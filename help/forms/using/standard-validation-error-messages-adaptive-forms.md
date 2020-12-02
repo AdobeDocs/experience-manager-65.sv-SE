@@ -17,7 +17,7 @@ ht-degree: 0%
 ---
 
 
-# Standardvalideringsfelmeddelanden för anpassade formulär {#standard-validation-error-messages}
+# Standardvalideringsfelmeddelanden för adaptiva formulär {#standard-validation-error-messages}
 
 Anpassade formulär validerar indata som du anger i fält baserat på ett förinställt valideringskriterier. Valideringskriterierna hänvisar till godkända indatavärden för fält i ett adaptivt formulär. Du kan ange valideringskriterier baserat på den datakälla som du använder med det anpassade formuläret. Om du till exempel använder RESTful-webbtjänster som datakälla kan du definiera valideringskriterierna i en Swagger-definitionsfil.
 
@@ -32,7 +32,7 @@ Om indatavärdena inte uppfyller valideringskriterierna och servervalideringsfel
 
 I den här artikeln beskrivs standardformatet för valideringsfelmeddelanden och instruktionerna för att omvandla felmeddelanden från ett anpassat till standardformatet.
 
-## Format för standardvalideringsfelmeddelande {#standard-validation-message-format}
+## Standardfelmeddelandeformat för validering {#standard-validation-message-format}
 
 De adaptiva formulären visar felen på fältnivå om servervalideringsfelmeddelanden är i följande standardformat:
 
@@ -62,32 +62,32 @@ Var:
 
 Om servervalideringsfelmeddelandet inte visas i standardformat kan du aktivera asynkron sändning och lägga till en anpassad felhanterare vid adaptiv formulärsändning för att konvertera meddelandet till ett standardformat.
 
-### Konfigurera asynkron överföring av adaptiva formulär {#configure-asynchronous-adaptive-form-submission}
+### Konfigurera asynkron sändning av anpassningsbara formulär {#configure-asynchronous-adaptive-form-submission}
 
 Innan du lägger till en anpassad hanterare måste du konfigurera det adaptiva formuläret för asynkron överföring. Utför följande steg:
 
 1. I redigeringsläget för anpassningsbara formulär väljer du objektet Formulärbehållare och trycker på ![adaptiva formuläregenskaper](assets/configure_icon.png) för att öppna dess egenskaper.
-1. Aktivera i delen **[!UICONTROL Submission]** Egenskaper **[!UICONTROL Use asynchronous submission]**.
-1. Välj **[!UICONTROL Revalidate on server]** att validera indatafältvärdena på servern innan de skickas.
+1. Aktivera **[!UICONTROL Use asynchronous submission]** i egenskapsavsnittet för **[!UICONTROL Submission]**.
+1. Välj **[!UICONTROL Revalidate on server]** för att validera indatafältvärdena på servern innan de skickas.
 1. Välj åtgärden Skicka:
 
    * Välj **[!UICONTROL Submit using Form Data Model]** och välj lämplig datamodell om du använder RESTful-webbtjänstbaserad [formulärdatamodell](work-with-form-data-model.md) som datakälla.
-   * Markera **[!UICONTROL Submit to REST endpoint]** och ange **[!UICONTROL Redirect URL/Path]** om du använder RESTful-webbtjänster som datakälla.
+   * Välj **[!UICONTROL Submit to REST endpoint]** och ange **[!UICONTROL Redirect URL/Path]** om du använder RESTful-webbtjänster som datakälla.
 
    ![adaptiva egenskaper för att skicka formulär](assets/af_submission_properties.png)
 
 1. Tryck på ![Spara](assets/save_icon.png) för att spara egenskaperna.
 
-### Lägg till en anpassad felhanterare när formulär skickas med adaptiv form {#add-custom-error-handler-af-submission}
+### Lägg till en anpassad felhanterare vid sändning av anpassningsbara formulär {#add-custom-error-handler-af-submission}
 
-AEM Forms har färdiga funktioner och felhanterare för att skicka formulär. Hanterare är funktioner på klientsidan som körs baserat på serversvaret. När ett formulär skickas skickas data till servern för validering, som returnerar ett svar till klienten med information om om huruvida överföringen lyckades eller inte. Informationen skickas som parametrar till den relevanta hanteraren för att köra funktionen.
+AEM Forms har färdiga funktioner och felhanterare för att skicka in formulär. Hanterare är funktioner på klientsidan som körs baserat på serversvaret. När ett formulär skickas skickas data till servern för validering, som returnerar ett svar till klienten med information om om huruvida överföringen lyckades eller inte. Informationen skickas som parametrar till den relevanta hanteraren för att köra funktionen.
 
 Utför följande steg för att lägga till en anpassad felhanterare när formulär skickas med adaptiv kod:
 
-1. Öppna det adaptiva formuläret i redigeringsläge, markera ett formulärobjekt och tryck för <!--![Rule Editor](assets/af_edit_rules.png)--> att öppna regelredigeraren.
-1. Markera **[!UICONTROL Form]** i trädet Formulärobjekt och tryck på **[!UICONTROL Create]**.
+1. Öppna det adaptiva formuläret i redigeringsläge, markera ett formulärobjekt och tryck på <!--![Rule Editor](assets/af_edit_rules.png)--> för att öppna regelredigeraren.
+1. Välj **[!UICONTROL Form]** i trädet Formulärobjekt och tryck på **[!UICONTROL Create]**.
 1. Välj **[!UICONTROL Error in Submission]** i listrutan Händelse.
-1. Skriv en regel för att konvertera en anpassad felstruktur till standardfelstrukturen och tryck för **[!UICONTROL Done]** att spara regeln.
+1. Skriv en regel för att konvertera en anpassad felstruktur till standardfelstrukturen och tryck på **[!UICONTROL Done]** för att spara regeln.
 
 Här följer ett exempel på kod som konverterar en anpassad felstruktur till standardfelstrukturen:
 
@@ -129,23 +129,23 @@ if (data) {
 }
 ```
 
-I listan visas SOM-uttrycket för de adaptiva formulärfält som du vill omvandla till standardformat. `var som_map` Du kan visa SOM-uttrycket för vilket fält som helst i en adaptiv form genom att trycka på fältet och välja **[!UICONTROL View SOM Expression]**.
+I `var som_map` visas SOM-uttrycket för de adaptiva formulärfält som du vill omvandla till standardformatet. Du kan visa SOM-uttrycket för vilket fält som helst i ett adaptivt formulär genom att trycka på fältet och välja **[!UICONTROL View SOM Expression]**.
 
 Med den här anpassade felhanteraren konverterar det adaptiva formuläret fälten i `var som_map` till standardfelmeddelandeformat. Därför visas valideringsfelmeddelanden på fältnivå i det adaptiva formuläret.
 
 ## Lägg till anpassad hanterare med åtgärden Anropa tjänst
 
-Utför följande steg för att lägga till felhanterare för att konvertera en anpassad felstruktur till standardfelstrukturen med hjälp av åtgärden Anropa tjänst i [regelredigeraren](rule-editor.md) :
+Utför följande steg för att lägga till felhanterare för att konvertera en anpassad felstruktur till standardfelstrukturen med [Regelredigerarens](rule-editor.md) Invoke Service-åtgärd:
 
-1. Öppna det anpassningsbara formuläret i redigeringsläge, markera ett formulärobjekt och tryck på ![regelredigeraren](assets/rule_editor_icon.png) för att öppna regelredigeraren.
+1. Öppna det adaptiva formuläret i redigeringsläge, markera ett formulärobjekt och tryck på ![Regelredigeraren](assets/rule_editor_icon.png) för att öppna regelredigeraren.
 1. Tryck på **[!UICONTROL Create]**.
-1. Skapa ett villkor i regelavsnittet **[!UICONTROL When]** . Till exempel[när fältnamnet] ändras. Välj **[!UICONTROL is changed]** i **[!UICONTROL Select State]** listrutan för att uppnå detta villkor.
-1. I **[!UICONTROL Then]** avsnittet väljer du **[!UICONTROL Invoke Service]** i **[!UICONTROL Select Action]** listrutan.
-1. Välj en posttjänst och dess motsvarande databindningar i **[!UICONTROL Input]** avsnittet. Om du till exempel vill validera fälten **Namn**, **ID** och **Status** i den adaptiva formen, markerar du en posttjänst (husdjur) och väljer pet.name, pet.id och pet.status i **[!UICONTROL Input]** avsnittet.
+1. Skapa ett villkor i avsnittet **[!UICONTROL When]** i regeln. När[fältnamnet] har ändrats. Välj **[!UICONTROL is changed]** i listrutan **[!UICONTROL Select State]** för att uppnå det här villkoret.
+1. I avsnittet **[!UICONTROL Then]** väljer du **[!UICONTROL Invoke Service]** i listrutan **[!UICONTROL Select Action]**.
+1. Välj en posttjänst och dess motsvarande databindningar i avsnittet **[!UICONTROL Input]**. Om du till exempel vill validera fälten **Namn**, **ID** och **Status** i anpassningsformuläret, markerar du en posttjänst (husdjur) och väljer pet.name, pet.id och pet.status i avsnittet **[!UICONTROL Input]**.
 
-Som ett resultat av den här regeln valideras de värden som du anger för **Namn**, **ID** och **Status** så fort fältet som definieras i steg 2 ändras och du tabbar ut från fältet i formuläret.
+Som ett resultat av den här regeln valideras de värden som du anger för fälten **Namn**, **ID** och **Status** så fort fältet som definieras i steg 2 ändras och du tabbar ut från fältet i formuläret.
 
-1. Välj **[!UICONTROL Code Editor]** i listrutan Lägesval.
+1. Välj **[!UICONTROL Code Editor]** i listrutan för lägesval.
 1. Tryck på **[!UICONTROL Edit Code]**.
 1. Ta bort följande rad från den befintliga koden:
 
@@ -153,7 +153,7 @@ Som ett resultat av den här regeln valideras de värden som du anger för **Nam
    guidelib.dataIntegrationUtils.executeOperation(operationInfo, inputs, outputs);
    ```
 
-1. Skriv en regel för att konvertera en anpassad felstruktur till standardfelstrukturen och tryck för **[!UICONTROL Done]** att spara regeln.
+1. Skriv en regel för att konvertera en anpassad felstruktur till standardfelstrukturen och tryck på **[!UICONTROL Done]** för att spara regeln.
 Lägg till exempel till följande exempelkod i slutet för att konvertera en anpassad felstruktur till standardfelstrukturen:
 
    ```javascript
@@ -198,7 +198,7 @@ Lägg till exempel till följande exempelkod i slutet för att konvertera en anp
    guidelib.dataIntegrationUtils.executeOperation(operationInfo, inputs, outputs, null, errorHandler);
    ```
 
-   I listan visas SOM-uttrycket för de adaptiva formulärfält som du vill omvandla till standardformat. `var som_map` Du kan visa SOM-uttrycket för vilket fält som helst i ett adaptivt formulär genom att trycka på fältet och välja **[!UICONTROL View SOM Expression]** från **[!UICONTROL More Opions]** (..)-menyn.
+   I `var som_map` visas SOM-uttrycket för de adaptiva formulärfält som du vill omvandla till standardformatet. Du kan visa SOM-uttrycket för vilket fält som helst i ett adaptivt formulär genom att trycka på fältet och välja **[!UICONTROL View SOM Expression]** från **[!UICONTROL More Opions]** (..)-menyn.
 
    Kontrollera att du kopierar följande rad med exempelkoden till den anpassade felhanteraren:
 
