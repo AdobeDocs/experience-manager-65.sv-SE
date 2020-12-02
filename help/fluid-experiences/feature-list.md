@@ -11,11 +11,11 @@ ht-degree: 6%
 ---
 
 
-# AEM med flytande upplevelser{#aem-fluid-experiences-feature-list}
+# AEM med flytande upplevelser, funktionslista{#aem-fluid-experiences-feature-list}
 
 Adobe Experience Manager Fluid Experiences bygger på de kraftfulla funktionerna i AEM Sites, AEM Dynamic Media och AEM Assets och ger en robust lösning för leverans av headless-material.
 
-AEM Fluid Experiences skiljer sig från klassiska AEM genom att endast använda headless delivery use case. Framtagning och distribution av högklassigt innehåll och AEM starkt stöd för hybridanvändning finns för [AEM Sites, Assets och Dynamic Media.](https://docs.adobe.com/content/help/en/experience-manager-65/user-guide/home.html)
+AEM Fluid Experiences skiljer sig från klassiska AEM genom att endast använda headless delivery use case. Framtagning och leverans av rubriker och AEM starkt stöd för hybridanvändning finns för [fullständiga AEM Sites-, Assets- och Dynamic Media-lösningar.](https://docs.adobe.com/content/help/en/experience-manager-65/user-guide/home.html)
 
 I följande tabeller definieras funktionerna i AEM flytande upplevelser och länken till relevant supportdokumentation.
 
@@ -37,7 +37,7 @@ I följande tabeller definieras funktionerna i AEM flytande upplevelser och län
 | [Bildåtergivningar](/help/assets/image-presets.md) |
 | [Metadata och tagghantering](/help/assets/metadata.md) |
 | [Sökning](/help/assets/manage-assets.md) |
-| [Samlingar](/help/assets/manage-assets.md) och [ljusbord](/help/assets/light-box.md) |
+| [](/help/assets/manage-assets.md) Samlingar och  [ljuslåda](/help/assets/light-box.md) |
 | [Profiler](/help/assets/processing-profiles.md) |
 | [Versionskontroll](/help/assets/manage-assets.md) |
 | [Dubblettidentifiering](/help/assets/duplicate-detection.md) |
@@ -56,7 +56,7 @@ I följande tabeller definieras funktionerna i AEM flytande upplevelser och län
 | [Kärnkomponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) |
 | [Dynamiska medier](/help/assets/dynamic-media.md) |
 
-## Funktioner för administration och integrering {#admin-and-integration-features}
+## Administrations- och integreringsfunktioner {#admin-and-integration-features}
 
 |  |
 |---|
