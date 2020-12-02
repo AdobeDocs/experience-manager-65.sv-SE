@@ -10,18 +10,21 @@ topic-tags: forms-manager
 discoiquuid: 6699e0e7-fd42-41ae-86a2-3b940d905111
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '338'
+ht-degree: 0%
 
 ---
 
 
-# Hämta en XFA- eller PDF-formulärmall {#download-an-xfa-or-a-pdf-form-template}
+# Hämta en XFA eller en PDF-formulärmall {#download-an-xfa-or-a-pdf-form-template}
 
 Med nedladdningsåtgärden kan du, som namnet antyder, exportera formulär från databasen till det lokala systemet. I kombination med överföringsåtgärden hjälper den här åtgärden dig att migrera dina formulär från en databas till en annan.
 
 I AEM Forms stöds nedladdningsåtgärden för följande resurstyper:
 
-* Formulärmallar (XFA-formulär)
-* PDF-formulär
+* Formulärmallar (XFA Forms)
+* PDF forms
 * Dokument (platta PDF-filer)
 
 AEM Forms stöder nedladdning av dessa formulärtyper individuellt eller i en mapp som innehåller ett eller flera formulär som stöds.
@@ -30,23 +33,23 @@ Förutom dessa resurser kan du hämta resurstypen `Resource` om den finns i en m
 
 ## Hämta ett eller flera formulär {#download-one-or-more-forms}
 
-1. Logga in i användargränssnittet för AEM Forms på `https://<server>:<port>/aem/forms.html`.
+1. Logga in på AEM Forms användargränssnitt på `https://<server>:<port>/aem/forms.html`.
 
 1. Navigera till platsen för resursen som du vill hämta.
 
-1. Markera resursen. Klicka på ikonen **[!UICONTROL Ladda ned]** ![aem6forms_download](assets/aem6forms_download.png) i verktygsfältet.
+1. Markera resursen. Klicka på ikonen **[!UICONTROL Download]** ![aem6forms_download](assets/aem6forms_download.png) i verktygsfältet.
 
    >[!NOTE]
    >
    >Du kan bara välja ett formulär för hämtning. Om du vill hämta flera formulär måste du hämta dem som en mapp.
 
-1. Klicka på **[!UICONTROL Hämta]** i dialogrutan som visas.
+1. Klicka på **[!UICONTROL Download]** i dialogrutan som visas.
 
    AEM Forms genererar en ZIP-fil som innehåller den valda filen eller den valda mappen.
 
    Om du hämtar en mapp hämtas de resurser i mappen som stöds i deras befintliga hierarki.
 
-   ZIP-filen sparas i `Downloads` systemmappen.
+   ZIP-filen sparas i mappen `Downloads` på datorn.
 
 ## Relaterade överväganden för överföringsåtgärden {#related-considerations-for-the-upload-operation}
 
