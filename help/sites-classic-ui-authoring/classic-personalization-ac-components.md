@@ -1,8 +1,8 @@
 ---
-title: Adobe Campaign-komponenter
-seo-title: Adobe Campaign-komponenter
-description: När ni integrerar med Adobe Campaign finns det komponenter tillgängliga för när ni arbetar med nyhetsbrev och formulär.
-seo-description: När ni integrerar med Adobe Campaign finns det komponenter tillgängliga för när ni arbetar med nyhetsbrev och formulär.
+title: Adobe Campaign Components
+seo-title: Adobe Campaign Components
+description: När du integrerar med Adobe Campaign finns det komponenter som du kan använda när du arbetar med nyhetsbrev och formulär.
+seo-description: När du integrerar med Adobe Campaign finns det komponenter som du kan använda när du arbetar med nyhetsbrev och formulär.
 uuid: cc9417c9-4cc1-4554-858e-2ecd682dc92f
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,25 +12,28 @@ discoiquuid: 5afe864d-5794-4ffa-99e7-a3233f982aff
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 016c705230dffec052c200b058a36cdbe0520fc4
+workflow-type: tm+mt
+source-wordcount: '2555'
+ht-degree: 0%
 
 ---
 
 
-# Adobe Campaign-komponenter{#adobe-campaign-components}
+# Adobe Campaign Components{#adobe-campaign-components}
 
-När ni integrerar med Adobe Campaign finns det komponenter tillgängliga för när ni arbetar med nyhetsbrev och formulär. Båda beskrivs i det här dokumentet.
+När du integrerar med Adobe Campaign finns det komponenter som du kan använda när du arbetar med nyhetsbrev och formulär. Båda beskrivs i det här dokumentet.
 
 >[!CAUTION]
 >
->AEM-e-postkomponenterna har tagits bort. På grund av e-postens natur, som sammanfogar innehåll och format, kommer de e-postkomponenter som tillhandahålls av AEM att ha begränsad återanvändning för kunderna eftersom de måste implementera anpassade format i de komponenter som behövs för projekten.
+>AEM e-postkomponenter har tagits bort. På grund av e-postens natur, som sammanfogar innehåll och format, blir de e-postkomponenter som AEM tillhandahåller direkt i kartong av begränsad återanvändning för kunderna på grund av behovet av att implementera anpassade format i de komponenter som behövs för projekt.
 >
->E-postkomponenter kan implementeras på projektnivå och de inaktuella AEM-e-postkomponenterna visar hur man kan uppnå detta. Dessa inaktuella komponenter bör dock inte användas i projekt.
+>E-postkomponenter kan implementeras på projektnivå och de borttagna AEM e-postkomponenterna visar hur man kan uppnå detta. Dessa inaktuella komponenter bör dock inte användas i projekt.
 
 ## Adobe Campaign Newsletter Components {#adobe-campaign-newsletter-components}
 
-Alla Campaign-komponenter följer den bästa praxis som beskrivs i [Bästa praxis för e-postmallar](/help/sites-administering/best-practices-for-email-templates.md) och baseras på Adobes [HTML-kod](https://helpx.adobe.com/experience-manager/htl/using/overview.html).
+Alla Campaign-komponenter följer den bästa praxis som beskrivs i [Bästa praxis för e-postmallar](/help/sites-administering/best-practices-for-email-templates.md) och baseras på Adobe-markeringsspråket [HTML](https://helpx.adobe.com/experience-manager/htl/using/overview.html).
 
-När du öppnar ett nyhetsbrev/e-postmeddelande som är konfigurerat för integrering med Adobe Campaign bör du se följande komponenter i **Adobe Campaign Newsletter** :
+När du öppnar ett nyhetsbrev/e-postmeddelande som är konfigurerat för integrering med Adobe Campaign, ska du se följande komponenter i avsnittet **Adobe Campaign Newsletter**:
 
 * Rubrik (kampanj)
 * Bild (Campaign)
@@ -49,17 +52,19 @@ En beskrivning av de här komponenterna finns i följande avsnitt.
 Rubrikkomponenten kan antingen:
 
 * Visa namnet på den aktuella sidan genom att lämna fältet **Titel** tomt.
-* Visa en text som du anger i fältet **Titel** .
+* Visa en text som du anger i fältet **Titel**.
 
-Du redigerar **rubrikkomponenten (Campaign)** direkt. Lämna tomt om du vill använda sidrubriken.
+Du redigerar **Rubrik (Campaign)**-komponenten direkt. Lämna tomt om du vill använda sidrubriken.
 
 ![chlimage_1-82](assets/chlimage_1-82.png)
 
 Du kan konfigurera följande:
 
-* **Titel** Om du vill använda ett annat namn än sidrubriken anger du det här.
+* ****
+TitelOm du vill använda ett annat namn än sidrubriken anger du det här.
 
-* **Rubriknivå (1, 2, 3, 4)** Rubriknivån som baseras på HTML-rubrikstorlekarna 1-4.
+* **Rubriknivå (1, 2, 3, 4)**
+Rubriknivån som baseras på HTML-rubrikstorlekarna 1-4.
 
 I följande exempel visas en rubrikkomponent (Campaign).
 
@@ -71,34 +76,44 @@ Komponenten image (campaign) visar en bild och tillhörande text enligt de angiv
 
 Du kan överföra en bild och sedan redigera den (till exempel beskära, rotera, lägga till länk/titel/text).
 
-Du kan överföra en bild och sedan redigera den (till exempel beskära, rotera, lägga till länk/titel/text). Du kan antingen dra och släppa en bild från [Innehållssökning](/help/sites-authoring/author-environment-tools.md#thecontentfinderclassicui) direkt till komponenten eller dess redigeringsdialogruta. Du kan också dubbelklicka i mitten av dialogrutan Redigera för att bläddra i det lokala filsystemet och överföra en bild. De två flikarna i dialogrutan Redigera styr också alla definitioner och ändringar av bilden:
+Du kan överföra en bild och sedan redigera den (till exempel beskära, rotera, lägga till länk/titel/text). Du kan antingen dra och släppa en bild från [Content Finder](/help/sites-authoring/author-environment-tools.md#thecontentfinderclassicui) direkt till komponenten eller dess redigeringsdialogruta. Du kan också dubbelklicka i mitten av dialogrutan Redigera för att bläddra i det lokala filsystemet och överföra en bild. De två flikarna i dialogrutan Redigera styr också alla definitioner och ändringar av bilden:
 
 ![chlimage_1-84](assets/chlimage_1-84.png)
 
 När en bild har lästs in kan du konfigurera följande:
 
-* **Karta** Om du vill mappa en bild väljer du Karta. Du kan ange hur du vill skapa bildschemat (rektangel, polygon och så vidare) och var området ska peka.
+* ****
+KartaOm du vill mappa en bild väljer du Karta. Du kan ange hur du vill skapa bildschemat (rektangel, polygon och så vidare) och var området ska peka.
 
-* **Beskär** Välj Beskär för att beskära en bild. Beskär bilden med musen.
+* **Beskär**
+Välj Beskär för att beskära en bild. Beskär bilden med musen.
 
-* **Rotera** om du vill rotera en bild väljer du Rotera. Använd detta upprepade gånger tills bilden roteras som du vill ha den.
+* ****
+RoteraOm du vill rotera en bild väljer du Rotera. Använd detta upprepade gånger tills bilden roteras som du vill ha den.
 
-* **Rensa** Ta bort den aktuella bilden.
+* ****
+RaderaTa bort den aktuella bilden.
 
-* Zoomfält (endast klassisk)Använd bildfältet under bilden om du vill zooma in och ut i bilden (ovanför knapparna OK och Avbryt)
-* **Bildens titel**.
+* Zoomfält (endast klassisk)
+Om du vill zooma in och ut i bilden använder du bildfältet under bilden (ovanför knapparna OK och Avbryt)
+* **Bildens**
+titelBildens titel.
 
-* **Alt-text** En alternativ text som kan användas när hjälpmedelsanpassat innehåll skapas.
+* **Alt**
+TextEn alternativ text som kan användas när hjälpmedelsanpassat innehåll skapas.
 
-* **Länk till** Skapa en länk till resurser eller andra sidor på webbplatsen.
+* **Länka**
+tillSkapa en länk till resurser eller andra sidor på webbplatsen.
 
-* **Beskrivning** En beskrivning av bilden.
+* **Beskrivning**
+En beskrivning av bilden.
 
-* **Storlek** Anger bildens höjd och bredd.
+* ****
+StorlekAnger bildens höjd och bredd.
 
 >[!NOTE]
 >
->Du måste ange information i fältet **Alt-text** på fliken **Avancerat** , annars kan bilden inte sparas och följande felmeddelande visas:
+>Du måste ange information i fältet **Alt-text** på fliken **Avancerat**, eller så kan bilden inte sparas och följande felmeddelande visas:
 >
 >`Validation failed. Verify the values of the marked fields.`
 
@@ -113,19 +128,24 @@ Med komponenten Länk (Campaign) kan du lägga till en länk i nyhetsbrevet. Den
 
 ![chlimage_1-86](assets/chlimage_1-86.png)
 
-Du kan konfigurera följande på flikarna **Visning**, **URL-information** eller **Avancerat** :
+Du kan konfigurera följande på flikarna **Visa**, **URL-information** eller **Avancerat**:
 
-* **Länkbeskrivning** Länkens bildtext. Det här är den text som användarna ser.
+* **Länkbeskrivning**
+Länkens bildtext. Det här är den text som användarna ser.
 
-* **Länkverktygstips** Lägger till ytterligare information om hur du använder länken.
+* **Link**
+ToolTipLägger till ytterligare information om hur du använder länken.
 
-* **LinkType** I listrutan väljer du mellan en **anpassad URL** och ett **anpassat dokument**. Det här fältet är obligatoriskt. Om du väljer Anpassad URL kan du ange länkens URL. Om du väljer Adaptivt dokument kan du ange dokumentets sökväg.
+* ****
+LinkTypeVälj mellan en 
+**Anpassad** URL-adress och ett  **anpassat dokument**. Det här fältet är obligatoriskt. Om du väljer Anpassad URL kan du ange länkens URL. Om du väljer Adaptivt dokument kan du ange dokumentets sökväg.
 
-* **Ytterligare URL-parameter** Lägg till ytterligare URL-parametrar. Klicka på Lägg till objekt om du vill lägga till flera objekt.
+* **Ytterligare URL-**
+parameterLägg till ytterligare URL-parametrar. Klicka på Lägg till objekt om du vill lägga till flera objekt.
 
 >[!NOTE]
 >
->Du måste ange information i fältet **Länktyp** på fliken **URL-information** , annars kan komponenten inte sparas och följande felmeddelande visas:
+>Du måste ange information i fältet **Länktyp** på fliken **URL-information**, eller så kan komponenten inte spara och följande felmeddelande visas:
 >
 >`Validation failed. Verify the values of the marked fields.`
 
@@ -134,7 +154,7 @@ I följande exempel visas en länkkomponent (Campaign).
 
 ![chlimage_1-87](assets/chlimage_1-87.png)
 
-### Riktad referens (Campaign) {#targeted-reference-campaign}
+### Målreferens (Campaign) {#targeted-reference-campaign}
 
 Med komponenten Målreferens (Campaign) kan du skapa en referens till ett målstycke.
 
@@ -150,25 +170,32 @@ Komponenten Text och bild (Campaign) lägger till ett textblock och en bild.
 
 Precis som med komponenterna Text &amp; Personalization (Campaign) och Image (Campaign) kan du konfigurera:
 
-* **Text** Ange text. Använd verktygsfältet för att ändra formatering, skapa listor och lägga till länkar.
+* ****
+TextAnge text. Använd verktygsfältet för att ändra formatering, skapa listor och lägga till länkar.
 
-* **Bild** Dra en bild från innehållssökaren eller klicka för att bläddra till en bild. Beskär eller rotera efter behov.
+* ****
+BildDra en bild från innehållssökaren eller klicka för att bläddra till en bild. Beskär eller rotera efter behov.
 
-* **Bildegenskaper** (**Avancerade bildegenskaper**)Gör att du kan ange följande:
+* **Bildegenskaper**  (**Avancerade bildegenskaper**) Gör att du kan ange följande:
 
-   * **Blockets titel**. visas med muspekaren.
+   * **Blockets**
+titelBlockets titel. visas med muspekaren.
 
-   * **Alternativ text** visas om bilden inte kan visas.
+   * **Alt**
+TextAlternative-text som visas om bilden inte kan visas.
 
-   * **Länk till** Skapa en länk till resurser eller andra sidor på webbplatsen.
+   * **Länka**
+tillSkapa en länk till resurser eller andra sidor på webbplatsen.
 
-   * **Beskrivning** En beskrivning av bilden.
+   * **Beskrivning**
+En beskrivning av bilden.
 
-   * **Storlek** Anger bildens höjd och bredd.
+   * ****
+StorlekAnger bildens höjd och bredd.
 
 >[!NOTE]
 >
->Fältet **Alt-text** på fliken **Avancerat** är obligatoriskt eller så kan komponenten inte spara och du ser följande felmeddelande:
+>Fältet **Alt-text** på fliken **Avancerat** krävs eller så kan komponenten inte spara och följande felmeddelande visas:
 >
 >`Validation failed. Verify the values of the marked fields.`
 
@@ -177,9 +204,9 @@ I följande exempel visas en text- och bildkomponent (Campaign).
 
 ![chlimage_1-89](assets/chlimage_1-89.png)
 
-### Text och personalisering (Campaign) {#text-personalization-campaign}
+### Text och personalisering (kampanj) {#text-personalization-campaign}
 
-Med komponenten Text &amp; Personalization (Campaign) kan du ange ett textblock med en WYSIWYG-redigerare, med funktioner som tillhandahålls av [RTF-redigeraren](/help/sites-authoring/rich-text-editor.md). Med den här komponenten kan du dessutom använda kontextfält och personaliseringsblock som finns i Adobe Campaign; Se även [Infoga personalisering](/help/sites-classic-ui-authoring/classic-personalization-ac-campaign.md#inserting-personalization).
+Med komponenten Text &amp; Personalization (Campaign) kan du ange ett textblock med en WYSIWYG-redigerare, med funktioner som finns i [RTF-redigeraren](/help/sites-authoring/rich-text-editor.md). Med den här komponenten kan du dessutom använda kontextfält och anpassningsblock som finns i Adobe Campaign; Se även [Infoga personalisering](/help/sites-classic-ui-authoring/classic-personalization-ac-campaign.md#inserting-personalization).
 
 Om du väljer ikoner kan du formatera texten, inklusive teckensnittsegenskaper, justering, länkar, listor och indrag.
 
@@ -191,15 +218,15 @@ Du lägger till text- och kontextfält eller anpassningsblock för att skapa inn
 
 >[!NOTE]
 >
->Endast de fält som definieras i **nms:seedMember** -schemat eller ett av dess tillägg tas med i beräkningen. Attributen för de tabeller som är länkade till `nms:seedMember` är inte tillgängliga.
+>Endast de fält som definieras i schemat **nms:seedMember** eller något av dess tillägg beaktas. Attributen för de tabeller som är länkade till `nms:seedMember` är inte tillgängliga.
 
-## Adobe Campaign-formulärkomponenter {#adobe-campaign-form-components}
+## Adobe Campaign Form Components {#adobe-campaign-form-components}
 
-Du använder Adobe Campaign-komponenter för att skapa ett formulär som användarna fyller i för att antingen prenumerera på ett nyhetsbrev, avbryta prenumerationen på ett nyhetsbrev eller uppdatera sina användarprofiler. Mer information finns i [Skapa Adobe Campaign-formulär](/help/sites-classic-ui-authoring/classic-personalization-ac-forms.md) .
+Du använder Adobe Campaign-komponenter för att skapa ett formulär som användarna fyller i för att antingen prenumerera på ett nyhetsbrev, avbryta prenumerationen på ett nyhetsbrev eller uppdatera sina användarprofiler. Mer information finns i [Skapa Adobe Campaign Forms](/help/sites-classic-ui-authoring/classic-personalization-ac-forms.md).
 
-Varje komponentfält kan länkas till ett Adobe Campaign-databasfält. De tillgängliga fälten skiljer sig åt beroende på vilken typ av data de innehåller, vilket beskrivs i avsnittet [Komponenter och Datatyp](#components-and-data-type). Om du utökar ditt mottagarschema i Adobe Campaign är de nya fälten tillgängliga i de komponenter vars datatyper matchar.
+Varje komponentfält kan länkas till ett Adobe Campaign-databasfält. De tillgängliga fälten skiljer sig åt beroende på vilken typ av data de innehåller, vilket beskrivs i avsnittet [Komponenter och datatyp](#components-and-data-type). Om du utökar ditt mottagarschema i Adobe Campaign är de nya fälten tillgängliga i de komponenter vars datatyper matchar.
 
-När du öppnar ett formulär som är konfigurerat att integreras med Adobe Campaign visas följande komponenter i **Adobe Campaign** -avsnittet:
+När du öppnar ett formulär som har konfigurerats för integrering med Adobe Campaign visas följande komponenter i avsnittet **Adobe Campaign**:
 
 * Kryssruta (kampanj)
 * Datumfält (kampanj) och Datumfält/HTML5 (kampanj)
@@ -221,7 +248,7 @@ I följande tabell beskrivs de komponenter som är tillgängliga för att visa o
  <tbody>
   <tr>
    <td><p><strong>Komponent</strong></p> </td>
-   <td><p><strong>Datatyp för Adobe Campaign-fältet</strong></p> </td>
+   <td><p><strong>Datatyp för Adobe Campaign-fält</strong></p> </td>
    <td><p><strong>Exempelfält</strong></p> </td>
   </tr>
   <tr>
@@ -260,30 +287,37 @@ I de flesta komponenter kan du konfigurera följande:
 
 #### Titel och text {#title-and-text}
 
-* **Titel** Om du vill använda ett annat namn än elementnamnet anger du det här.
+* ****
+TitelOm du vill använda ett annat namn än elementnamnet anger du det här.
 
-* **Dölj rubrik** Markera den här kryssrutan om du inte vill att titeln ska vara synlig.
+* **Dölj**
+titelMarkera den här kryssrutan om du inte vill att titeln ska vara synlig.
 
-* **Beskrivning** Lägg till en beskrivning i fältet för att ge mer information för användarna.
+* ****
+BeskrivningLägg till en beskrivning i fältet för att ge mer information för användarna.
 
-* **Visa endast värdet** om det finns ett
+* **Visa bara**
+valueOnly visar värdet, om det finns ett
 
 #### Adobe Campaign {#adobe-campaign}
 
 Du kan konfigurera följande:
 
-* **Mappning** Välj ett personaliseringsfält för Adobe Campaign, om det är lämpligt.
+* ****
+MappningVälj ett personaliseringsfält för Adobe Campaign, om det behövs.
 
-* **Avstämningsnyckel** Markera den här kryssrutan om det här fältet är en del av avstämningsnyckeln.
+* **Avstämningsnyckel**
+Markera den här kryssrutan om det här fältet är en del av avstämningsnyckeln.
 
 #### Begränsningar {#constraints}
 
 * **Obligatoriskt** - Markera den här kryssrutan för att göra den här komponenten obligatorisk. alltså måste användaren ange ett värde.
-* **Obligatoriskt meddelande** - Om du vill kan du lägga till ett meddelande om att fältet är obligatoriskt.
+* **Obligatoriskt meddelande**  - Om du vill kan du lägga till ett meddelande om att fältet är obligatoriskt.
 
-#### Stilar {#styling}
+#### Formatering {#styling}
 
-* **CSS** Ange de CSS-klasser som du vill använda för den här komponenten.
+* ****
+CSSEnge de CSS-klasser som du vill använda för den här komponenten.
 
 ### Kryssruta (kampanj) {#checkbox-campaign}
 
@@ -297,14 +331,14 @@ I följande exempel visas en CheckBox-komponent (Campaign).
 
 ### Datumfält (kampanj) och Datumfält/HTML 5 (kampanj) {#date-field-campaign-and-date-field-html-campaign}
 
-Använd datumfältet för att tillåta mottagarna att ange ett datum, Du kanske till exempel vill att mottagarna ska ange sina födelsedatum. Datumformatet matchar formatet som används i Adobe Campaign-instansen.
+Använd datumfältet för att tillåta mottagarna att ange ett datum, Du kanske till exempel vill att mottagarna ska ange sina födelsedatum. Datumformatet matchar det format som används i din Adobe Campaign-instans.
 
-Förutom de [inställningar som är gemensamma för de flesta Adobe Campaign-komponenter](#settings-common-to-most-components)kan du konfigurera följande:
+Förutom [inställningar som är gemensamma för de flesta Adobe Campaign-komponenter](#settings-common-to-most-components) kan du konfigurera följande:
 
-* **Begränsningar - begränsning** - Du kan välja **Ingen** eller **Datum** om du vill lägga till begränsningen för ett datum eller utan begränsning. Om du väljer ett datum måste de svar som användarna anger i fältet ha ett datumformat.
+* **Begränsningar - begränsning** - Du kan välja -  **** Ej  **** data om du vill lägga till en begränsning för ett datum eller ingen begränsning. Om du väljer ett datum måste de svar som användarna anger i fältet ha ett datumformat.
 
-* **Begränsningsmeddelande** - Dessutom kan du lägga till ett begränsningsmeddelande så att användarna vet hur de formaterar sina svar korrekt.
-* **Format - Bredd** - Justera fältets bredd genom att klicka eller trycka på **+** och **-** ikonerna eller genom att ange ett tal.
+* **Begränsningsmeddelande**  - Dessutom kan du lägga till ett begränsningsmeddelande så att användarna vet hur de formaterar sina svar korrekt.
+* **Format - Bredd**  - Justera fältets bredd genom att klicka eller trycka på  **+** och  **-** ikonerna eller genom att ange ett tal.
 
 I följande exempel visas en datumfältskomponent (Campaign) där bredden justeras.
 
@@ -312,14 +346,14 @@ I följande exempel visas en datumfältskomponent (Campaign) där bredden juster
 
 ### Krypterad primärnyckel (kampanj) {#encrypted-primary-key-campaign}
 
-Den här komponenten definierar namnet på URL-parametern som ska innehålla identifieraren för en Adobe Campaign-profil (**Main Resource Identifier** eller **Encrypted primary key** in Adobe Campaign Standard and 6.1).
+Den här komponenten definierar namnet på URL-parametern som ska innehålla identifieraren för en Adobe Campaign-profil (**ID för huvudresurs** eller **krypterad primärnyckel** i Adobe Campaign Standard respektive 6.1).
 
 Varje formulär som visar och ändrar Adobe Campaign-profildata **måste** innehålla en krypterad primärnyckelkomponent.
 
 Du kan konfigurera följande i komponenten Encrypted Primary Key (Campaign):
 
-* **Titel och text - Elementnamn** - Standard är encryptedPK. Du behöver bara ändra elementnamnet när det står i konflikt med namnet på ett annat element i formuläret. Två formulärfält kan inte ha samma elementnamn.
-* **Adobe Campaign - URL-parameter** - Lägg till URL-parametern för EPK. Du kan till exempel använda värdet **epk**.
+* **Titel och text - Elementnamn**  - Standardvärdet är encryptedPK. Du behöver bara ändra elementnamnet när det står i konflikt med namnet på ett annat element i formuläret. Två formulärfält kan inte ha samma elementnamn.
+* **Adobe Campaign - URL-parameter**  - Lägg till URL-parametern för EPK. Du kan till exempel använda värdet **epk**.
 
 I följande exempel visas en krypterad primärnyckelkomponent (Campaign).
 
@@ -339,8 +373,8 @@ Med komponenten Dold avstämningsnyckel (Campaign) kan du lägga till dolda fäl
 
 Du kan konfigurera följande i komponenten Dold avstämningsnyckel (Campaign):
 
-* **Titel och text - Elementnamn** - standard är concilKey. Du behöver bara ändra elementnamnet när det står i konflikt med namnet på ett annat element i formuläret. Två formulärfält kan inte ha samma elementnamn.
-* **Adobe Campaign - Mappning** - Mappa till ett personaliseringsfält för Adobe Campaign.
+* **Titel och text - Elementnamn**  - standard är concilKey. Du behöver bara ändra elementnamnet när det står i konflikt med namnet på ett annat element i formuläret. Två formulärfält kan inte ha samma elementnamn.
+* **Adobe Campaign - Mappning**  - Mappa till ett personaliseringsfält i Adobe Campaign.
 
 I följande exempel visas en komponent för dold avstämningsnyckel (Campaign).
 
@@ -350,12 +384,12 @@ I följande exempel visas en komponent för dold avstämningsnyckel (Campaign).
 
 Använd det numeriska fältet för att tillåta mottagarna att ange siffror, till exempel deras ålder.
 
-Förutom de [inställningar som är gemensamma för de flesta Adobe Campaign-komponenter](#settings-common-to-most-components)kan du konfigurera följande:
+Förutom [inställningar som är gemensamma för de flesta Adobe Campaign-komponenter](#settings-common-to-most-components) kan du konfigurera följande:
 
-* **Begränsningar - listrutan Begränsning** Du kan välja **Ingen** eller **Numerisk -** om du vill lägga till begränsningen för ett tal eller ingen begränsning. Om du väljer siffra måste de svar som användarna anger i fältet vara numeriska.
+* **Begränsningar -** listrutan Begränsning Du kan välja -  **** icke- **numeriskt -** om du vill lägga till begränsningen för ett tal eller ingen begränsning. Om du väljer siffra måste de svar som användarna anger i fältet vara numeriska.
 
-* **Begränsningsmeddelande** - Dessutom kan du lägga till ett begränsningsmeddelande så att användarna vet hur de formaterar sina svar korrekt.
-* **Format - Bredd** - Justera fältets bredd genom att klicka eller trycka på **+** och **-** ikonerna eller genom att ange ett tal.
+* **Begränsningsmeddelande**  - Dessutom kan du lägga till ett begränsningsmeddelande så att användarna vet hur de formaterar sina svar korrekt.
+* **Format - Bredd**  - Justera fältets bredd genom att klicka eller trycka på  **+** och  **-** ikonerna eller genom att ange ett tal.
 
 I följande exempel visas en Numeric Field-komponent (Campaign) med den konfigurerade bredden.
 
@@ -365,7 +399,7 @@ I följande exempel visas en Numeric Field-komponent (Campaign) med den konfigur
 
 I den här nedrullningsbara listan kan du välja ett alternativ; till exempel en mottagares kön eller status.
 
-Du kan [konfigurera inställningar som är gemensamma för de flesta Adobe Campaign-komponenter](#settings-common-to-most-components) i alternativfältskomponenten (Campaign). Om du vill fylla i den nedrullningsbara listan väljer du lämpligt fält i Adobe Campaign-anpassningsfälten genom att klicka eller trycka på Adobe Campaign-symbolen och navigera till fältet.
+Du kan [konfigurera inställningar som är gemensamma för de flesta Adobe Campaign-komponenter](#settings-common-to-most-components) i alternativfältskomponenten (Campaign). Om du vill fylla i den nedrullningsbara listan väljer du lämpligt fält i Adobe Campaign personaliseringsfält genom att klicka eller trycka på Adobe Campaign-symbolen och navigera till fältet.
 
 I följande exempel visas en alternativfältskomponent (Campaign).
 
@@ -373,9 +407,9 @@ I följande exempel visas en alternativfältskomponent (Campaign).
 
 ### Checklista för prenumerationer (kampanj) {#subscriptions-checklist-campaign}
 
-Använd komponenten **Checklista för prenumerationer (Campaign)** om du vill ändra de prenumerationer som är kopplade till en Adobe Campaign-profil.
+Använd komponenten **Checklista för prenumerationer (Campaign)** för att ändra prenumerationerna som är kopplade till en Adobe Campaign-profil.
 
-När den här komponenten läggs till i ett formulär visas alla tillgängliga prenumerationer som kryssrutor där användaren kan välja önskad prenumeration. När användare skickar formuläret prenumererar den här komponenten på användaren eller avbryter prenumerationen på de valda tjänsterna beroende på typ av formuläråtgärd (**Adobe Campaign: Prenumerera på Services** eller **Adobe Campaign: Avbeställ tjänsterna**).
+När den här komponenten läggs till i ett formulär visas alla tillgängliga prenumerationer som kryssrutor där användaren kan välja önskad prenumeration. När användare skickar formuläret prenumererar den här komponenten på användaren eller avbryter prenumerationen på de valda tjänsterna beroende på formuläråtgärdstypen (**Adobe Campaign: Prenumerera på Services** eller **Adobe Campaign: Avbeställ Services**).
 
 >[!NOTE]
 >
@@ -391,12 +425,12 @@ I följande exempel visas en komponent för checklista för prenumerationer (Cam
 
 Komponenten Textfält (Campaign) som gör att du kan ange strängtypsdata, t.ex. förnamn, efternamn, adress, e-postadress osv.
 
-Förutom de [inställningar som är gemensamma för de flesta Adobe Campaign-komponenter](#settings-common-to-most-components)kan du konfigurera följande:
+Förutom [inställningar som är gemensamma för de flesta Adobe Campaign-komponenter](#settings-common-to-most-components) kan du konfigurera följande:
 
-* **Begränsningar - Begränsning** - listruta - Du kan välja **Ingen**, **E-post**, **Namn** (inga omljud) för att lägga till begränsningen för en e-postadress, ett namn eller ingen begränsning. Om du väljer e-postadress måste det svar som användarna anger i fältet vara en e-postadress. Om du väljer ett namn måste det vara ett namn (omljud tillåts inte).
+* **Begränsningar - begränsning**  - listruta - Du kan välja  **Ingen**,  **E-post**,  **Namn**  (inga omljud) för att lägga till begränsningen för en e-postadress, ett namn eller ingen begränsning. Om du väljer e-postadress måste det svar som användarna anger i fältet vara en e-postadress. Om du väljer ett namn måste det vara ett namn (omljud tillåts inte).
 
-* **Begränsningsmeddelande** - Dessutom kan du lägga till ett begränsningsmeddelande så att användarna vet hur de formaterar sina svar korrekt.
-* **Format - Bredd** - Justera fältets bredd genom att klicka eller trycka på **+** och **-** ikonerna eller genom att ange ett tal.
+* **Begränsningsmeddelande**  - Dessutom kan du lägga till ett begränsningsmeddelande så att användarna vet hur de formaterar sina svar korrekt.
+* **Format - Bredd**  - Justera fältets bredd genom att klicka eller trycka på  **+** och  **-** ikonerna eller genom att ange ett tal.
 
 I följande exempel visas en textfältskomponent (Campaign).
 
