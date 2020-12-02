@@ -1,8 +1,8 @@
 ---
 title: Skriptstöd för HTML5-formulär
 seo-title: Skriptstöd för HTML5-formulär
-description: JavaScript, FormCalc-egenskaper och andra metoder som stöds i HTML5-formulär.
-seo-description: JavaScript, FormCalc-egenskaper och andra metoder som stöds i HTML5-formulär.
+description: JavaScript, FormCalc-egenskaper och andra metoder som stöds i HTML5 Forms.
+seo-description: JavaScript, FormCalc-egenskaper och andra metoder som stöds i HTML5 Forms.
 uuid: 697d5ec4-c818-41e4-b813-883c01b7ff3a
 contentOwner: robhagat
 content-type: reference
@@ -48,11 +48,11 @@ JavaScript, FormCalc-egenskaper och metoder som stöds i HTML5-formulär är som
   <tr>
    <td><code>newtext</code></td>
    <td>Anger fältets innehåll efter att det ändras som svar på användaråtgärder.</td>
-   <td><p>Egenskapen <code>newText</code> fungerar inte som den ska i följande fall:</p>
+   <td><p>Egenskapen <code>newText</code> fungerar inte korrekt i följande fall:</p>
     <ul>
      <li>Om att markera och ersätta text</li>
      <li>När du tar bort, kopierar och klistrar in text.</li>
-     <li>Om du skriver vissa specialteckennycklar (till exempel $, (, ), &amp;, @ och annat) i numeriska fält<br /> </li>
+     <li>Om du skriver vissa specialteckennycklar (t.ex. $, (, ), &amp;, @ och mer) i numeriska fält<br /> </li>
      <li>Vid användning av Skift+alfanumerisk kombination. </li>
      <li>Använda datum/tid-fält.</li>
     </ul>
@@ -67,7 +67,7 @@ JavaScript, FormCalc-egenskaper och metoder som stöds i HTML5-formulär är som
     <ul>
      <li>Om att markera och ersätta text</li>
      <li>När du tar bort, kopierar och klistrar in text.</li>
-     <li>Om du skriver vissa specialteckennycklar (till exempel $, (,), &amp;, @ och annat) i numeriska fält<br /> </li>
+     <li>Om du skriver vissa specialteckennycklar (till exempel $, (,), &amp;, @ och mer) i numeriska fält<br /> </li>
      <li>Vid användning av Skift+alfanumerisk kombination. </li>
      <li>Använda datum/tid-fält.</li>
     </ul> <p>Det går inte att ange värde via skript.</p> </td>
@@ -131,7 +131,7 @@ JavaScript, FormCalc-egenskaper och metoder som stöds i HTML5-formulär är som
   </tr>
   <tr>
    <td><code>validationsEnabled</code></td>
-   <td>Specifies whether validation scripts will execute.<br /> </td>
+   <td>Anger om valideringsskript ska köras.<br /> </td>
    <td>Inget</td>
   </tr>
   <tr>
@@ -204,17 +204,17 @@ JavaScript, FormCalc-egenskaper och metoder som stöds i HTML5-formulär är som
   <tr>
    <td><code>formattedValue</code></td>
    <td>Anger det formaterade värdet för det här fältet.</td>
-   <td>Inställning <code>formattedValue</code> via skript stöds inte.</td>
+   <td>Det går inte att ange <code>formattedValue</code> via skript.</td>
   </tr>
   <tr>
    <td><code>editValue</code></td>
    <td>Anger redigeringsvärdet för det här fältet.</td>
-   <td>Inställning <code>editValue </code>via skript stöds inte.</td>
+   <td>Det går inte att ange <code>editValue </code>via skript.</td>
   </tr>
   <tr>
    <td><code>formatMessage</code></td>
    <td>Anger meddelandesträngen för formatvalidering för det här fältet.</td>
-   <td>Inställning <code>formatMessage </code>via skript stöds inte.</td>
+   <td>Det går inte att ange <code>formatMessage </code>via skript.</td>
   </tr>
   <tr>
    <td><code>fillcolor</code></td>
@@ -339,7 +339,7 @@ JavaScript, FormCalc-egenskaper och metoder som stöds i HTML5-formulär är som
   <tr>
    <td>parentSubform</td>
    <td>Anger fältets överordnade delformulär (sida).</td>
-   <td>Returnerar alltid det överordnade delformuläret i stället för att returnera det första icke-omfångsbaserade överordnade delformuläret.<br /> </td>
+   <td>Returnerar alltid överordnat delformulär i stället för att returnera det första överordnade delformuläret som inte omfattas.<br /> </td>
   </tr>
   <tr>
    <td>selectedIndex</td>
@@ -349,7 +349,7 @@ JavaScript, FormCalc-egenskaper och metoder som stöds i HTML5-formulär är som
  </tbody>
 </table>
 
-## Form {#form}
+## Formulär {#form}
 
 | **Egenskap** | **Beskrivning** | **Undantag** |
 |---|---|---|
@@ -455,7 +455,7 @@ JavaScript, FormCalc-egenskaper och metoder som stöds i HTML5-formulär är som
    <td>Inget</td>
   </tr>
   <tr>
-   <td>validate</td>
+   <td>validera</td>
    <td>Objektet validate kontrollerar validering för användartillförd data på ett formulär. Objektet validate kan aktiveras flera gånger under ett formulärs livslängd.</td>
    <td>Inget</td>
   </tr>
@@ -544,7 +544,7 @@ JavaScript, FormCalc-egenskaper och metoder som stöds i HTML5-formulär är som
  </tbody>
 </table>
 
-## subformset {#subformset}
+## delformuläruppsättning {#subformset}
 
 | Egenskap | Beskrivning | Undantag |
 |---|---|---|
@@ -593,7 +593,7 @@ JavaScript, FormCalc-egenskaper och metoder som stöds i HTML5-formulär är som
    <td><strong>Undantag</strong></td>
   </tr>
   <tr>
-   <td>color</td>
+   <td>färg</td>
    <td>Färgegenskaperna definierar en unik fyllningsfärg.</td>
    <td>
     <ul>
@@ -614,7 +614,7 @@ JavaScript, FormCalc-egenskaper och metoder som stöds i HTML5-formulär är som
    <td><strong>Undantag</strong></td>
   </tr>
   <tr>
-   <td>color</td>
+   <td>färg</td>
    <td>Egenskapen color beskriver en unik färg för en linjär övertoningsfyllning i ett formulär.</td>
    <td>
     <ul>
@@ -652,7 +652,7 @@ JavaScript, FormCalc-egenskaper och metoder som stöds i HTML5-formulär är som
    <td><strong>Undantag</strong></td>
   </tr>
   <tr>
-   <td>color</td>
+   <td>färg</td>
    <td>Egenskapen color beskriver en unik färg för mönsterobjektet. </td>
    <td>
     <ul>
@@ -673,7 +673,7 @@ JavaScript, FormCalc-egenskaper och metoder som stöds i HTML5-formulär är som
    <td><strong>Undantag</strong></td>
   </tr>
   <tr>
-   <td>color</td>
+   <td>färg</td>
    <td>Egenskapen color beskriver en unik färg för det radiella objektet</td>
    <td>
     <ul>
@@ -694,7 +694,7 @@ JavaScript, FormCalc-egenskaper och metoder som stöds i HTML5-formulär är som
    <td><strong>Undantag</strong></td>
   </tr>
   <tr>
-   <td>color</td>
+   <td>färg</td>
    <td>Egenskapen color beskriver en unik färg för stöpplingsobjektet.</td>
    <td>
     <ul>
@@ -720,12 +720,12 @@ JavaScript, FormCalc-egenskaper och metoder som stöds i HTML5-formulär är som
    <td> </td>
   </tr>
   <tr>
-   <td>caption</td>
+   <td>bildtext</td>
    <td>Objektet caption beskiver en deskriptiv etikett med ett formulärdesignobjekt.</td>
    <td> </td>
   </tr>
   <tr>
-   <td>presence</td>
+   <td>närvaro</td>
    <td>Anger synligheten hos ett objekt.</td>
    <td> </td>
   </tr>
@@ -752,7 +752,7 @@ JavaScript, FormCalc-egenskaper och metoder som stöds i HTML5-formulär är som
    <td><strong>Undantag</strong></td>
   </tr>
   <tr>
-   <td>color</td>
+   <td>färg</td>
    <td>Egenskapen color beskriver en unik färg för hörnobjektet.</td>
    <td>
     <ul>
@@ -775,7 +775,7 @@ JavaScript, FormCalc-egenskaper och metoder som stöds i HTML5-formulär är som
   <tr>
    <td>border</td>
    <td>Kantobjektet beskriver kanten runt checkButton-objektet. </td>
-   <td>Ändringarna återspeglas i modellen och är tillgängliga för skript, men synkroniseras inte med HTML-element. Förändringarna återspeglas därför inte i användargränssnittet.<br /> </td>
+   <td>Ändringarna återspeglas i modellen och är tillgängliga för skript, men synkroniseras inte med HTML-element. Ändringarna återspeglas därför inte i användargränssnittet.<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -825,7 +825,7 @@ JavaScript, FormCalc-egenskaper och metoder som stöds i HTML5-formulär är som
  </tbody>
 </table>
 
-## imageEdit {#imageedit}
+## imageEdit  {#imageedit}
 
 | **Egenskap** | **Beskrivning** | **Undantag** |
 |---|---|---|
@@ -837,7 +837,7 @@ JavaScript, FormCalc-egenskaper och metoder som stöds i HTML5-formulär är som
 |---|---|---|
 | border | Objektet kantlinje beskriver kantlinjen som omger ett objekt. | inga |
 
-## object {#object}
+## objekt {#object}
 
 <table>
  <tbody>
@@ -864,7 +864,7 @@ JavaScript, FormCalc-egenskaper och metoder som stöds i HTML5-formulär är som
    <td><strong>Undantag</strong></td>
   </tr>
   <tr>
-   <td>edge</td>
+   <td>kant</td>
    <td>Objektet edge beskriver en båge, linje eller en sida av en kantlinje eller rektangel.<br /> </td>
    <td>Attribut som färg, ände med mera stöds inte.</td>
   </tr>
@@ -948,12 +948,12 @@ JavaScript, FormCalc-egenskaper och metoder som stöds i HTML5-formulär är som
    <td>Inget</td>
   </tr>
   <tr>
-   <td>caption</td>
+   <td>bildtext</td>
    <td>Objektet caption beskiver en deskriptiv etikett med ett formulärdesignobjekt.<br /> </td>
    <td>Inget</td>
   </tr>
   <tr>
-   <td>validate</td>
+   <td>validera</td>
    <td>Objektet validate kontrollerar validering för användartillförd data på ett formulär. Objektet validate kan aktiveras flera gånger under ett formulärs livslängd.</td>
    <td>Inget</td>
   </tr>
@@ -963,12 +963,12 @@ JavaScript, FormCalc-egenskaper och metoder som stöds i HTML5-formulär är som
    <td>Inget</td>
   </tr>
   <tr>
-   <td>presence</td>
+   <td>närvaro</td>
    <td>Anger synligheten hos ett objekt.</td>
    <td> </td>
   </tr>
   <tr>
-   <td>access</td>
+   <td>åtkomst</td>
    <td>Kontrollerar användaråtkomsten till innehållet i en behållare objekt, t.ex. ett delformulär.</td>
    <td>För enskilda objekt i undantaget returneras alltid open. </td>
   </tr>
@@ -1010,7 +1010,7 @@ JavaScript, FormCalc-egenskaper och metoder som stöds i HTML5-formulär är som
    <td><strong>Undantag<strong></strong></strong></td>
   </tr>
   <tr>
-   <td>edge</td>
+   <td>kant</td>
    <td>Objektet edge beskriver en båge, linje eller en sida av en kantlinje eller rektangel.<br /> </td>
    <td>Attribut som färg, ände med mera stöds inte. </td>
   </tr>
@@ -1027,7 +1027,7 @@ JavaScript, FormCalc-egenskaper och metoder som stöds i HTML5-formulär är som
    <td><strong>Undantag<strong></strong></strong></td>
   </tr>
   <tr>
-   <td>edge</td>
+   <td>kant</td>
    <td>Objektet edge beskriver en båge, linje eller en sida av en kantlinje eller rektangel.<br /> </td>
    <td>Attribut som färg, ände med mera stöds inte. </td>
   </tr>
@@ -1085,7 +1085,7 @@ JavaScript, FormCalc-egenskaper och metoder som stöds i HTML5-formulär är som
    <td>
     <ul>
      <li>layout.pageCount()-metoden returnerar olika värden för PDF- och HTML-formulär.</li>
-     <li>Om antalet sidor minskar genom att ett objekt döljs returnerar abspagecount-metoden ett felaktigt värde.<br /> </li>
+     <li>Om antalet sidor minskas genom att ett objekt döljs returnerar abspagecounting-metoden ett felaktigt värde.<br /> </li>
     </ul> </td>
   </tr>
   <tr>
@@ -1109,7 +1109,7 @@ JavaScript, FormCalc-egenskaper och metoder som stöds i HTML5-formulär är som
 
 | **Egenskap** | **Beskrivning** | **Undantag** |
 |---|---|---|
-| presence | Anger synligheten hos ett objekt. | Inget |
+| närvaro | Anger synligheten hos ett objekt. | Inget |
 
 ## FormCalc {#formcalc}
 
@@ -1117,7 +1117,7 @@ FormCalc är ett XFA-specifikt språk för att skapa e-formulärbaserade logiska
 
 ### Funktioner som stöds i FormCalc {#formcalc-supported-functions}
 
-### Stöd för FormCalc-uttryck {#formcalc-expression-support}
+### FormCalc-uttrycksstöd {#formcalc-expression-support}
 
 <table>
  <tbody>
@@ -1143,7 +1143,7 @@ FormCalc är ett XFA-specifikt språk för att skapa e-formulärbaserade logiska
      <li>Logic (och/eller)</li>
      <li>Jämförelse (större/mindre/lika)</li>
     </ul> </td>
-   <td>A eller 1<br /> 1 &lt;&gt; 2<br /> A NE B<br /> A eller 1<br /> 1 &lt;&gt; 2<br /> A NE B</td>
+   <td>A eller 1<br /> 1 &lt;&gt; 2<br /> A NE B<br /> A or 1<br /> 1 &lt;&gt; 2<br /> A NE B</td>
   </tr>
   <tr>
    <td>If-uttryck</td>
@@ -1298,7 +1298,7 @@ FormCalc är ett XFA-specifikt språk för att skapa e-formulärbaserade logiska
   <tr>
    <td>app.clearTimeOut()</td>
    <td>Avbryter ett tidigare registrerat timeout-intervall. Ett sådant intervall anges inledningsvis av setTimeOut.</td>
-   <td>I HTML5-formulär fungerar inte API korrekt.<br /> </td>
+   <td>I HTML5-formulär fungerar inte API:t korrekt.<br /> </td>
   </tr>
   <tr>
    <td>app.eval()</td>
@@ -1313,7 +1313,7 @@ FormCalc är ett XFA-specifikt språk för att skapa e-formulärbaserade logiska
   <tr>
    <td>app.calculate</td>
    <td>Om true (standardvärdet) kan beräkningar utföras. Om false tillåts inte beräkningar.</td>
-   <td>Alltid true för HTML5-formulär.</td>
+   <td>Alltid true för HTMl5 Forms.</td>
   </tr>
   <tr>
    <td>app.constants</td>
@@ -1353,4 +1353,4 @@ Följande klientsidade XFA-händelser stöds:
 
 >[!NOTE]
 >
->HTML5-formulär återges på klientsidan (webbläsare). Du bör **validera** och **beräkna** skript på klientsidan i stället för serverbaserade skript.
+>HTML5-formulär återges på klientsidan (webbläsare). Du bör använda skript på klientsidan **validate** och **calculate** i stället för serverbaserade skript.
