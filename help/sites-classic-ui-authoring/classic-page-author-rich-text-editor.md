@@ -8,6 +8,9 @@ discoiquuid: ccc0e434-8847-4e12-8a18-84b55fb2964b
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 7bf6657a8fd7677ab15e0f91324a065b684e2f92
+workflow-type: tm+mt
+source-wordcount: '1789'
+ht-degree: 0%
 
 ---
 
@@ -30,9 +33,9 @@ Dialogrutan för WYSIWYG-redigering innehåller många olika funktioner:
 >
 >De tillgängliga funktionerna kan konfigureras för enskilda projekt, så de kan variera för din installation.
 
-## Direktredigering {#in-place-editing}
+## Redigering på plats {#in-place-editing}
 
-Förutom det dialogbaserade läget för textredigering i Rich Text, innehåller AEM även redigeringsläget på plats, som gör det möjligt att redigera texten direkt när den visas i layouten på sidan.
+Förutom det dialogbaserade läget för textredigering i Rich Text, innehåller AEM även redigeringsläget på plats, som tillåter direkt redigering av texten så som den visas i sidlayouten.
 
 Klicka två gånger på ett stycke (ett långsamt dubbelklick) för att gå in i redigeringsläget (komponentens kantlinje är nu orange).
 
@@ -46,15 +49,15 @@ Du kan redigera texten direkt på sidan i stället för i ett dialogrutefönster
 >
 >Om innehållssökaren inte är öppen visas inte verktygsfältet.
 
-För närvarande är läget Redigering på plats aktiverat för sidelement som genereras av komponenterna **Text** och **Titel** .
+För närvarande är läget Redigering på plats aktiverat för sidelement som genereras av komponenterna **Text** och **Rubrik**.
 
 >[!NOTE]
 >
->Komponenten [!UICONTROL Title] är utformad för att innehålla en kort text utan radbrytningar. När du redigerar en titel i läget för infogad redigering öppnas en ny **textkomponent** under titeln när du skriver en radbrytning.
+>Komponenten [!UICONTROL Title] är utformad för att innehålla en kort text utan radbrytningar. När du redigerar en titel i läget för infogad redigering öppnas en ny **Text**-komponent under titeln om du anger en radbrytning.
 
 ## Funktioner i RTF-redigeraren {#features-of-the-rich-text-editor}
 
-RTF-redigeraren innehåller ett antal funktioner, som [beror på den enskilda komponentens konfiguration](/help/sites-administering/rich-text-editor.md) . Funktionerna är tillgängliga för både pekoptimerade och klassiska användargränssnitt.
+I RTF-redigeraren finns ett antal funktioner som är beroende av konfigurationen[för den enskilda komponenten. ](/help/sites-administering/rich-text-editor.md) Funktionerna är tillgängliga för både pekoptimerade och klassiska användargränssnitt.
 
 ### Grundläggande teckenformat {#basic-character-formats}
 
@@ -76,7 +79,7 @@ Alla fungerar som en växlingsknapp, så om du väljer det tas formatet bort.
 
 ![cq55_rte_stylesparagraph](assets/cq55_rte_stylesparagraph.png)
 
-Installationen kan innehålla fördefinierade format och format. De är tillgängliga i listrutorna **[!UICONTROL Format]** och **[!UICONTROL Format]** och kan användas på text som du har valt.
+Installationen kan innehålla fördefinierade format och format. Dessa är tillgängliga med listrutorna **[!UICONTROL Style]** och **[!UICONTROL Format]** och kan tillämpas på text som du har valt.
 
 Ett format kan användas på en viss sträng (ett format korrelerar till CSS):
 
@@ -86,7 +89,7 @@ Ett format tillämpas på hela textstycket (ett format är HTML-baserat):
 
 ![cq55_rte_paragraph_use](assets/cq55_rte_paragraph_use.png)
 
-Ett visst format kan bara ändras (standardformatet är **[!UICONTROL Stycke]**).
+Ett specifikt format kan bara ändras (standardvärdet är **[!UICONTROL Paragraph]**).
 
 Ett format kan tas bort; placera markören i texten som formatet har tillämpats på och klicka på ikonen Ta bort:
 
@@ -98,11 +101,12 @@ Ett format kan tas bort; placera markören i texten som formatet har tillämpats
 
 ![](do-not-localize/cq55_rte_cutcopypaste.png)
 
-Standardfunktionerna i **[!UICONTROL Klipp]** ut och **[!UICONTROL Kopiera]** är tillgängliga. Flera varianter av **[!UICONTROL Klistra]** in finns tillgängliga för olika format.
+Standardfunktionerna i **[!UICONTROL Cut]** och **[!UICONTROL Copy]** är tillgängliga. Flera varianter av **[!UICONTROL Paste]** tillhandahålls för att hantera olika format.
 
 * Klipp ut (Ctrl-X)
 * Kopiera (Ctrl-C)
-* PasteDetta är standardmekanismen för inklistring (Ctrl-V) av komponenten. vid installation utanför ramarna är detta konfigurerat att [!UICONTROL klistra in från Word].
+* Klistra in
+Detta är standardmekanismen för inklistring (Ctrl-V) av komponenten. vid installation utanför ramarna är detta konfigurerat till [!UICONTROL Paste from Word].
 
 * Klistra in som text: Tar bort alla format och formatering så att endast oformaterad text klistras in.
 
@@ -112,7 +116,7 @@ Standardfunktionerna i **[!UICONTROL Klipp]** ut och **[!UICONTROL Kopiera]** ä
 
 ![](do-not-localize/cq55_rte_undoredo.png)
 
-AEM sparar information om dina senaste 50 åtgärder i den aktuella komponenten, i kronologisk ordning. Dessa åtgärder kan ångras (och sedan göras om) i strikt ordning om det behövs.
+AEM sparar information om dina senaste 50 åtgärder i den aktuella komponenten, som hålls i kronologisk ordning. Dessa åtgärder kan ångras (och sedan göras om) i strikt ordning om det behövs.
 
 >[!CAUTION]
 >
@@ -166,19 +170,19 @@ Du kan:
 
 * Skriv in en URI direkt
 * Använd webbplatskartan för att välja en sida på webbplatsen
-* Ange URI:n och lägg sedan till målankarpunkten;t.ex. `www.TargetUri.org#AnchorName`
-* Ange endast en ankarpunkt (för att referera till&quot;den aktuella sidan&quot;);Till exempel: `#anchor`
+* Ange URI:n och lägg sedan till målankarpunkten; t.ex. `www.TargetUri.org#AnchorName`
+* Ange endast en ankarpunkt (för att referera till&quot;den aktuella sidan&quot;); Till exempel `#anchor`
 * Söka efter en sida i innehållssökaren och dra och släpp sidikonen i hyperlänksdialogrutan
 
 >[!NOTE]
 >
->URI:n kan prepended med något av de protokoll som är konfigurerade för din installation. I en standardinstallation är dessa `https://`, `ftp://`och `mailto:`. Protokoll som inte har konfigurerats för din installation kommer att avvisas och markeras som ogiltiga.
+>URI:n kan prepended med något av de protokoll som är konfigurerade för din installation. I en standardinstallation är dessa `https://`, `ftp://` och `mailto:`. Protokoll som inte har konfigurerats för din installation kommer att avvisas och markeras som ogiltiga.
 
-Om du vill bryta länken placerar du markören var som helst i länktexten och klickar på ikonen [!UICONTROL Bryt länk] :
+Om du vill bryta länken placerar du markören var som helst i länktexten och klickar på ikonen [!UICONTROL Unlink]:
 
 ![](do-not-localize/chlimage_1-10.png)
 
-### Fästpunkter {#anchors}
+### Ankarpunkter {#anchors}
 
 ![](do-not-localize/cq55_rte_anchor.png)
 
@@ -196,15 +200,15 @@ Fästpunkten visas när komponenten redigeras och kan nu användas inom ett län
 
 ![](do-not-localize/cq55_rte_findreplace.png)
 
-AEM tillhandahåller både en **Sök** - och en **Ersätt** -funktion (sök och ersätt).
+AEM innehåller både funktionen **Sök** och funktionen **Ersätt** (sök och ersätt).
 
-Båda har en **Sök efter nästa** knapp för att söka efter den angivna textens öppna komponent. Du kan också ange om du vill att skiftläget (övre/nedre) ska matchas.
+Båda har en **Sök nästa**-knapp för att söka efter den angivna texten i den öppna komponenten. Du kan också ange om du vill att skiftläget (övre/nedre) ska matchas.
 
 Sökningen startar alltid från den aktuella markörpositionen i texten. När komponentens slut nås visas ett meddelande om att nästa sökåtgärd kommer att starta uppifrån.
 
 ![cq55_rte_find_use](assets/cq55_rte_find_use.png)
 
-Med alternativet **Ersätt** kan du **söka** och sedan **ersätta** en enskild instans med den angivna texten eller **ersätta alla** instanser i den aktuella komponenten.
+Med alternativet **Ersätt** kan du **Sök** och sedan **Ersätt** en enskild instans med den angivna texten, eller **Ersätt alla**-instanser i den aktuella komponenten.
 
 ![cq55_rte_findreplace_use](assets/cq55_rte_findreplace_use.png)
 
@@ -216,7 +220,7 @@ Du kan dra bilder från innehållssökaren för att lägga till dem i texten.
 
 >[!NOTE]
 >
->AEM erbjuder också specialkomponenter för mer detaljerad bildkonfiguration. Komponenterna **Bild** och **Textbild** är till exempel tillgängliga.
+>AEM erbjuder också specialkomponenter för mer detaljerad bildkonfiguration. Till exempel är komponenterna **Bild** och **Textbild** tillgängliga.
 
 ### Stavningskontroll {#spelling-checker}
 
@@ -230,31 +234,31 @@ Felaktiga stavningar kommer att markeras:
 
 >[!NOTE]
 >
->Stavningskontrollen fungerar på webbplatsens språk antingen genom att använda underträdets language-egenskap eller genom att extrahera språket från URL:en. Till exempel kontrolleras `en` grenen för engelska och den för tyska för `de` grenen.
+>Stavningskontrollen fungerar på webbplatsens språk antingen genom att använda underträdets language-egenskap eller genom att extrahera språket från URL:en. Till exempel kommer grenen `en` att kontrolleras för engelska och grenen `de` för tyska.
 
 ### Tabeller {#tables}
 
 Tabeller är tillgängliga båda:
 
-* Som **tabellkomponenten**
+* Som komponenten **Tabell**
 
    ![chlimage_1-105](assets/chlimage_1-105.png)
 
-* I **Text** -komponenten
+* I komponenten **Text**
 
    ![](do-not-localize/chlimage_1-11.png)
 
    >[!NOTE]
    >
-   >Även om tabeller är tillgängliga i textredigeraren bör du använda **tabellkomponenten** när du skapar tabeller.
+   >Även om tabeller är tillgängliga i textredigeraren bör du använda komponenten **Tabell** när du skapar tabeller.
 
-I både **Text** - och **Table** -komponenterna är tabellfunktionaliteten tillgänglig via snabbmenyn (oftast högermusknappen) som klickas i tabellen. till exempel:
+I både tabellen **Text** och **Tabellfunktioner** för komponenterna är tillgängliga via snabbmenyn (oftast högermusknappen) som klickas i tabellen. till exempel:
 
 ![cq55_rte_tablemenu](assets/cq55_rte_tablemenu.png)
 
 >[!NOTE]
 >
->I **tabellkomponenten** finns det också ett specialverktygsfält, som innehåller olika RTF-redigeringsfunktioner och en delmängd av tabellspecifika funktioner.
+>I **Table**-komponenten finns det också ett specialverktygsfält, som innehåller olika RTF-redigeringsfunktioner, tillsammans med en delmängd av de tabellspecifika funktionerna.
 
 Tabellspecifika funktioner är:
 
@@ -292,7 +296,7 @@ Tabellens grundläggande egenskaper kan konfigureras innan du klickar på **OK**
 
 >[!CAUTION]
 >
->Du bör ange en bredd för tabellen.
+>Adobe rekommenderar att du anger en bredd för tabellen.
 
 #### Cellegenskaper {#cell-properties}
 
@@ -304,16 +308,16 @@ Egenskaperna för en viss cell, eller serie med celler, kan konfigureras:
 
 * **Bredd**
 * **Höjd**
-* **Vågrät justering** - vänster, mitten eller höger
-* **Lodrät justering** - Överkant, Mitten, Underkant eller Baslinje
-* **Celltyp**- Data eller rubrik
-* **** Använd för: En cell, Hela raden, Hela kolumnen
+* **Vågrät justering**  - vänster, mitten eller höger
+* **Lodrät justering**  - Överkant, Mitten, Underkant eller Baslinje
+* **Celltyp** - Data eller rubrik
+* **Använd för:** Enkelcell, Hela raden, Hela kolumnen
 
 #### Lägg till eller ta bort rader {#add-or-delete-rows}
 
 ![cq55_rte_rows](assets/cq55_rte_rows.png)
 
-Rader kan läggas till antingen ovanför eller under den aktuella raden.
+Rader kan läggas till ovanför eller under den aktuella raden.
 
 Den aktuella raden kan också tas bort.
 
@@ -333,7 +337,7 @@ Markerar hela den aktuella raden eller kolumnen. Särskilda åtgärder (t.ex. sa
 
 #### Sammanfoga celler {#merge-cells}
 
-![cq55_rte_cellmerge](assets/cq55_rte_cellmerge.png) ![cq55_rte_cellmerge-1](assets/cq55_rte_cellmerge-1.png)
+![cq55_te_](assets/cq55_rte_cellmerge.png) ![cellmergecq55_rte_cellmerge-1](assets/cq55_rte_cellmerge-1.png)
 
 * Om du har markerat en grupp celler kan du sammanfoga dessa till en.
 * Om du bara har markerat en cell kan du sammanfoga den med cellen till höger eller nedanför.
@@ -347,7 +351,7 @@ Markera en enskild cell för att dela den:
 * Om du delar en cell vågrätt skapas en ny cell till höger om den aktuella cellen, i den aktuella kolumnen.
 * När du delar en cell lodrätt genereras en ny cell under den aktuella cellen, men inom den aktuella raden.
 
-#### Creating Nested Tables {#creating-nested-tables}
+#### Skapar kapslade tabeller {#creating-nested-tables}
 
 ![chlimage_1-107](assets/chlimage_1-107.png)
 
@@ -365,7 +369,7 @@ Om du skapar en kapslad tabell skapas en ny, fristående tabell i den aktuella c
 
 ![cq55_rte_removetable](assets/cq55_rte_removetable.png)
 
-Använd alternativet för att ta bort tabellen från **[!UICONTROL Text]** -komponenten.
+Använd alternativet för att ta bort tabellen från **[!UICONTROL Text]**-komponenten.
 
 ### Specialtecken {#special-characters}
 
@@ -393,4 +397,4 @@ Ser ut så här i källäge (källan är ofta mycket längre, så du måste rull
 
 >[!CAUTION]
 >
->När du lämnar källäget gör AEM vissa valideringskontroller (till exempel ser du till att texten finns korrekt i/kapslas i block). Detta kan leda till ändringar i dina redigeringar.
+>När du lämnar källäget utför AEM vissa valideringskontroller (t.ex. ser du till att texten är korrekt innesluten/kapslad i block). Detta kan leda till ändringar i dina redigeringar.
