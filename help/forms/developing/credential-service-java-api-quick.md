@@ -17,7 +17,7 @@ ht-degree: 0%
 ---
 
 
-# Java API-snabbstart (SOAP) för autentiseringsuppgifter {#credential-service-java-api-quickstart-soap}
+# Java API Quick Start (SOAP) {#credential-service-java-api-quickstart-soap} för autentiseringsuppgifter
 
 Java API Quick Start (SOAP) är tillgängligt för tjänsten Credential.
 
@@ -37,7 +37,7 @@ AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutning
 
 ## Snabbstart (SOAP-läge): Importera autentiseringsuppgifter med Java API {#quick-start-soap-mode-importing-credentials-using-the-java-api}
 
-I följande kodexempel importeras en referens baserat på en fil med namnet *cred.p12*. Aliasvärdet som används för att importera autentiseringsuppgifterna är `Secure`. (Se [Importera autentiseringsuppgifter med Trust Manager API](/help/forms/developing/credentials.md#importing-credentials-by-using-the-trust-manager-api).)
+I följande kodexempel importeras en autentiseringsuppgift baserad på en fil med namnet *cred.p12*. Aliasvärdet som används för att importera autentiseringsuppgifterna är `Secure`. (Se [Importera autentiseringsuppgifter med Trust Manager API](/help/forms/developing/credentials.md#importing-credentials-by-using-the-trust-manager-api).)
 
 ```java
  /*
@@ -138,7 +138,7 @@ I följande kodexempel importeras en referens baserat på en fil med namnet *cre
 
 ## Snabbstart (SOAP-läge): Ta bort autentiseringsuppgifter med Java API {#quick-start-soap-mode-deleting-credentials-using-the-java-api}
 
-I följande kodexempel tas en referens bort baserat på ett aliasvärde som är *säkert*. (Se [Ta bort autentiseringsuppgifter med Trust Manager API](/help/forms/developing/credentials.md#deleting-credentials-by-using-the-trust-manager-api).)
+I följande kodexempel tas en autentiseringsuppgift bort baserat på aliasvärdet *secure*. (Se [Ta bort autentiseringsuppgifter med Trust Manager API](/help/forms/developing/credentials.md#deleting-credentials-by-using-the-trust-manager-api).)
 
 ```java
  /*
