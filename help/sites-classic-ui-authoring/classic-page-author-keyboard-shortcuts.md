@@ -1,8 +1,8 @@
 ---
 title: Kortkommandon vid sidredigering
 seo-title: Kortkommandon vid sidredigering
-description: Olika kortkommandon finns tillgängliga i hela AEM. En del gäller när du redigerar sidor, andra när du använder konsoler.
-seo-description: Olika kortkommandon finns tillgängliga i hela AEM. En del gäller när du redigerar sidor, andra när du använder konsoler.
+description: Olika kortkommandon finns i hela AEM. En del gäller när du redigerar sidor, andra när du använder konsoler.
+seo-description: Olika kortkommandon finns i hela AEM. En del gäller när du redigerar sidor, andra när du använder konsoler.
 uuid: a1753e0b-5701-426c-b974-2e8b8d81a30d
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,17 +11,20 @@ content-type: reference
 discoiquuid: 68fa88c5-a759-49fa-ab9b-8dc63c049d5f
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '336'
+ht-degree: 2%
 
 ---
 
 
 # Kortkommandon vid sidredigering{#keyboard-shortcuts-when-editing-pages}
 
-Olika kortkommandon finns tillgängliga i hela AEM. En del gäller när du redigerar sidor, andra när du [använder konsoler](/help/sites-classic-ui-authoring/author-env-keyboard-shortcuts.md).
+Olika kortkommandon finns i hela AEM. Vissa gäller när du redigerar sidor, andra för [användning av konsoler](/help/sites-classic-ui-authoring/author-env-keyboard-shortcuts.md).
 
 >[!NOTE]
 >
->För tangentkombinationerna i kolumnen **Kortkommando** i följande tabeller fungerar både Ctrl och Kommando i macOS.
+>För tangentkombinationerna i kolumnen **Kortkommando** i följande tabeller fungerar både Ctrl- och Kommando-tangenterna i macOS.
 
 >[!NOTE]
 >
@@ -29,6 +32,7 @@ Olika kortkommandon finns tillgängliga i hela AEM. En del gäller när du redig
 >
 >* Windows: Ctrl-klicka på nödvändiga komponenter.
 >* Mac: Cmd+klicka på de nödvändiga komponenterna.
+
 >
 
 
@@ -70,7 +74,7 @@ Olika kortkommandon finns tillgängliga i hela AEM. En del gäller när du redig
   <tr>
    <td> </td>
    <td><strong><code>Ctrl-X</code></strong></td>
-   <td>Klipp ut markerade stycken.<strong><br /></strong> Obs! Det urklippta stycket försvinner inte förrän det har klistrats in på den nya platsen.</td>
+   <td>Klipp ut markerade stycken.<strong><br /> Obs!</strong> Det urklippta stycket försvinner inte förrän det har klistrats in på den nya platsen.</td>
   </tr>
   <tr>
    <td> </td>
@@ -95,7 +99,7 @@ Olika kortkommandon finns tillgängliga i hela AEM. En del gäller när du redig
   <tr>
    <td> </td>
    <td><strong><code>Alt-right-click</code></strong></td>
-   <td>Använd standardsnabbmenyn (webbläsaren).<br /><strong> </strong>Obs! AEM-snabbmenyer finns bara i det klassiska användargränssnittet.</td>
+   <td>Använd standardsnabbmenyn (webbläsaren).<br /> <strong>Obs!</strong> AEM snabbmenyer finns bara i det klassiska användargränssnittet.</td>
   </tr>
   <tr>
    <td> </td>
@@ -143,14 +147,14 @@ Olika kortkommandon finns tillgängliga i hela AEM. En del gäller när du redig
    <td>Stäng förslagslagret.</td>
   </tr>
   <tr>
-   <td>Content Finder<br /> </td>
+   <td>Innehållssökning<br /> </td>
    <td><strong><code>Alt+drag</code></strong></td>
    <td><p>Dra resurser, släpp på målet.</p> <p>Släppåtgärden skapar ett nytt stycke. i stället för att ersätta resursen i målet.</p> </td>
   </tr>
  </tbody>
 </table>
 
-Olika kortkommandon är också tillgängliga för skrivbordsanvändare när de använder [konsolerna](/help/sites-classic-ui-authoring/author-env-keyboard-shortcuts.md).
+Olika kortkommandon är också tillgängliga för skrivbordsanvändare när de använder [konsoler](/help/sites-classic-ui-authoring/author-env-keyboard-shortcuts.md).
 
 ## Kortkommandon för utveckling {#keyboard-shortcuts-for-development}
 
@@ -165,7 +169,7 @@ Det finns ytterligare kortkommandon för skrivbordsutvecklare när du använder 
   </tr>
   <tr>
    <td>Redigeringsläge</td>
-   <td><br /> Ange följande suffix i URL:en: Använd <code>?debugClientLibs=true</code><br /> sedan:<br /> <strong><code>Ctrl-Shift-U</code></strong></td>
+   <td>Ange följande suffix i URL:<br /> <code>?debugClientLibs=true</code><br /> Använd sedan:<br /> <strong><code>Ctrl-Shift-U</code></strong></td>
    <td>Om du vill se timingstatistik för sidinläsning.</td>
   </tr>
  </tbody>
