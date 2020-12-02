@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 2e408acb-3802-4837-8619-688cfc3abfa7
 translation-type: tm+mt
 source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+workflow-type: tm+mt
+source-wordcount: '486'
+ht-degree: 4%
 
 ---
 
@@ -29,8 +32,8 @@ Välkomstkonsolen innehåller en lista med länkar till de olika konsolerna och 
 
 Det går att konfigurera synliga länkar. Detta kan definieras för specifika användare och/eller grupper. Vilka åtgärder som ska vidtas beror på måltypen (som motsvarar den del av konsolen som de finns i):
 
-* [Huvudkonsoler](#links-in-main-console-left-pane) - Länkar i huvudkonsolen (vänster ruta)
-* [Resurser, Dokumentation och referens, Funktioner](#links-in-sidebar-right-pane) - Länkar i sidofältet (den högra rutan)
+* [Huvudkonsoler](#links-in-main-console-left-pane)  - Länkar i huvudkonsolen (vänster ruta)
+* [Resurser, dokumentation och referens, funktioner](#links-in-sidebar-right-pane)  - Länkar i sidofältet (den högra rutan)
 
 ## Länkar i huvudkonsolen (vänster ruta) {#links-in-main-console-left-pane}
 
@@ -38,39 +41,39 @@ Här visas huvudkonsolerna för AEM.
 
 ![cq_welcomescreenmainconsole](assets/cq_welcomescreenmainconsole.png)
 
-### Konfigurera om huvudkonsollänkar är synliga {#configuring-whether-main-console-links-are-visible}
+### Konfigurerar om huvudkonsollänkar är synliga {#configuring-whether-main-console-links-are-visible}
 
 Nodnivåbehörigheter avgör om länken kan ses eller inte. De aktuella noderna är:
 
-* **** Webbplatser: `/libs/wcm/core/content/siteadmin`
+* **Webbplatser:** `/libs/wcm/core/content/siteadmin`
 
-* **** Digital Assets: `/libs/wcm/core/content/damadmin`
+* **Digital Assets:** `/libs/wcm/core/content/damadmin`
 
-* **** Community: `/libs/collab/core/content/admin`
+* **Community:** `/libs/collab/core/content/admin`
 
-* **** Kampanjer: `/libs/mcm/content/admin`
+* **Kampanjer:** `/libs/mcm/content/admin`
 
-* **** Inkorg: `/libs/cq/workflow/content/inbox`
+* **Inkorg:** `/libs/cq/workflow/content/inbox`
 
-* **** Användare: `/libs/cq/security/content/admin`
+* **Användare:** `/libs/cq/security/content/admin`
 
-* **** Systemutvärdering: `/libs/wcm/core/content/misc`
+* **Systemutvärdering:** `/libs/wcm/core/content/misc`
 
-* **** Taggning: `/libs/cq/tagging/content/tagadmin`
+* **Taggning:** `/libs/cq/tagging/content/tagadmin`
 
-Exempel:
+Till exempel:
 
-* Om du vill begränsa åtkomst till **verktyg** tar du bort läsåtkomst från
+* Om du vill begränsa åtkomsten till **Verktyg** tar du bort läsåtkomst från
 
    `/libs/wcm/core/content/misc`
 
-Mer information om hur du anger behörigheter finns i avsnittet [](/help/sites-administering/security.md) Säkerhet.
+Mer information om hur du anger behörigheter finns i [Security-avsnittet](/help/sites-administering/security.md).
 
 ### Länkar i sidofältet (höger ruta) {#links-in-sidebar-right-pane}
 
 ![cq_welcomescreensidebar](assets/cq_welcomescreensidebar.png)
 
-Länkarna baseras på att noder finns *och* läses under följande sökväg:
+Länkarna baseras på att det finns *och* läsåtkomst till noder under följande sökväg:
 
 `/libs/cq/core/content/welcome`
 
@@ -83,7 +86,7 @@ Det finns tre avsnitt (med ett mellanrum) som standard:
    <td> </td>
   </tr>
   <tr>
-   <td> Molntjänster</td>
+   <td> Cloud Services</td>
    <td><code>/libs/cq/core/content/welcome/resources/cloudservices</code></td>
   </tr>
   <tr>
@@ -135,7 +138,7 @@ Det finns tre avsnitt (med ett mellanrum) som standard:
    <td><code>/libs/cq/core/content/welcome/features/packages</code></td>
   </tr>
   <tr>
-   <td> Paketresurs</td>
+   <td> Paketdelning</td>
    <td><code>/libs/cq/core/content/welcome/features/share</code></td>
   </tr>
   <tr>
@@ -143,7 +146,7 @@ Det finns tre avsnitt (med ett mellanrum) som standard:
    <td><code>/libs/cq/core/content/welcome/features/cluster</code></td>
   </tr>
   <tr>
-   <td> Säkerhetskopiera</td>
+   <td> Säkerhetskopiering</td>
    <td><code>/libs/cq/core/content/welcome/features/backup</code></td>
   </tr>
   <tr>
@@ -173,9 +176,9 @@ Du kan dölja en länk för specifika användare eller grupper genom att ta bort
 
    `/libs/cq/core/content/welcome/features/<link-target>`
 
-Exempel:
+Till exempel:
 
-* Ta bort länken till **rapporter** genom att ta bort läsåtkomst från
+* Om du vill ta bort länken till **rapporter** tar du bort läsåtkomst från
 
    `/libs/cq/core/content/welcome/resources/reports`
 
@@ -183,30 +186,31 @@ Exempel:
 
    `/libs/cq/core/content/welcome/features/packages`
 
-Mer information om hur du anger behörigheter finns i avsnittet [](/help/sites-administering/security.md) Säkerhet.
+Mer information om hur du anger behörigheter finns i [Security-avsnittet](/help/sites-administering/security.md).
 
 ### Länkmarkeringsmekanism {#link-selection-mechanism}
 
-ConsoleUtil `/libs/cq/core/components/welcome/welcome.jsp` används [](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/ConsoleUtil.html)och kör en fråga på noder som har egenskapen:
+I `/libs/cq/core/components/welcome/welcome.jsp` används [ConsoleUtil](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/ConsoleUtil.html), som kör en fråga på noder som har egenskapen:
 
-* `jcr:mixinTypes` med värdet: `cq:Console`
+* `jcr:mixinTypes` med värdet:  `cq:Console`
 
 >[!NOTE]
 >
 >Kör följande fråga för att se den befintliga listan:
 >
 >* `select * from cq:Console`
+
 >
 
 
 
-När en användare eller grupp inte har läsbehörighet för en nod med mixin `cq:Console`hämtas inte den noden av `ConsoleUtil` sökningen och visas därför inte på konsolen.
+När en användare eller grupp inte har läsbehörighet för en nod med mixin `cq:Console` hämtas inte den noden av `ConsoleUtil`-sökningen, och därför visas den inte på konsolen.
 
 ### Lägga till ett anpassat objekt {#adding-a-custom-item}
 
-Du kan använda [länkmarkeringsfunktionen](#link-selection-mechanism) för att lägga till egna objekt i länklistan.
+Du kan använda funktionen [för länkval](#link-selection-mechanism) för att lägga till egna objekt i länklistan.
 
-Lägg till ditt anpassade objekt i listan genom att lägga till `cq:Console` mixen i widgeten eller resursen. Detta görs genom att definiera egenskapen:
+Lägg till ditt anpassade objekt i listan genom att lägga till `cq:Console`-blandningen i widgeten eller resursen. Detta görs genom att definiera egenskapen:
 
-* `jcr:mixinTypes` med värdet: `cq:Console`
+* `jcr:mixinTypes` med värdet:  `cq:Console`
 
