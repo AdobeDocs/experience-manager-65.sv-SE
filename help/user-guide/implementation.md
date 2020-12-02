@@ -1,19 +1,22 @@
 ---
 title: Användarhandbok för implementering av AEM 6.5
 seo-title: Användarhandbok för implementering av AEM 6.5
-description: En översikt över hur man implementerar AEM 6.5
-seo-description: En översikt över hur man implementerar AEM 6.5
+description: En översikt över hur du implementerar AEM 6.5
+seo-description: En översikt över hur du implementerar AEM 6.5
 translation-type: tm+mt
 source-git-commit: 315d1ac1a00da474f535087eff49c2be8fee8c37
+workflow-type: tm+mt
+source-wordcount: '119'
+ht-degree: 26%
 
 ---
 
 
 # Användarhandböcker för implementering av AEM 6.5 {#aem-65-implementation-user-guides}
 
-## Utveckling i AEM {#developing-on-aem}
+## Utvecklar på AEM {#developing-on-aem}
 
-Är du AEM-utvecklare? [Kom igång med utvecklingen på AEM.](/help/sites-developing/home.md)
+Är du AEM utvecklare? [Kom igång med AEM.](/help/sites-developing/home.md)
 
 ## Kärnkomponenter för AEM {#core-components-for-aem}
 
@@ -29,4 +32,4 @@ source-git-commit: 315d1ac1a00da474f535087eff49c2be8fee8c37
 
 ## Dispatcher-konfiguration {#dispatcher-configuration}
 
-[Konfigurera din dispatcher med AEM](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/dispatcher.html)
+[Konfigurera dispatchern med AEM](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/dispatcher.html)
