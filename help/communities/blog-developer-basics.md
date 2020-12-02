@@ -33,7 +33,7 @@ Den här sidan innehåller viktig information om hur du arbetar med bloggfunktio
 
 ## Grundläggande för klientsidan {#essentials-for-client-side}
 
-Bloggfunktionen består av två huvudkomponenter som är tillgängliga genom att lägga till [Blog-funktionen](/help/communities/functions.md#blog-function) eller genom att lägga till komponenterna på en sida i redigeringsläge för författare.
+Bloggfunktionen består av två huvudkomponenter som är tillgängliga genom att lägga till funktionen [Blog](/help/communities/functions.md#blog-function) eller genom att lägga till komponenterna på en sida i redigeringsläge för författare.
 
 ### Blogg {#blog}
 
@@ -66,13 +66,13 @@ Bloggfunktionen består av två huvudkomponenter som är tillgängliga genom att
  </tbody>
 </table>
 
-### Blogg, marginallist {#blog-sidebar}
+### Blogg, sidofält {#blog-sidebar}
 
 | **resourceType** | social/journal/components/hbs/sidebar |
 |---|---|
 | [**oklanderlig**](/help/communities/scf.md#add-or-include-a-communities-component) | Nej |
 | [**klientlibs**](/help/communities/clientlibs.md) | cq.social.hbs.journal_sidebar |
-| **templates** | /libs/social/journal/components/hbs/sidebar/sidebar.hbs |
+| **mallar** | /libs/social/journal/components/hbs/sidebar/sidebar.hbs |
 | **css** | /libs/social/journal/components/hbs/sidebar/clientlibs/sidebar.css |
 | **egenskaper** | se [Bloggfunktion](/help/communities/blog-feature.md) |
 
@@ -88,29 +88,29 @@ Bloggfunktionen består av två huvudkomponenter som är tillgängliga genom att
 
 ### Bloggfunktion {#blog-function}
 
-En community-webbplatsstruktur som innehåller [bloggfunktionen](/help/communities/functions.md#blog-function) kommer att ha konfigurerade `Blog` och `Blog Sidebar` komponenter. Bloggfunktionen stöder identifiering av en [behörig medlemsgrupp](/help/communities/users.md#privileged-members-group).
+En community-platsstruktur som innehåller [bloggfunktionen](/help/communities/functions.md#blog-function) har konfigurerat komponenterna `Blog` och `Blog Sidebar`. Bloggfunktionen stöder identifiering av en [privilegierad medlemsgrupp](/help/communities/users.md#privileged-members-group).
 
 ### Åtkomst till blogginlägg (UGC) {#accessing-blog-entries-ugc}
 
 UGC bör modereras med någon av standardmetoderna för moderering.
-Se [Moderera användargenererat innehåll](/help/communities/moderate-ugc.md).
+Se [Moderating User Generated Content](/help/communities/moderate-ugc.md).
 
-Från och med AEM 6.1 Communities omfattar användningen av en [gemensam butik](/help/communities/working-with-srp.md) för UGC programmatisk åtkomst till UGC oavsett vilket lagringsalternativ som valts (t.ex. ASRP, MSRP eller JSRP).
+Från och med AEM 6.1 Communities omfattar användningen av en [gemensam butik](/help/communities/working-with-srp.md) för UGC programmatisk åtkomst till UGC oavsett valt lagringsalternativ (som ASRP, MSRP eller JSRP).
 
 **Platsen och formatet för användargenererat innehåll i databasen kan ändras utan förvarning**.
 
 Se :
 
-* [Översikt över](/help/communities/srp.md) lagringsresursprovidern - introduktion och översikt över databasanvändningen.
-* [SRP och UGC Essentials](/help/communities/srp-and-ugc.md) - SRP-verktygsmetoder och exempel.
-* [Åtkomst till UGC med SRP](/help/communities/accessing-ugc-with-srp.md) - riktlinjer för kodning.
-* [Omfaktorisering för SocialUtils](/help/communities/socialutils.md) - mappning av utfasade verktygsmetoder till aktuella SRP-verktygsmetoder.
+* [Översikt över](/help/communities/srp.md)  lagringsresursprovidern - introduktion och översikt över databasanvändningen.
+* [SRP och UGC Essentials](/help/communities/srp-and-ugc.md) - SRP-verktygsmetoder och -exempel.
+* [Åtkomst till UGC med riktlinjerna för SRP](/help/communities/accessing-ugc-with-srp.md) -kodning.
+* [Omfaktorisering](/help/communities/socialutils.md)  för SocialUtils - mappning av utgått från verktygsmetoder till aktuella SRP-verktygsmetoder.
 
 ## Primär utgivare {#primary-publisher}
 
 När distributionen är en publiceringsgrupp är det nödvändigt att identifiera en primär utgivare som söker efter artiklar som är schemalagda att publiceras.
 
-Mer information finns i [Primär utgivare](/help/communities/deploy-communities.md#primary-publisher) .
+Mer information finns i [Primär utgivare](/help/communities/deploy-communities.md#primary-publisher).
 
 ## Tillåta multimedia {#allowing-rich-media}
 
@@ -120,7 +120,7 @@ Den AEM plattformen blockerar länkar från andra webbplatser för att förhindr
 
 Från och med AEM 6.2 inkluderas de ändringar som tidigare krävdes för att göras manuellt i standardkonfigurationsfilen för AntiSamy.
 
-Multimedia bäddas in i en bloggartikel genom att du väljer `Embed Media from External Sites` ikonen :
+Multimedia bäddas in i en bloggartikel genom att du väljer ikonen `Embed Media from External Sites` :
 
 ![media](assets/media-icon.png)
 
