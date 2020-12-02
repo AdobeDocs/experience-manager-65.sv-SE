@@ -11,13 +11,16 @@ content-type: reference
 discoiquuid: 104d1c64-b9b3-40f5-8f9b-fe92d9daaa1f
 translation-type: tm+mt
 source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+workflow-type: tm+mt
+source-wordcount: '648'
+ht-degree: 2%
 
 ---
 
 
 # Använda Dölj villkor{#using-hide-conditions}
 
-Dölj villkor kan användas för att avgöra om en komponentresurs återges eller inte. Ett exempel på detta är när en mallskapare konfigurerar [listkomponenten](https://helpx.adobe.com/experience-manager/core-components/using/list.html) Core Component i [mallredigeraren](/help/sites-authoring/templates.md) och bestämmer sig för att inaktivera alternativen för att skapa listan baserat på underordnade sidor. Om du inaktiverar det här alternativet i designdialogrutan anges en egenskap så att när listkomponenten återges utvärderas dolda villkor och alternativet att visa underordnade sidor inte visas.
+Dölj villkor kan användas för att avgöra om en komponentresurs återges eller inte. Ett exempel på detta är när en mallskapare konfigurerar listkomponenten [](https://helpx.adobe.com/experience-manager/core-components/using/list.html) i [mallredigeraren](/help/sites-authoring/templates.md) och bestämmer sig för att inaktivera alternativen för att skapa listan baserat på underordnade sidor. Om du inaktiverar det här alternativet i designdialogrutan anges en egenskap så att när listkomponenten återges utvärderas dolda villkor och alternativet att visa underordnade sidor inte visas.
 
 ## Översikt {#overview}
 
@@ -31,7 +34,7 @@ Genom att använda dolda villkor kan administratörer, utvecklare och superanvä
 
 ## Implementerings- och användningsinformation {#implementation-and-usage-details}
 
-`com.adobe.granite.ui.components.FilteringResourceWrapper` är ansvarig för att filtrera resurserna baserat på förekomsten och värdet av den `granite:hide` egenskap som finns i det fält som ska filtreras. Implementeringen av `/libs/cq/gui/components/authoring/dialog/dialog.jsp` innehåller en instans av `FilteringResourceWrapper.`
+`com.adobe.granite.ui.components.FilteringResourceWrapper` är ansvarig för att filtrera resurserna baserat på  `granite:hide` egenskapens existens och värde, som finns i det fält som ska filtreras. Implementeringen av `/libs/cq/gui/components/authoring/dialog/dialog.jsp` innehåller en instans av `FilteringResourceWrapper.`
 
 Implementeringen använder Granite [ELResolver API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/docs/server/el.html) och lägger till en `cqDesign` anpassad variabel via ExpressionCustomizer.
 
@@ -55,9 +58,9 @@ När du definierar ditt dolda uttryck ska du tänka på:
 
 ## Exempel {#example}
 
-Exempel på gömda förhållanden finns i hela AEM och i synnerhet i [kärnkomponenterna](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) . Ta till exempel huvudkomponenten [för](https://helpx.adobe.com/experience-manager/core-components/using/list.html)listan.
+Exempel på dolda villkor finns i AEM och i [kärnkomponenterna](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html). Ta till exempel huvudkomponenten [list](https://helpx.adobe.com/experience-manager/core-components/using/list.html).
 
-[Med mallredigeraren](/help/sites-authoring/templates.md)kan mallskaparen i designdialogrutan definiera vilka alternativ för listkomponenten som är tillgängliga för sidförfattaren. Alternativ som om listan ska kunna vara en statisk lista, en lista med underordnade sidor, en lista med taggade sidor osv. kan aktiveras eller inaktiveras.
+[Med mallredigeraren](/help/sites-authoring/templates.md) kan mallskaparen i designdialogrutan definiera vilka alternativ för listkomponenten som är tillgängliga för sidförfattaren. Alternativ som om listan ska kunna vara en statisk lista, en lista med underordnade sidor, en lista med taggade sidor osv. kan aktiveras eller inaktiveras.
 
 Om en mallskapare väljer att inaktivera alternativet för underordnade sidor, ställs en designegenskap in och ett dolt villkor utvärderas mot den, vilket gör att alternativet inte återges för sidförfattaren.
 
@@ -65,18 +68,18 @@ Om en mallskapare väljer att inaktivera alternativet för underordnade sidor, s
 
    ![chlimage_1-218](assets/chlimage_1-218.png)
 
-1. I designdialogrutan för listkärnkomponenten kan mallskaparen välja alternativet **Inaktivera underordnade** för att förhindra att alternativet genererar en lista baserad på underordnade sidor som visas för sidförfattaren.
+1. I designdialogrutan för listkärnkomponenten kan mallskaparen välja alternativet **Inaktivera underordnade** för att förhindra att alternativet att generera en lista baserad på underordnade sidor visas för sidförfattaren.
 
    ![chlimage_1-219](assets/chlimage_1-219.png)
 
-1. En principnod skapas under `/conf/we-retail/settings/wcm/policies/weretail/components/content/lis`den med egenskapen `disableChildren` inställd på `true`.
-1. Villkoret hide definieras som värdet för en `granite:hid`e-egenskap i egenskapsnoden dialog `/conf/we-retail/settings/wcm/policies/weretail/components/content/list`
+1. En principnod skapas under `/conf/we-retail/settings/wcm/policies/weretail/components/content/lis`t med egenskapen `disableChildren` inställd på `true`.
+1. Villkoret hide definieras som värdet på en `granite:hid`e-egenskap i egenskapsnoden `/conf/we-retail/settings/wcm/policies/weretail/components/content/list` i dialogrutan
 
    ![chlimage_1-220](assets/chlimage_1-220.png)
 
-1. Värdet för `disableChildren` hämtas från designkonfigurationen och uttrycket `${cdDesign.disableChildren}` utvärderas till `false`, vilket innebär att alternativet inte återges som en del av komponenten.
+1. Värdet `disableChildren` hämtas från designkonfigurationen och uttrycket `${cdDesign.disableChildren}` utvärderas till `false`, vilket innebär att alternativet inte återges som en del av komponenten.
 
-   Du kan visa uttrycket hide som värdet för `granite:hide` egenskapen [i GitHub här](https://github.com/Adobe-Marketing-Cloud/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/list/v1/list/_cq_dialog/.content.xml#L40).
+   Du kan visa det dolda uttrycket som värdet för egenskapen `granite:hide` [i GitHub här](https://github.com/Adobe-Marketing-Cloud/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/list/v1/list/_cq_dialog/.content.xml#L40).
 
 1. Alternativet **Underordnade sidor** återges inte längre för sidförfattaren när listkomponenten används.
 
