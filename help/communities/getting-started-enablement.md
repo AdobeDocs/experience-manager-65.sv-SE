@@ -22,13 +22,13 @@ ht-degree: 0%
 
 AEM Communities hjälper varumärken att skapa enhetliga upplevelser över digitala och personliga kanaler genom att underlätta aktivering för anställda och kunder med en katalog över aktiveringsresurser, tilldelat innehåll och dynamiska rekommendationer - allt som levereras inom en social community för att främja engagemang.
 
-Här följer en självstudiekurs om hur du snabbt skapar en [aktiveringscommunity](overview.md#enablement-community) för demonstrations- eller utvecklingsändamål.
+Här följer en självstudiekurs om hur du snabbt konfigurerar en [aktiveringscommunity](overview.md#enablement-community) för demonstrations- eller utvecklingsändamål.
 
-En självstudiekurs om hur du snabbt skapar en [engagemangscommunity](overview.md#engagement-community)finns på [Komma igång med AEM Communities](getting-started.md).
+En självstudiekurs om hur du snabbt skapar en [engagemangscommunity](overview.md#engagement-community) finns på [Komma igång med AEM Communities](getting-started.md).
 
 >[!NOTE]
 >
->I den här självstudiekursen förutsätts att [funktionspaket 1](deploy-communities.md#latestfeaturepack) eller senare för Communities installeras.
+>I den här självstudiekursen förutsätts att [användarfunktionspaket 1](deploy-communities.md#latestfeaturepack) eller senare installeras.
 
 * [Inledande konfiguration](enablement-setup.md)
 
