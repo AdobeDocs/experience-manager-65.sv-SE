@@ -33,7 +33,7 @@ I följande tabell beskrivs de olika sätt som du kan anropa AEM Forms-tjänster
  <tbody>
   <tr>
    <td><p>Fjärrintegrering</p></td>
-   <td><p>Med fjärrintegrering kan Flex-klienter anropa tjänståtgärder. (Se <a href="/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting">Anropa AEM Forms med (borttaget för AEM formulär) AEM Forms Remoting</a>.)</p></td>
+   <td><p>Med fjärrintegrering kan Flex-klienter anropa tjänståtgärder. (Se <a href="/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting">Anropa AEM Forms med (Borttaget för AEM formulär) AEM Forms Remoting</a>.)</p></td>
   </tr>
   <tr>
    <td><p>Java API</p></td>
@@ -45,7 +45,7 @@ I följande tabell beskrivs de olika sätt som du kan anropa AEM Forms-tjänster
   </tr>
   <tr>
    <td><p>REST-begäranden</p></td>
-   <td><p>AEM Forms stöder REST-begäranden. En tjänst kan anropas direkt från en HTML-sida. (Se <a href="/help/forms/developing/invoking-aem-forms-using-rest.md#invoking-aem-forms-using-rest-requests">Anropa AEM Forms med REST-begäran</a>.)</p></td>
+   <td><p>AEM Forms stöder REST-begäranden. En tjänst kan anropas direkt från en HTML-sida. (Se <a href="/help/forms/developing/invoking-aem-forms-using-rest.md#invoking-aem-forms-using-rest-requests">Anropa AEM Forms med REST Requests</a>.)</p></td>
   </tr>
  </tbody>
 </table>
@@ -54,7 +54,7 @@ Följande bild visar olika sätt som AEM Forms-tjänster kan anropas på med pro
 
 >[!NOTE]
 >
->Förutom att använda AEM Forms SDK för att skapa klientprogram som kan anropa AEM Forms tjänster, kan du även skapa komponenter som kan distribueras till tjänstbehållaren. Du kan till exempel skapa en bankkomponent som innehåller anpassade datatyper som kan användas i processer. Det innebär att du kan skapa en datatyp som `com.adobe.idp.BankAccount`. Du kan sedan skapa `com.adobe.idp.BankAccount` instanser i dina klientprogram.
+>Förutom att använda AEM Forms SDK för att skapa klientprogram som kan anropa AEM Forms tjänster, kan du även skapa komponenter som kan distribueras till tjänstbehållaren. Du kan till exempel skapa en bankkomponent som innehåller anpassade datatyper som kan användas i processer. Det innebär att du kan skapa en datatyp som `com.adobe.idp.BankAccount`. Du kan sedan skapa `com.adobe.idp.BankAccount`-instanser i dina klientprogram.
 
 Tjänstbehållaren har följande funktioner:
 
