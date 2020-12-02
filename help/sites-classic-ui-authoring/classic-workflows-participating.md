@@ -11,6 +11,9 @@ topic-tags: site-features
 discoiquuid: 1d7a4889-82c5-4096-8567-8f66215a8458
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '584'
+ht-degree: 4%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 Arbetsflödena omfattar vanligtvis steg som kräver att en person utför en aktivitet på en sida eller en resurs. Arbetsflödet väljer en användare eller grupp som ska utföra aktiviteten och tilldelar en arbetsuppgift till den personen eller gruppen.
 
-## Bearbetar dina arbetsuppgifter {#processing-your-work-items}
+## Bearbetar dina arbetsobjekt {#processing-your-work-items}
 
 Du kan utföra följande åtgärder för att bearbeta ett arbetsobjekt:
 
@@ -51,7 +54,7 @@ När du tilldelas en arbetsuppgift (till exempel **Godkänn innehåll**) visas o
 
    ![arbetsflödenstatus-1](assets/workflowstatus-1.png)
 
-* När du, eller en grupp som du tillhör, tilldelas en arbetsuppgift som en del av ett arbetsflöde, visas arbetsuppgiften i Inkorgen för ditt AEM-arbetsflöde.
+* När du, eller en grupp som du tillhör, tilldelas en arbetsuppgift som en del av ett arbetsflöde, visas arbetsuppgiften i AEM arbetsflödesinkorg.
 
    ![arbetsflödewinbox](assets/workflowinbox.png)
 
@@ -59,27 +62,27 @@ När du tilldelas en arbetsuppgift (till exempel **Godkänn innehåll**) visas o
 
 När du har vidtagit den angivna åtgärden kan du slutföra arbetsuppgiften och på så sätt tillåta arbetsflödet att fortsätta. Använd följande procedur för att slutföra arbetsuppgiften.
 
-1. Markera arbetsflödessteget och klicka på knappen **Slutför** i det övre navigeringsfältet.
-1. I den dialogruta som visas väljer du **Nästa steg**. det vill säga nästa steg. En nedrullningsbar lista visar alla lämpliga destinationer. Du kan också ange en **kommentar** .
+1. Markera arbetsflödessteget och klicka på knappen **Fullständig** i det övre navigeringsfältet.
+1. Välj **Nästa steg** i dialogrutan som visas. det vill säga nästa steg. En nedrullningsbar lista visar alla lämpliga destinationer. Du kan också ange en **kommentar**.
 
    ![arbetsflöde slutfört](assets/workflowcomplete.png)
 
    Hur många steg som visas beror på arbetsflödesmodellens design.
 
-1. Bekräfta åtgärden genom att klicka på **OK** .
+1. Klicka på **OK** för att bekräfta åtgärden.
 
 ### Delegera ett deltagarsteg {#delegating-a-participant-step}
 
 Använd följande procedur för att delegera en arbetsuppgift.
 
 1. Klicka på knappen **Delegera** i det övre navigeringsfältet.
-1. I dialogrutan använder du listrutan för att välja den **användare** som arbetsposten ska delegeras till. Du kan också lägga till en **kommentar**.
+1. I dialogrutan använder du listrutan för att välja **Användaren** att delegera arbetsposten till. Du kan också lägga till en **kommentar**.
 
    ![arbetsflödesdelegat](assets/workflowdelegate.png)
 
-1. Bekräfta åtgärden genom att klicka på **OK** .
+1. Klicka på **OK** för att bekräfta åtgärden.
 
-### Stega bakåt i ett deltagarsteg {#performing-step-back-on-a-participant-step}
+### Utför steg tillbaka på ett deltagarsteg {#performing-step-back-on-a-participant-step}
 
 Använd följande procedur för att stega bakåt.
 
