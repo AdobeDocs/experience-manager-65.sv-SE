@@ -12,10 +12,13 @@ discoiquuid: 23386353-b2bf-49f1-947a-dd7587bba175
 noindex: true
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '65'
+ht-degree: 0%
 
 ---
 
 
-# Begränsningar för PDF Generator-säkerhetskopiering {#pdf-generator-backup-limitations}
+# Säkerhetskopieringsbegränsningar för PDF Generator {#pdf-generator-backup-limitations}
 
 Den tillfälliga katalog som används av PDF Generator för att konvertera filer kan inte säkerhetskopieras. Även om tjänsten återställs korrekt kan data gå förlorade eftersom PDF Generator granskar och rensar innehållet i den tillfälliga katalogen med angivna intervall.
