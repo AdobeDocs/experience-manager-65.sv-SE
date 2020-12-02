@@ -1,8 +1,8 @@
 ---
-title: Skapa en anpassad AEM-sidmall med Adobe Campaign-formulärkomponenter
-seo-title: Skapa en anpassad AEM-sidmall med Adobe Campaign-formulärkomponenter
-description: Skapa en anpassad sidmall som använder Adobe Campaign-formulärkomponenter
-seo-description: Skapa en anpassad sidmall som använder Adobe Campaign-formulärkomponenter
+title: Skapa en anpassad AEM med Adobe Campaign Form Components
+seo-title: Skapa en anpassad AEM med Adobe Campaign Form Components
+description: Skapa en anpassad sidmall som använder Adobe Campaign Form-komponenter
+seo-description: Skapa en anpassad sidmall som använder Adobe Campaign Form-komponenter
 uuid: 8162ace2-b661-4c39-b0fb-288e1c035b9c
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,19 +11,22 @@ content-type: reference
 discoiquuid: c3f6eed4-bbda-454a-88ce-c7f2041d4217
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '259'
+ht-degree: 1%
 
 ---
 
 
-# Skapa en anpassad AEM-sidmall med Adobe Campaign-formulärkomponenter{#creating-custom-aem-page-template-with-adobe-campaign-form-components}
+# Skapa en anpassad AEM med Adobe Campaign Form Components{#creating-custom-aem-page-template-with-adobe-campaign-form-components}
 
-På den här sidan beskrivs hur du skapar en anpassad sidmall som använder [Adobe Campaign-formulärkomponenter](/help/sites-authoring/adobe-campaign-components.md) genom att undersöka hur mallen Geometrixx-outdoor ( `/apps/geometrixx-outdoors/components/page_campaign_profile`) implementeras och pekar på viktig information som du kan behöva när du skapar en egen anpassad mall.
+På den här sidan beskrivs hur du skapar en anpassad sidmall som använder [Adobe Campaign-formulär](/help/sites-authoring/adobe-campaign-components.md)-komponenter genom att undersöka hur mallen för utomhusbruk ( `/apps/geometrixx-outdoors/components/page_campaign_profile`) implementeras, och den pekar på viktig information som du kan behöva när du skapar en egen anpassad mall.
 
 >[!NOTE]
 >
 >[E-post och formulärexempel är bara tillgängliga i Geometrixx](/help/sites-developing/we-retail.md). Hämta exempelinnehåll för Geometrixx från paketresurs.
 
-Om du vill skapa en anpassad AEM-sidmall med hjälp av Adobe Campaign-formulärkomponenter måste du ha följande:
+Om du vill skapa en anpassad AEM sidmall med hjälp av Adobe Campaign Form-komponenter måste du ha följande:
 
 1. **Korrigera resourceSuperType**
 
@@ -33,14 +36,16 @@ Om du vill skapa en anpassad AEM-sidmall med hjälp av Adobe Campaign-formulärk
 
    * `com.day.cq.mcm.campaign.servlets.TemplateListServlet`
    * `com.day.cq.mcm.campaign.servlets.SaveProfileServlet`
+
    ![chlimage_1-201](assets/chlimage_1-201.png)
 
-1. **Klientkontextinställningar**
+1. **Inställningar för ClientContext**
 
    När du tittar på klientkontextinställningarna ( `/etc/designs/geometrixx-outdoors/jcr:content/page_campaign_profile`) ser du följande inställningar:
 
    * ClientContext pekar på `/etc/clientcontext/campaign`
-   * Det finns även en extra *config* -nod.
+   * Det finns också en extra *config*-nod.
+
    ![chlimage_1-202](assets/chlimage_1-202.png)
 
 1. **head.jsp (/apps/geometrixx-outdoors/components/page_campaign_profile/head.jsp)**
@@ -63,7 +68,7 @@ Om du vill skapa en anpassad AEM-sidmall med hjälp av Adobe Campaign-formulärk
 
 1. **Egenskaper för kampanjsida**
 
-   För att kunna välja en Adobe Campaign-mall utökas sidegenskaperna med fliken **Campaign** :
+   För att kunna välja en Adobe Campaign-mall utökas sidegenskaperna med fliken **Campaign**:
 
    `/apps/geometrixx-outdoors/components/page_campaign_profile/dialog/items/tabs/items/campaign`
 
