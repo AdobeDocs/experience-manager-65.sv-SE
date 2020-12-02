@@ -11,6 +11,9 @@ discoiquuid: ba571f8e-8bd3-48eb-82e1-c93b14ffe44a
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 06335b9a85414b6b1141dd19c863dfaad0812503
+workflow-type: tm+mt
+source-wordcount: '1979'
+ht-degree: 0%
 
 ---
 
@@ -21,11 +24,11 @@ source-git-commit: 06335b9a85414b6b1141dd19c863dfaad0812503
 
 Metadata gör det enklare att kategorisera och ordna resurser och hjälper användare som letar efter en viss resurs.
 
-Som standard innehåller AEM Forms en definierad uppsättning metadata för varje resurstyp. Utöver standardmetadata kan du lägga till anpassade metadata för varje resurstyp. Med AEM Forms kan du också skapa, hantera och utbyta alla dessa metadata effektivt för dina formulär.
+AEM Forms tillhandahåller som standard en definierad uppsättning metadata för varje resurstyp. Utöver standardmetadata kan du lägga till anpassade metadata för varje resurstyp. AEM Forms ger dig också rätt sätt att skapa, hantera och utbyta alla dessa metadata effektivt för dina formulär.
 
 Om du är utvecklare eller webbplatsägare kan du anpassa Forms Portal, slutanvändargränssnittet för AEM Forms, så att det återspeglar de metadata du använder i organisationen. Mer information om Forms Portal finns i [Introduktion till att publicera formulär på en portal](../../forms/using/introduction-publishing-forms.md).
 
-## Metadata i AEM-formulär {#metadata-in-aem-forms}
+## Metadata i AEM Forms {#metadata-in-aem-forms}
 
 I AEM Forms beror listan med metadataegenskaper som är associerade med en resurs på dess typ. Om du lägger till en anpassad metadataegenskap läggs den till i alla resurser av den typ som de anpassade metadata lades till i.
 
@@ -34,7 +37,7 @@ I AEM Forms beror listan med metadataegenskaper som är associerade med en resur
 Följande resurstyper stöds i AEM Forms:
 
 * Formulärmallar (XFA-formulär)
-* PDF-formulär
+* PDF forms
 * Dokument (platta PDF-filer)
 * Anpassningsbara formulär
 * Resurser
@@ -122,8 +125,8 @@ Nedan följer en omfattande lista över metadataegenskaper som stöds i AEM Form
    <td><p>Så här konfigurerar du en användardefinierad URL för att skicka formulärdata till en server.</p> <p>Skicka-URL kan konfigureras med någon av följande metoder, listade i prioritetsordning:</p> 
     <ul> 
      <li>Ange en skicka-URL direkt i en formulärmall genom att använda HTTP-knappen när du skapar ett XFA-formulär i AEM Forms Designer.</li> 
-     <li>I användargränssnittet för AEM-formulär väljer du ett formulär och anger en Skicka-URL när du redigerar metadataegenskaperna.</li> 
-     <li>I Forms Portal redigerar du komponenten Search &amp; Lister och anger en Skicka-URL på fliken Formulärlänk.</li> 
+     <li>I AEM Forms-användargränssnittet markerar du ett formulär och anger en Skicka-URL när du redigerar metadataegenskaperna.</li> 
+     <li>I Forms Portal redigerar du komponenten Sök och lista och anger en Skicka-URL på fliken Formulärlänk.</li> 
     </ul> </td> 
   </tr> 
   <tr> 
@@ -185,8 +188,8 @@ Resurser har befintliga egenskapsvärden som kan visas i skrivskyddat läge. Des
       >
       >Snabbåtgärder är de åtgärdsobjekt som visas över en miniatyrbild när du håller muspekaren.
 
-   1. Markera formuläret och klicka på ikonen Visa egenskaper ![e_reviewmode_properties_n](assets/e_reviewmode_properties_n.png) som visas i verktygsfältet.
-   1. Navigera till sidan med formulärinformation genom att klicka på miniatyrbilden för formuläret när det inte är i markeringsläget. Klicka nu på ![ögonikonen aem6forms_eye_view](assets/aem6forms_eye_viewon.png) i det övre högra hörnet och klicka sedan på Egenskaper i listan under den.
+   1. Markera formuläret och klicka på ikonen Visa egenskaper ![e_reviewMode_properties_n](assets/e_reviewmode_properties_n.png) som visas i verktygsfältet.
+   1. Navigera till sidan med formulärinformation genom att klicka på miniatyrbilden för formuläret när det inte är i markeringsläget. Klicka nu på ikonen ![aem6forms_eye_view](assets/aem6forms_eye_viewon.png) i det övre högra hörnet och klicka sedan på Egenskaper i listan nedanför.
 
 1. Egenskapssidan som öppnas visar ett schema som bara innehåller de metadataegenskaper som innehåller vissa värden.
 
@@ -194,13 +197,14 @@ Resurser har befintliga egenskapsvärden som kan visas i skrivskyddat läge. Des
 
    * Redigera: ![aem6forms_edit](assets/aem6forms_edit.png) Redigera egenskapsvärden för metadata
    * Visa: ![aem6forms_eye_view](assets/aem6forms_eye_viewon.png) Navigera till sidan med formulärinformation, som öppnar formuläret i förhandsgranskningsläget.
+
    Innehållsdelen är uppdelad i två delar:
 
    * Den vänstra panelen innehåller en miniatyrbild av formuläret
    * Den högra panelen innehåller metadataegenskaper i skrivskyddat läge, som är fördelade på olika flikar.
 
 
-## Lägg till/uppdatera värden för formulärmetadata {#add-update-form-metadata-values}
+## Lägg till/uppdatera värden för metadata i formulär {#add-update-form-metadata-values}
 
 Du kan redigera värdet för befintliga metadataegenskaper eller lägga till nya värden i ett befintligt egenskapsfält för metadata (till exempel när ett metadatafält är tomt).
 
@@ -220,37 +224,39 @@ Du kan redigera värdet för befintliga metadataegenskaper eller lägga till nya
 
    * Avbryt: ![aem6forms_close](assets/aem6forms_close.svg_w24.png) Avbryt alla ändringar av egenskapsvärden för metadata hittills
    * Klart: ![aem6forms_check](assets/aem6forms_check.png) Spara alla ändringar som gjorts i egenskapsvärden för metadata hittills
+
    Båda dessa åtgärder dirigerar användaren tillbaka till skrivskyddat läge för egenskapssidan som innehåller de uppdaterade värdena.
 
 ### Uppdatera formulärminiatyrbilden {#update-the-form-thumbnail}
 
 På den vänstra panelen på egenskapssidan visas miniatyrbilden för formuläret. Som standard är den miniatyrbild som visas när formuläret skapas (anpassat formulär) eller när formuläret överförs.
 
-För alla formulärtyper kan du välja att överföra en bild genom att klicka på **[!UICONTROL Överför bild]** och bläddra efter en bildfil från den lokala katalogen. Den markerade bilden används som miniatyrbild i stället för som standardbild.
+För alla formulärtyper kan du överföra en bild genom att klicka på **[!UICONTROL Upload Image]** och bläddra efter en bildfil från den lokala katalogen. Den markerade bilden används som miniatyrbild i stället för som standardbild.
 
-För adaptiva formulär finns ytterligare funktioner som gör att användaren kan generera en miniatyrbild som en ögonblicksbild av den aktuella förhandsvisningen av adaptiva formulär. Eftersom AEM Forms även stöder utveckling av anpassningsbara formulär kan förhandsgranskningen av det anpassningsbara formuläret ändras varje gång du ändrar det. Den här funktionen för att generera en miniatyrbild hjälper dig att få en ny miniatyrbild för det adaptiva formuläret baserat på den aktuella förhandsvisningsstatusen. Klicka på **[!UICONTROL Generera förhandsgranskning]** för att utföra den här åtgärden.
+För adaptiva formulär finns ytterligare funktioner som gör att användaren kan generera en miniatyrbild som en ögonblicksbild av den aktuella förhandsvisningen av adaptiva formulär. Eftersom AEM Forms även stöder redigering av anpassningsbara formulär kan förhandsgranskningen av det anpassningsbara formuläret ändras varje gång du ändrar det. Den här funktionen för att generera en miniatyrbild hjälper dig att få en ny miniatyrbild för det adaptiva formuläret baserat på den aktuella förhandsvisningsstatusen. Klicka på **[!UICONTROL Generate Preview]** för att utföra den här åtgärden.
 
 >[!NOTE]
 >
 >* Använd en fyrkantig bild som miniatyrbild. När du använder en bild som inte är fyrkantig och visar miniatyrbilden i listvyn visas miniatyrbilden som bortklippt.
 >* När en ny bild har överförts eller genererats ersätts miniatyrbilden av den här bilden och kan inte återställas till den föregående bilden.
+
 >
 
 
 
 ## Lägg till anpassade metadata {#add-custom-metadata}
 
-Förutom de metadata som finns i kartongen har AEM Forms stöd för nya anpassade metadata.
+Förutom de metadata som medföljer har AEM Forms stöd för nya anpassade metadata.
 
-Ett verktyg (redigeringsprogram för metadataschema) finns för att definiera schemat för metadatalayouten. d.v.s. layouten för det som visas på sidan **[!UICONTROL Egenskaper]** i ett formulär. Med metadatarameditor kan du lägga till eller ändra ett anpassat schema för dina resurser.
+Ett verktyg (redigeringsprogram för metadataschema) finns för att definiera schemat för metadatalayouten. d.v.s. layouten för det som visas på sidan **[!UICONTROL Properties]** i ett formulär. Med metadatarameditor kan du lägga till eller ändra ett anpassat schema för dina resurser.
 
 AEM Forms visar metadatamappningar för de formulärtyper som stöds i det här verktyget. På så sätt kan du komma åt dessa scheman och använda funktionerna som finns i redigeraren för metadatamatchning för att lägga till anpassade egenskaper.
 
-### Navigera i metadatamodeditorn {#navigate-the-metadata-schema-editor}
+### Navigera i metadataschredigeraren {#navigate-the-metadata-schema-editor}
 
-1. Navigera till **[!UICONTROL Verktyg > Resurser > Metadata Schemas]**.
+1. Navigera till **[!UICONTROL Tools > Assets > Metadata Schemas]**.
 
-1. Klicka på **[!UICONTROL formulär]** i de listade schemaformulären.
+1. Klicka på **[!UICONTROL forms]** i de listade schemaformulären.
 
 1. I listan som öppnas klickar du på resurstypen som du vill lägga till anpassade metadata för.
 
@@ -258,11 +264,11 @@ AEM Forms visar metadatamappningar för de formulärtyper som stöds i det här 
    >
    >Dessa scheman innehåller metadataegenskaper som anges utanför rutan och får inte ändras/redigeras (markera kryssrutan och klicka på Redigera från verktygsfältet) för att undvika funktionsproblem.
 
-1. Alla resurstyper som du klickar på öppnas en lista som innehåller `extendedmetadata` alternativet. Redigera det här schemat.
+1. Alla resurstyper som du klickar på öppnar en lista som innehåller alternativet `extendedmetadata`. Redigera det här schemat.
 
-1. Markera kryssrutan bredvid `extendedmetadata` och klicka sedan på ikonen Redigera ![aem6forms_edit](assets/aem6forms_edit.png) som visas i verktygsfältet.
+1. Markera kryssrutan bredvid `extendedmetadata` och klicka sedan på redigeringsikonen ![aem6forms_edit](assets/aem6forms_edit.png) som visas i verktygsfältet.
 
-1. AEM Forms öppnar metadatarammet/formulärbyggaren för den valda resurstypen (i det här fallet adaptiv form).
+1. AEM Forms öppnar metadataschredigeraren/formulärbyggaren för den valda resurstypen (i det här fallet adaptiv form).
 
    ![Metadata schema editor för adaptiv formulärtyp](assets/metadata-schema-editor-for-adaptive-form-type.png)
 
@@ -274,14 +280,14 @@ AEM Forms visar metadatamappningar för de formulärtyper som stöds i det här 
 
    1. Du kan lägga till fler flikar genom att klicka på +-symbolen.
 
-   1. Du kan lägga till ett anpassat fält av önskad typ genom att dra fältkomponenten från avsnittet **[!UICONTROL Skapa formulär]** till schemasidan.
-   1. Specifikationerna för det här fältet finns under avsnittet **[!UICONTROL Inställningar]** när du har klickat på fältet.
+   1. Du kan lägga till ett anpassat fält av önskad typ genom att dra fältkomponenten från **[!UICONTROL Build Form]**-avsnittet till schemasidan.
+   1. Specifikationerna för det här fältet kan anges under avsnittet **[!UICONTROL Settings]** efter att du klickat på fältet.
 
 ### Lägg till anpassad metadataegenskap i schemaredigeraren {#add-custom-metadata-property-in-schema-editor}
 
 1. Navigera till fliken (befintlig eller ny) där du vill lägga till den anpassade egenskapen.
 
-1. Dra en komponent av önskad typ från avsnittet **[!UICONTROL Skapa formulär]** till vänster och placera den på en lämplig plats.
+1. Dra en komponent av önskad typ från **[!UICONTROL Build Form]**-avsnittet till den vänstra panelen och placera på en lämplig plats.
 
    >[!NOTE]
    >
@@ -290,7 +296,7 @@ AEM Forms visar metadatamappningar för de formulärtyper som stöds i det här 
 1. Klicka på en komponent som du just har dragit. Fyll i information för följande fält på fliken Inställningar som öppnas i den högra panelen:
 
    1. Ange en fältetikett som ska användas som visningsnamn ovanför fältet som placeras i schemat (till exempel: Avdelning)
-   1. I egenskapsfältet Mappa till visas ett förifyllt värde **&#39;./jcr:content/metadata/default&quot;**. Ändra&quot;**default**&quot; till ett önskat egenskapsnamn, som används för att lagra egenskapen i crx-databasen (till exempel: &#39;./jcr:content/metadata/dec&#39;)
+   1. Under Mappa till egenskapsfält kan du se ett förfyllt värde **./jcr:content/metadata/default&#39;**. Ändra standardvärdet för **** till ett önskat egenskapsnamn, som används för att lagra egenskapen i crx-databasen (till exempel: &#39;./jcr:content/metadata/dec&#39;)
 
       >[!NOTE]
       >
@@ -299,11 +305,11 @@ AEM Forms visar metadatamappningar för de formulärtyper som stöds i det här 
       >Egenskapsnamnet måste också vara unikt för att du inte ska kunna skriva värden för två eller flera egenskaper på samma plats i databasen. Vi rekommenderar att du ändrar värdet &#39;default&#39;.
 
    1. Fyll i andra inställningar baserat på behov. Till exempel: Välj alternativet Obligatoriskt om du vill göra fältet obligatoriskt.
-   1. Om du vill ta bort ett fält som du har lagt till markerar du fältet och klickar sedan på ikonen Ta bort ![borttagning-1](assets/delete-1.png) .
+   1. Om du vill ta bort ett fält som du har lagt till markerar du fältet och klickar sedan på ikonen Ta bort ![delete-1](assets/delete-1.png).
 
 1. Om det behövs följer du steg 1-3 för att lägga till en annan egenskap.
 1. Klicka på **Klar** när du har gjort alla ändringar.
 
    Du har lagt till en anpassad metadataegenskap.
 
-Alla adaptiva formulär i AEM Forms innehåller nu den här extra metadataegenskapen. Du kan redigera den från egenskapssidan.
+Alla anpassningsbara formulär i AEM Forms innehåller nu den här extra metadataegenskapen. Du kan redigera den från egenskapssidan.
