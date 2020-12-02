@@ -24,7 +24,7 @@ ht-degree: 1%
 >
 >Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (t.ex. Reagera). [Läs mer](/help/sites-developing/spa-overview.md).
 
-Med panelerna **Hantera program** och Hantera program kan du visa och redigera programmetadata. Appens metadata krävs för att ett program ska kunna frisläppas till en återförsäljares butik. Detta kan omfatta vanliga metadata, iOS-metadata och skärmbilder. Mer information om vanliga metadata och iOS-metadata finns i [Hantera apppanel](/help/mobile/phonegap-app-details-tile.md) .
+På sidan **Hantera program** och Hantera program kan du visa och redigera programmetadata. Appens metadata krävs för att ett program ska kunna frisläppas till en återförsäljares butik. Detta kan omfatta vanliga metadata, iOS-metadata och skärmbilder. Mer information om vanliga metadata och iOS-metadata finns i [Hantera apppanel](/help/mobile/phonegap-app-details-tile.md).
 
 ## Redigera appdata {#editing-the-app-data}
 
@@ -34,7 +34,7 @@ Så här redigerar du appens metadata:
 
    ![chlimage_1-29](assets/chlimage_1-29.png)
 
-1. Om du vill visa eller redigera information genom att klicka på ... i det nedre högra hörnet i **rutan Hantera program** .
+1. Om du vill visa eller redigera information genom att klicka på ... i det nedre högra hörnet av rutan **Hantera program**.
 
 1. Ange eller visa informationen på någon av de fem flikarna som finns, enligt bilden nedan.
 
@@ -44,7 +44,7 @@ Så här redigerar du appens metadata:
 
 Du kan redigera de vanliga och iOS-metadata:
 
-* Klicka på fliken **Avancerat** på programbeskrivningssidan.
+* Välj fliken **Avancerat** på programbeskrivningssidan.
 * Redigera eller visa vanliga metadata och IOS-metadata. Se siffrorna nedan för mer information.
 
 ![chlimage_1-31](assets/chlimage_1-31.png) ![chlimage_1-32](assets/chlimage_1-32.png)
@@ -59,7 +59,7 @@ Du kan inkludera skärmbilder av appar för att lägga in metadata. Vissa levera
 
 Så här lägger du till en resurs som skärmbild:
 
-1. Klicka på Lägg till (plusikon) när du är i redigeringsläge på sidan **Hantera program** .
+1. I redigeringsläge på sidan **Hantera program** klickar du på Lägg till (plus-ikon).
 1. Markera resursen och klicka på **Välj** för att lägga till resursen.
 
    ![chlimage_1-34](assets/chlimage_1-34.png)
