@@ -17,7 +17,7 @@ ht-degree: 0%
 ---
 
 
-# Java API QuickStart(SOAP) för Assembler Service {#assembler-service-java-api-quickstart-soap}
+# Java API QuickStart(SOAP) {#assembler-service-java-api-quickstart-soap} för Assembler-tjänsten
 
 Java API Quick Start (SOAP) är tillgängligt för Assembler-tjänsten
 
@@ -51,7 +51,7 @@ AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutning
 
 ## Snabbstart (SOAP-läge): Sammanställa ett PDF-dokument med Java API {#quick-start-soap-mode-assembling-a-pdf-document-using-the-java-api}
 
-I följande Java-kodexempel sammanfogas två PDF-källdokument med namnen *map.pdf* och *direction.pdf* till ett enda PDF-dokument. Namnet på det enskilda PDF-dokumentet är *AssemblerResultPDF.pdf*. DDX-dokumentets namn är *shell.xml*. (Se [Sammanställa PDF-dokument](/help/forms/developing/assembling-pdf-documents.md#programmatically-assembling-pdf-documents)programmatiskt.)
+I följande Java-kodexempel sammanfogas två PDF-källdokument med namnet *map.pdf* och *direction.pdf* till ett enda PDF-dokument. Namnet på det enskilda PDF-dokumentet är *AssemblerResultPDF.pdf*. DDX-dokumentets namn är *shell.xml*. (Se [Programmatisk sammansättning av PDF-dokument](/help/forms/developing/assembling-pdf-documents.md#programmatically-assembling-pdf-documents).)
 
 ```java
  /*
@@ -193,9 +193,9 @@ I följande Java-kodexempel sammanfogas två PDF-källdokument med namnen *map.p
  }
 ```
 
-## Snabbstart (SOAP-läge): Dela upp ett PDF-dokument med Java API {#quick-start-soap-mode-disassembling-a-pdf-document-using-the-java-api}
+## Snabbstart (SOAP-läge): Disassemblera ett PDF-dokument med Java API {#quick-start-soap-mode-disassembling-a-pdf-document-using-the-java-api}
 
-I följande Java-kodexempel demonteras ett PDF-dokument med namnet *AssemblerResultPDF.pdf*. Observera att namnet på DDX-dokumentet är *shell_disassemble.xml*. Alla uppdelade PDF-dokument namnges `ResultPDF[Number].pdf`. Det vill säga, det första upplösta PDF-dokumentet heter *ResultPDF1.pdf.* Information om *dx-dokumentet shell_disassemble.xml* som används i det här kodexemplet finns i [Dela upp PDF-dokument](/help/forms/developing/assembling-pdf-documents.md#programmatically-disassembling-pdf-documents)programmatiskt.
+I följande Java-kodexempel demonteras ett PDF-dokument med namnet *AssemblerResultPDF.pdf*. Observera att namnet på DDX-dokumentet är *shell_disassemble.xml*. Varje upplöst PDF-dokument har namnet `ResultPDF[Number].pdf`. Det vill säga, det första upplösta PDF-dokumentet heter *ResultPDF1.pdf.* Mer information om  *shell_disassemble.* xmlDDX-dokumentet som används i det här kodexemplet finns i  [Dela upp PDF-dokument](/help/forms/developing/assembling-pdf-documents.md#programmatically-disassembling-pdf-documents) programmatiskt.
 
 ```java
  /*
@@ -739,7 +739,7 @@ I följande Java-kodexempel sätts ett icke-interaktivt PDF-dokument samman. Det
 
 ## Snabbstart (SOAP-läge): Avgöra om ett dokument är PDF/A-kompatibelt med Java API {#quick-start-soap-mode-determining-whether-a-document-is-pdf-a-compliant-using-the-java-api}
 
-I följande Java-kodexempel avgörs om PDF-indatadokumentet är PDF/A-kompatibelt. PDF-indatadokumentet som skickas till Assembler-tjänsten heter *Loan.pdf*. DDX-dokumentets namn är shell_PDFA.xml. Det XML-dokument som returneras från Assembler-tjänsten och anger om PDF-indatadokumentet är PDF/A-kompatibelt sparas som en XML-fil med namnet result.xml. Information om *dx-dokumentet shell_PDFA.xml* som används i det här kodexemplet finns i [Kontrollera om dokumenten är PDF/A-kompatibla](/help/forms/developing/assembling-pdf-documents.md#determining-whether-documents-are-pdf-a-compliant).
+I följande Java-kodexempel avgörs om PDF-indatadokumentet är PDF/A-kompatibelt. PDF-indatadokumentet som skickas till Assembler-tjänsten heter *Loan.pdf*. DDX-dokumentets namn är shell_PDFA.xml. Det XML-dokument som returneras från Assembler-tjänsten och anger om PDF-indatadokumentet är PDF/A-kompatibelt sparas som en XML-fil med namnet result.xml. Mer information om det *shell_PDFA.xml* DDX-dokument som används i det här kodexemplet finns i [Ta reda på om dokument är PDF/A- kompatibla](/help/forms/developing/assembling-pdf-documents.md#determining-whether-documents-are-pdf-a-compliant).
 
 ```java
  /*
@@ -1188,10 +1188,11 @@ I följande Java-kodexempel sammanställs ett PDF-dokument som innehåller bokm�
 
 I följande Java-kodexempel skapas ett DDX-dokument dynamiskt som demonterar ett PDF-dokument. Ett nytt PDF-dokument skapas för varje nivå 1-bokmärke i PDF-indatadokumentet. Det här kodexemplet innehåller två användardefinierade metoder:
 
-* `createDDX`: Skapar ett `org.w3c.dom.Document` objekt som representerar det DDX-dokument som skickas till Assembler-tjänsten. Den här användardefinierade metoden returnerar `org.w3c.dom.Document` objektet.
-* `convertDDX`: Konverterar ett `org.w3c.dom.Document` objekt till ett `com.adobe.idp.Document` objekt. Den här metoden accepterar ett `org.w3c.dom.Document` objekt som en indataparameter och returnerar ett `com.adobe.idp.Document` objekt.
+* `createDDX`: Skapar ett  `org.w3c.dom.Document` objekt som representerar det DDX-dokument som skickas till Assembler-tjänsten. Den här användardefinierade metoden returnerar `org.w3c.dom.Document`-objektet.
+* `convertDDX`: Konverterar ett  `org.w3c.dom.Document` objekt till ett  `com.adobe.idp.Document` objekt. Den här metoden accepterar ett `org.w3c.dom.Document`-objekt som en indataparameter och returnerar ett `com.adobe.idp.Document`-objekt.
 
-   Båda dessa metoder anropas i den här snabbstarten. (Se [Skapa DDX-dokument](/help/forms/developing/assembling-pdf-documents.md#dynamically-creating-ddx-documents)dynamiskt.)&quot;
+   Båda dessa metoder anropas i den här snabbstarten. (Se [Skapa DDX-dokument dynamiskt](/help/forms/developing/assembling-pdf-documents.md#dynamically-creating-ddx-documents).)
+&quot;
 
 ```java
 /*
