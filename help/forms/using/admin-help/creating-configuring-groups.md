@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 2058b501-65ce-4ad3-8e1b-b2eab896f70f
 translation-type: tm+mt
 source-git-commit: d3719a9ce2fbb066f99445475af8e1f1e7476f4e
+workflow-type: tm+mt
+source-wordcount: '1593'
+ht-degree: 0%
 
 ---
 
@@ -21,7 +24,7 @@ När du skapar grupper med användare kan du tilldela roller till gruppen i stä
 
 Det finns två olika typer av grupper. Du kan skapa en grupp manuellt och lägga till användare och andra grupper i den. Du kan också skapa dynamiska grupper som automatiskt inkluderar alla användare som uppfyller en viss uppsättning regler.
 
-Användare kan få en långsammare svarstid om de tillhör många grupper (till exempel 500 eller fler) eller om grupperna är djupt inkapslade (till exempel 30 nivåer). Om du får det här problemet kan du konfigurera AEM-formulär så att information från vissa domäner hämtas i förväg. (Se [Konfigurera AEM-formulär för att hämta domäninformation](/help/forms/using/admin-help/configure-aem-forms-prefetch-domain.md#configure-aem-forms-to-prefetch-domain-information)i förväg.)
+Användare kan få en långsammare svarstid om de tillhör många grupper (till exempel 500 eller fler) eller om grupperna är djupt inkapslade (till exempel 30 nivåer). Om det här problemet uppstår kan du konfigurera AEM formulär så att information hämtas i förväg från vissa domäner. (Se [Konfigurera AEM formulär för att hämta domäninformation i förväg](/help/forms/using/admin-help/configure-aem-forms-prefetch-domain.md#configure-aem-forms-to-prefetch-domain-information).)
 
 ## Skapa en grupp manuellt {#create-a-group-manually}
 
@@ -61,7 +64,7 @@ I en dynamisk grupp väljer du inte de användare som tillhör gruppen separat. 
 
 Använd något av följande två sätt för att skapa dynamiska grupper:
 
-* Gör det möjligt att automatiskt skapa dynamiska grupper baserat på e-postdomäner som @adobe.com. När du aktiverar den här funktionen skapar Hantering av användare en dynamisk grupp för varje unik e-postdomän i AEM-formulärdatabasen. Använd ett cron-uttryck för att ange hur ofta användarhantering söker i AEM-formulärdatabasen efter nya e-postdomäner. Dessa dynamiska grupper läggs till i den lokala domänen DefaultDom och får namnet&quot;Alla användare med ett *`[email domain]`* e-post-ID&quot;.
+* Gör det möjligt att automatiskt skapa dynamiska grupper baserat på e-postdomäner som @adobe.com. När du aktiverar den här funktionen skapar Hantering av användare en dynamisk grupp för varje unik e-postdomän i AEM formulärdatabas. Använd ett cron-uttryck för att ange hur ofta användarhantering söker i AEM formulärdatabas efter nya e-postdomäner. Dessa dynamiska grupper läggs till i den lokala domänen DefaultDom och får namnet&quot;Alla användare med ett *`[email domain]`* post-ID&quot;.
 * Skapa en dynamisk grupp baserat på angivna villkor, inklusive användarens e-postdomän, beskrivning, kanoniskt namn och domännamn. För att kunna tillhöra den dynamiska gruppen måste användaren uppfylla alla angivna villkor. Om du vill ställa in ett &quot;eller&quot;-villkor skapar du två separata dynamiska grupper och lägger till båda i en lokal grupp. Använd till exempel den metoden för att skapa en grupp användare som tillhör e-postdomänen @adobe.com eller vars kanoniska namn innehåller ou=adobe.com. Användarna behöver dock inte nödvändigtvis uppfylla båda villkoren.
 
 En dynamisk grupp innehåller bara användare. Den får inte innehålla andra grupper. En dynamisk grupp kan dock tillhöra en överordnad grupp.
@@ -90,13 +93,13 @@ En dynamisk grupp innehåller bara användare. Den får inte innehålla andra gr
    >
    >Attributen för e-post, beskrivning och kanoniskt namn är skiftlägeskänsliga när du använder operatorn Lika med. De är inte skiftlägeskänsliga med operatorerna Börjar med, Slutar med eller Innehåller.
 
-   **** E-post: Användarens e-postdomän, till exempel `@adobe.com`.
+   **E-post:** Användarens e-postdomän, till exempel  `@adobe.com`.
 
-   **** Beskrivning: Användarens beskrivning, t.ex.&quot;Computer Scientist&quot;
+   **Beskrivning:** Användarbeskrivning, t.ex.&quot;Computer Scientist&quot;
 
-   **** Kanoniskt namn: Användarens kanoniska namn, till exempel `ou=adobe.com`
+   **Kanoniskt namn:** användarens kanoniska namn, till exempel  `ou=adobe.com`
 
-   **** Domännamn: Namnet på den domän som användaren tillhör, till exempel `DefaultDom`. Attributet Domännamn är skiftlägeskänsligt när du använder operatorn Innehåller. Den är inte skiftlägeskänslig med operatorerna Börjar med, Slutar med eller Likhetstecken.
+   **Domännamn:** Namnet på den domän som användaren tillhör, till exempel  `DefaultDom`. Attributet Domännamn är skiftlägeskänsligt när du använder operatorn Innehåller. Den är inte skiftlägeskänslig med operatorerna Börjar med, Slutar med eller Likhetstecken.
 
 1. Klicka på Testa. På en testsida visas de första 200 användarna som uppfyller de definierade villkoren. Klicka på Stäng.
 1. Om testet returnerade det förväntade resultatet klickar du på Nästa. I annat fall redigerar du de dynamiska gruppvillkoren och testar igen.
@@ -113,7 +116,7 @@ En dynamisk grupp innehåller bara användare. Den får inte innehålla andra gr
 ## Visa information om en grupp {#view-details-about-a-group}
 
 1. I administrationskonsolen klickar du på Inställningar > Användarhantering > Användare och grupper.
-1. I listan In väljer du Gruppera och klickar sedan på Sök. Sökresultaten visas längst ned på sidan. Du kan sortera listan genom att klicka på någon av kolumnrubrikerna.
+1. Välj Gruppera i listan In och klicka sedan på Sök. Sökresultaten visas längst ned på sidan. Du kan sortera listan genom att klicka på någon av kolumnrubrikerna.
 1. Klicka på namnet på gruppen för att visa information om den. Sidan Gruppinformation visas.
 1. Om du vill visa direktmedlemmar i gruppen klickar du på Underordnade huvudkonton.
 
