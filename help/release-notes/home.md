@@ -50,6 +50,6 @@ AEM versionsinformation innehåller viktig information om den senaste versionen 
 
 ## Copyright, licenser och friskrivningsklausuler {#copyright-licenses-and-disclaimers}
 
-Mer information finns på [https://www.adobe.com/legal/terms/enterprise-licensing.html](https://www.adobe.com/legal/terms/enterprise-licensing.html)
+Mer information finns i [https://www.adobe.com/legal/terms/enterprise-licensing.html](https://www.adobe.com/legal/terms/enterprise-licensing.html)
 
 Meddelande om tredjepartslicenser: [https://www.adobe.com/products/eula/third_party/](https://www.adobe.com/products/eula/third_party/)
