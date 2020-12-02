@@ -35,13 +35,13 @@ ht-degree: 6%
    + [Skapa en webbplats med alla funktioner (Classic UI)](website.md)
    + [Designer och Designer (Classic UI)](designer.md)
    + [Migrering till Touch UI](/help/sites-developing/touch-ui-migration.md)
-+ Platform{#platform}
++ Plattform{#platform}
    + [Fusklapp för Sling](sling-cheatsheet.md)
    + [Använda Sling-adaptrar](sling-adapters.md)
    + [Taggbibliotek](taglib.md)
    + Mallar{#templates}
       + [Mallar](templates.md)
-      + [Sidmallar - redigerbara ](page-templates-editable.md)
+      + [Sidmallar - redigerbara  ](page-templates-editable.md)
       + [Sidmallar - statiska](page-templates-static.md)
       + [Mallar för innehållsfragment](content-fragment-templates.md)
       + [Adaptiv mallåtergivning](templates-adaptive-rendering.md)
@@ -49,7 +49,7 @@ ht-degree: 6%
    + [Övertäckningar](overlays.md)
    + [Namnkonventioner](naming-conventions.md)
    + [Skapa en ny GRE-fältkomponent](granite-ui-component.md)
-   + Query Builder{#query-builder}
+   + Frågebyggaren{#query-builder}
       + [Implementera en anpassad predikatutvärderare för Query Builder](implementing-custom-predicate-evaluator.md)
       + [Predikatreferens för Query Builder](querybuilder-predicate-reference.md)
       + [Query Builder API](querybuilder-api.md)
@@ -157,7 +157,7 @@ ht-degree: 6%
    + [Konfigurera din sida för gruppredigering av sidegenskaper](bulk-editing.md)
    + [Anpassa och utöka Content Fragments](customizing-content-fragments.md)
    + [Content Fragments – konfigurera komponenter för återgivning](content-fragments-config-components-rendering.md)
-   + [Experience Fragments](experience-fragments.md)
+   + [Upplevelsefragment](experience-fragments.md)
    + Utöka arbetsflöden{#extending-workflows}
       + [Utveckla och utöka arbetsflöden](workflows.md)
       + [Skapa arbetsflödesmodeller](workflows-models.md)
