@@ -12,6 +12,9 @@ discoiquuid: 56849775-3ac7-44a2-ab17-a707b001470e
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 4e5e6ef022dc9f083859e13ab9c86b622fc3d46e
+workflow-type: tm+mt
+source-wordcount: '378'
+ht-degree: 4%
 
 ---
 
@@ -20,7 +23,7 @@ source-git-commit: 4e5e6ef022dc9f083859e13ab9c86b622fc3d46e
 
 I det här avsnittet listas alla licenser, meddelanden om upphovsrätt och friskrivningar som måste anges uttryckligen i samband med Day JCR Connector för MS SharePoint.
 
-## Översikt över anslutning av bibliotek från tredje part {#overview-of-connector-rd-party-libraries}
+## Översikt över anslutning till bibliotek från tredje part {#overview-of-connector-rd-party-libraries}
 
 I följande tabell visas tredjepartsbibliotek som används i SharePoint Connector-kärnbiblioteken tillsammans med de licenser, copyrightmeddelanden och ansvarsfriskrivningar som de omfattas av:
 
@@ -39,7 +42,7 @@ I följande tabell visas tredjepartsbibliotek som används i SharePoint Connecto
 | comons-httpclient | [Apache](#apache) |
 | comons-io | [Apache](#apache) |
 | Commons-lang | [Apache](#apache) |
-| samtidig | [Samtidig](#concurrent) (offentlig domän) |
+| samtidig | [Samtidig](#concurrent)  (offentlig domän) |
 | geronimo-activation_1.1_spec | [Apache](#apache) |
 | geronimo-stax-api_1.0_spec | [Apache](#apache) |
 | httpcore | [Apache](#apache) |
@@ -58,7 +61,7 @@ I följande tabell visas tredjepartsbibliotek som används i SharePoint Connecto
 | wstx-asl | [Apache](#apache) |
 | xalan | [Apache](#apache) |
 | xbean | [Apache](#apache) |
-| xml-apis | [Apache](#apache) (innehåller delar som täcks av Public Domain och W3C Software licenses) |
+| xml-apis | [Apache](#apache)  (innehåller delar som täcks av Public Domain och W3C Software licenses) |
 | XmlSchema | [Apache](#apache) |
 
 ## Översikt över CRX-bibliotek från tredje part {#overview-of-crx-rd-party-libraries}
@@ -436,7 +439,7 @@ I följande tabell visas bibliotek från tredje part som används i Communiqué 
      <a href="https://gee.cs.oswego.edu/dl/classes/EDU/oswego/cs/dl/util/sun-u.c.license.pdf" TARGET="_blank" >https://gee.cs.oswego.edu/dl/classes/EDU/oswego/cs/dl/util/sun-u.c.license.pdf</a>
 ```
 
-## Day JCR {#day-jcr}
+## Dag-JCR {#day-jcr}
 
 ```xml
      Day Management AG ("Licensor") is willing to license this
