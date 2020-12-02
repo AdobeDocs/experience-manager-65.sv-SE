@@ -35,21 +35,21 @@ Använd dessa rutiner när du skapar ett eget nyhetsbrev.
 
 >[!NOTE]
 >
->Allt kampanjinnehåll ska skapas under en `master` sida av typen `cq/personalization/components/ambitpage`.
+>Allt kampanjinnehåll ska skapas under en `master`-sida av typen `cq/personalization/components/ambitpage`.
 >
 >Exempel: Den planerade kampanjstrukturen ser ut ungefär som
 >
 >`/content/campaigns/teasers/en/campaign-promotion-global`
 >
->Du bör se till att den finns under en `master` sida
+>Du bör se till att den finns under en `master`-sida
 >
 >`/content/campaigns/teasers/master/en/campaign-promotion-global`
 
 >[!NOTE]
 >
->När du skapar en e-postmall för Adobe Campaign måste du ta med egenskapen **acMapping** med värdet **mapRecipient** i **jcr:content** -noden i mallen, annars kan du inte välja Adobe Campaign-mallen i **Sidegenskaper** för AEM (fältet är inaktiverat).
+>När du skapar en e-postmall för Adobe Campaign måste du ta med egenskapen **acMapping** med värdet **mapRecipient** i **jcr:content**-noden för mallen, annars kan du inte välja Adobe Campaign-mallen i **Sidegenskaper** för AEM (fältet är inaktiverat).
 
-## Komponenten Mall/sida {#template-page-component}
+## Mallar/sidkomponent {#template-page-component}
 
 ***/libs/mcm/campaign/components/campaign_newsletterpage***
 
@@ -69,11 +69,11 @@ Använd dessa rutiner när du skapar ett eget nyhetsbrev.
   </tr>
   <tr>
    <td><p>Koda all struktur med &lt;table&gt;elementet. För mer komplicerade layouter bör du kapsla tabeller för att skapa komplexa strukturer.</p> <p>E-post ska se bra ut även utan CSS.</p> </td>
-   <td><p>Tabeller används i hela mallen för att strukturera innehåll. Använder för närvarande maximalt fyra kapslade tabeller (1 bastabell + max). 3 kapslingsnivåer)</p> <p>&lt;div&gt;-taggar används bara i redigeringsläge för att säkerställa korrekt komponentredigering.</p> </td>
+   <td><p>Tabeller används i hela mallen för att strukturera innehåll. Använder för närvarande maximalt fyra kapslade tabeller (1 bastabell + max). 3 kapslingsnivåer)</p> <p>&lt;div&gt; -taggar används endast i redigeringsläge för att säkerställa korrekt komponentredigering.</p> </td>
   </tr>
   <tr>
    <td>Använd elementattribut (t.ex. cellfyllnad, justering och bredd) för att ange tabelldimensioner. Detta framtvingar en kartongmodellstruktur.</td>
-   <td><p>Alla tabeller innehåller nödvändiga attribut som <i>kantlinje</i>, <i>cellfyllnad</i>, <i>cellmellanrum</i> och <i>bredd</i>.</p> <p>För att harmonisera elementplaceringen i tabeller har alla tabellceller attributet <i>valign="top"</i> angetts.</p> </td>
+   <td><p>Alla tabeller innehåller nödvändiga attribut som <i>border</i>, <i>cellpadding</i>, <i>cellspacing</i> och <i>width</i>.</p> <p>För att harmonisera elementplaceringen i tabeller har alla tabellceller attributet <i>valign="top"</i> angetts.</p> </td>
   </tr>
   <tr>
    <td><p>Konto för mobilvänlighet, om möjligt. Använd mediefrågor om du vill öka textstorleken på små skärmar, ange träffområden i ministorlek för länkar.</p> <p>Gör ett e-postmeddelande responsivt om designen tillåter det.</p> </td>
@@ -89,7 +89,7 @@ Använd dessa rutiner när du skapar ett eget nyhetsbrev.
   </tr>
   <tr>
    <td>E-postmeddelanden ska vara högst 600-800 pixlar breda. Detta gör att de beter sig bättre i den storlek på förhandsgranskningsfönstret som många klienter har.</td>
-   <td>Innehållstabellens <i>bredd</i> är begränsad till 600 px i demodesign.</td>
+   <td>Innehållstabellens <i>bredd</i> är begränsad till 600px i demodesign.</td>
   </tr>
  </tbody>
 </table>
@@ -100,10 +100,10 @@ Använd dessa rutiner när du skapar ett eget nyhetsbrev.
 
 | **Bästa praxis** | **Implementering** |
 |---|---|
-| Lägg till *alt* -attribut i bilder | Attributet *alt* har definierats som obligatoriskt för bildkomponenten. |
-| Använd *jpg* i stället för *png* -format för bilder | Bilderna hanteras alltid som JPG-bilder av bildkomponenten. |
-| Använd `<img>` element i stället för bakgrundsbilder i en tabell. | Inga bakgrundsbilddata används i mallarna. |
-| Lägg till attributet style=&quot;display block&quot; i bilder. Tillåter visning bra på Gmail. | Alla bilder innehåller som standard attributet *style=&quot;display block&quot;* . |
+| Lägg till *alt*-attribut i bilder | Attributet *alt* har definierats som obligatoriskt för bildkomponenten. |
+| Använd *jpg* i stället för *png*-format för bilder | Bilderna hanteras alltid som JPG-bilder av bildkomponenten. |
+| Använd elementet `<img>` i stället för bakgrundsbilder i en tabell. | Inga bakgrundsbilddata används i mallarna. |
+| Lägg till attributet style=&quot;display block&quot; i bilder. Tillåter visning bra på Gmail. | Alla bilder innehåller som standard attributet *style=&quot;display block&quot;*. |
 
 ### Text och länkar {#text-and-links}
 
@@ -130,11 +130,11 @@ Använd dessa rutiner när du skapar ett eget nyhetsbrev.
 
 | **Bästa praxis** | **Implementering** |
 |---|---|
-| Använd W3C-valideraren för att korrigera HTML-koden. Se till att alla öppna taggar stängs ordentligt. | Koden har validerats. För XHTML Transition Doctype saknas bara det saknade xmlns-attributet för `<html>` elementet. |
+| Använd W3C-valideraren för att korrigera HTML-koden. Se till att alla öppna taggar stängs ordentligt. | Koden har validerats. För XHTML Transition Doctype saknas bara det saknade xmlns-attributet för `<html>`-elementet. |
 | Stör inte JavaScript eller Flash - dessa tekniker stöds i stort sett inte av e-postklienter. | Varken JavaScript eller Flash används i nyhetsbrevmallen. |
 | Lägg till en oformaterad textversion för att skicka flera delar. | En ny widget skapades i sidegenskaperna för att enkelt extrahera en textversion från sidinnehållet. Detta kan användas som startpunkt för den slutliga versionen av plaintext. |
 
-## Mallar och exempel för kampanjnyhetsbrev {#campaign-newsletter-templates-and-examples}
+## Mallar för kampanjnyhetsbrev och exempel {#campaign-newsletter-templates-and-examples}
 
 AEM innehåller flera mallar och komponenter som du kan använda för att skapa nyhetsbrev om kampanjer. Du kan använda de här mallarna och komponenterna för att skapa anpassade nyhetsbrev.
 
@@ -142,13 +142,13 @@ AEM innehåller flera mallar och komponenter som du kan använda för att skapa 
 
 Det finns tre något olika malltyper att välja mellan för att få en heltäckande bas och för att bredda möjligheterna för innehållsflöde. Du kan enkelt använda dessa för att skapa anpassade nyhetsbrev.
 
-Alla har ett **sidhuvud**, en **sidfot** och ett **textavsnitt** . Under brödavsnittet skiljer sig varje mall i **kolumndesign** (1, 2 eller 3 kolumner).
+Alla har ett **huvud**, en **sidfot** och ett **body**-avsnitt. Under brödavsnittet skiljer sig varje mall i **kolumndesign** (1, 2 eller 3 kolumner).
 
 ![](assets/chlimage_1-69.png)
 
 ### Komponenter {#components}
 
-Det finns för närvarande [sju komponenter som kan användas i kampanjmallar](/help/sites-authoring/adobe-campaign-components.md). Dessa komponenter är alla baserade på Adobe markup-språkets **HTML**.
+Det finns för närvarande [sju komponenter som kan användas i kampanjmallar](/help/sites-authoring/adobe-campaign-components.md). Dessa komponenter är alla baserade på Adobe markup-språket **HTL**.
 
 | **Komponentnamn** | **Komponentsökväg** |
 |---|---|
@@ -164,4 +164,4 @@ Det finns för närvarande [sju komponenter som kan användas i kampanjmallar](/
 >
 >Dessa komponenter är optimerade för e-postinnehåll; dvs. de följer de bästa praxis som beskrivs i detta dokument. Om du använder andra komponenter som inte finns installerade i systemet bryter det vanligtvis mot dessa regler.
 
-Dessa komponenter beskrivs ingående i [Adobe Campaign-komponenter](/help/sites-authoring/adobe-campaign-components.md).
+Dessa komponenter beskrivs i detalj i [Adobe Campaign-komponenter](/help/sites-authoring/adobe-campaign-components.md).
