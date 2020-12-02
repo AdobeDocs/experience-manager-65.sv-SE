@@ -12,6 +12,9 @@ discoiquuid: b88edad4-2a2e-429b-86a2-cc68ba69697e
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 8b53e79e3a88f58423e99477db930a4912a1ba09
+workflow-type: tm+mt
+source-wordcount: '335'
+ht-degree: 0%
 
 ---
 
@@ -24,11 +27,12 @@ I följande procedur används det klassiska användargränssnittet för att skap
 1. Lägg till en ny underordnad sida som representerar webbplatsens språkversion:
 
    1. Klicka på Ny > Ny sida.
-   1. Ange titel och namn i dialogrutan. Namnet måste ha formatet `<language-code>` eller `<language-code>_<country-code>`t.ex. en_US, en_us, en_GB, en_gb.
+   1. Ange titel och namn i dialogrutan. Namnet måste ha formatet `<language-code>` eller `<language-code>_<country-code>`, till exempel en, en_US, en_us, en_GB, en_gb.
 
       * Den språkkod som stöds är en kod med två bokstäver och gemener som definieras av ISO-639-1
       * Den landskod som stöds är gemen eller versal, tvåbokstavskod enligt ISO 3166
    1. Markera mallen och klicka på Skapa.
+
    ![newpagefr](assets/newpagefr.png)
 
 1. I webbplatskonsolen väljer du webbplatsens rotsida i webbplatsträdet.
