@@ -65,12 +65,12 @@ Den här sidan innehåller viktig information om hur du arbetar med filbibliotek
 
 ### Filbiblioteksfunktion {#file-library-function}
 
-En community-platsstruktur som innehåller funktionen [](functions.md#file-library-function)Filbibliotek innehåller en konfigurerad `file library` komponent.
+En community-platsstruktur som innehåller [filbiblioteksfunktionen](functions.md#file-library-function) innehåller en konfigurerad `file library`-komponent.
 
 ### Komma åt kommentarer som har bokförts för filbibliotek (UGC) {#accessing-comments-posted-for-file-libraries-ugc}
 
 UGC bör modereras med någon av standardmetoderna för moderering.
-Se [Moderera användargenererat innehåll](moderate-ugc.md).
+Se [Moderating User Generated Content](moderate-ugc.md).
 
 Från och med AEM 6.1 Communities omfattar användningen av en [gemensam butik](working-with-srp.md) för UGC programmatisk åtkomst till UGC oavsett valt lagringsalternativ (som ASRP, MSRP eller JSRP).
 
@@ -78,8 +78,8 @@ Från och med AEM 6.1 Communities omfattar användningen av en [gemensam butik](
 
 Se:
 
-* [Översikt över](srp.md) lagringsresursprovidern - introduktion och översikt över databasanvändningen.
-* [SRP och UGC Essentials](srp-and-ugc.md) - SRP-verktygsmetoder och exempel.
-* [Åtkomst till UGC med SRP](accessing-ugc-with-srp.md) - riktlinjer för kodning.
-* [Omfaktorisering för SocialUtils](socialutils.md) - mappning av utfasade verktygsmetoder till aktuella SRP-verktygsmetoder.
+* [Översikt över](srp.md)  lagringsresursprovidern - introduktion och översikt över databasanvändningen.
+* [SRP och UGC Essentials](srp-and-ugc.md) - SRP-verktygsmetoder och -exempel.
+* [Åtkomst till UGC med riktlinjerna för SRP](accessing-ugc-with-srp.md) -kodning.
+* [Omfaktorisering](socialutils.md)  för SocialUtils - mappning av utgått från verktygsmetoder till aktuella SRP-verktygsmetoder.
 
