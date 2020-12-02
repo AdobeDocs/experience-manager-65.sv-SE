@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 8f94c22d-5f08-4a8b-8bb5-5ec757c44bc8
 translation-type: tm+mt
 source-git-commit: 34aadbc35d7aad127fe98211a5f37d623d101c0c
+workflow-type: tm+mt
+source-wordcount: '168'
+ht-degree: 1%
 
 ---
 
@@ -34,4 +37,4 @@ I följande checklista markeras några av de viktigaste problemen - läs de andr
 
 >[!NOTE]
 >
->Du kan även se checklistan för [hantering av projekt - bästa praxis](/help/managing/best-practices.md) för ytterligare checklistor som gäller hela projektet.
+>Du kan även se [Hantera projekt - checklistan för bästa praxis](/help/managing/best-practices.md) för ytterligare checklistor som gäller hela projektet.
