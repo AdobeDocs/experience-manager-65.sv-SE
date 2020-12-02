@@ -1,8 +1,8 @@
 ---
-title: Översikt över formulärarbetsflödet
-seo-title: Översikt över formulärarbetsflödet
-description: Med Forms kan man utforma, hantera och optimera handläggarcentrerade processer. Med hjälp av arbetsflöden för blanketter kan man också hantera automatiserade affärsprocesslösningar som knyter samman system och människor.
-seo-description: Med Forms kan man utforma, hantera och optimera handläggarcentrerade processer. Med hjälp av arbetsflöden för blanketter kan man också hantera automatiserade affärsprocesslösningar som knyter samman system och människor.
+title: Översikt över Forms arbetsflöde
+seo-title: Översikt över Forms arbetsflöde
+description: Med Forms arbetsflöde kan man utforma, hantera och optimera humancentrerade processer. Med hjälp av arbetsflöden för blanketter kan man också hantera automatiserade affärsprocesslösningar som knyter samman system och människor.
+seo-description: Med Forms arbetsflöde kan man utforma, hantera och optimera humancentrerade processer. Med hjälp av arbetsflöden för blanketter kan man också hantera automatiserade affärsprocesslösningar som knyter samman system och människor.
 uuid: b28ada7c-de75-416a-b2c8-f6494be5330c
 contentOwner: admin
 content-type: reference
@@ -11,15 +11,18 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 7d2a9de8-13d1-4981-9ba2-9654127556b8
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '283'
+ht-degree: 0%
 
 ---
 
 
-# Översikt över formulärarbetsflödet {#overview-of-forms-workflow}
+# Översikt över Forms arbetsflöde {#overview-of-forms-workflow}
 
-Med Forms kan man utforma, hantera och optimera handläggarcentrerade processer. Med hjälp av arbetsflöden för blanketter kan man också hantera automatiserade affärsprocesslösningar som knyter samman system och människor.
+Med Forms arbetsflöde kan man utforma, hantera och optimera humancentrerade processer. Med hjälp av arbetsflöden för blanketter kan man också hantera automatiserade affärsprocesslösningar som knyter samman system och människor.
 
-På varje sida för formulärarbetsflöde i administrationskonsolen kan du utföra olika uppgifter enligt tabellen.
+På varje Forms-arbetsflödessida i administrationskonsolen kan du utföra olika uppgifter enligt tabellen.
 
 <table>
  <thead>
