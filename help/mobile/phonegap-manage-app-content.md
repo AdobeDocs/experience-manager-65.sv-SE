@@ -11,6 +11,9 @@ topic-tags: authoring-adobe-phonegap-enterprise
 discoiquuid: 5c8971ab-b07c-4131-b4cb-f34c52425014
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '742'
+ht-degree: 1%
 
 ---
 
@@ -21,7 +24,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 >
 >Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (t.ex. Reagera). [Läs mer](/help/sites-developing/spa-overview.md).
 
-Att hantera appinnehåll kräver en gemensam insats från [utvecklare](#developer), [författare](#author) och [administratörer](#administrator). Författare hanterar sidor, som i sin tur är baserade på mallar och komponenter som genererats av apputvecklare.
+Hantering av appinnehåll kräver en gemensam åtgärd från [utvecklare](#developer), innehåll [författare](#author) och [administratörer](#administrator). Författare hanterar sidor, som i sin tur är baserade på mallar och komponenter som genererats av apputvecklare.
 
 Slutligen publicerar administratörer det uppdaterade programinnehållet strategiskt.
 
@@ -29,7 +32,7 @@ Slutligen publicerar administratörer det uppdaterade programinnehållet strateg
 >
 >**Krav**:
 >
->Vid [driftsättning och underhåll](/help/sites-deploying/deploy.md)bekantades utvecklarna med AEM:s system med komponenter och mallar.
+>I [Distribuera och underhålla](/help/sites-deploying/deploy.md) blev utvecklare bekanta med AEM system för komponenter och mallar.
 
 ## Panelen Hantera sidinnehåll {#the-manage-page-content-tile}
 
@@ -37,55 +40,55 @@ Slutligen publicerar administratörer det uppdaterade programinnehållet strateg
 >
 >Om du inte använder en färdig appmall måste du konfigurera en Content Sync-hanterare för att kunna aktivera nytt appinnehåll för publicering.
 >
->Mer information finns i avsnittet [Mobil med innehållssynkronisering](/help/mobile/phonegap-contentsync.md) i Developer&#39;s.
+>Mer information finns i [Mobile with Content Sync](/help/mobile/phonegap-contentsync.md) i Developer&#39;s section.
 
 Här kan du skapa, redigera och ta bort innehåll i AEM Mobile på ungefär samma sätt som i AEM Sites.
 
-I rutan **** Hantera sidinnehåll visas antalet sidor med hanterat innehåll och senast ändrade för en viss nyttolast. Du kan fördjupa innehållet för att skapa, kopiera, flytta, ta bort och uppdatera sidor genom att klicka på varje post i rutan.
+I **rutan Hantera sidinnehåll** visas antalet sidor med hanterat innehåll och senast ändrade för en viss nyttolast. Du kan fördjupa innehållet för att skapa, kopiera, flytta, ta bort och uppdatera sidor genom att klicka på varje post i rutan.
 
-När innehållet har uppdaterats kan administratörer publicera en nyttolast för innehållsuppdatering Over-the-Air (OTA) till kunder via panelen **Hantera innehållspaket.**
+När innehållet har uppdaterats kan administratörer publicera en nyttolast för innehållsuppdatering via AIR (OTA) till kunder via **Hantera innehållspaket.**
 
 ![chlimage_1-161](assets/chlimage_1-161.png)
 
 Välj något av innehållspaketen i listan om du vill skapa eller redigera innehåll, till exempel skapa, redigera eller ta bort sidor, ändra navigerings- och sidordning, skapa eller uppdatera innehåll som text och media.
 
-Observera att *allt är innehåll*, vilket innebär att programformat, text, media, sidor, navigering och målgruppsanpassning för innehåll kan redigeras och uppdateras i OTA, utan att man behöver besöka en app-butik.
+Observera *allt är innehåll*, vilket innebär att programformat, kopia (text), media, sidor, navigering och, målanpassning av innehåll kan redigeras och uppdateras i OTA-filen, utan att du behöver besöka en appbutik.
 
-*För att kunna redigera AEM Mobile-innehåll behöver AEM-författare *en god förståelse för AEM:s gränssnitt för innehållsredigering: Skapa [sidor i AEM.](/help/sites-authoring/qg-page-authoring.md)
+*AEM behöver en bra förståelse för gränssnittet AEM innehållsredigering för att kunna redigera AEM Mobile-innehåll: [Redigeringssidor i AEM.](/help/sites-authoring/qg-page-authoring.md)
 
 ## Panelen Hantera innehållspaket {#the-manage-content-packages-tile}
 
-Här kan *AEM-administratörer* snabbt och enkelt uppdatera sina appar för att leverera engagerande upplevelser och aktuellt innehåll som ökar varumärkesengagemanget och uppfyller affärsmålen utan att behöva skicka in något nytt till utvecklare eller appbutiker.
+Här kan *AEM administratörer* snabbt och enkelt uppdatera sina appar för att leverera engagerande upplevelser och aktuellt innehåll som ökar varumärkesengagemanget och uppfyller affärsmålen utan att behöva skicka in något nytt till utvecklare eller appbutiker.
 
 ![chlimage_1-162](assets/chlimage_1-162.png)
 
-När *AEM-författare* har lagt till eller ändrat innehåll via panelen Hantera innehåll kan *AEM-administratörer* skicka ut ändringarna till kunder med en innehållspaketuppdatering.
+När *AEM Authors* har lagt till eller ändrat innehåll via Hantera innehållspanel kan *AEM administratörer* skicka ut dessa ändringar till kunder med en innehållspaketuppdatering.
 
-Med åtgärden Innehållspaket kan *AEM Author* skapa och redigera sidinnehåll medan utvecklingsteamet gör ändringar i utformningen och implementeringen av ett värdprogram, inklusive navigering, format, logik på serversidan, mallar och komponenter, och sedan skickar ut ändringarna till kunder utan att behöva skicka in dem till olika butiker för distribution igen.
+Med åtgärden Innehållspaket kan *AEM Author* skapa och redigera sidinnehåll medan utvecklingsteamet gör ändringar i en värdprogramdesign och implementering, inklusive navigering, stil, serverlogik, mallar och komponenter, och sedan skickar ut ändringarna till kunder utan att behöva skicka in dem till olika butiker för distribution igen.
 
 **Publicera nytt eller uppdaterat innehåll**
 
-Välj ett innehållspaket i rutan, i det här exemplet det engelska paketet. Observera att en dialogruta för innehållsuppdatering innehåller information om den aktuella konfigurationen för *innehållssynkronisering* . Om appinnehåll har ändrats sedan en tidigare uppdatering visas statusen *Väntande*, enligt nedan.
+Välj ett innehållspaket i rutan, i det här exemplet det engelska paketet. Lägg märke till att en dialogruta för innehållsuppdatering innehåller relevant *konfiguration för innehållssynkronisering*. Om appinnehåll har ändrats sedan en tidigare uppdatering visas statusen *Väntande*, enligt nedan.
 
 ![chlimage_1-163](assets/chlimage_1-163.png)
 
-Välj sedan **scenåtgärden** längst upp till höger för att skapa den nya innehållsuppdateringen. Lägg till rätt uppdateringsinformation och tryck på Klar.
+Välj sedan åtgärden **Stage** längst upp till höger för att skapa den nya innehållsuppdateringen. Lägg till rätt uppdateringsinformation och tryck på Klar.
 
 ![chlimage_1-164](assets/chlimage_1-164.png)
 
-Hanteraren för *innehållssynkronisering* skapar sedan de nödvändiga paketen genom att bilda en delta (ett paket med *endast* det som har ändrats). När det är klart har uppdateringsinnehållspaketet mellanlagrats enligt nedan.
+Hanteraren *Innehållssynkronisering* skapar sedan de nödvändiga paketen genom att bilda ett delta (ett *paket* som bara har ändrats). När det är klart har uppdateringsinnehållspaketet mellanlagrats enligt nedan.
 
 Genom att mellanlagra en uppdatering av innehållet kan flera uppdateringar göras innan de publiceras till OTA för mobila enheter.
 
 >[!NOTE]
 >
->Det mellanlagrade innehållet kan verifieras med appen AEM Verify innan det publiceras.
+>Det mellanlagrade innehållet kan verifieras med AEM Verifiera-appen före publicering.
 >
->Se [Mobile Quickstart för AEM Verify](/help/mobile/phonegap-mobile-quickstart.md) för mer information om appen AEM Verify.
+>Se [Mobile Quickstart för AEM Verify](/help/mobile/phonegap-mobile-quickstart.md) för mer information om AEM Verifiera app.
 
 ![chlimage_1-165](assets/chlimage_1-165.png)
 
-När du är redo att leverera nytt innehåll till appanvändarna med Content Sync OTA väljer du **Publicera** enligt nedan.
+När du är redo att leverera nytt innehåll till appanvändarna med innehållssynkronisering, väljer du **Publicera** enligt nedan.
 
 ![chlimage_1-166](assets/chlimage_1-166.png)
 
@@ -99,7 +102,7 @@ När du har lärt dig mer om att skapa och hantera appinnehåll i programkontrol
 * [Skapa ett nytt program med guiden Skapa app](/help/mobile/phonegap-create-new-app.md)
 * [Importera en befintlig hybridapp](/help/mobile/phonegap-adding-content-to-imported-app.md)
 
-### Additional Resources {#additional-resources}
+### Ytterligare resurser {#additional-resources}
 
 Mer information om roller och ansvar för en administratör och utvecklare finns i resurserna nedan:
 
