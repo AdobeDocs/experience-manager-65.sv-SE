@@ -1,8 +1,8 @@
 ---
-title: Övervaka användning av AEM-formulär
-seo-title: Övervaka användning av AEM-formulär
-description: Du kan övervaka AEM-formulärdistributioner både på systemnivå och på intern nivå. Läs mer om hur du övervakar AEM-formulärdistributioner i det här dokumentet.
-seo-description: Du kan övervaka AEM-formulärdistributioner både på systemnivå och på intern nivå. Läs mer om hur du övervakar AEM-formulärdistributioner i det här dokumentet.
+title: Övervaka AEM
+seo-title: Övervaka AEM
+description: Du kan övervaka AEM formulärdistributioner både på systemnivå och intern nivå. Läs mer om övervakning AEM formulärdistributioner i det här dokumentet.
+seo-description: Du kan övervaka AEM formulärdistributioner både på systemnivå och intern nivå. Läs mer om övervakning AEM formulärdistributioner i det här dokumentet.
 uuid: 032b7a93-3069-4ad5-a8c6-4c160f290669
 contentOwner: admin
 content-type: reference
@@ -18,15 +18,15 @@ ht-degree: 0%
 ---
 
 
-# Övervaka användning av AEM-formulär {#monitoring-aem-forms-deployments}
+# Övervaka AEM formulärdistributioner {#monitoring-aem-forms-deployments}
 
-Du kan övervaka AEM-formulärdistributioner både på systemnivå och på intern nivå. Du kan använda specialhanteringsverktyg som HP OpenView, IBM Tivoli och CA UniCenter samt en JMX-bildskärm från tredje part som kallas *JConsole* för att specifikt övervaka Java-aktivitet. Implementeringen av en övervakningsstrategi förbättrar tillgängligheten, tillförlitligheten och prestandan för era AEM-blanketter.
+Du kan övervaka AEM formulärdistributioner både på systemnivå och intern nivå. Du kan använda specialhanteringsverktyg som HP OpenView, IBM Tivoli och CA UniCenter samt en JMX-bildskärm från tredje part som kallas *JConsole* för att specifikt övervaka Java-aktivitet. Implementeringen av en övervakningsstrategi förbättrar tillgängligheten, tillförlitligheten och prestandan för era AEM formulär.
 
-Mer information om hur du övervakar AEM-formulärdistributioner finns i [En teknisk guide för övervakning av AEM-formulärdistributioner](https://www.adobe.com/devnet/livecycle/pdfs/lc_monitoring_wp_ue.pdf).
+Mer information om övervakning AEM formulärdistributioner finns i [En teknisk guide för övervakning AEM formulärdistributioner](https://www.adobe.com/devnet/livecycle/pdfs/lc_monitoring_wp_ue.pdf).
 
 ## Övervaka med MBeans {#monitoring-using-mbeans}
 
-AEM-formulär innehåller två registrerade MBeans som tillhandahåller navigering och statistisk information. Det här är de enda MBeans som stöds för integrering och inspektion:
+AEM tillhandahåller två registrerade MBeans som tillhandahåller navigerings- och statistikinformation. Detta är de enda MBeans som stöds för integrering och inspektion:
 
 * **ServiceStatistic:** Denna MBean ger information om tjänstens namn och version.
 * **OperationStatistic:** Denna MBean ger statistik för alla formulärservertjänster. Här kan administratörer få information om en viss tjänst, t.ex. starttid, antal fel osv.
@@ -41,7 +41,7 @@ Dessa publika gränssnitt för ServiceStatistic MBean kan användas i testsyfte:
  public int getMinorVersion();
 ```
 
-### OperationStatisticMbean-offentliga gränssnitt {#operationstatisticmbean-public-interfaces}
+### OperationStatisticMbean publika gränssnitt {#operationstatisticmbean-public-interfaces}
 
 Dessa publika gränssnitt för OperationStatistic MBean kan användas i testsyfte:
 
@@ -79,13 +79,13 @@ Med en JMX-konsol (JConsole) finns statistik från OperationStatistic MBean till
 
 **ServiceType:** AdobeService är det namn som används för att lista alla tjänster.
 
-**AdobeServiceName:** Tjänstnamn eller tjänst-ID.
+**AdobeServiceName:** Service Name eller Service ID.
 
 **Version:** Tjänstens version.
 
 **Åtgärdsstatistik**
 
-**Anropstid:** Tidsåtgång för körning av metoden. Detta inkluderar inte den tidpunkt då begäran serialiseras, överförs från klient till server och avserialiseras.
+**Tid för anrop:** Tid för körning av metoden. Detta inkluderar inte den tidpunkt då begäran serialiseras, överförs från klient till server och avserialiseras.
 
 **Antal anrop:** Antalet gånger som tjänsten anropas.
 
@@ -99,9 +99,9 @@ Med en JMX-konsol (JConsole) finns statistik från OperationStatistic MBean till
 
 **Undantagsmeddelande:** Felmeddelandet för det senaste undantaget som inträffade.
 
-**Datum och tid för senaste provtagning:** Datum för det senaste anropet.
+**Senaste tidpunkten för provtagning:** Datum för senaste anrop.
 
-**Tidsenhet:** Standardvärdet är millisekunder.
+**Tidsenhet:** Standard är millisekunder.
 
 För att JMX-övervakning ska kunna aktiveras behöver programservrarna vanligtvis någon konfiguration. Mer information finns i programserverdokumentationen.
 
