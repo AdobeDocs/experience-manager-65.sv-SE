@@ -46,7 +46,7 @@ Ett särskilt [läge](/help/sites-authoring/author-environment-tools.md#page-mod
 
 >[!NOTE]
 >
->Glöm inte att det också finns [kommentarer](/help/sites-authoring/basic-handling.md#timeline) för att ge feedback på en sida.
+>Glöm inte att [kommentarer](/help/sites-authoring/basic-handling.md#timeline) också är tillgängliga för att ge feedback på en sida.
 
 >[!NOTE]
 >
@@ -59,7 +59,7 @@ Ett särskilt [läge](/help/sites-authoring/author-environment-tools.md#page-mod
 
 
 
-### Kommentera en komponent {#annotating-a-component}
+### Kommenterar en komponent {#annotating-a-component}
 
 I anteckningsläget kan du skapa, redigera, flytta eller ta bort anteckningar i ditt innehåll:
 
