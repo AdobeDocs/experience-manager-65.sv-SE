@@ -45,7 +45,7 @@ Följande bild är ett exempel på en kortlivad process som heter *MyApplication
 
 >[!NOTE]
 >
->Processen bygger inte på någon befintlig AEM Forms-process. Om du vill följa med i kodexemplen som beskriver hur du anropar den här processen skapar du en process med namnet `MyApplication/EncryptDocument` Workbench. (Se [Använda Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63).)
+>Processen bygger inte på någon befintlig AEM Forms-process. Om du vill följa med i kodexemplen som beskriver hur du anropar den här processen skapar du en process med namnet `MyApplication/EncryptDocument` med Workbench. (Se [Använda Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63).)
 
 När den här korta processen anropas utför den följande åtgärder:
 
@@ -53,7 +53,7 @@ När den här korta processen anropas utför den följande åtgärder:
 1. Krypterar PDF-dokumentet med ett lösenord. Namnet på indataparametern för den här processen är `inDoc` och datatypen är dokument.
 1. Sparar det lösenordskrypterade PDF-dokumentet som en PDF-fil i det lokala filsystemet. Den här processen returnerar det krypterade PDF-dokumentet som ett utdatavärde. Namnet på utdataparametern för den här processen är `outDoc` och datatypen är dokument.
 
-   Den här processen slutförs synkront på samma körningstråd som den anropades från. Namnet på den här kortvariga processen är `MyApplication/EncryptDocument`och dess åtgärd är `invoke`.
+   Den här processen slutförs synkront på samma körningstråd som den anropades från. Namnet på den här kortlivade processen är `MyApplication/EncryptDocument`och åtgärden är `invoke`.
 
    >[!NOTE]
    >
@@ -61,21 +61,21 @@ När den här korta processen anropas utför den följande åtgärder:
 
    *Programmering med AEM* formulär beskriver följande sätt på vilka du programmässigt kan anropa den här korta processen:
 
-   * [Anropa en kort process genom att skicka ett osäkert dokument med AEM Forms Remoting](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting) (Använda ett Flex-program)
-   * [Anropa en kort process med anrops-API](/help/forms/developing/invoking-aem-forms-using-java.md#invoking-a-short-lived-process-using-the-invocation-api) (Java Invocation API)
-   * [Anropa AEM Forms med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding) (webbtjänstexempel)
-   * [Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom) (webbtjänstexempel)
-   * [Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref) (webbtjänstexempel)
-   * [Anropa AEM Forms med BLOB-data via HTTP](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-blob-data-over-http) (webbtjänstexempel)
-   * [Anropa AEM Forms med DIME](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-dime) (webbtjänstexempel)
+   * [Anropa en kort process genom att skicka ett osäkert dokument med AEM Forms Remoting](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting)  (Använda ett Flex-program)
+   * [Anropa en kort process med anrops-API](/help/forms/developing/invoking-aem-forms-using-java.md#invoking-a-short-lived-process-using-the-invocation-api)  (Java Invocation API)
+   * [Anropa AEM Forms med Base64-kodning](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)  (webbtjänstexempel)
+   * [Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)  (webbtjänstexempel)
+   * [Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)  (webbtjänstexempel)
+   * [Anropa AEM Forms med BLOB-data via HTTP](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-blob-data-over-http)  (webbtjänstexempel)
+   * [Anropa AEM Forms med DIME](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-dime)  (webbtjänstexempel)
    * [Anropa processen MyApplication/EncryptDocument med REST](/help/forms/developing/invoking-aem-forms-using-rest.md)
 
 **Exempel på långvarig process**
 
 Följande bild är ett exempel på en långvarig process.
 
-Denna process anropas när en sökande lämnar in en låneblankett. Processen är inte slutförd förrän en lånehandläggare godkänner eller avvisar låneansökan. Namnet på den här långvariga processen är *FirstAppSolution/PreLoanProcess* och åtgärden är `invoke_Async`. Den här processen måste anropas asynkront. Mer information om att programmatiskt anropa den här långvariga processen finns i [Anropa humancentrerade, långvariga processer](/help/forms/developing/invoking-human-centric-long-lived.md#invoking-human-centric-long-lived-processes).
+Denna process anropas när en sökande lämnar in en låneblankett. Processen är inte slutförd förrän en lånehandläggare godkänner eller avvisar låneansökan. Namnet på den här långvariga processen är *FirstAppSolution/PreLoanProcess* och dess åtgärd är `invoke_Async`. Den här processen måste anropas asynkront. Mer information om att programmatiskt anropa den här långvariga processen finns i [Anropa humancentrerade, långlivade processer](/help/forms/developing/invoking-human-centric-long-lived.md#invoking-human-centric-long-lived-processes).
 
 >[!NOTE]
 >
->Du kan skapa den här processen genom att följa den självstudiekurs som anges i [Skapa ditt första AEM Forms-program](https://www.adobe.com/go/learn_aemforms_firstapp_ds_63).
+>Du kan skapa den här processen genom att följa självstudiekursen som anges i [Skapa ditt första AEM Forms-program](https://www.adobe.com/go/learn_aemforms_firstapp_ds_63).
