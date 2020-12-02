@@ -1,8 +1,8 @@
 ---
 title: Konfigurerar Connector för IBM FileNet
 seo-title: Konfigurerar Connector för IBM FileNet
-description: Lär dig hur du konfigurerar anslutningsprogrammet för IBM FileNet för att möjliggöra kommunikation mellan AEM-formulär och IBM FileNet.
-seo-description: Lär dig hur du konfigurerar anslutningsprogrammet för IBM FileNet för att möjliggöra kommunikation mellan AEM-formulär och IBM FileNet.
+description: Lär dig hur du konfigurerar anslutningsprogrammet för IBM FileNet för att möjliggöra kommunikation mellan AEM och IBM FileNet.
+seo-description: Lär dig hur du konfigurerar anslutningsprogrammet för IBM FileNet för att möjliggöra kommunikation mellan AEM och IBM FileNet.
 uuid: 29d4e221-97f7-4cfb-b7e4-75a8289d2604
 contentOwner: admin
 content-type: reference
@@ -11,17 +11,20 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: be4994de-12f8-436e-926a-49a6783b006e
 translation-type: tm+mt
 source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+workflow-type: tm+mt
+source-wordcount: '758'
+ht-degree: 0%
 
 ---
 
 
-# Konfigurerar Connector för IBM FileNet {#configuring-connector-for-ibm-filenet}
+# Konfigurerar koppling för IBM FileNet {#configuring-connector-for-ibm-filenet}
 
-Koppling till IBM FileNet möjliggör kommunikation mellan AEM-formulär och IBM FileNet. Mer bakgrundsinformation finns i&quot;Connectors for ECM&quot; i [Services Reference](https://www.adobe.com/go/learn_aemforms_services_63).
+Koppling för IBM FileNet möjliggör kommunikation mellan AEM och IBM FileNet. Mer bakgrundsinformation finns i &quot;Connectors for ECM&quot; i [Services Reference](https://www.adobe.com/go/learn_aemforms_services_63).
 
 >[!NOTE]
 >
->I tidigare versioner kunde resurserna lagras i en ECM-databas. I den här versionen lagras resurserna i AEM-formulärens ursprungliga databas och databasleverantörens tjänster har tagits bort. Överföring av resurser från en ECM-databas till AEM-formulärdatabasen sker när du uppgraderar till AEM-formulär. Mer information finns i uppgraderingsguiden för AEM-formulär för programservern.
+>I tidigare versioner kunde resurserna lagras i en ECM-databas. I den här versionen lagras resurser i AEM för inbyggda formulär och databasleverantörstjänsterna har tagits bort. Överföring av resurser från en ECM-databas till databasen med AEM formulär sker när du uppgraderar till AEM formulär. Mer information finns i uppgraderingsguiden för AEM formulär för programservern.
 
 ## Konfigurera anslutningen till innehållsmotorn {#configure-the-connection-to-the-content-engine}
 
@@ -40,21 +43,21 @@ IBM FileNet P8 Content Engine tillhandahåller programvarutjänster för hanteri
 
 1. Välj en av följande skyddsnivåer i listan över autentiseringsskyddssystem:
 
-   * **Rensa:** Skickar autentiseringsuppgifter i oskyddat läge över nätverket
-   * **Symmetrisk:** Skickar krypterade inloggningsuppgifter i nätverket
+   * **Rensa:** Skickar autentiseringsuppgifter i oskyddat läge i nätverket
+   * **Symmetrisk:** Skickar krypterade autentiseringsuppgifter i nätverket
 
 1. Ange sökvägen till krypteringsfilen i rutan Plats för krypteringsfil:
 
    * Om du valde Rensa som autentiseringsskyddsschema ignoreras det här nyckelordet och dess värde.
    * Om du valde Symmetric som autentiseringsskyddsschema pekar den sökväg du anger på platsen för en krypteringsfil på formulärservern som innehåller de kryptografiska nycklar som ska användas.
 
-1. I rutan Standardobjektarkiv anger du den objektarkivkoppling som AEM-formulär ansluter till som standard.
+1. I rutan Standardobjektarkiv anger du den objektarkivkoppling som AEM formulär ansluts till som standard.
 1. I rutan Användarnamn anger du användarnamnet för en användare som har behörighet till standardobjektarkivet som du angav i föregående steg.
 1. Ange användarens lösenord i rutan Lösenord och klicka på Spara.
 
-## Konfigurera inställningar för processmotorn {#configure-the-process-engine-settings}
+## Konfigurera inställningarna för processmotorn {#configure-the-process-engine-settings}
 
-Koppling för IBM FileNet innehåller Process Engine Connector för IBM FileNet-tjänsten som används för att interagera med IBM FileNet Process Engine. Du kan konfigurera inställningar för den här tjänsten.
+Koppling för IBM FileNet innehåller Process Engine Connector för tjänsten IBM FileNet, som används för att interagera med IBM FileNet Process Engine. Du kan konfigurera inställningar för den här tjänsten.
 
 1. Klicka på Tjänster > Koppling för IBM FileNet i administrationskonsolen.
 1. Om du vill aktivera användningen av Process Engine Connector för IBM FileNet-tjänsten väljer du Använd anslutningstjänsten för processmotor.
@@ -65,24 +68,24 @@ Koppling för IBM FileNet innehåller Process Engine Connector för IBM FileNet-
 1. I rutan Användarnamn anger du det användarnamn som används för att ansluta till processmotorn.
 1. I rutan Lösenord anger du lösenordet som används för att ansluta till processmotorn och klickar på Spara.
 
-## Validering av tjänstinställningar {#validation-of-service-settings}
+## Verifiering av tjänstinställningar {#validation-of-service-settings}
 
 Om du anger ett felaktigt användarnamn eller lösenord när du konfigurerar anslutningen till innehållsmotorn eller processmotorinställningarna får du följande resultat, beroende på om tjänsterna körs för närvarande:
 
 * Om både databasprovidertjänsten för IBM FileNet och Content Repository Connector för IBM FileNet-tjänsten stoppas visas inget fel när du sparar tjänstens konfigurationsinformation. Nästa gång du startar tjänsten inträffar dock ett undantag och tjänsten kommer inte att starta.
 * Om antingen databasprovidertjänsten för IBM FileNet eller Content Repository Connector för IBM FileNet-tjänsten startas, försöker tjänsten omedelbart att validera inloggningsinformationen när du sparar tjänstens konfigurationsinformation. I det här fallet inträffar ett fel och konfigurationsinformationen sparas inte.
 
-## Ändra databasens tjänstleverantör {#change-the-repository-service-provider}
+## Ändra databastjänstprovidern {#change-the-repository-service-provider}
 
 Du kan konfigurera vilken databastjänstleverantör som ska användas med FileNet. Databastjänstanrop delegeras till providern som du konfigurerar.
 
 Följande alternativ är tillgängliga:
 
-**Aktuellt databasprovidernamn:** Namnet på den aktuella databastjänstprovidern
+**Aktuellt databasprovidernamn:** Namnet på den aktuella databasprovidern
 
-**IBM FileNet Repository Provider:** Gör FileNet-databasprovidern till databasprovidern. Det här alternativet har tagits bort.
+**IBM FileNet-databasprovider:** Gör FileNet-databasprovidern till databasprovidern. Det här alternativet har tagits bort.
 
-**databasprovider:** Gör den inbyggda databasprovidern till databasprovidern
+**databasprovider:** gör den inbyggda databasprovidern till databasprovidern
 
 >[!NOTE]
 >
