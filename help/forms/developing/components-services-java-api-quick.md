@@ -17,7 +17,7 @@ ht-degree: 0%
 ---
 
 
-# Komponenter och tjänster - Java API snabbstart (SOAP) {#components-and-services-java-apiquick-start-soap}
+# Java API-snabbstart för komponenter och tjänster (SOAP) {#components-and-services-java-apiquick-start-soap}
 
 Java API Quick Start (SOAP) är tillgängligt för komponenter och tjänster.
 
@@ -47,7 +47,7 @@ AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutning
 
 >[!NOTE]
 >
->Om du har en anpassad komponent och använder SOAP- eller EJB-protokoll för att anropa DSC:er på samma lokala server, och dessa anrop slutar att fungera efter en uppgradering, använder du anropsstrategin in-VM ([DSC_IN_VM_PASSTHROUGH_STRATEGY](https://help.adobe.com/en_US/AEMForms/6-3/ProgramLC/javadoc/com/adobe/idp/dsc/clientsdk/ServiceClientFactoryProperties.html#DSC_IN_VM_PASSTHROUGH_STRATEGY)). Använd DSC-anropsmetoden in-VM med ServiceClientFactory som standard och konstruera inte ServiceClientFactory med SOAP- eller EJB-protokoll.
+>Om du har en anpassad komponent och använder SOAP- eller EJB-protokoll för att anropa DSC:er på samma lokala server, och dessa anrop slutar att fungera efter en uppgradering, använder du en startstrategi för DSC ([DSC_IN_VM_PASSTHROUGH_STRATEGY](https://help.adobe.com/en_US/AEMForms/6-3/ProgramLC/javadoc/com/adobe/idp/dsc/clientsdk/ServiceClientFactoryProperties.html#DSC_IN_VM_PASSTHROUGH_STRATEGY)). Använd DSC-anropsmetoden in-VM med ServiceClientFactory som standard och konstruera inte ServiceClientFactory med SOAP- eller EJB-protokoll.
 
 ## Snabbstart (SOAP-läge): Distribuera en komponent med Java API {#quick-start-soap-mode-deploying-a-component-using-the-java-api}
 
@@ -414,7 +414,7 @@ I följande Java-kodexempel startas en tjänst med namnet *SendEmailService*.
  
 ```
 
-## Snabbstart (SOAP-läge): Ändra konfigurationsvärden för tjänster med Java API {#quick-start-soap-mode-modifying-a-services-configuration-values-using-the-java-api}
+## Snabbstart (SOAP-läge): Ändra ett tjänstkonfigurationsvärde med Java API {#quick-start-soap-mode-modifying-a-services-configuration-values-using-the-java-api}
 
 I följande Java-exempel ändras konfigurationsvärden som tillhör SendEmail Service.
 
