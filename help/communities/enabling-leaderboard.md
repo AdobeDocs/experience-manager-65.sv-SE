@@ -19,36 +19,36 @@ ht-degree: 1%
 ---
 
 
-# Funktion för resultatavla {#leaderboard-feature}
+# Ledarbordsfunktion {#leaderboard-feature}
 
 ## Introduktion {#introduction}
 
-Komponenten `Leaderboard` ger möjlighet att få en uppfattning om hur medlemmarna interagerar inom communityn genom att rangordna medlemmar enligt poäng (grundläggande poängsättning) eller deras sakkunskap (avancerad poängsättning).
+Komponenten `Leaderboard` ger möjlighet att förstå hur medlemmar interagerar inom communityn genom att rangordna medlemmar enligt poäng (grundläggande poängsättning) eller deras sakkunskap (avancerad poängsättning).
 
-Innan du tar med huvudpanelskomponenten på en sida måste du konfigurera [Scoring and Badges](/help/communities/implementing-scoring.md)för Communities.
+Innan du inkluderar huvudpanelskomponenten på en sida måste du konfigurera [Webbgruppsbedömning och emblem](/help/communities/implementing-scoring.md).
 
 I det här avsnittet av dokumentationen beskrivs:
 
-* Lägga till `Leaderboard` komponenten på en [communitywebbplats](/help/communities/overview.md#community-sites).
-* Konfigurationsinställningar för `Leaderboard` komponenten.
+* Lägger till komponenten `Leaderboard` i en [community-webbplats](/help/communities/overview.md#community-sites).
+* Konfigurationsinställningar för komponenten `Leaderboard`.
 
 ### Lägga till en huvudpanel på en sida {#adding-a-leaderboard-to-a-page}
 
-Om du vill lägga till en `Leaderboard` komponent på en sida i redigeringsläge letar du reda på komponenten
+Om du vill lägga till en `Leaderboard`-komponent på en sida i redigeringsläge letar du reda på komponenten
 
 * `Communities / Leaderboard`
 
 och dra den till rätt plats på en sida.
 
-Mer information finns i Grunderna för [communitykomponenter](/help/communities/basics.md).
+Mer information finns på [Grunderna för communitykomponenter](/help/communities/basics.md).
 
 När komponenten placeras på en sida i en community-webbplats är det så här den visas:
 
 ![chlimage_1-8](assets/chlimage_1-8.png)
 
-### Konfigurerar huvudpanel {#configuring-leaderboard}
+### Konfigurerar huvudpanelen {#configuring-leaderboard}
 
-Markera den monterade `Leaderboard` komponent som du vill öppna och välj den `Configure` ikon som öppnar redigeringsdialogrutan.
+Markera den monterade `Leaderboard`-komponenten som ska öppnas och välj ikonen `Configure` som öppnar redigeringsdialogrutan.
 
 ![chlimage_1-9](assets/chlimage_1-9.png)
 
@@ -56,12 +56,12 @@ Markera den monterade `Leaderboard` komponent som du vill öppna och välj den `
 
 #### Fliken Inställningar {#settings-tab}
 
-Under **[!UICONTROL Settings]** fliken anger du vilken information om medlemmen som ska visas:
+Under fliken **[!UICONTROL Settings]** anger du vilken information om medlemmen som visas:
 
 * **Visningsnamn**
 
-   Ett beskrivande namn som ska visas för styrelsen, som återspeglar reglerna som valts för att visa märken och bakgrundsmusik.
-Standard är `Leaderboard`, om inget anges.
+   Ett beskrivande namn som ska visas för styrelsen, som återspeglar reglerna som valts för att visa märken och poäng.
+Standardvärdet är `Leaderboard`, om inget anges.
 
 * **Badge**
 
@@ -80,7 +80,7 @@ Standard är avmarkerat.
 
 #### Fliken Regler {#rules-tab}
 
-Under fliken **Regler** , communitywebbplatsen och dess regler för poäng och badging
+Under fliken **Regler**, communitywebbplatsen och dess regler för bedömning och märkning
 
 * **Regelplats**
 
@@ -98,7 +98,7 @@ Under fliken **Regler** , communitywebbplatsen och dess regler för poäng och b
 
    Antal medlemmar som ska visas per sida. Standard är 10.
 
-### Exempel: Deltagare i ledningsgruppen {#example-participants-leaderboard}
+### Exempel: Deltagarnas huvudpanel {#example-participants-leaderboard}
 
 Den här resultatöversikten är en följd av att grundläggande poängregler har tillämpats.
 
@@ -122,7 +122,7 @@ Konfiguration av huvudpanelskomponent:
 
 ![chlimage_1-11](assets/chlimage_1-11.png)
 
-### Exempel: Experter Leaderboard {#example-experts-leaderboard}
+### Exempel: Expertledare {#example-experts-leaderboard}
 
 Den här resultatöversikten är en följd av att avancerade poängregler har tillämpats.
 
@@ -145,8 +145,8 @@ Konfiguration av huvudpanelskomponent:
 
 ![chlimage_1-12](assets/chlimage_1-12.png)
 
-### Additional Information {#additional-information}
+### Ytterligare information {#additional-information}
 
-Mer information finns på sidan [Ledarpanel Essentials](/help/communities/leaderboard.md) för utvecklare.
+Mer information finns på sidan [Leaderboard Essentials](/help/communities/leaderboard.md) för utvecklare.
 
-Instruktioner för hur du skapar regler finns på sidan [Värderingslista och badges](/help/communities/implementing-scoring.md) för webbgrupper för administratörer.
+Instruktioner för hur du skapar regler finns på sidan [Webbgruppsbedömning och emblem](/help/communities/implementing-scoring.md) för administratörer.
