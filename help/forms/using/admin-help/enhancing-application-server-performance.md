@@ -1,8 +1,8 @@
 ---
 title: Förbättra programserverns prestanda
 seo-title: Förbättra programserverns prestanda
-description: I det här dokumentet beskrivs valfria inställningar som du kan konfigurera för att förbättra prestandan på AEM-formulärprogramservern.
-seo-description: I det här dokumentet beskrivs valfria inställningar som du kan konfigurera för att förbättra prestandan på AEM-formulärprogramservern.
+description: I det här dokumentet beskrivs valfria inställningar som du kan konfigurera för att förbättra prestandan på AEM formulärprogramserver.
+seo-description: I det här dokumentet beskrivs valfria inställningar som du kan konfigurera för att förbättra prestandan på AEM formulärprogramserver.
 uuid: 88d2f96a-3b59-410d-8160-20581d27acad
 contentOwner: admin
 content-type: reference
@@ -11,19 +11,22 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: fad65765-d56d-4a9f-82d5-bcceb1758953
 translation-type: tm+mt
 source-git-commit: a26bc4e4ea10370dd2fc3403500004b9e378c418
+workflow-type: tm+mt
+source-wordcount: '1886'
+ht-degree: 0%
 
 ---
 
 
 # Förbättra programserverns prestanda{#enhancing-application-server-performance}
 
-Det här innehållet beskriver valfria inställningar som du kan konfigurera för att förbättra prestandan på AEM-formulärprogramservern.
+Det här innehållet beskriver valfria inställningar som du kan konfigurera för att förbättra prestandan på AEM formulärprogramserver.
 
-## Konfigurera datakällor för programservrar {#configuring-application-server-data-sources}
+## Konfigurerar datakällor för programservern {#configuring-application-server-data-sources}
 
-AEM-formulär använder AEM-formulärdatabasen som sin datakälla. AEM-formulärdatabasen lagrar programresurser och vid körning kan tjänster hämta resurser från databasen som en del av en automatiserad affärsprocess.
+AEM använder AEM som datakälla. I databasen AEM formulär lagras programresurser, och vid körning kan tjänster hämta resurser från databasen som en del av en automatiserad affärsprocess.
 
-Åtkomsten till datakällan kan vara viktig, beroende på hur många AEM-formulärmoduler du kör och hur många användare som samtidigt använder programmet. Datakällans åtkomst kan optimeras med hjälp av anslutningspoolning. *Anslutningspoolning* är en teknik som används för att undvika att skapa nya databasanslutningar varje gång ett program eller serverobjekt kräver åtkomst till databasen. Anslutningspoolning används vanligtvis i webbaserade program och företagsprogram och hanteras vanligtvis av, men inte begränsat till, en programserver.
+Åtkomsten till datakällan kan vara viktig, beroende på hur många AEM formulärmoduler du kör och hur många användare som samtidigt använder programmet. Datakällans åtkomst kan optimeras med hjälp av anslutningspoolning. *Anslutningspoolning* är en teknik som används för att undvika att skapa nya databasanslutningar varje gång ett program eller serverobjekt kräver åtkomst till databasen. Anslutningspoolning används vanligtvis i webbaserade program och företagsprogram och hanteras vanligtvis av, men inte begränsat till, en programserver.
 
 Det är viktigt att du konfigurerar anslutningspoolens parametrar på rätt sätt så att du aldrig får slut på anslutningar, vilket kan försämra programmets prestanda.
 
@@ -65,34 +68,34 @@ När programserveradministratören fastställer rätt inställningar för anslut
 1. Klicka på Resurser > JDBC > JDBC Providers i navigeringsträdet. I den högra rutan klickar du på datakällan som du skapade, antingen DB2 Universal JDBC Driver Provider eller LiveCycle - db2 - IDP_DS.
 1. Klicka på Datakällor under Ytterligare egenskaper och välj IDP_DS.
 1. På nästa skärm, under Ytterligare egenskaper, klickar du på Egenskaper för anslutningspool och anger ett värde i rutan Maximalt antal anslutningar och rutan Minimalt antal anslutningar.
-1. Klicka på OK eller Använd och sedan på Spara direkt till huvudkonfiguration.
+1. Klicka på OK eller Använd och sedan på Spara direkt till Överordnad konfiguration.
 
 ### Konfigurera inställningar för anslutningspool för WebSphere för Oracle {#configure-connection-pool-settings-for-websphere-for-oracle}
 
 1. Klicka på Resurser > JDBC > JDBC Providers i navigeringsträdet. Klicka på datakällan för Oracle JDBC Driver som du skapade i den högra rutan.
 1. Klicka på Datakällor under Ytterligare egenskaper och välj IDP_DS.
 1. På nästa skärm, under Ytterligare egenskaper, klickar du på Egenskaper för anslutningspool och anger ett värde i rutan Maximalt antal anslutningar och rutan Minimalt antal anslutningar.
-1. Klicka på OK eller Använd och sedan på Spara direkt till huvudkonfiguration.
+1. Klicka på OK eller Använd och sedan på Spara direkt till Överordnad konfiguration.
 
 ### Konfigurera inställningar för anslutningspool för WebSphere för SqlServer {#configure-connection-pool-settings-for-websphere-for-sqlserver}
 
 1. Klicka på Resurser > JDBC > JDBC Providers i navigeringsträdet och klicka i den högra rutan på den användardefinierade datakällan för JDBC-drivrutin som du skapade.
 1. Klicka på Datakällor under Ytterligare egenskaper och välj IDP_DS.
 1. På nästa skärm, under Ytterligare egenskaper, klickar du på Egenskaper för anslutningspool och anger ett värde i rutan Maximalt antal anslutningar och rutan Minimalt antal anslutningar:
-1. Klicka på OK eller Använd och sedan på Spara direkt till huvudkonfiguration.
+1. Klicka på OK eller Använd och sedan på Spara direkt till Överordnad konfiguration.
 
 ## Optimera textbundna dokument och påverka JVM-minnet {#optimizing-inline-documents-and-impact-on-jvm-memory}
 
-Om du vanligtvis bearbetar dokument med relativt liten storlek kan du förbättra prestandan som är kopplad till dokumentöverföringshastigheten och lagringsutrymmet. Implementera följande produktkonfigurationer för AEM-formulär:
+Om du vanligtvis bearbetar dokument med relativt liten storlek kan du förbättra prestandan som är kopplad till dokumentöverföringshastigheten och lagringsutrymmet. Implementera följande produktkonfigurationer AEM formulär:
 
-* Öka dokumentets maximala textbundna standardstorlek för AEM-formulär så att den är större än storleken för de flesta dokument.
+* Öka dokumentets maximala textbundna storlek för AEM formulär så att den är större än storleken för de flesta dokument.
 * Om du vill bearbeta större filer anger du lagringskataloger på ett höghastighetsdisksystem eller en RAM-disk.
 
-Den maximala textbundna storleken och lagringskatalogerna (AEM-formulärens tillfälliga filkatalog och GDS-katalogen) har konfigurerats i administrationskonsolen.
+Den maximala textbundna storleken och lagringskatalogerna (AEM blankar temporär filkatalog och GDS-katalog) konfigureras i administrationskonsolen.
 
 ### Dokumentstorlek och maximal textbunden storlek {#document-size-and-maximum-inline-size}
 
-När ett dokument som skickas för bearbetning av AEM-formulär är mindre än eller lika med standarddokumentets maximala textbundna storlek, lagras dokumentet på servern infogat och dokumentet serialiseras som ett Adobe Document-objekt. Att lagra dokument textbundet kan ge avsevärda prestandafördelar. Om du däremot använder ett formulärarbetsflöde kan innehållet också lagras i databasen i spårningssyfte. Om du ökar den maximala textbundna storleken kan det därför påverka databasstorleken.
+När ett dokument som skickas för bearbetning av AEM är mindre än eller lika med standarddokumentets maximala textbundna storlek, lagras dokumentet på servern infogat och dokumentet serialiseras som ett Adobe Document-objekt. Att lagra dokument textbundet kan ge avsevärda prestandafördelar. Om du däremot använder ett formulärarbetsflöde kan innehållet också lagras i databasen i spårningssyfte. Om du ökar den maximala textbundna storleken kan det därför påverka databasstorleken.
 
 Ett dokument som är större än den maximala textbundna storleken lagras i det lokala filsystemet. Det Adobe Document-objekt som överförs till och från servern är bara en pekare till den filen.
 
@@ -105,7 +108,7 @@ När dokumentinnehållet är infogat (d.v.s. mindre än den maximala infogade st
 
    >[!NOTE]
    >
-   >Värdet för egenskapen för maximal dokumentstorlek måste vara identiskt för AEM Forms i JEE-miljö och AEM Forms i OSGi-paket som innehåller AEM Forms i JEE-miljö. Detta uppdaterade värde gäller endast för AEM Forms i JEE-miljö och inte för AEM Forms i OSGi-paket som innehåller AEM Forms i JEE-miljö.
+   >Värdet för egenskapen för maximal onlinestorlek för dokument måste vara identiskt för AEM Forms i JEE-miljö och AEM Forms i OSGi-paket som ingår i AEM Forms i JEE-miljö. Detta uppdaterade värde gäller endast för AEM Forms i JEE-miljö och inte för AEM Forms i OSGi-paket som innehåller AEM Forms i JEE-miljö.
 
 1. Starta om programservern med följande systemegenskap:
 
@@ -113,7 +116,7 @@ När dokumentinnehållet är infogat (d.v.s. mindre än den maximala infogade st
 
    >[!NOTE]
    >
-   >Den ovannämnda systemegenskapen åsidosätter värdet på egenskapen för dokumentets maximala textbundna storlek som angetts för AEM Forms i JEE-miljö och AEM Forms i OSGi-paketet innehöll AEM Forms i JEE-miljö.
+   >Systemegenskapen ovan åsidosätter värdet för egenskapen för dokumentets maximala textbundna storlek som angetts för AEM Forms i JEE-miljön och för AEM Forms i OSGi-paketet som ingår i AEM Forms i JEE-miljön.
 
 >[!NOTE]
 >
@@ -153,16 +156,16 @@ I det här avsnittet beskrivs inställningar som är specifika för en WebSphere
 
 ### Öka det maximala minne som tilldelas JVM {#increasing-the-maximum-memory-allocated-to-the-jvm}
 
-Om du kör Configuration Manager eller försöker generera Enterprise JavaBeans (EJB)-distributionskod genom att använda kommandoradsverktyget *ejbdeploy* och ett OutOfMemory-fel inträffar, ökar du mängden minne som tilldelas JVM.
+Om du kör Configuration Manager eller försöker generera Enterprise JavaBeans (EJB)-distributionskod med kommandoradsverktyget *ejbdeploy* och ett OutOfMemory-fel inträffar, ökar du mängden minne som tilldelats JVM.
 
 1. Redigera ejbdeploy-skriptet i katalogen *[appserver root]*/deploytool/itp/:
 
    * (Windows) `ejbdeploy.bat`
    * (Linux och UNIX) `ejbdeploy.sh`
 
-1. Leta reda på `-Xmx256M` parametern och ändra den till ett högre värde, till exempel `-Xmx1024M`.
+1. Hitta parametern `-Xmx256M` och ändra den till ett högre värde, till exempel `-Xmx1024M`.
 1. Spara filen.
-1. Kör `ejbdeploy` kommandot eller distribuera om med Configuration Manager.
+1. Kör kommandot `ejbdeploy` eller omdistribuera med Configuration Manager.
 
 ## Förbättra prestanda för Windows Server 2003 med LDAP {#improving-windows-server-2003-performance-with-ldap}
 
@@ -170,22 +173,22 @@ Det här innehållet beskriver inställningar som är specifika för en Microsof
 
 Om du använder anslutningspoolning på sökanslutningen kan antalet portar som behövs minska med så mycket som 50 %. Detta beror på att anslutningen alltid använder samma autentiseringsuppgifter för en viss domän, och kontexten och relaterade objekt stängs uttryckligen.
 
-### Konfigurera Windows Server för anslutningspoolning {#configure-your-windows-server-for-connection-pooling}
+### Konfigurera Windows Server för anslutningspooler {#configure-your-windows-server-for-connection-pooling}
 
-1. Klicka på Start > Kör för att starta Registereditorn, skriv `regedit` och klicka på OK i rutan Öppna.
+1. Klicka på Start > Kör för att starta Registereditorn, skriv `regedit` i rutan Öppna och klicka på OK.
 1. Gå till registernyckeln `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters`
 1. Leta reda på TcpTimedWaitDelay-värdenamnet i den högra rutan i Registereditorn. Om namnet inte visas väljer du Redigera > Nytt > DWORD-värde på menyraden för att lägga till namnet.
-1. Skriv i rutan Namn `TcpTimedWaitDelay`
+1. I rutan Namn skriver du `TcpTimedWaitDelay`
 
    >[!NOTE]
    >
    >Om du inte ser någon blinkande markör och `New Value #` inuti rutan högerklickar du i den högra panelen, väljer Byt namn och skriver `TcpTimedWaitDelay`*i rutan Namn.*
 
 1. Upprepa steg 4 för värdenamnen MaxUserPort, MaxHashTableSize och MaxFreeTcbs.
-1. Dubbelklicka i den högra rutan för att ange TcpTimedWaitDelay-värdet. Välj Decimal under Basvärde och skriv `30`i rutan Värde.
-1. Dubbelklicka i den högra rutan för att ange värdet för MaxUserPort. Välj Decimal under Basvärde och skriv `65534`i rutan Värde.
-1. Dubbelklicka inuti den högra rutan för att ange värdet för MaxHashTableSize. Välj Decimal under Basvärde och skriv `65536`i rutan Värde.
-1. Dubbelklicka inuti den högra rutan för att ange värdet för MaxFreeTcbs. Välj Decimal under Basvärde och skriv `16000`i rutan Värde.
+1. Dubbelklicka i den högra rutan för att ange TcpTimedWaitDelay-värdet. Välj Decimal under Basvärde och skriv `30` i rutan Värde.
+1. Dubbelklicka i den högra rutan för att ange värdet för MaxUserPort. Välj Decimal under Basvärde och skriv `65534` i rutan Värde.
+1. Dubbelklicka inuti den högra rutan för att ange värdet för MaxHashTableSize. Välj Decimal under Basvärde och skriv `65536` i rutan Värde.
+1. Dubbelklicka inuti den högra rutan för att ange värdet för MaxFreeTcbs. Välj Decimal under Basvärde och skriv `16000` i rutan Värde.
 
 >[!NOTE]
 >
