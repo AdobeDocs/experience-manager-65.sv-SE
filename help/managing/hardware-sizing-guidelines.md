@@ -1,8 +1,8 @@
 ---
 title: Riktlinjer för maskinvarans storlek
 seo-title: Riktlinjer för maskinvarans storlek
-description: Dessa riktlinjer för storleksändring ger en uppskattning av de maskinvaruresurser som krävs för att driftsätta ett AEM-projekt.
-seo-description: Dessa riktlinjer för storleksändring ger en uppskattning av de maskinvaruresurser som krävs för att driftsätta ett AEM-projekt.
+description: Dessa riktlinjer för storleksändring ger en uppskattning av de maskinvaruresurser som krävs för att driftsätta ett AEM projekt.
+seo-description: Dessa riktlinjer för storleksändring ger en uppskattning av de maskinvaruresurser som krävs för att driftsätta ett AEM projekt.
 uuid: 395f9869-17c4-4b9b-99f8-d35a44dd6256
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/MANAGING
@@ -12,13 +12,16 @@ discoiquuid: 8893306f-4bc0-48eb-8448-36d0214caddf
 docset: aem65
 translation-type: tm+mt
 source-git-commit: f24142064b15606a5706fe78bf56866f7f9a40ae
+workflow-type: tm+mt
+source-wordcount: '2832'
+ht-degree: 0%
 
 ---
 
 
-# Riktlinjer för maskinvarans storlek{#hardware-sizing-guidelines}
+# Riktlinjer för maskinvarustorlek{#hardware-sizing-guidelines}
 
-Dessa riktlinjer för storleksändring ger en uppskattning av de maskinvaruresurser som krävs för att driftsätta ett AEM-projekt. Beräkningar av storleken beror på projektets arkitektur, lösningens komplexitet, förväntad trafik och projektkraven. Den här guiden hjälper dig att fastställa maskinvarubehoven för en viss lösning eller att hitta en övre och nedre uppskattning av maskinvarukraven.
+Dessa riktlinjer för storleksändring ger en uppskattning av de maskinvaruresurser som krävs för att driftsätta ett AEM projekt. Beräkningar av storleken beror på projektets arkitektur, lösningens komplexitet, förväntad trafik och projektkraven. Den här guiden hjälper dig att fastställa maskinvarubehoven för en viss lösning eller att hitta en övre och nedre uppskattning av maskinvarukraven.
 
 Grundläggande faktorer att beakta är (i denna ordning):
 
@@ -50,27 +53,32 @@ Grundläggande faktorer att beakta är (i denna ordning):
 
 ## Arkitektur {#architecture}
 
-En vanlig AEM-konfiguration består av en författare och en publiceringsmiljö. De här miljöerna har olika krav på den underliggande maskinvarans storlek och systemkonfiguration. Detaljerade överväganden för båda miljöerna beskrivs i avsnitten om [författarmiljön](/help/managing/hardware-sizing-guidelines.md#author-environment-specific-calculations) och [publiceringsmiljön](/help/managing/hardware-sizing-guidelines.md#publish-environment-specific-calculations) .
+En vanlig AEM består av en författare och en publiceringsmiljö. De här miljöerna har olika krav på den underliggande maskinvarans storlek och systemkonfiguration. Detaljerade överväganden för båda miljöerna beskrivs i avsnitten [författarmiljö](/help/managing/hardware-sizing-guidelines.md#author-environment-specific-calculations) och [publiceringsmiljö](/help/managing/hardware-sizing-guidelines.md#publish-environment-specific-calculations).
 
 I en typisk projektkonfiguration har du flera miljöer där du ska fasa ut projektet:
 
-* **Utvecklingsmiljö** För att utveckla nya funktioner eller göra betydande ändringar. Bästa sättet är att arbeta i en utvecklingsmiljö per utvecklare (vanligen lokala installationer på deras personliga system).
+* **UtvecklingsmiljöFör**
+att utveckla nya funktioner eller göra betydande ändringar. Bästa sättet är att arbeta i en utvecklingsmiljö per utvecklare (vanligen lokala installationer på deras personliga system).
 
-* **Redigeringstestmiljö** Verifiera ändringar. Antalet testmiljöer kan variera beroende på projektkraven (t.ex. separat för kvalitetskontroll, integrationstestning eller testning av användaracceptans).
+* **Redigeringstestmiljö**
+För verifiering av ändringar. Antalet testmiljöer kan variera beroende på projektkraven (t.ex. separat för kvalitetskontroll, integrationstestning eller testning av användaracceptans).
 
-* **Publicera testmiljö** främst för testning av användningsfall för socialt samarbete och/eller interaktionen mellan författare och flera publiceringsinstanser.
+* **Publicera**
+testmiljöTesta huvudsakligen för användning i sociala samarbeten och/eller interaktionen mellan författare och flera publiceringsinstanser.
 
-* **Skapa produktionsmiljö** För redigering av innehåll.
+* **DesignproduktionsmiljöFör redigering**
+av innehåll.
 
-* **Publicera produktionsmiljö** för publicerat innehåll.
+* **Publicera produktionsmiljö**
+För publicerat innehåll.
 
-Dessutom kan miljöerna variera, från ett enserversystem som kör AEM och en programserver till en mycket skalad uppsättning multiserverinstanser med flera processorer. Vi rekommenderar att du använder en separat dator för varje produktionssystem och att du inte kör andra program på dessa datorer.
+Miljöerna kan dessutom variera, från ett enserversystem som kör AEM och en programserver till en mycket skalad uppsättning multiserverinstanser med flera processorer. Vi rekommenderar att du använder en separat dator för varje produktionssystem och att du inte kör andra program på dessa datorer.
 
 ## Allmän hänsyn till maskinvarustorlek {#generic-hardware-sizing-considerations}
 
 Avsnitten nedan ger vägledning om hur maskinvarukraven ska beräknas, med beaktande av olika överväganden. För stora system föreslår vi att du utför en enkel uppsättning interna prestandatester på en referenskonfiguration.
 
-Prestandaoptimering är en grundläggande uppgift som måste utföras innan det går att utföra riktmärkning för ett visst projekt. Var noga med att följa anvisningarna i dokumentationen [för](/help/sites-deploying/configuring-performance.md) prestandaoptimering innan du utför några prestandatester och använder resultaten för beräkningar av maskinvarustorlekar.
+Prestandaoptimering är en grundläggande uppgift som måste utföras innan det går att utföra riktmärkning för ett visst projekt. Var noga med att följa råden i [dokumentationen för prestandaoptimering](/help/sites-deploying/configuring-performance.md) innan du utför några prestandatester och använder resultaten för beräkningar av maskinvarustorlek.
 
 Krav på maskinvarustorlek för fall med avancerad användning måste baseras på en detaljerad prestandautvärdering av projektet. Karakteristika för avancerade användningsområden som kräver exceptionella maskinvaruresurser omfattar följande kombinationer:
 
@@ -99,7 +107,7 @@ Diskutrymmet övervakas kontinuerligt under rensning online och offline. Om det 
 
 AEM fungerar bra i virtualiserade miljöer, men det kan finnas faktorer som CPU eller I/O som inte direkt kan jämföras med fysisk maskinvara. En rekommendation är att välja en högre I/O-hastighet (i allmänhet) eftersom detta är en viktig faktor i de flesta fall. Det är nödvändigt att testa miljön för att få en mer detaljerad förståelse för vilka resurser som kommer att behövas.
 
-#### Parallalisering av AEM-instanser {#parallelization-of-aem-instances}
+#### Parallalisering av AEM instanser {#parallelization-of-aem-instances}
 
 **Säkert fel**
 
@@ -107,24 +115,28 @@ En felsäker webbplats används i minst två separata system. Om ett system kras
 
 **Skalbarhet för systemresurser**
 
-Alla system körs, men det finns bättre datorprestanda. Den extra prestandan är inte nödvändigtvis linjär med antalet klusternoder eftersom relationen är mycket beroende av den tekniska miljön. Mer information finns i [klusterdokumentationen](/help/sites-deploying/recommended-deploys.md) .
+Alla system körs, men det finns bättre datorprestanda. Den extra prestandan är inte nödvändigtvis linjär med antalet klusternoder eftersom relationen är mycket beroende av den tekniska miljön. Mer information finns i [klusterdokumentationen](/help/sites-deploying/recommended-deploys.md).
 
 Beräkningen av hur många klusternoder som behövs baseras på de grundläggande kraven och specifika användningsfall för det aktuella webbprojektet:
 
 * När det gäller felsäkerhet är det nödvändigt att för alla miljöer fastställa hur allvarligt felet är och hur lång tid det tar för en klusternod att återställa felet.
-* När det gäller skalbarhet är antalet skrivåtgärder i grunden den viktigaste faktorn. Se [Författare arbeta parallellt](/help/managing/hardware-sizing-guidelines.md#authors-working-in-parallel) för författarmiljön och [Social Collaboration](/help/managing/hardware-sizing-guidelines.md#socialcollaborationspecificconsiderations) för publiceringsmiljön. Belastningsbalansering kan upprättas för åtgärder som enbart har tillgång till systemet för att behandla läsåtgärder. Mer information finns i [Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html) .
+* För skalbarhetsaspekten är antalet skrivåtgärder i grunden den viktigaste faktorn. se [Författare som arbetar parallellt](/help/managing/hardware-sizing-guidelines.md#authors-working-in-parallel) för författarmiljön och [Socialt samarbete](/help/managing/hardware-sizing-guidelines.md#socialcollaborationspecificconsiderations) för publiceringsmiljön. Belastningsbalansering kan upprättas för åtgärder som enbart har tillgång till systemet för att behandla läsåtgärder. mer information finns i [Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html).
 
 ## Specifika beräkningar för redigeringsmiljön {#author-environment-specific-calculations}
 
-Adobe har utvecklat prestandatester för fristående författarinstanser för testresultat.
+I syfte att göra jämförelser har Adobe utvecklat några test för fristående författarinstanser.
 
-* **Benchmark test 1** Beräkna maximal genomströmning för en lastprofil där användarna utför en enkel simulering utöver en basbelastning på 300 befintliga sidor - alla av liknande natur. Stegen var att logga in på webbplatsen, skapa en sida med en SWF och bild/text, lägga till ett taggmoln och sedan aktivera sidan.
+* **Benchmark test 1**
+Beräkna maximal genomströmning för en lastprofil där användarna utför en enkel simulering utöver en basbelastning på 300 befintliga sidor - alla av liknande natur. Stegen var att logga in på webbplatsen, skapa en sida med en SWF och bild/text, lägga till ett taggmoln och sedan aktivera sidan.
 
-   * **Resultat**: Maximalt dataflöde för en enkel sidskapandeövning som ovan (betraktas som en transaktion) befanns vara 1 730 transaktioner/timme.
+   * ****
+ResultMaximum-dataflöde för en enkel sidskapandeövning som ovan (betraktas som en transaktion) befanns vara 1 730 transaktioner/timme.
 
-* **Benchmark test 2** Beräkna maximal genomströmning när inläsningsprofilen har en blandning av nya sidor (10 %), ändringar av en befintlig sida (80 %) och skapande av en ny sida i följd (10 %). Sidornas komplexitet är densamma som i profilen för test 1. Den grundläggande ändringen av sidan görs genom att en bild läggs till och textinnehållet ändras. Återigen utfördes övningen utöver en basbelastning på 300 sidor med samma komplexitet som definieras i test 1 av prestandan.
+* **Benchmark test 2**
+Beräkna maximal genomströmning när inläsningsprofilen har en blandning av nya sidor (10 %), ändringar av en befintlig sida (80 %) och skapande av en ny sida i följd (10 %). Sidornas komplexitet är densamma som i profilen för test 1. Den grundläggande ändringen av sidan görs genom att en bild läggs till och textinnehållet ändras. Återigen utfördes övningen utöver en basbelastning på 300 sidor med samma komplexitet som definieras i test 1 av prestandan.
 
-   * **Resultat**: Maximalt dataflöde för ett sådant blandningsåtgärdsscenario var 3252 transaktioner per timme.
+   * ****
+ResultMaximum-dataflöde för ett sådant blandningsåtgärdsscenario befanns vara 3 252 transaktioner per timme.
 
 >[!NOTE]
 >
@@ -132,29 +144,33 @@ Adobe har utvecklat prestandatester för fristående författarinstanser för te
 
 De två ovanstående testerna visar tydligt att flödet varierar beroende på typ av åtgärd. Använd aktiviteterna i din miljö som grund för att ändra systemstorlek. Du får bättre genomströmning med mindre krävande åtgärder som att ändra (vilket också är vanligare).
 
-### Cachelagring {#caching}
+### Cachelagra {#caching}
 
-I redigeringsmiljön är cachningseffektiviteten vanligtvis mycket lägre eftersom det är vanligare att ändra webbplatsen och innehållet är mycket interaktivt och personaliserat. Med hjälp av dispatchern kan du cachelagra AEM-bibliotek, JavaScript-skript, CSS-filer och layoutbilder. Detta snabbar upp vissa delar av redigeringsprocessen. Om du konfigurerar webbservern för att ytterligare ange rubriker för webbläsarcachelagring på dessa resurser, kommer antalet HTTP-begäranden att minskas och på så sätt blir systemet mer responsivt som författarna upplever.
+I redigeringsmiljön är cachningseffektiviteten vanligtvis mycket lägre eftersom det är vanligare att ändra webbplatsen och innehållet är mycket interaktivt och personaliserat. Med hjälp av dispatchern kan du cachelagra AEM bibliotek, JavaScript-skript, CSS-filer och layoutbilder. Detta snabbar upp vissa delar av redigeringsprocessen. Om du konfigurerar webbservern för att ytterligare ange rubriker för webbläsarcachelagring på dessa resurser, kommer antalet HTTP-begäranden att minskas och på så sätt blir systemet mer responsivt som författarna upplever.
 
 ### Författare som arbetar parallellt {#authors-working-in-parallel}
 
 I redigeringsmiljön är antalet författare som arbetar parallellt och den belastning som deras interaktioner lägger till i systemet de viktigaste begränsande faktorerna. Därför rekommenderar vi att du skalar ditt system baserat på det delade dataflödet.
 
-För sådana scenarier utförde Adobe prestandatester på ett kluster av författare som inte har några delade noder.
+För sådana scenarier utförde Adobe prestandatester på ett kluster med delade noder (ingen) som består av flera författare.
 
-* **Benchmark test 1a** Med ett aktivt-aktivt kluster med delad ingenting med två författarinstanser beräknar du den maximala genomströmningen med en lastprofil där användarna utför en enkel arbetsmoment som bygger på en basbelastning på 300 befintliga sidor, allt av liknande natur.
+* **Benchmark test 1**
+aMed ett aktivt-aktivt kluster med delad ingenting med två författarinstanser beräknar du den maximala genomströmningen med en inläsningsprofil där användarna utför en enkel arbetsmoment för att skapa sidor ovanpå en basbelastning på 300 befintliga sidor, allt av liknande natur.
 
-   * **Resultat**: Maximal genomströmning för en enkel sidskapandeövning, som ovan, (betraktas som en transaktion) är 2016 transaktioner/timme. Detta är en ökning på ungefär 16 % jämfört med en fristående författarinstans för samma test.
+   * ****
+ResultMaximum-flöde för en enkel sidskapandeövning, som ovan, (betraktas som en transaktion) är 2016 transaktioner/timme. Detta är en ökning på ungefär 16 % jämfört med en fristående författarinstans för samma test.
 
-* **Benchmark test 2b** Med ett aktivt-aktivt kluster med delad ingenting med två författarinstanser beräknar du den maximala genomströmningen när inläsningsprofilen har en blandning av ny sidgenerering (10 %), ändring av befintliga sidor (80 %) och skapande och ändring av en sida i följd (10 %). Sidans komplexitet är densamma som i profilen för test 1. Den grundläggande ändringen av sidan görs genom att en bild läggs till och textinnehållet ändras. Även här utfördes övningen på en basbelastning på 300 sidor med komplexitet på samma sätt som i prestandatest 1.
+* **Benchmark test 2**
+bMed ett aktivt-aktivt kluster utan delning av två författare-instanser beräknar du den maximala genomströmningen när inläsningsprofilen har en blandning av nya sidor (10 %), ändringar av befintliga sidor (80 %) och skapande och ändring av en sida i följd (10 %). Sidans komplexitet är densamma som i profilen för test 1. Den grundläggande ändringen av sidan görs genom att en bild läggs till och textinnehållet ändras. Även här utfördes övningen på en basbelastning på 300 sidor med komplexitet på samma sätt som i prestandatest 1.
 
-   * **Resultat**: Maximalt dataflöde för ett sådant blandat åtgärdsscenario var 6288 transaktioner/timme. Detta är en ökning på ungefär 93 % jämfört med en fristående författarinstans för samma test.
+   * ****
+ResultMaximum-dataflöde för ett sådant blandat åtgärdsscenario befanns vara 6288 transaktioner/timme. Detta är en ökning på ungefär 93 % jämfört med en fristående författarinstans för samma test.
 
 >[!NOTE]
 >
 >Genomströmningsfrekvensen skiljer inte mellan transaktionstyper i en lastprofil. Den metod som används för att mäta genomströmning säkerställer att en fast andel av varje typ av transaktion inkluderas i arbetsbelastningen.
 
-De två ovanstående testerna visar tydligt att AEM är skalbart väl för författare som utför grundläggande redigeringsåtgärder med AEM. I allmänhet är AEM mest effektivt vid skalning av läsåtgärder.
+De två testerna ovan visar tydligt att AEM kan skalas bra för författare som utför grundläggande redigeringsåtgärder med AEM. I allmänhet är AEM mest effektivt vid skalning av läsåtgärder.
 
 På en vanlig webbplats sker de flesta redigeringar under projektfasen. När webbplatsen har publicerats har antalet författare som arbetar parallellt vanligtvis sjunkit till ett lägre (driftsläge) genomsnitt.
 
@@ -164,13 +180,13 @@ Du kan beräkna antalet datorer (eller CPU:er) som krävs för författarmiljön
 
 Den här formeln kan fungera som en allmän riktlinje för skalning av CPU:er när författare utför grundläggande åtgärder med AEM. Det förutsätter att systemet och programmet är optimerade. Formeln kommer dock inte att innehålla true för avancerade funktioner som MSM eller Assets (se avsnitten nedan).
 
-Se även de ytterligare kommentarerna om [parallellisering](/help/managing/hardware-sizing-guidelines.md#parallelization-of-aem-instances) och [prestandaoptimering](/help/sites-deploying/configuring-performance.md).
+Se även de ytterligare kommentarerna om [Parallellisering](/help/managing/hardware-sizing-guidelines.md#parallelization-of-aem-instances) och [Prestandaoptimering](/help/sites-deploying/configuring-performance.md).
 
-### Maskinvarurekommendationer {#hardware-recommendations}
+### Maskinvarubaserad Recommendations {#hardware-recommendations}
 
-Vanligtvis kan du använda samma maskinvara för din författarmiljö som du rekommenderas för din publiceringsmiljö. Vanligtvis är webbplatstrafiken mycket lägre i redigeringssystemen, men cacheeffektiviteten är också lägre. Den grundläggande faktorn här är dock antalet författare som arbetar parallellt, tillsammans med den typ av åtgärder som görs i systemet. I allmänhet är AEM-klustring (i författarmiljön) mest effektivt vid skalning av läsåtgärder. Med andra ord kan ett AEM-kluster skalas väl tillsammans med författare som utför grundläggande redigeringsåtgärder.
+Vanligtvis kan du använda samma maskinvara för din författarmiljö som du rekommenderas för din publiceringsmiljö. Vanligtvis är webbplatstrafiken mycket lägre i redigeringssystemen, men cacheeffektiviteten är också lägre. Den grundläggande faktorn här är dock antalet författare som arbetar parallellt, tillsammans med den typ av åtgärder som görs i systemet. I allmänhet är AEM (i författarmiljön) mest effektivt vid skalning av läsåtgärder. Ett AEM kluster kan med andra ord skalas bra tillsammans med författare som utför grundläggande redigeringsåtgärder.
 
-Testerna på Adobe utfördes med operativsystemet RedHat 5.5, som körs på en Hewlett-Packard ProLiant DL380 G5-maskinvaruplattform med följande konfiguration:
+Testerna på Adobe utfördes med operativsystemet RedHat 5.5 som körs på en Hewlett-Packard ProLiant DL380 G5-maskinvaruplattform med följande konfiguration:
 
 * Två Intel Xeon X5450-processorer med fyra kärnor på 3,00 GHz
 * 8 GB RAM
@@ -179,21 +195,21 @@ Testerna på Adobe utfördes med operativsystemet RedHat 5.5, som körs på en H
 * Två 146 GB SAS-diskar med 10 000 RPM konfigurerade som en RAID0-stripe-uppsättning
 * SPEC CINT2006 Rate-poängen är 110
 
-AEM-instanser kördes med en minsta stackstorlek på 256 MB, en maximal stackstorlek på 1 024 MB.
+AEM kördes med en minsta stackstorlek på 256 MB, som är den maximala stackstorleken 1 024 MB.
 
 ## Specifika beräkningar för publiceringsmiljön {#publish-environment-specific-calculations}
 
 ### Cachelagring av effektivitet och trafik {#caching-efficiency-and-traffic}
 
-Cache-effektiviteten är avgörande för webbplatsens hastighet. I följande tabell visas hur många sidor per sekund ett optimerat AEM-system kan hantera med hjälp av en omvänd proxy, till exempel dispatchern:
+Cache-effektiviteten är avgörande för webbplatsens hastighet. I följande tabell visas hur många sidor per sekund ett optimerat AEM kan hantera med hjälp av en omvänd proxy, som dispatchern:
 
 | Cachenivåer | Sidor/s (topp) | Miljoner sidor/dag (genomsnitt) |
 |---|---|---|
-| 100% | 1000-2000 | 35-70 |
-| 99% | 910 | 32 |
-| 95% | 690 | 25 |
-| 90% | 520 | 18 |
-| 60% | 220 | 8 |
+| 100 % | 1000-2000 | 35-70 |
+| 99 % | 910 | 32 |
+| 95 % | 690 | 25 |
+| 90 % | 520 | 18 |
+| 60 % | 220 | 8 |
 | 0% | 100 | 3.5 |
 
 >[!CAUTION]
@@ -202,13 +218,13 @@ Cache-effektiviteten är avgörande för webbplatsens hastighet. I följande tab
 
 Cachekvoten är den procentandel sidor som dispatchern kan returnera utan att behöva komma åt AEM. 100 % anger att avsändaren besvarar alla förfrågningar, 0 % betyder att AEM beräknar varje sida.
 
-### Komplexa mallar och tillämpningar {#complexity-of-templates-and-applications}
+### Komplexitet för mallar och program {#complexity-of-templates-and-applications}
 
 Om du använder komplexa mallar behöver AEM mer tid för att återge en sida. Sidor som tas från cachen påverkas inte av detta, men sidstorleken är fortfarande relevant när den totala svarstiden ska beaktas. Det kan ta tio gånger längre tid att återge en komplex sida än att bara återge en enkel sida.
 
 ### Formel {#formula}
 
-Med följande formel kan du beräkna en uppskattning av hur komplex din AEM-lösning är:
+Med följande formel kan du beräkna en uppskattning av den totala komplexiteten hos din AEM:
 
 `complexity = applicationComplexity + ((1-cacheRatio) * templateComplexity)`
 
@@ -237,7 +253,7 @@ Variablerna i ekvationen är följande:
   </tr>
   <tr>
    <td>cacheRatio</td>
-   <td>Procentandelen sidor som kommer från dispatchercachen. Använd 1 om alla sidor kommer från cacheminnet, eller 0 om alla sidor beräknas av AEM.</td>
+   <td>Procentandelen sidor som kommer från dispatchercachen. Använd 1 om alla sidor kommer från cacheminnet, eller 0 om varje sida beräknas av AEM.</td>
   </tr>
   <tr>
    <td>templateComplexity</td>
@@ -253,13 +269,16 @@ Variablerna i ekvationen är följande:
 Om du har en mer komplex webbplats behöver du också kraftfullare webbservrar så att AEM kan besvara en förfrågan inom en rimlig tid.
 
 * Komplexitet under 4:
-・ 1 024 MB JVM RAM* ・ CPU med låg till medelhög prestanda
+・ 1 024 MB JVM RAM*
+・ Låg till medelhög processor
 
 * Komplexitet mellan 4 och 8:
-・ 2 048 MB JVM RAM* ・ MID till högpresterande CPU
+・ 2 048 MB JVM RAM*
+・ Processor med medelhög till hög prestanda
 
 * Komplexitet över 8:
-・ 4 096 MB JVM RAM* ・ processor med höga eller höga prestanda
+・ 4 096 MB JVM RAM*
+・ Avancerad till avancerad processor
 
 >[!NOTE]
 >
@@ -273,35 +292,35 @@ Förutom beräkningen för ett standardwebbprogram kan du behöva ta hänsyn til
 
 Omfattande bearbetning av digitala resurser kräver optimerade maskinvaruresurser, de viktigaste faktorerna är bildstorlek och högsta genomströmning för bearbetade bilder.
 
-Allokera minst 16 GB stackutrymme och konfigurera arbetsflödet för [!UICONTROL DAM-uppdatering av resurs] så att det använder [Camera Raw-paketet](/help/assets/camera-raw.md) för inhämtning av råbilder.
+Allokera minst 16 GB stackutrymme och konfigurera [!UICONTROL DAM Update Asset]-arbetsflödet så att det använder [Camera Raw paketet](/help/assets/camera-raw.md) för att ta in råbilder.
 
 >[!NOTE]
 Ett högre bildflöde innebär att datorresurserna måste kunna hålla jämna steg med I/O-system och vice versa. Om arbetsflöden till exempel startas vid import av bilder kan överföringen av många bilder via WebDAV orsaka en eftersläpning i arbetsflödena.
 Om du använder separata diskar för tarPM, datalager och sökindex kan det hjälpa till att optimera I/O-beteendet för systemet (det är dock oftast bra att behålla sökindexet lokalt).
 
 >[!NOTE]
-Se även [Resursens prestandaguide](/help/sites-deploying/assets-performance-sizing.md).
+Se även [Resursprestandahandboken](/help/sites-deploying/assets-performance-sizing.md).
 
-### Hanterare för flera platser {#multi-site-manager}
+### Hanteraren för flera platser {#multi-site-manager}
 
-Resursanvändningen när AEM MSM används i en redigeringsmiljö beror till stor del på de specifika användningsområdena. De grundläggande faktorerna är:
+Resursanvändningen när du använder AEM MSM i en redigeringsmiljö beror till stor del på de specifika användningsfallen. De grundläggande faktorerna är:
 
 * Antal live-kopior
 * Periodicitet för utrullningar
 * Innehållsträdets storlek som ska rullas ut
 * Anslutna funktioner för utrullningsåtgärderna
 
-Genom att testa det planerade användningsexemplet med ett representativt utdrag kan du få en bättre förståelse för resursanvändningen. Om du extrapolerar resultaten med den planerade genomströmningen kan du utvärdera de ytterligare resurser som krävs för AEM MSM.
+Genom att testa det planerade användningsexemplet med ett representativt utdrag kan du få en bättre förståelse för resursanvändningen. Om du extrapolerar resultaten med det planerade dataflödet kan du utvärdera de ytterligare resurser som krävs för AEM MSM.
 
-Tänk också på att skribenter som arbetar parallellt kommer att uppleva biverkningar om AEM MSM använder fler resurser än planerat.
+Tänk också på att skribenter som arbetar parallellt kommer att uppleva biverkningar om AEM används mer resurser än planerat.
 
-### Viktigt om storleksändring av AEM Communities {#aem-communities-sizing-considerations}
+### Viktiga faktorer för AEM Communities {#aem-communities-sizing-considerations}
 
-AEM-webbplatser som innehåller funktioner för AEM Communities (communitysajter) upplever en hög nivå av interaktion från webbplatsbesökare (medlemmar) i publiceringsmiljön.
+AEM webbplatser som innehåller AEM Communities-funktioner (communitysajter) upplever en hög nivå av interaktion från webbplatsbesökare (medlemmar) i publiceringsmiljön.
 
 Att tänka på vid storleksändring av en community-webbplats beror på den förväntade interaktionen från communitymedlemmar och huruvida optimala prestanda för sidinnehåll är av högre betydelse.
 
-Användargenererat innehåll (UGC) som skickas till medlemmar lagras separat från sidinnehållet. AEM-plattformen använder ett nodarkiv som replikerar webbplatsinnehåll från författaren till publiceringen, men AEM Communities använder en enda gemensam butik för UGC som aldrig replikeras.
+Användargenererat innehåll (UGC) som skickas till medlemmar lagras separat från sidinnehållet. Även om den AEM plattformen använder ett nodarkiv som replikerar webbplatsinnehåll från författaren till publiceringen, använder AEM Communities en gemensam lagringsplats för UGC som aldrig replikeras.
 
 För UGC-arkivet är det nödvändigt att välja en leverantör av lagringsresurser (SRP) som påverkar den valda distributionen.
 Se
