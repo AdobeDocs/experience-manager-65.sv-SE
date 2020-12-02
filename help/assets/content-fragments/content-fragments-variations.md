@@ -21,21 +21,21 @@ ht-degree: 14%
 
 # Variationer – redigera innehållsfragment{#variations-authoring-fragment-content}
 
-[Variationer](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment) är en viktig egenskap i innehållsfragment, eftersom de gör att du kan skapa och redigera kopior av det överordnad innehållet för användning i specifika kanaler och/eller scenarier.
+[](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment) Variationer är en viktig funktion i innehållsfragment eftersom de gör att du kan skapa och redigera kopior av det överordnad innehållet för användning i vissa kanaler och/eller scenarier.
 
 På fliken **Variationer** kan du:
 
-* [Ange innehållet](#authoring-your-content) för fragmentet
-* [Skapa och hantera varianter](#managing-variations) av det **Överordnad** innehållet
+* [Ange ](#authoring-your-content) innehållet för fragmentet
+* [Skapa och hantera ](#managing-variations) varianter av  **** Mastercontent
 
 Utför en rad andra åtgärder beroende på vilken datatyp som redigeras. till exempel:
 
-* [Infoga visuella resurser i fragmentet](#inserting-assets-into-your-fragment) (bilder)
+* [Infoga visuella resurser i fragmentet](#inserting-assets-into-your-fragment)  (bilder)
 * Välj mellan [RTF](#rich-text), [Oformaterad text](#plain-text) och [Markering](#markdown) för redigering
 
 * [Överför innehåll](#uploading-content)
 
-* [Visa nyckelstatistik](#viewing-key-statistics) (om flerradig text)
+* [Visa nyckelstatistik](#viewing-key-statistics)  (om flerradig text)
 * [Sammanfatta text](#summarizing-text)
 
 * [Synkronisera varianter med Överordnad innehåll](#synchronizing-with-master)
@@ -46,15 +46,15 @@ Utför en rad andra åtgärder beroende på vilken datatyp som redigeras. till e
 
 ## Redigera ditt innehåll {#authoring-your-content}
 
-När du öppnar ditt innehållsfragment för redigering öppnas fliken **Variationer** som standard. Här kan du skapa innehållet, för Överordnad eller andra varianter som du har. Du kan:
+När du öppnar ditt innehållsfragment för redigering är fliken **Variationer** öppen som standard. Här kan du skapa innehållet, för Överordnad eller andra varianter som du har. Du kan:
 
 * gör redigeringar direkt på fliken **Variationer**
 * öppna [helskärmsredigeraren](#full-screen-editor) för att:
 
    * välj [Format](#formats)
-   * se fler redigeringsalternativ (för [RTF](#rich-text) -format)
+   * se fler redigeringsalternativ (för [RTF](#rich-text)-format)
 
-   * få tillgång till ett antal [åtgärder](#actions)
+   * få åtkomst till ett intervall med [åtgärder](#actions)
 
 Till exempel:
 
@@ -66,11 +66,11 @@ Till exempel:
 
 * Redigera ett fragment med strukturerat innehåll
 
-   Ett strukturerat fragment innehåller olika fält, av olika datatyper, som har definierats i innehållsmodellen. För flerradiga fält är [helskärmsredigeraren](#full-screen-editor) tillgänglig.
+   Ett strukturerat fragment innehåller olika fält, av olika datatyper, som har definierats i innehållsmodellen. För flerradiga fält är [helskärmsredigeraren](#full-screen-editor) tillgängligt.
 
    ![cfm-6420-16](assets/cfm-6420-16.png)
 
-### Helskärmsredigerare {#full-screen-editor}
+### Helskärmsredigeraren {#full-screen-editor}
 
 När du redigerar ett textfält med flera rader kan du öppna fullskärmsredigeraren:
 
@@ -79,7 +79,7 @@ När du redigerar ett textfält med flera rader kan du öppna fullskärmsrediger
 Helskärmsredigeraren ger dig följande:
 
 * Åtkomst till olika [åtgärder](#actions)
-* Beroende på [format](#formats)kan ytterligare formateringsalternativ användas ([RTF](#rich-text))
+* Beroende på [format](#formats), ytterligare formateringsalternativ ([RTF](#rich-text))
 
 ### Åtgärder {#actions}
 
@@ -90,11 +90,11 @@ Följande åtgärder är också tillgängliga (för alla [format](#formats)) nä
 * [Visa textstatistik](#viewing-key-statistics)
 
 * [Överför innehåll](#uploading-content)
-* [Synkronisera med Överordnad](#synchronizing-with-master) (när du redigerar en variant)
+* [Synkronisera med Överordnad](#synchronizing-with-master)  (när du redigerar en variant)
 * [Sammanfatta text](#summarizing-text)
-* [Anteckna](/help/assets/content-fragments/content-fragments-variations.md#annotating-a-content-fragment) texten
+* [Anteckna ](/help/assets/content-fragments/content-fragments-variations.md#annotating-a-content-fragment) texten
 
-* [Infoga visuella resurser i fragmentet](#inserting-assets-into-your-fragment) (bilder)
+* [Infoga visuella resurser i fragmentet](#inserting-assets-into-your-fragment)  (bilder)
 
 ### Format {#formats}
 
@@ -129,11 +129,11 @@ Med textredigering kan du formatera:
    * Stavningskontroll
    * [Anteckningar](/help/assets/content-fragments/content-fragments-variations.md#annotating-a-content-fragment)
 
-Du kan även komma åt [funktionsmakrona](#actions) från helskärmsredigeraren.
+[åtgärderna](#actions) är även tillgängliga från helskärmsredigeraren.
 
 ### Oformaterad text {#plain-text}
 
-Med oformaterad text kan du snabbt lägga in innehåll utan formaterings- eller markeringsinformation. Du kan även öppna helskärmsredigeraren för ytterligare [åtgärder](#actions).
+Med oformaterad text kan du snabbt lägga in innehåll utan formaterings- eller markeringsinformation. Du kan även öppna fullskärmsredigeraren för ytterligare [åtgärder](#actions).
 
 >[!CAUTION]
 >
@@ -143,7 +143,7 @@ Med oformaterad text kan du snabbt lägga in innehåll utan formaterings- eller 
 
 >[!NOTE]
 >
->Mer information finns i dokumentationen för [Markdown](/help/assets/content-fragments/content-fragments-markdown.md) .
+>Mer information finns i dokumentationen för [Markdown](/help/assets/content-fragments/content-fragments-markdown.md).
 
 På så sätt kan du formatera texten med hjälp av markeringar. Du kan definiera:
 
@@ -157,13 +157,13 @@ På så sätt kan du formatera texten med hjälp av markeringar. Du kan definier
 * Kodblock
 * Backslash Escapes
 
-Du kan även öppna helskärmsredigeraren för ytterligare [åtgärder](#actions).
+Du kan även öppna fullskärmsredigeraren för ytterligare [åtgärder](#actions).
 
 >[!CAUTION]
 >
 >Om du växlar mellan **RTF** och **Markdown-kod** kan du få oväntade effekter med Blockcitattecken och Kodblock, eftersom dessa båda format kan hanteras på olika sätt.
 
-### Visa nyckelstatistik {#viewing-key-statistics}
+### Visar nyckelstatistik {#viewing-key-statistics}
 
 När helskärmsredigeraren är öppen visar åtgärden **Textstatistik** information om texten. Till exempel:
 
@@ -179,7 +179,7 @@ Att sammanfatta text är utformat för att hjälpa användare att minska längde
 
 >[!NOTE]
 >
->På en mer teknisk nivå behåller systemet meningarna som det klassificerar som att ge den *bästa andelen informationstäthet och unika egenskaper* enligt specifika algoritmer.
+>På en mer teknisk nivå behåller systemet meningarna som det klassificerar som att det ger det *bästa förhållandet mellan informationstäthet och unikhet* enligt specifika algoritmer.
 
 >[!CAUTION]
 >
@@ -220,9 +220,9 @@ Att sammanfatta text är utformat för att hjälpa användare att minska längde
 
    ![cfm-6420-23](assets/cfm-6420-23.png)
 
-1. Markera **Sammanfattning** för att bekräfta ändringarna.
+1. Välj **Sammanfattning** för att bekräfta ändringarna.
 
-### Anteckna ett innehållsfragment {#annotating-a-content-fragment}
+### Kommentera ett innehållsfragment {#annotating-a-content-fragment}
 
 Så här kommenterar du ett fragment:
 
@@ -234,7 +234,7 @@ Så här kommenterar du ett fragment:
 
 1. En dialogruta öppnas. Här kan du ange din anteckning.
 
-1. Stäng helskärmsredigeraren och **spara** fragmentet.
+1. Stäng helskärmsredigeraren och **Spara** fragmentet.
 
 ### Visa, redigera, ta bort anteckningar {#viewing-editing-deleting-annotations}
 
@@ -296,13 +296,13 @@ De läggs till i fragmentets styckesekvens utan formatering. formatering kan gö
 
 ### Skapa en variant {#creating-a-variation}
 
-Med variationer kan du ta det **Överordnad** innehållet och ändra det efter syfte (om det behövs).
+Med variationer kan du ta **Överordnad**-innehållet och ändra det efter syfte (om det behövs).
 
 Så här skapar du en ny variant:
 
 1. Öppna fragmentet och se till att sidopanelen är synlig.
 1. Välj **Variationer** i ikonfältet på sidpanelen.
-1. Välj **Skapa variation**.
+1. Välj **Skapa variant**.
 1. En dialogruta öppnas där du anger **titel** och **beskrivning** för den nya varianten.
 1. Välj **Lägg till**. **Fragmentmastern** kopieras till den nya varianten, som nu är öppen för [redigering](#editing-a-variation).
 
@@ -323,25 +323,25 @@ Du kan ändra variantinnehållet efter antingen:
 
 Så här byter du namn på en befintlig variant:
 
-1. Open your fragment and select **Variations** from the side panel.
+1. Öppna fragmentet och välj **Variationer** på sidpanelen.
 1. Välj önskad variant.
-1. Välj **Byt namn** i listrutan **Åtgärder** .
+1. Välj **Byt namn** i listrutan **Åtgärder**.
 
 1. Ange den nya **titeln** och/eller **beskrivningen** i dialogrutan som visas.
 
-1. Bekräfta åtgärden **Byt namn** .
+1. Bekräfta åtgärden **Byt namn**.
 
 >[!NOTE]
 >
->Detta påverkar bara **varianttiteln**.
+>Detta påverkar bara variationen **Titel**.
 
-### Ta bort en variant {#deleting-a-variation}
+### Tar bort en variant {#deleting-a-variation}
 
 Så här tar du bort en befintlig variant:
 
-1. Open your fragment and select **Variations** from the side panel.
+1. Öppna fragmentet och välj **Variationer** på sidpanelen.
 1. Välj önskad variant.
-1. Välj **Ta bort** i listrutan **Åtgärder** .
+1. Välj **Ta bort** i listrutan **Åtgärder**.
 
 1. Bekräfta åtgärden **Ta bort** i dialogrutan.
 
@@ -351,7 +351,7 @@ Så här tar du bort en befintlig variant:
 
 ### Synkroniserar med Överordnad {#synchronizing-with-master}
 
-**Överordnad** är en integrerad del av ett innehållsavdrag och innehåller per definition den överordnad kopian av innehållet, medan variationerna innehåller de individuella uppdaterade och anpassade versionerna av det innehållet. När Överordnad uppdateras är det möjligt att dessa ändringar också är relevanta för variationerna och därför måste spridas till dem.
+**Masterfilen är en** integrerad del av ett innehållsavdrag och innehåller per definition den överordnad kopian av innehållet, medan varianterna innehåller de individuella uppdaterade och anpassade versionerna av det innehållet. När Överordnad uppdateras är det möjligt att dessa ändringar också är relevanta för variationerna och därför måste spridas till dem.
 
 När du redigerar en variant har du tillgång till åtgärden för att synkronisera det aktuella elementet i variationen med Överordnad. På så sätt kan du automatiskt kopiera ändringar som gjorts Överordnad till den önskade variationen.
 
@@ -368,7 +368,7 @@ När du redigerar en variant har du tillgång till åtgärden för att synkronis
 1. Öppna ditt innehållsfragment i fragmentredigeraren. Kontrollera att **Överordnad** har redigerats.
 1. Välj en specifik variant och sedan lämplig synkroniseringsåtgärd från antingen:
 
-   * listrutan **Åtgärder** - **Synkronisera aktuellt element med överordnad**
+   * den nedrullningsbara listrutan **Åtgärder** - **Synkronisera aktuellt element med överordnad**
 
    * verktygsfältet i fullskärmsredigeraren - **Synkronisera med överordnad**
 
