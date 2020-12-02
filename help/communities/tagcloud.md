@@ -26,29 +26,29 @@ Komponenten `Social Tag Cloud` markerar taggar som används av communitymedlemma
 
 Ytterligare sätt att identifiera aktuella trender finns på [Aktivitetstrender](trends.md).
 
-Den här sidan dokumenterar inställningarna i `Social Tag Cloud` komponentens dialogruta och beskriver användarupplevelsen.
+Den här sidan dokumenterar inställningarna i `Social Tag Cloud`-komponentdialogrutan och beskriver användarupplevelsen.
 
-Mer information för utvecklare finns i [Tagga viktiga](tag.md).
+Mer information om utvecklare finns i [Tagga viktiga](tag.md).
 
-Se [Administrera taggar](../../help/sites-administering/tags.md) för information om hur du skapar och hanterar taggar samt om vilka innehållstaggar som har tillämpats.
+Se [Administrera taggar](../../help/sites-administering/tags.md) om du vill ha information om hur du skapar och hanterar taggar, samt om vilka innehållstaggar som har tillämpats.
 
 ## Lägga till ett moln för sociala taggar {#adding-a-social-tag-cloud}
 
-Om du vill lägga till en `Social Tag Cloud` komponent på en sida i redigeringsläge använder du komponentwebbläsaren för att leta reda på `Communities / Social Tag Cloud` och dra komponenten till den plats på en sida där taggmolnet ska visas.
+Om du vill lägga till en `Social Tag Cloud`-komponent på en sida i redigeringsläge använder du komponentwebbläsaren för att leta reda på `Communities / Social Tag Cloud` och dra komponenten till en plats på en sida där taggmolnet ska visas.
 
-Mer information finns i Grunderna för [communitykomponenter](basics.md).
+Mer information finns på [Grunderna för communitykomponenter](basics.md).
 
-När de [nödvändiga klientbiblioteken](tag.md#essentials-for-client-side) inkluderas visas `Social Tag Cloud` komponenten så här:
+När de [nödvändiga klientbiblioteken](tag.md#essentials-for-client-side) inkluderas visas `Social Tag Cloud`-komponenten så här:
 
 ![social-tag](assets/social-tag.png)
 
-## Konfigurerar molnet för sociala taggar {#configuring-social-tag-cloud}
+## Konfigurerar molnet för social tagg {#configuring-social-tag-cloud}
 
-Markera den monterade `Social Tag Cloud` komponent som du vill öppna och välj den `Configure` ikon som öppnar redigeringsdialogrutan.
+Markera den monterade `Social Tag Cloud`-komponenten som ska öppnas och välj ikonen `Configure` som öppnar redigeringsdialogrutan.
 
 ![konfigurera](assets/configure-new.png)
 
-Under fliken **[!UICONTROL Social Tag Cloud]** anger du vilka taggar som ska visas och, om taggarna är aktiva länkar, platsen för sidan där sökresultaten ska visas:
+Under fliken **[!UICONTROL Social Tag Cloud]** anger du vilka taggar som ska visas och, om taggarna är aktiva länkar, platsen för sidan för sökresultat:
 
 ![social-tag-cloud](assets/social-tag-cloud.png)
 
@@ -58,7 +58,7 @@ Identifiera vilka UGC-taggar som ska visas. De nedrullningsbara alternativen är
    * `From page and child pages`
    * `All tags`
 
-   Standardvärdet är `From page and child pages`, där &quot;sida&quot; refererar till inställningen för **sida** nedan.
+   Standardvärdet är `From page and child pages`, där &quot;page&quot; refererar till inställningen **Sida** nedan.
 
 * **[!UICONTROL Page]**
 
@@ -66,17 +66,17 @@ Identifiera vilka UGC-taggar som ska visas. De nedrullningsbara alternativen är
 
 * **[!UICONTROL No links on tags]**
 
-   Om du markerar det här alternativet visas taggarna i taggmolnet som oformaterad text. Om du inte markerar det här alternativet visas taggarna som aktiva länkar som söker efter allt innehåll som taggen tillämpas på. Standard är avmarkerat och kräver **[!UICONTROL Search Result Path]** att inställningen är angiven.
+   Om du markerar det här alternativet visas taggarna i taggmolnet som oformaterad text. Om du inte markerar det här alternativet visas taggarna som aktiva länkar som söker efter allt innehåll som taggen tillämpas på. Standardvärdet är avmarkerat och kräver att **[!UICONTROL Search Result Path]** har angetts.
 
 * **[!UICONTROL Search Result Path]**
 
-   Sökvägen till en sida där en `Search Result` komponent har placerats, konfigurerad att referera till UGC som innehåller den UGC-sökväg som anges av inställningen **Sida** .
+   Sökvägen till en sida där en `Search Result`-komponent har placerats, konfigurerad att referera till UGC som innehåller den UGC-sökväg som anges av inställningen **Sida**.
 
 ## Ändra visning av molnet för sociala taggar {#change-display-of-social-tag-cloud}
 
-Om du vill redigera visningen av **Social Tag Cloud** anger du [designläge](../../help/sites-authoring/default-components-designmode.md) och dubbelklickar på den monterade `Social Tag Cloud` komponenten för att öppna en dialogruta med en extra flik.
+Om du vill redigera visningen av **molnet för sociala taggar** anger du [designläge](../../help/sites-authoring/default-components-designmode.md) och dubbelklickar på den monterade `Social Tag Cloud`-komponenten för att öppna en dialogruta med en extra flik.
 
-Ange hur taggar ska visas på **[!UICONTROL Social Tag Cloud (Design)]** fliken. En tagg kan vara en enkel tagg, ett enstaka ord i standardnamnutrymmet eller en hierarkisk taxonomi:
+Ange hur taggar ska visas på fliken **[!UICONTROL Social Tag Cloud (Design)]**. En tagg kan vara en enkel tagg, ett enstaka ord i standardnamnutrymmet eller en hierarkisk taxonomi:
 
 ![social-tag-cloud-design](assets/social-tag-cloud-design.png)
 
@@ -103,10 +103,10 @@ Ange hur taggar ska visas på **[!UICONTROL Social Tag Cloud (Design)]** fliken.
 
    Det finns tre taggar som kan användas:
 
-   `Geometrixx Media (the namespace)`, `Gadgets`och `Cars`
+   `Geometrixx Media (the namespace)`,  `Gadgets`och  `Cars`
 
    * Markerad: Endast `Cars` visas om det används.
-   * Avmarkerad: `Geometrixx Media` och `Gadgets`kommer att `Cars` visas om det används.
+   * Avmarkerad: `Geometrixx Media` och `Gadgets`samt `Cars` visas om de används.
 
    En enkel tagg är en lövtagg.
 
@@ -120,7 +120,7 @@ Ange hur taggar ska visas på **[!UICONTROL Social Tag Cloud (Design)]** fliken.
 
    Om det här alternativet är markerat formateras alla ord i taggmolnet på samma sätt. Om alternativet inte är markerat formateras ord på olika sätt beroende på hur de används. Standard är avmarkerat.
 
-## Additional Information {#additional-information}
+## Ytterligare information {#additional-information}
 
 Mer information finns på sidan [Taggar Essentials](tag.md) för utvecklare.
 
