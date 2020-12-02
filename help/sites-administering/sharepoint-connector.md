@@ -37,16 +37,16 @@ Alla funktioner implementeras med SharePoint-webbtjänster som gränssnitt till 
 >
 >SharePoint Connector stöds även med AEM 6.1 Service Pack 2. Kopplingen stöder inte längre montering av virtuell databas och kan därför inte monteras. Om du vill komma åt SharePoint-databasen med Java API:er använder du SharePoint-anslutarens JCR-databasimplementering i ditt projekt.
 >
->Installation, konfigurering, hantering och IT-åtgärder för SharePoint-servern och relaterad IT-infrastruktur omfattas inte av det här dokumentet. Mer information om de här avsnitten finns i leverantörsdokumentationen för [SharePoint](https://www.microsoft.com/sharepoint) . Kopplingen kräver att dessa delar av infrastrukturen är korrekt installerade, konfigurerade och i drift.
+>Installation, konfigurering, hantering och IT-åtgärder för SharePoint-servern och relaterad IT-infrastruktur omfattas inte av det här dokumentet. Mer information om de här avsnitten finns i leverantörsdokumentationen för [SharePoint](https://www.microsoft.com/sharepoint). Kopplingen kräver att dessa delar av infrastrukturen är korrekt installerade, konfigurerade och i drift.
 
 
-## Getting started {#getting-started}
+## Komma igång {#getting-started}
 
 Så här kommer du igång med anslutningen:
 
 * Kontrollera att du har minst Java 7 installerat.
 * Ladda ned distributionsfilen för kopplingspaketet från Software Distribution.
-* Kopiera en giltig *license.properties* -fil till katalogen som innehåller *filen cq-quickstart-6.4.0.jar* .
+* Kopiera en giltig *license.properties*-fil till katalogen som innehåller filen *cq-quickstart-6.4.0.jar*.
 
 * Dubbelklicka/tryck på .jar-filen för att starta AEM eller starta den från kommandoraden.
 * Installera kopplingspaketet från Package Manager.
@@ -54,7 +54,8 @@ Så här kommer du igång med anslutningen:
 
 ## Installerar SharePoint-anslutning {#installing-sharepoint-connector}
 
-Kopplingen är ett innehållspaket som underlättar enkel installation. Installera paketet med hjälp av Pakethanteraren och ange sedan URL:en för SharePoint-servern och andra konfigurationsalternativ. SharePoint-innehållet är tillgängligt i AEM.
+Kopplingen är ett innehållspaket som underlättar enkel installation. Installera paketet med hjälp av Pakethanteraren och ange sedan URL-adressen för SharePoint-servern
+och andra konfigurationsalternativ. SharePoint-innehållet är tillgängligt i AEM.
 
 ### Installationskrav {#installation-requirements}
 
@@ -66,7 +67,7 @@ Kopplingen kräver följande:
 * Användarautentiseringsuppgifter och behörigheter för CRX- och SharePoint-databaser
 * [Plattformar som stöds](#supported-platforms)
 
-SharePoint-anslutningen är tillgänglig för hämtning från [programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-17673).
+SharePoint-anslutningen är tillgänglig för hämtning från [Programdistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-17673).
 
 ### Plattformar som stöds {#supported-platforms}
 
@@ -85,11 +86,11 @@ Kopplingen stöder följande:
 
 >[!NOTE]
 >
->Kopplingen stöder endast konfigurationer som officiellt stöds av Microsoft. Se systemkraven för [MOSS 2010](https://technet.microsoft.com/en-us/library/cc262485(office.14).aspx) och [MOSS 2013](https://technet.microsoft.com/en-us/library/cc262485.aspx) .
+>Kopplingen stöder endast konfigurationer som officiellt stöds av Microsoft. Se [Systemkrav för MOSS 2010](https://technet.microsoft.com/en-us/library/cc262485(office.14).aspx) och [MOSS 2013](https://technet.microsoft.com/en-us/library/cc262485.aspx).
 
 ### Standardinstallation {#standard-installation}
 
-Distribution av programvara används för att distribuera produktfunktioner, exempel och snabbkorrigeringar. Mer information finns i dokumentationen [för](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html#software-distribution)programvarudistribution.
+Distribution av programvara används för att distribuera produktfunktioner, exempel och snabbkorrigeringar. Mer information finns i [dokumentationen för programvarudistribution](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html#software-distribution).
 
 
 #### Integrera med AEM {#integrating-with-aem}
@@ -103,9 +104,9 @@ Så här installerar du innehållspaketet för anslutningsprogrammet.
 
    **Obs**: Kontrollera att du är inloggad som administratör.
 
-1. Tryck/klicka på **Stäng** när paketet är installerat.
+1. När paketet är installerat trycker/klickar du på **Stäng**.
 
-## Konfigurerar SharePoint-koppling {#configuring-sharepoint-connector}
+## Konfigurerar SharePoint-anslutningen {#configuring-sharepoint-connector}
 
 När du har installerat SharePoint-anslutningen konfigurerar du programmet och SharePoint-lagren för anslutningen.
 
@@ -116,9 +117,9 @@ Ange SharePoint-serverns URL så att SharePoint-databasen är JCR-kompatibel. Du
 Så här anger du URL:en för SharePoint-servern och avancerade alternativ:
 
 1. Gå till OSGi Management Console: [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr).
-1. Sök efter **Dag JCR Connector för Microsoft Sharepoint** -paketet.
+1. Sök efter JCR Connector för **dagen för Microsoft Sharepoint**-paketet.
 1. Redigera konfigurationsvärdena.
-1. Ange SharePoint Server-URL:en som värde för **Arbetsytor**.
+1. Ange SharePoint Server-URL:en som värdet för **Workspaces**.
 1. Tryck/klicka på **Spara**.
 
 ![chlimage_1-62](assets/chlimage_1-62.png)
@@ -128,16 +129,18 @@ Parametrarna &quot;Arbetsytor&quot; och &quot;Standardnamn på arbetsyta&quot;:
 Som standard visar kopplingen en enda JCR-arbetsyta. SharePoint-servern som visas av den här arbetsytan anges med konfigurationsparametern SharePoint Server URL.
 
 Kopplingen kan även konfigureras för flera arbetsytor. I det här fallet är varje arbetsyta associerad med URL:en för respektive SharePoint-server som visas via arbetsytan. Om du vill lägga till en arbetsyta lägger du till en arbetsytedefinition i parametern Arbetsytor. En arbetsytedefinition har följande format:
-`<name>`= `<url>` där`<name>` är namnet på JCR-arbetsytan och`<url>` är URL:en för SharePoint-servern för den arbetsytan.
+`<name>`= `<url>` där
+`<name>` är namnet på JCR-arbetsytan och
+`<url>` är URL-adressen till SharePoint-servern för den arbetsytan.
 
-I AEM utför du ett steg till utöver konfigurationsstegen ovan. Tillåtelselista i paketet &#39;**com.day.cq.dam.cq-dam-jcr-connectors**&#39;.
+I AEM utför du ett steg till utöver konfigurationsstegen ovan. Tillåtelselista paketet **com.day.cq.dam.cq-dam-jcr-connectors**.
 
 Gör så här för att tillåtelselista-paket i AEM:
 
 1. Gå till OSGi Management Console: http://localhost:4502/system/console/configMgr.
 1. Sök efter tjänsten Apache Sling Login Admin Whitelist.
 1. Välj **Åsidosätt vitlistan**.
-1. Lägg till `com.day.cq.dam.cq-dam-jcr-connectors` i vitlistningspaket som standard
+1. Lägg till `com.day.cq.dam.cq-dam-jcr-connectors` i standard för vitlistpaket
 1. Klicka på Spara.
 
 ![chlimage_1-82](assets/chlimage_1-82a.png)
@@ -148,7 +151,7 @@ Gör så här för att tillåtelselista-paket i AEM:
 
 Mer information om autentiseringsrelaterade parametrar finns i [Autentisering](/help/sites-administering/sharepoint-connector.md#configuring-authentication).
 
-### Verifiera SharePoint-konfigurationen {#verifying-the-sharepoint-setup}
+### Verifierar SharePoint-konfigurationen {#verifying-the-sharepoint-setup}
 
 Kontrollera följande när du har konfigurerat anslutningen:
 
@@ -207,17 +210,17 @@ Gå till: [http://localhost:4502/system/console/bundles](http://localhost:4502/s
 1. Sök efter&quot;Day JCR Connector for Microsoft Sharepoint&quot;
 1. Klicka på&quot;Redigera konfigurationsvärden&quot;
 1. Ange värdet för Sharepoint Connection Factory som com.day.crx.spi.sharepoint.security.FormsBasedAuthenticationConnectionFactory
-1. Click **Save**.
+1. Klicka på **Spara**.
 
 **Konfigurerar grundläggande autentisering (Windows)**
 
 1. [Inaktivera tokenautentisering](#disable-token-authentication).
 1. Gå till [http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles).
 1. Klicka på OSGI > Konfiguration.
-1. Sök efter JCR Connector för **Dag för Microsoft Sharepoint**.
+1. Sök efter **Day JCR Connector för Microsoft Sharepoint**.
 1. Klicka på `Edit the configuration values`.
-1. Ange värdet för Sharepoint Connection Factory till `com.day.crx.spi.sharepoint.security.WindowsAuthenticationConnectionFactory`.
-1. Click **Save**.
+1. Ange värdet `com.day.crx.spi.sharepoint.security.WindowsAuthenticationConnectionFactory` för SharePoint Connection Factory.
+1. Klicka på **Spara**.
 
 Endast användare som är autentiserade på både AEM och SharePoint kan komma åt SharePoint-innehållet via anslutningen.
 
@@ -239,7 +242,7 @@ Så här lägger du till användaren i administratörsgruppen:
 1. Gå till Gruppadministration.
 1. Klicka på noden&quot;a&quot;.
 1. Klicka på&quot;administratörer&quot;.
-1. Skriv det användar-ID som skapades ovan i textrutan före knappen **Bläddra** .
+1. Skriv det användar-ID som skapades ovan i textrutan före knappen **Bläddra**.
 1. Klicka på den gröna markeringssymbolen för att lägga till användaren i administratörsgruppen.
 
 ### Inaktivera tokenautentisering {#disable-token-authentication}
@@ -253,16 +256,16 @@ Så här lägger du till användaren i administratörsgruppen:
 1. Spara och stäng xml-filen.
 1. Starta om QuickStart och logga in med dina inloggningsuppgifter.
 
-#### Stöd för olika autentiseringsmetoder i SharePoint-servern {#supporting-different-authentication-methods-of-the-sharepoint-server}
+#### Stöd för olika autentiseringsmetoder för SharePoint-servern {#supporting-different-authentication-methods-of-the-sharepoint-server}
 
-I standardversionen stöder anslutningsprogrammet IIS **Windows** -standardautentisering (Basic) och Forms-baserad autentisering (tokenbaserad). De [andra autentiseringsmetoderna](https://technet.microsoft.com/en-us/library/cc262350.aspx#section2) kan stödjas via utökningsmekanismen.
+I standardversionen stöder kopplingen IIS **Windows**-autentisering (Basic) och Forms-baserad autentisering (tokenbaserad). [Andra autentiseringsmetoder](https://technet.microsoft.com/en-us/library/cc262350.aspx#section2) kan stödjas via utökningsmekanismen.
 
 Följande steg innehåller riktlinjer om hur du utökar standardautentiseringen så att den stöder olika autentiseringsmetoder i SharePoint-servern:
 
 1. Implementera `com.day.crx.spi.sharepoint.security.SharepointConnectionFactory` för att hantera klientsidan av din specifika autentiseringsprocess.
-1. Installera `SharepointConnectionFactory` implementeringen som ett fragmentpaket med fragmentvärden `com.day.crx.spi.crx2sharepoint-bundle`.
+1. Installera `SharepointConnectionFactory`-implementeringen som ett fragmentpaket med fragmentvärden `com.day.crx.spi.crx2sharepoint-bundle`.
 
-   När du använder Maven kan du anpassa följande konfiguration av `maven-bundle-plugin` för att uppfylla dina projektkrav:
+   När du använder Maven anpassar du följande konfiguration av `maven-bundle-plugin` till projektets krav:
 
    ```xml
               <plugin>
@@ -283,7 +286,7 @@ Följande steg innehåller riktlinjer om hur du utökar standardautentiseringen 
               </plugin>
    ```
 
-1. Registrera `SharepointConnectionFactory` implementeringen i anslutningskonfigurationen. Klicka på **Avancerade alternativ** i anslutningsprogrammets konfigurationsfönster. Ange implementeringens namn i fältet for **Sharepoint Connection Factory** `com.day.crx.spi.sharepoint.auth.CustomConnectionFactory`.
+1. Registrera implementeringen av `SharepointConnectionFactory` i anslutningskonfigurationen. Klicka på **Avancerade alternativ** i anslutningsprogrammets konfigurationsfönster. Ange implementeringens namn `com.day.crx.spi.sharepoint.auth.CustomConnectionFactory` i fältet for **Sharepoint Connection Factory**.
 
 1. Starta om kopplingen.
 
