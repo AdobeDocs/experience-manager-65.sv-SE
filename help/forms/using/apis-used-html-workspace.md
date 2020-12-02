@@ -1,6 +1,6 @@
 ---
-title: API:er som används i arbetsytan i AEM Forms
-seo-title: API:er som används i arbetsytan i AEM Forms
+title: API:er som används i AEM Forms arbetsyta
+seo-title: API:er som används i AEM Forms arbetsyta
 description: Offentliga Java- och JavaScript-API:er och metoder för arbetsytan i LiveCycle AEM Forms som kan anpassas och automatiseras.
 seo-description: Offentliga Java- och JavaScript-API:er och metoder för arbetsytan i LiveCycle AEM Forms som kan anpassas och automatiseras.
 uuid: 9602990e-8ac7-42eb-b507-50b3594055ba
@@ -10,13 +10,16 @@ topic-tags: forms-workspace
 discoiquuid: 4a73a973-fccf-466b-b4a0-47652a14a080
 translation-type: tm+mt
 source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+workflow-type: tm+mt
+source-wordcount: '1020'
+ht-degree: 1%
 
 ---
 
 
-# API:er som används i arbetsytan i AEM Forms {#apis-used-in-aem-forms-workspace}
+# API:er som används i AEM Forms arbetsyta {#apis-used-in-aem-forms-workspace}
 
-Följande API:er används på arbetsytan i AEM Forms.
+Följande API:er används i AEM Forms arbetsyta.
 
 <table>
  <tbody>
@@ -107,7 +110,7 @@ Följande API:er används på arbetsytan i AEM Forms.
   <tr>
    <td>save</td>
    <td>ProcessManagementTaskService</td>
-   <td>save</td>
+   <td>spara</td>
    <td>Den sparar en aktivitet på servern.</td>
   </tr>
   <tr>
@@ -234,7 +237,7 @@ Följande API:er används på arbetsytan i AEM Forms.
    <td>getAllQueues<br /> </td>
    <td>ProcessManagementQueueService<br /> </td>
    <td>getAllQueues<br /> </td>
-   <td>Den får alla köer (egna, delade och gruppköer) tillgängliga för inloggad användare.<br /> </td>
+   <td>Den får alla köer (egna, delade och gruppköer) tillgängliga för den inloggade användaren.<br /> </td>
   </tr>
   <tr>
    <td>getOutOfOfficeSettings</td>
