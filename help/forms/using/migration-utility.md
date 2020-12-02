@@ -22,7 +22,7 @@ ht-degree: 0%
 
 # Migrera AEM Forms-resurser och -dokument{#migrate-aem-forms-assets-and-documents}
 
-Migreringsverktyget konverterar [adaptiva Forms-resurser](../../forms/using/introduction-forms-authoring.md), [molnkonfigurationer](/help/sites-developing/extending-cloud-config.md)och [Correspondence Management-resurser](/help/forms/using/cm-overview.md) från det format som användes i de tidigare versionerna till det format som användes i AEM 6.5 Forms. När du kör migreringsverktyget migreras följande:
+Migreringsverktyget konverterar [adaptiva Forms-resurser](../../forms/using/introduction-forms-authoring.md), [molnkonfigurationer](/help/sites-developing/extending-cloud-config.md) och [Correspondence Management-resurser](/help/forms/using/cm-overview.md) från det format som användes i de tidigare versionerna till det format som användes i AEM 6.5 Forms. När du kör migreringsverktyget migreras följande:
 
 * Anpassade komponenter för adaptiva formulär
 * Anpassningsbara mallar för blanketter och korrespondenshantering
@@ -33,9 +33,9 @@ Migreringsverktyget konverterar [adaptiva Forms-resurser](../../forms/using/intr
 >
 >Om du har en uppgradering som inte är på plats, för Correspondence Management-resurser, kan du köra migreringen varje gång du importerar resurserna. För migrering av Correspondence Management måste Forms-kompatibilitetspaketet vara installerat.
 
-## Migreringsmetod {#approach-to-migration}
+## Metod för migrering {#approach-to-migration}
 
-Du kan [uppgradera](../../forms/using/upgrade.md) till den senaste versionen av AEM Forms 6.5 från AEM Forms 6.4, 6.3 eller 6.2 eller göra en ny installation. Beroende på om du har uppgraderat din tidigare installation eller utfört en ny installation måste du göra något av följande:
+Du kan [uppgradera](../../forms/using/upgrade.md) till den senaste versionen av AEM Forms 6.5 från AEM Forms 6.4, 6.3 eller 6.2 eller utföra en ny installation. Beroende på om du har uppgraderat din tidigare installation eller utfört en ny installation måste du göra något av följande:
 
 **Vid uppgradering på plats**
 
@@ -45,7 +45,7 @@ Därefter måste du uppdatera resurserna och dokumenten genom att [köra migreri
 
 **Om installationen inte är på plats**
 
-Om det är en installation på fel plats (ny) måste du installera [AEMFD-kompatibilitetspaketet](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) innan du kan använda resurserna och dokumenten (innehåller Correspondence Management Compatibility-paketet).
+Om installationen är på fel plats (ny) måste du installera [AEMFD-kompatibilitetspaketet](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) innan du kan använda resurserna och dokumenten (innehåller Correspondence Management Compatibility-paketet).
 
 Därefter måste du importera resurspaketet (zip eller cmp) till den nya konfigurationen och sedan uppdatera resurserna och dokumenten genom att [köra migreringsverktyget](#runningmigrationutility). Adobe rekommenderar att du skapar nya resurser i den nya installationen först efter att du har kört migreringsverktyget.
 
@@ -84,7 +84,7 @@ När du kör migreringsverktyget för första gången skapas en logg med följan
 
 1. Öppna följande URL i webbläsaren:
 
-   https://[*värdnamn*]:[*port*]/[*context_path*]/libs/fd/foundation/gui/content/migration.html
+   https://[*värdnamn*]:[*port*]/[*kontextsökväg*]/libs/fd/foundation/gui/content/migration.html
 
    Webbläsaren visar fyra alternativ:
 
@@ -95,7 +95,7 @@ När du kör migreringsverktyget för första gången skapas en logg med följan
 
 1. Gör följande för att utföra migreringen:
 
-   * Om du vill migrera **resurser** trycker du på migrering av AEM Forms-resurser och på **Starta migrering** på nästa skärm. Följande migreras:
+   * Om du vill migrera **resurser** trycker du på AEM Forms Assets Migration (Migrering av resurser) och trycker på **Starta migrering** på nästa skärm. Följande migreras:
 
       * Anpassningsbara formulär
       * Dokumentfragment
@@ -133,16 +133,16 @@ När du kör migreringsverktyget för första gången skapas en logg med följan
       >        * Nya mallar - Anpassningsbara formulärmallar som skapats med mallredigerare under /conf. Detta inkluderar migrering av regler och skript som skapats med regelredigeraren.
 
 
-   * Om du vill migrera anpassade formulärkomponenter trycker du på **Adaptiv migrering** av anpassade Forms-komponenter och på sidan Anpassad komponentmigrering trycker du på **Starta migrering**. Följande migreras:
+   * Om du vill migrera anpassade formulärkomponenter trycker du på **Anpassad migrering av Forms-komponenter** och på sidan Anpassad komponentmigrering trycker du på **Starta migrering**. Följande migreras:
 
       * Anpassade komponenter skrivna för Adaptive Forms
       * Komponentövertäckningar, om sådana finns.
-   * Om du vill migrera adaptiva formulärmallar trycker du på **Adaptiv migrering** av Forms-mallar och på sidan migrering av anpassade komponenter trycker du på **Starta migrering**. Följande migreras:
+   * Om du vill migrera adaptiva formulärmallar trycker du på **Migrering av adaptiva Forms-mallar** och på sidan Migrering av anpassade komponenter trycker du på **Starta migrering**. Följande migreras:
 
       * Anpassningsbara formulärmallar som skapats under /apps eller /conf med AEM mallredigeraren.
    * Migrera konfigurationstjänsterna i AEM Forms Cloud för att utnyttja det nya sammanhangsberoende molntjänstparadigmet, som innehåller det beröringsaktiverade användargränssnittet (under /conf). När du migrerar konfigurationstjänsterna i AEM Forms Cloud flyttas molntjänsterna i /etc till /conf. Om du inte har några anpassningar av molntjänster som är beroende av de äldre sökvägarna (/etc) rekommenderar vi att du kör migreringsverktyget direkt efter uppgraderingen till 6.5 och använder molnkonfigurationsgränssnittet för ytterligare arbete. Om du har befintliga anpassningar av molntjänster kan du fortsätta använda det klassiska användargränssnittet vid uppgraderad installation tills anpassningarna har uppdaterats för att anpassas till de migrerade sökvägarna (/conf) och sedan köra migreringsverktyget.
 
-   Om du vill migrera **AEM Forms molntjänster**, som innehåller följande, trycker du på AEM Forms Cloud Configuration Migration (migrering av molnkonfiguration är oberoende av AEMFD-kompatibilitetspaket), trycker på AEM Forms Cloud Configurations Migration och sedan på sidan Configuration Migration (konfigurationsmigrering) trycker du på **Start Migration (Starta migrering**):
+   Om du vill migrera **AEM Forms molntjänster**, som innehåller följande, trycker du på AEM Forms Cloud Configuration Migration (molnkonfigurationsmigrering är oberoende av AEMFD-kompatibilitetspaketet), trycker på AEM Forms Cloud Configurations Migration och sedan på sidan Configuration Migration (konfigurationsmigrering) trycker du på **Start Migration**:
 
    * Molntjänster för formulärdatamodell
 
@@ -187,7 +187,7 @@ När du kör migreringsverktyget för första gången skapas en logg med följan
 
 
 
-1. När migreringsverktyget är klart går du vidare till [hushållssysslorna](#housekeepingtasks).
+1. När migreringsverktyget har körts klart fortsätter du till [underhållsaktiviteterna](#housekeepingtasks).
 
 ### Hushållsuppgifter efter att migreringsverktyget har körts {#housekeepingtasks}
 
@@ -195,7 +195,7 @@ När du har kört migreringsverktyget ska du sköta följande uppgifter: [](../.
 
 1. Kontrollera att XFA-versionen av layouter och fragmentlayouter är 3.3 eller senare. Om du använder layouter och fragmentlayouter av en äldre version kan det uppstå problem när bokstaven återges. Så här uppdaterar du en äldre XFA-version till den senaste versionen:
 
-   1. [Hämta XFA som en zip-fil](../../forms/using/import-export-forms-templates.md#p-import-and-export-assets-in-correspondence-management-p) från Forms användargränssnitt.
+   1. [Ladda ned XFA som en zip-](../../forms/using/import-export-forms-templates.md#p-import-and-export-assets-in-correspondence-management-p) fil från Forms användargränssnitt.
    1. Extrahera filen.
    1. Öppna XFA-filen i den senaste Designer-filen och spara den. Versionen av XFA uppdateras till den senaste.
    1. Överför XFA i Forms användargränssnitt.
