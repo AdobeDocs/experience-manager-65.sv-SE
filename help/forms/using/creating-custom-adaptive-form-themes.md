@@ -1,8 +1,8 @@
 ---
 title: Skapa anpassade adaptiva formulärteman
 seo-title: Skapa anpassade adaptiva formulärteman
-description: Ett adaptivt formulärtema är ett AEM-klientbibliotek som du använder för att definiera formaten (utseende och känsla) för ett adaptivt formulär. Lär dig hur du kan skapa anpassade, anpassningsbara formulärteman.
-seo-description: Ett adaptivt formulärtema är ett AEM-klientbibliotek som du använder för att definiera formaten (utseende och känsla) för ett adaptivt formulär. Lär dig hur du kan skapa anpassade, anpassningsbara formulärteman.
+description: Ett adaptivt formulärtema är ett AEM klientbibliotek som du använder för att definiera format (utseende och känsla) för ett adaptivt formulär. Lär dig hur du kan skapa anpassade, anpassningsbara formulärteman.
+seo-description: Ett adaptivt formulärtema är ett AEM klientbibliotek som du använder för att definiera format (utseende och känsla) för ett adaptivt formulär. Lär dig hur du kan skapa anpassade, anpassningsbara formulärteman.
 uuid: b25df10e-b07c-4e9d-a799-30f1c6fb3c44
 content-type: reference
 topic-tags: customization
@@ -21,19 +21,19 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
->AEM Forms har funktioner för [Theme Editor](/help/forms/using/themes.md) för att skapa och ändra anpassningsbara [teman](/help/forms/using/themes.md). Utför stegen som anges i den här artikeln endast om du har uppgraderat från en version som inte har [Theme Editor](/help/forms/using/themes.md) och du har en befintlig investering i teman som skapats med Less-/CSS-filer (redigeringsmetod för förtema).
+>AEM Forms tillhandahåller funktionen [Theme Editor](/help/forms/using/themes.md) för att skapa och ändra adaptiva formulär [teman](/help/forms/using/themes.md). Utför stegen som anges i den här artikeln endast om du har uppgraderat från en version som inte har [Theme Editor](/help/forms/using/themes.md) och du har en befintlig investering i teman som skapats med Less-/CSS-filer (redigeringsmetod för förtema).
 
 ## Förutsättningar {#prerequisites}
 
 * Kunskap om LESS-ramverket (Leaner CSS)
 * Så här skapar du ett klientbibliotek i Adobe Experience Manager
-* [Skapa en adaptiv formulärmall](/help/forms/using/custom-adaptive-forms-templates.md) för det tema du skapar
+* [Skapa en adaptiv formulärmall ](/help/forms/using/custom-adaptive-forms-templates.md) för det tema du skapar
 
-## Adaptivt formtema {#adaptive-form-theme}
+## Adaptivt formulärtema {#adaptive-form-theme}
 
-Ett **adaptivt formulärtema** är ett AEM-klientbibliotek som du använder för att definiera formaten (utseende och känsla) för ett adaptivt formulär.
+Ett **adaptivt formulärtema** är ett AEM klientbibliotek som du använder för att definiera format (utseende och känsla) för ett adaptivt formulär.
 
-Du skapar en **adaptiv mall** och använder temat för mallen. Sedan använder du den här anpassade mallen för att skapa ett **anpassat formulär**.
+Du skapar en **adaptiv mall** och använder temat för mallen. Du använder sedan den här anpassade mallen för att skapa ett **anpassat formulär**.
 
 ![Adaptivt formulär och klientbibliotek](assets/hierarchy.png)
 
@@ -41,11 +41,12 @@ Du skapar en **adaptiv mall** och använder temat för mallen. Sedan använder d
 
 >[!NOTE]
 >
->Följande procedur beskrivs med exempelnamn för AEM-objekt som nod, egenskaper och mappar.
+>Följande procedur beskrivs med exempelnamn för AEM objekt som nod, egenskaper och mappar.
 >
 >Om du följer de här stegen med hjälp av namnen bör den resulterande mallen se ut ungefär som följande ögonblicksbild:
 
-![Skogsbild med adaptiv form](assets/thumbnail.png)**Bild:** *Exempel på skogtema*
+![Skogsteman, ](assets/thumbnail.png)
+**ögonblicksbild av adaptiv formBild:Exempel på** *skogtema*
 
 1. Skapa en nod av typen `cq:ClientLibraryFolder` under `/apps`noden.
 
@@ -59,11 +60,11 @@ Du skapar en **adaptiv mall** och använder temat för mallen. Sedan använder d
 
    ![CRX-databasögonblicksbild](assets/3-2.png)
 
-1. Lägg till två mappar `less` och `css`en fil `css.txt` till noden som skapades i steg 1:
+1. Lägg till två mappar, `less` och `css`, och en fil `css.txt` till noden som skapades i steg 1:
 
-   * `less` mapp: Innehåller de `less` variabelfiler där du definierar `less` variablerna och `less mixins` som används för att hantera css-formaten.
+   * `less` mapp: Innehåller de  `less` variabelfiler i vilka du definierar  `less` variablerna och  `less mixins` som används för att hantera css-formaten.
 
-      Mappen består av `less` variabelfiler, `less` mixfiler, `less` filer som definierar format med hjälp av mixins och variabler. Alla dessa mindre filer importeras sedan i styles.less.
+      Mappen består av `less` variabelfiler, `less` mixin-filer, `less`-filer som definierar format med hjälp av mixiner och variabler. Alla dessa mindre filer importeras sedan i styles.less.
 
    * `css`mapp: Innehåller de css-filer i vilka du definierar statiska format som ska användas i temat.
 
@@ -109,7 +110,7 @@ Du skapar en **adaptiv mall** och använder temat för mallen. Sedan använder d
    @button-hover-bg-color: rgb(30, 156, 67);
    ```
 
-   **Mindre filer:** Du kan definiera de funktioner som accepterar variabler som argument. Utdata för dessa funktioner är de resulterande formaten. Använd dessa blandningar i olika format för att undvika att CSS-formaten upprepas.
+   **Mindre blandade filer:** Du kan definiera funktioner som accepterar variabler som argument. Utdata för dessa funktioner är de resulterande formaten. Använd dessa blandningar i olika format för att undvika att CSS-formaten upprepas.
 
    Adaptiva former innehåller OTB-blandningar som definieras i:
 
@@ -135,9 +136,9 @@ Du skapar en **adaptiv mall** och använder temat för mallen. Sedan använder d
    }
    ```
 
-   **Styles.less File:** Använd den här filen för att inkludera alla färre filer (variabler, mixins, styles) som du behöver använda i klientbiblioteket.
+   **Styles.less File:** Använd den här filen för att inkludera alla mindre filer (variabler, mixins, styles) som du behöver använda i klientbiblioteket.
 
-   I följande exempelfil `styles.less` kan import-satsen placeras i vilken ordning som helst.
+   I följande exempel på `styles.less`-fil kan import-satsen placeras i vilken ordning som helst.
 
    Programsatserna för att importera följande .less-filer är obligatoriska:
 
@@ -174,7 +175,7 @@ Du skapar en **adaptiv mall** och använder temat för mallen. Sedan använder d
    }
    ```
 
-   Sökvägarna `css.txt` till css-filer som ska laddas ned för biblioteket finns.
+   `css.txt` innehåller sökvägarna till css-filer som ska hämtas för biblioteket.
 
    Till exempel:
 
@@ -204,15 +205,15 @@ Du skapar en **adaptiv mall** och använder temat för mallen. Sedan använder d
    >
    >**`styles.less`**
 
-## Använda ett tema i ett anpassat formulär {#to-use-a-theme-in-an-adaptive-form}
+## Så här använder du ett tema i en adaptiv form {#to-use-a-theme-in-an-adaptive-form}
 
 När du har skapat ett adaptivt formulärtema utför du följande steg för att använda det här temat i en adaptiv form:
 
-1. Om du vill inkludera temat som skapats i [för att skapa ett anpassat temaavsnitt](/help/forms/using/creating-custom-adaptive-form-themes.md#p-to-create-an-adaptive-form-theme-p) skapar du en anpassad sida av typen `cq:Component`.
+1. Om du vill ta med temat som skapats i [för att skapa ett adaptivt formulärtema](/help/forms/using/creating-custom-adaptive-form-themes.md#p-to-create-an-adaptive-form-theme-p) skapar du en anpassad sida av typen `cq:Component`.
 
    Till exempel, `/apps/myAfCustomizations/myAfPages/forestPage`
 
-   1. Lägg till en `sling:resourceSuperType` egenskap och ange dess värde som `fd/af/components/page/base`.
+   1. Lägg till en `sling:resourceSuperType`-egenskap och ange dess värde som `fd/af/components/page/base`.
 
       ![CRX-databasögonblicksbild](assets/1-2.png)
 
@@ -220,7 +221,7 @@ När du har skapat ett adaptivt formulärtema utför du följande steg för att 
 
       Du importerar sedan temat som skapats i Skapa ett anpassat formulärtemaavsnitt i den här artikeln.
 
-      Följande exempelkodfragment importerar `af.theme.forest` temat.
+      Följande exempelkodfragment importerar temat `af.theme.forest`.
 
       ```jsp
       <%@include file="/libs/fd/af/components/guidesglobal.jsp"%>
