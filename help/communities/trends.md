@@ -27,33 +27,33 @@ Komponenten `Community Activity List` gör det möjligt att lägga till trendinf
 
 Dokumentet beskriver:
 
-* Lägga till `Community Activity List` komponenten på en [communitywebbplats](/help/communities/overview.md#community-sites).
+* Lägger till komponenten `Community Activity List` i en [community-webbplats](/help/communities/overview.md#community-sites).
 
-* Konfigurationsinställningar för `Community Activity List` komponenten.
+* Konfigurationsinställningar för komponenten `Community Activity List`.
 
 ### Krav {#requirement}
 
-Data för `Community Activity List` webbplatsen är bara tillgängliga när Adobe Analytics har licens och konfigurerats för communitywebbplatsen.
+Data för `Community Activity List` är bara tillgängliga när Adobe Analytics är licensierat och konfigurerat för communitywebbplatsen.
 
 Se [Analyskonfiguration för communityfunktioner](/help/communities/analytics.md).
 
 ### Lägga till en lista med communityaktiviteter på en sida {#adding-a-community-activity-list-to-a-page}
 
-Om du vill lägga till en `Community Activity List` komponent på en sida i redigeringsläge letar du reda på komponenten
+Om du vill lägga till en `Community Activity List`-komponent på en sida i redigeringsläge letar du reda på komponenten
 
 * `Communities / Community Activity List`
 
 och dra den till rätt plats på en sida.
 
-Mer information finns i Grunderna för [communitykomponenter](/help/communities/basics.md).
+Mer information finns på [Grunderna för communitykomponenter](/help/communities/basics.md).
 
 När komponenten placeras på en sida i en community-webbplats är det så här den visas:
 
 ![communityaktivitet](assets/community-activity.png)
 
-### Konfigurerar lista över communityaktiviteter  {#configuring-community-activity-list}
+### Konfigurerar community-aktivitetslista {#configuring-community-activity-list}
 
-Markera den monterade `Community Activity List` komponent som du vill öppna och välj den `Configure` ikon som öppnar redigeringsdialogrutan.
+Markera den monterade `Community Activity List`-komponenten som ska öppnas och välj ikonen `Configure` som öppnar redigeringsdialogrutan.
 
 ![konfigurera](assets/configure-new.png)
 
@@ -74,7 +74,7 @@ Under fliken **Kommentarer** anger du om och hur kommentarer för överförda fi
 
 * **Visa titel**
 
-   En beskrivande rubrik som ska visas ovanför data, till exempel `Trending Content`.
+   En beskrivande titel som ska visas ovanför data, till exempel `Trending Content`.
 Standard är ingen titel.
 
 * **Visa antal**
@@ -113,18 +113,18 @@ Standard är hela communitywebbplatsen.
 
 * **Medlemsräkningsaggregering**
 
-   När du avmarkerar det här alternativet (inaktiverat) räknas endast inlägg på den översta nivån. Om till exempel kontexten är rotsidan (standardinställningen) visas ingen aktivitet `Activity Type` `Posts` i någon av dem eftersom det inte går att publicera innehåll på rotsidan. När du markerar det här alternativet inkluderas antalet på alla underordnade sidor.
+   När du avmarkerar det här alternativet (inaktiverat) räknas endast inlägg på den översta nivån. Om kontexten till exempel är rotsidan (standardvärdet) kommer en `Activity Type` av `Posts` aldrig att visa någon aktivitet eftersom det inte går att publicera innehåll på rotsidan. När du markerar det här alternativet inkluderas antalet på alla underordnade sidor.
 Standard är markerat.
 
 ### Exempelsida med 4 komponenter {#example-page-with-components}
 
-**Konfiguration för besökare** : Typ = Medlemmar, aktivitetstyp = Vyer
+**Konfiguration** för de vanligaste besökarna: Typ = Medlemmar, aktivitetstyp = Vyer
 
-**Top Contributors** config: Typ = Medlemmar, aktivitetstyp = Bokföring
+**Top** Contributorsconfig: Typ = Medlemmar, aktivitetstyp = Bokföring
 
-**Konfiguration för det övre innehållet** : Typ = Innehåll, aktivitetstyp = Vyer,
+**Övre** innehållskonfiguration: Typ = Innehåll, aktivitetstyp = Vyer,
 
-**Trending Content** config: Typ = innehåll, aktivitetstyp = inlägg
+**Trending** Contentconfig: Typ = innehåll, aktivitetstyp = inlägg
 
 ![komponenter](assets/activity-list-components.png)
 
