@@ -12,11 +12,11 @@ ht-degree: 1%
 ---
 
 
-# Läs om AEM 6.5-funktioner {#learn-about-aem-64-capabilities}
+# Läs mer om AEM 6.5-funktioner {#learn-about-aem-64-capabilities}
 
 ## AEM Sites {#aem-sites}
 
-AEM Sites är ett innehållshanteringssystem i Adobe Experience Manager som ger er en plats där ni kan skapa, hantera och leverera digitala upplevelser på webbplatser, mobilsajter och skärmar på plats för att göra dem globala, men ändå personligt relevanta och engagerande. [Lär dig mer](http://www.adobe.com/marketing-cloud/enterprise-content-management/web-cms.html) eller [lär dig mer om några av våra nya videofunktionsjälvstudiekurser.](https://helpx.adobe.com/experience-manager/kt/sites/index/aem-6-5-sites.html)
+AEM Sites är ett innehållshanteringssystem i Adobe Experience Manager som ger er en plats där ni kan skapa, hantera och leverera digitala upplevelser på webbplatser, mobilsajter och skärmar på plats för att göra dem globala, men ändå personligt relevanta och engagerande. [Lär dig ](http://www.adobe.com/marketing-cloud/enterprise-content-management/web-cms.html) mer eller  [lär dig mer om några av våra nya videofunktionsjälvstudiekurser.](https://helpx.adobe.com/experience-manager/kt/sites/index/aem-6-5-sites.html)
 
 ## AEM Assets {#aem-assets}
 
@@ -47,8 +47,8 @@ Communities är en Adobe Experience Manager-funktion som hjälper er att skapa o
 
 ## AEM Livefyre {#aem-livefyre}
 
-AEM Livefyre är en helt ny Adobe Experience Manager-funktion som gör att du kan utnyttja allt som delas på webben och skapa ett konstant flöde av nytt högkvalitativt innehåll på dina egna webbplatser. [Läs mer](http://www.adobe.com/marketing-cloud/enterprise-content-management/ugc-content-platform.html) eller [hoppa direkt in i våra guider.](https://answers.livefyre.com/product/livefyre-for-adobe-experience-manager-aem/)
+AEM Livefyre är en helt ny Adobe Experience Manager-funktion som gör att du kan utnyttja allt som delas på webben och skapa ett konstant flöde av nytt högkvalitativt innehåll på dina egna webbplatser. [Läs ](http://www.adobe.com/marketing-cloud/enterprise-content-management/ugc-content-platform.html) mer eller  [gå direkt in i våra guider.](https://answers.livefyre.com/product/livefyre-for-adobe-experience-manager-aem/)
 
-## AEM {#aem-foundation}
+## AEM Foundation {#aem-foundation}
 
 Läs mer om [Adobe Experience Manager 6.5 Foundation](/help/sites-deploying/home.md) och vår driftsättningsmodell för hanterade tjänster eller dyk in i några av våra [nya videopresentationer av funktionerna i den här versionen.](https://helpx.adobe.com/experience-manager/kt/sites/index/aem-6-5-sites.html)
