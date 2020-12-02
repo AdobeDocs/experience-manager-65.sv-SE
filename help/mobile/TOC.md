@@ -24,7 +24,7 @@ ht-degree: 0%
    + [AEM Adobe PhoneGap](getting-started-aem-mobile-phonegap.md)
    + [AEM Mobile - GDPR-beredskap](aem-mobile-gdpr-compliance.md)
    + [Utveckla mobilappar](develop-mobile-apps.md)
-+ App för redigering av On Demand Services {#authoring}
++ Redigeringsapp för On Demand Services {#authoring}
    + [Mobile On-Demand](mobile-apps-ondemand.md)
    + [Hantera innehåll](mobile-apps-ondemand-manage-content-ondemand.md)
    + [Publicera inte publicera innehåll](mobile-on-demand-publishing-unpublishing.md)
@@ -57,7 +57,7 @@ ht-degree: 0%
    + [Modeller - översikt](model-management.md)
    + [Blanksteg och entiteter](spaces-and-entities.md)
    + [Hantera samlingar](mobile-on-demand-managing-collections.md)
-+ Skapa Adobe PhoneGap Enterprise {#author-phonegap}
++ Skapar Adobe PhoneGap Enterprise {#author-phonegap}
    + [PhoneGap](phonegap.md)
    + [Redigera appmetadata](phonegap-editmetadata.md)
    + [Programdefinitioner](phonegap-app-definitions.md)
