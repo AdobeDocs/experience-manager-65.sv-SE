@@ -1,36 +1,36 @@
 ---
-title: Storleksguide för [!DNL Assets]
-description: Bästa metoder för att fastställa effektiva mätvärden för att uppskatta den infrastruktur och de resurser som krävs för att driftsätta [!DNL Adobe Experience Manager Assets].
+title: '[!DNL Assets] storleksstödlinje'
+description: Bästa tillvägagångssätt för att fastställa effektiva mått för att uppskatta den infrastruktur och de resurser som krävs för att distribuera [!DNL Adobe Experience Manager Assets].
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
-source-wordcount: '1616'
+source-wordcount: '1614'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Assets] storleksstödlinje {#assets-sizing-guide}
+# [!DNL Assets] storleksstödlinje  {#assets-sizing-guide}
 
-När du ändrar storlek på miljön för en [!DNL Adobe Experience Manager Assets] implementering är det viktigt att se till att det finns tillräckligt med resurser tillgängliga vad gäller disk, processor, minne, IO och nätverksgenomströmning. Om du vill ändra storlek på många av dessa resurser måste du känna till hur många resurser som läses in i systemet. Om det inte finns något bättre mätvärde kan du dividera storleken på det befintliga biblioteket med bibliotekets ålder för att hitta frekvensen som resurserna skapas med.
+När du ändrar storlek på miljön för en [!DNL Adobe Experience Manager Assets]-implementering är det viktigt att se till att det finns tillräckligt med resurser tillgängliga vad gäller disk, processor, minne, IO och nätverksgenomströmning. Om du vill ändra storlek på många av dessa resurser måste du känna till hur många resurser som läses in i systemet. Om det inte finns något bättre mätvärde kan du dividera storleken på det befintliga biblioteket med bibliotekets ålder för att hitta frekvensen som resurserna skapas med.
 
 ## Skiva {#disk}
 
 ### DataStore {#datastore}
 
-Ett vanligt misstag som görs vid storleksändring av det diskutrymme som krävs för en [!DNL Assets] implementering är att beräkningarna baseras på storleken på de råbilder som ska importeras till systemet. Som standard [!DNL Experience Manager] skapar tre återgivningar utöver den ursprungliga bilden som ska användas för att återge elementen i [!DNL Experience Manager] användargränssnittet. I tidigare implementeringar har dessa återgivningar observerats anta dubbelt så stora som storleken på de resurser som har importerats.
+Ett vanligt misstag när storleken på det nödvändiga diskutrymmet för en [!DNL Assets]-implementering anges är att beräkningarna baseras på storleken på de råbilder som ska importeras till systemet. Som standard skapar [!DNL Experience Manager] tre renderingar utöver den ursprungliga bilden, som används för att återge elementen i användargränssnittet i [!DNL Experience Manager]. I tidigare implementeringar har dessa återgivningar observerats anta dubbelt så stora som storleken på de resurser som har importerats.
 
-De flesta användare definierar anpassade återgivningar utöver de färdiga återgivningarna. Förutom återgivningarna kan du [!DNL Assets] extrahera underresurser från vanliga filtyper, till exempel [!DNL Adobe InDesign] och [!DNL Adobe Illustrator].
+De flesta användare definierar anpassade återgivningar utöver de färdiga återgivningarna. Förutom återgivningarna kan du med [!DNL Assets] extrahera underresurser från vanliga filtyper, till exempel [!DNL Adobe InDesign] och [!DNL Adobe Illustrator].
 
-Versionshanteringsfunktionerna i [!DNL Experience Manager] butiken duplicerar resurserna i versionshistoriken. Du kan konfigurera versionerna så att de rensas ofta. Många användare väljer dock att behålla versioner i systemet under lång tid, vilket kräver ytterligare lagringsutrymme.
+Versionsfunktionerna i [!DNL Experience Manager] lagrar dubbletter av resurserna i versionshistoriken. Du kan konfigurera versionerna så att de rensas ofta. Många användare väljer dock att behålla versioner i systemet under lång tid, vilket kräver ytterligare lagringsutrymme.
 
 Med tanke på dessa faktorer behöver du en metod för att beräkna ett tillräckligt exakt lagringsutrymme för lagring av användarresurser.
 
 1. Fastställ storleken och antalet resurser som ska läsas in i systemet.
-1. Hämta ett representativt urval av de resurser som ska överföras till [!DNL Experience Manager]. Om du till exempel tänker läsa in PSD-, JPG-, AI- och PDF-filer i systemet behöver du flera exempelbilder för varje filformat. Dessutom bör dessa prover representera de olika filstorlekarna och komplexiteterna i bilderna.
+1. Hämta ett representativt urval av resurserna som ska överföras till [!DNL Experience Manager]. Om du till exempel tänker läsa in PSD-, JPG-, AI- och PDF-filer i systemet behöver du flera exempelbilder för varje filformat. Dessutom bör dessa prover representera de olika filstorlekarna och komplexiteterna i bilderna.
 1. Definiera de återgivningar som ska användas.
-1. Skapa återgivningarna i [!DNL Experience Manager] med [!DNL ImageMagick] eller [!DNL Adobe Creative Cloud] program. Förutom de återgivningar som användarna anger skapar du färdiga återgivningar. För användare som implementerar Scene7 kan du använda IC-binärfilen för att generera PTIFF-återgivningar som ska lagras i Experience Manager.
+1. Skapa återgivningarna i [!DNL Experience Manager] med [!DNL ImageMagick] eller [!DNL Adobe Creative Cloud]-program. Förutom de återgivningar som användarna anger skapar du färdiga återgivningar. För användare som implementerar Scene7 kan du använda IC-binärfilen för att generera PTIFF-återgivningar som ska lagras i Experience Manager.
 1. Om du tänker använda delresurser genererar du dem för rätt filtyper.
 1. Jämför storleken på utdatabilder, återgivningar och delresurser med originalbilderna. Det gör att du kan generera en förväntad tillväxtfaktor när systemet har lästs in. Om du till exempel genererar återgivningar och delresurser med en kombinerad storlek på 3 GB efter att ha bearbetat 1 GB resurser, blir återgivningens tillväxtfaktor 3.
 1. Fastställer den maximala tid som tillgångsversionerna ska underhållas i systemet.
@@ -47,7 +47,7 @@ Genom att utföra ovanstående steg kan du fastställa följande:
 * Antal nya resurser som läses in varje månad.
 * År av tillväxt för tilldelning av lagringsutrymme.
 
-Du kan ange dessa tal i kalkylbladet Nätverksstorlek för att fastställa det totala utrymmet som krävs för datalagret. Det är också ett användbart verktyg för att avgöra vilken inverkan som bibehållande av resursversioner eller ändring av resurser i [!DNL Experience Manager] på disktillväxten har.
+Du kan ange dessa tal i kalkylbladet Nätverksstorlek för att fastställa det totala utrymmet som krävs för datalagret. Det är också ett användbart verktyg för att fastställa effekten av att underhålla resursversioner eller ändra resurser i [!DNL Experience Manager] på disktillväxten.
 
 De exempeldata som finns i verktyget visar hur viktigt det är att utföra de angivna stegen. Om du ändrar storlek på datalagret baserat enbart på de Raw-bilder som läses in (1 TB) kan du ha underskattat databasstorleken med faktorn 15.
 
@@ -75,13 +75,13 @@ Att distribuera AWS S3-tjänsten för delade datalager är att föredra eftersom
 
 Delade datastores ökar även komplexiteten i åtgärder, till exempel skräpinsamling. Vanligtvis kan skräpinsamlingen för ett fristående datalager initieras med ett enda klick. Delade datalager kräver dock markeringssvepning för varje medlem som använder datalagret, förutom att den faktiska samlingen körs på en enskild nod.
 
-För AWS-åtgärder kan en implementering av en central plats (via Amazon S3) i stället för att bygga en RAID-matris med EBS-volymer avsevärt kompensera för komplexiteten och driftriskerna i systemet.
+För AWS-åtgärder kan en implementering av en central plats (via Amazon S3) i stället för att bygga en RAID-matris med EBS-volymer avsevärt kompensera för komplexiteten och de operativa riskerna i systemet.
 
-#### Prestandafrågor {#performance-concerns}
+#### Prestandaproblem {#performance-concerns}
 
 Ett delat datalager kräver att binärfilerna lagras på en nätverksansluten enhet som delas mellan alla instanser. Eftersom dessa binärfiler nås via ett nätverk påverkas systemprestandan negativt. Du kan delvis minska effekten genom att använda en snabb nätverksanslutning till ett snabbt disksystem. Detta är dock ett dyrt förslag. När det gäller AWS-åtgärder är alla diskar fjärranslutna och kräver nätverksanslutning. Tidigare volymer förlorar data när instansen startas eller stoppas.
 
-#### Latens {#latency}
+#### Svarstid {#latency}
 
 Latens i S3-implementeringar introduceras av skrivtrådar i bakgrunden. Säkerhetskopieringsprocedurer måste ta hänsyn till denna fördröjning. Dessutom kan Lucene-index vara ofullständiga vid säkerhetskopiering. Det gäller för alla tidskänsliga filer som skrivs till S3-datalagret och som öppnas från en annan instans.
 
@@ -102,15 +102,15 @@ Använd SSD-diskar eller diskar med en IOPS-nivå som är högre än 3 000 för 
 
 ## Nätverk {#network}
 
-[!DNL Assets] har ett antal användningsområden som gör nätverksprestanda viktigare än i många av våra [!DNL Experience Manager] projekt. En kund kan ha en snabb server, men om nätverksanslutningen inte är tillräckligt stor för att stödja belastningen på de användare som överför och hämtar resurser från systemet verkar den ändå vara långsam. Det finns en bra metod för att fastställa krympningspunkten i en användares nätverksanslutning till [!DNL Experience Manager] Assets- [aspekter för användarupplevelser, till exempel storlek, arbetsflödesutvärdering och nätverkstopologi](/help/assets/assets-network-considerations.md).
+[!DNL Assets] har ett antal användningsområden som gör nätverksprestanda viktigare än i många av våra  [!DNL Experience Manager] projekt. En kund kan ha en snabb server, men om nätverksanslutningen inte är tillräckligt stor för att stödja belastningen på de användare som överför och hämtar resurser från systemet verkar den ändå vara långsam. Det finns en bra metod för att fastställa krympningspunkten i en användares nätverksanslutning till [!DNL Experience Manager] på [Resursaspekter för användarupplevelse, instansstorlek, utvärdering av arbetsflöde och nätverkstopologi](/help/assets/assets-network-considerations.md).
 
 ## Begränsningar {#limitations}
 
-När du ändrar storlek på en implementering är det viktigt att tänka på systembegränsningar. Om den föreslagna implementeringen överskrider dessa begränsningar ska du använda kreativa strategier, som att dela resurserna mellan flera [!DNL Assets] implementeringar.
+När du ändrar storlek på en implementering är det viktigt att tänka på systembegränsningar. Om den föreslagna implementeringen överskrider dessa begränsningar ska du använda kreativa strategier, som att t.ex. dela resurserna mellan flera [!DNL Assets]-implementeringar.
 
 Filstorleken är inte den enda faktor som bidrar till problem med ostrukturerat minne. Det beror också på bildens dimensioner. Du kan undvika OOM-problem genom att ange en högre stackstorlek när du startar [!DNL Experience Manager].
 
-Dessutom kan du redigera egenskapen för tröskelstorlek för komponenten i Configuration Manager så att den mellanliggande temporära filen som är större än noll används. `com.day.cq.dam.commons.handler.StandardImageHandler`
+Du kan dessutom redigera egenskapen för tröskelstorlek för komponenten `com.day.cq.dam.commons.handler.StandardImageHandler` i Configuration Manager om du vill använda en mellanliggande tillfällig fil som är större än noll.
 
 ## Maximalt antal resurser {#maximum-number-of-assets}
 
@@ -118,8 +118,8 @@ Gränsen för antalet filer som kan finnas i ett datalager kan vara 2,1 miljarde
 
 Använd det Camera Raw biblioteket om återgivningarna genereras på fel sätt. I det här fallet får dock den längsta sidan av bilden inte vara större än 65 000 pixlar. Dessutom får bilden inte innehålla fler än 512 MP (512 x 1 024 x 1 024 pixlar). Storleken på resursen spelar ingen roll.
 
-Det är svårt att exakt uppskatta storleken på TIFF-filen som stöds med en särskild heap för [!DNL Experience Manager] eftersom ytterligare faktorer, som pixelstorlek, påverkar bearbetningen. Det är möjligt att [!DNL Experience Manager] kan bearbeta en fil som är 255 MB färdig, men inte bearbeta en filstorlek på 18 MB eftersom den senare innehåller ett ovanligt högre antal pixlar jämfört med den förra.
+Det är svårt att exakt uppskatta storleken på TIFF-filen som stöds med ett särskilt heap för [!DNL Experience Manager] eftersom ytterligare faktorer, som pixelstorlek, påverkar bearbetningen. Det är möjligt att [!DNL Experience Manager] kan bearbeta en fil som är 255 MB färdig, men inte kan bearbeta en filstorlek på 18 MB eftersom den senare innehåller ett ovanligt högre antal pixlar än den första.
 
 ## Storlek på resurser {#size-of-assets}
 
-Som standard [!DNL Experience Manager] kan du överföra resurser med en filstorlek på upp till 2 GB. Information om hur du överför mycket stora resurser i [!DNL Experience Manager]finns i [Konfiguration för att överföra mycket stora resurser](managing-video-assets.md#configuration-to-upload-assets-that-are-larger-than-gb).
+Som standard kan du med [!DNL Experience Manager] överföra resurser med en filstorlek på upp till 2 GB. Information om hur du överför mycket stora resurser i [!DNL Experience Manager] finns i [Konfiguration för att överföra mycket stora resurser](managing-video-assets.md#configuration-to-upload-assets-that-are-larger-than-gb).
