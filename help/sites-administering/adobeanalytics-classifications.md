@@ -1,8 +1,8 @@
 ---
 title: Adobe-klassificeringar
 seo-title: Adobe-klassificeringar
-description: Läs om Adobe Classifications.
-seo-description: Läs om Adobe Classifications.
+description: Läs mer om Adobe Classifications.
+seo-description: Läs mer om Adobe Classifications.
 uuid: 57fb59f4-da90-4fe7-a5b1-c3bd51159a16
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 6787511a-2ce0-421a-bcfb-90d5f32ad35e
 translation-type: tm+mt
 source-git-commit: 4456b5366387c27810c407d6ac9e6c17fc290269
+workflow-type: tm+mt
+source-wordcount: '606'
+ht-degree: 1%
 
 ---
 
@@ -21,15 +24,16 @@ Med Adobe Classifications exporteras klassificeringsdata till [Adobe Analytics](
 
 Så här konfigurerar du:
 
-1. Välj **Navigering**, **Verktyg**, **Molntjänster** och sedan **Äldre molntjänster**.
-1. Bläddra till **Adobe Analytics** och välj **Show Configurations**.
+1. Använd **Navigering**, välj **Verktyg**, **Cloud Services** och sedan **Äldre Cloud Services**.
+1. Bläddra till **Adobe Analytics** och välj **Visa konfigurationer**.
 1. Klicka på länken **[+]** bredvid din Adobe Analytics-konfiguration.
 
-1. I dialogrutan **Skapa ramverk** :
+1. I dialogrutan **Create Framework**:
 
    * Ange en **titel**.
-   * Du kan också ange **Namn** för noden som lagrar ramverkets information i databasen.
+   * Du kan också ange **Namn** för noden som lagrar ramverksinformationen i databasen.
    * Välj **Adobe Analytics-klassificeringar**
+
    Klicka på **Skapa**.
 
    ![Dialogrutan Skapa ramverk](assets/aa-25.png)
@@ -42,10 +46,10 @@ Så här konfigurerar du:
 
    | **Fält** | **Beskrivning** |
    |---|---|
-   | Aktiverad | Välj **Ja** om du vill aktivera inställningarna för Adobe-klassificeringar. |
-   | Skriv över vid konflikt | Välj **Ja** om du vill skriva över datakollisioner. Som standard är inställningen **Nej**. |
-   | Ta bort bearbetade | Om du anger **Ja** tas bearbetade noder bort när de har exporterats. Standardvärdet är **False**. |
-   | Exportera jobbbeskrivning | Ange en beskrivning för Adobe Classifications-jobbet. |
+   | Aktiverad | Välj **Ja** om du vill aktivera inställningarna för klassificering i Adobe. |
+   | Skriv över vid konflikt | Välj **Ja** om du vill skriva över datakollisioner. Som standard är detta **Nej**. |
+   | Ta bort bearbetade | Om **Yes** anges tar bort bearbetade noder när de har exporterats. Standardvärdet är **Falskt**. |
+   | Exportera jobbbeskrivning | Ange en beskrivning för jobbet Adobe Classifications. |
    | E-postmeddelande | Ange en e-postadress för Adobe Classifications-meddelanden. |
    | Report Suite | Ange den rapportsvit som du vill köra importjobbet för. |
    | Datauppsättning | Ange det datauppsättningsrelations-ID som importjobbet ska köras för. |
@@ -59,11 +63,11 @@ Så här konfigurerar du:
 
 Poster behandlas på sidor. Som standard skapas sidor med sidstorleken 1 000 i Adobe Classifications.
 
-En sida kan vara högst 25 000 per definition i Adobe Classifications och kan ändras från Felix-konsolen. Vid exporten låses källnoden av Adobe Classifications för att förhindra samtidiga ändringar. Noden låses upp efter export, vid fel eller när sessionen stängs.
+En sida kan vara högst 25000, per definition i Adobe Classifications och kan ändras från Felix-konsolen. Vid exporten låses källnoden med Adobe-klassificeringar för att förhindra samtidiga ändringar. Noden låses upp efter export, vid fel eller när sessionen stängs.
 
 Så här ändrar du sidstorlek:
 
-1. Gå till OSGI-konsolen på **https://&lt;värd>:&lt;port>/system/console/configMgr** och välj **Adobe AEM Classifications Exporter**.
+1. Gå till OSGI-konsolen på **https://&lt;host>:&lt;port>/system/console/configMgr** och välj **Adobe AEM Classifications Exporter**.
 
    ![aa-26](assets/aa-26.png)
 
@@ -73,11 +77,11 @@ Så här ändrar du sidstorlek:
 
 >[!NOTE]
 >
->Adobe Classifications kallades tidigare SAINT Exporter.
+>Adobe-klassificeringar kallades tidigare för SAINT Exporter.
 
-En exportör kan använda en transformator för att omforma exportdata till ett visst format. För Adobe-klassificeringar har ett undergränssnitt `SAINTTransformer<String[]>` som implementerar Transformer-gränssnittet angetts. Det här gränssnittet används för att begränsa den datatyp `String[]` som används av SAINT API och för att ha ett markörgränssnitt för att hitta sådana tjänster för markering.
+En exportör kan använda en transformator för att omforma exportdata till ett visst format. För Adobe-klassificeringar har ett undergränssnitt `SAINTTransformer<String[]>` som implementerar Transformer-gränssnittet angetts. Det här gränssnittet används för att begränsa datatypen till `String[]`, som används av API:t för SAINT och som har ett markörgränssnitt för att hitta sådana tjänster för markering.
 
-I standardimplementeringen SAINTDefaultTransformer behandlas de underordnade resurserna för exportörkällan som poster med egenskapsnamn som nycklar och egenskapsvärden som värden. Kolumnen **Nyckel** läggs automatiskt till som första kolumn - dess värde blir nodnamnet. Namngivna egenskaper (som innehåller `:`) ignoreras.
+I standardimplementeringen SAINTDefaultTransformer behandlas de underordnade resurserna för exportörkällan som poster med egenskapsnamn som nycklar och egenskapsvärden som värden. Kolumnen **Nyckel** läggs till automatiskt som första kolumn - dess värde blir nodnamnet. Namngivna egenskaper (som innehåller `:`) ignoreras.
 
 *Nodstruktur:*
 
@@ -95,7 +99,7 @@ I standardimplementeringen SAINTDefaultTransformer behandlas de underordnade res
 
 | **Nyckel** | **Produkt** | **Pris** | **Storlek** | **Färg** | **Color^Code** |
 |---|---|---|---|---|---|
-| 1 | Mitt produktnamn | 120.90 | M | svart | 101 |
+| 1 | Mitt produktnamn | 120,90 | M | svart | 101 |
 
 Egenskaperna är följande:
 
@@ -142,4 +146,4 @@ Egenskaperna är följande:
 
 ## Automatisera export av Adobe-klassificeringar {#automating-adobe-classifications-export}
 
-Du kan skapa ett eget arbetsflöde, så att alla nya importer startar arbetsflödet för att skapa lämpliga, och korrekt strukturerade, data i **/var/export/** så att de kan exporteras till Adobe Classifications.
+Du kan skapa ett eget arbetsflöde, så att alla nya importer startar arbetsflödet för att skapa lämpliga, och korrekt strukturerade, data i **/var/export/** så att de kan exporteras till Adobe-klassificeringar.
