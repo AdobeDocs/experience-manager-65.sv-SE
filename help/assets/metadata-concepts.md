@@ -23,7 +23,7 @@ Metadata är en samling med alla data som är tillgängliga för en resurs, men 
 * Namnet på mappen som den finns i.
 * Relaterade resurser eller tillämpade taggar.
 
-Ovanstående är de grundläggande metadataegenskaper som [!DNL Experience Manager] kan hantera resurser, vilket gör att användare kan se alla resurser. Det kan till exempel vara bra att beställa resurser efter det senaste ändringsdatumet när du försöker identifiera nyligen tillagda resurser.
+Ovanstående är de grundläggande metadataegenskaper som [!DNL Experience Manager] kan hantera för resurser, vilket gör att användare kan se alla resurser. Det kan till exempel vara bra att beställa resurser efter det senaste ändringsdatumet när du försöker identifiera nyligen tillagda resurser.
 
 Du kan lägga till mer högnivådata till digitala resurser, till exempel:
 
@@ -41,7 +41,7 @@ Med hjälp av metadata ökar värdet på en digital resurs eftersom resursen bli
 * Enklare att hantera - du kan hitta resurser med samma uppsättning egenskaper enklare och använda ändringarna på dem.
 * Fullständigt - materialet innehåller mer information och sammanhang med fler metadata.
 
-Därför har du tillgång [!DNL Assets] till rätt sätt att skapa, hantera och utbyta metadata för dina digitala resurser.
+Av dessa anledningar ger [!DNL Assets] dig rätt sätt att skapa, hantera och utbyta metadata för dina digitala resurser.
 
 ## Typer av metadata {#types-of-metadata}
 
@@ -65,11 +65,11 @@ Det finns olika sätt att bädda in metadata i filer. Ett urval kodningsstandard
 * XMP: används av [!DNL Assets] för att lagra extraherade metadata i databasen.
 * ID3: för ljud- och videofiler.
 * Exif: för bildfiler.
-* Annat/äldre: från [!DNL Microsoft Word], [!DNL PowerPoint], [!DNL Excel]och så vidare.
+* Annat/äldre: från [!DNL Microsoft Word], [!DNL PowerPoint], [!DNL Excel] och så vidare.
 
 ### XMP {#xmp}
 
-[!DNL Extensible Metadata Platform] (XMP) är en öppen standard som används av [!DNL Experience Manager Assets] för all metadatahantering. Standarden erbjuder universell metadatakodning som kan bäddas in i alla filformat. Adobe och andra företag stöder XMP standard eftersom de erbjuder en innehållsmodell med mycket innehåll. Användare av XMP som är standard och av [!DNL Experience Manager Assets] har en kraftfull plattform att bygga vidare på. For more information, see [XMP](https://www.adobe.com/products/xmp.html).
+[!DNL Extensible Metadata Platform] (XMP) är en öppen standard som används av  [!DNL Experience Manager Assets] för all metadatahantering. Standarden erbjuder universell metadatakodning som kan bäddas in i alla filformat. Adobe och andra företag stöder XMP standard eftersom de erbjuder en innehållsmodell med mycket innehåll. Användare av XMP och [!DNL Experience Manager Assets] har en kraftfull plattform att bygga vidare på. Mer information finns i [XMP](https://www.adobe.com/products/xmp.html).
 
 ### ID3 {#id}
 
@@ -89,11 +89,11 @@ Exchangeable image file format (Exif) är det vanligaste metadataformatet som an
 
 En stor begränsning för Exif är att ett fåtal populära bildfilsformat som BMP, GIF och PNG inte har stöd för det.
 
-Metadatafält som definieras av Exif är vanligtvis av teknisk natur och har begränsad användning för beskrivande metadatahantering. Av den anledningen erbjuder [!DNL Experience Manager Assets] mappning av Exif-egenskaper till [vanliga metadatamatchningar](metadata-schemas.md) och till [XMP](xmp-writeback.md).
+Metadatafält som definieras av Exif är vanligtvis av teknisk natur och har begränsad användning för beskrivande metadatahantering. Av den anledningen erbjuder [!DNL Experience Manager Assets] mappning av Exif-egenskaper till [vanliga metadata-scheman](metadata-schemas.md) och till [XMP](xmp-writeback.md).
 
 ### Andra metadata {#other-metadata}
 
-Andra metadata som kan bäddas in från filer är bland annat [!DNL Microsoft Word], [!DNL PowerPoint], [!DNL Excel]osv.
+Andra metadata som kan bäddas in från filer är bland annat [!DNL Microsoft Word], [!DNL PowerPoint], [!DNL Excel] och så vidare.
 
 ## Förstå metadatamatchningar {#metadata-schemata}
 
@@ -107,20 +107,20 @@ De metadatamappningar som stöds listas nedan.
 
 * DC - [!DNL Dublin Core] är en viktig och allmänt använd uppsättning metadata.
 * DICOM - Digital Imaging and Communications in Medicine.
-* `Iptc4xmpCore` och `iptc4xmpExt` - International Press Communications Standard innehåller många ämnesspecifika metadata.
+* `Iptc4xmpCore` och  `iptc4xmpExt` - International Press Communications Standard innehåller många ämnesspecifika metadata.
 * RDF - Resource Description Framework - för generiska semantiska webbmetadata.
 * XMP - [!DNL Extensible Metadata Platform].
 * `xmpBJ` - Grundläggande jobbiljetter.
 
 ### Programspecifika metadata {#application-specific-metadata}
 
-Programspecifika metadata innehåller tekniska och beskrivande metadata. Om du använder sådana metadata kanske andra program inte kan använda dessa metadata. Ett annat bildåtergivningsprogram kanske inte kan komma åt [!DNL Adobe Photoshop] metadata. Du kan skapa ett arbetsflödessteg som ändrar en programspecifik egenskap till en standardegenskap.
+Programspecifika metadata innehåller tekniska och beskrivande metadata. Om du använder sådana metadata kanske andra program inte kan använda dessa metadata. Ett annat bildåtergivningsprogram kanske inte kan komma åt [!DNL Adobe Photoshop]-metadata. Du kan skapa ett arbetsflödessteg som ändrar en programspecifik egenskap till en standardegenskap.
 
-* ACDSee - metadata som hanteras av [!DNL ACDSee] programmet. Se [www.acdsee.com/](https://www.acdsee.com/).
+* ACDSe - Metadata som hanteras av [!DNL ACDSee]-programmet. Se [www.acdsee.com/](https://www.acdsee.com/).
 * Album - [!DNL Adobe Photoshop Album].
 * CQ - Används av [!DNL Experience Manager Assets].
 * DAM - Används av [!DNL Experience Manager Assets].
-* DEX - [Optima SC Description Explorer](http://www.optimasc.com/products/dex/index.html) är en samling verktyg för metadata och filhantering i Windows.
+* DEX - [Optima SC Description Explorer](http://www.optimasc.com/products/dex/index.html) är en samling verktyg för metadata och filhantering för Windows.
 * CRS - [Adobe Photoshop Camera Raw](https://helpx.adobe.com/camera-raw/using/introduction-camera-raw.html).
 * LR - [!DNL Adobe Lightroom].
 * MediaPro - [iView MediaPro](https://en.wikipedia.org/wiki/Phase_One_Media_Pro).
@@ -132,8 +132,8 @@ Programspecifika metadata innehåller tekniska och beskrivande metadata. Om du a
 
 * CC - [!DNL Creative Commons].
 * [!DNL XMPRights].
-* PLUS - [Picture Licensing Universal System](https://www.useplus.com).
-* PRISM - [publiceringskrav för branschstandardmetadata](https://www.idealliance.org/prism-metadata).
+* PLUS - [Universellt system för bildlicensiering](https://www.useplus.com).
+* PRISM - [Publiceringskrav för branschstandardmetadata](https://www.idealliance.org/prism-metadata).
 * PRL - PRISM Rights Language.
 * PUR - PRISM-användningsrättigheter.
 * `xmpPlus` - Integration av PLUS med XMP.
@@ -148,26 +148,26 @@ Programspecifika metadata innehåller tekniska och beskrivande metadata. Om du a
 ### Utskriftsspecifika metadata {#print-specific-metadata}
 
 * PDF och PDF/X - Adobe PDF och tredjepartsprogram.
-* PRISM - [publiceringskrav för branschstandardmetadata](https://www.idealliance.org/prism-metadata).
+* PRISM - [Publiceringskrav för branschstandardmetadata](https://www.idealliance.org/prism-metadata).
 * XMP - [!DNL Extensible Metadata Platform].
 * `xmpPG` - XMP metadata för sidindelad text.
 
-### Multimediaspecifika metadata {#multimedia-specific-metadata}
+### Multimediespecifika metadata {#multimedia-specific-metadata}
 
 * `xmpDM` - [!DNL Dynamic Media].
 * `xmpMM` - Mediehantering.
 
-## Referens för metadatamappningar {#metadata-schemata-reference}
+## Metadata schematareferens {#metadata-schemata-reference}
 
 Följande referens innehåller information om en viss metadataram (i alfabetisk ordning) samt en lista över egenskaper och deras definitioner.
 
 ### Dublin Core {#dublin-core}
 
-Dublin Core-metadata innehåller en standardiserad uppsättning konventioner för att beskriva resurser så att de blir lättare att hitta. Dublin Core [!DNL Assets]beskriver digitala resurser som video, ljud, bilder och dokument.
+Dublin Core-metadata innehåller en standardiserad uppsättning konventioner för att beskriva resurser så att de blir lättare att hitta. I [!DNL Assets] beskriver Dublin Core digitala resurser som video, ljud, bilder och dokument.
 
 Den enkla DCMES-uppsättningen (Dublin Core Metadata Element Set) innehåller 15 metadataelement som listas i följande tabell. Varje Dublin Core-element är valfritt och kan upprepas. Du kan lägga till eller ta bort metadata för Dublin Core på samma sätt som du gör för medietypsspecifika metadata.
 
-Förutom DCMES finns det andra metadataelement som skapats av Dublin Core Initiative. Mer information finns i [Dublin Core-initiativet](https://dublincore.org/) .
+Förutom DCMES finns det andra metadataelement som skapats av Dublin Core Initiative. Mer information finns i [Dublin Core-initiativet](https://dublincore.org/).
 
 | Egenskap | Beskrivning |
 | ----------- | ------------------------------------------------------------------------------------------------------------------------ |
@@ -176,7 +176,7 @@ Förutom DCMES finns det andra metadataelement som skapats av Dublin Core Initia
 | skapare | Den person eller det företag som ansvarar för att skapa innehållet. |
 | date | Datum eller tidsperiod som är associerad med tillgången. |
 | description | Mer information om resursen. |
-| format | Filformat, fysiskt medium eller dimensioner för resursen. [!DNL Experience Manager] används `dc:format` för att beteckna tillgångens MIME-typ. |
+| format | Filformat, fysiskt medium eller dimensioner för resursen. [!DNL Experience Manager] använder  `dc:format` för att beteckna tillgångens MIME-typ. |
 | identifierare | En unik referens till tillgången. |
 | language | Språket för resursen (t.ex. en för engelska). |
 | utgivare | Den person eller det företag som ansvarar för att göra tillgången tillgänglig. |
@@ -193,21 +193,21 @@ IPTC (International Press Telecommunications Council) är ett konsortium av nyhe
 
 Även om IPTC-huvudinformationen till största delen har ersatts av XMP finns det ett IPTC-kärnschema och ett tilläggsschema för XMP. I bildprogram synkroniseras både XMP och IPTC-egenskaper.
 
-## Metadatastyrda arbetsflöden {#metadata-driven-workflows}
+## Metadatadrivna arbetsflöden {#metadata-driven-workflows}
 
 Genom att skapa metadatadrivna arbetsflöden kan du automatisera vissa processer, vilket ökar effektiviteten. I ett metadatadrivet arbetsflöde läser arbetsflödet och utför därför en fördefinierad åtgärd. Du kan till exempel använda metadatadrivna arbetsflöden på olika sätt:
 
 * Arbetsflödet kan kontrollera om en bild har en titel eller inte. Om så inte är fallet meddelas systemet om att en titel ska läggas till.
 * Arbetsflödet kan kontrollera om ett copyrightmeddelande för en mediefil tillåter distribution eller inte. Systemet skickar alltså resursen till den ena servern eller den andra.
-* Ett arbetsflöde kan söka efter resurser utan fördefinierade, obligatoriska metadata eller resurser med *ogiltiga* metadata.
+* Ett arbetsflöde kan söka efter resurser utan fördefinierade, obligatoriska metadata eller resurser med *ogiltiga*-metadata.
 
 ## XMP-metadata {#xmp-metadata}
 
-XMP (Extensible Metadata Platform) är den metadatastandard som används [!DNL Adobe Experience Manager Assets] för all metadatahantering. XMP har ett standardformat för att skapa, bearbeta och utbyta metadata för en mängd olika program.
+XMP (Extensible Metadata Platform) är den metadatastandard som används av [!DNL Adobe Experience Manager Assets] för all metadatahantering. XMP har ett standardformat för att skapa, bearbeta och utbyta metadata för en mängd olika program.
 
-Förutom universell metadatakodning som kan bäddas in i alla filformat, har XMP en innehållsmodell [som](#xmp-core-concepts) stöds av Adobe [och andra företag, så att användare av XMP i kombination med](#advantages-of-xmp) [!DNL Assets] har en kraftfull plattform att bygga vidare på.
+Förutom universell metadatakodning som kan bäddas in i alla filformat, innehåller XMP en omfattande [innehållsmodell](#xmp-core-concepts) och [stöds av Adobe](#advantages-of-xmp) och andra företag, så att användare av XMP i kombination med [!DNL Assets] har en kraftfull plattform att bygga vidare på.
 
-Specifikationen [för](https://www.adobe.com/devnet/xmp.html) XMP är tillgänglig från Adobe.
+[XMP-specifikationen](https://www.adobe.com/devnet/xmp.html) är tillgänglig från Adobe.
 
 ### Vad är XMP? {#what-is-xmp}
 
@@ -219,7 +219,8 @@ XMP standardiserar hur metadata definieras, skapas och bearbetas genom att tillh
 
 Alla äldre metadata från EXIF, ID3 eller Microsoft Office översätts automatiskt till XMP, som kan utökas för att stödja kundspecifika metadatamatchningar, som produktkataloger.
 
-Metadata i XMP består av en uppsättning egenskaper. Dessa egenskaper är alltid kopplade till en särskild enhet som kallas resurs. Egenskaperna är alltså&quot;om&quot; resursen. När det gäller XMP är resursen alltid resursen.
+Metadata i XMP består av en uppsättning egenskaper. Dessa egenskaper är alltid kopplade till en
+En särskild enhet som kallas en resurs. Egenskaperna är alltså&quot;om&quot; resursen. När det gäller XMP är resursen alltid resursen.
 
 ### XMP ekosystem {#xmp-ecosystem}
 
@@ -240,7 +241,7 @@ XMP är utformad för att vara utökningsbar, så att du kan lägga till anpassa
 
 >[!NOTE]
 >
->XMP tillåter vanligtvis inte att binära datatyper bäddas in. Om du vill ha binära data i XMP, t.ex. miniatyrbilder, måste de kodas i ett XML-anpassat format, t.ex. `Base64`.
+>XMP tillåter vanligtvis inte att binära datatyper bäddas in. Om du vill ha binära data i XMP, till exempel miniatyrbilder, måste de kodas i ett XML-anpassat format som `Base64`.
 
 ### XMP {#xmp-core-concepts}
 
@@ -248,9 +249,10 @@ I följande avsnitt beskrivs de centrala begreppen för XMP, inklusive namnutrym
 
 #### Namnutrymmen och scheman {#namespaces-and-schemata}
 
-Ett XMP är en uppsättning egenskapsnamn i ett vanligt XML-namnutrymme som innehåller datatypen och beskrivande information. Ett XMP-schema identifieras av dess XML-namnområdes-URI. Om du använder namnutrymmen förhindras konflikter mellan egenskaper i olika scheman som har samma namn men en annan betydelse.
+Ett XMP är en uppsättning egenskapsnamn i ett vanligt XML-namnutrymme som innehåller
+datatypen och beskrivande information. Ett XMP-schema identifieras av dess XML-namnområdes-URI. Om du använder namnutrymmen förhindras konflikter mellan egenskaper i olika scheman som har samma namn men en annan betydelse.
 
-Egenskapen i två oberoende utformade scheman kan till exempel avse den person som skapade resursen eller det program som resursen skapades i (till exempel Adobe Photoshop). `Creator`
+Egenskapen `Creator` i två oberoende utformade scheman kan till exempel betyda den person som skapade resursen eller det program som skapade resursen (till exempel Adobe Photoshop).
 
 #### Egenskaper och värden {#properties-and-values}
 
@@ -263,28 +265,28 @@ XMP kan innehålla egenskaper från ett eller flera av scheman. En vanlig delmä
 
 #### Språkalternativ {#language-alternatives}
 
-XMP kan du lägga till en `xml:lang` egenskap i textegenskaperna för att ange textens språk.
+XMP kan du lägga till en `xml:lang`-egenskap i textegenskaperna för att ange textens språk.
 
 ## Arbeta med IPTC-metadata {#support-for-iptc-metadata}
 
-Lär dig hur [!DNL Adobe Experience Manager Assets] stöder IPTC-metadata, kreativa klassificeringar och nyckelord som läggs till i resurser via [!DNL Adobe Bridge] och andra [!DNL Adobe Creative Cloud] program.
+Lär dig hur [!DNL Adobe Experience Manager Assets] stöder IPTC-metadata, kreativa klassificeringar och nyckelord som läggs till i resurser via [!DNL Adobe Bridge] och andra [!DNL Adobe Creative Cloud]-program.
 
-[!DNL Adobe Experience Manager Assets] har stöd för IPTC-metadatastandarden som används ofta för att beskriva resurser. På så sätt blir det enklare att [!DNL Assets] acceptera bilderna från olika håll, t.ex. fotografer, byråer, bibliotek, museer osv.
+[!DNL Adobe Experience Manager Assets] har stöd för IPTC-metadatastandarden som används ofta för att beskriva resurser. På så sätt kan [!DNL Assets] förbättra accepterandet av bilder från olika parter, bland annat fotografer, byråer, museer och så vidare.
 
 Standardschemat för metadata för mediefiler innehåller nu metadatamodeller för IPTC Core och IPTC Extension för att definiera omfattande metadataegenskaper som gör att användare kan lägga till exakta och tillförlitliga data om personer, platser och produkter som visas i en bild. Det har även stöd för datum, namn och identifierare för att skapa bilden samt ett flexibelt sätt att uttrycka rättighetsinformation.
 
 Egenskapssidan för resurser innehåller nu separata flikar för att visa IPTC-kärnan och IPTC-tilläggsmetadata i redigerbara fält.
 
-1. Välj en bild i [!DNL Assets] användargränssnittet.
+1. Välj en bild i [!DNL Assets]-användargränssnittet.
 1. Klicka på **[!UICONTROL Properties]** i verktygsfältet.
-1. Click the **[!UICONTROL IPTC]** tab to view the IPTC metadata for the asset.
+1. Klicka på fliken **[!UICONTROL IPTC]** för att visa IPTC-metadata för resursen.
 1. Redigera IPTC-metadataegenskaperna efter behov.
 
    ![iptc_tab](assets/keywords-in-iptc-tab.png)
 
-1. Click the **[!UICONTROL IPTC Extension]** tab to view IPTC Extension metadata for the asset.
+1. Klicka på fliken **[!UICONTROL IPTC Extension]** för att visa IPTC-tilläggsmetadata för resursen.
 1. Redigera metadataegenskaperna för IPTC-tillägget efter behov.
-1. Click **[!UICONTROL Save & Close]** to save the changes.
+1. Klicka på **[!UICONTROL Save & Close]** för att spara ändringarna.
 
 ### Stöd för kreativa betyg {#creative-rating-support}
 
@@ -298,6 +300,6 @@ Den här egenskapen är dock för närvarande inte indexerad för att undvika ko
 
 ### Stöd för nyckelord {#keyword-support}
 
-På fliken **[!UICONTROL IPTC]** på [!UICONTROL Properties] sidan visas även nyckelord som har lagts till i resurser via Adobe Bridge och andra Adobe Creative Cloud-program. Du kan också redigera dessa nyckelord och lägga till fler nyckelord från **[!UICONTROL IPTC]** fliken.
+På fliken **[!UICONTROL IPTC]** på sidan [!UICONTROL Properties] visas även nyckelord som lagts till i resurser via Adobe Bridge och andra Adobe Creative Cloud-program. Du kan också redigera dessa nyckelord och lägga till fler nyckelord från fliken **[!UICONTROL IPTC]**.
 
 ![keywords](assets/keywords-in-iptc-tab.png)
