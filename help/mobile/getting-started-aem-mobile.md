@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 724e09c2-3df3-4080-a0d4-ee2ede483791
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '238'
+ht-degree: 0%
 
 ---
 
@@ -23,16 +26,16 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 
 >[!CAUTION]
 >
->Befintliga AEM-mobilappskunder som migrerar från AEM 6.2 eller 6.3 till AEM 6.5 kan fortsätta att använda AEM-mobilappar genom att hämta ett [paket från PackageShare](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/compatpack/aem-mobile-package). Nya installationer av AEM 6.5 har dock inte stöd för AEM-mobilappsfunktioner.
+>Befintliga AEM Mobile-appskunder som migrerar från AEM 6.2 eller 6.3 till AEM 6.5 kan fortsätta använda AEM Mobile-appar genom att hämta ett [paket från PackageShare](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/compatpack/aem-mobile-package). Nya installationer av AEM 6.5 stöder dock inte AEM Mobile Apps-funktioner.
 
-Adobe Experience Manager Mobile (AEM) är en del av den digitala flerkanalsplattformen Adobe Experience Manager som också utnyttjar AEM Assets, Sites, Screens, Workflow, User Manager, Commerce och Forms. AEM Mobile erbjuder enastående flexibilitet vid driftsättningen, vilket gör att företag kan använda olika innehållskällor.
+Adobe Experience Manager (AEM) Mobile är en del av Adobe Experience Manager flerkanaliga digitala plattform som också utnyttjar AEM Assets, Sites, Screens, Workflow, User Manager, Commerce och Forms. AEM Mobile erbjuder enastående flexibilitet vid driftsättningen, vilket gör det möjligt för företag att använda olika innehållskällor.
 
 AEM Mobile erbjuder flera metoder för att skapa appar. Du kan skapa appar på tre olika sätt:
 
-* **[Använda On Demand-tjänster med AEM](/help/mobile/getting-started-aem-mobile-on-demand.md)**
+* **[Använda On Demand Services med AEM](/help/mobile/getting-started-aem-mobile-on-demand.md)**
 * **[Använda On Demand-tjänster utan AEM](https://helpx.adobe.com/digital-publishing-solution/topics.html)**
 * **[Använda Adobe PhoneGap Enterprise med AEM](/help/mobile/getting-started-aem-mobile-phonegap.md)**
 
 >[!NOTE]
 >
->Om du inte har använt Adobe Experience Manager tidigare vill du kanske gå igenom [Komma igång med AEM](/help/sites-deploying/deploy.md).
+>Om du inte har använt Adobe Experience Manager tidigare kan du gå igenom [Komma igång med AEM](/help/sites-deploying/deploy.md).
