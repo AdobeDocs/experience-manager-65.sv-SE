@@ -32,7 +32,7 @@ Adobe Experience Manager (AEM) innehåller flera API:er för utveckling av progr
 * [API-referens för JavaScript i gränssnittstestramverket](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/test-api/index.html)
 * [JavaScript API-referens för redigeraren](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html)
 
-AEM SDK-ramverket för JavaScript API-referenser för SPA-redigerare (Single-Page Application):
+AEM Single-Page Application (SPA) Editor SDK Framework JavaScript API-referenser:
 
 * [Komponentmappning](https://www.npmjs.com/package/@adobe/aem-spa-component-mapping)
 * [Sidmodellshanteraren](https://www.npmjs.com/package/@adobe/aem-spa-page-model-manager)
@@ -45,11 +45,11 @@ AEM Delivery and Content Management APIs:
 
    * [JSON-exporterare](/help/sites-developing/json-exporter.md)
    * [Aktivera JSON-export för en komponent](/help/sites-developing/json-exporter-components.md)
-   * Mer information finns i avsnittet [Komponenter i användarhandboken](https://helpx.adobe.com/experience-manager/6-5/sites/developing/user-guide.html?topic=/experience-manager/6-4/sites/developing/morehelp/components.ug.js) för utveckling
+   * Mer information finns i avsnittet [Komponenter i användarhandboken för utveckling](https://helpx.adobe.com/experience-manager/6-5/sites/developing/user-guide.html?topic=/experience-manager/6-4/sites/developing/morehelp/components.ug.js)
 
 * **Resurser**: Med Assets HTTP API kan du skapa/läsa/uppdatera/ta bort-åtgärder (CRUD) för Assets, inklusive binära filer, metadata, återgivningar och kommentarer. Se [AEM Assets HTTP API](/help/assets/mac-api-assets.md)
 
-* **Innehållsfragment** (CF): [CF-stöd i Assets HTTP API](/help/assets/assets-api-content-fragments.md) och [AEM Assets API - innehållsfragment](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/assets-api-content-fragments/index.html)
+* **Innehållsfragment**  (CF):  [CF-stöd i Assets HTTP ](/help/assets/assets-api-content-fragments.md) API och  [AEM Assets API - innehållsfragment](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/assets-api-content-fragments/index.html)
 
 Följande externa resurser är endast avsedda som referens:
 
