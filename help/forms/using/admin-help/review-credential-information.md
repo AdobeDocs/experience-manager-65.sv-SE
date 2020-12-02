@@ -11,13 +11,16 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: cdf61cff-768b-49f7-9926-400bc96b0708
 translation-type: tm+mt
 source-git-commit: d3719a9ce2fbb066f99445475af8e1f1e7476f4e
+workflow-type: tm+mt
+source-wordcount: '191'
+ht-degree: 0%
 
 ---
 
 
 # Granska användarinformation för autentiseringsuppgifter {#review-credential-use-information}
 
-Autentiseringsuppgifterna innehåller information som beskriver dess avsedda användning och som är tillgänglig via slutanvändarprogrammet för Acrobat Reader DC-tillägg. Du kan använda den här informationen för att avgöra vilken typ av autentiseringsuppgifter som är installerad (utvärdering eller produktion) och dess giltighetsdatum.
+Autentiseringsuppgiften innehåller information som beskriver dess avsedda användning och som är tillgänglig via Acrobat Reader DC-tilläggens slutanvändarwebbprogram. Du kan använda den här informationen för att avgöra vilken typ av autentiseringsuppgifter som är installerad (utvärdering eller produktion) och dess giltighetsdatum.
 
 1. Öppna en webbläsare och ange följande URL:
 
@@ -27,7 +30,7 @@ Autentiseringsuppgifterna innehåller information som beskriver dess avsedda anv
 
    Användarnamn: administratör
 
-   Lösenord:lösenord
+   Lösenord: lösenord
 
    >[!NOTE]
    >
