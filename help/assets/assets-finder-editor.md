@@ -23,17 +23,17 @@ I det här dokumentet beskrivs följande:
 
 >[!NOTE]
 >
->Resursresurs är tillgänglig som en referensimplementering med öppen källkod. Se Kommentarer för [resursdelning](https://adobe-marketing-cloud.github.io/asset-share-commons/). Det stöds inte officiellt.
+>Resursresurs är tillgänglig som en referensimplementering med öppen källkod. Se [Kommandon för resursdelning](https://adobe-marketing-cloud.github.io/asset-share-commons/). Det stöds inte officiellt.
 
 ## Varför skapa och konfigurera sidor i Resursredigeraren? {#why-create-and-configure-asset-editor-pages}
 
-Digital Asset Management används i allt fler scenarier. När man går över från en småskalig lösning för en liten användargrupp yrkesutbildade användare - till exempel fotografer eller taxonomier - till större och mer mångsidiga användargrupper - t.ex. affärsanvändare, WCM-författare, journalister osv. - kan det kraftfulla användargränssnittet för professionella användare tillhandahålla för mycket information och intressenter börjar begära specifika användargränssnitt eller applikationer för att få tillgång till de digitala resurser som är relevanta för dem. [!DNL Adobe Experience Manager Assets]
+Digital Asset Management används i allt fler scenarier. När man går från en småskalig lösning för en liten användargrupp yrkesutbildade användare - till exempel fotografer eller taxonomier - till större och mer mångsidiga användargrupper - t.ex. affärsanvändare, WCM-författare, journalister osv. - kan det kraftfulla användargränssnittet [!DNL Adobe Experience Manager Assets] för professionella användare tillhandahålla för mycket information och intressenter börjar begära specifika användargränssnitt eller applikationer för att få tillgång till de digitala resurserna som är relevanta för dem.
 
 Dessa resurscentrerade program kan vara enkla fotogallerier i ett intranät där medarbetarna kan ladda upp bilder från mässor eller ett presscenter på en offentlig webbplats. Tillgångscentrerade tillämpningar kan även omfatta kompletta lösningar som kundvagnar, kassor och verifieringsprocesser.
 
-Att skapa ett resurscentrerat program blir i stor utsträckning en konfigurationsprocess som inte kräver kodning, bara kunskap om användargrupper och deras behov samt kunskap om de metadata som används. Resurscentrerade program som skapats med [!DNL Assets] är utökningsbara: med måttlig kodningsansträngning kan återanvändbara komponenter för att söka, visa och ändra resurser skapas.
+Att skapa ett resurscentrerat program blir i stor utsträckning en konfigurationsprocess som inte kräver kodning, bara kunskap om användargrupper och deras behov samt kunskap om de metadata som används. Resurscentrerade program som skapats med [!DNL Assets] kan utökas: med måttlig kodningsansträngning kan återanvändbara komponenter för att söka, visa och ändra resurser skapas.
 
-Ett resurscentrerat program i [!DNL Experience Manager] består av en tillgångsredigeringssida, som kan användas för att få en detaljerad vy av en viss resurs. På en resursredigeringssida kan du även redigera metadata, förutsatt att användaren som använder resursen har de behörigheter som krävs.
+Ett resurscentrerat program i [!DNL Experience Manager] består av en resursredigeringssida, som kan användas för att få en detaljerad vy av en viss resurs. På en resursredigeringssida kan du även redigera metadata, förutsatt att användaren som använder resursen har de behörigheter som krävs.
 
 <!--
 ## Create and configure an Asset Share page {#creating-and-configuring-an-asset-share-page}
@@ -195,7 +195,7 @@ Du anpassar resursredigeraren för att avgöra hur användare kan visa och redig
 
 >[!NOTE]
 >
->Om du vill lägga till anpassade fält i DAM-resursredigeraren lägger du till nya `cq:Widget` noder i `/apps/dam/content/asseteditors.`
+>Om du vill lägga till anpassade fält i DAM-resursredigeraren lägger du till nya `cq:Widget`-noder i `/apps/dam/content/asseteditors.`
 
 ### Skapa en resursredigeringssida {#creating-the-asset-editor-page}
 
@@ -203,8 +203,8 @@ När du skapar sidan Resursredigerare kan det vara bra att skapa sidan direkt un
 
 Så här skapar du en resursredigeringssida:
 
-1. Gå till den plats där du vill skapa en resursredigeringssida på **[!UICONTROL Websites]** fliken och klicka på **Ny**.
-1. Markera **Geometrixx Resursredigerare** och klicka på **Skapa**. Den nya sidan skapas och sidan visas på fliken **Webbplatser** .
+1. Gå till den plats där du vill skapa en resursredigeringssida på fliken **[!UICONTROL Websites]** och klicka på **Nytt**.
+1. Välj **Geometrixx Resursredigerare** och klicka på **Skapa**. Den nya sidan skapas och sidan visas på fliken **Webbplatser**.
 
 ![screen_shot_2012-04-23at15858pm](assets/screen_shot_2012-04-23at15858pm.png)
 
@@ -212,11 +212,11 @@ Grundsidan som skapas med Geometrixx Resursredigeraren ser ut så här:
 
 ![assetshare5](assets/assetshare5.png)
 
-Om du vill anpassa resursredigeringssidan använder du element från sidosparken. Sidan Resursredigeraren som öppnas från **Geometrixx Press Center** är en anpassad version av en sida som är baserad på den här mallen:
+Om du vill anpassa resursredigeringssidan använder du element från sidosparken. Sidan Resursredigeraren som du kommer åt från **Geometrixx Press Center** är en anpassad version av en sida baserad på den här mallen:
 
 ![assetshare6](assets/assetshare6.png)
 
-#### Ange att en resursredigerare ska öppnas från en resursdelningssida {#setting-which-asset-editor-opens-from-an-asset-share-page}
+#### Ange att en resursredigerare ska öppnas från sidan Resursresurs {#setting-which-asset-editor-opens-from-an-asset-share-page}
 
 När du har skapat den anpassade resursredigeringssidan måste du se till att när du dubbelklickar på resurser som den anpassade resursresursen du skapade öppnar resurserna på den anpassade redigeringssidan.
 
@@ -228,11 +228,11 @@ Så här anger du sidan Resursredigeraren:
 
 1. Klicka på fliken **Allmänt** om den inte redan är markerad.
 
-1. I fältet **Sökväg till resursredigeraren** anger du sökvägen till den resursredigerare som du vill att sidan Resursdelning ska öppna resurser i och klickar på **OK**.
+1. I fältet **Sökväg till resursredigeraren** anger du sökvägen till resursredigeraren som du vill att sidan Resursdelning ska öppna resurser i och klickar på **OK**.
 
 ![screen_shot_2012-04-23at21653pm](assets/screen_shot_2012-04-23at21653pm.png)
 
-#### Lägg till komponenterna i Resursredigeraren {#adding-asset-editor-components}
+#### Lägg till resursredigeringskomponenter {#adding-asset-editor-components}
 
 Du bestämmer vilken funktionalitet en resursredigerare har genom att lägga till komponenter på sidan.
 
@@ -262,29 +262,29 @@ Så här lägger du till komponenterna för redigering av resurser:
 
 #### Metadataformulär och textfält - Konfigurera komponenten Visa metadata {#metadata-form-and-text-field-configuring-the-view-metadata-component}
 
-Metadataformuläret är ett formulär som innehåller en start- och slutåtgärd. däremellan anger du **textfält** . Mer information om hur du arbetar med formulär finns i [Forms](/help/sites-authoring/default-components-foundation.md#form-component) .
+Metadataformuläret är ett formulär som innehåller en start- och slutåtgärd. däremellan anger du **Text**-fält. Mer information om hur du arbetar med formulär finns i [Forms](/help/sites-authoring/default-components-foundation.md#form-component).
 
-1. Skapa en startåtgärd genom att klicka på **Redigera** i formulärets startdel. Om du vill kan du ange en Box-titel. Som standard är rutans rubrik **Metadata**. Markera kryssrutan Klientvalidering om du vill att Java-script-klientkoden ska genereras för validering.
+1. Skapa en startåtgärd genom att klicka på **Redigera** i formulärets startområde. Om du vill kan du ange en Box-titel. Som standard är Box title **Metadata**. Markera kryssrutan Klientvalidering om du vill att Java-script-klientkoden ska genereras för validering.
 
 ![screen_shot_2012-04-23at22911pm](assets/screen_shot_2012-04-23at22911pm.png)
 
-1. Skapa en slutåtgärd genom att klicka på **Redigera** i formulärets slutområde. Du kan till exempel skapa en **Skicka** -knapp som tillåter användare att skicka metadataändringar. Du kan också lägga till en **återställningsknapp** som återställer metadata till det ursprungliga läget.
+1. Skapa en End-åtgärd genom att klicka på **Redigera** i formulärets slutområde. Du kan till exempel skapa en **Skicka**-knapp som tillåter användare att skicka sina metadataändringar. Du kan också lägga till en **Återställ**-knapp som återställer metadata till det ursprungliga läget.
 
 ![screen_shot_2012-04-23at23138pm](assets/screen_shot_2012-04-23at23138pm.png)
 
-1. Dra metadatatextfält mellan **Formulärstart** och **Formulärslut** till formuläret. Användare fyller i metadata i dessa textfält som de kan skicka eller slutföra en annan åtgärd på.
+1. Dra metadatatextfält mellan **formulärstart** och **formulärslut** till formuläret. Användare fyller i metadata i dessa textfält som de kan skicka eller slutföra en annan åtgärd på.
 
-1. Dubbelklicka på fältnamnet, till exempel **Titel** , för att öppna metadatafältet och göra ändringar. På fliken **Allmänt** i fönstret **Redigera komponent** definierar du namnutrymmet och fältetiketten samt typ, till exempel `dc:title`.
+1. Dubbelklicka på fältnamnet, till exempel **Titel**, för att öppna metadatafältet och göra ändringar. På fliken **Allmänt** i fönstret **Redigera komponent** definierar du namnutrymmet och fältetiketten samt typ, till exempel `dc:title`.
 
 ![screen_shot_2012-04-23at23305pm](assets/screen_shot_2012-04-23at23305pm.png)
 
-Mer information om hur du ändrar de namnutrymmen som finns i metadataformuläret finns i [Anpassa och utöka resurser](/help/assets/extending-assets.md) .
+Mer information om hur du ändrar namnutrymmen i metadataformuläret finns i [Anpassa och utöka resurser](/help/assets/extending-assets.md).
 
-1. Klicka på fliken **Begränsningar** . Här kan du välja om ett fält är obligatoriskt och vid behov lägga till begränsningar.
+1. Klicka på fliken **Begränsningar**. Här kan du välja om ett fält är obligatoriskt och vid behov lägga till begränsningar.
 
 ![screen_shot_2012-04-23at23435pm](assets/screen_shot_2012-04-23at23435pm.png)
 
-1. Klicka på fliken **Visa** . Här kan du ange en ny bredd och ett nytt antal rader för metadatafältet. Markera kryssrutan **Fältet är skrivskyddat** om du vill tillåta användare att redigera metadata.
+1. Klicka på fliken **Visa**. Här kan du ange en ny bredd och ett nytt antal rader för metadatafältet. Markera kryssrutan **Fältet är skrivskyddat** så att användarna kan redigera metadata.
 
 ![screen_shot_2012-04-23at23446pm](assets/screen_shot_2012-04-23at23446pm.png)
 
@@ -294,7 +294,7 @@ Följande är ett exempel på ett metadataformulär med olika fält:
 
 På sidan Resursredigeraren kan användare sedan ange värden i metadatafälten (om de är redigerbara) och utföra slutåtgärden (till exempel skicka ändringarna).
 
-#### Deltillgångar {#sub-assets}
+#### Underresurser {#sub-assets}
 
 I delresurskomponenten kan du visa och välja delresurser. Du kan bestämma vilka namn som ska visas under [huvudresursen](/help/assets/assets.md#what-are-digital-assets) och underresurserna.
 
@@ -316,7 +316,7 @@ Komponenten Tags är en komponent där användare kan tilldela befintliga taggar
 
 ![screen_shot_2012-04-23at25031pm](assets/screen_shot_2012-04-23at25031pm.png)
 
-Dubbelklicka på taggkomponenten för att öppna dialogrutan Taggar där du kan ändra titeln från Taggar, om du vill, och där du kan välja de tilldelade namnutrymmena. Om du vill göra det här fältet redigerbart avmarkerar du **[!UICONTROL Hide Edit]** kryssrutan. Som standard är taggar redigerbara.
+Dubbelklicka på taggkomponenten för att öppna dialogrutan Taggar där du kan ändra titeln från Taggar, om du vill, och där du kan välja de tilldelade namnutrymmena. Om du vill göra det här fältet redigerbart avmarkerar du kryssrutan **[!UICONTROL Hide Edit]**. Som standard är taggar redigerbara.
 
 ![screen_shot_2012-04-23at24731pm](assets/screen_shot_2012-04-23at24731pm.png)
 
@@ -330,11 +330,11 @@ Följande är en ifylld tagg-komponent:
 
 #### Miniatyrbild {#thumbnail}
 
-Miniatyrkomponenten är den plats där den valda miniatyrbilden visas (för många av formaten extraheras miniatyrbilden automatiskt). Komponenten visar dessutom filnamnet och de [åtgärder som du kan ändra](/help/assets/assets-finder-editor.md#adding-asset-editor-actions).
+Miniatyrkomponenten är den plats där den valda miniatyrbilden visas (för många av formaten extraheras miniatyrbilden automatiskt). Komponenten visar dessutom filnamnet och [åtgärder som du kan ändra](/help/assets/assets-finder-editor.md#adding-asset-editor-actions).
 
 ![screen_shot_2012-04-23at25452pm](assets/screen_shot_2012-04-23at25452pm.png)
 
-Dubbelklicka på miniatyrkomponenten för att öppna dialogrutan med miniatyrbilder där du kan ändra alternativ text. Som standard används miniatyrbilden för alternativ text som **Klicka för att hämta** resursen.
+Dubbelklicka på miniatyrkomponenten för att öppna dialogrutan med miniatyrbilder där du kan ändra alternativ text. Som standard är miniatyrbilden för alternativ text **Klicka för att hämta**-resurs.
 
 ![screen_shot_2012-04-23at25604pm](assets/screen_shot_2012-04-23at25604pm.png)
 
@@ -346,13 +346,13 @@ Följande är ett exempel på en fylld miniatyrkomponent:
 
 Rubrikkomponenten visar resursens namn och en beskrivning.
 
-Som standard är den i skrivskyddat läge, så användare kan inte redigera den. Dubbelklicka på komponenten och avmarkera kryssrutan **Dölj redigeringsknapp** om du vill göra den redigerbar. Ange dessutom en titel för flera resurser.
+Som standard är den i skrivskyddat läge, så användare kan inte redigera den. Dubbelklicka på komponenten och avmarkera kryssrutan **Dölj redigeringsknappen** om du vill göra den redigerbar. Ange dessutom en titel för flera resurser.
 
 ![screen_shot_2012-04-23at35100pm](assets/screen_shot_2012-04-23at35100pm.png)
 
-Om du kan redigera titeln kan du lägga till en titel och en beskrivning genom att klicka på pennan för att öppna fönstret **Resursegenskaper** . Dessutom kan du aktivera och inaktivera resursen genom att välja datum och tid.
+Om du kan redigera titeln kan du lägga till en titel och en beskrivning genom att klicka på pennan för att öppna fönstret **Resursegenskaper**. Dessutom kan du aktivera och inaktivera resursen genom att välja datum och tid.
 
-När du redigerar [!UICONTROL Title]kan du ändra **titel**, **beskrivning** och ange **På** - och **Av-tider** för att aktivera och inaktivera resursen.
+När du redigerar [!UICONTROL Title] kan användare ändra **titeln**, **Beskrivning** och ange **På** och **Av gånger** för att aktivera och inaktivera resursen.
 
 ![screen_shot_2012-04-23at35241pm](assets/screen_shot_2012-04-23at35241pm.png)
 
@@ -374,12 +374,12 @@ Följande åtgärder är tillgängliga:
 
 | Åtgärd | Beskrivning |
 |---|---|
-| [!UICONTROL Download] | Tillåter användare att hämta valda resurser till sina datorer. |
-| [!UICONTROL Editors] | Tillåter användare att redigera en bild (interaktiv redigering) |
-| [!UICONTROL Lightbox] | Sparar resurser i en&quot;ljuslåda&quot; där du kan utföra andra åtgärder på dem. Detta är praktiskt när du arbetar med resurser på flera sidor. |
-| [!UICONTROL Locking] | Tillåter användare att låsa en resurs. Den här funktionen är inte aktiverad som standard och måste aktiveras i komponentlistan. |
-| [!UICONTROL References] | Klicka här för att visa på vilka sidor resursen används. |
-| [!UICONTROL Versioning] | Gör att du kan skapa och återställa versioner av en resurs. |
+| [!UICONTROL Download] | Användarna kan hämta markerade   resurser till sina datorer. |
+| [!UICONTROL Editors] | Låter användarna redigera en bild   (interaktiv redigering) |
+| [!UICONTROL Lightbox] | Sparar resurser i en   &quot;lightbox&quot; där du kan utföra andra åtgärder på dem. Det här kommer   är praktiskt när du arbetar med resurser på flera sidor. |
+| [!UICONTROL Locking] | Tillåter användare att låsa en resurs. Detta   funktionen är inte aktiverad som standard och måste aktiveras i listan   av komponenter. |
+| [!UICONTROL References] | Klicka här för att visa vilka sidor   tillgången används. |
+| [!UICONTROL Versioning] | Skapa och återställ   versioner av en resurs. |
 
 1. Dra lämplig åtgärd till området **Åtgärder** på sidan. När du gör det skapas en knapp som används för att utföra åtgärden.
 
@@ -387,14 +387,14 @@ Följande åtgärder är tillgängliga:
 
 ## Flera redigeringsresurser med sidan Resursredigeraren {#multi-editing-assets-with-the-asset-editor-page}
 
-Med [!DNL Experience Manager Assets] hjälp av kan du ändra flera resurser samtidigt. När du har valt resurser kan du ändra deras:
+Med [!DNL Experience Manager Assets] kan du ändra flera resurser samtidigt. När du har valt resurser kan du ändra deras:
 
 * Taggar
 * Metadata
 
 Så här gör du om du vill redigera flera resurser på sidan Resursredigeraren:
 
-1. Öppna sidan Geometrixx **Press Center** :
+1. Öppna Geometrixx **Tryck på Center**:
    `https://localhost:4502/content/geometrixx/en/company/press.html`
 
 1. Välj resurser:
@@ -402,28 +402,28 @@ Så här gör du om du vill redigera flera resurser på sidan Resursredigeraren:
    * i Windows: `Ctrl + click` varje resurs.
    * på Mac: `Cmd + click` varje resurs.
 
-   Så här väljer du en rad resurser: klicka på den första resursen och sedan på `Shift + click` den sista resursen.
+   Så här väljer du en rad resurser: klicka på den första resursen och `Shift + click` den sista resursen.
 
 1. Klicka på **Redigera metadata** i fältet **Åtgärder** (vänster del av sidan).
-1. Geometrixx **Press Center Asset Editor** öppnas på en ny flik. Resursernas metadata visas enligt följande:
+1. Sidan **Press Center Asset Editor** öppnas på en ny flik. Resursernas metadata visas enligt följande:
 
    * En tagg som inte gäller för alla resurser utan bara för ett fåtal, visas i kursiv stil.
    * En tagg som gäller för alla resurser visas med ett vanligt teckensnitt.
    * Andra metadata än taggar: värdet för fältet visas bara om det är samma för alla markerade resurser.
 
-1. Klicka på **Hämta** för att hämta en ZIP-fil som innehåller de ursprungliga resursåtergivningarna.
-1. Klicka på Redigera taggalternativet som finns bredvid fältet **Taggar** .
+1. Klicka på **Hämta** om du vill hämta en ZIP-fil som innehåller resursens ursprungliga återgivningar.
+1. Klicka på Redigera taggalternativet som finns bredvid fältet **Taggar**.
 
    * En tagg som inte gäller för alla resurser, men bara för ett fåtal har en grå bakgrund.
    * En tagg som gäller för alla resurser har en vit bakgrund.
 
    Du kan:
 
-   * Klicka `x` för att ta bort taggen för alla resurser.
-   * Klicka `+` för att lägga till taggen i alla resurser.
+   * Klicka på `x` för att ta bort taggen för alla resurser.
+   * Klicka på `+` för att lägga till taggen i alla resurser.
    * Klicka på **pilen** och välj en tagg för att lägga till en ny tagg till alla resurser.
 
-   Klicka på **OK** för att skriva ändringarna i formuläret. Rutan bredvid fältet **Taggar** markeras automatiskt.
+   Klicka på **OK** om du vill skriva ändringarna i formuläret. Rutan bredvid fältet **Taggar** markeras automatiskt.
 
 1. Redigera beskrivningsfältet. Ange det till exempel till:
 
