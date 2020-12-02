@@ -18,19 +18,19 @@ ht-degree: 0%
 ---
 
 
-# Skriva anpassad skickaåtgärd för anpassningsbara formulär{#writing-custom-submit-action-for-adaptive-forms}
+# Skriver anpassad skickaåtgärd för anpassningsbara formulär{#writing-custom-submit-action-for-adaptive-forms}
 
-För adaptiva formulär krävs skicka-åtgärder för att bearbeta användarspecificerade data. En Skicka-åtgärd avgör vilken uppgift som utförs på de data som du skickar med ett anpassat formulär. Adobe Experience Manager (AEM) innehåller [OOTB-överföringsåtgärder](../../forms/using/configuring-submit-actions.md) som demonstrerar anpassade åtgärder som du kan utföra med hjälp av data som skickas av användaren. Du kan till exempel utföra uppgifter som att skicka e-post eller lagra data.
+Adaptiva formulär kräver att skicka-åtgärder utförs för att bearbeta användarspecificerade data. En Skicka-åtgärd avgör vilken uppgift som utförs på de data som du skickar med ett anpassat formulär. Adobe Experience Manager (AEM) innehåller [OTB-överföringsåtgärder](../../forms/using/configuring-submit-actions.md) som demonstrerar anpassade åtgärder som du kan utföra med hjälp av data som skickas av användaren. Du kan till exempel utföra uppgifter som att skicka e-post eller lagra data.
 
 ## Arbetsflöde för en Skicka-åtgärd {#workflow-for-a-submit-action}
 
-Flödesdiagrammet visar arbetsflödet för en Skicka-åtgärd som aktiveras när du klickar på **[!UICONTROL Submit]** knappen i ett anpassat formulär. Filerna i komponenten Bifogad fil överförs till servern och formulärdata uppdateras med URL:erna för de överförda filerna. I klienten lagras data i JSON-format. Klienten skickar en Ajax-begäran till en intern server som masserar de data du har angett och returnerar dem i XML-format. Klienten samlar in dessa data med åtgärdsfält. Den skickar data till den sista servern (Guide Submit servlet) via en åtgärd för att skicka formulär. Sedan vidarebefordrar servern kontrollen till åtgärden Skicka. Åtgärden Skicka kan vidarebefordra begäran till en annan försäljningsresurs eller dirigera om webbläsaren till en annan URL.
+Flödesdiagrammet visar arbetsflödet för en Skicka-åtgärd som aktiveras när du klickar på **[!UICONTROL Submit]**-knappen i ett anpassat formulär. Filerna i komponenten Bifogad fil överförs till servern och formulärdata uppdateras med URL:erna för de överförda filerna. I klienten lagras data i JSON-format. Klienten skickar en Ajax-begäran till en intern server som masserar de data du har angett och returnerar dem i XML-format. Klienten samlar in dessa data med åtgärdsfält. Den skickar data till den sista servern (Guide Submit servlet) via en åtgärd för att skicka formulär. Sedan vidarebefordrar servern kontrollen till åtgärden Skicka. Åtgärden Skicka kan vidarebefordra begäran till en annan försäljningsresurs eller dirigera om webbläsaren till en annan URL.
 
 ![Flödesschema som visar arbetsflödet för åtgärden Skicka](assets/diagram1.png)
 
 ### XML-dataformat {#xml-data-format}
 
-XML-data skickas till servern med hjälp av parametern request **`jcr:data`** . Skicka-åtgärder kan komma åt parametern för att bearbeta data. I följande kod beskrivs formatet för XML-data. De fält som är bundna till formulärmodellen visas i **`afBoundData`** avsnittet. Obundna fält visas i `afUnoundData`avsnittet. Mer information om `data.xml` filens format finns i [Introduktion till förifyllning av adaptiva formulärfält](../../forms/using/prepopulate-adaptive-form-fields.md).
+XML-data skickas till servern med parametern **`jcr:data`** request. Skicka-åtgärder kan komma åt parametern för att bearbeta data. I följande kod beskrivs formatet för XML-data. De fält som är bundna till formulärmodellen visas i **`afBoundData`**-avsnittet. Obundna fält visas i `afUnoundData`avsnittet. Mer information om formatet för filen `data.xml` finns i [Introduktion till förifyllning av adaptiva formulärfält](../../forms/using/prepopulate-adaptive-form-fields.md).
 
 ```xml
 <?xml ?>
@@ -54,15 +54,15 @@ XML-data skickas till servern med hjälp av parametern request **`jcr:data`** . 
 
 ### Åtgärdsfält {#action-fields}
 
-En Skicka-åtgärd kan lägga till dolda indatafält (med HTML- [indatataggen](https://developer.mozilla.org/en/docs/Web/HTML/Element/Input) ) i det återgivna HTML-formuläret. Dessa dolda fält kan innehålla värden som behövs när formulärinlämningen behandlas. När formuläret skickas bokförs dessa fältvärden som begärandeparametrar som åtgärden Skicka kan använda vid överföringshantering. Indatafälten kallas åtgärdsfält.
+En Skicka-åtgärd kan lägga till dolda indatafält (med HTML-taggen [input](https://developer.mozilla.org/en/docs/Web/HTML/Element/Input)) i det återgivna HTML-formuläret. Dessa dolda fält kan innehålla värden som behövs när formulärinlämningen behandlas. När formuläret skickas bokförs dessa fältvärden som begärandeparametrar som åtgärden Skicka kan använda vid överföringshantering. Indatafälten kallas åtgärdsfält.
 
-En Skicka-åtgärd som även fångar upp den tid det tar att fylla i ett formulär kan t.ex. lägga till dolda inmatningsfält `startTime` och `endTime`.
+En Skicka-åtgärd som även fångar den tid det tar att fylla i ett formulär kan lägga till de dolda indatafälten `startTime` och `endTime`.
 
-Ett skript kan innehålla värdena för `startTime` - och `endTime` -fälten när formuläret återges och före formuläröverföringen. Skriptet för åtgärden Skicka `post.jsp` kan sedan komma åt dessa fält med hjälp av frågeparametrar och beräkna den totala tid som krävs för att fylla i formuläret.
+Ett skript kan ange värdena för fälten `startTime` och `endTime` när formuläret återges respektive före formuläröverföringen. Skicka-åtgärdsskriptet `post.jsp` kan sedan komma åt dessa fält med hjälp av frågeparametrar och beräkna den totala tid som krävs för att fylla i formuläret.
 
 ### Bifogade filer {#file-attachments}
 
-Skicka-åtgärder kan även använda de bifogade filer som du överför med komponenten Bifogad fil. Skicka funktionsmakroskript kan komma åt dessa filer med [API:t](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/request/RequestParameter.html)för sling RequestParameter. Metoden [isFormField](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/request/RequestParameter.html#isFormField()) i API:t hjälper till att identifiera om parametern request är en fil eller ett formulärfält. Du kan iterera över parametrarna för begäran i en Skicka-åtgärd för att identifiera parametrar för bifogade filer.
+Skicka-åtgärder kan även använda de bifogade filer som du överför med komponenten Bifogad fil. Skicka funktionsmakroskript kan komma åt dessa filer med sling [RequestParameter API](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/request/RequestParameter.html). Metoden [isFormField](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/request/RequestParameter.html#isFormField()) i API:t hjälper till att identifiera om parametern request är en fil eller ett formulärfält. Du kan iterera över parametrarna för begäran i en Skicka-åtgärd för att identifiera parametrar för bifogade filer.
 
 Följande exempelkod identifierar de bifogade filerna i begäran. Därefter läses data in i filen med [Get API](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/request/RequestParameter.html#get()). Slutligen skapas ett Document-objekt med hjälp av data och läggs till i en lista.
 
@@ -84,26 +84,26 @@ Om åtgärden inte har någon framåtriktad sökväg dirigeras webbläsaren om m
 
 >[!NOTE]
 >
->En författare tillhandahåller en omdirigerings-URL (med hjälp av Tack-sidkonfigurationen). [OTB-överföringsåtgärder](../../forms/using/configuring-submit-actions.md) använder omdirigerings-URL:en för att dirigera om webbläsaren från resursen som sökvägen refererar till.
+>En författare tillhandahåller en omdirigerings-URL (med hjälp av Tack-sidkonfigurationen). [OOTB-](../../forms/using/configuring-submit-actions.md) skickaåtgärder använder omdirigerings-URL:en för att dirigera om webbläsaren från resursen som den framåtriktade sökvägen refererar till.
 >
->Du kan skriva en anpassad Skicka-åtgärd som vidarebefordrar en begäran till en resurs eller server. Adobe rekommenderar att det skript som utför resurshantering för vidarebefordringssökvägen omdirigerar begäran till omdirigerings-URL:en när bearbetningen är klar.
+>Du kan skriva en anpassad Skicka-åtgärd som vidarebefordrar en begäran till en resurs eller server. Adobe rekommenderar att skriptet som utför resurshantering för den framåtriktade sökvägen omdirigerar begäran till omdirigerings-URL:en när bearbetningen är klar.
 
 ## Skicka åtgärd {#submit-action}
 
 En Skicka-åtgärd är en sling:Mapp som innehåller följande:
 
 * **addfields.jsp**: Skriptet innehåller de åtgärdsfält som läggs till i HTML-filen under återgivningen. Använd det här skriptet för att lägga till dolda indataparametrar som krävs vid överföring i skriptet post.POST.jsp.
-* **dialog.xml**: Det här skriptet liknar dialogrutan CQ Component. Det innehåller konfigurationsinformation som författaren anpassar. Fälten visas på fliken Skicka åtgärder i dialogrutan Redigera anpassat formulär när du väljer åtgärden Skicka.
+* **dialog.xml**: Skriptet liknar CQ Component-dialogrutan. Det innehåller konfigurationsinformation som författaren anpassar. Fälten visas på fliken Skicka åtgärder i dialogrutan Redigera anpassat formulär när du väljer åtgärden Skicka.
 * **post.POST.jsp**: Submit-servern anropar det här skriptet med data som du skickar och ytterligare data i föregående avsnitt. Om du kör en åtgärd på den här sidan måste du köra skriptet post.POST.jsp. Om du vill registrera åtgärden Submit med de adaptiva formulär som ska visas i dialogrutan Redigera anpassat formulär lägger du till dessa egenskaper i sling:Folder:
 
-   * **guideComponentType** av typen String och value **fd/af/components/guideSubmitType**
-   * **guideDataModel** av typen String som anger vilken typ av adaptivt formulär som åtgärden Submit gäller för. **xfa** stöds för XFA-baserade adaptiva formulär medan **xsd** stöds för XSD-baserade adaptiva formulär. **basic** stöds för adaptiva formulär som inte använder XDP eller XSD. Om du vill visa åtgärden på flera typer av adaptiva formulär lägger du till motsvarande strängar. Avgränsa varje sträng med kommatecken. Om du till exempel vill göra en åtgärd synlig i XFA- och XSD-baserade adaptiva formulär anger du värdena **xfa** respektive **xsd** .
+   * **** guideComponentType av typen String och värdet  **fd/af/components/guideSubmitType**
+   * **guideDataModelof** typen String som anger vilken typ av anpassat formulär som åtgärden Submit gäller. **XFA-baserade adaptiva formulär** har stöd för XFA-baserade adaptiva formulär, medan  **** xsdis stöds för XSD-baserade adaptiva formulär. **Grunderna** stöds för adaptiva formulär som inte använder XDP eller XSD. Om du vill visa åtgärden på flera typer av adaptiva formulär lägger du till motsvarande strängar. Avgränsa varje sträng med kommatecken. Om du till exempel vill göra en åtgärd synlig i XFA- och XSD-baserade adaptiva formulär anger du värdena **xfa** respektive **xsd**.
 
-   * **jcr:description** av typen String. Värdet för den här egenskapen visas i listan med överföringsåtgärder på fliken Skicka-åtgärder i dialogrutan Redigera anpassat formulär. OTB-åtgärderna finns i CRX-databasen på platsen **/libs/fd/af/components/guideSubmit**.
+   * **jcr:** description av typen String. Värdet för den här egenskapen visas i listan med överföringsåtgärder på fliken Skicka-åtgärder i dialogrutan Redigera anpassat formulär. OTB-åtgärderna finns i CRX-databasen på platsen **/libs/fd/af/components/guideSubittype**.
 
-## Skapa en anpassad skickaåtgärd {#creating-a-custom-submit-action}
+## Skapa en anpassad Skicka-åtgärd {#creating-a-custom-submit-action}
 
-Utför följande steg för att skapa en anpassad Skicka-åtgärd som sparar data i CRX-databasen och sedan skickar ett e-postmeddelande till dig. Det adaptiva formuläret innehåller innehållet i OTB-sändningsåtgärden i Store (föråldrat) som sparar data i CRX-databasen. Dessutom innehåller CQ ett [e-post](https://docs.adobe.com/docs/en/cq/current/javadoc/com/day/cq/mailer/package-summary.html) -API som kan användas för att skicka e-post. Innan du använder e-post-API:t [konfigurerar]du tjänsten Day CQ Mail via systemkonsolen (https://docs.adobe.com/docs/en/cq/current/administering/notification.html?wcmmode=disabled#Configuring). Du kan återanvända åtgärden Lagra innehåll (föråldrat) för att lagra data i databasen. Åtgärden Lagra innehåll (borttaget) finns på platsen /libs/fd/af/components/guideSubittype/store i CRX-databasen.
+Utför följande steg för att skapa en anpassad Skicka-åtgärd som sparar data i CRX-databasen och sedan skickar ett e-postmeddelande till dig. Det adaptiva formuläret innehåller innehållet i OTB-sändningsåtgärden i Store (föråldrat) som sparar data i CRX-databasen. Dessutom innehåller CQ ett [Mail](https://docs.adobe.com/docs/en/cq/current/javadoc/com/day/cq/mailer/package-summary.html)-API som kan användas för att skicka e-postmeddelanden. Innan du använder e-post-API:t ska du [konfigurera](https://docs.adobe.com/docs/en/cq/current/administering/notification.html?wcmmode=disabled#Configuring the Mail Service) tjänsten Day CQ Mail via systemkonsolen. Du kan återanvända åtgärden Lagra innehåll (föråldrat) för att lagra data i databasen. Åtgärden Lagra innehåll (borttaget) finns på platsen /libs/fd/af/components/guideSubittype/store i CRX-databasen.
 
 1. Logga in på CRXDE Lite på URL:en https://&lt;server>:&lt;port>/crx/de/index.jsp. Skapa en nod med egenskapen sling:Folder och name store_and_mail i mappen /apps/custom_submit_action. Skapa mappen custom_submit_action om den inte redan finns.
 
@@ -111,7 +111,7 @@ Utför följande steg för att skapa en anpassad Skicka-åtgärd som sparar data
 
 1. **Ange de obligatoriska konfigurationsfälten.**
 
-   Lägg till den konfiguration som krävs för Store-åtgärden. Kopiera **cq:dialog** -noden för Store-åtgärden från /libs/fd/af/components/guideSubittype/store till åtgärdsmappen på /apps/custom_submit_action/store_and_email.
+   Lägg till den konfiguration som krävs för Store-åtgärden. Kopiera noden **cq:dialog** i Store-åtgärden från /libs/fd/af/components/guidepittype/store till åtgärdsmappen på /apps/custom_submit_action/store_and_email.
 
    ![Skärmbild som visar kopiering av dialognoden till åtgärdsmappen](assets/step2.png)
 
@@ -125,13 +125,13 @@ Utför följande steg för att skapa en anpassad Skicka-åtgärd som sparar data
 
    Lägg till följande egenskaper i noden store_and_email:
 
-   * **guideComponentType** av typen **String** och value **fd/af/components/guideSubmitType**
+   * **** guideComponentType av typen  **** Stringand value  **fd/af/components/guideSubmitType**
 
-   * **guideDataModel** av typen **String** och value **xfa, xsd, basic**
+   * **guideDataModelof** type  **** Stringand value  **xfa, xsd, basic**
 
-   * **jcr:beskrivning** av typen **String** och value **Store och Email Action**
+   * **jcr:** description av typen  **** Stringand value  **Store och Email Action**
 
-1. Öppna ett anpassat formulär. Klicka på knappen **Redigera** bredvid **Start** för att öppna dialogrutan **Redigera** för den adaptiva formulärbehållaren. Den nya åtgärden visas på fliken **Skicka åtgärder** . Om du väljer **Store och Email Action** (E-poståtgärd) visas konfigurationen som lagts till i noden dialog.
+1. Öppna ett anpassat formulär. Klicka på knappen **Redigera** bredvid **Starta** för att öppna dialogrutan **Redigera** för den adaptiva formulärbehållaren. Den nya åtgärden visas på fliken **Skicka åtgärder**. Om du väljer **Store- och Email Action** visas konfigurationen som lagts till i noden dialog.
 
    ![Dialogrutan Skicka åtgärdskonfiguration](assets/store_and_email_submit_action_dialog.jpg)
 
@@ -139,7 +139,7 @@ Utför följande steg för att skapa en anpassad Skicka-åtgärd som sparar data
 
    Lägg till skriptet post.POST.jsp i åtgärden. (/apps/custom_submit_action/store_and_mail/).
 
-   Kör åtgärden OTB Store (skriptet post.POST.jsp). Använd API:t [FormsHelper.runAction](https://docs.adobe.com/docs/en/cq/current/javadoc/com/day/cq/wcm/foundation/forms/FormsHelper.html#runAction(java.lang.String, java.lang.String, org.apache.sling.api.resource, org.apache.sling.api.SlingHttpServletRequest, org.apache.sling.api.SlingHttpServletResponse) som innehåller CQ i koden för att köra Store-åtgärden. Lägg till följande kod i JSP-filen:
+   Kör åtgärden OTB Store (skriptet post.POST.jsp). Använd [FormsHelper.runAction](https://docs.adobe.com/docs/en/cq/current/javadoc/com/day/cq/wcm/foundation/forms/FormsHelper.html#runAction(java.lang.String, java.lang.String, org.apache.sling.api.resource.resource, org.apache.sling.api.SlingHttpServletRequest, org.apache.sling.api.SlingHttpServletResponse)) API som CQ tillhandahåller i koden för att köra Store-åtgärden. Lägg till följande kod i JSP-filen:
 
    `FormsHelper.runAction("/libs/fd/af/components/guidesubmittype/store", "post", resource, slingRequest, slingResponse);`
 
@@ -149,7 +149,7 @@ Utför följande steg för att skapa en anpassad Skicka-åtgärd som sparar data
 
    `String mailTo = properties.get("mailTo");`
 
-   Använd slutligen CQ Mail API för att skicka e-postmeddelandet. Använd [klassen SimpleEmail](https://commons.apache.org/proper/commons-email/apidocs/org/apache/commons/mail/SimpleEmail.html) för att skapa e-postobjektet enligt nedan:
+   Använd slutligen CQ Mail API för att skicka e-postmeddelandet. Använd klassen [SimpleEmail](https://commons.apache.org/proper/commons-email/apidocs/org/apache/commons/mail/SimpleEmail.html) för att skapa e-postobjektet enligt nedan:
 
    >[!NOTE]
    >
