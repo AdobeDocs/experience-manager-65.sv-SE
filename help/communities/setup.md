@@ -18,13 +18,13 @@ ht-degree: 0%
 ---
 
 
-# Inledande konfiguration {#initial-setup}
+# Inledande inställning {#initial-setup}
 
-## Starta författare- och publiceringsinstanser {#start-author-and-publish-instances}
+## Starta författare och publiceringsinstanser {#start-author-and-publish-instances}
 
 I utvecklings- och demonstrationssyfte måste du köra en författare och en publiceringsinstans.
 
-Gör detta genom att följa de grundläggande AEM [Komma igång](../../help/sites-deploying/deploy.md#getting-started) -instruktionerna, som ger följande resultat:
+Om du vill göra det följer du de grundläggande AEM [Komma igång](../../help/sites-deploying/deploy.md#getting-started)-instruktionerna, som resulterar i:
 
 * Redigeringsmiljö på [localhost:4502](http://localhost:4502/)
 * Publiceringsmiljö på [localhost:4503](http://localhost:4503/)
@@ -43,27 +43,27 @@ För AEM Communities
 
 >[!NOTE]
 >
->Om du inte känner till AEM kan du läsa dokumentationen om [grundläggande hantering](../../help/sites-authoring/basic-handling.md) och en [snabbguide till hur du skapar sidor](../../help/sites-authoring/qg-page-authoring.md).
+>Om du inte känner till AEM kan du läsa dokumentationen om [grundläggande hantering](../../help/sites-authoring/basic-handling.md) och en [snabbguide till redigeringssidor](../../help/sites-authoring/qg-page-authoring.md).
 
-## Installera senaste versionen av Communities {#install-latest-communities-release}
+## Installera den senaste versionen av Communities {#install-latest-communities-release}
 
-Den här självstudiekursen skapar en [engagemangscommunitywebbplats](overview.md#engagement-community) och baseras på AEM Communities 6.2 feature pack version 1.10.
+I den här självstudien skapas en [engagemangscommunitywebbplats](overview.md#engagement-community) och den baseras på AEM Communities 6.2 feature pack version 1.10.
 
 Se till att det senaste funktionspaketet är installerat på:
 
 * [Senaste releaser](deploy-communities.md#latest-releases)
 
-En självstudiekurs om hur du skapar en [aktiveringscommunitywebbplats](overview.md#enablement-community)finns på [Komma igång med AEM Communities för aktivering](getting-started-enablement.md).
+En självstudiekurs som skapar en [aktiveringscommunitywebbplats](overview.md#enablement-community) finns på [Komma igång med AEM Communities för Enablement](getting-started-enablement.md).
 
 ## Konfigurera analys {#configure-analytics}
 
-När [Adobe Analytics har konfigurerats för communitywebbplatsen](analytics.md)finns det information om communityaktiviteter som förbättrar communitymedlemmens upplevelse samt ger feedback till administratörer av webbplatsen.
+När [Adobe Analytics har konfigurerats för communitywebbplatsen](analytics.md) finns det information om communityaktivitet som förbättrar communitymedlemmens upplevelse och ger återkoppling till webbplatsens administratörer.
 
 Integrering med Adobe Analytics är valfritt.
 
 ## Konfigurera e-post för meddelanden {#configure-email-for-notifications}
 
-Meddelandefunktionen, som är tillgänglig som standard för alla webbplatser som skapas med `Communities Sites` konsolen, erbjuder en e-postkanal för meddelanden.
+Meddelandefunktionen, som är tillgänglig som standard för alla webbplatser som skapats med `Communities Sites`-konsolen, erbjuder en e-postkanal för meddelanden.
 
 Det som är nödvändigt är att e-post konfigureras korrekt för webbplatsen.
 
@@ -71,11 +71,11 @@ Se [Konfigurera e-post](email.md).
 
 ## Aktivera tunneltjänsten {#enable-the-tunnel-service}
 
-När du skapar en community-webbplats i författarmiljön gör tunneltjänsten det möjligt att tilldela roller till betrodda communitymedlemmar som är registrerade i publiceringsmiljön. Tunneltjänsten ger även åtkomst till communitymedlemmar från konsolerna [Medlemmar och Grupper](members.md) i författarmiljön.
+När du skapar en community-webbplats i författarmiljön gör tunneltjänsten det möjligt att tilldela roller till betrodda communitymedlemmar som är registrerade i publiceringsmiljön. Tunneltjänsten ger även åtkomst till communitymedlemmar från [Konsolerna Medlemmar och Grupper](members.md) i författarmiljön.
 
-Konventionen är avsedd för medlemmar och medlemsgrupper som skapats i publiceringsmiljön och som *inte* kan återskapas i författarmiljön. Mer information finns i [Hantera användare och användargrupper](users.md).
+Konventionen gäller för medlemmar och medlemsgrupper som skapats i publiceringsmiljön till *inte* som ska återskapas i författarmiljön. Mer information finns i [Hantera användare och användargrupper](users.md).
 
-Mer information om hur du aktiverar tunneltjänsten på en **författarinstans** finns i [Tunneltjänsten](deploy-communities.md#tunnel-service-on-author).
+Mer information om hur du aktiverar tunneltjänsten på en **författare**-instans finns i [tunneltjänst](deploy-communities.md#tunnel-service-on-author).
 
 ## Rollen Community Administrator {#community-administrator-role}
 
@@ -83,7 +83,7 @@ Medlemmar i gruppen Community Administrators kan skapa communitysajter, hantera 
 
 ### Skapa användare {#create-user}
 
-Skapa en användare på *författaren* som får rollen som Community Administrator:
+Skapa en användare på *författare*, som tilldelas rollen Community Administrator:
 
 * På författarinstansen
 
@@ -93,19 +93,19 @@ Skapa en användare på *författaren* som får rollen som Community Administrat
 
    * Till exempel användarnamn &#39;admin&#39; / lösenord &#39;admin&#39;
 
-* Navigera från huvudkonsolen till **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Security]** > **[!UICONTROL Users]**.
-* På menyn **Redigera** väljer du **[!UICONTROL Add User]**
+* Gå till **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Security]** > **[!UICONTROL Users]** från huvudkonsolen.
+* Välj **[!UICONTROL Add User]** på menyn **Redigera**
 
-* In the `Create New User` dialog enter:
+* I dialogrutan `Create New User` anger du:
 
    * **[!UICONTROL ID]**: sirius
    * **[!UICONTROL Emai Address]**: sirius.nilson@mailinator.com
    * **[!UICONTROL Password]**: password
-   * **[!UICONTROL Confirm Password&ast;]**: password
+   * **[!UICONTROL Confirm Password&ast;]**: lösenord
    * **[!UICONTROL First Name]**: Sirius
    * **[!UICONTROL Last Name]**: Nilson
 
-### Tilldela Sirius till gruppen Community-administratörer {#assign-sirius-to-community-administrators-group}
+### Tilldela Sirius till communityadministratörsgruppen {#assign-sirius-to-community-administrators-group}
 
 Bläddra ned till `Add User to Groups`:
 
@@ -123,15 +123,15 @@ Bläddra ned till `Add User to Groups`:
 Innan demonstrationsversionerna av social inloggning med Facebook och Twitter kan användas är det nödvändigt att
 
 1. Installera ett korrigeringspaket eller [det senaste funktionspaketet](deploy-communities.md#latestfeaturepack) (för ändringar i Facebook-API:t från mars 2017).
-1. [Aktivera OAuth-providern](social-login.md#adobe-granite-oauth-authentication-handler) i publiceringsmiljön.
+1. [Aktivera OAuth-](social-login.md#adobe-granite-oauth-authentication-handler) providern i publiceringsmiljön.
 
 För produktionsservrar är det nödvändigt att skapa de molntjänster som krävs för att tillhandahålla social inloggning.
 
-Se [Social Login med Facebook och Twitter](social-login.md).
+Se [Social inloggning på Facebook och Twitter](social-login.md).
 
 ## Skapa självstudietaggar {#create-tutorial-tags}
 
-Skapa taggar som du kan använda för interaktions- och aktiveringssjälvstudiekurserna med hjälp av taggnamnutrymmet för `Tutorial`.
+Skapa taggar som ska användas för interaktions- och aktiveringssjälvstudiekurserna med hjälp av taggnamnutrymmet `Tutorial`.
 
 Använd [taggningskonsolen](../../help/sites-administering/tags.md#tagging-console) för att skapa följande taggar:
 
@@ -155,8 +155,8 @@ Exempelpaket med taggar som skapats för Tutorials AEM Communities Getting Start
 
 ## MongoDB för UGC Common Store {#mongodb-for-ugc-common-store}
 
-Vi rekommenderar, men är valfria, att du ställer in [MSRP](msrp.md) (MongoDB) som [gemensam lagringsplats](working-with-srp.md) för att kunna hantera all UGC från publicerings- och/eller författarmiljöer på ett flexibelt sätt.
+Vi rekommenderar, men är valfria, att du anger [MSRP](msrp.md) (MongoDB) som [gemensam lagringsplats](working-with-srp.md) för att du ska kunna moderera all UGC från publicerings- och/eller författarmiljöer.
 
-Instruktioner finns i [Konfigurera MongoDB för demo](demo-mongo.md).
+Instruktioner finns på [Så här installerar du MongoDB för demo](demo-mongo.md).
 
-Om du installerar författaren och publicerar AEM kommer användargenererat innehåll (UGC) att lagras i [JCR-tjärlagring](../../help/sites-deploying/platform.md) som nås med [JSRP](jsrp.md). JSRP är inte en vanlig lagringsplats, vilket innebär att UGC bara visas på den instans där den angavs. Vanligtvis anges UGC i en publiceringsinstans och skulle inte vara synligt i redigeringsmiljön, vilket resulterar i att alla modereringsåtgärder måste använda publiceringsinstansen.
+Installationen av författaren och publiceringsinstanserna AEM som standard resulterar i att användargenererat innehåll (UGC) lagras i [JCR-tjärlagring](../../help/sites-deploying/platform.md) som du kommer åt med [JSRP](jsrp.md). JSRP är inte en vanlig lagringsplats, vilket innebär att UGC bara visas på den instans där den angavs. Vanligtvis anges UGC i en publiceringsinstans och skulle inte vara synligt i redigeringsmiljön, vilket resulterar i att alla modereringsåtgärder måste använda publiceringsinstansen.
