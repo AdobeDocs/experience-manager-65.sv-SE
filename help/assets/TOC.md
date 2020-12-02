@@ -15,19 +15,19 @@ ht-degree: 34%
 ---
 
 
-# Resurshandbok {#assets}
+# Resursguide {#assets}
 
 + [[!DNL Assets] användarhandbok](home.md)
 + [[!DNL Experience Manager] 6.5 Versionsinformation om resurser](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/assets.html)
 + [Om DAM](assets.md)
 + [Metodtips för resurser](best-practices-for-assets.md)
 + [Tillgänglighet i [!DNL Assets]](accessibility.md)
-+ Använd Experience Manager Assets {#using}
++ Använd Experience Manager-resurser {#using}
    + [[!DNL Assets] upplevelse på hemsidan](assets-home-page.md)
    + [Söka efter digitala resurser](search-assets.md)
    + [Arbeta med metadata för resurser](metadata.md)
    + [Flerspråkiga resurser](multilingual-assets.md)
-   + [Använda [!DNL Adobe Stock] resurser i resurser](aem-assets-adobe-stock.md)
+   + [Använda  [!DNL Adobe Stock] resurser i resurser](aem-assets-adobe-stock.md)
    + [Förhandsgranska 3D-resurser](previewing-3d-assets.md)
    + [Granska resurser i mappar och samlingar](bulk-approval.md)
    + [Förbättrade smarta taggar](enhanced-smart-tags.md)
@@ -87,11 +87,11 @@ ht-degree: 34%
    + [Anpassa och utöka [!DNL Assets]](extending-assets.md)
    + [Bearbeta resurser med mediehanterare och arbetsflöden](media-handlers.md)
    + [Utöka sökfunktionen](searchx.md)
-   + [Installera och [!DNL ImageMagick] konfigurera för att arbeta med [!DNL Assets]](best-practices-for-imagemagick.md)
+   + [Installera och  [!DNL ImageMagick] konfigurera för att arbeta med [!DNL Assets]](best-practices-for-imagemagick.md)
    + [Integrera resurser med aktivitetsströmmen](extending-activity-stream.md)
    + [Utöka resursredigeraren](asseteditorx.md)
    + [[!DNL Assets] HTTP-API](mac-api-assets.md)
-   + [Content Fragments support [!DNL Assets] inHTTP API](assets-api-content-fragments.md)
+   + [Content Fragments support  [!DNL Assets] inHTTP API](assets-api-content-fragments.md)
    + [[!DNL Assets] proxyutveckling](proxy.md)
 + Administrera resurser {#administer}
    + [Filformat som stöds](assets-formats.md)
