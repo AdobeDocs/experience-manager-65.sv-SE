@@ -1,8 +1,8 @@
 ---
 title: Beskrivning av återanvändbara komponenter
 seo-title: Beskrivning av återanvändbara komponenter
-description: En fullständig lista över återanvändbara komponenter med filnamn och beroenden som hjälper dig att integrera arbetsytekomponenten för AEM Forms i dina webbprogram.
-seo-description: En fullständig lista över återanvändbara komponenter med filnamn och beroenden som hjälper dig att integrera arbetsytekomponenten för AEM Forms i dina webbprogram.
+description: En fullständig lista över återanvändbara komponenter med filnamn och beroenden som hjälper dig att integrera arbetsytekomponenten i AEM Forms i dina webbprogram.
+seo-description: En fullständig lista över återanvändbara komponenter med filnamn och beroenden som hjälper dig att integrera arbetsytekomponenten i AEM Forms i dina webbprogram.
 uuid: 8e6accc7-0935-4d7b-b838-d23676df5cda
 contentOwner: robhagat
 content-type: reference
@@ -11,15 +11,18 @@ topic-tags: forms-workspace
 discoiquuid: d3facd17-ceb0-4799-8cd9-ff9e81e09793
 translation-type: tm+mt
 source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+workflow-type: tm+mt
+source-wordcount: '1257'
+ht-degree: 6%
 
 ---
 
 
 # Beskrivning av återanvändbara komponenter {#description-of-reusable-components}
 
-Arbetsytan i AEM Forms består av [återanvändbara](/help/forms/using/integrating-html-ws-components-web.md) komponenter som är ordnade i en viss [mappstruktur](/help/forms/using/folder-structure.md) i CRX™. Varje komponent har modell-, vy- och mallfil på den plats som anges i mappstrukturen, JavaScript™-beroenden på andra komponentfiler, händelser som avlyssnas av komponenten och JavaScript-objekt som utlöser dessa händelser på arbetsytan i AEM Forms. En fullständig lista över återanvändbara komponenter med komponentens filnamn och beroenden anges här.
+AEM Forms arbetsyta består av [återanvändbara](/help/forms/using/integrating-html-ws-components-web.md)-komponenter som är ordnade i en viss [mappstruktur](/help/forms/using/folder-structure.md) i CRX™. Varje komponent har modell-, vy- och mallfil på den plats som anges i mappstrukturen, JavaScript™-beroenden på andra komponentfiler, händelser som avlyssnas av komponenten och JavaScript-objekt som utlöser dessa händelser på arbetsytan i AEM Forms. En fullständig lista över återanvändbara komponenter med komponentens filnamn och beroenden anges här.
 
-## AktivitetLista {#tasklist}
+## Aktivitetslista {#tasklist}
 
 <table>
  <tbody>
@@ -58,7 +61,7 @@ Arbetsytan i AEM Forms består av [återanvändbara](/help/forms/using/integrati
     <ul>
      <li><p>filterSelected - aktivitetslistmodell</p></li>
      <li><p>remove - aktivitetslistmodell</p></li>
-     <li><p>updateQueue - aktivitetslistmodell</p></li>
+     <li><p>updateQueue - aktivitetslista, modell</p></li>
     </ul></td>
   </tr>
  </tbody>
@@ -66,7 +69,7 @@ Arbetsytan i AEM Forms består av [återanvändbara](/help/forms/using/integrati
 
 >[!NOTE]
 >
->Den här komponenten kan användas oberoende av arbetsytan i AEM Forms, förutsatt att du utlöser händelsen filterSelected för den här komponenten från ditt anpassade program.
+>Den här komponenten kan användas oberoende av AEM Forms arbetsyta, förutsatt att du utlöser händelsen filterSelected för den här komponenten från ditt anpassade program.
 
 ## Uppgift {#task}
 
@@ -111,7 +114,7 @@ Arbetsytan i AEM Forms består av [återanvändbara](/help/forms/using/integrati
 >
 >Arbetsytan anropar funktionen fetchTasks i TaskList-modellen för att skapa aktivitetsmodeller för den här komponenten.
 
-## FilterList {#filterlist}
+## Filterlista {#filterlist}
 
 <table>
  <tbody>
@@ -141,7 +144,7 @@ Arbetsytan i AEM Forms består av [återanvändbara](/help/forms/using/integrati
     <ul>
      <li><p>hämtad - aktivitetslistmodell </p></li>
      <li><p>remove - aktivitetslistmodell </p></li>
-     <li><p>updateQueue - aktivitetslistmodell </p></li>
+     <li><p>updateQueue - aktivitetslista, modell </p></li>
      <li><p>uppdateradKö - aktivitetslistmodell </p></li>
      <li><p>filterSelected - aktivitetslistmodell</p></li>
     </ul></td>
@@ -213,7 +216,7 @@ Arbetsytan i AEM Forms består av [återanvändbara](/help/forms/using/integrati
     <ul>
      <li><p>hämtad - aktivitetslistmodell </p></li>
      <li><p>remove - aktivitetslistmodell </p></li>
-     <li><p>updateQueue - aktivitetslistmodell </p></li>
+     <li><p>updateQueue - aktivitetslista, modell </p></li>
      <li><p>teamQueuesFetched - tasklist model </p></li>
     </ul></td>
   </tr>
@@ -263,7 +266,7 @@ Arbetsytan i AEM Forms består av [återanvändbara](/help/forms/using/integrati
 >
 >TeamFilter hämtar händelsen som anger vilken aktivitet som har valts från TaskList-komponenten. Även om dessa komponenter delar modellklassen finns det inget annat beroende.
 
-## AktivitetDetaljer {#taskdetails}
+## Aktivitetsinformation {#taskdetails}
 
 <table>
  <tbody>
@@ -418,7 +421,7 @@ Arbetsytan i AEM Forms består av [återanvändbara](/help/forms/using/integrati
   </tr>
   <tr>
    <td><p>Mall</p></td>
-   <td><p>startprocess.html (in the route folder)</p></td>
+   <td><p>startprocess.html (i vägmappen)</p></td>
   </tr>
   <tr>
    <td><p>Kräver komponenter</p></td>
@@ -453,7 +456,7 @@ Arbetsytan i AEM Forms består av [återanvändbara](/help/forms/using/integrati
 
 >[!NOTE]
 >
->StartPointList and CategoryList components share the model class, hence the former depends on the latter. CategoryList accesses the information about which category&#39;s start points are shown. To use StartPointList independently, simulate the event trigger from CategoryList.
+>Komponenterna StartPointList och CategoryList delar modellklassen, och den första är beroende av den senare. CategoryList får åtkomst till informationen om vilken kategori startpunkter som visas. Om du vill använda StartPointList separat simulerar du händelseutlösaren från CategoryList.
 
 ## StartPoint {#startpoint}
 
@@ -514,8 +517,8 @@ Arbetsytan i AEM Forms består av [återanvändbara](/help/forms/using/integrati
    <td><p>JS-beroenden</p> </td>
    <td>
     <ul>
-     <li><p>category model</p> </li>
-     <li><p>favoritecategoryfactory model</p> </li>
+     <li><p>kategorimodell</p> </li>
+     <li><p>favoritkategoristandardmodell</p> </li>
      <li><p>allccategoryFactory-modell</p> </li>
      <li><p>formgivningsverktyg</p> </li>
      <li><p>anteckningsverktyg</p> </li>
