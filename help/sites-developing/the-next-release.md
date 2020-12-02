@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: a7be7d33-9d06-4d07-b7a0-e23251e26cb8
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '173'
+ht-degree: 0%
 
 ---
 
@@ -21,7 +24,7 @@ Genomförandet av ett projekt är sällan slutet av processen. En efterföljande
 
 I vilket fall som helst kan det vara användbart att planera för nästa version genom att:
 
-* Dokumentera och lagra dina testfall noggrant så att de kan refereras till, eller förhoppningsvis återanvändas.
+* Dokumentera och lagra dina testfall noggrant så att de kan refereras till eller förhoppningsvis återanvändas.
 * Utveckla tester som kan användas som regressionstester för nästa release.
 * Samla all information du eller kunden har fått genom upplevelsen av testprocessen.
 
