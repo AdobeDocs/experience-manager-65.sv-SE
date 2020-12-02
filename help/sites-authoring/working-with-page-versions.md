@@ -31,20 +31,20 @@ Versionshantering skapar en ögonblicksbild av en sida vid en viss tidpunkt. Med
 
 Du kan skapa en version av resursen från:
 
-* tidslinjen i [rälen](#creating-a-new-version-timeline)
-* alternativet [Skapa](#creating-a-new-version-create-with-a-selected-resource) (när en resurs har valts)
+* [Tidslinjerska](#creating-a-new-version-timeline)
+* alternativet [Skapa](#creating-a-new-version-create-with-a-selected-resource) (när en resurs är markerad)
 
-### Skapa en ny version - Tidslinje {#creating-a-new-version-timeline}
+### Skapar en ny version - Tidslinje {#creating-a-new-version-timeline}
 
 1. Navigera till sidan som du vill skapa en version för.
 1. Markera sidan i [markeringsläge](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources).
-1. Öppna kolumnen **Tidslinje** .
+1. Öppna kolumnen **Tidslinje**.
 1. Klicka/tryck på pilen vid kommentarfältet för att visa alternativen:
 
    ![screen-shot_2019-03-05at112335](assets/screen-shot_2019-03-05at112335.png)
 
 1. Välj **Spara som version**.
-1. Ange en **etikett** och **kommentar** om det behövs.
+1. Ange en **etikett** och **Kommentar** om det behövs.
 
    ![chlimage_1-42](assets/chlimage_1-42.png)
 
@@ -65,7 +65,7 @@ Du kan skapa en version av resursen från:
 
    Tidslinjen öppnas och informationen uppdateras för att ange den nya versionen.
 
-## Återställa till en sidversion {#reverting-to-a-page-version}
+## Återställer till en sidversion {#reverting-to-a-page-version}
 
 När en version har skapats kan du vid behov återgå till den versionen.
 
@@ -94,9 +94,9 @@ Så här återgår du till en tidigare version:
 
    ![screen-shot_2019-03-05at112505](assets/screen-shot_2019-03-05at112505.png)
 
-1. Välj **Återställ till den här versionen**. Den valda versionen återställs och informationen på tidslinjen uppdateras.
+1. Välj **Återställ till denna version**. Den valda versionen återställs och informationen på tidslinjen uppdateras.
 
-## Förhandsgranska en version {#previewing-a-version}
+## Förhandsgranska version {#previewing-a-version}
 
 Du kan förhandsgranska en viss version:
 
@@ -113,7 +113,7 @@ Du kan förhandsgranska en viss version:
    >
    >Om en sida har flyttats kan du inte längre förhandsgranska versioner som gjorts före flyttningen.
    >
-   >* Om du får problem med en förhandsgranskning kan du kontrollera om sidan har flyttats i [tidslinjen](/help/sites-authoring/basic-handling.md#timeline) .
+   >* Om du får problem med en förhandsgranskning kan du kontrollera [tidslinjen](/help/sites-authoring/basic-handling.md#timeline) för sidan för att se om sidan har flyttats.
 
 
 ## Jämföra en version med den aktuella sidan {#comparing-a-version-with-current-page}
@@ -131,7 +131,7 @@ Så här jämför du en tidigare version med den aktuella sidan:
 
 ## Timewarp {#timewarp}
 
-Timewarp är en funktion som är utformad för att simulera en sidas *publicerade* läge vid en viss tidpunkt.
+Timewarp är en funktion som är utformad för att simulera *publicerat*-läge för en sida vid en viss tidpunkt.
 
 Eftersom framtagning av innehåll är en pågående och samarbetsorienterad process är syftet med Timewarp att tillåta författare att spåra den publicerade webbplatsen över tid för att förstå hur innehållet har ändrats. Den här funktionen använder sidversionerna för att avgöra publiceringsmiljöns tillstånd.
 
@@ -162,13 +162,13 @@ Timewarp är ett [läge](/help/sites-authoring/author-environment-tools.md#page-
 
 Med Timewarp kan du göra ett bra försök att återskapa en sida vid en viss tidpunkt. På grund av komplexiteten i den kontinuerliga redigeringen av innehåll i AEM är detta dock inte alltid möjligt. Dessa begränsningar bör beaktas när du använder Timewarp.
 
-* **Timewarp fungerar baserat på publicerade sidor** - Timewarp fungerar bara helt om du tidigare har publicerat sidan. I annat fall visas den aktuella sidan i författarmiljön.
+* **Timewarp fungerar baserat på publicerade sidor**  - Timewarp fungerar bara helt om du tidigare har publicerat sidan. I annat fall visas den aktuella sidan i författarmiljön.
 * **Vid tidsförvrängning används sidversioner** - Om du navigerar till en sida som har tagits bort/tagits bort från databasen kommer den att återges korrekt om gamla versioner av sidan fortfarande är tillgängliga i databasen.
 * **Borttagna versioner påverkar Timewarp** - Om versioner tas bort från databasen kan inte Timewarp visa rätt vy.
 
-* **Timewarp är skrivskyddat** - du kan inte redigera den gamla versionen av sidan. Det är bara tillgängligt för visning. Om du vill återställa den äldre versionen måste du göra det manuellt med [återställning](#reverting-to-a-page-version).
+* **Timewarp är skrivskyddat**  - Du kan inte redigera den gamla versionen av sidan. Det är bara tillgängligt för visning. Om du vill återställa den äldre versionen måste du göra det manuellt med [restore](#reverting-to-a-page-version).
 
-* **Timewarp baseras bara på sidinnehåll** - Om element (som kod, css, resurser/bilder osv.) för återgivning av webbplatsen har ändrats skiljer sig vyn från den ursprungliga vyn, eftersom objekten inte har versionshanterats i databasen.
+* **Timewarp baseras bara på sidinnehåll**  - Om element (som kod, css, resurser/bilder osv.) för återgivning av webbplatsen har ändrats, skiljer sig vyn från den ursprungliga vyn eftersom objekten inte har versionsindelats i databasen.
 
 >[!CAUTION]
 >
