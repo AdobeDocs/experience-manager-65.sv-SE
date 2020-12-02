@@ -24,13 +24,13 @@ ht-degree: 3%
 
 Vi.Retail är en referensimplementering och exempelinnehåll som illustrerar det rekommenderade sättet att konfigurera en onlinenärvaro med Adobe Experience Manager.
 
-Vi.Retail använder de senaste AEM-teknikerna som HTML, responsiva layouter, redigerbara mallar, kärnkomponenter med mera.
+Vi.Retail använder de senaste AEM teknikerna som HTML, responsiva layouter, redigerbara mallar, kärnkomponenter med mera.
 
 Även om sajten är en vertikal butiksskylt kan den konfigureras på alla vertikala ytor, och endast produktkatalogen och kundvagnsfunktionerna är butiksspecifika.
 
 ## Funktioner {#features}
 
-Som AEM:s standardimplementering av referenser presenterar vi några av de mest kraftfulla funktionerna i AEM.
+Som AEM standardimplementering av referenser visar vi nu några av de mest kraftfulla funktionerna i AEM.
 
 | **Funktion** | **Beskrivning** | **Intresserad?** |
 |---|---|---|
@@ -46,55 +46,55 @@ Som AEM:s standardimplementering av referenser presenterar vi några av de mest 
 
 ## Komma igång {#getting-started}
 
-Vi.Retail levereras som AEM:s exempelinnehåll. Om du vill använda programmet [startar du bara AEM som vanligt](/help/sites-deploying/deploy.md#getting-started)och ser till att exempelinnehållet inte är inaktiverat.
+Vi.Retail levereras som AEM exempelinnehåll. Om du vill använda programmet behöver du bara [starta AEM som vanligt](/help/sites-deploying/deploy.md#getting-started) och kontrollera att exempelinnehållet inte är inaktiverat.
 
 >[!CAUTION]
 >
->Vi.Retail ska inte installeras på produktionsinstanser. Produktionsinstanser ska startas i `nosamplecontent`[körläge](/help/sites-deploying/configure-runmodes.md).
+>Vi.Retail ska inte installeras på produktionsinstanser. Produktionsinstanser ska startas i `nosamplecontent` [runmode](/help/sites-deploying/configure-runmodes.md).
 
 >[!CAUTION]
 >
->Vi.Retail baseras på den senaste AEM-tekniken och stöder därför inte [klassisk gränssnittsutveckling](/help/sites-classic-ui-authoring/home.md).
+>Vi.Retail baseras på den senaste AEM tekniken och stöder därför inte [utveckling av klassiskt användargränssnitt](/help/sites-classic-ui-authoring/home.md).
 
 ### Senaste version {#latest-version}
 
-Även om vi.Retail distribueras med AEM-versionen kan uppdateringar av innehållet och dess funktioner göras efter releasen. Det är därför möjligt att [hämta den senaste versionen från GitHub](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases) och sedan [överföra](/help/sites-administering/package-manager.md#uploading-packages-from-your-file-system) och [installera](/help/sites-administering/package-manager.md#installing-packages) den som ett paket på din AEM-instans.
+Även om vi.Retail distribueras tillsammans med AEM kan uppdateringar av innehållet och dess funktioner göras efter releasen. Det är därför möjligt att [hämta den senaste versionen från GitHub](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases) och sedan [överföra](/help/sites-administering/package-manager.md#uploading-packages-from-your-file-system) och [installera](/help/sites-administering/package-manager.md#installing-packages) den som ett paket på din AEM.
 
-### Steg 1 {#first-steps}
+### Steg {#first-steps}
 
-1. När AEM har startats (och/eller vi.Retail har installerats) är webbplatsen **We.Retail** tillgänglig i [webbplatskonsolen](/help/sites-authoring/basic-handling.md#global-navigation).
-1. Följande sida kan till exempel öppnas och ska se ut som i [bilagan](#appendix) nedan:
+1. När AEM har startats (och/eller vi.Retail har installerats) är platsen **We.Retail** tillgänglig i [platskonsolen](/help/sites-authoring/basic-handling.md#global-navigation).
+1. Följande sida kan till exempel öppnas och ska se ut som den visas i [bilagan](#appendix) nedan:
 
    `https://<server name>:<port number>/editor.html/content/we-retail/language-masters/en.html`
 
-## Vi.Retail &amp; Geometrixx {#we-retail-geometrixx}
+## Vi.Detaljhandel &amp; Geometrixx {#we-retail-geometrixx}
 
-Geometrixx och dess många tävlingsbidrag fungerade som exempelinnehåll i tidigare versioner av AEM. Sedan version 6.3 har We.Retail varit det exempelinnehåll som levererats med AEM och fungerar som den nya standardimplementeringen av referenser.
+Geometrixx och dess många inkvisitioner fungerade som exempelinnehåll i tidigare versioner av AEM. Sedan version 6.3 har We.Retail varit det exempelinnehåll som levereras med AEM och fungerar som den nya standardimplementeringen av referenser.
 
-Vi.Detaljhandeln är tekniskt sett mer robust och utnyttjar den senaste AEM-tekniken för att vara mer flexibel och skalbar, samtidigt som vi demonstrerar de senaste funktionerna i produkten.
+Vi.Detaljhandeln är tekniskt sett mer robust och utnyttjar den senaste AEM tekniken för att vara mer flexibel och skalbar, samtidigt som vi visar de senaste funktionerna i produkten.
 
 ### Funktionsjämförelse {#feature-comparison}
 
 Tabellen nedan ger en översikt över de viktigaste funktionerna som är tillgängliga i We.Retail jämfört med Geometrixx.
 
-* **Tillgängliga** innebär att exempel på funktionen finns i exempelinnehållet.
-* **Inte tillgängligt** betyder att exempel på funktionen inte är tillgängliga i exempelinnehållet, men inte betyder att själva funktionen inte är det.
+* **Det** finns exempel på funktionen i exempelinnehållet.
+* **Inte** tillgängligt - exempel på funktionen är inte tillgängliga i exempelinnehållet, men betyder inte att själva funktionen inte är det.
 
 | **Funktion** | **Vi.butik** | **Geometrixx** |
 |---|---|---|
 | Globaliserad webbplatsstruktur | Språkmallsidor som live-kopieras till landsspecifika webbplatser | Inte tillgängligt |
 | Innehållsfragment | Tillgänglig | Inte tillgängligt |
 | Experience Fragments | Tillgänglig | Inte tillgängligt |
-| Responsiv layout | För alla sidor | Endast Geometrixx-media |
+| Responsiv layout | För alla sidor | Endast Geometrixx Media |
 | Redigerbara mallar | För alla sidor | Inte tillgängligt |
 | HTL | Alla komponenter | Begränsad |
-| Målinriktning | För alla sidor | Endast geometrixx utomhus |
+| Målinriktning | För alla sidor | Endast Geometrixx Outdoors |
 | Skärmar | Tillgänglig | Inte tillgängligt |
 | Mobil | Inte tillgängligt | Tillgänglig |
 | Manuscript | Inte tillgängligt | Tillgänglig |
 | Carousel, nedladdning, diagramkomponenter | Inte tillgängligt | Tillgänglig |
 | Kolumnkontroll | Ersatt av layoutbehållare | Tillgänglig |
-| Formulär | Inte tillgängligt | Tillgänglig |
+| Forms | Inte tillgängligt | Tillgänglig |
 | Campaign | Inga e-postexempel | Tillgänglig |
 
 >[!NOTE]
@@ -112,11 +112,11 @@ Koden för den här sidan finns på GitHub
 * [Öppna aem-sample-we-retail-projekt på GitHub](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail)
 * Hämta projektet som [en ZIP-fil](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/archive/master.zip)
 
-Den senaste versionen kan också [laddas ned direkt](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases/latest) som ett installerbart paket.
+Den senaste versionen kan också [hämtas direkt](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases/latest) som ett installerbart paket.
 
-Om du råkar ut för problem kan du rapportera [GitHub-problem](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/issues).
+Om du råkar ut för problem ska du registrera [GitHub-problem](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/issues).
 
-Du kan fritt göra gaffel eller bidra med [pull-förfrågningar](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/pulls).
+Du kan fritt göra gaffel eller bidra med [pull-begäranden](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/pulls).
 
 ## Förhandsgranska {#preview}
 
