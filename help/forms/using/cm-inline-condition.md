@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Infogade villkor och upprepningar i interaktiv kommunikation och brev{#inline-condition-and-repeat-in-interactive-communications-and-letters}
+# Infogat villkor och upprepa i Interactive Communications och bokstäver{#inline-condition-and-repeat-in-interactive-communications-and-letters}
 
 ## Textbundna villkor {#inline-conditions}
 
@@ -40,7 +40,7 @@ Mer information finns i Skapa regel i text i [Texter i interaktiv kommunikation]
 
 När du har inkluderat textavsnittet i ett interaktivt kommunikations- och agentgränssnitt för att förbereda en interaktiv kommunikation, utvärderas (formulärdatamodell)-data för mottagarna och texten visas endast för mottagarna i USA.
 
-### Exempel: Använda textbundna villkor i en bokstav för att återge rätt adress  {#example-using-inline-condition-in-a-letter-to-render-the-appropriate-address}
+### Exempel: Använda ett internt villkor i en bokstav för att återge rätt adress {#example-using-inline-condition-in-a-letter-to-render-the-appropriate-address}
 
 Du kan infoga ett textbundet villkor i en bokstav genom att infoga det textbundna villkoret i rätt textmodul. I följande exempel används två villkor för att utvärdera och visa lämplig adress, Sir eller Ma&#39;am, i ett brev baserat på DD-elementets kön. Om du använder liknande steg kan du skapa andra villkor.
 
@@ -58,7 +58,7 @@ Du kan infoga ett textbundet villkor i en bokstav genom att infoga det textbundn
 
    >[!NOTE]
    >
-   >Ett tomt eller ogiltigt villkorsuttryck kan inte sparas. Det måste finnas ett giltigt villkorsuttryck i `${}` för att du ska kunna spara uttrycket.
+   >Ett tomt eller ogiltigt villkorsuttryck kan inte sparas. Det måste finnas ett giltigt villkorsuttryck i `${}` för att uttrycket ska kunna sparas.
 
 1. Gör följande för att skapa ett villkor för att utvärdera om den markerade/villkorade texten visas i bokstaven och tryck sedan på bockmarkeringen för att spara uttrycket:
 
@@ -72,9 +72,9 @@ Du kan infoga ett textbundet villkor i en bokstav genom att infoga det textbundn
 
    När villkoret har infogats kan du hålla muspekaren över handtaget till vänster om villkoret för att visa det. Du kan trycka på handtaget för att visa snabbmenyn för villkoret, som du kan använda för att redigera eller ta bort villkoret.
 
-   ![3_hoverhandle](assets/3_hoverhandle.png) ![4_editConditionremoveconektionspopup](assets/4_editconditionremoveconditionpopup.png)
+   ![3_hoverhandle](assets/3_hoverhandle.png) ![4_editConditionremoveconderpopup](assets/4_editconditionremoveconditionpopup.png)
 
-1. Infoga liknande villkor genom att markera texten `Ma'am`.
+1. Infoga ett liknande villkor genom att markera texten `Ma'am`.
 
    ```javascript
    ${DD_creditcard_Gender == "Female"}
@@ -212,9 +212,9 @@ I följande exempel visas hur du använder upprepning för att strukturera och �
    >
    >Du kan bara infoga villkor och upprepa medan du skapar eller redigerar den relevanta textmodulen. Även om du kan redigera i textmodulen när du förhandsgranskar brevet kan du inte infoga villkor eller upprepa.
 
-## Använda internt villkor och upprepning - vissa användningsfall  {#using-inline-condition-and-repeat-some-use-cases}
+## Använda internt villkor och upprepa - vissa användningsfall {#using-inline-condition-and-repeat-some-use-cases}
 
-### Upprepa i villkor {#repeat-within-condition}
+### Upprepa i villkoret {#repeat-within-condition}
 
 Du kan behöva upprepa detta inom ett villkor. Med Korrespondence Management kan du använda upprepning i en intern villkorskonstruktion.
 
