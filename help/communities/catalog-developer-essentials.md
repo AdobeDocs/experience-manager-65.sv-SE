@@ -24,7 +24,7 @@ Den här sidan innehåller viktig information om hur du arbetar med katalogfunkt
 
 När katalogfunktionen ingår i en community-webbplats kan communitymedlemmar bläddra bland och välja aktiveringsresurser som finns listade i en katalog.
 
-Komponenten [ gör att communitymedlemmar kan komma åt en katalog med `enablement catalog` aktiveringsresurser](catalog.md) [](resources.md). Användningen av AEM taggar är en viktig del av att hantera utseendet på aktiveringsresurser i en katalog.
+Med [ `enablement catalog`-komponenten](catalog.md) kan communitymedlemmar komma åt en katalog med [aktiveringsresurser](resources.md). Användningen av AEM taggar är en viktig del av att hantera utseendet på aktiveringsresurser i en katalog.
 
 Se [Tagga aktiveringsresurser](tag-resources.md).
 
@@ -63,13 +63,13 @@ Se [Tagga aktiveringsresurser](tag-resources.md).
 
 ### Katalogfunktion {#catalog-function}
 
-En community-platsstruktur som innehåller [katalogfunktionen](functions.md#catalog-function)innehåller en konfigurerad `enablement catalog` komponent.
+En community-platsstruktur som innehåller [katalogfunktionen](functions.md#catalog-function) innehåller en konfigurerad `enablement catalog`-komponent.
 
 ### Förfilter {#pre-filters}
 
 När en katalogfunktion har lagts till på en communitywebbplats är det möjligt att begränsa aktiveringsresurser och utbildningssökvägar som visas i katalogen genom att ange ett förfilter. Detta görs genom att ange egenskaper för platsens katalogresurs.
 
-Använda exemplet med [självstudiekursen](getting-started-enablement.md):
+Använda exemplet med [självstudiekursen för aktivering](getting-started-enablement.md):
 
 * On author
 * Använda [CRXDE](../../help/sites-developing/developing-with-crxde-lite.md)
@@ -82,25 +82,25 @@ Använda exemplet med [självstudiekursen](getting-started-enablement.md):
 
 * Lägga till en underordnad filternod
 
-   * Markera `catalog`noden
+   * Markera noden `catalog`
    * Välj **[!UICONTROL Create Node]**
 
       * Namn: `filters`
       * Typ: `nt:unstructured`
       * Välj **[!UICONTROL Save All]**
 
-* Lägg till `se_resource-tags` egenskap till `filters` noden
+* Lägg till egenskapen `se_resource-tags` i noden `filters`
 
-   * Markera `filters` noden
+   * Välj noden `filters`
    * Lägg till en Multi-egenskap
 
       * Namn: `se_resource-tags`
       * Typ: Sträng
-      * Värde: *&lt;ange ett[tagg-ID](#pre-filter-tagids)>*
+      * Värde: *&lt;ange ett [Tagg-ID](#pre-filter-tagids)>*
          * Välj **[!UICONTROL Multi]**
          * Välj **[!UICONTROL Add]**
 
-            * I popup-dialogrutan väljer du `+` att lägga till ytterligare förfiltertagg-ID:n
+            * I popup-dialogrutan väljer du `+` om du vill lägga till ytterligare förfiltertagg-ID:n
 
 * Publicera communitywebbplatsen igen
 
@@ -108,7 +108,7 @@ Använda exemplet med [självstudiekursen](getting-started-enablement.md):
 
 #### Förfiltrera tagg-ID:n {#pre-filter-tagids}
 
-Förfiltreringen av [TagID:n](../../help/sites-developing/framework.md#tagid) måste exakt matcha de taggar som används i aktiveringsresurserna. Dessa är synliga som egenskapens värden i platsens `resources` mapp `se_resource-tags`.
+Förfiltret [TaggID](../../help/sites-developing/framework.md#tagid) måste exakt matcha de taggar som används för aktiveringsresurserna. Dessa är synliga i mappen `resources` för platsen som värden för egenskapen `se_resource-tags`.
 
 ![configure-filters](assets/configure-catalog1.png)
 
