@@ -28,29 +28,29 @@ I det här avsnittet skapar du följande sidor som alla använder [sidmallen](in
 
    * SCF Play - Underordnad till den huvudsida som ska spelas upp.
 
-Även om den här självstudiekursen inte omfattar [språkkopior](../../help/sites-administering/tc-prep.md)är den utformad så att rotsidan kan implementera identifiering av det språk som användaren föredrar via HTML-rubriken och dirigera om till rätt huvudsida för språket. Konventionen är att använda landskoden med två bokstäver för sidans nodnamn, t.ex. &quot;en&quot; för engelska, &quot;fr&quot; för franska och så vidare.
+Även om den här självstudiekursen inte går vidare till [språkkopior](../../help/sites-administering/tc-prep.md) är den utformad så att rotsidan kan implementera identifiering av det språk som användaren föredrar via HTML-rubriken och dirigera om till rätt huvudsida för språket. Konventionen är att använda landskoden med två bokstäver för sidans nodnamn, t.ex. &quot;en&quot; för engelska, &quot;fr&quot; för franska och så vidare.
 
 ## Skapa första sidor {#create-first-pages}
 
-Nu när det finns en [sidmall](initial-app.md#createthepagetemplate)kan vi skapa webbplatsens rotsida i katalogen /content.
+Nu när det finns en [sidmall](initial-app.md#createthepagetemplate) kan vi skapa webbplatsens rotsida i katalogen /content.
 
 1. Standardgränssnittet innehåller för närvarande utkast för att skapa webbplatser. Det klassiska användargränssnittet är användbart eftersom den här självstudiekursen skapar en enkel webbplats.
 
-   Om du vill växla till det klassiska användargränssnittet väljer du global navigering och håller pekaren över den högra sidan av projektikonen. Välj ikonen *Växla till klassiskt gränssnitt* som visas:
+   Om du vill växla till det klassiska användargränssnittet väljer du global navigering och håller pekaren över den högra sidan av projektikonen. Välj ikonen *Byt till Classic UI* som visas:
 
    ![classic-ui](assets/classic-ui.png)
 
-   Möjligheten att växla till det klassiska användargränssnittet måste [aktiveras av en administratör](../../help/sites-administering/enable-classic-ui.md).
+   Möjligheten att växla till det klassiska användargränssnittet måste vara [aktiverat av en administratör](../../help/sites-administering/enable-classic-ui.md).
 
-1. På välkomstsidan [för det](http://localhost:4502/welcome.html)klassiska användargränssnittet väljer du **[!UICONTROL Websites]**.
+1. Välj **[!UICONTROL Websites]** på [välkomstsidan för det klassiska användargränssnittet](http://localhost:4502/welcome.html).
 
    ![classic-ui-website](assets/classic-ui-website.png)
 
-   Du kan även få tillgång till det klassiska användargränssnittet för webbplatser direkt genom att gå till [/siteAdmin.](http://localhost:4502/siteadmin)
+   Du kan även få tillgång till det klassiska användargränssnittet för webbplatser direkt genom att gå till [/siteadmin.](http://localhost:4502/siteadmin)
 
-1. I utforskarrutan markerar du **[!UICONTROL Websites]** och väljer sedan **[!UICONTROL New]** > **[!UICONTROL New Page]** i verktygsfältet.
+1. Välj **[!UICONTROL Websites]** i utforskarrutan och välj sedan **[!UICONTROL New]** > **[!UICONTROL New Page]** i verktygsfältet.
 
-   Ange följande i **[!UICONTROL Create Page]** dialogrutan:
+   Ange följande i dialogrutan **[!UICONTROL Create Page]**:
 
    * Titel: `SCF Sandbox Site`
    * Namn: `an-scf-sandbox`
@@ -59,14 +59,14 @@ Nu när det finns en [sidmall](initial-app.md#createthepagetemplate)kan vi skapa
 
    ![classic-ui-create-page](assets/classic-ui-create-page.png)
 
-1. Markera den sida du just skapade i Utforskarfönstret `/Websites/SCF Sandbox Site`och klicka på **[!UICONTROL New]** > **[!UICONTROL New Page]**:
+1. Markera den sida du just skapade i Utforskaren, `/Websites/SCF Sandbox Site`, och klicka på **[!UICONTROL New]** > **[!UICONTROL New Page]**:
 
    * Titel: `SCF Sandbox`
    * Namn: `en`
    * Välj **[!UICONTROL An SCF Sandbox Play Template]**
    * Klicka på **[!UICONTROL Create]**
 
-1. Markera den sida du just skapade i Utforskarfönstret `/Websites/SCF Sandbox Site/SCF Sandbox`och klicka på **[!UICONTROL New]** > **[!UICONTROL New Page]**
+1. Markera den sida du just skapade i Utforskaren, `/Websites/SCF Sandbox Site/SCF Sandbox`, och klicka på **[!UICONTROL New]** > **[!UICONTROL New Page]**
 
    * Titel: `SCF Play`
    * Namn: `play`
@@ -81,9 +81,9 @@ Nu när det finns en [sidmall](initial-app.md#createthepagetemplate)kan vi skapa
 
    ![classic-ui-database-view](assets/classic-ui-repository-view.png)
 
-## Lägg till designbanan {#add-the-design-path}
+## Lägg till designsökvägen {#add-the-design-path}
 
-Egenskapen &quot; ` [/etc/designs/an-scf-sandbox](setup-website.md#setupthedesigntreeetcdesigns)`
+När ` [/etc/designs/an-scf-sandbox](setup-website.md#setupthedesigntreeetcdesigns)` skapades med designavsnittet i verktygskonsolen är egenskapen &quot;
 
 * `cq:template="/libs/wcm/core/templates/designpage"`
 
