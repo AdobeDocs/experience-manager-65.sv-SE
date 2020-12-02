@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 525c4afc-e109-4546-b78c-1efee63edc43
 translation-type: tm+mt
 source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+workflow-type: tm+mt
+source-wordcount: '146'
+ht-degree: 0%
 
 ---
 
@@ -19,11 +22,12 @@ source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 
 Detta är några saker att tänka på när du kör administrationskonsolen:
 
-* Om du öppnar administrationskonsolen via URL:en `https://[hostname]:'port'/adminui`får det angivna värdnamnet inte innehålla understreck. I annat fall kanske länkar till vissa delar av administrationskonsolen inte fungerar som de ska.
+* Om du öppnar administrationskonsolen med URL:en `https://[hostname]:'port'/adminui` får det angivna värdnamnet inte innehålla understreck. I annat fall kanske länkar till vissa delar av administrationskonsolen inte fungerar som de ska.
 * Om du kör administrationskonsolen i Utforskaren i Windows på ett japanskt operativsystem kan du få följande problem:
 
    * När du klickar på en länk återgår du till inloggningssidan i stället för till den förväntade länken.
    * Om du klickar på en länk visas ett behörighetsfel.
+
    Det bästa sättet är att köra administrationskonsolen från en annan webbläsare, till exempel Mozilla Firefox, för att säkerställa att inga länkar fungerar.
 
 * Använd inte omvända snedstreck () vid sökningar i administrationskonsolen.
