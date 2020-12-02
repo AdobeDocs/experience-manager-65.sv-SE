@@ -1,8 +1,8 @@
 ---
 title: Felsöka AEM vid redigering
 seo-title: Felsöka AEM vid redigering
-description: Problem som kan uppstå när du använder AEM
-seo-description: Problem som kan uppstå när du använder AEM
+description: Vissa problem som kan uppstå när du använder AEM
+seo-description: Vissa problem som kan uppstå när du använder AEM
 uuid: 99af51ea-8628-4811-83f2-ab3f88f0279e
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,23 +11,26 @@ content-type: reference
 discoiquuid: da0a5644-2e1d-4394-a6aa-11bb41406ba6
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '307'
+ht-degree: 10%
 
 ---
 
 
-# Felsöka AEM vid redigering{#troubleshooting-aem-when-authoring}
+# Felsökning AEM vid redigering{#troubleshooting-aem-when-authoring}
 
 I följande avsnitt beskrivs några problem som du kan stöta på när du använder AEM, tillsammans med förslag på hur du felsöker dem.
 
 >[!NOTE]
 >
->När du får problem är det också värt att kontrollera listan med [kända fel](/help/release-notes/known-issues.md) för din instans (release- och servicepaket).
+>När du får problem är det också värt att kontrollera listan [Kända fel](/help/release-notes/known-issues.md) för din instans (release- och service packs).
 
 >[!NOTE]
 >
->Användare som har administratörsbehörighet och som vill felsöka problem med AEM kan använda de felsökningsmetoder som beskrivs i [Felsökning för AEM (för administratörer)](/help/sites-administering/troubleshoot.md). Om du inte har tillräcklig behörighet kontaktar du systemadministratören för felsökning av AEM.
+>Användare som har administratörsbehörighet och som vill felsöka problem med AEM kan använda felsökningsmetoderna som beskrivs i [AEM (för administratörer)](/help/sites-administering/troubleshoot.md). Om du inte har tillräcklig behörighet kontaktar du systemadministratören om felsökning AEM.
 
-## Gammal sidversion finns fortfarande på publicerad webbplats {#old-page-version-still-on-published-site}
+## Den gamla sidversionen finns fortfarande på den publicerade webbplatsen {#old-page-version-still-on-published-site}
 
 * **Problem**:
 
@@ -42,7 +45,7 @@ I följande avsnitt beskrivs några problem som du kan stöta på när du använ
    * Här finns olika möjligheter:
    * Bekräfta att sidan har replikerats korrekt. Kontrollera sidstatus och, om det behövs, status för replikeringskön.
    * Rensa cacheminnet i den lokala webbläsaren och öppna sidan igen.
-   * Lägg till `?` i slutet av sid-URL:en. Exempel:
+   * Lägg till `?` i slutet av sid-URL:en. Till exempel:
 
       * `http://localhost:4502/sites.html/content?`
       * Detta begär sidan direkt från AEM och kringgår Dispatcher. Om du får den uppdaterade sidan är det en indikation på att du bör rensa Dispatcher-cachen.
