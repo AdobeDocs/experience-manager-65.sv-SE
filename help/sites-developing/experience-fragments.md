@@ -1,5 +1,5 @@
 ---
-title: Upplevelsefragment
+title: Experience Fragments
 seo-title: Upplevelsefragment
 description: Läs om hur du anpassar Experience Fragments.
 seo-description: Läs om hur du anpassar Experience Fragments.
@@ -12,37 +12,40 @@ discoiquuid: c02e713e-15f3-408b-879a-d5eb014aef02
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 25eff10d4be811774e7a25cebf7e0506acfd5b0b
+workflow-type: tm+mt
+source-wordcount: '1667'
+ht-degree: 0%
 
 ---
 
 
-# Upplevelsefragment{#experience-fragments}
+# Experience Fragments{#experience-fragments}
 
-## Grunderna {#the-basics}
+## Grundläggande {#the-basics}
 
-Ett [Experience Fragment](/help/sites-authoring/experience-fragments.md) är en grupp med en eller flera komponenter, inklusive innehåll och layout, som kan refereras till på sidor.
+En [Experience Fragment](/help/sites-authoring/experience-fragments.md) är en grupp med en eller flera komponenter, inklusive innehåll och layout, som kan refereras till på sidor.
 
-En Experience Fragment Master och/eller Variant använder:
+En Experience Fragment-Överordnad och/eller Variant använder:
 
 * `sling:resourceType` : `/libs/cq/experience-fragments/components/xfpage`
 
-Eftersom det inte finns något `/libs/cq/experience-fragments/components/xfpage/xfpage.html` återgår det till
+Eftersom det inte finns någon `/libs/cq/experience-fragments/components/xfpage/xfpage.html` återgår den till
 
-* `sling:resourceSuperType` : `wcm/foundation/components/page`
+* `sling:resourceSuperType` :  `wcm/foundation/components/page`
 
-## The Plain HTML Rendition {#the-plain-html-rendition}
+## Den vanliga HTML-återgivningen {#the-plain-html-rendition}
 
-Med hjälp av väljaren i URL:en kan du komma åt den vanliga HTML-återgivningen. `.plain.`
+Om du använder `.plain.`-väljaren i URL:en kan du komma åt den vanliga HTML-återgivningen.
 
 Det här är tillgängligt från webbläsaren, men det främsta syftet är att tillåta andra program (till exempel webbprogram från tredje part, anpassade mobilimplementeringar) att komma åt innehållet i Experience Fragment direkt, med enbart URL:en.
 
 Den rena HTML-återgivningen lägger till protokoll, värd och kontextsökväg till sökvägar som är:
 
-* av typen: `src`, `href`eller `action`
+* av typen: `src`, `href` eller `action`
 
-* eller avsluta med: `-src`eller `-href`
+* eller avsluta med: `-src` eller `-href`
 
-Exempel:
+Till exempel:
 
 `.../brooklyn-coat/master.plain.html`
 
@@ -50,15 +53,15 @@ Exempel:
 >
 >Länkar refererar alltid till publiceringsinstansen. De är avsedda att användas av tredje part, så länken anropas alltid från publiceringsinstansen, inte författaren.
 
-![xf-14](assets/xf-14.png)
+![xf-12](assets/xf-14.png)
 
-Väljaren för ren återgivning använder en transformator i stället för ytterligare skript. Sling Rewriter [](https://sling.apache.org/documentation/bundles/output-rewriting-pipelines-org-apache-sling-rewriter.html) används som transformator. Detta är konfigurerat på
+Väljaren för ren återgivning använder en transformator i stället för ytterligare skript. [Sling Rewriter](https://sling.apache.org/documentation/bundles/output-rewriting-pipelines-org-apache-sling-rewriter.html) används som transformator. Detta är konfigurerat på
 
 * `/libs/experience-fragments/config/rewriter/experiencefragments`
 
 ## Sociala variationer {#social-variations}
 
-Sociala varianter kan publiceras på sociala medier (text och bild). I AEM kan dessa sociala varianter innehålla komponenter. till exempel textkomponenter, bildkomponenter.
+Sociala varianter kan publiceras på sociala medier (text och bild). AEM kan dessa sociala varianter innehålla komponenter, till exempel textkomponenter, bildkomponenter.
 
 Bilden och texten för det sociala inlägget kan hämtas från alla bildresurstyper eller textresurstyper på alla djupnivåer (antingen i byggblocket eller layoutbehållaren).
 
@@ -83,11 +86,11 @@ Komponenter som inte använder den här konventionen kommer inte att beaktas.
 
 >[!CAUTION]
 >
->***Endast*** [redigerbara mallar](/help/sites-developing/page-templates-editable.md) stöds för Experience Fragments.
+>***Endast*** [redigerbara ](/help/sites-developing/page-templates-editable.md) mallar stöds för Experience Fragments.
 
 När du utvecklar en ny mall för Experience Fragments kan du följa standardmetoderna för en [redigerbar mall](/help/sites-developing/page-templates-editable.md).
 
-Om du vill skapa en upplevelsefragmentmall som identifieras av guiden **Skapa Experience Fragment** måste du följa någon av dessa regeluppsättningar:
+Om du vill skapa en upplevelsefragmentmall som identifieras av guiden **Skapa upplevelsefragment** måste du följa någon av dessa regeluppsättningar:
 
 1. Båda:
 
@@ -96,9 +99,11 @@ Om du vill skapa en upplevelsefragmentmall som identifieras av guiden **Skapa Ex
 
    1. Och mallens namn måste börja med:
       `experience-fragments`
-Detta gör att användare kan skapa upplevelsefragment i /content/experience-fragments eftersom den här mappens egenskap `cq:allowedTemplates` innehåller alla mallar som har namn som börjar med `experience-fragment`. Kunder kan uppdatera den här egenskapen så att den omfattar sina egna namngivningsscheman eller mallplatser.
+Detta gör att användare kan skapa upplevelsefragment i /content/experience-fragments som 
+`cq:allowedTemplates` i den här mappen innehåller alla mallar som har namn som börjar med  `experience-fragment`. Kunder kan uppdatera den här egenskapen så att den omfattar sina egna namngivningsscheman eller mallplatser.
 
-1. [Tillåtna mallar](/help/sites-authoring/experience-fragments.md#configure-allowed-templates-folder) kan konfigureras i Experience Fragments-konsolen.
+1. [Tillåtna ](/help/sites-authoring/experience-fragments.md#configure-allowed-templates-folder) mallar kan konfigureras i Experience Fragments-konsolen.
+
 <!--
 1. Add the template details manually in `cq:allowedTemplates` on the `/content/experience-fragment` node.
 -->
@@ -110,20 +115,20 @@ Detta gör att användare kan skapa upplevelsefragment i /content/experience-fra
 
 ## Komponenter för Experience Fragments {#components-for-experience-fragments}
 
-[Utveckla komponenter](/help/sites-developing/components.md) för användning med/i Experience Fragments följer standardrutiner.
+[Utveckla ](/help/sites-developing/components.md) komponenter för användning med/i Experience Fragments följer standardrutiner.
 
-Den enda ytterligare konfigurationen är att se till att komponenterna [tillåts i mallen, vilket uppnås med innehållsprincipen](/help/sites-developing/page-templates-editable.md#content-policies).
+Den enda ytterligare konfigurationen är att se till att komponenterna är [tillåtna i mallen, vilket uppnås med innehållsprincipen](/help/sites-developing/page-templates-editable.md#content-policies).
 
-## Experience Fragment Link Rewriter Provider - HTML {#the-experience-fragment-link-rewriter-provider-html}
+## Experience Fragment Link Rewriter-providern - HTML {#the-experience-fragment-link-rewriter-provider-html}
 
-I AEM kan du skapa Experience Fragments. An Experience Fragment:
+I AEM kan ni skapa Experience Fragments. An Experience Fragment:
 
 * består av en grupp komponenter tillsammans med en layout,
-* kan finnas oberoende av en AEM-sida.
+* kan finnas oberoende av en AEM.
 
-Ett av användningsområdena för sådana grupper är att bädda in innehåll i kontaktpunkter från tredje part, som Adobe Target.
+Ett av användningsområdena för sådana grupper är att bädda in innehåll i kontaktpunkter från tredje part, till exempel Adobe Target.
 
-### Omskrivning av standardlänk {#default-link-rewriting}
+### Standardlänkreskrivning {#default-link-rewriting}
 
 Med funktionen [Exportera till mål](/help/sites-administering/experience-fragments-target.md) kan du:
 
@@ -131,58 +136,59 @@ Med funktionen [Exportera till mål](/help/sites-administering/experience-fragme
 * lägga till komponenter i den,
 * och sedan exportera det som ett Adobe Target-erbjudande, antingen i HTML-format eller JSON-format.
 
-Den här funktionen kan [aktiveras på en författarinstans av AEM](/help/sites-administering/experience-fragments-target.md#Prerequisites). Det kräver en giltig Adobe Target-konfiguration och konfigurationer för länkutökningen.
+Den här funktionen kan vara [aktiverad på en författarinstans av AEM](/help/sites-administering/experience-fragments-target.md#Prerequisites). Det kräver en giltig Adobe Target-konfiguration och konfigurationer för länkutökningen.
 
 Länkutjämnaren används för att fastställa rätt URL:er som behövs när du skapar HTML-versionen av målerbjudandet, som sedan skickas till Adobe Target. Detta är nödvändigt eftersom Adobe Target kräver att alla länkar i Target HTML-erbjudandet är tillgängliga för allmänheten. det innebär att alla resurser som länkarna refererar till, och själva Experience Fragment, måste publiceras innan de kan användas.
 
-Som standard skickas en begäran till en anpassad Sling-väljare i AEM när du skapar ett mål-HTML-erbjudande. Den här väljaren anropas `.nocloudconfigs.html`. Som namnet antyder skapas en vanlig HTML-återgivning av ett Experience Fragment, men inte molnkonfigurationer (vilket skulle vara överflödig information).
+När du skapar ett mål-HTML-erbjudande skickas som standard en begäran till en anpassad Sling-väljare i AEM. Den här väljaren kallas `.nocloudconfigs.html`. Som namnet antyder skapas en vanlig HTML-återgivning av ett Experience Fragment, men inte molnkonfigurationer (vilket skulle vara överflödig information).
 
 När du har genererat HTML-sidan ändrar Sling Rewriter-flödet utdata:
 
-1. Elementen `html`, `head`och `body` ersätts med `div` element. Elementen `meta`, `noscript` och `title` tas bort (de är underordnade element till det ursprungliga `head` elementet och beaktas inte när det ersätts av `div` elementet).
+1. Elementen `html`, `head` och `body` ersätts med `div`-element. Elementen `meta`, `noscript` och `title` tas bort (de är underordnade element till det ursprungliga `head`-elementet och beaktas inte när det ersätts av `div`-elementet).
 
    Detta görs för att säkerställa att HTML-målerbjudandet kan inkluderas i målaktiviteter.
 
 1. AEM ändrar alla interna länkar i HTML-koden så att de pekar på en publicerad resurs.
 
-   För att fastställa vilka länkar som ska ändras följer AEM det här mönstret för attribut för HTML-element:
+   Om du vill ta reda på vilka länkar som ska ändras följer AEM det här mönstret för attribut för HTML-element:
 
    1. `src` attributes
    1. `href` attributes
    1. `*-src` attribut (t.ex. data-src, custom-src)
-   1. `*-href` attribut (som `data-href`, `custom-href`, `img-href`osv.)
+   1. `*-href` attribut (som  `data-href`,  `custom-href`,  `img-href`osv.)
+
    >[!NOTE]
    >
-   >I de flesta fall är de interna länkarna i HTML relativa länkar, men det kan finnas fall när anpassade komponenter tillhandahåller fullständiga URL:er i HTML. Som standard ignorerar AEM dessa fullständiga URL:er och inga ändringar görs.
+   >I de flesta fall är de interna länkarna i HTML relativa länkar, men det kan finnas fall när anpassade komponenter tillhandahåller fullständiga URL:er i HTML. Som standard ignorerar AEM dessa fullständigt ifyllda URL:er och gör inga ändringar.
 
-   Länkarna i dessa attribut körs via AEM Link Externalizer `publishLink()` för att återskapa URL:en som om den fanns på en publicerad instans, och som sådan, offentligt tillgänglig.
+   Länkarna i de här attributen körs via AEM Link Externalizer `publishLink()` för att återskapa URL:en som om den fanns på en publicerad instans, och som sådan, offentligt tillgänglig.
 
 När du använder en körklar implementering bör den process som beskrivs ovan vara tillräcklig för att generera målerbjudandet från Experience Fragment och sedan exportera det till Adobe Target. Det finns dock vissa användningsfall som inte har beaktats i denna process. bland annat följande:
 
 * Samlingsmappning är bara tillgängligt på publiceringsinstansen
 * Dispatcher-omdirigeringar
 
-I sådana fall tillhandahåller AEM länkskrivarens providergränssnitt.
+I sådana fall AEM tillhandahåller länkskrivarens providergränssnitt.
 
-### Länk Rewriter-providergränssnitt {#link-rewriter-provider-interface}
+### Länkomskrivarens providergränssnitt {#link-rewriter-provider-interface}
 
 >[!NOTE]
 >
->Det här gränssnittet introducerades i [AEM 6.5 SP1 (6.5.1.0)](/help/release-notes/sp-release-notes.md).
+>Gränssnittet introducerades i [AEM 6.5 SP1 (6.5.1.0)](/help/release-notes/sp-release-notes.md).
 
-För mer komplicerade fall, som inte täcks av [standardinställningen](#default-link-rewriting), har AEM länkskrivarens providergränssnitt. Det här är ett `ConsumerType` gränssnitt som du kan implementera i dina paket som en tjänst. Den åsidosätter de ändringar som AEM utför på interna länkar i ett HTML-erbjudande som återges från ett Experience Fragment. Med det här gränssnittet kan du anpassa processen för att skriva om interna HTML-länkar så att de passar era affärsbehov.
+För mer komplicerade fall, som inte täcks av [standard](#default-link-rewriting), erbjuder AEM Länkskrivarens providergränssnitt. Det här är ett `ConsumerType`-gränssnitt som du kan implementera i dina paket som en tjänst. Den åsidosätter de ändringar AEM utför på interna länkar i ett HTML-erbjudande som återges från ett Experience Fragment. Med det här gränssnittet kan du anpassa processen för att skriva om interna HTML-länkar så att de passar era affärsbehov.
 
 Exempel på användningsområden för implementering av det här gränssnittet som en tjänst är:
 
 * Samlingsmappningar är aktiverade för publiceringsinstanserna, men inte för författarinstansen
 * En dispatcher eller liknande teknik används för att omdirigera URL:er internt
-* Det finns `sling:alias mechanisms` resurser på plats
+* Det finns `sling:alias mechanisms` på plats för resurser
 
 >[!NOTE]
 >
 >Det här gränssnittet bearbetar bara de interna HTML-länkarna från det genererade Target-erbjudandet.
 
-Länkskrivarens providergränssnitt ( `ExperienceFragmentLinkRewriterProvider`) ser ut så här:
+Länkskrivarens providergränssnitt ( `ExperienceFragmentLinkRewriterProvider`) är följande:
 
 ```java
 public interface ExperienceFragmentLinkRewriterProvider {
@@ -196,13 +202,13 @@ public interface ExperienceFragmentLinkRewriterProvider {
 }
 ```
 
-### Så här använder du providergränssnittet Länkskrivare {#how-to-use-the-link-rewriter-provider-interface}
+### Så här använder du providergränssnittet för Länkskrivare {#how-to-use-the-link-rewriter-provider-interface}
 
 Om du vill använda gränssnittet måste du först skapa ett paket som innehåller en ny tjänstkomponent som implementerar länkskrivarprovidergränssnittet.
 
 Den här tjänsten kommer att användas för att ansluta till Experience Fragment Export till Target för att få tillgång till de olika länkarna.
 
-Exempel, `ComponentService`:
+Till exempel, `ComponentService`:
 
 ```java
 import com.adobe.cq.xf.ExperienceFragmentLinkRewriterProvider;
@@ -247,7 +253,7 @@ Du måste ange för systemet om länkarna behöver skrivas om när du anropar Ex
 
 `shouldRewrite(ExperienceFragmentVariation experienceFragment);`
 
-Exempel:
+Till exempel:
 
 ```java
 @Override
@@ -278,7 +284,8 @@ För den Experience Fragment-variation som påverkas av omskrivningsprocessen fo
 Som indata tar metoden emot parametrarna:
 
 * `link`
-Representationen `String` av länken som bearbetas just nu. Detta är vanligtvis en relativ URL som pekar på resursen på författarinstansen.
+The 
+`String` återgivning av länken som bearbetas just nu. Detta är vanligtvis en relativ URL som pekar på resursen på författarinstansen.
 
 * `tag`
 Namnet på det HTML-element som bearbetas.
@@ -292,7 +299,7 @@ Om till exempel systemet Exportera till mål bearbetar det här elementet kan du
 <link rel="stylesheet" href="/etc.clientlibs/foundation/clientlibs/main.css" type="text/css">
 ```
 
-Anropet till `rewriteLink()` metoden görs med följande parametrar:
+Anropet till metoden `rewriteLink()` görs med följande parametrar:
 
 ```java
 rewriteLink(link="/etc.clientlibs/foundation/clientlibs/main.css", tag="link", attribute="href" )
@@ -300,7 +307,7 @@ rewriteLink(link="/etc.clientlibs/foundation/clientlibs/main.css", tag="link", a
 
 När du skapar tjänsten kan du fatta beslut baserat på angivna indata och sedan skriva om länken i enlighet med detta.
 
-Vi vill till exempel ta bort den `/etc.clientlibs` delen av URL:en och lägga till den externa domänen. För att förenkla saker och ting anser vi att vi har tillgång till en resurslösare för din tjänst, som i `rewriteLinkExample2`:
+Vi vill till exempel ta bort delen `/etc.clientlibs` av URL:en och lägga till den externa domänen. För att förenkla allt anser vi att vi har tillgång till en resurslösare för din tjänst, som i `rewriteLinkExample2`:
 
 >[!NOTE]
 >
@@ -333,14 +340,14 @@ public String rewriteLink(String link, String tag, String attribute) {
 
 >[!NOTE]
 >
->Om metoden ovan returneras `null`lämnar systemet Exportera till mål länken som den är, en relativ länk till en resurs.
+>Om metoden ovan returnerar `null` lämnar systemet Exportera till mål länken som den är, en relativ länk till en resurs.
 
-#### Prioriteringar - getPriority {#priorities-getpriority}
+#### Prioriteter - getPriority {#priorities-getpriority}
 
-Det är inte ovanligt att flera tjänster behövs för olika typer av upplevelsefragment, eller till och med för att ha en allmän tjänst som hanterar externalisering och mappning för alla Experience Fragments. I dessa fall kan konflikter uppstå om vilken tjänst som ska användas, så AEM ger möjlighet att definiera **prioriteringar** för olika tjänster. Prioriteringarna anges med hjälp av metoden:
+Det är inte ovanligt att flera tjänster behövs för olika typer av upplevelsefragment, eller till och med för att ha en allmän tjänst som hanterar externalisering och mappning för alla Experience Fragments. I dessa fall kan konflikter uppstå om vilken tjänst som ska användas, så AEM ger möjlighet att definiera **prioritet** för olika tjänster. Prioriteringarna anges med hjälp av metoden:
 
 * `getPriority()`
 
-Den här metoden tillåter användning av flera tjänster där `shouldRewrite()` metoden returnerar true för samma Experience Fragment. Tjänsten som returnerar det högsta antalet från sin `getPriority()`metod är den tjänst som hanterar Experience Fragment-variationen.
+Den här metoden tillåter användning av flera tjänster där metoden `shouldRewrite()` returnerar true för samma Experience Fragment. Tjänsten som returnerar det högsta antalet från sin `getPriority()`metod är den tjänst som hanterar Experience Fragment-variationen.
 
-Du kan till exempel ha en `GenericLinkRewriterProvider` som hanterar den grundläggande mappningen för alla Experience Fragments och när `shouldRewrite()` metoden returnerar `true` för alla Experience Fragment Variations. För flera specifika Experience Fragments kanske du vill ha specialhantering, så i det här fallet kan du ange en `SpecificLinkRewriterProvider` för vilken `shouldRewrite()` metoden bara returnerar true för vissa Experience Fragment-variationer. För att vara säker på att `SpecificLinkRewriterProvider` väljs för att hantera dessa Experience Fragment-variationer måste den i sin `getPriority()` metod returnera ett högre tal än `GenericLinkRewriterProvider.`
+Du kan till exempel ha en `GenericLinkRewriterProvider` som hanterar den grundläggande mappningen för alla Experience Fragments och när metoden `shouldRewrite()` returnerar `true` för alla Experience Fragment Variations. För flera specifika Experience Fragments kanske du vill ha specialhantering, så i det här fallet kan du ange en `SpecificLinkRewriterProvider` som `shouldRewrite()`-metoden bara returnerar true för vissa Experience Fragment-variationer. För att vara säker på att `SpecificLinkRewriterProvider` är valt att hantera dessa Experience Fragment-variationer måste det i sin `getPriority()`-metod returnera ett högre tal än `GenericLinkRewriterProvider.`
