@@ -18,9 +18,9 @@ ht-degree: 2%
 ---
 
 
-# Konfigurera din sida för gruppredigering av sidegenskaper {#configuring-your-page-for-bulk-editing-of-page-properties}
+# Konfigurera sidan för massredigering av sidegenskaper {#configuring-your-page-for-bulk-editing-of-page-properties}
 
-[Med gruppredigering av sidegenskaper](/help/sites-authoring/editing-page-properties.md#from-the-sites-console-multiple-pages) kan du redigera egenskaperna för flera sidor samtidigt.
+[Med gruppredigering av sidegenskaper kan du ](/help/sites-authoring/editing-page-properties.md#from-the-sites-console-multiple-pages) redigera egenskaperna för flera sidor samtidigt.
 
 På grund av möjligheten att det finns olika värden är sidegenskaperna inte aktiverade för massredigering som standard. De måste vara uttryckligen tillåtna (aktiverade). När du definierar vilka sidegenskaper som ska vara tillgängliga för massredigering måste du ta hänsyn till vissa konsekvenser, till exempel:
 
@@ -43,7 +43,7 @@ På grund av möjligheten att det finns olika värden är sidegenskaperna inte a
 
 >[!NOTE]
 >
->Massredigering är också tillgängligt för Assets. Den är mycket lik, men skiljer sig på några punkter. Mer information finns i [Redigera egenskaper för flera resurser](/help/assets/metadata.md) . Du kan anpassa fälten i redigeraren för massmetadata för resurser med [schemaredigeraren](/help/assets/metadata-schemas.md).
+>Massredigering är också tillgängligt för Assets. Den är mycket lik, men skiljer sig på några punkter. Mer information finns i [Redigera egenskaper för flera resurser](/help/assets/metadata.md). Du kan anpassa fälten i redigeraren för massmetadata för resurser med [schemaredigeraren](/help/assets/metadata-schemas.md).
 
 ## Aktivera ett fält {#enabling-a-field}
 
@@ -70,16 +70,16 @@ Fält är aktiverade i sidkomponenten (*inte* i mallen):
 
    >[!NOTE]
    >
-   >I det här exemplet antas att kärnkomponenterna har installerats på instansen, vilket är fallet om instansen körs med exempelinnehållet We.Retail. Mer information finns i dokumentationen [för](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) kärnkomponenter.
+   >I det här exemplet antas att kärnkomponenterna har installerats på instansen, vilket är fallet om instansen körs med exempelinnehållet We.Retail. Mer information finns i [dokumentationen för kärnkomponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html).
 
-1. Navigera till det obligatoriska fältet i `cq:dialog` definitionen.
+1. Navigera till det obligatoriska fältet i definitionen `cq:dialog`.
 1. Definiera följande egenskap på fältnoden:
 
-   * **Namn**: `allowBulkEdit`
-   * **Typ**: `Boolean`
-   * **Värde**: `true`
+   * **Namn**:  `allowBulkEdit`
+   * **Typ**:  `Boolean`
+   * **Värde**:  `true`
 
-   Exempel: för standardkomponenten [för](/help/sites-authoring/default-components-foundation.md)sidans grund:
+   Till exempel för standardsidan [Foundation component](/help/sites-authoring/default-components-foundation.md):
 
    `/libs/foundation/components/page`
 
@@ -89,7 +89,7 @@ Fält är aktiverade i sidkomponenten (*inte* i mallen):
 
    >[!CAUTION]
    >
-   >Du ***får*** inte ändra något i `/libs` banan.
+   >Du ***får*** inte ändra något i `/libs`-sökvägen.
    >
    >Detta beror på att innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan mycket väl skrivas över när du använder en snabbkorrigering eller ett funktionspaket).
    >
