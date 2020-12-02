@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: a89ab508-173f-4b1c-88d9-ef944af4d9ae
 translation-type: tm+mt
 source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+workflow-type: tm+mt
+source-wordcount: '1367'
+ht-degree: 0%
 
 ---
 
@@ -32,11 +35,11 @@ En *säkerhetsinställning* styr säkerhet och behörigheter för filer som konv
 
 ### Säkerhetsinställningar {#security-settings}
 
-De här inställningarna konfigurerar kompatibilitet och kryptering. Instruktioner om hur du kommer åt teckensnittsinställningarna finns i [Skapa eller redigera en skyddsinställning](configuring-security-settings.md#create-or-edit-a-security-setting).
+De här inställningarna konfigurerar kompatibilitet och kryptering. Instruktioner om hur du får åtkomst till teckensnittsinställningarna finns i [Skapa eller redigera en säkerhetsinställning](configuring-security-settings.md#create-or-edit-a-security-setting).
 
-**Kompatibilitet:** Anger vilken typ av kryptering som ska användas för att öppna ett lösenordsskyddat dokument. För alternativet Acrobat 3.0 och senare används en låg krypteringsnivå, men för de andra alternativen används en hög krypteringsnivå:
+**Kompatibilitet:** Anger krypteringstypen för att öppna ett lösenordsskyddat dokument. För alternativet Acrobat 3.0 och senare används en låg krypteringsnivå, men för de andra alternativen används en hög krypteringsnivå:
 
-**Acrobat 3.0 och senare:** Använder låg kryptering (40-bitars RC4).
+**Acrobat 3.0 och senare:** Använder låg krypteringsnivå (40-bitars RC4).
 
 **Acrobat 5.0 och senare:** Använder hög kryptering (128-bitars RC4).
 
@@ -46,7 +49,7 @@ De här inställningarna konfigurerar kompatibilitet och kryptering. Instruktion
 
 **Acrobat 9.0 och senare:** Använder hög kryptering (256-bitars AES). Med det här alternativet kan du aktivera metadata för sökning och kryptering av endast bifogade filer.
 
-En tidigare version av Acrobat kan inte öppna ett PDF-dokument som har en högre kompatibilitetsinställning. Om du t.ex. väljer alternativet Acrobat 7.0 och senare kan du inte öppna dokumentet i Acrobat 6.0 eller tidigare.
+En tidigare version av Acrobat kan inte öppna ett PDF-dokument med en högre kompatibilitetsinställning. Om du t.ex. väljer alternativet Acrobat 7.0 och senare kan du inte öppna dokumentet i Acrobat 6.0 eller tidigare.
 
 Kontrollera att kompatibilitetsnivån är konsekvent med PDF-kompatibilitetsnivån för samma källa. Om du till exempel har en bevakad mapp som är konfigurerad att använda standardinställningen för PDF, som är kompatibel med Acrobat 5.0 eller senare, får din kompatibilitetsnivå inte vara högre än Acrobat 5.0.
 
@@ -54,11 +57,11 @@ Kontrollera att kompatibilitetsnivån är konsekvent med PDF-kompatibilitetsniv�
 
 **Ingen kryptering:** Krypterar inte någon del av dokumentet.
 
-**Kryptera allt innehåll i dokumentet:** Krypterar dokumentet och dokumentets metadata. När det här alternativet är markerat kan sökmotorer inte komma åt dokumentets metadata.
+**Kryptera allt dokumentinnehåll:** Krypterar dokumentet och dokumentets metadata. När det här alternativet är markerat kan sökmotorer inte komma åt dokumentets metadata.
 
-**Kryptera allt innehåll i dokumentet utom metadata (Acrobat6 och senare):** Krypterar innehållet i ett dokument men tillåter ändå sökmotorer att få åtkomst till dokumentets metadata. Det här alternativet är bara tillgängligt när alternativet Kompatibilitet är inställt på Acrobat 6.0 eller senare, Acrobat 7.0 eller senare eller Acrobat 9.0 eller senare.
+**Kryptera allt innehåll i dokumentet utom metadata (Acrobat 6 och senare):** Krypterar innehållet i ett dokument men tillåter ändå sökmotorer att få åtkomst till dokumentets metadata. Det här alternativet är bara tillgängligt när du har valt Acrobat 6.0 eller senare, Acrobat 7.0 eller senare eller Acrobat 9.0 eller senare.
 
-**Kryptera endast bifogade filer (Acrobat 7 och senare):** Användarna kan öppna dokumentet utan lösenord men måste ange ett lösenord för att kunna öppna bifogade filer. Det här alternativet är bara tillgängligt när alternativet Kompatibilitet är inställt på Acrobat 7.0 eller senare eller på Acrobat 9.0 eller senare.
+**Kryptera endast bifogade filer (Acrobat 7 och senare):** Användare kan öppna dokumentet utan lösenord men måste ange ett lösenord för att kunna öppna bifogade filer. Det här alternativet är bara tillgängligt när du har angett Kompatibilitet till Acrobat 7.0 eller senare eller till Acrobat 9.0 eller senare.
 
 De här inställningarna konfigurerar lösenordsskyddet:
 
@@ -72,51 +75,51 @@ De här inställningarna konfigurerar lösenordsskyddet:
 
 **Skriv lösenordet för dokumentöppning igen:** Ser till att lösenordet för dokumentöppning är korrekt.
 
-**Kräv ett lösenord för att öppna bifogade filer:** Aktiverar lösenordsalternativen. Det här alternativet är endast tillgängligt när alternativet Kompatibilitet är inställt på Acrobat 7.0 eller senare eller på Acrobat 9.0 eller senare och alternativet Dokumentbegränsning är inställt på Kryptera bara bifogade filer.
+**Kräv ett lösenord för att öppna bifogade filer:** Aktiverar lösenordsalternativen. Det här alternativet är endast tillgängligt när alternativet Kompatibilitet är inställt på Acrobat 7.0 eller senare eller på Acrobat 9.0 eller senare och alternativet Dokumentbegränsning är inställt på Kryptera endast bifogade filer.
 
-**Lösenord för att öppna bifogad fil:** Ser till att ett lösenord krävs för att öppna en bifogad fil. Användarna kan öppna dokumentet utan lösenord. Det här alternativet är endast tillgängligt när alternativet Kompatibilitet är inställt på Acrobat 7.0 eller senare eller på Acrobat 9.0 eller senare och alternativet Dokumentbegränsning är inställt på Kryptera bara bifogade filer.
+**Lösenord för att öppna bifogad fil:** Ser till att ett lösenord krävs för att öppna en bifogad fil. Användarna kan öppna dokumentet utan lösenord. Det här alternativet är endast tillgängligt när alternativet Kompatibilitet är inställt på Acrobat 7.0 eller senare eller på Acrobat 9.0 eller senare och alternativet Dokumentbegränsning är inställt på Kryptera endast bifogade filer.
 
-**Skriv den bifogade filen igen:** Ser till att lösenordet är korrekt. Det här alternativet är endast tillgängligt när alternativet Kompatibilitet är inställt på Acrobat 7.0 eller senare eller på Acrobat 9.0 eller senare och alternativet Dokumentbegränsning är inställt på Kryptera bara bifogade filer.
+**Skriv in bifogad fil igen:** Ser till att lösenordet är korrekt. Det här alternativet är endast tillgängligt när alternativet Kompatibilitet är inställt på Acrobat 7.0 eller senare eller på Acrobat 9.0 eller senare och alternativet Dokumentbegränsning är inställt på Kryptera endast bifogade filer.
 
 De här alternativen konfigurerar behörigheter:
 
-**Använd ett lösenord för att begränsa utskrift och redigering av dokumentet och dess säkerhetsinställningar:** Aktiverar behörighetsbegränsningar.
+**Använd ett lösenord för att begränsa utskrift och redigering av dokumentet och dess skyddsinställningar:** Aktiverar behörighetsbegränsningar.
 
-**Lösenord för behörighet:** Begränsar användare från att skriva ut och redigera. Användarna kan inte ändra de här säkerhetsinställningarna såvida de inte skriver det lösenord som du anger. Du kan inte använda samma lösenord som används för lösenord för att öppna dokument. När du anger ett behörighetslösenord kan bara de personer som skriver lösenordet ändra säkerhetsinställningarna. Om PDF-dokumentet har båda typerna av lösenord öppnas det i båda lösenorden. En användare kan dock bara ange eller ändra de begränsade funktionerna med behörighetslösenordet. Om PDF-dokumentet bara har behörighetslösenordet eller om en användare öppnar dokumentet med hjälp av lösenordet för dokumentöppning, visas lösenordsmeddelandet när användaren försöker ändra säkerhetsinställningarna.
+**Lösenord för behörighet:** hindrar användare från att skriva ut och redigera. Användarna kan inte ändra de här säkerhetsinställningarna såvida de inte skriver det lösenord som du anger. Du kan inte använda samma lösenord som används för lösenord för att öppna dokument. När du anger ett behörighetslösenord kan bara de personer som skriver lösenordet ändra säkerhetsinställningarna. Om PDF-dokumentet har båda typerna av lösenord öppnas det i båda lösenorden. En användare kan dock bara ange eller ändra de begränsade funktionerna med behörighetslösenordet. Om PDF-dokumentet bara har behörighetslösenordet eller om en användare öppnar dokumentet med hjälp av lösenordet för dokumentöppning, visas lösenordsmeddelandet när användaren försöker ändra säkerhetsinställningarna.
 
-**Ange lösenordet för behörighet igen:** Ser till att behörighetslösenordet är korrekt.
+**Skriv lösenordet för behörighet igen:** ser till att lösenordet för behörighet är korrekt.
 
 **Tillåtna utskrifter:** Anger utskriftskvaliteten för PDF-dokumentet:
 
-**Ingen:** Användaren kan inte skriva ut dokumentet.
+**Inget:** Förhindrar att användare skriver ut dokumentet.
 
-**Låg upplösning (150 dpi):** Tillåter användare att skriva ut dokumentet med en upplösning på högst 150 dpi. Utskriften kan ta längre tid eftersom varje sida skrivs ut som en bitmappsbild. Det här alternativet är bara tillgängligt om du har valt en hög krypteringsnivå (Acrobat 5.0, 6.0, 7.0 eller 9.0).
+**Låg upplösning (150 dpi):** Tillåter användare att skriva ut dokumentet med en upplösning som inte överstiger 150 dpi. Utskriften kan ta längre tid eftersom varje sida skrivs ut som en bitmappsbild. Det här alternativet är bara tillgängligt om du har valt en hög krypteringsnivå (Acrobat 5.0, 6.0, 7.0 eller 9.0).
 
 **Hög upplösning:** Användare kan skriva ut med valfri upplösning och dirigera högkvalitativa vektorutdata till PostScript-skrivare och andra skrivare som stöder avancerade högkvalitativa utskriftsfunktioner.
 
 **Tillåtna ändringar:** Definierar vilka redigeringsåtgärder som tillåts i PDF-dokumentet:
 
-**Ingen:** Hindrar användare från att ändra dokumentet, inklusive fylla i signatur- och formulärfält.
+**Inget:** Hindrar användare från att ändra dokumentet, inklusive fylla i signatur- och formulärfält.
 
-**Infoga, ta bort och rotera sidor:** Användare kan infoga, ta bort och rotera sidor samt skapa bokmärken och miniatyrsidor. Det här alternativet är bara tillgängligt om du har valt en hög krypteringsnivå (Acrobat 5.0, 6.0, 7.0 eller 9.0).
+**Infoga, ta bort och rotera sidor:** Låter användarna infoga, ta bort och rotera sidor samt skapa bokmärken och miniatyrsidor. Det här alternativet är bara tillgängligt om du har valt en hög krypteringsnivå (Acrobat 5.0, 6.0, 7.0 eller 9.0).
 
-**Fylla i formulärfält och signera befintliga signaturfält:** Tillåter användare att fylla i formulär och lägga till digitala signaturer. Användarna kan dock inte lägga till kommentarer eller skapa formulärfält. Det här alternativet är bara tillgängligt om du har valt en hög krypteringsnivå (Acrobat 5.0, 6.0, 7.0 eller 9.0).
+**Fylla i formulärfält och signera befintliga signaturfält:** Låter användarna fylla i formulär och lägga till digitala signaturer. Användarna kan dock inte lägga till kommentarer eller skapa formulärfält. Det här alternativet är bara tillgängligt om du har valt en hög krypteringsnivå (Acrobat 5.0, 6.0, 7.0 eller 9.0).
 
-**Kommentera, fylla i formulärfält och signera befintliga signaturfält:** Tillåter användare att fylla i formulär och lägga till digitala signaturer och kommentarer.
+**Kommentera, fylla i formulärfält och signera befintliga signaturfält:** Låter användarna fylla i formulär och lägga till digitala signaturer och kommentarer.
 
-**Sidlayout, slutredigering, ifyllning av formulärfält och signeringBefintliga signaturfält:** Användare kan infoga, rotera eller ta bort sidor och skapa bokmärken eller miniatyrbilder, fylla i formulär och lägga till digitala signaturer. Det här alternativet tillåter inte användare att skapa formulärfält. Det här alternativet är bara tillgängligt om du har valt en låg krypteringsnivå (Acrobat 3.0).
+**Sidlayout, slutredigering, ifyllning av formulärfält och signering av befintliga signaturfält:** Låter användarna infoga, rotera eller ta bort sidor och skapa bokmärken eller miniatyrbilder, fylla i formulär och lägga till digitala signaturer. Det här alternativet tillåter inte användare att skapa formulärfält. Det här alternativet är bara tillgängligt om du har valt en låg krypteringsnivå (Acrobat 3.0).
 
-**Alla utom sidor som extraheras:** Tillåter användare att ändra dokumentet med någon metod i listan Ändringar tillåtna, förutom att ta bort sidor.
+**Valfritt utom att extrahera sidor:** Låter användare ändra dokumentet med någon metod i Tillåtelselista Ändringar, förutom att ta bort sidor.
 
-**Aktivera kopiering av text, bilder och annat innehåll:** Tillåter användare att markera och kopiera innehållet i PDF-dokumentet. Verktyg som behöver tillgång till innehållet i en PDF-fil, t.ex. Acrobat Catalog, kan också komma åt innehållet. Det här alternativet är bara tillgängligt om du har valt en hög krypteringsnivå.
+**Aktivera kopiering av text, bilder och annat innehåll:** Låter användarna markera och kopiera innehållet i PDF-dokumentet. Det ger även verktyg som behöver ha tillgång till innehållet i en PDF-fil, t.ex. Acrobat Catalog, tillgång till innehållet. Det här alternativet är bara tillgängligt om du har valt en hög krypteringsnivå.
 
-**Aktivera textåtkomst för skärmläsarenheter för synskadade:** Låter användare med synnedsättning läsa dokumentet med skärmläsare. Användarna kan dock inte kopiera eller extrahera dokumentinnehållet. Det här alternativet är bara tillgängligt om du har valt en hög krypteringsnivå.
+**Aktivera textåtkomst för skärmläsarenheter med nedsatt syn:** Gör att användare med nedsatt syn kan läsa dokumentet med skärmläsare. Användarna kan dock inte kopiera eller extrahera dokumentinnehållet. Det här alternativet är bara tillgängligt om du har valt en hög krypteringsnivå.
 
 ## Ta bort en säkerhetsinställning {#delete-a-security-setting}
 
 Du kan ta bort en säkerhetsinställning om den inte längre behövs. Förkonfigurerade säkerhetsinställningar kan dock inte tas bort.
 
-1. I administrationskonsolen klickar du på **[!UICONTROL Tjänster > PDF-generator > Skyddsinställningar]**.
+1. Klicka på **[!UICONTROL Services > PDF Generator > Security Settings]** i administrationskonsolen.
 1. Markera kryssrutan bredvid inställningen som ska tas bort. Du kan välja flera inställningar.
-1. Klicka på **[!UICONTROL Ta bort]** och klicka på **[!UICONTROL Ta bort]** igen på sidan **[!UICONTROL Ta bort bekräftelse]** .
+1. Klicka på **[!UICONTROL Delete]** och klicka på **[!UICONTROL Delete]** igen på sidan **[!UICONTROL Delete Confirmation]**.
 
