@@ -22,7 +22,7 @@ ht-degree: 3%
 
 ## Översikt {#overview}
 
-Sökfunktionen är en viktig funktion i AEM Communities. Förutom sökfunktionerna i [AEM](../../help/sites-deploying/queries-and-indexing.md) erbjuder AEM Communities [UGC-söknings-API](#ugc-search-api) för sökning efter användargenererat innehåll (UGC). UGC har unika egenskaper eftersom de anges och lagras separat från andra AEM och användardata.
+Sökfunktionen är en viktig funktion i AEM Communities. Förutom funktionerna [AEM plattformssökning](../../help/sites-deploying/queries-and-indexing.md) erbjuder AEM Communities [UGC-söknings-API](#ugc-search-api) för sökning efter användargenererat innehåll (UGC). UGC har unika egenskaper eftersom de anges och lagras separat från andra AEM och användardata.
 
 För Communities är de två saker som generellt söks igenom:
 
@@ -38,7 +38,7 @@ Det här avsnittet av dokumentationen är av intresse för utvecklare som skapar
 
 ## Säkerhets- och skuggnoder {#security-and-shadow-nodes}
 
-För en anpassad komponent måste du använda [SocialResourceUtilities](socialutils.md#socialresourceutilities-package) -metoderna. Verktygsmetoderna som skapar och söker efter UGC skapar de [skuggnoder](srp.md#about-shadow-nodes-in-jcr) som krävs och ser till att medlemmen har rätt behörigheter för begäran.
+För en anpassad komponent måste du använda metoderna [SocialResourceUtilities](socialutils.md#socialresourceutilities-package). Verktygsmetoderna som skapar och söker efter UGC skapar de nödvändiga [skuggnoderna](srp.md#about-shadow-nodes-in-jcr) och ser till att medlemmen har rätt behörigheter för begäran.
 
 Det som inte hanteras via SRP-verktygen är egenskaper som är relaterade till moderering.
 
@@ -46,19 +46,19 @@ Se [SRP och UGC Essentials](srp-and-ugc.md) för information om verktygsmetoder 
 
 ## API för UGC-sökning {#ugc-search-api}
 
-Den gemensamma lagringsplatsen [för](working-with-srp.md) UGC tillhandahålls av en av flera olika lagringsresursleverantörer (SRP), som båda kan ha olika inbyggda frågespråk. Därför bör anpassad kod, oavsett vald SRP, använda metoder från [UGC API-paketet](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/ugc/api/package-summary.html) (*com.adobe.cq.social.ugc.api*) som anropar det frågespråk som är lämpligt för vald SRP.
+Den gemensamma lagringsplatsen [UGC](working-with-srp.md) tillhandahålls av en av flera olika lagringsresursleverantörer (SRP), som båda kan ha olika interna frågespråk. Därför bör anpassad kod, oavsett vald SRP, använda metoder från [UGC API-paketet](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/ugc/api/package-summary.html) (*com.adobe.cq.social.ugc.api*) som anropar det frågespråk som passar för vald SRP.
 
 ### ASRP-sökningar {#asrp-searches}
 
-För [ASRP](asrp.md)lagras UGC i molnet Adobe. UGC är inte synligt i CRX, men [moderering](moderate-ugc.md) är tillgängligt både från författaren och publiceringsmiljön. Användning av [UGC-söknings-API](#ugc-search-api) fungerar på samma sätt för ASRP som för andra SRP.
+För [ASRP](asrp.md) lagras UGC i molnet Adobe. Även om UGC inte är synligt i CRX är [moderation](moderate-ugc.md) tillgängligt både från författarmiljön och publiceringsmiljön. Användningen av [UGC-söknings-API](#ugc-search-api) fungerar för ASRP på samma sätt som för andra SRP.
 
 Det finns för närvarande inga verktyg för att hantera ASRP-sökningar.
 
-När du skapar anpassade egenskaper som är sökbara måste du följa [namngivningskraven](#naming-of-custom-properties).
+När du skapar anpassade egenskaper som är sökbara måste du följa namnkraven [](#naming-of-custom-properties).
 
 ### MSRP-sökningar {#msrp-searches}
 
-För [MSRP](msrp.md)lagras UGC i MongoDB som konfigurerats att använda Solr för sökning. UGC visas inte i CRX, men [moderering](moderate-ugc.md) är tillgängligt både från författar- och publiceringsmiljöer.
+För [MSRP](msrp.md) lagras UGC i MongoDB som konfigurerats att använda Solr för sökning. UGC visas inte i CRX, men [moderation](moderate-ugc.md) är tillgängligt både från författar- och publiceringsmiljöerna.
 
 Om MSRP och Solr:
 
@@ -69,32 +69,32 @@ Om MSRP och Solr:
 
 Anpassade sökfunktioner bör använda [UGC-söknings-API](#ugc-search-api).
 
-När du skapar anpassade egenskaper som är sökbara måste du följa [namngivningskraven](#naming-of-custom-properties).
+När du skapar anpassade egenskaper som är sökbara måste du följa namnkraven [](#naming-of-custom-properties).
 
 ### JSRP-sökningar {#jsrp-searches}
 
-För [JSRP](jsrp.md)lagras UGC i [Oak](../../help/sites-deploying/platform.md) och visas bara i databasen för AEM författare eller publiceringsinstans som den angavs för.
+För [JSRP](jsrp.md) lagras UGC i [Oak](../../help/sites-deploying/platform.md) och visas bara i databasen för AEM författare eller publiceringsinstans som den angavs för.
 
 Eftersom UGC vanligtvis används i publiceringsmiljön måste du konfigurera ett [publiceringskluster](topologies.md), inte en publiceringsgrupp, för produktionssystem med flera utgivare, så att det angivna innehållet visas för alla utgivare.
 
-För JSRP visas aldrig UGC som anges i publiceringsmiljön i författarmiljön. Alla [modereringsuppgifter](moderate-ugc.md) äger alltså rum i publiceringsmiljön.
+För JSRP visas aldrig UGC som anges i publiceringsmiljön i författarmiljön. Alla [modereringsuppgifter](moderate-ugc.md) utförs därför i publiceringsmiljön.
 
 Anpassade sökfunktioner bör använda [UGC-söknings-API](#ugc-search-api).
 
-#### Oak-indexering {#oak-indexing}
+#### Oak Indexing {#oak-indexing}
 
 Oak-index skapas inte automatiskt för AEM plattformssökning, men från och med AEM 6.2 har de lagts till för AEM Communities för att förbättra prestanda och ge stöd för paginering när UGC-sökresultat presenteras.
 
-Om anpassade egenskaper används och sökningarna är långsamma, måste ytterligare index skapas för de anpassade egenskaperna för att de ska bli bättre. Om du vill behålla bärbarheten följer du [namngivningskraven](#naming-of-custom-properties) när du skapar anpassade egenskaper som är sökbara.
+Om anpassade egenskaper används och sökningarna är långsamma, måste ytterligare index skapas för de anpassade egenskaperna för att de ska bli bättre. Om du vill behålla bärbarheten ska du följa namnkraven [när du skapar anpassade egenskaper som är sökbara.](#naming-of-custom-properties)
 
-Om du vill ändra befintliga index eller skapa egna index läser du i [Oak Queries och Indexing](../../help/sites-deploying/queries-and-indexing.md).
+Om du vill ändra befintliga index eller skapa egna index läser du [eko-frågor och indexering](../../help/sites-deploying/queries-and-indexing.md).
 
-Indexhanteraren för [ekning](https://adobe-consulting-services.github.io/acs-aem-commons/features/oak-index-manager.html) är tillgänglig från ACS AEM Commons. Den innehåller följande:
+[Oak Index Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/oak-index-manager.html) är tillgänglig från ACS AEM Commons. Den innehåller följande:
 
 * En vy över befintliga index.
 * Möjlighet att initiera omindexering.
 
-Om du vill visa de befintliga Oak-indexen i [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md)är platsen:
+Om du vill visa de befintliga Oak-indexen i [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md) är platsen:
 
 * `/oak:index/socialLucene`
 
@@ -116,7 +116,7 @@ Nedan följer några av de sökbara egenskaper som används för olika webbgrupp
 | känslouttryck | *Lång* |
 | flaggad | *Boolesk* |
 | tillagd | *Date* |
-| modifiedDate | *Date* |
+| modifiedDate | *Datum* |
 | läge | *Sträng* |
 | userIdentifier | *Sträng* |
 | svar | *Lång* |
@@ -125,7 +125,7 @@ Nedan följer några av de sökbara egenskaper som används för olika webbgrupp
 | sling:resourceType | *Sträng* |
 | allowThreadedReply | *Boolesk* |
 | isDraft | *Boolesk* |
-| publishDate | *Date* |
+| publishDate | *Datum* |
 | publishJobId | *Sträng* |
 | besvarade | *Boolesk* |
 | välj | *Boolesk* |
@@ -136,9 +136,9 @@ Nedan följer några av de sökbara egenskaper som används för olika webbgrupp
 | parentPath | *Sträng* |
 | parentTitle | *Sträng* |
 
-### Namngivning av anpassade egenskaper {#naming-of-custom-properties}
+### Namnge anpassade egenskaper {#naming-of-custom-properties}
 
-När du lägger till anpassade egenskaper [måste](#ugc-search-api)ett suffix läggas till i egenskapsnamnet för att dessa egenskaper ska vara synliga för sortering och sökningar som skapas med *UGC-söknings-API* .
+När du lägger till anpassade egenskaper är det *nödvändigt* att lägga till ett suffix till egenskapsnamnet om du vill att dessa egenskaper ska vara synliga för sortering och sökningar som skapats med [API:t för UGC-sökning](#ugc-search-api).
 
 Suffixet är för frågespråk som använder ett schema:
 
@@ -158,7 +158,7 @@ Solr är ett exempel på ett frågespråk som använder ett schema.
 
 **Anteckningar:**
 
-* *Texten* är en tokeniserad sträng, *String* är inte det. Använd *text* för oskarpa sökningar (ungefär så här).
+* *Det* är inte  ** Stringis som är en tokeniserad sträng. Använd *Text* för oskarpa (mer som detta) sökningar.
 
 * För typer med flera värden lägger du till&quot;s&quot; i suffixet, till exempel:
 
@@ -167,7 +167,7 @@ Solr är ett exempel på ett frågespråk som använder ett schema.
 
 ## Filter {#filters}
 
-Komponenter som innehåller [kommentarsystemet](essentials-comments.md) har stöd för filterparametern förutom slutpunkterna.
+Komponenter som innehåller [kommentarsystemet](essentials-comments.md) har stöd för filterparametern som läggs till i slutpunkterna.
 
 Filtersyntaxen för AND- och OR-logiken uttrycks enligt följande (visas innan den är URL-kodad):
 
@@ -179,7 +179,7 @@ Filtersyntaxen för AND- och OR-logiken uttrycks enligt följande (visas innan d
 
    * `filter = name eq 'Jackson'&filter=message eq 'testing'`
 
-Standardimplementeringen av [sökkomponenten](search.md) använder den här syntaxen, vilket visas i den URL som öppnar sökresultatsidan i guiden [för](components-guide.md)communitykomponenter. Om du vill experimentera går du till [http://localhost:4503/content/community-components/en/search.html](http://localhost:4503/content/community-components/en/search.html).
+Standardimplementeringen av [sökkomponenten](search.md) använder den här syntaxen, vilket visas i den URL som öppnar sidan Sökresultat i [Community Components guide](components-guide.md). Om du vill experimentera går du till [http://localhost:4503/content/community-components/en/search.html](http://localhost:4503/content/community-components/en/search.html).
 
 Filteroperatorer är:
 
@@ -227,13 +227,13 @@ Den verkliga Solr-frågan visas URL-adress som är kodad i felsökningsloggen:
 
 Frågan som ska tolkas är: `sort=timestamp+desc&bl=en&pl=en&start=0&rows=10 &q=%2Btitle_t:(hello)+%2Bprovider_id:\/content/usergenerated/asi/mongo/content/+%2Bresource_type_s:&df=provider_id&trf=verbatim&fq={!cost%3D100}report_suite:mongo`
 
-Värdet för `q` parametern är frågan. När URL-kodningen har avkodats kan frågan skickas till Solr Admin Query Tool för ytterligare felsökning.
+Värdet för parametern `q` är frågan. När URL-kodningen har avkodats kan frågan skickas till Solr Admin Query Tool för ytterligare felsökning.
 
 ## Relaterade resurser {#related-resources}
 
-* [Community Content Storage](working-with-srp.md) - Diskutera tillgängliga SRP-alternativ för en gemensam UGC-butik.
-* [Översikt över](srp.md) lagringsresursprovidern - Introduktion och översikt över databasanvändningen.
-* [Åtkomst till UGC med SRP](accessing-ugc-with-srp.md) - riktlinjer för kodning.
-* [Omfaktorisering för SocialUtils](socialutils.md) - Verktygsmetoder för SRP som ersätter SocialUtils.
-* [Komponenter](search.md) för sökning och sökresultat - Lägga till UGC-sökfunktion i en mall.
+* [Community Content Storage](working-with-srp.md)  - Diskutera tillgängliga SRP-alternativ för en gemensam lagringsplats för användargenererat innehåll.
+* [Översikt över](srp.md)  lagringsresursprovidern - Introduktion och översikt över databasanvändningen.
+* [Använder UGC med riktlinjerna för SRP](accessing-ugc-with-srp.md) -kodning.
+* [SocialUtils-omfaktorisering](socialutils.md)  - Verktygsmetoder för SRP som ersätter SocialUtils.
+* [Komponenter](search.md)  för sökning och sökresultat - lägga till UGC-sökfunktion i en mall.
 
