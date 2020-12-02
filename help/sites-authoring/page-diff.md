@@ -29,16 +29,16 @@ Med funktionen för sidskillnader kan du enkelt jämföra två sidor sida vid si
 
 >[!TIP]
 >
->Mer teknisk information om den här funktionen finns i [Developing and Page Diff](/help/sites-developing/pagediff.md#operation-details) .
+>Mer teknisk information om den här funktionen finns i [Developing and Page Diff](/help/sites-developing/pagediff.md#operation-details).
 
-## Use {#use}
+## Använd {#use}
 
 Diff:en sida vid sida kan jämföra:
 
-* [Versioner](/help/sites-authoring/working-with-page-versions.md#comparing-a-version-with-current-page) - Tidigare version av en sida med det aktuella läget
-* [Live-kopior](/help/sites-administering/msm-livecopy.md#comparing-a-live-copy-page-with-a-blueprint-page) - Live-kopia med utkast
-* [Startar](/help/sites-authoring/launches-editing.md#comparing-a-launch-page-to-its-source-page) - Starta med dess källa
-* [Språkkopior](/help/sites-administering/tc-manage.md#comparing-language-copies) - En sida före och efter (re-)översättning
+* [Versioner](/help/sites-authoring/working-with-page-versions.md#comparing-a-version-with-current-page)  - Tidigare version av en sida med det aktuella läget
+* [Live-kopior](/help/sites-administering/msm-livecopy.md#comparing-a-live-copy-page-with-a-blueprint-page)  - Live Copy med utkast
+* [Startar](/help/sites-authoring/launches-editing.md#comparing-a-launch-page-to-its-source-page)  - Starta med dess källa
+* [Språkkopior](/help/sites-administering/tc-manage.md#comparing-language-copies)  - En sida före och efter (re-)översättning
 
 Läs respektive avsnitt om hur du påbörjar skillnaderna i dessa sammanhang.
 
@@ -75,7 +75,7 @@ Observera att färgerna Ändrad och Flyttad är desamma.
 >
 >När du jämför språkkopior inaktiveras markering, eftersom i en översättning ändras allt och markering inte har någon fördel.
 
-### Helskärm och avslutande {#fullscreen-and-exiting}
+### Helskärm och Avslutar {#fullscreen-and-exiting}
 
 Om du vill fokusera på ett visst innehåll kan du klicka på helskärmsikonen för endera&quot;sidan&quot; av diff:n för att förstora den till hela webbläsarfönstret.
 
@@ -101,7 +101,7 @@ I vissa situationer kan det hända att sidskillnader inte identifierar någon sk
 * Skillnaden kan inte identifiera bildrotation.
 * Om en sida flyttas kan du inte längre göra några skillnader med versioner som gjorts före flyttningen.
 
-   * Om du får problem med en skillnad kontrollerar du om sidan har flyttats i [tidslinjen](/help/sites-authoring/basic-handling.md#timeline) .
+   * Om du får problem med en skillnad kontrollerar du [tidslinjen](/help/sites-authoring/basic-handling.md#timeline) för sidan för att se om sidan har flyttats.
 
 >[!NOTE]
 >
@@ -109,4 +109,4 @@ I vissa situationer kan det hända att sidskillnader inte identifierar någon sk
 
 >[!NOTE]
 >
->Mer information om hur sidskillnader fungerar samt om begränsningar som kan påverka sidskillnader finns i [utvecklardokumentationen](/help/sites-developing/pagediff.md) för den här funktionen.
+>Mer information om hur sidskillnader fungerar och om begränsningar som kan påverka sidskillnader finns i [utvecklardokumentationen](/help/sites-developing/pagediff.md) för den här funktionen.
