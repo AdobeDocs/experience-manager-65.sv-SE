@@ -12,13 +12,13 @@ ht-degree: 2%
 ---
 
 
-# Användarhandböcker för AEM 6.5-funktioner {#aem-65-capabilities-user-guides}
+# AEM 6.5 Capabilities User Guides {#aem-65-capabilities-user-guides}
 
 ## AEM Foundation {#aem-foundation}
 
-[Läs mer om installation, driftsättning och arkitekturen i Adobe Experience Manager 6.5](/help/sites-deploying/home.md), inklusive vår molndriftsättning av Adobe Managed Services.
+[Läs mer om installation, distribution och arkitekturen för Adobe Experience Manager 6.5](/help/sites-deploying/home.md), inklusive vår molndistribution av Adobe Managed Services.
 
-[Lär dig hantera ett AEM-projekt](/help/managing/home.md).
+[Lär dig hantera ett AEM projekt](/help/managing/home.md).
 
 ## AEM Sites {#aem-sites}
 
