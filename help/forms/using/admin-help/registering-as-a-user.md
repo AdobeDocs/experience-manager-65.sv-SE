@@ -10,11 +10,14 @@ geptopics: SG_AEMFORMS/categories/working_with_document_security
 discoiquuid: 26e11ef4-9f8f-4b0b-b035-a498fd7d65ef
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '728'
+ht-degree: 0%
 
 ---
 
 
-# Registrera som användare {#registering-as-a-user}
+# Registrerar som en användare {#registering-as-a-user}
 
 Du kan använda policyskyddade dokument som du får från en dokumentsäkerhetsanvändare, även om du är extern i förhållande till användarens organisation. Om du vill använda ett profilskyddat dokument måste du registrera dig med dokumentskydd. Om du inte tidigare har bjudits in att registrera dig, initierar dokumentsäkerhet registreringsprocessen när dessa händelser inträffar:
 
@@ -23,7 +26,7 @@ Du kan använda policyskyddade dokument som du får från en dokumentsäkerhetsa
 
    När du har registrerat och aktiverat ditt konto kan du använda profilskyddade dokument som du har behörighet att använda via en profil. Om dokumentsäkerhetsadministratören aktiverar dessa funktioner för inbjudna användare kan du ha behörighet att göra följande:
 
-* Skydda dokumenten med dokumentskyddsprofiler.
+* Protect-dokument med dokumentskyddsprofiler.
 * Skapa egna användarprofiler som du kan tillämpa på dina dokument.
 * Bjud in andra externa användare att använda ett policyskyddat dokument genom att lägga till dem i profilen.
 
