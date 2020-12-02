@@ -13,15 +13,15 @@ docset: aem65
 translation-type: tm+mt
 source-git-commit: 18dcbf04bd88f63335ef36e2ec7ea81835e11b51
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '544'
+ht-degree: 1%
 
 ---
 
 
 # Redigering{#authoring}
 
-## Begreppet redigering (och publicering) {#concept-of-authoring-and-publishing}
+## Concept of Authoring (and Publishing) {#concept-of-authoring-and-publishing}
 
 AEM har två miljöer:
 
@@ -41,7 +41,7 @@ I redigeringsmiljön är funktionaliteten för AEM tillgänglig via två använd
 
 ### Författarmiljö {#author-environment}
 
-Författaren arbetar i det som kallas **författarmiljö**. Detta ger ett användarvänligt gränssnitt (grafiskt användargränssnitt (GUI eller UI)) för att skapa innehållet. Det ligger vanligtvis bakom ett företags brandvägg som ger fullständigt skydd och som kräver att författaren loggar in med ett konto som tilldelats rätt åtkomstbehörighet.
+Författaren arbetar i **författarmiljön**. Detta ger ett användarvänligt gränssnitt (grafiskt användargränssnitt (GUI eller UI)) för att skapa innehållet. Det ligger vanligtvis bakom ett företags brandvägg som ger fullständigt skydd och som kräver att författaren loggar in med ett konto som tilldelats rätt åtkomstbehörighet.
 
 >[!NOTE]
 >
@@ -65,15 +65,15 @@ Det finns dessutom administrativa uppgifter som hjälper dig att hantera ditt in
 
 >[!NOTE]
 >
->AEM [administreras](/help/sites-administering/home.md) också (för de flesta uppgifter) från författarmiljön.
+>AEM [administreras](/help/sites-administering/home.md) (för de flesta uppgifter) från författarmiljön.
 
 #### Publiceringsmiljö {#publish-environment}
 
-När AEM är klar publiceras webbplatsens innehåll i **publiceringsmiljön**. Här blir webbplatsens sidor tillgängliga för den avsedda publiken i enlighet med det gränssnitt som har utformats.
+När den är klar publiceras AEM innehåll till **publiceringsmiljön**. Här blir webbplatsens sidor tillgängliga för den avsedda publiken i enlighet med det gränssnitt som har utformats.
 
 Normalt ligger publiceringsmiljön innanför den demilitariserade zonen. med andra ord, tillgängliga för Internet, men inte längre till fullständigt skydd för det interna nätverket.
 
-När den AEM webbplatsen är en [communitywebbplats](/help/communities/overview.md), eller innehåller [communitykomponenter](/help/communities/author-communities.md), kan besökare (medlemmar) som är inloggade interagera med communityfunktioner. De kan till exempel publicera på ett forum, publicera en kommentar eller följa andra medlemmar. Medlemmar kan ges behörighet att utföra åtgärder som normalt bara är avsedda för författarmiljön, t.ex. skapa nya sidor (communitygrupper), bloggartiklar och moderata inlägg från andra medlemmar.
+När den AEM webbplatsen är en [community-webbplats](/help/communities/overview.md), eller innehåller [webbkomponenterna](/help/communities/author-communities.md), kan besökare (medlemmar) som är inloggade interagera med webbgruppsfunktioner. De kan till exempel publicera på ett forum, publicera en kommentar eller följa andra medlemmar. Medlemmar kan ges behörighet att utföra åtgärder som normalt bara är avsedda för författarmiljön, t.ex. skapa nya sidor (communitygrupper), bloggartiklar och moderata inlägg från andra medlemmar.
 
 >[!NOTE]
 >
@@ -95,4 +95,4 @@ När den AEM webbplatsen är en [communitywebbplats](/help/communities/overview.
 
 #### Dispatcher {#dispatcher}
 
-För att optimera prestanda för besökare på webbplatsen **[implementerar dispatchern](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html)** belastningsfördelning och cachning.
+**[dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html)** implementerar belastningsutjämning och cachning för att optimera prestanda för besökare på webbplatsen.
