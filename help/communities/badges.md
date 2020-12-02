@@ -21,7 +21,7 @@ ht-degree: 0%
 
 # Badges Console {#badges-console}
 
-## Om Badges {#about-badges}
+## Om emblem {#about-badges}
 
 Konsolen Communities Badges innehåller funktioner för att lägga till egna emblem som kan visas för en medlem när den har tjänats in (tilldelats) eller när de har en specifik roll i communityn (tilldelats).
 
@@ -57,18 +57,18 @@ Om publiceringsmiljön är en grupp utgivare måste du konfigurera [användarsyn
 
 * **Namn**
 
-   (*Obligatoriskt*) Namnet på märket. Det är standardnodnamnet `Display Name` och databasnodnamnet. Om `Name` databasen inte är ett giltigt databasnodnamn ändras det.
+   (*Obligatoriskt*) Namnet på märket. Det är standardnodnamnet `Display Name` och databasnodens namn. Om `Name` inte är ett giltigt databasnodnamn ändras det.
 
 * **Visningsnamn**
 
-   (*Valfritt*) Namnet som ska visas för märket i användargränssnittet. Standard är den oförändrade text som anges för `Name`.
+   (*Valfritt*) Namnet som ska visas för märket i gränssnittet. Standard är den oförändrade text som anges för `Name`.
 
 * **Beskrivning**
 
-   (*Valfritt*) En beskrivning av märket.
+   (*Valfritt*) En beskrivning för märket.
 
-## Additional Information {#additional-information}
+## Ytterligare information {#additional-information}
 
-Mer information om hur du ställer in regler för poängsättning och märkning finns i [Betygsättning och emblem](/help/communities/implementing-scoring.md).
+Mer information om hur du ställer in regler för poäng och badging finns i [Betygsättning och badges](/help/communities/implementing-scoring.md).
 
-Information om hur du hanterar emblem för medlemmar finns i [Medlemskonsolen](/help/communities/members.md).
+Information om hur du hanterar emblem för medlemmar finns i [Medlemskonsol](/help/communities/members.md).
