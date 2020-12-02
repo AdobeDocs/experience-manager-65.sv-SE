@@ -9,11 +9,14 @@ topic-tags: author
 discoiquuid: 678e9dfc-2c46-430a-8da9-0329dda80090
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '223'
+ht-degree: 13%
 
 ---
 
 
-# Nyckelord för adaptiva formulär {#adaptive-forms-keywords}
+# Anpassade formulärnyckelord {#adaptive-forms-keywords}
 
 Nyckelord för adaptiva formulär är fördefinierade, reserverade identifierare som har en speciell betydelse för adaptiva formulär. Du kan inte använda dessa nyckelord som identifierare i dina adaptiva formulär. I följande tabell visas alla nyckelord som är reserverade identifierare för adaptiva formulär.
 
@@ -237,4 +240,4 @@ Nyckelord för adaptiva formulär är fördefinierade, reserverade identifierare
  </tbody>
 </table>
 
-Förutom nyckelorden ovan bör du undvika att använda namn som liknar JavaScript-API:er för [adaptiva formulär](https://adobe.com/go/learn_aemforms_javascript_api_63).
+Förutom nyckelorden ovan bör du undvika att använda namn som liknar [JavaScript API:er för adaptiva formulär](https://adobe.com/go/learn_aemforms_javascript_api_63).
