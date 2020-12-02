@@ -11,6 +11,9 @@ topic-tags: personalization
 discoiquuid: 28582d42-ef24-4ca1-98e6-e02248fc9dea
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '152'
+ht-degree: 0%
 
 ---
 
@@ -27,8 +30,8 @@ I den här dokumentationen beskrivs hur du arbetar med Adobe Campaign:
 Se följande:
 
 * [Arbeta med Adobe Campaign Classic och Adobe Campaign Standard](/help/sites-authoring/campaign.md)
-* [Adobe Campaign-komponenter](/help/sites-authoring/adobe-campaign-components.md)
-* [Skapa Adobe Campaign-formulär i AEM](/help/sites-authoring/adobe-campaign-forms.md)
+* [Adobe Campaign Components](/help/sites-authoring/adobe-campaign-components.md)
+* [Skapa Adobe Campaign Forms i AEM](/help/sites-authoring/adobe-campaign-forms.md)
 * [Inrikta er på Adobe Campaign](/help/sites-authoring/target-adobe-campaign.md)
 
 Du måste tidigare ha [integrerat AEM med Adobe Campaign](/help/sites-administering/campaign.md).
