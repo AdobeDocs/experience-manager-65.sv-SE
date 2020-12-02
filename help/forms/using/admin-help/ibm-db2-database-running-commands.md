@@ -1,8 +1,8 @@
 ---
 title: '"IBM DB2-databas: Kör kommandon för regelbundet underhåll"'
 seo-title: '"IBM DB2-databas: Kör kommandon för regelbundet underhåll"'
-description: I det här dokumentet visas IBM DB2-kommandon som rekommenderas för regelbundet underhåll av AEM-formulärdatabasen.
-seo-description: I det här dokumentet visas IBM DB2-kommandon som rekommenderas för regelbundet underhåll av AEM-formulärdatabasen.
+description: I det här dokumentet visas IBM DB2-kommandon som rekommenderas för regelbundet underhåll av AEM formulärdatabas.
+seo-description: I det här dokumentet visas IBM DB2-kommandon som rekommenderas för regelbundet underhåll av AEM formulärdatabas.
 uuid: 235d59df-b9b9-4770-8b7d-00713701c3c2
 contentOwner: admin
 content-type: reference
@@ -20,31 +20,31 @@ ht-degree: 0%
 
 # IBM DB2-databas: Kör kommandon för regelbundet underhåll {#ibm-db-database-running-commands-for-regular-maintenance}
 
-Följande IBM DB2-kommandon rekommenderas för regelbundet underhåll av din AEM-formulärdatabas. Detaljerad information om underhåll och prestandajustering för din DB2-databas finns i *IBM DB2 Administration Guide*.
+Följande IBM DB2-kommandon rekommenderas för regelbundet underhåll av AEM formulärdatabas. Detaljerad information om underhåll och prestandajustering för databasen DB2 finns i *Administrationshandboken för IBM DB2*.
 
-* **runstats:** Det här kommandot uppdaterar statistik som beskriver de fysiska egenskaperna i en databastabell, tillsammans med tillhörande index. Dynamiska SQL-satser som genereras av AEM-formulär använder automatiskt den uppdaterade statistiken, men statiska SQL-satser som skapats i en databas kräver att `db2rbind` kommandot också körs.
-* **db2rbind:** Det här kommandot binder om alla paket i databasen. Använd det här kommandot när du har kört `runstats` verktyget för att validera alla paket i databasen igen.
-* **omordningstabell eller index:** Det här kommandot kontrollerar om det krävs en omorganisering av vissa tabeller och index.
+* **körningsstatistik:** Det här kommandot uppdaterar statistik som beskriver de fysiska egenskaperna för en databastabell, tillsammans med tillhörande index. Dynamiska SQL-satser som genereras av AEM formulär använder automatiskt den uppdaterade statistiken, men statiska SQL-satser som skapats i en databas kräver att kommandot `db2rbind` också körs.
+* **db2rbind:** Det här kommandot binder om alla paket i databasen. Använd det här kommandot när du har kört verktyget `runstats` för att validera alla paket i databasen igen.
+* **rapporttabell eller index:** Det här kommandot kontrollerar om det krävs en omorganisering av vissa tabeller och index.
 
    I takt med att databaserna växer och förändras är det viktigt att tabellstatistiken beräknas om för att förbättra databasens prestanda och bör göras regelbundet. Dessa kommandon kan köras antingen manuellt med skript eller med ett cron-jobb.
 
 >[!NOTE]
 >
->Innan du kör `runstats` kommandot måste databasen innehålla data och minst en katalogsynkronisering måste ha utförts.
+>Innan du kör kommandot `runstats` måste databasen innehålla data och minst en katalogsynkronisering måste ha utförts.
 
-För en liten databas, t.ex. för 10 000 användare eller 2 500 grupper, räcker det att anropa `runstats` kommandot för att minska synkroniseringstiderna.
+För en liten databas, t.ex. för 10 000 användare eller 2 500 grupper, räcker det att anropa kommandot `runstats` för att minska synkroniseringstiderna.
 
-För större databaser, t.ex. för 100 000 användare eller 10 000 grupper, kör du kommandot innan du kör `reorg` `runstats` kommandot.
+För större databaser, till exempel för 100 000 användare eller 10 000 grupper, kör du kommandot `reorg` innan du kör kommandot `runstats`.
 
-## Använd kommandot runstats i din AEM-formulärdatabas {#use-the-runstats-command-on-your-aem-forms-database}
+## Använd kommandot runstats i AEM formulärdatabas {#use-the-runstats-command-on-your-aem-forms-database}
 
-Kör `runstats` kommandot på följande databastabeller och index för AEM-formulär.
+Kör kommandot `runstats` på följande AEM databastabeller och index.
 
 >[!NOTE]
 >
 >Kommandot `runstats` behöver bara köras under den första databassynkroniseringen. Den måste dock köras två gånger under den processen: en gång under synkroniseringen av användare och grupper och sedan under synkroniseringen av gruppmedlemmar. Kontrollera att skriptet körs fullständigt varje gång du kör det.
 
-Korrekt syntax och användning finns i dokumentationen från databastillverkaren. Nedan `<schema>` används för att ange det schema som är associerat med ditt DB2-användarnamn. Om du har en enkel standardinstallation av DB2 är detta databasens schemanamn.
+Korrekt syntax och användning finns i dokumentationen från databastillverkaren. Nedan används `<schema>` för att ange det schema som är associerat med ditt DB2-användarnamn. Om du har en enkel standardinstallation av DB2 är detta databasens schemanamn.
 
 ```sql
      TABLE <schema>.EDCPRINCIPALGROUPENTITY
@@ -68,9 +68,9 @@ Korrekt syntax och användning finns i dokumentationen från databastillverkaren
      TABLE <schema>.EDCPRINCIPALGRPCTMNTENTITY FOR INDEXES ALL
 ```
 
-## Kör organisationskommandot i din AEM-formulärdatabas {#run-the-reorg-command-on-your-aem-forms-database}
+## Kör organisationskommandot på AEM formulärdatabas {#run-the-reorg-command-on-your-aem-forms-database}
 
-Kör `reorg` kommandot på följande databastabeller och index för AEM-formulär. Korrekt syntax och användning finns i dokumentationen från databastillverkaren.
+Kör kommandot `reorg` på följande AEM databastabeller och index. Korrekt syntax och användning finns i dokumentationen från databastillverkaren.
 
 ```sql
      TABLE <schema>.EDCPRINCIPALGROUPENTITY
