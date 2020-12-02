@@ -23,9 +23,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Klientkontext har ersatts av ContextHub. Mer information finns i relaterad []configuration-ch-configuring.md) och [utvecklardokumentation](/help/sites-developing/contexthub.md) .
+>Klientkontext har ersatts av ContextHub. Mer information finns i den relaterade [konfigurationen]ch-configuring.md) och [utvecklardokumentationen](/help/sites-developing/contexthub.md).
 
-Klientkontexten är en mekanism som ger dig viss information om den aktuella sidan och besökaren. Den kan öppnas med **Ctrl-Alt-c** (Windows) eller **Ctrl-Option-c** (Mac):
+Klientkontexten är en mekanism som ger dig viss information om den aktuella sidan och besökaren. Den kan öppnas med **Ctrl-Alt-c** (Windows) eller **control-option-c** (Mac):
 
 ![](assets/clientcontext_alisonparker.png)
 
@@ -41,57 +41,60 @@ Med ikonerna (endast tillgängliga i författarmiljön) kan du konfigurera infor
 
 ![](do-not-localize/clientcontext_icons.png)
 
-* **Redigera** En ny sida öppnas där du kan [redigera, lägga till eller ta bort en profilegenskap](#editingprofiledetails).
+* ****
+RedigeraEn ny sida öppnas där du kan  [redigera, lägga till eller ta bort en profilegenskap](#editingprofiledetails).
 
-* **Läs in** Du kan [välja i en lista med profiler och läsa in profilen](#loading-a-new-user-profile) som du vill testa.
+* **Läs**
+inDu kan  [välja i en lista med profiler och läsa in den profil ](#loading-a-new-user-profile) du vill testa.
 
-* **Återställ** Du kan [återställa profilen](#resetting-the-profile-to-the-current-user) till den aktuella användarens profil.
+* ****
+ÅterställDu kan  [återställa ](#resetting-the-profile-to-the-current-user) profilen till den aktuella användarens profil.
 
 ## Tillgängliga klientkontextkomponenter {#available-client-context-components}
 
 Klientkontexten kan visa följande egenskaper ([beroende på vad som har valts med Redigera](#adding-a-property-component)):
 
-**Surfer Information** Visar följande klientinformation:
+**Mer** informationVisar följande information på klientsidan:
 
-* IP- **adressen**
-* **nyckelord** som används för sökmotorreferens
+* den **IP-adressen**
+* **** nyckelord som används för sökmotorreferens
 * den **webbläsare** som används
-* det **operativsystem** som används
-* skärmupplösningen ****
-* X- **musens** position
-* musens Y- **position**
+* det **operativsystem** (operativsystem) som används
+* skärmupplösningen **upplösningen**
+* **musens X**-position
+* placeringen av **musen Y**
 
-**Aktivitetsström** Detta ger information om användarens sociala aktivitet på olika plattformar. till exempel AEM forum, bloggar, omdömen etc.
+**Aktivitetsström** Här finns information om användarens sociala aktivitet på olika plattformar. till exempel AEM forum, bloggar, omdömen etc.
 
-**Campaign** Tillåter författare att simulera en specifik upplevelse för en kampanj. Den här komponenten åsidosätter normal kampanjupplösning och val av upplevelse för att möjliggöra testning av olika permutationer.
+**** CampaignGör att författare kan simulera en specifik upplevelse för en kampanj. Den här komponenten åsidosätter normal kampanjupplösning och val av upplevelse för att möjliggöra testning av olika permutationer.
 
 Kampanjupplösning baseras vanligtvis på kampanjens prioritetsegenskap. Upplevelsen väljs vanligtvis baserat på segmentering.
 
-**Kundvagn** Visar kundvagnsinformation inklusive produktposter (titel, kvantitet, prisFormaterat osv.), lösta kampanjer (titel, meddelande osv.) och verifikationer (kod, beskrivning osv.).
+**** KundvagnVisar kundvagnsinformation inklusive produktposter (titel, kvantitet, prisFormaterat osv.), lösta kampanjer (titel, meddelande osv.) och verifikationer (kod, beskrivning osv.).
 
 Kundsessionslagringen meddelar också servern om lösta kampanjändringar (baserat på segmenteringsändringar) med hjälp av ClientContextCartServlet.
 
-**Allmän butik** är en allmän komponent som visar innehållet i en butik. Det är en version på lägre nivå av den allmänna lagringsegenskapskomponenten.
+**Generic** StoreÄr en allmän komponent som visar innehållet i en butik. Det är en version på lägre nivå av den allmänna lagringsegenskapskomponenten.
 
 Det allmänna arkivet måste konfigureras med en JS-renderare som visar data på ett anpassat sätt.
 
-**Egenskaper** för allmän lagring är en allmän komponent som visar innehållet i en butik. Det är en senare version av den allmänna lagringskomponenten.
+**Egenskaper** för allmän lagringÄr en allmän komponent som visar innehållet i en butik. Det är en senare version av den allmänna lagringskomponenten.
 
 Komponenten Egenskaper för allmän lagring innehåller en standardåtergivning som visar de konfigurerade egenskaperna (tillsammans med en miniatyrbild).
 
-**Geolocation** Visar klientens latitud och longitud. Det använder API:t för geopositionering i HTML5 för att fråga webbläsaren om den aktuella platsen. Detta resulterar i att ett popup-fönster visas för besökaren, där webbläsaren frågar om de godkänner att dela sin plats.
+**** GeolocationVisar klientens latitud och longitud. Det använder API:t för geopositionering i HTML5 för att fråga webbläsaren om den aktuella platsen. Detta resulterar i att ett popup-fönster visas för besökaren, där webbläsaren frågar om de godkänner att dela sin plats.
 
-När komponenten visas i Context Cloud används ett Google API för att visa en karta som miniatyrbild. Komponenten omfattas av Googles API- [användningsgränser](https://developers.google.com/maps/documentation/staticmaps/intro#Limits).
+När komponenten visas i Context Cloud används ett Google API för att visa en karta som miniatyrbild. Komponenten omfattas av Googles API [användarbegränsningar](https://developers.google.com/maps/documentation/staticmaps/intro#Limits).
 
 >[!NOTE]
 >
 >I AEM 6.1 innehåller Geolocation-butiken inte längre funktionen för omvänd geokodning. Geolocation-arkivet hämtar därför inte längre information om den aktuella platsen, till exempel ort eller landskod. Segment som använder dessa lagringsdata kommer inte att fungera korrekt. Geolocation-butiken innehåller endast latitud- och longitudvärdena för en plats.
 
-**JSONP Store** En komponent som visar innehåll som är beroende av din installation.
+**JSONP** StoreEn komponent som visar innehåll som är beroende av din installation.
 
-JSONP-standarden är ett komplement till JSON som gör det möjligt att kringgå samma ursprungspolicy (vilket gör det omöjligt för ett webbprogram att kommunicera med servrar som finns på en annan domän). Den består av att kapsla JSON-objektet i ett funktionsanrop för att kunna läsa in det som en `<script>` från den andra domänen (vilket är ett tillåtet undantag till samma ursprungsprincip).
+JSONP-standarden är ett komplement till JSON som gör det möjligt att kringgå samma ursprungspolicy (vilket gör det omöjligt för ett webbprogram att kommunicera med servrar som finns på en annan domän). Det består av att kapsla JSON-objektet i ett funktionsanrop för att kunna läsa in det som `<script>` från den andra domänen (vilket är ett tillåtet undantag till samma ursprungsprincip).
 
-JSONP Store är som vilken annan butik som helst, men den läser in information som kommer från en annan domän utan att du behöver ha en proxy för den informationen på den aktuella domänen. Se exemplet i [Lagra data i klientkontext via JSONP](/help/sites-administering/client-context.md#storing-data-in-client-context-via-jsonp).
+JSONP Store är som vilken annan butik som helst, men den läser in information som kommer från en annan domän utan att du behöver ha en proxy för den informationen på den aktuella domänen. Se exemplet i [Lagra data i klientkontexten via JSONP](/help/sites-administering/client-context.md#storing-data-in-client-context-via-jsonp).
 
 >[!NOTE]
 >
@@ -99,11 +102,11 @@ JSONP Store är som vilken annan butik som helst, men den läser in information 
 
 **Profildata** Visar information som samlats in i användarprofilen. Till exempel kön, ålder, e-postadress.
 
-**Lösta segment** Visar vilka segment som för närvarande tolkas (ofta beroende på annan information som visas i klientkontexten). Detta är intressant när man konfigurerar en kampanj.
+**Lösta** segmentVisar vilka segment som för närvarande tolkas (ofta beroende av annan information som visas i klientkontexten). Detta är intressant när man konfigurerar en kampanj.
 
 Om musen till exempel befinner sig över den vänstra eller högra delen av fönstret. Det här segmentet används främst för testning eftersom ändringarna kan ses omedelbart.
 
-**Social Graph** Visar det sociala diagrammet för användarens vänner och följare.
+**Socialt** diagramVisar det sociala diagrammet för användarens vänner och följare.
 
 >[!NOTE]
 >
@@ -111,21 +114,21 @@ Om musen till exempel befinner sig över den vänstra eller högra delen av fön
 >
 >`/home/users/geometrixx/aparker@geometrixx.info/profile` Egenskapen => för vänner
 
-**Tag Cloud** Visar taggar som är inställda på den aktuella sidan och de som samlas in när du surfar på webbplatsen. När du för musen över en tagg visas antalet gånger som den aktuella användaren har kommit åt sidor som innehåller den aktuella taggen.
+**Tagga** molnetVisar taggar som är inställda på den aktuella sidan och de som samlas in när du surfar på webbplatsen. När du för musen över en tagg visas antalet gånger som den aktuella användaren har kommit åt sidor som innehåller den aktuella taggen.
 
 >[!NOTE]
 Taggar som anges för DAM-resurser som visas på de besökta sidorna räknas inte.
 
-**Technographics Store** Den här komponenten är beroende av din installation.
+**Technographics** StoreDen här komponenten är beroende av din installation.
 
-**ViewedProducts** håller reda på vilka produkter kunden har tittat på. Kan frågas efter den senast visade produkten eller den senast visade produkten som inte redan finns i kundvagnen.
+**Viewed** ProductsHåller reda på vilka produkter kunden har tittat på. Kan frågas efter den senast visade produkten eller den senast visade produkten som inte redan finns i kundvagnen.
 
 Det här sessionsarkivet har ingen standardklientkontextkomponent.
 
 Mer information finns i [Klientkontext i detalj](/help/sites-developing/client-context.md).
 
 >[!NOTE]
-Siddata är inte längre en standardkomponent i klientkontexten. Om det behövs kan du lägga till detta genom att redigera klientkontexten, lägga till **den allmänna lagringsegenskapen** och sedan konfigurera den för att definiera **butiken** som `pagedata`.
+Siddata är inte längre en standardkomponent i klientkontexten. Om det behövs kan du lägga till detta genom att redigera klientkontexten, lägga till komponenten **Egenskaper för allmän lagring** och sedan konfigurera detta för att definiera **butiken** som `pagedata`.
 
 ## Ändra klientkontextprofilen {#changing-the-client-context-profile}
 
@@ -134,7 +137,7 @@ Med klientkontexten kan du interaktivt ändra information:
 * Genom att ändra profilen som används i klientkontexten kan du se de olika upplevelser som olika användare ser för den aktuella sidan.
 * Förutom att ändra användarprofilen kan du ändra viss profilinformation för att se hur sidupplevelsen skiljer sig under olika förhållanden.
 
-### Läsa in en ny användarprofil {#loading-a-new-user-profile}
+### Läser in en ny användarprofil {#loading-a-new-user-profile}
 
 Du kan ändra profilen genom att antingen:
 
@@ -171,7 +174,7 @@ Du kan också välja en profil med markeringsreglaget:
 
    ![](do-not-localize/clientcontext_resetprofile.png)
 
-### Ändra webbläsarplattform {#changing-the-browser-platform}
+### Ändra webbläsarplattformen {#changing-the-browser-platform}
 
 1. Dubbelklicka på ikonen som representerar webbläsarplattformen. Väljaren öppnas, använder pilarna för att navigera och ser vilka plattformar/webbläsare som är tillgängliga:
 
@@ -179,7 +182,7 @@ Du kan också välja en profil med markeringsreglaget:
 
 1. Klicka på den webbläsare som du vill läsa in. När detaljerna har lästs in klickar du utanför väljaren för att stänga.
 
-### Ändra geolokalisering {#changing-the-geolocation}
+### Ändra geopositioneringen {#changing-the-geolocation}
 
 1. Dubbelklicka på geopositioneringsikonen. En expanderad karta öppnas, där du kan dra markören till en ny plats:
 
@@ -201,19 +204,19 @@ När du redigerar en klientkontext kan du ange (eller återställa) värden för
 
 ### Redigera egenskapsinformation {#editing-property-details}
 
-När du redigerar en klientkontext kan du ange (eller återställa) värden för vissa egenskaper. På så sätt kan ni testa specifika scenarier (särskilt användbart för [segmentering](/help/sites-administering/campaign-segmentation.md) och [kampanjer](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md)).
+När du redigerar en klientkontext kan du ange (eller återställa) värden för vissa egenskaper. Detta gör att du kan testa specifika scenarier (särskilt användbart för [segmentering](/help/sites-administering/campaign-segmentation.md) och [kampanjer](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md)).
 
 ![](assets/clientcontext_alisonparker_edit.png)
 
 ### Lägga till en egenskapskomponent {#adding-a-property-component}
 
-När du har öppnat designsidan **för** ClientContext kan du även **lägga till** en helt ny egenskap med de tillgängliga komponenterna (komponenterna listas både i sidosparken eller i dialogrutan **Infoga ny komponent** som öppnas när du dubbelklickar på **Dra komponenter eller resurser här** ):
+När du har öppnat **ClientContext-designsidan** kan du även **lägga till en helt ny egenskap med de tillgängliga komponenterna (komponenterna listas både på sidosparken eller i dialogrutan** Infoga ny komponent **som öppnas efter att du dubbelklickat på** Dra komponenter eller resurser här **-rutan):**
 
 ![](assets/clientcontext_alisonparker_new.png)
 
-### Ta bort en egenskapskomponent {#removing-a-property-component}
+### Tar bort en egenskapskomponent {#removing-a-property-component}
 
-När du har öppnat designsidan **för** ClientContext kan du även **ta bort** en egenskap om det inte längre behövs. Detta omfattar egendomar som levereras färdiga för leverans. **Återställ** återställer dessa om de har tagits bort.
+När du har öppnat designsidan **ClientContext** kan du även **ta bort en egenskap om den inte längre behövs.** Detta omfattar egendomar som levereras färdiga för leverans. **Återställ** återskapar dessa om de har tagits bort.
 
 ## Lagra data i klientkontext via JSONP {#storing-data-in-client-context-via-jsonp}
 
