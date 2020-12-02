@@ -19,7 +19,7 @@ ht-degree: 0%
 ---
 
 
-# AEM Communities - översikt {#aem-communities-overview}
+# AEM Communities Overview {#aem-communities-overview}
 
 Adobe Experience Manager (AEM) Communities ger möjlighet att snabbt skapa en lokal communitysajt som har förbättrade prestanda, förbättrad webbplatshantering och uppmuntrar till konvertering av besökare till värdefulla communitymedlemmar.
 
@@ -27,33 +27,33 @@ Adobe Experience Manager (AEM) Communities ger möjlighet att snabbt skapa en lo
 Contact your account representative for information regarding licensing of AEM Communities as well as additional licensing for enablement features and Adobe Analytics.
 -->
 
-## Funktioner i Communities {#communities-features}
+## Communities Features {#communities-features}
 
 Med AEM Communities kan man utveckla en relation med besökare på en webbplats som:
 
-* **Information** via bloggar, frågor och svar och händelsekalendrar,
-* Samtidigt som ni **får insikter** via forum, kommentarer och annat communityinnehåll, som ofta kallas användargenererat innehåll (UGC).
-* Den tillåter **moderering** av betrodda medlemmar i publiceringsmiljön,
-* **Social inloggning** med Twitter och Facebook,
-* **Inline translation** of community content,
-* **Skapande** av communitygrupper från den publicerade communitywebbplatsen,
-* **Betygsätta** för utmärkelsebrickor,
+* **** Information via bloggar, frågor och svar och händelsekalendrar,
+* **Få insikter** genom forum, kommentarer och annat communityinnehåll, som ofta kallas användargenererat innehåll (UGC).
+* Det tillåter **moderering** av betrodda medlemmar i publiceringsmiljön,
+* **Social** inloggning med Twitter och Facebook,
+* **Inline-** översättning av communityinnehåll,
+* **Skapa communitygrupper** från den publicerade communitywebbplatsen,
+* **Scoringto** award badges,
 * **Fildelning**,
-* **Meddelanden** och **aktivitetsströmmar**,
-* Gör att andra registrerade medlemmar i användargenererat innehåll kan uppmärksammas genom att **tagga** (@mention).
+* **Meddelanden** och  **aktivitetsströmmar**,
+* Gör att **taggning** (@mention) andra registrerade medlemmar i användargenererat innehåll kan få dem att uppmärksammas.
 * Stöder **tangentbordsnavigering** i aktiveringskomponenter (t.ex. Katalog- och kursuppspelning, Uppdrag, Filbibliotek).
 
-Communities-funktioner kan demonstreras med den [AEM Demo Machine](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki) som är allmänt tillgänglig på GitHub.com eller med den nya referensimplementeringen We.Retail.
+Communities-funktioner kan demonstreras med [AEM Demo Machine](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki) som är allmänt tillgänglig på GitHub.com eller med den nya referensimplementeringen We.Retail.
 
 ## Community Sites {#community-sites}
 
 En communitywebbplats är en AEM webbplats som skapats med en enkel guide som ger en webbplats med många vanliga funktioner som är förkopplade till webbplatsen.
 
-Guiden [Skapa](/help/communities/sites-console.md)plats:
+Guiden [Skapa plats](/help/communities/sites-console.md):
 
-* Sammanställer funktioner för webbplatsen, baserat på den valda [communitywebbplatsmallen](/help/communities/sites.md) som är:
+* Sammanställer funktioner för webbplatsen baserat på den valda [communitywebbplatsmallen](/help/communities/sites.md) som är:
 
-   * bygger på [communityfunktioner](#community-functions)
+   * skapat från [communityfunktioner](#community-functions)
    * valfri funktion för [communitygrupper](#communitygroups)
 
 * Använder inställningar för att konfigurera:
@@ -64,7 +64,7 @@ Guiden [Skapa](/help/communities/sites-console.md)plats:
 
 * Innehåller viktiga funktioner:
 
-   * Responsiv design: använder teman från [Twitter Bootstrap](https://getbootstrap.com)
+   * Responsiv design: använder [Twitter-teman för Bootstrap](https://getbootstrap.com)
 
    * Inloggning: självregistrering, [social inloggning](/help/communities/social-login.md), användarprofiler
 
@@ -73,7 +73,7 @@ Medlemmar ser händelser som är relevanta för dem och användargenererat inneh
 
       * Meddelanden: Medlemmar kan skicka eller ta emot meddelanden på communitywebbplatsen.
       * Sök: möjlighet att söka på communitywebbplatsen.
-      * Språkväxling: möjlighet att välja språk för en [flerspråkig webbplats](/help/sites-administering/translation.md).
+      * Språkväxling: möjlighet att välja språk för en [flerspråkig plats](/help/sites-administering/translation.md).
 
       * Administration: åtkomst för behöriga medlemmar att moderera och hantera användare på communitywebbplatsen.
 
@@ -82,9 +82,9 @@ Medlemmar ser händelser som är relevanta för dem och användargenererat inneh
    * Varumärke: valfri överföring av en banderollbild för visning på alla sidor i communitywebbplatsen
    * Navigeringsmeny: navigeringslänkar finns för de funktioner som ingår i communitywebbplatsmallen.
 
-Om du snabbt vill skapa en ny community-sajt kan du besöka [Getting Started with AEM Communities](/help/communities/getting-started.md).
+Om du snabbt vill skapa en ny communitywebbplats går du till [Komma igång med AEM Communities](/help/communities/getting-started.md).
 
-## Community Content Persistence {#community-content-persistence}
+## Community-innehållets beständighet {#community-content-persistence}
 
 För att förbättra prestanda och synkronisering av communityinnehåll behöver AEM Communities en gemensam lagringsplats för användargenererat innehåll (UGC) som delas mellan alla AEM (författare och publicering) instanser.
 
@@ -100,62 +100,62 @@ Mer information om publicering av communityinnehåll och rekommenderade distribu
 
 I författarmiljön ger den globala navigeringskonsolen åtkomst till [webbgruppskonsolen](/help/communities/consoles.md), som innehåller:
 
-* [Platskonsol](/help/communities/sites-console.md)
+* [](/help/communities/sites-console.md) Platskonsol
 
    * Skapa webbplats
    * Webbplatsredigering
    * Platshantering
-   * [Community Groups](/help/communities/groups.md) console
+   * [Community-](/help/communities/groups.md) gruppkonsol
 
-* [Modereringskonsol](/help/communities/moderation.md)
+* [](/help/communities/moderation.md) Moderationconsole
 
    * Vanligt gränssnitt för massmoderering för skribent- och publiceringsmiljöer.
    * Nya filtervillkor.
 
-* [Konsoler för hantering av medlemmar och grupper](/help/communities/members.md)
+* [Medlemmar och ](/help/communities/members.md) grupphanteringskonsoler
 
    * Ger möjlighet att skapa och hantera användare på publiceringssidan (medlemmar) från redigeringsmiljön.
    * Möjlighet att förbjuda medlemmar.
    * Ger möjlighet att skapa och hantera användargrupper (medlemsgrupper) på publiceringssidan från redigeringsmiljön.
 
-* [Rapportkonsol](/help/communities/reports.md)
+* [](/help/communities/reports.md) Reportsconsole
 
    * Ger möjlighet att generera rapporter om uppdrag, inlägg och vyer.
 
-* [Resurskonsol](/help/communities/resources.md)
+* [](/help/communities/resources.md) Resurskonsol
 
    * Ger möjlighet att skapa aktiveringsresurser och utbildningsvägar.
    * Ger tillgång till rapporter om aktiveringsresurser och utbildningsvägar.
 
 Den globala verktygskonsolen ger tillgång till följande verktyg för communities:
 
-* [Konsol för webbplatsmallar](/help/communities/tools.md#sitetemplatesconsole)
+* [Site ](/help/communities/tools.md#sitetemplatesconsole) TemplatesConsole
 
    * Skapa och hantera mallar för communitysajter.
 
-* [Konsolen Gruppmallar](/help/communities/tools.md#grouptemplatesconsole)
+* [Group ](/help/communities/tools.md#grouptemplatesconsole) Templesconsole
 
    * Skapa och hantera communitygruppsmallar.
 
-* [Konsol för communityfunktioner](/help/communities/tools.md#communityfunctionsconsole)
+* [Community-](/help/communities/tools.md#communityfunctionsconsole) funktionskonsol
 
    * Skapa och hantera communityfunktioner.
 
-* [Konsol för](/help/communities/tools.md#storageconfiguratonconsole) lagringskonfiguration
+* [Storage ](/help/communities/tools.md#storageconfiguratonconsole) Configurationconsole
 
-   * Välj och konfigurera platsens [gemensamma lagringsplats](/help/communities/working-with-srp.md) .
+   * Välj och konfigurera [den gemensamma lagringsplatsen](/help/communities/working-with-srp.md) för platsen.
 
 * [Komponentguide](/help/communities/components-guide.md)
 
    * En exempelplats, [Community Components](https://localhost:4502/editor.html/content/community-components/en.html), som innehåller ett exempel på alla Communities-komponenter med deras standardkonfiguration och möjlighet att experimentera med dem.
 
-## Mallar för communitywebbplatser {#community-site-templates}
+## Community-webbplatsmallar {#community-site-templates}
 
 Skapandet av communitysajter bygger på ett urval av mallar för communitysajter som snabbt skapar en community som är oberoende av valfri exempelwebbplats.
 
 En mall för communitysajter, som består av communityfunktioner och mallar för communitygrupper, innehåller en struktur för en community-webbplats som inloggning, användarprofiler, meddelanden, webbplatsmeny, sökning, teman och varumärken.
 
-Se konsolen [](/help/communities/sites.md)Platsmallar.
+Se konsolen [Platsmallar](/help/communities/sites.md).
 
 ## Community-funktioner {#community-functions}
 
@@ -169,23 +169,23 @@ Se [användarfunktionskonsolen](/help/communities/functions.md).
 
 Funktionen för communitygrupper är möjligheten för en undercommunity att skapas dynamiskt på en community-webbplats av behöriga användare och communitymedlemmar från både författarmiljön och publiceringsmiljön.
 
-I författarmiljön kan communitygrupper (undergrupper) skapas inom en befintlig communitywebbplats eller kapslas inom en befintlig grupp när mallstrukturen innehåller [gruppfunktionen](/help/communities/functions.md#groups-function).
+I författarmiljön kan communitygrupper (undergrupper) skapas inom en befintlig communitywebbplats eller kapslas inom en befintlig grupp när mallstrukturen innehåller funktionen [Grupper](/help/communities/functions.md#groups-function).
 
 När du skapar en community-grupp måste du välja en community-gruppmall som innehåller designen för communitygruppssidorna. När en gruppfunktion läggs till i en mallstruktur konfigureras den att antingen ange en gruppmall eller välja mallar när en ny gruppgrupp skapas.
 
 Se även:
 
-* [Webbplatsgruppskonsol](/help/communities/groups.md) för att skapa undergrupper i författarmiljön.
-* [Konsolen](/help/communities/tools-groups.md) Gruppmallar för att skapa platsstruktur för grupper.
-* [Komma igång med AEM Communities](/help/communities/getting-started.md) för självstudiekurs om hur du snabbt skapar en community-webbplats med kapslade grupper.
+* [Webbplatsgrupper, ](/help/communities/groups.md) konsol för att skapa undergrupper i författarmiljön.
+* [Gruppmallar ](/help/communities/tools-groups.md) för att skapa platsstruktur för grupper.
+* [Komma igång med AEM ](/help/communities/getting-started.md) communityför självstudiekurser för att snabbt skapa en community-webbplats med kapslade grupper.
 
 ## Community-komponenter {#community-components}
 
-De [communitykomponenter](/help/communities/author-communities.md) som en communitywebbplats byggs från kan användas för att lägga till communityfunktioner till valfri AEM.
+[Community-komponenterna](/help/communities/author-communities.md) som en community-webbplats byggs från kan användas för att lägga till webbgruppsfunktioner till valfri AEM.
 
-Komponentguiden [för](/help/communities/components-guide.md) communityn finns tillgänglig för interaktiv utforskning av komponenterna.
+[Community Components Guide](/help/communities/components-guide.md) är tillgänglig för interaktiv utforskning av komponenterna.
 
-## Typ av Communities {#types-of-communities}
+## Typer av communities {#types-of-communities}
 
 ### Engagement Community {#engagement-community}
 
@@ -209,7 +209,7 @@ En engagemangscommunity kan innehålla:
 * Betyg och emblem
 * Analysrapporter
 
-Om du snabbt vill skapa en ny engagemangscommunity kan du besöka [Getting Started with AEM Communities](/help/communities/getting-started.md).
+Om du snabbt vill skapa en ny engagemangscommunity går du till [Komma igång med AEM Communities](/help/communities/getting-started.md).
 
 ### Aktivera community {#enablement-community}
 
@@ -224,13 +224,13 @@ En community för aktivering kan innehålla:
 * Tillgång till rapporter och analyser.
 * Möjlighet att diskutera en utbildningsresurs via forum, meddelanden, kommentarer och omdömen.
 
-En aktiveringscommunity kan skapas när [aktiveringstillägget har konfigurerats](/help/communities/enablement.md), vilket kräver ytterligare licensiering för användning i en produktionsmiljö. En community-webbplats för aktivering kommer att innehålla [tilldelningsfunktionen](#community-functions).
+En aktiveringscommunity kan skapas när [aktiveringstillägget är konfigurerat](/help/communities/enablement.md), vilket kräver ytterligare licensiering för användning i en produktionsmiljö. En community-webbplats för aktivering kommer att innehålla funktionen [tilldelningar](#community-functions).
 
-Om du enkelt vill skapa en ny aktiveringscommunity går du till [Komma igång med AEM Communities för aktivering](/help/communities/getting-started-enablement.md).
+Om du enkelt vill skapa en ny aktiveringscommunity går du till [Komma igång med AEM Communities för att aktivera](/help/communities/getting-started-enablement.md).
 
 ## AEM Demo Machine {#aem-demo-machine}
 
-Den [AEM Demo Machine](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine) hanterar och kör demonstrationer för AEM [Sites](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Sites), [Assets](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Assets), [Communities](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Communities), [Apps](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Apps) [](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Forms)ochForms¥, som ofta kräver mer konfiguration än att bara starta en QuickStart-instans. AEM Demo Machine kommer att konfigurera ytterligare [infrastrukturer](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Infrastructure) som MongoDB-, Solr-, MySQL-, FFmpeg- och e-postservrar.
+[AEM Demo Machine](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine) hanterar och kör demonstrationer för AEM [platser](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Sites), [resurser](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Assets), [Communities](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Communities), [Appar](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Apps) och [Forms](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Forms), som ofta kräver mer konfiguration än bara att starta en QuickStart-instans. Den AEM demodatorn konfigurerar ytterligare [infrastruktur](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Infrastructure) som t.ex. MongoDB-, Solr-, MySQL-, FFmpeg- och e-postservrar.
 
 Den AEM demomaskinen innehåller:
 
@@ -251,6 +251,6 @@ AEM Demo Machine kräver en giltig AEM.
 
 * Besök [Distribuera communityn](deploy-communities.md) om du vill veta mer om rekommenderade distributioner.
 * Besök [Administrera communitysajter](administer-landing.md) om du vill veta mer om hur du skapar en community-webbplats, lägger till communitygrupper, konfigurerar mallar för communitysajter, modererar communityinnehåll, hanterar medlemmar, taggar, meddelanden, poängsättning och märken.
-* Besök [Utvecklingsgrupper](communities.md) om du vill veta mer om ramverket för sociala komponenter (SCF) och hur du anpassar komponenter och funktioner i Communities.
-* Besök [Authoring Communities Components](author-communities.md) om du vill veta mer om hur du skapar med och konfigurerar Communities-komponenter.
+* Besök [Utveckla communityn](communities.md) om du vill veta mer om ramverket för sociala komponenter (SCF) och hur du anpassar communitykomponenter och -funktioner.
+* Gå till [Komponenter för redigeringsgrupper](author-communities.md) om du vill veta mer om hur du skapar med och konfigurerar webbgruppskomponenter.
 
