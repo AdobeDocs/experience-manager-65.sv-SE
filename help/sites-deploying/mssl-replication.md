@@ -1,8 +1,8 @@
 ---
 title: Replikering med ömsesidig SSL
 seo-title: Replikering med ömsesidig SSL
-description: Lär dig hur du konfigurerar AEM så att en replikeringsagent på författarinstansen använder gemensam SSL (MSSL) för att ansluta till publiceringsinstansen. Med MSSL använder replikeringsagenten och HTTP-tjänsten på publiceringsinstansen certifikat för att autentisera varandra.
-seo-description: Lär dig hur du konfigurerar AEM så att en replikeringsagent på författarinstansen använder gemensam SSL (MSSL) för att ansluta till publiceringsinstansen. Med MSSL använder replikeringsagenten och HTTP-tjänsten på publiceringsinstansen certifikat för att autentisera varandra.
+description: Lär dig konfigurera AEM så att en replikeringsagent på författarinstansen använder gemensam SSL (MSSL) för att ansluta till publiceringsinstansen. Med MSSL använder replikeringsagenten och HTTP-tjänsten på publiceringsinstansen certifikat för att autentisera varandra.
+seo-description: Lär dig konfigurera AEM så att en replikeringsagent på författarinstansen använder gemensam SSL (MSSL) för att ansluta till publiceringsinstansen. Med MSSL använder replikeringsagenten och HTTP-tjänsten på publiceringsinstansen certifikat för att autentisera varandra.
 uuid: f4bc5e61-a58c-4fd2-9a24-b31e0c032c15
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,11 +11,14 @@ topic-tags: configuring
 discoiquuid: 8bc307d9-fa5c-44c0-bff9-2d68d32a253b
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '1456'
+ht-degree: 2%
 
 ---
 
 
-# Replikering med ömsesidig SSL{#replicating-using-mutual-ssl}
+# Replikerar med ömsesidig SSL{#replicating-using-mutual-ssl}
 
 Konfigurera AEM så att en replikeringsagent på författarinstansen använder gemensam SSL (MSSL) för att ansluta till publiceringsinstansen. Med MSSL använder replikeringsagenten och HTTP-tjänsten på publiceringsinstansen certifikat för att autentisera varandra.
 
@@ -39,7 +42,7 @@ Du måste avgöra vilket användarkonto som utför replikeringen. När du instal
 Du behöver en privat nyckel och ett offentligt certifikat för författaren och publiceringsinstanserna:
 
 * Privata nycklar måste finnas i pkcs#12- eller JKS-format.
-* Certifikat måste finnas i pkcs#12- eller JKS-format. Dessutom kan certifikat i CER-format läggas till i Granite Truststore.
+* Certifikat måste finnas i pkcs#12- eller JKS-format. Certifikatet i CER-format kan också läggas till i Granite Truststore.
 * Certifikat kan vara självsignerade eller signerade av en erkänd certifikatutfärdare.
 
 ### JKS-format {#jks-format}
@@ -77,11 +80,11 @@ Använd följande procedur för att skapa en privat nyckel och ett självsignera
 
    | Alternativ | Författare | Publicera |
    |---|---|---|
-   | -alias | author | publicera |
+   | -alias | författare | publicera |
    | -file | author.cer | publish.cer |
    | -keystore | author.keystore | publish.keystore |
 
-### pkcs#12-format {#pkcs-format}
+### pkcs#12 Format {#pkcs-format}
 
 Generera en privat nyckel och ett certifikat i formatet pkcs#12. Använd [openSSL](https://www.openssl.org/) för att generera dem. Använd följande procedur för att skapa en privat nyckel och en certifikatbegäran. Om du vill få certifikatet signerar du begäran med din privata nyckel (självsignerade certifikat) eller skickar begäran till en certifikatutfärdare. Generera sedan arkivet pkcs#12 som innehåller den privata nyckeln och certifikatet.
 
@@ -131,7 +134,7 @@ Generera en privat nyckel och ett certifikat i formatet pkcs#12. Använd [openSS
    | -inkey | author.key | publish.key |
    | -out | author.pfx | publish.pfx |
    | -in | author.cer | publish.cer |
-   | -name | author | publicera |
+   | -name | författare | publicera |
 
 ## Installera den privata nyckeln och TrustStore på författaren {#install-the-private-key-and-truststore-on-author}
 
@@ -221,7 +224,7 @@ I följande tabell visas de OSGi-egenskaper som du behöver för att konfigurera
 
 ## Konfigurera replikeringsagenten på författaren {#configure-the-replication-agent-on-author}
 
-Konfigurera replikeringsagenten på författarinstansen så att HTTPS-protokollet används vid anslutning till publiceringsinstansen. Fullständig information om hur du konfigurerar replikeringsagenter finns i [Konfigurera replikeringsagenter](/help/sites-deploying/replication.md#configuring-your-replication-agents).
+Konfigurera replikeringsagenten på författarinstansen så att HTTPS-protokollet används vid anslutning till publiceringsinstansen. Fullständig information om hur du konfigurerar replikeringsagenter finns i [Konfigurera dina replikeringsagenter](/help/sites-deploying/replication.md#configuring-your-replication-agents).
 
 Om du vill aktivera MSSL konfigurerar du egenskaperna på fliken Transport enligt följande tabell:
 
@@ -233,7 +236,7 @@ Om du vill aktivera MSSL konfigurerar du egenskaperna på fliken Transport enlig
   </tr>
   <tr>
    <td>URI</td>
-   <td><p>https://server_name:SSL_port/bin/receive?sling:authRequestLogin=1</p> <p>Exempel:</p> <p>http://localhost:8443/bin/receive?sling:authRequestLogin=1</p> </td>
+   <td><p>https://server_name:SSL_port/bin/receive?sling:authRequestLogin=1</p> <p>Till exempel:</p> <p>http://localhost:8443/bin/receive?sling:authRequestLogin=1</p> </td>
   </tr>
   <tr>
    <td>Användare</td>
