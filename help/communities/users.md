@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Managing Users and User Groups {#managing-users-and-user-groups}
+# Hantera användare och användargrupper {#managing-users-and-user-groups}
 
 ## Översikt {#overview}
 
@@ -26,49 +26,49 @@ I AEM Communities kan användarna själva registrera och redigera sina profiler 
 
 * Skapa undergrupper på communitywebbplatsen (se [communitygrupper](creating-groups.md)).
 
-* [Moderat](moderation.md) användargenererat innehåll (UGC).
+* [UGC (](moderation.md) Moderateuser generated content).
 
-* Var [aktiveringsresurskontakter](resources.md) .
+* Var [aktiveringsresurs](resources.md) kontakter.
 
-* Var [privilegierad](#privileged-members-group) att skapa inlägg för bloggar, kalendrar, QnA och forum.
+* Var [privilegierad](#privileged-members-group) för att skapa inlägg för bloggar, kalendrar, QnA och forum.
 
-Användare som är registrerade i publiceringsmiljön kallas vanligtvis *communitymedlemmar (medlemmar)* för att skilja dem från *användare* i författarmiljön.
+Användare som är registrerade i publiceringsmiljön kallas vanligtvis *community-medlemmar (medlemmar)* för att skilja dem från *användare* i författarmiljön.
 
-Behörigheter ges genom att medlemmar tilldelas en av [medlemsgrupperna](#publish-group-roles) (användaren) som skapas dynamiskt när communitywebbplatsen [skapas](sites-console.md) eller [ändras](sites-console.md#modifying-site-properties) från författarmiljön. När du arbetar från författarmiljön visas medlemmar från publiceringsmiljön via [tunneltjänsten](#tunnel-service).
+Behörigheter ges genom att medlemmar tilldelas en av [medlemsgrupperna](#publish-group-roles) som skapats dynamiskt när communitywebbplatsen [har skapats](sites-console.md) eller [ändrats](sites-console.md#modifying-site-properties) från författarmiljön. När du arbetar från författarmiljön visas medlemmar i publiceringsmiljön med hjälp av [tunneltjänsten](#tunnel-service).
 
 Medlemmar och medlemsgrupper som skapats i publiceringsmiljön bör inte visas i författarmiljön. Användare och användargrupper som skapats i författarmiljön är avsedda att finnas kvar i författarmiljön.
 
 När användare som är författare och medlemmar vid publicering kommer från samma lista med användare, t.ex. synkroniserade från samma LDAP-katalog, betraktas de inte som samma användare med samma behörigheter och gruppmedlemskap i både författar- och publiceringsmiljöer. Medlemmars och användares roll(er) måste fastställas separat vid publicering och författare, beroende på vad som är lämpligt.
 
-För en [publiceringsgrupp](topologies.md)måste registrering och ändringar som görs i en publiceringsinstans synkroniseras med andra publiceringsinstanser för att de ska ha tillgång till samma användardata. Mer information finns i [Användarsynkronisering](sync.md), som innehåller ett avsnitt som beskriver [vad som händer när...](sync.md#what-happens-when).
+För en [publiceringsgrupp](topologies.md) måste registrering och ändringar som gjorts i en publiceringsinstans synkroniseras med andra publiceringsinstanser för att de ska ha tillgång till samma användardata. Mer information finns i [Användarsynkronisering](sync.md), som innehåller ett avsnitt som beskriver [Vad som händer när...](sync.md#what-happens-when).
 
 ### Bidragsgränser {#contribution-limits}
 
 För att skydda mot skräppost är det möjligt att begränsa medlemmarnas frekvens för publicering av innehåll. Dessutom är det möjligt att automatiskt begränsa bidragen från nyregistrerade medlemmar.
 
-Mer information finns i Gränser för [medlemsbidrag](limits.md).
+Mer information finns i [Gränser för medlemsbidrag](limits.md).
 
 ### Dynamiskt skapade användargrupper {#dynamically-created-user-groups}
 
-När en ny communitywebbplats skapas nya användargrupper dynamiskt med unika id:n (uid) och behörigheter som är lämpliga för olika administrativa funktioner som krävs för att hantera communitywebbplatsen i författarmiljön (se [Författargruppsroller](#author-group-roles)) eller publiceringsmiljön (se [Publicera grupproller](#publish-group-roles)).
+När en ny användargruppwebbplats skapas skapas nya användargrupper dynamiskt med unika ID:n (uid) och behörigheter som är lämpliga för olika administrativa funktioner som krävs för att hantera communitywebbplatsen, antingen i författarmiljön (se [Författargruppsroller](#author-group-roles)) eller i publiceringsmiljön (se [Publicera grupproller](#publish-group-roles)).
 
 Namnen på grupperna genereras från det namn som angavs för webbplatsen när [communitywebbplatsen skapades](sites-console.md#step13asitetemplate). Med de unika ID:na undviker du namnkonflikter för communitywebbplatser med liknande namn och communitygrupper på samma server.
 
-Om platsnamnet till exempel var &quot;*engage*&quot; för en webbplats med namnet &quot;We.Retail Engage&quot;, skulle en av de användargrupper som skapades vara:
+Om platsnamnet till exempel är *engage* för en webbplats med namnet&quot;We.Retail Engage&quot;, blir en av de användargrupper som skapas:
 
-* Community *Engage* -medlemmar
+* Community *Engagera*-medlemmar
 
 ## Författarmiljö {#author-environment}
 
-### Tunneltjänst {#tunnel-service}
+### Tunneltjänsten {#tunnel-service}
 
-När du använder författarmiljön för att [skapa webbplatser](sites-console.md), [ändra webbplatsegenskaper](sites-console.md#modifying-site-properties) och [hantera communitymedlemmar och medlemsgrupper](members.md), måste du ha tillgång till användare och användargrupper som är registrerade i publiceringsmiljön.
+När du använder redigeringsmiljön för att [skapa webbplatser](sites-console.md), [ändra webbplatsegenskaper](sites-console.md#modifying-site-properties) och [hantera communitymedlemmar och medlemsgrupper](members.md) måste du ha åtkomst till användare och användargrupper som är registrerade i publiceringsmiljön.
 
 Tunneltjänsten ger denna åtkomst med replikeringsagenten på författaren.
 
-* Mer information finns i [konfigurationsinstruktionerna](deploy-communities.md#tunnel-service-on-author) på distributionssidan.
+* Mer information finns i [konfigurationsinstruktioner](deploy-communities.md#tunnel-service-on-author) på distributionssidan.
 
-Konsolerna [](members.md) Communities-medlemmar och -grupper är avsedda endast för hantering av användare (medlemmar) och användargrupper (medlemsgrupper) som är registrerade i publiceringsmiljön.
+Konsolerna [Webbgruppsmedlemmar och -grupper](members.md) är endast avsedda att hantera användare (medlemmar) och användargrupper (medlemsgrupper) som endast är registrerade i publiceringsmiljön.
 
 Om du vill hantera användare och användargrupper som är registrerade i författarmiljön använder du [säkerhetskonsolen](../../help/sites-administering/security.md)
 
@@ -78,26 +78,26 @@ Om du vill hantera användare och användargrupper som är registrerade i förfa
 |---|---|
 | administratörer | Administratörsgruppen består av systemadministratörer som har alla funktioner som en community-administratör har samt möjlighet att hantera gruppen Community Administrators. |
 | Community-administratörer | Gruppen Community Administrators blir automatiskt medlem i alla communitysajter och i alla communitygrupper som skapas på webbplatsen. En inledande medlem i gruppen Community Administrators är gruppen Administratörer. I redigeringsmiljön kan communityadministratörer skapa communitysajter, hantera webbplatser, hantera medlemmar (de kan förbjuda medlemmar från communityn) och moderera innehåll. |
-| Webbplatskontakthanteraren för &lt;*platsnamn*> | Content Manager för communitysajt kan utföra AEM, skapa innehåll och ändra sidor för en community-sajt. |
+| Community &lt;*platsnamn*> Platskontakt, hanterare | Content Manager för communitysajt kan utföra AEM, skapa innehåll och ändra sidor för en community-sajt. |
 | Community Enablement Managers | Gruppen Hanterare för communityaktivering består av användare som är tillgängliga för tilldelning för att hantera en communitywebbplats grupp för aktiveringshanterare. |
-| Community &lt;*site name* > SiteEnablementManagers | Gruppen Hanterare för aktivering av communitywebbplats består av användare som har tilldelats behörigheten att hantera en communitys [aktiveringsresurser](resources.md). |
+| Community &lt;*platsnamn* > Platshållarhanterare | Gruppen Hanterare för aktivering av communitywebbplats består av användare som har tilldelats behörigheten att hantera aktiveringen av en community-webbplats [resurser](resources.md). |
 | Inget | En anonym besökare får inte åtkomst till författarmiljön. |
 
 ### Systemadministratörer {#system-administrators}
 
 Medlemmar i administratörsgruppen är systemadministratörer som kan utföra den första konfigurationen av en AEM för både författarmiljön och publiceringsmiljön.
 
-I demonstrations- och utvecklingssyfte har administratörsgruppen en medlem vars användar-ID är *admin* och lösenord är *admin*.
+I demonstrations- och utvecklingssyfte har administratörsgruppen en medlem vars användar-ID är *admin* och lösenordet är *admin*.
 
 I produktionsmiljöer bör standardadministratörsgruppen ändras.
 
-Var noga med att följa [checklistan](../../help/sites-administering/security-checklist.md).
+Var noga med att följa [säkerhetschecklistan](../../help/sites-administering/security-checklist.md).
 
 ## Publiceringsmiljö {#publish-environment}
 
 ### Bli medlem {#becoming-a-member}
 
-I publiceringsmiljön kan en besökare bli en community-medlem, beroende på [inställningarna](sites-console.md#user-management) för communitywebbplatsen:
+I publiceringsmiljön, beroende på [inställningarna](sites-console.md#user-management) för communityplatsen, kan en besökare bli en community-medlem:
 
 * När communitywebbplatsen är privat (stängd):
    * Efter inbjudan
@@ -115,35 +115,35 @@ I publiceringsmiljön kan en besökare bli en community-medlem, beroende på [in
 
 | Om gruppmedlem... | Primär roll |
 |---|---|
-| Community &lt;*site name*>-medlemmar | En community-medlem är en registrerad användare. De kan logga in, ändra sin profil, gå med i en öppen community-grupp, publicera innehåll i communityn, skicka meddelanden till andra medlemmar och följa webbplatsaktiviteter. |
+| Community &lt;*platsnamn*-medlemmar | En community-medlem är en registrerad användare. De kan logga in, ändra sin profil, gå med i en öppen community-grupp, publicera innehåll i communityn, skicka meddelanden till andra medlemmar och följa webbplatsaktiviteter. |
 | Moderatorer för communityn &lt;*platsnamn*> | En moderator för communitywebbplatser är en betrodd community-medlem som kan moderera UGC-innehåll antingen i grupp med modereringskonsolen eller i sitt sammanhang på den sida där innehållet publiceras. |
-| Community &lt;*site name*> &lt;*group name*>-medlemmar | En community-gruppmedlem är en community-medlem som antingen har gått med i en öppen community-grupp eller har bjudits in till en stängd community-grupp. De har funktionerna som en medlem i den communitygruppen på webbplatsen. |
-| Gruppadministratörer för &lt;*platsnamn*> | En administratör för en community-webbplatsgrupp är en betrodd community-medlem som har tilldelats behörigheten att skapa och hantera undergrupper (grupper) på en community-webbplats. Möjligheten att moderera i sitt sammanhang ingår. |
-| *Säkerhetsgrupp för behöriga medlemmar* | En användargrupp som skapats och underhålls manuellt för att begränsa möjligheten att skapa innehåll. Se [Grupp](#privileged-members-group)med behöriga medlemmar. |
+| Community &lt;*platsnamn*> &lt;*gruppnamn* medlemmar | En community-gruppmedlem är en community-medlem som antingen har gått med i en öppen community-grupp eller har bjudits in till en stängd community-grupp. De har funktionerna som en medlem i den communitygruppen på webbplatsen. |
+| Community &lt;*platsnamn* Gruppadministratörer | En administratör för en community-webbplatsgrupp är en betrodd community-medlem som har tilldelats behörigheten att skapa och hantera undergrupper (grupper) på en community-webbplats. Möjligheten att moderera i sitt sammanhang ingår. |
+| *Säkerhetsgrupp för behöriga medlemmar* | En användargrupp som skapats och underhålls manuellt för att begränsa möjligheten att skapa innehåll. Se [Grupp med behöriga medlemmar](#privileged-members-group). |
 | Inget | En anonym besökare som upptäcker webbplatsen kan visa och söka på communitysajter som tillåter anonym åtkomst. För att kunna delta och publicera innehåll måste användaren själv registrera sig (om det är tillåtet) och bli medlem i communityn. |
 
 ### Tilldela medlemmar till publiceringsgruppsroller {#assigning-members-to-publish-group-roles}
 
-När du [skapar en community-plats](sites-console.md) i författarmiljön eller när du [ändrar platsegenskaper,](sites-console.md#modifying-site-properties) kan medlemmar tilldelas olika roller som utförs i publiceringsmiljön, till exempel moderatorer, gruppadministratörer, resurskontakter eller behöriga medlemmar.
+När [skapar en community-plats](sites-console.md) i författarmiljön, eller när [webbplatsegenskaper ändras, kan ](sites-console.md#modifying-site-properties)-medlemmar tilldelas olika roller som utförs i publiceringsmiljön, till exempel moderatorer, gruppadministratörer, resurskontakter eller behöriga medlemmar.
 
-[Om du aktiverar tunneltjänsten](sync.md#accessingpublishusersfromauthor) visas tilldelningsalternativ från medlemmar vid publicering i stället för användare vid författare.
+[Om du aktiverar tunneltjänsterna ](sync.md#accessingpublishusersfromauthor) visas uppdragsalternativ från medlemmar vid publicering i stället för användare vid författare.
 
-De valda medlemmarna tilldelas automatiskt till [rätt grupp](#publish-group-roles) och deras medlemskap inkluderas när communitywebbplatsen publiceras (på nytt).
+De markerade medlemmarna tilldelas automatiskt till [rätt grupp](#publish-group-roles) och deras medlemskap inkluderas när communitywebbplatsen publiceras (på nytt).
 
 ### Grupp med behöriga medlemmar {#privileged-members-group}
 
 Syftet med en säkerhetsgrupp för behöriga medlemmar är att begränsa skapandet av innehåll för vissa communityfunktioner till en privilegierad delmängd av medlemmarna på en community-webbplats.
 
-Gruppen med behöriga medlemmar är en medlemsgrupp som skapas och hanteras med konsolen [](members.md)Communities-grupper.
+Gruppen med behöriga medlemmar är en medlemsgrupp som skapas och hanteras med konsolen [Communities Groups](members.md).
 
-När en privilegierad medlemsgrupp har skapats, och [tunneltjänsten är aktiverad](sync.md#accessingpublishusersfromauthor), kan en befintlig community-platsens struktur [ändras](sites-console.md#modify-structure) för att redigera konfigurationen av dess communityfunktioner till Tillåt privilegierade medlemmar och lägga till den skapade gruppen.
+När en privilegierad medlemsgrupp har skapats, och med [tunneltjänsten aktiverad](sync.md#accessingpublishusersfromauthor), kan en befintlig community-platsens struktur vara [modifierad](sites-console.md#modify-structure) för att redigera konfigurationen av dess community-funktioner till Tillåt privilegierade medlemmar och lägga till den skapade gruppen.
 
 De communityfunktioner som tillåter specificering av en eller flera privilegierade medlemsgrupper är:
 
-* [Bloggfunktion](functions.md#blog-function) - Begränsa möjligheten att skapa nya artiklar.
-* [Kalenderfunktion](functions.md#calendar-function) - Begränsa möjligheten att skapa nya händelser.
-* [Forumfunktion](functions.md#forum-function) - Begränsa möjligheten att skapa nya ämnen.
-* [QnA-funktion](functions.md#qna-function) - Begränsa skapandet av nya frågor.
+* [Bloggfunktion](functions.md#blog-function)  - Begränsa möjligheten att skapa nya artiklar.
+* [Kalenderfunktion](functions.md#calendar-function)  - Begränsa möjligheten att skapa nya händelser.
+* [Forumfunktion](functions.md#forum-function)  - Begränsa möjligheten att skapa nya ämnen.
+* [QnA-funktion](functions.md#qna-function)  - Begränsa skapandet av nya frågor.
 
 När en communityfunktion inte är skyddad (ingen privilegierad medlemsgrupp har tilldelats), tillåts alla community-webbplatsmedlemmar att skapa funktionsinnehåll (artiklar, händelser, ämnen, frågor).
 
@@ -151,21 +151,21 @@ När en communityfunktion inte är skyddad (ingen privilegierad medlemsgrupp har
 >
 >Om du lägger till en användare i en privilegierad medlemsgrupp för en communitywebbplats får användaren endast behörighet om han eller hon också är medlem på samma communitywebbplats.
 
-## Skapa communitymedlemmar {#creating-community-members}
+## Skapar communitymedlemmar {#creating-community-members}
 
-### Lagringsplats {#repository-location}
+### Databasplats {#repository-location}
 
 För att vissa funktioner ska fungera på rätt sätt måste du skapa användare och användargrupper med lämplig behörighet.
 
-När medlemmar skapas i `/home/users/community`ärver de rätt åtkomstkontrollistor som ger läsbehörighet till medlemmarnas profiler.
+När medlemmar skapas i `/home/users/community` ärver de rätt åtkomstkontrollistor som ger läsbehörighet till medlemmarnas profiler.
 
 På samma sätt bör anpassade användargrupper (som behöriga medlemsgrupper) skapas i `/home/groups/community`.
 
-Med konsolerna [Communities Members and Groups (](members.md) Communities-medlemmar och grupper) kan du skapa användare och grupper på de här sökvägarna.
+Om du använder konsolerna [Communities Members and Groups](members.md) skapas användare och grupper i de här sökvägarna.
 
 Om du vill ange en anpassad sökväg måste du använda det klassiska säkerhetsgränssnittet, som finns på [https://&lt;server>:&lt;port>/useradmin](http://localhost:4503/useradmin).
 
-Om du vill ge läsbehörighet för anpassade medlemssökvägar anger du åtkomstkontrollistor för alla publiceringsinstanser som liknar `/home/users/community`:
+Om du vill ge läsbehörighet för anpassade medlemssökvägar anger du åtkomstkontrollistor som liknar `/home/users/community` för alla publiceringsinstanser:
 
 ```xml
 <allow
@@ -178,7 +178,7 @@ Om du vill ge läsbehörighet för anpassade medlemssökvägar anger du åtkomst
 </allow>
 ```
 
-Om du vill ge rätt behörighet för anpassade medlemsgruppsökvägar, till exempel /home/groups/mycompany, anger du åtkomstkontrollistor som liknar `/home/groups/community`:
+Om du vill ge rätt behörighet för anpassade medlemsgruppsökvägar, till exempel /home/groups/mycompany, anger du åtkomstkontrollistor som liknar `/home/groups/community` för alla publiceringsinstanser:
 
 ```xml
 <allow
@@ -198,11 +198,11 @@ Det finns fyra separata konsoler som endast är tillgängliga i författarmiljö
 
 ### Roll för Community Enablement Manager {#community-enablement-manager-role}
 
-Möjligheten för en besökare att registrera sig själv är vanligtvis inte tillåten för en [aktiveringscommunity](overview.md#enablement-community) eftersom det finns kostnader som är kopplade till varje medlem. Aktiveringsdeltagare och -resurser hanteras av en användare som tilldelats [rollen](#author-group-roles) för `enablement manager` när webbplatsen skapas [på författaren (läggs till som medlem i gruppen](sites-console.md#enablement) `Community <site-name> Siteenablementmanagers`). Det `enablement manager` är även ansvarig för [att tilldela utbildningsresurser](resources.md) till communitymedlemmar om författare.
+Möjligheten för en besökare att registrera sig själv är vanligtvis inte tillåten för en [aktiveringscommunity](overview.md#enablement-community) eftersom det finns kostnader kopplade till varje medlem. Aktiveringsdeltagare och -resurser hanteras av en användare som tilldelats rollen [](#author-group-roles) `enablement manager` [när webbplatsen skapas](sites-console.md#enablement) av en författare (läggs till som medlem i gruppen `Community <site-name> Siteenablementmanagers`). `enablement manager` ansvarar också för att [tilldela utbildningsresurser](resources.md) till communitymedlemmar på författaren.
 
-Endast användare som är medlemmar i den globala `Community Enablement Managers` gruppen kan väljas som en `enablement manager` för en specifik community-webbplats.
+Endast användare som är medlemmar i den globala `Community Enablement Managers`-gruppen kan väljas som `enablement manager` för en specifik community-webbplats.
 
-Om du vill skapa en användare som kan tilldelas rollen `Community Site Enablement Manager`använder du den klassiska UI-säkerhetskonsolen för att ange sökvägen:
+Om du vill skapa en användare som kan tilldelas rollen `Community Site Enablement Manager` använder du den klassiska UI-säkerhetskonsolen för att ange sökvägen:
 
 På en författarinstans:
 
@@ -210,8 +210,8 @@ På en författarinstans:
 
    Till exempel [http://localhost:4502/useradmin](http://localhost:4502/useradmin)
 
-2. From the Edit menu, select **[!UICONTROL Create User]**.
-3. Fyll i `Create User` dialogrutan.
+2. Välj **[!UICONTROL Create User]** på menyn Redigera.
+3. Fyll i dialogrutan `Create User`.
    * Sökvägen måste vara `/home/users/community`.
 4. Välj **[!UICONTROL Create]**.
 
@@ -223,7 +223,7 @@ På en författarinstans:
 
 I den vänstra rutan:
 
-1. Avmarkera sökrutan och markera **[!UICONTROL Hide Users]**.
+1. Avmarkera sökrutan och välj **[!UICONTROL Hide Users]**.
 2. Leta upp och dra `community-enablementmanagers` till fliken **[!UICONTROL Groups]** för den nya användaren som visas i den högra rutan.
 
    ![assign-group](assets/assign-group.png)
@@ -232,7 +232,7 @@ I den vänstra rutan:
 
 Som framgår av diagrammet [Författargrupproller](#author-group-roles) kan medlemmar i gruppen Community Administrators skapa communitysajter, hantera webbplatser, hantera medlemmar (de kan förbjuda medlemmar från communityn) och moderera innehåll.
 
-Följ samma steg som när du skapar och tilldelar en användare rollen som [aktiveringshanterare](#communitysiteenablementmanagerrole), men lägg till en `ommunity-administrators` grupp under användarens gruppflik.
+Följ samma steg som när du skapar och tilldelar en användare rollen [aktiveringshanterare](#communitysiteenablementmanagerrole), men lägg till en c `ommunity-administrators`-grupp under fliken Grupper för användaren.
 
 ### LDAP-integrering {#ldap-integration}
 
@@ -250,24 +250,24 @@ Nedan följer några konfigurationsdetaljer som är specifika för communitymedl
    * Ange följande egenskaper:
 
       * **[!UICONTROL User auto membership]**: `community-<site name>-<uid>-members`
-      * **[!UICONTROL User Path Prefix]**: `/community`
-      * **[!UICONTROL Group Path Prefix]**: `/community`
+      * **[!UICONTROL User Path Prefix]**:  `/community`
+      * **[!UICONTROL Group Path Prefix]**:  `/community`
 
 4. [Modulen Extern inloggning](../../help/sites-administering/ldap-config.md#the-external-login-module)
 
    * inga särskilda instruktioner
 
-Detta leder till att användare automatiskt tilldelas till medlemsgruppen på communityplatsen och till att databasplatsen är `/home/users/community` och `/home/groups/community`att de ärver de behörigheter som krävs för att se andras profil.
+Detta resulterar i att användare automatiskt tilldelas medlemsgruppen för communityplatsen och att databasplatsen är `/home/users/community` och `/home/groups/community`, så att de ärver de behörigheter som krävs för att se varandras profil.
 
-* Värdet `User auto membership` ska vara `rep:authorizableId` egenskapen, inte `givenName` (visningsnamn) från profilen.
+* Värdet `User auto membership` ska vara egenskapen `rep:authorizableId`, inte `givenName` (visningsnamn) från profilen.
 
-## Synkronisera användare bland AEM instanser {#synchronizing-users-among-aem-instances}
+## Synkronisera användare bland AEM förekomster {#synchronizing-users-among-aem-instances}
 
-När du använder en [publiceringsgrupp](topologies.md)måste användarna ha samma sökväg för varje publiceringsinstans genom att först importera användarna till en instans och [aktivera användarsynkronisering](sync.md) för Sling, distribuera användarna till de andra publiceringsinstanserna.
+När du använder en [publiceringsgrupp](topologies.md) måste användarna ha samma sökväg för varje publiceringsinstans genom att först importera användarna till en instans och [aktivera användarsynkronisering](sync.md) till Sling för att distribuera användarna till de andra publiceringsinstanserna.
 
-Om du importerar användargrupper måste du importera till en instans, [skapa ett paket](../../help/sites-administering/package-manager.md#creating-a-new-package) för export och installera paketet på alla andra publiceringsinstanser för att se till att användargrupperna har samma sökväg för varje publiceringsinstans.
+Om du importerar användargrupper måste du importera till en instans, sedan [skapa ett paket](../../help/sites-administering/package-manager.md#creating-a-new-package) för export och installera paketet på alla andra publiceringsinstanser för att se till att användargrupperna har samma sökväg för varje publiceringsinstans.
 
-Synkronisering av användargrupper via användarsynkronisering ingår i en framtida release, men för närvarande synkroniseras endast *medlemskapet* i en användargrupp när användarsynkroniseringen körs.
+Synkronisering av användargrupper via användarsynkronisering kommer att ingå i en framtida release, men för närvarande synkroniseras endast *medlemskapet* för en användargrupp när användarsynkroniseringen körs.
 
 ## Om communitygrupper {#about-community-groups}
 
@@ -279,4 +279,4 @@ När man diskuterar grupper finns det två skilda ämnen:
 
 * **[Medlemsgrupper](../../help/sites-administering/security.md)**
 
-   Medlemsgrupper är de grupper som medlemmar kan tillhöra och hanteras via gruppkonsolen. En stor del av diskussionen på den här sidan har hänskjutits till medlemsgrupper. De medlemsgrupper som automatiskt skapas för en communitywebbplats, som är förberedd för *`Community`* detta, kan kallas en communitygrupp, och därför måste diskussionssammanhanget beaktas.
+   Medlemsgrupper är de grupper som medlemmar kan tillhöra och hanteras via gruppkonsolen. En stor del av diskussionen på den här sidan har hänskjutits till medlemsgrupper. Medlemsgrupper som skapas automatiskt för en communitywebbplats, som har prefixet *`Community`*, kan kallas för en communitygrupp, och därför måste diskussionssammanhanget beaktas.
