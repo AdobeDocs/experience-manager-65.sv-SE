@@ -18,13 +18,13 @@ ht-degree: 1%
 ---
 
 
-# Utveckla webbgrupper  {#developing-communities}
+# Utveckla webbgrupper {#developing-communities}
 
 ## Översikt {#overview}
 
 AEM Communities gör det enklare att skapa och anpassa communityfunktioner som forum, användargrupper, bloggar, frågor och svar, kalendrar, kommentarer, recensioner, omröstningar, omdömen och uppdrag. Dessa funktioner gör att användargenererat innehåll (UGC) anges i publiceringsmiljön.
 
-Grunden för en [communitywebbplats](overview.md#communitiessites) är den [sociala komponentens ramverk](scf.md) (SCF). Skapandet av en community-webbplats börjar med att en mall [för en](sites-console.md) community väljs som består av [communityfunktioner](functions.md).
+Grunden för en [community-plats](overview.md#communitiessites) är [ramverket för sociala komponenter](scf.md) (SCF). Skapandet av en community-webbplats börjar med att du väljer en [community-webbplatsmall](sites-console.md) som består av [community-funktioner](functions.md).
 
 En översikt och självstudiekurser för att komma igång finns på:
 
@@ -41,14 +41,14 @@ En översikt och självstudiekurser för att komma igång finns på:
 * [Community Content Storage](working-with-srp.md): diskuterar de tillgängliga SRP-valen för en gemensam lagringsplats för användargenererat innehåll
 * [Rekommenderade topologier för Communities](topologies.md): diskuterar topologier baserat på användningsfall och SRP-val
 
-## Ramverk för sociala komponenter {#social-component-framework}
+## Social Component Framework {#social-component-framework}
 
-* [Ramverk](scf.md)för sociala komponenter: översikt över ramverk och API:er.
+* [Ramverk](scf.md) för sociala komponenter: översikt över ramverk och API:er.
 * [SCF Handlebars Helpers](handlebars-helpers.md): standardhjälpprogram och hur du skriver anpassade hjälpprogram.
-* [Anpassning](client-customize.md)på klientsidan: anpassa kod som körs i webbläsaren.
-* [Anpassning](server-customize.md)på serversidan: anpassa kod som körs på servern.
+* [Anpassning](client-customize.md) på klientsidan: anpassa kod som körs i webbläsaren.
+* [Anpassning](server-customize.md) på serversidan: anpassa kod som körs på servern.
 * [Lagringsresursprovider (SRP)](srp.md): Översikt över lagring av communityinnehåll.
-* [Riktlinjer](code-guide.md)för kodning: riktlinjer, tips och tricks.
+* [Riktlinjer](code-guide.md) för kodning: riktlinjer, tips och tricks.
 * [Community Components Guide](components-guide.md): interaktivt utvecklingsverktyg.
 
 ## Grundläggande om komponenter, funktioner och funktioner {#component-function-and-feature-essentials}
@@ -66,9 +66,9 @@ AEM Communities komponenter, funktioner och funktioner utgör byggstenarna för 
 * [Hantera användare och användargrupper](users.md)
 * [Social inloggning med Facebook och Twitter](social-login.md)
 
-## Community-grupper {#community-groups}
+## Community Groups {#community-groups}
 
-[Community-grupper](overview.md#communitygroups) är konceptet att tillåta communitymedlemmar att bilda undergrupper på communitywebbplatsen. Skapande av en community-grupp kan ske i publicerings- eller författarmiljön.
+[Community-](overview.md#communitygroups) grupper är begreppet att tillåta communitymedlemmar att bilda undergrupper på communitywebbplatsen. Skapande av en community-grupp kan ske i publicerings- eller författarmiljön.
 
 * [Grundläggande om communitygrupper](essentials-groups.md)
 * [Funktionen Grupper](functions.md#groups-function)
@@ -78,8 +78,8 @@ AEM Communities komponenter, funktioner och funktioner utgör byggstenarna för 
 
 ## Hantera data {#managing-data}
 
-* [SRP och UGC Essentials](srp-and-ugc.md) - metoder och exempel för SRP API-verktyg
-* [Tagg Essentials](tag.md) - möjlighet för communitymedlemmar att tagga UGC- och/eller katalogaktiveringsresurser
+* [SRP och UGC Essentials](srp-and-ugc.md) - SRP API-verktygsmetoder och exempel
+* [Tagg Essentials](tag.md)  - möjlighet för communitymedlemmar att tagga UGC- och/eller katalogaktiveringsresurser
 
 ## Tutorials {#tutorials}
 
@@ -94,9 +94,9 @@ AEM Communities komponenter, funktioner och funktioner utgör byggstenarna för 
 
 ## Dokumentation för relaterade communities {#related-communities-documentation}
 
-* Besök [Distribuera communityn](deploy-communities.md) om du vill veta mer om rekommenderade distributioner och konfigurationer för dispatcher.
+* Besök [Distribuera communityer](deploy-communities.md) om du vill veta mer om rekommenderade distributioner och konfigurationer för dispatcher.
 
-* Besök [Administrera communitysajter](administer-landing.md) om du vill veta mer om hur du skapar en community-webbplats, konfigurerar mallar för communitysajter, modererar communityinnehåll, hanterar medlemmar och konfigurerar meddelanden.
+* Besök [Administrera communityplatser](administer-landing.md) om du vill veta mer om hur du skapar en community-webbplats, konfigurerar mallar för communitywebbplatser, modererar communityinnehåll, hanterar medlemmar och konfigurerar meddelanden.
 
-* Besök [Authoring Communities Components](author-communities.md) om du vill veta mer om hur du skapar med och konfigurerar Communities-komponenter.
+* Gå till [Komponenter för redigeringsgrupper](author-communities.md) om du vill veta mer om hur du skapar med och konfigurerar webbgruppskomponenter.
 
