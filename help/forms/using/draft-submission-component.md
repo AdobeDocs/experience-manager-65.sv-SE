@@ -11,11 +11,14 @@ discoiquuid: ad71b423-02e1-4476-9c7c-f832cea6b0a6
 docset: aem65
 translation-type: tm+mt
 source-git-commit: 23252989bb8649b2f0b96a58972c831257e0c5dc
+workflow-type: tm+mt
+source-wordcount: '776'
+ht-degree: 0%
 
 ---
 
 
-# Komponenten Utkast och inskickat material{#drafts-and-submissions-component}
+# Komponenten Utkast och inskickningar{#drafts-and-submissions-component}
 
 Komponenten Utkast och inskickningar visar alla formulär som är i utkastläge och de formulär som redan har skickats. Komponenten har separata avsnitt (flikar) för utkast och skickade formulär. Användarna kan bara visa sina utkast och skickade formulär.
 
@@ -23,7 +26,7 @@ Komponenten Utkast och inskickningar visar alla formulär som är i utkastläge 
 
 Komponenten Utkast och överföringar har två flikar: Utkast och inskickat material.
 
-Om du vill att ett anpassat formulär ska visas på fliken Skicka anger du åtgärden **** Skicka till **[formulärportalåtgärden](../../forms/using/configuring-submit-actions.md). Du kan också&#x200B;**aktivera alternativet Skicka i formulärportalen. När en användare skickar formuläret läggs formuläret till på fliken Skicka.
+Om du vill att ett anpassat formulär ska visas på fliken Skicka anger du **Skicka-åtgärden** till **[Forms Portal Submit Action](../../forms/using/configuring-submit-actions.md). Alternativt kan du** aktivera alternativet Skicka i Forms Portal. När en användare skickar formuläret läggs formuläret till på fliken Skicka.
 
 Funktionen Utkast är aktiverad direkt. När en användare klickar på **Spara** i ett anpassat formulär läggs formuläret till på fliken Utkast.
 
@@ -34,7 +37,7 @@ Utför följande steg för att lägga till och konfigurera en komponent för utk
 
    ![Komponenten Utkast och inskickning](assets/drafts-submissions-edit.png)
 
-1. I dialogrutan Redigera anger du följande information och trycker på **Klar** för att spara inställningarna.
+1. Ange följande information i dialogrutan Redigera och tryck på **Klar** för att spara inställningarna.
 
 <table>
  <tbody>
@@ -46,12 +49,12 @@ Utför följande steg för att lägga till och konfigurera en komponent för utk
   <tr>
    <td>Allmänt</td>
    <td>Totalt resultat</td>
-   <td>Anger det maximala antalet resultat som ska visas. Om antalet resultat ökar gränsen för totalt resultat visas en <strong>mer- </strong>länk längst ned i komponenten. Om du klickar på <strong>Mer </strong>visas alla formulär. </td>
+   <td>Anger det maximala antalet resultat som ska visas. Om antalet resultat ökar gränsen för totalt resultat visas en <strong>Mer </strong>länk längst ned i komponenten. Om du klickar på <strong>Mer </strong>visas alla formulär. </td>
   </tr>
   <tr>
    <td> </td>
    <td>Formattyp</td>
-   <td>Anger komponentens format. Du kan ange <strong>Inget format</strong>, <strong>Standardformat</strong>eller <strong>Eget format</strong> för att visa formulären. För alternativet Eget format kan du ange sökvägen till den anpassade CSS-filen i <strong>fältet </strong><strong>Anpassad formatsökväg.</strong></td>
+   <td>Anger komponentens format. Du kan ange <strong>Inget format</strong>, <strong>Standardformat</strong> eller <strong>Anpassat format</strong> för att visa formulären. För alternativet Eget format kan du ange sökvägen till den anpassade CSS-filen i fältet <strong>Anpassad formatsökväg </strong><strong>.</strong></td>
   </tr>
   <tr>
    <td> </td>
@@ -61,45 +64,45 @@ Utför följande steg för att lägga till och konfigurera en komponent för utk
   <tr>
    <td> </td>
    <td>Visningsalternativ</td>
-   <td><p>Anger vilka flikar som ska visas. Du kan välja att visa formulärutkast, skickade formulär eller både och. </p> <p><strong></strong> Obs<em>: Om du väljer något annat alternativ än <strong>Båda</strong>för <strong>visningsalternativ</strong>används inte alternativet <strong>Standardflik</strong> .</em></p> </td>
+   <td><p>Anger vilka flikar som ska visas. Du kan välja att visa formulärutkast, skickade formulär eller både och. </p> <p><strong>Obs</strong>! <em> Om du väljer något annat alternativ än  <strong>Båda</strong> för  <strong>visningsalternativ</strong> används inte alternativet  <strong>Standardtabell </strong> .</em></p> </td>
   </tr>
   <tr>
    <td> </td>
    <td>Standardflik</td>
-   <td>Anger fliken som ska visas när formulärportalsidan läses in. Du kan välja mellan fliken <strong>Utkastformulär</strong> och fliken <strong></strong>Skickade formulär.</td>
+   <td>Anger fliken som ska visas när formulärportalsidan läses in. Du kan välja mellan <strong>Utkast av Forms-flik</strong> och <strong>Skickad Forms-flik</strong>.</td>
   </tr>
   <tr>
-   <td>Konfiguration av fliken Utkastformulär</td>
+   <td>Utkast till Forms Tab Configuration</td>
    <td>Egen titel</td>
-   <td>Anger titeln på fliken <strong>Utkastformulär</strong> . Standardvärdet är <strong>Utkastformulär.</strong></td>
+   <td>Anger rubriken på fliken <strong>Utkast-Forms</strong>. Standardvärdet är <strong>Draft Forms.</strong></td>
   </tr>
   <tr>
    <td> </td>
    <td>Layoutmall</td>
-   <td>Anger den layout som ska användas för listan Utkastformulär.</td>
+   <td>Anger vilken layout som ska användas för listan med utkast till Forms.</td>
   </tr>
   <tr>
-   <td>Konfiguration av fliken Skickade formulär</td>
+   <td>Inskickad Forms-flikkonfiguration</td>
    <td>Egen titel </td>
-   <td>Anger titeln på <strong>fliken </strong>Skickade formulär. Standardvärdet är <strong>Skickade formulär.</strong></td>
+   <td>Anger rubriken på <strong>fliken </strong>Skickat Forms. Standardvärdet är <strong>Skickat Forms.</strong></td>
   </tr>
   <tr>
    <td> </td>
    <td>Layoutmall</td>
-   <td>Anger den layout som ska användas för<strong> listan Skickade formulär </strong>. </td>
+   <td>Anger den layout som ska användas för den skickade Forms<strong> </strong>listan. </td>
   </tr>
  </tbody>
 </table>
 
-## Anpassa lagringen {#customizing-the-storage}
+## Anpassa lagring {#customizing-the-storage}
 
-När du använder formulärportalens överföringsåtgärd eller aktiverar alternativet Lagra data i formulärportalen i anpassad form, lagras formulärdata i AEM-databasen. I en produktionsmiljö bör du inte lagra utkast eller inskickade formulärdata i AEM-databasen. Istället måste ni integrera utkasten och skicka-komponenten med en säker lagringsplats, t.ex. en företagsdatabas, för att lagra utkast och skickade formulärdata.
+När du använder Forms Portal-åtgärden för att skicka eller aktiverar alternativet Lagra data i formulärportalen i anpassad form, lagras formulärdata i AEM. I en produktionsmiljö bör du inte lagra utkast eller skickade formulärdata i AEM. Istället måste ni integrera utkasten och skicka-komponenten med en säker lagringsplats, t.ex. en företagsdatabas, för att lagra utkast och skickade formulärdata.
 
-I Forms-portalen kan du lagra data i en lokal AEM-databas, fjärr-AEM-databas eller i en databas. Med AEM Forms kan ni anpassa implementeringen av lagring av användardata för utkast och inskickade data. Du kan åsidosätta standardmetoder för att ange hur utkast- och inskickningsdata ska lagras på ett valfritt lagringsutrymme. Du kan till exempel lagra data i ett datalager som är implementerat i din organisation.
+Med Forms Portal kan du lagra data på en lokal AEM, AEM eller i en databas. Med AEM Forms kan ni anpassa implementeringen av lagring av användardata för utkast och inskickade data. Du kan åsidosätta standardmetoder för att ange hur utkast- och inskickningsdata ska lagras på ett valfritt lagringsutrymme. Du kan till exempel lagra data i ett datalager som är implementerat i din organisation.
 
-Forms-portalen innehåller färdiga API:er för lagring av data i krx-databaser för lokala och fjärranslutna AEM Forms-publiceringsinstanser. Du kan ersätta standardimplementeringarna, som beskrivs i [Konfigurera lagringstjänster för utkast och inskickade](/help/forms/using/configuring-draft-submission-storage.md) artiklar, med anpassade implementeringar som ersätter standardfunktionerna. Mer information om vilka metoder som krävs i en anpassad implementering för att lagra innehåll på en säker plats finns i [Anpassa datatjänster](/help/forms/using/custom-draft-submission-data-services.md) för utkast och överföring samt [Anpassad lagring för komponenter för utkast och inskickning.](/help/forms/using/adding-custom-storage-provider-forms.md)
+Forms Portal innehåller färdiga API:er för lagring av data i krx-databaser för AEM Forms publiceringsinstanser lokalt och på fjärrbasis. Du kan ersätta standardimplementeringarna, som beskrivs i [Konfigurera lagringstjänster för utkast och överföringar](/help/forms/using/configuring-draft-submission-storage.md)-artikeln, med anpassade implementeringar som ersätter standardfunktionerna. Mer information om vilka metoder som krävs i en anpassad implementering för att lagra innehåll på en skyddad plats finns i [Anpassa tjänster för utkast- och överföringsdata](/help/forms/using/custom-draft-submission-data-services.md) och [Anpassad lagring för komponenter för utkast och överföringar.](/help/forms/using/adding-custom-storage-provider-forms.md)
 
-I dokumentationen för AEM Forms finns ett exempel [på hur du integrerar utkast och inskickningskomponenter med databaser](integrate-draft-submission-database.md). Du kan använda exempelimplementeringen för att utveckla en egen anpassad implementering.
+I AEM Forms-dokumentationen finns ett [exempel för integrering av utkast och inskickningskomponenter i databasen](integrate-draft-submission-database.md). Du kan använda exempelimplementeringen för att utveckla en egen anpassad implementering.
 
 ## Relaterade artiklar
 
