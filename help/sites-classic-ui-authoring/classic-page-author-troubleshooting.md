@@ -11,23 +11,26 @@ content-type: reference
 discoiquuid: 9b492b17-9029-46ae-9dc0-bb21e6b484df
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '455'
+ht-degree: 6%
 
 ---
 
 
-# Felsöka AEM vid redigering{#troubleshooting-aem-when-authoring}
+# Felsökning AEM vid redigering{#troubleshooting-aem-when-authoring}
 
 I följande avsnitt beskrivs några problem som du kan stöta på när du använder AEM, tillsammans med förslag på hur du felsöker dem.
 
 >[!NOTE]
 >
->När du får problem är det också värt att kontrollera listan med [kända fel](/help/release-notes/known-issues.md) för din instans (release- och servicepaket).
+>När du får problem är det också värt att kontrollera listan [Kända fel](/help/release-notes/known-issues.md) för din instans (release- och service packs).
 
 >[!NOTE]
 >
->Användare som har administratörsbehörighet och som vill felsöka problem med AEM kan använda de felsökningsmetoder som beskrivs i [Felsökning för AEM (för administratörer)](/help/sites-administering/troubleshoot.md). Om du inte har tillräcklig behörighet kontaktar du systemadministratören för felsökning av AEM.
+>Användare som har administratörsbehörighet och som vill felsöka problem med AEM kan använda felsökningsmetoderna som beskrivs i [AEM (för administratörer)](/help/sites-administering/troubleshoot.md). Om du inte har tillräcklig behörighet kontaktar du systemadministratören om felsökning AEM.
 
-## Gammal sidversion finns fortfarande på publicerad webbplats {#old-page-version-still-on-published-site}
+## Den gamla sidversionen finns fortfarande på den publicerade webbplatsen {#old-page-version-still-on-published-site}
 
 * **Problem**:
 
@@ -42,7 +45,7 @@ I följande avsnitt beskrivs några problem som du kan stöta på när du använ
    * Här finns olika möjligheter:
    * Bekräfta att sidan har replikerats korrekt. Kontrollera sidstatus och, om det behövs, status för replikeringskön.
    * Rensa cacheminnet i den lokala webbläsaren och öppna sidan igen.
-   * Lägg till `?` i slutet av sid-URL:en. Exempel:
+   * Lägg till `?` i slutet av sid-URL:en. Till exempel:
 
       `http://localhost:4502/sites.html/content?`
 
@@ -50,7 +53,7 @@ I följande avsnitt beskrivs några problem som du kan stöta på när du använ
 
    * Kontakta systemadministratören om det finns problem med replikeringsköerna.
 
-## Sidekick inte synlig {#sidekick-not-visible}
+## Sidsparken är inte synlig {#sidekick-not-visible}
 
 * **Problem**:
 
@@ -64,15 +67,15 @@ I följande avsnitt beskrivs några problem som du kan stöta på när du använ
 
    * Logga ut från den aktuella sessionen och logga in igen. Sparken återgår till standardpositionen.
 
-## Sök och ersätt - alla förekomster ersätts inte {#find-replace-not-all-instances-are-replaced}
+## Sök och ersätt - alla förekomster har inte ersatts {#find-replace-not-all-instances-are-replaced}
 
 * **Problem:**
 
-   * När du använder alternativet **Sök och ersätt** kan det hända att inte alla förekomster av `find` termen ersätts på en sida.
+   * När du använder alternativet **Sök och ersätt** kan det hända att inte alla förekomster av `find`-termen ersätts på en sida.
 
 * **Orsak**:
 
-   * Funktionen **Sök och ersätt** beror på hur innehållet sparas och om det går att söka efter det. En bloggtext sparas till exempel i en `jcr:text` egenskap som inte är konfigurerad att genomsökas. Standardomfånget för sök- och ersättningsservern omfattar följande egenskaper:
+   * Funktionen för **Sök och ersätt** beror på hur innehållet sparas och om det går att söka efter det. En bloggtext sparas t.ex. i egenskapen `jcr:text` som inte är konfigurerad att genomsökas. Standardomfånget för sök- och ersättningsservern omfattar följande egenskaper:
 
       * `jcr:title`
       * `jcr:description`
@@ -81,7 +84,7 @@ I följande avsnitt beskrivs några problem som du kan stöta på när du använ
 
 * **Lösning**:
 
-   * Dessa definitioner kan ändras med konfigurationen för WCM Find Replace Server för **Dag CQ** med hjälp av **webbkonsolen**. till exempel
+   * Dessa definitioner kan ändras med konfigurationen för **Day CQ WCM Find Replace Servlet** med **webbkonsolen**; till exempel
 
       `http://localhost:4502/system/console/configMgr`
 
