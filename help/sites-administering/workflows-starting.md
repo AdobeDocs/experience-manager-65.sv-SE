@@ -11,22 +11,25 @@ content-type: reference
 discoiquuid: e9ab4796-a050-40de-b073-af7d33cff009
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '804'
+ht-degree: 1%
 
 ---
 
 
-# Starta arbetsflöden{#starting-workflows}
+# Startar arbetsflöden{#starting-workflows}
 
 När du administrerar arbetsflöden kan du starta dem på flera olika sätt:
 
 * Manuellt:
 
    * Från en [arbetsflödesmodell](#workflow-models).
-   * Använda ett arbetsflödespaket för [gruppbearbetning](#workflow-packages-for-batch-processing).
+   * Använder ett arbetsflödespaket för [gruppbearbetning](#workflow-packages-for-batch-processing).
 
 * Automatiskt:
 
-   * Som svar på nodändringar, [med Launcher](#workflows-launchers).
+   * Som svar på nodändringar, [använda en startfil](#workflows-launchers).
 
 >[!NOTE]
 >
@@ -34,21 +37,22 @@ När du administrerar arbetsflöden kan du starta dem på flera olika sätt:
 >
 >* [Använda arbetsflöden på sidor](/help/sites-authoring/workflows-applying.md)
 >* [Tillämpa arbetsflöden på DAM-resurser](/help/assets/assets-workflow.md)
->* [AEM-formulär](https://helpx.adobe.com/aem-forms/6-2/aem-workflows-submit-process-form.html)
+>* [AEM Forms](https://helpx.adobe.com/aem-forms/6-2/aem-workflows-submit-process-form.html)
 >* [Översättningsprojekt](/help/sites-administering/tc-manage.md)
+
 >
 
 
 
 ## Arbetsflödesmodeller {#workflow-models}
 
-Du kan starta ett arbetsflöde [baserat på någon av modellerna](/help/sites-administering/workflows.md#workflow-models-and-instances) som visas i konsolen Arbetsflödesmodeller. Den enda obligatoriska informationen är nyttolasten, men du kan även lägga till en titel och/eller kommentar.
+Du kan starta ett arbetsflöde [baserat på en av modellerna](/help/sites-administering/workflows.md#workflow-models-and-instances) som visas i konsolen Arbetsflödesmodeller. Den enda obligatoriska informationen är nyttolasten, men du kan även lägga till en titel och/eller kommentar.
 
 ## Starta arbetsflöden {#workflows-launchers}
 
 Workflow Launcher övervakar ändringar i innehållsdatabasen för att starta arbetsflöden beroende på platsen och resurstypen för den ändrade noden.
 
-Med **Launcher** kan du:
+Med **startprogrammet** kan du:
 
 * Se de arbetsflöden som redan har startats för specifika noder.
 * Välj ett arbetsflöde som ska startas när en viss nod/nodtyp har skapats/ändrats/tagits bort.
@@ -57,7 +61,7 @@ Med **Launcher** kan du:
 En startfil kan skapas för alla noder. Ändringar av vissa noder startar dock inte arbetsflöden. Ändringar av noder under följande sökvägar leder inte till att arbetsflöden startar:
 
 * `/var/workflow/instances`
-* Alla arbetsflödesinkorgsnoder som finns var som helst i `/home/users` grenen
+* Alla arbetsflödesinkorgsnoder som finns var som helst i `/home/users`-grenen
 * `/tmp`
 * `/var/audit`
 * `/var/classes`
@@ -66,7 +70,7 @@ En startfil kan skapas för alla noder. Ändringar av vissa noder startar dock i
 * `/var/mobile`
 * `/var/statistics`
 
-   * Undantag: Ändringar av noder nedan `/var/statistics/tracking`*leder* till att arbetsflöden startas.
+   * Undantag: Ändringar av noder under `/var/statistics/tracking` *do* orsakar att arbetsflöden startar.
 
 Olika definitioner ingår i standardinstallationen. Dessa används för hantering av digitala resurser och samarbete i sociala medier:
 
@@ -86,14 +90,14 @@ Ett arbetsflödespaket:
 
 ## Starta ett arbetsflöde från Models Console {#starting-a-workflow-from-the-models-console}
 
-1. Gå till **Models** Console med **Tools**, **Workflow** och sedan **Models**.
+1. Navigera till konsolen **Models** med **Verktyg**, **Arbetsflöde** och **Modeller**.
 1. Välj arbetsflöde (enligt konsolvyn); Du kan också använda Sök (längst upp till vänster) om det behövs:
 
    ![wf-103](assets/wf-103.png)
 
    >[!NOTE]
    >
-   >Indikatorn **[Övergående](/help/sites-developing/workflows.md#transient-workflows)**visar arbetsflöden där arbetsflödeshistoriken inte kommer att sparas.
+   >Indikatorn **[Transient](/help/sites-developing/workflows.md#transient-workflows)** visar arbetsflöden som arbetsflödeshistoriken inte kommer att sparas för.
 
 1. Välj **Starta arbetsflöde** i verktygsfältet.
 1. Dialogrutan Kör arbetsflöde öppnas och du kan ange:
@@ -113,8 +117,8 @@ Ett arbetsflödespaket:
 
 ## Skapa en startkonfiguration {#creating-a-launcher-configuration}
 
-1. Gå till **Workflow Launchers** -konsolen med **Tools**, **Workflow** och sedan **Launcher**.
-1. Välj **Skapa** och sedan **Lägg till startprogram** för att öppna dialogrutan:
+1. Gå till **Workflow Launcher**-konsolen med **Verktyg**, **Arbetsflöde** och **Startare**.
+1. Välj **Skapa** och **Lägg till startprogram** för att öppna dialogrutan:
 
    ![wf-105](assets/wf-105.png)
 
@@ -148,6 +152,7 @@ Ett arbetsflödespaket:
       En lista över funktioner som ska aktiveras. Välj önskad(a) funktion(er) i listrutan.
 
    * **Inaktiverade funktioner**
+
    En lista över funktioner som ska inaktiveras. Välj önskad(a) funktion(er) i listrutan.
 
    * **Arbetsflödesmodell**
@@ -162,7 +167,7 @@ Ett arbetsflödespaket:
 
       Anger om arbetsflödets startprogram är aktiverat:
 
-      * Välj **Aktivera** för att starta arbetsflöden när konfigurationsegenskaperna är uppfyllda.
+      * Välj **Aktivera** om du vill starta arbetsflöden när konfigurationsegenskaperna är uppfyllda.
       * Välj **Inaktivera** när arbetsflödet inte ska köras (inte ens när konfigurationsegenskaperna är uppfyllda).
    * **Uteslut lista**
 
@@ -170,9 +175,10 @@ Ett arbetsflödespaket:
 
       Den här startegenskapen är en kommaavgränsad lista med objekt: &quot;
 
-      * `property-name` ignorera alla `jcr` händelser som utlöses för det angivna egenskapsnamnet. &quot;
-      * `event-user-data:<*someValue*>` ignorerar alla händelser som innehåller `*<someValue*`> `user-data` -uppsättningen via [ API `ObservationManager`](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/observation/ObservationManager.html#setUserData(java.lang.String).
-      Exempel:
+      * `property-name` ignorera alla  `jcr` händelser som utlöses för det angivna egenskapsnamnet. &quot;
+      * `event-user-data:<*someValue*>` ignorerar alla händelser som innehåller  `*<someValue*`>- `user-data` uppsättningen via  [ `ObservationManager` API](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/observation/ObservationManager.html#setUserData(java.lang.String).
+
+      Till exempel:
 
       `jcr:lastModified,dc:modified,dc:format,jcr:lastModifiedBy,imageMap,event-user-data:changedByWorkflowProcess`
 
