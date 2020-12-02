@@ -25,7 +25,7 @@ Den här artikeln innehåller översikt, exempel på användningsområden, arbet
 
 Interactive Communications centraliserar och hanterar framtagning, sammanställning och leverans av säkra, personaliserade och interaktiva korrespondenser som affärskorrespondens, dokument, kontoutdrag, förmånsmeddelanden, marknadsföringsmejl, räkningar och välkomstpaket.
 
-## Viktiga funktioner {#key-capabilities}
+## Nyckelfunktioner {#key-capabilities}
 
 Här följer några av de viktigaste funktionerna i Interactive Communications:
 
@@ -36,28 +36,28 @@ Här följer några av de viktigaste funktionerna i Interactive Communications:
 * Agentanvändargränssnittet visar förhandsgranskning av interaktiv kommunikation i tryck och på webben
 * Dra och släpp komponenter för att snabbt skapa utskrifts- och webbkanaler
 
-## Skapa interaktiv kommunikation  {#interactive-communication-creation}
+## Skapa interaktiv kommunikation {#interactive-communication-creation}
 
 ![interactive_communication-01](assets/interactive_communication-01.jpg)
 
 ### Arbetsflöde {#workflow}
 
-Om du vill skapa en interaktiv kommunikation ska du förbereda [byggstenarna](#buildingblocks) för interaktiv kommunikation och sedan utföra följande steg:
+Om du vill skapa en interaktiv kommunikation ska du ha byggstenarna [för interaktiv kommunikation ](#buildingblocks) och sedan utföra följande steg:
 
-1. Välj om du vill [skapa en interaktiv kommunikation](/help/forms/using/create-interactive-communication.md).
+1. Välj att [skapa en interaktiv kommunikation](/help/forms/using/create-interactive-communication.md).
 
-1. Ange [formulärdatamodell](/help/forms/using/data-integration.md), förifyllningstjänst samt mallar [för](/help/forms/using/web-channel-print-channel.md)utskrift och webbkanal. Du kan välja att generera en webbkanal från utskriftskanalen.
+1. Ange [formulärdatamodell](/help/forms/using/data-integration.md), förifyllningstjänst och [utskrifts- och webbkanalsmallar](/help/forms/using/web-channel-print-channel.md). Du kan välja att generera en webbkanal från utskriftskanalen.
 
-1. Använd gränssnittet [för att](/help/forms/using/introduction-interactive-communication-authoring.md)dra och släppa för att lägga till dokumentfragment, bilder, komponenter i tryckt och webbkanaler i den interaktiva kommunikationen efter behov.
+1. Använd gränssnittet [dra och släpp](/help/forms/using/introduction-interactive-communication-authoring.md) för att lägga till dokumentfragment, bilder, komponenter i utskriften och webbkanalen i den interaktiva kommunikationen efter behov.
 1. Konfigurera egenskaperna för de infogade komponenterna, till exempel följande:
 
    1. [Bilder](/help/forms/using/create-interactive-communication.md#step2)
-   1. [Tabeller](/help/forms/using/create-interactive-communication.md#tables) (inklusive layoutfragment)
+   1. [Tabeller](/help/forms/using/create-interactive-communication.md#tables)  (inklusive layoutfragment)
    1. [Diagram](/help/forms/using/chart-component-interactive-communications.md)
    1. [Dokumentfragment](/help/forms/using/create-interactive-communication.md#document-fragment-properties)
 
 1. Förhandsgranska tryck- och webbkanaler och redigera vid behov interaktiv kommunikation.
-1. Agentens användargränssnitt används för att [förbereda interaktiv kommunikation](/help/forms/using/prepare-send-interactive-communication.md) för att skicka den till mottagare/post-processen.
+1. Agentens användargränssnitt används för att [förbereda interaktiv kommunikation](/help/forms/using/prepare-send-interactive-communication.md) för att skicka den till mottagar-/postprocessen.
 
 ### Byggklossarna {#buildingblocks}
 
@@ -67,7 +67,7 @@ Följande byggstenar krävs för att skapa en interaktiv kommunikation:
 * [Mallar för tryck och webbkanal](/help/forms/using/web-channel-print-channel.md)
 * [Dokumentfragment](/help/forms/using/document-fragments.md)
 * Bilder
-* [Teman](/help/forms/using/themes.md) för webbkanalen
+* [Teman ](/help/forms/using/themes.md) för webbkanalen
 
 ## Interaktiv kommunikation jämfört med korrespondenshantering {#interactive-communications-vs-correspondence-management}
 
