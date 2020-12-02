@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: c21debc3-ecf4-4aa9-ab5a-18ddd5cf2fff
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '2684'
+ht-degree: 0%
 
 ---
 
@@ -122,41 +125,41 @@ Det finns många användningsfall för MSM och live-kopior, och vissa scenarier 
 
 MSM är direkt tillgängligt i användargränssnittet med hjälp av olika alternativ från rätt konsol. Så här gör du en introduktion:
 
-* **Skapa plats** (**platser**)
+* **Skapa plats**  (**platser**)
 
-   * MSM hjälper er att hantera flera webbplatser som delar gemensamt innehåll; webbplatser tillhandahålls till exempel ofta för internationella målgrupper så att det mesta av innehållet är gemensamt i alla länder, med en delmängd av innehållet som är specifikt för varje enskilt land. Med MSM kan du [skapa live-kopior som automatiskt uppdaterar en eller flera webbplatser baserat på källplatsen](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-site-from-a-blueprint-configuration). Detta hjälper er också att genomdriva en gemensam basstruktur, använda det gemensamma innehållet på flera webbplatser, bibehålla en gemensam design och känsla och fokusera på att hantera det innehåll som faktiskt skiljer sig åt mellan webbplatserna.
+   * MSM hjälper er att hantera flera webbplatser som delar gemensamt innehåll; webbplatser tillhandahålls till exempel ofta för internationella målgrupper så att det mesta av innehållet är gemensamt i alla länder, med en delmängd av innehållet som är specifikt för varje enskilt land. Med MSM kan du [skapa live-kopior som automatiskt uppdaterar en eller flera webbplatser baserat på din källplats](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-site-from-a-blueprint-configuration). Detta hjälper er också att genomdriva en gemensam basstruktur, använda det gemensamma innehållet på flera webbplatser, bibehålla en gemensam design och känsla och fokusera på att hantera det innehåll som faktiskt skiljer sig åt mellan webbplatserna.
    * Kräver en fördefinierad ritningskonfiguration för att ange källan.
    * Skapar en live-kopia av (fördefinierad) källan.
-   * Förser användaren med knappen **Rollout** .
+   * Ger användaren knappen **Rollout**.
 
-* **Skapa Live-kopia** (**webbplatser**)
+* **Skapa Live-kopia**  (**webbplatser**)
 
-   * Med MSM kan ni [skapa en tillfällig (engångs) live kopia av en enskild sida eller underavdelning till en webbplats](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-page). till exempel duplicera en underavdelning för att ge information om en ny/uppdaterad version av en produkt.
+   * Med MSM kan du [skapa en tillfällig (engångs) live kopia av en enskild sida eller underavdelning till en webbplats](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-page); till exempel duplicera en underavdelning för att ge information om en ny/uppdaterad version av en produkt.
    * Skapar en ad hoc live-kopia (ingen plantryckskonfiguration krävs).
    * Kan användas för att (omedelbart) skapa en live-kopia av valfri sida/gren.
-   * Kräver **synkronisering** (aktiverar inte **utrullningsknappen** ).
+   * Kräver **Synkronisera** (aktiverar inte knappen **Övergång**).
 
-* **Visa egenskaper** (**platser**)
+* **Visa egenskaper**  (**platser**)
 
-   * Om det är lämpligt kan du med det här alternativet [övervaka din livekopia](/help/sites-administering/msm-livecopy.md#monitoring-your-live-copy) genom att ange information om **Live** Copy eller **Blueprint**.
+   * Om det är lämpligt kan du med det här alternativet [övervaka din live-kopia](/help/sites-administering/msm-livecopy.md#monitoring-your-live-copy) genom att ange information om relaterade **Live Cop** y eller **utkast**.
 
-* **Referenser** (**platser**)
+* **Referenser**  (**platser**)
 
-   * På [fliken Referenser](/help/sites-authoring/basic-handling.md#references) finns information om **Live-kopior** samt tillgång till lämpliga åtgärder.
+   * Spår [Referenser](/help/sites-authoring/basic-handling.md#references) ger information om **Live-kopior** tillsammans med tillgång till lämpliga åtgärder.
 
-* **Översikt över** Live-kopia (**webbplatser**)
+* **Översikt över**  Live-kopia (**webbplatser**)
 
-   * Med den här konsolen kan du [visa och hantera din ritning och dess live-kopior](/help/sites-administering/msm-livecopy-overview.md).
+   * Med den här konsolen kan du [visa och hantera din plan och dess live-kopior](/help/sites-administering/msm-livecopy-overview.md).
 
-* **Utskrifter** (**verktyg** - **webbplatser**)
+* **utkast** (**verktyg**  -  **webbplatser**)
 
    * Med den här konsolen kan du [skapa och hantera dina ritningskonfigurationer](/help/sites-administering/msm-livecopy.md#creating-a-blueprint-configuration).
 
 >[!NOTE]
 >
->Aspekter på MSM-funktioner används i flera andra AEM-funktioner (till exempel Launches, Catalog). i dessa fall hanteras den aktiva kopian av den funktionen.
+>Aspekter på MSM-funktioner används i flera andra AEM (t.ex. Launches, Catalog). i dessa fall hanteras den aktiva kopian av den funktionen.
 
-### Villkor {#terms-used}
+### Använda termer {#terms-used}
 
 Som en introduktion ger följande tabell en översikt över de viktigaste termerna som används med medlemsstaterna. dessa kommer att beskrivas mer ingående i de följande avsnitten och sidorna:
 
@@ -199,7 +202,7 @@ Som en introduktion ger följande tabell en översikt över de viktigaste termer
   </tr>
   <tr>
    <td><strong>Synkronisering</strong></td>
-   <td>Den generiska termen för synkronisering av innehåll mellan källan och live-kopiorna (av både <strong>utrullning</strong> och <strong>synkronisering</strong>).</td>
+   <td>Den generiska termen för synkronisering av innehåll mellan källan och live-kopiorna (av både <strong>Rollout</strong> och <strong>Synkronisera</strong>).</td>
    <td> </td>
   </tr>
   <tr>
@@ -236,7 +239,7 @@ Som en introduktion ger följande tabell en översikt över de viktigaste termer
    <td><strong>Återställ</strong></td>
    <td><p>Återställ en live-kopia till:</p>
     <ul>
-     <li>Ta bort alla annulleringar av arv och<br /> </li>
+     <li>Ta bort alla arvsannulleringar och<br /> </li>
      <li>Returnera sidan till samma läge som källsidan.</li>
     </ul> <p>Återställ påverkar alla ändringar som du har gjort i sidegenskaperna, styckesystemet och komponenterna.</p> </td>
    <td> </td>
@@ -271,16 +274,16 @@ En MSM-live kopia är en kopia av specifikt webbplatsinnehåll för vilket en di
 
 * Synkroniseringsregler, som kallas rollout-konfigurationer, avgör vilka egenskaper som synkroniseras och när synkroniseringen sker.
 
-I föregående exempel `/content/we-retail/language-masters/en` är den globala huvudwebbplatsen på engelska. För att återanvända innehållet på den här webbplatsen skapas MSM-kopior:
+I föregående exempel är `/content/we-retail/language-masters/en` den globala överordnad webbplatsen på engelska. För att återanvända innehållet på den här webbplatsen skapas MSM-kopior:
 
-* Innehållet nedan `/content/we-retail/language-masters/en` är källan.
+* Innehållet under `/content/we-retail/language-masters/en` är källan.
 
-* Innehållet nedan `/content/we-retail/language-masters/en` kopieras under `/content/we-retail/us/en/`-, `/content/we-retail/gb/en`- `/content/we-retail/ca/en`och `/content/we-retail/au/en` noderna. Det här är live-kopiorna.
+* Innehållet under `/content/we-retail/language-masters/en` kopieras under noderna `/content/we-retail/us/en/`, `/content/we-retail/gb/en`, `/content/we-retail/ca/en` och `/content/we-retail/au/en`. Det här är live-kopiorna.
 
-* Författare gör ändringar på sidorna nedan `/content/we-retail/language-masters/en`.
+* Författare gör ändringar i sidor under `/content/we-retail/language-masters/en`.
 * När MSM aktiveras synkroniseras dessa ändringar med live-kopiorna.
 
-### Live-kopior - komposition {#live-copies-composition}
+### Live-kopior - Disposition {#live-copies-composition}
 
 >[!NOTE]
 >
@@ -300,16 +303,16 @@ Den grundläggande formen av en live-kopia har:
    * Länka live-kopians resurs med dess plan/källa.
    * Används vid arv och utrullning.
 
-* Ändringarna kan [synkroniseras](/help/sites-administering/msm-livecopy.md#synchronizing-your-live-copy) efter behov.
+* Ändringar kan vara [synkroniserade](/help/sites-administering/msm-livecopy.md#synchronizing-your-live-copy) enligt krav.
 
 ![chlimage_1-367](assets/chlimage_1-367.png)
 
 #### Live Copy med icke-Live-Copy-sidor {#live-copy-with-non-live-copy-pages}
 
-När du skapar en live-kopia i AEM kan du se och navigera genom livekopiegrenen - och använda de vanliga AEM-funktionerna i livekopiegrenen. Det innebär att du (eller en process) kan skapa nya resurser (sidor och/eller stycken) inuti den aktiva kopiegrenen (t.ex. `myCanadaOnlyProduct`).
+När du skapar en live-kopia i AEM kan du se och navigera genom den aktiva kopieringsgrenen - och använda normal AEM på den aktiva kopieringsgrenen. Det innebär att du (eller en process) kan skapa nya resurser (sidor och/eller stycken) inuti den aktiva kopiegrenen (t.ex. `myCanadaOnlyProduct`).
 
 * Sådana resurser har ingen aktiv relation till käll-/ritningssidorna och är inte synkroniserade.
-* Scenarier kan inträffa som MSM hanterar som specialfall. När du till exempel (eller en process) skapar en sida med samma position och namn i både källans/ritytans och live-kopians grenar. Mer information finns i [MSM-utrullningskonflikter](/help/sites-administering/msm-rollout-conflicts.md) .
+* Scenarier kan inträffa som MSM hanterar som specialfall. När du till exempel (eller en process) skapar en sida med samma position och namn i både källans/ritytans och live-kopians grenar. Mer information finns i [MSM Rollout Conflicts](/help/sites-administering/msm-rollout-conflicts.md).
 
 ![chlimage_1-368](assets/chlimage_1-368.png)
 
@@ -326,7 +329,7 @@ När du (eller en process) skapar en [ny sida i en befintlig live-kopia](#live-c
 
 >[!NOTE]
 >
->Om du flyttar/byter namn på en sida i en livekopiegren behandlas detta som en kapslad livekopia så att AEM kan spåra relationerna.
+>Om du flyttar/byter namn på en sida inom en gren för live-kopia behandlas detta som en kapslad live-kopia för att AEM ska kunna spåra relationerna.
 
 #### Skiktade Live-kopior {#stacked-live-copies}
 
@@ -338,8 +341,8 @@ Alla sidor eller sidgrenar kan användas som källa för en live-kopia.
 
 Med MSM kan du även definiera en ritningskonfiguration som anger en källsökväg. Fördelarna med att använda en designkonfiguration är att de
 
-* Tillåt författaren att använda alternativet **Rollout** på en ritning - för att (explicit) överföra ändringar till live-kopior som ärver från den här ritningen.
-* Tillåt författaren att använda **Skapa webbplats**; på så sätt kan användaren enkelt välja språk och konfigurera strukturen för live-kopian.
+* Tillåt författaren att använda alternativet **Rollout** på en ritning - för att (explicit) push-modifiera live-kopior som ärver från den här ritningen.
+* Tillåt författaren att använda **Skapa plats**; på så sätt kan användaren enkelt välja språk och konfigurera strukturen för live-kopian.
 * Definiera en standardkonfiguration för utrullning för live-kopior som har en relation till ritningen.
 
 Källan för en live-kopia kan vara antingen vanliga sidor eller sidor som omfattas av en designkonfiguration - båda är giltiga användningsfall.
@@ -360,10 +363,10 @@ Källan utgör utkast för den aktiva kopian. Planen definieras när du antingen
 
 En utrullning är den centrala MSM-åtgärden som synkroniserar live-kopior med källan. Du kan utföra rollouts manuellt eller så kan de inträffa automatiskt:
 
-* En [utrullningskonfiguration](#rollout-configurations) kan definieras så att specifika [händelser](/help/sites-administering/msm-sync.md#rollout-triggers) kan leda till att en utrullning sker automatiskt.
-* När du skapar en ritningssida kan du använda kommandot [Rollout](/help/sites-administering/msm-livecopy.md#rolling-out-a-blueprint) för att göra ändringar i den aktiva kopian.
+* En [utrullningskonfiguration](#rollout-configurations) kan definieras så att specifika [händelser](/help/sites-administering/msm-sync.md#rollout-triggers) kan orsaka en automatisk utrullning.
+* När du skapar en ritningssida kan du använda kommandot [Överrullning](/help/sites-administering/msm-livecopy.md#rolling-out-a-blueprint) för att göra ändringar i den aktiva kopian.
 
-   **Kommandot Rollout** är tillgängligt på en ritningssida som en ritningskonfiguration refererar till.
+   **Kommandot** Rolloutfinns på en ritningssida som refereras av en ritningskonfiguration.
 
    ![chlimage_1-370](assets/chlimage_1-370.png)
 
@@ -389,7 +392,7 @@ En utrullningskonfiguration definierar när och hur en live-kopia synkroniseras 
    >
    >Du kan skapa anpassade åtgärder för instansen med Java API.
 
-Utrullningskonfigurationer kan återanvändas så att fler än en live-kopia kan använda samma utrullningskonfiguration. Flera [utrullningskonfigurationer](/help/sites-administering/msm-sync.md#installed-rollout-configurations) ingår i en standardinstallation.
+Utrullningskonfigurationer kan återanvändas så att fler än en live-kopia kan använda samma utrullningskonfiguration. Flera [rollout-konfigurationer](/help/sites-administering/msm-sync.md#installed-rollout-configurations) ingår i en standardinstallation.
 
 ### utrullningskonflikter {#rollout-conflicts}
 
@@ -399,13 +402,13 @@ Utrullningar kan bli komplicerade, särskilt när författare redigerar innehål
 
 Varje sida och komponent i en live-kopia kopplas till sin källsida och komponent via en live-relation. Live-relationen konfigurerar synkroniseringen av live-kopieinnehåll från källan.
 
-Du kan **pausa** arvet av live-kopior för en live-kopieringssida så att du kan ändra sidegenskaper och komponenter. När du gör uppehåll i arv synkroniseras inte längre sidegenskaperna och komponenterna med källan.
+Du kan **Skjut upp** live-kopiarv för en live-kopieringssida så att du kan ändra sidegenskaper och komponenter. När du gör uppehåll i arv synkroniseras inte längre sidegenskaperna och komponenterna med källan.
 
-När du redigerar en enskild sida kan författare **avbryta arv** för en komponent. När arvet avbryts pausas direktrelationen och synkronisering sker inte för den komponenten. Att avbryta arv och synkronisering är användbart när underavsnitt av innehållet behöver anpassas.
+När en enskild sida redigeras kan författare **avbryta arv** för en komponent. När arvet avbryts pausas direktrelationen och synkronisering sker inte för den komponenten. Att avbryta arv och synkronisering är användbart när underavsnitt av innehållet behöver anpassas.
 
 ### Koppla loss en Live-kopia {#detaching-a-live-copy}
 
-Du kan också [koppla loss en live-kopia](/help/sites-administering/msm-livecopy.md#detaching-a-live-copy) från sin plan för att ta bort alla anslutningar.
+Du kan också [frigöra en live-kopia](/help/sites-administering/msm-livecopy.md#detaching-a-live-copy) från sin plan för att ta bort alla anslutningar.
 
 >[!CAUTION]
 >
@@ -415,7 +418,7 @@ Koppla loss permanent tar bort den aktiva relationen mellan en live-kopia och de
 
 >[!NOTE]
 >
->Mer information finns i [Koppla loss en Live-kopia](/help/sites-administering/msm-livecopy.md#detaching-a-live-copy) . inklusive den inverkan som detta har på underordnade och överordnade sidor.
+>Mer information finns i [Koppla loss en Live-kopia](/help/sites-administering/msm-livecopy.md#detaching-a-live-copy). inklusive den inverkan som detta har på underordnade och överordnade sidor.
 
 ## Standardsteg för att använda MSM {#standard-steps-for-using-msm}
 
@@ -424,24 +427,24 @@ Följande steg beskriver standardproceduren för användning av MSM för att åt
 1. Utveckla innehållet på källwebbplatsen.
 1. Bestäm vilken utrullningskonfiguration som ska användas.
 
-   1. MSM [installerar flera utrullningskonfigurationer](/help/sites-administering/msm-sync.md#installed-rollout-configurations) som kan uppfylla ett antal användningsfall.
-   1. Du kan också [skapa en utrullningskonfiguration](/help/sites-administering/msm-sync.md#creating-a-rollout-configuration) om det behövs.
+   1. MSM [installerar flera rollout-konfigurationer](/help/sites-administering/msm-sync.md#installed-rollout-configurations) som kan uppfylla ett antal användningsfall.
+   1. Du kan också [skapa en rollout-konfiguration](/help/sites-administering/msm-sync.md#creating-a-rollout-configuration) om det behövs.
 
-1. Bestäm var du behöver [ange vilka rollout-konfigurationer som ska användas](/help/sites-administering/msm-sync.md#specifying-the-rollout-configurations-to-use) och konfigureras efter behov.
-1. Om det behövs kan du [skapa en designkonfiguration](/help/sites-administering/msm-livecopy.md#creating-a-blueprint-configuration) som identifierar källinnehållet i live-kopian.
+1. Bestäm var du behöver [ange de rollout-konfigurationer som ska användas](/help/sites-administering/msm-sync.md#specifying-the-rollout-configurations-to-use) och konfigurera efter behov.
+1. Om det behövs skapar du [en ritningskonfiguration](/help/sites-administering/msm-livecopy.md#creating-a-blueprint-configuration) som identifierar källinnehållet i live-kopian.
 1. [Skapa en live-kopia](/help/sites-administering/msm-livecopy.md#creating-a-live-copy).
 1. Ändra källinnehållet efter behov. Ni bör använda den normala process för granskning och godkännande av innehåll som er organisation har etablerat.
-1. [Rulla ut](/help/sites-administering/msm-livecopy.md#rolling-out-a-blueprint) planen eller [synkronisera live-kopian](/help/sites-administering/msm-livecopy.md#synchronizing-a-live-copy) med ändringarna.
+1. [Rulla ](/help/sites-administering/msm-livecopy.md#rolling-out-a-blueprint) ut ritningen eller  [synkronisera live-](/help/sites-administering/msm-livecopy.md#synchronizing-a-live-copy) kopian med ändringarna.
 
 ## Anpassa MSM {#customizing-msm}
 
 MSM tillhandahåller verktyg så att implementeringen kan anpassas till de stora svårigheter som kan uppstå när du delar innehåll:
 
 * **Anpassade utrullningskonfigurationer**
-   [Skapa en utrullningskonfiguration](/help/sites-administering/msm-sync.md#creating-a-rollout-configuration) när de installerade utrullningskonfigurationerna inte uppfyller dina krav. Du kan använda alla tillgängliga utlösare och synkroniseringsåtgärder.
+   [Skapa en ](/help/sites-administering/msm-sync.md#creating-a-rollout-configuration) utrullningskonfiguration när de installerade utrullningskonfigurationerna inte uppfyller dina krav. Du kan använda alla tillgängliga utlösare och synkroniseringsåtgärder.
 
 * **Anpassade synkroniseringsåtgärder**
-   [Skapa en anpassad synkroniseringsåtgärd](/help/sites-developing/extending-msm.md#creating-a-new-synchronization-action) när de installerade åtgärderna inte uppfyller dina specifika programkrav. MSM tillhandahåller ett Java-API för att skapa anpassade synkroniseringsåtgärder.
+   [Skapa en anpassad ](/help/sites-developing/extending-msm.md#creating-a-new-synchronization-action) synkroniseringsåtgärd när de installerade åtgärderna inte uppfyller dina specifika programkrav. MSM tillhandahåller ett Java-API för att skapa anpassade synkroniseringsåtgärder.
 
 ## Bästa praxis {#best-practices}
 
