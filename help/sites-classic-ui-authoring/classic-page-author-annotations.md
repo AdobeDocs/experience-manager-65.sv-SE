@@ -12,6 +12,9 @@ content-type: reference
 discoiquuid: 9bee0197-f275-49cc-922d-62cba826c4e5
 translation-type: tm+mt
 source-git-commit: c8a02ad9fc33e963d2c760840e70c40ede988054
+workflow-type: tm+mt
+source-wordcount: '821'
+ht-degree: 0%
 
 ---
 
@@ -42,7 +45,7 @@ En anteckning placerar en färgmarkör/anteckning på sidan. Med anteckningen ka
 
 Beroende på styckedesignen är anteckningen antingen tillgänglig som ett alternativ på snabbmenyn (vanligtvis högerknappen när den placeras över det önskade stycket) eller som en knapp på styckets redigeringsfält.
 
-I båda fallen väljer du **Anteckning**. En färgad anteckning kommer att användas på stycket. Du är direkt i redigeringsläge, vilket gör att du kan lägga till text direkt:
+I båda fallen väljer du **Anteckna**. En färgad anteckning kommer att användas på stycket. Du är direkt i redigeringsläge, vilket gör att du kan lägga till text direkt:
 
 ![chlimage_1-137](assets/chlimage_1-137.png)
 
@@ -76,6 +79,7 @@ Med de tre ikonerna längst upp till vänster kan du minimera anteckningen (till
 >
 >* ikonen visas inte.
 >* befintliga skisser som skapats i en annan webbläsare visas inte.
+
 >
 
 
@@ -93,12 +97,12 @@ Skisser är en funktion av anteckningar som gör att du kan skapa enkla linjereg
 
    * rak:
 
-      hålla ned `ALT` och klicka på start- och slutpunkterna, avsluta med ett dubbelklick.
+      håll ned `ALT` och klicka på start- och slutpunkterna; avsluta med ett dubbelklick.
 
 * När du har avslutat skissläget kan du klicka på en skiss för att markera den.
 * Flytta en skiss genom att markera skissen och sedan dra den till önskad plats.
 * En skiss täcker över innehållet. Det innebär att du inte kan klicka på det underliggande stycket i skissens fyra hörn. om du till exempel behöver redigera eller komma åt en länk. Om det här blir ett problem (du till exempel har en skiss som täcker ett stort område på sidan) minimerar du sedan lämplig anteckning, eftersom detta även minimerar alla relaterade skisser och ger dig tillgång till det underliggande området.
-* Om du vill ta bort en enskild skiss markerar du önskad skiss och trycker sedan på **Delete** (**fn**-**backspace** på en Mac).
+* Om du vill ta bort en enskild skiss markerar du önskad skiss och trycker sedan på **Delete**-tangenten (**fn**-**backsteg** på en Mac).
 
 * Om du flyttar, eller kopierar, ett stycke kommer alla relaterade anteckningar och skisser också att flyttas, eller kopieras; deras position i förhållande till stycket förblir densamma.
 * Om du tar bort en anteckning tas även alla skisser som är kopplade till den anteckningen bort.
