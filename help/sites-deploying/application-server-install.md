@@ -22,10 +22,10 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->`JAR` och `WAR` är de filtyper som AEM släpps i. Dessa format genomgår kvalitetssäkring som motsvarar de supportnivåer som Adobe har åtagit sig att använda.
+>`JAR` och  `WAR` är filtyperna som AEM släpps i. Dessa format genomgår kvalitetssäkring som motsvarar de supportnivåer som Adobe har åtagit sig att använda.
 
 
-I det här avsnittet beskrivs hur du installerar Adobe Experience Manager (AEM) med en programserver. Gå till avsnittet [Plattformar](/help/sites-deploying/technical-requirements.md#servlet-engines-application-servers) som stöds för att se de specifika supportnivåerna för de enskilda programservrarna.
+I det här avsnittet beskrivs hur du installerar Adobe Experience Manager (AEM) med en programserver. I avsnittet [Plattformar som stöds](/help/sites-deploying/technical-requirements.md#servlet-engines-application-servers) kan du se vilka supportnivåer som finns för de enskilda programservrarna.
 
 Installationsstegen för följande programservrar beskrivs:
 
@@ -38,7 +38,7 @@ Mer information om hur du installerar webbprogram, serverkonfigurationer och hur
 
 >[!NOTE]
 >
->Om du använder Dynamic Media i en WAR-distribution kan du läsa dokumentationen [för](/help/assets/config-dynamic.md#enabling-dynamic-media)dynamiska media.
+>Om du använder Dynamic Media i en WAR-distribution kan du läsa [dokumentationen för dynamiska media](/help/assets/config-dynamic.md#enabling-dynamic-media).
 
 ## Allmän beskrivning {#general-description}
 
@@ -49,7 +49,7 @@ AEM kommer som en enda krigsfil att distribuera.
 Om distribueras kommer följande att ske som standard:
 
 * körningsläget är `author`
-* instansen (Repository, Felix OSGI environment, bundles etc.) är installerat i `${user.dir}/crx-quickstart`den aktuella arbetskatalogen `${user.dir}` och den här sökvägen till crx-quickstart anropas `sling.home`
+* instansen (Repository, Felix OSGI environment, bundles etc.) är installerat i `${user.dir}/crx-quickstart`där `${user.dir}` är den aktuella arbetskatalogen, kallas sökvägen till crx-quickstart `sling.home`
 
 * kontextroten är krigsfilens namn, t.ex.: `aem-6`
 
@@ -57,13 +57,13 @@ Om distribueras kommer följande att ske som standard:
 
 Du kan ändra standardbeteendet på följande sätt:
 
-* körningsläge: konfigurera `sling.run.modes` parametern i `WEB-INF/web.xml` filen för AEM före distributionen
+* körningsläge: konfigurera parametern `sling.run.modes` i filen `WEB-INF/web.xml` i AEM krigsfil före distributionen
 
-* sling.home: konfigurera `sling.home` parametern i `WEB-INF/web.xml`filen med AEM krigsfil före distributionen
+* sling.home: konfigurera parametern `sling.home` i filen `WEB-INF/web.xml`för AEM krigsfil före distributionen
 
 * kontextrot: byta namn på AEM krigsfil
 
-#### Publicera installation {#publish-installation}
+#### Publicera installationen {#publish-installation}
 
 För att få en publiceringsinstans distribuerad måste du ange att körningsläget ska publiceras:
 
@@ -76,7 +76,7 @@ För att få en publiceringsinstans distribuerad måste du ange att körningslä
 
 Om du vill kontrollera om alla är installerade kan du:
 
-* svepa `error.log`filen för att se att allt innehåll är installerat
+* svepa över `error.log`filen för att se att allt innehåll är installerat
 * se i `/system/console` att alla paket är installerade
 
 #### Två instanser på samma programserver {#two-instances-on-the-same-application-server}
@@ -99,7 +99,7 @@ I demonstrationssyfte kan det vara lämpligt att installera författaren och pub
 
 ### WebSphere 8.5 {#websphere}
 
-Läs [Allmän beskrivning](#general-description) ovan före en distribution.
+Läs [General Description](#general-description) före en distribution.
 
 **Serverförberedelse**
 
@@ -128,7 +128,7 @@ Läs [Allmän beskrivning](#general-description) ovan före en distribution.
 
 #### JBoss EAP 6.3.0/6.4.0 {#jboss-eap}
 
-Läs [Allmän beskrivning](#general-description) ovan före en distribution.
+Läs [General Description](#general-description) före en distribution.
 
 **Förbered JBoss-server**
 
@@ -136,7 +136,7 @@ Ange minnesargument i din conf-fil (t.ex. `standalone.conf`)
 
 * JAVA_OPTS=&quot;-Xms64m -Xmx2048m&quot;
 
-Om du använder distributionsskannern för att installera AEM webbprogram kan det vara bra att öka värdet `deployment-timeout,` för det set- `deployment-timeout` attributet i xml-filen för instansen (t.ex. `configuration/standalone.xml)`:
+Om du använder distributionsskannern för att installera det AEM webbprogrammet kan det vara bra att öka `deployment-timeout,` för den uppsättningen med ett `deployment-timeout`-attribut i xml-filen för din instans (t.ex. `configuration/standalone.xml)`:
 
 ```xml
 <subsystem xmlns="urn:jboss:domain:deployment-scanner:1.1">
@@ -152,19 +152,19 @@ Om du använder distributionsskannern för att installera AEM webbprogram kan de
 
 #### Oracle WebLogic 12.1.3/12.2 {#oracle-weblogic}
 
-Läs [Allmän beskrivning](#general-description) ovan före en distribution.
+Läs [General Description](#general-description) före en distribution.
 
 Detta använder en enkel serverlayout med endast en Admin Server.
 
 **Förberedelse av WebLogic-server**
 
-* I `${myDomain}/config/config.xml`tillägg till avsnittet Säkerhetskonfiguration:
+* I `${myDomain}/config/config.xml`lägg till i avsnittet för säkerhetskonfiguration:
 
-   * `<enforce-valid-basic-auth-credentials>false</enforce-valid-basic-auth-credentials>` se [https://xmlns.oracle.com/weblogic/domain/1.0/domain.xsd](https://xmlns.oracle.com/weblogic/domain/1.0/domain.xsd) för rätt position (som standard är det OK att placera den i slutet av avsnittet)
+   * `<enforce-valid-basic-auth-credentials>false</enforce-valid-basic-auth-credentials>` se  [https://xmlns.oracle.com/weblogic/domain/1.0/domain.](https://xmlns.oracle.com/weblogic/domain/1.0/domain.xsd) xsdför rätt position (som standard är det OK att placera den i slutet av avsnittet)
 
 * Öka inställningarna för virtuellt minne:
 
-   * öppna `${myDomain}/bin/setDomainEnv.cmd` (Sesp .sh) sökning efter WLS_MEM_ARGS, ange t.ex. set `WLS_MEM_ARGS_64BIT=-Xms256m -Xmx2048m`
+   * öppna `${myDomain}/bin/setDomainEnv.cmd` (resp.sh) sök efter WLS_MEM_ARGS, ange t.ex. `WLS_MEM_ARGS_64BIT=-Xms256m -Xmx2048m`
    * starta om WebLogic-server
 
 * Skapa i `${myDomain}` en paketmapp och i en cq-mapp och i den en Plan-mapp
@@ -173,9 +173,9 @@ Detta använder en enkel serverlayout med endast en Admin Server.
 
 * Hämta AEM
 * Lägg AEM i mappen ${myDomain}/packages/cq
-* Gör dina konfigurationer tillgängliga i `WEB-INF/web.xml` vid behov (se ovan i den allmänna beskrivningen)
+* Gör dina konfigurationer i `WEB-INF/web.xml` om det behövs (se ovan i den allmänna beskrivningen)
 
-   * Packa upp `WEB-INF/web.xml`fil
+   * Packa upp `WEB-INF/web.xml`filen
    * ändra sling.run.modes-parameter för publicering
    * avkommentera sling.home initial parameter och ange den här sökvägen efter behov (se General Description)
    * Replikera filen web.xml
@@ -187,17 +187,17 @@ Detta använder en enkel serverlayout med endast en Admin Server.
 
 #### Tomcat 8/8.5 {#tomcat}
 
-Läs [Allmän beskrivning](#general-description) ovan före en distribution.
+Läs [General Description](#general-description) före en distribution.
 
 * **Förbered Tomcat Server**
 
    * Öka inställningarna för virtuellt minne:
 
-      * Lägg till följande inställning i `bin/catalina.bat` (svara `catalina.sh` vid unix):
+      * I `bin/catalina.bat` (svara `catalina.sh` vid unix) lägger du till följande inställning:
       * `set "JAVA_OPTS= -Xmx2048m`
-   * Tomcat ger varken administratörs- eller hanteraråtkomst vid installationen. Därför måste du redigera manuellt `tomcat-users.xml` för att tillåta åtkomst för dessa konton:
+   * Tomcat ger varken administratörs- eller hanteraråtkomst vid installationen. Därför måste du redigera `tomcat-users.xml` manuellt för att tillåta åtkomst för dessa konton:
 
-      * Redigera `tomcat-users.xml` för att inkludera åtkomst för admin och chef. Konfigurationen bör se ut ungefär som i följande exempel:
+      * Redigera `tomcat-users.xml` för att inkludera åtkomst för administratör och hanterare. Konfigurationen bör se ut ungefär som i följande exempel:
 
          ```xml
          <?xml version='1.0' encoding='utf-8'?>
@@ -222,7 +222,7 @@ Läs [Allmän beskrivning](#general-description) ovan före en distribution.
 
       `webapps/manager/WEB-INF/web.xml`
 
-      och öka storleken för max-file och max-request-size till minst 500 MB, se följande `multipart-config` exempel på en sådan `web.xml` fil.
+      och öka maxfilstorleken och max-request-size till minst 500 MB, se följande `multipart-config`-exempel på en sådan `web.xml`-fil.
 
       ```xml
       <multipart-config>
