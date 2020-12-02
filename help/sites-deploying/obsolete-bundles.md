@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 797a6f3b-d2a8-4835-81ab-a1602677417f
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '188'
+ht-degree: 0%
 
 ---
 
@@ -21,7 +24,7 @@ source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 >
 >Om koden är beroende av dessa paket ska du kontakta Adobe Support och be om ett kompatibilitetspaket för det drabbade området.
 
-När du uppgraderar till AEM 6.3 avinstalleras följande paket automatiskt beroende på vilken AEM-version uppgraderingen gjordes:
+När du uppgraderar till AEM 6.3 avinstalleras följande paket automatiskt beroende på vilken AEM uppgraderingen gjordes:
 
 **AEM 6.1:**
 
