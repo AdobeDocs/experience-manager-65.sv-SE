@@ -11,24 +11,27 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: a33b8834-6e39-47eb-a53b-0982d32e80ad
 translation-type: tm+mt
 source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+workflow-type: tm+mt
+source-wordcount: '700'
+ht-degree: 1%
 
 ---
 
 
 # Global dokumentlagringskatalog{#global-document-storage-directory}
 
-GDS-katalogen ( *global document storage)* är en katalog som används för att lagra långlivade filer som används i en process. Dessa filer innehåller PDF-filer, profiler och formulärmallar. Långvariga filer är en viktig del av det övergripande tillståndet för många AEM-formulärdistributioner. Om vissa eller alla långlivade dokument förloras eller skadas kan formulärservern bli instabil. Indatadokument för asynkrona jobbanrop lagras också i GDS-katalogen och måste vara tillgängliga för bearbetning av begäranden. Det är viktigt att du tar hänsyn till tillförlitligheten i det filsystem som är värd för GDS-katalogen. Använd en redundant matris med oberoende diskar (RAID) eller annan teknik som är lämplig för din kvalitet och nivå av servicebehov.
+Katalogen *GDS (Global Document Storage)* är en katalog som används för att lagra långlivade filer som används i en process. Dessa filer innehåller PDF-filer, profiler och formulärmallar. Långvariga filer är en viktig del av det övergripande tillståndet för många AEM. Om vissa eller alla långlivade dokument förloras eller skadas kan formulärservern bli instabil. Indatadokument för asynkrona jobbanrop lagras också i GDS-katalogen och måste vara tillgängliga för bearbetning av begäranden. Det är viktigt att du tar hänsyn till tillförlitligheten i det filsystem som är värd för GDS-katalogen. Använd en redundant matris med oberoende diskar (RAID) eller annan teknik som är lämplig för din kvalitet och nivå av servicebehov.
 
-Långa filer kan innehålla känslig användarinformation. Den här informationen kan kräva särskilda autentiseringsuppgifter när den används av API:er för AEM-formulär eller användargränssnitt. Det är viktigt att GDS-katalogen är ordentligt skyddad via operativsystemet. Endast administratörskontot som används för att köra programservern bör ha läs- och skrivåtkomst till GDS-katalogen.
+Långa filer kan innehålla känslig användarinformation. Den här informationen kan kräva särskilda autentiseringsuppgifter när den används med AEM formulär-API:er eller användargränssnitt. Det är viktigt att GDS-katalogen är ordentligt skyddad via operativsystemet. Endast administratörskontot som används för att köra programservern bör ha läs- och skrivåtkomst till GDS-katalogen.
 
-Förutom att välja en säker katalog med hög tillgänglighet för GDS kan du även välja att aktivera dokumentlagring i databasen. Observera, att även om AEM-formulärdatabasen används för dokumentlagring, kräver AEM-formulär fortfarande GDS-katalogen. (Se Alternativ för [säkerhetskopiering när databasen används för dokumentlagring](/help/forms/using/admin-help/files-back-recover.md#backup-options-when-database-is-used-for-document-storage).)
+Förutom att välja en säker katalog med hög tillgänglighet för GDS kan du även välja att aktivera dokumentlagring i databasen. Observera att även om du använder AEM formulärdatabas för dokumentlagring, kräver AEM fortfarande GDS-katalogen. (Se [Alternativ för säkerhetskopiering när databasen används för dokumentlagring](/help/forms/using/admin-help/files-back-recover.md#backup-options-when-database-is-used-for-document-storage).)
 
-AEM-formulärens programdata finns i GDS-katalogen och AEM-formulärdatabasen. I följande tabell beskrivs data och dess platser.
+AEM formulärprogramdata finns i GDS-katalogen och AEM formulärdatabas. I följande tabell beskrivs data och dess platser.
 
 <table>
  <thead>
   <tr>
-   <th><p>AEM-formulärdata</p></th>
+   <th><p>AEM</p></th>
    <th><p>Databas</p></th>
    <th><p>GDS</p></th>
   </tr>
@@ -50,7 +53,7 @@ AEM-formulärens programdata finns i GDS-katalogen och AEM-formulärdatabasen. I
    <td><p>Ja</p></td>
   </tr>
   <tr>
-   <td><p>Formulärdatabas</p></td>
+   <td><p>Forms Repository</p></td>
    <td><p>Ja</p></td>
    <td><p>Nej</p></td>
   </tr>
@@ -69,7 +72,7 @@ AEM-formulärens programdata finns i GDS-katalogen och AEM-formulärdatabasen. I
 
 ## Konfigurera GDS-katalogen {#configuring-the-gds-directory}
 
-Platsen för GDS-katalogen kan konfigureras manuellt under installationen av AEM-formulär. Om platsinställningen är tom under installationen blir platsen som standard en katalog under programserverinstallationen enligt följande:
+Platsen för GDS-katalogen kan konfigureras manuellt under installationen av AEM formulär. Om platsinställningen är tom under installationen blir platsen som standard en katalog under programserverinstallationen enligt följande:
 
 * (JBoss) `[appserver root]/server/[type]/svcnative/DocumentStorage`
 * (WebLogic) `[appserverdomain]/'server'/adobe/DocumentServer/DocumentStorage`
@@ -77,7 +80,7 @@ Platsen för GDS-katalogen kan konfigureras manuellt under installationen av AEM
 
 ## Ändra standardplats för GDS {#change-the-default-gds-location}
 
-Du kan ändra GDS-platsen i administrationskonsolen när installationen av AEM-formulär har slutförts. Du måste flytta data manuellt för att slutföra processen.
+Du kan ändra GDS-platsen i administrationskonsolen när installationen av AEM formulär har slutförts. Du måste flytta data manuellt för att slutföra processen.
 
 >[!NOTE]
 >
@@ -91,14 +94,14 @@ Du kan ändra GDS-platsen i administrationskonsolen när installationen av AEM-f
 
 ## Om distributionsfiler {#about-deployment-files}
 
-AEM-formulär består av två typer av distributionsfiler, tjänstbehållarna och Java 2 Platform, Enterprise Edition (J2EE) EAR-filer. EAR-filerna består av J2EE-standardprogrampaket som innehåller kärnfunktionerna i AEM-formulär. Programserverspecifika EAR-filer är följande:
+AEM består av två typer av distributionsfiler, servicebehållarna och Java 2 Platform, Enterprise Edition (J2EE) EAR-filer. EAR-filerna består av J2EE-standardprogrampaket som innehåller kärnfunktionaliteten i AEM formulär. Programserverspecifika EAR-filer är följande:
 
 * adobe-core-*[appserver]*.ear
 * adobe-core-*[appserver]*-*[OS]*.ear
 
-Implementering av AEM-formulär innebär att du distribuerar sammansatta EAR-filer och stödfiler till programservern där du planerar att köra din AEM-formulärslösning. Om du konfigurerade och satte ihop flera moduler paketeras de driftsättningsbara modulerna i de driftsättningsbara EAR-filerna. Om du vill distribuera de här filerna kopierar du dem till *[appserverhemmet]*\server\all\deploy directory.
+Implementera AEM innebär att du distribuerar sammansatta EAR-filer och stödfiler till programservern där du tänker köra din AEM formulärlösning. Om du konfigurerade och satte ihop flera moduler paketeras de driftsättningsbara modulerna i de driftsättningsbara EAR-filerna. Om du vill distribuera de här filerna kopierar du dem till *[appserver home]*\server\all\deploy directory.
 
-Moduler och AEM-formulärarkivfiler paketeras i JAR-filer. Eftersom de inte är J2EE-typfiler distribueras de inte till programservern. I stället kopieras de till GDS-katalogen och en referens till deras plats lagras i AEM-formulärdatabasen. Därför måste GDS-katalogen delas mellan alla noder i klustret. Alla noder måste ha tillgång till den centrala lagringskatalogen för DSC:er.
+Moduler och AEM i formulärarkiv paketeras i JAR-filer. Eftersom de inte är J2EE-typfiler distribueras de inte till programservern. I stället kopieras de till GDS-katalogen och en referens till deras plats lagras i AEM formulärdatabas. Därför måste GDS-katalogen delas mellan alla noder i klustret. Alla noder måste ha tillgång till den centrala lagringskatalogen för DSC:er.
 
 >[!NOTE]
 >
