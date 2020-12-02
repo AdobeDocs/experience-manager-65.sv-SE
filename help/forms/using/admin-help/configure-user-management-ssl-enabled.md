@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: e6e7e2fa-579d-4b36-8598-6ced469a94b1
 translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+workflow-type: tm+mt
+source-wordcount: '305'
+ht-degree: 0%
 
 ---
 
@@ -21,12 +24,12 @@ För att synkroniseringen ska fungera korrekt i stället för LDAPS måste LDAP-
 
 1. Aktivera SSL på katalogservern. Mer information finns i dokumentationen från katalogleverantören.
 1. Exportera ett klientcertifikat från katalogservern.
-1. Använd nyckelverktygsprogrammet för att importera klientcertifikatfilen till standardcertifikatarkivet för JVM (JVM™) på AEM-formulärprogramservern. Proceduren för den här aktiviteten varierar beroende på dina JVM- och klientinstallationssökvägar. Om du till exempel använder BEA WebLogic Server med JDK 1.5 från en kommandotolk skriver du den här texten:
+1. Använd nyckelverktygsprogrammet för att importera klientcertifikatfilen till standardcertifikatarkivet för JVM™ (Java Virtual Machine) i AEM formulärprogramserver. Proceduren för den här aktiviteten varierar beroende på dina JVM- och klientinstallationssökvägar. Om du till exempel använder BEA WebLogic Server med JDK 1.5 från en kommandotolk skriver du den här texten:
 
-   `keytool -import -alias`*alias *`-file certificatename -keystore C:\bea\jdk15_04\jre\lib\security\cacerts`
+   `keytool -import -alias`*alias* `-file certificatename -keystore C:\bea\jdk15_04\jre\lib\security\cacerts`
 
-1. Skriv lösenordet när du uppmanas till det. (I Java är standardlösenordet `changeit`.) Ett meddelande om att certifikatet har importerats visas.
-1. Ange att certifikatet är pålitligt när du uppmanas `Yes` att göra det.
+1. Skriv lösenordet när du uppmanas till det. (För Java är standardlösenordet `changeit`.) Ett meddelande om att certifikatet har importerats visas.
+1. Ange `Yes` som betrodd för certifikatet när du uppmanas att göra det.
 1. Aktivera SSL i Användarhantering och, när du konfigurerar kataloginställningarna, välj Ja för SSL-alternativet och ändra portinställningarna därefter. Standardportnumret är 636.
 
 >[!NOTE]
