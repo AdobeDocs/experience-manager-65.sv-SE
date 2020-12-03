@@ -4,9 +4,9 @@ description: Nyheter i Adobe Experience Manager 6.5 Service Pack 7
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: e056d25cf16d79e8eadc80b9cb17b60b2ba8d7e1
+source-git-commit: 55ef8af25887a59d9d13275645c1ec20f0c49380
 workflow-type: tm+mt
-source-wordcount: '2667'
+source-wordcount: '2770'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,23 @@ Nu kan du utföra sidflyttningar och MSM-rollouter som asynkrona åtgärder för
 
 >[!NOTE]
 >
->[!DNL Experience Manager Forms] tilläggspaket görs tillgängliga en vecka efter den schemalagda  [!DNL Experience Manager] Service Pack-versionen. [!DNL Experience Manager] 6.5 Service Pack 7 (6.5.7.0) planeras släppas den 26 november 2020.
+>[!DNL Experience Manager Forms] tilläggspaket görs tillgängliga en vecka efter den schemalagda  [!DNL Experience Manager] Service Pack-versionen.
+
+### Prestandaförbättringar {#performance-improvements-forms}
+
+[!DNL Experience Manager] 6.5 Service Pack 7 Forms förbättrar prestandan för:
+
+* Validerar fältvärdena på servern när du skickar ett anpassat formulär.
+
+* Konvertera ett PDF-formulär till ett anpassat formulär med [!DNL Automated Forms Conversion service].
+
+### HTTP-klientkonfiguration för formulärdatamodell för optimering av prestanda {#fdm-http-client-config}
+
+[!DNL Experience Manager Forms] när du integrerar med RESTful-webbtjänster som datakälla inkluderar nu HTTP-klientkonfigurationer för prestandaoptimering.
+
+### Tillgänglighet för alternativet Återställ för varje komponent i layoutläget {#reset-option-layout-mode}
+
+Du kan nu använda återställningsalternativet för varje komponent i layoutläget i ett anpassat formulär. När du definierar en layout med flera kolumner för en panel kan du använda den här funktionen för att återställa enskilda komponenter på panelen.
 
 ## Viktiga funktioner i tidigare [!DNL Experience Manager] 6.5 Service Packs {#key-features-previous-service-packs}
 
@@ -122,7 +138,7 @@ Nu kan du välja format i komponentdialogrutan med det förbättrade formatsyste
 
 #### Andra förbättringar i [!DNL Assets] (6.5.6.0) {#other-enhancements-assets-6560}
 
-* Användargrupper som är associerade med mappar (privata och icke-privata) tas nu bort från databasen den [borttagningen av dessa mappar](/help/assets/private-folder.md#delete-private-folder). De befintliga överflödiga, överblivna, oanvända och automatiskt genererade användargrupperna kan tas bort från databasen med JMX.
+* Användargrupper som är associerade med mappar (privata och icke-privata) tas nu bort från databasen den [borttagningen av dessa mappar](/help/assets/private-folder.md#delete-private-folder). Befintliga redundanta, överblivna, oanvända och autogenererade användargrupper kan tas bort från databasen med JMX.
 
 #### Tillgänglighetsförbättringar i [!DNL Assets] (6.5.5.0) {#assets-accessibility}
 
@@ -132,7 +148,7 @@ Nu kan du välja format i komponentdialogrutan med det förbättrade formatsyste
 
 * Många gränssnittselement, kontroller och inmatningsfält är tillgängliga via tangentbordet.
 
-* Färgen och kontrasten i vissa element i användargränssnittet uppdateras så att användare med begränsad syn eller användare utan att uppfatta färger kan särskilja dessa element i användargränssnittet. Färgen på stjärngraderingsikoner (t.ex. i [!UICONTROL Rating]-avsnittet på fliken [!UICONTROL Advanced] i resursen [!UICONTROL Properties] eller i kortvyn) ändras till exempel för lämplig kontrast.
+* Färg och kontrast i vissa element i användargränssnittet uppdateras så att användare med begränsad syn eller utan att uppfatta färger kan särskilja dessa element i användargränssnittet. Färgen på stjärngraderingsikoner (t.ex. i [!UICONTROL Rating]-avsnittet på [!UICONTROL Advanced]-fliken i resursen [!UICONTROL Properties] eller i kortvyn) ändras till lämplig kontrast.
 
    ![Klassificeringsikoner med förbättrad kontrast](assets/star-rating-icons.png)
 
@@ -142,7 +158,7 @@ Nu kan du välja format i komponentdialogrutan med det förbättrade formatsyste
 
 #### Stöd för 3D-resurser i [!DNL Dynamic Media] (6.5.5.0) {#support-for-3d}
 
-Stöd för 3D-bilder i [!DNL Dynamic Media] gör det möjligt för kunder att publicera och lägga till 3D-innehåll på webbsidor och i tillämpningar. Supporten omfattar:
+Stöd för 3D-bilder i [!DNL Dynamic Media] gör det möjligt för kunder att publicera och lägga till 3D-innehåll på webbsidor och i program. Supporten omfattar:
 
 * Publicera vanliga 3D-resursformat och generera en resurs-URL som kan användas på webbsidor och andra program.
 
@@ -152,22 +168,22 @@ Stöd för 3D-bilder i [!DNL Dynamic Media] gör det möjligt för kunder att pu
 
 #### Konfigurera [!DNL Experience Manager Assets] med [!DNL Brand Portal] (6.5.4.0) {#configure-assets-bp}
 
-Auktoriseringskanalen mellan [!DNL Experience Manager Assets] och [!DNL Brand Portal] har ändrats. Tidigare konfigurerades [!DNL Brand Portal] i Classic UI via äldre OAuth Gateway, som använder JWT-tokenutbyte för att erhålla en IMS Access-token för auktorisering. [!DNL Experience Manager Assets] har nu konfigurerats med  [!DNL Brand Portal] hjälp av Adobe I/O, som anskaffar en IMS-token för auktorisering av din  [!DNL Brand Portal] klientorganisation.
+Auktoriseringskanalen mellan [!DNL Experience Manager Assets] och [!DNL Brand Portal] har ändrats. Tidigare konfigurerades [!DNL Brand Portal] i Classic UI via Legacy OAuth Gateway, som använder JWT-tokenutbyte för att erhålla en IMS-åtkomsttoken för auktorisering. [!DNL Experience Manager Assets] har nu konfigurerats med  [!DNL Brand Portal] hjälp av Adobe I/O, som skaffar en IMS-token för auktorisering av din  [!DNL Brand Portal] klientorganisation.
 
-Stegen för att konfigurera [!DNL Experience Manager Assets] med [!DNL Brand Portal] skiljer sig åt beroende på din [!DNL Experience Manager]-version och om du konfigurerar för första gången eller uppgraderar befintliga konfigurationer. Mer information finns i [Konfigurera Experience Manager Assets with Brand Portal](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/publish/configure-aem-assets-with-brand-portal.html).
+Stegen för att konfigurera [!DNL Experience Manager Assets] med [!DNL Brand Portal] är olika beroende på din [!DNL Experience Manager]-version och om du konfigurerar för första gången eller uppgraderar de befintliga konfigurationerna. Mer information finns i [Konfigurera Experience Manager-resurser med varumärkesportalen](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/publish/configure-aem-assets-with-brand-portal.html).
 
 #### Tillgänglighetsförbättringar (6.5.4.0) {#accessibility-enhancements}
 
-[!DNL Experience Manager Assets] innehåller följande tillgänglighetsförbättringar:
+[!DNL Experience Manager Assets] innehåller följande förbättringar av tillgängligheten:
 
-* Piltangenter på tangentbordet kan användas för att flytta och panorera områden i zoomade bilder. Mer information finns i [förhandsgranska resurser endast med tangentbordstangenter](../assets/manage-assets.md#previewing-assets).
+* Du kan använda piltangenterna på tangentbordet till att flytta och panorera områden i zoomade bilder. Mer information finns i [Förhandsgranska resurser med endast tangentbordstangenter](../assets/manage-assets.md#previewing-assets).
 
-* Kryssrutorna för blandat läge (där kryssrutorna på första nivån inte markeras och genomstrykas) på panelen Filter kan läsas av skärmläsare om du inte markerar alla kapslade alternativ.
+* Kryssrutorna för blandat läge (där kryssrutorna på första nivån inte markeras och genomstryks) på panelen Filter kan läsas av skärmläsare om du inte markerar alla kapslade predikat.
 
-* Begränsningar för datum- och tidsformat finns i fältetiketter för datumfält, så att användarna kan ange datumet i korrekt format med tangentbordet.
-Till exempel, `On Time (MM-DD-YYYY HH:mm)`. Här är MM månad i tvåsiffrigt format, YYYY är år, DD är dag i tvåsiffrigt format, HH är timme i 24-timmars militärt format och mm är minut.
+* Begränsningar för datum- och tidsformat finns i fältetiketter för datumfält, så att användarna kan ange datum i korrekt format med tangentbordet.
+Till exempel, `On Time (MM-DD-YYYY HH:mm)`. Här MM är månad i tvåsiffrigt format, YYYY är år, DD är dag i tvåsiffrigt format, HH är timme i 24-timmars militärt format och mm är minut.
 
-* Skärmläsare meddelar att de kan ta bort markerade taggar (`X` symbol) och antalet markerade taggar.
+* Skärmläsare meddelar alternativet att ta bort markerade taggar (`X` symbol) och antalet markerade taggar.
 
 #### Sorterbar kolumn för Skapat datum för resurser i listvyn (6.5.3.0) {#sortable-date-created-column}
 
@@ -177,13 +193,13 @@ En ny sorterbar kolumn för skapat datum för resurser läggs till i DAM-listvyn
 
 #### Visuell sökning efter [!DNL Adobe Experience Manager Assets] (6.5.2.0) {#visual-search}
 
-[!DNL Assets] -användare kan söka visuellt liknande bilder. Experience Manager visar de smarta taggade bilder från DAM-databasen som liknar den bild som användaren har valt. Se [Visuell sökning](../assets/search-assets.md).
+[!DNL Assets] -användare kan söka efter visuellt liknande bilder. Experience Manager visar de smarta taggade bilder från DAM-databasen som liknar den bild som användaren har valt. Se [Visuell sökning](../assets/search-assets.md).
 
 ### Dynamic Media {#dynamic-media-previous-service-packs}
 
 #### Invalidera CDN-cachelagrat innehåll (6.5.6.0) {#invalidate-cdn-cached-content}
 
-Du kan nu använda användargränssnittet [!DNL Dynamic Media] för att ogiltigförklara det cachelagrade innehållet i CDN (Content Delivery Network). Därför är de uppdaterade resurserna tillgängliga direkt i stället för att vänta på att cachen ska upphöra att gälla. Du kan göra CDN ogiltig genom att:
+Du kan nu använda [!DNL Dynamic Media]-användargränssnittet för att ogiltigförklara det cachelagrade innehållet i CDN (Content Delivery Network). Därför är de uppdaterade resurserna tillgängliga direkt i stället för att vänta på att cachen ska upphöra. Du kan göra CDN ogiltig genom att:
 
 * Skapa en CDN-invalideringsmall: Välja resurser och formulärassocierade mallbaserade URL:er
 
@@ -193,34 +209,34 @@ Du kan nu använda användargränssnittet [!DNL Dynamic Media] för att ogiltigf
 
 #### Selektiv publicering av resurser till [!DNL Experience Manager] och [!DNL Dynamic Media] (6.5.6.0) {#selective-publishing}
 
-Du kan nu välja att selektivt publicera eller avpublicera resurser till antingen [!DNL Experience Manager] eller [!DNL Dynamic Media] med hjälp av guiden [!UICONTROL Quick Publish] eller [!UICONTROL Manage Publication]. Du kan också ange `Publish`- eller `Unpublish`-läget på mappnivå.
+Du kan nu välja att selektivt publicera eller avpublicera resurser till antingen [!DNL Experience Manager] eller [!DNL Dynamic Media] med hjälp av guiden [!UICONTROL Quick Publish] eller [!UICONTROL Manage Publication]. Du kan också ställa in läget `Publish` eller `Unpublish` på mappnivå.
 
-#### Smart Imaging for Dynamic Media {#smart-imaging}
+#### Smart bildbehandling för dynamiska media {#smart-imaging}
 
-Smart bildbehandling använder varje användares unika visningsegenskaper för att automatiskt leverera rätt bilder som är optimerade för sin upplevelse, vilket ger bättre prestanda och engagemang. Smart bildbehandling fungerar med befintliga bildförinställningar och använder intelligens under de sista millisekunderna i leveransen för att ytterligare minska bildfilens storlek baserat på webbläsarens eller nätverkets anslutningshastighet. Se [Smart bildbehandling](../assets/imaging-faq.md).
+Smart bildbehandling utnyttjar varje användares unika visningsegenskaper för att automatiskt leverera rätt bilder som är optimerade för deras upplevelse, vilket ger bättre prestanda och engagemang. Smart bildbehandling fungerar med dina befintliga förinställningar och använder intelligens under de sista millisekunderna av leveransen för att ytterligare minska bildfilens storlek baserat på webbläsarens eller nätverkets anslutningshastighet. Se [Smart bildbehandling](../assets/imaging-faq.md).
 
 #### Smart beskärning i videoprofiler för Dynamic Media (6.5.3.0) {#smart-crop-video}
 
-Smart beskärning för video - en valfri funktion i videoprofiler - är ett verktyg som använder kraften i artificiell intelligens i Adobe Sensei för att automatiskt upptäcka och beskära fokalpunkten i adaptiv video eller progressiv video som du har överfört, oavsett storlek. Se [Använda smart beskärning i videoprofiler](../assets/video-profiles.md).
+Smart beskärning för video och valfri funktion i videoprofiler - är ett verktyg som använder styrkan i artificiell intelligens i Adobe Sensei för att automatiskt upptäcka och beskära fokuspunkten i adaptiv video eller progressiv video som du har överfört, oavsett storlek. Se [Använda smart beskärning i videoprofiler](../assets/video-profiles.md).
 
 ### Experience Manager Forms {#aem-forms-previous-service-packs}
 
 #### Fyll i ett anpassat formulär i förväg på klienten (6.5.6.0) {#prefill-merge-data-at-client}
 
-När du fyller i ett adaptivt formulär i förväg sammanfogar [!DNL Experience Manager Forms]-servern data med ett adaptivt formulär och skickar det ifyllda formuläret till dig. Som standard utförs datasammanfogningsåtgärden på servern.
-Nu kan du konfigurera [!DNL Experience Manager Forms]-servern till [att utföra datasammanfogningsåtgärden på klienten](../../help/forms/using/prepopulate-adaptive-form-fields.md) i stället för på servern. Det minskar avsevärt den tid som krävs för att förifylla och återge anpassningsbara formulär.
+När du fyller i ett anpassningsbart formulär i förväg sammanfogar [!DNL Experience Manager Forms]-servern data med ett anpassningsbart formulär och skickar det ifyllda formuläret till dig. Som standard utförs datasammanfogningsåtgärden på servern.
+Nu kan du konfigurera [!DNL Experience Manager Forms]-servern till [utföra datasammanfogningsåtgärden på klienten](../../help/forms/using/prepopulate-adaptive-form-fields.md) i stället för på servern. Det minskar avsevärt tiden som krävs för att förifylla och återge anpassningsbara formulär.
 
-#### Integrering av formulärdatamodell med RESTful API:er på en server med tvåvägs SSL-implementering (6.5.6.0) {#fdm-integration-rest-apis-two-way-ssl}
+#### Integrering av formulärdatamodellen med RESTful API:er på en server med tvåvägs SSL-implementering (6.5.6.0) {#fdm-integration-rest-apis-two-way-ssl}
 
-[!DNL Experience Manager Forms] formulärdatamodellen kan nu  [integreras med RESTful-API:er på en server som har en tvåvägs SSL implementerad på den](../../help/forms/using/configure-data-sources.md).
+[!DNL Experience Manager Forms] formulärdatamodellen kan nu  [integreras med RESTful API:er på en server som har en tvåvägs SSL implementerad på den](../../help/forms/using/configure-data-sources.md).
 
 #### Stöd för [!DNL Adobe Sign]-texttaggar i tjänsten Automated forms conversion (6.5.6.0) {#sign-integration-acroform-afcs} har lagts till
 
-Om ett AcroForm innehåller [!DNL Adobe Sign]-texttaggar känns dessa fält nu igen och representeras som [!DNL Adobe Sign]-fält i det adaptiva formuläret som har konverterats med [!DNL Automated Forms Conversion service]. En signerare kan fylla i sådana fält medan han/hon signerar det anpassade formuläret.
+Om ett AcroForm-formulär innehåller [!DNL Adobe Sign]-texttaggar identifieras och representeras dessa fält som [!DNL Adobe Sign]-fält i det adaptiva formuläret som konverterats med [!DNL Automated Forms Conversion service]. En signerare kan fylla i sådana fält när han eller hon signerar det anpassade formuläret.
 
 #### Stöd för konvertering av färgat PDF forms till adaptiva formulär (6.5.6.0) {#colored-PDF-forms}
 
-Du kan använda [!DNL Automated Forms Conversion service] för att konvertera färgad PDF forms till adaptiva formulär.
+Du kan använda [!DNL Automated Forms Conversion service] för att konvertera färgad PDF forms till anpassningsbara formulär.
 
 #### Stöd för SMB 2- och SMB 3-protokoll (6.5.6.0) {#smb-support}
 
@@ -228,19 +244,19 @@ Du kan använda [!DNL Automated Forms Conversion service] för att konvertera f�
 
 #### Förbättrad cachning för översatta adaptiva formulärsidor (6.5.6.0) {#enhanced-caching-translated-adaptive-forms}
 
-Du kan nu ange [språkområde som en väljare i URL:en för anpassningsbara formulär i stället för ett argument i anpassat formulär-URL](../../help/forms/using/supporting-new-language-localization.md). Det hjälper till att cachelagra översatta adaptiva formulär på [!DNL Experience Manager Dispatcher]. Det gick inte att cachelagra översatt adaptiv form i tidigare versioner. Mer information om hur du konfigurerar cachning för att använda språkområdet som väljare i URL:en för anpassningsbara formulär finns i [Konfigurera cacheminne för anpassningsbara formulär vid dispatcher](../../help/forms/using/configure-adaptive-forms-cache.md).
+Du kan nu ange [nationella inställningar som väljare i URL:en för anpassningsbara formulär i stället för ett argument i URL:en för anpassningsbara formulär](../../help/forms/using/supporting-new-language-localization.md). Det hjälper till att cachelagra översatta adaptiva formulär på [!DNL Experience Manager Dispatcher]. Det gick inte att cachelagra översatta adaptiva formulär i tidigare versioner. Detaljerad information om hur du konfigurerar cachning för att använda språkområdet som väljare i URL:en för anpassningsbara formulär finns i [Konfigurera cacheminnet för anpassningsbara formulär vid dispatcher](../../help/forms/using/configure-adaptive-forms-cache.md).
 
 #### Spara utdata från formulärdatamodelltjänst till en variabel (6.5.6.0) {#save-fdm-service-to-variable}
 
-Med formulärdatamodellen kan du spara utdata från en formulärdatamodelltjänst till en variabel. [!DNL Experience Manager Forms] mappar nu automatiskt typen av formulärdatamodelltjänst till variabeltypen.
+Med formulärdatamodellen kan du spara utdata från en datamodelltjänst till en variabel. [!DNL Experience Manager Forms] mappar nu automatiskt typen av formulärdatamodelltjänst till variabeltypen.
 
 #### Bifoga flera filer för komponenten Bifogad fil (6.5.6.0) {#attach-multiple-files}
 
 Du kan nu [bifoga flera filer](../../help/forms/using/introduction-forms-authoring.md) till [!UICONTROL File Attachment]-komponenten i adaptiva formulär.
 
-#### Anpassa Adobe Experience Manager Inbox-kolumnerna (6.5.5.0) {#customize-aem-inbox-columns}
+#### Anpassa kolumnerna i Adobe Experience Manager Inbox (6.5.5.0) {#customize-aem-inbox-columns}
 
-Du kan anpassa en [!DNL Experience Manager]-inkorg om du vill ändra en kolumns standardtitel, ändra ordning på en kolumns position och visa ytterligare kolumner baserat på data i ett arbetsflöde. Medlemmar i `administrators`- eller `workflow-administrators`-gruppen kan anpassa kolumnerna. Mer information finns i [Administratörskontroll](../sites-authoring/inbox.md#inbox-admin-control).
+Du kan anpassa en [!DNL Experience Manager]-inkorg om du vill ändra standardtiteln för en kolumn, ändra ordning på en kolumns position och visa ytterligare kolumner baserat på data i ett arbetsflöde. Medlemmar i `administrators`- eller `workflow-administrators`-gruppen kan anpassa kolumnerna. Mer information finns i [Admin Control](../sites-authoring/inbox.md#inbox-admin-control).
 
 ![Anpassa Experience Manager-inkorgskolumner](assets/customize-columns.gif)
 
@@ -250,39 +266,39 @@ Du kan använda agentgränssnittet för att spara ett eller flera utkast för va
 
 ![Spara som utkast](assets/save-as-draft.gif)
 
-#### [!DNL Oracle WebLogic] stöd för programservrar (6.5.5.0)  {#weblogic-support}
+#### [!DNL Oracle WebLogic] stöd för programserver (6.5.5.0)  {#weblogic-support}
 
-Adobe Experience Manager Forms har lagt till stöd för [!DNL Oracle WebLogic 12] för Adobe Experience Manager Forms på JEE. Du kan uppgradera från en tidigare version eller konfigurera en ny Experience Manager 6.5 Forms på JEE-servern på [!DNL Oracle WebLogic] 12.2.1.4 och senare. Senare motsvarar de mindre versionsändringarna, där x i 12.2.1.x ersätts med ett versionsnummer.
+Adobe Experience Manager Forms har lagt till stöd för [!DNL Oracle WebLogic 12] för Adobe Experience Manager Forms på JEE. Du kan uppgradera från en tidigare version eller konfigurera en ny Experience Manager 6.5 Forms på JEE-server på [!DNL Oracle WebLogic] 12.2.1.4 och senare. Senare motsvarar de mindre versionsändringarna, där x i 12.2.1.x ersätts med ett versionsnummer.
 
-#### Förbättringar av hjälpmedel (6.5.5.0) {#accessibility-improvements}
+#### Tillgänglighetsförbättringar (6.5.5.0) {#accessibility-improvements}
 
-Adobe Experience Manager Forms innehåller följande tillgänglighetsförbättringar:
+Adobe Experience Manager Forms har följande tillgänglighetsförbättringar:
 
 * När en användare förhandsgranskar ett anpassat formulär som ett HTML-formulär behåller fältet [!UICONTROL Scribble Signature] tabbfokus.
 
-* Felmeddelandena som visas när du skickar ett adaptivt formulär innehåller nu attributet `aria-describedBy`. Attributet är kopplat till fälten som refereras i felmeddelandet. Attributet `aria-describedby` anger ID:n för elementen som beskriver objektet. Det hjälper till att skapa en relation mellan widgetar eller grupper och text som beskriver dem.
+* Felmeddelandena som visas när ett anpassat formulär skickas innehåller nu attributet `aria-describedBy`. Attributet är kopplat till fälten som refereras i felmeddelandet. Attributet `aria-describedby` indikerar ID:n för elementen som beskriver objektet. Det hjälper till att skapa en relation mellan widgetar eller grupper och text som beskriver dem.
 
-* Om ett adaptivt formulär har obligatoriska fält anges det obligatoriska attributet till `True` för sådana fält i ARIA-hjälpmedelsschemat.
+* Om ett anpassningsbart formulär har obligatoriska fält är attributet mandatory inställt på `True` för sådana fält i ARIA-hjälpmedelsschemat.
 
 #### X-509 certifikatbaserad autentisering för SOAP-baserade webbtjänster i formulärdatamodell (6.5.5.0) {#x509-based-authentication-soap}
 
-Formulärdatamodellen har nu stöd för X-509-certifikatbaserad autentisering när SOAP-webbtjänster används som datakälla. Mer information finns i [Konfigurera SOAP-webbtjänster](../forms/using/configure-data-sources.md#configure-soap-web-services).
+Formulärdatamodellen har nu stöd för certifikatbaserad X-509-autentisering när SOAP-webbtjänster används som datakälla. Mer information finns i [Konfigurera SOAP-webbtjänster](../forms/using/configure-data-sources.md#configure-soap-web-services).
 
 #### Andra viktiga förbättringar (6.5.5.0) {#other-improvements}
 
-* Experience Manager 6.5 Forms on JEE Document Security är nu baserat på [!DNL Apache Struts 2].
+* Experience Manager 6.5 Forms on JEE Document Security baseras nu på [!DNL Apache Struts 2].
 
 * Stöd för [!DNL Oracle Real Applications Cluster (RAC) 19c] har lagts till.
 
 #### Generera utskrifter i Experience Manager Forms-arbetsflöden (6.5.4.0) {#generate-printable-output}
 
-Med arbetsflödessteget Generera utskrift kan du integrera en källmallsfil med en datafil. Tack vare den här integreringen kan du skriva ut eller spara olika kopior av mallfilen. Steget genererar PCL-, PostScript-, ZPL-, IPL-, TPCL- eller DPL-utdata. Mer information om den här funktionen finns i [Forms-centrerat arbetsflöde i OSGi - Step Reference](../forms/using/aem-forms-workflow-step-reference.md).
+Med arbetsflödessteget Generera utskrift kan du integrera en källmallsfil med en datafil. Med den här integreringen kan du skriva ut eller spara olika kopior av mallfilen. Steget genererar PCL-, PostScript-, ZPL-, IPL-, TPCL- eller DPL-utdata. Mer information om den här funktionen finns i [Forms-centrerade arbetsflöden i OSGi - Step Reference](../forms/using/aem-forms-workflow-step-reference.md).
 
 ![Generera utdata för utskrift](assets/generate-print-output-step.gif)
 
 #### Stöd för flera kolumner för adaptiva formulär och interaktiv kommunikation i layoutläge (6.5.4.0) {#multi-column-adaptive-forms}
 
-Nu kan du definiera antalet kolumner för en panel i adaptiva formulär och interaktiv kommunikation. Växla till layoutläge om du vill använda det nya alternativet med flera kolumner. Mer information finns i [Använda layoutläget för att ändra storlek på komponenter](../forms/using/resize-using-layout-mode.md).
+Nu kan du definiera antalet kolumner för en panel i anpassningsbara formulär och interaktiv kommunikation. Växla till layoutläge om du vill använda det nya alternativet med flera kolumner. Mer information finns i [Använda layoutläget för att ändra storlek på komponenter](../forms/using/resize-using-layout-mode.md).
 
 ![Flerspaltig layout](assets/multi-column-layout.gif)
 
@@ -294,7 +310,7 @@ Med det nya alternativet Admin Control kan administratörer:
 
 * Styr visningen av navigeringslänkar i sidhuvudet.
 
-Alternativet Admin Control är bara synligt för medlemmarna i gruppen `administrators` eller `workflow-administrators`. Mer information om den här funktionen finns i [Inkorgen](../sites-authoring/inbox.md).
+Alternativet Admin Control är bara synligt för medlemmarna i `administrators`- eller `workflow-administrators`-gruppen. Mer information om den här funktionen finns i [Inkorgen](../sites-authoring/inbox.md).
 
 #### RTF-stöd i HTML5-formulär (6.5.4.0) {#rich-text-support}
 
@@ -302,30 +318,30 @@ Konvertera ett textfält i ett XFA-formulär till ett RTF-fält i ett HTML5-form
 
 #### Tillgänglighetsförbättringar (6.5.4.0) {#forms-accessibility-enhancements-6540}
 
-Experience Manager Forms innehåller följande tillgänglighetsförbättringar:
+Experience Manager Forms har följande tillgänglighetsförbättringar:
 
-* Skärmläsarna meddelar kryssrutor, länkar, datumväljare och datuminmatningsfält korrekt i ett anpassat formulär.
+* Skärmläsare meddelar kryssrutor, länkar, datumväljare och datuminmatningsfält korrekt i ett anpassat formulär.
 
 * Varje sida i ett adaptivt formulär innehåller nu en rubrik och en huvudlandmärkesetikett.
 
-#### Dela och begär åtkomst till inkorgsobjekt för användare av Experience Manager Forms (6.5.3.0) {#share-request-access}
+#### Dela och begär åtkomst till inkorgsobjekt från användare av Experience Manager Forms (6.5.3.0) {#share-request-access}
 
-Du kan dela dina inkorgsobjekt med en annan användare. När en annan användare får tillgång till dina inkorgsobjekt kan användaren göra anspråk på och vidta lämpliga åtgärder för delade objekt. På samma sätt kan du begära åtkomst till inkorgsobjekt från andra användare. Se [Dela och begära åtkomst till inkorgsobjekt för en användare](../forms/using/configure-shared-queues-osgi.md).
+Du kan dela dina inkorgsobjekt med en annan användare. När en annan användare får tillgång till dina inkorgsobjekt kan användaren göra anspråk på och vidta lämpliga åtgärder för delade objekt. På samma sätt kan du begära åtkomst till inkorgsobjekt från andra användare. Se [Dela och begär åtkomst till inkorgsobjekt för en användare](../forms/using/configure-shared-queues-osgi.md).
 
-#### Konfigurera inställningar utanför kontoret för inkorgsobjekt för användare av Experience Manager Forms (6.5.3.0) {#configure-out-of-office}
+#### Konfigurera out-of-office-inställningarna för inkorgsobjekt för användare av Experience Manager Forms (6.5.3.0) {#configure-out-of-office}
 
-Om du tänker vara utanför kontoret kan du ange vad som ska hända med artiklar som har tilldelats dig för den perioden.
-Du kan ange startdatum och -tid och slutdatum och sluttid så att dina inställningar som inte är på kontoret börjar gälla. Du kan ange en standardperson som alla dina objekt skickas till. Se [Konfigurera frånvaroinställningar](../forms/using/configure-out-of-office-settings.md).
+Om du planerar att vara utanför kontoret kan du ange vad som ska hända med artiklar som har tilldelats dig för den perioden.
+Du kan välja att ange startdatum och -tid och slutdatum och sluttid för att dina frånvaroinställningar ska gälla. Du kan ange en standardperson som alla dina objekt skickas till. Se [Konfigurera frånvaroinställningar](../forms/using/configure-out-of-office-settings.md).
 
-#### Generera flera interaktiva dokument med Batch API för Experience Manager Forms (6.5.3.0) {#generate-multiple-ic}
+#### Generera flera interaktiva kommunikationer med Batch API för Experience Manager Forms (6.5.3.0) {#generate-multiple-ic}
 
-Du kan använda batch-API:t för att skapa flera interaktiva dokument från en mall. Mallen är en interaktiv kommunikation utan data. Batch-API:t kombinerar data med en mall för att skapa en interaktiv kommunikation. API:t är användbart vid massproduktion av interaktiv kommunikation. Till exempel telefonräkningar, kreditkortsutdrag för flera kunder. Se [Generera flera interaktiva kommunikationer med hjälp av batch-API](../forms/using/generate-multiple-interactive-communication-using-batch-api.md).
+Du kan använda API:t Gruppera för att skapa flera interaktiva dokument från en mall. Mallen är en interaktiv kommunikation utan data. Batch-API:t kombinerar data med en mall för att skapa en interaktiv kommunikation. API:t är användbart vid massproduktion av interaktiv kommunikation. Till exempel telefonräkningar, kontoutdrag för flera kunder. Se [Generera flera interaktiva kommunikationer med Batch API](../forms/using/generate-multiple-interactive-communication-using-batch-api.md).
 
 ## Viktiga releaser sedan Adobe Experience Manager 6.5 SP6 {#key-releases-since-last-sp}
 
 Mellan 3 september 2020 och 26 november 2020 släppte Adobe följande, förutom servicepaket och kumulativa korrigeringspaket:
 
-* [!DNL Adobe Experience Manager] som en Cloud Service  [2020.9.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-2020-9-0.html?lang=en#release-notes)  och  [2020.10.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-2020-10-0.html?lang=en#release-notes).
+* [!DNL Adobe Experience Manager] som en Cloud Service  [2020.9.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-2020-9-0.html?lang=en#release-notes) och  [2020.10.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-2020-10-0.html?lang=en#release-notes).
 
 * [[!DNL Experience Manager] desktop app 2.0 (2.0.3.2)](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html).
 
