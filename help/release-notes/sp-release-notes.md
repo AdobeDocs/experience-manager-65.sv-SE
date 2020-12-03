@@ -4,9 +4,9 @@ description: Versionsinformation för  [!DNL Adobe Experience Manager] 6.5 Servi
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: ed8299662139c2c2ab2fa304c9fa3448b0fce223
+source-git-commit: c92efd64662e831c8771a8f35701f4e9ed788645
 workflow-type: tm+mt
-source-wordcount: '3696'
+source-wordcount: '4098'
 ht-degree: 0%
 
 ---
@@ -38,6 +38,16 @@ De viktigaste funktionerna och förbättringarna i [!DNL Adobe Experience Manage
 * Användare kan sortera digitala resurser i kort- och kolumnvyn.
 
 * [!DNL Assets] och  [!DNL Dynamic Media] erbjuder flera tillgänglighetsförbättringar. Förbättringarna rör tangentbordsnavigering, användning av skärmläsare och möjlighet för användare att använda liknande hjälpmedelsteknik (AT). Se [[!DNL Assets] förbättringar](#assets-6570) och [[!DNL Dynamic Media] förbättringar](#dynamic-media-6570).
+
+* HTTP-klientkonfiguration för formulärdatamodell för optimering av prestanda.
+
+* Tillgänglighet för alternativet Återställ för varje komponent i layoutläget
+
+* [!DNL Experience Manager] 6.5 Service Pack 7 Forms förbättrar prestandan för:
+
+   * Validerar fältvärdena på servern när du skickar ett anpassat formulär.
+
+   * Konvertera ett PDF-formulär till ett anpassat formulär med [!DNL Automated Forms Conversion service].
 
 * Den inbyggda databasen (Apache Jackrabbit Oak) uppdateras till version 1.2.5.
 
@@ -299,6 +309,48 @@ Nedan följer en lista över korrigeringar i [!DNL Experience Manager] 6.5.7.0-v
 >[!NOTE]
 >
 >[!DNL Experience Manager Forms] släpper tilläggspaketen en vecka efter det schemalagda datumet för  [!DNL Experience Manager] Service Pack.
+
+**Adaptiv Forms**
+
+* Det går inte att redigera ett anpassat formulär med hjälp av det klassiska användargränssnittet när du har använt [!DNL Experience Manager] Service Pack 6 (NPR-35126).
+
+* När du konverterar en PDF-fil till ett anpassat formulär kan du inte ange ett värde för en kapslad panel med hjälp av en formulärdatamodell i fliklayouten. Det finns dessutom problem när du ställer in ett värde för alternativknappsgrupper dynamiskt med en statisk array med kodredigeraren (NPR-35062).
+
+* När du anger japanska tecken i en textfältskomponent i ett anpassat format kan du ange fler tecken än maxgränsen på 35 tecken (NPR-35039).
+
+* Det adaptiva formuläret visar oönskade parametrar, till exempel `owner` och `status`, på sidan **[!UICONTROL Thank you]** som visas när formuläret har skickats (NPR-34989).
+
+* Dialogrutan [!UICONTROL File Selection] för komponenten [!UICONTROL Attachment] visar de filtyper som inte stöds samt för markering, vilket resulterar i fel vid överföring av adaptiva formulär (NPR-34970).
+
+* När du infogar ett anpassat formulär på en [!DNL Experience Manager Sites]-sida som innehåller text före formuläret, flyttas markörens fokus direkt till formuläret i stället för texten före formuläret (NPR-34947).
+
+* [!UICONTROL Preview with Data] alternativet att förifylla ett anpassat formulär med hjälp av en  [!DNL Experience Manager] 6.2-data-XML-fil inte fungerar korrekt (NPR-35087).
+
+* När du uppdaterar dataordlistan för ett anpassat formulär, översätts inte formuläret eftersom det anpassningsbara formuläret returnerar cachelagrade värden (NPR-34845).
+
+* Fragment tar längre tid att läsa in i en adaptiv form på grund av cacheogiltigförklaring (NPR-34567).
+
+* Tabbnavigering fungerar inte korrekt för skärmläsare i anpassad form (NPR-34544).
+
+**Korrespondenshantering**
+
+* Det går inte att spara värden för XML-taggar med numeriska data, som innehåller flyttalstyp, som ett utkast (NPR-35050).
+
+* När du migrerar resurserna från ES3 innehåller resurserna två icke-redigerbara standardvillkor (NPR-34972).
+
+* När du redigerar en dataordlista i en bokstav visar [!UICONTROL Lent Content]-avsnittet snurrande rektanglar i stället för användbar information (NPR-34853).
+
+**Interaktiv kommunikation**
+
+* Konfigurationsnamnet för den interaktiva kommunikationen, som är tillgängligt efter installation av [!DNL Forms]-tilläggspaketet, duplicerar standardkonfigurationsnamnet för utrullning (NPR-34976).
+
+**Dokumentsäkerhet**
+
+* När du sparar en ny dokumentsäkerhetsprofil visas felmeddelandet `Relative validity period is required` i Experience Manager Forms (NPR-34679).
+
+* När du sparar en ny dokumentsäkerhetsprofil visas felmeddelandet `Invalid filed value.Numeric value is required` i Experience Manager Forms (NPR-34678).
+
+* Dokumentsäkerhet kan inte skydda PDF 2.0-dokument (CQ-4305851).
 
 Mer information om säkerhetsuppdateringar finns på [Experience Manager-säkerhetsbulletinsidan](https://helpx.adobe.com/security/products/experience-manager.html).
 
