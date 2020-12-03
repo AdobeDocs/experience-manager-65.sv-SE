@@ -10,9 +10,9 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 32da99f0-f058-40ae-95a8-2522622438ce
 translation-type: tm+mt
-source-git-commit: 1c1ade947f2cbd26b35920cfd10b1666b132bcbd
+source-git-commit: 730a690bcbf5935ca00ed69c27ce108cb2664c22
 workflow-type: tm+mt
-source-wordcount: '397'
+source-wordcount: '398'
 ht-degree: 3%
 
 ---
@@ -53,13 +53,13 @@ Mer specifikt kommer följande konfigurationsändringar att utföras när AEM k�
 1. **Apache Sling Simple WebDAV Access till databaser** ( `org.apache.sling.jcr.webdav`)-paketet är bara tillgängligt för **författare**-instanser.
 
 1. Användare som skapats nyligen måste ändra lösenordet vid den första inloggningen. Detta gäller inte administratörsanvändaren.
-1. **Generate debug** info är inaktiverad för  **Apache Java Script Handler**.
+1. **Generate debug** infois disabled for the  **Apache Sling Java Script Handler**.
 
 1. **Mappat** innehåll och  **genererad felsökningsinformation är** inaktiverade för JSP-skripthanteraren för  **Apache Sling**.
 
 1. **Dag CQ WCM-filtret** är inställt på `edit` på **författare** och `disabled` på **publiceringsinstanser**.
 
-1. **HTML Library** Manager för Adobe Granite har konfigurerats med följande inställningar:
+1. **HTML-bibliotekshanteraren för Adobe Granite** har konfigurerats med följande inställningar:
 
    1. **Minimera:** `enabled`
    1. **Felsök:** `disabled`
