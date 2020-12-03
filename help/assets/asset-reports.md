@@ -3,15 +3,15 @@ title: Rapporter om användning och delning av resurser
 description: Rapporterar om dina resurser i [!DNL Adobe Experience Manager Assets] som hjälper dig att förstå användningen, aktiviteten och delningen av dina digitala resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: 6016cefa9456d8f142347ff197b61b1614d55ab9
 workflow-type: tm+mt
-source-wordcount: '986'
+source-wordcount: '1065'
 ht-degree: 9%
 
 ---
 
 
-# Resursrapporter {#asset-reports}
+# Materialrapporter {#asset-reports}
 
 Med tillgångsrapportering kan du utvärdera verktyget för din [!DNL Adobe Experience Manager Assets]-distribution. Med [!DNL Assets] kan du generera olika rapporter för dina digitala resurser. Rapporterna innehåller användbar information om hur ditt system används, hur användarna interagerar med resurser och vilka resurser som hämtas och delas.
 
@@ -59,7 +59,7 @@ Så här skapar du rapporter:
 
    >[!NOTE]
    >
-   >Som standard inkluderas innehållsfragment och länkdelningar i resursen [!UICONTROL Download]-rapporten. Välj lämpligt alternativ för att skapa en rapport över länkdelningar eller för att utesluta innehållsfragment från hämtningsrapporten.
+   >Som standard inkluderas innehållsfragment och länkdelningar i resursen [!UICONTROL Download]-rapporten. Välj lämpligt alternativ för att skapa en rapport över länkdelningar eller för att exkludera innehållsfragment från hämtningsrapporten.
 
    >[!NOTE]
    >
@@ -152,3 +152,11 @@ Om du vill ta bort rapporter som du inte längre behöver konfigurerar du tjäns
 1. Öppna **[!UICONTROL DAM Report Purge Service]**-konfigurationen.
 1. Ange frekvens (tidsintervall) för rensningstjänsten i fältet `scheduler.expression.name`. Du kan också konfigurera åldern och tröskelvärdet för antal rapporter.
 1. Spara ändringarna.
+
+## Felsökningsinformation, tips och begränsningar {#best-practices-and-limitations}
+
+* Om vissa rapporter eller siffror i rapporterna inte är tillgängliga eller som förväntat kontrollerar du att tjänsten [!UICONTROL Day CQ DAM Event Recorder] är aktiverad.
+
+* Ta bort de rapporter som inte längre behövs. Använd konfigurationsalternativen i tjänsten DAM Report Renge för att konfigurera villkoren för att rensa rapporter.
+
+* Om Diskanvändningsrapporten inte genereras och du använder [!DNL Dynamic Media] kontrollerar du att alla resurser är korrekta. Du löser problemet genom att bearbeta resurserna på nytt och sedan generera rapporten igen.
