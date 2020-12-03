@@ -11,9 +11,9 @@ topic-tags: site-features
 discoiquuid: 8386a16a-9d47-46d5-bc60-5f290c59e60e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: eb9a4792f4d64f98805919f00bb62193a6a7dafc
+source-git-commit: c51ba167d9b3d37de649c59526e74d9728c677c6
 workflow-type: tm+mt
-source-wordcount: '664'
+source-wordcount: '579'
 ht-degree: 1%
 
 ---
@@ -61,10 +61,6 @@ Skillnaden identifierar ändringar på komponentnivå och HTML-nivå. Objekt som
 
 * Ljusgrön - komponent tillagd
 * Rosa - komponent borttagen
-* Blå - komponenten ändrad
-* Blå - komponenten har flyttats
-
-Observera att färgerna Ändrad och Flyttad är desamma.
 
 **HTML-ändringar**
 
@@ -97,8 +93,6 @@ I vissa situationer kan det hända att sidskillnader inte identifierar någon sk
 
 * När olika versioner och starter används inte dynamiska komponenter som vägbeskrivningar, menyer, produktlistor eller logotyper (komponenter som är beroende av webbplatsstrukturen för att återge sitt innehåll).
 * För versioner återskapar inte diff åtkomstkontrollprincipen och Live copy-relationen.
-* Om du ändrar något i en bild, t.ex. attributen alt, title eller src, markeras den i blått som ändrad. I vissa fall har bilden emellertid en Base64-representation av src-attributet och även om båda bilderna ser likadana ut markeras de med diff som olika på grund av de olika src-attributen.
-* Skillnaden kan inte identifiera bildrotation.
 * Om en sida flyttas kan du inte längre göra några skillnader med versioner som gjorts före flyttningen.
 
    * Om du får problem med en skillnad kontrollerar du [tidslinjen](/help/sites-authoring/basic-handling.md#timeline) för sidan för att se om sidan har flyttats.
