@@ -4,9 +4,9 @@ description: Versionsinformation för  [!DNL Adobe Experience Manager] 6.5 Servi
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: c92efd64662e831c8771a8f35701f4e9ed788645
+source-git-commit: 69dbfeab855f70167eead24f3d411df4c82a0050
 workflow-type: tm+mt
-source-wordcount: '4098'
+source-wordcount: '4140'
 ht-degree: 0%
 
 ---
@@ -309,6 +309,10 @@ Nedan följer en lista över korrigeringar i [!DNL Experience Manager] 6.5.7.0-v
 >[!NOTE]
 >
 >[!DNL Experience Manager Forms] släpper tilläggspaketen en vecka efter det schemalagda datumet för  [!DNL Experience Manager] Service Pack.
+
+>[!NOTE]
+>
+>[!DNL Experience Manager] Service Pack innehåller inga korrigeringar för  [!DNL Forms]. De levereras med ett separat [!DNL Forms]-tilläggspaket. Dessutom släpps ett kumulativt installationsprogram som innehåller korrigeringar för [!DNL Experience Manager Forms] på JEE. Mer information finns i [Installera AEM Forms-tillägg](#install-aem-forms-add-on-package) och [Installera AEM Forms på JEE](#install-aem-forms-jee-installer).
 
 **Adaptiv Forms**
 
