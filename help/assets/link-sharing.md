@@ -3,9 +3,9 @@ title: Dela resurser via en länk
 description: Dela resurser, mappar och samlingar som en URL-adress.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 1f6da1c69ea3b3c3f07e8ac10fd8e1e9c7208158
+source-git-commit: e36d08c9ea89e840aecde79ffdd911372c0c54ee
 workflow-type: tm+mt
-source-wordcount: '944'
+source-wordcount: '963'
 ht-degree: 3%
 
 ---
@@ -57,9 +57,9 @@ Använd dialogrutan Länkdelning för att generera URL:en för resurser som du v
    >
    >Om du anger ett e-post-ID för en användare som inte är medlem i din organisation, kommer ordet [!UICONTROL External User] att föregås av användarens e-post-ID.
 
-1. Ange en ämnesrad i fältet **[!UICONTROL Subject]**.
+1. Ange ett ämne för resursen som du vill dela i rutan **[!UICONTROL Subject]**.
 
-1. Ange ett valfritt meddelande i fältet **[!UICONTROL Message]**.
+1. Ange ett valfritt meddelande i rutan **[!UICONTROL Message]**.
 
 1. I fältet **[!UICONTROL Expiration]** anger du ett förfallodatum och en förfallotid för att länken ska sluta fungera. Som standard är förfallodatumet inställt för en vecka från det datum du delar länken.
 
@@ -69,9 +69,9 @@ Använd dialogrutan Länkdelning för att generera URL:en för resurser som du v
 
 1. Klicka på **[!UICONTROL Share]**. Ett meddelande bekräftar att länken delas med användarna via ett e-postmeddelande.
 
-1. Om du vill visa den delade resursen klickar du på länken i e-postmeddelandet som skickas till användaren. Den delade resursen visas på sidan **[!UICONTROL Adobe Marketing Cloud]**.
+1. Om du vill visa den delade resursen klickar du på länken i e-postmeddelandet som skickas till användaren. Den delade resursen visas på sidan [!UICONTROL Adobe Marketing Cloud].
 
-   ![chlimage_1-260](assets/chlimage_1-545.png)
+   ![Delade resurser är tillgängliga i Adobe Marketing Cloud](assets/chlimage_1-545.png)
 
 1. Om du vill generera en förhandsgranskning av resursen klickar du på den delade resursen. Om du vill stänga förhandsgranskningen och gå tillbaka till sidan **[!UICONTROL Marketing Cloud]** klickar du på **[!UICONTROL Back]** i verktygsfältet. Om du har delat en mapp klickar du på **[!UICONTROL Parent Folder]** för att återgå till den överordnade mappen.
 
@@ -83,7 +83,7 @@ Använd dialogrutan Länkdelning för att generera URL:en för resurser som du v
 
 1. Om du vill hämta den delade resursen klickar du på **[!UICONTROL Select]** i verktygsfältet, på resursen och sedan på **[!UICONTROL Download]** i verktygsfältet.
 
-   ![chlimage_1-262](assets/chlimage_1-547.png)
+   ![Verktygsfältsalternativ för att hämta den delade resursen](assets/chlimage_1-547.png)
 
 1. Om du vill visa resurser som du har delat som länkar går du till [!DNL Assets]-användargränssnittet och klickar på logotypen [!DNL Experience Manager]. Choose **[!UICONTROL Navigation]**. I navigeringsrutan väljer du **[!UICONTROL Shared Links]** för att visa en lista med delade resurser.
 
