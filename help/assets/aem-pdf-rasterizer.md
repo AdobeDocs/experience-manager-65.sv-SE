@@ -1,11 +1,11 @@
 ---
 title: Använd PDF-rastrering för att generera renderingar
-description: Generera högkvalitativa miniatyrbilder och renderingar med Adobe PDF Rasterizer-biblioteket i [!DNL Adobe Experience Manager].
+description: Generera högkvalitativa miniatyrbilder och renderingar med Adobe PDF Rasterizer-biblioteket.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: b68311d593730d1c441b863967b15e6481758267
 workflow-type: tm+mt
-source-wordcount: '673'
+source-wordcount: '661'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,9 @@ ht-degree: 0%
 
 # Använd PDF-rastrering {#using-pdf-rasterizer}
 
-När du överför stora, innehållsintensiva PDF- eller AI-filer till [!DNL Adobe Experience Manager Assets] kanske standardkonverteringen inte genererar korrekta utdata. Adobe PDF Rasterizer-biblioteket kan generera tillförlitligare och exaktare utdata jämfört med utdata från ett standardbibliotek. Adobe rekommenderar att du använder PDF-rastreringsbiblioteket för följande scenarier:
+När du överför stora, innehållsintensiva PDF- eller AI-filer till [!DNL Adobe Experience Manager Assets] kanske standardbiblioteket inte genererar korrekta utdata. Adobe PDF Rasterizer-biblioteket kan generera tillförlitligare och exaktare utdata jämfört med utdata från ett standardbibliotek. Adobe rekommenderar att du använder PDF-rastreringsbiblioteket för följande scenarier:
+
+Adobe rekommenderar att du använder PDF-rastreringsbiblioteket för följande:
 
 * Tunga, innehållsintensiva AI-filer eller PDF-filer.
 * AI-filer och PDF-filer med miniatyrer som inte genereras som standard.
@@ -47,14 +49,12 @@ Miniatyrbilder och förhandsgranskningar som genererats med PDF Rasterizer har b
 1. Konfigurera följande argument för steget **[!UICONTROL PDF Rasterizer Handler]**:
 
    * MIME-typer: `application/pdf` eller `application/postscript`
-   * Kommandon: `PDFRasterizer -d -p 1 -s 1280 -t PNG -i ${file}`
+   * Kommandon: `PDFRasterizer -d -s 1280 -t PNG -i ${file}`
    * Lägg till miniatyrstorlekar: 319:319, 140:100, 48:48. Lägg till anpassad miniatyrkonfiguration, om det behövs.
 
    Kommandoradsargumenten för kommandot `PDFRasterizer` kan innehålla följande:
 
    * `-d`: Flagga för smidig återgivning av text, vektorgrafik och bilder. Skapar bilder med bättre kvalitet. Om du tar med den här parametern körs kommandot långsamt och bildstorleken ökar.
-
-   * `-p`: Sidnummer. Standardvärdet är alla sidor. Om du vill ange alla sidor använder du `*`.
 
    * `-s`: Största bilddimension (höjd eller bredd). Detta konverteras till DPI för varje sida. Om sidorna har olika storlek kan varje sida eventuellt skalas med olika mängd. Standardvärdet är faktisk sidstorlek.
 
@@ -66,7 +66,6 @@ Miniatyrbilder och förhandsgranskningar som genererats med PDF Rasterizer har b
 
 
 1. Om du vill ta bort mellanliggande återgivningar väljer du **[!UICONTROL Delete Generated Rendition]**.
-
 1. Om du vill att PDF-rastreraren ska kunna generera webbåtergivningar väljer du **[!UICONTROL Generate Web Rendition]**.
 
    ![generate_web_renditions1](assets/generate_web_renditions1.png)
@@ -76,23 +75,17 @@ Miniatyrbilder och förhandsgranskningar som genererats med PDF Rasterizer har b
    ![web_enabled_image1](assets/web_enabled_image1.png)
 
 1. Spara arbetsflödet.
-
 1. Om du vill att PDF-rastreraren ska kunna bearbeta PDF-sidor med PDF-bibliotek öppnar du **[!UICONTROL DAM Process Subasset]**-modellen från [!UICONTROL Workflow]-konsolen.
-
 1. Dra steget PDF-rastreringshanteraren från sidopanelen under steget **[!UICONTROL Create Web-Enabled Image Rendition]**.
-
 1. Konfigurera följande argument för steget **[!UICONTROL PDF Rasterizer Handler]**:
 
    * MIME-typer: `application/pdf` eller `application/postscript`
-
-   * Kommandon: `PDFRasterizer -d -p 1 -s 1280 -t PNG -i ${file}`
+   * Kommandon: `PDFRasterizer -d -s 1280 -t PNG -i ${file}`
    * Lägg till miniatyrstorlekar: `319:319`, `140:100`, `48:48`. Lägg till en anpassad miniatyrkonfiguration efter behov.
 
    Kommandoradsargumenten för kommandot `PDFRasterizer` kan innehålla följande:
 
    * `-d`: Flagga för smidig återgivning av text, vektorgrafik och bilder. Skapar bilder med bättre kvalitet. Om du tar med den här parametern körs kommandot långsamt och bildstorleken ökar.
-
-   * `-p`: Sidnummer. Standardvärdet är alla sidor. `*` anger alla sidor.
 
    * `-s`: Största bilddimension (höjd eller bredd). Detta konverteras till DPI för varje sida. Om sidorna har olika storlek kan varje sida eventuellt skalas med olika mängd. Standardvärdet är faktisk sidstorlek.
 
@@ -113,4 +106,4 @@ Miniatyrbilder och förhandsgranskningar som genererats med PDF Rasterizer har b
    ![web_enabled_image-1](assets/web_enabled_image-1.png)
 
 1. Spara arbetsflödet.
-1. Överför en PDF eller en AI-fil till [!DNL Experience Manager Assets]. I PDF-rastreraren genereras miniatyrbilder och webbåtergivningar för filen.
+1. Överför en PDF-fil eller en AI-fil till [!DNL Experience Manager Assets]. I PDF-rastreraren genereras miniatyrbilder och webbåtergivningar för filen.
