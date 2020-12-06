@@ -3,9 +3,9 @@ title: Migrera resurser i grupp
 description: Beskriver hur du hämtar resurser till [!DNL Adobe Experience Manager], använder metadata, genererar återgivningar och aktiverar dem för publiceringsinstanser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
 workflow-type: tm+mt
-source-wordcount: '1780'
+source-wordcount: '1781'
 ht-degree: 8%
 
 ---
@@ -79,7 +79,7 @@ Eftersom resurser inte behöver överföras via ett nätverk förbättras presta
 
 ### Bearbeta renderingar {#processing-renditions}
 
-När du har läst in resurserna i systemet måste du bearbeta dem i [!UICONTROL DAM Update Asset]-arbetsflödet för att extrahera metadata och generera renderingar. Innan du utför det här steget måste du duplicera och ändra [!UICONTROL DAM Update Asset]-arbetsflödet efter dina behov. Det färdiga arbetsflödet innehåller många steg som kanske inte behövs, till exempel Scene7 PTIFF-generering eller [!DNL InDesign Server]-integrering.
+När du har läst in resurserna i systemet måste du bearbeta dem i [!UICONTROL DAM Update Asset]-arbetsflödet för att extrahera metadata och generera renderingar. Innan du utför det här steget måste du duplicera och ändra [!UICONTROL DAM Update Asset]-arbetsflödet efter dina behov. Det färdiga arbetsflödet innehåller många steg som kanske inte behövs, till exempel Dynamic Media PTIFF-generering eller [!DNL InDesign Server]-integrering.
 
 När du har konfigurerat arbetsflödet efter dina behov finns det två alternativ:
 
