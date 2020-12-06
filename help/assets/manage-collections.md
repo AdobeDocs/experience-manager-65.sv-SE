@@ -4,9 +4,9 @@ description: Lär dig mer om hur du hanterar samlingar med resurser, som att ska
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 0d5a48be283484005013ef3ed7ad015b43f6398b
+source-git-commit: adeb20c1e7222e7c5702061cba73350002f5154c
 workflow-type: tm+mt
-source-wordcount: '2022'
+source-wordcount: '2020'
 ht-degree: 10%
 
 ---
@@ -80,7 +80,7 @@ Så här skapar du en smart samling:
 
 1. Navigera till användargränssnittet för [!DNL Assets] och klicka på Sök.
 
-1. Skriv sökordet i rutan Sök och tryck på `Enter`. Öppna filterpanelen och använd ett sökfilter.
+1. Skriv söknyckelordet i sökrutan och välj `Enter`. Öppna filterpanelen och använd ett sökfilter.
 
 1. Välj **[!UICONTROL Files]** i listan **[!UICONTROL Files & Folders]**.
 
@@ -120,7 +120,7 @@ Du kan också dra resursen till **[!UICONTROL Drop in Collection]**-området i g
 Smarta samlingar skapas genom att en sökning sparas så att du kan ändra deras innehåll genom att ändra sökparametrarna för den sparade sökningen [.](#saved-searches)
 
 1. I [!DNL Assets]-användargränssnittet klickar du på sökalternativet ![sökalternativ](assets/do-not-localize/search_icon.png) i verktygsfältet.
-1. Tryck på returtangenten när markören är i Omnissearch-rutan.
+1. Markera `Return`-tangenten med markören i sökrutan.
 1. Öppna panelen Filter i gränssnittet [!DNL Experience Manager].
 1. Välj den smarta samling du vill ändra i listan **[!UICONTROL Saved Searches]**. På sökpanelen visas de filter som har konfigurerats för den sparade sökningen.
 
@@ -249,7 +249,7 @@ Att redigera sparade sökningar är detsamma som att redigera smarta samlingar. 
 Så här tar du bort sparade sökningar:
 
 1. I [!DNL Assets]-användargränssnittet klickar du på sök ![sökalternativ](assets/do-not-localize/search_icon.png).
-1. Tryck på returtangenten när markören är i omsökningsfältet.
+1. Markera `Return`-tangenten med markören i omsökningsfältet.
 1. Öppna panelen Filter i gränssnittet [!DNL Experience Manager].
 1. I listan **[!UICONTROL Saved Searches]** klickar du på **[!UICONTROL Delete]** bredvid den smarta samling som du vill ta bort.
 
