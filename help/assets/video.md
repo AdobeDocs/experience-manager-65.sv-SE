@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 1103b849-0042-4e11-b170-38ee81dd0157
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
+source-git-commit: f63e13486792f9975c84202b2cd3ddcf618ce0fc
 workflow-type: tm+mt
 source-wordcount: '11340'
 ht-degree: 6%
@@ -342,7 +342,7 @@ VBR tar längre tid att koda men ger det mest fördelaktiga resultatet. mediefil
 När ska du använda VBR jämfört med CRB?
 När det gäller att välja VBR eller CBR rekommenderar vi nästan alltid att du använder VBR för dina mediefiler. VBR ger filer av högre kvalitet med konkurrenskraftiga bithastigheter. När du använder VBR måste du vara säker på att du använder kodning i två omgångar och ställa in den maximala bithastigheten till 1,5 gånger målvideobithastigheten.
 
-När du väljer en förinställning för videokodning ska du ta hänsyn till slutanvändarens anslutningshastighet. Välj en förinställning med en datahastighet som är 80 % av den hastigheten. Om målanvändarens anslutningshastighet till exempel är 1 000 kbit/s är den bästa förinställningen en med en videodatahastighet på 800 kbit/s.
+När du väljer en förinställning för videokodning ska du ta hänsyn till slutanvändarens anslutningshastighet. Välj en förinställning med en datahastighet som är 80 % av den hastigheten. Om målanvändarens anslutningshastighet till exempel är 1000 kbit/s är den bästa förinställningen en med en videodatahastighet på 800 kbit/s.
 
 I den här tabellen beskrivs datahastigheten för typiska anslutningshastigheter.
 
@@ -402,7 +402,7 @@ Anta till exempel att källvideon är 1 920 x 1 080. I följande tabell ger de t
 
 | Videotyp | Bredd x höjd | Breddförhållande | Höjdförhållande |
 |--- |--- |--- |--- |
-| Källa | 1920 x 1080 | 1 | 1 |
+| Källa | 1920 x 1080 | 1 | 3 |
 | Kodad | 960 x 540 | 2 | 2 |
 | Kodad | 640 x 360 | 3 | 3 |
 | Kodad | 480 x 270 | 4 | 4 |
@@ -991,13 +991,13 @@ Så här visar du videorapporter:
 1. I det övre vänstra hörnet av AEM trycker du på AEM-logotypen och sedan i den vänstra rutan på **[!UICONTROL Tools]** (hammarikon) > **[!UICONTROL Assets]** > **[!UICONTROL Video Reports.]**
 1. Gör något av följande på sidan Videorapporter:
 
-   * I närheten av det övre högra hörnet trycker du på ikonen **Uppdatera videorapport **.
+   * I närheten av det övre högra hörnet trycker du på ikonen **Uppdatera videorapport**.
 Du behöver bara använda Uppdatera om rapportens slutdatum är den aktuella dagen. På så sätt ser du den videospårning som har utförts sedan du senast körde rapporten.
 
-   * I det övre högra hörnet trycker du på ikonen **Datumväljaren **.
+   * I närheten av det övre högra hörnet trycker du på ikonen **Datumväljaren**.
 Ange start- och slutdatumintervallet som du vill ha videodata för och tryck sedan på **[!UICONTROL Run Report.]**
 
-   I grupprutan Top Metrics (Toppvärden) identifieras olika aggregerade mått för alla *publicerade *videor på webbplatsen.
+   I grupprutan Övre mått identifieras olika aggregerade mått för alla *publicerade* videor på webbplatsen.
 
 1. I tabellen som visar de publicerade videoklippen trycker du på ett videonamn för att spela upp videon och ser även videons återgivningsrapport.
 
