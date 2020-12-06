@@ -8,7 +8,7 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: e6c9b50b-c27c-48bf-b3c0-9994e7bf6d7e
 translation-type: tm+mt
-source-git-commit: 54645149dc4968c1c4f85eedb5ce4d71f80c3b64
+source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
 workflow-type: tm+mt
 source-wordcount: '679'
 ht-degree: 18%
@@ -18,7 +18,7 @@ ht-degree: 18%
 
 # CDN-cachen har inte verifierats med hjälp av Dynamic Media Classic {#invalidating-your-cdn-cached-content}
 
-CDN cachelagrar medieresurser för snabb leverans. När du uppdaterar en resurs kanske du vill att ändringarna ska börja gälla omedelbart. Genom att du validerar ditt cachelagrade CDN-innehåll (Content Delivery Network) kan du snabbt uppdatera resurser som levereras av Dynamic Media, i stället för att vänta på att cachen ska förfalla.
+CDN cachelagrar medieresurser för snabb leverans. När du uppdaterar en resurs kanske du vill att ändringarna ska börja gälla omedelbart. Genom att du validerar ditt cachelagrade CDN-innehåll (Content Delivery Network) kan du snabbt uppdatera resurser som levereras av Dynamic Media, i stället för att vänta på att cachen ska upphöra att gälla.
 
 >[!IMPORTANT]
 >
@@ -50,7 +50,7 @@ Se även [Cacheöversikt i Dynamic Media Classic (Scene7)](https://helpx.adobe.c
    Om mallen bara innehåller `<ID>` fylls Dynamic Media i `https://<server>/is/image` där `<server>` är det publiceringsservernamn som definieras i Allmänna inställningar och &lt;ID> är de resurser som markerats som ogiltiga.
 
 1. I sidans nedre högra hörn klickar du på **[!UICONTROL Close.]**
-1. I användargränssnittet för Dynamic Media Classic (Scene7) väljer du en eller flera resurser och klickar sedan på **[!UICONTROL File > Invalidate CDN.]** Du ser en lista över en eller flera URL:er som genererats från mallen som du skapade och de resurser som du markerade. Den använder den server-URL som anges under &quot;Publicerat servernamn&quot; under Allmänna inställningar för programmet.
+1. Välj en eller flera resurser i gränssnittet för Dynamic Media Classic och klicka sedan på **[!UICONTROL File > Invalidate CDN.]** Du ser en lista över en eller flera URL:er som genererats från mallen som du skapade och de resurser som du markerade. Den använder den server-URL som anges under &quot;Publicerat servernamn&quot; under Allmänna inställningar för programmet.
 
    Anta till exempel att du har valt en enda bild med namnet `Backpack_B` när du har angett en mall för CDN-validering i föregående steg. När du klickar på **[!UICONTROL File > Invalidate CDN]** resulterar det i följande genererade URL i användargränssnittet för CDN-validering:
 
