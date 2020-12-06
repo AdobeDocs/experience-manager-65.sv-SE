@@ -4,9 +4,9 @@ description: Lär dig resurshanteringsåtgärder som överföring, hämtning, re
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
+source-git-commit: adeb20c1e7222e7c5702061cba73350002f5154c
 workflow-type: tm+mt
-source-wordcount: '9334'
+source-wordcount: '9331'
 ht-degree: 3%
 
 ---
@@ -66,7 +66,7 @@ Innan du överför en resurs måste du kontrollera att den har ett [format](/hel
 
    ![Skapa alternativ för att överföra resurser](assets/create-options.png)
 
-   Om du vill markera flera filer trycker du på Ctrl- eller Kommando-tangenten och markerar resurserna i dialogrutan för filväljaren. När du använder en iPad kan du bara markera en fil i taget.
+   Om du vill markera flera filer väljer du `Ctrl` eller `Command` och markerar resurserna i dialogrutan för filväljaren. När du använder en iPad kan du bara markera en fil i taget.
 
    Du kan pausa överföringen av stora resurser (större än 500 MB) och återuppta den senare från samma sida. Klicka på **[!UICONTROL Pause]** bredvid förloppsindikatorn som visas när en överföring startar.
 
@@ -355,13 +355,13 @@ Så här förhandsgranskar du en resurs med tangentbordet:
 
 1. I [!DNL Assets]-användargränssnittet navigerar du till önskad resurs med `Tab` och piltangenterna.
 
-1. Tryck på `Enter` på den önskade resursen för att öppna den. Du kan zooma in resurser i förhandsvisningsläget.
+1. Välj `Enter`-tangenten på den önskade resursen för att öppna den. Du kan zooma in resurser i förhandsvisningsläget.
 
 1. Så här zoomar du in i resursen:
    1. Använd `Tab`-tangenten för att flytta fokus till inzoomningsalternativet.
    1. Använd `Enter`-tangenten för att zooma in i bilden.
 
-   Om du vill zooma ut använder du `Tab`-tangenten för att flytta fokus till utzoomningsalternativet och trycker på `Enter`.
+   Om du vill zooma ut använder du `Tab`-tangenten för att flytta fokus till utzoomningsalternativet och väljer `Enter`.
 
 1. Använd `Shift` + `Tab` för att flytta tillbaka fokus på bilden.
 
@@ -395,7 +395,7 @@ Så här förhandsgranskar du en resurs med tangentbordet:
 
 1. Om du vill inaktivera resursen efter en viss tid väljer du datum/tid för inaktiveringen i datumväljaren bredvid fältet **[!UICONTROL Off Time]**. Inaktiveringsdatumet ska vara senare än aktiveringsdatumet för en tillgång. Efter [!UICONTROL Off Time] är en resurs och dess återgivningar inte tillgängliga via webbgränssnittet [!DNL Assets] eller via HTTP-API:t.
 
-1. Markera en eller flera taggar i fältet **[!UICONTROL Tags]**. Om du vill lägga till en egen tagg skriver du namnet på taggen i rutan och trycker på Retur. Den nya taggen sparas i [!DNL Experience Manager]. [!DNL YouTube] kräver att taggar publiceras. Se [publicera videor på YouTube](video.md#publishing-videos-to-youtube).
+1. Markera en eller flera taggar i fältet **[!UICONTROL Tags]**. Om du vill lägga till en egen tagg skriver du namnet på taggen i rutan och väljer `Enter`. Den nya taggen sparas i [!DNL Experience Manager]. [!DNL YouTube] kräver att taggar publiceras. Se [publicera videor på YouTube](video.md#publishing-videos-to-youtube).
 
    >[!NOTE]
    >
