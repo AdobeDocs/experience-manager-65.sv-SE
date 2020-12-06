@@ -8,9 +8,9 @@ topic-tags: managing-assets
 content-type: reference
 discoiquuid: 2685f9f3-0973-40a9-89b8-e7db0a6a75f2
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
 workflow-type: tm+mt
-source-wordcount: '1572'
+source-wordcount: '1531'
 ht-degree: 1%
 
 ---
@@ -18,12 +18,12 @@ ht-degree: 1%
 
 # Video {#video}
 
-Med resurser kan du centralisera hanteringen av videoresurser så att du kan överföra videor direkt till Assets för automatisk kodning till Dynamic Media Classic (Scene7) och få tillgång till Dynamic Media Classic-videor direkt från Assets för sidredigering.
+Med resurser kan du centralisera hanteringen av videoresurser så att du kan överföra videor direkt till Assets för automatisk kodning till Dynamic Media Classic och få tillgång till Dynamic Media Classic-videor direkt från Assets för sidredigering.
 
 Med videointegrationen i Dynamic Media Classic kan du nå optimerad video på alla skärmar (automatisk enhets- och bandbreddsidentifiering).
 
 * Komponenten **[!UICONTROL Scene7 Video]** utför automatiskt enhets- och bandbreddsidentifiering för att spela upp video i rätt format och med rätt kvalitet på datorer, surfplattor och mobiler.
-* Resurser - Du kan inkludera adaptiva videouppsättningar i stället för bara enskilda videoresurser. En adaptiv videouppsättning är en behållare för alla videoåtergivningar som krävs för att spela upp video sömlöst på flera skärmar. En adaptiv videouppsättning grupperar versioner av samma video som är kodade med olika bithastigheter och format som 400 kbit/s, 800 kbit/s och 1 000 kbit/s. Du använder en adaptiv videouppsättning, tillsammans med S7-videokomponenten, för adaptiv videoströmning på flera skärmar, inklusive stationära datorer, iOS, Android, Blackberry och Windows mobila enheter. Mer information finns i [Scene7-dokumentation om adaptiva videouppsättningar](https://help.adobe.com/en_US/scene7/using/WS53492AE1-6029-45d8-BF80-F4B5CF33EB08.html).
+* Resurser - Du kan inkludera adaptiva videouppsättningar i stället för bara enskilda videoresurser. En adaptiv videouppsättning är en behållare för alla videoåtergivningar som krävs för att spela upp video sömlöst på flera skärmar. En adaptiv videouppsättning grupperar versioner av samma video som är kodade med olika bithastigheter och format som 400 kbit/s, 800 kbit/s och 1 000 kbit/s. Du använder en adaptiv videouppsättning, tillsammans med S7-videokomponenten, för adaptiv videoströmning på flera skärmar, inklusive stationära datorer, iOS, Android, Blackberry och Windows mobila enheter.
 
 ## Om FFMPEG och Dynamic Media Classic {#about-ffmpeg-and-scene}
 
@@ -60,11 +60,11 @@ Om du behöver ett arbetsflöde eller en versionshantering för dina resurser b�
 1. I AEM kommer du åt videomaterial i WCM på fliken **[!UICONTROL Movies]** i Content Finder.
 1. Skapa med en **[!UICONTROL Scene7 Video]**- eller **[!UICONTROL Foundation Video]**-komponent.
 
-### Om du överför din video till Scene7 {#if-you-are-uploading-your-video-to-scene}
+### Om du överför videon till Dynamic Media Classic {#if-you-are-uploading-your-video-to-scene}
 
 Om du inte behöver ett arbetsflöde eller en versionshantering för dina resurser bör du överföra dina resurser till Scene7. Här följer det rekommenderade arbetsflödet:
 
-1. I Dynamic Media Classic [konfigurerar du en schemalagd FTP-överföring och -kodning till Scene7 (automatiserad)](https://help.adobe.com/en_US/scene7/using/WS70B173EC-4CAD-4b4c-BF9C-43A11F3A5950.html).
+1. I Dynamic Media Classic [konfigurerar du en schemalagd FTP-överföring och -kodning till Scene7 (automatiserad)](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html#upload-files-using-via-ftp).
 1. I AEM kommer du åt videomaterial i WCM på fliken **[!UICONTROL Scene7]** i Content Finder.
 1. Skapa med komponenten **[!UICONTROL Scene7 Video]**.
 
@@ -85,7 +85,7 @@ Så här konfigurerar du universella förinställningar:
 
    >[!NOTE]
    >
-   >Mer information om vad videoförinställningarna betyder finns i [dokumentationen för Dynamic Media Classic](https://help.adobe.com/en_US/scene7/using/WSE86ACF2B-BD50-4c48-A1D7-9CD4405B62D0.html).
+   >Mer information om vad videoförinställningarna betyder finns i [dokumentationen för Dynamic Media Classic](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html#video-presets-for-encoding-video-files).
    >
    >Adobe rekommenderar att du antingen markerar båda adaptiva videouppsättningar när du konfigurerar de universella förinställningarna eller väljer alternativet **[!UICONTROL Adaptive Video Encoding]**.
 
