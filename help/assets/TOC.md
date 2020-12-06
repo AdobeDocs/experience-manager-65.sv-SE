@@ -7,9 +7,9 @@ user-guide-title: Resurshandbok
 breadcrumb-title: Resurshandbok
 user-guide-description: Skapa, hantera, leverera och optimera digitala resurser.
 translation-type: tm+mt
-source-git-commit: 696aaa54007e4a78fe6b07d8ba65660595286dca
+source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
 workflow-type: tm+mt
-source-wordcount: '589'
+source-wordcount: '590'
 ht-degree: 34%
 
 ---
@@ -55,7 +55,7 @@ ht-degree: 34%
    + [Bildprofiler för Dynamic Media](image-profiles.md)
    + [Smart bildbehandling](imaging-faq.md)
    + [Video](s7-video.md)
-   + [Lägga till Scene7-funktioner på sidan](scene7.md)
+   + [Lägga till dynamiska mediefunktioner på sidan](scene7.md)
    + [Leverera innehåll med HTTP2](http2.md)
    + [Leverera Dynamic Media-material](delivering-dynamic-media-assets.md)
    + [Aktivera hotlink-skydd i Dynamic Media](hotlink-protection.md)
