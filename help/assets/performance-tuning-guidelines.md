@@ -4,9 +4,9 @@ description: Förslag och vägledning om [!DNL Experience Manager] konfiguration
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: cc61b8473fb919a963eb73c015efbc2f06197ee8
+source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
 workflow-type: tm+mt
-source-wordcount: '2677'
+source-wordcount: '2678'
 ht-degree: 0%
 
 ---
@@ -164,7 +164,7 @@ Att ställa in en kö på hälften av de tillgängliga processorerna är en anv�
 
 ### DAM Update Asset configuration {#dam-update-asset-configuration}
 
-Arbetsflödet i [!UICONTROL DAM Update Asset] innehåller en komplett serie steg som är konfigurerade för uppgifter, till exempel Scene7 PTIFF-generering och [!DNL Adobe InDesign Server]-integrering. De flesta användare behöver dock inte utföra flera av dessa steg. Adobe rekommenderar att du skapar en anpassad kopia av arbetsflödesmodellen [!UICONTROL DAM Update Asset] och tar bort alla onödiga steg. I det här fallet ska du uppdatera startarna för [!UICONTROL DAM Update Asset] så att de pekar på den nya modellen.
+Arbetsflödet [!UICONTROL DAM Update Asset] innehåller en komplett serie steg som är konfigurerade för uppgifter, till exempel Dynamic Media PTIFF-generering och [!DNL Adobe InDesign Server]-integrering. De flesta användare behöver dock inte utföra flera av dessa steg. Adobe rekommenderar att du skapar en anpassad kopia av arbetsflödesmodellen [!UICONTROL DAM Update Asset] och tar bort alla onödiga steg. I det här fallet ska du uppdatera startarna för [!UICONTROL DAM Update Asset] så att de pekar på den nya modellen.
 
 Om du kör arbetsflödet [!UICONTROL DAM Update Asset] kraftigt kan du öka storleken på fildatalagret avsevärt. Resultaten från ett experiment som utfördes av Adobe har visat att datastorleken kan öka med ungefär 400 GB om cirka 500 arbetsflöden utförs inom 8 timmar.
 
@@ -180,7 +180,7 @@ Kunderna använder bilder av olika storlek och format på sin webbplats eller f�
 
 Många webbplatskunder implementerar en bildservett som ändrar storlek på och beskär bilder när de begärs, vilket medför ytterligare belastning på publiceringsinstansen. Så länge dessa bilder kan cachas kan utmaningen dock mildras.
 
-Ett annat sätt är att använda Scene7-teknik för att helt och hållet överge bildbearbetning. Dessutom kan du distribuera varumärkesportalen som inte bara tar över ansvaret för återgivningsgenerering från [!DNL Experience Manager]-infrastrukturen, utan även hela publiceringsnivån.
+Ett annat sätt är att använda Dynamic Media-tekniken för att helt och hållet överföra bildmanipulering. Dessutom kan du distribuera varumärkesportalen som inte bara tar över ansvaret för återgivningsgenerering från [!DNL Experience Manager]-infrastrukturen, utan även hela publiceringsnivån.
 
 #### ImageMagick {#imagemagick}
 
