@@ -3,10 +3,10 @@ title: Sök efter ansikten för att filtrera sökresultat
 description: Så här skapar, ändrar och använder du sökfaktorer i [!DNL Adobe Experience Manager].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: f9f745369ba0fe242dea1e5a5e5af0b8263b1ec0
+source-git-commit: adeb20c1e7222e7c5702061cba73350002f5154c
 workflow-type: tm+mt
-source-wordcount: '2288'
-ht-degree: 15%
+source-wordcount: '2274'
+ht-degree: 14%
 
 ---
 
@@ -38,15 +38,15 @@ För textsökningar lägger du till [!UICONTROL Fulltext]-predikatet i formulär
    >
    >1. Navigera till `/conf/global/settings/dam/search/facets/assets/jcr:content/items` i CRXDE.
    >1. Ta bort noden **type**.
-   >1. Från sökvägen */libs/settings/dam/search/facets/assets/jcr:content/items* kopierar du noderna **asset, directory, typeor, excludepaths** och **searchtype** till den sökväg som nämns i steg 1.
+   >1. Kopiera noderna `asset`, `directory`, `typeor`, `excludepaths` och `searchtype` från sökvägen `/libs/settings/dam/search/facets/assets/jcr:content/items` till sökvägen som anges i steg 1.
    >1. Spara ändringarna.
 
 
 1. På sidan [!UICONTROL Edit Search Forms] drar du ett predikat från fliken **[!UICONTROL Select Predicate]** till huvudrutan. Dra till exempel **[!UICONTROL Property Predicate]**.
 
-   ![Tryck och flytta ett predikat för att anpassa sökfiltren](assets/drag_predicate.png)
+   ![Markera och flytta ett predikat för att anpassa sökfiltren](assets/drag_predicate.png)
 
-   *Bild: Tryck och flytta ett predikat för att anpassa sökfiltren.*
+   *Bild: Välj och flytta ett predikat för att anpassa sökfiltren.*
 
 1. På fliken [!UICONTROL Settings] anger du en fältetikett, platshållartext och beskrivning för predikatet. Ange ett giltigt namn för metadataegenskapen som du vill associera med predikatet. Rubriketiketten på fliken [!UICONTROL Settings] identifierar det valda predikatets typ.
 
