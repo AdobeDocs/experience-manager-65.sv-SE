@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 632a9074-b747-49a1-a57d-1f42bba1f4e9
 docset: aem65
 translation-type: tm+mt
-source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
 workflow-type: tm+mt
-source-wordcount: '556'
+source-wordcount: '547'
 ht-degree: 4%
 
 ---
@@ -39,11 +39,11 @@ Kriterierna för proportioner och nyckelord gäller även för panoramaresurser 
 
 Information om hur du överför resurser som ska användas med visningsprogrammet för panoramabilder finns i [Överföra resurser](/help/assets/manage-assets.md#uploading-assets).
 
-## Konfigurera Dynamic Media Classic (Scene7) {#configuring-dynamic-media-classic-scene}
+## Konfigurera Dynamic Media Classic {#configuring-dynamic-media-classic-scene}
 
-För att visningsprogrammet för panoramabilder ska fungera på rätt sätt i AEM måste du synkronisera förinställningarna för visningsprogrammet för panoramabilder med metadata som är specifika för Dynamic Media Classic (Scene7) och Dynamic Media Classic (Scene7) så att visningsförinställningarna uppdateras i JCR-läsaren. Konfigurera Dynamic Media Classic (Scene7) på följande sätt:
+För att visningsprogrammet för panoramabilder ska fungera på rätt sätt i AEM måste du synkronisera förinställningarna för visningsprogrammet för panoramabilder med metadata som är specifika för Dynamic Media Classic och Dynamic Media Classic, så att visningsförinställningarna uppdateras i JCR. Konfigurera Dynamic Media Classic på följande sätt:
 
-1. [Logga in på din instans av Dynamic Media Classic (Scene7) ](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) för varje företagskonto.
+1. [Logga in på din instans av Dynamic Media ](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) Classic för varje företagskonto.
 
 1. Klicka på **[!UICONTROL Setup > Application Setup > Publish Setup > Image Server.]** längst upp till höger på sidan
 1. Välj **[!UICONTROL Image Serving.]** på menyn **[!UICONTROL Publish Context]** längst upp på sidan Image Server Publish (Publicera)
@@ -51,7 +51,7 @@ För att visningsprogrammet för panoramabilder ska fungera på rätt sätt i AE
 1. På samma Image Server Publish-sida hittar du rubriken **[!UICONTROL Request Attributes.]**
 1. Under rubriken Begäransattribut går du till **[!UICONTROL Reply Image Size Limit.]** och i de associerade fälten Bredd och Höjd ökar du den maximalt tillåtna bildstorleken för panoramabilder.
 
-   Dynamic Media Classic (Scene7) har en begränsning på 25 000 000 pixlar. Den största tillåtna storleken för bilder med 2:1-proportioner är 7 000 x 3 500. För vanliga skärmar räcker det dock med 4 096 x 2 048 pixlar.
+   Dynamic Media Classic har en begränsning på 25 000 000 pixlar. Den största tillåtna storleken för bilder med 2:1-proportioner är 7 000 x 3 500. För vanliga skärmar räcker det dock med 4 096 x 2 048 pixlar.
 
    >[!NOTE]
    >
@@ -72,11 +72,11 @@ För att visningsprogrammet för panoramabilder ska fungera på rätt sätt i AE
 
 Om du har släppt en bild i panoramamediakomponenten i WCM-filen och platshållaren för komponenten är komprimerad kanske du vill felsöka följande:
 
-* Om du får ett otillåtet fel 403 kan det bero på att den begärda bildstorleken är för stor. Granska **[!UICONTROL Reply Image Size Limit]**-inställningarna i [Konfigurera Dynamic Media Classic (Scene7)](/help/assets/panoramic-images.md#configuring-dynamic-media-classic-scene).
+* Om du får ett otillåtet fel 403 kan det bero på att den begärda bildstorleken är för stor. Granska **[!UICONTROL Reply Image Size Limit]**-inställningarna i [Konfigurera Dynamic Media Classic](/help/assets/panoramic-images.md#configuring-dynamic-media-classic-scene).
 
 * Om objektet har ett ogiltigt lås eller om ett parsningsfel visas på sidan, kontrollerar du Begär felsökningsläge och Begär låsläge för att se om de är inaktiverade.
 * Om det uppstår ett fel på arbetsytan för en målad arbetsyta skapar du en sökväg till definitionsfilen för regeluppsättningen och kontrollerar CTN för de tidigare förfrågningarna om bildresursen.
-* Om bildkvaliteten blir mycket låg efter en bildbegäran med en storlek över den gräns som stöds, kontrollerar du att inställningen **[!UICONTROL JPEG Encoding Attributes > Quality]** inte är tom. En typisk inställning för fältet **[!UICONTROL Quality]** är `95`. Inställningen finns på sidan Image Server Publish (Bildserverpublicering). Mer information finns i [Konfigurera Dynamic Media Classic (Scene7)](/help/assets/panoramic-images.md#configuring-dynamic-media-classic-scene).
+* Om bildkvaliteten blir mycket låg efter en bildbegäran med en storlek över den gräns som stöds, kontrollerar du att inställningen **[!UICONTROL JPEG Encoding Attributes > Quality]** inte är tom. En typisk inställning för fältet **[!UICONTROL Quality]** är `95`. Inställningen finns på sidan Image Server Publish (Bildserverpublicering). Mer information om hur du kommer åt sidan finns i [Konfigurera Dynamic Media Classic](/help/assets/panoramic-images.md#configuring-dynamic-media-classic-scene).
 
 ## Förhandsgranska panoramabilder {#previewing-panoramic-images}
 
