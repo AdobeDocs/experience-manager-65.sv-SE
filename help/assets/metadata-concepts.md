@@ -3,9 +3,9 @@ title: Förstå metadatabegrepp
 description: Lär dig mer om behovet av och typer av metadata som gör det enklare att kategorisera och ordna resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: ce43c49f8f7d4509e414554b8f4eba368ff66e95
+source-git-commit: adeb20c1e7222e7c5702061cba73350002f5154c
 workflow-type: tm+mt
-source-wordcount: '2720'
+source-wordcount: '2719'
 ht-degree: 6%
 
 ---
@@ -178,7 +178,7 @@ Förutom DCMES finns det andra metadataelement som skapats av Dublin Core Initia
 | description | Mer information om resursen. |
 | format | Filformat, fysiskt medium eller dimensioner för resursen. [!DNL Experience Manager] använder  `dc:format` för att beteckna tillgångens MIME-typ. |
 | identifierare | En unik referens till tillgången. |
-| language | Språket för resursen (t.ex. en för engelska). |
+| language | Språket för resursen (till exempel `en` för engelska). |
 | utgivare | Den person eller det företag som ansvarar för att göra tillgången tillgänglig. |
 | relation | En relaterad tillgång. |
 | rättigheter | Information om vem som har behörighet till den här resursen. |
