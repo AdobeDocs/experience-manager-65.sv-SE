@@ -1,14 +1,14 @@
 ---
 title: Konfigurera Dynamic Media
-description: Om du vill konfigurera dynamiska medier måste du konfigurera dynamiska medier och hantera bild- och visningsförinställningar
+description: Om du vill konfigurera Dynamic Media måste du konfigurera Dynamic Media och hantera bild- och visningsförinställningar.
 uuid: bcd1f9ab-4201-4222-9e4a-ba82b3c7cd6c
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: 36a4a4e7-8bb2-4853-b335-cf9148be410c
 translation-type: tm+mt
-source-git-commit: df89d5cfd5060d493babb89e92a9a98e851b8879
+source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
 workflow-type: tm+mt
-source-wordcount: '257'
+source-wordcount: '254'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->I den här dokumentationen beskrivs Dynamic Media-funktionerna, som är direkt integrerade i AEM. Om du använder Dynamic Media Classic (tidigare kallat Scene7) som är integrerat i AEM läser du [Integreringsdokumentationen för Dynamic Media Classic](/help/sites-administering/scene7.md).
+>I den här dokumentationen beskrivs Dynamic Media-funktionerna, som är direkt integrerade i AEM. Om du använder Dynamic Media Classic som är integrerat i AEM läser du [Integreringsdokumentation för Dynamic Media Classic](/help/sites-administering/scene7.md).
 >
 >Se [Scenario med dubbla användningsområden](/help/sites-administering/scene7.md#dual-use-scenario) för olika tillfällen när du kanske vill använda AEM som är integrerad med Dynamic Media Classic tillsammans med Dynamic Media.
 
