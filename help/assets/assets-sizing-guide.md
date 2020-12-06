@@ -3,9 +3,9 @@ title: '[!DNL Assets] storleksstödlinje'
 description: Bästa tillvägagångssätt för att fastställa effektiva mått för att uppskatta den infrastruktur och de resurser som krävs för att distribuera [!DNL Adobe Experience Manager Assets].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
 workflow-type: tm+mt
-source-wordcount: '1614'
+source-wordcount: '1615'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ Med tanke på dessa faktorer behöver du en metod för att beräkna ett tillräc
 1. Fastställ storleken och antalet resurser som ska läsas in i systemet.
 1. Hämta ett representativt urval av resurserna som ska överföras till [!DNL Experience Manager]. Om du till exempel tänker läsa in PSD-, JPG-, AI- och PDF-filer i systemet behöver du flera exempelbilder för varje filformat. Dessutom bör dessa prover representera de olika filstorlekarna och komplexiteterna i bilderna.
 1. Definiera de återgivningar som ska användas.
-1. Skapa återgivningarna i [!DNL Experience Manager] med [!DNL ImageMagick] eller [!DNL Adobe Creative Cloud]-program. Förutom de återgivningar som användarna anger skapar du färdiga återgivningar. För användare som implementerar Scene7 kan du använda IC-binärfilen för att generera PTIFF-återgivningar som ska lagras i Experience Manager.
+1. Skapa återgivningarna i [!DNL Experience Manager] med [!DNL ImageMagick] eller [!DNL Adobe Creative Cloud]-program. Förutom de återgivningar som användarna anger skapar du färdiga återgivningar. För användare som implementerar Dynamic Media kan du använda IC-binärfilen för att generera PTIFF-renderingar som ska lagras i Experience Manager.
 1. Om du tänker använda delresurser genererar du dem för rätt filtyper.
 1. Jämför storleken på utdatabilder, återgivningar och delresurser med originalbilderna. Det gör att du kan generera en förväntad tillväxtfaktor när systemet har lästs in. Om du till exempel genererar återgivningar och delresurser med en kombinerad storlek på 3 GB efter att ha bearbetat 1 GB resurser, blir återgivningens tillväxtfaktor 3.
 1. Fastställer den maximala tid som tillgångsversionerna ska underhållas i systemet.
