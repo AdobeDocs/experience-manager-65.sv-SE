@@ -8,9 +8,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
 translation-type: tm+mt
-source-git-commit: 5a3045b89ba6bb32482926ea8d2c5533e5394d9a
+source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
 workflow-type: tm+mt
-source-wordcount: '1765'
+source-wordcount: '1769'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ Förbättringar i den senaste versionen av Smart Imaging:
 
 ## Kostar licensieringen för smart bildbehandling några? {#are-there-any-licensing-costs-associated-with-smart-imaging}
 
-Nej. Smart Imaging ingår i din befintliga licens av antingen Dynamic Media Classic (Scene7) eller AEM Dynamic Media (On Prem, AMS och AEM som Cloud Service).
+Nej. Smart Imaging ingår i din befintliga licens av antingen Dynamic Media Classic eller Adobe Experience Manager - Dynamic Media (On Prem, AMS och AEM som Cloud Service).
 
 >[!NOTE]
 >
@@ -178,7 +178,7 @@ Under den inledande övergången kommer de icke-cachelagrade bilderna direkt til
 
 ## Hur kan jag verifiera om smart bildbehandling fungerar som väntat?  {#how-can-i-verify-whether-smart-imaging-is-working-as-expected}
 
-1. När ditt konto har konfigurerats med smart bildåtergivning läser du in en URL-adress för bilden Dynamic Media Classic (Scene7)/Dynamic Media i webbläsaren.
+1. När ditt konto har konfigurerats med smart bildåtergivning läser du in en Dynamic Media Classic- eller Adobe Experience Manager - Dynamic Media-bild-URL i webbläsaren.
 1. Öppna Chrome-utvecklarfönstret genom att klicka på **[!UICONTROL View > Developer > Developer Tools]** i webbläsaren. Eller välj ett valfritt verktyg för webbläsare.
 
 1. Kontrollera att cache är inaktiverat när utvecklingsverktygen är öppna.
