@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: f4051767-182e-4cfd-9dfc-8f516378e0b6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
+source-git-commit: adeb20c1e7222e7c5702061cba73350002f5154c
 workflow-type: tm+mt
 source-wordcount: '6239'
 ht-degree: 15%
@@ -227,7 +227,7 @@ Det exakta värdet som returneras av dataelementet beror på sammanhanget. Om da
    * Använder knapptryckningshändelsen från Core Adobe Launch-tillägget som utlösare.
    * Skickar värdet för **[!UICONTROL ZoomScale]**-dataelement till Adobe Analytics.
 
-Anta nu att slutanvändaren läser in webbsidan med de två visningsprogrammen. I *visningsprogram1* zoomar de in till 50 % skala; sedan zoomar de in i *visningsprogram2* till 25 % skala. I *visningsprogram1* panorerar de bilden runt bilden och trycker slutligen på en tangent på tangentbordet.
+Anta nu att slutanvändaren läser in webbsidan med de två visningsprogrammen. I *visningsprogram1* zoomar de in till 50 % skala; sedan zoomar de in i *visningsprogram2* till 25 % skala. I *visningsprogram1* panorerar de bilden runt bilden och väljer slutligen en tangent på tangentbordet.
 
 Slutanvändarens aktivitet resulterar i följande två spårningsanrop till Adobe Analytics:
 
