@@ -1,22 +1,18 @@
 ---
-source-git-commit: f5719bed6d55aa3775d873e85e23b4de60c8de03
+source-git-commit: 107ad4d7f875d27d392212f5fb8ca9b39aae3857
 workflow-type: tm+mt
 translation-type: tm+mt
-source-wordcount: '170'
+source-wordcount: '84'
 ht-degree: 0%
 
 ---
 # Adobe Experience Manager 6.5 - dokumentation
 
-| EXL-PR | EXL | Förhandsgranska | Aktivera | Publicerad | Hjälp |
-|--- |--- |--- |--- |--- |--- |
-| [![Byggstatus](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-manager-65.en_pr-exl/badge/icon)](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-manager-65.en_pr-exl/lastBuild/) | [![Byggstatus](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-manager-65.en_exl/lastBuild/badge/icon)](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-manager-65.en_exl/lastBuild/lastBuild) | [Förhandsgranska URL](https://experienceleague.corp.adobe.com/docs/experience-manager-65/authoring/home.html?lang=en) | [activate-exl](https://docs.ci.corp.adobe.com/job/activate-exl/build/) | [Live-URL](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html?lang=en) | [Redigeringshandbok](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html?lang=en) |
-
 Det här är arkivet för Adobe Experience Manager 6.5-dokumentation. Den här dokumentationen beskriver installation, administration, redigering och hur du anpassar AEM.
 
 Dina bidrag till dokumentationen är välkomna. Se följande resurser:
 
-* [contribute.md](contributing.md) En översikt över hur du kan bidra till dokumentationen.
-* [guidelines.md](guidelines.md) För en översikt över vad som förväntas i bidragen och hur du komponerar dina dokumentationsbidrag.
-* [code-of-behavior.md](code-of-conduct.md) En översikt över de beteendestandarder vi förväntar oss när du bidrar till detta dokumentationsprojekt.
+* [contribute.](contributing.md) mdEn översikt över hur du kan bidra till dokumentationen.
+* [guidelines.](guidelines.md) mdEn översikt över vad som förväntas i bidragen och hur du komponerar dokumentationsbidragen.
+* [code-of-behavior.](code-of-conduct.md) mdFör en översikt över de beteendestandarder vi förväntar oss när du bidrar till detta dokumentationsprojekt.
 
