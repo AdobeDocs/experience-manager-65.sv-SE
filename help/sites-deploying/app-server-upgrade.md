@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 1876d8d6-bffa-4a1c-99c0-f6001acea825
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 38ef8fc8d80009c8ca79aca9e45cf10bd70e1f1e
+source-git-commit: f696b1081f14ba379cde51a3542a5b1b5f9668e2
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '473'
 ht-degree: 0%
 
 ---
@@ -23,37 +23,27 @@ ht-degree: 0%
 
 I det här avsnittet beskrivs den procedur som måste följas för att uppdatera AEM för programserverinstallationer.
 
-I alla exemplen i den här proceduren används JBoss som Application Server och du antyder att du har en fungerande version av AEM redan distribuerad. Proceduren är avsedd att dokumentera uppgraderingar som utförts från **AEM version 5.6 till 6.3**.
+I alla exemplen i den här proceduren används Tomcat som Application Server och du antyder att du har en fungerande version av AEM redan distribuerad. Proceduren är avsedd att dokumentera uppgraderingar som utförts från **AEM version 6.4 till 6.5**.
 
-1. Börja med JBoss. I de flesta fall kan du göra detta genom att köra startskriptet `standalone.sh` genom att köra det här kommandot från terminalen:
-
-   ```shell
-   jboss-install-folder/bin/standalone.sh
-   ```
-
-1. Om AEM 5.6 redan är distribuerad kontrollerar du att paketen fungerar korrekt genom att köra:
+1. Börja med TomCat. I de flesta fall kan du göra detta genom att köra startskriptet `./catalina.sh` genom att köra det här kommandot från terminalen:
 
    ```shell
-   wget https://<serveraddress:port>/cq/system/console/bundles
+   $CATALINA_HOME/bin/catalina.sh start
    ```
 
-1. Avinstallera sedan AEM 5.6:
+1. Om AEM 6.4 redan är distribuerad kontrollerar du att paketen fungerar korrekt genom att gå till:
 
    ```shell
-   rm jboss-install-folder/standalone/deployments/cq.war
+   https://<serveraddress:port>/cq/system/console/bundles
    ```
 
-1. Stoppa JBoss.
+1. Avinstallera sedan AEM 6.4. Detta kan du göra med TomCat App Manager (`http://serveraddress:serverport/manager/html`)
 
-1. Nu kan du migrera databasen med hjälp av crx2oak-migreringsverktyget:
+1. Nu kan du migrera databasen med hjälp av crx2oak-migreringsverktyget. Om du vill göra det hämtar du den senaste versionen av crx2oak från [den här platsen](https://repo.adobe.com/nexus/content/groups/public/com/adobe/granite/crx2oak).
 
    ```shell
-   java -jar crx2oak.jar crx-quickstart/repository/ crx-quickstart/oak-repository
+   SLING_HOME= $AEM-HOME/crx-quickstart java -Xmx4096m -XX:MaxPermSize=2048M -jar crx2oak.jar --load-profile segment-fds
    ```
-
-   >[!NOTE]
-   >
-   >I det här exemplet är ekadatabas den tillfälliga katalog där den nyligen konverterade databasen finns. Kontrollera att du har den senaste versionen av crx2oak.jar innan du utför det här steget.
 
 1. Ta bort de nödvändiga egenskaperna i filen sling.properties genom att göra följande:
 
@@ -84,59 +74,41 @@ I alla exemplen i den här proceduren används JBoss som Application Server och 
 
    * Filen **BootstrapCommandFile_timestamp.txt**: `rm -f crx-quickstart/launchpad/felix/bundle0/BootstrapCommandFile_timestamp.txt`
 
-1. Kopiera det nyligen migrerade segmentlagret till rätt plats:
+   * Ta bort **sling.options.file** genom att köra: `find crx-quickstart/launchpad -type f -name "sling.options.file" -exec rm -rf`
 
-   ```shell
-   mv crx-quickstart/oak-repository/segmentstore crx-quickstart/repository/segmentstore
-   ```
-
-1. Kopiera datalagret också:
-
-   ```shell
-   mv crx-quickstart/repository/repository/datastore crx-quickstart/repository/datastore
-   ```
-
-1. Därefter måste du skapa den mapp som ska innehålla de OSGi-konfigurationer som ska användas med den nya uppgraderade instansen. Mer specifikt måste en mapp med namnet install skapas under **crx-quickstart**.
-
-1. Skapa nu nodarkivet och datalagret som ska användas med AEM 6.3. Du kan göra detta genom att skapa två filer med följande namn under **crx-quickstart\install**:
+1. Skapa nu nodarkivet och datalagret som ska användas med AEM 6.5. Du kan göra detta genom att skapa två filer med följande namn under `crx-quickstart\install`:
 
    * `org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.cfg`
-
    * `org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore.cfg`
 
    De här två filerna konfigurerar AEM att använda ett StarMK-nodarkiv och ett File-datalager.
 
 1. Redigera konfigurationsfilerna så att de blir klara att användas. Mer specifikt:
 
-   * Lägg till följande rad i **org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config**:\
-      `customBlobStore=true`
+   * Lägg till följande rad i `org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config`:
 
-   * Lägg sedan till följande rader i **org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore.config**:
+      ```customBlobStore=true```
+
+   * Lägg sedan till följande rader i `org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore.config`:
 
       ```
       path=./crx-quickstart/repository/datastore
-       minRecordLength=4096
+      minRecordLength=4096
       ```
 
-1. Ta bort körningsläget crx2 genom att köra:
+1. Nu måste du ändra körningslägena i AEM 6.5-filen. För att göra det skapar du först en tillfällig mapp som ska rymma AEM 6.5-kriget. Namnet på mappen i det här exemplet är `temp`. När krigsfilen har kopierats kan du extrahera innehållet genom att köra det inifrån den tillfälliga mappen:
 
-   ```shell
-   find crx-quickstart/launchpad -type f -name "sling.options.file" -exec rm -rf {} \
+   ```
+   jar xvf aem-quickstart-6.5.0.war
    ```
 
-1. Nu måste du ändra körningslägena i AEM 6.3-filen. För att göra det skapar du först en tillfällig mapp som ska rymma AEM 6.3-kriget. Namnet på mappen i det här exemplet är **temp**. När krigsfilen har kopierats kan du extrahera innehållet genom att köra det inifrån den tillfälliga mappen:
+1. När innehållet har extraherats går du till mappen **WEB-INF** och redigerar filen web.xml och ändrar körningslägena. Om du vill hitta platsen där de anges i XML söker du efter strängen `sling.run.modes`. När du har hittat den ändrar du körningslägena i nästa kodrad, som som standard är inställd på författare:
 
-   ```shell
-   jar xvf aem-quickstart-6.3.0.war
-   ```
-
-1. När innehållet har extraherats går du till mappen **WEB-INF** och redigerar filen `web.xml` och ändrar körningslägena. Om du vill hitta platsen där de anges i XML söker du efter strängen `sling.run.modes`. När du har hittat den ändrar du körningslägena i nästa kodrad, som som standard är inställd på författare:
-
-   ```shell
+   ```bash
    <param-value >author</param-value>
    ```
 
-1. Ändra ovanstående författarvärde och ställ in körningslägena på: author,crx3,crx3tar Det sista kodblocket ska se ut så här:
+1. Ändra ovanstående författarvärde och ställ in körningslägena på: `author,crx3,crx3tar`. Det sista kodblocket ska se ut så här:
 
    ```
    <init-param>
@@ -149,13 +121,8 @@ I alla exemplen i den här proceduren används JBoss som Application Server och 
 
 1. Återskapa behållaren med det ändrade innehållet:
 
-   ```shell
-   jar cvf aem62.war
+   ```bash
+   jar cvf aem65.war
    ```
 
-1. Distribuera slutligen den nya krigsfilen:
-
-   ```shell
-   cp temp/aem62.war jboss-install-folder/standalone/deployments/aem61.war
-   ```
-
+1. Distribuera slutligen den nya krigsfilen i TomCat.
