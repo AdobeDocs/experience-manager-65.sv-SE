@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 873ce073-0055-4e1b-b3c6-ae7967700894
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f64eb57a69f2124523bd6eaed3e2f58a54c1ea8e
+source-git-commit: 97c93a95cd7fe63b306d80fe127388a209b727c7
 workflow-type: tm+mt
-source-wordcount: '4989'
+source-wordcount: '4974'
 ht-degree: 0%
 
 ---
@@ -803,10 +803,7 @@ Visar ett meddelande i QuickStart-fönstret.
 
 Argument:
 
-* p1: Ett `String`-värde som representerar meddelandet som ska visas. Följande bild visar resultatet av att anropa `log` med p1-värdet `this is a log message`.
-
-![launcheruilog](assets/launcheruilog.png)
-
+* p1: Ett `String`-värde som representerar meddelandet som ska visas.
 * Returnerat värde: ingen
 
 **startupFinished**
@@ -821,12 +818,8 @@ Anropar metoden startFinished för serverstartprogrammet. Metoden försöker öp
 Anger slutvärdet för serverns startprocess. Förloppsindikatorn i QuickStart-fönstret representerar värdet för slutförande.
 
 * Argument:
-
    * p1: Ett flyttal som representerar hur mycket av startprocessen som är slutförd, som en bråkdel. Värdet måste vara mellan noll och ett. 0,3 anger till exempel att 30 % är klart.
-
 * Returnerat värde: ingen.
-
-![starcherprogress](assets/launcherprogress.png)
 
 ## Tredjepartstjänster {#third-party-services}
 
