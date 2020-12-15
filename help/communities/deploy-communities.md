@@ -11,10 +11,10 @@ topic-tags: deploying
 discoiquuid: c8d7355f-5a70-40d1-bf22-62fab8002ea0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: b29945dc73e85504cd42102eafb9e2bf6198c9cc
+source-git-commit: 0e1ac02879ff09ab0e78d043450ef7114c868417
 workflow-type: tm+mt
 source-wordcount: '1892'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -222,7 +222,7 @@ Som standard är OSGi-konfigurationen `AEM Communities Publisher Configuration` 
 
 Därför är det nödvändigt att **redigera konfigurationen för alla sekundära publiceringsinstanser** för att avmarkera kryssrutan **`Primary Publisher`**.
 
-![chlimage_1-411](assets/chlimage_1-411.png)
+![primär utgivare](assets/primary-publisher.png)
 
 För alla andra (sekundära) publiceringsinstanser i en publiceringsgrupp:
 
@@ -266,11 +266,11 @@ I följande bilder visas resultatet av att porten ändrats från 4503 till 6103 
 
 #### Standardagent (publicera) {#default-agent-publish}
 
-![chlimage_1-412](assets/chlimage_1-412.png)
+![default-agent-publish](assets/default-agent-publish.png)
 
 #### Omvänd replikeringsagent (återpublicera) {#reverse-replication-agent-publish-reverse}
 
-![chlimage_1-413](assets/chlimage_1-413.png)
+![reverse-replication-agent](assets/reverse-replication-agent.png)
 
 ### Tunneltjänsten på författaren {#tunnel-service-on-author}
 
@@ -293,7 +293,7 @@ Så här aktiverar du tunneltjänsten:
 * Markera rutan **aktivera**
 * Välj **Spara**
 
-   ![chlimage_1-414](assets/chlimage_1-414.png)
+   ![tunnel-service](assets/tunnel-service.png)
 
 ### Replikera krypteringsnyckeln {#replicate-the-crypto-key}
 
@@ -353,7 +353,7 @@ Använda [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md):
 
 * [Uppdatera Granite Crypto-paketet](#refresh-the-granite-crypto-bundle)
 
-   ![chlimage_1-415](assets/chlimage_1-415.png)
+   ![replikera databas](assets/replicare-repository.png)
 
 #### Uppdatera Granite Crypto Bundle {#refresh-the-granite-crypto-bundle}
 
@@ -364,7 +364,7 @@ Använda [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md):
 * Hitta `Adobe Granite Crypto Support`-paketet (com.adobe.granite.crypto)
 * Välj **Uppdatera**
 
-   ![chlimage_1-416](assets/chlimage_1-416.png)
+   ![granitkrypto](assets/granite-crypto.png)
 
 * Efter en stund visas en **dialogruta** Slutfört:
    `Operation completed successfully.`
