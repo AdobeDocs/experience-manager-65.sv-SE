@@ -2,9 +2,9 @@
 title: Kända fel
 description: Versionsinformation om kända fel i Adobe Experience Manager 6.5
 translation-type: tm+mt
-source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
+source-git-commit: f72101dadaa8d5d12f2f9a636548b18386b79b0a
 workflow-type: tm+mt
-source-wordcount: '571'
+source-wordcount: '593'
 ht-degree: 0%
 
 ---
@@ -80,3 +80,4 @@ org.osgi.framework.bootdelegation=sun.*,com.sun.*,jdk.internal.reflect,jdk.inter
    Egenskapen gör att klientbiblioteken under körningsmappen kan komma åt proxy. (CQ-4268679)
 
 * När AEM Forms startas visas `SAX Security Manager could not be setup`-varningen.
+* När du öppnar en PDF-fil som är skyddad med AEM Forms Document Security på en Apple iOS eller iPadOS som kör Adobe Acrobat Reader version 20.10.00.
