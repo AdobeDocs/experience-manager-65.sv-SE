@@ -677,7 +677,7 @@ Den AEM konfigurationen placerar databasen och datalagret på samma logiska voly
 Följande tabell visar storleken på datavolymer som används i prestandatesterna för säkerhetskopiering. Det ursprungliga baslinjeinnehållet installeras först, sedan läggs ytterligare kända datamängder till för att öka storleken på det säkerhetskopierade innehållet. Säkerhetskopior skapas i specifika steg för att representera en stor ökning av innehållet och vad som kan produceras under en dag. Distributionen av innehåll (sidor, bilder, taggar) kommer att vara ungefär baserad på realistisk komposition av produktionsresurser. Sidor, bilder och taggar begränsas till högst 800 underordnade sidor. Varje sida ska innehålla komponenterna title, Flash, text/image, video, bildspel, form, table, cloud och carousel. Bilderna överförs från en pool med 400 unika filer som är mellan 37 kB och 594 kB.
 
 |Innehåll|Noder|Sidor|Bilder|Taggar|
-|—|—|—|—|—|—|
+|---|---|---|---|---|
 |Grundinstallation|69 610|562|256|237|
 |Liten information för stegvis säkerhetskopiering||+100|+2|+2|
 |Stort innehåll för fullständig säkerhetskopiering||+10 000|+100|+100|
