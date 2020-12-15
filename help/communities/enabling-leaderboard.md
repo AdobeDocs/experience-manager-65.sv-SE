@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 9045ce2e-a06d-4da5-9b83-56dd823007bb
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 6720d5a0fdf1facc0b10011ec306dffbb31f4ac5
+source-git-commit: a8b1ad0fcd2ca9c7fe3117dd8bd161da82d13e8a
 workflow-type: tm+mt
 source-wordcount: '408'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -44,15 +44,15 @@ Mer information finns på [Grunderna för communitykomponenter](/help/communitie
 
 När komponenten placeras på en sida i en community-webbplats är det så här den visas:
 
-![chlimage_1-8](assets/chlimage_1-8.png)
+![rankningslista](assets/leaderboard.png)
 
 ### Konfigurerar huvudpanelen {#configuring-leaderboard}
 
 Markera den monterade `Leaderboard`-komponenten som ska öppnas och välj ikonen `Configure` som öppnar redigeringsdialogrutan.
 
-![chlimage_1-9](assets/chlimage_1-9.png)
+![configure-new](assets/configure-new.png)
 
-![chlimage_1-10](assets/chlimage_1-10.png)
+![configure-leaderboard](assets/configure-leaderboard.png)
 
 #### Fliken Inställningar {#settings-tab}
 
@@ -120,7 +120,7 @@ Konfiguration av huvudpanelskomponent:
    * Badningsregel = `/libs/settings/community/badging/rules//reference-badging`
    * Visningsgräns = `10`
 
-![chlimage_1-11](assets/chlimage_1-11.png)
+![deltagare-rankningslista](assets/participants-leaderboard.png)
 
 ### Exempel: Expertledare {#example-experts-leaderboard}
 
@@ -143,7 +143,7 @@ Konfiguration av huvudpanelskomponent:
    * Badningsregel = `/libs/settings/community/badging/rules/adv-forums-badging`
    * Visningsgräns = `10`
 
-![chlimage_1-12](assets/chlimage_1-12.png)
+![expertråd](assets/experts-leaderboard.png)
 
 ### Ytterligare information {#additional-information}
 
