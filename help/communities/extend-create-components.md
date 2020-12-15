@@ -10,10 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 83c4f18a-d7d6-4090-88c7-41a9075153b5
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: 418e7fad2d990f1a7cb3b69ab4c290ca1b7075ba
 workflow-type: tm+mt
 source-wordcount: '590'
-ht-degree: 5%
+ht-degree: 4%
 
 ---
 
@@ -72,7 +72,7 @@ Borttagningen av den automatiskt skapade JSP-filen beror på att HBS-standardfil
 1. Välj **[!UICONTROL Delete]**
 1. Välj **[!UICONTROL Save All]**
 
-![chlimage_1-70](assets/chlimage_1-70.png)
+![create-component](assets/create-component.png)
 
 ### Skapa den underordnade kommentarskomponenten {#create-the-child-comment-component}
 
@@ -83,7 +83,7 @@ Borttagningen av den automatiskt skapade JSP-filen beror på att HBS-standardfil
 1. Navigera till noden `/apps/custom/components/comments`
 1. Högerklicka på noden
 
-   * Välj **[!UICONTROL Create] > **[!UICONTROL Component...]**
+   * Välj **[!UICONTROL Create]** > **[!UICONTROL Component...]**
 
       * **Etikett**:  *kommentar*
       * **Titel**:  *Alt-kommentar*
@@ -102,9 +102,9 @@ Borttagningen av den automatiskt skapade JSP-filen beror på att HBS-standardfil
 1. Välj **[!UICONTROL Delete]**
 1. Välj **[!UICONTROL Save All]**
 
-![chlimage_1-71](assets/chlimage_1-71.png)
+![create-child-component](assets/create-child-component.png)
 
-![chlimage_1-72](assets/chlimage_1-72.png)
+![create-component-crxde](assets/create-component-crxde.png)
 
 ### Kopiera och ändra standardskript för HBS {#copy-and-modify-the-default-hbs-scripts}
 
@@ -168,7 +168,7 @@ Använda [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md)
 * Ange &#39;custom commentsystem.js&#39; som innehåll i `js.txt`
 * Välj **[!UICONTROL Save All]**
 
-![chlimage_1-73](assets/chlimage_1-73.png)
+![comments-clientlibs](assets/comments-clientlibs.png)
 
 ## Registrera SCF-modellen och visa {#register-the-scf-model-view}
 
@@ -200,7 +200,7 @@ Ange följande text som innehåll i `customcommentsystem.js`:
 
 För att den utökade komponenten ska fungera i publiceringsmiljön måste den anpassade komponenten replikeras.
 
-Ett sätt att göra detta är att
+Ett sätt är att
 
 * Från global navigering
 
