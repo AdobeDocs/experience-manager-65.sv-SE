@@ -10,10 +10,10 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: ee39435d-80f5-4758-ae01-1ea0d221b00b
 translation-type: tm+mt
-source-git-commit: cbb5a6bac5e9932fd36abf20d4424890080d39bf
+source-git-commit: a8b1ad0fcd2ca9c7fe3117dd8bd161da82d13e8a
 workflow-type: tm+mt
 source-wordcount: '339'
-ht-degree: 2%
+ht-degree: 1%
 
 ---
 
@@ -51,15 +51,15 @@ Mer information finns på [Grunderna för communitykomponenter](basics.md).
 
 När de [nödvändiga klientbiblioteken](essentials-featured.md#essentials-for-client-side) inkluderas visas `Featured Content`-komponenten så här:
 
-![chlimage_1-13](assets/chlimage_1-13.png)
+![funktionsinnehåll](assets/featuredcontent.png)
 
 ## Konfigurerar aktuellt innehåll {#configuring-featured-content}
 
 Markera den monterade `Featured Content`-komponenten som ska öppnas och välj ikonen `Configure` som öppnar redigeringsdialogrutan.
 
-![chlimage_1-14](assets/chlimage_1-14.png)
+![configure-new](assets/configure-new.png)
 
-![chlimage_1-15](assets/chlimage_1-15.png)
+![featuredcontent1](assets/featuredcontent1.png)
 
 ### Fliken Inställningar {#settings-tab}
 
@@ -83,13 +83,13 @@ Möjligheten att flagga innehåll som aktuellt innehåll kräver moderatorbehör
 
 När en moderator visar publicerat innehåll har de tillgång till modereringsflaggorna som innehåller den nya flaggan `Feature`.
 
-![chlimage_1-16](assets/chlimage_1-16.png)
+![webbplats-besökare-upplevelse](assets/site-visitor-experience.png)
 
 När modellflaggan har flaggats som en funktion blir den `Unfeature`.
 
 Sidan som innehåller komponenten `Featured Content` kommer nu att innehålla det här inlägget.
 
-![chlimage_1-17](assets/chlimage_1-17.png)
+![site-visitor-experience1](assets/site-visitor-experience1.png)
 
 `Read More` är en länk till själva inlägget.
 
