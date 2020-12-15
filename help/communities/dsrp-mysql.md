@@ -10,10 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: edc3043c-7ec4-4e4a-b008-95f1784f012e
 translation-type: tm+mt
-source-git-commit: 29f150215052d61c1e20d25b0c095ea6582e26f7
+source-git-commit: 6693baecb1345c30385eb04caeb03960925f46c3
 workflow-type: tm+mt
-source-wordcount: '728'
-ht-degree: 1%
+source-wordcount: '732'
+ht-degree: 0%
 
 ---
 
@@ -80,7 +80,7 @@ MySQL Workbench ska laddas ned och installeras enligt instruktionerna för målo
 
 När MySQL Workbench startas första gången visas inga anslutningar, såvida den inte redan används för andra syften:
 
-![chlimage_1-104](assets/chlimage_1-104.png)
+![mysqlconnection](assets/mysqlconnection.png)
 
 ### Nya anslutningsinställningar {#new-connection-settings}
 
@@ -105,13 +105,13 @@ När MySQL Workbench startas första gången visas inga anslutningar, såvida de
 
 #### Ny webbgruppsanslutning {#new-communities-connection}
 
-![chlimage_1-105](assets/chlimage_1-105.png)
+![communityanslutning](assets/community-connection.png)
 
 ## Databasinställningar {#database-setup}
 
 Öppna Communities-anslutningen för att installera databasen.
 
-![chlimage_1-106](assets/chlimage_1-106.png)
+![install-database](assets/install-database.png)
 
 ### Hämta SQL-skriptet {#obtain-the-sql-script}
 
@@ -124,9 +124,9 @@ SQL-skriptet hämtas från AEM:
 1. Välj mappen /libs/social/config/datastore/dsrp/schema
 1. Hämta `init-schema.sql`
 
-   ![chlimage_1-107](assets/chlimage_1-107.png)
+   ![database-schema-crxde](assets/database-schema-crxde.png)
 
-En metod för att hämta schemat är att
+En metod för att hämta schemat är:
 
 * Välj noden `jcr:content` för SQL-filen
 * Observera att värdet för egenskapen `jcr:data` är en visningslänk
@@ -143,10 +143,10 @@ Om databasnamnet ändras i skriptet måste du även ändra det i [JDBC-konfigura
 
 I MySQL Workbench
 
-* I listrutan Arkiv
-* Välj den hämtade `init_schema.sql`
+* Välj alternativet **[!UICONTROL Open SQL Script]** på menyn Arkiv
+* Välj det hämtade `init_schema.sql`-skriptet
 
-![chlimage_1-108](assets/chlimage_1-108.png)
+![select-sql-script](assets/select-sql-script.png)
 
 #### Steg 2: kör SQL-skript {#step-execute-sql-script}
 
@@ -154,13 +154,13 @@ I Workbench-fönstret för filen som öppnas i steg 1 väljer du `lightening (fl
 
 I följande bild är `init_schema.sql`-filen klar att köras:
 
-![chlimage_1-109](assets/chlimage_1-109.png)
+![execute-sql-script](assets/execute-sql-script.png)
 
 #### Uppdatera {#refresh}
 
 När skriptet har körts måste du uppdatera `SCHEMAS`-avsnittet i `Navigator` för att kunna se den nya databasen. Använd uppdateringsikonen till höger om SCHEMAS:
 
-![chlimage_1-110](assets/chlimage_1-110.png)
+![uppdateringsschema](assets/refresh-schema.png)
 
 ## Konfigurera JDBC-anslutning {#configure-jdbc-connection}
 
@@ -179,7 +179,7 @@ När MySQL körs på en annan server än AEM måste servervärdnamnet anges i st
 * Leta reda på `Day Commons JDBC Connections Pool`
 * Välj ikonen `+` för att skapa en ny anslutningskonfiguration.
 
-   ![chlimage_1-111](assets/chlimage_1-111.png)
+   ![configure-jdbc-connection](assets/configure-jdbc-connection.png)
 
 * Ange följande värden:
 
