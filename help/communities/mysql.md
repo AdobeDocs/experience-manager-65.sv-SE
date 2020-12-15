@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 9222bc93-c231-4ac8-aa28-30d784a4ca3b
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: 871c42ee000eb250c1c6159d9a0c752e8ed4d7b8
 workflow-type: tm+mt
 source-wordcount: '1075'
 ht-degree: 1%
@@ -194,7 +194,7 @@ När MySQL körs på en annan server än AEM måste servervärdnamnet anges i st
    * **[!UICONTROL JDBC driver class]**: `com.mysql.jdbc.Driver`
    * **URIJ** för DBC-anslutning:  `jdbc:mysql://localhost:3306/aem63reporting` Ange server i stället för localhost om MySQL-servern inte är samma som &#39;this&#39; AEM server.
    * **[!UICONTROL Username]**: Rotera eller ange det konfigurerade användarnamnet för MySQL-servern, om inte &#39;root&#39;.
-   * **[!UICONTROL Password]**: Rensa det här fältet om inget lösenord har angetts för MySQL, annars anger du det konfigurerade lösenordet för MySQL-användarnamnet.
+   * **[!UICONTROL Password]**: Avmarkera det här fältet om inget lösenord har angetts för MySQL, annars anger du det konfigurerade lösenordet för MySQL-användarnamnet.
    * **[!UICONTROL Datasource name]**: Namn som angetts för  [MySQL-anslutningen](#new-connection-settings), till exempel &#39;enablement&#39;.
 * Välj **[!UICONTROL Save]**.
 
@@ -217,7 +217,7 @@ När MySQL körs på en annan server än AEM måste servervärdnamnet anges i st
 * Leta reda på `AEM Communities ScormEngine Service`
 * Markera redigeringsikonen
 
-   ![chlimage_1-337](assets/chlimage_1-337.png)
+   ![skurmotor](assets/scrom-engine.png)
 
 * Kontrollera att följande parametervärden är konsekventa med konfigurationen [JDBC Connection](#configurejdbcconnectionspool):
    * **[!UICONTROL JDBC connection URI]**:  `jdbc:mysql://localhost:3306/ScormEngineDB` ** ScormEngineDBär standarddatabasnamnet i SQL-skripten
