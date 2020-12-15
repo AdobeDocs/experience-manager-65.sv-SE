@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: d936cef5-ad76-482d-97bf-c40137185812
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: 871c42ee000eb250c1c6159d9a0c752e8ed4d7b8
 workflow-type: tm+mt
 source-wordcount: '1226'
 ht-degree: 0%
@@ -49,13 +49,13 @@ Mer information finns på [Grunderna för communitykomponenter](/help/communitie
 
 När de [nödvändiga klientbiblioteken](/help/communities/essentials-forum.md#essentials-for-client-side) inkluderas visas `Forum`-komponenten så här:
 
-![chlimage_1-60](assets/chlimage_1-60.png)
+![forumkomponent](assets/forum-component.png)
 
 ### Konfigurera ett forum {#configuring-a-forum}
 
 Markera den monterade `Forum`-komponenten som ska öppnas och välj ikonen `Configure` som öppnar redigeringsdialogrutan.
 
-![chlimage_1-61](assets/chlimage_1-61.png)
+![configure-new](assets/configure-new.png)
 
 ![forum-config](assets/forum-config.png)
 
