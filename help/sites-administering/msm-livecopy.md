@@ -2,9 +2,9 @@
 title: Skapa och synkronisera Live-kopior
 description: Lär dig hur du skapar och synkroniserar Live-kopior.
 translation-type: tm+mt
-source-git-commit: 4755f33ed27bb876bfb70bab35d411d9b06788b0
+source-git-commit: 7d40fbfb55755d815a11b1872c41dd8e1a0e1ffd
 workflow-type: tm+mt
-source-wordcount: '4115'
+source-wordcount: '4114'
 ht-degree: 1%
 
 ---
@@ -47,7 +47,7 @@ Så här skapar du en ritningskonfiguration:
 1. [Gå ](/help/sites-authoring/basic-handling.md#global-navigation) till  **** Verktyg-menyn och välj sedan  **** Platser-menyn.
 1. Välj **utkast** för att öppna konsolen **Blueprint Configurations**:
 
-   ![chlimage_1-209](assets/chlimage_1-209.png)
+   ![chlimage_1-209](assets/blueprint-configurations.png)
 
 1. Välj **Skapa**.
 1. Välj ritningsmallen och **Nästa** för att fortsätta.
@@ -66,14 +66,12 @@ Du kan redigera eller ta bort en befintlig ritningskonfiguration:
 1. [Gå ](/help/sites-authoring/basic-handling.md#global-navigation) till  **** Verktyg-menyn och välj sedan  **** Platser-menyn.
 1. Välj **utkast** för att öppna konsolen **Blueprint Configurations**:
 
-   ![chlimage_1-210](assets/chlimage_1-210.png)
+   ![chlimage_1-210](assets/blueprint-configurations.png)
 
 1. Välj önskad konfiguration av utkast - lämpliga åtgärder blir tillgängliga i verktygsfältet:
 
    * **Egenskaper**; kan du använda detta för att visa och sedan redigera egenskaperna för konfigurationen.
    * **Ta bort**
-
-   ![chlimage_1-211](assets/chlimage_1-211.png)
 
 ## Skapa en Live-kopia {#creating-a-live-copy}
 
@@ -136,7 +134,7 @@ Om du utelämnar vissa språkgrenar eller kapitel från live-kopian kan du lägg
 
 >[!CAUTION]
 >
->När ritningskällan innehåller länkar och referenser som avser ett stycke i en annan gren, uppdateras inte målen på sidorna för den aktiva kopian, utan de är fortfarande kopplade till det ursprungliga målet.
+>När ritningskällan innehåller länkar och referenser som avser ett stycke i en annan gren, uppdateras inte målen i live-kopieringssidorna, utan de är fortfarande kopplade till det ursprungliga målet.
 
 När du skapar platsen anger du värden för följande egenskaper:
 
@@ -154,7 +152,7 @@ Så här skapar du en live-kopia av en webbplats från en designkonfiguration:
 1. I konsolen **Platser** väljer du **Skapa** och sedan **Plats** i listrutan.
 1. Välj den plantryckskonfiguration som ska användas som källa för live-kopian och fortsätt med **Nästa**:
 
-   ![chlimage_1-216](assets/chlimage_1-216.png)
+   ![chlimage_1-216](assets/blueprint-configuration-select.png)
 
 1. Använd väljaren **Initiala språk** för att ange språket/språken för den webbplats som ska användas för live-kopian.
 
@@ -183,7 +181,7 @@ Egenskaperna för en live-kopia visar följande information om live-kopian:
 
    * Anger om sidan fortfarande omfattas av live-kopiarv.
    * Anger om konfigurationen ärvs från den överordnade sidan.
-   * Alla utrullningskonfigurationer som används för live-kopian.
+   * Alla utrullningskonfigurationer som används av live-kopian.
 
 Så här visar du egenskaperna:
 
