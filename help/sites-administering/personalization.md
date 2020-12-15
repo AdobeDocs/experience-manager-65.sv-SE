@@ -10,15 +10,15 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: 03ebc494-8baa-4741-b8de-dac5ace743c8
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: ffded9c4c08c68db59d05b341166bed92e741e1e
 workflow-type: tm+mt
-source-wordcount: '1684'
+source-wordcount: '1693'
 ht-degree: 0%
 
 ---
 
 
-# Personanpassning{#personalization}
+# Personanpassning {#personalization}
 
 ## Vad är personalisering? {#what-is-personalization}
 
@@ -28,54 +28,54 @@ Personalisering handlar om att ge användaren en skräddarsydd miljö med dynami
 
 Personaliseringen består av tre huvuddelar:
 
-**Användare**
+### Användare {#users}
 
-* har profiler, både enskilda och grupper. Dessa profiler innehåller egenskaper (t.ex. jobbbeskrivning, plats, intressen) som kan användas för att anpassa innehållet som de kan se.
-* vidta åtgärder. Dessa kan sedan analyseras och matchas mot beteenderegler för att skräddarsy det innehåll de ser.
+* Har profiler, både enskilda och grupper. Dessa profiler innehåller egenskaper (t.ex. jobbbeskrivning, plats, intressen) som kan användas för att anpassa innehållet som de kan se.
+* Agera. Dessa kan sedan analyseras och matchas mot beteenderegler för att skräddarsy det innehåll de ser.
 
-**Innehåll**
+### Innehåll {#content}
 
-* är vad användaren vill se. Innehåll av intresse och användning för dem när de utför sina uppgifter.
-* kan kategoriseras och därför göras tillgängliga för användare enligt fördefinierade regler.måste vara dynamiska, med andra ord innehållet
-* måste på något sätt vara beroende av användaren - om alla användare ser samma innehåll blir personaliseringen överflödig.
+* Är det användaren vill se. Innehåll av intresse och användning för dem när de utför sina uppgifter.
+* Kan kategoriseras och därför göras tillgängliga för användare enligt fördefinierade regler.Måste vara dynamiskt. med andra ord innehållet
+* Måste på något sätt vara beroende av användaren - om alla användare ser samma innehåll blir personaliseringen överflödig.
 
-**Regler**
+### Regler {#rules}
 
-* definiera hur personalisering faktiskt sker - vilket innehåll användaren kan se och när.
+* Definiera hur personalisering faktiskt sker - vilket innehåll användaren kan se och när.
 
 Personalisering kan antingen vara:
 
-**Specifik**
+#### Specifik {#explicit}
 
 * Anpassning: där användaren gör val från ett urval av innehållskällor.
 
-**Implicit**
+#### Implicit {#implicit}
 
 * Regelbaserade: Företagsledare definierar specifika regler för åtgärder baserat på specifika profiler och/eller beteenden.
 * Enkel filtrering: val görs utifrån fördefinierade profiler på användar- och/eller gruppnivå.
-* Samverkande/rekommendationsfiltrering: användarbeteendet registreras enligt fördefinierade regler. Dessa regler bygger på beteenden som observeras med likasinnade individer. Den insamlade informationen används för att anpassa den information som visas för användaren, särskilt i form av rekommendationer.
+* Filtrering av samverkan/rekommendation: användarbeteendet registreras enligt fördefinierade regler. Dessa regler bygger på beteenden som observeras med likasinnade individer. Den insamlade informationen används för att anpassa den information som visas för användaren, särskilt i form av rekommendationer.
 
 ## Hur och när kan personalisering användas? {#how-and-when-can-personalization-be-used}
 
 Personalisering kan användas i många fall, till exempel:
 
-**Intranätsidor**
+### Intranätsidor {#intranet-pages}
 
 * Innehåll kan erbjudas baserat på en användares plats, avdelning och/eller roll, som redan definierats i ett internt nätverk.
 * Beroende på vilket alternativ som är tillgängligt kan användaren göra fler val.
 
-**Specifika, begränsade målanvändargrupper (extranät)**
+### Specifik, begränsad, målanvändargrupper - extranät {#extranets}
 
 * Användarna måste logga in för att kunna godkänna. Detta kommer att kopplas till en profil som tillhandahåller den information som krävs för personalisering. möjliga detaljer som plats, relation till produkten, användningshistorik, budgeteringsansvar osv.
 * Sådana instanser kan variera mellan webbplatser som:
 * Företag som tillhandahåller webbplatser till en mycket specialiserad del av sin marknad, t.ex. ett läkemedelsföretag som tillhandahåller en specialiserad webbplats för läkare.
 * Företag som tillhandahåller webbplatser som gör det möjligt för sina kunder att se aktuell konto- och faktureringsinformation. till exempel telefonleverantörer.
 
-**Försäljnings- och distributionswebbplatsen**
+### Försäljnings- och distributionswebbplats {#sales-site}
 
 * Försäljnings- och distributionswebbplatser, som Amazon, kan kombinera en användarprofil, användarens försäljningshistorik och användarens webbhistorik för att ge förslag på vad som kan intressera användaren härnäst.
 
-**Sök på webbplatser**
+### Sök på webbplatser {#search-site}
 
 * Många av de stora sökmotorwebbplatserna har mycket kraftfulla analysverktyg som registrerar användarbeteende, söktermer de använder och de webbplatser de faktiskt besöker. Det används sedan för att anpassa innehållet - särskilt när det gäller att visa annonser.
 
@@ -93,31 +93,35 @@ Följande är skäl till att personalisering bör användas:
 
 Tänk på följande när du använder personalisering:
 
-**Prestanda**
+#### Prestanda {#performance}
 
 * Den extra analysen och utvärderingen påverkar naturligtvis resultatet. De metoder som används är dock mycket avancerade och kan optimeras för att minimera påverkan.
 
-**Behörighet**
+#### Behörighet {#authorization}
 
 * Personalisering kräver en inloggningsfunktion eftersom webbplatsen måste kunna identifiera användaren.
 
-**Cachelagring**
+#### Cachelagra {#caching}
 
 * Cachelagring är en aspekt som användaren kommer att se när det gäller prestanda och precision - hur snabbt levererar webbplatsen personaliserat innehåll, och är det alltid aktuellt.
-* Cachelagring är en viktig faktor när personalisering konfigureras och man måste se till att rätt implementering används. Detta kommer att diskuteras mer ingående senare.
+* Cachelagring är en viktig faktor när personalisering konfigureras och man måste se till att rätt implementering används.
 
-**Regelernas exakthet**
+>[!TIP]
+>
+>Personaliseringens effekt på prestanda och relaterade cachelagringsämnen beskrivs närmare i dokumentet [Prestandaoptimering.](/help/sites-deploying/configuring-performance.md)
+
+#### Regelernas exakthet {#accuracy}
 
 * Personalisering som uppnås genom att spåra användarens beteende, eller genom att ställa in regler som baseras på användarens profil, måste vara korrekt och logiskt.
 * Det finns inget mer frustrerande för användaren än att ha innehåll som tvingats på eller nekats till dem på grund av den felaktiga logiken i en regel.
 * Därför måste regler vara väl genomtänkta - med användarens krav i förgrunden. Detta kan kräva mycket arbete och ska inte underskattas. Att definiera affärsreglerna uppväger ofta den tekniska ansträngningen vid personalisering.
 
-**När ska användas**
+#### Använd {#when-to-use}
 
 * Precis som många andra funktioner på webben bör personalisering användas med försiktighet. Kommer användandet verkligen att gynna användaren? ska alltid vara det första övervägandet - eller om det önskade målet kan uppnås med mindre ansträngning med en annan metod. Personalisering kan innebära en risk att användaren konfigurerar en funktion (för att se hur den fungerar) och bara en gång - eftersom den inte ger några verkliga fördelar.
 * Personalisering är bara meningsfullt när innehållet är dynamiskt - beroende på användaren på något sätt. Om alla användare ser samma innehåll är personaliseringen överflödig.
 
-**Sekretess**
+#### Sekretess {#confidentiality}
 
 * Många användare är oroade över dataskydd och -säkerhet. Särskilt när det gäller data som hämtats när de spåras när de surfar på webben.
 
@@ -156,7 +160,7 @@ Det finns olika komponenter med AEM för personalisering. Vissa tillåter använ
 | Profilvisningsnamn | Namn som ska visas. |
 | Profil-e-post | Ange en e-postadress. |
 | Profilkön | Tillåter indata för kön. |
-| Primärt telefonnummer för profil | Tillåter inmatning av ett telefonnummer. |
+| Profilens primära telefonnummer | Tillåter inmatning av ett telefonnummer. |
 | Primär URL för profil | Tillåter indata för en URL. |
 | Profil, allmän text, egenskap | Profilegenskaper. |
 | Logga in | Gör att du kan skicka ett användarnamn och lösenord när du loggar in. |
@@ -172,7 +176,7 @@ Med tillägget [AEM Communities 6.1](/help/communities/overview.md) löses probl
 
 Utan Communities-tillägg kan olika metoder för att undersöka frågan om enhetlighet i användargenererat innehåll vara:
 
-* synkronisera flera publiceringsinstanser vid behov
-* skicka användargenererat innehåll från publiceringsinstansen till författarmiljön, varifrån det kan publiceras på ett sätt som liknar publicering av sidinnehåll
+* Synkronisera flera publiceringsinstanser vid behov
+* Skicka användargenererat innehåll från publiceringsinstansen till författarmiljön, varifrån det kan publiceras på ett sätt som liknar publicering av sidinnehåll
 
 Den metod som används för att uppnå enhetlighet i användargenererat innehåll i en publiceringsmiljö som består av flera publiceringsinstanser bör utformas noggrant och testas med avseende på prestanda och konsekvens.
