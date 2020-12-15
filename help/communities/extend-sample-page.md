@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: a5040371-3bc2-43bc-a103-7175c4c6252d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 230c700d87d82d248b7d0bbc45c69c5c2b0e3ff8
+source-git-commit: d38395b8f845686492a26329bb732a41f79c85c4
 workflow-type: tm+mt
 source-wordcount: '381'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -33,7 +33,7 @@ Klientbiblioteken som är nödvändiga för att standardkommentarerna ska funger
 
 Observera de tre klientbiblioteken som krävs för att kommentarerna ska kunna återges och fungera korrekt. Dessa måste inkluderas där de utökade kommentarerna refereras och [de utökade kommentarernas klientbibliotek](/help/communities/extend-create-components.md#create-a-client-library-folder) ( `apps.custom.comments`).
 
-![chlimage_1-47](assets/chlimage_1-47.png)
+![comments-component1](assets/comments-component1.png)
 
 ### Lägg till anpassade kommentarer på en sida {#add-custom-comments-to-a-page}
 
@@ -45,17 +45,17 @@ För att kommentaren ska visas och fungera på rätt sätt måste klientbibliote
 
 #### Kommentarsklipp på exempelsidan {#comments-clientlibs-on-sample-page}
 
-![chlimage_1-48](assets/chlimage_1-48.png)
+![comments-clientlibs-crxde](assets/comments-clientlibs-crxde.png)
 
 #### Författare: Alt-kommentar på exempelsida {#author-alt-comment-on-sample-page}
 
-![chlimage_1-49](assets/chlimage_1-49.png)
+![alt-comment](assets/alt-comment.png)
 
 #### Författare: Exempelnod för sidkommentarer {#author-sample-page-comments-node}
 
 Du kan verifiera resourceType i CRXDE genom att visa egenskaperna för kommentarnoden för exempelsidan på `/content/sites/sample/en/jcr:content/content/primary/comments`.
 
-![chlimage_1-50](assets/chlimage_1-50.png)
+![verify-comment-crxde](assets/verify-comment-crxde.png)
 
 #### Publicera exempelsida {#publish-sample-page}
 
@@ -67,8 +67,8 @@ När du har publicerat både det anpassade programmet och exempelsidan kan du sk
 
 Här är aaron.mcdonald@mailinator.com som publicerar en kommentar:
 
-![chlimage_1-51](assets/chlimage_1-51.png)
+![publish-alt-comment](assets/publish-alt-comment.png)
 
-![chlimage_1-52](assets/chlimage_1-52.png)
+![publish-alt-comment1](assets/publish-alt-comment1.png)
 
 Nu när den utökade komponenten ser ut som den ska med standardutseendet är det dags att ändra utseendet.
