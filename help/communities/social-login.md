@@ -10,10 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: c0a71870-8f95-40c8-9ffd-b7af49723288
 translation-type: tm+mt
-source-git-commit: ce64b148ba96cc64670aaf96c1b201bafa282b98
+source-git-commit: 6d0ff6ae47688ba7f0e071bad40808fb3466246f
 workflow-type: tm+mt
 source-wordcount: '2650'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -391,13 +391,13 @@ Till exempel http://localhost:4503/system/console/configMgr
 * Välj att öppna konfigurationen för redigering.
 * Välj **[!UICONTROL Save]**.
 
-![chlimage_1-489](assets/chlimage_1-489.png)
+![graniteoauth](assets/graniteoauth.png)
 
 >[!CAUTION]
 >
 >Förväxla inte autentiseringshanteraren med en Facebook- eller Twitter-instans av *Adobe Granite OAuth-program och provider*.
 
-![chlimage_1-490](assets/chlimage_1-490.png)
+![graniteoauth1](assets/graniteoauth1.png)
 
 ### Adobe Granite OAuth-program och -provider {#adobe-granite-oauth-application-and-provider}
 
@@ -414,7 +414,7 @@ Så här söker du efter den skapade instansen för en Facebook- eller Twitter-a
 
    * Leta reda på instansen där **[!UICONTROL Client ID]** matchar **[!UICONTROL App ID]**.
 
-      ![chlimage_1-491](assets/chlimage_1-491.png)
+      ![graniteoauth2](assets/graniteoauth2.png)
 
       Utom följande egenskaper lämnar du de andra egenskaperna i konfigurationen oförändrade:
 
@@ -493,7 +493,7 @@ Inloggad med administratörsbehörighet för en författarinstans:
 
 * För **name** `oauthid-123` ersätter du *123* med Facebook ***App ID*** eller Twitter ***API-nyckel*** som är värdet för **klient-ID** i [Adobe Granite OAuth-program och provider](social-login.md#adobe-granite-oauth-application-and-provider)-konfiguration.
 
-   ![chlimage_1-492](assets/chlimage_1-492.png)
+   ![graniteoauth-crxde](assets/graniteoauth-crxde.png)
 
 Mer information och verktyg finns i [Frågor och indexering](../../help/sites-deploying/queries-and-indexing.md).
 
