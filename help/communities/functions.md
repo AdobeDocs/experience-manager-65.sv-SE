@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 91833914-b811-4355-a97d-e1a9cb7441f1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3133f712be1380ae98e18e63c9598d760d2e7595
+source-git-commit: cbce81a028195d97dba5f9bd154685393d8be180
 workflow-type: tm+mt
 source-wordcount: '2454'
 ht-degree: 0%
@@ -51,7 +51,7 @@ När en communityfunktion läggs till i en mall för en community-webbplats elle
 
 #### Information om konfigurationsfunktion {#configuration-function-details}
 
-![chlimage_1-380](assets/chlimage_1-380.png)
+![title-url-details](assets/title-url-details.png)
 
 * **Titel**
 
@@ -70,7 +70,7 @@ Därefter är URL:en till sidan https://localhost:4503/content/sites/engage/en/p
 
 och menylänken för sidan visas som:
 
-![chlimage_1-381](assets/chlimage_1-381.png)
+![engagemangssida](assets/engage-page.png)
 
 ### Funktion för aktivitetsström {#activity-stream-function}
 
@@ -80,7 +80,7 @@ När du lägger till en mall öppnas följande dialogruta:
 
 #### Information om konfigurationsfunktion {#configuration-function-details-1}
 
-![chlimage_1-382](assets/chlimage_1-382.png)
+![function-details](assets/function-details.png)
 
 * [Titel- och URL-inställningar](#title-and-url-settings)
 
@@ -110,7 +110,7 @@ Bloggfunktionen är en sida med en [Blog-komponent](/help/communities/blog-featu
 
 När du lägger till en mall öppnas följande dialogruta:
 
-![chlimage_1-383](assets/chlimage_1-383.png)
+![bloggkomponent](assets/blog-component.png)
 
 * [Titel- och URL-inställningar](#title-and-url-settings)
 
@@ -136,7 +136,7 @@ Kalenderfunktionen är en sida med en [kalenderkomponent](/help/communities/cale
 
 När du lägger till en mall öppnas följande dialogruta:
 
-![chlimage_1-384](assets/chlimage_1-384.png)
+![kalenderinformation](assets/calendar-details.png)
 
 * [Titel- och URL-inställningar](#title-and-url-settings)
 
@@ -201,7 +201,7 @@ När du lägger till en mall öppnas följande dialogruta:
 
 #### Information om konfigurationsfunktion {#configuration-function-details-2}
 
-![chlimage_1-384](assets/chlimage_1-384.png)
+![forumkomponent1](assets/forum-component1.png)
 
 * [Titel- och URL-inställningar](#title-and-url-settings)
 
@@ -243,7 +243,7 @@ Från och med Communities [feature pack 1](/help/communities/deploy-communities.
 
 När du lägger till en mall öppnas följande dialogruta:
 
-![chlimage_1-386](assets/chlimage_1-386.png)
+![group-template-config](assets/group-template-config.png)
 
 * [Titel- och URL-inställningar](#title-and-url-settings)
 
@@ -266,7 +266,7 @@ Idéfunktionen är en sida med en [Ideation-komponent](/help/communities/ideatio
 
 När du lägger till en mall öppnas följande dialogruta, som anger standardnamn för titel och URL samt standardvisningsinställningar för mallen:
 
-![chlimage_1-387](assets/chlimage_1-387.png)
+![ideation-function](assets/ideation-function.png)
 
 * [Titel- och URL-inställningar](#title-and-url-settings)
 
