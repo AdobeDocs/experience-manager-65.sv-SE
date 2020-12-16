@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 91833914-b811-4355-a97d-e1a9cb7441f1
 docset: aem65
 translation-type: tm+mt
-source-git-commit: cbce81a028195d97dba5f9bd154685393d8be180
+source-git-commit: 94a5a8d99d052d7bcf01f237dc2b73157a2f11c2
 workflow-type: tm+mt
 source-wordcount: '2454'
 ht-degree: 0%
@@ -294,7 +294,7 @@ Ledpanelsfunktionen är en sida med en [Leaderboard-komponent](/help/communities
 
 När du lägger till en mall öppnas följande dialogruta, som anger standardnamn för titel och URL samt standardvisningsinställningar för mallen:
 
-![chlimage_1-388](assets/chlimage_1-388.png)
+![lederboard-dialog](assets/leaderboard-dialog.png)
 
 * [Titel- och URL-inställningar](#title-and-url-settings)
 
@@ -325,7 +325,7 @@ QnA-funktionen är en sida med en [QnA-komponent](/help/communities/working-with
 
 När konfigurationen läggs till i en mall tillåts begränsningar för behöriga medlemmar:
 
-![chlimage_1-384](assets/chlimage_1-384.png)
+![qna-dialog](assets/qna-dialog.png)
 
 * [Titel- och URL-inställningar](#title-and-url-settings)
 
@@ -353,11 +353,11 @@ När konfigurationen läggs till i en mall tillåts begränsningar för behörig
 
 Du kan skapa en communityfunktion genom att välja ikonen `Create Community Function` längst upp i användarfunktionskonsolen. Flera funktioner som är baserade på samma AEM kan skapas och sedan anpassas unikt genom att du öppnar i redigeringsläget.
 
-![chlimage_1-390](assets/chlimage_1-390.png)
+![create-community-function](assets/create-community-function.png)
 
 ### Community-funktionsnamn {#community-function-name}
 
-![chlimage_1-391](assets/chlimage_1-391.png)
+![function-name](assets/function-name.png)
 
 På panelen Community Function Name konfigureras ett namn, en beskrivning och om funktionen är aktiverad eller inaktiverad:
 
@@ -375,7 +375,7 @@ På panelen Community Function Name konfigureras ett namn, en beskrivning och om
 
 ### AEM blå {#aem-blueprint}
 
-![chlimage_1-392](assets/chlimage_1-392.png)
+![aem-blueprint](assets/aem-blueprint.png)
 
 På panelen `AEM Blueprint` är det möjligt att välja den plan som är den underliggande implementeringen av communityfunktionen.
 
@@ -387,13 +387,13 @@ Se även [Multi Site Manager](/help/sites-administering/msm.md).
 
 ### Miniatyrbild {#thumbnail}
 
-![chlimage_1-393](assets/chlimage_1-393.png)
+![miniatyrbild](assets/funtion-thumbnail.png)
 
 På miniatyrpanelen kan en bild överföras för visning i [Community Function-konsolen](#community-functions-console).
 
 ## Öppna communityfunktion {#open-community-function}
 
-![chlimage_1-394](assets/chlimage_1-394.png)
+![open-function](assets/open-function.png)
 
 Välj ikonen `Open Community Function` för att öppna redigeringsläget för författare för redigering av sidinnehållet och ändring av konfigurationen av funktionskomponenterna.
 
@@ -409,6 +409,6 @@ Mer konfigurationsinformation finns på [Webbgruppskomponenter](/help/communitie
 
 ## Redigera communityfunktion {#edit-community-function}
 
-![chlimage_1-395](assets/chlimage_1-395.png)
+![edit-function](assets/edit-function.png)
 
 Välj ikonen `Edit Community Function` om du vill redigera funktionens egenskaper med samma paneler som [när du skapar en community-funktion](#create-community-function), inklusive att aktivera eller inaktivera funktionen.
