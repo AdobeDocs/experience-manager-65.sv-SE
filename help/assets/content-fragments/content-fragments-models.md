@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: 9da10294-2dc8-4e82-8d32-f034e6a5aeeb
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ce64b148ba96cc64670aaf96c1b201bafa282b98
+source-git-commit: 932601c849b3a1ddd196e6570a9cf05710cd3e6a
 workflow-type: tm+mt
-source-wordcount: '745'
+source-wordcount: '753'
 ht-degree: 20%
 
 ---
@@ -37,8 +37,12 @@ Om du vill aktivera innehållsfragmentmodeller måste du:
 
 Om du vill [skapa en ny innehållsfragmentmodell](#creating-a-content-fragment-model) måste du **först aktivera dem med Configuration Manager:**
 
+>[!CAUTION]
+>
+>Delkonfigurationer (en konfiguration som är kapslad i en konfiguration) stöds inte för användning med innehållsfragment.
+
 1. Navigera till **Verktyg**, **Allmänt** och öppna sedan **Konfigurationsläsaren**.
-1. Välj lämplig plats för webbplatsen.
+
 1. Använd **Skapa** för att öppna dialogrutan där du:
 
    1. Ange en **titel**.
@@ -47,6 +51,8 @@ Om du vill [skapa en ny innehållsfragmentmodell](#creating-a-content-fragment-m
    ![cfm-6420-09](assets/cfm-6420-09.png)
 
 1. Välj **Skapa** om du vill spara definitionen.
+
+<!-- 1. Select the location appropriate to your website. -->
 
 ### Använd konfigurationen i resursmappen {#apply-the-configuration-to-your-assets-folder}
 
