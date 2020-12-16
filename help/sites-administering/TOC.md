@@ -7,9 +7,9 @@ user-guide-title: Användarhandbok för AEM 6.5
 breadcrumb-title: Administratörshandbok
 user-guide-description: Läs om hur du administrerar AEM.
 translation-type: tm+mt
-source-git-commit: 984e50ec1a523ff8a4f618016797c326fd679511
+source-git-commit: 98180b630c991bc65ddfa275e0f8a97be3be6f7e
 workflow-type: tm+mt
-source-wordcount: '630'
+source-wordcount: '629'
 ht-degree: 6%
 
 ---
@@ -54,7 +54,7 @@ ht-degree: 6%
    + [Konfigurera komponenten Video](config-video.md)
    + [Massredigeraren](bulk-editor.md)
    + [Konfigurerar e-postmeddelande](notification.md)
-   + [Kontrollen Extern länk](external-link-checker.md)
+   + [Länkkontrollen](external-link-checker.md)
    + [AEM](troubleshoot.md)
    + [Hantera åtkomst till arbetsflöden](workflows-managing.md)
    + [Starta arbetsflöden](workflows-starting.md)
