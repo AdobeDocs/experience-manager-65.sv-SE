@@ -10,10 +10,10 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 26715b94-e2ea-4da7-a0e2-3e5a367ac1cd
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: 4d21a61ed687caea2b1867d5321f75636f5310a3
 workflow-type: tm+mt
 source-wordcount: '1210'
-ht-degree: 2%
+ht-degree: 1%
 
 ---
 
@@ -90,7 +90,7 @@ Om användarprofilen inte skapades genom självregistrering visas profilsidan de
 
 Nästa gång medlemmen loggar in visas startsidan, som identifieras av det första menyalternativet.
 
-![chlimage_1-434](assets/chlimage_1-434.png)
+![registrerad medlem](assets/enrolled-member.png)
 
 ### Uppdrag {#assignments}
 
@@ -106,11 +106,11 @@ Varje uppdrag innehåller grundläggande information om:
 
 Tilldelningstypen anges med en ikon i kortets övre vänstra hörn. Bilden av en väg är för en inlärningsväg med antalet medföljande aktiveringsresurser.
 
-![chlimage_1-435](assets/chlimage_1-435.png)
+![tilldelning1](assets/assignment1.png)
 
 Om du väljer *Skallektioner* visas de två aktiveringsresurserna som utbildningssökvägen refererar till.
 
-![chlimage_1-436](assets/chlimage_1-436.png)
+![tilldelning2](assets/assignment2.png)
 
 Om du väljer *Ski Lesson 1* öppnas informationssidan för aktiveringsresursen.
 
@@ -118,7 +118,7 @@ På informationssidan kan medlemmen lära sig [betygsätt](rating.md) lektionen 
 
 Interaktion med aktiveringsresursen beskrivs i rapportavsnittet som är tillgängligt i författarmiljön.
 
-![chlimage_1-437](assets/chlimage_1-437.png)
+![tilldelning3](assets/assignment3.png)
 
 ### Ski-katalog {#ski-catalog}
 
@@ -126,7 +126,7 @@ Ski Catalog-sidan är katalogen med aktiveringsresurser som taggats med taggar f
 
 När en medlem inte har tilldelats aktiveringsresurser, antingen direkt eller via en utbildningsväg, är det möjligt att interagera med aktiveringsresurser som finns i en katalog och ge feedback via kommentarer och omdömen.
 
-![chlimage_1-438](assets/chlimage_1-438.png)
+![skidkatalog](assets/ski-catalog.png)
 
 ### Diskussioner {#discussions}
 
@@ -138,7 +138,7 @@ Logga ut och logga in som Sidney Croft (sidney/lösenord) och svara på frågan 
 
 Observera, förutom intern moderering, att det finns alternativ för att dela ämnet i sociala medier eller för att skicka ämnet via e-post.
 
-![chlimage_1-439](assets/chlimage_1-439.png)
+![diskussioner](assets/discussions.png)
 
 ### Nyheter {#what-s-new}
 
@@ -146,7 +146,7 @@ Menyalternativet `What's New` är den rubrik som anges för funktionen [aktivite
 
 Du är fortfarande inloggad som Sidney och väljer länken `What's New` för att visa aktiviteten.
 
-![chlimage_1-440](assets/chlimage_1-440.png)
+![whats-new-menu](assets/whats-new-menu.png)
 
 ## Betrodd community-medlem {#trusted-community-member}
 
@@ -159,7 +159,7 @@ Logga in med
 
 När du har loggat in finns det ett nytt menyalternativ, `Administration`, som visas eftersom medlemmen fick rollen som moderator.
 
-![chlimage_1-441](assets/chlimage_1-441.png)
+![tillförlitlig-medlemshemsida](assets/trusted-member-homepage.png)
 
 Hemsidan identifieras av det första menyalternativet, Uppdrag. Quinn är moderator- och aktiveringsresurskontakt och är inte registrerad i några aktiveringsresurser eller utbildningsvägar, så det finns inget att visa.
 
@@ -171,7 +171,7 @@ Om du väljer ikonen för sidpanelen växlar du de filter som används för att 
 
 När du hovrar över ett kommentarskort visas modereringsåtgärder.
 
-![chlimage_1-442](assets/chlimage_1-442.png)
+![administration](assets/administration.png)
 
 ## Rapporter om författare {#reports-on-author}
 
@@ -213,7 +213,7 @@ Observera att det troligen är för tidigt att visa data från Adobe Analytics, 
 
 #### Resursrapport för SKI-lektioner {#ski-lessons-resource-report}
 
-![chlimage_1-443](assets/chlimage_1-443.png)
+![skidlektionsrapport](assets/ski-lessons-report.png)
 
 #### Användarrapport för SKI-lektioner {#ski-lessons-user-report}
 
@@ -223,7 +223,7 @@ Observera att det troligen är för tidigt att visa data från Adobe Analytics, 
 * Öppningskort `Ski Lessons`
 * Välj `Report > User Report`
 
-![chlimage_1-444](assets/chlimage_1-444.png)
+![skidlektioner-användarrapport](assets/ski-lessons-user-report.png)
 
 ### Rapportkonsol {#reports-console}
 
@@ -245,7 +245,7 @@ För rapporter om tilldelningar:
 
 * Välj **[!UICONTROL Generate]**
 
-![chlimage_1-445](assets/chlimage_1-445.png)
+![rapporttilldelning](assets/report-assignment.png)
 
 För rapporter om vyer:
 
@@ -259,6 +259,6 @@ För rapporter om vyer:
 
 * Välj **[!UICONTROL Generate]**.
 
-![chlimage_1-446](assets/chlimage_1-446.png)
+![rapportvisningar](assets/report-views.png)
 
 **[⇐ Skapa och tilldela aktiveringsresurser](resource.md)**
