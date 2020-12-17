@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: dc0191d0-f181-4e1e-b3f4-73427aa22073
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 81707b4d57f7f15106459b91f95b1bc6ec333bf4
+source-git-commit: 863c3292d272ba4c80a80645262919e55870a437
 workflow-type: tm+mt
-source-wordcount: '3221'
+source-wordcount: '3250'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 1%
 
 [Adobe Scene7](https://help.adobe.com/en_US/scene7/using/WS26AB0D9A-F51C-464e-88C8-580A5A82F810.html)  är en värdbaserad lösning för att hantera, förbättra, publicera och leverera mediefiler för webben, mobiler, e-post och internetanslutna displayer samt tryck.
 
-Du kan visa AEM resurser som publicerats i Scene7 i olika visningsprogram:
+Du kan visa Experience Manager-resurser som publicerats i Scene7 i olika visningsprogram:
 
 * Zoomning
 * Utfällbar
@@ -31,13 +31,13 @@ Du kan visa AEM resurser som publicerats i Scene7 i olika visningsprogram:
 * Bildmall
 * Bild
 
-Du kan publicera digitala resurser direkt från AEM till Scene7 och du kan publicera digitala resurser från Scene7 till AEM.
+Du kan publicera digitala resurser direkt från Experience Manager till Scene7 och du kan publicera digitala resurser från Scene7 till Experience Manager.
 
-I det här dokumentet beskrivs hur du publicerar digitala resurser från AEM till Scene7 och vice versa. Visningsprogrammen beskrivs också i detalj. Information om hur du konfigurerar AEM för Scene7 finns i [Integrera Scene7 med AEM](/help/sites-administering/scene7.md).
+I det här dokumentet beskrivs hur du publicerar digitala resurser från Experience Manager till Scene7 och vice versa. Visningsprogrammen beskrivs också i detalj. Mer information om hur du konfigurerar Experience Manager för Scene7 finns i [Integrera Scene7 med Experience Manager](/help/sites-administering/scene7.md).
 
 Se även [Lägga till bildscheman](/help/assets/image-maps.md).
 
-Mer information om hur du använder videokomponenter med AEM finns i:
+Mer information om hur du använder videokomponenter med Experience Manager finns i:
 
 * [Video](/help/sites-classic-ui-authoring/manage-assets-classic-s7-video.md)
 
@@ -51,14 +51,14 @@ Du kan publicera digitala resurser till Scene7 antingen från Assets-konsolen i 
 
 >[!NOTE]
 >
->AEM publicerar till Scene7 asynkront. När du har klickat på **Publish** kan det ta flera sekunder innan resursen publiceras till Scene7.
+>Experience Manager publicerar till Scene7 asynkront. När du har klickat på **Publish** kan det ta flera sekunder innan resursen publiceras till Scene7.
 
 
 ### Publicera från Resurskonsolen {#publishing-from-the-assets-console}
 
 Så här publicerar du till Scene7 från Resurskonsolen om resurserna finns i en målmapp i Scene7:
 
-1. I det AEM klassiska användargränssnittet klickar du på **Digital Assets** för att öppna den digitala resurshanteraren.
+1. Klicka på **Digital Assets** i det klassiska användargränssnittet i Experience Manager för att komma åt den digitala resurshanteraren.
 
 1. Markera resursen (eller resurserna) eller mappen i målmappen som du vill publicera till Scene7, högerklicka och välj **Publicera till Scene7**. Du kan också välja **Publicera till Scene7** på **Verktyg-menyn**.
 
@@ -80,7 +80,7 @@ Du kan publicera en resurs manuellt så länge som resursen finns inuti den synk
 
 Så här publicerar du till Scene7 direkt från en digital resurs:
 
-1. I AEM klickar du på **Digitala resurser** för att öppna den digitala resurshanteraren.
+1. I Experience Manager klickar du på **Digital Assets** för att öppna den digitala resurshanteraren.
 
 1. Dubbelklicka för att öppna en resurs.
 
@@ -92,7 +92,7 @@ Så här publicerar du till Scene7 direkt från en digital resurs:
 
    >[!NOTE]
    >
-   >Om resursen inte publiceras korrekt på Scene7 ändras länken till **Publiceringen misslyckades**. Om resursen redan har publicerats till Scene7, läses länken **Publicera igen till Scene7**. Med publicering kan du göra ändringar i en resurs i AEM och publicera om dem.
+   >Om resursen inte publiceras korrekt på Scene7 ändras länken till **Publiceringen misslyckades**. Om resursen redan har publicerats till Scene7, läses länken **Publicera igen till Scene7**. Med publicering kan du göra ändringar i en resurs i Experience Manager och publicera om dem.
 
 ### Publicera resurser utanför CQ-målmappen {#publishing-assets-from-outside-the-cq-target-folder}
 
@@ -106,7 +106,7 @@ Det gör du genom att först konfigurera molnkonfigurationen för sidan där res
 
 Så här publicerar du resurser som finns utanför CQ-målmappen:
 
-1. I AEM i det klassiska användargränssnittet klickar du på **Webbplatser** och navigerar till den webbsida där du vill lägga till en digital resurs som ännu inte har publicerats i Scene7. (Normala sidarvsregler gäller.)
+1. I Experience Manager i det klassiska användargränssnittet klickar du på **Webbplatser** och navigerar till den webbsida där du vill lägga till en digital resurs som ännu inte har publicerats i Scene7. (Normala sidarvsregler gäller.)
 
 1. Klicka på ikonen **Sida** i sidsparken och klicka på **Sidegenskaper**.
 
@@ -124,7 +124,7 @@ Så här publicerar du resurser som finns utanför CQ-målmappen:
 
    ![chlimage_1-50](assets/chlimage_1-50.png)
 
-1. Klicka på **Kontrollera Scene7 Publication Status**. Om resurserna inte publiceras publicerar AEM resursen till Scene7. När resursen har överförts finns den i ad hoc-mappen. Som standard finns ad hoc-mappen i **name_of_the_company/CQ5_adhoc**. Du kan [konfigurera detta, om det behövs](#configuringtheadhocfolder).
+1. Klicka på **Kontrollera Scene7 Publication Status**. Om resurserna inte publiceras publicerar Experience Manager resursen till Scene7. När resursen har överförts finns den i ad hoc-mappen. Som standard finns ad hoc-mappen i **name_of_the_company/CQ5_adhoc**. Du kan [konfigurera detta, om det behövs](#configuringtheadhocfolder).
 
    >[!NOTE]
    >
@@ -132,7 +132,7 @@ Så här publicerar du resurser som finns utanför CQ-målmappen:
 
 ## Scene7 Components {#scene-components}
 
-Följande Scene7-komponenter finns i AEM:
+Följande Scene7-komponenter finns i Experience Manager:
 
 * Zoomning
 * Utfällbar (zoom)
@@ -144,7 +144,7 @@ Följande Scene7-komponenter finns i AEM:
 >
 >De här komponenterna är inte tillgängliga som standard och måste markeras i designläge innan du använder.
 
-När de har gjorts tillgängliga i designläge kan du lägga till komponenterna på sidan precis som andra AEM. Resurser som ännu inte har publicerats till Scene7 publiceras till Scene7 om de ligger i en synkroniserad mapp, på en sida eller med en Scene7 molnkonfiguration.
+När de har gjorts tillgängliga i designläge kan du lägga till komponenterna på sidan precis som andra Experience Manager-komponenter. Resurser som ännu inte har publicerats till Scene7 publiceras till Scene7 om de ligger i en synkroniserad mapp, på en sida eller med en Scene7 molnkonfiguration.
 
 >[!NOTE]
 >
@@ -162,7 +162,7 @@ Att lägga till en Scene7-komponent på en sida är detsamma som att lägga till
 
 Så här lägger du till en Scene7-komponent/ett visningsprogram på en sida i det klassiska användargränssnittet:
 
-1. Öppna AEM sidan där du vill lägga till Scene7-komponenten.
+1. Öppna den sida i Experience Manager där du vill lägga till Scene7-komponenten.
 
 1. Om det inte finns några Scene7-komponenter tillgängliga klickar du på linjalen i sidosparken för att gå in i **designläget**, på **Redigera**-parsysen och markerar alla **Scene7**-komponenter för att göra dem tillgängliga.
 
@@ -180,7 +180,7 @@ Responsiv design för dina resurser innebär att dina resurser anpassas beroende
 
 Så här lägger du till en interaktiv visningsupplevelse på en responsiv webbplats i det klassiska användargränssnittet:
 
-1. Logga in på AEM och kontrollera att du har [konfigurerade Adobe Scene7-Cloud Services](/help/sites-administering/scene7.md#configuring-scene-integration) och att Scene7-komponenterna är tillgängliga.
+1. Logga in på Experience Manager och kontrollera att du har [konfigurerade Adobe Scene7-Cloud Services](/help/sites-administering/scene7.md#configuring-scene-integration) och att Scene7-komponenterna är tillgängliga.
 
    >[!NOTE]
    >
@@ -227,7 +227,7 @@ I den utfällbara HTML5-komponenten visas resursen som en delad skärm. lämnade
 
 ### Bild {#image}
 
-Med Scene7 Image-komponenten kan du lägga till Scene7-funktioner i dina bilder, t.ex. Scene7-modifierare, bild- eller visningsförinställningar samt skärpa. Scene7 bildkomponent liknar andra bildkomponenter i AEM med speciella Scene7-funktioner. I det här exemplet används Scene7 URL-modifieraren **&amp;op_invert=1**.
+Med Scene7 Image-komponenten kan du lägga till Scene7-funktioner i dina bilder, t.ex. Scene7-modifierare, bild- eller visningsförinställningar samt skärpa. Scene7-bildkomponenten liknar andra bildkomponenter i Experience Manager med speciella Scene7-funktioner. I det här exemplet används Scene7 URL-modifieraren **&amp;op_invert=1**.
 
 ![](do-not-localize/chlimage_1-4.png)
 
@@ -253,7 +253,7 @@ Med Scene7 Image-komponenten kan du lägga till Scene7-funktioner i dina bilder,
 
 ### Bildmall {#image-template}
 
-[Scene7 Image-](https://help.adobe.com/en_US/scene7/using/WS60B68844-9054-4099-BF69-3DC998A04D3C.html) mallar är Photoshop-innehåll i lager som importerats till Scene7, där innehåll och egenskaper parametriserats för variabilitet. Med komponenten **Bildmallen** kan du importera bilder och ändra texten dynamiskt i AEM. Dessutom kan du konfigurera **Image-mallen**-komponenten så att värden från klientkontexten används, så att varje användare upplever bilden på ett personligt sätt.
+[Scene7 Image-](https://help.adobe.com/en_US/scene7/using/WS60B68844-9054-4099-BF69-3DC998A04D3C.html) mallar är Photoshop-innehåll i lager som importerats till Scene7, där innehåll och egenskaper parametriserats för variabilitet. Med komponenten **Bildmallen** kan du importera bilder och ändra texten dynamiskt i Experience Manager. Dessutom kan du konfigurera **Image-mallen**-komponenten så att värden från klientkontexten används, så att varje användare upplever bilden på ett personligt sätt.
 
 Klicka på **Redigera** för att konfigurera komponenten. Du kan konfigurera [inställningar som är gemensamma för alla Scene7-komponenter](/help/sites-administering/scene7.md#settingscommontoallscene7components) samt andra inställningar som beskrivs i det här avsnittet.
 
@@ -327,15 +327,15 @@ När du använder en adaptiv videouppsättning med videokomponenten i Scene7 må
 
 ## Scene7 Content Browser {#scene-content-browser}
 
-Med Scene7 innehållsläsare kan du visa innehåll från Scene7 direkt i AEM. Om du vill komma åt innehållsläsaren väljer du **Scene7** i det pekoptimerade användargränssnittet eller **S7**-ikonen i det klassiska användargränssnittet. Funktionen är identisk mellan båda användargränssnitten.
+Med Scene7 innehållsläsare kan du visa innehåll från Scene7 direkt i Experience Manager. Om du vill komma åt innehållsläsaren väljer du **Scene7** i det pekoptimerade användargränssnittet eller **S7**-ikonen i det klassiska användargränssnittet. Funktionen är identisk mellan båda användargränssnitten.
 
-Om du har flera konfigurationer visar AEM som standard [standardkonfigurationen](/help/sites-administering/scene7.md#configuring-a-default-configuration). Du kan välja olika konfigurationer direkt i Scene7 innehållsläsare i listrutan.
+Om du har flera konfigurationer visar Experience Manager som standard [standardkonfigurationen](/help/sites-administering/scene7.md#configuring-a-default-configuration). Du kan välja olika konfigurationer direkt i Scene7 innehållsläsare i listrutan.
 
 >[!NOTE]
 >
 >* Resurser som finns i ad hoc-mappen visas inte i Scene7 innehållsläsare.
 >* När [Säker förhandsvisning är aktiverat](/help/sites-administering/scene7.md#configuring-the-state-published-unpublished-of-assets-pushed-to-scene) visas både publicerade och opublicerade resurser på Scene7 i Scene7 innehållsläsare.
->* Om du inte ser **Scene7**- eller **S7**-ikonen som ett alternativ i webbläsaren måste du [konfigurera Scene7 så att det fungerar med AEM](/help/sites-administering/scene7.md).
+>* Om du inte ser **Scene7** eller **S7**-ikonen som ett alternativ i webbläsaren måste du [konfigurera Scene7 så att det fungerar med Experience Manager](/help/sites-administering/scene7.md).
 >* För video har Scene7 Content Browser stöd för:
    >   * Adaptiva videouppsättningar: behållare för alla videoåtergivningar som behövs för sömlös uppspelning på flera skärmar
    >   * Enkel MP4-video
@@ -368,7 +368,7 @@ Som standard visas resurser efter filnamn. Du kan också filtrera resultat efter
 
 ### Söka efter Scene7-resurser med innehållsläsaren {#searching-for-scene-assets-with-the-content-browser}
 
-Att söka efter Scene7-resurser liknar att söka efter AEM resurser, förutom att när du söker igenom en fjärrvy av resurserna i Scene7-systemet, i stället för att importera dem direkt till AEM.
+Att söka efter Scene7-resurser liknar att söka efter Experience Manager-resurser, förutom att när du söker ser du en fjärrvy över resurserna i Scene7-systemet i stället för att importera dem direkt till Experience Manager.
 
 Du kan använda det klassiska användargränssnittet eller det pekoptimerade användargränssnittet för att både visa och söka efter resurser. Beroende på gränssnittet är sökningen något annorlunda.
 
@@ -380,9 +380,9 @@ När du söker i något av användargränssnitten kan du filtrera efter följand
 
 **Mapp/** sökväg Namnet på mappen som visas baseras på den konfiguration du har valt. Du kan gå ned till lägre nivåer genom att klicka på mappikonen och välja en undermapp. Markera sedan kryssrutan för att markera den.
 
-Om du anger ett nyckelord och väljer en mapp söker AEM igenom den mappen och eventuella undermappar. Om du inte anger några nyckelord när du söker efter, kommer endast resurserna i den mappen att visas om du väljer mappen. Inga undermappar kommer att visas.
+Om du anger ett nyckelord och väljer en mapp söker Experience Manager igenom den mappen och eventuella undermappar. Om du inte anger några nyckelord när du söker efter, kommer endast resurserna i den mappen att visas om du väljer mappen. Inga undermappar kommer att visas.
 
-Som standard söker AEM i den markerade mappen och i alla undermappar.
+Som standard söker Experience Manager i den markerade mappen och i alla undermappar.
 
 ![chlimage_1-66](assets/chlimage_1-66.png)
 
@@ -394,7 +394,7 @@ Som standard söker AEM i den markerade mappen och i alla undermappar.
 
 ![chlimage_1-68](assets/chlimage_1-68.png)
 
-**ResurstypI** webbläsaren Scene7 kan du filtrera resultaten så att de innehåller något av följande: bilder, mallar, videor och anpassningsbara videouppsättningar. Om du inte väljer någon resurstyp söker AEM som standard igenom alla resurstyper.
+**ResurstypI** webbläsaren Scene7 kan du filtrera resultaten så att de innehåller något av följande: bilder, mallar, videor och anpassningsbara videouppsättningar. Om du inte väljer någon resurstyp söker Experience Manager som standard igenom alla resurstyper.
 
 ![chlimage_1-69](assets/chlimage_1-69.png)
 
@@ -404,10 +404,10 @@ Som standard söker AEM i den markerade mappen och i alla undermappar.
    >
    >
 * När du söker efter video söker du efter en enskild återgivning. Resultatet returnerar den ursprungliga återgivningen (endast *.mp4) och den kodade återgivningen.
-* När du söker i en adaptiv videouppsättning söker du i mappen och i alla undermappar, men bara om du har lagt till ett nyckelord i sökningen. Om du inte har lagt till något nyckelord söker AEM inte igenom undermapparna.
+* När du söker i en adaptiv videouppsättning söker du i mappen och i alla undermappar, men bara om du har lagt till ett nyckelord i sökningen. Om du inte har lagt till något nyckelord söker Experience Manager inte igenom undermapparna.
 
 
 
-**Publiceringsstatus** Du kan filtrera efter resurser baserat på publiceringsstatus: Opublicerad eller publicerad. Om du inte väljer någon publiceringsstatus söker AEM som standard igenom alla publiceringsstatusar.
+**Publiceringsstatus** Du kan filtrera efter resurser baserat på publiceringsstatus: Opublicerad eller publicerad. Om du inte väljer någon publiceringsstatus söker Experience Manager som standard igenom alla publiceringsstatusar.
 
 ![chlimage_1-70](assets/chlimage_1-70.png)
