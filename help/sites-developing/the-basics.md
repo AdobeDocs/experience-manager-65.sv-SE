@@ -10,9 +10,9 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 6e913190-be92-4862-a8b9-517f8bde0044
 translation-type: tm+mt
-source-git-commit: d621a612556f0bea032444c2e07be101868b1905
+source-git-commit: 28fdb57f51a5bd97ce78b626db86f4a59de6f0be
 workflow-type: tm+mt
-source-wordcount: '3371'
+source-wordcount: '3386'
 ht-degree: 0%
 
 ---
@@ -162,10 +162,11 @@ Några andra punkter att notera är:
 * när metoden (GET, POST) krävs, anges den med versaler enligt HTTP-specifikationen, t.ex. job.POST.esp (se nedan)
 * olika skriptmotorer stöds:
 
-   * `.esp, .ecma`: ECMAScript-sidor (JavaScript) (körning på serversidan)
-   * `.jsp`: Java Server Pages (körning på serversidan)
-   * `.java`: Java Servlet Compiler (körning på serversidan)
-   * `.jst`: JavaScript-mallar (körning på klientsidan)
+   * HTML (HTML-mallspråk - Adobe Experience Manager rekommenderade och rekommenderade serversidesmallsystem för HTML): `.html`
+   * ECMAScript-sidor (JavaScript) (körning på serversidan): `.esp, .ecma`
+   * Java Server Pages (körning på serversidan): `.jsp`
+   * Java Servlet Compiler (körning på serversidan): `.java`
+   * JavaScript-mallar (körning på klientsidan): `.jst`
 
 Listan över skriptmotorer som stöds av den angivna AEM finns på Felix Management Console ( `http://<host>:<port>/system/console/slingscripting`).
 
