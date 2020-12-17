@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: f3b4ec1d-9054-47d4-afcb-0a0121b94190
 docset: aem65
 translation-type: tm+mt
-source-git-commit: c863e438df45fd54c29c1b99114eea07aaeb6162
+source-git-commit: 303841896717448947aa48ece7ae86519a5450d5
 workflow-type: tm+mt
-source-wordcount: '486'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -63,7 +63,7 @@ Kompatibilitetsläget är avsett för kunder som har anpassat gränssnitt som in
 
 ## Konfigurera {#how-to-set-up}
 
-Kompatibilitetspaketet AEM 6.3 kan installeras som ett paket med hjälp av pakethanteraren på den här [länken](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/compatpack/aem-compat-cq64-to-cq63).
+Kompatibilitetspaketet AEM 6.3 kan installeras som ett paket med hjälp av pakethanteraren. Du kan hämta [AEM 6.3-kompatibilitetspaketet från platsen Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/compatpack/aem-compat-cq64-to-cq63).
 
 När Kompatibilitetspaketet har installerats kan routningen aktiveras eller inaktiveras med en växel i OSGI-konfigurationen enligt nedan:
 
