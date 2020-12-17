@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: b9333558-6af9-46b2-9f03-3722645c69a6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: e9d5a7acad04d841cbc7d62050163f3de998fab6
 workflow-type: tm+mt
 source-wordcount: '1724'
 ht-degree: 1%
@@ -70,9 +70,9 @@ Välj det format som du vill använda på mallen. När du väljer det här alter
 
 (Valfritt) Ladda upp en banderollbild som ska visas på webbplatsens sidor. Banderollen är fäst vid webbläsarens vänstra kant, mellan communitywebbplatsens sidhuvud och meny (navigeringslänkar). Banderollhöjden beskärs till 120 pixlar. Banderollens storlek ändras inte så att den passar webbläsarens bredd och höjden 120 pixlar.
 
-![chlimage_1-449](assets/chlimage_1-449.png)
+![webbplatsmärkning1](assets/site-branding1.png)
 
-![chlimage_1](assets/chlimage_1.jpeg)
+![webbplatsmärkning2](assets/site-branding2.png)
 
 Välj **Nästa**.
 
@@ -130,7 +130,7 @@ Till exempel,
 
 Acceptera de globala standardinställningarna för [moderering](/help/communities/sites-console.md#moderation) användargenererat innehåll (UGC).
 
-![chlimage_1-452](assets/chlimage_1-452.png)
+![moderation1](assets/moderation1.png)
 
 #### ANALYTIK {#analytics}
 
@@ -138,7 +138,7 @@ I listrutan väljer du Analytics-molntjänstramverket som är konfigurerat för 
 
 Markeringen som visas på skärmbilden `Communities` är ett ramverksexempel från [konfigurationsdokumentationen.](/help/communities/analytics.md#aem-analytics-framework-configuration)
 
-![chlimage_1-454](assets/chlimage_1-454.png)
+![analys](assets/analytics.png)
 
 #### TRANSLATION {#translation}
 
@@ -147,7 +147,7 @@ Markeringen som visas på skärmbilden `Communities` är ett ramverksexempel fr�
 * Kontrollera **Tillåt maskinöversättning**
 * Använd standardinställningarna
 
-![chlimage_1-456](assets/chlimage_1-456.png)
+![översättning](assets/translation.png)
 
 #### AKTIVERA {#enablement}
 
@@ -163,7 +163,7 @@ För en aktiveringscommunity måste du identifiera en eller flera aktiveringsans
 * **Marketing Cloud Org ID**
  (valfritt) ID:t för ett Adobe Analytics-konto som krävs när  [Video Heartbeat ](/help/communities/analytics.md#video-heartbeat-analytics) Analytics inkluderas i aktiveringsrapporten.
 
-![chlimage_1-457](assets/chlimage_1-457.png)
+![aktivering](assets/enablement.png)
 
 Välj **Nästa**.
 
@@ -171,7 +171,7 @@ Välj **Nästa**.
 
 Välj **Skapa.**
 
-![chlimage_1-458](assets/chlimage_1-458.png)
+![förhandsgranska](assets/preview.png)
 
 När processen är klar visas mappen för den nya platsen i konsolen Communities > Sites.
 
@@ -218,11 +218,11 @@ Observera att UGC inte ingår i platspaketet.
 
 Välj världsikonen för att publicera communitywebbplatsen.
 
-![chlimage_1-465](assets/chlimage_1-465.png)
+![publicera-webbplats](assets/publish-site.png)
 
 Det kommer att finnas en indikation på att webbplatsen har publicerats.
 
-![chlimage_1-466](assets/chlimage_1-466.png)
+![webbpublicerad](assets/site-published.png)
 
 ## Community-användare och användargrupper {#community-users-user-groups}
 
@@ -251,7 +251,7 @@ I det här exemplet läggs gruppen `Community Ski Class` till som medlem i grupp
 
 * Välj **Spara**
 
-![chlimage_1-418](assets/chlimage_1-418.png)
+![edit-group-settings](assets/edit-group-settings.png)
 
 ## Konfigurationer vid publicering {#configurations-on-publish}
 
@@ -317,13 +317,13 @@ Så här kommer du igång:
 >
 >Om du vill inaktivera kan du förpend egenskapsvärdet `sling:match` med x - `xlocalhost.4503/$` - och **Spara alla**.
 
-![chlimage_1-364](assets/chlimage_1-364.png)
+![change-default-hompage](assets/change-default-homepage.png)
 
 #### Felsökning: Det gick inte att spara kartan {#troubleshooting-error-saving-map}
 
 Om det inte går att spara ändringarna måste du kontrollera att nodnamnet är `localhost.4503`, har en punktavgränsare och inte `localhost:4503` med en kolonavgränsare, eftersom `localhost` inte är ett giltigt namnområdesprefix.
 
-![chlimage_1-365](assets/chlimage_1-365.png)
+![error-map](assets/error-map.png)
 
 #### Felsökning: Det gick inte att omdirigera {#troubleshooting-fail-to-redirect}
 
@@ -361,11 +361,11 @@ Välj STRUKTURpanelen om du vill lägga till en katalog eller ändra en befintli
 
 * Välj **Spara**.
 
-![chlimage_1-299](assets/chlimage_1-299.png)
+![modify-site-structure](assets/modify-site-structure.png)
 
 Använd placeringsikonen för att flytta katalogfunktionen till den andra positionen, efter tilldelningar.
 
-![chlimage_1-300](assets/chlimage_1-300.png)
+![move-catalog-func](assets/move-catalog-func.png)
 
 Välj **Spara** i det övre högra hörnet för att spara ändringarna på communitywebbplatsen.
 
