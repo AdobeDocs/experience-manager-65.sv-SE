@@ -8,9 +8,9 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
 translation-type: tm+mt
-source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
+source-git-commit: ae3e6b1c2d3dfa63b9ea5763ebedaa57f5c7bc85
 workflow-type: tm+mt
-source-wordcount: '2675'
+source-wordcount: '2674'
 ht-degree: 6%
 
 ---
@@ -22,7 +22,7 @@ När du överför bilder kan du beskära bilden automatiskt vid överföring gen
 
 >[!NOTE]
 >
->Smart Crop är bara tillgängligt i läget Dynamic Media - Scene7.
+>Smart Crop är bara tillgängligt i Dynamic Media - Scene7-läge.
 
 >[!IMPORTANT]
 >
@@ -65,7 +65,7 @@ Du kan välja mellan två bildbeskärningsalternativ. Du kan också automatisera
   <tr>
    <td>Färg och bildfärgruta</td>
    <td>Generera en färgruta för varje bild gruppvis.</td>
-   <td><p><strong>Obs</strong>: Smarta färgrutor stöds inte i Dynamic Media Classic.</p> <p>Hitta och generera högkvalitativa färgrutor automatiskt från produktbilder som visar färg eller textur.</p> <p>Om du vill använda färg- och bildfärgruta väljer du <strong>Smart beskärning</strong> i listrutan Beskärningsalternativ. Aktivera sedan funktionen till höger om Färg och Bildfärgruta. Ange ett pixelvärde i textrutorna Bredd och Höjd.</p> <p>Alla bildbeskärningar är tillgängliga från renderingslisten, men färgrutor används bara via funktionen Kopiera URL. Observera att du måste använda en egen visningskomponent för att återge färgrutan på webbplatsen. (Undantaget är Carousel banners. Dynamic Media är visningskomponenten för den färgruta som används i karusellbanderoller.)</p> <p><strong>Använda färgrutor</strong></p> <p>URL:en för färgrutor är okomplicerad. Det vill säga:</p> <p><code>/is/image/company/&lt;asset_name&gt;:Swatch</code></p> <p>där <code>:Swatch</code> läggs till i resursbegäran.</p> <p><strong>Använda färgrutor</strong></p> <p>Om du vill använda färgrutor gör du en <code>req=userdata</code>-förfrågan med följande:</p> <p><code>/is/image/&lt;company_name&gt;/&lt;swatch_asset_name&gt;:Swatch?req=userdata</code></p> <p>Följande är till exempel en färgruteresurs i Dynamic Media Classic:</p> <p><code>https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch</code></p> <p>och här är färgruteresursens motsvarande <code>req=userdata</code>-URL:</p> <p><code>https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch?req=userdata</code></p> <p><code>req=userdata</code>-svaret är följande:</p> <p><code class="code">SmartCropDef=Swatch
+   <td><p><strong>Obs</strong>: Smarta färgrutor stöds inte i Dynamic Media Classic.</p> <p>Hitta och generera högkvalitativa färgrutor automatiskt från produktbilder som visar färg eller textur.</p> <p>Om du vill använda färg- och bildfärgruta väljer du <strong>Smart beskärning</strong> i listrutan Beskärningsalternativ. Aktivera sedan funktionen till höger om Färg och Bildfärgruta. Ange ett pixelvärde i textrutorna Bredd och Höjd.</p> <p>Alla bildbeskärningar är tillgängliga från renderingslisten, men färgrutor används bara via funktionen Kopiera URL. Observera att du måste använda en egen visningskomponent för att återge färgrutan på webbplatsen. (Undantaget är Carousel banners. Dynamic Media tillhandahåller visningskomponenten för den färgruta som används i karusellbanderoller.)</p> <p><strong>Använda färgrutor</strong></p> <p>URL:en för färgrutor är okomplicerad. Det vill säga:</p> <p><code>/is/image/company/&lt;asset_name&gt;:Swatch</code></p> <p>där <code>:Swatch</code> läggs till i resursbegäran.</p> <p><strong>Använda färgrutor</strong></p> <p>Om du vill använda färgrutor gör du en <code>req=userdata</code>-förfrågan med följande:</p> <p><code>/is/image/&lt;company_name&gt;/&lt;swatch_asset_name&gt;:Swatch?req=userdata</code></p> <p>Följande är till exempel en färgruteresurs i Dynamic Media Classic:</p> <p><code>https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch</code></p> <p>och här är färgruteresursens motsvarande <code>req=userdata</code>-URL:</p> <p><code>https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch?req=userdata</code></p> <p><code>req=userdata</code>-svaret är följande:</p> <p><code class="code">SmartCropDef=Swatch
        SmartCropHeight=200.0
        SmartCropRect=0.421671,0.389815,0.0848564,0.0592593,200,200
        SmartCropType=Swatch
@@ -103,9 +103,9 @@ I **[!UICONTROL Unsharp Mask]** har du följande filtreringsalternativ:
  </tbody>
 </table>
 
-Skärpa beskrivs i [Skärpa bilder](/help/assets/assets/s7_sharpening_images.pdf.
+Skärpa beskrivs i [Skärpa bilder](/help/assets/assets/sharpening_images.pdf.
 
-## Skapar dynamiska mediebildprofiler {#creating-image-profiles}
+## Skapar Dynamic Media-bildprofiler {#creating-image-profiles}
 
 Mer information om hur du definierar avancerade bearbetningsparametrar för andra resurstyper finns i [Konfigurera resursbearbetning](config-dms7.md#configuring-asset-processing).
 
@@ -113,7 +113,7 @@ Se [Profiler för bearbetning av metadata, bilder och video](processing-profiles
 
 Se även [Bästa metoder för att ordna dina digitala resurser så att du kan använda Bearbeta profiler](/help/assets/organize-assets.md).
 
-**Skapa dynamiska mediebildprofiler**
+**Skapa Dynamic Media-bildprofiler**
 
 1. Tryck på AEM-logotypen och navigera till **[!UICONTROL Tools > Assets > Image Profiles.]**
 1. Tryck på **[!UICONTROL Create]** för att lägga till en ny bildprofil.
@@ -127,7 +127,7 @@ Se även [Bästa metoder för att ordna dina digitala resurser så att du kan an
 
 1. Tryck på **[!UICONTROL Save.]** Den nya profilen visas i listan med tillgängliga profiler.
 
-## Redigera eller ta bort dynamiska mediebildprofiler {#editing-or-deleting-image-profiles}
+## Redigera eller ta bort Dynamic Media-bildprofiler {#editing-or-deleting-image-profiles}
 
 1. Tryck på AEM-logotypen och navigera till **[!UICONTROL Tools > Assets > Image Profiles.]**
 1. Markera den bildprofil som du vill redigera eller ta bort. Om du vill redigera den väljer du **[!UICONTROL Edit Image Processing Profile.]** Om du vill ta bort den väljer du **[!UICONTROL Delete Image Processing Profile.]**
@@ -136,7 +136,7 @@ Se även [Bästa metoder för att ordna dina digitala resurser så att du kan an
 
 1. Spara ändringarna om du redigerar dem. Bekräfta att du vill ta bort profilen om du tar bort den.
 
-## Använda en dynamisk mediabildprofil för mappar {#applying-an-image-profile-to-folders}
+## Använda en Dynamic Media-bildprofil för mappar {#applying-an-image-profile-to-folders}
 
 När du tilldelar en bildprofil till en mapp ärver alla undermappar automatiskt profilen från den överordnade mappen. Det innebär att du bara kan tilldela en bildprofil till en mapp. Fundera därför noga över mappstrukturen för var du överför, lagrar, använder och arkiverar resurser.
 
@@ -150,7 +150,7 @@ Du kan tillämpa bildprofiler på specifika mappar eller globalt på alla resurs
 
 Du kan bearbeta resurser i en mapp som redan har en befintlig bildprofil som du senare ändrade. Se [Återbearbeta resurser i en mapp när du har redigerat dess bearbetningsprofil](processing-profiles.md#reprocessing-assets).
 
-### Använda dynamiska mediabildprofiler på specifika mappar {#applying-image-profiles-to-specific-folders}
+### Använda Dynamic Media-bildprofiler på specifika mappar {#applying-image-profiles-to-specific-folders}
 
 Du kan tillämpa en bildprofil på en mapp från menyn **[!UICONTROL Tools]** eller om du är i mappen från **[!UICONTROL Properties.]** I det här avsnittet beskrivs hur du tillämpar bildprofiler på mappar på båda sätten.
 
@@ -158,7 +158,7 @@ För mappar som redan har tilldelats en profil visas profilens namn direkt under
 
 Du kan bearbeta resurser i en mapp som redan har en befintlig videoprofil som du senare ändrade. Se [Återbearbeta resurser i en mapp när du har redigerat dess bearbetningsprofil](processing-profiles.md#reprocessing-assets).
 
-#### Använda dynamiska mediebildprofiler på mappar från profilanvändargränssnittet {#applying-image-profiles-to-folders-from-profiles-user-interface}
+#### Använda Dynamic Media-bildprofiler på mappar från användargränssnittet för profiler {#applying-image-profiles-to-folders-from-profiles-user-interface}
 
 1. Tryck på AEM-logotypen och navigera till **[!UICONTROL Tools > Assets > Image Profiles.]**
 1. Välj den bildprofil som du vill använda för en eller flera mappar.
@@ -167,7 +167,7 @@ Du kan bearbeta resurser i en mapp som redan har en befintlig videoprofil som du
 
 1. Tryck på **[!UICONTROL Apply Processing Profile to Folder(s)]** och markera den eller de mappar som du vill använda för att ta emot de nyligen överförda resurserna. Tryck/klicka sedan på **[!UICONTROL Apply.]** Mappar som redan har en profil visas genom att profilens namn visas direkt under mappnamnet.
 
-#### Använda dynamiska mediabildprofiler på mappar från egenskaper {#applying-image-profiles-to-folders-from-properties}
+#### Använda Dynamic Media-bildprofiler på mappar från Egenskaper {#applying-image-profiles-to-folders-from-properties}
 
 1. Tryck på AEM logotyp och navigera till **[!UICONTROL Assets]** och sedan till mappen som du vill tillämpa en bildprofil på.
 1. Markera mappen genom att trycka på bockmarkeringen och sedan på **[!UICONTROL Properties.]**
@@ -175,13 +175,13 @@ Du kan bearbeta resurser i en mapp som redan har en befintlig videoprofil som du
 
    ![chlimage_1-256](assets/chlimage_1-256.png)
 
-### Använda en dynamisk mediabildprofil globalt {#applying-an-image-profile-globally}
+### Använda en Dynamic Media-bildprofil globalt {#applying-an-image-profile-globally}
 
 Förutom att tillämpa en profil på en mapp kan du även tillämpa en profil globalt så att allt innehåll som överförs till AEM resurser i en mapp har den valda profilen.
 
 Du kan bearbeta resurser i en mapp som redan har en befintlig videoprofil som du senare ändrade. Se [Återbearbeta resurser i en mapp när du har redigerat dess bearbetningsprofil](processing-profiles.md#reprocessing-assets).
 
-**Så här använder du en dynamisk mediabildprofil globalt**:
+**Så här använder du en Dynamic Media-bildprofil globalt**:
 
 1. Gör något av följande:
 
@@ -199,7 +199,7 @@ Du kan bearbeta resurser i en mapp som redan har en befintlig videoprofil som du
 
 >[!NOTE]
 >
->Smart Crop är bara tillgängligt i läget Dynamic Media - Scene7.
+>Smart Crop är bara tillgängligt i Dynamic Media - Scene7-läge.
 
 Du kan justera eller ändra storlek på bildens smarta beskärningsfönster manuellt för att ytterligare förfina fokalpunkten.
 
@@ -283,7 +283,7 @@ När du tar bort en bildprofil från en mapp ärver alla undermappar automatiskt
 
 Du kan ta bort en bildprofil från en mapp från menyn **[!UICONTROL Tools]** eller, om du är i mappen, från **[!UICONTROL Properties.]** I det här avsnittet beskrivs hur du tar bort bildprofiler från mappar på båda sätten.
 
-### Ta bort dynamiska mediebildprofiler från mappar via profilanvändargränssnittet {#removing-image-profiles-from-folders-via-profiles-user-interface}
+### Ta bort Dynamic Media-bildprofiler från mappar via profilanvändargränssnittet {#removing-image-profiles-from-folders-via-profiles-user-interface}
 
 1. Tryck på AEM-logotypen och navigera till **[!UICONTROL Tools > Assets > Image Profiles.]**
 1. Markera den bildprofil som du vill ta bort från en eller flera mappar.
@@ -291,7 +291,7 @@ Du kan ta bort en bildprofil från en mapp från menyn **[!UICONTROL Tools]** el
 
    Du kan bekräfta att bildprofilen inte längre används för en mapp eftersom namnet inte längre visas under mappnamnet.
 
-### Ta bort profiler för dynamiska mediebilder från mappar med hjälp av egenskaperna {#removing-image-profiles-from-folders-via-properties}
+### Ta bort Dynamic Media-bildprofiler från mappar med hjälp av egenskaperna {#removing-image-profiles-from-folders-via-properties}
 
 1. Tryck på AEM logotyp, navigera till **[!UICONTROL Assets]** och sedan till mappen som du vill ta bort en bildprofil från.
 1. Markera mappen genom att trycka på bockmarkeringen och sedan på **[!UICONTROL Properties.]**
