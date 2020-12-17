@@ -12,9 +12,9 @@ discoiquuid: 8cdb6db4-adaa-4eda-af7d-310a0b44b80b
 docset: aem65
 legacypath: /content/docs/en/aem/6-2/develop/components/components-touch-optimized
 translation-type: tm+mt
-source-git-commit: a430c4de89bde3b907d342106465d3b5a7c75cc8
+source-git-commit: d0842a5994068b1e9a92cd14c1a59f1ea1a6c8b8
 workflow-type: tm+mt
-source-wordcount: '3452'
+source-wordcount: '3533'
 ht-degree: 1%
 
 ---
@@ -287,6 +287,14 @@ Se följande exempel:
 I det klassiska användargränssnittet med ExtJS var det vanligt att ha avlyssnare för en viss widget i innehållsstrukturen. Att uppnå samma sak i det beröringskänsliga användargränssnittet skiljer sig från JS-avlyssnarkoden (eller vilken kod som helst) som inte längre är definierad i innehållet.
 
 Innehållsstrukturen beskriver den semantiska strukturen. det ska (måste) inte antyda den underliggande widgetens karaktär. Genom att inte ha JS-kod i innehållsstrukturen kan du ändra implementeringsinformationen utan att behöva ändra innehållsstrukturen. Du kan med andra ord ändra widgetbiblioteket utan att behöva ändra innehållsstrukturen.
+
+#### Identifiera tillgänglighet för dialogrutan {#dialog-ready}
+
+Om du har ett anpassat JavaScript som bara behöver köras när dialogrutan är tillgänglig och klar bör du avlyssna händelsen `dialog-ready`.
+
+Den här händelsen utlöses när dialogrutan läses in (eller läses in igen) och är klar att användas, vilket innebär när det finns en ändring (skapa/uppdatera) i DOM för dialogrutan.
+
+`dialog-ready` kan användas för att koppla i anpassad JavaScript-kod som utför anpassningar av fälten i en dialogruta eller liknande åtgärder.
 
 ### Fältvalidering {#field-validation}
 
