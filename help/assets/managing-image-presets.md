@@ -1,6 +1,6 @@
 ---
-title: Hantera förinställningar för dynamiska media-bilder
-description: Förstå förinställningar för Dynamic Media-bilder och lär dig hur du skapar, ändrar och hanterar bildförinställningar
+title: Hantera Dynamic Media bildförinställningar
+description: Förstå Dynamic Media bildförinställningar och lär dig hur du skapar, ändrar och hanterar bildförinställningar
 uuid: 3e9a7af6-bf49-4cff-b516-0a3ee9765391
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -10,15 +10,15 @@ discoiquuid: cc1111c4-6e24-4570-9ac7-97c25cf24ede
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/image-presets
 translation-type: tm+mt
-source-git-commit: fed2e6474f710fd02cf27946252896ac33f3b256
+source-git-commit: ae3e6b1c2d3dfa63b9ea5763ebedaa57f5c7bc85
 workflow-type: tm+mt
-source-wordcount: '3722'
+source-wordcount: '3721'
 ht-degree: 8%
 
 ---
 
 
-# Hantera förinställningar för dynamiska media-bilder{#managing-image-presets}
+# Hantera Dynamic Media-bildförinställningar{#managing-image-presets}
 
 Med bildförinställningar kan AEM Assets dynamiskt leverera bilder i olika storlekar, i olika format eller med andra bildegenskaper som genereras dynamiskt. Varje bildförinställning representerar en fördefinierad samling kommandon för storleksändring och formatering för visning av bilder. När du skapar en bildförinställning väljer du en storlek för bildleverans. Du kan också välja formateringskommandon så att bildens utseende optimeras när bilden levereras för visning.
 
@@ -46,7 +46,7 @@ Bilder som minskar i storlek när de levereras dynamiskt kan förlora i skärpa 
 
 Administratörer kan skapa bildförinställningar. Om du vill skapa en bildförinställning kan du börja från början eller så kan du börja från en befintlig förinställning och spara den under ett nytt namn.
 
-## Hantera förinställningar för dynamiska mediabilder {#managing-image-presets-1}
+## Hantera förinställningar för Dynamic Media-bilder {#managing-image-presets-1}
 
 Du hanterar dina bildförinställningar i AEM genom att trycka på eller klicka på AEM logotyp för att komma åt den globala navigeringskonsolen och sedan trycka eller klicka på verktygsikonen och navigera till **[!UICONTROL Assets > Image Presets.]**
 
@@ -56,9 +56,9 @@ Du hanterar dina bildförinställningar i AEM genom att trycka på eller klicka 
 >
 >Alla bildförinställningar som du skapar är också tillgängliga som dynamiska återgivningar när du förhandsvisar eller levererar resurser.
 >
->I *Dynamiska media - Scene7-läge* behöver du *inte* publicera bildförinställningar när bildförinställningar publiceras automatiskt.
+>I *Dynamic Media - Scene7 mode* behöver du *inte* publicera bildförinställningar eftersom bildförinställningar publiceras automatiskt.
 >
->I *Dynamiska media - hybridläge* måste du publicera bildförinställningar manuellt.
+>I *Dynamic Media - hybridläge* måste du publicera bildförinställningar manuellt.
 >
 >Se [Publicera bildförinställningar.](#publishing-image-presets)
 
@@ -70,7 +70,7 @@ Du hanterar dina bildförinställningar i AEM genom att trycka på eller klicka 
 
 >[!NOTE]
 >
->Det här avsnittet gäller endast för Dynamic Media - hybridläge.
+>Det här avsnittet gäller endast Dynamic Media - hybridläge.
 
 Om du tänker ge stöd för att lägga in AI-, EPS- och PDF-filer så att du kan generera dynamiska återgivningar av dessa filformat, bör du granska följande information innan du skapar bildförinställningar.
 
@@ -162,7 +162,7 @@ Processkomponenten för medieextrahering i `DAM Update Asset`-arbetsflödet kör
 
 ExtendScript söker i argumenten för processkomponenten för medieextrahering i [!UICONTROL DAM Update Asset]-arbetsflödet.
 
-Följande skript används av integreringen med Dynamic Media:
+Följande skript används av Dynamic Media-integrering:
 
 <table>
  <tbody>
@@ -223,11 +223,11 @@ Storleksändring för miniatyrbilder definieras i följande format: **[!UICONTRO
 
 1. Tryck på **[!UICONTROL Save]** för att spara ändringarna i arbetsflödet.
 
-### Öka eller minska antalet förinställningar för dynamiska media som visar {#increasing-or-decreasing-the-number-of-image-presets-that-display}
+### Öka eller minska antalet förinställningar för Dynamic Media som visar {#increasing-or-decreasing-the-number-of-image-presets-that-display}
 
 De bildförinställningar du skapar är tillgängliga som dynamiska återgivningar när du förhandsgranskar resurser. AEM visar en mängd olika dynamiska återgivningar när du visar resurser från **[!UICONTROL Detail View > Renditions.]** Du kan öka eller minska gränsen för återgivningar som visas.
 
-**Så här ökar eller minskar du antalet förinställningar för dynamiska media som visas**:
+**Så här ökar eller minskar du antalet bildförinställningar som visas** i Dynamic Media:
 
 1. Gå till CRXDE Lite ([https://localhost:4502/crx/de](https://localhost:4502/crx/de)).
 1. Navigera till noden med bildförinställningar på `/libs/dam/gui/coral/content/commons/sidepanels/imagepresetsdetail/imgagepresetslist`
@@ -242,9 +242,9 @@ De bildförinställningar du skapar är tillgängliga som dynamiska återgivning
 1. I egenskapen limit ändrar du talet till önskat tal, till exempel `{empty requestPathInfo.selectors[1] ? "20" : requestPathInfo.selectors[1]}`
 1. Tryck på **[!UICONTROL Save All.]**
 
-## Skapa en förinställning för Dynamic Media-bild {#creating-image-presets}
+## Skapa en Dynamic Media-bildförinställning {#creating-image-presets}
 
-När du skapar en förinställning för en bild i Dynamic Media kan du använda dessa inställningar på alla bilder när du förhandsgranskar eller publicerar.
+Om du skapar en bildförinställning för Dynamic Media kan du använda dessa inställningar på alla bilder när du förhandsgranskar eller publicerar.
 
 >[!NOTE]
 >
@@ -260,7 +260,7 @@ Se [InDesign (INDD)-filformat](#indesign-indd-file-format).
 >
 >Om du vill skapa förinställningar för Dynamic Media-bilder måste du ha administratörsbehörighet som AEM eller Admin Console-administratör.
 
-**Så här skapar du en förinställning** för Dynamic Media-bilder:
+**Så här skapar du en bildförinställning** för Dynamic Media:
 
 1. I AEM trycker du på AEM-logotypen för att komma åt den globala navigeringskonsolen och sedan trycker du på **[!UICONTROL Tools > Assets > Image Presets.]**
 1. Klicka på **[!UICONTROL Create.]** Fönstret **[!UICONTROL Edit Image Preset]** öppnas.
@@ -291,7 +291,7 @@ Om du lämnar dem tomma visas AEM att den här bildförinställningen är respon
 >
 >![chlimage_1-79](assets/chlimage_1-498.png)
 >
->I Dynamic Media - Scene7-läge publiceras bildförinställningar och bildresurser automatiskt.
+>I Dynamic Media - Scene7-läget publiceras bildförinställningar och bildresurser automatiskt.
 >
 >I Dynamic Media - hybrid-läge måste du manuellt publicera bildförinställningar och bildresurser.
 
@@ -407,7 +407,7 @@ När du skapar eller redigerar bildförinställningar finns alternativen som bes
     </ul>
     <div>
       Skärpa beskrivs i
-     <a href="https://docs.adobe.com/content/help/en/dynamic-media-classic/using/assets/s7_sharpening_images.pdf">Skärpa bilder</a>.
+     <a href="https://docs.adobe.com/content/help/en/dynamic-media-classic/using/assets/sharpening_images.pdf">Skärpa bilder</a>.
     </div> </td>
   </tr>
   <tr>
@@ -427,7 +427,7 @@ När du skapar eller redigerar bildförinställningar finns alternativen som bes
   </tr>
   <tr>
    <td><strong>Bildmodifierare</strong></td>
-   <td><p>Förutom de vanliga bildinställningarna i användargränssnittet har Dynamic Media stöd för många avancerade bildändringar som du kan ange i fältet <strong>Bildmodifierare</strong>. Dessa parametrar definieras i <a href="https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html">Image Server Protocol-kommandoreferensen</a>.</p> <p>Viktigt: Följande funktioner i API:t stöds inte:</p>
+   <td><p>Förutom de vanliga bildinställningarna i användargränssnittet stöder Dynamic Media många avancerade bildändringar som du kan ange i fältet <strong>Bildmodifierare</strong>. Dessa parametrar definieras i <a href="https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html">Image Server Protocol-kommandoreferensen</a>.</p> <p>Viktigt: Följande funktioner i API:t stöds inte:</p>
     <ul>
      <li>Grundläggande kommandon för mallar och textåtergivning: <code>text= textAngle= textAttr= textFlowPath= textFlowXPath= textPath=</code> och <code>textPs=</code></li>
      <li>Lokaliseringskommandon: <code>locale=</code> och <code>req=xlate</code></li>
@@ -436,7 +436,7 @@ När du skapar eller redigerar bildförinställningar finns alternativen som bes
      <li><code>req=saveToFile</code></li>
      <li><code>req=targets</code></li>
      <li><code>template=</code></li>
-     <li>Dynamiska medietjänster utan kärna: SVG, bildåtergivning och webb-till-tryck</li>
+     <li>Icke-kärntjänster från Dynamic Media: SVG, bildåtergivning och webb-till-tryck</li>
     </ul> </td>
   </tr>
  </tbody>
@@ -501,13 +501,13 @@ Nedan följer några grundläggande exempel på vad du kan göra med bildmodifie
 1. Välj en förinställning och klicka sedan på **[!UICONTROL Edit.]** Fönstret **[!UICONTROL Edit Image Preset]** öppnas.
 1. Gör ändringarna och klicka på **[!UICONTROL Save]** för att spara ändringarna eller **[!UICONTROL Cancel]** för att avbryta ändringarna.
 
-## Publicera förinställningar för dynamiska mediabilder {#publishing-image-presets}
+## Publicera förinställningar för Dynamic Media-bilder {#publishing-image-presets}
 
-Om du använder läget Dynamic Media - Hybrid måste du publicera bildförinställningar manuellt.
+Om du kör Dynamic Media - hybrid-läge måste du publicera bildförinställningar manuellt.
 
 (Om du kör Dynamic Media - Scene7-läge publiceras bildförinställningar automatiskt åt dig; behöver du inte utföra dessa steg.)
 
-**Så här publicerar du bildförinställningar i läget** Dynamic Media - Hybrid:
+**Så här publicerar du bildförinställningar i Dynamic Media - hybridläge**:
 
 1. I AEM: tryck eller klicka på den AEM logotypen för att komma åt den globala navigeringskonsolen och tryck eller klicka på verktygsikonen och navigera till **[!UICONTROL Assets > Image Presets.]**
 1. Välj bildförinställningen eller flera bildförinställningar i listan med bildförinställningar och klicka eller tryck på **[!UICONTROL Publish.]**
@@ -515,9 +515,9 @@ Om du använder läget Dynamic Media - Hybrid måste du publicera bildförinstä
 
    ![chlimage_1-81](assets/chlimage_1-505.png)
 
-## Tar bort förinställningar för Dynamic Media-bilder {#deleting-image-presets}
+## Tar bort Dynamic Media-bildförinställningar {#deleting-image-presets}
 
 1. I AEM trycker eller klickar du på den AEM logotypen för att komma åt den globala navigeringskonsolen.
 1. Tryck på ikonen **[!UICONTROL Tools]** och navigera sedan till **[!UICONTROL Assets > Image Presets.]**
-1. Välj en förinställning och klicka sedan på **[!UICONTROL Delete]**. Dynamic Media bekräftar att du vill ta bort det. Tryck på **[!UICONTROL Delete]** för att ta bort eller tryck på **[!UICONTROL Cancel]** för att avbryta.
+1. Välj en förinställning och klicka sedan på **[!UICONTROL Delete]**. Dynamic Media bekräftar att du vill ta bort den. Tryck på **[!UICONTROL Delete]** för att ta bort eller tryck på **[!UICONTROL Cancel]** för att avbryta.
 
