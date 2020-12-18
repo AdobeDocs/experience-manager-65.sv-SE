@@ -1,6 +1,6 @@
 ---
 title: Video
-description: Läs om den centraliserade hanteringen av videoresurser i AEM Assets där du kan överföra videor för automatisk kodning till Dynamic Media Classic och få tillgång till Dynamic Media Classic-videor direkt från AEM Assets. Integrering med Dynamic Media Classic gör att optimerad video kan användas på alla skärmar.
+description: Läs om den centraliserade hanteringen av videoresurser i AEM Assets där du kan överföra videor för automatisk kodning till Dynamic Media Classic och få tillgång till Dynamic Media Classic-videor direkt från AEM Assets. Integrering med Dynamic Media Classic-video ger optimerad video även på alla skärmar.
 uuid: 8b3423f1-d96b-44d9-bdb7-e3b77875b25d
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -8,9 +8,9 @@ topic-tags: managing-assets
 content-type: reference
 discoiquuid: 2685f9f3-0973-40a9-89b8-e7db0a6a75f2
 translation-type: tm+mt
-source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
+source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
 workflow-type: tm+mt
-source-wordcount: '1531'
+source-wordcount: '1527'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 Med resurser kan du centralisera hanteringen av videoresurser så att du kan överföra videor direkt till Assets för automatisk kodning till Dynamic Media Classic och få tillgång till Dynamic Media Classic-videor direkt från Assets för sidredigering.
 
-Med videointegrationen i Dynamic Media Classic kan du nå optimerad video på alla skärmar (automatisk enhets- och bandbreddsidentifiering).
+Integrering med Dynamic Media Classic för video ger optimerad video även på alla skärmar (automatisk enhets- och bandbreddsidentifiering).
 
 * Komponenten **[!UICONTROL Scene7 Video]** utför automatiskt enhets- och bandbreddsidentifiering för att spela upp video i rätt format och med rätt kvalitet på datorer, surfplattor och mobiler.
 * Resurser - Du kan inkludera adaptiva videouppsättningar i stället för bara enskilda videoresurser. En adaptiv videouppsättning är en behållare för alla videoåtergivningar som krävs för att spela upp video sömlöst på flera skärmar. En adaptiv videouppsättning grupperar versioner av samma video som är kodade med olika bithastigheter och format som 400 kbit/s, 800 kbit/s och 1 000 kbit/s. Du använder en adaptiv videouppsättning, tillsammans med S7-videokomponenten, för adaptiv videoströmning på flera skärmar, inklusive stationära datorer, iOS, Android, Blackberry och Windows mobila enheter.
@@ -32,7 +32,7 @@ Standardprocessen för videokodning bygger på den FFMPEG-baserade integrationen
 * FFMPEG-miniatyrbilder
 * FFMPEG-kodning
 
-Tänk på att aktivering och konfigurering av den dynamiska Media Classic-integreringen inte automatiskt tar bort eller inaktiverar dessa två arbetsflödessteg från det körklara arbetsflödet för DAM-hämtning. Om du redan använder den FFMPEG-baserade videokodningen i AEM är det troligt att du har FFMPEG installerat i dina redigeringsmiljöer. I det här fallet kodas en ny video som hämtas med DAM två gånger: en gång från FFMPEG-kodaren och en gång från Dynamic Media Classic-integreringen.
+Tänk på att aktivering och konfigurering av Dynamic Media Classic-integreringen inte automatiskt tar bort eller inaktiverar dessa två arbetsflödessteg från det färdiga arbetsflödet för DAM-import. Om du redan använder den FFMPEG-baserade videokodningen i AEM är det troligt att du har FFMPEG installerat i dina redigeringsmiljöer. I det här fallet kodas en ny video som hämtas med DAM två gånger: en gång från FFMPEG-kodaren och en gång från Dynamic Media Classic-integreringen.
 
 Om du har konfigurerat och installerat den FFMPEG-baserade videokodningen i AEM rekommenderar Adobe att du tar bort de två FFMPEG-arbetsflödena från arbetsflödena för DAM-inhämtning.
 
@@ -60,11 +60,11 @@ Om du behöver ett arbetsflöde eller en versionshantering för dina resurser b�
 1. I AEM kommer du åt videomaterial i WCM på fliken **[!UICONTROL Movies]** i Content Finder.
 1. Skapa med en **[!UICONTROL Scene7 Video]**- eller **[!UICONTROL Foundation Video]**-komponent.
 
-### Om du överför videon till Dynamic Media Classic {#if-you-are-uploading-your-video-to-scene}
+### Om du överför din video till Dynamic Media Classic {#if-you-are-uploading-your-video-to-scene}
 
 Om du inte behöver ett arbetsflöde eller en versionshantering för dina resurser bör du överföra dina resurser till Scene7. Här följer det rekommenderade arbetsflödet:
 
-1. I Dynamic Media Classic [konfigurerar du en schemalagd FTP-överföring och -kodning till Scene7 (automatiserad)](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html#upload-files-using-via-ftp).
+1. I Dynamic Media Classic [konfigurerar du en schemalagd FTP-överföring och -kodning till Scene7 (automatiskt system)](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html#upload-files-using-via-ftp).
 1. I AEM kommer du åt videomaterial i WCM på fliken **[!UICONTROL Scene7]** i Content Finder.
 1. Skapa med komponenten **[!UICONTROL Scene7 Video]**.
 
@@ -85,7 +85,7 @@ Så här konfigurerar du universella förinställningar:
 
    >[!NOTE]
    >
-   >Mer information om vad videoförinställningarna betyder finns i [dokumentationen för Dynamic Media Classic](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html#video-presets-for-encoding-video-files).
+   >Mer information om vad videoförinställningarna betyder finns i [Dynamic Media Classic-dokumentationen](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html#video-presets-for-encoding-video-files).
    >
    >Adobe rekommenderar att du antingen markerar båda adaptiva videouppsättningar när du konfigurerar de universella förinställningarna eller väljer alternativet **[!UICONTROL Adaptive Video Encoding]**.
 
@@ -135,7 +135,7 @@ I följande tabell visas en högnivåjämförelse av funktioner som stöds mella
 | Metod | HTML5 first approach. Flash används endast för icke-HTML5-reservlösningar. | Flash på de flesta stationära datorer. HTML5 används för mobiler och surfplattor. |
 | Leverans | Progressiv | Adaptiv strömning |
 | Spårning | Ja | Ja |
-| Utbyggbarhet | Ja | Ja (med Scene7 Viewer SDK) |
+| Utbyggbarhet | Ja | Nej |
 | Mobilvideo | Ja | Ja |
 
 ### Konfigurera {#setting-up}
