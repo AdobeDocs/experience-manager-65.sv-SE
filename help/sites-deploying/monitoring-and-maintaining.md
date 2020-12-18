@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 5d2364b7-4497-4f8b-85ef-6e780bfb8c36
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 9f22cb618d487a2b02dc17149d11b81a9e9e27be
+source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
 workflow-type: tm+mt
-source-wordcount: '5895'
+source-wordcount: '5891'
 ht-degree: 0%
 
 ---
@@ -203,13 +203,13 @@ Modereringsåtgärder registreras här.
    * `error.log`
 Felmeddelanden (av varierande allvarlighetsgrad) registreras här.
 
-   * [ `ImageServer-<PortId>-yyyy>-<mm>-<dd>.log`](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/config-admin/server-logging/c-image-server-log.html)
+   * [ `ImageServer-<PortId>-yyyy>-<mm>-<dd>.log`](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/config-admin/server-logging/c-image-server-log.html)
 Den här loggen används bara om den  [!DNL Dynamic Media] är aktiverad. Det innehåller statistik och analysinformation som används för att analysera beteendet i den interna ImageServer-processen.
 
    * `request.log`
 Varje åtkomstbegäran registreras här tillsammans med svaret.
 
-   * [ `s7access-<yyyy>-<mm>-<dd>.log`](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/config-admin/server-logging/c-access-log.html)
+   * [ `s7access-<yyyy>-<mm>-<dd>.log`](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/config-admin/server-logging/c-access-log.html)
 Den här loggen används bara om den  [!DNL Dynamic Media] är aktiverad. s7access-loggen registrerar varje begäran som gjorts till [!DNL Dynamic Media] till `/is/image` och `/is/content`.
 
    * `stderr.log`
