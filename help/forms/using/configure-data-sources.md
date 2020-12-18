@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 9d78a6dc-fc9c-415b-b817-164fe6648b30
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ce64b148ba96cc64670aaf96c1b201bafa282b98
+source-git-commit: 19ee2722bc73f67b77cc08dd2a634328ba5269ec
 workflow-type: tm+mt
-source-wordcount: '1669'
+source-wordcount: '1843'
 ht-degree: 0%
 
 ---
@@ -138,6 +138,28 @@ Gör följande för att konfigurera RESTful-tjänster:
    Om du väljer **[!UICONTROL Mutual Authentication]** som autentiseringstyp, se [Certifikatbaserad ömsesidig autentisering för RESTful- och SOAP-webbtjänster](#mutual-authentication).
 
 1. Tryck på **[!UICONTROL Create]** för att skapa molnkonfigurationen för RESTful-tjänsten.
+
+### HTTP-klientkonfiguration för formulärdatamodell för optimering av prestanda {#fdm-http-client-configuration}
+
+[!DNL Experience Manager Forms] formulärdatamodell vid integrering med RESTful-webbtjänster som datakälla inkluderar HTTP-klientkonfigurationer för prestandaoptimering.
+Utför följande steg för att konfigurera HTTP-klienten för formulärdatamodellen:
+
+1. Logga in på [!DNL Experience Manager Forms] Author Instance som administratör och gå till [!DNL Experience Manager] webbkonsolpaket. Standardwebbadressen är [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr).
+
+1. Tryck på **[!UICONTROL Form Data Model Http Client Configuration for REST data source]**.
+
+1. I dialogrutan [!UICONTROL Form Data Model Http Client Configuration for REST data source]:
+
+   * Ange maximalt antal tillåtna anslutningar mellan formulärdatamodellen och RESTful-webbtjänster i fältet **[!UICONTROL Connection limit in total]**. Standardvärdet är 20 anslutningar.
+
+   * Ange maximalt antal tillåtna anslutningar för varje flöde i fältet **[!UICONTROL Connection limit on per route basis]**. Standardvärdet är 2 anslutningar.
+
+   * Ange hur länge en beständig HTTP-anslutning ska vara aktiv i fältet **[!UICONTROL Keep alive]**. Standardvärdet är 15 sekunder.
+
+   * I fältet **[!UICONTROL Connection timeout]** anger du varaktigheten som [!DNL Experience Manager Forms]-servern väntar på att upprätta en anslutning. Standardvärdet är 10 sekunder.
+
+   * Ange den maximala tidsperioden för inaktivitet mellan två datapaket i fältet **[!UICONTROL Socket timeout]**. Standardvärdet är 30 sekunder.
+
 
 ## Konfigurera SOAP-webbtjänster {#configure-soap-web-services}
 
