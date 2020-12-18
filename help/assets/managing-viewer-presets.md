@@ -10,10 +10,10 @@ discoiquuid: cf7823f4-82c2-4e36-9b65-3c58359b8104
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/viewer-presets
 translation-type: tm+mt
-source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
+source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
 workflow-type: tm+mt
-source-wordcount: '4237'
-ht-degree: 15%
+source-wordcount: '4156'
+ht-degree: 16%
 
 ---
 
@@ -22,12 +22,12 @@ ht-degree: 15%
 
 En visningsförinställning är en samling inställningar som bestämmer hur användare visar mediefiler på datorskärmar och mobila enheter. Om du är administratör kan du skapa visningsförinställningar. Inställningarna är tillgängliga för en array med visningskonfigurationsalternativ. Du kan till exempel ändra visningsprogrammets visningsstorlek eller zoombeteende.
 
-Instruktioner om hur du skapar och anpassar dina egna HTML5-visningsförinställningar finns i *Adobe Scene7 HTML5 Viewer SDK*. SDK är tillgängligt på IS-publiceringsservern som är inbäddad i SDK:n. Varje biblioteksversion har en egen SDK-dokumentation.
+<!-- OBSOLETE CONTENT  For instructions on creating and customizing your own HTML5 viewer presets, see the *Adobe Scene7 HTML5 Viewer SDK*. The SDK is available on the IS publish server embedded in the SDK itself. Each library version has its own SDK documentation included.
 
-Sökväg: `<scene7_domain>/s7sdk/<library_version>/docs/jsdocs/index.html`.
-Exempel: 3.5 SDK: [https://s7d1.scene7.com/s7sdk/3.5/docs/jsdoc/index.html](https://s7d1.scene7.com/s7sdk/3.5/docs/jsdoc/index.html)
+Path: `<scene7_domain>/s7sdk/<library_version>/docs/jsdocs/index.html`.
+For example, 3.5 SDK: [https://s7d1.scene7.com/s7sdk/3.5/docs/jsdoc/index.html](https://s7d1.scene7.com/s7sdk/3.5/docs/jsdoc/index.html) -->
 
-Se även [referenshandboken för visningsprogram för Adobe](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/home.html).
+Se [Referenshandboken för Dynamic Media Viewer](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html).
 
 I det här avsnittet beskrivs hur du skapar, redigerar och hanterar visningsprogramförinställningar. Du kan använda en visningsförinställning för en resurs när du vill förhandsgranska den. Se [Använda visningsförinställningar](#applying-a-viewer-preset-to-an-asset).
 
@@ -39,7 +39,7 @@ I det här avsnittet beskrivs hur du skapar, redigerar och hanterar visningsprog
 
 Alla färdiga visningsprogram har stöd för tangentbordstillgänglighet.
 
-Se även [Tangentbordstillgänglighet och navigering](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/c-keyboard-accessibility.html).
+Se även [Tangentbordstillgänglighet och navigering](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/c-keyboard-accessibility.html).
 
 ## Hantera visningsförinställningar {#managing-viewer-presets-1}
 
@@ -117,7 +117,7 @@ Administratörer kan lägga till och anpassa följande typer av multimedia när 
     <ul>
      <li>Proportionerna 2:1.</li>
      <li>Taggad med nyckelorden <code>equirectangular</code>, <code>spherical</code> och <code>panorama</code>, eller <code>spherical </code>och <code>panoramic</code>. Se <a href="/help/sites-authoring/tags.md">Använda taggar</a>.</li>
-    </ul> <p>Både proportioner och nyckelordskriterier gäller för panoramaresurser för sidan med resursinformation och WCM-komponenten "Panoramic Media".</p> <p><strong>Viktigt</strong>: Det här visningsprogrammet är endast tillgängligt i läget Dynamic Media - Scene7.</p> </td>
+    </ul> <p>Både proportioner och nyckelordskriterier gäller för panoramaresurser för sidan med resursinformation och WCM-komponenten "Panoramic Media".</p> <p><strong>Viktigt</strong>: Det här visningsprogrammet är endast tillgängligt i Dynamic Media - Scene7-läge.</p> </td>
   </tr>
   <tr>
    <td><strong>Video för smart beskärning</strong><br /> </td>
@@ -129,7 +129,7 @@ Administratörer kan lägga till och anpassa följande typer av multimedia när 
   </tr>
   <tr>
    <td><strong>360-video</strong></td>
-   <td><p>Använd 360/VR Video Viewer för att återge ekvirektangulär video för en engagerande tittarupplevelse av ett rum, en egenskap, plats, landskap eller medicinskt förfarande.</p> <p>Vid uppspelning på en platt skärm har användaren kontroll över betraktningsvinkeln. uppspelning på mobila enheter utnyttjar vanligtvis de inbyggda gyroskopiska kontrollerna.</p> <p>Visningsprogrammet har inbyggt stöd för leverans av 360 videomaterial. Som standard krävs ingen ytterligare konfiguration för visning eller uppspelning. Du levererar 360-video med standardvideotillägg som .mp4, .mkv och .mov. Den vanligaste kodeken är H.264.</p> <p><strong>Viktigt</strong>: Det här visningsprogrammet är endast tillgängligt i läget Dynamic Media - Scene7.</p> </td>
+   <td><p>Använd 360/VR Video Viewer för att återge ekvirektangulär video för en engagerande tittarupplevelse av ett rum, en egenskap, plats, landskap eller medicinskt förfarande.</p> <p>Vid uppspelning på en platt skärm har användaren kontroll över betraktningsvinkeln. uppspelning på mobila enheter utnyttjar vanligtvis de inbyggda gyroskopiska kontrollerna.</p> <p>Visningsprogrammet har inbyggt stöd för leverans av 360 videomaterial. Som standard krävs ingen ytterligare konfiguration för visning eller uppspelning. Du levererar 360-video med standardvideotillägg som .mp4, .mkv och .mov. Den vanligaste kodeken är H.264.</p> <p><strong>Viktigt</strong>: Det här visningsprogrammet är endast tillgängligt i Dynamic Media - Scene7-läge.</p> </td>
   </tr>
   <tr>
    <td><strong>Video</strong></td>
@@ -152,13 +152,13 @@ Administratörer kan lägga till och anpassa följande typer av multimedia när 
 
 ### Lista med färdiga visningsförinställningar {#list-of-out-of-the-box-viewer-presets}
 
-I följande tabell visas alla fördefinierade, färdiga visningsförinställningar som medföljer Dynamic Media.
+I följande tabell visas alla fördefinierade färdiga visningsförinställningar som medföljer Dynamic Media.
 
 Se även [Livedemonstrationer](https://landing.adobe.com/en/na/dynamic-media/ctir-2755/live-demos.html).
 
 Information om vilka webbläsare och operativsystemversioner som stöds för visningsprogram finns i Viewer Release Notes.
 
-Se&quot;Versionsinformation för visningsprogram&quot; i innehållsförteckningen i [referenshandboken för visningsprogram](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/home.html).
+Se&quot;Versionsinformation för visningsprogram&quot; i innehållsförteckningen i [referenshandboken för visningsprogram](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html).
 
 >[!NOTE]
 >
@@ -408,7 +408,7 @@ AEM visar en mängd olika förinställningar för visningsprogram när du visar 
 
 Genom att skapa visningsförinställningar kan du använda olika inställningar för att visa och interagera med resurser. Du behöver dock inte skapa nya förinställningar för visningsprogrammet. Om du vill kan du använda de förinställda visningsprogrammen som redan finns i AEM Assets.
 
-Om du väljer att skapa en ny visningsförinställning aktiveras visningsprogrammets läge automatiskt (inställt på **[!UICONTROL On]**) på sidan Förinställningar för visningsprogram när du har sparat den. Det här läget innebär att det är synligt i komponenten Dynamic Media och komponenten Interactive Media och när du förhandsgranskar en bild eller video.
+Om du väljer att skapa en ny visningsförinställning aktiveras visningsprogrammets läge automatiskt (inställt på **[!UICONTROL On]**) på sidan Förinställningar för visningsprogram när du har sparat den. Det här läget innebär att det är synligt i Dynamic Media-komponenten och i Interactive Media-komponenten och när du förhandsgranskar en bild eller video.
 
 Vissa visningsprogramförinställningar har exklusiva inställningar som kan påverka visningsprogrammets användning och allmänna beteende. Beroende på vilken visningsförinställning du skapar kan det vara bra att tänka på dessa speciella saker.
 
@@ -438,13 +438,13 @@ Se [Specialöverväganden när du skapar en visningsförinställning för Carous
 
       Med den visuella redigeraren kan du se vilken effekt en viss egenskap har på ett format. Du behöver bara ställa in eller justera en egenskap för att omedelbart se vilken effekt den har på visningsprogrammet med exemplet till vänster om redigeraren.
 
-      CSS-formategenskaperna för varje typ av visningsförinställningar beskrivs i hjälpavsnittet Anpassa *`<viewer name>`*-visningsprogram i [referenshandboken för visningsprogram](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/home.html). Om du till exempel skapar en visningsförinställning av typen `Mixed_Media` kan du läsa [Anpassa blandad mediavisare](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/mixed-media/customing-mixed-media/c-html5-mixedmedia-viewer-customizingviewer.html) för en lista och en beskrivning av varje egenskap.
+      CSS-formategenskaperna för varje typ av visningsförinställningar beskrivs i hjälpavsnittet Anpassa *`<viewer name>`*-visningsprogram i [referenshandboken för visningsprogram](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html). Om du till exempel skapar en visningsförinställning av typen `Mixed_Media` kan du läsa [Anpassa blandad mediavisare](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/mixed-media/customing-mixed-media/c-html5-mixedmedia-viewer-customizingviewer.html) för en lista och en beskrivning av varje egenskap.
 
    * Om du har definierat formatinställningar i en separat CSS-fil kan du överföra CSS-filen till AEM Assets. Tryck på **[!UICONTROL Import CSS]** under listrutan **[!UICONTROL Selected Type]** (du kan behöva rulla den visuella redigeraren uppåt för att se den) för att hitta den överförda CSS-filen och koppla den till visningsförinställningen.
 
       När du importerar en CSS-fil kontrollerar den visuella redigeraren om rätt visningsmarkörer används i CSS. Om du till exempel skapar ett Zoom-visningsprogram måste alla CSS-regler som du importerar definieras med hjälp av visningsprogrammets klassnamn `.s7mixedmediaviewer` som definieras för ett överordnat visningsprogramelement.
 
-      Du kan importera godtycklig, handgjord CSS så länge den definierar CSS-markörerna för ett visst visningsprogram. (CSS-markörer beskrivs i hjälpavsnittet Anpassa *&lt;visningsprogramnamn>* visningsprogram&quot; i [referenshandboken för visningsprogram](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/home.html). Om du till exempel vill läsa om CSS-markörer för Zoomvisningsprogrammet läser du [Anpassa zoomvisningsprogrammet](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/zoom/customizing-zoom/c-html5-20-zoom-viewer-customizingviewer.html).) Det är dock möjligt att den visuella redigeraren kanske inte förstår vissa CSS-värden. I sådana fall försöker den visuella redigeraren åsidosätta felen så att CSS fortfarande fungerar.
+      Du kan importera godtycklig, handgjord CSS så länge den definierar CSS-markörerna för ett visst visningsprogram. (CSS-markörer beskrivs i hjälpavsnittet Anpassa *&lt;visningsprogramnamn>* visningsprogram&quot; i [referenshandboken för visningsprogram](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html). Om du till exempel vill läsa om CSS-markörer för Zoomvisningsprogrammet läser du [Anpassa zoomvisningsprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/zoom/customizing-zoom/c-html5-20-zoom-viewer-customizingviewer.html).) Det är dock möjligt att den visuella redigeraren kanske inte förstår vissa CSS-värden. I sådana fall försöker den visuella redigeraren åsidosätta felen så att CSS fortfarande fungerar.
    >[!NOTE]
    >
    >Om du föredrar att redigera CSS direkt i dess råformat trycker du på **[!UICONTROL Show/Hide CSS]** under listrutan Vald typ (du kan behöva rulla den visuella redigeraren uppåt för att se den).
@@ -460,7 +460,7 @@ Se [Specialöverväganden när du skapar en visningsförinställning för Carous
 
    Många komponenter i den visuella redigeraren har en detaljerad beskrivning. Dessa beskrivningar visas i blå rutor när du expanderar en komponent för att visa dess associerade parametrar.
 
-   Vissa typer av visningsprogram har komponenter som gör att du kan ange bildserverkommandon i ett **[!UICONTROL IS Command]**-textfält. En lista med kommandon som du kan använda finns i [API-referenshandboken för bildservrar](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/c-is-home.html).
+   Vissa typer av visningsprogram har komponenter som gör att du kan ange bildserverkommandon i ett **[!UICONTROL IS Command]**-textfält. En lista med kommandon som du kan använda finns i [API-referenshandboken för bildservrar](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/c-is-home.html).
 
    >[!NOTE]
    >
@@ -549,7 +549,7 @@ Vilka visningsprogramförinställningar som är tillgängliga i användargränss
 
 ## Förinställningar för publiceringsvisningsprogrammet {#publishing-viewer-presets}
 
-När du aktiverar (eller aktiverar&quot;På&quot;) ett förinställt visningsläge visas det i komponenten Dynamic Media, i komponenten Interactive Media och när du visar en resurs.
+När du aktiverar (eller aktiverar&quot;På&quot;) ett visningsförinställningsläge visas det i Dynamic Media-komponenten, i Interactive Media-komponenten och när du visar en mediefil.
 
 För att kunna leverera* *en resurs med en visningsförinställning måste visningsförinställningen också publiceras. Alla visningsförinställningar måste aktiveras *och *publiceras för att URL- eller inbäddningskod ska kunna hämtas för en resurs. Du måste aktivera och publicera alla färdiga visningsförinställningar som medföljer Dynamic Media. Anpassade visningsförinställningar som du skapar och lägger till aktiveras automatiskt, men de måste också publiceras.
 
@@ -588,7 +588,7 @@ Tänk på att redigering av *fördefinierade, körklara visningsförinställning
 
 ## Tar bort anpassade förinställningar för visningsprogram {#deleting-custom-viewer-presets}
 
-Du kan ta bort visningsförinställningar som du har skapat och lagt till i dynamiska media.
+Du kan ta bort visningsförinställningar som du har skapat och lagt till i Dynamic Media.
 
 **Ta bort anpassade visningsprogramförinställningar**
 
@@ -616,4 +616,4 @@ Om du redan har publicerat både resursen och det valda visningsprogrammet visas
 
 Mer information om hur du hämtar URL:er för visningsförinställningar finns i [Länka URL:er till ditt webbprogram](/help/assets/linking-urls-to-yourwebapplication.md). Se även [Bädda in Video Viewer på en webbsida](/help/assets/embed-code.md).
 
-Om du använder AEM som WCM-fil kan du lägga till resurser med visningsförinställningarna direkt på sidan. Se [Lägga till dynamiska medieresurser på sidor](/help/assets/adding-dynamic-media-assets-to-pages.md).
+Om du använder AEM som WCM-fil kan du lägga till resurser med visningsförinställningarna direkt på sidan. Se [Lägga till Dynamic Media-resurser på sidor](/help/assets/adding-dynamic-media-assets-to-pages.md).
