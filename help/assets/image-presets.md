@@ -8,9 +8,9 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 5c1f60ac-3741-4002-9c5d-c128f118342b
 translation-type: tm+mt
-source-git-commit: fed2e6474f710fd02cf27946252896ac33f3b256
+source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
 workflow-type: tm+mt
-source-wordcount: '314'
+source-wordcount: '313'
 ht-degree: 12%
 
 ---
@@ -34,7 +34,7 @@ Du kan använda en bildförinställning på en bild när du vill förhandsvisa d
 >
 >I Dynamic Media - Scene7-läget stöds endast bildförinställningar för bildresurser.
 
-**Använda förinställningar för dynamiska mediabilder**
+**Använda Dynamic Media-bildförinställningar**
 
 1. Öppna resursen och tryck på listrutan i den vänstra listen och tryck sedan på **[!UICONTROL Renditions.]**
 
@@ -57,5 +57,5 @@ Du kan använda en bildförinställning på en bild när du vill förhandsvisa d
    >
    >Om resursen *och* bildförinställningen ännu inte har publicerats är knappen **[!UICONTROL URL]** (eller knapparna **[!UICONTROL URL]** och **[!UICONTROL RESS]**, i förekommande fall) inte tillgängliga.
    >
-   >Observera också att bildförinställningar automatiskt publiceras på en Dynamic Media S7-server.
+   >Observera också att bildförinställningar automatiskt publiceras på en Dynamic Media-server.
 
