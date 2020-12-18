@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: f4051767-182e-4cfd-9dfc-8f516378e0b6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
+source-git-commit: 71e827dc17fd1c36230cb8d26b68d7f41c584e60
 workflow-type: tm+mt
 source-wordcount: '6221'
 ht-degree: 15%
@@ -34,7 +34,7 @@ Mer information om tillägg finns i [Adobe-tillägget](https://experienceleague.
 * Adobe Launch-integrering för Dynamic Media-visningsprogram fungerar inte i AEM författarnod. Du kan inte se någon spårning från en WCM-sida förrän den har publicerats.
 * Adobe Launch-integrering för Dynamic Media-visningsprogram stöds inte för &quot;popup&quot;-åtgärdsläget, där visningsprogrammets URL hämtas med knappen &quot;URL&quot; på sidan Resursinformation.
 * Integrering med Adobe Launch kan inte användas samtidigt med integrering med äldre visningsprogram med Analytics (via parametern `config2=`).
-* Stödet för videospårning är begränsat till enbart huvudspårning av uppspelning, vilket beskrivs i [Spårningsöversikt](https://experienceleague.adobe.com/docs/media-analytics/using/sdk-implement/track-av-playback/track-core-overview.html#player-events). Speciellt stöds inte QoS, Ads, Chapter/Segments eller Errors tracking.
+* Stödet för videospårning är begränsat till enbart huvuduppspelningsspårning, vilket beskrivs i [Spårningsöversikt](https://experienceleague.adobe.com/docs/media-analytics/using/sdk-implement/track-av-playback/track-core-overview.html#player-events). Speciellt stöds inte QoS, Ads, Chapter/Segments eller Errors tracking.
 * Konfiguration av lagringstid för dataelement stöds inte för dataelement med tillägget *Dynamic Media Viewer*. Lagringsvaraktighet måste anges till **[!UICONTROL None]**.
 
 ### Användningsexempel för integreringen {#use-cases-for-the-integration}
@@ -141,7 +141,7 @@ Om du vill spåra Dynamic Media-visningsprogram i AEM Sites måste du utföra al
 
 När konfigurationen är korrekt spåras data automatiskt i Adobe Analytics, Adobe Analytics for Video eller båda när du lägger till ett visningsprogram från Dynamic Media på en webbplats med en WCM-komponent som stöds av Dynamic Media.
 
-<!-- To be reviewed and updated:
+<!-- To be reviewed and updated although this is found live in the AEMaaCS version:
 See [Adding Dynamic Media Assets to Pages using Adobe Sites](https://helpx.adobe.com/experience-manager/6-5/help/assets/adding-dynamic-media-assets-to-pages.html).
 -->
 
@@ -155,7 +155,7 @@ Om konfigurationen är korrekt kan du lägga till stöd för Adobe Launch på en
 
 Se [Lägg till koden](https://experienceleague.adobe.com/docs/launch-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html#configure-launch) för Starta inbäddning om du vill veta mer om hur du använder inbäddningskod för Adobe Launch-bibliotek.
 
-<!-- To be reviewed and updated:
+<!-- To be reviewed and updated although this is found live in the AEMaaCS version:
 See [Embedding the Video or Image Viewer on a Web Page](https://helpx.adobe.com/experience-manager/6-5/help/assets/embed-code.html) to learn more about how to use the embed code feature of AEM Dynamic Media.
 -->
 
@@ -221,8 +221,7 @@ Det exakta värdet som returneras av dataelementet beror på sammanhanget. Om da
    * Använder Dynamic Media Viewer **[!UICONTROL PAN]**-händelsen som utlösare.
    * Skickar värdet för **[!UICONTROL ZoomScale]**-dataelement till Adobe Analytics.
 
-* 
-   * **[!UICONTROL TrackKey]** Regel med följande:
+* **[!UICONTROL TrackKey]** Regel med följande:
 
    * Använder knapptryckningshändelsen från Core Adobe Launch-tillägget som utlösare.
    * Skickar värdet för **[!UICONTROL ZoomScale]**-dataelement till Adobe Analytics.
@@ -502,7 +501,7 @@ När du har konfigurerat Adobe Launch kommer följande att konfigureras för int
 
 **Så här konfigurerar du Adobe Launch för integreringen**:
 
-1. Börja med att gå till Adobe Launch från Experience Cloud [startsidan](https://exc-home.experiencecloud.adobe.com/exc-home/home.html#/). På menyraden klickar du på ikonen Lösningar (tre gånger tre prickar) i det övre högra hörnet av sidan och sedan på **[!UICONTROL Launch]**.
+1. Börja med att gå till Adobe Launch från Experience Cloud [startsidan](https://exc-home.experiencecloud.adobe.com/exc-home/home.html#/). Klicka på ikonen Lösningar (tre gånger tre prickar) i det övre högra hörnet av sidan på menyraden och klicka sedan på **[!UICONTROL Launch]**.
 
    Du kan även [öppna Adobe Launch direkt](https://launch.adobe.com/).
 
