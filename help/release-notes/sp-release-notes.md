@@ -4,7 +4,7 @@ description: Versionsinformation för  [!DNL Adobe Experience Manager] 6.5 Servi
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 69dbfeab855f70167eead24f3d411df4c82a0050
+source-git-commit: 30701cfdb36e5caf606e31564179a632b0de9fb5
 workflow-type: tm+mt
 source-wordcount: '4140'
 ht-degree: 0%
@@ -39,9 +39,9 @@ De viktigaste funktionerna och förbättringarna i [!DNL Adobe Experience Manage
 
 * [!DNL Assets] och  [!DNL Dynamic Media] erbjuder flera tillgänglighetsförbättringar. Förbättringarna rör tangentbordsnavigering, användning av skärmläsare och möjlighet för användare att använda liknande hjälpmedelsteknik (AT). Se [[!DNL Assets] förbättringar](#assets-6570) och [[!DNL Dynamic Media] förbättringar](#dynamic-media-6570).
 
-* HTTP-klientkonfiguration för formulärdatamodell för optimering av prestanda.
+* [Form data model HTTP client ](../../help/forms/using/configure-data-sources.md#fdm-http-client-configuration) configuration to optimize performance.
 
-* Tillgänglighet för alternativet Återställ för varje komponent i layoutläget
+* [Tillgänglighet för alternativet Återställ för varje ](../../help/forms/using/resize-using-layout-mode.md#resize-components) komponent i layoutläget
 
 * [!DNL Experience Manager] 6.5 Service Pack 7 Forms förbättrar prestandan för:
 
@@ -226,7 +226,7 @@ Nedan följer en lista över korrigeringar i [!DNL Experience Manager] 6.5.7.0-v
 
 * Det går inte att hämta bilder som SmartCrop används på (CQ-4304558).
 
-* Det går inte att selektivt publicera mappar till dynamiska media (CQ-4304526).
+* Det går inte att selektivt publicera mappar till Dynamic Media (CQ-4304526).
 
 * Om du avpublicerar en videofil från [!DNL Experience Manager] avpubliceras inte den adaptiva videouppsättningen från en konfigurerad Scene7-distribution (CQ-4304405).
 
@@ -507,7 +507,7 @@ Om du vill hämta körtidskopian rekommenderar Adobe att du synkroniserar design
    * `com.adobe.granite.maintenance.impl.TaskScheduler`: Inga underhållsfönster hittades vid granit/drift/underhåll.
    * Validering på serversidan av adaptiva formulär misslyckas när sammanställningsfunktioner som SUM, MAX och MIN används. CQ-4274424
    * `com.adobe.granite.maintenance.impl.TaskScheduler` - Inga underhållsfönster hittades vid granit/drift/underhåll.
-   * Aktiveringspunkten i en interaktiv bild i Dynamic Media är inte synlig när du förhandsgranskar resursen via visningsprogrammet för den köpbara kanalen.
+   * Aktiveringspunkten i en interaktiv Dynamic Media-bild syns inte när du förhandsvisar mediefilen via Shoppable Banner Viewer.
 
 ## OSGi-paket och innehållspaket som ingår {#osgi-bundles-and-content-packages-included}
 
