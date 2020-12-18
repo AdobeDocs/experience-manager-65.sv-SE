@@ -2,9 +2,9 @@
 title: Versionsinformation om [!DNL Adobe Experience Manager Assets] 6.5.
 description: De nya funktionerna och förbättringarna i [!DNL Adobe Experience Manager] 6.5 [!DNL Assets].
 translation-type: tm+mt
-source-git-commit: 2cccbdea594bb9ba61e8c0f7884b724aab10b5da
+source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
 workflow-type: tm+mt
-source-wordcount: '901'
+source-wordcount: '897'
 ht-degree: 2%
 
 ---
@@ -68,7 +68,7 @@ I stora företag kan den infrastruktur som krävs för att skapa webbplatser dis
 
 [!DNL Dynamic Media] ger förbättrad multimediaproduktion och leverans  [!DNL Experience Manager Assets] för att skapa engagerande och personaliserade upplevelser. Genom att överföra en enda högkvalitativ överordnad resurs och använda vår avancerade molnrendering och våra visningsprogram kan ni leverera vilken kombination av renderingar som helst direkt för att stödja er organisations mediestrategi.
 
-Mer information om nya [!DNL Dynamic Media]-funktioner finns i [Versionsinformation om dynamiska media](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/release-notes/s7rn2017.html).
+Mer information om de nya [!DNL Dynamic Media]-funktionerna finns i [Versionsinformation för Dynamic Media](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/release-notes/s7rn2017.html).
 
 ### Stöd för 360-video {#video-support}
 
@@ -80,7 +80,7 @@ Nu kan du anpassa miniatyrbilderna för videomaterialet med hjälp av bildrutor 
 
 ### Tillgänglighetsförbättringar {#accessibility-enhancements}
 
-[!DNL Dynamic Media] visningsprogrammen har nu stöd för förbättrade hjälpmedelsfunktioner som Aria-support, skärmläsare och Alt-text. Mer information finns i [Versionsinformation för Dynamic Media-visningsprogram](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/home.html).
+[!DNL Dynamic Media] visningsprogrammen har nu stöd för förbättrade hjälpmedelsfunktioner som Aria-support, skärmläsare och Alt-text. Mer information finns i [Versionsinformation för Dynamic Media-visningsprogram](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html).
 
 ## Förbättrad sökupplevelse {#experience-enhancement-for-searching}
 
