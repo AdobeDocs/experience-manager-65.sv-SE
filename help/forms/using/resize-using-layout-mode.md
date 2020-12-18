@@ -2,9 +2,9 @@
 title: Använd layoutläget för att ändra storlek på komponenter för anpassningsbara formulär
 description: 'Definiera placeringen av komponenterna med det responsiva stödrastret som finns i layoutläget '
 translation-type: tm+mt
-source-git-commit: c62ad355469a95db89db44c34bb6df72d8f4bf77
+source-git-commit: 77fef5a1926c733abdaf01a19d9fdfc37323566e
 workflow-type: tm+mt
-source-wordcount: '1023'
+source-wordcount: '1046'
 ht-degree: 0%
 
 ---
@@ -31,14 +31,16 @@ Välj **Layout** i listrutan som visas högst upp i redigeringsgränssnittet fö
 1. Tryck på komponenten för att ändra storlek i layoutläget. De blå punkterna visas i början och slutet av det responsiva rutnätet.
 1. Dra och släpp de blå punkterna för att definiera placeringen av komponenten i det responsiva rutnätet.
 
-   ![Ändra storlek i layoutläget](assets/layout_mode_resize_new_updated.png)
+   ![Ändra storlek i layoutläget](assets/layout_mode_resize_new_updated1.png)
 
    Verktygsfältet som visas när du har tryckt på komponenter består av följande alternativ:
 
    * **Överordnad:** Välj överordnad för en komponent.
    * **Flyt till ny rad:** Skift komponenten till nästa rad om det finns flera komponenter inom samma rad.
 
-   Du kan ångra alla storleksändringar och använda standardlayout på panelen som innehåller storleksändrade komponenter med alternativet **[!UICONTROL Revert breakpoint layout]** ( ![Återställ brytpunkt](assets/reverttopreviouslypublishedversion.png)). Tryck på den överordnade för den storleksändrade komponenten för att visa alternativet.
+   Dessutom kan du ångra alla ändringar av storleksändring och använda standardlayout på panelen som innehåller storleksändrade komponenter med alternativet **[!UICONTROL Revert breakpoint layout]** ( ![Återställ brytpunkt](assets/reverttopreviouslypublishedversion.png)). Tryck på den överordnade för den storleksändrade komponenten för att visa alternativet.
+
+   Du kan trycka på komponenten och använda alternativet **[!UICONTROL Revert breakpoint layout]** för att ångra alla storleksändringar och använda standardlayout på komponentnivå.
 
    >[!NOTE]
    >
