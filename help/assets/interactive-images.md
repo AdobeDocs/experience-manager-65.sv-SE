@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: a6f58f6a-015a-4ced-941c-ef1b6d3e1d6f
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 90c99e527a40bb663d4f32d8746b46cf34a2319f
+source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
 workflow-type: tm+mt
-source-wordcount: '4301'
+source-wordcount: '4297'
 ht-degree: 1%
 
 ---
@@ -45,7 +45,7 @@ Självstudiekursen visar hur du integrerar interaktiva bilder på din egen webbp
 
 Interactive Images:
 
-1. **(Valfritt) Identifiera hotspot-variabler**  - Om du använder fristående AEM Assets och Dynamic Media börjar du med att identifiera dynamiska variabler som används i den befintliga QuickView-implementeringen så att du kan ange hotspot-data när du skapar den interaktiva bilden. Se [(Valfritt) Identifiera hotspot-variabler](#optional-identifying-hotspot-variables).
+1. **(Valfritt) Identifiera hotspot-variabler**  - Om du använder fristående AEM Assets och Dynamic Media kan du börja med att identifiera dynamiska variabler som används i den befintliga QuickView-implementeringen så att du kan ange hotspot-data när du skapar den interaktiva bilden. Se [(Valfritt) Identifiera hotspot-variabler](#optional-identifying-hotspot-variables).
 Men om du använder AEM Sites, eller AEM e-handel, eller båda, är det här steget inte nödvändigt.
 Se [e-handelskoncept i AEM Assets](/help/sites-administering/concepts.md).
 
@@ -62,7 +62,7 @@ Se [Överföra en bildbanderoll](#uploading-an-image-banner).
    * Mer information om hur du publicerar interaktiva bildresurser finns i [Publicera resurser](/help/assets/publishing-dynamicmedia-assets.md).
 
 1. **Om du lägger till en interaktiv bild till din webbplats eller till din webbplats i**
-AEMIom du använder AEM Sites, eller AEM e-handel, eller båda, kan du lägga till den interaktiva bilden direkt till en webbsida i AEM genom att dra Interactive Media-komponenten till sidan. Se [Lägga till dynamiska medieresurser på sidor.](/help/assets/adding-dynamic-media-assets-to-pages.md)
+AEMIom du använder AEM Sites, eller AEM e-handel, eller båda, kan du lägga till den interaktiva bilden direkt till en webbsida i AEM genom att dra Interactive Media-komponenten till sidan. Se [Lägga till Dynamic Media-resurser på sidor.](/help/assets/adding-dynamic-media-assets-to-pages.md)
 Om du använder fristående AEM Assets och Dynamic Media måste du kopiera den inbäddade koden på webbplatsen och sedan integrera den med din befintliga QuickView. Se [Integrera en interaktiv bild med din webbplats](#integrating-an-interactive-image-with-your-website).
 Om du använder en WCM-fil (Web Content Manager) från tredje part måste du integrera den nya interaktiva videon med den befintliga QuickView-implementeringen som används på webbplatsen. Se [Integrera en interaktiv bild med en befintlig Quickview](#integrating-an-interactive-image-with-an-existing-quickview).
 
@@ -328,7 +328,7 @@ Du kan använda Förhandsgranska för att se hur den interaktiva bilden kommer a
 När du är nöjd med den interaktiva bilden kan du publicera den.
 Se [Bädda in video- eller bildvisningsprogrammet på en webbsida](/help/assets/embed-code.md).
 Se [Länka URL:er till ditt webbprogram](/help/assets/linking-urls-to-yourwebapplication.md). Observera att den URL-baserade länkningsmetoden inte är möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till AEM Sites-sidor.
-Se [Lägga till dynamiska medieresurser på sidor.](/help/assets/adding-dynamic-media-assets-to-pages.md)
+Se [Lägga till Dynamic Media-resurser på sidor.](/help/assets/adding-dynamic-media-assets-to-pages.md)
 
 **Förhandsgranska interaktiva bilder**
 
@@ -345,7 +345,7 @@ Mer information om hur du publicerar interaktiva bildresurser finns i [Publicera
 
 När du har överfört en banderollbild, lagt till aktiveringspunkter i bilden och publicerat den interaktiva bilden kan du nu lägga till den på din webbsida.
 
-Om du är kund hos AEM Sites kan du lägga till den interaktiva bilden genom att dra Interactive Media-komponenten till din sida. Se [Lägga till dynamiska medieresurser på sidor.](/help/assets/adding-dynamic-media-assets-to-pages.md)
+Om du är kund hos AEM Sites kan du lägga till den interaktiva bilden genom att dra Interactive Media-komponenten till din sida. Se [Lägga till Dynamic Media-resurser på sidor.](/help/assets/adding-dynamic-media-assets-to-pages.md)
 
 Om du är en fristående AEM Assets-kund kan du lägga till den interaktiva bilden manuellt på din webbplats enligt beskrivningen i det här avsnittet.
 
@@ -377,9 +377,9 @@ Integrationen är lika enkel som att ta bort taggen `IMG` och ersätta den med d
 
 Om du vill tillämpa en beskärning på en interaktiv bild för en responsiv miljö kan du inkludera konfigurationsattributet för interaktiv bild `ZoomView.iscommand` i sökvägen, där `ZoomView` är den komponent som ska anropas och `iscommand` är det beskärningsbildserings-kommando som du använder.
 
-Se [ZoomView.iscommand](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/command-reference-configuration-attributes-interactive-images/r-html5-aem-interactive-image-config-attrib-zoomview-iscommand.html) konfigurationsattribut.
+Se [ZoomView.iscommand](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/command-reference-configuration-attributes-interactive-images/r-html5-aem-interactive-image-config-attrib-zoomview-iscommand.html) konfigurationsattribut.
 
-Se [kommandot för att beskära](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-crop.html) bilder.
+Se [kommandot för att beskära](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-crop.html) bilder.
 
 Nu kan du integrera den interaktiva bilden med en befintlig Quickview på webbplatsen.
 
