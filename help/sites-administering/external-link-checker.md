@@ -2,9 +2,9 @@
 title: Länkkontrollen
 description: Länkkontrollen hjälper till att validera både interna och externa länkar och tillåter att länkar skrivs om.
 translation-type: tm+mt
-source-git-commit: 861cd74e1b2fd3d210647d83dee5d9a6fcead22a
+source-git-commit: 8a551cce581056cb274b1d8567f579fc73a95d3c
 workflow-type: tm+mt
-source-wordcount: '970'
+source-wordcount: '986'
 ht-degree: 0%
 
 ---
@@ -65,14 +65,14 @@ Så här använder du den externa länkkontrollen:
 1. Använd **Navigering**, välj **Verktyg** och sedan **Platser**.
 1. Välj **Extern länkkontroll** och en lista över alla externa länkar visas.
 
-![](assets/external-link-checker.png)
+![Fönstret External Link Checker](assets/external-link-checker.png)
 
 Följande information visas:
 
-* **Status**  - länkens verifieringsstatus
+* **Status**  - Valideringsstatusen för länken, som kan vara något av följande:
    * **Giltig**  - Den externa länken kan nås av länkkontrollen
    * **Väntande**  - Den externa länken lades till i webbplatsinnehållet, men har ännu inte validerats av Länkkontrollen
-   * **Ogiltig**  - Den externa länken kan inte nås av länkkontrollen.
+   * **Ogiltig**  - den externa länken kan inte nås av länkkontrollen
 * **URL**  - den externa länken
 * **Referent**  - Innehållssidan som innehåller den externa länken
    * Detta är bara ifyllt [om det är konfigurerat.](#configuring)
@@ -80,7 +80,7 @@ Följande information visas:
    * Hur ofta länkar kontrolleras [kan konfigureras.](#configuring)
 * **Senaste status**  - Den senaste HTML-statuskoden som returnerades när länken senast kontrollerades
 * **Senast tillgänglig**  - Tid sedan länken senast var tillgänglig för länkkontrollen
-* **Senast använd**  - tid sedan länken senast användes av länkkontrollen
+* **Senast använd**  - tid sedan sidan med den externa länken senast öppnades i redigeringsgränssnittet
 
 Du kan ändra innehållet i fönstret genom att använda de två knapparna högst upp i länklistan:
 
