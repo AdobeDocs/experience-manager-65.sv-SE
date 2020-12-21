@@ -3,9 +3,9 @@ title: '[!DNL Adobe Experience Manager] 6.5 Versionsinformation om föregående 
 description: Versionsinformation för [!DNL Adobe Experience Manager] 6.5 Service Packs.
 contentOwner: AK
 translation-type: tm+mt
-source-git-commit: 22112319b31576d542d04bdc3519795b02db356c
+source-git-commit: 9be522fd8354674ad40691e99b349a6fd7bff2b5
 workflow-type: tm+mt
-source-wordcount: '14525'
+source-wordcount: '14670'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ De viktigaste funktionerna och förbättringarna i Adobe Experience Manager 6.5.
 
 * En ny företagsinställning anges för att återspegla statusen för [!DNL Dynamic Media]-kopplingen.
 
-* Standardalternativen för `test` och `aiprocess` uppdateras till `Thumbnail`, från `Rasterize` tidigare i Dynamic Media, för att säkerställa att användarna bara behöver skapa miniatyrbilder och hoppa över sidextraheringen och nyckelordsextraheringen.
+* Standardalternativen för `test` och `aiprocess` uppdateras till `Thumbnail` från `Rasterize` tidigare i Dynamic Media för att säkerställa att användare bara behöver skapa miniatyrbilder och hoppa över sidextraheringen och nyckelordsextraheringen.
 
 * [Fyll i ett anpassat formulär i förväg på klienten](../../help/forms/using/prepopulate-adaptive-form-fields.md#prefill-at-client).
 
@@ -95,6 +95,15 @@ Nedan följer en lista över korrigeringar i [!DNL Experience Manager] 6.5.6.0-v
 * I bläddringsläget lägger inte NVDA till en berättarröst för ett värde som är valt på menyalternativet Typ/Storlek. Det visuella fokus ligger inte på det markerade elementet. Användare som förlitar sig på en skärmläsare kan inte använda bläddringsläget (CQ-4294993).
 * När du skapar en webbsida kan användarna välja [!UICONTROL Content Page]-mall. På fliken [!UICONTROL Social Media] väljer användarna ett [!UICONTROL Preferred XF variation]. Användarna kan inte använda tangentbordstangenter för att välja ett Experience Fragment i NVDA-bläddringsläge (CQ-4292669).
 * Hanteringsbiblioteket uppdaterades till den säkrare versionen v4.7.3 (NPR-34484).
+* Flera instanser av korsskriptning mellan webbplatser i [!DNL Experience Manager Sites]-komponenter (NPR-33925).
+* Mappnamnsfältet när du skapar en ny mapp kan användas med korsskriptning mellan webbplatser (GRANITE-30094).
+* Sökresultaten på [!UICONTROL  Welcome]-sidan och mallen för komplettering av sökväg är sårbara för serveröverskridande skriptning (NPR-33719, NPR-33718).
+* Om du skapar en binär egenskap på en ostrukturerad nod får du serveröverskridande skriptning (cross-site scripting) i dialogrutan för binär egenskap (NPR-33717).
+* Serveröverskridande skriptning (cross-site scripting) när alternativet [!UICONTROL Access Control Test] används i CRX DE-gränssnittet (NPR-33716).
+* Användarindata är inte korrekt kodade för olika komponenter när information skickas till klienten (NPR-33695).
+* Serveröverskridande skriptning (cross site scripting) i kalendervyn för Experience Manager Inbox (NPR-33545).
+* En URL som slutar med `childrenlist.html` visar en HTML-sida i stället för ett 404-svar. Sådana URL:er är sårbara för serveröverskridande skriptning (NPR-33441).
+
 
 ### [!DNL Assets] {#assets-6560}
 
@@ -201,7 +210,7 @@ Nedan följer en lista över korrigeringar i [!DNL Experience Manager] 6.5.6.0-v
 * Körningskopian av resurser i en anpassad arbetsflödesmodell (skapad i `/var/workflow/models/dam`) tas bort när du installerar [!DNL Experience Manager] 6.5 Service Pack 5 eller en tidigare version på [!DNL Experience Manager] 6.5 (NPR-34532). Om du vill hämta körtidskopian synkroniserar du designtidskopian av arbetsflödesmodellen med körtidskopian med HTTP API:
    `<designModelPath>/jcr:content.generate.json`.
 
-**Problem som har åtgärdats i Dynamic Media**
+**Problem som har korrigerats i Dynamic Media**
 
 * Om användaren definierar kodningsinställningarna i redigeringar efter att videoprofilen har skapats, tas inställningarna för smart beskärning bort från videoprofiler (CQ-4299177).
 
@@ -281,6 +290,8 @@ Nedan följer en lista över korrigeringar i [!DNL Experience Manager] 6.5.6.0-v
 
 * Befintliga användare i en community-grupp som lagts till via Admin Console tas bort från användarlistan vid ändringar i community-gruppkonsolen (NPR-34315).
 
+* `TagFilterServlet` läcker potentiellt känsliga data (NPR-33868).
+
 <!--
 * Tag filters are vulnerable to sensitive information disclosure (NPR-33868).
 -->
@@ -328,6 +339,8 @@ När du har installerat tilläggspaketet [!DNL Experience Manager Forms] 6.5.6.0
 * När du öppnar fältkonfigurationen för första gången visas inte egenskapsikonen (CQ-4296284).
 
 * Användare kan redigera inskickningsmetadata, t.ex. `afPath`, `afSubmissionTime` och `signers`, när de skickar in ett anpassat formulär. För att lösa problemet tas metadatavärdena bort från informationen om att skicka formulär på klientsidan. Användare kan använda objektet `FormSubmitInfo` för att hämta dessa värden från servern (NPR-33654).
+
+* Användarindata är inte korrekt kodade för [!DNL Forms]-komponenter när information skickas till klienten (NPR-33611).
 
 **Arbetsflöde**
 
@@ -571,11 +584,11 @@ Nedan följer en lista över korrigeringar i [!DNL Experience Manager] 6.5.5.0-v
 
 * Undantag observeras i loggar vid öppning av renderingsspår för en PDF-fil i en mapp med en smart beskärningsprofil (CQ-4294201).
 
-* Bildförinställningar publiceras inte om [!UICONTROL Dynamic Media sync mode] är inaktiverat som standard på Experience Manager med Scene7-körningsläget Dynamic Media (CQ-4294200).
+* Bildförinställningar publiceras inte om [!UICONTROL Dynamic Media sync mode] är inaktiverat som standard på Experience Manager med Dynamic Media Scene7 runmode (CQ-4294200).
 
 * Resursbearbetning när massöverföring fastnar och arbetsflödesinstansen visar fasta instanser av DAM-uppdateringsresurs (CQ-4293916).
 
-* Det går att skapa en dynamisk mediekonfiguration i Experience Manager, men i användargränssnittet händer inget när du väljer Spara (CQ-4292442).
+* Det går att skapa en Dynamic Media-konfiguration i Experience Manager, men i användargränssnittet händer inget när du väljer Spara (CQ-4292442).
 
 * Förhandsgranskning av F4V-videomaterial fungerar inte i progressiv uppspelning på Safari/Mac (CQ-4289844).
 
@@ -587,11 +600,11 @@ Nedan följer en lista över korrigeringar i [!DNL Experience Manager] 6.5.5.0-v
 
 * Prestandaproblem som åtgärdas i 6.5.5.0 är (CQ-4279206):
 
-   * Det tar för lång tid att överföra stora binära filer till servrar för bildbearbetning i dynamiska media.
+   * Det tar för lång tid att överföra stora binära filer till Dynamic Media bildbehandlingsservrar.
 
-   * Genereringstiden för miniatyrbilder på Experience Manager ökar på grund av Scene7-arkitekturen för dynamiska media.
+   * Genereringstiden för miniatyrbilder på Experience Manager ökar på grund av Dynamic Media Scene7-arkitekturen.
 
-* Dynamic Media Scene7 migreringsproblem misslyckas för kunder med ett stort antal mediefiler (CQ-4279206).
+* Migreringsproblem med Dynamic Media Scene7 misslyckas för kunder med ett stort antal mediefiler (CQ-4279206).
 
 * Layouten för visningsprogrammet för video 360 fungerar inte om `setVideo` används och videon ändras när `video= modifier` används (CQ-4263201).
 
@@ -703,7 +716,7 @@ Några viktiga funktioner och förbättringar i Adobe Experience Manager 6.5.4.0
 
 * Den inbyggda databasen (Apache Jackrabbit Oak) uppdateras till version 1.10.8.
 
-* Nu kan du synkronisera selektiva innehållsunderträd till *Dynamiska media - Scene7-läge* i stället för alla tillgängliga på `content/dam`.
+* Nu kan du synkronisera underordnade innehållsträd till *Dynamic Media - Scene7-läge* i stället för alla tillgängliga på `content/dam`.
 
 * Integrering av formulärdatamodell med SOAP-webbtjänst har nu stöd för urvalsgrupper eller attribut för element.
 
@@ -791,11 +804,11 @@ En fullständig lista över funktioner och viktiga högdagrar som introducerats 
 
 * Touch UI-sökning (utförd via Omnissearch)-resultatsidan rullar automatiskt upp och förlorar användarens rullningsposition (NPR-31307).
 
-* Assets detail page of PDF assets does not show action buttons except To Collection and Add Rendition buttons in Experience Manager running on Dynamic Media Scene7 run mode (CQ-4286705).
+* Assets detail page of PDF assets does not show action buttons except To Collection and Add Rendition buttons in Experience Manager running mode (CQ-4286705).
 
 * Resurserna tar för lång tid att bearbeta genom batchöverföringen i Scene7 (CQ-4286445).
 
-* Knappen Spara importerar inte fjärruppsättningen när användaren inte har gjort några ändringar i Set Editor i Dynamic Media Client (CQ-4285690).
+* Knappen Spara importerar inte fjärruppsättningen när användaren inte har gjort några ändringar i uppsättningsredigeraren i Dynamic Media Client (CQ-4285690).
 
 * Miniatyrbilden av 3D-resursen är inte informativ när en 3D-modell som stöds har importerats till Experience Manager (CQ-4283701).
 
@@ -803,7 +816,7 @@ En fullständig lista över funktioner och viktiga högdagrar som introducerats 
 
 * Felaktig behållarhöjd för en överförd 3D-modell som förhandsvisats i 3D-visningsprogrammet visas på objektets informationssida (CQ-4283309).
 
-* Carousel Editor öppnas inte i IE 11 i läget Experience Manager Dynamic Media Hybrid (CQ-425590).
+* Carousel Editor öppnas inte i IE 11 i Experience Manager Dynamic Media Hybrid-läge (CQ-425590).
 
 * Tangentbordsfokus fastnar i den nedrullningsbara menyn E-post i hämtningsdialogrutan i webbläsarna Chrome och Safari (NPR-32067).
 
@@ -1420,7 +1433,7 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 * Ett problem med Scene7 videospelare när den expanderar till helskärm. Programfix för CQ-4266700
 * ZoomVerticalViewer: Panoreringsknappar ska inte visas om en enda bildresurs används. Programfix för CQ-4264795
 * Om du tar bort en underordnad nod i live-kopian bör liveRelationship frigöras. Programfix för CQ-4270395
-* Metadataschemat innehåller bara objekt från den globala konfigurationen och saknar dem från den aktiva klientorganisationen. URL-värdet för formPath återställs till standard även om det ändras. NPR-29945: Programfix för CQ-4262898
+* Metadataschemat innehåller bara objekt från den globala konfigurationen och saknar dem från den aktiva klientorganisationen. URL-värdet för formPath återställs till standard även om det ändras. NPR-29944: Programfix för CQ-4262898
 * Publicera bildförinställningar till [!DNL Brand Portal] misslyckas med 500-felkod. NPR-29510: Programfix för CQ-4268659
 
 ### Webbplatser
