@@ -1,8 +1,8 @@
 ---
 title: Återge HTML Forms med anpassade CSS-filer
 seo-title: Återge HTML Forms med anpassade CSS-filer
-description: 'null'
-seo-description: 'null'
+description: Använd tjänsten Forms för att referera till anpassade CSS-filer för att återge HTML-formulär som svar på en HTTP-begäran från en webbläsare. Du kan återge ett HTML-formulär som använder en CSS-fil med Java API och Web Service API.
+seo-description: Använd tjänsten Forms för att referera till anpassade CSS-filer för att återge HTML-formulär som svar på en HTTP-begäran från en webbläsare. Du kan återge ett HTML-formulär som använder en CSS-fil med Java API och Web Service API.
 uuid: a44e96f1-001d-48a2-8c96-15cb9d0c71b3
 contentOwner: admin
 content-type: reference
@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 8fe7c072-7df0-44b7-92d0-bf39dc1e688a
 translation-type: tm+mt
-source-git-commit: fcbe1d860410e215cb7c438f94579e0b14d262a5
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '1640'
+source-wordcount: '1724'
 ht-degree: 0%
 
 ---
