@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 3e81b519-57ca-4ee1-94bd-7adac4605407
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ef57d53fc780bd222abbe994fc71e133ce8a77fc
+source-git-commit: 3202866bd38779a9784e44ab470152df61c585f5
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '821'
 ht-degree: 0%
 
 ---
@@ -97,9 +97,9 @@ Så här gör du den identiska konfigurationen tillgänglig i publiceringsmiljö
 
 I AEM Author-instans:
 
-* Navigera från huvudmenyn till **[!UICONTROL Tools > Operations > Replication]**.
+* Navigera från huvudmenyn till **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Replication]**
 * Välj **Aktivera träd**
-* **Startsökväg**: bläddra till  `/etc/socialconfig/srpc/`
+* **Startsökväg**: bläddra till  `/conf/global/settings/communities/srpc/`
 * Avmarkera **Bara ändrad**
 * Välj **Aktivera**
 
@@ -144,8 +144,8 @@ Kontrollera att ASRP har konfigurerats som standardprovider genom att kontroller
 
 Gå till konsolen Lagringskonfiguration på alla författare och publicera AEM eller kontrollera AEM.
 
-I JCR, if [/etc/socialconfig](https://localhost:4502/crx/de/index.jsp#/etc/socialconfig/):
+I JCR, om [/conf/global/settings/communities](https://localhost:4502/crx/de/index.jsp#/etc/socialconfig/):
 
-* Innehåller ingen [srpc](https://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc)-nod, vilket betyder att lagringsprovidern är JSRP.
-* Om srpc-noden finns och innehåller noden [defaultconfiguration](https://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc/defaultconfiguration), definierar standardkonfigurationens egenskaper att ASRP ska vara standardprovider.
+* Innehåller ingen [srpc](https://localhost:4502/crx/de/index.jsp#/conf/global/settings/communities/srp)-nod, vilket betyder att lagringsprovidern är JSRP.
+* Om srpc-noden finns och innehåller [defaultconfiguration](https://localhost:4502/crx/de/index.jsp#/conf/global/settings/communities/srp/defaultconfiguration)-noden definierar standardkonfigurationens egenskaper att ASRP ska vara standardprovider.
 
