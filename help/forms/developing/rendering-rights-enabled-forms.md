@@ -1,8 +1,8 @@
 ---
 title: Rendering Rights-aktiverad Forms
 seo-title: Rendering Rights-aktiverad Forms
-description: 'null'
-seo-description: 'null'
+description: Använd tjänsten Forms för att återge formulär som har användarrättigheter. Du kan återge behörighetsaktiverade formulär med Java API och Web Service API.
+seo-description: Använd tjänsten Forms för att återge formulär som har användarrättigheter. Du kan återge behörighetsaktiverade formulär med Java API och Web Service API.
 uuid: ce5e4be6-d9b0-4989-a0e1-a8c3b98aed77
 contentOwner: admin
 content-type: reference
@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: d4c2b2f0-613a-409d-b39b-8e37fdb96eea
 translation-type: tm+mt
-source-git-commit: 7cbe3e94eddb81925072f68388649befbb027e6d
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '1441'
+source-wordcount: '1493'
 ht-degree: 0%
 
 ---
