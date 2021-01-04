@@ -1,8 +1,8 @@
 ---
 title: Skapa PDF-dokument med skickade XML-data
 seo-title: Skapa PDF-dokument med skickade XML-data
-description: 'null'
-seo-description: 'null'
+description: Använd tjänsten Forms för att hämta formulärdata som användaren har angett i ett interaktivt formulär. Skicka formulärdata till en annan AEM Forms-tjänst och skapa ett PDF-dokument med hjälp av data.
+seo-description: Använd tjänsten Forms för att hämta formulärdata som användaren har angett i ett interaktivt formulär. Skicka formulärdata till en annan AEM Forms-tjänst och skapa ett PDF-dokument med hjälp av data.
 uuid: 2676c614-8988-451b-ac7c-bd07731a3f5f
 contentOwner: admin
 content-type: reference
@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 62490230-a24e-419d-95bb-c0bb04a03f96
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '1279'
+source-wordcount: '1347'
 ht-degree: 0%
 
 ---
