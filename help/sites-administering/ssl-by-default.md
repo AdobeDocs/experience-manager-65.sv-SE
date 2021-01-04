@@ -11,9 +11,9 @@ topic-tags: Security
 discoiquuid: 68077369-0549-4c0f-901b-952e323013ea
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4b965d8f7814816126601f6366c1ba313e404538
+source-git-commit: 93ee9338fc2e78d01a9b62e8040c4674262ef6be
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '800'
 ht-degree: 0%
 
 ---
@@ -160,7 +160,7 @@ Du kan också automatisera SSL-konfigurationen genom att överföra ett paket so
 
 ### Genererar en privat nyckel/ett certifikatpar som ska användas med guiden {#generating-a-private-key-certificate-pair-to-use-with-the-wizard}
 
-Här nedan hittar du ett exempel på hur du skapar ett självsignerat certifikat i DER-format som kan användas i SSL-guiden.
+Här nedan hittar du ett exempel på hur du skapar ett självsignerat certifikat i DER-format som kan användas i SSL-guiden. Installera OpenSSL baserat på operativsystemet, öppna kommandotolken för OpenSSL och ändra katalogen till den mapp där du vill generera den privata nyckeln/certifikatet.
 
 >[!NOTE]
 >
@@ -176,7 +176,7 @@ Här nedan hittar du ett exempel på hur du skapar ett självsignerat certifikat
 1. Generera sedan en CSR-begäran (Certificate Signing Request) med hjälp av en privat nyckel:
 
    ```shell
-   openssl req -sha256 -new -key localhostprivate.key -out localhost.csr -subj '/CN=localhost'
+   openssl req -sha256 -new -key localhostprivate.key -out localhost.csr -subj "/CN=localhost"
    ```
 
 1. Generera SSL-certifikatet och signera det med den privata nyckeln. I det här exemplet upphör att gälla ett år från och med nu:
