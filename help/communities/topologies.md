@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 46f135de-a0bf-451d-bdcc-fb29188250aa
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: 612d102b5925704ce459ad818554e487ec0d5355
 workflow-type: tm+mt
-source-wordcount: '562'
+source-wordcount: '560'
 ht-degree: 0%
 
 ---
@@ -110,6 +110,6 @@ Om du väljer [ASRP](asrp.md), [DSRP](dsrp.md) eller [MSRP](msrp.md) för produk
 
    I princip lagras webbplatsinnehållet i en nodbutik. För Assets kan ett datalager konfigureras att lagra binära data. För Communities måste en gemensam butik konfigureras för att välja SRP.
 
-* [Lagringselement i AEM 6.3](../../help/sites-deploying/storage-elements-in-aem-6.md)
+* [Lagringselement](../../help/sites-deploying/storage-elements-in-aem-6.md)
 
    Beskriver implementeringarna av lagring i två noder: Tjära och MongoDB.
