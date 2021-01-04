@@ -1,8 +1,8 @@
 ---
 title: Arbeta med PDF-verktyg
 seo-title: Arbeta med PDF-verktyg
-description: 'null'
-seo-description: 'null'
+description: Använd tjänsten PDF Utilities för att konvertera mellan PDF- och XDP-filformat, ange och hämta PDF-dokumentegenskaper samt hantera XMP metadata.
+seo-description: Använd tjänsten PDF Utilities för att konvertera mellan PDF- och XDP-filformat, ange och hämta PDF-dokumentegenskaper samt hantera XMP metadata.
 uuid: a2ea2359-c547-4f1b-b6ca-f276f816e36a
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: d816bf2e-5236-4084-b7c4-c32b72cdff97
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '2548'
+source-wordcount: '2592'
 ht-degree: 0%
 
 ---
