@@ -10,44 +10,44 @@ topic-tags: develop
 discoiquuid: f79828d8-2230-4477-8ffa-eeb6a0413acd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4abfda568fc15f225510c79635387142aefddc72
+source-git-commit: 70fff9b4029ba70fe0667dafa69fc6172f4b1733
 workflow-type: tm+mt
-source-wordcount: '3861'
+source-wordcount: '3553'
 ht-degree: 0%
 
 ---
 
 
-# Använda Adobe Sign i anpassningsbar form{#using-adobe-sign-in-an-adaptive-form}
+# Använda [!DNL Adobe Sign] i en adaptiv form{#using-adobe-sign-in-an-adaptive-form}
 
-Adobe Sign möjliggör e-signaturarbetsflöden för anpassningsbara formulär. E-signaturer förbättrar arbetsflödena för att bearbeta dokument inom juridik, försäljning, löneadministration, personaladministration och andra områden.
+[!DNL Adobe Sign] möjliggör arbetsflöden för e-signaturer för anpassningsbara formulär. E-signaturer förbättrar arbetsflödena för att bearbeta dokument inom juridik, försäljning, löneadministration, personaladministration och andra områden.
 
-I ett typiskt Adobe Sign-scenario och ett scenario med adaptiva formulär fyller en användare i ett adaptivt formulär som kan användas för en tjänst. Till exempel kräver en ansökan om inteckning och kreditkort juridiska signaturer från alla låntagare och medsökande. Om du vill aktivera arbetsflöden för elektroniska signaturer för liknande scenarier kan du integrera Adobe Sign med AEM Forms. Några exempel till är:
+I ett typiskt [!DNL Adobe Sign]- och adaptivt formulärscenario fyller en användare i ett adaptivt formulär som kan användas för en tjänst. Till exempel kräver en ansökan om inteckning och kreditkort juridiska signaturer från alla låntagare och medsökande. Om du vill aktivera arbetsflöden för elektroniska signaturer för liknande scenarier kan du integrera [!DNL Adobe Sign] med AEM [!DNL Forms]. Ytterligare några exempel är:[!DNL Adobe Sign]
 
 * Slut avtal från vilken enhet som helst med fullt automatiserade processer för förslag, offerter och kontrakt.
 * Slutför HR-processerna snabbare och ge medarbetarna de digitala upplevelserna.
 * Minska kontraktscyklerna och anlita era leverantörer snabbare.
 * Skapa digitala arbetsflöden som automatiserar vanliga processer.
 
-Adobe Sign-integrering med AEM Forms har stöd för:
+[!DNL Adobe Sign] integrering med AEM  [!DNL Forms] stöder:
 
 * Arbetsflöden för signering för en och flera användare
 * Sekventiella och samtidiga signeringsarbetsflöden
 * Underteckna i form och i form
 * Signera formulär som anonym eller inloggad användare
-* Dynamiska signeringsprocesser (integration med AEM Forms-arbetsflöde)
+* Dynamiska signeringsprocesser (integration med AEM [!DNL Forms] arbetsflöde)
 * Autentisering via kunskapsbas, telefon och sociala profiler
 
 ## Förutsättningar {#prerequisites}
 
-Innan du använder Adobe Sign i en adaptiv form:
+Innan du använder [!DNL Adobe Sign] i en adaptiv form:
 
-* Kontrollera att AEM Forms molntjänst är konfigurerad att använda Adobe Sign. Mer information finns i [Integrera Adobe Sign med AEM Forms](../../forms/using/adobe-sign-integration-adaptive-forms.md).
+* Kontrollera att AEM [!DNL Forms]-molntjänsten är konfigurerad att använda [!DNL Adobe Sign]. Mer information finns i [Integrera Adobe Sign med AEM Forms](../../forms/using/adobe-sign-integration-adaptive-forms.md).
 * Håll listan med signerare klar. Du måste ange minst en e-postadress för varje signerare.
 
-## Konfigurera Adobe Sign för ett adaptivt formulär {#configure-adobe-sign-for-an-adaptive-form}
+## Konfigurera [!DNL Adobe Sign] för ett adaptivt formulär {#configure-adobe-sign-for-an-adaptive-form}
 
-Så här konfigurerar du Adobe Sign för ett anpassat formulär:
+Utför följande steg för att konfigurera [!DNL Adobe Sign] för ett anpassat formulär:
 
 1. [Redigera adaptiva formuläregenskaper för Adobe-signering](../../forms/using/working-with-adobe-sign.md#enableadobesign)
 1. [Lägga till Adobe Sign-fält i ett anpassat formulär](../../forms/using/working-with-adobe-sign.md#addadobesignfieldstoanadaptiveform)
@@ -59,13 +59,13 @@ Så här konfigurerar du Adobe Sign för ett anpassat formulär:
 
 ![Information om signerare](assets/signer_details_new.png)
 
-### Redigera adaptiva formuläregenskaper för Adobe Sign {#enableadobesign}
+### Redigera adaptiva formuläregenskaper för [!DNL Adobe Sign] {#enableadobesign}
 
-Konfigurera anpassningsbara formuläregenskaper för Adobe Sign för ett befintligt eller nytt anpassbart formulär.
+Konfigurera adaptiva formuläregenskaper för [!DNL Adobe Sign] för ett befintligt eller nytt adaptivt formulär.
 
 [Skapa ett adaptivt formulär för Adobe ](../../forms/using/working-with-adobe-sign.md#create-an-adaptive-form-for-adobe-sign) Signbeskriver stegen för att skapa ett enkelt adaptivt formulär. Se [Skapa ett adaptivt formulär](../../forms/using/creating-adaptive-form.md) för andra alternativ som är tillgängliga när du skapar ett adaptivt formulär.
 
-#### Skapa ett anpassat formulär för Adobe Sign {#create-an-adaptive-form-for-adobe-sign}
+#### Skapa ett anpassat formulär för [!DNL Adobe Sign] {#create-an-adaptive-form-for-adobe-sign}
 
 Så här skapar du ett signeringsaktiverat anpassat formulär:
 
@@ -73,9 +73,9 @@ Så här skapar du ett signeringsaktiverat anpassat formulär:
 1. Tryck på **[!UICONTROL Create]** och välj **[!UICONTROL Adaptive Form]**. En lista med mallar visas. Markera mallen och tryck på **[!UICONTROL Next]**.
 1. På fliken **[!UICONTROL Basic]**:
 
-   1. Ange **namnet** och **titeln** för det adaptiva formuläret.
+   1. Ange **[!UICONTROL Name]** och **[!UICONTROL Title]** för det adaptiva formuläret.
 
-   1. Markera [konfigurationsbehållaren](../../forms/using/adobe-sign-integration-adaptive-forms.md#configure-adobe-sign-with-aem-forms) som skapades när Adobe Sign konfigurerades med AEM Forms.
+   1. Markera [konfigurationsbehållaren](../../forms/using/adobe-sign-integration-adaptive-forms.md#configure-adobe-sign-with-aem-forms) som skapades när [!DNL Adobe Sign] konfigurerades med AEM [!DNL Forms].
 
       >[!NOTE]
       >
@@ -87,130 +87,130 @@ Så här skapar du ett signeringsaktiverat anpassat formulär:
 
    * Välj alternativet **[!UICONTROL Generate Document of Record]**. Om du använder ett anpassat formulär med alternativet Dokument för post aktiverat, visas alla fält i det adaptiva formuläret i det dokument som skickats för signering.
 
-1. Tryck på **[!UICONTROL Create.]** Ett signeringsaktiverat adaptivt formulär skapas, som kan användas för att lägga till Adobe Sign-fält.
+1. Tryck på **[!UICONTROL Create.]** Ett signeringsaktiverat adaptivt formulär skapas, som kan användas för att lägga till [!DNL Adobe Sign]-fält.
 
-#### Redigera ett anpassat formulär för Adobe Sign {#editafsign}
+#### Redigera ett anpassat formulär för [!DNL Adobe Sign] {#editafsign}
 
-Utför följande steg för att använda Adobe Sign i en befintlig adaptiv form:
+Utför följande steg om du vill använda [!DNL Adobe Sign] i ett befintligt anpassat formulär:
 
 1. Navigera till **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]**.
 1. Markera det adaptiva formuläret och tryck på **[!UICONTROL Properties]**.
-1. På fliken **[!UICONTROL Basic]** väljer du [konfigurationsbehållaren](../../forms/using/adobe-sign-integration-adaptive-forms.md#configure-adobe-sign-with-aem-forms) som skapades när Adobe Sign konfigurerades med AEM Forms.
-1. Välj något av följande alternativ på fliken **[!UICONTROL Form Mode]**:
+1. På fliken **[!UICONTROL Basic]** väljer du [konfigurationsbehållaren](../../forms/using/adobe-sign-integration-adaptive-forms.md#configure-adobe-sign-with-aem-forms) som skapades när [!DNL Adobe Sign] konfigurerades med AEM [!DNL Forms].
+1. Välj något av följande alternativ på fliken **[!UICONTROL Form Model]**:
 
    * Välj alternativet **[!UICONTROL Associate form template as the Document of Record template]** och välj en dokumentmall. Om du använder ett formulärmallsbaserat adaptivt formulär visar dokumenten som skickas för signering endast de fält som är baserade på den associerade formulärmallen. Alla fält i det adaptiva formuläret visas inte.
 
    * Välj alternativet **[!UICONTROL Generate Document of Record]**. Om du använder ett anpassat formulär med alternativet Dokument för post aktiverat, visas alla fält i det adaptiva formuläret i det dokument som skickats för signering.
 
-1. Tryck på **[!UICONTROL Save & Close]**. Det adaptiva formuläret är aktiverat för Adobe Sign.
+1. Tryck på **[!UICONTROL Save & Close]**. Det adaptiva formuläret är aktiverat för [!DNL Adobe Sign].
 
 ### Lägg till Adobe Sign-fält i ett anpassat formulär {#addadobesignfieldstoanadaptiveform}
 
-Adobe Sign har olika fält som kan placeras i ett anpassat formulär. Dessa fält accepterar olika typer av data som signaturer, initialer, företag eller titel och hjälper till att samla in extra information vid signering, tillsammans med signaturerna. Du kan använda Adobe Sign-komponenten Blockera för att placera Adobe Sign-fält på olika platser i ett anpassat formulär.
+[!DNL Adobe Sign] har olika fält som kan placeras i ett anpassat formulär. Dessa fält accepterar olika typer av data som signaturer, initialer, företag eller titel och hjälper till att samla in extra information vid signering, tillsammans med signaturerna. Du kan använda blockkomponenten [!DNL Adobe Sign] för att placera [!DNL Adobe Sign]-fält på olika platser i ett adaptivt formulär.
 
 Utför följande steg för att lägga till fält i ett adaptivt formulär och anpassa olika alternativ för dessa fält:
 
-1. Dra och släpp **Adobe Sign Block**-komponenten från komponentwebbläsaren till det adaptiva formuläret. Komponenten Adobe Sign Block har alla Adobe Sign-fält som stöds. Som standard läggs ett **Signature**-fält till i det adaptiva formuläret.
+1. Dra och släpp **[!UICONTROL Adobe Sign Block]**-komponenten från komponentwebbläsaren till det adaptiva formuläret. [!DNL Adobe Sign]-blockkomponenten har alla [!DNL Adobe Sign]-fält som stöds. Som standard läggs ett **Signature**-fält till i det adaptiva formuläret.
 
    ![Signeringsblock](assets/sign_block_new.png)
 
-   Som standard visas inte Adobe Sign-blocket i det publicerade adaptiva formuläret. Den visas bara i signeringsdokumenten. Du kan ändra synligheten för Adobe Sign Block från egenskaperna för Adobe Sign-komponenten Blockera.
+   Som standard är [!DNL Adobe Sign]-blocket inte synligt i det publicerade adaptiva formuläret. Den visas bara i signeringsdokumenten. Du kan ändra synligheten för [!DNL Adobe Sign]-blocket från egenskaperna för [!DNL Adobe Sign]-blockkomponenten.
 
    >[!NOTE]
    >
-   >    * Det är inte obligatoriskt att använda Adobe Sign-block för att använda Adobe Sign i en anpassningsbar form. Om du inte använder Adobe Sign-block och lägger till fält för signerare, visas standardsignaturfältet längst ned i signeringsdokumenten.
-   >    * Använd endast Adobe Sign-block för de hjälpformulär som automatiskt genererar arkivdokument. Om du använder en anpassad XDP för att generera ett anpassat formulär för arkivhandlingar eller ett formulärmallsbaserat formulär krävs inte Adobe Sign-block.
+   >    * Det är inte obligatoriskt att använda [!DNL Adobe Sign]-block för att använda [!DNL Adobe Sign] i en adaptiv form. Om du inte använder [!DNL Adobe Sign]-block och lägger till fält för signerare, visas standardsignaturfältet längst ned i signeringsdokumenten.
+   >    * Använd bara [!DNL Adobe Sign]-blocket för de adaptiva formulär som automatiskt genererar arkivdokument. Om du använder en anpassad XDP för att generera ett anpassat formulär för arkivhandlingar eller ett formulärmallsbaserat formulär krävs inte [!DNL Adobe Sign]-block.
 
 
-1. Markera komponenten **Adobe Sign Block** och tryck på ikonen **Redigera** ![aem_6_3_edit](assets/aem_6_3_edit.png). Här visas alternativ för att lägga till fält och formatera utseende för ett fält.
+1. Markera komponenten **[!UICONTROL Adobe Sign Block]** och tryck på ikonen **Redigera** ![aem_6_3_edit](assets/aem_6_3_edit.png). Här visas alternativ för att lägga till fält och formatera utseende för ett fält.
 
    ![adobe-sign-block-select-fields](assets/adobe-sign-block-select-fields.png)
 
-   **A.** Markera och lägg till Adobe Sign-fält. **B.** Expandera Adobe Sign-blocket till helskärmsläge
+   **A.** Markera och lägg till  [!DNL Adobe Sign] fält. **B.** Expandera  [!DNL Adobe Sign] blocket till helskärmsläge
 
-1. Tryck på ikonen **Adobe Sign Field** ![aem_6_3_adobesign](assets/aem_6_3_adobesign.png). Här visas alternativ för att markera och lägga till Adobe Sign-fält.
+1. Tryck på ikonen **[!UICONTROL Adobe Sign]Fält** ![aem_6_3_adobesign](assets/aem_6_3_adobesign.png). Här visas alternativ för att markera och lägga till [!DNL Adobe Sign]-fält.
 
-   Expandera listrutan **Skriv** för att markera ett Adobe Sign-fält och tryck på ikonen Klar ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) för att lägga till det markerade fältet i Adobe Sign-blocket. Listrutan **Typ** innehåller fälttyperna Signatur, Signerarinformation och Data. Adobe Sign-integrering med AEM Forms supportfält listas endast i listrutan Typ. Mer information om Adobe Sign-fält finns i [Adobe Sign-dokumentation](https://helpx.adobe.com/sign/help/field-types.html).
+   Expandera listrutan **[!UICONTROL Type]** för att markera ett [!DNL Adobe Sign]-fält och tryck på ikonen Klar ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) för att lägga till det markerade fältet i [!DNL Adobe Sign]-blocket. Det nedrullningsbara fältet **[!UICONTROL Type]** innehåller fälttyperna Signatur, Signerarinformation och Data. [!DNL Adobe Sign] integrering med AEM  [!DNL Forms] supportfält i  [!UICONTROL Type] listrutan. Mer information om [!DNL Adobe Sign]-fält finns i [Adobe Sign-dokumentation](https://helpx.adobe.com/sign/help/field-types.html).
 
    ![adobe-sign-block-fields-options](assets/adobe-sign-block-fields-options.png)
 
-   Du måste ange ett unikt namn för ett fält. Du kan också markera ett obligatoriskt fält genom att välja önskat alternativ. Förutom alternativet **Namn** och **Obligatoriskt** har vissa fält i Adobe Sign fler alternativ. Till exempel mask och flera rader. Ange dessutom ett unikt namn för varje Adobe Sign-fält oavsett om fälten finns i samma eller olika Adobe Sign-block.
+   Du måste ange ett unikt namn för ett fält. Du kan också markera ett obligatoriskt fält genom att välja önskat alternativ. Förutom alternativen **[!UICONTROL Name]** och **[!UICONTROL Required]** har vissa [!DNL Adobe Sign]-fält fler alternativ. Till exempel mask och flera rader. Ange dessutom ett unikt namn för varje [!DNL Adobe Sign]-fält om fälten finns i samma eller olika [!DNL Adobe Sign]-block.
 
-   Om du väljer **Digital signatur** i listrutan kan du använda digitala signaturer i det adaptiva formuläret:
+   Om du väljer **[!UICONTROL Digital Signature]** i listrutan kan du använda digitala signaturer i det adaptiva formuläret:
 
    * Online med molnsignaturer för att signera med ett [digitalt ID](https://helpx.adobe.com/sign/kb/digital-certificate-providers.html) som finns hos en betrodd tjänsteleverantör.
    * Hämta dokumentet lokalt med Adobe Acrobat eller Reader med ett smartkort, en USB-token eller ett filbaserat digitalt ID.
 
-### Aktivera Adobe Sign för ett anpassat formulär {#enableadobsignforanadaptiveform}
+### Aktivera [!DNL Adobe Sign] för ett anpassat formulär {#enableadobsignforanadaptiveform}
 
-Adobe Sign är inte aktiverat för anpassningsbara formulär. Gör så här för att aktivera den:
+[!DNL Adobe Sign] är inte aktiverat för ett anpassat formulär. Gör så här för att aktivera den:
 
-1. Tryck på **Formulärbehållare** i innehållsläsaren och tryck på ikonen **Konfigurera** ![Konfigurera](assets/configure.png). Egenskaper öppnas i webbläsaren och egenskaper för behållare för adaptiva formulär visas.
-1. Utöka dragspelsfliken **Elektronisk signatur** i egenskapswebbläsaren och välj alternativet **Aktivera Adobe Sign**. Det gör att Adobe Sign kan skapa en anpassningsbar blankett.
+1. Tryck på **[!UICONTROL Form Container]** i innehållsläsaren och tryck på ikonen **[!UICONTROL Configure]** ![configure](assets/configure.png). Egenskaper öppnas i webbläsaren och egenskaper för behållare för adaptiva formulär visas.
+1. Expandera dragspelsfliken **[!UICONTROL Electronic Signature]** i egenskapswebbläsaren och välj alternativet **[!UICONTROL Enable Adobe Sign]**. Det aktiverar [!DNL Adobe Sign] för ett anpassat formulär.
 
-### Välj Adobe Sign-Cloud Service och signeringsordning {#selectadobesigncloudserviceforanadaptiveform}
+### Markera [!DNL Adobe Sign]-Cloud Service och signeringsordning {#selectadobesigncloudserviceforanadaptiveform}
 
-Du kan konfigurera flera Adobe Sign-tjänster för en instans av AEM Forms. Det är tillrådligt att ha en separat uppsättning tjänster för varje funktion (personal, ekonomi med mera). Det gör det enklare att spåra och rapportera signerade dokument. En bank har till exempel flera avdelningar. Du kan ha en separat konfiguration för varje avdelning för bättre spårning av dokumenten.
+Du kan konfigurera flera [!DNL Adobe Sign]-tjänster för en instans av AEM [!DNL Forms]. Det är tillrådligt att ha en separat uppsättning tjänster för varje funktion (personal, ekonomi med mera). Det gör det enklare att spåra och rapportera signerade dokument. En bank har till exempel flera avdelningar. Du kan ha en separat konfiguration för varje avdelning för bättre spårning av dokumenten.
 
-Ett dokument kan också ha flera signerare. Ett kreditkortsprogram kan t.ex. ha flera sökande. En bank kräver signaturer från alla sökande innan ansökan behandlas. I scenarier med flera signerare kan du välja att signera dokumentet i sekventiell eller samtidig ordning.
+Ett dokument kan också ha flera signerare. En kreditkortsansökan kan till exempel ha flera sökande. En bank kräver signaturer från alla sökande innan ansökan behandlas. I scenarier med flera signerare kan du välja att signera dokumentet i sekventiell eller samtidig ordning.
 
 Gör så här för att välja en molntjänst och signeringsordning:
 
 ![molntjänst](assets/cloud-service.png)
 
-1. Tryck på **Formulärbehållare** i innehållsläsaren och tryck på ikonen **Konfigurera** ![Konfigurera](assets/configure.png). Egenskaper öppnas i webbläsaren och egenskaper för behållare för adaptiva formulär visas.
-1. Utöka dragspelsfliken **Elektronisk signatur** i egenskapswebbläsaren och välj alternativet **Aktivera Adobe Sign**. Det gör att Adobe Sign kan skapa en anpassningsbar blankett.
-1. Välj en molntjänst i den redan konfigurerade listan över Adobe Sign-Cloud Services.
+1. Tryck på **[!UICONTROL Form Container]** i innehållsläsaren och tryck på ikonen **[!UICONTROL Configure]** ![configure](assets/configure.png). Egenskaper öppnas i webbläsaren och egenskaper för behållare för adaptiva formulär visas.
+1. Expandera dragspelsfliken **[!UICONTROL Electronic Signature]** i egenskapswebbläsaren och välj alternativet **[!UICONTROL Enable Adobe Sign]**. Det aktiverar [!DNL Adobe Sign] för ett anpassat formulär.
+1. Välj en molntjänst i den redan konfigurerade listan med [!DNL Adobe Sign] Cloud Services.
 
-   Om listan **Adobe Sign Cloud Service** är tom följer du artikeln [Konfigurera Adobe Sign med AEM Forms](../../forms/using/adobe-sign-integration-adaptive-forms.md) för att konfigurera tjänsten.
+   Om listan **[!UICONTROL Adobe Sign Cloud Service]** är tom följer du artikeln [Konfigurera Adobe Sign med AEM Forms](../../forms/using/adobe-sign-integration-adaptive-forms.md) för att konfigurera tjänsten.
 
    I listrutan visas de molntjänster som finns i mappen `global` i Verktyg > **[!UICONTROL Cloud Services]** > **[!UICONTROL Adobe Sign]**. Dessutom listas de molntjänster som finns i mappen som du väljer i fältet **[!UICONTROL Configuration Container]** när du skapar ett anpassat formulär.
 
-1. Välj signeringsordning i dialogrutan **Signerare kan signera**. Adobe Sign-signerare kan signera ett adaptivt formulär **sekventiellt** - en efter en annan signerare eller **samtidigt** i valfri ordning.
+1. Välj signeringsordning i dialogrutan **[!UICONTROL Signers can Sign]**. [!DNL Adobe Sign] signerare kan signera ett adaptivt formulär  **[!UICONTROL Sequentially]** - en efter en annan signerare eller  **[!UICONTROL Simultaneously]** - i vilken ordning som helst.
 
    I sekventiell ordning tar en signerare emot formuläret för signering i taget. När en signerare har slutfört signeringen av dokumentet skickas formuläret till nästa signerare och så vidare.
 
    Flera signerare kan signera ett formulär samtidigt i en och samma ordning.
 
-1. [Lägg till signerare i ett adaptivt ](../../forms/using/working-with-adobe-sign.md#addsignerstoanadaptiveform) formulär och tryck på ikonen Klar  [aem_6_3_forms_](assets/aem_6_3_forms_save.png) saveicon för att spara ändringarna.
+1. [Lägg till signerare i ett adaptivt ](../../forms/using/working-with-adobe-sign.md#addsignerstoanadaptiveform) formulär och tryck på ikonen Klar  ![aem_6_3_forms_](assets/aem_6_3_forms_save.png) saveicon för att spara ändringarna.
 
 
 ### Lägg till signerare i ett anpassat formulär {#addsignerstoanadaptiveform}
 
 Du kan bara ha en eller flera signerare för ett anpassat formulär. När du lägger till en signerare kan du även konfigurera autentiseringsinformation för signeraren. Du kan också välja om formuläranvändaren och signeraren ska vara samma person. Utför följande steg för att lägga till och ange olika detaljer om en signerare:
 
-1. Tryck på **Formulärbehållare** i innehållsläsaren och tryck på ikonen **Konfigurera** ![Konfigurera](assets/configure.png). Egenskapsläsaren öppnas med egenskaper för adaptiv formulärbehållare.
-1. Utöka dragspelsfliken **Elektronisk signatur** i egenskapswebbläsaren och välj alternativet **Aktivera Adobe Sign**. Det gör att Adobe Sign kan skapa en anpassningsbar blankett.
-1. Tryck på **Lägg till signerare** under **Signerarkonfiguration**. Den lägger till en signerare i det adaptiva formuläret. Du kan lägga till flera Adobe Sign-signerare i ett anpassat formulär.
-1. ![telefoninformation](assets/phone-details.png)
+1. Tryck på **[!UICONTROL Form Container]** i innehållsläsaren och tryck på ikonen **[!UICONTROL Configure]** ![configure](assets/configure.png). Egenskapsläsaren öppnas med egenskaper för adaptiv formulärbehållare.
+1. Expandera dragspelsfliken **[!UICONTROL Electronic Signature]** i egenskapswebbläsaren och välj alternativet **[!UICONTROL Enable Adobe Sign]**. Det aktiverar [!DNL Adobe Sign] för ett anpassat formulär.
+1. Tryck på **[!UICONTROL Add Signer]** under **[!UICONTROL Signer Configuration]**. Den lägger till en signerare i det adaptiva formuläret. Du kan lägga till flera [!DNL Adobe Sign]-signerare i ett anpassat formulär.
+   ![telefoninformation](assets/phone-details.png)
 
-   Klicka på ikonen **Redigera** ![aem_6_3_edit](assets/aem_6_3_edit.png) för att ange följande information om signeraren:
+1. Klicka på ikonen **Redigera** ![aem_6_3_edit](assets/aem_6_3_edit.png) för att ange följande information om signeraren:
 
-   * **Titel:** Ange en titel som unikt identifierar en signerare.
+   * **[!UICONTROL Title]:** Ange en titel som unikt identifierar en signerare.
 
-   * **Är signeraren och den person som fyller i formuläret densamma?:** Välj  **Ja** om formuläranvändaren och den första signeraren är samma person. Om alternativet är inställt på **Nej** ska du inte använda signaturstegskomponenten i det adaptiva formuläret. Om formuläret innehåller en komponent för signatursteg ställs fältet automatiskt in på Ja.
+   * **[!UICONTROL Is the signer and the person filling the form same?]:** Välj  **Ja** om formuläranvändaren och den första signeraren är samma person. Om alternativet är inställt på **Nej** ska du inte använda signaturstegskomponenten i det adaptiva formuläret. Om formuläret innehåller en komponent för signatursteg ställs fältet automatiskt in på Ja.
 
-   * **Undertecknarens e-postadress:** Ange signerarens e-postadress. Signeraren får signerade dokument/formulär på den angivna e-postadressen. Du kan välja att använda en e-postadress som finns i ett formulärfält, i AEM användarprofil för den inloggade användaren eller manuellt ange en e-postadress. Det är ett obligatoriskt steg. Kontrollera att e-postadressen till den första signeraren eller den enda signeraren (för en signerare) inte är identisk med det Adobe Sign-konto som används för att konfigurera AEM-molntjänster.
+   * **[!UICONTROL Signer Email address]:** Ange signerarens e-postadress. Signeraren får signerade dokument/formulär på den angivna e-postadressen. Du kan välja att använda en e-postadress som finns i ett formulärfält, i AEM användarprofil för den inloggade användaren eller manuellt ange en e-postadress. Det är ett obligatoriskt steg. Kontrollera att e-postadressen för den första signeraren eller den enda signeraren (om det är en signerare) inte är identisk med [!DNL Adobe Sign]-kontot som används för att konfigurera AEM-molntjänster.
 
-   * **Autentiseringsmetod för signerare:** Ange metoden för att autentisera en användare innan ett formulär öppnas för signering. Du kan välja mellan telefon, kunskapsbas och social ID-baserad autentisering.
+   * **[!UICONTROL Signer Authentication Method]:** Ange vilken metod som ska användas för att autentisera en användare innan ett formulär öppnas för signering. Du kan välja mellan telefon, kunskapsbas och social ID-baserad autentisering.
    >[!NOTE]
    >
-   >    * Som standard har den sociala identitetsbaserade autentiseringen ett alternativ för att autentisera med Facebook, Google och LinkedIn. Du kan kontakta Adobe Sign support för att aktivera andra leverantörer av social autentisering.
+   >    * Som standard har den sociala identitetsbaserade autentiseringen ett alternativ för att autentisera med Facebook, Google och LinkedIn. Du kan kontakta supporten för [!DNL Adobe Sign] för att aktivera andra leverantörer av social autentisering.
 
 
-   * **Adobe Sign-fält som ska fyllas i eller signeras:** Välj Adobe Sign-fält för signeraren. Ett anpassningsbart formulär kan ha flera Adobe Sign-fält. Du kan välja att aktivera specifika fält för en signerare. I fältet visas alla tillgängliga Adobe Sign-block. När du markerar ett block markeras alla fält i blocket. Du kan använda X-ikonen för att avmarkera ett fält.
+   * **[!DNL Adobe Sign]fält som ska fyllas i eller signeras:** Välj  [!DNL Adobe Sign] fält för signeraren. Ett anpassningsbart formulär kan ha flera [!DNL Adobe Sign]-fält. Du kan välja att aktivera specifika fält för en signerare. Fältet visar alla tillgängliga [!DNL Adobe Sign]-block. När du markerar ett block markeras alla fält i blocket. Du kan använda X-ikonen för att avmarkera ett fält.
 
    ![signerarinformation](assets/signer-details.png)
 
-   I bilden ovan finns två exempel på Adobe Sign Blocks: Personlig information och kontorsinformation
+   Bilden ovan har två exempel på [!DNL Adobe Sign]-block: Personlig information och kontorsinformation
 
    Tryck på ikonen Klar ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png). Undertecknaren läggs till och konfigureras.
 
 ### Välj åtgärden Skicka för ett anpassat formulär {#selectsubmitactionforanadaptiveform}
 
-När du har lagt till Adobe Sign-fält i ett anpassat formulär, aktiverat Adobe Sign från formulärbehållaren, valt Adobe Sign-Cloud Service och lagt till Adobe Sign Signers, väljer du en lämplig överföringsåtgärd för det anpassade formuläret. Detaljerad information om hur du skickar formulär med adaptiva format finns i [Konfigurera åtgärden Skicka](../../forms/using/configuring-submit-actions.md).
+När du har lagt till [!DNL Adobe Sign]-fält i ett anpassat formulär, aktiverar [!DNL Adobe Sign] från formulärbehållaren, väljer [!DNL Adobe Sign]-Cloud Service och lägger till [!DNL Adobe Sign]-signerare, väljer du en lämplig skickaåtgärd för det anpassningsbara formuläret. Detaljerad information om hur du skickar formulär med adaptiva format finns i [Konfigurera åtgärden Skicka](../../forms/using/configuring-submit-actions.md).
 
-Dessutom skickas ett adaptivt formulär som aktiveras av Adobe Sign först när alla signerare har signerat formuläret. Du kan hitta delvis signerade formulär i avsnittet Väntande signering på formulärportalen. Adobe Sign konfigurationstjänst avsöker Adobe Sign-servern med [regelbundna intervall](../../forms/using/adobe-sign-integration-adaptive-forms.md) för att verifiera signaturens status. Om alla signerare signerar formuläret, startas tjänsten för att skicka och formuläret skickas. Om du använder en anpassad sändningsåtgärd och formuläret använder Adobe Sign, ska du uppdatera din anpassade sändningsåtgärd så att du kan använda åtgärdstjänsten Skicka.
+Dessutom skickas ett anpassningsbart formulär som är aktiverat för [!DNL Adobe Sign] endast när alla signerare har signerat formuläret. Du kan hitta delvis signerade formulär i avsnittet Väntande signering på formulärportalen. [!DNL Adobe Sign] Konfigurationstjänsten fortsätter avsökningsservern med  [!DNL Adobe Sign] regelbundna  [ ](../../forms/using/adobe-sign-integration-adaptive-forms.md) intervall för att verifiera signaturernas status. Om alla signerare signerar formuläret, startas tjänsten för att skicka och formuläret skickas. Om du använder en anpassad skicka-åtgärd och formuläret använder [!DNL Adobe Sign], ska du uppdatera din anpassade skicka-åtgärd så att den använder skicka-åtgärdstjänsten.
 
 <!-- Remove when forms portal goes live
 >[!NOTE]
@@ -218,7 +218,7 @@ Dessutom skickas ett adaptivt formulär som aktiveras av Adobe Sign först när 
 >Data of the adaptive form is stored temporarily on Forms Portal. It is recommended to use [custom storage for Forms Portal](/help/forms/using/configuring-draft-submission-storage.md). It ensures that the PII (personally identifiable information) data is not stored on AEM servers. 
 -->
 
-Din formulärsigneringsupplevelse är klar. Du kan förhandsgranska formuläret för att verifiera signeringsprocessen. På det publicerade formuläret visas Adobe Sign-blockfält när en signerare tar emot formuläret för signering via ett e-postmeddelande. Den här upplevelsen kallas även signeringsupplevelse som inte är i form. Du kan också konfigurera en signeringsupplevelse i formulär för den första signeraren. Mer information finns i [Skapa signeringsupplevelse i formulär](../../forms/using/working-with-adobe-sign.md#create-in-form-signing-experience).
+Din formulärsigneringsupplevelse är klar. Du kan förhandsgranska formuläret för att verifiera signeringsprocessen. På det publicerade formuläret visas [!DNL Adobe Sign] Blockfält när en signerare tar emot formuläret för signering via ett e-postmeddelande. Den här upplevelsen kallas även signeringsupplevelse som inte är i form. Du kan också konfigurera en signeringsupplevelse i formulär för den första signeraren. Mer information finns i [Skapa signeringsupplevelse i formulär](../../forms/using/working-with-adobe-sign.md#create-in-form-signing-experience).
 
 ## Konfigurera molnsignaturer för ett adaptivt formulär {#configure-cloud-signatures-for-an-adaptive-form}
 
@@ -226,19 +226,19 @@ Molnbaserade digitala signaturer eller fjärrsignaturer är en ny generation dig
 
 När du har [redigerat anpassningsbara formuläregenskaper för Adobe-signatur](../../forms/using/working-with-adobe-sign.md#enableadobesign) gör du följande för att lägga till molnsignaturfält i ett anpassat formulär:
 
-1. Dra och släpp **Adobe Sign Block**-komponenten från komponentwebbläsaren till det adaptiva formuläret. Komponenten Adobe Sign Block har alla Adobe Sign-fält som stöds. Som standard läggs ett **Signature**-fält till i det adaptiva formuläret.
+1. Dra och släpp **[!UICONTROL Adobe Sign Block]**-komponenten från komponentwebbläsaren till det adaptiva formuläret. Komponenten [!UICONTROL Adobe Sign Block] har alla [!DNL Adobe Sign]-fält som stöds. Som standard läggs ett **[!UICONTROL Signature]**-fält till i det adaptiva formuläret.
 
    ![Signeringsblock](assets/sign-block-new.png)
 
-1. Markera komponenten **Adobe Sign Block** och tryck på ikonen **Redigera** ![aem_6_3_edit](assets/aem_6_3_edit.png). Här visas alternativ för att lägga till fält och formatera utseende för ett fält.
+1. Markera komponenten **[!UICONTROL Adobe Sign Block]** och tryck på ikonen **Redigera** ![aem_6_3_edit](assets/aem_6_3_edit.png). Här visas alternativ för att lägga till fält och formatera utseende för ett fält.
 
    ![adobe-sign-block-select-fields](assets/adobe-sign-block-select-fields.png)
 
-   **A.** Markera och lägg till Adobe Sign-fält. **B.** Expandera Adobe Sign-blocket till helskärmsläge
+   **A.** Markera och lägg till  [!DNL Adobe Sign] fält. **B.** Expandera  [!DNL Adobe Sign] blocket till helskärmsläge
 
-1. Tryck på ikonen **Adobe Sign Field** ![aem_6_3_adobesign](assets/aem_6_3_adobesign.png). Här visas alternativ för att markera och lägga till Adobe Sign-fält.
+1. Tryck på ikonen **[!UICONTROL Adobe Sign Field]** ![aem_6_3_adobesign](assets/aem_6_3_adobesign.png). Här visas alternativ för att markera och lägga till [!DNL Adobe Sign]-fält.
 
-   Expandera listrutan **Skriv** för att välja **Digital signatur** och tryck på ikonen Klar för att lägga till det markerade fältet i Adobe Sign-blocket.
+   Expandera listrutan **[!UICONTROL Type]** för att markera **[!UICONTROL Digital Signature]** och tryck på ikonen **Klar** för att lägga till det markerade fältet i [!DNL Adobe Sign]-blocket.
 
    ![Elektroniska underskrifter](assets/digital_signatures_new.png)
 
@@ -272,18 +272,20 @@ Använd komponenten Signatursteg för att ange ett område där det ifyllda form
 
 Utför följande steg för att konfigurera signaturstegskomponenten:
 
-1. Dra och släpp **signatursteget**-komponenten från komponentwebbläsaren till formuläret.
+1. Dra och släpp **[!UICONTROL Signature Step]**-komponenten från komponentwebbläsaren till formuläret.
 1. Markera den nya signaturstegskomponenten och tryck på ikonen **Konfigurera** ![konfigurera](assets/configure.png). Egenskaper öppnas i webbläsaren och egenskaper för signatursteg visas. Konfigurera följande egenskaper:
 
-   * **Elementnamn**: Ange komponentens namn.
+   * **[!UICONTROL Name]**: Ange komponentens namn.
 
-   * **Titel:** Ange komponentens unika titel.
-   * **Mallmeddelande:** Ange meddelandet som ska visas när signatur-PDF-filen läses in. Adobe Sign tjänster tar tid att förbereda och läsa in PDF-signaturer.
-   * **Underteckningstjänst:** Markera  **Adobe-** signeringen.
+   * **[!UICONTROL Title]:** Ange komponentens unika namn.
+   * **[!UICONTROL Template message]:** Ange vilket meddelande som ska visas när signatur-PDF-filen läses in. [!DNL Adobe Sign] tjänster tar tid att förbereda och läsa in PDF-signaturer.
+   * **[!UICONTROL Signing Service]:** Välj  **[!DNL Adobe Sign]** alternativet.
 
-   * **Använd äldre e-signeringskomponent**: Om du använder respektive adaptiva formulär i  [AEM Forms Workspace](../../forms/using/introduction-html-workspace.md), AEM Forms-appen eller det underliggande adaptiva formuläret har en äldre e-signeringskomponent väljer du alternativet  **Använd äldre e-signeringskomponent** .
+   * **[!UICONTROL Use legacy E-sign component]**: Om du använder respektive adaptiva formulär i  [AEM Forms Workspace](../../forms/using/introduction-html-workspace.md), AEM  [!DNL Forms] app eller det underliggande adaptiva formuläret har en äldre e-signeringskomponent, väljer du  **Använd äldre e-signeringskomponent** som alternativ.
 
-   * **Konfiguration**: Välj en konfiguration (Adobe Sign Cloud Service). Listrutan är bara tillgänglig om alternativet **Använd äldre e-signeringskomponent** är aktiverat.
+   * **[!UICONTROL Configuration]**: Välj en konfiguration ([!DNL Adobe Sign] Cloud Service). Listrutan är bara tillgänglig om alternativet **Använd äldre e-signeringskomponent** är aktiverat.
+
+   * **[!UICONTROL CSS Class]**: Ange CSS-klassen för komponenten.
 
    Tryck på ikonen Klar ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) för att spara ändringarna.
 
@@ -295,7 +297,7 @@ Utför följande steg för att konfigurera signaturstegskomponenten:
       >
       > 
    * Använd komponenten Sammanfattningssteg efter signatursteget för att få en så bra upplevelse som möjligt. Sammanfattningssteget skickar automatiskt och omedelbart formuläret när du har signerat ett formulär i signeringssteget. Om du inte använder sammanfattningssteget aktiveras en automatisk överföring endast efter det intervall som angetts med [Adobe Sign konfigurationstjänst](../../forms/using/adobe-sign-integration-adaptive-forms.md#configure-adobe-sign-scheduler-to-sync-the-signing-status).
-   > * Några bra strategier är:
+      > Några bra strategier är:
    > * Anpassad formulärpanel som innehåller signeringssteget finns alltid i den sista eller andra panelen i ett anpassat formulär. Det kan bara vara den andra sista panelen när den sista panelen innehåller steget Sammanfattning.
    > * Panelen som innehåller signatur- eller sammanfattningssteget får inte innehålla några andra komponenter.
    > * Anpassningsbara formulär som innehåller signatursteget kan inte ha en skicka-knapp. Överföringen hanteras via en bakgrundstjänst eller steget Sammanfattning.
@@ -311,45 +313,45 @@ Nu är signeringsupplevelsen i form av formulär klar. Du kan förhandsgranska f
 
 ## Vanliga frågor {#frequently-asked-questions}
 
-**F:** Du kan bädda in ett adaptivt formulär i ett annat adaptivt formulär. Kan det inbäddade adaptiva formuläret vara Adobe Sign-aktiverat?
-**Ans:** Nej, AEM Forms har inte stöd för att använda ett adaptivt formulär som bäddar in ett adaptivt formulär aktiverat för Adobe Sign för signering
+**F:** Du kan bädda in ett adaptivt formulär i ett annat adaptivt formulär. Kan det inbäddade adaptiva formuläret vara [!DNL Adobe Sign] aktiverat?
+**Ans:** Nej, AEM har  [!DNL Forms] inte stöd för att använda ett adaptivt formulär som bäddar in ett  [!DNL Adobe Sign] aktiverat adaptivt formulär för signering
 
 **F:** När jag skapar ett adaptivt formulär med den avancerade mallen och öppnar det för redigering visas felmeddelandet&quot;Elektronisk signatur eller signerare är inte korrekt konfigurerade.&quot; visas. Hur löser jag felmeddelandet?
-**Ans:** Adaptivt formulär som skapats med den avancerade mallen är konfigurerat att använda Adobe Sign. Lös felet genom att skapa och välja en molnkonfiguration för Adobe Sign och konfigurera en Adobe Sign-signerare för det adaptiva formuläret.
+**Ans:** Adaptivt formulär som skapats med den avancerade mallen är konfigurerat att använda  [!DNL Adobe Sign]. Lös felet genom att skapa och välja en [!DNL Adobe Sign]-molnkonfiguration och konfigurera en [!DNL Adobe Sign]-signerare för det adaptiva formuläret.
 
-**F:** Kan jag använda Adobe Sign-texttaggar i en statisk textkomponent i ett adaptivt formulär?
-**Ans:** Ja, du kan använda texttaggar i en textkomponent för att lägga till Adobe Sign-fält i ett anpassat formulär som har  [dokumentformat](../../forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md)  (endast alternativet Automatiskt genererat postdokument). Mer information om proceduren och reglerna för att skapa en texttagg finns i [Adobe Sign Documentation](https://helpx.adobe.com/sign/using/text-tag.html). Dessutom har adaptiva formulär begränsat stöd för texttaggar. Du kan använda texttaggarna för att skapa endast de fält som stöds av [Adobe Sign Block](../../forms/using/working-with-adobe-sign.md#configure-cloud-signatures-for-an-adaptive-form).
+**F:** Kan jag använda  [!DNL Adobe Sign] texttaggar i en statisk textkomponent i ett adaptivt formulär?
+**Ans:** Ja, du kan använda texttaggar i en textkomponent för att lägga till  [!DNL Adobe Sign] fält i ett  [postdokument](../../forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md)  (endast alternativet Automatiskt genererat postdokument) som är aktiverat för anpassat formulär. Mer information om proceduren och reglerna för att skapa en texttagg finns i [Adobe Sign Documentation](https://helpx.adobe.com/sign/using/text-tag.html). Dessutom har adaptiva formulär begränsat stöd för texttaggar. Du kan använda texttaggarna för att skapa endast de fält som stöds av [Adobe Sign Block](../../forms/using/working-with-adobe-sign.md#configure-cloud-signatures-for-an-adaptive-form).
 
-**F:** AEM Forms innehåller både Adobe Sign-komponenter för block- och signatursteg. Kan dessa användas samtidigt i anpassningsbar form?
+**F:** AEM  [!DNL Forms] innehåller komponenter för både  [!UICONTROL Adobe Sign block] och signatursteg. Kan dessa användas samtidigt i anpassningsbar form?
 **Ans:** Du kan använda båda komponenterna samtidigt i ett formulär. Här följer några rekommendationer för hur du använder dessa komponenter:
 
-**Adobe Sign Block:** Du kan använda Adobe Sign Block för att lägga till Adobe Sign-fält var som helst i det adaptiva formuläret. Det hjälper även till att tilldela specifika fält till signerare. När ett anpassat formulär förhandsgranskas eller publiceras visas inte Adobe Sign Block som standard. De här blocken aktiveras bara i signeringsdokumentet. I signeringsdokumentet aktiveras bara de fält som tilldelats en signerare. Adobe Sign-block kan användas med första och efterföljande signerare.
+**Adobe Sign-block:** Du kan använda  [!UICONTROL Adobe Sign Block] för att lägga till  [!UICONTROL Adobe Sign] fält var som helst i det anpassade formuläret. Det hjälper även till att tilldela specifika fält till signerare. När ett anpassat formulär förhandsgranskas eller publiceras är [!UICONTROL Adobe Sign]-blocket inte synligt som standard. De här blocken aktiveras bara i signeringsdokumentet. I signeringsdokumentet aktiveras bara de fält som tilldelats en signerare. [!UICONTROL Adobe Sign] -block kan användas med första och efterföljande signerare.
 
 **Underskriftsstegkomponent:** Du kan använda signaturstegskomponenten för att skapa en signeringsupplevelse i ett formulär. Endast den första signeraren kan signera medan formuläret fylls i. När avsnittet som innehåller signaturstegskomponenten återges visas en signerbar PDF-version av formuläret. Det är vanligtvis det sista eller näst sista avsnittet följt av en sammanfattningskomponent i ett formulär.
 
 ## Felsök {#troubleshoot}
 
-### Adobe Sign avtalsfel {#adobe-sign-agreement-failures}
+### [!DNL Adobe Sign] avtalsfel  {#adobe-sign-agreement-failures}
 
-**Problem**
-När Adobe Sign-tjänsten har konfigurerats för ett adaptivt formulär kan tjänsten inte skapa ett Adobe Sign-avtal för det underliggande adaptiva formuläret.
+****
+ProblemNär  [!DNL Adobe Sign] tjänsten har konfigurerats för ett adaptivt formulär kan tjänsten inte skapa ett  [!DNL Adobe Sign] avtal för det underliggande adaptiva formuläret.
 
 **Upplösning**
 
 * Kontrollera [konfigurationen av Adobe Sign molntjänst](../../forms/using/adobe-sign-integration-adaptive-forms.md) som används i det adaptiva formuläret.
-* Kontrollera att API-programmet på Adobe Sign-servern som används för att konfigurera Adobe Sign Cloud-tjänsten har nödvändiga behörigheter.
-* Om du använder flera Adobe Sign Cloud-tjänster pekar du **[!UICONTROL oAuth URL]** på samma **[!UICONTROL Adobe Sign Shard]** för alla tjänster.
+* Kontrollera att API-programmet på [!DNL Adobe Sign]-servern som används för att konfigurera [!DNL Adobe Sign] Cloud-tjänsten har nödvändiga behörigheter.
+* Om du använder flera [!DNL Adobe Sign] Cloud-tjänster pekar du **[!UICONTROL oAuth URL]** för alla tjänster till samma **[!UICONTROL Adobe Sign Shard]**.
 
-* Använd separata e-postadresser för att konfigurera Adobe Sign-kontot och för den första signeraren och den första signeraren. E-postadressen till den första signeraren eller den enda signeraren (om det är en signerare) kan inte vara identisk med det Adobe Sign-konto som används för att konfigurera AEM-molntjänster.
+* Använd separata e-postadresser för att konfigurera [!DNL Adobe Sign]-kontot och för den första signeraren och den första signeraren. E-postadressen till den första signeraren eller den enda signeraren (om det är en signerare) kan inte vara identisk med [!DNL Adobe Sign]-kontot som används för att konfigurera AEM-molntjänster.
 
-### AEM Forms-arbetsflöde som konfigurerats för ett anpassat formulär som har aktiverats för Adobe Sign startar inte {#adobe-sign-aem-form-workflow-failures}
+### AEM [!DNL Forms]-arbetsflöde konfigurerat för ett [!DNL Adobe Sign]-aktiverat adaptivt formulär startar inte {#adobe-sign-aem-form-workflow-failures}
 
-**Problem**
-När Adobe Sign har konfigurerats för ett adaptivt formulär startar inte arbetsflödet som har konfigurerats med alternativet Anropa Forms Workflow.
+****
+ProblemNär  [!DNL Adobe Sign] har konfigurerats för ett adaptivt formulär startar inte arbetsflödet som har konfigurerats med alternativet Anropa  [!DNL Forms] arbetsflöde.
 
 **Upplösning**
 
-* När du använder Adobe Sign utan signatursteget eller formuläret kräver signaturer från flera personer, väntar AEM Forms-servern på att schemaläggaren ska bekräfta att alla personer har signerat formuläret. Schemaläggaren skickar det adaptiva formuläret först när alla personer har slutfört signeringen och arbetsflödet startar först när det adaptiva formuläret har skickats. Du kan korta ned intervallet för [schemaläggaren](adobe-sign-integration-adaptive-forms.md) för att kontrollera status för formulärsignering med snabba intervall och snabb formuläröverföring.
+* När du använder [!DNL Adobe Sign] utan signatursteget eller formuläret kräver signaturer från flera personer, väntar AEM [!DNL Forms]-servern på att schemaläggaren ska bekräfta att alla personer har signerat formuläret. Schemaläggaren skickar det adaptiva formuläret först när alla personer har slutfört signeringen och arbetsflödet startar först när det adaptiva formuläret har skickats. Du kan korta ned intervallet för [schemaläggaren](adobe-sign-integration-adaptive-forms.md) för att kontrollera status för formulärsignering med snabba intervall och snabb formuläröverföring.
 
 
 ## Relaterade artiklar {#related-articles}
