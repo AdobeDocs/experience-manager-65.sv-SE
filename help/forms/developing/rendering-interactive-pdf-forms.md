@@ -1,8 +1,8 @@
 ---
 title: Återger interaktiv PDF forms
 seo-title: Återger interaktiv PDF forms
-description: 'null'
-seo-description: 'null'
+description: Använd tjänsten Forms för att återge interaktiv PDF forms till klientenheter, vanligtvis webbläsare, för att samla in information från användare. Du kan använda Forms tjänst för att återge interaktiva formulär med Java API och Web Service API.
+seo-description: Använd tjänsten Forms för att återge interaktiv PDF forms till klientenheter, vanligtvis webbläsare, för att samla in information från användare. Du kan använda Forms tjänst för att återge interaktiva formulär med Java API och Web Service API.
 uuid: df2a4dc8-f19e-49de-850f-85a204102631
 contentOwner: admin
 content-type: reference
@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 3cb307ec-9b7b-4f03-b860-48553ccee746
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '2442'
+source-wordcount: '2514'
 ht-degree: 0%
 
 ---
