@@ -1,8 +1,8 @@
 ---
 title: Sammanställa PDF-Portfolio
 seo-title: Sammanställa PDF-Portfolio
-description: 'null'
-seo-description: 'null'
+description: Sammanställ en PDF-portfolio och kombinera flera olika typer av dokument, t.ex. Word-filer, bildfiler och PDF-dokument. Du kan sätta ihop en PDF-portfölj med ett Java API och ett Web Service API.
+seo-description: Sammanställ en PDF-portfolio och kombinera flera olika typer av dokument, t.ex. Word-filer, bildfiler och PDF-dokument. Du kan sätta ihop en PDF-portfölj med ett Java API och ett Web Service API.
 uuid: 1778c90b-9d26-466b-a7c7-401d737395e0
 contentOwner: admin
 content-type: reference
@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 023f0d9e-bfde-4879-a839-085fadffb48e
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '1785'
+source-wordcount: '1851'
 ht-degree: 0%
 
 ---
