@@ -1,8 +1,8 @@
 ---
 title: Digitalt signera och certifiera dokument
 seo-title: Digitalt signera och certifiera dokument
-description: 'null'
-seo-description: 'null'
+description: Använd signaturtjänsten för att lägga till och ta bort fält för digitala signaturer i ett PDF-dokument, hämta namn på signaturfält i ett PDF-dokument, ändra signaturfält, signera PDF-dokument digitalt, certifiera PDF-dokument, validera digitala signaturer i ett PDF-dokument, validera alla digitala signaturer i ett PDF-dokument och ta bort en digital signatur från ett signaturfält.
+seo-description: Använd signaturtjänsten för att lägga till och ta bort fält för digitala signaturer i ett PDF-dokument, hämta namn på signaturfält i ett PDF-dokument, ändra signaturfält, signera PDF-dokument digitalt, certifiera PDF-dokument, validera digitala signaturer i ett PDF-dokument, validera alla digitala signaturer i ett PDF-dokument och ta bort en digital signatur från ett signaturfält.
 uuid: 6331de8a-2a9c-45bf-89d2-29f1ad5cc856
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 42de04bf-25e4-4478-a411-38671ed871ae
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '16977'
+source-wordcount: '17099'
 ht-degree: 0%
 
 ---
