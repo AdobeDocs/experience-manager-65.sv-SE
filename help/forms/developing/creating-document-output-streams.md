@@ -1,8 +1,8 @@
 ---
 title: Skapa dokumentutdataströmmar
 seo-title: Skapa dokumentutdataströmmar
-description: 'null'
-seo-description: 'null'
+description: Använd utdatatjänsten för att konvertera dokument som PDF (inklusive PDF/A-dokument), PostScript, Printer Control Language (PCL) och Zebra - ZPL, Intermec - IPL, Datamax - DPL och TecToshiba - TPCL-etikettformat.
+seo-description: Använd utdatatjänsten för att konvertera dokument som PDF (inklusive PDF/A-dokument), PostScript, Printer Control Language (PCL) och Zebra - ZPL, Intermec - IPL, Datamax - DPL och TecToshiba - TPCL-etikettformat.
 uuid: 80c28efa-35ce-4073-9ca6-2d93bcd67fdd
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: de527d50-991b-4ca3-a8ac-44d5cab988e9
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '18972'
+source-wordcount: '19030'
 ht-degree: 0%
 
 ---
