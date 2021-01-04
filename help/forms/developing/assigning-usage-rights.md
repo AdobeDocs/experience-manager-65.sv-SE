@@ -1,8 +1,8 @@
 ---
 title: Tilldela användningsrättigheter
 seo-title: Tilldela användningsrättigheter
-description: 'null'
-seo-description: 'null'
+description: Använd Acrobat Reader DC-tilläggens Java Client API och Web Service API för att tillämpa och ta bort användningsrättigheter från PDF-dokument.
+seo-description: Använd Acrobat Reader DC-tilläggens Java Client API och Web Service API för att tillämpa och ta bort användningsrättigheter från PDF-dokument.
 uuid: 8c2020df-ea3c-49fa-916f-38a458f40d2b
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 9e8db506-9ace-4e1f-8a7b-c4e9b15dde7e
 translation-type: tm+mt
-source-git-commit: 413af4ef9bc3652e05da78d622183bcf20a8bee7
+source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
 workflow-type: tm+mt
-source-wordcount: '3895'
+source-wordcount: '3937'
 ht-degree: 0%
 
 ---
