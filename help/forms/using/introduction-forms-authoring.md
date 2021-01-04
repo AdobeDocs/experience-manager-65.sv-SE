@@ -10,7 +10,7 @@ topic-tags: introduction, author
 discoiquuid: ba70921e-db7e-43f6-902c-1065d3b13aef
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a69e0354b5599ab555df650858f8f3200e21d2b8
+source-git-commit: f3b5b22c1d5573492867aef60457413ad5cf419f
 workflow-type: tm+mt
 source-wordcount: '3097'
 ht-degree: 0%
@@ -159,11 +159,11 @@ Det gör att du kan dra och släppa formulärmodellelement i det anpassade formu
    <td>Lägger till ett fält som visar alla bifogade filer som har överförts med komponenten Bifogad fil.</td>
   </tr>
   <tr>
-   <td>Sidfot<br /> </td>
+   <td>Header<br /> </td>
    <td>Lägger till sidhuvudet som vanligtvis innehåller en företagslogotyp, formulärets rubrik och sammanfattning.<br /> </td>
   </tr>
   <tr>
-   <td>Sidhuvud</td>
+   <td>Sidfot</td>
    <td>Lägger till sidfoten som vanligtvis innehåller copyrightinformation och länkar till andra sidor. </td>
   </tr>
   <tr>
