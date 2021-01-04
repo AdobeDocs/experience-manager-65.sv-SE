@@ -1,8 +1,8 @@
 ---
 title: Uppgradera till AEM 6.5 Communities
 seo-title: Uppgradera till AEM 6.5 Communities
-description: Hur man uppgraderar från en tidigare version till AEM 6.4 Communities
-seo-description: Hur man uppgraderar från en tidigare version till AEM 6.4 Communities
+description: Hur man uppgraderar från en tidigare version till AEM 6.5 Communities
+seo-description: Hur man uppgraderar från en tidigare version till AEM 6.5 Communities
 uuid: 929c3892-1b3b-46a7-8e70-fa6864125911
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -11,7 +11,7 @@ topic-tags: deploying
 discoiquuid: abe5a998-bbe3-4a2b-bcf7-b490a8275219
 docset: aem65
 translation-type: tm+mt
-source-git-commit: c190d5f223c85f6c49fea1391d8a3d2baff20192
+source-git-commit: 612d102b5925704ce459ad818554e487ec0d5355
 workflow-type: tm+mt
 source-wordcount: '677'
 ht-degree: 0%
@@ -109,4 +109,4 @@ Det finns tre generationer av communitykomponenter:
 
 **Gen 2**: Från AEM 5.6.1 till och med AEM 6.1 är detta en blandning av  **** kollaband och  **** sociala komponenter. AEM 6.0 introducerade det nya [ramverket för sociala komponenter](/help/communities/scf.md) (SCF) och AEM 6.2 introducerade en [gemensam UGC-butik](/help/communities/working-with-srp.md) där UGC används med en [lagringsresursprovider](/help/communities/srp.md) (SRP).
 
-**Gen 3**: Från och med AEM 6.2 finns det bara  **** sociala komponenter som implementeras i SCF som HBS-komponenter som kräver ett val av SRP för UGC.
+**Gen 3**: Från och med AEM 6.2 finns det bara  **** sociala komponenter som implementeras i SCF som HBS-komponenter som kräver att man väljer SRP för UGC.
