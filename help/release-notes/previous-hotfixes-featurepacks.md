@@ -3,7 +3,7 @@ title: '[!DNL Adobe Experience Manager] 6.5 Versionsinformation om föregående 
 description: Versionsinformation för [!DNL Adobe Experience Manager] 6.5 Service Packs.
 contentOwner: AK
 translation-type: tm+mt
-source-git-commit: 9be522fd8354674ad40691e99b349a6fd7bff2b5
+source-git-commit: 544d99921a3b487bf8ae64111a8568f8f02fcd03
 workflow-type: tm+mt
 source-wordcount: '14670'
 ht-degree: 0%
@@ -66,7 +66,7 @@ Nedan följer en lista över korrigeringar i [!DNL Experience Manager] 6.5.6.0-v
    ![Skärmbild som illustrerar problemet med saknade menyer i Classic UI](assets/33949_missing_menu.png)
 
 * En [!DNL Content Fragment] kan inte användas som en `TemplatedResource` eftersom den inte kan användas i `ContentFragmentUsePojo` (NPR-33911).
-* Synkrona och asynkrona flyttningsåtgärder kan leda till fel på grund av samtidiga överföringar. Åtgärder för att flytta sidor är begränsade till synkron förflyttning. Den förhindrar samtidig flyttning av sidor (NPR-33875).
+* Synkrona och asynkrona flyttningsåtgärder kan leda till fel på grund av samtidiga överföringar. Åtgärder för att flytta sidor är begränsade till asynkron förflyttning. Den förhindrar samtidig flyttning av sidor (NPR-33875).
 * [!UICONTROL Manage Publication] åtgärden att replikera innehåll från författare till publiceringsinstans misslyckas och genererar ett JavaScript-fel (NPR-33872).
 * När flera sidor eller resurser har valts för att skapa versioner skapas den nya versionen endast för den senast valda sidan eller resursen (NPR-33866).
 * Flytta en ritningssida med live-kopior till en annan mapp. När du flyttar den till den ursprungliga mappen misslyckas flyttåtgärden utan något fel (NPR-33864).
