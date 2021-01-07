@@ -3,9 +3,9 @@ title: Integrera [!DNL Assets] med [!DNL InDesign Server]
 description: Lär dig hur du integrerar [!DNL Adobe Experience Manager Assets] med [!DNL Adobe InDesign Server].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 117208c634613559bb13556e12f094add70006e2
+source-git-commit: a31fa2712e541dfdc7a5b08ee9b33782f190f00b
 workflow-type: tm+mt
-source-wordcount: '1528'
+source-wordcount: '1546'
 ht-degree: 1%
 
 ---
@@ -165,15 +165,15 @@ poolSOAP-slutpunkter som ska användas för kommunikation med  [!DNL InDesign Se
 
 ### Konfigurera CQ Link Externalizer för dagen {#configuring-day-cq-link-externalizer}
 
-Om [!DNL InDesign Server] och [!DNL Experience Manager] körs på olika värdar eller något eller båda programmen inte körs på standardportar, konfigurerar du [!UICONTROL Day CQ Link Externalizer] för att ange värdnamn, port och innehållssökväg för [!DNL InDesign Server].
+Om [!DNL InDesign Server] och [!DNL Experience Manager] finns på olika värdar eller om ett eller båda programmen inte fungerar på standardportar konfigurerar du [!UICONTROL Day CQ Link Externalizer] för att ange värdnamn, port och innehållssökväg för [!DNL InDesign Server].
 
 1. Gå till webbkonsolen på `https://[aem_server]:[port]/system/console/configMgr`.
-1. Leta reda på konfigurationen **[!UICONTROL Day CQ Link Externalizer]** och klicka på **[!UICONTROL Edit]** för att öppna den.
-1. Ange värdnamnet och kontextsökvägen för [!DNL Adobe InDesign Server] och klicka på **Spara**.
+1. Leta reda på konfigurationen **[!UICONTROL Day CQ Link Externalizer]**. Klicka på **[!UICONTROL Edit]** för att öppna.
+1. Med inställningarna för länkutjämnaren kan du skapa absoluta URL:er för [!DNL Experience Manager]-distributionen och för [!DNL InDesign Server]. Använd fältet **[!UICONTROL Domains]** för att ange värdnamnet och kontextsökvägen för [!DNL Adobe InDesign Server]. Klicka på **Spara**.
 
-   ![chlimage_1-97](assets/chlimage_1-290.png)
+   ![Inställning för extern länkning](assets/link-externalizer-config.png)
 
-### Aktivera parallell jobbbearbetning för [!DNL InDesign Server] {#enabling-parallel-job-processing-for-indesign-server-s}
+### Aktivera parallell jobbbearbetning för [!DNL InDesign Server] {#enabling-parallel-job-processing-for-indesign-server}
 
 Nu kan du aktivera parallell jobbbearbetning för IDS. Bestäm det maximala antalet parallella jobb (`x`) som en [!DNL InDesign Server] kan bearbeta:
 
