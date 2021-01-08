@@ -10,9 +10,9 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: d15ded18-7417-47e2-9783-b23fa05a0cda
 translation-type: tm+mt
-source-git-commit: 22cdd6a7b343749b8ce85d8c1b230d094732f44a
+source-git-commit: 801d57bbe8a1bede6dcb4bf7884e5f71ddea1e83
 workflow-type: tm+mt
-source-wordcount: '301'
+source-wordcount: '302'
 ht-degree: 4%
 
 ---
@@ -38,7 +38,7 @@ Specifika dokument beskrivs och länkas till i de tabeller som följer.
 
 ## Assets {#assets}
 
-De bästa sätten att använda Assets, inklusive Dynamic Media-funktionen och Dynamic Media Classic-integrering, beskrivs i följande avsnitt:
+De effektivaste strategierna kring Assets, inklusive Dynamic Media-funktioner och Dynamic Media Classic-integrering, beskrivs i följande avsnitt:
 
 <table>
  <tbody>
@@ -55,7 +55,7 @@ De bästa sätten att använda Assets, inklusive Dynamic Media-funktionen och Dy
   <tr>
    <td>Dynamic Imaging</td>
    <td><a href="/help/assets/best-practices-for-optimizing-the-quality-of-your-images.md">Dynamic Imaging bästa praxis</a></td>
-   <td><p>Beskriver hur du kan göra en bild skarpare för bästa resultat och det bästa sättet att optimera bildkvaliteten om du använder funktionen Dynamic Media eller integrerar med Scene7. </p> </td>
+   <td><p>Beskriver hur du kan göra en bild skarpare för att få bästa resultat och det bästa sättet att optimera bildkvaliteten om du använder Dynamic Media-funktionen eller integrerar med Dynamic Media Classic. </p> </td>
   </tr>
   <tr>
    <td>Flerspråkiga resurser</td>
