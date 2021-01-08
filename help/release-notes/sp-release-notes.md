@@ -4,9 +4,9 @@ description: Versionsinformation för  [!DNL Adobe Experience Manager] 6.5 Servi
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 30701cfdb36e5caf606e31564179a632b0de9fb5
+source-git-commit: fa8d8c9a001b56006f1c0a30eb5a342754e63573
 workflow-type: tm+mt
-source-wordcount: '4140'
+source-wordcount: '4124'
 ht-degree: 0%
 
 ---
@@ -351,8 +351,6 @@ Nedan följer en lista över korrigeringar i [!DNL Experience Manager] 6.5.7.0-v
 **Dokumentsäkerhet**
 
 * När du sparar en ny dokumentsäkerhetsprofil visas felmeddelandet `Relative validity period is required` i Experience Manager Forms (NPR-34679).
-
-* När du sparar en ny dokumentsäkerhetsprofil visas felmeddelandet `Invalid filed value.Numeric value is required` i Experience Manager Forms (NPR-34678).
 
 * Dokumentsäkerhet kan inte skydda PDF 2.0-dokument (CQ-4305851).
 
