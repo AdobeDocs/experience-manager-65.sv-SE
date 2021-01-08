@@ -1,18 +1,16 @@
 ---
 title: Video
 seo-title: Video
-description: Med Assets får du en centraliserad hantering av videoresurser där du kan överföra videor direkt till Assets för automatisk kodning till Scene7 och få tillgång till Scene7 videor direkt från Assets för sidredigering.
-seo-description: Med Assets får du en centraliserad hantering av videoresurser där du kan överföra videor direkt till Assets för automatisk kodning till Scene7 och få tillgång till Scene7 videor direkt från Assets för sidredigering.
-uuid: 46da7a0d-d17b-4716-a304-ce5496421b5a
+description: Med Assets får du centraliserad hantering av videoresurser där du kan överföra videor direkt till Assets för automatisk kodning till Dynamic Media Classic och få tillgång till Dy-videor direkt från Assets för sidredigering.
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: authoring
 content-type: reference
 discoiquuid: dfaa4b3f-f65a-4fe3-87a7-f3bc71015e56
 translation-type: tm+mt
-source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
+source-git-commit: 801d57bbe8a1bede6dcb4bf7884e5f71ddea1e83
 workflow-type: tm+mt
-source-wordcount: '1686'
+source-wordcount: '1649'
 ht-degree: 0%
 
 ---
@@ -24,8 +22,8 @@ Med resurser kan du centralisera hanteringen av videoresurser så att du kan öv
 
 Integrering med Dynamic Media Classic för video ger optimerad video även på alla skärmar (automatisk enhets- och bandbreddsidentifiering).
 
-* Videokomponenten Dynamic Media Classic (Scene7) utför automatiskt enhets- och bandbreddsidentifiering för att spela upp video i rätt format och med rätt kvalitet på datorer, surfplattor och mobila enheter.
-* Resurser - Du kan inkludera adaptiva videouppsättningar i stället för bara enskilda videoresurser. En adaptiv videouppsättning är en behållare för alla videoåtergivningar som krävs för att spela upp video sömlöst på flera skärmar. En adaptiv videouppsättning grupperar versioner av samma video som är kodade med olika bithastigheter och format som 400 kbit/s, 800 kbit/s och 1 000 kbit/s. Du använder en adaptiv videouppsättning, tillsammans med S7-videokomponenten, för adaptiv videoströmning på flera skärmar, inklusive stationära datorer, iOS, Android, Blackberry och Windows mobila enheter. Mer information finns i [Scene7-dokumentation om adaptiva videouppsättningar](https://help.adobe.com/en_US/scene7/using/WS53492AE1-6029-45d8-BF80-F4B5CF33EB08.html).
+* Dynamic Media Classic-videokomponenten utför automatiskt enhets- och bandbreddsidentifiering för att spela upp video i rätt format och med rätt kvalitet på datorer, surfplattor och mobila enheter.
+* Resurser - Du kan inkludera adaptiva videouppsättningar i stället för bara enskilda videoresurser. En adaptiv videouppsättning är en behållare för alla videoåtergivningar som krävs för att spela upp video sömlöst på flera skärmar. En adaptiv videouppsättning grupperar versioner av samma video som är kodade med olika bithastigheter och format som 400 kbit/s, 800 kbit/s och 1 000 kbit/s. Du använder en adaptiv videouppsättning, tillsammans med S7-videokomponenten, för adaptiv videoströmning på flera skärmar, inklusive stationära datorer, iOS, Android, Blackberry och Windows mobila enheter. Mer information finns i [Dynamic Media Classic-dokumentationen om adaptiva videouppsättningar](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/quick-start-video.html#video).
 
 ## Om FFMPEG och Dynamic Media Classic {#about-ffmpeg-and-scene}
 
@@ -66,7 +64,7 @@ Om du behöver ett arbetsflöde eller en versionshantering för dina resurser b�
 
 Om du inte behöver ett arbetsflöde eller en versionshantering för dina resurser bör du överföra dina resurser till Dynamic Media Classic. Här följer det rekommenderade arbetsflödet:
 
-1. I Dynamic Media Classic [konfigurerar du en schemalagd FTP-överföring och -kodning till Dynamic Media Classic (automatiskt system)](https://help.adobe.com/en_US/scene7/using/WS70B173EC-4CAD-4b4c-BF9C-43A11F3A5950.html).
+1. [Konfigurera en schemalagd FTP-överföring och -kodning till Dynamic Media Classic (automatiskt system)](https://help.adobe.com/en_US/scene7/using/WS70B173EC-4CAD-4b4c-BF9C-43A11F3A5950.html) i Dynamic Media Classic-datorprogrammet.
 1. I AEM kommer du åt videomaterial i WCM på fliken **[!UICONTROL Dynamic Media Classic]** i Content Finder.
 1. Skapa med videokomponenten i Dynamic Media Classic.
 
@@ -85,7 +83,7 @@ Om du inte behöver ett arbetsflöde eller en versionshantering för dina resurs
 
    >[!NOTE]
    >
-   >Mer information om vad videoförinställningarna betyder finns i [Dynamic Media Classic-dokumentationen](https://help.adobe.com/en_US/scene7/using/WSE86ACF2B-BD50-4c48-A1D7-9CD4405B62D0.html).
+   >Mer information om vad videoförinställningarna betyder finns i [Videoförinställningar för kodning av videofiler](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html?lang=en#video-presets-for-encoding-video-files).
    >
    >Adobe rekommenderar att du antingen markerar båda adaptiva videouppsättningar när du konfigurerar de universella förinställningarna eller väljer alternativet **[!UICONTROL Adaptive Video Encoding]**.
 
@@ -112,7 +110,7 @@ Så här överför du din primära källvideo till Dynamic Media Classic från A
 
 ### Foundation Video Component jämfört med Dynamic Media Classic Video Component {#foundation-video-component-versus-scene-video-component}
 
-När du använder AEM har du tillgång till både videokomponenten som finns i Sites och videokomponenten för Dynamic Media Classic (Scene7). Dessa komponenter är inte utbytbara.
+När du använder AEM har du tillgång till både videokomponenten som är tillgänglig i Sites och videokomponenten i Dynamic Media Classic. Dessa komponenter är inte utbytbara.
 
 Videokomponenten Dynamic Media Classic fungerar bara för Dynamic Media Classic-videofilmer. Grundkomponenten fungerar med videor som lagras från AEM (med ffmpeg) och Dynamic Media Classic-videor.
 
@@ -131,7 +129,7 @@ I följande matris förklaras när du bör använda vilken komponent:
 
 ### AEM Video och Dynamic Media Classic Video-jämförelse {#aem-video-and-scene-video-comparison}
 
-I följande tabell visas en högnivåjämförelse av funktioner som stöds mellan AEM Foundation Video-komponenten och Scene7 Video-komponenten:
+I följande tabell visas en högnivåjämförelse av funktioner som stöds mellan AEM Foundation Video-komponenten och Dynamic Media Classic Video-komponenten:
 
 |  | AEM Foundation Video | Dynamic Media Classic-video |
 |---|---|---|
@@ -162,8 +160,8 @@ De olika videokodningarna skapas enligt de kodningsförinställningar för Dynam
 
    | Egenskap | Beskrivning |
    |---|---|
-   | Dynamic Media Classic (Scene7) - molnkonfiguration | Den molnkonfiguration som ska användas för kodningsförinställningarna. |
-   | Dynamic Media Classic (Scene7) - kodningsförinställning | Den kodningsförinställning som den här videoprofilen ska kopplas till. |
+   | Dynamic Media Classic Cloud-konfiguration | Den molnkonfiguration som ska användas för kodningsförinställningarna. |
+   | Dynamic Media Classic-kodningsförinställning | Den kodningsförinställning som den här videoprofilen ska kopplas till. |
    | HTML5-videotyp | Med den här egenskapen kan du ange värdet för type-egenskapen i HTML5-videokällelementet. Den här informationen finns inte i kodningsförinställningarna för Dynamic Media Classic, men krävs för att återge videoklippen med HTML5-videoelementet. En lista över vanliga format tillhandahålls, men kan skrivas över för andra format. |
 
    Upprepa det här steget för alla kodningsförinställningar som är markerade i molnkonfigurationen och som du vill använda i videokomponenten.
@@ -185,7 +183,7 @@ Grundvideokomponenten måste känna till vilka videoprofiler som ska användas f
 
 #### Checklista {#checklist}
 
-1. Skapa en Dynamic Media Classic-molnkonfiguration (Scene7). Kontrollera att förinställningarna för videokodning är angivna och att importeraren körs.
+1. Skapa en Dynamic Media Classic-molnkonfiguration. Kontrollera att förinställningarna för videokodning är angivna och att importeraren körs.
 1. Skapa en Dynamic Media Classic-videoprofil för varje videokodningsförinställning som har valts i molnkonfigurationen.
 1. Videoprofilerna måste aktiveras.
 1. Konfigurera utformningen av den grundläggande videokomponenten på sidan.
