@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 67625e62-7035-4eb5-8dd5-6840d775a547
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 90c99e527a40bb663d4f32d8746b46cf34a2319f
+source-git-commit: 801d57bbe8a1bede6dcb4bf7884e5f71ddea1e83
 workflow-type: tm+mt
 source-wordcount: '933'
 ht-degree: 1%
@@ -62,7 +62,7 @@ Du kan använda innehållssökaren för att hitta en rad olika resurser. Om det 
 * [Bilder](#finding-images)
 * [Dokument](#finding-documents)
 * [Filmer](#finding-movies)
-* [Scene 7 Media Browser](/help/sites-administering/scene7.md#scene7contentbrowser)
+* [Dynamic Media webbläsare](/help/sites-administering/scene7.md#scene7contentbrowser)
 * [](#products) [Sidor](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#finding-pages)
 
 * [Stycken](#referencing-paragraphs-from-other-pages)
