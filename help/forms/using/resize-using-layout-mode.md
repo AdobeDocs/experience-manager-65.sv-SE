@@ -2,9 +2,9 @@
 title: Använd layoutläget för att ändra storlek på komponenter för anpassningsbara formulär
 description: 'Definiera placeringen av komponenterna med det responsiva stödrastret som finns i layoutläget '
 translation-type: tm+mt
-source-git-commit: 77fef5a1926c733abdaf01a19d9fdfc37323566e
+source-git-commit: 923c31bf67c7ad480ef3c3a1e312b4bd841bac6d
 workflow-type: tm+mt
-source-wordcount: '1046'
+source-wordcount: '1013'
 ht-degree: 0%
 
 ---
@@ -35,12 +35,11 @@ Välj **Layout** i listrutan som visas högst upp i redigeringsgränssnittet fö
 
    Verktygsfältet som visas när du har tryckt på komponenter består av följande alternativ:
 
-   * **Överordnad:** Välj överordnad för en komponent.
-   * **Flyt till ny rad:** Skift komponenten till nästa rad om det finns flera komponenter inom samma rad.
+   * **[!UICONTROL Parent]**: Markera den överordnade komponenten för en komponent.
+   * **[!UICONTROL Revert breakpoint layout]**: Ångra alla storleksändringar och använd standardlayout på komponenten.
+   * **[!UICONTROL Float to new line]**: Flytta komponenten till nästa rad om det finns flera komponenter på samma rad.
 
-   Dessutom kan du ångra alla ändringar av storleksändring och använda standardlayout på panelen som innehåller storleksändrade komponenter med alternativet **[!UICONTROL Revert breakpoint layout]** ( ![Återställ brytpunkt](assets/reverttopreviouslypublishedversion.png)). Tryck på den överordnade för den storleksändrade komponenten för att visa alternativet.
-
-   Du kan trycka på komponenten och använda alternativet **[!UICONTROL Revert breakpoint layout]** för att ångra alla storleksändringar och använda standardlayout på komponentnivå.
+   Du kan också använda alternativet **[!UICONTROL Revert breakpoint layout]** ( ![Återställ brytpunkt](assets/reverttopreviouslypublishedversion.png)) på panelnivå om du vill ångra alla storleksändringar.
 
    >[!NOTE]
    >
