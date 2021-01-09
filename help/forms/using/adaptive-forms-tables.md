@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: fc418da9-496f-4a2b-bfe4-2add3ac4f468
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 26a65772c43a5176d178bb6625604d18ac91e894
+source-git-commit: 01c30e78d1f89e8c07abeb0ac19af38722010dd0
 workflow-type: tm+mt
-source-wordcount: '2302'
+source-wordcount: '2422'
 ht-degree: 0%
 
 ---
@@ -107,6 +107,14 @@ Så här aktiverar du sortering:
    På samma sätt visas en kolumnrubrik med en nedpil som värden i kolumnen i fallande ordning.
 
    Du kan också göra ändringar i tabellen i läget **Förhandsgranska** och sedan klicka på kolumnrubriken igen för att sortera kolumnvärdena.
+
+## Ange kolumnbredd för en tabell {#set-column-width}
+
+Gör så här för att ange kolumnbredd för en tabell:
+
+1. På fliken **[!UICONTROL Content]** trycker du på komponenten **[!UICONTROL Table]** och på ikonen Konfigurera (![Konfigurera](assets/configure-icon.svg)).
+
+1. Ange den kommaavgränsade listan med värden i fältet **[!UICONTROL Column Width]** för att ange den proportionella bredden för varje kolumn i tabellen. Om du till exempel anger 2,4,6 som värde i fältet **[!UICONTROL Column Width]** för en tabell som innehåller 3 kolumner, blir kolumnbredden 2/12 för den första kolumnen, 4/12 för den andra kolumnen och 6/12 för den tredje kolumnen. 2/12 som bredd för den första kolumnen avser en sjättedel av tabellbredden. På samma sätt anger 4/12 den andra kolumnbredden som en tredjedel av tabellbredden och 6/12 den tredje kolumnbredden som halva tabellbredden.
 
 ## Konfigurera tabellformat {#configure}
 
