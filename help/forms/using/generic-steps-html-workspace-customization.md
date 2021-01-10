@@ -11,29 +11,29 @@ topic-tags: forms-workspace
 discoiquuid: dd3218c4-2bb2-40fc-9141-5823b0ea4224
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 998a127ce00c6cbb3db3a81d8a89d97ab9ef7469
+source-git-commit: e863089a4328b7222b60429c82ca3df2b8e1dd05
 workflow-type: tm+mt
-source-wordcount: '273'
-ht-degree: 3%
+source-wordcount: '288'
+ht-degree: 2%
 
 ---
 
 
-# Allmänna steg för anpassning av arbetsytan i AEM Forms{#generic-steps-for-aem-forms-workspace-customization}
+# Allmänna steg för anpassning av arbetsytan i AEM Forms {#generic-steps-for-aem-forms-workspace-customization}
 
 De allmänna stegen för att utföra anpassningar är:
 
 1. Logga in på CRXDE Lite med `https://'[server]:[port]'/lc/crx/de/index.jsp`.
-1. Skapa en mapp med namnet `ws`vid `/apps`, om den inte finns. Klicka på **[!UICONTROL Save All]**.
+1. Skapa en `sling:Folder`-mapp med namnet `ws` på `/apps`, om den inte finns. Om du vill skapa en `sling:Folder`-mapp högerklickar du på mappen `apps` och väljer **[!UICONTROL Create]** > **[!UICONTROL Create Node]**. Ange namnet som `ws`, välj typen `sling:Folder` och klicka på **[!UICONTROL OK]**. Klicka på **[!UICONTROL Save All]**.
 1. Bläddra till `/apps/ws` och navigera till fliken **[!UICONTROL Access Control]**.
-1. Klicka på **[!UICONTROL +]** i listan **[!UICONTROL Access Control]** för att lägga till en ny post. Klicka på **[!UICONTROL +]** igen.
+1. Välj alternativet **[!UICONTROL Repository]**. Klicka på **[!UICONTROL +]** i listan **[!UICONTROL Access Control]** för att lägga till en ny post. Klicka på **[!UICONTROL +]** igen.
 1. Sök efter och välj **PERM_WORKSPACE_USER** Principal.
 
    ![Välj PERM_WORKSPACE_USER som en del av de allmänna stegen för att anpassa HTML-arbetsytan](assets/perm_workspace_user.png)
 
 1. Ge `jcr:read` privilegium till huvudmannen.
 1. Klicka på **[!UICONTROL Save All]**.
-1. Kopiera filerna `GET.jsp` och `html.jsp`från mappen `/libs/ws`till mappen `/apps/ws`.
+1. Kopiera filerna `GET.jsp`, `index` och `html.jsp` från mappen `/libs/ws` till mappen `/apps/ws`.
 1. Kopiera mappen `/libs/ws/locales` i mappen `/apps/ws`. Klicka på **[!UICONTROL Save All]**.
 1. Uppdatera referenserna och de relativa sökvägarna i `GET.jsp`-filen enligt nedan och klicka på **[!UICONTROL Save all]**.
 
@@ -64,7 +64,7 @@ De allmänna stegen för att utföra anpassningar är:
 
    >[!NOTE]
    >
-   >Placera den användardefinierade CSS-filen efter posten newStyle.css, som visas ovan.
+   >Placera posten för den användardefinierade CSS-filen efter posten för style.css, som visas ovan.
 
 1. I /apps/ws/html.jsp
 
@@ -80,13 +80,11 @@ De allmänna stegen för att utföra anpassningar är:
 
 1. Gör följande:
 
-   1. Skapa en mapp med namnet `js`på `/apps/ws`. Klicka på **[!UICONTROL Save All]**.
+   1. Skapa en mapp med namnet `js` på `/apps/ws`. Klicka på **[!UICONTROL Save All]**.
 
-   1. Skapa en mapp med namnet `libs`på `/apps/ws/js`. Klicka på **[!UICONTROL Save All]**.
+   1. Skapa en mapp med namnet `libs` på `/apps/ws/js`. Klicka på **[!UICONTROL Save All]**.
 
-   1. Skapa en mapp med namnet `jqueryui`på `/apps/ws/js/libs`. Klicka på **[!UICONTROL Save All]**.
-
-   1. Kopiera `/libs/ws/js/libs/jqueryui/jquery.ui.datepicker-ja.js` till `/apps/ws/js/libs/jqueryui`. Klicka på **[!UICONTROL Save All]**.
+   1. Kopiera mappen `/libs/ws/js/libs/jqueryui` till `/apps/ws/js/libs`. Klicka på **[!UICONTROL Save All]**.
 
 1. Gör följande för HTML-anpassningar:
 
