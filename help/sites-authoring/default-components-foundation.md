@@ -13,9 +13,9 @@ docset: aem65
 legacypath: /content/docs/en/aem/6-2/author/page-authoring/default-components/editmode
 pagetitle: Foundation Components
 translation-type: tm+mt
-source-git-commit: 90c99e527a40bb663d4f32d8746b46cf34a2319f
+source-git-commit: 0362be4d78fa39ac73c9be5dd5d08ccfebd21edc
 workflow-type: tm+mt
-source-wordcount: '7287'
+source-wordcount: '7364'
 ht-degree: 3%
 
 ---
@@ -337,6 +337,10 @@ Den externa tillämpningen är integrerad i den AEM sidans styckesystem. om du t
 >
 >Den här Foundation-komponenten har tagits bort. Adobe rekommenderar att du använder [kärnkomponenterna](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) i stället.
 
+>[!CAUTION]
+>
+>Den här komponenten förväntas inte längre fungera utan omfattande anpassning på projektnivå.
+
 Med komponenten Flash kan du läsa in en Flash-film. Du kan dra en Flash-resurs från innehållssökaren till komponenten eller använda dialogrutan:
 
 * **Flash**
@@ -547,6 +551,10 @@ I följande exempel visas en **List**-komponent på samma sätt som en lista med
 >
 >Den här Foundation-komponenten har tagits bort. Adobe rekommenderar att du använder [kärnkomponenterna](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) i stället.
 
+>[!CAUTION]
+>
+>Den här komponenten förväntas inte längre fungera utan omfattande anpassning på projektnivå.
+
 Här finns fälten Användarnamn och Lösenord.
 
 ![chlimage_1-94](assets/chlimage_1-94.png)
@@ -582,6 +590,10 @@ Du kan konfigurera:
       Text som anger att användaren redan är inloggad.
 
 ### Orderstatus {#order-status}
+
+>[!CAUTION]
+>
+>Den här komponenten förväntas inte längre fungera utan omfattande anpassning på projektnivå.
 
 * **Titel**
 
@@ -724,7 +736,11 @@ Om det behövs kan du konfigurera:
 
 >[!CAUTION]
 >
->Den här Foundation-komponenten har tagits bort. Adobe rekommenderar att du använder [Carousel Core Component](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/carousel.html) i stället.
+>Den här Foundation-komponenten har tagits bort. Adobe rekommenderar att du använder [Carousel Core Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/carousel.html) i stället.
+
+>[!CAUTION]
+>
+>Den här komponenten förväntas inte längre fungera utan omfattande anpassning på projektnivå.
 
 Med den här komponenten kan du läsa in en serie bilder som ska visas som ett bildspel på sidan.Du kan lägga till eller ta bort bilder och tilldela varje rubrik. Under Avancerat kan du även ange storleken på visningsområdet.
 
@@ -909,7 +925,11 @@ I följande exempel visas en **Title**-komponent; designen bestäms av den plats
 
 >[!CAUTION]
 >
->Den här Foundation-komponenten har tagits bort. Adobe rekommenderar att du använder [kärnkomponenterna](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) i stället.
+>Den här Foundation-komponenten har tagits bort. Adobe rekommenderar att du använder [kärnkomponenterna Embed Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/embed.html) i stället.
+
+>[!CAUTION]
+>
+>Den här komponenten förväntas inte längre fungera utan omfattande anpassning på projektnivå.
 
 Med komponenten **Video** kan du placera ett fördefinierat videoelement direkt på en sida.
 
@@ -1337,6 +1357,10 @@ Komponenten är konfigurerad för omedelbar användning, men du kan ändra konfi
 >[!CAUTION]
 >
 >Den här Foundation-komponenten har tagits bort. Adobe rekommenderar att du använder [kärnkomponenterna](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) i stället.
+
+>[!CAUTION]
+>
+>Den här komponenten förväntas inte längre fungera utan omfattande anpassning på projektnivå.
 
 Captcha-komponenten kräver att användaren skriver en alfanumerisk sträng som den visas på skärmen. Strängen ändras vid varje uppdatering.
 
