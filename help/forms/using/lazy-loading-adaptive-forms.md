@@ -9,9 +9,9 @@ topic-tags: develop
 discoiquuid: a20736b7-f7b4-4da1-aa32-2408049b1209
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 428d675bd254c18651c1188de26b706b5ad3d55c
+source-git-commit: 4d95d0e38acc54e1ebbb9f9e31761205533e99f9
 workflow-type: tm+mt
-source-wordcount: '1017'
+source-wordcount: '1033'
 ht-degree: 0%
 
 ---
@@ -72,6 +72,7 @@ Vissa begränsningar, rekommendationer och viktiga punkter som du bör tänka p�
 
 * Vi rekommenderar att du använder XSD-schemabaserade adaptiva formulär över XFA-baserade adaptiva formulär för att konfigurera lazy loading på stora formulär. Prestandavinster på grund av lazy loading-implementering i XFA-baserade adaptiva formulär är relativt mindre än förstärkning i XSD-baserade adaptiva formulär.
 * Konfigurera inte lat inläsning på fragment i ett adaptivt formulär som använder **[!UICONTROL Responsive -everything on one page without navigation]**-layout för rotpanelen. Som ett resultat av layoutkonfigurationen Responsiv läses alla fragment in samtidigt i en adaptiv form. Det kan också leda till försämrade prestanda.
+* Vi rekommenderar att du inte konfigurerar lazy loading för det första avsnittet i en adaptiv form.
 * Vi rekommenderar att du inte konfigurerar lazy loading på fragment på den första panelen som återges när det adaptiva formuläret läses in.
 * Lazy loading stöds upp till två nivåer i fragmenthierarkin.
 * Se till att fält som markerats som globala är unika i ett adaptivt formulär.
