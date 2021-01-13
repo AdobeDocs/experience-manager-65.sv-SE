@@ -10,9 +10,9 @@ topic-tags: operations
 content-type: reference
 discoiquuid: a1efef3c-0e4b-4a17-bcad-e3cc17adbbf7
 translation-type: tm+mt
-source-git-commit: 535a175486a2d0f31762d71954c4fead2ef246e1
+source-git-commit: 0362be4d78fa39ac73c9be5dd5d08ccfebd21edc
 workflow-type: tm+mt
-source-wordcount: '451'
+source-wordcount: '486'
 ht-degree: 0%
 
 ---
@@ -23,6 +23,14 @@ ht-degree: 0%
 Med [videokomponenten](/help/sites-authoring/default-components-foundation.md#video) kan du placera en fördefinierad, färdig videoresurs (OTB) på sidan.
 
 För att korrekt omkodning ska ske installerar administratören FFmpeg separat. Se [Installera MPEG och konfigurera AEM](#install-ffmpeg). Administratörer [Konfigurera videoprofiler](#configure-video-profiles) för användning med HTML5-element.
+
+>[!CAUTION]
+>
+>Den här Foundation-komponenten har tagits bort. Adobe rekommenderar att du använder [kärnkomponenterna Embed Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/embed.html) i stället.
+
+>[!CAUTION]
+>
+>Den här komponenten förväntas inte längre fungera utan omfattande anpassning på projektnivå.
 
 ## Konfigurera videoprofiler {#configure-video-profiles}
 
