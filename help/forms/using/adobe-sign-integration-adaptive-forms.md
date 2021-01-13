@@ -10,9 +10,9 @@ topic-tags: develop
 discoiquuid: 1f28b257-5419-4a21-a54a-b20bf35530ac
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 93ee9338fc2e78d01a9b62e8040c4674262ef6be
+source-git-commit: c451948c43004d084bc3fce7a2c6ad99381f1ea8
 workflow-type: tm+mt
-source-wordcount: '858'
+source-wordcount: '889'
 ht-degree: 0%
 
 ---
@@ -85,6 +85,9 @@ När förutsättningarna är uppfyllda utför du följande steg för att konfigu
    **na1** refererar till standarddatabasdelningen.
 
    Du kan ändra värdet för databasdelningen. Starta om servern för att kunna använda det nya värdet för databasdelningen.
+
+   >[!NOTE]
+   Se till att författaren och publicera instanskonfigurationer pekar på samma nivå. Om du skapar flera Adobe Sign-konfigurationer för en organisation måste du se till att alla konfigurationer använder samma fragment.
 
 1. Ange **klient-ID** (kallas även program-ID) och **klienthemlighet** som kopieras i steg 8. Välj alternativet **[!UICONTROL Enable Adobe Sign for attachments also]** om du vill lägga till filer som är kopplade till ett adaptivt formulär i motsvarande [!DNL Adobe Sign]-dokument som skickats för signering.
 
