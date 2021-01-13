@@ -11,9 +11,9 @@ topic-tags: configuring
 discoiquuid: 3cae081e-93e3-4317-b307-1316283c307a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 8adbf52b29cf6e548bf14df57bc12b44821c9def
+source-git-commit: 17d70e532ab5d825dd4dc0ea4c891c5b7cb8d345
 workflow-type: tm+mt
-source-wordcount: '3584'
+source-wordcount: '3434'
 ht-degree: 0%
 
 ---
@@ -593,19 +593,3 @@ Utgivaren packar upp alla artiklar, sparar dem och rapporterar tillbaka till fö
 ## Ytterligare resurser {#additional-resources}
 
 Mer information om felsökning finns på sidan [Felsökning av replikering](/help/sites-deploying/troubleshoot-rep.md).
-
-För mer information har Adobe en serie kunskapsbasartiklar om replikering:
-
-[https://helpx.adobe.com/experience-manager/kb/ReplicationSiblingReordering.](https://helpx.adobe.com/experience-manager/kb/ReplicationSiblingReordering.html)
-[htmlhttps://helpx.adobe.com/experience-manager/kb/ReplicationFailureAfterNewIP.](https://helpx.adobe.com/experience-manager/kb/ReplicationFailureAfterNewIP.html)
-[htmlhttps://helpx.adobe.com/experience-manager/kb/LimitAccessToReplicationAgents.](https://helpx.adobe.com/experience-manager/kb/LimitAccessToReplicationAgents.html)
-[htmlhttps://helpx.adobe.com/experience-manager/kb/PagePermissionsNotReplicatedWithUser.](https://helpx.adobe.com/experience-manager/kb/PagePermissionsNotReplicatedWithUser.html)
-[htmlhttps://helpx.adobe.com/experience-manager/kb/HowToUseReverseReplication.](https://helpx.adobe.com/experience-manager/kb/HowToUseReverseReplication.html)
-[htmlhttps://helpx.adobe.com/experience-manager/kb/CQ5ReplicateToSpecificAgents.](https://helpx.adobe.com/experience-manager/kb/CQ5ReplicateToSpecificAgents.html)
-[htmlhttps://helpx.adobe.com/experience-manager/kb/ReplicationListener.](https://helpx.adobe.com/experience-manager/kb/ReplicationListener.html)
-[htmlhttps://helpx.adobe.com/experience-manager/kb/replication-stuck.](https://helpx.adobe.com/experience-manager/kb/replication-stuck.html)
-[htmlhttps://helpx.adobe.com/experience-manager/kb/replication-privileges-missing-after-upgrade-to-cq-5-5.](https://helpx.adobe.com/experience-manager/kb/replication-privileges-missing-after-upgrade-to-cq-5-5.html)
-[htmlhttps://helpx.adobe.com/experience-manager/kb/CQ53UnableToCreateJobQueueDueToMaxQueues.](https://helpx.adobe.com/experience-manager/kb/CQ53UnableToCreateJobQueueDueToMaxQueues.html)
-[ ](https://helpx.adobe.com/experience-manager/kb/ACLReplication.html)
-[ ](https://helpx.adobe.com/experience-manager/kb/content-grow-due-reverse-replication.html)
-[¹.Ð.Ðª](https://helpx.adobe.com/experience-manager/kb/ReplicationAgentUsingAnonUser.html)
