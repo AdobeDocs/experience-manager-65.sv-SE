@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 1f9867f1-5089-46d0-8e21-30d62dbf4f45
 legacypath: /content/docs/en/aem/6-0/develop/components/components-develop
 translation-type: tm+mt
-source-git-commit: 0a6f50457efda42a9d496c0c9202cb7d7b8f6eb9
+source-git-commit: 149cdd00f745ad897f506434d7156b8147ef5bae
 workflow-type: tm+mt
 source-wordcount: '4974'
 ht-degree: 0%
@@ -224,7 +224,7 @@ Ikonen eller förkortningen för komponenten definieras via JCR-egenskaperna fö
    * Den rekommenderade färgen är rgb(112, 112, 112) > #707070
    * Bakgrunden för standardkomponentikoner är genomskinlig.
    * Endast `.png`- och `.svg`-filer stöds.
-   * Om du importerar från filsystemet via Eclipse-plugin-programmet måste du till exempel ändra filnamnen till `_cq_icon.png` eller `_cq_icon.svg`.
+   * Om du importerar från filsystemet via plugin-programmet Eclipse måste filnamnen escape-konverteras till exempelvis `_cq_icon.png` eller `_cq_icon.svg`.
    * `.png` har företräde framför  `.svg` om båda finns
 
 Om inga av ovanstående egenskaper ( `cq:icon`, `abbreviation`, `cq:icon.png` eller `cq:icon.svg`) hittas i komponenten:
