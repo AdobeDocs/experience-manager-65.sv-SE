@@ -11,9 +11,9 @@ topic-tags: site-features
 discoiquuid: b53348ca-fc50-4e7d-953d-b4c03a5025bb
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e3f1c932a5937e8a115e2849935b8f5ea5c2613d
+source-git-commit: 149cdd00f745ad897f506434d7156b8147ef5bae
 workflow-type: tm+mt
-source-wordcount: '4833'
+source-wordcount: '4901'
 ht-degree: 9%
 
 ---
@@ -148,7 +148,7 @@ När du skapar en ny redigerbar mall:
 
 >[!CAUTION]
 >
->Ange aldrig någon information som behöver vara [internationaliserad](/help/sites-developing/i18n.md) i en mall.
+>Ange aldrig någon information som behöver vara [internationaliserad](/help/sites-developing/i18n.md) i en mall. För internalisering rekommenderas [lokaliseringsfunktionerna för kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html).
 
 ### Skapar en mallmapp - administratör {#creating-a-template-folder-admin}
 
@@ -201,13 +201,19 @@ En mall kan ha följande egenskaper:
 
 * Beskrivning
 
-   * En valfri beskrivning som ger mer information om mallen och dess användning, som kan läsas i t.ex. guiden **Skapa sida**.
+   * En valfri beskrivning som ger mer information om mallen och dess användning, som kan visas t.ex. i guiden **Skapa sida**.
 
 Så här visar och/eller redigerar du egenskaperna:
 
 1. Välj mallen i **Mallkonsolen**.
 1. Välj **Visa egenskaper** i verktygsfältet eller från snabbalternativen för att öppna dialogrutan.
 1. Nu kan du visa eller redigera mallegenskaperna.
+
+>[!NOTE]
+>
+>Mallar är kraftfulla verktyg som effektiviserar arbetsflödet för att skapa sidor. Alltför många mallar kan överbelasta författarna och göra det förvirrande att skapa sidor. En bra tumregel är att hålla antalet mallar under 100.
+>
+>Adobe rekommenderar inte att ha fler än 1 000 mallar på grund av potentiella prestandaeffekter.
 
 >[!NOTE]
 >
@@ -386,7 +392,7 @@ I **strukturläge** för mallredigeraren:
 
    >[!NOTE]
    >
-   >Även om det inte är identiskt har tillägg av komponenter och resurser i en mall många likheter med liknande åtgärder när du [redigerar sidor](/help/sites-authoring/editing-content.md).
+   >Även om det inte är identiskt har tillägg av komponenter och resurser i en mall många likheter med liknande åtgärder när du skapar [sidor](/help/sites-authoring/editing-content.md).
 
 * **Komponentåtgärder**
 
@@ -482,7 +488,7 @@ I **strukturläge** för mallredigeraren:
 
    >[!CAUTION]
    >
-   >Observera att AEM beskärningsproportioner definieras som **höjd/bredd**. Detta skiljer sig från den vanliga definitionen av bredd/höjd och görs av äldre kompatibilitetsskäl. Sidredigeringsanvändarna kommer inte att vara medvetna om några skillnader förutsatt att du definierar **namnet** tydligt eftersom det är det som visas i användargränssnittet.
+   >Observera att AEM beskärningsproportioner definieras som **höjd/bredd**. Detta skiljer sig från den vanliga definitionen av bredd/höjd och görs av kompatibilitetsskäl. Sidredigeringsanvändarna kommer inte att vara medvetna om några skillnader förutsatt att du definierar **namnet** tydligt eftersom det är det som visas i användargränssnittet.
 
    >[!NOTE]
    >
@@ -557,7 +563,7 @@ I **strukturläge** för mallredigeraren:
 
    ![chlimage_1-147](assets/chlimage_1-147.png)
 
-   För att spara utrymme växer inte layoutbehållaren så att den passar listan över tillåtna komponenter. Behållaren blir i stället en rullningsbar lista.
+   För att spara utrymme växer inte layoutbehållaren så att den rymmer listan med tillåtna komponenter. Behållaren blir i stället en rullningsbar lista.
 
    Komponenter som kan konfigureras visas med en **policyikon**, som du kan trycka eller klicka på för att redigera policyn och egenskaperna för den komponenten.
 
