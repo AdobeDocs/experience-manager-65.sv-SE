@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 1099cc44-de6d-499e-8b52-f2f5811ae086
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ce64b148ba96cc64670aaf96c1b201bafa282b98
+source-git-commit: 149cdd00f745ad897f506434d7156b8147ef5bae
 workflow-type: tm+mt
-source-wordcount: '3218'
+source-wordcount: '3285'
 ht-degree: 0%
 
 ---
@@ -130,6 +130,16 @@ När du skapar en ny redigerbar mall:
 
    Teknisk information om hur du skapar sidor med redigerbara mallar finns i [Resulterande innehållssidor](/help/sites-developing/page-templates-editable.md#resultant-content-pages) i det här dokumentet.
 
+>[!TIP]
+>
+>Ange aldrig någon information som behöver internationaliseras i en mall. För internalisering rekommenderas lokaliseringsfunktionen [för kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html).
+
+>[!NOTE]
+>
+>Mallar är kraftfulla verktyg som effektiviserar arbetsflödet för att skapa sidor. Alltför många mallar kan överbelasta författarna och göra det förvirrande att skapa sidor. En bra tumregel är att hålla antalet mallar under 100.
+>
+>Adobe rekommenderar inte att ha fler än 1 000 mallar på grund av potentiella prestandaeffekter.
+
 >[!NOTE]
 >
 >Redigeringsklientbiblioteket förutsätter att namnutrymmet `cq.shared` finns på innehållssidorna, och om det saknas kommer JavaScript-felet `Uncaught TypeError: Cannot read property 'shared' of undefined` att uppstå.
@@ -137,10 +147,6 @@ När du skapar en ny redigerbar mall:
 >Alla exempelinnehållssidor innehåller `cq.shared`, så allt innehåll som baseras på dem inkluderar automatiskt `cq.shared`. Om du vill skapa egna innehållssidor från grunden utan att basera dem på exempelinnehåll måste du se till att inkludera namnutrymmet `cq.shared`.
 >
 >Mer information finns i [Använda bibliotek på klientsidan](/help/sites-developing/clientlibs.md).
-
->[!CAUTION]
->
->Ange aldrig någon information som behöver vara [internationaliserad](/help/sites-developing/i18n.md) i en mall.
 
 ## Mallmappar {#template-folders}
 
@@ -214,7 +220,7 @@ Om du vill skapa en ny mapp kan du göra det här:
 
 1. Gå till **Global Navigation** -> **Verktyg** > **Konfigurationsläsaren**.
 
-   De befintliga mapparna visas till vänster inklusive mappen **globa** l.
+   De befintliga mapparna visas till vänster inklusive mappen **global**.
 
 1. Klicka på **Skapa**.
 1. I dialogrutan **Skapa konfiguration** måste följande fält konfigureras:
