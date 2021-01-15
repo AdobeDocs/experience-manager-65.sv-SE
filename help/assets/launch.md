@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: f4051767-182e-4cfd-9dfc-8f516378e0b6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 71e827dc17fd1c36230cb8d26b68d7f41c584e60
+source-git-commit: 0560eb8e3c127964920827609a9982acf07b515f
 workflow-type: tm+mt
-source-wordcount: '6221'
+source-wordcount: '6212'
 ht-degree: 15%
 
 ---
@@ -418,7 +418,7 @@ Du konfigurerar integreringen i följande Adobe-produkter:
 
 Om den här integrationslösningen används med AEM Sites måste dessutom följande konfiguration göras:
 
-* Adobe I/O Console - integrering skapas för Adobe Launch.
+* [!DNL Adobe I/O] Konsol - integrering skapas för Adobe Launch.
 * AEM författarnod - IMS-konfiguration och Adobe Launch-molnkonfiguration.
 
 Som en del av konfigurationen bör du kontrollera att du har tillgång till ett företag i Adobe Experience Cloud som redan har Adobe Analytics och Adobe Launch aktiverat.
@@ -501,7 +501,7 @@ När du har konfigurerat Adobe Launch kommer följande att konfigureras för int
 
 **Så här konfigurerar du Adobe Launch för integreringen**:
 
-1. Börja med att gå till Adobe Launch från Experience Cloud [startsidan](https://exc-home.experiencecloud.adobe.com/exc-home/home.html#/). Klicka på ikonen Lösningar (tre gånger tre prickar) i det övre högra hörnet av sidan på menyraden och klicka sedan på **[!UICONTROL Launch]**.
+1. Börja med att gå till Adobe Launch från Experience Cloud [startsidan](https://exc-home.experiencecloud.adobe.com/exc-home/home.html#/). På menyraden klickar du på ikonen Lösningar (tre gånger tre prickar) i det övre högra hörnet av sidan och sedan på **[!UICONTROL Launch]**.
 
    Du kan även [öppna Adobe Launch direkt](https://launch.adobe.com/).
 
@@ -693,7 +693,7 @@ Den AEM konfigurationen består av följande två huvudsteg:
 
    ![2019-07-25_12-52-24](assets/2019-07-25_12-52-24.png)
 
-1. Gå till [Adobe I/O Console](https://console.adobe.io/integrations) på en ny flik i webbläsaren.
+1. Navigera till [[!DNL Adobe I/O] konsolen](https://console.adobe.io/integrations) på en ny flik i webbläsaren.
 
 1. På sidan **[!UICONTROL Adobe I/O Console Integrations]**, nära det övre högra hörnet, klickar du på **[!UICONTROL New integration]**.
 1. I dialogrutan **[!UICONTROL Create a new integration]** kontrollerar du att alternativknappen **[!UICONTROL Access an API]** är markerad och sedan klickar du på **[!UICONTROL Continue]**.
@@ -850,4 +850,4 @@ Det stöds dock i AEM publiceringsnod. Med standardinställningarna i Adobe Laun
 
 Det går att kringgå den här begränsningen genom att ange utvecklings- eller mellanlagrings-URL för Adobe Launch-biblioteket i Adobe Launch Cloud-konfigurationen för AEM publicering ovan. Detta gör att AEM publiceringsnod använder utvecklingsversionen eller mellanlagringsversionen av Adobe Launch-biblioteket.
 
-Se [Integrera AEM med Adobe Launch via Adobe I/O](https://helpx.adobe.com/experience-manager/using/aem_launch_adobeio_integration.html) om du vill ha mer information om hur du konfigurerar Adobe Launch Cloud Configuration.
+Se [Integrera AEM med Adobe Launch Via [!DNL Adobe I/O]](https://helpx.adobe.com/experience-manager/using/aem_launch_adobeio_integration.html) för mer information om hur du konfigurerar Adobe Launch Cloud Configuration.
