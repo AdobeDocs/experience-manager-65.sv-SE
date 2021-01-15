@@ -3,17 +3,17 @@ title: Förbättrade smarta taggar
 description: Förbättrade smarta taggar
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: e124025295f29d6f3999dc52467301d48bceee75
+source-git-commit: 0560eb8e3c127964920827609a9982acf07b515f
 workflow-type: tm+mt
-source-wordcount: '1489'
-ht-degree: 4%
+source-wordcount: '1478'
+ht-degree: 5%
 
 ---
 
 
 # Förstå, använda och strukturera smarta taggar {#enhanced-smart-tags}
 
-Organisationer som hanterar digitalt material använder i allt högre grad taxonomistyrd vokabulär i metadata. Det innehåller i själva verket en lista med nyckelord som anställda, partners och kunder vanligtvis använder för att referera till och söka efter digitala resurser i en viss klass. Genom att tagga resurser med taxonomistyrd vokabulär kan de enkelt identifieras och hämtas med taggbaserade sökningar.
+Organisationer som hanterar digitalt material använder i allt högre grad taxonomistyrd vokabulär i metadata. Det innehåller i själva verket en lista med nyckelord som anställda, partners och kunder vanligtvis använder för att referera till och söka efter digitala resurser i en viss klass. Genom att tagga resurser med taxonomistyrd vokabulär ser du till att resurserna är lätta att identifiera och hämta.
 
 Jämfört med naturtrogna språkordlistor kan taggning av digitala resurser baserat på företagsklonomi hjälpa dem att anpassa sig till företagets verksamhet och säkerställa att de mest relevanta resurserna visas i sökningar.
 
@@ -25,7 +25,7 @@ När en tagg har tränats och är klar kan tjänsten nu använda dessa taggar p�
 
 I bakgrunden använder Smart Content Service Adobe Sensei AI-ramverket för att träna sin bildigenkänningsalgoritm i er taggstruktur och affärsklonomi. Den här innehållsintelligensen används sedan för att tillämpa relevanta taggar på en annan uppsättning resurser.
 
-Smart Content Service är en molntjänst som tillhandahålls av Adobe I/O. Om du vill använda den i [!DNL Adobe Experience Manager] måste systemadministratören integrera din [!DNL Experience Manager]-distribution med Adobe I/O.
+Smart Content Service är en molntjänst som finns på [!DNL Adobe I/O]. Om du vill använda den i [!DNL Adobe Experience Manager] måste systemadministratören integrera din [!DNL Experience Manager]-distribution med [!DNL Adobe I/O].
 
 Här är sammanfattningsvis de viktigaste stegen för att använda tjänsten Smart Content:
 
@@ -34,19 +34,19 @@ Här är sammanfattningsvis de viktigaste stegen för att använda tjänsten Sma
 * Utbilda Smart Content Service
 * Automatisk taggning
 
-![flödesdiagram](assets/flowchart.gif)
+![Flödesschema](assets/flowchart.gif)
 
 ## Förutsättningar {#prerequisites}
 
-Innan du kan använda Smart Content Service måste du ha/se till/göra följande för att kunna integrera med Adobe I/O:
+Innan du kan använda Smart Content Service måste du ha/se till/göra följande för att kunna integrera med [!DNL Adobe I/O]:
 
 * Ett Adobe ID-konto som har administratörsbehörighet för organisationen.
 * Att Smart Content Service är aktiverad för din organisation.
-* Grundpaketet för smarta innehållstjänster kan endast läggas till i en distribution där ett [!DNL Sites]-baspaket och [!DNL Assets]-tillägg har licensierats.
+* Grundpaketet för smarta innehållstjänster kan endast läggas till i en distribution där ett [!DNL Adobe Experience Manager Sites]-baspaket och [!DNL Assets]-tillägg har licensierats.
 
 ## Introduktion till {#onboarding}
 
-Tjänsten Smart Content Service kan köpas som tillägg till [!DNL Experience Manager]. När du har köpt programmet skickas ett e-postmeddelande med en länk till Adobe I/O till administratören i organisationen.
+Tjänsten Smart Content Service kan köpas som tillägg till [!DNL Experience Manager]. När du har köpt funktionen skickas ett e-postmeddelande till administratören för organisationen med en länk till [!DNL Adobe I/O].
 
 Administratören kan följa länken för att integrera Smart Content Service med [!DNL Experience Manager]. Information om hur du integrerar tjänsten med [!DNL Experience Manager Assets] finns i [Konfigurera smarta taggar](config-smart-tagging.md).
 
@@ -73,17 +73,17 @@ Lägg till resurserna i en mapp och använd taggarna på varje resurs från egen
 
 ## Förstå [!DNL Experience Manager]-sökresultat med smarta taggar {#understandsearch}
 
-Som standard kombineras söktermerna i [!DNL Experience Manager]-sökningen med en `AND`-sats. Om du använder smarta taggar ändras inte standardbeteendet. Om du använder smarta taggar läggs ytterligare en `OR`-sats till för att hitta någon av söktermerna i de använda smarta taggarna. Du kan till exempel söka efter `woman running`. Resurser med bara `woman` eller bara `running` nyckelord i metadata visas inte som standard i sökresultaten. En resurs som är taggad med antingen `woman` eller `running` med smarta taggar visas i en sådan sökfråga. Sökresultaten är en kombination av
+Som standard kombineras söktermerna i [!DNL Experience Manager]-sökningen med en `AND`-sats. Om du använder smarta taggar ändras inte standardbeteendet. Om du använder smarta taggar läggs en extra `OR`-sats till för att hitta någon av söktermerna som är relaterade till de smarta taggarna. Du kan till exempel söka efter `woman running`. Resurser med bara `woman` eller bara `running` nyckelord i metadata visas inte som standard i sökresultaten. En resurs som är taggad med antingen `woman` eller `running` med smarta taggar visas i en sådan sökfråga. Sökresultaten är en kombination av
 
-* resurser med `woman` och `running` nyckelord i metadata.
+* Resurser med nyckelorden `woman` och `running` i metadata.
 
-* resurser som är smarta taggade med något av nyckelorden.
+* Resurser som är smarta och taggade med något av nyckelorden.
 
 Sökresultaten som matchar alla söktermer i metadatafält visas först, följt av sökresultaten som matchar någon av söktermerna i de smarta taggarna. I ovanstående exempel är den ungefärliga visningsordningen för sökresultat:
 
-1. matchar `woman running` i de olika metadatafälten.
-1. matchar `woman running` i smarta taggar.
-1. matchar `woman` eller `running` i smarta taggar.
+1. Matchar `woman running` i de olika metadatafälten.
+1. Matchar `woman running` i smarta taggar.
+1. Matchar `woman` eller `running` i smarta taggar.
 
 >[!CAUTION]
 >
@@ -140,7 +140,7 @@ Du kan utlösa taggningsarbetsflödet från arbetsflödeskonsolen eller från ti
 
 >[!NOTE]
 >
->I de efterföljande taggningscyklerna märks bara de ändrade resurserna igen med nyligen tränade taggar. Även oförändrade resurser taggas om mellanrummet mellan den sista och den aktuella taggningscykeln för taggningsarbetsflödet överstiger 24 timmar. För periodiska taggningsarbetsflöden taggas oförändrade resurser när tidsintervallet överskrider sex månader.
+>I de efterföljande taggningscyklerna är det bara de ändrade resurserna som taggas igen med nyligen tränade taggar. Även oförändrade resurser taggas om mellanrummet mellan den sista och den aktuella taggningscykeln för taggningsarbetsflödet överstiger 24 timmar. För periodiska taggningsarbetsflöden taggas oförändrade resurser när tidsintervallet överskrider sex månader.
 
 ## Kuratera eller moderera de använda smarta taggarna {#manage-smart-tags}
 
