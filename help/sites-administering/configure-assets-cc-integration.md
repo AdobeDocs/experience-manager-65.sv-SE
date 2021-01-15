@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 82a8e807-a2df-4fe3-a68c-2dabc9328eca
 docset: aem65
 translation-type: tm+mt
-source-git-commit: c7f06670ca8b488a661fde7a133bce6886ee7f5d
+source-git-commit: 0560eb8e3c127964920827609a9982acf07b515f
 workflow-type: tm+mt
-source-wordcount: '1326'
+source-wordcount: '1319'
 ht-degree: 1%
 
 ---
@@ -21,11 +21,11 @@ ht-degree: 1%
 
 # Konfigurera AEM Assets-integrering med Experience Cloud och Creative Cloud {#configure-aem-assets-integration-with-experience-cloud-and-creative-cloud}
 
-Om du är kund hos Adobe Experience Cloud kan du synkronisera dina mediefiler i Adobe Experience Manager (AEM) Assets med Adobe Creative Cloud, och vice versa. Du kan också synkronisera dina resurser med Experience Cloud och vice versa. Du kan konfigurera synkroniseringen via Adobe I/O.
+Om du är kund hos Adobe Experience Cloud kan du synkronisera dina resurser inom Adobe Experience Manager Assets med Adobe Creative Cloud, och vice versa. Du kan också synkronisera dina resurser med Experience Cloud och vice versa. Du kan konfigurera synkroniseringen via [!DNL Adobe I/O].
 
 Det arbetsflöde som ska användas för att konfigurera den här integreringen är:
 
-1. Skapa en autentisering i Adobe I/O med en offentlig gateway och få ett program-ID.
+1. Skapa en autentisering i [!DNL Adobe I/O] med en offentlig gateway och hämta ett program-ID.
 1. Skapa en profil på din AEM Assets-instans med program-ID:t.
 1. Använd den här konfigurationen för att synkronisera dina resurser inom AEM Assets med Creative Cloud.
 
