@@ -3,9 +3,9 @@ title: '[!DNL Adobe Experience Manager] 6.5 Versionsinformation om föregående 
 description: Versionsinformation för [!DNL Adobe Experience Manager] 6.5 Service Packs.
 contentOwner: AK
 translation-type: tm+mt
-source-git-commit: 544d99921a3b487bf8ae64111a8568f8f02fcd03
+source-git-commit: 0560eb8e3c127964920827609a9982acf07b515f
 workflow-type: tm+mt
-source-wordcount: '14670'
+source-wordcount: '14661'
 ht-degree: 0%
 
 ---
@@ -633,7 +633,7 @@ Nedan följer en lista över korrigeringar i [!DNL Experience Manager] 6.5.5.0-v
 * Intern cache rensas när en sida med en Adobe Target-komponent publiceras (NPR-33162).
 * Integrering med Adobe Target fungerar inte på [!DNL Windows Internet Explorer] 11 (NPR-33111).
 * När du konfigurerar Adobe Target visas inte fälten [!UICONTROL Company] och [!UICONTROL Report Suite] när du väljer en rapportkälla (NPR-32502).
-* När du exporterar [!DNL Experience Fragments] med Adobe I/O exporteras inte metadata som Source Product till Adobe Target (NPR-32159).
+* När du exporterar [!DNL Experience Fragments] med [!DNL Adobe I/O] exporteras inte metadata som Source Product till Adobe Target (NPR-32159).
 * Auktoriserade IMS-användare i den lokala Experience Manager-administratörsgruppen kan inte skapa eller ändra IMS-konfigurationer (NPR-33045).
 * Konfigurationssidan för Adobe Launch visar inte alla poster (NPR-33011).
 * Användare i gruppen content-authors kan inte redigera egenskaper för en Adobe Target-komponent på grund av ett JavaScript-fel (NPR-32996).
@@ -704,7 +704,7 @@ Adobe Experience Manager 6.5.4.0 är en viktig uppdatering som innehåller nya f
 
 Några viktiga funktioner och förbättringar i Adobe Experience Manager 6.5.4.0:
 
-* Adobe Experience Manager Assets har nu konfigurerats med Brand Portal via Adobe I/O Console.
+* Adobe Experience Manager Assets har nu konfigurerats med varumärkesportalen via [!DNL Adobe I/O]-konsolen.
 
 * Ett nytt [Generera utskrift](../forms/using/aem-forms-workflow-step-reference.md)-steg är nu tillgängligt för Adobe Experience Manager Forms-arbetsflöden.
 
@@ -868,7 +868,7 @@ En fullständig lista över funktioner och viktiga högdagrar som introducerats 
 
 ### Varumärkesportal {#assets-brand-portal-6540}
 
-* Användare av varumärkesportalen kan inte publicera resurser i mappen för bidrag till [!DNL Assets] när de uppgraderar till Adobe I/O på Experience Manager 6.5.4 (CQDOC-15655). För en omedelbar korrigering på Experience Manager 6.5.4 rekommenderar vi att du [hämtar snabbkorrigeringen](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/hotfix/cq-6.5.0-hotfix-33041) och installerar den på din författarinstans.
+* Användare av varumärkesportalen kan inte publicera resurser i mappen för bidrag till [!DNL Assets] vid uppgradering till [!DNL Adobe I/O] på Experience Manager 6.5.4 (CQDOC-15655). För en omedelbar korrigering på Experience Manager 6.5.4 rekommenderar vi att du [hämtar snabbkorrigeringen](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/hotfix/cq-6.5.0-hotfix-33041) och installerar den på din författarinstans.
 
 * Popup-värden för metadataschemat visas inte i resursegenskaper (CQ-4283287).
 
@@ -1433,7 +1433,7 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 * Ett problem med Scene7 videospelare när den expanderar till helskärm. Programfix för CQ-4266700
 * ZoomVerticalViewer: Panoreringsknappar ska inte visas om en enda bildresurs används. Programfix för CQ-4264795
 * Om du tar bort en underordnad nod i live-kopian bör liveRelationship frigöras. Programfix för CQ-4270395
-* Metadataschemat innehåller bara objekt från den globala konfigurationen och saknar dem från den aktiva klientorganisationen. URL-värdet för formPath återställs till standard även om det ändras. NPR-29944: Programfix för CQ-4262898
+* Metadataschemat innehåller bara objekt från den globala konfigurationen och saknar dem från den aktiva klientorganisationen. URL-värdet för formPath återställs till standard även om det ändras. NPR-29945: Programfix för CQ-4262898
 * Publicera bildförinställningar till [!DNL Brand Portal] misslyckas med 500-felkod. NPR-29510: Programfix för CQ-4268659
 
 ### Webbplatser
