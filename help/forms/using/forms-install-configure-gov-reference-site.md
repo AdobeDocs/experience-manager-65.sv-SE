@@ -8,9 +8,9 @@ contentOwner: anujkapo
 discoiquuid: fe5da0aa-d3a8-4b77-a447-9e429fdc2816
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: 0560eb8e3c127964920827609a9982acf07b515f
 workflow-type: tm+mt
-source-wordcount: '4727'
+source-wordcount: '4728'
 ht-degree: 1%
 
 ---
@@ -465,7 +465,7 @@ AEM Forms Analytics-data är tillgängliga offline eller utan en Adobe Analytics
 
 För att installera och konfigurera AEM Forms med Adobe Forms måste användare av konverteringsverktyget ha följande:
 
-1. Tillgång till Adobe IO.
+1. Tillgång till Adobe I/O.
 
 1. Behörighet att skapa en integrering med Adobe Forms Conversion-tjänsten.
 
