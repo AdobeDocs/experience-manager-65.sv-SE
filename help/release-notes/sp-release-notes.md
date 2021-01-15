@@ -4,9 +4,9 @@ description: Versionsinformation för  [!DNL Adobe Experience Manager] 6.5 Servi
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: ad8ca7aaacd80bf5ca8daec78f7836e883e2343b
+source-git-commit: 0560eb8e3c127964920827609a9982acf07b515f
 workflow-type: tm+mt
-source-wordcount: '4174'
+source-wordcount: '4171'
 ht-degree: 0%
 
 ---
@@ -463,7 +463,7 @@ Granska om du använder en funktion eller en funktion i en distribution. Planera
 
 | Yta | Funktion | Ersättning |
 |---|---|---|
-| Integreringar | Skärmen **[!UICONTROL AEM Cloud Services Opt-In]** är föråldrad. Med integreringen av AEM och Target uppdaterades i AEM 6.5 för att stödja Target Standard API, som använder autentisering via Adobe IMS och I/O, och den växande rollen hos Adobe Launch för att instrumentera AEM sidor för analys och personalisering, har guiden för att välja In blivit funktionellt irrelevant. | Konfigurera systemanslutningar, Adobe IMS-autentisering och Adobe I/O-integreringar via respektive AEM-molntjänster. |
+| Integreringar | Skärmen **[!UICONTROL AEM Cloud Services Opt-In]** är föråldrad. Med integreringen av AEM och Target uppdaterades i AEM 6.5 för att stödja Target Standard API, som använder autentisering via Adobe IMS och I/O, och den växande rollen hos Adobe Launch för att instrumentera AEM sidor för analys och personalisering, har guiden för att välja In blivit funktionellt irrelevant. | Konfigurera systemanslutningar, Adobe IMS-autentisering och [!DNL Adobe I/O]-integreringar via respektive AEM-molntjänster. |
 | Anslutningar | Adobe JCR Connector för Microsoft SharePoint 2010 och Microsoft SharePoint 2013 är borttagen för AEM 6.5. | Ej tillämpligt |
 
 ## Kända fel {#known-issues}
