@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: Security
 discoiquuid: badfaa18-472e-4777-a7dc-9c28441b38b7
 translation-type: tm+mt
-source-git-commit: 741ba6f6ef3270414c0ddabb1a1d02d5c436b7d9
+source-git-commit: bb50e530f0d015c0e7d06650157e3e3994082483
 workflow-type: tm+mt
 source-wordcount: '271'
 ht-degree: 0%
@@ -34,5 +34,4 @@ Alternativen för Innehållsdispositionsfilter innehåller följande funktioner:
 
 * Uteslutna resurssökvägar: En lista över uteslutna resurser. Varje resurssökväg måste anges som en absolut och fullständig sökväg. Prefixmatchning/jokertecken stöds inte.
 
-* Aktivera för alla resurssökvägar: Den här flaggan anger om det här filtret ska aktiveras för alla sökvägar, förutom för de uteslutna sökvägarna som definieras av Uteslutna resurssökvägar. Om du anger värdet true ignoreras innehållets dispositionsbanor. Oberoende av konfigurationen täcks bara resurssökvägar som innehåller en egenskap med namnet jcr:data eller jcr:content jcr:data.
-
+* Aktivera för alla resurssökvägar: Den här flaggan anger om det här filtret ska aktiveras för alla sökvägar, förutom för de uteslutna sökvägarna som definieras av Uteslutna resurssökvägar. Om du anger värdet true ignoreras innehållets dispositionsbanor. Oberoende av konfigurationen täcks bara resurssökvägar som innehåller egenskapen jcr:data eller jcr:content/jcr:data.
