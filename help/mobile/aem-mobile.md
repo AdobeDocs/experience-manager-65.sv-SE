@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: administering-on-demand-services-app
 discoiquuid: 5e1e6a51-67e1-42e3-bcb0-e16bc92c9cb3
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: a876a1a8d4aeb9e9a94c93a16742a4058307b0a8
 workflow-type: tm+mt
 source-wordcount: '326'
 ht-degree: 1%
@@ -53,7 +53,7 @@ En AEM är ansvarig för följande när du skapar ett program med AEM Mobile On-
 
 * [Konfigurera användar- och användargrupper](/help/mobile/aem-mobile-configure-users.md)
 * [Förhandsgranska med Preflight](/help/mobile/aem-mobile-manage-ondemand-services.md)
-* [Administrera innehållstjänster](//help/mobile/developing-content-services.md)
+* [Administrera innehållstjänster](/help/mobile/developing-content-services.md)
 
 ## Ytterligare resurser {#additional-resources}
 
