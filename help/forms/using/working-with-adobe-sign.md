@@ -10,9 +10,9 @@ topic-tags: develop
 discoiquuid: f79828d8-2230-4477-8ffa-eeb6a0413acd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 70fff9b4029ba70fe0667dafa69fc6172f4b1733
+source-git-commit: 77c3624a780bd0d2e3bb3e82004cce73e5b66b32
 workflow-type: tm+mt
-source-wordcount: '3553'
+source-wordcount: '3625'
 ht-degree: 0%
 
 ---
@@ -119,7 +119,7 @@ Utför följande steg för att lägga till fält i ett adaptivt formulär och an
    >[!NOTE]
    >
    >    * Det är inte obligatoriskt att använda [!DNL Adobe Sign]-block för att använda [!DNL Adobe Sign] i en adaptiv form. Om du inte använder [!DNL Adobe Sign]-block och lägger till fält för signerare, visas standardsignaturfältet längst ned i signeringsdokumenten.
-   >    * Använd bara [!DNL Adobe Sign]-blocket för de adaptiva formulär som automatiskt genererar arkivdokument. Om du använder en anpassad XDP för att generera ett anpassat formulär för arkivhandlingar eller ett formulärmallsbaserat formulär krävs inte [!DNL Adobe Sign]-block.
+   >    * Använd bara [!DNL Adobe Sign]-blocket för de adaptiva formulär som automatiskt genererar arkivdokument. Om du använder en anpassad XDP för att generera ett dokument för post eller ett formulärmallsbaserat anpassat formulär stöds inte [!DNL Adobe Sign]-block.
 
 
 1. Markera komponenten **[!UICONTROL Adobe Sign Block]** och tryck på ikonen **Redigera** ![aem_6_3_edit](assets/aem_6_3_edit.png). Här visas alternativ för att lägga till fält och formatera utseende för ett fält.
@@ -300,7 +300,8 @@ Utför följande steg för att konfigurera signaturstegskomponenten:
       > Några bra strategier är:
    > * Anpassad formulärpanel som innehåller signeringssteget finns alltid i den sista eller andra panelen i ett anpassat formulär. Det kan bara vara den andra sista panelen när den sista panelen innehåller steget Sammanfattning.
    > * Panelen som innehåller signatur- eller sammanfattningssteget får inte innehålla några andra komponenter.
-   > * Anpassningsbara formulär som innehåller signatursteget kan inte ha en skicka-knapp. Överföringen hanteras via en bakgrundstjänst eller steget Sammanfattning.
+   > * Anpassningsbara formulär som innehåller signatursteget kan inte ha en skicka-knapp.
+   > * Inlämningen av anpassade formulär som innehåller signeringssteget hanteras via en bakgrundstjänst eller sammanfattningssteget. Om det finns en konfigurerad signerare som också fyller i formuläret, är fördelen med att hantera den adaptiva formuläröverföringen med steget Sammanfattning att den omedelbart utvärderar att signeraren har signerat formuläret och anropar åtgärden skicka. En bakgrundstjänst tar längre tid att utvärdera om alla konfigurerade signerare har signerat formuläret och fördröjer överföringen av det adaptiva formuläret.
    > * Utforma formuläret så att användaren inte kan navigera tillbaka från en panel som innehåller signatur- eller sammanfattningssteget.
 
 
