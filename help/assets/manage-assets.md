@@ -4,9 +4,9 @@ description: Lär dig resurshanteringsåtgärder som överföring, hämtning, re
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: adeb20c1e7222e7c5702061cba73350002f5154c
+source-git-commit: f786b35e77c6b862f7fc6e45d3d0af56a51e3e95
 workflow-type: tm+mt
-source-wordcount: '9331'
+source-wordcount: '9359'
 ht-degree: 3%
 
 ---
@@ -50,7 +50,7 @@ Du kan överföra olika typer av resurser (inklusive bilder, PDF-filer, RAW-file
 
 >[!NOTE]
 >
->I läget Dynamic Media - Scene7 kan du bara överföra resurser vars filstorlek är 2 GB eller mindre.
+>I Dynamic Media - Scene7-läge kan du bara överföra resurser vars filstorlek är 2 GB eller mindre.
 
 Du kan välja att överföra resurser till mappar med eller utan en bearbetningsprofil tilldelad dem.
 
@@ -153,23 +153,27 @@ Seriell överföring av resurser är aktiverat som standard. Om du vill inaktive
 
 ### Överför resurser med FTP {#uploading-assets-using-ftp}
 
-Med Dynamic Media kan du batchöverföra resurser via FTP-servern. Om du tänker överföra stora resurser (>1 GB) eller överföra hela mappar och undermappar bör du använda FTP. Du kan till och med konfigurera FTP-överföring så att den sker regelbundet.
+Dynamic Media möjliggör batchöverföring av resurser via FTP-server. Om du tänker överföra stora resurser (>1 GB) eller överföra hela mappar och undermappar bör du använda FTP. Du kan till och med konfigurera FTP-överföring så att den sker regelbundet.
 
 >[!NOTE]
 >
->I läget Dynamic Media - Scene7 kan du bara överföra resurser vars filstorlek är 2 GB eller mindre.
+>I Dynamic Media - Scene7-läge kan du bara överföra resurser vars filstorlek är 2 GB eller mindre.
 
 >[!NOTE]
 >
->Om du vill överföra resurser via FTP i läget Dynamic Media - Scene7 installerar du Feature Pack 18912 på [!DNL Experience Manager]-författarinstanserna. Kontakta [Adobe kundtjänst](https://helpx.adobe.com/se/contact/enterprise-support.ec.html) för att få tillgång till FP-18912 och slutföra konfigurationen av ditt FTP-konto. Mer information finns i [Installera funktionspaket 18912 för migrering av gruppresurser](/help/assets/bulk-ingest-migrate.md).
+>Om du vill överföra resurser via FTP i Dynamic Media - Scene7-läge installerar du Feature Pack 18912 på [!DNL Experience Manager]-författarinstanserna. Kontakta [Adobe kundtjänst](https://helpx.adobe.com/se/contact/enterprise-support.ec.html) för att få tillgång till FP-18912 och slutföra konfigurationen av ditt FTP-konto. Mer information finns i [Installera funktionspaket 18912 för migrering av gruppresurser](/help/assets/bulk-ingest-migrate.md).
 >
->Om du använder FTP för att överföra resurser ignoreras de överföringsinställningar som anges i [!DNL Experience Manager]. I stället används filbearbetningsregler, enligt definition i Dynamic Media Classic,.
+>Om du använder FTP för att överföra resurser ignoreras de överföringsinställningar som anges i [!DNL Experience Manager]. I stället används filbearbetningsregler, enligt definitionen i Dynamic Media Classic,.
 
 **Så här överför du resurser med FTP**
 
 1. Logga in på FTP-servern med det FTP-användarnamn och lösenord som du fick från e-postmeddelandet om etablering. Överför filer eller mappar till FTP-servern i FTP-klienten.
-1. [Logga in på Dynamic Media ](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) Classic med hjälp av autentiseringsuppgifter från e-postmeddelandet om etablering. Klicka på **[!UICONTROL Upload]** i det globala navigeringsfältet.
 
+1. Öppna [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html?lang=en#system-requirements-dmc-app) och logga sedan in på ditt konto.
+
+   Dina autentiseringsuppgifter och din inloggning tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kontaktar du teknisk support.
+
+1. Klicka på **[!UICONTROL Upload]** i det globala navigeringsfältet.
 1. Klicka på fliken **[!UICONTROL Via FTP]** på sidan Överför, i det övre vänstra hörnet.
 1. Välj en FTP-mapp att överföra filer från till vänster på sidan. till höger på sidan väljer du en målmapp.
 1. Klicka på **[!UICONTROL Job Options]** längst ned till höger på sidan och ange önskade alternativ baserat på resurserna i den mapp du valde.
@@ -178,12 +182,12 @@ Med Dynamic Media kan du batchöverföra resurser via FTP-servern. Om du tänker
 
    >[!NOTE]
    >
-   >När du överför resurser via FTP får de alternativ för överföringsjobb som du anger i Dynamic Media Classic (S7) företräde framför de parametrar för resursbearbetning som anges i [!DNL Experience Manager].
+   >När du överför resurser via FTP får de överföringsjobbalternativ som du anger i Dynamic Media Classic (S7) företräde framför resurshanteringsparametrar som anges i [!DNL Experience Manager].
 
 1. Klicka på **[!UICONTROL Save]** längst ned till höger i dialogrutan Alternativ för överföringsjobb.
 1. Klicka på **[!UICONTROL Submit Upload]** längst ned till höger på sidan Överför.
 
-   Om du vill visa överföringsförloppet klickar du på **[!UICONTROL Jobs]** i det globala navigeringsfältet. På sidan Jobb visas överföringsförloppet. Du kan fortsätta arbeta i [!DNL Experience Manager] och gå tillbaka till sidan Jobs i Dynamic Media Classic när som helst för att granska ett pågående jobb.
+   Om du vill visa överföringsförloppet klickar du på **[!UICONTROL Jobs]** i det globala navigeringsfältet. På sidan Jobb visas överföringsförloppet. Du kan fortsätta arbeta i [!DNL Experience Manager] och gå tillbaka till jobbsidan i Dynamic Media Classic när som helst för att granska ett pågående jobb.
 Om du vill avbryta ett pågående överföringsjobb klickar du på **[!UICONTROL Cancel]** bredvid Varaktighet.
 
 #### Alternativ för överföring av jobb {#upload-job-options}
@@ -252,7 +256,7 @@ När du överför bildfiler från PostScript (EPS) eller Illustrator (AI) kan du
 
 PSD-filer (Photoshop Document) används oftast för att skapa bildmallar. När du överför en PSD-fil kan du skapa en bildmall automatiskt från filen (välj alternativet [!UICONTROL Create Template] på skärmen Överför).
 
-Dynamic Media skapar flera bilder från en PSD-fil med lager om du använder filen för att skapa en mall; skapas en bild för varje lager.
+Dynamic Media skapar flera bilder från en PSD-fil med lager om du använder filen för att skapa en mall. skapas en bild för varje lager.
 
 Använd [!UICONTROL Crop Options] och [!UICONTROL Color Profile Options], som beskrivs ovan, med överföringsalternativ för Photoshop.
 
@@ -369,7 +373,7 @@ Så här förhandsgranskar du en resurs med tangentbordet:
 
 >[!MORELIKETHIS]
 >
->* [Förhandsgranska dynamiska medieresurser](/help/assets/previewing-assets.md).
+>* [Förhandsgranska Dynamic Media Assets](/help/assets/previewing-assets.md).
 >* [Visa delresurser](managing-linked-subassets.md#viewing-subassets).
 
 
@@ -583,7 +587,7 @@ Se [Hämta resurser från Experience Manager](/help/assets/download-assets-from-
 
 >[!NOTE]
 >
->Mer information om Dynamic Media finns i [Publicera dynamiska medieresurser.](/help/assets/publishing-dynamicmedia-assets.md)
+>Mer information om Dynamic Media finns i [Publicera Dynamic Media Assets.](/help/assets/publishing-dynamicmedia-assets.md)
 
 1. Navigera till platsen för resursen/mappen som du vill publicera.
 
