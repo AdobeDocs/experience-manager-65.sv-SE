@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: 1103b849-0042-4e11-b170-38ee81dd0157
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
+source-git-commit: 4333cfde433d00ddc4cb013b31fe52956791da46
 workflow-type: tm+mt
-source-wordcount: '10806'
-ht-degree: 6%
+source-wordcount: '11264'
+ht-degree: 7%
 
 ---
 
@@ -160,7 +160,7 @@ Windows-enheter som stöder det här videoformatet finns på följande plats: [V
 * Konfigurera videospelare för att tillgodose era varumärkesbehov.
 * Integrera video på webbplatsen, mobilsajten eller mobilapplikationen med en enkel URL eller inbäddningskod.
 
-Se [Exempel på dynamisk videouppspelning](https://s7d9.scene7.com/s7/uvideo.jsp?asset=GeoRetail/Mop_AVS&amp;config=GeoRetail/Universal_Video1&amp;stageSize=640,480).
+<!-- See [Dynamic video playback](https://s7d9.scene7.com/s7/uvideo.jsp?asset=GeoRetail/Mop_AVS&config=GeoRetail/Universal_Video1&stageSize=640,480) sample. -->
 
 Se även [Visningsprogram för AEM Assets och Dynamic Media Classic](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers.html#viewers-aem-assets-dmc) och [Endast AEM resurser](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html#viewers-for-aem-assets-only).
 
@@ -402,7 +402,7 @@ Anta till exempel att källvideon är 1 920 x 1 080. I följande tabell ger de t
 
 | Videotyp | Bredd x höjd | Breddförhållande | Höjdförhållande |
 |--- |--- |--- |--- |
-| Källa | 1920 x 1080 | 1 | 3 |
+| Källa | 1920 x 1080 | 1 | 1 |
 | Kodad | 960 x 540 | 2 | 2 |
 | Kodad | 640 x 360 | 3 | 3 |
 | Kodad | 480 x 270 | 4 | 4 |
@@ -1001,67 +1001,68 @@ Ange start- och slutdatumintervallet som du vill ha videodata för och tryck sed
 
 1. I tabellen som visar de publicerade videoklippen trycker du på ett videonamn för att spela upp videon och ser även videons återgivningsrapport.
 
-<!-- OBSOLETE CONTENT ### Viewing video reports based on a video viewer that you created using the Scene7 HMTL5 Viewer SDK {#viewing-video-reports-based-on-a-video-viewer-that-you-created-using-the-scene-hmtl-viewer-sdk}
+### Visa videorapporter baserade på ett videovisningsprogram som du har skapat med Dynamic Media HTML5 Viewer SDK {#viewing-video-reports-based-on-a-video-viewer-that-you-created-using-the-scene-hmtl-viewer-sdk}
 
-If you are using an out-of-box video viewer provided by Dynamic Media, or if you created a custom viewer preset based off of an out-of-box video viewer, then no additional steps are required to view video reports. However, if you have created your own video viewer based off the Scene7 HTML5 Viewer SDK, then use the following steps to ensure the your video viewer is sending tracking events to Dynamic Media Video Reports.
+Om du använder ett användningsklart visningsprogram från Dynamic Media, eller om du har skapat en anpassad visningsförinställning baserad på ett skräddarsytt visningsprogram, krävs inga ytterligare steg för att visa videorapporter. Om du har skapat ett eget videovisningsprogram baserat på SDK-API:t för HTML5-visningsprogrammet ska du följa de här stegen för att se till att videovisningsprogrammet skickar spårningshändelser till Dynamic Media videorapporter.
 
-Use the Dynamic Media Viewers Reference and the Scene7 HTML5 Viewers SDK to create your own video viewers.
+Använd [Adobe Dynamic Media Viewer Reference Guide](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html) och [HTML5 Viewer SDK API](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html) för att skapa egna videovisningsprogram.
 
-See [Dynamic Media Viewers Reference Guide](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html). -->
+Så här visar du videorapporter baserade på ett videovisningsprogram som du har skapat med HTML5 Viewer SDK API:
 
-<!-- OBSOLETE CONTENT Download the Scene7 HTML Viewer SDK from Adobe Developer Connection.
-
-See [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html). -->
-
-<!-- OBSOLETE CONTENT To view Video Reports based on a video viewer that you created using the Scene7 HTML5 Viewer SDK:
-
-1. Navigate to any published video asset.
-1. Near the upper-left corner of the asset's page, from the drop-down list, select **[!UICONTROL Viewers.]**
-1. Select any video viewer preset and copy the embed code.
-1. In the embed code, find the line with the following:
+1. Navigera till alla publicerade videoresurser.
+1. I listrutan i det övre vänstra hörnet på resursens sida väljer du **[!UICONTROL Viewers]**.
+1. Välj en förinställning för visningsprogrammet och kopiera inbäddningskoden.
+1. I inbäddningskoden söker du efter raden med följande:
 
    `videoViewer.setParam("config2", "<value>");`
 
-   The `config2` parameter enables tracking in HTML5 Viewers. It is also a company-specific preset that contains the configuration information for Video Reporting, and for customer-specific Adobe Analytics configurations.
+   Parametern `config2` aktiverar spårning i HTML5-visningsprogram. Det är också en företagsspecifik förinställning som innehåller konfigurationsinformationen för Videorapportering och för kundspecifika Adobe Analytics-konfigurationer.
 
-   The correct value for the config2 parameter is found in both the **Embed Code **and in the copy **URL **function. In the URL from the copy **URL **command, the parameter to look for is `&config2=<value>` . The value is almost always `companypreset`, but in some instances it can also be `companypreset-1`, `companypreset-2`, and so forth.
+   Det korrekta värdet för parametern config2 finns både i **[!UICONTROL Embed Code]** och i kopieringsfunktionen **[!UICONTROL URL]**. I URL:en från kopieringskommandot **[!UICONTROL URL]** letar du efter parametern `&config2=<value>`. Värdet är nästan alltid `companypreset`, men i vissa fall kan det också vara `companypreset-1`, `companypreset-2` osv.
 
-1. In your custom video viewer code, add AppMeasurementBridge .jsp to the viewer page by doing the following:
+1. Lägg till AppMeasurementBridge .jsp på visningsprogramsidan i din anpassade videovisningsprogramkod genom att göra följande:
 
-    * First, determine if you need the `&preset` parameter.
-      If the `config2` parameter is `companypreset`, you do *not *need `&preset=parameter`.
-      If `config2` is anything else, set the preset parameter the same as the `config2` parameter. For example, if `config2=companypreset-2`, add `&param2=companypreset-2` to the AppMeasurmentBridge.jsp URL.
+   * Kontrollera först om du behöver parametern `&preset`.
 
-    * Then, add the AppMeasurementBridge.jsp script:
+      Om parametern `config2` är `companypreset` behöver du *inte* `&preset=parameter`.
+
+      Om `config2` är något annat anger du parametern preset till samma som parametern `config2`. Om `config2=companypreset-2` till exempel lägger du till `&param2=companypreset-2` i URL:en AppMeasurmentBridge.jsp.
+
+   * Lägg sedan till skriptet AppMeasurementBridge.jsp:
+
       `<script language="javascript" type="text/javascript" src="https://s7d1.scene7.com/s7viewers/AppMeasurementBridge.jsp?company=robindallas&preset=companypreset-2"></script>`
 
-1. Create the TrackingManager component by doing the following:
+1. Skapa komponenten TrackingManager genom att göra följande:
 
-    * After calling `s7sdk.Utils.init();` create a TrackingManager instance to track events by adding the following:
+   * När du har anropat `s7sdk.Util.init();` skapar du en TrackingManager-instans för att spåra händelser genom att lägga till följande:
+
       `var trackingManager = new s7sdk.TrackingManager();`
 
-    * Connect components to TrackingManager by doing the following:
-      In the `s7sdk.Event.SDK_READY` event handler, attach the component you want to track to the TrackingManager.
-      For example, if the component is `videoPlayer`, add
-      `trackingManager.attach(videoPlayer);`
-      to attach the component to the trackingManager. To track multiple viewers on a page, use multiple tracking mangaer components.
+   * Koppla komponenter till TrackingManager genom att göra följande:
 
-    * Create the AppMeasurementBridge object by adding the following:
+      I `s7sdk.Event.SDK_READY`-händelsehanteraren kopplar du komponenten som du vill spåra till TrackingManager.
+
+      Om komponenten till exempel är `videoPlayer` lägger du till
+
+      `trackingManager.attach(videoPlayer);`
+
+      för att bifoga komponenten till trackingManager. Om du vill spåra flera visningsprogram på en sida använder du flera komponenter för spårningshanteraren.
+
+   * Skapa AppMeasurementBridge-objektet genom att lägga till följande:
 
       ```
       var appMeasurementBridge = new AppMeasurementBridge(); appMeasurementBridge.setVideoPlayer(videoPlayer);
       ```
 
-    * Add the tracking function by adding the following:
+   * Lägg till spårningsfunktionen genom att lägga till följande:
 
       ```
-      trackingManager.setCallback(appMeasurementBridge.track,
+      trackingManager.setCallback(appMeasurementBridge.track, 
        appMeasurementBridge);
       ```
+   AppMeasurementBridge-objektet har en inbyggd spårfunktion. Du kan dock ge dig ett eget stöd för flera spårningssystem eller andra funktioner.
 
-   The appMeasurementBridge object has a built-in track function. However, you can provide your own to support multiple tracking systems or other functionality.
-
-   For more information, see *Using the TrackingManager Component* in the *Scene7 HTML5 Viewer SDK User Guide* available for download from [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html). -->
+<!--    For more information, see *Using the TrackingManager Component* in the *Scene7 HTML5 Viewer SDK User Guide* available for download from [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html). -->
 
 ## Lägga till bildtexter i videon {#adding-captions-to-video}
 
@@ -1077,7 +1078,7 @@ Dynamic Media kan konvertera bildtextfiler till JSON-format (JavaScript Object N
 
 Mer information om hur du använder JSON-funktionen i en URL finns i [Serverar statiskt (icke-bildinnehåll)](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/c-serving-static-nonimage-contents.html#image-serving-api) i hjälpen för Dynamic Media Image Serving and Rendering API *.*
 
-Så här lägger du till bildtexter eller undertexter till video:
+**Så här lägger du till bildtexter eller undertexter till video**:
 
 1. Använd ett program eller en tjänst från tredje part för att skapa en undertextningsfil för video.
 
@@ -1130,7 +1131,9 @@ Du kan göra det enklare att titta på och navigera i videoklipp med långa form
 >
 >Den videospelare som används måste ha stöd för kapitelmarkörer. Dynamic Media videospelare har stöd för kapitelmarkörer, men det är inte säkert att de använder tredjepartsvideospelare.
 
-<!-- OBSOLETE CONTENT If desired, you can create and brand your own custom video viewer with chapters instead of using a video viewer preset. For instructions on creating your own HTML5 viewer with chapter navigation, in the Adobe Scene7 Viewer SDK for HTML5 guide, reference the heading “Customizing Behavior Using Modifiers” under the classes `s7sdk.video.VideoPlayer` and `s7sdk.video.VideoScrubber`. The Adobe Scene7 Viewer SDK is available as a download from [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html). -->
+Om du vill kan du skapa och märka ut ett eget anpassat visningsprogram med kapitel i stället för att använda en förinställning för visningsprogrammet för video. Instruktioner om hur du skapar ett eget HTML5-visningsprogram med kapitelnavigering finns i Adobe HTML5 Viewer SDK API:t i rubriken&quot;Anpassa beteende med modifierare&quot; under klasserna `s7sdk.video.VideoPlayer` och `s7sdk.video.VideoScrubber`. Se dokumentationen för [HTML5 Viewer SDK API]((https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html)).
+
+<!-- If desired, you can create and brand your own custom video viewer with chapters instead of using a video viewer preset. For instructions on creating your own HTML5 viewer with chapter navigation, in the Adobe Scene7 Viewer SDK for HTML5 guide, reference the heading “Customizing Behavior Using Modifiers” under the classes `s7sdk.video.VideoPlayer` and `s7sdk.video.VideoScrubber`. The Adobe Scene7 Viewer SDK is available as a download from [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html). -->
 
 Du skapar en kapitellista för videon på ungefär samma sätt som du skapar bildtexter. Det innebär att du skapar en WebVTT-fil. Observera dock att den här filen måste vara separat från alla WebVTT-beskrivningsfiler som du också använder. du kan inte kombinera bildtexter och kapitel i en WebVTT-fil.
 
