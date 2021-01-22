@@ -8,9 +8,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
 translation-type: tm+mt
-source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
+source-git-commit: f786b35e77c6b862f7fc6e45d3d0af56a51e3e95
 workflow-type: tm+mt
-source-wordcount: '1769'
+source-wordcount: '1819'
 ht-degree: 0%
 
 ---
@@ -47,15 +47,15 @@ Förbättringar i den senaste versionen av Smart Imaging:
 * Smart Imaging kan inaktiveras med URL-parametern &quot;bfc&quot;.
 * TTL-oberoende (Time To Live). Tidigare var en minsta TTL på 12 timmar obligatorisk för att Smart Imaging skulle fungera.
 * Tidigare cachelagrades både original- och härledda bilder, och det var en tvåstegsprocess för att göra cacheminnet ogiltigt. I den senaste versionen av Smart Imaging cachelagras bara derivat, vilket möjliggör en cacheogiltigförklaring i ett enda steg.
-* Kunder som använder anpassade rubriker i sina regeluppsättningar (till exempel&quot;Timing Allow Origin&quot;,&quot;X-Robot&quot; som föreslogs i [Lägga till ett anpassat rubrikvärde i bildsvar|Dynamic Media Classic](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/add-custom-header-val-image.html)) kommer att ha nytta av den senaste smarta bildhanteringen, eftersom dessa rubriker inte är blockerade, till skillnad från den tidigare versionen av Smart Imaging.
+* Kunder som använder anpassade rubriker i sina regeluppsättningar (till exempel&quot;Timing Allow Origin&quot;,&quot;X-Robot&quot; som föreslogs i [Lägga till ett anpassat rubrikvärde i bildsvar|Dynamic Media Classic](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/add-custom-header-val-image.html)) har nytta av den senaste smarta bildhanteringen eftersom dessa rubriker inte är blockerade, till skillnad från den tidigare versionen av Smart Imaging.
 
 ## Kostar licensieringen för smart bildbehandling några? {#are-there-any-licensing-costs-associated-with-smart-imaging}
 
-Nej. Smart Imaging ingår i din befintliga licens av antingen Dynamic Media Classic eller Adobe Experience Manager - Dynamic Media (On Prem, AMS och AEM som Cloud Service).
+Nej. Smart Imaging ingår i din befintliga licens av Dynamic Media Classic eller Adobe Experience Manager - Dynamic Media (On Prem, AMS och AEM som Cloud Service).
 
 >[!NOTE]
 >
->Smart Imaging är inte tillgängligt för kunder med Dynamic Media - Hybrid.
+>Smart Imaging är inte tillgängligt för Dynamic Media - Hybrid-kunder.
 
 
 ## Hur fungerar smart bildbehandling? {#how-does-smart-imaging-work}
@@ -118,12 +118,12 @@ Smart Imaging fungerar med bilder som levereras via HTTP eller HTTPS. Dessutom f
 
 ## Är jag berättigad att använda smart bildbehandling? {#am-i-eligible-to-use-smart-imaging}
 
-Om du vill använda Smart Imaging måste företagets konto för Dynamic Media Classic eller Dynamic Media AEM uppfylla följande krav:
+Om du vill använda Smart Imaging måste ditt företags Dynamic Media Classic- eller Dynamic Media-konto AEM uppfylla följande krav:
 
 * Använd det Adobe-paketerade CDN (Content Delivery Network) som en del av licensen.
 * Använd en dedikerad domän (till exempel `images.company.com` eller `mycompany.scene7.com`), inte en allmän domän (till exempel `s7d1.scene7.com`, `s7d2.scene7.com` eller `s7d13.scene7.com`).
 
-Om du vill hitta dina domäner loggar du in på ditt företagskonto eller dina företagskonton.
+Om du vill hitta dina domäner öppnar du [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och loggar sedan in på ditt eller dina företagskonton.
 
 Tryck på **[!UICONTROL Setup > Application Setup > General Settings.]** Leta efter fältet **[!UICONTROL Published Server Name.]** Om du för närvarande använder en allmän domän kan du begära att gå över till din egen anpassade domän som en del av den här övergången när du skickar in en teknisk supportanmälan.
 
@@ -139,7 +139,7 @@ Du måste initiera begäran om att använda smart bildåtergivning; den inte akt
    1. Primärt kontaktnamn, e-postadress, telefon.
    1. Alla domäner som ska aktiveras för smart bildåtergivning (d.v.s. `images.company.com` eller `mycompany.scene7.com`).
 
-      Om du vill hitta dina domäner loggar du in på ditt företagskonto eller dina företagskonton.
+      Om du vill hitta dina domäner öppnar du [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och loggar sedan in på ditt eller dina företagskonton.
 
       Klicka på **[!UICONTROL Setup > Application Setup > General Settings.]**
 
@@ -147,7 +147,7 @@ Du måste initiera begäran om att använda smart bildåtergivning; den inte akt
    1. Kontrollera att du använder CDN via Adobe och inte hanteras med en direkt relation.
    1. Kontrollera att du använder en dedikerad domän som `images.company.com` eller `mycompany.scene7.com` och inte en allmän domän, som `s7d1.scene7.com`, `s7d2.scene7.com`, `s7d13.scene7.com`.
 
-      Om du vill hitta dina domäner loggar du in på ditt företagskonto eller dina företagskonton.
+      Om du vill hitta dina domäner öppnar du [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och loggar sedan in på ditt eller dina företagskonton.
 
       Klicka på **[!UICONTROL Setup > Application Setup > General Settings.]**
 
@@ -172,13 +172,13 @@ Det kan ta lång tid att skapa eftersom du måste rensa cacheminnet genom att ak
 
 ## Vilka är riskerna med att byta till Smart Imaging? {#what-are-the-risks-with-switching-over-to-use-smart-imaging}
 
-Det finns ingen risk för kundens webbsida. Du bör dock vara medveten om att övergången till Smart Imaging rensar bort ditt cacheminne vid CDN eftersom det handlar om att byta till en ny konfiguration av Dynamic Media Classic eller Dynamic Media på AEM.
+Det finns ingen risk för kundens webbsida. Du bör dock vara medveten om att övergången till Smart Imaging rensar bort ditt cacheminne vid CDN eftersom det handlar om att byta till en ny konfiguration av Dynamic Media Classic eller Dynamic Media AEM.
 
 Under den inledande övergången kommer de icke-cachelagrade bilderna direkt till Adobe ursprungliga servrar tills cachen återskapas. På grund av detta planerar Adobe att hantera ett fåtal kundövergångar i taget så att godtagbara prestanda upprätthålls när vi drar in förfrågningar från vårt ursprung. För de flesta kunder är cacheminnet helt uppbyggt igen på CDN inom cirka 1 till 2 dagar.
 
 ## Hur kan jag verifiera om smart bildbehandling fungerar som väntat?  {#how-can-i-verify-whether-smart-imaging-is-working-as-expected}
 
-1. När ditt konto har konfigurerats med smart bildåtergivning läser du in en Dynamic Media Classic- eller Adobe Experience Manager - Dynamic Media-bild-URL i webbläsaren.
+1. När ditt konto har konfigurerats med smart bildbehandling läser du in en Dynamic Media Classic- eller Adobe Experience Manager-Dynamic Media-bild-URL i webbläsaren.
 1. Öppna Chrome-utvecklarfönstret genom att klicka på **[!UICONTROL View > Developer > Developer Tools]** i webbläsaren. Eller välj ett valfritt verktyg för webbläsare.
 
 1. Kontrollera att cache är inaktiverat när utvecklingsverktygen är öppna.
