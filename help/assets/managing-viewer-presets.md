@@ -10,10 +10,10 @@ discoiquuid: cf7823f4-82c2-4e36-9b65-3c58359b8104
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/viewer-presets
 translation-type: tm+mt
-source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
+source-git-commit: 4333cfde433d00ddc4cb013b31fe52956791da46
 workflow-type: tm+mt
-source-wordcount: '4156'
-ht-degree: 16%
+source-wordcount: '4226'
+ht-degree: 15%
 
 ---
 
@@ -22,12 +22,12 @@ ht-degree: 16%
 
 En visningsförinställning är en samling inställningar som bestämmer hur användare visar mediefiler på datorskärmar och mobila enheter. Om du är administratör kan du skapa visningsförinställningar. Inställningarna är tillgängliga för en array med visningskonfigurationsalternativ. Du kan till exempel ändra visningsprogrammets visningsstorlek eller zoombeteende.
 
-<!-- OBSOLETE CONTENT  For instructions on creating and customizing your own HTML5 viewer presets, see the *Adobe Scene7 HTML5 Viewer SDK*. The SDK is available on the IS publish server embedded in the SDK itself. Each library version has its own SDK documentation included.
+Instruktioner om hur du skapar och anpassar dina egna HTML5-visningsförinställningar finns i Adobe Dynamic Media *HTML5 Viewer SDK API-dokumentation*. SDK är tillgängligt på IS-publiceringsservern som är inbäddad i SDK:n. Varje biblioteksversion har en egen SDK-dokumentation.
 
-Path: `<scene7_domain>/s7sdk/<library_version>/docs/jsdocs/index.html`.
-For example, 3.5 SDK: [https://s7d1.scene7.com/s7sdk/3.5/docs/jsdoc/index.html](https://s7d1.scene7.com/s7sdk/3.5/docs/jsdoc/index.html) -->
+Sökväg: `<scene7_domain>/s7sdk/<library_version>/docs/jsdocs/index.html`.\
+Exempel: 3.10 SDK: [https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html)
 
-Se [Referenshandboken för Dynamic Media Viewer](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html).
+Se även [Referenshandbok för Dynamic Media-visningsprogram för Adobe](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html).
 
 I det här avsnittet beskrivs hur du skapar, redigerar och hanterar visningsprogramförinställningar. Du kan använda en visningsförinställning för en resurs när du vill förhandsgranska den. Se [Använda visningsförinställningar](#applying-a-viewer-preset-to-an-asset).
 
@@ -522,7 +522,7 @@ Följande logik används för hur många miniatyrbilder som visas på panelen ba
 * Antal undersegment = rund upp till nästa undersegment (antal miniatyrbilder/antal synliga platser på miniatyrbildspanelen, baserat på webbläsarfönstrets storlek).
 I exemplet i tabellen ovan används 9 miniatyrbilder/4 kortplatser = 2,25; visningsprogrammets logik omger den med upp till tre undersegment.
 
-* Antal miniatyrbilder = avrunda till nästa miniatyrbild (antal miniatyrbilder/antal undersegment till video).
+* Antal miniatyrbilder = avrunda upp till nästa miniatyrbild (antal miniatyrbilder/antal undersegment till video).
 Med hjälp av exemplet i tabellen ovan är det 9 miniatyrbilder/3 undersegment för video = 3 miniatyrbilder.
 
 * Undersegmentets längd = den totala videons längd/antal undersegment.
@@ -534,7 +534,7 @@ När du skapar visningsförinställningar för Carousel Banner kan du ändra for
 
 |  | **Beskrivning** | **Åtgärder** |
 |---|---|---|
-| **[!UICONTROL Hotspot Icon]** | Ändra ikonen som används för hotspot-områden | Om du vill ändra hotspot-ikonbilden trycker du på **[!UICONTROL Appearance]** på **[!UICONTROL ImageMapEffect.]** under **[!UICONTROL Icon]** på fliken &lt;a0/> och går till önskad bakgrundsbild i fältet **[!UICONTROL Image]**.**[!UICONTROL Background]****[!UICONTROL Selected Component]** |
+| **[!UICONTROL Hotspot Icon]** | Ändra ikonen som används för hotspot-områden | Om du vill ändra hotspot-ikonbilden trycker du på **[!UICONTROL Appearance]** på **[!UICONTROL ImageMapEffect.]** under **[!UICONTROL Icon]** på fliken **[!UICONTROL Selected Component]** och går till önskad bakgrundsbild i fältet **[!UICONTROL Image]**.**[!UICONTROL Background]** |
 
 ## Aktivera eller inaktivera visningsförinställningar {#activating-or-deactivating-viewer-presets}
 
