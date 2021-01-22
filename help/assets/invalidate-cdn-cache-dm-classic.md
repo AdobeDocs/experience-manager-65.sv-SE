@@ -1,42 +1,34 @@
 ---
-title: Invalidera CDN-cachen med hjälp av Dynamic Media Classic
+title: CDN-cachen har inte verifierats med Dynamic Media Classic
 description: Om du validerar ditt cachelagrade CDN-innehåll (Content Delivery Network) kan du snabbt uppdatera resurser som levereras av Dynamic Media Classic, i stället för att vänta på att cachen ska upphöra att gälla.
-uuid: 0fd88e31-9745-4c98-a245-9f5d0766cad4
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
-discoiquuid: e6c9b50b-c27c-48bf-b3c0-9994e7bf6d7e
 translation-type: tm+mt
-source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
+source-git-commit: f786b35e77c6b862f7fc6e45d3d0af56a51e3e95
 workflow-type: tm+mt
-source-wordcount: '679'
+source-wordcount: '661'
 ht-degree: 18%
 
 ---
 
 
-# CDN-cachen har inte verifierats med hjälp av Dynamic Media Classic {#invalidating-your-cdn-cached-content}
+# CDN-cachen har inte verifierats med Dynamic Media Classic {#invalidating-your-cdn-cached-content}
 
-CDN cachelagrar medieresurser för snabb leverans. När du uppdaterar en resurs kanske du vill att ändringarna ska börja gälla omedelbart. Genom att du validerar ditt cachelagrade CDN-innehåll (Content Delivery Network) kan du snabbt uppdatera resurser som levereras av Dynamic Media, i stället för att vänta på att cachen ska upphöra att gälla.
+Dynamic Media-resurser cachas av CDN för snabb leverans. När du uppdaterar en resurs kanske du vill att ändringarna ska börja gälla omedelbart. Om du validerar ditt cachelagrade CDN-innehåll (Content Delivery Network) kan du snabbt uppdatera resurser som levereras av Dynamic Media, i stället för att vänta på att cachen ska upphöra att gälla.
 
 >[!IMPORTANT]
 >
->Följande steg gäller endast för Dynamic Media i AEM 6.5, Service Pack 5 (AEM 6.5.5) eller tidigare.<br>Om du använder Dynamic Media i AEM 6.5, Service Pack 6 (AEM 6.5.6) eller senare, följer du stegen som beskrivs i  [Invalidera CDN-cachen med Dynamic Media.](/help/assets/invalidate-cdn-cache-dynamic-media.md)
+>Följande steg gäller endast för Dynamic Media i AEM 6.5, Service Pack 5 (AEM 6.5.5) eller tidigare.<br>Om du använder Dynamic Media i AEM 6.5, Service Pack 6 (AEM 6.5.6) eller senare, följer du stegen i  [Invalidera CDN-cachen med Dynamic Media.](/help/assets/invalidate-cdn-cache-dynamic-media.md)
 
 Se även [Cacheöversikt i Dynamic Media Classic (Scene7)](https://helpx.adobe.com/experience-manager/scene7/kb/base/caching-questions/scene7-caching-overview.html).
 
-**Så här gör du CDN-cachen ogiltig med hjälp av Dynamic Media Classic:**
+**Så här gör du CDN-cachen ogiltig med Dynamic Media Classic:**
 
-1. Gör något av följande:
+1. Öppna [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html?lang=en#system-requirements-dmc-app) och logga sedan in på ditt konto.
 
-   * Logga in på ditt Dynamic Media Classic-konto i webbläsaren:
-
-      [https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html)
-
-      Dina autentiseringsuppgifter och din inloggning tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kontaktar du teknisk support.
-
-   * Öppna programmet Dynamic Media Classic och logga sedan in på ditt konto.
+   Dina autentiseringsuppgifter och din inloggning tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kontaktar du teknisk support.
 
 1. I sidans övre högra hörn trycker du på **[!UICONTROL Setup > Application Setup > General Settings.]**
 1. Gå till textrutan **[!UICONTROL CDN Invalidation Template]** under grupprubriken Servrar på sidan Allmänna inställningar för program.
@@ -47,10 +39,10 @@ Se även [Cacheöversikt i Dynamic Media Classic (Scene7)](https://helpx.adobe.c
 
    `https://server.com/is/image/Company/<ID>?$product$`
 
-   Om mallen bara innehåller `<ID>` fylls Dynamic Media i `https://<server>/is/image` där `<server>` är det publiceringsservernamn som definieras i Allmänna inställningar och &lt;ID> är de resurser som markerats som ogiltiga.
+   Om mallen bara innehåller `<ID>` fylls Dynamic Media i `https://<server>/is/image` där `<server>` är det publiceringsservernamn som definieras i Allmänna inställningar och &lt;ID> är det eller de objekt som ska ogiltigförklaras.
 
 1. I sidans nedre högra hörn klickar du på **[!UICONTROL Close.]**
-1. Välj en eller flera resurser i gränssnittet för Dynamic Media Classic och klicka sedan på **[!UICONTROL File > Invalidate CDN.]** Du ser en lista över en eller flera URL:er som genererats från mallen som du skapade och de resurser som du markerade. Den använder den server-URL som anges under &quot;Publicerat servernamn&quot; under Allmänna inställningar för programmet.
+1. I Dynamic Media Classic-användargränssnittet väljer du en eller flera resurser och klickar sedan på **[!UICONTROL File > Invalidate CDN.]** Du ser en lista över en eller flera URL:er som genererats från mallen som du skapade och de resurser som du markerade. Den använder den server-URL som anges under &quot;Publicerat servernamn&quot; under Allmänna inställningar för programmet.
 
    Anta till exempel att du har valt en enda bild med namnet `Backpack_B` när du har angett en mall för CDN-validering i föregående steg. När du klickar på **[!UICONTROL File > Invalidate CDN]** resulterar det i följande genererade URL i användargränssnittet för CDN-validering:
 
