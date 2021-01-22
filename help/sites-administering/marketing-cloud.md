@@ -1,18 +1,14 @@
 ---
 title: Integrera med Adobe Marketing Cloud
-seo-title: Integrera med Adobe Marketing Cloud
-description: Lär dig integrera AEM med Adobe Marketing Cloud.
-seo-description: Lär dig integrera AEM med Adobe Marketing Cloud.
-uuid: 36d71dd3-7fb0-4237-99d3-4fbb2e162e7b
+description: Lär dig hur du integrerar Adobe Experience Manager med Adobe Marketing Cloud.
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
-discoiquuid: ba496f6a-c9aa-49b5-8207-8633748d2c17
 translation-type: tm+mt
-source-git-commit: 801d57bbe8a1bede6dcb4bf7884e5f71ddea1e83
+source-git-commit: 4333cfde433d00ddc4cb013b31fe52956791da46
 workflow-type: tm+mt
-source-wordcount: '1005'
+source-wordcount: '998'
 ht-degree: 0%
 
 ---
@@ -26,7 +22,7 @@ Med Adobe Experience Manager (AEM) kan du smidigt integrera med följande Adobe 
 
 * Adobe Analytics förser marknadsförarna med användbar realtidsinformation om onlinestrategier och marknadsföringsinitiativ.
 * Adobe Target ger marknadsförarna möjlighet att kontinuerligt göra sitt webbinnehåll mer relevant för sina kunder, vilket ger större konverteringsgrad.
-* Adobe Scene7 automatiserar mediehanteringen, effektiviserar webbpubliceringen och förbättrar webbupplevelserna - allt i en hostingmiljö.
+* Adobe Dynamic Media Classic automatiserar mediehanteringen, effektiviserar webbpubliceringen och förbättrar webbupplevelserna, allt i en hostingmiljö.
 * Adobe Dynamic Tag Management ger marknadsförarna intuitiva verktyg för att snabbt och enkelt hantera ett obegränsat antal taggar från Adobe och tredje part.
 * Adobe Search &amp; Promote ger marknadsförarna möjlighet att styra och optimera sökresultaten på sina webbplatser.
 * Med Adobe Campaign kan ni hantera e-postleveransen direkt i Adobe Experience Manager.
@@ -76,11 +72,11 @@ Mer information finns i [Gå till Adobe Analytics och Adobe Target.](/help/sites
 
 Adobe Dynamic Media Classic är en värdbaserad lösning för publicering, hantering, förbättring och leverans av dynamiskt marknadsföringsmaterial och omfattande visuell marknadsföring för webben, mobiler, e-post, sociala medier, internetanslutna skärmar och tryck.
 
-I AEM kan du publicera digitala resurser direkt från AEM till Dynamic Media Classic och du kan publicera digitala resurser från Dynamic Media Classic till AEM.
+I Adobe Experience Manager kan du publicera digitala resurser direkt från Adobe Experience Manager till Dynamic Media Classic och du kan publicera digitala resurser från Dynamic Media Classic till Adobe Experience Manager.
 
-Dessutom kan du visa AEM resurser som publicerats i Dynamic Media Classic i olika visningsprogram, till exempel Grundläggande zoom och Video.
+Dessutom kan du visa Adobe Experience Manager-resurser som publicerats i Dynamic Media Classic i olika visningsprogram, till exempel Grundläggande zoom och Video.
 
-Mer information om hur AEM integreras med Dynamic Media Classic finns i [Integrera med Dynamic Media Classic](/help/sites-administering/scene7.md)-dokumentationen.
+Mer information om hur Adobe Experience Manager integreras med Dynamic Media Classic finns i [Integrera med Dynamic Media Classic](/help/sites-administering/scene7.md)-dokumentationen.
 
 ## Integrera med dynamisk tagghantering för Adobe {#integrating-with-adobe-dynamic-tag-management}
 
@@ -94,7 +90,7 @@ Integreringen av Audience Manager har tagits bort i AEM 6.3.
 
 ## Integrera med Search &amp; Promote {#integrating-with-search-promote}
 
-[Adobe Search&amp;](https://www.omniture.com/en/products/conversion/search-and-promote) Promotegör det möjligt för marknadsförare att optimera hur besökare surfar, söker, jämför och väljer ut relevanta produkter och innehåll på webbplatser och mobilsajter. Företag kan enkelt marknadsföra prioriterade element baserat på affärsmål och besökaravsikter samt automatisera försäljnings- och kampanjaktiviteter via KPI-baserade utlösare eller mätvärden.
+Med Adobe Search &amp; Promote kan marknadsförarna optimera besökarnas sätt att surfa, hitta, jämföra och välja relevanta produkter och relevant innehåll på webben och mobilsajter. Företag kan enkelt marknadsföra prioriterade element baserat på affärsmål och besökaravsikter samt automatisera försäljnings- och kampanjaktiviteter via KPI-baserade utlösare eller mätvärden.
 
 Adobe Search &amp; Promote är ett tillförlitligt och skalbart sökprogram på webben, som kan skalas till miljontals sidor eller produkter, för mycket besökta onlineföretag, från detaljhandel till nyhetssajter. Det ger oöverträffad marknadskontroll och mätningsbaserad relevans.
 
