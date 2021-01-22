@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 632a9074-b747-49a1-a57d-1f42bba1f4e9
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
+source-git-commit: f786b35e77c6b862f7fc6e45d3d0af56a51e3e95
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '550'
 ht-degree: 4%
 
 ---
@@ -39,11 +39,11 @@ Kriterierna för proportioner och nyckelord gäller även för panoramaresurser 
 
 Information om hur du överför resurser som ska användas med visningsprogrammet för panoramabilder finns i [Överföra resurser](/help/assets/manage-assets.md#uploading-assets).
 
-## Konfigurera Dynamic Media Classic {#configuring-dynamic-media-classic-scene}
+## Konfigurerar Dynamic Media Classic {#configuring-dynamic-media-classic-scene}
 
-För att visningsprogrammet för panoramabilder ska fungera på rätt sätt i AEM måste du synkronisera förinställningarna för visningsprogrammet för panoramabilder med metadata som är specifika för Dynamic Media Classic och Dynamic Media Classic, så att visningsförinställningarna uppdateras i JCR. Konfigurera Dynamic Media Classic på följande sätt:
+För att visningsprogrammet för panoramabilder ska fungera på rätt sätt i AEM måste du synkronisera förinställningarna för visningsprogrammet för panoramabilder med Dynamic Media Classic och Dynamic Media Classic-specifika metadata så att visningsförinställningarna uppdateras i JCR-filen. Konfigurera Dynamic Media Classic på följande sätt:
 
-1. [Logga in på din instans av Dynamic Media ](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) Classic för varje företagskonto.
+1. Öppna [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och logga sedan in på ditt konto.
 
 1. Klicka på **[!UICONTROL Setup > Application Setup > Publish Setup > Image Server.]** längst upp till höger på sidan
 1. Välj **[!UICONTROL Image Serving.]** på menyn **[!UICONTROL Publish Context]** längst upp på sidan Image Server Publish (Publicera)
@@ -76,7 +76,7 @@ Om du har släppt en bild i panoramamediakomponenten i WCM-filen och platshålla
 
 * Om objektet har ett ogiltigt lås eller om ett parsningsfel visas på sidan, kontrollerar du Begär felsökningsläge och Begär låsläge för att se om de är inaktiverade.
 * Om det uppstår ett fel på arbetsytan för en målad arbetsyta skapar du en sökväg till definitionsfilen för regeluppsättningen och kontrollerar CTN för de tidigare förfrågningarna om bildresursen.
-* Om bildkvaliteten blir mycket låg efter en bildbegäran med en storlek över den gräns som stöds, kontrollerar du att inställningen **[!UICONTROL JPEG Encoding Attributes > Quality]** inte är tom. En typisk inställning för fältet **[!UICONTROL Quality]** är `95`. Inställningen finns på sidan Image Server Publish (Bildserverpublicering). Mer information om hur du kommer åt sidan finns i [Konfigurera Dynamic Media Classic](/help/assets/panoramic-images.md#configuring-dynamic-media-classic-scene).
+* Om bildkvaliteten blir mycket låg efter en bildbegäran med en storlek över den gräns som stöds, kontrollerar du att inställningen **[!UICONTROL JPEG Encoding Attributes > Quality]** inte är tom. En typisk inställning för fältet **[!UICONTROL Quality]** är `95`. Inställningen finns på sidan Image Server Publish (Bildserverpublicering). Mer information finns i [Konfigurera Dynamic Media Classic](/help/assets/panoramic-images.md#configuring-dynamic-media-classic-scene).
 
 ## Förhandsgranska panoramabilder {#previewing-panoramic-images}
 
