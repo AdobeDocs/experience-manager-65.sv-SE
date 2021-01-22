@@ -1,39 +1,37 @@
 ---
 title: Konfigurera Dynamic Media - Scene7-läge
 description: Information om hur du konfigurerar läget Dynamic Media - Scene7.
-uuid: ce43c589-d415-4611-9266-b4e8887e4cdc
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
-discoiquuid: 492730a1-b29c-42db-ba6b-8a48cf8ce0f2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 24ad36d3ff329885efff319404e0d5321e8ce46d
+source-git-commit: f786b35e77c6b862f7fc6e45d3d0af56a51e3e95
 workflow-type: tm+mt
-source-wordcount: '5637'
+source-wordcount: '5676'
 ht-degree: 6%
 
 ---
 
 
-# Konfigurera dynamiska media - Scene7-läge{#configuring-dynamic-media-scene-mode}
+# Konfigurera Dynamic Media - Scene7-läge{#configuring-dynamic-media-scene-mode}
 
-Om du använder Adobe Experience Manager för olika miljöer, till exempel en för utveckling, en för staging och en för liveproduktion, måste du konfigurera Dynamic Media-Cloud Servicens för var och en av dessa miljöer.
+Om du använder Adobe Experience Manager för olika miljöer, till exempel en för utveckling, en för staging och en för liveproduktion, måste du konfigurera Dynamic Media-Cloud Services för var och en av dessa miljöer.
 
-## Arkitektur för Dynamic Media - Scene7 mode {#architecture-diagram-of-dynamic-media-scene-mode}
+## Arkitekturdiagram över Dynamic Media - Scene7-läge {#architecture-diagram-of-dynamic-media-scene-mode}
 
 I följande arkitekturdiagram beskrivs hur läget Dynamic Media - Scene7 fungerar.
 
-Med den nya arkitekturen ansvarar AEM för primära källresurser och synkronisering med Dynamic Media för bearbetning och publicering av resurser:
+Med den nya arkitekturen ansvarar AEM för primära källresurser och synkningar med Dynamic Media för bearbetning och publicering av resurser:
 
-1. När den primära källresursen överförs till AEM replikeras den till Dynamic Media. I det läget hanterar Dynamic Media all materialbearbetning och återgivningsgenerering, till exempel videokodning och dynamiska varianter av en bild. <!-- (In Dynamic Media - Scene7 mode, be aware that you can only upload assets whose file sizes are 2 GB or less.) Jira ticket CQ-4286561 fixed this issue. DM-S7 NOW SUPPORTS THE UPLOAD OF ASSETS LARGER THAN 2 GB. -->
-1. När återgivningarna har genererats kan AEM på ett säkert sätt få åtkomst till och förhandsgranska de dynamiska fjärråtergivningarna (inga binärfiler skickas tillbaka till AEM).
-1. När innehållet är klart att publiceras och godkännas utlöses Dynamic Media-tjänsten att skicka ut innehållet till leveransservrar och cachelagra innehållet vid CDN.
+1. När den primära källresursen överförs till AEM replikeras den till Dynamic Media. Då hanterar Dynamic Media all bearbetning och generering av resurser, till exempel videokodning och dynamiska varianter av en bild. <!-- (In Dynamic Media - Scene7 mode, be aware that you can only upload assets whose file sizes are 2 GB or less.) Jira ticket CQ-4286561 fixed this issue. DM-S7 NOW SUPPORTS THE UPLOAD OF ASSETS LARGER THAN 2 GB. -->
+1. När återgivningarna har genererats kan AEM på ett säkert sätt komma åt och förhandsgranska Dynamic Media-fjärråtergivningarna (inga binärfiler skickas tillbaka till AEM).
+1. När innehållet är klart att publiceras och godkännas utlöses Dynamic Media-tjänsten att skicka ut innehåll till leveransservrar och cachelagra innehåll på CDN.
 
 ![chlimage_1-550](assets/chlimage_1-550.png)
 
-## Aktivera dynamiska media i Scene7-läge {#enabling-dynamic-media-in-scene-mode}
+## Aktivera Dynamic Media i Scene7-läge {#enabling-dynamic-media-in-scene-mode}
 
 [Dynamiska ](https://www.adobe.com/solutions/web-experience-management/dynamic-media.html) medier är inaktiverade som standard. Om du vill utnyttja funktionerna för dynamiska medier måste du aktivera dem.
 
@@ -47,15 +45,15 @@ Om du vill aktivera dynamiska medier måste du starta AEM med körningsläget `d
 java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=500000 -jar cq-quickstart-6.5.0.jar -gui -r author,dynamicmedia_scene7 -p 4502
 ```
 
-## (Valfritt) Migrera förinställningar och konfigurationer för dynamiska media från 6.3 till 6.5 Zero Downtime {#optional-migrating-dynamic-media-presets-and-configurations-from-to-zero-downtime}
+## (Valfritt) Migrera förinställningar och konfigurationer för Dynamic Media från 6.3 till 6.5 Zero Downtime {#optional-migrating-dynamic-media-presets-and-configurations-from-to-zero-downtime}
 
-Om du uppgraderar AEM Dynamic Media från 6.3 till 6.4 eller 6.5 (som nu innehåller möjligheten till noll driftsättningar vid driftstopp), måste du köra följande kommando för att migrera alla förinställningar och konfigurationer från `/etc` till `/conf` i CRXDE Lite.
+Om du uppgraderar AEM Dynamic Media från 6.3 till 6.4 eller 6.5 (som nu innehåller möjligheten till noll driftsättningar vid driftstopp), måste du köra följande kommando för att migrera alla dina förinställningar och konfigurationer från `/etc` till `/conf` i CRXDE Lite.
 
 >[!NOTE]
 >
 >Om du kör AEM i kompatibilitetsläge, d.v.s. har kompatibilitetspaketet installerat, behöver du inte köra dessa kommandon.
 
-För alla uppgraderingar, antingen med eller utan kompatibilitetspaketet, kan du kopiera de förinställda visningsprogrammen som ursprungligen levererades med Dynamic Media genom att köra följande kommando för Linux-vändning:
+För alla uppgraderingar, antingen med eller utan kompatibilitetspaketet, kan du kopiera de förinställda visningsprogrammen som ursprungligen ingick i Dynamic Media genom att köra följande kommando för Linux-vändning:
 
 `curl -u admin:admin -X POST https://<server_address>:<server_port>/libs/settings/dam/dm/presets/viewer.pushviewerpresets.json`
 
@@ -67,49 +65,49 @@ Om du vill migrera anpassade förinställningar och konfigurationer för visning
 
 Installationen av funktionspaket 18912 är *valfri*.
 
-Med funktionspaketet 18912 kan du antingen importera resurser gruppvis via FTP eller migrera resurser från antingen Dynamic Media - hybrid-läge eller Dynamic Media Classic till Dynamic Media - Scene7-läge AEM. Den är tillgänglig från [Adobe Professional Services](https://www.adobe.com/experience-cloud/consulting-services.html).
+Med funktionspaketet 18912 kan du antingen importera resurser gruppvis via FTP eller migrera resurser från antingen Dynamic Media - hybrid- eller Dynamic Media Classic till Dynamic Media - Scene7-läge AEM. Den är tillgänglig från [Adobe Professional Services](https://www.adobe.com/experience-cloud/consulting-services.html).
 
 Mer information finns i [Installera funktionspaket 18912 för migrering av gruppresurser](/help/assets/bulk-ingest-migrate.md).
 
-## Skapa en dynamisk mediekonfiguration i Cloud Services {#configuring-dynamic-media-cloud-services}
+## Skapa en Dynamic Media-konfiguration i Cloud Services {#configuring-dynamic-media-cloud-services}
 
-**Innan du konfigurerar Dynamic Media** - När du har fått ditt e-postmeddelande med inloggningsuppgifter för Dynamic Media måste du  [logga ](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) in på Dynamic Media Classic för att ändra lösenordet. Lösenordet som anges i e-postmeddelandet om etablering genereras av systemet och är endast avsett som ett tillfälligt lösenord. Det är viktigt att du uppdaterar lösenordet så att Dynamic Media Cloud Service har rätt autentiseringsuppgifter.
+**Innan du konfigurerar Dynamic Media** - När du har fått ditt e-postmeddelande med Dynamic Media-inloggningsuppgifter måste du öppna  [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och sedan logga in på ditt konto för att ändra ditt lösenord. Lösenordet som anges i e-postmeddelandet om etablering genereras av systemet och är endast avsett som ett tillfälligt lösenord. Det är viktigt att du uppdaterar lösenordet så att Dynamic Media Cloud Service har rätt autentiseringsuppgifter.
 
 ![dynamicmediaconfiguration2uppdaterad](assets/dynamicmediaconfiguration2updated.png)
 
-**Skapa en dynamisk mediekonfiguration i Cloud Services**
+**Skapa en Dynamic Media-konfiguration i Cloud Services**
 
 1. I AEM trycker du på den AEM logotypen för att komma åt den globala navigeringskonsolen och sedan på verktygsikonen och trycker på **[!UICONTROL Cloud Services > Dynamic Media Configuration.]**
 1. På sidan Läsare för Dynamic Media-konfiguration trycker du i den vänstra rutan på **[!UICONTROL global]** (tryck inte på och välj inte mappikonen till vänster om **[!UICONTROL global]**) och sedan trycker du på **[!UICONTROL Create.]**
-1. På sidan **[!UICONTROL Create Dynamic Media Configuration]** anger du en titel, e-postadress för Dynamic Media-kontot, lösenord och väljer sedan region. Dessa tillhandahålls av Adobe i e-postmeddelandet om etablering. Kontakta supporten om du inte fått detta.
+1. På sidan **[!UICONTROL Create Dynamic Media Configuration]** anger du en titel, e-postadress för Dynamic Media-konto, lösenord och väljer sedan region. Dessa tillhandahålls av Adobe i e-postmeddelandet om etablering. Kontakta supporten om du inte fått detta.
 
    Klicka på **[!UICONTROL Connect to Dynamic Media.]**
 
    >[!NOTE]
    >
-   >När du har fått ditt e-postmeddelande med autentiseringsuppgifter för Dynamic Media loggar du in på[Dynamic Media Classic för att ändra ditt lösenord. ](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) Lösenordet som anges i e-postmeddelandet om etablering genereras av systemet och är endast avsett som ett tillfälligt lösenord. Det är viktigt att du uppdaterar lösenordet så att molntjänsten Dynamic Media är konfigurerad med rätt autentiseringsuppgifter.
+   >När du har fått ditt e-postmeddelande med Dynamic Media-inloggningsuppgifter öppnar du [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och loggar sedan in på ditt konto för att ändra ditt lösenord. Lösenordet som anges i e-postmeddelandet om etablering genereras av systemet och är endast avsett som ett tillfälligt lösenord. Det är viktigt att du uppdaterar lösenordet så att Dynamic Media molntjänst är konfigurerad med rätt autentiseringsuppgifter.
 
 1. Ange följande när anslutningen lyckas. Rubriker med asterisk (*) krävs:
 
-   * **[!UICONTROL Company]** - namnet på Dynamic Media-kontot. Det är möjligt att du har flera Dynamic Media-konton för olika undervarumärken, divisioner eller olika miljöer för staging/produktion.
+   * **[!UICONTROL Company]** - namnet på Dynamic Media-kontot. Det är möjligt att du har flera Dynamic Media-konton för olika undervarumärken, divisioner eller olika staging-/produktionsmiljöer.
 
    * **[!UICONTROL Company Root Folder Path]**
 
    * **[!UICONTROL Publishing Assets]** - Du kan välja mellan följande tre alternativ:
       * **[!UICONTROL Immediately]** betyder att när resurser överförs, importeras resurserna och URL:en/inbäddningen anges omedelbart. Ingen användaråtgärd krävs för att publicera resurser.
       * **[!UICONTROL Upon Activation]** betyder att du måste publicera resursen explicit innan en URL/Embed-länk anges.
-      * **[!UICONTROL Selective Publish]** Med det här alternativet kan du styra vilka mappar som publiceras i Dynamic Media så att du kan använda funktioner som Smart beskärning eller dynamiska återgivningar, eller vilka mappar som publiceras exklusivt i AEM för förhandsgranskning. samma resurs  ** inte publiceras i Dynamic Media för att distribueras i den offentliga domänen.<br>Du kan ange det här alternativet här i  **[!UICONTROL Dynamic Media Cloud Configuration]** eller, om du vill, du kan välja att ange det här alternativet på mappnivå, i en mapps  **[!UICONTROL Properties]**.<br>Se  [Arbeta med selektiv publicering i dynamiska media.](/help/assets/selective-publishing.md)<br>Observera att om du senare ändrar den här konfigurationen, eller ändrar den senare på mappnivå, påverkar dessa ändringar bara nya resurser som du överför från den punkten och framåt. Publiceringsläget för befintliga resurser i mappen ändras inte förrän du ändrar dem manuellt från antingen **[!UICONTROL Quick Publish]** eller **[!UICONTROL Manage Publication]**-dialogrutan.
-   * **[!UICONTROL Secure Preview Server]** - gör att du kan ange URL-sökvägen till förhandsgranskningsservern för säkra återgivningar. Det innebär att när renderingar har genererats kan AEM på ett säkert sätt komma åt och förhandsgranska de dynamiska fjärrrenderingarna (inga binärfiler skickas tillbaka till AEM).
+      * **[!UICONTROL Selective Publish]** Med det här alternativet kan du styra vilka mappar som publiceras i Dynamic Media så att du kan använda funktioner som Smart beskärning eller dynamiska återgivningar, eller vilka mappar som publiceras exklusivt i AEM för förhandsgranskning. samma mediefil  ** inte publiceras i Dynamic Media för att distribueras offentligt.<br>Du kan ange det här alternativet här i  **[!UICONTROL Dynamic Media Cloud Configuration]** eller, om du vill, du kan välja att ange det här alternativet på mappnivå, i en mapps  **[!UICONTROL Properties]**.<br>Se  [Arbeta med selektiv publicering i Dynamic Media.](/help/assets/selective-publishing.md)<br>Observera att om du senare ändrar den här konfigurationen, eller ändrar den senare på mappnivå, påverkar dessa ändringar bara nya resurser som du överför från den punkten och framåt. Publiceringsläget för befintliga resurser i mappen ändras inte förrän du ändrar dem manuellt från antingen **[!UICONTROL Quick Publish]** eller **[!UICONTROL Manage Publication]**-dialogrutan.
+   * **[!UICONTROL Secure Preview Server]** - gör att du kan ange URL-sökvägen till förhandsgranskningsservern för säkra återgivningar. Det innebär att när återgivningarna har genererats kan AEM på ett säkert sätt komma åt och förhandsgranska Dynamic Media-fjärråtergivningarna (inga binärfiler skickas tillbaka till den AEM instansen).
 Om du inte har ett särskilt arrangemang för att använda ditt företags server eller en speciell server rekommenderar Adobe Systems att du låter den här inställningen vara kvar som den har angetts.
 
-   * **[!UICONTROL Sync all content]** -  <!-- NEW OPTION, CQDOC-15371, Added March 4, 2020-->Markerat som standard. Avmarkera det här alternativet om du vill inkludera eller exkludera resurser från synkroniseringen till dynamiska media. Om du avmarkerar det här alternativet kan du välja mellan följande två synkroniseringslägen för dynamiska media:
+   * **[!UICONTROL Sync all content]** -  <!-- NEW OPTION, CQDOC-15371, Added March 4, 2020-->Markerat som standard. Avmarkera det här alternativet om du vill inkludera eller exkludera resurser från synkroniseringen till Dynamic Media. Om du avmarkerar det här alternativet kan du välja mellan följande två synkroniseringslägen för Dynamic Media:
 
    * **[!UICONTROL Dynamic Media sync mode]**
       * **[!UICONTROL Enabled by default]** - Konfigurationen används som standard på alla mappar såvida du inte markerar en mapp som är exkluderad.  <!-- you can then deselect the folders that you do not want the configuration applied to.-->
-      * **[!UICONTROL Disabled by default]** - Konfigurationen tillämpas inte på någon mapp förrän du uttryckligen markerar en vald mapp för synkronisering till Dynamic Media.
-Om du vill markera en markerad mapp för synkronisering till dynamiska media markerar du en resursmapp och klickar sedan på **[!UICONTROL Properties.]** I verktygsfältet på fliken **[!UICONTROL Details]** i listrutan **[!UICONTROL Dynamic Media sync mode]** och väljer något av följande tre alternativ. När du är klar trycker du på **[!UICONTROL Save.]** *Kom ihåg: Dessa tre alternativ är inte tillgängliga om du valde **Synkronisera allt innehåll**tidigare.* Se även  [Arbeta med selektiv publicering på mappnivå i Dynamic Media.](/help/assets/selective-publishing.md)
+      * **[!UICONTROL Disabled by default]** - Konfigurationen tillämpas inte på någon mapp förrän du uttryckligen markerar en markerad mapp för synkronisering till Dynamic Media.
+Om du vill markera en markerad mapp för synkronisering till Dynamic Media väljer du en resursmapp och klickar sedan på **[!UICONTROL Properties.]** I verktygsfältet på fliken **[!UICONTROL Details]** i listrutan **[!UICONTROL Dynamic Media sync mode]** och väljer något av följande tre alternativ. När du är klar trycker du på **[!UICONTROL Save.]** *Kom ihåg: Dessa tre alternativ är inte tillgängliga om du valde **Synkronisera allt innehåll**tidigare.* Se även  [Arbeta med selektiv publicering på mappnivå i Dynamic Media.](/help/assets/selective-publishing.md)
          * **[!UICONTROL Inherited]** - Det finns inget explicit synkroniseringsvärde i mappen; I stället ärver mappen synkroniseringsvärdet från någon av dess överordnade mappar eller standardläget i molnkonfigurationen. Detaljerad status för ärvda program genom ett verktygstips.
-         * **[!UICONTROL Enable for sub-folders]** - Inkludera allt i det här underträdet för synkronisering till Dynamic Media. De mappspecifika inställningarna åsidosätter standardläget i molnkonfigurationen.
+         * **[!UICONTROL Enable for sub-folders]** - Inkludera allt i det här underträdet för synkning till Dynamic Media. De mappspecifika inställningarna åsidosätter standardläget i molnkonfigurationen.
          * **[!UICONTROL Disabled for sub-folders]** - Uteslut allt i det här underträdet från synkronisering till Dynamic Media.
 
    >[!NOTE]
@@ -120,9 +118,10 @@ Om du vill markera en markerad mapp för synkronisering till dynamiska media mar
    >När en mediefil har aktiverats publiceras uppdateringar direkt till S7 Delivery.
 
 1. Tryck på **[!UICONTROL Save.]**
-1. Om du vill förhandsgranska dynamiskt mediematerial på ett säkert sätt innan det publiceras måste du &quot;tillåtslista&quot; den AEM författarinstansen för att ansluta till Dynamic Media:
+1. Om du vill förhandsgranska Dynamic Media-innehåll på ett säkert sätt innan det publiceras måste du tillåtslista den AEM författarinstansen för att ansluta till Dynamic Media:
 
-   * Logga in på ditt konto för Dynamic Media Classic: [https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html). Dina autentiseringsuppgifter och din inloggning tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kontaktar du teknisk support.
+   * Öppna [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och logga sedan in på ditt konto. Dina autentiseringsuppgifter och inloggningsuppgifter tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kontaktar du teknisk support.
+
    * Klicka på **[!UICONTROL Setup > Application Setup > Publish Setup > Image Server.]** i navigeringsfältet uppe till höger på sidan
 
    * Välj **[!UICONTROL Test Image Serving.]** i listrutan Publiceringskontext på sidan Image Server Publish (Publicera kontext)
@@ -130,25 +129,25 @@ Om du vill markera en markerad mapp för synkronisering till dynamiska media mar
    * Markera kryssrutan för att aktivera (aktivera) adressen och ange sedan IP-adressen för AEM Author-instansen (inte Dispatcher IP).
    * Klicka på **[!UICONTROL Save.]**
 
-Du är nu klar med den grundläggande konfigurationen; är du redo att använda läget Dynamic Media - Scene7.
+Du är nu klar med den grundläggande konfigurationen; är du redo att använda Dynamic Media - Scene7.
 
 Om du vill anpassa konfigurationen ytterligare kan du utföra alla åtgärder under [(Valfritt) Konfigurera avancerade inställningar i Dynamic Media - Scene7-läge](#optional-configuring-advanced-settings-in-dynamic-media-scene-mode).
 
 ## (Valfritt) Konfigurera avancerade inställningar i Dynamic Media - Scene7-läge {#optional-configuring-advanced-settings-in-dynamic-media-scene-mode}
 
-Om du vill anpassa konfigurationen och konfigurationen av läget Dynamic Media - Scene7 ytterligare, eller optimera prestandan, kan du utföra en eller flera av följande *valfria* uppgifter:
+Om du vill anpassa konfigurationen och konfigurationen av Dynamic Media - Scene7 eller optimera prestandan ytterligare kan du utföra en eller flera av följande *valfria* uppgifter:
 
-* [(Valfritt) Installation och konfiguration av Dynamic Media - Scene7-lägesinställningar](#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings)
+* [(Valfritt) Installation och konfiguration av Dynamic Media - inställningar för Scene7-läge](#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings)
 
 * [(Valfritt) Justera prestanda för Dynamic Media - Scene7-läge](#optional-tuning-the-performance-of-dynamic-media-scene-mode)
 
 * [(Valfritt) Filtrera resurser för replikering](#optional-filtering-assets-for-replication)
 
-### (Valfritt) Installation och konfiguration av Dynamic Media - Scene7-lägesinställningar {#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings}
+### (Valfritt) Installation och konfiguration av Dynamic Media - Inställningar för Scene7-läge {#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings}
 
-När du är i körläge `dynamicmedia_scene7` använder du användargränssnittet för Dynamic Media Classic (Scene7) för att göra ändringar i inställningarna för Dynamic Media.
+När du är i körläge `dynamicmedia_scene7` använder du användargränssnittet i Dynamic Media Classic (Scene7) för att göra ändringar i Dynamic Media-inställningarna.
 
-Vissa av ovanstående uppgifter kräver att du loggar in på Dynamic Media Classic (Scene7) här: [https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html)
+Vissa av ovanstående uppgifter kräver att du öppnar [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och sedan loggar in på ditt konto.
 
 Installations- och konfigureringsuppgifter omfattar följande:
 
@@ -177,9 +176,9 @@ Bildserverskärmen anger standardinställningar för att leverera bilder. I grä
 
 #### Konfigurerar allmänna inställningar för programmet {#configuring-application-general-settings}
 
-Öppna sidan Allmänna inställningar för programmet genom att klicka på **[!UICONTROL Setup > Application Setup > General Settings.]** i fältet Global navigering i Dynamic Media Classic
+Om du vill öppna sidan Allmänna inställningar för programmet klickar du på **[!UICONTROL Setup > Application Setup > General Settings.]** i det globala navigeringsfältet i Dynamic Media Classic
 
-**Servrar - **On account provisioning, ger Dynamic Media automatiskt de servrar som är tilldelade ditt företag. De här servrarna används för att skapa URL-strängar för din webbplats och dina program. Dessa URL-anrop är specifika för ditt konto. Ändra inte något av servernamnen om du inte uttryckligen har fått instruktioner om att göra det av AEM.
+**Servrar - **Vid kontoetablering tillhandahåller Dynamic Media automatiskt de tilldelade servrarna för ditt företag. De här servrarna används för att skapa URL-strängar för din webbplats och dina program. Dessa URL-anrop är specifika för ditt konto. Ändra inte något av servernamnen om du inte uttryckligen har fått instruktioner om att göra det av AEM.
 
 **[!UICONTROL Overwrite Images]** - Dynamic Media tillåter inte att två filer har samma namn. Varje objekts URL-ID (filnamnet minus filtillägget) måste vara unikt. De här alternativen anger hur ersättningsresurser överförs: om de ersätter originalet eller blir dubbletter. Duplicerade resurser får ett nytt namn med namnet&quot;-1&quot; (till exempel heter stol.tif stol-1.tif). Dessa alternativ påverkar resurser som överförts till en annan mapp än den ursprungliga eller resurser med ett annat filnamnstillägg än den ursprungliga (till exempel JPG, TIF eller PNG).
 
@@ -205,7 +204,8 @@ Med dynamisk mediefärghantering kan du färgkorrigera resurser. Med färgkorrig
 
 Så här konfigurerar du standardfärgegenskaperna så att färgkorrigering aktiveras när du begär bilder:
 
-1. [Logga in på Dynamic Media ](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) Classic med de autentiseringsuppgifter som angavs under etableringen. Navigera till **[!UICONTROL Setup > Application Setup.]**
+1. Öppna [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och logga sedan in på ditt konto med de autentiseringsuppgifter som anges under etableringen.
+1. Navigera till **[!UICONTROL Setup > Application Setup.]**
 1. Expandera området **[!UICONTROL Publish Setup]** och välj **[!UICONTROL Image Server.]** Ange **[!UICONTROL Publish Context]** till **[!UICONTROL Image Serving]** när du anger standardvärden för publiceringsinstanser.
 1. Bläddra till den egenskap som du behöver ändra, till exempel en egenskap i **[!UICONTROL Color Management Attributes]**-området.
 
@@ -316,7 +316,7 @@ Du kan lägga till anpassade MIME-typer för format som inte stöds i AEM Assets
 
 #### Skapa gruppuppsättningsförinställningar för automatisk generering av bilduppsättningar och snurpuppsättningar {#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets}
 
-Använd förinställningar för gruppuppsättningar för att automatisera skapandet av bilduppsättningar eller snurruppsättningar medan resurser överförs till Dynamic Media.
+Använd förinställningar för gruppuppsättningar för att automatisera skapandet av bilduppsättningar eller snurra uppsättningar medan resurserna överförs till Dynamic Media.
 
 Definiera först namnkonventionen för hur resurser ska grupperas tillsammans i en uppsättning. Du kan sedan skapa en gruppuppsättningsförinställning som är en unik, självständig uppsättning instruktioner som definierar hur uppsättningen ska skapas med bilder som matchar de definierade namnkonventionerna i förinställningsreceptet.
 
@@ -334,9 +334,9 @@ Det finns två element för definition, Matcha och Basnamn. Med dessa fält kan 
 
 **Konfigurera standardnamn**
 
-1. Logga in på ditt konto för Dynamic Media Classic (Scene7): [https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html)
+1. Öppna [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och logga sedan in på ditt konto.
 
-   Dina autentiseringsuppgifter och din inloggning tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kontaktar du teknisk support.
+   Dina autentiseringsuppgifter och inloggningsuppgifter tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kontaktar du teknisk support.
 
 1. Tryck på **[!UICONTROL Setup > Application Setup > Batch Set Presets > Default Naming.]** i navigeringsfältet uppe på sidan
 1. Välj **[!UICONTROL View Form]** eller **[!UICONTROL View Code]** för att ange hur du vill visa och ange information om varje element.
@@ -360,7 +360,7 @@ Det finns två element för definition, Matcha och Basnamn. Med dessa fält kan 
 
 **Skapa en förinställning för gruppuppsättning**
 
-I Dynamic Media används gruppuppsättningsförinställningar för att ordna resurser i uppsättningar med bilder (alternativa bilder, färgalternativ, 360-rotation) för visning i visningsprogram. Förinställningarna för gruppuppsättningar körs automatiskt tillsammans med överföringsprocesserna för resurser i Dynamic Media.
+I Dynamic Media används gruppuppsättningsförinställningar för att ordna resurser i uppsättningar med bilder (alternativa bilder, färgalternativ, 360 rotationer) för visning i visningsprogram. Förinställningarna för gruppuppsättningar körs automatiskt tillsammans med överföringsprocesserna för resurser i Dynamic Media.
 
 Du kan skapa, redigera och hantera dina gruppuppsättningsförinställningar. Det finns två former av förinställda gruppuppsättningsdefinitioner: en för en standardnamnkonvention som du kan ha konfigurerat och en för anpassade namnkonventioner som du skapar direkt.
 
@@ -368,9 +368,9 @@ Du kan antingen använda formulärfältsmetoden för att definiera en gruppupps�
 
 **Skapa en förinställning för gruppuppsättning**
 
-1. Logga in på ditt konto för Dynamic Media Classic (Scene7): [https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html)
+1. Öppna [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och logga sedan in på ditt konto.
 
-   Dina autentiseringsuppgifter och din inloggning tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kontaktar du teknisk support.
+   Dina autentiseringsuppgifter och inloggningsuppgifter tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kontaktar du teknisk support.
 
 1. Tryck på **[!UICONTROL Setup > Application Setup > Batch Set Presets > Batch Set Preset.]** i navigeringsfältet uppe på sidan
 
@@ -385,18 +385,18 @@ Du kan antingen använda formulärfältsmetoden för att definiera en gruppupps�
 
    * Om du vill definiera en ny namnkonvention när du konfigurerar förinställningen expanderar du **[!UICONTROL Asset Naming Conventions]** och klickar sedan på **[!UICONTROL Custom.]** i listrutan Namnge fil
 
-1. I Sekvensordning definierar du i vilken ordning bilderna ska visas efter att uppsättningen har grupperats tillsammans i Dynamic Media.
+1. I Sekvensordning definierar du i vilken ordning bilderna ska visas när uppsättningen har grupperats i Dynamic Media.
 
    Som standard sorteras dina resurser alfanumeriskt. Du kan dock använda en kommaavgränsad lista med reguljära uttryck för att definiera ordningen.
 
-1. Ange suffixet eller prefixet till basnamnet som du definierade i konventionen om namngivning av tillgångar för Ange namngivning och skapande. Definiera också var uppsättningen ska skapas i mappstrukturen Dynamic Media.
+1. Ange suffixet eller prefixet till basnamnet som du definierade i konventionen om namngivning av tillgångar för Ange namngivning och skapande. Ange också var uppsättningen ska skapas i mappstrukturen för Dynamic Media.
 
    Om du definierar ett stort antal uppsättningar kanske du föredrar att hålla dessa åtskilda från de mappar som innehåller själva resurserna. Du kan till exempel skapa en mapp för bilduppsättningar och placera genererade uppsättningar här.
 
 1. Tryck på **[!UICONTROL Save.]** på panelen Detaljer
 1. Tryck på **[!UICONTROL Active]** bredvid den nya förinställningens namn.
 
-   När du aktiverar förinställningen används den för att generera uppsättningen när du överför resurser till dynamiska media.
+   När du aktiverar förinställningen används den för att generera uppsättningen när du överför resurser till Dynamic Media.
 
 **Skapa en gruppuppsättningsförinställning för automatisk generering av en 2D-snurpuppsättning**
 
@@ -424,9 +424,9 @@ När rotationsuppsättningen har överförts och publicerats aktiverar du namnet
 
 **Skapa en gruppuppsättningsförinställning för automatisk generering av en 2D-snurpuppsättning**
 
-1. Logga in på ditt konto för Dynamic Media Classic (Scene7): [https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html)
+1. Öppna [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och logga sedan in på ditt konto.
 
-   Dina autentiseringsuppgifter och din inloggning tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kontaktar du teknisk support.
+   Dina autentiseringsuppgifter och inloggningsuppgifter tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kontaktar du teknisk support.
 
 1. Klicka på **[!UICONTROL Setup]> [!UICONTROL Application Setup] > [!UICONTROL Batch Set Presets] >[!UICONTROL Batch Set Preset]** i navigeringsfältet uppe på sidan.
 
@@ -471,18 +471,18 @@ När rotationsuppsättningen har överförts och publicerats aktiverar du namnet
 
 1. Ange suffixet eller prefixet till basnamnet som du definierade i konventionen om namngivning av tillgångar för Ange namngivning och skapande.
 
-   Definiera också var rotationsuppsättningen ska skapas i mappstrukturen Dynamic Media Classic.
+   Ange också var rotationsuppsättningen ska skapas i mappstrukturen för Dynamic Media Classic.
 
    Om du definierar ett stort antal uppsättningar kanske du föredrar att hålla dessa åtskilda från de mappar som innehåller själva resurserna. Du kan till exempel skapa en mapp för snurruppsättningar där du kan placera genererade uppsättningar här.
 
 1. Klicka på **[!UICONTROL Save.]** på detaljpanelen
 1. Klicka på **[!UICONTROL Active]** bredvid den nya förinställningens namn.
 
-   När du aktiverar förinställningen används den för att generera uppsättningen när du överför resurser till dynamiska media.
+   När du aktiverar förinställningen används den för att generera uppsättningen när du överför resurser till Dynamic Media.
 
-### (Valfritt) Justera prestanda för dynamiska media - Scene7-läge {#optional-tuning-the-performance-of-dynamic-media-scene-mode}
+### (Valfritt) Justera prestanda för Dynamic Media - Scene7-läge {#optional-tuning-the-performance-of-dynamic-media-scene-mode}
 
-För att Dynamic Media - Scene7-läget ska fungera smidigt rekommenderar Adobe följande finjusteringstips för synkroniseringsprestanda/skalbarhet:
+Adobe rekommenderar följande finjusteringstips för synkroniseringsprestanda/skalbarhet för att Dynamic Media - Scene7-läget ska fungera smidigt:
 
 * Uppdaterar de fördefinierade jobbparametrarna för bearbetning av olika filformat.
 * Uppdaterar de fördefinierade arbetstrådarna för Granite-arbetsflödet (videoresurser).
@@ -505,11 +505,11 @@ Adobe rekommenderar att du använder följande&quot;justerade&quot; jobbparametr
 | Postscript | `psprocess=Rasterize&psresolution=150&pscolorspace=Auto&psalpha=false&psextractsearchwords=false&aiprocess=Thumbnail&airesolution=150&aicolorspace=Auto&aialpha=false` |
 | PSD | `process=None&layerNaming=Layername&anchor=Center&createTemplate=false&extractText=false&extendLayers=false` |
 
-Om du vill uppdatera någon av de här parametrarna följer du stegen i [Aktivera MIME-typbaserade resurser/Dynamic Media Classic Upload job parameter support](#enabling-mime-type-based-assets-scene-upload-job-parameter-support).
+Om du vill uppdatera någon av de här parametrarna följer du stegen i [Aktivera stöd för MIME-typbaserade resurser/Dynamic Media Classic-överföringsjobbparametrar](#enabling-mime-type-based-assets-scene-upload-job-parameter-support).
 
 #### Uppdaterar den tillfälliga arbetsflödeskön för Granite {#updating-the-granite-transient-workflow-queue}
 
-Kön för Bevilja överföring av arbetsflöde används för **[!UICONTROL DAM Update Asset]**-arbetsflödet. I Dynamic Media används den för bildinläsning och bearbetning.
+Kön för Bevilja överföring av arbetsflöde används för **[!UICONTROL DAM Update Asset]**-arbetsflödet. I Dynamic Media används den för bildhantering.
 
 **Så här uppdaterar du den tillfälliga arbetsflödeskön för Granite**
 
@@ -533,7 +533,7 @@ Kön för Bevilja överföring av arbetsflöde används för **[!UICONTROL DAM U
 
 #### Uppdaterar arbetsflödeskön för Granite {#updating-the-granite-workflow-queue}
 
-Beviljad arbetsflödeskö används för icke-tillfälliga arbetsflöden. I Dynamic Media brukade den bearbeta video med arbetsflödet **[!UICONTROL Dynamic Media Encode Video]**.
+Beviljad arbetsflödeskö används för icke-tillfälliga arbetsflöden. I Dynamic Media bearbetades video med arbetsflödet **[!UICONTROL Dynamic Media Encode Video]**.
 
 **Så här uppdaterar du arbetsflödeskön för Granite**
 
@@ -551,11 +551,11 @@ Beviljad arbetsflödeskö används för icke-tillfälliga arbetsflöden. I Dynam
 
 1. Tryck på **[!UICONTROL Save.]**
 
-#### Uppdaterar den dynamiska Media Classic-överföringsanslutningen {#updating-the-scene-upload-connection}
+#### Uppdaterar Dynamic Media Classic-överföringsanslutningen {#updating-the-scene-upload-connection}
 
-Inställningen Scene7 Upload Connection synkroniserar AEM till Dynamic Media Classic-servrar.
+Inställningen Scene7 Upload Connection synkroniserar AEM resurser till Dynamic Media Classic-servrar.
 
-**Så här uppdaterar du den dynamiska Media Classic-överföringsanslutningen**
+**Så här uppdaterar du uppladdningsanslutningen för Dynamic Media Classic**
 
 1. Navigera till `https://<server>/system/console/configMgr/com.day.cq.dam.scene7.impl.Scene7UploadServiceImpl`
 1. I fältet **[!UICONTROL Number of connections]** och/eller fältet **[!UICONTROL Active job timeout]** ändrar du talet efter behov.
@@ -572,15 +572,15 @@ Inställningen Scene7 Upload Connection synkroniserar AEM till Dynamic Media Cla
 
 ### (Valfritt) Filtrera resurser för replikering {#optional-filtering-assets-for-replication}
 
-I distributioner av icke-dynamiska media replikerar du *alla*-resurser (både bilder och video) från AEM redigeringsmiljö till AEM publiceringsnod. Det här arbetsflödet är nödvändigt eftersom AEM publiceringsservrar också levererar resurserna.
+I distributioner som inte är från Dynamic Media replikerar du *alla*-resurser (både bilder och video) från AEM redigeringsmiljö till AEM publiceringsnod. Det här arbetsflödet är nödvändigt eftersom AEM publiceringsservrar också levererar resurserna.
 
-I Dynamic Media-distributioner behöver du dock inte replikera samma resurser till publiceringsnoder eftersom resurserna levereras via molntjänsten AEM. Ett sådant&quot;hybridpubliceringsarbetsflöde&quot; undviker extra lagringskostnader och längre bearbetningstider för att replikera resurser. Annat innehåll, t.ex. webbplatssidor, fortsätter att hanteras från de AEM publiceringsnoderna.
+I Dynamic Media-distributioner finns det dock inget behov av att replikera samma resurser till AEM publiceringsnoder eftersom resurserna levereras via molntjänsten. Ett sådant&quot;hybridpubliceringsarbetsflöde&quot; undviker extra lagringskostnader och längre bearbetningstider för att replikera resurser. Annat innehåll, t.ex. webbplatssidor, fortsätter att hanteras från de AEM publiceringsnoderna.
 
 Med filtren kan du *utesluta*-resurser från replikering till AEM publiceringsnod.
 
 #### Använda standardresursfilter för replikering {#using-default-asset-filters-for-replication}
 
-Om du använder Dynamic Media för bild och/eller video kan du använda de standardfilter som vi tillhandahåller i befintligt skick. Följande filter är aktiva som standard:
+Om du använder Dynamic Media för bilder och/eller video kan du använda de standardfilter som vi tillhandahåller i befintligt skick. Följande filter är aktiva som standard:
 
 <table>
  <tbody>
