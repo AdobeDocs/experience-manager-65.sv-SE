@@ -1,18 +1,14 @@
 ---
 title: Vanliga frågor om leverans av innehåll med HTTP2
-seo-title: Vanliga frågor om leverans av innehåll med HTTP2
 description: Läs mer om HTTP2-innehållsleverans.
-seo-description: Läs mer om HTTP2-innehållsleverans.
-uuid: e837c3e0-6e48-46f1-b510-847c9976807a
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
-discoiquuid: afbe9f80-c2a3-4a46-b9d6-4c9406667d7f
 translation-type: tm+mt
-source-git-commit: 801d57bbe8a1bede6dcb4bf7884e5f71ddea1e83
+source-git-commit: 4333cfde433d00ddc4cb013b31fe52956791da46
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '748'
 ht-degree: 1%
 
 ---
