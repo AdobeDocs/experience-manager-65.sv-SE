@@ -4,9 +4,9 @@ description: Versionsinformation för  [!DNL Adobe Experience Manager] 6.5 Servi
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 65a92d86a34ea7796f515178622332d6fbe31a39
+source-git-commit: eec0e8f466c4a228b16ee2c1249052bfc3250dec
 workflow-type: tm+mt
-source-wordcount: '4159'
+source-wordcount: '4206'
 ht-degree: 0%
 
 ---
@@ -465,6 +465,8 @@ Granska om du använder en funktion eller en funktion i en distribution. Planera
 | Anslutningar | Adobe JCR Connector för Microsoft SharePoint 2010 och Microsoft SharePoint 2013 är borttagen för AEM 6.5. | Ej tillämpligt |
 
 ## Kända fel {#known-issues}
+
+* Om du får problem i [!DNL Experience Manager]-svaret på grund av att en timer för komponentregistret är låst, [installerar du det här paketet](https://mvnrepository.com/artifact/org.apache.felix/org.apache.felix.scr/2.1.20). Lösning på dessa problem schemaläggs att ingå i nästa [Experience Manager Service Pack-version](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html?lang=en#aem-on-prem-managed-services).
 
 * Ignorera följande fel i `error.log`-filen under installationen av Experience Manager 6.5.7.0:
 
