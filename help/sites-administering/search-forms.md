@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 translation-type: tm+mt
-source-git-commit: 4333cfde433d00ddc4cb013b31fe52956791da46
+source-git-commit: 19faa273908e67a744e52d173a5352f0a52f7345
 workflow-type: tm+mt
 source-wordcount: '2060'
 ht-degree: 2%
@@ -414,7 +414,7 @@ Etiketterna för kryssrutorna för publicering och live-kopia för det platsspec
 
 ### Skapa/öppna en anpassad konfiguration {#creating-opening-a-customized-configuration}
 
-1. Navigera till **Verktyg**, **Åtgärder**, **Sök i Forms**.
+1. Navigera till **Verktyg**, **Allmänt**, **Sök i Forms**.
 
 1. Välj den konfiguration som du vill anpassa.
 1. Använd ikonen **Redigera** för att öppna konfigurationen för uppdatering.
