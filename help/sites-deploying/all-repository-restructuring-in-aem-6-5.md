@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: repo_restructuring
 discoiquuid: 80bd707f-c02d-4616-9b45-90f6c726abea
 translation-type: tm+mt
-source-git-commit: 6396660b642fd78ac7f311fa416efe0e0d52a9e3
+source-git-commit: 838e194f699b0832839c80f4ba9503c9d5a15945
 workflow-type: tm+mt
 source-wordcount: '2721'
 ht-degree: 1%
@@ -85,7 +85,7 @@ Det innebär att `sling:resourceType` för ContextHub-konfigurationen måste var
    <td><strong>Omstruktureringsvägledning</strong></td>
    <td><p>Alla nya eller ändrade arbetsflödesmodeller måste migreras till /conf/global/workflow/models.</p>
     <ol>
-     <li>Distribuera de ändrade arbetsflödesmodellerna till en lokal AEM 6.4-utvecklingsinstans, så att de finns på platsen Föregående.</li>
+     <li>Distribuera de ändrade arbetsflödesmodellerna till en lokal AEM 6.5-utvecklingsinstans, så att de finns på platsen Previous.</li>
      <li>Redigera arbetsflödesmodellen med AEM Workflow Model Editor på AEM &gt; Verktyg &gt; Arbetsflöde &gt; Modeller.</li>
      <li>Vid migrering av AEM medföljande arbetsflödesmodeller
       <ol>
