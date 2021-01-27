@@ -10,9 +10,9 @@ topic-tags: integrations
 discoiquuid: 96a77980-4213-4779-a540-00905ea8f7e3
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 5aa2fe48578633cbe5e4324f9e956e1dbbdab8af
 workflow-type: tm+mt
-source-wordcount: '1531'
+source-wordcount: '1533'
 ht-degree: 0%
 
 ---
@@ -111,7 +111,7 @@ Utför följande steg för att skapa en rapportserie.
 Konfigurationen av Cloud Servicen är information om ditt Adobe Analytics-konto. Med konfigurationen kan Adobe Experience Manager (AEM) ansluta till Adobe Analytics. Skapa en separat konfiguration för varje Analytics-konto som du använder.
 
 1. Logga in på AEM författarinstans som administratör.
-1. Klicka på **Adobe Experience Manager** > **Verktyg** ![](/help/forms/using/assets/tools.png) > **Distribution** > **Cloud Services** i det övre vänstra hörnet.
+1. Klicka på **Adobe Experience Manager** > **Verktyg** ![](/help/forms/using/assets/tools.png) > **Cloud Services** > **Äldre Cloud Services** i det övre vänstra hörnet.
 1. Leta reda på ikonen **Adobe Analytics**. Klicka på **Visa konfigurationer** och fortsätt sedan att klicka på **[+]** för att lägga till en ny konfiguration.
 
    Om du är förstagångsanvändare klickar du på **Konfigurera nu**.
