@@ -10,9 +10,9 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 4b09cd44-434e-4834-bc0d-c9c082a4ba5a
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 5a99daa208d1d109d2736525fdca3accdcfb4dd1
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '788'
 ht-degree: 0%
 
 ---
@@ -97,7 +97,7 @@ Ett arbetsflöde kan ha någon av följande status:
 * **KÖRS**: Arbetsflödesinstansen körs.
 * **SLUTFÖRT**: Arbetsflödesinstansen har avslutats.
 
-* **UPPSKJUTEN**: Arbetsflödesinstansen har inaktiverats.
+* **UPPSKJUTEN**: Markerar arbetsflödet som pausat. Se dock varningsmeddelandet nedan om du har några problem med det här läget.
 * **AVBRUTEN**: Arbetsflödesinstansen har avslutats.
 * **STAL**: Progression av arbetsflödesinstansen kräver att ett bakgrundsjobb körs, men jobbet kan inte hittas i systemet. Detta kan inträffa när ett fel inträffar när arbetsflödet körs.
 
@@ -107,7 +107,12 @@ Ett arbetsflöde kan ha någon av följande status:
 
 Beroende på aktuell status kan du utföra åtgärder för att köra arbetsflödesinstanser när du behöver ingripa i den normala förloppet för en arbetsflödesinstans:
 
-* **Gör uppehåll**: Stoppar tillfälligt körningen av arbetsflödet. Att göra uppehåll är användbart i undantagsfall när du inte vill att arbetsflödet ska fortsätta, t.ex. för underhåll. När du gör uppehåll ändras arbetsflödets status till Pausat.
+* **Gör uppehåll**: När du gör uppehåll ändras arbetsflödets status till Pausat. Se Varning nedan:
+
+>[!CAUTION]
+>
+>Det finns ett känt fel när ett arbetsflödesläge markeras som Pausa. I det här läget är det möjligt att vidta åtgärder för pausade arbetsflödesobjekt i en Inkorg.
+
 * **Återuppta**: Startar om ett pausat arbetsflöde på samma plats där det pausades, med samma konfiguration.
 * **Avsluta**: Avslutar arbetsflödets körning och ändrar tillståndet till  **ABORTED**. En avbruten arbetsflödesinstans kan inte startas om.
 
