@@ -6,9 +6,9 @@ user-guide-title: Användarhandbok för AEM 6.5 Communities
 breadcrumb-title: Communities Guide
 user-guide-description: Skapa onlineupplevelser som forum, användargrupper, utbildningsresurser och andra sociala funktioner.
 translation-type: tm+mt
-source-git-commit: d340f34704149c9e096aa6988bb3e3fda1caf3d7
+source-git-commit: fa2002950bbfb902db8c98a418b3a3d9185efea0
 workflow-type: tm+mt
-source-wordcount: '481'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 + Introduktion till AEM Communities {#introduction}
    + [Communities Sites](administer-landing.md)
    + [AEM Communities - översikt](overview.md)
-   + [Versionsinformation för AEM Communities](/help/release-notes/communities-release-notes.md)
+   + [Versionsinformation för AEM Communities](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/communities-release-notes.html)
    + [Komma igång med AEM Communities](getting-started.md)
    + [Komma igång med AEM Communities för aktivering](getting-started-enablement.md)
    + [Inledande konfiguration](setup.md)
@@ -38,7 +38,7 @@ ht-degree: 0%
    + [Konfigurera Dispatcher för Communities](dispatcher.md)
 + Administrera {#administer}
    + [Tjänsten för hantering av användare och användargenererat innehåll i AEM Communities](user-ugc-management-service.md)
-   + [Communities Sites](administer-landing.md)
+   + [Communities Sites](https://experienceleague.adobe.com/docs/experience-manager-65/communities/introduction/administer-landing.html)
    + [Communities-konsoler](consoles.md)
    + [Analyskonfiguration för communityfunktioner](analytics.md)
    + [Konfigurera aktiveringsfunktioner](enablement.md)
@@ -165,4 +165,4 @@ ht-degree: 0%
    + [Aktivitetstrender](trends.md)
    + [Använda molnet för sociala taggar](tagcloud.md)
    + [Använda röstning](voting.md)
-   + [Skapa en exempelsida](create-sample-page.md)
+   + [Skapa en exempelsida](https://experienceleague.adobe.com/docs/experience-manager-65/communities/develop/create-sample-page.html)
