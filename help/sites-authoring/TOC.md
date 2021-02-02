@@ -7,10 +7,10 @@ user-guide-title: Användarhandbok för redigering av AEM 6.5
 breadcrumb-title: Redigeringshandbok
 user-guide-description: Lär dig grunderna för att skapa innehåll och redigering i AEM.
 translation-type: tm+mt
-source-git-commit: 984e50ec1a523ff8a4f618016797c326fd679511
+source-git-commit: fa2002950bbfb902db8c98a418b3a3d9185efea0
 workflow-type: tm+mt
-source-wordcount: '284'
-ht-degree: 39%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -74,7 +74,7 @@ ht-degree: 39%
    + [Arbeta med arbetsflöden](workflows.md)
    + [Använda arbetsflöden på sidor](workflows-applying.md)
    + [Delta i arbetsflöden](workflows-participating.md)
-   + [Arbeta med projektarbetsflöden](projects-with-workflows.md)
+   + [Arbeta med projektarbetsflöden](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/projects/projects-with-workflows.html)
 + Sidprestanda {#page-performance}
    + [Content Insight](content-insights.md)
    + [Analyserar sidprestanda](ci-analyze.md)
