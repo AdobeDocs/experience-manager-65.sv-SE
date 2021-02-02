@@ -7,10 +7,10 @@ user-guide-title: AEM 6.5 Deployment Guide
 breadcrumb-title: Distributionsguide
 user-guide-description: Läs mer om installation, distribution och arkitekturen för Adobe Experience Manager 6.5, inklusive vår molndistribution av Adobe Managed Services.
 translation-type: tm+mt
-source-git-commit: 984e50ec1a523ff8a4f618016797c326fd679511
+source-git-commit: fa2002950bbfb902db8c98a418b3a3d9185efea0
 workflow-type: tm+mt
-source-wordcount: '345'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -55,7 +55,7 @@ ht-degree: 1%
    + [Avlastar jobb](offloading.md)
    + [Enkel inloggning](single-sign-on.md)
    + [Resursmappning](resource-mapping.md)
-   + [Aktivera HTTP över SSL](/help/sites-administering/ssl-by-default.md)
+   + [Aktivera HTTP över SSL](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/ssl-by-default.html)
    + [Konsekvenskontroll och genomgående kontroll](consistency-check.md)
    + [Riktlinjer för prestanda](performance-guidelines.md)
    + [Prestandaoptimering](configuring-performance.md)
@@ -84,7 +84,7 @@ ht-degree: 1%
    + [Omstrukturering av de gemensamma tillgångarna i AEM 6.5](all-repository-restructuring-in-aem-6-5.md)
    + [Omstrukturering av anläggningar Repository i AEM 6.5](sites-repository-restructuring-in-aem-6-5.md)
    + [Omstrukturering av tillgångar Repository i AEM 6.5](assets-repository-restructuring-in-aem-6-5.md)
-   + [Omstrukturering av Dynamic Media Repository i AEM 6.5](dynamicmedia-repository-restructuring-in-aem-6-5.md)
+   + [Omstrukturering av Dynamic Media-lager i AEM 6.5](dynamicmedia-repository-restructuring-in-aem-6-5.md)
    + [Omstrukturering av Forms-lager i AEM 6.5](forms-repository-restructuring-in-aem-6-5.md)
    + [Omstrukturering av e-handelslager i AEM 6.5](ecommerce-repository-restructuring-in-aem-6-5.md)
    + [Repositionsomstrukturering för AEM Communities i 6.5](communities-repository-restructuring-in-aem-6-5.md)
