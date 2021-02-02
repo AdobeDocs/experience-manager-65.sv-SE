@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 5542de4e-6262-4300-9cf8-0eac79ba4f9a
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: 9b65f7194dc648ba9a6dbc127bc8d5951f126269
 workflow-type: tm+mt
-source-wordcount: '1126'
+source-wordcount: '1181'
 ht-degree: 0%
 
 ---
@@ -130,3 +130,20 @@ Om din installation av AEM använder extern lagring, till exempel en databasserv
 
 Om du installerar eller uppdaterar JSP-filer till Experience Manager på JBoss och motsvarande servrar inte kompileras kontrollerar du att JBoss JSP-kompilatorn är korrekt konfigurerad. Mer information finns i
 [JSP Compilation Issues in JBoss](https://helpx.adobe.com/experience-manager/kb/jsps-dont-compile-jboss.html) article.
+
+### Webbplatsen läses inte in och misslyckas ibland med Java 11 {#the-website-does-not-load-or-fails-intermittently-with-java11}
+
+Det finns ett känt fel med att AEM 6.5 körs på Java 11 där webbplatsen kanske inte läses in eller misslyckas regelbundet.
+
+Om detta händer, följ nedanstående lösning:
+
+1. Öppna filen `sling.properties` under mappen `crx-quickstart/conf/`
+1. Leta reda på följande rad:
+
+   `org.osgi.framework.bootdelegation=sun.,com.sun.`
+
+1. Ersätt den med följande:
+
+   `org.osgi.framework.bootdelegation=sun.,com.sun.,jdk.internal.reflect,jdk.internal.reflect.*`
+
+1. Starta om instansen.
