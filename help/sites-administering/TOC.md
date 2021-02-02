@@ -7,10 +7,10 @@ user-guide-title: Användarhandbok för AEM 6.5
 breadcrumb-title: Administratörshandbok
 user-guide-description: Läs om hur du administrerar AEM.
 translation-type: tm+mt
-source-git-commit: 98180b630c991bc65ddfa275e0f8a97be3be6f7e
+source-git-commit: fd7a32c1070a0560ca744db041cf809f28672b33
 workflow-type: tm+mt
-source-wordcount: '629'
-ht-degree: 6%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -82,7 +82,7 @@ ht-degree: 6%
    + [Åtgärda serialiseringsproblem i AEM](mitigating-serialization-issues.md)
    + [Användarsynkronisering](sync.md)
    + [Stöd för inkapslad token](encapsulated-token.md)
-   + [Enkel inloggning](/help/sites-deploying/single-sign-on.md)
+   + [Enkel inloggning](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/single-sign-on.html)
    + [Granska åtgärder för användarhantering i AEM](audit-user-management-operations.md)
    + [SSL som standard](ssl-by-default.md)
    + [SAML 2.0-autentiseringshanterare](saml-2-0-authenticationhandler.md)
@@ -99,7 +99,7 @@ ht-degree: 6%
    + [Mappning av anpassade användargrupper i AEM 6.5](/help/sites-administering/cug-mapping.md)
 + Personanpassning {#personalization}
    + [Personanpassning](personalization.md)
-   + [ContextHub konfigureras](/help/sites-developing/ch-configuring.md)
+   + [ContextHub konfigureras](https://experienceleague.adobe.com/docs/experience-manager-65/developing/personlization/ch-configuring.html)
    + [Klientkontext](client-context.md)
    + [Kampanjer](campaigns.md)
    + [Konfigurera segmentering med ContextHub](segmentation.md)
@@ -158,11 +158,11 @@ ht-degree: 6%
    + [Integrera med Livefyre](livefyre.md)
 + Bästa praxis {#bestpractices}
    + [Bästa praxis](administer-best-practices.md)
-   + [Bästa praxis för översättning](tc-bp.md)
-   + [MSM Best Practices](msm-best-practices.md)
+   + [Bästa praxis för översättning](https://experienceleague.adobe.com/docs/experience-manager-65/administering/introduction/tc-bp.html)
+   + [MSM Best Practices](https://experienceleague.adobe.com/docs/experience-manager-65/administering/introduction/msm-best-practices.html)
    + [AEM Sites - GDPR-beredskap](gdpr-compliance-sites.md)
-   + [Hantera GDPR-begäranden för AEM Foundation](handling-gdpr-requests-for-aem-platform.md)
-   + [AEM Commerce - GDPR-beredskap](gdpr-compliance-commerce.md)
+   + [Hantera GDPR-begäranden för AEM Foundation](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/handling-gdpr-requests-for-aem-platform.html)
+   + [AEM Commerce - GDPR-beredskap](https://experienceleague.adobe.com/docs/experience-manager-65/administering/ecommerce/gdpr-compliance-commerce.html)
 + Innehållshantering {#contentmanagement}
    + [Så här arbetar du med paket](package-manager.md)
    + [Administrera taggar](tags.md)
