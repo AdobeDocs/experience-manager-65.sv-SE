@@ -6,9 +6,9 @@ user-guide-title: AEM 6.5 Mobile User Guide
 breadcrumb-title: Mobilguide
 user-guide-description: Skapa och hantera innehåll för mobilappar.
 translation-type: tm+mt
-source-git-commit: e917a36f9b8748080e9ab770a7f58f06123ea166
+source-git-commit: fa2002950bbfb902db8c98a418b3a3d9185efea0
 workflow-type: tm+mt
-source-wordcount: '324'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -82,7 +82,7 @@ ht-degree: 0%
    + [Sidmallar för mobilappar](phonegap-apps-arch-page-templates.md)
    + [Konfigurera Adobe Target Cloud Service](aem-mobile-configuring-cloud-service.md)
    + [Enkelsidiga program](phonegap-single-page-applications.md)
-   + [Modeller i databas](administer-mobile-apps.md)
+   + [Modeller i databas](https://experienceleague.adobe.com/docs/experience-manager-65/mobile/administering/administer-mobile-apps.html)
    + [Startar AEM PhoneGap](starting-aem-phonegap-app.md)
    + [Testar mobilappar](develop-mobile-apps-testing.md)
    + [Strukturera ett program](phonegap-structure-an-app.md)
