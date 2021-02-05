@@ -10,9 +10,9 @@ topic-tags: develop
 discoiquuid: f79828d8-2230-4477-8ffa-eeb6a0413acd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 77c3624a780bd0d2e3bb3e82004cce73e5b66b32
+source-git-commit: fd9ee8e4eb35bd5d303d7bbdd9660a94c54925ff
 workflow-type: tm+mt
-source-wordcount: '3625'
+source-wordcount: '3657'
 ht-degree: 0%
 
 ---
@@ -37,6 +37,8 @@ I ett typiskt [!DNL Adobe Sign]- och adaptivt formulärscenario fyller en använ
 * Signera formulär som anonym eller inloggad användare
 * Dynamiska signeringsprocesser (integration med AEM [!DNL Forms] arbetsflöde)
 * Autentisering via kunskapsbas, telefon och sociala profiler
+
+Lär dig [de bästa sätten att använda Adobe Sign med adaptiva formulär](https://medium.com/adobetech/using-adobe-sign-to-e-sign-an-adaptive-form-heres-the-best-way-to-do-it-dc3e15f9b684) för att skapa bättre signeringsupplevelser.
 
 ## Förutsättningar {#prerequisites}
 
@@ -358,5 +360,5 @@ ProblemNär  [!DNL Adobe Sign] har konfigurerats för ett adaptivt formulär sta
 ## Relaterade artiklar {#related-articles}
 
 * [Integrera Adobe Sign med AEM Forms](../../forms/using/adobe-sign-integration-adaptive-forms.md)
-* [Använda Adobe Sign i en adaptiv form](../../forms/using/working-with-adobe-sign.md)
+* [Bästa sättet att använda Adobe Sign med adaptiva formulär](https://medium.com/adobetech/using-adobe-sign-to-e-sign-an-adaptive-form-heres-the-best-way-to-do-it-dc3e15f9b684)
 * [Använda Adobe Sign med AEM Forms (video)](https://helpx.adobe.com/experience-manager/kt/forms/using/adobe-sign-integration-feature-video.html)
