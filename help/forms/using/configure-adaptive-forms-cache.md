@@ -10,9 +10,9 @@ topic-tags: Configuration
 discoiquuid: 9fa6f761-58ca-4cd0-8992-b9337dc1a279
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ade3747ba608164a792a62097b82c55626245891
+source-git-commit: 2d54d115529126162c92e9943a188d05159535f9
 workflow-type: tm+mt
-source-wordcount: '997'
+source-wordcount: '909'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,6 @@ Du kan också konfigurera adaptiv formulärcache-lagring vid dispatcher för ytt
 ### Krav {#pre-requisites}
 
 * Aktivera alternativet [sammanfogning eller förifyllning av data på klienten](prepopulate-adaptive-form-fields.md#prefill-at-client). Det hjälper till att sammanfoga unika data för varje instans av ett förfyllt formulär.
-* [Aktivera tömningsagenten för varje publiceringsinstans](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/page-invalidate.html#invalidating-dispatcher-cache-from-a-publishing-instance). Det ger bättre cachningsprestanda för adaptiva formulär. Standardwebbadressen för rensningsagenter är `http://[server]:[port]]/etc/replication/agents.publish/flush.html`.
 
 ### Att tänka på vid cachelagring av adaptiva formulär på en dispatcher {#considerations}
 
@@ -63,7 +62,7 @@ Du kan också konfigurera adaptiv formulärcache-lagring vid dispatcher för ytt
 
 Utför stegen nedan för att aktivera och konfigurera cachelagring av adaptiva formulär vid dispatcher:
 
-1. Öppna följande URL för varje publiceringsinstans i miljön och konfigurera replikeringsagenten:
+1. Öppna följande URL för varje publiceringsinstans av din miljö och [aktivera flush Agent för publiceringsinstanser av din miljö](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/page-invalidate.html#invalidating-dispatcher-cache-from-a-publishing-instance):
    `http://[server]:[port]]/etc/replication/agents.publish/flush.html`
 
 1. [Lägg till följande i din dispatcher.any-fil](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#automatically-invalidating-cached-files):
@@ -143,17 +142,7 @@ När du markerar och lägger till bilder eller videoklipp via en filläsare i et
 
 När du har publicerat bilder och video avpublicerar och publicerar du de adaptiva formulären som refererar till dessa resurser.
 
-### Vissa adaptiva formulär som innehåller innehållsfragment eller upplevelsefragment ogiltigförklaras inte automatiskt från dispatchercachen {#content-or-experience-fragment-not-auto-invalidated}
-
-#### Utgåva {#issue2}
-
-När du lägger till ett innehålls- eller upplevelsefragment i ett anpassat formulär och dessa resurser redigeras och publiceras oberoende av varandra, blir adaptiva formulär som innehåller sådana resurser inte automatiskt ogiltiga från dispatchercachen.
-
-#### Lösning {#Solution2}
-
-När du har publicerat uppdaterat innehållsfragment eller upplevelsefragment kan du uttryckligen avpublicera och publicera de adaptiva formulär som använder dessa resurser.
-
-### Endast den första instansen av ett adaptivt formulär cachelagras{#only-first-insatnce-of-adptive-forms-is-cached}
+### Endast den första instansen av ett adaptivt formulär cachelagras {#only-first-instance-of-adaptive-forms-is-cached}
 
 #### Utgåva {#issue3}
 
