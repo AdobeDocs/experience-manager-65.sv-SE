@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 6bcf0fcc-481a-4283-b30d-80b517701280
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3b64b1fe5d47f115681608f38e7e53d078c4698e
+source-git-commit: 31f546400f4c3335953d05b1df9394445b5feb56
 workflow-type: tm+mt
-source-wordcount: '2673'
+source-wordcount: '2707'
 ht-degree: 0%
 
 ---
@@ -29,6 +29,10 @@ Utför följande uppgifter för att kontrollera hur och när live-kopior synkron
 ## Installerade och anpassade utrullningskonfigurationer {#installed-and-custom-rollout-configurations}
 
 I det här avsnittet finns information om de installerade rollout-konfigurationerna och de synkroniseringsåtgärder som de använder samt hur du skapar anpassade konfigurationer om det behövs.
+
+>[!CAUTION]
+>
+>Uppdatering eller ändring av en körklar (installerad) utrullningskonfiguration är **inte** rekommenderas. Om det finns ett krav på en anpassad live-åtgärd bör den läggas till i en anpassad rollout-konfiguration.
 
 ### Utlösare för utrullning {#rollout-triggers}
 
