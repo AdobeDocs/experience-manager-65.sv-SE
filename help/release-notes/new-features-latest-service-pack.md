@@ -4,9 +4,9 @@ description: Nyheter i Adobe Experience Manager 6.5 Service Pack 7
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 65a92d86a34ea7796f515178622332d6fbe31a39
+source-git-commit: a24b66506440eb2153d5589e8c79dbfafb24df66
 workflow-type: tm+mt
-source-wordcount: '2743'
+source-wordcount: '2753'
 ht-degree: 0%
 
 ---
@@ -53,6 +53,10 @@ Nu kan du utföra sidflyttningar och MSM-rollouter som asynkrona åtgärder för
 ### Tillgänglighet för alternativet Återställ för varje komponent i layoutläget {#reset-option-layout-mode}
 
 Du kan nu använda återställningsalternativet för varje komponent i layoutläget i ett anpassat formulär. När du definierar en layout med flera kolumner för en panel kan du använda den här funktionen för att återställa enskilda komponenter på panelen. Se [Använda layoutläge för att ändra storlek på komponenter](../../help/forms/using/resize-using-layout-mode.md#resize-components).
+
+### Stöd för Microsoft SQL Server 2019
+
+[!DNL Experience Manager Forms] har nu stöd för Microsoft SQL Server 2019.
 
 ## Viktiga funktioner i tidigare [!DNL Experience Manager] 6.5 Service Packs {#key-features-previous-service-packs}
 
