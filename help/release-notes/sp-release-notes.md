@@ -4,9 +4,9 @@ description: Versionsinformation för  [!DNL Adobe Experience Manager] 6.5 Servi
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: eec0e8f466c4a228b16ee2c1249052bfc3250dec
+source-git-commit: a24b66506440eb2153d5589e8c79dbfafb24df66
 workflow-type: tm+mt
-source-wordcount: '4206'
+source-wordcount: '4212'
 ht-degree: 0%
 
 ---
@@ -46,6 +46,8 @@ De viktigaste funktionerna och förbättringarna i [!DNL Adobe Experience Manage
    * Validerar fältvärdena på servern när du skickar ett anpassat formulär.
 
    * Konvertera ett PDF-formulär till ett anpassat formulär med [!DNL Automated Forms Conversion service].
+
+* Stöd för Microsoft SQL Server 2019 i [!DNL Experience Manager Forms].
 
 * Den inbyggda databasen (Apache Jackrabbit Oak) uppdateras till version 1.2.5.
 
