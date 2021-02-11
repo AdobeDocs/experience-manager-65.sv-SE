@@ -1,34 +1,30 @@
 ---
-title: Skapa anpassningsbara formulär med XML-schema
-seo-title: Skapa anpassningsbara formulär med XML-schema
-description: Anpassningsbara formulär kan använda XML-schema som formulärmodell, vilket gör att du kan använda befintliga XSD-mallar för att skapa anpassningsbara formulär. Du kan dra och släppa schemaelement från XSD till ditt anpassningsbara formulär.
-seo-description: Anpassningsbara formulär kan använda XML-schema som formulärmodell, vilket gör att du kan använda befintliga XSD-mallar för att skapa anpassningsbara formulär. Du kan dra och släppa schemaelement från XSD till ditt anpassningsbara formulär.
-uuid: 84c35728-1b6c-4286-854b-51c03bfd0eac
-topic-tags: develop
-products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 0d6c12b3-3a70-48e9-a83b-974360a8b0b6
-docset: aem65
+title: Hur skapar man adaptiva Forms med XML-schema?
+description: Lär dig hur du använder XML-schema som formulärmodell i ett adaptivt formulär. Du kan använda befintliga XSD-mallar för att skapa anpassningsbara formulär och dra och släppa schemaelement från XSD till ditt anpassningsbara formulär. Gräv djupare med ett exempel på ett XML-schema, lägg till specialegenskaper i fält med XML-schema och begränsa godtagbara värden för en adaptiv formulärkomponent.
+feature: Adaptive Forms
+role: Business Practitioner, Developers
+level: Beginner, Imtermediate
 translation-type: tm+mt
-source-git-commit: 4ecf5efc568cd21f11801a71d491c3d75ca367fe
+source-git-commit: ec8a4c3941b5434f10ad0727be02fcf296cd4da7
 workflow-type: tm+mt
-source-wordcount: '1081'
+source-wordcount: '1073'
 ht-degree: 1%
 
 ---
 
 
-# Skapa anpassningsbara formulär med XML-schema{#creating-adaptive-forms-using-xml-schema}
+# Skapa anpassningsbara formulär med XML-schema {#creating-adaptive-forms-using-xml-schema}
 
 ## Förutsättningar {#prerequisites}
 
 Att skapa ett anpassat formulär med ett XML-schema som formulärmodell kräver grundläggande kunskaper i XML-scheman. Du bör även läsa igenom följande innehåll före den här artikeln.
 
-* [Skapa ett anpassat formulär](../../forms/using/creating-adaptive-form.md)
+* [Skapa ett anpassat formulär](creating-adaptive-form.md)
 * [XML-schema](https://www.w3.org/TR/xmlschema-2/)
 
 ## Använda ett XML-schema som formulärmodell {#using-an-xml-schema-as-form-model}
 
-AEM Forms har stöd för att skapa ett anpassat formulär genom att använda ett befintligt XML-schema som formulärmodell. Det här XML-schemat representerar strukturen i vilken data produceras eller används av det bakomliggande systemet i organisationen.
+[!DNL Experience Manager Forms] har stöd för att skapa ett anpassat formulär genom att använda ett befintligt XML-schema som formulärmodell. Det här XML-schemat representerar strukturen i vilken data produceras eller förbrukas av det bakomliggande systemet i organisationen.
 
 De viktigaste funktionerna i ett XML-schema är:
 
@@ -293,7 +289,7 @@ Du kan lägga till följande begränsningar i XML-schemaelement för att begrän
 
 **Hur vet jag vilket element i trädet som är associerat med vilket XML-element?**
 
-När du dubbelklickar på ett element i Innehållssökning visas ett fältnamn och en egenskap med namnet `bindRef` på en popup-meny. Den här egenskapen mappar trädelementet till elementet eller attributet i schemat.
+När du dubbelklickar på ett element i Innehållssökning visas ett popup-fönster med fältnamnet och egenskapen `bindRef`. Den här egenskapen mappar trädelementet till elementet eller attributet i schemat.
 
 ![Ett bindref-fält för ett XML-schemaelement](assets/dblclick.png)
 
@@ -305,7 +301,7 @@ Fältet bindRef</code> visar associationen mellan ett trädelement och ett eleme
 
 **Varför kan jag inte dra enskilda element i ett delformulär (struktur som genereras från en komplex typ) för repeterbara delformulär (värdena minOcCours och maxOccurs är större än 1)?**
 
-I ett upprepningsbart delformulär måste du använda hela delformuläret. Om du bara vill ha selektiva fält använder du hela strukturen och tar bort de oönskade.
+I ett upprepningsbart delformulär måste du använda delformuläret Fullständigt. Om du bara vill ha selektiva fält använder du hela strukturen och tar bort de oönskade.
 
 **Jag har en lång komplex struktur i Content Finder. Hur hittar jag ett specifikt element?**
 
