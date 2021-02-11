@@ -2,9 +2,9 @@
 title: Skapa och synkronisera Live-kopior
 description: Lär dig hur du skapar och synkroniserar Live-kopior.
 translation-type: tm+mt
-source-git-commit: 7d40fbfb55755d815a11b1872c41dd8e1a0e1ffd
+source-git-commit: 1725f19d0676680ae89ad7ea39fa3ae1deaeb8a3
 workflow-type: tm+mt
-source-wordcount: '4114'
+source-wordcount: '4170'
 ht-degree: 1%
 
 ---
@@ -181,7 +181,7 @@ Egenskaperna för en live-kopia visar följande information om live-kopian:
 
    * Anger om sidan fortfarande omfattas av live-kopiarv.
    * Anger om konfigurationen ärvs från den överordnade sidan.
-   * Alla utrullningskonfigurationer som används av live-kopian.
+   * Alla utrullningskonfigurationer som används för live-kopian.
 
 Så här visar du egenskaperna:
 
@@ -356,6 +356,10 @@ Du kan göra uppehåll i arvet av live-kopior för en live-kopieringssida så at
 >
 >Du kan också [frigöra en live-kopia](#detaching-a-live-copy) från sin plan för att ta bort alla anslutningar. Frigör är permanent och icke-reversibel.
 
+>[!NOTE]
+>
+>Om komponenten är markerad som en behållare gäller inte åtgärderna för att avbryta och göra uppehåll för dess underordnade komponenter. Se även [MSM Best Practices](/help/sites-administering/msm-best-practices.md#components-and-container-synchronization) om du vill ha mer information.
+
 #### Pausar arv från Sidegenskaper {#suspending-inheritance-from-page-properties}
 
 Så här gör du uppehåll i arv på en sida:
@@ -459,6 +463,10 @@ Så här anger eller ändrar du djup:
 ### Avbryter arv för en komponent {#cancelling-inheritance-for-a-component}
 
 Avbryt arvet av live-kopia för en komponent så att komponenten inte längre är synkroniserad med källkomponenten. Du kan aktivera arv vid ett senare tillfälle om det behövs.
+
+>[!NOTE]
+>
+>Om komponenten är markerad som en behållare gäller inte åtgärderna för att avbryta och göra uppehåll för dess underordnade komponenter. Se även [MSM Best Practices](/help/sites-administering/msm-best-practices.md#components-and-container-synchronization) om du vill ha mer information.
 
 >[!NOTE]
 >
