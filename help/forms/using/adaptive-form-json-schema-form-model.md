@@ -1,34 +1,30 @@
 ---
-title: Skapa anpassningsbara formulär med JSON-schema
-seo-title: Skapa anpassningsbara formulär med JSON-schema
-description: Anpassningsbara formulär kan använda JSON-schema som formulärmodell, vilket gör att du kan använda befintliga JSON-scheman för att skapa anpassningsbara formulär.
-seo-description: Anpassningsbara formulär kan använda JSON-schema som formulärmodell, vilket gör att du kan använda befintliga JSON-scheman för att skapa anpassningsbara formulär.
-uuid: bdeaeae8-65a3-4c46-b27d-fe68481e31f1
-topic-tags: develop
-products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 375ba8fc-3152-4564-aec5-fcff2a95cf4c
-docset: aem65
+title: Hur skapar man adaptiva Forms med JSON Schema?
+description: Lär dig hur du skapar adaptiva formulär med JSON-schema som formulärmodell. Du kan använda befintliga JSON-scheman för att skapa anpassningsbara formulär. Gräv djupare med ett exempel på ett JSON-schema, förkonfigurera fält i JSON-schemadefinitionen, begränsa godtagbara värden för en adaptiv formulärkomponent och lär dig konstruktioner som inte stöds.
+feature: Adaptive Forms
+role: Business Practitioner, Developers
+level: Beginner, Imtermediate
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 37ab98c9c78af452887c32101287b6d7f18d9d91
 workflow-type: tm+mt
-source-wordcount: '1469'
+source-wordcount: '1448'
 ht-degree: 2%
 
 ---
 
 
-# Skapa adaptiva formulär med JSON Schema{#creating-adaptive-forms-using-json-schema}
+# Skapa adaptiva formulär med JSON Schema {#creating-adaptive-forms-using-json-schema}
 
 ## Förutsättningar {#prerequisites}
 
 Om du skapar ett anpassat formulär med ett JSON-schema som formulärmodell måste du ha grundläggande kunskaper i JSON-schemat. Du bör läsa igenom följande innehåll före den här artikeln.
 
-* [Skapa ett anpassat formulär](../../forms/using/creating-adaptive-form.md)
+* [Skapa ett anpassat formulär](creating-adaptive-form.md)
 * [JSON-schema](https://json-schema.org/)
 
 ## Använda ett JSON-schema som formulärmodell {#using-a-json-schema-as-form-model}
 
-AEM Forms har stöd för att skapa ett adaptivt formulär genom att använda ett befintligt JSON-schema som formulärmodell. Detta JSON-schema representerar strukturen i vilken data produceras eller används av det bakomliggande systemet i din organisation. Det JSON-schema som du använder ska vara kompatibelt med [v4-specifikationerna](https://json-schema.org/draft-04/schema).
+[!DNL Adobe Experience Manager Forms] har stöd för att skapa ett anpassat formulär genom att använda ett befintligt JSON-schema som formulärmodell. Detta JSON-schema representerar strukturen i vilken data produceras eller används av det bakomliggande systemet i din organisation. Det JSON-schema som du använder ska vara kompatibelt med [v4-specifikationerna](https://json-schema.org/draft-04/schema).
 
 De viktigaste funktionerna i ett JSON-schema är:
 
@@ -82,7 +78,7 @@ Den här mappningen av JSON-element med adaptiva formulärkomponenter är följa
     </ul> </td>
   </tr>
   <tr>
-   <td><p>{</p> <p>"type" : "string",</p> <p>}</p> </td>
+   <td><p><code>{</code></p> <p><code>"type" : "string",</code></p> <p><code>}</code></p> </td>
    <td><br /> <br /> Textfält<br /> <br /> <br /> </td>
   </tr>
   <tr>
@@ -112,16 +108,16 @@ Den här mappningen av JSON-element med adaptiva formulärkomponenter är följa
 
 Det adaptiva formuläret använder information som finns i JSON-schemat för att mappa varje genererat fält. Särskilt gäller följande:
 
-* Egenskapen title fungerar som etikett för de adaptiva formulärkomponenterna.
-* Egenskapen description anges som lång beskrivning för en adaptiv formulärkomponent.
-* Egenskapen default fungerar som ett initialt värde i ett adaptivt formulärfält.
-* Egenskapen maxLength anges som maxlength-attribut för textfältskomponenten.
-* Egenskaperna minimum, maximum, exclusiveMinimum och exclusiveMaximum används för Numeric box-komponenter.
-* Ytterligare JSON-schemaegenskaper minDate och maxDate anges som stöd för intervall för DatePicker-komponenten.
-* Egenskaperna minItems och maxItems används för att begränsa antalet objekt/fält som kan läggas till eller tas bort från en panelkomponent.
-* Egenskapen readOnly anger det skrivskyddade attributet för en adaptiv formulärkomponent.
-* Den obligatoriska egenskapen anger att det adaptiva formulärfältet är obligatoriskt, medan det för panel (där typen är objekt) finns fält med tomma värden som motsvarar det objektet i de slutliga skickade JSON-data.
-* Egenskapen pattern anges som valideringsmönster (reguljärt uttryck) i adaptiv form.
+* Egenskapen `title` fungerar som etikett för adaptiva formulärkomponenter.
+* Egenskapen `description` är inställd som lång beskrivning för en adaptiv formulärkomponent.
+* Egenskapen `default` fungerar som ett initialt värde för ett adaptivt formulärfält.
+* Egenskapen `maxLength` är inställd som `maxlength`-attribut för textfältskomponenten.
+* Egenskaperna `minimum`, `maximum`, `exclusiveMinimum` och `exclusiveMaximum` används för Numerisk rutkomponent.
+* För att stöda intervall för `DatePicker component` har ytterligare JSON-schemaegenskaper `minDate` och `maxDate` angetts.
+* Egenskaperna `minItems` och `maxItems` används för att begränsa antalet objekt/fält som kan läggas till eller tas bort från en panelkomponent.
+* Egenskapen `readOnly` anger attributet `readonly` för en adaptiv formulärkomponent.
+* Egenskapen `required` anger att det adaptiva formulärfältet är obligatoriskt, medan den slutliga skickade JSON-informationen i panelen (där typen är objekt) har fält med ett tomt värde som motsvarar det objektet.
+* Egenskapen `pattern` anges som valideringsmönster (reguljärt uttryck) i adaptiv form.
 * Tillägget för JSON-schemafilen måste behållas som .schema.json. Till exempel &lt;filnamn>.schema.json.
 
 ## Exempel på JSON-schema {#sample-json-schema}
@@ -361,7 +357,7 @@ Du kan använda egenskapen **aem:afProperties** för att förkonfigurera JSON-sc
 
 ## Konfigurera skript eller uttryck för formulärobjekt {#configure-scripts-or-expressions-for-form-objects}
 
-JavaScript är uttrycksspråket i adaptiva formulär. Alla uttryck är giltiga JavaScript-uttryck och använder API:er för skriptmodell för adaptiva formulär. Du kan förkonfigurera formulärobjekt till [utvärdera ett uttryck](../../forms/using/adaptive-form-expressions.md) för en formulärhändelse.
+JavaScript är uttrycksspråket i adaptiva formulär. Alla uttryck är giltiga JavaScript-uttryck och använder API:er för skriptmodell för adaptiva formulär. Du kan förkonfigurera formulärobjekt till [utvärdera ett uttryck](adaptive-form-expressions.md) för en formulärhändelse.
 
 Använd egenskapen aem:afproperties för att förkonfigurera adaptiva formuläruttryck eller skript för adaptiva formulärkomponenter. När initialize-händelsen till exempel aktiveras, ställer koden nedan in värdet för telefonfältet och skriver ut ett värde till loggen:
 
@@ -381,7 +377,7 @@ Använd egenskapen aem:afproperties för att förkonfigurera adaptiva formuläru
 }
 ```
 
-Du bör vara medlem i [forms-power-user grupp](/help/forms/using/forms-groups-privileges-tasks.md) för att konfigurera skript eller uttryck för formulärobjektet. Tabellen nedan visar alla skripthändelser som stöds för en adaptiv formulärkomponent.
+Du bör vara medlem i [forms-power-user grupp](forms-groups-privileges-tasks.md) för att konfigurera skript eller uttryck för formulärobjektet. Tabellen nedan visar alla skripthändelser som stöds för en adaptiv formulärkomponent.
 
 <table>
  <tbody>
@@ -485,7 +481,7 @@ Du bör vara medlem i [forms-power-user grupp](/help/forms/using/forms-groups-pr
    <td><img alt="" src="assets/yes_tick.png" /></td>
   </tr>
   <tr>
-   <td>Nedrullningsbar</td>
+   <td>Nedrullningsbar meny</td>
    <td><img alt="" src="assets/yes_tick.png" /></td>
    <td><img alt="" src="assets/yes_tick.png" /></td>
    <td><img alt="" src="assets/yes_tick.png" /></td>
@@ -586,9 +582,9 @@ Du bör vara medlem i [forms-power-user grupp](/help/forms/using/forms-groups-pr
  </tbody>
 </table>
 
-Några exempel på hur du använder händelser i en JSON är att dölja ett fält vid initialize-händelsen och konfigurera värdet för ett annat fält vid värdestarthändelse. Mer information om hur du skapar uttryck för skripthändelserna finns i [Adaptiva formuläruttryck](../../forms/using/adaptive-form-expressions.md).
+Några exempel på hur du använder händelser i en JSON är att dölja ett fält vid initialize-händelsen och konfigurera värdet för ett annat fält vid värdestarthändelse. Mer information om hur du skapar uttryck för skripthändelserna finns i [Adaptiva formuläruttryck](adaptive-form-expressions.md).
 
-Här är JSON-exempelkoden för de tidigare nämnda exemplen.
+Här är JSON-exempelkoden för tidigare nämnda exempel.
 
 ### Dölja ett fält vid initieringshändelse {#hiding-a-field-on-initialize-event}
 
@@ -711,13 +707,13 @@ Du kan lägga till följande begränsningar i JSON-schemaelement för att begrä
     </ul> </td>
   </tr>
   <tr>
-   <td>maxItems</td>
+   <td><code>maxItems</code></td>
    <td>Sträng</td>
    <td>Anger maximalt antal objekt i en array. Det maximala antalet objekt måste vara lika med eller större än noll.</td>
    <td> </td>
   </tr>
   <tr>
-   <td>minItems</td>
+   <td><code>minItems</code></td>
    <td>Sträng</td>
    <td>Anger det minsta antalet objekt i en array. Minimiobjekten måste vara lika med eller större än noll.</td>
    <td> </td>
