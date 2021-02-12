@@ -3,9 +3,9 @@ title: Skapa översättningsprojekt
 description: Lär dig hur du skapar översättningsprojekt i [!DNL Adobe Experience Manager].
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: f9f745369ba0fe242dea1e5a5e5af0b8263b1ec0
+source-git-commit: 534a3d75ebb6a6d297354cce4840bdc1dfa25707
 workflow-type: tm+mt
-source-wordcount: '1749'
+source-wordcount: '1741'
 ht-degree: 12%
 
 ---
@@ -19,13 +19,11 @@ Om du vill skapa en språkkopia utlöser du ett av följande språkkopieringsarb
 
 * **Uppdatera språkkopior**: Kör det här arbetsflödet för att översätta ytterligare en grupp resurser och inkludera den i en språkkopia för en viss språkinställning. I det här fallet läggs de översatta resurserna till i målmappen som redan innehåller tidigare översatta resurser.
 
->[!NOTE]
+>[!PREREQUISITES]
 >
->Resursbinärfiler översätts bara om översättningstjänsten stöder översättning av binärfiler.
+>* Användare som skapar översättningsprojekt är medlemmar i gruppen `projects-administrators`.
+>* Översättningstjänstleverantören stöder översättning av binära filer.
 
->[!NOTE]
->
->Om du startar ett översättningsarbetsflöde för komplexa resurser, som PDF- och [!DNL Adobe InDesign]-filer, skickas inte deras delresurser eller återgivningar (om det finns några) för översättning.
 
 ## Skapa och översätta arbetsflöde {#create-and-translate-workflow}
 
@@ -40,17 +38,14 @@ Du använder arbetsflödet för att skapa och översätta för att generera spr�
 Använd alternativet **[!UICONTROL Create structure only]** för att skapa en målmappshierarki inom målspråkets rot som matchar källmappens hierarki i källspråkets rot. I det här fallet kopieras källresurserna till målmappen. Inget översättningsprojekt genereras emellertid.
 
 1. I gränssnittet [!DNL Assets] väljer du den källmapp som du vill skapa en struktur för i målspråkets rot.
+
 1. Öppna rutan **[!UICONTROL References]** och klicka på **[!UICONTROL Language Copies]** under **[!UICONTROL Copies]**.
 
-   ![chlimage_1-57](assets/chlimage_1-57.png)
+   ![Språkversioner](assets/translation-language-copies.png)
 
-1. Klicka på **[!UICONTROL Create & Translate]** längst ned.
-
-1. Välj det språk du vill skapa en mappstruktur för i listan **[!UICONTROL Target Languages]**.
+1. Klicka på **[!UICONTROL Create & Translate]**. Välj det språk du vill skapa en mappstruktur för i listan **[!UICONTROL Target Languages]**.
 
 1. Välj **[!UICONTROL Create structure only]** i listan **[!UICONTROL Project]**.
-
-   ![chlimage_1-60](assets/chlimage_1-60.png)
 
 1. Klicka på **[!UICONTROL Create]**. Den nya strukturen för målspråket listas under **[!UICONTROL Language Copies]**.
 
@@ -109,7 +104,7 @@ Om du använder det här alternativet kopieras resurser som ska översättas til
 
    Mer information om jobbstatus finns i [Övervaka status för ett översättningsjobb](/help/sites-administering/tc-manage.md#monitoring-the-status-of-a-translation-job).
 
-1. Navigera till användargränssnittet för [!DNL Assets] och öppna sidan Egenskaper för vart och ett av de översatta resurserna för att visa översatta metadata.
+1. Navigera till användargränssnittet för [!DNL Assets] och öppna sidan [!UICONTROL Properties] för var och en av de översatta resurserna för att visa översatta metadata.
 
    ![visa översatta metadata på sidan Egenskaper för resurs](assets/translated-metadata-asset-properties.png)
 
@@ -131,8 +126,6 @@ Om du använder det här alternativet körs översättningsarbetsflödet för re
 1. I listan **[!UICONTROL Target Languages]** väljer du det/de språk du vill skapa en mappstruktur för.
 
 1. I listan **[!UICONTROL Project]** väljer du **[!UICONTROL Add to existing translation project]** för att köra översättningsarbetsflödet för mappen.
-
-   ![chlimage_1-77](assets/chlimage_1-77.png)
 
    >[!NOTE]
    >
@@ -157,10 +150,6 @@ Om du använder det här alternativet körs översättningsarbetsflödet för re
 
    >[!NOTE]
    >
-   >Om du använder maskinöversättning översätts inte resursens binärfiler.
-
-   >[!NOTE]
-   >
    >Om den resurs som du lägger till i översättningsjobbet innehåller delresurser, markerar du delresurserna och tar bort dem för översättningen för att fortsätta utan några fel.
 
 1. Om du vill starta översättningen för resurserna klickar du på pilen på plattan **[!UICONTROL Translation Job]** och väljer **[!UICONTROL Start]** i listan.
@@ -175,7 +164,7 @@ Om du använder det här alternativet körs översättningsarbetsflödet för re
 
    Mer information finns i [Övervaka status för ett översättningsjobb](/help/sites-administering/tc-manage.md#monitoring-the-status-of-a-translation-job).
 
-1. När översättningen är klar ändras statusen till Klart för granskning. Navigera till användargränssnittet för [!DNL Assets] och öppna sidan Egenskaper för vart och ett av de översatta resurserna för att visa översatta metadata.
+1. När översättningen är klar ändras statusen till Klart för granskning. Navigera till användargränssnittet för [!DNL Assets] och öppna sidan Egenskaper för var och en av de översatta resurserna för att visa översatta metadata.
 
 ## Uppdatera språkkopior {#update-language-copies}
 
@@ -197,8 +186,6 @@ Om du använder det här alternativet skapas ett översättningsprojekt för den
 1. Klicka på **[!UICONTROL Update language copies]** längst ned.
 
 1. Välj **[!UICONTROL Create a new translation project]** i listan **[!UICONTROL Project]**.
-
-   ![chlimage_1-86](assets/chlimage_1-86.png)
 
 1. Ange en titel för projektet i fältet **[!UICONTROL Project Title]**.
 
@@ -279,7 +266,7 @@ När du kör ett översättningsarbetsflöde för att uppdatera en språkkopia m
 
 1. Om du vill visa översatta metadata går du till konsolen [!DNL Assets] och öppnar sidan [!UICONTROL Properties] för var och en av de översatta resurserna.
 
->[!MORELIKETHIS]
->
->* [Tips för att effektivt översätta metadata](https://blogs.adobe.com/experiencedelivers/experience-management/translate_aemassets_metadata/).
+## Tips och begränsningar {#tips-limitations}
 
+* Om du startar ett översättningsarbetsflöde för komplexa resurser, som PDF- och [!DNL Adobe InDesign]-filer, skickas inte deras delresurser eller återgivningar (om det finns några) för översättning.
+* Om du använder maskinöversättning översätts inte resursens binärfiler.
