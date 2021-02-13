@@ -3,9 +3,9 @@ title: Skapa och konfigurera sidor för Resursredigeraren
 description: Lär dig hur du skapar anpassade sidor i Resursredigeraren och redigerar flera resurser samtidigt.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: 863d1bd3f0f188153fcbbb7256d3ac2e3b247f59
 workflow-type: tm+mt
-source-wordcount: '2101'
+source-wordcount: '2105'
 ht-degree: 0%
 
 ---
@@ -268,7 +268,7 @@ Metadataformuläret är ett formulär som innehåller en start- och slutåtgärd
 
 ![screen_shot_2012-04-23at22911pm](assets/screen_shot_2012-04-23at22911pm.png)
 
-1. Skapa en End-åtgärd genom att klicka på **Redigera** i formulärets slutområde. Du kan till exempel skapa en **Skicka**-knapp som tillåter användare att skicka sina metadataändringar. Du kan också lägga till en **Återställ**-knapp som återställer metadata till det ursprungliga läget.
+1. Skapa en End-åtgärd genom att klicka på **Redigera** i formulärets slutområde. Du kan till exempel skapa ett **[!UICONTROL Submit]**-alternativ som tillåter användare att skicka sina metadataändringar. Du kan också lägga till ett **Återställ**-alternativ som återställer metadata till det ursprungliga läget.
 
 ![screen_shot_2012-04-23at23138pm](assets/screen_shot_2012-04-23at23138pm.png)
 
@@ -381,7 +381,7 @@ Följande åtgärder är tillgängliga:
 | [!UICONTROL References] | Klicka här för att visa vilka sidor   tillgången används. |
 | [!UICONTROL Versioning] | Skapa och återställ   versioner av en resurs. |
 
-1. Dra lämplig åtgärd till området **Åtgärder** på sidan. När du gör det skapas en knapp som används för att utföra åtgärden.
+1. Dra lämplig åtgärd till området **Åtgärder** på sidan. Det skapar ett alternativ som används för att köra åtgärden som dras på sidan.
 
 ![chlimage_1-165](assets/chlimage_1-393.png)
 
