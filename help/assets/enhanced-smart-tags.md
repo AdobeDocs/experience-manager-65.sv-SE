@@ -3,10 +3,10 @@ title: Förbättrade smarta taggar
 description: Förbättrade smarta taggar
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0560eb8e3c127964920827609a9982acf07b515f
+source-git-commit: 09bb767ae8565624e7a6b9786a5cd4c581fe0b9a
 workflow-type: tm+mt
-source-wordcount: '1478'
-ht-degree: 5%
+source-wordcount: '1574'
+ht-degree: 4%
 
 ---
 
@@ -25,7 +25,7 @@ När en tagg har tränats och är klar kan tjänsten nu använda dessa taggar p�
 
 I bakgrunden använder Smart Content Service Adobe Sensei AI-ramverket för att träna sin bildigenkänningsalgoritm i er taggstruktur och affärsklonomi. Den här innehållsintelligensen används sedan för att tillämpa relevanta taggar på en annan uppsättning resurser.
 
-Smart Content Service är en molntjänst som finns på [!DNL Adobe I/O]. Om du vill använda den i [!DNL Adobe Experience Manager] måste systemadministratören integrera din [!DNL Experience Manager]-distribution med [!DNL Adobe I/O].
+Smart Content Service är en molntjänst som finns på [!DNL Adobe Developer Console]. Om du vill använda den i [!DNL Adobe Experience Manager] måste systemadministratören integrera din [!DNL Experience Manager]-distribution med [!DNL Adobe Developer Console].
 
 Här är sammanfattningsvis de viktigaste stegen för att använda tjänsten Smart Content:
 
@@ -36,13 +36,40 @@ Här är sammanfattningsvis de viktigaste stegen för att använda tjänsten Sma
 
 ![Flödesschema](assets/flowchart.gif)
 
-## Förutsättningar {#prerequisites}
+## Förutsättningar och format som stöds {#prerequisites}
 
-Innan du kan använda Smart Content Service måste du ha/se till/göra följande för att kunna integrera med [!DNL Adobe I/O]:
+Innan du kan använda Smart Content Service måste du ha/se till/göra följande för att kunna integrera med [!DNL Adobe Developer Console]:
 
 * Ett Adobe ID-konto som har administratörsbehörighet för organisationen.
 * Att Smart Content Service är aktiverad för din organisation.
 * Grundpaketet för smarta innehållstjänster kan endast läggas till i en distribution där ett [!DNL Adobe Experience Manager Sites]-baspaket och [!DNL Assets]-tillägg har licensierats.
+
+Smarta taggar används bara för resurser med följande MIME-typer:
+
+* image/jpeg
+* bild/tiff
+* bild/png
+* image/bmp
+* image/gif
+* image/pjpeg
+* image/x-portable-anymap
+* image/x-portable-bitmap
+* image/x-portable-graymap
+* image/x-portable-pixmap
+* image/x-rgb
+* image/x-xbitmap
+* image/x-xpixmap
+* image/x-icon
+* image/photoshop
+* image/x-photoshop
+* image/psd
+* image/vnd.adobe.photoshop
+
+Smart taggning av resursåtergivningar stöds endast för följande MIME-typer:
+
+* image/jpeg
+* image/pjpeg
+* bild/png
 
 ## Introduktion till {#onboarding}
 
@@ -91,7 +118,7 @@ Sökresultaten som matchar alla söktermer i metadatafält visas först, följt 
 
 ## Tagga resurser automatiskt {#tagging-assets-automatically}
 
-När du har utbildat tjänsten för smart innehåll kan du utlösa taggningsarbetsflödet för att automatiskt tillämpa lämpliga taggar på en annan uppsättning med liknande resurser.
+När du har utbildat tjänsten Smart Content kan du utlösa taggningsarbetsflödet för att automatiskt tillämpa lämpliga taggar på en annan uppsättning med liknande resurser.
 
 Du kan köra taggningsarbetsflödet periodiskt eller när det behövs.
 
@@ -162,3 +189,4 @@ Du kan också tilldela en tagg en högre rankning för att öka dess relevans i 
 
 * Användningen av smarta innehållstjänster är begränsad till upp till 2 miljoner taggade bilder per år. Alla duplicerade bilder som bearbetas och taggas räknas som taggade bilder.
 * Om du kör taggningsarbetsflödet från tidslinjen kan du använda taggar på högst 15 resurser i taget.
+* Smarta taggar fungerar bara för bildformaten PNG och JPG. Resurser som stöds och som har återgivningar skapade i dessa två format taggas med smarta taggar.
