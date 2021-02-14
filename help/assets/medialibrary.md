@@ -3,7 +3,7 @@ title: Jämför [!DNL Assets] och Mediebibliotek
 description: Jämför [!DNL Experience Manager Assets] funktionerna och funktionerna i mediebiblioteket och se skillnaderna.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: ca54c880cbda2a573d6c1229900fd80082c5f5aa
+source-git-commit: 82c2df0e53e8ef595ad158ef46089d6e4964ca26
 workflow-type: tm+mt
 source-wordcount: '608'
 ht-degree: 0%
@@ -106,5 +106,6 @@ I det här fallet behöver du inte köpa [!DNL Assets], inte ens mediebiblioteke
 
 >[!MORELIKETHIS]
 >
->*[[!DNL Experience Manager] 6.5 Managed Services produktbeskrivning](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html)
->*[[!DNL Experience Manager] 6.5 lokal produktbeskrivning](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html)
+>* [[!DNL Experience Manager] 6.5 Managed Services produktbeskrivning](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html)
+>* [[!DNL Experience Manager] 6.5 Produktbeskrivning på plats](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html)
+
