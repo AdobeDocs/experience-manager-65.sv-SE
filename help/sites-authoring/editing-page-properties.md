@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 1e9dd0d7-209a-4989-b66b-bca0d04b437a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ea39bb870fd20f7e30afc2c4f5bceb2fe6427848
+source-git-commit: 7fed51b68c626b54565b9120f69229872946016f
 workflow-type: tm+mt
-source-wordcount: '1781'
+source-wordcount: '1883'
 ht-degree: 4%
 
 ---
@@ -53,6 +53,14 @@ Egenskaperna fördelas på flera flikar.
 
    Anger om sidan visas eller döljs i sidnavigeringen på den slutliga platsen.
 
+* **Varumärke**
+
+   Använd en enhetlig varumärkesidentitet på alla sidor genom att lägga till en instruktionsmarginal till varje sidrubrik. Den här funktionen kräver att du använder Page Component från version 2.14.0 eller senare av [Core Components.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
+
+   * **Åsidosätt**  - Markera för att definiera instruktionsmarginalen för varumärket på den här sidan.
+      * Värdet ärvs av alla underordnade sidor såvida inte deras **Åsidosätt**-värden har angetts.
+   * **Åsidosätt värde**  - Texten i instruktionsmarginalen som ska läggas till i sidrubriken.
+      * Värdet läggs till i sidrubriken efter ett lodstreck som &quot;Cycling Tuscany&quot; | Alltid redo för WKND&quot;
 * **Sidrubrik**
 
    En rubrik som ska användas på sidan. Används vanligtvis av titelkomponenter. Om den är tom kommer **Title** att användas.
