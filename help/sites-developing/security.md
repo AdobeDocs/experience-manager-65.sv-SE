@@ -10,7 +10,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: d2267663-6c1d-413c-9862-e82e21ae6906
 translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+source-git-commit: ea4de28525ec4c2094e84d98aad6a518b03f011e
 workflow-type: tm+mt
 source-wordcount: '434'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Programsäkerhet startar under utvecklingsfasen. Adobe rekommenderar att du till
 
 ## Använd begärandesession {#use-request-session}
 
-I enlighet med principen om leas-behörighet rekommenderar Adobe att all databasåtkomst görs genom att använda den session som är bunden till användarens begäran och rätt åtkomstkontroll.
+I enlighet med principen om minsta behörighet rekommenderar Adobe att all databasåtkomst görs genom att använda den session som är bunden till användarens begäran och rätt åtkomstkontroll.
 
 ## Protect mot XSS (Cross-Site Scripting) {#protect-against-cross-site-scripting-xss}
 
