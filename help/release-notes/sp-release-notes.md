@@ -4,9 +4,9 @@ description: Versionsinformation för  [!DNL Adobe Experience Manager] 6.5 Servi
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: a24b66506440eb2153d5589e8c79dbfafb24df66
+source-git-commit: 349568af561ca170ee000fbb0d1b40d3470ebe98
 workflow-type: tm+mt
-source-wordcount: '4212'
+source-wordcount: '4165'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ De viktigaste funktionerna och förbättringarna i [!DNL Adobe Experience Manage
 
 * Användare kan sortera digitala resurser i kort- och kolumnvyn.
 
-* [!DNL Assets] och  [!DNL Dynamic Media] erbjuder flera tillgänglighetsförbättringar. Förbättringarna rör tangentbordsnavigering, användning av skärmläsare och möjlighet för användare att använda liknande hjälpmedelsteknik (AT). Se [[!DNL Assets] förbättringar](#assets-6570) och [[!DNL Dynamic Media] förbättringar](#dynamic-media-6570).
+* [!DNL Assets] och  [!DNL Dynamic Media] erbjuder flera tillgänglighetsförbättringar. Förbättringarna rör tangentbordsnavigering, användning av skärmläsare och gör det möjligt för användare att använda liknande hjälpmedelsteknik. Se [[!DNL Assets] förbättringar](#assets-6570) och [[!DNL Dynamic Media] förbättringar](#dynamic-media-6570).
 
 * [Form data model HTTP client ](../../help/forms/using/configure-data-sources.md#fdm-http-client-configuration) configuration to optimize performance.
 
@@ -467,8 +467,6 @@ Granska om du använder en funktion eller en funktion i en distribution. Planera
 | Anslutningar | Adobe JCR Connector för Microsoft SharePoint 2010 och Microsoft SharePoint 2013 är borttagen för AEM 6.5. | Ej tillämpligt |
 
 ## Kända fel {#known-issues}
-
-* Om du får problem i [!DNL Experience Manager]-svaret på grund av att en timer för komponentregistret är låst, [installerar du det här paketet](https://mvnrepository.com/artifact/org.apache.felix/org.apache.felix.scr/2.1.20). Lösning på dessa problem schemaläggs att ingå i nästa [Experience Manager Service Pack-version](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html?lang=en#aem-on-prem-managed-services).
 
 * Ignorera följande fel i `error.log`-filen under installationen av Experience Manager 6.5.7.0:
 
