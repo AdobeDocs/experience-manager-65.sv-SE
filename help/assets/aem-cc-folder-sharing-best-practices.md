@@ -3,9 +3,9 @@ title: Mappdelning till  [!DNL Adobe Creative Cloud] god praxis
 description: Konfigurera [!DNL Adobe Experience Manager] to allow users in [!DNL Experience Manager Assets] för utbyte av mappar med Adobe Creative Cloud-användare (CC).
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
+source-git-commit: 18e62f8fb46de20e1668b2dcdcedf68fe4622b50
 workflow-type: tm+mt
-source-wordcount: '952'
+source-wordcount: '954'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
->Mappdelningsfunktionen [!DNL Experience Manager] till [!DNL Creative Cloud] är föråldrad. Adobe rekommenderar starkt att du använder nyare funktioner som [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) eller [Experience Manager-datorprogrammet](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html). Läs mer i [Bästa praxis för integrering mellan Experience Manager och Creative Cloud](/help/assets/aem-cc-integration-best-practices.md).
+>Mappdelningsfunktionen [!DNL Experience Manager] till [!DNL Creative Cloud] är föråldrad. Adobe rekommenderar starkt att du använder nyare funktioner som [Adobe Asset Link](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/adobe-asset-link.ug.html) eller [Experience Manager-datorprogrammet](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html). Läs mer i [Bästa praxis för integrering mellan Experience Manager och Creative Cloud](/help/assets/aem-cc-integration-best-practices.md).
 
 [!DNL Adobe Experience Manager] kan konfigureras så att användare i kan dela mappar  [!DNL Assets] med  [!DNL Adobe Creative Cloud] appanvändarna, så att de är tillgängliga som delade mappar i  [!DNL Adobe Creative Cloud] resurstjänsten. Funktionen kan användas för utbyte av filer mellan kreativa team och [!DNL Assets]-användare, särskilt när de kreativa användarna inte har tillgång till [!DNL Assets]-distributionen (de finns inte i företagsnätverket).
 
@@ -67,7 +67,7 @@ De bästa sätten att utnyttja mappdelning mellan [!DNL Experience Manager] och 
 * **Separata mappar för envägsdelning:** Separata mappar ska användas för att dela det slutliga materialet från  [!DNL Assets] till  [!DNL Creative Cloud] filer och för att dela det kreativa materialet tillbaka från  [!DNL Creative Cloud] filer till  [!DNL Assets]. Tillsammans med en bra namnkonvention för dessa mappar skapar den en lättbegriplig arbetsmiljö för [!DNL Assets]- och [!DNL Creative Cloud]-användare.
 * **Undvik PIA i den delade mappen:** Delad mapp ska inte användas för Pågående arbete - använd en separat mapp i Filer i Creative Cloud för att utföra arbete som kräver många ändringar av filen.
 * **Starta nytt arbete utanför den delade mappen:** Nya designer (kreativa filer) ska startas i den separata Pågående arbete-mappen i Creative Cloud-filer, och när de är klara att delas med  [!DNL Assets] användare bör de flyttas eller sparas i den delade mappen.
-* **Förenkla delningsstrukturen:** För en mer hanterbar driftsättning kan du tänka på att förenkla delningsstrukturen. I stället för att dela med alla kreativa användare bör [!DNL Assets]-mappar endast delas med grupprepresentanter, som en creative director eller gruppchef. Chefen på den kreativa sidan skulle få det slutliga materialet, besluta om arbetstilldelning och sedan låta designers arbeta i sina egna Creative Cloud-konton på PIA-resurser. De kan använda samarbetsfunktionerna i Creative Cloud för att koordinera arbetet och slutligen markera och placera resurser som är klara att dela tillbaka till [!DNL Assets] i sin kreativa färdiga delade mapp.
+* **Förenkla delningsstrukturen:** För en mer hanterbar driftsättning kan du tänka på att förenkla delningsstrukturen. I stället för att dela med alla kreativa användare bör [!DNL Assets]-mappar endast delas med grupprepresentanter, som en creative director eller gruppchef. Chefen på den kreativa sidan skulle få det slutliga materialet, besluta om arbetstilldelning och sedan låta designers arbeta i sina egna Creative Cloud-konton på PIA-resurser. De kan använda samarbetsfunktionerna i Creative Cloud för att koordinera arbetet och slutligen välja och placera resurser som är klara att dela tillbaka till [!DNL Assets] i sin kreativa färdiga delade mapp.
 
 I följande diagram visas ett exempel på hur du skapar nya designer baserat på befintliga slutliga resurser från [!DNL Assets].
 
