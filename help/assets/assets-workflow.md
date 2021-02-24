@@ -3,9 +3,9 @@ title: Bearbeta resurser med arbetsflöden
 description: Resursbearbetning för att konvertera format, skapa renderingar, hantera resurser, validera resurser och köra arbetsflöden.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0d5a48be283484005013ef3ed7ad015b43f6398b
+source-git-commit: 18e62f8fb46de20e1668b2dcdcedf68fe4622b50
 workflow-type: tm+mt
-source-wordcount: '938'
+source-wordcount: '924'
 ht-degree: 3%
 
 ---
@@ -106,5 +106,4 @@ För en arbetsflödesmodell kan användare skapa en startfil för arbetsflödet 
 >* [Skapa arbetsflödesmodeller och utöka arbetsflödesfunktioner](/help/sites-developing/workflows.md)
 >* [Metoder som kör arbetsflöden](/help/sites-administering/workflows-starting.md)
 >* [Bästa arbetsflöden](/help/sites-developing/workflows-best-practices.md)
->* [Community-artikel om att ändra resurs med hjälp av arbetsflöde](https://helpx.adobe.com/experience-manager/using/modify_asset_workflow.html)
 
