@@ -3,9 +3,9 @@ title: Resurshandbok
 description: Den här guiden täcker alla Experience Manager Assets-uppgifter, t.ex. hur du skapar, hanterar, levererar och optimerar digitala resurser.
 user-guide-title: Resurshandbok
 translation-type: tm+mt
-source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
+source-git-commit: 18e62f8fb46de20e1668b2dcdcedf68fe4622b50
 workflow-type: tm+mt
-source-wordcount: '330'
+source-wordcount: '321'
 ht-degree: 4%
 
 ---
@@ -20,7 +20,6 @@ Den här guiden täcker alla [!DNL Experience Manager Assets]-uppgifter, t.ex. h
 <!-- TBD: Some of these links will soon be updated. Change these when new articles go live on docs.adobe.com.
 -->
 
-* [Komma igång med Experience Manager](https://helpx.adobe.com/experience-manager/get-started.html)
 * [Versionsinformation om Experience Manager 6.5](/help/release-notes/home.md)
 * [Senaste dokumentationsuppdateringarna](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html)
 * [Säkerhetschecklista](/help/sites-administering/security-checklist.md)
@@ -44,9 +43,9 @@ Den här guiden täcker alla [!DNL Experience Manager Assets]-uppgifter, t.ex. h
 
 ## Nyckelresurser för [!DNL Experience Manager]
 
-* [Experience Manager Video Tutorials](https://helpx.adobe.com/experience-manager/kt/index/aem-6-5-videos.html#Assets)
+* [Experience Manager Video Tutorials](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/overview.html?lang=en)
 * [GDPR-efterlevnad](/help/managing/data-protection-and-privacy.md)
-* [Experience League](https://guided.adobe.com/?mv=other#recommended/solutions/experience-manager)
+* [Experience League](https://experienceleague.adobe.com/?mv=other#recommended/solutions/experience-manager)
 * [Experience Manager Assets Community Forum](https://experienceleaguecommunities.adobe.com/t5/Adobe-Experience-Manager-Assets/ct-p/experience-manager-assets-community)
 * [Användarhandbok för Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)
 * [Användarhandbok för HTML](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html)
