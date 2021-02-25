@@ -10,15 +10,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 2fd1a21a-0f90-49d8-9f62-383b268d540d
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '692'
+source-wordcount: '706'
 ht-degree: 0%
 
 ---
 
 
 # Snabbstart för databastjänstens API{#repository-service-api-quick-starts}
+
+**Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
 
 Följande snabbstarter är tillgängliga för tjänsten AEM Forms Repository.
 
@@ -498,7 +500,7 @@ Följande Java-kodexempel läser en resurs med namnet *Loan.xdp* från databasen
 
 ## Snabbstart (SOAP-läge): Uppdatera en resurs med Java API {#quick-start-soap-mode-updating-a-resource-using-the-java-api}
 
-Följande Java-kodexempel uppdaterar `/Applications/FormsApplication/1.0/FormsFolder` genom att ändra dess beskrivning. (Se [Uppdatera resurser](/help/forms/developing/aem-forms-repository.md#updating-resources).)
+I följande Java-kodexempel uppdateras `/Applications/FormsApplication/1.0/FormsFolder` genom att beskrivningen ändras. (Se [Uppdatera resurser](/help/forms/developing/aem-forms-repository.md#updating-resources).)
 
 ```java
  /*
