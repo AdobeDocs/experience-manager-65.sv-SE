@@ -10,15 +10,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 discoiquuid: df7b60bb-4897-479e-a05e-1b1e9429ed87
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '2506'
+source-wordcount: '2520'
 ht-degree: 0%
 
 ---
 
 
 # Anropa AEM Forms med REST-begäran {#invoking-aem-forms-using-rest-requests}
+
+**Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
 
 Processer som skapas i Workbench kan konfigureras så att du kan anropa dem via REST-begäranden (Representational State Transfer). REST-begäranden skickas från HTML-sidor. Det innebär att du kan anropa en Forms-process direkt från en webbsida med hjälp av en REST-begäran. Du kan till exempel öppna en ny instans av en webbsida. Sedan kan du anropa en Forms-process och läsa in ett återgivet PDF-dokument med data som skickats i en HTTP-POST-begäran.
 
@@ -107,7 +109,7 @@ Status för asynkront anrop kan hämtas med en anrops-URL med `services` som ers
 
 Den här URL:en returnerar ett heltalsvärde (i formatet &quot;text/plain&quot;) som kodar jobbstatusen enligt jobbuthanterarens specifikation (t.ex. 2 betyder att det körs, 3 betyder slutförd, 4 betyder misslyckad och så vidare).
 
-Om jobbet är klart returnerar URL-adressen samma resultat som om tjänsten anropades synkront.
+Om jobbet har slutförts returnerar URL-adressen samma resultat som om tjänsten anropades synkront.
 
 När jobbet är klart och resultatet har hämtats kan jobbet tas bort med en anrops-URL med `services` och ersätts med `async_dispose`. URL:en ska även innehålla en `job_id`-parameter som anger jobbets identifierarvärde. Till exempel:
 
@@ -285,7 +287,7 @@ I följande HTML-exempel anropas en AEM Forms-process med namnet `SOAPEchoServic
 
 **Anropa processen MyApplication/EncryptDocument med REST**
 
-Du kan anropa en kortlivad AEM Forms-process med namnet *MyApplication/EncryptDocument* genom att använda REST.
+Du kan anropa en kort AEM Forms-process med namnet *MyApplication/EncryptDocument* med REST.
 
 >[!NOTE]
 >
