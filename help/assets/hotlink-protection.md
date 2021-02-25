@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 content-type: reference
 discoiquuid: a70aa448-0f58-4ed2-9381-afcc76fa827f
 translation-type: tm+mt
-source-git-commit: 996780c3fac85f0ce0deeddd5ff4e74e01df436e
+source-git-commit: 787f3b4cf5835b7e9b03e3f4e6f6597084adec8c
 workflow-type: tm+mt
-source-wordcount: '174'
+source-wordcount: '196'
 ht-degree: 0%
 
 ---
@@ -24,4 +24,4 @@ Aktiv länkning är när en tredjepartswebbplats använder HTML-kod för att vis
 
 >[!NOTE]
 >
->Skydd av aktiva länkar kräver att du använder Adobe paketerade CDN. Om du vill aktivera hotlink-skydd måste en administratör skapa en supportbiljett för att begära konfigurationsändringen av ditt Dynamic Media-konto. Det kostar inget mer att aktivera skydd av aktiva länkar.
+>Den här funktionen kräver att du använder det färdiga CDN som medföljer Adobe Experience Manager Dynamic Media. Eventuellt annat anpassat CDN stöds inte med den här funktionen. För att aktivera aktivering av hot link-skydd måste en administratör skapa en Adobe kundtjänstsupportbiljett för att begära konfigurationsändringen av ditt Dynamic Media-konto. Det kostar inget mer att aktivera skydd av aktiva länkar.
