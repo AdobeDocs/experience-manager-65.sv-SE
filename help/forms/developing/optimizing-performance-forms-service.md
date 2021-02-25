@@ -11,15 +11,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 9f883483-b81e-42c6-a4a1-eb499dd112e7
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '1445'
+source-wordcount: '1459'
 ht-degree: 0%
 
 ---
 
 
 # Optimera prestanda för Forms-tjänsten {#optimizing-the-performance-of-theforms-service}
+
+**Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
 
 ## Optimera prestanda för Forms-tjänsten {#optimizing-the-performance-of-the-forms-service}
 
@@ -98,7 +100,7 @@ Rendera ett formulär med optimerade prestanda med Forms API (Java):
 
    * Skapa ett `PDFFormRenderSpec`-objekt med hjälp av dess konstruktor.
    * Ange alternativet för formulärcache genom att anropa `PDFFormRenderSpec`-objektets `setCacheEnabled`-metod och skicka `true`.
-   * Ange alternativet för linjär genom att anropa `PDFFormRenderSpec`-objektets `setLinearizedPDF`-metod och skicka `true.`
+   * Ställ in alternativet för linjär genom att anropa `PDFFormRenderSpec`-objektets `setLinearizedPDF`-metod och skicka `true.`
 
 1. Återge formuläret
 
