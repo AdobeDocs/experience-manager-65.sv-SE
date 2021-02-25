@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5.6/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 translation-type: tm+mt
-source-git-commit: 729fbf3a97d3ae3bc91204f8831fd115d9d77f20
+source-git-commit: 996780c3fac85f0ce0deeddd5ff4e74e01df436e
 workflow-type: tm+mt
-source-wordcount: '1268'
+source-wordcount: '1278'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Dynamic Media-resurser cachas av CDN (Content Delivery Network) för snabb lever
 
 >[!NOTE]
 >
->Kunder måste använda det CDN som medföljer Adobe Experience Manager Dynamic Media för att kunna utnyttja invalidering av CDN-cache.
+>Den här funktionen kräver att du använder det färdiga CDN som medföljer Adobe Experience Manager Dynamic Media. Eventuellt annat anpassat CDN stöds inte med den här funktionen.
 
 >[!IMPORTANT]
 >
