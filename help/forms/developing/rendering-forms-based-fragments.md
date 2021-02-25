@@ -11,15 +11,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: a65c5303-0ebd-43a9-a777-401042d8fcad
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '2215'
+source-wordcount: '2229'
 ht-degree: 7%
 
 ---
 
 
 # Återge Forms baserat på fragment {#rendering-forms-based-on-fragments}
+
+**Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
 
 ## Återge Forms baserat på fragment {#rendering-forms-based-on-fragments-inner}
 
