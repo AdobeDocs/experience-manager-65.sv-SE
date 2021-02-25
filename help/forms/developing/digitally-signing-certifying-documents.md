@@ -10,15 +10,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 42de04bf-25e4-4478-a411-38671ed871ae
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '17099'
+source-wordcount: '17113'
 ht-degree: 0%
 
 ---
 
 
 # Signera och certifiera dokument digitalt {#digitally-signing-and-certifying-documents}
+
+**Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
 
 **Om signaturtjänsten**
 
@@ -772,7 +774,7 @@ Så här signerar du ett PDF-dokument digitalt med signatur-API:t (webbtjänst):
 1. Få PDF-dokumentet att signera
 
    * Skapa ett `BLOB`-objekt med hjälp av dess konstruktor. Objektet `BLOB` används för att lagra ett PDF-dokument som är signerat.
-   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för PDF-dokumentet som ska signeras, och läget som filen ska öppnas i.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för PDF-dokumentet som ska signeras, samt läget som filen ska öppnas i.
    * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream`-objektet. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream`-objektets `Length`-egenskap.
    * Fyll i bytearrayen med strömdata genom att anropa `System.IO.FileStream`-objektets `Read`-metod och skicka bytearrayen, startpositionen och strömlängden som ska läsas.
    * Fyll i `BLOB`-objektet genom att tilldela dess `MTOM`-egenskap innehållet i bytearrayen.
@@ -1001,7 +1003,7 @@ Signera ett interaktivt formulär digitalt med Forms och Signature API (webbtjä
 1. Hämta det interaktiva formuläret med hjälp av tjänsten Forms
 
    * Skapa ett `BLOB`-objekt med hjälp av dess konstruktor. Objektet `BLOB` används för att lagra ett PDF-dokument som är signerat.
-   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för PDF-dokumentet som ska signeras, och läget som filen ska öppnas i.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för PDF-dokumentet som ska signeras, samt läget som filen ska öppnas i.
    * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream`-objektet. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream`-objektets `Length`-egenskap.
    * Fyll i bytearrayen med strömdata genom att anropa `System.IO.FileStream`-objektets `Read`-metod och skicka bytearrayen, startpositionen och strömlängden som ska läsas.
    * Fyll i `BLOB`-objektet genom att tilldela dess `MTOM`-egenskap innehållet i bytearrayen.
@@ -1569,7 +1571,7 @@ Om du vill göra en återkallningskontroll på ett certifikat anger du en URL ti
 
 I stället för att använda en CRL-server kan du använda en OCSP-server (Online Certificate Status Protocol) när du utför spärrkontroll. När du använder en OCSP-server i stället för en CRL-server utförs spärrkontrollen oftast snabbare. (Se [Online Certificate Status Protocol](https://tools.ietf.org/html/rfc2560).)
 
-Du kan ställa in CRL- och OCSP-serverordningen som används av signaturtjänsten med Adobe-program och -tjänster. Om till exempel OCSP-servern är inställd först i Adobe-program och -tjänster kontrolleras OCSP-servern, som följs av CRL-servern.
+Du kan ställa in CRL- och OCSP-serverordningen som används av signaturtjänsten genom att använda Adobe-program och -tjänster. Om till exempel OCSP-servern är inställd först i Adobe-program och -tjänster kontrolleras OCSP-servern, som följs av CRL-servern.
 
 Om du inte utför spärrkontroll kontrollerar inte signaturtjänsten om certifikatet har spärrats. CRL- och OCSP-serverinformation ignoreras alltså.
 
