@@ -2,15 +2,17 @@
 title: Skapa en hanterare för att bjuda in externa användare
 description: Skapa en hanterare för att bjuda in externa användare
 translation-type: tm+mt
-source-git-commit: 92e5cc0b1934dad641357a22894e70a3660b774a
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '1060'
+source-wordcount: '1074'
 ht-degree: 0%
 
 ---
 
 
 # Skapar en hanterare för inbjudan till externa användare {#create-invite-external-users-handler}
+
+**Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
 
 Du kan skapa en hanterare för att bjuda in externa användare för tjänsten Rights Management. Med en Bjud in extern användarhanterare kan Rights Management-tjänsten bjuda in externa användare att bli Rights Management-användare. När en användare har blivit Rights Management kan han/hon utföra uppgifter, t.ex. att öppna ett profilskyddat PDF-dokument. När hanteraren Bjud in externa användare har distribuerats till AEM Forms kan du använda administrationskonsolen för att interagera med den.
 
@@ -46,7 +48,7 @@ Metoden `invitedUser` accepterar en `java.util.List`-instans, som innehåller st
 >
 >Förutom att visa hur du skapar en extern användarhanterare för inbjudningar använder det här avsnittet även AEM Forms API.
 
-Implementeringen av hanteraren för inbjudan till externa användare innehåller en användardefinierad metod med namnet `createLocalPrincipalAccount`. Den här metoden accepterar ett strängvärde som anger en e-postadress som ett parametervärde. Metoden `createLocalPrincipalAccount` förutsätter att det redan finns en lokal domän med namnet `EDC_EXTERNAL_REGISTERED`. Du kan konfigurera det här domännamnet så att det blir vad du vill; Men för ett produktionsprogram kanske du vill integrera med en företagsdomän.
+Implementeringen av hanteraren för inbjudan av externa användare innehåller en användardefinierad metod med namnet `createLocalPrincipalAccount`. Den här metoden accepterar ett strängvärde som anger en e-postadress som ett parametervärde. Metoden `createLocalPrincipalAccount` förutsätter att det redan finns en lokal domän med namnet `EDC_EXTERNAL_REGISTERED`. Du kan konfigurera det här domännamnet så att det blir vad du vill; Men för ett produktionsprogram kanske du vill integrera med en företagsdomän.
 
 Metoden `createUsers` itererar över alla e-postadresser och skapar ett motsvarande användarobjekt (en lokal användare i domänen `EDC_EXTERNAL_REGISTERED`). Slutligen anropas metoden `doEmails`. Den här metoden finns avsiktligt kvar som en stub i exemplet. I en produktionsimplementering skulle den innehålla programlogik för att skicka e-postmeddelanden med inbjudningar till nyskapade användare. Det lämnas i exemplet för att visa programmets logikflöde i ett verkligt program.
 
