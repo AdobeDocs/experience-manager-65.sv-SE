@@ -10,15 +10,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 180cac3f-6378-42bc-9a47-60f9f08a7103
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '7898'
+source-wordcount: '7912'
 ht-degree: 0%
 
 ---
 
 
 # Konverterar mellan filformat och PDF {#converting-between-file-formatsand-pdf}
+
+**Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
 
 **Om tjänsten Generera PDF**
 
@@ -142,7 +144,7 @@ När filen har konverterats till ett PDF-dokument kan du hämta resultatet. När
 
 ### Konvertera Word-dokument till PDF-dokument med Java API {#convert-word-documents-to-pdf-documents-using-the-java-api}
 
-Konvertera ett Microsoft Word-dokument till ett PDF-dokument med hjälp av Generate PDF API (Java):
+Konvertera ett Microsoft Word-dokument till ett PDF-dokument med hjälp av Generera PDF API (Java):
 
 1. Inkludera projektfiler.
 
