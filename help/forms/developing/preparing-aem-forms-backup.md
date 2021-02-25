@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: e747147e-e96d-43c7-87b3-55947eef81f5
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '2540'
+source-wordcount: '2554'
 ht-degree: 0%
 
 ---
@@ -20,13 +20,15 @@ ht-degree: 0%
 
 # Förbereder AEM Forms för säkerhetskopiering {#preparing-aem-forms-for-backup}
 
+**Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
+
 ## Om tjänsten Säkerhetskopiering och återställning {#about-the-backup-and-restore-service}
 
 Med tjänsten Säkerhetskopiering och återställning kan du försätta AEM Forms i *säkerhetskopieringsläge*, vilket gör det möjligt att utföra säkerhetskopieringar. Säkerhetskopierings- och återställningstjänsten utför inte någon säkerhetskopiering av AEM Forms eller återställning av systemet. I stället försätts servern i ett läge där det går att utföra konsekventa och tillförlitliga säkerhetskopieringar samtidigt som servern kan fortsätta att köras. Du ansvarar för åtgärderna för att säkerhetskopiera GDS (Global Document Storage) och databasen som är ansluten till formulärservern. GDS är en katalog som används för att lagra filer som används i en långvarig process.
 
 Säkerhetskopieringsläget är ett läge som servern försätts i så att filer i GDS inte rensas när en säkerhetskopieringsprocedur utförs. I stället skapas underkataloger under GDS-katalogen för att behålla en post med filer som ska rensas när säkerhetskopieringsläget har avslutats. En fil är avsedd att överleva systemomstarter och kan sträcka sig över flera dagar eller till och med år. Dessa filer utgör en viktig del av formulärserverns övergripande status och kan innehålla PDF-filer, profiler eller formulärmallar. Om någon av dessa filer förloras eller skadas kan processerna på formulärservern bli instabila och data gå förlorade.
 
-Du kan välja att utföra säkerhetskopiering av ögonblicksbilder, där du vanligtvis aktiverar säkerhetskopieringsläget under en period och sedan lämnar säkerhetskopieringsläget när du har slutfört säkerhetskopieringsaktiviteterna. Du måste lämna säkerhetskopieringsläget för att filer ska kunna rensas från GDS så att de inte växer i onödan. Du kan antingen lämna säkerhetskopieringsläget explicit eller vänta på att tiden ska gå ut i en session i säkerhetskopieringsläge.
+Du kan välja att utföra säkerhetskopiering av ögonblicksbilder, där du vanligtvis aktiverar säkerhetskopieringsläget under en period och sedan lämnar säkerhetskopieringsläget när du har slutfört säkerhetskopieringsaktiviteterna. Du måste lämna säkerhetskopieringsläget så att filer kan rensas från GDS för att se till att de inte växer i onödan. Du kan antingen lämna säkerhetskopieringsläget explicit eller vänta på att tiden ska gå ut i en session i säkerhetskopieringsläge.
 
 Du kan också lämna servern i permanent säkerhetskopieringsläge, vilket är typiskt för strategier för säkerhetskopiering vid rullande säkerhetskopiering eller kontinuerlig systemtäckning. Läget för rullande säkerhetskopiering anger att systemet alltid är i säkerhetskopieringsläge, med en ny session som påbörjas så snart som föregående session släpps. I läget för kontinuerlig säkerhetskopiering töms en fil efter två sessioner med säkerhetskopieringsläge och refereras inte längre till den.
 
@@ -51,7 +53,7 @@ Du kan utföra följande åtgärder med tjänsten Säkerhetskopiera och återst�
 
 ## Startar säkerhetskopieringsläge på formulärservern {#entering-backup-mode-on-the-forms-server}
 
-Du aktiverar säkerhetskopieringsläget för att tillåta säkerhetskopiering av en formulärserver. När du aktiverar säkerhetskopieringsläge anger du följande information baserat på din organisations procedurer för säkerhetskopiering:
+Du aktiverar säkerhetskopieringsläge för att tillåta säkerhetskopiering av en formulärserver. När du aktiverar säkerhetskopieringsläge anger du följande information baserat på din organisations procedurer för säkerhetskopiering:
 
 * En unik etikett som identifierar den session i säkerhetskopieringsläget som kan vara användbar för dina säkerhetskopieringsprocesser.
 * Den tid det tar för säkerhetskopieringen att slutföras.
