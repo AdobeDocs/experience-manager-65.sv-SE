@@ -10,15 +10,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 9e8db506-9ace-4e1f-8a7b-c4e9b15dde7e
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '3937'
+source-wordcount: '3951'
 ht-degree: 0%
 
 ---
 
 
 # Tilldela användningsrättigheter {#assigning-usage-rights}
+
+**Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
 
 ## Om Acrobat Reader DC-tilläggstjänsten {#about-the-acrobat-reader-dc-extensions-service}
 
