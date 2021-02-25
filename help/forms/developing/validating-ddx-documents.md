@@ -11,15 +11,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 693859b0-a0c3-43f1-95c0-be48a90d7d8d
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '1529'
+source-wordcount: '1543'
 ht-degree: 0%
 
 ---
 
 
 # Kontrollerar DDX-dokument {#validating-ddx-documents}
+
+**Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
 
 Du kan programmässigt validera ett DDX-dokument som används av Assembler-tjänsten. Med andra ord kan du med hjälp av API:t för Assembler-tjänsten avgöra om ett DDX-dokument är giltigt eller inte. Om du till exempel uppgraderade från en tidigare version av AEM Forms och vill vara säker på att ditt DDX-dokument är giltigt, kan du validera det med hjälp av Assembler-tjänst-API:t.
 
