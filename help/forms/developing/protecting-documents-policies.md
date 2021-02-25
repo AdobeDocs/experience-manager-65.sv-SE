@@ -10,15 +10,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 9b1d2bf3-f28c-41b2-9026-1f3311556422
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '15544'
+source-wordcount: '15558'
 ht-degree: 0%
 
 ---
 
 
 # Skydda dokument med profiler {#protecting-documents-with-policies}
+
+**Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
 
 **Om Document Security Service**
 
@@ -44,7 +46,7 @@ Du kan utföra följande uppgifter med tjänsten Dokumentsäkerhet:
 * Ta bort profiler. Mer information finns i [Ta bort profiler](protecting-documents-policies.md#deleting-policies).
 * Tillämpa profiler på PDF-dokument. Mer information finns i [Tillämpa profiler på PDF-dokument](protecting-documents-policies.md#applying-policies-to-pdf-documents).
 * Ta bort profiler från PDF-dokument. Mer information finns i [Ta bort profiler från PDF-dokument](protecting-documents-policies.md#removing-policies-from-pdf-documents).
-* Inspect policyskyddade dokument. Mer information finns i [Inspektera skyddade PDF-dokument](protecting-documents-policies.md#inspecting-policy-protected-pdf-documents).
+* Inspect policyskyddade dokument. Mer information finns i [Inspektera skyddsskyddade PDF-dokument](protecting-documents-policies.md#inspecting-policy-protected-pdf-documents).
 * Återkalla åtkomst till PDF-dokument. Mer information finns i [Återkalla åtkomst till dokument](protecting-documents-policies.md#revoking-access-to-documents).
 * Återskapa åtkomst till återkallade dokument. Mer information finns i [Återställa åtkomst till återkallade dokument](protecting-documents-policies.md#reinstating-access-to-revoked-documents).
 * Skapa vattenstämplar. Mer information finns i [Skapa vattenstämplar](protecting-documents-policies.md#creating-watermarks).
@@ -360,7 +362,7 @@ Du måste hämta en befintlig princip för att kunna ändra den. Om du vill häm
 
 Om du vill ändra en profil ändrar du värdet för principattributen. Det enda principattribut som du inte kan ändra är namnattributet. Om du till exempel vill ändra principens låneperiod offline kan du ändra värdet på principens attribut för låneperiod offline.
 
-När du ändrar en princips låneperiod offline med hjälp av en webbtjänst ignoreras fältet `offlineLeasePeriod` i gränssnittet `PolicySpec`. Om du vill uppdatera offlinelåneperioden ändrar du elementet `OfflineLeasePeriod` i PDRL XML-dokumentet. Referera sedan till det uppdaterade PDRL XML-dokumentet med `PolicySpec`-gränssnittets `policyXML`-datamedlem.
+När du ändrar en princips låneperiod offline med hjälp av en webbtjänst ignoreras fältet `offlineLeasePeriod` i gränssnittet `PolicySpec`. Om du vill uppdatera offlinelåneperioden ändrar du elementet `OfflineLeasePeriod` i PDRL XML-dokumentet. Referera sedan det uppdaterade PDRL XML-dokumentet med `PolicySpec`-gränssnittets `policyXML`-datamedlem.
 
 >[!NOTE]
 >
