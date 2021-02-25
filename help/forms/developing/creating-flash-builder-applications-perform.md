@@ -10,15 +10,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 discoiquuid: 0ff30df7-b3ad-4c34-9644-87c689acc294
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '1825'
+source-wordcount: '1839'
 ht-degree: 0%
 
 ---
 
 
 # Skapa Flash Builder-program som utför SSO-autentisering med HTTP-tokens {#creating-flash-builder-applicationsthat-perform-sso-authentication-using-http-tokens}
+
+**Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
 
 Du kan skapa ett klientprogram med Flash Builder som utför SSO-autentisering (single sign on) med HTTP-tokens. Anta till exempel att du skapar ett webbaserat program med Flash Builder. Anta sedan att programmet innehåller olika vyer, där varje vy anropar en annan AEM Forms-åtgärd. I stället för att autentisera en användare för varje Forms-åtgärd kan du skapa en inloggningssida där en användare kan autentisera en gång. När användaren har autentiserats kan han eller hon starta flera åtgärder utan att behöva autentisera igen. Om en användare till exempel har loggat in på Workspace (eller ett annat Forms-program) behöver användaren inte autentisera igen.
 
@@ -84,7 +86,7 @@ Om autentiseringen fortfarande inte lyckas svarar säkerhetsservern med `authsta
 
 >[!NOTE]
 >
->När `authstate=CREDENTIAL_CHALLENGE` är &lt;a0/> bör klienten skicka de inhämtade autentiseringsuppgifterna till säkerhetsservern i en POST.
+>När `authstate=CREDENTIAL_CHALLENGE` är  bör klienten skicka de inhämtade autentiseringsuppgifterna till säkerhetsservern i en POST.
 
 **Utloggningsprocess**
 
