@@ -11,15 +11,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 2ad227de-68a8-446f-8c4f-a33a6f95bec8
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '2185'
+source-wordcount: '2199'
 ht-degree: 0%
 
 ---
 
 
 # Skapa DDX-dokument dynamiskt {#dynamically-creating-ddx-documents}
+
+**Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
 
 Du kan dynamiskt skapa ett DX-dokument som kan användas för att utföra en Assembler-åtgärd. När du dynamiskt skapar ett DX-dokument kan du använda värden i DDX-dokumentet som hämtas under körning. Om du vill skapa ett DDX-dokument dynamiskt använder du klasser som tillhör det programmeringsspråk som du använder. Om du till exempel utvecklar ditt klientprogram med Java ska du använda klasser som tillhör `org.w3c.dom.*`paketet. Om du använder Microsoft .NET ska du också använda klasser som tillhör namnutrymmet `System.Xml`.
 
