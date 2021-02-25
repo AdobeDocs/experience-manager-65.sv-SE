@@ -11,15 +11,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 669ede46-ea55-444b-a23f-23a86e5aff8e
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '4174'
+source-wordcount: '4188'
 ht-degree: 1%
 
 ---
 
 
 # Återger Forms som HTML {#rendering-forms-as-html}
+
+**Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
 
 Forms-tjänsten återger formulär som HTML som svar på en HTTP-begäran från en webbläsare. En fördel med att återge ett formulär som HTML är att datorn där klientwebbläsaren finns inte behöver Adobe Reader, Acrobat eller Flash Player (för formulärguider (borttagen)).
 
