@@ -10,15 +10,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 8e38a597-5d22-4d83-95fe-4494fb04e4a3
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '1774'
+source-wordcount: '1788'
 ht-degree: 0%
 
 ---
 
 
 # Dela upp PDF-dokument (a0/>){#programmatically-disassembling-pdf-documents}
+
+**Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
 
 Du kan demontera ett PDF-dokument genom att skicka det till Assembler-tjänsten. Vanligtvis är den här uppgiften användbar när PDF-dokumentet ursprungligen skapades från många enskilda dokument, till exempel en samling programsatser. På följande bild delas DocA in i flera resulterande dokument, där det första bokmärket på nivå 1 på en sida anger början på ett nytt resulterande dokument.
 
