@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
 discoiquuid: 32118d3b-54d0-4283-b489-780bdcbfc8d2
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: b4795930c87fa30d7c7ab60a50bc6f40da4f97d2
 workflow-type: tm+mt
-source-wordcount: '6355'
+source-wordcount: '6418'
 ht-degree: 1%
 
 ---
@@ -19,11 +19,15 @@ ht-degree: 1%
 
 # Använda AEM dokumenttjänster programmatiskt {#using-aem-document-services-programmatically}
 
-Klientklasser som krävs för att skapa Maven Projects med AEM Document Services finns i [AEM Forms Client SDK](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) jar. Mer information om maven-projekt finns i [hur du skapar AEM med Maven](/help/sites-developing/ht-projects-maven.md).
+Exempel och exempel i det här dokumentet hjälper dig att förstå och använda AEM Document Services i en AEM Forms-miljö i OSGi. Exempel och exempel på AEM Forms i JEE-miljö finns i [Programmering med AEM Forms i JEE](https://experienceleague.adobe.com/docs/experience-manager-65/forms/developer-reference/programming-aem-forms-jee/java-api-quick-start-code-examples/signature-service-java-api-quick.html?lang=en#programming-aem-forms-jee)
 
->[!NOTE]
->
->Innan du använder API:erna för tjänsten DocAssurance måste du [konfigurera tjänsten DocAssurance](/help/forms/using/install-configure-document-services.md).
+## Förutsättning {#prerequisite}
+
+* Innan du använder API:erna för tjänsten DocAssurance måste du [konfigurera tjänsten DocAssurance](/help/forms/using/install-configure-document-services.md).
+
+* Ladda ned och konfigurera [AEM Forms Client SDK](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) med ditt projekt AEM Maven. De klientklasser som krävs för att skapa Maven Projects med AEM Document Services finns i [AEM Forms Client SDK](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)
+
+* Lär dig [hur du bygger AEM med Maven](/help/sites-developing/ht-projects-maven.md)
 
 ## DocAssurance-tjänsten {#docassurance-service}
 
