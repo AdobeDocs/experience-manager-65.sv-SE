@@ -10,15 +10,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: de527d50-991b-4ca3-a8ac-44d5cab988e9
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '19030'
+source-wordcount: '19044'
 ht-degree: 0%
 
 ---
 
 
 # Skapar dokumentutdataströmmar {#creating-document-output-streams}
+
+**Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
 
 **Om utdatatjänsten**
 
@@ -47,7 +49,7 @@ I följande avsnitt visas hur du skickar en formulärdesign i en `com.adobe.idp.
 * [Skicka dokument som finns i innehållstjänster (borttagna) till utdatatjänsten](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service)
 * [Skapa PDF-dokument med fragment](creating-document-output-streams.md#creating-pdf-documents-using-fragments)
 
-När du bestämmer vilken teknik som ska användas bör du överväga om du hämtar formulärdesignen från en annan AEM Forms-tjänst och sedan skicka den inom en `com.adobe.idp.Document`-instans. I både *Skicka dokument till utdatatjänsten* och *Skapa PDF-dokument med fragment* visas hur du hämtar en formulärdesign från en annan AEM Forms-tjänst. Det första avsnittet hämtar formulärdesignen från innehållstjänster (borttagen). Det andra avsnittet hämtar formulärdesignen från Assembler-tjänsten.
+När du bestämmer vilken teknik du ska använda är det viktigt att du hämtar formulärdesignen från en annan AEM Forms-tjänst och skickar den i en `com.adobe.idp.Document`-instans. I både *Skicka dokument till utdatatjänsten* och *Skapa PDF-dokument med fragment* visas hur du hämtar en formulärdesign från en annan AEM Forms-tjänst. Det första avsnittet hämtar formulärdesignen från innehållstjänster (borttagen). Det andra avsnittet hämtar formulärdesignen från Assembler-tjänsten.
 
 Om du hämtar formulärdesignen från en fast plats, t.ex. i filsystemet, kan du använda vilken teknik som helst. Det innebär att du kan ange URI-värdet till en XDP-fil eller använda en `com.adobe.idp.Document`-instans.
 
@@ -174,7 +176,7 @@ Om du använder ett taggat Acrobat-formulär som indata kan du inte använda Jav
 
 **Generera ett PDF-dokument**
 
-När du har refererat till en giltig XML-datakälla som innehåller formulärdata och angett körningsalternativ, kan du anropa utdatatjänsten, vilket resulterar i att ett PDF-dokument skapas.
+När du har refererat till en giltig XML-datakälla som innehåller formulärdata och angett körningsalternativ, kan du anropa utdatatjänsten, vilket resulterar i att ett PDF-dokument genereras.
 
 När du genererar ett PDF-dokument anger du de URI-värden som krävs av utdatatjänsten för att skapa ett PDF-dokument. En formulärdesign kan lagras på platser som serverfilsystemet eller som en del av ett AEM Forms-program. En formulärdesign (eller andra resurser som en bildfil) som finns som en del av ett Forms-program kan refereras med hjälp av innehållsrots-URI-värdet `repository:///`. Ta till exempel följande formulärdesign *Loan.xdp* som finns i ett Forms-program med namnet *Applications/FormsApplication*:
 
