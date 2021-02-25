@@ -11,15 +11,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 8fe7c072-7df0-44b7-92d0-bf39dc1e688a
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '1724'
+source-wordcount: '1738'
 ht-degree: 0%
 
 ---
 
 
 # Återge HTML Forms med anpassade CSS-filer {#rendering-html-forms-using-custom-css-files}
+
+**Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
 
 Forms-tjänsten återger HTML-formulär som svar på en HTTP-begäran från en webbläsare. När du återger ett HTML-formulär kan Forms-tjänsten referera till en anpassad CSS-fil. Du kan skapa en anpassad CSS-fil som uppfyller dina affärskrav och referera till den CSS-filen när du använder Forms-tjänsten för att återge HTML-formulär.
 
