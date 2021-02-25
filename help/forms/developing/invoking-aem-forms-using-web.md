@@ -10,15 +10,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 discoiquuid: d5722281-bea9-4fc7-abdc-e678899e0a15
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '9990'
+source-wordcount: '10004'
 ht-degree: 0%
 
 ---
 
 
 # Anropa AEM Forms med webbtjänster {#invoking-aem-forms-using-web-services}
+
+**Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
 
 De flesta AEM Forms-tjänster i tjänstbehållaren är konfigurerade för att visa en webbtjänst, med fullständigt stöd för generering av WSDL (Web Service Definition Language). Det innebär att du kan skapa proxyobjekt som använder den inbyggda SOAP-stacken för en AEM Forms-tjänst. Därför kan AEM Forms tjänster utbyta och behandla följande SOAP-meddelanden:
 
@@ -682,7 +684,7 @@ Du kan anropa en AEM Forms-tjänst med hjälp av Java-proxyklasser och Base64. S
    >
    >Ersätt `hiro-xp` *med IP-adressen för J2EE-programtjänstleverantören som är värd för AEM Forms.*
 
-1. Paketera Java-proxyklasserna som skapats med JAX-WS till en JAR-fil.
+1. Paketera Java-proxyklasserna som skapats med JAX-WS i en JAR-fil.
 1. Inkludera JAR-proxyfilen för Java och JAR-filerna som finns i följande sökväg:
 
    &lt;install Directory=&quot;&quot;>\Adobe\Adobe_Experience_Manager_forms\sdk\client-libs\thirdparty
@@ -877,7 +879,7 @@ Så här anropar du processen `MyApplication/EncryptDocument` med Java-proxyfile
    >
    >Ersätt `hiro-xp` *med IP-adressen för J2EE-programservern som är värd för AEM Forms.*
 
-1. Paketera Java-proxyklasserna som skapats med JAX-WS till en JAR-fil.
+1. Paketera Java-proxyklasserna som skapats med JAX-WS i en JAR-fil.
 1. Inkludera JAR-proxyfilen för Java och JAR-filerna som finns i följande sökväg:
 
    &lt;install Directory=&quot;&quot;>\Adobe\Adobe_Experience_Manager_forms\sdk\client-libs\thirdparty
@@ -1000,7 +1002,7 @@ Du kan anropa en AEM Forms-tjänst med hjälp av Java-proxyklasser och BLOB-data
    >
    >Ersätt `hiro-xp` *med IP-adressen för J2EE-programservern som är värd för AEM Forms.*
 
-1. Paketera Java-proxyklasserna som skapats med JAX-WS till en JAR-fil.
+1. Paketera Java-proxyklasserna som skapats med JAX-WS i en JAR-fil.
 1. Inkludera JAR-proxyfilen för Java och JAR-filerna som finns i följande sökväg:
 
    &lt;install Directory=&quot;&quot;>\Adobe\Adobe_Experience_Manager_forms\sdk\client-libs\thirdparty
@@ -1457,7 +1459,7 @@ Följande C#-kodexempel anropar en Forms-tjänst med SAML-baserad autentisering.
 
 ## Relaterade överväganden när du använder webbtjänster {#related-considerations-when-using-web-services}
 
-Ibland uppstår problem när vissa AEM Forms-tjänster anropas med hjälp av webbtjänster. Syftet med denna diskussion är att identifiera dessa problem och tillhandahålla en lösning, om en sådan finns tillgänglig.
+Ibland uppstår problem när vissa AEM Forms-tjänster anropas med hjälp av webbtjänster. Syftet med denna diskussion är att identifiera dessa problem och ge en lösning, om en sådan finns tillgänglig.
 
 ### Anropar tjänståtgärder asynkront {#invoking-service-operations-asynchronously}
 
