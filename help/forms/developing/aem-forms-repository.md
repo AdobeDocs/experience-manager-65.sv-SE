@@ -10,15 +10,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: d2c95881-6c02-4e34-85af-84607df54287
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '9143'
+source-wordcount: '9157'
 ht-degree: 0%
 
 ---
 
 
 # Arbeta med AEM Forms Repository {#working-with-aem-forms-repository}
+
+**Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
 
 **Om databastjänsten**
 
@@ -1148,9 +1150,9 @@ Du kan ta bort resurser från en viss plats i databasen med hjälp av Java API(S
 
 När du tar bort en resurs är borttagningen vanligtvis permanent, men i vissa fall kan ECM-databaser lagra resursens versioner enligt deras historikmekanismer. När du tar bort en resurs är det därför viktigt att du aldrig behöver den igen. De vanligaste skälen till att en resurs tas bort är behovet av att öka det tillgängliga utrymmet i databasen. Du kan ta bort en version av en resurs, men om du gör det måste du ange resursidentifieraren och inte dess logiska identifierare (LID) eller sökväg. Om du tar bort en mapp tas allt i den mappen, inklusive undermappar och resurser, bort automatiskt.
 
-Relaterade resurser tas inte bort. Om du till exempel har ett formulär som använder filen logo.gif och du tar bort logo.gif, lagras en relation i den väntande relationstabellen. Du kan också ange att objektstatusen för den senaste versionen ska vara inaktuell för borttagning av version.
+Relaterade resurser tas inte bort. Om du till exempel har ett formulär som använder filen logo.gif och du tar bort logo.gif, lagras en relation i den väntande relationstabellen. Du kan också ange att objektstatusen för den senaste versionen är inaktuell för borttagning av version.
 
-En raderingsåtgärd är inte transaktionssäker i ECM-system. Om du till exempel försöker ta bort 100 resurser och åtgärden misslyckas på den 50:e resursen, tas de första 49 instanserna bort, men inte resten. I annat fall är standardbeteendet återställning (ej åtagande).
+En raderingsåtgärd är inte transaktionssäker i ECM-system. Om du till exempel försöker ta bort 100 resurser och åtgärden misslyckas på den 50:e resursen, tas de första 49 instanserna bort, men resten tas inte bort. I annat fall är standardbeteendet återställning (ej åtagande).
 
 >[!NOTE]
 >
