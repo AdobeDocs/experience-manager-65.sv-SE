@@ -11,15 +11,17 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
 discoiquuid: b4f57e42-60a6-407d-9764-15a11615827d
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '1902'
+source-wordcount: '1916'
 ht-degree: 0%
 
 ---
 
 
 # Beräknar formulärdata {#calculating-form-data}
+
+**Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
 
 Forms-tjänsten kan beräkna de värden som en användare anger i ett formulär och visa resultaten. Om du vill beräkna formulärdata måste du utföra två uppgifter. Först skapar du ett formulärdesignskript som beräknar formulärdata. En formulärdesign har stöd för tre typer av skript. En skripttyp körs på klienten, en annan på servern och den tredje typen körs på både servern och klienten. Skripttypen som beskrivs i det här avsnittet körs på servern. Serverberäkningar stöds för HTML-, PDF- och formulärguideomformningar (borttagna).
 
