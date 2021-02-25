@@ -11,15 +11,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 77e9b895-1313-4a5b-a2d5-cdb65bdc1966
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '1927'
+source-wordcount: '1941'
 ht-degree: 0%
 
 ---
 
 
 # Sammanställa dokument med Bates-numrering {#assembling-documents-using-bates-numbering}
+
+**Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
 
 Du kan sammanställa PDF-dokument som innehåller unika sididentifierare med hjälp av Bates-numrering. *Bates-* numrering är ett sätt att tillämpa unika identifieringsmetoder på en grupp med relaterade dokument. Varje sida i dokumentet (eller dokumentuppsättningen) tilldelas ett Bates-nummer som unikt identifierar sidan. Till exempel kan tillverkningsdokument som innehåller produktstruktur och som är kopplade till produktionen av en sammansättning innehålla en identifierare. Ett Bates-nummer innehåller ett numeriskt värde i följd samt ett valfritt prefix och suffix. Prefixet + det numeriska + suffixet kallas *bates-mönster*.
 
