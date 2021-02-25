@@ -1,8 +1,8 @@
 ---
 title: Anropa AEM Forms med JavaAPI
 seo-title: Anropa AEM Forms med JavaAPI
-description: Använd AEM Forms Java API för RMI-transportprotokoll för fjärranrop, VM-transport för lokala anrop, SOAP för fjärranrop, annan autentisering, till exempel användarnamn och lösenord, samt synkrona och asynkrona anropsbegäranden.
-seo-description: Använd AEM Forms Java API för RMI-transportprotokoll för fjärranrop, VM-transport för lokala anrop, SOAP för fjärranrop, annan autentisering, till exempel användarnamn och lösenord, samt synkrona och asynkrona anropsbegäranden.
+description: Använd AEM Forms Java API för RMI-transportprotokoll för fjärranrop, VM-transport för lokalt anrop, SOAP för fjärranrop, annan autentisering, till exempel användarnamn och lösenord, samt synkrona och asynkrona anropsbegäranden.
+seo-description: Använd AEM Forms Java API för RMI-transportprotokoll för fjärranrop, VM-transport för lokalt anrop, SOAP för fjärranrop, annan autentisering, till exempel användarnamn och lösenord, samt synkrona och asynkrona anropsbegäranden.
 uuid: 5e2fef2a-05f3-4283-8fd3-2d7dca411000
 contentOwner: admin
 content-type: reference
@@ -10,15 +10,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 discoiquuid: 0e6e7850-6137-42c5-b8e2-d4e352fddae2
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '5480'
+source-wordcount: '5494'
 ht-degree: 0%
 
 ---
 
 
 # Anropa AEM Forms med Java API {#invoking-aem-forms-using-the-javaapi}
+
+**Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
 
 AEM Forms kan anropas med AEM Forms Java API. När du använder AEM Forms Java API kan du antingen använda anrops-API eller Java-klientbibliotek. Java-klientbibliotek är tillgängliga för tjänster som Rights Management. Med dessa starkt typbestämda API:er kan du utveckla Java-program som anropar AEM Forms.
 
@@ -89,107 +91,107 @@ I följande tabell visas de JAR-filer som krävs för att anropa AEM Forms-tjän
   <tr>
    <td><p>adobe-livecycle-client.jar</p></td>
    <td><p>Måste alltid ingå i ett Java-klientprograms klassökväg.</p></td>
-   <td><p>&lt;&gt;installationskatalog<i>&gt;/sdk/client-libs/common</i></p></td>
+   <td><p>&lt;&gt;installationskatalog</i>&gt;/sdk/client-libs/common<i></i></p></td>
   </tr>
   <tr>
    <td><p>adobe-usermanager-client.jar</p></td>
    <td><p>Måste alltid ingå i ett Java-klientprograms klassökväg.</p></td>
-   <td><p>&lt;&gt;installationskatalog<i>&gt;/sdk/client-libs/common</i></p></td>
+   <td><p>&lt;&gt;installationskatalog</i>&gt;/sdk/client-libs/common<i></i></p></td>
   </tr>
   <tr>
    <td><p>adobe-utilities.jar</p></td>
    <td><p>Måste alltid ingå i ett Java-klientprograms klassökväg.</p></td>
-   <td><p>&lt;&gt;installationskatalog<i>&gt;/sdk//client-libs/&lt;app server=""&gt;</i></p></td>
+   <td><p>&lt;&gt;installationskatalog</i>&gt;/sdk//client-libs/&lt;app server=""&gt;<i></i></p></td>
   </tr>
   <tr>
    <td><p>adobe-applicationmanager-client-sdk.jar</p></td>
    <td><p>Krävs för att anropa Application Manager-tjänsten.</p></td>
-   <td><p>&lt;&gt;installationskatalog<i>&gt;/sdk/client-libs/common</i></p></td>
+   <td><p>&lt;&gt;installationskatalog</i>&gt;/sdk/client-libs/common<i></i></p></td>
   </tr>
   <tr>
    <td><p>adobe-assembler-client.jar</p></td>
    <td><p>Krävs för att anropa Assembler-tjänsten. </p></td>
-   <td><p>&lt;&gt;installationskatalog<i>&gt;/sdk/client-libs/common</i></p></td>
+   <td><p>&lt;&gt;installationskatalog</i>&gt;/sdk/client-libs/common<i></i></p></td>
   </tr>
   <tr>
    <td><p>adobe-backup-restore-client-sdk.jar</p></td>
    <td><p>Krävs för att anropa tjänste-API:t för säkerhetskopiering och återställning.</p></td>
-   <td><p>&lt;&gt;installationskatalog<i>&gt;/sdk/client-libs/common</i></p></td>
+   <td><p>&lt;&gt;installationskatalog</i>&gt;/sdk/client-libs/common<i></i></p></td>
   </tr>
   <tr>
    <td><p>adobe-barcodedforms-client.jar</p></td>
    <td><p>Krävs för att anropa den streckkodade formulärtjänsten. </p></td>
-   <td><p>&lt;&gt;installationskatalog<i>&gt;/sdk/client-libs/common</i></p></td>
+   <td><p>&lt;&gt;installationskatalog</i>&gt;/sdk/client-libs/common<i></i></p></td>
   </tr>
   <tr>
    <td><p>adobe-convertpdf-client.jar</p></td>
    <td><p>Krävs för att anropa tjänsten Konvertera PDF. </p></td>
-   <td><p>&lt;&gt;installationskatalog<i>&gt;/sdk/client-libs/common</i></p></td>
+   <td><p>&lt;&gt;installationskatalog</i>&gt;/sdk/client-libs/common<i></i></p></td>
   </tr>
   <tr>
    <td><p>adobe-distiller-client.jar</p></td>
    <td><p>Krävs för att anropa Distiller-tjänsten.</p></td>
-   <td><p>&lt;&gt;installationskatalog<i>&gt;/sdk/client-libs/common</i></p></td>
+   <td><p>&lt;&gt;installationskatalog</i>&gt;/sdk/client-libs/common<i></i></p></td>
   </tr>
   <tr>
    <td><p>adobe-docconverter-client.jar</p></td>
    <td><p>Krävs för att anropa tjänsten DocConverter.</p></td>
-   <td><p>&lt;&gt;installationskatalog<i>&gt;/sdk/client-libs/common</i></p></td>
+   <td><p>&lt;&gt;installationskatalog</i>&gt;/sdk/client-libs/common<i></i></p></td>
   </tr>
   <tr>
    <td><p>adobe-contentservices-client.jar</p></td>
    <td><p>Krävs för att anropa dokumenthanteringstjänsten.</p></td>
-   <td><p>&lt;&gt;installationskatalog<i>&gt;/sdk/client-libs/common</i></p></td>
+   <td><p>&lt;&gt;installationskatalog</i>&gt;/sdk/client-libs/common<i></i></p></td>
   </tr>
   <tr>
    <td><p>adobe-encryption-client.jar</p></td>
    <td><p>Krävs för att anropa krypteringstjänsten.</p></td>
-   <td><p>&lt;&gt;installationskatalog<i>&gt;/sdk/client-libs/common</i></p></td>
+   <td><p>&lt;&gt;installationskatalog</i>&gt;/sdk/client-libs/common<i></i></p></td>
   </tr>
   <tr>
    <td><p>adobe-forms-client.jar</p></td>
    <td><p>Krävs för att anropa Forms-tjänsten.</p></td>
-   <td><p>&lt;&gt;installationskatalog<i>&gt;/sdk/client-libs/common</i></p></td>
+   <td><p>&lt;&gt;installationskatalog</i>&gt;/sdk/client-libs/common<i></i></p></td>
   </tr>
   <tr>
    <td><p>adobe-formdataintegration-client.jar</p></td>
    <td><p>Krävs för att anropa integreringstjänsten för formulärdata.</p></td>
-   <td><p>&lt;&gt;installationskatalog<i>&gt;/sdk/client-libs/common</i></p></td>
+   <td><p>&lt;&gt;installationskatalog</i>&gt;/sdk/client-libs/common<i></i></p></td>
   </tr>
   <tr>
    <td><p>adobe-generatepdf-client.jar</p></td>
    <td><p>Krävs för att anropa tjänsten Generera PDF.</p></td>
-   <td><p>&lt;&gt;installationskatalog<i>&gt;/sdk/client-libs/common</i></p></td>
+   <td><p>&lt;&gt;installationskatalog</i>&gt;/sdk/client-libs/common<i></i></p></td>
   </tr>
   <tr>
    <td><p>adobe-generate3dpdf-client.jar</p></td>
    <td><p>Krävs för att anropa tjänsten Generera 3D PDF.</p></td>
-   <td><p>&lt;&gt;installationskatalog<i>&gt;/sdk/client-libs/common</i></p></td>
+   <td><p>&lt;&gt;installationskatalog</i>&gt;/sdk/client-libs/common<i></i></p></td>
   </tr>
   <tr>
    <td><p>adobe-jobmanager-client-sdk.jar</p></td>
    <td><p>Krävs för att anropa tjänsten Job Manager. </p></td>
-   <td><p>&lt;&gt;installationskatalog<i>&gt;/sdk/client-libs/common</i></p></td>
+   <td><p>&lt;&gt;installationskatalog</i>&gt;/sdk/client-libs/common<i></i></p></td>
   </tr>
   <tr>
    <td><p>adobe-output-client.jar</p></td>
    <td><p>Krävs för att anropa Output-tjänsten.</p></td>
-   <td><p>&lt;&gt;installationskatalog<i>&gt;/sdk/client-libs/common</i></p></td>
+   <td><p>&lt;&gt;installationskatalog</i>&gt;/sdk/client-libs/common<i></i></p></td>
   </tr>
   <tr>
    <td><p>adobe-pdfutility-client.jar</p></td>
    <td><p>Krävs för att anropa tjänsten PDF Utilities eller XMP Utilities.</p></td>
-   <td><p>&lt;&gt;installationskatalog<i>&gt;/sdk/client-libs/common</i></p></td>
+   <td><p>&lt;&gt;installationskatalog</i>&gt;/sdk/client-libs/common<i></i></p></td>
   </tr>
   <tr>
    <td><p>adobe-reader-extensions-client.jar</p></td>
    <td><p>Krävs för att anropa Acrobat Reader DC-tilläggstjänsten.</p></td>
-   <td><p>&lt;&gt;installationskatalog<i>&gt;/sdk/client-libs/common</i></p></td>
+   <td><p>&lt;&gt;installationskatalog</i>&gt;/sdk/client-libs/common<i></i></p></td>
   </tr>
   <tr>
    <td><p>adobe-repository-client.jar</p><p>comons-codec-1.3.jar</p></td>
    <td><p>Krävs för att anropa databastjänsten.</p></td>
-   <td><p>&lt;&gt;installationskatalog<i>&gt;/sdk/client-libs/common</i></p><p>&lt;&gt;installationskatalog<i>&gt;/sdk/client-libs\thirdparty</i></p></td>
+   <td><p>&lt;&gt;installationskatalog</i>&gt;/sdk/client-libs/common<i></i></p><p>&lt;&gt;installationskatalog</i>&gt;/sdk/client-libs\thirdparty<i></i></p></td>
   </tr>
   <tr>
    <td>
@@ -204,22 +206,22 @@ I följande tabell visas de JAR-filer som krävs för att anropa AEM Forms-tjän
      <li><p>xsdlib.jar</p></li>
     </ul></td>
    <td><p>Krävs för att anropa tjänsten Rights Management.</p><p>Om AEM Forms distribueras på JBoss inkluderar du alla dessa filer. </p></td>
-   <td><p>&lt;&gt;installationskatalog<i>&gt;/sdk/client-libs/common</i></p><p>JBoss-specifik bibliotekskatalog</p></td>
+   <td><p>&lt;&gt;installationskatalog</i>&gt;/sdk/client-libs/common<i></i></p><p>JBoss-specifik bibliotekskatalog</p></td>
   </tr>
   <tr>
    <td><p>adobe-signatures-client.jar</p></td>
    <td><p>Krävs för att anropa signaturtjänsten.</p></td>
-   <td><p>&lt;&gt;installationskatalog<i>&gt;/sdk/client-libs/common</i></p></td>
+   <td><p>&lt;&gt;installationskatalog</i>&gt;/sdk/client-libs/common<i></i></p></td>
   </tr>
   <tr>
    <td><p>adobe-taskmanager-client-sdk.jar</p></td>
    <td><p>Krävs för att anropa tjänsten Task Manager. </p></td>
-   <td><p>&lt;&gt;installationskatalog<i>&gt;/sdk/client-libs/common</i></p></td>
+   <td><p>&lt;&gt;installationskatalog</i>&gt;/sdk/client-libs/common<i></i></p></td>
   </tr>
   <tr>
    <td><p>adobe-truststore-client.jar</p></td>
    <td><p>Krävs för att anropa tjänsten Trust Store. </p></td>
-   <td><p>&lt;&gt;installationskatalog<i>&gt;/sdk/client-libs/common</i></p></td>
+   <td><p>&lt;&gt;installationskatalog</i>&gt;/sdk/client-libs/common<i></i></p></td>
   </tr>
  </tbody>
 </table>
@@ -261,7 +263,7 @@ I följande tabell visas de JAR-filer som är beroende av anslutningsläget och 
      <li>commons-httpclient-3.1.jar</li>
     </ul> <p> </p> </td>
    <td><p>om AEM Forms anropas i SOAP-läge, inkludera dessa JAR-filer.</p> </td>
-   <td><p>&lt;&gt;installationskatalog<em>&gt;/sdk/client-libs/thirdparty</em></p> </td>
+   <td><p>&lt;&gt;installationskatalog</em>&gt;/sdk/client-libs/thirdparty<em></em></p> </td>
   </tr>
   <tr>
    <td><p> jboss-client.jar</p> </td>
