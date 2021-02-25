@@ -10,15 +10,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 discoiquuid: 3d8bb2d3-b1f8-49e1-a529-b3e7a28da4bb
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '4647'
+source-wordcount: '4661'
 ht-degree: 0%
 
 ---
 
 
 # Anropa AEM Forms med Remoting {#invoking-aem-forms-using-remoting}
+
+**Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
 
 Processer som skapas i Workbench kan anropas med Remoting. Det innebär att du kan anropa en AEM Forms-process från ett klientprogram som skapats med Flex. Den här funktionen är baserad på datatjänster.
 
