@@ -1,6 +1,6 @@
 ---
-title: Aktivera hotlink-skydd i Dynamic Media
-description: Information om hur du aktiverar hotlink-skydd i Dynamic Media.
+title: Aktivera skydd för aktiva länkar i Dynamic Media
+description: Information om hur du aktiverar hot link-skydd i Dynamic Media.
 uuid: 5f93bc27-5edd-4143-8701-87896c52f0af
 contentOwner: Rick Brough
 topic-tags: dynamic-media
@@ -8,18 +8,18 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 content-type: reference
 discoiquuid: a70aa448-0f58-4ed2-9381-afcc76fa827f
 translation-type: tm+mt
-source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
+source-git-commit: 729fbf3a97d3ae3bc91204f8831fd115d9d77f20
 workflow-type: tm+mt
-source-wordcount: '165'
-ht-degree: 7%
+source-wordcount: '172'
+ht-degree: 0%
 
 ---
 
 
-# Aktivera hotlink-skydd i Dynamic Media {#activating-hotlink-protection-in-dynamic-media}
+# Aktiverar hot link-skydd i Dynamic Media {#activating-hotlink-protection-in-dynamic-media}
 
-Hotlinking är när en tredjepartswebbplats använder HTML-kod för att visa en bild från din webbplats. De använder din bandbredd varje gång bilden efterfrågas eftersom besökarens webbläsare öppnar den direkt från servern. Hotlink *protection* är ett sätt att förhindra att andra webbplatser direkt länkar till bilder, css eller javascript på dina webbsidor. Den här typen av skydd minskar onödig bandbreddsanvändning under ditt Dynamic Media-konto.
+Aktiv länkning är när en tredjepartswebbplats använder HTML-kod för att visa en bild från din webbplats. De använder din bandbredd varje gång bilden efterfrågas eftersom besökarens webbläsare öppnar den direkt från servern. Hotlink *protection* är en metod som förhindrar att andra webbplatser direkt länkar till bilder, css eller JavaScript på dina webbsidor. Den här typen av skydd minskar onödig bandbreddsanvändning på ditt Dynamic Media-konto.
 
-[Adobe ](https://helpx.adobe.com/support.html) Support kan konfigurera ett referensfilter på CDN-nivå så att Dynamic Media-innehåll endast kan användas för webbplatser i din lista över tillåtna webbplatser för domänen.
+[Adobe ](https://helpx.adobe.com/support.html) Support kan konfigurera ett referensfilter på CDN-nivå (Content Delivery Network) så att Dynamic Media-innehåll endast kan användas på webbplatser i din lista över tillåtna webbplatser för domänen.
 
-Hotlink-skydd kräver att du använder Adobe’s bundled CDN. För att aktivera hotlink-skydd måste en administratör skapa en supportbiljett för att begära konfigurationsändringen av ditt Dynamic Media-konto. Det kostar inget mer att aktivera hotlink-skydd.
+Hotlink-skydd kräver att du använder Adobe’s bundled CDN. Om du vill aktivera hotlink-skydd måste en administratör skapa en supportbiljett för att begära konfigurationsändringen av ditt Dynamic Media-konto. Det kostar inget mer att aktivera hotlink-skydd.
