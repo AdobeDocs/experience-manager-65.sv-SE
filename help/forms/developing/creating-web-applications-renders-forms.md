@@ -11,15 +11,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: f29b089e-8902-4744-81c5-15ee41ba8069
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '1901'
+source-wordcount: '1915'
 ht-degree: 0%
 
 ---
 
 
 # Skapar webbprogram som återger Forms {#creating-web-applications-thatrenders-forms}
+
+**Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
 
 ## Skapar webbprogram som återger Forms {#creating-web-applications-that-renders-forms}
 
@@ -138,7 +140,7 @@ Du skapar Java-programlogik som anropar Forms-tjänsten inifrån Java-servern. I
              }
 ```
 
-Normalt placerar du inte klientkod i en Java-servers `doGet`- eller `doPost`-metod. En bättre programmeringspraxis är att placera den här koden i en separat klass, instansiera klassen inifrån metoden `doPost` (eller metoden `doGet`) och anropa lämpliga metoder. För kodraperation begränsas dock kodexemplen i det här avsnittet till ett minimum och kodexempel placeras i metoden `doPost`.
+Normalt placerar du inte klientkod i en Java-serverds `doGet`- eller `doPost`-metod. En bättre programmeringspraxis är att placera den här koden i en separat klass, instansiera klassen inifrån metoden `doPost` (eller metoden `doGet`) och anropa lämpliga metoder. För kodraperation begränsas dock kodexemplen i det här avsnittet till ett minimum och kodexempel placeras i metoden `doPost`.
 
 Så här återger du ett formulär baserat på fragment med hjälp av Forms tjänst-API:
 
