@@ -10,15 +10,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 95804bff-9e6f-4807-aae4-790bd9e7cb57
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '6243'
+source-wordcount: '6257'
 ht-degree: 0%
 
 ---
 
 
 # Hantera användare {#managing-users}
+
+**Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
 
 **Om användarhantering**
 
@@ -744,7 +746,7 @@ I följande tabell beskrivs stegen i det här diagrammet
  </thead>
  <tbody>
   <tr>
-   <td><p>3</p></td>
+   <td><p>1</p></td>
    <td><p>Användaren kommer åt en webbplats och anger användarnamn och lösenord. Den här informationen skickas till en J2EE-programserver som är värd för AEM Forms.</p></td>
   </tr>
   <tr>
@@ -870,7 +872,7 @@ I följande tabell beskrivs stegen i det här diagrammet
  </thead>
  <tbody>
   <tr>
-   <td><p>3</p></td>
+   <td><p>1</p></td>
    <td><p>Ett klientprogram begär att AEM Forms utför en synkroniseringsåtgärd.</p></td>
   </tr>
   <tr>
