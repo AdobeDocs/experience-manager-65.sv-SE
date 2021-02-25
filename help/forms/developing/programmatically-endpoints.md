@@ -10,15 +10,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 076889a7-9c9f-4b6f-a45b-67a9b3923c36
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '10849'
+source-wordcount: '10863'
 ht-degree: 0%
 
 ---
 
 
 # Hantera slutpunkter programmatiskt {#programmatically-managing-endpoints}
+
+**Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
 
 **Om registertjänsten för slutpunkter**
 
@@ -313,7 +315,7 @@ Om du vill skapa en bevakad mappslutpunkt för en tjänst anger du följande vä
 * **Beskrivning**: Anger beskrivningen av slutpunkten.
 * **Namn**: Anger slutpunktens namn.
 * **Tjänstidentifierare**: Anger den tjänst som slutpunkten tillhör. Om du till exempel vill lägga till en bevakad mappslutpunkt i processen som introduceras i det här avsnittet (en process blir en tjänst när den aktiveras med Workbench) anger du `EncryptDocument`.
-* **Åtgärdsnamn**: Anger namnet på åtgärden som anropas med slutpunkten. När du skapar en bevakad mappslutpunkt för en tjänst som kommer från en process som har skapats i Workbench är namnet på åtgärden vanligtvis `invoke`.
+* **Åtgärdsnamn**: Anger namnet på åtgärden som anropas med slutpunkten. När du skapar en bevakad mappslutpunkt för en tjänst som kommer från en process som skapats i Workbench, är namnet på åtgärden vanligtvis `invoke`.
 
 **Ange konfigurationsvärden**
 
@@ -463,7 +465,7 @@ Lägg till en bevakad mappslutpunkt med AEM Forms Java API:
 
 ### Bevakad mappkonfigurationsvärdeskonstantfil {#watched-folder-configuration-values-constant-file}
 
-Snabbstart: När du lägger till en bevakad mappslutpunkt med Java API[ används en konstant fil som måste ingå i Java-projektet för att snabbstarten ska kunna kompileras. ](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-a-watched-folder-endpoint-using-the-java-api) Den här konstanta filen representerar konfigurationsvärden som måste anges när du lägger till en bevakad mappslutpunkt. Följande Java-kod representerar den konstanta filen.
+Snabbstart: När du lägger till en bevakad mappslutpunkt med Java API](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-a-watched-folder-endpoint-using-the-java-api) används en konstant fil som måste ingå i Java-projektet för att snabbstarten ska kunna kompileras. [ Den här konstanta filen representerar konfigurationsvärden som måste anges när du lägger till en bevakad mappslutpunkt. Följande Java-kod representerar den konstanta filen.
 
 ```java
  /**
@@ -620,7 +622,7 @@ Om du vill definiera ett utdataparametervärde som krävs för en e-postslutpunk
 
 **Skapa e-postslutpunkten**
 
-När du har angett attribut och konfigurationsvärden för e-postslutpunkten och angett in- och utdataparametervärden måste du skapa e-postslutpunkten.
+När du har angett slutpunktsattribut för e-post och konfigurationsvärden, och definierat in- och utdataparametervärden, måste du skapa e-postslutpunkten.
 
 **Aktivera slutpunkten**
 
@@ -708,7 +710,7 @@ Lägg till en e-postslutpunkt med Java API:
 
 ### Konstantfilen {#email-configuration-values-constant-file} för e-postkonfigurationsvärden
 
-Snabbstart: När du lägger till en e-postslutpunkt med Java API[ används en konstant fil som måste ingå i Java-projektet för att snabbstarten ska kunna kompileras. ](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-an-email-endpoint-using-the-java-api) Den här konstanta filen representerar konfigurationsvärden som måste anges när du lägger till en e-postslutpunkt. Följande Java-kod representerar den konstanta filen.
+Snabbstart: När du lägger till en e-postslutpunkt med Java API](/help/forms/developing/endpoint-registry-java-api-quick.md#quickstart-adding-an-email-endpoint-using-the-java-api) används en konstant fil som måste ingå i Java-projektet för att snabbstarten ska kunna kompileras. [ Den här konstanta filen representerar konfigurationsvärden som måste anges när du lägger till en e-postslutpunkt. Följande Java-kod representerar den konstanta filen.
 
 ```java
  /**
@@ -1084,7 +1086,7 @@ Ange nya konfigurationsvärden när du ändrar en slutpunkt. Om du till exempel 
 
 ## Tar bort slutpunkter {#removing-endpoints}
 
-Du kan ta bort en slutpunkt från en tjänst programmatiskt med AEM Forms Java API. När du har tagit bort en slutpunkt kan tjänsten inte anropas med den anropsmetod som slutpunkten aktiverade. Om du till exempel tar bort en SOAP-slutpunkt från en tjänst kan du inte anropa tjänsten i SOAP-läge.
+Du kan ta bort en slutpunkt från en tjänst genom att använda AEM Forms Java API. När du har tagit bort en slutpunkt kan tjänsten inte anropas med den anropsmetod som slutpunkten aktiverade. Om du till exempel tar bort en SOAP-slutpunkt från en tjänst kan du inte anropa tjänsten i SOAP-läge.
 
 För att visa hur du tar bort en slutpunkt från en tjänst tar det här avsnittet bort en EJB-slutpunkt från en tjänst med namnet *EncryptDocument*.
 
