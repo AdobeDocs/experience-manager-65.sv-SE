@@ -11,15 +11,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 3cb307ec-9b7b-4f03-b860-48553ccee746
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '2514'
+source-wordcount: '2528'
 ht-degree: 0%
 
 ---
 
 
 # Återger interaktiv PDF forms {#rendering-interactive-pdf-forms}
+
+**Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
 
 Forms-tjänsten återger interaktiv PDF forms till klientenheter, vanligtvis webbläsare, för att samla in information från användare. När ett interaktivt formulär har återgetts kan användaren ange data i formulärfält och klicka på en Skicka-knapp som finns i formuläret för att skicka tillbaka information till Forms-tjänsten. Adobe Reader eller Acrobat måste vara installerade på den dator som är värd för klientwebbläsaren för att ett interaktivt PDF-formulär ska kunna visas.
 
