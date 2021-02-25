@@ -9,15 +9,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: development-tools, coding
 discoiquuid: ac9fe461-63e7-442b-bd1c-eb9576ef55aa
 translation-type: tm+mt
-source-git-commit: a873cf3e7efd3bc9cd4744bf09078d9040efcdda
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '793'
+source-wordcount: '807'
 ht-degree: 0%
 
 ---
 
 
 # Förstå AEM Forms-processer {#understanding-aem-forms-processes}
+
+**Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
 
 Ett vanligt användningsexempel är en uppsättning AEM Forms-tjänster som kan användas på ett och samma dokument. Du kan skicka en begäran till tjänstbehållaren genom att skapa en process med Workbench. En process representerar en affärsprocess som du automatiserar. Mer information om hur du skapar processer finns i [Använda Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63).
 
