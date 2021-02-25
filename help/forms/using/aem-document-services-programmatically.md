@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
 discoiquuid: 32118d3b-54d0-4283-b489-780bdcbfc8d2
 translation-type: tm+mt
-source-git-commit: b4795930c87fa30d7c7ab60a50bc6f40da4f97d2
+source-git-commit: c3fddf28c0f2f5377fff7561d29f073cc847c3ca
 workflow-type: tm+mt
-source-wordcount: '6418'
+source-wordcount: '6450'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,13 @@ ht-degree: 1%
 
 # Använda AEM dokumenttjänster programmatiskt {#using-aem-document-services-programmatically}
 
-Exempel och exempel i det här dokumentet hjälper dig att förstå och använda AEM Document Services i en AEM Forms-miljö i OSGi. Exempel och exempel på AEM Forms i JEE-miljö finns i [Programmering med AEM Forms i JEE](https://experienceleague.adobe.com/docs/experience-manager-65/forms/developer-reference/programming-aem-forms-jee/java-api-quick-start-code-examples/signature-service-java-api-quick.html?lang=en#programming-aem-forms-jee)
+Exempel och exempel i det här dokumentet hjälper dig att förstå och använda AEM Document Services i en AEM Forms-miljö i OSGi. Exempel och exempel på AEM Forms i JEE-miljö finns på
+
+* [Snabbstart för Java API för signaturtjänst](https://experienceleague.adobe.com/docs/experience-manager-65/forms/developer-reference/programming-aem-forms-jee/java-api-quick-start-code-examples/signature-service-java-api-quick.html?#programming-aem-forms-jee)
+
+* [Snabbstart för Java API för krypteringstjänst](https://experienceleague.adobe.com/docs/experience-manager-65/forms/developer-reference/programming-aem-forms-jee/java-api-quick-start-code-examples/encryption-service-java-api-quick.html?#developer-reference)
+
+* [Snabbstart för Java API för Acrobat Reader-tillägg](https://experienceleague.adobe.com/docs/experience-manager-65/forms/developer-reference/programming-aem-forms-jee/java-api-quick-start-code-examples/acrobat-reader-dc-extensions-service.html?#developer-reference)
 
 ## Förutsättning {#prerequisite}
 
@@ -1380,7 +1386,7 @@ Digitala signaturer kan användas i PDF-dokument för att ge en viss säkerhetsn
 
 Den teknik som används för att digitalt signera dokument gör att både signeraren och mottagaren vet vad som signerats och vet att dokumentet inte har ändrats sedan det signerades.
 
-PDF-dokument signeras med hjälp av teknik för offentlig nyckel. En signerare har två nycklar: en offentlig nyckel och en privat nyckel. Den privata nyckeln lagras i en användares autentiseringsuppgifter som måste vara tillgängliga vid signeringen.
+PDF-dokument signeras med hjälp av teknik med öppen nyckel. En signerare har två nycklar: en offentlig nyckel och en privat nyckel. Den privata nyckeln lagras i en användares autentiseringsuppgifter som måste vara tillgängliga vid signeringen.
 
 Den offentliga nyckeln lagras i användarens certifikat som måste vara tillgängligt för mottagarna för att validera signaturen. Information om återkallade certifikat finns i listor över återkallade certifikat (CRL:er) och OCSP-svar (Online Certificate Status Protocol) som distribueras av certifikatutfärdare (CA:er). Tidpunkten för signering kan hämtas från en betrodd källa som kallas tidsstämpelutfärdare.
 
