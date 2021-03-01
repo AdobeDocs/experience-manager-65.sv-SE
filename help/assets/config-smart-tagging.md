@@ -3,17 +3,17 @@ title: Konfigurera resurstaggning med Smart Content Service
 description: Lär dig hur du konfigurerar smart taggning och förbättrad smart taggning i [!DNL Adobe Experience Manager] med hjälp av Smart Content Service.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
+source-git-commit: 788a66d5732f0a120de6b80da69e9cf81f998667
 workflow-type: tm+mt
-source-wordcount: '1916'
-ht-degree: 29%
+source-wordcount: '1909'
+ht-degree: 27%
 
 ---
 
 
 # Förbered [!DNL Assets] för smart taggning {#configure-asset-tagging-using-the-smart-content-service}
 
-Innan du kan börja tagga dina resurser med Smart Content Services bör du integrera [!DNL Experience ManageR Assets] med Adobe Developer Console för att utnyttja den smarta tjänsten [!DNL Adobe Sensei]. När du har konfigurerat tåget med några bilder och en tagg.
+Innan du kan börja tagga dina resurser med Smart Content Services bör du integrera [!DNL Experience Manager Assets] med Adobe Developer Console för att utnyttja den smarta tjänsten [!DNL Adobe Sensei]. När du har konfigurerat tåget med några bilder och en tagg.
 
 Innan du använder tjänsten för smart innehåll bör du kontrollera följande:
 
@@ -27,11 +27,11 @@ Innan du använder tjänsten för smart innehåll bör du kontrollera följande:
 
 ## Integrera med Adobe Developer Console {#integrate-adobe-io}
 
-När du integrerar med Adobe Developer Console autentiserar [!DNL Experience Manager]-servern dina inloggningsuppgifter med Adobe Developer Console-gatewayen innan du vidarebefordrar din begäran till Smart Content Service. För att integrera behöver ni ett Adobe ID-konto med administratörsbehörighet för organisationen och en licens för Smart Content Service som köpts och aktiverats för organisationen.
+När du integrerar med Adobe Developer Console autentiserar [!DNL Experience Manager]-servern dina inloggningsuppgifter med Adobe Developer Console-gatewayen innan du vidarebefordrar din begäran till Smart Content Service. För att kunna integrera behöver du ett Adobe ID-konto som har administratörsbehörighet för organisationen och som har köpts och aktiverats för din organisation.
 
 Så här konfigurerar du tjänsten Smart Content:
 
-1. [](#obtain-public-certificate)Skapa en konfiguration för Smart Content Service i [!DNL Experience Manager] för att generera en offentlig nyckel. [Hämta ett offentligt certifikat](#obtain-public-certificate) för OAuth-integrering.
+1. Om du vill generera en offentlig nyckel [skapar du en konfiguration för Smart Content Service](#obtain-public-certificate) i [!DNL Experience Manager]. [Hämta ett offentligt certifikat](#obtain-public-certificate) för OAuth-integrering.
 
 1. [Skapa en integrering i Adobe Developer Console](#create-adobe-i-o-integration) och överför den genererade offentliga nyckeln.
 
@@ -41,7 +41,7 @@ Så här konfigurerar du tjänsten Smart Content:
 
 1. Alternativt kan du [aktivera automatisk taggning vid överföring av resurser](#enable-smart-tagging-in-the-update-asset-workflow-optional).
 
-### Skapa konfigurationen för tjänsten Smart Content för att hämta det offentliga certifikatet {#obtain-public-certificate}
+### Hämta ett offentligt certifikat genom att skapa konfigurationen {#obtain-public-certificate} för tjänsten Smart Content
 
 Med ett offentligt certifikat kan du autentisera din profil på Adobe Developer Console.
 
@@ -73,11 +73,11 @@ Med ett offentligt certifikat kan du autentisera din profil på Adobe Developer 
    ![En representation av de inställningar som har skapats för den smarta taggningstjänsten](assets/smart-tags-download-public-cert.png)
 
 
-   *Bild: Inställningar för tjänsten för smart taggning*
+   *Bild: Inställningar för tjänsten för smart taggning.*
 
 #### Konfigurera om när ett certifikat upphör att gälla {#certrenew}
 
-När ett certifikat har upphört att gälla är det inte längre tillförlitligt. Du kan inte förnya ett certifikat som har upphört att gälla. Följ de här stegen för att lägga till ett nytt certifikat.
+När ett certifikat har upphört att gälla är det inte längre tillförlitligt. Du kan inte förnya ett certifikat som har upphört att gälla. Följ de här stegen för att lägga till ett certifikat.
 
 1. Logga in på [!DNL Experience Manager]-driftsättningen som administratör. Klicka på **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Users]**.
 
@@ -85,10 +85,10 @@ När ett certifikat har upphört att gälla är det inte längre tillförlitligt
 
 1. Ta bort den befintliga **[!UICONTROL similaritysearch]**-nyckelbehållaren med det certifikat som upphört att gälla. Klicka på **[!UICONTROL Save & Close]**.
 
-   ![Ta bort den befintliga posten för likhetssökning i nyckelbehållaren om du vill lägga till ett nytt säkerhetscertifikat](assets/smarttags_delete_similaritysearch_keystore.png)
+   ![Ta bort den befintliga posten för likhetssökning i nyckelbehållaren om du vill lägga till ett säkerhetscertifikat](assets/smarttags_delete_similaritysearch_keystore.png)
 
 
-   *Bild: Ta bort den befintliga `similaritysearch`-posten i nyckelbehållaren om du vill lägga till ett nytt säkerhetscertifikat.*
+   *Bild: Ta bort den befintliga  `similaritysearch` posten i nyckelbehållaren om du vill lägga till ett säkerhetscertifikat.*
 
 1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Legacy Cloud Services]**. Klicka på **[!UICONTROL Asset Smart Tags]** > **[!UICONTROL Show Configuration]** > **[!UICONTROL Available Configurations]**. Klicka på önskad konfiguration.
 
@@ -108,7 +108,7 @@ Om du vill använda API:er för tjänsten Smart Content Service skapar du en int
 
 1. Välj **[!UICONTROL Upload your public key]**. Ange certifikatfilen som hämtats från [!DNL Experience Manager]. Ett meddelande [!UICONTROL Public key(s) uploaded successfully] visas. Klicka på **[!UICONTROL Next]**.
 
-   Sidan [!UICONTROL Create a new Service Account (JWT) credential] visar den offentliga nyckeln för det tjänstekonto som just konfigurerats.
+   [!UICONTROL Create a new Service Account (JWT) credential] visas den offentliga nyckeln för tjänstkontot.
 
 1. Klicka på **[!UICONTROL Next]**.
 
@@ -187,7 +187,7 @@ Valideringsresultaten visas i samma dialogruta.
    ![Konfigurera arbetsflödet för DAM-uppdatering av resurser för att lägga till smart tagg och markera ignorera smart tagg](assets/smart-tag-step-properties-workflow3.png)
 
 
-   *Bild: Konfigurera arbetsflödet för DAM-uppdatering av resurser för att lägga till smart tagg och markera ignorera smart tagg*
+   *Bild: Konfigurera arbetsflödet för DAM-uppdatering av resurser för att lägga till smart tagg och välj ignorera flagga för smart tagg.*
 
 1. Klicka på **[!UICONTROL OK]** för att stänga processsteget och spara sedan arbetsflödet.
 
@@ -205,17 +205,17 @@ Du kan utbilda Smart Content Service regelbundet eller efter behov.
 
 ### Riktlinjer för utbildning {#guidelines-for-training}
 
-För bästa resultat bör bilderna i din utbildningsserie följa följande riktlinjer:
+För bästa resultat uppfyller bilderna i din utbildningsuppsättning följande riktlinjer:
 
 **Kvantitet och storlek:** Minst 30 bilder per tagg. Minst 500 pixlar på den längre sidan.
 
-**Samstämmighet**: Bilderna för en tagg bör vara visuellt lika.
+**Samstämmighet**: Bilder som används för en viss tagg liknar varandra visuellt.
 
 Det är till exempel ingen bra idé att tagga alla dessa bilder som `my-party` (för utbildning) eftersom de inte är visuellt lika.
 
 ![Illustrativa bilder som exempel på riktlinjer för utbildning](/help/assets/assets/do-not-localize/coherence.png)
 
-**Täckning**: Det ska finnas tillräckligt med variation i bilderna i utbildningen. Tanken är att ge några men relativt olika exempel så att Experience Manager lär sig att fokusera på rätt saker. Om du använder samma tagg på bilder som ser olika ut bör du ta med minst fem exempel av varje typ.
+**Täckning**: Använd tillräckligt med variation i bilderna i kursen. Tanken är att ge några men relativt olika exempel så att Experience Manager lär sig att fokusera på rätt saker. Om du använder samma tagg på bilder som ser olika ut bör du ta med minst fem exempel av varje typ.
 
 För taggen *model-down-pose* kan du t.ex. inkludera fler utbildningsbilder som liknar den markerade bilden nedan för att tjänsten ska kunna identifiera liknande bilder mer exakt under taggningen.
 
