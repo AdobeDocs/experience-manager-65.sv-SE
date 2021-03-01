@@ -9,8 +9,8 @@ user-guide-description: Läs mer om installation, distribution och arkitekturen 
 translation-type: tm+mt
 source-git-commit: fa2002950bbfb902db8c98a418b3a3d9185efea0
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '352'
+ht-degree: 1%
 
 ---
 
