@@ -9,8 +9,8 @@ user-guide-description: Läs om hur du administrerar AEM.
 translation-type: tm+mt
 source-git-commit: fd7a32c1070a0560ca744db041cf809f28672b33
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '671'
+ht-degree: 6%
 
 ---
 
