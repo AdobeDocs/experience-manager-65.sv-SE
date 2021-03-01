@@ -542,7 +542,7 @@ ht-degree: 1%
       + [Köra AEM formulär i underhållsläge](/help/forms/using/admin-help/running-aem-forms-maintenance-mode.md)
    + Underhålla databasen för AEM formulär {#maintain-aem-forms-database}
       + [DB2-databas: Köra en process varje vecka](/help/forms/using/admin-help/db2-database-running-process-weekly.md)
-      + [Tröskelvärde för högsta antal öppna markörer i oracle-databasen](/help/forms/using/admin-help/oracle-database-maximum-open-cursors.md)
+      + [Tröskelvärde för högsta antal öppna markörer i oraclets databas](/help/forms/using/admin-help/oracle-database-maximum-open-cursors.md)
       + [IBM DB2-databas: Kör kommandon för regelbundet underhåll](/help/forms/using/admin-help/ibm-db2-database-running-commands.md)
       + [Rensningsprocessdata](/help/forms/using/admin-help/purging-process-data.md)
       + [Microsoft SQL Server-databas: Finjustera konfigurationen](/help/forms/using/admin-help/microsoft-sql-server-database-fine.md)
