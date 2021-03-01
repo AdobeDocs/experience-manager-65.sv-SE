@@ -9,8 +9,8 @@ user-guide-description: Den här guiden beskriver hur du skapar AEM.
 translation-type: tm+mt
 source-git-commit: fa2002950bbfb902db8c98a418b3a3d9185efea0
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '905'
+ht-degree: 6%
 
 ---
 
@@ -106,7 +106,7 @@ ht-degree: 0%
       + [SPA introduktion och genomgång](spa-walkthrough.md)
       + [SPA WKND - självstudiekurs](spa-wknd.md)
       + [Getting Started with SPA in AEM - React](spa-getting-started-react.md)
-      + [Getting Started with SPA in AEM - Angular](spa-getting-started-angular.md)
+      + [Komma igång med SPA i AEM - Angular](spa-getting-started-angular.md)
       + [Implementera en React Component for SPA](spa-implementing-react-component.md)
       + [SPA djupdykning](spa-deep-dives.md)
       + [SPA](spa-overview.md)
