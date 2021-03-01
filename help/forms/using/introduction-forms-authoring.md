@@ -10,9 +10,9 @@ topic-tags: introduction, author
 discoiquuid: ba70921e-db7e-43f6-902c-1065d3b13aef
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f3b5b22c1d5573492867aef60457413ad5cf419f
+source-git-commit: 103468b8e6e5bdf870156f85b7f547f190044561
 workflow-type: tm+mt
-source-wordcount: '3097'
+source-wordcount: '3121'
 ht-degree: 0%
 
 ---
@@ -152,7 +152,7 @@ Det gör att du kan dra och släppa formulärmodellelement i det anpassade formu
   </tr>
   <tr>
    <td>Bifogad fil</td>
-   <td><p>Lägger till en knapp som gör att användare kan bläddra bland och bifoga stöddokument till ett formulär. Du kan bifoga flera filer till en bifogad filkomponent.</p> <p><strong> Obs! </strong><ul> <li> Komponenten stöder inte bifogade filer med filnamn som börjar med tecken (.), som innehåller tecknen \ / : * ? " &lt; &gt; | ; % $, eller innehåller speciella filnamn som är reserverade för Windows-operativsystem som null, prn, con, lpt eller com. </li> <li> Om du vill bifoga flera filer till en bifogad fil som öppnas i Apple Safari-webbläsaren, markerar och bifogar du filerna en i taget. Du kan inte markera och bifoga flera filer samtidigt.</li> <li>Komponenten Bifogad fil stöder en fördefinierad uppsättning filformat i adaptiva formulär som är aktiverade för Adobe Sign. Mer information finns i <a href="https://helpx.adobe.com/document-cloud/help/supported-file-formats-fill-sign.html#main-pars_text">Filformat som stöds</a>. </li> </ul></p> </td>
+   <td><p>Lägger till en knapp som gör att användare kan bläddra bland och bifoga stöddokument till ett formulär. Du kan bifoga flera filer till en bifogad filkomponent. Du kan också ange **[!UICONTROL Maximum File Size]** och **[!UICONTROL Supported File Types]** för de bifogade filerna i egenskapswebbläsaren för komponenten. </p> <p><strong> Obs! </strong><ul> <li> Komponenten stöder inte bifogade filer med filnamn som börjar med tecken (.), som innehåller tecknen \ / : * ? " &lt; &gt; | ; % $, eller innehåller speciella filnamn som är reserverade för Windows-operativsystem som null, prn, con, lpt eller com. </li> <li> Om du vill bifoga flera filer till en bifogad fil som öppnas i Apple Safari-webbläsaren, markerar och bifogar du filerna en i taget. Du kan inte markera och bifoga flera filer samtidigt.</li> <li>Komponenten Bifogad fil stöder en fördefinierad uppsättning filformat i adaptiva formulär som är aktiverade för Adobe Sign. Mer information finns i <a href="https://helpx.adobe.com/document-cloud/help/supported-file-formats-fill-sign.html#main-pars_text">Filformat som stöds</a>. </li></ul></p> </td>
   </tr>
   <tr>
    <td>Lista över bifogade filer</td>
@@ -273,7 +273,7 @@ Det gör att du kan dra och släppa formulärmodellelement i det anpassade formu
 
 #### Bästa tillvägagångssätt för att arbeta med komponenter {#best-practices}
 
-Här följer några tips och viktiga saker att komma ihåg när du arbetar med adaptiva formulärkomponenter:
+Här följer några tips och viktiga saker du bör komma ihåg när du arbetar med adaptiva formulärkomponenter:
 
 * Varje komponent har tillhörande egenskaper som styr dess utseende och funktion. Om du vill konfigurera egenskaperna för en komponent trycker du på komponenten och trycker på ![cmpr](assets/cmppr.png) för att öppna komponentegenskaperna i egenskapsläsaren.
 * En komponent identifieras med sitt elementnamn. När du trycker på ![cmpr](assets/cmppr.png) kan du ändra komponentens namn genom att ändra fältvärdet **[!UICONTROL Element Name]** i egenskapsläsaren. Endast bokstäver, siffror, bindestreck (-) och understreck (_) godkänns i fältet Elementnamn. Andra specialtecken tillåts inte och elementnamnet måste börja med en bokstav.
