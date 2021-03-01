@@ -3,10 +3,10 @@ title: Förbättrade smarta taggar
 description: Förbättrade smarta taggar
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 09bb767ae8565624e7a6b9786a5cd4c581fe0b9a
+source-git-commit: 788a66d5732f0a120de6b80da69e9cf81f998667
 workflow-type: tm+mt
-source-wordcount: '1574'
-ht-degree: 4%
+source-wordcount: '1561'
+ht-degree: 3%
 
 ---
 
@@ -19,7 +19,7 @@ Jämfört med naturtrogna språkordlistor kan taggning av digitala resurser base
 
 En biltillverkare kan t.ex. märka bilderna med modellnamn så att endast relevanta bilder visas när bilder av olika modeller söks igenom för att utforma en kampanj.
 
-För att Smart Content Service ska kunna använda rätt taggar måste du utbilda den så att den känner igen din taxonomi. För att utbilda tjänsten måste du först strukturera en uppsättning resurser och taggar som bäst beskriver dessa resurser. Använd dessa taggar på materialet och kör ett utbildningsarbetsflöde för att hjälpa tjänsten att lära sig.
+För att Smart Content Service ska kunna använda rätt taggar måste du träna den för att identifiera din taxonomi. För att utbilda tjänsten måste du först strukturera en uppsättning resurser och taggar som bäst beskriver dessa resurser. Använd dessa taggar på resurserna och kör ett utbildningsarbetsflöde för att hjälpa tjänsten att lära sig mer.
 
 När en tagg har tränats och är klar kan tjänsten nu använda dessa taggar på resurser via ett taggningsarbetsflöde.
 
@@ -40,11 +40,11 @@ Här är sammanfattningsvis de viktigaste stegen för att använda tjänsten Sma
 
 Innan du kan använda Smart Content Service måste du ha/se till/göra följande för att kunna integrera med [!DNL Adobe Developer Console]:
 
-* Ett Adobe ID-konto som har administratörsbehörighet för organisationen.
-* Att Smart Content Service är aktiverad för din organisation.
-* Grundpaketet för smarta innehållstjänster kan endast läggas till i en distribution där ett [!DNL Adobe Experience Manager Sites]-baspaket och [!DNL Assets]-tillägg har licensierats.
+* Ett Adobe ID-konto med administratörsbehörighet för organisationen.
+* Aktivera tjänsten Smart Content Service för din organisation.
+* Om du vill lägga till baspaketet för smarta innehållstjänster i en distribution licensierar du [!DNL Adobe Experience Manager Sites] baspaket och [!DNL Assets] tillägg.
 
-Smarta taggar används bara för resurser med följande MIME-typer:
+Tjänsten använder smarta taggar för resurser av följande MIME-typer:
 
 * image/jpeg
 * bild/tiff
@@ -65,7 +65,7 @@ Smarta taggar används bara för resurser med följande MIME-typer:
 * image/psd
 * image/vnd.adobe.photoshop
 
-Smart taggning av resursåtergivningar stöds endast för följande MIME-typer:
+Tjänsten använder smarta taggar för resursåtergivningar av följande MIME-typer:
 
 * image/jpeg
 * image/pjpeg
@@ -152,7 +152,7 @@ Du kan utlösa taggningsarbetsflödet från arbetsflödeskonsolen eller från ti
 
    ![tagging_dialog](assets/tagging_dialog.png)
 
-   Navigera till resursmappen och granska taggarna för att kontrollera om Smart Content Service taggade dina resurser på rätt sätt.
+   Kontrollera om Smart Content Service taggade dina resurser på rätt sätt genom att navigera till resursmappen och granska taggarna.
 
 #### Tagga resurser från tidslinjen {#tagging-assets-from-the-timeline}
 
@@ -163,7 +163,7 @@ Du kan utlösa taggningsarbetsflödet från arbetsflödeskonsolen eller från ti
    ![start_workflow](assets/start_workflow.png)
 
 1. Välj arbetsflödet **[!UICONTROL DAM Smart Tag Assets]** och ange en rubrik för arbetsflödet.
-1. Klicka på **[!UICONTROL Start]**. Arbetsflödet använder dina taggar på resurser. Navigera till resursmappen och granska taggarna för att kontrollera om Smart Content Service taggade dina resurser på rätt sätt.
+1. Klicka på **[!UICONTROL Start]**. Arbetsflödet använder taggar på resurserna. Om du vill kontrollera om Smart Content Service taggade dina resurser på rätt sätt går du till resursmappen och granskar taggarna.
 
 >[!NOTE]
 >
@@ -171,14 +171,14 @@ Du kan utlösa taggningsarbetsflödet från arbetsflödeskonsolen eller från ti
 
 ## Kuratera eller moderera de använda smarta taggarna {#manage-smart-tags}
 
-Du kan strukturera smarta taggar om du vill ta bort felaktiga taggar som kan ha tilldelats dina varumärkesbilder så att endast de mest relevanta taggarna visas.
+Du kan strukturera smarta taggar om du vill ta bort felaktiga taggar som har tilldelats dina varumärkesbilder så att endast de mest relevanta taggarna visas.
 
 Genom att moderera smarta taggar kan du också förbättra taggbaserade sökningar efter bilder genom att se till att bilden visas i sökresultaten för de mest relevanta taggarna. I grund och botten eliminerar det riskerna för att bilder som inte är relaterade visas i sökresultaten.
 
-Du kan också tilldela en tagg en högre rankning för att öka dess relevans i förhållande till en bild. Om du befordrar en tagg för en bild ökar risken för att bilden visas i sökresultatet när en sökning utförs baserat på den aktuella taggen.
+Du kan också tilldela en tagg en högre rankning för att öka dess relevans för en bild. Om du befordrar en tagg för en bild ökar risken för att bilden visas i sökresultaten när du söker efter den aktuella taggen.
 
-1. Sök efter resurser baserade på en tagg i rutan Omnissearch.
-1. Inspect sökresultaten för att identifiera en bild som du inte tycker är relevant för sökningen.
+1. I sökrutan söker du efter resurser som är baserade med en tagg som nyckelord.
+1. Granska sökresultaten för att identifiera en bild som du inte tycker är relevant för din sökning.
 1. Markera bilden och klicka på **[!UICONTROL Manage Tags]** i verktygsfältet.
 1. Granska taggarna på sidan **[!UICONTROL Manage Tags]**. Om du inte vill att bilden ska sökas igenom baserat på en viss tagg markerar du taggen och klickar sedan på **[!UICONTROL Delete]** i verktygsfältet. Du kan också klicka på symbolen `x` som visas bredvid en tagg.
 1. Om du vill tilldela en tagg en högre rankning markerar du taggen och klickar på **[!UICONTROL Promote]** i verktygsfältet. Taggen som du befordrar flyttas till avsnittet **[!UICONTROL Tags]**.
