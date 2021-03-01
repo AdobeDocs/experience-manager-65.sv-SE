@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 content-type: reference
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1f40c099518bc9d296026d8cfac5b6291e41a846
+source-git-commit: 02937bb85792e2ae9dcdeee3b860f800812a4461
 workflow-type: tm+mt
-source-wordcount: '6242'
+source-wordcount: '6235'
 ht-degree: 9%
 
 ---
@@ -25,7 +25,7 @@ Integrationen innebär att du kan spåra användningen av Dynamic Media Viewer p
 
 Mer information om tillägg finns i [Adobe Extension](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/overview.html#adobe-extension) i användarhandboken för Experience Platform Launch.
 
-**Vem den här dokumentationen är avsedd för:** Webbplatsadministratörer, utvecklare på Experience Manager-plattformen och personer i Operations.
+**Det här avsnittet är avsett för följande:** Webbplatsadministratörer, utvecklare på Experience Manager-plattformen och personer i Operations.
 
 ### Begränsningar för integreringen {#limitations-of-the-integration}
 
@@ -405,7 +405,7 @@ I följande tabell visas Dynamic Media Viewer-händelser och deras argument som 
 
 **INNAN DU BÖRJAR**
 
-Om du inte redan har gjort det rekommenderar Adobe att du noggrant granskar all dokumentation innan det här avsnittet så att du förstår den fullständiga integreringen.
+Adobe rekommenderar att du granskar all dokumentation innan det här avsnittet så att du förstår den fullständiga integreringen.
 
 I det här avsnittet beskrivs de konfigurationssteg som krävs för att integrera Dynamic Media-visningsprogram med Adobe Analytics och Adobe Analytics för ljud och video. Även om det går att använda Dynamic Media Viewer-tillägget för andra syften i Experience Platform Launch omfattas inte sådana scenarier i den här dokumentationen.
 
@@ -468,7 +468,7 @@ Se även [Implementeringshandbok för analys](https://experienceleague.adobe.com
    Om du vill aktivera en ny anpassad trafikvariabel i Adobe Analytics klickar du på **[!UICONTROL Admin > Report Suites]** i verktygsfältet.
 
 1. Välj rätt rapport på sidan **[!UICONTROL Report Suite Manager]** och klicka sedan på **[!UICONTROL Edit Settings > Traffic > Traffic Variables]** i verktygsfältet.
-1. Där hämtar du en oanvänd variabel, ger den ett beskrivande namn ( **[!UICONTROL Viewer asset (prop 30)]**) och ändrar kombinationsrutan till &quot;Aktiverad&quot; i kolumnen Aktiverad.
+1. Där väljer du en oanvänd variabel, ger den ett beskrivande namn ( **[!UICONTROL Viewer asset (prop 30)]**) och ändrar kombinationsrutan till &quot;Aktiverad&quot; i kolumnen Aktiverad.
 
    Följande skärmbild är ett exempel på en anpassad trafikvariabel ( **[!UICONTROL prop30]**) för att spåra ett resursnamn som används av visningsprogrammet:
 
@@ -597,7 +597,7 @@ Mer information om Experience Platform Launch-miljöer finns i [Miljöer](https:
 Publicering av ett bibliotek omfattar följande två steg:
 
 * Lägga till och skapa ett nytt bibliotek genom att inkludera alla nödvändiga ändringar (nya och uppdateringar) i biblioteket.
-* Flytta upp biblioteket genom de olika miljönivåerna (från utveckling till mellanlagring och produktion)
+* Flytta upp biblioteket genom de olika miljönivåerna (från utveckling till mellanlagring och produktion).
 
 #### Lägga till och skapa ett nytt bibliotek {#adding-and-building-a-new-library}
 
@@ -617,7 +617,7 @@ Publicering av ett bibliotek omfattar följande två steg:
 
 1. Klicka på **[!UICONTROL Save & Build for Development]** i det övre högra hörnet på sidan.
 
-   På några minuter är biblioteket klart att användas.
+   Om några minuter är biblioteket klart att användas.
 
    ![image2019-7-15_15-3-34](assets/image2019-7-15_15-3-34.png)
 
@@ -677,7 +677,7 @@ Den AEM konfigurationen består av följande två huvudsteg:
 
    Följande informationsmeddelande visas:
 
-   *Om du vill hämta en giltig åtkomsttoken läggs det nya certifikatets offentliga nyckel till i det tekniska kontot på Adobe I/O!*.
+   *Om du vill hämta en giltig åtkomsttoken läggs det nya certifikatets offentliga nyckel till i det tekniska kontot på Adobe I/O!*
 
    Om du vill stänga dialogrutan Info klickar du på **[!UICONTROL OK]**.
 
@@ -733,7 +733,7 @@ Den AEM konfigurationen består av följande två huvudsteg:
 
 1. Gå tillbaka till sidan **[!UICONTROL Adobe IMS Technical Account Configuration]** som du öppnade tidigare. Klicka på **[!UICONTROL Next]** i det övre högra hörnet av sidan för att öppna sidan **[!UICONTROL Account]** i fönstret **[!UICONTROL Adobe IMS Technical Account Configuration]**.
 
-   (Om du av misstag stängde sidan tidigare återgår du till författaren till Experience Manager och klickar sedan på **[!UICONTROL Tools > Security > Adobe IMS Configurations]**. Klicka på **[!UICONTROL Create]**. I listrutan **[!UICONTROL Cloud Solution]** väljer du **[!UICONTROL Experience Platform Launch]**. I listrutan **[!UICONTROL Certificate]** markerar du namnet på det tidigare skapade certifikatet.)
+   (Om du stängde sidan tidigare går du tillbaka till författaren av Experience Manager och klickar sedan på **[!UICONTROL Tools > Security > Adobe IMS Configurations]**. Klicka på **[!UICONTROL Create]**. I listrutan **[!UICONTROL Cloud Solution]** väljer du **[!UICONTROL Experience Platform Launch]**. I listrutan **[!UICONTROL Certificate]** markerar du namnet på det tidigare skapade certifikatet.)
 
    ![2019-07-25_20-57-50](assets/2019-07-25_20-57-50.png)
 
