@@ -8,7 +8,7 @@ user-guide-description: Skapa och hantera innehåll för mobilappar.
 translation-type: tm+mt
 source-git-commit: fa2002950bbfb902db8c98a418b3a3d9185efea0
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '331'
 ht-degree: 0%
 
 ---
