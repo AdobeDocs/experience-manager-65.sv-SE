@@ -9,7 +9,7 @@ topic-tags: author
 discoiquuid: d739c6da-3b41-4452-8728-d7cd1a3ae20b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ade3747ba608164a792a62097b82c55626245891
+source-git-commit: 3ca71b73444589096dee46c38daded043c9232b1
 workflow-type: tm+mt
 source-wordcount: '990'
 ht-degree: 0%
@@ -151,7 +151,7 @@ ProxyPassReverse /content https://<AEM_Instance>/content
 
 >[!NOTE]
 >
->Om du konfigurerar någon annan topologi måste du lägga till överförings-, förifyllnings- och andra URL-adresser till tillåtelselista i dispatcherlagret.
+>Om du konfigurerar någon annan topologi måste du lägga till webbadresserna för Skicka, Förifyll och andra URL:er till tillåtelselista i dispatcherlagret.
 
 ## God praxis {#best-practices}
 
@@ -165,7 +165,6 @@ Tänk på följande när du bäddar in ett anpassat formulär på en webbsida:
 
 ## Gör det möjligt för AEM Forms att skicka adaptiva formulär till en domänövergripande webbplats {#cross-site}
 
-1. AEM författarinstans går du till AEM Web Console Configuration Manager på `https://'[server]:[port]'/system/console/configMgr`.
+1. På AEM publiceringsinstans går du till AEM Configuration Manager för webbkonsolen på `https://'[server]:[port]'/system/console/configMgr`.
 1. Leta upp och öppna konfigurationen **Refererarfilter för Apache Sling**.
 1. I fältet Tillåtna värdar anger du den domän där webbsidan finns. Det gör att värddatorn kan göra POST-förfrågningar till AEM. Du kan också använda reguljära uttryck för att ange en serie externa programdomäner.
-
