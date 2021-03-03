@@ -12,10 +12,10 @@ discoiquuid: 30aa3177-bcf4-4260-8f64-e73bc907942a
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 translation-type: tm+mt
-source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
+source-git-commit: 6f1f4fbaf9ee4b5ab073a27a58cb040c76230ebd
 workflow-type: tm+mt
-source-wordcount: '517'
-ht-degree: 19%
+source-wordcount: '551'
+ht-degree: 18%
 
 ---
 
@@ -28,6 +28,13 @@ När en startsida har skapats för en sida (eller en uppsättning sidor) kan du 
 
 1. Gå till [Starta från Referenser (Sites-konsolen)](/help/sites-authoring/launches.md#launches-in-references-sites-console) för att visa tillgängliga åtgärder.
 1. Välj **Gå till sidan** för att öppna sidan för redigering.
+
+>[!NOTE]
+>
+>Du får inte flytta en sida inom en start. Om du försöker utföra den här åtgärden utlöses ett varningsmeddelande:
+>
+>* Varning: Den här sidan är startkällan. Det är inte tillåtet att flytta sidan.
+
 
 ### Redigering av startsidor som omfattas av en Live-kopia {#editing-launch-pages-subject-to-a-live-copy}
 
