@@ -9,7 +9,7 @@ topic-tags: author
 discoiquuid: 1a32eb24-db3b-4fad-b1c7-6326b5af4e5e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
+source-git-commit: 3690d2d76ce13064bd3946f4f6fea1a2759cdf37
 workflow-type: tm+mt
 source-wordcount: '2074'
 ht-degree: 0%
@@ -119,7 +119,7 @@ Utför följande steg för att visa fullständiga fragment i formulär:
 
 1. Gå till AEM webbkonsolkonfigurationssida på https:[*värd*]:[*port*]/system/console/configMgr.
 
-1. Sök och klicka på **[!UICONTROL Adaptive Form Configuration Service]** för att öppna den i redigeringsläge.
+1. Sök och klicka på **[!UICONTROL Adaptive Form and Interactive Communication Web Channel Configuration]** för att öppna den i redigeringsläge.
 1. Inaktivera kryssrutan **[!UICONTROL Enable Placeholder in place of Fragment]** om du vill visa hela fragment i stället för platshållarbilden.
 
 ### Infoga ett fragment i ett anpassat formulär {#insert-a-fragment-in-an-adaptive-form}
