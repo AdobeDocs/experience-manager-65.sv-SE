@@ -8,9 +8,9 @@ topic-tags: installing
 discoiquuid: de292a19-07db-4ed3-b13a-7a2f1cd9e0dd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 35b2c9c8c79b3cc3d81e0b92ea17cd7d599fa7ee
+source-git-commit: 3690d2d76ce13064bd3946f4f6fea1a2759cdf37
 workflow-type: tm+mt
-source-wordcount: '1623'
+source-wordcount: '1619'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ AEM Forms är en kraftfull plattform för större företag. Forms-centrerat arbe
 
 ## Distributionstopologi {#deployment-topology}
 
-AEM Forms tilläggspaket är ett program som distribueras till AEM. Du behöver bara minst en AEM Author- eller Processing-instans (produktionsförfattare) för att köra det Forms-centrerade arbetsflödet på OSGi-funktionen. En bearbetningsinstans är en [härdad AEM Author](/help/forms/using/hardening-securing-aem-forms-environment.md)-instans. Gör inga riktiga skribenter, som att skapa arbetsflöden eller anpassningsbara formulär, åt produktionsförfattaren.
+AEM Forms tilläggspaket är ett program som distribueras till AEM. Du behöver bara minst en AEM Author- eller Processing-instans (produktionsförfattare) för att köra det Forms-centrerade arbetsflödet på OSGi-funktionen. En bearbetningsinstans är en [härdad AEM Author](/help/forms/using/hardening-securing-aem-forms-environment.md)-instans. Gör inga riktiga redigeringsfunktioner, som att skapa arbetsflöden eller anpassningsbara formulär, på produktionsförfattaren.
 
 Följande topologi är en indikativ topologi för att köra AEM Forms Interactive Communications, Correspondence Management, AEM Forms datainhämtning och Forms-Centric-arbetsflöden för OSGi-funktioner. Mer information om topologin finns i [Arkitektur och distributionstopologier för AEM Forms](/help/forms/using/aem-forms-architecture-deployment.md).
 
@@ -177,7 +177,7 @@ Cachelagring är en mekanism som förkortar dataåtkomsttider, minskar fördröj
 Utför följande steg för att konfigurera cachen för adaptiva formulär:
 
 1. Gå till konfigurationshanteraren AEM webbkonsolen på `https://'[server]:[port]'/system/console/configMgr`.
-1. Klicka på **tjänsten Adaptiv formulärkonfiguration** om du vill redigera dess konfigurationsvärden. I dialogrutan Redigera konfigurationsvärden anger du det maximala antalet formulär eller dokument som en instans av AEM Forms-servern kan cachelagra i fältet **Antal adaptiva Forms**. Standardvärdet är 100. Klicka på **Spara**.
+1. Klicka på **[!UICONTROL Adaptive Form and Interactive Communication Web Channel Configuration]** om du vill redigera dess konfigurationsvärden. I dialogrutan Redigera konfigurationsvärden anger du det maximala antalet formulär eller dokument som en instans av AEM Forms-servern kan cachelagra i fältet **Antal adaptiva Forms**. Standardvärdet är 100. Klicka på **Spara**.
 
    >[!NOTE]
    >
