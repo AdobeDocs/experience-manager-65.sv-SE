@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d62249ee2e2d40f2a437c1cb7f2a80f3f8e67efe
+source-git-commit: 06cb3a7cdd9b6de00aff67c66327abadce3e0920
 workflow-type: tm+mt
-source-wordcount: '3311'
+source-wordcount: '3309'
 ht-degree: 0%
 
 ---
@@ -552,13 +552,12 @@ Ytterligare krav finns i:
 
 ### Designer {#designer}
 
-* Microsoft® Windows® 2016 Server, Microsoft® Windows® 2019 Server eller Microsoft Windows 10
+* Microsoft® Windows® 2016 Server, Microsoft® Windows® 2019 Server eller Microsoft® Windows® 10
 * 1 GHz eller snabbare processor med stöd för PAE, NX och SSE2.
 * 1 GB RAM för 32-bitars eller 2 GB RAM för 64-bitars operativsystem
 * 16 GB diskutrymme för 32-bitars eller 20 GB diskutrymme för 64-bitars operativsystem
 * Grafikminne - 128 MB GPU (256 MB rekommenderas)
 * 2,35 GB ledigt hårddiskutrymme
-* DVD-ROM-enhet
 * Bildskärmsupplösning på 1 024 x 768 pixlar eller högre
 * Maskinvaruacceleration för video (valfritt)
 * Acrobat Pro DC, Acrobat Standard DC eller Adobe Acrobat Reader DC.
