@@ -11,9 +11,9 @@ topic-tags: platform
 discoiquuid: 16c7a97d-884a-447e-9aad-18a2db1bda1d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 7065a6b984afb18c188acd848b9b77da7da67749
+source-git-commit: d62249ee2e2d40f2a437c1cb7f2a80f3f8e67efe
 workflow-type: tm+mt
-source-wordcount: '3118'
+source-wordcount: '3207'
 ht-degree: 0%
 
 ---
@@ -134,10 +134,10 @@ Adobe Experience Manager arbetar med följande versioner av Java Virtual Machine
  </tbody>
 </table>
 
-1. Oracle har flyttat till en&quot;LTS-modell&quot; (Long Term Support) för Oracle Java SE-produkter. Java 9, Java 10 och Java 12 är icke-LTS-versioner från Oracle (se [Oracle Java SE support roadmap](https://www.oracle.com/technetwork/java/eol-135779.html)). För att driftsätta AEM i produktionsmiljön tillhandahåller Adobe endast stöd för LTS-versionerna av Java.
+1. Oraclet har flyttat till en LTS-modell (Long Term Support) för Oracle Java SE-produkter. Java 9, Java 10 och Java 12 är icke-LTS-versioner som Oracle (se [Oracle Java SE support roadmap](https://www.oracle.com/technetwork/java/eol-135779.html)). För att driftsätta AEM i produktionsmiljön tillhandahåller Adobe endast stöd för LTS-versionerna av Java.
 
 1. IBM JRE stöds endast tillsammans med WebSphere Application Server.
-1. Stöd för och distribution av Oracle Java SE JDK, inklusive alla underhållsuppdateringar av LTS-releaser som ligger utanför de offentliga uppdateringarna, kommer att stödjas av Adobe direkt för alla AEM som använder Oracle Java SE-tekniken. Mer information finns i [Oracle Java support för Adobe Experience Manager Q&amp;A](assets/adobe-oracle-java-license-agreement.pdf).
+1. Stöd för och distribution av Oraclet Java SE JDK, inklusive alla underhållsuppdateringar av LTS-releaser efter slutet av de offentliga uppdateringarna, kommer att stödjas av Adobe direkt för alla AEM som använder Oraclet Java SE. Mer information finns i [Oraclets Java-stöd för Adobe Experience Manager Q&amp;A](assets/adobe-oracle-java-license-agreement.pdf).
 
 ### Lagring och beständighet {#storage-persistence}
 
@@ -374,7 +374,7 @@ till exempel `https://www.yourserver.com:4502`
 * standardfallet för `localhost` tolkas för både IPv4- och IPv6-nätverksinstallationer
 till exempel `https://localhost:4502`
 
-### Krav för AEM Dynamic Media Add-on {#requirements-for-aem-dynamic-media-add-on}
+### Krav för AEM Dynamic Media-tillägg {#requirements-for-aem-dynamic-media-add-on}
 
 AEM Dynamic Media är inaktiverat som standard. Se här för att [aktivera Dynamic Media](/help/assets/config-dynamic.md#enabling-dynamic-media).
 
@@ -382,9 +382,9 @@ När Dynamic Media är aktiverat gäller följande ytterligare tekniska krav.
 
 >[!NOTE]
 >
->Dessa systemkrav **gäller endast** om du använder läget Dynamic Media - Hybrid; Dynamic Media - Hybrid-läget har en inbäddad bildserver som bara är certifierad på vissa operativsystem.
+>Dessa systemkrav **gäller endast** om du använder Dynamic Media - hybridläge; Dynamic Media - Hybridläget har en inbäddad bildserver, som bara är certifierad på vissa operativsystem.
 >
->För Dynamic Media-kunder som kör Dynamic Media - Scene7-läge (d.v.s. **dynamicmedia_scene7** runmode) finns inga ytterligare systemkrav. endast samma systemkrav som AEM. Dynamic Media - Scene7-lägesarkitekturen använder den molnbaserade bildtjänsten och inte den tjänst som är inbäddad i AEM.
+>För Dynamic Media-kunder som kör Dynamic Media - Scene7-läge (d.v.s. **dynamicmedia_scene7** runmode) finns inga ytterligare systemkrav. endast samma systemkrav som AEM. Dynamic Media - Scene7-lägesarkitektur använder den molnbaserade bildtjänsten och inte den tjänst som är inbäddad i AEM.
 
 #### Maskinvara {#hardware}
 
@@ -404,7 +404,7 @@ Om du använder Dynamic Media i Linux måste följande krav vara uppfyllda:
 
 >[!NOTE]
 >
->Om språkinställningen är inställd så att LC_CTYPE inte är lika med `en_US.UTF-8` förhindrar den att Dynamic Media fungerar. Om du vill se vilket värde det har skriver du &quot;locale&quot; i kommandotolken. Om det inte är det anger du LC_CTYPE-miljövariabeln till den tomma strängen genom att skriva &quot;export LC_CTYPE=&quot; innan du kör AEM.
+>Om språkområdet är inställt så att LC_CTYPE inte är lika med `en_US.UTF-8`, fungerar inte Dynamic Media. Om du vill se vilket värde det har skriver du &quot;locale&quot; i kommandotolken. Om det inte är det anger du LC_CTYPE-miljövariabeln till den tomma strängen genom att skriva &quot;export LC_CTYPE=&quot; innan du kör AEM.
 
 >[!NOTE]
 >
@@ -509,6 +509,20 @@ För Windows x86:
 >
 
 
+
+### Krav för AEM Forms Designer {#requirements-for-aem-forms-designer}
+
+* Microsoft® Windows® 2016 Server, Microsoft® Windows® 2019 Server eller Microsoft Windows 10
+* 1 GHz eller snabbare processor med stöd för PAE, NX och SSE2.
+* 1 GB RAM för 32-bitars eller 2 GB RAM för 64-bitars operativsystem
+* 16 GB diskutrymme för 32-bitars eller 20 GB diskutrymme för 64-bitars operativsystem
+* Grafikminne - 128 MB GPU (256 MB rekommenderas)
+* 2,35 GB ledigt hårddiskutrymme
+* DVD-ROM-enhet
+* Bildskärmsupplösning på 1 024 x 768 pixlar eller högre
+* Maskinvaruacceleration för video (valfritt)
+* Acrobat Pro DC, Acrobat Standard DC eller Adobe Acrobat Reader DC.
+* Administrativ behörighet för att installera Designer.
 
 ### Krav för AEM Assets XMP metadata write-back {#requirements-for-aem-assets-xmp-metadata-write-back}
 
