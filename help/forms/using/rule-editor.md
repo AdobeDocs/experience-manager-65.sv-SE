@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 1b905e66-dc05-4f14-8025-62a78feef12a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: 3690d2d76ce13064bd3946f4f6fea1a2759cdf37
 workflow-type: tm+mt
 source-wordcount: '6766'
 ht-degree: 0%
@@ -140,7 +140,7 @@ Utöver formulärdatamodelltjänsten kan du ange en direkt WSDL-URL för att anr
 
 Mer information om hur du konfigurerar tjänster i formulärdatamodellen finns i [AEM Forms-dataintegrering](/help/forms/using/data-integration.md).
 
-**Ange värdet** för Computes och ställer in värdet för det angivna objektet. Du kan ställa in objektvärdet på en sträng, värdet för ett annat objekt, det beräknade värdet med hjälp av matematiska uttryck eller funktioner, värdet för ett objekts egenskap eller utdatavärdet från en konfigurerad datamodelltjänst för formulär. När du väljer webbtjänstalternativet visas alla tjänster som är konfigurerade i alla formulärdatamodeller på din AEM. När du väljer en datamodelltjänst för ett formulär visas ytterligare fält där du kan mappa formulärobjekt med in- och utdataparametrar för den angivna tjänsten.
+**Ange värdet** för Computes och ställer in värdet för det angivna objektet. Du kan ställa in objektvärdet på en sträng, värdet för ett annat objekt, det beräknade värdet med hjälp av matematiska uttryck eller funktioner, värdet för ett objekts egenskap eller utdatavärdet från en konfigurerad datamodelltjänst för formulär. När du väljer webbtjänstalternativet visas alla tjänster som är konfigurerade i alla formulärdatamodeller på AEM. När du väljer en datamodelltjänst för ett formulär visas ytterligare fält där du kan mappa formulärobjekt med in- och utdataparametrar för den angivna tjänsten.
 
 Mer information om hur du konfigurerar tjänster i formulärdatamodellen finns i [AEM Forms-dataintegrering](/help/forms/using/data-integration.md).
 
@@ -274,7 +274,7 @@ En vanlig Aktivera-regel är strukturerad på följande sätt:
 
 Ungefär som med regeltypen Aktivera kan du med regeltypen **Inaktivera** aktivera eller inaktivera ett formulärobjekt baserat på om ett villkor är uppfyllt eller inte. Regeltypen Inaktivera utlöser även åtgärden Aktivera om villkoret inte uppfylls eller returnerar `False`.
 
-En vanlig inaktiveringsregel är strukturerad på följande sätt:
+En vanlig inaktiveringsregel är strukturerad enligt följande:
 
 
 
@@ -383,7 +383,7 @@ Användare i gruppen för formuläranvändare har åtkomst till kodredigeraren. 
 AEM Forms spårar det regelredigeringsläge som du använde när du skrev en regel sist. När du startar regelredigeraren nästa gång öppnas den i det läget. Du kan dock konfigurera ett standardläge så att regelredigeraren öppnas i det angivna läget. Så här gör du:
 
 1. Gå till AEM webbkonsol på `https://[host]:[port]/system/console/configMgr`.
-1. Klicka för att redigera **[!UICONTROL Adaptive Form Configuration Service]**.
+1. Klicka för att redigera **[!UICONTROL Adaptive Form and Interactive Communication Web Channel Configuration]**.
 1. välj **[!UICONTROL Visual Editor]** eller **[!UICONTROL Code Editor]** i listrutan **[!UICONTROL Default Mode for Rule Editor]**
 
 1. Klicka på **[!UICONTROL Save]**.
@@ -533,7 +533,7 @@ Kodredigeraren JavaScript är uttrycksspråket i adaptiva formulär. Alla uttryc
 
 Mer information om riktlinjer för att skriva regler i kodredigeraren finns i [Adaptiva formuläruttryck](/help/forms/using/adaptive-form-expressions.md).
 
-När du skriver JavaScript-kod i regelredigeraren kan du använda följande visuella tips för att få hjälp med strukturen och syntaxen:
+När du skriver JavaScript-kod i regelredigeraren kan du använda följande visuella tecken för att utforma strukturen och syntaxen:
 
 * Syntaxhögdagrar
 * Automatiskt indrag
