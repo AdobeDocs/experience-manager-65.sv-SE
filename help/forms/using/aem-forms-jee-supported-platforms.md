@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 translation-type: tm+mt
-source-git-commit: c9c407ea7c0bff3d15934552cd709bec7f24e857
+source-git-commit: d62249ee2e2d40f2a437c1cb7f2a80f3f8e67efe
 workflow-type: tm+mt
-source-wordcount: '3318'
+source-wordcount: '3311'
 ht-degree: 0%
 
 ---
@@ -221,8 +221,8 @@ Adobe Experience Manager Forms kräver att en Java Virtual Machine körs, vilket
   </tr>
   <tr>
    <td>Oracle</td>
-   <td><p>Oracle Database 19.3.0.0.0 JDBC driver</p> <p>jodbc8.jar (version 19.3.0.0.0)<br /> </p> </td>
-   <td><p>Hämta från <a href="https://www.oracle.com/technetwork/database/features/jdbc/jdbc-ucp-122-3110062.html">Oracle webbplats</a>.</p> </td>
+   <td><p>JDBC-drivrutin för Oracle Database 19.3.0.0.0</p> <p>jodbc8.jar (version 19.3.0.0.0)<br /> </p> </td>
+   <td><p>Hämta från <a href="https://www.oracle.com/technetwork/database/features/jdbc/jdbc-ucp-122-3110062.html">Oraclets webbplats</a>.</p> </td>
   </tr>
  </tbody>
 </table>
@@ -324,7 +324,7 @@ Tänk på följande undantag när du väljer en plattform för att konfigurera A
 
 1. AEM Forms på JEE stöder inte IBM® WebSphere® med MySQL.
 1. AEM Forms på JEE stöder inte och JBoss på SUSE Linux Enterprise Server 12. Endast IBM WebSphere stöds i SUSE Linux Enterprise Server 12.
-1. AEM Forms på JEE stöder inte JDK med JBoss® annat än Oracle Java™ SE.
+1. AEM Forms på JEE stöder inte JDK med JBoss® annat än Oraclet Java™ SE.
 1. AEM Forms på JEE stöder inte JDK med andra IBM® WebSphere® än IBM® JDK.
 1. CRX-databasen har stöd för beständighet av typen tarMK, MongoDB och relationsdatabaser (RDBMK). Du kan inte ha två olika databassystem mellan programservern och CRX-databasen. I en AEM Forms-miljö för JEE kan du emellertid använda MongoMK med CRX-databas och en relationsdatabas som stöds med programserver.
 1. AEM Forms i JEE stöder inte WebSphere-programserver i CentOS.
@@ -350,7 +350,7 @@ Tänk dessutom på följande när du väljer program för Adobe AEM Forms i JEE-
    <th><p><strong>Patch-definitioner som stöds</strong></p> </th>
   </tr>
   <tr>
-   <td>Oracle Unified Directory (OUD) 11g version 2</td>
+   <td>Oracle - Unified Directory (OUD) 11g utgåva 2</td>
    <td>Service Pack</td>
   </tr>
   <tr>
@@ -552,23 +552,17 @@ Ytterligare krav finns i:
 
 ### Designer {#designer}
 
->[!NOTE]
->
->Om du vill installera Designer i Windows kör du installationsprogrammet med administratörsbehörighet.
-
-* Microsoft® Windows® 2016 Server, Microsoft Windows 10
-
-   * 1 GHz eller snabbare processor med stöd för PAE, NX och SSE2.
-   * 1 GB RAM för 32-bitars eller 2 GB RAM för 64-bitars operativsystem
-   * 16 GB diskutrymme för 32-bitars eller 20 GB diskutrymme för 64-bitars operativsystem
-
+* Microsoft® Windows® 2016 Server, Microsoft® Windows® 2019 Server eller Microsoft Windows 10
+* 1 GHz eller snabbare processor med stöd för PAE, NX och SSE2.
+* 1 GB RAM för 32-bitars eller 2 GB RAM för 64-bitars operativsystem
+* 16 GB diskutrymme för 32-bitars eller 20 GB diskutrymme för 64-bitars operativsystem
 * Grafikminne - 128 MB GPU (256 MB rekommenderas)
 * 2,35 GB ledigt hårddiskutrymme
 * DVD-ROM-enhet
-* Internet Explorer 10 eller 11; Firefox 45.x
 * Bildskärmsupplösning på 1 024 x 768 pixlar eller högre
 * Maskinvaruacceleration för video (valfritt)
 * Acrobat Pro DC, Acrobat Standard DC eller Adobe Acrobat Reader DC.
+* Administrativ behörighet för att installera Designer.
 
 ### Adobe Acrobat och Adobe Reader {#adobe-acrobat-and-adobe-reader}
 
