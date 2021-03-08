@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: dee7ac7c-ca86-48e9-8d95-7826fa926c68
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 0d5a48be283484005013ef3ed7ad015b43f6398b
+source-git-commit: b9c77b9b50ae7f18198baddf82dffcd8de4f30be
 workflow-type: tm+mt
-source-wordcount: '1395'
+source-wordcount: '1399'
 ht-degree: 10%
 
 ---
@@ -76,7 +76,7 @@ I rutan **Resurser** kan du samla alla resurser som du använder för ett visst 
 
 ![chlimage_1-70](assets/chlimage_1-70.png)
 
-Du överför resurser direkt i rutan. Du kan dessutom skapa bilduppsättningar, snurpuppsättningar eller blandade medieuppsättningar om du har tilläggsprogrammet Dynamiska media.
+Du överför resurser direkt i rutan. Du kan dessutom skapa bilduppsättningar, snurruppsättningar eller blandade medieuppsättningar om du har Dynamic Media-tillägget.
 
 ![chlimage_1-71](assets/chlimage_1-71.png)
 
@@ -234,7 +234,7 @@ Alla projekt har stöd för följande standardroller så att du kan administrera
    <td>
     <ul>
      <li>DAM-användargrupp (för att kunna skapa ett projekt)</li>
-     <li>projektadministratörsgrupp (för att kunna flytta resurser)</li>
+     <li>projektadministratörsgrupp (för att kunna skapa ett projekt och flytta resurser)</li>
     </ul> </td>
   </tr>
  </tbody>
