@@ -4,9 +4,9 @@ description: Lär dig mer om hur du hanterar samlingar med resurser, som att ska
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: adeb20c1e7222e7c5702061cba73350002f5154c
+source-git-commit: cf86d0c38e326766b35318e78a94a3f32e166e01
 workflow-type: tm+mt
-source-wordcount: '2020'
+source-wordcount: '2024'
 ht-degree: 10%
 
 ---
@@ -94,7 +94,7 @@ Så här skapar du en smart samling:
 
    >[!NOTE]
    >
-   >Om du väljer **[!UICONTROL Public]** blir den smarta samlingen tillgänglig för alla med ägarrollen när du har skapat den. Om du avmarkerar alternativet **[!UICONTROL Public]** är DAM-användargruppen inte längre kopplad till den smarta samlingen.
+   >Om du väljer **[!UICONTROL Public]** blir den smarta samlingen tillgänglig för alla med ägarrollen när du har skapat den. Om du avbryter alternativet **[!UICONTROL Public]** är DAM-användargruppen inte längre kopplad till den smarta samlingen.
 
 1. Klicka på **[!UICONTROL Save]** för att skapa den smarta samlingen och stäng sedan meddelanderutan för att slutföra processen.
 
@@ -117,7 +117,7 @@ Du kan också dra resursen till **[!UICONTROL Drop in Collection]**-området i g
 
 ## Redigera en smart samling {#editing-a-smart-collection}
 
-Smarta samlingar skapas genom att en sökning sparas så att du kan ändra deras innehåll genom att ändra sökparametrarna för den sparade sökningen [.](#saved-searches)
+Smarta samlingar skapas genom att en sökning sparas så att du kan ändra deras innehåll genom att ändra sökparametrarna för den sparade sökningen ](#saved-searches).[
 
 1. I [!DNL Assets]-användargränssnittet klickar du på sökalternativet ![sökalternativ](assets/do-not-localize/search_icon.png) i verktygsfältet.
 1. Markera `Return`-tangenten med markören i sökrutan.
@@ -152,11 +152,11 @@ Du kan redigera metadata för flera samlingar samtidigt. Med den här funktionen
 1. Välj två eller flera samlingar i konsolen Samlingar.
 1. Klicka på **[!UICONTROL Properties]** i verktygsfältet.
 1. På sidan **[!UICONTROL Collection Metadata]** redigerar du metadata på flikarna **[!UICONTROL Basic]** och **[!UICONTROL Advanced]** efter behov.
-1. Om du vill visa metadataegenskaperna för en viss samling avmarkerar du de återstående samlingarna i samlingslistan. Metadataredigeringsfälten fylls i med metadata för den aktuella samlingen.
+1. Om du vill visa metadataegenskaperna för en viss samling avbryter du valet av de återstående samlingarna i samlingslistan. Metadataredigeringsfälten fylls i med metadata för den aktuella samlingen.
 
    >[!NOTE]
    >
-   >* På sidan [!UICONTROL Properties] kan du ta bort samlingar från listan med samlingar genom att avmarkera dem. I samlingslistan är alla samlingar markerade som standard. [!DNL Experience Manager] uppdaterar inte metadata för de samlingar som du tar bort.
+   >* På sidan [!UICONTROL Properties] kan du ta bort samlingar från listan med samlingar genom att avbryta markeringen. I samlingslistan är alla samlingar markerade som standard. [!DNL Experience Manager] uppdaterar inte metadata för de samlingar som du tar bort.
    >* Överst i listan markerar du kryssrutan nära **[!UICONTROL Title]** för att växla mellan att markera samlingarna och rensa listan.
 
 
