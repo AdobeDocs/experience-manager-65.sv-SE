@@ -3,9 +3,9 @@ title: XMP till återgivning
 description: Lär dig hur XMP återskrivningsfunktionen sprider metadataändringar för en resurs till alla eller vissa återgivningar av resursen.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: cf86d0c38e326766b35318e78a94a3f32e166e01
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '721'
 ht-degree: 4%
 
 ---
@@ -88,6 +88,6 @@ Filtrering av XMP metadata via tillåtelselista löser problemet genom att du ka
 
    >[!NOTE]
    >
-   >Alternativet **[!UICONTROL Apply Blocklist to XMP Properties]** är markerat som standard. Filtrering med blockeringslista är alltså aktiverat som standard. Om du vill inaktivera sådan filtrering avmarkerar du alternativet **[!UICONTROL Apply Blocklist to XMP Properties]**.
+   >Alternativet **[!UICONTROL Apply Blocklist to XMP Properties]** är markerat som standard. Filtrering med blockeringslista är alltså aktiverat som standard. Om du vill inaktivera sådan filtrering avbryter du valet av **[!UICONTROL Apply Blocklist to XMP Properties]**-alternativet.
 
 1. Spara ändringarna.
