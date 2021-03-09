@@ -3,9 +3,9 @@ title: Rapporter om användning och delning av resurser
 description: Rapporterar om dina resurser i [!DNL Adobe Experience Manager Assets] som hjälper dig att förstå användningen, aktiviteten och delningen av dina digitala resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 6016cefa9456d8f142347ff197b61b1614d55ab9
+source-git-commit: cf86d0c38e326766b35318e78a94a3f32e166e01
 workflow-type: tm+mt
-source-wordcount: '1065'
+source-wordcount: '1073'
 ht-degree: 9%
 
 ---
@@ -59,7 +59,7 @@ Så här skapar du rapporter:
 
    >[!NOTE]
    >
-   >Som standard inkluderas innehållsfragment och länkdelningar i resursen [!UICONTROL Download]-rapporten. Välj lämpligt alternativ för att skapa en rapport över länkdelningar eller för att exkludera innehållsfragment från hämtningsrapporten.
+   >Som standard inkluderas innehållsfragment och länkdelningar i resursen [!UICONTROL Download]-rapporten. Välj lämpligt alternativ för att skapa en rapport över länkdelningar eller för att utesluta innehållsfragment från hämtningsrapporten.
 
    >[!NOTE]
    >
@@ -97,13 +97,13 @@ Så här skapar du rapporter:
 
 1. Klicka på **[!UICONTROL Next]** i verktygsfältet.
 
-1. På sidan **[!UICONTROL Configure Columns]** är vissa kolumner markerade för att visas i rapporten som standard. Du kan markera fler kolumner. Avmarkera en markerad kolumn om du vill utesluta den i rapporten.
+1. På sidan **[!UICONTROL Configure Columns]** är vissa kolumner markerade för att visas i rapporten som standard. Du kan markera fler kolumner. Avbryt valet av en kolumn för att utesluta den i rapporten.
 
-   ![Markera eller avmarkera rapportkolumner](assets/configure_columns.png)
+   ![Markera eller avbryta markeringen av rapportkolumner](assets/configure_columns.png)
 
    Om du vill visa ett anpassat kolumnnamn eller en egenskapssökväg konfigurerar du egenskaperna för resursens binärfil under noden `jcr:content` i CRX. Du kan också lägga till den via egenskapssökvägsväljaren.
 
-   ![Markera eller avmarkera rapportkolumner](assets/custom_columns.png)
+   ![Markera eller avbryta markeringen av rapportkolumner](assets/custom_columns.png)
 
 1. Klicka på **[!UICONTROL Create]** i verktygsfältet. Ett meddelande meddelar att rapportgenereringen har initierats.
 1. På sidan [!UICONTROL Asset Reports] baseras rapportgenereringsstatusen på rapportjobbets aktuella tillstånd, till exempel [!UICONTROL Success], [!UICONTROL Failed], [!UICONTROL Queued] eller [!UICONTROL Scheduled]. Samma status visas i inkorgen för meddelanden.Om du vill visa rapportsidan klickar du på rapportlänken. Du kan också markera rapporten och klicka på **[!UICONTROL View]** i verktygsfältet.
