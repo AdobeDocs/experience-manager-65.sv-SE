@@ -3,7 +3,7 @@ title: Hjälpmedel i [!DNL Experience Manager Assets]
 description: Se hur tillgänglighetsfunktionerna i [!DNL Adobe Experience Manager] 6.5 [!DNL Assets] kan hjälpa användare med funktionshinder.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 863d1bd3f0f188153fcbbb7256d3ac2e3b247f59
+source-git-commit: cf86d0c38e326766b35318e78a94a3f32e166e01
 workflow-type: tm+mt
 source-wordcount: '1900'
 ht-degree: 1%
@@ -95,7 +95,7 @@ Följande åtgärder i [!DNL Assets] fungerar med de angivna kortkommandona. De 
 | Resursen eller mappen är markerad | `e` | Redigera den valda resursen. |
 | Resursen eller mappen är markerad | `m` | Flytta den markerade resursen. |
 | Resursen eller mappen är markerad | `Ctrl + c` | Kopiera den markerade resursen. |
-| Resursen eller mappen är markerad | `Esc` | Avmarkera markeringen. |
+| Resursen eller mappen är markerad | `Esc` | Avbryt markeringen. |
 | Dialogrutan öppnas och är i fokus | `Esc` | Stäng dialogrutan. |
 | I en mapp i DAM | `Ctrl + v` | Klistra in den kopierade resursen. |
 | [!DNL Assets] Konsol | `Ctrl + A` | Markera alla resurser. |
