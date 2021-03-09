@@ -3,9 +3,9 @@ title: Hantera metadata för dina digitala resurser i [!DNL Adobe Experience Man
 description: Lär dig mer om metadatatyperna och hur [!DNL Adobe Experience Manager Assets] helps manage metadata for assets to allow easier categorization and organization of assets. [!DNL Experience Manager] gör det möjligt att automatiskt ordna och bearbeta resurser baserat på deras metadata.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 4ca77c7de6113127b123645a1955aaa70a91c1f3
+source-git-commit: cf86d0c38e326766b35318e78a94a3f32e166e01
 workflow-type: tm+mt
-source-wordcount: '2285'
+source-wordcount: '2289'
 ht-degree: 10%
 
 ---
@@ -78,11 +78,11 @@ Om du vill anpassa sidan med metadataegenskaper, inklusive lägga till, ändra o
 1. Markera de resurser som du vill redigera gemensamma egenskaper för.
 1. Klicka på **[!UICONTROL Properties]** i verktygsfältet för att öppna egenskapssidan för de valda resurserna.
 1. Ändra metadataegenskaperna för markerade resurser på de olika flikarna.
-1. Om du vill visa metadataredigeraren för en viss resurs avmarkerar du återstående resurser i listan. Metadataredigeringsfälten fylls i med metadata för den aktuella resursen.
+1. Om du vill visa metadataredigeraren för en viss resurs avbryter du valet av återstående resurser i listan. Metadataredigeringsfälten fylls i med metadata för den aktuella resursen.
 
    >[!NOTE]
    >
-   >* På egenskapssidan kan du ta bort resurser från resurslistan genom att avmarkera dem. Resurslistan har alla resurser markerade som standard. Metadata för resurser som du tar bort från listan uppdateras inte.
+   >* På egenskapssidan kan du ta bort resurser från resurslistan genom att avbryta markeringen. Resurslistan har alla resurser markerade som standard. Metadata för resurser som du tar bort från listan uppdateras inte.
    >* Överst i resurslistan markerar du kryssrutan nära **[!UICONTROL Title]** för att växla mellan att markera resurserna och rensa listan.
 
 
