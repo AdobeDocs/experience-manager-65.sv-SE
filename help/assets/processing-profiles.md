@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: b555bf0c-44cb-4fbf-abc4-15971663904d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 141a1783f275c0b3587ebc374bde19a21e107409
+source-git-commit: cf86d0c38e326766b35318e78a94a3f32e166e01
 workflow-type: tm+mt
-source-wordcount: '1317'
+source-wordcount: '1318'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ Genom att använda konsekventa och lämpliga namngivningsstrategier för filer o
 
 >[!NOTE]
 >
->Gäller endast för *Dynamiska media - Scene7-läge* i AEM 6.4.6.0 eller senare.
+>Gäller endast för *Dynamic Media - Scene7-läge* i AEM 6.4.6.0 eller senare.
 
 Du kan bearbeta resurser i en mapp som redan har en befintlig bearbetningsprofil som du senare ändrade.
 
@@ -52,7 +52,7 @@ Anta att du har skapat en bildprofil och tilldelat den till en mapp. Bildobjekt 
 
 Du kan köra arbetsflödet för ombearbetning på en resurs som bearbetningen misslyckades för första gången. Även om du inte har redigerat en bearbetningsprofil eller använt en bearbetningsprofil kan du ändå köra arbetsflödet för ombearbetning på en mapp med resurser när som helst.
 
-Du kan också justera batchstorleken för arbetsflödet för ombearbetning från standardvärdet 50 resurser upp till 1 000 resurser. När du kör _Scene7: Återbearbeta resurser_-arbetsflöde i en mapp, resurser grupperas tillsammans i grupper och skickas sedan till Dynamic Media-servern för bearbetning. Efter bearbetning uppdateras metadata för varje resurs i hela gruppuppsättningen AEM. Om batchstorleken är mycket stor kan bearbetningen fördröjas. Om gruppstorleken är för liten kan det orsaka för många rundresor till Dynamic Media-servern.
+Du kan också justera batchstorleken för arbetsflödet för ombearbetning från standardvärdet 50 resurser upp till 1 000 resurser. När du kör _Scene7: Återbearbeta Assets_-arbetsflödet i en mapp, resurser grupperas tillsammans i grupper och skickas sedan till Dynamic Media-servern för bearbetning. Efter bearbetning uppdateras metadata för varje resurs i hela gruppuppsättningen AEM. Om batchstorleken är mycket stor kan bearbetningen fördröjas. Om gruppstorleken är för liten kan det orsaka för många rundresor till Dynamic Media-servern.
 
 Se [Justera batchstorleken för arbetsflödet för ombearbetning](#adjusting-load).
 
@@ -113,7 +113,7 @@ Se [Justera batchstorleken för arbetsflödet för ombearbetning](#adjusting-loa
    * I fältet **[!UICONTROL Timeout]** anger du timeout för extern process (sekunder).
    * I fältet **[!UICONTROL Period]** anger du ett avsökningsintervall (sekunder) som ska testas för att den externa processen ska slutföras.
    * I **[!UICONTROL Batch field]** anger du det maximala antalet resurser (50-1000) som ska bearbetas i ett batchbearbetningsjobb för en Dynamic Media-server.
-   * Välj **[!UICONTROL Advance on timeout]** om du vill fortsätta när tidsgränsen nås. Avmarkera alternativet om du vill fortsätta till inkorgen när tidsgränsen nås.
+   * Välj **[!UICONTROL Advance on timeout]** om du vill fortsätta när tidsgränsen nås. Avbryt markeringen om du vill fortsätta till inkorgen när tidsgränsen nås.
 
    ![Egenskaper, dialogruta](/help/assets/assets-dm/reprocess-assets3.png)
 
