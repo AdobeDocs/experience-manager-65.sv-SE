@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: platform
 discoiquuid: 94a05894-743a-4ace-a292-bfee90ba9068
 translation-type: tm+mt
-source-git-commit: 7a96ff5cdd187291efe108d1171782bcbecfaeb0
+source-git-commit: 054b49fb8aacb9e267ed23552d788f72123ed3b3
 workflow-type: tm+mt
 source-wordcount: '2323'
 ht-degree: 2%
@@ -100,7 +100,7 @@ Detta är ett predikat som bara kan filtreras och kan inte utnyttja ett sökinde
 
 * **operation**
 
-   &quot;`equals`&quot; för exakt matchning, &quot;`!=`&quot; för jämförelse av olikheter, &quot;`greater`&quot; för egenskap1 större än egenskap2, &quot;`>=`&quot; för egenskap1 större än eller lika med egenskap2. Standardvärdet är &quot;`equals`&quot;.
+   &quot; `equals`&quot; för exakt matchning, &quot; `!=`&quot; för jämförelse av olikhet, &quot; `greater`&quot; för egenskap1 större än egenskap 2, &quot; `>=`&quot; för egenskap1 större än eller lika med egenskap 2. Standardvärdet är &quot; `equals`&quot;.
 
 ### daterange {#daterange}
 
@@ -370,7 +370,7 @@ Stöder facetextrahering. Ger bucket för varje unikt egenskapsvärde i resultat
 
 * **operation**
 
-   &quot;`equals`&quot; för exakt matchning (standard), &quot;`unequals`&quot; för jämförelse av olikheter, &quot;`like`&quot; för användning av xpath-funktionen `jcr:like` (valfritt), &quot; `not`&quot; för ingen matchning (t.ex. &quot;`not(@prop)`&quot; i xpath ignoreras value param) eller &quot;`exists`&quot; för existenskontroll (värdet kan vara true - egenskapen måste finnas, standardvärdet - eller false - samma som &quot;`not`&quot;)
+   &quot;`equals`&quot; för exakt matchning (standard), &quot; `unequals`&quot; för jämförelsen av olikheter, &quot; `like`&quot; för användning av xpath-funktionen `jcr:like` (valfritt), &quot; `not`&quot; för ingen matchning (t.ex. &quot;`not(@prop)`&quot; i xpath ignoreras value param) eller &quot; `exists`&quot; för existenskontroll (värdet kan vara true - egenskapen måste finnas, standardvärdet - eller false - samma som &quot; `not`&quot;)
 
 * **djup**
 
