@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: platform
 discoiquuid: 94a05894-743a-4ace-a292-bfee90ba9068
 translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+source-git-commit: 571a48790c4977e97abec24fe88407b5b6376108
 workflow-type: tm+mt
 source-wordcount: '2323'
 ht-degree: 2%
@@ -100,7 +100,7 @@ Detta är ett predikat som bara kan filtreras och kan inte utnyttja ett sökinde
 
 * **operation**
 
-   &quot; `=`&quot; för exakt matchning, &quot; `!=`&quot; för jämförelse av olikhet, &quot; `>`&quot; för egenskap1 större än egenskap 2, &quot; `>=`&quot; för egenskap1 större än eller lika med egenskap 2. Standardvärdet är &quot; `=`&quot;.
+   &quot; `equals`&quot; för exakt matchning, &quot; `!=`&quot; för jämförelse av olikhet, &quot; `greater`&quot; för egenskap1 större än egenskap 2, &quot; `>=`&quot; för egenskap1 större än eller lika med egenskap 2. Standardvärdet är &quot; `equals`&quot;.
 
 ### daterange {#daterange}
 
@@ -442,7 +442,7 @@ Stöder facet-extrahering på samma sätt som daterange-predikatet.
 
 Rotpredikatgrupp. Stöder alla funktioner i en grupp och tillåter att globala frågeparametrar ställs in.
 
-Namnet &quot;root&quot; används aldrig i en fråga, det är implicit.
+Namnet &quot;root&quot; används aldrig i en fråga, det är underförstått.
 
 #### Egenskaper {#properties-18}
 
