@@ -4,9 +4,9 @@ description: Använd resurser på flera sidor/mappar som är härledda från och
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 7eb569c86c45daa8b175f924b211693a5d5dde58
+source-git-commit: 5c9907bf475796c5bbb61d6fcaf43730f9e79777
 workflow-type: tm+mt
-source-wordcount: '3264'
+source-wordcount: '3257'
 ht-degree: 9%
 
 ---
@@ -70,7 +70,7 @@ Så här skapar du live-kopior med den första metoden:
 
 1. Välj källmaterial eller mappar. Klicka på **[!UICONTROL Create]** > **[!UICONTROL Live Copy]** i verktygsfältet.
 
-   ![Skapa en live-kopia från Experience Manager](assets/create_lc1.png)
+   ![Skapa live copy från  [!DNL Experience Manager] gränssnitt](assets/create_lc1.png)
 
    *Bild: Skapa en live-kopia från  [!DNL Experience Manager] gränssnittet.*
 
@@ -82,7 +82,7 @@ Så här skapar du live-kopior med den andra metoden:
 
 1. I [!DNL Experience Manager]-gränssnittet klickar du på **[!UICONTROL Create]** > **[!UICONTROL Live Copy]** i det övre högra hörnet.
 
-   ![Skapa en live-kopia från Experience Manager](assets/create_lc2.png)
+   ![Skapa live copy från  [!DNL Experience Manager] gränssnitt](assets/create_lc2.png)
 
    *Bild: Skapa en live-kopia från  [!DNL Experience Manager] gränssnittet.*
 
@@ -106,7 +106,7 @@ Följande två metoder fungerar för resurser och mappar:
 
 >[!TIP]
 >
->Om du vill kontrollera status för några separata live-kopior använder du den första metoden för att kontrollera [!UICONTROL Properties]-sidan. Om du vill kontrollera status för många live-kopior använder du den andra metoden för att kontrollera **[!UICONTROL Relationship Status]**-sidan.
+>Om du vill kontrollera status för några separata live-kopior använder du den första metoden för att kontrollera **[!UICONTROL Properties]**-sidan. Om du vill kontrollera status för många live-kopior använder du den andra metoden för att kontrollera **[!UICONTROL Relationship Status]**-sidan.
 
 ### Information om och status för en live-kopia {#statuslcasset}
 
@@ -189,8 +189,9 @@ När en källa har ändrats kan ändringarna spridas till live-kopiorna med anti
 Du kan initiera en utrullningsåtgärd från källresursen och uppdatera alla eller några utvalda live-kopior.
 
 1. Välj en live-kopia eller en mapp. Klicka på **[!UICONTROL Properties]** i verktygsfältet. Du kan också använda kortkommandot `p`.
-1. Klicka på **[!UICONTROL Live Copy Source]**. Klicka på **[!UICONTROL Rollout]** i verktygsfältet längst upp.
-1. Markera de live-kopior som du vill uppdatera. Klicka på **[!UICONTROL Rollout]**. Välj **[!UICONTROL Rollout Source and all Children]** om du vill ta med uppdateringarna av de underordnade resurserna.
+1. Klicka på **[!UICONTROL Live Copy Source]**. Klicka på **[!UICONTROL Rollout]** i verktygsfältet.
+1. Markera de live-kopior som du vill uppdatera. Klicka på **[!UICONTROL Rollout]**.
+1. Välj **[!UICONTROL Rollout Source and all Children]** om du vill ta med uppdateringarna av de underordnade resurserna.
 
    ![Fyll ut ändringarna av källan till några eller alla live-kopior](assets/livecopy_rollout_page.png)
 
