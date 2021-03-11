@@ -1,66 +1,50 @@
 ---
-title: Nyheter i Adobe Experience Manager 6.5 Service Pack 7
-description: Nyheter i Adobe Experience Manager 6.5 Service Pack 7
+title: Nyheter i [!DNL Experience Manager] 6.5 Service Pack 8
+description: Nyheter i [!DNL Experience Manager] 6.5 Service Pack 8
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: a24b66506440eb2153d5589e8c79dbfafb24df66
+source-git-commit: 2c6d11f63420040a500bbb75f1146c29f64bdcc5
 workflow-type: tm+mt
-source-wordcount: '2753'
+source-wordcount: '2845'
 ht-degree: 0%
 
 ---
 
 
-# Nyheter i Adobe Experience Manager 6.5 Service Pack 7 {#aem-whats-new-service-pack}
+# Nyheter i [!DNL Adobe Experience Manager] 6.5 Service Pack 8 {#aem-whats-new-service-pack}
 
 ![Nyheter](assets/whatsnew.jpeg)
 
-[!DNL Adobe Experience Manager] 6.5 Service Pack innehåller nya funktioner, förbättringar som kunden efterfrågat samt prestanda-, stabilitets- och säkerhetsförbättringar med kvartalsvisa intervall. Den kvartalsvisa tillgängligheten gör det enkelt att komma åt och anta nya funktioner och innovationer.
+[!DNL Adobe Experience Manager] 6.5 Service Packs innehåller nya funktioner, förbättringar som kunderna efterfrågat samt prestanda-, stabilitets- och säkerhetsförbättringar med kvartalsvisa intervall. Den kvartalsvisa tillgängligheten gör det enkelt att komma åt och anta nya funktioner och innovationer.
 
-I den här artikeln beskrivs de funktioner som ingår i det senaste 6.5 Service Pack, [nyckelfunktioner som ingår i det föregående 6.5 Service Pack](#key-features-previous-service-packs) och [AEM sedan den senaste Service Pack](#key-releases-since-last-sp)-versionen.
+I den här artikeln beskrivs de funktioner som ingår i det senaste Service Pack, [nyckelfunktioner som ingår i det föregående 6.5 Service Pack](#key-features-previous-service-packs) och [nyckelversionerna sedan den senaste Service Pack](#key-releases-since-last-sp)-versionen.
 
-## Adobe [!DNL Experience Manager Sites] {#aem-sites}
+## [!DNL Adobe Experience Manager Sites] {#aem-sites}
 
-### Tillgänglighet för sidförflyttning och MSM-rollouter som asynkrona åtgärder {#page-moves-msm-asynchronous}
+### Sortera de Live Copy-sidor som är tillgängliga för utrullning {#sort-livecopy-pages}
 
-Nu kan du utföra sidflyttningar och MSM-rollouter som asynkrona åtgärder för att minska deras påverkan på körningsprestanda. Du kan schemalägga åtgärderna för omedelbar eller senare körning. Statusen för associerade jobb och processsteg visas i en konsol, vilket är användbart för övervakning av storskaliga MSM-utrullningar.
+Nu kan du sortera de Live Copy-sidor som är tillgängliga för utrullning med hjälp av egenskaperna [!UICONTROL Name], [!UICONTROL Last modified date] och [!UICONTROL Last rollout date]. [!UICONTROL Last rollout date] för en sida är en ny egenskap som introducerades i den här versionen.
 
 ## [!DNL Adobe Experience Manager Assets] {#aem-assets}
 
-* [!DNL Assets] och  [!DNL Dynamic Media] erbjuder flera tillgänglighetsförbättringar. Förbättringarna är relaterade till tangentbordsnavigering, användning av skärmläsare och liknande förbättringar som möjliggör användning av hjälpmedelstekniker (AT). Se [[!DNL Assets] förbättringar](/help/release-notes/sp-release-notes.md#assets-6570) och [[!DNL Dynamic Media] förbättringar](/help/release-notes/sp-release-notes.md#dynamic-media-6570).
+* När du använder [funktionen Anslutna resurser](/help/assets/use-assets-across-connected-assets-instances.md) kan du nu visa en lista över alla [!DNL Sites] sidor som använder resursen. Dessa referenser till en resurs är tillgängliga på en resurses [!UICONTROL Properties]-sida. På så sätt kan administratörer, marknadsförare och bibliotekarier få en komplett bild av medieanvändningen, vilket ger bättre spårning, hantering och enhetlighet för varumärken.
 
-* Användare kan sortera digitala resurser i kort- och kolumnvyn.
+* När du tar bort en resurs som refereras på en webbsida visas en varning i [!DNL Experience Manager]. Du kan framtvinga borttagning av en refererad resurs eller kontrollera och ändra referenserna som visas på sidan [!DNL Properties] för resursen. När du klickar på referenserna öppnas de lokala sidorna och fjärrsidorna [!DNL Sites].
 
 ## [!DNL Adobe Experience Manager Forms] {#aem-forms}
 
 >[!NOTE]
 >
->[!DNL Experience Manager Forms] tilläggspaket görs tillgängliga en vecka efter den schemalagda  [!DNL Experience Manager] Service Pack-versionen.
-
-### Prestandaförbättringar {#performance-improvements-forms}
-
-[!DNL Experience Manager] 6.5 Service Pack 7 Forms förbättrar prestandan för:
-
-* Validerar fältvärdena på servern när du skickar ett anpassat formulär.
-
-* Konvertera ett PDF-formulär till ett anpassat formulär med [!DNL Automated Forms Conversion service].
-
-### HTTP-klientkonfiguration för formulärdatamodell för optimering av prestanda {#fdm-http-client-config}
-
-[!DNL Experience Manager Forms] när du integrerar med RESTful-webbtjänster som datakälla inkluderar nu HTTP-klientkonfigurationer för prestandaoptimering. Se [Konfigurera datakällor](../../help/forms/using/configure-data-sources.md#fdm-http-client-configuration).
-
-### Tillgänglighet för alternativet Återställ för varje komponent i layoutläget {#reset-option-layout-mode}
-
-Du kan nu använda återställningsalternativet för varje komponent i layoutläget i ett anpassat formulär. När du definierar en layout med flera kolumner för en panel kan du använda den här funktionen för att återställa enskilda komponenter på panelen. Se [Använda layoutläge för att ändra storlek på komponenter](../../help/forms/using/resize-using-layout-mode.md#resize-components).
-
-### Stöd för Microsoft SQL Server 2019
-
-[!DNL Experience Manager Forms] har nu stöd för Microsoft SQL Server 2019.
+>Tilläggspaketet [!DNL Experience Manager Forms] är tillgängligt en vecka efter den schemalagda versionen av [!DNL Experience Manager] Service Pack.
 
 ## Viktiga funktioner i tidigare [!DNL Experience Manager] 6.5 Service Packs {#key-features-previous-service-packs}
 
 ### [!DNL Experience Manager Sites] {#aem-sites-previous-service-packs}
+
+#### Tillgänglighet för sidförflyttning och MSM-rollouter som asynkrona åtgärder (6.5.7.0) {#page-moves-msm-asynchronous}
+
+Nu kan du utföra sidflyttningar och MSM-rollouter som asynkrona åtgärder för att minska deras påverkan på körningsprestanda. Du kan schemalägga åtgärderna för omedelbar eller senare körning. Statusen för associerade jobb och processsteg visas i en konsol, vilket är användbart för övervakning av storskaliga MSM-utrullningar.
 
 #### Tillgänglighet för åtgärden Sidflyttning i asynkront läge (6.5.6.0) {#page-move-asynchronous}
 
@@ -109,6 +93,10 @@ Nu kan du välja format i komponentdialogrutan med det förbättrade formatsyste
 * Förbättrad hantering av ofullständiga eller ogiltiga URL:er. Sådana URL-adresser kan göra mallredigeraren långsam.
 
 ### [!DNL Adobe Experience Manager Assets] {#aem-assets-previous-service-packs}
+
+* [!DNL Assets] och  [!DNL Dynamic Media] erbjuder flera tillgänglighetsförbättringar. Förbättringarna är relaterade till tangentbordsnavigering, användning av skärmläsare och liknande förbättringar som möjliggör användning av hjälpmedelstekniker (AT). Se [[!DNL Assets] förbättringar](/help/release-notes/sp-release-notes.md#assets-6570) och [[!DNL Dynamic Media] förbättringar](/help/release-notes/sp-release-notes.md#dynamic-media-6570) (6.5.7.0)
+
+* Användare kan sortera digitala resurser i kort- och kolumnvyerna (6.5.7.0).
 
 #### Tillgänglighetsförbättringar (6.5.6.0) {#accessibility-assets-6560}
 
@@ -220,6 +208,22 @@ Smart bildbehandling använder varje användares unika visningsegenskaper för a
 Smart beskärning för video - en valfri funktion i videoprofiler - är ett verktyg som använder kraften i artificiell intelligens i Adobe Sensei för att automatiskt upptäcka och beskära fokalpunkten i adaptiv video eller progressiv video som du har överfört, oavsett storlek. Se [Använda smart beskärning i videoprofiler](../assets/video-profiles.md).
 
 ### Experience Manager Forms {#aem-forms-previous-service-packs}
+
+#### Prestandaförbättringar (6.5.7.0) {#performance-improvements-forms}
+
+[!DNL Experience Manager] 6.5 Service Pack 7 Forms förbättrar prestandan för:
+
+* Validerar fältvärdena på servern när du skickar ett anpassat formulär.
+
+* Konvertera ett PDF-formulär till ett anpassat formulär med [!DNL Automated Forms Conversion service].
+
+#### HTTP-klientkonfiguration för formulärdatamodell för optimering av prestanda (6.5.7.0) {#fdm-http-client-config}
+
+[!DNL Experience Manager Forms] när du integrerar med RESTful-webbtjänster som datakälla inkluderar nu HTTP-klientkonfigurationer för prestandaoptimering. Se [Konfigurera datakällor](../../help/forms/using/configure-data-sources.md#fdm-http-client-configuration).
+
+#### Tillgänglighet för alternativet Återställ för varje komponent i layoutläget (6.5.7.0) {#reset-option-layout-mode}
+
+Du kan nu använda återställningsalternativet för varje komponent i layoutläget i ett anpassat formulär. När du definierar en layout med flera kolumner för en panel kan du använda den här funktionen för att återställa enskilda komponenter på panelen. Se [Använda layoutläge för att ändra storlek på komponenter](../../help/forms/using/resize-using-layout-mode.md#resize-components).
 
 #### Fyll i ett anpassat formulär i förväg på klienten (6.5.6.0) {#prefill-merge-data-at-client}
 
@@ -337,19 +341,18 @@ Du kan ange startdatum och -tid och slutdatum och sluttid så att dina inställn
 
 Du kan använda batch-API:t för att skapa flera interaktiva dokument från en mall. Mallen är en interaktiv kommunikation utan data. Batch-API:t kombinerar data med en mall för att skapa en interaktiv kommunikation. API:t är användbart vid massproduktion av interaktiv kommunikation. Till exempel telefonräkningar, kreditkortsutdrag för flera kunder. Se [Generera flera interaktiva kommunikationer med hjälp av batch-API](../forms/using/generate-multiple-interactive-communication-using-batch-api.md).
 
-## Viktiga releaser sedan Adobe Experience Manager 6.5 SP6 {#key-releases-since-last-sp}
+<!-- TBD: Check if the wider team released anything in FY21.
+-->
 
-Mellan 3 september 2020 och 26 november 2020 släppte Adobe följande, förutom servicepaket och kumulativa korrigeringspaket:
+## Viktiga versioner sedan [!DNL Adobe Experience Manager] 6.5 SP7 {#key-releases-since-last-sp}
 
-* [!DNL Adobe Experience Manager] som en Cloud Service  [2020.9.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-2020-9-0.html?lang=en#release-notes)  och  [2020.10.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-2020-10-0.html?lang=en#release-notes).
+Mellan 26 november 2020 och 25 februari 2021 släppte Adobe följande, förutom Service Packs och Cumulative Fix Packs:
 
-* [[!DNL Experience Manager] desktop app 2.0 (2.0.3.2)](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html).
+* [!DNL Adobe Experience Manager] som en Cloud Service  [20.11.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/2020/release-notes-2020-11-0.html),  [20.12.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/2020/release-notes-2020-12-0.html) och  [2021.1.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-current.html?lang=en#release-date).
 
-* [WKND-referensplats - 0.0.6](https://github.com/adobe/aem-guides-wknd/releases/tag/aem-guides-wknd-0.0.6)
+* [[!DNL Experience Manager] desktop app 2.1 (2.1.0.0)](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html).
 
 * [Experience Manager Screens: Funktionspaket 2011](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/release-notes/release-notes-fp-202011.html)
-
-* [Adobe Asset Link v2.2](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/adobe-asset-link.ug.html)
 
 >[!MORELIKETHIS]
 >
