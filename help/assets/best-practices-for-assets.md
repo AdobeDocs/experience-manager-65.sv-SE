@@ -3,7 +3,7 @@ title: Bästa tillvägagångssätt för [!DNL Assets]
 description: Förbättrar systemets stabilitet och prestanda under belastning genom att identifiera och följa bästa praxis som är beroende av din driftsättning och konfiguration.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
+source-git-commit: 4090b1641467c6fb02b2fcce4df97b9fd5da4e2f
 workflow-type: tm+mt
 source-wordcount: '507'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Metodtips för [!DNL Assets] {#best-practices-for-assets}
 
-[!DNL Adobe Experience Manager Assets] är en viktig del i att leverera digitala marknadsföringsupplevelser av hög kvalitet som bidrar till att uppnå affärsmålen genom att öka innehållets hastighet. Om du arbetar med ett stort antal resurser inom [!DNL Experience Manager Assets] eller regelbundet/regelbundet överför flera resurser, inklusive videor och dynamiska media, är det viktigt att optimera upplevelsen av den digitala resurshanteringen för att systemet ska bli effektivt.
+[!DNL Adobe Experience Manager Assets] är en viktig del i att leverera digitala marknadsföringsupplevelser av hög kvalitet som bidrar till att uppnå affärsmålen genom att öka innehållets hastighet. Om du arbetar med ett stort antal resurser inom [!DNL Experience Manager Assets] eller regelbundet/regelbundet överför flera resurser, inklusive videor och Dynamic Media, är det viktigt att optimera din digitala resurshantering för att systemet ska bli effektivt.
 
 Beroende på hur du har placerat [!DNL Assets] för din organisation och vilka funktioner du använder för materialintag, återgivningsgenerering och metadataextrahering, kan du identifiera och följa vedertagna metoder inom olika områden för att förbättra systemets stabilitet och prestanda vid inläsning.
 
