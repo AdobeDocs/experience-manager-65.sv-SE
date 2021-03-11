@@ -1,6 +1,6 @@
 ---
-title: Leverera dynamiska medieresurser
-description: Lär dig leverera dynamiska medieresurser
+title: Leverera Dynamic Media Assets
+description: Lär dig leverera Dynamic Media-material
 uuid: 23eddf83-34f5-4aae-8b81-d1cd7a098a7e
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: e3b44330-d476-49c6-b7ba-079d0d60e500
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3eacfe8a79d155dddde8908d05b05790d048b0c5
+source-git-commit: 4090b1641467c6fb02b2fcce4df97b9fd5da4e2f
 workflow-type: tm+mt
 source-wordcount: '306'
 ht-degree: 1%
@@ -17,13 +17,13 @@ ht-degree: 1%
 ---
 
 
-# Leverera dynamiska medieresurser{#delivering-dynamic-media-assets}
+# Leverera Dynamic Media Assets{#delivering-dynamic-media-assets}
 
-Hur du kan leverera dynamiska medieresurser - både video och bilder - beror på hur webbplatsen implementeras.
+Hur du kan leverera dina Dynamic Media-resurser - både video och bilder - beror på hur webbplatsen implementeras.
 
 Med Dynamic Media har du flera alternativ:
 
-* Om du har AEM som värd för webbplatsen vill du lägga till de dynamiska medieresurserna direkt på sidan.
+* Om du har AEM som värd för webbplatsen vill du lägga till Dynamic Media-resurserna direkt på sidan.
 * Om webbplatsen inte finns AEM kan du välja mellan följande:
 
    * Bädda in videon eller bilden på webbplatsen.
@@ -36,18 +36,18 @@ Med Dynamic Media har du flera alternativ:
 
 Mer information finns i följande avsnitt:
 
-* [Lägga till dynamiska medieresurser på webbsidor](/help/assets/adding-dynamic-media-assets-to-pages.md)
+* [Lägga till Dynamic Media-resurser på webbsidor](/help/assets/adding-dynamic-media-assets-to-pages.md)
 * [Bädda in video- eller bildvisningsprogrammet på en webbsida](/help/assets/embed-code.md)
 * [Aktivera hotlink-skydd i Dynamic Media](hotlink-protection.md)
 * [Länka URL:er till ditt webbprogram](/help/assets/linking-urls-to-yourwebapplication.md)
 * [Leverera optimerade bilder för en responsiv webbplats](/help/assets/responsive-site.md)
 * [HTTP2-leverans av innehåll](/help/assets/http2.md)
-* [Invalidera CDN-cachen med hjälp av Dynamic Media Classic](/help/assets/invalidate-cdn-cache-dm-classic.md)
+* [Invalidera CDN-cachen med Dynamic Media Classic](/help/assets/invalidate-cdn-cache-dm-classic.md)
 * [Använda regeluppsättningar för att omforma URL:er](/help/assets/using-rulesets-to-transform-urls.md)
 
 
 ## HTTP/2-leverans av Dynamic Media-resurser {#http-delivery-of-dynamic-media-assets}
 
-AEM har nu stöd för leverans av allt dynamiskt medieinnehåll (bilder och video) via HTTP/2. Det betyder att en publicerad URL eller inbäddningskod för bilden eller videon är tillgänglig för integrering med alla program som accepterar en värdbaserad resurs. Den publicerade resursen levereras sedan via HTTP/2-protokollet. Den här leveransmetoden förbättrar sättet som webbläsare och servrar kommunicerar på, vilket ger bättre respons och laddningstider för alla dynamiska medieresurser.
+AEM har nu stöd för leverans av allt Dynamic Media-innehåll (bilder och video) via HTTP/2. Det betyder att en publicerad URL eller inbäddningskod för bilden eller videon är tillgänglig för integrering med alla program som accepterar en värdbaserad resurs. Den publicerade resursen levereras sedan via HTTP/2-protokollet. Den här leveransmetoden förbättrar kommunikationen mellan webbläsare och servrar, vilket ger bättre respons och laddningstider för alla dina Dynamic Media-resurser.
 
 Mer information finns i [HTTP/2 Delivery of Content Frequently Asked Questions](/help/sites-administering/scene7-http2faq.md).
