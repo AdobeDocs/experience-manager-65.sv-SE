@@ -4,9 +4,9 @@ description: Förslag och vägledning om [!DNL Experience Manager] konfiguration
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
+source-git-commit: 0cecf1940136175887802b5ba205c67e61475a59
 workflow-type: tm+mt
-source-wordcount: '2678'
+source-wordcount: '2675'
 ht-degree: 0%
 
 ---
@@ -115,7 +115,7 @@ accessKey=<snip>
 
 Adobe rekommenderar att du aktiverar HTTPS eftersom många företag har brandväggar som fångar upp HTTP-trafik, vilket påverkar överföringar negativt och skadar filer. För stora filöverföringar måste användarna ha kabelanslutna anslutningar till nätverket eftersom ett WiFi-nätverk snabbt blir mättat. Riktlinjer för identifiering av nätverksflaskhalsar finns i [Handbok om resursstorlek](/help/assets/assets-sizing-guide.md). Information om hur du utvärderar nätverksprestanda genom att analysera nätverkstopologi finns i [Resurser för nätverksaspekter](/help/assets/assets-network-considerations.md).
 
-Din nätverksoptimeringsstrategi beror i första hand på den tillgängliga bandbredden och belastningen på din [!DNL Experience Manager]-instans. Gemensamma konfigurationsalternativ, inklusive brandväggar och proxies, kan förbättra nätverkets prestanda. Här följer några viktiga saker att tänka på:
+Din nätverksoptimeringsstrategi beror i första hand på den tillgängliga bandbredden och belastningen på din [!DNL Experience Manager]-instans. Gemensamma konfigurationsalternativ, inklusive brandväggar och proxies, kan förbättra nätverkets prestanda. Här följer några viktiga punkter att tänka på:
 
 * Beroende på vilken instanstyp du har (liten, måttlig, stor) kontrollerar du att du har tillräcklig nätverksbandbredd för instansen Experience Manager. Lämplig bandbreddsallokering är särskilt viktig om [!DNL Experience Manager] finns på AWS.
 * Om din [!DNL Experience Manager]-instans finns på AWS kan du dra nytta av en flexibel skalförändringsprincip. Överför instansen om användarna förväntar sig hög belastning. Minska storleken för måttlig/låg belastning.
@@ -164,7 +164,7 @@ Att ställa in en kö på hälften av de tillgängliga processorerna är en anv�
 
 ### DAM Update Asset configuration {#dam-update-asset-configuration}
 
-Arbetsflödet [!UICONTROL DAM Update Asset] innehåller en komplett serie steg som är konfigurerade för uppgifter, till exempel Dynamic Media PTIFF-generering och [!DNL Adobe InDesign Server]-integrering. De flesta användare behöver dock inte utföra flera av dessa steg. Adobe rekommenderar att du skapar en anpassad kopia av arbetsflödesmodellen [!UICONTROL DAM Update Asset] och tar bort alla onödiga steg. I det här fallet ska du uppdatera startarna för [!UICONTROL DAM Update Asset] så att de pekar på den nya modellen.
+Arbetsflödet i [!UICONTROL DAM Update Asset] innehåller en komplett serie steg som är konfigurerade för uppgifter, till exempel Dynamic Media PTIFF-generering och [!DNL Adobe InDesign Server]-integrering. De flesta användare behöver dock inte utföra flera av dessa steg. Adobe rekommenderar att du skapar en anpassad kopia av arbetsflödesmodellen [!UICONTROL DAM Update Asset] och tar bort alla onödiga steg. I det här fallet ska du uppdatera startarna för [!UICONTROL DAM Update Asset] så att de pekar på den nya modellen.
 
 Om du kör arbetsflödet [!UICONTROL DAM Update Asset] kraftigt kan du öka storleken på fildatalagret avsevärt. Resultaten från ett experiment som utfördes av Adobe har visat att datastorleken kan öka med ungefär 400 GB om cirka 500 arbetsflöden utförs inom 8 timmar.
 
@@ -180,7 +180,7 @@ Kunderna använder bilder av olika storlek och format på sin webbplats eller f�
 
 Många webbplatskunder implementerar en bildservett som ändrar storlek på och beskär bilder när de begärs, vilket medför ytterligare belastning på publiceringsinstansen. Så länge dessa bilder kan cachas kan utmaningen dock mildras.
 
-Ett annat sätt är att använda Dynamic Media-tekniken för att helt och hållet överföra bildmanipulering. Dessutom kan du distribuera varumärkesportalen som inte bara tar över ansvaret för återgivningsgenerering från [!DNL Experience Manager]-infrastrukturen, utan även hela publiceringsnivån.
+Ett annat sätt är att använda Dynamic Media-teknik för att helt och hållet överlåta bildbearbetning. Dessutom kan du distribuera varumärkesportalen som inte bara tar över ansvaret för återgivningsgenerering från [!DNL Experience Manager]-infrastrukturen, utan även hela publiceringsnivån.
 
 #### ImageMagick {#imagemagick}
 
@@ -241,7 +241,7 @@ När du replikerar resurser till ett stort antal publiceringsinstanser, till exe
 
 ## Sökindex {#search-indexes}
 
-Se till att du implementerar de senaste Service Pack-uppdateringarna och prestandarelaterade snabbkorrigeringar eftersom de ofta innehåller uppdateringar av systemindex. I [Prestandajusteringstips](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html) finns en del indexoptimeringar.
+Installera [de senaste Service Packs](/help/release-notes/sp-release-notes.md) och prestandarelaterade snabbkorrigeringar eftersom de ofta innehåller uppdateringar av systemindex. I [tips för prestandajustering](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html) finns en del indexoptimeringar.
 
 Skapa anpassade index för frågor som du kör ofta. Mer information finns i [metod för att analysera långsamma frågor](https://aemfaq.blogspot.com/2014/08/oak-query-log-file-analyzer-tool.html) och [skapa anpassade index](/help/sites-deploying/queries-and-indexing.md). Mer information om bästa praxis för frågor och index finns i [Bästa metoder för frågor och indexering](/help/sites-deploying/best-practices-for-queries-and-indexing.md).
 
@@ -267,7 +267,7 @@ När du skapar frågor som genererar stora resultatuppsättningar ska du använd
 
 ### Stora filer {#large-files}
 
-Det finns två stora kända fel relaterade till stora filer i [!DNL Experience Manager]. När filer når större storlekar än 2 GB kan synkronisering med kalla väntelägen hamna i en situation där minnet är slut. I vissa fall förhindras att standby-synkronisering körs. I andra fall kraschar den primära instansen. Detta scenario gäller för alla filer i [!DNL Experience Manager] som är större än 2 GB, inklusive innehållspaket.
+Det finns två stora kända fel relaterade till stora filer i [!DNL Experience Manager]. När filer når större storlekar än 2 GB kan synkronisering med vänteläge i kallt läge hamna i en situation där minnet är slut. I vissa fall förhindras att standby-synkronisering körs. I andra fall kraschar den primära instansen. Detta scenario gäller för alla filer i [!DNL Experience Manager] som är större än 2 GB, inklusive innehållspaket.
 
 På samma sätt kan det ta lite tid innan filen är helt beständig från cachen till filsystemet om filen är 2 GB stor när ett delat S3-datalager används. Detta innebär att om du använder en binär replikering utan binärfiler kan det hända att binära data inte har befunnits beständiga innan replikeringen slutförs. Denna situation kan leda till problem, särskilt om datatillgängligheten är viktig.
 
@@ -305,6 +305,6 @@ För att minimera latensen och uppnå hög genomströmning genom effektiv proces
 * Konfigurera [!DNL ImageMagick] för att begränsa resursförbrukningen.
 * Ta bort onödiga steg från [!UICONTROL DAM Update Asset]-arbetsflödet.
 * Konfigurera arbetsflöde och versionsrensning.
-* Optimera index med de senaste servicepaketen och snabbkorrigeringarna. Kontakta Adobe kundtjänst om du har ytterligare indexoptimeringar som kan vara tillgängliga.
+* Optimera index med de senaste Service Pack-uppdateringarna och snabbkorrigeringarna. Kontakta Adobe kundtjänst för eventuella ytterligare indexoptimeringar.
 * Använd gissningTotal för att optimera frågeprestanda.
 * Om du konfigurerar [!DNL Experience Manager] för att identifiera filtyper från innehållet i filerna (genom att aktivera **[!UICONTROL Day CQ DAM Mime Type Service]** i **[!UICONTROL AEM Web Console]**), överför många filer samtidigt under icke-toppvärdesdagar eftersom det är resurskrävande.
