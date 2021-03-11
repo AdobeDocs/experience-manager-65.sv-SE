@@ -1,15 +1,15 @@
 ---
 title: Konfigurera Dynamic Media - Scene7-läge
-description: Information om hur du konfigurerar läget Dynamic Media - Scene7.
+description: Lär dig hur du konfigurerar läget Dynamic Media - Scene7.
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 787f3b4cf5835b7e9b03e3f4e6f6597084adec8c
+source-git-commit: 99293a13fcdf06f37d9747683f7c32ebd9246d18
 workflow-type: tm+mt
-source-wordcount: '5719'
+source-wordcount: '5776'
 ht-degree: 4%
 
 ---
@@ -65,11 +65,11 @@ Uppgradering av Experience Manager Dynamic Media från 6.3 till 6.4 eller 6.5 in
 >
 >Om du kör Experience Manager-instansen i kompatibilitetsläge, d.v.s. har kompatibilitetspaketet installerat, behöver du inte köra dessa kommandon.
 
-För alla uppgraderingar, antingen med eller utan kompatibilitetspaketet, kan du kopiera de förinställda visningsprogrammen som ursprungligen ingick i Dynamic Media genom att köra följande kommando för Linux-vändning:
+För alla uppgraderingar, antingen med eller utan kompatibilitetspaketet, kan du kopiera de förinställningar för visningsprogram som ursprungligen ingick i Dynamic Media genom att köra följande kommando för Linux®-kurva:
 
 `curl -u admin:admin -X POST https://<server_address>:<server_port>/libs/settings/dam/dm/presets/viewer.pushviewerpresets.json`
 
-Om du vill migrera anpassade förinställningar och konfigurationer för visningsprogram som du har skapat från `/etc` till `/conf` kör du följande kommando för Linux-kontroll:
+Om du vill migrera anpassade förinställningar och konfigurationer för visningsprogram som du har skapat från `/etc` till `/conf` kör du följande kommando för Linux®-kontroll:
 
 `curl -u admin:admin -X POST https://<server_address>:<server_port>/libs/settings/dam/dm/presets.migratedmcontent.json`
 
@@ -106,7 +106,10 @@ Mer information finns i [Installera funktionspaket 18912 för migrering av grupp
 
    * **[!UICONTROL Publishing Assets]** - Du kan välja mellan följande tre alternativ:
       * **[!UICONTROL Immediately]** betyder att när resurser överförs, importeras resurserna och URL:en/inbäddningen anges omedelbart. Ingen användaråtgärd krävs för att publicera resurser.
-      * **[!UICONTROL Upon Activation]** betyder att du måste publicera resursen explicit innan en URL/Embed-länk anges.
+      * **[!UICONTROL Upon Activation]** betyder att du måste publicera resursen explicit innan en URL/Embed-länk anges.<br><!-- CQDOC-17478, Added March 9, 2021-->Från och med Experience Manager 6.5.8 återspeglar Experience Manager Publish-instansen korrekta Dynamic Media-metadatavärden, till exempel  `dam:scene7Domain` och  `dam:scene7FileStatus` i  **[!UICONTROL Upon Activation]** publiceringsläge. Om du vill aktivera den här funktionen installerar du Service Pack 8 och startar sedan om Experience Manager. Gå till Sling Config Manager. Hitta konfigurationen för `Scene7ActivationJobConsumer Component` eller skapa en ny). Markera kryssrutan **[!UICONTROL Replicate Metadata after Dynamic Media publishing]** och tryck sedan på **[!UICONTROL Save]**.
+
+         ![Replikera metadata efter Dynamic Media publicering, kryssruta](assets-dm/replicate-metadata-setting.png)
+
       * **[!UICONTROL Selective Publish]** Med det här alternativet kan du styra vilka mappar som ska publiceras i Dynamic Media. Du kan använda funktioner som smart beskärning eller dynamiska återgivningar, eller avgöra vilka mappar som publiceras exklusivt i Experience Manager för förhandsgranskning. Samma resurser är *inte* publicerade i Dynamic Media för att levereras i den offentliga domänen.<br>Du kan ange det här alternativet här i  **[!UICONTROL Dynamic Media Cloud Configuration]** eller, om du vill, du kan välja att ange det här alternativet på mappnivå, i en mapps  **[!UICONTROL Properties]**.<br>Se  [Arbeta med selektiv publicering i Dynamic Media.](/help/assets/selective-publishing.md)<br>Om du senare ändrar den här konfigurationen, eller ändrar den senare på mappnivå, påverkar ändringarna bara nya resurser som du överför från den punkten och framåt. Publiceringsläget för befintliga resurser i mappen ändras inte förrän du ändrar dem manuellt från antingen **[!UICONTROL Quick Publish]** eller **[!UICONTROL Manage Publication]**-dialogrutan.
    * **[!UICONTROL Secure Preview Server]** - gör att du kan ange URL-sökvägen till förhandsgranskningsservern för säkra återgivningar. Det innebär att när återgivningarna har genererats kan Experience Manager på ett säkert sätt komma åt och förhandsgranska Dynamic Media-fjärråtergivningarna (inga binärfiler skickas tillbaka till Experience Manager-instansen).
 Om du inte har en särskild lösning för att använda ditt företags server eller en speciell server rekommenderar Adobe att du låter den här inställningen vara angiven.
@@ -117,7 +120,7 @@ Om du inte har en särskild lösning för att använda ditt företags server ell
       * **[!UICONTROL Enabled by default]** - Konfigurationen används som standard på alla mappar såvida du inte markerar en mapp som är exkluderad.  <!-- you can then deselect the folders that you do not want the configuration applied to.-->
       * **[!UICONTROL Disabled by default]** - Konfigurationen tillämpas inte på någon mapp förrän du uttryckligen markerar en markerad mapp för synkronisering till Dynamic Media.
 Om du vill markera en markerad mapp för synkronisering till Dynamic Media väljer du en resursmapp och trycker sedan på **[!UICONTROL Properties]** i verktygsfältet. Välj bland följande tre alternativ i listrutan **[!UICONTROL Dynamic Media sync mode]** på fliken **[!UICONTROL Details]**. När du är klar trycker du på **[!UICONTROL Save.]** *Kom ihåg: Dessa tre alternativ är inte tillgängliga om du valde **Synkronisera allt innehåll**tidigare.* Se även  [Arbeta med selektiv publicering på mappnivå i Dynamic Media.](/help/assets/selective-publishing.md)
-         * **[!UICONTROL Inherited]** - Det finns inget explicit synkroniseringsvärde i mappen; I stället ärver mappen synkroniseringsvärdet från en av de överordnade mapparna eller standardläget i molnkonfigurationen. Detaljerad status för ärvda program genom ett verktygstips.
+         * **[!UICONTROL Inherited]** - Det finns inget explicit synkroniseringsvärde i mappen; I stället ärver mappen synkroniseringsvärdet från en av de överordnade mapparna eller standardläget i molnkonfigurationen. Detaljerad status för ärvda program via ett verktygstips.
          * **[!UICONTROL Enable for subfolders]** - Inkludera allt i det här underträdet för synkronisering med Dynamic Media. De mappspecifika inställningarna åsidosätter standardläget i molnkonfigurationen.
          * **[!UICONTROL Disabled for subfolders]** - Uteslut allt i det här underträdet från synkronisering till Dynamic Media.
 
@@ -589,7 +592,7 @@ Om du använder Dynamic Media för bilder, video eller båda, kan du använda st
   <tr>
    <td> </td>
    <td><strong>Filter</strong></td>
-   <td><strong>MimeterType</strong></td>
+   <td><strong>Mime-typ</strong></td>
    <td><strong>Återgivningar</strong></td>
   </tr>
   <tr>
