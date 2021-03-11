@@ -4,7 +4,7 @@ description: Lär dig resurshanteringsåtgärder som överföring, hämtning, re
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 863d1bd3f0f188153fcbbb7256d3ac2e3b247f59
+source-git-commit: 0cecf1940136175887802b5ba205c67e61475a59
 workflow-type: tm+mt
 source-wordcount: '9358'
 ht-degree: 3%
@@ -340,7 +340,7 @@ Vissa begränsningar för funktionen är:
 * Om det finns en mapp med samma namn på målet extraheras resurserna från ZIP-filen i den befintliga mappen.
 * Om du avbryter extraheringen tas de redan extraherade resurserna inte bort.
 * Du kan inte markera två ZIP-filer samtidigt och extrahera dem. Du kan bara extrahera ett ZIP-arkiv åt gången.
-* När du överför ett ZIP-arkiv och dialogrutan för överföring visar ett 500-serverfel, kan du försöka igen när du har installerat det senaste Service Pack-meddelandet.
+* När du överför ett ZIP-arkiv och dialogrutan för överföring visar ett 500-serverfel, försöker du igen när du har installerat [det senaste Service Pack](/help/release-notes/sp-release-notes.md).
 
 ## Förhandsgranska resurser {#previewing-assets}
 
