@@ -1,28 +1,24 @@
 ---
 title: Lägga till Dynamic Media-resurser på sidor
-seo-title: Lägga till Dynamic Media-resurser på sidor
-description: Om du vill lägga till de dynamiska mediefunktionerna i resurser som du använder på dina webbplatser kan du lägga till Dynamic Media-komponenten eller Interactive Media-komponenten direkt på sidan.
-seo-description: Om du vill lägga till de dynamiska mediefunktionerna i resurser som du använder på dina webbplatser kan du lägga till Dynamic Media-komponenten eller Interactive Media-komponenten direkt på sidan.
-uuid: 650d0867-a079-4936-a466-55b7a30803a2
+description: Om du vill lägga till Dynamic Media-funktionalitet i resurser som du använder på dina webbplatser kan du lägga till Dynamic Media- eller Interactive Media-komponenten direkt på sidan.
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: authoring
 content-type: reference
-discoiquuid: 331f4980-5193-4546-a22e-f27e38bb8250
 translation-type: tm+mt
-source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
+source-git-commit: 4090b1641467c6fb02b2fcce4df97b9fd5da4e2f
 workflow-type: tm+mt
-source-wordcount: '1602'
-ht-degree: 2%
+source-wordcount: '1569'
+ht-degree: 3%
 
 ---
 
 
 # Lägga till Dynamic Media-resurser på sidor{#adding-dynamic-media-assets-to-pages}
 
-Om du vill lägga till Dynamic Media-funktionalitet i resurser som du använder på dina webbplatser kan du lägga till komponenten **[!UICONTROL Dynamic Media]** eller **[!UICONTROL Interactive Media]** direkt på sidan. Det gör du genom att aktivera läget [!UICONTROL Design] och aktivera de dynamiska mediekomponenterna. Sedan kan du lägga till komponenterna på sidan och lägga till resurser i komponenterna. Komponenterna för dynamiska media och interaktiva media är smarta - de vet om du lägger till en bild eller en video och de tillgängliga alternativen ändras i enlighet med detta.
+Om du vill lägga till Dynamic Media-funktionalitet i resurser som du använder på dina webbplatser kan du lägga till komponenten **[!UICONTROL Dynamic Media]** eller **[!UICONTROL Interactive Media]** direkt på sidan. Det gör du genom att gå in i [!UICONTROL Design]-läget och aktivera Dynamic Media-komponenterna. Sedan kan du lägga till komponenterna på sidan och lägga till resurser i komponenterna. Dynamic Media och interaktiva mediekomponenter är smarta - de vet om du lägger till en bild eller en video och de tillgängliga alternativen ändras i enlighet med detta.
 
-Du lägger till dynamiska medieresurser direkt på sidan om du använder AEM som WCM-fil.
+Du lägger till Dynamic Media-resurser direkt på sidan om du använder AEM som innehållshanteringssystem.
 
 >[!NOTE]
 >
@@ -48,7 +44,7 @@ Så här lägger du till en Dynamic Media-komponent/ett visningsprogram på en s
 
 ## Dynamic Media Components {#dynamic-media-components}
 
-[!UICONTROL Dynamic Media] och  [!UICONTROL Interactive Media] är tillgängliga i  [!UICONTROL Sidekick] under  **[!UICONTROL Dynamic Media.]** Du använder  **[!UICONTROL Interactive Media]** komponenten för alla interaktiva resurser som interaktiv video, interaktiva bilder eller karuselluppsättningar. Använd komponenten **[!UICONTROL Dynamic Media]** för alla andra dynamiska mediekomponenter.
+[!UICONTROL Dynamic Media] och  [!UICONTROL Interactive Media] är tillgängliga i  [!UICONTROL Sidekick] under  **[!UICONTROL Dynamic Media.]** Du använder  **[!UICONTROL Interactive Media]** komponenten för alla interaktiva resurser som interaktiv video, interaktiva bilder eller karuselluppsättningar. Använd komponenten **[!UICONTROL Dynamic Media]** för alla andra Dynamic Media-komponenter.
 
 ![chlimage_1-71](assets/chlimage_1-71a.png)
 
@@ -65,7 +61,7 @@ Dynamic Media-komponenten är smart - beroende på om du lägger till en bild el
 >När du lägger till komponenten [!UICONTROL Dynamic Media] och **[!UICONTROL Dynamic Media Settings]** är tom eller du inte kan lägga till en resurs på rätt sätt bör du kontrollera följande:
 >
 >* Du har [aktiverat Dynamic Media](/help/assets/config-dynamic.md). Dynamic Media är inaktiverat som standard.
->* Bilden har en pyramidformad fil. Bilder som importerats innan dynamiska medier har aktiverats har ingen pyramiddiff-fil.
+>* Bilden har en pyramidformad fil. Bilder som importeras innan Dynamic Media är aktiverat har ingen pyramiddiff-fil.
 
 >
 
