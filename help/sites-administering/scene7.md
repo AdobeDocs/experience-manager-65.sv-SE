@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 translation-type: tm+mt
-source-git-commit: 4333cfde433d00ddc4cb013b31fe52956791da46
+source-git-commit: 4090b1641467c6fb02b2fcce4df97b9fd5da4e2f
 workflow-type: tm+mt
 source-wordcount: '5268'
 ht-degree: 1%
@@ -34,7 +34,7 @@ Information om hur du använder alla Dynamic Media Classic-komponenter på en si
 
 ## AEM/Dynamic Media Classic-integrering jämfört med Dynamic Media {#aem-scene-integration-versus-dynamic-media}
 
-AEM kan välja mellan två lösningar för att arbeta med dynamiska medier: Antingen integrerar de sin AEM med Dynamic Media Classic eller med den Dynamic Media-lösning som är integrerad i AEM.
+AEM kan välja mellan två lösningar för Dynamic Media: Antingen integrerar de sin AEM med Dynamic Media Classic eller med den Dynamic Media-lösning som är integrerad i AEM.
 
 Använd följande kriterier för att avgöra vilken lösning du ska välja:
 
@@ -160,7 +160,7 @@ Så här använder du Dynamic Media och Dynamic Media Classic samtidigt:
 1. (Valfritt) (se falltabell) - Om du väljer att aktivera automatisk överföring från resurser till Dynamic Media Classic måste du lägga till följande:
 
    1. Konfigurera automatisk överföring till Dynamic Media Classic.
-   1. Lägg till steget **Dynamic Media Classic upload** efter alla steg i Dynamic Media arbetsflöde *i slutet av* **arbetsflödet för Dam Update Asset** ( `https://<server>:<host>/cf#/etc/workflow/models/dam/update_asset.html)`
+   1. Lägg till steget **Dynamic Media Classic upload** efter alla steg i Dynamic Media arbetsflöde *i slutet av* **arbetsflödet för DAM Update Asset** ( `https://<server>:<host>/cf#/etc/workflow/models/dam/update_asset.html)`
    1. (Valfritt) Begränsa uppladdning av Dynamic Media Classic-resurser med MIME-typ i [https://&lt;server>:&lt;port>/system/console/configMgr/com.day.cq.dam.scene7.impl.Scene7AssetMimeTypeServiceImpl](http://localhost:4502/system/console/configMgr/com.day.cq.dam.scene7.impl.Scene7AssetMimeTypeServiceImpl). MIME-typer för resurser som inte finns i den här listan kommer inte att överföras till Dynamic Media Classic-servern.
    1. (Valfritt) Konfigurera video i Dynamic Media Classic-konfigurationen. Du kan aktivera videokodning för båda eller för både Dynamic Media och Dynamic Media Classic samtidigt. Dynamiska återgivningar används för att förhandsgranska och spela upp lokalt AEM instansen, medan Dynamic Media Classic-videoåtergivningar genereras och lagras på Dynamic Media Classic-servrar. När du konfigurerar videokodningstjänster för både Dynamic Media och Dynamic Media Classic ska du använda en [videobearbetningsprofil](/help/assets/video-profiles.md) i resursmappen för Dynamic Media Classic.
    1. (Valfritt) [Konfigurera säker förhandsvisning i Dynamic Media Classic](/help/sites-administering/scene7.md#configuring-the-state-published-unpublished-of-assets-pushed-to-scene).
@@ -613,7 +613,7 @@ Om du har problem med att integrera AEM med Dynamic Media Classic hittar du föl
 
 **Om videoöverföringen misslyckas**
 
-* Om videouppladdningen misslyckas och du använder AEM för att koda video via Dynamic Media Classic-integreringen, se [Lägga till konfigurerbar tidsgräns i Dynamic Media Classic Upload workflow](#adding-configurable-timeout-to-scene-upload-workflow).
+* Om videouppladdningen misslyckas och du använder AEM för att koda video via Dynamic Media Classic-integreringen, se [Lägga till konfigurerbar tidsgräns i arbetsflödet för Dynamic Media Classic Upload](#adding-configurable-timeout-to-scene-upload-workflow).
 
 >[!CAUTION]
 >
