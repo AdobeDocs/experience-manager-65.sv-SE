@@ -1,6 +1,6 @@
 ---
 title: Länka URL till ett webbprogram
-description: Länka URL:er till webbprogrammet i dynamiska medier
+description: Länka URL:er till ditt webbprogram i Dynamic Media
 uuid: cf599e66-b1f9-40c0-b572-cea19f2e6793
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -8,7 +8,7 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: d12e6ea3-aaf4-4672-9679-3c16c76d7d5b
 translation-type: tm+mt
-source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+source-git-commit: 4090b1641467c6fb02b2fcce4df97b9fd5da4e2f
 workflow-type: tm+mt
 source-wordcount: '1210'
 ht-degree: 10%
@@ -18,7 +18,7 @@ ht-degree: 10%
 
 # Länka URL till ett webbprogram {#linking-urls-to-your-web-application}
 
-Dina webbplatser och tillämpningar har åtkomst till Dynamic Media-tjänster via URL-samtal. När du har publicerat en resurs aktiverar Dynamic Media en URL-sträng som refererar till resursen. Du kan klistra in dessa URL:er i en webbläsare för testning.
+Dina webbplatser och tillämpningar har åtkomst till Dynamic Media tjänster via URL-samtal. När du har publicerat en resurs aktiverar Dynamic Media en URL-sträng som refererar till resursen. Du kan klistra in dessa URL:er i en webbläsare för testning.
 
 Du länkar bara till URL:er om du är *inte* och använder AEM som WCM. Länkning/inbäddning används när du vill leverera en videospelare som ett popup-fönster eller modalt fönster. Om du använder AEM som WCM-fil [lägger du till resurserna direkt på sidan.](adding-dynamic-media-assets-to-pages.md)
 
@@ -26,7 +26,7 @@ Om du vill placera dessa URL-strängar på dina webbsidor och i dina program kop
 
 >[!NOTE]
 >
->URL-strängar är bara tillgängliga för dynamiska återgivningar av resurser. De är för närvarande inte tillgängliga för statiska resurser som finns i DAM och inte för den dynamiska medieservern. URL-knappen visas inte för återgivningar som är statiska.
+>URL-strängar är bara tillgängliga för dynamiska återgivningar av resurser. De är för närvarande inte tillgängliga för statiska resurser som finns i DAM och inte på Dynamic Media-servern. URL-knappen visas inte för återgivningar som är statiska.
 
 Se även [Bädda in video- eller bildvisningsprogrammet på en webbsida.](embed-code.md)
 
@@ -88,7 +88,7 @@ Du kan hämta en URL-sträng på flera olika sätt. Stegen nedan visar dock bara
 
 ## Hämta en URL för en statisk resurs {#obtaining-a-url-for-a-static-asset}
 
-Dynamic Media har stöd för leverans av statiska resurser, som är ytterligare resurser utöver bara bilder och video. Statiska medieformat som stöds för leverans är bland annat följande:
+Dynamic Media stöder leverans av statiskt material, som är ytterligare material utöver bara bilder och video. Statiska medieformat som stöds för leverans är bland annat följande:
 
 * 3D-filer
 * Animerad GIF
