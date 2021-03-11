@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 97a5f018-8255-4b87-9d21-4a0fdf740e4d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
+source-git-commit: 4090b1641467c6fb02b2fcce4df97b9fd5da4e2f
 workflow-type: tm+mt
 source-wordcount: '2961'
 ht-degree: 8%
@@ -68,7 +68,7 @@ Om det inte finns några Dynamic Media-komponenter att lägga till på en sida b
 
    ![Policy](/help/assets/assets-dm/structure-mode.png)
 
-1. Långt ned på sidan trycker du på **[!UICONTROL Layout Container]** för att öppna verktygsfältet och sedan på ikonen Policy.
+1. I närheten av sidans nederkant trycker du på **[!UICONTROL Layout Container]** för att öppna verktygsfältet och sedan på ikonen Policy.
 1. Kontrollera att fliken **[!UICONTROL Allowed Components]** är markerad under rubriken **[!UICONTROL Properties]** på sidan **[!UICONTROL Layout Container]**.
 
    ![Tillåtna komponenter](/help/assets/assets-dm/allowed-components.png)
@@ -133,7 +133,7 @@ Tänk på att det inte går att tilldela olika visningsprogramförinställningar
 När du lägger till Dynamic Media-komponenten och **[!UICONTROL Dynamic Media Settings]** är tom eller du inte kan lägga till en resurs korrekt bör du kontrollera följande:
 
 * Du har [aktiverat Dynamic Media](/help/assets/config-dynamic.md). Dynamic Media är inaktiverat som standard.
-* Bilden har en pyramidformad fil. Bilder som importerats innan dynamiska medier har aktiverats har ingen pyramiddiff-fil.
+* Bilden har en pyramidformad fil. Bilder som importeras innan Dynamic Media är aktiverat har ingen pyramiddiff-fil.
 
 #### När du arbetar med bilder {#when-working-with-images}
 
