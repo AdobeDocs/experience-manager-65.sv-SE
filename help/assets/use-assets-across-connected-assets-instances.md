@@ -3,7 +3,7 @@ title: Använd Connected Assets när du vill dela DAM-resurser i [!DNL Sites]
 description: Använd resurser som är tillgängliga på en fjärrdistribution av [!DNL Adobe Experience Manager Assets] deployment when creating your web pages on another [!DNL Adobe Experience Manager Sites] data.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: d17749cb8e923848f8f81360c03b9afba7989ae2
+source-git-commit: 8714a76843231650555e84d3670ecad0bfec2566
 workflow-type: tm+mt
 source-wordcount: '2655'
 ht-degree: 27%
@@ -225,4 +225,4 @@ Följ de här stegen för att felsöka vanliga fel:
 
 * Om fjärrreferenser inte hämtas och leder till ett felmeddelande, kontrollerar du om det finns en tillgänglig webbplatsdistribution och söker efter nätverksanslutningsproblem. Försök igen senare för att kontrollera. [!DNL Assets] Två försök görs att upprätta en anslutning till  [!DNL Sites] distributionen och ett fel rapporteras sedan.
 
-![det gick inte att göra om fjärrreferenser till resurser](assets/reference-report-failure.png)
+   ![det gick inte att göra om fjärrreferenser till resurser](assets/reference-report-failure.png)
