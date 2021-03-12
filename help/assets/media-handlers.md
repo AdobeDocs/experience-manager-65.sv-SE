@@ -3,9 +3,9 @@ title: Bearbeta resurser med mediehanterare och arbetsflöden
 description: Lär dig mer om mediehanterarna och hur du använder arbetsflöden för att utföra uppgifter i dina digitala resurser.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 42b6bf50145ad82cd4cade3fa0de7effac3584b9
+source-git-commit: a6758adf5ac8992e27c13b87ae65c83b5b8695c7
 workflow-type: tm+mt
-source-wordcount: '2051'
+source-wordcount: '2090'
 ht-degree: 1%
 
 ---
@@ -35,7 +35,7 @@ Följande mediehanterare är tillgängliga i [!DNL Assets] och hanterar de vanli
 | [!UICONTROL TextHandler] | com.day.cq.dam.core.impl.handler.TextHandler | text/plain |
 | [!UICONTROL PdfHandler] | com.day.cq.dam.handler.standard.pdf.PdfHandler | <ul><li>application/pdf</li><li>program/illustrator</li></ul> |
 | [!UICONTROL JpegHandler] | com.day.cq.dam.core.impl.handler.JpegHandler | image/jpeg |
-| [!UICONTROL Mp3Handler] | com.day.cq.dam.handler.standard.mp3.Mp3Handler | audio/mpeg |
+| [!UICONTROL Mp3Handler] | com.day.cq.dam.handler.standard.mp3.Mp3Handler | audio/mpeg<br><b>Viktigt</b> - När du överför en MP3-fil behandlas den [med ett tredjepartsbibliotek](http://www.zxdr.it/programmi/SistEvolBDD/LibJava/doc/de/vdheide/mp3/MP3File.html). Biblioteket beräknar en icke korrekt ungefärlig längd om MP3 har variabel bithastighet (VBR). |
 | [!UICONTROL ZipHandler] | com.day.cq.dam.handler.standard.zip.ZipHandler | <ul><li>application/java-archive </li><li> application/zip</li></ul> |
 | [!UICONTROL PictHandler] | com.day.cq.dam.handler.standard.pict.PictHandler | bild/pict |
 | [!UICONTROL StandardImageHandler] | com.day.cq.dam.core.impl.handler.StandardImageHandler | <ul><li>image/gif </li><li> bild/png </li> <li>application/photoshop </li> <li>image/jpeg </li><li> bild/tiff </li> <li>image/x-ms-bmp </li><li> image/bmp</li></ul> |
