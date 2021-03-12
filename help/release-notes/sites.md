@@ -2,9 +2,9 @@
 title: Versionsinformation för AEM Sites
 description: Versionsinformation om webbplatser som tillhör Adobe Experience Manager 6.5.
 translation-type: tm+mt
-source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
+source-git-commit: 23656e023a9a0bfc335655f9cfb0530aa917b3ef
 workflow-type: tm+mt
-source-wordcount: '856'
+source-wordcount: '872'
 ht-degree: 0%
 
 ---
@@ -110,7 +110,13 @@ Se följande för AEM Sites 6.5-förbättringar i detalj:
 
 >[!CAUTION]
 >
->at.js 2.x stöds inte med AEM vid tidpunkten för AEM 6.5-versionen. Använd den senaste versionen av at.js 1.x
+>För närvarande:
+>
+>* Endast `at.js 1.x` stöds om du använder Adobe Target som målmotor i AEM aktivitetskonsol.
+   >
+   >
+* Både `at.js. 1.x` och `at.js 2.x` stöds om du använder Experience Fragment-export till Target och kör aktiviteter i Target-konsolen.
+
 
 * Adobe Target-integrering kan nu använda Target Standard API. I tidigare versioner av AEM används Target Classic HTTP API, som nu är föråldrat.
 * Adobe Target `mbox.js` version 63 ingår. Adobe rekommenderar starkt att implementeringen växlas till `at.js` v1.x.
