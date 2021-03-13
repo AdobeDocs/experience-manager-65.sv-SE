@@ -3,9 +3,9 @@ title: Använd Connected Assets när du vill dela DAM-resurser i [!DNL Sites]
 description: Använd resurser som är tillgängliga på en fjärrdistribution av [!DNL Adobe Experience Manager Assets] deployment when creating your web pages on another [!DNL Adobe Experience Manager Sites] data.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 8714a76843231650555e84d3670ecad0bfec2566
+source-git-commit: 8df7e4403c6664b52573cd4479b3a6a08d2cb6fa
 workflow-type: tm+mt
-source-wordcount: '2655'
+source-wordcount: '2630'
 ht-degree: 27%
 
 ---
@@ -106,13 +106,15 @@ Så här konfigurerar du anslutna resurser och lokal [!DNL Sites]-anslutning:
    >
    >Alla återgivningar som är tillgängliga på fjärrdistributionen hämtas när författare hämtar en resurs. Om du vill skapa fler återgivningar av en hämtad resurs hoppar du över det här konfigurationssteget. Arbetsflödet [!UICONTROL DAM Update Asset] aktiveras och skapar fler återgivningar. Dessa återgivningar är bara tillgängliga på den lokala distributionen av [!DNL Sites] och inte på den fjärranslutna DAM-distributionen.
 
-1. Lägg till [!DNL Sites]-distributionen som ett tillåtet ursprung i CORS-konfigurationen i [!DNL Assets]-distributionen.
+1. Lägg till [!DNL Sites]-distributionen som ett tillåtet ursprung i CORS-konfigurationen i [!DNL Assets]-distributionen. Mer information finns i [förstå CORS](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html).
 
-   1. Logga in med administratörsautentiseringsuppgifterna. Sök efter `Cross-Origin`. Öppna **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
+<!-- TBD: See if these steps are not required.
+    1. Log in using the administrator credentials. Search for `Cross-Origin`. Access **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
 
-   1. Om du vill skapa en CORS-konfiguration för [!DNL Sites]-distribution klickar du på Lägg till alternativ ![Ikon för att lägga till resurser](assets/do-not-localize/assets_add_icon.png) bredvid **[!UICONTROL Adobe Granite Cross-Origin Resource Sharing Policy]**.
+    1. To create a CORS configuration for [!DNL Sites] deployment, click add option ![Assets add icon](assets/do-not-localize/assets_add_icon.png) next to **[!UICONTROL Adobe Granite Cross-Origin Resource Sharing Policy]**.
 
-   1. I fältet **[!UICONTROL Allowed Origins]** anger du URL:en för den lokala [!DNL Sites], det vill säga `https://[local_sites]:[port]`. Spara konfigurationen.
+    1. In the field **[!UICONTROL Allowed Origins]**, input the URL of the local [!DNL Sites], that is, `https://[local_sites]:[port]`. Save the configuration.
+-->
 
 Du kan kontrollera anslutningen mellan konfigurerade [!DNL Sites]-distributioner och [!DNL Assets]-distribution.
 
@@ -173,7 +175,7 @@ Följ de här stegen för att visa och hantera referenser i [!DNL Assets]-distri
 1. Välj en resurs i [!DNL Assets]-konsolen och klicka på **[!UICONTROL Properties]** i verktygsfältet.
 1. Klicka på fliken **[!UICONTROL References]**. Se **[!UICONTROL Local References]** om du vill använda resursen i [!DNL Assets]-distributionen. Se **[!UICONTROL Remote References] om du vill använda resursen i [!DNL Sites]-distributionen där resursen hämtades med hjälp av funktionen Anslutna resurser.
 
-   ![fjärrreferenser i resursegenskaper](assets/connected-assets-remote-reference.png)
+   ![fjärrreferenser på sidan Egenskaper för resurs](assets/connected-assets-remote-reference.png)
 
 1. Referenserna för [!DNL Sites]-sidor visar totalt antal referenser för varje lokal [!DNL Sites]. Det kan ta en stund att hitta alla referenser och visa det totala antalet referenser.
 1. Listan med referenser är interaktiv och DAM-användare kan klicka på en referens för att öppna referenssidan. Om fjärrreferenser av någon anledning inte kan hämtas visas ett meddelande som informerar användaren om felet.
@@ -223,6 +225,6 @@ Följ de här stegen för att felsöka vanliga fel:
 
    ![Cookie-fel i Chrome i Incognito-läge](assets/chrome-cookies-incognito-dialog.png)
 
-* Om fjärrreferenser inte hämtas och leder till ett felmeddelande, kontrollerar du om det finns en tillgänglig webbplatsdistribution och söker efter nätverksanslutningsproblem. Försök igen senare för att kontrollera. [!DNL Assets] Två försök görs att upprätta en anslutning till  [!DNL Sites] distributionen och ett fel rapporteras sedan.
+* Om fjärrreferenser inte hämtas och leder till ett felmeddelande, kontrollerar du om [!DNL Sites]-distributionen är tillgänglig och söker efter nätverksanslutningsproblem. Försök igen senare för att kontrollera. [!DNL Assets] Två försök görs att upprätta en anslutning till  [!DNL Sites] distributionen och ett fel rapporteras sedan.
 
    ![det gick inte att göra om fjärrreferenser till resurser](assets/reference-report-failure.png)
