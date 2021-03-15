@@ -3,9 +3,9 @@ title: Hantera metadata för dina digitala resurser i [!DNL Adobe Experience Man
 description: Lär dig mer om metadatatyperna och hur [!DNL Adobe Experience Manager Assets] helps manage metadata for assets to allow easier categorization and organization of assets. [!DNL Experience Manager] gör det möjligt att automatiskt ordna och bearbeta resurser baserat på deras metadata.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: cf86d0c38e326766b35318e78a94a3f32e166e01
+source-git-commit: 31dcf48691fa849f757579e2e57dc3a9c2bbbbee
 workflow-type: tm+mt
-source-wordcount: '2289'
+source-wordcount: '2239'
 ht-degree: 10%
 
 ---
@@ -78,21 +78,15 @@ Om du vill anpassa sidan med metadataegenskaper, inklusive lägga till, ändra o
 1. Markera de resurser som du vill redigera gemensamma egenskaper för.
 1. Klicka på **[!UICONTROL Properties]** i verktygsfältet för att öppna egenskapssidan för de valda resurserna.
 1. Ändra metadataegenskaperna för markerade resurser på de olika flikarna.
-1. Om du vill visa metadataredigeraren för en viss resurs avbryter du valet av återstående resurser i listan. Metadataredigeringsfälten fylls i med metadata för den aktuella resursen.
-
-   >[!NOTE]
-   >
-   >* På egenskapssidan kan du ta bort resurser från resurslistan genom att avbryta markeringen. Resurslistan har alla resurser markerade som standard. Metadata för resurser som du tar bort från listan uppdateras inte.
-   >* Överst i resurslistan markerar du kryssrutan nära **[!UICONTROL Title]** för att växla mellan att markera resurserna och rensa listan.
-
-
-1. Klicka på **[!UICONTROL Settings]** i verktygsfältet och välj önskat schema för att välja ett annat metadatamatchschema för resurserna.
-1. Spara ändringarna.
+1. Om du vill visa metadata för en viss resurs avbryter du valet av återstående resurser i listan. Om du avbryter markeringen av ett fåtal resurser på sidan [!UICONTROL Properties] uppdateras inte metadata för sådana resurser.
+1. Klicka på **[!UICONTROL Settings]** i verktygsfältet och välj ett schema om du vill välja ett annat metadatamatchschema för resurserna. Klicka på **[!UICONTROL Save & Close]**.
 1. Om du vill lägga till nya metadata till befintliga metadata i fält som innehåller flera värden väljer du **[!UICONTROL Append mode]**. Om du inte markerar det här alternativet ersätter de nya metadata de data som finns i fälten. Klicka på **[!UICONTROL Submit]**.
 
-   >[!CAUTION]
-   >
-   >För fält med ett enda värde läggs de nya metadata inte till det befintliga värdet i fältet, även om du väljer **[!UICONTROL Append mode]**.
+![Massor av metadatamatcheman gäller för flera resurser](assets/metadata-schema-bulk-edit.gif)
+
+>[!CAUTION]
+>
+>För fält med ett enda värde läggs de nya metadata inte till det befintliga värdet i fältet, även om du väljer **[!UICONTROL Append mode]**.
 
 ## Importera metadata {#import-metadata}
 
