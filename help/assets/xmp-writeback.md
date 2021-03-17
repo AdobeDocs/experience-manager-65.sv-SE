@@ -3,9 +3,9 @@ title: XMP till återgivning
 description: Lär dig hur XMP återskrivningsfunktionen sprider metadataändringar för en resurs till alla eller vissa återgivningar av resursen.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: cf86d0c38e326766b35318e78a94a3f32e166e01
+source-git-commit: 7faa6638eff422599450946a257e53970d25189c
 workflow-type: tm+mt
-source-wordcount: '721'
+source-wordcount: '712'
 ht-degree: 4%
 
 ---
@@ -13,7 +13,9 @@ ht-degree: 4%
 
 # XMP tillbakaskrivning till återgivningar {#xmp-writeback-to-renditions}
 
-Funktionen XMP tillbakaskrivning i [!DNL Adobe Experience Manager Assets] replikerar ändringar i resursens återgivningar av metadata. När du ändrar metadata för en resurs från [!DNL Experience Manager Assets] eller när du överför resursen, lagras ändringarna i resursnoden i CRXDe. XMP återskrivningsfunktion sprider metadataändringarna till alla eller specifika återgivningar av resursen.
+Den här XMP återskrivningsfunktionen i [!DNL Adobe Experience Manager Assets] replikerar metadataändringarna till återgivningarna av den ursprungliga resursen. När du ändrar metadata för en resurs i Resurser eller när du överför resursen, lagras ändringarna först i metadatanoden i resurshierarkin.
+
+Med funktionen XMP kan du sprida metadataändringarna till alla eller vissa återgivningar av resursen. Funktionen skriver bara tillbaka de metadataegenskaper som använder namnutrymmet `jcr`, d.v.s. egenskapen `dc:title` skrivs tillbaka, men egenskapen `mytitle` skrivs inte tillbaka.
 
 Tänk dig ett scenario där du ändrar egenskapen [!UICONTROL Title] för resursen `Classic Leather` till `Nylon`.
 
@@ -23,11 +25,9 @@ I det här fallet sparar [!DNL Experience Manager Assets] ändringarna av egensk
 
 ![metadata_stored](assets/metadata_stored.png)
 
-[!DNL Experience Manager Assets] sprider dock inte automatiskt några metadataändringar till återgivningarna av en resurs.
+[!DNL Experience Manager Assets] sprider dock inte automatiskt några metadataändringar till återgivningarna av en resurs. Se [hur du aktiverar XMP-tillbakaskrivning](#enable-xmp-writeback).
 
-Med funktionen XMP kan du sprida metadataändringarna till alla eller vissa återgivningar av resursen. Ändringarna lagras dock inte under metadatanoden i resurshierarkin. I stället bäddar den här funktionen in ändringarna i de binära filerna för återgivningarna.
-
-## Aktivera XMP för tillbakaskrivning {#enabling-xmp-writeback}
+## Aktivera XMP-tillbakaskrivning {#enable-xmp-writeback}
 
 Om du vill att metadataändringarna ska kunna spridas till återgivningarna av resursen när du överför den ändrar du konfigurationen **[!UICONTROL Adobe CQ DAM Rendition Maker]** i Configuration Manager.
 
@@ -47,7 +47,7 @@ Utför följande steg för XMP återskrivningsfunktion som sprider metadata till
 1. Öppna arbetsflödesmodellen **[!UICONTROL DAM Metadata Writeback]** på sidan Modeller.
 1. På egenskapssidan för **[!UICONTROL DAM Metadata Writeback]** öppnar du steget **[!UICONTROL XMP Writeback Process]**.
 1. Klicka på fliken **[!UICONTROL Process]** i dialogrutan [!UICONTROL Step Properties].
-1. Lägg till `rendition:cq5dam.thumbnail.140.100.png,rendition:cq5dam.thumbnail.319.319.png` i rutan **Arguments** och klicka sedan på **OK**.
+1. Lägg till `rendition:cq5dam.thumbnail.140.100.png,rendition:cq5dam.thumbnail.319.319.png` i rutan **Arguments** och klicka på **[!UICONTROL OK]**.
 
    ![step_properties](assets/step_properties.png)
 
