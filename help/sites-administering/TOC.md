@@ -7,9 +7,9 @@ user-guide-title: Användarhandbok för AEM 6.5
 breadcrumb-title: Administratörshandbok
 user-guide-description: Läs om hur du administrerar AEM.
 translation-type: tm+mt
-source-git-commit: ac2f3d69fd20d7779120a194c698d6f0dd6e6a84
+source-git-commit: c56e93b99553993e1c144c2ad2cb1299c9894812
 workflow-type: tm+mt
-source-wordcount: '675'
+source-wordcount: '662'
 ht-degree: 6%
 
 ---
@@ -114,10 +114,9 @@ ht-degree: 6%
    + [Magento](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/integrations.html#!AdobeDocs/commerce-cif-documentation/master/integrations/02-AEM-Magento.md)
    + [SAP Commerce Cloud](sap-commerce-cloud.md)
    + [Salesforce Commerce Cloud](https://github.com/adobe/commerce-salesforce)
-   + [AEM - beredskap inför GDPR](gdpr-compliance-commerce.md)
 + Integrering {#integration}
    + [Integrera med tredjepartstjänster](third-party-services.md)
-   + [Integrering med Salesforce](salesforce.md)
+   + [Integrera med Salesforce](salesforce.md)
    + [Integrera med Adobe Target](target.md)
    + [Integrera med Adobe Analytics](adobeanalytics.md)
    + [Ansluta till Adobe Analytics och skapa ramverk](adobeanalytics-connect.md)
@@ -129,18 +128,18 @@ ht-degree: 6%
    + [SharePoint Connector-licenser, copyrightmeddelanden och friskrivningsklausuler](sharepoint-connector-licenses.md)
    + [SharePoint-anslutning](sharepoint-connector.md)
    + [Vanliga frågor om att DHTML Viewer upphör](dhtml-viewer-endoflifefaqs.md)
-   + [Integrering med Adobe Campaign Classic](campaignonpremise.md)
+   + [Integrera med Adobe Campaign Classic](campaignonpremise.md)
    + [Relaterade artiklar i communityn](related-community-articles.md)
-   + [Integrering med Adobe Campaign Standard](campaignstandard.md)
+   + [Integrera med Adobe Campaign Standard](campaignstandard.md)
    + [Meddelande om att Flash Viewer har upphört](flash-viewers-eol.md)
    + [Produktfeed](product-feed.md)
-   + [Integrering med dynamisk tagghantering i Adobe](dtm.md)
-   + [Gå till Adobe Analytics och Adobe Target](opt-in.md)
-   + [AEM Portaler och Portlets](aem-as-portal.md)
+   + [Integrera med dynamisk tagghantering i Adobe](dtm.md)
+   + [Ingå i Adobe Analytics och Adobe Target](opt-in.md)
+   + [AEM portaler och portlets](aem-as-portal.md)
    + [Integrera med Dynamic Media Classic (Scene7)](scene7.md)
    + [AEM Livefyre-recept](aem-livefyre-recipes.md)
-   + [Felsökning av integreringsproblem](troubleshooting-integration-issues.md)
-   + [Integrera med BrightStor Content Optimizer](brightedge.md)
+   + [Felsöka integreringsproblem](troubleshooting-integration-issues.md)
+   + [Integrera med BrightEdge Content Optimizer](brightedge.md)
    + [Katalogproducent](catalog-producer.md)
    + [Konfigurera AEM Assets-integrering med Experience Cloud och Creative Cloud](configure-assets-cc-integration.md)
    + [Integrera med Silverpop Engage](silverpop.md)
@@ -150,21 +149,20 @@ ht-degree: 6%
    + [Integrera med Adobe Marketing Cloud](marketing-cloud.md)
    + [Konfigurera integreringen med Adobe Target manuellt](target-configuring.md)
    + [Krav för integrering med Adobe Target](target-requirements.md)
-   + [Integration med Adobe Target med Adobe I/O](integration-ims-adobe-io.md)
+   + [Integrering med Adobe Target med Adobe I/O](integration-ims-adobe-io.md)
    + [Adobe-klassificeringar](adobeanalytics-classifications.md)
-   + [Integrering med Adobe Search &amp; Promote](search-and-promote.md)
+   + [Integrera med Adobe Search &amp; Promote](search-and-promote.md)
    + [Lösningsintegrering](integration.md)
-   + [Exportera upplevelsefragment till Adobe Target](experience-fragments-target.md)
+   + [Exportera Experience Fragments till Adobe Target](experience-fragments-target.md)
    + [Metodtips för e-postmallar](best-practices-for-email-templates.md)
-   + [Integrering med Livefyre](livefyre.md)
+   + [Integrera med Livefyre](livefyre.md)
 + Bästa praxis {#bestpractices}
    + [Bästa praxis](administer-best-practices.md)
    + [Bästa praxis för översättning](https://experienceleague.adobe.com/docs/experience-manager-65/administering/introduction/tc-bp.html)
-   + [Metodtips för MSM](https://experienceleague.adobe.com/docs/experience-manager-65/administering/introduction/msm-best-practices.html)
+   + [MSM Best Practices](https://experienceleague.adobe.com/docs/experience-manager-65/administering/introduction/msm-best-practices.html)
    + [AEM Sites - GDPR-beredskap](gdpr-compliance-sites.md)
    + [Hantera GDPR-begäranden för AEM Foundation](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/handling-gdpr-requests-for-aem-platform.html)
-   + [AEM - beredskap inför GDPR](https://experienceleague.adobe.com/docs/experience-manager-65/administering/ecommerce/gdpr-compliance-commerce.html)
-+ Innehållshantering {#contentmanagement}
+   + [AEM Commerce - GDPR-beredskap](gdpr-compliance-commerce.md)
    + [Så här arbetar du med paket](package-manager.md)
    + [Administrera taggar](tags.md)
    + [Sidexporteraren](page-exporter.md)
