@@ -4,9 +4,9 @@ description: Nyheter i [!DNL Experience Manager] 6.5 Service Pack 8
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 2c6d11f63420040a500bbb75f1146c29f64bdcc5
+source-git-commit: f52fc643c30babab68bcf122eb3d91da5ce37a24
 workflow-type: tm+mt
-source-wordcount: '2845'
+source-wordcount: '2977'
 ht-degree: 0%
 
 ---
@@ -37,6 +37,22 @@ Nu kan du sortera de Live Copy-sidor som är tillgängliga för utrullning med h
 >[!NOTE]
 >
 >Tilläggspaketet [!DNL Experience Manager Forms] är tillgängligt en vecka efter den schemalagda versionen av [!DNL Experience Manager] Service Pack.
+
+### Visa eller dölj CAPTCHA-komponenten i ett anpassat formulär baserat på reglerna {#show-hide-captcha}
+
+Du kan nu validera CAPTCHA antingen när du skickar in formulär med adaptiv form eller när användaren gör något. Du kan också lägga till villkor för att validera CAPTCHA på en användaråtgärd och visa eller dölja CAPTCHA-komponenten i ett anpassat formulär baserat på regler.
+
+### Lägg till anpassade CAPTCHA-tjänster {#add-custom-captcha-services}
+
+[!DNL Experience Manager Forms] ger direkt stöd för att använda Google reCAPTCHA (en separat licens av Google reCAPTCHA API:er krävs) som en CAPTCHA-valideringstjänst. Du kan också använda en anpassad CAPTCHA-tjänst för att validera CAPTCHA.
+
+### Andra förbättringar {#other-enhancements-forms-6580}
+
+* Förbättrad tillgänglighet för datumväljarkomponenten [!DNL Experience Manager Forms].
+
+* Stöd har lagts till för att generera en interaktiv kommunikation i PCL-format med hjälp av API:t PrintChannel.
+
+* När du utför en PDFG-konvertering kan du nu aktivera eller inaktivera registerändringarna [!DNL Experience Manager Forms] för generering av anpassade bokmärken.
 
 ## Viktiga funktioner i tidigare [!DNL Experience Manager] 6.5 Service Packs {#key-features-previous-service-packs}
 
