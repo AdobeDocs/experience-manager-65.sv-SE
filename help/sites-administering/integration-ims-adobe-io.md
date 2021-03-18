@@ -11,9 +11,9 @@ topic-tags: integration
 discoiquuid: 3b9285db-8fba-4d12-8f52-41daa50a5403
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 26efba567985dcb89b2610935cab18943b7034b3
+source-git-commit: 07f354ccfb8741f0de4fc85ba1575ead3b8ea6e4
 workflow-type: tm+mt
-source-wordcount: '1335'
+source-wordcount: '1559'
 ht-degree: 0%
 
 ---
@@ -30,6 +30,7 @@ Integreringen av AEM med Adobe Target via Target Standard API kräver att Adobe 
 >Det finns fortfarande stöd för att använda Adobe Target Classic API i AEM för bakåtkompatibilitet. I [Target Classic API används inloggningsuppgifter för autentisering](/help/sites-administering/target-configuring.md#manually-integrating-with-adobe-target).
 >
 >API-valet styrs av den autentiseringsmetod som används för AEM/Target-integrering.
+>Se även avsnittet [Klient-ID och Klientkod](#tenant-client).
 
 ## Förutsättningar {#prerequisites}
 
@@ -44,7 +45,7 @@ Innan du börjar med den här proceduren:
 
 * Din organisations systemadministratör bör använda Admin Console för att lägga till de utvecklare som behövs i organisationen till de relevanta produktprofilerna.
 
-   * Detta ger specifika utvecklare behörighet att aktivera integreringar inom Adobe I/O.
+   * Detta ger specifika utvecklare tillstånd att aktivera integreringar inom Adobe I/O.
    * Mer information finns i [Hantera utvecklare](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html).
 
 
@@ -71,17 +72,17 @@ Det första steget i konfigurationen är att skapa en IMS-konfiguration i AEM oc
 
 ## Konfigurera integrering av Adobe I/O för Adobe Target med AEM {#configuring-adobe-i-o-for-adobe-target-integration-with-aem}
 
-Du måste skapa det Adobe I/O Project (integration) med Adobe Target som AEM ska använda och sedan tilldela de behörigheter som krävs.
+Du måste skapa det Adobe I/O-projekt (integrering) med Adobe Target som AEM ska använda och sedan tilldela de behörigheter som krävs.
 
 ### Skapar projektet {#creating-the-project}
 
-Öppna Adobe I/O-konsolen och skapa ett I/O-projekt med Adobe Target som AEM ska använda:
+Öppna konsolen Adobe I/O för att skapa ett I/O-projekt med Adobe Target som AEM ska använda:
 
 >[!NOTE]
 >
->Se även [Adobe I/O självstudiekurser](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html).
+>Se även självstudiekurserna [Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html).
 
-1. Öppna Adobe I/O Console for Projects:
+1. Öppna Adobe I/O-konsolen för projekt:
 
    [https://console.adobe.io/projects](https://console.adobe.io/projects)
 
@@ -146,9 +147,9 @@ Du måste nu tilldela nödvändig behörighet till integreringen:
 1. Välj **Integrationer** och sedan den integreringskonfiguration som krävs.
 1. Välj **redigerare** som **produktroll**; i stället för **Observer**.
 
-## Information lagrad för Adobe I/O Integration Project {#details-stored-for-the-adobe-io-integration-project}
+## Information lagrad för Adobe I/O-integreringsprojektet {#details-stored-for-the-adobe-io-integration-project}
 
-På Adobe I/O Projects-konsolen ser du en lista över alla dina integrationsprojekt:
+På projektkonsolen i Adobe I/O kan du se en lista över alla dina integrationsprojekt:
 
 * [https://console.adobe.io/projects](https://console.adobe.io/projects)
 
@@ -163,7 +164,7 @@ Välj **Visa** (till höger om en viss projektpost) om du vill visa mer informat
 * APIS
    * Exempel: Adobe Target
 
-Några av dessa behöver du för att slutföra Adobe I/O-integreringen för Target i AEM.
+Vissa av dessa behöver du för att slutföra integreringen av Target i AEM med Adobe I/O.
 
 ## Slutför IMS-konfigurationen i AEM {#completing-the-ims-configuration-in-aem}
 
@@ -177,8 +178,8 @@ Om du går tillbaka till AEM kan du slutföra IMS-konfigurationen genom att läg
    * **Titel**: Din text.
    * **Auktoriseringsserver**: Kopiera/klistra in detta från  `"aud"` raden i  **** löneavsnittet nedan, t.ex.  `"https://ims-na1.adobelogin.com"` i exemplet nedan
    * **API-nyckel**: Kopiera detta från  [](#details-stored-for-the-adobe-io-integration-project) översiktsavsnittet i Adobe I/O-integreringen för Target
-   * **Klienthemlighet**: Generera detta under  [](#details-stored-for-the-adobe-io-integration-project) Översikt av Adobe I/O-integreringen för Target och kopiera
-   * **Nyttolast**: Kopiera detta från  [Generate ](#details-stored-for-the-adobe-io-integration-project) JWT-delen av Adobe I/O-integreringen för Target
+   * **Klienthemlighet**: Generera detta i  [](#details-stored-for-the-adobe-io-integration-project) översiktsavsnittet för Target-integrationen och kopiera
+   * **Nyttolast**: Kopiera detta från  [Generate ](#details-stored-for-the-adobe-io-integration-project) JWT-avsnittet i Adobe I/O-integreringen för Target
 
    ![](assets/integrate-target-io-10.png)
 
@@ -230,7 +231,7 @@ Det går nu att referera till konfigurationen för en Cloud Service som använde
 1. Ange informationen på fliken **Adobe Target Settings**:
 
    * **Autentisering**: IMS
-   * **Klient-ID**: Klient-ID för Adobe IMS
+   * **Klient-ID**: Klient-ID för Adobe IMS. Se även avsnittet [Klient-ID och Klientkod](#tenant-client) nedan.
 
       >[!NOTE]
       >
@@ -241,7 +242,7 @@ Det går nu att referera till konfigurationen för en Cloud Service som använde
       >`https://experience.adobe.com/#/@yourtenantid/target/activities`
       >
       >Sedan använder du `yourtenantid`.
-
+   * **Klientkod**: Se  [Klient-ID och ](#tenant-client) Klientkod nedan.
    * **IMS-konfiguration**: välj namnet på IMS-konfigurationen
    * **API-typ**: REST
    * **A4T Analytics Cloud-konfiguration**: Välj den Analytics-molnkonfiguration som används för målaktivitetsmål och -mått. Du behöver detta om du använder Adobe Analytics som rapportkälla när du skapar innehåll för målgruppsanpassning. Om du inte ser din molnkonfiguration läser du i [Konfigurera A4T Analytics Cloud Configuration](/help/sites-administering/target-configuring.md#configuring-a-t-analytics-cloud-configuration).
@@ -254,15 +255,35 @@ Det går nu att referera till konfigurationen för en Cloud Service som använde
    >[!NOTE]
    >
    >[Konfigurationen av en Cloud Service för att använda Target Classic-](/help/sites-administering/target-configuring.md#manually-integrating-with-adobe-target) API har tagits bort (fliken Adobe Recommendations Settings används).
-
-   Till exempel:
-
-   ![](assets/integrate-target-io-14.png)
-
 1. Klicka på **Anslut till mål** för att initiera anslutningen till Adobe Target.
 
    Om anslutningen lyckas visas meddelandet **Anslutningen lyckades**.
 
 1. Välj **OK** i meddelandet följt av **OK** i dialogrutan för att bekräfta konfigurationen.
 1. Du kan nu fortsätta till [Lägga till ett målramverk](/help/sites-administering/target-configuring.md#adding-a-target-framework) för att konfigurera ContextHub- eller ClientContext-parametrar som ska skickas till Target. Observera att detta kanske inte behövs för att exportera AEM Experience Fragments till Target.
+
+### Klient-ID och klientkod {#tenant-client}
+
+Med [Adobe Experience Manager 6.5.8.0](/help/release-notes/sp-release-notes.md) har fältet Klientkod lagts till i fönstret för målkonfigurationen.
+
+Tänk på följande när du konfigurerar fälten för klient-ID och klientkod:
+
+1. För de flesta kunder är innehavar-ID och klientkod samma. Det innebär att båda fälten innehåller samma information och är identiska. Se till att du anger klient-ID i båda fälten.
+2. För äldre syften kan du även ange olika värden i fälten Klient-ID och Klientkod.
+
+I båda fallen ska du tänka på följande:
+
+* Som standard kopieras även klientkoden (om den läggs till först) automatiskt till fältet Klient-ID.
+* Du kan ändra standardinställningen för klient-ID.
+* Därför kommer serverdelsanropen till Target att baseras på klientens ID och klientsidans anrop till Target kommer att baseras på klientkoden.
+
+Som tidigare nämnts är det första fallet det vanligaste för AEM 6.5. Oavsett vad du väljer bör du kontrollera att både **och**-fälten innehåller rätt information beroende på dina behov.
+
+>[!NOTE]
+>
+> Om du vill ändra en befintlig målkonfiguration:
+>
+> 1. Ange klientorganisations-ID:t igen.
+> 2. Återanslut till mål.
+> 3. Spara konfigurationen.
 
