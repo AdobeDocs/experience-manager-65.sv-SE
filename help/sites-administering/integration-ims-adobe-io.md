@@ -11,9 +11,9 @@ topic-tags: integration
 discoiquuid: 3b9285db-8fba-4d12-8f52-41daa50a5403
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 07f354ccfb8741f0de4fc85ba1575ead3b8ea6e4
+source-git-commit: 498896dccf80065195cc945b01cb8d037b8f6dab
 workflow-type: tm+mt
-source-wordcount: '1559'
+source-wordcount: '1557'
 ht-degree: 0%
 
 ---
@@ -231,7 +231,7 @@ Det går nu att referera till konfigurationen för en Cloud Service som använde
 1. Ange informationen på fliken **Adobe Target Settings**:
 
    * **Autentisering**: IMS
-   * **Klient-ID**: Klient-ID för Adobe IMS. Se även avsnittet [Klient-ID och Klientkod](#tenant-client) nedan.
+   * **Klient-ID**: Klient-ID för Adobe IMS. Se även avsnittet [Klient-ID och Klientkod](#tenant-client).
 
       >[!NOTE]
       >
@@ -242,7 +242,7 @@ Det går nu att referera till konfigurationen för en Cloud Service som använde
       >`https://experience.adobe.com/#/@yourtenantid/target/activities`
       >
       >Sedan använder du `yourtenantid`.
-   * **Klientkod**: Se  [Klient-ID och ](#tenant-client) Klientkod nedan.
+   * **Klientkod**: Se  [Klient-ID och ](#tenant-client) Klientkod.
    * **IMS-konfiguration**: välj namnet på IMS-konfigurationen
    * **API-typ**: REST
    * **A4T Analytics Cloud-konfiguration**: Välj den Analytics-molnkonfiguration som används för målaktivitetsmål och -mått. Du behöver detta om du använder Adobe Analytics som rapportkälla när du skapar innehåll för målgruppsanpassning. Om du inte ser din molnkonfiguration läser du i [Konfigurera A4T Analytics Cloud Configuration](/help/sites-administering/target-configuring.md#configuring-a-t-analytics-cloud-configuration).
