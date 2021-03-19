@@ -2,10 +2,12 @@
 title: Resurshandbok
 description: Den här guiden täcker alla Experience Manager Assets-uppgifter, t.ex. hur du skapar, hanterar, levererar och optimerar digitala resurser.
 user-guide-title: Resurshandbok
+feature: Resurshantering
+role: Affärsman, arkitekt, administratör
 translation-type: tm+mt
-source-git-commit: 18e62f8fb46de20e1668b2dcdcedf68fe4622b50
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '321'
+source-wordcount: '327'
 ht-degree: 4%
 
 ---
