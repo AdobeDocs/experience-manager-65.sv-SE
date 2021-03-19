@@ -9,10 +9,11 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: fa054d30-c7dc-4b64-acf1-cbcbe8827df5
+feature: Dokumentsäkerhet
 translation-type: tm+mt
-source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '4755'
+source-wordcount: '4757'
 ht-degree: 0%
 
 ---
@@ -20,7 +21,7 @@ ht-degree: 0%
 
 # Skapa och hantera profiler {#creating-and-managing-policies}
 
-En *princip* definierar en uppsättning sekretessinställningar och användare som kan komma åt ett dokument som profilen tillämpas på. En *principuppsättning* används för att gruppera en uppsättning principer som har ett gemensamt affärssyfte. Dessa principuppsättningar görs sedan tillgängliga för en delmängd av användarna i systemet. Mer information om profiler finns i [Profiler och policyskyddade dokument](/help/forms/using/admin-help/document-security.md#policies-and-policy-protected-documents).
+En *princip* definierar en uppsättning sekretessinställningar och användare som kan komma åt ett dokument som profilen tillämpas på. En *principuppsättning* används för att gruppera en uppsättning profiler som har ett gemensamt affärssyfte. Dessa principuppsättningar görs sedan tillgängliga för en delmängd av användarna i systemet. Mer information om profiler finns i [Profiler och policyskyddade dokument](/help/forms/using/admin-help/document-security.md#policies-and-policy-protected-documents).
 
 ## Typer av principer {#types-of-policies}
 
@@ -116,7 +117,7 @@ När du redigerar profiler gäller dessa begränsningar:
 1. Välj lämpliga alternativ under Allmänna inställningar. (Se [Allmänna inställningar](creating-policies.md#general-settings).)
 1. (Valfritt) Om det är tillämpligt väljer du en extern auktoriseringsleverantör och anger dess egenskaper. Om du inte vill använda en extern auktoriseringsleverantör klickar du på Ta bort standardprovider.
 
-   En extern auktoriseringsprovider används för att ställa in egenskaper i profilen och när den väljs används den externa auktoriseringsprovidern för att utvärdera principen. De tillgängliga egenskaperna konfigureras av administratören och den person som installerar programvaran.
+   En extern auktoriseringsleverantör används för att ställa in egenskaper i principen och när den väljs används den här informationen för att utvärdera principen. De tillgängliga egenskaperna konfigureras av administratören och den person som installerar programvaran.
 
 1. Välj lämpliga alternativ under Avancerade inställningar. (Se [Avancerade inställningar](creating-policies.md#advanced-settings).)
 1. Välj lämpliga alternativ under Ej ändringsbara avancerade inställningar. (Se [Avancerade inställningar som inte kan ändras](creating-policies.md#unchangeable-advanced-settings).)
@@ -156,7 +157,7 @@ Efter registrering kan inbjudna användare använda principskyddade dokument som
 
 #### Ange dokumentbehörigheter för användare och grupper {#specify-the-document-permissions-for-users-and-groups}
 
-Du kan ange dokumentbehörigheter för en användare eller grupp åt gången, eller så kan du markera flera användare och grupper i listan och ändra deras behörigheter med hjälp av alternativen i området för kolumnrubriker.
+Du kan ange dokumentbehörigheter för en användare eller grupp åt gången, eller så kan du markera flera användare och grupper i listan och ändra deras behörigheter med alternativen i området för kolumnrubriker.
 
 Som standard har alla principskyddade dokument en behörighet som tillåter användare att öppna dem online.
 
@@ -254,7 +255,7 @@ Om du åsidosätter de globala autentiseringsinställningarna kan du välja de a
 
 Området Avancerade inställningar innehåller följande inställningar:
 
-**Dynamisk vattenstämpel:** Välj en vattenstämpel som ska visas dynamiskt på sidorna i ett dokument (till exempel när en mottagare skriver ut dokumentet). Dynamiska vattenstämplar identifierar unikt ett dokument och bidrar därför till att säkerställa dokumentets sekretess och förhindra upphovsrättsintrång. Administratören kan till exempel konfigurera en dynamisk vattenstämpel som visar aktuellt datum, användarnamnet eller identifieraren för den person som använder dokumentet eller namnet på profilen som används för att skydda dokumentet. En vattenstämpel kan även visa anpassad text eller grafiska element om den är konfigurerad. Administratörer konfigurerar alternativen för vattenstämplar och administratörer och användare kan tillämpa dem på profiler.
+**Dynamisk vattenstämpel:** Välj en vattenstämpel som ska visas dynamiskt på sidorna i ett dokument (t.ex. när en mottagare skriver ut dokumentet). Dynamiska vattenstämplar identifierar unikt ett dokument och bidrar därför till att säkerställa dokumentets sekretess och förhindra upphovsrättsintrång. Administratören kan till exempel konfigurera en dynamisk vattenstämpel som visar aktuellt datum, användarnamnet eller identifieraren för den person som använder dokumentet eller namnet på profilen som används för att skydda dokumentet. En vattenstämpel kan även visa anpassad text eller grafiska element om den är konfigurerad. Administratörer konfigurerar alternativen för vattenstämplar och administratörer och användare kan tillämpa dem på profiler.
 
 (Se [Konfigurera dynamiska vattenstämplar](/help/forms/using/admin-help/configuring-client-server-options.md#configure-dynamic-watermarks).)
 
