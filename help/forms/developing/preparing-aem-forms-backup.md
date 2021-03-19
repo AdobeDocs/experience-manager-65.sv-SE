@@ -9,10 +9,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: e747147e-e96d-43c7-87b3-55947eef81f5
+role: Developer
 translation-type: tm+mt
-source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2554'
+source-wordcount: '2555'
 ht-degree: 0%
 
 ---
@@ -174,7 +175,7 @@ Ange säkerhetskopieringsläge med webbtjänsten som tillhandahålls av API:t f�
 
 1. Hämta information om sessionen för säkerhetskopieringsläge på servern
 
-   Hämta information om säkerhetskopieringsläget när du har anropat metoden enterBackupMode från BackupModeEntryResult som returneras för att bekräfta att den lyckades. Den information du kan hämta när du har aktiverat säkerhetskopieringsläget kan vara användbar för integrering med dina säkerhetskopieringsprocedurer. Etiketten, säkerhetskopierings-ID:t och starttiden kan till exempel vara användbara som indata för filnamn för säkerhetskopieringsproceduren.
+   Hämta information om sessionen för säkerhetskopieringsläge efter att metoden enterBackupMode har anropats från BackupModeEntryResult som returneras för att bekräfta att den lyckades. Den information du kan hämta när du har aktiverat säkerhetskopieringsläget kan vara användbar för integrering med dina säkerhetskopieringsprocedurer. Etiketten, säkerhetskopierings-ID:t och starttiden kan till exempel vara användbara som indata för filnamn för säkerhetskopieringsproceduren.
 
 1. Säkerhetskopiera GDS och databasen
 
