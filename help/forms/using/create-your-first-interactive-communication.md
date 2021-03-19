@@ -8,10 +8,11 @@ contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: interactive-communications, introduction
 discoiquuid: 954da8da-a30b-477d-bde7-3edd86a5be11
+feature: Interaktiv kommunikation
 translation-type: tm+mt
-source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1060'
+source-wordcount: '1062'
 ht-degree: 0%
 
 ---
@@ -52,7 +53,7 @@ En telekomoperatör skickar månadsräkningar till kunderna via e-post. Fakturan
 * Konfigurera en AEM författarinstans.
 * Installera [AEM Forms add-on](/help/forms/using/installing-configuring-aem-forms-osgi.md) på författarinstansen
 * Konfigurera MYSQL-databasen
-* Hämta JDBC-databasdrivrutin (JAR-fil) från databasprovidern. Exemplen i självstudien är baserade på MySQL-databasen och använder Oracle [MySQL JDBC-databasdrivrutin](https://dev.mysql.com/downloads/connector/j/5.1.html).
+* Hämta JDBC-databasdrivrutin (JAR-fil) från databasprovidern. Exemplen i självstudien är baserade på MySQL-databasen och använder Oraclets [JDBC-databasdrivrutin för MySQL](https://dev.mysql.com/downloads/connector/j/5.1.html).
 
 ## Steg 1: Planera interaktiv kommunikation {#step-plan-the-interactive-communication}
 
