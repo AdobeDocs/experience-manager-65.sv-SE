@@ -10,10 +10,11 @@ topic-tags: configuring
 content-type: reference
 discoiquuid: 5d2364b7-4497-4f8b-85ef-6e780bfb8c36
 docset: aem65
+feature: Konfigurerar
 translation-type: tm+mt
-source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '5891'
+source-wordcount: '5892'
 ht-degree: 0%
 
 ---
@@ -94,7 +95,7 @@ Mer information om hur du skapar en &quot;aktiv&quot; säkerhetskopiering online
 
 ## Rensning av version {#version-purging}
 
-Verktyget **Rensa versioner** är avsett för att rensa versioner av en nod eller en hierarki av noder i databasen. Dess främsta syfte är att hjälpa dig att minska storleken på databasen genom att ta bort tidigare versioner av dina noder.
+Verktyget **Rensa versioner** är avsett för att rensa versioner av en nod eller en hierarki av noder i din databas. Dess främsta syfte är att hjälpa dig att minska storleken på databasen genom att ta bort tidigare versioner av dina noder.
 
 I det här avsnittet behandlas underhållsåtgärder som rör versionsfunktionen i AEM. Verktyget **Rensa version** är avsett för att rensa versioner av en nod eller en hierarki av noder i databasen. Dess främsta syfte är att hjälpa dig att minska storleken på databasen genom att ta bort tidigare versioner av dina noder.
 
@@ -1169,6 +1170,6 @@ Detta hjälper dig att se hur mycket minne som används, vilka GC-algoritmer som
 
 >[!NOTE]
 >
->För Oracle VM finns även information på:
+>För Oraclets virtuella dator finns även information på:
 >
 >[https://docs.oracle.com/javase/7/docs/technotes/guides/vm/server-class.html](https://docs.oracle.com/javase/7/docs/technotes/guides/vm/server-class.html)
