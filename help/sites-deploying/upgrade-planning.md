@@ -10,10 +10,11 @@ content-type: reference
 topic-tags: upgrading
 discoiquuid: 49210824-ad87-4b6a-9ae8-77dcfe2b5c06
 docset: aem65
+feature: Uppgraderar
 translation-type: tm+mt
-source-git-commit: 5035c9630b5e861f4386e1b5ab4f4ae7a8d26149
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2447'
+source-wordcount: '2448'
 ht-degree: 0%
 
 ---
@@ -54,12 +55,12 @@ Nedan finns en lista över områden som påverkas i ett vanligt AEM Upgrade Proj
   <tr>
    <td>Java Runtime</td>
    <td>Måttlig effekt</td>
-   <td>AEM 6.3 kräver JRE 1.7.x (64 bitar) eller senare. JRE 1.8 är den enda version som för närvarande stöds av Oracle.</td>
+   <td>AEM 6.3 kräver JRE 1.7.x (64 bitar) eller senare. JRE 1.8 är den enda version som för närvarande stöds av Oraclet.</td>
   </tr>
   <tr>
    <td>Maskinvara</td>
    <td>Måttlig effekt</td>
-   <td>Onlinekorrigering av revision kräver ett ledigt<br /> diskutrymme som motsvarar 25 % av databasens storlek och 15 % ledigt stackutrymme<br /> för att slutföras. Du kan behöva uppgradera din maskinvara för att<br /> se till att det finns tillräckligt med resurser för att kunna utföra en fullständig <br />-åtgärd. Om du uppgraderar från en version som är tidigare än AEM 6 kan det dessutom finnas ytterligare lagringskrav.<br /></td>
+   <td>Onlinerevision Cleanup kräver ett ledigt<br /> diskutrymme som motsvarar 25 % av databasens storlek och 15 % ledigt heap-utrymme<br /> för att slutföras. Du kan behöva uppgradera din maskinvara för att<br /> se till att det finns tillräckligt med resurser för att kunna utföra en fullständig <br />-åtgärd. Om du uppgraderar från en version som är tidigare än AEM 6 kan det dessutom finnas ytterligare lagringskrav.<br /></td>
   </tr>
   <tr>
    <td>Innehållsdatabas (CRX eller Oak)</td>
