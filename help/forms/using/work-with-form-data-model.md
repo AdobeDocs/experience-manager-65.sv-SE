@@ -8,10 +8,11 @@ topic-tags: integration
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: c47ef627-261e-4b4b-8846-873d3d84234b
 docset: aem65
+feature: Formulärdatamodell
 translation-type: tm+mt
-source-git-commit: ba42f1e85216f6be4ae0dd90891e1b2d1d559bd8
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '4034'
+source-wordcount: '4037'
 ht-degree: 0%
 
 ---
@@ -512,7 +513,7 @@ I följande tabell visas begränsningarna för indata baserat på datakällan:
    <td>Swagger</td> 
   </tr> 
   <tr> 
-   <td>enum (sträng)<br /> <br /> </td> 
+   <td>enum (string)<br /> <br /> </td> 
    <td>Begränsar värdet för en parameter i indata till en fast uppsättning strängvärden. Det måste vara en array med minst ett element, där varje element är unikt.</td> 
    <td>Swagger, WSDL och Odata</td> 
   </tr> 
