@@ -2,10 +2,11 @@
 title: Integrera [!DNL Assets] med aktivitetsström
 description: Beskriver inspelningsfunktionerna i [!DNL Experience Manager] och hur du konfigurerar det för att spela in specifika händelser.
 contentOwner: AG
+role: Developer
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '254'
 ht-degree: 1%
 
 ---
