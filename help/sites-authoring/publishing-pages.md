@@ -1,7 +1,7 @@
 ---
 title: Publicera sidor
 seo-title: Publicera sidor
-description: 'null'
+description: Publicera sidor
 seo-description: 'null'
 uuid: 57795e4a-e528-4e74-ad9c-e13f868daebb
 contentOwner: Chris Bohnert
@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 1f5eb646-acc7-49d5-b839-e451e68ada9e
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1611'
-ht-degree: 6%
+source-wordcount: '1612'
+ht-degree: 7%
 
 ---
 
