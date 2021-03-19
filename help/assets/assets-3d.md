@@ -7,10 +7,12 @@ contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: introduction
 content-type: reference
+feature: 3D-resurser,Resurshantering
+role: Affärsledare, administratör
 translation-type: tm+mt
-source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '2241'
+source-wordcount: '2248'
 ht-degree: 2%
 
 ---
@@ -32,7 +34,7 @@ Det krävs ingen ytterligare konfiguration för att använda 3D-resurser i Dynam
 
 ## 3D-format som stöds i Dynamic Media {#supported-three-d-file-formats-in-dm}
 
-Dynamic Media har stöd för följande 3D-format.
+Dynamic Media stöder följande 3D-format.
 
 Se även [3D-format som stöds.](/help/assets/assets-formats.md)
 
@@ -45,15 +47,15 @@ Se även [3D-format som stöds.](/help/assets/assets-formats.md)
 
 ## Snabbstart: 3D-resurser i Dynamic Media {#quick-start-three-d}
 
-Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma igång snabbt med 3D-resurser i läget Dynamic Media - Scene7.
+Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma igång snabbt med 3D-resurser i Dynamic Media - Scene7-läge.
 
 >[!NOTE]
 >
->3D-resurser stöds inte i läget Dynamic Media - Hybrid.
+>3D-resurser stöds inte i Dynamic Media - hybrid-läge.
 
-Innan du arbetar med 3D-resurser i Dynamic Media måste du kontrollera att AEM redan har aktiverat och konfigurerat Dynamic Media-Cloud Services i läget Dynamic Media - Scene7.
+Innan du arbetar med 3D-resurser i Dynamic Media måste du kontrollera att AEM redan har aktiverat och konfigurerat Dynamic Media-Cloud Services i Dynamic Media - Scene7-läge.
 
-Se [Konfigurera Cloud Services för dynamiska media](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services) i Konfigurera Dynamic Media - Scene7-läge och [Felsöka Dynamic Media - Scene7-läge.](/help/assets/troubleshoot-dms7.md)
+Se [Konfigurera Dynamic Media-Cloud Services](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services) i Konfigurera Dynamic Media - Scene7 och [Felsöka Dynamic Media - Scene7-läge.](/help/assets/troubleshoot-dms7.md)
 
 1. **Överför 3D-resurser**
 
@@ -80,8 +82,8 @@ Se [Konfigurera Cloud Services för dynamiska media](/help/assets/config-dms7.md
 
 1. **Publicera 3D-resurser**
 
-   * [Publicera statiska 3D-resurser för dynamiska media](#publishing-three-d-assets)
-   * [Alternativa metoder för publicering av 3D-resurser i Dynamic Media med Dimensional Viewer](#alternate-publish-methods)
+   * [Publicera statiska Dynamic Media 3D-resurser](#publishing-three-d-assets)
+   * [Alternativa metoder för publicering av Dynamic Media 3D-resurser med Dimensional Viewer](#alternate-publish-methods)
 
 ## Om att visa och interagera med 3D-resurser {#viewing-three-d-assets}
 
@@ -175,7 +177,7 @@ komponentenEn helt interaktiv 3D-resurs som visas i  **[!UICONTROL Preview]** l�
 
 ## Om att arbeta med 3D-mediekomponenten {#working-with-three-d-media-component}
 
-Dynamic Media innehåller en 3D Media-komponent för Dynamic Media som du kan använda i AEM Sites för att aktivera interaktiv visning av 3D-modeller på dina webbsidor.
+Dynamic Media innehåller en Dynamic Media 3D Media-komponent som du kan använda i AEM Sites för att aktivera interaktiv visning av 3D-modeller på dina webbsidor.
 
 * [Lägga till komponenten 3D Media i sidmallen](#adding-three-d-media-component-to-page-template)
 * [Lägga till komponenten 3D Media på en webbsida](#adding-the-three-d-media-component-to-a-web-page)
@@ -197,15 +199,15 @@ Dynamic Media innehåller en 3D Media-komponent för Dynamic Media som du kan an
 1. I avsnittet **[!UICONTROL Properties]**, under fliken **[!UICONTROL Allowed Components]**, bläddrar du till **[!UICONTROL Dynamic Media]**, expanderar sedan listan och kontrollerar **[!UICONTROL 3D Media.]**
 1. Tryck på **[!UICONTROL Done]** för att spara ändringarna och stänga **[!UICONTROL Policy Editor.]**
 
-   Nu kan du placera komponenten Dynamic Media 3D Media på alla sidor som använder den här mallen.
+   Nu kan du placera Dynamic Media 3D Media-komponenten på alla sidor som använder den här mallen.
 
 ## Lägga till komponenten 3D Media på en webbsida {#adding-the-three-d-media-component-to-a-web-page}
 
 Om du använder Adobe Experience Manager som webbinnehållshanteringssystem kan du lägga till 3D-resurser på dina webbsidor med 3D Media-komponenten.
 
-Se även [Lägga till dynamiska medieresurser på sidor.](/help/assets/adding-dynamic-media-assets-to-pages.md)
+Se även [Lägga till Dynamic Media-resurser på sidor.](/help/assets/adding-dynamic-media-assets-to-pages.md)
 
-1. Öppna AEM Sites och markera den webbsida där du vill lägga till komponenten Dynamic Media 3D Media.
+1. Öppna AEM Sites och markera den webbsida där du vill lägga till Dynamic Media 3D Media-komponenten.
 1. Tryck på ikonen **[!UICONTROL Edit]** (penna) för att öppna sidan i sidredigeraren. Kontrollera att **[!UICONTROL Edit]**-läget är markerat i sidans övre högra hörn.
 
    ![3d-media-component-add](/help/assets/assets-dm/3d-media-component-edit.png)
@@ -252,21 +254,21 @@ Se [Lägga till komponenten 3D Media på en webbsida.](#adding-the-three-d-media
 >
 >När en webbsida är i läget AEM Sites **[!UICONTROL Edit]** visar 3D-mediekomponenten 3D-resursen, men ingen interaktion med resursen är möjlig. Om du vill göra resursen interaktiv kan du använda funktionen **[!UICONTROL Preview]** för att visa webbsidan i sidredigeraren med fullständig tillgång till funktionaliteten i 3D Media-komponenten.
 
-## Publicera statiska 3D-resurser för dynamiska media {#publishing-three-d-assets}
+## Publicera statiska Dynamic Media 3D-resurser {#publishing-three-d-assets}
 
-Dynamic Media har stöd för en mängd olika 3D-filformat som *statiskt innehåll* i Dynamic Media. Statiskt innehåll innebär att du kan överföra och publicera 3D-resurser, men det finns inget stöd för *dynamisk* bildåtergivning eller bildåtergivning som är associerat med 3D-resursen. Orsaken är att Dynamic Media Imaging Server inte känner igen 3D-format. När du har publicerat en 3D-resurs i Dynamic Media får du en direkt URL som du kan kopiera. URL:en för 3D-resursen följer den vanliga URL-strukturen för dynamiska media. Du kan dock inte redigera några parametrar i resursens URL, till skillnad från traditionella bildresurser i Dynamic Media.
+Dynamic Media accepterar en mängd olika 3D-filformat som stöds som *statiskt innehåll* i Dynamic Media. Statiskt innehåll innebär att du kan överföra och publicera 3D-resurser, men det finns inget stöd för *dynamisk* bildåtergivning eller bildåtergivning som är associerat med 3D-resursen. Orsaken är att Dynamic Media Imaging Server inte känner igen 3D-format. När du har publicerat en 3D-resurs i Dynamic Media får du en direkt URL som du kan kopiera. URL:en för 3D-resursen följer den vanliga Dynamic Media URL-strukturen. Du kan dock inte redigera några parametrar i resursens URL, till skillnad från traditionella bildresurser i Dynamic Media.
 
 Se även [Hämta en URL för en statisk resurs.](/help/assets/linking-urls-to-yourwebapplication.md#obtaining-a-url-for-a-static-asset)
 
 I **[!UICONTROL Card View]** visas en liten globala ikon direkt under namnet på en resurs och till vänster om dess datum och tid för att ange att den publiceras. I **[!UICONTROL List View]** anger kolumnen **[!UICONTROL Published]** vilka resurser som har publicerats och inte.
 
-Om du använder AEM som WCM-fil kan du använda den här publiceringsmetoden för att lägga till 3D-resurser för dynamiska media direkt på webbsidan.
+Om du använder AEM som WCM-fil kan du använda den här publiceringsmetoden för att lägga till Dynamic Media 3D-resurser direkt på webbsidan.
 
-Se även [Publicera dynamiska medieresurser.](publishing-dynamicmedia-assets.md)
+Se även [Publicera Dynamic Media-resurser.](publishing-dynamicmedia-assets.md)
 
 Se även [Publicera sidor.](/help/sites-authoring/publishing-pages.md)
 
-**Publicera statiska 3D-resurser för dynamiska media**
+**Publicera statiska Dynamic Media 3D-resurser**
 
 1. Öppna en 3D-resurs (GLB-, OBJ- eller STL-filformat) för att visa den på sidan med tillgångsinformation.
 1. Tryck på **[!UICONTROL Quick Publish.]** i verktygsfältet
@@ -287,14 +289,14 @@ Se även [Publicera sidor.](/help/sites-authoring/publishing-pages.md)
 
 1. Tryck på **[!UICONTROL URL]** för att visa 3D-resursens URL för direktproduktion som du kan kopiera och använda på webbsidor.
 
-### Alternativa metoder för publicering av 3D-resurser i Dynamic Media med Dimensional Viewer {#alternate-publish-methods}
+### Alternativa metoder för publicering av Dynamic Media 3D-resurser med Dimensional Viewer {#alternate-publish-methods}
 
-Använd följande två metoder för att publicera 3D-resurser i Dynamic Media om du *inte* använder AEM som WCM.
+Använd följande två metoder för att publicera Dynamic Media 3D-resurser om du *inte* använder AEM som WCM.
 
-* **[!UICONTROL URL]** - Använd  **[!UICONTROL URL]** om du använder ett tredjepartssystem för hantering av webbinnehåll och vill länka 3D-resurser för dynamiska media till dina webbsidor med Dimensional Viewer.
+* **[!UICONTROL URL]** - Använd  **[!UICONTROL URL]** om du använder ett tredjepartssystem för hantering av webbinnehåll och vill länka Dynamic Media 3D-resurser till dina webbsidor med Dimensional Viewer.
 
    Se [Länka URL:er till ditt webbprogram.](/help/assets/linking-urls-to-yourwebapplication.md#obtaining-a-url-for-an-asset)
 
-* **[!UICONTROL Embed]** - Använd  **[!UICONTROL Embed]** när du vill visa en 3D-resurs för dynamiska media som är inbäddad på en webbsida med Dimensional Viewer. Du kopierar inbäddningskoden till Urklipp så att du kan klistra in den på webbsidorna. Det är inte tillåtet att redigera koden i dialogrutan **[!UICONTROL Embed]**.
+* **[!UICONTROL Embed]** - Använd  **[!UICONTROL Embed]** när du vill visa en Dynamic Media 3D-resurs som är inbäddad på en webbsida med Dimensional Viewer. Du kopierar inbäddningskoden till Urklipp så att du kan klistra in den på webbsidorna. Det är inte tillåtet att redigera koden i dialogrutan **[!UICONTROL Embed]**.
 
    Se [Bädda in Dynamic Media Video, Image Viewer eller Dimensional Viewer på en webbsida.](/help/assets/embed-code.md#embedding-the-video-or-image-viewer-on-a-web-page)
