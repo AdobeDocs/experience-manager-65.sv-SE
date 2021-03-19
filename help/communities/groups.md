@@ -11,10 +11,11 @@ content-type: reference
 discoiquuid: d381ea40-fe49-4d32-bfad-1379c7a02aba
 docset: aem65
 pagetitle: Community Groups Console
+role: Administratör
 translation-type: tm+mt
-source-git-commit: 807a81045fca19ab83b9d7872684a5f8a9ed70f1
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1676'
+source-wordcount: '1677'
 ht-degree: 0%
 
 ---
@@ -121,7 +122,7 @@ Du kan välja ett tema som skiljer sig från den överordnade webbplatsens tema.
 
 När communitywebbplatsen har publicerats går det att [redigera egenskaperna](#modifyinggroupproperties) och välja ett annat tema.
 
-### GEMENSKAPSGRUPPENS VARUMÄRKE {#community-group-branding}
+### VARUMÄRKE FÖR GEMENSKAPSGRUPP {#community-group-branding}
 
 ![community-group-branding](assets/community-group-branding.png)
 
