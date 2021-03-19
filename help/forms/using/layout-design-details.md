@@ -9,10 +9,11 @@ topic-tags: correspondence-management, interactive-communications
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 683809ac-089b-49bf-a72c-67d32439081f
 docset: aem65
+feature: Korrespondenshantering
 translation-type: tm+mt
-source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2190'
+source-wordcount: '2192'
 ht-degree: 0%
 
 ---
@@ -78,7 +79,7 @@ Utför följande steg för att använda delformulär i en XDP-mall:
    1. Ange ett namn för delformuläret i fältet **Namn**.
    1. Välj **Ingen databindning** i listrutan **Databindning**.
 
-1. Markera på samma sätt rotdelformuläret i den vänstra rutan.
+1. På samma sätt markerar du rotdelformuläret i den vänstra rutan.
 
    ![Rotdelformulär](assets/root_subform_designer_new.png)
 
