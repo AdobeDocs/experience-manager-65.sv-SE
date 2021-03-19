@@ -7,10 +7,12 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: administering
 content-type: reference
 discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
+feature: Bildprofiler
+role: Affärsledare, administratör
 translation-type: tm+mt
-source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '2674'
+source-wordcount: '2679'
 ht-degree: 6%
 
 ---
@@ -34,7 +36,7 @@ När du överför bilder kan du beskära bilden automatiskt vid överföring gen
 
 Koordinaterna för smart beskärning är proportionella. Det vill säga, för de olika inställningarna för smart beskärning i en bildprofil, skickas samma proportioner till Dynamic Media om proportionerna är desamma för de nya måtten i bildprofilen. Därför rekommenderar Adobe att du använder samma beskärningsområde. Om du gör det påverkas inte de olika måtten som används i bildprofilen.
 
-Tänk på att varje generering av SmartCrop som du skapar kräver extra bearbetning. Om du till exempel lägger till fler än fem proportioner för smart beskärning kan det leda till en långsam intag av resurser. Det kan också ge ökad belastning på systemen. Eftersom du kan använda SmartCrop på mappnivå rekommenderar Adobe att du bara använder det på mappar *där det behövs.*
+Tänk på att varje generering av SmartCrop som du skapar kräver extra bearbetning. Om du till exempel lägger till mer än fem proportioner för smart beskärning kan det leda till en långsam intag av resurser. Det kan också ge ökad belastning på systemen. Eftersom du kan använda SmartCrop på mappnivå rekommenderar Adobe att du bara använder det på mappar *där det behövs.*
 
 Du kan välja mellan två bildbeskärningsalternativ. Du kan också automatisera skapandet av färg- och bildfärgrutor.
 
