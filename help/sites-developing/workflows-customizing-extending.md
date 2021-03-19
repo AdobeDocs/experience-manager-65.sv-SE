@@ -1,7 +1,7 @@
 ---
 title: Utöka arbetsflödesfunktioner
 seo-title: Utöka arbetsflödesfunktioner
-description: 'null'
+description: Utöka arbetsflödesfunktioner
 seo-description: 'null'
 uuid: 9f4ea2a8-8b21-4e7c-ac73-dd37d9ada111
 contentOwner: User
@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: f23408c3-6b37-4047-9cce-0cab97bb6c5c
 translation-type: tm+mt
-source-git-commit: 48d18de8c982ab3b92cad4df030cb1e4a1a8dfc4
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '3587'
+source-wordcount: '3589'
 ht-degree: 1%
 
 ---
@@ -209,7 +209,7 @@ Om du vill fokusera komponenten för användning i ett specifikt arbetsflödessc
 
 ### Lägga till Forms och dialogrutor i deltagarsteg {#adding-forms-and-dialogs-to-participant-steps}
 
-Anpassa stegkomponenten för deltagaren så att den innehåller funktioner som finns i [steget Formulärdeltagare](/help/sites-developing/workflows-step-ref.md#form-participant-step) och [Steg för dialogdeltagare](/help/sites-developing/workflows-step-ref.md#dialog-participant-step)-komponenterna:
+Anpassa stegkomponenten för deltagaren för att tillhandahålla funktioner som finns i [steget Formulärdeltagare](/help/sites-developing/workflows-step-ref.md#form-participant-step) och [Steg för dialogdeltagare](/help/sites-developing/workflows-step-ref.md#dialog-participant-step)-komponenterna:
 
 * Visa ett formulär för användaren när han/hon öppnar det genererade arbetsobjektet.
 * Visa en anpassad dialogruta för användaren när han/hon slutför det genererade arbetsobjektet.
@@ -817,7 +817,7 @@ Ett enkelt sätt att börja skapa ett eget anpassat steg är att kopiera ett bef
 
    Här är resultatet av vårt skräddarsydda steg:
 
-   ![wf-34](assets/wf-34.png)
+   ![wf-36](assets/wf-34.png)
 
    >[!CAUTION]
    >
@@ -858,7 +858,7 @@ Ett enkelt sätt att börja skapa ett eget anpassat steg är att kopiera ett bef
 
 1. Nu kan du öppna en arbetsflödesmodell för redigering. I stegwebbläsaren kan du filtrera så att du ser **Mina anpassade steg**:
 
-   ![wf-36](assets/wf-36.png)
+   ![wf-34](assets/wf-36.png)
 
    Om du drar **Mitt anpassade steg** till modellen visas kortet:
 
