@@ -10,10 +10,11 @@ content-type: reference
 topic-tags: configuring
 discoiquuid: 3cae081e-93e3-4317-b307-1316283c307a
 docset: aem65
+feature: Konfigurerar
 translation-type: tm+mt
-source-git-commit: 17d70e532ab5d825dd4dc0ea4c891c5b7cb8d345
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '3434'
+source-wordcount: '3435'
 ht-degree: 0%
 
 ---
@@ -508,7 +509,7 @@ Replikeringsagenten **Dispatcher Flush** är inte aktiv för författaren. Du ka
 >
 >Om du anger sådana behörigheter påverkas inte användare som replikerar innehåll (t.ex. från webbplatskonsolen eller sidosparsalternativet). Replikeringsramverket använder inte den aktuella användarens användarsession för att komma åt replikeringsagenter när sidor replikeras.
 
-### Konfigurera replikeringsagenter från CRXDE Lite {#configuring-your-replication-agents-from-crxde-lite}
+### Konfigurera dina replikeringsagenter från CRXDE Lite {#configuring-your-replication-agents-from-crxde-lite}
 
 >[!NOTE]
 >
