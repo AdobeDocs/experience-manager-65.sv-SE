@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: installing
 geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: 0156b5c3-3bef-4213-9ada-c7b6ae96ada4
+role: Administratör
 translation-type: tm+mt
-source-git-commit: aaedec7314b0fa8551df560eef2574a53c20d1c5
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2490'
+source-wordcount: '2491'
 ht-degree: 0%
 
 ---
@@ -50,7 +51,7 @@ AEM Forms on JEE innehåller även följande stödtjänster till AEM:
 
 AEM Forms redigeringsgränssnitt stöder inte skapande av DOR (Document of Record), PDF forms och HTML5 Forms. Sådana resurser är utformade med det fristående Forms Designer-programmet och överförs individuellt till AEM Forms Manager. För AEM Forms på JEE kan formulär även utformas som programresurser (i AEM Forms Workbench) och distribueras till AEM Forms på JEE-server.
 
-AEM Forms på OSGi och AEM Forms på JEE har båda arbetsflödesfunktioner. Du kan snabbt skapa och distribuera grundläggande arbetsflöden för olika uppgifter i AEM formulär på OSGi, utan att behöva installera AEM Forms fullständiga processhanteringsfunktion på JEE. Det finns en viss skillnad i [funktionerna i det formulärbaserade arbetsflödet i AEM Forms för OSGi och Process Management i AEM Forms på JEE](capabilities-osgi-jee-workflows.md). Utvecklandet och hanteringen av formulärcentrerade arbetsflöden i AEM Forms på OSGi använder de välbekanta AEM arbetsflödes- och AEM Inbox-funktionerna.
+AEM Forms på OSGi och AEM Forms på JEE har båda arbetsflödesfunktioner. Du kan snabbt skapa och distribuera grundläggande arbetsflöden för olika uppgifter i AEM formulär på OSGi, utan att behöva installera AEM Forms fullständiga processhanteringsfunktion på JEE. Det finns en viss skillnad i [funktionerna i det formulärbaserade arbetsflödet på AEM Forms i OSGi och Process Management-funktionen i AEM Forms i JEE](capabilities-osgi-jee-workflows.md). Utvecklandet och hanteringen av formulärcentrerade arbetsflöden i AEM Forms på OSGi använder de välbekanta AEM arbetsflödes- och AEM Inbox-funktionerna.
 
 ## Terminologier {#terminologies}
 
@@ -95,7 +96,7 @@ De AEM Forms on JEE-topologier som rekommenderas nedan gäller främst kunder so
 
 AEM Forms-kunder som bara planerar att använda dokumenttjänster eller dokumentsäkerhetsfunktioner kan ha en topologi som liknar den som visas nedan. Den här topologin rekommenderar att du använder en enda instans av AEM Forms. Du kan också skapa ett kluster eller en grupp med AEM Forms-servrar om det behövs. Den här topologin rekommenderas när de flesta användare programmässigt får tillgång till funktioner på AEM Forms-servern och det krävs minsta möjliga ingrepp via användargränssnittet. Topologin är användbar vid gruppbearbetning av dokumenttjänster. Du kan till exempel använda utdatatjänsten för att skapa hundratals icke-redigerbara PDF-dokument dagligen.
 
-Även om AEM Forms gör det möjligt att konfigurera och köra alla funktioner från en enda server bör du ändå göra kapacitetsplanering, lastbalansering och konfigurera dedikerade servrar för specifika funktioner i en produktionsmiljö. I en miljö som använder tjänsten PDF Generator för att konvertera tusentals sidor om dagen och lägga till digitala signaturer för att begränsa åtkomsten till dokumenten, kan du skapa separata AEM Forms-servrar för tjänsten PDF Generator och funktioner för digitala signaturer. Det ger optimala prestanda och skalar servrarna oberoende av varandra.
+Även om AEM Forms låter dig konfigurera och köra alla funktioner från en enda server bör du ändå göra kapacitetsplanering, lastbalansering och konfigurera dedikerade servrar för specifika funktioner i en produktionsmiljö. I en miljö som använder tjänsten PDF Generator för att konvertera tusentals sidor om dagen och lägga till digitala signaturer för att begränsa åtkomsten till dokumenten, kan du skapa separata AEM Forms-servrar för tjänsten PDF Generator och funktioner för digitala signaturer. Det ger optimala prestanda och skalar servrarna oberoende av varandra.
 
 ![grundläggande funktioner](assets/basic-features.png)
 
