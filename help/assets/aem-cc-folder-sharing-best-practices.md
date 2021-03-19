@@ -2,10 +2,11 @@
 title: Mappdelning till  [!DNL Adobe Creative Cloud] god praxis
 description: Konfigurera [!DNL Adobe Experience Manager] to allow users in [!DNL Experience Manager Assets] för utbyte av mappar med Adobe Creative Cloud-användare (CC).
 contentOwner: AG
+role: Affärsledare, administratör
 translation-type: tm+mt
-source-git-commit: 18e62f8fb46de20e1668b2dcdcedf68fe4622b50
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '954'
+source-wordcount: '957'
 ht-degree: 0%
 
 ---
