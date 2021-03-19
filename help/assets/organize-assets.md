@@ -2,10 +2,11 @@
 title: Ordna dina digitala resurser
 description: Organisera dina digitala resurser, bilder, filer, mappar och så vidare med Experience Manager.
 contentOwner: AG
+role: Yrkesverksamma inom affärsverksamhet
 translation-type: tm+mt
-source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '780'
+source-wordcount: '782'
 ht-degree: 0%
 
 ---
@@ -71,5 +72,5 @@ Genom att standardisera metadataanvändning, filnamngivning och mappstruktur sä
 >* [Profiler för att bearbeta metadata, bilder och videoklipp](processing-profiles.md).
 >* [Metadataprofiler](/help/assets/metadata-config.md#metadata-profiles).
 >* [Videoprofiler](video-profiles.md).
->* [Dynamic Media-bildprofiler](image-profiles.md).
+>* [Dynamic Media bildprofiler](image-profiles.md).
 
