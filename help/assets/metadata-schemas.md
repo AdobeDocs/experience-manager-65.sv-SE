@@ -2,10 +2,11 @@
 title: 'Metadata-scheman för att definiera layout för metadataegenskapssida i [!DNL Adobe Experience Manager Assets]. '
 description: Metadata-schemat definierar layouten för egenskapssidan och de metadataegenskaper som visas för resurser. Lär dig hur du skapar anpassade metadatamatcheman, redigerar metadatamatchema och hur du använder metadatamatchema på resurser.
 contentOwner: AG
+role: Affärsledare, administratör
 translation-type: tm+mt
-source-git-commit: 2cccbdea594bb9ba61e8c0f7884b724aab10b5da
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '3408'
+source-wordcount: '3411'
 ht-degree: 5%
 
 ---
@@ -31,7 +32,7 @@ Om du vill ändra MIME-typen för en resurs använder du ett anpassat metadatama
 
 ## Metadata Schema-formulär {#default-metadata-schema-forms}
 
-Om du vill visa en lista med formulär eller mallar går du till [!DNL Experience Manager] > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Schemas]** i &lt;a0/>-gränssnittet.**[!UICONTROL Tools]**
+Om du vill visa en lista med formulär eller mallar går du till [!DNL Experience Manager] > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Schemas]** i **[!UICONTROL Tools]**-gränssnittet.
 
 [!DNL Experience Manager] innehåller följande formulärmallar för metadatamatchning.
 
@@ -39,7 +40,7 @@ Om du vill visa en lista med formulär eller mallar går du till [!DNL Experienc
 |---|---|---|
 | [!UICONTROL default] |  | Basmetadataschemaformuläret för resurser. |
 |  | Följande underordnade formulär ärver egenskaperna för [!UICONTROL default]-formuläret: |  |
-|  | <ul><li>[!UICONTROL dm_video]</li></ul> | Schemaformulär för Dynamic Media-videor. |
+|  | <ul><li>[!UICONTROL dm_video]</li></ul> | Schemaformulär för Dynamic Media-videofilmer. |
 |  | <ul><li>[!UICONTROL image]</li></ul> | Schemaformulär för bilder med MIME-typen som `image/jpeg` och `image/png`. <br> Formuläret  [!UICONTROL image] har följande underordnade formulärmallar: <ul><li> [!UICONTROL jpeg]: Schemaformulär för resurser med undertyp  [!UICONTROL jpeg].</li> <li>[!UICONTROL tiff]: Schemaformulär för resurserna med undertypen TIFF.</li></ul> |
 |  | <ul><li>[!UICONTROL application]</li></ul> | Schemaformulär för resurser med MIME-typ som `application/pdf` och `application/zip`. <br>[!UICONTROL pdf]: Schemaformulär för resurser med undertyp PDF. |
 |  | <ul><li>[!UICONTROL video]</li></ul> | Schemaformulär för videoresurser med MIME-typ som `video/avi` och `video/mp4`. |
@@ -202,7 +203,7 @@ Oavsett vilken resurstyp du väljer visas copyrightinformationen som ett obligat
 
 1. Nyckelvärdepar är de alternativ som ges till en formuläranvändare. Du kan ange nyckelvärdepar antingen manuellt eller från en JSON-fil.
 
-   * Om du vill ange värdena manuellt väljer du **[!UICONTROL Add Manually]**, klickar på **[!UICONTROL Add Choice]** och anger alternativ för text och värde. Ange till exempel resurstyperna Video, PDF, Word och Bild.
+   * Om du vill ange värdena manuellt väljer du **[!UICONTROL Add Manually]** och klickar på **[!UICONTROL Add Choice]** och anger alternativ för text och värde. Ange till exempel resurstyperna Video, PDF, Word och Bild.
 
    * Om du vill hämta värden från en JSON-fil dynamiskt väljer du **[!UICONTROL Add Through JSON Path]** och anger sökvägen till JSON-filen. [!DNL Experience Manager] hämtar nyckelvärdepar i realtid när formuläret presenteras för användaren.
 
