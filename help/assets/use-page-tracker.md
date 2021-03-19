@@ -2,10 +2,11 @@
 title: Använda sidspåraren och bädda in kod på webbsidor
 description: Lär dig hur du inkluderar sidspåraren och bäddar in JavaScript-koder i webbplatskoden så att Adobe Analytics kan samla in användningsdata runt resurser.
 contentOwner: AG
+role: Arkitekt, administratör
 translation-type: tm+mt
-source-git-commit: fc433851c24f9049e7ba6dfada24d6e552eb6d05
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '178'
 ht-degree: 0%
 
 ---
