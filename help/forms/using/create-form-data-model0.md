@@ -8,10 +8,11 @@ contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: e5413fb3-9d50-4f4f-9db8-7e53cd5145d5
 docset: aem65
+feature: Interaktiv kommunikation
 translation-type: tm+mt
-source-git-commit: e4d84b5c6f7d2bfcac942b0b685a8f1fd11274f0
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2747'
+source-wordcount: '2749'
 ht-degree: 0%
 
 ---
@@ -124,7 +125,7 @@ Gör följande för att konfigurera MySQL-databasen:
    1. Logga in på AEM Forms Author Instance som administratör och gå till AEM webbkonsolpaket. Standardwebbadressen är [https://localhost:4502/system/console/bundles](https://localhost:4502/system/console/bundles).
    1. Tryck på **Installera/Uppdatera**. En **dialogruta för överföring/installation av programpaket** visas.
 
-   1. Tryck på **Välj Arkiv** om du vill bläddra och välja OSGi-paketet för MySQL JDBC-drivrutinen. Välj **Starta paketet** och **Uppdatera paket** och tryck på **Installera** eller **Uppdatera**. Kontrollera att Oracle Corporations JDBC Driver för MySQL är aktiverad. Drivrutinen är installerad.
+   1. Tryck på **Välj Arkiv** om du vill bläddra och välja OSGi-paketet för MySQL JDBC-drivrutinen. Välj **Starta paketet** och **Uppdatera paket** och tryck på **Installera** eller **Uppdatera**. Kontrollera att Oraclets JDBC-drivrutin för MySQL är aktiv. Drivrutinen är installerad.
 
 1. Konfigurera MySQL-databasen som en datakälla:
 
