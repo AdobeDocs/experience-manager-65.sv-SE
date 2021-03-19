@@ -7,10 +7,12 @@ audience: end-user
 user-guide-title: Adobe Experience Manager 6.5 Forms Guide
 breadcrumb-title: Forms Guide
 user-guide-description: Skapa, hantera, publicera och uppdatera digitala formulär.
+feature-set: Experience Manager Forms
+role: Yrkesverksamma inom affärsverksamhet
 translation-type: tm+mt
-source-git-commit: 4e4625fe20045a337c7bce780c57819c334fa4d6
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '3718'
+source-wordcount: '3720'
 ht-degree: 1%
 
 ---
@@ -84,7 +86,7 @@ ht-degree: 1%
       + [Konfigurera synkroniseringsplaneraren](using/configure-synchronization-scheduler.md)
       + [Konfigurera anslutningsprogrammet för Microsoft SharePoint](http://help.adobe.com/en_US/AEMForms/6.1/SharePointConfig/index.html)
       + [Ansluta AEM Forms till Adobe LiveCycle](using/aem-livecycle-connector.md)
-      + [Konfigurera AEM Forms för att skicka formulärdata till en JEE-process i AEM Forms](using/submit-form-data-livecycle-process.md)
+      + [Konfigurera AEM Forms för att skicka formulärdata till en JEE-process från AEM Forms](using/submit-form-data-livecycle-process.md)
       + [AEM datorprogram för AEM Forms](/help/forms/using/aem-desktop-app-for-aem-forms.md)
 + Uppgradera AEM Forms {#upgrade-aem-forms}
    + [Tillgängliga uppgraderingssökvägar](using/upgrade.md)
