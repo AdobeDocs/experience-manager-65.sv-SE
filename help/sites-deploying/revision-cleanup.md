@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: deploying
 discoiquuid: f03ebe60-88c0-4fc0-969f-949490a8e768
+feature: Konfigurerar
 translation-type: tm+mt
-source-git-commit: 2fc35bfd93585a586cb1d4e3299261611db49ba6
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '5916'
+source-wordcount: '5917'
 ht-degree: 0%
 
 ---
@@ -264,7 +265,7 @@ I vissa fall kan rensningsprocessen fördröjas om du växlar mellan svansen och
    <td> </td>
   </tr>
   <tr>
-   <td><strong>Kan skribenter fortfarande arbeta medan onlineredigering körs?</strong></td>
+   <td><strong>Kan skribenter fortfarande arbeta medan onlineversionen rensas?</strong></td>
    <td>Ja, onlinerevision Cleanup kan hantera samtidiga skrivningar. Online Revision Cleanup fungerar dock snabbare och effektivare utan samtidiga write-transaktioner. Vi rekommenderar att du schemalägger underhållsuppgiften Online Revision Cleanup till en relativt lugn tid utan att behöva så mycket trafik.</td>
    <td> </td>
   </tr>
