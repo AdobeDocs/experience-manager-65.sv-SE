@@ -7,10 +7,11 @@ uuid: c3fa2aa4-a6b4-458e-8534-138e075290b1
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: 01724ca0-6901-45e7-b045-f44814ed574e
+feature: Adaptiv Forms
 translation-type: tm+mt
-source-git-commit: 9d90bc5f77f827925e3e1ecd12d56a94a2bbae30
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1136'
+source-wordcount: '1138'
 ht-degree: 16%
 
 ---
@@ -20,7 +21,7 @@ ht-degree: 16%
 
 Upprepningsbara avsnitt är paneler som kan läggas till eller tas bort dynamiskt i ett formulär.
 
-När du t.ex. ansöker om ett jobb, ger den jobbsökande tidigare anställningsinformation som företagsnamn, roll, projekt och annan information. Information om alla arbetsgivare kräver olika men likartade sektioner. I ett sådant scenario tillhandahåller anställningsblanketten en arbetsgivaravdelning och ger även möjlighet att dynamiskt lägga till fler sådana avsnitt. Dessa avsnitt, som läggs till dynamiskt, kallas upprepningsbara avsnitt.
+När du t.ex. ansöker om ett jobb, ger den jobbsökande tidigare anställningsinformation som företagsnamn, roll, projekt och annan information. Information om alla arbetsgivare kräver olika men likartade sektioner. I ett sådant scenario tillhandahåller anställningsblanketten en arbetsgivaravdelning och ger också möjlighet att dynamiskt lägga till fler sådana avsnitt. Dessa avsnitt, som läggs till dynamiskt, kallas upprepningsbara avsnitt.
 
 Du kan använda någon av följande metoder för att skapa repeterbara paneler:
 
