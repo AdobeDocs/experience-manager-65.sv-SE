@@ -2,10 +2,11 @@
 title: Filformat och MIME-typer som stöds
 description: Filformat och MIME-typer stöds av [!DNL Assets] and [!DNL Dynamic Media] och de funktioner som stöds för varje format.
 contentOwner: AG
+role: Affärsledare, administratör
 translation-type: tm+mt
-source-git-commit: 376bb4496c1e875f8d129dd79d67e3347be726ac
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '1569'
+source-wordcount: '1572'
 ht-degree: 2%
 
 ---
