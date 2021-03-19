@@ -7,10 +7,11 @@ uuid: ed95fc64-56b3-4ea1-a5ba-2e96953fca56
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: 43c431e4-5286-4f4e-b94f-5a7451c4a22c
+feature: Adaptiv Forms
 translation-type: tm+mt
-source-git-commit: 615b0db6da0986d7a74c42ec0d0e14bad7ede168
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '4296'
+source-wordcount: '4298'
 ht-degree: 0%
 
 ---
@@ -84,7 +85,7 @@ Mer information finns i [Skapa ett anpassningsbart formulär](/help/forms/using/
    * Redigerbara mallar skapas av författare med hjälp av mallredigeraren. Med mallredigeraren kan du definiera en grundläggande struktur och ursprungligt innehåll i en mall. Alla ändringar i strukturlagret återspeglas i alla formulär som använder den mallen. Det ursprungliga innehållet kan innehålla förkonfigurerat tema, förifyllningstjänst, skicka-åtgärd och så vidare. Dessa inställningar kan dock ändras för ett formulär med formulärredigeraren. Mer information finns i [Adaptiva formulärmallar](/help/forms/using/template-editor.md).
 
 * Om du vill formatera ett visst fält eller en viss panelinstans använder du [infogad formatering](/help/forms/using/inline-style-adaptive-forms.md). Du kan också definiera en klass i en CSS-fil och ange klassnamnet i komponentens CSS-klassegenskap.
-* Inkludera ett klientbibliotek i en komponent för att konsekvent tillämpa format på adaptiva formulär eller fragment som använder den komponenten. Mer information finns i [Skapa en komponent för adaptiv formulärsida](/help/forms/using/custom-adaptive-forms-templates.md).
+* Inkludera ett klientbibliotek i en komponent för att konsekvent tillämpa format på adaptiva formulär eller fragment som använder den komponenten. Mer information finns i [Skapa en adaptiv formulärsidkomponent](/help/forms/using/custom-adaptive-forms-templates.md).
 * Använd format som har definierats i ett klientbibliotek för att välja adaptiva formulär genom att ange sökvägen till klientbiblioteket i fältet CSS-filsökväg i egenskaperna för den adaptiva formulärbehållaren.
 * Om du vill skapa ett klientbibliotek med dina format kan du konfigurera den anpassade CSS-filen i Theme Editor-basklienten eller i egenskaperna för formulärbehållaren.
 * Med adaptiva formulär kan du skapa panellayouter, som responsiva, tabbade, dragspel och guide, för att styra hur formulärkomponenter placeras ut på en panel. Du kan skapa anpassade panellayouter och göra dem tillgängliga för formulärförfattare. Mer information finns i [Skapa anpassade layoutkomponenter för adaptiva formulär](/help/forms/using/custom-layout-components-forms.md).
@@ -138,7 +139,7 @@ Regelredigeraren innehåller en visuell redigerare och en kodredigerare för att
       * `field.visible` om du vill ändra synlighet för ett fält.
 
 * Anpassa formulärförfattare kan behöva skriva JavaScript-kod för att skapa affärslogik i ett formulär. JavaScript är kraftfullt och effektivt, men det kan troligtvis påverka säkerheten. Därför måste du se till att formulärförfattaren är en betrodd person och det finns processer för att granska och godkänna JavaScript-koden innan ett formulär börjar användas. Administratören kan begränsa åtkomsten till regelredigeraren till användargrupper baserat på deras roll eller funktion. Se [Bevilja regelredigeringsåtkomst för valda användargrupper](/help/forms/using/rule-editor-access-user-groups.md).
-* Du kan använda uttryck i regler för att göra adaptiva formulär dynamiska. Alla uttryck är giltiga JavaScript-uttryck och använder API:er för skriptmodell för adaptiva formulär. Dessa uttryck returnerar värden av vissa typer. Mer information om uttryck och metodtips kring dem finns i [Adaptiva formuläruttryck](/help/forms/using/adaptive-form-expressions.md).
+* Du kan använda uttryck i regler för att göra adaptiva formulär dynamiska. Alla uttryck är giltiga JavaScript-uttryck och använder API:er för skriptmodell för adaptiva formulär. Dessa uttryck returnerar värden av vissa typer. Mer information om uttryck och de effektivaste strategierna kring dem finns i [Adaptiva formuläruttryck](/help/forms/using/adaptive-form-expressions.md).
 
 ### Arbeta med teman {#working-with-themes}
 
