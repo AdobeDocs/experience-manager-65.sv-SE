@@ -10,10 +10,11 @@ content-type: reference
 topic-tags: interactive-communications
 discoiquuid: acb61d37-cd22-422e-bbf3-a2979b13ad41
 docset: aem65
+feature: Interaktiv kommunikation
 translation-type: tm+mt
-source-git-commit: f9389a06f9c2cd720919486765cee76257f272c3
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '625'
+source-wordcount: '627'
 ht-degree: 5%
 
 ---
@@ -123,7 +124,7 @@ Tryck på **Adaptive Form and Interactive Communication Web Channel Configuratio
 | Maximalt antal cacheposter | Ange det maximala antalet adaptiva formulär och interaktiv kommunikation som kan hämtas med cacheminnet. | 100 | Siffra |
 | Gör filnamnet unikt | Markera kryssrutan om du vill ha unika namn för filer inkluderade som bilagor i Adaptive Forms och Interactive Communications. | Inte markerad | Ej relevant |
 
-## Konfiguration av temat Adaptiv form och interaktiv kommunikation - webbkanal {#adaptive-form-and-interactive-communication-web-channel-theme-configuration}
+## Konfiguration av temat för adaptiv form och interaktiv kommunikation i webbkanalen {#adaptive-form-and-interactive-communication-web-channel-theme-configuration}
 
 Tryck på **Adaptiv form och Interactive Communication Web Channel Theme Configuration** på **Adobe Experience Manager Web Console Configuration**-sidan för att visa konfigurationsegenskaperna för Adaptiva Forms- och Interactive Communications-webbkanalteman.
 
