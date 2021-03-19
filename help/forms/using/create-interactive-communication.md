@@ -8,10 +8,11 @@ topic-tags: interactive-communications
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: f4d98cb9-84d8-4735-91d2-b9ceec861e5e
 docset: aem65
+feature: Interaktiv kommunikation
 translation-type: tm+mt
-source-git-commit: bd70508b361ac8b62ebc0344538a18369a075f3e
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '5946'
+source-wordcount: '5948'
 ht-degree: 0%
 
 ---
@@ -187,7 +188,7 @@ Tryck på dokumentfragmentet, tryck på ![configure_icon](assets/configure_icon.
 
    ![webbkanalresurser](assets/webchannelassets.png)
 
-   Tryck på dokumentfragmentet, tryck på ![configure_icon](assets/configure_icon.png) (Configure) och tryck sedan på **[!UICONTROL Properties]** på sidan för Interactive Communication. Avsnittet **[!UICONTROL Variables and Data Model Objects]** listar variablerna, inklusive de dolda variablerna och datamodellsobjekten som används i dokumentfragmenten. Använd ikonen ![edit](assets/edit.svg) (Edit) bredvid varje datamodellsobjekt eller variabel för att redigera egenskaperna. För dokumentfragment som har [autogenererats](#synchronize) i webbkanalen med hjälp av Print-kanalen använder du ikonen ![cancelarance](assets/cancelinheritance.png) (Cancel Inheritance) bredvid varje datamodellsobjekt och variabel till [cancel inherance](#cancelinheritance) och kan redigera dem.
+   Tryck på dokumentfragmentet, tryck på ![configure_icon](assets/configure_icon.png) (Configure) och tryck sedan på **[!UICONTROL Properties]** på sidan för Interactive Communication. I avsnittet **[!UICONTROL Variables and Data Model Objects]** listas variablerna, inklusive de dolda variablerna och datamodellsobjekten som används i dokumentfragmenten. Använd ikonen ![edit](assets/edit.svg) (Edit) bredvid varje datamodellsobjekt eller variabel för att redigera egenskaperna. För dokumentfragment som har [autogenererats](#synchronize) i webbkanalen med hjälp av Print-kanalen använder du ikonen ![cancelarance](assets/cancelinheritance.png) (Cancel Inheritance) bredvid varje datamodellsobjekt och variabel till [cancel inherance](#cancelinheritance) och kan redigera dem.
 
 1. Om du vill lägga till ytterligare komponenter i webbkanalen när webbkanalen är vald trycker du på **[!UICONTROL Components]**. Dra och släpp komponenter i webbkanalen i din interaktiva kommunikation efter behov och fortsätt att konfigurera dem.
 
