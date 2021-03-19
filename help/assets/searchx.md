@@ -2,11 +2,12 @@
 title: Utöka sökfunktionen.
 description: Utöka sökfunktionerna i [!DNL Adobe Experience Manager Assets] utöver standardvärdena.
 contentOwner: AG
+role: Developer
 translation-type: tm+mt
-source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '838'
-ht-degree: 15%
+source-wordcount: '839'
+ht-degree: 16%
 
 ---
 
