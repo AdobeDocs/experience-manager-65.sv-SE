@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: repo_restructuring
 discoiquuid: fc879b0b-823b-4bdc-aaa6-36f53a33fb22
+feature: Uppgraderar
 translation-type: tm+mt
-source-git-commit: 97b2da315fac6f84fcba6d4464bf8dd1d690cfd1
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '550'
+source-wordcount: '551'
 ht-degree: 0%
 
 ---
@@ -26,7 +27,7 @@ Före AEM 6.4 driftsattes kundkoden i oförutsägbara områden av JCR som kunde 
 
 Genom att tydligt definiera hierarkier för AEM produktkod och kundkod kan dessa konflikter undvikas.
 
-Med början i AEM 6.4 och som kommer att fortsätta i framtida versioner struktureras innehållet därför om från /etc till andra mappar i databasen, tillsammans med riktlinjer för vilket innehåll som ska placeras, enligt följande högnivåregler:
+Med början i AEM 6.4 och som kommer att fortsätta i framtida versioner struktureras innehållet därför om från /etc till andra mappar i databasen, tillsammans med riktlinjer om vilket innehåll som ska placeras, enligt följande högnivåregler:
 
 * AEM produktkod placeras alltid i /libs, som inte får skrivas över av anpassad kod
 * Anpassad kod ska placeras i /apps, /content och /conf
@@ -45,7 +46,7 @@ Vid planering av en uppgradering till AEM 6.5 ska följande sidor per lösning r
 * [Omstrukturering av lager som är gemensamma för alla AEM](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md)
 * [Omstrukturering av AEM Sites-arkiv](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md)
 * [Omstrukturering av AEM Assets-arkiv](/help/sites-deploying/assets-repository-restructuring-in-aem-6-5.md)
-* [Omstrukturering av AEM Assets Dynamic Media-databasen](/help/sites-deploying/dynamicmedia-repository-restructuring-in-aem-6-5.md)
+* [Omstrukturering av AEM Assets Dynamic Media-arkiv](/help/sites-deploying/dynamicmedia-repository-restructuring-in-aem-6-5.md)
 * [Omstrukturering av AEM Forms-arkiv](/help/sites-deploying/forms-repository-restructuring-in-aem-6-5.md)
 * [Omstrukturering av AEM Communities-arkiv](/help/sites-deploying/communities-repository-restructuring-in-aem-6-5.md)
 * [Omstrukturering av AEM handelslager](/help/sites-deploying/ecommerce-repository-restructuring-in-aem-6-5.md)
