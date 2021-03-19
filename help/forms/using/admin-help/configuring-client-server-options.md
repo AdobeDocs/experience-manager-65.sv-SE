@@ -9,10 +9,11 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 0f069fbc-10c2-403e-9419-5e9920035d75
+feature: Dokumentsäkerhet
 translation-type: tm+mt
-source-git-commit: 998a127ce00c6cbb3db3a81d8a89d97ab9ef7469
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '10273'
+source-wordcount: '10275'
 ht-degree: 0%
 
 ---
@@ -152,9 +153,9 @@ Dokumentsäkerhet använder krypteringsalgoritmer och licenser för att skydda d
 
 >[!NOTE]
 >
->Om det inte finns någon huvudnyckel genereras en sådan för att skydda ett dokument.
+>Om det inte finns någon huvudnyckel genereras en för att skydda ett dokument.
 
-Om du vill öppna ett principskyddat dokument offline måste användarens dator ha rätt huvudnyckel. Datorn hämtar huvudnyckeln när användaren synkroniserar med dokumentsäkerhet (öppnar ett skyddat dokument online). Om den här huvudnyckeln är komprometterad kan även alla dokument som användaren har offlineåtkomst till vara komprometterade.
+Om du vill öppna ett principskyddat dokument offline måste användarens dator ha rätt huvudnyckel. Datorn hämtar huvudnyckeln när användaren synkroniserar med dokumentsäkerhet (öppnar ett skyddat dokument online). Om den här huvudnyckeln är komprometterad kan alla dokument som användaren har offlineåtkomst till också bli komprometterade.
 
 Ett sätt att minska hotet mot offlinedokument är att undvika att ge offlineåtkomst till särskilt känsliga dokument. En annan metod är att regelbundet föra över huvudnycklarna. När dokumentskyddet rullar tangenten över kan inte befintliga nycklar komma åt de profilskyddade dokumenten längre. Om en gärningsman t.ex. får en huvudnyckel från en stulen bärbar dator, kan den nyckeln inte användas för att få tillgång till dokument som är skyddade efter överrullningen. Om du misstänker att en viss huvudnyckel har komprometterats kan du manuellt föra över nyckeln.
 
@@ -172,7 +173,7 @@ Av sekretesskäl ger dokumentskyddet ett automatiskt nyckelrolloveralternativ me
 
 **Överför huvudnycklar manuellt**
 
-För att sekretessen för offlinedokument ska kunna bevaras kan du manuellt föra över huvudnycklar. Du kan behöva rulla över en nyckel manuellt (t.ex. om nyckeln komprometteras av någon som hämtar den från en dator där den cache-lagras för att kunna aktivera offlineåtkomst till ett dokument).
+Om du vill behålla sekretessen för offlinedokument kan du manuellt föra över huvudnycklar. Du kan behöva rulla över en nyckel manuellt (t.ex. om nyckeln komprometteras av någon som hämtar den från en dator där den cache-lagras för att kunna aktivera offlineåtkomst till ett dokument).
 
 >[!NOTE]
 >
@@ -645,7 +646,7 @@ Följande inställningar finns under E-postkonfiguration för inbjudan på sidan
 
 ### E-postinställningar för aktivering {#activation-email-settings}
 
-Dokumentsäkerheten skickar ett aktiveringsmejl när inbjudna användare har registrerat sig. E-postmeddelandet om aktivering innehåller en länk till kontoaktiveringssidan där användarna kan aktivera sina konton. När kontona är aktiverade kan användare logga in på dokumentsäkerhet med hjälp av sin e-postadress och det lösenord de skapade när de registrerade.
+Dokumentsäkerheten skickar ett aktiveringsmejl när inbjudna användare har registrerat sig. E-postmeddelandet om aktivering innehåller en länk till kontoaktiveringssidan där användarna kan aktivera sina konton. När kontona är aktiverade kan användare logga in på dokumentsäkerhet med sin e-postadress och det lösenord de skapade när de registrerade.
 
 När mottagaren aktiverar användarkontot blir användaren en lokal användare.
 
@@ -1043,7 +1044,7 @@ Du kan öka skalbarheten för dokumentsäkerhetsservern genom att begränsa den 
 
    >[!NOTE]
    >
-   >Som standard är värdet för `DisableGlobalOfflineSynchronizationData`tangenten `false` inställt på &lt;a1/>.
+   >Som standard är värdet för `DisableGlobalOfflineSynchronizationData`tangenten `false` inställt på .
 
 1. Spara och importera konfigurationsfilen. (Se [Redigera konfigurationsfilen för dokumentsäkerhet manuellt](/help/forms/using/admin-help/configuring-client-server-options.md#manually-editing-the-document-security-configuration-file).)
 
