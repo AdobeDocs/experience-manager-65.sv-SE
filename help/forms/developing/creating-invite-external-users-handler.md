@@ -1,10 +1,11 @@
 ---
 title: Skapa en hanterare för att bjuda in externa användare
 description: Skapa en hanterare för att bjuda in externa användare
+role: Developer
 translation-type: tm+mt
-source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1074'
+source-wordcount: '1075'
 ht-degree: 0%
 
 ---
