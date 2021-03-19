@@ -3,10 +3,11 @@ title: Prestandajustering [!DNL Assets].
 description: Förslag och vägledning om [!DNL Experience Manager] konfiguration, ändringar av maskinvara, programvara och nätverkskomponenter för att ta bort flaskhalsar och optimera prestanda för [!DNL Experience Manager Assets].
 contentOwner: AG
 mini-toc-levels: 1
+role: Arkitekt, administratör
 translation-type: tm+mt
-source-git-commit: 0cecf1940136175887802b5ba205c67e61475a59
+source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
 workflow-type: tm+mt
-source-wordcount: '2675'
+source-wordcount: '2677'
 ht-degree: 0%
 
 ---
