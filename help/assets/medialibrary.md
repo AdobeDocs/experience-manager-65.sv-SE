@@ -2,10 +2,11 @@
 title: Jämför [!DNL Assets] och Mediebibliotek
 description: Jämför [!DNL Experience Manager Assets] funktionerna och funktionerna i mediebiblioteket och se skillnaderna.
 contentOwner: AG
+role: Arkitekt, ledare
 translation-type: tm+mt
-source-git-commit: 82c2df0e53e8ef595ad158ef46089d6e4964ca26
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '608'
+source-wordcount: '610'
 ht-degree: 0%
 
 ---
