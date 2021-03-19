@@ -2,10 +2,11 @@
 title: Nätverksaspekter och -krav
 description: Diskuterar nätverksaspekter när du utformar en  [!DNL Adobe Experience Manager Assets] distribution.
 contentOwner: AG
+role: Arkitekt, administratör
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '992'
+source-wordcount: '994'
 ht-degree: 0%
 
 ---
@@ -68,7 +69,7 @@ I exempeldiagrammen kan du dra slutsatsen att sex enheter delar en konceptuell k
 
 Att utforma topologin för [!DNL Experience Manager]-miljön kräver detaljerade kunskaper om systemkonfigurationen och hur nätverket är anslutet i användarmiljön.
 
-Exempelscenariot innehåller en publiceringsgrupp med fem servrar, ett binärt S3-arkiv och Dynamic Media konfigurerat.
+Exempelscenariot innehåller en publiceringsgrupp med fem servrar, en binär S3-butik och Dynamic Media-konfigurerad.
 
 Avsändaren delar med sig av sin 100 Mbit/s-anslutning med två enheter, utsidan av världen och [!DNL Experience Manager]-distributionen. För samtidiga överförings- och nedladdningsåtgärder bör du dividera numret med två. Den anslutna externa lagringsplatsen använder en separat anslutning.
 
