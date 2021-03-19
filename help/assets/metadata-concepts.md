@@ -2,10 +2,11 @@
 title: Förstå metadatabegrepp
 description: Lär dig mer om behovet av och typer av metadata som gör det enklare att kategorisera och ordna resurser.
 contentOwner: AG
+role: Affärsledare, administratör
 translation-type: tm+mt
-source-git-commit: adeb20c1e7222e7c5702061cba73350002f5154c
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '2719'
+source-wordcount: '2722'
 ht-degree: 6%
 
 ---
