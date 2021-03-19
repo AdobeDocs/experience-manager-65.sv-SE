@@ -1,7 +1,7 @@
 ---
 title: Modeller - översikt
 seo-title: Modeller - översikt
-description: 'null'
+description: Modeller - översikt
 seo-description: 'null'
 uuid: e09dac52-9515-43f7-9d3b-6637e2283d59
 contentOwner: Jyotika Syal
@@ -9,9 +9,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 discoiquuid: c8281f98-9811-42f7-9a31-f82dd0f09319
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '786'
 ht-degree: 0%
 
 ---
@@ -66,7 +66,7 @@ Se **[Arbeta med entiteter](/help/mobile/spaces-and-entities.md)** för att skap
 
 >[!NOTE]
 >
->Om modellen inte motsvarar ett befintligt AEM, t.ex. om kunden har skapat en ny modell, finns det ett användargränssnitt så att kunden kan skapa en ny enhet.
+>Om modellen inte motsvarar ett befintligt AEM, t.ex. kunden har skapat en ny modell, finns det ett användargränssnitt så att kunden kan skapa en ny enhet.
 
 
 ### Blanksteg i innehållsmodellen {#spaces-in-content-model}
