@@ -7,10 +7,11 @@ uuid: 8acb7f68-0b52-4acd-97e2-af31c9408e8d
 topic-tags: installing
 discoiquuid: 225f2bc1-6842-4c79-a66d-8024a29325c0
 docset: aem65
+role: Administratör
 translation-type: tm+mt
-source-git-commit: 35b2c9c8c79b3cc3d81e0b92ea17cd7d599fa7ee
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1396'
+source-wordcount: '1397'
 ht-degree: 0%
 
 ---
@@ -30,7 +31,7 @@ AEM Forms är en kraftfull plattform för större företag. Interaktiv kommunika
 
 ## Distributionstopologi {#deployment-topology}
 
-AEM Forms tilläggspaket är ett program som distribueras till AEM. Du behöver bara minst en instans av AEM Author och Processing för att kunna köra funktionen Interactive Communications. Följande topologi är en indikativ topologi för att köra AEM Forms Interactive Communications, Correspondence Management, AEM Forms datainhämtning och Forms-Centric-arbetsflöden för OSGi-funktioner. Mer information om topologin finns i [Arkitektur och distributionstopologier för AEM Forms](/help/forms/using/aem-forms-architecture-deployment.md).
+AEM Forms tilläggspaket är ett program som distribueras till AEM. Du behöver bara minst en AEM Author and Processing-instans för att kunna köra funktionen Interactive Communications. Följande topologi är en indikativ topologi för att köra AEM Forms Interactive Communications, Correspondence Management, AEM Forms datainhämtning och Forms-Centric-arbetsflöden för OSGi-funktioner. Mer information om topologin finns i [Arkitektur och distributionstopologier för AEM Forms](/help/forms/using/aem-forms-architecture-deployment.md).
 
 ![rekommenderad topologi](assets/recommended-topology.png)
 
