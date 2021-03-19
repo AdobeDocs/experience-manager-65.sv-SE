@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: configuring
 content-type: reference
 discoiquuid: 370151df-3b8e-41aa-b586-5c21ecb55ffe
+feature: Konfigurerar
 translation-type: tm+mt
-source-git-commit: 29f8e59e3fc9d3c089ee3b78c24638cd3cd2e96b
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2403'
+source-wordcount: '2404'
 ht-degree: 1%
 
 ---
@@ -108,7 +109,7 @@ Gör så här för att öppna sidan Topology Management i webbkonsolen:
 
 Resursbaserad sökningstjänst för Apache Sling körs på varje instans för att styra hur instanser från Experience Manager interagerar med en topologi.
 
-Identifieringstjänsten skickar periodiska POSTER (hjärtslag) till Topology Connector-tjänster för att upprätta och underhålla anslutningar till topologin. Topology Connector-tjänsten underhåller en tillåtelselista med IP-adresser eller värdnamn som kan ansluta till topologin:
+Identifieringstjänsten skickar periodiska POSTER (hjärtslag) till Topology Connector-tjänster för att upprätta och underhålla kopplingar till topologin. Topology Connector-tjänsten underhåller en tillåtelselista med IP-adresser eller värdnamn som kan ansluta till topologin:
 
 * Om du vill koppla en instans till en topologi anger du URL:en för Topology Connector-tjänsten för rotmedlemmen.
 * Om du vill göra det möjligt för en instans att ansluta till en topologi lägger du till instansen tillåtelselista i rotmedlemmens Topology Connector-tjänst.
@@ -354,6 +355,6 @@ The following procedure assumes the following characteristics for the offloading
 
 ## Ytterligare läsning {#further-reading}
 
-Förutom informationen på den här sidan kan du läsa följande:
+Förutom den information som visas på den här sidan kan du även läsa följande:
 
 * Mer information om hur du använder Java API:er för att skapa jobb och jobbkunder finns i [Skapa och använda jobb för avlastning](/help/sites-developing/dev-offloading.md).
