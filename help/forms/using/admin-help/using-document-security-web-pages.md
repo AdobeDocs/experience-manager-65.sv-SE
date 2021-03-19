@@ -9,10 +9,11 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 2878b145-e6c0-48d3-810c-3540de13c826
+feature: Dokumentsäkerhet
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '941'
+source-wordcount: '943'
 ht-degree: 0%
 
 ---
@@ -57,7 +58,7 @@ För administratörer skapas ett superadministratörskonto som standard under in
 
 >[!NOTE]
 >
->När du arbetar med webbsidor bör du undvika att använda webbläsarknapparna, t.ex. bakåtknappen, uppdateringsknappen och bakåt- och framåtpilarna eftersom den här åtgärden kan orsaka oönskad datainhämtning och problem med visningen av data.
+>När du arbetar med webbsidor bör du undvika att använda webbläsarknapparna, som bakåtknappen, uppdateringsknappen samt bakåt- och framåtpilarna, eftersom den här åtgärden kan orsaka oönskade problem med datainhämtning och datavisning.
 
 ## Navigera på webbsidorna {#navigating-the-web-pages}
 
@@ -81,7 +82,7 @@ Använd de här länkarna för att komma åt de olika sidorna, där du skapar oc
 
 >[!NOTE]
 >
->När du arbetar med webbsidor bör du undvika att använda webbläsarknapparna, som bakåtknappen, uppdateringsknappen samt bakåt- och framåtpilarna, eftersom den här åtgärden kan orsaka oönskade problem med datainhämtning och datavisning.
+>När du arbetar med webbsidor bör du undvika att använda webbläsarknapparna, t.ex. bakåtknappen, uppdateringsknappen och bakåt- och framåtpilarna, eftersom den här åtgärden kan orsaka oönskad datainhämtning och problem med visningen av data.
 
 ## Konfigurera åtkomst till dokumentsäkerhet från klientprogram {#setting-up-access-to-document-security-from-client-applications}
 
