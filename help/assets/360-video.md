@@ -8,10 +8,12 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: aac3c850-ae84-4bff-80de-d370e150f675
 docset: aem65
+feature: 360 VR-video
+role: Affärsledare, administratör
 translation-type: tm+mt
-source-git-commit: 0d5ee29141c897284f3f298d921f4f8528216f8f
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '1087'
+source-wordcount: '1092'
 ht-degree: 0%
 
 ---
@@ -100,7 +102,7 @@ När du är nöjd med 360-videon kan du publicera den.
 
 Se [Bädda in video- eller bildvisningsprogrammet på en webbsida.](https://helpx.adobe.com/experience-manager/6-5/help/assets/embed-code.html)
 Se  [Länka URL:er till ditt webbprogram](https://helpx.adobe.com/experience-manager/6-5/help/assets/linking-urls-to-yourwebapplication.html). Observera att den URL-baserade länkningsmetoden inte är möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till AEM Sites-sidor.
-Se [Lägga till dynamiska medieresurser på sidor.](https://helpx.adobe.com/experience-manager/6-5/help/assets/adding-dynamic-media-assets-to-pages.html)
+Se [Lägga till Dynamic Media Assets på sidor.](https://helpx.adobe.com/experience-manager/6-5/help/assets/adding-dynamic-media-assets-to-pages.html)
 
 **Så här förhandsgranskar du 360-videoklipp**
 
@@ -131,9 +133,9 @@ Se [Lägga till dynamiska medieresurser på sidor.](https://helpx.adobe.com/expe
 
 ## Publicerar 360-video {#publishing-video}
 
-Du måste publicera 360-videon för att kunna använda den. När du publicerar en 360-video aktiveras URL:en och Bädda in kod. Dessutom publiceras 360-videon i Dynamic Media Cloud, som är integrerat med ett CDN för skalbar och prestandaoptimerad leverans.
+Du måste publicera 360-videon för att kunna använda den. När du publicerar en 360-video aktiveras URL:en och Bädda in kod. Dessutom publiceras 360-videon i Dynamic Media-molnet, som är integrerat med ett CDN för skalbar leverans och leverans med höga prestanda.
 
-Mer information om hur du publicerar 360-video finns i [Publicera dynamiska medieresurser](/help/assets/publishing-dynamicmedia-assets.md).
+Mer information om hur du publicerar 360-video finns i [Publicera Dynamic Media Assets](/help/assets/publishing-dynamicmedia-assets.md).
 Se även [Bädda in video- eller bildvisningsprogrammet på en webbsida](https://helpx.adobe.com/experience-manager/6-5/help/assets/embed-code.html).
 Se även [Länka URL:er till ditt webbprogram](https://helpx.adobe.com/experience-manager/6-5/help/assets/linking-urls-to-yourwebapplication.html). Observera att den URL-baserade länkningsmetoden inte är möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till AEM Sites-sidor.
-Se även [Lägga till dynamiska medieresurser på sidor.](https://helpx.adobe.com/experience-manager/6-5/help/assets/adding-dynamic-media-assets-to-pages.html)
+Se även [Lägga till Dynamic Media Assets på sidor.](https://helpx.adobe.com/experience-manager/6-5/help/assets/adding-dynamic-media-assets-to-pages.html)
