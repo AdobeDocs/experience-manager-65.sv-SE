@@ -6,10 +6,13 @@ audience: end-user
 user-guide-title: AEM 6.5 Developing User Guide
 breadcrumb-title: Utvecklingshandbok
 user-guide-description: Den här guiden beskriver hur du skapar AEM.
+feature-set: Experience Manager Sites
+feature: Utveckling
+role: Developer
 translation-type: tm+mt
-source-git-commit: fa2002950bbfb902db8c98a418b3a3d9185efea0
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '905'
+source-wordcount: '907'
 ht-degree: 6%
 
 ---
