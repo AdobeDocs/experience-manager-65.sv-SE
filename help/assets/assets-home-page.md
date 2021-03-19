@@ -2,10 +2,12 @@
 title: '[!DNL Assets] Startsidans upplevelse'
 description: Anpassa startsidan för [!DNL Experience Manager Assets] välkomstskärmen, inklusive en ögonblicksbild av nyligen gjorda aktiviteter kring resurser.
 contentOwner: AG
+feature: Utvecklarverktyg, Resurshantering
+role: Administratör, affärsansvarig
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '514'
 ht-degree: 1%
 
 ---
