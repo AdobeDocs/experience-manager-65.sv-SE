@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: ccabf301-b417-48aa-8501-8360fd9f3e36
+role: Administratör
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '917'
+source-wordcount: '918'
 ht-degree: 0%
 
 ---
@@ -26,7 +27,7 @@ AEM Communities funktioner kräver ofta att besökarna är registrerade och inlo
 
 ### Medlemmar (användare) på Publish {#members-users-on-publish}
 
-Med konsolerna Webbgruppsmedlemmar och Grupper kan medlemmar och medlemsgrupper som är registrerade i *publiceringsmiljön* skapas och hanteras från *författarmiljön*. Detta är bara möjligt när tunneln [service](deploy-communities.md#tunnel-service-on-author) är aktiverad.
+Med konsolerna Communities Members and Groups (Communities-medlemmar och grupper), medlemmar och medlemsgrupper som är registrerade i *publish*-miljön, kan skapas och hanteras från *author*-miljön. Detta är bara möjligt när tunneln [service](deploy-communities.md#tunnel-service-on-author) är aktiverad.
 
 ### Användare på författare {#users-on-author}
 
