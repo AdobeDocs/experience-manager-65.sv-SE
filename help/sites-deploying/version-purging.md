@@ -10,10 +10,11 @@ topic-tags: configuring
 content-type: reference
 discoiquuid: fb4d7337-7b94-430b-80d2-f1754f823c2b
 docset: aem65
+feature: Konfigurerar
 translation-type: tm+mt
-source-git-commit: 1f7a45adc73b407c402a51b061632e72d97ca306
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '739'
+source-wordcount: '740'
 ht-degree: 0%
 
 ---
@@ -121,4 +122,4 @@ Om du till exempel definierar det högsta OCH lägsta antalet versioner som ska 
 
 ## Rensa versioner {#purge-versions-tool}
 
-Verktyget [Rensa versioner](/help/sites-deploying/monitoring-and-maintaining.md#purgeversionstool) är avsett för att rensa versioner av en nod eller en hierarki av noder i databasen. Dess främsta syfte är att hjälpa dig att minska storleken på databasen genom att ta bort tidigare versioner av dina noder.
+Verktyget [Rensa versioner](/help/sites-deploying/monitoring-and-maintaining.md#purgeversionstool) är avsett för att rensa versioner av en nod eller en hierarki av noder i din databas. Dess främsta syfte är att hjälpa dig att minska storleken på databasen genom att ta bort tidigare versioner av dina noder.
