@@ -1,6 +1,6 @@
 ---
 title: Interaktiva videoklipp
-description: Lär dig hur du arbetar med interaktiv video och köpbar video i Dynamic Media
+description: Lär dig hur du arbetar med interaktiv video och videor som kan köpas i Dynamic Media
 uuid: c3ff6839-fff5-4709-8163-5c4245b80e6d
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -8,10 +8,12 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 04be55f2-c7d8-45ef-89e5-58856b971de5
 docset: aem65
+feature: Interaktiva videoklipp
+role: Affärsledare, administratör
 translation-type: tm+mt
-source-git-commit: ce43c49f8f7d4509e414554b8f4eba368ff66e95
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '6013'
+source-wordcount: '6018'
 ht-degree: 4%
 
 ---
@@ -86,10 +88,10 @@ Slutför genom att publicera det interaktiva videomaterialet. Publicering skapar
 Se [Publicera resurser](/help/assets/publishing-dynamicmedia-assets.md).
 
 1. **Om du lägger till en interaktiv video till din webbplats eller till din webbplats i**
-AEMIom du använder AEM Sites, eller AEM eCommerce, eller båda, kan du lägga till den interaktiva videon direkt till en webbsida i AEM genom att dra Interactive Media-komponenten till sidan. Se [Lägga till dynamiska medieresurser på sidor.](/help/assets/adding-dynamic-media-assets-to-pages.md)
+AEMIom du använder AEM Sites, eller AEM eCommerce, eller båda, kan du lägga till den interaktiva videon direkt till en webbsida i AEM genom att dra Interactive Media-komponenten till sidan. Se [Lägga till Dynamic Media-resurser på sidor.](/help/assets/adding-dynamic-media-assets-to-pages.md)
 Använd inbäddningskoden eller URL-adressen för att integrera interaktiv video med webbplatsupplevelserna. Se [Integrera en interaktiv video med din webbplats](#integrating-an-interactive-video-with-your-website).
 Om du använder en WCM-fil (Web Content Manager) från tredje part måste du integrera den nya interaktiva videon med den befintliga QuickView-implementeringen som används på webbplatsen. Se [Integrera en interaktiv video med en befintlig Quickview](#integrating-an-interactive-video-with-an-existing-quickview).
-   [Lägga till dynamiska medieresurser på sidor](/help/assets/adding-dynamic-media-assets-to-pages.md)
+   [Lägga till Dynamic Media-resurser på sidor](/help/assets/adding-dynamic-media-assets-to-pages.md)
 
 ## (Valfritt) Identifiera QuickView-variabler {#optional-identifying-quickview-variables}
 
@@ -416,7 +418,7 @@ Så här lägger du till interaktivitet i videon:
       <td><p>Under Åtgärdstyp trycker du på <strong>Hyperlänk</strong> och sedan på något av följande:</p> 
        <ul> 
        <li>Om du är AEM Sites-kund går du till en webbsida genom att trycka på ikonen Platsväljare (mapp). Observera att den URL-baserade länkningsmetoden inte är möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till AEM Sites-sidor.</li> 
-       <li>Om du är en fristående kund av Dynamic Media anger du den fullständiga URL-sökvägen till en länkad webbsida i textfältet HREF.</li> 
+       <li>Om du är en fristående Dynamic Media-kund anger du den fullständiga URL-sökvägen till en länkad webbsida i textfältet HREF.</li> 
        </ul> <p>Var noga med att ange om länken ska öppnas på en ny flik i webbläsaren eller på den aktuella fliken.</p> </td> 
       </tr> 
       <tr> 
@@ -485,7 +487,7 @@ Så här lägger du till interaktivitet i videon:
 
 1. Publicera den interaktiva videon. Publicering skapar den inbäddningskod eller URL som du så småningom kommer att kopiera och klistra in på webbplatsupplevelserna.
 
-   Om du har lagt till interaktivitet med snabbvyer ska du bara använda inbäddningskoden; om du har lagt till interaktivitet med hyperlänkade webbsidor kan du även använda den publicerade URL:en. Observera dock att den URL-baserade länkningsmetoden inte är möjlig om ditt interaktiva innehåll har länkar till relativa URL-adresser, särskilt länkar till AEM Sites-sidor.
+   Om du har lagt till interaktivitet med snabbvyer ska du bara använda inbäddningskoden; om du har lagt till interaktivitet med hyperlänkade webbsidor kan du även använda den publicerade webbadressen. Observera dock att den URL-baserade länkningsmetoden inte är möjlig om ditt interaktiva innehåll har länkar till relativa URL-adresser, särskilt länkar till AEM Sites-sidor.
 
    Se [Publicera resurser](publishing-dynamicmedia-assets.md).
 
@@ -502,13 +504,13 @@ Mer information om hur du publicerar interaktiva videoresurser finns i [Publicer
 
 När du har överfört en video, lagt till tidslinjesegment i den och publicerat den interaktiva videon är du nu redo att lägga till den på din befintliga webbplats.
 
-Om du är kund hos AEM Sites kan du lägga till den interaktiva videon genom att dra Interactive Media-komponenten till din sida. Se [Lägga till dynamiska medieresurser på sidor.](/help/assets/adding-dynamic-media-assets-to-pages.md)
+Om du är kund hos AEM Sites kan du lägga till den interaktiva videon genom att dra Interactive Media-komponenten till din sida. Se [Lägga till Dynamic Media-resurser på sidor.](/help/assets/adding-dynamic-media-assets-to-pages.md)
 
 Om du är en fristående AEM Assets-kund kan du lägga till den interaktiva videon manuellt på din webbplats enligt beskrivningen i det här avsnittet.
 
 1. Kopiera den publicerade interaktiva videons inbäddningskod eller URL.
 Se [Bädda in video- eller bildvisningsprogrammet på en webbsida](/help/assets/embed-code.md).
-Om du har lagt till interaktivitet med snabbvyer ska du bara använda inbäddningskoden; om du har lagt till interaktivitet med hyperlänkade webbsidor kan du även använda den publicerade URL:en. Observera dock att den URL-baserade länkningsmetoden inte är möjlig om ditt interaktiva innehåll har länkar till relativa URL-adresser, särskilt länkar till AEM Sites-sidor.
+Om du har lagt till interaktivitet med snabbvyer ska du bara använda inbäddningskoden; om du har lagt till interaktivitet med hyperlänkade webbsidor kan du även använda den publicerade webbadressen. Observera dock att den URL-baserade länkningsmetoden inte är möjlig om ditt interaktiva innehåll har länkar till relativa URL-adresser, särskilt länkar till AEM Sites-sidor.
 
 1. Identifiera var den statiska videon finns i målets webbsideskod.
 1. Ta bort den statiska videon och ersätt koden med den inbäddade koden eller URL-adressen som du kopierade från AEM Assets, som den är.
