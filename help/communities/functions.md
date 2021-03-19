@@ -10,10 +10,11 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 91833914-b811-4355-a97d-e1a9cb7441f1
 docset: aem65
+role: Administratör
 translation-type: tm+mt
-source-git-commit: 94a5a8d99d052d7bcf01f237dc2b73157a2f11c2
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2454'
+source-wordcount: '2455'
 ht-degree: 0%
 
 ---
@@ -47,7 +48,7 @@ En mall för en community-webbplats innehåller strukturen för en community-web
 
 **Titlar** och  **** URL är egenskaper som är gemensamma för alla communityfunktioner.
 
-När en communityfunktion läggs till i en mall för en community-webbplats eller läggs till när [strukturen för en community-plats ändras, öppnas funktionens dialogruta så att titeln och URL:en kan konfigureras.](/help/communities/sites-console.md#modifying-site-properties)
+När en communityfunktion läggs till i en mall för en community-webbplats eller läggs till när [strukturen för en community-webbplats ändras, öppnas funktionens dialogruta så att titeln och URL:en kan konfigureras.](/help/communities/sites-console.md#modifying-site-properties)
 
 #### Information om konfigurationsfunktion {#configuration-function-details}
 
