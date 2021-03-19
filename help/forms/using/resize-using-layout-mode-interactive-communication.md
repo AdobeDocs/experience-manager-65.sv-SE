@@ -1,10 +1,11 @@
 ---
 title: Använd layoutläget för att ändra storlek på komponenter för interaktiv kommunikation
 description: 'Definiera placeringen av komponenterna med det responsiva stödrastret som finns i layoutläget '
+feature: Interaktiv kommunikation
 translation-type: tm+mt
-source-git-commit: c62ad355469a95db89db44c34bb6df72d8f4bf77
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '843'
+source-wordcount: '845'
 ht-degree: 0%
 
 ---
