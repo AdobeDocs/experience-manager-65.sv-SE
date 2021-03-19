@@ -5,10 +5,13 @@ solution: Experience Manager, Experience Manager Sites
 audience: end-user
 user-guide-title: Användarhandbok för redigering av AEM 6.5 Classic UI
 user-guide-description: Den här handboken beskriver koncepten för redigering i AEM i det klassiska användargränssnittet.
+feature-set: Experience Manager Sites
+feature: Redigering
+role: Yrkesverksamma inom affärsverksamhet
 translation-type: tm+mt
-source-git-commit: 984e50ec1a523ff8a4f618016797c326fd679511
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '271'
+source-wordcount: '274'
 ht-degree: 20%
 
 ---
@@ -80,8 +83,8 @@ ht-degree: 20%
    + [Skapa Adobe Campaign Forms i AEM](classic-personalization-ac-forms.md)
 + Funktionsredigering i det klassiska användargränssnittet {#assets}
    + [Arbeta med resurser](classicui-assets.md)
-   + [Leverera dynamiska medieresurser](dynamic-media-assets-delivering.md)
-   + [Lägga till dynamiska medieresurser på sidor](dynamic-media-assets-adding-to-page.md)
+   + [Leverera Dynamic Media Assets](dynamic-media-assets-delivering.md)
+   + [Lägga till Dynamic Media-resurser på sidor](dynamic-media-assets-adding-to-page.md)
    + [Lägga till Scene7-funktioner på din sida](manage-assets-classic-s7.md)
    + [Video](manage-assets-classic-s7-video.md)
    + [Arbeta med Dynamic Media](dynamic-media-assets.md)
