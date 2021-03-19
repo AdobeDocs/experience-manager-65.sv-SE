@@ -11,10 +11,11 @@ content-type: reference
 discoiquuid: ea033bb9-cb92-4c93-855f-8c902999378c
 docset: aem65
 tagskeywords: scoring, badging, badges, gamification
+role: Administratör
 translation-type: tm+mt
-source-git-commit: 2daf00f17058de8b901848fcf1128a5ee9770368
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2884'
+source-wordcount: '2885'
 ht-degree: 1%
 
 ---
@@ -113,7 +114,7 @@ I releasen ingår tre belöningsbaserade märken:
 
 Anpassade emblem kan installeras med [Badges-konsolen](/help/communities/badges.md) och antingen tilldelas eller anges i badging-regler.
 
-Anpassade märken replikeras automatiskt till publiceringsmiljön när de installeras från badges-konsolen.
+Vid installation från badges-konsolen replikeras anpassade märken automatiskt till publiceringsmiljön.
 
 ## Aktivera poängsättning {#enable-scoring}
 
@@ -643,7 +644,7 @@ Kontrollera sedan att forumkomponenterna och kommentarkomponenterna tillåter at
 
 * Välj forum.
 
-Detta bör göra att communitymedlemmen får ett bronze-märke synligt med sitt foruminlägg eftersom den första tröskeln för forumbadging är 1 poäng.
+Detta bör göra att communitymedlemmen får ett bronze-märke synligt med sitt foruminlägg eftersom den första tröskeln för forumbadging är ett poäng på 1.
 
 ![bronzebadge](assets/bronzebadge.png)
 
