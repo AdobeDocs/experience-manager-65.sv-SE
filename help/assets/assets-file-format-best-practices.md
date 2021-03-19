@@ -2,10 +2,11 @@
 title: Bästa tillvägagångssätt för att bearbeta de filformat som stöds
 description: Bästa tillvägagångssätt för att bearbeta de olika filtyper som stöds med [!DNL Experience Manager Assets].
 contentOwner: AG
+role: Administratör
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '466'
 ht-degree: 0%
 
 ---
@@ -45,7 +46,7 @@ Adobe rekommenderar att du använder [!DNL Adobe InDesign Server] för att extra
 
 ## [!DNL Dynamic Media] {#dynamic-media}
 
-[!DNL Dynamic Media] genererar och levererar flera varianter av avancerat innehåll i realtid via sitt globala, skalbara och prestandaoptimerade nätverk. Det levererar interaktiva tittarupplevelser och effektiviserar den digitala kampanjhanteringsprocessen. Mer information om hur du aktiverar [!DNL Dynamic Media] finns i [Konfigurera dynamiska media](/help/assets/config-dynamic.md).
+[!DNL Dynamic Media] genererar och levererar flera varianter av avancerat innehåll i realtid via sitt globala, skalbara och prestandaoptimerade nätverk. Det levererar interaktiva tittarupplevelser och effektiviserar den digitala kampanjhanteringsprocessen. Mer information om hur du aktiverar [!DNL Dynamic Media] finns i [Konfigurera Dynamic Media](/help/assets/config-dynamic.md).
 
 För närvarande kan [!DNL Dynamic Media] ha stöd för videoklipp med upp till 15 GB innehåll per fil.
 
