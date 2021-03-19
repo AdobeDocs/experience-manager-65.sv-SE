@@ -1,13 +1,13 @@
 ---
 title: AEM Forms JEE Patch Installer
-description: 'null'
+description: AEM Forms JEE Patch Installer
 uuid: 76662858-afca-4ba3-883b-9b9a61874f15
 content-type: reference
 discoiquuid: b0283feb-c3ec-4ef0-885c-46bc83a61e26
 translation-type: tm+mt
-source-git-commit: c1af919d4c0fd984249e1a7009274c63b8ce9adb
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '477'
 ht-degree: 0%
 
 ---
