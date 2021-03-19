@@ -9,10 +9,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 discoiquuid: 18a320b4-dce6-4c50-8864-644b0b2d6644
+role: Developer
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '3739'
+source-wordcount: '3740'
 ht-degree: 0%
 
 ---
@@ -157,7 +158,7 @@ Skapa Java-programlogik som anropar `FirstAppSolution/PreLoanProcess`-processen 
              }
 ```
 
-Normalt placerar du inte klientkod i en Java-servers `doGet`- eller `doPost`-metod. En bättre programmeringspraxis är att placera den här koden i en separat klass. Instansiera sedan klassen inifrån `doPost`-metoden (eller `doGet`-metoden) och anropa lämpliga metoder. För kodförkortning begränsas dock kodexemplen till ett minimum och placeras i metoden `doPost`.
+Normalt placerar du inte klientkod i en Java-serverds `doGet`- eller `doPost`-metod. En bättre programmeringspraxis är att placera den här koden i en separat klass. Instansiera sedan klassen inifrån `doPost`-metoden (eller `doGet`-metoden) och anropa lämpliga metoder. För kodförkortning begränsas dock kodexemplen till ett minimum och placeras i metoden `doPost`.
 
 Så här anropar du processen `FirstAppSolution/PreLoanProcess` med API:t för anrop:
 
@@ -503,7 +504,7 @@ Meddelande under Tjänstreferenser, det finns två objekt. Det första objektet 
 1. Skriv `JobManager` i fältet Namespace.
 1. Klicka på **Gå** och klicka sedan på&#x200B;**OK**.
 1. Välj **Lägg till tjänstreferens** på menyn **Projekt**.
-1. I dialogrutan **Adress** anger du WSDL för processen FirstAppSolution/PreLoanProcess.
+1. I dialogrutan **Adress** anger du WSDL till processen FirstAppSolution/PreLoanProcess.
 
    ```java
     https://hiro-xp:8080/soap/services/FirstAppSolution/PreLoanProcess?WSDL&lc_version=9.0.1
@@ -621,7 +622,7 @@ Om du vill skapa en ASP-sida som anropar processen `FirstAppSolution/PreLoanProc
 1. Skapa en `JobManagerClient` med hjälp av konstruktorn is. (Kontrollera att du har angett en tjänstreferens för tjänsten Job Manager.)
 1. Upprepa steg 1-5. Ange följande URL för steg 2: `https://hiro-xp:8080/soap/services/JobManager?blob=mtom`.
 1. Skapa ett `JobId`-objekt med hjälp av dess konstruktor.
-1. Ange `JobId`-objektets &lt;a1/>-datamedlem med returvärdet för `id`-objektets `FirstAppSolution_PreLoanProcessClient`-metod.`invoke_Async`
+1. Ange `id`-objektets `JobId`-datamedlem med returvärdet för `FirstAppSolution_PreLoanProcessClient`-objektets `invoke_Async`-metod.
 1. Tilldela `value` true till `JobId`-objektets `persistent`-datamedlem.
 1. Skapa ett `JobStatus`-objekt genom att anropa `JobManagerService`-objektets `getStatus`-metod och skicka `JobId`-objektet.
 1. Hämta statusvärdet genom att hämta värdet för `JobStatus`-objektets `statusCode`-datamedlem.
