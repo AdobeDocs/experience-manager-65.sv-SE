@@ -8,10 +8,12 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 1103b849-0042-4e11-b170-38ee81dd0157
 docset: aem65
+feature: Resurshantering
+role: Affärsledare, administratör
 translation-type: tm+mt
-source-git-commit: 4090b1641467c6fb02b2fcce4df97b9fd5da4e2f
+source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
 workflow-type: tm+mt
-source-wordcount: '11264'
+source-wordcount: '11269'
 ht-degree: 6%
 
 ---
@@ -402,7 +404,7 @@ Anta till exempel att källvideon är 1 920 x 1 080. I följande tabell ger de t
 
 | Videotyp | Bredd x höjd | Breddförhållande | Höjdförhållande |
 |--- |--- |--- |--- |
-| Källa | 1920 x 1080 | 1 | 3 |
+| Källa | 1920 x 1080 | 1 | 1 |
 | Kodad | 960 x 540 | 2 | 2 |
 | Kodad | 640 x 360 | 3 | 1 |
 | Kodad | 480 x 270 | 4 | 4 |
