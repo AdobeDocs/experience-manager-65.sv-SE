@@ -8,10 +8,12 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: ccc4eb23-934c-4e67-860b-a6faa2bcaafc
 docset: aem65
+feature: bilduppsättningar,Resurshantering
+role: Affärsledare, administratör
 translation-type: tm+mt
-source-git-commit: c3ae4447581d946554d792c68d31b47a6b67d5df
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '2005'
+source-wordcount: '2012'
 ht-degree: 14%
 
 ---
@@ -54,7 +56,7 @@ Så här kommer du igång snabbt:
    Du kan också skapa bilduppsättningar automatiskt med [gruppuppsättningsförinställningar](/help/assets/config-dms7.md).
    >[!IMPORTANT]
    >
-   >Batchuppsättningar skapas av IPS (Image Production System) som en del av tillgångsinmatningen och är endast tillgängliga i läget Dynamic Media - Scene7.
+   >Batchuppsättningar skapas av IPS (Image Production System) som en del av tillgångsintag och är endast tillgängliga i Dynamic Media-Scene7-läge.
 
    Se [Förbereda bilduppsättningsresurser för överföring och överföring av filer](#uploading-assets-in-image-sets).
 
@@ -85,7 +87,7 @@ Så här kommer du igång snabbt:
 
 Mer information om hur du redigerar bilduppsättningar finns i [Redigera bilduppsättningar.](#editing-image-sets) Dessutom kan du visa och redigera  [bilduppsättningsegenskaper](/help/assets/manage-assets.md#editing-properties).
 
-Om du har problem med att skapa uppsättningar kan du läsa Bilder och uppsättningar i [Felsöka dynamiska media - Scene7-läge](/help/assets/troubleshoot-dms7.md#images-and-sets).
+Om du har problem med att skapa uppsättningar kan du läsa Bilder och uppsättningar i [Felsöka Dynamic Media - Scene7-läge](/help/assets/troubleshoot-dms7.md#images-and-sets).
 
 ## Överför resurser i bilduppsättningar {#uploading-assets-in-image-sets}
 
@@ -118,7 +120,7 @@ Du kan skapa bilduppsättningar via användargränssnittet eller API:t. I det h�
 >[!NOTE]
 >
 >Du kan också skapa bilduppsättningar automatiskt med [gruppuppsättningsförinställningar](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets).
->**Viktigt:** Gruppuppsättningar skapas av IPS (Image Production System) som en del av tillgångsintag och är endast tillgängliga i läget Dynamic Media - Scene7.
+>**Viktigt:** Gruppuppsättningar skapas av IPS (Image Production System) som en del av tillgångsintag och är endast tillgängliga i Dynamic Media - Scene7-läge.
 
 När du lägger till resurser i uppsättningen läggs de automatiskt till i alfanumerisk ordning. Du kan ändra ordning på eller sortera resurser manuellt när de har lagts till.
 
@@ -176,7 +178,7 @@ Du kan skapa bilduppsättningar antingen i användargränssnittet eller automati
 
 >[!IMPORTANT]
 >
->Batchuppsättningar skapas av IPS [Image Production System] som en del av tillgångsintag och är endast tillgängliga i läget Dynamic Media - Scene7.)
+>Gruppuppsättningar skapas av IPS [Image Production System] som en del av tillgångsintag och är endast tillgängliga i Dynamic Media - Scene7-läge.)
 
 Uppsättningar som skapats med gruppuppsättningsförinställningar visas *inte* i användargränssnittet. Du kan visa uppsättningarna på tre olika sätt. (Dessa metoder är tillgängliga även om du har skapat bilduppsättningarna i användargränssnittet).
 
