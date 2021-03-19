@@ -10,10 +10,11 @@ content-type: reference
 topic-tags: upgrading
 discoiquuid: fcb17227-ff1f-4b47-ae94-6b7f60923876
 docset: aem65
+feature: Uppgraderar
 translation-type: tm+mt
-source-git-commit: b8a532f45f531f36e04ff4b5f0cc2c9e729668bb
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1275'
+source-wordcount: '1276'
 ht-degree: 0%
 
 ---
@@ -23,7 +24,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->På den här sidan beskrivs uppgraderingsproceduren för AEM 6.5. Om du har en installation som distribueras till en programserver läser du [Uppgraderingssteg för programserverinstallationer](/help/sites-deploying/app-server-upgrade.md).
+>På den här sidan beskrivs uppgraderingsproceduren för AEM 6.5. Om du har en installation som distribueras till en programserver läser du [Uppgradera steg för programserverinstallationer](/help/sites-deploying/app-server-upgrade.md).
 
 ## Steg före uppgradering {#pre-upgrade-steps}
 
@@ -33,7 +34,7 @@ Innan du utför uppgraderingen måste du utföra flera steg. Mer information fin
 
 ## Migreringskrav {#migration-prerequisites}
 
-* **Minimikrav för Java-version:** Migreringsverktyget fungerar bara med Java-version 7 och senare. Observera att för AEM 6.3 och senare är Oracle JRE 8 och IBM:s JRE 7 och 8 de enda versionerna som stöds.
+* **Minimikrav för Java-version:** Migreringsverktyget fungerar bara med Java-version 7 och senare. Observera att för AEM 6.3 och senare är Oraclets JRE 8 och IBM:s JRE 7 och 8 de enda versionerna som stöds.
 
 * **Uppgraderad instans:** Om du uppgraderar från en version som är  **äldre än 5.6** bör du kontrollera att du har utfört en på plats-uppgradering till AEM 6.0 genom att följa proceduren som beskrivs i version 6.0 av uppgraderingsdokumentationen.
 
