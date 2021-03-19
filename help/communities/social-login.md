@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: c0a71870-8f95-40c8-9ffd-b7af49723288
+role: Administratör
 translation-type: tm+mt
-source-git-commit: 6d0ff6ae47688ba7f0e071bad40808fb3466246f
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2650'
+source-wordcount: '2651'
 ht-degree: 0%
 
 ---
