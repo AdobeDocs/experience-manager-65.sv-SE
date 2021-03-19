@@ -1,7 +1,7 @@
 ---
 title: Provar kärnkomponenter i We.Retail
 seo-title: Provar kärnkomponenter i We.Retail
-description: 'null'
+description: Provar kärnkomponenter i We.Retail
 seo-description: 'null'
 uuid: 8d1cea0b-99d9-49b2-b275-41f14864b1ff
 contentOwner: User
@@ -10,10 +10,10 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: af3cd818-61cf-4da1-bfb5-87540911ddd5
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '539'
-ht-degree: 4%
+source-wordcount: '544'
+ht-degree: 3%
 
 ---
 
@@ -37,7 +37,7 @@ De centrala komponenterna är moderna, flexibla komponenter som är enkla att ut
 
    ![chlimage_1-162](assets/chlimage_1-162.png)
 
-1. Observera att alla kärnkomponenter har namnet **v1**, vilket visar att detta är den första versionen av kärnkomponenten. Vi kommer att lansera de senaste versionerna, som blir versionskompatibla med AEM och gör det enkelt att uppgradera så att du kan dra nytta av de senaste funktionerna.
+1. Observera att alla kärnkomponenter har namnet **v1**, vilket visar att detta är den första versionen av kärnkomponenten. Regelbundna versioner kommer att släppas på marknaden i framtiden, vilket blir versionskompatibelt med AEM och gör det enkelt att uppgradera så att du kan utnyttja de senaste funktionerna.
 1. Klicka på **Text (v1)**.
 
    Se till att **Resurstypen** för komponenten är `/apps/core/wcm/components/text/v1/text`. Kärnkomponenter finns under `/apps/core/wcm/components` och versionsindelas per komponent.
