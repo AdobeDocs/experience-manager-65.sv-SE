@@ -3,10 +3,11 @@ title: Förhandsgranska 3D-resurser
 description: Lär dig hur du förhandsgranskar 3D-resurser
 contentOwner: Rick Brough
 docset: aem65
+feature: 3D-resurser
 translation-type: tm+mt
-source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '558'
+source-wordcount: '560'
 ht-degree: 4%
 
 ---
@@ -33,7 +34,7 @@ Interaktiv 3D-förhandsgranskning stöder följande filformat:
 | DN | Adobe Dimension | model/x-adobe-dn | Stöd endast för förtäring. förhandsgranskning är inte tillgänglig. |
 | USDZ | Zip-arkiv för universell scenbeskrivning | model/vnd.usdz+zip | Stöd endast för förtäring. förhandsgranskning är inte tillgänglig. |
 
-**Obs**: Om materialet inte återges i förhandsgranskningen av en gLTF-modell måste du se till att de har rätt namn och finns i en  `textures` mapp i samma rotmapp som modellen, som i följande:
+**Obs**: Om materialet inte återges i förhandsgranskningen av en gLTF-modell måste du se till att de har rätt namn och finns i en  `textures` mapp i samma rotmapp som modellen, som i följande exempel:
 
     Resurs (mapp)
     modell.
