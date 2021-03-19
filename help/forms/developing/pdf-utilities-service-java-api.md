@@ -1,18 +1,19 @@
 ---
 title: PDF Utilities Service Java APIQuick Start(SOAP)
 seo-title: PDF Utilities Service Java APIQuick Start(SOAP)
-description: Använd PDF Utilities för att konvertera ett PDF-dokument till ett XDP-dokument, konvertera ett XDP-dokument till ett PDF-dokument, hämta PDF-dokumentegenskaper, ange format för att spara ett PDF-dokument och rensa PDF-dokument.
-seo-description: Använd PDF Utilities för att konvertera ett PDF-dokument till ett XDP-dokument, konvertera ett XDP-dokument till ett PDF-dokument, hämta PDF-dokumentegenskaper, ange format för att spara ett PDF-dokument och rensa PDF-dokument.
+description: Använd tjänsten PDF Utilities för att konvertera ett PDF-dokument till ett XDP-dokument, konvertera ett XDP-dokument till ett PDF-dokument, hämta PDF-dokumentegenskaper, ange format för att spara ett PDF-dokument och rensa PDF-dokument.
+seo-description: Använd tjänsten PDF Utilities för att konvertera ett PDF-dokument till ett XDP-dokument, konvertera ett XDP-dokument till ett PDF-dokument, hämta PDF-dokumentegenskaper, ange format för att spara ett PDF-dokument och rensa PDF-dokument.
 uuid: 96bb2bd5-b274-43d4-a664-49cc1c526b3f
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 4ec4c674-d7d3-4988-9d77-78d274970672
+role: Developer
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '503'
+source-wordcount: '504'
 ht-degree: 0%
 
 ---
