@@ -5,11 +5,14 @@ audience: end-user
 user-guide-title: AEM 6.5 Handbok för användarhantering
 breadcrumb-title: Handbok
 user-guide-description: Lär dig hantera ett AEM projekt.
+feature-set: Experience Manager Sites
+feature: Distribuerar
+role: Yrkesverksamma inom affärsverksamhet
 translation-type: tm+mt
-source-git-commit: e917a36f9b8748080e9ab770a7f58f06123ea166
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '72'
-ht-degree: 18%
+source-wordcount: '75'
+ht-degree: 17%
 
 ---
 
