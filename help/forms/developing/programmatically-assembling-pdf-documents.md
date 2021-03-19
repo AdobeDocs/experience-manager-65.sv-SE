@@ -1,8 +1,8 @@
 ---
 title: Programmisk sammanställning av PDF-dokument
 seo-title: Programmisk sammanställning av PDF-dokument
-description: Använd API:t för Assembler-tjänsten för att samla ihop flera PDF-dokument till ett enda PDF-dokument med Java API och Web Service API.
-seo-description: Använd API:t för Assembler-tjänsten för att samla ihop flera PDF-dokument till ett enda PDF-dokument med Java API och Web Service API.
+description: Använd API:t för Assembler-tjänsten för att samla ihop flera PDF-dokument till ett enda PDF-dokument med hjälp av Java API och Web Service API.
+seo-description: Använd API:t för Assembler-tjänsten för att samla ihop flera PDF-dokument till ett enda PDF-dokument med hjälp av Java API och Web Service API.
 uuid: aa3f8f39-1fbc-48d0-82ff-6caaadf125fc
 contentOwner: admin
 content-type: reference
@@ -10,10 +10,11 @@ geptopics: SG_AEMFORMS/categories/assembling_pdf_documents
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: ebe8136b-2a79-4035-b9d5-aa70a5bbd4af
+role: Developer
 translation-type: tm+mt
-source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2152'
+source-wordcount: '2153'
 ht-degree: 0%
 
 ---
