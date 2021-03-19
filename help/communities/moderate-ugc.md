@@ -10,10 +10,11 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 6866d209-5789-4ef9-bc3c-d644d4fb4b1c
 docset: aem65
+role: Administratör
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1517'
+source-wordcount: '1518'
 ht-degree: 2%
 
 ---
@@ -34,7 +35,7 @@ Community-innehåll, som också kallas användargenererat innehåll (UGC), skapa
 * [QnA](/help/communities/working-with-qna.md): -medlemmar skapar en fråga eller besvarar en fråga.
 * [Recensioner](/help/communities/reviews.md): medlemmar publicerar en kommentar när de klassificerar ett objekt.
 
-Moderering av användargenererat innehåll är användbart för erkännande av positiva bidrag samt för begränsning av negativa bidrag (t.ex. skräppost och missbruk). UGC kan modereras från flera miljöer:
+Moderering av användargenererat innehåll är användbart för att redovisa positiva bidrag och begränsa negativa bidrag (t.ex. skräppost och missbruk). UGC kan modereras från flera miljöer:
 
 * [Community-innehåll lagras](working-with-srp.md)
 
@@ -290,7 +291,7 @@ Så här konfigurerar du uttryck och bevakningsord:
 
    Databasplatsen för reglerna för att beräkna en uppfattning baserat på positiva och negativa bevakningsord. Standardvärdet är `/libs/cq/workflow/components/workflow/social/sentiments/rules` (men det finns inte längre något arbetsflöde).
 
-Här följer ett exempel på en anpassad post för standardbevakningsorden när `Explicit Path to Watchwords Node` är inställt på `/libs/settings/community/watchwords/default`.
+Nedan visas ett exempel på en anpassad post för standardbevakningsorden när `Explicit Path to Watchwords Node` är `/libs/settings/community/watchwords/default`.
 
 ![crxde](assets/crxde.png)
 
