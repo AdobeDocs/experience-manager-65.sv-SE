@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: d855aac2-f34d-402f-9dc3-c7ad494b45f2
+role: Administratör
 translation-type: tm+mt
-source-git-commit: d80c6609b5a0ac299b57b1d0c0e8d6210e595b97
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '436'
+source-wordcount: '437'
 ht-degree: 0%
 
 ---
@@ -34,7 +35,7 @@ Med hjälp av medlemskonsolen kan bidragsgränser tas bort proaktivt för en med
 
 Den här OSGi-konfigurationen:
 
-* Definierar karaktärerna för bidragsgränserna (antalet tjänster inom en tidsperiod).
+* Definierar egenskaperna för bidragsgränserna (antalet tjänster inom en tidsperiod).
 * Identifierar vem medlemmen kan meddela när gränsen har nåtts.
 * Identifierar domäner som aldrig behöver begränsas.
 
