@@ -8,10 +8,11 @@ content-type: reference
 topic-tags: develop
 discoiquuid: f5642571-9657-4ca1-93c5-4ae2eb91e967
 noindex: true
+feature: Adaptiv Forms
 translation-type: tm+mt
-source-git-commit: 5120bbdefea528ad6d07a9c99df565555b6a8444
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '779'
+source-wordcount: '781'
 ht-degree: 0%
 
 ---
@@ -34,7 +35,7 @@ Maskinöversättningstjänsten översätter omedelbart ditt innehåll i adaptiv 
 1. Klicka på **Öppna projekt** i dialogrutan Lexikon tillagd. Öppna det nyskapade projektet på projektskärmen.
 1. Klicka på **ellipserna** längst ned i rutan **Översättningssammanfattning**. Skärmen Översättningssammanfattning öppnas.
 1. Klicka på ikonen **Redigera** längst upp på skärmen **Översättningssammanfattning**. Öppna fliken **Översättning** och välj Maskinöversättning på skärmen **Översättningsmetod**. Välj lämplig **översättningsprovider** och **molnkonfiguration**. Klicka på ikonen **Klar** längst upp på skärmen.
-1. Klicka på ikonen **aem62forms_download![ på ](assets/aem62forms_downarrow.png)översättningsjobb**. **** Status för rutan ändras till Utkast. När översättningen är klar ändras statusen till **Klart för granskning**. Uppdatera sidan efter några minuter och kontrollera statusen.
+1. Klicka på ikonen ![aem62forms_download](assets/aem62forms_downarrow.png) på **översättningsjobb**. **** Status för rutan ändras till Utkast. När översättningen är klar ändras statusen till **Klart för granskning**. Uppdatera sidan efter några minuter och kontrollera statusen.
 1. När statusen har ändrats till **Klar för granskning** på **översättningsjobb**-panelen öppnar du formuläret i ett webbläsarfönster. En lokaliserad version av formuläret visas.
 
    >[!NOTE]
