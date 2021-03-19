@@ -12,9 +12,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: d8c9c2db-6709-409a-93d0-11b802763ada
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4c9a0bd73e8d87d3869c6a133f5d1049f8430cd1
+source-git-commit: 5b33f615f1c82ec7cf80ae00c440cb5e3f0741fa
 workflow-type: tm+mt
-source-wordcount: '312'
+source-wordcount: '308'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,6 @@ ht-degree: 0%
 Adobe Experience Manager (AEM) innehåller flera API:er för utveckling av program och utökning av AEM. Följande lista innehåller dokumentation för API:er som stöds av AEM:
 
 * [Adobe AEM 6.5.0 API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html)
-* API-skillnader (kommer snart)
 * [Begränsa API-dokumentation (Touch-aktiverad)](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html)
 * [Användargränssnittshandbok för Coral](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/index.html)
 * [Dokumentation för widgets-API (Classic UI)](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html)
@@ -37,7 +36,7 @@ AEM Single-Page Application (SPA) Editor SDK Framework JavaScript API-referenser
 * [Komponentmappning](https://www.npmjs.com/package/@adobe/aem-spa-component-mapping)
 * [Sidmodellshanteraren](https://www.npmjs.com/package/@adobe/aem-spa-page-model-manager)
 * [Reagera på redigerbara komponenter](https://www.npmjs.com/package/@adobe/aem-react-editable-components)
-* [Vinkelredigerbara komponenter](https://www.npmjs.com/package/@adobe/aem-angular-editable-components)
+* [Redigerbara komponenter för angular](https://www.npmjs.com/package/@adobe/aem-angular-editable-components)
 
 AEM Delivery and Content Management APIs:
 
