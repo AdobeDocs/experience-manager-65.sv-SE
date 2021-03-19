@@ -2,10 +2,11 @@
 title: Bästa tillvägagångssätt för att övervaka [!DNL Assets] distribution
 description: Bästa tillvägagångssätt för att övervaka miljön och prestandan för din  [!DNL Adobe Experience Manager] distribution efter att den har distribuerats.
 contentOwner: AG
+role: Administratör, arkitekt
 translation-type: tm+mt
-source-git-commit: b14b377e52ab10c41355f069d97508b588d82216
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '1668'
+source-wordcount: '1670'
 ht-degree: 0%
 
 ---
