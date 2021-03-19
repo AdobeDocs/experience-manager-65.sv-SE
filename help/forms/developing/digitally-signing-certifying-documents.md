@@ -9,10 +9,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 42de04bf-25e4-4478-a411-38671ed871ae
+role: Developer
 translation-type: tm+mt
-source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '17113'
+source-wordcount: '17114'
 ht-degree: 0%
 
 ---
@@ -557,7 +558,7 @@ Spara PDF-dokumentet som innehåller det ändrade signaturfältet som en PDF-fil
 
 Digitala signaturer kan användas i PDF-dokument för att ge en viss säkerhetsnivå. Digitala signaturer, precis som handskrivna signaturer, är ett sätt som signerare kan använda för att identifiera sig och göra programsatser om ett dokument. Den teknik som används för att digitalt signera dokument gör att både signeraren och mottagaren vet vad som signerats och vet att dokumentet inte har ändrats sedan det signerades.
 
-PDF-dokument signeras med hjälp av teknik för offentlig nyckel. En signerare har två nycklar: en offentlig nyckel och en privat nyckel. Den privata nyckeln lagras i en användares autentiseringsuppgifter som måste vara tillgängliga vid signeringen. Den offentliga nyckeln lagras i användarens certifikat som måste vara tillgängligt för mottagarna för att validera signaturen. Information om återkallade certifikat finns i listor över återkallade certifikat (CRL:er) och OCSP-svar (Online Certificate Status Protocol) som distribueras av certifikatutfärdare (CA:er). Tidpunkten för signering kan hämtas från en betrodd källa som kallas tidsstämpelutfärdare.
+PDF-dokument signeras med hjälp av teknik med öppen nyckel. En signerare har två nycklar: en offentlig nyckel och en privat nyckel. Den privata nyckeln lagras i en användares autentiseringsuppgifter som måste vara tillgängliga vid signeringen. Den offentliga nyckeln lagras i användarens certifikat som måste vara tillgängligt för mottagarna för att validera signaturen. Information om återkallade certifikat finns i listor över återkallade certifikat (CRL:er) och OCSP-svar (Online Certificate Status Protocol) som distribueras av certifikatutfärdare (CA:er). Tidpunkten för signering kan hämtas från en betrodd källa som kallas tidsstämpelutfärdare.
 
 >[!NOTE]
 >
@@ -1571,7 +1572,7 @@ Om du vill göra en återkallningskontroll på ett certifikat anger du en URL ti
 
 I stället för att använda en CRL-server kan du använda en OCSP-server (Online Certificate Status Protocol) när du utför spärrkontroll. När du använder en OCSP-server i stället för en CRL-server utförs spärrkontrollen oftast snabbare. (Se [Online Certificate Status Protocol](https://tools.ietf.org/html/rfc2560).)
 
-Du kan ställa in CRL- och OCSP-serverordningen som används av signaturtjänsten genom att använda Adobe-program och -tjänster. Om till exempel OCSP-servern är inställd först i Adobe-program och -tjänster kontrolleras OCSP-servern, som följs av CRL-servern.
+Du kan ställa in CRL- och OCSP-serverordningen som används av signaturtjänsten med Adobe-program och -tjänster. Om till exempel OCSP-servern är inställd först i Adobe-program och -tjänster kontrolleras OCSP-servern, som följs av CRL-servern.
 
 Om du inte utför spärrkontroll kontrollerar inte signaturtjänsten om certifikatet har spärrats. CRL- och OCSP-serverinformation ignoreras alltså.
 
