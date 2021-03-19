@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: configuring
 discoiquuid: 80118cd1-73e1-4675-bbdf-85d66d150abc
+feature: Konfigurerar
 translation-type: tm+mt
-source-git-commit: a0673c23588cba263c292680637b16a18ef1431c
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '6658'
+source-wordcount: '6659'
 ht-degree: 1%
 
 ---
@@ -30,7 +31,7 @@ ht-degree: 1%
 
 Ett viktigt problem är den tid det tar för er webbplats att svara på besökarnas förfrågningar. Även om det här värdet varierar för varje begäran kan ett genomsnittligt målvärde definieras. När det här värdet har visat sig vara både genomförbart och underhållbart kan det användas för att övervaka webbplatsens prestanda och indikera utvecklingen av potentiella problem.
 
-De svarstider du vill ha skiljer sig åt mellan skribent- och publiceringsmiljöerna, vilket återspeglar målgruppens olika egenskaper:
+De svarstider du vill använda skiljer sig åt mellan skribent- och publiceringsmiljöerna, vilket återspeglar målgruppens olika egenskaper:
 
 ## Författarmiljö {#author-environment}
 
@@ -142,7 +143,7 @@ Två saker påverkar prestandan här:
 * CPU - flera kärnor ger jämnare arbete vid omkodning
 * Hårddisk - parallella RAID-diskar uppnår samma
 
-Du kan förbättra prestanda genom att tänka på följande:
+För att förbättra prestanda kan du tänka på följande:
 
 * Hur många mediefiler överförs per dag? En god uppskattning kan baseras på
 
@@ -390,7 +391,7 @@ I båda fallen kan du definiera det förväntade antalet transaktioner per sekun
 |---|---|---|---|---|---|
 | Startsida - en användare | Medel | 1 | 3 |  |  |
 |  | Toppvärde | 3 | 3 |  |  |
-| Startsida 100 användare | Medel | 100 | 3 |  |  |
+| Startsida 100 användare | Medel | 100 | 1 |  |  |
 |  | Toppvärde | 100 | 3 |  |
 
 #### Kombinerade komponenttester {#combined-component-tests}
@@ -433,9 +434,9 @@ När man utformar dessa tester bör man komma ihåg att inte alla scenarier komm
 
 | Felscenario | Feltyp | Nej. Användare | Tx/sek (förväntas) | Tx/sek (testad) | Beskrivning |
 |---|---|---|---|---|---|
-| Överlagring av sökkomponent | Sök på globalt jokertecken (asterisk) | 10 | 3 |  | Endast &amp;stämpel;ast;&amp;ast;&amp;ast; söks igenom. |
+| Överlagring av sökkomponent | Sök på globalt jokertecken (asterisk) | 10 | 1 |  | Endast &amp;stämpel;ast;&amp;ast;&amp;ast; söks igenom. |
 |  | Stoppord | 20 | 2 |  | Söker efter ett stoppord. |
-|  | Tom sträng | 10 | 3 |  | Söker efter en tom sträng. |
+|  | Tom sträng | 10 | 1 |  | Söker efter en tom sträng. |
 |  | Specialtecken | 10 | 3 |  | Söker efter specialtecken. |
 
 #### Bevarandetest {#endurance-tests}
@@ -445,10 +446,10 @@ Vissa problem kommer inte att uppstå förrän systemet har körts under en kont
 | Scenario | Testtyp | Nej. Användare | Tx/sek (förväntas) | Tx/sek (testad) | Beskrivning |
 |---|---|---|---|---|---|
 | Varaktighetsprovning (72 timmar) | Hemsida | 10 | 3 |  |  |
-|  | Sökning | 10 | 3 |  |  |
+|  | Sökning | 10 | 1 |  |  |
 |  | Nyheter | 20 | 2 |  |  |
 |  | Händelser | 10 | 3 |  |  |
-|  | Aktiveringar | 3 | 3 |  | Simulering av författarbeteende. |
+|  | Aktiveringar | 1 | 3 |  | Simulering av författarbeteende. |
 
 ### Optimering {#optimization}
 
@@ -653,7 +654,7 @@ Följ dessa riktlinjer för att vara säker på att filerna cachelagras korrekt:
 
 ## Säkerhetskopieringsprestanda {#backup-performance}
 
-I det här avsnittet presenteras en serie prestandatester som används för att utvärdera AEM säkerhetskopiering och hur säkerhetskopiering påverkar programmets prestanda. AEM säkerhetskopieringar är mycket belastade på systemet medan det körs, och vi mäter detta, liksom effekterna av inställningarna för fördröjning av säkerhetskopieringen som försöker att modulera dessa effekter. Målet är att tillhandahålla vissa referensdata om förväntade prestanda för säkerhetskopieringar i realistiska konfigurationer och kvantiteter av produktionsdata, och att ge vägledning om hur man beräknar säkerhetskopieringstider för planerade system.
+I det här avsnittet presenteras en serie prestandatester som används för att utvärdera AEM säkerhetskopiering och hur säkerhetskopiering påverkar programmets prestanda. AEM säkerhetskopieringar innebär en betydande belastning på systemet medan det körs, och vi mäter detta, liksom effekterna av inställningarna för fördröjning av säkerhetskopieringen som försöker modulera dessa effekter. Målet är att tillhandahålla vissa referensdata om förväntade prestanda för säkerhetskopieringar i realistiska konfigurationer och kvantiteter av produktionsdata, och att ge vägledning om hur man beräknar säkerhetskopieringstider för planerade system.
 
 ### Referensmiljö {#reference-environment}
 
@@ -686,7 +687,7 @@ Prestandatestvärdet för säkerhetskopiering upprepas med ytterligare innehåll
 
 #### Benchmark-scenarier {#benchmark-scenarios}
 
-Referensvärdena för säkerhetskopiering omfattar två huvudscenarier: säkerhetskopieringar när systemet är under stor programbelastning och säkerhetskopieringar när systemet är ledigt. Även om den allmänna rekommendationen är att säkerhetskopieringar ska utföras när AEM är så inaktiv som möjligt, finns det situationer då det är nödvändigt att säkerhetskopieringen måste köras när systemet är under laddning.
+Referensvärdena för säkerhetskopiering omfattar två huvudscenarier: säkerhetskopierar när systemet är under en betydande programbelastning och säkerhetskopierar när systemet är inaktivt. Även om den allmänna rekommendationen är att säkerhetskopieringar ska utföras när AEM är så inaktiv som möjligt, finns det situationer då det är nödvändigt att säkerhetskopieringen måste köras när systemet är under laddning.
 
 * **Vänteläge**  - Säkerhetskopieringar utförs utan någon annan aktivitet på AEM.
 * **Under Load**  - Säkerhetskopieringar utförs medan systemet är under 80 % inläst från onlineprocesser. Fördröjningen för säkerhetskopiering varierade för att se effekten på inläsningen.
