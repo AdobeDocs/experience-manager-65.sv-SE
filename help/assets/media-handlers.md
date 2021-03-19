@@ -2,10 +2,11 @@
 title: Bearbeta resurser med mediehanterare och arbetsflöden
 description: Lär dig mer om mediehanterarna och hur du använder arbetsflöden för att utföra uppgifter i dina digitala resurser.
 contentOwner: AG
+role: Yrkesverksamma inom affärsverksamhet
 translation-type: tm+mt
-source-git-commit: a6758adf5ac8992e27c13b87ae65c83b5b8695c7
+source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
 workflow-type: tm+mt
-source-wordcount: '2090'
+source-wordcount: '2092'
 ht-degree: 1%
 
 ---
