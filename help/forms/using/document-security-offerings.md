@@ -10,10 +10,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 91e85e86-2361-4d1d-aa73-c3cce46ab1f1
 docset: aem65
+feature: Dokumentsäkerhet
 translation-type: tm+mt
-source-git-commit: e45e335d433f17a48ba1bf27a93c5b1003369512
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1217'
+source-wordcount: '1219'
 ht-degree: 0%
 
 ---
@@ -75,7 +76,7 @@ Du kan använda Document Security SDK, Adobe Acrobat, Document Security Extensio
 
 ### Indexskyddade dokument {#index-protected-documents}
 
-Fulltextsökmotorer för Microsoft Windows (SharePoint Index-server) och Adobe Experience Manager (AEM) kan utföra fulltextsökning i vanliga dokumentformat som vanliga textfiler, Microsoft Office-dokument och PDF-dokument. Du kan använda dokumentsäkerhetsindexerare för att aktivera fulltextsökmotorer för att söka efter skyddade PDF-dokument:
+Fulltextsökmotorer i Microsoft Windows (SharePoint Index-server) och Adobe Experience Manager (AEM) kan utföra fulltextsökning i vanliga dokumentformat som vanliga textfiler, Microsoft Office-dokument och PDF-dokument. Du kan använda dokumentsäkerhetsindexerare för att aktivera fulltextsökmotorer för att söka efter skyddade PDF-dokument:
 
 * **iFilter-indexerare:** Du kan använda iFilter-indexeraren för att indexera skyddade PDF-dokument och aktivera fulltextsökmotorer i Microsoft Windows (Desktop Indexing Service och SharePoint Indexserver) för att söka i skyddade PDF-dokument. Mer information finns i [AEM SharePoint IFilter for Protected Documents](assets/sharepoint-ifilter-doc-security.pdf).
 
