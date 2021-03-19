@@ -8,10 +8,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: 9459c414-eac9-4bd9-a773-cceaeb736c56
 docset: aem65
+feature: Adaptiv Forms
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1155'
+source-wordcount: '1157'
 ht-degree: 0%
 
 ---
@@ -143,9 +144,9 @@ Mobila layouter med paneltitlar i formulärrubriker
 
 Den här layouten, som namnet föreslår, visar bara navigeringsmenyn och navigeringsfältet utan panelrubriker. Den här layouten innehåller även ikoner för Nästa och Föregående för navigering.
 
-![Mobila layouter utan panelrubriker i formulärrubriker](assets/mobile_layout_without.png)
+![Mobila layouter utan panelrubriker i formulärrubrikerna](assets/mobile_layout_without.png)
 
-Mobila layouter utan panelrubriker i formulärrubriker
+Mobila layouter utan panelrubriker i formulärrubrikerna
 
 ## Verktygsfältslayouter {#toolbar-layouts}
 
