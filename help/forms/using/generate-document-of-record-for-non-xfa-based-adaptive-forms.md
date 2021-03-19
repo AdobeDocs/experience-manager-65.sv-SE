@@ -9,10 +9,11 @@ topic-tags: adaptive_forms, develop
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: ce65cb5f-94ec-4423-9fa9-d617e9703091
 docset: aem65
+feature: Adaptiv Forms
 translation-type: tm+mt
-source-git-commit: fa3d5923784a8d89e2b440412d2b88790de3e39e
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2646'
+source-wordcount: '2648'
 ht-degree: 1%
 
 ---
