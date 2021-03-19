@@ -8,10 +8,11 @@ contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 879ff6ca-e5f3-451d-acc2-f75142101ddd
 docset: aem65
+feature: Interaktiv kommunikation
 translation-type: tm+mt
-source-git-commit: ce64b148ba96cc64670aaf96c1b201bafa282b98
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1809'
+source-wordcount: '1811'
 ht-degree: 0%
 
 ---
@@ -99,7 +100,7 @@ Så här skapar du en XDP-mall för utskriftskanalen:
 
    För att spara tid kan du även kopiera och klistra in befintliga delformulär för att skapa nya delformulär.
 
-   Om du vill flytta delformuläret **Diagram** till höger om delformuläret Charges väljer du delformuläret **Diagram** i den vänstra rutan, väljer fliken **Layout** och anger ett värde för fältet **AnchorX**. Värdet måste vara större än värdet för fältet **Bredd** för delformuläret **Avgifter**. Markera delformuläret **Avgifter** och välj fliken **Layout** för att visa värdet för fältet **Bredd**.
+   Om du vill flytta delformuläret **Diagram** till höger om delformuläret Diagram väljer du delformuläret **Diagram** i den vänstra rutan, väljer fliken **Layout** och anger ett värde för fältet **AnchorX**. Värdet måste vara större än värdet för fältet **Bredd** för delformuläret **Avgifter**. Markera delformuläret **Avgifter** och välj fliken **Layout** för att visa värdet för fältet **Bredd**.
 
 1. Dra och släpp **Text**-objektet från **objektbiblioteket** till formuläret och ange **Dial XXXX för att prenumerera**-texten i rutan.
 1. Högerklicka på textobjektet i den vänstra rutan, välj **Byt namn på objekt** och ange namnet på textobjektet som **Prenumerera**.
@@ -242,7 +243,7 @@ Utför följande steg för att skapa en mall för webbkanalen i mappen **Create_
    | kundinformation | Kundinformation | 1 |
    | faktureringssammanfattning | Fakturasammanfattning | 1 |
    | summeringskostnader | Sammanfattning av avgifter | 2 |
-   | objektanrop | Specificerade samtal | 1 |
+   | objektanrop | Specificerade samtal | 3 |
    | nyttja | Betala nu | 2 |
    | arbetsyta | Mervärdestjänster | 3 |
 
