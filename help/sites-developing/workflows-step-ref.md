@@ -1,7 +1,7 @@
 ---
 title: Referens för arbetsflödessteg
 seo-title: Referens för arbetsflödessteg
-description: 'null'
+description: Referens för arbetsflödessteg
 seo-description: 'null'
 uuid: 88bf6997-73a1-4639-82aa-5dff08d3ef86
 contentOwner: User
@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: e3afffd0-d90c-4bd0-b814-f7aeac6ceb6d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '3286'
+source-wordcount: '3288'
 ht-degree: 0%
 
 ---
@@ -282,7 +282,7 @@ Om du vill konfigurera steget redigerar du och använder följande flikar:
 
 Om du vill skapa en dialogruta måste du skapa den:
 
-* Bestäm var de resulterande data ska sparas i nyttolasten[.](#dialog-participant-step-storing-data-in-the-payload)
+* Bestäm var de resulterande data ska sparas i nyttolasten](#dialog-participant-step-storing-data-in-the-payload).[
 * [Definiera dialogrutan. Detta innefattar att definiera de fält som används för att samla in (och spara) data](#dialog-participant-step-dialog-definition).
 
 #### Steg för dialogdeltagare - lagra data i nyttolasten {#dialog-participant-step-storing-data-in-the-payload}
