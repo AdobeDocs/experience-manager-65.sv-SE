@@ -7,10 +7,11 @@ uuid: 6d182bbc-b47a-4c97-af70-c960b52fdfac
 contentOwner: khsingh
 discoiquuid: ecddb22e-c148-441f-9088-2e5b35c7021b
 docset: aem65
+feature: Adaptiv Forms
 translation-type: tm+mt
-source-git-commit: 1a816672b3e97346f5a7a984fcb4dc0df1a5b0da
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '904'
+source-wordcount: '906'
 ht-degree: 1%
 
 ---
