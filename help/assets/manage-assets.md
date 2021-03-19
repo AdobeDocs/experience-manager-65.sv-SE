@@ -3,10 +3,11 @@ title: Hantera era digitala resurser
 description: Lär dig resurshanteringsåtgärder som överföring, hämtning, redigering, sökning, borttagning, anteckning och version av digitala resurser.
 contentOwner: AG
 mini-toc-levels: 1
+role: Yrkesverksamma inom affärsverksamhet
 translation-type: tm+mt
-source-git-commit: 0cecf1940136175887802b5ba205c67e61475a59
+source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
 workflow-type: tm+mt
-source-wordcount: '9358'
+source-wordcount: '9360'
 ht-degree: 3%
 
 ---
