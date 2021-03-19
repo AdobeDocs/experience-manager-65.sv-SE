@@ -1,7 +1,7 @@
 ---
 title: Interagera med arbetsflöden programmatiskt
 seo-title: Interagera med arbetsflöden programmatiskt
-description: 'null'
+description: Interagera med arbetsflöden programmatiskt
 seo-description: 'null'
 uuid: a0f19fc6-b9bd-4b98-9c0e-fbf4f7383026
 contentOwner: User
@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: cb621332-a149-4f8d-9425-fd815b033c38
 translation-type: tm+mt
-source-git-commit: edf7ef93372e44cb71d8eac8712db53f4e45b6cf
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2006'
+source-wordcount: '2009'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ Följande tabell innehåller länkar till referensdokumentationen för flera vik
 
 Så som beskrivs i [Leta reda på skriptet](/help/sites-developing/the-basics.md#locating-the-script), tillhandahåller AEM (via Apache Sling) en ECMA-skriptmotor som kör ECMA-skript på serversidan. Klassen [`org.apache.sling.scripting.core.ScriptHelper`](https://sling.apache.org/apidocs/sling5/org/apache/sling/scripting/core/ScriptHelper.html) är omedelbart tillgänglig för dina skript som variabeln `sling`.
 
-Klassen `ScriptHelper` ger åtkomst till `SlingHttpServletRequest` som du kan använda för att till slut få `WorkflowSession`-objektet; till exempel:
+Klassen `ScriptHelper` ger åtkomst till `SlingHttpServletRequest` som du kan använda för att till slut hämta `WorkflowSession`-objektet; till exempel:
 
 ```
 var wfsession = sling.getRequest().getResource().getResourceResolver().adaptTo(Packages.com.adobe.granite.workflow.WorkflowSession);
@@ -63,7 +63,7 @@ Arbetsflödeskonsolen använder REST API i stor utsträckning. så den här sida
 
 >[!NOTE]
 >
->Med kommandoradsverktyget curl kan du använda arbetsflödets REST API för att komma åt arbetsflödesobjekt och hantera instanslivscykler. Exemplen på hela den här sidan visar hur REST API används via verktyget för rullande kommandorad.
+>Med verktygen på kommandoraden kan du använda arbetsflödets REST API för att komma åt arbetsflödesobjekt och hantera instanslivscykler. Exemplen på den här sidan visar hur du använder REST API via verktygen för rullande kommandorad.
 
 Följande åtgärder stöds med REST API:
 
@@ -74,9 +74,9 @@ Följande åtgärder stöds med REST API:
 
 >[!NOTE]
 >
->Genom att använda Firebug, ett Firefox-tillägg för webbutveckling, är det möjligt att följa HTTP-trafiken när konsolen används. Du kan till exempel kontrollera parametrarna och värdena som skickas till AEM med en `POST`-begäran.
+>Genom att använda Firebug, ett Firefox-tillägg för webbutveckling, är det möjligt att följa HTTP-trafiken när konsolen körs. Du kan till exempel kontrollera parametrarna och värdena som skickas till den AEM servern med en `POST`-begäran.
 
-På den här sidan antas att AEM körs på localhost vid port `4502` och att installationskontexten är `/` (root). Om det inte är fallet med din installation måste de URI:er som HTTP-begäran gäller anpassas därefter.
+På den här sidan antas att AEM körs på localhost vid port `4502` och att installationskontexten är `/` (root). Om det inte är fallet med din installation måste URI:erna som HTTP-begäran gäller för anpassas därefter.
 
 Den återgivning som stöds för `GET`-begäranden är JSON-återgivningen. URL:erna för `GET` ska ha tillägget `.json`, till exempel:
 
@@ -91,7 +91,7 @@ Följande metoder för HTTP-begäran gäller:
 <table>
  <tbody>
   <tr>
-   <td>HTTP-begärandemetod</td>
+   <td>Metod för HTTP-begäran</td>
    <td>Åtgärder</td>
   </tr>
   <tr>
