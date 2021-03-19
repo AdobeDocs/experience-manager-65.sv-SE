@@ -8,10 +8,11 @@ topic-tags: author
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: fc418da9-496f-4a2b-bfe4-2add3ac4f468
 docset: aem65
+feature: Adaptiv Forms
 translation-type: tm+mt
-source-git-commit: 01c30e78d1f89e8c07abeb0ac19af38722010dd0
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2422'
+source-wordcount: '2424'
 ht-degree: 0%
 
 ---
@@ -305,7 +306,7 @@ Dessutom kan du dra och släppa en grupp XSD-element med komplex typ för att sk
 >
 >Antalet element i en XDP-tabellkomponent, ett delformulär eller en XSD-komplex typ får inte överstiga antalet celler i en rad. Du kan till exempel inte släppa fyra element på en rad som bara har tre celler. Det resulterar i ett fel.
 >
->Om antalet element är mindre än antalet celler i en rad lägger den nya raden först till celler som är baserade på elementen, och därefter läggs standardcellerna till för att fylla i de återstående cellerna i raden. Om du till exempel släpper en grupp med tre element på en rad som har fyra celler, baseras de första tre cellerna på de element som du har tagit bort och de återstående en cellerna blir standardtabellcellen.
+>Om antalet element är mindre än antalet celler i en rad lägger den nya raden först till celler som baseras på elementen, och därefter läggs standardcellerna till för att fylla i de återstående cellerna i raden. Om du till exempel släpper en grupp med tre element på en rad som har fyra celler, baseras de första tre cellerna på de element som du har tagit bort och de återstående en cellerna blir standardtabellcellen.
 
 ## Viktiga överväganden {#key-considerations}
 
