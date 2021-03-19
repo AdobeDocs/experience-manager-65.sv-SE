@@ -8,10 +8,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
 discoiquuid: a1a0ad6b-023a-4822-9cce-0618657c3f9d
 docset: aem65
+feature: Korrespondenshantering
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '3859'
+source-wordcount: '3861'
 ht-degree: 0%
 
 ---
@@ -98,7 +99,7 @@ Du använder Data Dictionary Editor för att skapa ett datalexikon eller du kan 
 
    ![2_addPropertiesBasic](assets/2_addddpropertiesbasic.png)
 
-1. (Valfritt) När du har markerat ett element kan du lägga till egenskaper (attribut) på fliken Avancerat. Du kan också trycka på **Lägg till fält** och utöka egenskaperna för ett DD-element.
+1. (Valfritt) När du har valt ett element kan du lägga till egenskaper (attribut) på fliken Avancerat. Du kan också trycka på **Lägg till fält** och utöka egenskaperna för ett DD-element.
 
    ![3_addPropertiesAdvanced](assets/3_addddpropertiesadvanced.png)
 
@@ -468,7 +469,7 @@ Dataordlisteredigeraren verkställer följande valideringar när du skapar eller
 * Sammansatta element och samlingselement tillåts inte på lövnivå. Endast primitiva (String, Date, Number, Boolean) element tillåts på lövnivå. Valideringen säkerställer att det inte finns något sammansatt element och samlingselement utan en underordnad DDE.
 * När du överför en XSD-fil för att skapa ett datalexikon uppmanas du att skapa dataordlistan om det finns flera element på den översta nivån.
 * Namnet är den enda obligatoriska parametern för en dataordlista.
-* En överordnad DDE (sammansatt) får inte ha två underordnade med samma namn
+* En överordnad DDE (sammansatt) får inte ha två underordnade objekt med samma namn
 * Ser till att en DDE markeras som beräknad, endast om det inte är en obligatorisk parameter. Ett obligatoriskt element kan inte beräknas och ett beräknat element kan inte behövas. Samling och sammansatta element kan inte heller beräknas.
 * Ser till att en DDE markeras som obligatorisk, endast när den inte beräknas. Det ser också till att det inte är &quot;collectionElement&quot; som betecknar typen av Collection (d.v.s. det enda underordnade elementet i ett samlingselement).
 * Tomma nycklar eller dubblettnycklar tillåts inte i extendedProperties för ett datalexikon eller DDE.
