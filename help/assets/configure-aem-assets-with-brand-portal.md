@@ -9,10 +9,12 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: dca5a2ac-1fc8-4251-b073-730fd6f49b1c
 docset: aem65
+feature: Varumärkesportal
+role: Administratör
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1967'
+source-wordcount: '1970'
 ht-degree: 11%
 
 ---
@@ -287,7 +289,7 @@ Så här konfigurerar du molntjänsten Brand Portal:
 
 1. Ange en **[!UICONTROL Title]** för konfigurationen.
 
-   Välj den IMS-konfiguration som du skapade när du konfigurerade IMS-kontot[.](#create-ims-account-configuration)
+   Välj den IMS-konfiguration som du skapade när du konfigurerade IMS-kontot](#create-ims-account-configuration).[
 
    I fältet **[!UICONTROL Service URL]** anger du din webbadress till innehavaren av varumärkesportalen (organisation).
 
