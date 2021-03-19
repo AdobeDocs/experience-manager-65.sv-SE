@@ -1,16 +1,18 @@
 ---
-title: Använda förinställningar för Dynamic Media Viewer
-description: Lär dig hur du använder visningsförinställningar i Dynamic Media
+title: Använda förinställningar för Dynamic Media-visningsprogram
+description: Lär dig hur du använder visningsprogramförinställningar i Dynamic Media
 uuid: cebad000-2bda-4e62-a0d1-7155151daf6c
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 82bed457-794e-4bf2-bc80-abde24fd2851
+feature: Förinställningar för visningsprogram
+role: Affärsledare, administratör
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '212'
+source-wordcount: '217'
 ht-degree: 9%
 
 ---
@@ -25,9 +27,9 @@ Om du är administratör och behöver hantera, skapa, sortera och ta bort visnin
 Se även [Förinställningar för publiceringsvisningsprogram](managing-viewer-presets.md#publishing-viewer-presets).
 
 Du kanske inte behöver publicera förinställningar för visningsprogrammet beroende på vilket publiceringsläge du använder.
-Eventuella problem med visningsförinställningar finns i [Felsökning av dynamiska media - Scene7](troubleshoot-dms7.md#viewers).
+Eventuella problem med visningsförinställningar finns i [Felsökning av Dynamic Media - Scene7](troubleshoot-dms7.md#viewers).
 
-## Använda en förinställning för Dynamic Media Viewer på en resurs {#applying-a-viewer-preset-to-an-asset}
+## Använda en förinställning för Dynamic Media-visningsprogram på en resurs {#applying-a-viewer-preset-to-an-asset}
 
 1. Öppna resursen och i den vänstra listen och tryck på **[!UICONTROL Viewers.]**
 
