@@ -7,10 +7,11 @@ page-status-flag: de-activated
 uuid: ffb2cc22-baaf-4525-a2e3-29f39271c670
 topic-tags: introduction
 discoiquuid: 655303a4-99bb-4ba3-9d50-a178f5edcf85
+feature: Adaptiv Forms
 translation-type: tm+mt
-source-git-commit: 263a25b70fe4a3e7de65b47f07932d2e5f3d0197
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1947'
+source-wordcount: '1949'
 ht-degree: 5%
 
 ---
@@ -26,7 +27,7 @@ Den här självstudiekursen är ett steg i [Skapa ditt första adaptiva formulä
 
 ## Om självstudiekursen {#about-the-tutorial}
 
-Du kan använda teman för att ge ett anpassat formulär ett unikt utseende och en unik stil. Du kan använda färdiga teman som medföljer redigeringsprogrammet för anpassade formulär eller skapa egna teman. AEM [!DNL Forms] tillhandahåller en [temaredigerare](https://helpx.adobe.com/experience-manager/6-3/forms/using/themes.html) för att skapa anpassade teman. Ett och samma tema kan ge olika utseenden till samma adaptiva formulär som öppnas på mobilen, surfplattan eller datorn. Du behöver inte ha någon tidigare kunskap om CSS eller LESS för att kunna använda temaredigeraren, men du vill ha den.
+Du kan använda teman för att ge ett anpassat formulär ett unikt utseende och en unik stil. Du kan använda färdiga teman som medföljer redigeringsprogrammet för anpassade formulär eller skapa egna teman. AEM [!DNL Forms] tillhandahåller en [temaredigerare](https://helpx.adobe.com/experience-manager/6-3/forms/using/themes.html) för att skapa anpassade teman. Ett och samma tema kan ge olika utseenden till samma adaptiva formulär som öppnas på mobilen, surfplattan eller datorn. Det krävs ingen tidigare kunskap om CSS eller LESS för att kunna använda temaredigeraren, men det är önskvärt.
 
 I slutet av självstudiekursen kommer du att lära dig att:
 
