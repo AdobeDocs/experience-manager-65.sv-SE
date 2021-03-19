@@ -10,10 +10,11 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 3e81b519-57ca-4ee1-94bd-7adac4605407
 docset: aem65
+role: Administratör
 translation-type: tm+mt
-source-git-commit: 3202866bd38779a9784e44ab470152df61c585f5
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '821'
+source-wordcount: '822'
 ht-degree: 0%
 
 ---
@@ -69,7 +70,7 @@ Testa anslutningen när konfigurationen har skickats:
 
 * Välj **Testa konfiguration**.
 
-   Testa anslutningen till datacentret från lagringskonsolen för varje författare och publiceringsinstans.
+   Testa anslutningen till datacentret från konsolen Lagringskonfiguration för varje författare och publiceringsinstans.
 
 * Se till att URL:er för platsen för profildata kan dirigeras från datacentret genom att [externalisera länkar](#externalize-links).
 
