@@ -2,10 +2,11 @@
 title: Konfigurera tillgångsinsikter för att få analyser.
 description: Konfigurera tillgångsinsikter i [!DNL Adobe Experience Manager Assets].
 contentOwner: AG
+role: Arkitekt, administratör
 translation-type: tm+mt
-source-git-commit: c1362c2c1f32d02d36d2067e0e74d927ddbc1554
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '212'
 ht-degree: 1%
 
 ---
