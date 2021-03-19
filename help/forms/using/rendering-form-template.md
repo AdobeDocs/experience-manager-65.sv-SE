@@ -8,10 +8,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: cb75b826-d044-44be-b364-790c046513e0
+feature: Mobile Forms
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '568'
+source-wordcount: '570'
 ht-degree: 1%
 
 ---
@@ -77,7 +78,7 @@ HTML5-formulär har stöd för tre metoder för att skicka återgivningsparametr
 
 * **URL-frågeparametrar**: Du kan ange återgivningsparametrarna i URL:en. I parametrarna för URL-begäran är parametrarna synliga för slutanvändaren. Följande Skicka-URL innehåller mallparameter i URL:en: `http://localhost:4502/content/xfaforms/profiles/default.html?contentRoot=/Applications/FormSubmission/1.0&template=sampleForm.xdp`
 
-* **Parametrar** för SetAttribute-begäran: Du kan ange återgivningsparametrarna som ett nyckelvärdepar. I parametrarna för SetAttribute-begäran är parametrarna inte synliga för slutanvändaren. Du kan vidarebefordra en begäran från en annan JSP till JSP för HTML5-formulärprofiler och använda *setAttribute* för att skicka alla återgivningsparametrar. Den här metoden har högsta prioritet.
+* **Parametrar** för SetAttribute-begäran: Du kan ange återgivningsparametrarna som ett nyckelvärdepar. I parametrarna för SetAttribute-begäran är parametrarna inte synliga för slutanvändaren. Du kan vidarebefordra en begäran från en annan JSP till en JSP för HTML5-formulärprofiler och använda *setAttribute* för att skicka alla återgivningsparametrar. Den här metoden har högsta prioritet.
 
 * **Parametrar för profilnodsbegäran:** Du kan ange återgivningsparametrar som nodegenskaper för en profilnod. I parametrarna för profilnodbegäran är parametrarna inte synliga för slutanvändaren. Profilnod är den nod där begäran skickas. Om du vill ange parametrar som nodegenskaper använder du CRXDE lite.
 
