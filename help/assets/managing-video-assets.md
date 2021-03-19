@@ -2,10 +2,11 @@
 title: Hantera videoresurser
 description: Överför, förhandsgranska, kommentera och publicera videomaterial i [!DNL Adobe Experience Manager].
 contentOwner: AG
+role: Yrkesverksamma inom affärsverksamhet
 translation-type: tm+mt
-source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '725'
+source-wordcount: '727'
 ht-degree: 8%
 
 ---
@@ -67,7 +68,7 @@ Utför följande steg i katalogen `/apps` om du vill konfigurera en större fils
 
 ## Publicera videoresurser {#publish-video-assets}
 
-Efter publiceringen kan du inkludera videomaterialet på en webbsida som en URL eller bädda in resurserna direkt. Mer information finns i [publicera dynamiska medieresurser](/help/assets/publishing-dynamicmedia-assets.md).
+Efter publiceringen kan du inkludera videomaterialet på en webbsida som en URL eller bädda in resurserna direkt. Mer information finns i [publicera Dynamic Media-resurser](/help/assets/publishing-dynamicmedia-assets.md).
 
 ## Kommentera videoresurser {#annotate-video-assets}
 
@@ -89,5 +90,5 @@ Efter publiceringen kan du inkludera videomaterialet på en webbsida som en URL 
 >
 >* [Hantera digitala resurser i Experience Manager Assets](/help/assets/manage-assets.md)
 >* [Hantera samlingar i Experience Manager Assets](/help/assets/manage-collections.md)
->* [Videodokumentation](/help/assets/video.md) för Dynamic Media.
+>* [Dynamic Media videodokumentation](/help/assets/video.md).
 
