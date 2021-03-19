@@ -10,10 +10,11 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 492741d5-8d2b-4a81-8f21-e621ef3ee685
 legacypath: /content/docs/en/aem/6-0/deploy/upgrade/queries-and-indexing
+feature: Konfigurerar
 translation-type: tm+mt
-source-git-commit: b01f6d3726fd6aa06ffedaf10dfde9526479a2a3
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2880'
+source-wordcount: '2881'
 ht-degree: 0%
 
 ---
@@ -68,7 +69,7 @@ Därefter används varje index för att beräkna kostnaden för frågan. När de
 
 >[!NOTE]
 >
->För stora databaser är det tidskrävande att skapa ett index. Detta gäller både när ett index skapas första gången och när ett index indexeras om (när definitionen ändrats). Se även [Felsökning av ekningsindex](/help/sites-deploying/troubleshooting-oak-indexes.md) och [Förhindra långsam omindexering](/help/sites-deploying/troubleshooting-oak-indexes.md#preventing-slow-re-indexing).
+>För stora databaser är det tidskrävande att skapa ett index. Detta gäller både när ett index skapas första gången och när ett index indexeras om (när definitionen har ändrats). Se även [Felsökning av ekningsindex](/help/sites-deploying/troubleshooting-oak-indexes.md) och [Förhindra långsam omindexering](/help/sites-deploying/troubleshooting-oak-indexes.md#preventing-slow-re-indexing).
 
 Om omindexering behövs i mycket stora databaser, särskilt när du använder MongoDB och fulltextindex, bör du överväga att extrahera text och använda eko-run för att skapa det ursprungliga indexet och indexera om.
 
