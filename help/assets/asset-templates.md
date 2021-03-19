@@ -2,10 +2,11 @@
 title: Resursmallar
 description: Lär dig mer om tillgångsmallar i [!DNL Adobe Experience Manager Assets] och hur du använder resursmallar för att skapa marknadsföringsmaterial.
 contentOwner: AG
+role: Yrkesverksamma inom affärsverksamhet
 translation-type: tm+mt
-source-git-commit: f9f745369ba0fe242dea1e5a5e5af0b8263b1ec0
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1503'
+source-wordcount: '1505'
 ht-degree: 1%
 
 ---
