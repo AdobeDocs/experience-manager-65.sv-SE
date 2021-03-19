@@ -2,10 +2,11 @@
 title: AEM med flytande upplevelser
 description: Lista med flytande upplevelser
 index: n
+feature: Redigering
 translation-type: tm+mt
-source-git-commit: 33abb544c5f12f7d7a44fc326f07fe9b53ebc9d3
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '350'
+source-wordcount: '351'
 ht-degree: 6%
 
 ---
@@ -15,7 +16,7 @@ ht-degree: 6%
 
 Adobe Experience Manager Fluid Experiences bygger på de kraftfulla funktionerna i AEM Sites, AEM Dynamic Media och AEM Assets och ger en robust lösning för leverans av headless-material.
 
-AEM Fluid Experiences skiljer sig från klassiska AEM genom att endast använda headless delivery use case. Framtagning och leverans av rubriker och AEM starkt stöd för hybridanvändning finns för [fullständiga AEM Sites-, Assets- och Dynamic Media-lösningar.](https://docs.adobe.com/content/help/en/experience-manager-65/user-guide/home.html)
+AEM Fluid Experiences skiljer sig från klassiska AEM genom att endast använda headless delivery use case. Framtagning och distribution av rubrikinnehåll och AEM starkt stöd för hybridanvändning finns med [fullständiga AEM Sites-, Assets- och Dynamic Media-lösningar.](https://docs.adobe.com/content/help/en/experience-manager-65/user-guide/home.html)
 
 I följande tabeller definieras funktionerna i AEM flytande upplevelser och länken till relevant supportdokumentation.
 
