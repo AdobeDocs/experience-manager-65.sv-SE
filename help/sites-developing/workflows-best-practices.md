@@ -1,7 +1,7 @@
 ---
 title: Bästa praxis för arbetsflöden
 seo-title: Bästa praxis för arbetsflöden
-description: 'null'
+description: Bästa praxis för arbetsflöden
 seo-description: 'null'
 uuid: 79be4055-c2ef-428e-9054-103c6cfde1d2
 contentOwner: User
@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: 0be8b88c-6f57-4dcc-ae11-77b378a2decd
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1922'
+source-wordcount: '1924'
 ht-degree: 0%
 
 ---
@@ -250,7 +250,7 @@ public void execute(WorkItem item, WorkflowSession workflowSession, MetaDataMap 
 
 Spara en session:
 
-* Om du använder `WorkflowSession` i en arbetsflödesprocess för att ändra databasen ska du inte explicit spara sessionen. Arbetsflödet sparar sessionen när den är klar.
+* Om `WorkflowSession` används för att ändra databasen i en arbetsflödesprocess ska du inte explicit spara sessionen. Arbetsflödet sparar då sessionen när den är klar.
 * `Session.Save` ska inte anropas inifrån ett arbetsflödessteg:
 
    * Vi rekommenderar att man anpassar arbetsflödets jcr-session. är `save` inte nödvändigt eftersom arbetsflödesmotorn sparar sessionen automatiskt när arbetsflödet har slutförts.
@@ -306,7 +306,7 @@ Den här informationen används för att visa förloppet för ett arbetsflöde n
 
 ### Aktivera steg för sidprocess {#activate-page-process-step}
 
-Med steget **Aktivera sidprocess** aktiveras sidor åt dig, men inga refererade DAM-resurser hittas automatiskt och de aktiveras också.
+Med steget **Aktivera sidprocess** aktiveras sidorna åt dig, men inga refererade DAM-resurser hittas automatiskt och de aktiveras också.
 
 Detta är något att tänka på om du tänker använda det här steget som en del av en arbetsflödesmodell.
 
@@ -325,7 +325,7 @@ När du uppgraderar din instans:
 
 ## Systemverktyg {#system-tools}
 
-Det finns många systemverktyg som kan användas för att övervaka, underhålla och felsöka arbetsflöden. Alla exempel-URL:er nedan använder `localhost:4502`, men bör vara tillgängliga för alla författarinstanser ( `<hostname>:<port>`).
+Det finns många systemverktyg som du kan använda för att övervaka, underhålla och felsöka arbetsflöden. Alla exempel-URL:er nedan använder `localhost:4502`, men bör vara tillgängliga för alla författarinstanser ( `<hostname>:<port>`).
 
 ### Sling Job Handling Console {#sling-job-handling-console}
 
