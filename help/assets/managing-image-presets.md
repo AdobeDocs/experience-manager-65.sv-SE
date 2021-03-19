@@ -9,10 +9,12 @@ content-type: reference
 discoiquuid: cc1111c4-6e24-4570-9ac7-97c25cf24ede
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/image-presets
+feature: Bildförinställningar
+role: Affärsledare, administratör
 translation-type: tm+mt
-source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '3683'
+source-wordcount: '3688'
 ht-degree: 8%
 
 ---
@@ -375,7 +377,7 @@ När du skapar eller redigerar bildförinställningar finns alternativen som bes
   </tr>
   <tr>
    <td><strong>Återgivningsmetod</strong></td>
-   <td>Du kan åsidosätta standardåtergivningsmetoden. Återgivningsmetoden bestämmer vad som händer med färger som inte kan återges i målfärgprofilen (ej tryckbart). Återgivningsmetoden ignoreras om den inte är kompatibel med ICC-profilen.
+   <td>Du kan åsidosätta standardåtergivningsmetoden. Återgivningsmetoden avgör vad som händer med färger som inte kan återges i målfärgprofilen (ej tryckbart). Återgivningsmetoden ignoreras om den inte är kompatibel med ICC-profilen.
     <ul>
      <li>Välj <strong>Perceptuell</strong> om du vill komprimera det totala färgomfånget från en färgrymd till en annan när en eller flera färger i den ursprungliga bilden är utanför färgomfånget för målfärgrymden.</li>
      <li>Välj <strong>Relativa färgvärden</strong> när en färg i den aktuella färgrymden är utanför färgomfånget i målfärgrymden och du vill mappa den till den närmaste möjliga färgen inom färgomfånget för målfärgrymden utan att påverka några andra färger. </li>
@@ -416,7 +418,7 @@ När du skapar eller redigerar bildförinställningar finns alternativen som bes
     <ul>
      <li><strong>Dubbellinjär</strong>  - Den snabbaste omsamplingsmetoden. Vissa aliaseringsartefakter är märkbara.</li>
      <li><strong>Bikubisk</strong>  - Ökar CPU-användningen men ger skarpare bilder med mindre framträdande aliasartefakter.</li>
-     <li><strong>Sharp2</strong> - Kan ge något tydligare resultat än bikubiska, men till en ännu högre processorkostnad.</li>
+     <li><strong>Sharp2</strong> - Kan ge något skarpare resultat än bikubiska, men till en ännu högre CPU-kostnad.</li>
      <li><strong>Bi-Sharp</strong>  - Väljer Photoshop standardomsampling för att minska bildstorleken, som kallas  <strong>bikubisk </strong> skärpa i Adobe Photoshop.</li>
      <li><strong>Varje </strong> färg och  <strong>intensitet</strong>  - varje metod kan baseras på färg eller intensitet. Som standard är <strong>Varje färg</strong> markerad.</li>
     </ul> </td>
