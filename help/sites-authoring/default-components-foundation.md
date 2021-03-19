@@ -1,7 +1,7 @@
 ---
 title: Foundation Components
 seo-title: Foundation Components
-description: 'null'
+description: Foundation Components
 seo-description: 'null'
 uuid: 3caf9123-ae58-4590-af2f-57ef076daf7f
 contentOwner: User
@@ -13,9 +13,9 @@ docset: aem65
 legacypath: /content/docs/en/aem/6-2/author/page-authoring/default-components/editmode
 pagetitle: Foundation Components
 translation-type: tm+mt
-source-git-commit: 0362be4d78fa39ac73c9be5dd5d08ccfebd21edc
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '7364'
+source-wordcount: '7365'
 ht-degree: 3%
 
 ---
@@ -825,7 +825,7 @@ Mer information om hur du använder taggar finns på [Använda taggar](/help/sit
 >
 >**Text**-komponenten för utvärdering är baserad på [RTF-redigeraren](/help/sites-authoring/rich-text-editor.md), liksom **Table** Foundation Component.
 
-Med komponenten Text kan du ange ett textblock med en WYSIWYG-redigerare, med funktioner som finns i [RTF-redigeraren](/help/sites-authoring/rich-text-editor.md). Med en rad ikoner kan du formatera texten, inklusive teckensnittsegenskaper, justering, länkar, listor och indrag.
+Med komponenten Text kan du ange ett textblock med en WYSIWYG-redigerare, med funktioner som finns i [RTF-redigeraren](/help/sites-authoring/rich-text-editor.md). Med ett urval ikoner kan du formatera texten, inklusive teckensnittsegenskaper, justering, länkar, listor och indrag.
 
 ![chlimage_1-98](assets/chlimage_1-98.png)
 
@@ -1032,7 +1032,7 @@ När du konfigurerar någon av formulärkomponenterna är följande flikar tillg
 
 * **Begränsningar**
 
-   Här kan du ange om ett fält är obligatoriskt och om det finns platsbegränsningar i det fältet (måste till exempel vara numeriskt).
+   Här kan du ange om ett fält är obligatoriskt och om det finns platsbegränsningar i fältet (måste till exempel vara numeriska).
 
 * **Stilar**
 
@@ -1042,7 +1042,7 @@ När du konfigurerar någon av formulärkomponenterna är följande flikar tillg
 >
 >Fälten som visas varierar avsevärt beroende på den enskilda komponenten.
 
-Dessa flikar ger dig de parametrar som behövs. dessa kan bero på den enskilda komponenttypen, men kan omfatta:
+Dessa flikar ger dig de parametrar som behövs. de kan vara beroende av den enskilda komponenttypen, men kan innehålla:
 
 * **Titel och text**
 
