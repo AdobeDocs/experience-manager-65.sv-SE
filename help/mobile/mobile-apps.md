@@ -1,7 +1,7 @@
 ---
 title: Mobilappar
 seo-title: Mobilappar
-description: 'null'
+description: '"Mobilappar"'
 seo-description: 'null'
 uuid: 4a91241e-8c78-42fe-a5d3-732a6c34cbfd
 contentOwner: msm-service
@@ -9,10 +9,10 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 discoiquuid: eda55579-4140-477b-b4d0-a87d14ec3237
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
 source-wordcount: '120'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 1%
 >
 >Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (t.ex. Reagera). [Läs mer](/help/sites-developing/spa-overview.md).
 
-Adobe Experience Manager (AEM) Mobile är en del av Adobe Experience Manager flerkanaliga digitala plattform som också utnyttjar AEM Assets, Sites, Screens, Workflow, User Manager, Commerce och Forms. AEM Mobile erbjuder enastående flexibilitet vid driftsättningen, vilket gör det möjligt för företag att använda olika innehållskällor.
+Adobe Experience Manager (AEM) Mobile är en del av Adobe Experience Manager flerkanaliga digitala plattform som också utnyttjar AEM Assets, Sites, Screens, Workflow, User Manager, Commerce och Forms. AEM Mobile erbjuder enastående flexibilitet vid driftsättningen, vilket gör att man kan använda olika innehållskällor.
 
 AEM Mobile erbjuder flera metoder för att skapa appar. De olika sätt du kan använda för att skapa program är:
 
