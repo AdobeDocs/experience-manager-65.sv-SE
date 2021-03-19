@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 8799386a-c3b8-43cf-9f71-580ff2a81abc
+role: Administratör
 translation-type: tm+mt
-source-git-commit: 2bd74d5e90aff1146de5c5a0dffd99fc7dd9031c
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '479'
 ht-degree: 0%
 
 ---
@@ -62,7 +63,7 @@ En viktig egenskap hos AEM Communities är att skapa användargenererat innehål
 * [Vanligt UGC-arkiv](working-with-srp.md): val av SRP för delad lagring av UGC
 * [Modererar UGC](moderate-ugc.md): pålitliga medlemmar kan moderera UGC-innehåll i bulk eller kontext
 * [Taggning UGC](tag-ugc.md): funktioner kan konfigureras så att medlemmar kan tagga innehåll
-* [Översätter UGC](translate-ugc.md): funktioner kan konfigureras för att översätta alla användargenererat innehåll eller tillåta medlemmar att översätta valda inlägg
+* [Översätter UGC](translate-ugc.md): funktioner kan konfigureras för att översätta alla UGC eller tillåta medlemmar att översätta valda inlägg
 * [Analyskonfiguration](analytics.md): göra det möjligt för Adobe Analytics att rapportera olika mätvärden för medlemsaktivitet
 
 ### Community-medlemmar {#community-members}
