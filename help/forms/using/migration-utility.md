@@ -11,10 +11,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 content-strategy: max-2018
 discoiquuid: 39dfef85-d047-4b6d-a0f5-92bd77df103b
 docset: aem65
+role: Administratör
 translation-type: tm+mt
-source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1809'
+source-wordcount: '1810'
 ht-degree: 0%
 
 ---
@@ -140,7 +141,7 @@ När du kör migreringsverktyget för första gången skapas en logg med följan
    * Om du vill migrera adaptiva formulärmallar trycker du på **Migrering av adaptiva Forms-mallar** och på sidan Migrering av anpassade komponenter trycker du på **Starta migrering**. Följande migreras:
 
       * Anpassningsbara formulärmallar som skapats under /apps eller /conf med AEM mallredigeraren.
-   * Migrera konfigurationstjänsterna i AEM Forms Cloud för att utnyttja det nya sammanhangsberoende molntjänstparadigmet, som innehåller det beröringsaktiverade användargränssnittet (under /conf). När du migrerar konfigurationstjänsterna i AEM Forms Cloud flyttas molntjänsterna i /etc till /conf. Om du inte har några anpassningar av molntjänster som är beroende av de äldre sökvägarna (/etc) rekommenderar vi att du kör migreringsverktyget direkt efter uppgraderingen till 6.5 och använder molnkonfigurationsgränssnittet för ytterligare arbete. Om du har befintliga anpassningar av molntjänster kan du fortsätta använda det klassiska användargränssnittet vid uppgraderad installation tills anpassningarna har uppdaterats för att anpassas till de migrerade sökvägarna (/conf) och sedan köra migreringsverktyget.
+   * Migrera konfigurationstjänsterna i AEM Forms Cloud för att utnyttja det nya sammanhangsberoende molntjänstparadigmet, som inkluderar det beröringsaktiverade användargränssnittet (under /conf). När du migrerar konfigurationstjänsterna i AEM Forms Cloud flyttas molntjänsterna i /etc till /conf. Om du inte har några anpassningar av molntjänster som är beroende av de äldre sökvägarna (/etc) rekommenderar vi att du kör migreringsverktyget direkt efter uppgraderingen till 6.5 och använder molnkonfigurationsgränssnittet för ytterligare arbete. Om du har befintliga anpassningar av molntjänster kan du fortsätta använda det klassiska användargränssnittet vid uppgraderad installation tills anpassningarna har uppdaterats för att anpassas till de migrerade sökvägarna (/conf) och sedan köra migreringsverktyget.
 
    Om du vill migrera **AEM Forms molntjänster**, som innehåller följande, trycker du på AEM Forms Cloud Configuration Migration (molnkonfigurationsmigrering är oberoende av AEMFD-kompatibilitetspaketet), trycker på AEM Forms Cloud Configurations Migration och sedan på sidan Configuration Migration (konfigurationsmigrering) trycker du på **Start Migration**:
 
