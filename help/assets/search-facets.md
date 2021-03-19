@@ -2,10 +2,11 @@
 title: Sök efter ansikten för att filtrera sökresultat
 description: Så här skapar, ändrar och använder du sökfaktorer i [!DNL Adobe Experience Manager].
 contentOwner: AG
+role: Administratör, utvecklare
 translation-type: tm+mt
-source-git-commit: adeb20c1e7222e7c5702061cba73350002f5154c
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '2274'
+source-wordcount: '2276'
 ht-degree: 14%
 
 ---
