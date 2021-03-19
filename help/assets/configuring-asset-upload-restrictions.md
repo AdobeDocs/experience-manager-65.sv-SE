@@ -2,10 +2,11 @@
 title: Konfigurera överföringsbegränsningar för resurser
 description: 'Begränsa den typ av resurser (filer) som användare kan överföra '
 contentOwner: AG
+role: Utvecklare, administratör, arkitekt
 translation-type: tm+mt
-source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '176'
+source-wordcount: '179'
 ht-degree: 31%
 
 ---
