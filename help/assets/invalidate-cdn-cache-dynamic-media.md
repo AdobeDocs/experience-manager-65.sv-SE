@@ -5,10 +5,11 @@ contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5.6/ASSETS
 topic-tags: dynamic-media
 content-type: reference
+role: Affärsledare, administratör
 translation-type: tm+mt
-source-git-commit: 996780c3fac85f0ce0deeddd5ff4e74e01df436e
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '1278'
+source-wordcount: '1281'
 ht-degree: 0%
 
 ---
