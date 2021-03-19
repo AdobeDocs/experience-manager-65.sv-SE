@@ -7,10 +7,12 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 5edcc765-c374-4368-a0d9-e02a713a24f2
+feature: Resurshantering
+role: Affärsledare, administratör
 translation-type: tm+mt
-source-git-commit: 0595d89409e0ca21f771be5c55c3ec9548a8449f
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '321'
+source-wordcount: '326'
 ht-degree: 12%
 
 ---
@@ -40,7 +42,7 @@ Se även [Länka URL:er till ditt webbprogram.](linking-urls-to-yourwebapplicati
    >
    >Den valda resursen *och* den valda bildförinställningen eller visningsförinställningen måste publiceras för att knappen **[!UICONTROL URL]** eller **[!UICONTROL RESS]** ska vara tillgänglig.
    >
-   >Dynamiska media - Hybrid-läget kräver att du publicerar bildförinställningar; Dynamic Media - I Scene7-läget publiceras bildförinställningar automatiskt.
+   >Dynamic Media - Hybrid-läget kräver att du publicerar bildförinställningar; Dynamic Media - Scene7-läget publicerar automatiskt bildförinställningar.
 
 1. Tryck på **[!UICONTROL RESS]**.
 
@@ -51,6 +53,6 @@ Se även [Länka URL:er till ditt webbprogram.](linking-urls-to-yourwebapplicati
 
 ## Använda HTTP/2 för att leverera dina Dynamic Media-resurser {#using-http-to-delivery-your-dynamic-media-assets}
 
-HTTP/2 är det nya, uppdaterade webbprotokollet som förbättrar kommunikationen mellan webbläsare och servrar. Det ger snabbare överföring av information och minskar mängden processorkraft som behövs. Dynamic Media-material kan levereras med HTTP/2 som ger bättre respons och laddningstider.
+HTTP/2 är det nya, uppdaterade webbprotokollet som förbättrar kommunikationen mellan webbläsare och servrar. Det ger snabbare överföring av information och minskar mängden processorkraft som behövs. Leverans av Dynamic Media-resurser stöds med HTTP/2 som ger bättre respons och laddningstider.
 
 Se [HTTP2 Delivery of Content](http2.md) för fullständig information om hur du kommer igång med HTTP/2 med ditt Dynamic Media-konto.
