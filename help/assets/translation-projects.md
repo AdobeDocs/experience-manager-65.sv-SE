@@ -2,10 +2,11 @@
 title: Skapa översättningsprojekt
 description: Lär dig hur du skapar översättningsprojekt i [!DNL Adobe Experience Manager].
 contentOwner: AG
+role: Arkitekt, administratör
 translation-type: tm+mt
-source-git-commit: 534a3d75ebb6a6d297354cce4840bdc1dfa25707
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '1741'
+source-wordcount: '1743'
 ht-degree: 12%
 
 ---
