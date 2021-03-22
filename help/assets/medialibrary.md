@@ -1,12 +1,12 @@
 ---
-title: Mediebibliotek för hantering av digitala resurser.
+title: Använd mediebiblioteket för grundläggande digital resurshantering
 description: '[!DNL Experience Manager Assets] och mediebibliotek för resurshantering.'
 contentOwner: AG
 role: Arkitekt, ledare
 translation-type: tm+mt
-source-git-commit: 10e5ca2fb6e108a7201e6114b61b3d0266ff80d2
+source-git-commit: 31dc984d9cd93f7024229fd6773878eebfdadc57
 workflow-type: tm+mt
-source-wordcount: '422'
+source-wordcount: '455'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,6 @@ Mediebiblioteket omfattar i stort sett följande användningsområden:
 * Digitala skärmupplevelser som skapats med [!DNL Adobe Experience Manager Screens].
 * [!DNL Assets] HTTP REST API:er för headless-åtgärder.
 
-
 <!-- TBD: Remove this after confirmation. May need to merge this list with the list provided by PMs.
 
 * Basic metadata properties
@@ -65,7 +64,7 @@ Mediebiblioteket omfattar i stort sett följande användningsområden:
 * Comments and annotation
 -->
 
-Du kan utföra följande specifika uppgifter med hjälp av mediebiblioteket:
+Om du vill använda funktionerna i mediebiblioteket kan du använda standardanvändargränssnittet för [!DNL Experience Manager]. Mediebiblioteket ingår i [!DNL Experience Manager Sites]-installationen och inget separat gränssnitt eller tillägg krävs. Med det befintliga gränssnittet har mediebiblioteksanvändare rätt att utföra följande uppgifter:
 
 * Skapa mappar för att ordna resurser.
 * Överför resurser.
