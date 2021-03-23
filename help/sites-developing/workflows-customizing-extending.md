@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: f23408c3-6b37-4047-9cce-0cab97bb6c5c
 translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+source-git-commit: 7035c19a109ff67655ee0419aa37d1723e2189cc
 workflow-type: tm+mt
-source-wordcount: '3589'
+source-wordcount: '3587'
 ht-degree: 1%
 
 ---
@@ -1039,7 +1039,7 @@ Markering för ett anpassat steg representeras i `.content.xml` för komponenten
 >
 >Klassiska dialogrutor för modellredigering i användargränssnittet fungerar fortfarande med den pekaktiverade standardredigeraren.
 >
->AEM har dock ett [dialogkonverteringsverktyg](/help/sites-developing/dialog-conversion.md) om du vill uppgradera dina klassiska dialogrutor för gränssnittssteg till standarddialogrutor. Efter konverteringen finns det fortfarande några manuella förbättringar som kan göras i dialogrutan för vissa fall.
+>AEM har [moderniseringsverktyg](/help/sites-developing/modernization-tools.md) om du vill uppgradera dina klassiska dialogrutor för användargränssnittssteg till standarddialogrutor för användargränssnitt. Efter konverteringen finns det fortfarande några manuella förbättringar som kan göras i dialogrutan för vissa fall.
 >
 >* Om en uppgraderad dialogruta är tom kan du titta på dialogrutor i `/libs` som har liknande funktionalitet som exempel på hur du tillhandahåller en lösning. Till exempel:
    >
