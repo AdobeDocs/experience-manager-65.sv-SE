@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 1f9867f1-5089-46d0-8e21-30d62dbf4f45
 legacypath: /content/docs/en/aem/6-0/develop/components/components-develop
 translation-type: tm+mt
-source-git-commit: 149cdd00f745ad897f506434d7156b8147ef5bae
+source-git-commit: 7035c19a109ff67655ee0419aa37d1723e2189cc
 workflow-type: tm+mt
 source-wordcount: '4974'
 ht-degree: 0%
@@ -431,7 +431,7 @@ Dialogrutedefinitioner är specifika för användargränssnittet:
 >[!NOTE]
 >
 >* Av kompatibilitetsskäl kan det beröringsaktiverade användargränssnittet använda definitionen för en klassisk användargränssnittsdialogruta när ingen dialogruta har definierats för det beröringsaktiverade användargränssnittet.
->* Verktyget [Dialogrutekonvertering](/help/sites-developing/dialog-conversion.md) finns även för att hjälpa dig att utöka/konvertera komponenter som bara har dialogrutor definierade för det klassiska användargränssnittet.
+>* [Verktygen för AEM](/help/sites-developing/modernization-tools.md) finns även för att hjälpa dig att utöka/konvertera komponenter som bara har dialogrutor definierade för det klassiska användargränssnittet.
 
 >
 
@@ -605,7 +605,7 @@ Det finns många befintliga konfigurationer i databasen. Du kan enkelt söka eft
 
    `//element(cq:editConfig, cq:EditConfig)[@cq:actions]`
 
-* Om du vill söka efter en underordnad nod till `cq:editConfig` kan du t.ex. söka efter `cq:dropTargets`, som är av typen `cq:DropTargetConfig`; Du kan använda frågeverktyget i** CRXDE Lite** och söka med följande XPath-frågesträng:
+* Om du vill söka efter en underordnad nod till `cq:editConfig` kan du t.ex. söka efter `cq:dropTargets` som är av typen `cq:DropTargetConfig`; Du kan använda frågeverktyget i** CRXDE Lite** och söka med följande XPath-frågesträng:
 
    `//element(cq:dropTargets, cq:DropTargetConfig)`
 
