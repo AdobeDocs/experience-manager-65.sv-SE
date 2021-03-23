@@ -10,7 +10,7 @@ topic-tags: development-tools
 content-type: reference
 discoiquuid: 76c570e5-46ed-46be-9864-4fe4a83f0caf
 translation-type: tm+mt
-source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
+source-git-commit: 7035c19a109ff67655ee0419aa37d1723e2189cc
 workflow-type: tm+mt
 source-wordcount: '410'
 ht-degree: 0%
@@ -50,7 +50,7 @@ AEM levereras med andra verktyg som underlättar utvecklingen:
 * [Utveckla AEM projekt med IntelliJ IDEA](/help/sites-developing/ht-intellij.md)
 * [Så här använder du VLT-verktyget](/help/sites-developing/ht-vlttool.md)
 * [Så här använder du proxyserververktyget](/help/sites-developing/ht-proxy-server.md)
-* [Verktyget Dialogkonvertering](/help/sites-developing/dialog-conversion.md)
+* [AEM Modernization Tools](/help/sites-developing/modernization-tools.md)
 * [AEM](/help/sites-developing/aem-repo-tool.md)
 
 Verktyg som underlättar skapandet av nya projekt:
