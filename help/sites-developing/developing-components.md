@@ -12,7 +12,7 @@ discoiquuid: 8cdb6db4-adaa-4eda-af7d-310a0b44b80b
 docset: aem65
 legacypath: /content/docs/en/aem/6-2/develop/components/components-touch-optimized
 translation-type: tm+mt
-source-git-commit: d0842a5994068b1e9a92cd14c1a59f1ea1a6c8b8
+source-git-commit: 7035c19a109ff67655ee0419aa37d1723e2189cc
 workflow-type: tm+mt
 source-wordcount: '3533'
 ht-degree: 1%
@@ -201,7 +201,7 @@ Se till exempel:
 >
 >Se:
 >
->* aem Gems-sessionen på [Anpassa dialogrutefält](https://docs.adobe.com/content/ddc/en/gems/customizing-dialog-fields-in-touch-ui.html).
+>* AEM Gems-sessionen på [Anpassa dialogrutefält](https://docs.adobe.com/content/ddc/en/gems/customizing-dialog-fields-in-touch-ui.html).
 >* den relaterade exempelkoden som beskrivs i [Kodexempel - Anpassa dialogrutefält](/help/sites-developing/developing-components-samples.md#code-sample-how-to-customize-dialog-fields).
 
 >
@@ -228,7 +228,7 @@ Mer specifikt ger GRE UI ett antal fältkomponenter som är lämpliga att använ
 >
 >Detta skiljer sig från det klassiska användargränssnittet, där widgetar representeras av `cq:Widgets`-noder, där var och en har en viss `xtype` för att etablera relationen med sin motsvarande ExtJS-widget. Från en implementeringssynvinkel renderades dessa widgetar på klientsidan av ExtJS-ramverket.
 
-När du har skapat resurstypen kan du skapa en instans av fältet genom att lägga till en ny nod i dialogrutan där egenskapen `sling:resourceType` refererar till resurstypen som du just introducerat.
+När du har skapat resurstypen kan du skapa en instans av fältet genom att lägga till en ny nod i dialogrutan där egenskapen `sling:resourceType` refererar till den resurstyp som du just har introducerat.
 
 #### Skapa ett klientbibliotek för stil och beteende {#creating-a-client-library-for-style-and-behavior}
 
@@ -470,7 +470,7 @@ När du migrerar en komponent som har utformats för användning med det klassis
 * Dialogrutor
 
    * Du måste skapa en ny dialogruta för användning i det beröringsaktiverade användargränssnittet. Av kompatibilitetsskäl kan emellertid det beröringsaktiverade användargränssnittet använda definitionen för en klassisk användargränssnittsdialogruta när ingen dialogruta har definierats för det beröringsaktiverade användargränssnittet.
-   * Du kan använda verktyget [Dialogkonvertering](/help/sites-developing/dialog-conversion.md) till att utöka befintliga komponenter.
+   * [AEM Moderniseringsverktygen](/help/sites-developing/modernization-tools.md) är till hjälp när du ska utöka befintliga komponenter.
    * [Genom att mappa ExtJS till Granite UI-](/help/sites-developing/touch-ui-concepts.md#extjs-and-corresponding-granite-ui-components) komponenter får du en bekväm översikt över ExtJS-xtyper och nodtyper med motsvarande Granite UI-resurstyper.
    * Mer information om hur du anpassar fält finns i AEM Gems-sessionen på [Anpassa dialogrutefält](https://docs.adobe.com/content/ddc/en/gems/customizing-dialog-fields-in-touch-ui.html).
    * Migrera från typer till [Bevilja gränssnittsvalidering](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/foundation/clientlibs/foundation/js/validation/index.html)
