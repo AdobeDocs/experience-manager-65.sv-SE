@@ -11,7 +11,7 @@ topic-tags: introduction
 discoiquuid: b315720f-e9b8-4063-99e2-1b9aa6bba460
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5597fb39500ac1f85d03263bfa1e5239d35d2a2c
+source-git-commit: 7035c19a109ff67655ee0419aa37d1723e2189cc
 workflow-type: tm+mt
 source-wordcount: '685'
 ht-degree: 4%
@@ -119,7 +119,7 @@ Dialogrutor är en viktig faktor när du migrerar komponenter:
 
 * [Utveckla AEM komponenter](/help/sites-developing/developing-components.md)  (med det beröringsaktiverade användargränssnittet)
 * [Migrera från en klassisk komponent](/help/sites-developing/developing-components.md#migrating-from-a-classic-component)
-* [Konverteringsverktyg](/help/sites-developing/dialog-conversion.md)  för dialogrutor - hjälper dig att konvertera dialogrutorna för dina klassiska användargränssnittskomponenter till användargränssnitt
+* [Verktyg](/help/sites-developing/modernization-tools.md)  för AEM - som hjälper dig att konvertera dialogrutorna för dina klassiska användargränssnittskomponenter till användargränssnitt
 
    * Det finns ett kompatibilitetslager med pekfunktion för att öppna en klassisk användargränssnittsdialogruta i en&quot;Touch UI wrapper&quot;, men det har begränsad funktionalitet och rekommenderas inte på lång sikt.
 
