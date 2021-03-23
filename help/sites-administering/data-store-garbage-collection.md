@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 5b1e46c5-7e56-433e-b62e-2a76ea7be0fd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 0eda6ee61acf737abc91d1e5df731e719663b3f2
+source-git-commit: 7035c19a109ff67655ee0419aa37d1723e2189cc
 workflow-type: tm+mt
 source-wordcount: '1904'
 ht-degree: 0%
@@ -154,7 +154,7 @@ Så här kör du skräpinsamlingen:
 
 >[!NOTE]
 >
->Skräpinsamlingsaktiviteten för datalagret startar bara om du har konfigurerat ett externt fildatalager. Om ett externt fildatalager inte har konfigurerats returnerar aktiviteten meddelandet `Cannot perform operation: no service of type BlobGCMBean found` efter anropet. Mer information om hur du konfigurerar ett fildatalager finns i [Konfigurera nodarkiv och datalager i AEM 6](/help/sites-deploying/data-store-config.md#file-data-store).
+>Datalagrets skräpinsamlingsaktivitet startar bara om du har konfigurerat ett externt fildatalager. Om ett externt fildatalager inte har konfigurerats returnerar aktiviteten meddelandet `Cannot perform operation: no service of type BlobGCMBean found` efter anropet. Mer information om hur du konfigurerar ett fildatalager finns i [Konfigurera nodarkiv och datalager i AEM 6](/help/sites-deploying/data-store-config.md#file-data-store).
 
 ## Automatiserar skräpinsamlingen för datalagret {#automating-data-store-garbage-collection}
 
@@ -172,7 +172,7 @@ Om du inte vill köra skräpinsamlingen i datalagret med fönstret för veckound
 >
 >I följande exempel `curl`-kommandon kan olika parametrar behöva konfigureras för din instans: till exempel värdnamnet ( `localhost`), porten ( `4502`), administratörslösenordet ( `xyz`) och olika parametrar för den faktiska skräpinsamlingen i datalagret.
 
-Här följer ett exempel på ett curl-kommando för att anropa skräpinsamling för datalagring via kommandoraden:
+Här är ett exempel på ett curl-kommando som anropar skräpinsamlingen för datalagring via kommandoraden:
 
 ```shell
 curl -u admin:admin -X POST --data markOnly=true  https://localhost:4503/system/console/jmx/org.apache.jackrabbit.oak"%"3Aname"%"3Drepository+manager"%"2Ctype"%"3DRepositoryManagement/op/startDataStoreGC/boolean
