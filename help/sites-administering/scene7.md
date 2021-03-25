@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 translation-type: tm+mt
-source-git-commit: ef975961ddcd6910b5fba2dea7e9302921f45055
+source-git-commit: d700510efb340598a7931647164e22d574884569
 workflow-type: tm+mt
-source-wordcount: '5326'
+source-wordcount: '5332'
 ht-degree: 1%
 
 ---
@@ -351,7 +351,7 @@ Så här konfigurerar du Experience Manager så att det går att publicera resur
 
 Aktivera Adobe CQ Dynamic Media Classic Dam Listener, som är inaktiverat som standard.
 
-Så här aktiverar du den:
+Så här aktiverar du Adobe CQ Dynamic Media Classic Dam Listener:
 
 1. Tryck på ikonen [!UICONTROL Tools] och navigera sedan till **[!UICONTROL Operations > Web Console]**. Webbkonsolen öppnas.
 1. Navigera till **[!UICONTROL Adobe CQ Dynamic Media Classic Dam Listener]** och markera kryssrutan **[!UICONTROL Enabled]**.
@@ -525,7 +525,7 @@ Så här konfigurerar du standardkonfigurationen:
 
 Du kan konfigurera mappen som resurser överförs till i Dynamic Media Classic när resursen inte finns i CQ-målmappen. Se Publicera resurser utanför CQ-målmappen.
 
-Så här konfigurerar du ad hoc-mappen:
+Så här konfigurerar du Ad-hoc-mappen:
 
 1. Tryck på ikonen Experience Manager och navigera till **[!UICONTROL Deployment > Cloud Services]**, tryck på **[!UICONTROL Dynamic Media Classic]** och välj konfigurationen i Dynamic Media Classic.
 1. Tryck på **[!UICONTROL Edit]** för att öppna konfigurationen.
