@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 translation-type: tm+mt
-source-git-commit: 19faa273908e67a744e52d173a5352f0a52f7345
+source-git-commit: b7be1ff0e842794511ffeb4fed60eed60796b4ff
 workflow-type: tm+mt
-source-wordcount: '2060'
+source-wordcount: '2042'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 2%
 
 Använd **Sök i Forms** för att anpassa urvalet av sökpredikt som används i sökpanelerna som finns i olika AEM och/eller paneler i författarmiljön. När du anpassar panelerna blir sökfunktionen mångsidig efter dina specifika behov.
 
-Ett [intervall med predikat](#predicates-and-their-settings)s är tillgängligt direkt. Du kan lägga till flera predikat, bland annat fulltextpredikatet för fulltextsökningar, egenskapspredikatet för att söka efter resurser som matchar en enskild egenskap som du har angett, eller alternativet för att söka efter resurser som matchar ett eller flera värden som du anger för en viss egenskap.
+Ett [intervall med predikat](#predicates-and-their-settings)s är tillgängligt direkt. Du kan lägga till flera predikat, bland annat egenskapspredikatet, om du vill söka efter resurser som matchar en enskild egenskap som du har angett, eller predikatet Alternativ om du vill söka efter resurser som matchar ett eller flera värden som du anger för en viss egenskap.
 
 Du kan [konfigurera de sökformulär](#configuring-your-search-forms) som används i olika konsoler och i resursläsaren (när du redigerar sidor). Du kommer åt [dialogrutorna för att konfigurera dessa formulär](#configuring-your-search-forms) via:
 
@@ -176,17 +176,6 @@ Följande predikat är tillgängliga, beroende på konfigurationen:
      <li>Fältetikett</li>
      <li>Egenskapsnamn*</li>
      <li>Alternativbana</li>
-     <li>Beskrivning</li>
-    </ul> </td>
-  </tr>
-  <tr>
-   <td>Fulltext </td>
-   <td>Sök på predikatet efter fulltextsökningar.</td>
-   <td>
-    <ul>
-     <li>Fältetikett</li>
-     <li>Platshållare</li>
-     <li>Egenskapsnamn</li>
      <li>Beskrivning</li>
     </ul> </td>
   </tr>
