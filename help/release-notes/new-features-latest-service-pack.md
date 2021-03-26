@@ -4,9 +4,9 @@ description: Nyheter i [!DNL Experience Manager] 6.5 Service Pack 8
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: f52fc643c30babab68bcf122eb3d91da5ce37a24
+source-git-commit: ecb32596edecaf47ef54a74c2be8ecf252de466c
 workflow-type: tm+mt
-source-wordcount: '2977'
+source-wordcount: '3003'
 ht-degree: 0%
 
 ---
@@ -232,6 +232,10 @@ Smart beskärning för video - en valfri funktion i videoprofiler - är ett verk
 * Validerar fältvärdena på servern när du skickar ett anpassat formulär.
 
 * Konvertera ett PDF-formulär till ett anpassat formulär med [!DNL Automated Forms Conversion service].
+
+#### Stöd för tillgänglighetsgrupper med Alltid på i Microsoft SQL Server 2016 för hög tillgänglighet (6.5.7.0) {#always-on-availability-groups}
+
+[!DNL Experience Manager Forms] har nu stöd för tillgänglighetsgrupper för  [!DNL Microsoft] SQL Server 2016 Always On för OSGi-distributioner.
 
 #### HTTP-klientkonfiguration för formulärdatamodell för optimering av prestanda (6.5.7.0) {#fdm-http-client-config}
 
