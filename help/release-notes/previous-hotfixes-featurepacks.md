@@ -3,9 +3,9 @@ title: '[!DNL Adobe Experience Manager] 6.5 Versionsinformation för föregåend
 description: Versionsinformation för [!DNL Adobe Experience Manager] 6.5 Service Packs.
 contentOwner: AK
 translation-type: tm+mt
-source-git-commit: 131e564e4ed50c4f08412ba39c62f15b9c362b8c
+source-git-commit: ecb32596edecaf47ef54a74c2be8ecf252de466c
 workflow-type: tm+mt
-source-wordcount: '17544'
+source-wordcount: '17558'
 ht-degree: 0%
 
 ---
@@ -36,6 +36,8 @@ De viktigaste funktionerna och förbättringarna i [!DNL Adobe Experience Manage
    * Konvertera ett PDF-formulär till ett anpassat formulär med [!DNL Automated Forms Conversion service].
 
 * Stöd för [!DNL Microsoft SQL Server] 2019 i [!DNL Experience Manager Forms].
+
+* Stöd för [!DNL Microsoft] SQL Server 2016 Always On-tillgänglighetsgrupper för OSGi-distributioner.
 
 * Den inbyggda databasen (Apache Jackrabbit Oak) uppdateras till version 1.2.5.
 
@@ -1655,7 +1657,7 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 ### Projekt {#projects-6520}
 
 * dam:folderThumbnailPaths-värden uppdateras inte och gamla miniatyrer visas inte ens när resurserna i mappen har tagits bort. NPR-30424: Programfix för CQ-4273667
-* När du slutför alternativet &quot;flytta&quot; ändras inte resursens namn och namn. NPR-30647: Programfix för CQ-4276265
+* När du slutför flyttalternativet ändras inte resursens namn och namn. NPR-30647: Programfix för CQ-4276265
 
 ### Communities {#communities-6520}
 
@@ -1764,7 +1766,7 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 * Ett problem med Scene7 videospelare när den expanderar till helskärm. Programfix för CQ-4266700
 * ZoomVerticalViewer: Panoreringsknappar ska inte visas om en enda bildresurs används. Programfix för CQ-4264795
 * Om du tar bort en underordnad nod i live-kopian bör liveRelationship frigöras. Programfix för CQ-4270395
-* Metadataschemat innehåller bara objekt från den globala konfigurationen och saknar dem från den aktiva klientorganisationen. URL-värdet för formPath återställs till standard även om det ändras. NPR-29945: Programfix för CQ-4262898
+* Metadataschemat innehåller bara objekt från den globala konfigurationen och saknar dem från den aktiva klientorganisationen. URL-värdet för formPath återställs till standard även om det ändras. NPR-29944: Programfix för CQ-4262898
 * Publicera bildförinställningar till [!DNL Brand Portal] misslyckas med 500-felkod. NPR-29510: Programfix för CQ-4268659
 
 ### Webbplatser
