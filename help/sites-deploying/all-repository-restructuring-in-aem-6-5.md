@@ -9,11 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: repo_restructuring
 discoiquuid: 80bd707f-c02d-4616-9b45-90f6c726abea
-feature: Uppgraderar
 translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+source-git-commit: 8d6818d0f2d90482f930f8e98682670ed6d0dd28
 workflow-type: tm+mt
-source-wordcount: '2722'
+source-wordcount: '2724'
 ht-degree: 1%
 
 ---
@@ -72,7 +71,7 @@ Det innebär att `sling:resourceType` för ContextHub-konfigurationen måste var
 
 ### Arbetsflödesmodeller {#workflow-models}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>Föregående plats</strong></td>
@@ -121,7 +120,7 @@ Det innebär att `sling:resourceType` för ContextHub-konfigurationen måste var
 
 ### Arbetsflödesinstanser {#workflow-instances}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>Föregående plats</strong></td>
@@ -147,7 +146,7 @@ Det innebär att `sling:resourceType` för ContextHub-konfigurationen måste var
 
 ### Starta arbetsflöden {#workflow-launchers}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>Föregående plats</strong></td>
@@ -178,7 +177,7 @@ Det innebär att `sling:resourceType` för ContextHub-konfigurationen måste var
 
 ### Arbetsflödesskript {#workflow-scripts}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>Föregående plats</strong></td>
@@ -213,7 +212,7 @@ Det innebär att `sling:resourceType` för ContextHub-konfigurationen måste var
 
 ### ContextHub-konfigurationer {#contexthub-configurations}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>Föregående plats</strong></td>
@@ -244,7 +243,7 @@ Det innebär att `sling:resourceType` för ContextHub-konfigurationen måste var
 
 ### Klassiska Cloud Services {#classic-cloud-services-designs}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>Föregående plats</strong></td>
@@ -283,7 +282,7 @@ Det innebär att `sling:resourceType` för ContextHub-konfigurationen måste var
 
 ### Klassiska instrumentpanelsdesigner {#classic-dashboards-designs}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>Föregående plats</strong></td>
@@ -322,7 +321,7 @@ Det innebär att `sling:resourceType` för ContextHub-konfigurationen måste var
 
 ### Designer för klassiska rapporter {#classic-reports-designs}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>Föregående plats</strong></td>
@@ -361,7 +360,7 @@ Det innebär att `sling:resourceType` för ContextHub-konfigurationen måste var
 
 ### Standarddesigner {#default-designs}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>Föregående plats</strong></td>
@@ -400,7 +399,7 @@ Det innebär att `sling:resourceType` för ContextHub-konfigurationen måste var
 
 ### Adobe DTM JavaScript-slutpunkt {#adobe-dtm-javascript-endpoint}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>Föregående plats</strong></td>
@@ -423,7 +422,7 @@ Det innebär att `sling:resourceType` för ContextHub-konfigurationen måste var
 
 ### Adobe DTM-webbhook-slutpunkt {#adobe-dtm-web-hook-endpoint}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>Föregående plats</strong></td>
@@ -446,7 +445,7 @@ Det innebär att `sling:resourceType` för ContextHub-konfigurationen måste var
 
 ### Inkorgsuppgifter {#inbox-tasks}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>Föregående plats</strong></td>
@@ -473,7 +472,7 @@ Det innebär att `sling:resourceType` för ContextHub-konfigurationen måste var
 
 ### Konfigurationer för designutskrift av flera webbplatser {#multi-site-manager-blueprint-configurations}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong><em></em>Föregående plats</strong></td>
@@ -500,7 +499,7 @@ Det innebär att `sling:resourceType` för ContextHub-konfigurationen måste var
 
 ### Konfigurationer för instrumentpanelen för AEM projekt {#aem-projects-dashboard-gadget-configurations}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>Föregående plats</strong></td>
@@ -530,7 +529,7 @@ Det innebär att `sling:resourceType` för ContextHub-konfigurationen måste var
 
 ### E-postmall för replikeringsmeddelande {#replication-notification-e-mail-template}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>Föregående plats</strong></td>
@@ -563,7 +562,7 @@ Det innebär att `sling:resourceType` för ContextHub-konfigurationen måste var
 
 ### Taggar {#tags}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>Föregående plats</strong></td>
@@ -597,7 +596,7 @@ Det innebär att `sling:resourceType` för ContextHub-konfigurationen måste var
 
 ### Cloud Services för översättning {#translation-cloud-services}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>Föregående plats</strong></td>
@@ -642,7 +641,7 @@ Det innebär att `sling:resourceType` för ContextHub-konfigurationen måste var
 
 ### Översättningsspråk {#translation-languages}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>Föregående plats</strong></td>
@@ -673,7 +672,7 @@ Det innebär att `sling:resourceType` för ContextHub-konfigurationen måste var
 
 ### Översättningsregler {#translation-rules}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>Föregående plats</strong></td>
@@ -704,7 +703,7 @@ Det innebär att `sling:resourceType` för ContextHub-konfigurationen måste var
 
 ### Klientbibliotek för översättningswidget {#translation-widget-client-library}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>Föregående plats</strong></td>
@@ -749,9 +748,11 @@ Det innebär att `sling:resourceType` för ContextHub-konfigurationen måste var
 | **Omstruktureringsvägledning** | Ingen åtgärd krävs. |
 | **Anteckningar** | Webbkonsolen Trädaktivering är nu tillgänglig via **Verktyg > Distribution > Replikering > Aktivera träd**. |
 
+{style=&quot;table-layout:auto&quot;}
+
 ### Cloud Services för leverantörskonverteringskoppling {#vendor-translation-connector-cloud-services}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>Föregående plats</strong></td>
@@ -798,7 +799,7 @@ Det innebär att `sling:resourceType` för ContextHub-konfigurationen måste var
 
 ### E-postmallar för arbetsflödesmeddelanden {#workflow-notification-email-templates}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>Föregående plats</strong></td>
@@ -830,7 +831,7 @@ Det innebär att `sling:resourceType` för ContextHub-konfigurationen måste var
 
 ### Arbetsflödespaket {#workflow-packages}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>Föregående plats</strong></td>
