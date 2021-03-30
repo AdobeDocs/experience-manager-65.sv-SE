@@ -155,33 +155,39 @@ Det finns olika alternativ på en listruta. Exempel: Föregående/Nästa-knappar
 * **Lista** Här anger du hur sidorna ska inkluderas i Carousel:
 
    * **Skapa en lista med hjälp**
-   Det finns flera sätt att skapa en sidlista - Underordnade sidor, Fast lista, Sök eller Avancerad sökning (alla beskrivs nedan).
-Observera, att oavsett vilken metod du väljer, så kommer den bild som visas i Carousel att visas på de sidor som finns med i listan. Om det inte finns någon bild för en viss sida under sidans Sidegenskaper, bör du koppla en bild till sidan innan du börjar, eftersom Carousel annars visar en tom (eller nästan tom) sida. Se [Redigera sidegenskaper](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md).
-Beroende på vilket objekt du väljer visas en ny panel:
+    Det finns flera sätt att skapa en sidlista - Underordnade sidor, Fast lista, Sök eller Avancerad sökning (alla beskrivs nedan).
+    Observera, att oavsett vilken metod du väljer, så kommer den bild som visas i Carousel att visas på de sidor som finns med i listan. Om det inte finns någon bild för en viss sida under sidans Sidegenskaper, bör du koppla en bild till sidan innan du börjar, eftersom Carousel annars visar en tom (eller nästan tom) sida. Se [Redigera sidegenskaper](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md).
+    Beroende på vilket objekt du väljer visas en ny panel:
 
       * **Alternativ för underordnade sidor**
 
-         * **Överordnad sida** Ange en bana antingen manuellt eller med väljaren. Lämna tomt om du vill använda den aktuella sidan som överordnad.
+         * **Överordnad sida** 
+           Ange en bana antingen manuellt eller med väljaren. Lämna tomt om du vill använda den aktuella sidan som överordnad.
+         
       * **Alternativ för fast lista**
 
-         * **Sidor** Välj en lista med sidor. Använd `+` för att lägga till fler poster och upp-/nedknapparna för att justera ordningen.
+         * **Sidor** 
+           Välj en lista med sidor. Använd `+` för att lägga till fler poster och upp-/nedknapparna för att justera ordningen.
+         
       * **Alternativ för sökning**
 
-         * **Starta**
-inAnge en startbana, antingen manuellt eller med väljaren.
+         * **Starta in**
+           Ange en startbana, antingen manuellt eller med väljaren.
 
-         * **Sökfråga** Du kan ange en vanlig textsökfråga.
+         * **Sökfråga** 
+           Du kan ange en vanlig textsökfråga.
+         
       * **Alternativ för avancerad sökning**
 
          * **Querybuilder-predikatnotation**
-Du kan ange en sökfråga med Querybuilder-predikatnotation. Du kan till exempel ange &quot;fulltext=Marketing&quot; om du vill att alla sidor med &quot;Marketing&quot; i innehållet ska visas i Carousel.
-Mer information om frågeuttryck och fler exempel finns i [QueryBuilder API](/help/sites-developing/querybuilder-api.md).
+           Du kan ange en sökfråga med Querybuilder-predikatnotation. Du kan till exempel ange &quot;fulltext=Marketing&quot; om du vill att alla sidor med &quot;Marketing&quot; i innehållet ska visas i Carousel.
+           Mer information om frågeuttryck och fler exempel finns i [QueryBuilder API](/help/sites-developing/querybuilder-api.md).
 
    * **Sortera** 
-Välj `jcr:title`, `jcr:created``cq:lastModified`eller `cq:template` från listrutan.
+     Välj `jcr:title`, `jcr:created``cq:lastModified`eller `cq:template` från listrutan.
 
    * **Gräns**
-Maximalt antal objekt som du vill använda i Carousel. detta är valfritt.
+     Maximalt antal objekt som du vill använda i Carousel. detta är valfritt.
 
 
 
