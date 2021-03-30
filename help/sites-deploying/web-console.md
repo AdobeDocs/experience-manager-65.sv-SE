@@ -65,14 +65,14 @@ En lista över konfigurationer visas:
 
 Det finns två typer av konfigurationer tillgängliga i listrutorna på den här skärmen:
 
-* ****
-KonfigurationerHär kan du uppdatera befintliga konfigurationer. Dessa har en Persistent Identity (PID) och kan antingen vara:
+* **Konfigurationer**
+  Här kan du uppdatera befintliga konfigurationer. Dessa har en Persistent Identity (PID) och kan antingen vara:
 
    * standard och integrerad i AEM, dessa är obligatoriska, om de tas bort återgår värdena till standardinställningarna.
    * instanser som skapats från fabrikskonfigurationer, om instanserna skapas av användaren tas instansen bort.
 
-* **Factory**
-ConfigurationsGör att du kan skapa en instans av det funktionsobjekt som krävs.
+* **Fabrikskonfigurationer**
+   Gör att du kan skapa en instans av det funktionsobjekt som krävs.
 
    Detta tilldelas en beständig identitet och visas sedan i listrutan Konfigurationer.
 
