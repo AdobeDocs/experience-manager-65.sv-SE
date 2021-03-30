@@ -36,21 +36,14 @@ I det här dokumentet beskrivs de olika element som utgör kampanjer. Mer detalj
 
 Kampanjhanteringen består av olika delar:
 
-* ****
-VarumärkenaI AEM är varumärken den viktigaste enheten och utgör en samling av 
-**Kampanjer**.
+* **Varumärken** i AEM är varumärken den främsta enheten och utgör en samling **kampanjer**.
 
-* ****
-KampanjerEn kampanj består av en samling individuella kampanjer 
-**Upplevelser**.
+* **Kampanjer** En kampanj är en samling individuella **upplevelser**.
 
-* ****
-ErfarenheterDet fokuserade innehållet utgör de olika upplevelserna, som presenteras för besökaren på 
-**Pekpunkter**. Det finns flera olika typer av upplevelser:
+* **Upplevelser** Det fokuserade innehållet utgör de olika upplevelserna, som presenteras för besökaren vid **kontaktpunkter**. Det finns flera olika typer av upplevelser:
 
    * **Lärare**
-
-      [Teaser Pages/](#teasers) Paragraphes används för att styra specifika besökarsegment  **** till innehåll som är inriktat på deras intressen.
+      [Teaser Pages/Paragraphs](#teasers) används för att styra specifika **besökarsegment** till innehåll som är inriktat på deras intressen.
 
       Teaser pages can:
 
@@ -61,7 +54,7 @@ ErfarenheterDet fokuserade innehållet utgör de olika upplevelserna, som presen
 
    * **Nyhetsbrev**
 
-      [E-](#emailmarketing) postkommunikation används för att engagera användare och uppmuntra dem att besöka din webbplats. Dessa består vanligtvis av ett nyhetsbrev som skickas till dina **leads** (som vanligtvis grupperas i **listor**). **Obs!** Adobe planerar inte att ytterligare förbättra den här funktionen. Rekommendationen är att [utnyttja Adobe Campaign och integreringen till AEM](/help/sites-administering/campaign.md).
+      [E-postkommunikation](#emailmarketing) används för att engagera användare och uppmuntra dem att besöka din webbplats. Dessa består vanligtvis av ett nyhetsbrev som skickas till dina **leads** (som vanligtvis grupperas i **listor**). **Obs!** Adobe planerar inte att ytterligare förbättra den här funktionen. Rekommendationen är att [utnyttja Adobe Campaign och integreringen till AEM](/help/sites-administering/campaign.md).
 
    * **Adobe Target**
 
