@@ -49,6 +49,7 @@ ErfarenheterDet fokuserade innehållet utgör de olika upplevelserna, som presen
 **Pekpunkter**. Det finns flera olika typer av upplevelser:
 
    * **Lärare**
+
       [Teaser Pages/](#teasers) Paragraphes används för att styra specifika besökarsegment  **** till innehåll som är inriktat på deras intressen.
 
       Teaser pages can:
