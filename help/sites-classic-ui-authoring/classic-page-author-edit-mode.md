@@ -176,9 +176,9 @@ inAnge en startbana, antingen manuellt eller med väljaren.
          * **Querybuilder-predikatnotation**
 Du kan ange en sökfråga med Querybuilder-predikatnotation. Du kan till exempel ange &quot;fulltext=Marketing&quot; om du vill att alla sidor med &quot;Marketing&quot; i innehållet ska visas i Carousel.
 Mer information om frågeuttryck och fler exempel finns i [QueryBuilder API](/help/sites-developing/querybuilder-api.md).
-   * **Sortera**
-efter val 
-`jcr:title`,  `jcr:created`,  `cq:lastModified`eller  `cq:template` från listrutan.
+
+   * **Sortera** 
+Välj `jcr:title`, `jcr:created``cq:lastModified`eller `cq:template` från listrutan.
 
    * **Gräns**
 Maximalt antal objekt som du vill använda i Carousel. detta är valfritt.
