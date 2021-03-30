@@ -174,8 +174,8 @@ Med klickbara kontroller kan användaren även bläddra igenom de visade sidorna
 
 Dessa finns på två flikar:
 
-* ****
-CarouselHär anger du hur karusellen fungerar:
+* **Carousel**
+  Här anger du hur karusellen fungerar:
 
    * Uppspelningshastighet
 Tiden i millisekunder innan nästa bild visas.
