@@ -106,11 +106,9 @@ BildDra en bild från innehållssökaren eller klicka för att öppna ett blädd
    * **Beskär**
 Beskär en bild. Dra kanten för att beskära bilden.
 
-   * ****
-RoteraKlicka på Rotera upprepade gånger tills bilden roteras som du vill.
+   * **Rotera** Klicka på Rotera upprepade gånger tills bilden roteras som du vill.
 
-   * ****
-RaderaTa bort den aktuella bilden.
+   * **Rensa** Ta bort den aktuella bilden.
 
 * **Avancerat**
 
@@ -145,8 +143,7 @@ Med klickbara kontroller kan användaren även bläddra igenom de visade sidorna
 
 Dessa finns på två flikar:
 
-* ****
-CarouselHär anger du hur karusellen fungerar:
+* **Carousel** Här anger du hur karusellen fungerar:
 
    * Uppspelningshastighet
 Tiden i millisekunder innan nästa bild visas.
@@ -155,30 +152,25 @@ Tid i millisekunder för övergången mellan två bildrutor.
    * Kontrollformat
 Det finns olika alternativ på en listruta. Exempel: Föregående/Nästa-knappar, Överst till höger-växlar.
 
-* ****
-ListHär anger du hur sidorna ska inkluderas i Carousel:
+* **Lista** Här anger du hur sidorna ska inkluderas i Carousel:
 
-   * **Skapa lista**
-medDet finns flera sätt att skapa en sidlista - Underordnade sidor, Fast lista, Sök eller Avancerad sökning (alla beskrivs nedan).
+   * **Skapa en lista med hjälp**
+   Det finns flera sätt att skapa en sidlista - Underordnade sidor, Fast lista, Sök eller Avancerad sökning (alla beskrivs nedan).
 Observera, att oavsett vilken metod du väljer, så kommer den bild som visas i Carousel att visas på de sidor som finns med i listan. Om det inte finns någon bild för en viss sida under sidans Sidegenskaper, bör du koppla en bild till sidan innan du börjar, eftersom Carousel annars visar en tom (eller nästan tom) sida. Se [Redigera sidegenskaper](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md).
 Beroende på vilket objekt du väljer visas en ny panel:
 
       * **Alternativ för underordnade sidor**
 
-         * **Överordnad**
-sidaAnge en bana antingen manuellt eller med väljaren. Lämna tomt om du vill använda den aktuella sidan som överordnad.
+         * **Överordnad sida** Ange en bana antingen manuellt eller med väljaren. Lämna tomt om du vill använda den aktuella sidan som överordnad.
       * **Alternativ för fast lista**
 
-         * **SidorVälj en**
-lista med sidor. Användning 
-`+` om du vill lägga till fler poster och upp-/nedknapparna för att justera ordningen.
+         * **Sidor** Välj en lista med sidor. Använd `+` för att lägga till fler poster och upp-/nedknapparna för att justera ordningen.
       * **Alternativ för sökning**
 
          * **Starta**
 inAnge en startbana, antingen manuellt eller med väljaren.
 
-         * **Sök**
-frågaDu kan ange en vanlig textsökfråga.
+         * **Sökfråga** Du kan ange en vanlig textsökfråga.
       * **Alternativ för avancerad sökning**
 
          * **Querybuilder-predikatnotation**
@@ -188,8 +180,8 @@ Mer information om frågeuttryck och fler exempel finns i [QueryBuilder API](/he
 efter val 
 `jcr:title`,  `jcr:created`,  `cq:lastModified`eller  `cq:template` från listrutan.
 
-   * ****
-GränsMaximalt antal objekt som du vill använda i Carousel. detta är valfritt.
+   * **Gräns**
+Maximalt antal objekt som du vill använda i Carousel. detta är valfritt.
 
 
 
@@ -210,17 +202,14 @@ Ange diagramdata i CSV-format. I formatet för kommaseparerade värden används 
 
 * **Avancerat**
 
-   * **DiagramtypVälj**
-från cirkeldiagram, linjediagram och stapeldiagram.
+   * **Diagramtyp** Välj från cirkeldiagram, linjediagram och stapeldiagram.
 
-   * **Alternativ**
-textAlternativ text som visas i stället för diagrammet.
+   * **Alternativ text** Alternativ text som visas i stället för diagrammet.
 
    * **Diagrammets**
 bredd i pixlar.
 
-   * **Diagrammets**
-HeightHeight i pixlar.
+   * **Diagrammets höjd** i pixlar.
 
 I följande exempel visas ett exempel på diagramdata följt av det resulterande stapeldiagrammet:
 
@@ -249,8 +238,8 @@ Komponenten Download skapar en länk på den valda webbsidan för att hämta en 
 
 * **Hämta**
 
-   * ****
-BeskrivningEn kort beskrivning visas med nedladdningslänken.
+   * **Beskrivning** 
+   En kort beskrivning med nedladdningslänken.
 
    * **File**
 File är tillgängligt för hämtning på den slutliga webbsidan. Dra en resurs från innehållssökaren eller klicka på området för att överföra filen som ska vara tillgänglig för hämtning.
