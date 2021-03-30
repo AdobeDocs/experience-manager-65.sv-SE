@@ -90,21 +90,21 @@ I de flesta projekt installeras Dispatcher för cachelagring och belastningsutj�
 
 Testningen är svår (cachelagring sker på olika nivåer och på olika platser) och måste göras i svarta lådor. Viktiga aspekter att testa för är:
 
-* **Se**
-till att webbplatsens besökare kan se innehållsuppdateringarna korrekt.
+* **Noggrannheten** 
+säkerställer att webbplatsens besökare kan se innehållsuppdateringarna.
 
-* **Se**
-till att webbplatsen fortfarande är tillgänglig när en server stängs av.
+* **Kontinuitet** 
+säkerställer att webbplatsen fortfarande är tillgänglig när en server stängs av.
 
-* ****
-ClustersClusters används för att tillhandahålla:
+* **Kluster**
+används för att tillhandahålla:
 
-   * ****
-RedundansOm en server inte fungerar tar andra servrar i klustret över bearbetningen.
+   * **Redundans** 
+    Om en server misslyckas tar andra servrar i klustret över bearbetningen.
 
-   * **PerformanceLoad-**
-balansering med fullständig failover ökar prestanda för ett kluster.
-När det används för ett kundprojekt måste klustret testas för att bekräfta att konfigurationen fungerar korrekt.
+   * **Prestanda belastnings**
+    balansering med fullständig failover ökar prestanda för ett kluster.
+    När det används för ett kundprojekt måste klustret testas för att bekräfta att konfigurationen fungerar korrekt.
 
 ## Testar tredjepartsprogram {#testing-third-party-software}
 
