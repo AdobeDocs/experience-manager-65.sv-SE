@@ -3,10 +3,11 @@ title: Integrering med Adobe Creative Cloud bästa praxis
 description: Bästa tillvägagångssätt för att integrera [!DNL Adobe Experience Manager] with [!DNL Adobe Creative Cloud] för att effektivisera arbetsflöden för överföring av resurser och uppnå hög innehållshastighet.
 contentOwner: AG
 role: Affärsledare, administratör
+feature: Collaboration,Adobe Asset Link,Experience Manager Desktop App
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt
-source-wordcount: '3251'
+source-wordcount: '3259'
 ht-degree: 15%
 
 ---
