@@ -4,10 +4,11 @@ description: Förslag och vägledning om [!DNL Experience Manager] konfiguration
 contentOwner: AG
 mini-toc-levels: 1
 role: Arkitekt, administratör
+feature: Resurshantering
 translation-type: tm+mt
-source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
+source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt
-source-wordcount: '2677'
+source-wordcount: '2679'
 ht-degree: 0%
 
 ---
@@ -306,6 +307,6 @@ För att minimera latensen och uppnå hög genomströmning genom effektiv proces
 * Konfigurera [!DNL ImageMagick] för att begränsa resursförbrukningen.
 * Ta bort onödiga steg från [!UICONTROL DAM Update Asset]-arbetsflödet.
 * Konfigurera arbetsflöde och versionsrensning.
-* Optimera index med de senaste Service Pack-uppdateringarna och snabbkorrigeringarna. Kontakta Adobe kundtjänst för eventuella ytterligare indexoptimeringar.
+* Optimera index med de senaste Service Pack-uppdateringarna och snabbkorrigeringarna. Kontakta Adobe kundtjänst om du har ytterligare indexoptimeringar som kan vara tillgängliga.
 * Använd gissningTotal för att optimera frågeprestanda.
 * Om du konfigurerar [!DNL Experience Manager] för att identifiera filtyper från innehållet i filerna (genom att aktivera **[!UICONTROL Day CQ DAM Mime Type Service]** i **[!UICONTROL AEM Web Console]**), överför många filer samtidigt under icke-toppvärdesdagar eftersom det är resurskrävande.
