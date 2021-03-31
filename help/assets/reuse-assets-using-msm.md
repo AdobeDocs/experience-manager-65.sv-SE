@@ -4,10 +4,11 @@ description: Använd resurser på flera sidor/mappar som är härledda från och
 contentOwner: AG
 mini-toc-levels: 1
 role: Affärsledare, administratör, arkitekt
+feature: Resurshantering,Multi Site Manager
 translation-type: tm+mt
-source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
+source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt
-source-wordcount: '3261'
+source-wordcount: '3266'
 ht-degree: 9%
 
 ---
