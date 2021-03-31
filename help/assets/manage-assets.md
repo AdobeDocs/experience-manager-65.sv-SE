@@ -4,10 +4,11 @@ description: Lär dig resurshanteringsåtgärder som överföring, hämtning, re
 contentOwner: AG
 mini-toc-levels: 1
 role: Yrkesverksamma inom affärsverksamhet
+feature: Resurshantering, sökning
 translation-type: tm+mt
-source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
+source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt
-source-wordcount: '9360'
+source-wordcount: '9363'
 ht-degree: 3%
 
 ---
