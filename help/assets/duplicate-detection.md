@@ -3,10 +3,11 @@ title: Aktivera identifiering av dubblettresurser
 description: Lär dig hur du aktiverar identifiering av duplicerade resurser i Experience Manager.
 contentOwner: AG
 role: Affärsledare, administratör
+feature: Resurshantering,Resursrapporter
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt
-source-wordcount: '152'
+source-wordcount: '156'
 ht-degree: 0%
 
 ---
