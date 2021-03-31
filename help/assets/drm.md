@@ -3,10 +3,11 @@ title: Digital Rights Management tillgångar
 description: Lär dig hur du hanterar förfallotillstånd för mediefiler och information för licensierade mediefiler i [!DNL Experience Manager].
 contentOwner: AG
 role: Affärsledare, administratör
+feature: DRM,Resurshantering
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt
-source-wordcount: '1323'
+source-wordcount: '1326'
 ht-degree: 6%
 
 ---
