@@ -3,10 +3,11 @@ title: Hantera sammansatta resurser med referenser och flera sidor
 description: Lär dig hur du skapar referenser till digitala resurser inifrån [!DNL Adobe InDesign], [!DNL Adobe Illustrator], and [!DNL Adobe Photoshop]. Använd funktionen för sidvisningsprogram för att visa enskilda underresurssidor för flersidiga filer som PDF-, INDD-, PPT-, PPTX- och AI-filer.
 contentOwner: AG
 role: Affärsledare, administratör
+feature: Resurshantering
 translation-type: tm+mt
-source-git-commit: e6a0cab17d203183cc4169563179060338596cc3
+source-git-commit: ad0672c345262712e51e821fa4e050b505063ac4
 workflow-type: tm+mt
-source-wordcount: '1319'
+source-wordcount: '1321'
 ht-degree: 0%
 
 ---
