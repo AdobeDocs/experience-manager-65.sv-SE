@@ -10,10 +10,12 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 content-type: reference
 discoiquuid: 7ecc1bcf-38a9-4a59-8dd3-79cb90dec33d
 docset: aem65
+feature: Innehållsfragment
+role: Affärsledare, administratör
 translation-type: tm+mt
-source-git-commit: 0d5a48be283484005013ef3ed7ad015b43f6398b
+source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt
-source-wordcount: '1973'
+source-wordcount: '1978'
 ht-degree: 3%
 
 ---
@@ -246,7 +248,7 @@ Resurserna för innehållsfragmentet består av följande delar (antingen direkt
    * Lagras i fragmentet för att undvika spridning av innehållskopior.
    * Variationer kan vara [synkroniserade](/help/assets/content-fragments/content-fragments-variations.md#synchronizing-with-master) med Överordnad om det Överordnad innehållet har uppdaterats.
    * Kan vara [Summerad](/help/assets/content-fragments/content-fragments-variations.md#summarizing-text) för att snabbt korta av texten till en fördefinierad längd.
-   * Finns under fliken [Variationer](/help/assets/content-fragments/content-fragments-variations.md) i fragmentredigeraren.
+   * Tillgängligt under fliken [Variationer](/help/assets/content-fragments/content-fragments-variations.md) i fragmentredigeraren.
 
 ### Mellan innehåll vid sidredigering med innehållsfragment {#in-between-content-when-page-authoring-with-content-fragments}
 
