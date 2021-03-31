@@ -3,10 +3,11 @@ title: Konfiguration och administration av metadatafunktioner.
 description: Konfiguration och administration av [!DNL Experience Manager Assets] funktioner för tillägg och hantering av metadata.
 contentOwner: AG
 role: Affärsledare, administratör
+feature: Metadata
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt
-source-wordcount: '1799'
+source-wordcount: '1800'
 ht-degree: 4%
 
 ---
