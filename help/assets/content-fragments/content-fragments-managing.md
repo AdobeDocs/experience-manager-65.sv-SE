@@ -10,10 +10,12 @@ topic-tags: content-fragments
 content-type: reference
 discoiquuid: 21a18d60-f3fe-4048-9949-8416b5cb4596
 docset: aem65
+feature: Innehållsfragment
+role: Affärsledare, administratör
 translation-type: tm+mt
-source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt
-source-wordcount: '1486'
+source-wordcount: '1491'
 ht-degree: 10%
 
 ---
@@ -233,7 +235,7 @@ Du kan visa och redigera egenskaperna för ett fragment på fliken [Metadata](/h
 
 ## Tidslinje för innehållsfragment {#timeline-for-content-fragments}
 
-Förutom standardalternativen ger [Tidslinjen](/help/assets/manage-assets.md#timeline) både information och åtgärder som är specifika för innehållsfragment:
+Förutom standardalternativen innehåller [Tidslinjen](/help/assets/manage-assets.md#timeline) både information och åtgärder som är specifika för innehållsfragment:
 
 * Visa information om versioner, kommentarer och anteckningar
 * Åtgärder för versioner
@@ -309,7 +311,7 @@ Du kan återgå till en viss version av fragmentet:
 
    Välj önskad version och sedan åtgärden **Återställ till denna version**.
 
-* När du jämför en version med den aktuella versionen[ kan du ](/help/assets/content-fragments/content-fragments-managing.md#comparing-fragment-versions)återställa **till den valda versionen.**
+* När du jämför en version med den aktuella versionen](/help/assets/content-fragments/content-fragments-managing.md#comparing-fragment-versions) kan du **återställa** till den valda versionen.[
 
 ## Publicera och referera till ett fragment {#publishing-and-referencing-a-fragment}
 
