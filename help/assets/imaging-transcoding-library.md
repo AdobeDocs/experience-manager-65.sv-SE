@@ -3,10 +3,11 @@ title: Konverteringsbibliotek för bildbehandling
 description: Lär dig hur du konfigurerar och använder Adobe Imaging Transcoding Library, en bildbehandlingslösning som kan utföra grundläggande bildhanteringsfunktioner, inklusive kodning, omkodning, bildomsampling och storleksändring.
 contentOwner: AG
 role: Administratör
+feature: Återgivningar,Utvecklarverktyg,Resurshantering
 translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt
-source-wordcount: '943'
+source-wordcount: '948'
 ht-degree: 0%
 
 ---
