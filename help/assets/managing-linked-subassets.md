@@ -4,9 +4,9 @@ description: Lär dig hur du skapar referenser till digitala resurser inifrån [
 contentOwner: AG
 role: Affärsledare, administratör
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: e6a0cab17d203183cc4169563179060338596cc3
 workflow-type: tm+mt
-source-wordcount: '1289'
+source-wordcount: '1319'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Förutom att eliminera redundans kan du genom att referera till resurserna i [!D
 
 Referenser tolkas utifrån sökväg, dokument-ID och instans-ID för de refererade resurserna.
 
-## Lägg till digitala resurser som referenser i [!DNL Adobe Illustrator] {#refai}
+## [!DNL Adobe Illustrator]: Lägg till digitala resurser som referenser  {#refai}
 
 Du kan referera till befintliga digitala resurser inifrån en [!DNL Adobe Illustrator]-fil.
 
@@ -45,7 +45,7 @@ Du kan referera till befintliga digitala resurser inifrån en [!DNL Adobe Illust
 
    *Bild: Resursreferenser i tillgångsinformation.*
 
-## Lägg till digitala resurser som referenser i [!DNL Adobe InDesign] {#add-aem-assets-as-references-in-adobe-indesign}
+## [!DNL Adobe InDesign]: Lägg till digitala resurser som referenser  {#add-aem-assets-as-references-in-adobe-indesign}
 
 Om du vill referera till digitala resurser från en [!DNL InDesign]-fil, drar du resurserna till [!DNL InDesign]-filen eller exporterar [!DNL InDesign]-filen som ett ZIP-arkiv.
 
@@ -55,6 +55,8 @@ Refererade resurser finns redan i [!DNL Experience Manager Assets]. Du kan extra
 >
 >Om [!DNL InDesign Server] är proxiderad är förhandsgranskningen för [!DNL InDesign]-filerna inbäddad i deras XMP metadata. I det här fallet krävs inte extrahering av miniatyrer uttryckligen. Om [!DNL InDesign Server] inte är proxiderad måste miniatyrbilder extraheras explicit för [!DNL InDesign]-filer.
 
+När en INDD-fil överförs hämtas referenserna genom att resurser med egenskapen `xmpMM:InstanceID` och `xmpMM:DocumentID` hämtas i databasen.
+
 ### Skapa referenser genom att dra resurser {#create-references-by-dragging-aem-assets}
 
 Den här proceduren liknar [hur du lägger till digitala resurser som referenser i Adobe Illustrator](#refai).
@@ -62,12 +64,12 @@ Den här proceduren liknar [hur du lägger till digitala resurser som referenser
 ### Skapa referenser till resurser genom att exportera en ZIP-fil {#create-references-to-aem-assets-by-exporting-a-zip-file}
 
 1. Utför stegen i [Skapa arbetsflödesmodeller](/help/sites-developing/workflows-models.md) för att skapa ett nytt arbetsflöde.
-1. Använd paketeringsfunktionen i [!DNL Adobe InDesign] för att exportera dokumentet. [!DNL Adobe InDesign] kan exportera ett dokument och de länkade resurserna som ett paket. I det här fallet innehåller den exporterade mappen en länkmapp som innehåller underresurser i [!DNL InDesign]-filen.
+1. Använd [paketfunktionen](https://helpx.adobe.com/indesign/how-to/indesign-package-files-for-handoff.html) i [!DNL Adobe InDesign] för att exportera dokumentet. [!DNL Adobe InDesign] kan exportera ett dokument och de länkade resurserna som ett paket. I det här fallet innehåller den exporterade mappen en `Links`-mapp som innehåller underresurser i [!DNL InDesign]-filen. Mappen `Links` finns i samma mapp som INDD-filen.
 1. Skapa en ZIP-fil och överför den till [!DNL Experience Manager]-databasen.
 1. Starta `Unarchiver`-arbetsflödet.
 1. När arbetsflödet är klart refereras referenserna i mappen Länkar automatiskt till underresurser. Om du vill visa en lista över refererade resurser går du till sidan med tillgångsinformation för [!DNL InDesign]-resursen och stänger [Rail](/help/sites-authoring/basic-handling.md#rail-selector).
 
-## Lägg till digitala resurser som referenser i [!DNL Adobe Photoshop] {#refps}
+## [!DNL Adobe Photoshop]: Lägg till digitala resurser som referenser  {#refps}
 
 1. Använd [!DNL Experience Manager]-datorprogrammet för att komma åt [!DNL Experience Manager Assets]. Hämta och visa resurserna i det lokala filsystemet. Använd funktionen [!UICONTROL Place Linked] i [!DNL Adobe Photoshop]. Se [placera resurser i skrivbordsappen](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#place-assets-in-native-documents).
 
