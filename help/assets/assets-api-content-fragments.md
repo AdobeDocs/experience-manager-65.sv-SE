@@ -10,10 +10,12 @@ content-type: reference
 topic-tags: extending-assets
 discoiquuid: 03502b41-b448-47ab-9729-e0a66a3389fa
 docset: aem65
+feature: Innehållsfragment
+role: Affärsledare, administratör
 translation-type: tm+mt
-source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
+source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt
-source-wordcount: '1859'
+source-wordcount: '1864'
 ht-degree: 2%
 
 ---
