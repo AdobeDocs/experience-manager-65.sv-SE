@@ -3,10 +3,11 @@ title: Använd PDF-rastrering för att generera renderingar
 description: Generera högkvalitativa miniatyrbilder och renderingar med Adobe PDF Rasterizer-biblioteket.
 contentOwner: AG
 role: Utvecklare, administratör
+feature: Utvecklarverktyg,Återgivningar
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt
-source-wordcount: '663'
+source-wordcount: '666'
 ht-degree: 0%
 
 ---
@@ -34,7 +35,7 @@ Miniatyrbilder och förhandsgranskningar som genererats med PDF Rasterizer har b
 
 1. Följ de här stegen för att förhindra att miniatyrbilder och webbåtergivning genereras för PDF-filer och AI-filer med standardmetoderna:
 
-   * Öppna steget **[!UICONTROL Process Thumbnails]** och lägg till `application/pdf` eller `application/postscript` i fältet **[!UICONTROL Skip Mime Types]** under fliken **[!UICONTROL Thumbnails]** om det behövs.
+   * Öppna steget **[!UICONTROL Process Thumbnails]** och lägg till `application/pdf` eller `application/postscript` i fältet **[!UICONTROL Skip Mime Types]** under fliken **[!UICONTROL Thumbnails]** efter behov.
 
    ![skip_mime_types-2](assets/skip_mime_types-2.png)
 
@@ -46,18 +47,18 @@ Miniatyrbilder och förhandsgranskningar som genererats med PDF Rasterizer har b
 
    ![process_arguments](assets/process_arguments.png)
 
-1. Dra **[!UICONTROL PDF Rasterizer Handler]**-steget från sidopanelen till under **[!UICONTROL Process Thumbnails]**-steget.
+1. Dra steget **[!UICONTROL PDF Rasterizer Handler]** från sidopanelen till nedanför steget **[!UICONTROL Process Thumbnails]**.
 1. Konfigurera följande argument för steget **[!UICONTROL PDF Rasterizer Handler]**:
 
    * MIME-typer: `application/pdf` eller `application/postscript`
    * Kommandon: `PDFRasterizer -d -s 1280 -t PNG -i ${file}`
-   * Lägg till miniatyrstorlekar: 319:319, 140:100, 48:48. Lägg till anpassad miniatyrkonfiguration om det behövs.
+   * Lägg till miniatyrstorlekar: 319:319, 140:100, 48:48. Lägg till anpassad miniatyrkonfiguration, om det behövs.
 
    Kommandoradsargumenten för kommandot `PDFRasterizer` kan innehålla följande:
 
    * `-d`: Flagga för smidig återgivning av text, vektorgrafik och bilder. Skapar bilder med bättre kvalitet. Om du tar med den här parametern körs kommandot långsamt och bildstorleken ökar.
 
-   * `-s`: Maximal bilddimension (höjd eller bredd). Detta konverteras till DPI för varje sida. Om sidorna har olika storlek kan varje sida eventuellt skalas upp olika mycket. Standardvärdet är faktisk sidstorlek.
+   * `-s`: Största bilddimension (höjd eller bredd). Detta konverteras till DPI för varje sida. Om sidorna har olika storlek kan varje sida eventuellt skalas med olika mängd. Standardvärdet är faktisk sidstorlek.
 
    * `-t`: Typ av utdatabild. Giltiga typer är JPEG, PNG, GIF och BMP. Standardvärdet är JPEG.
 
