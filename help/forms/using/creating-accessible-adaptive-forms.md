@@ -10,10 +10,10 @@ discoiquuid: 1e95c66b-d132-4c44-a1dc-31fd09af8113
 docset: aem65
 feature: Adaptiv Forms
 translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+source-git-commit: 7a3f54d90769708344e6751756b2a12ac6c962d7
 workflow-type: tm+mt
-source-wordcount: '1782'
-ht-degree: 0%
+source-wordcount: '2057'
+ht-degree: 1%
 
 ---
 
@@ -163,6 +163,24 @@ Följande kortkommandon finns i AEM Forms.
 | Flytta till föregående panel | Alt + vänsterpil |
 | Återställ ifyllda data i ett formulär | Alt+R |
 | Skicka ett formulär | Alt+S |
+
+Dessutom finns det olika kortkommandon för komponenten **[!UICONTROL Date Picker]** i Adaptive Forms. Om du vill aktivera kortkommandona trycker du på komponenten **[!UICONTROL Date Picker]** och trycker på ![Configure](assets/configure-icon.svg) för att öppna egenskaperna. I avsnittet **[!UICONTROL Patterns]** väljer du ett visningsmönster med listrutorna **[!UICONTROL Type]** och **[!UICONTROL Pattern]**. Spara egenskaperna för att aktivera användning av kortkommandon för komponenten **[!UICONTROL Date Picker]**.
+
+Följande kortkommandon är tillgängliga för datumväljarkomponenten i Adaptiv Forms:
+
+| Åtgärd | Kortkommando |
+|---|---|
+| <ul><li>Visa komponentalternativen för datumväljaren när tabbfokus markerar kalenderikonen</li><li>Utför klickhändelsen när tabbfokus markerar ett alternativ</li> | Blanksteg eller Retur |
+| Dölj komponentalternativen för datumväljaren | Esc |
+| <ul><li>Flytta markören framåt genom de alternativ som är tillgängliga i datumväljarkomponenten.</li><li>Ange flikfokus för kalenderikonen när datuminmatningsfältet är aktivt</li> | Tabb |
+| Flytta markören bakåt genom de alternativ som är tillgängliga i datumväljarkomponenten | Skift+Tabb |
+| <ul><li>Visa komponentalternativen för datumväljaren när tabbfokus markerar datuminmatningsfältet</li><li>Flytta markören nedåt i kalendern som är tillgänglig i datumväljarkomponenten</li> | Nedåtpil |
+| Flytta markören uppåt i kalendern som är tillgänglig i datumväljarkomponenten | Uppåtpil |
+| Flytta markören bakåt i kalendern som är tillgänglig i datumväljarkomponenten | Vänsterpil |
+| Flytta markören framåt i kalendern som är tillgänglig i datumväljarkomponenten | Högerpil |
+| Utför åtgärden för den bildtext som är tillgänglig mellan höger och vänster navigeringspilar i kalendern | Skift+Uppil |
+| Utför åtgärden för höger navigeringspilikon ![högerpil](assets/right-navigation-icon.svg) som är tillgänglig i kalendern | Skift+Vänsterpil |
+| Utför åtgärden för den vänstra navigeringspilikonen ![vänsterpil](assets/left-navigation-icon.svg) som är tillgänglig i kalendern | Skift+Högerpil |
 
 ## Använd hjälpmedelsverktyget för att hitta återstående tillgänglighetsproblem
 
