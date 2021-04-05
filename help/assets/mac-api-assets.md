@@ -4,14 +4,14 @@ description: Skapa, läsa, uppdatera, ta bort, hantera digitala resurser med HTT
 contentOwner: AG
 role: Developer
 feature: API:er,Resurser HTTP API,Utvecklarverktyg
+exl-id: 6bc10f4e-a951-49ba-9c71-f568a7f2e40d
 translation-type: tm+mt
-source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
+source-git-commit: 15f83387629687994bc2ffee4156d7d42dc1c537
 workflow-type: tm+mt
-source-wordcount: '1722'
+source-wordcount: '1718'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Assets] HTTP-API  {#assets-http-api}
 
@@ -314,4 +314,4 @@ Tar bort en resurs (-tree) vid den angivna sökvägen.
 
 * [HTTP API uppdaterar metadataegenskaperna ](#update-asset-metadata) i  `jcr` namnutrymmet. Experience Manager uppdaterar emellertid metadataegenskaperna i namnutrymmet `dc`.
 
-* Resurs-API returnerar inte alla metadata. I API är namnutrymmena hårdkodade och de returneras bara. Om du behöver hela metadata tittar du på resurssökvägen `/jcr_content/metadata.json`.
+* Resursens HTTP API returnerar inte alla metadata. Namnutrymmena är hårdkodade och endast dessa namnutrymmen returneras. Fullständiga metadata finns i resurssökvägen `/jcr_content/metadata.json`.
