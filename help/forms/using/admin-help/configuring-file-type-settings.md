@@ -10,9 +10,9 @@ content-type: reference
 discoiquuid: ab19b248-8931-4cf6-b6a5-fb7b067c4a49
 feature: PDF Generator
 translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+source-git-commit: 3bb12f6323398971ec315f49611a39977bd548a2
 workflow-type: tm+mt
-source-wordcount: '5859'
+source-wordcount: '5874'
 ht-degree: 1%
 
 ---
@@ -177,7 +177,7 @@ Aktivera dessa alternativ för att ange hur HTML-sidorna ska konverteras. Basera
 
 **Marginaler:** Anger marginaler (Överkant, Underkant, Vänster och Höger) i det genererade PDF-dokumentet.
 
-**Lägg till bokmärken i PDF-filen:** lägger till bokmärken i PDF-dokumentet.
+**Lägg till bokmärken i PDF-dokument:** Lägger till bokmärken i PDF-dokumentet.
 
 **Aktivera taggad PDF-fil:** Bäddar in taggar i PDF-dokumentet.
 
@@ -515,6 +515,8 @@ De här alternativen avgör hur Microsoft Word-filer konverteras. Instruktioner 
 **[!UICONTROL Enable Advanced Tagging]**: Lägger till avancerade taggar för förbättrad tillgänglighet.
 
 **[!UICONTROL Convert All Styles To Bookmarks]**: Konverterar alla format i Word-dokumentet till bokmärken i PDF-dokumentet.
+
+**[!UICONTROL Convert specified styles to bookmarks]**: Konverterar de format du definierar i  **[!UICONTROL Styles with levels]** fältet till bokmärken i PDF-dokumentet.
 
 **[!UICONTROL Styles With Levels]**: Anger vilka format i Word-dokumentet som ska konverteras till bokmärken i PDF-dokumentet. Anger också nivån på bokmärkena. Om du vill använda den här funktionen avmarkerar du alternativet **[!UICONTROL Convert All Styles To Bookmarks]** och anger formatnamnen i följande format:
 
