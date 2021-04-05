@@ -9,14 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: f4d98cb9-84d8-4735-91d2-b9ceec861e5e
 docset: aem65
 feature: Interaktiv kommunikation
+exl-id: 1f89c3bf-e67e-4d13-9285-3367be1ac8f8
 translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+source-git-commit: 92092e1c050c9264c19e3cd9da9b240607af7bab
 workflow-type: tm+mt
-source-wordcount: '5948'
+source-wordcount: '6038'
 ht-degree: 0%
 
 ---
-
 
 # Skapa en interaktiv kommunikation{#create-an-interactive-communication}
 
@@ -611,3 +611,23 @@ Med webbkanalens redigeringsgränssnitt är det lättare att gruppera komponente
 
    ![content_tree_grouping](assets/content_tree_grouping.png)
 
+## Utdataformat för utskriftskanal {#output-format-print-channel}
+
+Använd PrintChannel API för att definiera utdataformat för Print-kanalen i en interaktiv kommunikation. Om du inte definierar något utdataformat genererar AEM Forms utdata i PDF-format.
+
+```javascript
+//options for rendering print channel of a multi-channel document
+PrintChannelRenderOptions renderOptions = new PrintChannelRenderOptions();
+PrintDocument printDocument = printChannel.render(renderOptions);
+```
+
+Om du vill generera utdata i något annat format anger du typ av utdataformat. I [PrintChannel API](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/PrintConfig.html) finns en lista över de utdataformattyper som stöds.
+
+Du kan till exempel använda följande exempel för att definiera PCL som utdataformat för en interaktiv kommunikation:
+
+```javascript
+//options for rendering print channel of a multi-channel document
+PrintChannelRenderOptions renderOptions = new PrintChannelRenderOptions();
+renderOptions.setRenderFormat(PrintConfig.HP_PCL_5e);
+PrintDocument printDocument = printChannel.render(renderOptions);
+```
