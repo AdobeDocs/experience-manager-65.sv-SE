@@ -4,14 +4,14 @@ description: Lär dig mer om mediehanterarna och hur du använder arbetsflöden 
 contentOwner: AG
 role: Yrkesverksamma inom affärsverksamhet
 feature: arbetsflöde,återgivningar
+exl-id: cfd6c981-1a35-4327-82d7-cf373d842cc3
 translation-type: tm+mt
-source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
+source-git-commit: 15f83387629687994bc2ffee4156d7d42dc1c537
 workflow-type: tm+mt
-source-wordcount: '2094'
+source-wordcount: '2097'
 ht-degree: 1%
 
 ---
-
 
 # Bearbeta resurser med mediehanterare och arbetsflöden {#processing-assets-using-media-handlers-and-workflows}
 
@@ -46,6 +46,8 @@ Följande mediehanterare är tillgängliga i [!DNL Assets] och hanterar de vanli
 | [!UICONTROL OpenOfficeHandler] | com.day.cq.dam.handler.standard.ooxml.OpenOfficeHandler | <ul><li>application/vnd.openxmlformats.wordbehandlingml.document</li><li> application/vnd.openxmlformats-officedocument.spreadsheet.etml.sheet</li><li> application/vnd.openxmlformats.presentationml.presentation</li></ul> |
 | [!UICONTROL EPubHandler] | com.day.cq.dam.handler.standard.epub.EPubHandler | application/epub+zip |
 | [!UICONTROL GenericAssetHandler] | com.day.cq.dam.core.impl.handler.GenericAssetHandler | tillbaka om ingen annan hanterare hittades för att extrahera data från en resurs |
+
+{style=&quot;table-layout:auto&quot;}
 
 Alla hanterare utför följande uppgifter:
 
