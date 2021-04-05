@@ -2,14 +2,14 @@
 title: Konfigurera plugin-programmen för RTF-redigeraren
 description: Lär dig konfigurera plugin-programmen för Adobe Experience Manager Rich Text Editor så att enskilda funktioner aktiveras.
 contentOwner: AG
+exl-id: 6bfd6caa-a68a-40ba-9826-4ba02cd1dbfb
 translation-type: tm+mt
-source-git-commit: 6f5e650c99017c4b2f04ca8495eea8481b3236cd
+source-git-commit: 443115b306ff34ee98da9403222874a9700d8aed
 workflow-type: tm+mt
-source-wordcount: '4383'
+source-wordcount: '4382'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera plugin-programmen för RTF-redigeraren {#configure-the-rich-text-editor-plug-ins}
 
@@ -73,13 +73,13 @@ När du använder funktionen Ersätt bör du ange den ersättningssträng som sk
 
 Dialogrutan Sök och ersätt blir genomskinlig när du klickar på Sök och blir ogenomskinlig när du klickar på Ersätt. Detta gör att författaren kan granska texten som författaren ska ersätta. Om användare klickar på Ersätt alla stängs dialogrutan och visar antalet ersättningar som gjorts.
 
-## Konfigurera inklistringslägena {#pastemodes}
+## Konfigurera inklistringslägena {#paste-modes}
 
 När du använder RTE kan författare klistra in innehåll i något av följande tre lägen:
 
 * **Webbläsarläge**: Klistra in text med webbläsarens standardimplementering för inklistring. Det är inte en rekommenderad metod eftersom den kan medföra oönskad markering.
 
-* **Läge** för oformaterad text: Klistra in urklippsinnehållet som oformaterad text. Alla formatelement från det kopierade innehållet tas bort innan de infogas i AEM.
+* **Läge** för oformaterad text: Klistra in urklippsinnehållet som oformaterad text. Alla formatelement och formateringselement i det kopierade innehållet tas bort innan de infogas i [!DNL Experience Manager]-komponenten.
 
 * **MS Word-läge**: Klistra in texten, inklusive tabeller, med formatering när du kopierar från MS Word. Det går inte att kopiera och klistra in text från en annan källa, t.ex. en webbsida eller MS Excel, utan endast partiell formatering.
 
@@ -124,7 +124,7 @@ Läget Klistra in som Microsoft-Word (`paste-wordhtml`) kan konfigureras ytterli
 
 Om t.ex. endast fet stil och listor ska tillåtas när du klistrar in i AEM kan du filtrera bort de andra formaten. Detta kallas konfigurerbar inklistringsfiltrering, vilket kan göras för båda:
 
-* [Text](#pastemodes)
+* [Text](#paste-modes)
 * [Länkar](#linkstyles)
 
 För länkar kan du också definiera de protokoll som automatiskt godkänns.
