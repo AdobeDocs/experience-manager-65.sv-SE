@@ -3,14 +3,14 @@ title: '[!DNL Assets] proxyutveckling'
 description: En proxy är en  [!DNL Experience Manager] instance that uses proxy workers to process jobs. Learn how to configure an [!DNL Experience Manager] proxy, åtgärder som stöds, proxykomponenter och hur du utvecklar en anpassad proxyarbetare.
 contentOwner: AG
 role: Administratör, arkitekt
+exl-id: 42fff236-b4e1-4f42-922c-97da32a933cf
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: 15f83387629687994bc2ffee4156d7d42dc1c537
 workflow-type: tm+mt
-source-wordcount: '861'
+source-wordcount: '857'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Assets] proxyutveckling  {#assets-proxy-development}
 
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 En proxy är en specifik (och ibland separat) Experience Manager-instans som använder proxyarbetare som processorer som hanterar ett jobb och skapar ett resultat. En proxyarbetare kan användas för en mängd olika uppgifter. Om det är en [!DNL Assets]-proxy kan den användas för att läsa in resurser för återgivning i Assets. Exempelvis använder IDS-proxyarbetaren [en ](indesign.md)-server för att bearbeta filer som ska användas i Assets.[!DNL Adobe InDesign]
 
-När proxyn är en separat [!DNL Experience Manager]-instans minskar detta belastningen på författarinstansen/instanserna i Experience Manager. Som standard kör [!DNL Assets] resurshanteringsuppgifterna i samma JVM (externaliserat via Proxy) för att minska belastningen på författarinstansen i Experience Manager.
+När proxyn är en separat [!DNL Experience Manager]-instans minskar detta belastningen på [!DNL Experience Manager]-redigeringsinstansen/-instanserna. Som standard kör [!DNL Assets] resurshanteringsuppgifterna i samma JVM (externaliserat via Proxy) för att minska belastningen på [!DNL Experience Manager]-redigeringsinstansen.
 
 ## Proxy (HTTP Access) {#proxy-http-access}
 
@@ -104,7 +104,7 @@ Här följer ett exempel på API-användning:
  proxyJobService.removeJob(jobId);
 ```
 
-### Konfigurationer för Cloud Service {#cloud-service-configurations}
+### Konfigurationer av Cloud Service {#cloud-service-configurations}
 
 >[!NOTE]
 >
