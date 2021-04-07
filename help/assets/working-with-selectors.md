@@ -7,15 +7,16 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 262eb911-3dcb-475d-b410-8bcac1347905
-role: Affärsledare, administratör
+role: Business Practitioner, Administrator
+exl-id: 6d165b0d-e3e7-4115-8f2a-827679754b3b
+feature: Väljare
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
 workflow-type: tm+mt
-source-wordcount: '691'
+source-wordcount: '689'
 ht-degree: 19%
 
 ---
-
 
 # Arbeta med väljare {#working-with-selectors}
 
@@ -117,4 +118,3 @@ Mer information finns även i [Resursväljaren](search-assets.md#assetpicker).
 1. Tryck på bockmarkeringen för att markera resursen. Resursen visas.
 
    ![chlimage_1-536](assets/chlimage_1-536.png)
-
