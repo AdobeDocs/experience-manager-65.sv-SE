@@ -10,14 +10,15 @@ topic-tags: operations
 content-type: reference
 discoiquuid: b210f5d7-1d68-49ee-ade7-667c6ab11d2b
 docset: aem65
+exl-id: f9a88156-91a2-4c85-9bc9-8f23700c2cbd
+feature: Användning
 translation-type: tm+mt
-source-git-commit: 19a6a4f80e2af37b8de49080a977d02bf0e43507
+source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
 workflow-type: tm+mt
-source-wordcount: '6198'
+source-wordcount: '6199'
 ht-degree: 0%
 
 ---
-
 
 # Kontrollpanelen för åtgärder {#operations-dashboard}
 
@@ -81,7 +82,7 @@ Du skapar en enskild hälsokontroll i två steg: implementera en kontroll av ski
 
 1. För att kunna skapa en Sling Health Check måste du skapa en OSGI-komponent som implementerar Sling HealthCheck-gränssnittet. Du lägger till den här komponenten i ett paket. Komponentens egenskaper identifierar hälsokontrollen fullständigt. När komponenten har installerats skapas en JMX MBean automatiskt för hälsokontrollen. Mer information finns i [Dokumentation för hälsokontroll vid segmentering](https://sling.apache.org/documentation/bundles/sling-health-check-tool.html).
 
-   Exempel på en Sling Health Check-komponent, skriven med OSGI-tjänstkomponentanteckningar:
+   Exempel på en Sling Health Check-komponent, skriven med OSGI-tjänstkomponentsanteckningar:
 
    ```java
    @Component(service = HealthCheck.class,
@@ -206,7 +207,7 @@ En sammansatt hälsokontroll har till uppgift att sammanställa ett antal enskil
   </tr>
   <tr>
    <td>Gränser för genomgång av frågor</td>
-   <td><p>Gränser för genomgång av frågor kontrollerar MBean, närmare bestämt attributen <code>QueryEngineSettings</code> och <code>LimitInMemory</code>, och returnerar följande status:<code>LimitReads</code></p>
+   <td><p>Gränser för genomgång av frågor kontrollerar MBean, närmare bestämt attributen <code>LimitInMemory</code> och <code>LimitReads</code>, och returnerar följande status:<code>QueryEngineSettings</code></p>
     <ul>
      <li>returnerar varningsstatus om en av gränserna är lika med eller högre än <code>Integer.MAX_VALUE</code></li>
      <li>returnerar Warn-status om en av gränserna är lägre än 10000 (den rekommenderade inställningen från Oak)</li>
@@ -468,7 +469,7 @@ Som standard hämtas de långsammaste 20 sidbegäranden, men gränsen kan ändra
 
 ### Frågeprestanda {#query-performance}
 
-På sidan Frågeprestanda kan du analysera de långsammaste frågorna som har utförts av systemet. Denna information tillhandahålls av databasen i en JMX Mbean. JMX Mbean ger denna information i Jackrabbit, medan den i Oak-databasen erbjuds av `com.adobe.granite.QueryStat``org.apache.jackrabbit.oak.QueryStats.`
+På sidan Frågeprestanda kan du analysera de långsammaste frågorna som har utförts av systemet. Denna information tillhandahålls av databasen i en JMX Mbean. JMX Mbean ger denna information i Jackrabbit, medan den i Oak-databasen erbjuds av `org.apache.jackrabbit.oak.QueryStats.``com.adobe.granite.QueryStat`
 
 Sidan visar:
 
@@ -564,7 +565,7 @@ Du kan också konfigurera timinginställningarna genom att trycka på kugghjulsi
 
 ### Revision Clean Up {#revision-clean-up}
 
-Mer information om hur du utför rensning av revision finns i den här dedikerade artikeln[.](/help/sites-deploying/revision-cleanup.md)
+Mer information om hur du utför rensning av revision finns i den här dedikerade artikeln](/help/sites-deploying/revision-cleanup.md).[
 
 ### Lucene Binaries Cleanup {#lucene-binaries-cleanup}
 
@@ -697,7 +698,7 @@ På **systemöversiktspanelen** visas en översikt på hög nivå över konfigur
 
 >[!NOTE]
 >
->Du kan även [titta på den här videon](https://video.tv.adobe.com/v/21340?captions=swe) om du vill se en introduktion till kontrollpanelen för systemöversikt.
+>Du kan även [titta på den här videon](https://video.tv.adobe.com/v/21340) om du vill se en introduktion till kontrollpanelen för systemöversikt.
 
 ### Åtkomst till {#how-to-access}
 
@@ -773,7 +774,7 @@ Du kan även hämta en `JSON`-fil som sammanfattar instrumentpanelsinformationen
    <td>Instans</td>
    <td>
     <ul>
-     <li>aem</li>
+     <li>AEM</li>
      <li>lista över körningslägen</li>
      <li>det datum då instansen startades</li>
     </ul> </td>
@@ -905,4 +906,3 @@ Du kan även hämta en `JSON`-fil som sammanfattar instrumentpanelsinformationen
   </tr>
  </tbody>
 </table>
-
