@@ -5,15 +5,16 @@ contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
-role: Affärsledare, administratör
+role: Business Practitioner, Administrator,Developer
+exl-id: b0ac587b-8592-4d37-9ce0-98a0859c367f
+feature: Konfiguration,Linjaler
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: c9aec973faf4caef741961d92a6f258646aeddb7
 workflow-type: tm+mt
-source-wordcount: '726'
+source-wordcount: '725'
 ht-degree: 3%
 
 ---
-
 
 # Använda regeluppsättningar för att omforma URL:er {#using-rulesets-to-transform-urls}
 
@@ -84,4 +85,3 @@ Se även [Använda &quot;asset&quot; i stället för &quot;is&quot;-bilden i en 
    Regeluppsättningsvillkoren tillämpas på begäranden till Dynamic Media Image-servrar.
 
    Om du gör ändringar i regeluppsättningsfilen tillämpas ändringarna omedelbart när du överför och publicerar den uppdaterade regeluppsättningsfilen igen.
-
