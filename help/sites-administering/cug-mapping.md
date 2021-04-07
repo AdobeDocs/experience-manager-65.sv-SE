@@ -10,14 +10,15 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 13085dd3-d283-4354-874b-cd837a9db9f9
 docset: aem65
+exl-id: 661602eb-a117-454d-93d3-a079584f7a5d
+feature: Dokumentskydd
 translation-type: tm+mt
-source-git-commit: c2937a1989c6cfe33cc3f56f89c307cb5fb8d272
+source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '505'
 ht-degree: 0%
 
 ---
-
 
 # Mappning av anpassad användargrupp i AEM 6.5 {#custom-user-group-mapping-in-aem}
 
@@ -156,4 +157,3 @@ Tjänst för att konfigurera exkluderingslista för huvudobjekt som inte ska på
  </tbody>
 </table>
 -->
-
