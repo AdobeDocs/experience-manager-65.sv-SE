@@ -10,14 +10,14 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: e145afd8-7391-47aa-b389-16fb303749d0
 docset: aem65
+exl-id: b25d3f8e-5687-49ab-95e1-19ec75c87f6e
 translation-type: tm+mt
-source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
+source-git-commit: 47870c05d231bacc424cfbf308f78bc1eaeb907b
 workflow-type: tm+mt
-source-wordcount: '827'
+source-wordcount: '854'
 ht-degree: 6%
 
 ---
-
 
 # Launches{#launches}
 
@@ -102,6 +102,13 @@ Med Launes kan du:
 >Du måste ha åtkomsträttigheter till `/content/launches` för att kunna skapa och redigera starter, precis som med standardgruppen `content-authors`.
 >
 >Kontakta systemadministratören om du får problem.
+
+>[!CAUTION]
+>
+>Omordning av komponenter på en startsida stöds inte.
+>
+>När sidan befordras återspeglas alla innehållsändringar, men komponentens placering ändras inte.
+
 
 ### Startar konsolen {#the-launches-console}
 
