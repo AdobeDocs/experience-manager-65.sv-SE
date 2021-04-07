@@ -8,15 +8,16 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 97a5f018-8255-4b87-9d21-4a0fdf740e4d
 docset: aem65
-role: Affärsledare, administratör
+role: Business Practitioner, Administrator
+exl-id: 62d4a38c-2873-4560-8d58-ad172288764d
+feature: komponenter,publicera
 translation-type: tm+mt
-source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
+source-git-commit: c9aec973faf4caef741961d92a6f258646aeddb7
 workflow-type: tm+mt
-source-wordcount: '2964'
+source-wordcount: '2963'
 ht-degree: 8%
 
 ---
-
 
 # Lägga till Dynamic Media-resurser på sidor{#adding-dynamic-media-assets-to-pages}
 
@@ -69,7 +70,7 @@ Om det inte finns några Dynamic Media-komponenter att lägga till på en sida b
 
    ![Policy](/help/assets/assets-dm/structure-mode.png)
 
-1. I närheten av sidans nederkant trycker du på **[!UICONTROL Layout Container]** för att öppna verktygsfältet och sedan på ikonen Policy.
+1. Långt ned på sidan trycker du på **[!UICONTROL Layout Container]** för att öppna verktygsfältet och sedan på ikonen Policy.
 1. Kontrollera att fliken **[!UICONTROL Allowed Components]** är markerad under rubriken **[!UICONTROL Properties]** på sidan **[!UICONTROL Layout Container]**.
 
    ![Tillåtna komponenter](/help/assets/assets-dm/allowed-components.png)
