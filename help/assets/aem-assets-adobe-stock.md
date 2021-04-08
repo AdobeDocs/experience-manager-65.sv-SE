@@ -3,15 +3,15 @@ title: Hantera [!DNL Adobe Stock] resurser
 description: Sök, hämta, licensiera och hantera [!DNL Adobe Stock] resurser inifrån [!DNL Adobe Experience Manager]. Använd de licensierade mediefilerna som andra digitala resurser.
 contentOwner: AG
 feature: Sök, Adobe Stock
-role: Affärsledare, administratör
+role: Business Practitioner, Administrator
+exl-id: 8ec597df-bb64-4768-bf9c-e8cca4fea25b
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: a7a9a31364497ab67d805e45ba4fa03c927828ed
 workflow-type: tm+mt
-source-wordcount: '1022'
+source-wordcount: '1014'
 ht-degree: 4%
 
 ---
-
 
 # Använd [!DNL Adobe Stock]-resurser i [!DNL Adobe Experience Manager Assets] {#use-adobe-stock-assets-in-aem-assets}
 
@@ -35,11 +35,11 @@ Om du vill tillåta kommunikation mellan [!DNL Experience Manager] och [!DNL Ado
 
 1. I [!DNL Experience Manager]-användargränssnittet går du till **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Adobe IMS Configurations]**. Klicka på **[!UICONTROL Create]** och välj **[!UICONTROL Cloud Solution]** > **[!UICONTROL Adobe Stock]**.
 1. Återanvänd ett befintligt certifikat eller välj **[!UICONTROL Create new certificate]**.
-1. Klicka på **[!UICONTROL Create certificate]**. Ladda ned den offentliga nyckeln när du har skapat den. Klicka på **[!UICONTROL Next]**.
-1. Lägg till den hämtade offentliga nyckeln till ditt [!DNL Adobe Developer Console]-tjänstkonto. Klicka på **[!UICONTROL Next]**. Lämna skärmen [!UICONTROL Adobe IMS Technical Account Configuration] öppen så att värdena visas inom kort.
+1. Klicka på **[!UICONTROL Create certificate]**. Ladda ned den offentliga nyckeln när du har skapat den. Klicka på **[!UICONTROL Next]**. Lämna skärmen [!UICONTROL Adobe IMS Technical Account Configuration] öppen så att de värden som krävs anges inom kort.
 1. Åtkomst till [Adobe Developer Console](https://console.adobe.io). Se till att ditt konto har administratörsbehörighet för organisationen som integreringen krävs för.
-1. Klicka på **[!UICONTROL Create new project]** och klicka på **[!UICONTROL Add API]**. Välj **[!UICONTROL Adobe Stock]** i listan över API:er som är tillgängliga för dig. Välj [!UICONTROL OAUTH 2.0 Web]. Konfigurera och kopiera de olika värdena som presenteras.
-1. I [!DNL Experience Manager] anger du värdena i fälten **[!UICONTROL Title]**, **[!UICONTROL Authorization Server]**, **[!UICONTROL API Key]**, **[!UICONTROL Client Secret]** och **[!UICONTROL Payload]**. Mer information om dessa värden finns i [Snabbstart för JWT-autentisering](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/JWT/JWT.md).
+1. Klicka på **[!UICONTROL Create new project]** och klicka på **[!UICONTROL Add API]**. Välj **[!UICONTROL Adobe Stock]** i listan över API:er som är tillgängliga för dig. Välj [!UICONTROL OAUTH 2.0 Web].
+1. Ange **[!UICONTROL Default redirect URI]**- och **[!UICONTROL Redirect URI pattern]**-värden. Klicka på **[!UICONTROL Save configured API]**. Kopiera genererat ID och hemlighet.
+1. På skärmen [!UICONTROL Adobe IMS Technical Account Configuration] anger du värdena i rutorna **[!UICONTROL Title]**, **[!UICONTROL Authorization Server]**, **[!UICONTROL API Key]**, **[!UICONTROL Client Secret]** och **[!UICONTROL Payload]**. Mer information om dessa värden finns i [Snabbstart för JWT-autentisering](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/JWT/JWT.md).
 
 <!-- TBD: Update the URL to update the terminology when AIO team updates their documentation URL. Logged issue github.com/AdobeDocs/adobeio-auth/issues/63.
 -->
