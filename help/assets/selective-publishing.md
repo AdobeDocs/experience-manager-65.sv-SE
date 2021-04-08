@@ -6,15 +6,16 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 docset: aem65
-role: Affärsledare, administratör
+role: Business Practitioner, Administrator
+exl-id: cd025e9d-6fb1-436c-9e78-795f2daaf345
+feature: Publicering
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
 workflow-type: tm+mt
-source-wordcount: '2541'
+source-wordcount: '2539'
 ht-degree: 1%
 
 ---
-
 
 # Konfigurera selektiv publicering på mappnivå i Dynamic Media {#selective-publish-configure-folder}
 
@@ -264,4 +265,3 @@ När du använder **[!UICONTROL List View]** visas ytterligare en kolumn för **
 En resurs som inte synkroniseras med Dynamic Media men som har en publiceringsåtgärd från Dynamic Media aktiverad resulterar i följande felmeddelande och lösning:
 
 ![Selektivt publiceringsfel](/help/assets/assets-dm/selective-publish-error.png)
-
