@@ -9,15 +9,16 @@ content-type: reference
 discoiquuid: 7d8e7273-29f3-4a45-ae94-aad660d2c71d
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/config-dynamic
-role: Affärsledare, administratör
+role: Business Practitioner, Administrator
+exl-id: 5719d32c-4f19-47c1-bea9-8fd0bc8439ed
+feature: Konfiguration,Hybrid-läge
 translation-type: tm+mt
-source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
+source-git-commit: c9aec973faf4caef741961d92a6f258646aeddb7
 workflow-type: tm+mt
 source-wordcount: '7604'
 ht-degree: 1%
 
 ---
-
 
 # Konfigurera Dynamic Media - hybrid-läge {#configuring-dynamic-media-hybrid-mode}
 
@@ -964,29 +965,29 @@ Manifestinställningar och deras standardvärden:
 
 Med Dynamic Media färghantering kan du färgkorrigera resurser för förhandsgranskning.
 
-Med färgkorrigering behåller inkapslade resurser sin färgrymd (RGB, CMYK, Grå) och inbäddade färgprofil i den genererade TIFF-pyramidåtergivningen. När du begär en dynamisk återgivning korrigeras bildens färg till målfärgrymden. Du konfigurerar utdatafärgprofilen i Dynamic Media publiceringsinställningar i JCR.
+Med färgkorrigering behåller inkapslade resurser sin färgrymd (RGB, CMYK, Grå) och inbäddade färgprofil i den genererade TIFF-pyramidåtergivningen. När du begär en dynamisk återgivning korrigeras bildfärgen till målfärgrymden. Du konfigurerar utdatafärgprofilen i Dynamic Media publiceringsinställningar i JCR.
 
 Färghanteringen i Adobe använder ICC-profiler (International Color Consortium), ett format som definieras av ICC.
 
-Du kan konfigurera Dynamic Media färghantering och konfigurera bildförinställningar med hjälp av CMYK-, RGB- eller gråskaleutdata. Se [Konfigurera bildförinställningar](/help/assets/managing-image-presets.md).
+Du kan konfigurera Dynamic Media färghantering och konfigurera bildförinställningar med CMYK-, RGB- eller gråskaleutdata. Se [Konfigurera bildförinställningar](/help/assets/managing-image-presets.md).
 
-I avancerade användningsfall kan du använda en manuell konfigureringsmodifierare för att explicit välja en utdatafärgprofil:`icc=`
+I avancerade användningsfall kan en manuell konfigureringsmodifierare för att explicit välja en utdatafärgprofil användas:`icc=`
 
 * `icc` -  [https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-icc.html](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-icc.html)
 
 * `iccEmbed` -  [https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-iccembed.html](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-iccembed.html)
 
 >[!NOTE]
-Färgprofilerna för Adobe är bara tillgängliga om du har [Feature Pack 12445 från Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-12445) installerat. Alla funktionspaket och servicepaket finns på [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html). Funktionspaket 12445 innehåller färgprofilerna för Adobe.
+Standarduppsättningen med färgprofiler för Adobe är bara tillgänglig om du har [Feature Pack 12445 från Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-12445) installerat. Alla funktionspaket och servicepaket finns på [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html). I Feature Pack 12445 finns färgprofilerna för Adobe.
 
 
 ### Installerar funktionspaket 12445 {#installing-feature-pack}
 
 Installera funktionspaket 12445 om du vill använda Dynamic Media färghanteringsfunktioner.
 
-**Installera funktionspaket 12445**
+**Installera funktionspaketet 12445**
 
-1. Navigera till [Programdistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html) och hämta antingen `cq-6.3.0-featurepack-12445`.
+1. Navigera till [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html) och hämta antingen `cq-6.3.0-featurepack-12445`.
 
    Mer information om hur du använder paket i [!DNL Adobe Experience Manager] finns i [Arbeta med paket](/help/sites-administering/package-manager.md).
 
