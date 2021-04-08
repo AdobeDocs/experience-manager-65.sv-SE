@@ -5,15 +5,16 @@ contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5.6/ASSETS
 topic-tags: dynamic-media
 content-type: reference
-role: Affärsledare, administratör
+role: Business Practitioner, Administrator
+exl-id: 23d3c274-0736-49f7-8d44-a56a55cfd06d
+feature: CDN-cache
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
 workflow-type: tm+mt
-source-wordcount: '1281'
+source-wordcount: '1280'
 ht-degree: 0%
 
 ---
-
 
 # CDN-cachen har inte verifierats med Dynamic Media {#invalidating-cdn-cache-for-dm-assets}
 
