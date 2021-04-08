@@ -7,15 +7,16 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: managing-assets
 content-type: reference
 discoiquuid: 2685f9f3-0973-40a9-89b8-e7db0a6a75f2
-role: Affärsledare, administratör
+role: Business Practitioner, Administrator
+exl-id: 56009925-1a36-48b5-b96c-ec2e468da106
+feature: Video
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
 workflow-type: tm+mt
-source-wordcount: '1530'
+source-wordcount: '1528'
 ht-degree: 1%
 
 ---
-
 
 # Video {#video}
 
@@ -190,4 +191,3 @@ Komponenten **[!UICONTROL Foundation Video]** måste känna till vilka videoprof
 1. Videoprofilerna måste aktiveras.
 1. Konfigurera designen för **[!UICONTROL oundation Video]**-komponenten på sidan.
 1. Aktivera designen när du är klar med designändringarna.
-
