@@ -1,17 +1,17 @@
 ---
-title: Hjälpmedel i [!DNL Experience Manager Assets]
+title: Tillgängliga funktioner och gränssnitt i [!DNL Experience Manager Assets]
 description: Se hur tillgänglighetsfunktionerna i [!DNL Adobe Experience Manager] 6.5 [!DNL Assets] kan hjälpa användare med funktionshinder.
 contentOwner: AG
 feature: Resurshantering
-role: Affärsledare, arkitekt, ledare
+role: Business Practitioner, Architect, Leader
+exl-id: 15555941-99a2-4586-8d7b-b22f3ec17805
 translation-type: tm+mt
-source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
+source-git-commit: a7a9a31364497ab67d805e45ba4fa03c927828ed
 workflow-type: tm+mt
-source-wordcount: '1906'
+source-wordcount: '1905'
 ht-degree: 1%
 
 ---
-
 
 <!--
 Possible topics to cover in this article are below.
