@@ -9,14 +9,15 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 discoiquuid: 565d89de-b3ca-41a5-8e1c-d10905c25fb5
+exl-id: 1e05faf5-619a-4ea3-acbf-2fd37c71e6d2
+feature: Användning
 translation-type: tm+mt
-source-git-commit: 2fc35bfd93585a586cb1d4e3299261611db49ba6
+source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
 workflow-type: tm+mt
-source-wordcount: '615'
+source-wordcount: '616'
 ht-degree: 0%
 
 ---
-
 
 # Granskningslogghantering i AEM 6{#audit-log-maintenance-in-aem}
 
@@ -101,4 +102,3 @@ I AEM 6.3 stoppas aktiviteten automatiskt om det schemalagda underhållsfönstre
    * **händelsetyper** för replikeringsloggens replikering:typer av replikeringsgranskningshändelser som ska rensas
 
 1. Klicka på **Spara** för att spara konfigurationen.
-
