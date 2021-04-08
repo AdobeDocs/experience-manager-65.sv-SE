@@ -10,14 +10,15 @@ topic-tags: Security
 content-type: reference
 discoiquuid: a2bd7045-970f-4245-ad5d-a272a654df0a
 docset: aem65
+exl-id: 39e35a07-140f-4853-8f0d-8275bce27a65
+feature: Dokumentskydd
 translation-type: tm+mt
-source-git-commit: 2142df4f7579e052e18879b437fc43911010b475
+source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
 workflow-type: tm+mt
-source-wordcount: '6890'
+source-wordcount: '6891'
 ht-degree: 0%
 
 ---
-
 
 # Stängda användargrupper i AEM{#closed-user-groups-in-aem}
 
@@ -27,7 +28,7 @@ Sedan AEM 6.3 finns det en ny implementering av en sluten användargrupp som är
 
 >[!NOTE]
 >
->För enkelhetens skull kommer förkortningen av CUG att användas i denna dokumentation.
+>För enkelhetens skull kommer förkortningen CUG att användas i denna dokumentation.
 
 Målet med den nya implementeringen är att vid behov ta med befintliga funktioner samtidigt som man åtgärdar problem och designbegränsningar från äldre versioner. Resultatet blir en ny CUG-design med följande egenskaper:
 
@@ -153,7 +154,7 @@ När den här hanteraren anropar `AuthenticationHandler.requestCredentials` gör
    * från Inloggningssidmappningar, enligt definitionen med `LoginSelectorHandler`,
    * och slutligen, återgå till standardinloggningssidan, enligt definitionen med `LoginSelectorHandler`.
 
-* Så snart en giltig inloggningssökväg har erhållits via de samtal som listas ovan, kommer användarens begäran att omdirigeras till den sidan.
+* Så snart en giltig inloggningssökväg har erhållits via de samtal som listas ovan kommer användarens begäran att dirigeras om till den sidan.
 
 Målet för den här dokumentationen är utvärderingen av inloggningssökvägen som visas av det interna `LoginPathProvider`-gränssnittet. Implementeringen som skickats sedan AEM 6.3 fungerar på följande sätt:
 
@@ -165,7 +166,7 @@ Målet för den här dokumentationen är utvärderingen av inloggningssökvägen
    * från Inloggningssidmappningar som definierats med `LoginSelectorHandler`,
    * och slutligen återgå till standardinloggningssidan enligt definitionen med `LoginSelectorHandler`.
 
-* Så snart en giltig inloggningssökväg har erhållits via de samtal som listas ovan, kommer användarens begäran att omdirigeras till den sidan.
+* Så snart en giltig inloggningssökväg har erhållits via de samtal som listas ovan kommer användarens begäran att dirigeras om till den sidan.
 
 `LoginPathProvider` som implementerats av det nya stödet för autokrav i Granite visar inloggningssökvägar som definieras av `granite:loginPath`-egenskaperna, som i sin tur definieras av blandningstypen enligt beskrivningen ovan. Mappningen av resurssökvägen som innehåller inloggningssökvägen och egenskapsvärdet behålls i minnet och utvärderas för att hitta en lämplig inloggningssökväg för andra noder i hierarkin.
 
@@ -883,4 +884,3 @@ Adobe tillhandahåller ett verktyg för migrering till den nya CUG-implementerin
 >[!NOTE]
 >
 >Om du stöter på problem är det möjligt att ställa in en specifik logger på **DEBUG**-nivå på `com.day.cq.auth.impl.cug` för att få fram utdata från migreringsverktyget. Mer information om hur du gör detta finns i [Loggning](/help/sites-deploying/configure-logging.md).
-
