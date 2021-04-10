@@ -2,16 +2,16 @@
 title: Använd Connected Assets när du vill dela DAM-resurser i [!DNL Sites]
 description: Använd resurser som är tillgängliga på en fjärrdistribution av [!DNL Adobe Experience Manager Assets] deployment when creating your web pages on another [!DNL Adobe Experience Manager Sites] data.
 contentOwner: AG
-role: Affärsledare, administratör, ledare
+role: Business Practitioner, Administrator, Leader
 feature: Anslutna resurser,Användare och grupper
+exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
 translation-type: tm+mt
-source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
+source-git-commit: 48e5b55a1d79fef6172f684cb65a4137113fb7fb
 workflow-type: tm+mt
-source-wordcount: '2639'
+source-wordcount: '2652'
 ht-degree: 27%
 
 ---
-
 
 # Använd Connected Assets när du vill dela DAM-resurser i [!DNL Experience Manager Sites] {#use-connected-assets-to-share-dam-assets-in-aem-sites}
 
@@ -42,7 +42,7 @@ Innan du använder eller konfigurerar den här funktionen bör du kontrollera f�
 
 Författare söker efter bilder och följande typer av dokument i Content Finder och använder de sökbara resurserna i Page Editor. Dokument läggs till i `Download`-komponenten och bilder till `Image`-komponenten. Författare lägger också till fjärrresurserna i valfri anpassad [!DNL Experience Manager]-komponent som utökar standardkomponenterna för `Download` eller `Image`. De format som stöds är:
 
-* **Bildformat**: De format som  [Image-](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html) komponenten stöder. [!DNL Dynamic Media] bilder stöds inte.
+* **Bildformat**: De format som  [Image-](https://www.aemcomponents.dev/content/core-components-examples/library/page-authoring/image.html) komponenten stöder. [!DNL Dynamic Media] bilder stöds inte.
 * **Dokumentformat**: Se vilka  [dokumentformat](assets-formats.md#supported-document-formats) som stöds.
 
 ### Användare och grupper som krävs {#users-and-groups-involved}
@@ -110,17 +110,12 @@ Så här konfigurerar du anslutna resurser och lokal [!DNL Sites]-anslutning:
 
 1. Lägg till [!DNL Sites]-distributionen som ett tillåtet ursprung i CORS-konfigurationen i [!DNL Assets]-distributionen. Mer information finns i [förstå CORS](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html).
 
-<!-- TBD: See if these steps are not required.
-    1. Log in using the administrator credentials. Search for `Cross-Origin`. Access **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
-
-    1. To create a CORS configuration for [!DNL Sites] deployment, click add option ![Assets add icon](assets/do-not-localize/assets_add_icon.png) next to **[!UICONTROL Adobe Granite Cross-Origin Resource Sharing Policy]**.
-
-    1. In the field **[!UICONTROL Allowed Origins]**, input the URL of the local [!DNL Sites], that is, `https://[local_sites]:[port]`. Save the configuration.
--->
+1. Konfigurera [stöd för samma webbplats-cookie](/help/sites-administering/same-site-cookie-support.md).
 
 Du kan kontrollera anslutningen mellan konfigurerade [!DNL Sites]-distributioner och [!DNL Assets]-distribution.
 
-![Anslutningstest för konfigurerade anslutna resurser  [!DNL Sites]](assets/connected-assets-multiple-config.png)
+![Anslutningstest för konfigurerade  [!DNL Sites]](assets/connected-assets-multiple-config.png)
+*resurser: Anslutningstest för konfigurerade anslutna resurser  [!DNL Sites].*
 
 ## Använda fjärresurser {#use-remote-assets}
 
@@ -177,7 +172,7 @@ Följ de här stegen för att visa och hantera referenser i [!DNL Assets]-distri
 1. Välj en resurs i [!DNL Assets]-konsolen och klicka på **[!UICONTROL Properties]** i verktygsfältet.
 1. Klicka på fliken **[!UICONTROL References]**. Se **[!UICONTROL Local References]** om du vill använda resursen i [!DNL Assets]-distributionen. Se **[!UICONTROL Remote References] om du vill använda resursen i [!DNL Sites]-distributionen där resursen hämtades med hjälp av funktionen Anslutna resurser.
 
-   ![fjärrreferenser på sidan Egenskaper för resurs](assets/connected-assets-remote-reference.png)
+   ![Fjärrreferenser på sidan Resursegenskaper](assets/connected-assets-remote-reference.png)
 
 1. Referenserna för [!DNL Sites]-sidor visar totalt antal referenser för varje lokal [!DNL Sites]. Det kan ta en stund att hitta alla referenser och visa det totala antalet referenser.
 1. Listan med referenser är interaktiv och DAM-användare kan klicka på en referens för att öppna referenssidan. Om fjärrreferenser av någon anledning inte kan hämtas visas ett meddelande som informerar användaren om felet.
@@ -222,11 +217,13 @@ Följ de här stegen för att visa och hantera referenser i [!DNL Assets]-distri
 Följ de här stegen för att felsöka vanliga fel:
 
 * Om du inte kan söka efter fjärrresurser från [!UICONTROL Content Finder] kontrollerar du att de roller och behörigheter som krävs finns på plats.
-* En resurs som hämtats från fjärrdammen kanske inte publiceras på en webbsida av en eller flera orsaker. Den finns inte på fjärrservern, saknar behörighet att hämta den eller så kan nätverksfel vara orsaken. Se till att resursen inte tas bort från fjärr-DAM. Se till att rätt behörigheter finns och att kraven är uppfyllda. Försök lägga till resursen på sidan igen och publicera den på nytt. Kontrollera i [listan över asynkrona jobb](/help/sites-administering/asynchronous-jobs.md) om fel uppstod vid hämtning av resurser.
-* Om du inte kan komma åt fjärr-DAM-distributionen från den lokala [!DNL Sites]-distributionen kontrollerar du att cookies mellan platser tillåts. Om cookies mellan platser blockeras kanske de två distributionerna av [!DNL Experience Manager] inte autentiseras. [!DNL Google Chrome] i Incognito-läge kan till exempel blockera cookies från tredje part. Om du vill tillåta cookies i [!DNL Chrome]-webbläsaren klickar du på ögonikonen i adressfältet, navigerar till Plats som inte fungerar > Blockerad, markerar fjärr-DAM-URL:en och tillåter inloggningstokencookie. Du kan även läsa mer i hjälpen om [hur du aktiverar cookies](https://support.google.com/chrome/answer/95647) från tredje part.
 
-   ![Cookie-fel i Chrome i Incognito-läge](assets/chrome-cookies-incognito-dialog.png)
+* En resurs som hämtats från fjärr-DAM kanske inte publiceras på en webbsida av en eller flera orsaker. Den finns inte på fjärrservern, saknar behörighet att hämta den eller så kan nätverksfel vara orsaken. Se till att resursen inte tas bort från fjärr-DAM. Se till att rätt behörigheter finns och att kraven är uppfyllda. Försök lägga till resursen på sidan igen och publicera den på nytt. Kontrollera i [listan över asynkrona jobb](/help/sites-administering/asynchronous-jobs.md) om fel uppstod vid hämtning av resurser.
+
+* Om du inte kan komma åt fjärr-DAM-distributionen från den lokala [!DNL Sites]-distributionen kontrollerar du att cookies mellan platser tillåts och att [stöd för samma webbplats-cookies](/help/sites-administering/same-site-cookie-support.md) är konfigurerat. Om cookies mellan platser blockeras kanske inte distributionerna av [!DNL Experience Manager] autentiseras. [!DNL Google Chrome] i Incognito-läge kan till exempel blockera cookies från tredje part. Om du vill tillåta cookies i [!DNL Chrome]-webbläsaren klickar du på ögonikonen i adressfältet, navigerar till **Webbplatsen fungerar inte** > **Blockerad**, väljer fjärr-DAM-URL:en och tillåter inloggningstokcookie. Du kan även läsa [om hur du aktiverar cookies](https://support.google.com/chrome/answer/95647) från tredje part.
+
+   ![Cookie-fel i Chrome-webbläsare i Incognito-läge](assets/chrome-cookies-incognito-dialog.png)
 
 * Om fjärrreferenser inte hämtas och leder till ett felmeddelande, kontrollerar du om [!DNL Sites]-distributionen är tillgänglig och söker efter nätverksanslutningsproblem. Försök igen senare för att kontrollera. [!DNL Assets] Två försök görs att upprätta en anslutning till  [!DNL Sites] distributionen och ett fel rapporteras sedan.
 
-   ![det gick inte att göra om fjärrreferenser till resurser](assets/reference-report-failure.png)
+   ![det gick inte att hämta resursfjärrreferenser](assets/reference-report-failure.png)
