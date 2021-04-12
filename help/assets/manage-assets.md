@@ -7,9 +7,9 @@ role: Business Practitioner
 feature: Resurshantering, sökning
 exl-id: 158607e6-b4e9-4a3f-b023-4023d60c97d2
 translation-type: tm+mt
-source-git-commit: d88962cb4018b0b60f61006510f416478d119cb5
+source-git-commit: 46b11d0b59d748f2035e7ed46dc8caeef79d48c0
 workflow-type: tm+mt
-source-wordcount: '9417'
+source-wordcount: '9563'
 ht-degree: 3%
 
 ---
@@ -926,3 +926,23 @@ En samling är en ordnad uppsättning med resurser. Använd samlingar för att d
 * Du kan dela samlingar med flera användare med olika behörighetsnivåer, inklusive redigering, visning och så vidare.
 
 Mer information om samlingshantering finns i [hantera samlingar](/help/assets/manage-collections.md).
+
+## Dölj utgångna resurser när du visar resurser i skrivbordsappen eller Adobe Asset Link {#hide-expired-assets-via-acp-api}
+
+[!DNL Experience Manager] datorprogrammet ger åtkomst till DAM-databasen från Windows eller Mac. Adobe Asset Link ger åtkomst till resurser från de [!DNL Creative Cloud]-skrivbordsprogram som stöds.
+
+När du bläddrar bland resurser i användargränssnittet [!DNL Experience Manager] visas inte de utgångna resurserna. Administratörer kan göra följande konfiguration för att förhindra att resurser som har gått ut visas, söks och hämtas när de bläddrar bland resurser från skrivbordsappen och Asset Link. Konfigurationen fungerar för alla användare, oavsett administratörsbehörighet.
+
+Kör följande CURL-kommando. Kontrollera läsåtkomst på `/conf/global/settings/dam/acpapi/` för de användare som har åtkomst till resurser. Användare som ingår i `dam-user`-gruppen har behörigheten som standard.
+
+```curl
+curl -v -u admin:admin --location --request POST 'http://localhost:4502/conf/global/settings/dam/acpapi/configuration/_jcr_content' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'jcr:title=acpapiconfig' \
+--data-urlencode 'hideExpiredAssets=true' \
+--data-urlencode 'hideExpiredAssets@TypeHint=Boolean' \
+--data-urlencode 'jcr:primaryType=nt:unstructured' \
+--data-urlencode '../../jcr:primaryType=sling:Folder'
+```
+
+Om du vill veta mer kan du läsa om hur du [bläddrar bland DAM-resurser med skrivbordsappen](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#browse-search-preview-assets) och [hur du använder Adobe Asset Link](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-assets-using-adobe-asset-link.ug.html).
