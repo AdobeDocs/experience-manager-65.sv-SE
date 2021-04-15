@@ -2,14 +2,14 @@
 title: Skapa och synkronisera Live-kopior
 description: Lär dig hur du skapar och synkroniserar Live-kopior.
 feature: Multi Site Manager
+exl-id: 896b35dd-4510-4c94-8615-03d9649c2f64
 translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+source-git-commit: 05dc73448d6902ccdbc92782fff39ef1a6339056
 workflow-type: tm+mt
-source-wordcount: '4173'
+source-wordcount: '4174'
 ht-degree: 1%
 
 ---
-
 
 # Skapa och synkronisera live-kopior{#creating-and-synchronizing-live-copies}
 
@@ -182,7 +182,7 @@ Egenskaperna för en live-kopia visar följande information om live-kopian:
 
    * Anger om sidan fortfarande omfattas av live-kopiarv.
    * Anger om konfigurationen ärvs från den överordnade sidan.
-   * Alla utrullningskonfigurationer som används av live-kopian.
+   * Alla utrullningskonfigurationer som används för live-kopian.
 
 Så här visar du egenskaperna:
 
@@ -240,7 +240,7 @@ Utsläppen bearbetas som asynkrona jobb och kan kontrolleras i kontrollpanelen [
 
 #### Rulla ut en skiss från referenslinjen {#roll-out-a-blueprint-from-the-reference-rail}
 
-1. I konsolen **Platser** markerar du sidan i utkastet och öppnar panelen **[Referenser](/help/sites-authoring/basic-handling.md#references)** (i verktygsfältet).
+1. I konsolen **Platser** markerar du sidan i den aktiva kopian och öppnar panelen **[Referenser](/help/sites-authoring/basic-handling.md#references)** (i verktygsfältet).
 1. Välj alternativet **Utskrift** i listan för att visa de utkast som är associerade med den här sidan.
 1. Välj önskad rityta i listan.
 1. Klicka eller tryck på **Överrullning**.
