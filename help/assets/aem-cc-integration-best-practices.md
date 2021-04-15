@@ -2,16 +2,16 @@
 title: Integrering med Adobe Creative Cloud bästa praxis
 description: Bästa tillvägagångssätt för att integrera [!DNL Adobe Experience Manager] with [!DNL Adobe Creative Cloud] för att effektivisera arbetsflöden för överföring av resurser och uppnå hög innehållshastighet.
 contentOwner: AG
-role: Affärsledare, administratör
-feature: Collaboration,Adobe Asset Link,Experience Manager Desktop App
+role: Business Practitioner, Administrator
+feature: Samarbete,Adobe Asset Link,Skrivbordsapp
+exl-id: c7d589a3-1c5f-4ff0-879e-15e1c556f6dc
 translation-type: tm+mt
-source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
+source-git-commit: c4cfb709162ca8f8f6e8508516c39542347c6bc4
 workflow-type: tm+mt
-source-wordcount: '3259'
+source-wordcount: '3254'
 ht-degree: 15%
 
 ---
-
 
 # [!DNL Adobe Experience Manager] och god  [!DNL Creative Cloud] praxis för integrering  {#aem-and-creative-cloud-integration-best-practices}
 
@@ -129,7 +129,7 @@ Genom att lagra resurser i DAM blir de enkelt tillgängliga och sökbara. Det se
 
 De flesta organisationer väljer att endast lagra resurser som är relevanta för marknadsförings-/LOB-processerna längre fram i kedjan (publicera till kanaler som webbkanal via [!DNL Experience Manager Sites] eller andra kanaler som tillhandahålls av Adobe Experience Cloud - Marketing Cloud, Advertising Cloud och mäts av Analytics Cloud, som tillhandahåller till användare/partner osv.). Dessutom lagrar organisationer resurser som kan bli föremål för en gransknings-/godkännandeprocess i DAM. På så sätt lagrar DAM de flesta resurser som har stora chanser att utnyttjas och undviker att lagra inaktiva resurser.
 
-Lagring av resurser är också beroende av tekniska aspekter och resursutnyttjande. DAM tillhandahåller ytterligare tjänster runt lagrade resurser, inklusive extrahering av metadata, versionshantering, generering av förhandsgranskning/omkodning, hantering av referenser och tillägg av åtkomstkontrollsinformation. Dessa tjänster kräver extra tid och infrastrukturresurser.
+Lagring av resurser är också beroende av tekniska aspekter och resursanvändning. DAM tillhandahåller ytterligare tjänster runt lagrade resurser, inklusive extrahering av metadata, versionshantering, generering av förhandsgranskning/omkodning, hantering av referenser och tillägg av åtkomstkontrollsinformation. Dessa tjänster kräver extra tid och infrastrukturresurser.
 
 Det är ofta inte önskvärt att lagra alla resurser och uppdateringar. Om till exempel uppdateringar av specifika resurser har dålig kvalitet och förbrukar för mycket resurser, kanske resurserna inte lagras i DAM.
 
