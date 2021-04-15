@@ -5,9 +5,9 @@ docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
 translation-type: tm+mt
-source-git-commit: e2eb007eb7660004f98b4c26aba00a6a6e2a2f1a
+source-git-commit: 9b23e9d5bbdbdde864ce71f434d6536439067f82
 workflow-type: tm+mt
-source-wordcount: '3353'
+source-wordcount: '3346'
 ht-degree: 0%
 
 ---
@@ -158,7 +158,7 @@ Nedan följer en lista över korrigeringar i [!DNL Experience Manager] 6.5.8.0-v
 * Om du tar bort [!UICONTROL All Users] från fältet [!UICONTROL Administrators] tas de inte bort från serverdelen (NPR-35592, NPR-35611).
 * Komponenten [!UICONTROL Compose Message] returnerar inget resultat när den angivna texten är en partiell matchning (NPR-35666).
 
-* När du försöker lägga till taggar i en ny blogg genom att välja **Lägg till taggar**, observeras en viss prestandapåverkan. Installera [cqTagLucene-0.0.1.zip-snabbkorrigering](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/cqTagLucene-0.0.1.zip) som åtgärdar problemet med taggförslag för att förbättra prestandan. Du kan hämta snabbkorrigeringen från [!DNL Software Distribution].
+* Om du vill lägga till taggar i en ny blogg väljer du **[!UICONTROL Add Tags]** kan du märka en viss prestandapåverkan och långsamhet. Installera [cqTagLucene-0.0.1.zip-snabbkorrigering](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/cqTagLucene-0.0.1.zip) som är tillgänglig från [!DNL Software Distribution] för att förbättra prestanda.
 
 ### [!DNL Brand Portal] {#brandportal-6580}
 
