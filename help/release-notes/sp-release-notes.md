@@ -3,14 +3,14 @@ title: '[!DNL Experience Manager] 6.5 Versionsinformation för Service Pack'
 description: Versionsinformation som är specifik för  [!DNL Adobe Experience Manager] 6.5 Service Pack 8
 docset: aem65
 mini-toc-levels: 1
+exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
 translation-type: tm+mt
-source-git-commit: fb1423b7ae110b8a3cf8e0e389394e9266157a9f
+source-git-commit: e2eb007eb7660004f98b4c26aba00a6a6e2a2f1a
 workflow-type: tm+mt
-source-wordcount: '3295'
+source-wordcount: '3353'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Adobe Experience Manager] 6.5 Versionsinformation för Service Pack  {#aem-service-pack-release-notes}
 
@@ -154,9 +154,11 @@ Nedan följer en lista över korrigeringar i [!DNL Experience Manager] 6.5.8.0-v
 
 * När du lägger till en sidstruktur i en community-grupp ändras rubriken [!UICONTROL Group] i den synliga sökvägen till titeln för den första [!UICONTROL Page] (NPR-35803).
 * Till skillnad från moderatorer kan en standardmedlem i communityn inte komma åt och redigera utkast (NPR-35339).
-* Åtkomstkontroll och denial of service med DSRPReindexServlet, som minskar communitywebbplatsen tills indexeringen är klar (NPR-35591).
+* Åtkomstkontroll och denial of service med `DSRPReindexServlet` som gör att communitysajten tas bort tills indexeringen är klar (NPR-35591).
 * Om du tar bort [!UICONTROL All Users] från fältet [!UICONTROL Administrators] tas de inte bort från serverdelen (NPR-35592, NPR-35611).
 * Komponenten [!UICONTROL Compose Message] returnerar inget resultat när den angivna texten är en partiell matchning (NPR-35666).
+
+* När du försöker lägga till taggar i en ny blogg genom att välja **Lägg till taggar**, observeras en viss prestandapåverkan. Installera [cqTagLucene-0.0.1.zip-snabbkorrigering](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/cqTagLucene-0.0.1.zip) som åtgärdar problemet med taggförslag för att förbättra prestandan. Du kan hämta snabbkorrigeringen från [!DNL Software Distribution].
 
 ### [!DNL Brand Portal] {#brandportal-6580}
 
