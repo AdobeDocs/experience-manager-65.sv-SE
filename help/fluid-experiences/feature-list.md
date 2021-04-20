@@ -2,7 +2,7 @@
 title: AEM med flytande upplevelser
 description: Lista med flytande upplevelser
 index: n
-feature: Redigering
+feature: Authoring
 translation-type: tm+mt
 source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt

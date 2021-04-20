@@ -6,7 +6,7 @@ seo-description: 'Använd dokumentskydd för att på ett säkert sätt distribue
 uuid: 04c67a84-01ad-45b7-a590-822b1c067d52
 contentOwner: khsingh
 discoiquuid: 600d13e7-6655-41c5-aab4-c8e9e2a8d14f
-role: Administratör
+role: Administrator
 translation-type: tm+mt
 source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt

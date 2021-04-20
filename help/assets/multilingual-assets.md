@@ -2,8 +2,8 @@
 title: Flerspråkiga resurser och översättning av resurser
 description: Lär dig hur du automatiserar arbetsflöden för att översätta resurser, inklusive binära filer, metadata och taggar till flera språk.
 contentOwner: AG
-feature: Resurshantering
-role: Administratör
+feature: Asset Management
+role: Administrator
 translation-type: tm+mt
 source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt

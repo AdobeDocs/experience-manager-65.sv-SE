@@ -8,7 +8,7 @@ user-guide-title: Adobe Experience Manager 6.5 Forms Guide
 breadcrumb-title: Forms Guide
 user-guide-description: Skapa, hantera, publicera och uppdatera digitala formulär.
 feature-set: Experience Manager Forms
-role: Yrkesverksamma inom affärsverksamhet
+role: Business Practitioner
 translation-type: tm+mt
 source-git-commit: d7b0803385aaa451a1ec7ec280ff51c3e96e36e7
 workflow-type: tm+mt

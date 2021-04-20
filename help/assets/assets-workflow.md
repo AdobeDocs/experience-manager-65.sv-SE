@@ -2,8 +2,8 @@
 title: Bearbeta resurser med arbetsflöden
 description: Resursbearbetning för att konvertera format, skapa renderingar, hantera resurser, validera resurser och köra arbetsflöden.
 contentOwner: AG
-feature: Arbetsflöde, återgivningar
-role: Affärsledare, administratör
+feature: Workflow, Renditions
+role: Business Practitioner, Administrator
 translation-type: tm+mt
 source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt

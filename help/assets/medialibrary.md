@@ -2,8 +2,8 @@
 title: Använd mediebiblioteket för grundläggande digital resurshantering
 description: '[!DNL Experience Manager Assets] och mediebibliotek för resurshantering.'
 contentOwner: AG
-role: Arkitekt, ledare
-feature: Resurshantering
+role: Architect, Leader
+feature: Asset Management
 translation-type: tm+mt
 source-git-commit: ad0672c345262712e51e821fa4e050b505063ac4
 workflow-type: tm+mt

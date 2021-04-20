@@ -2,8 +2,8 @@
 title: Migrera resurser i grupp
 description: Beskriver hur du hämtar resurser till [!DNL Adobe Experience Manager], använder metadata, genererar återgivningar och aktiverar dem för publiceringsinstanser.
 contentOwner: AG
-role: Arkitekt, administratör
-feature: Migrering,Återgivningar,Resurshantering
+role: Architect, Administrator
+feature: Migration,Renditions,Asset Management
 translation-type: tm+mt
 source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt

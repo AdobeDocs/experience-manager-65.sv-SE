@@ -9,8 +9,8 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: dca5a2ac-1fc8-4251-b073-730fd6f49b1c
 docset: aem65
-feature: Varumärkesportal
-role: Administratör
+feature: Brand Portal
+role: Administrator
 translation-type: tm+mt
 source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt

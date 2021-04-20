@@ -3,8 +3,8 @@ title: Hantera samlingar med digitala resurser
 description: Lär dig mer om hur du hanterar samlingar med resurser, som att skapa, visa, ta bort, redigera och hämta samlingar.
 contentOwner: AG
 mini-toc-levels: 1
-role: Yrkesverksamma inom affärsverksamhet
-feature: Samlingar,Resurshantering
+role: Business Practitioner
+feature: Collections,Asset Management
 translation-type: tm+mt
 source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt

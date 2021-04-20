@@ -4,8 +4,8 @@ description: Läs om tillgänglighetsstödet i Dynamic Media och Dynamic Media V
 contentOwner: Rick Brough
 topic-tags: introduction
 content-type: reference
-feature: Tillgänglighet
-role: Affärsledare, administratör
+feature: Accessibility
+role: Business Practitioner, Administrator
 translation-type: tm+mt
 source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt

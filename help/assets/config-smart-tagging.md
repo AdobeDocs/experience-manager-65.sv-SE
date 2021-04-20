@@ -2,8 +2,8 @@
 title: Konfigurera resurstaggning med Smart Content Service
 description: Lär dig hur du konfigurerar smart taggning och förbättrad smart taggning i [!DNL Adobe Experience Manager] med hjälp av Smart Content Service.
 contentOwner: AG
-role: Administratör
-feature: taggar,Smarta taggar
+role: Administrator
+feature: Tagging,Smart Tags
 translation-type: tm+mt
 source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt

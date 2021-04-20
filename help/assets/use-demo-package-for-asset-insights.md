@@ -2,8 +2,8 @@
 title: Använd demopaket för resursinsikter
 description: Använd demopaketet för att aktivera Adobe-tillgångsinsikter för att hämta data från och generera insikter för en webbsida.
 contentOwner: AG
-role: Affärsledare, administratör
-feature: Resursinsikter,Resursrapporter
+role: Business Practitioner, Administrator
+feature: Asset Insights,Asset Reports
 translation-type: tm+mt
 source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt

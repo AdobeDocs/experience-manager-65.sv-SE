@@ -3,8 +3,8 @@ title: Sök efter digitala resurser och bilder i [!DNL Adobe Experience Manager]
 description: Lär dig hur du söker efter de nödvändiga resurserna i [!DNL Adobe Experience Manager] genom att använda panelen Filter och hur du använder de resurser som visas i sökningen.
 contentOwner: AG
 mini-toc-levels: 1
-feature: Sök, metadata
-role: Yrkesverksamma inom affärsverksamhet
+feature: Search, Metadata
+role: Business Practitioner
 translation-type: tm+mt
 source-git-commit: fd283b840830bef613689f81cf753e226fb834d7
 workflow-type: tm+mt

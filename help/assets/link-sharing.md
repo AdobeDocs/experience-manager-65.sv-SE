@@ -2,8 +2,8 @@
 title: Dela resurser via en länk
 description: Dela resurser, mappar och samlingar som en URL-adress.
 contentOwner: AG
-role: Yrkesverksamma inom affärsverksamhet
-feature: Länkdelning,Resurshantering
+role: Business Practitioner
+feature: Link Sharing,Asset Management
 translation-type: tm+mt
 source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt

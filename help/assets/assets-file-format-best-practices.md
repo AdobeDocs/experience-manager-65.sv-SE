@@ -2,8 +2,8 @@
 title: Bästa tillvägagångssätt för att bearbeta de filformat som stöds
 description: Bästa tillvägagångssätt för att bearbeta de olika filtyper som stöds med [!DNL Experience Manager Assets].
 contentOwner: AG
-role: Administratör
-feature: Resurshantering,Utvecklarverktyg
+role: Administrator
+feature: Asset Management,Developer Tools
 translation-type: tm+mt
 source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt

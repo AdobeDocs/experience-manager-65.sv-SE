@@ -2,7 +2,7 @@
 title: '[!DNL Assets] proxyutveckling'
 description: En proxy är en  [!DNL Experience Manager] instance that uses proxy workers to process jobs. Learn how to configure an [!DNL Experience Manager] proxy, åtgärder som stöds, proxykomponenter och hur du utvecklar en anpassad proxyarbetare.
 contentOwner: AG
-role: Administratör, arkitekt
+role: Administrator, Architect
 exl-id: 42fff236-b4e1-4f42-922c-97da32a933cf
 translation-type: tm+mt
 source-git-commit: 15f83387629687994bc2ffee4156d7d42dc1c537

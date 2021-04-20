@@ -6,8 +6,8 @@ user-guide-title: AEM 6.5 Mobile User Guide
 breadcrumb-title: Mobilguide
 user-guide-description: Skapa och hantera innehåll för mobilappar.
 feature-set: Experience Manager Sites
-feature: Mobil
-role: Yrkesverksamma inom affärsverksamhet
+feature: Mobile
+role: Business Practitioner
 translation-type: tm+mt
 source-git-commit: d7b0803385aaa451a1ec7ec280ff51c3e96e36e7
 workflow-type: tm+mt

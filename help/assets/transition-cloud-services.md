@@ -2,8 +2,8 @@
 title: Använd översättningsmolntjänster på mappar
 description: Använd översättningsmolntjänster på mappar
 contentOwner: AG
-role: Administratör
-feature: Översättning
+role: Administrator
+feature: Translation
 translation-type: tm+mt
 source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt

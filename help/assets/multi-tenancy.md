@@ -2,8 +2,8 @@
 title: Multi-tenancy för mallar för samlingar, fragment och fragment
 description: Lär dig hur ni med funktionen för multi-tenancy kan segmentera innehåll i CRX-databasen baserat på kundorganisationen för att förhindra obehörig åtkomst.
 contentOwner: AG
-role: Arkitekt, administratör, ledare
-feature: Samlingar
+role: Architect, Administrator, Leader
+feature: Collections
 translation-type: tm+mt
 source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt

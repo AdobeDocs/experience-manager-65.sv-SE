@@ -2,8 +2,8 @@
 title: Nätverksaspekter och -krav
 description: Diskuterar nätverksaspekter när du utformar en  [!DNL Adobe Experience Manager Assets] distribution.
 contentOwner: AG
-role: Arkitekt, administratör
-feature: Utvecklarverktyg
+role: Architect, Administrator
+feature: Developer Tools
 translation-type: tm+mt
 source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt

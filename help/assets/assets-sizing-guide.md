@@ -2,8 +2,8 @@
 title: '[!DNL Assets] storleksstödlinje'
 description: Bästa tillvägagångssätt för att fastställa effektiva mått för att uppskatta den infrastruktur och de resurser som krävs för att distribuera [!DNL Adobe Experience Manager Assets].
 contentOwner: AG
-role: Arkitekt, administratör
-feature: Resurshantering
+role: Architect, Administrator
+feature: Asset Management
 translation-type: tm+mt
 source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt

@@ -2,7 +2,7 @@
 title: 'Metadata-scheman för att definiera layout för metadataegenskapssida i [!DNL Adobe Experience Manager Assets]. '
 description: Metadata-schemat definierar layouten för egenskapssidan och de metadataegenskaper som visas för resurser. Lär dig hur du skapar anpassade metadatamatcheman, redigerar metadatamatchema och hur du använder metadatamatchema på resurser.
 contentOwner: AG
-role: Affärsledare, administratör
+role: Business Practitioner, Administrator
 feature: Metadata
 translation-type: tm+mt
 source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c

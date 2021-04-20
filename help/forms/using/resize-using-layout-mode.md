@@ -1,7 +1,7 @@
 ---
 title: Använd layoutläget för att ändra storlek på komponenter för anpassningsbara formulär
 description: 'Definiera placeringen av komponenterna med det responsiva stödrastret som finns i layoutläget '
-feature: Adaptiv Forms
+feature: Adaptive Forms
 translation-type: tm+mt
 source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt

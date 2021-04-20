@@ -2,8 +2,8 @@
 title: Bästa tillvägagångssätt för [!DNL Assets]
 description: Förbättrar systemets stabilitet och prestanda under belastning genom att identifiera och följa bästa praxis som är beroende av din driftsättning och konfiguration.
 contentOwner: AG
-feature: Resurshantering
-role: Arkitekt, administratör
+feature: Asset Management
+role: Architect, Administrator
 translation-type: tm+mt
 source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
 workflow-type: tm+mt

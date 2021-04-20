@@ -2,7 +2,7 @@
 title: XMP till återgivning
 description: Lär dig hur XMP återskrivningsfunktionen sprider metadataändringar för en resurs till alla eller vissa återgivningar av resursen.
 contentOwner: AG
-role: Affärsledare, administratör
+role: Business Practitioner, Administrator
 feature: Metadata
 translation-type: tm+mt
 source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c

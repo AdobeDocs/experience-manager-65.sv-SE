@@ -2,8 +2,8 @@
 title: Förbättrade smarta taggar
 description: Förbättrade smarta taggar
 contentOwner: AG
-feature: Smarta taggar, sökning
-role: Yrkesverksamma inom affärsverksamhet
+feature: Smart Tags, Search
+role: Business Practitioner
 translation-type: tm+mt
 source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt

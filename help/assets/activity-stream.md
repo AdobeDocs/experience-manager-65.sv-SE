@@ -2,8 +2,8 @@
 title: Aktivitetsström för digitala resurser i tidslinjevyn
 description: I den här artikeln beskrivs hur du visar aktivitetsloggar för resurser på tidslinjen.
 contentOwner: AG
-feature: Resurshantering
-role: Affärsledare, administratör
+feature: Asset Management
+role: Business Practitioner, Administrator
 translation-type: tm+mt
 source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt

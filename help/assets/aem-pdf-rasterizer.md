@@ -2,8 +2,8 @@
 title: Använd PDF-rastrering för att generera renderingar
 description: Generera högkvalitativa miniatyrbilder och renderingar med Adobe PDF Rasterizer-biblioteket.
 contentOwner: AG
-role: Utvecklare, administratör
-feature: Utvecklarverktyg,Återgivningar
+role: Developer, Administrator
+feature: Developer Tools,Renditions
 translation-type: tm+mt
 source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt

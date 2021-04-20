@@ -2,8 +2,8 @@
 title: 'Asset Insights '
 description: Lär dig hur funktionen för tillgångsinsikter gör att du kan spåra användarbetyg och användningsstatistik för bilder som används på tredjepartswebbplatser, marknadsföringskampanjer och Adobe kreativa lösningar.
 contentOwner: AG
-role: Affärsledare, administratör
-feature: Resursinsikter,Resursrapporter
+role: Business Practitioner, Administrator
+feature: Asset Insights,Asset Reports
 translation-type: tm+mt
 source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt

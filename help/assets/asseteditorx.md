@@ -2,8 +2,8 @@
 title: Utöka resursredigeraren
 description: Lär dig hur du utökar funktionerna i Resursredigeraren med hjälp av anpassade komponenter.
 contentOwner: AG
-role: Affärsledare, administratör
-feature: Utvecklarverktyg
+role: Business Practitioner, Administrator
+feature: Developer Tools
 translation-type: tm+mt
 source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt

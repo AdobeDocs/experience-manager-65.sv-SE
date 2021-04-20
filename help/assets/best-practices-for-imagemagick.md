@@ -2,8 +2,8 @@
 title: Installera och konfigurera ImageMagick
 description: Läs om programmet ImageMagick, hur du installerar det, konfigurerar kommandoradsprocessen och använder det för att redigera, skapa och generera miniatyrbilder från bilder.
 contentOwner: AG
-role: Administratör
-feature: Återgivningar,Utvecklarverktyg
+role: Administrator
+feature: Renditions,Developer Tools
 translation-type: tm+mt
 source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt

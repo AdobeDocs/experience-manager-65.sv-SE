@@ -2,8 +2,8 @@
 title: Skapa och konfigurera sidor för Resursredigeraren
 description: Lär dig hur du skapar anpassade sidor i Resursredigeraren och redigerar flera resurser samtidigt.
 contentOwner: AG
-role: Affärsledare, administratör
-feature: Utvecklarverktyg,Resurshantering
+role: Business Practitioner, Administrator
+feature: Developer Tools,Asset Management
 translation-type: tm+mt
 source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt

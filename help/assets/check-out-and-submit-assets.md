@@ -2,8 +2,8 @@
 title: Checka in och checka ut filer i [!DNL Assets]
 description: Lär dig hur du checkar ut resurser för redigering och checkar in dem igen när ändringarna är klara.
 contentOwner: AG
-role: Yrkesverksamma inom affärsverksamhet
-feature: Resurshantering
+role: Business Practitioner
+feature: Asset Management
 translation-type: tm+mt
 source-git-commit: ad0672c345262712e51e821fa4e050b505063ac4
 workflow-type: tm+mt

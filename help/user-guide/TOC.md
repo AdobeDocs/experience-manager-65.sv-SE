@@ -5,7 +5,7 @@ audience: end-user
 user-guide-title: AEM 6.5 Användarhandbok
 user-guide-description: Översikt över alla nödvändiga resurser för att förstå, installera, hantera och använda AEM 6.5
 feature-set: Experience Manager
-feature: Versionsinformation
+feature: Release Information
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Administrator, Business Practitioner
 translation-type: tm+mt
 source-git-commit: d7b0803385aaa451a1ec7ec280ff51c3e96e36e7

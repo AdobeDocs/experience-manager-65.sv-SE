@@ -2,8 +2,8 @@
 title: Privata mappar för att dela resurser
 description: Lär dig hur du skapar en privat mapp i  [!DNL Adobe Experience Manager Assets] och delar den med andra användare och tilldelar olika behörigheter till dem.
 contentOwner: AG
-role: Yrkesverksamma inom affärsverksamhet
-feature: Samarbete
+role: Business Practitioner
+feature: Collaboration
 translation-type: tm+mt
 source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt

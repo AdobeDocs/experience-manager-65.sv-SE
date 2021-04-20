@@ -2,8 +2,8 @@
 title: Konfigurera AEM Assets-integrering med Experience Cloud
 description: Lär dig hur du konfigurerar AEM Assets-integrering med Experience Cloud.
 contentOwner: AG
-feature: Resurshantering
-role: Affärsman, arkitekt, administratör
+feature: Asset Management
+role: Business Practitioner, Architect, Administrator
 translation-type: tm+mt
 source-git-commit: a9c9194ac1d163be3ab642ab5a6323de02d67363
 workflow-type: tm+mt

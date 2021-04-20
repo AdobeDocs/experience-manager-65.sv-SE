@@ -2,8 +2,8 @@
 title: Relaterade tillgångar
 description: Lär dig hur du relaterar digitala resurser som delar vissa gemensamma attribut. Skapa också källbaserade relationer mellan digitala resurser.
 contentOwner: AG
-role: Yrkesverksamma inom affärsverksamhet
-feature: Samarbete,Resurshantering
+role: Business Practitioner
+feature: Collaboration,Asset Management
 translation-type: tm+mt
 source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt
