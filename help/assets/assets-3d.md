@@ -7,16 +7,16 @@ contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: introduction
 content-type: reference
-feature: 3D Assets,Asset Management
+feature: 3D-resurser,Resurshantering
 role: Business Practitioner, Administrator
+exl-id: 01c96f1e-c0e6-497d-bd7a-c0fd547a34da
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: 666bc5d943af371726708cb2ef157a9b3f07eb8e
 workflow-type: tm+mt
-source-wordcount: '2248'
+source-wordcount: '2220'
 ht-degree: 2%
 
 ---
-
 
 # Arbeta med 3D-resurser i Dynamic Media {#working-with-three-d-assets-dm}
 
@@ -24,11 +24,11 @@ Med Dynamic Media kan du överföra, hantera, visa och leverera 3D-resurser som 
 
 * Publicera 3D-resurser med ett klick (med **[!UICONTROL Quick Publish]** i verktygsfältet) för att generera en URL.
 * Optimerat stöd för 3D-material med den högkvalitativa, interaktiva Dimensional-visningsförinställningen som drivs av Adobe Dimension.
-* Med 3D Media WCM-komponenten kan du enkelt lägga till 3D-resurser på dina AEM Sites-sidor.
+* Med 3D Media WCM-komponenten kan du enkelt lägga till 3D-resurser på dina Adobe Experience Manager Sites-sidor.
 
 Det krävs ingen ytterligare konfiguration för att använda 3D-resurser i Dynamic Media.
 
-![sko i 3d](/help/assets/assets-dm/3d-dimensional-viewer-quickpublish-url-embed2.png)
+![Visa i 3d](/help/assets/assets-dm/3d-dimensional-viewer-quickpublish-url-embed2.png)
 
 <!-- See also [Dynamic Media 3D Release Notes](/help/release-notes/aem3d-release-notes.md). -->
 
@@ -53,7 +53,7 @@ Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma ig�
 >
 >3D-resurser stöds inte i Dynamic Media - hybrid-läge.
 
-Innan du arbetar med 3D-resurser i Dynamic Media måste du kontrollera att AEM redan har aktiverat och konfigurerat Dynamic Media-Cloud Services i Dynamic Media - Scene7-läge.
+Innan du arbetar med 3D-resurser i Dynamic Media måste du kontrollera att administratören för Experience Manager redan har aktiverat och konfigurerat Dynamic Media-Cloud Services i läget Dynamic Media - Scene7.
 
 Se [Konfigurera Dynamic Media-Cloud Services](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services) i Konfigurera Dynamic Media - Scene7 och [Felsöka Dynamic Media - Scene7-läge.](/help/assets/troubleshoot-dms7.md)
 
@@ -91,7 +91,7 @@ I det här avsnittet beskrivs hur du visar och interagerar med 3D-resurser på t
 
 Det interaktiva 3D-visningsprogrammet innehåller bland annat en samling interaktiva kamerakontroller där du kan omforma, zooma och panorera 3D-resursen.
 
-Tänk på att den tid det tar att öppna en 3D-resurs i vyn Resursinformation beror på flera faktorer. Bland dessa faktorer finns följande:
+Hur lång tid det tar att öppna en 3D-resurs i vyn Resursinformation beror på flera faktorer. Bland dessa faktorer finns följande:
 
 * Bandbredd till servern.
 * Latenser till servern
@@ -109,32 +109,26 @@ Dessutom är funktioner i klientdatorn, t.ex. en arbetsstation, bärbar dator el
 
 Se även [Förhandsgranska resurser med programgränssnittet](/help/assets/previewing-assets.md).
 
-**Visa och interagera med en 3D-resurs från sidan med resursinformation**
+**Så här visar och interagerar du med en 3D-resurs från sidan med resursinformation:**
 
-1. Se till att du har överfört 3D-resurser till AEM.
+1. Se till att du har överfört 3D-resurser till Experience Manager.
 
    Se [Överföra dina 3D-resurser för användning i Dynamic Media.](/help/assets/manage-assets.md#uploading-assets)
 
-1. Tryck på **[!UICONTROL Assets > Files.]** från AEM på **[!UICONTROL Navigation]**-sidan
+1. Tryck på **[!UICONTROL Assets > Files.]** från Experience Manager på **[!UICONTROL Navigation]**-sidan
 1. Tryck på **[!UICONTROL Card View.]** i den nedrullningsbara listan **[!UICONTROL View]** i sidans övre högra hörn
 1. Navigera till en 3D-resurs som du vill visa.
-1. Tryck på 3D-resursens kort för att öppna den på sidan med resursinformation.
+1. Tryck på kortet för 3D-resursen.
 1. Gör något av följande på informationssidan för 3D-resursen:
 
-   * **Vrid kameran**  - Skruva vyn runt 3D-motivet och objekten.
-      * _Mus_: Vänsterklicka och dra.
-      * _Pekskärm_: Tryck med ett finger och dra.
-   * **Panorera kameran**  - Panorera vyn åt vänster, åt höger, uppåt eller nedåt.
-      * _Mus_: Högerklicka och dra.
-      * _Pekskärm_: Tryck med två fingrar och dra.
-   * **Zooma kameran**  - Zooma kameran för att flytta in och ut i 3D-scenens områden.
-      * _Mus_: Rullningshjul.
-      * _Pekskärm_: Nyp med två fingrar.
-   * **Centrera kameran**  igen - Centrera kameran igen och placera den vid en punkt på ett objekt i 3D-scenen.
-      * _Mus_: Dubbelklicka.
-      * _Pekskärm_: Dubbeltryck.
-   * **Återställ**  - I närheten av det nedre högra hörnet av sidan trycker du på ikonen Återställ för att återställa vymålpunkten till mitten av 3D-resursen. Återställ flyttar också kameran närmare eller längre bort för att visa resursen i dess helhet och med en rimlig visningsstorlek.
-   * **Helskärmsläge**  - Tryck på ikonen Helskärm i det nedre högra hörnet av sidan för att öppna helskärmsläget.
+   | Visa | Beskrivning | Musåtgärd | Åtgärd på pekskärmen |
+   | --- | --- | --- | --- |
+   | **Vrid kameran** | Ordna vyn runt 3D-scenen och objekt. | Vänsterklicka och dra. | Tryck med ett finger och dra. |
+   | **Panorera kameran** | Panorera vyn åt vänster, åt höger, uppåt eller nedåt. | Högerklicka och dra. | Tryck med två fingrar och dra. |
+   | **Zooma kameran** | Flytta in och ut från områden i 3D-scenen. | Rullningshjul. | Nyp med två fingrar. |
+   | **Ange kameran igen** | Centrera kameran igen till en punkt på ett objekt i 3D-scenen. | Dubbelklicka. | Dubbeltryck. |
+   | **Återställ** | I närheten av det nedre högra hörnet av sidan trycker du på ikonen Återställ för att återställa vymålpunkten till mitten av 3D-resursen. Återställ flyttar också kameran närmare eller längre bort för att visa resursen i dess helhet och med en rimlig visningsstorlek. |  |  |
+   | **Helskärmsläge** | Om du vill aktivera helskärmsläget trycker du på ikonen Helskärm längst ned till höger på sidan. |  |  |
 
 1. Tryck på **[!UICONTROL Close]** längst upp till höger på sidan för att gå tillbaka till sidan Resurser.
 
@@ -148,7 +142,7 @@ När en webbsida är i **[!UICONTROL Edit]**-läge går det inte att interagera 
 
 Se även [Förhandsgranska resurser med programgränssnittet.](/help/assets/previewing-assets.md)
 
-**Visa och interagera med en 3D-resurs inuti en 3D-mediekomponent**
+**Så här visar och interagerar du med en 3D-resurs i en 3D-mediekomponent:**
 
 1. Gör något av följande när en webbsida är i **[!UICONTROL Edit]**-läge:
 
@@ -160,20 +154,14 @@ komponentenEn helt interaktiv 3D-resurs som visas i  **[!UICONTROL Preview]** l�
 
 1. Gör något av följande i **[!UICONTROL Preview]**-läget:
 
-   * **Vrid kameran**  - Skruva vyn runt 3D-motivet och objekten.
-      * _Mus_: Vänsterklicka och dra.
-      * _Pekskärm_: Tryck med ett finger och dra.
-   * **Panorera kameran**  - Panorera vyn åt vänster, åt höger, uppåt eller nedåt.
-      * _Mus_: Högerklicka och dra.
-      * _Pekskärm_: Tryck med två fingrar och dra.
-   * **Zooma kameran**  - Zooma kameran för att flytta in och ut i 3D-scenens områden.
-      * _Mus_: Rullningshjul.
-      * _Pekskärm_: Nyp med två fingrar.
-   * **Centrera kameran**  igen - Centrera kameran igen och placera den vid en punkt på ett objekt i 3D-scenen.
-      * _Mus_: Dubbelklicka.
-      * _Pekskärm_: Dubbeltryck.
-   * **Återställ**  - I närheten av det nedre högra hörnet av sidan trycker du på ikonen Återställ för att återställa vymålpunkten till mitten av 3D-resursen. Återställ flyttar också kameran närmare eller längre bort för att visa resursen i dess helhet och med en rimlig visningsstorlek.
-   * **Helskärmsläge**  - Tryck på ikonen Helskärm i det nedre högra hörnet av sidan för att öppna helskärmsläget.
+   | Visa | Beskrivning | Musåtgärd | Åtgärd på pekskärmen |
+   | --- | --- | --- | --- |
+   | **Vrid kameran** | Ordna vyn runt 3D-scenen och objekt. | Vänsterklicka och dra. | Tryck med ett finger och dra. |
+   | **Panorera kameran** | Panorera vyn åt vänster, åt höger, uppåt eller nedåt. | Högerklicka och dra. | Tryck med två fingrar och dra. |
+   | **Zooma kameran** | Flytta in och ut från områden i 3D-scenen. | Rullningshjul. | Nyp med två fingrar. |
+   | **Ange kameran igen** | Centrera kameran igen till en punkt på ett objekt i 3D-scenen. | Dubbelklicka. | Dubbeltryck. |
+   | **Återställ** | I närheten av det nedre högra hörnet av sidan trycker du på ikonen Återställ för att återställa vymålpunkten till mitten av 3D-resursen. Återställ flyttar också kameran närmare eller längre bort för att visa resursen i dess helhet och med en rimlig visningsstorlek. |  |  |
+   | **Helskärmsläge** | Om du vill aktivera helskärmsläget trycker du på ikonen Helskärm längst ned till höger på sidan. |  |  |
 
 ## Om att arbeta med 3D-mediekomponenten {#working-with-three-d-media-component}
 
@@ -183,7 +171,6 @@ Dynamic Media innehåller en Dynamic Media 3D Media-komponent som du kan använd
 * [Lägga till komponenten 3D Media på en webbsida](#adding-the-three-d-media-component-to-a-web-page)
    * [Valfritt - Konfigurera komponenten 3D Media](#configuring-the-three-d-component)
 * [Tilldela en 3D-resurs till 3D-mediekomponenten](#assigning-a-three-d-asset-to-the-component)
-
 
 ## Lägga till komponenten 3D Media i sidmallen {#adding-three-d-media-component-to-page-template}
 
@@ -203,7 +190,7 @@ Dynamic Media innehåller en Dynamic Media 3D Media-komponent som du kan använd
 
 ## Lägga till komponenten 3D Media på en webbsida {#adding-the-three-d-media-component-to-a-web-page}
 
-Om du använder Adobe Experience Manager som webbinnehållshanteringssystem kan du lägga till 3D-resurser på dina webbsidor med 3D Media-komponenten.
+Om du använder Experience Manager som webbinnehållshanteringssystem kan du lägga till 3D-resurser på dina webbsidor med hjälp av 3D Media-komponenten.
 
 Se även [Lägga till Dynamic Media-resurser på sidor.](/help/assets/adding-dynamic-media-assets-to-pages.md)
 
@@ -222,7 +209,7 @@ Se även [Lägga till Dynamic Media-resurser på sidor.](/help/assets/adding-dyn
 
 Nu kan du tilldela en 3D-resurs till komponenten.
 
-Se [Tilldela en 3D-resurs till en 3D-mediekomponent.](#assigning-a-three-d-asset-to-the-component)
+Se [Tilldela en 3D-resurs till komponenten 3D Media.](#assigning-a-three-d-asset-to-the-component)
 
 ### Valfritt - Konfigurera 3D-mediekomponenten {#configuring-the-three-d-component}
 
@@ -256,19 +243,19 @@ Se [Lägga till komponenten 3D Media på en webbsida.](#adding-the-three-d-media
 
 ## Publicera statiska Dynamic Media 3D-resurser {#publishing-three-d-assets}
 
-Dynamic Media accepterar en mängd olika 3D-filformat som stöds som *statiskt innehåll* i Dynamic Media. Statiskt innehåll innebär att du kan överföra och publicera 3D-resurser, men det finns inget stöd för *dynamisk* bildåtergivning eller bildåtergivning som är associerat med 3D-resursen. Orsaken är att Dynamic Media Imaging Server inte känner igen 3D-format. När du har publicerat en 3D-resurs i Dynamic Media får du en direkt URL som du kan kopiera. URL:en för 3D-resursen följer den vanliga Dynamic Media URL-strukturen. Du kan dock inte redigera några parametrar i resursens URL, till skillnad från traditionella bildresurser i Dynamic Media.
+Dynamic Media accepterar olika 3D-filformat som stöds som *statiskt innehåll* i Dynamic Media. Statiskt innehåll innebär att du kan överföra och publicera 3D-resurser, men det finns inget stöd för *dynamisk* bildåtergivning eller bildåtergivning som är associerat med 3D-resursen. Orsaken är att Dynamic Media Imaging Server inte känner igen 3D-format. När du har publicerat en 3D-resurs i Dynamic Media får du en direkt URL som du kan kopiera. URL:en för 3D-resursen följer den vanliga Dynamic Media URL-strukturen. Du kan dock inte redigera några parametrar i resursens URL, till skillnad från traditionella bildresurser i Dynamic Media.
 
 Se även [Hämta en URL för en statisk resurs.](/help/assets/linking-urls-to-yourwebapplication.md#obtaining-a-url-for-a-static-asset)
 
 I **[!UICONTROL Card View]** visas en liten globala ikon direkt under namnet på en resurs och till vänster om dess datum och tid för att ange att den publiceras. I **[!UICONTROL List View]** anger kolumnen **[!UICONTROL Published]** vilka resurser som har publicerats och inte.
 
-Om du använder AEM som WCM-fil kan du använda den här publiceringsmetoden för att lägga till Dynamic Media 3D-resurser direkt på webbsidan.
+Om du använder Experience Manager som WCM-fil kan du använda den här publiceringsmetoden för att lägga till Dynamic Media 3D-resurser direkt på webbsidan.
 
 Se även [Publicera Dynamic Media-resurser.](publishing-dynamicmedia-assets.md)
 
 Se även [Publicera sidor.](/help/sites-authoring/publishing-pages.md)
 
-**Publicera statiska Dynamic Media 3D-resurser**
+**Så här publicerar du statiska Dynamic Media 3D-resurser:**
 
 1. Öppna en 3D-resurs (GLB-, OBJ- eller STL-filformat) för att visa den på sidan med tillgångsinformation.
 1. Tryck på **[!UICONTROL Quick Publish.]** i verktygsfältet
@@ -280,7 +267,7 @@ Se även [Publicera sidor.](/help/sites-authoring/publishing-pages.md)
 
    ![3d-asset-renditions](/help/assets/assets-dm/3d-asset-renditions.png)
 
-1. Tryck på **[!UICONTROL original.]** När en 3D-resurs publiceras (eller &quot;aktiveras&quot;) visas knappen **[!UICONTROL URL]** i det nedre vänstra hörnet av sidan om alla följande 3D-resursvillkor uppfylls:
+1. Tryck på **[!UICONTROL original]**. När en 3D-resurs publiceras (eller&quot;aktiveras&quot;) visas knappen **[!UICONTROL URL]** i det nedre vänstra hörnet av sidan om alla följande 3D-resursvillkor uppfylls:
    * 3D-resursen har ett format som stöds (GLB, OBJ, STL och USDZ).
    * 3D-resursen har importerats till Dynamic Media Image Production System (IPS).
    * 3D-resursen publiceras.
@@ -291,7 +278,7 @@ Se även [Publicera sidor.](/help/sites-authoring/publishing-pages.md)
 
 ### Alternativa metoder för publicering av Dynamic Media 3D-resurser med Dimensional Viewer {#alternate-publish-methods}
 
-Använd följande två metoder för att publicera Dynamic Media 3D-resurser om du *inte* använder AEM som WCM.
+Använd följande två metoder för att publicera Dynamic Media 3D-resurser om du *inte* använder Experience Manager som WCM.
 
 * **[!UICONTROL URL]** - Använd  **[!UICONTROL URL]** om du använder ett tredjepartssystem för hantering av webbinnehåll och vill länka Dynamic Media 3D-resurser till dina webbsidor med Dimensional Viewer.
 
