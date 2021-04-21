@@ -1,17 +1,17 @@
 ---
 title: Hur skapar man adaptiva Forms med JSON Schema?
 description: Lär dig hur du skapar adaptiva formulär med JSON-schema som formulärmodell. Du kan använda befintliga JSON-scheman för att skapa anpassningsbara formulär. Gräv djupare med ett exempel på ett JSON-schema, förkonfigurera fält i JSON-schemadefinitionen, begränsa godtagbara värden för en adaptiv formulärkomponent och lär dig konstruktioner som inte stöds.
-feature: Adaptive Forms
-role: Business Practitioner, Developers
-level: Beginner, Imtermediate
+feature: Adaptiv Forms
+role: Business Practitioner, Developer
+level: Beginner, Intermediate
+exl-id: 1b402aef-a319-4d32-8ada-cadc86f5c872
 translation-type: tm+mt
-source-git-commit: 37ab98c9c78af452887c32101287b6d7f18d9d91
+source-git-commit: ad67634278088f8f953fde61a3543acdd70537dd
 workflow-type: tm+mt
-source-wordcount: '1448'
+source-wordcount: '1450'
 ht-degree: 2%
 
 ---
-
 
 # Skapa adaptiva formulär med JSON Schema {#creating-adaptive-forms-using-json-schema}
 
