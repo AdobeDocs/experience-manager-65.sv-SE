@@ -1,17 +1,17 @@
 ---
 title: Skapa ett anpassat formulär
 description: 'Lär dig hur du skapar ett anpassat formulär med  [!DNL Experience Manager Forms]. Adaptiva formulär är responsiva HTML5-formulär som effektiviserar informationsinsamling och -bearbetning. Mer information om hur du skapar ett adaptivt formulär baserat på en formulärdatamodell, XFA-formulärmall och XML- eller JSON-schema. '
-feature: Adaptive Forms
-role: Business Practitioner, Developers
+feature: Adaptiv Forms
+role: Business Practitioner, Developer
 level: Beginner
+exl-id: 2c25a8b7-73f7-40fb-a303-9446a708c8eb
 translation-type: tm+mt
-source-git-commit: 52fedc234b3edf581393bb42325902d2da3ab46e
+source-git-commit: ad67634278088f8f953fde61a3543acdd70537dd
 workflow-type: tm+mt
-source-wordcount: '1761'
+source-wordcount: '1763'
 ht-degree: 0%
 
 ---
-
 
 # Skapa ett anpassat formulär {#creating-an-adaptive-form}
 
