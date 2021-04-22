@@ -9,9 +9,9 @@ user-guide-description: Läs om hur du administrerar AEM.
 feature: Administratör
 role: Administrator
 translation-type: tm+mt
-source-git-commit: ad67634278088f8f953fde61a3543acdd70537dd
+source-git-commit: 06cbf5ccc957b0cb5bd24c820f5209821ae92cd9
 workflow-type: tm+mt
-source-wordcount: '663'
+source-wordcount: '665'
 ht-degree: 6%
 
 ---
@@ -165,6 +165,7 @@ ht-degree: 6%
    + [AEM Sites - GDPR-beredskap](gdpr-compliance-sites.md)
    + [Hantera GDPR-begäranden för AEM Foundation](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/handling-gdpr-requests-for-aem-platform.html)
    + [AEM Commerce - GDPR-beredskap](gdpr-compliance-commerce.md)
++ Innehållshantering {#contentmanagement}
    + [Så här arbetar du med paket](package-manager.md)
    + [Administrera taggar](tags.md)
    + [Sidexporteraren](page-exporter.md)
