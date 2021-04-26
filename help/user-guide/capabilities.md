@@ -3,14 +3,14 @@ title: Användarhandbok för AEM 6.5 Capabilities
 seo-title: Användarhandbok för AEM 6.5 Capabilities
 description: En översikt över de viktigaste funktionerna i AEM 6.5
 seo-description: En översikt över de viktigaste funktionerna i AEM 6.5
+exl-id: d9941242-a01d-48fa-bad0-4c5b9dd16f4c
 translation-type: tm+mt
-source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
-source-wordcount: '153'
+source-wordcount: '157'
 ht-degree: 2%
 
 ---
-
 
 # AEM 6.5 Capabilities User Guides {#aem-65-capabilities-user-guides}
 
@@ -36,7 +36,11 @@ ht-degree: 2%
 
 ## AEM Screens {#aem-screens}
 
-[Lär dig mer om den digitala signeringslösningen för att publicera dynamiska och interaktiva upplevelser.](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/aem-screens-introduction.html)
+[Lär dig mer om den digitala signeringslösningen för att publicera dynamiska och interaktiva upplevelser.](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html)
+
+## AEM Commerce {#aem-commerce}
+
+[Läs om AEM.](/help/commerce/home.md)
 
 ## AEM Communities {#aem-communities}
 
