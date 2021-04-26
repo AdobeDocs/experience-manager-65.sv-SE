@@ -10,14 +10,14 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: f488ba79-5bda-46e9-9c15-9a8c3dbfa2ce
 docset: aem65
+exl-id: 3b3c118b-ca35-484b-a62e-7bec98953123
 translation-type: tm+mt
-source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
 source-wordcount: '2239'
 ht-degree: 9%
 
 ---
-
 
 # Redigering - miljö och verktyg{#authoring-the-environment-and-tools}
 
@@ -243,7 +243,7 @@ Välj lämplig referenstyp för mer information. I vissa situationer är ytterli
 
 * Instanser av lånat och lånat innehåll med **Reference**-komponenten, härifrån kan du navigera till den refererande/refererade sidan
 
-* [Referenser till produktsidor](/help/sites-administering/generic.md#showing-product-references)  (finns i Commerce-Products-konsolen)
+* [Referenser till produktsidor](/help/commerce/cif-classic/administering/generic.md#showing-product-references)  (finns i Commerce-Products-konsolen)
 * [Startar](/help/sites-authoring/launches.md), ger åtkomst till relaterade starter
 * [Live-](/help/sites-administering/msm.md) kopior visar sökvägarna för alla live-kopior som baseras på den valda resursen.
 * [utkast](/help/sites-administering/msm-best-practices.md), innehåller information och olika åtgärder
