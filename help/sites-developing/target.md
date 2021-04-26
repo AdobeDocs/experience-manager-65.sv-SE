@@ -10,14 +10,14 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: bff078cd-c390-4870-ad1d-192807c67ca4
 docset: aem65
+exl-id: 92b62532-4f79-410d-903e-d2bca6d0fd1c
 translation-type: tm+mt
-source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
 source-wordcount: '1287'
 ht-degree: 0%
 
 ---
-
 
 # Utveckla för riktat innehåll{#developing-for-targeted-content}
 
@@ -253,7 +253,7 @@ Koden på den återgivna HTML-sidan som skapar mbox liknar följande exempel:
 </script>
 ```
 
-Värdena för varje parameter är olika för varje ordning. Därför behöver du en komponent som genererar koden baserat på inköpets egenskaper. CQ [eCommerce Integration Framework](/help/sites-administering/ecommerce.md) gör att du kan integrera med din produktkatalog och implementera en kundvagn- och utcheckningssida.
+Värdena för varje parameter är olika för varje ordning. Därför behöver du en komponent som genererar koden baserat på inköpets egenskaper. CQ [eCommerce Integration Framework](/help/commerce/cif-classic/administering/ecommerce.md) gör att du kan integrera med din produktkatalog och implementera en kundvagn- och utcheckningssida.
 
 I exemplet på Geometrixx Outdoors visas följande bekräftelsesida när en besökare köper produkter:
 
