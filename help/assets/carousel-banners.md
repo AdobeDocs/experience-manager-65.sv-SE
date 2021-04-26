@@ -8,16 +8,16 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: e26c7f7f-bdd7-421a-8614-ba48abf381d2
 docset: aem65
-feature: Carousel Banners
+feature: Karusellbanner
 role: Business Practitioner, Administrator
+exl-id: 53d34d3a-ecb6-4fa0-9665-60d21f48021e
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
-source-wordcount: '4724'
+source-wordcount: '4721'
 ht-degree: 3%
 
 ---
-
 
 # Karusellbanner{#carousel-banners}
 
@@ -57,7 +57,7 @@ Så här kommer du igång snabbt:
 
    >[!NOTE]
    >
-   >Om du är kund hos AEM Sites eller e-handel kan du använda den inbyggda funktionen för att navigera till produktsidor och söka efter befintliga skal i produktkatalogen. Du behöver inte ange variabler för hotspot eller bildschema manuellt. Mer information finns i [konfigurera e-handel](/help/sites-administering/generic.md).
+   >Om du är kund hos AEM Sites eller e-handel kan du använda den inbyggda funktionen för att navigera till produktsidor och söka efter befintliga skal i produktkatalogen. Du behöver inte ange variabler för hotspot eller bildschema manuellt. Mer information finns i [konfigurera e-handel](/help/commerce/cif-classic/administering/generic.md).
    >
    >
    >Om du använder AEM Assets och Dynamic Media anger du manuellt data för hotspot-områden och bildscheman och integrerar sedan den publicerade URL:en eller inbäddningskoden med ditt tredjeparts innehållshanteringssystem.
@@ -104,7 +104,7 @@ När du lägger till aktiveringspunkter eller bildscheman i en banderollbild i A
 
 >[!NOTE]
 >
->Om du är kund hos AEM Sites och/eller AEM Ecommerce hoppar du över det här steget. Du behöver inte identifiera hotspot- eller bildschemavariabler manuellt. kan du använda integreringen med e-handel för produktintegrering. Mer information finns i [konfigurera e-handel](/help/sites-administering/generic.md). Dessutom kan du använda den interaktiva komponenten och lägga till den på webbsidan.
+>Om du är kund hos AEM Sites och/eller AEM Ecommerce hoppar du över det här steget. Du behöver inte identifiera hotspot- eller bildschemavariabler manuellt. kan du använda integreringen med e-handel för produktintegrering. Mer information finns i [konfigurera e-handel](/help/commerce/cif-classic/administering/generic.md). Dessutom kan du använda den interaktiva komponenten och lägga till den på webbsidan.
 >
 >Om du är kund hos AEM Assets eller Media publicerar du URL:en eller Bädda in kod och integrerar sedan med ditt tredjepartssystem för innehållshantering och identifierar hotspot-områden och bildscheman manuellt.
 
