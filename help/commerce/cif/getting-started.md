@@ -5,9 +5,9 @@ topics: Commerce
 feature: Commerce Integration Framework
 thumbnail: 37843.jpg
 translation-type: tm+mt
-source-git-commit: 8ead3d1b24177effa4d40141408c5676eaabcc30
+source-git-commit: 3df590b5b5dd4a72af1808fe55c8e61338334d0d
 workflow-type: tm+mt
-source-wordcount: '682'
+source-wordcount: '681'
 ht-degree: 0%
 
 ---
@@ -28,17 +28,17 @@ Introduktionen AEM innehåll och handel är en tvåstegsprocess:
 
 2. Koppla AEM till e-handelslösningen
 
-### Installera AEM Content and Comemerce för AEM 6.5
+### Installera AEM Content and Commerce-tillägget för AEM 6.5 {#install-add-on}
 
 Hämta och installera AEM Commerce Add-On för AEM 6.5 från [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)-portalen.
 
 Starta och installera AEM 6.5 Service Pack. Vi rekommenderar att du installerar det senaste tillgängliga Service Pack-paketet.
 
-    >[!NOTE]
-    >
-    >Detta görs av CSE för AEM Managed Service-kunder.
+>[!NOTE]
+>
+>Detta görs av CSE för AEM kunder som har hanterade tjänster.
 
-### Anslut AEM till e-handelssystemet
+### Anslut AEM till e-handelssystemet {#connect}
 
 AEM kan anslutas till alla handelssystem som har en tillgänglig GraphQL-slutpunkt för AEM. Dessa slutpunkter är vanligtvis offentligt tillgängliga eller kan anslutas via privata VPN-anslutningar eller lokala anslutningar beroende på de enskilda projektinställningarna.
 
