@@ -11,14 +11,14 @@ content-type: reference
 discoiquuid: 8cdb6db4-adaa-4eda-af7d-310a0b44b80b
 docset: aem65
 legacypath: /content/docs/en/aem/6-2/develop/components/components-touch-optimized
+exl-id: 573cdc36-e9c3-4803-9c4e-cebd0cf0a56f
 translation-type: tm+mt
-source-git-commit: 7035c19a109ff67655ee0419aa37d1723e2189cc
+source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
 source-wordcount: '3533'
 ht-degree: 1%
 
 ---
-
 
 # Utveckla AEM{#developing-aem-components}
 
@@ -26,8 +26,8 @@ AEM används för att lagra, formatera och återge innehåll som är tillgängli
 
 * När [du redigerar sidor](/help/sites-authoring/default-components.md) tillåter komponenterna författarna att redigera och konfigurera innehållet.
 
-   * När du skapar en [Commerce](/help/sites-administering/ecommerce.md)-plats kan komponenterna t.ex. samla in och återge information från katalogen.
-Mer information finns i [Utveckla e-handel](/help/sites-developing/ecommerce.md).
+   * När du skapar en [Commerce](/help/commerce/cif-classic/administering/ecommerce.md)-plats kan komponenterna t.ex. samla in och återge information från katalogen.
+Mer information finns i [Utveckla e-handel](/help/commerce/cif-classic/developing/ecommerce.md).
 
    * När du skapar en [Communities](/help/communities/author-communities.md)-plats kan komponenterna tillhandahålla information till och samla in information från besökarna.
 Mer information finns i [Utveckla användargrupper](/help/communities/communities.md).
