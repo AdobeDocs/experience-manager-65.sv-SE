@@ -8,16 +8,16 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: a6f58f6a-015a-4ced-941c-ef1b6d3e1d6f
 docset: aem65
-feature: Interactive Images
+feature: Interaktiva bilder
 role: Business Practitioner, Administrator
+exl-id: 8a609024-e9e6-4805-8306-48d095110eb6
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
-source-wordcount: '4302'
-ht-degree: 1%
+source-wordcount: '4299'
+ht-degree: 2%
 
 ---
-
 
 # Interaktiva bilder{#interactive-images}
 
@@ -49,7 +49,7 @@ Interactive Images:
 
 1. **(Valfritt) Identifiera hotspot-variabler**  - Om du använder fristående AEM Assets och Dynamic Media kan du börja med att identifiera dynamiska variabler som används i den befintliga QuickView-implementeringen så att du kan ange hotspot-data när du skapar den interaktiva bilden. Se [(Valfritt) Identifiera hotspot-variabler](#optional-identifying-hotspot-variables).
 Men om du använder AEM Sites, eller AEM e-handel, eller båda, är det här steget inte nödvändigt.
-Se [e-handelskoncept i AEM Assets](/help/sites-administering/concepts.md).
+Se [e-handelskoncept i AEM Assets](/help/commerce/cif-classic/administering/concepts.md).
 
 1. **(Valfritt) Skapa en förinställning**  för Interactive Image viewer - Anpassa den grafiska bild som används för att representera aktiveringspunkter. Du behöver inte skapa en egen förinställning för Interactive Image Viewer om du tänker använda den färdiga Interactive Image Viewer-förinställningen `Shoppable_Banner` i stället.
 Se [(Valfritt) Skapa en förinställning för visningsprogrammet för interaktiv bild](/help/assets/managing-viewer-presets.md#creating-a-new-viewer-preset).
@@ -75,7 +75,7 @@ Om du använder en WCM-fil (Web Content Manager) från tredje part måste du int
 >Den här aktiviteten krävs bara om följande är sant:
 >
 >* Du vill lägga till interaktivitet i bilden genom att aktivera snabbvyer.
->* Er implementering av AEM *inte* använder ett ramverk för e-handelsintegrering för att hämta produktdata till AEM från en e-handelslösning som IBM Websphere Commerce, Elastic Path, hybris eller Intershop. Se [e-handelskoncept i AEM Assets](/help/sites-administering/concepts.md).
+>* Er implementering av AEM *inte* använder ett ramverk för e-handelsintegrering för att hämta produktdata till AEM från en e-handelslösning som IBM Websphere Commerce, Elastic Path, hybris eller Intershop. Se [e-handelskoncept i AEM Assets](/help/commerce/cif-classic/administering/concepts.md).
 
 >
 >
