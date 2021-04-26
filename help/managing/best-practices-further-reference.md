@@ -9,14 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.5/MANAGING
 topic-tags: managing-checklist
 content-type: reference
 discoiquuid: 6fc2751e-f42a-4519-bc8c-695057f21b69
+exl-id: 36620e3e-ecdf-4062-bbef-65513362d691
 translation-type: tm+mt
-source-git-commit: 37ec3d8ce779ba392e6a92c828efb5fad749abec
+source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
 source-wordcount: '3783'
 ht-degree: 0%
 
 ---
-
 
 # Checklistan - ytterligare referens{#the-checklist-further-reference}
 
@@ -34,7 +34,7 @@ När du implementerar AEM (särskilt för första gången) måste du granska [fu
 
 Fundera på AEM funktioner du kommer att använda och hur designen påverkas. till exempel:
 
-* [Handel](/help/sites-administering/ecommerce.md)
+* [Handel](/help/commerce/cif-classic/administering/ecommerce.md)
 * [Skärmar](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/aem-screens-introduction.html)
 * [Assets](/help/assets/assets.md)
 * [Taggar](/help/sites-administering/tags.md)
@@ -111,7 +111,7 @@ Precis som med andra projekt är det viktigt att fastställa grundregler så sna
    Definiera tydligt vad som ska täckas av projektet på olika nivåer:
 
    * de enskilda releaserna (om en iterativ versionsprocess används och oavsett om de levereras till kunder eller till ditt interna testteam).
-   * aem.
+   * AEM.
    * Hela projektet. inklusive eventuella tredjepartsprogram, deras inverkan på testning, organisatoriska frågor och många andra.
    * För vissa aspekter kan det också vara användbart att ange vad som är *inte* inom projektets omfång. Detta kan bidra till att förhindra förvirring och felaktiga antaganden, även om det bör begränsas till väsentliga frågor.
 
@@ -264,7 +264,7 @@ De svarstider du vill ha skiljer sig åt mellan skribent- och publiceringsmiljö
 Så hur kan du bestämma dig för uppnåbara (genomsnittliga) svarstider? Detta är ofta en fråga om erfarenhet:
 
 * tidigare erfarenheter på din webbplats
-* aem
+* AEM
 * känna igen komplexa sidor som har mer än de genomsnittliga svarstiderna (dessa bör optimeras individuellt om det är möjligt)
 
 Under kontrollerade förhållanden kan dock följande riktlinjer tillämpas:
@@ -309,7 +309,7 @@ Sökförfrågningar kan ha stor effekt på din webbplats, både när det gäller
 
 Att ange mål för sökbegäranden är återigen en fråga om erfarenhet beroende på:
 
-* aem
+* AEM
 * en bedömning av hur ofta sökningen kommer att användas jämfört med andra mål
 * din persistence Manager
 * ditt sökindex
