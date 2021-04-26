@@ -10,14 +10,14 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 21181a6f-b434-40ed-8eb1-ebdfc98964dd
 docset: aem65
+exl-id: ef1a3997-feb4-4cb0-9396-c8335b69bb10
 translation-type: tm+mt
-source-git-commit: b68dd6c48d03e233265a2c93e61c0aeb768fa408
+source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
 source-wordcount: '2979'
 ht-degree: 3%
 
 ---
-
 
 # Grundläggande hantering{#basic-handling}
 
@@ -108,7 +108,7 @@ Följande konsoler finns i Navigation:
   </tr>
   <tr>
    <td>Handel</td>
-   <td>På så sätt kan du hantera produkter, produktkataloger och beställningar som är kopplade till dina <a href="/help/sites-administering/ecommerce.md">Commerce</a>-platser.</td>
+   <td>På så sätt kan du hantera produkter, produktkataloger och beställningar som är kopplade till dina <a href="/help/commerce/cif-classic/administering/ecommerce.md">Commerce</a>-platser.</td>
   </tr>
   <tr>
    <td>Experience Fragments</td>
@@ -193,7 +193,7 @@ Rubriken visas alltid längst upp på skärmen. De flesta alternativen i huvudet
 
 * Breadcrumbs
 
-   ![bh-03](assets/bh-05.png)
+   ![bh-05](assets/bh-05.png)
 
    I mitten av spåret, och alltid med beskrivningen av det markerade objektet, kan du navigera i en viss konsol med hjälp av de synliga kolumnerna. På webbplatskonsolen kan du navigera på webbplatsnivå.
 
@@ -516,7 +516,7 @@ Om du väljer en resurs i kolumnen längst till vänster visas de underordnade r
 
 ## Järnvägsväljare {#rail-selector}
 
-**Rälsväljaren** är tillgänglig längst upp till vänster i fönstret och visar alternativ beroende på de aktuella konsolerna.
+**Rail Selector** är tillgänglig längst upp till vänster i fönstret och visar alternativ beroende på de aktuella konsolerna.
 
 ![bh-25](assets/bh-25.png)
 
@@ -593,4 +593,3 @@ Dessa alternativ är tillgängliga via markeringen bredvid **Kommentar**-fältet
 Då öppnas en panel som liknar [sök](/help/sites-authoring/search.md) med rätt platsfilter inställda så att du kan filtrera innehållet ytterligare.
 
 ![bh-29](assets/bh-29.png)
-
