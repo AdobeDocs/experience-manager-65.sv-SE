@@ -9,9 +9,9 @@ user-guide-description: Den här guiden beskriver hur du skapar AEM.
 feature: Utveckling
 role: Developer
 translation-type: tm+mt
-source-git-commit: ad67634278088f8f953fde61a3543acdd70537dd
+source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
-source-wordcount: '919'
+source-wordcount: '910'
 ht-degree: 6%
 
 ---
@@ -70,10 +70,6 @@ ht-degree: 6%
    + [Integrera tjänster med JMX-konsolen](jmx-integration.md)
    + [Developing the Bulk Editor](dev-bulk-editor.md)
    + [Utveckla rapporter](dev-reports.md)
-   + eCommerce{#ecommerce}
-      + [eCommerce](ecommerce.md)
-      + [Utveckla (allmän)](generic.md)
-      + [Utveckla med SAP Commerce Cloud](sap-commerce-cloud.md)
 + Komponenter{#components}
    + [Kärnkomponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)
    + [Formatsystem](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html)
