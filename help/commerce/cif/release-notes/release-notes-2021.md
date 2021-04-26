@@ -2,9 +2,9 @@
 title: AEM Content and Commerce Release Notes 2021
 description: AEM Content and Commerce Release Notes 2021
 translation-type: tm+mt
-source-git-commit: 2d0b52dbf85e1fbe91c09a8366744aa77f25cd73
+source-git-commit: 1a6d713e74056333b18ed68f58876c2a75d535b8
 workflow-type: tm+mt
-source-wordcount: '536'
+source-wordcount: '498'
 ht-degree: 8%
 
 ---
@@ -27,13 +27,11 @@ Granska de lägsta systemkraven i tabellen nedan för den CIF-version som du anv
 
 | Komponent | Version | Information |
 |:-------|:-----:|---------------------:|
-| CIF-tillägg | v2021.04.22 | [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.04.22.zip) |
+| CIF-tillägg | v021.04.22 | [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.04.22.zip) |
 | CIF-kärnkomponenter | 1.10.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases) |
 | CIF Venias referenswebbplats | 2021.04.22 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases) |
 
 ### Nyheter {#what-is-new-april}
-
-* **CIF-tillägget är nu tillgängligt via  [Adobe Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html). Den gamla AEM CIF Connector försätts i underhållsläge och ska inte användas längre. Migrera till det nya CIF-tillägget.**
 
 * Stöd för kategori-UID - Detta frigör e-handelsintegreringar från tredje part för system som använder strängar för kategori-ID
 
