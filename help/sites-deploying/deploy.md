@@ -10,14 +10,14 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: e48cc0ed-688c-44c8-b6d6-5f3c8593a295
 docset: aem65
+exl-id: 3df0662a-0768-4b56-8b94-c517657b4bd9
 translation-type: tm+mt
-source-git-commit: cb07e24b01084f57ad46615cb463ad5a0329c181
+source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
 source-wordcount: '1833'
 ht-degree: 1%
 
 ---
-
 
 # Distribuera och underhålla{#deploying-and-maintaining}
 
@@ -50,7 +50,7 @@ När du har lärt dig grunderna hittar du mer avancerad och detaljerad informati
 * [Kommandoradens start och stopp](/help/sites-deploying/command-line-start-and-stop.md)
 * [Konfigurerar](/help/sites-deploying/configuring.md)
 * [Uppgradera till AEM 6.5](/help/sites-deploying/upgrade.md)
-* [eCommerce](/help/sites-deploying/ecommerce.md)
+* [eCommerce](/help/commerce/cif-classic/deploying/ecommerce.md)
 * [Instruktionsartiklar för konfiguration](/help/sites-deploying/ht-deploy.md)
 * [Webbkonsol](/help/sites-deploying/web-console.md)
 * [Felsökning av replikering](/help/sites-deploying/troubleshoot-rep.md)
@@ -114,7 +114,7 @@ Mer information om typiska lokala distributioner finns i [Rekommenderade distrib
 
 ### Managed Services med Cloud Manager {#managed-services-using-cloud-manager}
 
-AEM Managed Services är en komplett lösning för hantering av digitala upplevelser. Det ger fördelar med upplevelseleverans i molnet samtidigt som alla kontroll-, säkerhets- och anpassningsfördelar vid en lokal driftsättning bibehålls. AEM Managed Services gör det möjligt för kunderna att lansera snabbare genom att driftsätta i molnet och även genom att lära sig de bästa metoderna och den bästa supporten från Adobe. Organisationer och företagsanvändare kan engagera kunderna på minimal tid, öka marknadsandelen och fokusera på att skapa innovativa marknadsföringskampanjer samtidigt som IT-avdelningen minskar bördan.
+AEM Managed Services är en komplett lösning för hantering av digitala upplevelser. Det ger fördelar med upplevelseleverans i molnet samtidigt som man behåller alla kontroll-, säkerhets- och anpassningsfördelar som en lokal driftsättning ger. AEM Managed Services gör det möjligt för kunderna att lansera snabbare genom att driftsätta i molnet och även genom att lära sig de bästa metoderna och den bästa supporten från Adobe. Organisationer och företagsanvändare kan engagera kunderna på minimal tid, öka marknadsandelen och fokusera på att skapa innovativa marknadsföringskampanjer samtidigt som IT-avdelningen minskar bördan.
 
 Med AEM Managed Services kan man dra nytta av följande fördelar:
 
@@ -138,7 +138,7 @@ Medan produktionsinstanser vanligtvis körs på dedikerade datorer som kör ett 
 
 För att bli bekant och för att kunna utveckla AEM är det mycket vanligt att använda en instans som är installerad på din lokala dator och som kör Apple OS X eller skrivbordsversioner av Microsoft Windows eller Linux.
 
-På klientsidan fungerar AEM med alla moderna webbläsare (**Microsoft Edge**, **Internet Explorer** 11, **Chrome **51+** **, **Firefox **47+, **Safari** 8+) på både dator- och surfplattans operativsystem. Mer information finns i [Klientplattformar som stöds](/help/sites-deploying/technical-requirements.md#supported-client-platforms).
+På klientsidan fungerar AEM med alla moderna webbläsare (**Microsoft Edge**, **Internet Explorer** 11, **Chrome **51+** **, **Firefox **47+, **Safari** 8+) både på dator och surfplatta. Mer information finns i [Klientplattformar som stöds](/help/sites-deploying/technical-requirements.md#supported-client-platforms).
 
 ### Hämta programvaran {#getting-the-software}
 
@@ -311,7 +311,7 @@ Ovanstående avsnitt bör ge dig en god förståelse för grunderna i AEM instal
 * [Kommandoradens start och stopp](/help/sites-deploying/command-line-start-and-stop.md)
 * [Konfigurerar](/help/sites-deploying/configuring.md)
 * [Uppgradera till AEM 6.5](/help/sites-deploying/upgrade.md)
-* [eCommerce](/help/sites-deploying/ecommerce.md)
+* [eCommerce](/help/commerce/cif-classic/deploying/ecommerce.md)
 * [Instruktionsartiklar för konfiguration](/help/sites-deploying/ht-deploy.md)
 * [Webbkonsol](/help/sites-deploying/web-console.md)
 * [Felsökning av replikering](/help/sites-deploying/troubleshoot-rep.md)
