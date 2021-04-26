@@ -9,14 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 discoiquuid: f50150af-deff-4c29-bfe0-1cfc67b29d51
+exl-id: 504c61c7-dcd3-412c-9239-d24a2b78e4b9
 translation-type: tm+mt
-source-git-commit: 307a1db2e5bbb72d730c89ba14f5ce02b96c108d
+source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
 source-wordcount: '779'
 ht-degree: 3%
 
 ---
-
 
 # Implementering av referens för Vi.butik{#we-retail-reference-implementation}
 
@@ -38,7 +38,7 @@ Som AEM standardimplementering av referenser visar vi nu några av de mest kraft
 | [Responsiv layout](/help/sites-authoring/responsive-layout.md) | Alla sidor har en responsiv layout som anpassas dynamiskt efter skärm- och enhetsstorlek. | [Prova!](/help/sites-developing/we-retail-responsive-layout.md) |
 | [Redigerbara mallar](/help/sites-developing/page-templates-editable.md) | Alla sidor är baserade på redigerbara mallar, som gör att icke-utvecklare kan anpassa och anpassa mallarna. | [Prova!](/help/sites-developing/we-retail-editable-templates.md) |
 | [HTML-mallspråk](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html) | Alla komponenter är baserade på HTML |  |
-| [eCommerce-funktioner](/help/sites-developing/ecommerce.md) | Innehåller en produktkatalog |  |
+| [eCommerce-funktioner](/help/commerce/cif-classic/developing/ecommerce.md) | Innehåller en produktkatalog |  |
 | [Communities](/help/communities/overview.md) | Låt besökarna delta i communitydiskussioner, läsa bloggar och mycket mer |  |
 | [Kärnkomponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) | Alla komponenter baseras på de nya kärnkomponenterna och är mer användbara och användarkonfigurerbara. | [Prova!](/help/sites-developing/we-retail-core-components.md) |
 | [Innehållsfragment](/help/assets/content-fragments/content-fragments.md) | Avsnittet&quot;We.Retail Experiences&quot; visar möjligheterna att återanvända innehåll via innehållsfragment. | [Prova dem!](/help/sites-developing/we-retail-content-fragments.md) |
@@ -123,4 +123,3 @@ Du kan fritt göra gaffel eller bidra med [pull-begäranden](https://github.com/
 Förhandsgranskning av välkomstsidan för Vi.Retail:
 
 ![screencapture-localhost-4502-editor-html-content-we-retail-us-en-html-2018-08-17-14_33_32](assets/screencapture-localhost-4502-editor-html-content-we-retail-us-en-html-2018-08-17-14_33_32.png)
-
