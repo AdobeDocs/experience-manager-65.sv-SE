@@ -2,16 +2,16 @@
 title: Resurshandbok
 description: Den här guiden täcker alla Experience Manager Assets-uppgifter, t.ex. hur du skapar, hanterar, levererar och optimerar digitala resurser.
 user-guide-title: Resurshandbok
-feature: Asset Management
+feature: Resurshantering
 role: Business Practitioner, Architect, Administrator
+exl-id: f4016056-47a2-4d86-b12b-90d062d6a21a
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
-source-wordcount: '327'
+source-wordcount: '333'
 ht-degree: 4%
 
 ---
-
 
 # Resurshandbok
 
@@ -40,6 +40,7 @@ Den här guiden täcker alla [!DNL Experience Manager Assets]-uppgifter, t.ex. h
 | [Distribuera användarhandbok](/help/sites-deploying/home.md) | Den här guiden visar grunderna i Experience Manager. |
 | [Utveckla användarhandbok](/help/sites-developing/home.md) | Lär dig hur du bygger ut driftsättningen i Experience Manager. |
 | [Hantera användarhandbok](/help/managing/home.md) | I den här guiden beskrivs hur du hanterar ett Experience Manager-projekt utan problem. |
+| [Handbok för Commerce](/help/commerce/home.md) | Läs mer om Commerce Integration Framework på AEM. |
 | [Användarhandbok för mobiler](/help/mobile/home.md) | I den här guiden beskrivs hur du skapar och hanterar innehåll för mobilprogram. |
 | [Experience Manager Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/home.html) | Den här guiden visar hur du delar användargenererat innehåll med [!DNL Livefyre]. |
 
