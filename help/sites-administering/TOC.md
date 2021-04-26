@@ -9,9 +9,9 @@ user-guide-description: Läs om hur du administrerar AEM.
 feature: Administratör
 role: Administrator
 translation-type: tm+mt
-source-git-commit: 06cbf5ccc957b0cb5bd24c820f5209821ae92cd9
+source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
-source-wordcount: '665'
+source-wordcount: '637'
 ht-degree: 6%
 
 ---
@@ -109,13 +109,6 @@ ht-degree: 6%
    + [Konfigurera segmentering](campaign-segmentation.md)
    + [Utöka och konfigurera designimporteraren för landningssidor](extending-the-design-importer-for-landingpages.md)
    + [Integrera landningssidor med Adobe Analytics](integrating-landing-pages-with-adobe-analytics.md)
-+ e-handel {#ecommerce}
-   + [eCommerce](ecommerce.md)
-   + [Concepts](concepts.md)
-   + [Administrera allmän e-handel](generic.md)
-   + [Magento](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/integrations.html#!AdobeDocs/commerce-cif-documentation/master/integrations/02-AEM-Magento.md)
-   + [SAP Commerce Cloud](sap-commerce-cloud.md)
-   + [Salesforce Commerce Cloud](https://github.com/adobe/commerce-salesforce)
 + Integrering {#integration}
    + [Integrera med tredjepartstjänster](third-party-services.md)
    + [Integrera med Salesforce](salesforce.md)
