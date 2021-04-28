@@ -10,14 +10,14 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 6ae57874-a9a1-4208-9001-7f44a1f57cbe
 docset: aem65
+exl-id: 9efba91d-45e8-42e1-9db6-490d21bf7412
 translation-type: tm+mt
-source-git-commit: 29328ff7fde4ed0e7f9728af1be911133259dc6c
+source-git-commit: cb4b0cb60b8709beea3da70495a15edc8c4831b8
 workflow-type: tm+mt
 source-wordcount: '808'
 ht-degree: 0%
 
 ---
-
 
 # Skapa en stängd användargrupp{#creating-a-closed-user-group}
 
@@ -85,7 +85,7 @@ Så här använder du CUG-filen på en sida:
 
    >[OBS!]
    >
-   > Observera att CUG-filer på fliken Behörigheter inte kan återställas från utkast till Live-kopior. Se till att du undviker detta när du konfigurerar Live Copy.
+   > Observera att CUG-filer på fliken Behörigheter inte kan rullas ut till Live-kopior från utkast. Se till att du undviker detta när du konfigurerar Live Copy.
    >
    > Mer information finns i [den här sidan](closed-user-groups.md#aem-livecopy).
 
@@ -144,4 +144,3 @@ Konfigurera [sessionshantering i dispatchern.alla filer](https://helpx.adobe.com
    ```
 
 1. Ange [/allowAuthorized](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#caching-when-authentication-is-used) till `0`.
-
