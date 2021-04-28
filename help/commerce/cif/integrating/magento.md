@@ -3,7 +3,7 @@ title: Integrering av AEM och Adobe Commerce (Magento) med Commerce Integration 
 description: AEM och Adobe Commerce (Magento) integreras smidigt med Commerce Integration Framework (CIF). Med CIF kan AEM få åtkomst till en Magento-instans och kommunicera med Magento via GraphQL. AEM Authors kan också använda produkt- och kategoriväljare och produktkonsolen för att bläddra bland produkt- och kategoridata som hämtats on demand från Magento. Dessutom erbjuder CIF en färdig butik som kan snabba upp affärsprojekt.
 thumbnail: aem-magento-architecture.jpg
 translation-type: tm+mt
-source-git-commit: d92a635d41cf1b14e109c316bd7264cf7d45a9fe
+source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
 workflow-type: tm+mt
 source-wordcount: '340'
 ht-degree: 0%
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Integrering av AEM och Adobe Commerce (Magento) med Commerce Integration Framework {#aem-magento-framework}
 
-Handeln Experience Manager och Adobe (Magento) är sömlöst integrerad med Commerce Integration Framework (CIF). CIF gör det möjligt för AEM att komma åt och kommunicera direkt med den aktuella instansen med Adobe Commerce [GraphQL API:er](https://devdocs.magento.com/guides/v2.4/graphql/).
+Handeln Experience Manager och Adobe (Magento) är sömlöst integrerad med Commerce Integration Framework (CIF). CIF gör det möjligt för AEM att komma åt och kommunicera direkt med handelsinstansen med Adobe Commerce [GraphQL API:er](https://devdocs.magento.com/guides/v2.4/graphql/).
 
 ## Arkitekturöversikt {#overview}
 
@@ -21,7 +21,7 @@ Den övergripande arkitekturen är följande:
 ![CIF-arkitekturöversikt](../assets/AEM_Magento_Architecture.png)
 
 Inom CIF finns stöd för kommunikationsmönster på serversidan och klientsidan.
-API:anrop på serversidan implementeras med den generiska [GraphQL-klienten](https://github.com/adobe/commerce-cif-graphql-client) i kombination med en [uppsättning genererade datamodeller](https://github.com/adobe/commerce-cif-magento-graphql) för GraphQL-schemat Commerce. Dessutom kan alla GraphQL-frågor eller mutationer i GQL-format användas.
+API:anrop på serversidan implementeras med den generiska [GraphQL-klienten](https://github.com/adobe/commerce-cif-graphql-client) i kombination med en [uppsättning genererade datamodeller](https://github.com/adobe/commerce-cif-magento-graphql) för Commerce GraphQL-schemat. Dessutom kan alla GraphQL-frågor eller mutationer i GQL-format användas.
 
 För klientkomponenterna, som byggs med [React](https://reactjs.org/), används [Apollo Client](https://www.apollographql.com/docs/react/).
 
