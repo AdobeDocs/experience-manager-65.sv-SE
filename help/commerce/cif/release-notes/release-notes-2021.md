@@ -2,7 +2,7 @@
 title: AEM Content and Commerce Release Notes 2021
 description: AEM Content and Commerce Release Notes 2021
 translation-type: tm+mt
-source-git-commit: 1a6d713e74056333b18ed68f58876c2a75d535b8
+source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
 workflow-type: tm+mt
 source-wordcount: '498'
 ht-degree: 8%
@@ -27,7 +27,7 @@ Granska de lägsta systemkraven i tabellen nedan för den CIF-version som du anv
 
 | Komponent | Version | Information |
 |:-------|:-----:|---------------------:|
-| CIF-tillägg | v021.04.22 | [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.04.22.zip) |
+| CIF-tillägg | 2021.04.22 | [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.04.22.zip) |
 | CIF-kärnkomponenter | 1.10.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases) |
 | CIF Venias referenswebbplats | 2021.04.22 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases) |
 
@@ -57,7 +57,7 @@ Granska de lägsta systemkraven i tabellen nedan för den CIF-version som du anv
 
 * Stöd för Magento 2.4.2
 
-### Förbättringar
+### Vad har förbättrats
 
 * Förbättrad återanvändning av produktdetaljkomponenten för innehållsdrivna sidor
 
@@ -79,9 +79,9 @@ Granska de lägsta systemkraven i tabellen nedan för den CIF-version som du anv
 
 * Utökade egenskaper för produktkonsolen för att visa länkade resurser och upplevelsefragment, inklusive åtgärder för att snabbt navigera till det associerade innehållet.
 
-### Förbättringar  {#what-is-improved-february}
+### Förbättrade {#what-is-improved-february}
 
-* Förbättrat datalager på klientsidan med produktbild-URL och kategoriinformation
+* Förbättrat datalager på klientsidan med produktbild-URL och kategoriinformation.
 
 * Flera felkorrigeringar.
 
@@ -97,7 +97,7 @@ Granska de lägsta systemkraven i tabellen nedan för den CIF-version som du anv
 
 * Product Experience Management: Ny egenskapsflik för Commerce för Assets och Experience Fragments. På den här fliken kan du länka resurser och Experience Fragments till produkter och kategorier. På fliken visas även realtidsdata för länkade e-handelsobjekt och en länk som visar information i produktkonsolen.
 
-### Förbättringar  {#what-is-improved-january}
+### Förbättrade {#what-is-improved-january}
 
 * Skicka användardata efter autentisering till Adobe-klientdatalagret.
 
