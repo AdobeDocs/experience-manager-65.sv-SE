@@ -2,10 +2,10 @@
 title: AEM Content and Commerce Release Notes 2021
 description: AEM Content and Commerce Release Notes 2021
 translation-type: tm+mt
-source-git-commit: c2fb9af056fa4be13cfd7e60e8a44485e8712c0b
+source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
 workflow-type: tm+mt
 source-wordcount: '973'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 6%
 
 * Betalningsstöd för Braintree har lagts till AEM Venia store front.
 
-### Förbättringar {#what-is-improved-november}
+### Förbättrade {#what-is-improved-november}
 
 * Kategori-/produktväljare har förbättrats så att den angivna Magento-butiksvyn respekteras i en konfiguration med flera butiker.
 
@@ -53,7 +53,7 @@ ht-degree: 6%
 
 * Reaktionsbaserade komponenter på klientsidan för kontohantering. Den här versionen har stöd för följande funktioner: Logga in, Glömt lösenordet och Skapa konto.
 
-### Förbättringar {#what-is-improved-october}
+### Förbättrade {#what-is-improved-october}
 
 * Produktinformation och produktlistekomponenter har förbättrats så att man kan visa dummy-data och ge författarna en förhandsgranskning av layouten när dessa komponenter placeras på en mall/sida.
 
@@ -77,7 +77,7 @@ ht-degree: 6%
 
 * Utcheckningskomponenten innehåller adressformulär, betalningsval och val av leveransmetod.
 
-### Förbättringar {#what-is-improved-september}
+### Förbättrade {#what-is-improved-september}
 
 * Product Teaser- och Product Carousel-komponenterna har stöd för produktvarianter.
 
@@ -105,7 +105,7 @@ ht-degree: 6%
 
 * Knapp som tillåter författare att placera på en AEM sida och länka till antingen en AEM, produktinformationssida, produktlistsida eller en extern länk.
 
-### Förbättringar {#what-is-improved-august}
+### Förbättrade {#what-is-improved-august}
 
 * Magento store-konfigurationen flyttades från OSGi till AEM produktkonsolen för att göra integreringskonfigurationen mer författarvänlig.
 
@@ -131,7 +131,7 @@ ht-degree: 6%
 
 * Aktuell kategorilista på serversidan om du vill visa en lista över kategorier på en AEM.
 
-### Förbättringar {#what-is-improved-july}
+### Förbättrade {#what-is-improved-july}
 
 * Stöd för Magento 2.3.2 och felkorrigeringar för produktegenskaper visas i produktkonsolen.
 
