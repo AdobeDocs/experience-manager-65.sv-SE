@@ -10,14 +10,14 @@ topic-tags: site-features, best-practices
 content-type: reference
 discoiquuid: 04344537-7485-40a9-ad14-804ba448f1e2
 feature: Multi Site Manager
+exl-id: 3fedc1ba-64f5-4fbe-9ee5-9b96b75dda58
 translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+source-git-commit: cb4b0cb60b8709beea3da70495a15edc8c4831b8
 workflow-type: tm+mt
-source-wordcount: '1642'
+source-wordcount: '1667'
 ht-degree: 0%
 
 ---
-
 
 # MSM Best Practices{#msm-best-practices}
 
@@ -68,6 +68,10 @@ Ytterligare fördelar med att använda en ritkonfiguration är att de
 Om det inte finns någon referens till en ritningskonfiguration kan rollouts bara initieras från själva live-kopiorna, vilket i själva verket leder till att innehållet hämtas från källan.
 
 När du skapar en ny webbplats med en live-kopia är det fördelaktigt att skapa designkonfigurationer för att säkerställa att hela MSM-funktionsuppsättningen är tillgänglig.
+
+>[OBS!]
+>
+> Observera att CUG-filer på fliken Behörigheter inte kan rullas ut till Live-kopior från utkast. Se till att du undviker detta när du konfigurerar Live Copy.
 
 ## Synkronisering av komponenter och behållare {#components-and-container-synchronization}
 
@@ -207,4 +211,3 @@ Här och på följande sidor finns de relaterade frågorna:
 * [Översiktskonsol för Live Copy](/help/sites-administering/msm-livecopy-overview.md)
 * [Konfigurera Live Copy-synkronisering](/help/sites-administering/msm-sync.md)
 * [MSM-utrullningskonflikter](/help/sites-administering/msm-rollout-conflicts.md)
-
