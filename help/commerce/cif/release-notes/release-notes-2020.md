@@ -2,10 +2,10 @@
 title: AEM Content and Commerce Release Notes 2021
 description: AEM Content and Commerce Release Notes 2021
 translation-type: tm+mt
-source-git-commit: c859aa89e481e852302e9cda0adf2acc04d68a55
+source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
 workflow-type: tm+mt
-source-wordcount: '1323'
-ht-degree: 8%
+source-wordcount: '1324'
+ht-degree: 9%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 8%
 
 * Platinas referensarkiv har uppdaterats för att använda Experience Fragment för sidfoten. Affärsanvändare kan redigera sidfoten med hjälp AEM redigeringsverktyg.
 
-### Förbättringar {#what-is-improved-november}
+### Förbättrade {#what-is-improved-november}
 
 * Utcheckningskomponenten har förbättrats för att ge kunderna möjlighet att komma in i destinationslandet för att tillåta fakturerings-/leveransadresser utanför USA.
 
@@ -48,7 +48,7 @@ ht-degree: 8%
 
 * CIF-kärnkomponenter har utökats för att hydratisera Adobe Client Data Layer genom att skicka e-handelsdata. Adobe Client Data Layer är en standardiserad metod för att samla in data och kommunicera data till digitala analyser och rapportservrar. Mer information finns i [Adobe Client Data Layer](https://github.com/adobe/adobe-client-data-layer/wiki).
 
-* Sidorna Produktinformation och Produktlista utökas för att automatiskt fylla i SEO-metadata (t.ex. titel, metabeskrivning, metanyckelord) som konfigurerats inifrån Magento Admin UI
+* Sidorna Produktinformation och Produktlista utökas för att automatiskt fylla i SEO-metadata (som titel, metabeskrivning, meta-nyckelord) som konfigurerats inifrån Magento Admin UI
 
 * Fel i Commerce teaser-komponent har åtgärdats.
 
@@ -120,7 +120,7 @@ ht-degree: 8%
 
 * CIF Cloud Configuration UI har stöd för publicerings-/avpubliceringsåtgärder.
 
-### Förbättringar {#what-is-improved-july}
+### Förbättrade {#what-is-improved-july}
 
 * Inloggningskomponenten har flyttats till listrutan Användare för enkel åtkomst.
 
@@ -146,7 +146,7 @@ Detta är den första versionen av CIF Core Components som stöds i Adobe Experi
 
 * Tjänstanvändarmappning har lagts till som en del av säkerhetskraven för att säkerställa åtkomst till /conf via tjänstanvändare och inte genom att direkt ändra åtkomstkontrollistor. CIF Core Components måste nu använda en tjänstanvändare för att få åtkomst till konfigurationer.
 
-### Förbättringar {#what-is-improved-june}
+### Förbättrade {#what-is-improved-june}
 
 * Sidan Produktlista och sidan Sökresultat visar totalt antal objekt. Antalet objekt uppdateras när användaren använder filter.
 
@@ -174,9 +174,9 @@ Detta är den första versionen av CIF Core Components som stöds i Adobe Experi
 
 * Produktbindning skapas automatiskt när en molnkonfiguration skapas.
 
-### Förbättringar
+### Vad har förbättrats
 
-* Molnkonfigurationen har utökats så att åtgärden Skapa mapp visas.
+* Molnkonfiguration utökad för att visa åtgärden Skapa mapp.
 
 * Flera felkorrigeringar har tillämpats.
 
@@ -192,7 +192,7 @@ Detta är den första versionen av CIF Core Components som stöds i Adobe Experi
 
 * Konfigurationsinställningar för CIF Connector är enhetliga och förenklade. Mer information finns i avsnittet [Komma igång](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/getting-started.html) eller [Nya AEM CIF-projektinställningar](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/getting-started.html#!AdobeDocs/commerce-cif-documentation/master/getting-started/02-new-cif-project.md)
 
-### Förbättringar {#what-is-improved-april}
+### Förbättrade {#what-is-improved-april}
 
 * Kundvagn- och utcheckningsflödet har utökats för att stödja registrerade kunder.
 
@@ -218,9 +218,9 @@ Detta är den första versionen av CIF Core Components som stöds i Adobe Experi
 
 * Tillagt sökstöd i kategoriväljaren.
 
-* Sidnumrering i komponenten Catogory List som stöder stora kataloguppsättningar.
+* Sidindelning i kategorilistkomponenten som stöder stora kataloguppsättningar.
 
-### Förbättringar {#what-is-improved-february}
+### Förbättrade {#what-is-improved-february}
 
 * Kundvagnen har förbättrats och visar rabatter.
 
@@ -248,7 +248,7 @@ Detta är den första versionen av CIF Core Components som stöds i Adobe Experi
 
 * Allmän relaterad produktkomponent tillgänglig.
 
-### Förbättringar {#what-is-improved-january}
+### Förbättrade {#what-is-improved-january}
 
 * Stöd för att visa CTA-knappen på produktsuddgummit.
 
