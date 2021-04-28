@@ -9,16 +9,16 @@ feature: Commerce Integration Framework
 kt: 4933
 thumbnail: 34350.jpg
 translation-type: tm+mt
-source-git-commit: d92a635d41cf1b14e109c316bd7264cf7d45a9fe
+source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
 workflow-type: tm+mt
-source-wordcount: '792'
+source-wordcount: '791'
 ht-degree: 2%
 
 ---
 
 # Avancerade URL-konfigurationer {#url}
 
-[AEM CIF Core ](https://github.com/adobe/aem-core-cif-components) Components innehåller avancerade konfigurationer för att anpassa URL:er för produkt- och kategorisidor. Många implementeringar anpassar dessa URL:er för sökmotoroptimering (SEO).  Följande video visar hur du konfigurerar tjänsten `UrlProvider` och funktionerna i [Sling Mapping](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html) för att anpassa URL:er för produkt- och kategorisidor.
+[AEM CIF Core ](https://github.com/adobe/aem-core-cif-components) Components innehåller avancerade konfigurationer för att anpassa URL:er för produkt- och kategorisidor. Många implementeringar anpassar dessa URL:er för sökmotoroptimering (SEO). Följande video visar hur du konfigurerar tjänsten `UrlProvider` och funktionerna i [Sling Mapping](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html) för att anpassa URL:er för produkt- och kategorisidor.
 
 >[!VIDEO](https://video.tv.adobe.com/v/34350/?quality=12)
 
@@ -65,7 +65,7 @@ URL-omskrivningar kan också utföras med AEM Dispatcher HTTP-server med modulen
 
 ## Exempel
 
-I [Venias referensarkiv](https://github.com/adobe/aem-cif-guides-venia)-projektet finns exempelkonfigurationer som visar hur anpassade URL:er används för produkt- och kategorisidor. På så sätt kan varje projekt konfigurera individuella URL-mönster för produkt- och kategorisidor efter sina SEO-behov. En kombination av CIF `UrlProvider` och Sling Mappings enligt beskrivningen ovan används.
+I [Venias referensarkiv](https://github.com/adobe/aem-cif-guides-venia)-projektet finns exempelkonfigurationer som visar hur anpassade URL:er används för produkt- och kategorisidor. På så sätt kan varje projekt skapa individuella URL-mönster för produkt- och kategorisidor efter sina SEO-behov. En kombination av CIF `UrlProvider` och Sling Mappings enligt beskrivningen ovan används.
 
 >[!NOTE]
 >
@@ -74,5 +74,5 @@ I [Venias referensarkiv](https://github.com/adobe/aem-cif-guides-venia)-projekte
 ## Ytterligare resurser
 
 * [Referensarkiv för Venedig](https://github.com/adobe/aem-cif-guides-venia)
-* [AEM](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/configuring/resource-mapping.html)
+* [AEM](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/resource-mapping.html)
 * [Samlingsmappningar](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)
