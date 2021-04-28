@@ -7,9 +7,9 @@ doc-type: tutorial
 kt: 5826
 thumbnail: 39476.jpg
 translation-type: tm+mt
-source-git-commit: 8ead3d1b24177effa4d40141408c5676eaabcc30
+source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
 workflow-type: tm+mt
-source-wordcount: '875'
+source-wordcount: '874'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ En lokal utvecklingsmiljö rekommenderas för arbete med CIF-projekt.
 
 >[!NOTE]
 >
->Följande instruktioner hjälper dig att konfigurera en lokal AEM utvecklingsmiljö för AEM Commerce med CIF med fokus för AEM 6.5). Om du använder AEM som Cloud Service, se [AEM Commerce som en Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/commerce/home.html)-dokumentation.
+>Följande instruktioner hjälper dig att konfigurera en lokal AEM utvecklingsmiljö för AEM Commerce med CIF med fokus för AEM 6.5). Om du använder AEM som Cloud Service, se [AEM Commerce som en Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content-and-commerce/home.html)-dokumentation.
 
 AEM Commerce Add-On för AEM 6.5 alias. CIF-tillägget finns även för lokal utveckling och tillhandahålls som ett AEM. Den kan laddas ned från [Software Distribution portal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html) som ett funktionspaket.
 
@@ -149,7 +149,7 @@ Börja med att klona [Git-databasen](https://github.com/adobe/aem-cif-guides-ven
 >
 >Projektet Venia Reference Store innehåller två byggprofiler för AEM som Cloud Service och AEM 6.5. Kontrollera [projektets readme.md](https://github.com/adobe/aem-cif-guides-venia/blob/main/README.md) för att se hur de används. För AEM 6.5 använder du profilen `classic`.
 
-### Anslut AEM till e-handelssystemet
+### Anslut AEM till Commerce System
 
 För att ansluta ditt projekt till e-handelssystemet måste AEM konfigureras med GraphQL-slutpunkten i e-handelssystemet.
 
