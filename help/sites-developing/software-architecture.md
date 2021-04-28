@@ -9,14 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 discoiquuid: 92971747-1c74-4917-b5a0-7b79b3ae1e68
+exl-id: cd4f3b4c-5488-4ca7-9c1e-b4c819fda8e8
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 423e17dadf2e506eb68b37851dde5e68ed950866
 workflow-type: tm+mt
-source-wordcount: '583'
+source-wordcount: '622'
 ht-degree: 0%
 
 ---
-
 
 # Programvaruarkitektur{#software-architecture}
 
@@ -36,7 +36,7 @@ Genom att definiera vilka komponenter som kan inkluderas i varje parsys på sida
 
 SOLID är en förkortning som beskriver fem arkitektoniska principer som bör följas:
 
-* **Principen om** ett enda ansvar - varje modul, klass, metod osv. ska bara göra en sak.
+* **Principen om** ett enda ansvar - varje modul, klass, metod osv. bör endast ha ett ansvar.
 * ****&#x200B;Öppen/stängd princip - modulerna bör vara öppna för utökning och stängda för ändring.
 * **Liskov** Substitution Principle - Typerna ska kunna ersättas av sina undertyper.
 * **Princip för** gränssnittssegmentering - ingen klient ska tvingas att vara beroende av metoder som den inte använder.
@@ -44,9 +44,15 @@ SOLID är en förkortning som beskriver fem arkitektoniska principer som bör f�
 
 Att sträva efter att följa dessa fem principer bör leda till ett system som är strikt åtskilt från oron.
 
+>[!TIP]
+>
+>SOLID är ett ofta använt koncept för objektorienterad programmering och varje element diskuteras ofta i branschens litteratur.
+>
+>Detta är bara en kort sammanfattning som presenteras för att vara medveten om detta och du uppmuntras att bekanta dig med dessa koncept på ett mer djupgående sätt.
+
 ### Följ principen {#follow-the-robustness-principle}
 
-Robusitetsprincipen säger att vi bör vara konservativa i det vi skickar, men vara liberala i det vi accepterar. Med andra ord, när vi skickar meddelanden till en tredje part bör vi helt och hållet följa specifikationerna, men när vi tar emot meddelanden från en tredje part bör vi acceptera meddelanden som inte överensstämmer så länge som meddelandets betydelse är tydlig.
+Robusitetsprincipen säger att vi bör vara konservativa i det vi skickar, men vara liberala i det vi accepterar. Med andra ord, när vi skickar meddelanden till en tredje part bör vi helt och hållet följa specifikationerna, men när vi tar emot meddelanden från en tredje part bör vi acceptera meddelanden som inte överensstämmer så länge som meddelandets innebörd är tydlig.
 
 ### Implementera toppar i sina egna moduler {#implement-spikes-in-their-own-modules}
 
