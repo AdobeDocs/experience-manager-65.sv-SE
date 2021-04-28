@@ -11,11 +11,11 @@ content-type: reference
 discoiquuid: a2bd7045-970f-4245-ad5d-a272a654df0a
 docset: aem65
 exl-id: 39e35a07-140f-4853-8f0d-8275bce27a65
-feature: Security
+feature: Dokumentskydd
 translation-type: tm+mt
-source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
+source-git-commit: cb4b0cb60b8709beea3da70495a15edc8c4831b8
 workflow-type: tm+mt
-source-wordcount: '6891'
+source-wordcount: '6886'
 ht-degree: 0%
 
 ---
@@ -773,7 +773,7 @@ Om du konfigurerar CUG:er i kombination med LiveCopy representeras de i database
 
 Båda dessa element skapas under `cq:Page`. Med den aktuella designen hanterar MSM bara noder och egenskaper som finns under `cq:PageContent` (`jcr:content`)-noden.
 
-Därför kan CUG-grupper inte återställas från en plan till en Live Copy. Se till att du har en plan för hur du ska göra när du skapar en Live-kopia.
+Därför kan CUG-grupper inte rullas ut till Live-kopior från utkast. Se till att du undviker detta när du konfigurerar Live Copy.
 
 ## Ändringar med den nya CUG-implementeringen {#changes-with-the-new-cug-implementation}
 
