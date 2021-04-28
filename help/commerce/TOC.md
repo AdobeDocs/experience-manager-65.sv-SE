@@ -1,13 +1,13 @@
 ---
-sub-product: AEM
-user-guide-title: AEM
+sub-product: AEM innehåll och handel
+user-guide-title: AEM innehåll och handel
 breadcrumb-title: Commerce Guide
-user-guide-description: Förstå hur man använder och administrerar Experience Manager Commerce.
+user-guide-description: Förstå hur ni använder och administrerar AEM innehåll och handel.
 translation-type: tm+mt
-source-git-commit: 96bb4904818e7f3f64613c810eeb48f223e287c7
+source-git-commit: 8612e7c4105a9872fc8bba1988716eaa4b18d550
 workflow-type: tm+mt
-source-wordcount: '99'
-ht-degree: 8%
+source-wordcount: '104'
+ht-degree: 7%
 
 ---
 
