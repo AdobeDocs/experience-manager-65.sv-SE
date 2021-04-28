@@ -9,9 +9,9 @@ feature: Commerce Integration Framework
 kt: 3046
 thumbnail: 28952.jpg
 translation-type: tm+mt
-source-git-commit: d92a635d41cf1b14e109c316bd7264cf7d45a9fe
+source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
 workflow-type: tm+mt
-source-wordcount: '382'
+source-wordcount: '381'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ Följ stegen nedan för att ansluta en AEM plats och AEM CIF Core Components så
 4. Tilldela den underordnade konfigurationen till en AEM plats
 
    * Gå till AEM Sites Console
-   * Navigera till regionen eller språkroten i platsstrukturen, t.ex. /content/venia/us _eller_ /content/venia/us/en för Venias exempelsida
+   * Navigera till regionen eller språkroten i platsstrukturen, t.ex. /content/venia/us _eller_ /content/venia/us/en för exempelsidan i Venia
    * Markera sidan och öppna sidegenskaper
    * Välj fliken Avancerat
    * I avsnittet `Configuration` väljer du konfigurationen som du skapade i steg
@@ -60,5 +60,5 @@ Följ stegen nedan för att ansluta en AEM plats och AEM CIF Core Components så
 
 * [Magento webbplatser, butiker och vyer](https://docs.magento.com/m2/ce/user_guide/stores/websites-stores-views.html)
 * [AEM CIF Core Components - konfiguration av flera butiker/platser](https://github.com/adobe/aem-core-cif-components/wiki/configuration#multi-store--site-configuration)
-* [Använda Multi-Site Manager](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/translation/multi-site-manager-feature-video-use.html)
+* [Använda Multi-Site Manager](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/translation/multi-site-manager-feature-video-use.html)
 * [Återanvända innehåll: Multi Site Manager och Live Copy](/help/sites-administering/msm.md)
