@@ -9,9 +9,9 @@ feature: Commerce Integration Framework
 kt: 3456
 thumbnail: 3456-style-cif.jpg
 translation-type: tm+mt
-source-git-commit: d92a635d41cf1b14e109c316bd7264cf7d45a9fe
+source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
 workflow-type: tm+mt
-source-wordcount: '2562'
+source-wordcount: '2566'
 ht-degree: 0%
 
 ---
@@ -65,7 +65,7 @@ Vi klonar [Veniaprojektet](https://github.com/adobe/aem-cif-guides-venia) och å
 
 ## Klientbibliotek och modulen ui.klienttend {#introduction-to-client-libraries}
 
-CSS och JavaScript som ansvarar för att återge temat/formaten för butiken hanteras i AEM av ett [klientbibliotek](/help/sites-developing/clientlibs.md) eller klientbibliotek för kort tid. Klientbibliotek erbjuder en mekanism för att ordna CSS och Javascript i ett projekts kod och sedan leverera på sidan.
+CSS och JavaScript som ansvarar för att återge temat/formaten för butiken hanteras i AEM av ett [klientbibliotek](/help/sites-developing/clientlibs.md) eller klientlibs för kort. Klientbibliotek erbjuder en mekanism för att ordna CSS och Javascript i ett projekts kod och sedan leverera på sidan.
 
 Märkesspecifika format kan användas på AEM CIF Core-komponenter genom att lägga till och åsidosätta den CSS som hanteras av dessa klientbibliotek. Det är viktigt att förstå hur klientbibliotek är strukturerade och inkluderas på sidan.
 
@@ -164,7 +164,7 @@ Gör sedan en liten ändring i Teaser-formatet för att se hur modulen `ui.front
 
    ![Kompilerad CSS för webbplats i ui.apps](../assets/style-cif-component/comiled-css-ui-apps.png)
 
-   Detta är den kopierade `site.css`-filen till `ui.apps`-projektet. Den ingår nu i ett klientbibliotek med namnet `clientlib-site` och kategorin `venia.site`. När filen ingår i `ui.apps`-modulen kan den distribueras till AEM.
+   Detta kopierar `site.css`-filen till `ui.apps`-projektet. Den ingår nu i ett klientbibliotek med namnet `clientlib-site` och kategorin `venia.site`. När filen ingår i `ui.apps`-modulen kan den distribueras till AEM.
 
    >[!NOTE]
    >
@@ -225,7 +225,7 @@ Kontrollera sedan att klientbiblioteken finns med på sidan.
 
    ![Visa som publicerad](../assets/style-cif-component/view-as-published.png)
 
-   Sidan öppnas utan att någon av författarens javascript-skript AEM, som det skulle se ut på den publicerade webbplatsen. Observera att frågeparametern `?wcmmode=disabled` har lagts till på URL:en. När du utvecklar CSS och Javascript är det en god vana att använda den här parametern för att förenkla sidan utan att skriva ut något från AEM författare.
+   Sidan öppnas utan att någon av författarens javascript-skript AEM, som det skulle se ut på den publicerade webbplatsen. Observera att frågeparametern `?wcmmode=disabled` har lagts till på URL:en. När du utvecklar CSS och Javascript är det en god vana att använda den här parametern för att förenkla sidan utan att AEM författare behöver göra något.
 
 1. Visa sidkällan så bör du kunna identifiera flera klientbibliotek:
 
@@ -275,12 +275,12 @@ Det finns flera alternativ för hur du inkluderar ett klientbibliotek. Kontrolle
 
    ![Sidprofil - landningssida](../assets/style-cif-component/page-policy-properties.png)
 
-   Till höger visas en lista över klientbibliotek **kategorier** som kommer att inkluderas på alla sidor som använder den här mallen.
+   Till höger visas en lista med klientbibliotek **kategorier** som kommer att inkluderas på alla sidor som använder den här mallen.
 
    * `venia.dependencies` - Tillhandahåller eventuella leverantörsbibliotek som  `venia.site` är beroende av.
    * `venia.site` - Det här är kategorin  `clientlib-site` som  `ui.frontend` modulen genererar.
 
-   Observera att andra mallar använder samma princip, **Innehållssida**, **Landningssida** osv.. Genom att återanvända samma policy kan vi se till att samma klientbibliotek inkluderas på alla sidor.
+   Observera att samma princip används för andra mallar, **Innehållssida**, **Startsida** och så vidare. Genom att återanvända samma policy kan vi se till att samma klientbibliotek inkluderas på alla sidor.
 
    Fördelen med att använda mallar och sidprofiler för att hantera inkludering av klientbibliotek är att du kan ändra principen per mall. Du kanske hanterar två olika varumärken inom samma AEM. Varje varumärke kommer att ha sin egen unika stil eller *tema*, men grundbiblioteken och koden kommer att vara desamma. Om du har ett större klientbibliotek som du bara vill visa på vissa sidor kan du skapa en unik sidprofil för just den mallen.
 
@@ -328,7 +328,7 @@ Webbpack-dev-server proxies bilder och en del CSS/JavaScript från den lokala in
 
    >[!CAUTION]
    >
-   > Om du får ett Sass-relaterat fel stoppar du servern och kör kommandot `npm rebuild node-sass` och upprepar stegen ovan. Detta kan inträffa om en annan version av `npm` och `node` har angetts i projektet `aem-cif-guides-venia/pom.xml`.
+   > Om du får ett Sass-relaterat fel stoppar du servern och kör kommandot `npm rebuild node-sass` och upprepar stegen ovan. Detta kan inträffa om du har en annan version av `npm` och `node` som anges i projektet `aem-cif-guides-venia/pom.xml`.
 
 1. Navigera till [http://localhost:8080/](http://localhost:8080/) på en ny flik med samma webbläsare som en loggad instans av AEM. Webbsidan Venia finns på webbpack-dev-server:
 
