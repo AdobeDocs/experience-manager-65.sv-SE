@@ -2,10 +2,10 @@
 title: AEM innehåll och handel
 description: AEM självhjälp och dokumentationslänkar för innehåll och handel
 translation-type: tm+mt
-source-git-commit: 7b03772e3c7f185cb107c6576e2423275c1a6ccc
+source-git-commit: 809789d268deb4d77bbb5101265a1a0d7268b748
 workflow-type: tm+mt
-source-wordcount: '315'
-ht-degree: 20%
+source-wordcount: '337'
+ht-degree: 19%
 
 ---
 
@@ -13,6 +13,11 @@ ht-degree: 20%
 # AEM innehåll och handel {#commerce-guide}
 
 På den här sidan visas självhjälpsresurser för AEM.
+
+>[!NOTE]
+>
+>AEM innehåll och handel med AEM som Cloud Service finns i [AEM innehåll och handel](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content-and-commerce/home.html).
+
 
 ## Nyckelhandelsartiklar {#key-articles}
 
