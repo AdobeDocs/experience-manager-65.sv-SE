@@ -2,9 +2,9 @@
 title: Inställning av kundvagn och utskicksare
 description: Inställning av kundvagn och utskicksare
 translation-type: tm+mt
-source-git-commit: 1848a9789b4008f1be43b36ee3edfac35d8fdc7c
+source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '140'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/29656/?quality=12)
 
-Mer information om det här avsnittet finns i följande resurser:
+Mer information om det här avsnittet finns på följande resurser:
 
 - [Kundvagn](https://github.com/adobe/aem-core-cif-components/tree/master/ui.apps/src/main/content/jcr_root/apps/core/cif/components/commerce/minicart/v1/minicart)
 - [AEM Dispatcher med Magento Proxy](https://github.com/adobe/aem-core-cif-components/tree/master/dispatcher)
