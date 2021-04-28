@@ -7,7 +7,7 @@ contentOwner: Guillaume Carlino
 topic-tags: e-commerce
 content-type: reference
 translation-type: tm+mt
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
 workflow-type: tm+mt
 source-wordcount: '733'
 ht-degree: 0%
@@ -203,7 +203,7 @@ Den här proceduren överför och konfigurerar demonstrationsbutiken - Geometrix
    * användarnamn: admin
    * lösenord: nimda
 
-1. I sidofältsnavigeringen kan du utforska **System** och **Verktyg**. Välj sedan **Importera** för att öppna **guiden: CSV-importfönstret**.
+1. Expandera **System** och **Verktyg** från sidofältsnavigeringen. Välj sedan **Importera** för att öppna **guiden: CSV-importfönstret**.
 1. På fliken **Konfiguration** **Överför** följande **Importera fil**:
 
    [Hämta fil](/help/sites-deploying/assets/geometrixx-outdoors-export.csv)
