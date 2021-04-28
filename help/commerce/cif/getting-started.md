@@ -5,9 +5,9 @@ topics: Commerce
 feature: Commerce Integration Framework
 thumbnail: 37843.jpg
 translation-type: tm+mt
-source-git-commit: 3df590b5b5dd4a72af1808fe55c8e61338334d0d
+source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
 workflow-type: tm+mt
-source-wordcount: '681'
+source-wordcount: '682'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Introduktionen AEM innehåll och handel är en tvåstegsprocess:
 
 2. Koppla AEM till e-handelslösningen
 
-### Installera AEM Content and Commerce-tillägget för AEM 6.5 {#install-add-on}
+### Installera AEM Content and Commerce Add-on för AEM 6.5 {#install-add-on}
 
 Hämta och installera AEM Commerce Add-On för AEM 6.5 från [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)-portalen.
 
@@ -38,7 +38,7 @@ Starta och installera AEM 6.5 Service Pack. Vi rekommenderar att du installerar 
 >
 >Detta görs av CSE för AEM kunder som har hanterade tjänster.
 
-### Anslut AEM till e-handelssystemet {#connect}
+### Anslut AEM till ditt Commerce System {#connect}
 
 AEM kan anslutas till alla handelssystem som har en tillgänglig GraphQL-slutpunkt för AEM. Dessa slutpunkter är vanligtvis offentligt tillgängliga eller kan anslutas via privata VPN-anslutningar eller lokala anslutningar beroende på de enskilda projektinställningarna.
 
@@ -50,11 +50,11 @@ Ersätt värdet för `url` i `com.adobe.cq.commerce.graphql.client.impl.GraphqlC
 
 AEM Content and Commerce Add-On och CIF Core Components använder både anslutningar på serversidan och på klientsidan. CIF-kärnkomponenter på klientsidan och CIF-tilläggsverktyg ansluter som standard till `/api/graphql`. Detta kan vid behov justeras via CIF-Cloud Servicens konfiguration (se nedan).
 
-CIF-tillägget tillhandahåller en GraphQL-proxyserver på `/api/graphql` som kan användas för [lokal utveckling](develop.md). För produktionsdistributioner rekommenderar vi starkt att du skapar en omvänd proxy till Commerce GraphQL-slutpunkten via AEM Dispatcher eller andra nätverkslager (som CDN).
+CIF Add-On tillhandahåller en GraphQL-proxyserver på `/api/graphql` som kan användas för [lokal utveckling](develop.md). För produktionsdistributioner rekommenderar vi starkt att du skapar en omvänd proxy till Commerce GraphQL-slutpunkten via AEM Dispatcher eller andra nätverkslager (som CDN).
 
-## Konfigurera butiker och kataloger {#catalog}
+## Konfigurerar arkiv och kataloger {#catalog}
 
-Tillägget och [CIF Core-komponenterna](https://github.com/adobe/aem-core-cif-components) kan användas på flera AEM webbplatsstrukturer som är kopplade till olika e-handelsbutiker (eller butiksvyer etc.). Som standard distribueras CIF-tillägget med en standardkonfiguration som ansluter till Adobe Commerce standardbutik och -katalog (Magento).
+Tillägget och [CIF Core-komponenterna](https://github.com/adobe/aem-core-cif-components) kan användas på flera AEM webbplatsstrukturer som är kopplade till olika e-handelsbutiker (eller butiksvyer osv.). Som standard distribueras CIF-tillägget med en standardkonfiguration som ansluter till Adobe Commerce standardbutik och -katalog (Magento).
 
 Den här konfigurationen kan justeras för projektet via CIF-Cloud Servicens konfiguration enligt följande steg:
 
@@ -80,7 +80,7 @@ Följande egenskaper kan konfigureras:
    > Stöd för UID introducerades i Adobe Commerce (Magento) 2.4.2. Aktivera bara detta om e-handelsbackend har stöd för ett GraphQL-schema av version 2.4.2 eller senare.
 - Katalogrotkategoriidentifierare - identifieraren (UID eller ID) för arkivkatalogroten
 
-Konfigurationen som visas ovan är för referens. Projekten ska innehålla egna konfigurationer.
+Konfigurationen som visas ovan är för referens. Projekten ska ha egna konfigurationer.
 
 Mer komplexa inställningar som använder flera AEM webbplatsstrukturer i kombination med olika e-handelskataloger finns i [Commerce Multi-Store Setup](configuring/multi-store-setup.md) självstudiekursen.
 
