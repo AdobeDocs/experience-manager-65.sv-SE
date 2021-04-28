@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: platform
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
 workflow-type: tm+mt
-source-wordcount: '178'
+source-wordcount: '151'
 ht-degree: 2%
 
 ---
@@ -47,6 +47,3 @@ eCommerce API tillhandahålls av paketen:
 
 Mer information finns i [API-dokumentationen](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html).
 
->[!NOTE]
->
->En fullständig artikel med information om alla steg som krävs för att skapa en e-handelsleverantör finns i [Skapa anpassade Adobe Experience Manager 6.2-e-handelsleverantörer](https://helpx.adobe.com/experience-manager/using/ecommerce62.html).
