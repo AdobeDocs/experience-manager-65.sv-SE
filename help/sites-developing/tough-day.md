@@ -10,14 +10,14 @@ topic-tags: testing
 content-type: reference
 discoiquuid: ea6b40fe-b6e1-495c-b34f-8815a4e2e42e
 docset: aem65
+exl-id: ceb9671c-57f9-4d81-94c0-0dbccd4d90a2
 translation-type: tm+mt
-source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
+source-git-commit: 3727b561a2ee9778d75f18530caf16c6c3ef846a
 workflow-type: tm+mt
 source-wordcount: '1909'
 ht-degree: 1%
 
 ---
-
 
 # Tålig dag{#tough-day}
 
