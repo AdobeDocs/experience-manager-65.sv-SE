@@ -10,14 +10,14 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 7e2b30a3-75ff-4735-8038-5c5391ac36f3
 docset: aem65
+exl-id: 2a0bf59d-8829-4142-9cb4-dcef90f53ae9
 translation-type: tm+mt
-source-git-commit: 4e5e6ef022dc9f083859e13ab9c86b622fc3d46e
+source-git-commit: 429f3ee859477fb38938fd6b9706c8006623eb03
 workflow-type: tm+mt
-source-wordcount: '2793'
+source-wordcount: '2815'
 ht-degree: 0%
 
 ---
-
 
 # Rapportering {#reporting}
 
@@ -31,6 +31,10 @@ För att hjälpa dig att övervaka och analysera instansens tillstånd finns AEM
 * [Användarrapport](#user-report)
 * [Instansrapport för arbetsflöde](#workflow-instance-report)
 * [Arbetsflödesrapport](#workflow-report)
+
+>[!NOTE]
+>
+>Rapporterna är bara tillgängliga i det klassiska användargränssnittet. Systemövervakning och rapportering i det moderna användargränssnittet finns i [Operations Dashboard.](/help/sites-administering/operations-dashboard.md)
 
 Alla rapporter kan nås från **Verktyg**-konsolen. Välj **Rapporter** i den vänstra rutan och dubbelklicka sedan på önskad rapport i den högra rutan för att öppna den för visning och/eller konfiguration.
 
@@ -564,4 +568,4 @@ I en AEM är följande behörigheter förinställda för rapporterna:
 
    `workflow-users` - läsa och skriva
 
-Alla medlemmar i `administrators`-gruppen har de rättigheter som krävs för att skapa nya rapporter.
+Alla medlemmar i `administrators`-gruppen har den behörighet som krävs för att skapa nya rapporter.
