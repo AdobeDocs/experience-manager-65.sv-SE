@@ -9,14 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
 discoiquuid: 6e913190-be92-4862-a8b9-517f8bde0044
+exl-id: f6f32290-422e-4037-89d8-d9f414332e8e
 translation-type: tm+mt
-source-git-commit: 28fdb57f51a5bd97ce78b626db86f4a59de6f0be
+source-git-commit: 78e28636eec331314c2f29c93d516215b1572f20
 workflow-type: tm+mt
-source-wordcount: '3386'
+source-wordcount: '3367'
 ht-degree: 0%
 
 ---
-
 
 # AEM Core Concepts {#aem-core-concepts}
 
@@ -178,7 +178,7 @@ Om du använder exemplet ovan och om `sling:resourceType` är `hr/jobs` gäller 
 
    Skriptet kommer att vara /apps/hr/jobs/jobs.esp; den sista delen av sling:resourceType utgör filnamnet.
 
-* Begäranden om POST (alla begärandetyper utom GET/HEAD, metodnamnet måste vara versaler)
+* Begäranden om POST (alla förfrågningstyper utom GET/HEAD, metodnamnet måste vara versaler)
 
    POSTEN används i skriptnamnet.
 
@@ -441,7 +441,7 @@ I följande lista visas en översikt över strukturen som visas i databasen.
 
 * `/var`
 
-   Filer som ändras och uppdateras av systemet. som granskningsloggar, statistik, händelsehantering. Undermappen `/var/classes` innehåller java-servlets i källformulär och kompilerade formulär som har genererats från komponentskripten.
+   Filer som ändras och uppdateras av systemet. som granskningsloggar, statistik, händelsehantering.
 
 ## Miljöer {#environments}
 
