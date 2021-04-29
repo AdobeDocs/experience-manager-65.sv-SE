@@ -77,7 +77,7 @@ Om du vill göra det måste du [säkerhetskopiera hela databasen](#backing-up-yo
 
 >[!CAUTION]
 >
->Om du använder en programserver från en annan tillverkare kan ytterligare mappar finnas på en annan plats och behöver också säkerhetskopieras. Mer information om hur du installerar programservrar finns i [Installera AEM med en Application Server](/help/sites-deploying/application-server-install.md). [](/content/docs/en/aem/6-3/deploy/installing.md#installing adobe experience manager with an application server)
+>Om du använder en programserver från en annan tillverkare kan ytterligare mappar finnas på en annan plats och behöver också säkerhetskopieras. Mer information om hur du installerar programservrar finns i [Installera AEM med en Application Server](/help/sites-deploying/application-server-install.md).
 
 >[!CAUTION]
 >
