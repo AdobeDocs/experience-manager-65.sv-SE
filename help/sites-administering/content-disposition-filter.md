@@ -9,16 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: Security
 discoiquuid: badfaa18-472e-4777-a7dc-9c28441b38b7
+exl-id: 1c3d0d48-5c31-42a8-8698-922d7c2127e9
 translation-type: tm+mt
-source-git-commit: bb50e530f0d015c0e7d06650157e3e3994082483
+source-git-commit: cd895fcab5adce600ce230fb6867392e45963c16
 workflow-type: tm+mt
-source-wordcount: '271'
+source-wordcount: '255'
 ht-degree: 0%
 
 ---
 
-
-# Innehållsdispositionsfilter{#content-disposition-filter}
+# Innehållsdispositionsfilter {#content-disposition-filter}
 
 Dispositionsfiltret är en säkerhetsfunktion mot XSS-attacker på SVG-filer.
 
@@ -30,8 +30,8 @@ Du kan visa filtret [Apache Sling Content Disposition Filter i GitHub](https://g
 
 Alternativen för Innehållsdispositionsfilter innehåller följande funktioner:
 
-* Sökvägar för innehållsdisposition: en lista med sökvägar där filtret ska användas följt av en lista med MIME-typer som ska uteslutas på den sökvägen. Sökvägen måste vara en absolut sökväg och kan innehålla ett jokertecken (&#39;&amp;ast;&#39;) i slutet, för att matcha alla resurssökvägar med det angivna sökvägsprefixet. Till exempel: /content/&amp;ast;:image/jpeg,image/svg+xml &quot; tillämpar filtret på alla noder i /content, utom jpg- och svg-bilder
+* **Innehållsdispositionssökvägar:** en lista över sökvägar där filtret ska användas följt av en lista med MIME-typer som ska uteslutas på den sökvägen. Sökvägen måste vara en absolut sökväg och kan innehålla ett jokertecken (`*`) i slutet, för att matcha alla resurssökvägar med det angivna sökvägsprefixet. Till exempel: `/content/*:image/jpeg,image/svg+xml` kommer att tillämpa filtret på alla noder i `/content? förutom jpg- och svg-bilder
 
-* Uteslutna resurssökvägar: En lista över uteslutna resurser. Varje resurssökväg måste anges som en absolut och fullständig sökväg. Prefixmatchning/jokertecken stöds inte.
+* **Uteslutna resurssökvägar:** en lista över uteslutna resurser. Varje resurssökväg måste anges som en absolut och fullständig sökväg. Prefixmatchning/jokertecken stöds inte.
 
-* Aktivera för alla resurssökvägar: Den här flaggan anger om det här filtret ska aktiveras för alla sökvägar, förutom för de uteslutna sökvägarna som definieras av Uteslutna resurssökvägar. Om du anger värdet true ignoreras innehållets dispositionsbanor. Oberoende av konfigurationen täcks bara resurssökvägar som innehåller egenskapen jcr:data eller jcr:content/jcr:data.
+* **Aktivera för alla resurssökvägar:** den här flaggan anger om det här filtret ska aktiveras för alla sökvägar, utom för de uteslutna sökvägarna som definieras av Undantagna resurssökvägar. Om du anger värdet true ignoreras innehållets dispositionsbanor. Oberoende av konfigurationen täcks bara resurssökvägar som innehåller egenskapen `jcr:data` eller `jcr:content/jcr:data`.
