@@ -9,16 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: components
 content-type: reference
 discoiquuid: 104d1c64-b9b3-40f5-8f9b-fe92d9daaa1f
+exl-id: 65f5d5e1-ac11-4a3c-8a51-ce06a741c264
 translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+source-git-commit: baf2c6339a554743b6cc69486fb77b121048ba4b
 workflow-type: tm+mt
-source-wordcount: '648'
+source-wordcount: '646'
 ht-degree: 2%
 
 ---
 
-
-# Använda Dölj villkor{#using-hide-conditions}
+# Använda Dölj villkor {#using-hide-conditions}
 
 Dölj villkor kan användas för att avgöra om en komponentresurs återges eller inte. Ett exempel på detta är när en mallskapare konfigurerar listkomponenten [](https://helpx.adobe.com/experience-manager/core-components/using/list.html) i [mallredigeraren](/help/sites-authoring/templates.md) och bestämmer sig för att inaktivera alternativen för att skapa listan baserat på underordnade sidor. Om du inaktiverar det här alternativet i designdialogrutan anges en egenskap så att när listkomponenten återges utvärderas dolda villkor och alternativet att visa underordnade sidor inte visas.
 
@@ -72,16 +72,15 @@ Om en mallskapare väljer att inaktivera alternativet för underordnade sidor, s
 
    ![chlimage_1-219](assets/chlimage_1-219.png)
 
-1. En principnod skapas under `/conf/we-retail/settings/wcm/policies/weretail/components/content/lis`t med egenskapen `disableChildren` inställd på `true`.
-1. Villkoret hide definieras som värdet på en `granite:hid`e-egenskap i egenskapsnoden `/conf/we-retail/settings/wcm/policies/weretail/components/content/list` i dialogrutan
+1. En principnod skapas under `/conf/we-retail/settings/wcm/policies/weretail/components/content/list` med egenskapen `disableChildren` inställd på `true`.
+1. Villkoret hide definieras som värdet för en `granite:hide`-egenskap i egenskapsnoden `/conf/we-retail/settings/wcm/policies/weretail/components/content/list`
 
    ![chlimage_1-220](assets/chlimage_1-220.png)
 
-1. Värdet `disableChildren` hämtas från designkonfigurationen och uttrycket `${cdDesign.disableChildren}` utvärderas till `false`, vilket innebär att alternativet inte återges som en del av komponenten.
+1. Värdet `disableChildren` hämtas från designkonfigurationen och uttrycket `${cqDesign.disableChildren}` utvärderas till `false`, vilket innebär att alternativet inte återges som en del av komponenten.
 
    Du kan visa det dolda uttrycket som värdet för egenskapen `granite:hide` [i GitHub här](https://github.com/Adobe-Marketing-Cloud/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/list/v1/list/_cq_dialog/.content.xml#L40).
 
 1. Alternativet **Underordnade sidor** återges inte längre för sidförfattaren när listkomponenten används.
 
    ![chlimage_1-221](assets/chlimage_1-221.png)
-
