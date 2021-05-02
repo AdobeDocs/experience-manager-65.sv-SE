@@ -1,21 +1,21 @@
 ---
-title: 'Metadata-scheman för att definiera layout för metadataegenskapssida i [!DNL Adobe Experience Manager Assets]. '
+title: 'Metadata-scheman definierar layouten för metadataegenskapssida '
 description: Metadata-schemat definierar layouten för egenskapssidan och de metadataegenskaper som visas för resurser. Lär dig hur du skapar anpassade metadatamatcheman, redigerar metadatamatchema och hur du använder metadatamatchema på resurser.
 contentOwner: AG
-role: Business Practitioner, Administrator
+role: Business Practitioner,Administrator
 feature: Metadata
+exl-id: 0dd322cd-ce97-4335-825d-71f72a5e438c
 translation-type: tm+mt
-source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
+source-git-commit: ae0c8bda918e2e8a7a6a32e0228d1a2410b283d9
 workflow-type: tm+mt
-source-wordcount: '3412'
+source-wordcount: '3378'
 ht-degree: 5%
 
 ---
 
-
 # Metadata schemas {#metadata-schemas}
 
-Organisationer har en metadatamodell som förbättrar tillgångsidentifiering, användning, interoperabilitet och så vidare. Korrekt metadataanvändning är till stor hjälp för att underhålla metadatadrivna arbetsflöden och processer. Om du vill följa en metadatastrategi och standarder för hela organisationen kan du använda metadatamodeller som hjälper DAM-användare att anpassa sig. [!DNL Adobe Experience Manager] Med kan du enkelt och flexibelt skapa, underhålla och använda metadatamatchningar.
+Organisationer har en metadatamodell som förbättrar tillgångsidentifiering, användning, interoperabilitet och så vidare. Korrigera metadataprogram är akrossbart för att underhålla metadatadrivna arbetsflöden och processer. Om du vill följa en metadatastrategi och standarder för hela organisationen kan du använda metadatamodeller som hjälper DAM-användare att anpassa sig. [!DNL Adobe Experience Manager] Med kan du enkelt och flexibelt skapa, underhålla och använda metadatamatchningar.
 
 I [!DNL Adobe Experience Manager Assets] innehåller scheman specifika fält för specifik information som ska fyllas i. Den innehåller även layoutinformation för att visa metadatafält på ett användarvänligt sätt. Metadataegenskaperna innehåller titel, beskrivning, MIME-typer, taggar med mera. Du kan använda redigeraren [!UICONTROL Metadata Schema Forms] om du vill ändra befintliga scheman eller lägga till anpassade metadatamatcheman.
 
@@ -27,9 +27,9 @@ Så här visar och redigerar du egenskapssidan för en resurs:
 
    ![Fliken Grundläggande i resursegenskaper, där resurstypen inte kan ändras](assets/asset-properties-basic-tab.png)
 
-*Bild: Fliken Grundläggande för resurs  [!UICONTROL Properties].*
+   *Bild: Fliken Grundläggande för resurs  [!UICONTROL Properties].*
 
-Om du vill ändra MIME-typen för en resurs använder du ett anpassat metadatamatchschema eller ändrar ett befintligt formulär. Mer information finns i [Redigera metadataschema Forms](/help/assets/metadata-schemas.md#edit-metadata-schema-forms). Om du ändrar metadatamatchemat för en MIME-typ ändras egenskapens sidlayout för resurserna och alla undertyper. Om du till exempel ändrar ett jpeg-schema under `default/image` ändras bara metadatalayouten (resursegenskaper) för resurser med MIME-typen `image/jpeg`. Om du redigerar standardschemat ändrar du metadatalayouten för alla typer av resurser.
+   Om du vill ändra MIME-typen för en resurs använder du ett anpassat metadatamatchschema eller ändrar ett befintligt formulär. Mer information finns i [Redigera metadataschema Forms](#edit-metadata-schema-forms). Om du ändrar metadatamatchemat för en MIME-typ ändras egenskapens sidlayout för resurserna och alla undertyper. Om du till exempel ändrar ett jpeg-schema under `default/image` ändras bara metadatalayouten (resursegenskaper) för resurser med MIME-typen `image/jpeg`. Om du redigerar standardschemat ändrar du metadatalayouten för alla typer av resurser.
 
 ## Metadata Schema-formulär {#default-metadata-schema-forms}
 
@@ -113,7 +113,7 @@ Följande är giltiga värden för den här egenskapen:
 
 * `./jcr:content/metadata/dc:title`: Lagrar värdet vid resursens metadatanod som egenskapen `dc:title`.
 
-* `./jcr:created`: Lagrar datum och tid för när en resurs skapades. Det är en skyddad egenskap. Om du konfigurerar dessa egenskaper bör du markera dem som Inaktivera redigering i Adobe.
+* `./jcr:created`: Lagrar datum och tid för när en resurs skapades. Det är en skyddad egenskap. Om du konfigurerar dessa egenskaper bör du markera dem som Inaktivera redigering i Adobe. Annars inträffar felet ”Det gick inte att ändra resurserna” när du sparar resursens egenskaper.
 
 För att komponenten ska visas korrekt i metadataschemaformuläret bör egenskapssökvägen inte innehålla några blanksteg.
 
@@ -301,7 +301,7 @@ I det här fallet skapar du en nod på `/etc/dam/metadataeditor/mimetypemappings
 [!DNL Assets] mappar följande MIME-typer och schemaformulär:
 
 | Schemaformulär | MIME-typer |
-| --------------------------- | --------------------------------------------------- |
+|---|---|
 | image/jpeg | image/pjpeg |
 | bild/tiff | image/x-tiff |
 | application/pdf | application/postscript |
@@ -326,9 +326,7 @@ Du kan t.ex. definiera en variant av standardmetadataschemat och använda det p�
 
 Endast resurser som har överförts till den mapp som det här schemat används på följer de ändrade metadata som har definierats i variantmetadataschemat. [!DNL Assets] i andra mappar där det ursprungliga schemat används fortsätter att överensstämma med de metadata som definierats i det ursprungliga schemat.
 
-Metadataarv av resurser baseras på det schema som tillämpas på mappen på första nivån i hierarkin. Om en mapp inte innehåller undermappar ärver resurserna i mappen metadata från det schema som används i mappen.
-
-Du kan använda ett annat schema på undermappen. Resurserna i en undermapp ärver metadatamatchemat för den omedelbara undermappen. Om inget schema eller samma schema används på undermappsnivå ärver dess resurser schemat från den överordnade mappen.
+Metadatarv av resurser baseras på det schema som tillämpas på den översta mappen i hierarkin. Samma schema tillämpas på eller ärvs av undermapparna. Om ett annat schema används på undermappsnivå avbryts arvet.
 
 1. I [!DNL Experience Manager]-gränssnittet går du till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Schemas]**. Sidan **[!UICONTROL Metadata Schema Forms]** visas.
 1. Markera kryssrutan före ett formulär, till exempel standardformuläret för metadata, och klicka på **[!UICONTROL Copy]** och spara det som ett anpassat formulär. Ange ett anpassat namn för formuläret, till exempel `my_default`. Du kan också skapa ett eget formulär.
