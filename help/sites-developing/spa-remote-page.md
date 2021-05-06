@@ -1,10 +1,11 @@
 ---
 title: RemotePage-komponenten
 description: RemotePage-komponenten är en anpassad sidkomponent för redigering av SPA för fjärreaktion i AEM.
+exl-id: 3f015997-0d42-4241-a890-0f16a19c5e34
 translation-type: tm+mt
-source-git-commit: 431bed450ed5b0239d9191dcf061f01e64b8981a
+source-git-commit: a92358d187aa78e05dd9b5a7bd4ae14bf0972f62
 workflow-type: tm+mt
-source-wordcount: '261'
+source-wordcount: '354'
 ht-degree: 0%
 
 ---
@@ -28,6 +29,14 @@ Läs artikeln [Redigera en extern SPA i AEM](spa-edit-external.md) om du vill ha
 * Aktivera CORS under utveckling
 * Konfigurera fjärr-URL i Sidegenskaper
 * Återge SPA i AEM
+* Webbprogrammet måste använda ett resurmanifest som något av följande och visa en asset-manifest.json-fil i domänroten som listar alla CSS- och JS-filer som ska läsas in i en entrypoints-egenskap:
+   * https://github.com/shellscape/webpack-manifest-plugin
+   * https://github.com/webdeveric/webpack-assets-manifest
+   * https://github.com/mugi-uno/parcel-plugin-bundle-manifest
+
+   ![Entrypoints](assets/asset-manifest-entrypoints.png)
+
+* Programmet måste kunna initieras i ett `<div id="root"></div>` under body-elementet. Om en annan kod förväntas för att programmet ska kunna instansieras måste detta justeras i HTML-skripten för proxykomponenten som har `sling:resourceSuperType="spa-project-core/components/remotepage`.
 
 ## Begränsningar {#limitations}
 
