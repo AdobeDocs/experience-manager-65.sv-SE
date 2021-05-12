@@ -11,11 +11,10 @@ content-type: reference
 discoiquuid: de7d7209-c194-4d19-853b-468ebf3fa4b2
 docset: aem65
 exl-id: 314a6409-398c-470b-8799-0c4e6f745141
-feature: Security
-translation-type: tm+mt
-source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
+feature: Dokumentskydd
+source-git-commit: 1c6ee9b547fd0870feb510e35ffdcb8e3f857f18
 workflow-type: tm+mt
-source-wordcount: '2842'
+source-wordcount: '2873'
 ht-degree: 0%
 
 ---
@@ -26,7 +25,7 @@ I det här avsnittet beskrivs olika åtgärder som du bör vidta för att se til
 
 >[!NOTE]
 >
->Ytterligare information [finns också tillgänglig om de farligaste säkerhetshot som publicerats av Open Web Application Security Project (OWASP)](https://www.owasp.org/index.php/OWASP_Top_Ten_Project).
+>Ytterligare information finns också om de farligaste säkerhetshot som publicerats av [Open Web Application Security Project (OWASP)](https://owasp.org/www-project-top-ten/).
 
 >[!NOTE]
 >
@@ -155,7 +154,7 @@ Dessa OSGi-utvecklingspaket bör avinstalleras både på författaren och public
 
 ### Kontrollera om Sling-utvecklingspaketet finns {#check-if-the-sling-development-bundle-is-present}
 
-[AEM Developer Tools for Eclipse](/help/sites-developing/aem-eclipse.md) distribuerar installationen av Apache Sling Tooling Support (org.apache.sling.tooling.support.install).
+[AEM Developer Tools for Eclipse](/help/sites-developing/aem-eclipse.md) distribuerar installationsprogrammet för Apache Sling Tooling (org.apache.sling.tooling.support.install).
 
 Detta OSGi-paket bör avinstalleras både på författaren och publicera produktionssystem innan de blir tillgängliga.
 
@@ -163,7 +162,7 @@ Detta OSGi-paket bör avinstalleras både på författaren och publicera produkt
 
 #### CSRF Protection Framework {#the-csrf-protection-framework}
 
-AEM 6.1 levereras med en mekanism som hjälper till att skydda mot attacker med attacker med smidning av korsbegäran mellan webbplatser, som kallas **CSRF Protection Framework**. Mer information om hur du använder den finns i [dokumentationen](/help/sites-developing/csrf-protection.md).
+AEM 6.1 levereras med en mekanism som hjälper till att skydda mot attacker med attacker med smidda korswebbplatser som kallas **CSRF Protection Framework**. Mer information om hur du använder den finns i [dokumentationen](/help/sites-developing/csrf-protection.md).
 
 #### Sling Referer-filtret {#the-sling-referrer-filter}
 
@@ -333,11 +332,9 @@ Följ stegen nedan för att minska detta:
 
 **Minska mot DoS som orsakas av tjänsten för hämtning av resurser**
 
-Med standardtjänsten för hämtning av resurser i AEM kan autentiserade användare skicka godtyckligt stora, samtidiga hämtningsbegäranden för att skapa ZIP-filer med resurser som är synliga för dem och som kan överbelasta servern och/eller nätverket.
+Med standardservern för hämtning av resurser kan autentiserade användare skicka godtyckligt stora begäranden om samtidig hämtning för att skapa ZIP-filer med resurser. Om du skapar stora ZIP-arkiv kan servern och nätverket överbelastas. För att minska en potentiell denial of service-risk (DoS) som orsakas av det här beteendet är OSGi-komponenten inaktiverad som standard på [!DNL Experience Manager]-publiceringsinstansen. `AssetDownloadServlet` Den är aktiverad som standard på [!DNL Experience Manager]-författarinstansen.
 
-För att minska de potentiella DoS-riskerna som orsakas av den här funktionen är `AssetDownloadServlet` OSGi-komponenten inaktiverad som standard för publiceringsinstanser i de senaste AEM versionerna.
-
-Om din installation kräver att hämtningsservern för resurser är aktiverad kan du läsa [den här artikeln](/help/assets/download-assets-from-aem.md) för mer information.
+Om du inte behöver nedladdningsfunktionen kan du inaktivera servleten för att skapa och publicera distributioner. Om din installation kräver att hämtningsfunktionen för resurser är aktiverad finns mer information i [den här artikeln](/help/assets/download-assets-from-aem.md). Du kan också ange en maximal hämtningsgräns som din distribution kan stödja.
 
 ### Inaktivera WebDAV {#disable-webdav}
 
