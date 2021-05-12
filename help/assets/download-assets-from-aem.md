@@ -3,15 +3,14 @@ title: Hämta resurser
 description: Lär dig hur du hämtar resurser från [!DNL Adobe Experience Manager] och aktiverar eller inaktiverar hämtningsfunktionen.
 contentOwner: AG
 role: Business Practitioner
-feature: Asset Management,Asset Distribution
-translation-type: tm+mt
-source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
+feature: Resurshantering,Resursfördelning
+exl-id: 6bda9e52-5a6e-446e-99c7-96793482c190
+source-git-commit: 92983232216a5c7c563ebddc3baf6fcd81aaa4e2
 workflow-type: tm+mt
-source-wordcount: '833'
+source-wordcount: '862'
 ht-degree: 0%
 
 ---
-
 
 # Hämta resurser från [!DNL Adobe Experience Manager] {#download-assets-from-aem}
 
@@ -64,6 +63,8 @@ Om du vill tillåta hämtning av resurser från DAM, till exempel när du använ
    enabled=B"true"
    asset.download.prezip.maxcontentsize=I"102400"
    ```
+
+Som standard har `GET` förfrågningar om att hämta filer [!DNL Experience Manager] en begränsning på 50 MB för ZIP-arkivets hämtningsstorlek. Hämtningar som initierats via `POST`-begäranden eller användargränssnittet påverkas inte av den här gränsen.
 
 ## Inaktivera resurshämtningsservlet {#disable-asset-download-servlet}
 
