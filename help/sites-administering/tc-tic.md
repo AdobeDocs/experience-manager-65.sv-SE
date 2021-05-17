@@ -9,15 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: site-features
 content-type: reference
 discoiquuid: 200f51ab-f9bf-4989-91af-c3904fc673e5
-feature: Language Copy
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+feature: Språkkopia
+exl-id: 7562754b-d9fd-441b-8ae5-c7eebe458cef
+source-git-commit: bed7ffd413c7826cf0e419fa1c31e3d3c325d4b1
 workflow-type: tm+mt
-source-wordcount: '1565'
+source-wordcount: '1571'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera översättningsintegreringsramverket{#configuring-the-translation-integration-framework}
 
@@ -40,6 +39,7 @@ Följande översättningsleverantörer tillhandahåller en implementering av det
 * [Memsource](https://exchange.adobe.com/experiencecloud.details.103166.memsource-connector-for-adobe-experience-manager.html)
 * [Molnord](https://exchange.adobe.com/experiencecloud.details.90019.html)
 * [CrossLang NV](https://exchange.adobe.com/experiencecloud.details.90049.crosslang-xtm-for-adobe-experience-manager.html)
+* [XTM Cloud](https://exchange.adobe.com/experiencecloud.details.105037.xtm-connect-for-adobe-experience-manager.html)
 * [Lingotek](https://exchange.adobe.com/experiencecloud.details.90088.lingotek-collaborative-translation-platform.html)
 * [Smartling](https://exchange.adobe.com/experiencecloud.details.90101.smartling-connector-for-adobe-experience-manager.html)
 * [SDL](https://exchange.adobe.com/experiencecloud.details.100110.sdl-translation-management.html)
@@ -228,4 +228,3 @@ Koppla en sida till översättningsintegreringsramverket som definierar hur du v
 1. Klicka eller tryck på Redigera och sedan på fliken Cloud Services.
 1. Klicka eller tryck på Add Configuration (Lägg till konfiguration) > Translation Integration (Översättningsintegrering).
 1. Markera det översättningsintegreringsramverk som ska användas och klicka eller tryck sedan på Klar.
-
