@@ -3,10 +3,9 @@ title: Använd Connected Assets när du vill dela DAM-resurser i [!DNL Sites]
 description: Använd resurser som är tillgängliga på en fjärrdistribution av [!DNL Adobe Experience Manager Assets] deployment when creating your web pages on another [!DNL Adobe Experience Manager Sites] data.
 contentOwner: AG
 role: Business Practitioner, Administrator, Leader
-feature: Connected Assets,User and Groups
+feature: Anslutna resurser,Användare och grupper
 exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
-translation-type: tm+mt
-source-git-commit: 48e5b55a1d79fef6172f684cb65a4137113fb7fb
+source-git-commit: c07467feb96c25a4bac1916f88f04fdb37979ee1
 workflow-type: tm+mt
 source-wordcount: '2652'
 ht-degree: 27%
@@ -182,7 +181,7 @@ Följ de här stegen för att visa och hantera referenser i [!DNL Assets]-distri
 
 ## Begränsningar och bästa praxis {#tip-and-limitations}
 
-* Konfigurera funktionen [Asset Insight](/help/assets/asset-insights.md) i [!DNL Sites]-instansen för att få information om resursanvändning.
+* Konfigurera funktionen [Assets Insight](/help/assets/asset-insights.md) i [!DNL Sites]-instansen för att få information om resursanvändning.
 
 ### Behörigheter och resurshantering {#permissions-and-managing-assets}
 
