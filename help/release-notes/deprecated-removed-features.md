@@ -1,14 +1,13 @@
 ---
 title: Borttagna funktioner i Adobe Experience Manager 6.5.
 description: Versionsinformation om borttagna funktioner i Adobe Experience Manager 6.5.
-translation-type: tm+mt
-source-git-commit: 7035c19a109ff67655ee0419aa37d1723e2189cc
+exl-id: d9b6140a-c37d-4b90-a60c-01f471d65621
+source-git-commit: d19b203ffe75a5628f350113d4d74a2916beffc8
 workflow-type: tm+mt
-source-wordcount: '1719'
+source-wordcount: '1736'
 ht-degree: 2%
 
 ---
-
 
 # Inaktuella och borttagna funktioner {#deprecated-and-removed-features}
 
@@ -29,7 +28,7 @@ Kunderna rekommenderas att granska om de använder funktionen/funktionen i den a
 
 | Yta | Funktion | Ersättning |
 |---|---|---|
-| Integrering med Creative Cloud | AEM till Mappdelning i Creative Cloud introducerades i AEM 6.2 som ett sätt att ge kreativa användare åtkomst till resurser från AEM, så att de kan öppna dem i CC-program och överföra nya filer eller spara ändringar i AEM. En ny funktion i Creative Cloud, Adobe Asset Link, ger en mycket bättre användarupplevelse och kraftfullare åtkomst till AEM direkt inifrån Photoshop, InDesign och Illustrator. Adobe planerar inte att göra ytterligare förbättringar av integrationen mellan AEM och Creative Cloud Mappdelning. Funktionen ingår i AEM, men kunderna rekommenderas att använda ersättningslösningar. | Kunder rekommenderas att byta till nya integrationsfunktioner för Creative Cloud, som Adobe Asset Link eller AEM. Mer information finns i Bästa praxis för integrering av AEM och Creative Cloud. |
+| Integrering med Creative Cloud | AEM till Mappdelning i Creative Cloud introducerades i AEM 6.2 som ett sätt att ge kreativa användare åtkomst till resurser från AEM, så att de kan öppna dem i CC-program och överföra nya filer eller spara ändringar i AEM. En ny funktion i Creative Cloud, Adobe Asset Link, ger en mycket bättre användarupplevelse och kraftfullare åtkomst till AEM direkt inifrån Photoshop, InDesign och Illustrator. Adobe planerar inte att göra ytterligare förbättringar av integrationen mellan AEM och Creative Cloud Mappdelning. Funktionen ingår i AEM, men kunderna rekommenderas att använda ersättningslösningar. | Kunder rekommenderas att byta till nya integrationsfunktioner för Creative Cloud, som Adobe Asset Link eller AEM. |
 | Assets | `AssetDownloadServlet` är inaktiverat som standard för publiceringsinstanserna. Mer information finns i [AEM checklista för säkerhet](/help/sites-administering/security-checklist.md). | Konfiguration som beskrivs i [AEM checklista för säkerhet](/help/sites-administering/security-checklist.md). |
 | Resurser | Om en användare inte har tillräcklig behörighet (läs- och skrivbehörighet) för `/content/dam/collections` kan användaren inte skapa en samling. | Följ användarens inställningar för åtkomstkontroll och se till att du har rätt behörigheter. |
 | Adobe Search &amp; Promote | Integreringen med Adobe Search &amp; Promote är föråldrad. Adobe planerar inte att göra ytterligare förbättringar av integrationen av Sök och Befordra. Observera att integrering med Sök och Befordra fortfarande stöds fullt ut när den är inaktuell. |  |
@@ -57,6 +56,7 @@ I det här avsnittet visas funktioner som har tagits bort från AEM 6.5. Tidigar
 
 | Yta | Funktion | Ersättning |
 |--- |--- |--- |
+| Integrering med [!DNL Experience Cloud] | Du kan synkronisera dina resurser med [!DNL Experience Cloud] genom att konfigurera via [!DNL Adobe I/O]. [!DNL Adobe Experience Cloud] kallades tidigare  [!DNL Adobe Marketing Cloud]. | Om du har frågor, [kontakta Adobe kundtjänst](https://www.adobe.com/account/sign-in.supportportal.html). |
 | Analytics Activity Map | Den version av Activity Map som ingår i AEM. | På grund av säkerhetsändringar i Adobe Analytics API är det inte längre möjligt att använda den version av Activity Map som ingår i AEM. Använd plugin-programmet [ActivityMap som finns i Adobe Analytics](https://docs.adobe.com/content/help/en/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html). |
 | Integreringar | ExactTarget-integrering har tagits bort från standarddistributionen (Quickstart) och är inte längre tillgänglig. | Ingen ersättning. |
 | Integreringar | Integreringen av Salesforce Force API har tagits bort från standarddistributionen (Quickstart) och är nu ett extra paket att installera från [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html). | Funktionen är fortfarande tillgänglig. |
