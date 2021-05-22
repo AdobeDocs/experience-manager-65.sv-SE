@@ -6,28 +6,27 @@ audience: end-user
 user-guide-title: Resurshandbok
 breadcrumb-title: Resurshandbok
 user-guide-description: Skapa, hantera, bearbeta och distribuera digitalt material.
-translation-type: tm+mt
-source-git-commit: ad67634278088f8f953fde61a3543acdd70537dd
+source-git-commit: d19b203ffe75a5628f350113d4d74a2916beffc8
 workflow-type: tm+mt
-source-wordcount: '590'
+source-wordcount: '582'
 ht-degree: 34%
 
 ---
 
 
-# Resursguide {#assets}
+# Resurshandbok {#assets}
 
 + [[!DNL Assets] användarhandbok](home.md)
 + [[!DNL Experience Manager] 6.5 Versionsinformation om resurser](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/assets.html)
 + [Om DAM](assets.md)
 + [Metodtips för resurser](best-practices-for-assets.md)
-+ [Tillgänglighet i [!DNL Assets]](accessibility.md)
++ [Hjälpmedel i [!DNL Assets]](accessibility.md)
 + Använd Experience Manager-resurser {#using}
    + [[!DNL Assets] upplevelse på hemsidan](assets-home-page.md)
    + [Söka efter digitala resurser](search-assets.md)
    + [Arbeta med metadata för resurser](metadata.md)
    + [Flerspråkiga resurser](multilingual-assets.md)
-   + [Använda  [!DNL Adobe Stock] resurser i resurser](aem-assets-adobe-stock.md)
+   + [Använd [!DNL Adobe Stock] resurser i resurser](aem-assets-adobe-stock.md)
    + [Förhandsgranska 3D-resurser](previewing-3d-assets.md)
    + [Granska resurser i mappar och samlingar](bulk-approval.md)
    + [Förbättrade smarta taggar](enhanced-smart-tags.md)
@@ -57,7 +56,7 @@ ht-degree: 34%
    + [Video](s7-video.md)
    + [Lägga till Dynamic Media-funktioner på sidan](scene7.md)
    + [Leverera innehåll med HTTP2](http2.md)
-   + [Leverera Dynamic Media-material](delivering-dynamic-media-assets.md)
+   + [Leverera Dynamic Media-resurser](delivering-dynamic-media-assets.md)
    + [Aktivera hotlink-skydd i Dynamic Media](hotlink-protection.md)
    + [Stöd för 3D](/help/assets/assets-3d.md)
    + [Bilduppsättningar](image-sets.md)
@@ -87,11 +86,11 @@ ht-degree: 34%
    + [Anpassa och utöka [!DNL Assets]](extending-assets.md)
    + [Bearbeta resurser med mediehanterare och arbetsflöden](media-handlers.md)
    + [Utöka sökfunktionen](searchx.md)
-   + [Installera och  [!DNL ImageMagick] konfigurera för att arbeta med [!DNL Assets]](best-practices-for-imagemagick.md)
+   + [Installera och konfigurera [!DNL ImageMagick] för att arbeta med [!DNL Assets]](best-practices-for-imagemagick.md)
    + [Integrera resurser med aktivitetsströmmen](extending-activity-stream.md)
    + [Utöka resursredigeraren](asseteditorx.md)
    + [[!DNL Assets] HTTP-API](mac-api-assets.md)
-   + [Content Fragments support  [!DNL Assets] inHTTP API](assets-api-content-fragments.md)
+   + [Stöd för innehållsfragment i [!DNL Assets] HTTP API](assets-api-content-fragments.md)
    + [[!DNL Assets] proxyutveckling](proxy.md)
 + Administrera resurser {#administer}
    + [Filformat som stöds](assets-formats.md)
@@ -125,10 +124,9 @@ ht-degree: 34%
    + [Flera innehavare för samlingar, kodavsnitt och kodfragment](multi-tenancy.md)
    + [Vattenstämpla dina resurser](watermarking.md)
    + [Resursmallar](asset-templates.md)
-   + [Bästa tillvägagångssätt för att dela mapp med [!DNL Creative Cloud]](aem-cc-folder-sharing-best-practices.md)
-+ Varumärkesportal {#brandportal}
-   + [ [!DNL Assets] Konfigurera med [!DNL Brand Portal]](configure-aem-assets-with-brand-portal.md)
-   + [Publicera resurser på [!DNL Brand Portal]](brand-portal-publish-assets.md)
++ Brand Portal {#brandportal}
+   + [Konfigurera [!DNL Assets] med [!DNL Brand Portal]](configure-aem-assets-with-brand-portal.md)
+   + [Publicera resurser till [!DNL Brand Portal]](brand-portal-publish-assets.md)
    + [Publicera mappar till [!DNL Brand Portal]](brand-portal-publish-folder.md)
    + [Publicera samlingar till [!DNL Brand Portal]](brand-portal-publish-collection.md)
 + Innehållsfragment {#fragments}
