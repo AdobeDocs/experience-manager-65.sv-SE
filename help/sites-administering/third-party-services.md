@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 discoiquuid: e0d6478a-4420-46a6-96fe-082a30ee82f0
-translation-type: tm+mt
-source-git-commit: 471b57a52efc849eb57201e6397221fa4f88c746
+exl-id: 50b70e47-a801-4f0a-be92-4427c4b2cad1
+source-git-commit: d19b203ffe75a5628f350113d4d74a2916beffc8
 workflow-type: tm+mt
-source-wordcount: '339'
+source-wordcount: '335'
 ht-degree: 0%
 
 ---
-
 
 # Integrera med tredjepartstjänster{#integrating-with-third-party-services}
 
@@ -34,7 +33,7 @@ Med AEM kan du integrera med följande icke-Adobe-produkter direkt:
 * Twitter - sociala nätverk
 * YouTube - videodelning
 
-Dessutom kan du integrera AEM med [marknadsföringsmolnet](/help/sites-administering/marketing-cloud.md) och med [Creative Cloud](/help/assets/aem-cc-folder-sharing-best-practices.md).
+Dessutom kan du integrera AEM med [Adobe Creative Cloud](/help/assets/aem-cc-integration-best-practices.md).
 
 ## Integrera med Salesforce {#integrating-with-salesforce}
 
