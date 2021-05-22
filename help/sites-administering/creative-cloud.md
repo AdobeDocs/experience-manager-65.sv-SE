@@ -10,10 +10,9 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 7699c08b-a5b8-4f8b-8856-113d09349f49
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 525b11fbb60fc3568ecc028562ffbf174b8e4c37
+source-git-commit: d19b203ffe75a5628f350113d4d74a2916beffc8
 workflow-type: tm+mt
-source-wordcount: '194'
+source-wordcount: '80'
 ht-degree: 0%
 
 ---
@@ -25,23 +24,26 @@ ht-degree: 0%
 >
 >Mappdelningsfunktionen AEM till Creative Cloud är föråldrad. Kunderna rekommenderas att använda nyare funktioner, som [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) eller [AEM datorprogram](https://helpx.adobe.com/experience-manager/desktop-app/aem-desktop-app.html). Läs mer i [Bästa praxis för integrering av AEM och Creative Cloud](/help/assets/aem-cc-integration-best-practices.md).
 
-Med Adobe Experience Manager (AEM) Assets kan du dela mappar som innehåller resurser med Adobe Creative Cloud-användare. Mer information om hur du konfigurerar Adobe Marketing Cloud så att du kan dela resurser med Adobe Creative Cloud finns i [Konfigurera integrering Assets-Creative Cloud](/help/sites-administering/configure-assets-cc-integration.md).
+<!-- TBD: This article is removed from TOC and is not published. The functionality does not exist.
 
-1. I resurskonsolen väljer du en mapp som du vill dela med Creative Cloud.
+Adobe Experience Manager (AEM) Assets lets you share folders containing assets with Adobe Creative Cloud users. For details on how to configure Adobe Marketing Cloud to let you share assets with Adobe Creative Cloud, see [Configuring Assets-Creative Cloud integration](/help/sites-administering/configure-assets-cc-integration.md).
+
+1. In the Assets console, select a folder to share with Creative Cloud.
 
    ![](assets/chlimage_1-139.png)
 
-1. Klicka på **Dela** i verktygsfältet.
+1. From the toolbar, click **Share**.
 
    ![](assets/chlimage_1-140.png)
 
-1. I listan väljer du alternativet **Adobe Creative Cloud**.
+1. From the list, select the **Adobe Creative Cloud** option.
 
    ![](assets/chlimage_1-141.png)
 
-1. På sidan **Creative Cloud Sharing** lägger du till den användare som ska dela mappen med och klickar sedan på **Spara**.
+1. In the **Creative Cloud Sharing** page, add the user to share the folder with and then click **Save**.
 
    ![](assets/chlimage_1-142.png)
 
-1. Klicka på **OK** för att stänga bekräftelsemeddelandet.
-1. Logga in på Creative Cloud med inloggningsuppgifterna för den användare som du delade mappen med. Den delade mappen är tillgänglig i Creative Cloud.
+1. Click **Ok** to close the confirmation message.
+1. Log on to Creative Cloud with the credentials of the user you shared the folder with. The shared folder is available in Creative Cloud.
+-->
