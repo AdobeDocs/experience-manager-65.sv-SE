@@ -5,14 +5,13 @@ contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
-translation-type: tm+mt
-source-git-commit: 4333cfde433d00ddc4cb013b31fe52956791da46
+exl-id: ba518290-dd82-44dc-ae7c-c8152df89179
+source-git-commit: d19b203ffe75a5628f350113d4d74a2916beffc8
 workflow-type: tm+mt
 source-wordcount: '998'
 ht-degree: 0%
 
 ---
-
 
 # Integrera med Adobe Marketing Cloud{#integrating-with-the-adobe-marketing-cloud}
 
@@ -27,7 +26,7 @@ Med Adobe Experience Manager (AEM) kan du smidigt integrera med följande Adobe 
 * Adobe Search &amp; Promote ger marknadsförarna möjlighet att styra och optimera sökresultaten på sina webbplatser.
 * Med Adobe Campaign kan ni hantera e-postleveransen direkt i Adobe Experience Manager.
 
-Dessutom kan du [integrera AEM med Creative Cloud](/help/assets/aem-cc-folder-sharing-best-practices.md) och med [tredjepartstjänster](/help/sites-administering/third-party-services.md).
+Dessutom kan du [integrera AEM med Creative Cloud](/help/assets/aem-cc-integration-best-practices.md) och med [tredjepartstjänster](/help/sites-administering/third-party-services.md).
 
 ## Integrera med Adobe Analytics {#integrating-with-adobe-analytics}
 
@@ -109,4 +108,3 @@ Läs om AEM och Livefyre:
 * [Komma igång med Livefyre](https://answers.livefyre.com/developers/getting-started)
 
 * [Livefyre och AEM](https://answers.livefyre.com/product/livefyre-for-adobe-experience-manager-aem/livefyre-for-adobe-experience-manager/)
-
