@@ -5,18 +5,18 @@ contentOwner: AG
 role: Business Practitioner, Administrator, Leader
 feature: Anslutna resurser,Användare och grupper
 exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
-source-git-commit: c07467feb96c25a4bac1916f88f04fdb37979ee1
+source-git-commit: 9e99d25a15aee56721112e2afd4b570ba7854bd7
 workflow-type: tm+mt
-source-wordcount: '2652'
+source-wordcount: '2655'
 ht-degree: 27%
 
 ---
 
 # Använd Connected Assets när du vill dela DAM-resurser i [!DNL Experience Manager Sites] {#use-connected-assets-to-share-dam-assets-in-aem-sites}
 
-I stora företag kan den infrastruktur som krävs för att skapa webbplatser vara distribuerad. Ibland kan funktionerna för att skapa webbplatser och de digitala resurser som används för att skapa webbplatserna finnas i olika distributioner. En orsak kan vara att befintliga distributioner som behövs för att fungera tillsammans distribueras geografiskt. En annan orsak kan vara förvärv som leder till heterogen infrastruktur som moderbolaget vill använda tillsammans.
+I stora företag kan den infrastruktur som krävs för att skapa webbplatser vara distribuerad. Ibland kan funktionerna för att skapa webbplatser och de digitala resurser som används för att skapa webbplatserna finnas i olika distributioner. En orsak kan vara att befintliga distributioner som krävs för att fungera tillsammans distribueras geografiskt. En annan orsak kan vara förvärv som leder till heterogen infrastruktur, inklusive olika [!DNL Experience Manager]-versioner, som moderbolaget vill använda tillsammans.
 
-Användare kan skapa webbsidor i [!DNL Experience Manager Sites]. [!DNL Experience Manager Assets] är det DAM-system (Digital Asset Management) som tillhandahåller de resurser som krävs för webbplatser. [!DNL Experience Manager] har nu stöd för ovanstående användningsexempel genom integrering  [!DNL Sites] och  [!DNL Assets].
+Funktionen för anslutna resurser stöder ovanstående användningsfall genom att integrera [!DNL Experience Manager Sites] och [!DNL Experience Manager Assets]. Användare kan skapa webbsidor i [!DNL Sites] som använder digitala resurser från separata [!DNL Assets]-distributioner.
 
 ## Översikt över Connected Assets {#overview-of-connected-assets}
 
@@ -188,8 +188,8 @@ Följ de här stegen för att visa och hantera referenser i [!DNL Assets]-distri
 * Lokala resurser synkroniseras inte med de ursprungliga resurserna i fjärrdistributionen. Ändringar, borttagningar eller återkallande av behörigheter i DAM-distributionen sprids inte längre ned i kedjan.
 * Lokala resurser är skrivskyddade kopior. [!DNL Experience Manager] -komponenter gör icke-förstörande redigeringar av resurser. Inga andra redigeringar tillåts.
 * Lokalt hämtade resurser är endast tillgängliga för redigeringsändamål. Det går inte att använda arbetsflöden för resursuppdatering och metadata kan inte redigeras.
-* Endast bilder och dokumentformaten i listan stöds. [!DNL Dynamic Media] resurser, innehållsfragment och Experience Fragments stöds inte.
-* [!DNL Experience Manager] hämtar inte metadatamatcheman. Det innebär att alla hämtade metadata inte visas. Om schemat uppdateras separat visas alla egenskaper.
+* Endast bilder och dokumentformaten i listan stöds. [!DNL Dynamic Media] resurser,  [!DNL Content Fragments]och  [!DNL Experience Fragments] stöds inte.
+* [!DNL Experience Manager] hämtar inte metadatamatcheman. Det innebär att alla hämtade metadata inte visas. Om schemat uppdateras separat för [!DNL Sites]-distributionen visas alla metadataegenskaper.
 * Alla [!DNL Sites]-författare har läsbehörighet för de hämtade kopiorna, även om författare inte har åtkomst till fjärr-DAM-distributionen.
 * Det finns inte API-stöd för att anpassa integreringen.
 * Funktionen stöder smidig sökning och användning av fjärresurser. Om du vill göra många fjärresurser tillgängliga i den lokala distributionen på en gång bör du överväga att migrera resurserna. Se [Handbok för resursmigrering](assets-migration-guide.md).
@@ -199,8 +199,8 @@ Följ de här stegen för att visa och hantera referenser i [!DNL Assets]-distri
 
 * [!DNL Assets] det  [!DNL Adobe Managed Services] finns stöd för distribution på.
 * [!DNL Sites] kan ansluta till en enda  [!DNL Assets] databas åt gången.
-* En licens för [!DNL Assets] som fungerar som fjärrdatabas.
-* En eller flera licenser av [!DNL Sites] fungerar som lokal redigeringsdistribution.
+* En licens för [!DNL Assets] som fungerar som fjärrdatabas krävs.
+* En eller flera licenser av [!DNL Sites] som fungerar som lokal redigeringsdistribution krävs.
 
 ### Användning {#usage}
 
