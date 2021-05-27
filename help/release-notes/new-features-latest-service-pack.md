@@ -4,9 +4,9 @@ description: Nyheter i [!DNL Experience Manager] 6.5 Service Pack 9
 contentOwner: AK
 mini-toc-levels: 1
 exl-id: 32470e6e-8a66-4670-82da-2259f6e001c3
-source-git-commit: 48a5f9ffb33ae09f5d4e6e57cf66b871a9ff6981
+source-git-commit: f0398d63aa7d9c994c56217cce52b3fb4de04769
 workflow-type: tm+mt
-source-wordcount: '3256'
+source-wordcount: '3254'
 ht-degree: 0%
 
 ---
@@ -413,15 +413,15 @@ Du kan använda batch-API:t för att skapa flera interaktiva dokument från en m
 <!-- TBD: Check if the wider team released anything in FY21.
 -->
 
-## Viktiga versioner sedan [!DNL Adobe Experience Manager] 6.5 SP7 {#key-releases-since-last-sp}
+## Viktiga releaser sedan [!DNL Adobe Experience Manager] 6.5 SP8 {#key-releases-since-last-sp}
 
-Mellan 26 november 2020 och 25 februari 2021 släppte Adobe följande, förutom Service Packs och Cumulative Fix Packs:
+Mellan 25 februari 2021 och 27 maj 2021 släppte Adobe följande, förutom Service Packs:
 
-* [!DNL Adobe Experience Manager] som en Cloud Service  [20.11.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/2020/release-notes-2020-11-0.html),  [20.12.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/2020/release-notes-2020-12-0.html) och  [2021.1.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-current.html?lang=en#release-date).
+* [!DNL Adobe Experience Manager] som en Cloud Service  [2021.2.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/2021/release-notes-2021-2-0.html),  [2021.3.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/2021/release-notes-2021-3-0.html) och  [2021.4.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-current.html?lang=en#release-date).
 
-* [[!DNL Experience Manager] desktop app 2.1 (2.1.0.0)](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html).
+* [[!DNL Experience Manager] desktop app 2.1 (2.1.2.0)](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html).
 
-* [Experience Manager Screens: Funktionspaket 2011](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/release-notes/release-notes-fp-202011.html)
+* [Experience Manager Screens: Feature Pack 202103](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/release-notes/release-notes-fp-202103.html?lang=en)
 
 >[!MORELIKETHIS]
 >
