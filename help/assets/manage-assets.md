@@ -6,9 +6,9 @@ mini-toc-levels: 1
 role: Business Practitioner
 feature: Resurshantering, sökning
 exl-id: 158607e6-b4e9-4a3f-b023-4023d60c97d2
-source-git-commit: c07467feb96c25a4bac1916f88f04fdb37979ee1
+source-git-commit: a7f8e98729dd27f6976d3289a51f22435fced585
 workflow-type: tm+mt
-source-wordcount: '9561'
+source-wordcount: '9540'
 ht-degree: 3%
 
 ---
@@ -811,10 +811,6 @@ Om du vill skriva ut anteckningarna och granskningsstatusen klickar du på **[!U
    ![Välj position för anteckningen/granskningsstatusen som ska visas i PDF-filen i dialogrutan Skriv ut](assets/Print-annotation-dialog.png)
 
    Du kan välja andra inställningar beroende på var du vill att anteckningarna/statusen ska visas i den utskrivna PDF-filen. Om du vill att anteckningarna/statusen ska visas på en sida som är skild från den utskrivna resursen väljer du **[!UICONTROL Next Page]**.
-
-   >[!NOTE]
-   >
-   >Långa anteckningar kanske inte återges korrekt i PDF-filen. För optimal återgivning rekommenderar Adobe att du begränsar kommentarerna till 50 ord.
 
 1. Klicka på **[!UICONTROL Print]**. Beroende på vilket alternativ du väljer i steg 2 visar den genererade PDF-filen anteckningarna/statusen vid den angivna positionen. Om du till exempel väljer att skriva ut både anteckningar och granskningsstatus med inställningen **Överst till vänster** liknar genererade utdata den PDF-fil som återges här.
 
