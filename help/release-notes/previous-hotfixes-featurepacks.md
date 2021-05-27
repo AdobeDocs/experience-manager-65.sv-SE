@@ -2,16 +2,234 @@
 title: '[!DNL Adobe Experience Manager] 6.5 Versionsinformation för föregående Service Pack'
 description: Versionsinformation för [!DNL Adobe Experience Manager] 6.5 Service Packs.
 contentOwner: AK
-translation-type: tm+mt
-source-git-commit: ecb32596edecaf47ef54a74c2be8ecf252de466c
+exl-id: aeed49a0-c7c2-44da-b0b8-ba9f6b6f7101
+source-git-commit: 8c69687ef4fbc2e4ee729d98232fe56db9b1df5a
 workflow-type: tm+mt
-source-wordcount: '17558'
+source-wordcount: '19911'
 ht-degree: 0%
 
 ---
 
-
 # Programfixar och funktionspaket som ingår i tidigare Service Packs {#hotfixes-and-feature-packs-included-in-previous-service-packs}
+
+## [!DNL Adobe Experience Manager] 6.5.8.0  {#experience-manager-6580}
+
+[!DNL Adobe Experience Manager] 6.5.8.0 innehåller nya funktioner, viktiga förbättringar som kunderna efterfrågat samt prestanda-, stabilitets- och säkerhetsförbättringar som släppts sedan 6.5-versionen släpptes i april 2019. Service Pack är installerat på [!DNL Adobe Experience Manager] 6.5.
+
+De viktigaste funktionerna och förbättringarna i [!DNL Adobe Experience Manager] 6.5.8.0 är:
+
+<!-- TBD:
+* Using the Connected Assets functionality, it is now possible to connect up to 3 [!DNL Sites] instances with 1 [!DNL Assets] instances. The configuration user interface now allows the administrators to provide the details of these [!DNL Sites] instances. -->
+
+* När du använder [funktionen Anslutna resurser](/help/assets/use-assets-across-connected-assets-instances.md) kan du nu visa en lista över alla [!DNL Sites] sidor som använder resursen. Dessa referenser till en resurs är tillgängliga på en resurses [!UICONTROL Properties]-sida. På så sätt kan administratörer, marknadsförare och bibliotekarier få en komplett bild av medieanvändningen, vilket ger bättre spårning, hantering och enhetlighet för varumärken.
+
+* När du tar bort en resurs som refereras på en webbsida visas en varning i [!DNL Experience Manager] [](/help/assets/use-assets-across-connected-assets-instances.md#asset-usage-references). Du kan framtvinga borttagning av en refererad resurs eller kontrollera och ändra referenserna som visas på sidan [!DNL Properties] för resursen. När du klickar på referenserna öppnas de lokala sidorna och fjärrsidorna [!DNL Sites].
+
+* Sortera de Live Copy-sidor som är tillgängliga för utrullning med hjälp av egenskaperna [!UICONTROL Name], [!UICONTROL Last modified date,] och [!UICONTROL Last rollout date].
+
+* Den inbyggda databasen (Apache Jackrabbit Oak) uppdateras till 1.22.6. <!-- TBD: Mention the version -->
+
+En fullständig lista över funktioner och förbättringar som introducerats i [!DNL Experience Manager] 6.5.8.0 finns i [vad som är nytt i [!DNL Adobe Experience Manager] 6.5 Service Pack 8](new-features-latest-service-pack.md).
+
+Nedan följer en lista över korrigeringar i [!DNL Experience Manager] 6.5.8.0-versionen.
+
+### [!DNL Sites] {#sites-6580}
+
+* När en sida flyttas till utkast uppdateras inte länkarnas mål (NPR-35724).
+* Tizen-baserad spelare kan inte autentiseras i vissa webbläsare. Problemet inträffar med webbläsare som inte har stöd för attributet sameSite=none (NPR-35589).
+* En olåst responsiv behållare visar inte tillåtna komponenter (NPR-35565).
+* När du skapar en live-kopia av en nyligen tillagd sida skapar överordnad två kopior för varje domän (NPR-35545).
+* Deadlock i registret över SCR-komponenter när många trådar blockeras på grund av `org.apache.felix.scr.impl.ComponentRegistry`-timern. Därför slutar [!DNL Experience Manager] svara på obestämd tid (GRANITE-33125,FELIX-6252).
+* När du söker efter en viss resurs i sidofältet innehåller resultatet vissa resurser som inte sökts (NPR-35524).
+* När du aktiverar SSL för en Experience Manager-instans tas kontextsökvägen bort (NPR-35477).
+* När du skapar en lista lägger till text som det första elementet, lägger till en tabell som det andra elementet och lägger till en lista inuti tabellen, förvrängs den överordnade listan (NPR-35465).
+* När du använder olika plugin-program för efterföljande listobjekt läggs en extra <br>-tagg till i listobjekten (NPR-35464).
+* När en lista placeras mellan två stycken kan du inte lägga till en tabell i listan (NPR-35356).
+* När du startar en uppgradering av en AEM instans från AEM 6.3 till AEM 6.5 tar det längre tid att starta uppgraderingsinstansen (NPR-35323).
+* När du replikerar en AEM som innehåller en hakparentes (). i namnet misslyckas replikeringen (GRANITE-27004, NPR-35315).
+* När du lägger till rubriker i en textredigerare inaktiveras styckeknappen (NPR-35256).
+* När du lägger till ett objekt i en befintlig lista tas efterföljande komprimeringsbar lista eller växlingslista bort (NPR-35206).
+* När alternativet Utrullningssida är markerat visas en dialogruta med alla tillgängliga live-kopior och automatisk utrullning sker. De publicerade kopiorna av sidorna distribueras till alla platser utan användaråtgärd (NPR-35138).
+* När du använder alternativet Inkludera underordnade visas inte alla sidor med alternativet Hantera publikation. Endast 22 sidor listas (NPR-35086).
+* När en profil redigeras behåller textkomponenten inte policyändringarna (NPR-35070).
+* När du drar in vissa objekt i en numrerad lista behåller alla objekt samma nummer, men numreringen ska börja från 1 för objekt med samma indrag (CQ-4313011).
+* När miniatyrbilder är aktiverade kan du inte redigera någon sida eller komponent. Problemet uppstod efter installation av AEM 6.5 Service Pack 7 (CQ-431133).
+* Omni sök- och resursfilter returnerar irrelevanta eller inga resultat (CQ-4312322, NPR-35793).
+* När flera sidor samtidigt kommer åt ett klientbibliotek, kan HTML-bibliotekshanteraren inte läsa in klientbiblioteket. Det leder till felaktig återgivning av sidor (NPR-35538).
+* Kontextsökvägen tas bort automatiskt när du ställer in en SSL i [!DNL Experience Manager] (NPR-35294).
+* Pakethanteraren loggar inte ut användare efter att ha klickat på alternativet Logout (NPR-35160).
+
+### [!DNL Assets] {#assets-6580}
+
+[!DNL Adobe Experience Manager] 6.5.8.0  [!DNL Assets] åtgärdar följande och ger följande förbättringar.
+
+* När en tidigare version av en resurs återställs aktiveras inte händelsen DamEvent.Type RESTORED i OSGi-konsolen (NPR-35789).
+* `IndexWriter.merge` orsakar  `OutOfMemoryError` fel eftersom funktionen för smart taggning skapar stora  `/oak:index/lucene` och  `/oak:index/ntBaseLucene` indexerade värden (NPR-35651).
+* Ett felmeddelande visas när du försöker spara en [!UICONTROL Asset Contribution]-typmapp med multibytetecken i namnet (NPR-35605).
+* När överlappande metadataundertypsfält används inträffar ett felaktigt &#39;Fyll i det här fältet&#39;-fel (NPR-35643).
+* När en befintlig resurs dras i [!DNL Assets]-användargränssnittet och en ny version skapas, är ändringarna i metadata inte beständiga (NPR-34940).
+* När du skapar regler i metadatarammet för en överlappande meny upprepas samma namn med alternativet [!UICONTROL Dependant On] (NPR-35596).
+* Likhetssökning fungerar inte efter redigering av [!UICONTROL Assets Admin Search Rail] (NPR-35588).
+* Om du öppnar resurssökning i den vänstra listen genom att klicka på [!UICONTROL Filter] i en mapp fungerar inte filtret i [!UICONTROL Status] > [!UICONTROL Checkout] > [!UICONTROL Checked out] (NPR-35530).
+* Om du försöker ta bort alla smarta taggar för en resurs och spara ändringarna tas de inte bort. Användargränssnittet anger dock att ändringarna sparas (NPR-35519).
+* Användare kan inte ordna om eller sortera resurser i listvyn i en ordningsbar mapp (NPR-35516).
+* Om du redigerar standardmetadataschemat ändras taggfältet i resursens [!UICONTROL Properties]-sida till ett textfält. Ändringen gör att okända användare kan lägga till taggar på begäran och taggarna lagras som en sträng i databasen (NPR-35478).
+* Om du anger ett namn som inte har en giltig e-postadress när du hämtar en resurs är nedladdningsalternativet inte tillgängligt. Om ett annat alternativ i hämtningsdialogrutan väljs aktiveras knappen, men inget e-postmeddelande skickas (NPR-35365).
+* Användare kan inte checka in resurser efter att ha redigerat dem i [!DNL Adobe InDesign] och få felmeddelanden om bristande behörigheter (NPR-35341).
+* Hanteringsfält JavaScript-biblioteket uppgraderas till v4.7.6 (NPR-35333).
+* Gränssnittet för metadataredigeraren slutar fungera som förväntat när du startar från redigering av massmetadata och avmarkerar objekt tills ett enda objekt förblir markerat (NPR-35144).
+* Global navigering öppnar inte rätt konsol när användaren klickar på den på sidan `assets.html` (CQ-4312311).
+* [!DNL Assets] RGB-återgivning visas inte för en resurs som har RGB-återgivning (CQ-4310190).
+* Alternativet [!UICONTROL Relate] på menyn visas inte korrekt på sidan [!UICONTROL Properties] (CQ-4310188).
+* Om filtypsfilter för dokument används för att söka efter resurser och skapa en smart samling används inte filtret när samlingen används. I stället visas alla typer av resurser i sökningen (NPR-35759).
+* Du kan inte dra och lägga till resurser i en ljuslåda från användargränssnittet [!DNL Assets] (NPR-35901).
+* När en ny version av en befintlig resurs skapas efter att namnkonflikten har lösts, skrivs metadata för den ursprungliga resursen över (CQ-4313594).
+* När du filtrerar resurssökningen med ett sökfilter eller predikat, öppnar en resurs för att visa eller redigera den och går tillbaka till sökresultatsidan fungerar inte filtret. Alla sökda resurser listas ofiltrerade (NPR-35913).
+
+#### [!DNL Dynamic Media] {#dynamic-media-6580}
+
+* Alternativet URL för RESS-bildförinställning är aktiverat på sidan med resursinformation. Nu är både URL- och RESS-alternativen tillgängliga på sidan med resursinformation när RESS-bildförinställningen har valts i avsnittet med dynamiska återgivningar. (CQ-4311241)
+* Interaktiv mediakomponent - interaktiv video fungerar inte om användaren har [!DNL Experience Manager] med selektiv publiceringskonfiguration (CQ-4311054).
+* Om du flyttar resurser mellan mappar är synkroniseringen mellan [!DNL Experience Manager] och [!DNL Dynamic Media–Scene7] via API mycket långsam (CQ-4310001).
+* När Omnisearch används ökar loggarnas storlek avsevärt (CQ-4309153).
+* När selektiv synkronisering är aktiverat och en resurs kopieras (inte flyttas) till en synkroniseringsmapp synkroniseras den inte som förväntat (CQ-4307122).
+* För överförda resurser som automatiskt publiceras till DM visas inte statusen Publicerad på AEM. Dessutom visas inte rätt publiceringsstatus i statuskolumnen för Dynamic Media Publish (CQ-4306415).
+* Om en resurs publiceras på [!DNL Experience Manager] och är inställd på att publiceras på [!DNL Dynamic Media] vid aktivering uppdateras inte metadatavärdet för `scene7FileStatus` som förväntat (CQ-4308269).
+* När du redigerar videoprofilen visar [!DNL Experience Manager] inte de höjd- och bithastighetsvärden som angetts för videoförinställningen. Fälten visas tomma (CQ-4311828).
+
+### [!DNL Commerce] {#commerce-6580}
+
+* Det går inte att skapa en anpassad tagg för alla produkter i Commerce (CQ-4310682).
+
+* Referensuppdatering av produktresurs gör att replikeringstrådar är i vänteläge tills ProductAssetListener-tråden slutför sina implementeringar av JCR (NPR-35269).
+
+### Plattform {#platform-6580}
+
+* När du använder en Coral Tab View-komponent utan flikar och sedan utlöser en Foundation-validerare inträffar följande fel (NPR-35636):
+
+   ```TXT
+    Uncaught TypeError: Cannot set property 'invalid' of undefined
+     at enable (foundation.js:10703)
+     at foundation.js:10710
+   ```
+
+* SCD-framåtreplikering misslyckas för Delete-händelser för noder som innehåller kommatecken i namnet (NPR-35191).
+
+* När du har uppgraderat till AEM 6.5.7 misslyckas byggnaderna. Orsaken är att en gammal version eller ingen jackson-core är inbäddad i uber-jar (GRANITE-33006).
+
+### Användargränssnitt {#ui-6580}
+
+* När du växlar från kortvyn till listvyn för dokument i en mapp i resurskonsolen fungerar inte sorteringen korrekt (NPR-35842).
+
+* När du hyperlänkar text i en textkomponent visas inte rätt resultat i sökfunktionen (NPR-35849).
+
+* När ett värde inte anges för ett dolt fält som är markerat som obligatoriskt, blockerar det dig från att spara en komponent (NPR-35219).
+
+### Integreringar {#integrations-6580}
+
+* När du använder olika värden för IMS-klient-ID och målklientkod kan [!DNL Experience Manager] inte integreras med [!DNL Adobe Target] (NPR-35342).
+
+### Översättningsprojekt {#translation-6580}
+
+* Problem vid export eller import av ett översättningsjobb i [!DNL Experience Manager] (NPR-35259).
+
+### Kampanj {#campaign-6580}
+
+* När du skapar en kampanjsida med hjälp av en färdig mall i Touch-gränssnittet och öppnar fliken E-post i dialogrutan för sidegenskaper, är personaliseringsvariabeln för ämnes- och brödfälten fortfarande inaktiverad (CQ-4312388).
+
+### [!DNL Communities] {#communities-6580}
+
+* När du lägger till en sidstruktur i en community-grupp ändras rubriken [!UICONTROL Group] i den synliga sökvägen till titeln för den första [!UICONTROL Page] (NPR-35803).
+* Till skillnad från moderatorer kan en standardmedlem i communityn inte komma åt och redigera utkast (NPR-35339).
+* Åtkomstkontroll och denial of service med `DSRPReindexServlet` som gör att communitysajten tas bort tills indexeringen är klar (NPR-35591).
+* Om du tar bort [!UICONTROL All Users] från fältet [!UICONTROL Administrators] tas de inte bort från serverdelen (NPR-35592, NPR-35611).
+* Komponenten [!UICONTROL Compose Message] returnerar inget resultat när den angivna texten är en partiell matchning (NPR-35666).
+
+* Om du vill lägga till taggar i en ny blogg väljer du **[!UICONTROL Add Tags]** kan du märka en viss prestandapåverkan och långsamhet. Installera [cqTagLucene-0.0.1.zip-snabbkorrigering](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/cqTagLucene-0.0.1.zip) för att förbättra prestandan.
+
+### [!DNL Brand Portal] {#brandportal-6580}
+
+* Om du lägger till en medlem i en [!UICONTROL Asset Contribution]-typmapp visas [!UICONTROL Add User or Group]-beskrivningen i användargränssnittet, men bara aktiva Brand Portal-användare stöds och inte grupper (NPR-35332).
+
+### [!DNL Forms] {#forms-6580}
+
+>[!NOTE]
+>
+>[!DNL Experience Manager Forms] släpper tilläggspaketen en vecka efter det schemalagda datumet för  [!DNL Experience Manager] Service Pack.
+
+**Adaptiv Forms**
+
+* När du infogar en tabell med en repeterbar rad på en repeterbar panel som har flera instanser i en adaptiv form, läggs tabellen alltid till i den första instansen av panelen (NPR-35635).
+
+* När tabbfokus når CAPTCHA-komponenten igen efter att ha verifierat den en gång i en adaptiv form, visar [!DNL Experience Manager Forms] felmeddelandet `Provide Captcha phrase to proceed` (NPR-35539).
+
+**Interaktiv kommunikation**
+
+* När du skickar in ett översatt formulär visas inskickningsmeddelandena på engelska och översätts inte till rätt språk (NPR-35808).
+
+* När du inkluderar ett dolt villkor i bifogade XDP-dokument eller dokumentfragment, läses inte den interaktiva kommunikationen in (NPR-35745).
+
+**Korrespondenshantering**
+
+* När du redigerar ett brev tar det längre tid att läsa in moduler med villkor (NPR-35325).
+
+* När du väljer en resurs i den vänstra navigeringsrutan som inte ingår i en bokstav och sedan väljer nästa resurs, tas inte den blå markeringen bort från den tidigare valda resursen (NPR-35851).
+
+* När du redigerar textfält i en bokstav visar [!DNL Experience Manager Forms] felmeddelandet `Text Edit Failed` (CQ-4313770).
+
+**Arbetsflöde**
+
+* När du försöker öppna ett anpassat formulär i ett [!DNL Experience Manager Forms]-mobilprogram för iOS slutar programmet svara (CQ-4314825).
+
+* Fliken [!UICONTROL To-do] på arbetsytan HTML visar HTML-tecken (NPR-35298).
+
+**XMLFM**
+
+* När du genererar ett XML-dokument med hjälp av utdatatjänsten inträffar felet `OutputServiceException` för vissa XML-filer (CQ-4311341, CQ-4313893).
+
+* När du använder upphöjd egenskap på det första tecknet i en punkt blir punktstorleken mindre (CQ-4306476).
+
+* PDF forms som genereras med Output Service innehåller inga kantlinjer (CQ-4312564).
+
+**Designer**
+
+* När du öppnar en XDP-fil i [!DNL Experience Manager Forms] Designer skapas filen designer.log i samma mapp som XDP-filen (CQ-4309427, CQ-4310865).
+
+**HTML5 Forms**
+
+* När du markerar en kryssruta i ett adaptivt formulär i webbläsaren [!DNL Safari] för [!DNL iOS 14.1 or 14.2] visas inte ytterligare fält (NPR-35652).
+
+**Forms Management**
+
+* Inget bekräftelsemeddelande som indikerar slutförd massöverföring av XDP-filer till CRX-databasen (NPR-35546).
+
+**Dokumentsäkerhet**
+
+* Flera problem har rapporterats för alternativet [!UICONTROL Edit Policy] i AdminUI (NPR-35747).
+
+### Kända fel för [!DNL Experience Manager 6.5.8.0] {#known-issues}
+
+* Om du uppgraderar din [!DNL Experience Manager]-instans från version 6.5 till version 6.5.8.0 kan du visa `RRD4JReporter`-undantag i `error.log`-filen. Starta om instansen för att lösa problemet.
+
+* Om du installerar [!DNL Experience Manager] 6.5 Service Pack 5 eller ett tidigare Service Pack på [!DNL Experience Manager] 6.5 tas körtidskopian av din resurskräddarsydda arbetsflödesmodell (skapad i `/var/workflow/models/dam`) bort.
+Om du vill hämta körtidskopian rekommenderar Adobe att du synkroniserar designtidskopian av den anpassade arbetsflödesmodellen med körtidskopian med hjälp av HTTP API:
+   `<designModelPath>/jcr:content.generate.json`.
+
+* Kontakta Adobe kundtjänst om du stöter på problem när du redigerar och skapar överlappande regler i [!UICONTROL Folder Metadata Schema Forms Editor] och [!UICONTROL Metadata Schema Forms Editor] med hjälp av dialogrutan [!UICONTROL Define Rule]. Reglerna som redan har skapats och sparats fungerar som förväntat.
+
+* Om en mapp i hierarkin byter namn i [!DNL Experience Manager Assets] och den kapslade mappen som innehåller en resurs publiceras i [!DNL Brand Portal], uppdateras inte mappens namn i [!DNL Brand Portal] förrän rotmappen publiceras igen.
+
+* När en användare väljer att konfigurera ett fält för första gången i ett adaptivt formulär visas inte alternativet att spara en konfiguration i egenskapsläsaren. Om du väljer att konfigurera ett annat fält i det adaptiva formuläret i samma redigerare åtgärdas problemet.
+
+* Om [!UICONTROL Connected assets configuration]-guiden returnerar ett 404-felmeddelande efter installationen måste du installera om paketen `cq-remotedam-client-ui-content` och `cq-remotedam-client-ui-components` manuellt med hjälp av pakethanteraren.
+
+* Följande fel och varningsmeddelanden kan visas under installationen av Experience Manager 6.5.x.x:
+   * &quot;När Adobe Target-integreringen har konfigurerats i Experience Manager med Target Standard API (IMS-autentisering) skapas felaktiga erbjudandetyper när Experience Fragments exporteras till Target. I stället för att skriva&quot;Experience Fragment&quot;/källa&quot;Adobe Experience Manager&quot; skapar Target flera erbjudanden med typen&quot;HTML&quot;/källa&quot;Adobe Target Classic&quot;.
+   * `com.adobe.granite.maintenance.impl.TaskScheduler`: Inga underhållsfönster hittades vid granit/drift/underhåll.
+   * Validering på serversidan av adaptiva formulär misslyckas när sammanställningsfunktioner som SUM, MAX och MIN används (CQ-4274424).
+   * `com.adobe.granite.maintenance.impl.TaskScheduler` - Inga underhållsfönster hittades vid granit/drift/underhåll.
+   * Aktiveringspunkten i en interaktiv Dynamic Media-bild syns inte när du förhandsvisar mediefilen via Shoppable Banner Viewer.
+   * `com.adobe.cq.social.cq-social-jcr-provider bundle com.adobe.cq.social.cq-social-jcr-provider:1.3.5 (395)[com.adobe.cq.social.provider.jcr.impl.SpiSocialJcrResourceProviderImpl(2302)]` : Tidsgränsen överskreds i väntan på att reg.ändringen skulle slutföras utan registrering.
 
 ## [!DNL Adobe Experience Manager] 6.5.7.0  {#experience-manager-6570}
 
@@ -988,7 +1206,7 @@ Nedan följer en lista över korrigeringar i [!DNL Experience Manager] 6.5.5.0-v
 ### [!DNL Brand Portal] {#assets-brand-portal-6550}
 
 * Om du tar bort ett publicerat metadataschema från [!DNL Brand Portal] uppstår ett fel (CQ-4292063).
-* Om en administratör konfigurerar [!DNL Experience Manager Assets] 6.5.4 med varumärkesportalen via Adobe Developer Console kan inte [!DNL Brand Portal]-användaren publicera en resurs i en mapp från [!DNL Brand Portal] till [!DNL Experience Manager] (NPR-33046).
+* Om en administratör konfigurerar [!DNL Experience Manager Assets] 6.5.4 med Brand Portal via Adobe Developer Console kan [!DNL Brand Portal]-användaren inte publicera en resurs i en mapp från [!DNL Brand Portal] till [!DNL Experience Manager] (NPR-33046).
 * Duplicerad replikering av de överordnade mapparna som orsakar konflikter (NPR-33001).
 
 ### [!DNL Communities] {#communities-6550}
@@ -1037,7 +1255,7 @@ Adobe Experience Manager 6.5.4.0 är en viktig uppdatering som innehåller nya f
 
 Några viktiga funktioner och förbättringar i Adobe Experience Manager 6.5.4.0:
 
-* Adobe Experience Manager Assets har nu konfigurerats med varumärkesportalen via [!DNL Adobe I/O]-konsolen.
+* Adobe Experience Manager Assets har nu konfigurerats med Brand Portal via [!DNL Adobe I/O]-konsolen.
 
 * Ett nytt [Generera utskrift](../forms/using/aem-forms-workflow-step-reference.md)-steg är nu tillgängligt för Adobe Experience Manager Forms-arbetsflöden.
 
@@ -1199,9 +1417,9 @@ En fullständig lista över funktioner och viktiga högdagrar som introducerats 
 
 * Målmolnkonfigurationen misslyckades med felet när mbox-begäran skulle hämtas (CQ-4279880).
 
-### Varumärkesportal {#assets-brand-portal-6540}
+### Brand Portal {#assets-brand-portal-6540}
 
-* Användare av varumärkesportalen kan inte publicera resurser i mappen för bidrag till [!DNL Assets] vid uppgradering till [!DNL Adobe I/O] på Experience Manager 6.5.4 (CQDOC-15655). För en omedelbar korrigering på Experience Manager 6.5.4 rekommenderar vi att du [hämtar snabbkorrigeringen](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/hotfix/cq-6.5.0-hotfix-33041) och installerar den på din författarinstans.
+* Brand Portal-användare kan inte publicera resurser i mappen för bidrag till [!DNL Assets] vid uppgradering till [!DNL Adobe I/O] på Experience Manager 6.5.4 (CQDOC-15655). För en omedelbar korrigering på Experience Manager 6.5.4 rekommenderar vi att du [hämtar snabbkorrigeringen](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/hotfix/cq-6.5.0-hotfix-33041) och installerar den på din författarinstans.
 
 * Popup-värden för metadataschemat visas inte i resursegenskaper (CQ-4283287).
 
@@ -1455,7 +1673,7 @@ Remove one mention of this fix.
 
 * Det går inte att växla kalendervyer (NPR-31271).
 
-### Varumärkesportal {#assets-brand-portal-6530}
+### Brand Portal {#assets-brand-portal-6530}
 
 **Produktförbättringar**
 
@@ -1766,7 +1984,7 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 * Ett problem med Scene7 videospelare när den expanderar till helskärm. Programfix för CQ-4266700
 * ZoomVerticalViewer: Panoreringsknappar ska inte visas om en enda bildresurs används. Programfix för CQ-4264795
 * Om du tar bort en underordnad nod i live-kopian bör liveRelationship frigöras. Programfix för CQ-4270395
-* Metadataschemat innehåller bara objekt från den globala konfigurationen och saknar dem från den aktiva klientorganisationen. URL-värdet för formPath återställs till standard även om det ändras. NPR-29944: Programfix för CQ-4262898
+* Metadataschemat innehåller bara objekt från den globala konfigurationen och saknar dem från den aktiva klientorganisationen. URL-värdet för formPath återställs till standard även om det ändras. NPR-29945: Programfix för CQ-4262898
 * Publicera bildförinställningar till [!DNL Brand Portal] misslyckas med 500-felkod. NPR-29510: Programfix för CQ-4268659
 
 ### Webbplatser
@@ -1866,7 +2084,7 @@ De viktigaste högdagrarna för [!DNL Experience Manager Forms] 6.5.1.0 är:
 
 **Integrering med backend**
 
-* Det gick inte att hämta WSDL (Protected Web Service Definition Language). NPR-29944: Programfix för CQ-4270777
+* Det gick inte att hämta WSDL (Protected Web Service Definition Language). NPR-29945: Programfix för CQ-4270777
 * När [!DNL Experience Manager Forms] är installerat på IBM WebSphere misslyckas skapandet av en formulärdatamodell baserad på SOAP. Programfix för CQ-4251134
 * Aktiverat stöd för ADFS (Active Directory Federation Services) v3.0 för integrering på plats i Microsoft Dynamics. Programfix för CQ-4270586
 * När en datakällas titel ändras visas inte den uppdaterade titeln i formulärdatamodellen. Programfix för CQ-4265599
