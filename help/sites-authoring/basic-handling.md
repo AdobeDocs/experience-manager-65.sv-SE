@@ -11,10 +11,9 @@ content-type: reference
 discoiquuid: 21181a6f-b434-40ed-8eb1-ebdfc98964dd
 docset: aem65
 exl-id: ef1a3997-feb4-4cb0-9396-c8335b69bb10
-translation-type: tm+mt
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+source-git-commit: 440aa5a2f4a020a16104f11eaf484a2cf7291e1f
 workflow-type: tm+mt
-source-wordcount: '2979'
+source-wordcount: '2980'
 ht-degree: 3%
 
 ---
@@ -271,7 +270,7 @@ för utvecklareResurser och nedladdningar för utvecklare
    >En översikt över alla kortkommandon finns i följande dokumentation:
    >
    >    * [Kortkommandon för att redigera sidor](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)
-   >    * [Kortkommandon för konsoler](/help/sites-authoring/keyboard-shortcuts.md)
+   * [Kortkommandon för konsoler](/help/sites-authoring/keyboard-shortcuts.md)
 
 
 ## Verktygsfältet Åtgärder {#actions-toolbar}
@@ -288,11 +287,10 @@ Hur du [väljer en resurs](/help/sites-authoring/basic-handling.md#viewing-and-s
 
 På grund av utrymmesbegränsningar i vissa fönster kan verktygsfältet snabbt bli längre än det tillgängliga utrymmet. När detta inträffar visas ytterligare alternativ. Om du klickar eller trycker på ellipsen (de tre punkterna eller **...**) öppnas en listruta med alla återstående åtgärder. När du till exempel har valt en sida i **Sites**-konsolen:
 
-![bh-12](assets/bh-12.png)
+![Verktygsfältet Åtgärder](assets/bh-12.png)
 
 >[!NOTE]
->
->De enskilda ikonerna som är tillgängliga dokumenteras i relation till rätt konsol/funktion/scenario.
+De enskilda ikonerna som är tillgängliga dokumenteras i relation till rätt konsol/funktion/scenario.
 
 ## Snabbåtgärder {#quick-actions}
 
@@ -314,8 +312,7 @@ Du kan visa, navigera i och välja (för ytterligare åtgärder) dina resurser m
 * [Listvy](#list-view)
 
 >[!NOTE]
->
->Som standard visas inte de ursprungliga återgivningarna av resurser i användargränssnittet som miniatyrbilder i någon av vyerna i AEM Assets. Om du är administratör kan du använda övertäckningar för att konfigurera AEM Assets så att ursprungliga återgivningar visas som miniatyrbilder.
+Som standard visas inte de ursprungliga återgivningarna av resurser i användargränssnittet som miniatyrbilder i någon av vyerna i AEM Assets. Om du är administratör kan du använda övertäckningar för att konfigurera AEM Assets så att ursprungliga återgivningar visas som miniatyrbilder.
 
 ### Välja resurser {#selecting-resources}
 
@@ -416,7 +413,7 @@ Om du väljer en resurs i kolumnen längst till vänster visas de underordnade r
 
    * Resursnamnet och förvrängningen markeras när användaren knackar på eller klickar på den.
 
-   ![bh-15](assets/bh-17.png)
+   ![bh-17](assets/bh-17.png)
 
    * De underordnade resurserna för den resurs som användaren klickar på/trycker på visas i kolumnen till höger om den resurs som användaren klickar på/trycker på.
    * Om du trycker eller klickar på ett resursnamn som inte har några underordnade objekt visas informationen i den sista kolumnen.
@@ -499,8 +496,7 @@ Om du väljer en resurs i kolumnen längst till vänster visas de underordnade r
 * Ändra objektens ordning med hjälp av den prickade lodräta listen längst till höger om varje objekt i listan.
 
    >[!NOTE]
-   >
-   >Det går bara att ändra ordningen i en ordnad mapp som har `jcr:primaryType`-värdet `sling:OrderedFolder`.
+   Det går bara att ändra ordningen i en ordnad mapp som har `jcr:primaryType`-värdet `sling:OrderedFolder`.
 
    ![bh-22](assets/bh-22.png)
 
@@ -525,8 +521,7 @@ I Platser kan du t.ex. markera endast innehåll (standard), innehållsträdet, t
 Om du bara väljer innehåll visas bara ikonen för skenor. När något annat alternativ är markerat visas alternativnamnet bredvid ikonen för skenor.
 
 >[!NOTE]
->
->[Det finns ](/help/sites-authoring/keyboard-shortcuts.md) kortkommandon som du kan använda för att snabbt växla mellan olika visningsalternativ.
+[Det finns ](/help/sites-authoring/keyboard-shortcuts.md) kortkommandon som du kan använda för att snabbt växla mellan olika visningsalternativ.
 
 ### Innehållsträd {#content-tree}
 
@@ -537,10 +532,8 @@ Med innehållsträdets sidopanel i kombination med en listvy eller kortvy kan an
 ![bh-26](assets/bh-26.png)
 
 >[!NOTE]
->
->När du har markerat en post i hierarkin kan du använda piltangenterna för att snabbt navigera i hierarkin.
->
->Mer information finns i [kortkommandona](/help/sites-authoring/keyboard-shortcuts.md).
+När du har markerat en post i hierarkin kan du använda piltangenterna för att snabbt navigera i hierarkin.
+Mer information finns i [kortkommandona](/help/sites-authoring/keyboard-shortcuts.md).
 
 ### Tidslinje {#timeline}
 
