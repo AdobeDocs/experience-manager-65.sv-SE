@@ -11,15 +11,14 @@ content-type: reference
 discoiquuid: ebd99cc4-8762-4c28-a177-d62dac276afe
 docset: aem65
 targetaudience: target-audience upgrader
-feature: Upgrading
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+feature: Uppgraderar
+exl-id: 722d544c-c342-4c1c-80e5-d0a1244f4d36
+source-git-commit: 68c36d4e3a14567a4d115ee64a4474bcaf9aa386
 workflow-type: tm+mt
 source-wordcount: '721'
 ht-degree: 0%
 
 ---
-
 
 # Uppgraderar till AEM 6.5 {#upgrading-to-aem}
 
@@ -54,7 +53,7 @@ Nedan följer viktiga ändringar av anmärkningar under de senaste versionerna a
 
 AEM 6.0 introducerade den nya Jackrabbit Oak-databasen. Persistence Managers ersattes av [Micro Kernels](/help/sites-deploying/platform.md#contentbody_title_4). Från och med version 6.1 stöds inte längre CRX2. Ett migreringsverktyg som kallas crx2oak måste köras för att kunna migrera CRX2-databaser från 5.6.1-instanser. Mer information finns i [Använda CRX2OAK-migreringsverktyget](/help/sites-deploying/using-crx2oak.md).
 
-Om resursinsikter ska användas och du uppgraderar från en version som är äldre än AEM 6.2, måste resurserna migreras och ha ID:n som genereras via en JMX-böna. I våra interna tester migrerades 125 K-resurser på en TjärMK-miljö på en timme, men resultatet kan variera.
+Om Assets Insights ska användas och du uppgraderar från en version som är äldre än AEM 6.2, måste resurserna migreras och ha ID:n som genereras via en JMX-böna. I våra interna tester migrerades 125 K-resurser på en TjärMK-miljö på en timme, men resultatet kan variera.
 
 I 6.3 introducerades ett nytt format för `SegmentNodeStore`, som är grunden för TjäraMK-implementeringen. Om du uppgraderar från en version som är äldre än AEM 6.3 måste du migrera databasen som en del av uppgraderingen, vilket innebär driftstopp.
 
@@ -94,4 +93,3 @@ I 6.5 fokuserades alla nya funktioner bakåt så att de var kompatibla, men i de
 I din 6.5-utvecklingscykel kan funktioner som introducerats under Hållbara uppgraderingar (se [Hållbara uppgraderingar](/help/sites-deploying/sustainable-upgrades.md)) hjälpa dig att följa bästa praxis för att göra framtida uppgraderingar ännu effektivare och smidigare.
 
 ![6_4_upgrade_overview_flowchart-newpage3](assets/6_4_upgrade_overviewflowchart-newpage3.png)
-
