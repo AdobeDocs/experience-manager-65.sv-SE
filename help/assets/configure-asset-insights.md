@@ -1,20 +1,20 @@
 ---
-title: Konfigurera tillgångsinsikter för att få analyser.
-description: Konfigurera tillgångsinsikter i [!DNL Adobe Experience Manager Assets].
+title: Konfigurera Assets Insights för att få analyser.
+description: Konfigurera resursinsikter i [!DNL Adobe Experience Manager Assets].
 contentOwner: AG
 role: Architect, Administrator
 feature: Resursinsikter,Resursrapporter
 exl-id: 67be0ae6-5939-40fe-bf8a-b8a2c2f68f15
-source-git-commit: c07467feb96c25a4bac1916f88f04fdb37979ee1
+source-git-commit: 68c36d4e3a14567a4d115ee64a4474bcaf9aa386
 workflow-type: tm+mt
-source-wordcount: '235'
+source-wordcount: '239'
 ht-degree: 1%
 
 ---
 
-# Konfigurera tillgångsinsikter {#configure-asset-insights}
+# Konfigurera resursinsikter {#configure-asset-insights}
 
-[!DNL Adobe Experience Manager Assets] hämtar användningsdata om digitala resurser som används av tredjepartswebbplatser från  [!DNL Adobe Analytics]. Om du vill att tillgångsinsikter ska kunna hämta dessa data och generera insikter måste du först konfigurera funktionen så att den integreras med [!DNL Adobe Analytics]. Om du vill använda den här funktionen måste du köpa [!DNL Adobe Analytics] separat. Kunder på [!DNL Managed Services] får [!DNL Analytics] licens som paketerats med [!DNL Experience Manager]. Se [Managed Services produktbeskrivning](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html).
+[!DNL Adobe Experience Manager Assets] hämtar användningsdata om digitala resurser som används av tredjepartswebbplatser från  [!DNL Adobe Analytics]. Om du vill att Assets Insights ska kunna hämta data och generera insikter måste du först konfigurera funktionen så att den integreras med [!DNL Adobe Analytics]. Om du vill använda den här funktionen i en lokal installation måste du köpa [!DNL Adobe Analytics]-licensen separat. Kunder på [!DNL Managed Services] får [!DNL Analytics] licens som paketerats med [!DNL Experience Manager]. Se [Managed Services produktbeskrivning](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html).
 
 >[!NOTE]
 >
@@ -32,7 +32,7 @@ ht-degree: 1%
    *Bild: Konfigurera  [!DNL Adobe Analytics] för Assets Insights i  [!DNL Experience Manager].*
 
 1. Klicka på **[!UICONTROL Authenticate]**.
-1. När [!DNL Experience Manager] har autentiserat dina inloggningsuppgifter väljer du en [!DNL Adobe Analytics]-rapportsvit från **[!UICONTROL Report Suite]**-listan där du vill att resursinsikter ska hämta data. Klicka på **[!UICONTROL Add]**.
+1. När [!DNL Experience Manager] har autentiserat dina autentiseringsuppgifter väljer du en [!DNL Adobe Analytics]-rapportsvit från **[!UICONTROL Report Suite]**-listan där du vill att resursinsikter ska hämta data. Klicka på **[!UICONTROL Add]**.
 1. När [!DNL Experience Manager] har konfigurerat rapportsviten klickar du på **[!UICONTROL Done]**.
 
 ## Sidspåraren {#page-tracker}
