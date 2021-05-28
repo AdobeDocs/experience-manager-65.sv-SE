@@ -7,14 +7,13 @@ uuid: 17d34923-f1ce-463b-8e9d-a713edcce51b
 contentOwner: jsyal
 discoiquuid: a3bb5695-6593-413d-9c2f-4c164e663b15
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 117208c634613559bb13556e12f094add70006e2
+exl-id: 182c464a-ff7a-467b-9eb5-8ffac335a87a
+source-git-commit: 68c36d4e3a14567a4d115ee64a4474bcaf9aa386
 workflow-type: tm+mt
-source-wordcount: '1356'
+source-wordcount: '1114'
 ht-degree: 0%
 
 ---
-
 
 # AEM frågor och svar {#aem-faqs}
 
@@ -94,15 +93,7 @@ Se [Förstå orsaker till att uppgradera AEM](https://helpx.adobe.com/experience
 
 Om användaren inte har borttagningsbehörighet under objektnoden när de överför filmfilerna misslyckas borttagningssegmentnoderna och överföringen startas om.
 
-#### Hur många digitala resurser får användas tillsammans med AEM 6.4? {#what-is-the-maximum-number-of-digital-assets-that-can-be-operated-with-aem-at-a-time}
-
-Med Adobe Experience Manager (AEM) 6.5 kan du överföra upp till 2 GB resurser i taget.
-
-Mer information om maximalt antal resurser som kan användas med AEM 6.5 finns i [Handbok om resursstorlek](/help/assets/assets-sizing-guide.md).
-
 #### Vilka är standardinställningarna för OTB-konfigurationer när du skapar en språkkopia? {#what-are-the-default-settings-for-ootb-configurations-while-creating-language-copy}
-
-När du skapar språkkopior med hjälp av det klassiska användargränssnittet flyttas resurser inte under den nya språkhierarkin utan används från den överordnad språkhierarkin.
 
 När du skapar en språkkopia via Touch-gränssnittet (**Referenser** -> **Uppdatera språkkopia**) skapas en ny DAM-mapp under det nya språket och resurser refereras därifrån.
 
@@ -117,17 +108,13 @@ Som en tillfällig lösning kan du även inaktivera komponenten manuellt antinge
 
 `curl -u admin:$(pass CQ_Admin) 'https://localhost:4502/system/console/components/com.day.cq.analytics.sitecatalyst.impl.importer.ReportImporter' --data 'action=disable'`
 
-#### Hur konfigurerar man tillgångsinsikter med AEM 6.5-instansen? {#how-to-configure-asset-insights-with-aem-instance}
-
-Om du vill konfigurera och konfigurera resursinsikter för Experience Manager som distribueras via Adobe Activation (DTM) ska du läsa om hur du [konfigurerar resursinsikter med AEM Assets](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/advanced/asset-insights-launch-tutorial.html).
-
 #### Hur anpassar man administrationskonsoler? {#how-to-customize-admin-consoles}
 
 AEM innehåller olika mekanismer som gör att du kan anpassa konsolerna och sidredigeringsfunktionerna i din redigeringsinstans. Mer information om hur du skapar en anpassad konsol och anpassar en standardvy för en konsol finns i [Anpassa konsolerna](/help/sites-developing/customizing-consoles-touch.md).
 
 #### Vad är skillnaden mellan CoralUI 2- och CoralUI 3-baserade komponenter? {#what-is-the-difference-between-coralui-and-coralui-based-components}
 
-En ny uppsättning Sling-komponenter för Granite UI Foundation skapas för Coral3 och finns under [/libs/granite/ui/components/coral/Foundation.](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/server.html) Det finns en uppsättning för CoralUI 2-baserade komponenter och en uppsättning för CoralUI 3-baserade komponenter. Den nya uppsättningen kommer inte bara att vara en kopiera-klistra in av den gamla uppsättningen, utan kommer att rensas (till exempel strömlinjeformning, borttagning av borttagen funktion). Därför rekommenderar vi att en sida bara använder CoralUI 3-baserad eller CoralUI 2-baserad uppsättning.
+En ny uppsättning Sling-komponenter för Granite UI Foundation skapas för Coral3 och finns under [/libs/granite/ui/components/coral/Foundation.](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/server.html) Det finns en uppsättning för CoralUI 2-baserade komponenter och en uppsättning för CoralUI 3-baserade komponenter. Den nya uppsättningen kommer inte bara att vara en kopiera-klistra in av den gamla uppsättningen, utan kommer att rensas (till exempel strömlinjeformning, borttagning av borttagen funktion). Därför rekommenderar vi att en sida endast använder CoralUI 3-baserad eller CoralUI 2-baserad uppsättning.
 
 Mer information finns i [Migreringshandboken till CoralUI 3-baserad](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/legacy/coral2/migration.html).
 
@@ -137,20 +124,8 @@ Mer information om sökökning/rankning och ytterligare implementeringsinformati
 
 Den enkla sökimplementeringen är material från 2017 Summit lab AEM Search Demystified.
 
-#### Vad är skillnaden mellan AEM Assets och AEM MediaLibrary? {#what-is-the-difference-between-aem-assets-and-aem-medialibrary}
-
-AEM Assets är en applikation på AEM Platform som gör det möjligt för våra kunder att hantera sina digitala resurser (bilder, videor, dokument och ljudklipp) i en webbaserad databas medan AEM Media Library är en del av den AEM WCM-innehållslagringsplatsen där bilder och andra delade resurser lagras.
-
-Mer information finns i [AEM Assets vs. AEM MediaLibrary](/help/assets/medialibrary.md).
-
 #### Går det att bygga plugin-program för WordPress som ger en kund möjlighet att välja bilder i Adobe Resursväljaren? {#is-it-possible-to-build-plugin-for-wordpress-that-allows-a-customer-to-access-adobe-asset-picker-to-select-images}
 
 Ja, en kund som använder WordPress kan använda Adobe Resursväljare för att välja bilder från sin AEM Assets-server och lägga till i inlägg på sin WordPress-webbplats.
 
 Mer information finns i [Resursväljare](../assets/search-assets.md#assetpicker).
-
-#### Går det att utöka sökfunktionerna i AEM Assets för att lägga till fler predikat? {#is-it-possible-to-extend-the-search-facets-in-aem-assets-to-add-additional-predicates}
-
-En företagsövergripande driftsättning av Adobe Experience Manager (AEM) Assets har kapacitet att lagra många resurser. Du kan lägga till predikat i standardformuläret eller använda ett anpassat formulär som innehåller valfria aspekter.
-
-Mer information finns i [Sök efter ansikten](/help/assets/search-facets.md).
