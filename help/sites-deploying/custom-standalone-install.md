@@ -3,21 +3,15 @@ title: Anpassad fristående installation
 seo-title: Anpassad fristående installation
 description: Lär dig mer om de alternativ som är tillgängliga när du installerar en fristående AEM.
 seo-description: Lär dig mer om de alternativ som är tillgängliga när du installerar en fristående AEM.
-uuid: 83fc49d8-2c44-4bb2-988a-f29475066efc
-contentOwner: Tyler Rushton
-products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: deploying
-discoiquuid: deae8ecb-a2ee-4442-97ca-98bfd1b85738
-docset: aem65
-translation-type: tm+mt
-source-git-commit: 3f53945579eaf5de1ed0b071aa9cce30dded89f1
+exl-id: d6484bb7-8123-4f42-96e8-aa441b1093f3
+source-git-commit: 3e18eed63d676e22e12483a1ee68e7e0148d8083
 workflow-type: tm+mt
 source-wordcount: '1623'
 ht-degree: 0%
 
 ---
-
 
 # Anpassad fristående installation{#custom-standalone-install}
 
