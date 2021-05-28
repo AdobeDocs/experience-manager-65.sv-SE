@@ -6,7 +6,7 @@ mini-toc-levels: 1
 role: Business Practitioner
 feature: Resurshantering, sökning
 exl-id: 158607e6-b4e9-4a3f-b023-4023d60c97d2
-source-git-commit: a7f8e98729dd27f6976d3289a51f22435fced585
+source-git-commit: d06e60baac692c92358244944226b77d5dad4022
 workflow-type: tm+mt
 source-wordcount: '9540'
 ht-degree: 3%
@@ -113,7 +113,7 @@ Du kan välja att ersätta en befintlig resurs, skapa en annan version eller beh
 >
 >När du väljer **[!UICONTROL Replace]** i dialogrutan [!UICONTROL Name Conflict] genereras resurs-ID om för den nya resursen. Detta ID skiljer sig från ID:t för föregående resurs.
 >
->Om Resursinsikter är aktiverat för att spåra visningar eller klickningar med [!DNL Adobe Analytics] blir det återskapade resurs-ID:t ogiltigt för de data som hämtats för resursen på [!DNL Analytics].
+>Om Assets Insights är aktiverat för att spåra visningar eller klickningar med [!DNL Adobe Analytics] blir det återskapade resurs-ID:t ogiltigt för de data som hämtats för resursen på [!DNL Analytics].
 
 Om resursen som du överför finns i [!DNL Assets] visas en varning i dialogrutan **[!UICONTROL Duplicates Detected]** om att du försöker överföra en dubblettresurs. Dialogrutan visas bara om kontrollsummevärdet `SHA 1` för binärfilen för den befintliga resursen matchar kontrollsummevärdet för resursen som du överför. I det här fallet spelar resursernas namn ingen roll.
 
