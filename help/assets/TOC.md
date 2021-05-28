@@ -6,7 +6,7 @@ audience: end-user
 user-guide-title: Resurshandbok
 breadcrumb-title: Resurshandbok
 user-guide-description: Skapa, hantera, bearbeta och distribuera digitalt material.
-source-git-commit: d19b203ffe75a5628f350113d4d74a2916beffc8
+source-git-commit: 68c36d4e3a14567a4d115ee64a4474bcaf9aa386
 workflow-type: tm+mt
 source-wordcount: '582'
 ht-degree: 34%
@@ -150,7 +150,7 @@ ht-degree: 34%
    + [Hämta resurser från Experience Manager](download-assets-from-aem.md)
    + [Ljuslåda](light-box.md)
    + [Resursinsikter](asset-insights.md)
-   + [Aktivera tillgångsinsikter via DTM](use-dtm-for-asset-insights.md)
+   + [Aktivera insikter om resurser via DTM](use-dtm-for-asset-insights.md)
    + [Konfigurera resursinsikter](configure-asset-insights.md)
    + [Checka in och checka ut resurser](check-out-and-submit-assets.md)
    + [Använd översättningsmolntjänster på mappar](transition-cloud-services.md)
