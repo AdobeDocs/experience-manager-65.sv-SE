@@ -3,7 +3,7 @@ title: '[!DNL Adobe Experience Manager] 6.5 Versionsinformation för föregåend
 description: Versionsinformation för [!DNL Adobe Experience Manager] 6.5 Service Packs.
 contentOwner: AK
 exl-id: aeed49a0-c7c2-44da-b0b8-ba9f6b6f7101
-source-git-commit: 8c69687ef4fbc2e4ee729d98232fe56db9b1df5a
+source-git-commit: d06e60baac692c92358244944226b77d5dad4022
 workflow-type: tm+mt
 source-wordcount: '19911'
 ht-degree: 0%
@@ -1107,7 +1107,7 @@ Nedan följer en lista över korrigeringar i [!DNL Experience Manager] 6.5.5.0-v
 
 * När du använder överlappande popup-fönster i metadatascheman försvinner det valda alternativet för apostrof när du väljer och sparar ett nedrullningsbart alternativ som innehåller en apostrof (från den underordnade listrutan) efter att resursen [!UICONTROL Properties] öppnats på nytt (NPR-32649).
 
-* [!UICONTROL Asset Insights Sync Job] stoppar och misslyckas om ogiltiga poster påträffas (på analyssidan) i stället för att nästa post (NPR-32674) flyttas.
+* [!UICONTROL Assets Insights Sync Job] stoppar och misslyckas om ogiltiga poster påträffas (på analyssidan) i stället för att nästa post (NPR-32674) flyttas.
 
 * Gyroscope fungerar inte eftersom rörelsesensorerna är inaktiverade som standard i mobilwebbläsare i panoramavisare (CQ-4272937).
 
