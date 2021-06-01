@@ -9,10 +9,9 @@ docset: aem65
 role: Business Practitioner, Administrator
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: Konfiguration,Scene7-läge
-translation-type: tm+mt
-source-git-commit: ad67634278088f8f953fde61a3543acdd70537dd
+source-git-commit: 485464350f391fca327207b78b165897fdacc2d3
 workflow-type: tm+mt
-source-wordcount: '5791'
+source-wordcount: '5793'
 ht-degree: 4%
 
 ---
@@ -33,25 +32,24 @@ Med den nya arkitekturen ansvarar Experience Manager för de viktigaste källres
 
 ![chlimage_1-550](assets/chlimage_1-550.png)
 
->[!NOTE]
+>[!IMPORTANT]
 >
 >Följande funktionslista kräver att du använder det färdiga CDN som medföljer Adobe Experience Manager - Dynamic Media. Andra anpassade CDN stöds inte med dessa funktioner.
 >
 >* [Smart bildbehandling](/help/assets/imaging-faq.md)
->* [Cacheogiltigförklaring](/help/assets/invalidate-cdn-cache-dynamic-media.md)
->* [Hotlänksskydd](/help/assets/hotlink-protection.md)
->* [HTTP/2-leverans av innehåll](/help/assets/http2.md)
->* URL-omdirigering på CDN-nivå
->* Akamai ChinaCDN (för optimal leverans i Kina)
+* [Cacheogiltigförklaring](/help/assets/invalidate-cdn-cache-dynamic-media.md)
+* [Hotlänksskydd](/help/assets/hotlink-protection.md)
+* [HTTP/2-leverans av innehåll](/help/assets/http2.md)
+* URL-omdirigering på CDN-nivå
+* Akamai ChinaCDN (för optimal leverans i Kina)
 
 
 ## Aktivera Dynamic Media i Scene7-läge {#enabling-dynamic-media-in-scene-mode}
 
 [Dynamic ](https://www.adobe.com/solutions/web-experience-management/dynamic-media.html) Mediais är inaktiverat som standard. Om du vill utnyttja Dynamic Media funktioner måste du aktivera dem.
 
->[!NOTE]
->
->Dynamic Media - Scene7-läget är endast till för författarinstansen Experience Manager. Därför måste du konfigurera `runmode=dynamicmedia_scene7` på Experience Manager Author-instansen *inte* Experience Manager Publish-instansen.
+>[!WARNING]
+Dynamic Media - Scene7-läget är endast för *författarinstansen av Experience Manager*. Därför måste du konfigurera `runmode=dynamicmedia_scene7` på Experience Manager Author-instansen *inte* Experience Manager Publish-instansen.
 
 Om du vill aktivera Dynamic Media måste du starta Experience Manager med körningsläget `dynamicmedia_scene7` från kommandoraden genom att ange följande i ett terminalfönster (exempelporten som används är 4502):
 
@@ -64,8 +62,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 Uppgradering av Experience Manager Dynamic Media från 6.3 till 6.4 eller 6.5 innefattar nu möjligheten till driftsättning utan driftstopp. Om du vill migrera alla förinställningar och konfigurationer från `/etc` till `/conf` i CRXDE Lite ska du köra följande kommando.
 
 >[!NOTE]
->
->Om du kör Experience Manager-instansen i kompatibilitetsläge, d.v.s. har kompatibilitetspaketet installerat, behöver du inte köra dessa kommandon.
+Om du kör Experience Manager-instansen i kompatibilitetsläge, d.v.s. har kompatibilitetspaketet installerat, behöver du inte köra dessa kommandon.
 
 För alla uppgraderingar, antingen med eller utan kompatibilitetspaketet, kan du kopiera de förinställningar för visningsprogram som ursprungligen ingick i Dynamic Media genom att köra följande kommando för Linux®-kurva:
 
@@ -89,9 +86,9 @@ Mer information finns i [Installera funktionspaket 18912 för migrering av grupp
 
 ![dynamicmediaconfiguration2uppdaterad](assets/dynamicmediaconfiguration2updated.png)
 
-**Skapa en Dynamic Media-konfiguration i Cloud Services**
+**Så här skapar du en Dynamic Media-konfiguration i Cloud Services:**
 
-1. I Experience Manager trycker du på Experience Manager-logotypen för att komma åt den globala navigeringskonsolen, trycker på verktygsikonen och sedan på **[!UICONTROL Cloud Services > Dynamic Media Configuration]**.
+1. I läget Experience Manager Author trycker du på Experience Manager-logotypen för att komma åt den globala navigeringskonsolen och sedan på verktygsikonen och sedan på **[!UICONTROL Cloud Services > Dynamic Media Configuration]**.
 1. På sidan Läsare för Dynamic Media-konfiguration trycker du i den vänstra rutan på **[!UICONTROL global]** (tryck inte på och välj inte mappikonen till vänster om **[!UICONTROL global]**) och sedan trycker du på **[!UICONTROL Create]**.
 1. På sidan **[!UICONTROL Create Dynamic Media Configuration]** anger du en titel, e-postadress för Dynamic Media-konto, lösenord och väljer sedan region. Den här informationen tillhandahålls av Adobe i e-postmeddelandet om etablering. Kontakta Adobe kundtjänst om du inte har fått e-postmeddelandet.
 
