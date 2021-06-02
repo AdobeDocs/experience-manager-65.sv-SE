@@ -8,20 +8,19 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: aac3c850-ae84-4bff-80de-d370e150f675
 docset: aem65
-feature: 360 VR Video
+feature: 360 VR-video
 role: Business Practitioner, Administrator
-translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+exl-id: 0c2077a7-bd16-484b-980f-4d4a1a681491
+source-git-commit: a4e9a4003bf0ce686578d3f8b3fddc19bc49dfb4
 workflow-type: tm+mt
-source-wordcount: '1092'
+source-wordcount: '1047'
 ht-degree: 0%
 
 ---
 
-
 # 360/VR-video {#vr-video}
 
-360-gradersvyer spelar in en vy i alla riktningar samtidigt. De filmas med en omdirigerad kamera eller en samling kameror. Vid uppspelning på en platt skärm har användaren kontroll över betraktningsvinkeln. uppspelning på mobila enheter utnyttjar vanligtvis de inbyggda gyroskopiska kontrollerna.
+360-gradersvyer spelar in en vy i alla riktningar samtidigt. De filmas med en omdirigerad kamera eller en samling kameror. Vid uppspelning på en platt skärm har användaren kontroll över betraktningsvinkeln. uppspelningar på mobila enheter använder vanligtvis de inbyggda gyroskopiska kontrollerna.
 
 Dynamic Media - Scene7-läget har inbyggt stöd för leverans av 360 videomaterial. Som standard krävs ingen ytterligare konfiguration för visning eller uppspelning. Du levererar 360-video med standardvideotillägg som .mp4, .mkv och .mov. Den vanligaste kodeken är H.264.
 
@@ -33,7 +32,7 @@ Se även [Hantera visningsförinställningar](/help/assets/managing-viewer-prese
 
 ## 360 Video in action {#video-in-action}
 
-Tryck på [Space Station 360](http://mobiletest.scene7.com/s7viewers/html5/Video360Viewer.html?asset=Viewers/space_station_360-AVS) för att öppna ett webbläsarfönster och titta på en 360-gradersvideo. Under videouppspelningen drar du muspekaren till en ny plats för att ändra visningsvinkeln.
+Tryck på [Space Station 360](https://mobiletest.scene7.com/s7viewers/html5/Video360Viewer.html?asset=Viewers/space_station_360-AVS) för att öppna ett webbläsarfönster och titta på en 360-gradersvideo. Under videouppspelningen drar du muspekaren till en ny plats för att ändra visningsvinkeln.
 
 ![360-](assets/6_5_360videoiss_simplified.png)
 *videoexempelVideobildruta från Space Station 360*
@@ -46,7 +45,7 @@ Se [Redigera 360/VR-video](https://helpx.adobe.com/premiere-pro/how-to/edit-360-
 
 ## Överför resurser som ska användas med 360-videovisningsprogrammet {#uploading-assets-for-use-with-the-video-viewer}
 
-360 videomaterial som överförs till AEM är märkta som **Multimedia** på en tillgångssida, på liknande sätt som vanliga videomaterial.
+360 videomaterial som överförs till Adobe Experience Manager kallas **Multimedia** på en tillgångssida, ungefär som vanliga videomaterial.
 
 ![6_5_360video-](assets/6_5_360video-selecttopreview.png)
 *selectPreviewEn överförd 360-videoresurs som visas i kortvyn. Resursen är märkt som Multimedia.*
@@ -58,20 +57,20 @@ Se [Redigera 360/VR-video](https://helpx.adobe.com/premiere-pro/how-to/edit-360-
 
    Om du återger 360-videoinnehåll ställs högre krav på källvideoupplösning och för kodad återgivningsupplösning än standardvideoinnehåll som inte är 360.
 
-   Du kan använda den färdiga adaptiva videoprofilen som redan finns i Dynamic Media. Tänk dock på att det ger betydligt lägre 360-videokvalitet än vad du skulle få för icke-360-video som är kodad med samma inställningar som återges med ett icke-360-videovisningsprogram. Om 360-video med hög kvalitet krävs gör du därför följande:
+   Du kan använda den färdiga adaptiva videoprofilen som redan finns i Dynamic Media. Det ger dock betydligt lägre 360-videokvalitet än vad du skulle få för icke-360-video som är kodad med samma inställningar som återges med ett icke-360-videovisningsprogram. Om 360-video med hög kvalitet krävs gör du därför följande:
 
-   * Helst bör ditt ursprungliga 360-videoinnehåll ha någon av följande upplösningar:
+   * Det bästa är att ditt ursprungliga 360-videoinnehåll har någon av följande upplösningar:
 
       * 1080p - 1920 x 1080, känd som Full HD eller FHD upplösning eller
-      * 2160p - 3840 x 2160, känd som 4K-, UHD- eller Ultra HD-upplösning. Den här mycket stora skärmupplösningen finns oftast på tv-apparater och datorskärmar. Upplösningen 2160p kallas ofta för&quot;4K&quot; eftersom bredden är nästan 4 000 pixlar. Med andra ord har den fyra gånger så många pixlar som 1080p.
-   * [Skapa en anpassad adaptiv ](/help/assets/video-profiles.md#creating-a-video-encoding-profile-for-adaptive-streaming) videoprofil med renderingar av högre kvalitet. Du kan till exempel skapa en adaptiv videoprofil som innehåller följande tre inställningar:
+      * 2160p - 3840 x 2160, känd som 4K-, UHD- eller Ultra HD-upplösning. Den här stora skärmupplösningen finns oftast på tv-apparater och datorskärmar. Upplösningen 2160p kallas ofta för&quot;4K&quot; eftersom bredden är nästan 4 000 pixlar. Med andra ord har den fyra gånger så många pixlar som 1080p.
+   * [Skapa en anpassad adaptiv ](/help/assets/video-profiles.md#creating-a-video-encoding-profile-for-adaptive-streaming) videoprofil med renderingar av högre kvalitet. Skapa till exempel en adaptiv videoprofil som innehåller följande tre inställningar:
 
       * width=auto; height=720; bithastighet=2 500 kbit/s
       * width=auto; height=1080; bithastighet=5000 kbit/s
       * width=auto; height=1440; bithastighet=6600 kbit/s
    * Bearbeta 360-videoinnehåll i en mapp som är exklusivt dedikerad till 360-videoresurser.
 
-   Tänk på att detta tillvägagångssätt också kommer att ställa större krav på slutanvändarens nätverk och CPU.
+   Detta tillvägagångssätt ställer större krav på slutanvändarens nätverk och processor.
 
 1. [Överför videon till mappen](/help/assets/managing-video-assets.md#upload-and-preview-video-assets).
 
@@ -79,7 +78,7 @@ Se [Redigera 360/VR-video](https://helpx.adobe.com/premiere-pro/how-to/edit-360-
 
 För att en överförd resurs ska kvalificera sig som en 360-video som du tänker använda med 360-videovisningsprogrammet måste resursen ha proportionerna 2.
 
-Som standard identifierar AEM video som&quot;360&quot; om proportionerna (bredd/höjd) är 2.0. Om du är administratör kan du åsidosätta standardinställningen för proportioner på 2 genom att ange den valfria egenskapen `s7video360AR` i CRXDE Lite enligt följande:
+Som standard identifierar Experience Manager video som&quot;360&quot; om proportionerna (bredd/höjd) är 2.0. Om du är administratör kan du åsidosätta standardinställningen för proportioner på 2 genom att ange den valfria egenskapen `s7video360AR` i CRXDE Lite enligt följande:
 
 * `/conf/global/settings/cloudconfigs/dmscene7/jcr:content`
 
@@ -100,17 +99,17 @@ Se även [Redigera visningsförinställningar](/help/assets/managing-viewer-pres
 
 När du är nöjd med 360-videon kan du publicera den.
 
-Se [Bädda in video- eller bildvisningsprogrammet på en webbsida.](https://helpx.adobe.com/experience-manager/6-5/help/assets/embed-code.html)
-Se  [Länka URL:er till ditt webbprogram](https://helpx.adobe.com/experience-manager/6-5/help/assets/linking-urls-to-yourwebapplication.html). Observera att den URL-baserade länkningsmetoden inte är möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till AEM Sites-sidor.
-Se [Lägga till Dynamic Media Assets på sidor.](https://helpx.adobe.com/experience-manager/6-5/help/assets/adding-dynamic-media-assets-to-pages.html)
+Se [Bädda in video- eller bildvisningsprogrammet på en webbsida.](/help/assets/embed-code.md)
+Se  [Länka URL:er till ditt webbprogram](/help/assets/linking-urls-to-yourwebapplication.md). Den URL-baserade länkningsmetoden är inte möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till Experience Manager-sidor.
+Se [Lägga till Dynamic Media Assets på sidor.](/help/assets/adding-dynamic-media-assets-to-pages.md)
 
-**Så här förhandsgranskar du 360-videoklipp**
+**Så här förhandsgranskar du 360-videoklipp:**
 
-1. I **[!UICONTROL Assets]** navigerar du till en befintlig 360-video som du har skapat. Tryck på 360-videoresursen för att öppna den i förhandsgranskningsläge.
+1. I **[!UICONTROL Assets]** navigerar du till en befintlig 360-video som du har skapat. Tryck på 360-videoresursen så att du kan öppna den i förhandsgranskningsläge.
 
    ![6_5_360video-selecttopreview-1](assets/6_5_360video-selecttopreview-1.png)
 
-   Tryck på 360-videoresursen för att förhandsgranska videon.
+   Tryck på 360-videoresursen så att du kan förhandsgranska videon.
 
 1. Tryck på listrutan på förhandsgranskningssidan i det övre vänstra hörnet av sidan och välj **[!UICONTROL Viewers.]**
 
@@ -119,7 +118,7 @@ Se [Lägga till Dynamic Media Assets på sidor.](https://helpx.adobe.com/experie
    Tryck på **[!UICONTROL Video360_social]** i visningslistan och gör sedan något av följande:
 
    * Dra muspekaren över videon om du vill ändra visningsvinkeln för den statiska scenen.
-   * Tryck på videons **[!UICONTROL Play]**-knapp för att påbörja uppspelningen; När videon spelas upp drar du muspekaren över videon för att ändra visningsvinkeln.
+   * Tryck på videoknappen **[!UICONTROL Play]** om du vill påbörja uppspelningen. När videon spelas upp drar du muspekaren över videon för att ändra visningsvinkeln.
 
    ![6_5_360video-preview-video360-](assets/6_5_360video-preview-video360-social.png)*socialA 360 video, skärmdump.*
 
@@ -133,9 +132,9 @@ Se [Lägga till Dynamic Media Assets på sidor.](https://helpx.adobe.com/experie
 
 ## Publicerar 360-video {#publishing-video}
 
-Du måste publicera 360-videon för att kunna använda den. När du publicerar en 360-video aktiveras URL:en och Bädda in kod. Dessutom publiceras 360-videon i Dynamic Media-molnet, som är integrerat med ett CDN för skalbar leverans och leverans med höga prestanda.
+Publicera 360-videon så att du kan använda den. När du publicerar en 360-video aktiveras URL:en och Bädda in kod. Dessutom publiceras 360-videon i Dynamic Media-molnet, som är integrerat med ett CDN för skalbar leverans och leverans med höga prestanda.
 
 Mer information om hur du publicerar 360-video finns i [Publicera Dynamic Media Assets](/help/assets/publishing-dynamicmedia-assets.md).
-Se även [Bädda in video- eller bildvisningsprogrammet på en webbsida](https://helpx.adobe.com/experience-manager/6-5/help/assets/embed-code.html).
-Se även [Länka URL:er till ditt webbprogram](https://helpx.adobe.com/experience-manager/6-5/help/assets/linking-urls-to-yourwebapplication.html). Observera att den URL-baserade länkningsmetoden inte är möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till AEM Sites-sidor.
-Se även [Lägga till Dynamic Media Assets på sidor.](https://helpx.adobe.com/experience-manager/6-5/help/assets/adding-dynamic-media-assets-to-pages.html)
+Se även [Bädda in video- eller bildvisningsprogrammet på en webbsida](/help/assets/embed-code.md).
+Se även [Länka URL:er till ditt webbprogram](/help/assets/linking-urls-to-yourwebapplication.md). Den URL-baserade länkningsmetoden är inte möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till Experience Manager-sidor.
+Se även [Lägga till Dynamic Media Assets på sidor.](/help/assets/adding-dynamic-media-assets-to-pages.md)
