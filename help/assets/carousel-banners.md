@@ -11,11 +11,10 @@ docset: aem65
 feature: Karusellbanner
 role: Business Practitioner, Administrator
 exl-id: 53d34d3a-ecb6-4fa0-9665-60d21f48021e
-translation-type: tm+mt
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+source-git-commit: a4e9a4003bf0ce686578d3f8b3fddc19bc49dfb4
 workflow-type: tm+mt
-source-wordcount: '4721'
-ht-degree: 3%
+source-wordcount: '4649'
+ht-degree: 4%
 
 ---
 
@@ -23,7 +22,7 @@ ht-degree: 3%
 
 Carousel-banners gör det möjligt för marknadsförare att öka konverteringsgraden genom att enkelt skapa interaktivt roterande marknadsföringsmaterial och leverera det till alla skärmar.
 
-Det kan vara tidskrävande att skapa och ändra innehåll i reklambanners, vilket begränsar möjligheten att snabbt publicera nytt innehåll eller göra det mer riktat. Med Carousel Banners kan du snabbt skapa eller ändra roterande banners, lägga till interaktivitet, till exempel hotspot-områden som länkar till produktdetaljer eller relaterade resurser, och leverera dem till alla skärmar, så att du kan få ut nytt marknadsföringsmaterial snabbare.
+Det kan vara tidskrävande att skapa och ändra innehåll i reklambanners, vilket begränsar möjligheten att snabbt publicera nytt innehåll eller göra det mer riktat. Med Carousel Banners kan du snabbt skapa eller ändra roterande banners. Ni kan lägga till interaktivitet, till exempel hotspot-områden som länkar till produktinformation eller relaterade resurser, och leverera dem till alla skärmar, så att ni snabbare kan få ut nytt marknadsföringsmaterial på marknaden.
 
 Carousel Banners betecknas med en banderoll med ordet **[!UICONTROL CAROUSELSET]**:
 
@@ -33,15 +32,15 @@ På din webbplats kan en karusellbanderoll se ut så här:
 
 ![chlimage_1-439](assets/chlimage_1-439.png)
 
-Här kan du navigera bland bilderna (genom att klicka på siffrorna). Dessutom roteras bildrutorna automatiskt baserat på ett tidsintervall som du kan anpassa. Bilder som du lägger till i karusellbanderollen har stöd för både hotspot-områden och bildscheman, där användarna kan trycka eller gå till en hyperlänk eller komma åt ett snabbfönster.
+Här kan du navigera bland bilderna (genom att klicka på siffrorna). Dessutom roteras bildrutorna automatiskt baserat på ett tidsintervall som du kan anpassa. Bilder som du lägger till i karusellbanners har stöd för både hotspot-områden och bildscheman, där användarna kan trycka eller gå till en hyperlänk eller öppna ett Quickview-fönster.
 
-I det här exemplet har en användare tryckt på eller klickat på ett bildschema och öppnat snabbvyfönstret för handskar:
+I det här exemplet har en användare tryckt på eller klickat på ett bildschema och öppnat fönstret Quickview för handskar:
 
 ![chlimage_1-440](assets/chlimage_1-440.png)
 
 ## Se hur karusellbanderoller skapas {#watch-how-carousel-banners-are-created}
 
-Titta på en genomgång på 10 minuter och 33 sekunder om [hur karusellbanderoller skapas](https://s7d5.scene7.com/s7viewers/html5/VideoViewer.html?videoserverurl=https://s7d5.scene7.com/is/content/&amp;emailurl=https://s7d5.scene7.com/s7/emailFriend&amp;serverUrl=https://s7d5.scene7.com/is/image/&amp;config=Scene7SharedAssets/Universal_HTML5_Video_social&amp;contenturl=https://s7d5.scene7.com/skins/&amp;asset=S7tutorials/InteractiveCarouselBanner). Du får också lära dig att förhandsgranska, redigera och leverera karusellbanderoller.
+Spela en genomgång om [hur karusellbanners skapas](https://s7d5.scene7.com/s7viewers/html5/VideoViewer.html?videoserverurl=https://s7d5.scene7.com/is/content/&amp;emailurl=https://s7d5.scene7.com/s7/emailFriend&amp;serverUrl=https://s7d5.scene7.com/is/image/&amp;config=Scene7SharedAssets/Universal_HTML5_Video_social&amp;contenturl=https://s7d5.scene7.com/skins/&amp;asset=S7tutorials/InteractiveCarouselBanner)(10 minuter och 33 sekunder). Du får också lära dig hur du förhandsgranskar, redigerar och levererar karusellbanderoller.
 
 >[!NOTE]
 >
@@ -51,20 +50,20 @@ Titta på en genomgång på 10 minuter och 33 sekunder om [hur karusellbanderoll
 
 Så här kommer du igång snabbt:
 
-1. [Identifiera hotspot- och bildschemavariabler](#identifying-hotspot-and-image-map-variables)  (endast för kunder som använder AEM Assets + Dynamic Media)
+1. [Identifiera hotspot- och bildschemavariabler](#identifying-hotspot-and-image-map-variables)  (endast för kunder som använder Experience Manager Assets + Dynamic Media)
 
-   Börja med att identifiera dynamiska variabler som används i den befintliga snabbvyimplementeringen, så att du kan ange klickbara områden och data från bildscheman korrekt när du skapar en karusellbanderoll i AEM Assets.
+   Börja med att identifiera dynamiska variabler som används i den befintliga Quickview-implementeringen så att du kan ange klickbara områden och data från bildscheman korrekt när du skapar en karusellbanderoll i Adobe Experience Manager Assets.
 
    >[!NOTE]
    >
-   >Om du är kund hos AEM Sites eller e-handel kan du använda den inbyggda funktionen för att navigera till produktsidor och söka efter befintliga skal i produktkatalogen. Du behöver inte ange variabler för hotspot eller bildschema manuellt. Mer information finns i [konfigurera e-handel](/help/commerce/cif-classic/administering/generic.md).
+   >Om du använder Experience Manager Sites eller Ecommerce kan du använda den inbyggda funktionen för att navigera till produktsidor och söka efter befintliga SKU:er i produktkatalogen. Du behöver inte ange variabler för hotspot eller bildschema manuellt. Mer information finns i [konfigurera e-handel](/help/commerce/cif-classic/administering/generic.md).
    >
    >
-   >Om du använder AEM Assets och Dynamic Media anger du manuellt data för hotspot-områden och bildscheman och integrerar sedan den publicerade URL:en eller inbäddningskoden med ditt tredjeparts innehållshanteringssystem.
+   >Om du använder Experience Manager Assets och Dynamic Media anger du manuellt data för hotspot-områden och bildscheman och integrerar sedan den publicerade URL:en eller inbäddningskoden med ditt innehållshanteringssystem från tredje part.
 
 1. Valfritt: [Skapa en visningsförinställning för en karuselluppsättning](/help/assets/managing-viewer-presets.md) om det behövs.
 
-   Om du är administratör kan du anpassa karusellens beteende och utseende genom att skapa en egen förinställning för Carousel-visningsprogrammet. Den största fördelen är att du kan återanvända den här anpassade visningsförinställningen för flera bildspel. Man kan också anpassa karusellens beteende och utseende direkt när man skapar karusellen. Detta är det bästa sättet när du vill ha en mycket specifik design för en viss karusell.
+   Om du är administratör kan du anpassa karusellens beteende och utseende genom att skapa en egen förinställning för Carousel-visningsprogrammet. Den största fördelen är att du kan återanvända den här anpassade visningsförinställningen för flera bildspel. Man kan dock anpassa karusellens beteende och utseende direkt när man skapar karusellen. Den här metoden är att föredra när du vill ha en specifik design för en viss karusell.
 
 1. [Överför en bildbanderoll](#uploading-image-banners).
 
@@ -74,54 +73,54 @@ Så här kommer du igång snabbt:
 
    I Carousels Sets navigerar användarna genom banderollbilder och trycker på hotspot-områden eller bildscheman för att få tillgång till relevant innehåll.
 
-   Om du vill skapa en Carousel-uppsättning i resurser trycker du på **[!UICONTROL Create]**, väljer **[!UICONTROL Carousel Sets.]** Lägg till resurser i bildrutor och trycker på **[!UICONTROL Save.]** Du kan även redigera karusellens utseende och beteende direkt i redigeraren.
+   Om du vill skapa en karuselluppsättning i Assets trycker du på **[!UICONTROL Create]** och väljer sedan **[!UICONTROL Carousel Sets]**. Lägg till resurser i bilderna och tryck på **[!UICONTROL Save]**. Du kan också redigera karusellens utseende och beteende direkt i redigeraren.
 
-1. [Lägg till aktiveringspunkter eller bildscheman i en bildbanderoll.](#adding-hotspots-or-image-maps-to-an-image-banner)
+1. [Lägg till aktiveringspunkter eller bildscheman i en bildbanderoll](#adding-hotspots-or-image-maps-to-an-image-banner).
 
    Lägg till en eller flera hotspot-områden eller bildscheman i en bildbanderoll och koppla dem till en åtgärd som en länk, en snabbvy eller ett Experience Fragment. När du har lagt till aktiveringspunkter eller bildscheman avslutar du den här uppgiften genom att publicera karuselluppsättningen. Med Publicering skapas den inbäddningskod som du kan använda för att kopiera och tillämpa på webbplatsens landningssida.
 
    Se [(Valfritt) Förhandsgranska Carousel Banners](#optional-previewing-carousel-banners) - Valfritt. Om du vill kan du visa en representation av karuselluppsättningen och testa dess interaktivitet.
 
-1. [Publicera Carousel Banners.](#publishing-carousel-banners)
+1. [Publicera Carousel Banners](#publishing-carousel-banners).
 
-   Du publicerar en Carousel-uppsättning på samma sätt som andra resurser. Navigera till Carousel Set i Assets, markera den och tryck på **[!UICONTROL Publish.]** Publishing a Carousel Set för att aktivera URL:en och bädda in strängen.
+   Du publicerar en Carousel-uppsättning på samma sätt som andra resurser. Navigera till Carousel Set i Assets, markera den och tryck på **[!UICONTROL Publish]**. När du publicerar en Carousel Set aktiveras URL:en och strängen Embed.
 
 1. Gör något av följande:
 
    * [Lägg till en karusellbanderoll på webbplatsens ](#adding-a-carousel-banner-to-your-website-page) sidaDu kan lägga till karusellbanderollens URL eller inbäddningskod som du har kopierat till webbplatsens sida.
 
-      * [Integrera karusellbanderollen med en befintlig QuickView](#integrating-the-carousel-banner-with-an-existing-quickview). Om du använder ett webbinnehållshanteringssystem från tredje part måste du integrera den nya Carousel-banderollen med den befintliga Quickview-implementeringen på din webbplats.
-   * [Lägg till en karusellbanderoll på din webbplats i ](/help/assets/adding-dynamic-media-assets-to-pages.md) AEMIom du är AEM Sites-kund kan du lägga till karuselluppsättningen direkt på sidan i AEM med hjälp av komponenten Interactive Media.
+      * [Integrera karusellbanderollen med en befintlig QuickView](#integrating-the-carousel-banner-with-an-existing-quickview). Om du använder ett tredjepartssystem för hantering av webbinnehåll måste du integrera den nya Carousel-banderollen med den befintliga Quickview-implementeringen på din webbplats.
+   * [Lägg till en karusellbanderoll på webbplatsen i Experience ](/help/assets/adding-dynamic-media-assets-to-pages.md) Manager. Om du är kund på Experience Manager Sites kan du lägga till karuselluppsättningen direkt på sidan i Experience Manager med hjälp av Interactive Media-komponenten.
 
 
-Om du behöver redigera Carousel-uppsättningar läser du [redigera Carousel-uppsättningar.](#editing-carousel-sets) Dessutom kan du visa och redigera  [Carousel Set-egenskaper](manage-assets.md#editing-properties).
+Mer information om hur du redigerar Carousel-uppsättningar finns i [redigera Carousel-uppsättningar](#editing-carousel-sets). Dessutom kan du visa och redigera [Carousel Set-egenskaper](manage-assets.md#editing-properties).
 
 ## Identifiera aktiveringspunkt- och bildschemavariabler {#identifying-hotspot-and-image-map-variables}
 
-Börja med att identifiera dynamiska variabler som används i den befintliga snabbvyimplementeringen så att du kan ange aktiveringspunkter eller data för bildscheman korrekt när du skapar karuselluppsättningar i AEM Assets.
+Börja med att identifiera dynamiska variabler som används av den befintliga Quickview-implementeringen så att du kan ange klickbara områden eller data från bildscheman korrekt när du skapar karuselluppsättningar i Experience Manager Assets.
 
-När du lägger till aktiveringspunkter eller bildscheman i en banderollbild i AEM Assets måste du tilldela varje hotspot eller bildschema en SKU och valfria ytterligare variabler. Sådana variabler används senare för att matcha aktiveringspunkter eller bildscheman med snabbvyinnehåll.
+När du lägger till aktiveringspunkter eller bildscheman i en banderollbild i Experience Manager Assets, tilldelar du en SKU och valfria ytterligare variabler till varje hotspot eller bildschema. Sådana variabler används senare för att matcha hotspot-områden eller bildscheman med QuickView-innehåll.
 
 >[!NOTE]
 >
->Om du är kund hos AEM Sites och/eller AEM Ecommerce hoppar du över det här steget. Du behöver inte identifiera hotspot- eller bildschemavariabler manuellt. kan du använda integreringen med e-handel för produktintegrering. Mer information finns i [konfigurera e-handel](/help/commerce/cif-classic/administering/generic.md). Dessutom kan du använda den interaktiva komponenten och lägga till den på webbsidan.
+>Om du använder Experience Manager Sites och/eller Experience Manager Ecommerce hoppar du över det här steget. Du behöver inte identifiera hotspot- eller bildschemavariabler manuellt. kan du använda integreringen med e-handel för produktintegrering. Mer information finns i [konfigurera e-handel](/help/commerce/cif-classic/administering/generic.md). Dessutom kan du använda den interaktiva komponenten och lägga till den på webbsidan.
 >
->Om du är kund hos AEM Assets eller Media publicerar du URL:en eller Bädda in kod och integrerar sedan med ditt tredjepartssystem för innehållshantering och identifierar hotspot-områden och bildscheman manuellt.
+>Om du använder Experience Manager Assets eller Media publicerar du URL:en eller inbäddningskoden och integrerar sedan med ditt tredjepartssystem för innehållshantering och identifierar hotspot-områden och bildscheman manuellt.
 
-Det är viktigt att kunna identifiera antalet och typen av variabler som ska kopplas till hotspot- eller bildschemadata. Varje hotspot eller bildschema som läggs till i en banderollbild måste innehålla tillräckligt med information för att entydigt identifiera produkten i det befintliga backend-systemet. Samtidigt bör varje hotspot eller bildschema inte innehålla mer data än vad som är nödvändigt. Orsaken är att det skulle göra inmatningsprocessen alltför komplex och pågående hotspot- eller bildschemahantering mer felbenägen.
+Det är viktigt att kunna identifiera antalet och typen av variabler som ska kopplas till hotspot- eller bildschemadata. Varje hotspot eller bildschema som läggs till i en banderollbild måste innehålla tillräckligt med information för att entydigt identifiera produkten i det befintliga backend-systemet. Samtidigt får varje hotspot eller bildschema inte innehålla mer data än nödvändigt. Orsaken är att det skulle göra inmatningsprocessen alltför komplex och pågående hotspot- eller bildschemahantering mer felbenägen.
 
 Det finns olika sätt att identifiera en uppsättning variabler som ska användas för hotspot- eller bildschemaddata.
 
-Ibland kan det räcka att rådfråga IT-specialister som är ansvariga för den befintliga snabbvyimplementeringen, eftersom de troligen vet vilken minimiuppsättning data som behövs för att identifiera snabbvyn i systemet. I de flesta fall går det dock även att bara analysera den befintliga beteendet för koden.
+Ibland räcker det att rådfråga IT-specialister som är ansvariga för den befintliga Quickview-implementeringen. De vet troligen vilken minimiuppsättning data som krävs för att identifiera Quickview i systemet. Vanligtvis går det också att analysera det befintliga beteendet för koden.
 
-De flesta implementeringar av snabbvyn använder följande paradigm:
+De flesta QuickView-implementeringar använder följande paradigm:
 
-* Användaren aktiverar ett element i användargränssnittet på webbplatsen. Till exempel trycker de på en **[!UICONTROL Quick View]**-knapp.
-* Webbplatsen skickar en Ajax-begäran till backend-servern för att läsa in snabbvydata eller -innehåll vid behov.
-* Snabbvydata översätts till innehållet som förberedelse för återgivning på webbsidan.
+* Användaren aktiverar ett element i användargränssnittet på webbplatsen. Till exempel trycker de på en **[!UICONTROL Quickview]**-knapp.
+* Webbplatsen skickar en Ajax-begäran till serverdelen för att läsa in QuickView-data eller -innehåll vid behov.
+* Quickview-data översätts till innehållet som förberedelse för återgivning på webbsidan.
 * Slutligen återges sådant innehåll på skärmen visuellt i koden.
 
-Då besöker man olika delar av den befintliga webbplatsen där snabbvyfunktionen är implementerad, aktiverar snabbvyn och hämtar den Ajax-URL som webbsidan skickar för att läsa in snabbvydata eller -innehåll.
+Då besöker man olika delar av den befintliga webbplatsen där QuickView-funktionen används. Starta Quickview och hämta den Ajax-URL som skickats av webbsidan för att läsa in QuickView-data eller -innehåll.
 
 Normalt behöver du inte använda några specialverktyg för felsökning. Moderna webbläsare har webbinspektörer som klarar ett bra jobb. Nedan följer några exempel på webbläsare som innehåller webbinspektörer:
 
@@ -130,31 +129,31 @@ Normalt behöver du inte använda några specialverktyg för felsökning. Modern
 
 När nätverksövervakning är aktiverat i webbläsaren utlöser du snabbvyn på sidan.
 
-Nu hittar du snabbvyns Ajax-URL i nätverksloggen och kopierar den inspelade URL:en för framtida analys. I de flesta fall när du utlöser snabbvyn skickas flera begäranden till servern. Vanligtvis är snabbvyns Ajax-URL en en av de första i listan. Den har antingen en komplex frågesträngsdel eller sökväg och dess MIME-svarstyp är antingen `text/html`, `text/xml` eller `text/javascript`.
+Nu kan du hitta Quickview Ajax-URL:en i nätverksloggen och kopiera den inspelade URL:en för framtida analys. Vanligtvis skickas flera begäranden till servern när du utlöser snabbvyn. Vanligtvis är Quickview Ajax-URL en en av de första i listan. Den har antingen en komplex frågesträngsdel eller sökväg och dess MIME-svarstyp är antingen `text/html`, `text/xml` eller `text/javascript`.
 
-Under den här processen är det viktigt att du besöker olika delar av webbplatsen, med olika produktkategorier och typer. Anledningen är att URL:er för snabbvyn kan ha delar som är gemensamma för en viss webbplatskategori, men bara ändras om du besöker ett annat område på webbplatsen.
+Under den här processen är det viktigt att du besöker olika delar av webbplatsen, med olika produktkategorier och typer. Anledningen är att URL:er för snabbvyn har delar som är gemensamma för en viss webbplatskategori, men som bara ändras om du besöker ett annat område på webbplatsen.
 
 I det enklaste fallet är den enda variabeldelen i snabbvyns URL produktens SKU. I det här fallet är SKU-värdet den enda datadel som du behöver för att lägga till aktiveringspunkter eller bildscheman i banderollbilden.
 
-I komplexa fall har dock snabbvyns URL-adress olika element utöver SKU:n, till exempel kategori-ID, färgkod, storlekskod osv. I sådana fall är varje element en separat variabel i hotspot- eller bildschemats datadefinition i karusellbanderollfunktionen.
+I komplexa fall har emellertid QuickView-URL:en olika element utöver SKU:n, till exempel kategori-ID, färgkod och storlekskod. I sådana fall är varje element en separat variabel i hotspot- eller bildschemats datadefinition i karusellbanderollfunktionen.
 
-Titta på följande exempel på URL:er för snabbvyn och deras resulterande hotspot- eller bildschemavariabler:
+Titta på följande exempel på QuickView-URL:er och deras resulterande hotspot- eller bildschemavariabler:
 
 <table>
  <tbody>
   <tr>
    <td>En SKU, hittades i frågesträngen.</td>
-   <td><p>De inspelade URL:erna för snabbvyn innehåller följande:</p>
+   <td><p>De inspelade URL:erna för snabbvyn är bland annat följande:</p>
     <ul>
      <li><p><code>https://server/json?productId=866558&amp;source=100</code></p> </li>
      <li><p><code>https://server/json?productId=1196184&amp;source=100</code></p> </li>
      <li><p><code>https://server/json?productId=1081492&amp;source=100</code></p> </li>
      <li><p><code>https://server/json?productId=1898294&amp;source=100</code></p> </li>
-    </ul> <p>Den enda variabeldelen i URL:en är värdet på frågesträngsparametern <code>productId=</code>, och det är tydligt ett SKU-värde. Därför behöver våra aktiveringspunkter eller bildscheman bara SKU-fält med värden som <code>866558,</code> <code>1196184,</code> <code>1081492,</code> <code>1898294.</code></p> </td>
+    </ul> <p>Den enda variabeldelen i URL:en är värdet på frågesträngsparametern <code>productId=</code>, och det är tydligt ett SKU-värde. Därför behöver aktiveringspunkter och bildscheman bara SKU-fält med värden som <code>866558,</code> <code>1196184,</code> <code>1081492,</code> <code>1898294.</code></p> </td>
   </tr>
   <tr>
    <td>En SKU, finns i URL-sökvägen.</td>
-   <td><p>De inspelade URL:erna för snabbvyn innehåller följande:</p>
+   <td><p>De inspelade URL:erna för snabbvyn är bland annat följande:</p>
     <ul>
      <li><p><code>https://server/product/6422350843</code></p> </li>
      <li><p><code>https://server/product/1607745002</code></p> </li>
@@ -163,12 +162,12 @@ Titta på följande exempel på URL:er för snabbvyn och deras resulterande hots
   </tr>
   <tr>
    <td>SKU och kategori-ID i frågesträngen.</td>
-   <td><p>De inspelade URL:erna för snabbvyn innehåller följande:</p>
+   <td><p>De inspelade URL:erna för snabbvyn är bland annat följande:</p>
     <ul>
      <li><p><code>https://server/quickView/product/?category=1100004&amp;prodId=305466</code></p> </li>
      <li><p><code>https://server/quickView/product/?category=1100004&amp;prodId=310181</code></p> </li>
      <li><p><code>https://server/quickView/product/?category=1740148&amp;prodId=308706</code></p> </li>
-    </ul> <p>I det här fallet finns det två olika delar i URL:en. SKU:n lagras i parametern <code>prodId</code> och kategori-ID:t lagras i parametern <code>category=</code>.</p> <p>Definitionerna av hotspot/bildschema är par. Det vill säga ett SKU-värde och en ytterligare variabel som heter <code>categoryId</code>. De resulterande paren är följande:</p>
+    </ul> <p>I det här fallet finns det två olika delar i URL:en. SKU:n lagras i parametern <code>prodId</code> och kategori-ID:t lagras i parametern <code>category=</code>.</p> <p>Definitionerna av hotspot/bildschema är par. Det vill säga ett SKU-värde och en extra variabel som heter <code>categoryId</code>. De resulterande paren är följande:</p>
     <ul>
      <li><p>SKU är <strong><code>305466</code></strong> och <code>categoryId</code> är <code>1100004</code>.</p> </li>
      <li><p>SKU är <strong><code>310181</code></strong> och <code>categoryId</code> är <strong><code>1100004</code></strong>.</p> </li>
@@ -190,47 +189,48 @@ Information om hur du överför bildbanderoller finns i [Överföra resurser](/h
 >
 >Icke-administrativa användare måste läggas till i **[!UICONTROL dam-users]**-gruppen för att kunna skapa eller redigera karusellbanderoller. Om du har problem med att skapa eller redigera kontaktar du systemadministratören som kan lägga till dig i **[!UICONTROL dam-users]**-gruppen.
 
-**Skapa en Carousel-uppsättning**
+**Så här skapar du en Carousel-uppsättning:**
 
-1. I Resurser navigerar du till den mapp där du vill skapa Carousel-uppsättningen och trycker på **[!UICONTROL Create > Carousel Set.]**
+1. I Resurser navigerar du till den mapp där du vill skapa Carousel-uppsättningen och trycker på **[!UICONTROL Create > Carousel Set]**.
 1. På Carousel Banner Editor-sidan trycker du på **[!UICONTROL Tap to open Asset Selector]** för att välja bilden för din första bild.
 
    Gör något av följande på Carousel Banner Editor-sidan:
 
    * I närheten av sidans övre vänstra hörn trycker du på ikonen **[!UICONTROL Add Slide]**.
 
-   * I mitten av sidan trycker du på **[!UICONTROL Tap to open Asset Selector.]**
+   * I mitten av sidan trycker du på **[!UICONTROL Tap to open Asset Selector]**.
    Tryck här för att välja resurser som du vill inkludera i karuselluppsättningen. De markerade resurserna visas med en bock. När du är klar trycker du **[!UICONTROL Select]** i det övre högra hörnet på sidan.
 
-   Med resursväljaren kan du söka efter resurser genom att skriva ett nyckelord och trycka eller klicka på **[!UICONTROL Return.]**. Du kan också använda filter för att förfina sökresultaten. Du kan filtrera efter sökväg, samling, filtyp och tagg. Markera filtret och tryck sedan på ikonen **[!UICONTROL Filter]** i verktygsfältet. Ändra vyn genom att trycka på ikonen Visa och sedan välja **[!UICONTROL Column View]**, **[!UICONTROL Card View]** eller **[!UICONTROL List View.]**
+   Med resursväljaren kan du söka efter resurser genom att skriva ett nyckelord och trycka eller klicka på **[!UICONTROL Return]**. Du kan också använda filter för att förfina sökresultatet. Du kan filtrera efter sökväg, samling, filtyp och tagg. Markera filtret och tryck sedan på ikonen **[!UICONTROL Filter]** i verktygsfältet. Ändra vyn genom att trycka på ikonen Visa och sedan välja **[!UICONTROL Column View]**, **[!UICONTROL Card View]** eller **[!UICONTROL List View]**.
 
    Mer information finns i [Arbeta med väljare](/help/assets/working-with-selectors.md).
 
 1. Fortsätt med att lägga till bilder tills du har lagt till alla bilder som du vill rotera genom i Carousel-uppsättningen.
 1. (Valfritt) Gör något av följande:
 
-   * Om det behövs drar du bildrutorna för att ändra ordning på bilderna i listan.
+   * Om det behövs kan du dra bildrutorna för att ändra ordning på bilderna i listan.
    * Om du vill ta bort en bild markerar du bilden och trycker sedan på **[!UICONTROL Delete Slide]** i verktygsfältet.
 
    * Om du vill använda en förinställning trycker du på den förinställda listrutan längst upp till höger på sidan och väljer sedan en förinställning som ska användas på uppsättningen samtidigt.
    Om du vill ta bort en bildruta trycker eller klickar du på bildrutan och trycker eller klickar på **[!UICONTROL Delete Slide]** i verktygsfältet. Om du vill flytta en bildruta trycker du på ikonen för att ändra ordning och håller ned och flyttar till önskad plats.
 
 1. När du har lagt till bilderna i bildrutor kan du lägga till en aktiveringspunkt, ett bildschema eller båda delarna. Se [lägga till aktiveringspunkter eller bildscheman](#adding-hotspots-or-image-maps-to-an-image-banner).
-1. Du kan ändra den visuella designen och beteendet för karuselluppsättningar genom att trycka eller klicka på flikarna Beteende och Utseende och göra justeringar av hur karusellbanderollen ser ut eller hur specifika komponenter fungerar. Mer information om hur du använder visningsprogramredigeraren finns i [hantera visningsförinställningar](/help/assets/viewer-presets.md).
+1. Du kan ändra den visuella designen och beteendet för karuselluppsättningar. Tryck på flikarna **[!UICONTROL Behavior]** och **[!UICONTROL Appearance]** och justera hur karusellbanderollen visas eller hur specifika komponenter fungerar. Mer information om hur du använder visningsprogramredigeraren finns i [hantera visningsförinställningar](/help/assets/viewer-presets.md).
 
    >[!NOTE]
    >
-   >För karusellbanderoller kan följande saker behöva justeras:
+   >För Carousel banners kan du justera följande:
+   >
    >    * Längd som en bild visas. Som standard visas varje bild i 9 sekunder.
    >    * Animering. Som standard tonas varje bildruteövergång ut. Du kan ändra det till en bildövergång.
    >    * Knapparnas format. Användarna kan rotera genom banners genom att trycka på varje punkt eller nummer. Du kan ändra var de angivna indikatorknapparna visas (och om de är numeriska eller prickade) och hur stora de är.
    >    * Ändra markeringsformatet för ett bildschema eller ikonen som används för aktiveringspunkter.
-   >    * Innan du redigerar en visningsförinställning väljer du det format du vill basera förinställningen på. Om du inte gör det förlorar du alla ändringar när du börjar redigera visningsförinställningen om du väljer att ändra till en annan förinställning.
+   >    * Innan du redigerar en visningsförinställning väljer du det format som du vill att förinställningen ska baseras på. Om du inte väljer ett format förlorar du alla ändringar när du börjar redigera visningsförinställningen om du väljer att ändra till en annan förinställning.
 
    >
    >Se [Specialöverväganden för Carousel Banners](/help/assets/managing-viewer-presets.md#special-considerations-for-creating-a-carousel-banner-viewer-preset) för detaljerade instruktioner och mer information om visningsprogrammet.
 
-   Du kan också förhandsvisa hur karusellbanderollen kommer att se ut. Se [(Valfritt) Förhandsgranska Carousel Banners](#optional-previewing-carousel-banners).
+   Du kan också förhandsgranska hur karusellbanderollen visas. Se [(Valfritt) Förhandsgranska Carousel Banners](#optional-previewing-carousel-banners).
 
 1. Tryck på **[!UICONTROL Save]** när du är klar.
 
@@ -244,32 +244,32 @@ Se [Experience Fragment](/help/sites-authoring/experience-fragments.md).
 
 >[!NOTE]
 >
->Observera att verktygen för delning av sociala medier i Carousel Banner inte stöds när du bäddar in visningsprogrammet i en Experience Fragment.
+>Delningsverktygen för sociala medier i Carousel Banner stöds inte när du bäddar in visningsprogrammet i en Experience Fragment.
 >
->Du kan undvika detta genom att använda eller skapa visningsförinställningar som inte har verktyg för delning av sociala medier. Med sådana visningsförinställningar kan du bädda in dem i Experience Fragments.
+>Du kan undvika det här problemet genom att använda eller skapa visningsförinställningar som inte har verktyg för delning av sociala medier. Med sådana visningsförinställningar kan du bädda in dem i Experience Fragments.
 
 Kom ihåg att spara ditt arbete när du lägger till hotspot-områden eller bildscheman i en bild. Alternativen Ångra och Gör om, nära det övre högra hörnet på sidan, stöds under den aktuella skaps-/redigeringssessionen.
 
-När du är klar med att skapa en karusellbanderoll kan du använda Förhandsgranska för att se hur karusellbanderollen kommer att se ut för kunderna.
+När du är klar med att skapa en karusellbanderoll kan du använda Förhandsgranska för att se hur karusellbanderollen ser ut för kunderna.
 
-Se [(Valfritt) Förhandsgranska Carousel Banners.](#optional-previewing-carousel-banners)
+Se [(Valfritt) Förhandsgranska Carousel Banners](#optional-previewing-carousel-banners).
 
 >[!NOTE]
 >
->När du lägger till aktiveringspunkter i en bild i en [interaktiv bild](/help/assets/interactive-images.md) eller en Carousel-banderoll lagras hotspot-informationen på samma metadataplats, i förhållande till bildens plats&amp;mdashvärde, oavsett om det är en interaktiv bild eller en Carousel-banderoll. Den här funktionen innebär att du enkelt kan återanvända samma bild - tillsammans med dess definierade hotspot-data - i båda visningsprogrammen.
-Observera dock att Carousel Banners stöder bildscheman på bilder som även kan innehålla hotspot-områden. en interaktiv bild gör det inte. Tänk på detta om du tänker skapa en interaktiv bild eller en Carousel-banderoll som använder samma bild. Du kanske vill skapa interaktiva bilder och Carousel Banners med separata kopior av samma bild istället.
+>När du lägger till aktiveringspunkter i en bild i en [interaktiv bild](/help/assets/interactive-images.md) eller en Carousel-banderoll lagras hotspot-informationen på samma metadataplats. Platsen är relativ till bildens plats, oavsett om det är en interaktiv bild eller en Carousel Banner. Den här funktionen innebär att du enkelt kan återanvända samma bild tillsammans med dess definierade hotspot-data i båda visningsprogrammen.
+Observera dock att Carousel Banners stöder bildscheman på bilder som även kan innehålla hotspot-områden. en interaktiv bild gör det inte. Kom ihåg den här regeln om du tänker skapa en interaktiv bild eller en Carousel-banderoll som använder samma bild. Överväg att skapa interaktiva bilder och Carousel Banners med separata kopior av samma bild istället.
 
 >[!NOTE]
 Om du redigerar interaktiva bilder med aktiveringspunkter och beskär bilden tas dina aktiveringspunkter bort.
 
 Se även [Lägga till bildscheman](/help/assets/image-maps.md).
 
-**Lägga till aktiveringspunkter eller bildscheman i en bildbanderoll**
+**Så här lägger du till aktiveringspunkter eller bildscheman i en bildbanderoll:**
 
 1. Navigera från Assets till karuselluppsättningen som du vill göra interaktiv.
-1. Markera karuselluppsättningen och tryck på **[!UICONTROL Edit.]** Carousel Viewer Editor öppnas.
+1. Markera karuselluppsättningen och tryck på **[!UICONTROL Edit]**. Carousel Viewer Editor öppnas.
 1. Markera den bildruta som du vill göra interaktiv.
-1. I det övre vänstra hörnet av sidan trycker du på **[!UICONTROL Hotspot]** eller **[!UICONTROL Image Map.]**
+1. I det övre vänstra hörnet av sidan trycker du på **[!UICONTROL Hotspot]** eller **[!UICONTROL Image Map]**.
 1. Gör något av följande:
 
    * För aktiveringspunkter: Tryck på den plats i bilden där du vill att hotspot-området ska visas.
@@ -277,26 +277,26 @@ Se även [Lägga till bildscheman](/help/assets/image-maps.md).
 
    Om det behövs drar du hotspot- eller bildschemat till en ny plats. Lägg till ytterligare hotspot-områden eller bildscheman efter behov.
 
-   Tryck på fliken **[!UICONTROL Actions]** om du vill ta bort ett hotspot-område eller bildschema. Under rubriken **[!UICONTROL Maps & Hotspots]** i listrutan **[!UICONTROL Selected Type]** väljer du namnet på det hotspot-område eller bildschema som du vill ta bort. Tryck på ikonen **[!UICONTROL Trash]** bredvid menyn och tryck sedan på **[!UICONTROL Delete.]**
+   Tryck på fliken **[!UICONTROL Actions]** om du vill ta bort ett hotspot-område eller bildschema. Under rubriken **[!UICONTROL Maps & Hotspots]** i listrutan **[!UICONTROL Selected Type]** väljer du namnet på det hotspot-område eller bildschema som du vill ta bort. Tryck på ikonen **[!UICONTROL Trash]** bredvid menyn och tryck sedan på **[!UICONTROL Delete]**.
 
-1. Skriv namnet på aktiveringspunkten eller bildschemat i textfältet Namn. Det här namnet visas också i listrutan **[!UICONTROL Maps & Hotspot]**. Genom att ange ett namn blir det enkelt att identifiera hotspot-området eller bildschemat om du bestämmer dig för att göra ändringar i det i framtiden.
+1. Skriv namnet på aktiveringspunkten eller bildschemat i textfältet Namn. Det här namnet visas också i listrutan **[!UICONTROL Maps & Hotspot]**. Genom att ange ett namn blir det enkelt att identifiera hotspot-området eller bildschemat om du bestämmer dig för att ändra det i framtiden.
 1. Gör något av följande på fliken **[!UICONTROL Actions]**:
 
-   * Tryck på **[!UICONTROL Quickview.]**
+   * Tryck på **[!UICONTROL Quickview]**.
 
-      * Om du är kund inom AEM Sites och e-handel trycker du på produktväljarens ikon (förstoringsglas) för att öppna sidan Select Product (Välj produkt). Tryck på den produkt du vill använda och tryck sedan på bockmarkeringen i det övre högra hörnet av sidan för att gå tillbaka till Carousel Banner Editor.
-      * Om du inte är AEM Sites- eller e-handelskund
+      * Om du använder Experience Manager Sites and Ecommerce trycker du på produktväljarens ikon (förstoringsglas) för att öppna sidan Select Product (Välj produkt). Tryck på den produkt du vill använda och tryck sedan på bockmarkeringen i det övre högra hörnet av sidan så att du kan gå tillbaka till Carousel Banner Editor.
+      * Om du inte är Experience Manager Sites- eller Ecommerce-kund
 
-         * Se [Identifiera hotspot-variabler](#identifying-hotspot-and-image-map-variables) eftersom du kanske vill definiera dessa variabler.
-         * Ange sedan SKU-värdet manuellt. I textfältet SKU-värde skriver du produktens SKU (Stock Keeping Unit), som är en unik identifierare för varje separat produkt eller tjänst som du erbjuder. Det angivna SKU-värdet fyller automatiskt i variabeldelen av snabbvymallen så att systemet vet att den aktiveringspunkt som användaren går till associeras med en viss SKU-snabbvy.
-         * (Valfritt) Om det finns andra variabler i snabbvyn som du behöver för att ytterligare identifiera en produkt trycker du på **[!UICONTROL Add Generic Variable.]** I textfältet anger du ytterligare en variabel. Till exempel är category=Mens en tillagd variabel.
+         * Se [Identifiera hotspot-variabler](#identifying-hotspot-and-image-map-variables) om du vill definiera dessa variabler.
+         * Ange sedan SKU-värdet manuellt. I textfältet SKU-värde skriver du produktens SKU (Stock Keeping Unit), som är en unik identifierare för varje separat produkt eller tjänst som du erbjuder. Det angivna SKU-värdet fyller automatiskt i variabeldelen av QuickView-mallen så att systemet vet att den aktiveringspunkt som användaren går till associeras med en viss SKU:s snabbvy.
+         * (Valfritt) Om det finns andra variabler i snabbvyn som du måste använda för att identifiera en produkt ytterligare trycker du på **[!UICONTROL Add Generic Variable]**. Ange en extra variabel i textfältet. Till exempel är category=Mens en tillagd variabel.
 
          * Mer information finns i [Arbeta med väljare](/help/assets/working-with-selectors.md).
-   * Tryck på **[!UICONTROL Hyperlink.]**
+   * Tryck på **[!UICONTROL Hyperlink]**.
 
-      * Om du är kund hos AEM Sites trycker du på ikonen Platsväljare (mapp) för att navigera till en URL.
+      * Om du använder Experience Manager Sites trycker du på ikonen för platsväljaren (mappen) för att navigera till en URL-adress.
          >[!NOTE]
-         Den URL-baserade länkningsmetoden är inte möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till AEM Sites-sidor.
+         Den URL-baserade länkningsmetoden är inte möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till Experience Manager-sidor.
 
       * Om du är en fristående kund anger du den fullständiga URL-sökvägen till en länkad webbsida i textfältet HREF.
 
@@ -304,22 +304,22 @@ Se även [Lägga till bildscheman](/help/assets/image-maps.md).
 
    Mer information finns i [Arbeta med väljare](/help/assets/working-with-selectors.md).
 
-   * Tryck på **[!UICONTROL Experience Fragment.]**
+   * Tryck på **[!UICONTROL Experience Fragment]**.
 
-      * Om du är AEM Sites-kund trycker du på ikonen Sök (förstoringsglas) för att öppna sidan Experience Fragment. Tryck eller klicka på det Experience Fragment som du vill använda och tryck sedan på Select (Välj) längst upp till höger på sidan för att återgå till sidan för hantering av hotspot.
+      * Om du använder Experience Manager Sites trycker du på ikonen Sök (förstoringsglas) för att öppna sidan Experience Fragment. Tryck eller klicka på det Experience Fragment som du vill använda och tryck sedan på Select (Välj) längst upp till höger på sidan så att du kan gå tillbaka till sidan för hantering av hotspot.
 Se [Upplevelsefragment](/help/sites-authoring/experience-fragments.md).
 
-      * Ange bredd och höjd för Experience Fragment så som det kommer att visas på banderollen.
+      * Ange bredd och höjd för Experience Fragment så som det visas på banderollen.
 
          >[!NOTE]
-         Observera att verktygen för delning av sociala medier i Carousel Banner inte stöds när du bäddar in visningsprogrammet i en Experience Fragment.
-         Du kan undvika detta genom att använda eller skapa visningsförinställningar som inte har verktyg för delning av sociala medier. Med sådana visningsförinställningar kan du bädda in dem i Experience Fragments.
+         Delningsverktygen för sociala medier i Carousel Banner stöds inte när du bäddar in visningsprogrammet i en Experience Fragment.
+         Du kan lösa det här problemet genom att skapa visningsförinställningar som inte har verktyg för delning av sociala medier. Med sådana visningsförinställningar kan du bädda in dem i Experience Fragments.
    ![experience_fragment-carouselbanner](assets/experience_fragment-carouselbanner.png)
 
-   Du kan också förhandsvisa hur karusellbanderollen kommer att se ut. Se [(Valfritt) Förhandsgranska Carousel Banners](#optional-previewing-carousel-banners).
+   Du kan också förhandsgranska hur karusellbanderollen visas. Se [(Valfritt) Förhandsgranska Carousel Banners](#optional-previewing-carousel-banners).
 
-1. Tryck på **[!UICONTROL Save.]**
-1. Publicera karuselluppsättningen. Publicering skapar den inbäddningskod eller URL som du kan använda på din webbsida. Om du är kund hos AEM Sites kan du lägga till karuselluppsättningen direkt på din webbsida.
+1. Tryck på **[!UICONTROL Save]**.
+1. Publicera karuselluppsättningen. Publicering skapar den inbäddningskod eller URL som du kan använda på din webbsida. Om du använder Experience Manager Sites kan du lägga till karuselluppsättningen direkt på din webbsida.
 
    Se [Publicera resurser](/help/assets/publishing-dynamicmedia-assets.md).
 
@@ -330,10 +330,10 @@ Se [Upplevelsefragment](/help/sites-authoring/experience-fragments.md).
 >[!NOTE]
 Icke-administrativa användare måste läggas till i **[!UICONTROL dam-users]**-gruppen för att kunna skapa eller redigera karusellbanners. Om du har problem med att skapa eller redigera kontaktar du systemadministratören som kan lägga till dig i **[!UICONTROL dam-users]**-gruppen.
 
-Du kan utföra en mängd redigeringsuppgifter på Carousel Sets, till exempel:
+Du kan utföra olika redigeringsåtgärder på Carousel Sets, till exempel:
 
 * Lägg till bilder i en Carousel-uppsättning. Se även [Arbeta med väljare](/help/assets/working-with-selectors.md).
-* Sortera om bilderna i Carousel-uppsättningen.
+* Ändra ordning på bilderna i Carousel Set.
 * Ta bort resurser i Carousel-uppsättningen.
 * Använd en visningsförinställning.
 * Ta bort Carousel-uppsättningen.
@@ -354,46 +354,46 @@ Du kan utföra en mängd redigeringsuppgifter på Carousel Sets, till exempel:
    * Om du vill ändra ordning på bildrutorna drar du en bildruta till en ny plats (markera sorteringsikonen för att flytta objekt).
    * Om du vill lägga till ett hotspot- eller bildschema klickar du på ikonerna för hotspot eller bildschema och läser [lägga till hotspot-områden och bildscheman](#adding-hotspots-or-image-maps-to-an-image-banner).
    * Om du vill redigera karuselluppsättningens utseende eller beteende trycker du på fliken **[!UICONTROL Appearance]** eller **[!UICONTROL Behavior]** och anger sedan önskade alternativ.
-   * Om du vill redigera aktiveringspunkter eller bildscheman markerar du en aktiveringspunkt eller ett bildschema på lämplig bildruta och gör de ändringar som behövs under fliken **[!UICONTROL Actions]**.
+   * Om du vill redigera aktiveringspunkter eller bildscheman markerar du ett hotspot- eller bildschema på lämplig bildruta och ändrar vid behov under fliken **[!UICONTROL Actions]**.
    * Om du vill ta bort en bildruta markerar du den och trycker sedan på **[!UICONTROL Delete Slide]** i verktygsfältet.
    * Om du vill använda en förinställning trycker du på listrutan **[!UICONTROL Preset]** längst upp till höger på sidan och väljer sedan en visningsförinställning.
-   * Om du vill ta bort en hel Carousel-uppsättning går du till Carousel-uppsättningen, markerar den och trycker sedan på **[!UICONTROL Delete.]**
+   * Om du vill ta bort en hel Carousel-uppsättning går du till Carousel-uppsättningen, markerar den och trycker sedan på **[!UICONTROL Delete]**.
 
    >[!NOTE]
    Om du redigerar interaktiva bilder med aktiveringspunkter och beskär bilden tas dina aktiveringspunkter bort.
 
 ## (Valfritt) Förhandsgranska Carousel Banners {#optional-previewing-carousel-banners}
 
-Du kan använda Förhandsgranska för att se hur karusellbanderollen kommer att se ut för kunderna och för att testa karusellbanderollernas hotspot-områden och bildscheman för att säkerställa att de beter sig som förväntat.
+Du kan använda Förhandsgranska för att se hur karusellbanderollen ser ut för kunderna och för att testa aktiveringspunkter och bildscheman för att se om de fungerar som förväntat.
 
 När du är nöjd med karusellbanderollen kan du publicera den.
 Se [Bädda in video- eller bildvisningsprogrammet på en webbsida](/help/assets/embed-code.md).
-Se [Länka URL:er till ditt webbprogram](/help/assets/linking-urls-to-yourwebapplication.md). Observera att den URL-baserade länkningsmetoden inte är möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till AEM Sites-sidor.
-Se [Lägga till Dynamic Media Assets på sidor.](/help/assets/adding-dynamic-media-assets-to-pages.md)
+Se [Länka URL:er till ditt webbprogram](/help/assets/linking-urls-to-yourwebapplication.md). Den URL-baserade länkningsmetoden är inte möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till Experience Manager-sidor.
+Se [Lägga till Dynamic Media Assets på sidor](/help/assets/adding-dynamic-media-assets-to-pages.md).
 
 Du kan förhandsgranska karusellbanners i Carousel Editor (föredragen metod) eller i **[!UICONTROL Viewers]**-listan.
 
-**Förhandsgranska Carousel banners**
+**Så här förhandsgranskar du Carousel banners:**
 
 1. I **[!UICONTROL Assets]** navigerar du till en befintlig Carousel-banderoll som du har skapat och trycker för att öppna den.
-1. Tryck på **[!UICONTROL Edit.]**
+1. Tryck på **[!UICONTROL Edit]**.
 1. I listan med visningsförinställningar i det högra hörnet av verktygsfältet väljer du ett visningsprogram för att förhandsgranska karusellbanderollen.
 
    ![experience_fragment-carouselbanner-viewerdropdown](assets/experience_fragment-carouselbanner-viewerdropdown.png)
 
-1. Tryck på **[Förhandsgranska.]**
-1. Tryck på hotspot-områden eller bildscheman på bilden för att testa deras associerade åtgärder.
+1. Tryck på **[!UICONTROL Preview]**.
+1. Tryck på hotspot-områden eller bildscheman på bilden så att du kan testa deras associerade åtgärder.
 
-**Förhandsgranska karusellbanners från visningslistan**
+**Så här förhandsgranskar du Carousel banners från visningslistan:**
 
 1. I **[!UICONTROL Assets]** navigerar du till en befintlig Carousel-banderoll som du har skapat och trycker för att öppna den.
 1. Klicka på ikonen Innehåll i det övre vänstra hörnet på sidan Förhandsvisa.
 1. I listan **[!UICONTROL Viewers]** på panelen till vänster på sidan trycker du på namnet på den visningsförinställning för Carousel banner som du vill använda.
-1. Tryck på hotspot-områden eller bildscheman på bilden för att testa deras associerade åtgärder.
+1. Tryck på hotspot-områden eller bildscheman på bilden så att du kan testa deras associerade åtgärder.
 
 ## Publishing Carousel Banners {#publishing-carousel-banners}
 
-Du måste publicera karusellen för att kunna använda den. När du publicerar en Carousel Set aktiveras URL:en och Bädda in kod. Carousel publiceras också i Dynamic Media Cloud, som är integrerat med ett CDN för skalbar och högpresterande leverans.
+Publicera karusellen så att du kan använda den. När du publicerar en Carousel Set aktiveras URL:en och Bädda in kod. Carousel publiceras också i Dynamic Media Cloud, som är integrerat med ett CDN för skalbar och högpresterande leverans.
 
 >[!NOTE]
 Om du använder en befintlig interaktiv bild med aktiveringspunkter för din Carousel-banderoll måste du publicera den interaktiva bilden separat när du har publicerat karusellbanderollen.
@@ -406,52 +406,52 @@ Se [Publicera Dynamic Media Assets](/help/assets/publishing-dynamicmedia-assets.
 När du har överfört banderollbilder för att skapa en karusell, lagt till hotspot-områden och/eller bildscheman i banderollen och publicerat karuselluppsättningen är du nu redo att lägga till den på din befintliga webbsida.
 
 >[!NOTE]
-Om du är kund hos AEM Sites kan du lägga till karusellbanderollen direkt på din sida genom att dra Interactive Media-komponenten till din sida. Se [Lägga till Dynamic Media-resurser på sidor.](/help/assets/adding-dynamic-media-assets-to-pages.md)
+Om du använder Experience Manager Sites kan du lägga till karusellbanderollen direkt på sidan genom att dra Interactive Media-komponenten till sidan. Se [Lägga till Dynamic Media-resurser på sidor](/help/assets/adding-dynamic-media-assets-to-pages.md).
 
-Om du är en fristående AEM kan du dock manuellt lägga till karusellbanderollen på webbplatsens landningssida enligt beskrivningen i detta avsnitt.
+Om du är en fristående kund av Experience Manager-tillgångar kan du dock lägga till Carousel-banderollen manuellt på din webbplats landningssida enligt beskrivningen i detta avsnitt.
 
 1. Kopiera den publicerade Carousel-uppsättningens inbäddningskod.
 Se [Bädda in video- eller bildvisningsprogrammet på en webbsida](/help/assets/embed-code.md).
 
-1. Lägg till den inbäddningskod som du kopierade från AEM Assets på din webbsida.
-Den kopierade inbäddningskoden är responsiv så den bör automatiskt passa inbäddningsområdet på sidan.
+1. Lägg till den inbäddningskod som du kopierade från Experience Manager Assets på din webbsida.
+Den kopierade inbäddningskoden är responsiv så den måste automatiskt passa sidans inbäddningsområde.
 
 ## Integrera Carousel-banderollen med en befintlig snabbvy {#integrating-the-carousel-banner-with-an-existing-quickview}
 
-Obs! det här steget gäller endast om du är en fristående AEM Assets-kund.
+Obs! det här steget gäller endast om du är en fristående kund av Experience Manager Assets.
 
-Det sista steget i den här processen är att integrera karusellbanderollen med en befintlig snabbvyimplementering på din webbplats. Alla snabba visningsimplementeringar är unika och det behövs ett specifikt tillvägagångssätt som sannolikt inbegriper hjälp av en IT-handläggare på frontend.
+Det sista steget i den här processen är att integrera karusellbanderollen med en befintlig Quickview-implementering på din webbplats. Alla QuickView-implementeringar är unika och det behövs ett specifikt tillvägagångssätt som inbegriper hjälp av en IT-handläggare.
 
-Den befintliga snabbvyimplementeringen representerar normalt en kedja av interrelaterade åtgärder som inträffar på webbsidan i följande ordning:
+Den befintliga Quickview-implementeringen representerar normalt en kedja av interrelaterade åtgärder som inträffar på webbsidan i följande ordning:
 
 1. En användare utlöser ett element i användargränssnittet för webbplatsen.
-1. Slutkoden hämtar en URL för snabbvyn baserat på användargränssnittselementet som utlöstes i steg 1.
+1. FrontEnd-koden hämtar en QuickView-URL som baseras på användargränssnittselementet som utlöstes i steg 1.
 1. Front-end-koden skickar en Ajax-begäran med den URL som fås i steg 2.
-1. Motstående logik returnerar motsvarande snabbvydata eller innehåll tillbaka till slutkoden.
-1. Slutkoden läser in snabbvydata eller -innehåll.
-1. Om du vill kan du konvertera den inlästa snabbvyinformationen till en HTML-representation med koden längst fram.
+1. Bakåtlogiken returnerar motsvarande QuickView-data eller -innehåll tillbaka till slutkoden.
+1. Slutkoden läser in QuickView-data eller -innehåll.
+1. Om du vill kan du konvertera den inlästa QuickView-informationen till en HTML-representation med hjälp av koden längst fram.
 1. I koden visas en modal dialogruta eller panel och HTML-innehållet återges på skärmen för slutanvändaren.
 
-Dessa anrop kanske inte representerar oberoende offentliga API-anrop som kan anropas av webbsidans logik från ett godtyckligt steg. I stället är det ett kedjat anrop där varje steg döljs i den sista fasen (återanrop) av föregående steg.
+Dessa anrop representerar inte oberoende offentliga API-anrop som kan anropas av webbsidans logik från ett godtyckligt steg. I stället är det ett kedjat anrop där varje steg döljs i den sista fasen (återanrop) av föregående steg.
 
-Samtidigt som Carousel-banderollen ersätter steg 1 och delvis steg 2, när en användare klickar på en hotspot eller bildschema inuti karusellbanderollen, hanteras en sådan användarinteraktion av användaren. Visningsprogrammet returnerar en händelse till webbsidan som innehåller alla hotspot- eller bildschemadata som tidigare lagts till.
+Samtidigt som Carousel-banderollen ersätter steg 1 och delvis steg 2, hanteras sådan interaktion av användaren när användaren trycker på en hotspot- eller bildschema inuti karusellbanderollen. Visningsprogrammet returnerar en händelse till webbsidan som innehåller alla hotspot- eller bildschemadata som tidigare lagts till.
 
 I en sådan händelsehanterare gör koden längst fram följande:
 
 * Lyssnar på en händelse som skickas av karusellbanderollen.
 * Skapar en URL för snabbvyn baserat på hotspot- eller bildschemats data.
-* Startar processen att läsa in snabbvyn från backend-objektet och återge den på skärmen för visning.
+* Startar processen att läsa in snabbvyn från serverdelen och återge den på skärmen för visning.
 
-Den inbäddningskod som returneras av AEM Assets har redan en färdig händelsehanterare på plats som kommenteras ut.
+Inbäddningskoden som returneras av Experience Manager Assets har redan en färdig händelsehanterare som kommenteras ut.
 
 Därför är det bara nödvändigt att avkommentera koden och ersätta dummy-hanterarens brödtext med koden som är specifik för den aktuella webbsidan.
 
-Processen med att skapa snabbvyns URL är i princip motsatt den process som används för att identifiera hotspot- och bildschemavariabler som beskrivs tidigare.
+Processen med att skapa QuickView-URL:en är motsatt den process som användes för att identifiera hotspot- och bildschemavariabler som beskrivs tidigare.
 
 Se [Identifiera hotspot- och bildschemavariabler](#identifying-hotspot-and-image-map-variables).
 
-Det sista steget för att utlösa snabbvyns URL och aktivera snabbvypanelen kräver troligen hjälp av en IT-handläggare på IT-avdelningen. De har kunskap att lära sig hur man på bästa sätt aktiverar snabbvyimplementeringen från rätt steg med en färdig snabbvywebbadress.
+Det sista steget för att utlösa snabbgransknings-URL:en och aktivera snabbvypanelen kräver troligen hjälp av en IT-handläggare på IT-avdelningen. De har kunskap om hur de bäst kan utlösa QuickView-implementeringen från rätt steg med en färdig QuickView-URL.
 
 ## Använda snabbvyer för att skapa anpassade popup-fönster {#using-quickviews-to-create-custom-pop-ups}
 
-Se [Använda snabbvyer för att skapa anpassade popup-fönster](/help/assets/custom-pop-ups.md).
+Se [Skapa anpassade popup-fönster med snabbvyer](/help/assets/custom-pop-ups.md).
