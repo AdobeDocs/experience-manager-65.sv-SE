@@ -10,10 +10,9 @@ content-type: reference
 feature: 3D-resurser,Resurshantering
 role: Business Practitioner, Administrator
 exl-id: 01c96f1e-c0e6-497d-bd7a-c0fd547a34da
-translation-type: tm+mt
-source-git-commit: 666bc5d943af371726708cb2ef157a9b3f07eb8e
+source-git-commit: 1c95217c98cdf24182eebbfea09c807318b2d514
 workflow-type: tm+mt
-source-wordcount: '2220'
+source-wordcount: '2235'
 ht-degree: 2%
 
 ---
@@ -36,7 +35,7 @@ Det krävs ingen ytterligare konfiguration för att använda 3D-resurser i Dynam
 
 Dynamic Media stöder följande 3D-format.
 
-Se även [3D-format som stöds.](/help/assets/assets-formats.md)
+Se även [3D-format som stöds](/help/assets/assets-formats.md).
 
 | 3D-filtillägg | Filformat | MIME-typ | Anteckningar |
 |---|---|---|---|
@@ -55,7 +54,7 @@ Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma ig�
 
 Innan du arbetar med 3D-resurser i Dynamic Media måste du kontrollera att administratören för Experience Manager redan har aktiverat och konfigurerat Dynamic Media-Cloud Services i läget Dynamic Media - Scene7.
 
-Se [Konfigurera Dynamic Media-Cloud Services](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services) i Konfigurera Dynamic Media - Scene7 och [Felsöka Dynamic Media - Scene7-läge.](/help/assets/troubleshoot-dms7.md)
+Se [Konfigurera Dynamic Media-Cloud Services](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services) i Konfigurera Dynamic Media - Scene7 och [Felsöka Dynamic Media - Scene7-läge](/help/assets/troubleshoot-dms7.md).
 
 1. **Överför 3D-resurser**
 
@@ -103,7 +102,7 @@ Dessutom är funktioner i klientdatorn, t.ex. en arbetsstation, bärbar dator el
 >
 >Du kan öppna Dimensional Viewer-förinställningen i Viewer Preset Editor för att öva på att navigera i en 3D-resurs utan att först behöva överföra några 3D-filer. Förinställningen för Dimensional Viewer har en inbyggd 3D-resurs som du kan interagera med.
 >
->Se [Hantera visningsförinställningar.](/help/assets/managing-viewer-presets.md)
+>Se [Hantera visningsförinställningar](/help/assets/managing-viewer-presets.md).
 
 ## Visa och interagera med en 3D-resurs från sidan med resursinformation {#viewing-three-d-assets-from-asset-details-page}
 
@@ -113,10 +112,10 @@ Se även [Förhandsgranska resurser med programgränssnittet](/help/assets/previ
 
 1. Se till att du har överfört 3D-resurser till Experience Manager.
 
-   Se [Överföra dina 3D-resurser för användning i Dynamic Media.](/help/assets/manage-assets.md#uploading-assets)
+   Se [Överföra dina 3D-resurser för användning i Dynamic Media](/help/assets/manage-assets.md#uploading-assets).
 
-1. Tryck på **[!UICONTROL Assets > Files.]** från Experience Manager på **[!UICONTROL Navigation]**-sidan
-1. Tryck på **[!UICONTROL Card View.]** i den nedrullningsbara listan **[!UICONTROL View]** i sidans övre högra hörn
+1. Tryck på **[!UICONTROL Assets]** > **[!UICONTROL Files]** från Experience Manager på sidan **[!UICONTROL Navigation]**.
+1. Tryck på **[!UICONTROL Card View]** i den nedrullningsbara listan **[!UICONTROL View]** i sidans övre högra hörn.
 1. Navigera till en 3D-resurs som du vill visa.
 1. Tryck på kortet för 3D-resursen.
 1. Gör något av följande på informationssidan för 3D-resursen:
@@ -138,9 +137,9 @@ När en webbsida är i **[!UICONTROL Edit]**-läge går det inte att interagera 
 
 >[!IMPORTANT]
 >
->Du kan bara utföra den här åtgärden när du har lagt till en 3D-mediekomponent på en webbsida och tilldelat en 3D-resurs till komponenten. Se [Lägga till 3D-mediekomponenten på en webbsida](#adding-the-three-d-media-component-to-a-web-page) och [Tilldela en 3D-resurs till en 3D-mediekomponent.](#assigning-a-three-d-asset-to-the-component)
+>Du kan bara utföra den här åtgärden när du har lagt till en 3D-mediekomponent på en webbsida och tilldelat en 3D-resurs till komponenten. Se [Lägga till 3D-mediekomponenten på en webbsida](#adding-the-three-d-media-component-to-a-web-page) och [Tilldela en 3D-resurs till en 3D-mediekomponent](#assigning-a-three-d-asset-to-the-component).
 
-Se även [Förhandsgranska resurser med programgränssnittet.](/help/assets/previewing-assets.md)
+Se även [Förhandsgranska resurser med programgränssnittet](/help/assets/previewing-assets.md).
 
 **Så här visar och interagerar du med en 3D-resurs i en 3D-mediekomponent:**
 
@@ -165,7 +164,7 @@ komponentenEn helt interaktiv 3D-resurs som visas i  **[!UICONTROL Preview]** l�
 
 ## Om att arbeta med 3D-mediekomponenten {#working-with-three-d-media-component}
 
-Dynamic Media innehåller en Dynamic Media 3D Media-komponent som du kan använda i AEM Sites för att aktivera interaktiv visning av 3D-modeller på dina webbsidor.
+Dynamic Media innehåller en Dynamic Media 3D Media-komponent som du kan använda i Adobe Experience Manager Sites för att aktivera interaktiv visning av 3D-modeller på dina webbsidor.
 
 * [Lägga till komponenten 3D Media i sidmallen](#adding-three-d-media-component-to-page-template)
 * [Lägga till komponenten 3D Media på en webbsida](#adding-the-three-d-media-component-to-a-web-page)
@@ -174,7 +173,7 @@ Dynamic Media innehåller en Dynamic Media 3D Media-komponent som du kan använd
 
 ## Lägga till komponenten 3D Media i sidmallen {#adding-three-d-media-component-to-page-template}
 
-1. Navigera till **[!UICONTROL Tools > General > Templates.]**
+1. Navigera till **[!UICONTROL Tools > General > Templates]**.
 1. Navigera till den sidmall som du vill aktivera 3D-komponenten i och markera mallen.
 1. Tryck på **[!UICONTROL Edit]** för att öppna mallen.
 1. I den nedrullningsbara menyn i sidans övre högra hörn väljer du läget **[!UICONTROL Structure]**, om det inte redan är aktivt.
@@ -182,9 +181,9 @@ Dynamic Media innehåller en Dynamic Media 3D Media-komponent som du kan använd
    ![3d-media-component-structure](/help/assets/assets-dm/3d-media-component-structure.png)
 
 1. Tryck på ett tomt område i **[!UICONTROL Layout Container]**-regionen för att markera det och öppna det tillhörande verktygsfältet.
-1. Tryck på ikonen **[!UICONTROL Policy]** i verktygsfältet för att öppna **[!UICONTROL Policy Editor.]**
-1. I avsnittet **[!UICONTROL Properties]**, under fliken **[!UICONTROL Allowed Components]**, bläddrar du till **[!UICONTROL Dynamic Media]**, expanderar sedan listan och kontrollerar **[!UICONTROL 3D Media.]**
-1. Tryck på **[!UICONTROL Done]** för att spara ändringarna och stänga **[!UICONTROL Policy Editor.]**
+1. Tryck på ikonen **[!UICONTROL Policy]** i verktygsfältet för att öppna **[!UICONTROL Policy Editor]**.
+1. I avsnittet **[!UICONTROL Properties]**, under fliken **[!UICONTROL Allowed Components]**, bläddrar du till **[!UICONTROL Dynamic Media]**, expanderar sedan listan och kontrollerar **[!UICONTROL 3D Media]**.
+1. Tryck på **[!UICONTROL Done]** för att spara ändringarna och stänga **[!UICONTROL Policy Editor]**.
 
    Nu kan du placera Dynamic Media 3D Media-komponenten på alla sidor som använder den här mallen.
 
@@ -192,10 +191,10 @@ Dynamic Media innehåller en Dynamic Media 3D Media-komponent som du kan använd
 
 Om du använder Experience Manager som webbinnehållshanteringssystem kan du lägga till 3D-resurser på dina webbsidor med hjälp av 3D Media-komponenten.
 
-Se även [Lägga till Dynamic Media-resurser på sidor.](/help/assets/adding-dynamic-media-assets-to-pages.md)
+Se även [Lägga till Dynamic Media-resurser på sidor](/help/assets/adding-dynamic-media-assets-to-pages.md).
 
-1. Öppna AEM Sites och markera den webbsida där du vill lägga till Dynamic Media 3D Media-komponenten.
-1. Tryck på ikonen **[!UICONTROL Edit]** (penna) för att öppna sidan i sidredigeraren. Kontrollera att **[!UICONTROL Edit]**-läget är markerat i sidans övre högra hörn.
+1. Öppna Experience Manager Sites och markera den webbsida där du vill lägga till Dynamic Media 3D Media-komponenten.
+1. Tryck på ikonen **[!UICONTROL Edit]** (penna) så att du kan öppna sidan i sidredigeraren. Kontrollera att **[!UICONTROL Edit]**-läget är markerat i sidans övre högra hörn.
 
    ![3d-media-component-add](/help/assets/assets-dm/3d-media-component-edit.png)
 
@@ -209,12 +208,12 @@ Se även [Lägga till Dynamic Media-resurser på sidor.](/help/assets/adding-dyn
 
 Nu kan du tilldela en 3D-resurs till komponenten.
 
-Se [Tilldela en 3D-resurs till komponenten 3D Media.](#assigning-a-three-d-asset-to-the-component)
+Se [Tilldela en 3D-resurs till 3D-mediekomponenten](#assigning-a-three-d-asset-to-the-component).
 
 ### Valfritt - Konfigurera 3D-mediekomponenten {#configuring-the-three-d-component}
 
-1. I sidredigeraren i AEM Sites väljer du den **[!UICONTROL 3D Media Viewer]**-komponent som du tidigare har lagt till på sidan.
-1. Tryck på ikonen **[!UICONTROL Configuration]** (skiftnyckel) för att öppna dialogrutan för komponentkonfiguration.
+1. Markera **[!UICONTROL 3D Media Viewer]**-komponenten som du tidigare lade till på Experience Manager-sidan i sidredigeraren Platser.
+1. Tryck på ikonen **[!UICONTROL Configuration]** (skiftnyckel) så att du kan öppna dialogrutan för komponentkonfiguration.
 
    ![3d-media-component-config](/help/assets/assets-dm/3d-media-component-config.png)
 
@@ -228,42 +227,42 @@ Se [Tilldela en 3D-resurs till komponenten 3D Media.](#assigning-a-three-d-asset
 
 När du har lagt till en 3D-mediekomponent på en webbsida kan du tilldela den en 3D-resurs.
 
-Se [Lägga till komponenten 3D Media på en webbsida.](#adding-the-three-d-media-component-to-a-web-page)
+Se [Lägga till komponenten 3D Media på en webbsida](#adding-the-three-d-media-component-to-a-web-page).
 
-1. Klicka på ikonen **[!UICONTROL Assets]** i sidredigeraren i AEM Sites för att öppna **[!UICONTROL Assets]** på sidpanelen.
+1. Klicka på ikonen **[!UICONTROL Assets]** i sidredigeraren i Experience Manager för att öppna **[!UICONTROL Assets]** i sidpanelen.
 1. I listrutan väljer du **[!UICONTROL 3D]** om du bara vill visa filtyper för 3D-resurser.
 1. På sidopanelen söker du efter eller bläddrar till den 3D-resurs som du vill visa på sidan som redigeras.
 1. Dra 3D-resursen från resurspanelen och släpp den på **[!UICONTROL 3D Media]**-komponenten som du tidigare lade till på sidan.
 
-   ![Tilldela 3d-resurs till 3d Media-komponent](/help/assets/assets-dm/3d-asset-add.png)
+   ![Tilldela 3D-resurs till komponenten 3D Media](/help/assets/assets-dm/3d-asset-add.png)
 
 >[!NOTE]
 >
->När en webbsida är i läget AEM Sites **[!UICONTROL Edit]** visar 3D-mediekomponenten 3D-resursen, men ingen interaktion med resursen är möjlig. Om du vill göra resursen interaktiv kan du använda funktionen **[!UICONTROL Preview]** för att visa webbsidan i sidredigeraren med fullständig tillgång till funktionaliteten i 3D Media-komponenten.
+>När en webbsida är i läget Experience Manager Sites **[!UICONTROL Edit]** visar 3D-mediekomponenten 3D-resursen, men det går inte att interagera med resursen. Om du vill göra resursen interaktiv kan du använda funktionen **[!UICONTROL Preview]** för att visa webbsidan i sidredigeraren med fullständig tillgång till funktionaliteten i 3D Media-komponenten.
 
 ## Publicera statiska Dynamic Media 3D-resurser {#publishing-three-d-assets}
 
 Dynamic Media accepterar olika 3D-filformat som stöds som *statiskt innehåll* i Dynamic Media. Statiskt innehåll innebär att du kan överföra och publicera 3D-resurser, men det finns inget stöd för *dynamisk* bildåtergivning eller bildåtergivning som är associerat med 3D-resursen. Orsaken är att Dynamic Media Imaging Server inte känner igen 3D-format. När du har publicerat en 3D-resurs i Dynamic Media får du en direkt URL som du kan kopiera. URL:en för 3D-resursen följer den vanliga Dynamic Media URL-strukturen. Du kan dock inte redigera några parametrar i resursens URL, till skillnad från traditionella bildresurser i Dynamic Media.
 
-Se även [Hämta en URL för en statisk resurs.](/help/assets/linking-urls-to-yourwebapplication.md#obtaining-a-url-for-a-static-asset)
+Se även [Hämta en URL för en statisk resurs](/help/assets/linking-urls-to-yourwebapplication.md#obtaining-a-url-for-a-static-asset).
 
 I **[!UICONTROL Card View]** visas en liten globala ikon direkt under namnet på en resurs och till vänster om dess datum och tid för att ange att den publiceras. I **[!UICONTROL List View]** anger kolumnen **[!UICONTROL Published]** vilka resurser som har publicerats och inte.
 
 Om du använder Experience Manager som WCM-fil kan du använda den här publiceringsmetoden för att lägga till Dynamic Media 3D-resurser direkt på webbsidan.
 
-Se även [Publicera Dynamic Media-resurser.](publishing-dynamicmedia-assets.md)
+Se även [Publicera Dynamic Media-resurser](publishing-dynamicmedia-assets.md).
 
-Se även [Publicera sidor.](/help/sites-authoring/publishing-pages.md)
+Se även [Publicera sidor](/help/sites-authoring/publishing-pages.md).
 
 **Så här publicerar du statiska Dynamic Media 3D-resurser:**
 
-1. Öppna en 3D-resurs (GLB-, OBJ- eller STL-filformat) för att visa den på sidan med tillgångsinformation.
-1. Tryck på **[!UICONTROL Quick Publish.]** i verktygsfältet
+1. Öppna en 3D-resurs (GLB-, OBJ- eller STL-filformat) så att du kan visa den på sidan med tillgångsinformation.
+1. Tryck på **[!UICONTROL Quick Publish]** i verktygsfältet.
 
    ![3d-asset-quick-publish](/help/assets/assets-dm/3d-asset-quick-publish.png)
 
 1. Tryck på **[!UICONTROL Close]** för att stänga dialogrutan och återgå till sidan med resursinformation.
-1. Tryck på **[!UICONTROL Renditions.]** i listrutan till vänster om 3D-resursens filnamn
+1. Tryck på **[!UICONTROL Renditions]** i listrutan till vänster om 3D-resursens filnamn.
 
    ![3d-asset-renditions](/help/assets/assets-dm/3d-asset-renditions.png)
 
@@ -274,7 +273,7 @@ Se även [Publicera sidor.](/help/sites-authoring/publishing-pages.md)
 
    ![3d-asset-url](/help/assets/assets-dm/3d-asset-url.png)
 
-1. Tryck på **[!UICONTROL URL]** för att visa 3D-resursens URL för direktproduktion som du kan kopiera och använda på webbsidor.
+1. Tryck på **[!UICONTROL URL]** så att du kan visa 3D-resursens URL för direktproduktion som du kan kopiera och använda på webbsidor.
 
 ### Alternativa metoder för publicering av Dynamic Media 3D-resurser med Dimensional Viewer {#alternate-publish-methods}
 
@@ -282,8 +281,8 @@ Använd följande två metoder för att publicera Dynamic Media 3D-resurser om d
 
 * **[!UICONTROL URL]** - Använd  **[!UICONTROL URL]** om du använder ett tredjepartssystem för hantering av webbinnehåll och vill länka Dynamic Media 3D-resurser till dina webbsidor med Dimensional Viewer.
 
-   Se [Länka URL:er till ditt webbprogram.](/help/assets/linking-urls-to-yourwebapplication.md#obtaining-a-url-for-an-asset)
+   Se [Länka URL:er till ditt webbprogram](/help/assets/linking-urls-to-yourwebapplication.md#obtaining-a-url-for-an-asset).
 
 * **[!UICONTROL Embed]** - Använd  **[!UICONTROL Embed]** när du vill visa en Dynamic Media 3D-resurs som är inbäddad på en webbsida med Dimensional Viewer. Du kopierar inbäddningskoden till Urklipp så att du kan klistra in den på webbsidorna. Det är inte tillåtet att redigera koden i dialogrutan **[!UICONTROL Embed]**.
 
-   Se [Bädda in Dynamic Media Video, Image Viewer eller Dimensional Viewer på en webbsida.](/help/assets/embed-code.md#embedding-the-video-or-image-viewer-on-a-web-page)
+   Se [Bädda in Dynamic Media Video, Image Viewer eller Dimensional Viewer på en webbsida](/help/assets/embed-code.md#embedding-the-video-or-image-viewer-on-a-web-page).
