@@ -4,16 +4,15 @@ description: Läs om tillgänglighetsstödet i Dynamic Media och Dynamic Media V
 contentOwner: Rick Brough
 topic-tags: introduction
 content-type: reference
-feature: Accessibility
+feature: Tillgänglighet
 role: Business Practitioner, Administrator
-translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+exl-id: bbdb800c-b6f8-4506-b8ac-daf64edcd6c0
+source-git-commit: a4e9a4003bf0ce686578d3f8b3fddc19bc49dfb4
 workflow-type: tm+mt
-source-wordcount: '581'
+source-wordcount: '568'
 ht-degree: 0%
 
 ---
-
 
 # Tillgänglighet i [!DNL Dynamic Media] {#working-with-three-d-assets-dm}
 
@@ -21,20 +20,20 @@ ht-degree: 0%
 
 ## Stöd för tangentbordstillgänglighet i [!DNL Dynamic Media]
 
-Eftersom [!DNL Dynamic Media] är ett plugin-program till [!DNL Adobe Experience Manager Assets] är det mesta av tangentbordskontrollbeteendet exakt detsamma som i [!DNL Experience Manager Assets]. Knappen `Cancel` i [!DNL Dynamic Media] har till exempel samma fokus som i [!DNL Experience Manager Assets] och reagerar på `Spacebar`-tangenten som i [!DNL Experience Manager Assets]. Se [Kortkommandon i Resurser](/help/assets/accessibility.md#keyboard-shortcuts).
+Eftersom [!DNL Dynamic Media] är ett plugin-program till [!DNL Adobe Experience Manager Assets] är det mesta av tangentbordskontrollbeteendet detsamma som i [!DNL Experience Manager Assets]. Knappen `Cancel` i [!DNL Dynamic Media] har till exempel samma fokus som i [!DNL Experience Manager Assets] och reagerar på `Spacebar`-tangenten som i [!DNL Experience Manager Assets]. Se [Kortkommandon i Resurser](/help/assets/accessibility.md#keyboard-shortcuts).
 
 Tangentbordslinjer som stöds av enskilda element i användargränssnittet i [!DNL Dynamic Media] är i de flesta fall enkla att upptäcka och se. Tangentbordskontrollen i [!DNL Dynamic Media] handlar om följande:
 
 * Möjlighet att använda `Tab` och `Shift+Tab`-tangenttryckningar för att navigera mellan interaktiva element på sidan.
 Om du använder `Tab` flyttas indatafokus till nästa element i användargränssnittet i tabbordningen; om du använder `Shift+Tab` får indatafokus tillbaka till det föregående elementet i användargränssnittet.
 Fokusförflyttningen följer det naturliga elementet i användargränssnittet på skärmen och flyttas från vänster till höger och sedan uppifrån och ned. Om ett fält innehåller ett fel kan du dessutom trycka på `Tab` för att flytta fokus till det.
-* Möjlighet att använda tangenterna `Spacebar` och `Enter` för att aktivera standardelement i användargränssnittet, som knappar, listrutor och så vidare.
-* Möjlighet att se fokus på tangentbordet på det aktiva elementet. Det element i användargränssnittet som har indatafokus kan få en visuell fokusindikation som en kantlinje som återges runt elementet i användargränssnittet.
+* Möjlighet att använda tangenterna `Spacebar` och `Enter` för att aktivera standardelement i användargränssnittet, som knappar och nedrullningsbara listor.
+* Möjlighet att se fokus på tangentbordet på det aktiva elementet. Det element i användargränssnittet som har indatafokus får en visuell fokusindikation som en kantlinje som återges runt elementet i användargränssnittet.
 * I Hotspot-redigeraren kan du använda vissa anpassade tangenttryckningar, till exempel piltangenter, för att interagera med komplexa element i användargränssnittet för att flytta hotspot-områden.
-* I den interaktiva videoredigeraren kan du använda `Spacebar` för att markera en bild och lägga till den i ett segment. Dessutom kan du använda `Backspace`-tangenten för att ta bort det markerade objektet från fliken **[!UICONTROL Content]**. Om du trycker på `Tab`-funktioner efter behov för att navigera mellan interaktiva element på sidan.
+* I den interaktiva videoredigeraren kan du använda `Spacebar` för att markera en bild och lägga till den i ett segment. Du kan dessutom använda `Backspace`-tangenten för att ta bort det markerade objektet från fliken **[!UICONTROL Content]**. Om du trycker på `Tab`-funktioner efter behov för att navigera mellan interaktiva element på sidan.
 * I redigeraren för bildbeskärning/smart beskärning kan du göra följande:
-   * Använd piltangenterna för att beskära bildrutestorleken, flytta om bilden eller båda.
-   * Det första `Tab`-steget markerar hela bildramen. Du kan sedan använda piltangenterna på tangentbordet för att placera bildrutan igen.
+   * Använd piltangenterna för att beskära bildrutestorleken, flytta bilden eller båda.
+   * Det första `Tab`-steget markerar hela bildramen. Du kan sedan använda piltangenterna på tangentbordet för att flytta ramen.
    * De följande fyra `Tab` stoppen är ramens fyra hörn. När fokus placeras i ett ramhörn markeras hörnet. Återigen kan du använda piltangenterna på tangentbordet för att flytta det fokuserade hörnet.
 Se [Redigera den smarta beskärningen eller den smarta färgrutan för en enskild bild](/help/assets/image-profiles.md#editing-the-smart-crop-or-smart-swatch-of-a-single-image)
 
@@ -64,5 +63,5 @@ Se hjälpavsnittet **Stöd för hjälpteknik** i eventuella hjälpavsnitt för a
 >[!MORELIKETHIS]
 >
 >* [Tillgänglighet för Adobe-lösningar](https://www.adobe.com/accessibility.html)
->* [Tillgänglighet i [!DNL Experience Manager Assets]](/help/assets/accessibility.md)
+>* [Hjälpmedel i [!DNL Experience Manager Assets]](/help/assets/accessibility.md)
 
