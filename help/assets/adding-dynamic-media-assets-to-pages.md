@@ -11,7 +11,7 @@ docset: aem65
 role: Business Practitioner, Administrator
 exl-id: 62d4a38c-2873-4560-8d58-ad172288764d
 feature: komponenter,publicera
-source-git-commit: 8199702fe778f11cc2a953979a4ccfdcef3f1154
+source-git-commit: 1c95217c98cdf24182eebbfea09c807318b2d514
 workflow-type: tm+mt
 source-wordcount: '3043'
 ht-degree: 6%
@@ -173,13 +173,12 @@ Redigera följande Dynamic Media-inställningar genom att trycka på ikonen **[!
 * **[!UICONTROL Optimize for higher resolution devices]** - Markera (standard) kryssrutan för att tillåta optimering av DPR (Device Pixel Ratio).
 
    Alternativet **[!UICONTROL Optimize for higher resolution devices]** visas bara när följande är sant:
+
    * Under Förinställningstyp är **[!UICONTROL Image Preset]** markerat och **[!UICONTROL RESS_IP]** markerat i listrutan **[!UICONTROL Image Preset]**.
 
    ![inställning för enhetens pixelproportioner för bildförinställning](/help/assets/assets-dm/dpr-ress-ip.png)
 
-<!--   See also [About device pixel ratio optimization](/help/assets/imaging-faq.md#dpr).
-
-  Note that any Adobe Experience Manager Dynamic Media Smart Imaging DPR values are ignored. -->
+<!--   See also [About device pixel ratio optimization](/help/assets/imaging-faq.md#dpr). Note that any Adobe Experience Manager Dynamic Media Smart Imaging DPR values are ignored. -->
 
 * **[!UICONTROL Title]** - Ändra bildens titel.
 
@@ -255,9 +254,7 @@ Redigera följande Dynamic Media-inställning genom att klicka på **[!UICONTROL
 
    ![inställning för enhetspixelproportioner för smart beskärning](/help/assets/assets-dm/dpr-smartcrop.png)
 
-<!--   See also [About device pixel ratio optimization](/help/assets/imaging-faq.md#dpr).
-
-  Note that any Adobe Experience Manager Dynamic Media Smart Imaging DPR values are ignored. -->
+<!-- CQDOC-17915 HIDDEN FOR NOW AS OF MAY 28 2021 See also [About device pixel ratio optimization](/help/assets/imaging-faq.md#dpr). Note that any Adobe Experience Manager Dynamic Media Smart Imaging DPR values are ignored. -->
 
 * **[!UICONTROL Title]** - Ändra titeln på bilden för smart beskärning.
 
