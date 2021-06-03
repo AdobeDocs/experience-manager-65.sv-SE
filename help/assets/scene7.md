@@ -9,14 +9,13 @@ topic-tags: managing-assets
 discoiquuid: e7b95732-a571-48e8-afad-612059cdbde7
 feature: Dynamic Media Classic
 role: Business Practitioner, Administrator
-translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+exl-id: 815f577d-4774-4830-8baf-0294bd085b83
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
-source-wordcount: '2731'
+source-wordcount: '2728'
 ht-degree: 1%
 
 ---
-
 
 # Lägga till Dynamic Media Classic-funktioner på din sida {#adding-scene-features-to-your-page}
 
@@ -89,7 +88,7 @@ Att lägga till en Dynamic Media Classic-komponent (Scene7) på en sida är dets
 
 1. Öppna AEM sidan där du vill lägga till komponenten Dynamic Media Classic (Scene7).
 
-1. Om det inte finns några tillgängliga Dynamic Media Classic-komponenter klickar du på **[!UICONTROL Design]**-läget, trycker på en komponent med en blå kant, trycker på ikonen **[!UICONTROL Parent]** och sedan på ikonen **[!UICONTROL Configuration]**. I **[!UICONTROL Parsys (Design)]** markerar du alla Dynamic Media Classic-komponenter som du vill göra tillgängliga och klickar på **[!UICONTROL OK.]**
+1. Om det inte finns några tillgängliga Dynamic Media Classic-komponenter klickar du på **[!UICONTROL Design]**-läget, trycker på en komponent med en blå kant, trycker på ikonen **[!UICONTROL Parent]** och sedan på ikonen **[!UICONTROL Configuration]**. I **[!UICONTROL Parsys (Design)]** markerar du alla Dynamic Media Classic-komponenter som du vill göra tillgängliga och klickar på **[!UICONTROL OK]**.
 
    ![chlimage_1-224](assets/chlimage_1-224.png)
 
@@ -148,7 +147,7 @@ Resursen har zoomverktyg längst ned. Tryck på **[!UICONTROL +]** för att för
 
 ![chlimage_1-227](/help/assets/assets/do-not-localize/chlimage_1-227.png)
 
-### Flyout {#flyout}
+### Utfällbar {#flyout}
 
 I HTML5 **[!UICONTROL Flyout]**-komponenten visas resursen som en delad skärm; lämnade tillgången i den angivna storleken, till höger visas zoomdelen. Tryck på **[!UICONTROL Edit]** för att konfigurera komponenten. Med den här komponenten kan du konfigurera [inställningar som är gemensamma för alla Dynamic Media Classic-komponenter](#settings-common-to-all-scene-components).
 
@@ -212,7 +211,7 @@ Tryck på **[!UICONTROL Edit]** för att konfigurera komponenten. Du kan konfigu
 
 #### Ändra text dynamiskt {#changing-text-dynamically}
 
-Om du vill ändra texten dynamiskt anger du ny text i fälten och klickar på **[!UICONTROL OK.]** I det här exemplet är **[!UICONTROL Price]** nu $50 och frakten är 99 cent.
+Om du vill ändra texten dynamiskt anger du ny text i fälten och klickar på **[!UICONTROL OK]**. I det här exemplet är **[!UICONTROL Price]** nu $50 och frakten 99 cent.
 
 ![chlimage_1-234](assets/chlimage_1-234.png)
 
@@ -222,7 +221,7 @@ Texten i bilden ändras. Du kan återställa texten till det ursprungliga värde
 
 #### Ändra text så att den återspeglar värdet för ett klientkontextvärde {#changing-text-to-reflect-the-value-of-a-client-context-value}
 
-Om du vill länka ett fält till ett klientkontextvärde trycker du på **[!UICONTROL Select]** för att öppna klientsnabbmenyn, markerar klientkontexten och trycker på **[!UICONTROL OK.]** I det här exemplet ändras namnet baserat på att namnet länkas till det formaterade namnet i profilen.
+Om du vill länka ett fält till ett klientkontextvärde trycker du på **[!UICONTROL Select]** för att öppna klientsnabbmenyn, markerar klientkontexten och trycker på **[!UICONTROL OK]**. I det här exemplet ändras namnet baserat på att namnet länkas till det formaterade namnet i profilen.
 
 ![chlimage_1-236](assets/chlimage_1-236.png)
 
@@ -232,12 +231,12 @@ Texten återspeglar namnet på den inloggade användaren. Du kan återställa te
 
 #### Göra Dynamic Media Classic Image Template till en länk {#making-the-scene-image-template-a-link}
 
-1. Tryck på **[!UICONTROL Edit.]** på sidan med komponenten Dynamic Media Classic **[!UICONTROL Image Template]**
+1. Tryck på **[!UICONTROL Edit]** på sidan med Dynamic Media Classic **[!UICONTROL Image Template]**-komponenten.
 1. I fältet **[!UICONTROL URL]** anger du den URL som användarna ska gå till när användaren trycker på bilden. I fältet **[!UICONTROL Open in]** väljer du om du vill att målet ska öppnas (ett nytt fönster eller samma fönster).
 
    ![chlimage_1-238](assets/chlimage_1-238.png)
 
-1. Tryck på **[!UICONTROL OK.]**
+1. Tryck på **[!UICONTROL OK]**.
 
 ### Videokomponent {#video-component}
 
@@ -348,7 +347,6 @@ Som standard söker AEM i den markerade mappen och i alla undermappar.
 
 
 
-**[!UICONTROL Publish Status]** - Du kan filtrera efter resurser baserat på publiceringsstatus:  **[!UICONTROL Unpublished]** eller  **[!UICONTROL Published.]** Om du inte väljer något  **[!UICONTROL Publish Status]** söker AEM som standard igenom alla publiceringsstatusar.
+**[!UICONTROL Publish Status]** - Du kan filtrera efter resurser baserat på publiceringsstatus:  **[!UICONTROL Unpublished]** eller  **[!UICONTROL Published]**. Om du inte väljer **[!UICONTROL Publish Status]** söker AEM som standard igenom alla publiceringsstatusar.
 
 ![chlimage_1-247](assets/chlimage_1-247.png)
-
