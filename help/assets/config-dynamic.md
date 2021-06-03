@@ -12,7 +12,7 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/config
 role: Business Practitioner, Administrator
 exl-id: 5719d32c-4f19-47c1-bea9-8fd0bc8439ed
 feature: Konfiguration,Hybrid-läge
-source-git-commit: d2649ec83424978ba01b9bb61e9f935bdc79aa62
+source-git-commit: c4221ede672c131aa0864438bc9fd16c73ddf10c
 workflow-type: tm+mt
 source-wordcount: '7603'
 ht-degree: 1%
@@ -259,16 +259,18 @@ När du har konfigurerat replikeringsagenten måste du [verifiera och testa att 
 Standardminnesgränsen för att skapa PTIFF är 3 GB för alla arbetsflöden. Du kan till exempel bearbeta en bild som kräver 3 GB minne medan andra arbetsflöden är pausade, eller så kan du bearbeta 10 bilder parallellt som kräver 300 MB minne vardera.
 Minnesgränsen kan konfigureras och passar systemresursens tillgänglighet och den typ av bildinnehåll som bearbetas. Om du har många stora resurser och tillräckligt med minne i systemet kan du öka den här gränsen för att se till att bilderna bearbetas parallellt.
 En bild som kräver mer än den maximala minnesgränsen avvisas.
-Om du vill ändra minnesgränsen för att skapa PTIFF går du till **[!UICONTROL Tools > Operations > Web Console > Adobe CQ Scene7 PTiffManager]** och ändrar **[!UICONTROL maxMemory]**-värdet.
+Om du vill ändra minnesgränsen för att skapa PTIFF går du till **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]** > **[!UICONTROL Adobe CQ Scene7 PTiffManager]** och ändrar **[!UICONTROL maxMemory]**-värdet.
 
 ### Konfigurerar autentisering {#setting-up-authentication}
 
 Konfigurera replikeringsautentisering för författaren så att du kan replikera bilder till tjänsten för leverans av bilder från Dynamic Media. Du får först en KeyStore och sparar den sedan under **[!UICONTROL dynamic-media-replication]**-användaren och konfigurerar den. Företagsadministratören fick ett välkomstmeddelande med KeyStore-filen och de nödvändiga autentiseringsuppgifterna under etableringsprocessen. Kontakta Adobe kundtjänst om du inte fått någon sådan information.
 
-**Ställa in autentisering**
+**Så här konfigurerar du autentisering:**
 
 1. Kontakta Adobe kundtjänst för din KeyStore-fil och ditt lösenord om du inte redan har filen och lösenordet. Den här informationen är en nödvändig del av provisioneringen. Den kopplar nycklarna till ditt konto.
+
 1. I Experience Manager trycker du på Experience Manager-logotypen för att komma åt den globala navigeringskonsolen och sedan på **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Users]**.
+
 1. Navigera till **[!UICONTROL dynamic-media-replication]**-användaren på sidan Användarhantering och öppna den genom att trycka.
 
    ![dm-replikering](assets/dm-replication.png)
@@ -818,7 +820,7 @@ Dynamic Media arbetar körklart [när det har aktiverats](#enabling-dynamic-medi
 Så här konfigurerar du inställningarna för Dynamic Media Image Server:
 
 1. Tryck på **[!UICONTROL Adobe Experience Manager]** i det övre vänstra hörnet av Experience Manager för att komma åt den globala navigeringskonsolen och tryck sedan på **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
-1. På sidan Konfigurera Adobe Experience Manager Web Console trycker du på **[!UICONTROL OSGi > Configuration]** för att visa alla paket som körs i Experience Manager.
+1. På konfigurationssidan för Adobe Experience Manager Web Console trycker du på **[!UICONTROL OSGi]** > **[!UICONTROL Configuration]** för att visa alla paket som körs i Experience Manager.
 
    Dynamic Media Delivery Servers finns under följande namn i listan:
 
