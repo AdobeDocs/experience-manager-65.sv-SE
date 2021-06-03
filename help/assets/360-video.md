@@ -11,7 +11,7 @@ docset: aem65
 feature: 360 VR-video
 role: Business Practitioner, Administrator
 exl-id: 0c2077a7-bd16-484b-980f-4d4a1a681491
-source-git-commit: a4e9a4003bf0ce686578d3f8b3fddc19bc49dfb4
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
 source-wordcount: '1047'
 ht-degree: 0%
@@ -53,7 +53,7 @@ Se [Redigera 360/VR-video](https://helpx.adobe.com/premiere-pro/how-to/edit-360-
 **Så här överför du resurser som ska användas med 360-videovisningsprogrammet:**
 
 1. Skapade en mapp som är dedikerad till ditt 360-videomaterial.
-1. [Använd en adaptiv videoprofil på mappen.](/help/assets/video-profiles.md#applying-a-video-profile-to-folders)
+1. [Använd en adaptiv videoprofil på mappen](/help/assets/video-profiles.md#applying-a-video-profile-to-folders).
 
    Om du återger 360-videoinnehåll ställs högre krav på källvideoupplösning och för kodad återgivningsupplösning än standardvideoinnehåll som inte är 360.
 
@@ -99,9 +99,9 @@ Se även [Redigera visningsförinställningar](/help/assets/managing-viewer-pres
 
 När du är nöjd med 360-videon kan du publicera den.
 
-Se [Bädda in video- eller bildvisningsprogrammet på en webbsida.](/help/assets/embed-code.md)
-Se  [Länka URL:er till ditt webbprogram](/help/assets/linking-urls-to-yourwebapplication.md). Den URL-baserade länkningsmetoden är inte möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till Experience Manager-sidor.
-Se [Lägga till Dynamic Media Assets på sidor.](/help/assets/adding-dynamic-media-assets-to-pages.md)
+Se [Bädda in video- eller bildvisningsprogrammet på en webbsida](/help/assets/embed-code.md).
+Se [Länka URL:er till ditt webbprogram](/help/assets/linking-urls-to-yourwebapplication.md). Den URL-baserade länkningsmetoden är inte möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till Experience Manager-sidor.
+Se [Lägga till Dynamic Media Assets på sidor](/help/assets/adding-dynamic-media-assets-to-pages.md).
 
 **Så här förhandsgranskar du 360-videoklipp:**
 
@@ -111,7 +111,7 @@ Se [Lägga till Dynamic Media Assets på sidor.](/help/assets/adding-dynamic-med
 
    Tryck på 360-videoresursen så att du kan förhandsgranska videon.
 
-1. Tryck på listrutan på förhandsgranskningssidan i det övre vänstra hörnet av sidan och välj **[!UICONTROL Viewers.]**
+1. Tryck på listrutan på förhandsgranskningssidan i det övre vänstra hörnet av sidan och välj **[!UICONTROL Viewers]**.
 
    ![6_5_360video-preview-viewers](assets/6_5_360video-preview-viewers.png)
 
@@ -122,13 +122,13 @@ Se [Lägga till Dynamic Media Assets på sidor.](/help/assets/adding-dynamic-med
 
    ![6_5_360video-preview-video360-](assets/6_5_360video-preview-video360-social.png)*socialA 360 video, skärmdump.*
 
-   * Tryck på **[!UICONTROL Video360VR.]** i visningslistan
+   * Tryck på **[!UICONTROL Video360VR]** i visningslistan.
 
       VR-video (Virtual Reality) är engagerande videomaterial som nås via virtuella verklighetshuvuden. Precis som med vanliga videor skapar du VR-videor i början när en video spelas in eller spelas in med 360-graderskameror.
    ![6_5_360video-preview-video360vr](assets/6_5_360video-preview-video360vr.png)
    *En 360 VR-videobildskärm.*
 
-1. Tryck på **[!UICONTROL Close.]** längst upp till höger på förhandsgranskningssidan
+1. Tryck på **[!UICONTROL Close]** uppe till höger på förhandsgranskningssidan.
 
 ## Publicerar 360-video {#publishing-video}
 
@@ -137,4 +137,4 @@ Publicera 360-videon så att du kan använda den. När du publicerar en 360-vide
 Mer information om hur du publicerar 360-video finns i [Publicera Dynamic Media Assets](/help/assets/publishing-dynamicmedia-assets.md).
 Se även [Bädda in video- eller bildvisningsprogrammet på en webbsida](/help/assets/embed-code.md).
 Se även [Länka URL:er till ditt webbprogram](/help/assets/linking-urls-to-yourwebapplication.md). Den URL-baserade länkningsmetoden är inte möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till Experience Manager-sidor.
-Se även [Lägga till Dynamic Media Assets på sidor.](/help/assets/adding-dynamic-media-assets-to-pages.md)
+Se även [Lägga till Dynamic Media Assets på sidor](/help/assets/adding-dynamic-media-assets-to-pages.md).
