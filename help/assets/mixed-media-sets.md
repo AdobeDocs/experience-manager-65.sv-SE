@@ -8,22 +8,21 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: ed84157a-e6b4-4dde-af2e-a1e0b6259628
 docset: aem65
-feature: Mix Media Sets,Asset Management
+feature: Blanda medieuppsättningar,Resurshantering
 role: Business Practitioner, Administrator
-translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+exl-id: 70a72fb9-a289-4eda-abcc-300edf9f1961
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
-source-wordcount: '1399'
-ht-degree: 19%
+source-wordcount: '1396'
+ht-degree: 28%
 
 ---
-
 
 # Blandade medieuppsättningar{#mixed-media-sets}
 
 Med blandade medieuppsättningar kan du kombinera bilder, bilduppsättningar, snurruppsättningar och videoklipp i en presentation.
 
-Blandade medieuppsättningar definieras av en banderoll med ordet **[!UICONTROL MixedMediaSet.]** Om den blandade medieuppsättningen publiceras finns dessutom det publiceringsdatum som anges av ikonen **[!UICONTROL World]** på banderollen tillsammans med det senaste ändringsdatumet, vilket visas av ikonen **[!UICONTROL Pencil]**.
+Blandade medieuppsättningar definieras av en banderoll med ordet **[!UICONTROL MixedMediaSet]**. Om uppsättningen med blandade medier publiceras visas dessutom det publiceringsdatum som anges av ikonen **[!UICONTROL World]** på banderollen tillsammans med det senaste ändringsdatumet, som anges av ikonen **[!UICONTROL Pencil]**.
 
 ![chlimage_1-137](assets/chlimage_1-348.png)
 
@@ -47,7 +46,7 @@ Följ de här stegen för att komma igång snabbt med blandade medieuppsättning
 
 1. Ställ in [förinställningar för blandad Media Viewer](/help/assets/managing-viewer-presets.md) efter behov.
 
-   Administratörer kan skapa eller ändra visningsförinställningar för blandade medieuppsättningar. Om du vill visa dina blandade medier med en visningsförinställning väljer du den blandade medieuppsättningen och väljer **[!UICONTROL Viewers.]** i listrutan till vänster
+   Administratörer kan skapa eller ändra visningsförinställningar för blandade medieuppsättningar. Om du vill visa de blandade medierna med en visningsförinställning väljer du uppsättningen med blandade medier och väljer sedan **[!UICONTROL Viewers]** i listrutan till vänster.
 
    Se **[!UICONTROL Tools > Assets > Viewer Presets]** om du vill skapa eller redigera visningsprogramförinställningar.
 
@@ -65,7 +64,7 @@ Följ de här stegen för att komma igång snabbt med blandade medieuppsättning
 
    AEM Assets skapar URL-anrop för blandade medieuppsättningar och aktiverar dem när du har publicerat de blandade medieuppsättningarna. Du kan kopiera dessa URL:er när du förhandsgranskar resurser. Du kan även bädda in dem på din webbplats.
 
-   Välj den blandade medieuppsättningen och välj **[!UICONTROL Viewers.]** i den vänstra listrutan.
+   Välj den blandade medieuppsättningen och välj **[!UICONTROL Viewers]** i den vänstra listrutan.
 
    Se [Länka en uppsättning med blandade medier till en webbsida](/help/assets/linking-urls-to-yourwebapplication.md) och [Bädda in video- eller bildvisningsprogrammet](/help/assets/embed-code.md).
 
@@ -89,7 +88,7 @@ När du lägger till resurser i uppsättningen läggs de automatiskt till i alfa
 
 **Skapa en blandad medieuppsättning**
 
-1. Navigera till den plats där du vill skapa en blandad medieuppsättning i Resurser, klicka på **[!UICONTROL Create]** och välj **[!UICONTROL Mixed Media Set.]**. Du kan också skapa uppsättningen inifrån en mapp som innehåller dina resurser. Redigeraren för uppsättningar med blandade medier visas.
+1. Navigera till den plats där du vill skapa en blandad medieuppsättning i Assets, klicka på **[!UICONTROL Create]** och välj **[!UICONTROL Mixed Media Set]**. Du kan också skapa uppsättningen inifrån en mapp som innehåller resurserna. Redigeraren för uppsättningar med blandade medier visas.
 
    ![chlimage_1-138](assets/chlimage_1-349.png)
 
@@ -99,11 +98,11 @@ När du lägger till resurser i uppsättningen läggs de automatiskt till i alfa
 
    >[!NOTE]
    >
-   >När du skapar den blandade medieuppsättningen kan du ändra miniatyrbilden för den blandade medieuppsättningen eller låta AEM välja miniatyrbilden automatiskt baserat på resurserna i den blandade medieuppsättningen. Om du vill välja en miniatyrbild klickar du på **[!UICONTROL Change thumbnail]** och väljer en bild (du kan navigera till andra mappar för att söka efter bilder också). Om du har valt en miniatyrbild och sedan vill AEM att du ska generera en från den blandade medieuppsättningen väljer du **[!UICONTROL Switch to Automatic thumbnail.]**
+   >När du skapar den blandade medieuppsättningen kan du ändra miniatyrbilden för den blandade medieuppsättningen eller låta AEM välja miniatyrbilden automatiskt baserat på resurserna i den blandade medieuppsättningen. Om du vill välja en miniatyrbild klickar du på **[!UICONTROL Change thumbnail]** och väljer en bild (du kan navigera till andra mappar för att söka efter bilder också). Om du har valt en miniatyrbild och sedan vill AEM att du ska generera en från den blandade medieuppsättningen väljer du **[!UICONTROL Switch to Automatic thumbnail]**.
 
-1. Tryck på resursväljaren för att välja resurser som du vill inkludera i den blandade medieuppsättningen. Markera dem och klicka på **[!UICONTROL Select.]**
+1. Tryck på resursväljaren för att välja resurser som du vill inkludera i den blandade medieuppsättningen. Markera dem och klicka på **[!UICONTROL Select]**.
 
-   Med resursväljaren kan du söka efter resurser genom att skriva ett nyckelord och trycka på **[!UICONTROL Return.]**. Du kan också använda filter för att förfina sökresultaten. Du kan filtrera efter sökväg, samling, filtyp och tagg. Markera filtret och tryck sedan på ikonen **[!UICONTROL Filter]** i verktygsfältet. Ändra vyn genom att markera ikonen **[!UICONTROL View]** och markera **[!UICONTROL List View]**, **[!UICONTROL Column View]** eller **[!UICONTROL Card View.]**
+   Med resursväljaren kan du söka efter resurser genom att skriva ett nyckelord och trycka på **[!UICONTROL Return]**. Du kan också använda filter för att förfina sökresultatet. Du kan filtrera efter sökväg, samling, filtyp och tagg. Markera filtret och tryck sedan på ikonen **[!UICONTROL Filter]** i verktygsfältet. Ändra vyn genom att markera ikonen **[!UICONTROL View]** och markera **[!UICONTROL List View]**, **[!UICONTROL Column View]** eller **[!UICONTROL Card View]**.
 
    Se [Arbeta med väljare](/help/assets/working-with-selectors.md).
 
@@ -113,15 +112,15 @@ När du lägger till resurser i uppsättningen läggs de automatiskt till i alfa
 
    ![chlimage_1-141](assets/chlimage_1-352.png)
 
-   Om du vill lägga till miniatyrbilder klickar du på ikonen **+** **[!UICONTROL thumbnail]** bredvid bilden och går till den miniatyrbild du vill använda. När du har markerat alla miniatyrbilderna klickar du på **[!UICONTROL Save.]**
+   Om du vill lägga till miniatyrbilder klickar du på ikonen **+** **[!UICONTROL thumbnail]** bredvid bilden och går till den miniatyrbild du vill använda. När du har markerat alla miniatyrbilderna klickar du på **[!UICONTROL Save]**.
 
    >[!NOTE]
    >
-   >Om du vill lägga till resurser trycker du på **[!UICONTROL Add Asset.]**
+   >Om du vill lägga till resurser trycker du på **[!UICONTROL Add Asset]**.
 
-1. Om du vill ta bort en resurs markerar du motsvarande kryssruta och trycker på **[!UICONTROL Delete Asset.]**
+1. Om du vill ta bort en resurs markerar du motsvarande kryssruta och trycker på **[!UICONTROL Delete Asset]**.
 1. Om du vill använda en förinställning trycker du på **[!UICONTROL Preset]** i det övre högra hörnet och väljer en förinställning som ska användas för resurserna.
-1. Klicka på **[!UICONTROL Save.]** Din nya blandade medieuppsättning visas i den mapp du skapade den i.
+1. Klicka på **[!UICONTROL Save]**. Den nya blandade medieuppsättningen visas i den mapp du skapade den i.
 
 ## Redigera blandade medieuppsättningar {#editing-mixed-media-sets}
 
@@ -145,15 +144,15 @@ Du kan utföra en mängd redigeringsåtgärder för resurser i blandade medieupp
 1. Gör något av följande i redigeraren för den blandade medieuppsättningen:
 
    * Om du vill ordna om resurser trycker du på **[!UICONTROL Assets]** (bildikon) i den vänstra panelen och drar en resurs till en ny plats.
-   * Om du vill lägga till resurser trycker du på **[!UICONTROL Add Asset.]** Navigera till resurserna i verktygsfältet. För varje resurs som du vill lägga till håller du pekaren över resursens bild (inte resursens namn) och trycker sedan på bockmarkeringsikonen. Tryck på **[!UICONTROL Select.]** i det övre högra hörnet
+   * Om du vill lägga till resurser trycker du på **[!UICONTROL Add Asset]** i verktygsfältet. Navigera till resurserna. För varje resurs som du vill lägga till håller du pekaren över resursens bild (inte resursens namn) och trycker sedan på bockmarkeringsikonen. Tryck på **[!UICONTROL Select]** i det övre högra hörnet.
 
-   * Om du vill ta bort en resurs trycker du på **[!UICONTROL Assets]** (bildikon) i den vänstra panelen och markerar sedan resursen. Tryck på **[!UICONTROL Delete Asset.]** i verktygsfältet
+   * Om du vill ta bort en resurs trycker du på **[!UICONTROL Assets]** (bildikon) i den vänstra panelen och markerar sedan resursen. Tryck på **[!UICONTROL Delete Asset]** i verktygsfältet.
 
    * Om du vill sortera resurser efter namn i stigande eller fallande ordning trycker du på **[!UICONTROL Assets]** (bildikon) i den vänstra panelen. Till höger om rubriken **[!UICONTROL Assets]** trycker du på upp- eller nedknappsikonerna.
 
       >[!NOTE]
       >
-      >* Om du vill ta bort en hel uppsättning med blandade media går du till valfritt visningsläge (till exempel **[!UICONTROL Card View]** eller **[!UICONTROL Column View]**) och navigerar till den blandade medieuppsättningen. Håll pekaren över resursen och tryck på bocken för att markera den. Tryck på **[!UICONTROL Backspace]** på tangentbordet eller klicka på **[!UICONTROL More]** (tre punkter) i verktygsfältet och tryck sedan på **[!UICONTROL Delete.]**
+      >* Om du vill ta bort en hel uppsättning med blandade media går du till valfritt visningsläge (till exempel **[!UICONTROL Card View]** eller **[!UICONTROL Column View]**) och navigerar till den blandade medieuppsättningen. Håll pekaren över resursen och tryck på bocken för att markera den. Tryck på **[!UICONTROL Backspace]** på tangentbordet eller klicka på **[!UICONTROL More]** (tre punkter) i verktygsfältet och tryck sedan på **[!UICONTROL Delete]**.
          >
          >
       * Du kan redigera resurserna i en uppsättning med blandade media genom att navigera till uppsättningen, klicka på **[!UICONTROL Set Members]** i den vänstra listen och sedan trycka på ikonen **[!UICONTROL Pencil]** för en enskild resurs för att öppna redigeringsfönstret.
@@ -163,10 +162,10 @@ Du kan utföra en mängd redigeringsåtgärder för resurser i blandade medieupp
 
    >[!NOTE]
    >
-   >* Om du vill redigera resurserna i en uppsättning med blandade medier navigerar du till den blandade medieuppsättningen. Tryck på (markera inte) uppsättningen för att öppna den på AEM-sidan för förhandsgranskning. I den vänstra listen klickar du på nedåtpilen för att öppna listrutan och trycker sedan på **[!UICONTROL Set Members.]** På sidan Ange medlemmar håller du ned muspekaren på en resurs och trycker sedan på **[!UICONTROL Edit]** (pennikon) för att öppna redigeringssidan.
+   >* Om du vill redigera resurserna i en uppsättning med blandade medier navigerar du till den blandade medieuppsättningen. Tryck på (markera inte) uppsättningen för att öppna den på AEM-sidan för förhandsgranskning. Klicka på nedåtpilen i den vänstra listen för att öppna listrutan och tryck sedan på **[!UICONTROL Set Members]**. Håll markören över en resurs på sidan Ange medlemmar och tryck sedan på **[!UICONTROL Edit]** (pennikon) för att öppna redigeringssidan.
       >
       >
-   * Om du vill ta bort en hel uppsättning med blandade medier – I valfritt visningsläge (som kortvyn eller kolumnvyn) går du till uppsättningen med blandade medier. Håll pekaren över uppsättningen och tryck sedan på **Välj** (bockmarkeringsikon). Tryck på **[!UICONTROL Backspace]** på tangentbordet eller tryck på **[!UICONTROL More]** (rad om tre punkter) och tryck sedan på **[!UICONTROL Delete.]**
+   * Om du vill ta bort en hel uppsättning med blandade medier – I valfritt visningsläge (som kortvyn eller kolumnvyn) går du till uppsättningen med blandade medier. Håll pekaren över uppsättningen och tryck sedan på **Välj** (bockmarkeringsikon). Tryck på **[!UICONTROL Backspace]** på tangentbordet eller tryck på **[!UICONTROL More]** (rad om tre punkter) och sedan på **[!UICONTROL Delete]**.
 
 
 ## Förhandsgranska blandade medieuppsättningar {#previewing-mixed-media-sets}
@@ -180,4 +179,3 @@ Mer information om hur du publicerar blandade medieuppsättningar finns i [Publi
 >[!NOTE]
 >
 >Om den blandade medieuppsättningen inte hamnar helt i leveranstjänsten första gången du publicerar den kanske du måste publicera den blandade medieuppsättningen en andra gång.
-
