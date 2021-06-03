@@ -10,11 +10,10 @@ discoiquuid: e3b44330-d476-49c6-b7ba-079d0d60e500
 docset: aem65
 role: Business Practitioner, Administrator
 exl-id: 274af114-845a-46bd-b091-802cf589687a
-feature: Asset Management,Renditions
-translation-type: tm+mt
-source-git-commit: c9aec973faf4caef741961d92a6f258646aeddb7
+feature: Resurshantering,Återgivningar
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '313'
 ht-degree: 1%
 
 ---
@@ -25,8 +24,8 @@ Hur du kan leverera dina Dynamic Media-resurser - både video och bilder - beror
 
 Med Dynamic Media har du flera alternativ:
 
-* Om du har AEM som värd för webbplatsen vill du lägga till Dynamic Media-resurserna direkt på sidan.
-* Om webbplatsen inte finns AEM kan du välja mellan följande:
+* Om webbplatsen finns på Adobe Experience Manager vill du lägga till Dynamic Media-resurserna direkt på sidan.
+* Om webbplatsen inte ligger på Experience Manager kan du välja något av följande:
 
    * Bädda in videon eller bilden på webbplatsen.
    * Länka URL:er till webbprogrammet. Använd länkning när du vill leverera en videospelare som ett popup-fönster eller modalt fönster.
@@ -40,7 +39,7 @@ Mer information finns i följande avsnitt:
 
 * [Lägga till Dynamic Media-resurser på webbsidor](/help/assets/adding-dynamic-media-assets-to-pages.md)
 * [Bädda in video- eller bildvisningsprogrammet på en webbsida](/help/assets/embed-code.md)
-* [Aktivera hotlink-skydd i Dynamic Media](hotlink-protection.md)
+* [Aktivera hotlink-skydd i Dynamic Media](/help/assets/hotlink-protection.md)
 * [Länka URL:er till ditt webbprogram](/help/assets/linking-urls-to-yourwebapplication.md)
 * [Leverera optimerade bilder för en responsiv webbplats](/help/assets/responsive-site.md)
 * [HTTP2-leverans av innehåll](/help/assets/http2.md)
@@ -50,6 +49,6 @@ Mer information finns i följande avsnitt:
 
 ## HTTP/2-leverans av Dynamic Media-resurser {#http-delivery-of-dynamic-media-assets}
 
-AEM har nu stöd för leverans av allt Dynamic Media-innehåll (bilder och video) via HTTP/2. Det betyder att en publicerad URL eller inbäddningskod för bilden eller videon är tillgänglig för integrering med alla program som accepterar en värdbaserad resurs. Den publicerade resursen levereras sedan via HTTP/2-protokollet. Den här leveransmetoden förbättrar kommunikationen mellan webbläsare och servrar, vilket ger bättre respons och laddningstider för alla dina Dynamic Media-resurser.
+Experience Manager stöder nu leverans av allt Dynamic Media-innehåll (bilder och video) via HTTP/2. Det betyder att en publicerad URL eller inbäddningskod för bilden eller videon är tillgänglig för integrering med alla program som accepterar en värdbaserad resurs. Den publicerade resursen levereras sedan via HTTP/2-protokollet. Den här leveransmetoden förbättrar kommunikationen mellan webbläsare och servrar, vilket ger bättre respons och laddningstider för alla dina Dynamic Media-resurser.
 
 Mer information finns i [HTTP/2 Delivery of Content Frequently Asked Questions](/help/sites-administering/scene7-http2faq.md).
