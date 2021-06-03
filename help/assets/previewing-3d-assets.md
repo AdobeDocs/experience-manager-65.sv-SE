@@ -6,8 +6,7 @@ docset: aem65
 feature: 3D-resurser
 role: Business Practitioner
 exl-id: fdebbc2b-c04d-4cdd-b7c2-8e9a2a854e79
-translation-type: tm+mt
-source-git-commit: 666bc5d943af371726708cb2ef157a9b3f07eb8e
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
 source-wordcount: '547'
 ht-degree: 4%
@@ -56,7 +55,7 @@ Dessutom är funktioner i klientdatorn - t.ex. en arbetsstation, bärbar dator e
 
 1. Se till att du har överfört 3D-resurser till Experience Manager.
 Se [Format som stöds för 3D-förhandsgranskning](#supported-3d-previewing-assets) och [Överföra resurser](/help/assets/manage-assets.md#uploading-assets).
-1. Tryck på **[!UICONTROL Assets > Files.]** från Experience Manager på **[!UICONTROL Navigation]**-sidan
+1. Tryck på **[!UICONTROL Assets > Files]** från Experience Manager på sidan **[!UICONTROL Navigation]**.
 
    ![Navigeringssida](/help/assets/assets-dm/navigation-assets.png)
 
@@ -80,4 +79,4 @@ Se [Format som stöds för 3D-förhandsgranskning](#supported-3d-previewing-asse
    | **Återställ** | I närheten av det nedre högra hörnet av sidan trycker du på ikonen Återställ för att återställa vymålpunkten till mitten av 3D-resursen. Återställ flyttar också kameran närmare eller längre bort för att visa resursen i dess helhet och med en rimlig visningsstorlek. |  |  |
    | **Helskärmsläge** | Om du vill aktivera helskärmsläget trycker du på ikonen Helskärm längst ned till höger på sidan. |  |  |
 
-1. När du är klar trycker du **[!UICONTROL Close.]** längst upp till höger på sidan
+1. När du är klar trycker du **[!UICONTROL Close]** i det övre högra hörnet på sidan.
