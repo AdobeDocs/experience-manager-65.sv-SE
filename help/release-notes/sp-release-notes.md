@@ -4,9 +4,9 @@ description: Versionsinformation som är specifik för  [!DNL Adobe Experience M
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: 0f70c011cc192df0650c3ec666bae2c26653b444
+source-git-commit: 7d3c8d9266bdec3f75211cfa0636217fd8b054ca
 workflow-type: tm+mt
-source-wordcount: '3338'
+source-wordcount: '3814'
 ht-degree: 0%
 
 ---
@@ -75,6 +75,18 @@ De viktigaste funktionerna och förbättringarna i [!DNL Adobe Experience Manage
       >
    * Asien-Stillahavsområdet 24 juni 2021.
 
+
+* Möjlighet att skicka ett e-postmeddelande till en grupp med [!UICONTROL Assign Task]-arbetsflödessteg.
+
+* Möjlighet att hämta ett utkast till interaktiv kommunikation efter att källan för interaktiv kommunikation har ändrats.
+
+* Ange ett anpassat domännamn för inläsning, återgivning och validering av reCAPTCHA-tjänsten i [!DNL Experience Manager Forms].
+
+* Förbättrade indata för arbetsflödessteget [!UICONTROL Invoke Form Data Model Service].
+
+* Möjlighet att använda flera överordnad sidor i en dokumentmall i [!DNL Experience Manager Forms].
+
+* Supportsidbrytningar i Postdokument i [!DNL Experience Manager Forms].
 
 * Den inbyggda databasen (Apache Jackrabbit Oak) uppdateras till 1.22.7.
 
@@ -307,7 +319,50 @@ Adobe Experience Manager 6.5.9.0 Assets åtgärdar följande problem i [!DNL Dyn
 
 >[!NOTE]
 >
->[!DNL Experience Manager Forms] släpper tilläggspaketen en vecka efter det schemalagda datumet för  [!DNL Experience Manager] Service Pack.
+>* [!DNL Experience Manager Forms] släpper tilläggspaketen en vecka efter det schemalagda datumet för  [!DNL Experience Manager] Service Pack.
+>* Du kan nu utveckla och använda program med [!DNL Azul Zulu]-versioner av [!DNL OpenJDK] för [!DNL Experience Manager Forms] på OSGi-distributioner.
+
+
+**Adaptiv Forms**
+
+* Problem med språkinitiering i [!DNL Experience Manager Forms] 6.5.7.0 när flera översättningsordlistor genereras (NPR-36439).
+* När du lägger till en bifogad fil i ett adaptivt formulärfragment och skickar formuläret visas följande felmeddelande (NPR-36195):[!DNL Experience Manager Forms]
+
+   ```TXT
+    POST /content/forms/af/attachmentissue/jcr:content/guideContainer.af.submit.jsp HTTP/1.1] com.adobe.aemds.guide.servlet.GuideSubmitServlet [AF] Invalid file name or mime type for file resulted in submission failure
+   ```
+
+* När du använder mänsklig översättning för att uppdatera ett lexikon och sedan förhandsgranska ett anpassat formulär visas inte ändringarna (NPR-36035).
+
+**Interaktiv kommunikation**
+
+* När du överför en bild med Interactive Communications Print-kanalen och redigerar den är bilden inte längre synlig (NPR-36518).
+
+* När du redigerar en textresurs och fyller i en platshållare tas alla interaktiva element bort från navigeringsrutan (NPR-35991).
+
+**Arbetsflöde**
+
+* När du anropar REST-slutpunkten för en [!DNL Experience Manager Forms]-tjänst på JBoss visar [!DNL Experience Manager] följande felmeddelande (NPR-36305):
+
+   ```TXT
+   Invalid input. The maximum length of 2000 characters was exceeded.
+   ```
+
+**BackendIntegration**
+
+* Det går inte att spara en formulärdatamodell när Lästjänstargumentet binds till ett literalt värde som innehåller ett bindestreck (NPR-36366).
+
+**Dokumentsäkerhet**
+
+* När du anger certifiering och HSM för GlobalSign visar [!DNL Experience Manager Forms] felmeddelandena `Unsuported Algorithm` och `Invalid TSA Certificate` när du lägger till en tidsstämpel till LTV (NPR-36026, NPR-36025).
+
+**Dokumenttjänster**
+
+* Uppdaterar till [!DNL Gibson]-biblioteket för integrering med [!DNL Experience Manager Forms] (NPR-36211).
+
+**Foundation JEE**
+
+* När du väljer Endpoint Management i AdminUI visar [!DNL Experience Manager Forms] felmeddelandet `endpoint registry failure` (CQ-4320249).
 
 Mer information om säkerhetsuppdateringar finns på [Experience Manager-säkerhetsbulletinsidan](https://helpx.adobe.com/security/products/experience-manager.html).
 
@@ -365,34 +420,31 @@ B. Använd [HTTP-API:t från Package Manager](/help/sites-administering/package-
 
 Information om vilka plattformar som är certifierade för att fungera med den här versionen finns i [tekniska krav](/help/sites-deploying/technical-requirements.md).
 
-<!--
-
-### Install Adobe Experience Manager Forms add-on package {#install-aem-forms-add-on-package}
+### Installera Adobe Experience Manager Forms tilläggspaket {#install-aem-forms-add-on-package}
 
 >[!NOTE]
 >
->Skip if you are not using Experience Manager Forms. Fixes in Experience Manager Forms are delivered through a separate add-on package a week after the scheduled [!DNL Experience Manager] Service Pack release.
+>Hoppa över om du inte använder Experience Manager Forms. Korrigeringar i Experience Manager Forms levereras via ett separat tilläggspaket en vecka efter den schemalagda versionen av [!DNL Experience Manager] Service Pack.
 
-1. Ensure that you have installed the Adobe Experience Manager Service Pack.
-1. Download the corresponding Forms add-on package listed at [AEM Forms releases](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en#forms-updates) for your operating system.
-1. Install the Forms add-on package as described in [Installing AEM Forms add-on packages](../forms/using/installing-configuring-aem-forms-osgi.md#install-aem-forms-add-on-package).
-
->[!NOTE]
->
->AEM 6.5.9.0 includes a new version of [AEM Forms Compatibility Package](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en#aem-65-forms-releases). If you are using an older version of AEM Forms Compatibility Package and updating to AEM 6.5.9.0, install the latest version of the package post installation of Forms Add-On Package.
-
-### Install Adobe Experience Manager Forms on JEE {#install-aem-forms-jee-installer}
+1. Kontrollera att du har installerat Adobe Experience Manager Service Pack.
+1. Ladda ned motsvarande tilläggspaket från Forms som finns på [AEM Forms releases](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en#forms-updates) för ditt operativsystem.
+1. Installera Forms tilläggspaket enligt beskrivningen i [Installera AEM Forms tilläggspaket](../forms/using/installing-configuring-aem-forms-osgi.md#install-aem-forms-add-on-package).
 
 >[!NOTE]
 >
->Skip if you are not using AEM Forms on JEE. Fixes in Adobe Experience Manager Forms on JEE are delivered through a separate installer.
+>AEM 6.5.9.0 innehåller en ny version av [AEM Forms-kompatibilitetspaket](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en#aem-65-forms-releases). Om du använder en äldre version av AEM Forms Compatibility Package och uppdaterar till AEM 6.5.9.0 installerar du den senaste versionen av paketet efter installationen av Forms Add-On Package.
 
-For information about installing the cumulative installer for Experience Manager Forms on JEE and post-deployment configuration, see the [release notes](jee-patch-installer-65.md).
+### Installera Adobe Experience Manager Forms på JEE {#install-aem-forms-jee-installer}
 
 >[!NOTE]
 >
->After installing the cumulative installer for Experience Manager Forms on JEE, install the latest Forms add-on package, delete the Forms add-on package from the `crx-repository\install` folder, and restart the server.
--->
+>Hoppa över om du inte använder AEM Forms på JEE. Korrigeringar i Adobe Experience Manager Forms på JEE levereras via ett separat installationsprogram.
+
+Information om hur du installerar det kumulativa installationsprogrammet för Experience Manager Forms på JEE och konfigurationen efter distributionen finns i [versionsinformationen](jee-patch-installer-65.md).
+
+>[!NOTE]
+>
+>När du har installerat det kumulativa installationsprogrammet för Experience Manager Forms på JEE installerar du det senaste Forms-tilläggspaketet, tar bort Forms-tilläggspaketet från mappen `crx-repository\install` och startar om servern.
 
 ### UberJar {#uber-jar}
 
