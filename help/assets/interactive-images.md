@@ -11,8 +11,7 @@ docset: aem65
 feature: Interaktiva bilder
 role: Business Practitioner, Administrator
 exl-id: 8a609024-e9e6-4805-8306-48d095110eb6
-translation-type: tm+mt
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
 source-wordcount: '4299'
 ht-degree: 2%
@@ -192,23 +191,23 @@ När du skapar en anpassad förinställning för Interactive Image Viewer kan du
 
 När du har sparat visningsförinställningen aktiveras den automatiskt (aktiveras) på listsidan för visningsförinställningar i AEM Assets. Den här funktionen innebär att den är synlig i komponenten Interactive Media och när du visar en resurs. Om du vill *leverera *en interaktiv banderoll med den här visningsförinställningen måste du även *publicera *din visningsförinställning (detta gäller anpassade visningsprogramförinställningar eller förinställda visningsprograminställningar som inte är installerade).
 
-**Skapa en förinställning för Interactive Image Viewer**
+**Så här skapar du en förinställning för Interactive Image Viewer:**
 
-1. Tryck på **[!UICONTROL Tools > Assets > Viewer Presets.]** i den vänstra listen
-1. I sidans övre högra hörn trycker du på **[!UICONTROL Create.]**
+1. Tryck på **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Viewer Presets]** i den vänstra listen.
+1. Tryck på **[!UICONTROL Create]** i sidans övre högra hörn.
 1. I dialogrutan Ny visningsförinställning för visningsprogrammet skriver du ett namn som beskriver förinställningen för det interaktiva visningsprogrammet för banderollen.
 
    Det här är titeln som visas på listsidan för visningsförinställningar när du har sparat.
 
-1. I listrutan Multimedietyp väljer du **[!UICONTROL Interactive Image.]**
-1. Tryck på **[!UICONTROL Create.]**
+1. I listrutan Multimedietyp väljer du **[!UICONTROL Interactive Image]**.
+1. Tryck på **[!UICONTROL Create]**.
 1. Tryck på fliken **[!UICONTROL Appearance]** på sidan Redigera visningsförinställning.
 1. Gör något av följande:
 
    * Om du vill överföra en egen hotspot-bild som du vill använda på bilder trycker du på ikonen Resursväljaren. Gå till den hotspot-bild som du vill använda på sidan Välj innehåll, markera den och tryck sedan på ikonen Markera i det övre högra hörnet.
    * Om du vill välja en fördefinierad hotspot-bild trycker du på ikonen för Hotspot-galleriet. Tryck på den hotspot-bild som du vill använda på paletten för klickbara områden.
 
-1. I sidans övre högra hörn trycker du på **[!UICONTROL Save.]**
+1. Tryck på **[!UICONTROL Save]** i sidans övre högra hörn.
 
    Var noga med att publicera den nya visningsförinställningen.
 
@@ -220,7 +219,7 @@ När du har sparat visningsförinställningen aktiveras den automatiskt (aktiver
 
 Om du redan har överfört de bilder du vill använda går du vidare till nästa steg, [Lägga till aktiveringspunkter i en bildbanderoll](#adding-hotspots-to-an-image-banner).
 
-**Så här överför du en bildbanderoll**
+**Så här överför du en bildbanderoll:**
 
 1. Överför bildbanderoller som du vill göra interaktiva.
 
@@ -263,32 +262,32 @@ Se [(Valfritt) Förhandsvisa interaktiva bilder](#optional-previewing-interactiv
 1. I resursvyn navigerar du till den bildbanderoll som du vill göra interaktiv.
 1. Gör något av följande:
 
-   * Håll pekaren över bilden och tryck sedan på **[!UICONTROL Select]** (bockmarkeringsikon). Tryck på **[!UICONTROL Edit.]** i verktygsfältet
+   * Håll pekaren över bilden och tryck sedan på **[!UICONTROL Select]** (bockmarkeringsikon). Tryck på **[!UICONTROL Edit]** i verktygsfältet.
 
-   * Håll pekaren över bilden och tryck sedan på **[!UICONTROL More actions]** (ikonen med tre punkter) **[!UICONTROL > Edit.]**
+   * Håll pekaren över bilden och tryck sedan på **[!UICONTROL More actions]** (ikonen med tre punkter) **[!UICONTROL Edit]**.
 
-   * Tryck på bilden för att öppna den på sidan Detaljvy. Tryck på **[!UICONTROL Edit.]** i verktygsfältet
+   * Tryck på bilden för att öppna den på sidan Detaljvy. Tryck på **[!UICONTROL Edit]** i verktygsfältet.
 
 1. I närheten av sidans övre vänstra hörn trycker du på **[!UICONTROL Add Hotspot]** (pekaren) för att öppna sidan för hantering av hotspot-områden.
-1. I närheten av sidans övre vänstra hörn trycker du på **[!UICONTROL Hotspot.]**
+1. I närheten av det övre vänstra hörnet på sidan trycker du på **[!UICONTROL Hotspot]**.
 
-1. I närheten av det övre vänstra hörnet på sidan Hantering av aktiveringspunkter trycker du på **[!UICONTROL Hotspot.]**
-1. Tryck på den plats i bilden där du vill att hotspot-området ska visas. Dra hotspot-området om det behövs för att justera dess placering.
-1. Lägg till ytterligare hotspot-områden efter behov genom att upprepa steg a och b.
-1. (Valfritt) Om du vill ta bort en aktiveringspunkt markerar du den i bilden och trycker sedan på **[!UICONTROL Delete]** (skräpburkikon) under rubriken **[!UICONTROL Hotspots]**.
+   1. Tryck på **[!UICONTROL Hotspot]** i det övre vänstra hörnet på sidan Hantering av hotspot.
+   1. Tryck på den plats i bilden där du vill att hotspot-området ska visas. Dra hotspot-området om det behövs för att justera dess placering.
+   1. Lägg till ytterligare hotspot-områden efter behov genom att upprepa steg a och b.
+   1. (Valfritt) Om du vill ta bort en aktiveringspunkt markerar du den i bilden och trycker sedan på **[!UICONTROL Delete]** (skräpburkikon) under rubriken **[!UICONTROL Hotspots]**.
 
 1. Skriv namnet på aktiveringspunkten i textfältet Namn. Det här namnet visas också i listrutan Markerad aktiveringspunkt.
 1. Gör något av följande:
 
-   * Tryck på **[!UICONTROL Quickview.]**
+   * Tryck på **[!UICONTROL Quickview]**.
 
-      * Om du är AEM Sites- eller e-handelskund trycker eller klickar du på produktväljarens ikon (förstoringsglas) för att öppna sidan Select Product (Välj produkt). Tryck eller klicka på den produkt du vill använda och tryck sedan på **Select **i det övre högra hörnet av sidan för att gå tillbaka till sidan för hantering av hotspot.
+      * Om du är AEM Sites- eller e-handelskund trycker eller klickar du på produktväljarens ikon (förstoringsglas) för att öppna sidan Select Product (Välj produkt). Tryck eller klicka på den produkt du vill använda och tryck sedan på **Välj** i det övre högra hörnet av sidan för att återgå till sidan för hantering av aktiveringspunkter.
       * Om du är *inte* en AEM Sites- eller e-handelskund
 
          * Se [Identifiera hotspot-variabler](#optional-identifying-hotspot-variables); måste du definiera dessa variabler.
          * Ange sedan SKU-värdet manuellt. I textfältet SKU-värde skriver du produktens SKU (Stock Keeping Unit), som är en unik identifierare för varje separat produkt eller tjänst som du erbjuder. Det angivna SKU-värdet fyller automatiskt i variabeldelen av QuickView-mallen så att systemet vet att den aktiveringspunkt som användaren går till associeras med en viss SKU:s snabbvy.
-         * (Valfritt) Om det finns andra variabler i snabbvyn som du behöver använda för att identifiera en produkt ytterligare trycker du på **[!UICONTROL Add Generic Variable.]** I textfältet anger du ytterligare en variabel. `category=Mens` är till exempel en tillagd variabel.
-   * Tryck på **[!UICONTROL Hyperlink.]**
+         * (Valfritt) Om det finns andra variabler i snabbvyn som du behöver för att identifiera en produkt ytterligare trycker du på **[!UICONTROL Add Generic Variable]**. Ange ytterligare en variabel i textfältet. `category=Mens` är till exempel en tillagd variabel.
+   * Tryck på **[!UICONTROL Hyperlink]**.
 
       * Om du är kund hos AEM Sites trycker eller klickar du på ikonen Platsväljare (mapp) för att navigera till en URL. Observera att den URL-baserade länkningsmetoden inte är möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till AEM Sites-sidor.
       * Om du är en fristående kund anger du den fullständiga URL-sökvägen till en länkad webbsida i textfältet HREF.
@@ -297,7 +296,7 @@ Se [(Valfritt) Förhandsvisa interaktiva bilder](#optional-previewing-interactiv
 
    Mer information finns i [Arbeta med väljare](/help/assets/working-with-selectors.md).
 
-   * Tryck på **[!UICONTROL Experience Fragment.]**
+   * Tryck på **[!UICONTROL Experience Fragment]**.
 
       * Om du är AEM Sites-kund trycker eller klickar du på ikonen Sök (förstoringsglas) för att öppna sidan Experience Fragment. Tryck eller klicka på det Experience Fragment som du vill använda och tryck sedan på Select (Välj) längst upp till höger på sidan för att återgå till sidan för hantering av hotspot.
 Se [Upplevelsefragment](/help/sites-authoring/experience-fragments.md).
@@ -332,10 +331,10 @@ Se [Bädda in video- eller bildvisningsprogrammet på en webbsida](/help/assets/
 Se [Länka URL:er till ditt webbprogram](/help/assets/linking-urls-to-yourwebapplication.md). Observera att den URL-baserade länkningsmetoden inte är möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till AEM Sites-sidor.
 Se [Lägga till Dynamic Media-resurser på sidor.](/help/assets/adding-dynamic-media-assets-to-pages.md)
 
-**Förhandsgranska interaktiva bilder**
+**Så här förhandsgranskar du interaktiva bilder:**
 
 1. Navigera till en befintlig interaktiv bild som du har skapat i resursvyn och öppna den i förhandsvisningen genom att trycka.
-1. I det övre vänstra hörnet av förhandsgranskningssidan trycker du på **[!UICONTROL Viewers.]** i listrutan Innehåll
+1. I det övre vänstra hörnet av förhandsgranskningssidan trycker du på **[!UICONTROL Viewers]** i listrutan Innehåll.
 1. Tryck på **[!UICONTROL Shoppable_Banner]** eller namnet på den förinställning för visningsprogrammet för den interaktiva bilden som du har skapat i listan Visare.
 1. Tryck på hotspot-områden på bilden för att testa deras associerade åtgärder.
 
