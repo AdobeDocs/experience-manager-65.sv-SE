@@ -9,11 +9,10 @@ content-type: reference
 discoiquuid: c8e145ad-f021-4043-8190-62151775e296
 role: Business Practitioner, Administrator
 exl-id: 9eb9f309-33e5-4694-84d2-fb2cd3de50a6
-feature: Publishing,Configuration
-translation-type: tm+mt
-source-git-commit: c9aec973faf4caef741961d92a6f258646aeddb7
+feature: Publicering,Konfiguration
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
-source-wordcount: '726'
+source-wordcount: '732'
 ht-degree: 0%
 
 ---
@@ -32,7 +31,7 @@ HTTP/2 förbättrar sättet som webbläsare och servrar kommunicerar på, vilket
 
 På följande webbplats beskrivs HTTP/2 och dess fördelar på ett kort och enkelt sätt:
 
-[https://www.engadget.com/2015/02/24/what-you-need-to-know-about-http-2/](https://www.engadget.com/2015/02/24/what-you-need-to-know-about-http-2/)
+[Vad du måste känna till om HTTP/2](https://www.engadget.com/2015-02-24-what-you-need-to-know-about-http-2.html)
 
 ## Vilka är de viktigaste fördelarna med att gå över till HTTP/2 för innehållsleverans? {#what-are-the-key-benefits-of-moving-to-http-for-content-delivery}
 
@@ -63,7 +62,7 @@ Om du vill använda HTTP/2 måste du uppfylla följande krav:
 
 Du initierar begäran om att växla över till HTTP/2; det görs inte automatiskt åt dig.
 
-1. Om du vill växla till HTTP/2 startar du en kundtjänstbegäran i Adobe. Se [Gå till AEM supportportal](https://helpx.adobe.com/experience-manager/kb/accessing-aem-support-portal.html).
+1. Om du vill växla till HTTP/2 startar du en kundtjänstbegäran i Adobe. Se [Gå till Adobe Experience Manager supportportal](https://helpx.adobe.com/experience-manager/kb/accessing-aem-support-portal.html).
 
    1. Ange följande information i din supportförfrågan:
 
