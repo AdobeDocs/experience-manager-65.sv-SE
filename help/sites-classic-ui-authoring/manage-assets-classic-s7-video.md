@@ -7,14 +7,13 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: authoring
 content-type: reference
 discoiquuid: dfaa4b3f-f65a-4fe3-87a7-f3bc71015e56
-translation-type: tm+mt
-source-git-commit: 801d57bbe8a1bede6dcb4bf7884e5f71ddea1e83
+exl-id: c540aa49-9981-4e8c-97df-972085b26490
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
-source-wordcount: '1649'
+source-wordcount: '1650'
 ht-degree: 0%
 
 ---
-
 
 # Video{#video}
 
@@ -72,7 +71,7 @@ Om du inte behöver ett arbetsflöde eller en versionshantering för dina resurs
 
 **Så här konfigurerar du universella förinställningar**:
 
-1. I **[!UICONTROL Cloud Services]** navigerar du till din **[!UICONTROL Dynamic Media Classic]**-konfiguration och klickar på **[!UICONTROL Edit.]**
+1. I **[!UICONTROL Cloud Services]** navigerar du till din **[!UICONTROL Dynamic Media Classic]**-konfiguration och klickar på **[!UICONTROL Edit]**.
 1. Välj fliken **[!UICONTROL Video]**.
 
    >[!NOTE]
@@ -149,8 +148,8 @@ De olika videokodningarna skapas enligt de kodningsförinställningar för Dynam
 >
 >Nya videoprofiler och ändringar av dem måste aktiveras för publicering.
 
-1. I AEM går du till **[!UICONTROL Tools]** och väljer **[!UICONTROL Configuration Console.]** Gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles]** i navigeringsträdet i Configuration Console.
-1. Skapa en ny Dynamic Media Classic-videoprofil. På menyn **[!UICONTROL New...]** väljer du **[!UICONTROL Create Page]** och sedan Dynamic Media Classic Video Profile-mallen. Ge den nya videoprofilsidan ett namn och klicka på **[!UICONTROL Create.]**
+1. I Experience Manager går du till **[!UICONTROL Tools]** och väljer **[!UICONTROL Configuration Console]**. Gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles]** i navigeringsträdet i Configuration Console.
+1. Skapa en ny Dynamic Media Classic-videoprofil. I **[!UICONTROL New]**. väljer du **[!UICONTROL Create Page]** och sedan mallen Dynamic Media Classic Video Profile. Ge den nya videoprofilsidan ett namn och klicka på **[!UICONTROL Create]**.
 
    ![chlimage_1-133](assets/chlimage_1-133.png)
 
@@ -188,4 +187,3 @@ Grundvideokomponenten måste känna till vilka videoprofiler som ska användas f
 1. Videoprofilerna måste aktiveras.
 1. Konfigurera utformningen av den grundläggande videokomponenten på sidan.
 1. Aktivera designen när du är klar med designändringarna.
-
