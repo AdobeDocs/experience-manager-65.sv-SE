@@ -10,9 +10,8 @@ discoiquuid: 0d48c031-d3ee-4143-b739-a79ba28fd63a
 docset: aem65
 role: Business Practitioner, Administrator
 exl-id: d4507059-a54d-4dc9-a263-e55dfa27eeb1
-feature: Troubleshooting
-translation-type: tm+mt
-source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
+feature: Felsökning
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
 source-wordcount: '1284'
 ht-degree: 0%
@@ -33,7 +32,7 @@ Kontrollera att Dynamic Media har konfigurerats korrekt genom att göra följand
 
    Det här tillvalspaketet är till för FTP-stöd eller om du migrerar resurser till Dynamic Media från Dynamic Media Classic.
 
-* Navigera till användargränssnittet för Cloud Services och bekräfta att det tilldelade kontot visas under **[!UICONTROL Available Configurations.]**
+* Navigera till användargränssnittet för Cloud Services och bekräfta att det tilldelade kontot visas under **[!UICONTROL Available Configurations]**.
 * Kontrollera att replikeringsagenten `Dynamic Media Asset Activation (scene7)` är aktiverad.
 
    Den här replikeringsagenten finns under Agenter på författare.
@@ -206,7 +205,7 @@ Om du har problem med video kan du läsa följande felsökningsguide.
  </tbody>
 </table>
 
-## Visare {#viewers}
+## Tittare {#viewers}
 
 Om du har problem med visningsprogram kan du läsa följande felsökningsguide.
 
