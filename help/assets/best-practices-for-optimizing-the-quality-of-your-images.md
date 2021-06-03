@@ -10,7 +10,7 @@ discoiquuid: 12baf001-dfc9-410a-9821-a3bae1324392
 feature: Resurshantering
 role: Business Practitioner, Administrator
 exl-id: 7a568cae-e505-4b3a-abc5-8aae723460c3
-source-git-commit: a4e9a4003bf0ce686578d3f8b3fddc19bc49dfb4
+source-git-commit: d2649ec83424978ba01b9bb61e9f935bdc79aa62
 workflow-type: tm+mt
 source-wordcount: '1434'
 ht-degree: 5%
@@ -64,18 +64,19 @@ Det finns två metoder för bildskärpa:
       * **[!UICONTROL amount]** (0-5, effektens styrka.)
       * **[!UICONTROL radius]** (0-250, bredden på de&quot;skärpelinjer&quot; som ritas runt objektet med skärpa, mätt i pixlar.)
 
-         Tänk på att parametrarnas radie och mängd fungerar mot varandra. Reducerad radie kan kompenseras genom ett ökat belopp. Med radie får du bättre kontroll eftersom ett lägre värde ökar skärpan endast för kantpixlarna, medan ett högre värde ökar skärpan för ett större antal pixlar.
+      Tänk på att parametrarnas radie och mängd fungerar mot varandra. Reducerad radie kan kompenseras genom ett ökat belopp. Med radie får du bättre kontroll eftersom ett lägre värde ökar skärpan endast för kantpixlarna, medan ett högre värde ökar skärpan för ett större antal pixlar.
 
       * **[!UICONTROL threshold]** (0-255, effektkänslighet.)
 
-         Den här parametern avgör hur annorlunda de pixlar som ska göras skarpare måste vara jämfört med det omgivande området innan de betraktas som kantpixlar och filtret gör dem skarpare. Med parametern **[!UICONTROL threshold]** undviker du för mycket skärpa i områden med liknande färger, som hudtoner. Ett tröskelvärde på 12 ignorerar till exempel små variationer i hudtonens ljusstyrka för att undvika att lägga till ”brus”, men lägger ändå till kantkontrast i områden med hög kontrast, till exempel där ögonfransarna möter huden.
-      Mer information om hur du ställer in de här tre parametrarna, inklusive de bästa sätten att använda med filtret, finns i följande resurser:
+             Den här parametern avgör hur annorlunda de pixlar som ska göras skarpare måste vara jämfört med det omgivande området innan de betraktas som kantpixlar och filtret gör dem skarpare. Parametern **[!UICONTROL threshold]** hjälper dig att undvika att göra områden med liknande färger för mycket skarpare, som hudtoner. Ett tröskelvärde på 12 ignorerar till exempel små variationer i hudtonens ljusstyrka för att undvika att lägga till ”brus”, men lägger ändå till kantkontrast i områden med hög kontrast, till exempel där ögonfransarna möter huden.
+         
+         Mer information om hur du ställer in de här tre parametrarna, inklusive de bästa sätten att använda med filtret, finns i följande resurser:
 
-      Hjälpavsnittet Experience Manager om skärpa i en bild.
+         Hjälpavsnittet Experience Manager om skärpa i en bild.
 
-      Best practices white paper [Skärpa bilder i Adobe Dynamic Media Classic](/help/assets/assets/sharpening_images.pdf).
+         Best practices white paper [Skärpa bilder i Adobe Dynamic Media Classic](/help/assets/assets/sharpening_images.pdf).
 
-   * Med Experience Manager kan du även styra en fjärde parameter: monokrom (0,1). Den här parametern avgör om oskarp maskning används separat på varje färgkomponent med värdet 0 eller på bildens intensitet/intensitet med värdet 1.
+      * Med Experience Manager kan du även styra en fjärde parameter: monokrom (0,1). Den här parametern avgör om oskarp maskning används separat på varje färgkomponent med värdet 0 eller på bildens intensitet/intensitet med värdet 1.
 
 
 Det bästa sättet är att börja med parametern oskarp maskradie. Radie-inställningar som du kan börja med är följande:
