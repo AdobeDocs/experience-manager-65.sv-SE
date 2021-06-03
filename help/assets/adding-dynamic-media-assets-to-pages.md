@@ -11,7 +11,7 @@ docset: aem65
 role: Business Practitioner, Administrator
 exl-id: 62d4a38c-2873-4560-8d58-ad172288764d
 feature: komponenter,publicera
-source-git-commit: 1c95217c98cdf24182eebbfea09c807318b2d514
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
 source-wordcount: '3043'
 ht-degree: 6%
@@ -34,7 +34,7 @@ Att lägga till en 3D-mediekomponent, Dynamic Media, Interactive Media, Panorami
 
 1. Öppna den sida i Experience Manager där du vill lägga till Dynamic Media-komponenten.
 1. Klicka på ikonen **[!UICONTROL Components]** på panelen till vänster på sidan (om det behövs för att växla visning av sidopanelen).
-1. Under rubriken **[!UICONTROL Components]** väljer du **[!UICONTROL Dynamic Media.]** i listrutan
+1. Under rubriken **[!UICONTROL Components]** väljer du **[!UICONTROL Dynamic Media]** i listrutan.
 
    Om det inte finns någon lista över Dynamic Media-komponenter måste du aktivera de Dynamic Media-komponenter som du vill använda. Se [Aktivera Dynamic Media-komponenter](#enabling-dynamic-media-components).
 
@@ -65,7 +65,7 @@ Om det inte finns några Dynamic Media-komponenter att lägga till på en sida b
 
    ![edit-template](/help/assets/assets-dm/edit-template.png)
 
-1. Tryck på **[!UICONTROL Structure.]** i listrutan till höger om verktygsfältet längst upp på sidan
+1. Tryck på **[!UICONTROL Structure]** i listrutan till höger om verktygsfältet uppe på sidan.
 
    ![Policy](/help/assets/assets-dm/structure-mode.png)
 
@@ -74,7 +74,7 @@ Om det inte finns några Dynamic Media-komponenter att lägga till på en sida b
 
    ![Tillåtna komponenter](/help/assets/assets-dm/allowed-components.png)
 
-1. Rulla tills du ser **[!UICONTROL Dynamic Media.]**
+1. Rulla tills du ser **[!UICONTROL Dynamic Media]**.
 1. Tryck på ikonen > till vänster om **[!UICONTROL Dynamic Media]** så att du kan expandera listan och sedan markera de Dynamic Media-komponenter som du vill aktivera.
 
    ![Lista över komponenter i Dynamic Media](/help/assets/assets-dm/dm-components-select.png)
@@ -99,7 +99,7 @@ Du kan lokalisera Dynamic Media-komponenter på ett av två sätt:
 
 ## Dynamic Media Components {#dynamic-media-components}
 
-Dynamic Media-komponenter är tillgängliga när du trycker på ikonen **[!UICONTROL Components]** och sedan filtrerar på **[!UICONTROL Dynamic Media.]**
+Dynamic Media-komponenter är tillgängliga när du trycker på ikonen **[!UICONTROL Components]** och sedan filtrerar på **[!UICONTROL Dynamic Media]**.
 
 Följande Dynamic Media-komponenter är tillgängliga:
 
@@ -142,13 +142,13 @@ Med Dynamic Media-komponenten kan du lägga till dynamiska bilder, inklusive bil
 
 Du kan också konfigurera visningsförinställningen, bildförinställningen eller bildformatet direkt i komponenten. Om du vill göra en bild responsiv kan du antingen ange brytpunkter eller använda en responsiv bildförinställning.
 
-Redigera följande Dynamic Media-inställningar genom att trycka på ikonen **[!UICONTROL Edit]** i komponenten och sedan **[!UICONTROL Dynamic Media Settings.]**
+Redigera följande Dynamic Media-inställningar genom att trycka på ikonen **[!UICONTROL Edit]** i komponenten och sedan **[!UICONTROL Dynamic Media Settings]**.
 
 ![dm-settings-image-preset](assets/dm-settings-image-preset.png)
 
 >[!NOTE]
 >
->Som standard är Dynamic Media-bildkomponenten adaptiv. Om du vill att den ska ha en fast storlek anger du det i komponenten på fliken **[!UICONTROL Advanced]** med **[!UICONTROL Width]** och **[!UICONTROL Height.]**
+>Som standard är Dynamic Media-bildkomponenten adaptiv. Om du vill att den ska ha en fast storlek anger du det i komponenten på fliken **[!UICONTROL Advanced]** med **[!UICONTROL Width]** och **[!UICONTROL Height]**.
 
 * **[!UICONTROL Viewer preset]** - Välj en befintlig visningsförinställning i listrutan. Om den visningsförinställning du söker efter inte visas måste du göra den synlig. Se [Hantera visningsförinställningar](/help/assets/managing-viewer-presets.md). Du kan inte välja en visningsförinställning om du använder en bildförinställning och omvänt.
 
@@ -236,7 +236,7 @@ Redigera följande Dynamic Media-inställning genom att klicka på **[!UICONTROL
 
 >[!NOTE]
 >
->Som standard är Dynamic Media-bildkomponenten adaptiv. Om du vill att den ska ha en fast storlek anger du det i komponenten på fliken **[!UICONTROL Advanced]** med **[!UICONTROL Width]** och **[!UICONTROL Height.]**
+>Som standard är Dynamic Media-bildkomponenten adaptiv. Om du vill att den ska ha en fast storlek anger du det i komponenten på fliken **[!UICONTROL Advanced]** med **[!UICONTROL Width]** och **[!UICONTROL Height]**.
 
 * **[!UICONTROL Image Modifiers]** - Du kan använda bildeffekter genom att ange ytterligare bildkommandon. Dessa effekter beskrivs i Bildförinställningar och i Referens för bildserverkommando.
 
