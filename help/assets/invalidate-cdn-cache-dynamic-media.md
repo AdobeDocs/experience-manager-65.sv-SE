@@ -7,9 +7,8 @@ topic-tags: dynamic-media
 content-type: reference
 role: Business Practitioner, Administrator
 exl-id: 23d3c274-0736-49f7-8d44-a56a55cfd06d
-feature: CDN Cache
-translation-type: tm+mt
-source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
+feature: CDN-cache
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
 source-wordcount: '1280'
 ht-degree: 0%
@@ -34,7 +33,7 @@ Se även [Översikt över cachelagring i Dynamic Media](https://helpx.adobe.com/
 
 *Del 1 av 2: Skapa en mall för CDN-invalidering*
 
-1. Tryck på **[!UICONTROL Tools > Assets > CDN Invalidation.]** i Experience Manager 6.5.6 eller senare
+1. Tryck på **[!UICONTROL Tools > Assets > CDN Invalidation]** i Experience Manager 6.5.6 eller senare.
 
    ![CDN-valideringsfunktion](/help/assets/assets-dm/cdn-invalidation-template2.png)
 
@@ -47,10 +46,12 @@ Se även [Översikt över cachelagring i Dynamic Media](https://helpx.adobe.com/
 
    ![CDN-valideringsmall - Skapa](/help/assets/assets-dm/cdn-invalidation-template-create-2.png)
 
-1. I det övre högra hörnet på sidan **[!UICONTROL CDN Invalidation template]** trycker du på **[!UICONTROL Save]** och sedan på **[!UICONTROL OK.]**<br>   *Del 2 av 2: Ange alternativ för CDN-validering*
+1. I det övre högra hörnet på sidan **[!UICONTROL CDN Invalidation template]** trycker du på **[!UICONTROL Save]** och sedan på **[!UICONTROL OK]**.<br>
+
+   *Del 2 av 2: Ange alternativ för CDN-validering*
    <br>
 
-1. Tryck på **[!UICONTROL Tools > Assets > CDN Invalidation.]** i Experience Manager som Cloud Service
+1. I Experience Manager som Cloud Service trycker du på **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL CDN Invalidation]**.
 
    ![CDN-valideringsfunktion](/help/assets/assets-dm/cdn-invalidation-path2.png)
 
@@ -70,7 +71,7 @@ Se även [Översikt över cachelagring i Dynamic Media](https://helpx.adobe.com/
    | **[!UICONTROL Add Assets]** | Använd Resursväljaren för att välja resurser som du vill göra ogiltiga. Du kan välja antingen publicerade eller opublicerade resurser.<br>Cachelagring vid CDN är URL-baserad, inte resursbaserad. Därför måste du vara medveten om de fullständiga URL:erna som finns på webbplatsen. När du har fastställt dessa URL-adresser kan du lägga till dem i mallen. Sedan kan du markera och lägga till resurserna och göra URL-adresserna ogiltiga i ett enda steg. <br>Använd det här alternativet med  **[!UICONTROL Invalidate asset associated image presets in CDN]**, eller  **[!UICONTROL Invalidation based on template]**, eller båda. |
    | **[!UICONTROL Add URL]** | Lägg till eller klistra in fullständiga URL-sökvägar manuellt i Dynamic Media-resurser vars CDN-cache du vill ogiltigförklara. Använd det här alternativet om du inte skapade en CDN-valideringsmall i ***Del 1 av 2: Skapar en CDN-valideringsmall*** och har bara några resurser att ogiltigförklara.<br>**Viktigt:** Varje URL som du lägger till måste finnas på en egen rad.<br>Du kan göra upp till 1 000 URL-adresser ogiltiga samtidigt. Om antalet URL:er i textfältet **[!UICONTROL Add URL]** är större än 1000 kan du inte trycka på **[!UICONTROL Next]**. I sådana fall måste du trycka på **[!UICONTROL X]** till höger om en markerad resurs eller en manuellt tillagd URL för att ta bort den från ogiltiglistan.<br>Ange URL:er för smart beskärning av bilder antingen i CDN-valideringsmallen eller i det här  **[!UICONTROL Add URL]** textfältet. |
 
-1. I sidans övre högra hörn trycker du på **[!UICONTROL Next.]**
+1. Tryck på **[!UICONTROL Next]** i sidans övre högra hörn.
 1. På sidan **[!UICONTROL CDN Invalidation - Confirm]** i listrutan **[!UICONTROL URLs]** kan du se en lista över en eller flera URL:er som genererats från CDN-valideringsmallen som du skapade tidigare och de resurser som du just lade till.
 
    Anta att du har lagt till en enskild resurs med namnet `spinset` med exemplet med mallen för CDN-invalidering som visades i stegen ovan. När du trycker på **[!UICONTROL Tools > Assets > CDN Invalidation]** resulterar det i följande fem genererade URL:er i **[!UICONTROL CDN Invalidation - Confirm]**-användargränssnittet:
@@ -90,7 +91,7 @@ I samtliga fall bearbetas hela gruppen för att ogiltigförklaras, eller så mis
 | *Det gick inte att hämta URL:er för valda resurser.* | Inträffar om något av följande scenarier uppfylls:<br>- Det går inte att hitta någon Dynamic Media-konfiguration.<br>- Det finns ett undantag när en tjänstanvändare hämtas genom vilket Dynamic Media-konfigurationen läses.<br>- Publiceringsservern eller företagsroten som används för att skapa URL-adresserna saknas i Dynamic Media-konfigurationen. |
 | *Vissa URL:er är inte korrekt definierade. Korrigera och skicka om.* | Inträffar om invaliderings-API:t för IPS CDN-cache returnerar ett fel om att URL:en refererar till ett annat företag. Eller om URL:en inte är giltig enligt den validering som görs av API:t `cdnCacheInvalidation` för IPS. |
 | *Det gick inte att göra CDN-cachen ogiltig.* | Inträffar om CDN-cachen ogiltigförklarar begäran av någon annan anledning. |
-| *Inga URL:er har angetts som ogiltiga.* | Inträffar om det inte finns några URL-adresser på **[!UICONTROL CDN Invalidation - Confirm]**-sidan och du trycker på **[!UICONTROL Submit.]** |
+| *Inga URL:er har angetts som ogiltiga.* | Inträffar om det inte finns några URL-adresser på **[!UICONTROL CDN Invalidation - Confirm]**-sidan och du trycker på **[!UICONTROL Submit]**. |
 
 
 <!--  | I do not want to create a template. | Near the upper-right corner of the page, tap **[!UICONTROL Cancel]**, then continue with ***Part 2: Working with CDN Invalidation***. Note that while you are not required to create a template to use CDN Invalidation, Adobe recommends that you create one, especially if you have numerous assets that you need to update immediately, on a regular basis. The template is used at the time you set CDN invalidation options. | -->
