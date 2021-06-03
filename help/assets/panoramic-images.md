@@ -8,16 +8,15 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 content-type: reference
 discoiquuid: 632a9074-b747-49a1-a57d-1f42bba1f4e9
 docset: aem65
-feature: Panoramic Images,Asset Management
+feature: Panoramabilder,Resurshantering
 role: Business Practitioner, Administrator
-translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+exl-id: 4d6fbeb1-94db-4154-9e41-b76033fb4398
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
-source-wordcount: '557'
-ht-degree: 4%
+source-wordcount: '554'
+ht-degree: 5%
 
 ---
-
 
 # Panoramabilder{#panoramic-images}
 
@@ -47,11 +46,11 @@ För att visningsprogrammet för panoramabilder ska fungera på rätt sätt i AE
 
 1. Öppna [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och logga sedan in på ditt konto.
 
-1. Klicka på **[!UICONTROL Setup > Application Setup > Publish Setup > Image Server.]** längst upp till höger på sidan
-1. Välj **[!UICONTROL Image Serving.]** på menyn **[!UICONTROL Publish Context]** längst upp på sidan Image Server Publish (Publicera)
+1. Klicka på **[!UICONTROL Setup > Application Setup > Publish Setup > Image Server]** i det övre högra hörnet på sidan.
+1. Välj **[!UICONTROL Image Serving]** i listrutan **[!UICONTROL Publish Context]** på sidan Image Server Publish.
 
-1. På samma Image Server Publish-sida hittar du rubriken **[!UICONTROL Request Attributes.]**
-1. Under rubriken Begäransattribut går du till **[!UICONTROL Reply Image Size Limit.]** och i de associerade fälten Bredd och Höjd ökar du den maximalt tillåtna bildstorleken för panoramabilder.
+1. Gå till rubriken **[!UICONTROL Request Attributes]** på samma Image Server Publish-sida.
+1. Gå till **[!UICONTROL Reply Image Size Limit]** under rubriken Begärandeattribut. I de associerade fälten Bredd och Höjd ökar du den största tillåtna bildstorleken för panoramabilder.
 
    Dynamic Media Classic har en begränsning på 25 000 000 pixlar. Den största tillåtna storleken för bilder med 2:1-proportioner är 7 000 x 3 500. För vanliga skärmar räcker det dock med 4 096 x 2 048 pixlar.
 
@@ -61,14 +60,14 @@ För att visningsprogrammet för panoramabilder ska fungera på rätt sätt i AE
 
 1. Gör följande under rubriken Begärandeattribut:
 
-   * Ställ in begäranobfuktningsläget till **[!UICONTROL Disabled.]**
-   * Ange låsläge för begäran till **[!UICONTROL Disabled.]**
+   * Ställ in begäranobfuktningsläget på **[!UICONTROL Disabled]**.
+   * Ange läget för låsning av begäran till **[!UICONTROL Disabled]**.
 
    Dessa inställningar är nödvändiga för att du ska kunna använda WCM-komponenten `Panoramic Media` i AEM.
 
-1. Klicka på **[!UICONTROL Save.]** längst ned på sidan Image Server Publish (Publicera på vänster sida)
+1. Klicka på **[!UICONTROL Save]** längst ned på sidan Image Server Publish (Publicera på vänster sida).
 
-1. Klicka på **[!UICONTROL Close.]** i det nedre högra hörnet
+1. Klicka på **[!UICONTROL Close]** i det nedre högra hörnet.
 
 ### Felsökning av WCM-komponenten för panoramamedia {#troubleshooting-the-panoramic-media-wcm-component}
 
