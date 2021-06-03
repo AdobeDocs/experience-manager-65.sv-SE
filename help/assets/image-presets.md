@@ -7,20 +7,19 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 5c1f60ac-3741-4002-9c5d-c128f118342b
-feature: Image Presets
+feature: Bildförinställningar
 role: Business Practitioner, Administrator
-translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+exl-id: 98d88b59-eb8f-42db-abb8-04506a5b8c30
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
-source-wordcount: '318'
-ht-degree: 12%
+source-wordcount: '317'
+ht-degree: 5%
 
 ---
 
-
 # Använda förinställningar för Dynamic Media-bilder {#applying-image-presets}
 
-Med bildförinställningar kan resurser dynamiskt leverera bilder i olika storlekar, i olika format eller med andra bildegenskaper som genereras dynamiskt. Du kan välja en förinställning när du exporterar bilder. Då formateras bilderna också om till de specifikationer som administratören har angett.
+Med bildförinställningar kan resurser dynamiskt leverera bilder i olika storlekar, i olika format eller med andra bildegenskaper som genereras dynamiskt. Du kan välja en förinställning när du exporterar bilder. I förinställningen formateras bilderna om enligt de specifikationer som administratören har angett.
 
 Du kan dessutom välja en bildförinställning som är responsiv (anges av knappen **[!UICONTROL RESS]** när du har valt den).
 
@@ -36,9 +35,9 @@ Du kan använda en bildförinställning på en bild när du vill förhandsvisa d
 >
 >I Dynamic Media - Scene7-läget stöds endast bildförinställningar för bildresurser.
 
-**Använda Dynamic Media-bildförinställningar**
+**Så här använder du Dynamic Media-bildförinställningar:**
 
-1. Öppna resursen och tryck på listrutan i den vänstra listen och tryck sedan på **[!UICONTROL Renditions.]**
+1. Öppna resursen och tryck på den nedrullningsbara menyn till vänster och tryck sedan på **[!UICONTROL Renditions]**.
 
    >[!NOTE]
    >
@@ -52,12 +51,11 @@ Du kan använda en bildförinställning på en bild när du vill förhandsvisa d
 
 1. Gör något av följande:
 
-   * Välj en dynamisk återgivning om du vill förhandsgranska bildförinställningen.
-   * Tryck på **[!UICONTROL URL]**, **[!UICONTROL Embed]** eller **[!UICONTROL RESS]** för att visa popup-fönstret.
+   * Välj en dynamisk återgivning så att du kan förhandsgranska bildförinställningen.
+   * Om du vill visa popup-fönstret trycker du på **[!UICONTROL URL]**, **[!UICONTROL Embed]** eller **[!UICONTROL RESS]**.
 
    >[!NOTE]
    >
-   >Om resursen *och* bildförinställningen ännu inte har publicerats är knappen **[!UICONTROL URL]** (eller knapparna **[!UICONTROL URL]** och **[!UICONTROL RESS]**, i förekommande fall) inte tillgängliga.
+   >Om resursen *och* inte har publicerats än är knappen **[!UICONTROL URL]** (eller **[!UICONTROL URL]** och **[!UICONTROL RESS]**, om tillämpligt) inte tillgänglig.
    >
    >Observera också att bildförinställningar automatiskt publiceras på en Dynamic Media-server.
-
