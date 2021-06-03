@@ -5,11 +5,10 @@ contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
-feature: CDN Cache,Dynamic Media Classic
+feature: CDN-cache,Dynamic Media Classic
 role: Business Practitioner, Administrator
 exl-id: 7020343a-b556-4091-9717-93fcc55e623b
-translation-type: tm+mt
-source-git-commit: c9aec973faf4caef741961d92a6f258646aeddb7
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
 source-wordcount: '686'
 ht-degree: 17%
@@ -36,7 +35,7 @@ Se även [Cacheöversikt i Dynamic Media Classic (Scene7)](https://helpx.adobe.c
 
    Dina autentiseringsuppgifter och din inloggning tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kontaktar du teknisk support.
 
-1. I sidans övre högra hörn trycker du på **[!UICONTROL Setup > Application Setup > General Settings.]**
+1. I det övre högra hörnet av sidan trycker du på **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL General Settings]**.
 1. Gå till textrutan **[!UICONTROL CDN Invalidation Template]** under grupprubriken Servrar på sidan Allmänna inställningar för program.
 
 1. Ange den mall som används för att ogiltigförklara CDN-cachen (Content Delivery Network).
@@ -47,8 +46,8 @@ Se även [Cacheöversikt i Dynamic Media Classic (Scene7)](https://helpx.adobe.c
 
    Om mallen bara innehåller `<ID>` fylls Dynamic Media i `https://<server>/is/image` där `<server>` är det publiceringsservernamn som definieras i Allmänna inställningar och &lt;ID> är de resurser som markerats som ogiltiga.
 
-1. I sidans nedre högra hörn klickar du på **[!UICONTROL Close.]**
-1. I Dynamic Media Classic-användargränssnittet väljer du en eller flera resurser och klickar sedan på **[!UICONTROL File > Invalidate CDN.]** En lista över en eller flera URL:er som genererats från mallen som du skapade och de resurser som du markerade visas. Den använder den server-URL som anges under &quot;Publicerat servernamn&quot; under Allmänna inställningar för programmet.
+1. I sidans nedre högra hörn klickar du på **[!UICONTROL Close]**.
+1. I Dynamic Media Classic-användargränssnittet väljer du en eller flera resurser och klickar sedan på **[!UICONTROL File]** > **[!UICONTROL Invalidate CDN]**. Du ser en lista över en eller flera URL-adresser som genererats från mallen som du skapade och de resurser som du markerade. Den använder den server-URL som anges under &quot;Publicerat servernamn&quot; under Allmänna inställningar för programmet.
 
    Anta till exempel att du har valt en enda bild med namnet `Backpack_B` när du har angett en mall för CDN-validering i föregående steg. När du trycker på **[!UICONTROL File > Invalidate CDN]** resulterar det i följande genererade URL i användargränssnittet för CDN-validering:
 
@@ -58,7 +57,7 @@ Se även [Cacheöversikt i Dynamic Media Classic (Scene7)](https://helpx.adobe.c
 
    När du har klickat på **[!UICONTROL Continue]** visas en indikator som ger dig en uppskattning av hur lång tid det tar att rensa cachen.
 
-   Om du har valt flera resurser och sedan trycker på **[!UICONTROL File > Invalidate CDN]** refereras varje resurs till i den sparade **[!UICONTROL Template URL.]**. Därför kan du definiera en **[!UICONTROL CDN Invalidate Template]** som refererar till varje URL-bildförinställning som refereras till på webbplatsen (till exempel produktinformation och sökresultat). När du sedan väljer en eller flera bilder som ska ogiltigförklaras från cachen fylls gränssnittet automatiskt i med URL:erna.
+   Om du har markerat flera resurser och sedan trycker på **[!UICONTROL File > Invalidate CDN]** refereras varje resurs i den sparade **[!UICONTROL Template URL]**. Därför kan du definiera en **[!UICONTROL CDN Invalidate Template]** som refererar till varje URL-bildförinställning som refereras på webbplatsen (t.ex. produktinformation och sökresultat). När du sedan väljer en eller flera bilder som ska ogiltigförklaras från cachen fylls gränssnittet automatiskt i med URL:erna.
 
    >[!NOTE]
    >
