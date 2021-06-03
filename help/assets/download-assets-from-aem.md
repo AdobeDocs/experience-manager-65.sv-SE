@@ -5,7 +5,7 @@ contentOwner: AG
 role: Business Practitioner
 feature: Resurshantering,Resursfördelning
 exl-id: 6bda9e52-5a6e-446e-99c7-96793482c190
-source-git-commit: 92983232216a5c7c563ebddc3baf6fcd81aaa4e2
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
 source-wordcount: '862'
 ht-degree: 0%
@@ -22,13 +22,13 @@ Du kan hämta resurser, inklusive statiska och dynamiska återgivningar. Du kan 
 
 Det går inte att hämta resurstyperna Bilduppsättningar, Snurra uppsättningar, Blandade medieuppsättningar och Carousel-uppsättningar.
 
-Så här hämtar du resurser:
+**Så här hämtar du resurser:**
 
 1. Klicka på logotypen i det övre vänstra hörnet. Klicka på **[!UICONTROL Navigation]** i den vänstra listen.
-1. På sidan [!UICONTROL Navigation] klickar du på **[!UICONTROL Assets]** > **[!UICONTROL Files.]**
+1. På sidan [!UICONTROL Navigation] klickar du på **[!UICONTROL Assets]** > **[!UICONTROL Files]**.
 1. Navigera till en mapp som innehåller resurser som du vill hämta.
 1. Markera mappen eller välj en eller flera resurser i mappen.
-1. Klicka på **[!UICONTROL Download.]** i verktygsfältet
+1. Klicka på **[!UICONTROL Download]** i verktygsfältet.
 
    ![Tillgängliga alternativ vid hämtning av resurser från Experience Manager Assets](/help/assets/assets/asset-download1.png)
 
@@ -45,7 +45,7 @@ Så här hämtar du resurser:
    | **[!UICONTROL Smart Crops]** | Välj det här alternativet om du vill hämta alla smarta beskärningsåtergivningar av den valda resursen från AEM. En ZIP-fil med renderingarna Smart Crop skapas och hämtas till din lokala dator. |
    | **[!UICONTROL Dynamic Rendition(s)]** | Välj det här alternativet om du vill generera en serie alternativa återgivningar i realtid. När du väljer det här alternativet väljer du också de återgivningar som du vill skapa dynamiskt genom att välja i listan [Bildförinställning](image-presets.md). <br>Du kan dessutom välja storlek och måttenhet, format, färgrymd, upplösning och alla valfria bildmodifierare, t.ex. invertering av bilden. Alternativet är bara tillgängligt om du har [!DNL Dynamic Media] aktiverat. |
 
-1. Klicka på **[!UICONTROL Download.]** i dialogrutan.
+1. Klicka på **[!UICONTROL Download]** i dialogrutan.
 
 När du väljer en mapp att hämta hämtas hela resurshierarkin under mappen. Om du vill inkludera varje resurs som du hämtar (inklusive resurser i underordnade mappar som är kapslade under den överordnade mappen) i en enskild mapp väljer du **[!UICONTROL Create separate folder for each asset]**.
 
@@ -76,7 +76,7 @@ Som standard har `GET` förfrågningar om att hämta filer [!DNL Experience Mana
 
 >[!MORELIKETHIS]
 >
->* [Hämta resurser med varumärkesportalen](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/download/brand-portal-download-assets.html)
+>* [Hämta resurser med Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/download/brand-portal-download-assets.html)
 >* [Hämta DRM-skyddade resurser](drm.md).
 >* [Hämta resurser med datorprogrammet Experience Manager på Win- eller Mac-datorer](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#download-assets).
 >* [Hämta resurser med Adobe Assets Link inifrån de Adobe Creative Cloud-program](https://helpx.adobe.com/se/enterprise/using/manage-assets-using-adobe-asset-link.html) som stöds.
