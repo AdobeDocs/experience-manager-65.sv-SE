@@ -4,9 +4,9 @@ description: Nyheter i [!DNL Experience Manager] 6.5 Service Pack 9
 contentOwner: AK
 mini-toc-levels: 1
 exl-id: 32470e6e-8a66-4670-82da-2259f6e001c3
-source-git-commit: f0398d63aa7d9c994c56217cce52b3fb4de04769
+source-git-commit: 3d6b0c696b625869bc4ed682a310399b3b6301fb
 workflow-type: tm+mt
-source-wordcount: '3254'
+source-wordcount: '3674'
 ht-degree: 0%
 
 ---
@@ -18,6 +18,13 @@ ht-degree: 0%
 [!DNL Adobe Experience Manager] 6.5 Service Packs innehåller nya funktioner, förbättringar som kunderna efterfrågat samt prestanda-, stabilitets- och säkerhetsförbättringar med kvartalsvisa intervall. Den kvartalsvisa tillgängligheten gör det enkelt att komma åt och anta nya funktioner och innovationer.
 
 I den här artikeln beskrivs de funktioner som ingår i det senaste Service Pack, [nyckelfunktioner som ingår i det föregående 6.5 Service Pack](#key-features-previous-service-packs) och [nyckelversionerna sedan den senaste Service Pack](#key-releases-since-last-sp)-versionen.
+
+>[!NOTE]
+>
+>Från och med AEM Service Pack 9 kan [!DNL Experience Manager]-kunder utveckla och använda sina [!DNL Experience Manager]-program med distributioner av [!DNL Azul Zulu]-byggen av OpenJDK, som följer Java SE-standarden.
+>Adobe stöder också [!DNL Azul Zulu] JDK:er till [!DNL Experience Manager]-kunder.
+>Du kan hämta relevanta versioner av [!DNL Azul Zulu JDKs] från [Adobe Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html).
+>Användarrättigheterna för Oraclet Java-tekniken, som distribuerats av Adobe, upphör att gälla i slutet av december 2022. [!DNL Experience Manager] Vi rekommenderar att man planerar och implementerar användning för  [!DNL Azul Zulu] JDK senast detta datum. Mer information om användningen av [!DNL Oracle Java]-tekniken och [!DNL Azul Zulu]-tekniken finns i [Frågor och svar](https://experienceleague.adobe.com/docs/experience-manager-65/assets/adobe-azul-openjdk-license-agreement.pdf?lang=en).
 
 ## [!DNL Adobe Experience Manager Sites] {#aem-sites}
 
@@ -78,6 +85,36 @@ Du kan nu återställa de borttagna sidorna och hela trädvyn på en [!DNL Exper
 >[!NOTE]
 >
 >Tilläggspaketet [!DNL Experience Manager Forms] är tillgängligt en vecka efter den schemalagda versionen av [!DNL Experience Manager] Service Pack.
+
+### Stöd för [!DNL Azul Zulu OpenJDK] {#support-azul-zulu}
+
+Du kan nu utveckla och använda program med [!DNL Azul Zulu]-versioner av [!DNL OpenJDK] för [!DNL Experience Manager Forms] på OSGi-distributioner. Mer information finns i [Versionsinformation för Experience Manager 6.5 Service Pack 9](sp-release-notes.md) och [Tekniska krav](../sites-deploying/technical-requirements.md).
+
+### Möjlighet att skicka ett e-postmeddelande till en grupp med [!UICONTROL Assign Task] {#group-notification-email}
+
+Du kan nu skicka ett e-postmeddelande till en grupp-e-postadress med hjälp av arbetsflödessteget Tilldela uppgift.
+
+### Möjlighet att hämta ett interaktivt kommunikationsutkast efter att källan för interaktiv kommunikation har ändrats {#retrieve-draft-after-source-modifications}
+
+Du kan nu hämta en interaktiv kommunikation som har sparats som ett utkast när du har gjort ändringar i källan för interaktiv kommunikation.
+
+### Ange ett anpassat domännamn för inläsning, återgivning och validering av reCAPTCHA-tjänsten {#set-custom-domain-name-recaptcha}
+
+reCAPTCHA-tjänsten använder `https://www.recaptcha.net/` som standarddomän. Du kan nu ändra inställningarna för att ställa in `https://www.google.com/` eller valfritt anpassat domännamn för att läsa in, återge och validera tjänsten reCAPTCHA.
+
+### Förbättrade indata för [!UICONTROL Invoke Form Data Model Service]-arbetsflödessteg {#input-data-enhancements-fdm}
+
+När du väljer en formulärdatamodell och en tjänst i [!UICONTROL Invoke Form Data Model Service]-arbetsflödessteget anger du tjänstargument för indata.
+
+Om du väljer alternativet [!UICONTROL Relative to Payload] för att bifoga en fil som ett tjänstargument kan du nu ange den mappsökväg som innehåller filen i stället för det faktiska filnamnet. Om du definierar mappnamnet i stället för namnet på den bifogade filen kan du återanvända arbetsflödesmodeller. Du begränsar inte arbetsflödesmodellen till ett namn på en bifogad fil.
+
+### Möjlighet att använda flera överordnad sidor i en dokumentmall {#use-multiple-master-pages-dor-template}
+
+Nu kan du använda flera överordnad sidor i en dokumentmall. Därför kan du nu ha olika sidhuvuden, sidfötter, teckensnitt, logotypinformation på titelsidan och andra sidor i mallen.
+
+### Stödsidbrytningar i postdokument {#support-page-breaks-dor}
+
+Nu kan du lägga till sidbrytningar i ett postdokument. Om en panel bryts på sidor kan du därför lägga till en sidbrytning för att flytta panelen till en ny sida i ett postdokument.
 
 ## Viktiga funktioner i tidigare [!DNL Experience Manager] 6.5 Service Packs {#key-features-previous-service-packs}
 
