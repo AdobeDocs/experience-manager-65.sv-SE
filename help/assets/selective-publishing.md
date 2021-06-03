@@ -8,9 +8,8 @@ content-type: reference
 docset: aem65
 role: Business Practitioner, Administrator
 exl-id: cd025e9d-6fb1-436c-9e78-795f2daaf345
-feature: Publishing
-translation-type: tm+mt
-source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
+feature: Publicering
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
 source-wordcount: '2539'
 ht-degree: 1%
@@ -33,9 +32,9 @@ Med selektiv publicering kan du till exempel arbeta med resurser för produkter 
 
 Om du senare bestämmer dig för att ändra **[!UICONTROL Selective Publish]**-inställningarna i en mapp påverkar de ändringarna bara nya resurser som du överför till den mappen från den punkten och framåt. Publiceringsläget för befintliga resurser i mappen ändras inte förrän du ändrar dem manuellt från antingen **[!UICONTROL Quick Publish]** eller **[!UICONTROL Manage Publication]**-dialogrutan.
 
-Alternativet **[!UICONTROL Dynamic Media Publish mode]** på mappnivå är alltid det värde som finns i inställningen **[!UICONTROL Publish Assets]** i **[!UICONTROL Dynamic Media Configuration.]** Följande steg i det här avsnittet visar dock hur du manuellt ändrar det här standardvärdet på mappnivå (enligt beskrivningen i följande steg) för att åsidosätta värdet **[!UICONTROL Dynamic Media Configuration]**.
+Alternativet **[!UICONTROL Dynamic Media Publish mode]** på mappnivå är alltid det värde som finns i **[!UICONTROL Publish Assets]**-inställningen i **[!UICONTROL Dynamic Media Configuration]**. Följande steg i det här avsnittet visar emellertid hur du manuellt ändrar det här standardvärdet på mappnivå (vilket beskrivs i följande steg) för att åsidosätta **[!UICONTROL Dynamic Media Configuration]**-värdet.
 
-Oavsett om du förlitar dig på **[!UICONTROL Publish Assets]**-värdet som angetts i **[!UICONTROL Dynamic Media Configuration]**, eller **[!UICONTROL Dynamic Media Publish mode]**-värdet som angetts i mappnivåegenskaperna, kan du fortfarande välja **[!UICONTROL Immediately]**, **[!UICONTROL Upon Activation]** eller **[!UICONTROL Selective Publish.]** Du kan till exempel ange **[!UICONTROL Publish Assets]**-värdet i **[!UICONTROL Dynamic Media Configuration]** till **[!UICONTROL Upon Activation]**, men ställa in **[!UICONTROL Dynamic Media Publish]**-lägesvärdet på till **[!UICONTROL Selective Publish]**, vice versa och så vidare.
+Oavsett om du förlitar dig på **[!UICONTROL Publish Assets]**-värdet som angetts i **[!UICONTROL Dynamic Media Configuration]** eller **[!UICONTROL Dynamic Media Publish mode]**-värdet som angetts i mappnivåegenskaperna kan du fortfarande välja **[!UICONTROL Immediately]**, **[!UICONTROL Upon Activation]** eller **[!UICONTROL Selective Publish]**. Du kan till exempel ställa in **[!UICONTROL Publish Assets]**-värdet i **[!UICONTROL Dynamic Media Configuration]** till **[!UICONTROL Upon Activation]**, men ställa in **[!UICONTROL Dynamic Media Publish]**-lägesvärdet på mappnivå till **[!UICONTROL Selective Publish]**, vice versa och så vidare.
 
 När du har konfigurerat selektiv publicering i en mapp kan du göra något av följande:
 
@@ -46,22 +45,22 @@ När du har konfigurerat selektiv publicering i en mapp kan du göra något av f
 
 **Konfigurera selektiv publicering på mappnivå i Dynamic Media**
 
-1. I AEM trycker du på AEM logotyp för att komma åt den globala navigeringskonsolen. Tryck på navigeringsikonen (alldeles ovanför verktygsikonen) till vänster och tryck sedan på **[!UICONTROL Assets > Files.]**
+1. I AEM trycker du på AEM logotyp för att komma åt den globala navigeringskonsolen. Tryck på navigeringsikonen till vänster (alldeles ovanför verktygsikonen) och tryck sedan på **[!UICONTROL Assets > Files]**.
 1. Gör något av följande:
-   * Redigera egenskaperna för en befintlig mapp - Navigera i **[!UICONTROL Card View]**, **[!UICONTROL Column View]** eller **[!UICONTROL List View]** till en mapp vars egenskaper du vill redigera. Markera mappen och tryck sedan på **[!UICONTROL Properties.]** i verktygsfältet
-   * Redigera egenskaperna för en ny mapp - I **[!UICONTROL Card View]**, **[!UICONTROL Column View]** eller **[!UICONTROL List View]**, nära det övre högra hörnet på sidan, tryck på **[!UICONTROL Create > Folder.]** I dialogrutan **[!UICONTROL Create Folder]** anger du en rubrik (krävs) för mappen, trycker sedan på **[!UICONTROL Create.]** Markera mappen och trycker sedan på **[!UICONTROL Properties.]**
+   * Redigera egenskaperna för en befintlig mapp - Navigera i **[!UICONTROL Card View]**, **[!UICONTROL Column View]** eller **[!UICONTROL List View]** till en mapp vars egenskaper du vill redigera. Markera mappen och tryck sedan på **[!UICONTROL Properties]** i verktygsfältet.
+   * Redigera egenskaperna för en ny mapp - I **[!UICONTROL Card View]**, **[!UICONTROL Column View]** eller **[!UICONTROL List View]**, nära sidans övre högra hörn, tryck på **[!UICONTROL Create]** > **[!UICONTROL Folder]**. Ange en rubrik (krävs) för mappen i dialogrutan **[!UICONTROL Create Folder]** och tryck sedan på **[!UICONTROL Create]**. Markera mappen och tryck sedan på **[!UICONTROL Properties]** i verktygsfältet.
 
 1. Välj något av följande i listrutan **[!UICONTROL Sync mode]**:
 
    | Synkroniseringsläge | Beskrivning |
    | --- | --- |
-   | **[!UICONTROL Inherited]** | Det finns inget explicit synkroniseringsvärde för mappen; I stället ärver mappen synkroniseringsvärdet från en av de överordnade mapparna eller det standardläge som angetts i **[!UICONTROL Dynamic Media Configuration.]** Detaljerad status för **[!UICONTROL Inherited]** visas som ett verktygstips. |
-   | **[!UICONTROL Sync everything in this folder sub-tree to dynamicmedia]** | För att publiceringen till Dynamic Media ska lyckas måste materialet synkroniseras med Dynamic Media. Om du väljer det här alternativet inkluderas alla resurser i det här underträdet för synkronisering till Dynamic Media. De mappspecifika inställningarna åsidosätter standardinställningen i **[!UICONTROL Dynamic Media Configuration.]** |
+   | **[!UICONTROL Inherited]** | Det finns inget explicit synkroniseringsvärde för mappen; I stället ärver mappen synkroniseringsvärdet från en av dess överordnade mappar eller det standardläge som angetts i **[!UICONTROL Dynamic Media Configuration]**. Detaljerad status för **[!UICONTROL Inherited]** visas som ett verktygstips. |
+   | **[!UICONTROL Sync everything in this folder sub-tree to dynamicmedia]** | För att publiceringen till Dynamic Media ska lyckas måste materialet synkroniseras med Dynamic Media. Om du väljer det här alternativet inkluderas alla resurser i det här underträdet för synkronisering till Dynamic Media. De mappspecifika inställningarna åsidosätter standardinställningen i **[!UICONTROL Dynamic Media Configuration]**. |
    | **[!UICONTROL Exclude everything in this folder sub-tree from dynamicmedia sync]** | Uteslut alla resurser i det här underträdet från synkronisering till Dynamic Media. |
 
    ![Selektiv publicering på mappnivå](/help/assets/assets-dm/createfolder-properties-selectivepublish.png)
 
-1. Välj ett alternativ i listrutan **[!UICONTROL Dynamic Media Publish mode]**. Observera att alternativet **[!UICONTROL Dynamic Media Publish mode]** alltid har det standardvärde som anges i **[!UICONTROL Dynamic Media Configuration.]**. Du kan dock manuellt åsidosätta det här standardvärdet **[!UICONTROL Dynamic Media Configuration]** genom att använda något av följande alternativ.
+1. Välj ett alternativ i listrutan **[!UICONTROL Dynamic Media Publish mode]**. Observera att alternativet **[!UICONTROL Dynamic Media Publish mode]** alltid har det standardvärde som anges i **[!UICONTROL Dynamic Media Configuration]**. Du kan dock manuellt åsidosätta det här standardvärdet för **[!UICONTROL Dynamic Media Configuration]** genom att använda något av följande alternativ.
 
    >[!IMPORTANT]
    >
@@ -91,10 +90,10 @@ Se [Skapa en Dynamic Media-konfiguration](#configuring-dynamic-media-cloud-servi
 
 **Publicera material selektivt till Dynamic Media eller AEM med Hantera publikation**
 
-1. I AEM trycker du på AEM logotyp för att komma åt den globala navigeringskonsolen. Tryck på navigeringsikonen (alldeles ovanför verktygsikonen) till vänster och tryck sedan på **[!UICONTROL Assets > Files.]**
+1. I AEM trycker du på AEM logotyp för att komma åt den globala navigeringskonsolen. Tryck på navigeringsikonen till vänster (alldeles ovanför verktygsikonen) och tryck sedan på **[!UICONTROL Assets]** > **[!UICONTROL Files]**.
 1. Gör något av följande i **[!UICONTROL Card View]**, **[!UICONTROL Column View]** eller **[!UICONTROL List View]**:
-   * Navigera till en mapp vars resurser du vill publicera. Markera mappen och tryck sedan på **[!UICONTROL Manage Publication.]** Det kan vara praktiskt att använda **[!UICONTROL List View]** i verktygsfältet så att du enklare kan kontrollera publiceringsstatusen för en viss mapp.
-   * Navigera till en mapp vars resurser du vill publicera. Öppna mappen och välj sedan en eller flera resurser. Tryck på **[!UICONTROL Manage Publication.]** Det kan vara praktiskt att använda **[!UICONTROL List View]** i verktygsfältet så att du enklare kan kontrollera publiceringsstatusen för en viss resurs.
+   * Navigera till en mapp vars resurser du vill publicera. Markera mappen och tryck sedan på **[!UICONTROL Manage Publication]** i verktygsfältet.  Det kan vara praktiskt att använda **[!UICONTROL List View]** så att du enklare kan kontrollera publiceringsstatusen för en viss mapp.
+   * Navigera till en mapp vars resurser du vill publicera. Öppna mappen och välj sedan en eller flera resurser. Tryck på **[!UICONTROL Manage Publication]** i verktygsfältet. Det kan vara praktiskt att använda **[!UICONTROL List View]** så att du enklare kan kontrollera publiceringsstatusen för en viss resurs.
 
       >[!NOTE]
       >
@@ -114,19 +113,19 @@ Se [Skapa en Dynamic Media-konfiguration](#configuring-dynamic-media-cloud-servi
    | **[!UICONTROL Now]** | Välj att publicera resurserna direkt. |
    | **[!UICONTROL Later]** | Välj det här alternativet om du vill publicera resurserna ett visst datum och en viss tid. |
 
-1. Tryck på **[!UICONTROL Next.]** i det övre högra hörnet på sidan **[!UICONTROL Manage Publication]**
+1. Tryck på **[!UICONTROL Next]** i det övre högra hörnet på sidan **[!UICONTROL Manage Publication]**.
 1. Gör något av följande på sidan **[!UICONTROL Manage Publication - Scope]**:
 
    * Om det behövs väljer du en eller flera resurser som du vill ta bort från publiceringen.
-   * Tryck på **[!UICONTROL Publish]** eller **[!UICONTROL Publish to Dynamic Media.]** i det övre högra hörnet på sidan **[!UICONTROL Manage Publication - Scope]**.
-1. Tryck på **[!UICONTROL OK.]**
+   * Tryck på **[!UICONTROL Publish]** eller **[!UICONTROL Publish to Dynamic Media]** i det övre högra hörnet på sidan **[!UICONTROL Manage Publication - Scope]**.
+1. Tryck på **[!UICONTROL OK]**.
 
 ### Avpublicera valfritt material från Dynamic Media eller AEM med Manage Publication {#selective-unpublish-manage-publication}
 
-1. I AEM trycker du på AEM logotyp för att komma åt den globala navigeringskonsolen. Tryck på navigeringsikonen (alldeles ovanför verktygsikonen) till vänster och tryck sedan på **[!UICONTROL Assets > Files.]**
+1. I AEM trycker du på AEM logotyp för att komma åt den globala navigeringskonsolen. Tryck på navigeringsikonen till vänster (alldeles ovanför verktygsikonen) och tryck sedan på **[!UICONTROL Assets]** > **[!UICONTROL Files]**.
 1. Gör något av följande i **[!UICONTROL Card View]**, **[!UICONTROL Column View]** eller **[!UICONTROL List View]**:
-   * Navigera till en mapp vars resurser du vill avpublicera. Markera mappen och tryck sedan på **[!UICONTROL Manage Publication.]** Det kan vara praktiskt att använda **[!UICONTROL List View]** i verktygsfältet så att du enklare kan kontrollera publiceringsstatusen för en viss mapp.
-   * Navigera till en mapp vars resurser du vill avpublicera. Öppna mappen och välj sedan en eller flera resurser. Tryck på **[!UICONTROL Manage Publication.]** Det kan vara praktiskt att använda **[!UICONTROL List View]** i verktygsfältet så att du enklare kan kontrollera publiceringsstatusen för en viss resurs.
+   * Navigera till en mapp vars resurser du vill avpublicera. Markera mappen och tryck sedan på **[!UICONTROL Manage Publication]** i verktygsfältet.  Det kan vara praktiskt att använda **[!UICONTROL List View]** så att du enklare kan kontrollera publiceringsstatusen för en viss mapp.
+   * Navigera till en mapp vars resurser du vill avpublicera. Öppna mappen och välj sedan en eller flera resurser. Tryck på **[!UICONTROL Manage Publication]** i verktygsfältet. Det kan vara praktiskt att använda **[!UICONTROL List View]** så att du enklare kan kontrollera publiceringsstatusen för en viss resurs.
 
       >[!NOTE]
       >
@@ -146,11 +145,11 @@ Se [Skapa en Dynamic Media-konfiguration](#configuring-dynamic-media-cloud-servi
    | **[!UICONTROL Now]** | Välj att avpublicera resurserna direkt. |
    | **[!UICONTROL Later]** | Välj det här alternativet om du vill avpublicera resurserna ett visst datum och en viss tid. |
 
-1. Tryck på **[!UICONTROL Next.]** i det övre högra hörnet på sidan **[!UICONTROL Manage Publication]**
+1. Tryck på **[!UICONTROL Next]** i det övre högra hörnet på sidan **[!UICONTROL Manage Publication]**.
 1. Gör något av följande på sidan **[!UICONTROL Manage Publication - Scope]**:
    * Markera en eller flera resurser som du vill ta bort från avpubliceringen.
-   * Tryck på **[!UICONTROL Unpublish]** eller **[!UICONTROL Unpublish from Dynamic Media.]** i det övre högra hörnet på sidan **[!UICONTROL Manage Publication - Scope]**.
-1. Tryck på **[!UICONTROL OK.]**
+   * Tryck på **[!UICONTROL Unpublish]** eller **[!UICONTROL Unpublish from Dynamic Media]** i det övre högra hörnet på sidan **[!UICONTROL Manage Publication - Scope]**.
+1. Tryck på **[!UICONTROL OK]**.
 
 ## Publicera material till Dynamic Media eller AEM med Snabbpublicering {#quick-publish-aem-dm}
 
@@ -162,10 +161,10 @@ Du kan använda **[!UICONTROL Quick Publish]** för enkla resursaktiveringsfall.
 
 **Publicera material till Dynamic Media eller AEM med Snabbpublicering**
 
-1. I AEM trycker du på AEM logotyp för att komma åt den globala navigeringskonsolen. Tryck på navigeringsikonen (precis ovanför verktygsikonen) till vänster på sidan och tryck sedan på **[!UICONTROL Assets > Files.]** till höger på sidan
+1. I AEM trycker du på AEM logotyp för att komma åt den globala navigeringskonsolen. Tryck på navigeringsikonen (precis ovanför verktygsikonen) till vänster på sidan och tryck sedan på **[!UICONTROL Assets]** > **[!UICONTROL Files]** till höger på sidan.
 1. Gör något av följande i **[!UICONTROL Card View]**, **[!UICONTROL Column View]** eller **[!UICONTROL List View]**:
-   * Navigera till en mapp vars resurser du vill publicera. Markera mappen och tryck sedan på **[!UICONTROL Quick Publish.]** Det kan vara praktiskt att använda **[!UICONTROL List View]** i verktygsfältet så att du enklare kan kontrollera publiceringsstatusen för en viss mapp.
-   * Navigera till en mapp vars resurser du vill publicera. Öppna mappen och välj sedan en eller flera resurser. Tryck på **[!UICONTROL Quick Publish.]** Det kan vara praktiskt att använda **[!UICONTROL List View]** i verktygsfältet så att du enklare kan kontrollera publiceringsstatusen för en viss resurs.
+   * Navigera till en mapp vars resurser du vill publicera. Markera mappen och tryck sedan på **[!UICONTROL Quick Publish]** i verktygsfältet.  Det kan vara praktiskt att använda **[!UICONTROL List View]** så att du enklare kan kontrollera publiceringsstatusen för en viss mapp.
+   * Navigera till en mapp vars resurser du vill publicera. Öppna mappen och välj sedan en eller flera resurser. Tryck på **[!UICONTROL Quick Publish]** i verktygsfältet. Det kan vara praktiskt att använda **[!UICONTROL List View]** så att du enklare kan kontrollera publiceringsstatusen för en viss resurs.
 
       >[!NOTE]
       >
@@ -178,10 +177,10 @@ Du kan använda **[!UICONTROL Quick Publish]** för enkla resursaktiveringsfall.
    | Snabbpublicering, alternativ | Vad det gör |
    | --- | --- | 
    | Publicera till AEM | Publicerar de markerade resurserna direkt till AEM. |
-   | Publicera på varumärkesportal | Publicerar de markerade resurserna direkt till **[!UICONTROL Brand Portal.]**<br>Det här alternativet är endast tillgängligt om din AEM Assets-instans har **[!UICONTROL Brand Portal]**redan konfigurerats. |
-   | Publicera till Dynamic Media | Publicerar de markerade resurserna direkt till Dynamic Media.<br>En resurs måste redan synkroniseras till Dynamic Media. Om det behövs kontrollerar du att **[!UICONTROL Sync mode]** i en mapps egenskaper redan är inställda på **[!UICONTROL Sync everything in this folder sub-tree to dynamicmedia.]** |
+   | Publicera till Brand Portal | Publicerar de markerade resurserna direkt till **[!UICONTROL Brand Portal]**.<br>Det här alternativet är bara tillgängligt om din AEM Assets-instans  **[!UICONTROL Brand Portal]** redan har konfigurerats. |
+   | Publicera till Dynamic Media | Publicerar de markerade resurserna direkt till Dynamic Media.<br>En resurs måste redan synkroniseras till Dynamic Media. Om det behövs kontrollerar du att **[!UICONTROL Sync mode]** i en mapps egenskaper redan är inställda på **[!UICONTROL Sync everything in this folder sub-tree to dynamicmedia]**. |
 
-1. Tryck på **[!UICONTROL OK]** och sedan på **[!UICONTROL Close.]**
+1. Tryck på **[!UICONTROL OK]** och sedan på **[!UICONTROL Close]**.
 
 ## Publicera eller avpublicera resurser selektivt via sökresultat {#selective-publish-unpublish-search-results}
 
@@ -191,9 +190,9 @@ Se även [Sök efter resurser i AEM.](/help/assets/search-assets.md)
 
 **Publicera eller avpublicera resurser selektivt via sökresultat**
 
-1. I AEM, i det övre vänstra hörnet av sidan, trycker du på AEM logotyp för att komma åt den globala navigeringskonsolen. Tryck på navigeringsikonen (precis ovanför verktygsikonen) till vänster på sidan och tryck sedan på **[!UICONTROL Assets > Files.]**
+1. I AEM, i det övre vänstra hörnet av sidan, trycker du på AEM logotyp för att komma åt den globala navigeringskonsolen. Tryck på navigeringsikonen (precis ovanför verktygsikonen) till vänster på sidan och tryck sedan på **[!UICONTROL Assets]** > **[!UICONTROL Files]**.
 1. I verktygsfältet, i det övre högra hörnet på sidan, trycker du på ikonen Sök (förstoringsglas).
-1. Ange ett nyckelord i textfältet **[!UICONTROL Type to search]** och tryck sedan på **[!UICONTROL Enter.]**
+1. Ange ett nyckelord i textfältet **[!UICONTROL Type to search]** och tryck sedan på **[!UICONTROL Enter]**.
 1. I det övre högra hörnet av sidan trycker du på ikonen **[!UICONTROL List View]**.
 1. I närheten av sidans övre vänstra hörn trycker du på ikonen **[!UICONTROL Filters]**.
 
@@ -204,8 +203,8 @@ Se även [Sök efter resurser i AEM.](/help/assets/search-assets.md)
 Du kan också använda de här kryssrutorna tillsammans med **[!UICONTROL Publish]**-sökpredikatet för att förfina sökresultaten för **[!UICONTROL Published]**- och **[!UICONTROL Unpublished]**-AEM.
 1. Gör något av följande:
    * Markera en eller flera resurser som du vill publicera eller avpublicera.
-   * I det övre högra hörnet av sidan **[!UICONTROL Search Results]** trycker du på **[!UICONTROL Select All.]**
-1. Tryck på **[!UICONTROL Manage Publication.]** Du kan behöva trycka på ellipsikonen i verktygsfältet för att se **[!UICONTROL Manage Publication.]**
+   * I det övre högra hörnet av sidan **[!UICONTROL Search Results]** trycker du på **[!UICONTROL Select All]**.
+1. Tryck på **[!UICONTROL Manage Publication]** i verktygsfältet. Du kan behöva trycka på ellipsikonen i verktygsfältet för att se **[!UICONTROL Manage Publication]**.
 1. Välj önskad åtgärd på sidan **[!UICONTROL Manage Publication - Options]**.
 
    | Markerad åtgärd | Inställningen Publicera resurser i Dynamic Media Configuration | Resurserna är |
@@ -226,7 +225,7 @@ Du kan också använda de här kryssrutorna tillsammans med **[!UICONTROL Publis
    | Nu | Den valda åtgärden utförs omedelbart. |
    | Senare | Den valda åtgärden körs på det valda datumet och den valda tiden. |
 
-1. Tryck på **[!UICONTROL Next.]** i det övre högra hörnet på sidan **[!UICONTROL Manage Publication - Options]**
+1. Tryck på **[!UICONTROL Next]** i det övre högra hörnet på sidan **[!UICONTROL Manage Publication - Options]**.
 1. (Valfritt) På sidan **[!UICONTROL Manage Publication - Scope]** granskar du kolumnen **[!UICONTROL Publish Target]** i tabellen för de valda resurserna.
 
    | Inställningen Publicera resurser i Dynamic Media Configuration | Markerad åtgärd | Publiceringsmål |
@@ -243,7 +242,7 @@ Du kan också använda de här kryssrutorna tillsammans med **[!UICONTROL Publis
 1. Gör något av följande på sidan **[!UICONTROL Manage Publication - Scope]**:
    * Markera en eller flera resurser som du vill ta bort från publicering eller avpublicering.
    * Tryck på **[!UICONTROL Publish]** eller **[!UICONTROL Unpublish]** i det övre högra hörnet av **[!UICONTROL Manage Publication - Scope]**-sidan för att påbörja åtgärden.
-1. Tryck på **[!UICONTROL OK.]**
+1. Tryck på **[!UICONTROL OK]**.
 
 ## Kontrollera publiceringsstatus för en resurs {#check-publish-status-of-asset}
 
@@ -251,10 +250,10 @@ Du kan använda **[!UICONTROL Timeline]** med **[!UICONTROL Card view]**, **[!UI
 
 **Kontrollera publiceringsstatus för en resurs**
 
-1. I AEM, i det övre vänstra hörnet av sidan, trycker du på AEM logotyp för att komma åt den globala navigeringskonsolen. Tryck på navigeringsikonen (precis ovanför verktygsikonen) till vänster på sidan och tryck sedan på **[!UICONTROL Assets > Files.]**
+1. I AEM, i det övre vänstra hörnet av sidan, trycker du på AEM logotyp för att komma åt den globala navigeringskonsolen. Tryck på navigeringsikonen (precis ovanför verktygsikonen) till vänster på sidan och tryck sedan på **[!UICONTROL Assets]** > **[!UICONTROL Files]**.
 1. I **[!UICONTROL Card View]**, **[!UICONTROL Column View]** eller **[!UICONTROL List View]** (skärmbilden nedan visar **[!UICONTROL List View]**) öppnar du en mapp som innehåller resurser som du har publicerat eller opublicerat.
 1. Markera en resurs så att den visas med en bock. Se skärmbilden nedan.
-1. I den nedrullningsbara menyn i det övre vänstra hörnet av sidan väljer du **[!UICONTROL Timeline.]** Regionen **[!UICONTROL Status]** i den vänstra panelen visar publiceringsläget för den valda resursen.
+1. Välj **[!UICONTROL Timeline]** i den nedrullningsbara menyn nära sidans övre vänstra hörn. Regionen **[!UICONTROL Status]** i den vänstra panelen visar den valda resursens publiceringstillstånd.
 När du använder **[!UICONTROL List View]** visas ytterligare en kolumn för **[!UICONTROL Dynamic Media]**-publiceringstillstånd.
    * En mapp som är konfigurerad att synkronisera till Dynamic Media visar kolumnen **[!UICONTROL Dynamic Media]** som standard.
    * En mapp som är *inte* konfigurerad att synkronisera till Dynamic Media visar inte Dynamic Media-kolumnen.
