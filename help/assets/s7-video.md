@@ -10,10 +10,9 @@ discoiquuid: 2685f9f3-0973-40a9-89b8-e7db0a6a75f2
 role: Business Practitioner, Administrator
 exl-id: 56009925-1a36-48b5-b96c-ec2e468da106
 feature: Video
-translation-type: tm+mt
-source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
-source-wordcount: '1528'
+source-wordcount: '1534'
 ht-degree: 1%
 
 ---
@@ -75,7 +74,7 @@ Om du inte behöver ett arbetsflöde eller en versionshantering för dina resurs
 
 Så här konfigurerar du universella förinställningar:
 
-1. I **[!UICONTROL Cloud Services]** navigerar du till din **[!UICONTROL Scene7]**-konfiguration och klickar på **[!UICONTROL Edit.]**
+1. I **[!UICONTROL Cloud Services]** navigerar du till din **[!UICONTROL Scene7]**-konfiguration och klickar på **[!UICONTROL Edit]**.
 1. Välj fliken **[!UICONTROL Video]**.
 
    ![chlimage_1-363](assets/chlimage_1-363.png)
@@ -96,7 +95,7 @@ Så här konfigurerar du universella förinställningar:
 
 ## Uppdaterar förinställningar för visningsprogram och kodning {#updating-viewer-and-encoding-presets}
 
-Om du behöver uppdatera visningsprogrammet och kodningsförinställningarna för video i AEM eftersom förinställningarna har uppdaterats i Scene7 går du till Scene7-konfigurationen i molnkonfigurationen och klickar på **[!UICONTROL Update the viewer and encoding presets.]**
+Om du behöver uppdatera visningsprogrammet och kodningsförinställningarna för video i Experience Manager eftersom förinställningarna har uppdaterats i Scene7 går du till Scene7-konfigurationen i molnkonfigurationen och klickar på **[!UICONTROL Update the viewer and encoding presets]**.
 
 ![chlimage_1-364](assets/chlimage_1-364.png)
 
@@ -113,9 +112,9 @@ Om du behöver uppdatera visningsprogrammet och kodningsförinställningarna fö
 
 ## Foundation Video Component jämfört med Scene7 Video Component {#foundation-video-component-versus-scene-video-component}
 
-När du använder AEM har du tillgång till både videokomponenten som är tillgänglig i Sites och videokomponenten i Scene7. Dessa komponenter är inte utbytbara.
+När du använder Experience Manager har du tillgång till både videokomponenten som finns på Sites och videokomponenten i Scene7. Dessa komponenter är inte utbytbara.
 
-Scene7 videokomponent fungerar bara för Scene7-videofilmer. Grundkomponenten fungerar med videor som lagras från AEM (med ffmpeg) och Scene7-videor.
+Scene7 videokomponent fungerar bara för Scene7-videofilmer. Grundkomponenten fungerar med videofilmer som lagras från Experience Manager (med ffmpeg) och Scene7-videofilmer.
 
 I följande matris förklaras när du bör använda vilken komponent:
 
@@ -123,11 +122,11 @@ I följande matris förklaras när du bör använda vilken komponent:
 
 >[!NOTE]
 >
->Som standard använder S7-videokomponenten den universella videoprofilen. Du kan dock hämta den HTML5-baserade videospelaren för användning genom AEM göra något av följande i Scene7: kopiera inbäddningskoden för den färdiga HTML5-videospelaren och placera den på din AEM.
+>Som standard använder S7-videokomponenten den universella videoprofilen. Du kan emellertid få den HTML5-baserade videospelaren att användas av Experience Manager genom att göra något av följande i Scene7: kopiera inbäddningskoden för den färdiga HTML5-videospelaren och placera den på Experience Manager-sidan.
 
 ## AEM videokomponent {#aem-video-component}
 
-Även om du bör använda videokomponenten för Scene7 för att visa Scene7-videofilmer beskrivs det här avsnittet hur du använder Scene7-videofiler med komponenten Foundation Video i AEM för att få en fullständig beskrivning.
+Även om du bör använda videokomponenten för Scene7 för att visa Scene7-videofilmer beskrivs det här avsnittet hur du använder Scene7-videofiler med Foundation Video Component i Experience Manager för att få en fullständig beskrivning.
 
 ### AEM Video- och Scene7 Video-jämförelse {#aem-video-and-scene-video-comparison}
 
@@ -151,9 +150,9 @@ De olika videokodningarna skapas enligt de kodningsförinställningar för S7 so
 >
 >Nya videoprofiler och ändringar av dem måste aktiveras för publicering.
 
-1. I AEM trycker du på **[!UICONTROL Tools]>[!UICONTROL Configuration Console]**.
-1. I **[!UICONTROL Configuration Console]** navigerar du till **[!UICONTROL Tools > DAM > Video Profiles]** i navigeringsträdet.
-1. Skapa en ny S7-videoprofil. På menyn **[!UICONTROL New...]** väljer du **[!UICONTROL Create Page]** och sedan Scene7 videoprofilmall. Ge den nya videoprofilsidan ett namn och klicka på **[!UICONTROL Create.]**
+1. I AEM trycker du på **[!UICONTROL Tools]** > **[!UICONTROL Configuration Console]**.
+1. I **[!UICONTROL Configuration Console]** navigerar du till **[!UICONTROL Tools]** > **[!UICONTROL DAM]** > **[!UICONTROL Video Profiles]** i navigeringsträdet.
+1. Skapa en ny S7-videoprofil. I **[!UICONTROL New]**. väljer du **[!UICONTROL Create Page]** och sedan Scene7 videoprofilmall. Ge den nya videoprofilsidan ett namn och klicka på **[!UICONTROL Create]**.
 
    ![chlimage_1-366](assets/chlimage_1-366.png)
 
