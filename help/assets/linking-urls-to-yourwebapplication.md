@@ -9,9 +9,8 @@ content-type: reference
 discoiquuid: d12e6ea3-aaf4-4672-9679-3c16c76d7d5b
 role: Business Practitioner, Administrator
 exl-id: d62275f0-02a4-48c9-bfb1-e23d63b618c9
-feature: Configuration
-translation-type: tm+mt
-source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
+feature: Konfiguration
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
 source-wordcount: '1211'
 ht-degree: 10%
@@ -32,7 +31,7 @@ Om du vill placera dessa URL-strängar på dina webbsidor och i dina program kop
 
 Se även [Bädda in video- eller bildvisningsprogrammet på en webbsida.](embed-code.md)
 
-Se även [Länka YouTube-URL:er till ditt webbprogram.](video.md)
+Se även [Länka YouTube URL:er till ditt webbprogram.](video.md)
 
 Se även [Leverera optimerade bilder för en responsiv webbplats.](responsive-site.md)
 
@@ -68,25 +67,25 @@ Du kan hämta en URL-sträng på flera olika sätt. Stegen nedan visar dock bara
 
 1. Gör något av följande beroende på vilken resurs du valt:
 
-   * Om du valde en bild trycker du på **[!UICONTROL Renditions.]** i listrutan
+   * Om du valde en bild trycker du på **[!UICONTROL Renditions]** i listrutan.
 
       Under rubriken **[!UICONTROL Dynamic]** trycker du på ett förinställningsnamn för att visa återgivningen i den högra bildrutan. Du kan behöva bläddra i listan Återgivningar för att se den dynamiska rubriken.
 
-      Tryck **[!UICONTROL URL.]** längst ned i den vänstra listen
+      Tryck **[!UICONTROL URL]** längst ned i den vänstra listen.
 
       ![chlimage_1-270](assets/chlimage_1-270.png)
 
-   * Om du har valt en snurruppsättning, en bilduppsättning, en Carousel-uppsättning eller en video trycker du på **[!UICONTROL Viewers.]** i listrutan
+   * Om du har valt en snurruppsättning, en bilduppsättning, en Carousel-uppsättning eller en video trycker du på **[!UICONTROL Viewers]** i listrutan.
 
       Tryck på ett namn på en visningsförinställning i den vänstra listen. En förhandsgranskning av uppsättningen eller videon öppnas på en separat sida.
 
-      Tryck på **[!UICONTROL URL.]** längst ned i den vänstra listen
+      Tryck på **[!UICONTROL URL]** längst ned i den vänstra listen.
 
       ![chlimage_1-271](assets/chlimage_1-271.png)
 
 1. Markera och kopiera texten till webbläsaren för att förhandsgranska resursen eller lägga till den på webbinnehållssidan.
 
-   Om du vill avsluta URL-fönstret trycker du på **[!UICONTROL X]** eller **[!UICONTROL Close.]**
+   Om du vill avsluta URL-fönstret trycker du på **[!UICONTROL X]** eller **[!UICONTROL Close]**.
 
 ## Hämta en URL för en statisk resurs {#obtaining-a-url-for-a-static-asset}
 
@@ -124,8 +123,8 @@ Dynamic Media stöder leverans av statiskt material, som är ytterligare materia
 
 ## Hämta en video-URL för en publicerad videoåtergivning {#obtaining-a-video-url-for-a-published-video-rendition}
 
-1. I AEM navigerar du till **[!UICONTROL Tools > Deployment > Cloud > Cloud Services.]**
-1. På sidan **[!UICONTROL Cloud Services]** bläddrar du nedåt till rubriken **[!UICONTROL Dynamic Media Cloud Services]** och trycker sedan på **[!UICONTROL Show Configurations.]**
+1. I AEM går du till **[!UICONTROL Tools]** > **[!UICONTROL Deployment]** > **[!UICONTROL Cloud]** > **[!UICONTROL Cloud Services]**.
+1. På sidan **[!UICONTROL Cloud Services]** bläddrar du nedåt till rubriken **[!UICONTROL Dynamic Media Cloud Services]** och trycker sedan på **[!UICONTROL Show Configurations]**.
 1. Under **[!UICONTROL Available Configurations]** trycker du på namnet på den konfiguration du vill använda.
 
 1. Kopiera ned hela URL-sökvägen under **[!UICONTROL Video Service URL]** på sidan **[!UICONTROL Dynamic Media Cloud Settings]**. Du behöver den kopierade URL-sökvägen senare i stegen.
@@ -140,7 +139,7 @@ Dynamic Media stöder leverans av statiskt material, som är ytterligare materia
 
    Om registrerings-ID till exempel är `87654321|MyCompany` blir kundnamnet `MyCompany`.
 
-1. I närheten av sidans övre vänstra hörn trycker du på **[!UICONTROL Cloud Services]**, sedan på logotypen Experience Manager och går till **[!UICONTROL General > CRXDE Lite.]**
+1. I närheten av sidans övre vänstra hörn trycker du på **[!UICONTROL Cloud Services]**, sedan på logotypen Experience Manager och går till **[!UICONTROL General]** > **[!UICONTROL CRXDE Lite]**.
 1. Kopiera ned hela videouppdateringssökvägen från JCR-filen (Java Content Repository).
 
    Videons återgivningssökväg kan till exempel se ut ungefär så här:
@@ -161,8 +160,8 @@ Dynamic Media stöder leverans av statiskt material, som är ytterligare materia
 
 ## Hämta en video-URL för adaptiv direktuppspelning (HLS) {#obtaining-a-video-url-for-adaptive-streaming-hls}
 
-1. I AEM navigerar du till **[!UICONTROL Tools > Deployment > Cloud > Cloud Services.]**
-1. På sidan **[!UICONTROL Cloud Services]** bläddrar du nedåt till rubriken **[!UICONTROL Dynamic Media Cloud Services]** och trycker sedan på **[!UICONTROL Show Configurations.]**
+1. I AEM går du till **[!UICONTROL Tools]** > **[!UICONTROL Deployment]** > **[!UICONTROL Cloud]** > **[!UICONTROL Cloud Services]**.
+1. På sidan **[!UICONTROL Cloud Services]** bläddrar du nedåt till rubriken **[!UICONTROL Dynamic Media Cloud Services]** och trycker sedan på **[!UICONTROL Show Configurations]**.
 1. Under **[!UICONTROL Available Configurations]** trycker du på namnet på den konfiguration du vill använda.
 1. Gör följande på sidan **[!UICONTROL Dynamic Media Cloud Services Settings]**:
 
