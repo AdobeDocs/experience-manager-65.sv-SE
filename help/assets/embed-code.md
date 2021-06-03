@@ -7,26 +7,25 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 4ae76d8a-208f-4099-9f17-a94df424685e
-feature: Viewers
+feature: Tittare
 role: Business Practitioner, Administrator
-translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+exl-id: 203ea349-ef4c-421c-b4b6-76ee9d46ec34
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
 source-wordcount: '366'
 ht-degree: 21%
 
 ---
 
-
 # Bädda in Dynamic Media Video, Image Viewer eller Dimensional Viewer på en webbsida {#embedding-the-video-or-image-viewer-on-a-web-page}
 
 Använd funktionen **[!UICONTROL Embed Code]** när du vill spela upp videon eller visa en resurs som är inbäddad på en webbsida. Du kopierar inbäddningskoden till Urklipp så att du kan klistra in den på webbsidorna. Det är inte tillåtet att redigera koden i dialogrutan **[!UICONTROL Embed Code]**.
 
-Du bäddar bara in URL:er om du är _inte_ och använder AEM som WCM. Om du använder AEM som WCM-fil [lägger du till resurserna direkt på sidan.](adding-dynamic-media-assets-to-pages.md)
+Du bäddar bara in URL:er om du är *inte* och använder Adobe Experience Manager som WCM. Om du använder Experience Manager som WCM-fil [lägger du till resurserna direkt på sidan](adding-dynamic-media-assets-to-pages.md).
 
-Se [Länka URL:er till ditt webbprogram.](linking-urls-to-yourwebapplication.md)
+Se [Länka URL:er till ditt webbprogram](linking-urls-to-yourwebapplication.md).
 
-Se [Leverera optimerade bilder för en responsiv webbplats.](responsive-site.md)
+Se [Leverera optimerade bilder för en responsiv plats](responsive-site.md).
 
 >[!NOTE]
 >
@@ -38,22 +37,22 @@ Se [Leverera optimerade bilder för en responsiv webbplats.](responsive-site.md)
 >
 >Se [Publicera bildförinställningar](managing-image-presets.md#publishing-image-presets).
 
-**Bädda in Dynamic Media Video eller Image Viewer på en webbsida**
+**Så här bäddar du in Dynamic Media Video eller Image Viewer på en webbsida:**
 
 1. Navigera till den *publicerade* video- eller bildresurs vars inbäddningskod du vill kopiera.
 
    Kom ihåg att inbäddningskoden endast går att kopiera *efter* att du har *publicerat* resurserna. Dessutom måste visningsförinställningen eller bildförinställningen också publiceras.
 
-   Se [Publicera resurser.](publishing-dynamicmedia-assets.md)
+   Se [Publicera resurser](publishing-dynamicmedia-assets.md).
 
    Se [Förinställningar för publiceringsvisningsprogram](managing-viewer-presets.md#publishing-viewer-presets).
 
    Se [Publicera bildförinställningar](managing-image-presets.md#publishing-image-presets).
 
-1. Markera listrutan i den vänstra listen och tryck på **[!UICONTROL Viewers.]**
+1. I den vänstra listen väljer du listrutan och trycker på **[!UICONTROL Viewers]**.
 1. Tryck på ett namn på en visningsförinställning i den vänstra listen. Visningsförinställningen används på resursen.
-1. Tryck på **[!UICONTROL Embed.]**
-1. Kopiera hela koden till Urklipp i dialogrutan **[!UICONTROL Embed Code]** och tryck sedan på **[!UICONTROL Close.]**
+1. Tryck på **[!UICONTROL Embed]**.
+1. Kopiera hela koden till Urklipp i dialogrutan **[!UICONTROL Embed Code]** och tryck sedan på **[!UICONTROL Close]**.
 1. Klistra in inbäddningskoden på dina webbsidor.
 
 ## Använda HTTP/2 för att leverera dina Dynamic Media-resurser {#using-http-to-deliver-your-dynamic-media-assets}
