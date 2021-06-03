@@ -11,10 +11,9 @@ docset: aem65
 feature: Resurshantering
 role: Business Practitioner, Administrator
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-translation-type: tm+mt
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
-source-wordcount: '11276'
+source-wordcount: '11272'
 ht-degree: 6%
 
 ---
@@ -457,12 +456,12 @@ Så här konfigurerar du Google Cloud-inställningar:
    Om du redan har ett Google-konto går du vidare till nästa steg.
 
 1. Gå till [https://cloud.google.com/](https://cloud.google.com/).
-1. På Google Cloud-sidan uppe till höger klickar du på **[!UICONTROL Console.]**
+1. På Google Cloud-sidan uppe till höger klickar du på **[!UICONTROL Console]**.
 
    Om det behövs kan du behöva **[!UICONTROL Sign in]** använda inloggningsuppgifterna för ditt Google-konto för att se alternativet **[!UICONTROL Console]**.
 
 1. Klicka på listrutan Projekt till höger om **[!UICONTROL Google Cloud Platform]** på sidan Kontrollpanel för att öppna dialogrutan Välj ett projekt.
-1. Tryck på **[!UICONTROL New Project.]** i dialogrutan Välj ett projekt
+1. Tryck på **[!UICONTROL New Project]** i dialogrutan Välj ett projekt.
 
    ![6_5_googleaccount-newproject](assets/6_5_googleaccount-newproject.png)
 
@@ -470,32 +469,32 @@ Så här konfigurerar du Google Cloud-inställningar:
 
    Observera att ditt projekt-ID baseras på ditt projektnamn. Välj projektnamnet noggrant. den kan inte ändras efter att den har skapats. Du måste även ange samma projekt-ID igen när du konfigurerar YouTube i AEM senare. kanske du vill skriva ner det.
 
-1. Klicka på **[!UICONTROL Create.]**
+1. Klicka på **[!UICONTROL Create]**.
 
 1. Gör något av följande:
 
-   * Tryck på **[!UICONTROL Explore and enable APIs.]** på kontrollpanelen Komma igång för projektet
-   * Tryck på **[!UICONTROL Go to APIs overview.]** i API-kortet på Dashboard för ditt projekt
+   * Tryck på **[!UICONTROL Explore and enable APIs]** på Komma igång-kortet på Dashboard för ditt projekt.
+   * Tryck på **[!UICONTROL Go to APIs overview]** i API-kortet på Dashboard för ditt projekt.
 
    ![6_5_googleaccount-apis-enable2](assets/6_5_googleaccount-apis-enable2.png)
 
-1. Tryck på **[!UICONTROL Enable APIs and Services.]** längst upp på sidan API:er och tjänster
-1. Tryck på **[!UICONTROL Category]** till höger på sidan API-bibliotek, till vänster, på **[!UICONTROL YouTube Data API.]**. Tryck på **[!UICONTROL YouTube.]** till höger på sidan
-1. På sidan YouTube Data API v3 trycker du på **[!UICONTROL Enable.]**
+1. Tryck på **[!UICONTROL Enable APIs and Services]** längst upp på sidan API:er och tjänster.
+1. Tryck på **[!UICONTROL Category]** till vänster på sidan API-bibliotek. **[!UICONTROL YouTube]** Tryck på **[!UICONTROL YouTube Data API]** till höger på sidan.
+1. Tryck på **[!UICONTROL Enable]** på sidan YouTube Data API v3.
 
    ![6_5_googleaccount-apis-enable3](assets/6_5_googleaccount-apis-enable3.png)
 
-1. Om du vill använda API:t kan du behöva inloggningsuppgifter. Om det behövs klickar du på **[!UICONTROL Create Credentials.]**
+1. Om du vill använda API:t kan du behöva inloggningsuppgifter. Om det behövs klickar du på **[!UICONTROL Create Credentials]**.
 
    ![6_5_googleaccount-apis-createcredentials](assets/6_5_googleaccount-apis-createcredentials.png)
 
 1. Gör följande på sidan **[!UICONTROL Add credentials to your project]**, steg 1:
 
-   * I listrutan **[!UICONTROL Which API are you using?]** väljer du **[!UICONTROL YouTube Data API v3.]**
+   * I listrutan **[!UICONTROL Which API are you using?]** väljer du **[!UICONTROL YouTube Data API v3]**.
 
    * I listrutan **[!UICONTROL Where will you be calling the API from?]** väljer du **[!UICONTROL Web Server (e.g. node.js, Tomcat)]**
 
-   * Tryck på **[!UICONTROL User data.]** i listrutan **[!UICONTROL What data will you be accessing?]**
+   * Tryck på **[!UICONTROL User data]** i listrutan **[!UICONTROL What data will you be accessing?]**.
 
    ![6_5_googleaccount-apis-createcredentials2](assets/6_5_googleaccount-apis-createcredentials2.png)
 
@@ -519,7 +518,7 @@ Så här konfigurerar du Google Cloud-inställningar:
 
    **Obs**: Banexemplet ovan är endast avsett för illustrationsändamål.
 
-1. Klicka på **[!UICONTROL Create OAuth client ID.]**
+1. Klicka på **[!UICONTROL Create OAuth client ID]**.
 1. På sidan **[!UICONTROL Add credentials to your project]**, steg 3, under rubriken **[!UICONTROL Set up the OAuth 2.0 consent screen]**, väljer du den Gmail-e-postadress som du för närvarande använder.
 
    ![6_5_googleaccount-apis-createcredentials-consentscreen](assets/6_5_googleaccount-apis-createcredentials-consentscreen.png)
@@ -528,8 +527,8 @@ Så här konfigurerar du Google Cloud-inställningar:
 
    Godkännandeskärmen visas för AEM när de autentiserar sig för YouTube. AEM kontaktar YouTube för tillstånd.
 
-1. Klicka på **[!UICONTROL Continue.]**
-1. Gå till sidan Lägg till inloggningsuppgifter för projektet och i steg 4, under rubriken **[!UICONTROL Download credentials]**, trycker du på **[!UICONTROL Download.]**
+1. Klicka på **[!UICONTROL Continue]**.
+1. Gå till sidan Lägg till inloggningsuppgifter för projektet och i steg 4, under rubriken **[!UICONTROL Download credentials]**, trycker du på **[!UICONTROL Download]**.
 
    ![6_5_googleaccount-apis-createcredentials-downloadcredentials](assets/6_5_googleaccount-apis-createcredentials-downloadcredentials.png)
 
@@ -537,7 +536,7 @@ Så här konfigurerar du Google Cloud-inställningar:
 
    Du behöver den här hämtade JSON-filen när du konfigurerar YouTube i Adobe Experience Manager senare.
 
-1. Klicka på **[!UICONTROL Done.]**
+1. Klicka på **[!UICONTROL Done]**.
 
    Logga ut från ditt Google-konto. Nu ska du skapa en YouTube-kanal.
 
@@ -553,9 +552,9 @@ Så här skapar du en YouTube-kanal:
 
 1. Gå till [https://www.youtube.com](https://www.youtube.com/) och logga in med inloggningsuppgifterna för ditt Google-konto.
 1. Klicka på din profilbild i det övre högra hörnet på YouTube-sidan (kan också visas som en bokstav i en enfärgad cirkel) och klicka sedan på **[!UICONTROL YouTube settings]** (den runda kugghjulsikonen).
-1. På sidan Översikt, under rubriken Ytterligare funktioner, klickar du på **[!UICONTROL See all my channels or create a new channel.]**
-1. Klicka på **[!UICONTROL Create a new channel.]** på sidan Kanaler
-1. På sidan Varumärkeskonto anger du ett företagsnamn eller ett annat kanalnamn som du väljer där du vill publicera videoresurserna. Klicka sedan på **[!UICONTROL Create.]**
+1. På sidan Översikt, under rubriken Ytterligare funktioner, klickar du på **[!UICONTROL See all my channels or create a new channel]**.
+1. Klicka på **[!UICONTROL Create a new channel]** på sidan Kanaler.
+1. På sidan Varumärkeskonto anger du ett företagsnamn eller ett annat kanalnamn som du väljer där du vill publicera videoresurserna i fältet Märkeskontonamn. Klicka sedan på **[!UICONTROL Create]**.
 
    Kom ihåg det namn du anger här eftersom du måste ange det igen när du konfigurerar YouTube i AEM.
 
@@ -571,13 +570,13 @@ Om du tänker använda standardtaggarna i AEM kan du hoppa över den här uppgif
 
 ### Aktivera YouTube Publish-replikeringsagenten {#enabling-the-youtube-publish-replication-agent}
 
-När du har aktiverat YouTube Publish-replikeringsagenten och vill testa anslutningen till Google Cloud-kontot trycker du på **[!UICONTROL Test Connection.]** Anslutningsresultaten visas på fliken Webbläsare. Om du har lagt till YouTube-kanaler visas en lista över dessa som en del av testet.
+När du har aktiverat YouTube Publish-replikeringsagenten trycker du på **[!UICONTROL Test Connection]** om du vill testa anslutningen till Google Cloud-kontot. Anslutningsresultaten visas på en flik i webbläsaren. Om du har lagt till YouTube-kanaler visas en lista över dessa som en del av testet.
 
-1. Klicka på den AEM logotypen i det övre vänstra hörnet av AEM och klicka sedan på **[!UICONTROL Tools]** > **[!UICONTROL Deployment]** > **[!UICONTROL Replication]** > **[!UICONTROL Agents on Author.]** i det vänstra hörnet.
-1. På sidan Agents of Author klickar du på **[!UICONTROL YouTube Publish (youtube).]**
-1. Klicka på **[!UICONTROL Edit.]** till höger om Inställningar i verktygsfältet
+1. Klicka på AEM-logotypen i det övre vänstra hörnet av AEM och klicka sedan på **[!UICONTROL Tools]** > **[!UICONTROL Deployment]** > **[!UICONTROL Replication]** > **[!UICONTROL Agents on Author]** i den vänstra rutan.
+1. På sidan Agents of Author klickar du på **[!UICONTROL YouTube Publish (youtube)]**.
+1. Klicka på **[!UICONTROL Edit]** till höger om Inställningar i verktygsfältet.
 1. Markera kryssrutan **[!UICONTROL Enabled]** för att aktivera replikeringsagenten.
-1. Klicka på **[!UICONTROL OK.]**
+1. Klicka på **[!UICONTROL OK]**.
 
    Nu ska du konfigurera YouTube i AEM.
 
@@ -591,10 +590,10 @@ Från och med AEM 6.4 finns en ny pekgränssnittsmetod för att konfigurera YouT
 #### Konfigurera YouTube i AEM 6.4 och senare {#setting-up-youtube-in-aem-and-later}
 
 1. Se till att du loggar in på din instans av Dynamic Media som administratör.
-1. I det övre vänstra hörnet av AEM trycker du på AEM-logotypen och sedan i den vänstra rutan på **[!UICONTROL Tools]** (hammarikon) > **[!UICONTROL Cloud Services]** > **[!UICONTROL YouTube Publishing Configuration.]**
+1. I det övre vänstra hörnet trycker du på logotypen för Experience Manager och sedan på **[!UICONTROL Tools]**(hammer icon) > **[!UICONTROL Cloud Services]** > **[!UICONTROL YouTube Publishing Configuration]** i den vänstra listen.
 1. Tryck på **[!UICONTROL global]** (markera det inte).
 
-1. I det övre högra hörnet av den globala sidan trycker du på **[!UICONTROL Create.]**
+1. I det övre högra hörnet av den globala sidan trycker du på **[!UICONTROL Create]**.
 1. På sidan Skapa YouTube-konfiguration anger du Googles projekt-ID under Inställningar för Google Cloud-plattform i fältet **[!UICONTROL Application Name]**.
 
    Du angav projekt-ID när du konfigurerade Google Cloud-inställningarna tidigare.
@@ -605,23 +604,23 @@ Lämna sidan Skapa YouTube-konfiguration öppen; kommer du tillbaka till den om 
 1. Öppna JSON-filen som du hämtade och sparade tidigare i uppgiften [Konfigurera inställningarna för Google Cloud](/help/assets/video.md#configuring-google-cloud-settings) med en vanlig textredigerare.
 1. Markera och kopiera hela JSON-texten.
 1. Återgå till dialogrutan YouTube-kontoinställningar Klistra in JSON-texten i fältet **[!UICONTROL JSON Config]**.
-1. I sidans övre högra hörn trycker du på **[!UICONTROL Save.]**
+1. Tryck på **[!UICONTROL Save]** i sidans övre högra hörn.
 
    Du kommer nu att konfigurera YouTube-kanaler i AEM.
 
-1. Tryck på **[!UICONTROL Add Channel.]**
+1. Tryck på **[!UICONTROL Add Channel]**.
 1. I fältet Kanalnamn anger du namnet på kanalen som du skapade i uppgiften **[!UICONTROL Adding one or more channels to YouTube]** tidigare.
 
    Om du vill kan du lägga till en beskrivning.
 
-1. Tryck på **[!UICONTROL Add.]**
+1. Tryck på **[!UICONTROL Add]**.
 1. YouTube/Google-autentisering visas. Om du inte redan är inloggad på Google Cloud-kontot hoppar du över det här steget.
 
    * Ange det Google-användarnamn och lösenord som är kopplat till Googles projekt-ID och JSON-texten ovan.
    * Beroende på hur många kanaler ditt konto har visas två eller flera objekt. Välj en kanal. Ange inte e-postadressen. det är inte en kanal.
    * På nästa sida trycker du på **[!UICONTROL Accept]** för att tillåta åtkomst till den här kanalen.
 
-1. Tryck på **[!UICONTROL Allow.]**
+1. Tryck på **[!UICONTROL Allow]**.
 
    Du kommer nu att konfigurera taggar för publicering.
 
@@ -629,9 +628,9 @@ Lämna sidan Skapa YouTube-konfiguration öppen; kommer du tillbaka till den om 
 1. Tryck på listruteikonen (upp-och-nedpil) för att visa listan med tillgängliga taggar i AEM.
 1. Tryck på en eller flera taggar för att lägga till dem.
 
-   Om du vill ta bort en tagg som du har lagt till markerar du den och trycker på **[!UICONTROL X.]**
+   Om du vill ta bort en tagg som du har lagt till markerar du taggen och trycker på **[!UICONTROL X]**.
 
-1. När du är klar med att lägga till de taggar du vill ha trycker du på **[!UICONTROL Save.]**
+1. När du är klar med att lägga till de taggar du vill ha trycker du på **[!UICONTROL Save]**.
 
    Nu kan du publicera videor i din YouTube-kanal.
 
@@ -639,10 +638,10 @@ Lämna sidan Skapa YouTube-konfiguration öppen; kommer du tillbaka till den om 
 
 1. Se till att du loggar in på din instans av Dynamic Media som administratör.
 
-1. I det övre vänstra hörnet av AEM trycker du på AEM-logotypen och sedan i den vänstra rutan på **[!UICONTROL Tools]** (hammarikon) > **[!UICONTROL Deployment]** > **[!UICONTROL Cloud Services.]**
-1. Tryck på **[!UICONTROL Configure now.]** under rubriken Tredjepartstjänster, under YouTube
+1. I det övre vänstra hörnet trycker du på logotypen för Experience Manager och sedan på **[!UICONTROL Tools]** (hammikon) > **[!UICONTROL Deployment]** > **[!UICONTROL Cloud Services]** till vänster.
+1. Tryck på **[!UICONTROL Configure now]** under rubriken Tredjepartstjänster, under YouTube.
 1. I dialogrutan Skapa konfiguration anger du en rubrik (obligatoriskt) och ett namn (valfritt) i respektive fält.
-1. Tryck på **[!UICONTROL Create.]**
+1. Tryck på **[!UICONTROL Create]**.
 1. I dialogrutan YouTube-kontoinställningar anger du Googles projekt-ID i fältet **[!UICONTROL Application Name]**.
 
    Du angav projekt-ID när du först [konfigurerade Google Cloud-inställningar](/help/assets/video.md#configuring-google-cloud-settings) tidigare.
@@ -651,23 +650,23 @@ Lämna dialogrutan YouTube Kontoinställning öppen; kommer du tillbaka till den
 1. Öppna JSON-filen som du hämtade och sparade tidigare i uppgiften Konfigurera inställningarna för Google Cloud med en vanlig textredigerare.
 1. Markera och kopiera hela JSON-texten.
 1. Återgå till dialogrutan YouTube-kontoinställningar Klistra in JSON-texten i fältet **[!UICONTROL JSON Config]**.
-1. Tryck på **[!UICONTROL OK.]**
+1. Tryck på **[!UICONTROL OK]**.
 
-   Du kommer nu att konfigurera YouTube-kanaler i AEM.
+   Nu ska du konfigurera YouTube-kanaler i Experience Manager.
 
 1. Till höger om **[!UICONTROL Available Channels]** trycker du på **+** (plustecknet).
 1. I dialogrutan YouTube-kanalinställningar, i fältet Titel, anger du namnet på kanalen som du skapade i uppgiften **[!UICONTROL Adding one or more channels to YouTube]** tidigare.
 
    Om du vill kan du lägga till en beskrivning.
 
-1. Tryck på **[!UICONTROL OK.]**
+1. Tryck på **[!UICONTROL OK]**.
 1. YouTube/Google-autentisering visas. Om du inte redan är inloggad på Google Cloud-kontot hoppar du över det här steget.
 
    * Ange det Google-användarnamn och lösenord som är kopplat till Googles projekt-ID och JSON-texten ovan.
    * Beroende på hur många kanaler ditt konto har visas två eller flera objekt. Välj en kanal. Ange inte e-postadressen. det är inte en kanal.
    * På nästa sida trycker du på **[!UICONTROL Accept]** för att tillåta åtkomst till den här kanalen.
 
-1. Tryck på **[!UICONTROL Allow.]**
+1. Tryck på **[!UICONTROL Allow]**.
 
    Du kommer nu att konfigurera taggar för publicering.
 
@@ -677,7 +676,7 @@ Lämna dialogrutan YouTube Kontoinställning öppen; kommer du tillbaka till den
 
    Om du vill ta bort en tagg som du har lagt till markerar du taggen och trycker på **X**.
 
-1. När du är klar med att lägga till de taggar du vill ha trycker du på **[!UICONTROL OK.]**
+1. När du är klar med att lägga till de taggar du vill ha trycker du på **[!UICONTROL OK]**.
 
    Nu kan du publicera videor i din YouTube-kanal.
 
@@ -689,11 +688,11 @@ Om du vill skapa en profil för metadatabearbetning kopierar du först värden f
 
 Så här automatiserar du inställningen av YouTube standardegenskaper för överförda videofilmer:
 
-1. I det övre vänstra hörnet av AEM klickar du på AEM-logotypen och sedan i den vänstra rutan klickar du på **[!UICONTROL Tools]** (hammarikon) > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Schemas.]**
-1. Klicka på **[!UICONTROL default.]** (Lägg inte till en bockmarkering till vänster om &quot;default&quot;.)
-1. Markera rutan till vänster om **[!UICONTROL video]** på **[!UICONTROL default]**-sidan och klicka sedan på **[!UICONTROL Edit.]**
-1. Klicka på fliken **[!UICONTROL Advanced]** på sidan Redigerare för metadatamodeller.
-1. Under rubriken YouTube-publicering klickar du på **[!UICONTROL YouTube Category.]**
+1. I det övre vänstra hörnet trycker du på logotypen för Experience Manager och sedan på **[!UICONTROL Tools]** (hammikon) > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Schemas]** till vänster.
+1. Klicka på **[!UICONTROL default]**. (Lägg inte till en bockmarkering i markeringsrutan till vänster om &quot;standard&quot;.)
+1. Markera rutan till vänster om **[!UICONTROL video]** på **[!UICONTROL default]**-sidan och tryck sedan på **[!UICONTROL Edit]**.
+1. Tryck på fliken **[!UICONTROL Advanced]** på sidan för redigeringsprogram för metadatamodeller.
+1. Under rubriken YouTube-publicering klickar du på **[!UICONTROL YouTube Category]**.
 1. Till höger på sidan, under fliken **[!UICONTROL Settings]**, gör du följande:
 
    * Markera och kopiera värdet i textfältet **[!UICONTROL Map to property]**.
@@ -702,7 +701,7 @@ Klistra in det kopierade värdet i den öppna textredigeraren. Du kommer att beh
    * Under **[!UICONTROL Choices]** markerar och kopierar du standardvärdet som du vill använda (till exempel Folk &amp; bloggar eller Vetenskap och teknik).
 Klistra in det kopierade värdet i den öppna textredigeraren. Du kommer att behöva det här värdet senare när du skapar din metadatabearbetningsprofil. Låt textredigeraren vara öppen.
 
-1. Under rubriken YouTube-publicering klickar du på **[!UICONTROL YouTube Privacy.]**
+1. Tryck på **[!UICONTROL YouTube Privacy]** under rubriken YouTube Publishing.
 1. Till höger på sidan, under fliken **[!UICONTROL Settings]**, gör du följande:
 
    * Markera och kopiera värdet i textfältet **[!UICONTROL Map to property]**.
@@ -711,11 +710,11 @@ Klistra in det kopierade värdet i den öppna textredigeraren. Du kommer att beh
    * Under **[!UICONTROL Choices]** markerar och kopierar du standardvärdet som du vill använda. Observera att alternativen grupperas i par om två. Det undre fältet i paret är standardvärdet som du vill kopiera, till exempel public, unlisted eller private.
 Klistra in det kopierade värdet i den öppna textredigeraren. Du kommer att behöva det här värdet senare när du skapar din metadatabearbetningsprofil. Låt textredigeraren vara öppen.
 
-1. Klicka på **[!UICONTROL Cancel.]** i det övre högra hörnet på sidan för redigeringsprogram för metadataschning
-1. I det övre vänstra hörnet av AEM trycker du på AEM-logotypen och sedan i den vänstra rutan klickar du på **[!UICONTROL Tools]** (hammarikon) > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Profiles.]**
+1. Klicka på **[!UICONTROL Cancel]** i det övre högra hörnet på sidan för redigering av metadatamodell.
+1. I det övre vänstra hörnet av AEM trycker du på AEM-logotypen och sedan i den vänstra rutan klickar du på **[!UICONTROL Tools]** (hammarikon) > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Profiles]**.
 
-1. Klicka på **[!UICONTROL Create.]** längst upp till höger på sidan Metadataprofiler
-1. I dialogrutan Lägg till metadataprofil i textfältet **[!UICONTROL Profile title]** anger du namnet `YouTube Video` och sedan klickar du på **[!UICONTROL Create.]**
+1. Klicka på **[!UICONTROL Create]** längst upp till höger på sidan Metadataprofiler.
+1. I dialogrutan Lägg till metadataprofil i textfältet **[!UICONTROL Profile title]** anger du namnet `YouTube Video` och sedan klickar du på **[!UICONTROL Create]**.
 1. Klicka på fliken **[!UICONTROL Advance]** på sidan Redigerare för metadataprofil.
 1. Lägg till de kopierade YouTube Publishing-värdena i profilen genom att göra följande:
 
@@ -739,7 +738,7 @@ Klistra in det kopierade värdet i den öppna textredigeraren. Du kommer att beh
    * Klicka på **[!UICONTROL Field Label]** för att markera komponenten.
    * Till höger på sidan, under fliken Inställningar, klistrar du in de YouTube Publishing-värden (Field Label-värde och Map to property-värde) som du kopierade tidigare i deras respektive fält i formuläret. Klistra in alternativvärdet i fältet Standardvärde.
 
-1. Klicka på **[!UICONTROL Save.]** längst upp till höger på sidan
+1. Klicka på **[!UICONTROL Save]** i det övre högra hörnet på sidan.
 1. Använd metadataprofilen för YouTube Publishing på de mappar där du ska överföra videoklipp. Du måste ha både metadataprofilen och videoprofilen inställda.
 
    Se [Metadataprofiler](/help/assets/metadata-config.md#metadata-profiles) och [Videoprofiler](/help/assets/video-profiles.md).
@@ -750,7 +749,7 @@ Nu kopplar du taggarna som du lade till tidigare till videoresurser. I den här 
 
 >[!NOTE]
 >
->Observera att publicering direkt inte automatiskt publiceras till YouTube när programmet körs i Dynamic Media - Scene7-läge. När läget Dynamic Media - Scene7 är inställt finns det två publiceringsalternativ att välja mellan: **[!UICONTROL Immediately]** eller **[!UICONTROL Upon Activation.]**
+>Observera att publicering direkt inte automatiskt publiceras till YouTube när programmet körs i Dynamic Media - Scene7-läge. När läget Dynamic Media - Scene7 är inställt finns det två publiceringsalternativ att välja mellan: **[!UICONTROL Immediately]** eller **[!UICONTROL Upon Activation]**.
 >
 >**[!UICONTROL Publish Immediately]** betyder att den överförda resursen - när den har synkroniserats med IPS - publiceras automatiskt till leveranssystemet. Det gäller Dynamic Media, men inte YouTube. Om du vill publicera till YouTube måste du publicera med hjälp av AEM Author.
 
@@ -766,15 +765,15 @@ Så här publicerar du videor i din YouTube-kanal:
 
 1. I AEM navigerar du till en videoresurs som du vill publicera i din YouTube-kanal.
 1. Välj videoresurs (den adaptiva videouppsättningen).
-1. Klicka på **[!UICONTROL Properties.]** i verktygsfältet
+1. Klicka på **[!UICONTROL Properties]** i verktygsfältet.
 1. Klicka på **[!UICONTROL Open Selection Dialog]** till höger om fältet Taggar under rubriken Metadata på fliken Grundläggande.
 1. På sidan Välj taggar navigerar du till de taggar du vill använda och markerar sedan en eller flera taggar.
 
    Kom ihåg att taggarna måste kopplas till YouTube-kanalen.
 
-1. Klicka på **[!UICONTROL Select.]** längst upp till höger på sidan
-1. Klicka på **[!UICONTROL Save and Close.]** i det övre högra hörnet på egenskapssidan för videon
-1. Klicka på **[!UICONTROL Quick Publish.]** i verktygsfältet
+1. Klicka på **[!UICONTROL Select]** i det övre högra hörnet på sidan.
+1. Klicka på **[!UICONTROL Save and Close]** i det övre högra hörnet på egenskapssidan för videon.
+1. Klicka på **[!UICONTROL Quick Publish]** i verktygsfältet.
 
    Se även [Använda Publiceringshantering med AEM Sites](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/page-authoring/publication-management-feature-video-use.html).
 
@@ -804,7 +803,7 @@ Så här länkar du YouTube URL:er till ditt webbprogram:
 
    Kom ihåg att YouTube URL:er endast är tillgängliga för kopiering *efter* att du först *har publicerat* videomaterialet till YouTube.
 
-1. Klicka på **[!UICONTROL Properties.]** i verktygsfältet
+1. Klicka på **[!UICONTROL Properties]** i verktygsfältet.
 1. Klicka på fliken **[!UICONTROL Advanced]**.
 1. Under rubriken YouTube Publishing, i YouTube URL List, markerar och kopierar du URL-texten till webbläsaren för att förhandsgranska resursen eller lägga till den på webbinnehållssidan.
 
@@ -826,10 +825,10 @@ Så här avpublicerar du videoklipp för att ta bort dem från YouTube:
 
 1. Navigera till de videoresurser som du vill avpublicera från din YouTube-kanal.
 1. Välj en eller flera publicerade videoresurser i ett resursurvalsläge.
-1. Klicka på **[!UICONTROL Manage Publication.]** Du kan behöva trycka på ikonen med tre punkter (. . .) i verktygsfältet för att se **[!UICONTROL Manage Publication.]**
-1. Tryck på **[!UICONTROL Unpublish.]** på sidan Hantera publikation
-1. Tryck på **[!UICONTROL Next.]** längst upp till höger på sidan
-1. Tryck på **[!UICONTROL Unpublish.]** längst upp till höger på sidan
+1. Klicka på **[!UICONTROL Manage Publication]** i verktygsfältet. Du kan behöva trycka på ikonen med tre punkter (. . .) i verktygsfältet för att se **[!UICONTROL Manage Publication]**.
+1. Tryck på **[!UICONTROL Unpublish]** på sidan Hantera publikation.
+1. Tryck på **[!UICONTROL Next]** i det övre högra hörnet på sidan.
+1. Tryck på **[!UICONTROL Unpublish]** i det övre högra hörnet på sidan.
 
 ## Övervaka videokodning och YouTube publiceringsförlopp {#monitoring-video-encoding-and-youtube-publishing-progress}
 
@@ -849,11 +848,11 @@ Så här övervakar du förloppet (inklusive misslyckad kodning/YouTube-publicer
 
    ![chlimage_1-430](assets/chlimage_1-430.png)
 
-   Den här kolumnen visas inte som standard. Om du vill aktivera kolumnen väljer du **[!UICONTROL View Settings]** i listrutan Vyer, lägger till kolumnen **[!UICONTROL Processing Status]** och trycker eller klickar på **[!UICONTROL Update.]**
+   Den här kolumnen visas inte som standard. Om du vill aktivera kolumnen väljer du **[!UICONTROL View Settings]** i listrutan Vyer, lägger till kolumnen **[!UICONTROL Processing Status]** och trycker eller klickar på **[!UICONTROL Update]**.
 
    ![chlimage_1-431](assets/chlimage_1-431.png)
 
-1. Visa förloppet i tillgångsinformationen. När du trycker eller klickar på en resurs öppnar du den nedrullningsbara menyn och väljer **[!UICONTROL Timeline.]** Om du vill begränsa den till arbetsflödesaktiviteter som kodning eller YouTube-publicering väljer du **[!UICONTROL Workflows.]**
+1. Visa förloppet i tillgångsinformationen. När du trycker eller klickar på en resurs öppnar du den nedrullningsbara menyn och väljer **[!UICONTROL Timeline]**. Om du vill begränsa det till arbetsflödesaktiviteter som kodning eller YouTube-publicering väljer du **[!UICONTROL Workflows]**.
 
    ![chlimage_1-432](assets/chlimage_1-432.png)
 
@@ -870,7 +869,7 @@ Så här övervakar du förloppet (inklusive misslyckad kodning/YouTube-publicer
    >
    >Du kan justera egenskaperna **[!UICONTROL retries]**, **[!UICONTROL retry delay]** och **[!UICONTROL timeout]** i dessa konfigurationer.
 
-1. Information om pågående arbetsflöden finns i Arbetsflödesinstanser som är tillgängliga i **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Instances.]**
+1. Information om pågående arbetsflöden finns i Arbetsflödesinstanser som är tillgängliga i **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Instances]**.
 
    >[!NOTE]
    >
@@ -878,13 +877,13 @@ Så här övervakar du förloppet (inklusive misslyckad kodning/YouTube-publicer
 
    ![chlimage_1-433](assets/chlimage_1-433.png)
 
-   Markera instansen och tryck eller klicka på **[!UICONTROL Open History.]**
+   Markera instansen och tryck på **[!UICONTROL Open History]**.
 
    ![chlimage_1-434](assets/chlimage_1-434.png)
 
    I området Arbetsflödesinstanser kan du även göra uppehåll i, avsluta eller byta namn på arbetsflöden. Mer information finns i [Administrera arbetsflöden](/help/sites-administering/workflows-administering.md).
 
-1. Information om misslyckade jobb finns i Arbetsflödesfel som är tillgängliga från **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Failures.]** I **[!UICONTROL Workflow Failure]** listas alla misslyckade arbetsflödesaktiviteter.
+1. Information om misslyckade jobb finns i Arbetsflödesfel i **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Failures]**. I listan **[!UICONTROL Workflow Failure]** visas alla misslyckade arbetsflödesaktiviteter.
 
    >[!NOTE]
    >
@@ -906,7 +905,7 @@ Så här övervakar du förloppet (inklusive misslyckad kodning/YouTube-publicer
    >
    >Du kan justera egenskaperna **[!UICONTROL retries]**, **[!UICONTROL retry delay]** och **[!UICONTROL timeout]** i dessa konfigurationer.
 
-1. Information om slutförda arbetsflöden finns i Arbetsflödesarkiv som är tillgängligt från **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Archive.]** I **[!UICONTROL Workflow Archive]** listas alla slutförda arbetsflödesaktiviteter.
+1. Information om slutförda arbetsflöden finns i Arbetsflödesarkiv som är tillgängligt från **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Archive]**. **[!UICONTROL Workflow Archive]** visar alla slutförda arbetsflödesaktiviteter.
 
    >[!NOTE]
    >
@@ -924,13 +923,13 @@ Så här övervakar du förloppet (inklusive misslyckad kodning/YouTube-publicer
 
 Hur du konfigurerar meddelanden beror på om du vill ha meddelanden för kodningsjobb eller YouTube publiceringsjobb:
 
-* För kodningsjobb kan du komma åt konfigurationssidan för alla e-postmeddelanden AEM arbetsflödet på **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]** och genom att söka efter **[!UICONTROL Day CQ Workflow Email Notification Service.]** Se [Konfigurera e-postmeddelande i AEM](/help/sites-administering/notification.md). Du kan markera eller avmarkera kryssrutorna för **[!UICONTROL Notify on Abort]** eller **[!UICONTROL Notify on Complete]**.
+* För kodningsjobb kan du komma åt konfigurationssidan för alla e-postmeddelanden AEM arbetsflödet på **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]** och genom att söka efter **[!UICONTROL Day CQ Workflow Email Notification Service]**. Se [Konfigurera e-postmeddelande i AEM](/help/sites-administering/notification.md). Du kan markera eller avmarkera kryssrutorna för **[!UICONTROL Notify on Abort]** eller **[!UICONTROL Notify on Complete]**.
 
 * Gör följande för publiceringsjobb i YouTube:
 
-1. I AEM trycker du på **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models.]**
+1. I AEM trycker du på **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**.
 1. På sidan Arbetsflödesmodeller väljer du **[!UICONTROL Publish to YouTube]** och trycker sedan på **[!UICONTROL Edit]** i verktygsfältet.
-1. I det övre högra hörnet av arbetsflödessidan Publicera till YouTube trycker du på **[!UICONTROL Edit.]**
+1. Tryck på **[!UICONTROL Edit]** i det övre högra hörnet av arbetsflödessidan Publicera till YouTube.
 1. Håll muspekaren över YouTube Upload-komponenten och tryck sedan en gång för att visa det textbundna verktygsfältet.
 
    ![6_5_publishingUtubeworkflow](assets/6_5_publishtoyoutubeworkflow.png)
@@ -956,7 +955,7 @@ Hur du konfigurerar meddelanden beror på om du vill ha meddelanden för kodning
    >Dessa e-postmeddelanden är specifika för YouTube och är utöver de allmänna e-postmeddelandena för arbetsflöden. Du kan därför få två uppsättningar e-postmeddelanden - det allmänna meddelandet som finns i **[!UICONTROL Day CQ Workflow Email Notification Service]** och ett som är specifikt för YouTube beroende på dina konfigurationsinställningar.
 
 1. När du är klar trycker du på ikonen **[!UICONTROL Done]** (bockmarkering) i dialogrutans övre högra hörn.
-1. Tryck på **[!UICONTROL Sync.]** längst upp till höger på sidan Publicera till YouTube.
+1. Tryck på **[!UICONTROL Sync]** längst upp till höger på arbetsflödessidan Publicera till YouTube.
 
 ## Visa videorapporter {#viewing-video-reports}
 
@@ -986,18 +985,18 @@ Se även [Konfigurera Dynamic Media-Cloud Services](/help/assets/config-dynamic.
 
 Första gången du anger Videorapporter visas som standard videodata från och med den första i den aktuella månaden och till och med den aktuella månadens datum. Du kan dock åsidosätta standarddatumintervallet genom att ange ett eget datumintervall. Nästa gång du anger Videorapporter används det datumintervall du har angett.
 
-För att videorapporter ska fungera på rätt sätt skapas ett Report Suite-ID automatiskt när Dynamic Media-Cloud Services konfigureras. Samtidigt skickas Report Suite-ID:t till publiceringsservern så att det är tillgängligt för funktionen Kopiera URL när du förhandsgranskar resurser. Detta kräver dock att publiceringsservern redan har konfigurerats. Om publiceringsservern inte är konfigurerad kan du fortfarande publicera för att se videorapporten, men du måste gå tillbaka till Dynamic Media Cloud Configuration och trycka på **[!UICONTROL OK.]**
+För att videorapporter ska fungera på rätt sätt skapas ett Report Suite-ID automatiskt när Dynamic Media-Cloud Services konfigureras. Samtidigt skickas Report Suite-ID:t till publiceringsservern så att det är tillgängligt för funktionen Kopiera URL när du förhandsgranskar resurser. Detta kräver dock att publiceringsservern redan har konfigurerats. Om publiceringsservern inte är konfigurerad kan du fortfarande publicera för att se videorapporten, men du måste gå tillbaka till Dynamic Media Cloud Configuration och trycka på **[!UICONTROL OK]**.
 
 Så här visar du videorapporter:
 
-1. I det övre vänstra hörnet av AEM trycker du på AEM-logotypen och sedan i den vänstra rutan på **[!UICONTROL Tools]** (hammarikon) > **[!UICONTROL Assets]** > **[!UICONTROL Video Reports.]**
+1. I det övre vänstra hörnet av AEM trycker du på AEM-logotypen och sedan i den vänstra rutan på **[!UICONTROL Tools]** (hammarikon) > **[!UICONTROL Assets]** > **[!UICONTROL Video Reports]**.
 1. Gör något av följande på sidan Videorapporter:
 
    * I närheten av det övre högra hörnet trycker du på ikonen **Uppdatera videorapport**.
 Du behöver bara använda Uppdatera om rapportens slutdatum är den aktuella dagen. På så sätt ser du den videospårning som har utförts sedan du senast körde rapporten.
 
    * I närheten av det övre högra hörnet trycker du på ikonen **Datumväljaren**.
-Ange start- och slutdatumintervallet som du vill ha videodata för och tryck sedan på **[!UICONTROL Run Report.]**
+Ange start- och slutdatumintervallet som du vill ha videodata för och tryck sedan på **[!UICONTROL Run Report]**.
 
    I grupprutan Övre mått identifieras olika aggregerade mått för alla *publicerade* videor på webbplatsen.
 
@@ -1094,7 +1093,7 @@ Mer information om hur du använder JSON-funktionen i en URL finns i [Serverar s
 
    Du får bäst resultat om du använder verktyget i Internet Explorer 9 eller senare, Google Chrome eller Safari.
 
-   Klistra in den kopierade URL-adressen för videofilen i fältet **[!UICONTROL Enter URL of video file]** i verktyget och klicka sedan på **[!UICONTROL Load]**. Se [Hämta en URL för en resurs](/help/assets/linking-urls-to-yourwebapplication.md#obtaining-a-url-for-an-asset) för att hämta URL:en till själva videofilen, som du sedan kan klistra in i Internet Explorer, Chrome eller Safari för att sedan spela upp videon.**[!UICONTROL Enter URL of video file field.]**
+   Klistra in den kopierade URL-adressen för videofilen i fältet **[!UICONTROL Enter URL of video file]** i verktyget och klicka sedan på **[!UICONTROL Load]**. Se [Hämta en URL för en resurs](/help/assets/linking-urls-to-yourwebapplication.md#obtaining-a-url-for-an-asset) för att hämta URL-adressen till själva videofilen som du sedan kan klistra in i **[!UICONTROL Enter URL of video file field]**. Internet Explorer, Chrome och Safari kan sedan spela upp videon direkt.
 
    Följ nu instruktionerna på skärmen för att skapa och spara WebVTT-filen. När du är klar kopierar du bildtextfilens innehåll och klistrar in det i en vanlig textredigerare och sparar det med filnamnstillägget .vtt.
 
@@ -1113,13 +1112,13 @@ Mer information om hur du använder JSON-funktionen i en URL finns i [Serverar s
 
 1. Gör något av följande:
 
-   * Tryck på **[!UICONTROL URL.]** I dialogrutan URL för att välja och kopiera URL:en till Urklipp och sedan förbi URL:en till en enkel textredigerare om du vill visa en videouppspelningsversion. Lägg till den kopierade URL:en för videon med följande syntax:
+   * Tryck på **[!UICONTROL URL]** om du vill visa ett videoklipp. I dialogrutan URL-adress markerar och kopierar du URL-adressen till Urklipp och sedan förbi URL-adressen till en enkel textredigerare. Lägg till den kopierade URL:en för videon med följande syntax:
 
       `&caption=<server_path>/is/content/<path_to_caption.vtt_file,1>`
 
       Observera `,1` i slutet av bildtextsökvägen. Omedelbart efter tillägget .vtt i sökvägen kan du aktivera (aktivera) eller inaktivera (inaktivera) den stängda bildtextsknappen i videospelarfältet genom att ange `,1` eller `,0`.
 
-   * Om du vill visa en inbäddad video trycker du på **[!UICONTROL Embed Code.]** I dialogrutan Bädda in kod markerar och kopierar du inbäddningskoden till Urklipp och klistrar sedan in koden i en enkel textredigerare. Lägg till den kopierade inbäddningskoden med följande syntax:
+   * Tryck på **[!UICONTROL Embed Code]** om du vill få en inbäddad videoredigeringsfunktion. I dialogrutan Bädda in kod markerar och kopierar du den inbäddade koden till Urklipp och klistrar sedan in koden i en enkel textredigerare. Lägg till den kopierade inbäddningskoden med följande syntax:
 
       `videoViewer.setParam("caption","<path_to_caption.vtt_file,1>");`
 
@@ -1223,7 +1222,7 @@ Se även [Om videominiatyrer i Dynamic Media - hybrid-läge](#about-video-thumbn
 
 De här stegen gäller endast för Dynamic Media som körs i läget&quot;Dynamicmedia_Scene7&quot;.
 
-T **om du vill lägga till en anpassad videominiatyr**,
+**Så här lägger du till en anpassad videominiatyr:**
 
 1. Kontrollera att du redan har gjort följande:
 
@@ -1235,23 +1234,23 @@ T **om du vill lägga till en anpassad videominiatyr**,
 1. Navigera till en överförd videoresurs vars miniatyrbild du vill ändra.
 1. I resursurvalsläget, antingen från **[!UICONTROL List View]** eller **[!UICONTROL Card View]**, trycker du på videoresursen.
 1. Tryck på ikonen **[!UICONTROL Properties]** (en cirkel med ett &quot;i&quot; i verktygsfältet).
-1. Tryck på **[!UICONTROL Change Thumbnail.]** på egenskapssidan för videon
+1. Tryck på **[!UICONTROL Change Thumbnail]** på egenskapssidan för videon.
 1. Gör något av följande på sidan Ändra miniatyrbild:
 
    * Så här använder du en bildruta från videon som ny miniatyrbild:
 
-      * Tryck på **[!UICONTROL Select Frame from video.]** i verktygsfältet
+      * Tryck på **[!UICONTROL Select Frame from video]** i verktygsfältet.
       * Tryck på uppspelningsknappen och tryck sedan på pausknappen på bildrutan som du vill spela in som videons nya miniatyrbild.
    * Så här använder du en bildresurs som ny miniatyrbild:
 
-      * Tryck på **[!UICONTROL Select Thumbnail from Assets.]** i verktygsfältet
-      * Tryck på **[!UICONTROL Select Thumbnail.]**
+      * Tryck på **[!UICONTROL Select Thumbnail from Assets]** i verktygsfältet.
+      * Tryck på **[!UICONTROL Select Thumbnail]**.
       * Navigera till en tidigare överförd och publicerad bildresurs som du vill använda. Observera att resursens storlek automatiskt ändras så att den fungerar som en miniatyrbild för videon.
-      * Markera bildresursen och tryck sedan på **[!UICONTROL Select.]**
+      * Markera bildresursen och tryck sedan på **[!UICONTROL Select]**.
 
 
-1. Tryck på **[!UICONTROL Save Change.]** på sidan Ändra miniatyrbild
-1. Tryck på **[!UICONTROL Save & Close.]** i det övre högra hörnet på videons egenskapssida
+1. Tryck på **[!UICONTROL Save Change]** på sidan Ändra miniatyrbild.
+1. Tryck på **[!UICONTROL Save & Close]** i det övre högra hörnet på videons egenskapssida.
 
 ## Om videominiatyrbilder i Dynamic Media - hybrid-läge {#about-video-thumbnails-in-dynamic-media-hybrid-mode}
 
@@ -1269,18 +1268,18 @@ Se även [Om videominiatyrer i Dynamic Media - Scene7-läge](/help/assets/video.
 
 De här stegen gäller endast för Dynamic Media som körs i hybridläge.
 
-T **om du vill lägga till en videominiatyr**,
+**Så här lägger du till en videominiatyr:**
 
 1. Navigera till en överförd videoresurs som du vill lägga till en videominiatyr.
 1. I resursurvalsläget, antingen från listvyn eller kortvyn, trycker du på videoresursen.
 1. Tryck på ikonen **[!UICONTROL View Properties]** (en cirkel med ett &quot;i&quot; i verktygsfältet).
-1. Tryck på **[!UICONTROL Change Thumbnail.]** på egenskapssidan för videon
-1. Tryck på **[!UICONTROL Select Frame.]** i verktygsfältet på sidan Ändra miniatyrbild
+1. Tryck på **[!UICONTROL Change Thumbnail]** på egenskapssidan för videon.
+1. Tryck på **[!UICONTROL Select Frame]** i verktygsfältet på sidan Ändra miniatyrbild.
 
    Dynamic Media genererar en serie miniatyrbilder från videon baserat på det standardtidsintervall eller tidsintervall som du har anpassat.
 
 1. Förhandsgranska de genererade miniatyrbilderna och välj sedan den som du vill lägga till i videon.
-1. Tryck på **[!UICONTROL Save Change.]**
+1. Tryck på **[!UICONTROL Save Change]**.
 
    Videons miniatyrbild uppdateras till att använda den miniatyrbild du valde. Om du senare bestämmer dig för att ändra miniatyrbilden kan du gå tillbaka till **[!UICONTROL Change Thumbnail]**-sidan och välja en ny.
 
@@ -1294,9 +1293,9 @@ När du konfigurerar och sparar det nya standardtidsintervallet gäller ändring
 
 Se [Lägga till en videominiatyr](#adding-a-video-thumbnail).
 
-**Om du vill konfigurera det standardtidsintervall som videominiatyrbilder genereras,**
+**Så här konfigurerar du det standardtidsintervall som videominiatyrbilder genereras:**
 
-1. I AEM trycker du på **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL CRXDE Lite.]**
+1. I Experience Manager trycker du på **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL CRXDE Lite]**.
 
 1. Gå till `o etc/dam/imageserver/configuration/jcr:content/settings.` på CRXDE Lite-sidan i katalogpanelen till vänster
 
@@ -1318,14 +1317,14 @@ Se [Lägga till en videominiatyr](#adding-a-video-thumbnail).
 
 De här stegen gäller endast för Dynamic Media som körs i hybridläge.
 
-T **om du vill lägga till en anpassad videominiatyr**,
+**Så här lägger du till en anpassad videominiatyr:**
 
 1. Navigera till en överförd videoresurs som du vill lägga till en anpassad videominiatyr.
 1. I resursurvalsläget, antingen från listvyn eller kortvyn, trycker du på videoresursen.
 1. Tryck på ikonen **[!UICONTROL View Properties]** (en cirkel med ett &quot;i&quot; i verktygsfältet).
-1. Tryck på **[!UICONTROL Change Thumbnail.]** på egenskapssidan för videon
-1. Tryck på **[!UICONTROL Upload New Thumbnail.]** i verktygsfältet på sidan Ändra miniatyrbild
+1. Tryck på **[!UICONTROL Change Thumbnail]** på egenskapssidan för videon.
+1. Tryck på **[!UICONTROL Upload New Thumbnail]** i verktygsfältet på sidan Ändra miniatyrbild.
 1. Navigera till en miniatyrbild som du vill använda, markera den och tryck sedan på **[!UICONTROL Open]** för att börja överföra bilden till AEM. Efter överföringen måste du publicera bilden.
-1. När du har överfört och publicerat bilden trycker du på **[!UICONTROL Save Changes.]** på sidan Ändra miniatyrbild
+1. När du har överfört och publicerat bilden trycker du på **[!UICONTROL Save Changes]** på sidan Ändra miniatyrbild.
 
    Den anpassade miniatyrbilden läggs till i videon.
