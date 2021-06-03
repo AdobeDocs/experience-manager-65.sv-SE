@@ -7,16 +7,15 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 82bed457-794e-4bf2-bc80-abde24fd2851
-feature: Viewer Presets
+feature: Förinställningar för visningsprogram
 role: Business Practitioner, Administrator
-translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+exl-id: daa1ffdd-de5c-470e-8875-84144b7d327f
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
-source-wordcount: '217'
-ht-degree: 9%
+source-wordcount: '214'
+ht-degree: 23%
 
 ---
-
 
 # Använda förinställningar för Dynamic Media Viewer {#applying-viewer-presets}
 
@@ -31,12 +30,12 @@ Eventuella problem med visningsförinställningar finns i [Felsökning av Dynami
 
 ## Använda en förinställning för Dynamic Media-visningsprogram på en resurs {#applying-a-viewer-preset-to-an-asset}
 
-1. Öppna resursen och i den vänstra listen och tryck på **[!UICONTROL Viewers.]**
+1. Öppna resursen och tryck på **[!UICONTROL Viewers]** i den vänstra rutan.
 
    ![chlimage_1-104](assets/chlimage_1-104.png)
 
    * Knapparna **[!UICONTROL URL]** och **[!UICONTROL Embed]** visas när du har valt en visningsförinställning.
-   * Systemet visar flera förinställningar för visningsprogram när du väljer visningsprogram i resursens **[!UICONTROL Detail View.]** Du kan öka antalet förinställningar som visas. Se [Öka antalet visningsförinställningar som visas](managing-viewer-presets.md).
+   * Systemet visar flera visningsförinställningar när du väljer visningsprogram för en resurs **[!UICONTROL Detail View]**. Du kan öka antalet förinställningar som visas. Se [Öka antalet visningsförinställningar som visas](managing-viewer-presets.md).
 
 1. Välj ett visningsprogram i den vänstra rutan för att använda det på resursen så som den visas i den högra rutan. Du kan även [kopiera URL:en för att dela](linking-urls-to-yourwebapplication.md) med andra användare.
 
