@@ -9,9 +9,8 @@ content-type: reference
 discoiquuid: 99d7025f-d022-4213-83c0-815a4712c573
 role: Business Practitioner, Administrator
 exl-id: 750627fc-2a29-43ff-867e-55cb2e371043
-feature: Publishing
-translation-type: tm+mt
-source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
+feature: Publicering
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
 source-wordcount: '452'
 ht-degree: 2%
@@ -20,7 +19,7 @@ ht-degree: 2%
 
 # Publicera Dynamic Media Assets {#publishing-dynamic-media-assets}
 
-Du publicerar dina Dynamic Media-resurser genom att välja de resurser du redan har överfört och trycka på **[!UICONTROL Publish]** eller **[!UICONTROL Quick Publish.]** när dina Dynamic Media-resurser har publicerats, är de tillgängliga för dig för att inkluderas på en webbsida via en URL eller genom att bädda in koden på sidan.
+Du publicerar dina Dynamic Media-resurser genom att välja de resurser du redan har överfört och trycka på **[!UICONTROL Publish]** eller **[!UICONTROL Quick Publish]**. När dina Dynamic Media-resurser har publicerats kan du inkludera dem på en webbsida via en URL eller genom att bädda in koden på sidan.
 
 Du kan också publicera resurser som du överför direkt - utan att behöva göra något från användaren. Se [Konfigurera Dynamic Media - Scene7-läge.](config-dms7.md)
 Eller så kan du selektivt publicera material till antingen Dynamic Media eller AEM, som inte är ömsesidigt oberoende av varandra,  **[!UICONTROL Selective Publish]** på mappnivå. Se [Arbeta med selektiv publicering i Dynamic Media.](/help/assets/selective-publishing.md)
