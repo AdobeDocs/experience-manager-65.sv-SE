@@ -9,9 +9,9 @@ docset: aem65
 role: Business Practitioner, Administrator
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: Konfiguration,Scene7-läge
-source-git-commit: 485464350f391fca327207b78b165897fdacc2d3
+source-git-commit: 90737593086c680f0a948f5b9cab6e58767b6373
 workflow-type: tm+mt
-source-wordcount: '5793'
+source-wordcount: '5778'
 ht-degree: 4%
 
 ---
@@ -46,7 +46,7 @@ Med den nya arkitekturen ansvarar Experience Manager för de viktigaste källres
 
 ## Aktivera Dynamic Media i Scene7-läge {#enabling-dynamic-media-in-scene-mode}
 
-[Dynamic ](https://www.adobe.com/solutions/web-experience-management/dynamic-media.html) Mediais är inaktiverat som standard. Om du vill utnyttja Dynamic Media funktioner måste du aktivera dem.
+[Dynamic ](https://business.adobe.com/products/experience-manager/assets/dynamic-media.html) Mediais är inaktiverat som standard. Om du vill utnyttja Dynamic Media funktioner måste du aktivera dem.
 
 >[!WARNING]
 Dynamic Media - Scene7-läget är endast för *författarinstansen av Experience Manager*. Därför måste du konfigurera `runmode=dynamicmedia_scene7` på Experience Manager Author-instansen *inte* Experience Manager Publish-instansen.
@@ -76,7 +76,7 @@ Om du vill migrera anpassade förinställningar och konfigurationer för visning
 
 Installationen av funktionspaket 18912 är *valfri*.
 
-Med funktionspaketet 18912 kan du antingen importera resurser gruppvis via FTP eller migrera resurser från antingen Dynamic Media - hybrid- eller Dynamic Media Classic till Dynamic Media - Scene7-läge på Experience Manager. Den är tillgänglig från [Adobe Professional Services](https://www.adobe.com/experience-cloud/consulting-services.html).
+Med funktionspaketet 18912 kan du antingen importera resurser gruppvis via FTP eller migrera resurser från antingen Dynamic Media - hybrid- eller Dynamic Media Classic till Dynamic Media - Scene7-läge på Experience Manager. Den är tillgänglig från [Adobe Professional Services](https://business.adobe.com/customers/consulting-services/main.html).
 
 Mer information finns i [Installera funktionspaket 18912 för migrering av gruppresurser](/help/assets/bulk-ingest-migrate.md).
 
@@ -88,7 +88,7 @@ Mer information finns i [Installera funktionspaket 18912 för migrering av grupp
 
 **Så här skapar du en Dynamic Media-konfiguration i Cloud Services:**
 
-1. I läget Experience Manager Author trycker du på Experience Manager-logotypen för att komma åt den globala navigeringskonsolen och sedan på verktygsikonen och sedan på **[!UICONTROL Cloud Services > Dynamic Media Configuration]**.
+1. I läget Experience Manager Author trycker du på Experience Manager-logotypen för att komma åt den globala navigeringskonsolen och sedan på verktygsikonen och sedan på **[!UICONTROL Cloud Services]** > **[!UICONTROL Dynamic Media Configuration]**.
 1. På sidan Läsare för Dynamic Media-konfiguration trycker du i den vänstra rutan på **[!UICONTROL global]** (tryck inte på och välj inte mappikonen till vänster om **[!UICONTROL global]**) och sedan trycker du på **[!UICONTROL Create]**.
 1. På sidan **[!UICONTROL Create Dynamic Media Configuration]** anger du en titel, e-postadress för Dynamic Media-konto, lösenord och väljer sedan region. Den här informationen tillhandahålls av Adobe i e-postmeddelandet om etablering. Kontakta Adobe kundtjänst om du inte har fått e-postmeddelandet.
 
@@ -109,7 +109,7 @@ Mer information finns i [Installera funktionspaket 18912 för migrering av grupp
 
          ![Replikera metadata efter Dynamic Media publicering, kryssruta](assets-dm/replicate-metadata-setting.png)
 
-      * **[!UICONTROL Selective Publish]** Med det här alternativet kan du styra vilka mappar som ska publiceras i Dynamic Media. Du kan använda funktioner som smart beskärning eller dynamiska återgivningar, eller avgöra vilka mappar som publiceras exklusivt i Experience Manager för förhandsgranskning. Samma resurser är *inte* publicerade i Dynamic Media för att levereras i den offentliga domänen.<br>Du kan ange det här alternativet här i  **[!UICONTROL Dynamic Media Cloud Configuration]** eller, om du vill, du kan välja att ange det här alternativet på mappnivå, i en mapps  **[!UICONTROL Properties]**.<br>Se  [Arbeta med selektiv publicering i Dynamic Media.](/help/assets/selective-publishing.md)<br>Om du senare ändrar den här konfigurationen, eller ändrar den senare på mappnivå, påverkar ändringarna bara nya resurser som du överför från den punkten och framåt. Publiceringsläget för befintliga resurser i mappen ändras inte förrän du ändrar dem manuellt från antingen **[!UICONTROL Quick Publish]** eller **[!UICONTROL Manage Publication]**-dialogrutan.
+      * **[!UICONTROL Selective Publish]** Med det här alternativet kan du styra vilka mappar som ska publiceras i Dynamic Media. Du kan använda funktioner som smart beskärning eller dynamiska återgivningar, eller avgöra vilka mappar som publiceras exklusivt i Experience Manager för förhandsgranskning. Samma resurser är *inte* publicerade i Dynamic Media för att levereras i den offentliga domänen.<br>Du kan ange det här alternativet här i  **[!UICONTROL Dynamic Media Cloud Configuration]** eller, om du vill, du kan välja att ange det här alternativet på mappnivå, i en mapps  **[!UICONTROL Properties]**.<br>Se  [Arbeta med selektiv publicering i Dynamic Media](/help/assets/selective-publishing.md).<br>Om du senare ändrar den här konfigurationen, eller ändrar den senare på mappnivå, påverkar ändringarna bara nya resurser som du överför från den punkten och framåt. Publiceringsläget för befintliga resurser i mappen ändras inte förrän du ändrar dem manuellt från antingen **[!UICONTROL Quick Publish]** eller **[!UICONTROL Manage Publication]**-dialogrutan.
    * **[!UICONTROL Secure Preview Server]** - gör att du kan ange URL-sökvägen till förhandsgranskningsservern för säkra återgivningar. Det innebär att när återgivningarna har genererats kan Experience Manager på ett säkert sätt komma åt och förhandsgranska Dynamic Media-fjärråtergivningarna (inga binärfiler skickas tillbaka till Experience Manager-instansen).
 Om du inte har en särskild lösning för att använda ditt företags server eller en speciell server rekommenderar Adobe att du låter den här inställningen vara angiven.
 
@@ -118,7 +118,7 @@ Om du inte har en särskild lösning för att använda ditt företags server ell
    * **[!UICONTROL Dynamic Media sync mode]**
       * **[!UICONTROL Enabled by default]** - Konfigurationen används som standard på alla mappar såvida du inte markerar en mapp som är exkluderad.  <!-- you can then deselect the folders that you do not want the configuration applied to.-->
       * **[!UICONTROL Disabled by default]** - Konfigurationen tillämpas inte på någon mapp förrän du uttryckligen markerar en markerad mapp för synkronisering till Dynamic Media.
-Om du vill markera en markerad mapp för synkronisering till Dynamic Media väljer du en resursmapp och trycker sedan på **[!UICONTROL Properties]** i verktygsfältet. Välj bland följande tre alternativ i listrutan **[!UICONTROL Dynamic Media sync mode]** på fliken **[!UICONTROL Details]**. När du är klar trycker du på **[!UICONTROL Save]**. *Kom ihåg: Dessa tre alternativ är inte tillgängliga om du valde **Synkronisera allt**innehåll tidigare.* Se även  [Arbeta med selektiv publicering på mappnivå i Dynamic Media.](/help/assets/selective-publishing.md)
+Om du vill markera en markerad mapp för synkronisering till Dynamic Media väljer du en resursmapp och trycker sedan på **[!UICONTROL Properties]** i verktygsfältet. Välj bland följande tre alternativ i listrutan **[!UICONTROL Dynamic Media sync mode]** på fliken **[!UICONTROL Details]**. När du är klar trycker du på **[!UICONTROL Save]**. *Kom ihåg: dessa tre alternativ är inte tillgängliga om du valde **[!UICONTROL Sync all content]**tidigare.* Se även  [Arbeta med selektiv publicering på mappnivå i Dynamic Media](/help/assets/selective-publishing.md).
          * **[!UICONTROL Inherited]** - Det finns inget explicit synkroniseringsvärde i mappen; I stället ärver mappen synkroniseringsvärdet från en av de överordnade mapparna eller standardläget i molnkonfigurationen. Detaljerad status för ärvda program via ett verktygstips.
          * **[!UICONTROL Enable for subfolders]** - Inkludera allt i det här underträdet för synkronisering med Dynamic Media. De mappspecifika inställningarna åsidosätter standardläget i molnkonfigurationen.
          * **[!UICONTROL Disabled for subfolders]** - Uteslut allt i det här underträdet från synkronisering till Dynamic Media.
@@ -132,7 +132,7 @@ Om du vill markera en markerad mapp för synkronisering till Dynamic Media välj
 
    * Öppna [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och logga sedan in på ditt konto. Dina autentiseringsuppgifter och inloggningsuppgifter tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kontaktar du teknisk support.
 
-   * Tryck på **[!UICONTROL Setup > Application Setup > Publish Setup > Image Server]** i navigeringsfältet uppe till höger på sidan.
+   * I navigeringsfältet uppe till höger på sidan trycker du på **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL Publish Setup]** > **[!UICONTROL Image Server]**.
 
    * Välj **[!UICONTROL Test Image Serving]** i listrutan Publiceringskontext på sidan Image Server Publish.
    * Tryck på **[!UICONTROL Add]** för klientadressfiltret.
@@ -172,7 +172,7 @@ Installations- och konfigureringsuppgifter omfattar följande:
 
 Publiceringsinställningarna avgör hur resurser levereras som standard från Dynamic Media. Om ingen inställning anges levererar Dynamic Media en resurs enligt standardinställningarna som definierats i Publiceringsinställningar. En begäran om att leverera en bild som inte innehåller ett upplösningsattribut ger till exempel en bild med inställningen för standardobjektupplösning.
 
-Så här konfigurerar du publiceringsinställningar: i Dynamic Media Classic: tryck på **[!UICONTROL Setup > Application Setup > Publish Setup > Image Server]**.
+Så här konfigurerar du publiceringsinställningar: i Dynamic Media Classic: tryck på **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL Publish Setup]** > **[!UICONTROL Image Server]**.
 
 Bildserverskärmen anger standardinställningar för att leverera bilder. I gränssnittsskärmen finns en beskrivning av varje inställning.
 
@@ -182,11 +182,11 @@ Bildserverskärmen anger standardinställningar för att leverera bilder. I grä
 * **[!UICONTROL Defaults for Catalog Fields]**- De här inställningarna gäller bildernas upplösning och standardtyp av miniatyrbilder.
 * **[!UICONTROL Color Management Attributes]** - De här inställningarna avgör vilka ICC-färgprofiler som används.
 * **[!UICONTROL Compatibility Attributes]** - Den här inställningen gör att inledande och avslutande stycken i textlager kan hanteras som de var i version 3.6 för bakåtkompatibilitet.
-* **[!UICONTROL Localization Support]** - Med de här inställningarna kan du hantera flera språkattribut. Här kan du också ange en sträng för språkområdeskarta så att du kan definiera vilka språk du vill ha stöd för de olika verktygstipsen i visningsprogram. Mer information om hur du konfigurerar **[lokaliseringsstöd]** finns i [Att tänka på när du konfigurerar lokalisering av resurser](https://help.adobe.com/en_US/scene7/using/WS997f1dc4cb0179f034e07dc31412799d19a-8000.html).
+* **[!UICONTROL Localization Support]** - Med de här inställningarna kan du hantera flera språkattribut. Här kan du också ange en sträng för språkområdeskarta så att du kan definiera vilka språk du vill ha stöd för de olika verktygstipsen i visningsprogram. Mer information om hur du konfigurerar **[lokaliseringsstöd]** finns i [Att tänka på när du konfigurerar lokalisering av resurser](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/publish-setup.html?lang=en#considerations-when-setting-up-localization-of-assets).
 
 #### Konfigurerar allmänna inställningar för programmet {#configuring-application-general-settings}
 
-Öppna sidan Allmänna inställningar för programmet genom att trycka på **[!UICONTROL Setup > Application Setup > General Settings]** i det globala navigeringsfältet i Dynamic Media Classic.
+Öppna sidan Allmänna inställningar för programmet genom att trycka på **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL General Settings]** i det globala navigeringsfältet i Dynamic Media Classic.
 
 **[!UICONTROL Servers]** - Vid kontoetablering tillhandahåller Dynamic Media automatiskt de tilldelade servrarna för ditt företag. De här servrarna används för att skapa URL-strängar för din webbplats och dina program. Dessa URL-anrop är specifika för ditt konto. Ändra inte något av servernamnen om du inte uttryckligen har fått instruktioner från Adobe kundtjänst om att göra det.
 
@@ -249,7 +249,7 @@ Se [Överför resurser](/help/assets/manage-assets.md#uploading-assets).
 
 **Så här redigerar du MIME-typer för de format som stöds:**
 
-1. Tryck på Experience Manager-logotypen i Experience Manager för att komma åt den globala navigeringskonsolen och tryck sedan på **[!UICONTROL Tools > General > CRXDE Lite]**.
+1. I Experience Manager trycker du på Experience Manager-logotypen för att komma åt den globala navigeringskonsolen och sedan på **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL CRXDE Lite]**.
 1. Navigera till följande i den vänstra listen:
 
    `/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`
@@ -276,7 +276,7 @@ Du kan lägga till anpassade MIME-typer för format som inte stöds i Experience
 
 **Så här lägger du till MIME-typer för format som inte stöds:**
 
-1. Tryck på **[!UICONTROL Tools > Operations > Web Console]** från Experience Manager.
+1. I Experience Manager trycker du på **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
 
    ![2019-08-02_16-13-14](assets/2019-08-02_16-13-14.png)
 
@@ -294,7 +294,7 @@ Du kan lägga till anpassade MIME-typer för format som inte stöds i Experience
 
 1. Skriv `DWG=image/vnd.dwg` i det tomma textfältet som du just lade till.
 
-   Exemplet `DWG=image/vnd.dwg` är endast för illustrationsändamål. MIME-typen som du lägger till här kan vara ett annat format som inte stöds.
+   Exemplet `DWG=image/vnd.dwg` är endast avsett som exempel. MIME-typen som du lägger till här kan vara ett annat format som inte stöds.
 
    ![2019-08-02_16-36-36](assets/2019-08-02_16-36-36.png)
 
@@ -303,7 +303,7 @@ Du kan lägga till anpassade MIME-typer för format som inte stöds i Experience
    Nu kan du stänga webbläsarfliken som har den öppna konfigurationssidan för Adobe Experience Manager Web Console.
 
 1. Gå tillbaka till webbläsarfliken som har din öppna Experience Manager-konsol.
-1. Tryck på **[!UICONTROL Tools > General > CRXDE Lite]** från Experience Manager.
+1. I Experience Manager trycker du på **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL CRXDE Lite]**.
 
    ![2019-08-02_16-55-41](assets/2019-08-02_16-55-41.png)
 
@@ -330,7 +330,7 @@ Definiera först namnkonventionen för hur resurser grupperas i en uppsättning.
 
 När du överför filer skapar Dynamic Media automatiskt en uppsättning med alla filer som matchar den definierade namnkonventionen i de aktiva förinställningarna.
 
-**Konfigurerar standardnamngivning**
+##### Konfigurerar standardnamngivning
 
 Skapa en standardnamnkonvention som används i alla förinställda gruppuppsättningar. Den standardnamnkonvention som valts i definitionen av gruppuppsättningsförinställningen är troligen allt som ditt företag behöver för att gruppgenerera uppsättningar. En gruppuppsättningsförinställning skapas för att använda den standardnamnkonvention som du definierar. Du kan skapa så många gruppuppsättningsförinställningar med alternativa, anpassade namnkonventioner som behövs för en viss uppsättning innehåll om det finns ett undantag från den företagsdefinierade standardnamngivningen.
 
@@ -346,7 +346,7 @@ Det finns två element för definition, Matcha och Basnamn. Med dessa fält kan 
 
    Dina autentiseringsuppgifter och inloggningsuppgifter tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kontaktar du teknisk support.
 
-1. Tryck på **[!UICONTROL Setup > Application Setup > Batch Set Presets > Default Naming]** i navigeringsfältet uppe på sidan.
+1. Tryck på **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL Batch Set Presets]** > **[!UICONTROL Default Naming]** på navigeringsfältet nära sidans överkant.
 1. Välj **[!UICONTROL View Form]** eller **[!UICONTROL View Code]** för att ange hur du vill visa och ange information om varje element.
 
    Du kan markera kryssrutan **[!UICONTROL View Code]** om du vill visa värdeuppbyggnaden för det reguljära uttrycket tillsammans med dina formulärval. Du kan ange eller ändra dessa värden för att underlätta definitionen av elementen i namnkonventionen, om formulärvyn begränsar dig av någon anledning. Om dina värden inte kan tolkas i formulärvyn blir formulärfälten inaktiva.
@@ -365,7 +365,7 @@ Det finns två element för definition, Matcha och Basnamn. Med dessa fält kan 
    * Tryck på **[!UICONTROL Save As]** och ange ett namn för förinställningen.
    * Tryck på **[!UICONTROL Save]** om du redigerar en befintlig förinställning.
 
-**Skapa en förinställning för gruppuppsättning**
+##### Skapa en förinställning för gruppuppsättning
 
 I Dynamic Media används gruppuppsättningsförinställningar för att ordna resurser i uppsättningar med bilder (alternativa bilder, färgalternativ, 360 rotationer) för visning i visningsprogram. Förinställningarna för gruppuppsättningar körs automatiskt tillsammans med överföringsprocesserna för resurser i Dynamic Media.
 
@@ -379,7 +379,7 @@ Du kan antingen använda formulärfältsmetoden för att definiera en gruppupps�
 
    Dina autentiseringsuppgifter och inloggningsuppgifter tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kontaktar du teknisk support.
 
-1. Tryck på **[!UICONTROL Setup > Application Setup > Batch Set Presets > Batch Set Preset]** i navigeringsfältet uppe på sidan.
+1. Tryck på **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL Batch Set Presets]** > **[!UICONTROL Batch Set Preset]** på navigeringsfältet nära sidans överkant.
 
    **[!UICONTROL View Form]**, som anges i det övre högra hörnet på detaljsidan, är standardvyn.
 
@@ -388,7 +388,7 @@ Du kan antingen använda formulärfältsmetoden för att definiera en gruppupps�
 1. Välj en förinställningstyp i listrutan Gruppuppsättningstyp.
 1. Gör något av följande:
 
-   * Om du använder en standardnamnkonvention som du tidigare konfigurerat under **[!UICONTROL Application Setup > Batch Set Presets > Default Naming]** expanderar du **[!UICONTROL Asset Naming Conventions]** och trycker sedan på **[!UICONTROL Default]** i listrutan Namnge fil.
+   * Om du använder en standardnamnkonvention som du tidigare konfigurerat under **[!UICONTROL Application Setup]** > **[!UICONTROL Batch Set Presets]** > **[!UICONTROL Default Naming]** expanderar du **[!UICONTROL Asset Naming Conventions]** och trycker sedan på **[!UICONTROL Default]** i listrutan Namnge fil.
 
    * Om du vill definiera en ny namnkonvention när du konfigurerar förinställningen expanderar du **[!UICONTROL Asset Naming Conventions]** och trycker sedan på **[!UICONTROL Custom]** i listrutan Filnamngivning.
 
@@ -405,7 +405,7 @@ Du kan antingen använda formulärfältsmetoden för att definiera en gruppupps�
 
    När du aktiverar förinställningen används den för att generera uppsättningen när du överför resurser till Dynamic Media.
 
-**Skapa en gruppuppsättningsförinställning för automatisk generering av en 2D-snurpuppsättning**
+##### Skapa en gruppuppsättningsförinställning för automatisk generering av en 2D-snurpuppsättning
 
 Du kan använda gruppuppsättningstypen **[!UICONTROL Multi-Axis Spin Set]** för att skapa ett recept som automatiserar genereringen av 2D-snurruppsättningar. Vid gruppering av bilder används reguljära uttryck för rad och kolumn så att bildresurserna justeras korrekt på motsvarande plats i den flerdimensionella arrayen. Det finns inget minsta eller högsta antal rader eller kolumner som du måste ha i en rotationsuppsättning med flera axlar.
 
@@ -425,9 +425,9 @@ Med den här informationen kan du skapa ditt recept för gruppuppsättningstyp e
 
 ![chlimage_1-560](assets/chlimage_1-560.png)
 
-Gruppering för den delade resursnamndelen i rotationsuppsättningen läggs till i fältet **Matcha** (markerat). Variabeldelen av resursnamnet som innehåller raden och kolumnen läggs till i fälten **Rad** och **Kolumn**.
+Gruppering för den delade resursnamndelen i rotationsuppsättningen läggs till i fältet **[!UICONTROL Match]** (markerat). Variabeldelen av resursnamnet som innehåller raden och kolumnen läggs till i fälten **[!UICONTROL Row]** och **[!UICONTROL Column]**.
 
-När rotationsuppsättningen har överförts och publicerats aktiverar du namnet på det 2D-rotationsuppsättningsrecept som visas under **Förinställningar för gruppuppsättning** i dialogrutan **Alternativ för överföringsjobb**.
+När rotationsuppsättningen har överförts och publicerats aktiverar du namnet på det 2D-rotationsuppsättningsrecept som visas under **[!UICONTROL Batch Set Presets]** i dialogrutan **[!UICONTROL Upload Job Options]**.
 
 **Så här skapar du en gruppuppsättningsförinställning för automatisk generering av en 2D-snurpuppsättning:**
 
@@ -435,7 +435,7 @@ När rotationsuppsättningen har överförts och publicerats aktiverar du namnet
 
    Dina autentiseringsuppgifter och inloggningsuppgifter tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kontaktar du teknisk support.
 
-1. Tryck på **[!UICONTROL Setup]> [!UICONTROL Application Setup] > [!UICONTROL Batch Set Presets] >[!UICONTROL Batch Set Preset]** på navigeringsfältet nära sidans överkant.
+1. Tryck på **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL Batch Set Presets]** > **[!UICONTROL Batch Set Preset]** på navigeringsfältet nära sidans överkant.
 
    **[!UICONTROL View Form]**, som anges i det övre högra hörnet på detaljsidan, är standardvyn.
 
@@ -470,7 +470,7 @@ När rotationsuppsättningen har överförts och publicerats aktiverar du namnet
 
    `\w+-\w+-C(\d+)`
 
-   Proven ovan är endast avsedda som illustrationer. Du kan skapa det reguljära uttrycket hur du vill.
+   Proverna ovan är endast avsedda som exempel. Du kan skapa det reguljära uttrycket hur du vill.
 
    >[!NOTE]
    Om kombinationen av reguljära uttryck för rader och kolumner inte kan avgöra positionen för resursen i den flerdimensionella rotationsinställningsarrayen, läggs resursen inte till i uppsättningen. Ett fel loggas också.
@@ -592,41 +592,17 @@ Med filtren kan du *utesluta*-resurser från replikering till publiceringsnoden 
 
 Om du använder Dynamic Media för bilder, video eller båda, kan du använda standardfiltren som finns i Adobe. Följande filter är aktiva som standard:
 
-<table>
- <tbody>
-  <tr>
-   <td> </td>
-   <td><strong>Filter</strong></td>
-   <td><strong>Mime-typ</strong></td>
-   <td><strong>Återgivningar</strong></td>
-  </tr>
-  <tr>
-   <td>Dynamic Media Image Delivery</td>
-   <td><p>filterbilder</p> <p>filteruppsättningar</p> <p> </p> </td>
-   <td><p>Börjar med <strong>image/</strong></p> <p>Innehåller <strong>program/</strong> och avslutas med <strong>uppsättning</strong>.</p> </td>
-   <td>De färdiga filterbilderna (gäller för enstaka bildresurser, inklusive interaktiva bilder) och "filteruppsättningar" (gäller Spin Sets, Image Sets, Mixed Media Sets och Carousel Sets) kommer att
-    <ul>
-     <li>Uteslut den ursprungliga bilden och statiska bildåtergivningar från replikering.</li>
-    </ul> </td>
-  </tr>
-  <tr>
-   <td>Dynamic Media Video Delivery</td>
-   <td>filter-video</td>
-   <td>Börjar med <strong>video/</strong></td>
-   <td>"filter-video" som är klar att användas:
-    <ul>
-     <li>Undanta återgivningar av originalvideo och statiska miniatyrer från replikering.<br /> <br /> </li>
-    </ul> </td>
-  </tr>
- </tbody>
-</table>
+|  | Filter | Mime-typ | Återgivningar |
+| --- | --- | --- | --- |
+| Dynamic Media Image Delivery | filter-image<br>filteruppsättningar | Börjar med **image/**<br> Innehåller **program/** och slutar med **set**. | Färdiga&quot;filterbilder&quot; (gäller för enstaka bildresurser, inklusive interaktiva bilder) och&quot;filteruppsättningar&quot; (gäller för snurra uppsättningar, bilduppsättningar, blandade medieuppsättningar och Carousel-uppsättningar) kommer att:<br> ・ Uteslut från replikering av den ursprungliga bilden och statiska bildåtergivningar. |
+| Dynamic Media Video Delivery | filter-video | Börjar med **video/** | Den färdiga filtervideon:<br> ・ Uteslut från replikering av den ursprungliga videon och statiska miniatyråtergivningar. |
 
 >[!NOTE]
 Filter gäller för MIME-typer och kan inte vara sökvägsspecifika.
 
 #### Anpassa resursfilter för replikering {#customizing-asset-filters-for-replication}
 
-1. Tryck på Experience Manager-logotypen i Experience Manager för att komma åt den globala navigeringskonsolen och tryck på **[!UICONTROL Tools > General > CRXDE Lite]**.
+1. I Experience Manager trycker du på Experience Manager-logotypen för att komma åt den globala navigeringskonsolen och trycker på **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL CRXDE Lite]**.
 1. Navigera till `/etc/replication/agents.author/publish/jcr:content/damRenditionFilters` i det vänstra mappträdet för att granska filtren.
 
    ![chlimage_1-17](assets/chlimage_1-2.png)
@@ -649,31 +625,16 @@ Filter gäller för MIME-typer och kan inte vara sökvägsspecifika.
 
    Följande tecken kan användas för att filtrera replikering:
 
-<table>
- <tbody>
-  <tr>
-   <td><strong>Tecken som ska användas</strong></td>
-   <td><strong>Så här filtrerar du resurser för replikering</strong></td>
-  </tr>
-  <tr>
-   <td>*</td>
-   <td>Jokertecken</td>
-  </tr>
-  <tr>
-   <td>+</td>
-   <td>Innehåller resurser för replikering.</td>
-  </tr>
-  <tr>
-   <td>-</td>
-   <td>Exkluderar resurser från replikering.</td>
-  </tr>
- </tbody>
-</table>
+   | Tecken som ska användas | Så här filtrerar du resurser för replikering |
+   | --- | --- |
+   | * | Jokertecken |
+   | + | Innehåller resurser för replikering |
+   | - | Exkluderar resurser från replikering |
 
-Navigera till `content/dam/<locate your asset>/jcr:content/renditions`.
+   Navigera till `content/dam/<locate your asset>/jcr:content/renditions`.
 
-Följande grafik är ett exempel på en resurs återgivningar.
+   Följande grafik är ett exempel på en resurs återgivningar.
 
-![chlimage_1-4](assets/chlimage_1-4.png)
+   ![chlimage_1-4](assets/chlimage_1-4.png)
 
-Om du bara vill replikera originalet skriver du `+original`.
+   Om du bara vill replikera originalet skriver du `+original`.
