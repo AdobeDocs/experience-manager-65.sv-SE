@@ -5,14 +5,13 @@ contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: authoring
 content-type: reference
-translation-type: tm+mt
-source-git-commit: 4090b1641467c6fb02b2fcce4df97b9fd5da4e2f
+exl-id: d2ebfca5-19f9-4fa5-b142-b978f46a912f
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
 source-wordcount: '1569'
 ht-degree: 3%
 
 ---
-
 
 # Lägga till Dynamic Media-resurser på sidor{#adding-dynamic-media-assets-to-pages}
 
@@ -44,7 +43,7 @@ Så här lägger du till en Dynamic Media-komponent/ett visningsprogram på en s
 
 ## Dynamic Media Components {#dynamic-media-components}
 
-[!UICONTROL Dynamic Media] och  [!UICONTROL Interactive Media] är tillgängliga i  [!UICONTROL Sidekick] under  **[!UICONTROL Dynamic Media.]** Du använder  **[!UICONTROL Interactive Media]** komponenten för alla interaktiva resurser som interaktiv video, interaktiva bilder eller karuselluppsättningar. Använd komponenten **[!UICONTROL Dynamic Media]** för alla andra Dynamic Media-komponenter.
+[!UICONTROL Dynamic Media] och  [!UICONTROL Interactive Media] finns i  [!UICONTROL Sidekick] under  **[!UICONTROL Dynamic Media]**. Du använder komponenten **[!UICONTROL Interactive Media]** för alla interaktiva resurser, som interaktiv video, interaktiva bilder eller karuselluppsättningar. Använd komponenten **[!UICONTROL Dynamic Media]** för alla andra Dynamic Media-komponenter.
 
 ![chlimage_1-71](assets/chlimage_1-71a.png)
 
@@ -137,7 +136,7 @@ Du kan redigera följande [!UICONTROL Advanced]-inställningar genom att klicka 
 
 När du installerar [FP-13480](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq620/featurepack/cq-6.2.0-featurepack-13480) i AEM 6.2 kan du kontrollera om en video levereras via en säker SSL-anslutning (HTTPS) eller en osäker anslutning (HTTP). Som standard ärvs videoleveransprotokollet automatiskt från inbäddningswebbsidans protokoll. Om webbsidan läses in via HTTPS levereras videon också via HTTPS. Och tvärtom, om webbsidan finns på HTTP, levereras videon via HTTP. I de flesta fall är standardbeteendet bra och du behöver inte göra några konfigurationsändringar. Du kan dock åsidosätta det här standardbeteendet genom att lägga till `VideoPlayer.ssl=on` i slutet av en URL-sökväg eller i listan med andra parametrar för visningsprogramkonfiguration i ett inbäddat kodfragment, för att framtvinga en säker videoleverans.
 
-Mer information om säker videoleverans och användning av konfigurationsattributet `VideoPlayer.ssl` i URL-sökvägen finns i [Säker videoleverans](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/c-html5-video-viewer-20-securevideodelivery.html) i referenshandboken för visningsprogram. Förutom Video Viewer finns säker videoutgång för visningsprogram för Mixed Media och Interactive Video.
+Mer information om säker videoleverans och användning av konfigurationsattributet `VideoPlayer.ssl` i URL-sökvägen finns i [Säker videoleverans](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/c-html5-video-viewer-20-securevideodelivery.html) i referenshandboken för visningsprogram. Förutom Video Viewer finns säker videoutgång för visningsprogrammet Mixed Media och Interactive Video Viewer.
 
 ### Interaktiv mediakomponent {#interactive-media-component}
 
