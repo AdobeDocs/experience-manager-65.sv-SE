@@ -9,24 +9,23 @@ content-type: reference
 discoiquuid: a8063d43-923a-42ac-9a16-0c7fadd8f73f
 role: Business Practitioner, Administrator
 exl-id: f8a80b22-b1a6-475f-b3f1-b2f47822f21d
-feature: Collaboration,Asset Management
-translation-type: tm+mt
-source-git-commit: c9aec973faf4caef741961d92a6f258646aeddb7
+feature: Samarbete,Resurshantering
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
-source-wordcount: '441'
-ht-degree: 7%
+source-wordcount: '423'
+ht-degree: 8%
 
 ---
 
 # Arbeta med Dynamic Media {#working-with-dynamic-media}
 
-[Dynamic ](https://www.adobe.com/solutions/web-experience-management/dynamic-media.html) Media hjälper er att leverera visuella marknadsförings- och marknadsföringsresurser on demand, som automatiskt skalas för konsumtion på webben, mobilsajter och sociala medier. Med en uppsättning primära källresurser genererar och levererar Dynamic Media flera varianter av multimedieinnehåll i realtid via sitt globala, skalbara, prestandaoptimerade nätverk.
+[Dynamic ](https://business.adobe.com/products/experience-manager/assets/dynamic-media.html) Media hjälper er att leverera visuella marknadsförings- och marknadsföringsresurser on demand, som automatiskt skalas för konsumtion på webben, mobilsajter och sociala medier. Med en uppsättning primära källresurser genererar och levererar Dynamic Media flera varianter av multimedieinnehåll i realtid via sitt globala, skalbara, prestandaoptimerade nätverk.
 
 Dynamiska medier ger interaktiva tittarupplevelser som zoomning, 360-graders rotation och video. Dynamic Media innehåller arbetsflödena från Adobe Experience Manager Digital Asset Management (Assets) för att förenkla och effektivisera hanteringen av digitala kampanjer.
 
->[!NOTE]
+<!-- >ARTICLE IS MISSING. GIVES 404 [!NOTE]
 >
->Det finns en community-artikel på [Arbeta med Adobe Experience Manager och Dynamic Media](https://helpx.adobe.com/experience-manager/using/aem_dynamic_media.html).
+>A Community article is available on [Working with Adobe Experience Manager and Dynamic Media](https://helpx.adobe.com/experience-manager/using/aem_dynamic_media.html). -->
 
 ## Vad du kan göra med Dynamic Media {#what-you-can-do-with-dynamic-media}
 
@@ -51,7 +50,7 @@ Se även [Konfigurera Dynamic Media](administering-dynamic-media.md).
 
 >[!NOTE]
 >
->Mer information om skillnaderna mellan att använda Dynamic Media och integrera Dynamic Media Classic med AEM finns i [Dynamic Media Classic-integrering jämfört med Dynamic Media](/help/sites-administering/scene7.md#aem-scene-integration-versus-dynamic-media).
+>Mer information om skillnaderna mellan att använda Dynamic Media och integrera Dynamic Media Classic med Adobe Experience Manager finns i [Dynamic Media Classic-integrering jämfört med Dynamic Media](/help/sites-administering/scene7.md#aem-scene-integration-versus-dynamic-media).
 
 ## Dynamic Media aktiverat jämfört med Dynamic Media inaktiverat {#dynamic-media-on-versus-dynamic-media-off}
 
