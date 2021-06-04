@@ -8,7 +8,7 @@ content-type: reference
 feature: CDN-cache,Dynamic Media Classic
 role: Business Practitioner, Administrator
 exl-id: 7020343a-b556-4091-9717-93fcc55e623b
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
 workflow-type: tm+mt
 source-wordcount: '686'
 ht-degree: 17%
@@ -25,7 +25,7 @@ Dynamic Media resurser cachas av CDN (Content Delivery Network) för snabb lever
 
 >[!IMPORTANT]
 >
->Följande steg gäller endast för Dynamic Media i AEM 6.5, Service Pack 5 (AEM 6.5.5) eller tidigare.<br>Om du använder Dynamic Media i AEM 6.5, Service Pack 6 (AEM 6.5.6) eller senare, följer du stegen i  [Invalidera CDN-cachen med Dynamic Media.](/help/assets/invalidate-cdn-cache-dynamic-media.md)
+>Följande steg gäller endast för Dynamic Media i AEM 6.5, Service Pack 5 (AEM 6.5.5) eller tidigare.<br>Om du använder Dynamic Media i AEM 6.5, Service Pack 6 (AEM 6.5.6) eller senare, följer du stegen i  [Invalidera CDN-cachen med Dynamic Media](/help/assets/invalidate-cdn-cache-dynamic-media.md).
 
 Se även [Cacheöversikt i Dynamic Media Classic (Scene7)](https://helpx.adobe.com/experience-manager/scene7/kb/base/caching-questions/scene7-caching-overview.html).
 
