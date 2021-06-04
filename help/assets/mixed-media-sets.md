@@ -11,7 +11,7 @@ docset: aem65
 feature: Blanda medieuppsättningar,Resurshantering
 role: Business Practitioner, Administrator
 exl-id: 70a72fb9-a289-4eda-abcc-300edf9f1961
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
 workflow-type: tm+mt
 source-wordcount: '1396'
 ht-degree: 28%
@@ -38,11 +38,11 @@ Följ de här stegen för att komma igång snabbt med blandade medieuppsättning
 
    Börja med att ladda upp bilder och videoklipp för uppsättningarna med blandade medier. Om det behövs kan du skapa [bilduppsättningar](/help/assets/image-sets.md) och [rotationsuppsättningar](/help/assets/spin-sets.md). Eftersom användare kan zooma in bilder i visningsprogrammet för uppsättningen med blandade medier bör du ta hänsyn till zoomningen när du väljer bilder. Se till att bilderna har minst 2 000 pixlar i den största dimensionen.
 
-1. [Skapa blandade medieuppsättningar.](#creating-mixed-media-sets)
+1. [Skapa blandade medieuppsättningar](#creating-mixed-media-sets).
 
    Om du vill skapa en uppsättning med blandade medier trycker du på **[!UICONTROL Create > Mixed Media Set]** på resurssidan och ger sedan uppsättningen ett namn, väljer resurser och väljer i vilken ordning bilderna ska visas.
 
-   Se [Arbeta med väljare.](/help/assets/working-with-selectors.md)
+   Se [Arbeta med väljare](/help/assets/working-with-selectors.md).
 
 1. Ställ in [förinställningar för blandad Media Viewer](/help/assets/managing-viewer-presets.md) efter behov.
 
@@ -50,13 +50,13 @@ Följ de här stegen för att komma igång snabbt med blandade medieuppsättning
 
    Se **[!UICONTROL Tools > Assets > Viewer Presets]** om du vill skapa eller redigera visningsprogramförinställningar.
 
-   Se [Lägga till och redigera visningsprogramförinställningar.](/help/assets/managing-viewer-presets.md)
+   Se [Lägga till och redigera visningsprogramförinställningar](/help/assets/managing-viewer-presets.md).
 
-1. [Förhandsgranska blandade medieuppsättningar.](#previewing-mixed-media-sets)
+1. [Förhandsgranska blandade medieuppsättningar](#previewing-mixed-media-sets).
 
    Markera den blandade medieuppsättningen och du kan förhandsgranska den. Klicka på miniatyrbildikonerna för att undersöka den blandade medieuppsättningen i det valda visningsprogrammet. Du kan välja olika visningsprogram på menyn **[!UICONTROL Viewers]**, som finns i den vänstra listrutan.
 
-1. [Publicera blandade medieuppsättningar.](#publishing-mixed-media-sets)
+1. [Publicera blandade medieuppsättningar](#publishing-mixed-media-sets).
 
    När du publicerar en blandad medieuppsättning aktiveras URL-adressen och strängen Embed. Dessutom måste du [publicera visningsförinställningen](/help/assets/managing-viewer-presets.md#publishing-viewer-presets).
 
@@ -86,7 +86,7 @@ Du kan lägga till bilder, bilduppsättningar, snurruppsättningar och videoklip
 
 När du lägger till resurser i uppsättningen läggs de automatiskt till i alfanumerisk ordning. Du kan ändra ordning på eller sortera resurser manuellt när de har lagts till.
 
-**Skapa en blandad medieuppsättning**
+**Så här skapar du en blandad medieuppsättning:**
 
 1. Navigera till den plats där du vill skapa en blandad medieuppsättning i Assets, klicka på **[!UICONTROL Create]** och välj **[!UICONTROL Mixed Media Set]**. Du kan också skapa uppsättningen inifrån en mapp som innehåller resurserna. Redigeraren för uppsättningar med blandade medier visas.
 
@@ -132,7 +132,7 @@ Du kan utföra en mängd redigeringsåtgärder för resurser i blandade medieupp
 * Använd förinställningar för visningsprogram.
 * Ändra standardminiatyrbilden.
 
-**Redigera en blandad medieuppsättning**
+**Så här redigerar du en blandad medieuppsättning:**
 
 1. Gör något av följande:
 
