@@ -10,14 +10,13 @@ topic-tags: integration
 content-type: reference
 discoiquuid: aca444f6-418a-4c01-ae19-663b4e04fab9
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 1c1ade947f2cbd26b35920cfd10b1666b132bcbd
+exl-id: 15f45978-a983-49a0-91cf-c7610fc37eef
+source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
 workflow-type: tm+mt
 source-wordcount: '910'
 ht-degree: 1%
 
 ---
-
 
 # Integrera med Adobe Search &amp; Promote{#integrating-with-adobe-search-promote}
 
@@ -45,7 +44,7 @@ Gör så här för att ringa tjänsten Adobe Search &amp; Promote från din webb
 
 Standardwebbadressen som är konfigurerad för Search &amp; Promote är `https://searchandpromote.omniture.com/px/`. Om du vill använda en annan tjänst använder du OSGi-konsolen för att ange en annan URL.
 
-1. Öppna OSGi-konsolen och klicka på fliken Konfiguration. ([https://localhost:4502/system/console/configMgr.](https://localhost:4502/system/console/configMgr))
+1. Öppna OSGi-konsolen och klicka på fliken Konfiguration. ([https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr))
 1. Klicka på Dag CQ Search &amp; Promote Configuration.
 1. Ange URL-adressen i rutan Fjärrserverns URI och klicka på Spara.
 
