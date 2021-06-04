@@ -10,7 +10,7 @@ discoiquuid: 99d7025f-d022-4213-83c0-815a4712c573
 role: Business Practitioner, Administrator
 exl-id: 750627fc-2a29-43ff-867e-55cb2e371043
 feature: Publicering
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
 workflow-type: tm+mt
 source-wordcount: '452'
 ht-degree: 2%
@@ -21,8 +21,8 @@ ht-degree: 2%
 
 Du publicerar dina Dynamic Media-resurser genom att välja de resurser du redan har överfört och trycka på **[!UICONTROL Publish]** eller **[!UICONTROL Quick Publish]**. När dina Dynamic Media-resurser har publicerats kan du inkludera dem på en webbsida via en URL eller genom att bädda in koden på sidan.
 
-Du kan också publicera resurser som du överför direkt - utan att behöva göra något från användaren. Se [Konfigurera Dynamic Media - Scene7-läge.](config-dms7.md)
-Eller så kan du selektivt publicera material till antingen Dynamic Media eller AEM, som inte är ömsesidigt oberoende av varandra,  **[!UICONTROL Selective Publish]** på mappnivå. Se [Arbeta med selektiv publicering i Dynamic Media.](/help/assets/selective-publishing.md)
+Du kan också publicera resurser som du överför direkt - utan att behöva göra något från användaren. Se [Konfigurera Dynamic Media - Scene7-läge](config-dms7.md).
+Eller så kan du selektivt publicera resurser på antingen Dynamic Media eller AEM, som utesluter varandra, med **[!UICONTROL Selective Publish]** på mappnivå. Se [Arbeta med selektiv publicering i Dynamic Media](/help/assets/selective-publishing.md).
 
 I **[!UICONTROL Card View]** visas en liten globala ikon direkt under namnet på en resurs och till vänster om datumet och tiden för att ange att den publiceras. I **[!UICONTROL List View]** anger kolumnen **[!UICONTROL Published]** vilka resurser som har publicerats och inte.
 
@@ -45,7 +45,7 @@ Se även [Bädda in Dynamic Media Video eller Image Viewer på en webbsida](embe
 
 
 
-Mer information om hur du publicerar en uppsättning eller resurs finns i [Publicera resurser.](manage-assets.md).
+Mer information om publicering av en uppsättning eller resurs finns i [Publicera resurser](manage-assets.md).
 
 ## HTTP/2-leverans av Dynamic Media-resurser {#http-delivery-of-dynamic-media-assets}
 
