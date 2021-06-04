@@ -11,7 +11,7 @@ docset: aem65
 feature: Snurra uppsättningar,Resurshantering
 role: Business Practitioner, Administrator
 exl-id: 758ad754-15de-4e72-9b7d-ab49c51d7d4f
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
 workflow-type: tm+mt
 source-wordcount: '1765'
 ht-degree: 11%
@@ -36,11 +36,11 @@ Snurra uppsättningar anges av en banderoll med ordet **[!UICONTROL SPINSET]**. 
 
 Så här kommer du igång snabbt med Spin Sets:
 
-1. [Ladda upp bilderna för flera vyer.](#uploading-assets-for-spin-sets)
+1. [Ladda upp bilderna för olika vyer](#uploading-assets-for-spin-sets).
 
    Du behöver minst 8-12 tagningar av ett objekt för en endimensionell snurra och 16-24 för en tvådimensionell snurra uppsättning. Fotografierna måste tas med jämna mellanrum för att ge intryck av att objektet roteras och vändas. Om en endimensionell snurra t.ex. innehåller 12 tagningar roterar du objektet 30 grader (360/12) för varje tagning.
 
-1. [Skapa snurruppsättningar.](#creating-spin-sets)
+1. [Skapa snurruppsättningar](#creating-spin-sets).
 
    Om du vill skapa en snurruppsättning väljer du **[!UICONTROL Create > Spin Set]** och ger uppsättningen ett namn, väljer resurser och väljer i vilken ordning bilderna ska visas.
 
@@ -56,17 +56,17 @@ Så här kommer du igång snabbt med Spin Sets:
 
    Se **[!UICONTROL Tools > Assets > Viewer Presets]** om du vill skapa eller redigera visningsprogramförinställningar.
 
-   Se [Lägga till och redigera visningsprogramförinställningar.](/help/assets/managing-viewer-presets.md)
+   Se [Lägga till och redigera visningsprogramförinställningar](/help/assets/managing-viewer-presets.md).
 
 1. [Visar snurruppsättningar](#viewing-spin-sets).
 
    Du kan visa och komma åt uppsättningar som skapats med förinställningar för gruppuppsättningar på tre olika sätt. (Uppsättningar som skapats med gruppuppsättningsförinställningar, *visas inte* i användargränssnittet.)
 
-1. [Förhandsgranska snurra uppsättningar.](/help/assets/previewing-assets.md)
+1. [Förhandsgranska snurruppsättningar](/help/assets/previewing-assets.md).
 
    Markera rotationsuppsättningen så kan du förhandsgranska den. Rotera snurrsuppsättningen. Du kan välja olika visningsprogram på menyn **[!UICONTROL Viewers]**, som finns i den vänstra listrutan.
 
-1. [Publicera snurruppsättningar.](/help/assets/publishing-dynamicmedia-assets.md)
+1. [Publicera snurruppsättningar](/help/assets/publishing-dynamicmedia-assets.md).
 
    När du publicerar en snurruppsättning aktiveras URL-adressen och strängen Embed. Dessutom måste du [publicera visningsförinställningen](/help/assets/managing-viewer-presets.md).
 
@@ -142,7 +142,7 @@ I det här avsnittet beskrivs hur du skapar snurruppsättningar i AEM.
 
    Om det behövs kan du dra en resurs sorteringsikon till höger om resursens filnamn för att ordna om bilderna uppåt eller nedåt i uppsättningslistan.
 
-   ![Ändra ordning på bildruta 11 i rotationsrutan genom att dra den till en ny plats.](assets/6_5_spinset-reorderassets.png)
+   ![Ändra ordning på bildruta 11 i rotationsrutan genom att dra den till en ny plats](assets/6_5_spinset-reorderassets.png).
 
    Ändra ordning på bildruta 11 i rotationsrutan genom att dra den till en ny plats.
 
@@ -162,7 +162,7 @@ Du kan skapa snurruppsättningar antingen i användargränssnittet eller automat
 >
 >Du kan också visa uppsättningar via användargränssnittet enligt beskrivningen i [Redigera snurruppsättningar](#editing-spin-sets).
 
-**Så här visar du snurruppsättningar**
+**Så här visar du snurruppsättningar:**
 
 1. När egenskaperna för en enskild resurs öppnas. Egenskaperna anger vad som ställer in den valda resursen som medlem av (under **[!UICONTROL Member of Sets]**). Klicka på uppsättningens namn för att se hela uppsättningen.
 
@@ -188,7 +188,7 @@ Du kan utföra en mängd redigeringsåtgärder på snurra uppsättningar, till e
 * Använd förinställningar för visningsprogram.
 * Ta bort rotationsrutan.
 
-**Redigera en snurruppsättning**
+**Så här redigerar du en snurra:**
 
 1. Gör något av följande:
 
