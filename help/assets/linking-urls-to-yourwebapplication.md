@@ -10,7 +10,7 @@ discoiquuid: d12e6ea3-aaf4-4672-9679-3c16c76d7d5b
 role: Business Practitioner, Administrator
 exl-id: d62275f0-02a4-48c9-bfb1-e23d63b618c9
 feature: Konfiguration
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
 workflow-type: tm+mt
 source-wordcount: '1211'
 ht-degree: 10%
@@ -21,7 +21,7 @@ ht-degree: 10%
 
 Dina webbplatser och tillämpningar har åtkomst till Dynamic Media tjänster via URL-samtal. När du har publicerat en resurs aktiverar Dynamic Media en URL-sträng som refererar till resursen. Du kan klistra in dessa URL:er i en webbläsare för testning.
 
-Du länkar bara till URL:er om du är *inte* och använder AEM som WCM. Länkning/inbäddning används när du vill leverera en videospelare som ett popup-fönster eller modalt fönster. Om du använder AEM som WCM-fil [lägger du till resurserna direkt på sidan.](adding-dynamic-media-assets-to-pages.md)
+Du länkar bara till URL:er om du är *inte* och använder AEM som WCM. Länkning/inbäddning används när du vill leverera en videospelare som ett popup-fönster eller modalt fönster. Om du använder AEM som WCM-fil [lägger du till resurserna direkt på sidan](adding-dynamic-media-assets-to-pages.md).
 
 Om du vill placera dessa URL-strängar på dina webbsidor och i dina program kopierar du dem från Dynamic Media.
 
@@ -29,13 +29,13 @@ Om du vill placera dessa URL-strängar på dina webbsidor och i dina program kop
 >
 >URL-strängar är bara tillgängliga för dynamiska återgivningar av resurser. De är för närvarande inte tillgängliga för statiska resurser som finns i DAM och inte på Dynamic Media-servern. URL-knappen visas inte för återgivningar som är statiska.
 
-Se även [Bädda in video- eller bildvisningsprogrammet på en webbsida.](embed-code.md)
+Se även [Bädda in video- eller bildvisningsprogrammet på en webbsida](embed-code.md).
 
-Se även [Länka YouTube URL:er till ditt webbprogram.](video.md)
+Se även [Länka YouTube URL:er till ditt webbprogram](video.md).
 
-Se även [Leverera optimerade bilder för en responsiv webbplats.](responsive-site.md)
+Se även [Leverera optimerade bilder för en responsiv plats](responsive-site.md).
 
-Se även [Överför resurser.](manage-assets.md#uploading-assets)
+Se även [Överför resurser](manage-assets.md#uploading-assets).
 
 ## Hämta en URL för en resurs {#obtaining-a-url-for-an-asset}
 
@@ -59,7 +59,7 @@ Du kan hämta en URL-sträng på flera olika sätt. Stegen nedan visar dock bara
 
    Kom ihåg att URL:er endast går att kopiera *efter* att du har *publicerat* resurserna. Dessutom måste visningsförinställningen eller bildförinställningen också publiceras.
 
-   Se [Publicera resurser.](publishing-dynamicmedia-assets.md)
+   Se [Publicera resurser](publishing-dynamicmedia-assets.md).
 
    Se [Förinställningar för publiceringsvisningsprogram](managing-viewer-presets.md#publishing-viewer-presets).
 
