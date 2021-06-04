@@ -4,14 +4,13 @@ description: AEM Forms JEE Patch Installer
 uuid: 76662858-afca-4ba3-883b-9b9a61874f15
 content-type: reference
 discoiquuid: b0283feb-c3ec-4ef0-885c-46bc83a61e26
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 6b17472b-9226-4319-b305-4dba862d21af
+source-git-commit: ecac6269b5e12b847136f4af534016bc7b88bb2b
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '476'
 ht-degree: 0%
 
 ---
-
 
 # AEM Forms JEE Patch Installer {#aem-forms-jee-patch-installer}
 
@@ -53,10 +52,12 @@ LinuxNavigera till rätt katalog och skriv från en kommandotolk
 1. Läs informationen i Sammanfattning av förinstallation och klicka på **[!UICONTROL Install]**.
 1. När installationen är klar klickar du på **[!UICONTROL Next]** för att tillämpa snabbkorrigeringsuppdateringarna på de installerade filerna.
 
-1. Avmarkera alternativet Starta Configuration Manager innan du klickar på Klar. Innan du kör konfigurationshanteraren med **ConfigurationManager.exe** eller **ConfigurationManager_IPv6.exe** går du till *&lt;AEMForms_Install_Dir>\configurationManager\bin*-katalog och uppdaterar **axis.jar** till **axis-1.4.1.1.1.1.1.1.1.1.1 .jar** i följande filer:
+1. Avmarkera alternativet Starta Configuration Manager innan du klickar på Klar. Innan du kör konfigurationshanteraren med **ConfigurationManager.exe** eller **ConfigurationManager_IPv6.exe** går du till *&lt;AEMForms_Install_Dir>\configurationManager\bin* och uppdaterar `ConfigurationManager.lax`- och `ConfigurationManager_IPv6.lax`-filer med följande namnbytesåtgärder:
 
-   * ConfigurationManager.lax
-   * ConfigurationManager_IPv6.lax
+   * `axis.jar` till  `axis-1.4.1.1.jar`
+   * `serializer-2.7.1.jar` till  `serializer-2.7.2.jar`
+   * `xalan-2.7.1.jar` till  `xalan-2.7.2.jar`
+   * `xercesImpl-2.9.1.jar` till  `xercesImpl-2.12.0.jar`
 
 1. Kryssrutan Starta Configuration Manager är markerad som standard. Klicka på **[!UICONTROL Done]** för att köra Configuration Manager.
 
