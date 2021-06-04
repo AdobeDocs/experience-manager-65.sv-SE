@@ -8,7 +8,7 @@ content-type: reference
 role: Business Practitioner, Administrator
 exl-id: 23d3c274-0736-49f7-8d44-a56a55cfd06d
 feature: CDN-cache
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
 workflow-type: tm+mt
 source-wordcount: '1280'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Dynamic Media-resurser cachas av CDN (Content Delivery Network) för snabb lever
 
 >[!IMPORTANT]
 >
->Följande steg gäller endast för Dynamic Media - Scene7-läge i Adobe Experience Manager 6.5, Service Pack 6 (Experience Manager 6.5.6) eller senare. Denna CDN-funktion kräver också att du använder det färdiga CDN som medföljer Experience Manager Dynamic Media. inget annat anpassat CDN stöds.<br>Om du använder Dynamic Media i Experience Manager 6.5, Service Pack 5 (Experience Manager 6.5.5) eller tidigare, följer du stegen i  [Invalidera CDN-cachen med hjälp av Dynamic Media Classic.](/help/assets/invalidate-cdn-cache-dm-classic.md)
+>Följande steg gäller endast för Dynamic Media - Scene7-läge i Adobe Experience Manager 6.5, Service Pack 6 (Experience Manager 6.5.6) eller senare. Denna CDN-funktion kräver också att du använder det färdiga CDN som medföljer Experience Manager Dynamic Media. inget annat anpassat CDN stöds.<br>Om du använder Dynamic Media i Experience Manager 6.5, Service Pack 5 (Experience Manager 6.5.5) eller tidigare, följer du stegen i  [Invalidera CDN-cachen med hjälp av Dynamic Media Classic](/help/assets/invalidate-cdn-cache-dm-classic.md).
 
 Se även [Översikt över cachelagring i Dynamic Media](https://helpx.adobe.com/experience-manager/scene7/kb/base/caching-questions/scene7-caching-overview.html).
 
