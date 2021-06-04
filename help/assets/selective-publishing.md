@@ -9,7 +9,7 @@ docset: aem65
 role: Business Practitioner, Administrator
 exl-id: cd025e9d-6fb1-436c-9e78-795f2daaf345
 feature: Publicering
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
 workflow-type: tm+mt
 source-wordcount: '2539'
 ht-degree: 1%
@@ -38,10 +38,10 @@ Oavsett om du förlitar dig på **[!UICONTROL Publish Assets]**-värdet som ange
 
 När du har konfigurerat selektiv publicering i en mapp kan du göra något av följande:
 
-* [Publicera valfritt material till Dynamic Media eller AEM med Hantera publikation.](#selective-publish-manage-publication)
-* [Avpublicera valfritt material från Dynamic Media eller AEM med Hantera publikation.](#selective-unpublish-manage-publication)
-* [Publicera material till Dynamic Media eller AEM med Snabbpublicering.](#quick-publish-aem-dm)
-* [Publicera eller avpublicera resurser selektivt via sökresultat.](#selective-publish-unpublish-search-results)
+* [Publicera valfritt material till Dynamic Media eller AEM med Hantera publikation](#selective-publish-manage-publication).
+* [Avpublicera valfritt material från Dynamic Media eller AEM med Hantera publikation](#selective-unpublish-manage-publication).
+* [Publicera material till Dynamic Media eller AEM med Snabbpublicering](#quick-publish-aem-dm).
+* [Publicera eller avpublicera resurser selektivt via sökresultat](#selective-publish-unpublish-search-results).
 
 **Konfigurera selektiv publicering på mappnivå i Dynamic Media**
 
@@ -186,7 +186,7 @@ Du kan använda **[!UICONTROL Quick Publish]** för enkla resursaktiveringsfall.
 
 Sökresultaten kan visa resurser från olika resursmappar med olika publiceringsinställningar för Dynamic Media. Om du har valt en eller flera resurser från sökresultaten och resurserna har olika publiceringslägesinställningar för Dynamic Media, kan du aktivera **[!UICONTROL Manage Publication]** från verktygsfältet för att publicera eller avpublicera.
 
-Se även [Sök efter resurser i AEM.](/help/assets/search-assets.md)
+Se även [Sök efter resurser i AEM](/help/assets/search-assets.md).
 
 **Publicera eller avpublicera resurser selektivt via sökresultat**
 
