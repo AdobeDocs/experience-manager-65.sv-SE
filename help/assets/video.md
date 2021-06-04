@@ -11,7 +11,7 @@ docset: aem65
 feature: Resurshantering
 role: Business Practitioner, Administrator
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
 workflow-type: tm+mt
 source-wordcount: '11272'
 ht-degree: 6%
@@ -30,7 +30,7 @@ Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma ig�
 >
 >Innan du arbetar med video i Dynamic Media måste du kontrollera att AEM redan har aktiverat och konfigurerat Dynamic Media-Cloud Services i Dynamic Media - Scene7-läge eller Dynamic Media - hybrid-läge.
 >
->* Se [Konfigurera Dynamic Media-Cloud Services](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services) i Konfigurera Dynamic Media - Scene7 och [Felsöka Dynamic Media - Scene7-läge.](/help/assets/troubleshoot-dms7.md)
+>* Se [Konfigurera Dynamic Media-Cloud Services](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services) i Konfigurera Dynamic Media - Scene7 och [Felsöka Dynamic Media - Scene7-läge](/help/assets/troubleshoot-dms7.md).
    >
    >
 * Se [Konfigurera Dynamic Media-Cloud Services](/help/assets/config-dynamic.md#configuring-dynamic-media-cloud-services) i Konfigurera Dynamic Media - hybrid-läge.
@@ -356,7 +356,7 @@ I den här tabellen beskrivs datahastigheten för typiska anslutningshastigheter
 
 ### Upplösning {#resolution}
 
-**Upplösning **beskriver en videofils höjd och bredd i pixlar. Den mesta källvideon lagras med hög upplösning (till exempel 1 920 x 1 080). Vid direktuppspelning komprimeras källvideo till en lägre upplösning (640 x 480 eller lägre).
+**Upplösning** beskriver videofilens höjd och bredd i pixlar. Den mesta källvideon lagras med hög upplösning (till exempel 1 920 x 1 080). Vid direktuppspelning komprimeras källvideo till en lägre upplösning (640 x 480 eller lägre).
 
 Upplösning och datahastighet är två sammankopplade faktorer som avgör videokvaliteten. Om du vill behålla samma videokvalitet måste datahastigheten vara högre ju fler pixlar en videofil har (ju högre upplösning). Ta till exempel antalet pixlar per bildruta i en 320 x 240-upplösning och en 640 x 480-upplösningsvideofil:
 
@@ -403,9 +403,9 @@ Anta till exempel att källvideon är 1 920 x 1 080. I följande tabell ger de t
 
 | Videotyp | Bredd x höjd | Breddförhållande | Höjdförhållande |
 |--- |--- |--- |--- |
-| Källa | 1920 x 1080 | 1 | 1 |
+| Källa | 1920 x 1080 | 1 | 3 |
 | Kodad | 960 x 540 | 2 | 2 |
-| Kodad | 640 x 360 | 3 | 1 |
+| Kodad | 640 x 360 | 3 | 3 |
 | Kodad | 480 x 270 | 4 | 4 |
 
 ### Kodat videofilformat {#encoded-video-file-format}
@@ -548,7 +548,7 @@ Du måste ha en eller flera kanaler för att kunna publicera videofilmer på You
 >
 >Kontrollera att du redan har konfigurerat en eller flera kanaler i YouTube *innan* du lägger till kanaler under YouTube Settings i AEM (se [Konfigurera YouTube i AEM](#setting-up-youtube-in-aem) nedan). Om du inte gör detta får du ingen varning om att det inte finns några befintliga kanaler. Google-autentisering sker dock fortfarande när du lägger till en kanal, men det finns inget alternativ för att välja vilken kanal videon skickas till.
 
-Så här skapar du en YouTube-kanal:
+**Så här skapar du en YouTube-kanal:**
 
 1. Gå till [https://www.youtube.com](https://www.youtube.com/) och logga in med inloggningsuppgifterna för ditt Google-konto.
 1. Klicka på din profilbild i det övre högra hörnet på YouTube-sidan (kan också visas som en bokstav i en enfärgad cirkel) och klicka sedan på **[!UICONTROL YouTube settings]** (den runda kugghjulsikonen).
@@ -761,7 +761,7 @@ Nu kopplar du taggarna som du lade till tidigare till videoresurser. I den här 
 >
 >Mer detaljerad förloppsinformation finns i YouTube-loggen som replikeras. Tänk dock på att en sådan övervakning kräver administratörsåtkomst.
 
-Så här publicerar du videor i din YouTube-kanal:
+**Så här publicerar du videor i din YouTube-kanal:**
 
 1. I AEM navigerar du till en videoresurs som du vill publicera i din YouTube-kanal.
 1. Välj videoresurs (den adaptiva videouppsättningen).
@@ -797,7 +797,7 @@ Du kan hämta en YouTube URL-sträng som genereras av Dynamic Media när du har 
 >
 >YouTube-URL:en kan inte kopieras förrän du har publicerat videoresursen till YouTube.
 
-Så här länkar du YouTube URL:er till ditt webbprogram:
+**Så här länkar du YouTube URL:er till ditt webbprogram:**
 
 1. Navigera till den *YouTube-publicerade* videoresurs vars URL du vill kopiera och markera den.
 
@@ -821,7 +821,7 @@ När du avpublicerar en videoresurs i AEM tas videon bort från YouTube.
 >
 >Se [Övervaka videokodning och publiceringsförlopp på YouTube](#monitoring-video-encoding-and-youtube-publishing-progress).
 
-Så här avpublicerar du videoklipp för att ta bort dem från YouTube:
+**Så här avpublicerar du videoklipp för att ta bort dem från YouTube:**
 
 1. Navigera till de videoresurser som du vill avpublicera från din YouTube-kanal.
 1. Välj en eller flera publicerade videoresurser i ett resursurvalsläge.
@@ -836,7 +836,7 @@ När du överför en ny video till en mapp där videokodning används eller publ
 
 ### Övervaka förlopp {#monitoring-progress}
 
-Så här övervakar du förloppet (inklusive misslyckad kodning/YouTube-publicering):
+**Så här övervakar du förloppet (inklusive misslyckad kodning/YouTube-publicering):**
 
 1. Visa kodningsförloppet för video i resursmappen:
 
@@ -987,7 +987,7 @@ Första gången du anger Videorapporter visas som standard videodata från och m
 
 För att videorapporter ska fungera på rätt sätt skapas ett Report Suite-ID automatiskt när Dynamic Media-Cloud Services konfigureras. Samtidigt skickas Report Suite-ID:t till publiceringsservern så att det är tillgängligt för funktionen Kopiera URL när du förhandsgranskar resurser. Detta kräver dock att publiceringsservern redan har konfigurerats. Om publiceringsservern inte är konfigurerad kan du fortfarande publicera för att se videorapporten, men du måste gå tillbaka till Dynamic Media Cloud Configuration och trycka på **[!UICONTROL OK]**.
 
-Så här visar du videorapporter:
+**Så här visar du videorapporter:**
 
 1. I det övre vänstra hörnet av AEM trycker du på AEM-logotypen och sedan i den vänstra rutan på **[!UICONTROL Tools]** (hammarikon) > **[!UICONTROL Assets]** > **[!UICONTROL Video Reports]**.
 1. Gör något av följande på sidan Videorapporter:
@@ -1008,7 +1008,7 @@ Om du använder ett användningsklart visningsprogram från Dynamic Media, eller
 
 Använd [Adobe Dynamic Media Viewer Reference Guide](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html) och [HTML5 Viewer SDK API](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html) för att skapa egna videovisningsprogram.
 
-Så här visar du videorapporter baserade på ett videovisningsprogram som du har skapat med HTML5 Viewer SDK API:
+**Så här visar du videorapporter baserade på ett videovisningsprogram som du har skapat med HTML5 Viewer SDK API:**
 
 1. Navigera till alla publicerade videoresurser.
 1. I listrutan i det övre vänstra hörnet på resursens sida väljer du **[!UICONTROL Viewers]**.
@@ -1108,7 +1108,7 @@ Mer information om hur du använder JSON-funktionen i en URL finns i [Serverar s
 
    Kom ihåg att URL:er endast går att kopiera *efter* att du har *publicerat* resurserna.
 
-   Se [Publicera resurser.](/help/assets/publishing-dynamicmedia-assets.md)
+   Se [Publicera resurser](/help/assets/publishing-dynamicmedia-assets.md).
 
 1. Gör något av följande:
 
@@ -1311,7 +1311,7 @@ Se [Lägga till en videominiatyr](#adding-a-video-thumbnail).
 1. Tryck på **[!UICONTROL OK]** för att återgå till fliken Egenskaper.
 1. I närheten av det övre vänstra hörnet på CRXDE Lite-sidan trycker du på **[!UICONTROL Save All]** och sedan på ikonen Bakåt i det övre vänstra hörnet för att återgå till AEM.
 
-   Se [Lägga till en videominiatyr.](#adding-a-video-thumbnail)
+   Se [Lägga till en videominiatyr](#adding-a-video-thumbnail).
 
 ### Lägga till en anpassad videominiatyr {#adding-a-custom-video-thumbnail-1}
 
