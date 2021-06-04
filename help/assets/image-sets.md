@@ -11,7 +11,7 @@ docset: aem65
 feature: bilduppsättningar,Resurshantering
 role: Business Practitioner, Administrator
 exl-id: 2a536745-fa13-4158-8761-2ac5b6e1893e
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
 workflow-type: tm+mt
 source-wordcount: '2018'
 ht-degree: 13%
@@ -40,13 +40,13 @@ Anta till exempel att du vill visa bilder med olika färgskalor; räkningarna ä
 
 **Så här kommer du igång snabbt:**
 
-1. [Överför dina primära källbilder för flera vyer.](#uploading-assets-in-image-sets)
+1. [Överför dina primära källbilder för flera vyer](#uploading-assets-in-image-sets).
 
    Börja med att ladda upp bilderna för dina bilduppsättningar. När du väljer bilder bör du komma ihåg att dina kunder kan zooma in på bilder i bilduppsättningsvisningsprogrammet. Se till att bilderna har minst 2 000 pixlar i den största dimensionen för optimal zoomdetaljrikedom. Dynamic Media kan återge bilder på upp till 25 megapixlar vardera. Du kan till exempel använda en 5 000 × 5 000 megapixelbild eller någon annan storlekskombination på upp till 25 megapixlar.
 
    Adobe Experience Manager Assets stöder många bildfilsformat, men förlustfria TIFF-, PNG- och EPS-bilder rekommenderas.
 
-1. [Skapa bilduppsättningar.](#creating-image-sets)
+1. [Skapa bilduppsättningar](#creating-image-sets).
 
    I Bilduppsättningar klickar användare på miniatyrbilder i Bilduppsättningsvisningsprogrammet.
 
@@ -59,7 +59,7 @@ Anta till exempel att du vill visa bilder med olika färgskalor; räkningarna ä
 
    Se [Förbereda bilduppsättningsresurser för överföring och överföring av filer](#uploading-assets-in-image-sets).
 
-   Se [Arbeta med väljare.](/help/assets/working-with-selectors.md)
+   Se [Arbeta med väljare](/help/assets/working-with-selectors.md).
 
 1. Lägg till [Image Set Viewer-förinställningar](/help/assets/managing-viewer-presets.md) efter behov.
 
@@ -68,11 +68,11 @@ Anta till exempel att du vill visa bilder med olika färgskalor; räkningarna ä
    Se **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Viewer Presets]** om du vill skapa eller redigera visningsförinställningar.
 
 1. (Valfritt) [Visa bilduppsättningar](/help/assets/image-sets.md#viewing-image-sets) som har skapats med gruppuppsättningsförinställningar.
-1. [Förhandsgranska bilduppsättningar.](/help/assets/previewing-assets.md)
+1. [Förhandsgranska bilduppsättningar](/help/assets/previewing-assets.md).
 
    Markera bilduppsättningen och du kan förhandsgranska den. Klicka på miniatyrbildikonerna så att du kan undersöka bilduppsättningen i det valda visningsprogrammet. Du kan välja olika visningsprogram på menyn **[!UICONTROL Viewers]**, som finns i den vänstra listrutan.
 
-1. [Publicera bilduppsättningar.](/help/assets/publishing-dynamicmedia-assets.md)
+1. [Publicera bilduppsättningar](/help/assets/publishing-dynamicmedia-assets.md).
 
    När du publicerar en bilduppsättning aktiveras URL-adressen och inbäddningskoden. Dessutom måste du [publicera alla anpassade visningsförinställningar](/help/assets/managing-viewer-presets.md) som du har skapat. Visningsförinställningarna som är färdiga för leverans har redan publicerats.
 
@@ -84,7 +84,7 @@ Anta till exempel att du vill visa bilder med olika färgskalor; räkningarna ä
 
    Läs mer i [Länka en bilduppsättning till en webbsida](/help/assets/linking-urls-to-yourwebapplication.md) och [Bädda in video- eller bildvisningsprogrammet](/help/assets/embed-code.md).
 
-Mer information om hur du redigerar bilduppsättningar finns i [Redigera bilduppsättningar.](#editing-image-sets) Dessutom kan du visa och redigera  [bilduppsättningsegenskaper](/help/assets/manage-assets.md#editing-properties).
+Mer information om hur du redigerar bilduppsättningar finns i [redigera bilduppsättningar](#editing-image-sets). Dessutom kan du visa och redigera [bilduppsättningsegenskaper](/help/assets/manage-assets.md#editing-properties).
 
 Om du har problem med att skapa uppsättningar kan du läsa Bilder och uppsättningar i [Felsöka Dynamic Media - Scene7-läge](/help/assets/troubleshoot-dms7.md#images-and-sets).
 
@@ -148,7 +148,7 @@ När du lägger till resurser i uppsättningen läggs de automatiskt till i alfa
 
    Med resursväljaren kan du söka efter resurser genom att skriva ett nyckelord och trycka eller klicka på **[!UICONTROL Return]**. Du kan också använda filter för att förfina sökresultatet. Du kan filtrera efter sökväg, samling, filtyp och tagg. Markera filtret och tryck sedan på ikonen **[!UICONTROL Filter]** i verktygsfältet. Ändra vyn genom att trycka på ikonen Visa och sedan välja **[!UICONTROL Column View]**, **[!UICONTROL Card View]** eller **[!UICONTROL List View]**.
 
-   Se [Arbeta med väljare.](/help/assets/working-with-selectors.md)
+   Se [Arbeta med väljare](/help/assets/working-with-selectors.md).
 
    ![6_5_imageset-add-assets](assets/6_5_imageset-addingassets.png)
 
