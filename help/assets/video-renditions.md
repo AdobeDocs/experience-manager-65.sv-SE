@@ -5,14 +5,13 @@ uuid: a02f9ec1-30d9-4cbb-8746-8391ac614f0a
 contentOwner: rbrough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: 1601b473-7227-4a56-bb7c-289de2987e4b
-translation-type: tm+mt
-source-git-commit: 66f46a34832254af74c72da16ec8ebe3eb8cd46d
+exl-id: a644558e-5be9-4ba2-b560-fc300497fbdf
+source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
 workflow-type: tm+mt
 source-wordcount: '218'
 ht-degree: 0%
 
 ---
-
 
 # Videoåtergivningar {#video-renditions}
 
@@ -34,7 +33,7 @@ Listan med videoåtergivningar visas på panelen **[!UICONTROL Renditions]**.
 
 ![chlimage_1-479](assets/chlimage_1-479.png)
 
-[Konfigurera Dynamic Media Cloud-tjänster om du vill konfigurera proxyservern för DM-kodade återgivningar.](config-dynamic.md)
+[Konfigurera Dynamic Media Cloud-tjänster](config-dynamic.md) om du vill konfigurera proxyservern för DM-kodade återgivningar.
 
 Om du vill generera videoåtergivningar med önskade parametrar [skapar du en motsvarande videoprofil](video-profiles.md).
 
