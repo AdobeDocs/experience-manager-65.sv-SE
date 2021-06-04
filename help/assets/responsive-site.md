@@ -7,16 +7,15 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 5edcc765-c374-4368-a0d9-e02a713a24f2
-feature: Asset Management
+feature: Resurshantering
 role: Business Practitioner, Administrator
-translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+exl-id: 753d806f-5f44-4d73-a3a3-a2a0fc3e154b
+source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
 workflow-type: tm+mt
-source-wordcount: '326'
+source-wordcount: '323'
 ht-degree: 12%
 
 ---
-
 
 # Leverera optimerade bilder för en responsiv webbplats {#delivering-optimized-images-for-a-responsive-site}
 
@@ -24,11 +23,11 @@ Använd funktionen Responsiv kod när du vill dela koden för responsiv visning 
 
 Den här funktionen är användbar om webbplatsen finns på en WCM-fil från tredje part. Om webbplatsen däremot finns på AEM återger en extern bildserver bilden och skickar den till webbsidan.
 
-Se även [Bädda in Video Viewer på en webbsida.](embed-code.md)
+Se även [Bädda in Video Viewer på en webbsida](embed-code.md).
 
-Se även [Länka URL:er till ditt webbprogram.](linking-urls-to-yourwebapplication.md)
+Se även [Länka URL:er till ditt webbprogram](linking-urls-to-yourwebapplication.md).
 
-**Så här levererar du optimerade bilder för en responsiv webbplats**:
+**Så här levererar du optimerade bilder för en responsiv webbplats:**
 
 1. Navigera till bilden som du vill ange responsiv kod för och tryck på **[!UICONTROL Renditions]** i listrutan.
 
