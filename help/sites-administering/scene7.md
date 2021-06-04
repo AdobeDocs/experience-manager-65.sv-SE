@@ -5,14 +5,13 @@ contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
-translation-type: tm+mt
-source-git-commit: d700510efb340598a7931647164e22d574884569
+exl-id: f244cfb5-5550-4f20-92f0-bb296e2bf76e
+source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
 workflow-type: tm+mt
 source-wordcount: '5332'
 ht-degree: 1%
 
 ---
-
 
 # Integrera med Dynamic Media Classic {#integrating-with-dynamic-media-classic-scene}
 
@@ -54,7 +53,7 @@ När du arbetar med resurser i den här lösningen gör du något av följande:
 * Ladda upp material direkt till Dynamic Media Classic och gå sedan till via **Dynamic Media Classic**-webbläsaren för att skapa sidor eller
 * Överför till Experience Manager Assets och aktivera sedan automatisk publicering till Dynamic Media Classic. du kommer åt via **Resurser** i webbläsaren för att skapa sidor
 
-Komponenterna som du använder för den här integreringen finns i **Dynamic Media Classic**-komponentområdet i [designläget.](/help/sites-authoring/author-environment-tools.md#page-modes)
+Komponenterna som du använder för den här integreringen finns i **Dynamic Media Classic**-komponentområdet i [Designläge](/help/sites-authoring/author-environment-tools.md#page-modes).
 
 ### Experience Manager Dynamic Media {#aem-dynamic-media}
 
@@ -424,8 +423,8 @@ Om du inte vill att resurser som skickas till Dynamic Media Classic ska publicer
 
 Innan du kan överföra resurser till Dynamic Media Classic utan att publicera dem måste du konfigurera följande:
 
-1. [Använd Admin Console för att skapa ett supportärende.](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html) I ditt supportärende begär du att du aktiverar säker förhandsvisning för ditt Dynamic Media Classic-konto.
-1. Följ instruktionerna för att [konfigurera säker förhandsgranskning för ditt Dynamic Media Classic-konto.](https://help.adobe.com/en_US/scene7/using/WSd968ca97bf00cf72-5eeee3a113268dc80f5-8000.html)
+1. [Använd Admin Console för att skapa ett supportärende](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html). I ditt supportärende begär du att du aktiverar säker förhandsvisning för ditt Dynamic Media Classic-konto.
+1. Följ anvisningarna för att [konfigurera säker förhandsgranskning för ditt Dynamic Media Classic-konto](https://help.adobe.com/en_US/scene7/using/WSd968ca97bf00cf72-5eeee3a113268dc80f5-8000.html).
 
 Detta är samma steg som du följer för att skapa säkra testinställningar i Dynamic Media Classic.
 
@@ -623,4 +622,3 @@ Om du har problem med att integrera Experience Manager med Dynamic Media Classic
 >Det kan ta lång tid att importera resurser från ett befintligt Dynamic Media Classic-företagskonto och visa dem i Experience Manager. Se till att du anger en mapp i Dynamic Media Classic som inte har för många resurser. Rotmappen har till exempel ofta för många resurser.
 >
 >Om du vill testa att köra integreringen ska rotmappen bara peka på en undermapp, i stället för på hela företaget.
-
