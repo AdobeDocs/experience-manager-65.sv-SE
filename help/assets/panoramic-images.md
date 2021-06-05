@@ -11,10 +11,10 @@ docset: aem65
 feature: Panoramabilder,Resurshantering
 role: Business Practitioner, Administrator
 exl-id: 4d6fbeb1-94db-4154-9e41-b76033fb4398
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 1349d9929fc64ad46fc91f0d189bab54cca9de81
 workflow-type: tm+mt
-source-wordcount: '554'
-ht-degree: 5%
+source-wordcount: '548'
+ht-degree: 4%
 
 ---
 
@@ -42,11 +42,11 @@ Information om hur du överför resurser som ska användas med visningsprogramme
 
 ## Konfigurerar Dynamic Media Classic {#configuring-dynamic-media-classic-scene}
 
-För att visningsprogrammet för panoramabilder ska fungera på rätt sätt i AEM måste du synkronisera förinställningarna för visningsprogrammet för panoramabilder med Dynamic Media Classic och Dynamic Media Classic-specifika metadata så att visningsförinställningarna uppdateras i JCR-filen. Konfigurera Dynamic Media Classic på följande sätt:
+För att visningsprogrammet för panoramabilder ska fungera på rätt sätt i Adobe Experience Manager synkroniserar du förinställningarna för visningsprogrammet för panoramabilder med Dynamic Media Classic och Dynamic Media Classic-specifika metadata så att visningsförinställningarna uppdateras i JCR-filen. Konfigurera Dynamic Media Classic enligt följande:
 
 1. Öppna [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och logga sedan in på ditt konto.
 
-1. Klicka på **[!UICONTROL Setup > Application Setup > Publish Setup > Image Server]** i det övre högra hörnet på sidan.
+1. Klicka på **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL Publish Setup]** > **[!UICONTROL Image Server]** i sidans övre högra hörn.
 1. Välj **[!UICONTROL Image Serving]** i listrutan **[!UICONTROL Publish Context]** på sidan Image Server Publish.
 
 1. Gå till rubriken **[!UICONTROL Request Attributes]** på samma Image Server Publish-sida.
@@ -63,7 +63,7 @@ För att visningsprogrammet för panoramabilder ska fungera på rätt sätt i AE
    * Ställ in begäranobfuktningsläget på **[!UICONTROL Disabled]**.
    * Ange läget för låsning av begäran till **[!UICONTROL Disabled]**.
 
-   Dessa inställningar är nödvändiga för att du ska kunna använda WCM-komponenten `Panoramic Media` i AEM.
+   Dessa inställningar är nödvändiga för att du ska kunna använda WCM-komponenten `Panoramic Media` i Experience Manager.
 
 1. Klicka på **[!UICONTROL Save]** längst ned på sidan Image Server Publish (Publicera på vänster sida).
 
@@ -71,13 +71,13 @@ För att visningsprogrammet för panoramabilder ska fungera på rätt sätt i AE
 
 ### Felsökning av WCM-komponenten för panoramamedia {#troubleshooting-the-panoramic-media-wcm-component}
 
-Om du har släppt en bild i panoramamediakomponenten i WCM-filen och platshållaren för komponenten är komprimerad kanske du vill felsöka följande:
+Om du har släppt en bild i panoramamediakomponenten i WCM-filen och platshållaren för komponenten är komprimerad felsöker du följande:
 
-* Om du får ett otillåtet fel 403 kan det bero på att den begärda bildstorleken är för stor. Granska **[!UICONTROL Reply Image Size Limit]**-inställningarna i [Konfigurera Dynamic Media Classic](/help/assets/panoramic-images.md#configuring-dynamic-media-classic-scene).
+* Om du får ett otillåtet 403-fel kan det bero på att den begärda bildstorleken är för stor. Granska **[!UICONTROL Reply Image Size Limit]**-inställningarna i [Konfigurera Dynamic Media Classic](/help/assets/panoramic-images.md#configuring-dynamic-media-classic-scene).
 
 * Om objektet har ett ogiltigt lås eller om ett parsningsfel visas på sidan, kontrollerar du Begär felsökningsläge och Begär låsläge för att se om de är inaktiverade.
-* Om det uppstår ett fel på arbetsytan för en målad arbetsyta skapar du en sökväg till definitionsfilen för regeluppsättningen och kontrollerar CTN för de tidigare förfrågningarna om bildresursen.
-* Om bildkvaliteten blir mycket låg efter en bildbegäran med en storlek över den gräns som stöds, kontrollerar du att inställningen **[!UICONTROL JPEG Encoding Attributes > Quality]** inte är tom. En typisk inställning för fältet **[!UICONTROL Quality]** är `95`. Inställningen finns på sidan Image Server Publish (Bildserverpublicering). Mer information finns i [Konfigurera Dynamic Media Classic](/help/assets/panoramic-images.md#configuring-dynamic-media-classic-scene).
+* Om det är ett fel på arbetsytan för målning anger du en sökväg till definitionsfilen för regeluppsättningen och en ogiltig CTN för de tidigare förfrågningarna om bildresursen.
+* Om bildkvaliteten blir låg efter en bildbegäran med en storlek över den gräns som stöds, kontrollerar du att inställningen **[!UICONTROL JPEG Encoding Attributes > Quality]** inte är tom. En typisk inställning för fältet **[!UICONTROL Quality]** är `95`. Inställningen finns på sidan Image Server Publish (Bildserverpublicering). Mer information finns i [Konfigurera Dynamic Media Classic](/help/assets/panoramic-images.md#configuring-dynamic-media-classic-scene).
 
 ## Förhandsgranska panoramabilder {#previewing-panoramic-images}
 
