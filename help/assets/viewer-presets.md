@@ -10,9 +10,9 @@ discoiquuid: 82bed457-794e-4bf2-bc80-abde24fd2851
 feature: Förinställningar för visningsprogram
 role: Business Practitioner, Administrator
 exl-id: daa1ffdd-de5c-470e-8875-84144b7d327f
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 1349d9929fc64ad46fc91f0d189bab54cca9de81
 workflow-type: tm+mt
-source-wordcount: '214'
+source-wordcount: '215'
 ht-degree: 23%
 
 ---
@@ -21,11 +21,11 @@ ht-degree: 23%
 
 En visningsförinställning är en samling inställningar som bestämmer hur användare visar mediefiler på datorskärmar och mobila enheter. Du kan använda alla förinställningar för visningsprogram som du har skapat av administratören på en resurs.
 
-Om du är administratör och behöver hantera, skapa, sortera och ta bort visningsförinställningar läser du [Hantera visningsförinställningar](managing-viewer-presets.md).
+Om du är administratör och måste hantera, skapa, sortera och ta bort visningsförinställningar läser du [Hantera visningsförinställningar](managing-viewer-presets.md).
 
 Se även [Förinställningar för publiceringsvisningsprogram](managing-viewer-presets.md#publishing-viewer-presets).
 
-Du kanske inte behöver publicera förinställningar för visningsprogrammet beroende på vilket publiceringsläge du använder.
+Du behöver inte publicera förinställningar för visningsprogrammet beroende på vilket publiceringsläge du använder.
 Eventuella problem med visningsförinställningar finns i [Felsökning av Dynamic Media - Scene7](troubleshoot-dms7.md#viewers).
 
 ## Använda en förinställning för Dynamic Media-visningsprogram på en resurs {#applying-a-viewer-preset-to-an-asset}
@@ -37,7 +37,7 @@ Eventuella problem med visningsförinställningar finns i [Felsökning av Dynami
    * Knapparna **[!UICONTROL URL]** och **[!UICONTROL Embed]** visas när du har valt en visningsförinställning.
    * Systemet visar flera visningsförinställningar när du väljer visningsprogram för en resurs **[!UICONTROL Detail View]**. Du kan öka antalet förinställningar som visas. Se [Öka antalet visningsförinställningar som visas](managing-viewer-presets.md).
 
-1. Välj ett visningsprogram i den vänstra rutan för att använda det på resursen så som den visas i den högra rutan. Du kan även [kopiera URL:en för att dela](linking-urls-to-yourwebapplication.md) med andra användare.
+1. Välj ett visningsprogram i den vänstra rutan så att du kan använda det på resursen så som den visas i den högra rutan. Du kan även [kopiera URL:en för att dela](linking-urls-to-yourwebapplication.md) med andra användare.
 
 ## Hämtar förinställda URL:er för visningsprogram {#obtaining-viewer-preset-urls}
 
