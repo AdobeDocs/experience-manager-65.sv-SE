@@ -11,10 +11,10 @@ docset: aem65
 feature: Blanda medieuppsättningar,Resurshantering
 role: Business Practitioner, Administrator
 exl-id: 70a72fb9-a289-4eda-abcc-300edf9f1961
-source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
+source-git-commit: 1349d9929fc64ad46fc91f0d189bab54cca9de81
 workflow-type: tm+mt
-source-wordcount: '1396'
-ht-degree: 28%
+source-wordcount: '1384'
+ht-degree: 23%
 
 ---
 
@@ -36,11 +36,11 @@ Följ de här stegen för att komma igång snabbt med blandade medieuppsättning
 
 1. [Överför dina resurser](#uploading-assets).
 
-   Börja med att ladda upp bilder och videoklipp för uppsättningarna med blandade medier. Om det behövs kan du skapa [bilduppsättningar](/help/assets/image-sets.md) och [rotationsuppsättningar](/help/assets/spin-sets.md). Eftersom användare kan zooma in bilder i visningsprogrammet för uppsättningen med blandade medier bör du ta hänsyn till zoomningen när du väljer bilder. Se till att bilderna har minst 2 000 pixlar i den största dimensionen.
+   Börja med att ladda upp bilder och videoklipp för uppsättningarna med blandade medier. Om det behövs kan du skapa [bilduppsättningar](/help/assets/image-sets.md) och [rotationsuppsättningar](/help/assets/spin-sets.md). Eftersom användarna kan zooma in på bilder i visningsprogrammet för den blandade medieuppsättningen bör du vara noggrann när du väljer bilder. Se till att bilderna har minst 2 000 pixlar i den största dimensionen.
 
 1. [Skapa blandade medieuppsättningar](#creating-mixed-media-sets).
 
-   Om du vill skapa en uppsättning med blandade medier trycker du på **[!UICONTROL Create > Mixed Media Set]** på resurssidan och ger sedan uppsättningen ett namn, väljer resurser och väljer i vilken ordning bilderna ska visas.
+   Om du vill skapa en uppsättning med blandade media trycker du på **[!UICONTROL Create]** > **[!UICONTROL Mixed Media Set]** på sidan Resurser och namnger sedan uppsättningen, väljer resurserna och väljer den ordning som bilderna ska visas.
 
    Se [Arbeta med väljare](/help/assets/working-with-selectors.md).
 
@@ -48,7 +48,7 @@ Följ de här stegen för att komma igång snabbt med blandade medieuppsättning
 
    Administratörer kan skapa eller ändra visningsförinställningar för blandade medieuppsättningar. Om du vill visa de blandade medierna med en visningsförinställning väljer du uppsättningen med blandade medier och väljer sedan **[!UICONTROL Viewers]** i listrutan till vänster.
 
-   Se **[!UICONTROL Tools > Assets > Viewer Presets]** om du vill skapa eller redigera visningsprogramförinställningar.
+   Information om hur du skapar eller redigerar förinställningar för visningsprogram finns i **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Viewer Presets]**.
 
    Se [Lägga till och redigera visningsprogramförinställningar](/help/assets/managing-viewer-presets.md).
 
@@ -62,13 +62,13 @@ Följ de här stegen för att komma igång snabbt med blandade medieuppsättning
 
 1. [Länka URL:er till webbprogrammet ](/help/assets/linking-urls-to-yourwebapplication.md) eller  [bädda in video- eller bildvisningsprogrammet](/help/assets/embed-code.md).
 
-   AEM Assets skapar URL-anrop för blandade medieuppsättningar och aktiverar dem när du har publicerat de blandade medieuppsättningarna. Du kan kopiera dessa URL:er när du förhandsgranskar resurser. Du kan även bädda in dem på din webbplats.
+   Adobe Experience Manager Assets skapar URL-anrop för blandade medieuppsättningar och aktiverar dem när du har publicerat de blandade medieuppsättningarna. Du kan kopiera dessa URL:er när du förhandsgranskar resurser. Du kan även bädda in dem på din webbplats.
 
    Välj den blandade medieuppsättningen och välj **[!UICONTROL Viewers]** i den vänstra listrutan.
 
    Se [Länka en uppsättning med blandade medier till en webbsida](/help/assets/linking-urls-to-yourwebapplication.md) och [Bädda in video- eller bildvisningsprogrammet](/help/assets/embed-code.md).
 
-Om du behöver kan du redigera [blandade medieuppsättningar](#editing-mixed-media-sets). Dessutom kan du visa och ändra [egenskaper för den blandade medieuppsättningen](/help/assets/manage-assets.md#editing-properties).
+Om det behövs kan du redigera [blandade medieuppsättningar](#editing-mixed-media-sets). Dessutom kan du visa och ändra [egenskaper för den blandade medieuppsättningen](/help/assets/manage-assets.md#editing-properties).
 
 >[!NOTE]
 >
@@ -76,9 +76,9 @@ Om du behöver kan du redigera [blandade medieuppsättningar](#editing-mixed-med
 
 ## Överför resurser {#uploading-assets}
 
-Börja med att ladda upp bilder och videoklipp för uppsättningarna med blandade medier. Eftersom användare kan zooma in bilder i visningsprogrammet för den blandade medieuppsättningen måste du ta hänsyn till zoomningen när du väljer bilder. Se till att bilderna har minst 2 000 pixlar i den största dimensionen.
+Börja med att ladda upp bilder och videoklipp för uppsättningarna med blandade medier. Eftersom användarna kan zooma in på bilder i visningsprogrammet för den blandade medieuppsättningen bör du vara noggrann när du väljer bilder. Se till att bilderna har minst 2 000 pixlar i den största dimensionen.
 
-Om du dessutom vill lägga till snurrsuppsättningar eller bilduppsättningar i den blandade medieuppsättningen skapar du även dem.
+Om du dessutom vill lägga till snurrsuppsättningar eller bilduppsättningar i den blandade medieuppsättningen skapar du också dessa uppsättningar.
 
 ## Skapar blandade medieuppsättningar {#creating-mixed-media-sets}
 
@@ -98,9 +98,9 @@ När du lägger till resurser i uppsättningen läggs de automatiskt till i alfa
 
    >[!NOTE]
    >
-   >När du skapar den blandade medieuppsättningen kan du ändra miniatyrbilden för den blandade medieuppsättningen eller låta AEM välja miniatyrbilden automatiskt baserat på resurserna i den blandade medieuppsättningen. Om du vill välja en miniatyrbild klickar du på **[!UICONTROL Change thumbnail]** och väljer en bild (du kan navigera till andra mappar för att söka efter bilder också). Om du har valt en miniatyrbild och sedan vill AEM att du ska generera en från den blandade medieuppsättningen väljer du **[!UICONTROL Switch to Automatic thumbnail]**.
+   >När du skapar den blandade medieuppsättningen kan du ändra miniatyrbilden för den blandade medieuppsättningen eller låta Experience Manager välja miniatyrbilden automatiskt baserat på resurserna i den blandade medieuppsättningen. Om du vill välja en miniatyrbild klickar du på **[!UICONTROL Change thumbnail]** och väljer en bild (du kan navigera till andra mappar för att söka efter bilder också). Om du har valt en miniatyrbild och sedan vill att Experience Manager ska generera en från den blandade medieuppsättningen väljer du **[!UICONTROL Switch to Automatic thumbnail]**.
 
-1. Tryck på resursväljaren för att välja resurser som du vill inkludera i den blandade medieuppsättningen. Markera dem och klicka på **[!UICONTROL Select]**.
+1. Tryck på resursväljaren så att du kan välja resurser som du vill inkludera i din uppsättning med blandade media. Markera dem och klicka på **[!UICONTROL Select]**.
 
    Med resursväljaren kan du söka efter resurser genom att skriva ett nyckelord och trycka på **[!UICONTROL Return]**. Du kan också använda filter för att förfina sökresultatet. Du kan filtrera efter sökväg, samling, filtyp och tagg. Markera filtret och tryck sedan på ikonen **[!UICONTROL Filter]** i verktygsfältet. Ändra vyn genom att markera ikonen **[!UICONTROL View]** och markera **[!UICONTROL List View]**, **[!UICONTROL Column View]** eller **[!UICONTROL Card View]**.
 
@@ -108,7 +108,7 @@ När du lägger till resurser i uppsättningen läggs de automatiskt till i alfa
 
    ![chlimage_1-140](assets/chlimage_1-383.png)
 
-1. Sortera om resurserna genom att dra dem uppåt eller nedåt i listan (måste markera ikonen **[!UICONTROL Reorder]**), om det behövs.
+1. Ändra ordning på resurserna genom att dra dem uppåt eller nedåt i listan (måste markera ikonen **[!UICONTROL Reorder]**), om det behövs.
 
    ![chlimage_1-141](assets/chlimage_1-352.png)
 
@@ -124,7 +124,7 @@ När du lägger till resurser i uppsättningen läggs de automatiskt till i alfa
 
 ## Redigera blandade medieuppsättningar {#editing-mixed-media-sets}
 
-Du kan utföra en mängd redigeringsåtgärder för resurser i blandade medieuppsättningar direkt i användargränssnittet [på samma sätt som för andra resurser i Resurser](/help/assets/manage-assets.md). Du kan även utföra följande åtgärder i Blandade medieuppsättningar:
+Du kan utföra olika redigeringsåtgärder för resurser i blandade medieuppsättningar direkt i användargränssnittet [på samma sätt som för andra resurser i Resurser](/help/assets/manage-assets.md). Du kan även utföra följande åtgärder i Blandade medieuppsättningar:
 
 * Lägg till resurser i den blandade medieuppsättningen.
 * Ändra ordning på resurser i den blandade medieuppsättningen.
@@ -152,17 +152,17 @@ Du kan utföra en mängd redigeringsåtgärder för resurser i blandade medieupp
 
       >[!NOTE]
       >
-      >* Om du vill ta bort en hel uppsättning med blandade media går du till valfritt visningsläge (till exempel **[!UICONTROL Card View]** eller **[!UICONTROL Column View]**) och navigerar till den blandade medieuppsättningen. Håll pekaren över resursen och tryck på bocken för att markera den. Tryck på **[!UICONTROL Backspace]** på tangentbordet eller klicka på **[!UICONTROL More]** (tre punkter) i verktygsfältet och tryck sedan på **[!UICONTROL Delete]**.
+      >* Om du vill ta bort en hel uppsättning med blandade media går du till valfritt visningsläge (till exempel **[!UICONTROL Card View]** eller **[!UICONTROL Column View]**) och navigerar till den blandade medieuppsättningen. Håll pekaren över resursen och tryck på bockmarkeringsikonen så att du markerar den. Tryck på **[!UICONTROL Backspace]** på tangentbordet eller klicka på **[!UICONTROL More]** (tre punkter) i verktygsfältet och tryck sedan på **[!UICONTROL Delete]**.
          >
          >
-      * Du kan redigera resurserna i en uppsättning med blandade media genom att navigera till uppsättningen, klicka på **[!UICONTROL Set Members]** i den vänstra listen och sedan trycka på ikonen **[!UICONTROL Pencil]** för en enskild resurs för att öppna redigeringsfönstret.
+      * Du kan redigera resurser i en uppsättning med blandade media genom att navigera till uppsättningen och klicka på **[!UICONTROL Set Members]** i den vänstra listen. Tryck på ikonen **[!UICONTROL Pencil]** på en enskild resurs så att du öppnar den i redigeringsfönstret.
 
 
 1. Tryck på **[!UICONTROL Save]** när du är klar med redigeringen.
 
    >[!NOTE]
    >
-   >* Om du vill redigera resurserna i en uppsättning med blandade medier navigerar du till den blandade medieuppsättningen. Tryck på (markera inte) uppsättningen för att öppna den på AEM-sidan för förhandsgranskning. Klicka på nedåtpilen i den vänstra listen för att öppna listrutan och tryck sedan på **[!UICONTROL Set Members]**. Håll markören över en resurs på sidan Ange medlemmar och tryck sedan på **[!UICONTROL Edit]** (pennikon) för att öppna redigeringssidan.
+   >* Om du vill redigera resurserna i en uppsättning med blandade medier navigerar du till den blandade medieuppsättningen. Tryck på (markera inte) uppsättningen så att den öppnas på Experience Manager Set Preview-sidan. Klicka på nedåtpilen i den vänstra listen för att öppna listrutan och tryck sedan på **[!UICONTROL Set Members]**. Håll markören över en resurs på sidan Ange medlemmar och tryck sedan på **[!UICONTROL Edit]** (pennikon) för att öppna redigeringssidan.
       >
       >
    * Om du vill ta bort en hel uppsättning med blandade medier – I valfritt visningsläge (som kortvyn eller kolumnvyn) går du till uppsättningen med blandade medier. Håll pekaren över uppsättningen och tryck sedan på **Välj** (bockmarkeringsikon). Tryck på **[!UICONTROL Backspace]** på tangentbordet eller tryck på **[!UICONTROL More]** (rad om tre punkter) och sedan på **[!UICONTROL Delete]**.
@@ -178,4 +178,4 @@ Mer information om hur du publicerar blandade medieuppsättningar finns i [Publi
 
 >[!NOTE]
 >
->Om den blandade medieuppsättningen inte hamnar helt i leveranstjänsten första gången du publicerar den kanske du måste publicera den blandade medieuppsättningen en andra gång.
+>Om den blandade medieuppsättningen inte hamnar helt i leveranstjänsten första gången du publicerar den publicerar du den blandade medieuppsättningen en andra gång.
