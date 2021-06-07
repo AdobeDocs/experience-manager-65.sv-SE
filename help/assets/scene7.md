@@ -1,6 +1,6 @@
 ---
 title: Lägga till Dynamic Media Classic-funktioner på din sida
-description: Lär dig hur du lägger till Dynamic Media Classic-funktioner och -komponenter på AEM.
+description: Lär dig hur du lägger till Dynamic Media Classic-funktioner och -komponenter på din Adobe Experience Manager-sida.
 uuid: aa5a4735-bfec-43b8-aec0-a0c32bff134f
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -10,18 +10,18 @@ discoiquuid: e7b95732-a571-48e8-afad-612059cdbde7
 feature: Dynamic Media Classic
 role: Business Practitioner, Administrator
 exl-id: 815f577d-4774-4830-8baf-0294bd085b83
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 900a2ccbf33575644f934e5a75380d8dd3eab5d8
 workflow-type: tm+mt
-source-wordcount: '2728'
+source-wordcount: '2711'
 ht-degree: 1%
 
 ---
 
 # Lägga till Dynamic Media Classic-funktioner på din sida {#adding-scene-features-to-your-page}
 
-[Adobe Dynamic Media ](https://help.adobe.com/en_US/scene7/using/WS26AB0D9A-F51C-464e-88C8-580A5A82F810.html) Classic är en värdbaserad lösning för att hantera, förbättra, publicera och leverera multimediematerial för webben, mobiler, e-post och internetanslutna skärmar och för tryck.
+[Adobe Dynamic Media ](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/home.html) Classic är en värdbaserad lösning för att hantera, förbättra, publicera och leverera multimediematerial för webben, mobiler, e-post och internetanslutna skärmar och för tryck.
 
-Du kan visa AEM resurser som publicerats i Dynamic Media Classic i olika visningsprogram:
+Du kan visa Experience Manager-resurser som publicerats i Dynamic Media Classic i olika visningsprogram:
 
 * Zoomning
 * Utfällbar
@@ -29,13 +29,13 @@ Du kan visa AEM resurser som publicerats i Dynamic Media Classic i olika visning
 * Bildmall
 * Bild
 
-Du kan publicera digitala resurser direkt från AEM till Dynamic Media Classic och du kan publicera digitala resurser från Dynamic Media Classic till AEM.
+Du kan publicera digitala resurser direkt från Experience Manager till Dynamic Media Classic och du kan publicera digitala resurser från Dynamic Media Classic till Experience Manager.
 
-I det här dokumentet beskrivs hur du publicerar digitala resurser från AEM till Dynamic Media Classic och vice versa. Visningsprogrammen beskrivs också i detalj. Information om hur du konfigurerar AEM för Dynamic Media Classic finns i [Integrera Dynamic Media Classic med AEM](/help/sites-administering/scene7.md).
+I det här dokumentet beskrivs hur du publicerar digitala resurser från Experience Manager till Dynamic Media Classic och omvänt. Visningsprogrammen beskrivs också i detalj. Information om hur du konfigurerar Experience Manager för Dynamic Media Classic finns i [Integrera Dynamic Media Classic med Experience Manager](/help/sites-administering/scene7.md).
 
 Se även [Lägga till bildscheman](image-maps.md).
 
-Mer information om hur du använder videokomponenter med AEM finns i [Video](video.md).
+Mer information om hur du använder videokomponenter med Experience Manager finns i [Video](video.md).
 
 >[!NOTE]
 >
@@ -51,12 +51,12 @@ Du kan publicera digitala resurser till Dynamic Media Classic på följande sät
 
 >[!NOTE]
 >
->AEM publicerar till Dynamic Media Classic asynkront. När du har klickat på **[!UICONTROL Publish]** kan det ta flera sekunder innan resursen publiceras till Dynamic Media Classic.
+>Experience Manager publicerar till Dynamic Media Classic asynkront. När du har klickat på **[!UICONTROL Publish]** tar det flera sekunder för resursen att publicera till Dynamic Media Classic.
 
 
 ## Dynamic Media Classic-komponenter {#scene-components}
 
-Följande Dynamic Media Classic-komponenter finns i AEM:
+Följande Dynamic Media Classic-komponenter är tillgängliga i Experience Manager:
 
 * Zoomning
 * Utfällbar (zoom)
@@ -68,35 +68,35 @@ Följande Dynamic Media Classic-komponenter finns i AEM:
 >
 >De här komponenterna är inte tillgängliga som standard och måste markeras i **[!UICONTROL Design]**-läge innan du använder dem.
 
-När de har gjorts tillgängliga i **[!UICONTROL Design]**-läge kan du lägga till komponenterna på sidan precis som andra AEM. Resurser som ännu inte har publicerats till Dynamic Media Classic publiceras till Dynamic Media Classic om de ligger i en synkroniserad mapp, på en sida eller med en Dynamic Media Classic-molnkonfiguration.
+När de har gjorts tillgängliga i **[!UICONTROL Design]**-läge kan du lägga till komponenterna på sidan precis som andra Experience Manager-komponenter. Resurser som ännu inte har publicerats till Dynamic Media Classic publiceras till Dynamic Media Classic om de ligger i en synkroniserad mapp, på en sida eller med en Dynamic Media Classic-molnkonfiguration.
 
 >[!NOTE]
 >
->Om du skapar och utvecklar anpassade visningsprogram och använder Content Finder måste du lägga till parametern **[!UICONTROL allowfullscreen]** explicit.
+>Om du skapar och utvecklar anpassade visningsprogram och använder Content Finder måste du lägga till parametern `allowfullscreen` explicit.
 
 ### Meddelande om att Flash Viewer har upphört {#flash-viewers-end-of-life-notice}
 
 Från och med den 31 januari 2017 upphörde Adobe Dynamic Media Classic med stödet för visningsprogramplattformen Flash.
 
-Mer information om den här viktiga ändringen finns i [Vanliga frågor om användarutgånget i Flash Viewer](https://docs.adobe.com/content/docs/en/aem/6-1/administer/integration/marketing-cloud/scene7/flash-eol.html).
+<!-- For more information about this important change, see [Flash Viewer End-of-Life FAQs](https://docs.adobe.com/content/docs/en/aem/6-1/administer/integration/marketing-cloud/scene7/flash-eol.html). -->
 
 ### Lägga till en Dynamic Media Classic-komponent (Scene7) på en sida {#adding-a-scene-component-to-a-page}
 
 Att lägga till en Dynamic Media Classic-komponent (Scene7) på en sida är detsamma som att lägga till en komponent på en sida. Dynamic Media Classic-komponenter beskrivs i detalj i följande avsnitt.
 
-**Lägga till en Dynamic Media Classic-komponent (Scene7) på en sida**
+**Så här lägger du till en Dynamic Media Classic-komponent (Scene7) på en sida:**
 
-1. Öppna AEM sidan där du vill lägga till komponenten Dynamic Media Classic (Scene7).
+1. Öppna den sida i Experience Manager där du vill lägga till komponenten **[!UICONTROL Dynamic Media Classic (Scene7)]**.
 
 1. Om det inte finns några tillgängliga Dynamic Media Classic-komponenter klickar du på **[!UICONTROL Design]**-läget, trycker på en komponent med en blå kant, trycker på ikonen **[!UICONTROL Parent]** och sedan på ikonen **[!UICONTROL Configuration]**. I **[!UICONTROL Parsys (Design)]** markerar du alla Dynamic Media Classic-komponenter som du vill göra tillgängliga och klickar på **[!UICONTROL OK]**.
 
    ![chlimage_1-224](assets/chlimage_1-224.png)
 
-1. Klicka på **[!UICONTROL Edit]** för att återgå till **[!UICONTROL Edit]**-läget.
+1. Klicka på **[!UICONTROL Edit]** så att du kan återgå till **[!UICONTROL Edit]**-läget.
 
 1. Dra en komponent från Dynamic Media Classic-gruppen i sidosparken till sidan på önskad plats.
 
-1. Klicka på ikonen **[!UICONTROL Configuration]** för att öppna komponenten.
+1. Klicka på ikonen **[!UICONTROL Configuration]** så att du kan öppna komponenten.
 
 1. Redigera komponenten efter behov och klicka på **[!UICONTROL OK]** för att spara ändringarna.
 1. Dra bilden eller videon från innehållsläsaren till den Dynamic Media Classic-komponent som du har lagt till på sidan.
@@ -111,9 +111,9 @@ Responsiv design för dina resurser innebär att dina resurser anpassas beroende
 
 Se även [Responsiv design för webbsidor](/help/sites-developing/responsive.md).
 
-**Lägga till en interaktiv tittarupplevelse på en responsiv webbplats**
+**Så här lägger du till en interaktiv tittarupplevelse på en responsiv webbplats:**
 
-1. Logga in på AEM och kontrollera att du har [konfigurerade Adobe Dynamic Media Classic-Cloud Services](/help/sites-administering/scene7.md#configuring-scene-integration) och att Dynamic Media Classic-komponenter är tillgängliga.
+1. Logga in på Experience Manager och kontrollera att du har [konfigurerade Adobe Dynamic Media Classic-Cloud Services](/help/sites-administering/scene7.md#configuring-scene-integration) och att Dynamic Media Classic-komponenter är tillgängliga.
 
    >[!NOTE]
    >
@@ -131,7 +131,7 @@ Se även [Responsiv design för webbsidor](/help/sites-developing/responsive.md)
 
 Även om konfigurationsalternativen varierar är följande vanligt för alla [!UICONTROL Dynamic Media Classic]-komponenter:
 
-* **[!UICONTROL File Reference]** - Bläddra till en fil som du vill referera till. Filreferensen visar resurs-URL:en och inte nödvändigtvis den fullständiga Dynamic Media Classic-URL:en, inklusive URL-kommandona och -parametrarna. Du kan inte lägga till Dynamic Media Classic URL-kommandon och -parametrar i det här fältet. De måste läggas till med motsvarande funktioner i komponenten.
+* **[!UICONTROL File Reference]** - Bläddra till en fil som du vill referera till. Filreferensen visar resurs-URL:en och inte nödvändigtvis den fullständiga Dynamic Media Classic-URL:en, inklusive URL-kommandona och -parametrarna. Du kan inte lägga till Dynamic Media Classic URL-kommandon och -parametrar i det här fältet. I stället lägger du till dem via motsvarande funktioner i komponenten.
 * **[!UICONTROL Width]** - Ange bredden.
 * **[!UICONTROL Height]** - Här kan du ange höjden.
 
@@ -143,25 +143,25 @@ Du anger dessa konfigurationsalternativ genom att öppna (dubbelklicka) en Dynam
 
 HTML5 Zoom-komponenten visar en större bild när du trycker på knappen **[!UICONTROL +]**.
 
-Resursen har zoomverktyg längst ned. Tryck på **[!UICONTROL +]** för att förstora. Tryck på **[!UICONTROL -]** för att minska. Om du trycker på **[!UICONTROL x]** eller zoompilen reset återställs bilden till den ursprungliga storlek den importerades som. Tryck på de diagonala pilarna för att göra helskärmsläget. Tryck på **[!UICONTROL Edit]** för att konfigurera komponenten. Med den här komponenten kan du konfigurera [inställningar som är gemensamma för alla [!UICONTROL Dynamic Media Classic]-komponenter](#settings-common-to-all-scene-components).
+Resursen har zoomverktyg längst ned. Tryck på **[!UICONTROL +]** om du vill förstora; tryck på **[!UICONTROL -]** om du vill minska. Om du trycker på **[!UICONTROL x]** eller zoompilen reset återställs bilden till den ursprungliga storlek den importerades som. Tryck på de diagonala pilarna så att du kan göra den i helskärmsläge. Tryck på **[!UICONTROL Edit]** så att du kan konfigurera komponenten. Med den här komponenten kan du konfigurera [inställningar som är gemensamma för alla [!UICONTROL Dynamic Media Classic]-komponenter](#settings-common-to-all-scene-components).
 
 ![chlimage_1-227](/help/assets/assets/do-not-localize/chlimage_1-227.png)
 
 ### Utfällbar {#flyout}
 
-I HTML5 **[!UICONTROL Flyout]**-komponenten visas resursen som en delad skärm; lämnade tillgången i den angivna storleken, till höger visas zoomdelen. Tryck på **[!UICONTROL Edit]** för att konfigurera komponenten. Med den här komponenten kan du konfigurera [inställningar som är gemensamma för alla Dynamic Media Classic-komponenter](#settings-common-to-all-scene-components).
+I HTML5 **[!UICONTROL Flyout]**-komponenten visas resursen som en delad skärm; lämnade tillgången i den angivna storleken, till höger visas zoomdelen. Tryck på **[!UICONTROL Edit]** så att du kan konfigurera komponenten. Med den här komponenten kan du konfigurera [inställningar som är gemensamma för alla Dynamic Media Classic-komponenter](#settings-common-to-all-scene-components).
 
 >[!NOTE]
 >
 >Om **[!UICONTROL Flyout]**-komponenten använder en anpassad storlek används den anpassade storleken och responsiv konfiguration av komponenten inaktiveras.
 >
->Om din **[!UICONTROL Flyout]**-komponent använder standardstorleken, enligt inställningen i **[!UICONTROL Design View]**, används standardstorleken och komponenten sträcks ut för att passa sidlayoutstorleken med responsiv konfiguration av komponenten aktiverad. Tänk dock på att det finns en begränsning för responsiv konfiguration av komponenten. När du använder komponenten **[!UICONTROL Flyout]** med responsiv konfiguration bör du inte använda den med full sidsträckning. Annars kan **[!UICONTROL Flyout]** sträcka sig utanför sidans högra kant.
+>Om din **[!UICONTROL Flyout]**-komponent använder standardstorleken, som anges i **[!UICONTROL Design View]**, används standardstorleken och komponenten sträcks ut för att passa sidlayoutstorleken med responsiv konfiguration av komponenten aktiverad. Det finns en begränsning för responsiv konfiguration av komponenten. När du använder komponenten **[!UICONTROL Flyout]** med responsiv konfiguration ska du inte använda den med full sidsträckning. Annars sträcker sig **[!UICONTROL Flyout]** utanför sidans högra kant.
 
 ![chlimage_1-228](assets/chlimage_1-228.png)
 
 ### Bild {#image}
 
-Med Dynamic Media Classic **[!UICONTROL Image]**-komponenten kan du lägga till Dynamic Media Classic-funktioner i dina bilder, till exempel Dynamic Media Classic-modifierare, bild- eller visningsförinställningar samt skärpa. Dynamic Media Classic **[!UICONTROL Image]**-komponenten liknar andra bildkomponenter i AEM med speciella Dynamic Media Classic-funktioner. I det här exemplet används URL-modifieraren för Dynamic Media Classic, `&op_invert=1`.
+Med Dynamic Media Classic **[!UICONTROL Image]**-komponenten kan du lägga till Dynamic Media Classic-funktioner i dina bilder, till exempel Dynamic Media Classic-modifierare, bild- eller visningsförinställningar samt skärpa. Dynamic Media Classic **[!UICONTROL Image]**-komponenten liknar andra bildkomponenter i Experience Manager med speciella Dynamic Media Classic-funktioner. I det här exemplet används URL-modifieraren för Dynamic Media Classic, `&op_invert=1`.
 
 ![chlimage_1-229](assets/chlimage_1-229.png)
 
@@ -171,25 +171,25 @@ Med Dynamic Media Classic **[!UICONTROL Image]**-komponenten kan du lägga till 
 
 ![chlimage_1-230](assets/chlimage_1-230.png)
 
-**[!UICONTROL Viewer preset]** - Välj en befintlig visningsförinställning i listrutan. Om den visningsförinställning som du söker efter inte visas kanske du måste göra den synlig. Se [Hantera visningsförinställningar](/help/assets/managing-viewer-presets.md). Du kan inte välja en visningsförinställning om du använder en bildförinställning och vice versa.
+**[!UICONTROL Viewer preset]** - Välj en befintlig visningsförinställning i listrutan. Om den visningsförinställning du söker efter inte visas måste du göra den synlig. Se [Hantera visningsförinställningar](/help/assets/managing-viewer-presets.md). Du kan inte välja en visningsförinställning om du använder en bildförinställning och omvänt.
 
 **[!UICONTROL Dynamic Media Classic Configuration]** - Välj den Dynamic Media Classic-konfiguration som du vill använda för att hämta aktiva bildförinställningar från SPS.
 
-**[!UICONTROL Image preset]** - Välj en befintlig bildförinställning i listrutan. Om den bildförinställning du söker inte syns kan du behöva göra den synlig. Se [Hantera bildförinställningar](/help/assets/managing-image-presets.md). Du kan inte välja en visningsförinställning om du använder en bildförinställning och vice versa.
+**[!UICONTROL Image preset]** - Välj en befintlig bildförinställning i listrutan. Om den bildförinställning du söker inte syns måste du göra den synlig. Se [Hantera bildförinställningar](/help/assets/managing-image-presets.md). Du kan inte välja en visningsförinställning om du använder en bildförinställning och omvänt.
 
-**[!UICONTROL Output Format]** - Välj bildens utdataformat, till exempel jpeg. Beroende på vilket utdataformat du väljer kan det finnas ytterligare konfigurationsalternativ. Se [Bästa praxis för bildförinställningar](/help/assets/managing-image-presets.md#image-preset-options).
+**[!UICONTROL Output Format]** - Välj bildens utdataformat, till exempel jpeg. Beroende på vilket utdataformat du väljer finns det ytterligare konfigurationsalternativ. Se [Bästa praxis för bildförinställningar](/help/assets/managing-image-presets.md#image-preset-options).
 
 **[!UICONTROL Sharpening]** - Välj hur du vill öka skärpan i bilden. Skärpeinställningen förklaras i detalj i [Bästa praxis för bildförinställningar](/help/assets/managing-image-presets.md#image-preset-options) och [Bästa tillvägagångssätt för skärpeökning](/help/assets/assets/sharpening_images.pdf).
 
-**[!UICONTROL URL Modifiers]** - Du kan ändra bildeffekter genom att ange ytterligare bildkommandon för Dynamic Media Classic. Dessa beskrivs i [Bildförinställningar](/help/assets/managing-image-presets.md) och [Kommandoreferensen](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html).
+**[!UICONTROL URL Modifiers]** - Du kan ändra bildeffekter genom att ange ytterligare bildkommandon för Dynamic Media Classic. Dessa kommandon beskrivs i [Bildförinställningar](/help/assets/managing-image-presets.md) och [Kommandoreferens](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html).
 
 **[!UICONTROL Breakpoints]** - Om webbplatsen är responsiv vill du justera brytpunkterna. Brytpunkter måste avgränsas med kommatecken ( , ).
 
 ### Bildmall {#image-template}
 
-[Dynamic Media Classic Image-](https://docs.adobe.com/help/en/dynamic-media-classic/using/template-basics/quick-start-template-basics.html) mallar är Photoshop-innehåll i lager som har importerats till Dynamic Media Classic, där innehåll och egenskaper har parametriserats för variabilitet. Med **[!UICONTROL Image template]**-komponenten kan du importera bilder och ändra texten dynamiskt i AEM. Dessutom kan du konfigurera **[!UICONTROL Image template]**-komponenten så att värden från klientkontexten används, så att varje användare upplever bilden på ett personligt sätt.
+[Dynamic Media Classic Image-](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/quick-start-template-basics.html) mallar är Photoshop-innehåll i lager som har importerats till Dynamic Media Classic, där innehåll och egenskaper har parametriserats för variabilitet. Med **[!UICONTROL Image template]**-komponenten kan du importera bilder och ändra texten dynamiskt i Experience Manager. Dessutom kan du konfigurera **[!UICONTROL Image template]**-komponenten så att värden från klientkontexten används, så att varje användare upplever bilden på ett personligt sätt.
 
-Tryck på **[!UICONTROL Edit]** för att konfigurera komponenten. Du kan konfigurera [inställningar som är gemensamma för alla Dynamic Media Classic-komponenter](#settings-common-to-all-scene-components) samt andra inställningar som beskrivs i det här avsnittet.
+Tryck på **[!UICONTROL Edit]** om du vill konfigurera komponenten. Du kan konfigurera [inställningar som är gemensamma för alla Dynamic Media Classic-komponenter](#settings-common-to-all-scene-components) och andra inställningar som beskrivs i det här avsnittet.
 
 ![chlimage_1-231](assets/chlimage_1-231.png)
 
@@ -259,15 +259,15 @@ När du använder en adaptiv videouppsättning med videokomponenten i Dynamic Me
 
 ## Dynamic Media Classic content browser {#scene-content-browser}
 
-I Dynamic Media Classic kan du visa innehåll från Dynamic Media Classic direkt i AEM. I **[!UICONTROL Content Finder]** väljer du **[!UICONTROL Dynamic Media Classic]** i det pekoptimerade användargränssnittet eller **[!UICONTROL S7]**-ikonen i det klassiska användargränssnittet. Funktionen är identisk mellan båda användargränssnitten.
+I Dynamic Media Classic kan du visa innehåll från Dynamic Media Classic direkt i Experience Manager. I **[!UICONTROL Content Finder]** väljer du **[!UICONTROL Dynamic Media Classic]** i det pekoptimerade användargränssnittet eller **[!UICONTROL S7]**-ikonen i det klassiska användargränssnittet. Funktionen är identisk mellan båda användargränssnitten.
 
-Om du har flera konfigurationer visar AEM som standard [standardkonfigurationen](/help/sites-administering/scene7.md#configuring-a-default-configuration). Du kan välja olika konfigurationer direkt i webbläsaren för Dynamic Media Classic-innehåll i listrutan.
+Om du har flera konfigurationer visar Experience Manager som standard [standardkonfigurationen](/help/sites-administering/scene7.md#configuring-a-default-configuration). Du kan välja olika konfigurationer direkt i webbläsaren för Dynamic Media Classic-innehåll i listrutan.
 
 >[!NOTE]
 >
->* Resurser som finns i ad hoc-mappen visas inte i Dynamic Media Classic-innehållsläsaren.
+>* Resurser i mappen on-demand visas inte i Dynamic Media Classic.
 >* När [Säker förhandsvisning är aktiverat](/help/sites-administering/scene7.md#configuring-the-state-published-unpublished-of-assets-pushed-to-scene) visas både publicerade och opublicerade resurser i Dynamic Media Classic i innehållsläsaren i Dynamic Media Classic.
->* Om du inte ser **[!UICONTROL Dynamic Media Classic]** eller **[!UICONTROL S7]**-ikonen som ett alternativ i webbläsaren måste du [konfigurera Dynamic Media Classic så att det fungerar med AEM](/help/sites-administering/scene7.md).
+>* Om du inte ser **[!UICONTROL Dynamic Media Classic]** eller **[!UICONTROL S7]**-ikonen som ett alternativ i webbläsaren måste du [konfigurera Dynamic Media Classic så att det fungerar med Experience Manager](/help/sites-administering/scene7.md).
 >* För video har Dynamic Media Classic-webbläsaren stöd för:
 
    >
@@ -283,7 +283,7 @@ Du kan öppna innehållsläsaren i det pekoptimerade eller klassiska användargr
 
 * FXG- och Flash-resurser från Dynamic Media Classic stöds inte.
 
-Bläddra bland Dynamic Media Classic-resurser genom att välja **[!UICONTROL Dynamic Media Classic]** i den tredje listrutan. Dynamic Media Classic visas inte i listan om du inte har konfigurerat Dynamic Media Classic/AEM-integrering.
+Bläddra bland Dynamic Media Classic-resurser genom att välja **[!UICONTROL Dynamic Media Classic]** i den tredje listrutan. Dynamic Media Classic visas inte i listan om du inte har konfigurerat Dynamic Media Classic/Experience Manager.
 
 >[!NOTE]
 >
@@ -305,21 +305,21 @@ Dessutom kan du bläddra bland upplösningsinformation, storlek, dagar sedan än
 
 ### Söka efter Dynamic Media Classic-resurser med innehållsläsaren {#searching-for-scene-assets-with-the-content-browser}
 
-Att söka efter Dynamic Media Classic-resurser liknar att söka efter AEM resurser, förutom att när du söker igenom en fjärrvy av resurserna i Dynamic Media Classic-systemet, i stället för att importera dem direkt till AEM.
+Att söka efter resurser i Dynamic Media Classic påminner om att söka efter resurser i Experience Manager Assets. När du gör en sökning ser du i själva verket en fjärrvy över resurserna i Dynamic Media Classic-systemet i stället för att importera dem direkt till Experience Manager.
 
 Du kan använda det klassiska användargränssnittet eller det pekoptimerade användargränssnittet för att både visa och söka efter resurser. Beroende på gränssnittet är sökningen något annorlunda.
 
 När du söker i något av användargränssnitten kan du filtrera efter följande villkor (visas här i det pekoptimerade användargränssnittet):
 
-**[!UICONTROL Enter keywords]** - Du kan söka efter resurser efter namn. När du söker efter nyckelord som du anger är det filnamnet börjar med. Om du t.ex. skriver ordet &quot;simning&quot; söker du efter alla resursfilnamn som börjar med de bokstäverna i den ordningen. Var noga med att trycka på Retur när du har skrivit in termen för att hitta resursen.
+**[!UICONTROL Enter keywords]** - Du kan söka efter resurser efter namn. När du söker efter nyckelorden som du anger är det filnamnet börjar med. Om du t.ex. skriver ordet &quot;simning&quot; söker du efter alla resursfilnamn som börjar med de bokstäverna i den ordningen. Var noga med att trycka på Retur när du har skrivit in termen för att hitta resursen.
 
 ![chlimage_1-242](assets/chlimage_1-242.png)
 
 **[!UICONTROL Folder/path]** - Namnet på mappen som visas baseras på den konfiguration du har valt. Du kan gå ned till lägre nivåer genom att trycka på mappikonen och välja en undermapp. Tryck sedan på bockmarkeringen för att markera den.
 
-Om du anger ett nyckelord och väljer en mapp söker AEM igenom den mappen och eventuella undermappar. Om du inte anger några nyckelord när du söker efter, kommer endast resurserna i den mappen att visas om du väljer mappen. Inga undermappar kommer att visas.
+Om du anger ett nyckelord och väljer en mapp söker Experience Manager igenom den mappen och eventuella undermappar. Om du inte anger några nyckelord när du söker efter, visas bara resurserna i den mappen om du markerar mappen, och inga undermappar inkluderas.
 
-Som standard söker AEM i den markerade mappen och i alla undermappar.
+Som standard söker Experience Manager i den markerade mappen och i alla undermappar.
 
 ![chlimage_1-243](assets/chlimage_1-243.png)
 
@@ -331,22 +331,22 @@ Som standard söker AEM i den markerade mappen och i alla undermappar.
 
 ![chlimage_1-245](assets/chlimage_1-245.png)
 
-**[!UICONTROL Asset type]** - I Dynamic Media Classic-webbläsaren kan du filtrera resultatet så att det innehåller något av följande: bilder, mallar, videor och anpassningsbara videouppsättningar. Om du inte väljer någon resurstyp söker AEM som standard igenom alla resurstyper.
+**[!UICONTROL Asset type]** - I Dynamic Media Classic-webbläsaren kan du filtrera resultatet så att det innehåller något av följande: bilder, mallar, videor och anpassningsbara videouppsättningar. Om du inte väljer någon resurstyp söker Experience Manager som standard i alla resurstyper.
 
 ![chlimage_1-246](assets/chlimage_1-246.png)
 
 >[!NOTE]
 >
->* I det klassiska användargränssnittet kan du även söka efter **Flash** och **FXG**. Filtrering för dessa i det pekoptimerade användargränssnittet stöds för närvarande inte.
+>* I det klassiska användargränssnittet kan du även söka efter **Flash** och **FXG**. Filtrering för de här typerna i det pekoptimerade användargränssnittet stöds inte.
    >
    >
 * När du söker efter video söker du efter en enskild återgivning. Resultatet returnerar den ursprungliga återgivningen (endast &amp;ast;.mp4) och den kodade återgivningen.
->* När du söker i en adaptiv videouppsättning söker du i mappen och i alla undermappar, men bara om du har lagt till ett nyckelord i sökningen. Om du inte har lagt till något nyckelord söker AEM inte igenom undermapparna.
+>* När du söker i en adaptiv videouppsättning söker du i mappen och i alla undermappar, men bara om du har lagt till ett nyckelord i sökningen. Om du inte har lagt till något nyckelord söker Experience Manager inte i undermapparna.
 
 >
 
 
 
-**[!UICONTROL Publish Status]** - Du kan filtrera efter resurser baserat på publiceringsstatus:  **[!UICONTROL Unpublished]** eller  **[!UICONTROL Published]**. Om du inte väljer **[!UICONTROL Publish Status]** söker AEM som standard igenom alla publiceringsstatusar.
+**[!UICONTROL Publish Status]** - Du kan filtrera efter resurser baserat på publiceringsstatus:  **[!UICONTROL Unpublished]** eller  **[!UICONTROL Published]**. Om du inte väljer **[!UICONTROL Publish Status]** söker Experience Manager som standard igenom alla publiceringsstatusar.
 
 ![chlimage_1-247](assets/chlimage_1-247.png)
