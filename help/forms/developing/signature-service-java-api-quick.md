@@ -10,18 +10,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 07fffbd5-5430-4abc-b532-0840ecc7b1b0
 role: Developer
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 34069505-a6cf-4540-932b-604f81823178
+source-git-commit: 9fa433bedefdb3272b43d540ba26624e28c1dbbd
 workflow-type: tm+mt
-source-wordcount: '888'
+source-wordcount: '926'
 ht-degree: 0%
 
 ---
 
-
 # Snabbstart för Java API (SOAP) för signaturtjänst {#signature-service-java-api-quickstart-soap}
 
-Java API Quick Start (SOAP) är tillgängligt för signaturtjänsten:
+Följande Java API Quick Start (SOAP) är tillgängligt för AEM Forms JEE Signature Service:
 
 [Snabbstart (SOAP-läge): Lägga till ett signaturfält i ett PDF-dokument med Java API](signature-service-java-api-quick.md#quick-start-soap-mode-adding-a-signature-field-to-a-pdf-document-using-the-java-api)
 
@@ -41,7 +40,9 @@ Java API Quick Start (SOAP) är tillgängligt för signaturtjänsten:
 
 [Snabbstart (SOAP-läge): Ta bort en digital signatur med Java API](signature-service-java-api-quick.md#quick-start-soap-mode-removing-a-digital-signature-using-the-java-api)
 
-AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutningsläget bör anges till SOAP.
+[Snabbstart (SOAP-läge): Använd dokumenttidsstämpel med Java API](#quick-start-soap-mode-apply-document-timestamp-using-the-java-api)
+
+AEM Forms JEE-åtgärder kan utföras med AEM Forms starkt typade API och anslutningsläget bör anges till SOAP.
 
 >[!NOTE]
 >
@@ -1335,8 +1336,113 @@ I följande Java-kodexempel tas en digital signatur bort från ett signaturfält
          }
      }
  }
+
+
  
  
  
 ```
 
+## Snabbstart (SOAP-läge): Använd dokumenttidsstämpel med Java API {#quick-start-soap-mode-apply-document-timestamp-using-the-java-api}
+
+I följande Java-kodexempel används en tidsstämpel i ett PDF-dokument:
+
+```java
+ /*
+ * This Java Quick Start uses the SOAP mode and contains the following JAR files
+ * in the class path:
+ * 1. adobe-signatures-client.jar
+ * 2. adobe-livecycle-client.jar
+ * 3. adobe-usermanager-client.jar
+ * 4. adobe-utilities.jar
+ * 5. commons-httpclient-<version>.jar
+ * 6. axis.jar (required for SOAP mode)
+ * 7. jaxrpc-api.jar (required for SOAP mode)
+ * 8. commons-logging.jar (required for SOAP mode)
+ * 9. commons-discovery.jar (required for SOAP mode)
+ * 10. wsdl4j.jar (required for SOAP mode)
+ * 11. adobe-utilities.jar (required for SOAP mode)
+ *
+ *
+ * These JAR files are located in the following path:
+ * <install directory>/sdk/client-libs/common
+ *
+ * The adobe-utilities.jar file is located in the following path:
+ * <install directory>/sdk/client-libs/jboss
+ *
+ * SOAP required JAR files are located in the following path:
+ * <install directory>/sdk/client-libs/thirdparty
+ *
+ * If you want to invoke a remote forms server instance and there is a
+ * firewall between the client application and the server, then it is
+ * recommended that you use the SOAP mode. When using the SOAP mode,
+ * you have to include these additional JAR files
+ *
+ * For information about the SOAP
+ * mode, see "Setting connection properties" in Programming
+ * with AEM Forms
+ */
+import java.io.File;
+import java.io.FileInputStream;
+import java.util.Properties;
+
+import com.adobe.idp.Document;
+import com.adobe.idp.dsc.clientsdk.ServiceClientFactory;
+import com.adobe.idp.dsc.clientsdk.ServiceClientFactoryProperties;
+import com.adobe.livecycle.signatures.client.SignatureServiceClient;
+import com.adobe.livecycle.signatures.client.types.AddSignatureValidationOptionSpec;
+import com.adobe.livecycle.signatures.client.types.TSPOptionSpec;
+
+public class ApplyDocumentTimeStamp {
+
+    public static void main(String args[]){
+        {
+
+            try
+            {
+                //Set connection properties required to invoke AEM Forms using SOAP mode
+                Properties connectionProps = new Properties();
+                connectionProps.setProperty(ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT, "https://'[server]:[port]'");
+                connectionProps.setProperty(ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL,ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL);
+                connectionProps.setProperty(ServiceClientFactoryProperties.DSC_SERVER_TYPE, "JBoss");
+                connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME, "administrator");
+                connectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_PASSWORD, "password");
+
+                //Create a ServiceClientFactory instance
+                ServiceClientFactory myFactory = ServiceClientFactory.createInstance(connectionProps);
+
+                //Create a SignatureServiceClient object
+                SignatureServiceClient signClient = new SignatureServiceClient(myFactory);
+
+                //Specify a PDF document to sign
+                FileInputStream fileInputStream = new FileInputStream("test.pdf");
+
+                //Sign the PDF document
+                Document inPDFDoc = new Document (fileInputStream);
+
+                // create AddSignatureValidationOptionSpec Object. later we will set the required OptionSpecs
+                AddSignatureValidationOptionSpec addSigValidiationSpec =  new AddSignatureValidationOptionSpec();
+
+                //Create a TSPOptionSpec object to pass to in AddSignatureValidationOptionSpec
+                TSPOptionSpec tspSpec = new TSPOptionSpec();
+                tspSpec.setTspServerURL("http://tsp-server-url.com");
+                tspSpec.setTspServerPassword("provide Timestamp server password");
+                tspSpec.setTspServerUsername("provide Timestamp server username");
+                addSigValidiationSpec.setTSPOptionSpec(tspSpec);
+
+                Document signedDoc = signClient.applyDocumentTimeStamp(inPDFDoc,addSigValidiationSpec);
+
+                //Save the signed PDF document
+                File outFile = new File("testout.pdf");
+                signedDoc.copyToFile (outFile);
+
+            }
+
+            catch (Exception ee)
+            {
+                ee.printStackTrace();
+            }
+        }
+    }
+}
+```
