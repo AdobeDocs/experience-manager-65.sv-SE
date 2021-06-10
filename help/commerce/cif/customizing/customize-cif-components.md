@@ -10,10 +10,9 @@ audience: developer
 feature: Commerce Integration Framework
 kt: 4279
 thumbnail: customize-aem-cif-core-component.jpg
-translation-type: tm+mt
-source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
+source-git-commit: b132fc30e9ab77da24557c5d644a255173dc23c2
 workflow-type: tm+mt
-source-wordcount: '2541'
+source-wordcount: '2587'
 ht-degree: 0%
 
 ---
@@ -336,6 +335,10 @@ Ett vanligt tillägg för AEM är att ändra den kod som genereras av komponente
 
 I det här fallet vill vi återge en banderoll ovanpå teaser för att ange att produkten är&quot;miljövänlig&quot; baserat på ett anpassat attribut. Designmönstret för att [anpassa markeringen](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/customizing.html#customizing-the-markup) för en komponent är i själva verket standard för alla AEM, inte bara för AEM CIF Core Components.
 
+>[!NOTE]
+>
+> Om du anpassar en komponent med CIF-produkt- och kategoriväljare som denna Product Teaser eller CIF-sidkomponenten måste du ta med det nödvändiga `cif.shell.picker` klientlib för komponentdialogrutorna. Mer information finns i [Användning av CIF-produkt- och kategoriväljare](use-cif-pickers.md).
+
 1. I den integrerade utvecklingsmiljön navigerar och expanderar du modulen `ui.apps` och expanderar mapphierarkin till: `ui.apps/src/main/content/jcr_root/apps/venia/components/commerce/productteaser` och kontrollera `.content.xml`-filen.
 
    ![Product Teaser Ui.apps](../assets/customize-cif-components/product-teaser-ui-apps-ide.png)
@@ -499,3 +502,4 @@ Granska funktionaliteten i **märket New** som redan har implementerats i Produc
 - [Anpassa AEM CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components/wiki/Customizing-CIF-Core-Components)
 - [Anpassa kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/customizing.html)
 - [Komma igång med AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
+- [Användning av CIF-produkt- och kategoriväljare](use-cif-pickers.md)
