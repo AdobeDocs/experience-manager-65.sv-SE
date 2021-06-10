@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 discoiquuid: 6466d7b8-e308-43c5-acdc-dec15f796f64
-translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+exl-id: 918fcbbc-a78a-4fab-a933-f183ce6a907f
+source-git-commit: 2a866e82a059184ea86f22646e4a20406ad109e8
 workflow-type: tm+mt
-source-wordcount: '1145'
-ht-degree: 1%
+source-wordcount: '2097'
+ht-degree: 0%
 
 ---
-
 
 # Konfigurerar e-postmeddelande{#configuring-email-notification}
 
@@ -304,7 +303,7 @@ Så här lägger du till en mall för ett nytt språk:
 >
 >`<language-code>` som används som filnamn för e-postmallen måste vara en språkkod med två bokstäver och gemener som känns igen av AEM. För språkkoder använder AEM ISO-639-1.
 
-## Konfigurerar AEM Assets e-postmeddelanden {#assetsconfig}
+## Konfigurera e-postmeddelanden från AEM Assets {#assetsconfig}
 
 När samlingar i AEM Assets delas eller inte delas kan användare få e-postmeddelanden från AEM. Följ de här stegen för att konfigurera e-postmeddelanden.
 
@@ -312,3 +311,155 @@ När samlingar i AEM Assets delas eller inte delas kan användare få e-postmedd
 1. Logga in AEM som administratör. Klicka på **Verktyg** > **Åtgärder** > **Webbkonsol** för att öppna Konfiguration av webbkonsol.
 1. Redigera **Day CQ DAM Resource Collection-server**. Välj **skicka e-post**. Klicka på **Spara**.
 
+## Konfigurerar OAuth {#setting-up-oauth}
+
+AEM erbjuder OAuth2-stöd för den integrerade Mailer-tjänsten, så att organisationer kan följa e-postkraven.
+
+Du kan konfigurera OAuth för flera e-postleverantörer enligt instruktionerna nedan.
+
+### Gmail {#gmail}
+
+1. Skapa ditt projekt på `https://console.developers.google.com/projectcreate`
+1. Välj ditt projekt och gå sedan till **API:er och tjänster** - **Kontrollpanel - Autentiseringsuppgifter**
+1. Konfigurera OAuth-godkännandeskärmen enligt dina krav
+1. Lägg till följande två omfång på uppdateringsskärmen:
+   * `https://mail.google.com/`
+   * `https://www.googleapis.com//auth/gmail.send`
+1. När du har lagt till scopen går du tillbaka till **Autentiseringsuppgifter** på den vänstra menyn och sedan till **Skapa autentiseringsuppgifter** - **OAuth Client ID** - **Datorprogram**
+1. Ett nytt fönster öppnas med klient-ID och klienthemlighet.
+1. Spara dessa autentiseringsuppgifter.
+
+**AEM**
+
+>[!NOTE]
+>
+>Adobe Managed Service-kunder kan samarbeta med sin kundtjänsttekniker för att göra dessa ändringar i produktionsmiljöer.
+
+Konfigurera först e-posttjänsten:
+
+1. Öppna AEM webbkonsol genom att gå till `http://serveraddress:serverport/system/console/configMgr`
+1. Leta efter och klicka sedan på **Day CQ Mail Service**
+1. Lägg till följande inställningar:
+   * Värdnamn för SMTP-server: `smtp.gmail.com`
+   * SMTP-serverport: `25` eller `587`, beroende på kraven
+   * Markera kryssrutorna för **SMPT använder StarTLS** och **SMTP kräver StarTLS**
+   * Kontrollera **OAuth-flöde** och klicka på **Spara**.
+
+Konfigurera sedan SMTP OAuth-providern genom att följa proceduren nedan:
+
+1. Öppna AEM webbkonsol genom att gå till `http://serveraddress:serverport/system/console/configMgr`
+1. Leta efter och klicka sedan på **CQ Mailer SMTP OAuth2 Provider**
+1. Fyll i den obligatoriska informationen enligt följande:
+   * Autentiserings-URL: `https://accounts.google.com/o/oauth2/auth`
+   * Token-URL: `https://accounts.google.com/o/oauth2/token`
+   * Omfång: `https://www.googleapis.com/auth/gmail.send` och `https://mail.google.com/`. Du kan lägga till mer än ett omfång genom att trycka på knappen **+** till höger om varje konfigurerat omfång.
+   * Klient-ID och klienthemlighet: konfigurera dessa fält med de värden som du har hämtat enligt beskrivningen i stycket ovan.
+   * Uppdatera token-URL: `https://accounts.google.com/o/oauth2/token`
+   * Uppdateringstoken förfaller: aldrig
+1. Klicka på **Spara**.
+
+<!-- clarify refresh token expiry, currrently not present in the UI -->
+
+När inställningarna har konfigurerats bör de se ut så här:
+
+![oauth smtp-provider](assets/oauth-smtpprov2.png)
+
+Aktivera nu OAuth-komponenterna. Du kan göra detta genom att:
+
+1. Gå till komponentkonsolen genom att besöka den här URL:en: `http://serveraddress:serverport/system/console/components`
+1. Leta efter följande komponenter
+   * `com.day.cq.mailer.oauth.servlets.handler.OAuthCodeGenerateServlet`
+   * `com.day.cq.mailer.oauth.servlets.handler.OAuthCodeAccessTokenGenerator`
+1. Tryck på ikonen Spela upp till vänster om komponenterna
+
+   ![komponenter](assets/oauth-components-play.png)
+
+Bekräfta slutligen konfigurationen genom att:
+
+1. Gå till adressen för Publish-instansen och logga in som administratör.
+1. Öppna en ny flik i webbläsaren och gå till `http://serveraddress:serverport/services/mailer/oauth2/authorize`. Detta dirigerar om dig till sidan för din SMTP-leverantör, i det här fallet Gmail.
+1. Logga in och godkänn att ge nödvändiga behörigheter
+1. När du har gett ditt medgivande lagras denna token i databasen. Du kan komma åt den under `accessToken` genom att gå direkt till den här URL:en på din publiceringsinstans: `http://serveraddress:serverport/crx/de/index.jsp#/conf/global/settings/mailer/oauth2 `
+1. Upprepa ovanstående för varje publiceringsinstans
+
+<!-- clarify if the ip/server address in the last procedure is that of the publish instance -->
+
+### Microsoft Outlook {#microsoft-outlook}
+
+1. Gå till [https://portal.azure.com/](https://portal.azure.com/) och logga in.
+1. Sök efter **Azure Active Directory** i sökfältet och klicka på resultatet. Du kan även bläddra direkt till [https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview)
+1. Klicka på **Appregistrering** - **Ny registrering**
+
+   ![](assets/oauth-outlook1.png)
+
+1. Fyll i informationen enligt dina krav och klicka sedan på **Registrera**
+1. Gå till den nya appen och välj **API-behörigheter**
+1. Gå till **Lägg till behörighet** - **Diagrambehörighet** - **Delegerade behörigheter**
+1. Välj behörigheterna nedan för din app och klicka sedan på **Lägg till behörighet**:
+   * `SMTP.Send`
+   * `Mail.Read`
+   * `Mail.Send`
+   * `openid`
+   * `offline_access`
+1. Gå till **Autentisering** - **Lägg till en plattform** - **Webb** och lägg till följande URL för omdirigering av OAuth-koden i **Omdirigerings-URL**-avsnittet och tryck sedan på **Konfigurera**:
+   * `http://localhost:4503/services/mailer/oauth2/token`
+1. Upprepa ovanstående för varje publiceringsinstans
+1. Konfigurera inställningarna enligt dina krav
+1. Gå sedan till **Certifikat och hemligheter**, klicka på **Ny klienthemlighet** och följ stegen på skärmen för att skapa en hemlighet. Observera denna hemlighet för senare bruk
+1. Tryck på **Översikt** i den vänstra rutan och kopiera värdena för **program-ID** och **katalog-ID** för senare bruk
+
+För att komma tillbaka behöver du följande information för att konfigurera OAuth2 för tjänsten Mailer på AEM sida:
+
+* Autentiserings-URL:en som skapas med klientorganisations-ID:t. Den kommer att ha följande formulär: `https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/authorize`
+* Token URL, som skapas med klient-ID. Den kommer att ha följande formulär: `https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/token`
+* Uppdaterings-URL:en som skapas med klient-ID:t. Den kommer att ha följande formulär: `https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/token`
+* Klient-ID
+* Klienthemlighet
+
+**AEM**
+
+Integrera sedan dina OAuth2-inställningar med AEM:
+
+1. Gå till webbkonsolen för den lokala instansen genom att gå till `http://serveraddress:serverport/system/console/configMgr`
+1. Sök efter och klicka på **Day CQ Mail Service**
+1. Lägg till följande inställningar:
+   * Värdnamn för SMTP-server: `smtp.office365.com`
+   * SMTP-användare: ditt användarnamn i e-postformat
+   * &quot;Från&quot;-adress: E-postadressen som ska användas i fältet Från: i meddelanden som skickas av postlådan
+   * SMTP-serverport: `25` eller `587` beroende på kraven
+   * Markera kryssrutorna för **SMPT använder StarTLS** och **SMTP kräver StarTLS**
+   * Kontrollera **OAuth-flöde** och klicka på **Spara**.
+1. Leta efter och klicka sedan på **CQ Mailer SMTP OAuth2 Provider**
+1. Fyll i den obligatoriska informationen enligt följande:
+   * Fyll i auktoriserings-URL:en, token-URL:en och uppdatera token-URL:en genom att konstruera dem enligt beskrivningen i [slutet av proceduren](#microsoft-outlook)
+   * Klient-ID och klienthemlighet: konfigurera dessa fält med de värden som du har hämtat enligt beskrivningen ovan.
+   * Lägg till följande scope i konfigurationen:
+      * open
+      * offline_access
+      * `https://outlook.office365.com/Mail.Send`
+      * `https://outlook.office365.com/Mail.Read`
+      * `https://outlook.office365.com/SMTP.Send`
+   * Omdirigerings-URL för AuthCode: `http://localhost:4503/services/mailer/oauth2/token`
+   * Uppdatera token-URL: detta bör ha samma värde som token-URL:en ovan
+1. Klicka på **Spara**.
+
+När inställningarna har konfigurerats bör de se ut så här:
+
+![](assets/oauth-outlook-smptconfig.png)
+
+Aktivera nu OAuth-komponenterna. Du kan göra detta genom att:
+
+1. Gå till komponentkonsolen genom att besöka den här URL:en: `http://serveraddress:serverport/system/console/components`
+1. Leta efter följande komponenter
+   * `com.day.cq.mailer.oauth.servlets.handler.OAuthCodeGenerateServlet`
+   * `com.day.cq.mailer.oauth.servlets.handler.OAuthCodeAccessTokenGenerator`
+1. Tryck på ikonen Spela upp till vänster om komponenterna
+
+![components2](assets/oauth-components-play.png)
+
+Bekräfta slutligen konfigurationen genom att:
+
+1. Gå till adressen för Publish-instansen och logga in som administratör.
+1. Öppna en ny flik i webbläsaren och gå till `http://serveraddress:serverport/services/mailer/oauth2/authorize`. Detta dirigerar om dig till sidan för din SMTP-leverantör, i det här fallet Gmail.
+1. Logga in och godkänn att ge nödvändiga behörigheter
+1. När du har gett ditt medgivande lagras denna token i databasen. Du kan komma åt den under `accessToken` genom att gå direkt till den här URL:en på din publiceringsinstans: `http://serveraddress:serverport/crx/de/index.jsp#/conf/global/settings/mailer/oauth2 `
