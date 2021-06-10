@@ -4,9 +4,9 @@ description: Versionsinformation som är specifik för  [!DNL Adobe Experience M
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: 7d3c8d9266bdec3f75211cfa0636217fd8b054ca
+source-git-commit: 2e01bb0b16728a8073e5de47deb88de69486d408
 workflow-type: tm+mt
-source-wordcount: '3814'
+source-wordcount: '3817'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ De viktigaste funktionerna och förbättringarna i [!DNL Adobe Experience Manage
 
 * Stöd för en ny användare att uppdatera åtkomsttoken med hjälp av en uppdateringstoken för konfigurationstjänsten för postlådor.
 
-* Stöd för [!DNL SMTP XOAUTH2]-mekanismen för konfigurationstjänsten för postlådan.
+* [Stöd för SMTP XOAUTH2-](/help/sites-administering/notification.md#setting-up-oauth) mekanismen för e-postkonfigurationstjänsten.
 
 * Stöd för [!DNL MongoDB] version 4.2 och 4.4.
 
