@@ -4,9 +4,9 @@ description: Versionsinformation som är specifik för  [!DNL Adobe Experience M
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: 2e01bb0b16728a8073e5de47deb88de69486d408
+source-git-commit: f62c675af34a4b11cc152eafb7bc561f8b6890a9
 workflow-type: tm+mt
-source-wordcount: '3817'
+source-wordcount: '3797'
 ht-degree: 0%
 
 ---
@@ -22,17 +22,15 @@ ht-degree: 0%
 | Date | 27 maj 2021 |
 | Hämta URL | [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.9.zip) |
 
-<!-- TBD: Update the SD link when SP8 is available. Same link is duplicated below in install -->
-
 ## Vad ingår i [!DNL Adobe Experience Manager] 6.5.9.0 {#what-s-included-in-aem}
 
 [!DNL Adobe Experience Manager] 6.5.9.0 innehåller nya funktioner, viktiga förbättringar som kunderna efterfrågat samt prestanda-, stabilitets- och säkerhetsförbättringar som släppts sedan 6.5-versionen släpptes i april 2019. Service Pack är installerat på [!DNL Adobe Experience Manager] 6.5.
 
 De viktigaste funktionerna och förbättringarna i [!DNL Adobe Experience Manager] 6.5.9.0 är:
 
-* Nu kan AEM Sites Dynamic Media Foundation-komponenten aktivera eller inaktivera optimering för enheter med högre upplösning när du använder responsiv bildförinställning eller smart beskärning.
+* [!DNL Experience Manager Sites] Nu kan Dynamic Media Foundation-komponenten aktivera eller inaktivera optimering för enheter med högre upplösning när du använder responsiv bildförinställning eller smart beskärning.
 
-* För att förbättra prestandan flyttas villkoret hidden=false från JCR-frågan till QueryBuilder-utvärderaren. För att verifiera att ett dolt predikat fungerar efter ändringen kontrollerar Adobe Experience Manager att alla dolda mappar inte visas i gränssnittet.
+* För att förbättra prestandan flyttas villkoret hidden=false från JCR-frågan till QueryBuilder-utvärderaren. För att verifiera att ett dolt predikat fungerar efter ändringen kontrollerar Experience Manager att alla dolda mappar inte visas i gränssnittet.
 
 * Möjlighet att återställa borttagna sidor och träd på en [!DNL Experience Manager Sites]-sida.
 
@@ -94,9 +92,9 @@ En fullständig lista över funktioner och förbättringar som introducerats i [
 
 >[!NOTE]
 >
->Från och med AEM Service Pack 9 kan [!DNL Experience Manager]-kunder utveckla och använda sina [!DNL Experience Manager]-program med distributioner av [!DNL Azul Zulu]-byggen av OpenJDK, som följer Java SE-standarden.
+>Från och med Service Pack 9 kan [!DNL Experience Manager]-kunder utveckla och använda sina [!DNL Experience Manager]-program med distributioner av [!DNL Azul Zulu]-byggen av OpenJDK, som följer Java SE-standarden.
 >Adobe stöder också [!DNL Azul Zulu] JDK:er till [!DNL Experience Manager]-kunder.
->Du kan hämta relevanta versioner av [!DNL Azul Zulu JDKs] från [Adobe Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html).
+>Du kan hämta relevanta versioner av JDK:n [!DNL Azul Zulu] från [Adobe Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html).
 >Användarrättigheterna för Oraclet Java-tekniken, som distribuerats av Adobe, upphör att gälla i slutet av december 2022. [!DNL Experience Manager] Vi rekommenderar att man planerar och implementerar användning för  [!DNL Azul Zulu] JDK senast detta datum. Mer information om användningen av [!DNL Oracle Java]-tekniken och [!DNL Azul Zulu]-tekniken finns i [Frågor och svar](https://experienceleague.adobe.com/docs/experience-manager-65/assets/adobe-azul-openjdk-license-agreement.pdf?lang=en).
 
 Nedan följer en lista över korrigeringar i [!DNL Experience Manager] 6.5.9.0-versionen.
@@ -212,7 +210,7 @@ Adobe Experience Manager 6.5.9.0 Assets åtgärdar följande problem i [!DNL Dyn
 
 * Webbplatsförfattare med skrivskyddad behörighet kan använda smarta beskärningsfunktioner för resurser och redigera smarta beskurna återgivningar. Användare med skrivskyddad behörighet får dock inte kunna redigera resursegenskaper i Sites Dev-instansen (CQ-4316450).
 
-* Videoanteckningar fungerar inte för mappsökvägar där Dynamic Media-konfigurationen inte är aktiverad, även om AEM är Dynamic Media-läge (CQ-4314950).
+* Videoanteckningar fungerar inte för mappsökvägar [!DNL where Dynamic] Mediekonfigurationen är inte aktiverad, även om instansen [!DNL Experience Manager] är inställd i läget [!DNL Dynamic Media] (CQ-4314950).
 
 * När resurstiteln har tecken för dubbelbyte, multibyte, högt ASCII, kyrilliskt, surrogatpar, hebreiska, arabiska och GB18030 får resurstiteln ett frågetecken (?) vid publicering till Dynamic Media. (CQ-4311872).
 
@@ -261,7 +259,7 @@ Adobe Experience Manager 6.5.9.0 Assets åtgärdar följande problem i [!DNL Dyn
 
 * En `resourceresolver`-delningsbunt gör att `Sling:alias`-frågan misslyckas (NPR-35335).
 
-* Kontextsökvägen tas bort när SSL konfigureras i AEM (NPR-35294).
+* Kontextsökvägen tas bort när SSL konfigureras i Experience Manager (NPR-35294).
 
 * Undantaget `SegmentNotFound` returneras efter en session som körs länge (NPR-36405).
 
@@ -275,11 +273,11 @@ Adobe Experience Manager 6.5.9.0 Assets åtgärdar följande problem i [!DNL Dyn
 
 ### Projekt {#projects-6590}
 
-* Det går inte att spara egenskaperna för ett projekt eftersom JCR-sökvägen till projektet inte löses på grund av ett extra snedstreck (/) som läggs till i projektsökvägen (NPR-36191).
+* Det går inte att spara egenskaperna för ett projekt eftersom JCR-sökvägen till projektet inte har lösts på grund av ett extra snedstreck (`/`) som lagts till i projektsökvägen (NPR-36191).
 
 ### Skärmar {#screens-6590}
 
-* [!DNL Experience Manager Screens] Det går inte att autentisera om en anpassad 2FA-autentiseringshanterare används (NPR-35854).
+* [!DNL Experience Manager Screens] Det går inte att autentisera om en anpassad tvåfaktorsautentiseringshanterare används (NPR-35854).
 
 ### Handel {#commerce-6590}
 
@@ -291,7 +289,7 @@ Adobe Experience Manager 6.5.9.0 Assets åtgärdar följande problem i [!DNL Dyn
 
 * När alternativet för automatiskt godkännande har valts för ett projekt med mänsklig översättning visas jobbstatusen som `Unknown` (NPR-35981).
 
-* När du översätter en sida uppdateras inte referenssökvägen för Experience Fragments till referenssökvägen för Experience Fragment (NPR-35911).
+* När du översätter en sida uppdateras inte referenssökvägen [!DNL Experience Fragments] till referenssökvägen [!DNL Experience Fragment] (NPR-35911).
 
 * När du gör ändringar på de överordnade och underordnade sidorna och skickar den överordnade sidan för översättning, översätts även de underordnade sidorna felaktigt (NPR-35896).
 
@@ -303,12 +301,12 @@ Adobe Experience Manager 6.5.9.0 Assets åtgärdar följande problem i [!DNL Dyn
 
 ### Arbetsflöde {#workflow-6590}
 
-* När du klickar på Complete (Fullständig), Delegate (Delegera) eller Open (Öppna) för objekt som är tillgängliga i Inbox finns ingen visuell ledtråd som anger att dessa åtgärder har slutförts (NPR-36317).
+* När du klickar på Complete (Fullständig), Delegate (Delegera) eller Open (Öppna) för objekt som är tillgängliga i Inbox finns ingen visuell ledtråd för att slutföra dessa åtgärder (NPR-36317).
 
 ### [!DNL Communities] {#communities-6590}
 
-* Vid filtrering av skräppost förbrukar systemet 100 % av JAVA-heap-utrymmet, vilket medför att den AEM servern krymper (NPR-36316, NPR-36493).
-* I forumen läses JCR-sessionsdata som härstammar från SearchCommentSocialComponentListProvider (NPR-36235).
+* Vid skräppostfiltrering förbrukar systemet 100 % av Java-heap-utrymmet, vilket gör att Experience Manager-servern inte svarar (NPR-36316, NPR-36493).
+* I forumen läses data från JCR-sessioner från `SearchCommentSocialComponentListProvider` in (NPR-36235).
 * När du öppnar ett specifikt inkorgsmeddelande visas alla meddelanden med felaktig sidnumrering och andra problem (NPR-35917).
 
 ### [!DNL Brand Portal] {#brandportal-6590}
@@ -364,7 +362,7 @@ Adobe Experience Manager 6.5.9.0 Assets åtgärdar följande problem i [!DNL Dyn
 
 * När du väljer Endpoint Management i AdminUI visar [!DNL Experience Manager Forms] felmeddelandet `endpoint registry failure` (CQ-4320249).
 
-Mer information om säkerhetsuppdateringar finns på [Experience Manager-säkerhetsbulletinsidan](https://helpx.adobe.com/security/products/experience-manager.html).
+Mer information om säkerhetsuppdateringar finns på [[!DNL Experience Manager] sidan Säkerhetsbulletiner](https://helpx.adobe.com/security/products/experience-manager.html).
 
 ## Installera 6.5.9.0 {#install}
 
@@ -400,7 +398,7 @@ Så här installerar du Service Pack på en [!DNL Adobe Experience Manager] 6.5-
 
 **Automatisk installation**
 
-Det finns två sätt att installera Adobe Experience Manager 6.5.9.0 automatiskt på en fungerande instans:
+Det finns två sätt att automatiskt installera [!DNL Experience Manager] 6.5.9.0 på en fungerande instans:
 
 S. Placera paketet i mappen `../crx-quickstart/install` när servern är tillgänglig online. Paketet installeras automatiskt.
 
@@ -410,7 +408,7 @@ B. Använd [HTTP-API:t från Package Manager](/help/sites-administering/package-
 >
 >Adobe Experience Manager 6.5.9.0 stöder inte installation av Bootstrap.
 
-**Validera installation**
+**Validera installationen**
 
 1. Produktinformationssidan (`/system/console/productinfo`) visar den uppdaterade versionssträngen `Adobe Experience Manager (6.5.9.0)` under [!UICONTROL Installed Products].
 
@@ -473,7 +471,7 @@ Granska om du använder en funktion eller en funktion i en distribution. Planera
 
 | Yta | Funktion | Ersättning |
 |---|---|---|
-| Integreringar | Skärmen **[!UICONTROL AEM Cloud Services Opt-In]** är föråldrad. Tack vare integreringen mellan Experience Manager och Adobe Target som uppdaterades i Experience Manager 6.5 för att stödja Adobe Target Standard API, som använder autentisering via Adobe IMS och I/O, och den växande rollen hos Adobe Launch för att instrumentera Experience Manager sidor för analys och personalisering, har guiden för att välja In blivit funktionellt irrelevant. | Konfigurera systemanslutningar, Adobe IMS-autentisering och [!DNL Adobe I/O]-integreringar via respektive Experience Manager molntjänster. |
+| Integreringar | Skärmen **[!UICONTROL AEM Cloud Services Opt-In]** är föråldrad. Tack vare integreringen mellan Experience Manager och Adobe Target som uppdaterades i Experience Manager 6.5 för att stödja Adobe Target Standard API, som använder autentisering via Adobe IMS och [!DNL Adobe I/O], och den växande rollen hos Adobe Launch för att instrumentera Experience Manager sidor för analys och personalisering, har avanmälningsguiden blivit funktionellt irrelevant. | Konfigurera systemanslutningar, Adobe IMS-autentisering och [!DNL Adobe I/O]-integreringar via respektive [!DNL Experience Manager]-molntjänster. |
 | Anslutningar | Adobe JCR Connector för Microsoft SharePoint 2010 och Microsoft SharePoint 2013 är föråldrad för Experience Manager 6.5. | Ej tillämpligt |
 
 ## Kända fel {#known-issues}
@@ -484,7 +482,7 @@ Granska om du använder en funktion eller en funktion i en distribution. Planera
 Om du vill hämta körtidskopian rekommenderar Adobe att du synkroniserar designtidskopian av den anpassade arbetsflödesmodellen med körtidskopian med hjälp av HTTP API:
    `<designModelPath>/jcr:content.generate.json`.
 
-* Om en mapp i hierarkin byter namn i [!DNL Experience Manager Assets] och den kapslade mappen som innehåller en resurs publiceras i [!DNL Brand Portal], uppdateras inte mappens namn i [!DNL Brand Portal] förrän rotmappen publiceras igen.
+* Om en mapp i hierarkin byter namn i [!DNL Assets] och en kapslad mapp som innehåller en resurs publiceras i [!DNL Brand Portal], uppdateras inte mappens namn i [!DNL Brand Portal] förrän rotmappen publiceras på nytt.
 
 * När en användare väljer att konfigurera ett fält för första gången i ett adaptivt formulär visas inte alternativet att spara en konfiguration i egenskapsläsaren. Om du väljer att konfigurera ett annat fält i det adaptiva formuläret i samma redigerare åtgärdas problemet.
 
