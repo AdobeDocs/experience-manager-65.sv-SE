@@ -7,10 +7,9 @@ version: cloud-service
 activity: develop
 audience: developer
 feature: Commerce Integration Framework
-translation-type: tm+mt
-source-git-commit: d92a635d41cf1b14e109c316bd7264cf7d45a9fe
+source-git-commit: d84993e704096eabe85c4d4d61e24096d15ae9bd
 workflow-type: tm+mt
-source-wordcount: '581'
+source-wordcount: '579'
 ht-degree: 0%
 
 ---
@@ -44,7 +43,9 @@ Produktväljarfältet har stöd för följande valfria egenskaper:
 
 Standardegenskaper för diagloger som `name`, `fieldLabel` eller `fieldDescription` stöds också.
 
-Komponenten `cifproductfield` kräver clientlib-objektet cif.shell.picker. Om du vill lägga till ett clientlib i en dialogruta kan du använda egenskapen extraClientlibs.
+>[!CAUTION]
+>
+>Komponenten `cifproductfield` kräver klientlib `cif.shell.picker`. Om du vill lägga till ett clientlib i en dialogruta kan du använda egenskapen extraClientlibs.
 
 Ett fullt fungerande exempel på `cifproductfield` finns i [CIF Core Components](https://github.com/adobe/aem-core-cif-components/blob/master/ui.apps/src/main/content/jcr_root/apps/core/cif/components/commerce/productteaser/v1/productteaser/_cq_dialog/.content.xml)-projektet. Se även [Anpassa dialogrutor](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/customizing.html?lang=en#customizing-dialogs) i dokumentationen för AEM Core Components.
 
@@ -69,6 +70,8 @@ Fältet för kategoriväljare har stöd för följande valfria egenskaper:
 
 Standardegenskaper för diagloger som `name`, `fieldLabel` eller `fieldDescription` stöds också.
 
-Samma som `cifproductfield`-komponenten för `cifcategoryfield`-komponenten kräver även clientlib för cif.shell.picker. Om du vill lägga till ett klientlib i en dialogruta kan du använda egenskapen `extraClientlibs`. Se [Anpassa dialogrutor](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/customizing.html?lang=en#customizing-dialogs) i dokumentationen för AEM Core Components.
+>[!CAUTION]
+>
+>Samma som `cifproductfield`-komponenten kräver `cifcategoryfield`-komponenten också klientlib. `cif.shell.picker` Om du vill lägga till ett klientlib i en dialogruta kan du använda egenskapen `extraClientlibs`. Se [Anpassa dialogrutor](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/customizing.html?lang=en#customizing-dialogs) i dokumentationen för AEM Core Components.
 
 Ett fullt fungerande exempel på `cifcategoryfield` finns i [CIF Core Components](https://github.com/adobe/aem-core-cif-components/blob/master/ui.apps/src/main/content/jcr_root/apps/core/cif/components/commerce/featuredcategorylist/v1/featuredcategorylist/_cq_dialog/.content.xml)-projektet.
