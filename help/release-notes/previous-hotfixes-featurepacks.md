@@ -3,9 +3,9 @@ title: '[!DNL Adobe Experience Manager] 6.5 Versionsinformation för föregåend
 description: Versionsinformation för [!DNL Adobe Experience Manager] 6.5 Service Packs.
 contentOwner: AK
 exl-id: aeed49a0-c7c2-44da-b0b8-ba9f6b6f7101
-source-git-commit: d06e60baac692c92358244944226b77d5dad4022
+source-git-commit: 29e045ef3080866a94e0925bc0c176a91092c729
 workflow-type: tm+mt
-source-wordcount: '19911'
+source-wordcount: '19903'
 ht-degree: 0%
 
 ---
@@ -590,9 +590,9 @@ De viktigaste funktionerna och förbättringarna i Adobe Experience Manager 6.5.
 
 * [Förbättrad cachning för översatta adaptiva formulärsidor](../../help/forms/using/configure-adaptive-forms-cache.md).
 
-* Stöd för [Adobe Sign-texttaggar i tjänsten Automated forms conversion](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/convert-existing-forms-to-adaptive-forms.html).
+* Stöd för [Adobe Sign-texttaggar i tjänsten Automated forms conversion](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/convert-existing-forms-to-adaptive-forms.html).
 
-* Stöd för [konvertering av färgade formulär till adaptiva formulär](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/convert-existing-forms-to-adaptive-forms.html) med [!DNL Automated Forms Conversion service].
+* Stöd för [konvertering av färgade formulär till adaptiva formulär](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/convert-existing-forms-to-adaptive-forms.html) med [!DNL Automated Forms Conversion service].
 
 * Stöd för SMB 2- och SMB 3-protokoll.
 
@@ -1001,7 +1001,7 @@ Nedan följer en lista över korrigeringar i [!DNL Experience Manager] 6.5.5.0-v
 
 >[!IMPORTANT]
 >
->Windows-användare av [!DNL Experience Manager desktop app] rekommenderas att uppgradera till [datorprogramversion 2.0.3.2](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/release-notes.html#whats-new-added) för att få åtkomst till DAM-databasen på [!DNL Adobe Experience Manager 6.5.5.0]-instansen. Eftersom de kan stöta på problem vid åtkomst till DAM-databasen i instansen [!DNL Adobe Experience Manager] 6.5.5.0 med datorprogramversionen 2.0.2.
+>Windows-användare av [!DNL Experience Manager desktop app] rekommenderas att uppgradera till [datorprogramversion 2.0.3.2](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html#what-is-new) för att få åtkomst till DAM-databasen på [!DNL Adobe Experience Manager 6.5.5.0]-instansen. Eftersom de kan stöta på problem vid åtkomst till DAM-databasen i instansen [!DNL Adobe Experience Manager] 6.5.5.0 med datorprogramversionen 2.0.2.
 
 **Tillgänglighetsförbättringar i Experience Manager Assets**
 
@@ -2183,7 +2183,7 @@ De viktigaste högdagrarna för [!DNL Experience Manager Forms] 6.5.1.0 är:
 
 #### Resurser - inkluderade
 
-* Flerplatshanteraren har aktiverats för [!DNL Experience Manager Assets]. Mer information finns i [Återanvända resurser med MSM för Experience Manager Assets](https://docs.adobe.com/content/help/en/experience-manager-65/assets/using/reuse-assets-using-msm.html). NPR-29199: Programfix för CQ-4259922
+* Flerplatshanteraren har aktiverats för [!DNL Experience Manager Assets]. Mer information finns i [Återanvända resurser med MSM för Experience Manager Assets](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/reuse-assets-using-msm.html). NPR-29199: Programfix för CQ-4259922
 
 #### Webbplatser - ingår
 
