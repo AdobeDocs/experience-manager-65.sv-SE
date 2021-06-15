@@ -12,7 +12,7 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/config
 role: Business Practitioner, Administrator
 exl-id: 5719d32c-4f19-47c1-bea9-8fd0bc8439ed
 feature: Konfiguration,Hybrid-läge
-source-git-commit: c4221ede672c131aa0864438bc9fd16c73ddf10c
+source-git-commit: 3267fba890424e18c8c3c61a0cf4c79387b074a8
 workflow-type: tm+mt
 source-wordcount: '7603'
 ht-degree: 1%
@@ -211,7 +211,7 @@ Dynamic Media är inte aktiverat som standard. Om du tidigare har aktiverat Dyna
 
 Om du vill inaktivera Dynamic Media efter att du har aktiverat det tar du bort flaggan `-r dynamicmedia` för körningsläge.
 
-**Så här inaktiverar du Dynamic Media när det har aktiverats**
+**Så här inaktiverar du Dynamic Media när det har aktiverats:**
 
 1. När du startar snabbstarten på kommandoraden kan du göra något av följande:
 
@@ -229,7 +229,7 @@ Om du vill inaktivera Dynamic Media efter att du har aktiverat det tar du bort f
 
 ## (Valfritt) Migrera förinställningar och konfigurationer för Dynamic Media från 6.3 till 6.5 Zero Downtime {#optional-migrating-dynamic-media-presets-and-configurations-from-to-zero-downtime}
 
-Om du uppgraderar Experience Manager Dynamic Media från 6.3 till 6.5 (som nu innehåller möjligheten till noll driftsättningar under driftstopp), måste du köra följande kommando. Kommandot migrerar alla dina förinställningar och konfigurationer från `/etc` till `/conf` i CRXDE Lite.
+Om du uppgraderar Experience Manager - Dynamic Media från 6.3 till 6.5 (som nu kan köras utan driftavbrott) måste du köra följande kommando. Kommandot migrerar alla dina förinställningar och konfigurationer från `/etc` till `/conf` i CRXDE Lite.
 
 >[!NOTE]
 Om du kör Experience Manager-instansen i kompatibilitetsläge, d.v.s. har kompatibilitetspaketet installerat, behöver du inte köra dessa kommandon.
@@ -373,7 +373,8 @@ Replication test to s7delivery:https://s7bern.macromedia.com:8580/is-publish/
  Server returned status code 401 with message: Authorization required.
 ```
 
-**Lösning**: Kontrollera att filen  `KeyStore` har sparats till  **dynamic-media-** replikationuser och att rätt lösenord har angetts.
+**Lösning:**
+Kontrollera att filen  `KeyStore` har sparats till  **dynamic-media-** replikationuser och att den har rätt lösenord.
 
 #### Problem: Det gick inte att dekryptera nyckeln - det gick inte att dekryptera data {#problem-could-not-decrypt-key-could-not-decrypt-data}
 
@@ -389,7 +390,8 @@ Replication test to s7delivery:https://<localhost>:8580/is-publish/
 17.06.2016 19:00:16 - Transfer failed for ReplicationAction{type=TEST, path[0]='/content/dam', time=1466215216662, userId='admin', revision='null'}. java.lang.SecurityException: java.security.UnrecoverableKeyException: Could not decrypt key: Could not decrypt data.
 ```
 
-**Lösning**: Kontrollera lösenordet. Lösenordet som har sparats i replikeringsagenten är inte samma lösenord som användes för att skapa nyckelbehållaren.
+**Lösning:**
+Kontrollera lösenordet. Lösenordet som har sparats i replikeringsagenten är inte samma lösenord som användes för att skapa nyckelbehållaren.
 
 #### Problem: InvalidAlgorithmParameterException {#problem-invalidalgorithmparameterexception}
 
@@ -409,7 +411,8 @@ java.io.IOException: Failed to execute request 'https://replicate-na.assetsadobe
         at com.scene7.is.catalog.service.publish.atomic.PublishingServiceHttp.executePost(PublishingServiceHttp.scala:195)
 ```
 
-**Lösning**: Kontrollera att egenskapen system är  `-Djavax.net.ssl.trustStore=` inställd på ett giltigt förtroendearkiv för Java™-processen på författaren till Experience Manager.
+**Lösning:**
+Kontrollera att systemegenskapen är  `-Djavax.net.ssl.trustStore=` inställd på ett giltigt förtroendearkiv för Java™-processen på författaren till Experience Manager.
 
 #### Problem: KeyStore har inte konfigurerats eller är inte initierat {#problem-keystore-is-either-not-set-up-or-it-is-not-initialized}
 
@@ -427,7 +430,7 @@ Replication test to s7delivery:https://replicate-na.assetsadobe.com/is-publish
 02.08.2016 14:37:44 - Transfer failed for ReplicationAction{type=TEST, path[0]='/content/dam', time=1470173864834, userId='admin', revision='null'}. com.adobe.granite.keystore.KeyStoreNotInitialisedException: Uninitialised key store for user dynamic-media-replication
 ```
 
-**Lösning**:
+**Lösning:**
 
 1. Gå till sidan Användarhantering:
    `localhost:4502/libs/granite/security/content/useradmin.html`
@@ -585,7 +588,7 @@ Om du till exempel vill se Analytics-förinställningen på författarnoden kan 
       ```
 
    * **Kontrollera förinställningen för videoanalys med videorapporteringsverktyget i Experience**
-ManagerTap  **[!UICONTROL Tools > Assets > Video Reporting]**
+ManagerTryck  **[!UICONTROL Tools]** >  **[!UICONTROL Assets]** >  **[!UICONTROL Video Reporting]**
 
       `https://localhost:4502/mnt/overlay/dam/gui/content/s7dam/videoreports/videoreport.html`
 
@@ -815,7 +818,7 @@ När du konfigurerar Dynamic Media Image Server måste du redigera Adobe CQ Scen
 >[!NOTE]
 Dynamic Media arbetar körklart [när det har aktiverats](#enabling-dynamic-media). Du kan dock välja att finjustera installationen genom att konfigurera Dynamic Media Image Server så att den uppfyller vissa specifikationer eller krav.
 
-**Krav**:  *Innan* du konfigurerar Dynamic Media Image Server bör du kontrollera att din virtuella dator med Windows® innehåller en installation av Microsoft® Visual C++ Libraries. Biblioteken krävs för att köra Dynamic Media Image Server. Du kan [hämta Microsoft® Visual C++ 2010 Redistributable Package (x64) här](https://www.microsoft.com/en-us/download/details.aspx?id=26999).
+**Krav**  -  ** Innan du konfigurerar Dynamic Media Image Server bör du kontrollera att din virtuella dator med Windows® innehåller en installation av Microsoft® Visual C++-biblioteken. Biblioteken krävs för att köra Dynamic Media Image Server. Du kan [hämta Microsoft® Visual C++ 2010 Redistributable Package (x64) här](https://www.microsoft.com/en-us/download/details.aspx?id=26999).
 
 Så här konfigurerar du inställningarna för Dynamic Media Image Server:
 
@@ -891,7 +894,7 @@ Så här konfigurerar du inställningarna för Dynamic Media Image Server:
 
 Med standardmanifestet kan du konfigurera standardinställningarna som används för att generera Dynamic Media Delivery-svar. Du kan finjustera kvaliteten (JPEG-kvalitet, upplösning, omsamplingsläge), cachning (förfaller) och förhindra återgivning av bilder som är för stora (standardvärde, standardvärde för miniatyrbild, maxpix).
 
-Platsen för standardmanifestkonfigurationen hämtas från **[!UICONTROL Catalog root]**-standardvärdet för **[!UICONTROL Adobe CQ Scene7 PlatformServer]**-paketet. Som standard finns det här värdet i följande sökväg inom **[!UICONTROL Tools > General > CRXDE Lite]**:
+Platsen för standardmanifestkonfigurationen hämtas från **[!UICONTROL Catalog root]**-standardvärdet för **[!UICONTROL Adobe CQ Scene7 PlatformServer]**-paketet. Som standard finns det här värdet i följande sökväg inom **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL CRXDE Lite]**
 
 `/conf/global/settings/dam/dm/imageserver/`
 
@@ -998,9 +1001,9 @@ Installera funktionspaket 12445 om du vill använda Dynamic Media färghantering
 
 När du har installerat funktionspaketet konfigurerar du lämpliga standardfärgprofiler för att aktivera färgkorrigering när du begär RGB- eller CMYK-bilddata.
 
-**Konfigurera standardfärgprofiler**
+**Så här konfigurerar du standardfärgprofiler:**
 
-1. I **[!UICONTROL Tools > General > CRXDE Lite]** navigerar du till `/conf/global/settings/dam/dm/imageserver/jcr:content` som innehåller standardprofilerna för Adobe Color.
+1. I **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL CRXDE Lite]** navigerar du till `/conf/global/settings/dam/dm/imageserver/jcr:content` som innehåller Adobe Color standardprofiler.
 
    ![chlimage_1-514](assets/chlimage_1-514.png)
 
