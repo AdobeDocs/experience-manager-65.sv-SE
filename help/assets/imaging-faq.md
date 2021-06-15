@@ -9,7 +9,7 @@ discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
 feature: Resurshantering,Återgivningar
 role: Business Practitioner, Administrator
 exl-id: e427d4ee-d5c8-421b-9739-f3cf2de36e41
-source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
+source-git-commit: 3267fba890424e18c8c3c61a0cf4c79387b074a8
 workflow-type: tm+mt
 source-wordcount: '1866'
 ht-degree: 0%
@@ -220,7 +220,7 @@ The release schedule for Smart Imaging DPR and network optimization is as follow
 
 1. Adobe kundtjänst lägger till dig i väntelistan för Smart Imaging baserat på i vilken ordning begäranden skickades.
 1. När Adobe är redo att hantera din begäran kontaktar supporten dig för att koordinera och ange ett måldatum.
-1. **Valfritt**: Du kan också testa smart bildåtergivning i mellanlagring innan Adobe överför den nya funktionen till produktion.
+1. **Valfritt**  - Du kan testa smart bildåtergivning i mellanlagring innan Adobe överför den nya funktionen till produktion.
 1. Du meddelas när du är klar av Kundtjänst.
 1. För att maximera prestandaförbättringarna av Smart Imaging rekommenderar Adobe att TTL (Time To Live) ställs in på 24 timmar eller längre. TTL-värdet definierar hur länge resurser cachas av CDN. Så här ändrar du den här inställningen:
 
