@@ -11,7 +11,7 @@ docset: aem65
 feature: 360 VR-video
 role: Business Practitioner, Administrator
 exl-id: 0c2077a7-bd16-484b-980f-4d4a1a681491
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 3267fba890424e18c8c3c61a0cf4c79387b074a8
 workflow-type: tm+mt
 source-wordcount: '1047'
 ht-degree: 0%
@@ -82,8 +82,8 @@ Som standard identifierar Experience Manager video som&quot;360&quot; om proport
 
 * `/conf/global/settings/cloudconfigs/dmscene7/jcr:content`
 
-   * **Egenskapstyp**: Dubbel
-   * **Värde**: flyttalsproportioner, standard 2.0.
+   * **Egenskapstyp**  - dubbel
+   * **Värde**  - flyttalsproportioner, standard 2.0.
 
 När du har angett den här egenskapen börjar den gälla omedelbart för både befintliga videoklipp och nyligen överförda videoklipp.
 
