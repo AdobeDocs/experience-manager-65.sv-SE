@@ -9,10 +9,9 @@ docset: aem65
 feature: Tittare
 role: Business Practitioner, Administrator,Developer,Data Engineer,Data Architect
 exl-id: 161dfe22-bc1c-4b60-8ab6-a19407a39e2e
-translation-type: tm+mt
-source-git-commit: 4b1b9fb014594a67e8db271cc02bc54b29e24896
+source-git-commit: 22a181e77a563ee3590cd661507f4dfeaf9d14da
 workflow-type: tm+mt
-source-wordcount: '6210'
+source-wordcount: '6224'
 ht-degree: 9%
 
 ---
@@ -41,11 +40,11 @@ Mer information om tillägg finns i [Adobe Extension](https://experienceleague.a
 
 ### Användningsexempel för integreringen {#use-cases-for-the-integration}
 
-Det viktigaste användningsområdet för integreringen med Experience Platform Launch är kunder som använder både AEM Assets och AEM Sites. I sådana fall kan du konfigurera en standardintegrering mellan AEM författarnod och Experience Platform Launch och sedan associera din Sites-instans med egenskapen Experience Platform Launch. Efter det kommer alla Dynamic Media WCM-komponenter som läggs till på en Sites-sida att spåra data och händelser från tittarna.
+Det viktigaste användningsområdet för integreringen med Experience Platform Launch är kunder som använder både Adobe Experience Manager Assets och Adobe Experience Manager Sites. I sådana fall kan du konfigurera en standardintegrering mellan författarnoden i Experience Manager och Experience Platform Launch och sedan associera din Sites-instans med egenskapen Experience Platform Launch. Efter det kommer alla Dynamic Media WCM-komponenter som läggs till på en Sites-sida att spåra data och händelser från tittarna.
 
-Se [Spåra Dynamic Media-visningsprogram i AEM Sites](#tracking-dynamic-media-viewers-in-aem-sites).
+Se [Spåra Dynamic Media-visningsprogram i Experience Manager Sites](#tracking-dynamic-media-viewers-in-aem-sites).
 
-Ett sekundärt användningsfall som integreringen stöder är de kunder som bara använder AEM Assets eller Dynamic Media Classic. I så fall får du inbäddningskoden för ditt visningsprogram och lägger till den på webbplatssidan. Hämta sedan Experience Platform Launch URL:en för biblioteksproduktion från Experience Platform Launch och lägg till den manuellt i webbsideskoden.
+Ett sekundärt användningsfall som integreringen stöder är de kunder som bara använder Experience Manager Assets eller Dynamic Media Classic. I så fall får du inbäddningskoden för ditt visningsprogram och lägger till den på webbplatssidan. Hämta sedan Experience Platform Launch URL:en för biblioteksproduktion från Experience Platform Launch och lägg till den manuellt i webbsideskoden.
 
 Se [Spåra Dynamic Media-visningsprogram med hjälp av inbäddningskod](#tracking-dynamic-media-viewers-using-embed-code).
 
@@ -73,7 +72,7 @@ Dynamic Media Viewer-tillägget håller automatiskt värdena för dataelementen 
 
 När du har definierat det kan ett dataelement användas på andra platser i användargränssnittet för Experience Platform Launch med hjälp av widgeten för dataelementväljare. Dataelement som definieras för spårning av Dynamic Media-visningsprogram refereras särskilt av tillägget Ange variabelåtgärd för Adobe Analytics i regeln (se nedan).
 
-Se [Dataelement](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/data-elements.html#reference).
+Se [Dataelement](https://experienceleague.adobe.com/docs/launch/using/ui/data-elements.html).
 
 #### Om regler i Experience Platform Launch {#about-rules-in-adobe-launch}
 
@@ -99,7 +98,7 @@ I avsnittet Åtgärder måste du ha en *Set Variables*-åtgärd. Den här åtgä
 
 Åtgärden *Ange variabler* måste följas av en *Skicka Beacon*-åtgärd. Åtgärden *Skicka Beacon* skickar data till analysspårningsservern. Båda åtgärderna, *Ange variabler* och *Skicka Beacon*, kommer från Adobe Analytics-tillägget.
 
-Se [Regler](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/rules.html#reference).
+Se [Regler](https://experienceleague.adobe.com/docs/launch/using/ui/rules.html).
 
 #### Exempelkonfiguration {#sample-configuration}
 
@@ -137,21 +136,21 @@ Stödet för videospårning är för närvarande begränsat till enbart huvudupp
 
 ## Använda tillägget Dynamic Media Viewer {#using-the-dynamic-media-viewers-extension}
 
-Som nämndes i [Användningsexempel för integrering](#use-cases-for-the-integration) är det möjligt att spåra Dynamic Media-visningsprogram med den nya Experience Platform Launch-integreringen i AEM Sites och genom att använda inbäddningskod.
+Som nämndes i [Användningsexempel för integrering](#use-cases-for-the-integration) är det möjligt att spåra Dynamic Media-visningsprogram med den nya Experience Platform Launch-integreringen i Experience Manager Sites och genom att använda inbäddningskod.
 
-### Spåra Dynamic Media-visningsprogram i AEM Sites {#tracking-dynamic-media-viewers-in-aem-sites}
+### Spåra Dynamic Media-visningsprogram i Experience Manager Sites {#tracking-dynamic-media-viewers-in-aem-sites}
 
-Om du vill spåra Dynamic Media-visningsprogram i AEM Sites måste du utföra alla steg som listas under [Konfigurera alla integrationsdelar](#configuring-all-the-integration-pieces)-avsnittet. Du måste skapa IMS-konfigurationen och konfigurationen för Experience Platform Launch Cloud.
+Om du vill spåra Dynamic Media-visningsprogram i Experience Manager Sites måste du utföra alla steg som listas under [Konfigurera alla integrationsdelar](#configuring-all-the-integration-pieces)-avsnittet. Du måste skapa IMS-konfigurationen och konfigurationen för Experience Platform Launch Cloud.
 
 När konfigurationen är korrekt spåras data automatiskt i Adobe Analytics, Adobe Analytics for Video eller båda när du lägger till ett visningsprogram från Dynamic Media på en webbplats med en WCM-komponent som stöds av Dynamic Media.
 
-<!-- To be reviewed and updated although this is found live in the AEMaaCS version:
+<!-- To be reviewed and updated although this is found live in the Experience ManageraaCS version:
 See [Adding Dynamic Media Assets to Pages using Adobe Sites](https://helpx.adobe.com/experience-manager/6-5/help/assets/adding-dynamic-media-assets-to-pages.html).
 -->
 
 ### Spåra Dynamic Media-visningsprogram med hjälp av inbäddningskoden {#tracking-dynamic-media-viewers-using-embed-code}
 
-Kunder som inte använder AEM Sites, eller bäddar in Dynamic Media-visningsprogram på webbsidor utanför AEM Sites, eller båda, kan fortfarande använda integreringen med Experience Platform Launch.
+Kunder som inte använder Experience Manager Sites eller bäddar in Dynamic Media-visningsprogram på webbsidor utanför Experience Manager Sites, eller båda, kan fortfarande använda Experience Platform Launch-integreringen.
 
 Slutför konfigurationsstegen i [Konfigurera Adobe Analytics](#configuring-adobe-analytics-for-the-integration) och [Konfigurera Experience Platform Launch](#configuring-adobe-launch-for-the-integration)-avsnitten. Konfigurationssteg som rör Experience Manager behövs dock inte.
 
@@ -159,11 +158,11 @@ Om konfigurationen är korrekt kan du lägga till stöd för Experience Platform
 
 Läs [Lägg till Platforma launchen Embed Code](https://experienceleague.adobe.com/docs/launch-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html#configure-launch) om du vill veta mer om hur du använder inbäddningskod för Experience Platform Launch-bibliotek.
 
-<!-- To be reviewed and updated although this is found live in the AEMaaCS version:
-See [Embedding the Video or Image Viewer on a Web Page](https://helpx.adobe.com/experience-manager/6-5/help/assets/embed-code.html) to learn more about how to use the embed code feature of AEM Dynamic Media.
+<!-- To be reviewed and updated although this is found live in the Experience ManageraaCS version:
+See [Embedding the Video or Image Viewer on a Web Page](https://helpx.adobe.com/experience-manager/6-5/help/assets/embed-code.html) to learn more about how to use the embed code feature of Experience Manager Dynamic Media.
 -->
 
-**Så här spårar du Dynamic Media-visningsprogram med hjälp av inbäddningskod**:
+**Så här spårar du Dynamic Media-visningsprogram med hjälp av inbäddningskod:**
 
 1. Ha en webbsida redo för inbäddning av ett Dynamic Media-visningsprogram.
 1. Hämta inbäddningskoden för Experience Platform Launch-biblioteket genom att först logga in på Experience Platform Launch (se [Konfigurera Experience Platform Launch](#configuring-adobe-launch-for-the-integration)).
@@ -215,7 +214,7 @@ Alla Dynamic Media-visningsprogram har en unik identifierare på webbsidan. Data
 
 Det exakta värdet som returneras av dataelementet beror på sammanhanget. Om dataelementet begärs i en regel som utlöstes av en Dynamic Media-visningshändelse, returneras dataelementvärdet för det visningsprogram som initierade regeln. Och dataelementet begärs i en regel som utlöstes av en händelse från någon annan Platform launch. I det skedet kommer dataelementets värde från det visningsprogram som senast uppdaterade det här dataelementet.
 
-**Tänk på följande exempelinställningar**:
+**Tänk på följande exempelinställningar:**
 
 * En webbsida med två zoomningsvisningsprogram från Dynamic Media: *visningsprogram1* och *visningsprogram2*.
 
@@ -241,7 +240,7 @@ Samplingsuppsättningen ovan påverkar också dataelementvärdets livslängd. V�
 
 Värdena för dataelement som drivs av Dynamic Media-visningsprogram lagras inte i den lokala lagringen eller på servern. i stället finns de bara i klientbiblioteket Experience Platform Launch. Värdena för sådana dataelement försvinner när webbsidan läses in igen.
 
-I allmänhet har dataelementsredigeraren stöd för [val av lagringstid](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/data-elements.html?lang=en#create-a-data-element). Dataelement som använder Dynamic Media Viewer-tillägget har dock bara stöd för alternativet för lagringstid på **[!UICONTROL None]**. Det går att ange andra värden i användargränssnittet, men i det här fallet är dataelementets beteende inte definierat. Tillägget hanterar värdet för dataelementet separat: Data-elementet som behåller värdet för visningsprogrammets händelseargument under hela visningsprogrammets livscykel.
+I allmänhet har dataelementsredigeraren stöd för [val av lagringstid](https://experienceleague.adobe.com/docs/launch/using/ui/data-elements.html?lang=en#create-a-data-element). Dataelement som använder tillägget Dynamic Media Viewer stöder dock endast alternativet för lagringstid på **[!UICONTROL None]**. Det går att ange andra värden i användargränssnittet, men i det här fallet är dataelementets beteende inte definierat. Tillägget hanterar värdet för dataelementet separat: Data-elementet som behåller värdet för visningsprogrammets händelseargument under hela visningsprogrammets livscykel.
 
 ### Om regler i tillägget Dynamic Media Viewer {#about-rules-in-the-dynamic-media-viewers-extension}
 
@@ -437,9 +436,9 @@ När du har konfigurerat Adobe Analytics kommer följande att konfigureras för 
 
 Se även [Implementeringshandbok för analys](https://experienceleague.adobe.com/docs/analytics/implementation/home.html).
 
-**Så här konfigurerar du Adobe Analytics för integreringen**:
+**Så här konfigurerar du Adobe Analytics för integreringen:**
 
-1. Börja med att gå till Adobe Analytics från Experience Cloud [startsidan](https://exc-home.experiencecloud.adobe.com/exc-home/home.html#/). På menyraden klickar du på ikonen Lösningar (en tabell med tre punkter) i det övre högra hörnet av sidan och sedan på **[!UICONTROL Analytics]**.
+1. Börja med att gå till Adobe Analytics från Experience Cloud [startsidan](https://experience.adobe.com/#/home). På menyraden klickar du på ikonen Lösningar (en tabell med tre punkter) i det övre högra hörnet av sidan och sedan på **[!UICONTROL Analytics]**.
 
    ![2019-07-22_18-08-47](assets/2019-07-22_18-08-47.png)
 
@@ -449,13 +448,13 @@ Se även [Implementeringshandbok för analys](https://experienceleague.adobe.com
 
 1. I det övre högra hörnet av Adobe Analytics-sidan, till höger om fältet **[!UICONTROL Search Reports]**, väljer du rätt rapportsvit i listrutan. Om det finns flera rapportsviter och du är osäker på vilken du ska använda kontaktar du Adobe Analytics-administratören, som kan hjälpa dig att välja rätt rapportsvit.
 
-   I bilden nedan skapade en användare en rapportsvit med namnet *DynamicMediaViewersExtensionDoc* och markerade den i listrutan. Rapportsvitens namn är endast för illustrationsändamål. Namnet på den rapportsvit du väljer är upp till dig.
+   På skärmbilden nedan skapade en användare en rapportsvit med namnet *DynamicMediaViewersExtensionDoc* och markerade den i listrutan. Rapportsvitens namn är endast ett exempelnamn. Namnet på den rapportsvit du väljer är upp till dig.
 
    Om ingen rapportsvit är tillgänglig måste du eller Adobe Analytics-administratören skapa en innan du kan fortsätta med konfigurationen.
 
-   Se [Rapporter och rapportsviter](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/report-suites-admin.html#manage-report-suites) och [Skapa en rapportsvit](https://experienceleague.adobe.com/docs/analytics/admin/admin-console/create-report-suite.html#admin-console).
+   Se [Rapporter och rapportsviter](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/report-suites-admin.html#manage-report-suites) och [Skapa en rapportsvit](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/new-report-suite/t-create-a-report-suite.html).
 
-   I Adobe Analytics hanteras rapportsviter under **[!UICONTROL Admin > Report Suites]**.
+   I Adobe Analytics hanteras rapportsviter under **[!UICONTROL Admin]** > **[!UICONTROL Report Suites]**.
 
    ![2019-07-22_18-09-49](assets/2019-07-22_18-09-49.png)
 
@@ -471,10 +470,10 @@ Se även [Implementeringshandbok för analys](https://experienceleague.adobe.com
 
    I den här dokumentationen kommer endast en anpassad trafikvariabel (props) att användas eftersom de blir tillgängliga i en analysrapport inom några minuter efter att en åtgärd har utförts på en webbsida.
 
-   Om du vill aktivera en ny anpassad trafikvariabel i Adobe Analytics klickar du på **[!UICONTROL Admin > Report Suites]** i verktygsfältet.
+   Om du vill aktivera en ny anpassad trafikvariabel i Adobe Analytics klickar du i verktygsfältet på **[!UICONTROL Admin]** > **[!UICONTROL Report Suites]**.
 
-1. Välj rätt rapport på sidan **[!UICONTROL Report Suite Manager]** och klicka sedan på **[!UICONTROL Edit Settings > Traffic > Traffic Variables]** i verktygsfältet.
-1. Där väljer du en oanvänd variabel, ger den ett beskrivande namn ( **[!UICONTROL Viewer asset (prop 30)]**) och ändrar kombinationsrutan till &quot;Aktiverad&quot; i kolumnen Aktiverad.
+1. Välj rätt rapport på sidan **[!UICONTROL Report Suite Manager]** och klicka sedan på **[!UICONTROL Edit Settings]** > **[!UICONTROL Traffic]** > **[!UICONTROL Traffic Variables]** i verktygsfältet.
+1. Välj en variabel som inte används, ge den ett beskrivande namn (**[!UICONTROL Viewer asset (prop 30)]**) och ändra kombinationsrutan till &quot;Aktiverad&quot; i kolumnen Aktiverad.
 
    Följande skärmbild är ett exempel på en anpassad trafikvariabel ( **[!UICONTROL prop30]**) för att spåra ett resursnamn som används av visningsprogrammet:
 
@@ -488,7 +487,7 @@ Se även [Implementeringshandbok för analys](https://experienceleague.adobe.com
 
    Det räcker dock att känna till att rapporterna om anpassad trafik automatiskt blir tillgängliga i Adobe Analytics när du har konfigurerat anpassade trafikvariabler i [Konfigurera Adobe Analytics-variabler](#setting-up-adobe-analytics-variables).
 
-   Till exempel finns rapporten för variabeln **[!UICONTROL Viewer asset (prop 30)]** på menyn Rapporter under **[!UICONTROL Custom Traffic > Custom Traffic 21-30 > Viewer asset (prop 30)]**.
+   Till exempel finns rapporten för variabeln **[!UICONTROL Viewer asset (prop 30)]** på menyn Rapporter under **[!UICONTROL Custom Traffic]** > **[!UICONTROL Custom Traffic 21-30]** > **[!UICONTROL Viewer asset (prop 30)]**.
 
    Inga data visas när du besöker den här rapporten direkt efter att **[!UICONTROL Viewer asset (prop 30)]** har skapats, vilket är som väntat vid den här tidpunkten i integreringen.
 
@@ -503,9 +502,9 @@ När du har konfigurerat Experience Platform Launch kommer följande att konfigu
 * Konfiguration av dataelement och regler. Den här konfigurationen definierar vilka data som ska hämtas från Dynamic Media-visningsprogram, när spårningslogiken ska aktiveras och var visningsprogrammets data ska skickas i Adobe Analytics.
 * Publicering av biblioteket.
 
-**Så här konfigurerar du Experience Platform Launch för integreringen**:
+**Så här konfigurerar du Experience Platform Launch för integreringen:**
 
-1. Börja med att gå till Experience Platform Launch från Experience Cloud [startsidan](https://exc-home.experiencecloud.adobe.com/exc-home/home.html#/). På menyraden klickar du på ikonen Lösningar (tre gånger tre prickar) i det övre högra hörnet av sidan och sedan på **[!UICONTROL Launch]**.
+1. Börja med att gå till Experience Platform Launch från Experience Cloud [startsidan](https://experience.adobe.com/#/home). På menyraden klickar du på ikonen Lösningar (tre gånger tre prickar) i det övre högra hörnet av sidan och sedan på **[!UICONTROL Launch]**.
 
    Du kan även [öppna Experience Platform Launch direkt](https://launch.adobe.com/).
 
@@ -530,13 +529,13 @@ Se även [Skapa en startegenskap](https://experienceleague.adobe.com/docs/launch
 
 ### Installera och konfigurera tillägg {#installing-and-setup-of-extensions}
 
-Alla tillgängliga tillägg i Experience Platform Launch visas under **[!UICONTROL Extensions > Catalog]**.
+Alla tillgängliga tillägg i Experience Platform Launch visas under **[!UICONTROL Extensions]** > **[!UICONTROL Catalog]**.
 
 Klicka på **[!UICONTROL Install]** om du vill installera ett tillägg. Utför vid behov en engångskonfiguration och klicka sedan på **[!UICONTROL Save]**.
 
 Om det behövs måste följande tillägg installeras och konfigureras:
 
-* (Obligatoriskt) *Experience Cloud ID-tjänst *tillägg
+* (Obligatoriskt) *Tillägget Experience Cloud ID Service*.
 
 Ingen ytterligare konfiguration behövs. Godkänn för föreslagna värden. När du är klar ska du klicka på **[!UICONTROL Save]**.
 
@@ -544,7 +543,7 @@ Se [Experience Cloud ID-tjänsttillägg](https://experienceleague.adobe.com/docs
 
 * (Obligatoriskt) *Adobe Analytics*-tillägg
 
-Om du vill konfigurera det här tillägget måste du ha det Report Suite-ID som finns i Adobe Analytics, under **[!UICONTROL Admin > Report Suite]**, under kolumnrubriken **[!UICONTROL Report Suite ID]**.
+Om du vill konfigurera det här tillägget måste du ha det Report Suite-ID som finns i Adobe Analytics, under **[!UICONTROL Admin]** > **[!UICONTROL Report Suite]**, under kolumnrubriken **[!UICONTROL Report Suite ID]**.
 
 (Endast i demonstrationssyfte används Report Suite-ID:t för **[!UICONTROL DynamicMediaViewersExtensionDoc]** Report Suite i följande skärmbilder. Detta ID skapades och användes tidigare när du [valde en rapportsvit](#selecting-a-report-suite).)
 
@@ -596,9 +595,9 @@ Se [Konfigurera tillägget Dynamic Media Viewer](#configuring-the-dynamic-media-
 
 Om du vill ändra konfigurationen för Experience Platform Launch (inklusive Egenskap, Tillägg, Regler och Dataelement) måste du *publicera* sådana ändringar. Publicering i Experience Platform Launch utförs från fliken Publicering under egenskapskonfigurationen.
 
-platforma launchen kan ha flera utvecklingsmiljöer, en mellanlagringsmiljö och en produktionsmiljö. Som standard pekar Platform launch Cloud Configuration i Experience Manager på Experience Manager författarnoden mot scenmiljön i Platform launch. Publiceringsnoden Experience Manager pekar på Platforma launchens produktionsmiljö. Detta innebär att med standardinställningarna för Experience Manager måste du publicera Platform launch-biblioteket till mellanlagringsmiljön. Om du gör det kan du använda det i författaren till Experience Manager. Du kan sedan publicera den i produktionsmiljön så att den kan användas i Experience Manager.
+platforma launchen kan ha flera utvecklingsmiljöer, en mellanlagringsmiljö och en produktionsmiljö. Som standard pekar Platform launch Cloud Configuration i Experience Manager på Experience Manager författarnoden mot scenmiljön i Platform launch. Noden Experience Manager Publish pekar på Platforma launchens produktionsmiljö. Detta innebär att med standardinställningarna för Experience Manager måste du publicera Platform launch-biblioteket till mellanlagringsmiljön. Om du gör det kan du använda det i författaren till Experience Manager. Du kan sedan publicera den i produktionsmiljön så att den kan användas i Experience Manager.
 
-Mer information om Experience Platform Launch-miljöer finns i [Miljöer](https://experienceleague.adobe.com/docs/launch/using/reference/publish/environments/environments.html#environment-types).
+Mer information om Experience Platform Launch-miljöer finns i [Miljöer](https://experienceleague.adobe.com/docs/launch/using/publish/environments/environments.html#environment-types).
 
 Publicering av ett bibliotek omfattar följande två steg:
 
@@ -656,24 +655,24 @@ Publicering av ett bibliotek omfattar följande två steg:
 
    ![image2019-7-15_16-8-9](assets/image2019-7-15_16-8-9.png)
 
-   Mer information om publiceringsprocessen i Experience Platform Launch finns i [Publicera](https://experienceleague.adobe.com/docs/launch/using/reference/publish/overview.html#reference).
+   Mer information om publiceringsprocessen i Experience Platform Launch finns i [Publicera](https://experienceleague.adobe.com/docs/launch/using/publish/overview.html).
 
 ## Konfigurera Adobe Experience Manager för integreringen {#configuring-adobe-experience-manager-for-the-integration}
 
 Förutsättningar:
 
-* AEM kör både Author- och Publish-instanser.
-* AEM författarnod har konfigurerats i Dynamic Media - Scene7 körningsläge (dynamicmedia_s7)
-* Dynamic Media WCM-komponenter är aktiverade i AEM Sites.
+* Experience Manager kör både författarinstansen och publiceringsinstansen.
+* Skribentnoden för Experience Manager har konfigurerats i Dynamic Media - Scene7 körningsläge (dynamicmedia_s7)
+* Dynamic Media WCM-komponenter är aktiverade i Experience Manager Sites.
 
-Den AEM konfigurationen består av följande två huvudsteg:
+Konfigurationen av Experience Manager består av följande två stora steg:
 
-* Konfiguration av AEM IMS.
+* Konfiguration av Experience Manager IMS.
 * Konfiguration av Experience Platform Launch Cloud.
 
-### Konfigurerar AEM IMS {#configuring-aem-ims}
+### Konfigurerar Experience Manager IMS {#configuring-aem-ims}
 
-1. Klicka på ikonen Verktyg (hammer) i AEM författare och klicka sedan på **[!UICONTROL Security > Adobe IMS Configurations]**.
+1. Klicka på verktygsikonen (hammer) i författaren till Experience Manager och klicka sedan på **[!UICONTROL Security]** > **[!UICONTROL Adobe IMS Configurations]**.
 
    ![2019-07-25_11-52-58](assets/2019-07-25_11-52-58.png)
 
@@ -739,7 +738,7 @@ Den AEM konfigurationen består av följande två huvudsteg:
 
 1. Gå tillbaka till sidan **[!UICONTROL Adobe IMS Technical Account Configuration]** som du öppnade tidigare. Klicka på **[!UICONTROL Next]** i det övre högra hörnet av sidan för att öppna sidan **[!UICONTROL Account]** i fönstret **[!UICONTROL Adobe IMS Technical Account Configuration]**.
 
-   (Om du stängde sidan tidigare går du tillbaka till författaren av Experience Manager och klickar sedan på **[!UICONTROL Tools > Security > Adobe IMS Configurations]**. Klicka på **[!UICONTROL Create]**. I listrutan **[!UICONTROL Cloud Solution]** väljer du **[!UICONTROL Experience Platform Launch]**. I listrutan **[!UICONTROL Certificate]** markerar du namnet på det tidigare skapade certifikatet.)
+   (Om du stängde sidan tidigare går du tillbaka till författaren till Experience Manager och klickar sedan på **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Adobe IMS Configurations]**. Klicka på **[!UICONTROL Create]**. I listrutan **[!UICONTROL Cloud Solution]** väljer du **[!UICONTROL Experience Platform Launch]**. I listrutan **[!UICONTROL Certificate]** markerar du namnet på det tidigare skapade certifikatet.)
 
    ![2019-07-25_20-57-50](assets/2019-07-25_20-57-50.png)
 
@@ -756,9 +755,9 @@ Den AEM konfigurationen består av följande två huvudsteg:
    * **[!UICONTROL Title]** - Ange en beskrivande kontotitel.
    * **[!UICONTROL Authorization Server]** - Gå tillbaka till sidan Integreringsinformation som du öppnade tidigare. Klicka på fliken **[!UICONTROL JWT]**. Kopiera servernamnet - utan sökvägen - enligt markeringen nedan.
 
-(exempelservernamnet är endast för illustrationsändamål)   Gå tillbaka till sidan **[!UICONTROL Account]** och klistra sedan in namnet i respektive fält.
+(servernamnet är endast ett exempel)   Gå tillbaka till sidan **[!UICONTROL Account]** och klistra sedan in namnet i respektive fält.
 Till exempel `https://ims-na1.adobelogin.com/`
-(exempelservernamnet är endast för illustrationsändamål)
+(servernamnet är endast ett exempel)
 
    ![2019-07-25_15-01-53](assets/2019-07-25_15-01-53.png)
 
@@ -790,19 +789,19 @@ Till exempel `https://ims-na1.adobelogin.com/`
 
 1. Klicka på **[!UICONTROL Create]** i det övre högra hörnet på sidan **[!UICONTROL Account]**.
 
-   Med AEM IMS konfigurerat har du nu ett nytt IMSAccount som visas under **[!UICONTROL Adobe IMS Configurations]**.
+   När Experience Manager IMS är konfigurerat har du nu ett nytt IMSA-konto som listas under **[!UICONTROL Adobe IMS Configurations]**.
 
    ![image2019-7-15_14-17-54](assets/image2019-7-15_14-17-54.png)
 
 ## Konfigurera Experience Platform Launch Cloud för integrering {#configuring-adobe-launch-cloud-for-the-integration}
 
-1. I AEM författare klickar du på verktygsikonen (hammer) i det övre vänstra hörnet och sedan på **[!UICONTROL Cloud Services > Experience Platform Launch Configurations]**.
+1. Klicka på verktygsikonen (hammer) i Experience Manager-författaren, nära det övre vänstra hörnet, och klicka sedan på **[!UICONTROL Cloud Services]** > **[!UICONTROL Experience Platform Launch Configurations]**.
 
    ![2019-07-26_12-10-38](assets/2019-07-26_12-10-38.png)
 
-1. På sidan **[!UICONTROL Experience Platform Launch Configurations]** i den vänstra panelen väljer du en AEM plats som du vill använda Experience Platform Launch-konfigurationen för.
+1. På sidan **[!UICONTROL Experience Platform Launch Configurations]** i den vänstra panelen väljer du en Experience Manager-plats som du vill använda Experience Platform Launch-konfigurationen för.
 
-   Endast i illustrationssyfte är **[!UICONTROL We.Retail]**-platsen vald i skärmbilden nedan.
+   Endast för exempelsyften är **[!UICONTROL We.Retail]**-platsen vald i skärmbilden nedan.
 
    ![2019-07-26_12-20-06](assets/2019-07-26_12-20-06.png)
 
@@ -811,7 +810,7 @@ Till exempel `https://ims-na1.adobelogin.com/`
 
    * **[!UICONTROL Title]** - Ange en beskrivande konfigurationstitel. Till exempel, `We.Retail Launch cloud configuration`.
 
-   * **[!UICONTROL Associated Adobe IMS Configuration]** - Välj den IMS-konfiguration som du skapade tidigare i  [Konfigurera AEM IMS](#configuring-aem-ims).
+   * **[!UICONTROL Associated Adobe IMS Configuration]** - Välj den IMS-konfiguration som du skapade tidigare i  [Konfigurera Experience Manager IMS](#configuring-aem-ims).
 
    * **[!UICONTROL Company]** - I  **[!UICONTROL Company]** listrutan väljer du Experience Cloud. Listan fylls i automatiskt.
 
@@ -823,9 +822,9 @@ Till exempel `https://ims-na1.adobelogin.com/`
 1. Klicka på **[!UICONTROL Next]** i det övre vänstra hörnet.
 1. På sidan **[!UICONTROL Staging]** (sida 2/3) i fönstret **[!UICONTROL Create Experience Platform Launch Configuration]** fyller du i följande fält:
 
-   I fältet **[!UICONTROL Library URI]** kontrollerar du platsen för mellanlagringsversionen av ditt Experience Platform Launch-bibliotek. Det här fältet fylls i automatiskt i AEM.
+   I fältet **[!UICONTROL Library URI]** kontrollerar du platsen för mellanlagringsversionen av ditt Experience Platform Launch-bibliotek. Experience Manager fyller i det här fältet automatiskt.
 
-   I det här steget används Experience Platform Launch-bibliotek som distribueras till Adobe CDN endast i illustrationssyfte.
+   I det här steget används t.ex. bibliotek i Experience Platform Launch som distribueras till Adobe CDN.
 
    >[!NOTE]
    >
@@ -848,10 +847,10 @@ Till exempel `https://ims-na1.adobelogin.com/`
 
    ![image2019-7-15_15-47-6](assets/image2019-7-15_15-47-6.png)
 
-För närvarande stöder AEM inte integrering av Dynamic Media Viewer med Experience Platform Launch.
+Experience Manager saknar för närvarande stöd för integrering av Dynamic Media Viewer med Experience Platform Launch.
 
 Det stöds dock i Experience Manager-publiceringsnoden. Experience Manager publiceringsnod använder standardinställningarna i Platform launch Cloud Configuration och produktionsmiljön i Experience Platform Launch. Därför är det nödvändigt att varje gång under testet föra över Experience Platform Launch biblioteksuppdateringar från Development till produktionsmiljön.
 
 Det är möjligt att kringgå denna begränsning. Ange utvecklings- eller mellanlagrings-URL för Platform launch-biblioteket i Platform launch Cloud-konfigurationen för publiceringsnoden för Experience Manager ovan. När du gör det används utvecklingsbiblioteket eller mellanlagringsversionen av Platforma launchen av publiceringsnoden i Experience Manager.
 
-Mer information om hur du konfigurerar Experience Platform Launch Cloud finns i [Integrera AEM med Experience Platform Launch via [!DNL Adobe I/O]](https://helpx.adobe.com/experience-manager/using/aem_launch_adobeio_integration.html).
+Mer information om hur du konfigurerar Experience Platform Launch Cloud finns i [Integrera Experience Manager med Experience Platform Launch via [!DNL Adobe I/O]](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html).
