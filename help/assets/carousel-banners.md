@@ -11,9 +11,9 @@ docset: aem65
 feature: Karusellbanner
 role: Business Practitioner, Administrator
 exl-id: 53d34d3a-ecb6-4fa0-9665-60d21f48021e
-source-git-commit: a4e9a4003bf0ce686578d3f8b3fddc19bc49dfb4
+source-git-commit: 4ad5237939289b5411a988424b2a3ecad15ca029
 workflow-type: tm+mt
-source-wordcount: '4649'
+source-wordcount: '4655'
 ht-degree: 4%
 
 ---
@@ -24,7 +24,7 @@ Carousel-banners gör det möjligt för marknadsförare att öka konverteringsgr
 
 Det kan vara tidskrävande att skapa och ändra innehåll i reklambanners, vilket begränsar möjligheten att snabbt publicera nytt innehåll eller göra det mer riktat. Med Carousel Banners kan du snabbt skapa eller ändra roterande banners. Ni kan lägga till interaktivitet, till exempel hotspot-områden som länkar till produktinformation eller relaterade resurser, och leverera dem till alla skärmar, så att ni snabbare kan få ut nytt marknadsföringsmaterial på marknaden.
 
-Carousel Banners betecknas med en banderoll med ordet **[!UICONTROL CAROUSELSET]**:
+Carousel Banners definieras av en banderoll med ordet **[!UICONTROL CAROUSELSET]**
 
 ![chlimage_1-438](assets/chlimage_1-438.png)
 
@@ -44,11 +44,11 @@ Spela en genomgång om [hur karusellbanners skapas](https://s7d5.scene7.com/s7vi
 
 >[!NOTE]
 >
->Icke-administrativa användare måste läggas till i **[!UICONTROL dam-users]**-gruppen för att kunna skapa eller redigera karusellbanners. Om du har problem med att skapa eller redigera kontaktar du systemadministratören som kan lägga till dig i **[!UICONTROL dam-users]**-gruppen.
+>Icke-administrativa användare måste läggas till i **[!UICONTROL dam-users]**-gruppen för att kunna skapa eller redigera Carousel-banners. Om du har problem med att skapa eller redigera kontaktar du systemadministratören som kan lägga till dig i **[!UICONTROL dam-users]**-gruppen.
 
 ## Snabbstart: Carousel Banners {#quick-start-carousel-banners}
 
-Så här kommer du igång snabbt:
+Så här kommer du igång snabbt med Carousel Banners:
 
 1. [Identifiera hotspot- och bildschemavariabler](#identifying-hotspot-and-image-map-variables)  (endast för kunder som använder Experience Manager Assets + Dynamic Media)
 
@@ -56,7 +56,7 @@ Så här kommer du igång snabbt:
 
    >[!NOTE]
    >
-   >Om du använder Experience Manager Sites eller Ecommerce kan du använda den inbyggda funktionen för att navigera till produktsidor och söka efter befintliga SKU:er i produktkatalogen. Du behöver inte ange variabler för hotspot eller bildschema manuellt. Mer information finns i [konfigurera e-handel](/help/commerce/cif-classic/administering/generic.md).
+   >Om du använder Experience Manager Sites eller Ecommerce kan du använda den inbyggda funktionen för att navigera till produktsidor och söka efter befintliga SKU:er (Stock Keeping Unit) i produktkatalogen. Du behöver inte ange variabler för hotspot eller bildschema manuellt. Mer information finns i [konfigurera e-handel](/help/commerce/cif-classic/administering/generic.md).
    >
    >
    >Om du använder Experience Manager Assets och Dynamic Media anger du manuellt data för hotspot-områden och bildscheman och integrerar sedan den publicerade URL:en eller inbäddningskoden med ditt innehållshanteringssystem från tredje part.
