@@ -11,14 +11,13 @@ topic-tags: hTML5_forms
 discoiquuid: 973806f8-fb44-4d52-ad3f-bfbf335f60a1
 docset: aem65
 feature: Mobile Forms
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 2f574c98-550c-4b84-be1e-46a2700e7277
+source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
 workflow-type: tm+mt
-source-wordcount: '648'
+source-wordcount: '647'
 ht-degree: 4%
 
 ---
-
 
 # Aktivera loggning för HTML5-formulär{#enable-logging-for-html-forms}
 
@@ -53,7 +52,7 @@ Du kan använda följande metoder för att aktivera klientloggning i HTML5-formu
 
 ### Aktivera loggning med parametern {#enabling-logging-using-request-parameter} för begäran
 
-Med den här metoden kan du generera loggar för en viss begäran. Namnet på parametern request är &quot;log&quot;. Loggens URL är följande:
+Med den här metoden kan du generera loggar för en viss begäran. Namnet på parametern request är `log`. Loggens URL är följande:
 
 `https://<server>:<port>/content/xfaforms/profiles/test.html?contentRoot=<path of the folder containing form xdp>&template=<name of the xdp>&log=<log configuration>.`
 
@@ -95,7 +94,7 @@ Loggkonfigurationen består av loggnivån och loggkategorin.
    <td>AV<br type="_moz" /> </td>
   </tr>
   <tr>
-   <td>1</td>
+   <td>3</td>
    <td>FATAL<br type="_moz" /> </td>
   </tr>
   <tr>
@@ -103,7 +102,7 @@ Loggkonfigurationen består av loggnivån och loggkategorin.
    <td>FEL<br type="_moz" /> </td>
   </tr>
   <tr>
-   <td>1</td>
+   <td>3</td>
    <td>VARNA<br type="_moz" /> </td>
   </tr>
   <tr>
