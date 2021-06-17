@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: dfc473eb-6091-4f5d-a5a0-789972c513a9
 docset: aem65
 role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 19b5765e-50bc-4fed-8af5-f6bb464516c8
+source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
 workflow-type: tm+mt
-source-wordcount: '1896'
+source-wordcount: '1892'
 ht-degree: 0%
 
 ---
-
 
 # Installera och konfigurera datainhämtningsfunktioner{#install-and-configure-data-capture-capabilities}
 
@@ -192,7 +191,7 @@ Dispatcher är ett Adobe Experience Manager verktyg för cachelagring och/eller 
 
 1. Konfigurera tjänsten för refererarfilter:
 
-   Logga in som administratör i konfigurationshanteraren för Apache Felix. Konfigurationshanterarens standardwebbadress är `https://[server]:[port_number]/system/console/configMgr`. Välj alternativet **Refererarfilter för Apache Sling** på menyn **Konfigurationer**. I fältet Tillåt värdar anger du värdnamnet för dispatchern så att den kan användas som referent och klickar på **Spara**. Postens format är &quot;https://[server]:[port]&quot;.
+   Logga in som administratör i konfigurationshanteraren för Apache Felix. Konfigurationshanterarens standardwebbadress är `https://[server]:[port_number]/system/console/configMgr`. Välj alternativet **Refererarfilter för Apache Sling** på menyn **Konfigurationer**. I fältet Tillåt värdar anger du värdnamnet för dispatchern så att den kan användas som referent och klickar på **Spara**. Postens format är `https://[server]:[port]`.
 
 #### Konfigurera cache {#configure-cache}
 
@@ -243,4 +242,3 @@ Du har konfigurerat en miljö för att använda AEM Forms datainhämtningsfunkti
 * [Skapa ditt första anpassningsbara formulär](/help/forms/using/create-your-first-adaptive-form.md)
 * [Skapa ditt första PDF-formulär](http://www.adobe.com/go/learn_aemforms_designer_quick_start_65)
 * [Introduktion till HTML5 Forms](/help/forms/using/introduction.md)
-
