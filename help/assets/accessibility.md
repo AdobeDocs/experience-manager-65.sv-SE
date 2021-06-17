@@ -2,13 +2,12 @@
 title: Tillgängliga funktioner och gränssnitt i [!DNL Experience Manager Assets]
 description: Se hur tillgänglighetsfunktionerna i [!DNL Adobe Experience Manager] 6.5 [!DNL Assets] kan hjälpa användare med funktionshinder.
 contentOwner: AG
-feature: Asset Management
+feature: Resurshantering
 role: Business Practitioner, Architect, Leader
 exl-id: 15555941-99a2-4586-8d7b-b22f3ec17805
-translation-type: tm+mt
-source-git-commit: a7a9a31364497ab67d805e45ba4fa03c927828ed
+source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
 workflow-type: tm+mt
-source-wordcount: '1905'
+source-wordcount: '1907'
 ht-degree: 1%
 
 ---
@@ -86,7 +85,7 @@ Följande åtgärder i [!DNL Assets] fungerar med de angivna kortkommandona. De 
 | Kolumnvy i [!DNL Assets]-användargränssnitt | Uppåtpil och nedåtpil | Navigera till filer och mappar i samma hierarki. |
 | Kolumnvy i [!DNL Assets]-användargränssnitt | Vänster- och högerpilstangenter | Navigera till filer och mappar ovanför eller nedanför den aktuella mappen. |
 | Bläddra bland mappar i [!DNL Assets] | `/` | Anropa sökning genom att öppna Omnissearch-rutan. |
-| [!DNL Assets] Konsol | ` | Växla sidoskenor |
+| [!DNL Assets] Konsol | &amp;grave; | Växla sidoskenor |
 | [!DNL Assets] Konsol | `Alt + 1` | Öppna innehållsträdet. |
 | [!DNL Assets] Konsol | `Alt + 2` | Öppna [!UICONTROL Navigation] vänster skena. |
 | [!DNL Assets] Konsol | `Alt + 3` | Visa [!UICONTROL Timeline] för en markerad resurs. |
@@ -104,7 +103,7 @@ Följande åtgärder i [!DNL Assets] fungerar med de angivna kortkommandona. De 
 | Egenskapssidor för resurs | `Ctrl + S` | Spara ändringar. |
 | [!DNL Assets] Konsol | `?` | Visa en lista med kortkommandon. |
 
-## Logga in och navigera i [!DNL Assets]-användargränssnittet {#login}
+## Logga in och navigera i användargränssnittet för [!DNL Assets] {#login}
 
 Användare kan använda tangentbordet för att navigera till och fylla i inloggningsfältet för att logga in. Felmeddelandena på grund av felaktiga kombinationer av användarnamn och lösenord på inloggningssidan meddelas av skärmläsare varje gång felet inträffar.
 
