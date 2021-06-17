@@ -3,10 +3,9 @@ title: Konfigurera plugin-programmen för RTF-redigeraren
 description: Lär dig konfigurera plugin-programmen för Adobe Experience Manager Rich Text Editor så att enskilda funktioner aktiveras.
 contentOwner: AG
 exl-id: 6bfd6caa-a68a-40ba-9826-4ba02cd1dbfb
-translation-type: tm+mt
-source-git-commit: 443115b306ff34ee98da9403222874a9700d8aed
+source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
 workflow-type: tm+mt
-source-wordcount: '4382'
+source-wordcount: '4380'
 ht-degree: 0%
 
 ---
@@ -21,7 +20,7 @@ Mer information om de andra RTE-konfigurationerna finns i [Konfigurera RTF-redig
 >
 >När du arbetar med CRXDE Lite bör du spara ändringarna regelbundet med alternativet [!UICONTROL Save All].
 
-## Aktivera ett plugin-program och konfigurera egenskapen {#activateplugin} för funktioner
+## Aktivera ett plugin-program och konfigurera egenskapen features {#activateplugin}
 
 Följ de här stegen för att aktivera ett plugin-program. Vissa steg behövs bara när du konfigurerar ett plugin-program för första gången, eftersom motsvarande noder inte finns.
 
@@ -244,7 +243,7 @@ Om du vill lägga till fler format vid senare (re-)konfigurationer, t.ex. följe
 >
 >Format kan också definieras för [tabeller eller tabellceller](/help/sites-administering/configure-rich-text-editor-plug-ins.md#tablestyles). Dessa konfigurationer kräver separata procedurer.
 
-### Aktivera listrutan Format {#styleselectorlist}
+### Aktivera listrutan Format för väljare {#styleselectorlist}
 
 Detta görs genom att plugin-programmet för format aktiveras.
 
@@ -339,7 +338,7 @@ Så här skapar du det format som författare kan använda på japansk text:
 
 1. Skapa en ny nod under noden Styles. Se [ange ett nytt format](#stylesindropdown).
    * Namn: `jpn-word-wrap`
-   * Typ: `nt:dela upp
+   * Typ: `nt:unstructure`
 
 1. Lägg till egenskapen `cssName` i noden som referens för CSS-klassen. Klassnamnet är ett reserverat namn för japansk radbrytning.
    * Namn: `cssName`
@@ -365,7 +364,7 @@ Så här skapar du det format som författare kan använda på japansk text:
 
    ![Formatmall som gör japansk radbrytning tillgänglig för författare](assets/rte_jpwordwrap_stylesheet.jpg)
 
-## Konfigurera styckeformaten {#paraformats}
+## Konfigurera styckeformat {#paraformats}
 
 All text som har skapats i RTE placeras i en blocktagg och standardvärdet är `<p>`. Genom att aktivera plugin-programmet `paraformat` anger du ytterligare blocktaggar som kan tilldelas stycken med hjälp av en nedrullningsbar markeringslista. Styckeformat bestämmer stycketypen genom att tilldela rätt blocktagg. Författaren kan markera och tilldela dem med formatväljaren. Exempelblocktaggarna innehåller bland annat standardstycket &lt;p> och rubrikerna &lt;h1>, &lt;h2> och så vidare.
 
@@ -628,7 +627,7 @@ I en standardinstallation AEM ordlistorna för amerikansk engelska (`en_us`) och
 Stavningskontrollen för textredigering är tillgänglig på begäran. Den körs inte automatiskt när du börjar skriva text. Om du vill köra stavningskontrollen klickar du på [!UICONTROL Spellchecker] i verktygsfältet. RTE kontrollerar stavningen av ord och markerar de felstavade orden.
 Om du infogar någon ändring som stavningskontrollen föreslår markeras inte längre textens status och felstavade ord. Om du vill köra stavningskontrollen trycker/klickar du på stavningskontrollknappen igen.
 
-## Konfigurera historikstorleken för ångra- och gör om-åtgärder {#undohistory}
+## Konfigurera historikstorlek för ångra- och gör om-åtgärder {#undohistory}
 
 Med RTE kan författare ångra eller göra om några sista redigeringar. Som standard lagras 50 redigeringar i historiken. Du kan konfigurera det här värdet efter behov.
 
