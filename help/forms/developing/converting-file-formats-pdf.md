@@ -10,14 +10,13 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 180cac3f-6378-42bc-9a47-60f9f08a7103
 role: Developer
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 10535740-e3c2-4347-a88f-86706ad699b4
+source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
 workflow-type: tm+mt
-source-wordcount: '7913'
+source-wordcount: '7911'
 ht-degree: 0%
 
 ---
-
 
 # Konverterar mellan filformat och PDF {#converting-between-file-formatsand-pdf}
 
@@ -851,7 +850,7 @@ Om du skapar ett skript för ett internt program som inte stöds tidigare, måst
 
 >[!NOTE]
 >
->I detta sammanhang innebär termen ytterligare innehållet i filen `appmon.[applicationname].addition.[locale]`.xml`. En sådan fil anger åsidosättningar och tillägg till XML-filen i dialogrutan.
+>I det här sammanhanget innebär termen ytterligare innehållet i `appmon.[applicationname].addition.[locale].xml`-filen. En sådan fil anger åsidosättningar och tillägg till XML-filen i dialogrutan.
 
 Du kan också ändra XML-filen för ytterligare dialogrutor för ett internt program för följande syften:
 
@@ -1146,4 +1145,3 @@ I det här exemplet anges hur tjänsten Generate PDF ska samverka med Anteckning
     <abortMessage msg="15078"/>
 </application>
 ```
-
