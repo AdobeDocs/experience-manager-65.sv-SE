@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
 discoiquuid: aae186eb-e059-4a9d-b02d-86a86c86589d
-translation-type: tm+mt
-source-git-commit: 07eb53f19cf7c7c2799c95ba9df54f4673d72fdc
+exl-id: bfd50aa9-579e-47d5-997d-ec764c782497
+source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
 workflow-type: tm+mt
-source-wordcount: '1918'
+source-wordcount: '1907'
 ht-degree: 7%
 
 ---
-
 
 # Anpassade nodtyper{#custom-node-types}
 
@@ -130,7 +129,7 @@ Definierar nodtypen för en bakåtspårningsnod.
 
 * `[cq:Trackback] > mix:title, mix:created, mix:language, nt:unstructured`
 
-## Kärna {#core}
+## Core {#core}
 
 ### cq:Sida {#cq-page}
 
@@ -497,7 +496,7 @@ Avsökningskonfiguration.
 
 **Definition**
 
-* `[cq:PollConfig]
+* `[cq:PollConfig]`
    * `mixin`
    * `- source (String) mandatory`
    * `- target (String)`
@@ -526,7 +525,7 @@ En blandning som definierar en geografisk plats i decimalgrader (DD).
 
 **Definition**
 
-* `[cq:GeoLocation]
+* `[cq:GeoLocation]`
    * `mixin`
    * `- latitude (double)`
    * `- longitude (double)`
@@ -662,7 +661,7 @@ Definierar blandning av information om replikeringsstatus.
 
 **Definition**
 
-* `[cq:ReplicationStatus]
+* `[cq:ReplicationStatus]`
    * `mixin`
    * `- cq:lastPublished (date) ignore`
    * `- cq:lastPublishedBy (string) ignore`
@@ -925,7 +924,7 @@ Panelen Tabb
 
 **Definition**
 
-* `[cq:TabPanel] > cq:Panel orderable&quot;
+* `[cq:TabPanel]` > `cq:Panel orderable`
    * `- activeTab (long)`
 
 ### cq:Field {#cq-field}
