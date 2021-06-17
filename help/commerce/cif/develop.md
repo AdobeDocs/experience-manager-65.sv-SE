@@ -6,8 +6,7 @@ feature: Commerce Integration Framework
 doc-type: tutorial
 kt: 5826
 thumbnail: 39476.jpg
-translation-type: tm+mt
-source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
+source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
 workflow-type: tm+mt
 source-wordcount: '874'
 ht-degree: 0%
@@ -15,7 +14,7 @@ ht-degree: 0%
 ---
 
 
-# Utveckla AEM Commerce {#develop}
+# Utveckla AEM {#develop}
 
 Utveckla AEM handelsprojekt som bygger på Commerce Integration Framework (CIF) för AEM följer samma regler och bästa praxis som andra AEM. Granska dessa först:
 
@@ -24,7 +23,7 @@ Utveckla AEM handelsprojekt som bygger på Commerce Integration Framework (CIF) 
 - [AEM - riktlinjer och bästa praxis](/help/sites-developing/dev-guidelines-bestpractices.md)
 - [Skapa AEM projekt med Apache Maven](/help/sites-developing/ht-projects-maven.md)
 
-## Local Development for AEM Commerce {#local}
+## Lokal utveckling för AEM {#local}
 
 En lokal utvecklingsmiljö rekommenderas för arbete med CIF-projekt.
 
@@ -48,7 +47,7 @@ Följande bör installeras lokalt:
 
 ### Åtkomst till CIF-tillägget
 
-Tillägget CIF kan laddas ned från [portalen för programdistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html), sök efter &quot;AEM Commerce add-on&quot;.
+CIF-tillägget kan hämtas från [portalen för programdistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html), sök efter AEM Commerce-tillägg.
 
 >[!TIP]
 >
