@@ -10,18 +10,17 @@ topic-tags: content-fragments
 content-type: reference
 discoiquuid: b193f28c-46c2-4eab-bbb8-578530f80ba5
 docset: aem65
-feature: Content Fragments
+feature: Innehållsfragment
 role: Business Practitioner, Administrator
-translation-type: tm+mt
-source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
+exl-id: 28e1052f-62b5-47bc-9bc8-f2d92f0254f6
+source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
 workflow-type: tm+mt
-source-wordcount: '544'
+source-wordcount: '543'
 ht-degree: 4%
 
 ---
 
-
-# Markdown{#markdown}
+# Markering{#markdown}
 
 När du [redigerar](content-fragments-variations.md#authoring-your-content) använder innehållsfragmentredigeraren syntaxen *markdown* så att du enkelt kan skriva innehåll:
 
@@ -175,7 +174,7 @@ Du kan fet text enligt följande:
 
     `Keyboard shortcut: Ctrl-B (Cmd-B)`
 
-Om du vill ange ett intervall med kod omsluter du det med citattecken (`). Till skillnad från ett förformaterat kodblock anger ett kodintervall koden i ett normalt stycke.
+Om du vill ange ett intervall med kod omsluter du det med citattecken (&amp;grave;). Till skillnad från ett förformaterat kodblock anger ett kodintervall koden i ett normalt stycke.
 
 Till exempel:
 
@@ -218,4 +217,3 @@ Omvända snedstreck är tillgängliga för följande tecken:
     ` - minus sign (hyphen)`
 
     ` . dot`
-
