@@ -11,9 +11,9 @@ docset: aem65
 role: Business Practitioner, Administrator
 exl-id: 62d4a38c-2873-4560-8d58-ad172288764d
 feature: komponenter,publicera
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 3221454e2d2dfd90b645a4c0303404d44f8d373d
 workflow-type: tm+mt
-source-wordcount: '3043'
+source-wordcount: '3085'
 ht-degree: 6%
 
 ---
@@ -83,7 +83,7 @@ Om det inte finns några Dynamic Media-komponenter att lägga till på en sida b
 
 1. Till höger om verktygsfältet uppe på sidan trycker du på **[!UICONTROL Initial Content]** i listrutan och sedan [lägger du till en Dynamic Media-komponent på en sida](#adding-a-dynamic-media-component-to-a-page) som vanligt.
 
-## Lokaliserar Dynamic Media-komponenter {#localizing-dynamic-media-components}
+## Lokalisera Dynamic Media-komponenter {#localizing-dynamic-media-components}
 
 Du kan lokalisera Dynamic Media-komponenter på ett av två sätt:
 
@@ -178,7 +178,7 @@ Redigera följande Dynamic Media-inställningar genom att trycka på ikonen **[!
 
    ![inställning för enhetens pixelproportioner för bildförinställning](/help/assets/assets-dm/dpr-ress-ip.png)
 
-<!--   See also [About device pixel ratio optimization](/help/assets/imaging-faq.md#dpr). Note that any Adobe Experience Manager Dynamic Media Smart Imaging DPR values are ignored. -->
+   Se även [Om optimering av enhetspixelproportioner](/help/assets/imaging-faq.md#dpr). Observera att alla DPR-värden för Adobe Experience Manager Dynamic Media Smart Imaging ignoreras.
 
 * **[!UICONTROL Title]** - Ändra bildens titel.
 
@@ -254,7 +254,7 @@ Redigera följande Dynamic Media-inställning genom att klicka på **[!UICONTROL
 
    ![inställning för enhetspixelproportioner för smart beskärning](/help/assets/assets-dm/dpr-smartcrop.png)
 
-<!-- CQDOC-17915 HIDDEN FOR NOW AS OF MAY 28 2021 See also [About device pixel ratio optimization](/help/assets/imaging-faq.md#dpr). Note that any Adobe Experience Manager Dynamic Media Smart Imaging DPR values are ignored. -->
+   Se även [Om optimering av enhetspixelproportioner](/help/assets/imaging-faq.md#dpr). Observera att alla DPR-värden för Adobe Experience Manager Dynamic Media Smart Imaging ignoreras.
 
 * **[!UICONTROL Title]** - Ändra titeln på bilden för smart beskärning.
 
@@ -355,7 +355,7 @@ Du kan redigera följande inställning genom att trycka på **[!UICONTROL Config
 
 Om den visningsförinställning du söker efter inte visas kontrollerar du att den är publicerad. Kontrollera att du publicerar förinställningarna för visningsprogrammet innan du använder dem. Se [Hantera visningsförinställningar](/help/assets/managing-viewer-presets.md).
 
-### Använda HTTP/2 för att leverera Dynamic Media-resurser {#using-http-to-delivery-dynamic-media-assets}
+### Använda HTTP/2 för att leverera Dynamic Media-material {#using-http-to-delivery-dynamic-media-assets}
 
 HTTP/2 är det nya, uppdaterade webbprotokollet som förbättrar kommunikationen mellan webbläsare och servrar. Det ger snabbare överföring av information och minskar mängden processorkraft som behövs. Dynamic Media-material kan nu levereras via HTTP/2 vilket ger bättre respons och laddningstider.
 
