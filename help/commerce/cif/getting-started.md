@@ -4,10 +4,10 @@ description: Lär dig hur du distribuerar ett AEM Content and Commerce-projekt.
 topics: Commerce
 feature: Commerce Integration Framework
 thumbnail: 37843.jpg
-translation-type: tm+mt
-source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
+exl-id: 92b964f8-6672-4f76-8a9f-5782c3ceb83f
+source-git-commit: 61b8d0bf960bd03a19d22061f3c897a56259dd24
 workflow-type: tm+mt
-source-wordcount: '682'
+source-wordcount: '721'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ För att komma igång med AEM innehåll och handel måste du installera AEM Cont
 
 [AEM 6.5 Service Pack](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html) 7 eller senare krävs.
 
-## Introduktion till {#onboarding}
+## Onboarding {#onboarding}
 
 Introduktionen AEM innehåll och handel är en tvåstegsprocess:
 
@@ -52,7 +52,7 @@ AEM Content and Commerce Add-On och CIF Core Components använder både anslutni
 
 CIF Add-On tillhandahåller en GraphQL-proxyserver på `/api/graphql` som kan användas för [lokal utveckling](develop.md). För produktionsdistributioner rekommenderar vi starkt att du skapar en omvänd proxy till Commerce GraphQL-slutpunkten via AEM Dispatcher eller andra nätverkslager (som CDN).
 
-## Konfigurerar arkiv och kataloger {#catalog}
+## Konfigurera butiker och kataloger {#catalog}
 
 Tillägget och [CIF Core-komponenterna](https://github.com/adobe/aem-core-cif-components) kan användas på flera AEM webbplatsstrukturer som är kopplade till olika e-handelsbutiker (eller butiksvyer osv.). Som standard distribueras CIF-tillägget med en standardkonfiguration som ansluter till Adobe Commerce standardbutik och -katalog (Magento).
 
@@ -79,6 +79,9 @@ Följande egenskaper kan konfigureras:
    >
    > Stöd för UID introducerades i Adobe Commerce (Magento) 2.4.2. Aktivera bara detta om e-handelsbackend har stöd för ett GraphQL-schema av version 2.4.2 eller senare.
 - Katalogrotkategoriidentifierare - identifieraren (UID eller ID) för arkivkatalogroten
+   >[!CAUTION]
+   >
+   > Från och med CIF Core Components version 2.0.0 togs stödet för `id` bort och ersattes med `uid`. Om ditt projekt använder CIF Core Components version 2.0.0 måste du aktivera stöd för katalog-UID och använda ett giltigt kategori-UID som &quot;Katalogens rotkategoriidentifierare&quot;.
 
 Konfigurationen som visas ovan är för referens. Projekten ska ha egna konfigurationer.
 
