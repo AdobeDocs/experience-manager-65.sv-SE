@@ -3,12 +3,11 @@ title: Bearbeta resurser med mediehanterare och arbetsflöden
 description: Lär dig mer om mediehanterarna och hur du använder arbetsflöden för att utföra uppgifter i dina digitala resurser.
 contentOwner: AG
 role: Business Practitioner
-feature: Workflow,Renditions
+feature: arbetsflöde,återgivningar
 exl-id: cfd6c981-1a35-4327-82d7-cf373d842cc3
-translation-type: tm+mt
-source-git-commit: 15f83387629687994bc2ffee4156d7d42dc1c537
+source-git-commit: e78b42a899de3c8009817ba9e60bac40e161270f
 workflow-type: tm+mt
-source-wordcount: '2097'
+source-wordcount: '2095'
 ht-degree: 1%
 
 ---
@@ -62,7 +61,7 @@ Så här visar du de aktiva mediehanterarna:
 
 ![chlimage_1-437](assets/chlimage_1-437.png)
 
-## Använd mediehanterare i arbetsflöden för att utföra åtgärder på resurser {#using-media-handlers-in-workflows-to-perform-tasks-on-assets}
+## Använda mediehanterare i arbetsflöden för att utföra åtgärder på resurser {#using-media-handlers-in-workflows-to-perform-tasks-on-assets}
 
 Mediehanterare är tjänster som vanligtvis används i kombination med arbetsflöden.
 
@@ -369,7 +368,7 @@ När du har utfört följande procedur extraheras filens metadata när du överf
      Layer watermarkLayer;
      try {
       final Session session = node.getSession();
-      watermarkLayer = ImageHelper.createLayer(session, "/content/dam/geometrixx/icons/certificate.png");
+      watermarkLayer = ImageHelper.createLayer(session, "/content/dam/samplesite/icons/certificate.png");
       watermarkLayer.setX(MARGIN);
       watermarkLayer.setY(MARGIN);
       layer.merge(watermarkLayer);
