@@ -3,15 +3,14 @@ title: Lägga till bildscheman med hyperlänkar
 description: Lär dig hur du lägger till bildschema med hyperlänkar till en bild.
 contentOwner: AG
 role: Business Practitioner, Administrator
-feature: Asset Management
-translation-type: tm+mt
-source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
+feature: Resurshantering
+exl-id: 77da4917-47ce-4f2e-b062-73cee312a7ea
+source-git-commit: 1cfa58bb7dcbe70906071a22fbae4a9f479a31d9
 workflow-type: tm+mt
-source-wordcount: '252'
+source-wordcount: '247'
 ht-degree: 1%
 
 ---
-
 
 # Lägg till bildscheman {#adding-image-maps}
 
@@ -27,8 +26,6 @@ Med bildscheman kan du lägga till ett eller flera hyperlänkade områden som fu
 
    * I vyn **[!UICONTROL Card]** eller **[!UICONTROL List]** markerar du resursen och klickar på **[!UICONTROL Edit]** i verktygsfältet.
    * Klicka på **[!UICONTROL Edit]** på resurssidan.
-
-      ![redigeringsalternativ](assets/do-not-localize/edit_icon.png)
 
 1. Om du vill infoga ett bildschema klickar du på **[!UICONTROL Launch Map]** ![bildschema](assets/do-not-localize/image-map-icon.png) i verktygsfältet.
 1. Markera formen på bildschemat. Den aktiva punkten för den markerade formen placeras på bilden.
