@@ -3,15 +3,14 @@ title: Sök efter ansikten för att filtrera sökresultat
 description: Så här skapar, ändrar och använder du sökfaktorer i [!DNL Adobe Experience Manager].
 contentOwner: AG
 role: Administrator, Developer
-feature: Search
-translation-type: tm+mt
-source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
+feature: Sökning
+exl-id: acaf46e6-ff70-4825-8922-ce8f82905a92
+source-git-commit: e78b42a899de3c8009817ba9e60bac40e161270f
 workflow-type: tm+mt
-source-wordcount: '2277'
+source-wordcount: '2247'
 ht-degree: 14%
 
 ---
-
 
 # Söka efter fasetter {#search-facets}
 
@@ -31,8 +30,6 @@ För textsökningar lägger du till [!UICONTROL Fulltext]-predikatet i formulär
 
 1. Klicka på logotypen [!DNL Experience Manager] och gå sedan till **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
 1. På sidan Sök i Forms väljer du **[!UICONTROL Assets Admin Search Rail]** och klickar sedan på **[!UICONTROL Edit]** ![redigeringsikonen](assets/do-not-localize/aemassets_edit.png).
-
-   ![Leta reda på och välj Resurser eller Admin Search Rail](assets/assets_admin_searchrail.png)
 
    >[!NOTE]
    >
@@ -72,7 +69,7 @@ För textsökningar lägger du till [!UICONTROL Fulltext]-predikatet i formulär
 1. Navigera till sökpanelen i [!DNL Assets]-användargränssnittet. Egenskapspredikatet läggs till på panelen.
 1. Ange en beskrivning av resursen som ska genomsökas i textrutan. Ange till exempel `Adobe`. När du utför en sökning visas resurser med en beskrivning som matchar `Adobe` i sökresultaten.
 
-## Lägg till ett Alternativpredikat {#adding-an-options-predicate}
+## Lägg till ett alternativs predikat {#adding-an-options-predicate}
 
 Med predikatet Alternativ kan du lägga till flera sökalternativ på panelen Filter. Du kan välja ett eller flera av dessa alternativ på panelen Filter om du vill söka efter resurser. Om du till exempel vill söka efter resurser baserat på filtyp konfigurerar du alternativ som Bilder, Multimedia, Dokument och Arkiv i sökformuläret. När du har konfigurerat de här alternativen utförs sökningen på resurser av typen GIF, JPEG, PNG och så vidare när du väljer alternativet Bilder på panelen Filter.
 
@@ -181,7 +178,7 @@ På samma sätt som du lägger till ett egenskapsprediat eller ett alternativpre
 
 Som standard visas en låsikon ![låsikon](assets/do-not-localize/lock_closed_icon.svg) före **[!UICONTROL Assets Admin Search Rail]** på sidan **[!UICONTROL Search Forms]**. Låsikonen mot ett alternativ på söksidan i Forms anger att standardinställningarna är intakta och inte anpassade. Ikonen ![lås stängd](assets/do-not-localize/lock_closed_icon.svg) försvinner om du lägger till sökfaktorer i formuläret, vilket anger att standardformuläret har ändrats.
 
-![Låsikonen mot ett alternativ på söksidan i Forms anger att standardinställningarna är intakta och inte anpassade.](assets/locked_admin_rail.png)
+![Låsikon](assets/locked_admin_rail.png)
 
 Så här återställer du standardsökaspekten:
 
@@ -204,5 +201,5 @@ Om du inte har tilldelats en administratörsroll finns det en lista med behörig
 >[!MORELIKETHIS]
 >
 >* [Utöka sökfunktionen för resurser](searchx.md)
->* [Söka efter resurser](search-assets.md)
+* [Söka efter resurser](search-assets.md)
 
