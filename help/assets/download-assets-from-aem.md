@@ -5,9 +5,9 @@ contentOwner: AG
 role: Business Practitioner
 feature: Resurshantering,Resursfördelning
 exl-id: 6bda9e52-5a6e-446e-99c7-96793482c190
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: eefd19768cc52350ba5858a439b793c125fd23cc
 workflow-type: tm+mt
-source-wordcount: '862'
+source-wordcount: '846'
 ht-degree: 0%
 
 ---
@@ -29,11 +29,6 @@ Det går inte att hämta resurstyperna Bilduppsättningar, Snurra uppsättningar
 1. Navigera till en mapp som innehåller resurser som du vill hämta.
 1. Markera mappen eller välj en eller flera resurser i mappen.
 1. Klicka på **[!UICONTROL Download]** i verktygsfältet.
-
-   ![Tillgängliga alternativ vid hämtning av resurser från Experience Manager Assets](/help/assets/assets/asset-download1.png)
-
-   *Bild: Alternativ som är tillgängliga i hämtningsdialogrutan.*
-
 1. I dialogrutan Hämta väljer du de hämtningsalternativ som du vill använda.
 
    | Alternativet Exportera eller hämta | Beskrivning |
@@ -66,7 +61,7 @@ Om du vill tillåta hämtning av resurser från DAM, till exempel när du använ
 
 Som standard har `GET` förfrågningar om att hämta filer [!DNL Experience Manager] en begränsning på 50 MB för ZIP-arkivets hämtningsstorlek. Hämtningar som initierats via `POST`-begäranden eller användargränssnittet påverkas inte av den här gränsen.
 
-## Inaktivera resurshämtningsservlet {#disable-asset-download-servlet}
+## Inaktivera resurshämtningsserver {#disable-asset-download-servlet}
 
 `Asset Download Servlet` kan inaktiveras för en [!DNL Experience Manager]-publiceringsinstans genom att uppdatera dispatcherkonfigurationen för att blockera eventuella hämtningsbegäranden. Servern kan även inaktiveras manuellt via OSGi-konsolen direkt.
 
