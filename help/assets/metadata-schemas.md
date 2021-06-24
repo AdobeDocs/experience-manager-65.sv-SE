@@ -5,15 +5,14 @@ contentOwner: AG
 role: Business Practitioner,Administrator
 feature: Metadata
 exl-id: 0dd322cd-ce97-4335-825d-71f72a5e438c
-translation-type: tm+mt
-source-git-commit: ae0c8bda918e2e8a7a6a32e0228d1a2410b283d9
+source-git-commit: eefd19768cc52350ba5858a439b793c125fd23cc
 workflow-type: tm+mt
-source-wordcount: '3378'
+source-wordcount: '3358'
 ht-degree: 5%
 
 ---
 
-# Metadata schemas {#metadata-schemas}
+# Metadata-scheman {#metadata-schemas}
 
 Organisationer har en metadatamodell som förbättrar tillgångsidentifiering, användning, interoperabilitet och så vidare. Korrigera metadataprogram är akrossbart för att underhålla metadatadrivna arbetsflöden och processer. Om du vill följa en metadatastrategi och standarder för hela organisationen kan du använda metadatamodeller som hjälper DAM-användare att anpassa sig. [!DNL Adobe Experience Manager] Med kan du enkelt och flexibelt skapa, underhålla och använda metadatamatchningar.
 
@@ -73,10 +72,6 @@ Du kan redigera ett nyligen tillagt eller befintligt metadatchemaformulär. Meta
 1. På sidan [!UICONTROL Metadata Schema Forms] markerar du ett formulär och klickar på **[!UICONTROL Edit]** i verktygsfältet.
 
 1. Anpassa metadataformuläret på sidan **[!UICONTROL Metadata Schema Form Editor]**. Dra de nödvändiga komponenterna från fliken **[!UICONTROL Build Form]** till en av flikarna.
-
-   ![Redigerare för metadatamodell för att anpassa sidan Egenskaper för resurser](assets/metadata-schema-editor.png)
-
-   *Bild: En  [!UICONTROL Metadata Schema Form Editor] sida med tillgängliga flikar.*
 
 1. Om du vill konfigurera en komponent markerar du den och ändrar dess egenskaper på fliken **[!UICONTROL Settings]**.
 
@@ -149,11 +144,9 @@ Om du vill visa en flik på egenskapssidan förutom fliken där komponenten Samm
 
 I stället för att ange egenskaper för alternativen på fliken **[!UICONTROL Settings]** kan du definiera alternativen i en JSON-fil genom att ange motsvarande nyckelvärdespar. Ange sökvägen till JSON-filen i fältet **[!UICONTROL JSON Path]**.
 
-#### Lägg till eller ta bort en flik i schemaformuläret {#adding-deleting-a-tab-in-the-schema-form}
+#### Lägga till eller ta bort en flik i schemaformuläret {#adding-deleting-a-tab-in-the-schema-form}
 
 Med schemaredigeraren kan du lägga till eller ta bort en flik. Standardschemaformuläret innehåller flikarna **[!UICONTROL Basic]**, **[!UICONTROL Advanced]**, **[!UICONTROL IPTC]** och **[!UICONTROL IPTC Extension]**.
-
-![Standardflikar i formuläret för metadataschema](assets/metadata-schema-form-tabs.png)
 
 Klicka på `+` för att lägga till en flik i ett schemaformulär. Som standard har den nya fliken namnet `Unnamed-1`. Du kan ändra namnet på fliken **[!UICONTROL Settings]**. Klicka på `X` för att ta bort en flik.
 
@@ -178,7 +171,7 @@ Här följer några exempel där du kan definiera överlappande metadata:
 * Ändra alternativen som visas för ett visst fält baserat på värdet som anges i ett annat fält.
 * Ange standardvärdet för metadata i ett visst fält baserat på det värde som anges i ett annat fält.
 
-### Konfigurera metadata i [!DNL Experience Manager] {#configure-cascading-metadata-in-aem}
+### Konfigurera överlappande metadata i [!DNL Experience Manager] {#configure-cascading-metadata-in-aem}
 
 Tänk dig ett scenario där du vill visa överlappande metadata baserat på den typ av resurs som är markerad. Några exempel
 
@@ -314,7 +307,7 @@ I det här fallet skapar du en nod på `/etc/dam/metadataeditor/mimetypemappings
 | video/wmv | video/x-ms-wmv |
 | video/flv | video/x-flv |
 
-## Bevilja åtkomst till metadatamatcheman {#grant-access-to-metadata-schemas}
+## Bevilja åtkomst till metadatamappningar {#grant-access-to-metadata-schemas}
 
 Funktionen Metadata Schema är bara tillgänglig för administratörer. Administratörer kan dock ge åtkomst till icke-administratörer genom att ändra vissa behörigheter. Ange att användare som inte är administratörer ska skapa, ändra och ta bort behörigheter i mappen `/conf`.
 
