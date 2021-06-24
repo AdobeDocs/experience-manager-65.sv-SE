@@ -3,15 +3,14 @@ title: Skapa översättningsprojekt
 description: Lär dig hur du skapar översättningsprojekt i [!DNL Adobe Experience Manager].
 contentOwner: AG
 role: Architect, Administrator
-feature: Translation
-translation-type: tm+mt
-source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
+feature: Översättning
+exl-id: 8990feca-cfda-4974-915e-27aa9d8f2ee1
+source-git-commit: a564f158cf1040ef43cb9f5dde9f7cb22769587f
 workflow-type: tm+mt
-source-wordcount: '1744'
-ht-degree: 12%
+source-wordcount: '1738'
+ht-degree: 11%
 
 ---
-
 
 # Skapa översättningsprojekt {#creating-translation-projects}
 
@@ -70,15 +69,9 @@ Om du använder det här alternativet kopieras resurser som ska översättas til
 
 1. I listan **[!UICONTROL Target Languages]** väljer du det/de språk du vill skapa en mappstruktur för.
 
-   ![chlimage_1-65](assets/chlimage_1-65.png)
-
 1. Välj **[!UICONTROL Create a new translation project]** i listan **[!UICONTROL Project]**.
 
-   ![chlimage_1-66](assets/chlimage_1-66.png)
-
 1. Ange en titel för projektet i fältet **[!UICONTROL Project Title]**.
-
-   ![chlimage_1-67](assets/chlimage_1-67.png)
 
 1. Klicka på **[!UICONTROL Create]**. [!DNL Assets] från källmappen kopieras till målmapparna för de språkinställningar du valde i steg 4.
 
@@ -234,8 +227,6 @@ Om du använder det här alternativet läggs resursuppsättningen till i ett bef
 1. Klicka på **[!UICONTROL Update language copies]** längst ned.
 
 1. Välj **[!UICONTROL Add to existing translation project]** i listan **[!UICONTROL Project]**.
-
-   ![chlimage_1-97](assets/chlimage_1-97.png)
 
 1. Välj ett projekt i listan **[!UICONTROL Existing translation project]** som du vill lägga till resursen för översättning.
 
