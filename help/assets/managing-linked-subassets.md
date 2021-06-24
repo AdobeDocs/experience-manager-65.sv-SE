@@ -3,15 +3,14 @@ title: Hantera sammansatta resurser med referenser och flera sidor
 description: Lär dig hur du skapar referenser till digitala resurser inifrån [!DNL Adobe InDesign], [!DNL Adobe Illustrator], and [!DNL Adobe Photoshop]. Använd funktionen för sidvisningsprogram för att visa enskilda underresurssidor för flersidiga filer som PDF-, INDD-, PPT-, PPTX- och AI-filer.
 contentOwner: AG
 role: Business Practitioner, Administrator
-feature: Asset Management
-translation-type: tm+mt
-source-git-commit: ad0672c345262712e51e821fa4e050b505063ac4
+feature: Resurshantering
+exl-id: 1ea9d8fe-602c-452b-9a24-4125b705aedf
+source-git-commit: a564f158cf1040ef43cb9f5dde9f7cb22769587f
 workflow-type: tm+mt
-source-wordcount: '1321'
+source-wordcount: '1317'
 ht-degree: 0%
 
 ---
-
 
 # Hantera sammansatta och flersidiga resurser {#managing-compound-assets}
 
@@ -23,7 +22,7 @@ Förutom att eliminera redundans kan du genom att referera till resurserna i [!D
 
 Referenser tolkas utifrån sökväg, dokument-ID och instans-ID för de refererade resurserna.
 
-## [!DNL Adobe Illustrator]: Lägg till digitala resurser som referenser  {#refai}
+## [!DNL Adobe Illustrator]: Lägg till digitala resurser som referenser {#refai}
 
 Du kan referera till befintliga digitala resurser inifrån en [!DNL Adobe Illustrator]-fil.
 
@@ -46,7 +45,7 @@ Du kan referera till befintliga digitala resurser inifrån en [!DNL Adobe Illust
 
    *Bild: Resursreferenser i tillgångsinformation.*
 
-## [!DNL Adobe InDesign]: Lägg till digitala resurser som referenser  {#add-aem-assets-as-references-in-adobe-indesign}
+## [!DNL Adobe InDesign]: Lägg till digitala resurser som referenser {#add-aem-assets-as-references-in-adobe-indesign}
 
 Om du vill referera till digitala resurser från en [!DNL InDesign]-fil, drar du resurserna till [!DNL InDesign]-filen eller exporterar [!DNL InDesign]-filen som ett ZIP-arkiv.
 
@@ -70,11 +69,9 @@ Den här proceduren liknar [hur du lägger till digitala resurser som referenser
 1. Starta `Unarchiver`-arbetsflödet.
 1. När arbetsflödet är klart refereras referenserna i mappen Länkar automatiskt till underresurser. Om du vill visa en lista över refererade resurser går du till sidan med tillgångsinformation för [!DNL InDesign]-resursen och stänger [Rail](/help/sites-authoring/basic-handling.md#rail-selector).
 
-## [!DNL Adobe Photoshop]: Lägg till digitala resurser som referenser  {#refps}
+## [!DNL Adobe Photoshop]: Lägg till digitala resurser som referenser {#refps}
 
 1. Använd [!DNL Experience Manager]-datorprogrammet för att komma åt [!DNL Experience Manager Assets]. Hämta och visa resurserna i det lokala filsystemet. Använd funktionen [!UICONTROL Place Linked] i [!DNL Adobe Photoshop]. Se [placera resurser i skrivbordsappen](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#place-assets-in-native-documents).
-
-   ![chlimage_1-87](assets/chlimage_1-261.png)
 
 1. Spara i [!DNL Photoshop]-filen på den monterade enheten eller [överför](/help/assets/manage-assets.md#uploading-assets) till [!DNL Experience Manager]-databasen.
 1. När arbetsflödet är klart visas referenserna till befintliga [!DNL Experience Manager]-resurser på sidan med resursinformation.
@@ -87,7 +84,7 @@ Den här proceduren liknar [hur du lägger till digitala resurser som referenser
 >
 >Resurserna i sammansatta resurser kan också refereras baserat på deras dokument-ID och instans-ID. Den här funktionen är endast tillgänglig med versionerna [!DNL Adobe Illustrator] och [!DNL Adobe Photoshop]. För andra görs en referens på grundval av den relativa sökvägen för länkade tillgångar i den huvudsakliga sammansatta tillgången, som i tidigare versioner av [!DNL Experience Manager].
 
-## Skapa underresurser {#generate-subassets}
+## Skapa delresurser {#generate-subassets}
 
 För resurser som stöds med flersidiga format - PDF-filer, AI-filer, [!DNL Microsoft PowerPoint]- och [!DNL Apple Keynote]-filer och [!DNL Adobe InDesign]-filer - kan [!DNL Experience Manager] generera delresurser som motsvarar varje enskild sida i den ursprungliga resursen. Dessa underresurser är länkade till *överordnad* resurs och underlättar flersidesvisning. I alla andra syften behandlas delresurserna som vanliga resurser i [!DNL Experience Manager].
 
