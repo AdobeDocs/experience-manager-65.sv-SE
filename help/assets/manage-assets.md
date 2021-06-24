@@ -6,14 +6,14 @@ mini-toc-levels: 1
 role: Business Practitioner
 feature: Resurshantering, sökning
 exl-id: 158607e6-b4e9-4a3f-b023-4023d60c97d2
-source-git-commit: d06e60baac692c92358244944226b77d5dad4022
+source-git-commit: 550d837c8ad86393eefecb264b69157fca312984
 workflow-type: tm+mt
-source-wordcount: '9540'
+source-wordcount: '9508'
 ht-degree: 3%
 
 ---
 
-# Hantera dina digitala resurser {#manage-digital-assets}
+# Hantera era digitala resurser {#manage-digital-assets}
 
 I [!DNL Adobe Experience Manager Assets] kan du göra mer än att bara lagra och styra dina resurser. [!DNL Experience Manager] har funktioner för resurshantering i enterpriseklass. Du kan redigera och dela resurser, utföra avancerade sökningar, skapa flera renderingar av dussintals filformat som stöds, hantera versioner och digitala rättigheter, automatisera bearbetningen av resurser, hantera och styra metadata, samarbeta med anteckningar och mycket annat.
 
@@ -77,11 +77,9 @@ Den storlek över vilken en tillgång betraktas som en stor tillgång kan konfig
 
 Alternativet [!UICONTROL Pause] visas inte om en fil som är större än 1 000 MB överförs med en fil som är mindre än 1 000 MB. Om du avbryter filöverföringen på mindre än 1 000 MB visas alternativet **[!UICONTROL Pause]**.
 
-Om du vill ändra storleksgränsen konfigurerar du egenskapen `chunkUploadMinFileSize` för noden `fileupload`i CRX-databasen.
+Om du vill ändra storleksgränsen konfigurerar du egenskapen `chunkUploadMinFileSize` för noden `fileupload` i CRX-databasen.
 
 När du klickar på **[!UICONTROL Pause]** växlar den till alternativet **[!UICONTROL Play]**. Om du vill återuppta överföringen klickar du på **[!UICONTROL Play]**.
-
-![Återuppta den pausade resursuppladdningen](assets/resume-paused-upload.png)
 
 Om du vill avbryta en pågående överföring klickar du på Stäng (`X`) bredvid förloppsindikatorn. När du avbryter överföringsåtgärden tar [!DNL Assets] bort den delvis överförda delen av resursen.
 
@@ -191,7 +189,7 @@ Dynamic Media möjliggör batchöverföring av resurser via FTP-server. Om du t�
    Om du vill visa överföringsförloppet klickar du på **[!UICONTROL Jobs]** i det globala navigeringsfältet. På sidan Jobb visas överföringsförloppet. Du kan fortsätta arbeta i [!DNL Experience Manager] och gå tillbaka till jobbsidan i Dynamic Media Classic när som helst för att granska ett pågående jobb.
 Om du vill avbryta ett pågående överföringsjobb klickar du på **[!UICONTROL Cancel]** bredvid Varaktighet.
 
-#### Alternativ för överföring av jobb {#upload-job-options}
+#### Alternativ för överföringsjobb {#upload-job-options}
 
 | Överföringsalternativ | Delalternativ | Beskrivning |
 |---|---|---|
@@ -253,7 +251,7 @@ När du överför bildfiler från PostScript (EPS) eller Illustrator (AI) kan du
 |  | Tvinga som CMYK | Konverterar till CMYK-färgmodellen. |
 |  | Tvinga som gråskala | Konverterar till gråskalefärgrymden. |
 
-#### Ange uppladdningsalternativ för Photoshop {#setting-photoshop-upload-options}
+#### Ange överföringsalternativ för Photoshop {#setting-photoshop-upload-options}
 
 PSD-filer (Photoshop Document) används oftast för att skapa bildmallar. När du överför en PSD-fil kan du skapa en bildmall automatiskt från filen (välj alternativet [!UICONTROL Create Template] på skärmen Överför).
 
@@ -277,7 +275,7 @@ Använd [!UICONTROL Crop Options] och [!UICONTROL Color Profile Options], som be
 |  | Photoshop- och lagernamn | Namnger bilderna efter PSD-filen följt av lagernamnet eller lagernumret. Lagernumret används om lagernamnen i PSD-filen är Photoshop standardlagernamn. Ett lager med namnet Price Tag i en PSD-fil med namnet SpringAd får till exempel namnet Spring Ad_Price Tag. Ett lager med standardnamnet Lager2 kallas Spring Ad_2. |
 | Fästpunkt |  | Ange hur bilder ska förankras i mallar som genereras från lagerkompositionen som skapas från PSD-filen. Som standard är ankarpunkten i mitten. Med en central ankarpunkt kan ersättningsbilder bäst fylla samma område, oavsett ersättningsbildens proportioner. Bilder med en annan aspekt som ersätter den här bilden upptar i själva verket samma utrymme när de refererar till mallen och använder parameterersättning. Ändra till en annan inställning om ditt program kräver att ersättningsbilderna fyller ut det tilldelade utrymmet i mallen. |
 
-#### Ange alternativ för PDF-överföring {#setting-pdf-upload-options}
+#### Ange överföringsalternativ för PDF {#setting-pdf-upload-options}
 
 När du överför en PDF-fil kan du formatera den på olika sätt. Du beskär sidorna, extraherar sökord, anger en pixel per tum-upplösning och väljer en färgrymd. PDF-filer innehåller ofta en ytmarginal, skärmärken, passmärken och andra skrivarmärken. Du kan beskära dessa märken från sidorna när du överför en PDF-fil.
 
@@ -300,7 +298,7 @@ Välj bland följande alternativ:
 |  | Tvinga som CMYK | Konverterar till CMYK-färgmodellen. |
 |  | Tvinga som gråskala | Konverterar till gråskalefärgrymden. |
 
-#### Ange eVideo-överföringsalternativ {#setting-evideo-upload-options}
+#### Ange överföringsalternativ för eVideo {#setting-evideo-upload-options}
 
 Om du vill omkoda en videofil väljer du bland en mängd olika förinställningar för video.
 
@@ -318,7 +316,7 @@ Om du automatiskt vill skapa en bilduppsättning eller en snurruppsättning frå
 
 Mer information om hur du skapar gruppuppsättningsförinställningar finns i [Konfigurera gruppuppsättningsförinställningar för att automatiskt generera bilduppsättningar och snurpuppsättningar](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets).
 
-### Direktuppspelade överföringar {#streamed-uploads}
+### Strömmade överföringar {#streamed-uploads}
 
 Om du överför många resurser till Adobe Experience Manager ökar I/O-begäranden till servern drastiskt, vilket minskar överföringseffektiviteten och kan till och med leda till att en del överföringsåtgärder tar slut. [!DNL Experience Manager Assets] har stöd för direktuppspelad överföring av resurser. Direktuppspelad överföring minskar I/O-disken under överföringen genom att resurslagring undviks i en tillfällig mapp på servern innan den kopieras till databasen. I stället överförs data direkt till databasen. På så sätt minskas tiden det tar att överföra stora resurser och möjligheten till timeout. Direktuppspelad överföring är som standard aktiverad i [!DNL Assets].
 
@@ -507,7 +505,7 @@ När du flyttar resurser genom att dra dem öppnas inte guiden [!UICONTROL Move 
 
 ![Flytta resurser till jämställda mappar genom att dra resurser](assets/move-by-drag.gif)
 
-## Hantera renderingar {#managing-renditions}
+## Hantera återgivningar {#managing-renditions}
 
 1. Du kan lägga till eller ta bort återgivningar för en resurs, förutom originalet. Navigera till platsen för resursen som du vill lägga till eller ta bort återgivningar för.
 
@@ -541,7 +539,7 @@ När du flyttar resurser genom att dra dem öppnas inte guiden [!UICONTROL Move 
 
    På samma sätt kan du anpassa anteckningssidans bild genom att åsidosätta `libs/dam/gui/content/assets/annotate/jcr:content/body/content/content/items/content/renditionpicker`.
 
-   ![Noden Overlay renderingsväljare i CRXDE för att anpassa bilden för anteckningssidan](assets/renditionpicker-node-crxde.png)
+   ![Noden Overlay renderingsväljare i CRXDE för att anpassa bilden för anteckningssidan](assets/renditionpicker-node.png)
 
    Om du vill konfigurera återgivningsdimensioner för en videoresurs navigerar du till noden `videopicker` i CRX-databasen på platsen `/libs/dam/gui/content/assets/assetpage/jcr:content/body/content/content/items/assetdetail/items/col1/items/assetview/videopicker`, täcker över noden och redigerar sedan lämplig egenskap.
 
@@ -655,8 +653,6 @@ I listvyn och kolumnvyn visas alternativet **[!UICONTROL Select]** när du håll
 
 I kortvyn visas alternativet **[!UICONTROL Select]** som en snabbåtgärd.
 
-![Välj snabbåtgärd i kortvyn](assets/select_quick_action.png)
-
 När du bläddrar i en mapp eller en samling i [!DNL Assets]-användargränssnittet i en webbläsare kan du välja alla visade eller inlästa resurser med alternativet [!UICONTROL Select All] i det övre högra hörnet. Till att börja med läses endast 100 resurser in i kortvyn och 200 läses in i listvyn. Fler resurser läses in i vyn när du bläddrar på sökresultatsidan. Alternativet [!UICONTROL Select All] väljer bara de inlästa resurserna.
 
 Mer information finns i [visa och välja resurser](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources).
@@ -678,8 +674,6 @@ Med redigeringsverktygen i gränssnittet [!DNL Assets] kan du utföra små redig
 1. Beskär bilden genom att klicka på **[!UICONTROL Crop]** ![Alternativ för att beskära en bild](assets/do-not-localize/crop.png).
 
 1. Välj önskat alternativ i listan. Beskärningsområdet visas på bilden baserat på det alternativ du väljer. Med alternativet **Frihand** kan du beskära bilden utan proportionsbegränsningar.
-
-   ![Beskärningsalternativ](assets/crop-options.png)
 
 1. Markera området som ska beskäras och ändra storlek på det eller flytta det på bilden.
 
@@ -736,11 +730,9 @@ Videoanteckningar stöds bara i webbläsare med HTML5-kompatibla videoformat. Vi
 
 1. Lägg till en kommentar i rutan **[!UICONTROL Comment]** längst ned på tidslinjen. Du kan också markera ett område i bilden och lägga till en anteckning i dialogrutan **[!UICONTROL Add Annotation]**.
 
-   ![Rutan Kommentar i dialogrutan Lägg till anteckning](assets/annotation-comment-box.png)
-
 1. Om du vill meddela en användare om en anteckning anger du användarens e-postadress och lägger till kommentaren. Om du till exempel vill meddela Aaron MacDonald om en anteckning anger du @aa. Tips för alla matchande användare visas i en lista. Välj Aaron e-postadress i listan för att tagga henne med kommentaren. På samma sätt kan du tagga fler användare var som helst i anteckningen eller före eller efter den.
 
-   ![Ange användarens e-postadress och lägg till kommentar för att meddela användaren](assets/annotation-add-user-email.png)
+   ![Ange användarens e-postadress och lägg till kommentar för att meddela användaren](assets/annotate-gif.gif)
 
    >[!NOTE]
    >
@@ -808,8 +800,6 @@ Om du vill skriva ut anteckningarna och granskningsstatusen klickar du på **[!U
 
 1. I dialogrutan Skriv ut väljer du den position du vill att anteckningarna/granskningsstatusen ska visas i PDF-filen. Om du till exempel vill att anteckningarna/statusen ska skrivas ut längst upp till höger på sidan som innehåller den utskrivna bilden använder du inställningen **Övre vänster**. Det är markerat som standard.
 
-   ![Välj position för anteckningen/granskningsstatusen som ska visas i PDF-filen i dialogrutan Skriv ut](assets/Print-annotation-dialog.png)
-
    Du kan välja andra inställningar beroende på var du vill att anteckningarna/statusen ska visas i den utskrivna PDF-filen. Om du vill att anteckningarna/statusen ska visas på en sida som är skild från den utskrivna resursen väljer du **[!UICONTROL Next Page]**.
 
 1. Klicka på **[!UICONTROL Print]**. Beroende på vilket alternativ du väljer i steg 2 visar den genererade PDF-filen anteckningarna/statusen vid den angivna positionen. Om du till exempel väljer att skriva ut både anteckningar och granskningsstatus med inställningen **Överst till vänster** liknar genererade utdata den PDF-fil som återges här.
@@ -856,7 +846,7 @@ Här är ett exempel på hur du kan konfigurera [!DNL Experience Manager] för a
 1. Konfigurera PDF-filen med anteckningen genom att ange parametern font-family till `Arial Unicode MS, Noto Sans, Noto Sans CJK JP, sans-serif`. Den här konfigurationen är tillgänglig som standard och fungerar för alla europeiska språk och CJK-språk.
 1. Om det språk du väljer skiljer sig från de språk som nämns i steg 2 lägger du till en lämplig (kommaseparerad) post i standardteckensnittsfamiljen.
 
-## Skapa, hantera, förhandsgranska och återställ resursversioner {#asset-versioning}
+## Skapa, hantera, förhandsgranska och återställa resursversioner {#asset-versioning}
 
 Versionshantering skapar en ögonblicksbild av digitala resurser vid en viss tidpunkt. Versionshantering hjälper till att återställa resurser till ett tidigare läge vid ett senare tillfälle. Om du till exempel vill ångra en ändring som du har gjort i en resurs återställer du den oredigerade versionen av resursen. I [!DNL Experience Manager] kan du skapa en version, visa den aktuella revisionen, visa skillnaderna sida vid sida mellan två versioner av bilder och återställa en resurs till den tidigare versionen.
 
