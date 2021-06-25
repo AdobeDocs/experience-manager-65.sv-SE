@@ -11,15 +11,14 @@ topic-tags: deploying
 discoiquuid: b97482f2-2791-4d14-ae82-388302d9eab3
 docset: aem65
 legacypath: /deploy/platform/data-store-config
-feature: Configuring
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+feature: Konfigurerar
+exl-id: c1c90d6a-ee5a-487d-9a8a-741b407c8c06
+source-git-commit: e7038e9c2949cb6326470d0248b640e576c7f919
 workflow-type: tm+mt
-source-wordcount: '3424'
+source-wordcount: '3487'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera nodarkiv och datalager i AEM 6{#configuring-node-stores-and-data-stores-in-aem}
 
@@ -143,7 +142,7 @@ Dessa konfigurationsalternativ är tillgängliga:
 >
 >När du använder en NAS för att lagra delade fildatalager bör du endast använda högpresterande enheter för att undvika prestandaproblem.
 
-## Amazon S3-datalager {#amazon-s-data-store}
+## Amazon S3 - datalager {#amazon-s-data-store}
 
 AEM kan konfigureras för att lagra data i Amazon Simple Storage Service (S3). Det använder `org.apache.jackrabbit.oak.plugins.blob.datastore.S3DataStore.config`-PID för konfiguration.
 
@@ -191,7 +190,7 @@ När du har laddat ned den kan du installera och konfigurera S3 Connector på f�
 1. Redigera filen och lägg till de konfigurationsalternativ som krävs för installationen.
 1. Börja AEM.
 
-### Uppgraderar till en ny version av 1.10.x S3 Connector {#upgrading-to-a-new-version-of-the-s-connector}
+### Uppgradera till en ny version av 1.10.x S3 Connector {#upgrading-to-a-new-version-of-the-s-connector}
 
 Om du behöver uppgradera till en ny version av 1.10.x S3-kontakten (till exempel från 1.10.0 till 1.10.4) följer du dessa steg:
 
@@ -296,7 +295,7 @@ Filerna flyttas till huvudcachen för hämtning när överföringen är klar. N�
 
 Misslyckade överföringar (till exempel på grund av nätverksavbrott) placeras i en återförsökskö och försök med jämna mellanrum. Återförsöksintervallet konfigureras med `stagingRetryInterval parameter`.
 
-#### Konfigurera binär replikering med Amazon S3 {#configuring-binaryless-replication-with-amazon-s}
+#### Konfigurera icke-binära replikeringar med Amazon S3 {#configuring-binaryless-replication-with-amazon-s}
 
 Följande steg krävs för att konfigurera binär replikering med S3:
 
@@ -470,6 +469,14 @@ Du kan köra skräpinsamling för datalager genom att:
 >
 >När du utför skräpinsamling i ett klustrat eller delat datalager (med mongo- eller segmentmål) kan loggen visa varningar om att vissa blob-ID inte kan tas bort. Detta beror på att blob-ID:n som tagits bort i en tidigare skräpinsamling felaktigt refereras igen av andra kluster eller delade noder som inte har information om ID-borttagningar. När skräpinsamlingen utförs loggas därför en varning när den försöker ta bort ett ID som redan har tagits bort i den senaste körningen. Det här beteendet påverkar inte prestanda eller funktioner.
 
+>[!NOTE]
+> Om du använder en delad datalagerinställning och datalagrets skräpinsamling är inaktiverad kan rensningen av Lucene-binärfilen plötsligt öka diskutrymmet som används. För att undvika detta måste du inaktivera BlobTracker på alla författare- och publiceringsinstanser enligt följande:
+>
+> 1. Stoppa AEM.
+> 2. Lägg till parametern `blobTrackSnapshotIntervalInSecs=L"0"` i filen `crx-quickstart/install/org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config`. Den här parametern kräver Oak 1.12.0, 1.10.2 eller senare.
+> 3. Starta om AEM.
+
+
 Med senare versioner av AEM kan skräpinsamlingen i datalagret även köras på datalager som delas av mer än en databas. Gör så här för att kunna köra skräpinsamling i datalager på ett delat datalager:
 
 1. Se till att alla underhållsuppgifter som konfigurerats för datalagrets skräpinsamling är inaktiverade för alla databasinstanser som delar datalagret.
@@ -482,6 +489,4 @@ Med senare versioner av AEM kan skräpinsamlingen i datalagret även köras på 
    1. Gå till JMX-konsolen och välj Repository Manager Mbean.
    1. Klicka på länken **Klicka på startDataStoreGC(boolesk markOnly)**.
    1. I följande dialogruta anger du `false` som `markOnly`-parameter igen.
-
    Då sorteras alla filer som hittas med markeringsfasen som använts tidigare och resten som inte används tas bort från datalagret.
-
