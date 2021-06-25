@@ -1,14 +1,14 @@
 ---
 title: Hantera metadata för dina digitala resurser
-description: Lär dig mer om metadatatyperna och hur [!DNL Adobe Experience Manager Assets] helps manage metadata for assets to allow easier categorization and organization of assets. [!DNL Experience Manager] gör det möjligt att automatiskt ordna och bearbeta resurser baserat på deras metadata.
+description: Lär dig mer om metadatatyperna och hur du hanterar metadata för resurser för att enkelt ordna och bearbeta resurser.
 contentOwner: AG
-feature: Tagging, Metadata
+mini-toc-levels: 1
+feature: Taggar, metadata
 role: Architect, Leader
 exl-id: c630709a-7e8b-417c-83a4-35ca9be832a0
-translation-type: tm+mt
-source-git-commit: a7a9a31364497ab67d805e45ba4fa03c927828ed
+source-git-commit: 124f44b7893631703b1bd79e5c78976463f01efc
 workflow-type: tm+mt
-source-wordcount: '2240'
+source-wordcount: '2238'
 ht-degree: 10%
 
 ---
@@ -117,7 +117,7 @@ Import av metadata är asynkron och påverkar inte systemets prestanda. Samtidig
 
 1. Kontrollera att importen är korrekt genom att navigera till resursens [!UICONTROL Properties]-sida och verifiera värdena i fälten.
 
-Om du vill lägga till datum och tidsstämpel när du importerar metadata använder du formatet `YYYY-MM-DDThh:mm:ss.fff-00:00` för datum och tid. Datum och tid avgränsas med `T`, `hh` är timmar i 24-timmarsformat, `fff` är nanosekunder och `-00:00` är tidszonsförskjutning. Till exempel är `2020-03-26T11:26:00.000-07:00` den 26 mars 2020 kl. 11:26:00.000 PST-tid.
+Om du vill lägga till datum och tidsstämpel när du importerar metadata använder du formatet `YYYY-MM-DDThh:mm:ss.fff-00:00` för datum och tid. Datum och tid avgränsas med `T`, `hh` är timmar i 24-timmarsformat, `fff` är nanosekunder och `-00:00` är tidszonsförskjutning. Till exempel är `2020-03-26T11:26:00.000-07:00` 26 mars 2020 vid 11:26:000 AM PST time.
 
 >[!CAUTION]
 >
@@ -156,7 +156,7 @@ Några exempel på användningsområden för att exportera flera metadata samtid
 
 Mer information finns i [visa och redigera samlingsmetadata](/help/assets/manage-collections.md#view-edit-collection-metadata) och [redigera metadata för flera samlingar i grupp](/help/assets/manage-collections.md#editing-collection-metadata-in-bulk).
 
-## Använd en metadataprofil för mappar {#applying-a-metadata-profile-to-folders}
+## Använda en metadataprofil för mappar {#applying-a-metadata-profile-to-folders}
 
 <!-- TBD: Review this overview.
 -->
@@ -208,7 +208,7 @@ När du tar bort en metadataprofil från en mapp ärver alla undermappar automat
 
 Du kan ta bort en metadataprofil från en mapp från menyn **[!UICONTROL Tools]** eller från **[!UICONTROL Properties]** i mappen.
 
-#### Ta bort metadataprofiler från mappar via profilanvändargränssnittet {#removing-metadata-profiles-from-folders-via-profiles-user-interface}
+#### Ta bort metadataprofiler från mappar via användargränssnittet Profiler {#removing-metadata-profiles-from-folders-via-profiles-user-interface}
 
 1. Klicka på logotypen [!DNL Experience Manager] och navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Profiles]**.
 1. Markera den metadataprofil som du vill ta bort från en eller flera mappar.
@@ -234,7 +234,7 @@ Du kan ta bort en metadataprofil från en mapp från menyn **[!UICONTROL Tools]*
 >
 >* [Metadata-koncept och -förståelse](metadata-concepts.md).
 >* [Redigera metadataegenskaper för flera samlingar](manage-collections.md#editing-collection-metadata-in-bulk)
->* [Import och export av metadata i Experience Manager Assets](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/metadata-import-feature-video-use.html)
+* [Import och export av metadata i Experience Manager Assets](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/metadata-import-feature-video-use.html)
 
 
 <!-- TBD: Try filling the available information in these topics to the extent possible. As and when complete, publish the sections live.
