@@ -4,9 +4,9 @@ description: Nyheter i [!DNL Experience Manager] 6.5 Service Pack 9
 contentOwner: AK
 mini-toc-levels: 1
 exl-id: 32470e6e-8a66-4670-82da-2259f6e001c3
-source-git-commit: 29e045ef3080866a94e0925bc0c176a91092c729
+source-git-commit: 557615a019fedee1863e4d1970445fbfa17736cb
 workflow-type: tm+mt
-source-wordcount: '3673'
+source-wordcount: '3627'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ I den här artikeln beskrivs de funktioner som ingår i det senaste Service Pack
 
 >[!NOTE]
 >
->Från och med AEM Service Pack 9 kan [!DNL Experience Manager]-kunder utveckla och använda sina [!DNL Experience Manager]-program med distributioner av [!DNL Azul Zulu]-byggen av OpenJDK, som följer Java SE-standarden.
+>Från och med [!DNL Experience Manager] Service Pack 9 kan [!DNL Experience Manager]-kunder utveckla och använda sina [!DNL Experience Manager]-program med distributioner av [!DNL Azul Zulu]-byggen av OpenJDK, som följer Java SE-standarden.
 >Adobe stöder också [!DNL Azul Zulu] JDK:er till [!DNL Experience Manager]-kunder.
 >Du kan hämta relevanta versioner av JDK:n [!DNL Azul Zulu] från [Adobe Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html).
 >Användarrättigheterna för Oraclet Java-tekniken, som distribuerats av Adobe, upphör att gälla i slutet av december 2022. [!DNL Experience Manager] Vi rekommenderar att man planerar och implementerar användning för  [!DNL Azul Zulu] JDK senast detta datum. Mer information om användningen av [!DNL Oracle Java]-tekniken och [!DNL Azul Zulu]-tekniken finns i [Frågor och svar](https://experienceleague.adobe.com/docs/experience-manager-65/assets/adobe-azul-openjdk-license-agreement.pdf?lang=en).
@@ -36,49 +36,23 @@ Du kan nu återställa de borttagna sidorna och hela trädvyn på en [!DNL Exper
 
 * Uppdaterade namngivningen av kinesiska språk och regioner med anknytning till Hong Kong, Macau och Taiwan för att få dem att överensstämma med kinesiska sociala och politiska åsikter.
 
-* En valfri konfiguration introduceras för att skapa gemener i e-post-ID:n i AVS API-svar från [!DNL Adobe Experience Manager].
+* En valfri konfiguration introduceras för att ändra placering i e-post-ID:n i AVS-API-svar från [!DNL Adobe Experience Manager].
 
-   ![konfiguration för att gemena upp e-post-ID:n i AVS-svar från AEM](assets/email-lowcase-config.png)
+   ![konfiguration för att ändra e-post-ID till gemener i AVS-svar från  [!DNL Experience Manager]](assets/email-lowcase-config.png)
 
-* Kontrasten (med bakgrund) för text och ikoner på olika ställen förbättras enligt WCAG-standarden så att den blir tillgänglig för användare med begränsad syn och uppfattning om färg. Mer information finns i [Tillgänglighetsförbättringar i Resurser](sp-release-notes.md#assets-accessibility-6590).
+* Kontrasten mellan text och ikoner mot bakgrunden har förbättrats för olika funktioner. Den här implementeringen av WCAG-riktlinjer gör [!DNL Assets] mer tillgänglig för användare med begränsad syn och uppfattning av färger. Se [tillgänglighetsförbättringar i [!DNL Assets]](sp-release-notes.md#assets-accessibility-6590).
 
-### Dynamic Media {#assets-dynamic-media}
+### [!DNL Dynamic Media] {#assets-dynamic-media}
 
-* [Dynamiska medier är mer ](sp-release-notes.md#assets-accessibility-6590) tillgängliga när det gäller
+* [[!DNL Dynamic Media] är mer ](sp-release-notes.md#assets-accessibility-6590) tillgängligt när det gäller
 
-   * användarvänlighet med tangentbordstangenter.
-   * kontrast (med bakgrund) för text, platshållartext och kontroller i olika redigerare.
-   * hjälpmedel och berättarröst för skärmläsare.
+   * Enkel användning med tangentbordstangenter.
+   * Kontrast (med bakgrund) för text, platshållartext och kontroller i olika redigerare.
+   * Skärmläsarnas tillgänglighet och berättarröst.
 
-* Smart Imaging DPR (Device Pixel Ratio) och optimering av nätverksbandbredd gör att du kan leverera bilder av högsta kvalitet effektivt. på enheter med högupplösta skärmar och begränsad nätverksbandbredd. Mer information finns i [Vanliga frågor om smart bildbehandling](/help/assets/imaging-faq.md).
+* Smart Imaging DPR (Device Pixel Ratio) och optimering av nätverksbandbredd gör att du kan leverera bilder av högsta kvalitet effektivt. på enheter med högupplösta skärmar och begränsad nätverksbandbredd. Mer information och tidslinje finns i [Vanliga frågor om smart bildbehandling](/help/assets/imaging-faq.md).
 
-   >[!NOTE]
-   >
-   >Tidslinjen för lanseringen av förbättringar av smarta bilder är:
-   >
-   >* Nordamerika 24 maj 2021 i NA,
-      >
-      >
-   * Europa, Mellanöstern och Afrika 25 juni 2021,
-      >
-      >
-   * Asien-Stillahavsområdet 19 juli 2021.
-
-
-* Introducerat stöd för nästa generationens AVIF-bildformat i Dynamic Media-leverans (fmt URL-modifierare). Mer information finns i [bildvisning och återgivning av api fmt](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-is-http-fmt.html).
-
-   >[!NOTE]
-   >
-   >Tidslinjen för releasen för AVIF-stöd är:
-   >
-   >* Nordamerika 10 maj 2021,
-      >
-      >
-   * Europa, Mellanöstern och Afrika 24 maj 2021,
-      >
-      >
-   * Asien-Stillahavsområdet 24 juni 2021.
-
+* [!DNL Dynamic Media] leverans (`fmt` URL-modifierare) stöder nu nästa generationens AVIF-bildformat (AV1-bildformat). Mer information och tidslinje finns i [API-fmt för bildvisning och återgivning](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-is-http-fmt.html).
 
 ## [!DNL Adobe Experience Manager Forms] {#aem-forms}
 
@@ -94,7 +68,7 @@ Du kan nu utveckla och använda program med [!DNL Azul Zulu]-versioner av [!DNL 
 
 Du kan nu skicka ett e-postmeddelande till en grupp-e-postadress med hjälp av arbetsflödessteget Tilldela uppgift.
 
-### Möjlighet att hämta ett interaktivt kommunikationsutkast efter att källan för interaktiv kommunikation har ändrats {#retrieve-draft-after-source-modifications}
+### Möjlighet att hämta ett utkast till interaktiv kommunikation efter ändring av källan för interaktiv kommunikation {#retrieve-draft-after-source-modifications}
 
 Du kan nu hämta en interaktiv kommunikation som har sparats som ett utkast när du har gjort ändringar i källan för interaktiv kommunikation.
 
@@ -102,7 +76,7 @@ Du kan nu hämta en interaktiv kommunikation som har sparats som ett utkast när
 
 reCAPTCHA-tjänsten använder `https://www.recaptcha.net/` som standarddomän. Du kan nu ändra inställningarna för att ställa in `https://www.google.com/` eller valfritt anpassat domännamn för att läsa in, återge och validera tjänsten reCAPTCHA.
 
-### Förbättrade indata för [!UICONTROL Invoke Form Data Model Service]-arbetsflödessteg {#input-data-enhancements-fdm}
+### Förbättrade indata för arbetsflödessteget [!UICONTROL Invoke Form Data Model Service] {#input-data-enhancements-fdm}
 
 När du väljer en formulärdatamodell och en tjänst i [!UICONTROL Invoke Form Data Model Service]-arbetsflödessteget anger du tjänstargument för indata.
 
@@ -112,7 +86,7 @@ Om du väljer alternativet [!UICONTROL Relative to Payload] för att bifoga en f
 
 Nu kan du använda flera överordnad sidor i en dokumentmall. Därför kan du nu ha olika sidhuvuden, sidfötter, teckensnitt, logotypinformation på titelsidan och andra sidor i mallen.
 
-### Stödsidbrytningar i postdokument {#support-page-breaks-dor}
+### Stödsidbrytningar i arkivhandlingar {#support-page-breaks-dor}
 
 Nu kan du lägga till sidbrytningar i ett postdokument. Om en panel bryts på sidor kan du därför lägga till en sidbrytning för att flytta panelen till en ny sida i ett postdokument.
 
@@ -164,7 +138,7 @@ Nu kan du utföra sidflyttningar och MSM-rollouter som asynkrona åtgärder för
 
 Nu kan du välja format i komponentdialogrutan med det förbättrade formatsystemet.
 
-#### Prestandaförbättringar i olika områden (6.5.4.0) {#performance-improvements}
+#### Prestandaförbättringar inom olika områden (6.5.4.0) {#performance-improvements}
 
 * Minskad tid för inläsning och initiering av ContextHub inom en plats (`contexthub.kernel.js`). Det ger snabbare sidinläsning under ett webbplatsbesök.
 
@@ -271,7 +245,7 @@ En ny sorterbar kolumn för skapat datum för resurser läggs till i DAM-listvyn
 
 ### Dynamic Media {#dynamic-media-previous-service-packs}
 
-#### Invalidera CDN-cachelagrat innehåll (6.5.6.0) {#invalidate-cdn-cached-content}
+#### Invalidera cachelagrat CDN-innehåll (6.5.6.0) {#invalidate-cdn-cached-content}
 
 Du kan nu använda användargränssnittet [!DNL Dynamic Media] för att ogiltigförklara det cachelagrade innehållet i CDN (Content Delivery Network). Därför är de uppdaterade resurserna tillgängliga direkt i stället för att vänta på att cachen ska upphöra att gälla. Du kan göra CDN ogiltig genom att:
 
@@ -331,7 +305,7 @@ Du kan nu validera CAPTCHA antingen när du skickar in formulär med adaptiv for
 
 Du kan nu använda återställningsalternativet för varje komponent i layoutläget i ett anpassat formulär. När du definierar en layout med flera kolumner för en panel kan du använda den här funktionen för att återställa enskilda komponenter på panelen. Se [Använda layoutläge för att ändra storlek på komponenter](../../help/forms/using/resize-using-layout-mode.md#resize-components).
 
-#### Fyll i ett anpassat formulär i förväg på klienten (6.5.6.0) {#prefill-merge-data-at-client}
+#### Förifyll ett adaptivt formulär på klienten (6.5.6.0) {#prefill-merge-data-at-client}
 
 När du fyller i ett adaptivt formulär i förväg sammanfogar [!DNL Experience Manager Forms]-servern data med ett adaptivt formulär och skickar det ifyllda formuläret till dig. Som standard utförs datasammanfogningsåtgärden på servern.
 Nu kan du konfigurera [!DNL Experience Manager Forms]-servern till [att utföra datasammanfogningsåtgärden på klienten](../../help/forms/using/prepopulate-adaptive-form-fields.md) i stället för på servern. Det minskar avsevärt den tid som krävs för att förifylla och återge anpassningsbara formulär.
@@ -340,7 +314,7 @@ Nu kan du konfigurera [!DNL Experience Manager Forms]-servern till [att utföra 
 
 [!DNL Experience Manager Forms] formulärdatamodellen kan nu  [integreras med RESTful-API:er på en server som har en tvåvägs SSL implementerad på den](../../help/forms/using/configure-data-sources.md).
 
-#### Stöd för [!DNL Adobe Sign]-texttaggar i tjänsten Automated forms conversion (6.5.6.0) {#sign-integration-acroform-afcs} har lagts till
+#### Stöd för [!DNL Adobe Sign]-texttaggar i tjänsten Automated forms conversion (6.5.6.0) har lagts till {#sign-integration-acroform-afcs}
 
 Om ett AcroForm innehåller [!DNL Adobe Sign]-texttaggar känns dessa fält nu igen och representeras som [!DNL Adobe Sign]-fält i det adaptiva formuläret som har konverterats med [!DNL Automated Forms Conversion service]. En signerare kan fylla i sådana fält medan han/hon signerar det anpassade formuläret.
 
@@ -376,7 +350,7 @@ Du kan använda agentgränssnittet för att spara ett eller flera utkast för va
 
 ![Spara som utkast](assets/save-as-draft.gif)
 
-#### [!DNL Oracle WebLogic] stöd för programservrar (6.5.5.0)  {#weblogic-support}
+#### [!DNL Oracle WebLogic] stöd för programservrar (6.5.5.0) {#weblogic-support}
 
 Adobe Experience Manager Forms har lagt till stöd för [!DNL Oracle WebLogic 12] för Adobe Experience Manager Forms på JEE. Du kan uppgradera från en tidigare version eller konfigurera en ny Experience Manager 6.5 Forms på JEE-servern på [!DNL Oracle WebLogic] 12.2.1.4 och senare. Senare motsvarar de mindre versionsändringarna, där x i 12.2.1.x ersätts med ett versionsnummer.
 
@@ -434,7 +408,7 @@ Experience Manager Forms innehåller följande tillgänglighetsförbättringar:
 
 * Varje sida i ett adaptivt formulär innehåller nu en rubrik och en huvudlandmärkesetikett.
 
-#### Dela och begär åtkomst till inkorgsobjekt för användare av Experience Manager Forms (6.5.3.0) {#share-request-access}
+#### Dela och begär åtkomst till inkorgsobjekt från användare av Experience Manager Forms (6.5.3.0) {#share-request-access}
 
 Du kan dela dina inkorgsobjekt med en annan användare. När en annan användare får tillgång till dina inkorgsobjekt kan användaren göra anspråk på och vidta lämpliga åtgärder för delade objekt. På samma sätt kan du begära åtkomst till inkorgsobjekt från andra användare. Se [Dela och begära åtkomst till inkorgsobjekt för en användare](../forms/using/configure-shared-queues-osgi.md).
 
