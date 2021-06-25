@@ -4,14 +4,14 @@ description: Versionsinformation som är specifik för  [!DNL Adobe Experience M
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: 101cbd0d06d370da315e1579a8c2f274a6138b9a
+source-git-commit: 557615a019fedee1863e4d1970445fbfa17736cb
 workflow-type: tm+mt
-source-wordcount: '3797'
+source-wordcount: '3744'
 ht-degree: 0%
 
 ---
 
-# [!DNL Adobe Experience Manager] 6.5 Versionsinformation för Service Pack  {#aem-service-pack-release-notes}
+# [!DNL Adobe Experience Manager] 6.5 Versionsinformation för Service Pack {#aem-service-pack-release-notes}
 
 ## Versionsinformation {#release-information}
 
@@ -30,7 +30,7 @@ De viktigaste funktionerna och förbättringarna i [!DNL Adobe Experience Manage
 
 * [!DNL Experience Manager Sites] Nu kan Dynamic Media Foundation-komponenten aktivera eller inaktivera optimering för enheter med högre upplösning när du använder responsiv bildförinställning eller smart beskärning.
 
-* För att förbättra prestandan flyttas villkoret hidden=false från JCR-frågan till QueryBuilder-utvärderaren. För att verifiera att ett dolt predikat fungerar efter ändringen kontrollerar Experience Manager att alla dolda mappar inte visas i gränssnittet.
+* För att förbättra prestandan har villkoret `hidden=false` flyttats från JCR-frågan till [!UICONTROL QueryBuilder]-utvärderaren. [!DNL Experience Manager] kontrollerar att en dold mapp inte visas för att verifiera att ett dolt predikat fungerar efter ändringen.
 
 * Möjlighet att återställa borttagna sidor och träd på en [!DNL Experience Manager Sites]-sida.
 
@@ -40,39 +40,13 @@ De viktigaste funktionerna och förbättringarna i [!DNL Adobe Experience Manage
 
 * Stöd för [!DNL MongoDB] version 4.2 och 4.4.
 
-* Förekomster av namn relaterade till Hong Kong, Macau och Taiwan uppdateras enligt de nya namnkonventionerna för kinesiska språk och regioner.
+* Förekomster av namn relaterade till Hong Kong, Macau och Taiwan uppdateras enligt de nya namngivningskonventionerna för kinesiska språk och regioner.
 
-* Tillgänglighetsförbättringar i [!DNL Experience Manager] [Resurser](#assets-accessibility-6590) och [Dynamic Media](#accessibility-dm-6590).
+* Tillgänglighetsförbättringar i [!DNL Experience Manager] [[!DNL Assets]](#assets-accessibility-6590) och [[!DNL Dynamic Media]](#accessibility-dm-6590).
 
-* Smart Imaging DPR (Device Pixel Ratio) och optimering av nätverksbandbredd gör att du kan leverera bilder av högsta kvalitet effektivt. på enheter med högupplösta skärmar och begränsad nätverksbandbredd. Mer information finns i [Vanliga frågor om smart bildbehandling](/help/assets/imaging-faq.md).
+* Smart Imaging DPR (Device Pixel Ratio) och optimering av nätverksbandbredd gör att du kan leverera bilder av högsta kvalitet effektivt. på enheter med högupplösta skärmar och begränsad nätverksbandbredd. Mer information och tidslinje finns i [Vanliga frågor om smart bildbehandling](/help/assets/imaging-faq.md).
 
-   >[!NOTE]
-   >
-   >Tidslinjen i releasen för de ovanstående förbättringarna av Smart Imaging är:
-   >
-   >* Nordamerika 24 maj 2021 i NA,
-      >
-      >
-   * Europa, Mellanöstern och Afrika 25 juni 2021,
-      >
-      >
-   * Asien-Stillahavsområdet 19 juli 2021.
-
-
-* Introducerat stöd för nästa generationens AVIF-bildformat i Dynamic Media-leverans (fmt URL-modifierare). Mer information finns i [bildvisning och återgivning av api fmt](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-is-http-fmt.html).
-
-   >[!NOTE]
-   >
-   >Tidslinjen för releasen för AVIF-stöd är:
-   >
-   >* Nordamerika 10 maj 2021,
-      >
-      >
-   * Europa, Mellanöstern och Afrika 24 maj 2021,
-      >
-      >
-   * Asien-Stillahavsområdet 24 juni 2021.
-
+* [!DNL Dynamic Media] delivery (`fmt` URL modifier) supports the next-generation image format AVIF (AV1 Image format). Mer information och tidslinje finns i [API-fmt för bildvisning och återgivning](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-is-http-fmt.html).
 
 * Möjlighet att skicka ett e-postmeddelande till en grupp med [!UICONTROL Assign Task]-arbetsflödessteg.
 
@@ -432,7 +406,7 @@ Information om vilka plattformar som är certifierade för att fungera med den h
 >
 >AEM 6.5.9.0 innehåller en ny version av [AEM Forms-kompatibilitetspaket](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en#aem-65-forms-releases). Om du använder en äldre version av AEM Forms Compatibility Package och uppdaterar till AEM 6.5.9.0 installerar du den senaste versionen av paketet efter installationen av Forms Add-On Package.
 
-### Installera Adobe Experience Manager Forms på JEE {#install-aem-forms-jee-installer}
+### Installera Adobe Experience Manager Forms i JEE {#install-aem-forms-jee-installer}
 
 >[!NOTE]
 >
@@ -463,7 +437,7 @@ Om du vill använda UberJar i ett Maven-projekt läser du [hur du använder Uber
 >
 >UberJar och andra relaterade artefakter finns tillgängliga i Maven Central Repository i stället för i Adobe Public Maven-databasen (`repo.adobe.com`). Huvudfilen för UberJar har bytt namn till `uber-jar-<version>.jar`. Det finns alltså inget `classifier`, med `apis` som värde, för taggen `dependency`.
 
-## Inaktuella funktioner {#removed-deprecated-features}
+## Föråldrade funktioner {#removed-deprecated-features}
 
 Nedan finns en lista över funktioner som är markerade som borttagna med [!DNL Experience Manager] 6.5.7.0. Funktioner markeras som borttagna från början och senare i en framtida version. Ett alternativt alternativ brukar anges.
 
