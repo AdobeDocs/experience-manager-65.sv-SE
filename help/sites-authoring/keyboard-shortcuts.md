@@ -42,7 +42,7 @@ Följande genvägar är tillgängliga för konsolerna Webbplatser, Handel, Skär
 | Konsoler | `?` | Hjälp för kortkommandon |
 |  | `/` | Anropa [sökning](/help/sites-authoring/search.md) |
 |  | `Alt+`&lt;`Number`> | Växla vilken [järnvägsväljare](/help/sites-authoring/basic-handling.md#rail-selector) som ska visas |
-|  | ` | Göm rälsstöd |
+|  | &grave; | Göm rälsstöd |
 |  | `e` | Redigera |
 |  | `p` | Egenskaper |
 |  | `m` | Flytta |
