@@ -4,9 +4,9 @@ description: Versionsinformation som är specifik för  [!DNL Adobe Experience M
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: 557615a019fedee1863e4d1970445fbfa17736cb
+source-git-commit: a0f47b4e0e9f38df208ed78fde63c70813fb7dcc
 workflow-type: tm+mt
-source-wordcount: '3744'
+source-wordcount: '3762'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ De viktigaste funktionerna och förbättringarna i [!DNL Adobe Experience Manage
 
 * Tillgänglighetsförbättringar i [!DNL Experience Manager] [[!DNL Assets]](#assets-accessibility-6590) och [[!DNL Dynamic Media]](#accessibility-dm-6590).
 
-* Smart Imaging DPR (Device Pixel Ratio) och optimering av nätverksbandbredd gör att du kan leverera bilder av högsta kvalitet effektivt. på enheter med högupplösta skärmar och begränsad nätverksbandbredd. Mer information och tidslinje finns i [Vanliga frågor om smart bildbehandling](/help/assets/imaging-faq.md).
+* Smart Imaging DPR (Device Pixel Ratio) och optimering av nätverksbandbredd gör att du kan leverera bilder av högsta kvalitet effektivt; på enheter med högupplösta skärmar och begränsad nätverksbandbredd. Mer information och tidslinje finns i [Vanliga frågor om smart bildbehandling](/help/assets/imaging-faq.md).
 
 * [!DNL Dynamic Media] delivery (`fmt` URL modifier) supports the next-generation image format AVIF (AV1 Image format). Mer information och tidslinje finns i [API-fmt för bildvisning och återgivning](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-is-http-fmt.html).
 
@@ -115,6 +115,29 @@ Nedan följer en lista över korrigeringar i [!DNL Experience Manager] 6.5.9.0-v
 
 ### [!DNL Assets] {#assets-6590}
 
+Följande förbättringar av användarupplevelsen görs i [!DNL Assets]:
+
+* Om du vill visa resurser som inte är sorterade baserat på någon av parametrarna [!UICONTROL Create], [!UICONTROL Modify] eller [!UICONTROL Name] har [!DNL Adobe Experience Manager] ett [!UICONTROL None]-alternativ inom [!UICONTROL Sort by]-alternativen. Alternativet [!UICONTROL None] säkerställer att resurserna i Assets-användargränssnittet (i vyn Card, Column och Insights) är i samma ordning som de finns i JCR-noden (NPR-36356).
+
+* Om du vill att e-post-ID:t ska skrivas med gemener i AVS-API-svar från [!DNL Adobe Experience Manager], införs en valfri inställning. eftersom [!DNL Adobe Asset Link]-användare inte kunde checka in resurser om deras ID inte hade alla tecken i gemener. Observera att panelen [!DNL Adobe Asset Link] använder AVS API-svaret från [!DNL Adobe Experience Manager] (CQ-4317704).
+
+[!DNL Adobe Experience Manager] 6.5.9.0  [!DNL Assets] innehåller följande tillgänglighetsförbättringar.
+
+Kontrasten (med bakgrund) för följande text och ikoner har förbättrats så att användare med begränsad syn och uppfattning om färger kan förstå:
+
+* Resursrubrik på sidan [!UICONTROL Properties] (NPR-35967).
+* Stjärngraderingsikoner i [!UICONTROL Rating]-avsnitt på olika platser (NPR-36009).
+* Text på resursvyn och mappkortsvyn (NPR-35966).
+* Platshållartext i vyn [!UICONTROL Timeline] (NPR-35965).
+* Resursnamn på resurssökningsresultaten (NPR-35964).
+* Platshållartext i dialogrutan [!UICONTROL Link Sharing] (NPR-35963).
+* [!UICONTROL Metadata],  [!UICONTROL Status]och  [!UICONTROL Other] text i  [!UICONTROL List] alternativet i  [!UICONTROL View Settings] dialogrutan (NPR-35910).
+* [!UICONTROL Location] och  [!UICONTROL Type to search] platshållartexter vid global sökning (NPR-35909).
+* Utöka och komprimera ikoner under [!UICONTROL Content Tree] (NPR-35908).
+* Texten [!UICONTROL Assets] på sidan där resursmappar visas (NPR-35905).
+* Text i [!UICONTROL Asset Metadata], [!UICONTROL Usage Statistics] inom alternativet [!UICONTROL Overview] på sidan med tillgångsinformation (NPR-35904).
+* Text för kortkommandon för alternativen [!UICONTROL properties] och [!UICONTROL edit] på sidan med tillgångsinformation (NPR-35904).
+
 [!DNL Adobe Experience Manager] 6.5.9.0  [!DNL Assets] åtgärdar följande problem.
 
 * De taggar som skapas från ett taggrevalselement i ett [!UICONTROL Folder Metadata Schema]-formulär sparas inte (NPR-36119).
@@ -141,61 +164,14 @@ Nedan följer en lista över korrigeringar i [!DNL Experience Manager] 6.5.9.0-v
 
 * DAM-mappar kan inte tas bort eller flyttas och ett undantag loggas (NPR-35942).
 
-#### Förbättringar i resurser {#assets-enhancements}
-
-* Alternativet [!UICONTROL None] introducerades i vyn kort, kolumn och insikter för att sortera resurser i den ordning som de lagras i JCR-noden (NPR-36356).
-
-* Ett alternativ har lagts till för att lägga till e-post-ID i gemener i API-svar från Adobe Experience Manager (CQ-4317704).
-
-#### Tillgänglighetsförbättringar i resurser {#assets-accessibility-6590}
-
-[!DNL Adobe Experience Manager] 6.5.9.0  [!DNL Assets] innehåller följande tillgänglighetsförbättringar.
-
-Kontrasten (med bakgrund) för följande text och ikoner har förbättrats så att användare med begränsad syn och uppfattning om färger kan förstå:
-
-* tillgångstitel på sidan [!UICONTROL Properties] (NPR-35967).
-* stjärngraderingsikoner i [!UICONTROL Rating]-avsnitt på olika platser (NPR-36009).
-* text på tillgångs- och mappkortsvyn (NPR-35966).
-* platshållartext i vyn [!UICONTROL Timeline] (NPR-35965).
-* resursnamn på resurssökningsresultaten (NPR-35964).
-* platshållartext i dialogrutan [!UICONTROL Link Sharing] (NPR-35963).
-* [!UICONTROL Metadata],  [!UICONTROL Status]och  [!UICONTROL Other] text i  [!UICONTROL List] alternativet i  [!UICONTROL View Settings] dialogrutan (NPR-35910).
-* [!UICONTROL Location] och  [!UICONTROL Type to search] platshållartexter vid global sökning (NPR-35909).
-* expandera och komprimera ikoner under [!UICONTROL Content Tree] (NPR-35908).
-* texten [!UICONTROL Assets] på sidan där resursmappar visas (NPR-35905).
-* text i [!UICONTROL Asset Metadata], [!UICONTROL Usage Statistics] inom alternativet [!UICONTROL Overview] på sidan med tillgångsinformation (NPR-35904).
-* text för kortkommandon för alternativen [!UICONTROL properties] och [!UICONTROL edit] på sidan med tillgångsinformation (NPR-35904).
-
 ### [!DNL Dynamic Media] {#dynamic-media-6590}
-
-Adobe Experience Manager 6.5.9.0 Assets åtgärdar följande problem i [!DNL Dynamic Media]:
-
-* Anpassade visningsprogramförinställningar och CSS replikeras inte till [!DNL Dynamic Media] när [!DNL Dynamic Media] aktiveras selektivt och inaktiveras av [standard](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/dynamicmedia/config-dm.html?lang=en#troubleshoot-dm-config) (NPR-36232).
-
-* När du försöker förhandsgranska videoåtergivningar på sidan med resursinformation går det långsamt att läsa in videoklippen (CQ-4320122).
-
-* Webbläsarsidan slutar svara och blir långsammare när över 200 resurser överförs med funktionen Duplicera resursidentifierare aktiverad (CQ-4319633).
-
-* När en panoramabild läggs till på panoramamakomponenten på en sida loggas ett ej infångat referensfel (CQ-4317666).
-
-* När en interaktiv mediavisare implementeras med Experience Fragment öppnas inte Experience Fragment från utgivaren och ett fel loggas (CQ-4317655).
-
-* Alternativet Publicera till Dynamic Media är inte tillgängligt i snabbpublicering i metadataredigerarvyn (CQ-4317199).
-
-* Webbplatsförfattare med skrivskyddad behörighet kan använda smarta beskärningsfunktioner för resurser och redigera smarta beskurna återgivningar. Användare med skrivskyddad behörighet får dock inte kunna redigera resursegenskaper i Sites Dev-instansen (CQ-4316450).
-
-* Videoanteckningar fungerar inte för mappsökvägar [!DNL where Dynamic] Mediekonfigurationen är inte aktiverad, även om instansen [!DNL Experience Manager] är inställd i läget [!DNL Dynamic Media] (CQ-4314950).
-
-* När resurstiteln har tecken för dubbelbyte, multibyte, högt ASCII, kyrilliskt, surrogatpar, hebreiska, arabiska och GB18030 får resurstiteln ett frågetecken (?) vid publicering till Dynamic Media. (CQ-4311872).
-
-#### Tillgänglighetsförbättringar i Dynamic Media {#accessibility-dm-6590}
 
 [!DNL Adobe Experience Manager] 6.5.9.0  [!DNL Assets] innehåller följande tillgänglighetsförbättringar i  [!DNL Dynamic Media].
 
-* När du öppnar dialogrutan för att lägga till resurser med hjälp av tangentbordstangenter i bilduppsättningsredigeraren:
-   * skärmläsare anger att dialogrutan öppnas.
-   * tangentbordsfokus flyttas till dialogrutan när den öppnas.
-   * tangentbordsfokus flyttas tillbaka till alternativet Lägg till resurs när dialogrutan stängs (CQ-4312134).
+* När du öppnar dialogrutan för att lägga till resurser med hjälp av tangentbordstangenter i [!UICONTROL Image Set]-redigeraren:
+   * Skärmläsare anger att dialogrutan är öppen.
+   * Tangentbordsfokus flyttas till dialogrutan när den öppnas.
+   * Tangentbordsfokus flyttas tillbaka till alternativet Lägg till resurs när dialogrutan stängs (CQ-4312134).
 
 * Nu kan du lägga till och redigera aktiveringspunkter för resurser med hjälp av tangentbordstangenter i Hotspot-redigeraren (CQ-4305965).
 
@@ -218,6 +194,26 @@ Adobe Experience Manager 6.5.9.0 Assets åtgärdar följande problem i [!DNL Dyn
 * Visuell asterisk för att ange obligatoriskt fält finns nu i tillgångsfältet Rubrik i bilduppsättningsredigeraren, och skärmläsare meddelar den obligatoriska informationen för fältet (CQ-4290712).
 
 * Skärmläsare kan nu komma åt och lägga till en berättarröst för olika interaktiva alternativ i visningsprogram på sidan med tillgångsinformation (CQ-4290708).
+
+Adobe Experience Manager 6.5.9.0 Assets åtgärdar följande problem i [!DNL Dynamic Media]:
+
+* Anpassade visningsprogramförinställningar och CSS replikeras inte till [!DNL Dynamic Media] när [!DNL Dynamic Media] aktiveras selektivt och inaktiveras av [standard](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/dynamicmedia/config-dm.html?lang=en#troubleshoot-dm-config) (NPR-36232).
+
+* När du försöker förhandsgranska videoåtergivningar på sidan med resursinformation går det långsamt att läsa in videoklippen (CQ-4320122).
+
+* Webbläsarsidan slutar svara och blir långsammare när över 200 resurser överförs med funktionen Duplicera resursidentifierare aktiverad (CQ-4319633).
+
+* När en panoramabild läggs till på panoramamakomponenten på en sida loggas ett ej infångat referensfel (CQ-4317666).
+
+* När en interaktiv mediavisare implementeras med Experience Fragment öppnas inte Experience Fragment från utgivaren och ett fel loggas (CQ-4317655).
+
+* [!UICONTROL Publish to Dynamic Media] är inte tillgängligt inom  [!UICONTROL Quick Publish] alternativen på  [!UICONTROL Properties] sidan (CQ-4317199).
+
+* Webbplatsförfattare med skrivskyddad behörighet kan använda smarta beskärningsfunktioner för resurser och redigera smarta beskurna återgivningar (CQ-4316450).
+
+* Videoanteckningar fungerar inte för mappsökvägar där konfigurationen [!DNL Dynamic Media] inte är aktiverad, även om instansen [!DNL Experience Manager] är inställd i läget [!DNL Dynamic Media] (CQ-4314950).
+
+* När resurstiteln har tecken för dubbelbyte, multibyte, högt ASCII, kyrilliskt, surrogatpar, hebreiska, arabiska och GB18030 får resurstiteln ett frågetecken (?) vid publicering till Dynamic Media. (CQ-4311872).
 
 ### Plattform {#platform-6590}
 
