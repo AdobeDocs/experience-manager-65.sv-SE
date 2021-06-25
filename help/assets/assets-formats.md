@@ -2,16 +2,16 @@
 title: Filformat och MIME-typer som stöds
 description: Filformat och MIME-typer stöds av [!DNL Assets] and [!DNL Dynamic Media] och de funktioner som stöds för varje format.
 contentOwner: AG
+mini-toc-levels: 1
 role: Business Practitioner, Administrator
-feature: Asset Management,Renditions
-translation-type: tm+mt
-source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
+feature: Resurshantering,Återgivningar
+exl-id: a4bcf67b-54f4-4681-9e42-fd4753acde1a
+source-git-commit: 124f44b7893631703b1bd79e5c78976463f01efc
 workflow-type: tm+mt
-source-wordcount: '1575'
+source-wordcount: '1572'
 ht-degree: 2%
 
 ---
-
 
 # Format som stöds i [!DNL Adobe Experience Manager Assets] {#assets-supported-formats}
 
@@ -118,7 +118,7 @@ The following table describes the sub-types of raster image formats that are *no
 |  | Files that have Lab color space. | Use ExifTool if the color mode is Lab.<br>Example in an ExifTool log:<br>1. Color mode: `Lab` |
 -->
 
-## PDF Rasterizer-bibliotek {#supported-pdf-rasterizer-library} som stöds
+## PDF Rasterizer-bibliotek som stöds {#supported-pdf-rasterizer-library}
 
 Adobe PDF Rasterizer-biblioteket genererar högkvalitativa miniatyrbilder och förhandsgranskningar för stora och innehållsintensiva [!DNL Adobe Illustrator]- och PDF-filer. Adobe rekommenderar att du använder PDF-rastreringsbiblioteket för följande:
 
@@ -128,7 +128,7 @@ Adobe PDF Rasterizer-biblioteket genererar högkvalitativa miniatyrbilder och f�
 
 Se [Använda PDF-rastrering](aem-pdf-rasterizer.md).
 
-## Bildkodningsbibliotek {#supported-image-transcoding-library} som stöds
+## Bildkodningsbibliotek som stöds {#supported-image-transcoding-library}
 
 Biblioteket Adobe Imaging Transcoding är en bildbehandlingslösning som utför viktiga bildhanteringsfunktioner som kodning, omkodning, omsampling och storleksändring.
 
@@ -136,11 +136,11 @@ Bildkonverteringsbiblioteket stöder JPG/JPEG, PNG (8-bitars och 16-bitars), GIF
 
 Se [Bildkonverteringsbibliotek](imaging-transcoding-library.md).
 
-## Camera Raw {#supported-camera-raw} stöds
+## Camera Raw som stöds {#supported-camera-raw}
 
 Med [!DNL Adobe Camera Raw]-biblioteket kan [!DNL Assets] importera Raw-bilder. Se [Camera Raw stöd](camera-raw.md).
 
-## [!DNL Assets]-dokumentformat {#supported-document-formats} som stöds
+## [!DNL Assets]-dokumentformat som stöds {#supported-document-formats}
 
 Dokumentformat som stöds för filhanteringsfunktioner är följande:
 
@@ -204,7 +204,7 @@ Utöver ovanstående funktioner bör du tänka på följande:
 | WMV | ✓ | ✓ | - | * | * |
 | SWF | ✓ | ✓ | - | - | - |
 
-## Videoformat som stöds i Dynamic Media för omkodning {#supported-input-video-formats-for-dynamic-media-transcoding}
+## Videoformat som stöds i Dynamic Media för transkodning {#supported-input-video-formats-for-dynamic-media-transcoding}
 
 | Videofiltillägg | Behållare | Rekommenderade videokodekar | Videokodekar som inte stöds |
 |---|---|---|---|
