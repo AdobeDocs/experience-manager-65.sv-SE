@@ -4,14 +4,13 @@ description: Lär dig mer om behovet av och typer av metadata som gör det enkla
 contentOwner: AG
 role: Business Practitioner, Administrator
 feature: Metadata
-translation-type: tm+mt
-source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
+exl-id: 312fff5f-39c1-48c1-aa99-40feb72c2f59
+source-git-commit: 124f44b7893631703b1bd79e5c78976463f01efc
 workflow-type: tm+mt
-source-wordcount: '2723'
+source-wordcount: '2718'
 ht-degree: 6%
 
 ---
-
 
 # Förstå metadatabegrepp {#why-we-need-metadata}
 
@@ -29,7 +28,7 @@ Ovanstående är de grundläggande metadataegenskaper som [!DNL Experience Manag
 
 Du kan lägga till mer högnivådata till digitala resurser, till exempel:
 
-* Typ av resurs (är det en bild, en video, ett ljudklipp eller ett dokument?).
+* Typ av resurs (en bild, en video, ett ljudklipp eller ett dokument).
 * Tillgångens ägare.
 * Tillgångens namn.
 * Beskrivning av tillgången.
@@ -154,12 +153,12 @@ Programspecifika metadata innehåller tekniska och beskrivande metadata. Om du a
 * XMP - [!DNL Extensible Metadata Platform].
 * `xmpPG` - XMP metadata för sidindelad text.
 
-### Multimediespecifika metadata {#multimedia-specific-metadata}
+### Multimediaspecifika metadata {#multimedia-specific-metadata}
 
 * `xmpDM` - [!DNL Dynamic Media].
 * `xmpMM` - Mediehantering.
 
-## Metadata schematareferens {#metadata-schemata-reference}
+## Referens för metadatamappningar {#metadata-schemata-reference}
 
 Följande referens innehåller information om en viss metadataram (i alfabetisk ordning) samt en lista över egenskaper och deras definitioner.
 
@@ -195,7 +194,7 @@ IPTC (International Press Telecommunications Council) är ett konsortium av nyhe
 
 Även om IPTC-huvudinformationen till största delen har ersatts av XMP finns det ett IPTC-kärnschema och ett tilläggsschema för XMP. I bildprogram synkroniseras både XMP och IPTC-egenskaper.
 
-## Metadatadrivna arbetsflöden {#metadata-driven-workflows}
+## Metadatastyrda arbetsflöden {#metadata-driven-workflows}
 
 Genom att skapa metadatadrivna arbetsflöden kan du automatisera vissa processer, vilket ökar effektiviteten. I ett metadatadrivet arbetsflöde läser arbetsflödet och utför därför en fördefinierad åtgärd. Du kan till exempel använda metadatadrivna arbetsflöden på olika sätt:
 
