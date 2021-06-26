@@ -11,9 +11,9 @@ docset: aem65
 feature: 360 VR-video
 role: Business Practitioner, Administrator
 exl-id: 0c2077a7-bd16-484b-980f-4d4a1a681491
-source-git-commit: 3267fba890424e18c8c3c61a0cf4c79387b074a8
+source-git-commit: 663d7b886ba31521789b41002333715ce447e5ca
 workflow-type: tm+mt
-source-wordcount: '1047'
+source-wordcount: '1046'
 ht-degree: 0%
 
 ---
@@ -43,14 +43,14 @@ Du kan använda Adobe Premier Pro för att visa och redigera 360/VR-filmer. Du k
 
 Se [Redigera 360/VR-video](https://helpx.adobe.com/premiere-pro/how-to/edit-360-vr-video.html).
 
-## Överför resurser som ska användas med 360-videovisningsprogrammet {#uploading-assets-for-use-with-the-video-viewer}
+## Överföra resurser som ska användas med 360-videovisningsprogrammet {#uploading-assets-for-use-with-the-video-viewer}
 
 360 videomaterial som överförs till Adobe Experience Manager kallas **Multimedia** på en tillgångssida, ungefär som vanliga videomaterial.
 
 ![6_5_360video-](assets/6_5_360video-selecttopreview.png)
 *selectPreviewEn överförd 360-videoresurs som visas i kortvyn. Resursen är märkt som Multimedia.*
 
-**Så här överför du resurser som ska användas med 360-videovisningsprogrammet:**
+**Ladda upp material som ska användas med 360-videovisningsprogrammet:**
 
 1. Skapade en mapp som är dedikerad till ditt 360-videomaterial.
 1. [Använd en adaptiv videoprofil på mappen](/help/assets/video-profiles.md#applying-a-video-profile-to-folders).
@@ -62,7 +62,7 @@ Se [Redigera 360/VR-video](https://helpx.adobe.com/premiere-pro/how-to/edit-360-
    * Det bästa är att ditt ursprungliga 360-videoinnehåll har någon av följande upplösningar:
 
       * 1080p - 1920 x 1080, känd som Full HD eller FHD upplösning eller
-      * 2160p - 3840 x 2160, känd som 4K-, UHD- eller Ultra HD-upplösning. Den här stora skärmupplösningen finns oftast på tv-apparater och datorskärmar. Upplösningen 2160p kallas ofta för&quot;4K&quot; eftersom bredden är nästan 4 000 pixlar. Med andra ord har den fyra gånger så många pixlar som 1080p.
+      * 2160p - 3840 x 2160, känd som 4k, UHD eller Ultra HD-upplösning. Den här stora skärmupplösningen finns oftast på tv-apparater och datorskärmar. Upplösningen 2160p kallas ofta för&quot;4k&quot; eftersom bredden är nästan 4 000 pixlar. Med andra ord har den fyra gånger så många pixlar som 1080p.
    * [Skapa en anpassad adaptiv ](/help/assets/video-profiles.md#creating-a-video-encoding-profile-for-adaptive-streaming) videoprofil med renderingar av högre kvalitet. Skapa till exempel en adaptiv videoprofil som innehåller följande tre inställningar:
 
       * width=auto; height=720; bithastighet=2 500 kbit/s
@@ -74,7 +74,7 @@ Se [Redigera 360/VR-video](https://helpx.adobe.com/premiere-pro/how-to/edit-360-
 
 1. [Överför videon till mappen](/help/assets/managing-video-assets.md#upload-and-preview-video-assets).
 
-## Åsidosätta standardproportionerna för 360 videofilmer {#overriding-the-default-aspect-ratio-of-videos}
+## Åsidosätta standardproportionerna för 360-videofilmer  {#overriding-the-default-aspect-ratio-of-videos}
 
 För att en överförd resurs ska kvalificera sig som en 360-video som du tänker använda med 360-videovisningsprogrammet måste resursen ha proportionerna 2.
 
@@ -130,7 +130,7 @@ Se [Lägga till Dynamic Media Assets på sidor](/help/assets/adding-dynamic-medi
 
 1. Tryck på **[!UICONTROL Close]** uppe till höger på förhandsgranskningssidan.
 
-## Publicerar 360-video {#publishing-video}
+## Publicera 360-video {#publishing-video}
 
 Publicera 360-videon så att du kan använda den. När du publicerar en 360-video aktiveras URL:en och Bädda in kod. Dessutom publiceras 360-videon i Dynamic Media-molnet, som är integrerat med ett CDN för skalbar leverans och leverans med höga prestanda.
 
