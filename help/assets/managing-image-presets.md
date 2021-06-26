@@ -2,6 +2,7 @@
 title: Hantera Dynamic Media bildförinställningar
 description: Förstå Dynamic Media bildförinställningar och lär dig hur du skapar, ändrar och hanterar bildförinställningar
 uuid: 3e9a7af6-bf49-4cff-b516-0a3ee9765391
+mini-toc-levels: 3
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
@@ -12,14 +13,14 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/image-
 feature: Bildförinställningar
 role: Business Practitioner, Administrator
 exl-id: 556b99fe-91c3-441f-ba81-22cb8c10ef7f
-source-git-commit: 4ad5237939289b5411a988424b2a3ecad15ca029
+source-git-commit: 663d7b886ba31521789b41002333715ce447e5ca
 workflow-type: tm+mt
-source-wordcount: '3708'
+source-wordcount: '3707'
 ht-degree: 7%
 
 ---
 
-# Hantera Dynamic Media-bildförinställningar{#managing-image-presets}
+# Hantera Dynamic Media bildförinställningar{#managing-image-presets}
 
 Med bildförinställningar kan Adobe Experience Manager Assets dynamiskt leverera bilder i olika storlekar, i olika format eller med andra bildegenskaper som genereras dynamiskt. Varje bildförinställning representerar en fördefinierad samling kommandon för storleksändring och formatering för visning av bilder. När du skapar en bildförinställning väljer du en storlek för bildleverans. Du kan också välja formateringskommandon så att bildens utseende optimeras när bilden levereras för visning.
 
@@ -47,7 +48,7 @@ Bilder som minskar i storlek när de levereras dynamiskt kan förlora i skärpa 
 
 Administratörer kan skapa bildförinställningar. Om du vill skapa en bildförinställning kan du börja från början eller så kan du börja från en befintlig förinställning och spara den under ett nytt namn.
 
-## Hantera förinställningar för Dynamic Media-bilder {#managing-image-presets-1}
+## Hantera Dynamic Media bildförinställningar {#managing-image-presets-1}
 
 Du hanterar dina bildförinställningar i Experience Manager genom att trycka på eller klicka på Experience Manager-logotypen för att komma åt den globala navigeringskonsolen och sedan trycka eller klicka på verktygsikonen och navigera till **[!UICONTROL Assets > Image Presets]**.
 
@@ -107,7 +108,7 @@ Du kommer åt alternativen för processkomponenter i `Rasterize PDF/AI Image Pre
 
 Tryck på Adobe Experience Manager i det övre vänstra hörnet, navigera till **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**. Välj **[!UICONTROL DAM Update Asset]** på sidan Arbetsflödesmodeller och tryck sedan på **[!UICONTROL Edit]** i verktygsfältet. Dubbeltryck på processkomponenten `Rasterize PDF/AI Image Preview Rendition` på arbetsflödessidan [!UICONTROL DAM Update Asset] för att öppna dialogrutan Stegegenskaper.
 
-#### Rastrera renderingsalternativen PDF/AI Image Preview {#rasterize-pdf-ai-image-preview-rendition-options}
+#### Rastrera alternativ för PDF/AI-förhandsvisning av återgivning {#rasterize-pdf-ai-image-preview-rendition-options}
 
 ![Argument för att rastrera PDF- eller AI-arbetsflödet](assets/rasterize_pdf_ai_image_preview.png)
 
@@ -180,7 +181,7 @@ Följande skript används av Dynamic Media-integrering:
   <tr>
    <td>JPEGPagesExport.jsx</td>
    <td>Ja</td>
-   <td>Skapar en JPEG-underresurs med 300 ppi för varje sida. JPEG-underresursen är en verklig resurs som lagras under InDesign-resursen. Den är också optimerad och omvandlad till en PTIFF-fil med <code>DAM Update Asset</code>-arbetsflödet.<br /> </td>
+   <td>Skapar en JPEG-underresurs på 300 ppi för varje sida. JPEG-underresursen är en verklig resurs som lagras under InDesign-resursen. Den är också optimerad och omvandlad till en PTIFF-fil med <code>DAM Update Asset</code>-arbetsflödet.<br /> </td>
   </tr>
   <tr>
    <td>PDFPagesExport.jsx</td>
@@ -190,7 +191,7 @@ Följande skript används av Dynamic Media-integrering:
  </tbody>
 </table>
 
-## Konfigurerar bildens miniatyrstorlek {#configuring-image-thumbnail-size}
+## Konfigurera miniatyrstorlek för bild {#configuring-image-thumbnail-size}
 
 Du kan konfigurera storleken på miniatyrbilder genom att konfigurera de inställningarna i **[!UICONTROL DAM Update Asset]**-arbetsflödet. I arbetsflödet finns två steg där du kan konfigurera miniatyrstorlek för bildresurser. Även om ett (**[!UICONTROL Dynamic Media Process Image Assets]**) används för dynamiska bildobjekt och det andra (**[!UICONTROL Process Thumbnails]**) för generering av statiska miniatyrbilder, eller när alla andra processer inte kan generera miniatyrbilder, måste *båda ha samma inställningar.*
 
@@ -224,11 +225,11 @@ Storleksändring för miniatyrbilder definieras i följande format: **[!UICONTRO
 
 1. Tryck på **[!UICONTROL Save]** för att spara ändringarna i arbetsflödet.
 
-### Öka eller minska antalet förinställningar för Dynamic Media som visar {#increasing-or-decreasing-the-number-of-image-presets-that-display}
+### Öka eller minska antalet förinställningar för Dynamic Media-bilder som visas {#increasing-or-decreasing-the-number-of-image-presets-that-display}
 
 De bildförinställningar du skapar är tillgängliga som dynamiska återgivningar när du förhandsgranskar resurser. Experience Manager visar olika dynamiska återgivningar när en resurs från **[!UICONTROL Detail View > Renditions]** visas. Du kan öka eller minska gränsen för de återgivningar som visas.
 
-**Så här ökar eller minskar du antalet bildförinställningar som visas i Dynamic Media:**
+**Öka eller minska antalet bildförinställningar som visas i Dynamic Media:**
 
 1. Gå till CRXDE Lite ([https://localhost:4502/crx/de](https://localhost:4502/crx/de)).
 1. Navigera till noden med bildförinställningar på `/libs/dam/gui/coral/content/commons/sidepanels/imagepresetsdetail/imgagepresetslist`
@@ -243,7 +244,7 @@ De bildförinställningar du skapar är tillgängliga som dynamiska återgivning
 1. I egenskapen limit ändrar du talet till önskat tal, till exempel `{empty requestPathInfo.selectors[1] ? "20" : requestPathInfo.selectors[1]}`
 1. Tryck på **[!UICONTROL Save All]**.
 
-## Skapa en Dynamic Media-bildförinställning {#creating-image-presets}
+## Skapa en bildförinställning för Dynamic Media {#creating-image-presets}
 
 Om du skapar en bildförinställning för Dynamic Media kan du använda dessa inställningar på alla bilder när du förhandsgranskar eller publicerar.
 
@@ -408,7 +409,7 @@ När du skapar eller redigerar bildförinställningar finns alternativen som bes
     </ul>
     <div>
       Skärpa beskrivs i
-     <a href="https://experienceleague.adobe.com/docs/dynamic-media-classic/assets/sharpening_images.pdf">Skärpa bilder</a>.
+     <a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/sharpening_images.pdf">Skärpa bilder</a>.
     </div> </td>
   </tr>
   <tr>
@@ -516,7 +517,7 @@ Om du kör Dynamic Media - hybrid-läge måste du publicera bildförinställning
 
    ![chlimage_1-81](assets/chlimage_1-505.png)
 
-## Tar bort Dynamic Media-bildförinställningar {#deleting-image-presets}
+## Ta bort Dynamic Media-bildförinställningar {#deleting-image-presets}
 
 1. I Experience Manager: tryck eller klicka på Experience Manager-logotypen för att komma åt den globala navigeringskonsolen.
 1. Tryck på ikonen **[!UICONTROL Tools]** och navigera sedan till **[!UICONTROL Assets]** > **[!UICONTROL Image Presets]**.
