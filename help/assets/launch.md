@@ -1,6 +1,7 @@
 ---
 title: Integrera Dynamic Media Viewers med Adobe Analytics och Experience Platform Launch
 description: Med Dynamic Media Viewer-tillägget för Experience Platform Launch, tillsammans med Dynamic Media Viewer 5.13, kan kunder som har Adobe Analytics och Platform launch använda händelser och data som är specifika för Dynamic Media Viewer i sin Platform launch.
+mini-toc-levels: 3
 contentOwner: Rick Brough
 topic-tags: dynamic-media
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -9,14 +10,14 @@ docset: aem65
 feature: Tittare
 role: Business Practitioner, Administrator,Developer,Data Engineer,Data Architect
 exl-id: 161dfe22-bc1c-4b60-8ab6-a19407a39e2e
-source-git-commit: 22a181e77a563ee3590cd661507f4dfeaf9d14da
+source-git-commit: 663d7b886ba31521789b41002333715ce447e5ca
 workflow-type: tm+mt
 source-wordcount: '6224'
 ht-degree: 9%
 
 ---
 
-# Integrera Dynamic Media-visningsprogram med Adobe Analytics och Experience Platform Launch {#integrating-dynamic-media-viewers-with-adobe-analytics-and-adobe-launch}
+# Integrera Dynamic Media Viewers med Adobe Analytics och Experience Platform Launch {#integrating-dynamic-media-viewers-with-adobe-analytics-and-adobe-launch}
 
 ## Vad är Dynamic Media Viewer integrerat med Adobe Analytics och Experience Platform Launch? {#what-is-dynamic-media-viewers-integration-with-adobe-analytics-and-adobe-launch}
 
@@ -30,7 +31,7 @@ Mer information om tillägg finns i [Adobe Extension](https://experienceleague.a
 
 **Det här avsnittet är avsett för följande:** Webbplatsadministratörer, utvecklare på Experience Manager-plattformen och personer i Operations.
 
-### Begränsningar för integreringen {#limitations-of-the-integration}
+### Begränsningar i integreringen {#limitations-of-the-integration}
 
 * Integrering med Experience Platform Launch för Dynamic Media-visningsprogram fungerar inte i noden Experience Manager författare. Du kan inte se någon spårning från en WCM-sida förrän den har publicerats.
 * Experience Platform Launch-integrering för Dynamic Media-visningsprogram stöds inte för åtgärdsläget&quot;popup&quot;, där visningsprogrammets URL hämtas med knappen&quot;URL&quot; på sidan Resursinformation.
@@ -54,7 +55,7 @@ Se [Spåra Dynamic Media-visningsprogram med hjälp av inbäddningskod](#trackin
 
 Integreringen utnyttjar två separata och oberoende typer av spårning av Dynamic Media Viewers: *Adobe Analytics* och *Adobe Analytics for Audio and Video*.
 
-### Om spårning med Adobe Analytics {#about-tracking-using-adobe-analytics}
+### Om spårning med Adobe Analytics  {#about-tracking-using-adobe-analytics}
 
 Med Adobe Analytics kan du spåra åtgärder som slutanvändaren utför när de interagerar med Dynamic Media-visningsprogram på webbplatsen. Med Adobe Analytics kan du också spåra visningsprogramspecifika data. Du kan till exempel spåra och spela in inläsningshändelser tillsammans med resursnamnet, eventuella zoomåtgärder som har utförts och videouppspelningsåtgärder.
 
@@ -148,7 +149,7 @@ När konfigurationen är korrekt spåras data automatiskt i Adobe Analytics, Ado
 See [Adding Dynamic Media Assets to Pages using Adobe Sites](https://helpx.adobe.com/experience-manager/6-5/help/assets/adding-dynamic-media-assets-to-pages.html).
 -->
 
-### Spåra Dynamic Media-visningsprogram med hjälp av inbäddningskoden {#tracking-dynamic-media-viewers-using-embed-code}
+### Spåra Dynamic Media-visningsprogram med hjälp av inbäddningskod {#tracking-dynamic-media-viewers-using-embed-code}
 
 Kunder som inte använder Experience Manager Sites eller bäddar in Dynamic Media-visningsprogram på webbsidor utanför Experience Manager Sites, eller båda, kan fortfarande använda Experience Platform Launch-integreringen.
 
@@ -170,7 +171,7 @@ See [Embedding the Video or Image Viewer on a Web Page](https://helpx.adobe.com/
 1. Plocka upp den miljönivå som är relevant för webbsidans miljö. Klicka sedan på ruteikonen i kolumnen **[!UICONTROL Install]**.
 1. **[!UICONTROL In the Web Install Instructions]** kopierar den fullständiga inbäddningskoden för Experience Platform Launch-biblioteket tillsammans med de omgivande  `<script/>` taggarna.
 
-## Referenshandbok för tillägget Dynamic Media Viewer {#reference-guide-for-the-dynamic-media-viewers-extension}
+## Referenshandbok för tillägget Dynamic Media Viewers {#reference-guide-for-the-dynamic-media-viewers-extension}
 
 ### Om konfigurationen för Dynamic Media Viewer {#about-the-dynamic-media-viewers-configuration}
 
@@ -254,7 +255,7 @@ När du väljer det här alternativet återges listrutan **[!UICONTROL Dynamic M
 
 ![image2019-8-2_15-13-1](assets/image2019-8-2_15-13-1.png)
 
-#### Om åtgärdsredigeraren {#about-the-actions-editor}
+#### Om funktionsmakroredigeraren {#about-the-actions-editor}
 
 Med Dynamic Media Viewer-tillägget kan du använda händelseparametrar för Dynamic Media-visningsprogram för att mappa till analysvariabler i Adobe Analytics-tilläggets Set Variables-redigerare.
 
@@ -406,7 +407,7 @@ I följande tabell visas Dynamic Media Viewer-händelser och deras argument som 
  </tbody>
 </table>
 
-## Konfigurerar alla integreringsdelar {#configuring-all-the-integration-pieces}
+## Konfigurera alla integreringsdelar {#configuring-all-the-integration-pieces}
 
 **INNAN DU BÖRJAR**
 
@@ -426,7 +427,7 @@ Om den här integrationslösningen används med Experience Manager Sites måste 
 
 Som en del av konfigurationen måste du se till att du har tillgång till ett företag i Adobe Experience Cloud som redan har Adobe Analytics och Experience Platform Launch aktiverat.
 
-## Konfigurera Adobe Analytics för integreringen {#configuring-adobe-analytics-for-the-integration}
+## Konfigurera Adobe Analytics för integrering {#configuring-adobe-analytics-for-the-integration}
 
 När du har konfigurerat Adobe Analytics kommer följande att konfigureras för integreringen:
 
@@ -493,7 +494,7 @@ Se även [Implementeringshandbok för analys](https://experienceleague.adobe.com
 
    ![image2019-6-26_23-12-49](assets/image2019-6-26_23-12-49.png)
 
-## Konfigurerar Experience Platform Launch för integreringen {#configuring-adobe-launch-for-the-integration}
+## Konfigurera Experience Platform Launch för integreringen {#configuring-adobe-launch-for-the-integration}
 
 När du har konfigurerat Experience Platform Launch kommer följande att konfigureras för integreringen:
 
@@ -657,7 +658,7 @@ Publicering av ett bibliotek omfattar följande två steg:
 
    Mer information om publiceringsprocessen i Experience Platform Launch finns i [Publicera](https://experienceleague.adobe.com/docs/launch/using/publish/overview.html).
 
-## Konfigurera Adobe Experience Manager för integreringen {#configuring-adobe-experience-manager-for-the-integration}
+## Konfigurera Adobe Experience Manager för integrering {#configuring-adobe-experience-manager-for-the-integration}
 
 Förutsättningar:
 
@@ -670,7 +671,7 @@ Konfigurationen av Experience Manager består av följande två stora steg:
 * Konfiguration av Experience Manager IMS.
 * Konfiguration av Experience Platform Launch Cloud.
 
-### Konfigurerar Experience Manager IMS {#configuring-aem-ims}
+### Konfigurera Experience Manager IMS {#configuring-aem-ims}
 
 1. Klicka på verktygsikonen (hammer) i författaren till Experience Manager och klicka sedan på **[!UICONTROL Security]** > **[!UICONTROL Adobe IMS Configurations]**.
 
