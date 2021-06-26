@@ -1,6 +1,7 @@
 ---
 title: Konfigurera Dynamic Media - hybrid-läge
 description: Lär dig hur du konfigurerar Dynamic Media - hybrid-läge.
+mini-toc-levels: 3
 uuid: 39ad7d83-d310-4baf-9d85-5532c2f201f3
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -12,9 +13,9 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/config
 role: Business Practitioner, Administrator
 exl-id: 5719d32c-4f19-47c1-bea9-8fd0bc8439ed
 feature: Konfiguration,Hybrid-läge
-source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
+source-git-commit: 48463a72108621e94f1c50cf43f911794ec759dd
 workflow-type: tm+mt
-source-wordcount: '7603'
+source-wordcount: '7598'
 ht-degree: 1%
 
 ---
@@ -189,23 +190,23 @@ Om du vill aktivera Dynamic Media måste du aktivera körningsläget för Dynami
 
 ### Om du har installerat Experience Manager till en annan port eller kontextsökväg ... {#if-you-installed-aem-to-a-different-port-or-context-path}
 
-Om du distribuerar [Experience Manager till en programserver](/help/sites-deploying/application-server-install.md) och har Dynamic Media aktiverat, måste du konfigurera domänen **self** i externaliseraren. I annat fall fungerar inte generering av miniatyrbilder för resurser i Dynamic Media korrekt.
+Om du distribuerar [Experience Manager till en programserver](/help/sites-deploying/application-server-install.md) och har Dynamic Media aktiverat, måste du konfigurera **självdomänen** i externaliseraren. I annat fall fungerar inte generering av miniatyrbilder för resurser i Dynamic Media korrekt.
 
-Om du kör snabbstart på en annan port eller kontextsökväg måste du dessutom ändra domänen **self**.
+Om du kör snabbstart på en annan port eller kontextsökväg måste du dessutom ändra **självdomänen**.
 
 När Dynamic Media är aktiverat genereras de statiska miniatyråtergivningarna för bildresurser med Dynamic Media. För att miniatyrbildsgenerering ska fungera för Dynamic Media måste Experience Manager utföra en URL-begäran till sig själv och känna till både portnumret och kontextsökvägen.
 
 I Experience Manager:
 
-* Domänen **self** i [externalizer](/help/sites-developing/externalizer.md) används för att hämta både portnummer och kontextsökväg.
-* Om ingen **self**-domän har konfigurerats hämtas portnumret och kontextsökvägen från HTTP-tjänsten Jetty.
+* **självdomänen** i [externalizer](/help/sites-developing/externalizer.md) används för att hämta både portnumret och kontextsökvägen.
+* Om ingen **självdomän** har konfigurerats hämtas portnumret och kontextsökvägen från HTTP-tjänsten Jetty.
 
-I en WAR-distribution för Experience Manager QuickStart går det inte att härleda portnumret och kontextsökvägen. Därför måste du konfigurera en **self**-domän. Se [dokumentationen för externalisering](/help/sites-developing/externalizer.md) om hur du konfigurerar domänen **self**.
+I en WAR-distribution för Experience Manager QuickStart går det inte att härleda portnumret och kontextsökvägen. Därför måste du konfigurera en **självdomän**. Se [dokumentationen för externalisering](/help/sites-developing/externalizer.md) om hur du konfigurerar **självdomänen**.
 
 >[!NOTE]
-I en fristående [Experience Manager Quickstart-distribution](/help/sites-deploying/deploy.md) behöver en **självdomän** vanligtvis inte konfigureras eftersom portnumret och kontextsökvägen kan konfigureras automatiskt. Om alla nätverksgränssnitt är inaktiverade måste du konfigurera domänen **self**.
+I en fristående [Experience Manager Quickstart-distribution](/help/sites-deploying/deploy.md) behöver en **självdomän** vanligtvis inte konfigureras eftersom portnumret och kontextsökvägen kan konfigureras automatiskt. Om alla nätverksgränssnitt är inaktiverade måste du konfigurera **självdomänen**.
 
-## Inaktiverar Dynamic Media {#disabling-dynamic-media}
+## Inaktivera Dynamic Media  {#disabling-dynamic-media}
 
 Dynamic Media är inte aktiverat som standard. Om du tidigare har aktiverat Dynamic Media kan du stänga av det senare.
 
@@ -227,7 +228,7 @@ Om du vill inaktivera Dynamic Media efter att du har aktiverat det tar du bort f
    När körningsläget för Dynamic Media har inaktiverats hoppas det arbetsflödessteg som genererar `cqdam.pyramid.tiff`-återgivningen över automatiskt. Det inaktiverar även stöd för dynamisk återgivning och andra Dynamic Media-funktioner.
    Observera också att när Dynamic Media körningsläge är inaktiverat efter att du har konfigurerat Experience Manager-servern är alla resurser som har överförts i det körningsläget nu ogiltiga.
 
-## (Valfritt) Migrera förinställningar och konfigurationer för Dynamic Media från 6.3 till 6.5 Zero Downtime {#optional-migrating-dynamic-media-presets-and-configurations-from-to-zero-downtime}
+## (Valfritt) Migrera förinställningar och konfigurationer för Dynamic Media från 6.3 till 6.5 nolltid {#optional-migrating-dynamic-media-presets-and-configurations-from-to-zero-downtime}
 
 Om du uppgraderar Experience Manager - Dynamic Media från 6.3 till 6.5 (som nu kan köras utan driftavbrott) måste du köra följande kommando. Kommandot migrerar alla dina förinställningar och konfigurationer från `/etc` till `/conf` i CRXDE Lite.
 
@@ -261,7 +262,7 @@ Minnesgränsen kan konfigureras och passar systemresursens tillgänglighet och d
 En bild som kräver mer än den maximala minnesgränsen avvisas.
 Om du vill ändra minnesgränsen för att skapa PTIFF går du till **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]** > **[!UICONTROL Adobe CQ Scene7 PTiffManager]** och ändrar **[!UICONTROL maxMemory]**-värdet.
 
-### Konfigurerar autentisering {#setting-up-authentication}
+### Konfigurera autentisering {#setting-up-authentication}
 
 Konfigurera replikeringsautentisering för författaren så att du kan replikera bilder till tjänsten för leverans av bilder från Dynamic Media. Du får först en KeyStore och sparar den sedan under **[!UICONTROL dynamic-media-replication]**-användaren och konfigurerar den. Företagsadministratören fick ett välkomstmeddelande med KeyStore-filen och de nödvändiga autentiseringsuppgifterna under etableringsprocessen. Kontakta Adobe kundtjänst om du inte fått någon sådan information.
 
@@ -300,7 +301,7 @@ Konfigurera replikeringsautentisering för författaren så att du kan replikera
 
    Sedan måste du [konfigurera replikeringsagenten](#configuring-the-replication-agent).
 
-### Konfigurerar replikeringsagenten {#configuring-the-replication-agent}
+### Konfigurera replikeringsagenten {#configuring-the-replication-agent}
 
 1. I Experience Manager trycker du på Experience Manager-logotypen för att komma åt den globala navigeringskonsolen och sedan på **[!UICONTROL Tools]** > **[!UICONTROL Deployment]** > **[!UICONTROL Replication]** > **[!UICONTROL Agents on author]**.
 1. Tryck på **[!UICONTROL Dynamic Media Hybrid Image Replication (s7delivery)]** på sidan Agents på författare.
@@ -350,7 +351,7 @@ Du kan även kontrollera genom att göra något av följande:
 
 När du konfigurerar autentisering finns det några problem som du kan stöta på när du skapar lösningar. Kontrollera att du har konfigurerat replikering innan du söker efter dessa problem.
 
-#### Problem: HTTP-statuskod 401 med Meddelande - Behörighet krävs {#problem-http-status-code-with-message-authorization-required}
+#### Problem: HTTP-statuskod 401 med meddelande - Behörighet krävs {#problem-http-status-code-with-message-authorization-required}
 
 Problemet kan bero på att det inte gick att konfigurera KeyStore för `dynamic-media-replication`-användaren.
 
@@ -474,7 +475,7 @@ Exempel på replikeringslogg:
 
 1. I närheten av det övre vänstra hörnet på sidan trycker du på **[!UICONTROL Save All]**.
 
-### Testar konfigurationen {#testing-your-configuration}
+### Testa konfigurationen {#testing-your-configuration}
 
 Adobe rekommenderar att du utför ett test från början till slut av konfigurationen.
 
@@ -521,7 +522,7 @@ Så här konfigurerar du Dynamic Media-Cloud Services:
 1. Tryck på **[!UICONTROL Save]** för att gå tillbaka till Dynamic Media Configuration Browser-sidan.
 1. Tryck på Experience Manager-logotypen för att öppna den globala navigeringskonsolen.
 
-## Konfigurerar videorapportering {#configuring-video-reporting}
+## Konfigurera videorapportering {#configuring-video-reporting}
 
 Du kan konfigurera videorapportering för flera installationer av Experience Manager med Dynamic Media Hybrid.
 
@@ -533,7 +534,7 @@ Du kan konfigurera videorapportering för flera installationer av Experience Man
 1. Installera förinställningspaketet för videoanalys på en ***ny*** författarnod ***innan du konfigurerar Dynamic Media Configuration (Pre 6.3).***
 1. Verifiera och felsök paketinstallationen.
 
-### Skapa ett förinställningspaket för videoanalys efter att ha konfigurerat den första författarnoden {#creating-a-video-analytics-preset-package-after-configuring-the-first-author-node}
+### Skapa ett förinställningspaket för videoanalys efter att du har konfigurerat den första redigeringsnoden {#creating-a-video-analytics-preset-package-after-configuring-the-first-author-node}
 
 När du är klar med den här uppgiften har du en paketfil som innehåller förinställningarna för videoanalys. Dessa förinställningar innehåller en rapportserie, spårningsservern, spårningsnamnutrymmet och Experience Cloud organisations-ID, om sådana finns.
 
@@ -604,13 +605,13 @@ ManagerTryck  **[!UICONTROL Tools]** >  **[!UICONTROL Assets]** >  **[!UICONTROL
 
    Det här felet visas också om videorapporteringen körs innan du konfigurerar Dynamic Media Configuration (Pre 6.3)-tjänster.
 
-### Felsökning av videorapporteringskonfigurationen {#troubleshooting-the-video-reporting-configuration}
+### Felsöka konfigurationen för videorapportering {#troubleshooting-the-video-reporting-configuration}
 
 * Under installationen kan anslutningar till API-servern för Analytics göra timeout. Installationen försöker ansluta igen 20 gånger, men den misslyckas fortfarande. När detta inträffar registreras flera fel i loggfilen. Sök efter `SiteCatalystReportService`.
 * Om Analytics Preset-paketet inte installeras först kan en ny rapportserie skapas.
 * Om du uppgraderar från Experience Manager 6.3 till Experience Manager 6.4 eller Experience Manager 6.4.1 och sedan konfigurerar Dynamic Media Configuration (Pre 6.3) skapas fortfarande en rapportserie. Detta problem är känt och behandlas som åtgärdat för Experience Manager 6.4.2.
 
-### Om förinställningen för videoanalys {#about-the-video-analytics-preset}
+### Om förinställningen Videoanalys {#about-the-video-analytics-preset}
 
 Förinställningen Video Analytics (Videoanalys), som ibland helt enkelt kallas analysförinställning, lagras bredvid visningsförinställningarna i Dynamic Media. Det är i princip detsamma som en visningsprogramförinställning, men med information som används för att konfigurera AppMeasurement- och Video Heartbeat-rapporter.
 
@@ -638,7 +639,7 @@ Publicera dina egna standardkataloginställningar som en del av konfigurationspr
 1. Tryck på fliken **[!UICONTROL Replication]**. 
 1. Tryck på **[!UICONTROL Replicate]**.
 
-## Replikerar visningsförinställningar {#replicating-viewer-presets}
+## Replikera visningsförinställningar {#replicating-viewer-presets}
 
 Om du vill leverera *en resurs med en visningsförinställning måste du replikera/publicera* visningsförinställningen. (Alla visningsförinställningar måste vara aktiverade *och* replikerade för att hämta URL:en eller inbäddningskoden för en resurs.
 Mer information finns i [Förinställningar för publiceringsvisningsprogram](/help/assets/managing-viewer-presets.md#publishing-viewer-presets).
@@ -662,7 +663,7 @@ Med filtren kan du *utesluta*-resurser från replikering till publiceringsnoden 
 
 ### Använda standardresursfilter för replikering {#using-default-asset-filters-for-replication}
 
-Om du använder Dynamic Media för (1) bildåtergivning i produktionen **eller** (2) bildåtergivning och video kan du använda standardfiltren som Adobe har i befintligt skick. Följande filter är aktiva som standard:
+Om du använder Dynamic Media för (1) bildåtergivning i produktionen *eller* (2) bildåtergivning och video kan du använda standardfiltren som Adobe har i befintligt skick. Följande filter är aktiva som standard:
 
 <table>
  <tbody>
@@ -708,7 +709,7 @@ Om du använder Dynamic Media för (1) bildåtergivning i produktionen **eller**
 >[!NOTE]
 Filter gäller för MIME-typer och kan inte vara sökvägsspecifika.
 
-### Ställa in resursfilter för distribution endast video {#setting-up-asset-filters-for-video-only-deployments}
+### Ställa in resursfilter för distributioner endast för video {#setting-up-asset-filters-for-video-only-deployments}
 
 Om du använder Dynamic Media för endast video följer du de här stegen för att konfigurera resursfilter för replikering:
 
@@ -725,7 +726,7 @@ Om du använder Dynamic Media för endast video följer du de här stegen för a
 
 Med de här stegen konfigureras publiceringsinstansen i Experience Manager så att videobilden och de videometadata som krävs för uppspelning levereras av Dynamic Media-Cloud Servicen. Filtret exkluderar även återgivningar av originalvideo och statiska miniatyrer som inte behövs i publiceringsinstansen från replikering.
 
-### Konfigurera resursfilter för bildåtergivning i icke-produktionsdistributioner {#setting-up-asset-filters-for-imaging-in-non-production-deployments}
+### Ställa in resursfilter för bildåtergivning vid icke-produktionsdistributioner {#setting-up-asset-filters-for-imaging-in-non-production-deployments}
 
 Om du använder Dynamic Media för bildåtergivning i icke-produktionsdistributioner följer du de här stegen för att ställa in resursfilter för replikering:
 
@@ -810,7 +811,7 @@ Om du bara vill replikera PTIFF (Pyramid TIFF) i exemplet ovan anger du `+cqdam,
 
 Om du bara vill replikera originalet skriver du `+original`.
 
-## Konfigurerar inställningar för Dynamic Media Image Server {#configuring-dynamic-media-image-server-settings}
+## Konfigurera inställningar för Dynamic Media Image Server {#configuring-dynamic-media-image-server-settings}
 
 När du konfigurerar Dynamic Media Image Server måste du redigera Adobe CQ Scene7 ImageServer-paketet och Adobe CQ Scene7 PlatformServer-paketet.
 
@@ -964,7 +965,7 @@ Manifestinställningar och deras standardvärden:
  </tbody>
 </table>
 
-## Konfigurerar Dynamic Media färghantering {#configuring-dynamic-media-color-management}
+## Konfigurera Dynamic Media färghantering {#configuring-dynamic-media-color-management}
 
 Med Dynamic Media färghantering kan du färgkorrigera resurser för förhandsgranskning.
 
@@ -996,7 +997,7 @@ Installera funktionspaket 12445 om du vill använda Dynamic Media färghantering
 
 1. Installera funktionspaketet.
 
-### Konfigurera standardfärgprofilerna {#configuring-the-default-color-profiles}
+### Konfigurera standardfärgprofiler {#configuring-the-default-color-profiles}
 
 När du har installerat funktionspaketet konfigurerar du lämpliga standardfärgprofiler för att aktivera färgkorrigering när du begär RGB- eller CMYK-bilddata.
 
@@ -1092,11 +1093,11 @@ Följande färgprofiler är installerade:
  <tbody>
   <tr>
    <th><p>Namn</p> </th>
-   <th><p>Färgrymd</p> </th>
+   <th><p>Färgmodell</p> </th>
    <th><p>Beskrivning</p> </th>
   </tr>
   <tr>
-   <td>AdobeRGB</td>
+   <td>Adobe RGB</td>
    <td>RGB</td>
    <td>Adobe RGB (1998)</td>
   </tr>
