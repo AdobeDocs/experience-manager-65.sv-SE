@@ -6,9 +6,9 @@ mini-toc-levels: 1
 role: Business Practitioner, Administrator
 feature: Resurshantering,Återgivningar
 exl-id: a4bcf67b-54f4-4681-9e42-fd4753acde1a
-source-git-commit: 124f44b7893631703b1bd79e5c78976463f01efc
+source-git-commit: 663d7b886ba31521789b41002333715ce447e5ca
 workflow-type: tm+mt
-source-wordcount: '1572'
+source-wordcount: '1571'
 ht-degree: 2%
 
 ---
@@ -130,7 +130,7 @@ Se [Använda PDF-rastrering](aem-pdf-rasterizer.md).
 
 ## Bildkodningsbibliotek som stöds {#supported-image-transcoding-library}
 
-Biblioteket Adobe Imaging Transcoding är en bildbehandlingslösning som utför viktiga bildhanteringsfunktioner som kodning, omkodning, omsampling och storleksändring.
+Biblioteket Adobe Imaging Transcoding är en bildbehandlingslösning som utför viktiga bildhanteringsfunktioner, som kodning, omkodning, omsampling och storleksändring.
 
 Bildkonverteringsbiblioteket stöder JPG/JPEG, PNG (8-bitars och 16-bitars), GIF, BMP, TIFF/komprimerad TIFF (förutom 32-bitars TIFF-filer och PTIFF-filer), ICO- och ICN MIME-typer.
 
@@ -211,10 +211,10 @@ Utöver ovanstående funktioner bör du tänka på följande:
 | MP4 | MPEG-4 | H264/AVC (alla profiler) | - |
 | MOV, QT | Apple QuickTime | H264/AVC, Apple ProRes422 &amp; HQ, Sony XDCAM, Sony DVCAM, HDV, Panasonic DVCPro, Apple DV (DV25), Apple PhotoJPEG, Sorenson, Avid DNxHD, Avid AVR | Apple Intermediate, Apple Animation |
 | FLV, F4V | Adobe Flash | H264/AVC, Flix VP6, H263, Sorenson | SWF (vektoranimeringsfiler) |
-| WMV | Windows Media 9 | WMV3 (v9), WMV2 (v8), WMV1 (v7), GoToMeeting (G2M2, G2M3, G2M4) | Microsoft-skärm (MSS2), Microsoft Photo Story (WVP2) |
+| WMV | Windows Media 9 | WMV3 (v9), WMV2 (v8), WMV1 (v7), GoToMeeting (G2M2, G2M3, G2M4) | Microsoft® Screen (MSS2), Microsoft® Photo Story (WVP2) |
 | MPG, VOB, M2V, MP2 | MPEG-2 | MPEG-2 | - |
 | M4V | Apple iTunes | H264/AVC | - |
-| AVI | A/V-sammanflätning | XVID, DIVX, HDV, MiniDV (DV25), Techsmith Camtasia, Huffyuv, Fraps, Panasonic DVCPro | Indeo3 (IV30), MJPEG, Microsoft Video 1 (MS-CRAM) |
+| AVI | A/V-sammanflätning | XVID, DIVX, HDV, MiniDV (DV25), Techsmith Camtasia, Huffyuv, Fraps, Panasonic DVCPro | Indeo3 (IV30), MJPEG, Microsoft® Video 1 (MS-CRAM) |
 | WebM | WebM | Google VP8 | - |
 | OGV, OGG | Ogg | Theora, VP3, Dirac | - |
 | MXF | MXF | Sony XDCAM, MPEG-2, MPEG-4, Panasonic DVCPro | - |
@@ -251,7 +251,7 @@ Hur de vanliga DAM-funktionerna kan användas för ett fåtal specifika filforma
 
 >[!NOTE]
 >
->Att överföra och distribuera JavaScript-filer kan vara säkert eller inte. Om det behövs kan övertäckningar användas för att hindra användare från att överföra JS-filer.
+>Att överföra och distribuera JavaScript-filer kan vara säkert eller inte. Om det behövs kan du använda övertäckningar för att hindra användare från att överföra JS-filer.
 
 ## MIME-typer som stöds {#supported-mime-types}
 
