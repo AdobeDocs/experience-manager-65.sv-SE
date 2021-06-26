@@ -11,9 +11,9 @@ docset: aem65
 feature: Interaktiva videoklipp
 role: Business Practitioner, Administrator
 exl-id: d118879d-c17b-43f3-9cc8-0405531b4d9f
-source-git-commit: 3110c1d4424179dbc9eda9e07cf3353c4b4bb4b0
+source-git-commit: 663d7b886ba31521789b41002333715ce447e5ca
 workflow-type: tm+mt
-source-wordcount: '5971'
+source-wordcount: '5970'
 ht-degree: 3%
 
 ---
@@ -42,7 +42,7 @@ Om du vill se en interaktiv, köpbar video in action klickar du på [Live Demos]
 >
 >Om du skapar en interaktiv video för att starta en webbsida när en användare klickar på en miniatyrbild, kan vissa enheter förhindra att popup-webbsidan öppnas. I sådana fall måste du ändra inställningen för blockering av popup-fönster på enheten. På en Apple iPhone 6 trycker du till exempel på **[!UICONTROL Settings]** > **Safari** > **Blockera popup-fönster** och drar sedan kontrollen till **[!UICONTROL Off]**. När du spelar upp en interaktiv video och klickar på en miniatyrbild blir du nu tillfrågad om du vill öppna popup-fönstret. Om du accepterar öppnas webbsidan.
 
-### Se hur interaktiva videoklipp skapas {#watch-how-interactive-videos-are-created}
+### Se hur interaktiva videor skapas {#watch-how-interactive-videos-are-created}
 
 Spela upp en genomgång om [hur interaktiva videor skapas](https://s7d5.scene7.com/s7viewers/html5/VideoViewer.html?videoserverurl=https://s7d5.scene7.com/is/content/&amp;emailurl=https://s7d5.scene7.com/s7/emailFriend&amp;serverUrl=https://s7d5.scene7.com/is/image/&amp;config=Scene7SharedAssets/Universal_HTML5_Video_social&amp;contenturl=https://s7d5.scene7.com/skins/&amp;asset=S7tutorials/InteractiveVideo) (7 minuter och 30 sekunder).
 Även om videosjälvstudien är märkt med Assets on Demand gäller fortfarande principerna och stegen för Interactive Video i Adobe Experience Manager Assets.
@@ -92,7 +92,7 @@ Använd inbäddningskoden eller URL-adressen för att integrera interaktiv video
 Om du använder en WCM-fil (Web Content Manager) från tredje part måste du integrera den nya interaktiva videon med den befintliga QuickView-implementeringen som används på webbplatsen. Se [Integrera en interaktiv video med en befintlig Quickview](#integrating-an-interactive-video-with-an-existing-quickview).
    [Lägga till Dynamic Media-resurser på sidor](/help/assets/adding-dynamic-media-assets-to-pages.md)
 
-## (Valfritt) Identifiera QuickView-variabler {#optional-identifying-quickview-variables}
+## (Valfritt) Identifiera Quickview-variabler {#optional-identifying-quickview-variables}
 
 >[!NOTE]
 >
@@ -238,7 +238,7 @@ När du har sparat visningsförinställningen ställs dess läge automatiskt in 
 
 Se [Skapa en ny visningsförinställning](/help/assets/managing-viewer-presets.md#creating-a-new-viewer-preset) för att skapa en egen förinställning för Interactive Video Viewer.
 
-## Överföra en video och dess associerade miniatyrresurser {#uploading-a-video-and-its-associated-thumbnail-assets}
+## Överföra en video och dess tillhörande miniatyrbilder {#uploading-a-video-and-its-associated-thumbnail-assets}
 
 Om du redan har överfört videoklipp och miniatyrbilder går du vidare till [Lägga till interaktivitet i videon](#adding-interactivity-to-your-video).
 
@@ -503,11 +503,11 @@ När du har sparat den interaktiva videon öppnas videon direkt i förhandsvisni
 
    När du har lagt till tidslinjesegment och publicerat den interaktiva videon kan du lägga till den på din befintliga startsida för webbplatsen. Se [Integrera en interaktiv video med din webbplats](#integrating-an-interactive-video-with-your-website).
 
-## Publicera interaktiva videoresurser {#publishing-interactive-video-assets}
+## Publicera interaktivt videomaterial {#publishing-interactive-video-assets}
 
 Mer information om hur du publicerar interaktiva videoresurser finns i [Publicera resurser](/help/assets/publishing-dynamicmedia-assets.md).
 
-## Integrera en interaktiv video med din webbplats {#integrating-an-interactive-video-with-your-website}
+## Integrera en interaktiv video med webbplatsen {#integrating-an-interactive-video-with-your-website}
 
 När du har överfört en video, lagt till tidslinjesegment i den och publicerat den interaktiva videon är du nu redo att lägga till den på din befintliga webbplats.
 
@@ -711,7 +711,7 @@ Där `inner_container` är en referens till ett `DIV`-element som hanteras av vi
 
 Stegen för att hitta det modala dialogruteelementet och bifoga det till behållaren ovan är skiftlägeskänsliga. Återigen kan du få hjälp av den som är bekant med den QuickView-implementering som behövs.
 
-När det gäller exempelwebbplatsen implementeras dialogrutan för spärrning av snabbvyn som en `DIV` med ett spärrtecken-ID som bifogas direkt till dokumentet `BODY`. Koden som flyttar dialogrutan till visningsprogrammets behållare är därför så enkel som följande:
+Om vi använder exempelwebbplatsen implementeras dialogrutan för spärrning av snabbvyn som en `DIV` med ett spärrtecken-ID som bifogas direkt till dokumentet `BODY`. Koden som flyttar dialogrutan till visningsprogrammets behållare är därför så enkel som följande:
 
 ```xml
 var sdkContainerId = s7interactivevideoviewer.getComponent("container").getInnerContainerId(); // get viewer container component
