@@ -11,9 +11,9 @@ docset: aem65
 feature: Interaktiva bilder
 role: Business Practitioner, Administrator
 exl-id: 8a609024-e9e6-4805-8306-48d095110eb6
-source-git-commit: 3110c1d4424179dbc9eda9e07cf3353c4b4bb4b0
+source-git-commit: 663d7b886ba31521789b41002333715ce447e5ca
 workflow-type: tm+mt
-source-wordcount: '4256'
+source-wordcount: '4249'
 ht-degree: 2%
 
 ---
@@ -46,23 +46,23 @@ Självstudiekursen visar hur du integrerar interaktiva bilder på din egen webbp
 
 Interactive Images:
 
-1. **(Valfritt) Identifiera hotspot-variabler**  - Om du använder fristående Experience Manager Assets och Dynamic Media börjar du med att identifiera dynamiska variabler som används i den befintliga QuickView-implementeringen. Sedan kan du ange hotspot-data när du skapar den interaktiva bilden. Se [(Valfritt) Identifiera hotspot-variabler](#optional-identifying-hotspot-variables).
+1. **(Valfritt) Identifiera hotspot-variabler**  - Om du använder fristående Experience Manager Assets och Dynamic Media kan du börja med att identifiera dynamiska variabler som används i den befintliga QuickView-implementeringen. Sedan kan du ange hotspot-data när du skapar den interaktiva bilden. Se [(Valfritt) Identifiera hotspot-variabler](#optional-identifying-hotspot-variables).
 Om du använder Adobe Experience Manager Sites, Adobe Experience Manager e-handel eller båda är det här steget inte nödvändigt.
 Se [e-handelskoncept i Experience Manager Assets](/help/commerce/cif-classic/administering/concepts.md).
 
 1. **(Valfritt) Skapa en förinställning**  för Interactive Image viewer - Anpassa den grafiska bild som används för att representera aktiveringspunkter. Du behöver inte skapa en egen förinställning för Interactive Image Viewer om du tänker använda den färdiga Interactive Image Viewer-förinställningen `Shoppable_Banner` i stället.
 Se [(Valfritt) Skapa en förinställning för visningsprogrammet för interaktiv bild](/help/assets/managing-viewer-presets.md#creating-a-new-viewer-preset).
 
-1. **Överför en bildbanderoll**  - Överför bildbanderoller som du vill göra interaktiva.
+1. **Ladda upp en bildbanderoll**  - Ladda upp bildbanderoller som du vill göra interaktiva.
 Se [Överföra en bildbanderoll](#uploading-an-image-banner).
 
-1. **Lägga till aktiveringspunkter i en bildbanderoll**  - Lägg till en eller flera hotspot-områden i en bildbanderoll och koppla dem till en åtgärd som en hyperlänk, en snabbvy eller ett Experience Fragment. När du har lagt till aktiveringspunkter avslutar du den här uppgiften genom att publicera den interaktiva bilden.
+1. **Lägg till aktiveringspunkter i en bildbanderoll**  - Lägg till en eller flera hotspot-områden i en bildbanderoll och koppla dem till en åtgärd som en hyperlänk, en snabbvy eller ett Experience Fragment. När du har lagt till aktiveringspunkter avslutar du den här uppgiften genom att publicera den interaktiva bilden.
 
    * Se [Lägga till aktiveringspunkter i en bildbanderoll](#adding-hotspots-to-an-image-banner).
    * Se [Förhandsgranska interaktiva bilder](#optional-previewing-interactive-images) - Valfritt. Om du vill kan du visa en representation av din köpbara banner och testa dess interaktivitet.
    * Mer information om hur du publicerar interaktiva bildresurser finns i [Publicera resurser](/help/assets/publishing-dynamicmedia-assets.md).
 
-1. **Lägga till en interaktiv bild till din webbplats eller till din webbplats i Experience Manager**  - Om du använder Experience Manager Sites eller eCommerce, eller båda, kan du lägga till den interaktiva bilden till en webbsida i Experience Manager. Dra Interactive Media-komponenten till sidan. Se [Lägga till Dynamic Media-resurser på sidor](/help/assets/adding-dynamic-media-assets-to-pages.md).
+1. **Lägg till en interaktiv bild på webbplatsen**  - Om du använder Experience Manager Sites eller eCommerce, eller båda, kan du lägga till den interaktiva bilden på en webbsida i Experience Manager. Dra Interactive Media-komponenten till sidan. Se [Lägga till Dynamic Media-resurser på sidor](/help/assets/adding-dynamic-media-assets-to-pages.md).
 
    Om du använder fristående Experience Manager Assets och Dynamic Media måste du kopiera inbäddningskoden på din webbplats och sedan integrera den med din befintliga snabbvy. Se [Integrera en interaktiv bild med din webbplats](#integrating-an-interactive-image-with-your-website).
 
@@ -166,14 +166,14 @@ Du kan använda samma metod som i de tre exemplen ovan på demowebbsidan:
 
 Demonstrationswebbsidan innehåller flera produktminiatyrbilder med en QuickView-knapp med etiketten&quot;See More&quot;. Med webbläsarens felsökningsverktyg fortfarande aktiverat klickar du på varje knapp och noterar de inspelade URL:erna för snabbvyn. När du har aktiverat alla fyra snabbvyerna för produkten som finns på sidan, finns följande lista över snabbvybegäranden som gjorts i bakgrunden:
 
-* `/datafeed/Men-Windbreaker.json`
-* `/datafeed/Men-SimpleHenley.json`
-* `/datafeed/Men-CamoPullover.json`
-* `/datafeed/Women-QuiltedDownJacket.json`
+* `/datafeed/Male-Windbreaker.json`
+* `/datafeed/Male-SimpleHenley.json`
+* `/datafeed/Male-CamoPullover.json`
+* `/datafeed/Female-QuiltedDownJacket.json`
 
 Om du tittar på serveranropen ser du att produktspecifik information bara finns i sökvägen för begäran. Du observerar också att frågesträngen inte används alls och att det finns två olika typer av datadelar:
 
-* Den första typen är Män eller Kvinnor. Du kan kalla den här&quot;produktkategorin&quot;.
+* Den första typen är man eller kvinna. Du kan kalla den här&quot;produktkategorin&quot;.
 * Den andra typen är produktnamn, till exempel CamoPullover. Du kan anta att den här informationen är produktens SKU.
 
 Med hjälp av den här informationen har hela snabbvyns URL följande mönster:
@@ -216,7 +216,7 @@ När du har sparat visningsförinställningen aktiveras den automatiskt (aktiver
 
    Du kan nu ladda upp en bildbanderoll.
 
-## Överför en bildbanderoll {#uploading-an-image-banner}
+## Överföra en bildbanderoll {#uploading-an-image-banner}
 
 Om du redan har överfört de bilder du vill använda går du vidare till nästa steg, [Lägga till aktiveringspunkter i en bildbanderoll](#adding-hotspots-to-an-image-banner).
 
@@ -284,7 +284,7 @@ Om du redigerar interaktiva bilder med aktiveringspunkter och beskär bilden tas
 
          * Se [Identifiera hotspot-variabler](#optional-identifying-hotspot-variables); du måste definiera dessa variabler.
          * Ange sedan SKU-värdet manuellt. I textfältet SKU-värde skriver du produktens SKU (Stock Keeping Unit), som är en unik identifierare för varje separat produkt eller tjänst som du erbjuder. Det angivna SKU-värdet fyller automatiskt i variabeldelen av QuickView-mallen så att systemet vet att den aktiveringspunkt som användaren går till associeras med en viss SKU:s snabbvy.
-         * (Valfritt) Om det finns andra variabler i snabbvyn som du måste använda för att identifiera en produkt ytterligare trycker du på **[!UICONTROL Add Generic Variable]**. Ange en extra variabel i textfältet. `category=Mens` är till exempel en tillagd variabel.
+         * (Valfritt) Om det finns andra variabler i snabbvyn som du måste använda för att identifiera en produkt ytterligare trycker du på **[!UICONTROL Add Generic Variable]**. Ange en extra variabel i textfältet. `category=Males` är till exempel en tillagd variabel.
    * Tryck på **[!UICONTROL Hyperlink]**.
 
       * Om du använder Experience Manager Sites trycker eller klickar du på ikonen för platsväljaren (mappen) för att navigera till en URL. Den URL-baserade länkningsmetoden är inte möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till Experience Manager-sidor.
@@ -358,7 +358,7 @@ Använda demowebbplatsen som exempel:
 
 [https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html)
 
-Observera att bilden på de tre männen är en statisk `IMG`-tagg:
+Observera att bilden på de tre hanarna är en statisk `IMG`-tagg:
 
 ```xml
 <img class="img-responsive" width="100%" title="Hero Image 2" alt="Hero Image 2" src="images/shoppable-banner.jpg">
