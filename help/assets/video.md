@@ -1,6 +1,7 @@
 ---
 title: Video i Dynamic Media
 description: Lär dig arbeta med video i Dynamic Media
+mini-toc-levels: 3
 uuid: 97f311a3-a227-479a-91bf-fb54ecd1a55d
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -11,10 +12,10 @@ docset: aem65
 feature: Resurshantering
 role: Business Practitioner, Administrator
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: 900a2ccbf33575644f934e5a75380d8dd3eab5d8
+source-git-commit: 54230d68fc86c9098f7712044bc501bdc4f16502
 workflow-type: tm+mt
-source-wordcount: '11179'
-ht-degree: 5%
+source-wordcount: '11191'
+ht-degree: 4%
 
 ---
 
@@ -22,7 +23,17 @@ ht-degree: 5%
 
 I det här avsnittet beskrivs hur du arbetar med video i Dynamic Media.
 
-## Snabbstart: Videoklipp {#quick-start-videos}
+För närvarande kända problem med videouppspelning i Dynamic Media:
+
+* 
+
+   <!-- CQDOC-18116 -->You cannot play video renditions from the asset's Details page on Experience Manager - Dynamic Media running in hybrid mode.
+
+* 
+
+   <!-- CQDOC-18116 -->You cannot stream videos on Experience Manager - Dynamic Media running in hybrid mode.
+
+## Snabbstart: Videor {#quick-start-videos}
 
 Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma igång snabbt med anpassningsbara videouppsättningar i Dynamic Media. Efter varje steg finns det korsreferenser till ämnesrubriker där du kan hitta mer information.
 
@@ -47,9 +58,9 @@ Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma ig�
       * Läs mer om [Bästa tillvägagångssätt för videokodning](#best-practices-for-encoding-videos).
    * Koppla videobearbetningsprofilen till en eller flera mappar där du ska överföra dina primära källvideor.
 
-      * [Tillämpa en videoprofil på mappar](/help/assets/video-profiles.md#applying-a-video-profile-to-folders).
+      * [Använd en videoprofil på mappar](/help/assets/video-profiles.md#applying-a-video-profile-to-folders).
       * Läs mer om [Bästa tillvägagångssätt för att ordna digitala resurser så att du kan använda bearbetningsprofiler](/help/assets/organize-assets.md).
-      * Läs mer om [Organisera digitala resurser](/help/assets/organize-assets.md).
+      * Läs mer om [Ordna digitala resurser](/help/assets/organize-assets.md).
    * Överför dina primära källvideor till mapparna. Du kan överföra videofiler som är upp till 15 GB vardera. När du lägger till videofilmer i mappen kodas de enligt den videobearbetningsprofil som du tilldelade mappen.
 
       * [Ladda upp videor](/help/assets/managing-video-assets.md#upload-and-preview-video-assets).
@@ -64,13 +75,13 @@ Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma ig�
    * Ordna, bläddra bland och söka efter videomaterial
 
       * [Organisera digitalt ](/help/assets/organize-assets.md)
-materialLäs mer om  [Bästa metoder för att ordna digitala resurser för att använda bearbetningsprofiler](organize-assets.md)
+materialLäs mer om  [Bästa metoder för att ordna digitalt material för användning av bearbetningsprofiler](organize-assets.md)
 
-      * [Söka efter ](search-assets.md#custompredicates) videomaterial eller  [söka resurser](/help/assets/search-assets.md)
+      * [Söka efter ](search-assets.md#custompredicates) videomaterial eller  [söka efter resurser](/help/assets/search-assets.md)
    * Förhandsgranska och publicera videomaterial
 
       * Visa källvideon och de kodade återgivningarna av videon tillsammans med tillhörande miniatyrer:
-         [Förhandsgranska ](managing-video-assets.md#upload-and-preview-video-assets) videoklipp eller  [förhandsgranska resurser](previewing-assets.md)
+         [Förhandsgranska ](managing-video-assets.md#upload-and-preview-video-assets) videoklipp eller  [Förhandsgranska resurser](previewing-assets.md)
          [Visa videoåtergivningar](video-renditions.md)
          [Hantera videoåtergivningar](manage-assets.md#managing-renditions)
 
@@ -103,18 +114,18 @@ materialLäs mer om  [Bästa metoder för att ordna digitala resurser för att a
 
    * Om du använder Adobe Experience Manager som webbinnehållshanteringssystem kan du lägga till videofilmer direkt på dina webbsidor.
 
-      * [Lägga till videoklipp på webbsidor](adding-dynamic-media-assets-to-pages.md).
+      * [Lägg till videor på webbsidorna](adding-dynamic-media-assets-to-pages.md).
    * Om du använder ett webbinnehållshanteringssystem från en annan leverantör kan du länka eller bädda in videor på dina webbsidor.
 
       * Integrera video med URL:
-         [Länka URL till ett webbprogram](linking-urls-to-yourwebapplication.md).
+         [Länka URL:er till webbprogrammet](linking-urls-to-yourwebapplication.md).
 
       * Integrera video med inbäddad kod på webbsidan:
          [Bädda in videovisningsprogrammet på en webbsida](embed-code.md).
    * [Publicera videor på YouTube](#publishing-videos-to-youtube).
-   * [Genererar videorapporter](#viewing-video-reports).
+   * [Generera videorapporter](#viewing-video-reports).
 
-   * [Lägga till bildtexter i videon](#adding-captions-to-video).
+   * [Lägg till bildtexter i videon](#adding-captions-to-video).
 
 
 
@@ -165,7 +176,7 @@ Windows-enheter som stöder det här videoformatet finns på följande plats: [M
 
 Se även [Visningsprogram för Experience Manager Assets och Dynamic Media Classic](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers.html#viewers-aem-assets-dmc) och [Visningsprogram för endast Experience Manager-resurser](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html#viewers-for-aem-assets-only).
 
-## Bästa praxis: Använda HTML5-videovisningsprogrammet {#best-practice-using-the-html-video-viewer}
+## Bästa praxis: Använda videovisningsprogrammet för HTML5 {#best-practice-using-the-html-video-viewer}
 
 Förinställningarna för visningsprogrammet för Dynamic Media HTML5-video är robusta videospelare. Du kan använda dem för att undvika många vanliga problem som är kopplade till videouppspelning i HTML5. Och även problem med mobila enheter, som brist på adaptiv strömning och begränsad räckvidd för datorwebbläsare.
 
@@ -280,9 +291,9 @@ Följande bild visar det övergripande arbetsflödet för redigering av videokli
 
 ![chlimage_1-428](assets/chlimage_1-428.png)
 
-## Metodtips för att koda videofilmer {#best-practices-for-encoding-videos}
+## Bästa tillvägagångssätt för att koda videofilmer {#best-practices-for-encoding-videos}
 
-Arbetsflödet **Dynamic Media Encode Video** kodar video om du har aktiverat Dynamic Media och konfigurerat videolmolntjänster. Det här arbetsflödet innehåller information om arbetsflödets processhistorik och fel. Se [Övervaka videokodning och publiceringsförlopp på YouTube](#monitoring-video-encoding-and-youtube-publishing-progress). Om du har aktiverat Dynamic Media och konfigurerat videolmolntjänster börjar arbetsflödet **[!UICONTROL Dynamic Media Encode Video]** automatiskt gälla när du överför en video. (Om du inte använder Dynamic Media börjar arbetsflödet **[!UICONTROL DAM Update Asset]** gälla.)
+Arbetsflödet **Dynamic Media Encode Video** kodar video om du har aktiverat Dynamic Media och konfigurerat videolmolntjänster. Det här arbetsflödet innehåller information om arbetsflödets processhistorik och fel. Se [Övervaka videokodning och YouTube publiceringsförlopp](#monitoring-video-encoding-and-youtube-publishing-progress). Om du har aktiverat Dynamic Media och konfigurerat videolmolntjänster börjar arbetsflödet **[!UICONTROL Dynamic Media Encode Video]** automatiskt gälla när du överför en video. (Om du inte använder Dynamic Media börjar arbetsflödet **[!UICONTROL DAM Update Asset]** gälla.)
 
 <!-- DEAD The following are best-practice tips for encoding source video files.
 
@@ -340,7 +351,7 @@ Bithastighet är den mängd data som kodas för att skapa en enda sekund av vide
 När du väljer en bithastighetskodning kan du välja mellan två typer:
 
 * **[!UICONTROL Constant Bitrate Encoding]** (CBR) - Under CBR-kodning är bithastigheten eller antalet bitar per sekund densamma under hela kodningsprocessen. CBR-kodning bevarar den angivna datahastigheten enligt inställningen för hela videon. CBR-kodning optimerar inte heller mediefiler för kvalitet utan sparar på lagringsutrymmet.
-Använd CBR om videon innehåller en liknande rörelsenivå i hela videon. CBR används oftast för direktuppspelat videoinnehåll. Se även [Använda egna parametrar för videokodning](/help/assets/video-profiles.md#using-custom-added-video-encoding-parameters).
+Använd CBR om videon innehåller en liknande rörelsenivå i hela videon. CBR används oftast för direktuppspelat videoinnehåll. Se även [Använd egna parametrar för videokodning](/help/assets/video-profiles.md#using-custom-added-video-encoding-parameters).
 
 * **[!UICONTROL Variable Bitrate Encoding]** (VBR) - VBR-kodning justerar datahastigheten nedåt och till den övre gräns som du anger, baserat på de data som krävs av kompressorn. Den här funktionen innebär att under en VBR-kodningsprocess ökar eller minskar bithastigheten för mediefilen dynamiskt beroende på mediafilens behov av bithastighet.
 VBR tar längre tid att koda men ger det mest fördelaktiga resultatet. mediefilens kvalitet är överlägsen. VBR används oftast för http-progressiv leverans av videoinnehåll.
@@ -408,7 +419,7 @@ Anta till exempel att källvideon är 1 920 x 1 080. I följande tabell ger de t
 
 | Videotyp | Bredd x höjd | Breddförhållande | Höjdförhållande |
 |--- |--- |--- |--- |
-| Källa | 1920 x 1080 | 1 | 3 |
+| Källa | 1920 x 1080 | 1 | 1 |
 | Kodad | 960 x 540 | 2 | 2 |
 | Kodad | 640 x 360 | 3 | 3 |
 | Kodad | 480 x 270 | 4 | 4 |
@@ -417,7 +428,7 @@ Anta till exempel att källvideon är 1 920 x 1 080. I följande tabell ger de t
 
 Dynamic Media rekommenderar att du använder MP4 H.264-videokodningsförinställningar. Eftersom MP4-filer använder H.264-videokodeken ger den video med hög kvalitet men i en komprimerad filstorlek.
 
-## Publicera videofilmer till YouTube {#publishing-videos-to-youtube}
+## Publicera videor på YouTube {#publishing-videos-to-youtube}
 
 Du kan publicera Experience Manager-videoresurser direkt i en YouTube-kanal som du tidigare har skapat.
 
@@ -434,10 +445,10 @@ När du publicerar videomaterial till YouTube-servrar utför du följande uppgif
 1. [Lägga till taggar för publicering](#adding-tags-for-publishing)
 1. [Aktivera YouTube Publish Replication Agent](#enabling-the-youtube-publish-replication-agent)
 1. [Konfigurera YouTube i Experience Manager](#setting-up-youtube-in-aem)
-1. [(Valfritt) Automatisera inställningen av YouTube standardegenskaper för dina överförda videofilmer](#optional-automating-the-setting-of-default-youtube-properties-for-your-uploaded-videos)
+1. [(Valfritt) Automatisera inställningen av YouTube standardegenskaper för överförda videofilmer](#optional-automating-the-setting-of-default-youtube-properties-for-your-uploaded-videos)
 1. [Publicera videor i din YouTube-kanal](#publishing-videos-to-your-youtube-channel)
-1. [(Valfritt) Verifiera publicerad video på YouTube](/help/assets/video.md#optional-verifying-the-published-video-on-youtube)
-1. [Länka YouTube-URL:er till ditt webbprogram](#linking-youtube-urls-to-your-web-application)
+1. [(Valfritt) Verifiera den publicerade videon på YouTube](/help/assets/video.md#optional-verifying-the-published-video-on-youtube)
+1. [Länka YouTube URL:er till ditt webbprogram](#linking-youtube-urls-to-your-web-application)
 
 Du kan även [avpublicera videoklipp för att ta bort dem från YouTube](#unpublishing-videos-to-remove-them-from-youtube).
 
@@ -547,7 +558,7 @@ Så här konfigurerar du Google Cloud-inställningar:
 
 ### Skapa en YouTube-kanal {#creating-a-youtube-channel}
 
-Du måste ha en eller flera kanaler för att kunna publicera videofilmer på YouTube. Om du redan har skapat en YouTube-kanal kan du hoppa över den här uppgiften och gå till [Adding tags for publishing](/help/assets/video.md#adding-tags-for-publishing).
+Du måste ha en eller flera kanaler för att kunna publicera videofilmer på YouTube. Om du redan har skapat en YouTube-kanal kan du hoppa över den här uppgiften och gå till [Lägg till taggar för publicering](/help/assets/video.md#adding-tags-for-publishing).
 
 >[!WARNING]
 >
@@ -578,7 +589,7 @@ Om du tänker använda standardtaggarna i Experience Manager kan du hoppa över 
 När du har aktiverat YouTube Publish-replikeringsagenten trycker du på **[!UICONTROL Test Connection]** om du vill testa anslutningen till Google Cloud-kontot. Anslutningsresultaten visas på en flik i webbläsaren. Om du har lagt till YouTube-kanaler visas en lista över dem som en del av testet.
 
 1. Klicka på Experience Manager-logotypen i det övre vänstra hörnet av Experience Manager och klicka sedan på **[!UICONTROL Tools]** > **[!UICONTROL Deployment]** > **[!UICONTROL Replication]** > **[!UICONTROL Agents on Author]** i det vänstra hörnet.
-1. På sidan Agents of Author klickar du på **[!UICONTROL YouTube Publish (youtube)]**.
+1. På sidan Agents of Author klickar du på **[!UICONTROL YouTube Publish]**.
 1. Klicka på **[!UICONTROL Edit]** till höger om Inställningar i verktygsfältet.
 1. Markera kryssrutan **[!UICONTROL Enabled]** så att du kan aktivera replikeringsagenten.
 1. Klicka på **[!UICONTROL OK]**.
@@ -606,7 +617,7 @@ Lämna sidan Skapa YouTube-konfiguration öppen; om en stund kommer du tillbaka 
 
    ![6_5_youtubepublish-createUtubeConfiguration](assets/6_5_youtubepublish-createyoutubeconfiguration.png)
 
-1. Öppna JSON-filen som du hämtade och sparade tidigare i uppgiften [Konfigurera inställningarna för Google Cloud](/help/assets/video.md#configuring-google-cloud-settings) med en vanlig textredigerare.
+1. Öppna JSON-filen som du hämtade och sparade tidigare i [Konfigurera inställningarna för Google Cloud](/help/assets/video.md#configuring-google-cloud-settings) med en vanlig textredigerare.
 1. Markera och kopiera hela JSON-texten.
 1. Återgå till dialogrutan YouTube-kontoinställningar Klistra in JSON-texten i fältet **[!UICONTROL JSON Config]**.
 1. Tryck på **[!UICONTROL Save]** i sidans övre högra hörn.
@@ -685,7 +696,7 @@ Lämna dialogrutan YouTube Kontoinställning öppen; kommer du att återvända t
 
    Nu kan du publicera videor i din YouTube-kanal.
 
-### (Valfritt) Automatisera inställningen av YouTube standardegenskaper för dina överförda videofilmer {#optional-automating-the-setting-of-default-youtube-properties-for-your-uploaded-videos}
+### (Valfritt) Automatisera inställningen av YouTube standardegenskaper för överförda videofilmer {#optional-automating-the-setting-of-default-youtube-properties-for-your-uploaded-videos}
 
 Du kan också automatisera inställningen av YouTube-egenskaper vid överföring av videofilmer genom att skapa en metadatabearbetningsprofil i Experience Manager.
 
@@ -762,7 +773,7 @@ Nu kopplar du taggarna som du lade till tidigare till videoresurser. På så sä
 >
 >För att publicera innehåll från YouTube använder Experience Manager arbetsflödet **[!UICONTROL Publish to YouTube]**, som gör att du kan övervaka förloppet och visa felinformation.
 >
->Se [Övervaka videokodning och publiceringsförlopp på YouTube](#monitoring-video-encoding-and-youtube-publishing-progress).
+>Se [Övervaka videokodning och YouTube publiceringsförlopp](#monitoring-video-encoding-and-youtube-publishing-progress).
 >
 >Mer detaljerad förloppsinformation finns i YouTube-loggen som replikeras. Tänk dock på att en sådan övervakning kräver administratörsåtkomst.
 
@@ -788,7 +799,7 @@ Nu kopplar du taggarna som du lade till tidigare till videoresurser. På så sä
 
 Du kan också övervaka förloppet för din YouTube-publicering (eller avpublicering).
 
-Se [Övervaka videokodning och publiceringsförlopp på YouTube](#monitoring-video-encoding-and-youtube-publishing-progress).
+Se [Övervaka videokodning och YouTube publiceringsförlopp](#monitoring-video-encoding-and-youtube-publishing-progress).
 
 Publiceringstiderna kan variera avsevärt beroende på olika faktorer, bland annat formatet för den primära källvideon, filstorleken och överföringstrafiken. Publiceringsprocessen kan ta från några minuter till flera timmar. Högre upplösningsformat återges dessutom mycket långsammare. 720p och 1080p tar till exempel längre tid att visa än 480p.
 
@@ -812,7 +823,7 @@ Du kan hämta en YouTube URL-sträng som genereras av Dynamic Media när du har 
 1. Klicka på fliken **[!UICONTROL Advanced]**.
 1. Under rubriken YouTube Publishing (Publicering), i YouTube URL List, markerar och kopierar du URL-texten till webbläsaren för att förhandsgranska resursen eller lägga till den på webbinnehållssidan.
 
-### Avpublicerar videoklipp för att ta bort dem från YouTube {#unpublishing-videos-to-remove-them-from-youtube}
+### Avpublicera videoklipp så att du kan ta bort dem från YouTube {#unpublishing-videos-to-remove-them-from-youtube}
 
 När du avpublicerar en videoresurs i Experience Manager tas videon bort från YouTube.
 
@@ -824,7 +835,7 @@ När du avpublicerar en videoresurs i Experience Manager tas videon bort från Y
 >
 >Experience Manager använder arbetsflödet **[!UICONTROL Unpublish from YouTube]** för att ta bort innehåll från YouTube, vilket gör att du kan övervaka förloppet och visa felinformation.
 >
->Se [Övervaka videokodning och publiceringsförlopp på YouTube](#monitoring-video-encoding-and-youtube-publishing-progress).
+>Se [Övervaka videokodning och YouTube publiceringsförlopp](#monitoring-video-encoding-and-youtube-publishing-progress).
 
 **Så här avpublicerar du videoklipp för att ta bort dem från YouTube:**
 
@@ -837,7 +848,7 @@ När du avpublicerar en videoresurs i Experience Manager tas videon bort från Y
 
 ## Övervaka videokodning och YouTube publiceringsförlopp {#monitoring-video-encoding-and-youtube-publishing-progress}
 
-När du överför en ny video till en mapp där videokodning används, eller publicerar videon till YouTube, kan du övervaka hur din videokodning/YouTube-publicering fortskrider (eller misslyckas). Publiceringsförloppet för YouTube är endast tillgängligt via loggarna. Misslyckandet eller framgången listas dock på ytterligare sätt som beskrivs i följande procedur. Dessutom får du e-postmeddelanden när en YouTube-publiceringsarbetsgång eller videokodning har slutförts eller avbrutits.
+När du överför en ny video till en mapp där videokodning används, eller publicerar videon på YouTube, kan du övervaka hur videokodningen/YouTube-publiceringen fortskrider. Publiceringsförloppet för YouTube är endast tillgängligt via loggarna. Misslyckandet eller framgången listas dock på ytterligare sätt som beskrivs i följande procedur. Dessutom får du e-postmeddelanden när en YouTube-publiceringsarbetsgång eller videokodning har slutförts eller avbrutits.
 
 ### Övervaka förlopp {#monitoring-progress}
 
@@ -918,7 +929,7 @@ När du överför en ny video till en mapp där videokodning används, eller pub
 
 1. Du får e-postmeddelanden om avbrutna eller misslyckade arbetsflödesjobb. Dessa e-postmeddelanden kan konfigureras av en administratör. Se [Konfigurera e-postmeddelanden](#configuring-e-mail-notifications).
 
-#### Konfigurerar e-postmeddelanden {#configuring-e-mail-notifications}
+#### Konfigurera e-postmeddelanden {#configuring-e-mail-notifications}
 
 >[!NOTE]
 >
@@ -926,7 +937,7 @@ När du överför en ny video till en mapp där videokodning används, eller pub
 
 Hur du konfigurerar meddelanden beror på om du vill ha meddelanden för kodningsjobb eller YouTube publiceringsjobb:
 
-* För kodningsjobb kan du komma åt konfigurationssidan för alla e-postmeddelanden om arbetsflöden i Experience Manager på **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]** och genom att söka efter **[!UICONTROL Day CQ Workflow Email Notification Service]**. Se [Konfigurera e-postmeddelande i Experience Manager](/help/sites-administering/notification.md). Du kan markera eller avmarkera kryssrutorna för **[!UICONTROL Notify on Abort]** eller **[!UICONTROL Notify on Complete]**.
+* För kodningsjobb kan du komma åt konfigurationssidan för alla e-postmeddelanden om arbetsflöden i Experience Manager på **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]** och genom att söka efter **[!UICONTROL Day CQ Workflow Email Notification Service]**. Se [Konfigurera e-postmeddelanden i Experience Manager](/help/sites-administering/notification.md). Du kan markera eller avmarkera kryssrutorna för **[!UICONTROL Notify on Abort]** eller **[!UICONTROL Notify on Complete]**.
 
 * Gör följande för publiceringsjobb i YouTube:
 
@@ -1009,9 +1020,9 @@ Ange start- och slutdatumintervallet som du vill ha videodata för och tryck sed
 
 Om du använder ett användningsklart visningsprogram från Dynamic Media, eller om du har skapat en anpassad visningsförinställning baserad på ett användningsklart videovisningsprogram, krävs inga ytterligare steg för att visa videorapporter. Om du har skapat ett eget videovisningsprogram baserat på SDK-API:t för HTML5-visningsprogrammet ska du följa de här stegen för att se till att videovisningsprogrammet skickar spårningshändelser till Dynamic Media videorapporter.
 
-Använd [Adobe Dynamic Media Viewer Reference Guide](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html) och [HTML5 Viewer SDK API](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html) för att skapa egna videovisningsprogram.
+Använd [Adobe Dynamic Media Viewer Reference Guide](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources.html) och [HTML5 Viewer SDK API](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html) för att skapa egna videovisningsprogram.
 
-**Så här visar du videorapporter baserade på ett videovisningsprogram som du har skapat med HTML5 Viewer SDK API:**
+**Så här visar du videorapporter baserade på ett videovisningsprogram som du har skapat med Dynamic Media HTML5 Viewer SDK:**
 
 1. Navigera till alla publicerade videoresurser.
 1. I listrutan i det övre vänstra hörnet på resursens sida väljer du **[!UICONTROL Viewers]**.
@@ -1068,7 +1079,7 @@ Använd [Adobe Dynamic Media Viewer Reference Guide](https://experienceleague.ad
 
 <!--    For more information, see *Using the TrackingManager Component* in the *Scene7 HTML5 Viewer SDK User Guide* available for download from [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html). -->
 
-## Lägga till bildtexter i videon {#adding-captions-to-video}
+## Lägga till bildtexter eller undertexter till video {#adding-captions-to-video}
 
 Du kan utöka räckvidden för dina videor till globala marknader genom att lägga till bildtexter till enskilda videor eller till adaptiva videouppsättningar. Genom att lägga till bildtext undviker du behovet av att duplicera ljudet, eller behovet av att använda inbyggda högtalare för att spela in ljudet igen för varje språk. Videon spelas upp på det språk den spelades in på. Undertexter på främmande språk visas så att personer på olika språk fortfarande kan förstå ljuddelen.
 
@@ -1080,7 +1091,7 @@ Bildtext ger också bättre tillgänglighet genom att använda undertexter för 
 
 Dynamic Media konverterar bildtextfiler till JSON-format (JavaScript Object Notation). Den här konverteringen innebär att du kan bädda in JSON-texten på en webbsida som en dold men fullständig utskrift av videon. Sökmotorerna kan sedan crawla och indexera innehållet så att videoklippen blir lättare att hitta och ge kunderna ytterligare information om videoinnehållet.
 
-Mer information om hur du använder JSON-funktionen i en URL finns i [Serverar statiskt (icke-bildinnehåll)](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/c-serving-static-nonimage-contents.html#image-serving-api) i hjälpen för Dynamic Media Image Serving and Rendering API *.*
+Mer information om hur du använder JSON-funktionen i en URL finns i [Servera statiskt (icke-image) innehåll](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/c-serving-static-nonimage-contents.html#image-serving-api) i *Dynamic Media Image Serving and Rendering API Help*.
 
 **Så här lägger du till bildtexter eller undertexter till video:**
 
@@ -1096,7 +1107,7 @@ Mer information om hur du använder JSON-funktionen i en URL finns i [Serverar s
 
    Du får bäst resultat om du använder verktyget i Internet Explorer 9 eller senare, Google Chrome eller Safari.
 
-   Klistra in den kopierade URL-adressen för videofilen i fältet **[!UICONTROL Enter URL of video file]** i verktyget och klicka sedan på **[!UICONTROL Load]**. Se [Hämta en URL för en resurs](/help/assets/linking-urls-to-yourwebapplication.md#obtaining-a-url-for-an-asset) för att hämta URL-adressen till själva videofilen som du sedan kan klistra in i **[!UICONTROL Enter URL of video file field]**. Internet Explorer, Chrome och Safari kan sedan spela upp videon direkt.
+   Klistra in den kopierade URL-adressen för videofilen i fältet **[!UICONTROL Enter URL of video file]** i verktyget och klicka sedan på **[!UICONTROL Load]**. Se [Hämta en URL för en resurs](/help/assets/linking-urls-to-yourwebapplication.md#obtaining-a-url-for-an-asset) för att hämta URL:en till själva videofilen som du sedan kan klistra in i **[!UICONTROL Enter URL of video file field]**. Internet Explorer, Chrome och Safari kan sedan spela upp videon direkt.
 
    Följ nu instruktionerna på skärmen för att skapa och spara WebVTT-filen. När du är klar kopierar du bildtextfilens innehåll och klistrar in det i en vanlig textredigerare och sparar det med filnamnstillägget `.vtt`.
 
@@ -1255,11 +1266,11 @@ De här stegen gäller endast för Dynamic Media som körs i läget&quot;Dynamic
 1. Tryck på **[!UICONTROL Save Change]** på sidan Ändra miniatyrbild.
 1. Tryck på **[!UICONTROL Save & Close]** i det övre högra hörnet på videons egenskapssida.
 
-## Om videominiatyrbilder i Dynamic Media - hybrid-läge {#about-video-thumbnails-in-dynamic-media-hybrid-mode}
+## Om videominiatyrer i Dynamic Media - hybrid-läge {#about-video-thumbnails-in-dynamic-media-hybrid-mode}
 
 Du kan välja mellan en av tio miniatyrbilder som har genererats automatiskt av Dynamic Media och lägga till dem i videon. Videospelaren visar den valda miniatyrbilden när en videoresurs används med Dynamic Media-komponenten i redigeringsmiljön på Experience Manager Sites, Experience Manager Mobile eller Experience Manager Screens. Miniatyrbilden fungerar som en statisk bild som bäst motsvarar innehållet i hela videon och uppmuntrar dessutom användarna att klicka på knappen Spela upp.
 
-Baserat på den totala tiden för videon hämtar Dynamic Media tio (standardvärdet) miniatyrbilder med 1 %, 11 %, 21 %, 31 %, 41 %, 51 %, 61 %, 71 %, 81 % och 91 % i videon. De tio miniatyrbilderna finns kvar, vilket innebär att om du väljer en annan miniatyrbild senare behöver du inte återskapa serien. Du förhandsgranskar de tio miniatyrbilderna och väljer sedan den som du vill använda med videon. Om du vill ändra till standardvärdet kan du använda CRXDE Lite för att konfigurera det tidsintervall som miniatyrbilderna genereras i. Om du till exempel bara vill generera en serie med fyra miniatyrbilder med jämna mellanrum från videon kan du konfigurera intervalltiden till 24 %, 49 %, 74 % och 99 %.
+Baserat på den totala tiden för videon tar Dynamic Media tio (standard) miniatyrbilder. Bilderna spelas in i videon med 1 %, 11 %, 21 %, 31 %, 41 %, 51 %, 61 %, 71 %, 81 % och 91 %. De tio miniatyrbilderna finns kvar, vilket innebär att om du väljer en annan miniatyrbild senare behöver du inte återskapa serien. Du förhandsgranskar de tio miniatyrbilderna och väljer sedan den som du vill använda med videon. Om du vill ändra till standardvärdet kan du använda CRXDE Lite för att konfigurera det tidsintervall som miniatyrbilderna genereras i. Om du till exempel bara vill generera en serie med fyra miniatyrbilder med jämna mellanrum från videon kan du konfigurera intervalltiden till 24 %, 49 %, 74 % och 99 %.
 
 Helst kan du lägga till en videominiatyr när som helst efter att du har överfört videon, men innan du publicerar videon på webbplatsen.
 
@@ -1288,13 +1299,13 @@ De här stegen gäller endast för Dynamic Media som körs i hybridläge.
 
    Om du har konfigurerat nya standardtidsintervall, eller om du har överfört en ny video som ska ersätta den befintliga videon, bör du låta Dynamic Media generera om miniatyrbilderna.
 
-   Se [Konfigurera standardtidsintervallet som videominiatyrbilder genereras](#configuring-the-default-time-interval-that-video-thumbnails-are-generated).
+   Se [Konfigurera det standardtidsintervall som videominiatyrbilder genereras](#configuring-the-default-time-interval-that-video-thumbnails-are-generated).
 
-#### Konfigurera standardtidsintervallet som videominiatyrbilder genereras {#configuring-the-default-time-interval-that-video-thumbnails-are-generated}
+#### Konfigurera det standardtidsintervall som videominiatyrbilder genereras {#configuring-the-default-time-interval-that-video-thumbnails-are-generated}
 
 När du konfigurerar och sparar det nya standardtidsintervallet gäller ändringen automatiskt endast videoklipp som du överför i framtiden. Den nya standardinställningen tillämpas inte automatiskt på videoklipp som du tidigare överfört. För befintliga videofilmer måste du återskapa miniatyrbilderna.
 
-Se [Lägga till en videominiatyr](#adding-a-video-thumbnail).
+Se [Lägg till en videominiatyr](#adding-a-video-thumbnail).
 
 **Så här konfigurerar du det standardtidsintervall som videominiatyrbilder genereras:**
 
@@ -1314,7 +1325,7 @@ Se [Lägga till en videominiatyr](#adding-a-video-thumbnail).
 1. Tryck på **[!UICONTROL OK]** och återgå till fliken Egenskaper.
 1. I närheten av det övre vänstra hörnet på CRXDE Lite-sidan trycker du på **[!UICONTROL Save All]** och sedan på ikonen Bakåt i det övre vänstra hörnet för att gå tillbaka till Experience Manager.
 
-   Se [Lägga till en videominiatyr](#adding-a-video-thumbnail).
+   Se [Lägg till en videominiatyr](#adding-a-video-thumbnail).
 
 ### Lägga till en anpassad videominiatyr {#adding-a-custom-video-thumbnail-1}
 
