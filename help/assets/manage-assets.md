@@ -6,9 +6,9 @@ mini-toc-levels: 1
 role: Business Practitioner
 feature: Resurshantering, sökning
 exl-id: 158607e6-b4e9-4a3f-b023-4023d60c97d2
-source-git-commit: 550d837c8ad86393eefecb264b69157fca312984
+source-git-commit: dc483b9871cebce64f7b60fec2144f1f19ef28ec
 workflow-type: tm+mt
-source-wordcount: '9508'
+source-wordcount: '9553'
 ht-degree: 3%
 
 ---
@@ -765,7 +765,17 @@ Videoanteckningar stöds bara i webbläsare med HTML5-kompatibla videoformat. Vi
 
 ### Visa sparade anteckningar {#viewing-saved-annotations}
 
-1. Om du vill visa sparade anteckningar för en resurs går du till resursens plats och öppnar resurssidan för resursen.
+Det går bara att visa en anteckning åt gången.
+
+>[!NOTE]
+>
+>Om du markerar flera anteckningar visas den senaste anteckningen i användargränssnittet.
+>
+>Flerval stöds endast för utskrift av kommenterade resurser som PDF.
+
+**Så här visar du sparade anteckningar för en resurs:**
+
+1. Navigera till resursens plats och öppna resurssidan.
 
 1. I gränssnittet Experience Manager väljer du **[!UICONTROL Timeline]**.
 1. I listan **[!UICONTROL Show All]** på tidslinjen väljer du **[!UICONTROL Comments]** för att filtrera resultatet baserat på kommentarer.
@@ -781,6 +791,10 @@ Videoanteckningar stöds bara i webbläsare med HTML5-kompatibla videoformat. Vi
 Om en resurs har anteckningar eller har genomgått ett granskningsarbetsflöde kan du skriva ut resursen tillsammans med anteckningar och granskningsstatus som en PDF-fil för offlinegranskning.
 
 Du kan också välja att bara skriva ut anteckningarna eller granskningsstatusen.
+
+>[!NOTE]
+>
+>Du kan välja flera anteckningar när du skriver ut den kommenterade resursen som PDF.
 
 Om du vill skriva ut anteckningarna och granskningsstatusen klickar du på **[!UICONTROL Print]** och följer instruktionerna i guiden. Alternativet **[!UICONTROL Print]** visas bara i verktygsfältet när resursen har minst en antecknings- eller granskningsstatus tilldelad.
 
