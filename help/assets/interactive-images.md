@@ -11,10 +11,10 @@ docset: aem65
 feature: Interaktiva bilder
 role: Business Practitioner, Administrator
 exl-id: 8a609024-e9e6-4805-8306-48d095110eb6
-source-git-commit: 663d7b886ba31521789b41002333715ce447e5ca
+source-git-commit: c59ec6e2429095c07c9b2d6bb83dad6ab4f80aa0
 workflow-type: tm+mt
-source-wordcount: '4249'
-ht-degree: 2%
+source-wordcount: '4251'
+ht-degree: 1%
 
 ---
 
@@ -54,7 +54,7 @@ Se [e-handelskoncept i Experience Manager Assets](/help/commerce/cif-classic/adm
 Se [(Valfritt) Skapa en förinställning för visningsprogrammet för interaktiv bild](/help/assets/managing-viewer-presets.md#creating-a-new-viewer-preset).
 
 1. **Ladda upp en bildbanderoll**  - Ladda upp bildbanderoller som du vill göra interaktiva.
-Se [Överföra en bildbanderoll](#uploading-an-image-banner).
+Se [Överför en bildbanderoll](#uploading-an-image-banner).
 
 1. **Lägg till aktiveringspunkter i en bildbanderoll**  - Lägg till en eller flera hotspot-områden i en bildbanderoll och koppla dem till en åtgärd som en hyperlänk, en snabbvy eller ett Experience Fragment. När du har lagt till aktiveringspunkter avslutar du den här uppgiften genom att publicera den interaktiva bilden.
 
@@ -62,7 +62,7 @@ Se [Överföra en bildbanderoll](#uploading-an-image-banner).
    * Se [Förhandsgranska interaktiva bilder](#optional-previewing-interactive-images) - Valfritt. Om du vill kan du visa en representation av din köpbara banner och testa dess interaktivitet.
    * Mer information om hur du publicerar interaktiva bildresurser finns i [Publicera resurser](/help/assets/publishing-dynamicmedia-assets.md).
 
-1. **Lägg till en interaktiv bild på webbplatsen**  - Om du använder Experience Manager Sites eller eCommerce, eller båda, kan du lägga till den interaktiva bilden på en webbsida i Experience Manager. Dra Interactive Media-komponenten till sidan. Se [Lägga till Dynamic Media-resurser på sidor](/help/assets/adding-dynamic-media-assets-to-pages.md).
+1. **Lägg till en interaktiv bild på webbplatsen**  - Om du använder Experience Manager Sites eller eCommerce, eller båda, kan du lägga till den interaktiva bilden på en webbsida i Experience Manager. Dra Interactive Media-komponenten till sidan. Se [Lägg till Dynamic Media-resurser på sidor](/help/assets/adding-dynamic-media-assets-to-pages.md).
 
    Om du använder fristående Experience Manager Assets och Dynamic Media måste du kopiera inbäddningskoden på din webbplats och sedan integrera den med din befintliga snabbvy. Se [Integrera en interaktiv bild med din webbplats](#integrating-an-interactive-image-with-your-website).
 
@@ -74,7 +74,7 @@ Se [Överföra en bildbanderoll](#uploading-an-image-banner).
 >
 >Den här aktiviteten krävs bara om följande är sant:
 >
->* Du vill lägga till interaktivitet i bilden genom att aktivera snabbvyer.
+>* Du vill lägga till interaktivitet i bilden genom att aktivera snabbvyn.
 >* Din implementering av Experience Manager *använder inte* ett ramverk för e-handelsintegrering för att hämta produktdata till Experience Manager från en e-handelslösning som IBM® WebSphere® Commerce, Elastic Path, hybris eller Intershop. Se [e-handelskoncept i Experience Manager Assets](/help/commerce/cif-classic/administering/concepts.md).
 
 >
@@ -164,7 +164,7 @@ Du kan använda samma metod som i de tre exemplen ovan på demowebbsidan:
 
 [https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html)
 
-Demonstrationswebbsidan innehåller flera produktminiatyrbilder med en QuickView-knapp med etiketten&quot;See More&quot;. Med webbläsarens felsökningsverktyg fortfarande aktiverat klickar du på varje knapp och noterar de inspelade URL:erna för snabbvyn. När du har aktiverat alla fyra snabbvyerna för produkten som finns på sidan, finns följande lista över snabbvybegäranden som gjorts i bakgrunden:
+Demonstrationswebbsidan innehåller flera produktminiatyrbilder med en QuickView-knapp med etiketten&quot;See More&quot;. Med webbläsarens felsökningsverktyg fortfarande aktiverat klickar du på varje knapp och noterar de inspelade URL:erna för snabbvyn. När du har aktiverat alla fyra produkterna i snabbvyn som finns på sidan, finns följande lista över snabbvybegäranden som gjorts till serverdelen:
 
 * `/datafeed/Male-Windbreaker.json`
 * `/datafeed/Male-SimpleHenley.json`
@@ -244,7 +244,7 @@ Alternativen Ångra och Gör om, nära det övre högra hörnet på sidan, stöd
 
 När du är klar med att skapa en interaktiv bild kan du använda Förhandsgranska för att se hur den interaktiva bilden ser ut för kunderna.
 
-Se [(Valfritt) Förhandsvisa interaktiva bilder](#optional-previewing-interactive-images).
+Se [(Valfritt) Förhandsgranska interaktiva bilder](#optional-previewing-interactive-images).
 
 >[!NOTE]
 >
@@ -325,7 +325,7 @@ Du kan använda Förhandsgranska för att se hur den interaktiva bilden ser ut f
 När du är nöjd med den interaktiva bilden kan du publicera den.
 Se [Bädda in video- eller bildvisningsprogrammet på en webbsida](/help/assets/embed-code.md).
 Se [Länka URL:er till ditt webbprogram](/help/assets/linking-urls-to-yourwebapplication.md). Den URL-baserade länkningsmetoden är inte möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till Experience Manager-sidor.
-Se [Lägga till Dynamic Media-resurser på sidor](/help/assets/adding-dynamic-media-assets-to-pages.md).
+Se [Lägg till Dynamic Media-resurser på sidor](/help/assets/adding-dynamic-media-assets-to-pages.md).
 
 **Så här förhandsgranskar du interaktiva bilder:**
 
@@ -342,7 +342,7 @@ Mer information om hur du publicerar interaktiva bildresurser finns i [Publicera
 
 När du har överfört en banderollbild, lagt till aktiveringspunkter i bilden och publicerat den interaktiva bilden kan du nu lägga till den på din webbsida.
 
-Om du använder Experience Manager Sites kan du lägga till den interaktiva bilden genom att dra Interactive Media-komponenten till sidan. Se [Lägga till Dynamic Media-resurser på sidor](/help/assets/adding-dynamic-media-assets-to-pages.md).
+Om du använder Experience Manager Sites kan du lägga till den interaktiva bilden genom att dra Interactive Media-komponenten till sidan. Se [Lägg till Dynamic Media-resurser på sidor](/help/assets/adding-dynamic-media-assets-to-pages.md).
 
 Om du är fristående kund av Experience Manager Assets kan du lägga till den interaktiva bilden manuellt på din webbplats enligt beskrivningen i det här avsnittet.
 
@@ -369,7 +369,7 @@ Integrationen är så enkel som att ta bort taggen `IMG` och ersätta den med de
 [https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-1.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-1.html)
 
 >[!NOTE]
-Så här långt är de hotspots som finns på den interaktiva bilden av demowebbplatsen endast avsedda för webben. de är ännu inte integrerade med de befintliga snabbvyerna.
+Så här långt är de hotspots som finns på den interaktiva bilden av demowebbplatsen endast avsedda för webben. de är ännu inte integrerade med den befintliga snabbvyn.
 
 Om du vill tillämpa en beskärning på en interaktiv bild för en responsiv miljö kan du inkludera konfigurationsattributet för interaktiv bild `ZoomView.iscommand` i sökvägen. Komponenten `ZoomView` anropas och `iscommand` är det kommando för att visa bilden som du använder.
 
@@ -515,6 +515,6 @@ Den färdiga demowebbplatsen med den helt integrerade interaktiva bilden ser ut 
 
 [https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-3.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-3.html)
 
-## Använda snabbvyer för att skapa anpassade popup-fönster {#using-quickviews-to-create-custom-pop-ups}
+## Använd snabbvyn för att skapa anpassade popup-fönster {#using-quickviews-to-create-custom-pop-ups}
 
-Se [Skapa anpassade popup-fönster med snabbvyer](/help/assets/custom-pop-ups.md).
+Se [Skapa anpassade popup-fönster med Quickview](/help/assets/custom-pop-ups.md).
