@@ -6,7 +6,7 @@ contentOwner: AG
 role: Business Practitioner
 feature: arbetsflöde,återgivningar
 exl-id: cfd6c981-1a35-4327-82d7-cf373d842cc3
-source-git-commit: 9ac5582b2e4859bf4f101c5caa5258fc755ebc46
+source-git-commit: 0db95c4e7fc1ca20ce4f2d352c1276aa546dc7c3
 workflow-type: tm+mt
 source-wordcount: '2095'
 ht-degree: 1%
@@ -369,7 +369,7 @@ När du har utfört följande procedur extraheras filens metadata när du överf
      Layer watermarkLayer;
      try {
       final Session session = node.getSession();
-      watermarkLayer = ImageHelper.createLayer(session, "/content/dam/samplesite/icons/certificate.png");
+      watermarkLayer = ImageHelper.createLayer(session, "/content/dam/we-retail/en/products/apparel/gloves/Gloves.jpg");
       watermarkLayer.setX(MARGIN);
       watermarkLayer.setY(MARGIN);
       layer.merge(watermarkLayer);
