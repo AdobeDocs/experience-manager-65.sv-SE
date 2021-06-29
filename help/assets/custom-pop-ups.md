@@ -1,6 +1,6 @@
 ---
-title: Skapa anpassade popup-fönster med snabbvyer
-seo-title: Använda snabbvyer för att skapa anpassade popup-fönster
+title: Skapa anpassade popup-fönster med snabbvyn
+seo-title: Använd snabbvyn för att skapa anpassade popup-fönster
 description: Standardsnabbvyn används i e-handelsupplevelser där ett popup-fönster visas med produktinformation som driver ett köp. Du kan aktivera anpassat innehåll som ska visas i popup-fönstren.
 seo-description: Standardsnabbvyn används i e-handelsupplevelser där ett popup-fönster visas med produktinformation som driver ett köp. Du kan aktivera anpassat innehåll som ska visas i popup-fönstren.
 uuid: b906cfff-ac44-4989-b6da-8a9bbf02af03
@@ -12,18 +12,18 @@ discoiquuid: 4bcab3f4-500f-432e-b16b-cdc26b9bab4d
 feature: Tittare
 role: Business Practitioner, Administrator
 exl-id: 4e7f17ea-6985-4644-b91c-2c1299d01321
-source-git-commit: a4e9a4003bf0ce686578d3f8b3fddc19bc49dfb4
+source-git-commit: c59ec6e2429095c07c9b2d6bb83dad6ab4f80aa0
 workflow-type: tm+mt
 source-wordcount: '1090'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
-# Använda snabbvyer för att skapa anpassade popup-fönster {#using-quickviews-to-create-custom-pop-ups}
+# Använd snabbvyn för att skapa anpassade popup-fönster {#using-quickviews-to-create-custom-pop-ups}
 
 Standardsnabbvyn används i e-handelsupplevelser där ett popup-fönster visas med produktinformation som driver ett köp. Du kan emellertid utlösa anpassat innehåll som ska visas i popup-fönstren. Beroende på vilket visningsprogram som används kan användarna med den här funktionen trycka på en hotspot, en miniatyrbild eller på en bildschema för att se information eller relaterat innehåll.
 
-Snabbvyer stöds av följande visningsprogram i Dynamic Media:
+Quickview stöds av följande visningsprogram i Dynamic Media:
 
 * Interaktiva bilder (klickbara hotspot-områden)
 * Interaktiv video (klickbara miniatyrbilder vid videouppspelning)
@@ -31,7 +31,7 @@ Snabbvyer stöds av följande visningsprogram i Dynamic Media:
 
 Även om funktionerna i de olika visningsprogrammen skiljer sig åt är processen att skapa en snabbvy densamma för alla tre visningsprogram som stöds.
 
-**Så här använder du snabbvyer för att skapa anpassade popup-fönster:**
+**Så här använder du snabbvyn för att skapa anpassade popup-fönster:**
 
 1. Skapa en snabbvy för en överförd resurs.
 
@@ -114,7 +114,7 @@ ExempelAnta att du använder följande exempelkod för inbäddning på webbsidan
 
 1. Du måste nu konfigurera `quickViewActivate`-hanteraren.
 
-   Hanteraren `quickViewActivate` styr snabbvyerna i visningsprogrammet. Hanteraren innehåller variabellistan och funktionsanrop som kan användas med snabbvyn. Inbäddningskoden tillhandahåller mappning för SKU-variabeluppsättningen i snabbvyn och ett exempel på `loadQuickView`-funktionsanrop.
+   Hanteraren `quickViewActivate` styr snabbvyn i visningsprogrammet. Hanteraren innehåller variabellistan och funktionsanrop som kan användas med snabbvyn. Inbäddningskoden tillhandahåller mappning för SKU-variabeluppsättningen i snabbvyn och ett exempel på `loadQuickView`-funktionsanrop.
 
    **Variable**
 mappingMap-variabler som ska användas på webbsidan till SKU-värdet och generiska variabler som finns i QuickView:
