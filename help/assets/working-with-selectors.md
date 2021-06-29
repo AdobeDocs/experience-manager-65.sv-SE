@@ -9,12 +9,11 @@ content-type: reference
 discoiquuid: 262eb911-3dcb-475d-b410-8bcac1347905
 role: Business Practitioner, Administrator
 exl-id: 6d165b0d-e3e7-4115-8f2a-827679754b3b
-feature: Selectors
-translation-type: tm+mt
-source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
+feature: Väljare
+source-git-commit: c59ec6e2429095c07c9b2d6bb83dad6ab4f80aa0
 workflow-type: tm+mt
-source-wordcount: '689'
-ht-degree: 19%
+source-wordcount: '684'
+ht-degree: 16%
 
 ---
 
@@ -26,11 +25,11 @@ Det här avsnittet handlar om hur du använder väljarna Produkt, Plats och Resu
 
 Du kommer åt väljarna när du skapar karuselluppsättningar, lägger till aktiveringspunkter och bildscheman, skapar interaktiva videor och bilder.
 
-I den här Carousel-banderollen använder du produktväljaren om du länkar en hotspot eller bildschema till en QuickView-sida; använda platsväljaren om du länkar en hotspot eller ett bildschema till en hyperlänk, använder du resursväljaren när du skapar en ny bildruta.
+I den här Carousel-banderollen använder du produktväljaren om du länkar en hotspot eller bildschema till en QuickView-sida. Använd webbplatsväljaren om du länkar en hotspot eller ett bildschema till en hyperlänk. använder du resursväljaren när du skapar en bildruta.
 
 ![chlimage_1-520](assets/chlimage_1-520.png)
 
-När du väljer (i stället för att ange manuellt) vart hotspot-områden eller bildscheman ska gå, använder du väljaren. Webbplatsväljaren fungerar bara om du är AEM Sites-kund. Produktväljaren kräver också AEM.
+När du väljer (i stället för att ange manuellt) vart hotspot-områden eller bildscheman ska gå, använder du väljaren. Platsväljaren fungerar bara om du är en Experience Manager Sites-kund. Produktväljaren kräver också Experience Manager Commerce.
 
 ## Välja produkter {#selecting-products}
 
@@ -46,15 +45,15 @@ Använd produktväljaren för att välja en produkt när du vill ha en aktiverin
 
    ![chlimage_1-522](assets/chlimage_1-522.png)
 
-   Du kan också filtrera efter nyckelord eller tagg genom att trycka på **[!UICONTROL Filter]** och ange nyckelord, markera taggar eller båda.
+   Filtrera efter nyckelord eller tagg genom att trycka på **[!UICONTROL Filter]** och ange nyckelord, markera taggar eller båda.
 
    ![chlimage_1-523](assets/chlimage_1-523.png)
 
-   Du kan ändra var AEM bläddrar efter produktdata genom att trycka på **[!UICONTROL Browse]** och navigera till en annan mapp.
+   Ändra var Experience Manager bläddrar efter produktdata genom att trycka på **[!UICONTROL Browse]** och navigera till en annan mapp.
 
    ![chlimage_1-524](assets/chlimage_1-524.png)
 
-   Tryck på **[!UICONTROL Sort]** om du vill ändra om AEM sorterar efter senaste till äldsta eller äldsta till nyaste.
+   Tryck på **[!UICONTROL Sort]** om du vill ändra om Experience Manager ska sortera efter nyaste till äldsta eller äldsta till nyaste.
 
    ![chlimage_1-525](assets/chlimage_1-525.png)
 
@@ -72,7 +71,7 @@ Använd produktväljaren för att välja en produkt när du vill ha en aktiverin
 
 ## Välja platser {#selecting-sites}
 
-Använd webbplatsväljaren för att välja en webbsida när du vill att ett hotspot- eller bildschema ska länka till en webbsida som hanteras AEM webbplatser.
+Använd webbplatsväljaren för att välja en webbsida när du vill att ett hotspot- eller bildschema ska länka till en webbsida som hanteras i Experience Manager Sites.
 
 1. Navigera till karuselluppsättningen, den interaktiva bilden eller den interaktiva videon och tryck på fliken **[!UICONTROL Actions]** (endast tillgänglig om du har definierat ett hotspot-område eller bildschema).
 
@@ -80,7 +79,7 @@ Använd webbplatsväljaren för att välja en webbsida när du vill att ett hots
 
    ![chlimage_1-529](assets/chlimage_1-529.png)
 
-1. Tryck på ikonen **[!UICONTROL Site Selector]** (mapp med förstoringsglas) och navigera till en sida på era AEM-webbplatser som du vill länka hotspot-området eller bildschemat till.
+1. Tryck på ikonen **[!UICONTROL Site Selector]** (mapp med förstoringsglas) och navigera till en sida i Experience Manager Sites som du vill länka hotspot eller bildschema till.
 
    ![chlimage_1-530](assets/chlimage_1-530.png)
 
@@ -88,24 +87,24 @@ Använd webbplatsväljaren för att välja en webbsida när du vill att ett hots
 
    ![chlimage_1-531](assets/chlimage_1-531.png)
 
-1. Om du trycker på hotspot eller bildschema i **[!UICONTROL Preview]**-läget navigerar du till den AEM webbplatssida du angav.
+1. Om du trycker på hotspot eller bildschema i **[!UICONTROL Preview]**-läget navigerar du till den angivna Experience Manager-webbplatssidan.
 
 ## Välja resurser {#selecting-assets}
 
-Använd den här väljaren för att välja bilder som ska användas i en Carousel Banner, en interaktiv video, bilduppsättningar, blandade medieuppsättningar och snurruppsättningar. I interaktiv video är resursväljaren tillgänglig när du trycker på **[!UICONTROL Select Assets]** på fliken **[!UICONTROL Content]**. I Carousel Sets är resursväljaren tillgänglig när du skapar en ny bildruta. I Bilduppsättningar, Blandade medieuppsättningar och Snurra uppsättningar är resursväljaren tillgänglig när du skapar en ny bilduppsättning, blandad medieuppsättning eller snurra uppsättning.
+Använd den här väljaren för att välja bilder som ska användas i en Carousel Banner, en interaktiv video, bilduppsättningar, blandade medieuppsättningar och snurruppsättningar. I interaktiv video är resursväljaren tillgänglig när du trycker på **[!UICONTROL Select Assets]** på fliken **[!UICONTROL Content]**. I Carousel Sets är resursväljaren tillgänglig när du skapar en bildruta. I Bilduppsättningar, Blandade medieuppsättningar och Snurra uppsättningar är resursväljaren tillgänglig när du skapar en bilduppsättning, blandad medieuppsättning eller snurra uppsättning.
 
 Mer information finns även i [Resursväljaren](search-assets.md#assetpicker).
 
-1. Navigera till Carousel Set och skapa en ny bild. Du kan också navigera till den interaktiva videon, gå till fliken **[!UICONTROL Content]** och välja resurser. Du kan också skapa en uppsättning med blandade media, bilduppsättning eller snurra.
+1. Navigera till Carousel Set och skapa en bild. Du kan också navigera till den interaktiva videon, gå till fliken **[!UICONTROL Content]** och välja resurser. Du kan också skapa en uppsättning med blandade media, bilduppsättning eller snurra.
 1. Tryck på ikonen **[!UICONTROL Asset Selector]** (mapp med förstoringsglas) och navigera till en resurs.
 
    ![chlimage_1-532](assets/chlimage_1-532.png)
 
-   Du kan också filtrera efter nyckelord eller tagg genom att trycka på **[!UICONTROL Filter]** och ange nyckelord, lägga till villkor eller båda.
+   Filtrera efter nyckelord eller tagg genom att trycka på **[!UICONTROL Filter]** och ange nyckelord, lägga till villkor eller båda.
 
    ![chlimage_1-533](assets/chlimage_1-533.png)
 
-   Du kan ändra var AEM bläddrar efter resurser genom att navigera till en annan mapp i fältet **[!UICONTROL Path]**.
+   Ändra var Experience Manager ska bläddra efter resurser genom att navigera till en annan mapp i fältet **[!UICONTROL Path]**.
 
    Tryck på **[!UICONTROL Collection]** om du bara vill söka efter resurser i samlingar.
 
@@ -115,6 +114,6 @@ Mer information finns även i [Resursväljaren](search-assets.md#assetpicker).
 
    ![chlimage_1-535](assets/chlimage_1-535.png)
 
-1. Tryck på bockmarkeringen för att markera resursen. Resursen visas.
+1. Markera resursen genom att trycka på bockmarkeringen. Resursen visas.
 
    ![chlimage_1-536](assets/chlimage_1-536.png)
