@@ -5,7 +5,7 @@ contentOwner: AG
 role: Developer
 feature: Sökning
 exl-id: 9e33d1c0-232b-458a-ad6a-f595aa541a5a
-source-git-commit: 124f44b7893631703b1bd79e5c78976463f01efc
+source-git-commit: 0db95c4e7fc1ca20ce4f2d352c1276aa546dc7c3
 workflow-type: tm+mt
 source-wordcount: '839'
 ht-degree: 16%
@@ -59,7 +59,7 @@ Det bästa sättet är att kopiera ett befintligt predikat och justera det. Exem
 
 Så här skapar du ett egenskapspredikat:
 
-1. Skapa en komponentmapp i projektkatalogen, till exempel **/apps/geometrixx/components/titlepreate**.
+1. Skapa en komponentmapp i projektkatalogen, till exempel **/apps/werdetail/components/titlepreate**.
 1. Lägg till **content.xml**:
 
    ```xml
@@ -152,7 +152,7 @@ Så här skapar du ett egenskapspredikat:
 
 Så här skapar du ett grupppredikat:
 
-1. Skapa en komponentmapp i projektkatalogen, till exempel **/apps/geometrixx/components/picspredicate.**
+1. Skapa en komponentmapp i projektkatalogen, till exempel **/apps/werdetail/components/picspredicate**.
 1. Lägg till **content.xml**:
 
    ```xml
