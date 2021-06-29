@@ -4,9 +4,9 @@ description: Versionsinformation som är specifik för  [!DNL Adobe Experience M
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: a0f47b4e0e9f38df208ed78fde63c70813fb7dcc
+source-git-commit: c59ec6e2429095c07c9b2d6bb83dad6ab4f80aa0
 workflow-type: tm+mt
-source-wordcount: '3762'
+source-wordcount: '3761'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 De viktigaste funktionerna och förbättringarna i [!DNL Adobe Experience Manager] 6.5.9.0 är:
 
-* [!DNL Experience Manager Sites] Nu kan Dynamic Media Foundation-komponenten aktivera eller inaktivera optimering för enheter med högre upplösning när du använder responsiv bildförinställning eller smart beskärning.
+* [!DNL Experience Manager Sites] Med Dynamic Media Foundation-komponenten kan du nu aktivera eller inaktivera optimering för enheter med högre upplösning när du använder responsiv bildförinställning eller smart beskärning.
 
 * För att förbättra prestandan har villkoret `hidden=false` flyttats från JCR-frågan till [!UICONTROL QueryBuilder]-utvärderaren. [!DNL Experience Manager] kontrollerar att en dold mapp inte visas för att verifiera att ett dolt predikat fungerar efter ändringen.
 
@@ -66,10 +66,10 @@ En fullständig lista över funktioner och förbättringar som introducerats i [
 
 >[!NOTE]
 >
->Från och med Service Pack 9 kan [!DNL Experience Manager]-kunder utveckla och använda sina [!DNL Experience Manager]-program med distributioner av [!DNL Azul Zulu]-byggen av OpenJDK, som följer Java SE-standarden.
+>Från och med Service Pack 9 kan [!DNL Experience Manager]-kunder utveckla och använda sina [!DNL Experience Manager]-program med distributioner av [!DNL Azul Zulu]-byggen av OpenJDK, som följer Java™ SE-standarden.
 >Adobe stöder också [!DNL Azul Zulu] JDK:er till [!DNL Experience Manager]-kunder.
 >Du kan hämta relevanta versioner av JDK:n [!DNL Azul Zulu] från [Adobe Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html).
->Användarrättigheterna för Oraclet Java-tekniken, som distribuerats av Adobe, upphör att gälla i slutet av december 2022. [!DNL Experience Manager] Vi rekommenderar att man planerar och implementerar användning för  [!DNL Azul Zulu] JDK senast detta datum. Mer information om användningen av [!DNL Oracle Java]-tekniken och [!DNL Azul Zulu]-tekniken finns i [Frågor och svar](https://experienceleague.adobe.com/docs/experience-manager-65/assets/adobe-azul-openjdk-license-agreement.pdf?lang=en).
+>Användarrättigheterna för Oraclet Java™-tekniken, som distribuerats av Adobe, upphör att gälla i slutet av december 2022. [!DNL Experience Manager] Vi rekommenderar att man planerar och implementerar användning för  [!DNL Azul Zulu] JDK senast detta datum. Mer information om användningen av [!DNL Oracle Java™]-tekniken och [!DNL Azul Zulu]-tekniken finns i [Frågor och svar](https://experienceleague.adobe.com/docs/experience-manager-65/assets/adobe-azul-openjdk-license-agreement.pdf?lang=en).
 
 Nedan följer en lista över korrigeringar i [!DNL Experience Manager] 6.5.9.0-versionen.
 
@@ -83,7 +83,7 @@ Nedan följer en lista över korrigeringar i [!DNL Experience Manager] 6.5.9.0-v
 
 * Kapslad layoutbehållare i en annan storleksändrad layoutbehållare visar ett felaktigt antal kolumner för sina underordnade komponenter, vilket gör att dessa komponenter inte justeras mot rutnätet (NPR-36359).
 
-* External Link Checker visar giltiga externa länkar som ogiltiga länkar (NPR-36289).
+* Extern länkkontroll visar giltiga externa länkar som ogiltiga länkar (NPR-36289).
 
 * När du har visat referenser ett tag visas ett felmeddelande på referenspanelen (NPR-36167).
 
@@ -91,7 +91,7 @@ Nedan följer en lista över korrigeringar i [!DNL Experience Manager] 6.5.9.0-v
 
 * När du försöker synkronisera en livecopy (när rollout-konfigurationer används [!UICONTROL Activate on Blueprint activation] och [!UICONTROL De-activate on Blueprint activation]) om en komponent tas bort i livecopy-överordnad misslyckas synkroniseringen och en `NullPointerException` loggas (NPR-36127).
 
-* När en användare skriver ad hoc-text för tagg (tagg som inte finns i systemet) och trycker på Retur, visas taggen under fältet, men när innehållsfragmentet sparas och öppnas igen försvinner ad hoc-taggen (NPR-36132).
+* När en användare skriver i improviserad text för tagg (tagg som inte finns i systemet) och trycker på Retur, visas taggen under fältet, men när innehållsfragmentet sparas och öppnas igen försvinner den improviserade taggen (NPR-36132).
 
 * Det finns inget alternativ för att visa status för asynkrona åtgärder (NPR-36104).
 
@@ -119,7 +119,7 @@ Följande förbättringar av användarupplevelsen görs i [!DNL Assets]:
 
 * Om du vill visa resurser som inte är sorterade baserat på någon av parametrarna [!UICONTROL Create], [!UICONTROL Modify] eller [!UICONTROL Name] har [!DNL Adobe Experience Manager] ett [!UICONTROL None]-alternativ inom [!UICONTROL Sort by]-alternativen. Alternativet [!UICONTROL None] säkerställer att resurserna i Assets-användargränssnittet (i vyn Card, Column och Insights) är i samma ordning som de finns i JCR-noden (NPR-36356).
 
-* Om du vill att e-post-ID:t ska skrivas med gemener i AVS-API-svar från [!DNL Adobe Experience Manager], införs en valfri inställning. eftersom [!DNL Adobe Asset Link]-användare inte kunde checka in resurser om deras ID inte hade alla tecken i gemener. Observera att panelen [!DNL Adobe Asset Link] använder AVS API-svaret från [!DNL Adobe Experience Manager] (CQ-4317704).
+* Om du vill att e-post-ID:t ska skrivas med gemener i AVS-API-svar från [!DNL Adobe Experience Manager], införs en valfri inställning. eftersom [!DNL Adobe Asset Link]-användare inte kunde checka in resurser om deras ID inte hade alla tecken i gemener. Panelen [!DNL Adobe Asset Link] använder AVS API-svaret från [!DNL Adobe Experience Manager] (CQ-4317704).
 
 [!DNL Adobe Experience Manager] 6.5.9.0  [!DNL Assets] innehåller följande tillgänglighetsförbättringar.
 
@@ -144,7 +144,7 @@ Kontrasten (med bakgrund) för följande text och ikoner har förbättrats så a
 
 * När en liten ellips används för att anteckna resurser överlappar ellipsen numret på anteckningen i utskriftsversionen (NPR-36114).
 
-* I kolumnvyn kan det hända att [!DNL Experience Manager] inte frågar efter en dubblettresurskonflikt när en dubblettresurs överförs (NPR-36048).
+* Ibland frågar inte [!DNL Experience Manager] i kolumnvyn efter en dubblettresurskonflikt när en dubblettresurs överförs (NPR-36048).
 
 * Dialogrutan Dela länk stängs inte genom att klicka på stängningsknappen om den är öppen och inga ändringar görs (NPR-36030).
 
@@ -194,6 +194,16 @@ Kontrasten (med bakgrund) för följande text och ikoner har förbättrats så a
 * Visuell asterisk för att ange obligatoriskt fält finns nu i tillgångsfältet Rubrik i bilduppsättningsredigeraren, och skärmläsare meddelar den obligatoriska informationen för fältet (CQ-4290712).
 
 * Skärmläsare kan nu komma åt och lägga till en berättarröst för olika interaktiva alternativ i visningsprogram på sidan med tillgångsinformation (CQ-4290708).
+
+Kända problem med videouppspelning i [!DNL Dynamic Media]:
+
+* 
+
+   <!-- CQDOC-18116 -->You cannot play video renditions from the asset's Details page on Experience Manager - Dynamic Media running in hybrid mode.
+
+* 
+
+   <!-- CQDOC-18116 -->You cannot stream videos on Experience Manager - Dynamic Media running in hybrid mode.
 
 Adobe Experience Manager 6.5.9.0 Assets åtgärdar följande problem i [!DNL Dynamic Media]:
 
@@ -275,7 +285,7 @@ Adobe Experience Manager 6.5.9.0 Assets åtgärdar följande problem i [!DNL Dyn
 
 ### [!DNL Communities] {#communities-6590}
 
-* Vid skräppostfiltrering förbrukar systemet 100 % av Java-heap-utrymmet, vilket gör att Experience Manager-servern inte svarar (NPR-36316, NPR-36493).
+* Vid skräppostfiltrering förbrukar systemet 100 % av Java™-heap-utrymmet, vilket gör att Experience Manager-servern inte svarar (NPR-36316, NPR-36493).
 * I forumen läses data från JCR-sessioner från `SearchCommentSocialComponentListProvider` in (NPR-36235).
 * När du öppnar ett specifikt inkorgsmeddelande visas alla meddelanden med felaktig sidnumrering och andra problem (NPR-35917).
 
@@ -310,7 +320,7 @@ Adobe Experience Manager 6.5.9.0 Assets åtgärdar följande problem i [!DNL Dyn
 
 **Arbetsflöde**
 
-* När du anropar REST-slutpunkten för en [!DNL Experience Manager Forms]-tjänst på JBoss visar [!DNL Experience Manager] följande felmeddelande (NPR-36305):
+* När du anropar REST-slutpunkten för en [!DNL Experience Manager Forms]-tjänst på JBoss® visar [!DNL Experience Manager] följande felmeddelande (NPR-36305):
 
    ```TXT
    Invalid input. The maximum length of 2000 characters was exceeded.
@@ -400,7 +410,7 @@ Information om vilka plattformar som är certifierade för att fungera med den h
 
 >[!NOTE]
 >
->AEM 6.5.9.0 innehåller en ny version av [AEM Forms-kompatibilitetspaket](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en#aem-65-forms-releases). Om du använder en äldre version av AEM Forms Compatibility Package och uppdaterar till AEM 6.5.9.0 installerar du den senaste versionen av paketet efter installationen av Forms Add-On Package.
+>Experience Manager 6.5.9.0 innehåller en ny version av [AEM Forms-kompatibilitetspaket](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en#aem-65-forms-releases). Om du använder en äldre version av AEM Forms Compatibility Package och uppdaterar till Experience Manager 6.5.9.0 installerar du den senaste versionen av paketet efter installationen av Forms Add-On Package.
 
 ### Installera Adobe Experience Manager Forms i JEE {#install-aem-forms-jee-installer}
 
@@ -435,14 +445,14 @@ Om du vill använda UberJar i ett Maven-projekt läser du [hur du använder Uber
 
 ## Föråldrade funktioner {#removed-deprecated-features}
 
-Nedan finns en lista över funktioner som är markerade som borttagna med [!DNL Experience Manager] 6.5.7.0. Funktioner markeras som borttagna från början och senare i en framtida version. Ett alternativt alternativ brukar anges.
+Nedan finns en lista över funktioner som är markerade som borttagna med [!DNL Experience Manager] 6.5.7.0. Funktioner markeras som borttagna från början och senare i en framtida version. Ett alternativt alternativ anges.
 
 Granska om du använder en funktion eller en funktion i en distribution. Planera också att ändra implementeringen så att ett alternativt alternativ används.
 
 | Yta | Funktion | Ersättning |
 |---|---|---|
 | Integreringar | Skärmen **[!UICONTROL AEM Cloud Services Opt-In]** är föråldrad. Tack vare integreringen mellan Experience Manager och Adobe Target som uppdaterades i Experience Manager 6.5 för att stödja Adobe Target Standard API, som använder autentisering via Adobe IMS och [!DNL Adobe I/O], och den växande rollen hos Adobe Launch för att instrumentera Experience Manager sidor för analys och personalisering, har avanmälningsguiden blivit funktionellt irrelevant. | Konfigurera systemanslutningar, Adobe IMS-autentisering och [!DNL Adobe I/O]-integreringar via respektive [!DNL Experience Manager]-molntjänster. |
-| Anslutningar | Adobe JCR Connector för Microsoft SharePoint 2010 och Microsoft SharePoint 2013 är föråldrad för Experience Manager 6.5. | Ej tillämpligt |
+| Anslutningar | Adobe JCR Connector för Microsoft® SharePoint 2010 och Microsoft® SharePoint 2013 är föråldrad för Experience Manager 6.5. | Ej tillämpligt |
 
 ## Kända fel {#known-issues}
 
