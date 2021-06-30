@@ -2,14 +2,13 @@
 cloud: Experience Cloud
 product: adobe experience manager
 sub-product: formulär
-solution: Experience Manager, Experience Manager Forms
+solution: Experience Manager, Experience Manager Forms, Experience Manager 6.5
 audience: end-user
 user-guide-title: Adobe Experience Manager 6.5 Forms Guide
 breadcrumb-title: Forms Guide
 user-guide-description: Skapa, hantera, publicera och uppdatera digitala formulär.
 role: Business Practitioner
-translation-type: tm+mt
-source-git-commit: ad67634278088f8f953fde61a3543acdd70537dd
+source-git-commit: 5536ee27ad51356c2dcd0f0f36b91025bf1d228c
 workflow-type: tm+mt
 source-wordcount: '3718'
 ht-degree: 1%
