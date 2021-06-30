@@ -6,7 +6,7 @@ mini-toc-levels: 1
 role: Business Practitioner
 feature: Resurshantering, sökning
 exl-id: 158607e6-b4e9-4a3f-b023-4023d60c97d2
-source-git-commit: dc483b9871cebce64f7b60fec2144f1f19ef28ec
+source-git-commit: 03b171d2af17efee73780b01058fd62bc9d45dbd
 workflow-type: tm+mt
 source-wordcount: '9553'
 ht-degree: 3%
@@ -765,7 +765,7 @@ Videoanteckningar stöds bara i webbläsare med HTML5-kompatibla videoformat. Vi
 
 ### Visa sparade anteckningar {#viewing-saved-annotations}
 
-Det går bara att visa en anteckning åt gången.
+Du kan bara visa en anteckning åt gången.
 
 >[!NOTE]
 >
@@ -775,7 +775,7 @@ Det går bara att visa en anteckning åt gången.
 
 **Så här visar du sparade anteckningar för en resurs:**
 
-1. Navigera till resursens plats och öppna resurssidan.
+1. Gå till resursens plats och öppna resurssidan.
 
 1. I gränssnittet Experience Manager väljer du **[!UICONTROL Timeline]**.
 1. I listan **[!UICONTROL Show All]** på tidslinjen väljer du **[!UICONTROL Comments]** för att filtrera resultatet baserat på kommentarer.
