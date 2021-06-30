@@ -1,15 +1,14 @@
 ---
 cloud: Experience Cloud
 product: adobe experience manager
-solution: Experience Manager, Experience Manager Sites
+solution: Experience Manager, Experience Manager Sites, Experience Manager 6.5
 audience: end-user
 user-guide-title: AEM 6.5 Developing User Guide
 breadcrumb-title: Utvecklingshandbok
 user-guide-description: Den här guiden beskriver hur du skapar AEM.
 feature: Utveckling
 role: Developer
-translation-type: tm+mt
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+source-git-commit: 5536ee27ad51356c2dcd0f0f36b91025bf1d228c
 workflow-type: tm+mt
 source-wordcount: '910'
 ht-degree: 6%
@@ -43,7 +42,7 @@ ht-degree: 6%
    + [Taggbibliotek](taglib.md)
    + Mallar{#templates}
       + [Mallar](templates.md)
-      + [Sidmallar - redigerbara  ](page-templates-editable.md)
+      + [Sidmallar - redigerbara ](page-templates-editable.md)
       + [Sidmallar - statiska](page-templates-static.md)
       + [Mallar för innehållsfragment](content-fragment-templates.md)
       + [Adaptiv mallåtergivning](templates-adaptive-rendering.md)
@@ -158,7 +157,7 @@ ht-degree: 6%
    + [Konfigurera din sida för gruppredigering av sidegenskaper](bulk-editing.md)
    + [Anpassa och utöka Content Fragments](customizing-content-fragments.md)
    + [Content Fragments – konfigurera komponenter för återgivning](content-fragments-config-components-rendering.md)
-   + [Upplevelsefragment](experience-fragments.md)
+   + [Experience Fragments](experience-fragments.md)
    + Utöka arbetsflöden{#extending-workflows}
       + [Utveckla och utöka arbetsflöden](workflows.md)
       + [Skapa arbetsflödesmodeller](workflows-models.md)
