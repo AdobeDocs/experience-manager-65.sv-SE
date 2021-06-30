@@ -1,14 +1,13 @@
 ---
 cloud: Experience Cloud
 product: adobe experience manager
-solution: Experience Manager, Experience Manager Sites
+solution: Experience Manager, Experience Manager Sites, Experience Manager 6.5
 audience: end-user
 user-guide-title: Användarhandbok för redigering av AEM 6.5 Classic UI
 user-guide-description: Den här handboken beskriver koncepten för redigering i AEM i det klassiska användargränssnittet.
 feature: Redigering
 role: Business Practitioner
-translation-type: tm+mt
-source-git-commit: ad67634278088f8f953fde61a3543acdd70537dd
+source-git-commit: 5536ee27ad51356c2dcd0f0f36b91025bf1d228c
 workflow-type: tm+mt
 source-wordcount: '272'
 ht-degree: 20%
@@ -16,7 +15,7 @@ ht-degree: 20%
 ---
 
 
-# AEM 6.5 Classic UI Authoring User Guide {#classic-ui}
+# Användarhandbok för redigering av AEM 6.5 Classic UI {#classic-ui}
 
 + [Översikt över redigeringshandboken för det klassiska användargränssnittet](home.md)
 + Introduktion till redigering av klassiskt användargränssnitt {#introduction}
