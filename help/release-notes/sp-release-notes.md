@@ -4,9 +4,9 @@ description: Versionsinformation som är specifik för  [!DNL Adobe Experience M
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: c59ec6e2429095c07c9b2d6bb83dad6ab4f80aa0
+source-git-commit: 0c5759786a698f7c7503a56da7f472229d18f763
 workflow-type: tm+mt
-source-wordcount: '3761'
+source-wordcount: '3767'
 ht-degree: 0%
 
 ---
@@ -195,16 +195,6 @@ Kontrasten (med bakgrund) för följande text och ikoner har förbättrats så a
 
 * Skärmläsare kan nu komma åt och lägga till en berättarröst för olika interaktiva alternativ i visningsprogram på sidan med tillgångsinformation (CQ-4290708).
 
-Kända problem med videouppspelning i [!DNL Dynamic Media]:
-
-* 
-
-   <!-- CQDOC-18116 -->You cannot play video renditions from the asset's Details page on Experience Manager - Dynamic Media running in hybrid mode.
-
-* 
-
-   <!-- CQDOC-18116 -->You cannot stream videos on Experience Manager - Dynamic Media running in hybrid mode.
-
 Adobe Experience Manager 6.5.9.0 Assets åtgärdar följande problem i [!DNL Dynamic Media]:
 
 * Anpassade visningsprogramförinställningar och CSS replikeras inte till [!DNL Dynamic Media] när [!DNL Dynamic Media] aktiveras selektivt och inaktiveras av [standard](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/dynamicmedia/config-dm.html?lang=en#troubleshoot-dm-config) (NPR-36232).
@@ -224,6 +214,16 @@ Adobe Experience Manager 6.5.9.0 Assets åtgärdar följande problem i [!DNL Dyn
 * Videoanteckningar fungerar inte för mappsökvägar där konfigurationen [!DNL Dynamic Media] inte är aktiverad, även om instansen [!DNL Experience Manager] är inställd i läget [!DNL Dynamic Media] (CQ-4314950).
 
 * När resurstiteln har tecken för dubbelbyte, multibyte, högt ASCII, kyrilliskt, surrogatpar, hebreiska, arabiska och GB18030 får resurstiteln ett frågetecken (?) vid publicering till Dynamic Media. (CQ-4311872).
+
+>Kända videouppspelningsproblem i Dynamic Media *på Experience Manager 6.5.9.0 endast*:
+>
+>* 
+
+   <!-- CQDOC-18116 -->You cannot play video renditions from the asset's Details page on Experience Manager - Dynamic Media running in hybrid mode.
+>* 
+
+   <!-- CQDOC-18116 -->You cannot stream videos on Experience Manager - Dynamic Media running in hybrid mode.
+
 
 ### Plattform {#platform-6590}
 
