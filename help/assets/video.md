@@ -12,9 +12,9 @@ docset: aem65
 feature: Resurshantering
 role: Business Practitioner, Administrator
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: 54230d68fc86c9098f7712044bc501bdc4f16502
+source-git-commit: 0c5759786a698f7c7503a56da7f472229d18f763
 workflow-type: tm+mt
-source-wordcount: '11191'
+source-wordcount: '11195'
 ht-degree: 4%
 
 ---
@@ -23,21 +23,11 @@ ht-degree: 4%
 
 I det här avsnittet beskrivs hur du arbetar med video i Dynamic Media.
 
-För närvarande kända problem med videouppspelning i Dynamic Media:
-
-* 
-
-   <!-- CQDOC-18116 -->You cannot play video renditions from the asset's Details page on Experience Manager - Dynamic Media running in hybrid mode.
-
-* 
-
-   <!-- CQDOC-18116 -->You cannot stream videos on Experience Manager - Dynamic Media running in hybrid mode.
-
 ## Snabbstart: Videor {#quick-start-videos}
 
 Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma igång snabbt med anpassningsbara videouppsättningar i Dynamic Media. Efter varje steg finns det korsreferenser till ämnesrubriker där du kan hitta mer information.
 
->[!NOTE]
+>[!IMPORTANT]
 >
 >Innan du arbetar med video i Dynamic Media måste Adobe Experience Manager-administratören ha aktiverat och konfigurerat Dynamic Media-Cloud Services i Dynamic Media - Scene7-läge eller Dynamic Media - hybrid-läge.
 >
@@ -45,7 +35,16 @@ Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma ig�
    >
    >
 * Se [Konfigurera Dynamic Media-Cloud Services](/help/assets/config-dynamic.md#configuring-dynamic-media-cloud-services) i Konfigurera Dynamic Media - hybrid-läge.
+>
+>
+För närvarande kända problem med videouppspelning i Dynamic Media *på Experience Manager 6.5.9.0 endast*:
+>
+>* 
 
+   <!-- CQDOC-18116 -->You cannot play video renditions from the asset's Details page on Experience Manager - Dynamic Media running in hybrid mode.
+>* 
+
+   <!-- CQDOC-18116 -->You cannot stream videos on Experience Manager - Dynamic Media running in hybrid mode.
 >
 
 
@@ -421,7 +420,7 @@ Anta till exempel att källvideon är 1 920 x 1 080. I följande tabell ger de t
 |--- |--- |--- |--- |
 | Källa | 1920 x 1080 | 1 | 1 |
 | Kodad | 960 x 540 | 2 | 2 |
-| Kodad | 640 x 360 | 3 | 3 |
+| Kodad | 640 x 360 | 3 | 1 |
 | Kodad | 480 x 270 | 4 | 4 |
 
 ### Kodat videofilformat {#encoded-video-file-format}
