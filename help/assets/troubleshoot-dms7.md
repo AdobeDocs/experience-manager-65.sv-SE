@@ -8,10 +8,10 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 0d48c031-d3ee-4143-b739-a79ba28fd63a
 docset: aem65
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: d4507059-a54d-4dc9-a263-e55dfa27eeb1
 feature: Felsökning
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1284'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 I följande dokument beskrivs felsökning för Dynamic Media som kör körningsläget **dynamicmedia_scene7**.
 
-## Konfigurera {#setup-and-configuration}
+## Installation och konfiguration {#setup-and-configuration}
 
 Kontrollera att Dynamic Media har konfigurerats korrekt genom att göra följande:
 
