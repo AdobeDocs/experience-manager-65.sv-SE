@@ -5,17 +5,17 @@ contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5.6/ASSETS
 topic-tags: dynamic-media
 content-type: reference
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 23d3c274-0736-49f7-8d44-a56a55cfd06d
 feature: CDN-cache
-source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1280'
 ht-degree: 0%
 
 ---
 
-# CDN-cachen har inte verifierats med Dynamic Media {#invalidating-cdn-cache-for-dm-assets}
+# CDN-cachen har inte verifierats via Dynamic Media {#invalidating-cdn-cache-for-dm-assets}
 
 Dynamic Media-resurser cachas av CDN (Content Delivery Network) för snabb leverans till dina kunder. När du uppdaterar resurserna vill du dock att ändringarna ska börja gälla omedelbart på webbplatsen. Genom att rensa eller göra CDN-cachen ogiltig kan du snabbt uppdatera resurser som levereras av Dynamic Media. I stället för att vänta på att cachen ska förfalla med ett TTL-värde (Time To Live) (standard är tio timmar) kan du skicka en begäran från Dynamic Media om att cachen ska förfalla inom några minuter.
 
