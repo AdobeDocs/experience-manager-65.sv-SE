@@ -3,20 +3,19 @@ title: Prestandajustering [!DNL Assets].
 description: Förslag och vägledning om [!DNL Experience Manager] konfiguration, ändringar av maskinvara, programvara och nätverkskomponenter för att ta bort flaskhalsar och optimera prestanda för [!DNL Experience Manager Assets].
 contentOwner: AG
 mini-toc-levels: 1
-role: Architect, Administrator
-feature: Asset Management
-translation-type: tm+mt
-source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
+role: Architect, Admin
+feature: Resurshantering
+exl-id: 1d9388de-f601-42bf-885b-6a7c3236b97e
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
-source-wordcount: '2679'
+source-wordcount: '2677'
 ht-degree: 0%
 
 ---
 
-
 <!-- TBD: Get reviewed by engineering. -->
 
-# [!DNL Adobe Experience Manager Assets] guide för prestandajustering  {#assets-performance-tuning-guide}
+# [!DNL Adobe Experience Manager Assets] guide för prestandajustering {#assets-performance-tuning-guide}
 
 En [!DNL Experience Manager Assets]-installation innehåller ett antal maskinvaru-, programvaru- och nätverkskomponenter. Beroende på ditt driftsättningsscenario kan du behöva specifika konfigurationsändringar för maskinvara, programvara och nätverkskomponenter för att ta bort flaskhalsar i prestandan.
 
@@ -70,13 +69,13 @@ Ange följande JVM-parametrar:
 * `-Dupdate.limit`=250000
 * `-Doak.fastQuerySize`=true
 
-## Dataarkiv och minneskonfiguration {#data-store-and-memory-configuration}
+## Datalagring och minneskonfiguration {#data-store-and-memory-configuration}
 
-### Konfiguration för fillagring {#file-data-store-configuration}
+### Konfiguration av fillagring {#file-data-store-configuration}
 
 Du bör separera datalagret från segmentlagret för alla [!DNL Experience Manager Assets]-användare. Dessutom kan du maximera prestanda genom att konfigurera parametrarna `maxCachedBinarySize` och `cacheSizeInMB`. Ange `maxCachedBinarySize` som den minsta filstorleken som kan sparas i cachen. Ange storleken på den minnescache som ska användas för datalagret i `cacheSizeInMB`. Adobe rekommenderar att du anger det här värdet mellan 2 och 10 procent av den totala stackstorleken. Inläsnings-/prestandatestning kan dock hjälpa till att fastställa den idealiska inställningen.
 
-### Konfigurera maxstorleken för buffrad bildcache {#configure-the-maximum-size-of-the-buffered-image-cache}
+### Konfigurera maximal storlek för buffrad bildcache {#configure-the-maximum-size-of-the-buffered-image-cache}
 
 När du överför stora mängder resurser till [!DNL Adobe Experience Manager] kan du minska den konfigurerade maxstorleken för buffrat bildcacheminne för att undvika oväntade ökningar i minnesanvändningen och för att förhindra att JVM misslyckas med OutOfMemoryErrors. Tänk dig ett exempel på att du har ett system med en högsta heap (- `Xmx`param) på 5 GB, en Oak BlobCache inställd på 1 GB och dokumentcache inställd på 2 GB. I det här fallet tar den buffrade cachen upp till 1,25 GB och minne, vilket innebär att endast 0,75 GB minne återstår för oväntade toppar.
 
@@ -84,7 +83,7 @@ Konfigurera den buffrade cachestorleken i OSGi-webbkonsolen. Vid `https://host:p
 
 Om du använder en `sling:osgiConfig`-nod från Experience Manager 6.1 SP1 för att konfigurera den här egenskapen måste du ange datatypen till Long. Mer information finns i [CQBufferedImageCache använder heap under överföring av tillgångar](https://helpx.adobe.com/experience-manager/kb/cqbufferedimagecache-consumes-heap-during-asset-uploads.html).
 
-### Delade datalager {#shared-data-stores}
+### Gemensamma datalager {#shared-data-stores}
 
 Implementering av ett S3- eller delat fildatalager kan bidra till att spara diskutrymme och öka nätverkets genomströmning i storskaliga implementeringar. Mer information om för- och nackdelar med att använda ett delat datalager finns i [Handbok om resursstorlek](/help/assets/assets-sizing-guide.md).
 
@@ -164,7 +163,7 @@ Som standard kör [!DNL Experience Manager] ett maximalt antal parallella jobb s
 
 Att ställa in en kö på hälften av de tillgängliga processorerna är en användbar lösning att börja med. Du kan dock behöva öka eller minska det här antalet för att få maximal genomströmning och justera det efter miljö. Det finns separata köer för tillfälliga och icke-tillfälliga arbetsflöden samt andra processer, till exempel externa arbetsflöden. Om flera köer är inställda på 50 % av processorerna aktiva samtidigt kan systemet snabbt bli överbelastat. De köer som används ofta varierar mycket mellan olika implementeringar. Därför kan du behöva konfigurera dem noggrant för maximal effektivitet utan att ge avkall på serverstabiliteten.
 
-### DAM Update Asset configuration {#dam-update-asset-configuration}
+### DAM-uppdateringskonfiguration {#dam-update-asset-configuration}
 
 Arbetsflödet i [!UICONTROL DAM Update Asset] innehåller en komplett serie steg som är konfigurerade för uppgifter, till exempel Dynamic Media PTIFF-generering och [!DNL Adobe InDesign Server]-integrering. De flesta användare behöver dock inte utföra flera av dessa steg. Adobe rekommenderar att du skapar en anpassad kopia av arbetsflödesmodellen [!UICONTROL DAM Update Asset] och tar bort alla onödiga steg. I det här fallet ska du uppdatera startarna för [!UICONTROL DAM Update Asset] så att de pekar på den nya modellen.
 
@@ -182,7 +181,7 @@ Kunderna använder bilder av olika storlek och format på sin webbplats eller f�
 
 Många webbplatskunder implementerar en bildservett som ändrar storlek på och beskär bilder när de begärs, vilket medför ytterligare belastning på publiceringsinstansen. Så länge dessa bilder kan cachas kan utmaningen dock mildras.
 
-Ett annat sätt är att använda Dynamic Media-teknik för att helt och hållet överlåta bildbearbetning. Dessutom kan du distribuera varumärkesportalen som inte bara tar över ansvaret för återgivningsgenerering från [!DNL Experience Manager]-infrastrukturen, utan även hela publiceringsnivån.
+Ett annat sätt är att använda Dynamic Media-teknik för att helt och hållet överlåta bildbearbetning. Dessutom kan du distribuera Brand Portal som inte bara tar över ansvaret för återgivningsgenerering från [!DNL Experience Manager]-infrastrukturen, utan även hela publiceringsnivån.
 
 #### ImageMagick {#imagemagick}
 
@@ -215,7 +214,7 @@ Dessutom anger du sökvägen till ImageMagick:s temporära mapp i filen `configu
 
 Om du använder [!DNL Experience Manager] på Adobe Managed Services (AMS) kan du kontakta Adobe kundtjänst om du tänker bearbeta många stora PSD- eller PSB-filer. Samarbeta med Adobe kundtjänstrepresentant för att implementera de bästa metoderna för driftsättningen av AMS och för att välja bästa möjliga verktyg och modeller för Adobe egna format. [!DNL Experience Manager] kan inte bearbeta PSB-filer med hög upplösning som är större än 30000 x 23000 pixlar.
 
-### XMP tillbakaskrivning {#xmp-writeback}
+### XMP {#xmp-writeback}
 
 XMP återskrivning uppdaterar den ursprungliga resursen när metadata ändras i [!DNL Experience Manager], vilket ger följande resultat:
 
@@ -287,14 +286,14 @@ Utför följande uppgifter för alla problem med nätverkets prestanda från kun
 * Genom att använda ett prestandatest för nätverk
 * Testa mot dispatchern
 
-### [!DNL Experience Manager] driftsättningstest  {#aem-deployment-testing}
+### [!DNL Experience Manager] driftsättningstest {#aem-deployment-testing}
 
 För att minimera latensen och uppnå hög genomströmning genom effektiv processoranvändning och lastdelning ska du regelbundet övervaka prestandan för din [!DNL Experience Manager]-distribution. Särskilt gäller följande:
 
 * Kör lasttester mot [!DNL Experience Manager]-distributionen.
 * Övervaka uppladdningsprestanda och användargränssnittets svarstider.
 
-## [!DNL Experience Manager Assets] resultatchecklista och påverkan av tillgångshanteringsåtgärder  {#checklist}
+## [!DNL Experience Manager Assets] resultatchecklista och påverkan av tillgångshanteringsåtgärder {#checklist}
 
 * Gör det möjligt för HTTPS att kringgå alla HTTP-trafiksniffare på företag.
 * Använd en kabelanslutning för överföring av stora resurser.
