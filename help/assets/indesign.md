@@ -2,10 +2,10 @@
 title: Integrera [!DNL Assets] med [!DNL InDesign Server]
 description: Lär dig hur du integrerar [!DNL Adobe Experience Manager Assets] med [!DNL Adobe InDesign Server].
 contentOwner: AG
-role: Administrator
+role: Admin
 feature: Publicering
 exl-id: 5ba020a3-c36c-402b-a11b-d6b0426b03bf
-source-git-commit: 3c1a30f36222c319c354afa408555982bfe2804e
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1533'
 ht-degree: 1%
@@ -26,7 +26,7 @@ För att överföra filer till [!DNL Experience Manager Assets] som du har skapa
 >
 >[!DNL Adobe InDesign] erbjuds som två separata erbjudanden. [Adobe ](https://www.adobe.com/products/indesign.html) InDesign-datorprogram som används för att utforma sidlayouter för tryck och digital distribution. [Med Adobe InDesign ](https://www.adobe.com/products/indesignserver.html) Server kan ni programmässigt skapa automatiserade dokument baserat på det ni skapat med  [!DNL InDesign]. Det fungerar som en tjänst som erbjuder ett gränssnitt till sin [ExtendScript](https://www.adobe.com/devnet/scripting.html)-motor. Skripten är skrivna i [!DNL ExtendScript], som liknar [!DNL JavaScript]. Mer information om [!DNL InDesign] skript finns i [https://www.adobe.com/devnet/indesign/documentation.html#idscripting](https://www.adobe.com/devnet/indesign/documentation.html#idscripting).
 
-## Så här fungerar extraheringen {#how-the-extraction-works}
+## Hur extraheringen fungerar {#how-the-extraction-works}
 
 [!DNL Adobe InDesign Server] kan integreras med [!DNL Experience Manager Assets] så att INDD-filer som skapats med [!DNL InDesign] kan överföras, återgivningar genereras, alla media extraheras (till exempel video) och lagras som resurser:
 
@@ -88,7 +88,7 @@ Så här installerar och startar du [!DNL InDesign Server] för användning med 
    >Om du vill spara utdatameddelandena i en fil använder du omdirigering; under Windows:
    >`<ids-installation-dir>/InDesignServer.com -port 8080 > ~/temp/INDD-logfile.txt 2>&1`
 
-### Konfigurera [!DNL Experience Manager Assets]-arbetsflödet {#configuring-the-aem-assets-workflow}
+### Konfigurera arbetsflödet [!DNL Experience Manager Assets] {#configuring-the-aem-assets-workflow}
 
 [!DNL Experience Manager Assets] har ett förkonfigurerat arbetsflöde  **[!UICONTROL DAM Update Asset]** som innehåller flera processsteg särskilt för  [!DNL InDesign]:
 
@@ -166,7 +166,7 @@ poolSOAP-slutpunkter som ska användas för kommunikation med  [!DNL InDesign Se
 
 1. Spara genom att klicka på OK.
 
-### Konfigurera CQ Link Externalizer för dagen {#configuring-day-cq-link-externalizer}
+### Konfigurera Dag CQ Link Externalizer {#configuring-day-cq-link-externalizer}
 
 Om [!DNL InDesign Server] och [!DNL Experience Manager] finns på olika värdar eller om ett eller båda programmen inte fungerar på standardportar konfigurerar du [!UICONTROL Day CQ Link Externalizer] för att ange värdnamn, port och innehållssökväg för [!DNL InDesign Server].
 
