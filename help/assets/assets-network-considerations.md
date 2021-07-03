@@ -2,18 +2,17 @@
 title: Nätverksaspekter och -krav
 description: Diskuterar nätverksaspekter när du utformar en  [!DNL Adobe Experience Manager Assets] distribution.
 contentOwner: AG
-role: Architect, Administrator
-feature: Developer Tools
-translation-type: tm+mt
-source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
+role: Architect, Admin
+feature: Utvecklarverktyg
+exl-id: 1313842c-18b1-4727-ba63-b454d0f5a2cc
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
-source-wordcount: '996'
+source-wordcount: '994'
 ht-degree: 0%
 
 ---
 
-
-# [!DNL Assets] nätverksaspekter  {#assets-network-considerations}
+# [!DNL Assets] nätverksaspekter {#assets-network-considerations}
 
 Att förstå ditt nätverk är lika viktigt som att förstå [!DNL Adobe Experience Manager Assets]. Nätverket kan påverka uppladdning, nedladdning och användarupplevelser. Genom att diagram över din nätverkstopologi kan du identifiera kodpunkter och underoptimerade områden i nätverket som du måste åtgärda för att förbättra nätverkets prestanda och användarupplevelsen.
 
@@ -42,7 +41,7 @@ Bilden längst ned till vänster visar två enheter som är anslutna till föret
 
 Den dator som visas till höger har en begränsad uppström till företagsnätverket via ett VPN med en hastighet på 1 Mbit/s. Användarupplevelsen för 1 Mbit/s-anslutningen skiljer sig avsevärt från användarupplevelsen via 1 Gbit/s-anslutningen. Beroende på storleken på de resurser som användarna interagerar med kan deras VPN-anslutning vara otillräcklig för uppgiften.
 
-## Företagsnätets topologi {#topology-of-the-corporate-network}
+## Företagets topologi {#topology-of-the-corporate-network}
 
 ![chlimage_1-354](assets/chlimage_1-354.png)
 
