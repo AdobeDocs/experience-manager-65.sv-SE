@@ -2,18 +2,17 @@
 title: XMP till återgivning
 description: Lär dig hur XMP återskrivningsfunktionen sprider metadataändringar för en resurs till alla eller vissa återgivningar av resursen.
 contentOwner: AG
-role: Business Practitioner, Administrator
+role: User, Admin
 feature: Metadata
-translation-type: tm+mt
-source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
+exl-id: 82148ae5-37e9-4fc5-ada9-db3d91b29c33
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
-source-wordcount: '716'
+source-wordcount: '713'
 ht-degree: 4%
 
 ---
 
-
-# XMP tillbakaskrivning till återgivningar {#xmp-writeback-to-renditions}
+# XMP till återgivning {#xmp-writeback-to-renditions}
 
 Den här XMP återskrivningsfunktionen i [!DNL Adobe Experience Manager Assets] replikerar metadataändringarna till återgivningarna av den ursprungliga resursen. När du ändrar metadata för en resurs i Resurser eller när du överför resursen, lagras ändringarna först i metadatanoden i resurshierarkin.
 
@@ -29,7 +28,7 @@ I det här fallet sparar [!DNL Experience Manager Assets] ändringarna av egensk
 
 [!DNL Experience Manager Assets] sprider dock inte automatiskt några metadataändringar till återgivningarna av en resurs. Se [hur du aktiverar XMP-tillbakaskrivning](#enable-xmp-writeback).
 
-## Aktivera XMP-tillbakaskrivning {#enable-xmp-writeback}
+## Aktivera XMP {#enable-xmp-writeback}
 
 Om du vill att metadataändringarna ska kunna spridas till återgivningarna av resursen när du överför den ändrar du konfigurationen **[!UICONTROL Adobe CQ DAM Rendition Maker]** i Configuration Manager.
 
@@ -39,7 +38,7 @@ Om du vill att metadataändringarna ska kunna spridas till återgivningarna av r
 
    ![chlimage_1-135](assets/chlimage_1-346.png)
 
-## Aktivera XMP för specifik återgivning {#enabling-xmp-writeback-for-specific-renditions}
+## Aktivera XMP återskrivning för specifika återgivningar {#enabling-xmp-writeback-for-specific-renditions}
 
 Om du vill att XMP återskrivningsfunktion ska kunna sprida metadataändringar för att välja återgivningar, anger du dessa återgivningar i arbetsflödessteget XMP återskrivningsprocessen i [!UICONTROL DAM Metadata WriteBack]-arbetsflödet. Som standard konfigureras det här steget med den ursprungliga återgivningen.
 
