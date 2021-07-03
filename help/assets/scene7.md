@@ -8,9 +8,9 @@ content-type: reference
 topic-tags: managing-assets
 discoiquuid: e7b95732-a571-48e8-afad-612059cdbde7
 feature: Dynamic Media Classic
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 815f577d-4774-4830-8baf-0294bd085b83
-source-git-commit: 900a2ccbf33575644f934e5a75380d8dd3eab5d8
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '2711'
 ht-degree: 1%
@@ -219,7 +219,7 @@ Texten i bilden ändras. Du kan återställa texten till det ursprungliga värde
 
 ![chlimage_1-235](assets/chlimage_1-235.png)
 
-#### Ändra text så att den återspeglar värdet för ett klientkontextvärde {#changing-text-to-reflect-the-value-of-a-client-context-value}
+#### Ändra text så att värdet för en klientkontext återspeglas {#changing-text-to-reflect-the-value-of-a-client-context-value}
 
 Om du vill länka ett fält till ett klientkontextvärde trycker du på **[!UICONTROL Select]** för att öppna klientsnabbmenyn, markerar klientkontexten och trycker på **[!UICONTROL OK]**. I det här exemplet ändras namnet baserat på att namnet länkas till det formaterade namnet i profilen.
 
@@ -257,7 +257,7 @@ Adobe DAM och WCM visar om en primär källvideo har överförts. De visar inte 
 
 När du använder en adaptiv videouppsättning med videokomponenten i Dynamic Media Classic måste du ändra storlek på komponenten så att den passar videofilens mått.
 
-## Dynamic Media Classic content browser {#scene-content-browser}
+## Dynamic Media Classic Content Browser {#scene-content-browser}
 
 I Dynamic Media Classic kan du visa innehåll från Dynamic Media Classic direkt i Experience Manager. I **[!UICONTROL Content Finder]** väljer du **[!UICONTROL Dynamic Media Classic]** i det pekoptimerade användargränssnittet eller **[!UICONTROL S7]**-ikonen i det klassiska användargränssnittet. Funktionen är identisk mellan båda användargränssnitten.
 
@@ -277,7 +277,7 @@ Om du har flera konfigurationer visar Experience Manager som standard [standardk
    >   * En F4V-video
 
 
-### Bläddra bland innehåll i det pekoptimerade användargränssnittet {#browsing-content-in-the-touch-optimized-ui}
+### Bläddra i det pekoptimerade användargränssnittet {#browsing-content-in-the-touch-optimized-ui}
 
 Du kan öppna innehållsläsaren i det pekoptimerade eller klassiska användargränssnittet. För närvarande har pekoptimeringen följande begränsning:
 
