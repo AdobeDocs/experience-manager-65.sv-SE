@@ -8,9 +8,9 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
 feature: Bildprofiler
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 67240ad0-1a7c-4e58-a518-1e36d771f1a1
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '2669'
 ht-degree: 9%
@@ -35,7 +35,7 @@ När du överför bilder kan du beskära bilden automatiskt vid överföring gen
 
 Koordinaterna för smart beskärning är proportionella. För de olika inställningarna för smart beskärning i en bildprofil skickas samma proportioner till Dynamic Media om proportionerna är desamma för de nya måtten i bildprofilen. Adobe rekommenderar att du använder samma beskärningsområde. Om du gör det påverkas inte de olika dimensioner som används i bildprofilen.
 
-Varje generering av Smart Crop som du skapar kräver extra bearbetning. Om du till exempel lägger till fler än fem proportioner för smart beskärning kan det leda till en långsam intag av resurser. Det medför också ökad belastning på systemen. Eftersom du kan använda SmartCrop på mappnivå rekommenderar Adobe att du bara använder det på mappar *där det behövs.*
+Varje generering av Smart Crop som du skapar kräver extra bearbetning. Om du till exempel lägger till mer än fem proportioner för smart beskärning kan det leda till en långsam intag av resurser. Det medför också ökad belastning på systemen. Eftersom du kan använda SmartCrop på mappnivå rekommenderar Adobe att du bara använder det på mappar *där det behövs.*
 
 Du kan välja mellan två bildbeskärningsalternativ. Du kan också automatisera skapandet av färg- och bildfärgrutor.
 
@@ -91,7 +91,7 @@ I **[!UICONTROL Unsharp Mask]** har du följande filtreringsalternativ:
 
 Skärpa beskrivs i [Skärpa bilder](/help/assets/assets/sharpening_images.pdf.
 
-## Skapar Dynamic Media-bildprofiler {#creating-image-profiles}
+## Skapa Dynamic Media-bildprofiler {#creating-image-profiles}
 
 Mer information om hur du definierar avancerade bearbetningsparametrar för andra resurstyper finns i [Konfigurera resursbearbetning](config-dms7.md#configuring-asset-processing).
 
@@ -113,7 +113,7 @@ Se även [Bästa metoder för att ordna dina digitala resurser så att du kan an
 
 1. Tryck på **[!UICONTROL Save]**. Den nya profilen visas i listan med tillgängliga profiler.
 
-## Redigera eller ta bort Dynamic Media-bildprofiler {#editing-or-deleting-image-profiles}
+## Redigera eller ta bort Dynamic Media bildprofiler {#editing-or-deleting-image-profiles}
 
 1. Tryck på Experience Manager-logotypen och navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Image Profiles]**.
 1. Markera den bildprofil som du vill redigera eller ta bort. Om du vill redigera den väljer du **[!UICONTROL Edit Image Processing Profile]**. Om du vill ta bort den väljer du **[!UICONTROL Delete Image Processing Profile]**.
@@ -122,7 +122,7 @@ Se även [Bästa metoder för att ordna dina digitala resurser så att du kan an
 
 1. Spara ändringarna om du redigerar dem. Bekräfta att du vill ta bort profilen om du tar bort den.
 
-## Använda en Dynamic Media-bildprofil för mappar {#applying-an-image-profile-to-folders}
+## Använda en Dynamic Media-bildprofil på mappar {#applying-an-image-profile-to-folders}
 
 När du tilldelar en bildprofil till en mapp ärver alla undermappar automatiskt profilen från den överordnade mappen. Det här arbetsflödet innebär att du bara kan tilldela en bildprofil till en mapp. Fundera därför noga över mappstrukturen för var du överför, lagrar, använder och arkiverar resurser.
 
@@ -144,7 +144,7 @@ För mappar som redan har tilldelats en profil visas profilens namn direkt under
 
 Du kan bearbeta resurser i en mapp som redan har en befintlig videoprofil som du senare ändrade. Se [Återbearbeta resurser i en mapp när du har redigerat dess bearbetningsprofil](processing-profiles.md#reprocessing-assets).
 
-#### Använda Dynamic Media-bildprofiler på mappar från användargränssnittet för profiler {#applying-image-profiles-to-folders-from-profiles-user-interface}
+#### Använda Dynamic Media-bildprofiler på mappar från användargränssnittet Profiles {#applying-image-profiles-to-folders-from-profiles-user-interface}
 
 1. Tryck på Experience Manager-logotypen och navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Image Profiles]**.
 1. Välj den bildprofil som du vill använda för en eller flera mappar.
@@ -263,7 +263,7 @@ Du kan vid behov köra smart beskärning igen för att generera ytterligare besk
 
 1. I närheten av det övre högra hörnet av sidan trycker du på **[!UICONTROL Save]** och sedan på **[!UICONTROL Close]** för att gå tillbaka till resursmappen.
 
-## Tar bort en bildprofil från mappar {#removing-an-image-profile-from-folders}
+## Ta bort en bildprofil från mappar {#removing-an-image-profile-from-folders}
 
 När du tar bort en bildprofil från en mapp ärver alla undermappar automatiskt borttagningen av profilen från den överordnade mappen. All bearbetning av filer som har inträffat i mapparna förblir dock oförändrad.
 
@@ -277,7 +277,7 @@ Du kan ta bort en bildprofil från en mapp från menyn **[!UICONTROL Tools]** el
 
    Du kan bekräfta att bildprofilen inte längre används för en mapp eftersom namnet inte längre visas under mappnamnet.
 
-### Ta bort Dynamic Media-bildprofiler från mappar med hjälp av egenskaperna {#removing-image-profiles-from-folders-via-properties}
+### Ta bort Dynamic Media-bildprofiler från mappar via Egenskaper {#removing-image-profiles-from-folders-via-properties}
 
 1. Tryck på Experience Manager-logotypen, navigera till **[!UICONTROL Assets]** och sedan till den mapp som du vill ta bort en bildprofil från.
 1. Markera mappen genom att trycka på bockmarkeringen och sedan på **[!UICONTROL Properties]**.
