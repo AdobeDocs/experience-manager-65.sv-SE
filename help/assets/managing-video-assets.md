@@ -2,16 +2,15 @@
 title: Hantera videoresurser
 description: Överför, förhandsgranska, kommentera och publicera videomaterial i [!DNL Adobe Experience Manager].
 contentOwner: AG
-role: Business Practitioner
-feature: Asset Management
-translation-type: tm+mt
-source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
+role: User
+feature: Resurshantering
+exl-id: 21d3e0bd-5955-470a-8ca2-4d995c17eb4c
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
-source-wordcount: '729'
+source-wordcount: '727'
 ht-degree: 8%
 
 ---
-
 
 # Hantera videoresurser {#manage-video-assets}
 
@@ -19,7 +18,7 @@ Videoformatet är en viktig del av ett företags digitala resurser. [!DNL Adobe 
 
 Lär dig hur du hanterar och redigerar videoresurserna i [!DNL Adobe Experience Manager Assets]. Videokodning och transkodning, till exempel FFmpeg-transkodning, är möjlig med [!DNL Dynamic Media]-integrering.
 
-## Överför och förhandsgranska videomaterial {#upload-and-preview-video-assets}
+## Överföra och förhandsgranska videomaterial {#upload-and-preview-video-assets}
 
 [!DNL Adobe Experience Manager Assets] skapar förhandsvisningar för videoresurser med filnamnstillägget MP4. Om resursens format inte är MP4 installerar du FFmpeg-paketet för att generera en förhandsvisning. FFmpeg skapar videoåtergivningar av typen OGG och MP4. Du kan förhandsgranska återgivningarna i [!DNL Assets]-användargränssnittet.
 
@@ -67,11 +66,11 @@ Utför följande steg i katalogen `/apps` om du vill konfigurera en större fils
 1. I fältet **[!UICONTROL Timeout]** anger du värdet `18000` och klickar sedan på **[!UICONTROL OK]** för att återgå till arbetsflödessidan för **[!UICONTROL Dynamic Media Encode Video]**.
 1. Klicka **[!UICONTROL Save]** nära sidans överkant, under sidtiteln [!UICONTROL Dynamic Media Encode Video].
 
-## Publicera videoresurser {#publish-video-assets}
+## Publicera videomaterial {#publish-video-assets}
 
 Efter publiceringen kan du inkludera videomaterialet på en webbsida som en URL eller bädda in resurserna direkt. Mer information finns i [publicera Dynamic Media-resurser](/help/assets/publishing-dynamicmedia-assets.md).
 
-## Kommentera videoresurser {#annotate-video-assets}
+## Kommentera videomaterial {#annotate-video-assets}
 
 1. På [!DNL Assets]-konsolen väljer du **[!UICONTROL Edit]** på resurskortet för att visa sidan med resursinformation.
 1. Om du vill spela upp videon klickar du på **[!UICONTROL Preview]**.
@@ -90,6 +89,6 @@ Efter publiceringen kan du inkludera videomaterialet på en webbsida som en URL 
 >[!MORELIKETHIS]
 >
 >* [Hantera digitala resurser i Experience Manager Assets](/help/assets/manage-assets.md)
->* [Hantera samlingar i Experience Manager Assets](/help/assets/manage-collections.md)
->* [Dynamic Media videodokumentation](/help/assets/video.md).
+* [Hantera samlingar i Experience Manager Assets](/help/assets/manage-collections.md)
+* [Dynamic Media videodokumentation](/help/assets/video.md).
 
