@@ -2,16 +2,15 @@
 title: Bästa tillvägagångssätt för att övervaka [!DNL Assets] distribution
 description: Bästa tillvägagångssätt för att övervaka miljön och prestandan för din  [!DNL Adobe Experience Manager] distribution efter att den har distribuerats.
 contentOwner: AG
-role: Administrator, Architect
-feature: Asset Management
-translation-type: tm+mt
-source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
+role: Admin, Architect
+feature: Resurshantering
+exl-id: a9e1bd6b-c768-4faa-99a3-7110693998dc
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
-source-wordcount: '1672'
+source-wordcount: '1670'
 ht-degree: 0%
 
 ---
-
 
 # Bästa tillvägagångssätt för att övervaka [!DNL Adobe Experience Manager Assets]-distribution {#assets-monitoring-best-practices}
 
@@ -189,7 +188,7 @@ Här följer några färdiga hälsokontroller som är bra att övervaka:
    * Larm threshold: När statusen inte är OK
    * Larm-definition: Det finns fel i loggfilerna. Mer information om orsaken till problemet finns i loggattributet.
 
-## Vanliga problem och lösningar {#common-issues-and-resolutions}
+## Vanliga problem och lösningar  {#common-issues-and-resolutions}
 
 Om du råkar ut för problem i samband med övervakningen finns det några felsökningsuppgifter som du kan utföra för att lösa vanliga problem med [!DNL Experience Manager]-distributioner:
 
