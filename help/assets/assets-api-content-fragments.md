@@ -10,16 +10,15 @@ content-type: reference
 topic-tags: extending-assets
 discoiquuid: 03502b41-b448-47ab-9729-e0a66a3389fa
 docset: aem65
-feature: Content Fragments
-role: Business Practitioner, Administrator
-translation-type: tm+mt
-source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
+feature: Innehållsfragment
+role: User, Admin
+exl-id: 0f9efb47-a8d1-46d9-b3ff-a6c0741ca138
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
-source-wordcount: '1864'
+source-wordcount: '1861'
 ht-degree: 2%
 
 ---
-
 
 # Stöd för Content Fragments i AEM Assets HTTP API{#content-fragments-support-in-aem-assets-http-api}
 
@@ -56,7 +55,7 @@ Resursens REST API:
 
 Resursens REST API är tillgängligt för varje körklar installation av en nyligen AEM version.
 
-## Nyckelbegrepp {#key-concepts}
+## Viktiga begrepp {#key-concepts}
 
 Resursens REST API ger [REST](https://en.wikipedia.org/wiki/Representational_state_transfer)-åtkomst till resurser som lagras i en AEM. Slutpunkten `/api/assets` används och resursens sökväg krävs för att komma åt den (utan inledande `/content/dam`).
 
@@ -242,7 +241,7 @@ Användningen kan variera beroende på om du använder en AEM författare eller 
 >
 >Mer information finns i [API-referens](/help/assets/assets-api-content-fragments.md#api-reference). Speciellt [Adobe Experience Manager Assets API - Content Fragments](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/assets-api-content-fragments/index.html).
 
-### Läs/Leverera {#read-delivery}
+### Läsning/leverans {#read-delivery}
 
 Användning sker via:
 
@@ -380,4 +379,3 @@ Mer information finns i:
 
 * [Resurser för HTTP API-dokumentation](/help/assets/mac-api-assets.md)
 * [AEM Gem-session: OAuth](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-oauth-server-functionality-in-aem.html)
-
