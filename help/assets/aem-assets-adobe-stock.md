@@ -2,11 +2,10 @@
 title: Hantera [!DNL Adobe Stock] resurser
 description: Sök, hämta, licensiera och hantera [!DNL Adobe Stock] resurser inifrån [!DNL Adobe Experience Manager]. Använd de licensierade mediefilerna som andra digitala resurser.
 contentOwner: AG
-feature: Search, Adobe Stock
-role: Business Practitioner, Administrator
+feature: Sök, Adobe Stock
+role: User, Admin
 exl-id: 8ec597df-bb64-4768-bf9c-e8cca4fea25b
-translation-type: tm+mt
-source-git-commit: a7a9a31364497ab67d805e45ba4fa03c927828ed
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1014'
 ht-degree: 4%
@@ -68,7 +67,7 @@ När en [!DNL Adobe Stock]-resurs har licensierats i [!DNL Experience Manager] k
 
 **A.**[!DNL Adobe Stock] Sök efter resurser som liknar de resurser vars ID har angetts. **B.** Sök efter resurser som matchar ditt val av form eller orientering. **C.** Sök efter en eller flera resurstyper som stöds  **D.** Öppna eller dölj filtret  **E.** Licensiera och spara den markerade resursen i  [!DNL Experience Manager] **F.** Spara resursen i  [!DNL Experience Manager] med vattenstämpel  **G.**   [!DNL Adobe Stock]   ****   [!DNL Adobe Stock]   ****   **** Utforska resurser på webbplatsen som liknar den markerade resursen¥H.SökAntal markerade resurser från den markerade resursen. resultatetJ.Växla mellan kortvyn och listvyn
 
-### Sök efter resurser {#find-assets}
+### Hitta resurser {#find-assets}
 
 Dina [!DNL Experience Manager]-användare kan söka efter resurser i både, [!DNL Experience Manager] och [!DNL Adobe Stock]. När sökplatsen inte är begränsad till [!DNL Adobe Stock] visas sökresultaten från [!DNL Experience Manager] och [!DNL Adobe Stock].
 
