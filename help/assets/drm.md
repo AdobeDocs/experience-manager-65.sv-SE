@@ -2,18 +2,17 @@
 title: Digital Rights Management tillgångar
 description: Lär dig hur du hanterar förfallotillstånd för mediefiler och information för licensierade mediefiler i [!DNL Experience Manager].
 contentOwner: AG
-role: Business Practitioner, Administrator
-feature: DRM,Asset Management
-translation-type: tm+mt
-source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
+role: User, Admin
+feature: DRM,Resurshantering
+exl-id: a49cfd25-e8d9-492f-be5e-acab0cf67a28
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
-source-wordcount: '1326'
+source-wordcount: '1323'
 ht-degree: 6%
 
 ---
 
-
-# Digital Rights Management för resurser {#digital-rights-management-in-assets}
+# Digital Rights Management för tillgångar {#digital-rights-management-in-assets}
 
 Digitala resurser är ofta kopplade till en licens som anger användningsvillkoren och hur länge de ska användas. Eftersom [!DNL Adobe Experience Manager Assets] är helt integrerat med [!DNL Experience Manager]-plattformen kan du effektivt hantera förfalloinformation och resurstillstånd. Du kan även associera licensinformation med resurser.
 
