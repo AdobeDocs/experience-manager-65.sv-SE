@@ -2,16 +2,15 @@
 title: Förbered resurser för översättning
 description: Skapa rotmappar för språk för att förbereda resurser för översättning för stöd av flerspråkiga resurser.
 contentOwner: AG
-role: Business Practitioner, Administrator
-feature: Projects
-translation-type: tm+mt
-source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
+role: User, Admin
+feature: Projekt
+exl-id: eee768e3-3eb4-46fa-b9ae-9ef8764a3a94
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
-source-wordcount: '433'
+source-wordcount: '430'
 ht-degree: 0%
 
 ---
-
 
 # Förbered resurser för översättning {#preparing-assets-for-translation}
 
