@@ -9,18 +9,17 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: managing-assets
 content-type: reference
 discoiquuid: d2decc31-a04b-4a8e-bb19-65f21cf7107e
-feature: Content Fragments
-role: Business Practitioner, Administrator
-translation-type: tm+mt
-source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
+feature: Innehållsfragment
+role: User, Admin
+exl-id: 19bb58da-8220-404e-bddb-34be94a3a7d7
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
-source-wordcount: '934'
+source-wordcount: '931'
 ht-degree: 3%
 
 ---
 
-
-# Skapar översättningsprojekt för innehållsfragment {#creating-translation-projects-for-content-fragments}
+# Skapa översättningsprojekt för innehållsfragment {#creating-translation-projects-for-content-fragments}
 
 Förutom resurser har Adobe Experience Manager (AEM) Assets stöd för språkkopieringsarbetsflöden för [innehållsfragment](/help/assets/content-fragments/content-fragments.md) (inklusive variationer). Ingen ytterligare optimering krävs för att köra språkkopieringsarbetsflöden på innehållsfragment. I varje arbetsflöde skickas hela innehållsfragmentet för översättning.
 
@@ -165,4 +164,3 @@ Om du vill kunna översätta innehållsfragment som innehåller blandade media m
    >[!NOTE]
    >
    >Procedurerna för att lägga till ett innehållsfragment i ett befintligt projekt eller för att utföra uppdateringsarbetsflöden liknar motsvarande procedurer för resurser. Vägledning om dessa förfaranden finns i de förfaranden som beskrivs för tillgångar.
-
