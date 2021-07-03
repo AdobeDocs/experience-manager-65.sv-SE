@@ -2,16 +2,15 @@
 title: Rapporter om användning och delning av resurser
 description: Rapporterar om dina resurser i [!DNL Adobe Experience Manager Assets] som hjälper dig att förstå användningen, aktiviteten och delningen av dina digitala resurser.
 contentOwner: AG
-role: Business Practitioner, Administrator
-feature: Asset Reports,Asset Management
-translation-type: tm+mt
-source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
+role: User, Admin
+feature: Resursrapporter,Resurshantering
+exl-id: b4963a03-3496-4c6c-9d30-8812304d0e9f
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
-source-wordcount: '1080'
+source-wordcount: '1077'
 ht-degree: 9%
 
 ---
-
 
 # Materialrapporter {#asset-reports}
 
@@ -146,7 +145,7 @@ Följ de här stegen för att lägga till anpassade kolumner i de här rapporter
 
 1. Klicka på **[!UICONTROL Create]** i verktygsfältet. Ett meddelande meddelar att rapportgenereringen har initierats.
 
-## Konfigurera rensningstjänsten {#configure-purging-service}
+## Konfigurera rensningstjänst {#configure-purging-service}
 
 Om du vill ta bort rapporter som du inte längre behöver konfigurerar du tjänsten DAM Report Renge från webbkonsolen så att befintliga rapporter rensas baserat på antal och ålder.
 
