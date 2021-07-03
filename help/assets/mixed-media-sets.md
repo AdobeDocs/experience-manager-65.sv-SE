@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: ed84157a-e6b4-4dde-af2e-a1e0b6259628
 docset: aem65
 feature: Blanda medieuppsättningar,Resurshantering
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 70a72fb9-a289-4eda-abcc-300edf9f1961
-source-git-commit: 1349d9929fc64ad46fc91f0d189bab54cca9de81
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1384'
 ht-degree: 23%
@@ -80,7 +80,7 @@ Börja med att ladda upp bilder och videoklipp för uppsättningarna med blandad
 
 Om du dessutom vill lägga till snurrsuppsättningar eller bilduppsättningar i den blandade medieuppsättningen skapar du också dessa uppsättningar.
 
-## Skapar blandade medieuppsättningar {#creating-mixed-media-sets}
+## Skapa blandade medieuppsättningar {#creating-mixed-media-sets}
 
 Du kan lägga till bilder, bilduppsättningar, snurruppsättningar och videoklipp i din uppsättning med blandade media. Se till att dina filer, bilduppsättningar och snurruppsättningar är klara att publiceras innan du lägger till dem i den blandade medieuppsättningen.
 
@@ -172,7 +172,7 @@ Du kan utföra olika redigeringsåtgärder för resurser i blandade medieuppsät
 
 Se [Förhandsgranska resurser](/help/assets/previewing-assets.md) för mer information om hur du förhandsvisar blandade medieuppsättningar.
 
-## Publicerar blandade medieuppsättningar {#publishing-mixed-media-sets}
+## Publicera blandade medieuppsättningar {#publishing-mixed-media-sets}
 
 Mer information om hur du publicerar blandade medieuppsättningar finns i [Publicera resurser](/help/assets/publishing-dynamicmedia-assets.md).
 
