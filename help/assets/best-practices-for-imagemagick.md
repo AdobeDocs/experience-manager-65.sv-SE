@@ -2,16 +2,15 @@
 title: Installera och konfigurera ImageMagick
 description: Läs om programmet ImageMagick, hur du installerar det, konfigurerar kommandoradsprocessen och använder det för att redigera, skapa och generera miniatyrbilder från bilder.
 contentOwner: AG
-role: Administrator
-feature: Renditions,Developer Tools
-translation-type: tm+mt
-source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
+role: Admin
+feature: Återgivningar,Utvecklarverktyg
+exl-id: 6c149d31-1e64-4d29-a32a-58bd69e9fa98
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '658'
 ht-degree: 0%
 
 ---
-
 
 # Installera och konfigurera ImageMagick så att det fungerar med [!DNL Experience Manager Assets] {#install-and-configure-imagemagick-to-work-with-aem-assets}
 
@@ -35,7 +34,7 @@ Det finns flera versioner av installationsfilerna för ImageMagic för olika ope
 1. Ange miljövariabeln path till installationskatalogen för ImageMagic.
 1. Om du vill kontrollera om installationen lyckades kör du kommandot `identify -version`.
 
-## Ställa in kommandoradsprocessteget {#set-up-the-command-line-process-step}
+## Ställa in kommandoradens processsteg {#set-up-the-command-line-process-step}
 
 Du kan ställa in kommandoradens processsteg för ditt särskilda användningsfall. Följ de här stegen för att skapa en vänd bild och miniatyrbilder (140x100, 48x48, 319x319 och 1280x1280) varje gång du lägger till en JPEG-bildfil i `/content/dam` på [!DNL Experience Manager]-servern:
 
@@ -78,7 +77,7 @@ Du kan ställa in kommandoradens processsteg för ditt särskilda användningsfa
 
 1. Om du vill verifiera att bearbetningen är korrekt överför du en JPG-bild till [!DNL Assets]. När bearbetningen är klar kontrollerar du om en bild som har vänts och återgivningarna har genererats eller inte.
 
-## Minskar säkerhetsbrister {#mitigating-security-vulnerabilities}
+## Minska säkerhetsluckor {#mitigating-security-vulnerabilities}
 
 Det finns flera säkerhetsluckor i samband med användning av ImageMagick för att bearbeta bilder. Att bearbeta bilder som skickas in av användaren innebär till exempel en risk för fjärrexekvering av kod (RCE).
 
