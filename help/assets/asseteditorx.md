@@ -2,16 +2,15 @@
 title: Utöka resursredigeraren
 description: Lär dig hur du utökar funktionerna i Resursredigeraren med hjälp av anpassade komponenter.
 contentOwner: AG
-role: Business Practitioner, Administrator
-feature: Developer Tools
-translation-type: tm+mt
-source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
+role: User, Admin
+feature: Utvecklarverktyg
+exl-id: de1c63c1-a0e5-470b-8d83-b594513a5dbd
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
-source-wordcount: '693'
+source-wordcount: '690'
 ht-degree: 13%
 
 ---
-
 
 # Utöka resursredigeraren {#extending-asset-editor}
 
@@ -63,7 +62,7 @@ Vissa [!DNL Assets]-komponenter använder widgetbiblioteket. För att kunna åte
 
 Komponenterna för exempelsidan kräver att alla väljare börjar med `.asseteditor` av `static.css` (`/etc/designs/geometrixx/static.css`). Bästa praxis: Kopiera alla `.asseteditor`-väljare till formatmallen och justera reglerna efter behov.
 
-### FormChooser: Justeringar för resurser som eventuellt lästs in {#formchooser-adjustments-for-eventually-loaded-resources}
+### FormChooser: Justeringar för resurser som slutligen läses in {#formchooser-adjustments-for-eventually-loaded-resources}
 
 Resursredigeraren använder formulärväljaren, som gör att du kan redigera resurser - i det här fallet resurser - på samma formulärsida genom att lägga till en formulärväljare och formulärsökvägen till resursens URL.
 
