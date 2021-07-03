@@ -2,10 +2,10 @@
 title: Konfigurera Assets Insights för att få analyser.
 description: Konfigurera resursinsikter i [!DNL Adobe Experience Manager Assets].
 contentOwner: AG
-role: Architect, Administrator
+role: Architect, Admin
 feature: Resursinsikter,Resursrapporter
 exl-id: 67be0ae6-5939-40fe-bf8a-b8a2c2f68f15
-source-git-commit: 68c36d4e3a14567a4d115ee64a4474bcaf9aa386
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '239'
 ht-degree: 1%
@@ -35,7 +35,7 @@ ht-degree: 1%
 1. När [!DNL Experience Manager] har autentiserat dina autentiseringsuppgifter väljer du en [!DNL Adobe Analytics]-rapportsvit från **[!UICONTROL Report Suite]**-listan där du vill att resursinsikter ska hämta data. Klicka på **[!UICONTROL Add]**.
 1. När [!DNL Experience Manager] har konfigurerat rapportsviten klickar du på **[!UICONTROL Done]**.
 
-## Sidspåraren {#page-tracker}
+## Sidspårare {#page-tracker}
 
 När du har konfigurerat ditt [!DNL Adobe Analytics]-konto genereras sidspårningskoden åt dig. Om du vill att Assets Insights ska kunna spåra [!DNL Experience Manager]-resurser som används på tredjepartswebbplatser, inkluderar du sidspårningskoden i webbplatskoden. Använd verktyget [!UICONTROL Page Tracker] i [!DNL Experience Manager Assets] för att generera sidspårningskod. Mer information om hur du inkluderar Page Tracker-koden i tredjepartswebbsidor finns i [Använda sidspåraren och bädda in kod i webbsidor](/help/assets/use-page-tracker.md).
 
