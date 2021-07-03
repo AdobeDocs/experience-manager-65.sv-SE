@@ -2,16 +2,15 @@
 title: Konfiguration och administration av metadatafunktioner.
 description: Konfiguration och administration av [!DNL Experience Manager Assets] funktioner för tillägg och hantering av metadata.
 contentOwner: AG
-role: Business Practitioner, Administrator
+role: User, Admin
 feature: Metadata
-translation-type: tm+mt
-source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
+exl-id: 56c92b7f-e687-4ab5-a376-afa58bdb6ee0
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
-source-wordcount: '1800'
+source-wordcount: '1797'
 ht-degree: 4%
 
 ---
-
 
 # Konfiguration och administration av metadatafunktioner i [!DNL Assets] {#config-metadata}
 
@@ -23,7 +22,7 @@ ht-degree: 4%
 
 [!DNL Adobe Experience Manager Assets] sparar metadata för varje resurs. Det gör det enklare att kategorisera och ordna resurser och det hjälper personer som letar efter en viss resurs. Med möjligheten att behålla och hantera metadata med dina resurser kan du automatiskt ordna och bearbeta resurser baserat på deras metadata. [!DNL Adobe Experience Manager Assets] gör att administratörer kan konfigurera och anpassa metadatafunktioner för att ändra standarderbjudandet för Adobe.
 
-## Redigera metadatamatchemat {#metadata-schema}
+## Redigera metadatamatchema {#metadata-schema}
 
 Mer information finns i [redigera metadata-schemaformulär](metadata-schemas.md#edit-metadata-schema-forms).
 
@@ -131,11 +130,11 @@ To apply a metadata profile globally, follow these steps:
   ![See applied metadata profile to a folder in the JCR in CRXDE](assets/metadata-profile-folder-setting2.png)
 -->
 
-## Metadataschema för en mapp {#folder-metadata-schema}
+## Metadata-schema för en mapp {#folder-metadata-schema}
 
 [!DNL Adobe Experience Manager Assets] Med kan du skapa metadatascheman för resursmappar, som definierar layouten och metadata som visas på mappegenskapssidor.
 
-### Lägg till ett mappmetadatamatchschema {#add-a-folder-metadata-schema-form}
+### Lägga till ett schemaformulär för mappmetadata {#add-a-folder-metadata-schema-form}
 
 Använd schemaredigeraren för mappmetadata i Forms för att skapa och redigera metadatascheman för mappar.
 
@@ -220,13 +219,13 @@ Du kan ta bort schemaformulär för mappmetadata från Forms-sidan för mappmeta
 
 ![delete_form](assets/delete_form.png)
 
-### Tilldela ett mappmetadatamatchema {#assign-a-folder-metadata-schema}
+### Tilldela ett mappmetadatchema {#assign-a-folder-metadata-schema}
 
 Du kan tilldela ett mappmetadatchema till en mapp från Forms-sidan för mappmetadataschema eller när du skapar en mapp.
 
 Om du konfigurerar ett metadataram för en mapp lagras sökvägen till schemaformuläret i egenskapen `folderMetadataSchema` för mappnoden under `./jcr:content`.
 
-#### Tilldela till ett schema från sidan för mappmetadataschema {#assign-to-a-schema-from-the-folder-metadata-schema-page}
+#### Tilldela till ett schema från sidan Mappmetadatamatchema {#assign-to-a-schema-from-the-folder-metadata-schema-page}
 
 1. I gränssnittet [!DNL Experience Manager] går du till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Folder Metadata Schemas]**.
 1. På Forms-sidan för mappmetadataschema väljer du det schemaformulär som du vill tillämpa på en mapp.
@@ -254,7 +253,7 @@ Du kan tilldela ett mappmetadatchema när du skapar en mapp. Om det finns minst 
 1. Öppna metadataegenskaperna för den mapp som du tillämpade metadataschemat på.
 1. Om du vill visa metadatafälten för mappen klickar du på fliken **[!UICONTROL Folder Metadata]**.
 
-### Använd mappmetadataschemat {#use-the-folder-metadata-schema}
+### Använd mappens metadatamatchema {#use-the-folder-metadata-schema}
 
 Öppna egenskaperna för en mapp som har konfigurerats med ett schema för mappmetadata. En **[!UICONTROL Folder Metadata]**-flik visas på mappsidan [!UICONTROL Properties]. Om du vill visa formuläret för schemat med mappmetadata väljer du den här fliken.
 
