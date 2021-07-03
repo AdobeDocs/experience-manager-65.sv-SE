@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 docset: aem65
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: cd025e9d-6fb1-436c-9e78-795f2daaf345
 feature: Publicering
-source-git-commit: 1349d9929fc64ad46fc91f0d189bab54cca9de81
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '2542'
 ht-degree: 1%
@@ -74,7 +74,7 @@ När du har konfigurerat selektiv publicering i en mapp kan du göra något av f
 
 1. Tryck på **[!UICONTROL Save & Close]** längst upp till höger på sidan och tryck sedan på **[!UICONTROL OK]** för att återgå till Experience Manager Assets.
 
-## Publicera utvalda resurser på Dynamic Media eller Experience Manager med Hantera publikation{#selective-publish-manage-publication}
+## Publicera valfritt material till Dynamic Media eller Experience Manager med Hantera publikation{#selective-publish-manage-publication}
 
 Innan du kan använda **[!UICONTROL Manage Publication]** för att selektivt publicera resurser på Dynamic Media eller Experience Manager måste du ange något av följande:
 
@@ -123,7 +123,7 @@ Se [Skapa en Dynamic Media-konfiguration](#configuring-dynamic-media-cloud-servi
    * Tryck på **[!UICONTROL Publish]** eller **[!UICONTROL Publish to Dynamic Media]** i det övre högra hörnet på sidan **[!UICONTROL Manage Publication - Scope]**.
 1. Tryck på **[!UICONTROL OK]**.
 
-### Avpublicera valfritt material från Dynamic Media eller Experience Manager med Manage Publication {#selective-unpublish-manage-publication}
+### Avpublicera valfritt material från Dynamic Media eller Experience Manager med Hantera publikation {#selective-unpublish-manage-publication}
 
 1. Tryck på Experience Manager-logotypen i Experience Manager för att komma åt den globala navigeringskonsolen. Tryck på navigeringsikonen till vänster (alldeles ovanför verktygsikonen) och tryck sedan på **[!UICONTROL Assets]** > **[!UICONTROL Files]**.
 1. Gör något av följande i **[!UICONTROL Card View]**, **[!UICONTROL Column View]** eller **[!UICONTROL List View]**:
@@ -262,7 +262,7 @@ När du använder **[!UICONTROL List View]** visas en extra kolumn för **[!UICO
    * En mapp som är *inte* konfigurerad att synkronisera till Dynamic Media visar inte Dynamic Media-kolumnen.
       ![Listvy och tidslinje](/help/assets/assets-dm/selective-publish-status-timeline.png)
 
-## Felsökning av selektiv publicering {#selective-publish-troubleshoot}
+## Felsöka selektiv publicering {#selective-publish-troubleshoot}
 
 En resurs som inte synkroniseras med Dynamic Media men som har en publiceringsåtgärd från Dynamic Media aktiverad resulterar i följande felmeddelande och lösning:
 
