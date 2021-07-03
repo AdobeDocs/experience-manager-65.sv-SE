@@ -2,16 +2,15 @@
 title: Bearbeta resurser med arbetsflöden
 description: Resursbearbetning för att konvertera format, skapa renderingar, hantera resurser, validera resurser och köra arbetsflöden.
 contentOwner: AG
-feature: Workflow, Renditions
-role: Business Practitioner, Administrator
-translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+feature: Arbetsflöde, återgivningar
+role: User, Admin
+exl-id: e7c84385-efb3-4997-83ff-7a7f31582469
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
-source-wordcount: '929'
+source-wordcount: '926'
 ht-degree: 3%
 
 ---
-
 
 # Bearbeta digitala resurser {#process-assets}
 
@@ -31,7 +30,7 @@ Information om de olika arbetsflödesmodellerna som är tillgängliga som standa
 
 *Bild: Vissa standardarbetsflöden som är tillgängliga i  [!DNL Experience Manager].*
 
-## Använd arbetsflöden för att bearbeta resurser {#applying-workflows-to-assets}
+## Använda arbetsflöden för att bearbeta resurser {#applying-workflows-to-assets}
 
 Att använda arbetsflöden på digitala resurser är detsamma som för webbsidor. En fullständig guide om hur du skapar och använder arbetsflöden finns i [starta arbetsflöden](/help/sites-authoring/workflows-participating.md).
 
@@ -88,7 +87,7 @@ Hur du tillämpar ett arbetsflöde på flera mappar liknar hur du tillämpar ett
 
 Se [tillämpa ett arbetsflöde på en samling](/help/assets/manage-collections.md#running-a-workflow-on-a-collection).
 
-## Starta ett arbetsflöde automatiskt för att bearbeta resurser med villkor {#auto-execute-workflow-on-some-assets}
+## Starta ett arbetsflöde automatiskt för att bearbeta resurser {#auto-execute-workflow-on-some-assets}
 
 Administratörer kan konfigurera arbetsflödet så att resurser automatiskt körs och bearbetas baserat på fördefinierade villkor. Funktionen är användbar för användare och marknadsförare inom olika branscher, till exempel för att skapa anpassade arbetsflöden för specifika mappar. Anta att alla resurser från en reklambyrås foton kan vara vattenstämplade eller att alla resurser som överförts av en frilansare kan bearbetas för att skapa specifika renderingar.
 
@@ -105,7 +104,7 @@ För en arbetsflödesmodell kan användare skapa en startfil för arbetsflödet 
 >[!MORELIKETHIS]
 >
 >* [Använda och delta i arbetsflöden](/help/sites-authoring/workflows.md)
->* [Skapa arbetsflödesmodeller och utöka arbetsflödesfunktioner](/help/sites-developing/workflows.md)
->* [Metoder som kör arbetsflöden](/help/sites-administering/workflows-starting.md)
->* [Bästa arbetsflöden](/help/sites-developing/workflows-best-practices.md)
+* [Skapa arbetsflödesmodeller och utöka arbetsflödesfunktioner](/help/sites-developing/workflows.md)
+* [Metoder som kör arbetsflöden](/help/sites-administering/workflows-starting.md)
+* [Bästa arbetsflöden](/help/sites-developing/workflows-best-practices.md)
 
