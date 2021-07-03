@@ -2,16 +2,15 @@
 title: Introduktion till [!DNL Adobe Experience Manager Assets]
 description: Lär dig vad som är digital resurshantering, användningsexempel och [!DNL Adobe Experience Manager Asset] erbjudande.
 contentOwner: AG
-feature: Asset Management
-role: Leader, Architect, Business Practitioner
-translation-type: tm+mt
-source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
+feature: Resurshantering
+role: Leader, Architect, User
+exl-id: 68239634-a2e8-414e-a866-cd8082641ee8
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
-source-wordcount: '876'
+source-wordcount: '872'
 ht-degree: 0%
 
 ---
-
 
 # Om [!DNL Adobe Experience Manager Assets] som en DAM-lösning {#administering-assets}
 
@@ -36,7 +35,7 @@ ht-degree: 0%
 
 Det grundläggande användargränssnittet är samma som för [!DNL Sites]. Mer information finns i [Översikt över platserna](/help/sites-authoring/page-authoring.md).
 
-### Digital Asset Management jämfört med bildkomponenten {#digital-asset-management-versus-image-component}
+### Digital Asset Management jämfört med bildkomponent {#digital-asset-management-versus-image-component}
 
 När du avgör om en bild ska placeras i DAM-databasen eller om bildkomponenten ska användas, bör du tänka på bildens livscykel:
 
@@ -53,7 +52,7 @@ En resurs är i stort sett en binär resurs plus metadata plus återgivningar pl
 >
 >Överföring och/eller redigering av en stor mängd resurser (särskilt bilder) kan påverka prestandan för din [!DNL Experience Manager]-distribution.
 
-### [!DNL Experience Manager Assets] terminologi  {#aem-assets-terminology}
+### [!DNL Experience Manager Assets] terminologi {#aem-assets-terminology}
 
 När du arbetar med digitala resurser i [!DNL Experience Manager] måste du förstå följande terminologi:
 
@@ -86,9 +85,9 @@ De uppgifter du kan utföra med dessa förkonfigurerade arbetsflöden:
 
 Du kan förstås även använda arbetsflöden manuellt. En lista över standardarbetsflöden finns i [Resursmediehanterare](media-handlers.md).
 
-## [!DNL Experience Manager Assets] och  [!DNL Media Library] {#cq-dam-vs-cq-medialibrary}
+## [!DNL Experience Manager Assets] and [!DNL Media Library] {#cq-dam-vs-cq-medialibrary}
 
-Mer information om skillnaderna finns i [Resurser och mediebibliotek](medialibrary.md).
+Mer information om skillnaderna finns i [Resurser och Media Library](medialibrary.md).
 
 >[!MORELIKETHIS]
 >
