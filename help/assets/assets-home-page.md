@@ -2,18 +2,17 @@
 title: '[!DNL Assets] Startsidans upplevelse'
 description: Anpassa startsidan för [!DNL Experience Manager Assets] välkomstskärmen, inklusive en ögonblicksbild av nyligen gjorda aktiviteter kring resurser.
 contentOwner: AG
-feature: Developer Tools, Asset Management
-role: Administrator, Business Practitioner
-translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+feature: Utvecklarverktyg, Resurshantering
+role: Admin, User
+exl-id: 042bd959-256a-4794-a34d-0848a6b8840d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
-source-wordcount: '514'
+source-wordcount: '511'
 ht-degree: 1%
 
 ---
 
-
-# [!DNL Adobe Experience Manager Assets] Home Page Experience  {#aem-assets-home-page-experience}
+# [!DNL Adobe Experience Manager Assets] Home Page Experience {#aem-assets-home-page-experience}
 
 Anpassa startsidan för [!DNL Adobe Experience Manager Assets] för en rik välkomstskärm, inklusive en ögonblicksbild av nyligen gjorda aktiviteter kring resurser.
 
