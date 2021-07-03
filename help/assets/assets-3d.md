@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: introduction
 content-type: reference
 feature: 3D-resurser,Resurshantering
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 01c96f1e-c0e6-497d-bd7a-c0fd547a34da
-source-git-commit: 1c95217c98cdf24182eebbfea09c807318b2d514
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '2235'
 ht-degree: 2%
@@ -84,7 +84,7 @@ Se [Konfigurera Dynamic Media-Cloud Services](/help/assets/config-dms7.md#config
    * [Publicera statiska Dynamic Media 3D-resurser](#publishing-three-d-assets)
    * [Alternativa metoder för publicering av Dynamic Media 3D-resurser med Dimensional Viewer](#alternate-publish-methods)
 
-## Om att visa och interagera med 3D-resurser {#viewing-three-d-assets}
+## Visa och interagera med 3D-resurser {#viewing-three-d-assets}
 
 I det här avsnittet beskrivs hur du visar och interagerar med 3D-resurser på två olika sätt: från sidan med resursinformation och från 3D-mediekomponenten i Sites.
 
@@ -162,7 +162,7 @@ komponentenEn helt interaktiv 3D-resurs som visas i  **[!UICONTROL Preview]** l�
    | **Återställ** | I närheten av det nedre högra hörnet av sidan trycker du på ikonen Återställ för att återställa vymålpunkten till mitten av 3D-resursen. Återställ flyttar också kameran närmare eller längre bort för att visa resursen i dess helhet och med en rimlig visningsstorlek. |  |  |
    | **Helskärmsläge** | Om du vill aktivera helskärmsläget trycker du på ikonen Helskärm längst ned till höger på sidan. |  |  |
 
-## Om att arbeta med 3D-mediekomponenten {#working-with-three-d-media-component}
+## Arbeta med 3D Media-komponenten {#working-with-three-d-media-component}
 
 Dynamic Media innehåller en Dynamic Media 3D Media-komponent som du kan använda i Adobe Experience Manager Sites för att aktivera interaktiv visning av 3D-modeller på dina webbsidor.
 
@@ -210,7 +210,7 @@ Nu kan du tilldela en 3D-resurs till komponenten.
 
 Se [Tilldela en 3D-resurs till 3D-mediekomponenten](#assigning-a-three-d-asset-to-the-component).
 
-### Valfritt - Konfigurera 3D-mediekomponenten {#configuring-the-three-d-component}
+### Valfritt - Konfigurera komponenten 3D Media {#configuring-the-three-d-component}
 
 1. Markera **[!UICONTROL 3D Media Viewer]**-komponenten som du tidigare lade till på Experience Manager-sidan i sidredigeraren Platser.
 1. Tryck på ikonen **[!UICONTROL Configuration]** (skiftnyckel) så att du kan öppna dialogrutan för komponentkonfiguration.
