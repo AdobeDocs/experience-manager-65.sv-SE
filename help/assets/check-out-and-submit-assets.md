@@ -2,16 +2,15 @@
 title: Checka in och checka ut filer i [!DNL Assets]
 description: Lär dig hur du checkar ut resurser för redigering och checkar in dem igen när ändringarna är klara.
 contentOwner: AG
-role: Business Practitioner
-feature: Asset Management
-translation-type: tm+mt
-source-git-commit: ad0672c345262712e51e821fa4e050b505063ac4
+role: User
+feature: Resurshantering
+exl-id: 544ef73c-4e4b-433f-a173-fdf1c8f45d8e
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
-source-wordcount: '422'
+source-wordcount: '420'
 ht-degree: 3%
 
 ---
-
 
 # Checka in och checka ut filer i [!DNL Experience Manager] DAM {#check-in-and-check-out-files-in-assets}
 
@@ -21,7 +20,7 @@ Om du vill kunna checka ut/in resurser måste du ha skrivbehörighet för dem.
 
 Den här funktionen förhindrar att andra användare åsidosätter ändringar som gjorts av en författare där flera användare samarbetar i redigeringsarbetsflöden mellan team.
 
-## Kolla in resurser {#checking-out-assets}
+## Checka ut resurser {#checking-out-assets}
 
 1. Välj den resurs du vill checka ut i [!DNL Assets]-användargränssnittet. Du kan också välja flera resurser att checka ut.
 1. Klicka på **[!UICONTROL Checkout]** i verktygsfältet. Alternativet **[!UICONTROL Checkout]** växlar till **[!UICONTROL Checkin]**.
