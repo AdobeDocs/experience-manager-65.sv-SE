@@ -5,9 +5,9 @@ contentOwner: Rick Brough
 topic-tags: introduction
 content-type: reference
 feature: Tillgänglighet
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: bbdb800c-b6f8-4506-b8ac-daf64edcd6c0
-source-git-commit: a4e9a4003bf0ce686578d3f8b3fddc19bc49dfb4
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '568'
 ht-degree: 0%
