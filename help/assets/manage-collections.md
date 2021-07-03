@@ -3,16 +3,15 @@ title: Hantera samlingar med digitala resurser
 description: Lär dig mer om hur du hanterar samlingar med resurser, som att skapa, visa, ta bort, redigera och hämta samlingar.
 contentOwner: AG
 mini-toc-levels: 1
-role: Business Practitioner
-feature: Collections,Asset Management
-translation-type: tm+mt
-source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
+role: User
+feature: Samlingar,Resurshantering
+exl-id: 2117b2de-8024-4aa8-9ce0-68a156928356
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
-source-wordcount: '2029'
+source-wordcount: '2027'
 ht-degree: 10%
 
 ---
-
 
 # Hantera samlingar {#managing-collections}
 
@@ -147,7 +146,7 @@ Samlingsmetadata omfattar data om samlingen, inklusive taggar som läggs till.
 1. På sidan **[!UICONTROL Collection Metadata]** visar du samlingens metadata från flikarna **[!UICONTROL Basic]** och **[!UICONTROL Advanced]**.
 1. Ändra metadata efter behov. Spara ändringarna genom att klicka på **[!UICONTROL Save & Close]** i verktygsfältet.
 
-## Redigera metadata för flera samlingar i grupp {#editing-collection-metadata-in-bulk}
+## Redigera metadata för flera samlingar samtidigt {#editing-collection-metadata-in-bulk}
 
 Du kan redigera metadata för flera samlingar samtidigt. Med den här funktionen kan du snabbt replikera vanliga metadata i flera samlingar.
 
@@ -259,7 +258,7 @@ Så här tar du bort sparade sökningar:
 
 1. Klicka på **[!UICONTROL Delete]** i dialogrutan för att ta bort den sparade sökningen.
 
-## Kör ett arbetsflöde i en samling {#running-a-workflow-on-a-collection}
+## Köra ett arbetsflöde i en samling {#running-a-workflow-on-a-collection}
 
 Du kan köra ett arbetsflöde för resurserna i en samling. Om samlingen innehåller kapslade samlingar körs arbetsflödet även på resurserna i de kapslade samlingarna. Om samlingen och den kapslade samlingen innehåller duplicerade resurser körs arbetsflödet bara en gång för sådana resurser.
 
@@ -272,5 +271,5 @@ Du kan köra ett arbetsflöde för resurserna i en samling. Om samlingen innehå
 >[!MORELIKETHIS]
 >
 >* [Konfigurera e-postmeddelanden för Experience Manager Assets](/help/sites-administering/notification.md#assetsconfig)
->* [Skapa en granskningsuppgift för samlingar](bulk-approval.md)
+* [Skapa en granskningsuppgift för samlingar](bulk-approval.md)
 
