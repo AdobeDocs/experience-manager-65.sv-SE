@@ -8,16 +8,16 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 82bed457-794e-4bf2-bc80-abde24fd2851
 feature: Förinställningar för visningsprogram
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: daa1ffdd-de5c-470e-8875-84144b7d327f
-source-git-commit: 1349d9929fc64ad46fc91f0d189bab54cca9de81
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '215'
 ht-degree: 23%
 
 ---
 
-# Använda förinställningar för Dynamic Media Viewer {#applying-viewer-presets}
+# Använda förinställningar för Dynamic Media-visningsprogram {#applying-viewer-presets}
 
 En visningsförinställning är en samling inställningar som bestämmer hur användare visar mediefiler på datorskärmar och mobila enheter. Du kan använda alla förinställningar för visningsprogram som du har skapat av administratören på en resurs.
 
@@ -28,7 +28,7 @@ Se även [Förinställningar för publiceringsvisningsprogram](managing-viewer-p
 Du behöver inte publicera förinställningar för visningsprogrammet beroende på vilket publiceringsläge du använder.
 Eventuella problem med visningsförinställningar finns i [Felsökning av Dynamic Media - Scene7](troubleshoot-dms7.md#viewers).
 
-## Använda en förinställning för Dynamic Media-visningsprogram på en resurs {#applying-a-viewer-preset-to-an-asset}
+## Använda en förinställning för Dynamic Media-visningsprogram på en mediefil {#applying-a-viewer-preset-to-an-asset}
 
 1. Öppna resursen och tryck på **[!UICONTROL Viewers]** i den vänstra rutan.
 
@@ -39,6 +39,6 @@ Eventuella problem med visningsförinställningar finns i [Felsökning av Dynami
 
 1. Välj ett visningsprogram i den vänstra rutan så att du kan använda det på resursen så som den visas i den högra rutan. Du kan även [kopiera URL:en för att dela](linking-urls-to-yourwebapplication.md) med andra användare.
 
-## Hämtar förinställda URL:er för visningsprogram {#obtaining-viewer-preset-urls}
+## Hämta förinställda URL:er för visningsprogram {#obtaining-viewer-preset-urls}
 
 Mer information om hur du hämtar URL:er för visningsförinställningar finns i [Länka URL:er till ditt webbprogram](linking-urls-to-yourwebapplication.md).
