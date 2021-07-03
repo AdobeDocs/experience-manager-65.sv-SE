@@ -2,10 +2,10 @@
 title: Lägga till bildscheman med hyperlänkar
 description: Lär dig hur du lägger till bildschema med hyperlänkar till en bild.
 contentOwner: AG
-role: Business Practitioner, Administrator
+role: User, Admin
 feature: Resurshantering
 exl-id: 77da4917-47ce-4f2e-b062-73cee312a7ea
-source-git-commit: 1cfa58bb7dcbe70906071a22fbae4a9f479a31d9
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '247'
 ht-degree: 1%
