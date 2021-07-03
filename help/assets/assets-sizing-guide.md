@@ -2,18 +2,17 @@
 title: '[!DNL Assets] storleksstödlinje'
 description: Bästa tillvägagångssätt för att fastställa effektiva mått för att uppskatta den infrastruktur och de resurser som krävs för att distribuera [!DNL Adobe Experience Manager Assets].
 contentOwner: AG
-role: Architect, Administrator
-feature: Asset Management
-translation-type: tm+mt
-source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
+role: Architect, Admin
+feature: Resurshantering
+exl-id: fd58ead9-5e18-4f55-8d20-1cf4402fad97
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
-source-wordcount: '1619'
+source-wordcount: '1617'
 ht-degree: 0%
 
 ---
 
-
-# [!DNL Assets] storleksstödlinje  {#assets-sizing-guide}
+# [!DNL Assets] storleksstödlinje {#assets-sizing-guide}
 
 När du ändrar storlek på miljön för en [!DNL Adobe Experience Manager Assets]-implementering är det viktigt att se till att det finns tillräckligt med resurser tillgängliga vad gäller disk, processor, minne, IO och nätverksgenomströmning. Om du vill ändra storlek på många av dessa resurser måste du känna till hur många resurser som läses in i systemet. Om det inte finns något bättre mätvärde kan du dividera storleken på det befintliga biblioteket med bibliotekets ålder för att hitta frekvensen som resurserna skapas med.
 
@@ -79,11 +78,11 @@ Delade datastores ökar även komplexiteten i åtgärder, till exempel skräpins
 
 För AWS-åtgärder kan en implementering av en central plats (via Amazon S3) i stället för att bygga en RAID-matris med EBS-volymer avsevärt kompensera för komplexiteten och de operativa riskerna i systemet.
 
-#### Prestandaproblem {#performance-concerns}
+#### Prestandafrågor {#performance-concerns}
 
 Ett delat datalager kräver att binärfilerna lagras på en nätverksansluten enhet som delas mellan alla instanser. Eftersom dessa binärfiler nås via ett nätverk påverkas systemprestandan negativt. Du kan delvis minska effekten genom att använda en snabb nätverksanslutning till ett snabbt disksystem. Detta är dock ett dyrt förslag. När det gäller AWS-åtgärder är alla diskar fjärranslutna och kräver nätverksanslutning. Tidigare volymer förlorar data när instansen startas eller stoppas.
 
-#### Svarstid {#latency}
+#### Latens {#latency}
 
 Latens i S3-implementeringar introduceras av skrivtrådar i bakgrunden. Säkerhetskopieringsprocedurer måste ta hänsyn till denna fördröjning. Dessutom kan Lucene-index vara ofullständiga vid säkerhetskopiering. Det gäller för alla tidskänsliga filer som skrivs till S3-datalagret och som öppnas från en annan instans.
 
