@@ -2,16 +2,15 @@
 title: Skapa och konfigurera sidor för Resursredigeraren
 description: Lär dig hur du skapar anpassade sidor i Resursredigeraren och redigerar flera resurser samtidigt.
 contentOwner: AG
-role: Business Practitioner, Administrator
-feature: Developer Tools,Asset Management
-translation-type: tm+mt
-source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
+role: User, Admin
+feature: Utvecklarverktyg,Resurshantering
+exl-id: 53e310a9-c511-447a-91bd-8c5b2760dc03
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
-source-wordcount: '2112'
+source-wordcount: '2109'
 ht-degree: 0%
 
 ---
-
 
 # Skapa och konfigurera sidor för Resursredigeraren {#creating-and-configuring-asset-editor-pages}
 
@@ -218,7 +217,7 @@ Om du vill anpassa resursredigeringssidan använder du element från sidosparken
 
 ![assetshare6](assets/assetshare6.png)
 
-#### Ange att en resursredigerare ska öppnas från sidan Resursresurs {#setting-which-asset-editor-opens-from-an-asset-share-page}
+#### Ange att en resursredigerare ska öppnas från en resursdelningssida {#setting-which-asset-editor-opens-from-an-asset-share-page}
 
 När du har skapat den anpassade resursredigeringssidan måste du se till att när du dubbelklickar på resurser som den anpassade resursresursen du skapade öppnar resurserna på den anpassade redigeringssidan.
 
@@ -234,7 +233,7 @@ Så här anger du sidan Resursredigeraren:
 
 ![screen_shot_2012-04-23at21653pm](assets/screen_shot_2012-04-23at21653pm.png)
 
-#### Lägg till resursredigeringskomponenter {#adding-asset-editor-components}
+#### Lägg till komponenterna i Resursredigeraren {#adding-asset-editor-components}
 
 Du bestämmer vilken funktionalitet en resursredigerare har genom att lägga till komponenter på sidan.
 
@@ -296,7 +295,7 @@ Följande är ett exempel på ett metadataformulär med olika fält:
 
 På sidan Resursredigeraren kan användare sedan ange värden i metadatafälten (om de är redigerbara) och utföra slutåtgärden (till exempel skicka ändringarna).
 
-#### Underresurser {#sub-assets}
+#### Deltillgångar {#sub-assets}
 
 I delresurskomponenten kan du visa och välja delresurser. Du kan bestämma vilka namn som ska visas under [huvudresursen](/help/assets/assets.md#what-are-digital-assets) och underresurserna.
 
