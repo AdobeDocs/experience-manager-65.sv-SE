@@ -2,16 +2,15 @@
 title: Migrera resurser i grupp
 description: Beskriver hur du hämtar resurser till [!DNL Adobe Experience Manager], använder metadata, genererar återgivningar och aktiverar dem för publiceringsinstanser.
 contentOwner: AG
-role: Architect, Administrator
-feature: Migration,Renditions,Asset Management
-translation-type: tm+mt
-source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
+role: Architect, Admin
+feature: Migrering,Återgivningar,Resurshantering
+exl-id: 184f1645-894a-43c1-85f5-8e0d2d77aa73
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
-source-wordcount: '1787'
+source-wordcount: '1785'
 ht-degree: 8%
 
 ---
-
 
 # Så här migrerar du resurser i grupp {#assets-migration-guide}
 
@@ -56,7 +55,7 @@ Inaktivera startprogrammet för [!UICONTROL DAM Update Asset]-arbetsflödet inna
 
 Du kanske redan har en tagg-taxonomi på plats som du tillämpar på dina bilder. Verktyg som CSV-resursimporteraren och [!DNL Experience Manager]-stöd för metadataprofiler kan automatisera processen att använda taggar på resurser, men taggarna måste läsas in i systemet. Med funktionen [ACS AEM Tools Tag Maker](https://adobe-consulting-services.github.io/acs-aem-tools/features/tag-maker/index.html) kan du fylla i taggar med hjälp av ett Microsoft Excel-kalkylblad som är inläst i systemet.
 
-### Inkommande resurser {#ingesting-assets}
+### Ingående resurser {#ingesting-assets}
 
 Prestanda och stabilitet är viktiga frågor när du ska hämta in resurser i systemet. Eftersom du läser in en stor mängd data i systemet bör du se till att systemet fungerar så bra som möjligt för att minimera tidsåtgången och undvika att överbelasta systemet, vilket kan leda till att systemet kraschar, särskilt i system som redan är i produktion.
 
@@ -79,7 +78,7 @@ Det andra sättet att importera resurser är att hämta resurser från det lokal
 
 Eftersom resurser inte behöver överföras via ett nätverk förbättras prestandan avsevärt, och den här metoden anses generellt vara det mest effektiva sättet att läsa in resurser i databasen. Eftersom verktyget har stöd för metadatainmatning kan du dessutom importera alla resurser och metadata i ett enda steg i stället för att skapa ett andra steg för att använda metadata med hjälp av ett separat verktyg.
 
-### Bearbeta renderingar {#processing-renditions}
+### Bearbeta återgivningar {#processing-renditions}
 
 När du har läst in resurserna i systemet måste du bearbeta dem i [!UICONTROL DAM Update Asset]-arbetsflödet för att extrahera metadata och generera renderingar. Innan du utför det här steget måste du duplicera och ändra [!UICONTROL DAM Update Asset]-arbetsflödet efter dina behov. Det färdiga arbetsflödet innehåller många steg som kanske inte behövs, till exempel Dynamic Media PTIFF-generering eller [!DNL InDesign Server]-integrering.
 
