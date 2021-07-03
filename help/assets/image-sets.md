@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: ccc4eb23-934c-4e67-860b-a6faa2bcaafc
 docset: aem65
 feature: bilduppsättningar,Resurshantering
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 2a536745-fa13-4158-8761-2ac5b6e1893e
-source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '2018'
 ht-degree: 13%
@@ -112,7 +112,7 @@ Eftersom användare kan zooma bilder i bilduppsättningar bör du se till att bi
 >* En svart, brun och grön färgminiatyrbild.
 
 
-## Skapar bilduppsättningar {#creating-image-sets}
+## Skapa bilduppsättningar {#creating-image-sets}
 
 Du kan skapa bilduppsättningar via användargränssnittet eller API:t. I det här avsnittet beskrivs hur du skapar bilduppsättningar i användargränssnittet.
 
@@ -241,6 +241,6 @@ Du kan utföra olika redigeringsåtgärder på bilduppsättningar, till exempel:
 
 Se [Förhandsgranska resurser](/help/assets/previewing-assets.md).
 
-## Publicerar bilduppsättningar {#publishing-image-sets}
+## Publicera bilduppsättningar {#publishing-image-sets}
 
 Se [Publicera resurser](/help/assets/publishing-dynamicmedia-assets.md).
