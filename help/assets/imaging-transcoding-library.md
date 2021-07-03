@@ -2,18 +2,17 @@
 title: Konverteringsbibliotek för bildbehandling
 description: Lär dig hur du konfigurerar och använder Adobe Imaging Transcoding Library, en bildbehandlingslösning som kan utföra grundläggande bildhanteringsfunktioner, inklusive kodning, omkodning, bildomsampling och storleksändring.
 contentOwner: AG
-role: Administrator
-feature: Renditions,Developer Tools,Asset Processing
-translation-type: tm+mt
-source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
+role: Admin
+feature: Återgivningar,Utvecklarverktyg,Resurshantering
+exl-id: b67465f9-177c-49c4-b4eb-a1d6e09ac9a2
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
-source-wordcount: '948'
+source-wordcount: '947'
 ht-degree: 0%
 
 ---
 
-
-# Bildkodningsbibliotek {#imaging-transcoding-library}
+# Konverteringsbibliotek för bildbehandling {#imaging-transcoding-library}
 
 Adobe Imaging Transcoding Library är en tillverkarspecifik bildbehandlingslösning som kan utföra grundläggande bildhanteringsfunktioner, som:
 
@@ -103,7 +102,7 @@ Om du vill konfigurera biblioteket skapar du en CONF-fil som anger biblioteken m
 
 1. Använd kommandot `echo $LD_LIBRARY_PATH` om du vill vara säker på att värdet för sökvägen är `.`. Utdata ska bara vara `.`. Om värdet inte är `.` startar du om sessionen.
 
-### Konfigurera [!UICONTROL DAM Update Asset]-arbetsflödet {#configure-dam-asset-update-workflow}
+### Konfigurera arbetsflödet [!UICONTROL DAM Update Asset] {#configure-dam-asset-update-workflow}
 
 Uppdatera [!UICONTROL DAM Update Asset]-arbetsflödet om du vill använda biblioteket för bearbetning av bilder.
 
