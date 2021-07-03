@@ -2,16 +2,15 @@
 title: Förbättrade smarta taggar
 description: Förbättrade smarta taggar
 contentOwner: AG
-feature: Smart Tags, Search
-role: Business Practitioner
-translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+feature: Smarta taggar, sökning
+role: User
+exl-id: 5eff4a0f-30b1-4753-ad0b-002656eed972
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
-source-wordcount: '1566'
+source-wordcount: '1564'
 ht-degree: 3%
 
 ---
-
 
 # Förstå, använda och strukturera smarta taggar {#enhanced-smart-tags}
 
@@ -73,7 +72,7 @@ Tjänsten använder smarta taggar för resursåtergivningar av följande MIME-ty
 * image/pjpeg
 * bild/png
 
-## Introduktion till {#onboarding}
+## Onboarding {#onboarding}
 
 Tjänsten Smart Content Service kan köpas som tillägg till [!DNL Experience Manager]. När du har köpt funktionen skickas ett e-postmeddelande till administratören för organisationen med en länk till [!DNL Adobe I/O].
 
@@ -134,7 +133,7 @@ Du kan aktivera tjänsten Smart Content Service för att regelbundet tagga resur
 
 När det här alternativet har valts för en mapp taggar tjänsten Smart Content Service automatiskt resurserna i mappen. Som standard körs taggningsarbetsflödet varje dag kl. 12.00.
 
-### On demand-taggning {#on-demand-tagging}
+### On-demand-taggning {#on-demand-tagging}
 
 Du kan utlösa taggningsarbetsflödet från arbetsflödeskonsolen eller från tidslinjen för att omedelbart tagga dina resurser.
 
