@@ -3,9 +3,9 @@ title: Tillgängliga funktioner och gränssnitt i [!DNL Experience Manager Asset
 description: Se hur tillgänglighetsfunktionerna i [!DNL Adobe Experience Manager] 6.5 [!DNL Assets] kan hjälpa användare med funktionshinder.
 contentOwner: AG
 feature: Resurshantering
-role: Business Practitioner, Architect, Leader
+role: User, Architect, Leader
 exl-id: 15555941-99a2-4586-8d7b-b22f3ec17805
-source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1907'
 ht-degree: 1%
@@ -45,7 +45,7 @@ Om du vill läsa en rapport med information om efterlevnadsnivån läser du [Rap
 
 Om du vill veta hur [!DNL Dynamic Media] är tillgängligt läser du [hjälpmedel i [!DNL Dynamic Media]](/help/assets/accessibility-dm.md).
 
-## Hjälpmedelstekniker {#at-support}
+## Hjälpmedel {#at-support}
 
 Användare med funktionshinder förlitar sig ofta på maskinvara och programvara för att få tillgång till webbinnehåll och använda programvaror. Dessa verktyg kallas hjälpmedelstekniker. [!DNL Experience Manager Assets] kan fungera med följande typer av hjälpmedelstekniker (AT) när du använder programmets huvudfunktioner:
 
@@ -55,7 +55,7 @@ Användare med funktionshinder förlitar sig ofta på maskinvara och programvara
 * Hjälpmaskinvara, inklusive switchkontroller, uppdateringsbara blindskriftsskärmar och andra indataenheter.
 * Förstoringsverktygen i användargränssnittet.
 
-## [!DNL Experience Manager Assets] användningsfall som är tillgängliga  {#accessible-assets-use-cases}
+## [!DNL Experience Manager Assets] användningsfall som är tillgängliga {#accessible-assets-use-cases}
 
 I [!DNL Experience Manager] uppfyller hjälpmedelsfunktionerna två viktiga krav för [!DNL Experience Manager]-användare och deras kunder.
 
@@ -173,7 +173,7 @@ För metadataåtgärder som vanligtvis utförs av roller som marknadsförare och
 * Dragningsfunktionen med tangentbordet fungerar korrekt i [!UICONTROL Metadata Schema Editor] i skärmläsarläge.
 * En användare kan flytta fokus med tangentbordet till fältet Lägg till användare eller grupp under [!UICONTROL Closed User Group] på fliken [!UICONTROL Permissions] i mappen [!UICONTROL Properties].
 
-## Sök efter digitala resurser {#search-assets}
+## Söka efter digitala resurser {#search-assets}
 
 En snabb och smidig sökupplevelse av resurser ökar innehållets hastighet. Användningsexempel för innehållshastighet är en del av de centrala [!DNL Assets]-funktionerna. Om du vill starta en sökning från omsökningsfältet kan användarna använda kortkommandot `/` eller använda `Tab` tillsammans med skärmläsare för att snabbt hitta sökalternativet. Skärmläsaren anger namnet på alternativet som &quot;Sökknapp&quot; när sökalternativet ![sökalternativ](assets/do-not-localize/search_icon.png) är i fokus. Användarna kan välja `Return` för att öppna sökrutan. Skärmläsaren lägger inte bara till en berättarröst för det nyckelord som skrivs i sökrutan utan lägger även till en berättarröst för de förslag som ges av [!DNL Experience Manager Assets]. Användare kan använda en kombination av piltangenter, `Return` och `Tab` för att komma åt de olika alternativen för att utlösa en sökning.
 
