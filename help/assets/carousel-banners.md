@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: e26c7f7f-bdd7-421a-8614-ba48abf381d2
 docset: aem65
 feature: Karusellbanner
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 53d34d3a-ecb6-4fa0-9665-60d21f48021e
-source-git-commit: 4ad5237939289b5411a988424b2a3ecad15ca029
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '4655'
 ht-degree: 4%
@@ -38,7 +38,7 @@ I det här exemplet har en användare tryckt på eller klickat på ett bildschem
 
 ![chlimage_1-440](assets/chlimage_1-440.png)
 
-## Se hur karusellbanderoller skapas {#watch-how-carousel-banners-are-created}
+## Se hur karusellbanners skapas {#watch-how-carousel-banners-are-created}
 
 Spela en genomgång om [hur karusellbanners skapas](https://s7d5.scene7.com/s7viewers/html5/VideoViewer.html?videoserverurl=https://s7d5.scene7.com/is/content/&amp;emailurl=https://s7d5.scene7.com/s7/emailFriend&amp;serverUrl=https://s7d5.scene7.com/is/image/&amp;config=Scene7SharedAssets/Universal_HTML5_Video_social&amp;contenturl=https://s7d5.scene7.com/skins/&amp;asset=S7tutorials/InteractiveCarouselBanner)(10 minuter och 33 sekunder). Du får också lära dig hur du förhandsgranskar, redigerar och levererar karusellbanderoller.
 
@@ -95,7 +95,7 @@ Så här kommer du igång snabbt med Carousel Banners:
 
 Mer information om hur du redigerar Carousel-uppsättningar finns i [redigera Carousel-uppsättningar](#editing-carousel-sets). Dessutom kan du visa och redigera [Carousel Set-egenskaper](manage-assets.md#editing-properties).
 
-## Identifiera aktiveringspunkt- och bildschemavariabler {#identifying-hotspot-and-image-map-variables}
+## Identifiera variabler för aktiveringspunkt och bildschema {#identifying-hotspot-and-image-map-variables}
 
 Börja med att identifiera dynamiska variabler som används av den befintliga Quickview-implementeringen så att du kan ange klickbara områden eller data från bildscheman korrekt när du skapar karuselluppsättningar i Experience Manager Assets.
 
@@ -183,7 +183,7 @@ Om du redan har överfört de bilder du vill använda går du vidare till nästa
 
 Information om hur du överför bildbanderoller finns i [Överföra resurser](/help/assets/manage-assets.md).
 
-## Skapar Carousel-uppsättningar {#creating-carousel-sets}
+## Skapa Carousel-uppsättningar {#creating-carousel-sets}
 
 >[!NOTE]
 >
