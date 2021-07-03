@@ -2,16 +2,15 @@
 title: Aktivitetsström för digitala resurser i tidslinjevyn
 description: I den här artikeln beskrivs hur du visar aktivitetsloggar för resurser på tidslinjen.
 contentOwner: AG
-feature: Asset Management
-role: Business Practitioner, Administrator
-translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+feature: Resurshantering
+role: User, Admin
+exl-id: 28dc0aa5-f2be-4e27-b7d8-415569b7ecd4
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
-source-wordcount: '216'
+source-wordcount: '213'
 ht-degree: 18%
 
 ---
-
 
 # Aktivitetsström på tidslinjen {#activity-stream-in-timeline}
 
