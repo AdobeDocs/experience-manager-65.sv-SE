@@ -2,16 +2,15 @@
 title: Bästa tillvägagångssätt för att översätta resurser
 description: Bästa tillvägagångssätt för effektiv hantering av resurser för att synkronisera olika översatta versioner och effektivisera översättningsarbetsflöden.
 contentOwner: AG
-role: Administrator
-feature: Asset Management
-translation-type: tm+mt
-source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
+role: Admin
+feature: Resurshantering
+exl-id: e632dcdb-b2b9-45bc-89e7-337b44b6fc61
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
-source-wordcount: '409'
+source-wordcount: '408'
 ht-degree: 1%
 
 ---
-
 
 # Bästa tillvägagångssätt för att översätta resurser {#best-practices-for-translating-assets-efficiently}
 
