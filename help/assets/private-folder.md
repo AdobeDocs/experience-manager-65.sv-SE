@@ -2,16 +2,15 @@
 title: Privata mappar för att dela resurser
 description: Lär dig hur du skapar en privat mapp i  [!DNL Adobe Experience Manager Assets] och delar den med andra användare och tilldelar olika behörigheter till dem.
 contentOwner: AG
-role: Business Practitioner
-feature: Collaboration
-translation-type: tm+mt
-source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
+role: User
+feature: Samarbete
+exl-id: c1aece06-7c1c-43a0-bea0-6f11ecda7e68
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
-source-wordcount: '559'
+source-wordcount: '557'
 ht-degree: 0%
 
 ---
-
 
 # Privat mapp i [!DNL Adobe Experience Manager Assets] {#private-folder}
 
@@ -71,7 +70,7 @@ Så här skapar och delar du en privat mapp:
 >
 >Om du vill skapa en privat mapp måste du ha behörigheten Läs och Ändra [åtkomstkontroll](/help/sites-administering/security.md#permissions-in-aem) för den överordnade mapp som du vill skapa en privat mapp i. Om du inte är administratör aktiveras dessa behörigheter inte som standard för `/content/dam`. I så fall måste du först skaffa dessa behörigheter för ditt användar-ID/din grupp innan du försöker skapa privata mappar.
 
-## Ta bort privat mapp {#delete-private-folder}
+## Borttagning av privata mappar {#delete-private-folder}
 
 Du kan ta bort en mapp genom att markera mappen och välja [!UICONTROL Delete] på den översta menyn eller genom att använda Backsteg på tangentbordet.
 
