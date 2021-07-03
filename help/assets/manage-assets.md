@@ -3,10 +3,10 @@ title: Hantera era digitala resurser
 description: Lär dig resurshanteringsåtgärder som överföring, hämtning, redigering, sökning, borttagning, anteckning och version av digitala resurser.
 contentOwner: AG
 mini-toc-levels: 1
-role: Business Practitioner
+role: User
 feature: Resurshantering, sökning
 exl-id: 158607e6-b4e9-4a3f-b023-4023d60c97d2
-source-git-commit: 03b171d2af17efee73780b01058fd62bc9d45dbd
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '9553'
 ht-degree: 3%
@@ -858,7 +858,7 @@ Här är ett exempel på hur du kan konfigurera [!DNL Experience Manager] för a
    * Teckensnitt för valfritt språk: [https://www.google.com/get/noto/](https://www.google.com/get/noto/)
 
 1. Konfigurera PDF-filen med anteckningen genom att ange parametern font-family till `Arial Unicode MS, Noto Sans, Noto Sans CJK JP, sans-serif`. Den här konfigurationen är tillgänglig som standard och fungerar för alla europeiska språk och CJK-språk.
-1. Om det språk du väljer skiljer sig från de språk som nämns i steg 2 lägger du till en lämplig (kommaseparerad) post i standardteckensnittsfamiljen.
+1. Om det språk du väljer skiljer sig från de språk som nämns i steg 2 lägger du till en lämplig (kommaavgränsad) post i standardteckensnittsfamiljen.
 
 ## Skapa, hantera, förhandsgranska och återställa resursversioner {#asset-versioning}
 
