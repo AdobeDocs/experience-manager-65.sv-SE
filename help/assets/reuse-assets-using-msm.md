@@ -3,16 +3,15 @@ title: Återanvända resurser med MSM
 description: Använd resurser på flera sidor/mappar som är härledda från och länkade till överordnade resurser. Resurserna är synkroniserade med en primär kopia och med några klick får du uppdateringar från överordnade resurser.
 contentOwner: AG
 mini-toc-levels: 1
-role: Business Practitioner, Administrator, Architect
-feature: Asset Management,Multi Site Manager
-translation-type: tm+mt
-source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
+role: User, Admin, Architect
+feature: Resurshantering,Multi Site Manager
+exl-id: 4d0367c4-88aa-4aef-b23d-828609b0df09
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
-source-wordcount: '3266'
+source-wordcount: '3262'
 ht-degree: 9%
 
 ---
-
 
 # Återanvänd resurser med MSM för [!DNL Assets] {#reuse-assets-using-msm-for-assets}
 
@@ -28,7 +27,7 @@ Installera minst [!DNL Experience Manager] 6.5 Service Pack 1 om du vill använd
 
 ## Förstå fördelarna och begreppen {#concepts}
 
-### Så fungerar det och fördelarna med {#how-it-works-and-the-benefits}
+### Så fungerar det och fördelarna {#how-it-works-and-the-benefits}
 
 Mer information om användningsscenarierna för att återanvända samma innehåll (text och resurser) på flera webbplatser finns i [möjliga MSM-scenarier](/help/sites-administering/msm.md). [!DNL Experience Manager] behåller en länk mellan den ursprungliga resursen och dess länkade kopior, som kallas live-kopior. Tack vare den bevarade länken kan centraliserade ändringar skickas till många aktiva kopior. Detta ger snabbare uppdateringar och eliminerar samtidigt begränsningarna med att hantera duplicerade kopior. Spridningen av ändringar är felfri och centraliserad. Funktionen ger utrymme för uppdateringar som är begränsade till valda kopior. Användare kan koppla loss länken, d.v.s. bryta arv, och göra lokala redigeringar som inte skrivs över nästa gång den primära kopian uppdateras och ändringarna introduceras. Frånkopplingen kan göras för ett fåtal metadatafält eller för en hel resurs. Det ger flexibilitet att lokalt uppdatera resurser som ursprungligen ärvts från en primär kopia.
 
@@ -37,7 +36,7 @@ MSM upprätthåller en aktiv relation mellan källresursen och dess livekopior s
 * Ändringar av källresurserna tillämpas (utlöses) även på live-kopior, det vill säga de live-kopior som synkroniseras med källan.
 * Du kan uppdatera live-kopiorna genom att avbryta direktrelationen eller ta bort arvet för några få begränsade fält. Ändringarna i källan tillämpas inte längre på den aktiva kopian.
 
-### Ordlista för MSM för [!DNL Assets] termer {#glossary}
+### Ordlista för MSM för [!DNL Assets]-termer {#glossary}
 
 **Källa:** De ursprungliga resurserna eller mapparna. Primär kopia som live-kopior härleds från.
 
@@ -186,7 +185,7 @@ Välj en resurs eller mapp med en live-kopia, öppna den vänstra rutan och klic
 
 När en källa har ändrats kan ändringarna spridas till live-kopiorna med antingen en synkroniseringsåtgärd eller en utrullningsåtgärd. Mer information om skillnaden mellan de båda åtgärderna finns i [ordlista](#glossary).
 
-### Utrullningsåtgärd {#rollout}
+### Åtgärd för utrullning {#rollout}
 
 Du kan initiera en utrullningsåtgärd från källresursen och uppdatera alla eller några utvalda live-kopior.
 
@@ -209,7 +208,7 @@ Du kan också starta en utrullningsåtgärd från referenslinjen när du har val
 
 *Bild: Rulla ut ändringarna av källan till den markerade live-kopian.*
 
-### Om synkroniseringsåtgärden {#about-sync}
+### Om synkroniseringsåtgärd {#about-sync}
 
 Med en synkroniseringsåtgärd hämtas ändringarna från en källa endast till den markerade Live-kopian. Synkroniseringsåtgärden respekterar och underhåller lokala ändringar som gjorts efter att arv har annullerats. De lokala ändringarna skrivs inte över och arvet som avbryts återupprättas inte. Du kan initiera en synkroniseringsåtgärd på tre sätt.
 
@@ -233,7 +232,7 @@ Om du vill se status och information om en synkroniseringsåtgärd läser du [In
 >
 >Om relationen är inaktiverad är synkroniseringsåtgärden inte tillgänglig i verktygsfältet. Synkroniseringsåtgärden är tillgänglig i referensfältet, men ändringarna sprids inte ens när en lyckad utrullning har slutförts.
 
-## Pausa och återuppta relationen {#suspend-resume}
+## Pausa och återuppta relation {#suspend-resume}
 
 Du kan tillfälligt inaktivera relationen för att förhindra att en live-kopia tar emot ändringar som gjorts i källresursen eller källmappen. Relationen kan även återupptas för live-kopiering för att börja ta emot ändringarna från källan.
 
@@ -253,7 +252,7 @@ Du kan ångra alla lokala ändringar och återställa resursen till källans lä
 
 *Bild: Återställ-åtgärden skriver över lokala redigeringar och delar av den aktiva kopian med källan.*
 
-## Ta bort aktiv relation {#detach}
+## Ta bort direktrelation {#detach}
 
 Du kan ta bort relationen mellan en källa och en live-kopia helt med åtgärden Koppla loss. Den aktiva kopian blir en fristående resurs eller mapp när den har kopplats loss. Den visas som en ny resurs i [!DNL Experience Manager]-gränssnittet, omedelbart efter frånkoppling. Följ de här stegen för att koppla loss en live-kopia från källan.
 
@@ -271,7 +270,7 @@ Du kan ta bort relationen mellan en källa och en live-kopia helt med åtgärden
 
 Du kan också snabbt frigöra flera resurser i en live-kopieringsmapp från **[!UICONTROL Live Copy Overview]**-konsolen. Se [Utföra åtgärder för många resurser i mappar med live-kopior](#bulk-actions).
 
-## Massåtgärder i en dynamisk kopiamapp {#bulk-actions}
+## Massåtgärder i en mapp för live-kopior {#bulk-actions}
 
 Om du har flera resurser i en live-kopieringsmapp kan initieringsåtgärder för varje resurs vara långsamma. Du kan snabbt initiera grundläggande åtgärder för många resurser från [!UICONTROL Live Copy Console]. Ovanstående metoder fortsätter att fungera för enskilda resurser.
 
