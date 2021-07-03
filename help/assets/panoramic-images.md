@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 632a9074-b747-49a1-a57d-1f42bba1f4e9
 docset: aem65
 feature: Panoramabilder,Resurshantering
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 4d6fbeb1-94db-4154-9e41-b76033fb4398
-source-git-commit: 1349d9929fc64ad46fc91f0d189bab54cca9de81
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '548'
 ht-degree: 4%
@@ -40,7 +40,7 @@ Kriterierna för proportioner och nyckelord gäller även för panoramaresurser 
 
 Information om hur du överför resurser som ska användas med visningsprogrammet för panoramabilder finns i [Överföra resurser](/help/assets/manage-assets.md#uploading-assets).
 
-## Konfigurerar Dynamic Media Classic {#configuring-dynamic-media-classic-scene}
+## Konfigurera Dynamic Media Classic {#configuring-dynamic-media-classic-scene}
 
 För att visningsprogrammet för panoramabilder ska fungera på rätt sätt i Adobe Experience Manager synkroniserar du förinställningarna för visningsprogrammet för panoramabilder med Dynamic Media Classic och Dynamic Media Classic-specifika metadata så att visningsförinställningarna uppdateras i JCR-filen. Konfigurera Dynamic Media Classic enligt följande:
 
@@ -69,7 +69,7 @@ För att visningsprogrammet för panoramabilder ska fungera på rätt sätt i Ad
 
 1. Klicka på **[!UICONTROL Close]** i det nedre högra hörnet.
 
-### Felsökning av WCM-komponenten för panoramamedia {#troubleshooting-the-panoramic-media-wcm-component}
+### Felsöka komponenten Panoramic Media WCM {#troubleshooting-the-panoramic-media-wcm-component}
 
 Om du har släppt en bild i panoramamediakomponenten i WCM-filen och platshållaren för komponenten är komprimerad felsöker du följande:
 
@@ -83,6 +83,6 @@ Om du har släppt en bild i panoramamediakomponenten i WCM-filen och platshålla
 
 Se [Förhandsgranska resurser](/help/assets/previewing-assets.md).
 
-## Publicerar panoramabilder {#publishing-panoramic-images}
+## Publicera panoramabilder {#publishing-panoramic-images}
 
 Se [Publicera resurser](/help/assets/publishing-dynamicmedia-assets.md).
