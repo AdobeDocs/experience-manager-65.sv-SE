@@ -7,10 +7,10 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: managing-assets
 content-type: reference
 discoiquuid: 2685f9f3-0973-40a9-89b8-e7db0a6a75f2
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 56009925-1a36-48b5-b96c-ec2e468da106
 feature: Video
-source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1513'
 ht-degree: 1%
@@ -62,7 +62,7 @@ Om du behöver ett arbetsflöde eller en versionshantering för dina resurser sk
 1. I Experience Manager får du åtkomst till videomaterial i WCM på fliken **[!UICONTROL Movies]** i Content Finder.
 1. Skapa med en **[!UICONTROL Scene7 Video]**- eller **[!UICONTROL Foundation Video]**-komponent.
 
-### Om du överför din video till Dynamic Media Classic {#if-you-are-uploading-your-video-to-scene}
+### Om du överför videon till Dynamic Media Classic {#if-you-are-uploading-your-video-to-scene}
 
 Om du inte behöver ett arbetsflöde eller en versionshantering för dina resurser överför du dina resurser till Scene7. Här följer det rekommenderade arbetsflödet:
 
@@ -93,7 +93,7 @@ Så här konfigurerar du universella förinställningar:
 
 1. De valda kodningsprofilerna tillämpas automatiskt på alla videoklipp som överförs till CQ DAM-målmappen som du konfigurerar för den här Scene7-molnkonfigurationen. Du kan konfigurera flera Scene7 molnkonfigurationer med olika målmappar för att tillämpa olika kodningsprofiler efter behov.
 
-## Uppdaterar förinställningar för visningsprogram och kodning {#updating-viewer-and-encoding-presets}
+## Uppdatera visningsprogram och kodningsförinställningar {#updating-viewer-and-encoding-presets}
 
 Om du vill uppdatera visnings- och kodningsförinställningarna för video eftersom förinställningarna har uppdaterats i Scene7 går du till Scene7-konfigurationen i molnkonfigurationen och trycker på **[!UICONTROL Update the viewer and encoding presets]**.
 
@@ -124,7 +124,7 @@ I följande matris förklaras när du ska använda vilken komponent:
 >
 >Som standard använder S7-videokomponenten den universella videoprofilen. Du kan dock hämta den HTML5-baserade videospelaren som ska användas av Experience Manager. I Scene7 kopierar du inbäddningskoden för den färdiga HTML5-videospelaren och placerar den på Experience Manager-sidan.
 
-## Experience Manager videokomponent {#aem-video-component}
+## Videokomponent för Experience Manager {#aem-video-component}
 
 Även om du bör använda videokomponenten för Scene7 för att visa Scene7-videofilmer beskrivs det här avsnittet hur du använder Scene7-videofiler med Foundation Video Component i Experience Manager för att få en fullständig beskrivning.
 
@@ -142,7 +142,7 @@ Följande tabell innehåller en högnivåjämförelse mellan videokomponenten i 
 
 ### Konfigurera {#setting-up}
 
-#### Skapar videoprofiler {#creating-video-profiles}
+#### Skapa videoprofiler {#creating-video-profiles}
 
 De olika videokodningarna skapas enligt de kodningsförinställningar för S7 som valts i molnkonfigurationen för S7. För att den grundläggande videokomponenten ska kunna använda dem måste en videoprofil skapas för varje vald S7-kodningsförinställning. Med den här metoden kan videokomponenten välja DAM-återgivningar utifrån detta.
 
@@ -168,7 +168,7 @@ De olika videokodningarna skapas enligt de kodningsförinställningar för S7 so
 
    Upprepa det här steget för alla kodningsförinställningar som är markerade i molnkonfigurationen och som du vill använda i videokomponenten.
 
-#### Konfigurerar design {#configuring-design}
+#### Konfigurera design {#configuring-design}
 
 Komponenten **[!UICONTROL Foundation Video]** måste känna till vilka videoprofiler som ska användas för att skapa listan över videokällor. Öppna dialogrutan för videokomponentdesign och konfigurera komponentdesignen för användning av de nya videoprofilerna.
 
@@ -181,7 +181,7 @@ Komponenten **[!UICONTROL Foundation Video]** måste känna till vilka videoprof
 >Ändringar i designen kräver att designen aktiveras för att börja gälla vid publiceringen.
 
 1. Öppna **[!UICONTROL Foundation Video]**-komponentens designdialogruta och ändra till fliken **[!UICONTROL Profiles]**. Ta sedan bort färdiga profiler och lägg till de nya videoprofilerna för S7. Ordningen på profillistan i designdialogrutan definierar ordningen på videokällelementet vid återgivning.
-1. För webbläsare som inte stöder HTML5 kan du konfigurera ett Flash-reservläge med videokomponenten. Öppna dialogrutan för design av videokomponenter och ändra till fliken **[!UICONTROL Flash]**. Konfigurera inställningarna för Flash-spelaren och tilldela en reservprofil för Flash Player.
+1. För webbläsare som inte stöder HTML5 kan du konfigurera ett Flash-reserv med videokomponenten. Öppna dialogrutan för design av videokomponenter och ändra till fliken **[!UICONTROL Flash]**. Konfigurera inställningarna för Flash-spelaren och tilldela en reservprofil för Flash Player.
 
 #### Checklista {#checklist}
 
