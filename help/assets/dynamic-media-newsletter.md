@@ -4,10 +4,10 @@ description: 'Dynamic Media Newsletter från Experience League är ett månatlig
 keywords: Dynamic Media;nyhetsbrev;produktuppdateringar;tips och tricks;event;customer success;blog;blogs;images;videor;features;capabilities
 contentOwner: Rick Brough
 solution: Dynamic Media Classic, Experience Manager
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 8aa779e0-cf76-45a7-a474-556fdfded31b
 feature: Samarbete,Dynamic Media Classic
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1182'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 # ![Dynamic Media Newsletter logo](/help/assets/assets/dynamic-media-newsletter-logo.png)
 
-Det månatliga nyhetsbrevet från Experience League är utformat för att hjälpa dig att komma igång med Dynamic Media och Dynamic Media Classic så att du snabbt kan börja skapa värde.
+Det månatliga Dynamic Media Newsletter från Experience League är utformat för att hjälpa dig att komma igång med Dynamic Media och Dynamic Media Classic så att du kan börja skapa värde direkt.
 
 Det här nyhetsbrevet innehåller värdefulla resurser för att bygga upp din kunskap. Det innehåller videor, översikter över lösningar och introduktioner till några av de viktigaste funktionerna och funktionerna, som förinställningar för bilder, visningsinställningar, videoprofiler med mera.
 
@@ -48,7 +48,7 @@ Det här nyhetsbrevet innehåller värdefulla resurser för att bygga upp din ku
    * Upptäck tre sätt som er investering i multimedia kan hjälpa er i dessa utmanande tider.
    * Anmäl dig till webbinariet för att lära dig hur du gör sidan ljusare med Smart Imaging.
    * Titta på on-demand-webbinariet SKompetens Builder för Dynamic Media Classic.
-   * Se Dynamic Media seminarier från Adobe Summit 2020.
+   * Se Dynamic Media sessioner från Online Adobe Summit 2020.
    * Läs mer om Adobe kostnadsfria Dynamic Media Classic-revisioner.
    * Möt John Monroe, Senior Program Manager för Customer Success Services.
 
@@ -135,7 +135,7 @@ Det här nyhetsbrevet innehåller värdefulla resurser för att bygga upp din ku
    I detta nummer:
 
    * Se videor som belyser hur välbekant det är att uppgradera till Dynamic Media inifrån Experience Manager Assets.
-   * Se videoklipp med nyckeltips i Experience League.
+   * Se videoklipp om hur man gör i Experience League.
    * Läs mer om den kommande Adobe Insider Tour.
    * Läs om hur ni kan skydda era digitala resurser mot piratkopiering.
    * Lär dig mer om AI-driven Smart Crop för bilder.
@@ -146,7 +146,7 @@ Det här nyhetsbrevet innehåller värdefulla resurser för att bygga upp din ku
    I detta nummer:
 
    * Upptäck de tio viktigaste dolda funktionerna i Dynamic Media Classic i ett blogginlägg.
-   * Se videoklipp med nyckeltips i Experience League.
+   * Se videoklipp om hur man gör i Experience League.
    * Läs mer om den kommande Adobe Insider Tour.
    * Läs en bloggserie i tre delar som hjälper er att uppdatera er multimediestrategi.
    * Lär dig mer om AI-styrd videoredigering med smart beskärning.
