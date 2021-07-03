@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 8e9b3815-2893-4e6b-ac41-77720b42d56b
 docset: aem65
 feature: Snurra uppsättningar,Resurshantering
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 758ad754-15de-4e72-9b7d-ab49c51d7d4f
-source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1765'
 ht-degree: 11%
@@ -90,13 +90,13 @@ Du kan överföra bilder för snurra uppsättningar på samma sätt som du [öve
 
 Nedan följer några tips om hur du använder snurra uppsättningsbilder. Ju fler bilder du har i en snurrfunktion, desto bättre blir effekten av att snurra. Om du inkluderar många bilder i uppsättningen ökar dock tiden det tar för bilderna att läsas in. AEM rekommenderar följande riktlinjer för att ta bilder för användning i snurra uppsättningar:
 
-* Använd minst 8-12 bilder i en endimensionell snurra och 16-24 bilder i en tvådimensionell snurra. Minst 8 bilder krävs för att kunna vridas 360 grader. Endimensionella snurruppsättningar är vanligare eftersom tvådimensionella snurvuppsättningar är arbetsintensiva.
+* Använd minst 8-12 bilder i en endimensionell snurra och 16-24 bilder i en tvådimensionell snurra. Minst 8 bilder krävs för att kunna vridas 360 grader. Endimensionella snurruppsättningar är vanligare eftersom tvådimensionella snurruppsättningar är arbetsintensiva.
 * Använd ett förlustfritt format, TIFF och PNG rekommenderas.
 * Maskera alla bilder så att objektet visas på en helt vit eller annan bakgrund med hög kontrast. Du kan också lägga till skuggor.
 * Se till att produktinformationen är väl belyst och i fokus.
 * Ta snurra bilder till modekläder med mannequin eller modell. Ofta är mannequin antingen helt maskerat (med hjälp av en glasmannequin) eller en stiliserad mannequin/form visas i bilden. Du kan skapa en omformningsrotation genom att definiera antalet vinklar. Markera varje vinkel med band på golvet för att vägleda modellen till steg och titta i riktningen för varje tagning.
 
-## Skapar snurruppsättningar {#creating-spin-sets}
+## Skapa snurruppsättningar {#creating-spin-sets}
 
 I det här avsnittet beskrivs hur du skapar snurruppsättningar i AEM.
 
@@ -213,10 +213,10 @@ Om du tar bort den bild som AEM använder som miniatyrbild genom att ersätta de
 
 1. Klicka på **[!UICONTROL Save]** när redigeringen är klar.
 
-## Förhandsgranska snuruppsättningar {#previewing-spin-sets}
+## Förhandsgranska snurra uppsättningar {#previewing-spin-sets}
 
 Se [Förhandsgranska resurser](/help/assets/previewing-assets.md).
 
-## Publicerar snurruppsättningar {#publishing-spin-sets}
+## Publicera snurruppsättningar {#publishing-spin-sets}
 
 Se [Publicera resurser](/help/assets/publishing-dynamicmedia-assets.md).
