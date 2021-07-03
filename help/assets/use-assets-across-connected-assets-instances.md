@@ -2,10 +2,10 @@
 title: Använd Connected Assets när du vill dela DAM-resurser i [!DNL Sites]
 description: Använd resurser som är tillgängliga på en fjärrdistribution av [!DNL Adobe Experience Manager Assets] deployment when creating your web pages on another [!DNL Adobe Experience Manager Sites] data.
 contentOwner: AG
-role: Business Practitioner, Administrator, Leader
+role: User, Admin, Leader
 feature: Anslutna resurser,Användare och grupper
 exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
-source-git-commit: 9e99d25a15aee56721112e2afd4b570ba7854bd7
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '2655'
 ht-degree: 27%
@@ -57,7 +57,7 @@ De olika roller som krävs för att konfigurera och använda funktionen och mots
 | DAM-användare | Fjärr | `Authors` | `ksaner` på fjärrkontrollen  [!DNL Experience Manager] | Författarrollen på fjärrdistributionen [!DNL Experience Manager]. Söker efter och bläddrar bland resurser i Connected Assets med hjälp av [!UICONTROL Content Finder]. |
 | DAM-distributör (teknisk användare) | Fjärr | [!DNL Sites] `Authors` | `ksaner` på fjärrkontrollen  [!DNL Experience Manager] | Den här användaren som finns på fjärrdistributionen används av den lokala servern [!DNL Experience Manager] (inte författarrollen [!DNL Sites]) för att hämta fjärrresurserna, för författaren [!DNL Sites]. Den här rollen är inte densamma som de två `ksaner`-rollerna ovan och den tillhör en annan användargrupp. |
 
-## Konfigurera en anslutning mellan [!DNL Sites] och [!DNL Assets] distributioner {#configure-a-connection-between-sites-and-assets-deployments}
+## Konfigurera en anslutning mellan [!DNL Sites] och [!DNL Assets]-distributioner {#configure-a-connection-between-sites-and-assets-deployments}
 
 En [!DNL Experience Manager]-administratör kan skapa den här integreringen. Behörigheterna som krävs för att använda det skapas via användargrupper när de har skapats. Användargrupperna definieras i [!DNL Sites]-distributionen och i DAM-distributionen.
 
@@ -162,7 +162,7 @@ Använd konfigurationen ovan när du vill prova redigeringsfunktionen och se hur
 
 De hämtade resurserna kan användas som andra lokala resurser, förutom att associerade metadata inte kan redigeras.
 
-### Kontrollera användning av en resurs på webbsidor {#asset-usage-references}
+### Kontrollera hur en resurs används på olika webbsidor {#asset-usage-references}
 
 [!DNL Experience Manager] gör att DAM-användare kan kontrollera alla referenser till en resurs. Det hjälper till att förstå och hantera användningen av en resurs i fjärr-[!DNL Sites] och i sammansatta resurser. Många som skapar webbsidor på [!DNL Experience Manager Sites]-distributioner kan använda en resurs på en [!DNL Assets]-fjärrplats på olika webbsidor. För att förenkla resurshanteringen och inte leda till brutna referenser är det viktigt för DAM-användarna att kontrollera användningen av en resurs på lokala webbplatser och fjärrwebbsidor. På fliken [!UICONTROL References] på sidan [!UICONTROL Properties] för en resurs visas lokala referenser och fjärrreferenser för resursen.
 
@@ -179,11 +179,11 @@ Följ de här stegen för att visa och hantera referenser i [!DNL Assets]-distri
 
    ![varning om force delete](assets/delete-referenced-asset.png)
 
-## Begränsningar och bästa praxis {#tip-and-limitations}
+## Begränsningar och bästa metoder {#tip-and-limitations}
 
 * Konfigurera funktionen [Assets Insight](/help/assets/asset-insights.md) i [!DNL Sites]-instansen för att få information om resursanvändning.
 
-### Behörigheter och resurshantering {#permissions-and-managing-assets}
+### Tillstånd och resurshantering {#permissions-and-managing-assets}
 
 * Lokala resurser synkroniseras inte med de ursprungliga resurserna i fjärrdistributionen. Ändringar, borttagningar eller återkallande av behörigheter i DAM-distributionen sprids inte längre ned i kedjan.
 * Lokala resurser är skrivskyddade kopior. [!DNL Experience Manager] -komponenter gör icke-förstörande redigeringar av resurser. Inga andra redigeringar tillåts.
