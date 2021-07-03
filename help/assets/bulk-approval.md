@@ -2,16 +2,15 @@
 title: Granska resurser i mappar och samlingar
 description: Ställ in granskningsarbetsflöden för material i en mapp eller en samling och dela dem med granskare eller kreativa partners för att få feedback.
 contentOwner: AG
-feature: Collaboration, Collections
-role: Business Practitioner
-translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+feature: Samarbete, Samlingar
+role: User
+exl-id: 23c90e10-aa03-450e-9fb0-2f5be0c5066b
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
-source-wordcount: '740'
+source-wordcount: '738'
 ht-degree: 5%
 
 ---
-
 
 # Granska resurser i mappar och samlingar {#review-folder-assets-and-collections}
 
@@ -25,7 +24,7 @@ När du har delat resurserna kan granskarna godkänna eller avvisa dem. Meddelan
 
 När granskaren har slutfört granskningen (godkänner eller avvisar resurser) får du ett meddelande om slutförd granskning.
 
-## Skapa en granskningsåtgärd för mappar {#creating-a-review-task-for-folders}
+## Skapa en granskningsuppgift för mappar {#creating-a-review-task-for-folders}
 
 1. I [!DNL Assets]-användargränssnittet väljer du den mapp som du vill skapa en granskningsaktivitet för.
 1. Klicka på **[!UICONTROL Create Review Task]** ![skapa granskningsaktivitet](assets/do-not-localize/create-review-task.png) i verktygsfältet för att öppna sidan **[!UICONTROL Review Task]**. Om du inte kan se alternativet i verktygsfältet klickar du på **[!UICONTROL More]** och väljer sedan alternativet.
@@ -71,7 +70,7 @@ När granskaren har slutfört granskningen (godkänner eller avvisar resurser) f
 
    ![Granska status som den visas i listvyn](assets/review_status_listview.png)
 
-## Skapa en granskningsaktivitet för samlingar {#creating-a-review-task-for-collections}
+## Skapa en granskningsuppgift för samlingar {#creating-a-review-task-for-collections}
 
 1. På sidan Samlingar väljer du den samling som du vill skapa en granskningsuppgift för.
 1. Klicka på **[!UICONTROL Create Review Task]** ![skapa granskningsaktivitet](assets/do-not-localize/create-review-task.png) i verktygsfältet för att öppna sidan **[!UICONTROL Review Task]**. Om du inte kan se alternativet i verktygsfältet klickar du på **[!UICONTROL More]** och väljer sedan alternativet.
