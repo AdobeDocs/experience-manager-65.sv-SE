@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 docset: aem65
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: Konfiguration,Scene7-läge
-source-git-commit: 90737593086c680f0a948f5b9cab6e58767b6373
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '5778'
 ht-degree: 4%
@@ -57,7 +57,7 @@ Om du vill aktivera Dynamic Media måste du starta Experience Manager med körni
 java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=500000 -jar cq-quickstart-6.5.0.jar -gui -r author,dynamicmedia_scene7 -p 4502
 ```
 
-## (Valfritt) Migrera förinställningar och konfigurationer för Dynamic Media från 6.3 till 6.5 Zero Downtime {#optional-migrating-dynamic-media-presets-and-configurations-from-to-zero-downtime}
+## (Valfritt) Migrera förinställningar och konfigurationer för Dynamic Media från 6.3 till 6.5 nolltid {#optional-migrating-dynamic-media-presets-and-configurations-from-to-zero-downtime}
 
 Uppgradering av Experience Manager Dynamic Media från 6.3 till 6.4 eller 6.5 innefattar nu möjligheten till driftsättning utan driftstopp. Om du vill migrera alla förinställningar och konfigurationer från `/etc` till `/conf` i CRXDE Lite ska du köra följande kommando.
 
@@ -80,7 +80,7 @@ Med funktionspaketet 18912 kan du antingen importera resurser gruppvis via FTP e
 
 Mer information finns i [Installera funktionspaket 18912 för migrering av gruppresurser](/help/assets/bulk-ingest-migrate.md).
 
-## Skapa en Dynamic Media-konfiguration i Cloud Servicens {#configuring-dynamic-media-cloud-services}
+## Skapa en Dynamic Media-konfiguration i Cloud Services {#configuring-dynamic-media-cloud-services}
 
 **Innan du konfigurerar Dynamic Media** - När du har fått ditt e-postmeddelande med Dynamic Media-inloggningsuppgifter måste du öppna  [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och sedan logga in på ditt konto för att ändra ditt lösenord. Lösenordet som anges i e-postmeddelandet om etablering genereras av systemet och är endast avsett som ett tillfälligt lösenord. Det är viktigt att du uppdaterar lösenordet så att Dynamic Media Cloud Service har rätt autentiseringsuppgifter.
 
@@ -153,7 +153,7 @@ Om du vill anpassa konfigurationen och konfigurationen av Dynamic Media - Scene7
 
 * [(Valfritt) Filtrera resurser för replikering](#optional-filtering-assets-for-replication)
 
-### (Valfritt) Installation och konfiguration av Dynamic Media - Inställningar för Scene7-läge {#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings}
+### (Valfritt) Installation och konfiguration av Dynamic Media - inställningar för Scene7-läge {#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings}
 
 När du är i körläge `dynamicmedia_scene7` använder du användargränssnittet i Dynamic Media Classic för att ändra dina Dynamic Media-inställningar.
 
@@ -168,7 +168,7 @@ Installations- och konfigureringsuppgifter omfattar följande:
 * [Lägga till MIME-typer för format som inte stöds](#adding-mime-types-for-unsupported-formats)
 * [Skapa gruppuppsättningsförinställningar för automatisk generering av bilduppsättningar och snurpuppsättningar](#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)
 
-#### Publiceringsinställningar för Image Server {#publishing-setup-for-image-server}
+#### Publiceringskonfiguration för Image Server {#publishing-setup-for-image-server}
 
 Publiceringsinställningarna avgör hur resurser levereras som standard från Dynamic Media. Om ingen inställning anges levererar Dynamic Media en resurs enligt standardinställningarna som definierats i Publiceringsinställningar. En begäran om att leverera en bild som inte innehåller ett upplösningsattribut ger till exempel en bild med inställningen för standardobjektupplösning.
 
@@ -184,13 +184,13 @@ Bildserverskärmen anger standardinställningar för att leverera bilder. I grä
 * **[!UICONTROL Compatibility Attributes]** - Den här inställningen gör att inledande och avslutande stycken i textlager kan hanteras som de var i version 3.6 för bakåtkompatibilitet.
 * **[!UICONTROL Localization Support]** - Med de här inställningarna kan du hantera flera språkattribut. Här kan du också ange en sträng för språkområdeskarta så att du kan definiera vilka språk du vill ha stöd för de olika verktygstipsen i visningsprogram. Mer information om hur du konfigurerar **[lokaliseringsstöd]** finns i [Att tänka på när du konfigurerar lokalisering av resurser](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/publish-setup.html?lang=en#considerations-when-setting-up-localization-of-assets).
 
-#### Konfigurerar allmänna inställningar för programmet {#configuring-application-general-settings}
+#### Konfigurera allmänna inställningar för programmet {#configuring-application-general-settings}
 
 Öppna sidan Allmänna inställningar för programmet genom att trycka på **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL General Settings]** i det globala navigeringsfältet i Dynamic Media Classic.
 
 **[!UICONTROL Servers]** - Vid kontoetablering tillhandahåller Dynamic Media automatiskt de tilldelade servrarna för ditt företag. De här servrarna används för att skapa URL-strängar för din webbplats och dina program. Dessa URL-anrop är specifika för ditt konto. Ändra inte något av servernamnen om du inte uttryckligen har fått instruktioner från Adobe kundtjänst om att göra det.
 
-**[!UICONTROL Overwrite Images]** - Dynamic Media tillåter inte att två filer har samma namn. Varje objekts URL-ID (filnamnet minus filtillägget) måste vara unikt. De här alternativen anger hur ersättningsresurser överförs: om de ersätter originalet eller blir dubbletter. Duplicerade resurser får ett nytt namn med namnet&quot;-1&quot; (till exempel heter stol.tif stol-1.tif). Dessa alternativ påverkar resurser som överförts till en annan mapp än den ursprungliga eller resurser med ett annat filnamnstillägg än den ursprungliga (till exempel JPG, TIF eller PNG).
+**[!UICONTROL Overwrite Images]** - Dynamic Media tillåter inte att två filer har samma namn. Varje objekts URL-ID (filnamnet minus filtillägget) måste vara unikt. De här alternativen anger hur ersättningsresurser överförs: om de ersätter originalet eller blir dubbletter. Dubblettresurser får ett nytt namn med namnet&quot;-1&quot; (till exempel heter stol.tif stol-1.tif). Dessa alternativ påverkar resurser som överförts till en annan mapp än den ursprungliga eller resurser med ett annat filnamnstillägg än den ursprungliga (till exempel JPG, TIF eller PNG).
 
 * **[!UICONTROL Overwrite in current folder, same base image name/extension]** - Det här alternativet är den striktaste regeln för ersättning. Det kräver att du överför ersättningsbilden till samma mapp som originalbilden och att ersättningsbilden har samma filnamnstillägg som originalbilden. Om dessa krav inte uppfylls skapas en dubblett.
 
@@ -206,7 +206,7 @@ Välj alltid den här inställningen om du vill att den ska vara konsekvent med 
 Som standard visas 15 återgivningar när du väljer **[!UICONTROL Renditions]** och 15 visningsförinställningar när du väljer **[!UICONTROL Viewers]** i resursens detaljvy. Du kan öka den här gränsen. Se [Öka antalet bildförinställningar som visas](/help/assets/managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display) eller [Öka antalet visningsförinställningar som visas](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display).
 
 
-#### Konfigurerar färghantering {#configuring-color-management}
+#### Konfigurera färghantering {#configuring-color-management}
 
 Med dynamisk mediefärghantering kan du färgkorrigera resurser. Med färgkorrigering behåller inkapslade resurser sin färgmodell (RGB, CMYK, Grå) och inbäddad färgprofil. När du begär en dynamisk återgivning korrigeras bildfärgen till målfärgrymden med hjälp av CMYK-, RGB- eller grå utdata. Se [Konfigurera bildförinställningar](/help/assets/managing-image-presets.md).
 
@@ -270,7 +270,7 @@ Se [Överför resurser](/help/assets/manage-assets.md#uploading-assets).
 
 1. Tryck på **[!UICONTROL CRXDE Lite]** längst upp till vänster på sidan för att gå tillbaka till Experience Manager.
 
-#### Lägger till MIME-typer för format som inte stöds {#adding-mime-types-for-unsupported-formats}
+#### Lägga till MIME-typer för format som inte stöds {#adding-mime-types-for-unsupported-formats}
 
 Du kan lägga till anpassade MIME-typer för format som inte stöds i Experience Manager Assets. Kontrollera att alla nya noder som du lägger till i CRXDE Lite inte tas bort av Experience Manager genom att flytta MIME-typen före `image_`. Kontrollera också att dess aktiverade värde är **[!UICONTROL false]**.
 
@@ -519,7 +519,7 @@ Adobe rekommenderar att du använder följande&quot;justerade&quot; jobbparametr
 
 Om du vill uppdatera någon av de här parametrarna följer du stegen i [Aktivera stöd för MIME-typbaserade resurser/Dynamic Media Classic-överföringsjobbparametrar](/help/sites-administering/scene7.md#enabling-mime-type-based-assets-scene-upload-job-parameter-support).
 
-#### Uppdaterar den tillfälliga arbetsflödeskön för Granite {#updating-the-granite-transient-workflow-queue}
+#### Uppdatera den tillfälliga arbetsflödeskön för Granite {#updating-the-granite-transient-workflow-queue}
 
 Kön för Bevilja överföring av arbetsflöde används för **[!UICONTROL DAM Update Asset]**-arbetsflödet. I Dynamic Media används den för bildhantering.
 
@@ -542,7 +542,7 @@ Kön för Bevilja överföring av arbetsflöde används för **[!UICONTROL DAM U
 
 1. Tryck på **[!UICONTROL Save]**.
 
-#### Uppdaterar arbetsflödeskön för Granite {#updating-the-granite-workflow-queue}
+#### Uppdaterar arbetsflödeskön Granite {#updating-the-granite-workflow-queue}
 
 Beviljad arbetsflödeskö används för icke-tillfälliga arbetsflöden. I Dynamic Media bearbetades video med arbetsflödet **[!UICONTROL Dynamic Media Encode Video]**.
 
