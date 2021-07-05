@@ -9,8 +9,8 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 discoiquuid: 50fafc64-d462-4386-93af-ce360588d294
-translation-type: tm+mt
-source-git-commit: ea6da2b75cce4052211fb8f0793f1f380eb85a20
+exl-id: 3891150e-9972-4bbc-ad61-7f46a1f9bbb4
+source-git-commit: 08269877be5e98405474e4b1793526763cab174f
 workflow-type: tm+mt
 source-wordcount: '5252'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Utveckla rapporter{#developing-reports}
+# Utveckla rapporter {#developing-reports}
 
 AEM innehåller ett urval av [standardrapporter](/help/sites-administering/reporting.md) som i de flesta fall baseras på ett rapportramverk.
 
@@ -86,7 +86,7 @@ Om inget annat anges är standardtyperna:
 >* Egenskaper - `String`
 
 
-## Reporting Framework {#reporting-framework}
+## Rapporteringsramverk {#reporting-framework}
 
 Rapporteringsramen fungerar enligt följande principer:
 
@@ -169,7 +169,7 @@ Detta gör att:
 
    Exempel: en text som visas för användaren, ett värde som ska användas för sortering och en extra URL som används (på klientsidan) för att skapa en länk.
 
-#### Arbetsflöde för bearbetningskön {#workflow-of-the-processing-queue}
+#### Bearbetningsköns arbetsflöde {#workflow-of-the-processing-queue}
 
 Följande arbetsflöde representerar arbetskön:
 
@@ -400,7 +400,7 @@ standard: `9` (detta är också det högsta tillåtna värdet)
 
 
 
-### Konfigurationsdialogrutan {#configuration-dialog}
+### Konfigurationsdialogruta {#configuration-dialog}
 
 Varje rapport kan ha en konfigurationsdialogruta där användaren kan ange olika parametrar för rapporten. Den här dialogrutan är tillgänglig via knappen **Redigera** när rapportsidan är öppen.
 
@@ -603,7 +603,7 @@ function(v) {
 }
 ```
 
-### Lös upp och förbearbeta {#resolvers-and-preprocessing}
+### Lösning och förbearbetning {#resolvers-and-preprocessing}
 
 [Bearbetningskön](#processing-queue) definierar de olika lösarna och konfigurerar förbearbetningen:
 
@@ -635,7 +635,7 @@ N:definitions
 
    * `path`
 
-      Löser ett sökvägsvärde genom att lägga till en undersökväg och ta det faktiska värdet från en egenskap i noden (som definieras av `resolverConfig`) vid den lösta sökvägen. En `path` av `/content/.../page/jcr:content` kan till exempel matchas mot innehållet i egenskapen `jcr:title`, vilket innebär att en sidsökväg tolkas som sidans rubrik.
+      Löser ett sökvägsvärde genom att lägga till en undersökväg och ta det faktiska värdet från en egenskap i noden (som definieras av `resolverConfig`) vid den lösta sökvägen. En `path` av `/content/.../page/jcr:content` kan till exempel matchas med innehållet i egenskapen `jcr:title`, vilket innebär att en sidsökväg tolkas som sidans rubrik.
 
    * `pathextension`
 
@@ -697,7 +697,7 @@ N:definitions
 
       Använd efter förbearbetning ([steg 9 i återgivningen av bearbetningskön](#processing-queue)).
 
-#### Lösare {#resolvers}
+#### Resolvers {#resolvers}
 
 Upplösarna används för att extrahera den information som krävs. Exempel på olika lösare är:
 
@@ -755,7 +755,7 @@ N:data
         P:propertyName="language"
 ```
 
-#### Förbearbetar {#preprocessing}
+#### Förbehandling {#preprocessing}
 
 Definitionen `preprocessing` kan användas på antingen:
 
@@ -825,7 +825,7 @@ En exempelersättning kan delas upp som:
 
    * `/content/geometrixx/en/services`
 
-#### Förbehandling - Datatypen Formatter {#preprocessing-data-type-formatters}
+#### Förbehandling - Datatyper för datafrågor {#preprocessing-data-type-formatters}
 
 Dessa formaterare konverterar ett numeriskt värde till en relativ sträng.
 
@@ -1200,7 +1200,7 @@ N:apps
                 N:<reportname> [sling:Folder]
 ```
 
-## Skapar din egen rapport - ett exempel {#creating-your-own-report-an-example}
+## Skapa en egen rapport - ett exempel {#creating-your-own-report-an-example}
 
 ### Definiera din nya rapport {#defining-your-new-report}
 
@@ -1382,7 +1382,7 @@ För att illustrera dessa steg definierar följande exempel en rapport som visar
    * innehåller rubriker och beskrivningar för mallen
    * innehåller en miniatyrbild som kan användas i malllistan (den fullständiga definitionen för den här noden visas inte ovan - det är enklast att kopiera en instans av miniatyrbild.png från en befintlig rapport).
 
-### Skapar en instans av din nya rapport {#creating-an-instance-of-your-new-report}
+### Skapa en instans av din nya rapport {#creating-an-instance-of-your-new-report}
 
 En instans av din nya rapport kan nu skapas:
 
@@ -1449,6 +1449,5 @@ Dessa kan visas med hjälp av webbkonsolens konfigurationsmeny (finns t.ex. på 
 >* en användare och två rapporter
 
 >
-
 
 
