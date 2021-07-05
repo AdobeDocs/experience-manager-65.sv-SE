@@ -10,7 +10,7 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: 50fafc64-d462-4386-93af-ce360588d294
 exl-id: 3891150e-9972-4bbc-ad61-7f46a1f9bbb4
-source-git-commit: 08269877be5e98405474e4b1793526763cab174f
+source-git-commit: 071bc0e36ed2d8eb4ce7bd0ba46823adc0e43095
 workflow-type: tm+mt
 source-wordcount: '5252'
 ht-degree: 0%
@@ -50,34 +50,17 @@ För standardrapporter som levereras med AEM:
 >I exemplen och definitionerna nedan används följande notering:
 >
 >* Varje rad definierar en nod eller en egenskap där:
-   >
-   >  
-* `N:<name> [<nodeType>]`
-   >
-   >     
-   Beskriver en nod med namnet `<*name*>` och nodtypen `<*nodeType*>`*.*
-   >
-   >  
-* `P:<name> [<propertyType]`
-   >
-   >     
-   Beskriver en egenskap med namnet `<*name*>` och egenskapstypen `<*propertyType*>`.
-   >
-   >  
-* `P:<name> = <value>`
-   >
-   >     
-   Beskriver en egenskap `<name>` som måste anges till värdet `<value>`.
+   >  `N:<name> [<nodeType>]` : Beskriver en nod med namnet  `<*name*>` och nodtypen  `<*nodeType*>`*.*
+   >  `P:<name> [<propertyType]` : Beskriver en egenskap med namnet  `<*name*>` och egenskapstypen  `<*propertyType*>`.
+   >  `P:<name> = <value>` : Beskriver en egenskap  `<name>` som måste anges till värdet för  `<value>`.
    >
    >
 * Indrag visar hierarkiska beroenden mellan noderna.
->* Objekt avgränsade med | betecknar en lista över möjliga poster, till exempel typer eller namn:
+>* Objekt avgränsade med | betecknar en lista över möjliga poster, till exempel typer eller namn, t.ex. `String|String[]` betyder att egenskapen kan vara antingen String eller String[].
 
->
->  
-t.ex. `String|String[]` betyder att egenskapen kan vara antingen String eller String[].
->
->* `[]` avbildar en array, som [] String eller en array med noder som i  [Frågedefinitionen](#query-definition).
+   >
+   >
+* `[]` avbildar en array, som [] String eller en array med noder som i  [Frågedefinitionen](#query-definition).
 >
 >
 Om inget annat anges är standardtyperna:
