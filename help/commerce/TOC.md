@@ -3,10 +3,9 @@ sub-product: AEM innehåll och handel
 user-guide-title: AEM innehåll och handel
 breadcrumb-title: Commerce Guide
 user-guide-description: Förstå hur ni använder och administrerar AEM innehåll och handel.
-translation-type: tm+mt
-source-git-commit: 8612e7c4105a9872fc8bba1988716eaa4b18d550
+source-git-commit: 538dc7620317f86c0b3d762eaef597d0a7969ace
 workflow-type: tm+mt
-source-wordcount: '104'
+source-wordcount: '108'
 ht-degree: 7%
 
 ---
@@ -32,6 +31,7 @@ ht-degree: 7%
       + [Formatera CIF-komponenter](cif/customizing/style-cif-component.md)
       + [Anpassa CIF-komponenter](cif/customizing/customize-cif-components.md)
       + [Använda CIF-katalogväljare](cif/customizing/use-cif-pickers.md)
++ [Adobe Commerce PWA Studio](cif/pwa-studio/getting-started.md)
 + [Migrering](cif/migration.md)
 + Versionsinformation {#release-notes}
    + [2021](cif/release-notes/release-notes-2021.md)
