@@ -5,9 +5,9 @@ contentOwner: AG
 role: User
 feature: Resurshantering
 exl-id: 544ef73c-4e4b-433f-a173-fdf1c8f45d8e
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 19dd081674b4954498d6aa62335f6b5a9f2a4146
 workflow-type: tm+mt
-source-wordcount: '420'
+source-wordcount: '418'
 ht-degree: 3%
 
 ---
@@ -63,6 +63,6 @@ Administratörer kan checka in resurser som är utcheckade av andra användare.
 
 >[!MORELIKETHIS]
 >
->* [Förstå in- och utcheckning av  [!DNL Experience Manager] sktop](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=en#how-app-works2)
+>* [Förstå in- och utcheckning av  [!DNL Experience Manager] sktop](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#how-app-works2)
 >* [Videosjälvstudiekurs för att förstå hur du checkar in och checkar ut [!DNL Assets]](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/collaboration/check-in-and-check-out.html)
 
