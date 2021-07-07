@@ -6,9 +6,9 @@ mini-toc-levels: 1
 feature: Sök, metadata
 role: User
 exl-id: 588433b2-564a-430f-9d04-480465ece2ad
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 19dd081674b4954498d6aa62335f6b5a9f2a4146
 workflow-type: tm+mt
-source-wordcount: '5526'
+source-wordcount: '5524'
 ht-degree: 4%
 
 ---
@@ -358,7 +358,7 @@ Visuell sökning använder smarta taggar. Följ de här stegen när du har konfi
    Spara ändringarna.
 
 1. Få åtkomst till `/oak:index/damAssetLucene/indexRules/dam:Asset/properties/predictedTags` och lägg till egenskapen `similarityTags` av typen `Boolean` med värdet `true`.
-1. Använd smarta taggar för resurserna i din [!DNL Experience Manager]-databas. Se [konfigurera smarta taggar](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/configuring/tagging.html?lang=en#configuring).
+1. Använd smarta taggar för resurserna i din [!DNL Experience Manager]-databas. Se [konfigurera smarta taggar](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/configuring/tagging.html#configuring).
 1. I CRXDE anger du `/oak-index/damAssetLucene`-egenskapen till `true` i noden `reindex`. Spara ändringarna.
 1. (Valfritt) Om du har anpassat sökformulär kopierar du noden `/libs/settings/dam/search/facets/assets/jcr%3Acontent/items/similaritysearch` till `/conf/global/settings/dam/search/facets/assets/jcr:content/items`. Spara ändringarna.
 
