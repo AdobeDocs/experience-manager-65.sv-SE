@@ -3,12 +3,13 @@ title: Konfigurera plugin-programmen för RTF-redigeraren
 description: Lär dig konfigurera plugin-programmen för Adobe Experience Manager Rich Text Editor så att enskilda funktioner aktiveras.
 contentOwner: AG
 exl-id: 6bfd6caa-a68a-40ba-9826-4ba02cd1dbfb
-source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
+source-git-commit: 7f8263a9304ff51e08878c13115c8aeeafce3de3
 workflow-type: tm+mt
-source-wordcount: '4380'
+source-wordcount: '4390'
 ht-degree: 0%
 
 ---
+
 
 # Konfigurera plugin-programmen för RTF-redigeraren {#configure-the-rich-text-editor-plug-ins}
 
@@ -72,7 +73,7 @@ När du använder funktionen Ersätt bör du ange den ersättningssträng som sk
 
 Dialogrutan Sök och ersätt blir genomskinlig när du klickar på Sök och blir ogenomskinlig när du klickar på Ersätt. Detta gör att författaren kan granska texten som författaren ska ersätta. Om användare klickar på Ersätt alla stängs dialogrutan och visar antalet ersättningar som gjorts.
 
-## Konfigurera inklistringslägena {#paste-modes}
+## Konfigurera inklistringslägen {#paste-modes}
 
 När du använder RTE kan författare klistra in innehåll i något av följande tre lägen:
 
@@ -82,7 +83,7 @@ När du använder RTE kan författare klistra in innehåll i något av följande
 
 * **MS Word-läge**: Klistra in texten, inklusive tabeller, med formatering när du kopierar från MS Word. Det går inte att kopiera och klistra in text från en annan källa, t.ex. en webbsida eller MS Excel, utan endast partiell formatering.
 
-### Konfigurera de alternativ för Klistra in som finns i verktygsfältet RTE {#configure-paste-options-available-on-the-rte-toolbar}
+### Konfigurera de inklistringsalternativ som finns i verktygsfältet för textredigering  {#configure-paste-options-available-on-the-rte-toolbar}
 
 Du kan ange några, alla eller inga av dessa tre ikoner till författarna i verktygsfältet för textredigering:
 
@@ -155,53 +156,18 @@ Så här konfigurerar du vilka format som tillåts när du klistrar in text i AE
    >
    >Om det inte uttryckligen definieras används standardvärdet true och formatet accepteras.
 
-1. Andra format kan också definieras med hjälp av ett intervall av andra egenskaper eller noder, som även kan användas på noden `htmlPasteRules`:
+1. Andra format kan också definieras med hjälp av ett intervall av andra egenskaper eller noder, som även kan användas på noden `htmlPasteRules`. Spara alla ändringar.
 
-<table>
- <tbody>
-  <tr>
-   <td><strong>Egenskap</strong></td>
-   <td><strong>Typ</strong></td>
-   <td><strong>Beskrivning</strong></td>
-  </tr>
-  <tr>
-   <td>allowBlockTags</td>
-   <td>Sträng[]</td>
-   <td><p>Definierar listan med blocktaggar som tillåts.</p> <p>Några möjliga blocktaggar är:</p>
-    <ul>
-     <li>rubriker (h1, h2, h3)</li>
-     <li>stycken (p)</li>
-     <li>listor (ol, ul)</li>
-     <li>tabeller (tabell)</li>
-    </ul> </td>
-  </tr>
-  <tr>
-   <td>fallbackBlockTag</td>
-   <td>Sträng</td>
-   <td><p>Definierar den blocktagg som används för block med en blocktagg som inte ingår i allowBlockTags.</p> <p> i de flesta fall är det tillräckligt.</p> </td>
-  </tr>
-  <tr>
-   <td>tabell</td>
-   <td>nt:ostrukturerad</td>
-   <td><p>Definierar beteendet när tabeller klistras in.<br /> </p> <p>Den här noden måste ha egenskapen <code>allow</code> (typ <code>Boolean</code>) för att definiera om det är tillåtet att klistra in tabeller.</p> <p>Om <code>allow</code> är <code>false</code> måste du ange egenskapen <code>ignoreMode</code> (typ<code> String</code>) för att definiera hur inklistrat tabellinnehåll hanteras. Giltiga värden för <code>ignoreMode</code> är:</p>
-    <ul>
-     <li><code>remove</code>: Tar bort tabellinnehåll.</li>
-     <li><code>paragraph</code>: Ändrar tabellceller till stycken.</li>
-    </ul> </td>
-  </tr>
-  <tr>
-   <td>list</td>
-   <td>nt:ostrukturerad</td>
-   <td><p>Definierar beteendet när listor klistras in.<br /> </p> <p>Måste ha egenskapen <code>allow</code> (typ <code>Boolean</code>) för att definiera om inklistring av listor är tillåten.</p> <p>Om <code>allow</code> är <code>false</code> måste du ange egenskapen <code>ignoreMode</code> (typ <code>String</code>) för att definiera hur allt listinnehåll som klistras in ska hanteras. Giltiga värden för <code>ignoreMode</code> är:</p>
-    <ul>
-     <li><code>remove</code>: Tar bort listinnehåll.</li>
-     <li><code>paragraph</code>: Omvandlar listobjekt till stycken.</li>
-    </ul> </td>
-  </tr>
- </tbody>
-</table>
+Du kan använda följande egenskaper för `htmlPasteRules`.
 
-Exempel på en giltig `htmlPasteRules`-struktur:
+| Egenskap | Typ | Beskrivning |
+|---|---|---|
+| `allowBlockTags` | Sträng | Definierar listan med blocktaggar som tillåts. Några möjliga blocktaggar är: <ul> <li>rubriker (h1, h2, h3)</li> <li>stycken (p)</li> <li>listor (ol, ul)</li> <li>tabeller (tabell)</li> </ul> |
+| `fallbackBlockTag` | Sträng | Definierar den blocktagg som används för alla block med en blocktagg som inte ingår i `allowBlockTags`. `p` i de flesta fall. |
+| tabell | nt:ostrukturerad | Definierar beteendet när tabeller klistras in. Den här noden måste ha egenskapen `allow` (typ Boolean) för att definiera om det är tillåtet att klistra in tabeller. Om allow är `false` måste du ange egenskapen `ignoreMode` (type String) för att definiera hur inklistrat tabellinnehåll hanteras. Giltiga värden för `ignoreMode` är: <ul> <li>`remove`: Tar bort tabellinnehåll.</li> <li>`paragraph`: Ändrar tabellceller till stycken.</li> </ul> |
+| list | nt:ostrukturerad | Definierar beteendet när listor klistras in. Måste ha egenskapen `allow` (typ Boolean) för att definiera om inklistring av listor är tillåten. Om `allow` är `false` måste du ange egenskapen `ignoreMode` (type String) för att definiera hur allt listinnehåll som klistras in ska hanteras. Giltiga värden för `ignoreMode` är: <ul><li> `remove`: Tar bort listinnehåll.</li> <li>`paragraph`: Omvandlar listobjekt till stycken.</li> </ul> |
+
+Ett exempel på en giltig `htmlPasteRules`-struktur visas nedan.
 
 ```xml
 "htmlPasteRules": {
@@ -223,13 +189,9 @@ Exempel på en giltig `htmlPasteRules`-struktur:
 }
 ```
 
-1. Spara alla ändringar.
-
 ## Konfigurera textformat {#textstyles}
 
-Författare kan använda format för att ändra utseendet på en del av texten. Formaten baseras på CSS-klasser som du fördefinierar i din CSS-formatmall. Stiliserat innehåll omges av `span`-taggar som använder attributet `class` för att referera till CSS-klassen. Till exempel:
-
-`<span class=monospaced>Monospaced Text Here</span>`
+Författare kan använda format för att ändra utseendet på en del av texten. Formaten baseras på CSS-klasser som du fördefinierar i din CSS-formatmall. Stiliserat innehåll omges av `span`-taggar som använder attributet `class` för att referera till CSS-klassen. Till exempel, `<span class=monospaced>Monospaced Text Here</span>`.
 
 När plugin-programmet Styles är aktiverat för första gången finns det inga standardformat. Popup-listan är tom. Så här förser du författarna med formatmallar:
 
@@ -237,11 +199,11 @@ När plugin-programmet Styles är aktiverat för första gången finns det inga 
 * Ange platsen/platserna för formatmallarna.
 * Ange de enskilda format som du kan välja i listrutan Format.
 
-Om du vill lägga till fler format vid senare (re-)konfigurationer, t.ex. följer du bara instruktionerna för att referera till en ny formatmall och ange de ytterligare formaten.
+Om du vill lägga till fler format vid ett senare tillfälle följer du bara instruktionerna för att referera till en ny formatmall och ange de ytterligare formaten.
 
 >[!NOTE]
 >
->Format kan också definieras för [tabeller eller tabellceller](/help/sites-administering/configure-rich-text-editor-plug-ins.md#tablestyles). Dessa konfigurationer kräver separata procedurer.
+>Du kan definiera format för [tabeller eller tabellceller](/help/sites-administering/configure-rich-text-editor-plug-ins.md#tablestyles). Dessa konfigurationer kräver separata procedurer.
 
 ### Aktivera listrutan Format för väljare {#styleselectorlist}
 
@@ -708,10 +670,7 @@ Om du vill konfigurera hur länkar läggs till i AEM från ett annat program def
    * **Typ** `String`
    * **Värde** `richtext`
 
-   Platsen för `../items/text`-noden kan variera beroende på strukturen i dialogrutan. två exempel:
-   * `/apps/myProject>/components/text/dialog/items/text`
-   * `/apps/<myProject>/components/text/dialog/items/panel/items/text`
-
+   Platsen för `../items/text`-noden kan variera beroende på strukturen i dialogrutan. två exempel är `/apps/myProject>/components/text/dialog/items/text` och `/apps/<myProject>/components/text/dialog/items/panel/items/text`.
 
 1. Skapa en ny nod under `htmlRules`.
 
