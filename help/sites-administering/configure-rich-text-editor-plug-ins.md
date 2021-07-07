@@ -3,9 +3,9 @@ title: Konfigurera plugin-programmen för RTF-redigeraren
 description: Lär dig konfigurera plugin-programmen för Adobe Experience Manager Rich Text Editor så att enskilda funktioner aktiveras.
 contentOwner: AG
 exl-id: 6bfd6caa-a68a-40ba-9826-4ba02cd1dbfb
-source-git-commit: 7f8263a9304ff51e08878c13115c8aeeafce3de3
+source-git-commit: 11cda989e6a28428f03a269c407a7672e6eab747
 workflow-type: tm+mt
-source-wordcount: '4390'
+source-wordcount: '4391'
 ht-degree: 0%
 
 ---
@@ -245,19 +245,11 @@ Ange sedan platsen/platserna för de formatmallar som du vill referera till:
 >
 >I Rich Text Editor används ett behållar-DOM-element med ID `CQrte` som kan användas för att tillhandahålla olika format för visning och redigering:
 >
+>`#CQ td {`
+>` // defines the style for viewing }`
 >
-```
->#CQ td {
-> // defines the style for viewing
-> }
->```
->
->
-```
->#CQrte td {
-> // defines the style for editing
-> }
->```
+>`#CQrte td {`
+>` // defines the style for editing }`
 
 ### Ange tillgängliga format i popup-listan {#stylesindropdown}
 
@@ -496,7 +488,7 @@ Kopiering och inklistring av tabeller i eller från RTE-komponenten är webbläs
 
    * **Namn** `features`
    * **Typ** `String`
-   * **Värde** `*`
+   * **Värde** `*`  (asterisk)
 
    >[!NOTE]
    Om du inte vill aktivera alla tabellfunktioner kan du skapa egenskapen `features` som:
@@ -613,7 +605,7 @@ Så här definierar du tabbstorleken:
 
    * **Namn** `tabSize`
    * **Typ** `String`
-   * **Ange** värdet för det antal blankstegstecken som ska användas för tabulatorn.
+   * **Ange** värdet för antalet blanksteg som ska användas för tabulatorn
 
 1. Spara ändringarna.
 
