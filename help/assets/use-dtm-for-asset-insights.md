@@ -5,9 +5,9 @@ contentOwner: AG
 role: User, Admin
 feature: Resursinsikter,Resursrapporter
 exl-id: 80e8f84e-3235-4212-9dcd-6acdb9067893
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: b3acfdba41e1bd94c65bb7a87f63b9c326a80dd2
 workflow-type: tm+mt
-source-wordcount: '614'
+source-wordcount: '590'
 ht-degree: 1%
 
 ---
@@ -114,4 +114,4 @@ Utför dessa steg för att aktivera Assets Insights via DTM.
    * AppMeasurement-objektet hämtas genom att fråga `satelliteLib` för alla tillgängliga SiteCatalyst-motorer. Om flera taggar har konfigurerats ändrar du indexvärdet för arrayväljaren på rätt sätt. Posterna i arrayen ordnas enligt de SiteCatalyst-verktyg som finns i DTM-gränssnittet.
 
 1. Spara och stäng fönstret Kodredigeraren och spara sedan ändringarna i verktygskonfigurationen.
-1. Godkänn båda väntande godkännanden på fliken **[!UICONTROL Approvals]**. DTM-taggen kan infogas på webbsidan. Mer information om hur du infogar DTM-taggar på webbsidor finns i [Integrera DTM i anpassade sidmallar](https://blogs.adobe.com/experiencedelivers/experience-management/integrating-dtm-custom-aem6-page-template/).
+1. Godkänn båda väntande godkännanden på fliken **[!UICONTROL Approvals]**. DTM-taggen kan infogas på webbsidan.
