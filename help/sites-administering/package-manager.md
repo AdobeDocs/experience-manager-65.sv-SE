@@ -10,16 +10,15 @@ topic-tags: content
 content-type: reference
 discoiquuid: 6694a135-d1e1-4afb-9f5b-23991ee70eee
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 03967fcdc9685c9a8bf1dead4bd5e389603ff91b
+exl-id: e8929d7c-9920-4c02-95a9-6f7f7a365203
+source-git-commit: 4a2a9f177049e8199662ed94cf7aace9aa937655
 workflow-type: tm+mt
-source-wordcount: '3934'
+source-wordcount: '3964'
 ht-degree: 0%
 
 ---
 
-
-# Arbeta med paket{#how-to-work-with-packages}
+# Så här arbetar du med paket{#how-to-work-with-packages}
 
 Med paket kan du importera och exportera databasinnehåll. Du kan till exempel använda paket för att installera nya funktioner, överföra innehåll mellan instanser och säkerhetskopiera databasinnehåll.
 
@@ -227,12 +226,18 @@ Pakethanteraren hanterar paketen i din lokala AEM. När du har [tilldelat de nö
 * [Paketinställningar](#package-settings)
 * [Paketfilter](#package-filters)
 
-### Behörigheter som krävs för att använda pakethanteraren {#permissions-needed-for-using-the-package-manager}
+### Behörigheter som krävs för att använda Pakethanteraren {#permissions-needed-for-using-the-package-manager}
 
 Om du vill ge användarna rätt att skapa, ändra, överföra och installera paket måste du ge dem rätt behörighet på följande platser:
 
 * **/etc/packages** (fullständig behörighet exklusive radering)
 * noden som innehåller paketets innehåll
+
+>[!CAUTION]
+>
+>Om du beviljar behörigheter för paket kan det leda till att känslig information röjs och att data går förlorade.
+>
+>För att begränsa de här riskerna rekommenderar vi att du endast ger särskilda gruppbehörigheter för dedikerade underträd, till exempel `/etc/packages/site-content`.
 
 Mer information om hur du ändrar behörigheter finns i [Ange behörigheter](/help/sites-administering/security.md#setting-page-permissions).
 
@@ -337,7 +342,7 @@ Ett paket skapas ofta samtidigt som du [skapar paketdefinitionen](#creating-a-ne
 
 1. Klicka på **OK**. AEM skapar paketet med allt innehåll som läggs till i paketet. När AEM är klar visas en bekräftelse på att paketet har skapats och (när du stänger dialogrutan) information om paketlistan uppdateras.
 
-### Rewrapping a package {#rewrapping-a-package}
+### Rewrapping a Package {#rewrapping-a-package}
 
 När ett paket har byggts kan det vid behov rewrappas.
 
@@ -368,7 +373,7 @@ Så här visar eller redigerar du information om en paketdefinition:
 
 1. Om paketet redan har byggts klickar du på **Innehåll** så öppnas ett fönster och hela innehållet i paketet visas:
 
-### Visa paketinnehåll och testinstallation {#viewing-package-contents-and-testing-installation}
+### Innehåll och testinstallation för visning av paket {#viewing-package-contents-and-testing-installation}
 
 När ett paket har skapats kan du visa innehållet:
 
@@ -383,7 +388,7 @@ När ett paket har skapats kan du visa innehållet:
 
    ![paketestestinstallera](assets/packagestestinstall.png)
 
-### Hämtar paket till ditt filsystem {#downloading-packages-to-your-file-system}
+### Hämtar paket till filsystemet {#downloading-packages-to-your-file-system}
 
 I det här avsnittet beskrivs hur du hämtar ett paket från AEM till filsystemet med **Package Manager**.
 
@@ -640,7 +645,7 @@ AEM kan du avinstallera paket. Den här åtgärden återställer innehållet i d
 1. Klicka på paketikonen för det paket som du vill avinstallera.
 1. Klicka på **Avinstallera** om du vill ta bort innehållet i det här paketet från databasen. En dialogruta begär bekräftelse och visar alla ändringar som görs. När du är klar klickar du på **Stäng** i dialogrutan.
 
-### Tar bort paket {#deleting-packages}
+### Ta bort paket {#deleting-packages}
 
 Så här tar du bort ett paket från pakethanterarlistan:
 
@@ -678,7 +683,7 @@ Paketresursen var en centraliserad server som är allmänt tillgänglig för del
 
 Den har ersatts av [Programvarudistribution](#software-distribution).
 
-## Programdistribution {#software-distribution}
+## Programvarudistribution {#software-distribution}
 
 [Software ](https://downloads.experiencecloud.adobe.com) Distribution är det nya användargränssnittet som förenklar sökning och hämtning av AEM.
 
@@ -687,4 +692,3 @@ Mer information finns i [Software Distribution documentation](https://experience
 >[!CAUTION]
 >
 >AEM pakethanteraren kan för tillfället inte användas med programvarudistribution, du hämtar dina paket till den lokala hårddisken.
-
