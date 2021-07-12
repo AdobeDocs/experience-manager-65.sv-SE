@@ -10,16 +10,15 @@ topic-tags: content-fragments
 content-type: reference
 discoiquuid: 324df1da-78fa-460f-a744-3504259f1d4a
 docset: aem65
-feature: Content Fragments
-role: Business Practitioner, Administrator
-translation-type: tm+mt
-source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
+feature: Innehållsfragment
+role: User, Admin
+exl-id: ded05f24-ab5c-4195-b5c4-704a9fd93c7e
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '1749'
-ht-degree: 14%
+source-wordcount: '1746'
+ht-degree: 15%
 
 ---
-
 
 # Variationer – redigera innehållsfragment{#variations-authoring-fragment-content}
 
@@ -72,7 +71,7 @@ Till exempel:
 
    ![cfm-6420-16](assets/cfm-6420-16.png)
 
-### Helskärmsredigeraren {#full-screen-editor}
+### Helskärmsredigerare {#full-screen-editor}
 
 När du redigerar ett textfält med flera rader kan du öppna fullskärmsredigeraren:
 
@@ -141,7 +140,7 @@ Med oformaterad text kan du snabbt lägga in innehåll utan formaterings- eller 
 >
 >Om du väljer **Oformaterad text** kan du förlora formatering, markdown-kod och/eller resurser som du har infogat i **RTF** eller **Markdown-kod**.
 
-### Markdown {#markdown}
+### Markering {#markdown}
 
 >[!NOTE]
 >
@@ -165,7 +164,7 @@ Du kan även öppna fullskärmsredigeraren för ytterligare [åtgärder](#action
 >
 >Om du växlar mellan **RTF** och **Markdown-kod** kan du få oväntade effekter med Blockcitattecken och Kodblock, eftersom dessa båda format kan hanteras på olika sätt.
 
-### Visar nyckelstatistik {#viewing-key-statistics}
+### Visa nyckelstatistik {#viewing-key-statistics}
 
 När helskärmsredigeraren är öppen visar åtgärden **Textstatistik** information om texten. Till exempel:
 
@@ -224,7 +223,7 @@ Att sammanfatta text är utformat för att hjälpa användare att minska längde
 
 1. Välj **Sammanfattning** för att bekräfta ändringarna.
 
-### Kommentera ett innehållsfragment {#annotating-a-content-fragment}
+### Anteckna ett innehållsfragment {#annotating-a-content-fragment}
 
 Så här kommenterar du ett fragment:
 
@@ -337,7 +336,7 @@ Så här byter du namn på en befintlig variant:
 >
 >Detta påverkar bara variationen **Titel**.
 
-### Tar bort en variant {#deleting-a-variation}
+### Ta bort en variant {#deleting-a-variation}
 
 Så här tar du bort en befintlig variant:
 
@@ -382,4 +381,3 @@ När du redigerar en variant har du tillgång till åtgärden för att synkronis
    ![cfm-6420-27](assets/cfm-6420-27.png)
 
 1. Välj **Synkronisera**. Variationen uppdateras och visas.
-
