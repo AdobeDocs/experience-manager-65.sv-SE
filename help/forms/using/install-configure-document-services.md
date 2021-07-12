@@ -6,15 +6,14 @@ seo-description: Installera AEM Forms dokumenttjänster för att skapa, sammanst
 uuid: 908806a9-b0d4-42d3-9fe4-3eae44cf4326
 topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+role: Admin
+exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '4123'
+source-wordcount: '4122'
 ht-degree: 0%
 
 ---
-
 
 # Installera och konfigurera dokumenttjänster {#installing-and-configuring-document-services}
 
@@ -264,7 +263,7 @@ Ange miljövariabler för 32- och 64-bitars Java Development Kit, tredjepartspro
 >  
 `export OpenOffice_PATH=/opt/openoffice.org4`
 
-### (Endast för IBM WebSphere) Konfigurera IBM SSL-socketprovidern {#only-for-ibm-websphere-configure-ibm-ssl-socket-provider}
+### (Endast för IBM WebSphere) Konfigurera IBM SSL-socketprovider {#only-for-ibm-websphere-configure-ibm-ssl-socket-provider}
 
 Utför följande steg för att konfigurera IBM SSL-socketprovidern:
 
@@ -305,7 +304,7 @@ Om du kör Microsoft Windows Server konfigurerar du bläck- och handskriftstjän
 1. Klicka på **[!UICONTROL Add Features]** på **[!UICONTROL Features]**-menyn. Markera kryssrutan **[!UICONTROL Ink and Handwriting Services]**.
 1. **[!UICONTROL Select Features]** med  **[!UICONTROL Ink and Handwriting Services]** markerad dialogruta. Klicka på **[!UICONTROL Install]** så installeras tjänsten.
 
-### (Endast Windows) Konfigurera inställningarna för filblockering för Microsoft Office {#configure-the-file-block-settings-for-microsoft-office}
+### (Endast Windows) Konfigurera inställningarna för filblock för Microsoft Office {#configure-the-file-block-settings-for-microsoft-office}
 
 Ändra inställningarna för Microsoft Office Trust Center så att tjänsten PDF Generator kan konvertera filer som skapats med äldre versioner av Microsoft Office.
 
@@ -315,7 +314,7 @@ Om du kör Microsoft Windows Server konfigurerar du bläck- och handskriftstjän
 1. Klicka på **[!UICONTROL File Block Settings]** i **[!UICONTROL Trust Center settings]**.
 1. Avmarkera **[!UICONTROL Open]** i listan **[!UICONTROL File Type]** som filtyp som PDF Generator-tjänsten ska kunna konvertera till PDF-dokument.
 
-### (Endast Windows) Bevilja privilegiet Ersätt en processnivåtoken {#grant-the-replace-a-process-level-token-privilege}
+### (Endast Windows) Bevilja privilegiet Ersätt en token på processnivå {#grant-the-replace-a-process-level-token-privilege}
 
 Användarkontot som används för att starta programservern kräver privilegiet **Ersätt en procesnivåtoken**. Det lokala systemkontot har behörigheten **Ersätt en token på processnivå** som standard. För servrar som körs med en användare i gruppen Lokala administratörer måste privilegiet ges uttryckligen. Utför följande steg för att bevilja privilegiet:
 
@@ -359,7 +358,7 @@ Tjänsten PDF Generator tillhandahåller vägar eller metoder för WebKit, WebCa
 >
 >När du installerar nya teckensnitt i teckensnittsmappen startar du om AEM Forms-instansen.
 
-### (Endast UNIX-baserade plattformar) Extra konfigurationer för HTML till PDF-konvertering {#extra-configurations-for-html-to-pdf-conversion}
+### (Endast UNIX-baserade plattformar) Extra konfigurationer för konvertering från HTML till PDF  {#extra-configurations-for-html-to-pdf-conversion}
 
 På UNIX-baserade plattformar stöder PDF Generator-tjänsten WebKit- och PhantomJS-vägar för konvertering av HTML-filer till PDF-dokument. Om du vill aktivera konvertering från HTML till PDF utför du följande konfigurationer, som gäller för den konverteringsväg du föredrar:
 
@@ -405,9 +404,9 @@ AEM Forms tilläggspaket är ett program som distribueras till AEM. Paketet inne
 
 1. När paketet har installerats uppmanas du att starta om AEM. **Stoppa inte servern omedelbart.** Innan du stoppar AEM Forms-servern väntar du tills meddelandena ServiceEvent REGISTERED och ServiceEvent UNREGISTERED inte visas i filen  `[AEM-Installation-Directory]/crx-quickstart/logs/error`.log och loggen är stabil.
 
-## Konfigurationer efter installation {#post-installation-configurations}
+## Konfiguration efter installation {#post-installation-configurations}
 
-### Konfigurera Boot Delegation för RSA/BouncyCastle-bibliotek {#configure-boot-delegation-for-rsa-bouncycastle-libraries}
+### Konfigurera Boot Delegation för RSA/BouncyCastle-bibliotek  {#configure-boot-delegation-for-rsa-bouncycastle-libraries}
 
 1. Stoppa AEM. Gå till [AEM installationskatalog]\crx-quickstart\conf\ folder. Öppna filen sling.properties för redigering.
 
@@ -427,7 +426,7 @@ AEM Forms tilläggspaket är ett program som distribueras till AEM. Paketet inne
 
 1. Spara och stäng filen.
 
-### Konfigurerar teckensnittshanterartjänsten {#configuring-the-font-manager-service}
+### Konfigurera teckensnittshanterartjänsten  {#configuring-the-font-manager-service}
 
 1. Logga in på [AEM Configuration Manager](http://localhost:4502/system/console/configMgr) som administratör.
 1. Leta reda på och öppna tjänsten **[!UICONTROL CQ-DAM-Handler-Gibson Font Managers]**. Ange sökvägen till katalogerna System Fonts, Adobe Server Fonts och Customer Fonts. Klicka på **[!UICONTROL Save]**.
@@ -437,7 +436,7 @@ AEM Forms tilläggspaket är ett program som distribueras till AEM. Paketet inne
    >Din rätt att använda teckensnitt som tillhandahålls av andra parter än Adobe regleras av de licensavtal som dessa parter ger dig med dessa teckensnitt och omfattas inte av din licens att använda Adobe. Adobe rekommenderar att du granskar och kontrollerar att du följer alla tillämpliga licensavtal som inte är Adobe innan du använder teckensnitt som inte är Adobe med Adobe, särskilt när det gäller användning av teckensnitt i servermiljöer.
    > När du installerar nya teckensnitt i teckensnittsmappen startar du om AEM Forms-instansen.
 
-### Konfigurera ett lokalt användarkonto för att köra PDF Generator-tjänsten {#configure-a-local-user-account-to-run-the-pdf-generator-service}
+### Konfigurera ett lokalt användarkonto för att köra PDF Generator-tjänsten  {#configure-a-local-user-account-to-run-the-pdf-generator-service}
 
 Det krävs ett lokalt användarkonto för att köra PDF Generator-tjänsten. Anvisningar om hur du skapar en lokal användare finns i [Skapa ett användarkonto i Windows](https://support.microsoft.com/en-us/help/13951/windows-create-user-account) eller [skapa ett användarkonto på UNIX-baserade plattformar](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/4/html/Step_by_Step_Guide/s1-starting-create-account.html).
 
@@ -445,7 +444,7 @@ Det krävs ett lokalt användarkonto för att köra PDF Generator-tjänsten. Anv
 
 1. Ange autentiseringsuppgifter för ett lokalt användarkonto på fliken **[!UICONTROL User Accounts]** och klicka på **[!UICONTROL Submit]**. Tillåt åtkomst till användaren om Microsoft Windows tillfrågas. När den konfigurerade användaren läggs till visas den under **[!UICONTROL Your user accounts]**-avsnittet på fliken **[!UICONTROL User Accounts]**.
 
-### Konfigurera timeout-inställningarna {#configure-the-time-out-settings}
+### Konfigurera timeout-inställningar {#configure-the-time-out-settings}
 
 1. I [AEM konfigurationshanteraren](http://localhost:4502/system/console/configMgr) letar du reda på och öppnar tjänsten **[!UICONTROL Jacorb ORB Provider]**.
 
@@ -510,7 +509,7 @@ I Microsoft Windows använder PDF Generator-tjänsten Adobe Acrobat för att kon
 
    1. Navigera till `[Path_of_reports_folder]`. Öppna filen SystemReadinessTool.html. Verifiera rapporten och åtgärda problemen.
 
-### (Endast Windows) Konfigurera primär väg för HTML till PDF-konvertering {#configure-primary-route-for-html-to-pdf-conversion-windows-only}
+### (Endast Windows) Konfigurera primär väg för konvertering från HTML till PDF {#configure-primary-route-for-html-to-pdf-conversion-windows-only}
 
 Tjänsten PDF Generator erbjuder flera vägar för att konvertera HTML-filer till PDF-dokument: Webkit, Acrobat WebCapture (endast Windows) och PhantomJS. Adobe rekommenderar att du använder PhantomJS-vägen eftersom den kan hantera dynamiskt innehåll och inte har några beroenden till 32-bitars bibliotek, 32-bitars JDK eller inte kräver några extra teckensnitt. Inte heller PhantomJS-vägen kräver sudo- eller root-åtkomst för att köra konverteringen.
 
@@ -520,7 +519,7 @@ Den primära standardvägen för konvertering från HTML till PDF är Webkit. S�
 
 1. Välj önskad konverteringsväg i listrutan **[!UICONTROL Primary Route for HTML to PDF conversions]** på fliken **[!UICONTROL General Configuration]**.
 
-### Initiera globalt förtroendearkiv {#intialize-global-trust-store}
+### Initiera Global Trust Store {#intialize-global-trust-store}
 
 Med pålitlighetslagerhanteringen kan du importera, redigera och ta bort certifikat som du litar på på servern för validering av digitala signaturer och certifikatautentisering. Du kan importera och exportera valfritt antal certifikat. När ett certifikat har importerats kan du redigera pålitlighetsinställningarna och förtroendearkivets typ. Så här initierar du ett förtroendearkiv:
 
@@ -528,7 +527,7 @@ Med pålitlighetslagerhanteringen kan du importera, redigera och ta bort certifi
 1. Gå till **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Trust Store]**.
 1. Klicka på  **[!UICONTROL Create TrustStore]**. Ange lösenord och tryck på **[!UICONTROL Save]**.
 
-### Konfigurera certifikat för Reader-tillägg och krypteringstjänst {#set-up-certificates-for-reader-extension-and-encryption-service}
+### Konfigurera certifikat för Reader-tilläggs- och krypteringstjänsten {#set-up-certificates-for-reader-extension-and-encryption-service}
 
 DocAssurance-tjänsten kan tillämpa användningsrättigheter på PDF-dokument. Konfigurera certifikaten om du vill tillämpa användningsbehörighet för PDF-dokument.
 
@@ -617,4 +616,3 @@ Du har en fungerande AEM Forms Document Services-miljö. Du kan använda dokumen
 * [Formulärbaserade arbetsflöden i OSGi](/help/forms/using/aem-forms-workflow.md)
 * [Bevakade mappar](/help/forms/using/watched-folder-in-aem-forms.md)
 * [API:er för dokumenttjänster](/help/forms/using/aem-document-services-programmatically.md)
-
