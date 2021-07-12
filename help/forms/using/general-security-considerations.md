@@ -9,17 +9,16 @@ topic-tags: Security
 products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: 64bc6018-2828-4634-9275-48f1d411452b
 docset: aem65
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+role: Admin
+exl-id: 3f150dd5-f486-4f16-9de9-035cde53b034
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '1083'
+source-wordcount: '1082'
 ht-degree: 0%
 
 ---
 
-
-# Allmänna säkerhetsfrågor för AEM Forms på JEE{#general-security-considerations-for-aem-forms-on-jee}
+# Allmänna säkerhetsfrågor för AEM Forms i JEE{#general-security-considerations-for-aem-forms-on-jee}
 
 Den här artikeln innehåller introduktionsinformation som hjälper dig att förbereda dig för att förbättra din AEM Forms-miljö. Det innehåller information om krav på AEM Forms på JEE, operativsystem, programserver och databassäkerhet. Granska informationen innan du fortsätter att låsa miljön.
 
@@ -207,7 +206,7 @@ I den här tabellen beskrivs de standardportar som krävs för att vara öppna u
  </tbody>
 </table>
 
-### Konfigurera JBoss så att en HTTP-port {#configuring-jboss-to-use-a-non-default-http-port} som inte är standard används
+### Konfigurera JBoss att använda en HTTP-port som inte är standard {#configuring-jboss-to-use-a-non-default-http-port}
 
 JBoss Application Server använder 8080 som standard-HTTP-port. JBoss har även förkonfigurerade portarna 8180, 8280 och 8380, som kommenteras ut i filen jboss-service.xml. Om du har ett program på datorn som redan använder den här porten ändrar du den port som AEM Forms på JEE använder genom att följa de här stegen:
 
@@ -224,11 +223,11 @@ JBoss Application Server använder 8080 som standard-HTTP-port. JBoss har även 
 1. Spara och stäng filen.
 1. Starta om JBoss-programservern.
 
-## AEM Forms om JEE-säkerhet {#aem-forms-on-jee-security-considerations}
+## AEM Forms om JEE - säkerhetsfrågor {#aem-forms-on-jee-security-considerations}
 
 I det här avsnittet beskrivs några av AEM Forms om JEE-specifika säkerhetsfrågor som du bör känna till.
 
-### E-postautentiseringsuppgifterna är inte krypterade i databasen {#email-credentials-not-encrypted-in-database}
+### E-postautentiseringsuppgifter är inte krypterade i databasen {#email-credentials-not-encrypted-in-database}
 
 De e-postautentiseringsuppgifter som lagras av program krypteras inte innan de lagras i AEM Forms i JEE-databasen. När du konfigurerar en tjänstslutpunkt att använda e-post krypteras inte lösenordsinformation som används som en del av den slutpunktskonfigurationen när den lagras i databasen.
 
@@ -236,7 +235,7 @@ De e-postautentiseringsuppgifter som lagras av program krypteras inte innan de l
 
 AEM Forms on JEE använder AEM Forms on JEE-databasen för att lagra känslig dokumentnyckelinformation och annat kryptografiskt material som används för policydokument. Skydda känslig information genom att skydda databasen mot intrång.
 
-### Lösenord i klartextformulär {#password-in-clear-text-format-in-adobe-ds-xml}
+### Lösenord i klartext {#password-in-clear-text-format-in-adobe-ds-xml}
 
 Programservern som används för att köra AEM Forms på JEE kräver en egen konfiguration för åtkomst till databasen via en datakälla som är konfigurerad på programservern. Se till att programservern inte visar databaslösenordet i klartext i sin datakällkonfigurationsfil.
 
