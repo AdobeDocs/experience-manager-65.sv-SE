@@ -8,9 +8,9 @@ topic-tags: installing
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: dfc473eb-6091-4f5d-a5a0-789972c513a9
 docset: aem65
-role: Administrator
+role: Admin
 exl-id: 19b5765e-50bc-4fed-8af5-f6bb464516c8
-source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '1892'
 ht-degree: 0%
@@ -124,7 +124,7 @@ AEM Forms tilläggspaket är ett program som distribueras till AEM. Paketet inne
 1. När paketet har installerats uppmanas du att starta om AEM. **Starta inte om servern omedelbart.** Innan du stoppar AEM Forms-servern väntar du tills meddelandena ServiceEvent REGISTERED och ServiceEvent UNREGISTERED inte visas i  `[AEM-Installation-Directory]/crx-quickstart/logs/error.log` filen och loggen är stabil.
 1. Upprepa steg 1-7 för alla författare- och publiceringsinstanser.
 
-### (Endast Windows) Automatisk installation av Visual Studio-omdistribuerbara {#automatic-installation-visual-studio-redistributables}
+### (Endast Windows) Automatisk installation av Visual Studio-omdistribuerbara filer {#automatic-installation-visual-studio-redistributables}
 
 Om du installerar en AEM i förhöjt läge installeras de saknade Visual Studio-omdistribuerbara komponenterna automatiskt när AEM Forms tilläggspaket installeras.
 
@@ -142,13 +142,13 @@ Om behörighetskontrollen misslyckas innehåller loggarna följande meddelande:
 
 `Privilege escalation check failed with error: <error message>`
 
-## Konfigurationer efter installation {#post-installation-configurations}
+## Konfiguration efter installation {#post-installation-configurations}
 
 AEM Forms har några obligatoriska och valfria konfigurationer. De obligatoriska konfigurationerna är bland annat att konfigurera BouncyCastle-bibliotek och serialiseringsagent. De valfria konfigurationerna är bland annat att konfigurera dispatcher, Forms-portalen, Adobe Sign, Adobe Analytics och Adobe Target.
 
-### Obligatoriska konfigurationer efter installation {#mandatory-post-installation-configurations}
+### Obligatoriska efterinstallationskonfigurationer {#mandatory-post-installation-configurations}
 
-#### Konfigurera RSA- och BouncyCastle-bibliotek {#configure-rsa-and-bouncycastle-libraries}
+#### Konfigurera RSA- och BouncyCastle-bibliotek  {#configure-rsa-and-bouncycastle-libraries}
 
 Utför följande steg på alla författare- och publiceringsinstanser för att starta delegeringen av biblioteken:
 
@@ -175,7 +175,7 @@ Utför följande steg på alla Author- och Publish-instanser för att lägga til
 1. Lägg till **sun.util.calendar**-paketet i **tillåtelselista**-fältet. Klicka på **Spara**.
 1. Upprepa steg 1-3 för alla författarinstanser och publiceringsinstanser.
 
-### Valfria konfigurationer efter installation {#optional-post-installation-configurations}
+### Ytterligare konfigurationer efter installation {#optional-post-installation-configurations}
 
 #### Konfigurera Dispatcher {#configure-dispatcher}
 
