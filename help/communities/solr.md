@@ -9,15 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: e228f1db-91ea-4ec3-86da-06d89d74bc72
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+role: Admin
+exl-id: a9fc9c06-b9e6-4a5e-ab5e-0930ecd4b51b
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '1484'
+source-wordcount: '1483'
 ht-degree: 2%
 
 ---
-
 
 # Solr-konfiguration för SRP {#solr-configuration-for-srp}
 
@@ -143,7 +142,7 @@ Följande 33 språk stöds i avancerad MLS.
 | Finska | Lettiska | Thailändska |
 | Franska | Litauiska | Turkiska |
 
-#### Jämförelse av AEM 6.1 Solr-sökning, standard-MLS och avancerad MLS {#comparison-of-aem-solr-search-standard-mls-and-advanced-mls}
+#### Jämförelse av AEM 6.1 Solr-sökning, Standard MLS och Advanced MLS {#comparison-of-aem-solr-search-standard-mls-and-advanced-mls}
 
 **Obs**: AEM 6.1 avser AEM 6.1 Communities FP3 och tidigare.
 
@@ -217,7 +216,7 @@ Standard-MLS-filerna lagras i AEM.
 1. Starta om Solr.
 1. För MSRP kör du [MSRP Reindex Tool](#msrpreindextool), om det inte är en ny installation.
 
-### Installerar avancerad MLS {#installing-advanced-mls}
+### Avancerad MLS installeras {#installing-advanced-mls}
 
 För att SRP-samlingen (MSRP eller DSRP) ska ha stöd för avancerad MLS krävs nya Solr-plugin-program förutom ett anpassat schema och en Solr-konfiguration. Alla nödvändiga objekt paketeras i en nedladdningsbar zip-fil. Dessutom ingår ett installationsskript som ska användas när Solr distribueras i fristående läge.
 
