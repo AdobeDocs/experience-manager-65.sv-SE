@@ -3,9 +3,9 @@ title: Konfigurera AEM Assets-integrering med Experience Cloud
 description: Lär dig hur du konfigurerar AEM Assets-integrering med Experience Cloud.
 contentOwner: AG
 feature: Resurshantering
-role: Business Practitioner, Architect, Administrator
+role: User, Architect, Admin
 exl-id: d167cf97-6829-45a7-ba46-2239d530b060
-source-git-commit: d19b203ffe75a5628f350113d4d74a2916beffc8
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '906'
 ht-degree: 1%
@@ -127,7 +127,7 @@ I backend autentiserar AEM din profil med gatewayen och synkroniserar sedan data
 
 -->
 
-## Växla resurser mellan AEM Assets och Experience Cloud {#exchange-assets-between-aem-and-experience-cloud}
+## Utbyt resurser mellan AEM Assets och Experience Cloud {#exchange-assets-between-aem-and-experience-cloud}
 
 1. Logga in på AEM Assets.
 1. Skapa en mapp i resurskonsolen och överför några resurser till den. Skapa till exempel en mapp **mc-demo** och överför en resurs till den.
