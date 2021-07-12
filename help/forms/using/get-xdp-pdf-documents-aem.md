@@ -9,15 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-manager
 discoiquuid: 28b9f1d6-6a52-458f-a8ed-a206502eda0d
 docset: aem65
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+role: Admin
+exl-id: 9ecdc50a-31e3-46ae-948a-d1f6e6085734
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '709'
+source-wordcount: '708'
 ht-degree: 0%
 
 ---
-
 
 # Hämta XDP- och PDF-dokument i AEM Forms{#getting-xdp-and-pdf-documents-in-aem-forms}
 
@@ -35,7 +34,7 @@ Du kan överföra de resurstyper som stöds individuellt eller som ett ZIP-arkiv
 >
 >Kontrollera att du är medlem i `form-power-users`-gruppen för att kunna överföra XDP-filer. Kontakta administratören om du vill bli medlem i gruppen.
 
-## Överför formulär {#uploading-forms}
+## Överföra formulär {#uploading-forms}
 
 1. Logga in på AEM Forms användargränssnitt med `https://'[server]:[port]'/aem/forms.html`.
 1. Navigera till mappen där du vill överföra formuläret eller mappen som innehåller formulär.
@@ -89,4 +88,3 @@ Om du tar bort en formulärmall skadas det beroende adaptiva formuläret eller f
 En flagga används för att ange om en adaptiv form är smutsig. Den här informationen är tillgänglig på sidan för formuläregenskaper, tillsammans med formulärets metadata. Endast för felaktiga adaptiva formulär visar en metadataegenskap `Model Refresh` `Recommended`-värdet.
 
 ![Indikation på att ett adaptivt formulär inte är synkroniserat med XFA-modellen](assets/model-refresh.png)
-
