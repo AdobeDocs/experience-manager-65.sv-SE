@@ -10,15 +10,14 @@ topic-tags: administering
 content-type: reference
 discoiquuid: b4d38e45-eaa0-4ace-a885-a2e84fdfd5a1
 pagetitle: Configuring Email
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+role: Admin
+exl-id: bf97d388-f8ca-4e37-88e2-0c536834311e
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '751'
+source-wordcount: '750'
 ht-degree: 1%
 
 ---
-
 
 # Konfigurerar e-post {#configuring-email}
 
@@ -223,4 +222,3 @@ Använda [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md)
 De röda trianglarna anger de ändrade egenskaperna. Spara ändringarna:
 
 * Välj **[!UICONTROL Save All]**.
-
