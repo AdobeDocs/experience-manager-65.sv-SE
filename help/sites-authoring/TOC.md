@@ -7,8 +7,8 @@ user-guide-title: Användarhandbok för redigering av AEM 6.5
 breadcrumb-title: Redigeringshandbok
 user-guide-description: Lär dig grunderna för att skapa innehåll och redigering i AEM.
 feature: Redigering
-role: Business Practitioner
-source-git-commit: 5536ee27ad51356c2dcd0f0f36b91025bf1d228c
+role: User
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '299'
 ht-degree: 38%
