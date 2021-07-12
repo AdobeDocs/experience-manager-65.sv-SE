@@ -8,23 +8,22 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-manager
 discoiquuid: c8519eec-f841-4867-baa9-a9e03042755e
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+role: Admin
+exl-id: b31f9f56-dd33-4478-ad34-01ac7d5a1b40
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '399'
+source-wordcount: '398'
 ht-degree: 0%
 
 ---
 
-
-# Tar bort formulär och relaterade resurser {#deleting-forms-and-related-resources}
+# Ta bort formulär och relaterade resurser {#deleting-forms-and-related-resources}
 
 Du kan ta bort formulären och resurserna för att ta bort dessa resurser från databasen. Borttagningsåtgärden fungerar för alla resurstyper och mappar.
 
 Om du tar bort en resurs från författarinstansen tas även resursen bort från publiceringsinstansen. AEM Forms-servern består av författarinstanser och publiceringsinstanser. Instansen Författare används för att skapa och hantera formulärresurser och -resurser. Publiceringsinstansen innehåller publicerade formulärresurser och relaterade resurser som är tillgängliga för slutanvändare.
 
-## Ta bort ett formulär {#how-to-delete-a-form}
+## Så här tar du bort ett formulär {#how-to-delete-a-form}
 
 1. Logga in på AEM Forms användargränssnitt med `https://[hostname]:'port'/aem/forms.html.`
 1. Navigera till och markera det formulär som du vill ta bort. Klicka på Ta bort ![aem6forms_delete2](assets/aem6forms_delete2.png) från verktygsfältet och bekräfta borttagningsåtgärden.
