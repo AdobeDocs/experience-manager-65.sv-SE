@@ -1,8 +1,8 @@
 ---
 title: Konfigurera AEM Assets med varumärkesportalen
 seo-title: Konfigurera AEM Assets med varumärkesportalen
-description: Lär dig hur du konfigurerar AEM Assets med varumärkesportalen för publicering av resurser och samlingar på varumärkesportalen.
-seo-description: Lär dig hur du konfigurerar AEM Assets med varumärkesportalen för publicering av resurser och samlingar på varumärkesportalen.
+description: Lär dig hur du konfigurerar AEM Assets med Brand Portal för publicering av resurser och samlingar till Brand Portal.
+seo-description: Lär dig hur du konfigurerar AEM Assets med Brand Portal för publicering av resurser och samlingar till Brand Portal.
 uuid: b95c046e-9988-444c-b50e-ff5ec8cafe14
 topic-tags: brand-portal
 content-type: reference
@@ -10,27 +10,26 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: dca5a2ac-1fc8-4251-b073-730fd6f49b1c
 docset: aem65
 feature: Brand Portal
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+role: Admin
+exl-id: ae33181c-9eec-421c-be55-4bd019de40b8
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '1970'
+source-wordcount: '1969'
 ht-degree: 11%
 
 ---
 
-
 # Konfigurera AEM Assets med varumärkesportalen {#configure-integration-65}
 
-Med Adobe Experience Manager Assets Brand Portal kan ni publicera godkända varumärkesresurser från Adobe Experience Manager Assets till varumärkesportalen och distribuera dem till varumärkesportalanvändarna.
+Med Adobe Experience Manager Assets Brand Portal kan ni publicera godkända varumärkesresurser från Adobe Experience Manager Assets till Brand Portal och distribuera dem till Brand Portal-användarna.
 
-AEM Assets är konfigurerat med varumärkesportalen via Adobe Developer Console, som köper en kontotoken för Adobe Identity Management Services (IMS) för auktorisering av innehavaren av varumärkesportalen.
+AEM Assets konfigureras med Brand Portal via Adobe Developer Console, som köper en kontotoken för Adobe Identity Management Services (IMS) för auktorisering av Brand Portal-klienten.
 
 >[!NOTE]
 >
->Det finns stöd för att konfigurera AEM Assets med varumärkesportalen via Adobe Developer Console i AEM 6.5.4.0 och senare.
+>Det finns stöd för att konfigurera AEM Assets med Brand Portal via Adobe Developer Console i AEM 6.5.4.0 och senare.
 >
->Tidigare konfigurerades varumärkesportalen via äldre OAuth Gateway, som använder JSON Web Token-utbyte för att erhålla en IMS Access-token för auktorisering.
+>Tidigare konfigurerades Brand Portal via äldre OAuth Gateway, som använder JSON Web Token-utbyte för att erhålla en IMS Access-token för auktorisering.
 >
 >Konfiguration via äldre OAuth Gateway stöds inte längre från 6 april 2020 och har ändrats till Adobe Developer Console.
 
@@ -56,7 +55,7 @@ Informationen baseras på antagandet att alla som läser den här hjälpen känn
 Du behöver följande för att konfigurera AEM Assets med varumärkesportalen:
 
 * En pågående AEM Assets-författarinstans med senaste Service Pack
-* En klientorganisations-URL
+* En Brand Portal tenant-URL
 * En användare med systemadministratörsbehörighet på IMS-organisationen för varumärkesportalens klient
 
 [Hämta och installera AEM 6.5](#aemquickstart)
@@ -83,21 +82,21 @@ Detaljerade instruktioner finns i
 
 ## Skapa en konfiguration {#configure-new-integration-65}
 
-Konfigurationen av AEM Assets med Brand Portal kräver konfigurationer i både AEM Assets Author Instance och Adobe Developer Console.
+Konfigurationen av AEM Assets med Brand Portal kräver konfigurationer i både AEM Assets och Adobe Developer Console.
 
 1. Skapa ett IMS-konto i AEM Assets och generera ett offentligt certifikat (offentlig nyckel).
-1. Skapa ett projekt för din varumärksportal (organisation) i Adobe Developer Console.
+1. Skapa ett projekt för din Brand Portal-klient (organisation) i Adobe Developer Console.
 1. Under projektet konfigurerar du ett API med den offentliga nyckeln för att skapa en JWT-anslutning (Service Account).
 1. Hämta tjänstkontots autentiseringsuppgifter och information om JWT-nyttolast.
 1. I AEM Assets konfigurerar du IMS-kontot med tjänstkontots autentiseringsuppgifter och JWT-nyttolast.
-1. Konfigurera molntjänsten Brand Portal i AEM Assets med hjälp av IMS-kontot och varumärkesportalens slutpunkt (organisations-URL).
-1. Testa konfigurationen genom att publicera en resurs från AEM Assets till varumärkesportalen.
+1. I AEM Assets konfigurerar du Brand Portal molntjänst med hjälp av IMS-kontot och Brand Portal slutpunkt (organisations-URL).
+1. Testa konfigurationen genom att publicera en resurs från AEM Assets till Brand Portal.
 
 >[!NOTE]
 >
 >En instans av en AEM Assets-författare får endast konfigureras med en Brand Portal-klient.
 
-Utför följande steg i den listade sekvensen om du konfigurerar AEM Assets med varumärkesportalen för första gången:
+Utför följande steg i den listade sekvensen om du konfigurerar AEM Assets med Brand Portal för första gången:
 1. [Hämta ett offentligt certifikat](#public-certificate)
 1. [Skapa JWT-anslutning (Service Account)](#createnewintegration)
 1. [Konfigurera IMS-konto](#create-ims-account-configuration)
@@ -106,7 +105,7 @@ Utför följande steg i den listade sekvensen om du konfigurerar AEM Assets med 
 
 ### Skapa IMS-konfigurationen {#create-ims-configuration}
 
-IMS-konfigurationen autentiserar din AEM Assets-författarinstans med innehavaren av varumärkesportalen.
+IMS-konfigurationen autentiserar din AEM Assets-författarinstans med Brand Portal-klienten.
 
 IMS-konfigurationen har två steg:
 
@@ -133,7 +132,7 @@ Den offentliga nyckeln (certifikatet) autentiserar din profil på Adobe Develope
 
 1. Klicka på ikonen **[!UICONTROL Download Public Key]** och spara filen med den offentliga nyckeln (.crt) på datorn.
 
-   Den offentliga nyckeln kommer att användas senare för att konfigurera API för din varumärksportal och generera autentiseringsuppgifter för tjänstkontot i Adobe Developer Console.
+   Den offentliga nyckeln används senare för att konfigurera API för din Brand Portal-klient och generera autentiseringsuppgifter för tjänstkontot i Adobe Developer Console.
 
    ![Hämta certifikatet](assets/ims-config3.png)
 
@@ -143,18 +142,18 @@ Den offentliga nyckeln (certifikatet) autentiserar din profil på Adobe Develope
 
    Öppna en ny flik och [skapa en JWT-anslutning i Adobe Developer Console](#createnewintegration) för att hämta autentiseringsuppgifter och JWT-nyttolast för konfigurering av IMS-kontot.
 
-### Skapa tjänstkontoanslutning (JWT) {#createnewintegration}
+### Skapa JWT-anslutning (Service Account) {#createnewintegration}
 
-I Adobe Developer Console konfigureras projekt och API:er på innehavarnivå för varumärkesportalen (organisation). När du konfigurerar ett API skapas en JWT-anslutning (Service Account). Det finns två metoder för att konfigurera API, genom att generera ett nyckelpar (privata och offentliga nycklar) eller genom att överföra en offentlig nyckel. Om du vill konfigurera AEM Assets med varumärkesportalen måste du skapa en offentlig nyckel (certifikat) i AEM Assets och skapa autentiseringsuppgifter i Adobe Developer Console genom att överföra den offentliga nyckeln. Dessa autentiseringsuppgifter krävs för att konfigurera IMS-kontot i AEM Assets. När IMS-kontot har konfigurerats kan du konfigurera molntjänsten Brand Portal i AEM Assets.
+I Adobe Developer Console konfigureras projekt och API:er på Brand Portal tenant-nivå (organisationsnivå). När du konfigurerar ett API skapas en JWT-anslutning (Service Account). Det finns två metoder för att konfigurera API, genom att generera ett nyckelpar (privata och offentliga nycklar) eller genom att överföra en offentlig nyckel. Om du vill konfigurera AEM Assets med Brand Portal måste du skapa en offentlig nyckel (certifikat) i AEM Assets och skapa autentiseringsuppgifter i Adobe Developer Console genom att överföra den offentliga nyckeln. Dessa autentiseringsuppgifter krävs för att konfigurera IMS-kontot i AEM Assets. När IMS-kontot har konfigurerats kan du konfigurera Brand Portal molntjänst i AEM Assets.
 
 Utför följande steg för att generera autentiseringsuppgifter för tjänstkontot och JWT-nyttolast:
 
-1. Logga in på Adobe Developer Console med systemadministratörsbehörighet för IMS-organisationen (innehavaren av varumärkesportalen). Standardwebbadressen är [https://www.adobe.com/go/devs_console_ui](https://www.adobe.com/go/devs_console_ui).
+1. Logga in på Adobe Developer Console med systemadministratörsbehörighet för IMS-organisationen (Brand Portal tenant). Standardwebbadressen är [https://www.adobe.com/go/devs_console_ui](https://www.adobe.com/go/devs_console_ui).
 
 
    >[!NOTE]
    >
-   >Se till att du har valt rätt IMS-organisation (innehavaren av varumärkesportalen) i listrutan (organisationen) längst upp till höger.
+   >Kontrollera att du har valt rätt IMS-organisation (Brand Portal-klientorganisation) i listrutan (organisationen) längst upp till höger.
 
 1. Klicka på **[!UICONTROL Create new project]**. Ett tomt projekt med ett systemgenererat namn skapas för din organisation.
 
@@ -164,7 +163,7 @@ Utför följande steg för att generera autentiseringsuppgifter för tjänstkont
 
 1. I **[!UICONTROL Add an API window]** väljer du **[!UICONTROL AEM Brand Portal]** och klickar på **[!UICONTROL Next]**.
 
-   Se till att du har tillgång till tjänsten AEM varumärkesportalen.
+   Kontrollera att du har tillgång till tjänsten AEM Brand Portal.
 
 1. Klicka på **[!UICONTROL Upload your public key]** i fönstret **[!UICONTROL Configure API]**. Klicka sedan på **[!UICONTROL Select a File]** och överför den publika nyckeln (.crt-filen) som du har hämtat i [Hämta det publika certifikatet](#public-certificate)-avsnittet.
 
@@ -277,27 +276,27 @@ Utför följande steg för att konfigurera IMS-kontot.
 >
 >Kontrollera att IMS-konfigurationen klarar hälsokontrollen. Om konfigurationen inte godkänns i hälsokontrollen är den ogiltig. Du måste ta bort den och skapa en ny, giltig konfiguration.
 
-### Konfigurera molntjänsten{#configure-the-cloud-service}
+### Konfigurera molntjänsten {#configure-the-cloud-service}
 
-Så här konfigurerar du molntjänsten Brand Portal:
+Så här konfigurerar du molntjänsten i Brand Portal:
 
 1. Logga in på din AEM Assets-författarinstans.
 
 1. Gå till **[!UICONTROL Cloud Services]** > **[!UICONTROL AEM Brand Portal]** på panelen **Verktyg** på panelen ![.](assets/do-not-localize/tools.png)
 
-1. Klicka på **[!UICONTROL Create]** på sidan Konfigurationer för varumärkesportalen.
+1. Klicka på **[!UICONTROL Create]** på sidan Brand Portal Configurations.
 
 1. Ange en **[!UICONTROL Title]** för konfigurationen.
 
    Välj den IMS-konfiguration som du skapade när du konfigurerade IMS-kontot](#create-ims-account-configuration).[
 
-   I fältet **[!UICONTROL Service URL]** anger du din webbadress till innehavaren av varumärkesportalen (organisation).
+   I fältet **[!UICONTROL Service URL]** anger du din Brand Portal tenant-URL (organisation).
 
    ![](assets/create-cloud-service.png)
 
 1. Klicka på **[!UICONTROL Save & Close]**. Molnkonfigurationen har skapats.
 
-   Din AEM Assets-författarinstans har nu konfigurerats med innehavaren av varumärkesportalen.
+   Din AEM Assets-författarinstans har nu konfigurerats med Brand Portal-klienten.
 
 ### Testa konfigurationen {#test-integration}
 
@@ -313,9 +312,9 @@ Utför följande steg för att validera konfigurationen:
 
    ![](assets/test-integration2.png)
 
-   Du kan se de fyra replikeringsagenter som har skapats för din varumärkesportal-klient.
+   Du kan se de fyra replikeringsagenterna som har skapats för din Brand Portal-klient.
 
-   Leta reda på replikeringsagenterna för din varumärksportal och klicka på replikeringsagentens URL.
+   Leta reda på replikeringsagenterna för din Brand Portal-klient och klicka på replikeringsagentens URL.
 
    ![](assets/test-integration3.png)
 
@@ -323,7 +322,7 @@ Utför följande steg för att validera konfigurationen:
    >
    >Replikeringsagenterna arbetar parallellt och delar jobbdistributionen jämnt, vilket ökar publiceringshastigheten fyra gånger den ursprungliga hastigheten. När molntjänsten har konfigurerats krävs ingen ytterligare konfiguration för att aktivera de replikeringsagenter som aktiveras som standard för att aktivera parallell publicering av flera resurser.
 
-1. Kontrollera anslutningen mellan AEM Assets och varumärkesportalen genom att klicka på ikonen **[!UICONTROL Test Connection]**.
+1. Kontrollera anslutningen mellan AEM Assets och Brand Portal genom att klicka på ikonen **[!UICONTROL Test Connection]**.
 
    ![](assets/test-integration4.png)
 
@@ -338,18 +337,18 @@ Utför följande steg för att validera konfigurationen:
    >
    >Undvik att inaktivera någon av replikeringsagenterna eftersom det kan göra att replikeringen av resurserna (som körs i kö) misslyckas.
    >
-   >Se till att alla fyra replikeringsagenterna är konfigurerade för att undvika timeout-fel. Se [felsöka problem vid parallell publicering till varumärkesportalen](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/publish/troubleshoot-parallel-publishing.html#connection-timeout).
+   >Se till att alla fyra replikeringsagenterna är konfigurerade för att undvika timeout-fel. Se [felsöka problem vid parallell publicering till Brand Portal](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/publish/troubleshoot-parallel-publishing.html#connection-timeout).
 
 Du kan nu:
 
 * [Publicera resurser från AEM Assets till varumärkesportalen](../assets/brand-portal-publish-assets.md)
-* [Publicera material från Brand Portal till AEM Assets](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html)  - Resurser i varumärkesportalen
+* [Publicera material från Brand Portal till AEM Assets](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html)  - Resurser i Brand Portal
 * [Publicera mappar från AEM Assets till varumärkesportalen](../assets/brand-portal-publish-folder.md)
 * [Publicera samlingar från AEM Assets till varumärkesportalen](../assets/brand-portal-publish-collection.md)
 * [Publicera förinställningar, scheman och fasetter på varumärkesportalen](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/publish/publish-schema-search-facets-presets.html)
 * [Publicera taggar på varumärkesportalen](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/publish/brand-portal-publish-tags.html)
 
-Mer information finns i [varumärkesportaldokumentationen](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/home.html).
+Mer information finns i [Brand Portal-dokumentation](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/home.html).
 
 
 ## Uppgraderingskonfiguration {#upgrade-integration-65}
@@ -371,7 +370,7 @@ Kontrollera att inget publiceringsjobb körs på din AEM Assets-författarinstan
 
    ![](assets/test-integration2.png)
 
-1. Leta reda på replikeringsagenterna för din varumärksportal-klient.
+1. Leta reda på replikeringsagenterna för din Brand Portal-klient.
 
    Kontrollera att **kön är i viloläge** för alla replikeringsagenter. Inget publiceringsjobb är aktivt.
 
@@ -381,20 +380,20 @@ Kontrollera att inget publiceringsjobb körs på din AEM Assets-författarinstan
 
 Du måste köra följande checklista när du tar bort befintliga konfigurationer:
 * Ta bort alla fyra replikeringsagenter
-* Ta bort molntjänsten Brand Portal
+* Ta bort Brand Portal molntjänst
 * Ta bort MAC-användare
 
 1. Logga in på din AEM Assets-författarinstans och öppna CRX Lite som administratör. Standardwebbadressen är `http://localhost:4502/crx/de/index.jsp`.
 
-1. Navigera till `/etc/replications/agents.author` och ta bort alla fyra replikeringsagenterna för din varumärksportal-klient.
+1. Navigera till `/etc/replications/agents.author` och ta bort alla fyra replikeringsagenterna för din Brand Portal-klient.
 
    ![](assets/delete-replication-agent.png)
 
-1. Navigera till `/etc/cloudservices/mediaportal` och ta bort molntjänstkonfigurationen Brand Portal.
+1. Navigera till `/etc/cloudservices/mediaportal` och ta bort Brand Portal molntjänstkonfiguration.
 
    ![](assets/delete-cloud-service.png)
 
-1. Navigera till `/home/users/mac` och ta bort **MAC-användaren** för din varumärksportal-klient.
+1. Navigera till `/home/users/mac` och ta bort **MAC-användaren** för din Brand Portal-klient.
 
    ![](assets/delete-mac-user.png)
 
@@ -414,5 +413,3 @@ Nu kan du [skapa konfiguration](#configure-new-integration-65) via Adobe Develop
 
    <li>Step text</li>
    -->
-
-
