@@ -6,15 +6,14 @@ uuid: 3b06ef19-d3c4-411e-9530-2c5d2159b559
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 5632a8df-a827-4e38-beaa-18b61c2208a3
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+role: Admin
+exl-id: 847fa303-8d1e-4a17-b90d-5f9da5ca2d77
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '1372'
+source-wordcount: '1371'
 ht-degree: 0%
 
 ---
-
 
 # Forms JEE-arbetsflöden | Hantera användardata {#forms-jee-workflows-handling-user-data}
 
@@ -141,7 +140,7 @@ Nu när du har identifierat de processinstans-ID som är kopplade till en använ
 
    Metoden `purgeProcessInstance` tar helt bort alla data för det angivna anrops-ID:t från AEM Forms-serverdatabasen och GDS, om de är konfigurerade.
 
-### Arbeta med överblivna aktiviteter {#orphan}
+### Arbeta med överblivna uppgifter {#orphan}
 
 Enstaka uppgifter är de uppgifter vars innehållsprocess har initierats men inte skickats ännu. i det här fallet är `process_instance_id` **0** (noll). Därför kan du inte spåra användardata som lagrats för ägarlösa uppgifter med hjälp av processens instans-ID. Du kan dock spåra den med uppgifts-ID:t för en överbliven uppgift. Du kan identifiera uppgifts-ID:n från tabellen `tb_task` för en användare enligt beskrivningen i [Identifiera processinstans-ID:n när arbetsflödets initierare eller deltagare är känd](/help/forms/using/forms-workflow-jee-handling-user-data.md#initiator-participant).
 
@@ -197,4 +196,3 @@ När du har uppgifts-ID:n gör du följande för att rensa de associerade filern
    delete from tb_assignment where task_id=<task_id>
    delete from tb_task where id=<task_id>
    ```
-
