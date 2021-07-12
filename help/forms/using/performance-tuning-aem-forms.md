@@ -9,15 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
 discoiquuid: 38c0ec46-5686-4656-bfb4-7125ec194673
 docset: aem65
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+role: Admin
+exl-id: 22926757-9cdb-4f8a-9bd9-16ddbc3f954a
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '928'
+source-wordcount: '927'
 ht-degree: 0%
 
 ---
-
 
 # Prestandajustering av AEM Forms-server{#performance-tuning-of-aem-forms-server}
 
@@ -175,6 +174,5 @@ För att förbättra prestandan kan du instruera antivirusprogrammet att uteslut
 >* Om du använder en annan plats för GDS och en tillfällig katalog öppnar du AdminUI på `https://'[server]:[port]'/adminui`, navigerar till **Hem > Inställningar > Core System Settings > Core Configurations** för att bekräfta platsen som används.
 
 * Om AEM Forms-servern fungerar långsamt även efter att de föreslagna katalogerna har utelämnats, ska du även utelämna den körbara Java-filen (java.exe).
-
 
 
