@@ -6,15 +6,14 @@ uuid: 1624a465-8b0c-4347-a53f-1118bfa6e18f
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 898268cb-4426-421f-8f63-d75bd85cb57f
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+role: Admin
+exl-id: 00c01a12-1180-4f35-9179-461bf177c787
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '939'
+source-wordcount: '938'
 ht-degree: 0%
 
 ---
-
 
 # Dokumentsäkerhet | Hantera användardata {#document-security-handling-user-data}
 
@@ -213,4 +212,3 @@ Gör följande för att ta bort dokumentsäkerhetsdata för ett säkerhetsobjekt
 
 1. Ta bort data för huvuds-ID från användarhanteringsdatabasen. Mer information finns i [Forms användarhantering | Hantera användardata](/help/forms/using/user-management-handling-user-data.md).
 1. Starta AEM Forms-servern.
-
