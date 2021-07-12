@@ -9,15 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: ccabf301-b417-48aa-8501-8360fd9f3e36
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+role: Admin
+exl-id: b64e24d2-8407-484c-8216-8d328ef5fa4f
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '918'
+source-wordcount: '917'
 ht-degree: 0%
 
 ---
-
 
 # Hanteringskonsoler för medlemmar och grupper {#members-groups-management-consoles}
 
@@ -25,7 +24,7 @@ ht-degree: 0%
 
 AEM Communities funktioner kräver ofta att besökarna är registrerade och inloggade innan de deltar i en community i publiceringsmiljön. Användarregistreringen behöver bara finnas i publiceringsmiljön och kallas ofta *medlemmar* för att skilja dem från *användare* registrerade i författarmiljön.
 
-### Medlemmar (användare) på Publish {#members-users-on-publish}
+### Medlemmar (användare) vid publicering {#members-users-on-publish}
 
 Med konsolerna Communities Members and Groups (Communities-medlemmar och grupper), medlemmar och medlemsgrupper som är registrerade i *publish*-miljön, kan skapas och hanteras från *author*-miljön. Detta är bara möjligt när tunneln [service](deploy-communities.md#tunnel-service-on-author) är aktiverad.
 
@@ -40,7 +39,7 @@ För att hantera användare och grupper som är registrerade i *författarmiljö
 >
 >När exempelinnehåll är distribuerat och aktiverat finns det många exempelanvändare i både författar- och publiceringsmiljöer. De här användarna kommer inte att vara närvarande när de körs med [nosamplingsinnehållskörningsläge](../../help/sites-administering/production-ready.md).
 
-## Medlemskonsol {#members-console}
+## Medlemskonsolen {#members-console}
 
 I författarmiljön kan du nå Medlemskonsolen för att hantera medlemmar som är registrerade i publiceringsmiljön:
 
@@ -164,7 +163,7 @@ Se även [Betygsättning och badges](implementing-scoring.md).
 * **[!UICONTROL Remove badges]**
    * Markera papperskorgsikonen bredvid ett märke för att ta bort det.
 
-## Gruppkonsol {#groups-console}
+## Konsolen Grupper {#groups-console}
 
 Gruppkonsolen, som är tillgänglig från författarmiljön, gör det möjligt att skapa och hantera medlemsgrupper som är registrerade i publiceringsmiljön. Det är särskilt användbart för
 * [Behöriga medlemsgrupper](users.md#privilegedmembersgroups)
