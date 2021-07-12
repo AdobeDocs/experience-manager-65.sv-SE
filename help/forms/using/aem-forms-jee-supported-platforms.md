@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
-role: Administrator
+role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: 3d6b0c696b625869bc4ed682a310399b3b6301fb
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '3323'
 ht-degree: 0%
@@ -350,7 +350,7 @@ Tänk dessutom på följande när du väljer program för Adobe AEM Forms i JEE-
 * AEM Forms på JEE stöder inte MySQL-databaser i en klustrad miljö.
 * En lista över borttagna eller uppdaterade plattformar finns i dokumentet [AEM 6.5 Forms New Feature Summary](../../forms/using/whats-new.md).
 
-### LDAP-servrar (valfritt) {#ldap-servers-optional}
+### LDAP-servrar (tillval) {#ldap-servers-optional}
 
 <table>
  <tbody>
@@ -381,7 +381,7 @@ Tänk dessutom på följande när du väljer program för Adobe AEM Forms i JEE-
 | Microsoft Exchange 2013 |
 | Microsoft Office 365 |
 
-### Innehållshanterare och motsvarande anslutningar {#content-managers-and-corresponding-connectors}
+### Innehållshanterare och motsvarande kopplingar {#content-managers-and-corresponding-connectors}
 
 <table>
  <tbody>
@@ -492,7 +492,7 @@ Följande delsystem i AEM Forms är inte [508](https://www.section508.gov/)-komp
 * Redigeringsgränssnitt för korrespondenshantering
 * Administratörsgränssnitt (administrationskonsolens användargränssnitt)
 
-## Systemkrav för AEM Forms på JEE {#system-requirements-for-aem-forms-on-jee}
+## Systemkrav för AEM Forms i JEE {#system-requirements-for-aem-forms-on-jee}
 
 ### Lägsta maskinvarukrav {#minimum-hardware-requirements}
 
@@ -530,7 +530,7 @@ Ytterligare krav finns i:
 * [Systemkrav för en enda server-AEM Forms för JEE-distribution](https://www.adobe.com/go/learn_aemforms_sysreq_single_63)
 * [Systemkrav för klustrade AEM Forms vid JEE-driftsättning](https://www.adobe.com/go/learn_aemforms_sysreq_cluster_63)
 
-## Klienter som stöds för AEM Forms på JEE {#supported-clients-for-aem-forms-on-jee}
+## Klienter som stöds för AEM Forms i JEE {#supported-clients-for-aem-forms-on-jee}
 
 ### Workbench {#workbench}
 
@@ -654,7 +654,7 @@ Ytterligare krav finns i:
 
 
 
-#### Mobilklienter {#mobile-clients}
+#### Mobila kunder {#mobile-clients}
 
 <table>
  <tbody>
@@ -688,7 +688,7 @@ Ytterligare krav finns i:
 
 
 
-### AEM Forms app {#aem-forms-workspace-app}
+### AEM Forms {#aem-forms-workspace-app}
 
 #### Stöd för mobila enheter {#mobile-device-support}
 
@@ -727,7 +727,7 @@ Klicka [här](https://www.adobe.com/products/livecycle/rightsmanagement/extensio
 
 AEM Forms på JEE stöder uppdateringar, patchar och korrigeringspaket utöver den angivna större och mindre versionen av programvaran som stöds. Uppdatering till nästa större eller mindre version stöds dock inte om det inte anges.
 
-## Supportpolicy {#third-party-patch-support-policy} för korrigeringsfiler från tredje part
+## Supportpolicy för korrigeringsstöd från tredje part {#third-party-patch-support-policy}
 
 Tredjepartskraven för AEM Forms på JEE beskrivs i avsnittet Systemkrav i respektive produktdokument. Du kan komma åt all dokumentation från [https://adobe.com/go/learn_aemforms_documentation_65](https://adobe.com/go/learn_aemforms_documentation_65).
 
