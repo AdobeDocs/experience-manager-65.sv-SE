@@ -9,15 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: bfaf80c5-448b-47fb-9f22-57ee0eb169b2
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+role: Admin
+exl-id: ac54f06e-1545-44bb-9f8f-970f161ebb72
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '1091'
+source-wordcount: '1090'
 ht-degree: 0%
 
 ---
-
 
 # Översätter användargenererat innehåll {#translating-user-generated-content}
 
@@ -53,7 +52,7 @@ När [skapar en community-webbplats](sites-console.md) aktiveras standardövers�
 >
 >För ett produktionssystem krävs en licensierad översättningstjänst. Om den inte är licensierad bör standardöversättningstjänsten vara [inaktiverad](../../help/sites-administering/tc-msconf.md#microsoft-translator-trial-license-geometrixx-outdoors).
 
-## Global översättning av UGC {#global-translation-of-ugc}
+## Global översättning av användargenererat innehåll {#global-translation-of-ugc}
 
 När en webbplats har flera [språkkopior](../../help/sites-administering/tc-prep.md) känner inte standardöversättningstjänsten igen att den UGC som anges på en webbplats kan vara relaterad till den UGC som anges på en annan, som när UGC i stort sett genereras av samma komponent (språkkopian av sidan som innehåller komponenten).
 
@@ -71,7 +70,7 @@ Om t.ex. ett forum har skapats på baswebbplatsen, språkkopior har skapats och 
 >
 >Det finns inget migreringsverktyg för att flytta eller sammanfoga språkspecifikt innehåll i det globala delade arkivet.
 
-### Konfiguration för översättningsintegrering {#translation-integration-configuration}
+### Konfiguration av översättningsintegrering {#translation-integration-configuration}
 
 Så här skapar du en ny översättningsintegrering, som integrerar en översättningstjänstkoppling med webbplatsen på författarinstansen:
 
