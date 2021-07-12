@@ -10,17 +10,16 @@ topic-tags: administering
 content-type: reference
 discoiquuid: ab9088b7-a691-4153-ac82-1e8c0a19ed5d
 docset: aem65
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+role: Admin
+exl-id: cadb62c9-210d-4204-8abc-d0cf70960392
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '622'
+source-wordcount: '621'
 ht-degree: 0%
 
 ---
 
-
-# Communities Notifications {#communities-notifications}
+# Communities-meddelanden {#communities-notifications}
 
 ## Översikt {#overview}
 
@@ -136,4 +135,3 @@ Om du vill ändra e-postmeddelandemallen för @mention i bloggkommentarer placer
     A new mention <a href="{{objectUrl}}">comment</a> {{#if this.target.properties.[jcr:title]}}to the article "{{{target.displayName}}}" {{/if}}was added by {{{user.name}}} on {{dateUtil this.published format="EEE, d MMM yyyy HH:mm:ss z"}}.\n \
 {{/equals}}\
 ```
-
