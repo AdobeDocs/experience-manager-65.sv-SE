@@ -9,17 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 048f7b30-20c3-4567-bd32-38cf2643cf39
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+role: Admin
+exl-id: 799d5ae1-caac-4c92-8835-696ad25de553
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '1175'
+source-wordcount: '1174'
 ht-degree: 0%
 
 ---
 
-
-# MSRP - MongoDB-lagringsresursprovidern {#msrp-mongodb-storage-resource-provider}
+# MSRP - lagringsresursprovider för MongoDB {#msrp-mongodb-storage-resource-provider}
 
 ## Om MSRP {#about-msrp}
 
@@ -115,7 +114,7 @@ Mer information om replikuppsättningar finns i dokumentationen för MongoDB [Re
 
 Om du vill arbeta med replikuppsättningar och lära dig hur du definierar anslutningar mellan program och MongoDB-instanser går du till dokumentationen för MongoDB:s [URI-format för anslutningssträng](https://docs.mongodb.org/manual/reference/connection-string/).
 
-#### Exempel-URL för anslutning till en replikuppsättning {#example-url-for-connecting-to-a-replica-set}
+#### Exempel-URL för anslutning till en replikuppsättning  {#example-url-for-connecting-to-a-replica-set}
 
 ```shell
 # Example url for:
@@ -182,7 +181,7 @@ Ett rimligt standardvärde är 5000:
 * Om det är problem med minnet anger du ett mindre tal
 * Om hastigheten är ett problem anger du ett större tal för att öka hastigheten
 
-### Kör MSRP-omindexeringsverktyget med cURL-kommandot {#running-msrp-reindex-tool-using-curl-command}
+### Kör MSRP-omindexeringsverktyget med kommandot cURL {#running-msrp-reindex-tool-using-curl-command}
 
 Följande cURL-kommando visar vad som krävs för att en HTTP-begäran ska kunna indexera om UGC som lagras i MSRP.
 
@@ -243,11 +242,11 @@ Det finns ett verktyg med öppen källkod tillgängligt på GitHub för detta ä
 
 Migreringsverktyget kan anpassas för att exportera UGC från tidigare versioner av AEM sociala communities för import till AEM Communities 6.1 eller senare.
 
-### Fel - odefinierat fält provider_id {#error-undefined-field-provider-id}
+### Fel - odefinierad fältprovider_id {#error-undefined-field-provider-id}
 
 Om följande fel visas i loggarna anger det att Solr-schemafilen inte är korrekt konfigurerad.
 
-#### JsonMappingException: odefinierad fältprovider_id {#jsonmappingexception-undefined-field-provider-id}
+#### JsonMappingException: undefined field provider_id {#jsonmappingexception-undefined-field-provider-id}
 
 ```xml
 Caused by: com.fasterxml.jackson.databind.JsonMappingException: undefined field provider_id
@@ -274,4 +273,3 @@ Om ett försök att skapa en säker anslutning till MongoDB-servern misslyckas p
 
 * [AEM med MongoDB](../../help/sites-deploying/aem-with-mongodb.md)
 * [MongoDB-dokumentation](https://docs.mongodb.org/)
-
