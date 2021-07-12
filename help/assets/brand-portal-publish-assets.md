@@ -1,8 +1,8 @@
 ---
 title: Publicera resurser på varumärkesportalen
 seo-title: Publicera resurser på varumärkesportalen
-description: Lär dig hur du publicerar och avpublicerar resurser på varumärkesportalen.
-seo-description: Lär dig hur du publicerar och avpublicerar resurser på varumärkesportalen.
+description: Lär dig hur du publicerar och avpublicerar resurser på Brand Portal.
+seo-description: Lär dig hur du publicerar och avpublicerar resurser på Brand Portal.
 uuid: 350beb85-c0fb-4a1c-8597-c03592c02d3d
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -11,21 +11,20 @@ content-type: reference
 discoiquuid: 39b8cf9b-afec-4c9a-8a5d-7fc87e643f26
 docset: aem65
 feature: Brand Portal
-role: Business Practitioner
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+role: User
+exl-id: 76652a16-cad6-4e95-9e66-41efec452b03
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '333'
+source-wordcount: '331'
 ht-degree: 45%
 
 ---
 
-
 # Publicera resurser på varumärkesportalen {#publish-assets-to-brand-portal}
 
-Som Adobe Experience Manager (AEM) Assets-administratör kan du publicera resurser och mappar till AEM Assets Brand Portal-instansen (eller schemalägga publiceringsarbetsflödet till ett senare datum/tid) för din organisation. Du måste dock först konfigurera AEM Assets med varumärkesportalen. Mer information finns i [Konfigurera AEM Assets med varumärkesportalen](/help/assets/configure-aem-assets-with-brand-portal.md).
+Som Adobe Experience Manager (AEM) Assets-administratör kan du publicera resurser och mappar i AEM Assets Brand Portal-instansen (eller schemalägga publiceringsarbetsflödet till ett senare datum/tid) för din organisation. Du måste dock först konfigurera AEM Assets med varumärkesportalen. Mer information finns i [Konfigurera AEM Assets med varumärkesportalen](/help/assets/configure-aem-assets-with-brand-portal.md).
 
-När replikeringen är klar kan du publicera resurser, mappar och samlingar på varumärkesportalen. Så här publicerar du resurser på varumärkesportalen:
+När replikeringen är klar kan du publicera resurser, mappar och samlingar till Brand Portal. Så här publicerar du resurser på Brand Portal:
 
 >[!NOTE]
 >
@@ -33,11 +32,11 @@ När replikeringen är klar kan du publicera resurser, mappar och samlingar på 
 
 1. I resurskonsolen markerar du de resurser/mappar som du vill publicera och klickar på **[!UICONTROL Quick Publish]** i verktygsfältet.
 
-   Du kan också välja de resurser du vill publicera på varumärkesportalen.
+   Du kan också välja de mediefiler du vill publicera till Brand Portal.
 
    ![publish2bp-2](assets/publish2bp.png)
 
-1. Följande två alternativ är tillgängliga för att publicera resurserna på varumärkesportalen:
+1. Följande två alternativ är tillgängliga när du vill publicera mediefiler till Brand Portal:
    * [Publicera resurser direkt](#publish-to-bp-now)
    * [Publicera resurser senare](#publish-to-bp-now)
 
@@ -73,7 +72,6 @@ Gör så här för att schemalägga publicering av resurser på varumärkesporta
 
    ![publishworkflow](assets/publishworkflow.png)
 
-Logga sedan in på Brand Portal för att se om de publicerade resurserna finns tillgängliga i gränssnittet för varumärkesportalen.
+Logga sedan in på Brand Portal för att se om de publicerade resurserna finns tillgängliga i Brand Portal gränssnitt.
 
 ![bp_landing_page](assets/bp_landing_page.png)
-
