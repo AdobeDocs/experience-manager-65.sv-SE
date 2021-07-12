@@ -9,16 +9,15 @@ topic-tags: content-fragments
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: 9da10294-2dc8-4e82-8d32-f034e6a5aeeb
 docset: aem65
-feature: Content Fragments
-role: Business Practitioner, Administrator
-translation-type: tm+mt
-source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
+feature: Innehållsfragment
+role: User, Admin
+exl-id: 76f3a684-027d-4822-9eb4-220fc96956e3
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '755'
 ht-degree: 20%
 
 ---
-
 
 # Modeller för innehållsfragment{#content-fragment-models}
 
@@ -161,4 +160,3 @@ Så här publicerar du en innehållsfragmentmodell:
 
    >[!NOTE]
    Om du publicerar ett innehållsfragment för vilket modellen ännu inte har publicerats, visas detta i en urvalslista och modellen publiceras med fragmentet.
-
