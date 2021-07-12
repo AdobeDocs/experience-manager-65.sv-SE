@@ -8,15 +8,14 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: manage
 discoiquuid: c30332b6-e012-442d-8e84-28832c116c7b
 noindex: true
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+role: Admin
+exl-id: b87e07b1-4a19-4888-bad0-c0f5327b9ad3
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '411'
+source-wordcount: '410'
 ht-degree: 0%
 
 ---
-
 
 # AEM datorprogram för AEM Forms {#aem-desktop-app-for-aem-forms}
 
@@ -32,7 +31,7 @@ Du kan använda appen för att synkronisera binära AEM Forms-filer av följande
 >
 >Ett filnamn får bara innehålla alfanumeriska tecken, bindestreck eller understreck.
 
-## Aktivera AEM Forms för AEM-datorprogrammet {#enable-aem-forms-for-aem-desktop-app}
+## Aktivera AEM Forms för AEM {#enable-aem-forms-for-aem-desktop-app}
 
 AEM skrivbordsapp använder WebDAV-protokoll i Microsoft Windows och SMB1 i Mac OS X för att ansluta till en AEM Forms-server. AEM Forms-servern är inte aktiverad att synkronisera binära filer och andra resurser med en WebDAV- eller SMB-klient. Så här aktiverar du AEM Forms för AEM datorprogram:
 
@@ -44,4 +43,3 @@ AEM skrivbordsapp använder WebDAV-protokoll i Microsoft Windows och SMB1 i Mac 
 1. Öppna appen och anslut till AEM Forms-servern.
 
    När anslutningen lyckades fyller programmet i mapparna `content/dam` och `content/dam/formsanddocuments`. Förutom att flytta filer från mapparna ovan till lokala mappar kan du använda appen för att flytta innehåll mellan automatiskt ifyllda mappar.
-
