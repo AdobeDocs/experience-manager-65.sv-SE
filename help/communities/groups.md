@@ -11,15 +11,14 @@ content-type: reference
 discoiquuid: d381ea40-fe49-4d32-bfad-1379c7a02aba
 docset: aem65
 pagetitle: Community Groups Console
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+role: Admin
+exl-id: ef371ff8-6b4f-4e5a-98fb-d7c274927c46
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '1677'
+source-wordcount: '1676'
 ht-degree: 0%
 
 ---
-
 
 # Community Groups Console {#community-groups-console}
 
@@ -122,7 +121,7 @@ Du kan välja ett tema som skiljer sig från den överordnade webbplatsens tema.
 
 När communitywebbplatsen har publicerats går det att [redigera egenskaperna](#modifyinggroupproperties) och välja ett annat tema.
 
-### VARUMÄRKE FÖR GEMENSKAPSGRUPP {#community-group-branding}
+### GEMENSKAPSGRUPPENS VARUMÄRKE {#community-group-branding}
 
 ![community-group-branding](assets/community-group-branding.png)
 
@@ -205,7 +204,7 @@ När processen är klar visas kortet för den nya undercommunitywebbplatsen (gru
 >
 >Gruppen skapas på alla språk enligt [steg 1: Community Group Template](/help/communities/groups.md#step-community-group-template) in Additional Available Community Group Languages, in the Community Groups console of the respective community sites.
 
-## Skapa gruppinnehåll {#author-group-content}
+## Författargruppinnehåll {#author-group-content}
 
 ![öppen webbplats](assets/open-site.png)
 
