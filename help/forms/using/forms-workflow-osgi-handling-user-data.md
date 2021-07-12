@@ -6,15 +6,14 @@ uuid: 6eefbe84-6496-4bf8-b065-212aa50cd074
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 9f400560-8152-4d07-a946-e514e9b9cedf
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+role: Admin
+exl-id: fd0e17d7-c3e9-4dec-ad26-ed96a1881f42
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '1009'
+source-wordcount: '1008'
 ht-degree: 0%
 
 ---
-
 
 # Forms-centrerade arbetsflöden på OSGi | Hantera användardata {#forms-centric-workflows-on-osgi-handling-user-data}
 
@@ -161,4 +160,3 @@ Du kan också använda API:er för att komma åt och ta bort noder och egenskape
 * [Så här programmässigt kommer du åt AEM JCR](/help/sites-developing/access-jcr.md)
 * [Tar bort noder och egenskaper](https://docs.adobe.com/docs/en/spec/jcr/2.0/10_Writing.html#10.9%20Removing%20Nodes%20and%20Properties)
 * [API-referens](https://helpx.adobe.com/experience-manager/6-3/sites-developing/reference-materials/javadoc/overview-summary.html)
-
