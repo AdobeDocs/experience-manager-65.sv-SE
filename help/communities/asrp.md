@@ -10,17 +10,16 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 3e81b519-57ca-4ee1-94bd-7adac4605407
 docset: aem65
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+role: Admin
+exl-id: 6430ed96-5d96-41b6-866f-90b34ff84f7a
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '822'
+source-wordcount: '821'
 ht-degree: 0%
 
 ---
 
-
-# ASRP - Adobe lagringsresursprovider {#asrp-adobe-storage-resource-provider}
+# ASRP - Adobe lagringsresursleverantör {#asrp-adobe-storage-resource-provider}
 
 ## Om ASRP {#about-asrp}
 
@@ -104,7 +103,7 @@ I AEM Author-instans:
 * Avmarkera **Bara ändrad**
 * Välj **Aktivera**
 
-## Uppgraderar från AEM 6.0 {#upgrading-from-aem}
+## Uppgradera från AEM 6.0 {#upgrading-from-aem}
 
 >[!CAUTION]
 >
@@ -149,4 +148,3 @@ I JCR, om [/conf/global/settings/communities](https://localhost:4502/crx/de/inde
 
 * Innehåller ingen [srpc](https://localhost:4502/crx/de/index.jsp#/conf/global/settings/communities/srp)-nod, vilket betyder att lagringsprovidern är JSRP.
 * Om srpc-noden finns och innehåller [defaultconfiguration](https://localhost:4502/crx/de/index.jsp#/conf/global/settings/communities/srp/defaultconfiguration)-noden definierar standardkonfigurationens egenskaper att ASRP ska vara standardprovider.
-
