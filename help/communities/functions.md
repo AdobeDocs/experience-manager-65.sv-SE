@@ -10,11 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 91833914-b811-4355-a97d-e1a9cb7441f1
 docset: aem65
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+role: Admin
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '2455'
+source-wordcount: '2454'
 ht-degree: 0%
 
 ---
@@ -180,7 +179,7 @@ Om det här alternativet är markerat är alla taggnamnutrymmen som är tillåtn
 Om du avmarkerar det här alternativet kan du välja ett eller flera namnutrymmen som är tillåtna för communitywebbplatsen.
 Standard är valt.
 
-### Funktionen Innehåll {#featured-content-function}
+### Funktion för aktuellt innehåll {#featured-content-function}
 
 Funktionen för aktuellt innehåll är en sida med en [innehållskomponent](/help/communities/featured.md) som är konfigurerad för att tillåta att kommentarer läggs till och tas bort.
 
@@ -194,7 +193,7 @@ Filbiblioteksfunktionen är en sida med en [filbibliotekskomponent](/help/commun
 
 När du lägger till en mall är den enda konfigurationen för [titel- och URL-inställningarna](#title-and-url-settings).
 
-### Forum Function {#forum-function}
+### Forum {#forum-function}
 
 Forumfunktionen är en sida med en [forumkomponent](/help/communities/forum.md) som är konfigurerad för taggning, filöverföringar, och efterföljande medlemmar som kan redigera, rösta och moderera själva.
 
@@ -226,7 +225,7 @@ När du lägger till en mall öppnas följande dialogruta:
 
    Om det här alternativet är markerat identifieras komponentens innehåll som [aktuellt innehåll](/help/communities/featured.md). Standard är valt.
 
-### Gruppfunktion {#groups-function}
+### Funktionen Grupper {#groups-function}
 
 >[!CAUTION]
 >
@@ -287,7 +286,7 @@ När du lägger till en mall öppnas följande dialogruta, som anger standardnam
 
    Om det här alternativet är markerat identifieras dess innehåll som [aktuellt innehåll](/help/communities/featured.md). Standard är valt.
 
-### Ledarpanelsfunktion {#leaderboard-function}
+### Ledarbordsfunktion {#leaderboard-function}
 
 Ledpanelsfunktionen är en sida med en [Leaderboard-komponent](/help/communities/enabling-leaderboard.md).
 
@@ -350,7 +349,7 @@ När konfigurationen läggs till i en mall tillåts begränsningar för behörig
 
    Om det här alternativet är markerat identifieras dess innehåll som [aktuellt innehåll](/help/communities/featured.md). Standard är valt.
 
-## Skapa communityfunktion {#create-community-function}
+## Skapa community-funktion {#create-community-function}
 
 Du kan skapa en communityfunktion genom att välja ikonen `Create Community Function` längst upp i användarfunktionskonsolen. Flera funktioner som är baserade på samma AEM kan skapas och sedan anpassas unikt genom att du öppnar i redigeringsläget.
 
@@ -374,7 +373,7 @@ På panelen Community Function Name konfigureras ett namn, en beskrivning och om
 
    En växlingsväxling som styr om funktionen kan refereras.
 
-### AEM blå {#aem-blueprint}
+### AEM Blueprint {#aem-blueprint}
 
 ![aem-blueprint](assets/aem-blueprint.png)
 
@@ -392,13 +391,13 @@ Se även [Multi Site Manager](/help/sites-administering/msm.md).
 
 På miniatyrpanelen kan en bild överföras för visning i [Community Function-konsolen](#community-functions-console).
 
-## Öppna communityfunktion {#open-community-function}
+## Öppen communityfunktion {#open-community-function}
 
 ![open-function](assets/open-function.png)
 
 Välj ikonen `Open Community Function` för att öppna redigeringsläget för författare för redigering av sidinnehållet och ändring av konfigurationen av funktionskomponenterna.
 
-### Konfigurerar komponenter {#configuring-components}
+### Konfigurera komponenter {#configuring-components}
 
 En communityfunktion implementeras som en Live-kopia av en AEM, som beskrivs i [Multi Site Manager](/help/sites-administering/msm.md).
 
