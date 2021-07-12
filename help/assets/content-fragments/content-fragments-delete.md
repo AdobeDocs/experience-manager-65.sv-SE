@@ -10,20 +10,19 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 content-type: reference
 discoiquuid: ec21237f-9186-49b4-8039-99df4db7c14a
 docset: aem65
-feature: Content Fragments
-role: Business Practitioner, Administrator
-translation-type: tm+mt
-source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
+feature: Innehållsfragment
+role: User, Admin
+exl-id: cc212f95-0be0-4705-8dfd-beda9bfb13e0
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '460'
+source-wordcount: '457'
 ht-degree: 13%
 
 ---
 
-
 # Innehållsfragment – ta bort överväganden{#content-fragments-delete-considerations}
 
-## Behörigheter - Ta bort eller ta inte bort {#permissions-delete-or-not-delete}
+## Behörigheter - ta bort eller inte ta bort {#permissions-delete-or-not-delete}
 
 Möjligheten att ta bort innehåll är kraftfull, men potentiellt känslig, och många branscher måste begränsa och styra hur dessa behörigheter distribueras.
 
@@ -96,4 +95,3 @@ Behörigheterna `add` och `modify` kan också administreras i CRXDE Lite eller m
 Definitionen av `remove`-behörigheten för en grupp `content-authors-no-delete`:
 
 ![cf-delete-03](assets/cf-delete-03.png)
-
