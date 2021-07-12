@@ -9,17 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-manager
 discoiquuid: e65925ff-1fbf-4da6-bf09-0cf056c86e5a
 docset: aem65
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+role: Admin
+exl-id: 1f4f49b7-5f32-47dd-9dc7-a6974faf2bdf
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '722'
+source-wordcount: '721'
 ht-degree: 0%
 
 ---
 
-
-# Söker efter formulär och resurser{#searching-for-forms-and-assets}
+# Söka efter formulär och resurser{#searching-for-forms-and-assets}
 
 Du kan söka efter formulär eller formulärresurser med hjälp av en textsträng eller textsträng tillsammans med jokertecken. Du kan även begränsa sökningen med hjälp av de villkor som finns i olika kategorier på sökpanelen.
 
@@ -58,7 +57,7 @@ Sökfält och parametrar eller filter AEM formulär- och resurssökning
 
 Genom att använda filtret för resurssökväg kan du begränsa sökresultaten till den aktuella katalogen. Om alternativet Sök i aktuell katalog inte är markerat innehåller sökresultaten resurser från baskatalogen. Om den aktuella sidan inte är en katalog och alternativet Sök i den aktuella katalogen är markerat, returnerar sökningen de resurser som finns i den överordnade katalogen.
 
-### Resursändring {#asset-modification}
+### Ändrad tillgång {#asset-modification}
 
 Välj ett av följande alternativ om du vill söka bland alla resurser som har ändrats inom en viss tidsperiod.
 
