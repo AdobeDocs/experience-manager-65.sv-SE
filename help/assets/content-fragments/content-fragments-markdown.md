@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: b193f28c-46c2-4eab-bbb8-578530f80ba5
 docset: aem65
 feature: Innehållsfragment
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 28e1052f-62b5-47bc-9bc8-f2d92f0254f6
-source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '543'
 ht-degree: 4%
@@ -188,7 +188,7 @@ Kodblock används vanligtvis för att illustrera källkod. Du kan skapa kodblock
 
         `This is a code block.`
 
-## Omvänt snedstreck hoppar över {#backslash-escapes}
+## Omvända snedstreck {#backslash-escapes}
 
 Du kan använda omvänt snedstreck för att generera litterala tecken som har en speciell betydelse för formateringssyntaxen. Om du till exempel vill omsluta ett ord med literala asterisker (i stället för en HTML &lt;em>-tagg) kan du använda omvända snedstreck före asteriskerna, enligt följande:
 
