@@ -9,15 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.3/FORMS
 topic-tags: installing
 geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: e745033f-8015-4fae-9d82-99d35802c0a6
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+role: Admin
+exl-id: 1e39455e-f588-42a2-91f5-daefcfed82a0
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '941'
+source-wordcount: '940'
 ht-degree: 0%
 
 ---
-
 
 # Uppgradera till AEM 6.5 Forms på OSGi {#upgrade-to-aem-forms-osgi}
 
@@ -110,4 +109,3 @@ Gör följande för att uppgradera från AEM 6.3 Forms eller AEM 6.4 Forms till 
 
    >[!NOTE]
    I AEM 6.4 Forms har strukturen för crx-database ändrats. Om du uppgraderar från 6.3 Forms till AEM 6.5 Forms kan du använda de nya anpassningsmöjligheterna som du skapar på nytt. En fullständig lista över ändrade sökvägar finns i [Omstrukturering av Forms-databaser i AEM](/help/sites-deploying/forms-repository-restructuring-in-aem-6-5.md).
-
