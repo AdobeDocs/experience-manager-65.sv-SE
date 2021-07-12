@@ -9,15 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: f5316a73-84e2-4a18-98c1-a384eeaa77cf
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+role: Admin
+exl-id: 873e013c-a2da-4b37-b0e3-56bdf240004a
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '444'
 ht-degree: 1%
 
 ---
-
 
 # JSRP - JCR-lagringsresursprovider {#jsrp-jcr-storage-resource-provider}
 
@@ -78,7 +77,7 @@ Gå till konsolen för lagringskonfiguration eller kontrollera den AEM databasen
    * Innehåller ingen [srpc](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community/srpc)-nod, vilket betyder att lagringsprovidern är JSRP.
    * Om srpc-noden finns och innehåller noden [defaultconfiguration](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community/srpc/defaultconfiguration), ska standardkonfigurationens egenskaper definiera JSRP som standardprovider.
 
-### UGC är inte synligt på författarinstansen {#ugc-not-visible-on-author-instance}
+### UGC är inte synlig på författarinstans {#ugc-not-visible-on-author-instance}
 
 Det här är inte något fel. En egenskap hos JSRP är att communityinnehåll som anges i publiceringsmiljön endast visas i publiceringsmiljön.
 
