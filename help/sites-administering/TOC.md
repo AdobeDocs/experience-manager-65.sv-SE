@@ -7,8 +7,8 @@ user-guide-title: Användarhandbok för AEM 6.5
 breadcrumb-title: Administratörshandbok
 user-guide-description: Läs om hur du administrerar AEM.
 feature: Administratör
-role: Administrator
-source-git-commit: 5536ee27ad51356c2dcd0f0f36b91025bf1d228c
+role: Admin
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '627'
 ht-degree: 6%
