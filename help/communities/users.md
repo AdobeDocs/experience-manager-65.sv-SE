@@ -9,15 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 774c2553-b629-456b-afa7-5713490f4a0a
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+role: Admin
+exl-id: 4237085a-d70d-41de-975d-153f58336daa
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '2169'
+source-wordcount: '2168'
 ht-degree: 0%
 
 ---
-
 
 # Hantera användare och användargrupper {#managing-users-and-user-groups}
 
@@ -61,7 +60,7 @@ Om platsnamnet till exempel är *engage* för en webbplats med namnet&quot;We.Re
 
 ## Författarmiljö {#author-environment}
 
-### Tunneltjänsten {#tunnel-service}
+### Tunneltjänst {#tunnel-service}
 
 När du använder redigeringsmiljön för att [skapa webbplatser](sites-console.md), [ändra webbplatsegenskaper](sites-console.md#modifying-site-properties) och [hantera communitymedlemmar och medlemsgrupper](members.md) måste du ha åtkomst till användare och användargrupper som är registrerade i publiceringsmiljön.
 
@@ -152,9 +151,9 @@ När en communityfunktion inte är skyddad (ingen privilegierad medlemsgrupp har
 >
 >Om du lägger till en användare i en privilegierad medlemsgrupp för en communitywebbplats får användaren endast behörighet om han eller hon också är medlem på samma communitywebbplats.
 
-## Skapar communitymedlemmar {#creating-community-members}
+## Skapa communitymedlemmar {#creating-community-members}
 
-### Databasplats {#repository-location}
+### Lagringsplats {#repository-location}
 
 För att vissa funktioner ska fungera på rätt sätt måste du skapa användare och användargrupper med lämplig behörighet.
 
@@ -262,7 +261,7 @@ Detta resulterar i att användare automatiskt tilldelas medlemsgruppen för comm
 
 * Värdet `User auto membership` ska vara egenskapen `rep:authorizableId`, inte `givenName` (visningsnamn) från profilen.
 
-## Synkronisera användare bland AEM förekomster {#synchronizing-users-among-aem-instances}
+## Synkronisera användare bland AEM instanser {#synchronizing-users-among-aem-instances}
 
 När du använder en [publiceringsgrupp](topologies.md) måste användarna ha samma sökväg för varje publiceringsinstans genom att först importera användarna till en instans och [aktivera användarsynkronisering](sync.md) till Sling för att distribuera användarna till de andra publiceringsinstanserna.
 
