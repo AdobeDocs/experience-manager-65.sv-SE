@@ -2,18 +2,17 @@
 title: Hur skapar man adaptiva Forms med JSON Schema?
 description: Lär dig hur du skapar adaptiva formulär med JSON-schema som formulärmodell. Du kan använda befintliga JSON-scheman för att skapa anpassningsbara formulär. Gräv djupare med ett exempel på ett JSON-schema, förkonfigurera fält i JSON-schemadefinitionen, begränsa godtagbara värden för en adaptiv formulärkomponent och lär dig konstruktioner som inte stöds.
 feature: Adaptiv Forms
-role: Business Practitioner, Developer
+role: User, Developer
 level: Beginner, Intermediate
 exl-id: 1b402aef-a319-4d32-8ada-cadc86f5c872
-translation-type: tm+mt
-source-git-commit: ad67634278088f8f953fde61a3543acdd70537dd
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '1450'
 ht-degree: 2%
 
 ---
 
-# Skapa adaptiva formulär med JSON Schema {#creating-adaptive-forms-using-json-schema}
+# Skapa anpassningsbara formulär med JSON-schema {#creating-adaptive-forms-using-json-schema}
 
 ## Förutsättningar {#prerequisites}
 
@@ -22,7 +21,7 @@ Om du skapar ett anpassat formulär med ett JSON-schema som formulärmodell mås
 * [Skapa ett anpassat formulär](creating-adaptive-form.md)
 * [JSON-schema](https://json-schema.org/)
 
-## Använda ett JSON-schema som formulärmodell {#using-a-json-schema-as-form-model}
+## Använda ett JSON-schema som formulärmodell  {#using-a-json-schema-as-form-model}
 
 [!DNL Adobe Experience Manager Forms] har stöd för att skapa ett anpassat formulär genom att använda ett befintligt JSON-schema som formulärmodell. Detta JSON-schema representerar strukturen i vilken data produceras eller används av det bakomliggande systemet i din organisation. Det JSON-schema som du använder ska vara kompatibelt med [v4-specifikationerna](https://json-schema.org/draft-04/schema).
 
@@ -333,7 +332,7 @@ Definitionsnycklar används för att identifiera återanvändbara scheman. Åter
 
 Exemplet ovan definierar en kundpost där varje kund har både en leveransadress och en faktureringsadress. Adressernas struktur är densamma - adresserna har en gatuadress, ort och delstat - så det är en bra idé att inte duplicera adresserna. Det gör det också enkelt att lägga till och ta bort fält för framtida ändringar.
 
-## Förkonfigurerar fält i JSON-schemadefinitionen {#pre-configuring-fields-in-json-schema-definition}
+## Förkonfigurerar fält i JSON-schemadefinition {#pre-configuring-fields-in-json-schema-definition}
 
 Du kan använda egenskapen **aem:afProperties** för att förkonfigurera JSON-schemafältet för att mappa till en anpassad adaptiv formulärkomponent. Ett exempel visas nedan:
 
@@ -355,7 +354,7 @@ Du kan använda egenskapen **aem:afProperties** för att förkonfigurera JSON-sc
 }
 ```
 
-## Konfigurera skript eller uttryck för formulärobjekt {#configure-scripts-or-expressions-for-form-objects}
+## Konfigurera skript eller uttryck för formulärobjekt  {#configure-scripts-or-expressions-for-form-objects}
 
 JavaScript är uttrycksspråket i adaptiva formulär. Alla uttryck är giltiga JavaScript-uttryck och använder API:er för skriptmodell för adaptiva formulär. Du kan förkonfigurera formulärobjekt till [utvärdera ett uttryck](adaptive-form-expressions.md) för en formulärhändelse.
 
@@ -586,7 +585,7 @@ Några exempel på hur du använder händelser i en JSON är att dölja ett fäl
 
 Här är JSON-exempelkoden för tidigare nämnda exempel.
 
-### Dölja ett fält vid initieringshändelse {#hiding-a-field-on-initialize-event}
+### Dölja ett fält vid händelsen initialize {#hiding-a-field-on-initialize-event}
 
 ```json
 "name": {
@@ -599,7 +598,7 @@ Här är JSON-exempelkoden för tidigare nämnda exempel.
 }
 ```
 
-#### Konfigurera värdet för ett annat fält för händelsen implementera värde {#configure-value-of-another-field-on-value-commit-event}
+#### Konfigurera värdet för ett annat fält för värdeimplementeringshändelsen {#configure-value-of-another-field-on-value-commit-event}
 
 ```json
 "Income": {
@@ -721,7 +720,7 @@ Du kan lägga till följande begränsningar i JSON-schemaelement för att begrä
  </tbody>
 </table>
 
-## Konstruktioner som inte stöds {#non-supported-constructs}
+## Konstruktioner som inte stöds  {#non-supported-constructs}
 
 Adaptiva formulär stöder inte följande JSON-schemakonstruktioner:
 
