@@ -8,15 +8,14 @@ content-type: reference
 topic-tags: Security
 products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: d211d8b0-e75f-49c3-808d-5d0e26ad3a6b
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+role: Admin
+exl-id: 40bc01b4-a59e-4420-81d6-2887857bddce
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '885'
+source-wordcount: '884'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera inställningar för säker administration för AEM Forms på JEE {#configuring-secure-administration-settings-for-aem-forms-on-jee}
 
@@ -108,7 +107,7 @@ Vissa formulärservertjänster tillåter oautentiserade (anonyma) anrop för vis
 
    Anonym åtkomst bör inaktiveras för alla tjänster som inte behövs. Många interna tjänster kräver att anonym autentisering är aktiverat eftersom de måste anropas av en potentiell användare i systemet utan att vara förauktoriserade.
 
-## Ändra standardvärdet för global timeout {#changing-the-default-global-time-out}
+## Ändra standardtimeout för global {#changing-the-default-global-time-out}
 
 Slutanvändare kan autentisera till AEM Forms via Workbench, AEM Forms webbprogram eller anpassade program som anropar AEM Forms servertjänster. En global timeout-inställning används för att ange hur lång tid dessa användare kan interagera med AEM Forms (med en SAML-baserad försäkran) innan de tvingas autentisera igen. Standardinställningen är två timmar. I en produktionsmiljö måste tiden minskas till det minsta antal minuter som tillåts.
 
@@ -130,4 +129,3 @@ Slutanvändare kan autentisera till AEM Forms via Workbench, AEM Forms webbprogr
 1. Gå till sidan Importera och exportera konfigurationsfiler i administrationskonsolen.
 1. Ange sökvägen till den ändrade filen config.xml eller klicka på Bläddra för att navigera till den.
 1. Klicka på **Importera** för att överföra den ändrade config.xml-filen och klicka sedan på **OK**.
-
