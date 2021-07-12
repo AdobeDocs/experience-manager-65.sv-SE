@@ -10,15 +10,14 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 6f13b21a-f4ef-4889-9b8e-4da3f846fa35
 docset: aem65
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+role: Admin
+exl-id: e29aae44-67be-43d2-8004-c986412d9e63
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '922'
+source-wordcount: '921'
 ht-degree: 0%
 
 ---
-
 
 # SRP - Community Content Storage {#srp-community-content-storage}
 
@@ -137,7 +136,7 @@ CommunitIes är [*användare*, *användargrupper* och *användarprofiler*](/help
 
 Från och med AEM Communities 6.1 synkroniseras användarrelaterade data med Sling-distribution i stället för replikering. Mer information finns på [Användarsynkronisering](/help/communities/sync.md).
 
-### Uppgraderar till AEM Communities 6.5 {#upgrading-to-aem-communities}
+### Uppgradera till AEM Communities 6.5 {#upgrading-to-aem-communities}
 
 Vid uppgradering till AEM 6.5 Communities, om befintlig UGC måste behållas, bör åtgärder vidtas beroende på om AEM 5.6.1- eller AEM 6.0-communityn använde Adobe on demand-lagring eller lokal lagring av UGC.
 
