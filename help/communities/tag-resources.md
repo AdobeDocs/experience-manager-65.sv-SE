@@ -9,15 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: c012d639-c6e6-4f73-bbd8-78a4baa38c17
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+role: Admin
+exl-id: ce58c8e9-8b4a-43fb-a108-ed2ac40268c7
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '638'
+source-wordcount: '637'
 ht-degree: 0%
 
 ---
-
 
 # Aktiveringsresurser för taggning {#tagging-enablement-resources}
 
@@ -73,7 +72,7 @@ Katalogfunktionen innehåller en tagginställning som definierar taggarna som fi
 
 ![catalog-namespace](assets/catalog-namespace.png)
 
-## Tillämpar taggar på aktiveringsresurser {#applying-tags-to-enablement-resources}
+## Tillämpa taggar på aktiveringsresurser {#applying-tags-to-enablement-resources}
 
 Aktiveringsresurser och utbildningssökvägar visas i alla kataloger när `Show in Catalog` är markerat. Om du lägger till taggar i resurser och utbildningsvägar kan du förfiltrera i specifika kataloger och filtrera i kataloggränssnittet.
 
@@ -105,4 +104,3 @@ Om taggnamnutrymmen har lagts till och saknas kontrollerar du att taggarna och w
 Om inga aktiveringsresurser visas efter att du har valt en tagg när du visar katalogen kontrollerar du att en tagg från katalogens namnutrymmen används för aktiveringsresursen.
 
 ![view-catalog](assets/viewcatalog.png)
-
