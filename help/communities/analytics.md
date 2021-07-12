@@ -10,15 +10,14 @@ topic-tags: administering
 content-type: reference
 discoiquuid: e6fdaf56-402f-418d-96d8-e46bd3ad1e8c
 docset: aem65
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+role: Admin
+exl-id: 7d54928b-6512-4da9-a209-eb4488bf2b64
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '2743'
+source-wordcount: '2742'
 ht-degree: 2%
 
 ---
-
 
 # Analyskonfiguration för communityfunktioner {#analytics-configuration-for-communities-features}
 
@@ -163,7 +162,7 @@ När Video Heartbeat Analytics är aktiverat instansierar JavaScript-koden (JS) 
 
 Om det inte är aktiverat instansieras aldrig videons hjärtslagskod och endast videoförloppet och återupptagningspositionsspårning sparas i SRP för rapportering.
 
-## AEM Analytics Cloud tjänstkonfiguration {#aem-analytics-cloud-service-configuration}
+## AEM Analytics Cloud-tjänstkonfiguration {#aem-analytics-cloud-service-configuration}
 
 Så här skapar du en ny Analytics-integrering, som integrerar Adobe Analytics med AEM communitywebbplats, med standardgränssnittet i författarinstansen:
 
@@ -276,7 +275,7 @@ Ange till exempel *communities*.
 
 Om du skapar Analytics Framework öppnas ramverket för konfiguration.
 
-## Konfiguration för AEM Analytics Framework {#aem-analytics-framework-configuration}
+## Konfiguration av AEM Analytics Framework {#aem-analytics-framework-configuration}
 
 Syftet med ramverket är att mappa AEM till analysvariabler (eVars och events). Analysvariablerna som är tillgängliga för mappning är [definierade i rapportsviten](#adobe-analytics-report-suite-for-video-reporting).
 
@@ -291,7 +290,7 @@ Om en rapportsvit ännu inte har skapats eller inte har konfigurerats på rätt 
 
 Den idekiske behövs inte och kan minimeras så att den inte förhindrar åtkomst till inställningarna för Report Suites.
 
-#### Dialogrutan Rapportsviter före och efter att du har valt Lägg till objekt {#report-suites-dialog-before-and-after-selecting-add-item}
+#### Dialogrutan Rapportsviter före och efter alternativet Lägg till objekt {#report-suites-dialog-before-and-after-selecting-add-item}
 
 ![report-suite](assets/report-suite.png)
 
@@ -318,9 +317,9 @@ Den idekiske behövs inte och kan minimeras så att den inte förhindrar åtkoms
 
 Molntjänsten och ramverket för Analytics är nu färdiga. Mappningarna definieras när en communitywebbplats har skapats med den här analystjänsten aktiverad.
 
-## Aktivera analys för en community-webbplats {#enable-analytics-for-a-community-site}
+## Aktivera analys för en communitywebbplats {#enable-analytics-for-a-community-site}
 
-### Aktivera för ny community-webbplats {#enable-for-new-community-site}
+### Aktivera för ny community-plats {#enable-for-new-community-site}
 
 Så här lägger du till molntjänsten Analytics när du [skapar en ny community-webbplats](/help/communities/sites-console.md):
 
@@ -330,7 +329,7 @@ Så här lägger du till molntjänsten Analytics när du [skapar en ny community
 
 * Om du vill kan du gå tillbaka till Analytics-ramverkskonfigurationen och justera variabelmappningarna.
 
-### Aktivera för befintlig communityplats {#enable-for-existing-community-site}
+### Aktivera för befintlig communitywebbplats {#enable-for-existing-community-site}
 
 Så här lägger du till molntjänsten Analytics i en [befintlig community-webbplats](/help/communities/sites-console.md#modifying-site-properties):
 
@@ -372,7 +371,7 @@ För en **allmän AEM**-plats som innehåller webbgruppskomponenter, men som int
 </div>
 ```
 
-## Analytics for Communities Features {#analytics-for-communities-features}
+## Funktioner i Analytics for Communities {#analytics-for-communities-features}
 
 Analyser används automatiskt för flera communityfunktioner.
 
@@ -556,7 +555,7 @@ Om Communities eVars och events skriver över mappningar som fanns tidigare i ra
 
 ![analytics-mapping-evar](assets/analytics-mapping-evar.png)
 
-#### Exempelsteg 2: Välj &#39;x&#39; för att ta bort ersatt evar11 {#example-step-selecting-x-to-remove-replaced-evar}
+#### Exempelsteg 2: Välja &#39;x&#39; för att ta bort ersatt evar11 {#example-step-selecting-x-to-remove-replaced-evar}
 
 ![analytics-mapping-evar1](assets/analytics-mapping-evar1.png)
 
@@ -564,9 +563,9 @@ Om Communities eVars och events skriver över mappningar som fanns tidigare i ra
 
 ![analytics-mapping-evar2](assets/analytics-mapping-evar2.png)
 
-## Publicerar communitywebbplatsen {#publishing-the-community-site}
+## Publicera communitywebbplatsen {#publishing-the-community-site}
 
-### Verifiera analys för att AEM variabelmappning {#verify-analytics-to-aem-variable-mapping}
+### Verifiera analyser för att AEM variabelmappning {#verify-analytics-to-aem-variable-mapping}
 
 Det är klokt att verifiera variabelmappningen innan communitywebbplatsen publiceras, som även publicerar molntjänsten och ramverket för Analytics.
 
@@ -613,7 +612,7 @@ Följ instruktionerna på [Replikera krypteringsnyckeln](/help/communities/deplo
 
 När molntjänsten Analytics har aktiverats för en community-webbplats och, om det behövs, [mappningen av Analytics till AEM variabler har justerats](#mapped-analytics-to-aem-variables), är det nödvändigt att replikera konfigurationen till publiceringsmiljön genom att [(re)publicera communitywebbplatsen](/help/communities/sites-console.md#publishing-the-site).
 
-## Få rapporter från analyser {#obtaining-reports-from-analytics}
+## Få rapporter från Analytics {#obtaining-reports-from-analytics}
 
 ### Rapporthantering {#report-management}
 
@@ -662,7 +661,7 @@ Till exempel, **`analytics/reportConfigs/social_forum_components_hbs_topic`**
 
 ![komponentrapport](assets/component-report.png)
 
-## Hantera användardata i analysen {#manage-user-data-in-analytics}
+## Hantera användardata i Analytics {#manage-user-data-in-analytics}
 
 Adobe Analytics tillhandahåller API:er som gör att du kan komma åt, exportera och ta bort användardata. Mer information finns i [Skicka in åtkomst- och borttagningsbegäranden](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/gdpr-submit-access-delete.html).
 
