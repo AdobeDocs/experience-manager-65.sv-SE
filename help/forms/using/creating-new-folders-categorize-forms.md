@@ -8,15 +8,14 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-manager
 discoiquuid: 2a8f4380-8d0f-4354-b2da-4e0c02a545e3
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+role: Admin
+exl-id: f8af1ac3-6a95-4f91-8979-6b41a7e02ca4
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '408'
+source-wordcount: '407'
 ht-degree: 0%
 
 ---
-
 
 # Skapa nya mappar för att kategorisera formulär {#create-new-folders-to-categorize-forms}
 
@@ -57,4 +56,3 @@ Du kan skapa en mapp i AEM Forms på något av följande sätt:
 1. Klicka på ikonen Redigera ![aem6forms_edit](assets/aem6forms_edit.png) i verktygsfältet.
 1. Ange den nya titeln. Textfältet är förifyllt med det aktuella värdet för mapptiteln. Du kan ändra det till ett nytt värde.
 1. Klicka på **[!UICONTROL Submit].**
-
