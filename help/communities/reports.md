@@ -10,15 +10,14 @@ topic-tags: administering
 content-type: reference
 discoiquuid: fde053ff-b671-456b-869c-81f16ea1f1be
 docset: aem65
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+role: Admin
+exl-id: 2aff2ffe-ba6f-4cc9-a126-40fc2a1161e2
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '602'
+source-wordcount: '601'
 ht-degree: 0%
 
 ---
-
 
 # Rapportkonsol {#reports-console}
 
@@ -46,7 +45,7 @@ Tabellrapporter kan exporteras i CSV-format för efterföljande bearbetning.
 
 ## Rapporteringskonsoler {#reporting-consoles}
 
-### Rapporter för communityplatser {#reports-for-community-sites}
+### Rapporter om communitysajter {#reports-for-community-sites}
 
 * Från global navigering: **[!UICONTROL Navigation]** > **[!UICONTROL Communities]** > **[!UICONTROL Reports]**
 
@@ -66,7 +65,7 @@ Tabellrapporter kan exporteras i CSV-format för efterföljande bearbetning.
 
 ![rapporter](assets/reports1.png)
 
-### Rapporter om aktiveringsresurser och utbildningssökvägar {#reports-for-enablement-resources-and-learning-paths}
+### Rapporter om aktiveringsresurser och utbildningsvägar {#reports-for-enablement-resources-and-learning-paths}
 
 * Från global navigering: **[!UICONTROL Navigation]** > **[!UICONTROL Communities]** > **[!UICONTROL Resources]**
 
@@ -179,7 +178,7 @@ Välj **[!UICONTROL Generate]** för att skapa rapporten.
 
 ## Felsökning {#troubleshooting}
 
-### Inga communitywebbplatser har listats {#no-community-sites-listed}
+### Inga communitywebbplatser har angetts {#no-community-sites-listed}
 
 Om det inte finns några communitysajter i listan kontrollerar du att Adobe Analytics har aktiverats för en webbplats. Om du väljer rapporter om tilldelningar måste du se till att tilldelningsfunktionen finns i communityplatsens struktur.
 
