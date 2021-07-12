@@ -10,22 +10,21 @@ topic-tags: content-fragments
 content-type: reference
 discoiquuid: 5af45caf-5e85-4c57-bcd1-e8f7fc460315
 docset: aem65
-feature: Content Fragments
-role: Business Practitioner, Administrator
-translation-type: tm+mt
-source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
+feature: Innehållsfragment
+role: User, Admin
+exl-id: ced7c902-193c-4e97-9070-2a4d958b64a3
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '246'
+source-wordcount: '243'
 ht-degree: 13%
 
 ---
-
 
 # Associerat innehåll{#associated-content}
 
 Associerat innehåll ger anslutningen så att resurser (t.ex.) kan (valfritt) användas med fragmentet när det läggs till på en innehållssida. Detta ger flexibilitet genom att [tillhandahålla ett antal resurser att komma åt när du använder innehållsfragmentet på en sida](/help/sites-authoring/content-fragments.md#using-associated-content), samtidigt som det minskar tiden som krävs för att söka efter rätt resurs.
 
-## Lägger till associerat innehåll {#adding-associated-content}
+## Lägga till associerat innehåll {#adding-associated-content}
 
 >[!NOTE]
 >
@@ -56,4 +55,3 @@ När du har kopplat en samling kan du:
 * **Lägg till** resurser i samlingen.
 * Välj en resurs för ytterligare åtgärder.
 * Redigera resursen.
-
