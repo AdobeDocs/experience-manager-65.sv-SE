@@ -10,16 +10,15 @@ topic-tags: content-fragments
 content-type: reference
 discoiquuid: 21a18d60-f3fe-4048-9949-8416b5cb4596
 docset: aem65
-feature: Content Fragments
-role: Business Practitioner, Administrator
-translation-type: tm+mt
-source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
+feature: Innehållsfragment
+role: User, Admin
+exl-id: 636daf55-2225-4780-9c57-1a2d7464fe2c
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '1491'
+source-wordcount: '1488'
 ht-degree: 10%
 
 ---
-
 
 # Hantera innehållsfragment{#managing-content-fragments}
 
@@ -303,7 +302,7 @@ De visas sida vid sida, där:
 
 ![cfm-6420-20](assets/cfm-6420-20.png)
 
-## Återställer till version {#reverting-to-a-version}
+## Återställa till en version  {#reverting-to-a-version}
 
 Du kan återgå till en viss version av fragmentet:
 
@@ -347,4 +346,3 @@ Så här tar du bort ett fragment:
    >[!CAUTION]
    >
    >Om fragmentet redan finns på en sida visas ett varningsmeddelande och du måste bekräfta att du vill fortsätta med **Tvinga borttagning**. Fragmentet, tillsammans med dess innehållskomponentfragment, tas bort från alla innehållssidor.
-
