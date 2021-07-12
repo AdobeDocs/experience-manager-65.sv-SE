@@ -10,17 +10,16 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 404582ab-bb4c-4775-9ae3-17356d376dca
 docset: aem65
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+role: Admin
+exl-id: 829da16a-4083-43c1-857d-f2666b363bfc
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '2109'
+source-wordcount: '2108'
 ht-degree: 1%
 
 ---
 
-
-# Moderationskonsol {#moderation-console}
+# Modereringskonsol {#moderation-console}
 
 I AEM Communities går det att moderera [communityinnehåll](/help/communities/moderate-ugc.md) satsvis både från författar- och publiceringsmiljöer av administratörer och community-moderatorer (betrodda communitymedlemmar tilldelade som moderatorer).
 
@@ -65,7 +64,7 @@ Modereringsåtgärder kan bara utföras om du är inloggad som administratör el
 
 ![moderationkonsoleförfattare](assets/moderationconsoleauthor.png)
 
-## Moderationskonsolens användargränssnitt {#moderation-console-ui}
+## Användargränssnitt för modereringskonsol {#moderation-console-ui}
 
 Bortsett från den vänstra navigeringslisten (som visas på författaren men inte vid publicering) har modereringsgränssnittet följande huvudområden:
 
@@ -131,7 +130,7 @@ Om du däremot markerar **Fråga** och **Väntande**, visas endast innehåll som
 
 När filterlisten är öppen växlar ikonen Sök och sidopanelen stängs. Om du vill stänga filterfältet och bara visa det innehåll som användaren skapat klickar du på ikonen Sök och väljer alternativet Endast innehåll.
 
-#### Innehållssökväg {#content-path}
+#### Innehållsbana {#content-path}
 
 Innehållssökväg begränsar den UGC-referens som visas för inlägg i den angivna innehållsdatabasen.
 
@@ -207,7 +206,7 @@ Status begränsar den refererade UGC:n som visas till inlägg med den valda stat
 
 ![status](assets/statuses.png)
 
-#### Flaggar {#flagging}
+#### Flaggning {#flagging}
 
 Flaggning begränsar det refererade användargenererat innehåll som visas till inlägg som är flaggade eller dolda.
 
@@ -221,7 +220,7 @@ Medlemmar begränsar den refererade UGC som visas för UGC som har bokförts av 
 
 ![medlemmar](assets/members.png)
 
-#### Anslaget i de sista {#posted-in-the-last}
+#### Anslaget senast {#posted-in-the-last}
 
 Bokförd i sista begränsa hur den refererade UGC:n visas för inlägg gjorda i sista timmen, dagen, veckan, månaden eller året.
 
@@ -272,7 +271,7 @@ Om du vill göra inläggen större och mindre vanliga klickar du i innehållsomr
 
 Om du vill ändra ett inlägg i innehållsområdet till en viss nivå håller du pekaren över det med musen (skrivbordet) eller trycker och håller ned ett finger på posten (mobilen) så att knapparna visas på posten. När du arbetar med en enskild innehållsdetalj uppmanas du bara att bekräfta borttagningsåtgärden.
 
-### Modererar flera inlägg {#moderating-multiple-posts}
+### Moderering av flera inlägg {#moderating-multiple-posts}
 
 Ange läget för gruppval genom att klicka på ikonen `Select` för ett inlägg:
 
@@ -290,7 +289,7 @@ Ikonerna som tillåter dessa åtgärder visas bara i verktygsfältet när flera 
 
 ![bulkmoderat](assets/bulkmoderate.png)
 
-### Modererar ett enstaka inlägg {#moderating-a-single-post}
+### Moderera ett enstaka inlägg {#moderating-a-single-post}
 
 I läget för en markering är det möjligt att:
 
@@ -361,7 +360,7 @@ Till exempel:
 
 ![moderation-history](assets/moderation-history.png)
 
-#### Visa detalj {#view-detail}
+#### Visa detaljer {#view-detail}
 
 ![visa](assets/view.png)
 
@@ -374,4 +373,3 @@ Om du vill återgå till visning av flera UGC-inlägg i innehållsområdet marke
 Till exempel:
 
 ![view1](assets/view1.png)
-
