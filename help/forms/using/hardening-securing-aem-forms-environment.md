@@ -6,15 +6,14 @@ seo-description: Lär dig rekommendationer och bästa praxis för att skydda AEM
 uuid: abca7e7c-38c3-44f5-8d8a-4615cfce26c6
 topic-tags: Security
 discoiquuid: b1bd04bf-0d6d-4e6b-8c7c-eafd1a24b5fe
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+role: Admin
+exl-id: 5da3cc59-4243-4098-b1e0-438304fcd0c5
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '1464'
+source-wordcount: '1463'
 ht-degree: 0%
 
 ---
-
 
 # Förbättra och skydda AEM formulär i OSGi-miljö {#hardening-and-securing-aem-forms-on-osgi-environment}
 
@@ -39,11 +38,11 @@ AEM Forms är mycket anpassningsbart och kan fungera i många olika miljöer. Vi
 
 Säkerhetsluckor i transportskiktet är bland de första hoten mot alla Internetanslutna eller intranätriktade programservrar. I det här avsnittet beskrivs processen att härja värdar i nätverket mot dessa sårbarheter. Den behandlar nätverkssegmentering, TCP/IP-stackhärdning (Transmission Control Protocol/Internet Protocol) och användning av brandväggar för värdskydd.
 
-### Begränsa öppna slutpunkter {#limit-open-endpoints}
+### Begränsa öppna slutpunkter  {#limit-open-endpoints}
 
 En organisation kan ha en extern brandvägg som begränsar åtkomsten mellan en slutanvändare och AEM Forms publiceringsgrupp. Organisationen kan också ha en intern brandvägg som begränsar åtkomsten mellan en publiceringsgrupp och andra element i organisationen (till exempel författarinstans, bearbetningsinstans, databaser). Tillåt att brandväggar ger åtkomst till ett begränsat antal AEM Forms URL:er för slutanvändare och inom organisationselement:
 
-#### Konfigurera extern brandvägg {#configure-external-firewall}
+#### Konfigurera extern brandvägg  {#configure-external-firewall}
 
 Du kan konfigurera en extern brandvägg så att vissa AEM Forms-URL:er kan ansluta till Internet. Åtkomst till dessa URL:er krävs för att fylla i eller skicka ett anpassningsbart formulär, HTML5, korrespondenshanteringsbrev eller för att logga in på en AEM Forms-server:
 
@@ -97,7 +96,7 @@ Du kan konfigurera en extern brandvägg så att vissa AEM Forms-URL:er kan anslu
  </tbody>
 </table>
 
-#### Konfigurera intern brandvägg {#configure-internal-firewall}
+#### Konfigurera intern brandvägg  {#configure-internal-firewall}
 
 Du kan konfigurera den interna brandväggen så att vissa AEM Forms-komponenter (till exempel författarinstans, bearbetningsinstans, databaser) kan kommunicera med publiceringsservergruppen och andra interna komponenter som omnämns i topologidiagrammet:
 
@@ -130,7 +129,7 @@ Som standard är resurser som är tillgängliga på publiceringsnoderna tillgän
 * /etc.clientlibs/fd/&amp;ast;
 * /libs/fd/&amp;ast;
 
-## Hantera formulärdata säkert {#securely-handle-forms-data}
+## Hantera blankettdata på ett säkert sätt  {#securely-handle-forms-data}
 
 AEM Forms lagrar data till fördefinierade platser och tillfälliga mappar. Ni bör skydda uppgifterna för att förhindra obehörig användning.
 
@@ -140,7 +139,7 @@ När du konfigurerar formulär för bifogade filer, verifiera eller förhandsgra
 
 I ovanstående scenarier sparas data endast för autentiserade användare. Dessutom skyddas uppgifterna med åtkomstkontrollistor. Att ändra datarensningen är alltså ytterligare ett steg för att skydda informationen.
 
-### Säkra data sparade av formulärportalens överföringsåtgärd {#secure-data-saved-by-forms-portal-submit-action}
+### Skydda data som sparats av formulärportalens överföringsåtgärd {#secure-data-saved-by-forms-portal-submit-action}
 
 Som standard sparar formulärportalens åtgärd för att skicka anpassade formulär data i den lokala databasen på publiceringsnoden. Informationen sparas på /content/forms/fp. **Du bör inte lagra data på en publiceringsinstans.**
 
@@ -193,7 +192,7 @@ En annan uppsättning användarprofiler krävs för att skapa, publicera och bea
 
 Vanligtvis körs Bearbetningskluster och tilläggsprogram för Forms Workflow (AEM Forms på JEE) bakom en brandvägg. De här anses säkra. Du kan fortfarande utföra några steg för att förbättra dessa miljöer:
 
-### Säkert bearbetningskluster {#secure-processing-cluster}
+### Kluster för säker bearbetning {#secure-processing-cluster}
 
 Ett bearbetningskluster körs i redigeringsläge, men använder det inte för utvecklingsaktiviteter. Tillåt inte att en normal användare inkluderas i innehållsförfattare och formuläranvändargrupper i ett bearbetningskluster.
 
