@@ -10,16 +10,16 @@ topic-tags: administering
 content-type: reference
 discoiquuid: eb3d5c37-8097-46de-8c4f-804ea723f1c5
 docset: aem65
-role: Administrator
+role: Admin
 exl-id: d3bb6664-6c01-4bcf-840c-072fc491fc99
-source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '1060'
 ht-degree: 1%
 
 ---
 
-# Avancerade poäng och märken{#advanced-scoring-and-badges}
+# Advanced Scoring and Badges{#advanced-scoring-and-badges}
 
 ## Översikt {#overview}
 
@@ -87,7 +87,7 @@ frekvensDetta anger poängen mellan 0 och poängintervallet, efter vilket tillv�
 
    Standardvärdet är 50.
 
-## Avancerade bedömningsregler {#advanced-scoring-rules}
+## Avancerade poängregler {#advanced-scoring-rules}
 
 Vid grundläggande poängsättning är den kvantitet som behövs för att få ett märke känd.
 
@@ -155,9 +155,9 @@ I stället för att associera punkter med en badge-bild är det bara nödvändig
  </tbody>
 </table>
 
-## Inkluderade regler och märke {#included-rules-and-badge}
+## Inkluderade regler och emblem {#included-rules-and-badge}
 
-### Inkluderad bricka {#included-badge}
+### Inkluderat märke {#included-badge}
 
 I den här betaversionen ingår ett belöningsbaserat expertmärke:
 
