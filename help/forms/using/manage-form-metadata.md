@@ -9,15 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-manager
 discoiquuid: ba571f8e-8bd3-48eb-82e1-c93b14ffe44a
 docset: aem65
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+role: Admin
+exl-id: f82bbd39-b655-47a9-bca9-21d7cd30c082
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '1980'
+source-wordcount: '1979'
 ht-degree: 0%
 
 ---
-
 
 # Hantera formulärmetadata{#manage-form-metadata}
 
@@ -205,7 +204,7 @@ Resurser har befintliga egenskapsvärden som kan visas i skrivskyddat läge. Des
    * Den högra panelen innehåller metadataegenskaper i skrivskyddat läge, som är fördelade på olika flikar.
 
 
-## Lägg till/uppdatera värden för metadata i formulär {#add-update-form-metadata-values}
+## Lägg till/uppdatera värden för formulärmetadata {#add-update-form-metadata-values}
 
 Du kan redigera värdet för befintliga metadataegenskaper eller lägga till nya värden i ett befintligt egenskapsfält för metadata (till exempel när ett metadatafält är tomt).
 
@@ -253,7 +252,7 @@ Ett verktyg (redigeringsprogram för metadataschema) finns för att definiera sc
 
 AEM Forms visar metadatamappningar för de formulärtyper som stöds i det här verktyget. På så sätt kan du komma åt dessa scheman och använda funktionerna som finns i redigeraren för metadatamatchning för att lägga till anpassade egenskaper.
 
-### Navigera i metadataschredigeraren {#navigate-the-metadata-schema-editor}
+### Navigera i metadatamodeditorn {#navigate-the-metadata-schema-editor}
 
 1. Navigera till **[!UICONTROL Tools > Assets > Metadata Schemas]**.
 
