@@ -9,15 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 0b126218-b142-4d33-a28c-a91ab4fe99ac
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+role: Admin
+exl-id: 7e257b34-a0f5-47db-b1a9-e26333c287d9
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '789'
+source-wordcount: '788'
 ht-degree: 0%
 
 ---
-
 
 # Så här konfigurerar du MongoDB för demo {#how-to-setup-mongodb-for-demo}
 
@@ -75,7 +74,7 @@ Detta startar en MongoDB-server med standardport 27017.
 >
 >Om MongoDB startas *efter* AEM **startar du om alla** AEM **instanser så att de ansluter till MongoDB korrekt.**
 
-### Demo Production Option: Konfigurera MongoDB-replikuppsättningen {#demo-production-option-setup-mongodb-replica-set}
+### Demo Production Option: Konfigurera MongoDB-replikuppsättning {#demo-production-option-setup-mongodb-replica-set}
 
 Följande kommandon är ett exempel på hur du konfigurerar en replikuppsättning med 3 noder på localhost:
 
