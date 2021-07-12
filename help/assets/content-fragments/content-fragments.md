@@ -10,16 +10,15 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 content-type: reference
 discoiquuid: 7ecc1bcf-38a9-4a59-8dd3-79cb90dec33d
 docset: aem65
-feature: Content Fragments
-role: Business Practitioner, Administrator
-translation-type: tm+mt
-source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
+feature: Innehållsfragment
+role: User, Admin
+exl-id: b204df18-2aef-4905-82f8-c777928ba828
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '1978'
+source-wordcount: '1975'
 ht-degree: 3%
 
 ---
-
 
 # Arbeta med innehållsfragment{#working-with-content-fragments}
 
@@ -162,7 +161,7 @@ Resurser kan användas med ett innehållsfragment på flera sätt. var och en me
    * Innebär inte att man kan godkänna ett visst fragment.
    * Mer information finns i [Resursläsaren](/help/sites-authoring/author-environment-tools.md#assets-browser).
 
-### Ingående delar i ett innehållsfragment {#constituent-parts-of-a-content-fragment}
+### Komponentdelar i ett innehållsfragment {#constituent-parts-of-a-content-fragment}
 
 Resurserna för innehållsfragmentet består av följande delar (antingen direkt eller indirekt):
 
@@ -289,7 +288,7 @@ Om du vill skapa, redigera och använda innehållsfragment behöver du också:
    * Fragment behöver en eller flera dedikerade komponenter för att definiera layout och leverera vissa eller alla element/varianter och tillhörande innehåll.
    * Om du drar ett fragment till en sida när du redigerar kopplas den nödvändiga komponenten automatiskt till.
 
-## Exempelanvändning {#example-usage}
+## Exempel på användning {#example-usage}
 
 Ett fragment, med dess element och variationer, kan användas för att skapa sammanhängande innehåll för flera kanaler. När du utformar ditt fragment måste du tänka på vad som kommer att användas var.
 
