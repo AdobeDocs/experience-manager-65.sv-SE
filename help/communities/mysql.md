@@ -9,15 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 9222bc93-c231-4ac8-aa28-30d784a4ca3b
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+role: Admin
+exl-id: 2d33e6ba-cd32-40d1-8983-58f636b21470
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '1076'
+source-wordcount: '1075'
 ht-degree: 1%
 
 ---
-
 
 # MySQL-konfiguration för aktiveringsfunktioner {#mysql-configuration-for-enablement-features}
 
@@ -40,7 +39,7 @@ Innan du konfigurerar aktiveringsfunktionen i MySQL för Communities måste du s
 
 MySQL ska laddas ned och installeras enligt instruktionerna för måloperativsystemet.
 
-### Gemener i tabellnamn {#lower-case-table-names}
+### Tabellnamn med gemener {#lower-case-table-names}
 
 Eftersom SQL inte är skiftlägeskänsligt måste du, för skiftlägeskänsliga operativsystem, inkludera en inställning som anger alla tabellnamn med gemener.
 
@@ -89,7 +88,7 @@ När MySQL Workbench startas första gången visas inga anslutningar, såvida de
 * Standardporten är `3306`.
 * Det `Connection Name` som valts anges som `datasource`-namn i [JDBC OSGi-konfiguration](#configure-jdbc-connections).
 
-#### Anslutningen {#successful-connection} lyckades
+#### Anslutningen lyckades {#successful-connection}
 
 ![mysqlconnection1](assets/mysqlconnection1.png)
 
@@ -139,7 +138,7 @@ Installera schemat innan du installerar data.
 >Om databasnamnet ändras måste du ange det korrekt i:
 >
 >* [JDBC-konfiguration](#configure-jdbc-connections)
->* [SCORM-konfiguration](#configure-scorm)
+* [SCORM-konfiguration](#configure-scorm)
 
 
 #### Steg 1: öppna SQL-fil {#step-open-sql-file}
@@ -154,7 +153,7 @@ I MySQL Workbench
 
 ![scrom-database](assets/scrom-database.png)
 
-#### Steg 2: kör SQL-skript {#step-execute-sql-script}
+#### Steg 2: köra SQL-skript {#step-execute-sql-script}
 
 I Workbench-fönstret för filen som öppnas i steg 1 väljer du `lightening (flash) icon` för att köra skriptet.
 
@@ -199,7 +198,7 @@ När MySQL körs på en annan server än AEM måste servervärdnamnet anges i st
    * **[!UICONTROL Datasource name]**: Namn som angetts för  [MySQL-anslutningen](#new-connection-settings), till exempel &#39;enablement&#39;.
 * Välj **[!UICONTROL Save]**.
 
-## Konfigurera Scorm {#configure-scorm}
+## Konfigurera korm {#configure-scorm}
 
 ### Tjänsten AEM Communities ScormEngine {#aem-communities-scormengine-service}
 
@@ -245,4 +244,3 @@ För att se till att aktiveringskurser fungerar korrekt i alla webbläsare måst
 * Välj ikonen `[+]` för att lägga till en säker användaragent.
 * Ange `Mozilla/*`.
 * Välj **[!UICONTROL Save]**.
-
