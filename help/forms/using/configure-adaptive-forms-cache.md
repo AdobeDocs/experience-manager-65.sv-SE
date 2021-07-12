@@ -9,17 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
 discoiquuid: 9fa6f761-58ca-4cd0-8992-b9337dc1a279
 docset: aem65
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+role: Admin
+exl-id: 153986f0-b6ff-4278-8bb6-70c320a4e539
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '910'
+source-wordcount: '909'
 ht-degree: 0%
 
 ---
 
-
-# Konfigurera cache för adaptiva formulär {#configure-adaptive-forms-cache}
+# Konfigurera cacheminne för adaptiva formulär {#configure-adaptive-forms-cache}
 
 Ett cacheminne är en mekanism som förkortar dataåtkomsttider, minskar latensen och förbättrar I/O-hastigheter (input/output). Cacheminnet för adaptiva formulär lagrar endast HTML-innehåll och JSON-strukturen i ett adaptivt formulär utan att några förfyllda data sparas. Det minskar tiden som krävs för att återge ett anpassat formulär på klienten. Det är särskilt utformat för anpassningsbara formulär.
 
@@ -40,7 +39,7 @@ Ett cacheminne är en mekanism som förkortar dataåtkomsttider, minskar latense
 Miljön är konfigurerad att använda cacheadaptiva formulär och relaterade resurser.
 
 
-## (Valfritt) Konfigurera cacheminne för anpassat formulär vid dispatcher {#configure-the-cache}
+## (Valfritt) Konfigurera cacheminne för anpassningsbara formulär vid dispatcher {#configure-the-cache}
 
 Du kan också konfigurera adaptiv formulärcache-lagring vid dispatcher för ytterligare prestandaförbättringar.
 
@@ -48,7 +47,7 @@ Du kan också konfigurera adaptiv formulärcache-lagring vid dispatcher för ytt
 
 * Aktivera alternativet [sammanfogning eller förifyllning av data på klienten](prepopulate-adaptive-form-fields.md#prefill-at-client). Det hjälper till att sammanfoga unika data för varje instans av ett förfyllt formulär.
 
-### Att tänka på vid cachelagring av adaptiva formulär på en dispatcher {#considerations}
+### Att tänka på när du cachelagrar adaptiva formulär på en dispatcher {#considerations}
 
 * När du använder cacheminnet för adaptiva formulär använder du AEM [!DNL Dispatcher] för att cachelagra klientbibliotek (CSS och JavaScript) för ett adaptivt formulär.
 * När du utvecklar anpassade komponenter på servern som används för utveckling ska du inaktivera cachen för anpassade formulär.
@@ -133,9 +132,9 @@ Din AEM är konfigurerad att cachelagra adaptiva formulär. Den cache-lagrar all
 
 ## Felsökning {#troubleshooting}
 
-### Vissa adaptiva formulär som innehåller bilder eller videoklipp ogiltigförklaras inte automatiskt från dispatcherns cache {#videos-or-images-not-auto-invalidated}
+### Vissa anpassningsbara formulär som innehåller bilder eller videoklipp ogiltigförklaras inte automatiskt från dispatcherns cache {#videos-or-images-not-auto-invalidated}
 
-#### Utgåva {#issue1}
+#### Problem {#issue1}
 
 När du markerar och lägger till bilder eller videoklipp via en filläsare i ett anpassat formulär och dessa bilder och videoklipp redigeras i Assets Editor blir adaptiva formulär som innehåller sådana bilder inte automatiskt ogiltiga från dispatchercachen.
 
@@ -145,7 +144,7 @@ När du har publicerat bilder och video avpublicerar och publicerar du de adapti
 
 ### Endast den första instansen av ett adaptivt formulär cachelagras {#only-first-instance-of-adaptive-forms-is-cached}
 
-#### Utgåva {#issue3}
+#### Problem {#issue3}
 
 När URL:en för det adaptiva formuläret inte har någon lokaliseringsinformation och **[!UICONTROL Use Browser Locale]** i konfigurationshanteraren är aktiverad, hanteras en lokaliserad version av det adaptiva formuläret och endast den första instansen av det adaptiva formuläret cachelagras och levereras till varje efterföljande användare.
 
