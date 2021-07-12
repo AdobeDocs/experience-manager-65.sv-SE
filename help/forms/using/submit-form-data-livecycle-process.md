@@ -1,5 +1,5 @@
 ---
-title: Konfigurera AEM Forms för att skicka formulärdata till en JEE-process från AEM Forms
+title: Konfigurera AEM Forms för att skicka formulärdata till en JEE-process i AEM Forms
 seo-title: Konfigurera AEM Forms för att skicka formulärdata till en JEE-process från AEM Forms
 description: Med AEM Forms kan ni integrera adaptiva formulär med AEM Forms i JEE-processer för bearbetning av formulärdata.
 seo-description: Med AEM Forms kan ni integrera adaptiva formulär med AEM Forms i JEE-processer för bearbetning av formulärdata.
@@ -9,21 +9,20 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
 discoiquuid: ff97424d-b384-4149-9a3c-b4f00aaa1def
 docset: aem65
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+role: Admin
+exl-id: 025a3314-8b9d-48e1-a74f-ea0c933e21e3
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '359'
+source-wordcount: '358'
 ht-degree: 0%
 
 ---
 
-
-# Konfigurera AEM Forms för att skicka formulärdata till en AEM Forms på en JEE-process{#configuring-aem-forms-to-submit-form-data-to-an-aem-forms-on-jee-process}
+# Konfigurera AEM Forms för att skicka formulärdata till en JEE-process i AEM Forms{#configuring-aem-forms-to-submit-form-data-to-an-aem-forms-on-jee-process}
 
 Med adaptiva formulär kan data skickas till en AEM Forms om JEE-process för vidare bearbetning. Med den kan du aktivera en AEM Forms on JEE-process med data som är tillgängliga från det skickade formuläret. Utför följande steg för att göra det möjligt för din AEM Forms-instans att skicka ett adaptivt formulär till AEM Forms i JEE-processen:
 
-## Konfigurera din AEM Forms-server {#configure-your-aem-forms-server}
+## Konfigurera AEM Forms-servern {#configure-your-aem-forms-server}
 
 Utför följande steg för att göra det möjligt för AEM formulärserver att skicka data till en AEM Forms på en JEE-server:
 
