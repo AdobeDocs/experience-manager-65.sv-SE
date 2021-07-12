@@ -2,11 +2,10 @@
 title: Skapa ett anpassat formulär
 description: 'Lär dig hur du skapar ett anpassat formulär med  [!DNL Experience Manager Forms]. Adaptiva formulär är responsiva HTML5-formulär som effektiviserar informationsinsamling och -bearbetning. Mer information om hur du skapar ett adaptivt formulär baserat på en formulärdatamodell, XFA-formulärmall och XML- eller JSON-schema. '
 feature: Adaptiv Forms
-role: Business Practitioner, Developer
+role: User, Developer
 level: Beginner
 exl-id: 2c25a8b7-73f7-40fb-a303-9446a708c8eb
-translation-type: tm+mt
-source-git-commit: ad67634278088f8f953fde61a3543acdd70537dd
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '1763'
 ht-degree: 0%
@@ -138,7 +137,7 @@ Gör följande om du vill använda XML- eller JSON-schema som formulärmodell f�
 >
 >Du kan också ändra schemat för ett anpassat formulär. Detaljerade steg finns i [Redigera formulärmodellegenskaper för ett adaptivt formulär](#edit-form-model).
 
-## Anpassade formulärmallar {#adaptive-form-templates}
+## Adaptiva formulärmallar {#adaptive-form-templates}
 
 En mall innehåller en grundläggande struktur och definierar utseendet (layouter och format) för ett anpassat formulär. Den har förformaterade komponenter som innehåller vissa egenskaper och innehållsstruktur. <!-- Out of the box, AEM Forms provides some adaptive form templates. To get the complete template package including advanced templates, you need to install the AEM Forms add-on package. For more information, see [Installing AEM Forms add-on package](installing-configuring-aem-forms-osgi.md).-->
 
@@ -148,7 +147,7 @@ Dessutom kan du använda mallredigeraren för att skapa egna mallar. Mer informa
 >
 >När du öppnar ett adaptivt formulär som skapats med den avancerade mallen för redigering visas ett felmeddelande. Den avancerade mallen har en signaturstegskomponent och Adobe Sign är aktiverat som standard för den. Skapa och välj en [molnkonfiguration för Adobe Sign](adobe-sign-integration-adaptive-forms.md) och [konfigurera en signerare](working-with-adobe-sign.md#addsignerstoanadaptiveform) för att åtgärda felet.
 
-## Redigera formulärmodellegenskaper för ett adaptivt formulär {#edit-form-model}
+## Redigera formulärmodellegenskaper för ett anpassat formulär {#edit-form-model}
 
 Anpassningsbara formulär skapas utan någon formulärmodell (med alternativet Ingen för formulärmodellen) eller med en formulärmodell som en formulärmall, XML-schema, JSON-schema eller formulärdatamodell. Du kan ändra formulärmodellen för ett anpassat formulär från Ingen till en annan formulärmodell. För anpassningsbara formulär baserade på en formulärmodell kan du välja en annan formulärmall, XML-schema, JSON-schema eller formulärdatamodell för samma formulärmodell. Du kan dock inte ändra från en formulärmodell till en annan.
 
@@ -179,7 +178,7 @@ Som standard är alternativet för att spara automatiskt inte aktiverat. Du kan 
 1. Ange utlösaren. Automatiskt sparande aktiveras baserat på din konfiguration. Dina alternativ är:
 
    * **[!UICONTROL Time based:]** Välj alternativet för att börja spara innehållet baserat på ett visst tidsintervall.
-   * **[!UICONTROL Event based:]** Välj alternativet för att börja spara innehållet baserat på när en händelse utlöses.
+   * **[!UICONTROL Event based:]** Välj alternativet för att börja spara innehållet baserat på när en händelse aktiveras.
 
    När du väljer en utlösare aktiveras rutan Strategisk konfiguration. I rutan Strategisk konfiguration kan du:
 
