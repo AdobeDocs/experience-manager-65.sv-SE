@@ -8,21 +8,20 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
 discoiquuid: 7e404b45-1302-4dd1-b3c9-3f47fedb5f94
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+role: Admin
+exl-id: 562f8a22-cbab-4915-bc0d-da9bea7d18fa
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '1030'
+source-wordcount: '1029'
 ht-degree: 0%
 
 ---
-
 
 # Ansluta AEM Forms till Adobe LiveCycle {#connecting-aem-forms-with-adobe-livecycle}
 
 Adobe Experience Manager (AEM) LiveCycle Connector gör det möjligt att smidigt anropa Adobe LiveCycle ES4 Document Services inifrån AEM webbprogram och arbetsflöden. LiveCycle har ett omfattande klient-SDK som gör att klientapplikationer kan starta LiveCycle-tjänster med Java API:er. AEM LiveCycle Connector förenklar användningen av dessa API:er i OSGi-miljön.
 
-## Ansluter AEM till Adobe LiveCycle {#connecting-aem-server-to-adobe-livecycle}
+## Ansluta AEM till Adobe LiveCycle {#connecting-aem-server-to-adobe-livecycle}
 
 AEM LiveCycle Connector ingår i [AEM Forms-tilläggspaketet](/help/forms/using/installing-configuring-aem-forms-osgi.md). När du har installerat AEM Forms-tilläggspaketet utför du följande steg för att lägga till information om LiveCycle-servern AEM webbkonsolen.
 
@@ -59,7 +58,7 @@ AEM LiveCycle Connector förenklar flödet genom att visa dessa klientinstanser 
 * Spridning av användarautentiseringsuppgifter: Den anslutningsinformation som krävs för att ansluta till LiveCycle-servern hanteras på en central plats.
 * ServiceClientFactory-tjänst: Klientprogrammet kan starta processerna genom att komma åt ServiceClientFactory-instansen.
 
-### Startar via tjänstreferenser från OSGi-tjänstregistret {#starting-via-service-references-from-osgi-service-registry}
+### Starta via tjänstreferenser från OSGi-tjänstregistret {#starting-via-service-references-from-osgi-service-registry}
 
 Så här startar du en exponerad tjänst från AEM:
 
@@ -157,7 +156,7 @@ ServiceClientFactory scf = scfProvider.getDefaultServiceClientFactory();
 
 Nästan alla dokumenttjänster i LiveCycle kräver autentisering. Du kan använda något av följande alternativ för att starta de här tjänsterna utan att ange specifika autentiseringsuppgifter i koden:
 
-### konfiguration för Tillåtelselista {#allowlist-configuration}
+### Tillåtelselista-konfiguration {#allowlist-configuration}
 
 SDK-konfigurationen för LiveCycle-klienten innehåller en inställning för tjänstnamn. Den här konfigurationen är en lista över tjänster som anropslogiken använder administratörsautentiseringsuppgifter för. Om du till exempel lägger till DirectoryManager-tjänster (som ingår i API:t för användarhantering) i den här listan, kan all klientkod använda tjänsten direkt och anropslagret skickar automatiskt de konfigurerade autentiseringsuppgifterna som en del av den begäran som skickas till LiveCycle-servern
 
@@ -193,7 +192,7 @@ List<Component> components = runAsManager.doPrivileged(new PrivilegedAction<List
 },credential);
 ```
 
-### InvocationRequest-egenskap {#invocationrequest-property}
+### InvocationRequest, egenskap {#invocationrequest-property}
 
 Om du anropar en process eller använder klassen ServiceClientFactory direkt och skapar en InvocationRequest, kan du ange en egenskap som anger att anropslagret ska använda konfigurerade autentiseringsuppgifter.
 
@@ -258,7 +257,7 @@ Följande tjänster är tillgängliga:
 </dependency>
 ```
 
-### Klientpaketet {#adobe-livecycle-taskmanager-client-bundle} för Adobe TaskManager
+### Klientpaket för Adobe TaskManager LiveCycle {#adobe-livecycle-taskmanager-client-bundle}
 
 Följande tjänster är tillgängliga:
 
@@ -279,7 +278,7 @@ Följande tjänster är tillgängliga:
 </dependency>
 ```
 
-### Klientpaketet Adobe {#adobe-livecycle-workflow-client-bundle}
+### Klientpaketet Adobe LiveCycle Workflow {#adobe-livecycle-workflow-client-bundle}
 
 Följande tjänst är tillgänglig:
 
@@ -311,7 +310,7 @@ Följande tjänst är tillgänglig:
 </dependency>
 ```
 
-### Klientpaketet {#adobe-livecycle-application-manager-client-bundle} för Adobe Application Manager
+### Klientpaket för Adobe LiveCycle Application Manager {#adobe-livecycle-application-manager-client-bundle}
 
 Följande tjänster är tillgängliga:
 
@@ -329,7 +328,7 @@ Följande tjänster är tillgängliga:
 </dependency>
 ```
 
-### Klientpaket för Adobe LiveCycle Assembler {#adobe-livecycle-assembler-client-bundle}
+### Adobe LiveCycle Assembler Client bundle {#adobe-livecycle-assembler-client-bundle}
 
 Följande tjänst är tillgänglig:
 
@@ -409,7 +408,7 @@ Följande tjänst är tillgänglig:
 </dependency>
 ```
 
-### Klientpaketet {#adobe-livecycle-rights-manager-client-bundle} för Adobe LiveCycle Rights Manager
+### Klientpaket för Adobe LiveCycle Rights Manager {#adobe-livecycle-rights-manager-client-bundle}
 
 Följande tjänster är tillgängliga:
 
@@ -431,7 +430,7 @@ Följande tjänster är tillgängliga:
 </dependency>
 ```
 
-### Klientpaketet Adobe LiveCycle Signatures {#adobe-livecycle-signatures-client-bundle}
+### Klientpaket för Adobe LiveCycle Signatures {#adobe-livecycle-signatures-client-bundle}
 
 Följande tjänst är tillgänglig:
 
@@ -447,7 +446,7 @@ Följande tjänst är tillgänglig:
 </dependency>
 ```
 
-### Klientpaket för Adobe LiveCycle-förtroendelager {#adobe-livecycle-truststore-client-bundle}
+### Klientpaket för Adobe LiveCycle-butik {#adobe-livecycle-truststore-client-bundle}
 
 Följande tjänster är tillgängliga:
 
@@ -466,7 +465,7 @@ Följande tjänster är tillgängliga:
 </dependency>
 ```
 
-### Klientpaket för Adobe-databas {#adobe-livecycle-repository-client-bundle}
+### Adobe LiveCycle Repository Client bundle {#adobe-livecycle-repository-client-bundle}
 
 Följande tjänster är tillgängliga:
 
