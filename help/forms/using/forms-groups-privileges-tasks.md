@@ -10,15 +10,14 @@ content-type: reference
 topic-tags: Configuration
 discoiquuid: 1717b1b4-1c2a-450e-8e79-4156a974d5fa
 docset: aem65
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+role: Admin
+exl-id: d802ac53-e3db-45ca-afcb-7e99d0bb7877
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '280'
+source-wordcount: '279'
 ht-degree: 0%
 
 ---
-
 
 # AEM Forms on OSGi Groups and Privileges{#aem-forms-on-osgi-groups-and-privileges}
 
@@ -113,4 +112,3 @@ När du har installerat [AEM Forms-tilläggspaket](../../forms/using/installing-
 
 1. Användaren med gruppbehörighet för formuläranvändare kan inte skriva skript för anpassade formulär.
 1. Användaren med gruppbehörighet för mallförfattare kan inte skriva skript för mallar.
-
