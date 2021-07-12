@@ -9,15 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: installing
 geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: 0156b5c3-3bef-4213-9ada-c7b6ae96ada4
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+role: Admin
+exl-id: d4421d46-cfc9-424e-8a88-9d0a2994a5cf
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '2491'
+source-wordcount: '2490'
 ht-degree: 0%
 
 ---
-
 
 # Arkitektur och driftsättningstopologier för AEM Forms {#architecture-and-deployment-topologies-for-aem-forms}
 
@@ -53,7 +52,7 @@ AEM Forms redigeringsgränssnitt stöder inte skapande av DOR (Document of Recor
 
 AEM Forms på OSGi och AEM Forms på JEE har båda arbetsflödesfunktioner. Du kan snabbt skapa och distribuera grundläggande arbetsflöden för olika uppgifter i AEM formulär på OSGi, utan att behöva installera AEM Forms fullständiga processhanteringsfunktion på JEE. Det finns en viss skillnad i [funktionerna i det formulärbaserade arbetsflödet på AEM Forms i OSGi och Process Management-funktionen i AEM Forms i JEE](capabilities-osgi-jee-workflows.md). Utvecklandet och hanteringen av formulärcentrerade arbetsflöden i AEM Forms på OSGi använder de välbekanta AEM arbetsflödes- och AEM Inbox-funktionerna.
 
-## Terminologier {#terminologies}
+## Terminologies {#terminologies}
 
 I följande bild visas olika AEM formulärserverkonfigurationer och deras komponenter som används i en typisk AEM Forms-distribution:
 
@@ -92,7 +91,7 @@ En bearbetningsinstans har konfigurerats att köras i redigeringskörningsläget
 
 De AEM Forms on JEE-topologier som rekommenderas nedan gäller främst kunder som uppgraderar från LiveCycle eller en tidigare version av AEM Forms på JEE. Adobe rekommenderar att AEM Forms används på OSGi för nya installationer. En ny installation av AEM Forms på JEE rekommenderas endast för dokumentsäkerhet och processhantering.
 
-### Topologi för att använda dokumenttjänster eller dokumentsäkerhetsfunktioner {#topology-for-using-document-services-or-document-security-capabilities}
+### Topologi för dokumenttjänster eller dokumentsäkerhet {#topology-for-using-document-services-or-document-security-capabilities}
 
 AEM Forms-kunder som bara planerar att använda dokumenttjänster eller dokumentsäkerhetsfunktioner kan ha en topologi som liknar den som visas nedan. Den här topologin rekommenderar att du använder en enda instans av AEM Forms. Du kan också skapa ett kluster eller en grupp med AEM Forms-servrar om det behövs. Den här topologin rekommenderas när de flesta användare programmässigt får tillgång till funktioner på AEM Forms-servern och det krävs minsta möjliga ingrepp via användargränssnittet. Topologin är användbar vid gruppbearbetning av dokumenttjänster. Du kan till exempel använda utdatatjänsten för att skapa hundratals icke-redigerbara PDF-dokument dagligen.
 
@@ -125,7 +124,7 @@ Du kan göra följande ändringar/anpassningar av ovanstående föreslagna topol
 * gränssnitt för interaktiv kommunikationsagent körs vanligtvis inom organisationen. Du kan därför behålla en publiceringsserver för agentanvändargränssnittet i det privata nätverket.
 * AEM formulär på OSGi-instansen inbyggda i AEM Forms på JEE-servern kan även köra Forms-centrerade arbetsflöden på OSGi och Bevakade mappar.
 
-## Exempel på fysiska topologier för användning av AEM Forms på OSGi {#sample-physical-topologies-for-using-aem-forms-on-osgi}
+## Exempel på fysiska topologier för användning av AEM Forms i OSGi {#sample-physical-topologies-for-using-aem-forms-on-osgi}
 
 ### Topology for data capture, interactive communication, Form-Centric Workflow on OSGi capabilities {#topology-for-data-capture-interactive-communication-form-centric-workflow-on-osgi-capabilities}
 
@@ -139,11 +138,10 @@ AEM Forms-kunder som planerar att använda bevakade mappar för batchbearbetning
 
 ![offline-batch-processing-via-watch-folders](assets/offline-batch-processing-via-watched-folders.png)
 
-### Topologi för att använda dokumenttjänster för offline-API-baserad bearbetning {#topology-for-using-document-services-capabilities-for-offline-api-based-processing}
+### Topologi för dokumenttjänster för offlinebaserad API-baserad bearbetning {#topology-for-using-document-services-capabilities-for-offline-api-based-processing}
 
 AEM Forms-kunder som bara planerar att använda dokumenttjänster kan ha en topologi som liknar den som visas nedan. Den här topologin rekommenderar att du använder ett kluster av AEM Forms på OSGi-servrar. Den här topologin rekommenderas när de flesta användare använder API:er via programmering för att få åtkomst till AEM Forms-servrar och ett ingripande via användargränssnittet är minimum. Topologin är mycket användbar i olika kundscenarier. Till exempel kan flera klienter använda PDF Generator-tjänsten för att skapa PDF-dokument på begäran.
 
 Även om du kan använda AEM Forms för att konfigurera och köra alla funktioner från en enda server, bör du göra kapacitetsplanering, lastbalansering och konfigurera dedikerade servrar för specifika funktioner i en produktionsmiljö. Om du till exempel använder tjänsten PDF Generator för att konvertera tusentals sidor om dagen och flera adaptiva formulär för att hämta in data, kan du skapa separata AEM Forms-servrar för tjänsten PDF Generator och funktioner för adaptiva formulär. Det ger optimala prestanda och skalar servrarna oberoende av varandra.
 
 ![offline-api-baserad-bearbetning](assets/offline-api-based-processing.png)
-
