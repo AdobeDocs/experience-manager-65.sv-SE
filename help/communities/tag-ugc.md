@@ -9,15 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 1cc8ce66-2c03-44e4-9ddd-8d6944d85c99
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+role: Admin
+exl-id: 1ecb41e5-c959-4380-a5c7-df9fc3a7703a
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '249'
+source-wordcount: '248'
 ht-degree: 0%
 
 ---
-
 
 # Tagga användargenererat innehåll {#tagging-user-generated-content}
 
@@ -29,7 +28,7 @@ Taggar används oftast av författare och administratörer i författarmiljön. 
 
 Taggnamnutrymmen och taxonomier är samma för båda programmen.
 
-## Communities Features {#communities-features}
+## Funktioner i Communities {#communities-features}
 
 AEM Communities-funktionerna som kan konfigureras för att tillåta taggning är:
 
@@ -58,4 +57,3 @@ Se [Ange taggbehörigheter](../../help/sites-administering/tags.md#setting-tag-p
 Så här visas det i CRXDE när en administratör tillämpar läsbehörigheter på `/etc/tag/discussions` för gruppen `Community Engage Members`.
 
 ![tag-permissions](assets/tag-permissions.png)
-
