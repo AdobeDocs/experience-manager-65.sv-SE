@@ -9,15 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-manager
 discoiquuid: 69210727-dde3-495a-87b7-2e8173e6b664
 docset: aem65
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+role: Admin
+exl-id: b5f6a54e-92d1-4631-a1d1-184f37d174b6
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '2533'
+source-wordcount: '2532'
 ht-degree: 0%
 
 ---
-
 
 # Importera och exportera resurser till AEM Forms{#importing-and-exporting-assets-to-aem-forms}
 
@@ -31,7 +30,7 @@ Du kan flytta formulär och relaterade resurser, teman, dataordlistor, dokumentf
 
 
 
-## Hämta eller överföra Forms- och dokumentresurser {#download-or-upload-forms-amp-documents-assets}
+## Hämta eller överföra Forms &amp; Documents-resurser {#download-or-upload-forms-amp-documents-assets}
 
 Med AEM Forms användargränssnitt kan du exportera resurser från en AEM genom att hämta dem som ett AEM CRX-paket eller binära filer. Du kan sedan importera det hämtade AEM CRX-paketet eller den binära filen till en annan AEM.
 
@@ -83,7 +82,7 @@ Så här överför du Forms- och dokumentresurser:
 
 Med AEM Forms kan du skapa, ladda ned och ladda upp teman. Ett tema skapas som andra resurser som formulär, dokument och brev. Du kan skapa ett tema, hämta det och överföra det till en separat instans för att återanvända det. Mer information om teman finns i [Teman i AEM Forms](../../forms/using/themes.md).
 
-### Hämtar ett tema {#downloading-a-theme}
+### Hämta ett tema {#downloading-a-theme}
 
 Du kan exportera teman i AEM Forms som du kan använda i andra projekt eller instanser. Med AEM kan du hämta temat som en zip-fil som du kan överföra till instansen.
 
@@ -93,7 +92,7 @@ Så här hämtar du ett tema:
 1. Tryck på Experience Manager ![adobeexperienceManager](assets/adobeexperiencemanager.png)-ikonen > navigering ![compass](assets/compass.png)-ikon> Forms>-teman.
 1. Markera temat och tryck på **Hämta**. Temat laddas ned som ett arkiv (.zip-fil).
 
-### Överför ett tema {#uploading-a-theme}
+### Överföra ett tema {#uploading-a-theme}
 
 Du kan använda skapade teman med formatförinställningar i ditt projekt. Du kan importera temapaket som andra skapar genom att överföra dem till ditt projekt.
 
@@ -112,7 +111,7 @@ Det överförda temat är tillgängligt på temasidan.
 
 Om du vill dela resurser, t.ex. dataordlistor, bokstäver och dokumentfragment, mellan två olika implementeringar av Correspondence Management, kan du skapa och dela .cmp-filer. En .cmp-fil kan innehålla en eller flera dataordlistor, bokstäver, dokumentfragment och formulär.
 
-### Exportera dokumentfragment, bokstäver och/eller datafält {#export-document-fragments-letters-and-or-data-dictionaries}
+### Exportera dokumentfragment, bokstäver och/eller dataordlistor {#export-document-fragments-letters-and-or-data-dictionaries}
 
 1. På bokstäverna, dokumentfragmenten eller dataordlistesidorna trycker du på och markerar de resurser du vill exportera till ett enskilt paket och trycker sedan på Kö för hämtning. Resurserna är anpassade för export.
 1. Om det behövs upprepar du ovanstående steg för att lägga till bokstäver, dokumentfragment och dataordlistor.
@@ -158,7 +157,7 @@ Så här hämtar du alla Correspondence Management-resurser och relaterade beroe
 
    Om du vill lägga till resurserna i paketet i en annan instans av Correspondence Management, [importerar du paketet till en AEM Forms-instans](../../forms/using/import-export-forms-templates.md#p-upload-forms-documents-assets-p).
 
-### Importera dokumentfragment, bokstäver och/eller dataordlistor till Correspondence Management {#import-document-fragments-letters-and-or-data-dictionaries-into-correspondence-management}
+### Importera dokumentfragment, bokstäver och/eller dataregister till Correspondence Management {#import-document-fragments-letters-and-or-data-dictionaries-into-correspondence-management}
 
 Du kan importera resurser som har exporterats till en .cmp-fil. En .cmp-fil kan innehålla en eller flera bokstäver, dataordlistor, dokumentfragment och beroende resurser.
 
