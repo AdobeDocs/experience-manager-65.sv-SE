@@ -9,15 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 8799386a-c3b8-43cf-9f71-580ff2a81abc
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+role: Admin
+exl-id: e3ffc73e-2bc5-492d-b64b-750cc7d8ab9b
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '479'
+source-wordcount: '478'
 ht-degree: 0%
 
 ---
-
 
 # Communities Sites {#communities-sites}
 
@@ -31,9 +30,9 @@ En översikt och självstudiekurser för att komma igång finns på:
 * [Komma igång med AEM Communities](getting-started.md)
 * [Komma igång med AEM Communities för aktivering](getting-started-enablement.md)
 
-## Administrations- och konfigurationsämnen {#administration-and-configuration-topics}
+## Administrations- och konfigurationsområden {#administration-and-configuration-topics}
 
-### Skapande och hantering av communitywebbplats {#communities-site-creation-and-management}
+### Skapande och hantering av communitysajter {#communities-site-creation-and-management}
 
 * Communities [konsoler](consoles.md)
 
@@ -73,7 +72,7 @@ En viktig egenskap hos AEM Communities är att skapa användargenererat innehål
 * [Tunneltjänst](deploy-communities.md#tunnel-service-on-author): gör att medlemmar och medlemsgrupper på publiceringssidan kan nås från redigeringsmiljön.
 * [Konsoler för medlemmar och grupper](members.md): tillåter att medlemmar och medlemsgrupper på publiceringssidan skapas och hanteras från författarmiljön.
 * [Användarsynkronisering](sync.md): för synkronisering av medlemmar och medlemsgrupper i flera publiceringsinstanser.
-* [Social inloggning med Facebook och Twitter](social-login.md): möjlighet för besökare att bli community-medlem med sina inloggningsuppgifter för Facebook eller Twitter.
+* [Social inloggning med Facebook och Twitter](social-login.md): möjlighet för webbplatsbesökare att bli community-medlemmar med sina Facebook- eller Twitter-behörigheter.
 * [Betyg och märken](implementing-scoring.md): Möjlighet att tilldela emblem till att identifiera en medlems roll(er) och för medlemmar att få brickor genom sitt deltagande i communityn.
 * [Meddelanden](notifications.md): möjlighet för medlemmar att underrättas om den aktivitet de följer.
 * [Prenumerationer](subscriptions.md): möjlighet för medlemmarna att interagera med communityn via extern e-post.
