@@ -4,15 +4,14 @@ seo-title: Installera workbench
 description: Installera workbench.
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+role: Admin
+exl-id: d530dbb9-f95e-4329-9665-37faf8f7931b
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '2247'
+source-wordcount: '2246'
 ht-degree: 0%
 
 ---
-
 
 # Installera Workbench {#install-workbench}
 
@@ -101,7 +100,7 @@ WorkbenchFöljande krav rekommenderas som minimum: Diskutrymme för installation
 
 Se den fullständiga listan över plattformar som stöds för Workbench på [AEM Forms Supported Platforms](http://adobe.com/go/learn_aemforms_supportedplatforms_65).
 
-## Designerinstallationshänsyn {#designer-installation-considerations}
+## Installationsfrågor för Designer {#designer-installation-considerations}
 
 Workbench-installationen innehåller som standard en motsvarande version av Designer som endast finns på engelska. Om Workbench-installationsprogrammet upptäcker en befintlig version av Designer på datorn kan installationen avslutas och du måste ta bort den aktuella versionen av Designer innan du kan fortsätta.
 Tabellen nedan innehåller en fullständig lista över möjliga installationsscenarier för Designer som du kan stöta på, samt alla åtgärder du måste vidta när du installerar Workbench.
@@ -126,7 +125,7 @@ Olika versioner av Designer kan finnas samtidigt i samma system, till exempel De
  </tbody>
 </table>
 
-### Så här avinstallerar du Designer (fristående) på Windows 10 {#uninstall-designer-standalone-windows10}
+### Så här avinstallerar du Designer (fristående) i Windows 10 {#uninstall-designer-standalone-windows10}
 
 1. Gå till **Kontrollpanelen > Program > Program och funktioner**
 1. I listan Installerade program väljer du **Adobe Designer**.
@@ -176,7 +175,7 @@ Innan du installerar Workbench måste du kontrollera att miljön innehåller den
    * **Designer**: Du kan öppna Designer inifrån Workbench. Mer information finns i avsnittet Komma igång i <a href="https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/using-designer.pdf">Designer-hjälpen</a>.
    * **AEM Forms SDK**: Mer information om hur du använder SDK finns i  <a href="http://www.adobe.com/go/learn_aemforms_programming_65">Programmering med AEM Forms</a>.
 
-## Uppgraderar processer {#upgrading-processes}
+## Uppgraderingsprocesser {#upgrading-processes}
 
 AEM Forms på JEE-processer kan uppgraderas till AEM Forms-program med hjälp av uppgraderingsguiden. Mer information finns i Uppgradera dokumentation om artefakter i Workbench-hjälpen.
 
@@ -188,7 +187,7 @@ Om du vill använda Workbench måste du ha en instans av AEM Forms igång, vanli
 >
 >Om du har konfigurerat AEM Forms att använda databasprovidern EMC Documentum eller IBM FileNet och du vill logga in i en annan databas än den som är konfigurerad som standard i administrationskonsolen för formulär, anger du användarnamnet som username@Repository.
 
-### Konfigurerar timeout-inställningar {#configuring-timeout-settings}
+### Konfigurera timeout-inställningar {#configuring-timeout-settings}
 
 Workbench gör som standard en timeout efter två timmar, oavsett aktivitet eller inaktivitet. Information om hur du redigerar timeout-inställningen finns i&quot;Konfigurera användarhantering > Konfigurera avancerade systemattribut&quot; i <a href="https://docs.adobe.com/content/help/en/experience-manager-65/forms/administrator-help/configure-user-management/configure-advanced-system-attributes.html">administrationskonsolens hjälp</a>.
 
@@ -274,4 +273,3 @@ Innan administratören för nätverksskrivaren använder XDC-redigeringsprogramm
 **Så här får du hjälp** om XDC Editor:
 1. Gå till AEM Forms dokumentationswebbplats.
 1. Klicka på fliken **Utveckla** och navigera till Skapa enhetsprofiler med XDC-redigeringsprogrammet. Hämta filen xdc_editor_help_web.zip och installera hjälpfilerna genom att följa instruktionerna i Viktigt-filen.
-
