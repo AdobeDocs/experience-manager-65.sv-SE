@@ -7,17 +7,16 @@ uuid: 1ceae822-215a-4b83-a562-4609a09c3a54
 topic-tags: installing
 discoiquuid: de292a19-07db-4ed3-b13a-7a2f1cd9e0dd
 docset: aem65
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+role: Admin
+exl-id: 4b24a38a-c1f0-4c81-bb3a-39ce2c4892b1
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '1620'
+source-wordcount: '1619'
 ht-degree: 0%
 
 ---
 
-
-# Installera och konfigurera ett Forms-centrerat arbetsflöde på OSGi{#installing-and-configuring-forms-centric-workflow-on-osgi}
+# Installera och konfigurera ett Forms-centrerat arbetsflöde i OSGi{#installing-and-configuring-forms-centric-workflow-on-osgi}
 
 ## Introduktion {#introduction}
 
@@ -117,13 +116,13 @@ AEM Forms tilläggspaket är ett program som distribueras till AEM. Paketet inne
 1. När paketet har installerats uppmanas du att starta om AEM. **Starta inte om servern omedelbart.** Innan du stoppar AEM Forms-servern väntar du tills meddelandena ServiceEvent REGISTERED och ServiceEvent UNREGISTERED inte visas i filen  [AEM-Installation-Directory]/crx-quickstart/logs/error.log och loggen är stabil.
 1. Upprepa steg 1-7 för alla författare- och publiceringsinstanser.
 
-## Konfigurationer efter installation {#post-installation-configurations}
+## Konfiguration efter installation {#post-installation-configurations}
 
 AEM Forms har några obligatoriska och valfria konfigurationer. De obligatoriska konfigurationerna är bland annat att konfigurera BouncyCastle-bibliotek och serialiseringsagent. De valfria konfigurationerna inkluderar konfigurering av dispatcher och Adobe Target.
 
-### Obligatoriska konfigurationer efter installation {#mandatory-post-installation-configurations}
+### Obligatoriska efterinstallationskonfigurationer {#mandatory-post-installation-configurations}
 
-#### Konfigurera RSA- och BouncyCastle-bibliotek {#configure-rsa-and-bouncycastle-libraries}
+#### Konfigurera RSA- och BouncyCastle-bibliotek  {#configure-rsa-and-bouncycastle-libraries}
 
 Utför följande steg på alla författare- och publiceringsinstanser för att starta delegeringen av biblioteken:
 
@@ -150,7 +149,7 @@ Utför följande steg på alla Author- och Publish-instanser för att lägga til
 1. Lägg till **sun.util.calendar**-paketet i **tillåtelselista**-fältet. Klicka på Spara.
 1. Upprepa steg 1-3 för alla författare- och publiceringsinstanser.
 
-### Valfria konfigurationer efter installation {#optional-post-installation-configurations}
+### Ytterligare konfigurationer efter installation {#optional-post-installation-configurations}
 
 #### Konfigurera Dispatcher {#configure-dispatcher}
 
@@ -199,4 +198,3 @@ Du har konfigurerat en miljö för att använda ett Forms-centrerat arbetsflöde
 * [Använda ett Forms-orienterat arbetsflöde på OSGi](../../forms/using/aem-forms-workflow.md)
 * [Referens för arbetsflödessteg](/help/sites-developing/workflows-step-ref.md)
 * [Efterbearbetning av brev och interaktiv kommunikation](../../forms/using/submit-letter-topostprocess.md)
-
