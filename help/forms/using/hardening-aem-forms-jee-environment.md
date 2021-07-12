@@ -8,15 +8,14 @@ content-type: reference
 topic-tags: Security
 products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: 6b380e92-f90d-4875-b7a2-f3958daf2364
-role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+role: Admin
+exl-id: 6fb260f9-d0f8-431e-8d4e-535b451e4124
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '7699'
+source-wordcount: '7696'
 ht-degree: 0%
 
 ---
-
 
 # Förbättra din AEM Forms på JEE-miljö {#hardening-your-aem-forms-on-jee-environment}
 
@@ -156,7 +155,7 @@ När du har installerat AEM Forms på JEE är det viktigt att regelbundet upprä
 
 I följande avsnitt beskrivs i detalj de olika åtgärder som rekommenderas för att skydda den distribuerade formulärservern.
 
-### AEM Forms security {#aem-forms-security}
+### AEM Forms säkerhet {#aem-forms-security}
 
 Följande rekommenderade inställningar gäller för AEM Forms på JEE-servern utanför det administrativa webbprogrammet. Om du vill minska säkerhetsriskerna för servern ska du tillämpa de här inställningarna omedelbart efter att du har installerat AEM Forms på JEE.
 
@@ -355,7 +354,7 @@ När du skyddar din databas bör du implementera de åtgärder som beskrivs av d
 
 I Oracle behöver det databaskonto du använder bara behörigheterna CONNECT, RESOURCE och CREATE VIEW. Liknande krav för andra databaser finns i [Förbereda för installation av AEM Forms på JEE (Single Server)](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_64).
 
-#### Konfigurerar integrerad säkerhet för SQL Server i Windows för JBoss {#configuring-integrated-security-for-sql-server-on-windows-for-jboss}
+#### Konfigurera integrerad säkerhet för SQL Server i Windows för JBoss {#configuring-integrated-security-for-sql-server-on-windows-for-jboss}
 
 1. Ändra [JBOSS_HOME]\\standalone\configuration\lc_{datasource.xml} för att lägga till `integratedSecurity=true` i anslutnings-URL:en, som i det här exemplet:
 
@@ -383,7 +382,7 @@ I Oracle behöver det databaskonto du använder bara behörigheterna CONNECT, RE
 1. Lägg till filen sqljdbc_auth.dll i Windows-systemsökvägen på den dator som kör programservern. Filen sqljdbc_auth.dll finns med drivrutinsinstallationen för Microsoft SQL JDBC 6.2.1.0.
 1. Ange säkerhet för SQL Server från **Blandat**-läge till **Endast Windows-autentisering**.
 
-#### Konfigurerar integrerad säkerhet för SQL Server i Windows för WebSphere {#configuring-integrated-security-for-sql-server-on-windows-for-websphere}
+#### Konfigurera integrerad säkerhet för SQL Server i Windows för WebSphere {#configuring-integrated-security-for-sql-server-on-windows-for-websphere}
 
 På WebSphere kan du bara konfigurera integrerad säkerhet när du använder en extern JDBC-drivrutin för SQL Server, inte den JDBC-drivrutin för SQL Server som är inbäddad med WebSphere.
 
@@ -416,13 +415,13 @@ Mer information om leverantörsspecifika verktyg finns i [&quot;Databassäkerhet
 
 En LDAP-katalog (Lightweight Directory Access Protocol) används vanligtvis av AEM Forms på JEE som källa för företagsanvändar- och gruppinformation och ett sätt att utföra lösenordsautentisering. Du bör se till att LDAP-katalogen är konfigurerad att använda SSL (Secure Socket Layer) och att AEM Forms on JEE är konfigurerat att komma åt LDAP-katalogen med hjälp av SSL-porten.
 
-#### LDAP denial of service {#ldap-denial-of-service}
+#### LDAP - denial of service {#ldap-denial-of-service}
 
 En vanlig attack med LDAP innebär att en angripare avsiktligt misslyckas med att autentisera flera gånger. Detta tvingar LDAP-katalogservern att låsa ut en användare från alla LDAP-beroende tjänster.
 
 Du kan ange antalet misslyckade försök och efterföljande låsningstid som AEM Forms implementerar när en användare upprepade gånger inte kan autentisera till AEM Forms. Välj låga värden i administrationskonsolen. När du väljer antalet misslyckade försök är det viktigt att du förstår att AEM Forms efter alla försök låser ut användaren innan LDAP-katalogservern gör det.
 
-#### Ange automatisk låsning av konto {#set-automatic-account-locking}
+#### Ange automatisk låsning av konton {#set-automatic-account-locking}
 
 1. Logga in på administrationskonsolen.
 1. Klicka på **Inställningar** > **Användarhantering** > **Domänhantering**.
@@ -659,7 +658,7 @@ Vissa URL:er markeras som användarvänliga webbprogram. Du bör undvika att exp
  </tbody> 
 </table>
 
-## Skydda mot attacker av typen Cross-Site Request Forgery {#protecting-from-cross-site-request-forgery-attacks}
+## Skydda dig mot attacker med förfalskade förfrågningar på olika webbplatser {#protecting-from-cross-site-request-forgery-attacks}
 
 En CSRF-attack (Cross-Site Request Forgery) utnyttjar det förtroende som en webbplats har för användaren för att överföra kommandon som är otillåtna och oavsedda av användaren. Anfallet konfigureras genom att en länk, ett skript eller en URL-adress läggs till i ett e-postmeddelande för att komma åt en annan webbplats som användaren redan har autentiserats på.
 
@@ -679,7 +678,7 @@ AEM Forms på JEE använder funktionen Refererarfilter för att blockera CSRF-at
 * **Tillåtna URI:** Detta är en lista över resurser som ska hanteras utan att refererarens huvud har markerats. Resurser, t.ex. hjälpsidor som inte leder till statusändringar på servern, kan läggas till i den här listan. Resurserna i listan Tillåtna URI:er blockeras aldrig av referensfiltret oavsett vem som refererar.
 * **Null-referens:** En serverbegäran som inte är associerad med eller inte kommer från en överordnad webbsida betraktas som en begäran från en Null-referens. När du till exempel öppnar ett nytt webbläsarfönster, skriver en adress och trycker på Retur är den referent som skickas till servern null. Ett skrivbordsprogram (.NET eller SWING) som gör en HTTP-begäran till en webbserver skickar även en Null-referens till servern.
 
-### Refererarfiltrering {#referer-filtering}
+### Referentfiltrering {#referer-filtering}
 
 Refererarfiltreringsprocessen kan beskrivas så här:
 
@@ -810,7 +809,7 @@ Om berättigade serverförfrågningar blockeras av CSRF-filtret kan du försöka
 
 I det här avsnittet beskrivs de protokoll och portar som krävs för AEM Forms på JEE och innehåller rekommendationer för att distribuera AEM Forms på JEE i en säker nätverkskonfiguration.
 
-### Nätverksprotokoll som används av AEM Forms på JEE {#network-protocols-used-by-aem-forms-on-jee}
+### Nätverksprotokoll som används av AEM Forms i JEE {#network-protocols-used-by-aem-forms-on-jee}
 
 När du konfigurerar en säker nätverksarkitektur enligt beskrivningen i föregående avsnitt krävs följande nätverksprotokoll för interaktion mellan AEM Forms på JEE och andra system i företagsnätverket.
 
@@ -1088,7 +1087,7 @@ Det här avsnittet innehåller rekommendationer för programserverkonfiguration 
 
 Ställ in egenskapen `directoryBrowsingEnabled` i filen ibm-web-ext.xml till `false`.
 
-### Aktivera WebSphere-administrativ säkerhet {#enable-websphere-administrative-security}
+### Aktivera administrationssäkerhet för WebSphere {#enable-websphere-administrative-security}
 
 1. Logga in på administrationskonsolen för WebSphere.
 1. Gå till **Säkerhet** > **Global säkerhet** i navigeringsträdet
