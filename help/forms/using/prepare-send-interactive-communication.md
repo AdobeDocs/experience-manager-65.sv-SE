@@ -7,17 +7,16 @@ uuid: d1a19b83-f630-4648-9ad2-a22374e31aa9
 topic-tags: interactive-communications
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 110c86ea-9bd8-4018-bfcc-ca33e6b3f3ba
-feature: Interactive Communication
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+feature: Interaktiv kommunikation
+exl-id: 4fb82e9b-f870-47db-ac92-2d7510acace8
+source-git-commit: b6774acc4ec32c87a5ad5f5b2ea885e1e1aa867e
 workflow-type: tm+mt
-source-wordcount: '2033'
+source-wordcount: '2012'
 ht-degree: 0%
 
 ---
 
-
-# Förbered och skicka interaktiv kommunikation med agentgränssnittet {#prepare-and-send-interactive-communication-using-the-agent-ui}
+# Förbereda och skicka interaktiv kommunikation med agentens användargränssnitt {#prepare-and-send-interactive-communication-using-the-agent-ui}
 
 Agentgränssnittet gör att agenterna kan förbereda och skicka interaktiv kommunikation till postprocessen. Agenten gör de ändringar som krävs och skickar den interaktiva kommunikationen till en postprocess, som e-post eller utskrift.
 
@@ -31,7 +30,7 @@ När agenten förbereder den interaktiva kommunikationen med hjälp av agentgrä
 * **Innehåll**: På fliken Innehåll hanterar agenten innehåll som dokumentfragment och innehållsvariabler i den interaktiva kommunikationen. Agenten kan göra de ändringar som är tillåtna i dokumentfragmentet när den interaktiva kommunikationen skapas i egenskaperna för dessa dokumentfragment. Agenten kan också ändra ordning på, lägga till/ta bort ett dokumentfragment och lägga till sidbrytningar, om det är tillåtet.
 * **Bifogade filer**: Fliken Bifogade filer visas bara i agentgränssnittet om den interaktiva kommunikationen har några bilagor eller agenten har biblioteksåtkomst. Agenten får ändra eller redigera de bifogade filerna, men får inte göra det.
 
-## Förbered interaktiv kommunikation med agentgränssnittet {#prepare-interactive-communication-using-the-agent-ui}
+## Förbereda interaktiv kommunikation med hjälp av agentgränssnittet {#prepare-interactive-communication-using-the-agent-ui}
 
 1. Välj **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]**.
 1. Välj lämplig interaktiv kommunikation och tryck på **[!UICONTROL Open Agent UI]**.
@@ -134,17 +133,17 @@ Markera texten och tryck på Markera färg om du vill framhäva delar av texten 
 
 ![inklistrad text](assets/pastedtext.png)
 
-### Infoga specialtecken i texten {#specialcharacters}
+### Infoga specialtecken i text {#specialcharacters}
 
 Agentgränssnittet har inbyggt stöd för 210 specialtecken. Administratören kan [lägga till stöd för fler/anpassade specialtecken genom anpassning](/help/forms/using/custom-special-characters.md).
 
-#### Leverans av bifogad fil {#attachmentdelivery}
+#### Leverans av bifogade filer {#attachmentdelivery}
 
-* När den interaktiva kommunikationen återges med hjälp av API:er på serversidan som en interaktiv eller icke-interaktiv PDF, innehåller den återgivna PDF-filen bilagor som PDF-bilagor.
+* När den interaktiva kommunikationen återges med serversidans API:er som en interaktiv eller icke-interaktiv PDF innehåller den återgivna PDF-filen bilagor som PDF-bilagor.
 * När en inläggsprocess som är kopplad till en interaktiv kommunikation läses in som en del av Skicka med agentgränssnittet, skickas bilagor som List&lt;com.adobe.idp.Document> inAttachmentDocs-parametern.
 * Arbetsflöden för leveransfunktion, som e-post och utskrift, ger även bilagor tillsammans med PDF-versionen av Interactive Communication.
 
-## Åtgärder och information som är tillgänglig i agentens användargränssnitt {#actionsagentui}
+## Åtgärder och information som finns i agentens användargränssnitt {#actionsagentui}
 
 ### Dokumentfragment {#document-fragments}
 
@@ -172,7 +171,7 @@ Agentgränssnittet har inbyggt stöd för 210 specialtecken. Administratören ka
 * Hoppa över punkter/nummer: Aktivera det här alternativet om du vill hoppa över punkter/numrering i listdokumentfragmentet.
 * Ofyllda värden (info): Anger antalet ofyllda variabler i dokumentfragmentet.
 
-## Spara interaktiv kommunikation som ett utkast {#save-as-draft}
+## Spara interaktiv kommunikation som utkast {#save-as-draft}
 
 Du kan använda agentgränssnittet för att spara ett eller flera utkast för varje interaktiv kommunikation och hämta utkastet senare för att fortsätta arbeta med det. Du kan ange olika namn för varje utkast för att identifiera det.
 
@@ -192,7 +191,7 @@ Funktionen Spara som utkast är inte aktiverad som standard. Gör så här för 
 1. Tryck på **[!UICONTROL Create Correspondence Configuration]**.
 1. Välj **[!UICONTROL Enable Save Using CCRDocumentInstanceService]** och tryck på **[!UICONTROL Save]**.
 
-### Spara en interaktiv kommunikation som utkast {#save-as-draft-agent-ui}
+### Spara interaktiv kommunikation som utkast {#save-as-draft-agent-ui}
 
 Så här sparar du en interaktiv kommunikation som ett utkast:
 
@@ -204,7 +203,7 @@ Så här sparar du en interaktiv kommunikation som ett utkast:
 
 När du har sparat det interaktiva meddelandet som ett utkast trycker du på **[!UICONTROL Save Changes]** för att spara ytterligare ändringar i utkastet.
 
-### Hämta utkastet till en interaktiv kommunikation {#retrieve-draft}
+### Hämta utkastet till interaktiv kommunikation {#retrieve-draft}
 
 När du har sparat ett utkast för interaktiv kommunikation kan du hämta det och fortsätta arbeta med det. Hämta interaktiv kommunikation med:
 
@@ -212,11 +211,7 @@ När du har sparat ett utkast för interaktiv kommunikation kan du hämta det oc
 
 [utkast ] refererar till den unika identifieraren för utkastet som genereras när ett interaktivt meddelande har sparats som ett utkast.
 
->[!NOTE]
->
->Om du gör några ändringar i det interaktiva meddelandet när du har sparat det som ett utkast, kommer utkastet inte att öppnas.
-
-### Exempelimplementering av ccrDocumentInstance SPI {#sample-ccrDocumentInstance-spi}
+### Exempel på SPI-implementering av ccrDocumentInstance {#sample-ccrDocumentInstance-spi}
 
 Implementera SPI-filen `ccrDocumentInstance` om du vill spara ett interaktivt meddelande som ett utkast. Nedan följer ett exempel på implementering av SPI-filen `ccrDocumentInstance`.
 
