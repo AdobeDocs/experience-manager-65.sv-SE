@@ -8,18 +8,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 discoiquuid: f0a5588d-f210-4f04-bc35-b62834f90ab1
 docset: aem65
-translation-type: tm+mt
-source-git-commit: a873cf3e7efd3bc9cd4744bf09078d9040efcdda
+exl-id: 470fcfda-dfde-437c-b539-d5af1e13a7d6
+source-git-commit: aaafda59c63ea47c67ec974263013ead468df9cc
 workflow-type: tm+mt
-source-wordcount: '7013'
+source-wordcount: '7150'
 ht-degree: 0%
 
 ---
 
-
 # Forms-centrerat arbetsflöde i OSGi - stegreferens{#forms-centric-workflow-on-osgi-step-reference}
 
-## Forms Workflow steg {#forms-workflow-steps}
+## Forms Workflow {#forms-workflow-steps}
 
 Forms arbetsflödessteg utför AEM Forms-specifika åtgärder i ett AEM arbetsflöde. Med dessa steg kan du snabbt skapa anpassningsbara formulärbaserade Forms-baserade arbetsflöden i OSGi. Dessa arbetsflöden kan användas för att utveckla enkla arbetsflöden för granskning och godkännande, interna och övergripande affärsprocesser. Du kan också använda steg för Forms Workflow för att starta dokumenttjänster, integrera med Adobe Sign signaturarbetsflöde och utföra andra AEM Forms-åtgärder. Du behöver [AEM Forms add-on](https://www.adobe.com/go/learn_aemforms_documentation_63) för att kunna använda dessa steg i ett arbetsflöde.
 
@@ -88,7 +87,9 @@ Du kan också använda komponenten för att styra aktivitetens beteende. Du kan 
 * **Användare eller grupp:** Uppgiften tilldelas till vald användare eller grupp. Alternativet är tillgängligt när **Till en viss användare eller grupp** är markerat i fältet **Tilldela alternativ**. I fältet visas alla användare och grupper i gruppen för arbetsflödesanvändare.\
    I listrutan **Användare eller Grupp** visas de användare och grupper som den inloggade användaren har åtkomst till. Hur användarnamn visas beror på om du har åtkomstbehörighet till **användare**-noden i crx-databasen för den aktuella användaren.
 
-* **Meddela den tilldelade via e-post:** Välj det här alternativet om du vill skicka e-postmeddelanden till den tilldelade personen. Dessa meddelanden skickas när en uppgift tilldelas en användare. Aktivera meddelanden från AEM webbkonsol innan du använder alternativet. Stegvisa instruktioner finns i [konfigurera e-postmeddelanden för tilldelningssteget](../../forms/using/aem-forms-workflow.md)
+* **[!UICONTROL Send Notification Email]**: Välj det här alternativet om du vill skicka e-postmeddelanden till den tilldelade personen. Dessa meddelanden skickas när en uppgift tilldelas en användare eller grupp. Du kan använda alternativet **[!UICONTROL Recipient Email Address]** för att ange vilken mekanism som ska användas för att hämta e-postadressen.
+
+* **[!UICONTROL Recipient Email Address]**: Du kan lagra e-postadresser i en variabel, använda en litteral för att ange en permanent e-postadress eller använda den tilldelade personens standardadress som anges i den tilldelade personens profil. Du kan använda literalen eller en variabel för att ange en grupps e-postadress. Variabelalternativet är användbart när du dynamiskt vill hämta och använda en e-postadress. Alternativet **[!UICONTROL Use default email address of the assignee]** är bara för en tilldelad. I det här fallet används den e-postadress som lagras i användarprofilen för tilldelningar.
 
 * **HTML-e-postmall**: Välj e-postmall för e-postmeddelandet. Om du vill redigera en mall ändrar du filen på /libs/fd/dashboard/templates/email/htmlEmailTemplate.txt i crx-databasen.
 * **Tillåt delegering till:** AEM Inkorg ger den inloggade användaren möjlighet att delegera det tilldelade arbetsflödet till en annan användare. Du får delegera inom samma grupp eller till arbetsflödesanvändaren i en annan grupp. Om uppgiften har tilldelats en enskild användare och alternativet **Tillåt delegering till medlemmar i den tilldelade gruppen** har valts, går det inte att delegera uppgiften till en annan användare eller grupp.
@@ -152,7 +153,7 @@ Välj alternativet **Variabel** om du vill hämta den bifogade filen som lagras 
 
 **Filnamn:** Namn på e-postbilagefilen. E-poststeget ändrar det ursprungliga filnamnet för den bifogade filen till det angivna filnamnet. Namnet kan anges manuellt eller hämtas från en metadataegenskap eller variabel i arbetsflödet. Använd alternativet **Literal** när du vet exakt vilket värde som ska anges. Använd alternativet **Variabel** för att hämta filnamnet från värdet som lagras i en variabel av strängdatatyp. Använd alternativet **Hämta från arbetsflödesmetadata** när värdet som ska användas sparas i en metadataegenskap för arbetsflöde.
 
-## Generera steget Dokument för post {#generate-document-of-record-step}
+## Generera dokumentarkivhandlingssteget {#generate-document-of-record-step}
 
 När ett formulär fylls i eller skickas kan du spara en post med formuläret, i utskrift eller i dokumentformat. Detta kallas DOS (Document of Record). Du kan använda steget Skapa dokument för post för att skapa en skrivskyddad eller interaktiv PDF-version av ett anpassat formulär. PDF-versionen innehåller information som är ifylld i formuläret tillsammans med layouten för det adaptiva formuläret.
 
@@ -173,7 +174,7 @@ Om du anger sökvägen till en mapp, till exempel bilagor, bifogas alla filer so
 
 **Språk**: Ange språk för postdokumentet. Välj **Literal** om du vill välja språkområde från en nedrullningsbar lista eller välj **Variabel** om du vill hämta språkområdet från det värde som lagras i en variabel av strängdatatyp. Du måste definiera språkkoden medan du lagrar värdet för språkinställningen i en variabel. Ange till exempel **en_US** för engelska och **fr_FR** för franska.
 
-## Anropa tjänststeget för formulärdatamodell {#invoke-form-data-model-service-step}
+## Anropa tjänststeg för formulärdatamodell {#invoke-form-data-model-service-step}
 
 Du kan använda [AEM Forms-dataintegrering](../../forms/using/data-integration.md) för att konfigurera och ansluta till olika datakällor. Dessa datakällor kan vara en databas-, webbtjänst-, REST-tjänst-, OData-tjänst- och CRM-lösning. Med AEM Forms dataintegrering kan du skapa en formulärdatamodell som omfattar olika tjänster för att utföra datahämtnings-, additions- och uppdateringsåtgärder för den konfigurerade databasen. Du kan använda steget **Anropa datamodelltjänst** för att välja en formulärdatamodell (FDM) och använda tjänsterna i FDM för att hämta, uppdatera eller lägga till data i olika datakällor.
 
@@ -243,6 +244,9 @@ I steget Anropa formulärdatamodelltjänst visas följande fält för att underl
    * **Literal:** Använd alternativet när du vet exakt vilket värde du vill ange. Exempel: srose@we.info.
    * **Variabel:** Använd alternativet för att hämta värdet som lagras i en variabel.
    * **Hämta från arbetsflödesmetadata:** Använd alternativet när värdet som ska användas sparas i en metadataegenskap för arbetsflöde. Till exempel emailAddress.
+   * **[!UICONTROL Relative to Payload]**: Använd alternativet för att hämta den bifogade filen som har sparats på en sökväg i förhållande till nyttolasten. Markera alternativet och ange antingen mappnamnet som innehåller den bifogade filen eller ange namnet på den bifogade filen i textrutan.
+
+      Om till exempel mappen Relativt till nyttolast i CRX-databasen innehåller en bifogad fil på platsen `attachment\attachment-folder` anger du `attachment\attachment-folder` i textrutan efter att du har valt alternativet **[!UICONTROL Relative to Payload]**.
    * **JSON-punktnotation:** Använd alternativet när värdet som ska användas finns i en JSON-fil. Till exempel försäkring.customerDetails.emailAddress. Alternativet JSON-punktnotation är bara tillgängligt om du har valt alternativet Mappa inmatningsfält från JSON-inmatningsalternativet.
    * **Mappa indatafält från JSON-indata:** Ange sökvägen till en JSON-fil för att få indatavärdet för vissa tjänstargument från JSON-filen. Sökvägen till JSON-filen kan vara relativ till nyttolasten, en absolut sökväg eller så kan du välja ett JSON-inmatningsdokument med hjälp av variabeln JSON eller Form Data Model.
 
@@ -255,7 +259,7 @@ I steget Anropa formulärdatamodelltjänst visas följande fält för att underl
 * **Utdata från tjänst > Spara utdata till variabel eller en JSON-fil:** Välj alternativet att spara utdatavärdena i en JSON-fil med en absolut sökväg, i förhållande till nyttolast eller i en variabel.
 * **Spara JSON-utdatadokument med alternativen nedan:** Spara JSON-utdatafilen. Sökvägen till JSON-utdatafilen kan vara relativ till nyttolasten eller en absolut sökväg. Du kan också spara JSON-utdatafilen med en variabel av datatypen JSON eller Form Data Model.
 
-## Signera dokumentsteget {#sign-document-step}
+## Underteckna dokumentsteg {#sign-document-step}
 
 Med steget Signera dokument kan du använda Adobe Sign för att signera dokument. Stegen Signera dokument har följande egenskaper:
 
@@ -277,7 +281,7 @@ Med steget Signera dokument kan du använda Adobe Sign för att signera dokument
 * **Statusvariabel:** Ett Adobe Sign-aktiverat dokument lagrar dokumentets signeringsstatus i en variabel med datatypen String. Ange namnet på statusvariabeln (adobeSignStatus). En statusvariabel för en instans finns i CRXDE på /etc/workflow/instances/&lt;server>/&lt;datum-tid>/&lt;instans av arbetsflödesmodell>/workItems/&lt;nod>/metaData innehåller status för en variabel.
 * **Spara signerat dokument med alternativen nedan:** Ange platsen där signerade dokument ska sparas. Du kan välja att skriva över nyttolastfilen, placera det signerade dokumentet på en plats i nyttolastkatalogen eller lagra det signerade dokumentet i en variabel av Dokumenttyp.
 
-## Steg i Document Services {#document-services-steps}
+## Steg för Document Services {#document-services-steps}
 
 AEM dokumenttjänster är en uppsättning tjänster för att skapa, sammanställa och skydda PDF-dokument. AEM Forms tillhandahåller ett separat AEM arbetsflöde för varje dokumenttjänst.
 
@@ -302,11 +306,11 @@ Konverterar ett PDF-dokument till PDF/A-format med de angivna alternativen. PDF/
 
 Konvertera PDF-dokument till PostScript. När du konverterar till PostScript kan du använda konverteringsåtgärden för att ange källdokumentet och om det ska konverteras till PostScript-nivå 2 eller 3. PDF-dokumentet som du konverterar till en PostScript-fil måste vara icke-interaktivt.
 
-### Skapa PDF från angivet typsteg {#create-pdf-from-specified-type-step}
+### Skapa PDF från angivet textsteg {#create-pdf-from-specified-type-step}
 
 Generera ett PDF-dokument från en indatafil. Indatadokumentet kan vara relativt till nyttolasten, ha en absolut sökväg, vara nyttolasten själv eller lagras i en variabel av datatypen Document.
 
-### Skapa PDF från URL/HTML/ZIP-steg {#create-pdf-from-url-html-zip-step}
+### Skapa PDF från URL/HTML/ZIP {#create-pdf-from-url-html-zip-step}
 
 Skapar ett PDF-dokument av den angivna URL-, HTML- och ZIP-filen.
 
@@ -326,7 +330,7 @@ Skapa en icke-interaktiv PDF. Här finns olika anpassningsalternativ.
 >
 >Du kan använda variabler för att ange mallfilen för indatadokument. Lagra sökvägen till mallfilen i en variabel av datatypen String.
 
-### Importera datagrupp {#import-data-step}
+### Importera datasteg {#import-data-step}
 
 Sammanfogar formulärdata till ett PDF-formulär. Du kan importera formulärdata till ett PDF-formulär.
 
@@ -338,7 +342,7 @@ Kör DDX-filen på den angivna kartan över indatadokument och returnerar de man
 >
 >Du kan använda variabler för att ange DDX-filen för indatadokument. Lagra DDX-filen i en variabel av dokumentdatatypen eller XML-datatypen.
 
-### Optimize PDF, steg {#optimize-pdf-step}
+### Optimize PDF step {#optimize-pdf-step}
 
 Optimerar PDF-filer genom att minska deras storlek. Resultatet av konverteringen är PDF-filer som kan vara mindre än originalversionerna. Den här åtgärden konverterar även PDF-dokument till den PDF-version som anges i optimeringsparametrarna.
 
@@ -352,7 +356,7 @@ Optimeringsinställningarna anger hur filerna optimeras. Här följer några exe
 * Ta bort inbäddade teckensnitt
 * Ange genomskinlighetsvärden
 
-### Återge PDF-formulärsteg {#renderpdf}
+### Återge PDF-formulär, steg {#renderpdf}
 
 Återger ett formulär som skapats i Form Designer (XDP) till ett PDF-formulär.
 
@@ -364,7 +368,7 @@ Optimeringsinställningarna anger hur filerna optimeras. Här följer några exe
 
 Kryptera, signera och certifiera ett dokument. AEM Forms stöder både lösenordsbaserad kryptering och certifikatbaserad kryptering. Du kan också välja mellan olika algoritmer för signering av dokument. Exempel: SHA-256 och SH-512. Du kan också använda arbetsflödessteget för att läsa utökade PDF-dokument. Arbetsflödessteget innehåller alternativ för att aktivera streckkodsavkodning, digitala signaturer, import och export av PDF-data och andra alternativ.
 
-### Skicka till skrivarsteg {#send-to-printer-step}
+### Skicka till skrivare, steg {#send-to-printer-step}
 
 Skicka ett dokument direkt till en skrivare. Det har stöd för följande åtkomstmekanismer för utskrift:
 
