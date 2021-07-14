@@ -5,9 +5,9 @@ uuid: 76662858-afca-4ba3-883b-9b9a61874f15
 content-type: reference
 discoiquuid: b0283feb-c3ec-4ef0-885c-46bc83a61e26
 exl-id: 6b17472b-9226-4319-b305-4dba862d21af
-source-git-commit: ecac6269b5e12b847136f4af534016bc7b88bb2b
+source-git-commit: e54d8633aa3b8c1554df90d1b9650713246b95e8
 workflow-type: tm+mt
-source-wordcount: '476'
+source-wordcount: '477'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ Installationsprogrammet för AEM 6.5 Forms JEE patch innehåller alla åtgärdad
 WindowsNavigera till rätt katalog på installationsmediet eller mappen på hårddisken där du kopierade installationsprogrammet och dubbelklicka på filen aemforms65_cfp_install.exe.
 
       * (32-bitars Windows) `Windows\Disk1\InstData\VM`
-      * (64-bitars Windows) `Windows_64Bit`\ `Disk1\InstData\VM`
+      * (64-bitars Windows) `Windows_64Bit`\`Disk1\InstData\VM`
    * ****
 LinuxNavigera till rätt katalog och skriv från en kommandotolk 
 `./aem65_cfp_install.bin`.
@@ -58,6 +58,7 @@ LinuxNavigera till rätt katalog och skriv från en kommandotolk
    * `serializer-2.7.1.jar` till  `serializer-2.7.2.jar`
    * `xalan-2.7.1.jar` till  `xalan-2.7.2.jar`
    * `xercesImpl-2.9.1.jar` till  `xercesImpl-2.12.0.jar`
+   * `xml-apis-2.7.1.jar` till  `xml-apis-2.7.2.jar`
 
 1. Kryssrutan Starta Configuration Manager är markerad som standard. Klicka på **[!UICONTROL Done]** för att köra Configuration Manager.
 
@@ -70,7 +71,7 @@ LinuxNavigera till rätt katalog och skriv från en kommandotolk
 
 1. (Endast JBoss) När du har installerat korrigeringen och konfigurerat servern tar du bort tmp och arbetskataloger för JBoss-programservern.
 
-## Konfigurationer efter distribution {#post-deployment-configurations}
+## Konfigurationer efter distributionen {#post-deployment-configurations}
 
 ### SAML-konfigurationer {#saml-configurations}
 
