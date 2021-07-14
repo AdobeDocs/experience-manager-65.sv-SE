@@ -9,28 +9,32 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 8eebfcd6-0597-44ed-b718-bf9a1baa6c12
 feature: Mobile Forms
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 68912260-179a-4d1b-b944-0a1777c021ac
+source-git-commit: 6e2a0f053a1f6989524e9ae2b1dcb001b0397ac6
 workflow-type: tm+mt
-source-wordcount: '337'
-ht-degree: 0%
+source-wordcount: '353'
+ht-degree: 1%
 
 ---
-
 
 # Aktivera bilagor för ett HTML5-formulär {#enabling-attachments-for-an-html-form}
 
 Du kan överföra, förhandsgranska och skicka bilagor med HTML5-formulär. Som standard är stöd för bifogade filer inaktiverat. Så här aktiverar du stöd för bifogade filer:
 
-1. Skapa en [anpassad profil](/help/forms/using/custom-profile.md) med multiselect-strängegenskap `mfAttachmentOptions`.
-1. I den anpassade profilen anger du egenskaperna `fileSizeLimit`, `multiSelect` och `buttonTex`t för att konfigurera alternativ för widgeten för bifogade filer. Om det behövs kan du även ange fler anpassade egenskaper.
+1. Skapa en [anpassad profil](/help/forms/using/custom-profile.md) med en `mfAttachmentOptions` flervalsegenskap. Varje sträng i egenskapen `mfAttachmentOptions` måste ha ett `property=value`-format för att kunna konfigurera alternativ för widgeten för bifogade filer. `property` och `value` kan ha något av följande värden:
 
-1. Använd följande konfigurationer i den anpassade profilen:
+   | Egenskap | Värde |
+   |--- |---|
+   | multiSelect | true eller false (true som standard) |
+   | fileSizeLimit | Antal i MB (2 MB som standard). Exempel: 5. |
+   | buttonText | Knapptext för popup-fönster (&quot;Bifoga&quot; som standard) |
+   | acceptera | kommaavgränsad lista över filtyper som ska accepteras (&quot;ljud/&amp;ast;, video/&amp;ast;, bild/&amp;ast;, text/&amp;ast;, .pdf&quot; som standard) |
 
-   * **multiSelect** -> true eller false (true som standard)
-   * **fileSizeLimit** -> value_in_mb (say 5) (2 MB som standard)
-   * **buttonText** -> Button text for pop-up window (&quot;Attach&quot; as default)
-   * **acceptera** -> filtyper att acceptera (&quot;audio/&amp;ast;, video/&amp;ast;, image/&amp;ast;, text/&amp;ast;, .pdf&quot; som standard)
+   Till exempel:
+
+   ![konfigurera alternativ](assets/mfAttachmentOptions.png)
+
+   Om det behövs kan du även ange fler anpassade alternativ för egenskapen `mfAttachmentOptions`.
 
    >[!NOTE]
    >
@@ -53,7 +57,7 @@ Du kan överföra, förhandsgranska och skicka bilagor med HTML5-formulär. Som 
    >
    >Filförhandsvisningsalternativet är inte tillgängligt för anonyma användare.
 
-## Överföringsformat för bifogad fil {#attachment-submission-format}
+## Bifogad filinlämningsformat {#attachment-submission-format}
 
 När bilagor är aktiverade skickar HTML5-formulär multipart-data. Flerdelsdata har två delar **dataXml** och **bilagor**.
 
