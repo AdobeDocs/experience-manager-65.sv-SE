@@ -7,9 +7,9 @@ content-type: reference
 feature: Tillgänglighet
 role: User, Admin
 exl-id: bbdb800c-b6f8-4506-b8ac-daf64edcd6c0
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 471f9e99078a1e0af60024d439afd42ae77cba8c
 workflow-type: tm+mt
-source-wordcount: '568'
+source-wordcount: '567'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Eftersom [!DNL Dynamic Media] är ett plugin-program till [!DNL Adobe Experience Manager Assets] är det mesta av tangentbordskontrollbeteendet detsamma som i [!DNL Experience Manager Assets]. Knappen `Cancel` i [!DNL Dynamic Media] har till exempel samma fokus som i [!DNL Experience Manager Assets] och reagerar på `Spacebar`-tangenten som i [!DNL Experience Manager Assets]. Se [Kortkommandon i Resurser](/help/assets/accessibility.md#keyboard-shortcuts).
 
-Tangentbordslinjer som stöds av enskilda element i användargränssnittet i [!DNL Dynamic Media] är i de flesta fall enkla att upptäcka och se. Tangentbordskontrollen i [!DNL Dynamic Media] handlar om följande:
+Tangentbordslinjer som stöds av enskilda element i användargränssnittet i [!DNL Dynamic Media] är tydliga och lätta att upptäcka. Tangentbordskontrollen i [!DNL Dynamic Media] handlar om följande:
 
 * Möjlighet att använda `Tab` och `Shift+Tab`-tangenttryckningar för att navigera mellan interaktiva element på sidan.
 Om du använder `Tab` flyttas indatafokus till nästa element i användargränssnittet i tabbordningen; om du använder `Shift+Tab` får indatafokus tillbaka till det föregående elementet i användargränssnittet.
