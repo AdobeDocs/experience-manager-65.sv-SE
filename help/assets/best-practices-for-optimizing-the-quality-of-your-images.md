@@ -1,5 +1,5 @@
 ---
-title: Bästa tillvägagångssätt för att optimera bildkvalitet
+title: Bästa tillvägagångssätt för att optimera kvaliteten på dina bilder i Dynamic Media
 description: Lär dig de bästa sätten att optimera bildkvaliteten i Dynamic Media
 uuid: b73f0918-c723-4a0d-a63f-4242223c2d47
 contentOwner: Rick Brough
@@ -10,14 +10,14 @@ discoiquuid: 12baf001-dfc9-410a-9821-a3bae1324392
 feature: Resurshantering
 role: User, Admin
 exl-id: 7a568cae-e505-4b3a-abc5-8aae723460c3
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 471f9e99078a1e0af60024d439afd42ae77cba8c
 workflow-type: tm+mt
-source-wordcount: '1434'
-ht-degree: 5%
+source-wordcount: '1440'
+ht-degree: 3%
 
 ---
 
-# Bästa tillvägagångssätt för att optimera bildkvalitet {#best-practices-for-optimizing-the-quality-of-your-images}
+# Bästa tillvägagångssätt för att optimera kvaliteten på dina bilder i Dynamic Media {#best-practices-for-optimizing-the-quality-of-your-images}
 
 Att optimera bildkvaliteten kan vara en tidskrävande process eftersom många faktorer bidrar till att återge godtagbara resultat. Resultatet är delvis subjektivt eftersom individer upplever olika bildkvalitet. Strukturerade experiment är avgörande.
 
@@ -47,7 +47,7 @@ Använd `&wid=<value>&hei=<value>&resMode=sharp2` eller `&hei=<value>&resMode=sh
 
 Bildskärpa är den mest komplicerade aspekten när det gäller att styra bilder på webbplatsen och var många misstag görs. Ta dig tid att lära dig mer om hur skärpa och oskarp maskning fungerar i Experience Manager genom att titta på följande resurser:
 
-Best practices white paper [Skärpa bilder i Adobe Dynamic Media Classic](/help/assets/assets/sharpening_images.pdf) som även gäller Experience Manager.
+Best practices white paper [Öka skärpan i bilder i Adobe Dynamic Media Classic](/help/assets/assets/sharpening_images.pdf) som även gäller Experience Manager.
 
 <!-- To be reviewed and updated: Broken link.
 See also [Sharpening an image with unsharp mask](https://helpx.adobe.com/photoshop/atv/cs6-tutorials/sharpening-an-image-with-unsharp-mask.html). -->
@@ -59,14 +59,14 @@ Det finns två metoder för bildskärpa:
 * Enkel skärpa ( `&op_sharpen`) - Precis som skärpefiltret som används i Photoshop, tillämpar enkel skärpa grundläggande skärpa på den slutliga vyn av bilden efter den dynamiska storleksändringen. Den här metoden kan dock inte konfigureras av användaren. Det bästa sättet är att inte använda &amp;op_sharpen om det inte behövs.
 * Oskarp maskering ( `&op_USM`) - Oskarp maskering är ett skärpefilter som är branschstandard. Det bästa sättet är att göra bilder skarpare med oskarp maskering enligt riktlinjerna nedan. Med Oskarp maskning kan du styra följande tre parametrar:
 
-   * `&op_sharpen=`belopp,radie,tröskelvärde
+   * `&op_sharpen=amount,radius,threshold`
 
-      * **[!UICONTROL amount]** (0-5, effektens styrka.)
-      * **[!UICONTROL radius]** (0-250, bredden på de&quot;skärpelinjer&quot; som ritas runt objektet med skärpa, mätt i pixlar.)
+      * **[!UICONTROL *mängd *]**(0-5, effektens styrka.)
+      * **[!UICONTROL *radius *]**(0-250, bredden på de&quot;skärpelinjer&quot; som ritas runt det skarpa objektet, mätt i pixlar.)
 
       Tänk på att parametrarnas radie och mängd fungerar mot varandra. Reducerad radie kan kompenseras genom ett ökat belopp. Med radie får du bättre kontroll eftersom ett lägre värde ökar skärpan endast för kantpixlarna, medan ett högre värde ökar skärpan för ett större antal pixlar.
 
-      * **[!UICONTROL threshold]** (0-255, effektkänslighet.)
+      * **[!UICONTROL *tröskelvärde *]**(0-255, effektkänslighet).
 
              Den här parametern avgör hur annorlunda de pixlar som ska göras skarpare måste vara jämfört med det omgivande området innan de betraktas som kantpixlar och filtret gör dem skarpare. Parametern **[!UICONTROL threshold]** hjälper dig att undvika att göra områden med liknande färger för mycket skarpare, som hudtoner. Ett tröskelvärde på 12 ignorerar till exempel små variationer i hudtonens ljusstyrka för att undvika att lägga till ”brus”, men lägger ändå till kantkontrast i områden med hög kontrast, till exempel där ögonfransarna möter huden.
          
@@ -74,7 +74,7 @@ Det finns två metoder för bildskärpa:
 
          Hjälpavsnittet Experience Manager om skärpa i en bild.
 
-         Best practices white paper [Skärpa bilder i Adobe Dynamic Media Classic](/help/assets/assets/sharpening_images.pdf).
+         Best practices white paper [Öka skärpan i bilder i Adobe Dynamic Media Classic](/help/assets/assets/sharpening_images.pdf).
 
       * Med Experience Manager kan du även styra en fjärde parameter: monokrom (0,1). Den här parametern avgör om oskarp maskning används separat på varje färgkomponent med värdet 0 eller på bildens intensitet/intensitet med värdet 1.
 
