@@ -37,7 +37,7 @@ Installationsprogrammet för AEM 6.5 Forms JEE patch innehåller alla åtgärdad
 WindowsNavigera till rätt katalog på installationsmediet eller mappen på hårddisken där du kopierade installationsprogrammet och dubbelklicka på filen aemforms65_cfp_install.exe.
 
       * (32-bitars Windows) `Windows\Disk1\InstData\VM`
-      * (64-bitars Windows) `Windows_64Bit`\`Disk1\InstData\VM`
+      * (64-bitars Windows) `Windows_64Bit`\ `Disk1\InstData\VM`
    * ****
 LinuxNavigera till rätt katalog och skriv från en kommandotolk 
 `./aem65_cfp_install.bin`.
