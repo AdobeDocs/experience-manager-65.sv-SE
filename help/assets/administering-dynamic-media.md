@@ -8,9 +8,9 @@ discoiquuid: 36a4a4e7-8bb2-4853-b335-cf9148be410c
 role: User, Admin
 exl-id: 85fa0414-354e-4530-81f9-a5659bb7f2fd
 feature: Konfiguration
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 471f9e99078a1e0af60024d439afd42ae77cba8c
 workflow-type: tm+mt
-source-wordcount: '259'
+source-wordcount: '261'
 ht-degree: 0%
 
 ---
@@ -27,11 +27,11 @@ ht-degree: 0%
 
 Om du administrerar Dynamic Media är följande ämnen av intresse:
 
-* [Konfigurerar Dynamic Media-Scene7-läge](config-dms7.md)  - Använd den här konfigurationen om du är en ny Dynamic Media-kund.
-* [Konfigurera Dynamic Media-hybridläge](config-dynamic.md)  - Använd den här konfigurationen om du är en befintlig Dynamic Media-kund som uppgraderar Experience Manager.
+* [Konfigurera Dynamic Media - Scene7-läge](config-dms7.md)  - Använd den här konfigurationen om du är en ny Dynamic Media-kund.
+* [Konfigurera Dynamic Media - hybridläge](config-dynamic.md)  - Använd den här konfigurationen om du är en befintlig Dynamic Media-kund som uppgraderar Experience Manager.
 * [Hantera bildförinställningar](managing-image-presets.md)
-* [Hantera visningsförinställningar](managing-viewer-presets.md)
-* [Felsökning av Dynamic Media - Scene7-läge](troubleshoot-dms7.md)
+* [Hantera förinställningar för visningsprogram](managing-viewer-presets.md)
+* [Felsöka Dynamic Media - Scene7-läge](troubleshoot-dms7.md)
 
 Se även följande avsnitt:
 
