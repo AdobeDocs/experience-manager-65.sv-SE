@@ -1,39 +1,39 @@
 ---
 title: Generera renderingar endast för placering för Adobe InDesign
-description: Generera FPO-återgivningar av nya och befintliga resurser med AEM arbetsflöde och ImageMagick.
+description: Generera FPO-återgivningar av nya och befintliga resurser med hjälp av arbetsflödet Experience Manager Assets och ImageMagick.
 contentOwner: Vishabh Gupta
 role: Admin
-feature: FPO-återgivningar, återgivningar
+feature: Återgivningar
 exl-id: null
-source-git-commit: dab3bf47fbc59abab2c8a7972653aaece2b4bcdb
+source-git-commit: 865370e38368072c39ad337eb52259c586403efb
 workflow-type: tm+mt
-source-wordcount: '975'
+source-wordcount: '979'
 ht-degree: 0%
 
 ---
 
 # Generera renderingar endast för placering för Adobe InDesign {#fpo-renditions}
 
-När du monterar stora AEM resurser i Adobe InDesign-dokument måste den som arbetar med projekten vänta en längre tid efter att de [har monterat en resurs](https://helpx.adobe.com/indesign/using/placing-graphics.html). Användaren kan inte använda InDesign. Detta stör det kreativa flödet och påverkar användarupplevelsen negativt. Med Adobe kan du tillfälligt placera små renderingar i InDesign-dokument till att börja med. När det slutliga resultatet behövs, till exempel för tryck- och publiceringsarbetsflöden, ersätter det ursprungliga, högupplösta materialet den tillfälliga återgivningen i bakgrunden. Denna asynkrona uppdatering i bakgrunden snabbar upp designprocessen för att öka produktiviteten och hindrar inte den kreativa processen.
+När du monterar stora resurser från Experience Manager i Adobe InDesign-dokument måste en kreatör vänta en lång tid efter att de [har monterat en resurs](https://helpx.adobe.com/indesign/using/placing-graphics.html). Användaren kan inte använda InDesign. Detta stör det kreativa flödet och påverkar användarupplevelsen negativt. Med Adobe kan du tillfälligt placera små renderingar i InDesign-dokument till att börja med. När det slutliga resultatet behövs, till exempel för tryck- och publiceringsarbetsflöden, ersätter det ursprungliga, högupplösta materialet den tillfälliga återgivningen i bakgrunden. Denna asynkrona uppdatering i bakgrunden snabbar upp designprocessen för att öka produktiviteten och hindrar inte den kreativa processen.
 
-AEM innehåller renderingar som endast används för placering (FPO). Dessa FPO-återgivningar har en liten filstorlek men har samma proportioner. Om det inte finns någon FPO-återgivning tillgänglig för en resurs använder Adobe InDesign den ursprungliga resursen i stället. Denna reservfunktion säkerställer att det kreativa arbetsflödet fortsätter utan avbrott.
+Adobe Experience Manager (AEM) innehåller renderingar som endast används för placering (FPO). Dessa FPO-återgivningar har en liten filstorlek men har samma proportioner. Om det inte finns någon FPO-återgivning tillgänglig för en resurs använder Adobe InDesign den ursprungliga resursen i stället. Denna reservfunktion säkerställer att det kreativa arbetsflödet fortsätter utan avbrott.
 
 ## Metod för att generera FPO-återgivningar {#approach-to-generate-fpo-renditions}
 
-I AEM kan många metoder bearbeta bilder som kan användas för att generera FPO-återgivningar. De två vanligaste metoderna är att använda inbyggda AEM och ImageMagick. Med dessa två metoder kan du konfigurera återgivningsgenerering för nyligen överförda resurser och för de resurser som finns i AEM.
+I Experience Manager kan många metoder bearbeta bilder som kan användas för att generera FPO-återgivningar. De två vanligaste metoderna är att använda inbyggda arbetsflöden i Experience Manager och att använda ImageMagick. Med dessa två metoder kan du konfigurera återgivningsgenerering för nyligen överförda resurser och för de resurser som finns i Experience Manager.
 
-Du kan använda ImageMagick för att bearbeta bilder, inklusive för att generera FPO-återgivningar. Sådana återgivningar nedsamplas, vilket innebär att återgivningens pixeldimensioner minskas proportionellt om den ursprungliga bilden har PPI större än 72. Se [installera och konfigurera ImageMagick så att det fungerar med AEM Assets](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/best-practices-for-imagemagick.html).
+Du kan använda ImageMagick för att bearbeta bilder, inklusive för att generera FPO-återgivningar. Sådana återgivningar nedsamplas, vilket innebär att återgivningens pixeldimensioner minskas proportionellt om den ursprungliga bilden har PPI större än 72. Se [installera och konfigurera ImageMagick så att det fungerar med Experience Manager Assets](best-practices-for-imagemagick.md).
 
-|  | Använda AEM inbyggt arbetsflöde | Använda ImageMagick-arbetsflöde | Anmärkningar |
+|  | Använda ett arbetsflöde som byggts i Experience Manager | Använda ImageMagick-arbetsflöde | Anmärkningar |
 |— |— |—|— |
-| För nya tillgångar | Aktivera FPO-återgivning ([hjälp](#generate-renditions-of-new-assets-using-aem-workflow)) | Lägg till ImageMagick, kommandorad i AEM ([hjälp](#generate-renditions-of-new-assets-using-imagemagick)) | AEM kör arbetsflödet DAM Update Assets för varje överföring. |
-| För befintliga tillgångar | Aktivera FPO-återgivning i ett nytt dedikerat AEM ([hjälp](#generate-renditions-of-existing-assets-using-aem-workflow)) | Lägg till ImageMagick-kommandorad i ett nytt dedikerat AEM ([hjälp](#generate-renditions-of-existing-assets-using-imagemagick)) | FPO-återgivningar av befintliga resurser kan skapas vid behov eller gruppvis. |
+| För nya tillgångar | Aktivera FPO-återgivning ([hjälp](#generate-renditions-of-new-assets-using-aem-workflow)) | Lägg till ImageMagick-kommandorad i arbetsflödet för Experience Manager ([hjälp](#generate-renditions-of-new-assets-using-imagemagick)) | Experience Manager kör arbetsflödet DAM Update Assets för varje överföring. |
+| För befintliga tillgångar | Aktivera FPO-återgivning i ett nytt dedikerat Experience Manager-arbetsflöde ([hjälp](#generate-renditions-of-existing-assets-using-aem-workflow)) | Lägg till ImageMagick-kommandorad i ett nytt dedikerat Experience Manager-arbetsflöde ([hjälp](#generate-renditions-of-existing-assets-using-imagemagick)) | FPO-återgivningar av befintliga resurser kan skapas vid behov eller gruppvis. |
 
 >[!CAUTION]
 >
->Skapa arbetsflöden för att generera återgivningar genom att ändra en kopia av standardarbetsflödena. Det förhindrar att ändringar skrivs över när AEM uppdateras, t.ex. genom att installera ett nytt Service Pack.
+>Skapa arbetsflöden för att generera återgivningar genom att ändra en kopia av standardarbetsflödena. Det förhindrar att ändringar skrivs över när Experience Manager uppdateras, till exempel genom att installera ett nytt Service Pack.
 
-## Generera återgivningar av nya resurser med AEM arbetsflöde {#generate-renditions-of-new-assets-using-aem-workflow}
+## Generera återgivningar av nya resurser med hjälp av arbetsflödet i Experience Manager {#generate-renditions-of-new-assets-using-aem-workflow}
 
 Så här konfigurerar du arbetsflödesmodellen DAM Update Asset för att aktivera generering av återgivning:
 
@@ -59,7 +59,7 @@ Så här konfigurerar du arbetsflödesmodellen DAM Update Asset för att aktiver
 
 ## Generera återgivningar av nya resurser med ImageMagick {#generate-renditions-of-new-assets-using-imagemagick}
 
-I AEM körs arbetsflödet DAM Update Asset när en ny resurs överförs. Om du vill använda ImageMagick för att bearbeta återgivningar av nyligen överförda resurser lägger du till ett nytt kommando i arbetsflödesmodellen.
+I Experience Manager körs arbetsflödet för DAM-uppdatering av tillgångar när en ny resurs överförs. Om du vill använda ImageMagick för att bearbeta återgivningar av nyligen överförda resurser lägger du till ett nytt kommando i arbetsflödesmodellen.
 
 1. Klicka på **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**. Välj **[!UICONTROL DAM Update Asset]**-modellen och klicka på **[!UICONTROL Edit]**.
 
@@ -83,11 +83,11 @@ I AEM körs arbetsflödet DAM Update Asset när en ny resurs överförs. Om du v
 
 1. Om du vill aktivera ändringarna klickar du på **[!UICONTROL Sync]**.
 
-Mer information om kommandoradsfunktionerna i ImageMagick finns på https://imagemagick.org.
+Mer information om funktioner för kommandoraden i ImageMagick finns i [https://imagemagick.org](https://imagemagick.org).
 
-## Generera återgivningar av befintliga resurser med AEM arbetsflöde {#generate-renditions-of-existing-assets-using-aem-workflow}
+## Generera återgivningar av befintliga resurser med hjälp av arbetsflödet i Experience Manager {#generate-renditions-of-existing-assets-using-aem-workflow}
 
-Om du vill använda AEM arbetsflöde för att generera en FPO-återgivning av befintliga resurser skapar du en dedikerad arbetsflödesmodell som använder det inbyggda FPO-återgivningsalternativet.
+Om du vill använda arbetsflödet i Experience Manager för att generera en FPO-återgivning av befintliga resurser skapar du en dedikerad arbetsflödesmodell som använder det inbyggda FPO-återgivningsalternativet.
 
 1. Klicka på **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**. Om du vill skapa en modell klickar du på **[!UICONTROL Create]** > **[!UICONTROL Create Model]**. Lägg till en meningsfull **[!UICONTROL Title]** och en **[!UICONTROL Name]**.
 
@@ -95,21 +95,21 @@ Om du vill använda AEM arbetsflöde för att generera en FPO-återgivning av be
 
 1. Klicka på **[!UICONTROL Toggle Side Panel]** i det övre vänstra hörnet. Sök efter steg för processminiatyrbilder. Dra steget **[!UICONTROL Process Thumbnails]**.
 
-1. Välj **[!UICONTROL Process Thumbnails]** och klicka på **[!UICONTROL Configure]**. Följ [konfigurationen för att generera återgivning av nya resurser med AEM arbetsflöde](#generate-renditions-of-new-assets-using-aem-workflow). Om du vill aktivera ändringarna klickar du på **[!UICONTROL Sync]**.
+1. Välj **[!UICONTROL Process Thumbnails]** och klicka på **[!UICONTROL Configure]**. Följ [konfigurationen för att generera återgivning av nya resurser med hjälp av arbetsflödet Experience Manager](#generate-renditions-of-new-assets-using-aem-workflow). Om du vill aktivera ändringarna klickar du på **[!UICONTROL Sync]**.
 
 
 ## Generera återgivningar av befintliga resurser med ImageMagick {#generate-renditions-of-existing-assets-using-imagemagick}
 
 Om du vill använda bearbetningsfunktionerna i ImageMagick för att generera en FPO-återgivning av befintliga resurser skapar du en dedikerad arbetsflödesmodell som använder kommandoraden i ImageMagick för att göra detta.
 
-1. Följ steg 1 för att steg 3 från [konfigurationen för att generera återgivning av befintliga resurser med hjälp av AEM](#generate-renditions-of-existing-assets-using-aem-workflow)-avsnitt.
+1. Följ steg 1 för att steg 3 från [konfigurationen för att generera återgivning av befintliga resurser med hjälp av Experience Manager-arbetsflödet](#generate-renditions-of-existing-assets-using-aem-workflow)-avsnittet.
 
 1. Följ steg 4 för att steg 8 från [konfigurationen för att generera återgivning av nya resurser med ImageMagick](#generate-renditions-of-new-assets-using-imagemagick)-avsnittet.
 
 
 ## Visa FPO-återgivningar {#view-fpo-renditions}
 
-Du kan kontrollera de genererade FPO-återgivningarna när arbetsflödet har slutförts. Klicka på resursen i AEM Assets användargränssnitt för att öppna en stor förhandsvisning. Öppna den vänstra listen och välj Återgivningar. Du kan också använda kortkommandot `Alt + 3` när förhandsvisningen är öppen.
+Du kan kontrollera de genererade FPO-återgivningarna när arbetsflödet har slutförts. Klicka på resursen i användargränssnittet för Experience Manager Resurser för att öppna en stor förhandsgranskning. Öppna den vänstra listen och välj Återgivningar. Du kan också använda kortkommandot `Alt + 3` när förhandsvisningen är öppen.
 
 Klicka på **[!UICONTROL FPO rendition]** för att läsa in förhandsgranskningen. Du kan även högerklicka på återgivningen och spara den i filsystemet.
 
@@ -118,7 +118,7 @@ Klicka på **[!UICONTROL FPO rendition]** för att läsa in förhandsgranskninge
 
 ## Tips och begränsningar {#tips-limitations}
 
-* Om du vill använda ImageMagick-baserad konfiguration installerar du ImageMagick på samma dator som AEM.
-* Om du vill generera FPO-återgivningar av många resurser eller av hela databasen ska du planera och köra arbetsflödena under låg trafiktid. Att generera FPO-återgivningar för ett stort antal resurser är en resurskrävande aktivitet och AEM servrar måste ha tillräcklig processorkraft och tillräckligt med minne.
-* Mer information om prestanda och skalbarhet finns i [Finjustera ImageMagick](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/performance-tuning-guidelines.html).
-* Mer information om allmän kommandoradshantering för resurser finns i [kommandoradshanterare för att bearbeta resurser](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/media-handlers.html).
+* Om du vill använda ImageMagick-baserad konfiguration installerar du ImageMagick på samma dator som Experience Manager.
+* Om du vill generera FPO-återgivningar av många resurser eller av hela databasen ska du planera och köra arbetsflödena under låg trafiktid. Att generera FPO-renderingar för ett stort antal resurser är en resurskrävande aktivitet och Experience Manager-servrarna måste ha tillräcklig processorkraft och tillräckligt med minne.
+* Mer information om prestanda och skalbarhet finns i [Finjustera ImageMagick](performance-tuning-guidelines.md).
+* Mer information om allmän kommandoradshantering för resurser finns i [kommandoradshanterare för att bearbeta resurser](media-handlers.md).
