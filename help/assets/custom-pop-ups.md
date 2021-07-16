@@ -12,26 +12,26 @@ discoiquuid: 4bcab3f4-500f-432e-b16b-cdc26b9bab4d
 feature: Tittare
 role: User, Admin
 exl-id: 4e7f17ea-6985-4644-b91c-2c1299d01321
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 5192a284c38eb10c214c67a8727de0f7dd4d1ee2
 workflow-type: tm+mt
-source-wordcount: '1090'
+source-wordcount: '1088'
 ht-degree: 0%
 
 ---
 
-# Använd snabbvyn för att skapa anpassade popup-fönster {#using-quickviews-to-create-custom-pop-ups}
+# Skapa anpassade popup-fönster med snabbvyn {#using-quickviews-to-create-custom-pop-ups}
 
-Standardsnabbvyn används i e-handelsupplevelser där ett popup-fönster visas med produktinformation som driver ett köp. Du kan emellertid utlösa anpassat innehåll som ska visas i popup-fönstren. Beroende på vilket visningsprogram som används kan användarna med den här funktionen trycka på en hotspot, en miniatyrbild eller på en bildschema för att se information eller relaterat innehåll.
+Standardsnabbvyn används i e-handelsupplevelser där ett popup-fönster visas med produktinformation som driver ett köp. Du kan emellertid utlösa anpassat innehåll som ska visas i popup-fönstren. Beroende på vilket visningsprogram som används kan användarna med den här funktionen markera en hotspot, en miniatyrbild eller en bildschema för att se information eller relaterat innehåll.
 
 Quickview stöds av följande visningsprogram i Dynamic Media:
 
-* Interaktiva bilder (klickbara hotspot-områden)
+* Interaktiv bild (klickbara hotspot-områden)
 * Interaktiv video (klickbara miniatyrbilder vid videouppspelning)
-* Carousel Banners (klickbara hotspot-områden eller bildscheman)
+* Carousel-banderoll (klickbara hotspot-områden eller bildscheman)
 
 Även om funktionerna i de olika visningsprogrammen skiljer sig åt är processen att skapa en snabbvy densamma för alla tre visningsprogram som stöds.
 
-**Så här använder du snabbvyn för att skapa anpassade popup-fönster:**
+**Så här skapar du anpassade popup-fönster med snabbvyn:**
 
 1. Skapa en snabbvy för en överförd resurs.
 
