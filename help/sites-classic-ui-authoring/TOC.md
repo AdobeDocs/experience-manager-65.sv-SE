@@ -6,8 +6,8 @@ audience: end-user
 user-guide-title: Användarhandbok för redigering av AEM 6.5 Classic UI
 user-guide-description: Den här handboken beskriver koncepten för redigering i AEM i det klassiska användargränssnittet.
 feature: Redigering
-role: Business Practitioner
-source-git-commit: 5536ee27ad51356c2dcd0f0f36b91025bf1d228c
+role: User
+source-git-commit: 5192a284c38eb10c214c67a8727de0f7dd4d1ee2
 workflow-type: tm+mt
 source-wordcount: '272'
 ht-degree: 20%
