@@ -9,7 +9,7 @@ docset: aem65
 role: User, Admin
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: Konfiguration,Scene7-läge
-source-git-commit: 5192a284c38eb10c214c67a8727de0f7dd4d1ee2
+source-git-commit: 752eacca9d29b272c040b48c35e4717b13e34b12
 workflow-type: tm+mt
 source-wordcount: '5785'
 ht-degree: 3%
@@ -270,7 +270,7 @@ Se [Överför resurser](/help/assets/manage-assets.md#uploading-assets).
 
 1. I det övre vänstra hörnet på sidan väljer du **[!UICONTROL CRXDE Lite]** för att återgå till Experience Manager.
 
-#### Lägg till MIME-typer för format som inte stöds {#adding-mime-types-for-unsupported-formats}
+#### Lägga till MIME-typer för format som inte stöds {#adding-mime-types-for-unsupported-formats}
 
 Du kan lägga till anpassade MIME-typer för format som inte stöds i Experience Manager Assets. Kontrollera att alla nya noder som du lägger till i CRXDE Lite inte tas bort av Experience Manager genom att flytta MIME-typen före `image_`. Kontrollera också att dess aktiverade värde är **[!UICONTROL false]**.
 
