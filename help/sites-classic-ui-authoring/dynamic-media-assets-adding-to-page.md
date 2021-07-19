@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: authoring
 content-type: reference
 exl-id: d2ebfca5-19f9-4fa5-b142-b978f46a912f
-source-git-commit: 1349d9929fc64ad46fc91f0d189bab54cca9de81
+source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
 workflow-type: tm+mt
 source-wordcount: '1552'
-ht-degree: 2%
+ht-degree: 1%
 
 ---
 
@@ -30,7 +30,9 @@ Att lägga till komponenten [!UICONTROL Dynamic Media] eller [!UICONTROL Interac
 Så här lägger du till en Dynamic Media-komponent/ett visningsprogram på en sida:
 
 1. Öppna den sida i Experience Manager där du vill lägga till Dynamic Media-komponenten.
-1. Om ingen Dynamic Media-komponent är tillgänglig klickar du på linjalen i [!UICONTROL Sidekick] för att gå in i **[!UICONTROL Design]**-läget, klickar på **[!UICONTROL Edit]**-parsysen och väljer **[!UICONTROL Dynamic Media]** för att göra Dynamic Media-komponenterna tillgängliga.
+1. Om ingen Dynamic Media-komponent är tillgänglig väljer du linjalen i [!UICONTROL Sidekick] för att aktivera **[!UICONTROL Design]**-läget.
+1. Välj **[!UICONTROL Edit]**-parsys.
+1. Välj **[!UICONTROL Dynamic Media]** så att Dynamic Media-komponenterna blir tillgängliga.
 
    >[!NOTE]
    >
@@ -38,8 +40,9 @@ Så här lägger du till en Dynamic Media-komponent/ett visningsprogram på en s
 
 1. Gå tillbaka till läget **[!UICONTROL Edit]** genom att klicka på pennikonen i [!UICONTROL Sidekick].
 1. Dra **[!UICONTROL Dynamic Media]**- eller **[!UICONTROL Interactive Media]**-komponenten från **[!UICONTROL Other]**-gruppen i sidesparken till sidan på önskad plats.
-1. Klicka på **[!UICONTROL Edit]** så att komponenten öppnas.
-1. [Redigera ](#dynamic-media-component) komponenterna efter behov och klicka  **[!UICONTROL OK]** för att spara ändringarna.
+1. Välj **[!UICONTROL Edit]** så att komponenten öppnas.
+1. [Redigera ](#dynamic-media-component) komponenterna efter behov.
+1. Välj **[!UICONTROL OK]** så att ändringarna sparas.
 
 ## Dynamic Media Components {#dynamic-media-components}
 
@@ -132,13 +135,13 @@ Du kan redigera följande [!UICONTROL Advanced]-inställningar genom att klicka 
 
 **[!UICONTROL Width and Height]** - Ange värdet i pixlar om du vill att videon ska ha en fast storlek. Om du lämnar dessa värden tomma blir de anpassningsbara.
 
-#### Så här levererar du säker video {#how-to-delivery-secure-video}
+#### Leverera säker video {#how-to-delivery-secure-video}
 
 När du installerar [FP-13480](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq620/featurepack/cq-6.2.0-featurepack-13480) i Experience Manager 6.2 kan du kontrollera om en video levereras via en säker SSL-anslutning (HTTPS) eller en osäker anslutning (HTTP). Som standard ärvs videoleveransprotokollet automatiskt från inbäddningswebbsidans protokoll. Om webbsidan läses in via HTTPS levereras videon också via HTTPS. Och omvänt, om webbsidan finns på HTTP, levereras videon via HTTP. Normalt är standardbeteendet bra och du behöver inte göra några konfigurationsändringar. Du kan dock åsidosätta det här standardbeteendet. Lägg till `VideoPlayer.ssl=on` antingen i slutet av en URL-sökväg eller i listan med andra parametrar för visningsprogramkonfiguration i ett inbäddat kodfragment. Båda åtgärderna tvingar till säker leverans av video.
 
 Mer information om säker videoleverans och användning av konfigurationsattributet `VideoPlayer.ssl` i URL-sökvägen finns i [Säker videoleverans](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/c-html5-video-viewer-20-securevideodelivery.html) i referenshandboken för visningsprogram. Förutom Video Viewer finns säker videoutgång för visningsprogrammet Mixed Media och Interactive Video Viewer.
 
-### Interaktiv mediakomponent {#interactive-media-component}
+### Interaktiv mediekomponent {#interactive-media-component}
 
 Komponenten Interactive Media är till för de resurser som har interaktivitet i dem, till exempel hotspot-områden eller bildscheman. Om du har en interaktiv bild, interaktiv video eller karusellbanderoll använder du komponenten **[!UICONTROL Interactive Media]**.
 
