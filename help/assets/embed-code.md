@@ -1,6 +1,6 @@
 ---
-title: Bädda in Dynamic Media Video eller Image Viewer på en webbsida
-description: Lär dig bädda in Dynamic Media-video eller -bilder på en webbsida
+title: Bädda in Dynamic Media Video-, Image Viewer- eller Dimensional-visningsprogram på en webbsida
+description: Lär dig bädda in Dynamic Media-video, bilder eller 3D-bilder på en webbsida
 uuid: 6f786521-eb6c-4c80-8c15-9bf97b56818f
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -10,10 +10,10 @@ discoiquuid: 4ae76d8a-208f-4099-9f17-a94df424685e
 feature: Tittare
 role: User, Admin
 exl-id: 203ea349-ef4c-421c-b4b6-76ee9d46ec34
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
 workflow-type: tm+mt
-source-wordcount: '366'
-ht-degree: 21%
+source-wordcount: '372'
+ht-degree: 20%
 
 ---
 
@@ -33,11 +33,11 @@ Se [Leverera optimerade bilder för en responsiv plats](responsive-site.md).
 >
 >Se [Publicera resurser](publishing-dynamicmedia-assets.md).
 >
->Se [Förinställningar för publiceringsvisningsprogram](managing-viewer-presets.md#publishing-viewer-presets).
+>Se [Publicera förinställningar för visningsprogram](managing-viewer-presets.md#publishing-viewer-presets).
 >
 >Se [Publicera bildförinställningar](managing-image-presets.md#publishing-image-presets).
 
-**Så här bäddar du in Dynamic Media Video eller Image Viewer på en webbsida:**
+**Så här bäddar du in Dynamic Media Video, Image Viewer eller Dimensional Viewer på en webbsida:**
 
 1. Navigera till den *publicerade* video- eller bildresurs vars inbäddningskod du vill kopiera.
 
@@ -45,14 +45,14 @@ Se [Leverera optimerade bilder för en responsiv plats](responsive-site.md).
 
    Se [Publicera resurser](publishing-dynamicmedia-assets.md).
 
-   Se [Förinställningar för publiceringsvisningsprogram](managing-viewer-presets.md#publishing-viewer-presets).
+   Se [Publicera förinställningar för visningsprogram](managing-viewer-presets.md#publishing-viewer-presets).
 
    Se [Publicera bildförinställningar](managing-image-presets.md#publishing-image-presets).
 
-1. I den vänstra listen väljer du listrutan och trycker på **[!UICONTROL Viewers]**.
-1. Tryck på ett namn på en visningsförinställning i den vänstra listen. Visningsförinställningen används på resursen.
-1. Tryck på **[!UICONTROL Embed]**.
-1. Kopiera hela koden till Urklipp i dialogrutan **[!UICONTROL Embed Code]** och tryck sedan på **[!UICONTROL Close]**.
+1. I den vänstra listen väljer du listrutan och **[!UICONTROL Viewers]**.
+1. Välj ett namn på visningsförinställningen i den vänstra listen. Visningsförinställningen används på resursen.
+1. Välj **[!UICONTROL Embed]**.
+1. Kopiera hela koden till Urklipp i dialogrutan **[!UICONTROL Embed Code]** och välj sedan **[!UICONTROL Close]**.
 1. Klistra in inbäddningskoden på dina webbsidor.
 
 ## Använd HTTP/2 för att leverera Dynamic Media-material {#using-http-to-deliver-your-dynamic-media-assets}
