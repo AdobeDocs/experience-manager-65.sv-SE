@@ -10,10 +10,10 @@ discoiquuid: a8063d43-923a-42ac-9a16-0c7fadd8f73f
 role: User, Admin
 exl-id: f8a80b22-b1a6-475f-b3f1-b2f47822f21d
 feature: Samarbete,Resurshantering
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
 workflow-type: tm+mt
-source-wordcount: '423'
-ht-degree: 8%
+source-wordcount: '421'
+ht-degree: 5%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 8%
 
 [Dynamic ](https://business.adobe.com/products/experience-manager/assets/dynamic-media.html) Media hjälper er att leverera visuella marknadsförings- och marknadsföringsresurser on demand, som automatiskt skalas för konsumtion på webben, mobilsajter och sociala medier. Med en uppsättning primära källresurser genererar och levererar Dynamic Media flera varianter av multimedieinnehåll i realtid via sitt globala, skalbara, prestandaoptimerade nätverk.
 
-Dynamiska medier ger interaktiva tittarupplevelser som zoomning, 360-graders rotation och video. Dynamic Media innehåller arbetsflödena från Adobe Experience Manager Digital Asset Management (Assets) för att förenkla och effektivisera hanteringen av digitala kampanjer.
+Dynamic Media visar interaktivt material, som zoomning, 360-graders rotation och video. Dynamic Media införlivar smidigt arbetsflödena i Adobe Experience Manager Digital Asset Management (Assets) för att förenkla och effektivisera hanteringen av digitala kampanjer.
 
 <!-- >ARTICLE IS MISSING. GIVES 404 [!NOTE]
 >
@@ -42,9 +42,9 @@ Dynamic Media har följande funktioner:
 
 * [Snurrande uppsättningar](spin-sets.md)
 * [Video](video.md)
-* [Leverera Dynamic Media Assets](delivering-dynamic-media-assets.md)
+* [Leverera Dynamic Media-material](delivering-dynamic-media-assets.md)
 * [Hantera resurser](managing-assets.md)
-* [Använda snabbvyer för att skapa anpassade popup-fönster](custom-pop-ups.md)
+* [Skapa anpassade popup-fönster med snabbvyn](custom-pop-ups.md)
 
 Se även [Konfigurera Dynamic Media](administering-dynamic-media.md).
 
@@ -60,7 +60,7 @@ Du kan se om Dynamic Media är aktiverat (aktiverat) enligt följande:
 * Bilduppsättningar, snurruppsättningar, blandade medieuppsättningar är tillgängliga.
 * PTIFF-återgivningar skapas.
 
-När du klickar på en bildresurs ser resursen annorlunda ut med Dynamic Media [enabled](config-dynamic.md#enabling-dynamic-media). Dynamic Media använder on demand-visningsprogrammen för HTML5.
+När du väljer en bildresurs ser resursen annorlunda ut med Dynamic Media [enabled](config-dynamic.md#enabling-dynamic-media). Dynamic Media använder on demand-visningsprogrammen för HTML5.
 
 ### Dynamiska renderingar {#dynamic-renditions}
 
@@ -76,7 +76,7 @@ Uppsättningar med bilder, snurra och blandade medieuppsättningar är tillgäng
 
 ### PTIFF-återgivningar {#ptiff-renditions}
 
-Dynamiska medieaktiverade resurser innehåller `pyramid.tiffs`.
+Dynamic Media-aktiverade resurser innehåller `pyramid.tiffs`.
 
 ![chlimage_1-360](assets/chlimage_1-360.png)
 
