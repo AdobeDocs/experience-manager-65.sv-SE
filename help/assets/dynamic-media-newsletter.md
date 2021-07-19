@@ -7,9 +7,9 @@ solution: Experience Manager, Dynamic Media Classic
 role: User, Admin
 exl-id: 8aa779e0-cf76-45a7-a474-556fdfded31b
 feature: Samarbete,Dynamic Media Classic
-source-git-commit: ed213692bc72ab727a5fa105796fb68aef33904e
+source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
 workflow-type: tm+mt
-source-wordcount: '1182'
+source-wordcount: '1170'
 ht-degree: 0%
 
 ---
@@ -65,7 +65,7 @@ Det här nyhetsbrevet innehåller värdefulla resurser för att bygga upp din ku
    * Upptäck hur du använder Dynamic Media beskärningsmagi.
    * Utnyttja den kostnadsfria granskningen och få ut mer av Dynamic Media Classic.
    * Läs om det nya användargränssnittet för Dynamic Media Classic.
-   * Träffa Georgia Myers, chef för Customer Success for Adobe Experience Cloud.
+   * `Georgia Myers`, chef för Customer Success for Adobe Experience Cloud.
 
 * **[Januari 2020, utgåva 1](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_01_2020_Jan.html)**
 
@@ -85,7 +85,7 @@ Det här nyhetsbrevet innehåller värdefulla resurser för att bygga upp din ku
    * Kraftfulla nya säkerhetsfunktioner.
    * Hur Adobe förbereder sig för en lyckad semestersäsong.
    * Dela nyhetsbrevet med dina kollegor för att bygga upp teamets expertis.
-   * Möt Apoorva Gupta, Senior Product Manager, Dynamic Media.
+   * `Apoorva Gupta`, Senior Product Manager, Dynamic Media.
 
 * **[Oktober 2019, utgåva 10](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_10_2019_Oct.html)**
 
@@ -95,7 +95,7 @@ Det här nyhetsbrevet innehåller värdefulla resurser för att bygga upp din ku
    * En infografik med tips för att hoppa över resultatet av att leverera högkvalitativa bilder och videor.
    * En CMSwire-artikel som hjälper er att förstå hur ni uppdaterar er multimediestrategi för att uppfylla dagens kunders förväntningar.
    * Tillgång till on-demand-webbinariet på Dynamic Media från serien SKill Builder.
-   * Möt Nick Peters, Manager, Site Reliable Engineering, Adobe Experience Manager.
+   * Träffa `Nick Peters`, chef, Site Reliable Engineering, Adobe Experience Manager.
    * Kom igång med Dynamic Media och Dynamic Media Classic i Experience League.
 
 * **[September 2019, utgåva 09](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_09_2019_Sept.html)**
@@ -117,7 +117,7 @@ Det här nyhetsbrevet innehåller värdefulla resurser för att bygga upp din ku
    * Läs mer om en webbinarier som utformats för att hjälpa dig komma igång med Adobe Experience Manager Assets och Dynamic Media.
    * Börja din resa och få värde från Dynamic Media på Experience League.
    * Få en smygtitt på den kraftfulla integrering som kommer i september och som låter er analysera hur besökarna interagerar med ert multimediematerial.
-   * Träffa PieterJan Pieper, Dynamic Media tekniska support wiz.
+   * `PieterJan Pieper`, Dynamic Media tekniska support wiz.
 
 * **[Juli 2019, utgåva 07](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_07_2019_July.html)**
 
@@ -128,7 +128,7 @@ Det här nyhetsbrevet innehåller värdefulla resurser för att bygga upp din ku
    * Nästa steg på informationsfyllda Adobe Insider Tour.
    * Spännande funktioner är tillgängliga när du har Dynamic Media i Adobe Experience Manager Assets (Adobe Experience Manager Assets).
    * Lägga till 360-gradersvideor och anpassade videominiatyrer på webbplatsen.
-   * Möt Andrew Hathaway, Principal Solutions Consultant för Dynamic Media i Experience Manager Assets.
+   * `Andrew Hathaway`, Principal Solutions Consultant for Dynamic Media inom Experience Manager Assets.
 
 * **[Juni 2019, utgåva 06](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_06_2019_June.html)**
 
@@ -139,7 +139,7 @@ Det här nyhetsbrevet innehåller värdefulla resurser för att bygga upp din ku
    * Läs mer om den kommande Adobe Insider Tour.
    * Läs om hur ni kan skydda era digitala resurser mot piratkopiering.
    * Lär dig mer om AI-driven Smart Crop för bilder.
-   * Möt Alex Thiers, en av de främsta bakom många av de fantastiska funktionerna och innovationerna i Dynamic Media och Dynamic Media Classic.
+   * Möt `Alex Thiers`, en av drivkrafterna bakom många av de fantastiska funktionerna och innovationerna i Dynamic Media och Dynamic Media Classic.
 
 * **[maj 2019, utgåva 05](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_05_2019_May.html)**
 
