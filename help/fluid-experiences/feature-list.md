@@ -2,17 +2,16 @@
 title: AEM med flytande upplevelser
 description: Lista med flytande upplevelser
 index: n
-feature: Authoring
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+feature: Redigering
+exl-id: 3ac61645-4873-4602-b740-2236aba5bc5e
+source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
 workflow-type: tm+mt
 source-wordcount: '351'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
-
-# AEM med flytande upplevelser, funktionslista{#aem-fluid-experiences-feature-list}
+# AEM med flytande upplevelser{#aem-fluid-experiences-feature-list}
 
 Adobe Experience Manager Fluid Experiences bygger på de kraftfulla funktionerna i AEM Sites, AEM Dynamic Media och AEM Assets och ger en robust lösning för leverans av headless-material.
 
@@ -55,9 +54,9 @@ I följande tabeller definieras funktionerna i AEM flytande upplevelser och län
 | HTTP API för strukturerat innehåll (läs) |
 | HTTP API för strukturerat innehåll (CRUD) |
 | [Kärnkomponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) |
-| [Dynamiska medier](/help/assets/dynamic-media.md) |
+| [Dynamic Media](/help/assets/dynamic-media.md) |
 
-## Administrations- och integreringsfunktioner {#admin-and-integration-features}
+## Funktioner för administration och integrering {#admin-and-integration-features}
 
 |  |
 |---|
