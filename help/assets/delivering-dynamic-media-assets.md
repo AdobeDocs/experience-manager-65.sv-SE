@@ -1,5 +1,5 @@
 ---
-title: Leverera Dynamic Media Assets
+title: Leverera Dynamic Media-material
 description: Lär dig leverera Dynamic Media-material
 uuid: 23eddf83-34f5-4aae-8b81-d1cd7a098a7e
 contentOwner: Rick Brough
@@ -11,14 +11,14 @@ docset: aem65
 role: User, Admin
 exl-id: 274af114-845a-46bd-b091-802cf589687a
 feature: Resurshantering,Återgivningar
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
 workflow-type: tm+mt
 source-wordcount: '313'
 ht-degree: 1%
 
 ---
 
-# Leverera Dynamic Media Assets{#delivering-dynamic-media-assets}
+# Leverera Dynamic Media-material{#delivering-dynamic-media-assets}
 
 Hur du kan leverera dina Dynamic Media-resurser - både video och bilder - beror på hur webbplatsen implementeras.
 
@@ -42,13 +42,13 @@ Mer information finns i följande avsnitt:
 * [Aktivera hotlink-skydd i Dynamic Media](/help/assets/hotlink-protection.md)
 * [Länka URL:er till ditt webbprogram](/help/assets/linking-urls-to-yourwebapplication.md)
 * [Leverera optimerade bilder för en responsiv webbplats](/help/assets/responsive-site.md)
-* [HTTP2-leverans av innehåll](/help/assets/http2.md)
-* [Invalidera CDN-cachen med Dynamic Media Classic](/help/assets/invalidate-cdn-cache-dm-classic.md)
-* [Använda regeluppsättningar för att omforma URL:er](/help/assets/using-rulesets-to-transform-urls.md)
+* [Leverera innehåll med HTTP2](/help/assets/http2.md)
+* [Gör CDN-cachen ogiltig med Dynamic Media Classic](/help/assets/invalidate-cdn-cache-dm-classic.md)
+* [Använd regeluppsättningar för att omforma URL:er](/help/assets/using-rulesets-to-transform-urls.md)
 
 
 ## HTTP/2-leverans av Dynamic Media-resurser {#http-delivery-of-dynamic-media-assets}
 
 Experience Manager stöder nu leverans av allt Dynamic Media-innehåll (bilder och video) via HTTP/2. Det betyder att en publicerad URL eller inbäddningskod för bilden eller videon är tillgänglig för integrering med alla program som accepterar en värdbaserad resurs. Den publicerade resursen levereras sedan via HTTP/2-protokollet. Den här leveransmetoden förbättrar kommunikationen mellan webbläsare och servrar, vilket ger bättre respons och laddningstider för alla dina Dynamic Media-resurser.
 
-Mer information finns i [HTTP/2 Delivery of Content Frequently Asked Questions](/help/sites-administering/scene7-http2faq.md).
+Mer information finns i [HTTP/2-leverans av innehåll, vanliga frågor och svar](/help/sites-administering/scene7-http2faq.md).
