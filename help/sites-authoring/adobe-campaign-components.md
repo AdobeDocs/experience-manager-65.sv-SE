@@ -10,14 +10,13 @@ content-type: reference
 topic-tags: personalization
 discoiquuid: 9da34dab-7e89-4127-ab26-532687746b2a
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 90c99e527a40bb663d4f32d8746b46cf34a2319f
+exl-id: d1132fcd-e6a0-44a2-8753-d250f68fbd78
+source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
 workflow-type: tm+mt
-source-wordcount: '2854'
+source-wordcount: '2845'
 ht-degree: 1%
 
 ---
-
 
 # Adobe Campaign Components{#adobe-campaign-components}
 
@@ -172,9 +171,9 @@ I följande exempel visas en länkkomponent (Campaign).
 
 ![chlimage_1-48](assets/chlimage_1-48.png)
 
-### Scene7 Image Template (Campaign) {#scene-image-template-campaign}
+### Dynamic Media Classic (Scene7) - bildmall (kampanj) {#scene-image-template-campaign}
 
-[Scene7 Image-](https://help.adobe.com/en_US/scene7/using/WS60B68844-9054-4099-BF69-3DC998A04D3C.html) mallar är lageruppbyggda bildfiler, där innehåll och egenskaper kan parametriseras för variabilitet. Med komponenten **Bildmallen** kan du använda Scene7-mallar i nyhetsbrev och ändra värdena för mallparametrar. Dessutom kan du använda Adobe Campaign-metadatavariabler inuti parametrarna, så att varje användare upplever bilden på ett personaliserat sätt.
+Dynamic Media Classic (Scene7)-bildmallar är lageruppbyggda bildfiler, där innehåll och egenskaper kan parametriseras för variabilitet. Med **[!UICONTROL Image template]**-komponenten kan du använda Scene7-mallar i nyhetsbrev och ändra värdena för mallparametrar. Dessutom kan du använda Adobe Campaign-metadatavariabler inuti parametrarna, så att varje användare upplever bilden på ett personaliserat sätt.
 
 ![chlimage_1-49](assets/chlimage_1-49.png)
 
@@ -184,7 +183,7 @@ Dessutom listas alla mallparametrar som har definierats för mallen i Scene7 på
 
 ![chlimage_1-50](assets/chlimage_1-50.png)
 
-### Målreferens (Campaign) {#targeted-reference-campaign}
+### Riktad referens (Campaign) {#targeted-reference-campaign}
 
 Med komponenten Målreferens (Campaign) kan du skapa en referens till ett målstycke.
 
@@ -246,7 +245,7 @@ I följande exempel visas en text- och bildkomponent (Campaign).
 
 ![chlimage_1-52](assets/chlimage_1-52.png)
 
-### Text och personalisering (kampanj) {#text-personalization-campaign}
+### Text och personalisering (Campaign) {#text-personalization-campaign}
 
 Med komponenten Text &amp; Personalization (Campaign) kan du ange ett textblock med en WYSIWYG-redigerare, med funktioner som finns i [RTF-redigeraren](/help/sites-authoring/rich-text-editor.md). Med den här komponenten kan du dessutom använda kontextfält och anpassningsblock som finns i Adobe Campaign; Se även [Infoga personalisering](/help/sites-authoring/campaign.md#inserting-personalization).
 
@@ -375,7 +374,7 @@ Markera den här kryssrutan om det här fältet är en del av avstämningsnyckel
 
 ![chlimage_1-58](assets/chlimage_1-58.png)
 
-#### Formatering {#styling}
+#### Stilar {#styling}
 
 * ****
 CSSEnge de CSS-klasser som du vill använda för den här komponenten.
@@ -409,7 +408,7 @@ I följande exempel visas en datumfältskomponent (Campaign) där bredden juster
 
 ### Krypterad primärnyckel (kampanj) {#encrypted-primary-key-campaign}
 
-Den här komponenten definierar namnet på URL-parametern som ska innehålla identifieraren för en Adobe Campaign-profil (**ID för huvudresurs** eller **krypterad primärnyckel** i Adobe Campaign Standard respektive 6.1).
+Den här komponenten definierar namnet på URL-parametern som kommer att innehålla identifieraren för en Adobe Campaign-profil (**ID för huvudresurs** eller **krypterad primärnyckel** i Adobe Campaign Standard respektive 6.1).
 
 Varje formulär som visar och ändrar Adobe Campaign-profildata **måste** innehålla en krypterad primärnyckelkomponent.
 
@@ -500,4 +499,3 @@ Förutom [inställningar som är gemensamma för de flesta Adobe Campaign-kompon
 I följande exempel visas en textfältskomponent (Campaign).
 
 ![chlimage_1-69](assets/chlimage_1-69.png)
-
