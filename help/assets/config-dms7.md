@@ -9,7 +9,7 @@ docset: aem65
 role: User, Admin
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: Konfiguration,Scene7-läge
-source-git-commit: 752eacca9d29b272c040b48c35e4717b13e34b12
+source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
 workflow-type: tm+mt
 source-wordcount: '5785'
 ht-degree: 3%
@@ -208,7 +208,7 @@ Som standard visas 15 återgivningar när du väljer **[!UICONTROL Renditions]**
 
 #### Konfigurera färghantering {#configuring-color-management}
 
-Med dynamisk mediefärghantering kan du färgkorrigera resurser. Med färgkorrigering behåller inkapslade resurser sin färgmodell (RGB, CMYK, Grå) och inbäddad färgprofil. När du begär en dynamisk återgivning korrigeras bildfärgen till målfärgrymden med hjälp av CMYK-, RGB- eller grå utdata. Se [Konfigurera bildförinställningar](/help/assets/managing-image-presets.md).
+Med Dynamic Media färghantering kan du färgkorrigera resurser. Med färgkorrigering behåller inkapslade resurser sin färgmodell (RGB, CMYK, Grå) och inbäddad färgprofil. När du begär en dynamisk återgivning korrigeras bildfärgen till målfärgrymden med hjälp av CMYK-, RGB- eller grå utdata. Se [Konfigurera bildförinställningar](/help/assets/managing-image-presets.md).
 
 Så här konfigurerar du standardfärgegenskaperna så att färgkorrigering aktiveras när bilder begärs:
 
