@@ -10,7 +10,7 @@ discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
 feature: Bildprofiler
 role: User, Admin
 exl-id: 67240ad0-1a7c-4e58-a518-1e36d771f1a1
-source-git-commit: 3411c5c4498cc45451a5874fae2bfccfaddae251
+source-git-commit: 6ac0be454a5410f55155490941cb5aa6e2d8620b
 workflow-type: tm+mt
 source-wordcount: '2672'
 ht-degree: 9%
@@ -155,7 +155,7 @@ Du kan bearbeta resurser i en mapp som redan har en befintlig videoprofil som du
 
 #### Använda Dynamic Media-bildprofiler på mappar från Egenskaper {#applying-image-profiles-to-folders-from-properties}
 
-1. Tryck på AEM-logotypen och navigera till **[!UICONTROL Assets]**. Navigera sedan till den överordnade mappen för den mapp som du vill använda en bildprofil på.
+1. Tryck på AEM-logotypen och navigera till **[!UICONTROL Assets]**. Navigera sedan till den överordnade mappen för den mapp som du vill tillämpa en bildprofil på.
 1. Markera mappen genom att trycka på bockmarkeringen och sedan på **[!UICONTROL Properties]**.
 1. Tryck på fliken **[!UICONTROL Image Profiles]**. Välj profilen i listrutan **[!UICONTROL Profile Name]** och tryck sedan på **[!UICONTROL Save & Close]**. För mappar som redan har tilldelats en profil visas profilens namn direkt under mappnamnet.
 
