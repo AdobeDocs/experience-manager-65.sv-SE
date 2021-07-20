@@ -11,18 +11,18 @@ docset: aem65
 feature: Interaktiva bilder
 role: User, Admin
 exl-id: 8a609024-e9e6-4805-8306-48d095110eb6
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 4b8369de9e6a10b73115d53358ce98729d92ed44
 workflow-type: tm+mt
-source-wordcount: '4251'
+source-wordcount: '4242'
 ht-degree: 1%
 
 ---
 
 # Interaktiva bilder{#interactive-images}
 
-Du kan enkelt skapa statiska bilder med engagerande upplevelser för kunderna genom att dra och släppa&quot;köpbara&quot; hotspot-områden på en bild. De köpbara hotspotten kombinerar ytterligare information om en produkt eller tjänst med en direktförsäljningsfunktion,&quot;Lägg i kundvagnen&quot; eller&quot;Köp&quot;. Kunderna kan trycka eller klicka på dessa hotspot-områden och länkas direkt till produkten eller tjänsten, lägga till den i en kundvagn eller länkas till en webbsida. Direktupplevelser som dessa ökar kundernas engagemang och konverteringar på er webbplats.
+Du kan enkelt skapa statiska bilder med engagerande upplevelser för kunderna genom att dra och släppa&quot;köpbara&quot; hotspot-områden på en bild. De köpbara hotspotten kombinerar ytterligare information om en produkt eller tjänst med en direktförsäljningsfunktion,&quot;Lägg i kundvagnen&quot; eller&quot;Köp&quot;. Kunderna kan välja dessa hotspots och länkas direkt till produkten eller tjänsten, lägga till den i en kundvagn eller länkas till en webbsida. Direktupplevelser som dessa ökar kundernas engagemang och konverteringar på er webbplats.
 
-Här följer en köpbar banderoll med popup-fönstret QuickView. En användare aktiverar snabbvyn genom att trycka på cirkeln eller aktiveringspunkten på modellen.
+Här följer en köpbar banderoll med popup-fönstret QuickView. En användare aktiverar snabbvyn genom att markera cirkeln eller aktiveringspunkten i modellen.
 
 ![chlimage_1-152](assets/chlimage_1-368.png)
 
@@ -93,7 +93,7 @@ Ibland räcker det att rådfråga IT-specialister som är ansvariga för den bef
 
 De flesta QuickView-implementeringar använder följande paradigm:
 
-* Användaren aktiverar ett element i användargränssnittet på webbplatsen. Om du till exempel klickar på en snabbvyknapp.
+* Användaren aktiverar ett element i användargränssnittet på webbplatsen. Du kan till exempel välja en snabbvyknapp.
 * Webbplatsen skickar en Ajax-begäran till serverdelen för att läsa in QuickView-data eller -innehåll vid behov.
 * Quickview-data översätts till innehållet som förberedelse för återgivning på webbsidan.
 * Slutligen återges sådant innehåll på skärmen visuellt i koden.
@@ -102,11 +102,11 @@ Då besöker man olika delar av den befintliga webbplatsen där QuickView-funkti
 
 Normalt behöver du inte använda några specialverktyg för felsökning. Moderna webbläsare har webbinspektörer som klarar ett bra jobb. Nedan följer några exempel på webbläsare som innehåller webbinspektörer:
 
-* Om du vill visa alla utgående HTTP-begäranden i Google Chrome trycker du på F12 för att öppna panelen Utvecklarverktyg och klickar sedan på fliken Nätverk.
-På Mac trycker du på Command+Option+I för att öppna panelen Utvecklarverktyg och klickar sedan på fliken Nätverk.
+* Om du vill visa alla utgående HTTP-begäranden i Google Chrome trycker du på F12 för att öppna panelen Utvecklarverktyg och väljer sedan fliken Nätverk.
+På en Mac trycker du på Command+Option+I för att öppna panelen Utvecklarverktyg och sedan på fliken Nätverk.
 
 * I Firefox kan du antingen aktivera plugin-programmet för Firebug genom att trycka på F12 och använda fliken Net. Du kan också använda det inbyggda Inspector-verktyget och fliken Nätverk.
-Tryck på Kommando+Alt+I på en Mac för att öppna panelen Utvecklarverktyg och klicka sedan på fliken Granska.
+Tryck på Kommando+Alt+I på en Mac för att öppna panelen Utvecklarverktyg och välj sedan fliken Granska.
 
 När nätverksövervakning är aktiverat i webbläsaren utlöser du snabbvyn på sidan.
 
@@ -164,7 +164,7 @@ Du kan använda samma metod som i de tre exemplen ovan på demowebbsidan:
 
 [https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html)
 
-Demonstrationswebbsidan innehåller flera produktminiatyrbilder med en QuickView-knapp med etiketten&quot;See More&quot;. Med webbläsarens felsökningsverktyg fortfarande aktiverat klickar du på varje knapp och noterar de inspelade URL:erna för snabbvyn. När du har aktiverat alla fyra produkterna i snabbvyn som finns på sidan, finns följande lista över snabbvybegäranden som gjorts till serverdelen:
+Demonstrationswebbsidan innehåller flera produktminiatyrbilder med en QuickView-knapp med etiketten&quot;See More&quot;. Med webbläsarens felsökningsverktyg fortfarande aktiverat markerar du varje knapp och noterar de inspelade URL:erna för snabbvyn. När du har aktiverat alla fyra produkterna i snabbvyn som finns på sidan, finns följande lista över snabbvybegäranden som gjorts till serverdelen:
 
 * `/datafeed/Male-Windbreaker.json`
 * `/datafeed/Male-SimpleHenley.json`
@@ -194,21 +194,21 @@ När du har sparat visningsförinställningen aktiveras den automatiskt (aktiver
 
 **Så här skapar du en förinställning för Interactive Image Viewer:**
 
-1. Tryck på **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Viewer Presets]** i den vänstra listen.
-1. Tryck på **[!UICONTROL Create]** i sidans övre högra hörn.
+1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Viewer Presets]** i den vänstra listen.
+1. Välj **[!UICONTROL Create]** längst upp till höger på sidan.
 1. I dialogrutan Ny visningsförinställning för visningsprogrammet skriver du ett namn som beskriver förinställningen för det interaktiva visningsprogrammet för banderollen.
 
    Titeln visas på listsidan för visningsförinställningar när du har sparat.
 
 1. I listrutan Multimedietyp väljer du **[!UICONTROL Interactive Image]**.
-1. Tryck på **[!UICONTROL Create]**.
-1. Tryck på fliken **[!UICONTROL Appearance]** på sidan Redigera visningsförinställning.
+1. Välj **[!UICONTROL Create]**.
+1. Välj fliken **[!UICONTROL Appearance]** på sidan Redigera visningsförinställning.
 1. Gör något av följande:
 
-   * Om du vill överföra en egen hotspot-bild som du vill använda på bilder trycker du på ikonen Resursväljaren. Gå till den hotspot-bild som du vill använda på sidan Välj innehåll, markera den och tryck sedan på ikonen Markera i det övre högra hörnet.
-   * Om du vill välja en fördefinierad hotspot-bild trycker du på ikonen för Hotspot-galleriet. Tryck på den hotspot-bild som du vill använda på paletten för aktivt punktgalleri.
+   * Om du vill överföra en egen hotspot-bild som du vill använda på bilder väljer du ikonen Resursväljaren. Gå till den hotspot-bild som du vill använda på sidan Välj innehåll, markera den och markera sedan bockmarkeringsikonen i det övre högra hörnet.
+   * Om du vill välja en fördefinierad hotspot-bild väljer du ikonen för Hotspot-galleriet. Markera den hotspot-bild som du vill använda på paletten för aktivt punktgalleri.
 
-1. Tryck på **[!UICONTROL Save]** i sidans övre högra hörn.
+1. Välj **[!UICONTROL Save]** längst upp till höger på sidan.
 
    Var noga med att publicera den nya visningsförinställningen.
 
@@ -260,43 +260,43 @@ Om du redigerar interaktiva bilder med aktiveringspunkter och beskär bilden tas
 1. I resursvyn navigerar du till den bildbanderoll som du vill göra interaktiv.
 1. Gör något av följande:
 
-   * Håll pekaren över bilden och tryck sedan på **[!UICONTROL Select]** (bockmarkeringsikon). Tryck på **[!UICONTROL Edit]** i verktygsfältet.
+   * Håll pekaren över bilden och välj sedan **[!UICONTROL Select]** (bockmarkeringsikon). Välj **[!UICONTROL Edit]** i verktygsfältet.
 
-   * Håll pekaren över bilden och tryck sedan på **[!UICONTROL More actions]** (ikonen med tre punkter) **[!UICONTROL Edit]**.
+   * Håll pekaren över bilden och välj sedan **[!UICONTROL More actions]** (ikonen med tre punkter) **[!UICONTROL Edit]**.
 
-   * Tryck på bilden så att du kan öppna den på sidan Detaljvy. Tryck på **[!UICONTROL Edit]** i verktygsfältet.
+   * Markera bilden så att du kan öppna den på sidan Detaljvy. Välj **[!UICONTROL Edit]** i verktygsfältet.
 
-1. I närheten av sidans övre vänstra hörn trycker du på **[!UICONTROL Add Hotspot]** (pekaren) för att öppna sidan för hantering av hotspot-områden.
-1. I närheten av det övre vänstra hörnet på sidan trycker du på **[!UICONTROL Hotspot]**.
+1. I närheten av det övre vänstra hörnet av sidan väljer du **[!UICONTROL Add Hotspot]** (pekikon) för att öppna sidan för hantering av aktiveringspunkter.
+1. Välj **[!UICONTROL Hotspot]** längst upp till vänster på sidan.
 
-   1. Tryck på **[!UICONTROL Hotspot]** i det övre vänstra hörnet på sidan Hantering av hotspot.
-   1. Tryck på den plats i bilden där du vill att hotspot-området ska visas. Dra hotspot-området om det behövs för att justera dess placering.
+   1. Välj **[!UICONTROL Hotspot]** i det övre vänstra hörnet på sidan Hantering av aktiveringspunkter.
+   1. På bilden väljer du en plats där du vill att hotspot-området ska visas. Dra hotspot-området om det behövs för att justera dess placering.
    1. Lägg till ytterligare hotspot-områden efter behov genom att upprepa steg a och b.
-   1. (Valfritt) Om du vill ta bort en aktiveringspunkt markerar du den på bilden och trycker sedan på **[!UICONTROL Delete]** (kontrollkaneikonen) under rubriken **[!UICONTROL Hotspots]**.
+   1. (Valfritt) Om du vill ta bort en aktiveringspunkt markerar du den i bilden och väljer sedan **[!UICONTROL Delete]** (kontrollkaneikonen) under rubriken **[!UICONTROL Hotspots]**.
 
 1. Skriv namnet på aktiveringspunkten i textfältet Namn. Det här namnet visas också i listrutan Markerad aktiveringspunkt.
 1. Gör något av följande:
 
-   * Tryck på **[!UICONTROL Quickview]**.
+   * Välj **[!UICONTROL Quickview]**.
 
-      * Om du använder Experience Manager Sites eller eCommerce trycker eller klickar du på produktväljarens ikon (förstoringsglas) för att öppna produktsidan. Tryck eller klicka på den produkt du vill använda och tryck sedan på **[!UICONTROL Select]** i det övre högra hörnet av sidan så att du kan gå tillbaka till sidan för hantering av hotspot.
+      * Om du använder Experience Manager Sites eller eCommerce väljer du produktväljarens ikon (förstoringsglas) för att öppna sidan Select Product (Välj produkt). Välj den produkt du vill använda och välj sedan **[!UICONTROL Select]** i det övre högra hörnet av sidan så att du kan gå tillbaka till sidan för hantering av hotspot.
       * Om du är *inte* en Experience Manager Sites- eller e-handelskund
 
          * Se [Identifiera hotspot-variabler](#optional-identifying-hotspot-variables); du måste definiera dessa variabler.
-         * Ange sedan SKU-värdet manuellt. I textfältet SKU-värde skriver du produktens SKU (Stock Keeping Unit), som är en unik identifierare för varje separat produkt eller tjänst som du erbjuder. Det angivna SKU-värdet fyller automatiskt i variabeldelen av QuickView-mallen så att systemet vet att den aktiveringspunkt som användaren går till associeras med en viss SKU:s snabbvy.
-         * (Valfritt) Om det finns andra variabler i snabbvyn som du måste använda för att identifiera en produkt ytterligare trycker du på **[!UICONTROL Add Generic Variable]**. Ange en extra variabel i textfältet. `category=Males` är till exempel en tillagd variabel.
-   * Tryck på **[!UICONTROL Hyperlink]**.
+         * Ange sedan SKU-värdet manuellt. I textfältet SKU-värde skriver du produktens SKU (Stock Keeping Unit), som är en unik identifierare för varje separat produkt eller tjänst som du erbjuder. Det angivna SKU-värdet fyller automatiskt i variabeldelen av QuickView-mallen så att systemet kan koppla den markerade hotspot-området till en viss SKU:s snabbvy.
+         * (Valfritt) Om det finns andra variabler i snabbvyn som du måste använda för att identifiera en produkt ytterligare väljer du **[!UICONTROL Add Generic Variable]**. Ange en extra variabel i textfältet. `category=Males` är till exempel en tillagd variabel.
+   * Välj **[!UICONTROL Hyperlink]**.
 
-      * Om du använder Experience Manager Sites trycker eller klickar du på ikonen för platsväljaren (mappen) för att navigera till en URL. Den URL-baserade länkningsmetoden är inte möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till Experience Manager-sidor.
+      * Om du använder Experience Manager Sites väljer du ikonen Platsväljare (mapp) för att navigera till en URL. Den URL-baserade länkningsmetoden är inte möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till Experience Manager-sidor.
       * Om du är en fristående kund anger du den fullständiga URL-sökvägen till en länkad webbsida i textfältet HREF.
 
    Var noga med att ange om länken ska öppnas på en ny webbläsarflik (rekommenderat standardvärde) eller på samma flik.
 
    Mer information finns i [Arbeta med väljare](/help/assets/working-with-selectors.md).
 
-   * Tryck på **[!UICONTROL Experience Fragment]**.
+   * Välj **[!UICONTROL Experience Fragment]**.
 
-      * Om du använder Experience Manager Sites trycker eller klickar du på sökikonen (förstoringsglas) för att öppna sidan Experience Fragment. Tryck på det Experience Fragment du vill använda och tryck sedan på **[!UICONTROL Select]** i det övre högra hörnet av sidan så att du kan gå tillbaka till sidan för hantering av hotspot.
+      * Om du använder Experience Manager Sites väljer du ikonen Sök (förstoringsglas) för att öppna sidan Experience Fragment. Välj den Experience Fragment som du vill använda och välj sedan **[!UICONTROL Select]** i det övre högra hörnet av sidan så att du kan gå tillbaka till sidan för hantering av hotspot.
 Se [Upplevelsefragment](/help/sites-authoring/experience-fragments.md).
 
       * Ange bredd och höjd för Experience Fragment så som du vill att det ska visas på banderollen.
@@ -306,7 +306,7 @@ Se [Upplevelsefragment](/help/sites-authoring/experience-fragments.md).
 
 
 
-1. Tryck på **[!UICONTROL Save]** för att spara ditt arbete och återgå till sidan Bläddra.
+1. Välj **[!UICONTROL Save]** om du vill spara ditt arbete och återgå till sidan Bläddra.
 1. Publicera den interaktiva bilden. Med publicering kan banderollen levereras via molnet och även generera inbäddningskod om du behöver integrera den med en tredjepartswebbplats.
 
    Se [Publicera resurser](/help/assets/manage-assets.md#publishing-assets).
@@ -329,10 +329,10 @@ Se [Lägg till Dynamic Media-resurser på sidor](/help/assets/adding-dynamic-med
 
 **Så här förhandsgranskar du interaktiva bilder:**
 
-1. Navigera till en befintlig interaktiv bild som du har skapat i resursvyn och öppna den i förhandsvisningen genom att trycka.
-1. I det övre vänstra hörnet av förhandsgranskningssidan trycker du på **[!UICONTROL Viewers]** i listrutan Innehåll.
-1. Tryck på **[!UICONTROL Shoppable_Banner]** eller namnet på den förinställning för visningsprogrammet för den interaktiva bilden som du har skapat i listan Visare.
-1. Tryck på hotspot-områden på bilden om du vill testa deras associerade åtgärder.
+1. I resursvyn navigerar du till en befintlig interaktiv bild som du har skapat och väljer att öppna den i förhandsvisningen.
+1. Välj **[!UICONTROL Viewers]** i listrutan Innehåll i det övre vänstra hörnet på sidan Förhandsgranska.
+1. Välj **[!UICONTROL Shoppable_Banner]** eller namnet på den förinställning för visningsprogrammet för den interaktiva bilden som du har skapat i listan Visare.
+1. Markera hotspot-områden i bilden om du vill testa deras associerade åtgärder.
 
 ## Publicera interaktiva bildresurser {#publishing-interactive-image-assets}
 
@@ -398,7 +398,7 @@ Den befintliga Quickview-implementeringen representerar normalt en kedja av inte
 
 Dessa anrop representerar inte oberoende offentliga API-anrop som kan anropas av webbsidans logik från ett godtyckligt steg. I stället är det ett kedjat anrop där varje steg döljs i den sista fasen (återanrop) av föregående steg.
 
-Samtidigt som den interaktiva bilden som kan köpas ersätter steg 1, och delvis steg 2, när en användare klickar på en hotspot i bilden som kan köpas, hanteras den här användarinteraktionen av användaren. Visningsprogrammet returnerar en händelse till webbsidan som innehåller alla hotspot-data som tidigare lagts till i Experience Manager Assets.
+Samtidigt som den interaktiva bilden som kan köpas ersätter steg 1 och delvis steg 2, när en användare väljer en aktiveringspunkt i bilden som kan köpas, hanteras denna användarinteraktion av användaren. Visningsprogrammet returnerar en händelse till webbsidan som innehåller alla hotspot-data som tidigare lagts till i Experience Manager Assets.
 
 I en sådan händelsehanterare gör koden längst fram följande:
 
