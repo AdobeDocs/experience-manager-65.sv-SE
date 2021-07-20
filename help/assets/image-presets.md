@@ -1,5 +1,5 @@
 ---
-title: Använda förinställningar för Dynamic Media-bilder
+title: Använd Dynamic Media-bildförinställningar
 description: Lär dig hur du använder bildförinställningar i Dynamic Media
 uuid: 8bafcbd0-6df0-4d5b-b2f7-116ddb4ec060
 contentOwner: Rick Brough
@@ -8,12 +8,12 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 5c1f60ac-3741-4002-9c5d-c128f118342b
 feature: Bildförinställningar
-role: User, Admin
+role: User,Admin
 exl-id: 98d88b59-eb8f-42db-abb8-04506a5b8c30
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 4b8369de9e6a10b73115d53358ce98729d92ed44
 workflow-type: tm+mt
-source-wordcount: '317'
-ht-degree: 5%
+source-wordcount: '318'
+ht-degree: 2%
 
 ---
 
@@ -37,7 +37,7 @@ Du kan använda en bildförinställning på en bild när du vill förhandsvisa d
 
 **Så här använder du Dynamic Media-bildförinställningar:**
 
-1. Öppna resursen och tryck på den nedrullningsbara menyn till vänster och tryck sedan på **[!UICONTROL Renditions]**.
+1. Öppna resursen och markera listrutan i den vänstra listen och välj **[!UICONTROL Renditions]**.
 
    >[!NOTE]
    >
@@ -52,7 +52,7 @@ Du kan använda en bildförinställning på en bild när du vill förhandsvisa d
 1. Gör något av följande:
 
    * Välj en dynamisk återgivning så att du kan förhandsgranska bildförinställningen.
-   * Om du vill visa popup-fönstret trycker du på **[!UICONTROL URL]**, **[!UICONTROL Embed]** eller **[!UICONTROL RESS]**.
+   * Om du vill visa popup-fönstret väljer du **[!UICONTROL URL]**, **[!UICONTROL Embed]** eller **[!UICONTROL RESS]**.
 
    >[!NOTE]
    >
