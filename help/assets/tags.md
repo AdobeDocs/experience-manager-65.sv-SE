@@ -1,6 +1,6 @@
 ---
 title: Integrera Dynamic Media-visningsprogram med taggar från Adobe Analytics och Experience Platform
-description: Med Dynamic Media Viewer-tillägget för Experience Platform Tags och Dynamic Media Viewer 5.13 kan Adobe Analytics- och Experience Platform Tags-kunder använda händelser och data som är specifika för Dynamic Media Viewer i sina Experience Platform Tags-konfigurationer.
+description: Läs mer om Dynamic Media Viewer-tillägget för Experience Platform Tags och Dynamic Media Viewer 5.13. Med den kan kunder som använder Adobe Analytics- och Experience Platform-taggar använda händelser och data som är specifika för Dynamic Media-visningsprogram i sin konfiguration med Experience Platform-taggar.
 mini-toc-levels: 3
 contentOwner: Rick Brough
 topic-tags: dynamic-media
@@ -10,9 +10,9 @@ docset: aem65
 feature: Tittare
 role: User, Admin,Developer,Data Engineer,Data Architect
 exl-id: 161dfe22-bc1c-4b60-8ab6-a19407a39e2e
-source-git-commit: a8fef5d797efb3a6ce25760df6f710b8b99c2dc0
+source-git-commit: 997eeafa03d3148fb0754eaa27a5a99217e0d1bc
 workflow-type: tm+mt
-source-wordcount: '6233'
+source-wordcount: '6239'
 ht-degree: 7%
 
 ---
@@ -802,7 +802,7 @@ Till exempel `https://ims-na1.adobelogin.com/`
 
 1. På sidan **[!UICONTROL Experience Platform Tags Configurations]** i den vänstra panelen väljer du en Experience Manager-plats som du vill använda Experience Platform-taggkonfigurationen för.
 
-   Endast för exempelsyften är `We.Retail`-platsen vald i skärmbilden nedan.
+   Endast för exempelsyften är **`We.Retail`**-platsen vald i skärmbilden nedan.
 
    ![2019-07-26_12-20-06](assets/2019-07-26_12-20-06.png)
 
