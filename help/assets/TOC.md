@@ -6,10 +6,10 @@ audience: end-user
 user-guide-title: Resurshandbok
 breadcrumb-title: Resurshandbok
 user-guide-description: Skapa, hantera, bearbeta och distribuera digitalt material.
-source-git-commit: ed213692bc72ab727a5fa105796fb68aef33904e
+source-git-commit: a8fef5d797efb3a6ce25760df6f710b8b99c2dc0
 workflow-type: tm+mt
-source-wordcount: '582'
-ht-degree: 34%
+source-wordcount: '584'
+ht-degree: 32%
 
 ---
 
@@ -68,7 +68,7 @@ ht-degree: 34%
    + [Interaktiva bilder](interactive-images.md)
    + [Interaktiva videoklipp](interactive-videos.md)
    + [360 VR-video](/help/assets/360-video.md)
-   + [Integrera Dynamic Media Viewers med Adobe Analytics och Adobe Launch](/help/assets/launch.md)
+   + [Integrera Dynamic Media Viewer med Adobe Analytics- och Adobe Experience Platform-taggar](/help/assets/tags.md)
    + [Använda snabbvyer för att skapa anpassade popup-fönster](custom-pop-ups.md)
    + [Leverera optimerade bilder för en responsiv webbplats](responsive-site.md)
    + [Förhandsgranska Dynamic Media-resurser](previewing-assets.md)
