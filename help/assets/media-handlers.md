@@ -6,7 +6,7 @@ contentOwner: AG
 role: User
 feature: arbetsflöde,återgivningar
 exl-id: cfd6c981-1a35-4327-82d7-cf373d842cc3
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 4851d61d9897ac71c6512829fdccf1895ad58bcd
 workflow-type: tm+mt
 source-wordcount: '2095'
 ht-degree: 1%
@@ -37,7 +37,7 @@ Följande mediehanterare är tillgängliga i [!DNL Assets] och hanterar de vanli
 | [!UICONTROL TextHandler] | com.day.cq.dam.core.impl.handler.TextHandler | text/plain |
 | [!UICONTROL PdfHandler] | com.day.cq.dam.handler.standard.pdf.PdfHandler | <ul><li>application/pdf</li><li>program/illustrator</li></ul> |
 | [!UICONTROL JpegHandler] | com.day.cq.dam.core.impl.handler.JpegHandler | image/jpeg |
-| [!UICONTROL Mp3Handler] | com.day.cq.dam.handler.standard.mp3.Mp3Handler | audio/mpeg<br><b>Viktigt</b> - När du överför en MP3-fil behandlas den [med ett tredjepartsbibliotek](http://www.zxdr.it/programmi/SistEvolBDD/LibJava/doc/de/vdheide/mp3/MP3File.html). Biblioteket beräknar en icke korrekt ungefärlig längd om MP3 har variabel bithastighet (VBR). |
+| [!UICONTROL Mp3Handler] | com.day.cq.dam.handler.standard.mp3.Mp3Handler | audio/mpeg<br><b>Viktigt</b> - När du överför en MP3-fil behandlas den [med ett tredjepartsbibliotek](https://www.zxdr.it/programmi/SistEvolBDD/LibJava/doc/de/vdheide/mp3/MP3File.html). Biblioteket beräknar en icke korrekt ungefärlig längd om MP3 har variabel bithastighet (VBR). |
 | [!UICONTROL ZipHandler] | com.day.cq.dam.handler.standard.zip.ZipHandler | <ul><li>application/java-archive </li><li> application/zip</li></ul> |
 | [!UICONTROL PictHandler] | com.day.cq.dam.handler.standard.pict.PictHandler | bild/pict |
 | [!UICONTROL StandardImageHandler] | com.day.cq.dam.core.impl.handler.StandardImageHandler | <ul><li>image/gif </li><li> bild/png </li> <li>application/photoshop </li> <li>image/jpeg </li><li> bild/tiff </li> <li>image/x-ms-bmp </li><li> image/bmp</li></ul> |
@@ -56,7 +56,7 @@ Alla hanterare utför följande uppgifter:
 
 Så här visar du de aktiva mediehanterarna:
 
-1. Navigera till `http://localhost:4502/system/console/components` i webbläsaren.
+1. Navigera till `https://localhost:4502/system/console/components` i webbläsaren.
 1. Klicka på `com.day.cq.dam.core.impl.store.AssetStoreImpl`.
 1. En lista med alla aktiva mediehanterare visas. Till exempel:
 
@@ -494,7 +494,7 @@ Installera [!DNL ImageMagick] på den disk som är värd för [!DNL Experience M
 Om du vill testa det ändrade arbetsflödet lägger du till en resurs i `/content/dam`.
 
 1. Hämta en TIFF-bild i filsystemet. Byt namn på den till `myImage.tiff` och kopiera den till `/content/dam`, t.ex. med WebDAV.
-1. Gå till **[!UICONTROL CQ5 DAM]**-konsolen, till exempel `http://localhost:4502/libs/wcm/core/content/damadmin.html`.
+1. Gå till **[!UICONTROL CQ5 DAM]**-konsolen, till exempel `https://localhost:4502/libs/wcm/core/content/damadmin.html`.
 1. Öppna resursen **[!UICONTROL myImage.tiff]** och kontrollera att den vända bilden och de tre miniatyrbilderna har skapats.
 
 #### Konfigurera processteget CommandLineProcess {#configuring-the-commandlineprocess-process-step}
