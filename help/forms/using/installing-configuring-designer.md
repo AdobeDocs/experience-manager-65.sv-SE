@@ -12,7 +12,7 @@ discoiquuid: f3a5b5ce-2262-4d5d-a8ae-d59a3a4229e7
 docset: aem65
 role: Admin
 exl-id: 90503d29-e079-43f4-a5dc-ce90ed7844c6
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 85596d4c2204aa1dd34c409b45d25eeffdb9c046
 workflow-type: tm+mt
 source-wordcount: '213'
 ht-degree: 37%
@@ -29,7 +29,7 @@ Installationsprogrammet för AEM Forms Designer kräver 32-bitarsversionen av [V
 
 Designer är tillgängligt som ett fristående installationsprogram och ingår även i WorkBench. Om du använder ett fristående installationsprogram för Designer utför du följande steg:
 
-1. Kontakta Adobe Support för att ladda ned Designer-installationsprogrammet.
+1. Hämta Designer från Adobe [licenswebbplats](https://licensing.adobe.com/).
 
    >[!NOTE]
    >
