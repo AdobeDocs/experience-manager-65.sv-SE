@@ -1,5 +1,5 @@
 ---
-title: '"PUBLICERA INTE självstudiekurs: Använd regler för anpassningsbara formulärfält"'
+title: Tillämpa regler på anpassningsbara formulärfält
 seo-title: Tillämpa regler på anpassningsbara formulärfält
 description: Skapa regler för att lägga till interaktivitet, affärslogik och smarta valideringar i ett anpassat formulär.
 seo-description: Skapa regler för att lägga till interaktivitet, affärslogik och smarta valideringar i ett anpassat formulär.
@@ -7,16 +7,15 @@ page-status-flag: de-activated
 uuid: 60f142aa-81ca-4333-8614-85a01e23e917
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 discoiquuid: 982eddba-2350-40e7-8a42-db02d28cf133
-translation-type: tm+mt
-source-git-commit: e3ecf724cdfcd20ef4c089605e644ad10ef1221b
+exl-id: 0202ca65-21ef-4477-b704-7b52314a7d7b
+source-git-commit: 63bc43bba88a42d62fb574bc8ce42470ac61d693
 workflow-type: tm+mt
-source-wordcount: '1030'
+source-wordcount: '1026'
 ht-degree: 0%
 
 ---
 
-
-# Självstudiekurs: Använd regler för anpassningsbara formulärfält {#tutorial-apply-rules-to-adaptive-form-fields}
+# Självstudiekurs: Tillämpa regler på anpassningsbara formulärfält {#tutorial-apply-rules-to-adaptive-form-fields}
 
 ![06-apply-rules-to-adaptive-form_main](assets/06-apply-rules-to-adaptive-form_main.png)
 
@@ -152,4 +151,3 @@ Följande procedur visar hur du skapar en regel som visar ett felmeddelande om d
 1. Förhandsgranska det adaptiva formuläret. Ange ett felaktigt kund-ID. Ett felmeddelande visas.
 
    ![display-validation-error](assets/display-validation-error.gif)
-
