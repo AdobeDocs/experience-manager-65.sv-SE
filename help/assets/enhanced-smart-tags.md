@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Smarta taggar, sökning
 role: User
 exl-id: 5eff4a0f-30b1-4753-ad0b-002656eed972
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 20442918270b484e0b3c3ce8e68df90e0f305a52
 workflow-type: tm+mt
-source-wordcount: '1564'
+source-wordcount: '1596'
 ht-degree: 3%
 
 ---
@@ -188,6 +188,7 @@ Du kan också tilldela en tagg en högre rankning för att öka dess relevans f�
 
 ## Tips och begränsningar {#tips-best-practices-limitations}
 
+* Använd de bilder som passar bäst för att utbilda modellen. Utbildningen kan inte återupptas eller så kan utbildningsmodellen inte tas bort. Hur korrekt taggningen är beror på den aktuella kursen, så gör det med omsorg.
 * Användningen av smarta innehållstjänster är begränsad till upp till 2 miljoner taggade bilder per år. Alla duplicerade bilder som bearbetas och taggas räknas som taggade bilder.
 * Om du kör taggningsarbetsflödet från tidslinjen kan du använda taggar på högst 15 resurser i taget.
 * Smarta taggar fungerar bara för bildformaten PNG och JPG. Resurser som stöds och som har återgivningar skapade i dessa två format taggas med smarta taggar.
