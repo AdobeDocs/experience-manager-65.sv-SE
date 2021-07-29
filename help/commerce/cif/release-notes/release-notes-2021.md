@@ -2,9 +2,9 @@
 title: AEM Content and Commerce Release Notes 2021
 description: AEM Content and Commerce Release Notes 2021
 exl-id: ec47c5f8-d4dd-469f-94df-5ee28f25d696
-source-git-commit: 71782a3caae3f74a4886c52cf9b29f9e998913fa
+source-git-commit: d1e2a2b11bd4eaece80a2538ddc34ada59e63578
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '867'
 ht-degree: 7%
 
 ---
@@ -15,19 +15,36 @@ ht-degree: 7%
 
 Granska de lägsta systemkraven i tabellen nedan för den CIF-version som du använder eller planerar att använda i framtiden.
 
-**I aprilversionen har vi ersatt CIF Connector från GitHub med CIF-tillägget som finns på [Adobe Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html). Övergången till tillägget ger stora fördelar för projekten:
+**I aprilversionen har vi ersatt CIF Connector från GitHub med CIF-tillägget** som finns tillgängligt på  [Adobe Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html). Övergången till tillägget ger stora fördelar för projekten:
 
 * De flesta av de nya funktionerna är omedelbart tillgängliga AEM 6.5 (ingen mer väntan på sidoport för funktionen)
 * Enkelt att uppgradera till nya tilläggsversioner
 * Klar för Cloud Service
 
-Den gamla AEM CIF Connector försätts i underhållsläge och ska inte användas längre. Ersätt CIF Connector med det nya CIF-tillägget. Det är enkelt att ersätta paket för de flesta projekt. **
+Den gamla AEM CIF Connector försätts i underhållsläge och ska inte användas längre. Ersätt CIF Connector med det nya CIF-tillägget. Det är enkelt att ersätta paket för de flesta projekt.
 
 | Komponent | Systemkrav |
 |:-------|:-----:|
 | CIF-tillägg | Minimum: AEM 6.5.7, Magento 2.3.5 GraphQL scheman |
 | CIF-kärnkomponenter | [Systemkrav](https://github.com/adobe/aem-core-cif-components/blob/master/VERSIONS.md) |
 | AEM Project Archetype | [Systemkrav](https://github.com/adobe/aem-project-archetype/blob/master/VERSIONS.md) |
+
+## Releasedatum: Juli 2021
+
+| Komponent | Version | Information |
+|:-------|:-----:|---------------------:|
+| CIF-tillägg | 2021.07.21 | [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.07.21.zip) |
+| CIF-kärnkomponenter | 1.13.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-1.13.0) |
+| CIF Venias referenswebbplats | 2021.07.22 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2021.07.22) |
+
+### Nyheter {#what-is-new-july}
+
+* CIF Core Components v2
+   * Förenklade och förbättrade konfigurationer för PDP/PLP URL och SEO
+   * Visuell indikator för mellanlagrade produktdata i redigeringsläge för bättre synlighet för kommande ändringar
+   * Ny platskarta för innehålls- och e-handelssidor
+
+* Stöd för [Adobe Commerce Sensei-produktrekommendation, som drivs av Adobe Sensei](https://business.adobe.com/products/magento/product-recommendations.html) i AEM Storefront med fördefinierade eller direkt skapade rekommendationer
 
 ## Releasedatum: Juni 2021
 
@@ -79,8 +96,6 @@ Den gamla AEM CIF Connector försätts i underhållsläge och ska inte användas
 * AEM för PWA Studio inkl. exempelintegrering
 
 * Ny kärnkomponent för CIF-navigering som utökar kärnkomponenten för WCM-navigering
-
-* Visuell indikator för mellanlagrade katalogdata i AEM
 
 ### Felkorrigeringar {#bug-fixes-april}
 
