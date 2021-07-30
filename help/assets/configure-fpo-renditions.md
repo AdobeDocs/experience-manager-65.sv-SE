@@ -5,7 +5,7 @@ contentOwner: Vishabh Gupta
 role: Admin
 feature: Återgivningar
 exl-id: null
-source-git-commit: 865370e38368072c39ad337eb52259c586403efb
+source-git-commit: 771bccf12f79648afd59573dad0b7fdf95c6e1e2
 workflow-type: tm+mt
 source-wordcount: '979'
 ht-degree: 0%
@@ -24,10 +24,10 @@ I Experience Manager kan många metoder bearbeta bilder som kan användas för a
 
 Du kan använda ImageMagick för att bearbeta bilder, inklusive för att generera FPO-återgivningar. Sådana återgivningar nedsamplas, vilket innebär att återgivningens pixeldimensioner minskas proportionellt om den ursprungliga bilden har PPI större än 72. Se [installera och konfigurera ImageMagick så att det fungerar med Experience Manager Assets](best-practices-for-imagemagick.md).
 
-|  | Använda ett arbetsflöde som byggts i Experience Manager | Använda ImageMagick-arbetsflöde | Anmärkningar |
-|— |— |—|— |
-| För nya tillgångar | Aktivera FPO-återgivning ([hjälp](#generate-renditions-of-new-assets-using-aem-workflow)) | Lägg till ImageMagick-kommandorad i arbetsflödet för Experience Manager ([hjälp](#generate-renditions-of-new-assets-using-imagemagick)) | Experience Manager kör arbetsflödet DAM Update Assets för varje överföring. |
-| För befintliga tillgångar | Aktivera FPO-återgivning i ett nytt dedikerat Experience Manager-arbetsflöde ([hjälp](#generate-renditions-of-existing-assets-using-aem-workflow)) | Lägg till ImageMagick-kommandorad i ett nytt dedikerat Experience Manager-arbetsflöde ([hjälp](#generate-renditions-of-existing-assets-using-imagemagick)) | FPO-återgivningar av befintliga resurser kan skapas vid behov eller gruppvis. |
+|  | Använda det Experience Manager byggda arbetsflödet | Använda arbetsflödet i ImageMagick | Anmärkningar |
+|--- |--- |---|--- |
+| För nya resurser | Aktivera FPO-återgivning ([hjälp](#generate-renditions-of-new-assets-using-aem-workflow)) | Lägg till ImageMagick-kommandorad i arbetsflödet för Experience Manager ([hjälp](#generate-renditions-of-new-assets-using-imagemagick)) | Experience Manager kör arbetsflödet DAM Update Assets för varje överföring. |
+| För befintliga resurser | Aktivera FPO-återgivning i ett nytt dedikerat Experience Manager-arbetsflöde ([hjälp](#generate-renditions-of-existing-assets-using-aem-workflow)) | Lägg till ImageMagick-kommandorad i ett nytt dedikerat Experience Manager-arbetsflöde ([hjälp](#generate-renditions-of-existing-assets-using-imagemagick)) | FPO-återgivningar av befintliga resurser kan skapas vid behov eller gruppvis. |
 
 >[!CAUTION]
 >
