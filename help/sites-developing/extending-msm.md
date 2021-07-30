@@ -10,14 +10,13 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: 6128c91a-4173-42b4-926f-bbbb2b54ba5b
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 3a1d02fc1bc561b54e57cf91abc8f4406ba8c365
+exl-id: bba64ce6-8b74-4be1-bf14-cfdf3b9b60e1
+source-git-commit: 6bc228866aca785ec768daefb73970fc24568ef0
 workflow-type: tm+mt
 source-wordcount: '2601'
 ht-degree: 0%
 
 ---
-
 
 # Utöka Multi Site Manager{#extending-the-multi-site-manager}
 
@@ -65,14 +64,18 @@ De huvudsakliga MSM API-objekten interagerar på följande sätt (se även [Anv�
       * Låter författaren använda **Skapa plats**; på så sätt kan användaren enkelt välja språk och konfigurera strukturen för live-kopian.
       * Definierar standardkonfigurationen för utrullning för alla resulterande live-kopior.
 
-* **`LiveRelationship`** Anger  `LiveRelationship` anslutningen (relationen) mellan en resurs i livekopiegrenen och dess motsvarande källa/rityta.
+* **`LiveRelationship`**
+
+   `LiveRelationship` anger anslutningen (relationen) mellan en resurs i livekopieringsgrenen och dess motsvarande källa/ritresurs.
 
    * Relationerna används vid arv och utrullning.
    * `LiveRelationship` -objekt ger åtkomst (referenser) till rollout-konfigurationer (  `RolloutConfig`),  `LiveCopy`och  `LiveStatus` objekt som är relaterade till relationen.
 
    * En live-kopia skapas t.ex. i `/content/copy/us` från källan/utkast på `/content/we-retail/language-masters`. Resurserna `/content/we.retail/language-masters/en/jcr:content` och `/content/copy/us/en/jcr:content` utgör en relation.
 
-* **`LiveCopy`** `LiveCopy` innehåller konfigurationsinformation för relationerna (  `LiveRelationship`) mellan live-kopieringsresurserna och deras käll-/ritningsresurser.
+* **`LiveCopy`**
+
+   `LiveCopy` innehåller konfigurationsinformation för relationerna (  `LiveRelationship`) mellan live-kopieringsresurserna och deras käll-/ritningsresurser.
 
    * Använd klassen `LiveCopy` för att komma åt sidans sökväg, sökvägen till käll-/ritningssidan, rollout-konfigurationerna och om underordnade sidor också ska inkluderas i `LiveCopy`.
 
@@ -92,11 +95,13 @@ De huvudsakliga MSM API-objekten interagerar på följande sätt (se även [Anv�
 
    Skapar `LiveAction`-objekt som tilldelats en `LiveAction`-konfiguration. Konfigurationer lagras som resurser i databasen.
 
-* **`RolloutConfig`** Den  `RolloutConfig` innehåller en lista med  `LiveActions`som ska användas när den aktiveras. `LiveCopy` ärver `RolloutConfig` och resultatet finns i `LiveRelationship`.
+* **`RolloutConfig`**
+
+   `RolloutConfig` innehåller en lista med `LiveActions` som ska användas när den aktiveras. `LiveCopy` ärver `RolloutConfig` och resultatet finns i `LiveRelationship`.
 
    * När du konfigurerar en live-kopia för första gången används också en RolloutConfig (som utlöser LiveActions).
 
-## Skapar en ny synkroniseringsåtgärd {#creating-a-new-synchronization-action}
+## Skapa en ny synkroniseringsåtgärd {#creating-a-new-synchronization-action}
 
 Skapa anpassade synkroniseringsåtgärder som du kan använda med dina utrullningskonfigurationer. Skapa en synkroniseringsåtgärd när de [installerade åtgärderna](/help/sites-administering/msm-sync.md#installed-synchronization-actions) inte uppfyller dina specifika programkrav. Skapa då två klasser:
 
@@ -118,7 +123,7 @@ Skapa anpassade synkroniseringsåtgärder som du kan använda med dina utrullnin
 
    * `createsAction`: Returnerar namnet på associerat  `LiveAction`objekt.
 
-### Åtkomst till LiveAction-konfigurationsnoden {#accessing-the-liveaction-configuration-node}
+### Åtkomst till konfigurationsnoden för LiveAction {#accessing-the-liveaction-configuration-node}
 
 Använd konfigurationsnoden `LiveAction` i databasen för att lagra information som påverkar körningsbeteendet för `LiveAction`-instansen. Noden i databasen som lagrar konfigurationen `LiveAction` är tillgänglig för objektet `LiveActionFactory` vid körning. Därför kan du lägga till egenskaper i konfigurationsnoden och använda dem i `LiveActionFactory`-implementeringen efter behov.
 
@@ -163,7 +168,7 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
 >
 >Argumenten `Resource` kan vara `null` eller `Resources` objekt som inte anpassar sig till `Node`-objekt, till exempel [ `NonExistingResource`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/NonExistingResource.html)-objekt.
 
-## Skapar en ny utrullningskonfiguration {#creating-a-new-rollout-configuration}
+## Skapa en ny utrullningskonfiguration {#creating-a-new-rollout-configuration}
 
 Skapa en utrullningskonfiguration när de installerade utrullningskonfigurationerna inte uppfyller dina programkrav:
 
@@ -176,7 +181,7 @@ Den nya utrullningskonfigurationen är sedan tillgänglig för dig när du stäl
 >
 >Se även de [bästa sätten att anpassa rollouts](/help/sites-administering/msm-best-practices.md#customizing-rollouts).
 
-### Skapa utrullningskonfigurationen {#create-the-rollout-configuration}
+### Skapa utrullningskonfiguration {#create-the-rollout-configuration}
 
 Så här skapar du en ny utrullningskonfiguration:
 
@@ -263,7 +268,7 @@ Koden för den här sidan finns på GitHub
 * [Open ExperienceManager-java-msmrollout-projekt på GitHub](https://github.com/Adobe-Marketing-Cloud/experiencemanager-java-msmrollout)
 * Hämta projektet som [en ZIP-fil](https://github.com/Adobe-Marketing-Cloud/experiencemanager-java-msmrollout/archive/master.zip)
 
-### Skapa Maven Project {#create-the-maven-project}
+### Skapa projektet Maven {#create-the-maven-project}
 
 Följande procedur kräver att du har lagt till adobe-public-profilen i Maven-inställningsfilen.
 
@@ -289,7 +294,7 @@ Följande procedur kräver att du har lagt till adobe-public-profilen i Maven-in
 
 1. Starta Eclipse och [importera Maven-projektet](/help/sites-developing/howto-projects-eclipse.md#import-the-maven-project-into-eclipse).
 
-### Lägg till beroenden i POM-filen {#add-dependencies-to-the-pom-file}
+### Lägg till beroenden till POM-filen {#add-dependencies-to-the-pom-file}
 
 Lägg till beroenden så att Eclipse-kompilatorn kan referera till klasserna som används i `LiveActionFactory`-koden.
 
@@ -555,7 +560,7 @@ Skapa den MSM-utrullningskonfiguration som använder `LiveActionFactory` som du 
    * **Namn**: examplerolloutconfig
    * **cq:trigger**:  `publish`
 
-### Lägg till Live-åtgärden i exempelkonfigurationen {#add-the-live-action-to-the-example-rollout-configuration}
+### Lägg till Live-åtgärden i exempelkonfigurationen för utrullning {#add-the-live-action-to-the-example-rollout-configuration}
 
 Konfigurera den utrullningskonfiguration som du skapade i föregående procedur så att den använder klassen `ExampleLiveActionFactory`.
 
@@ -576,7 +581,7 @@ Konfigurera den utrullningskonfiguration som du skapade i föregående procedur 
 
 1. Klicka på **Spara alla**.
 
-### Skapa Live-kopian {#create-the-live-copy}
+### Skapa Live Copy {#create-the-live-copy}
 
 [Skapa en live-](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-page) kopia av engelska/produkter-grenen i referenswebbplatsen för Vi.Retail med din rollout-konfiguration:
 
@@ -652,7 +657,7 @@ Så här ändrar du språk:
 
    ![chlimage_1-78](assets/chlimage_1-78.png)
 
-## Konfigurera MSM-lås på sidegenskaper (Touch-aktiverat gränssnitt) {#configuring-msm-locks-on-page-properties-touch-enabled-ui}
+## Konfigurera MSM-lås på sidegenskaper (pekaktiverat gränssnitt) {#configuring-msm-locks-on-page-properties-touch-enabled-ui}
 
 När du skapar en anpassad sidegenskap kan du behöva fundera på om den nya egenskapen ska kunna rullas ut till alla live-kopior.
 
