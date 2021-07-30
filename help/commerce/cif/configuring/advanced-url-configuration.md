@@ -8,10 +8,10 @@ audience: administrator
 feature: Commerce Integration Framework
 kt: 4933
 thumbnail: 34350.jpg
-translation-type: tm+mt
-source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
+exl-id: 0125021a-1c00-4ea3-b7fb-1533b7b9f4f2
+source-git-commit: dbd38aa75caa7c3c2feee79702ab85ab397eb583
 workflow-type: tm+mt
-source-wordcount: '791'
+source-wordcount: '745'
 ht-degree: 2%
 
 ---
@@ -24,36 +24,61 @@ ht-degree: 2%
 
 ## Konfiguration {#configuration}
 
-Om du vill konfigurera tjänsten `UrlProvider` enligt SEO-kraven och behöver ett projekt måste du tillhandahålla en OSGI-konfiguration för konfigurationen CIF URL Provider och konfigurera tjänsten enligt beskrivningen nedan.
+Om du vill konfigurera tjänsten `UrlProvider` enligt SEO-kraven och behöver ett projekt måste det tillhandahålla en OSGI-konfiguration för konfigurationen för CIF URL-providern.
 
 >[!NOTE]
 >
-> [Platina Reference store](https://github.com/adobe/aem-cif-guides-venia)-projektet, se nedan, innehåller exempelkonfigurationer som visar hur anpassade URL:er används för produkt- och kategorisidor.
+> Sedan version 2.0.0 av AEM CIF Core Components finns det bara fördefinierade url-format i URL-providerkonfigurationen, i stället för det kostnadsfria format som kan konfigureras från 1.x-versioner. Dessutom har användningen av väljare för att skicka data i URL-adresser ersatts med suffix.
 
-### URL-mall för produktsida {#product}
+### URL-format för produktsida {#product}
 
-Detta konfigurerar URL:erna för produktsidorna med följande egenskaper:
+Detta konfigurerar URL:erna för produktsidorna och stöder följande alternativ:
 
-* **Produkt-URL-mall**: definierar formatet för URL:er med en uppsättning platshållare. Standardvärdet är `{{page}}.{{url_key}}.html#{{variant_sku}}`, vilket resulterar i att URL:er genereras, till exempel `/content/venia/us/en/products/product-page.chaz-kangeroo-hoodie.html#MH01-M-Orange` där
-   * `{{page}}` ersattes med  `/content/venia/us/en/products/product-page`
-   * `{{url_key}}` har ersatts av produktens  `url_key` egendom, här  `chaz-kangeroo-hoodie`
-   * `{{variant_sku}}` har ersatts med den valda varianten här  `MH01-M-Orange`
-* **Produktidentifierarplats**: definierar platsen för den identifierare som ska användas för att hämta produktdata. Standardvärdet är `SELECTOR`, det andra möjliga värdet är `SUFFIX`. I föregående exempel-URL betyder det att identifieraren `chaz-kangeroo-hoodie` kommer att användas för att hämta produktdata.
-* **Produktidentifierartyp**: definierar vilken typ av identifierare som ska användas när produktdata hämtas. Standardvärdet är `URL_KEY`, det andra möjliga värdet är `SKU`. Med den tidigare exempel-URL:en innebär det att produktdata kommer att hämtas med ett Magento GraphQL-filter som `filter:{url_key:{eq:"chaz-kangeroo-hoodie"}}`.
+* `{{page}}.html/{{sku}}.html#{{variant_sku}}` (standard)
+* `{{page}}.html/{{url_key}}.html#{{variant_sku}}`
+* `{{page}}.html/{{sku}}/{{url_key}}.html#{{variant_sku}}`
+* `{{page}}.html/{{url_path}}.html#{{variant_sku}}`
+* `{{page}}.html/{{sku}}/{{url_path}}.html#{{variant_sku}}`
 
-### URL-mall för produktlistsida {#product-list}
+I fallet [Venias referensarkiv](https://github.com/adobe/aem-cif-guides-venia):
 
-Detta konfigurerar URL:erna för kategori- eller produktlistsidorna med följande egenskaper:
+* `{{page}}` ersätts med  `/content/venia/us/en/products/product-page`
+* `{{sku}}` ersätts med produktens sku, t.ex.  `VP09`
+* `{{url_key}}` ersätts med produktens  `url_key` egendom, t.ex.  `lenora-crochet-shorts`
+* `{{url_path}}` ersätts med produktens  `url_path`, t.ex.  `venia-bottoms/venia-pants/lenora-crochet-shorts`
+* `{{variant_sku}}` ersätts med den aktuella varianten, t.ex.  `VP09-KH-S`
 
-* **Kategori-URL-mall**: definierar formatet för URL:er med en uppsättning platshållare. Standardvärdet är `{{page}}.{{id}}.html`, vilket resulterar i att URL:er genereras, till exempel `/content/venia/us/en/products/category-page.3.html` där
-   * `{{page}}` ersattes med  `/content/venia/us/en/products/category-page`
-   * `{{id}}` har ersatts av Magento  `id` property i kategorin, här  `3`
-* **Kategoriidentifierarplats**: definierar platsen för den identifierare som ska användas för att hämta produktdata. Standardvärdet är `SELECTOR`, det andra möjliga värdet är `SUFFIX`. I föregående exempel-URL betyder det att identifieraren `3` kommer att användas för att hämta produktdata.
-* **Kategoriidentifierartyp**: definierar vilken typ av identifierare som ska användas när produktdata hämtas. Standardvärdet och det värde som för närvarande bara stöds är `ID`. I det föregående exempel-URL:en innebär det att kategoridata kommer att hämtas med ett Magento GraphQL-filter som `category(id:3)`.
+Med exempeldata ovan kommer en produktvariant-URL som är formaterad med standard-URL-formatet att se ut som `/content/venia/us/en/products/product-page.html/VP09.html#VP09-KH-S`.
 
-Det går att lägga till anpassade egenskaper för varje mall, förutsatt att motsvarande data anges av komponenterna med `UrlProvider`. Kontrollera till exempel koden för klassen `ProductListItemImpl` för att ta reda på hur den implementeras.
+### URL-format för kategorisida {#product-list}
 
-Det går också att ersätta `UrlProvider`-tjänsten med en helt anpassad OSGi-tjänst. I det här fallet måste du implementera gränssnittet `UrlProvider` och registrera det med en högre servicerankning för att standardimplementeringen ska kunna ersättas.
+Detta konfigurerar URL:erna för kategorierna eller produktlistsidorna och stöder följande alternativ:
+
+* `{{page}}.html/{{url_path}}.html` (standard)
+* `{{page}}.html/{{url_key}}.html`
+
+I fallet [Venias referensarkiv](https://github.com/adobe/aem-cif-guides-venia):
+
+* `{{page}}` ersätts med  `/content/venia/us/en/products/category-page`
+* `{{url_key}}` ersätts av kategorins  `url_key` egenskap
+* `{{url_path}}` ersätts av kategoriens  `url_path`
+
+Med exempeldata ovan kommer en kategorisidas URL-adress som är formaterad med standardformatet för URL att se ut som `/content/venia/us/en/products/category-page.html/venia-bottoms/venia-pants.html`.
+
+>[!NOTE]
+> 
+> `url_path` är en sammanfogning av `url_keys` för en produkts eller kategorins överordnade och produktens eller kategorins `url_key` avgränsade med `/`-snedstreck.
+
+## Anpassade URL-format {#custom-url-format}
+
+Om ett projekt ska tillhandahålla ett anpassat URL-format kan det implementera gränssnittet [`UrlFormat`](https://javadoc.io/doc/com.adobe.commerce.cif/core-cif-components-core/latest/com/adobe/cq/commerce/core/components/services/urls/UrlFormat.html) och registrera implementeringen som en OSGI-tjänst, med det antingen som kategorisida eller som URL-format för produktsida. Egenskapen `UrlFormat#PROP_USE_AS` för tjänsten anger vilket av de fördefinierade formaten som ska ersättas:
+
+* `useAs=productPageUrlFormat`, ersätter det konfigurerade URL-formatet för produktsidan
+* `useAs=categoryPageUrlFormat`, ersätter det konfigurerade URL-formatet för kategorisidan
+
+Om det finns flera implementeringar av `UrlFormat` som är registrerade som OSGI-tjänster ersätter den med den högre rangordningen den med den lägre rangordningen.
+
+`UrlFormat` måste implementera ett par metoder för att skapa en URL från en given parameterkarta och tolka en URL för att returnera samma parameterkarta. Parametrarna är desamma som beskrivs ovan, endast för kategorier anges ytterligare en `{{uid}}`-parameter till `UrlFormat`.
 
 ## Kombinera med delningskartor {#sling-mapping}
 
