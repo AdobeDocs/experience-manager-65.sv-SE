@@ -8,9 +8,9 @@ user-guide-title: Adobe Experience Manager 6.5 Forms Guide
 breadcrumb-title: Forms Guide
 user-guide-description: Skapa, hantera, publicera och uppdatera digitala formulär.
 role: User
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 730ae7cd6cd04eb6377b37eafe29db597e93cce3
 workflow-type: tm+mt
-source-wordcount: '3718'
+source-wordcount: '3771'
 ht-degree: 1%
 
 ---
@@ -679,3 +679,10 @@ ht-degree: 1%
          + [Hantera inställningsnoderna programmatiskt](developing/programmatically-preferences-nodes.md)
          + [Skydda dokument med regler](developing/protecting-documents-policies.md)
          + [Validera ett DX-dokument med webbtjänstens API](developing/validate-ddx-document-using-web.md)
+      + Äldre dokumentation {#legacy-documentation}
+         + [Använda den körda skripttjänsten i AEM Forms på JEE Workbench för att skapa XML-data](developing/building-xml.md)
+         + [Komprimera och dekomprimera filer med en AEM Forms på en anpassad JEE DSC](developing/compressing-decompressing-custom-dsc.md)
+         + [Konfigurera och felsöka ett AEM Forms i JEE-serverkluster](developing/configure-server-cluster.md)
+         + [Generera och arbeta med hashvärden i dynamisk PDF forms](developing/hashing-forms.md)
+         + [Skicka inloggningsuppgifter med WS-Security-huvuden](developing/passing-credentials.md)
+
