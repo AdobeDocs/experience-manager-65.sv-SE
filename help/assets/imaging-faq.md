@@ -9,9 +9,9 @@ discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
 feature: Resurshantering,Återgivningar
 role: User, Admin
 exl-id: e427d4ee-d5c8-421b-9739-f3cf2de36e41
-source-git-commit: 4b8369de9e6a10b73115d53358ce98729d92ed44
+source-git-commit: a166ea9e56ba6b69793e9949a920a7a24b5b9b25
 workflow-type: tm+mt
-source-wordcount: '2582'
+source-wordcount: '2556'
 ht-degree: 1%
 
 ---
@@ -190,13 +190,13 @@ Du initierar begäran om att använda smart bildbehandling; den inte aktiveras a
 
 Som standard är DPR för Smart Imaging och nätverksoptimering inaktiverat (inaktiverat) för ett Dynamic Media-företagskonto. Om du vill aktivera (aktivera) en eller båda av dessa färdiga förbättringar skapar du ett supportärende enligt beskrivningen nedan.
 
-Versionsschemat för DPR för Smart Imaging och nätverksoptimering är följande:
+<!-- NOW AVAILABLE IN ALL THREE REGIONS AS OF AUGUST 2. 2021. SEE CQDOC- 17915 The release schedule for Smart Imaging DPR and network optimization is as follows:
 
-| Län | Måldatum |
+| Region | Target date |
 |---|---|
-| Nordamerika | Live |
-| Europa, Mellanöstern, Afrika | 13 aug 2021 |
-| Asien-Stillahavsområdet | 22 juli 2021 |
+| North America | Live |
+| Europe, Middle East, Africa | 13 Aug 2021 |
+| Asia-Pacific | 22 Jul 2021 | -->
 
 1. [Använd Admin Console för att skapa ett supportärende](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html).
 1. Ange följande information i ditt supportärende:
