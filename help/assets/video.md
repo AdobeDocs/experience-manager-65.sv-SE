@@ -12,9 +12,9 @@ docset: aem65
 feature: Resurshantering
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: b42a14729a88bda563b0773dac735ad569ad3097
+source-git-commit: 3dd49715c7c3078f2ef9495c99c98d4dd566db9b
 workflow-type: tm+mt
-source-wordcount: '11189'
+source-wordcount: '11226'
 ht-degree: 4%
 
 ---
@@ -60,8 +60,10 @@ För närvarande kända problem med videouppspelning i Dynamic Media *på Experi
       * [Använd en videoprofil på mappar](/help/assets/video-profiles.md#applying-a-video-profile-to-folders).
       * Läs mer om [Bästa tillvägagångssätt för att ordna digitala resurser så att du kan använda bearbetningsprofiler](/help/assets/organize-assets.md).
       * Läs mer om [Ordna digitala resurser](/help/assets/organize-assets.md).
-   * Överför dina primära källvideor till mapparna. Du kan överföra videofiler som är upp till 15 GB vardera. När du lägger till videofilmer i mappen kodas de enligt den videobearbetningsprofil som du tilldelade mappen.
+   * Överför dina primära källvideor till mapparna. När du lägger till videofilmer i mappen kodas de enligt den videobearbetningsprofil som du tilldelade mappen.
 
+      * Dynamic Media har främst stöd för videoklipp i kort form med en maxlängd på 30 minuter.
+      * Du kan överföra videofiler som är upp till 15 GB vardera.
       * [Ladda upp videor](/help/assets/managing-video-assets.md#upload-and-preview-video-assets).
       * Läs mer om [Indatafilformat](/help/assets/assets-formats.md#supported-multimedia-formats) som stöds.
    * Övervaka hur [videokodningen fortskrider](#monitoring-video-encoding-and-youtube-publishing-progress) antingen från resursvyn eller arbetsflödesvyn.
@@ -304,6 +306,9 @@ For advice about video encoding, see [Video Encoding Basics](https://www.adobe.c
 
 När du kodar en videofil ska du använda en källvideofil med högsta möjliga kvalitet. Undvik att använda tidigare kodade videofiler eftersom dessa filer redan är komprimerade, och ytterligare kodning skapar en video med delkvalitet.
 
+* Dynamic Media har främst stöd för videoklipp i kort form med en maxlängd på 30 minuter.
+* Du kan överföra primära källvideofiler på upp till 15 GB vardera.
+
 I följande tabell beskrivs rekommenderad storlek, proportioner och lägsta bithastighet som källvideofilerna måste ha innan du kodar dem:
 
 | Storlek | Proportioner | Minsta bithastighet |
@@ -418,9 +423,9 @@ Anta till exempel att källvideon är 1 920 x 1 080. I följande tabell ger de t
 
 | Videotyp | Bredd x höjd | Breddförhållande | Höjdförhållande |
 |--- |--- |--- |--- |
-| Källa | 1920 x 1080 | 1 | 3 |
+| Källa | 1920 x 1080 | 1 | 1 |
 | Kodad | 960 x 540 | 2 | 2 |
-| Kodad | 640 x 360 | 3 | 1 |
+| Kodad | 640 x 360 | 3 | 3 |
 | Kodad | 480 x 270 | 4 | 4 |
 
 ### Kodat videofilformat {#encoded-video-file-format}
