@@ -6,10 +6,10 @@ audience: end-user
 user-guide-title: Resurshandbok
 breadcrumb-title: Resurshandbok
 user-guide-description: Skapa, hantera, bearbeta och distribuera digitalt material.
-source-git-commit: a8fef5d797efb3a6ce25760df6f710b8b99c2dc0
+source-git-commit: 3dd49715c7c3078f2ef9495c99c98d4dd566db9b
 workflow-type: tm+mt
 source-wordcount: '584'
-ht-degree: 32%
+ht-degree: 17%
 
 ---
 
@@ -36,27 +36,27 @@ ht-degree: 32%
    + [Återanvända resurser med MSM](reuse-assets-using-msm.md)
    + [Anslutna resurser med [!DNL Sites]](use-assets-across-connected-assets-instances.md)
 + Dynamic Media{#dynamic}
-   + [Dynamic Media-nyhetsbrev från Experience League](dynamic-media-newsletter.md)
-   + [Installera Dynamic Media](administering-dynamic-media.md)
+   + [Dynamic Media nyhetsbrevarkiv från Experience League](dynamic-media-newsletter.md)
+   + [Konfigurera Dynamic Media](administering-dynamic-media.md)
    + [Arbeta med Dynamic Media](dynamic-media.md)
    + [Konfigurera Dynamic Media - Scene7-läge](config-dms7.md)
-   + [Konfigurera Dynamic Media - hybrid-läge](config-dynamic.md)
-   + [Felsökning av Dynamic Media - Scene7-läge](troubleshoot-dms7.md)
+   + [Konfigurera Dynamic Media - hybridläge](config-dynamic.md)
+   + [Felsöka Dynamic Media - Scene7-läge](troubleshoot-dms7.md)
    + [Tillgänglighet i Dynamic Media](accessibility-dm.md)
    + [Migrera från Dynamic Media - hybrid-läge till Dynamic Media - S7-läge](migrate-from-hybrid-to-dms7.md)
    + [Hantera Dynamic Media-resurser](managing-assets.md)
    + [Bästa tillvägagångssätt för att optimera bildkvalitet](best-practices-for-optimizing-the-quality-of-your-images.md)
    + [Hantera förinställningar för Dynamic Media Viewer](managing-viewer-presets.md)
    + [Använda förinställningar för Dynamic Media Viewer](viewer-presets.md)
-   + [Hantera förinställningar för Dynamic Media-bilder](managing-image-presets.md)
-   + [Använda förinställningar för Dynamic Media-bilder](image-presets.md)
+   + [Hantera Dynamic Media bildförinställningar](managing-image-presets.md)
+   + [Använd Dynamic Media-bildförinställningar](image-presets.md)
    + [Videoprofiler för Dynamic Media](video-profiles.md)
    + [Bildprofiler för Dynamic Media](image-profiles.md)
    + [Smart bildbehandling](imaging-faq.md)
    + [Video](s7-video.md)
-   + [Lägga till Dynamic Media-funktioner på sidan](scene7.md)
+   + [Lägg till Dynamic Media-funktioner på din sida](scene7.md)
    + [Leverera innehåll med HTTP2](http2.md)
-   + [Leverera Dynamic Media-resurser](delivering-dynamic-media-assets.md)
+   + [Leverera Dynamic Media-material](delivering-dynamic-media-assets.md)
    + [Aktivera hotlink-skydd i Dynamic Media](hotlink-protection.md)
    + [Stöd för 3D](/help/assets/assets-3d.md)
    + [Bilduppsättningar](image-sets.md)
@@ -68,19 +68,19 @@ ht-degree: 32%
    + [Interaktiva bilder](interactive-images.md)
    + [Interaktiva videoklipp](interactive-videos.md)
    + [360 VR-video](/help/assets/360-video.md)
-   + [Integrera Dynamic Media Viewer med Adobe Analytics- och Adobe Experience Platform-taggar](/help/assets/tags.md)
-   + [Använda snabbvyer för att skapa anpassade popup-fönster](custom-pop-ups.md)
+   + [Integrera Dynamic Media-visningsprogram med taggar från Adobe Analytics och Adobe Experience Platform](/help/assets/tags.md)
+   + [Skapa anpassade popup-fönster med snabbvyn](custom-pop-ups.md)
    + [Leverera optimerade bilder för en responsiv webbplats](responsive-site.md)
    + [Förhandsgranska Dynamic Media-resurser](previewing-assets.md)
    + [Lägga till Dynamic Media-resurser på sidor](adding-dynamic-media-assets-to-pages.md)
-   + [Bädda in läsare för Dynamic-video eller -bilder på en webbsida](embed-code.md)
-   + [Länka URL till ett webbprogram](linking-urls-to-yourwebapplication.md)
+   + [Bädda in det dynamiska video- eller bildvisningsprogrammet på en webbsida](embed-code.md)
+   + [Länka URL:er till ditt webbprogram](linking-urls-to-yourwebapplication.md)
    + [Omforma URL:er med regeluppsättningar](using-rulesets-to-transform-urls.md)
    + [Publicera Dynamic Media-resurser](publishing-dynamicmedia-assets.md)
    + [Arbeta med selektiv publicering i Dynamic Media](selective-publishing.md)
-   + [CDN-cachen har inte verifierats via Dynamic Media](invalidate-cdn-cache-dynamic-media.md)
-   + [CDN-cachen har inte verifierats med Dynamic Media Classic](invalidate-cdn-cache-dm-classic.md)
-   + [Installerar funktionspaket 18912 för migrering av gruppresurser](bulk-ingest-migrate.md)
+   + [Invalidera CDN-cachen med Dynamic Media](invalidate-cdn-cache-dynamic-media.md)
+   + [Invalidera CDN-cachen med Dynamic Media Classic](invalidate-cdn-cache-dm-classic.md)
+   + [Installera funktionspaket 18912 för migrering av gruppresurser](bulk-ingest-migrate.md)
    + [Arbeta med väljare](working-with-selectors.md)
 + Utöka resurser {#extending}
    + [Anpassa och utöka [!DNL Assets]](extending-assets.md)
