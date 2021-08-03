@@ -5,7 +5,7 @@ contentOwner: Vishabh Gupta
 role: Admin
 feature: Återgivningar
 exl-id: null
-source-git-commit: 771bccf12f79648afd59573dad0b7fdf95c6e1e2
+source-git-commit: 1e8b5ab66668215e0eeed676b42f533d4e210e1c
 workflow-type: tm+mt
 source-wordcount: '979'
 ht-degree: 0%
@@ -61,9 +61,11 @@ Så här konfigurerar du arbetsflödesmodellen DAM Update Asset för att aktiver
 
 I Experience Manager körs arbetsflödet för DAM-uppdatering av tillgångar när en ny resurs överförs. Om du vill använda ImageMagick för att bearbeta återgivningar av nyligen överförda resurser lägger du till ett nytt kommando i arbetsflödesmodellen.
 
-1. Klicka på **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**. Välj **[!UICONTROL DAM Update Asset]**-modellen och klicka på **[!UICONTROL Edit]**.
+1. Klicka på **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**.
 
-1. Klicka på **[!UICONTROL Toggle Side Panel]** i det övre vänstra hörnet. Sök efter kommandoradssteg.
+1. Välj **[!UICONTROL DAM Update Asset]**-modellen och klicka på **[!UICONTROL Edit]**.
+
+1. Klicka på **[!UICONTROL Toggle Side Panel]** i det övre vänstra hörnet och sök efter kommandoradssteget.
 
 1. Dra steget **[!UICONTROL Command Line]** och lägg till det före steget **[!UICONTROL Process Thumbnails]**.
 
@@ -89,13 +91,21 @@ Mer information om funktioner för kommandoraden i ImageMagick finns i [https://
 
 Om du vill använda arbetsflödet i Experience Manager för att generera en FPO-återgivning av befintliga resurser skapar du en dedikerad arbetsflödesmodell som använder det inbyggda FPO-återgivningsalternativet.
 
-1. Klicka på **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**. Om du vill skapa en modell klickar du på **[!UICONTROL Create]** > **[!UICONTROL Create Model]**. Lägg till en meningsfull **[!UICONTROL Title]** och en **[!UICONTROL Name]**.
+1. Klicka på **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**.
 
-1. Markera modellen och klicka på **[!UICONTROL Edit]**. Klicka på **[!UICONTROL Page Information]** > **[!UICONTROL Open Properties]**. Välj **[!UICONTROL Transient Workflow]**. Detta förbättrar skalbarhet och prestanda. Klicka på **[!UICONTROL Save]** och **[!UICONTROL Close]**.
+1. Om du vill skapa en modell klickar du på **[!UICONTROL Create]** > **[!UICONTROL Create Model]**.
 
-1. Klicka på **[!UICONTROL Toggle Side Panel]** i det övre vänstra hörnet. Sök efter steg för processminiatyrbilder. Dra steget **[!UICONTROL Process Thumbnails]**.
+1. Lägg till en meningsfull **[!UICONTROL Title]** och **[!UICONTROL Name]**.
 
-1. Välj **[!UICONTROL Process Thumbnails]** och klicka på **[!UICONTROL Configure]**. Följ [konfigurationen för att generera återgivning av nya resurser med hjälp av arbetsflödet Experience Manager](#generate-renditions-of-new-assets-using-aem-workflow). Om du vill aktivera ändringarna klickar du på **[!UICONTROL Sync]**.
+1. Markera modellen och klicka på **[!UICONTROL Edit]**. Klicka på **[!UICONTROL Page Information]** > **[!UICONTROL Open Properties]** och välj sedan **[!UICONTROL Transient Workflow]**. Detta förbättrar skalbarhet och prestanda.
+
+1. Klicka på **[!UICONTROL Save]** och **[!UICONTROL Close]**.
+
+1. Klicka på **[!UICONTROL Toggle Side Panel]** i det övre vänstra hörnet och sök efter procesminiatyrbildssteget.
+
+1. Välj **[!UICONTROL Process Thumbnails]** och klicka på **[!UICONTROL Configure]**. Följ [konfigurationen för att generera återgivning av nya resurser med hjälp av arbetsflödet Experience Manager](#generate-renditions-of-new-assets-using-aem-workflow).
+
+1. Om du vill aktivera ändringarna klickar du på **[!UICONTROL Sync]**.
 
 
 ## Generera återgivningar av befintliga resurser med ImageMagick {#generate-renditions-of-existing-assets-using-imagemagick}
