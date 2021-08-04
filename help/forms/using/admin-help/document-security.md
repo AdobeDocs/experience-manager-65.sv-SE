@@ -12,9 +12,9 @@ discoiquuid: 1820cb38-ba70-4cce-8895-290524bdd9bf
 docset: aem65
 feature: Dokumentsäkerhet
 exl-id: 0cdc9ee3-0172-43be-9b62-ed768534c074
-source-git-commit: a84f9bd590193cbb8c2549b34df1bbcec618ba67
+source-git-commit: de5eb53f6160991ca0718d61afaeed2078a4fa88
 workflow-type: tm+mt
-source-wordcount: '3298'
+source-wordcount: '3310'
 ht-degree: 0%
 
 ---
@@ -147,13 +147,13 @@ Administratörer för dokumentsäkerhet kan skapa anpassade roller med följande
 * Vyserverhändelser för dokumentsäkerhet
 * Ägare av dokumentskyddsändringsprincip
 
-## Profiler och principskyddade dokument {#policies-and-policy-protected-documents}
+## Profiler och policyskyddade dokument {#policies-and-policy-protected-documents}
 
 En *princip* definierar en uppsättning sekretessinställningar och användare som kan komma åt ett dokument som profilen tillämpas på. En profil gör det även möjligt att ändra behörigheter för ett dokument dynamiskt. Den person som skyddar dokumentet får behörighet att ändra sekretessinställningarna för att återkalla åtkomst till dokumentet eller för att ändra profilen.
 
 Policyskydd kan tillämpas på ett PDF-dokument med Adobe Acrobat® Pro och Acrobat Standard. Du kan skydda andra filtyper, t.ex. Microsoft® Word-, Excel- och PowerPoint-filer, genom att använda klientprogrammet med rätt Acrobat Reader DC-tillägg installerat.
 
-### Hur profiler fungerar {#how-policies-work}
+### Hur policyer fungerar {#how-policies-work}
 
 Profilerna innehåller information om behöriga användare och sekretessinställningar som ska gälla för dokumenten. Användare kan vara vem som helst i din organisation, liksom personer som är externa i din organisation och som har ett konto. Om administratören aktiverar funktionen för användarinbjudan går det till och med att lägga till nya användare i profiler, vilket initierar en e-postprocess för registreringsinbjudan.
 
@@ -207,7 +207,7 @@ När offlinelåneperioden är slut måste du synkronisera dokumentet igen med do
 
 Om du sparar en kopia av ett principskyddat dokument med menykommandot Spara eller Spara som, används profilen automatiskt för det nya dokumentet. Händelser som försök att öppna det nya dokumentet granskas också och registreras för det ursprungliga dokumentet.
 
-## Principuppsättningar {#policy-sets}
+## Policyuppsättningar {#policy-sets}
 
 *Policyuppsättningar* används för att gruppera en uppsättning principer som har ett gemensamt affärssyfte. Dessa principuppsättningar görs sedan tillgängliga för en delmängd av användarna i systemet.
 
@@ -276,4 +276,4 @@ Lägg till användargrupper i profiler i stället för enskilda användare. Det 
 
    >[!NOTE]
    >
-   > Du kan använda API:t [getAllPolicyListennames()]((https://helpx.adobe.com/experience-manager/6-5/forms/programlc/javadoc/com/adobe/livecycle/rightsmanagement/client/PolicyManager.html)) för att hämta maximalt 1 000 principuppsättningsnamn. Internt hämtar API:t upp till 1 000 principer som API-anroparen har dokumentutgivarbehörighet för och skapar och returnerar sedan en lista med unika principuppsättningsnamn som är associerade med hämtade profiler till dig. Om API:t till exempel hämtar 1 000 principer och de hämtade profilerna är kopplade till totalt 200 principuppsättningar, returnerar API bara 200 principuppsättningsnamn.
+   > Du kan använda API:t [getAllPolicyListennames()](https://helpx.adobe.com/experience-manager/6-5/forms/programlc/javadoc/com/adobe/livecycle/rightsmanagement/client/PolicyManager.html) för att hämta maximalt 1 000 principuppsättningsnamn. Internt hämtar API:t upp till 1 000 principer som API-anroparen har dokumentutgivarbehörighet för och skapar och returnerar sedan en lista med unika principuppsättningsnamn som är associerade med hämtade profiler till dig. Om API:t till exempel hämtar 1 000 principer och de hämtade profilerna är kopplade till totalt 200 principuppsättningar, returnerar API bara 200 principuppsättningsnamn.
