@@ -9,20 +9,19 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
 discoiquuid: 6678e3c3-fb0f-4300-8838-38f23f14db07
-translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+exl-id: 50e608d5-951f-4a3f-bed4-9e92ff5d7bd4
+source-git-commit: de5eb53f6160991ca0718d61afaeed2078a4fa88
 workflow-type: tm+mt
-source-wordcount: '2487'
+source-wordcount: '2509'
 ht-degree: 1%
 
 ---
-
 
 # Taggbibliotek{#tag-libraries}
 
 Taggbiblioteken Granite, CQ och Sling ger dig tillgång till specifika funktioner som du kan använda i JSP-skriptet för dina mallar och komponenter.
 
-## Bibliotek för Granite-tagg {#granite-tag-library}
+## Bibliotek för Granite-taggar {#granite-tag-library}
 
 Biblioteket med Granite-taggar innehåller användbara funktioner.
 
@@ -38,7 +37,7 @@ Den globala filen deklarerar också [Sling-biblioteket](/help/sites-developing/t
 <%@taglib prefix="sling" uri="https://sling.apache.org/taglibs/sling" %>
 ```
 
-### <ui:includeClientLib> {#ui-includeclientlib}
+### &lt;ui:includeclientlib> {#ui-includeclientlib}
 
 Taggen `<ui:includeClientLib>` innehåller ett AEM HTML-klientbibliotek som kan vara ett js, en css eller ett temabibliotek. För flera inkluderingar av olika typer, till exempel js och css, måste den här taggen användas flera gånger i jsp. Den här taggen är en praktisk wrapper runt ` [com.adobe.granite.ui.clientlibs.HtmlLibraryManager](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/ui/clientlibs/HtmlLibraryManager.html)`-tjänstgränssnittet.
 
@@ -100,7 +99,7 @@ När du utvecklar jsp-skriptet för en AEM bör du ta med följande kod högst u
 
 Den deklarerar sling-, CQ- och jstl-taggarna och visar de skriptobjekt som används ofta och som definieras av [ `<cq:defineObjects />`](#amp-lt-cq-defineobjects)-taggen. Detta förkortar och förenklar jsp-koden för komponenten.
 
-### <cq:text> {#cq-text}
+### &lt;cq:text> {#cq-text}
 
 Taggen `<cq:text>` är en praktisk tagg som visar komponenttext i en JSP.
 
@@ -158,7 +157,7 @@ Några exempel på hur taggen `<cq:text>` kan användas i en JSP:
 <cq:text property="text" tagClass="text"/>
 ```
 
-### <cq:setContentBundle> {#cq-setcontentbundle}
+### &lt;cq:setcontentbundle> {#cq-setcontentbundle}
 
 Taggen `<cq:setContentBundle>` skapar en i18n-lokaliseringskontext och lagrar den i konfigurationsvariabeln `javax.servlet.jsp.jstl.fmt.localizationContext`.
 
@@ -205,7 +204,7 @@ För användaranpassade sidor:
 </div> ...
 ```
 
-### <cq:include> {#cq-include}
+### &lt;cq:include> {#cq-include}
 
 Taggen `<cq:include>` innehåller en resurs på den aktuella sidan.
 
@@ -255,7 +254,7 @@ Ska du använda `<cq:include>` eller `<sling:include>`?
 * När du utvecklar AEM bör du använda `<cq:include>`.
 * `<cq:include>` gör att du kan inkludera skriptfiler direkt efter deras namn när du använder skriptattributet. Detta tar hänsyn till arv av komponent- och resurstyp och är ofta enklare än att följa Sling:s skriptupplösning med väljare och tillägg.
 
-### <cq:includeClientLib> {#cq-includeclientlib}
+### &lt;cq:includeclientlib> {#cq-includeclientlib}
 
 >[!CAUTION]
 >
@@ -299,7 +298,7 @@ Taggen `<cq:includeClientLib>` kan användas så här i en jsp:
 <cq:includeClientLib css="cq.collab.calendar, cq.security" />
 ```
 
-### <cq:defineObjects> {#cq-defineobjects}
+### &lt;cq:defineobjects> {#cq-defineobjects}
 
 Taggen `<cq:defineObjects>` visar följande, ofta använda, skriptobjekt som utvecklaren kan referera till. Objekten som definieras av [ `<sling:defineObjects>`](#amp-lt-sling-defineobjects)-taggen visas också.
 
@@ -441,7 +440,7 @@ Taggen `<cq:defineObjects>` visar följande, ofta använda, skriptobjekt som utv
 >
 >När `/libs/foundation/global.jsp`-filen inkluderas i skriptet inkluderas taggen `<cq:defineObjects />` automatiskt.
 
-### <cq:requestURL> {#cq-requesturl}
+### &lt;cq:requesturl> {#cq-requesturl}
 
 Taggen `<cq:requestURL>` skriver den aktuella URL:en för begäran till JspWriter. De två taggarna [ `<cq:addParam>`](#amp-lt-cq-addparam) och [ `<cq:removeParam>`](#amp-lt-cq-removeparam) kan användas i taggens brödtext för att ändra den aktuella URL-adressen för begäran innan den skrivs.
 
@@ -463,7 +462,7 @@ Exempel:
 <a title="filter results" href="<cq:requestURL><cq:addParam name="language" value="${bucket.value}"/></cq:requestURL>">${label} (${bucket.count})</a>
 ```
 
-### <cq:addParam> {#cq-addparam}
+### &lt;cq:addparam> {#cq-addparam}
 
 Taggen `<cq:addParam>` lägger till en request-parameter med det angivna namnet och värdet i den avgränsande [ `<cq:requestURL>`](#amp-lt-cq-requesturl)-taggen.
 
@@ -483,7 +482,7 @@ Den har följande attribut:
 <a title="filter results" href="<cq:requestURL><cq:addParam name="language" value="${bucket.value}"/></cq:requestURL>">${label} (${bucket.count})</a>
 ```
 
-### <cq:removeParam> {#cq-removeparam}
+### &lt;cq:removeparam> {#cq-removeparam}
 
 Taggen `<cq:removeParam>` tar bort en request-parameter med det angivna namnet och värdet från den avgränsande [ `<cq:requestURL>`](#amp-lt-cq-requesturl)-taggen. Om inget värde anges tas alla parametrar med det angivna namnet bort.
 
@@ -513,7 +512,7 @@ När du använder Sling Tag Library i skriptet måste skriptet börja med följa
 >
 >När `/libs/foundation/global.jsp`-filen inkluderas i skriptet deklareras sling-taglib automatiskt.
 
-### <sling:include> {#sling-include}
+### &lt;sling:include> {#sling-include}
 
 Taggen `<sling:include>` innehåller en resurs på den aktuella sidan.
 
@@ -578,7 +577,7 @@ Exempel:
 <sling:include replaceSelectors="content" />
 ```
 
-### <sling:defineObjects> {#sling-defineobjects}
+### &lt;sling:defineobjects> {#sling-defineobjects}
 
 Taggen `<sling:defineObjects>` visar följande, ofta använda, skriptobjekt som utvecklaren kan referera till:
 
