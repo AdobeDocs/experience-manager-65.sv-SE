@@ -10,16 +10,16 @@ discoiquuid: a323bf5a-b5b2-4b15-bcf8-48d0fe819512
 feature: Resurshantering
 role: User, Admin
 exl-id: 74242ee5-1036-498b-88ef-2310ba2643ce
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: b0286341c1b643bd39a3009185c0d4c8d76ccba5
 workflow-type: tm+mt
-source-wordcount: '116'
+source-wordcount: '118'
 ht-degree: 13%
 
 ---
 
 # Hantera Dynamic Media-resurser {#managing-assets}
 
-Hantera Dynamic Media-resurser - bilder, video och interaktiva resurser - när de har överförts - innefattar många uppgifter som att förhandsgranska, ladda ned eller publicera dem.
+Hantera Dynamic Media-resurser - bilder, video och interaktiva resurser - efter att de har överförts innebär många uppgifter som att förhandsgranska, hämta eller publicera dem.
 
 När du förhandsgranskar kan du även använda bildförinställningar (endast för bilder) eller visningsförinställningar (för video och bilder). Du kan inte använda båda för en resurs. Se [Använda visningsförinställningar](/help/assets/viewer-presets.md) och [Använda bildförinställningar](/help/assets/image-sets.md).
 
