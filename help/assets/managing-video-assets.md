@@ -5,7 +5,7 @@ contentOwner: AG
 role: User
 feature: Resurshantering
 exl-id: 21d3e0bd-5955-470a-8ca2-4d995c17eb4c
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: b0286341c1b643bd39a3009185c0d4c8d76ccba5
 workflow-type: tm+mt
 source-wordcount: '727'
 ht-degree: 8%
@@ -57,7 +57,7 @@ Utför följande steg i katalogen `/apps` om du vill konfigurera en större fils
 
 1. Klicka på **[!UICONTROL Save All]** i verktygsfältet.
 1. I [!DNL Experience Manager] klickar du på **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
-1. På sidan [!DNL Adobe Experience Manager] [!UICONTROL Web Console Bundles], under kolumnen Namn i tabellen, letar du reda på och klickar på **[!UICONTROL Adobe Granite Workflow External Process Job Handler]**.
+1. Gå till sidan [!DNL Adobe Experience Manager] [!UICONTROL Web Console Bundles], under kolumnen Namn i tabellen, och klicka på **[!UICONTROL Adobe Granite Workflow External Process Job Handler]**.
 1. På sidan [!UICONTROL Adobe Granite Workflow External Process Job Handler] anger du sekunder för både **[!UICONTROL Default Timeout]** och **[!UICONTROL Max Timeout]** fält till `18000` (fem timmar). Klicka på **[!UICONTROL Save]**.
 1. I [!DNL Experience Manager] klickar du på **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**.
 1. Välj **[!UICONTROL Dynamic Media Encode Video]** på sidan Arbetsflödesmodeller och klicka sedan på **[!UICONTROL Edit]**.
