@@ -6,16 +6,16 @@ mini-toc-levels: 1
 role: User
 feature: Resurshantering, sökning
 exl-id: 158607e6-b4e9-4a3f-b023-4023d60c97d2
-source-git-commit: 19dd081674b4954498d6aa62335f6b5a9f2a4146
+source-git-commit: 9dc61a66a79004013d8cff89c4607f7aafad08df
 workflow-type: tm+mt
-source-wordcount: '9549'
+source-wordcount: '9611'
 ht-degree: 3%
 
 ---
 
 # Hantera era digitala resurser {#manage-digital-assets}
 
-I [!DNL Adobe Experience Manager Assets] kan du göra mer än att bara lagra och styra dina resurser. [!DNL Experience Manager] har funktioner för resurshantering i enterpriseklass. Du kan redigera och dela resurser, utföra avancerade sökningar, skapa flera renderingar av dussintals filformat som stöds, hantera versioner och digitala rättigheter, automatisera bearbetningen av resurser, hantera och styra metadata, samarbeta med anteckningar och mycket annat.
+I [!DNL Adobe Experience Manager Assets] kan du göra mer än att lagra och styra dina resurser. [!DNL Experience Manager] har funktioner för resurshantering i enterpriseklass. Du kan redigera och dela resurser, köra avancerade sökningar och skapa flera renderingar av dussintals filformat som stöds. Du kan också hantera versioner och digitala rättigheter, automatisera bearbetningen av resurser, hantera och styra metadata, samarbeta med anteckningar och mycket annat.
 
 I den här artikeln beskrivs de grundläggande tillgångshanteringsuppgifterna, som att skapa eller överföra. metadatauppdateringar, kopiera, flytta och ta bort, publicera, avpublicera och söka resurser. Mer information om användargränssnittet finns i [komma igång med resursanvändargränssnittet](/help/sites-authoring/basic-handling.md). Information om hur du hanterar innehållsfragment finns i [hantera innehållsfragment](/help/assets/content-fragments/content-fragments-managing.md) resurser.
 
@@ -25,11 +25,11 @@ När du organiserar en samling resurser, till exempel alla `Nature`-bilder, kan 
 
 >[!NOTE]
 >
->* Delning av en [!DNL Assets]-mapp av typen `sling:OrderedFolder` stöds inte vid delning till Marketing Cloud. Om du vill dela en mapp ska du inte välja [!UICONTROL Ordered] när du skapar en mapp.
->* [!DNL Experience Manager] tillåter inte att  `subassets` ord används som mappnamn. Det är ett nyckelord som är reserverat för nod som innehåller delresurser för sammansatta resurser.
+>* Delning av en [!DNL Assets]-mapp av typen `sling:OrderedFolder` stöds inte vid delning till Experience Cloud. Om du vill dela en mapp ska du inte välja [!UICONTROL Ordered] när du skapar en mapp.
+>* [!DNL Experience Manager] tillåter inte att  `subassets` ord används som mappnamn. Det är ett nyckelord som är reserverat för en nod som innehåller delresurser för sammansatta resurser.
 
 
-1. Navigera till den plats i mappen med digitala resurser där du vill skapa en ny mapp. Klicka på **[!UICONTROL Create]** på menyn. Välj **[!UICONTROL New Folder]**.
+1. Navigera till den plats i mappen med digitala resurser där du vill skapa en mapp. Klicka på **[!UICONTROL Create]** på menyn. Välj **[!UICONTROL New Folder]**.
 1. Ange ett mappnamn i fältet **[!UICONTROL Title]**. Som standard använder DAM den titel som du angav som mappnamn. När mappen har skapats kan du åsidosätta standardmappen och ange ett annat mappnamn.
 1. Klicka på **[!UICONTROL Create]**. Mappen visas i mappen med digitala resurser.
 
@@ -51,7 +51,7 @@ Du kan överföra olika typer av resurser (inklusive bilder, PDF-filer, RAW-file
 
 >[!NOTE]
 >
->I Dynamic Media - Scene7-läge kan du bara överföra resurser vars filstorlek är 2 GB eller mindre.
+>I Dynamic Media - Scene7-läge är standardfilstorleken för överföring av resurser 2 GB eller mindre. Information om hur du konfigurerar överföring av resurser som är större än 2 GB upp till 15 GB finns i [ (Valfritt) Konfigurera Dynamic Media - Scene7-läge för överföring av resurser som är större än 2 GB](/help/assets/config-dms7.md#optional-config-dms7-assets-larger-than-2gb).
 
 Du kan välja att överföra resurser till mappar med eller utan en bearbetningsprofil tilldelad dem.
 
@@ -91,9 +91,9 @@ Om du vill konfigurera rensningsaktiviteten för de oavslutade segmentöverföri
 
 >[!CAUTION]
 >
->Standardvärdet när segmentöverföring utlöses är 500 MB och segmentstorleken är 50 MB. Om du ändrar [Apache Jackrabbit Oak TokenConfiguration](https://helpx.adobe.com/experience-manager/kb/How-to-set-token-session-expiration-AEM.html) för att ställa in `timeout configuration` på mindre än den tid det tar för en resurs att överföra, kan du träffa på en timeout-situation för sessionen när överföringen av resursen pågår. Du måste därför ändra `chunkUploadMinFileSize` och `chunksize` så att varje segmentbegäran uppdaterar sessionen.
+>Segmentöverföring utlöses när standardvärdet är 500 MB och segmentstorleken är 50 MB. Om du redigerar [Apache Jackrabbit Oak TokenConfiguration](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-16464.html) och anger `timeout configuration` till mindre än den tid det tar för en resurs att överföra, kommer du att upptäcka en timeout-situation för sessionen när överföringen av resursen pågår. Ändra därför `chunkUploadMinFileSize` och `chunksize` så att varje segmentbegäran uppdaterar sessionen.
 >
->Med tanke på tidsgräns, fördröjning, bandbredd och förväntade samtidiga överföringar för autentiseringsuppgifter, är det högsta värdet som gör att du kan säkerställa följande:
+>Med tanke på tidsgräns, fördröjning, bandbredd och förväntade samtidiga överföringar för autentiseringsuppgifter, är det högsta värdet som gör att du kan säkerställa att följande väljs:
 >
 >* För att säkerställa att segmentöverföring är aktiverad för filer med storlekar som kan orsaka att autentiseringsuppgifterna förfaller när överföringen pågår.
    >
@@ -101,7 +101,7 @@ Om du vill konfigurera rensningsaktiviteten för de oavslutade segmentöverföri
 * För att säkerställa att varje segment avslutas innan autentiseringsuppgifterna upphör att gälla.
 
 
-Om du överför en resurs med samma namn som en resurs som redan finns på den plats där du överför resursen visas en varningsdialogruta.
+Om du överför en resurs med samma namn som en resurs som redan är tillgänglig på den plats där du överför resursen visas en varningsdialogruta.
 
 Du kan välja att ersätta en befintlig resurs, skapa en annan version eller behålla båda genom att byta namn på den nya resursen som överförs. Om du ersätter en befintlig resurs tas metadata för resursen och eventuella tidigare ändringar (till exempel anteckningar eller beskärningar) som du har gjort i den befintliga resursen bort. Om du väljer att behålla båda resurserna får den nya resursen ett nytt namn med numret `1` efter namnet.
 
@@ -156,11 +156,11 @@ Dynamic Media möjliggör batchöverföring av resurser via FTP-server. Om du t�
 
 >[!NOTE]
 >
->I Dynamic Media - Scene7-läge kan du bara överföra resurser vars filstorlek är 2 GB eller mindre.
+>I Dynamic Media - Scene7-läge är standardfilstorleken för överföring av resurser 2 GB eller mindre. Information om hur du konfigurerar överföring av resurser som är större än 2 GB upp till 15 GB finns i [ (Valfritt) Konfigurera Dynamic Media - Scene7-läge för överföring av resurser som är större än 2 GB](/help/assets/config-dms7.md#optional-config-dms7-assets-larger-than-2gb).
 
 >[!NOTE]
 >
->Om du vill överföra resurser via FTP i Dynamic Media - Scene7-läge installerar du Feature Pack 18912 på [!DNL Experience Manager]-författarinstanserna. Kontakta [Adobe kundtjänst](https://helpx.adobe.com/se/contact/enterprise-support.ec.html) för att få tillgång till FP-18912 och slutföra konfigurationen av ditt FTP-konto. Mer information finns i [Installera funktionspaket 18912 för migrering av gruppresurser](/help/assets/bulk-ingest-migrate.md).
+>Om du vill överföra resurser via FTP i Dynamic Media - Scene7-läge installerar du Feature Pack 18912 på [!DNL Experience Manager]-författarinstanserna. Kontakta [Adobe kundtjänst](https://experienceleague.adobe.com/?support-solution=General#support) för att få tillgång till FP-18912 och slutföra konfigurationen av ditt FTP-konto. Mer information finns i [Installera funktionspaket 18912 för migrering av gruppresurser](/help/assets/bulk-ingest-migrate.md).
 >
 >Om du använder FTP för att överföra resurser ignoreras de överföringsinställningar som anges i [!DNL Experience Manager]. I stället används filbearbetningsregler, enligt definitionen i Dynamic Media Classic,.
 
@@ -197,20 +197,20 @@ Om du vill avbryta ett pågående överföringsjobb klickar du på **[!UICONTROL
 | Publicera efter överföring |  | Publicerar automatiskt de resurser som du överför. |
 | Skriv över i valfri mapp, samma basresursnamn oavsett tillägg |  | Välj det här alternativet om du vill att de filer du överför ska ersätta befintliga filer med samma namn. Namnet på det här alternativet kan vara annorlunda, beroende på inställningarna i **[!UICONTROL Application Setup]** > **[!UICONTROL General Settings]** > **[!UICONTROL Upload to Application]** > **[!UICONTROL Overwrite Images]**. |
 | Ta bort komprimering av ZIP- eller Tjära-filer vid överföring |  |  |
-| Jobbalternativ |  | Klicka på **[!UICONTROL Job Options]** för att öppna dialogrutan [!UICONTROL Upload Job Options] och välj alternativ som påverkar hela överföringsjobbet. De här alternativen är desamma för alla filtyper.<br>Du kan välja standardalternativ för att överföra filer från sidan Allmänna inställningar i programmet. Om du vill öppna den här sidan väljer du **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]**. Välj alternativet **[!UICONTROL Default Upload Options]** för att öppna dialogrutan [!UICONTROL Upload Job Options]. |
+| Jobbalternativ |  | Klicka på **[!UICONTROL Job Options]** så att du kan öppna dialogrutan [!UICONTROL Upload Job Options] och välja alternativ som påverkar hela överföringsjobbet. De här alternativen är desamma för alla filtyper.<br>Du kan välja standardalternativ för att överföra filer från sidan Allmänna inställningar i programmet. Om du vill öppna den här sidan väljer du **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]**. Välj alternativet **[!UICONTROL Default Upload Options]** för att öppna dialogrutan [!UICONTROL Upload Job Options]. |
 |  | När | Välj En gång eller Återkommande. Om du vill ställa in ett återkommande jobb väljer du alternativet Upprepa - varje dag, Varje vecka, Varje månad eller Anpassa - för att ange när du vill att FTP-överföringsjobbet ska återkomma. Ange sedan schemaläggningsalternativen efter behov. |
 |  | Inkludera undermappar | Överför alla undermappar i mappen som du vill överföra. Namnen på mappen och dess undermappar som du överför anges automatiskt i [!DNL Experience Manager Assets]. |
-|  | Beskärningsalternativ | Om du vill beskära manuellt från sidorna av en bild väljer du Beskär-menyn och sedan Manuell. Ange sedan antalet pixlar att beskära från en sida eller från varje sida av bilden. Hur mycket av bilden som beskärs beror på bildfilens ppi-inställning (pixlar per tum). Om bilden till exempel visar 150 ppi och du anger 75 i textrutorna Överkant, Höger, Underkant och Vänster beskärs en halv tum från varje sida.<br> Om du vill beskära pixlar med tomt utrymme automatiskt från en bild öppnar du menyn Beskär, väljer Manuell och anger pixelmått i fälten Överkant, Höger, Underkant och Vänster för att beskära från sidorna. Du kan också välja Trimma på menyn Beskär och välja följande alternativ:<br> **Trimma bort baserat på** <ul><li>**Färg**  - Välj alternativet Färg. Välj sedan menyn Hörn och välj hörnet på bilden med den färg som bäst motsvarar den tomrumsfärg som du vill beskära.</li><li>**Genomskinlighet**  - Välj alternativet Genomskinlighet.<br> **Tolerans**  - Dra i skjutreglaget för att ange en tolerans mellan 0 och 1. För beskärning baserat på färg anger du 0 om pixlarna bara ska beskäras om de exakt matchar den färg som du har markerat i hörnet av bilden. Nummer som ligger närmare 1 ger större färgskillnader.<br>Om du vill trimma baserat på genomskinlighet anger du 0 så att pixlarna bara beskärs om de är genomskinliga. Siffror närmare 1 ger större genomskinlighet.</li></ul><br>Observera att dessa beskärningsalternativ är icke-förstörande. |
+|  | Beskärningsalternativ | Om du vill beskära manuellt från sidorna av en bild väljer du Beskär-menyn och sedan Manuell. Ange sedan antalet pixlar att beskära från en sida eller från varje sida av bilden. Hur mycket av bilden som beskärs beror på bildfilens ppi-inställning (pixlar per tum). Om bilden till exempel visar 150 ppi och du anger 75 i textrutorna Överkant, Höger, Underkant och Vänster beskärs en halv tum från varje sida.<br> Om du vill beskära pixlar med tomt utrymme automatiskt från en bild öppnar du menyn Beskär, väljer Manuell och anger pixelmått i fälten Överkant, Höger, Underkant och Vänster för att beskära från sidorna. Du kan också välja Trimma på menyn Beskär och välja följande alternativ:<br> **Trimma bort baserat på** <ul><li>**Färg**  - Välj alternativet Färg. Välj sedan menyn Hörn och välj hörnet på bilden med den färg som bäst motsvarar den tomrumsfärg som du vill beskära.</li><li>**Genomskinlighet**  - Välj alternativet Genomskinlighet.<br> **Tolerans**  - Dra i skjutreglaget för att ange en tolerans mellan 0 och 1. För beskärning baserat på färg anger du 0 om pixlarna bara ska beskäras om de exakt matchar den färg som du har markerat i hörnet av bilden. Nummer som ligger närmare 1 ger större färgskillnader.<br>Om du vill trimma baserat på genomskinlighet anger du 0 så att pixlarna bara beskärs om de är genomskinliga. Siffror närmare 1 ger större genomskinlighet.</li></ul><br>Dessa beskärningsalternativ är icke-förstörande. |
 |  | Alternativ för färgprofil | Välj en färgkonvertering när du skapar optimerade filer som används för leverans:<ul><li>Standardfärgbevaring: Behåller källbildens färger när bilderna innehåller färgrymdsinformation. det inte finns någon färgkonvertering. Nästan alla bilder idag har rätt färgprofil inbäddad. Om en CMYK-källbild inte innehåller någon inbäddad färgprofil konverteras färgerna till sRGB-färgrymden (standard röd grön). sRGB är den rekommenderade färgrymden för visning av bilder på webbsidor.</li><li>Behåll ursprunglig färgrymd: Bevarar de ursprungliga färgerna utan någon färgkonvertering vid punkten. För bilder utan inbäddad färgprofil görs färgkonverteringen med de standardfärgprofiler som konfigurerats i publiceringsinställningarna. Färgprofilerna kanske inte justeras mot färgen i de filer som skapas med det här alternativet. Därför bör du använda alternativet Standardfärgbevaring.</li><li>Anpassad från > Till<br> Öppnar menyer så att du kan välja färgmodellen Konvertera från och Konvertera till. Det här avancerade alternativet åsidosätter eventuell färginformation som är inbäddad i källfilen. Välj det här alternativet när alla bilder som du skickar in innehåller felaktiga eller saknade färgprofildata.</li></ul> |
-|  | Bildredigeringsalternativ | Du kan bevara urklippsmaskerna i bilder och välja en färgprofil.<br> Se  [Ange bildredigeringsalternativ vid överföring](#setting-image-editing-options-at-upload). |
+|  | Bildredigeringsalternativ | Du kan bevara urklippsmaskerna i bilder och välja en färgprofil.<br> Se  [Ange alternativ för bildredigering vid överföring](#setting-image-editing-options-at-upload). |
 |  | PostScript-alternativ | Du kan rastrera PostScript®, beskära filer, behålla genomskinliga bakgrunder, välja en upplösning och välja en färgrymd.<br> Se  [Ange överföringsalternativ](#setting-postscript-and-illustrator-upload-options) för PostScript och Illustrator. |
-|  | Photoshop-alternativ | Du kan skapa mallar från Adobe® Photoshop®-filer, behålla lager, ange hur lager ska namnges, extrahera text och ange hur bilder ska förankras i mallar.<br> Observera att mallar inte stöds i  [!DNL Experience Manager].<br> Se  [Ange överföringsalternativ](#setting-photoshop-upload-options) för Photoshop. |
-|  | PDF-alternativ | Du kan rastrera filerna, extrahera sökord och länkar, automatiskt generera en e-katalog, ange upplösningen och välja en färgrymd.<br> Observera att e-kataloger inte stöds i  [!DNL Experience Manager]. <br> Se  [Ange överföringsalternativ](#setting-pdf-upload-options) för PDF. |
+|  | Photoshop-alternativ | Du kan skapa mallar från Adobe® Photoshop®-filer, behålla lager, ange hur lager ska namnges, extrahera text och ange hur bilder ska förankras i mallar.<br> Mallar stöds inte i  [!DNL Experience Manager].<br> Se  [Ange överföringsalternativ](#setting-photoshop-upload-options) för Photoshop. |
+|  | PDF-alternativ | Du kan rastrera filerna, extrahera sökord och länkar, automatiskt generera en e-katalog, ange upplösningen och välja en färgrymd.<br>eCatalogs stöds inte i  [!DNL Experience Manager]. <br> Se  [Ange överföringsalternativ](#setting-pdf-upload-options) för PDF. |
 |  | Illustrator-alternativ | Du kan rastrera Adobe Illustrator®-filer, behålla genomskinliga bakgrunder, välja en upplösning och välja en färgrymd.<br> Se  [Ange överföringsalternativ](#setting-postscript-and-illustrator-upload-options) för PostScript och Illustrator. |
 |  | EVideoalternativ | Du kan omkoda en videofil genom att välja en videoförinställning.<br> Se  [Ange alternativ](#setting-evideo-upload-options) för eVideo-överföring. |
 |  | Förinställningar för gruppuppsättning | Om du vill skapa en bilduppsättning, eller en snurra uppsättning, från de överförda filerna klickar du på kolumnen Aktiv för den förinställning som du vill använda. Du kan markera flera förinställningar. Du skapar förinställningarna på sidan Programinställningar/Gruppinställningar i Dynamic Media Classic.<br> Mer information om hur du skapar förinställningar för gruppuppsättningar finns i  [Konfigurera förinställningar för gruppuppsättningar för att automatiskt generera ](config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets) bilduppsättningar och snurra uppsättningar.<br> Se  [Ställa in förinställningar för gruppuppsättning vid överföring](#setting-batch-set-presets-at-upload). |
 
-#### Ange bildredigeringsalternativ vid överföring {#setting-image-editing-options-at-upload}
+#### Ange alternativ för bildredigering vid överföring {#setting-image-editing-options-at-upload}
 
 När du överför bildfiler, inklusive AI-, EPS- och PSD-filer, kan du utföra följande redigeringsåtgärder i dialogrutan [!UICONTROL Upload Job Options]:
 
@@ -270,7 +270,7 @@ Använd [!UICONTROL Crop Options] och [!UICONTROL Color Profile Options], som be
 | Extrahera text |  | Extraherar texten så att användare kan söka efter text i ett visningsprogram. |
 | Utöka lager till bakgrundsstorlek |  | Utökar storleken på överlappade bildlager till storleken på bakgrundslagret. |
 | Namnge lager |  | Lager i PSD-filen överförs som separata bilder. |
-|  | Lagernamn | Namnger bilderna efter deras lagernamn i PSD-filen. Ett lager med namnet Price Tag i den ursprungliga PSD-filen blir till exempel en bild med namnet Price Tag. Om lagernamnen i PSD-filen däremot är Photoshop standardlagernamn (Bakgrund, Lager 1, Lager 2 och så vidare) får bilderna namn efter sina lagernummer i PSD-filen, inte efter deras standardlagernamn. |
+|  | Lagernamn | Namnger bilderna efter deras lagernamn i PSD-filen. Ett lager med namnet Price Tag i den ursprungliga PSD-filen blir till exempel en bild med namnet Price Tag. Om lagernamnen i PSD-filen däremot är Photoshop standardlagernamn (Bakgrund, Lager 1, Lager 2 och så vidare) får bilderna namn efter sina lagernummer i PSD-filen. De namnges inte efter sina standardlagernamn. |
 |  | Photoshop och lagernummer | Namnger bilderna efter deras lagernummer i PSD-filen och ignorerar de ursprungliga lagernamnen. Bilderna får samma namn som Photoshop-filnamnet och ett nummer i det tillagda lagret. Det andra lagret i en fil som heter Spring Ad.psd får till exempel namnet Spring Ad_2 även om det har ett icke-standardnamn i Photoshop. |
 |  | Photoshop- och lagernamn | Namnger bilderna efter PSD-filen följt av lagernamnet eller lagernumret. Lagernumret används om lagernamnen i PSD-filen är Photoshop standardlagernamn. Ett lager med namnet Price Tag i en PSD-fil med namnet SpringAd får till exempel namnet Spring Ad_Price Tag. Ett lager med standardnamnet Lager2 kallas Spring Ad_2. |
 | Fästpunkt |  | Ange hur bilder ska förankras i mallar som genereras från lagerkompositionen som skapas från PSD-filen. Som standard är ankarpunkten i mitten. Med en central ankarpunkt kan ersättningsbilder bäst fylla samma område, oavsett ersättningsbildens proportioner. Bilder med en annan aspekt som ersätter den här bilden upptar i själva verket samma utrymme när de refererar till mallen och använder parameterersättning. Ändra till en annan inställning om ditt program kräver att ersättningsbilderna fyller ut det tilldelade utrymmet i mallen. |
@@ -300,15 +300,15 @@ Välj bland följande alternativ:
 
 #### Ange överföringsalternativ för eVideo {#setting-evideo-upload-options}
 
-Om du vill omkoda en videofil väljer du bland en mängd olika förinställningar för video.
+Om du vill omkoda en videofil väljer du bland olika förinställningar för video.
 
 | Alternativ | Delalternativ | Beskrivning |
 |---|---|---|
 | Adaptiv video |  | En enda förinställning för kodning som fungerar med alla proportioner för att skapa videor som ska skickas till mobilen, surfplattan och datorn. Överförda källvideor som är kodade med den här förinställningen har en fast höjd. Bredden skalas dock automatiskt så att videons proportioner bevaras. <br>Det bästa sättet är att använda adaptiv videokodning. |
-| Förinställningar för enskild kodning | Sortera kodningsförinställningar | Välj Namn eller Storlek om du vill sortera kodningsförinställningarna under Skrivbord, Mobil och Surfplatta efter namn eller upplösningsstorlek. |
-|  | Skrivbord | Skapa en MP4-fil för att leverera en direktuppspelad eller progressiv videoupplevelse till stationära datorer. Välj en eller flera proportioner med önskad upplösningsstorlek och måldatahastighet. |
-|  | Mobil | Skapa en MP4-fil för leverans på iPhone- eller Android-mobilenheter. Välj en eller flera proportioner med önskad upplösning och datahastighet. |
-|  | Tablet | Skapa en MP4-fil för leverans på iPad- eller Android-surfplattor. Välj en eller flera proportioner med önskad upplösning och datahastighet. |
+| Förinställningar för enskild kodning | Sortera kodningsförinställningar | Välj **[!UICONTROL Name]** eller **[!UICONTROL Size]** om du vill sortera kodningsförinställningarna under Skrivbord, Mobil och Surfplatta efter namn eller efter upplösningsstorlek. |
+|  | Skrivbord | Skapa en MP4-fil för att leverera strömmande eller progressiv videoupplevelse till stationära datorer. Välj en eller flera proportioner med den upplösning och datahastighet du vill ha. |
+|  | Mobil | Skapa en MP4-fil för iPhone- eller Android™-enheter. Välj en eller flera proportioner med den upplösning och datahastighet du vill ha. |
+|  | Tablet | Skapa en MP4-fil för iPad eller Android™-surfplattor. Välj en eller flera proportioner med den upplösning och datahastighet du vill ha. |
 
 #### Ange förinställningar för gruppuppsättning vid överföring {#setting-batch-set-presets-at-upload}
 
@@ -328,7 +328,7 @@ Om du överför många resurser till Adobe Experience Manager ökar I/O-begäran
 
 Du kan överföra ZIP-arkiv precis som andra resurser som stöds. Samma filnamnsregler gäller för ZIP-filer. [!DNL Experience Manager] gör att du kan extrahera ett ZIP-arkiv till en DAM-plats. Om arkivfilerna inte innehåller ZIP som tillägg aktiverar du identifiering av filtyp med hjälp av innehåll.
 
-Välj ett ZIP-arkiv i taget, klicka på **[!UICONTROL Extract Archive]** och välj en målmapp. Välj ett alternativ för att hantera eventuella konflikter. Om resurserna i ZIP-filen redan finns i målmappen kan du välja något av följande alternativ: hoppa över extrahering, ersätta befintliga filer, behålla båda resurserna genom att byta namn eller skapa en ny version.
+Välj ett ZIP-arkiv i taget, klicka på **[!UICONTROL Extract Archive]** och välj en målmapp. Välj ett alternativ som du vill hantera konflikter, om det finns några. Om resurserna i ZIP-filen finns i målmappen kan du välja något av följande alternativ: hoppa över extrahering, ersätta befintliga filer, behålla båda resurserna genom att byta namn eller skapa en version.
 
 När extraheringen är klar meddelar [!DNL Experience Manager] dig i meddelandefältet. När [!DNL Experience Manager] extraherar ZIP kan du gå tillbaka till ditt arbete utan att avbryta extraheringen.
 
@@ -346,7 +346,7 @@ Vissa begränsningar för funktionen är:
 Följ de här stegen för att förhandsgranska en resurs.
 
 1. Navigera från [!DNL Assets]-användargränssnittet till platsen för resursen som du vill förhandsgranska.
-1. Klicka på önskad resurs för att öppna den.
+1. Klicka på önskad resurs så att du kan öppna den.
 
 1. I förhandsgranskningsläget är zoomalternativ tillgängliga för [bildtyper som stöds](/help/assets/assets-formats.md#supported-raster-image-formats) (med interaktiv redigering).
 
@@ -358,13 +358,13 @@ Så här förhandsgranskar du en resurs med tangentbordet:
 
 1. I [!DNL Assets]-användargränssnittet navigerar du till önskad resurs med `Tab` och piltangenterna.
 
-1. Välj `Enter`-tangenten på den önskade resursen för att öppna den. Du kan zooma in resurser i förhandsvisningsläget.
+1. Tryck på `Enter` på den önskade resursen så att du kan öppna den. Du kan zooma in resurser i förhandsvisningsläget.
 
 1. Så här zoomar du in i resursen:
    1. Använd `Tab`-tangenten för att flytta fokus till inzoomningsalternativet.
    1. Använd `Enter`-tangenten för att zooma in i bilden.
 
-   Om du vill zooma ut använder du `Tab`-tangenten för att flytta fokus till utzoomningsalternativet och väljer `Enter`.
+   Om du vill zooma ut använder du `Tab`-tangenten för att placera fokus på utzoomningsalternativet och trycker på `Enter`.
 
 1. Använd `Shift` + `Tab` för att flytta tillbaka fokus på bilden.
 
@@ -378,13 +378,13 @@ Så här förhandsgranskar du en resurs med tangentbordet:
 
 ## Redigera egenskaper och metadata {#editing-properties}
 
-1. Navigera till resursens plats för att redigera dess metadata.
+1. Navigera till platsen för resursen vars metadata du vill redigera.
 
-1. Markera resursen och klicka på **[!UICONTROL Properties]** i verktygsfältet för att visa resursegenskaper. Du kan också välja snabbåtgärden **[!UICONTROL Properties]** på resurskortet.
+1. Markera resursen och välj **[!UICONTROL Properties]** i verktygsfältet så att du kan visa resursens egenskaper. Du kan också välja snabbåtgärden **[!UICONTROL Properties]** på resurskortet.
 
    ![Snabbåtgärden Egenskaper för resurskortvyn](assets/properties_quickaction.png)
 
-1. Redigera metadataegenskaperna under olika flikar på sidan [!UICONTROL Properties]. Du kan till exempel redigera titeln, beskrivningen och så vidare på fliken **[!UICONTROL Basic]**.
+1. Redigera metadataegenskaperna under olika flikar på sidan [!UICONTROL Properties]. Redigera till exempel rubriken och beskrivningen under fliken **[!UICONTROL Basic]**.
 
    >[!NOTE]
    >
@@ -421,7 +421,7 @@ Så här förhandsgranskar du en resurs med tangentbordet:
    Mer information finns i [Resursinsikter](/help/assets/asset-insights.md).
 
 1. Klicka på **[!UICONTROL Save & Close]**.
-1. Navigera till användargränssnittet för [!DNL Assets]. De redigerade metadataegenskaperna, inklusive titel, beskrivning, omdömen och så vidare, visas på tillgångskortet i kortvyn och under relevanta kolumner i listvyn.
+1. Navigera till användargränssnittet för [!DNL Assets]. De redigerade metadataegenskaperna, inklusive titel, beskrivning, omdömen och så vidare, visas på resurskortet i kortvyn och under relevanta kolumner i listvyn.
 
 ## Kopiera resurser {#copying-assets}
 
@@ -456,7 +456,7 @@ Några attribut som är unika för en viss kopia av en tillgång överförs inte
 ## Flytta och byta namn på resurser {#moving-or-renaming-assets}
 
 När du flyttar resurser (eller mappar) till en annan plats dupliceras inte resurserna (eller mapparna) till skillnad från när du kopierar resursen. Resurserna (eller mapparna) placeras på målplatsen och tas bort från källplatsen. Du kan också byta namn på resursen när du flyttar den till den nya platsen.
-Om du flyttar en publicerad resurs till en annan plats kan du välja att publicera om resursen. Som standard avpubliceras en flyttningsåtgärd för en publicerad resurs automatiskt. En flyttad resurs publiceras om om författaren väljer alternativet [!UICONTROL Republish] när resursen flyttas.
+Om du flyttar en publicerad resurs till en annan plats kan du publicera om resursen. Som standard avpubliceras en flyttningsåtgärd för en publicerad resurs automatiskt. En flyttad resurs publiceras om om författaren väljer alternativet [!UICONTROL Republish] när resursen flyttas.
 
 ![Du kan publicera om en redan publicerad resurs när du flyttar den](assets/republish-on-move.png)
 
@@ -509,7 +509,7 @@ När du flyttar resurser genom att dra dem öppnas inte guiden [!UICONTROL Move 
 
 1. Du kan lägga till eller ta bort återgivningar för en resurs, förutom originalet. Navigera till platsen för resursen som du vill lägga till eller ta bort återgivningar för.
 
-1. Klicka på resursen för att öppna sidan.
+1. Klicka på resursen så att sidan öppnas.
 1. I Experience Manager-gränssnittet väljer du **[!UICONTROL Renditions]** i listan.
 1. I panelen **[!UICONTROL Renditions]** visar du listan över återgivningar som genererats för resursen.
 
@@ -535,7 +535,7 @@ När du flyttar resurser genom att dra dem öppnas inte guiden [!UICONTROL Move 
 
    Du kan konfigurera dimensionerna för den återgivning som du vill ska visas på informationssidan för en bild- eller videoresurs. Beroende på vilka dimensioner du anger visar [!DNL Assets] återgivningen med de exakta eller närmaste dimensionerna.
 
-   Om du vill konfigurera återgivningsdimensionerna för en bild på resursdetaljnivån överlagrar du noden `renditionpicker` (`libs/dam/gui/content/assets/assetpage/jcr:content/body/content/content/items/assetdetail/items/col1/items/assetview/renditionpicker`) och konfigurera värdet för breddegenskapen (width). Konfigurera egenskapen **[!UICONTROL size (Long) in KB]** i stället för bredden för att anpassa återgivningen på resursdetaljsidan utifrån bildstorleken. För storleksbaserad anpassning prioriterar egenskapen `preferOriginal` originalet om storleken på den matchade återgivningen är större än originalet.
+   Om du vill konfigurera återgivningsdimensionerna för en bild på resursdetaljnivån överlagrar du noden `renditionpicker` (`libs/dam/gui/content/assets/assetpage/jcr:content/body/content/content/items/assetdetail/items/col1/items/assetview/renditionpicker`) och konfigurera värdet för breddegenskapen (width). Konfigurera egenskapen **[!UICONTROL size (Long) in KB]** i stället för bredden så att du kan anpassa återgivningen på resursdetaljsidan baserat på bildstorleken. För storleksbaserad anpassning prioriterar egenskapen `preferOriginal` originalet om storleken på den matchade återgivningen är större än originalet.
 
    På samma sätt kan du anpassa anteckningssidans bild genom att åsidosätta `libs/dam/gui/content/assets/annotate/jcr:content/body/content/content/items/content/renditionpicker`.
 
@@ -590,7 +590,7 @@ Mer information om [!DNL Dynamic Media] finns i [publicera [!DNL Dynamic Media] 
 
 1. Navigera till platsen för resursen eller resursmappen som du vill publicera eller som du vill ta bort från publiceringsmiljön (avpublicera).
 
-1. Markera resursen eller mappen som ska avpubliceras och klicka på **[!UICONTROL Manage Publication]** ![alternativet Hantera publikation](assets/do-not-localize/globe-publication.png) i verktygsfältet. Du kan även publicera snabbt genom att välja alternativet **[!UICONTROL Quick Publish]** i verktygsfältet. Om mappen som du vill publicera innehåller en tom mapp publiceras inte den tomma mappen.
+1. Markera resursen eller mappen som du vill avpublicera och klicka på **[!UICONTROL Manage Publication]** ![alternativet Hantera publikation](assets/do-not-localize/globe-publication.png) i verktygsfältet. Du kan även publicera snabbt genom att välja alternativet **[!UICONTROL Quick Publish]** i verktygsfältet. Om mappen som du vill publicera innehåller en tom mapp publiceras inte den tomma mappen.
 
 1. Välj **[!UICONTROL Publish]** eller **[!UICONTROL Unpublish]** efter behov.
 
@@ -608,7 +608,7 @@ Förstå följande begränsningar och tips för publicering eller avpublicering 
 * Alternativet [!UICONTROL Manage Publication] är bara tillgängligt för användarkonton som har replikeringsbehörigheter.
 * När du avpublicerar en komplex resurs avpublicerar du bara resursen. Undvik att avpublicera referenserna eftersom andra publicerade resurser kan referera till dem.
 * Tomma mappar publiceras inte.
-* Om du publicerar ett material som bearbetas publiceras bara det ursprungliga innehållet. Återgivningarna saknas. Antingen väntar du på att bearbetningen ska slutföras och publicerar eller publicerar om resursen när bearbetningen är klar.
+* Om du publicerar en resurs som bearbetas publiceras bara det ursprungliga innehållet. Återgivningarna saknas. Antingen väntar du tills bearbetningen är klar och publicerar eller publicerar om resursen när bearbetningen är klar.
 
 ## Stängd användargrupp {#closed-user-group}
 
@@ -616,7 +616,7 @@ En stängd användargrupp (CUG) används för att begränsa åtkomst till specif
 
 CUG är ett extra sätt att begränsa åtkomsten till dina resurser. Du kan också konfigurera en inloggningssida för mappen.
 
-1. Välj en mapp från gränssnittet [!DNL Assets] och klicka på alternativet [!UICONTROL Properties] i verktygsfältet för att visa egenskapssidan.
+1. Välj en mapp i gränssnittet [!DNL Assets] och klicka på alternativet [!UICONTROL Properties] i verktygsfältet så att du kan visa egenskapssidan.
 1. Lägg till medlemmar eller grupper under **[!UICONTROL Closed User Group]** på fliken **[!UICONTROL Permissions]**.
 
    ![Lägg till användare i stängd användargrupp](assets/add_user.png)
@@ -634,7 +634,7 @@ CUG är ett extra sätt att begränsa åtkomsten till dina resurser. Du kan ocks
 
 ## Söka efter resurser {#assetsearch}
 
-Att söka resurser är centralt för användningen av ett digitalt resurshanteringssystem - oavsett om det är avsett för kreativa användare, för robust hantering av resurser av företagsanvändare och marknadsförare eller för administration av DAM-administratörer.
+Att söka efter resurser är centralt för användningen av ett digitalt resurshanteringssystem. Den här funktionaliteten är viktig för kreatörerna, för effektiv hantering av resurser av företagsanvändare och marknadsförare eller för administration av DAM-administratörer.
 
 Mer information om enkla, avancerade och anpassade sökningar för att identifiera och använda de lämpligaste resurserna finns i [söka resurser i Experience Manager](search-assets.md).
 
@@ -682,7 +682,7 @@ Med redigeringsverktygen i gränssnittet [!DNL Assets] kan du utföra små redig
 
    ![Roteringsalternativ medsols och motsols](assets/do-not-localize/rotate-options.png)
 
-1. Klicka på lämpliga **[!UICONTROL Flip]**-alternativ för att vända bilden vågrätt ![spegla vågrätt](assets/do-not-localize/flip-horizontal.png) eller lodrätt ![spegla lodrätt](assets/do-not-localize/flip-vertical.png).
+1. Klicka på lämpliga **[!UICONTROL Flip]**-alternativ om du vill vända bilden vågrätt ![spegla vågrätt](assets/do-not-localize/flip-horizontal.png) eller lodrätt ![spegla lodrätt](assets/do-not-localize/flip-vertical.png).
 
 1. Slutför bildredigeringen genom att klicka på **[!UICONTROL Finish]** ![alternativet Slutför](assets/do-not-localize/check-ok-done-icon.png). När du klickar på **Slutför** startas även omgenereringen av återgivningar.
 
@@ -730,7 +730,7 @@ Videoanteckningar stöds bara i webbläsare med HTML5-kompatibla videoformat. Vi
 
 1. Lägg till en kommentar i rutan **[!UICONTROL Comment]** längst ned på tidslinjen. Du kan också markera ett område i bilden och lägga till en anteckning i dialogrutan **[!UICONTROL Add Annotation]**.
 
-1. Om du vill meddela en användare om en anteckning anger du användarens e-postadress och lägger till kommentaren. Om du till exempel vill meddela Aaron MacDonald om en anteckning anger du @aa. Tips för alla matchande användare visas i en lista. Välj Aaron e-postadress i listan för att tagga henne med kommentaren. På samma sätt kan du tagga fler användare var som helst i anteckningen eller före eller efter den.
+1. Om du vill meddela en användare om en anteckning anger du användarens e-postadress och lägger till kommentaren. Om du till exempel vill meddela Aaron MacDonald om en anteckning anger du @aa. Tips för alla matchande användare visas i en lista. Välj Arons e-postadress i listan så att du kan tagga personen med kommentaren. På samma sätt kan du tagga fler användare var som helst i anteckningen eller före eller efter den.
 
    ![Ange användarens e-postadress och lägg till kommentar för att meddela användaren](assets/annotate-gif.gif)
 
@@ -780,7 +780,7 @@ Du kan bara visa en anteckning åt gången.
 1. I gränssnittet Experience Manager väljer du **[!UICONTROL Timeline]**.
 1. I listan **[!UICONTROL Show All]** på tidslinjen väljer du **[!UICONTROL Comments]** för att filtrera resultatet baserat på kommentarer.
 
-   Klicka på en kommentar på panelen **[!UICONTROL Timeline]** för att visa motsvarande anteckning på bilden.
+   Klicka på en kommentar på panelen **[!UICONTROL Timeline]** om du vill visa motsvarande anteckning på bilden.
 
    ![Panelen Tidslinje för att visa anteckningar i bilden](assets/timeline-view-annotations.png)
 
@@ -826,7 +826,7 @@ Om du vill skriva ut anteckningarna och granskningsstatusen klickar du på **[!U
    >
    >Om resursen har delresurser kan du skriva ut alla delresurser tillsammans med deras specifika sidvisa anteckningar.
 
-   Om du vill ändra utseendet på den återgivna PDF-filen, till exempel teckensnittsfärg, storlek och format, bakgrundsfärg för kommentarer och statusvärden, öppnar du **[!UICONTROL Annotation PDF configuration]** i Configuration Manager och ändrar önskade alternativ. Om du till exempel vill ändra visningsfärgen för den godkända statusen ändrar du färgkoden i motsvarande fält. Mer information om hur du ändrar teckenfärg i anteckningar finns i [Kommentera](/help/assets/manage-assets.md#annotating).
+   Om du vill redigera utseendet på den återgivna PDF-filen, till exempel teckensnittsfärg, storlek och format, öppnar du **[!UICONTROL Annotation PDF configuration]** från Configuration Manager och ändrar önskade alternativ. Om du till exempel vill ändra visningsfärgen för den godkända statusen ändrar du färgkoden i motsvarande fält. Mer information om hur du ändrar teckenfärg i anteckningar finns i [Kommentera](/help/assets/manage-assets.md#annotating).
 
    ![Konfiguration för att skriva ut resursanteckning i PDF-dokument](assets/annotation-print-pdf-config.png)
 
@@ -840,12 +840,12 @@ Om en resurs innehåller anteckningar på främmande språk (särskilt icke-lati
    * I katalogalternativet Systemteckensnitt anger du den fullständiga sökvägen till teckensnittskatalogen på datorn. Om du till exempel är Mac-användare kan du ange sökvägen som */Library/Fonts* i katalogalternativet Systemteckensnitt. [!DNL Experience Manager] hämtar teckensnitten från den här katalogen.
    * Skapa en katalog med namnet `fonts` i mappen `crx-quickstart`. Font Manager-tjänsten CQ-DAM-Handler-Gibson hämtar automatiskt teckensnitten på platsen `crx-quickstart/fonts`. Du kan åsidosätta den här standardsökvägen inifrån katalogalternativet Adobe Server Fonts.
 
-   * Skapa en ny mapp för teckensnitt i datorn och lagra önskade teckensnitt i mappen. Ange sedan den fullständiga sökvägen till mappen i katalogalternativet Kundteckensnitt.
+   * Skapa en mapp för teckensnitt i datorn och lagra önskade teckensnitt i mappen. Ange sedan den fullständiga sökvägen till mappen i katalogalternativet Kundteckensnitt.
 
 1. Öppna PDF-konfigurationen för anteckningen från URL:en `https://[aem_server]:[4502]/system/console/configMgr/com.day.cq.dam.core.impl.annotation.pdf.AnnotationPdfConfig`.
 1. Konfigurera Antecknings-PDF:en med rätt uppsättning teckensnittsfamiljer enligt följande:
 
-   * Inkludera strängen `<font_family_name_of_custom_font, sans-serif>` i alternativet för teckensnittsfamilj. Om du till exempel vill skriva ut anteckningar i CJK (kinesiska, japanska och koreanska), inkluderar du strängen `Arial Unicode MS, Noto Sans, Noto Sans CJK JP, sans-serif` i alternativet för teckensnittsfamilj. Om du vill skriva ut anteckningar på hindi hämtar du lämpligt teckensnitt och konfigurerar teckensnittsfamiljen som Arial Unicode MS, Noto Sans, Noto Sans CJK JP, Noto Sans Devanagari, sans-serif.
+   * Inkludera strängen `<font_family_name_of_custom_font, sans-serif>` i alternativet för teckensnittsfamilj. Om du till exempel vill skriva ut anteckningar i CJK (kinesiska, japanska och koreanska), inkluderar du strängen `Arial Unicode MS, Noto Sans, Noto Sans CJK JP, sans-serif` i alternativet för teckensnittsfamilj. Om du vill skriva ut anteckningar på hindi hämtar du rätt teckensnitt och konfigurerar teckensnittsfamiljen som Arial® Unicode MS®, Noto Sans, Noto Sans CJK JP, Noto Sans Devanagari, sans-serif.
 
 1. Starta om distributionen av [!DNL Experience Manager].
 
@@ -862,7 +862,7 @@ Här är ett exempel på hur du kan konfigurera [!DNL Experience Manager] för a
 
 ## Skapa, hantera, förhandsgranska och återställa resursversioner {#asset-versioning}
 
-Versionshantering skapar en ögonblicksbild av digitala resurser vid en viss tidpunkt. Versionshantering hjälper till att återställa resurser till ett tidigare läge vid ett senare tillfälle. Om du till exempel vill ångra en ändring som du har gjort i en resurs återställer du den oredigerade versionen av resursen. I [!DNL Experience Manager] kan du skapa en version, visa den aktuella revisionen, visa skillnaderna sida vid sida mellan två versioner av bilder och återställa en resurs till den tidigare versionen.
+Versionshantering skapar en ögonblicksbild av digitala resurser vid en viss tidpunkt. Versionshantering hjälper dig att återställa resurser till ett tidigare läge senare. Om du till exempel vill ångra en ändring som du har gjort i en resurs återställer du den oredigerade versionen av resursen. I [!DNL Experience Manager] kan du skapa en version, visa den aktuella revisionen, visa skillnaderna sida vid sida mellan två versioner av bilder och återställa en resurs till den tidigare versionen.
 
 Du kan skapa versioner i [!DNL Experience Manager] i följande scenarier:
 
@@ -882,7 +882,7 @@ Du kan även aktivera automatisk versionshantering via ett arbetsflöde. När du
 1. Så här skapar du en version av resursen:
 
    * Klicka på **[!UICONTROL Actions]** längst ned.
-   * Klicka på **[!UICONTROL Save as Version]** för att skapa en version för resursen. Du kan även lägga till en etikett och en kommentar.
+   * Klicka på **[!UICONTROL Save as Version]** så att du kan skapa en version för resursen. Du kan även lägga till en etikett och en kommentar.
    * Klicka på **[!UICONTROL Create]** för att skapa en version.
 
       ![Skapa resursversion från sidofältet](assets/create-new-version-from-timeline.png)
