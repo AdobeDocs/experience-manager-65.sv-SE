@@ -7,11 +7,12 @@ topic-tags: dynamic-media
 content-type: reference
 docset: aem65
 role: User, Admin
+mini-toc-levels: 3
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: Konfiguration,Scene7-läge
-source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
+source-git-commit: 9cca48f13f2e6f26961cff86d71f342cab422a78
 workflow-type: tm+mt
-source-wordcount: '5785'
+source-wordcount: '6430'
 ht-degree: 3%
 
 ---
@@ -26,7 +27,8 @@ I följande arkitekturdiagram beskrivs hur läget Dynamic Media - Scene7 fungera
 
 Med den nya arkitekturen ansvarar Experience Manager för de viktigaste källresurserna och synkningarna med Dynamic Media för bearbetning och publicering av mediefiler:
 
-1. När den primära källresursen överförs till Experience Manager replikeras den till Dynamic Media. Då hanterar Dynamic Media all bearbetning och generering av resurser, till exempel videokodning och dynamiska varianter av en bild. <!-- (In Dynamic Media - Scene7 mode, be aware that you can only upload assets whose file sizes are 2 GB or less.) Jira ticket CQ-4286561 fixed this issue. DM-S7 NOW SUPPORTS THE UPLOAD OF ASSETS LARGER THAN 2 GB. -->
+1. När den primära källresursen överförs till Experience Manager replikeras den till Dynamic Media. Då hanterar Dynamic Media all bearbetning och generering av resurser, till exempel videokodning och dynamiska varianter av en bild.
+(I Dynamic Media - Scene7-läge är standardstorleken för överföring 2 GB eller mindre. Om du vill aktivera filstorlekar på 2 GB upp till 15 GB läser du [ (Valfritt) Konfigurera Dynamic Media - Scene7-läge för överföring av resurser som är större än 2 GB](#optional-config-dms7-assets-larger-than-2gb).)
 1. När återgivningarna har genererats kan Experience Manager på ett säkert sätt komma åt och förhandsgranska Dynamic Media-fjärråtergivningarna (inga binärfiler skickas tillbaka till Experience Manager-instansen).
 1. När innehållet är klart att publiceras och godkännas utlöses Dynamic Media-tjänsten att skicka ut innehåll till leveransservrar och cachelagra innehåll på leveransnätverket.
 
@@ -147,11 +149,95 @@ Om du vill anpassa konfigurationen ytterligare kan du utföra alla åtgärder un
 
 Om du vill anpassa konfigurationen och konfigurationen av Dynamic Media - Scene7 eller optimera prestandan ytterligare kan du utföra en eller flera av följande *valfria* uppgifter:
 
+* [(Valfritt) Konfigurera Dynamic Media - Scene7-läge för överföring av resurser som är större än 2 GB](#optional-config-dms7-assets-larger-than-2gb)
+
 * [(Valfritt) Installation och konfiguration av Dynamic Media - inställningar för Scene7-läge](#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings)
 
 * [(Valfritt) Justera prestanda för Dynamic Media - Scene7-läge](#optional-tuning-the-performance-of-dynamic-media-scene-mode)
 
 * [(Valfritt) Filtrera resurser för replikering](#optional-filtering-assets-for-replication)
+
+### (Valfritt) Konfigurera Dynamic Media - Scene7-läge för överföring av resurser som är större än 2 GB {#optional-config-dms7-assets-larger-than-2gb}
+
+I Dynamic Media - Scene7-läge är standardfilstorleken för överföring av resurser 2 GB eller mindre. Du kan dock välja att konfigurera överföring av resurser som är större än 2 GB och upp till 15 GB.
+
+Observera följande krav och punkter om du tänker använda den här funktionen:
+
+* Du måste köra Experience Manager 6.5 med Service Pack 6.5.4.0 eller senare.
+* [Oak&#39;s Direct Binary Access ](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html) downloadis enabled.
+
+   Om du vill aktivera anger du egenskapen `presignedHttpDownloadURIExpirySeconds > 0` i datalagerkonfigurationen. Värdet måste vara tillräckligt långt för att ladda ned större binärfiler och eventuellt försöka igen.
+
+* Resurser som är större än 15 GB överförs inte. (Storleksgränsen anges i steg 8 nedan.)
+* När arbetsflödet för att bearbeta resurser i Scene7 utlöses för en mapp, bearbetas de redan överförda stora resurserna i mappen om. Däremot överförs stora mediefiler som inte finns i Scene7.
+* Stora överföringar fungerar bara för nyttolaster för en resurs, inte om arbetsflödet aktiveras för en mapp.
+
+**Så här konfigurerar du Dynamic Media - Scene7-läge för överföring av resurser som är större än 2 GB:**
+
+1. I Experience Manager väljer du Experience Manager logotypen för att komma åt den globala navigeringskonsolen och navigerar sedan till **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL CRXDE Lite]**.
+
+1. Gör något av följande i fönstret CRXDE Lite:
+
+   * Navigera till följande sökväg i den vänstra listen:
+
+      `/libs/dam/gui/content/assets/jcr:content/actions/secondary/create/items/fileupload`
+
+   * Kopiera och klistra in sökvägen ovanför i fältet CRXDE Lite under verktygsfältet och tryck sedan på `Enter`.
+
+1. Högerklicka på `fileupload` i den vänstra listen och välj **[!UICONTROL Overlay Node]** på snabbmenyn.
+
+   ![Alternativet Täcka över nod](/help/assets/assets-dm/uploadassets15gb_a.png)
+
+1. I dialogrutan Overlay Node markerar du kryssrutan **[!UICONTROL Match Node Types]** för att aktivera (aktivera) alternativet och väljer sedan **[!UICONTROL OK]**.
+
+   ![Dialogrutan Overlay Node](/help/assets/assets-dm/uploadassets15gb_b.png)
+
+1. Gör något av följande i fönstret CRXDE Lite:
+
+   * Navigera till följande nodsökväg för övertäckning i den vänstra listen:
+
+      `/apps/dam/gui/content/assets/jcr:content/actions/secondary/create/items/fileupload`
+
+   * Kopiera och klistra in sökvägen ovanför i fältet CRXDE Lite under verktygsfältet och tryck sedan på `Enter`.
+
+1. Gå till `sizeLimit` under kolumnen **[!UICONTROL Name]** på fliken **[!UICONTROL Properties]**.
+1. Dubbelklicka på värdefältet till höger om `sizeLimit`-namnet under **[!UICONTROL Value]**-kolumnen.
+1. Ange lämpligt värde i byte så att du kan öka storleksgränsen till den önskade överföringsstorleken. Om du till exempel vill öka storleken på överföringsresursen till 10 GB anger du `10737418240` i värdefältet.
+Du kan ange ett värde på upp till 15 GB (`2013265920` byte). I det här fallet överförs inte överförda resurser som är större än 15 GB.
+
+
+   ![Gränsvärde för storlek](/help/assets/assets-dm/uploadassets15gb_c.png)
+
+1. I närheten av det övre vänstra hörnet av fönstret CRXDE Lite väljer du **[!UICONTROL Save All]**.
+
+   *Ange nu tidsgränsen för arbetsflödets hanterare för externa processer i Adobe Granite genom att göra följande:*
+
+1. I Experience Manager väljer du Experience Manager logotypen för att komma åt den globala navigeringskonsolen.
+1. Gör något av följande:
+
+   * Navigera till följande URL-sökväg:
+
+      `localhost:4502/system/console/configMgr/com.adobe.granite.workflow.core.job.ExternalProcessJobHandler`
+
+   * Kopiera och klistra in sökvägen ovanför i URL-fältet i webbläsaren. Se till att du ersätter `localhost:4502` med din egen Experience Manager-instans.
+
+1. I dialogrutan **[!UICONTROL Adobe Granite Workflow External Process Job Handler]** anger du värdet till `18000` minuter (fem timmar) i fältet **[!UICONTROL Max Timeout]**. Standardvärdet är 1 0800 minuter (tre timmar).
+
+   ![Högsta timeout-värde](/help/assets/assets-dm/uploadassets15gb_d.png)
+
+1. Välj **[!UICONTROL Save]** längst ned till höger i dialogrutan.
+
+   *Ange nu tidsgränsen för Scene7 Direct Binary Upload-processen genom att göra följande:*
+
+1. I Experience Manager väljer du Experience Manager logotypen för att komma åt den globala navigeringskonsolen.
+1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**.
+1. Välj **[!UICONTROL Dynamic Media Encode Video]** på sidan Arbetsflödesmodeller.
+1. Välj **[!UICONTROL Edit]** i verktygsfältet.
+1. Dubbelklicka på processteget **[!UICONTROL Scene7 Direct Binary Upload]** på arbetsflödessidan.
+1. I dialogrutan **[!UICONTROL Step Properties]**, under fliken **[!UICONTROL Common]**, under rubriken **[!UICONTROL Advanced Settings]**, i fältet **[!UICONTROL Timeout]** anger du värdet `18000` minuter (fem timmar). Standardvärdet är `3600` minuter (en timme).
+1. Välj **[!UICONTROL OK]**.
+1. Välj **[!UICONTROL Sync]**.
+1. Upprepa steg 14-21 för arbetsflödesmodellen **[!UICONTROL DAM Update Asset]** och arbetsflödesmodellen **[!UICONTROL Scene7 Reprocess Workflow]**.
 
 ### (Valfritt) Installation och konfiguration av Dynamic Media - inställningar för Scene7-läge {#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings}
 
@@ -525,7 +611,7 @@ Kön för Bevilja överföring av arbetsflöde används för **[!UICONTROL DAM U
 
 **Så här uppdaterar du den tillfälliga arbetsflödeskön för Granite:**
 
-1. Gå till [https://&lt;server>/system/console/configMgr](https://localhost:4502/system/console/configMgr) och sök efter **kö: Bevilja övergångsarbetsflödeskö**.
+1. Navigera till [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr) och sök efter **Kö: Bevilja övergångsarbetsflödeskö**.
 
    >[!NOTE]
    En textsökning är nödvändig i stället för en direkt URL eftersom OSGi PID genereras dynamiskt.
