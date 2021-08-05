@@ -6,9 +6,9 @@ mini-toc-levels: 1
 role: User,Admin
 feature: Metadata
 exl-id: 0dd322cd-ce97-4335-825d-71f72a5e438c
-source-git-commit: 771bccf12f79648afd59573dad0b7fdf95c6e1e2
+source-git-commit: d3fcf3e55af1c57bed1db9191aa76576d3bedb29
 workflow-type: tm+mt
-source-wordcount: '3358'
+source-wordcount: '3408'
 ht-degree: 5%
 
 ---
@@ -28,6 +28,8 @@ Så här visar och redigerar du egenskapssidan för en resurs:
    ![Fliken Grundläggande i resursegenskaper, där resurstypen inte kan ändras](assets/asset-properties-basic-tab.png)
 
    *Bild: Fliken Grundläggande för resurs  [!UICONTROL Properties].*
+
+   Se till att bara en egenskap mappas till ett fält när du skapar eller redigerar metadatamodellen.
 
    Om du vill ändra MIME-typen för en resurs använder du ett anpassat metadatamatchschema eller ändrar ett befintligt formulär. Mer information finns i [Redigera metadataschema Forms](#edit-metadata-schema-forms). Om du ändrar metadatamatchemat för en MIME-typ ändras egenskapens sidlayout för resurserna och alla undertyper. Om du till exempel ändrar ett jpeg-schema under `default/image` ändras bara metadatalayouten (resursegenskaper) för resurser med MIME-typen `image/jpeg`. Om du redigerar standardschemat ändrar du metadatalayouten för alla typer av resurser.
 
@@ -99,13 +101,13 @@ Fliken **[!UICONTROL Build Form]** visar de formulärobjekt som du använder i s
 
 #### Redigera metadatakomponenten {#edit-the-metadata-component}
 
-Om du vill redigera egenskaperna för en metadatakomponent i formuläret klickar du på komponenten för att redigera alla eller en delmängd av följande egenskaper på fliken **[!UICONTROL Settings]**.
+Om du vill redigera egenskaperna för en metadatakomponent i formuläret klickar du på komponenten för att redigera alla eller en delmängd av följande egenskaper på fliken **[!UICONTROL Settings]**. Vi rekommenderar att du bara mappar ett fält till en viss egenskap i metadataschemat. I annat fall hämtas det senast tillagda fältet som är mappat till egenskapen av systemet.
 
 **Fältetikett**: Namnet på metadataegenskapen som visas på egenskapssidan för resursen.
 
 **Mappa till egenskap**: This property specifies the relative path to or name of the asset node where it is saved in the CRX database. Den börjar med `./` för att ange att sökvägen finns under objektets nod.
 
-Följande är giltiga värden för den här egenskapen:
+Nedan följer exempel på giltiga värden för en egenskap:
 
 * `./jcr:content/metadata/dc:title`: Lagrar värdet vid resursens metadatanod som egenskapen `dc:title`.
 
