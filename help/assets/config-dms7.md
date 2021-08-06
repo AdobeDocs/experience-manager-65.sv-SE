@@ -10,9 +10,9 @@ role: User, Admin
 mini-toc-levels: 3
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: Konfiguration,Scene7-läge
-source-git-commit: 9cca48f13f2e6f26961cff86d71f342cab422a78
+source-git-commit: 5769ddeefe2d01d32bb9a0611dc06af68a848936
 workflow-type: tm+mt
-source-wordcount: '6430'
+source-wordcount: '6509'
 ht-degree: 3%
 
 ---
@@ -161,16 +161,21 @@ Om du vill anpassa konfigurationen och konfigurationen av Dynamic Media - Scene7
 
 I Dynamic Media - Scene7-läge är standardfilstorleken för överföring av resurser 2 GB eller mindre. Du kan dock välja att konfigurera överföring av resurser som är större än 2 GB och upp till 15 GB.
 
-Observera följande krav och punkter om du tänker använda den här funktionen:
+Om du tänker använda den här funktionen bör du vara medveten om följande krav och punkter:
 
-* Du måste köra Experience Manager 6.5 med Service Pack 6.5.4.0 eller senare.
-* [Oak&#39;s Direct Binary Access ](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html) downloadis enabled.
+* Du måste köra Experience Manager 6.5 med Service Pack 6.5.4.0 eller senare i Dynamic Media - Scene7-läge.
+* Den här stora överföringsfunktionen stöds bara för [*Managed Services*](https://business.adobe.com/products/experience-manager/managed-services.html)-kunder.
+* Kontrollera att din Experience Manager-instans är konfigurerad med Amazon S3 eller Microsoft® Azure Blob Storage.
 
-   Om du vill aktivera anger du egenskapen `presignedHttpDownloadURIExpirySeconds > 0` i datalagerkonfigurationen. Värdet måste vara tillräckligt långt för att ladda ned större binärfiler och eventuellt försöka igen.
+   >[!NOTE]
+   Konfigurera Azure Blob-lagringen med båda åtkomstnycklarna (nyckel1 och nyckel2) eftersom den här stora överföringsfunktionen inte stöds med AzureSas i Blob-lagringskonfigurationen.
+
+* Hämtning [Direkt binär åtkomst ](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html) är aktiverad (Oak&#39;s *Direct Binary Access upload* krävs inte).
+
+   Om du vill aktivera hämtning av direkt binär åtkomst anger du egenskapen `presignedHttpDownloadURIExpirySeconds > 0` i datalagerkonfigurationen. Värdet måste vara tillräckligt långt för att ladda ned större binärfiler och eventuellt försöka igen.
 
 * Resurser som är större än 15 GB överförs inte. (Storleksgränsen anges i steg 8 nedan.)
-* När arbetsflödet för att bearbeta resurser i Scene7 utlöses för en mapp, bearbetas de redan överförda stora resurserna i mappen om. Däremot överförs stora mediefiler som inte finns i Scene7.
-* Stora överföringar fungerar bara för nyttolaster för en resurs, inte om arbetsflödet aktiveras för en mapp.
+* När arbetsflödet för **[!UICONTROL Dynamic Media Reprocess]**-resurser aktiveras för en mapp bearbetas alla stora resurser som redan är synkroniserade med Dynamic Media-företaget om. Om stora resurser ännu inte har synkroniserats i mappen överförs inte resursen. Om du vill synkronisera stora resurser i Dynamic Media kan du därför köra arbetsflödet **[!UICONTROL Dynamic Media Reprocess]** för resurser på enskilda resurser.
 
 **Så här konfigurerar du Dynamic Media - Scene7-läge för överföring av resurser som är större än 2 GB:**
 
@@ -237,7 +242,7 @@ Du kan ange ett värde på upp till 15 GB (`2013265920` byte). I det här fallet
 1. I dialogrutan **[!UICONTROL Step Properties]**, under fliken **[!UICONTROL Common]**, under rubriken **[!UICONTROL Advanced Settings]**, i fältet **[!UICONTROL Timeout]** anger du värdet `18000` minuter (fem timmar). Standardvärdet är `3600` minuter (en timme).
 1. Välj **[!UICONTROL OK]**.
 1. Välj **[!UICONTROL Sync]**.
-1. Upprepa steg 14-21 för arbetsflödesmodellen **[!UICONTROL DAM Update Asset]** och arbetsflödesmodellen **[!UICONTROL Scene7 Reprocess Workflow]**.
+1. Upprepa steg 14-21 för arbetsflödesmodellen **[!UICONTROL DAM Update Asset]** och arbetsflödesmodellen **[!UICONTROL Dynamic Media Reprocess]**.
 
 ### (Valfritt) Installation och konfiguration av Dynamic Media - inställningar för Scene7-läge {#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings}
 
