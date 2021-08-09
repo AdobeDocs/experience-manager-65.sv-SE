@@ -11,10 +11,10 @@ docset: aem65
 role: User, Admin
 feature: Arbetsflöde,Resurshantering,Återgivningar
 exl-id: 3d9367ed-5a02-43aa-abd9-24fae457d4c5
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 363e5159d290ecfbf4338f6b9793e11b613389a5
 workflow-type: tm+mt
 source-wordcount: '1324'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -41,7 +41,7 @@ Genom att använda konsekventa och lämpliga namngivningsstrategier för filer o
 >
 >Detsamma gäller även när du flyttar resurser mellan två mappar som har samma profil tilldelad.
 
-## Bearbeta resurser i en mapp {#reprocessing-assets}
+## Bearbeta resurser igen i en mapp {#reprocessing-assets}
 
 >[!NOTE]
 >
@@ -77,20 +77,20 @@ Se [Justera batchstorleken för arbetsflödet för ombearbetning](#adjusting-loa
    * Om det finns en eller flera undermappar med resurser i den markerade huvudmappen, bearbetas alla resurser i mapphierarkin om i arbetsflödet.
    * Som en god vana bör du undvika att köra det här arbetsflödet på en mapphierarki som har fler än 1 000 resurser.
 
-1. Klicka på **[!UICONTROL Timeline]** i listrutan nära sidans övre vänstra hörn.
-1. Klicka på karikonen ( **^** ) nära sidans nedre vänstra hörn till höger om kommentarsfältet.
+1. I den nedrullningsbara listan i det övre vänstra hörnet på sidan väljer du **[!UICONTROL Timeline]**.
+1. I närheten av sidans nedre vänstra hörn, till höger om kommentarsfältet, väljer du karikonen ( **^** ).
 
    ![Bearbeta resursarbetsflöde 1](/help/assets/assets/reprocess-assets1.png)
 
-1. Klicka på **[!UICONTROL Start Workflow]**.
+1. Välj **[!UICONTROL Start Workflow]**.
 1. Välj **[!UICONTROL Scene7: Reprocess Assets]** i listrutan **[!UICONTROL Start Workflow]**.
 1. (Valfritt) Ange ett namn för arbetsflödet i **textrutan**. Du kan använda namnet för att referera till arbetsflödesinstansen, om det behövs.
 
    ![Bearbeta resurser 2](/help/assets/assets/reprocess-assets2.png)
 
-1. Klicka på **[!UICONTROL Start]** och sedan på **[!UICONTROL Confirm]**.
+1. Välj **[!UICONTROL Start]** och sedan **[!UICONTROL Confirm]**.
 
-   Om du vill övervaka arbetsflödet eller kontrollera dess förlopp går du till huvudkonsolsidan för Experience Manager och klickar på **[!UICONTROL Tools]** > **[!UICONTROL Workflow]**. Välj ett arbetsflöde på sidan Arbetsflödesinstanser. Klicka på **[!UICONTROL Open History]** på menyraden. Du kan också avsluta, göra uppehåll i eller byta namn på ett valt arbetsflöde från samma sida för arbetsflödesinstanser.
+   Om du vill övervaka arbetsflödet eller kontrollera förloppet väljer du **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** på huvudkonsolsidan för Experience Manager. Välj ett arbetsflöde på sidan Arbetsflödesinstanser. Välj **[!UICONTROL Open History]** på menyraden. Du kan också avsluta, göra uppehåll i eller byta namn på ett valt arbetsflöde från samma sida för arbetsflödesinstanser.
 
 ### Justera batchstorleken för arbetsflödet för ombearbetning {#adjusting-load}
 
@@ -98,14 +98,14 @@ Se [Justera batchstorleken för arbetsflödet för ombearbetning](#adjusting-loa
 
 **Om du vill justera batchstorleken för arbetsflödet för ombearbetning:**
 
-1. I Experience Manager klickar du på **[!UICONTROL Adobe Experience Manager]** för att komma åt den globala navigeringskonsolen och sedan på ikonen **[!UICONTROL Tools]** (hammer) > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**.
+1. I Experience Manager väljer du **[!UICONTROL Adobe Experience Manager]** för att komma åt den globala navigeringskonsolen och sedan **[!UICONTROL Tools]** (hammer) > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**.
 1. Välj **[!UICONTROL Scene7: Reprocess Assets]** i kortvyn eller listvyn på sidan Arbetsflödesmodeller.
 
    ![Workflow Models page with Scene7: Arbetsflödet för att bearbeta resurser som valts i kortvyn](/help/assets/assets-dm/reprocess-assets7.png)
 
-1. Klicka på **[!UICONTROL Edit]** i verktygsfältet. En ny flik i webbläsaren öppnar Scene7: Sidan med arbetsflödesmodellen Återbearbeta resurser.
-1. På Scene7: Arbetsflödessidan för att bearbeta resurser igen, i det övre högra hörnet, klickar du på **[!UICONTROL Edit]** för att låsa upp arbetsflödet.
-1. Öppna verktygsfältet genom att markera Scene7 Batch Upload-komponenten i arbetsflödet och klicka sedan på **[!UICONTROL Configure]** i verktygsfältet.
+1. Välj **[!UICONTROL Edit]** i verktygsfältet. En ny flik i webbläsaren öppnar Scene7: Sidan med arbetsflödesmodellen Återbearbeta resurser.
+1. På Scene7: Arbetsflödessidan för att bearbeta resurser igen, i det övre högra hörnet, väljer du **[!UICONTROL Edit]** för att låsa upp arbetsflödet.
+1. Öppna verktygsfältet genom att markera Scene7 Batch Upload-komponenten i arbetsflödet och välj sedan **[!UICONTROL Configure]** i verktygsfältet.
 
    ![Komponenten Scene7 Batch Upload](/help/assets/assets-dm/reprocess-assets8.png)
 
@@ -119,16 +119,16 @@ Se [Justera batchstorleken för arbetsflödet för ombearbetning](#adjusting-loa
 
    ![Egenskaper, dialogruta](/help/assets/assets-dm/reprocess-assets3.png)
 
-1. Klicka på **[!UICONTROL Done]** i det övre högra hörnet i dialogrutan **[!UICONTROL Batch Upload to Scene7 – Step Properties]**.
+1. Välj **[!UICONTROL Done]** i det övre högra hörnet i dialogrutan **[!UICONTROL Batch Upload to Scene7 – Step Properties]**.
 
-1. I det övre högra hörnet av Scene7: Bearbeta om sidan med arbetsflödesmodellen Resurser, klicka på **[!UICONTROL Sync]**. När du ser **[!UICONTROL Synced]** är arbetsflödets körningsmodell synkroniserad och klar att bearbeta resurser i en mapp igen.
+1. I det övre högra hörnet av Scene7: Sidan för arbetsflödesmodellen Återbearbeta resurser väljer du **[!UICONTROL Sync]**. När du ser **[!UICONTROL Synced]** är arbetsflödets körningsmodell synkroniserad och klar att bearbeta resurser i en mapp igen.
 
    ![Synkronisera arbetsflödesmodellen](/help/assets/assets-dm/reprocess-assets1.png)
 
 1. Stäng webbläsarfliken som visar Scene7: Arbetsflödesmodellen Återbearbeta resurser.
 
 <!--1. Return to the browser tab that has the open Workflow Models page, then press **Esc** to exit the selection.
-1. In the upper-left corner of the page, click **[!UICONTROL Adobe Experience Manager]** to access the global navigation console, then click the **[!UICONTROL Tools]** (hammer) icon > **[!UICONTROL General > CRXDE Lite]**.
+1. In the upper-left corner of the page, select **[!UICONTROL Adobe Experience Manager]** to access the global navigation console, then select the **[!UICONTROL Tools]** (hammer) icon > **[!UICONTROL General > CRXDE Lite]**.
 1. In the folder tree on the left side of the CRXDE Lite page, navigate to the following location:
 
    `/conf/global/settings/workflow/models/scene7_reprocess_assets/jcr:content/flow/reprocess/metaData`
@@ -139,10 +139,10 @@ Se [Justera batchstorleken för arbetsflödet för ombearbetning](#adjusting-loa
     * **[!UICONTROL Name]**: `reprocess-batch-size`
     * **[!UICONTROL Type]**: `Long`
     * **[!UICONTROL Value]**: enter a default value (50-1000) for the batch size
-1. In the lower-right corner, click **[!UICONTROL Add]**. The new property appears as the following:
+1. In the lower-right corner, select **[!UICONTROL Add]**. The new property appears as the following:
 
     ![Saving the new property](/help/assets/assets/workflow-models10.png)
 
-1. On the menu bar of the CRXDE Lite page, click **[!UICONTROL Save All]**.
-1. In the upper-left corner of the page, click **[!UICONTROL CRXDE Lite]** to return to the main Experience Manager console
+1. On the menu bar of the CRXDE Lite page, select **[!UICONTROL Save All]**.
+1. In the upper-left corner of the page, select **[!UICONTROL CRXDE Lite]** to return to the main Experience Manager console
 1. Repeat steps 1-7 to re-synchronize the new batch size to the Scene7: Reprocess Assets workflow model.-->
