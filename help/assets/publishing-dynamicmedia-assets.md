@@ -10,14 +10,14 @@ discoiquuid: 99d7025f-d022-4213-83c0-815a4712c573
 role: User, Admin
 exl-id: 750627fc-2a29-43ff-867e-55cb2e371043
 feature: Publicering
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 363e5159d290ecfbf4338f6b9793e11b613389a5
 workflow-type: tm+mt
 source-wordcount: '452'
 ht-degree: 2%
 
 ---
 
-# Publicera Dynamic Media Assets {#publishing-dynamic-media-assets}
+# Publicera Dynamic Media-resurser {#publishing-dynamic-media-assets}
 
 Du publicerar dina Dynamic Media-resurser genom att välja de resurser du redan har överfört och trycka på **[!UICONTROL Publish]** eller **[!UICONTROL Quick Publish]**. När dina Dynamic Media-resurser har publicerats kan du inkludera dem på en webbsida via en URL eller genom att bädda in koden på sidan.
 
@@ -45,7 +45,7 @@ Se även [Bädda in Dynamic Media Video eller Image Viewer på en webbsida](embe
 
 
 
-Mer information om publicering av en uppsättning eller resurs finns i [Publicera resurser](manage-assets.md).
+Mer information om hur du publicerar en uppsättning eller resurs finns i [Publicera resurser](manage-assets.md).
 
 ## HTTP/2-leverans av Dynamic Media-resurser {#http-delivery-of-dynamic-media-assets}
 
