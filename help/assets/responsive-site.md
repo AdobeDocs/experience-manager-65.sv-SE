@@ -10,10 +10,10 @@ discoiquuid: 5edcc765-c374-4368-a0d9-e02a713a24f2
 feature: Resurshantering
 role: User, Admin
 exl-id: 753d806f-5f44-4d73-a3a3-a2a0fc3e154b
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 363e5159d290ecfbf4338f6b9793e11b613389a5
 workflow-type: tm+mt
-source-wordcount: '323'
-ht-degree: 12%
+source-wordcount: '326'
+ht-degree: 10%
 
 ---
 
@@ -21,15 +21,15 @@ ht-degree: 12%
 
 Använd funktionen Responsiv kod när du vill dela koden för responsiv visning med webbutvecklaren. Du kopierar den responsiva (**[!UICONTROL RESS]**) koden till Urklipp så att du kan dela den med webbutvecklaren.
 
-Den här funktionen är användbar om webbplatsen finns på en WCM-fil från tredje part. Om webbplatsen däremot finns på AEM återger en extern bildserver bilden och skickar den till webbsidan.
+Den här funktionen är användbar om webbplatsen finns på en WCM-fil från tredje part. Om webbplatsen däremot finns på Adobe Experience Manager återger en extern bildserver bilden och skickar den till webbsidan.
 
-Se även [Bädda in Video Viewer på en webbsida](embed-code.md).
+Se även [Bädda in visningsprogrammet på en webbsida](embed-code.md).
 
 Se även [Länka URL:er till ditt webbprogram](linking-urls-to-yourwebapplication.md).
 
 **Så här levererar du optimerade bilder för en responsiv webbplats:**
 
-1. Navigera till bilden som du vill ange responsiv kod för och tryck på **[!UICONTROL Renditions]** i listrutan.
+1. Navigera till bilden som du vill ange responsiv kod för och välj **[!UICONTROL Renditions]** i listrutan.
 
    ![chlimage_1-408](assets/chlimage_1-408.png)
 
@@ -43,12 +43,12 @@ Se även [Länka URL:er till ditt webbprogram](linking-urls-to-yourwebapplicatio
    >
    >Dynamic Media - Hybrid-läget kräver att du publicerar bildförinställningar; Dynamic Media - Scene7-läget publicerar automatiskt bildförinställningar.
 
-1. Tryck på **[!UICONTROL RESS]**.
+1. Välj **[!UICONTROL RESS]**.
 
    ![chlimage_1-410](assets/chlimage_1-410.png)
 
 1. I dialogrutan **[!UICONTROL Embed Responsive Image]** markerar och kopierar du den responsiva kodtexten och klistrar in den på din webbplats för att komma åt den responsiva resursen.
-1. Redigera standardbrytpunkterna i inbäddningskoden så att de matchar dem för den responsiva webbplatsen direkt i koden. Testa dessutom de olika bildupplösningarna som används vid olika sidbrytpunkter.
+1. Redigera standardbrytpunkterna i inbäddningskoden så att de matchar brytpunkterna för den responsiva webbplatsen, direkt i koden. Testa dessutom de olika bildupplösningarna som används vid olika sidbrytpunkter.
 
 ## Använda HTTP/2 för att leverera dina Dynamic Media-resurser {#using-http-to-delivery-your-dynamic-media-assets}
 
