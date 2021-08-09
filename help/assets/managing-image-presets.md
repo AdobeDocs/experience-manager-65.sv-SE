@@ -1,6 +1,6 @@
 ---
 title: Hantera Dynamic Media bildförinställningar
-description: Förstå Dynamic Media bildförinställningar och lär dig hur du skapar, ändrar och hanterar bildförinställningar
+description: Lär dig hur du skapar, ändrar och hanterar bildförinställningar i Dynamic Media.
 uuid: 3e9a7af6-bf49-4cff-b516-0a3ee9765391
 mini-toc-levels: 3
 contentOwner: Rick Brough
@@ -13,9 +13,9 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/image-
 feature: Bildförinställningar
 role: User, Admin
 exl-id: 556b99fe-91c3-441f-ba81-22cb8c10ef7f
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 363e5159d290ecfbf4338f6b9793e11b613389a5
 workflow-type: tm+mt
-source-wordcount: '3707'
+source-wordcount: '3699'
 ht-degree: 7%
 
 ---
@@ -101,8 +101,8 @@ Om du vill använda Dynamic Media för att förhandsgranska och generera dynamis
 
 | **Metadataegenskap** | **Beskrivning** |
 |---|---|
-| dam:Physicalwiddinins | Dokumentets bredd i tum. |
-| dam:Physicalheightininches | Dokumenthöjd i tum. |
+| `dam:Physicalwidthininches` | Dokumentets bredd i tum. |
+| `dam:Physicalheightininches` | Dokumenthöjd i tum. |
 
 Du kommer åt alternativen för processkomponenter i `Rasterize PDF/AI Image Preview Rendition` via arbetsflödet i `DAM Update Asset`.
 
@@ -181,7 +181,7 @@ Följande skript används av Dynamic Media-integrering:
   <tr>
    <td>JPEGPagesExport.jsx</td>
    <td>Ja</td>
-   <td>Skapar en JPEG-underresurs på 300 ppi för varje sida. JPEG-underresursen är en verklig resurs som lagras under InDesign-resursen. Den är också optimerad och omvandlad till en PTIFF-fil med <code>DAM Update Asset</code>-arbetsflödet.<br /> </td>
+   <td>Skapar en 300 PPI JPEG-underresurs för varje sida. JPEG-underresursen är en verklig resurs som lagras under InDesign-resursen. Den är också optimerad och omvandlad till en PTIFF-fil med <code>DAM Update Asset</code>-arbetsflödet.<br /> </td>
   </tr>
   <tr>
    <td>PDFPagesExport.jsx</td>
@@ -193,11 +193,11 @@ Följande skript används av Dynamic Media-integrering:
 
 ## Konfigurera miniatyrstorlek för bild {#configuring-image-thumbnail-size}
 
-Du kan konfigurera storleken på miniatyrbilder genom att konfigurera de inställningarna i **[!UICONTROL DAM Update Asset]**-arbetsflödet. I arbetsflödet finns två steg där du kan konfigurera miniatyrstorlek för bildresurser. Även om ett (**[!UICONTROL Dynamic Media Process Image Assets]**) används för dynamiska bildobjekt och det andra (**[!UICONTROL Process Thumbnails]**) för generering av statiska miniatyrbilder, eller när alla andra processer inte kan generera miniatyrbilder, måste *båda ha samma inställningar.*
+Du kan konfigurera storleken på miniatyrbilder genom att konfigurera de inställningarna i **[!UICONTROL DAM Update Asset]**-arbetsflödet. I arbetsflödet finns två steg där du kan konfigurera miniatyrstorlek för bildresurser. Även om (**[!UICONTROL Dynamic Media Process Image Assets]**) används för dynamiska bildobjekt och (**[!UICONTROL Process Thumbnails]**) används för att generera statiska miniatyrbilder, eller när alla andra processer inte kan generera miniatyrbilder, måste *båda* ha samma inställningar.
 
 I steget **[!UICONTROL Dynamic Media Process Image Assets]** genereras miniatyrbilder av bildservern och den här konfigurationen är oberoende av den konfiguration som används i steget **[!UICONTROL Process Thumbnails]**. Att skapa miniatyrbilder med steget **[!UICONTROL Process Thumbnails]** är det långsammaste och mest minneskrävande sättet att skapa miniatyrbilder.
 
-Storleksändring för miniatyrbilder definieras i följande format: **[!UICONTROL width:height:center]**, till exempel *80:80:false*. Bredden och höjden bestämmer storleken i pixlar på miniatyrbilden. Mittvärdet är antingen false eller true, och om värdet är true betyder det att miniatyrbilden har exakt den storlek som anges i konfigurationen. Om den storleksändrade bilden är mindre centreras den i miniatyrbilden.
+Storleksändring för miniatyrbilder definieras i följande format: **[!UICONTROL width:height:center]**, till exempel `80:80:false`. Bredden och höjden bestämmer storleken i pixlar på miniatyrbilden. Mittvärdet är antingen false eller true, och om värdet är true betyder det att miniatyrbilden har exakt den storlek som anges i konfigurationen. Om den storleksändrade bilden är mindre centreras den i miniatyrbilden.
 
 >[!NOTE]
 >
@@ -340,7 +340,7 @@ När du skapar eller redigerar bildförinställningar finns alternativen som bes
      <li><strong>Typ  </strong>- Välj  <strong>Adaptiv</strong>  (standard),  <strong>Webb</strong> eller  <strong>Macintosh</strong>. Om du väljer <strong>GIF med alfa</strong> är Macintosh-alternativet inte tillgängligt.</li>
      <li><strong>Gitter</strong>  - Välj  <strong></strong> Diffusera eller  <strong>Av</strong>.</li>
      <li><strong>Antal färger  </strong>- Ange ett tal mellan 2 och 256.</li>
-     <li><strong>Färglista</strong>  - Ange en kommaavgränsad lista. För vitt, grått och svart anger du 00000,888888,ffff.</li>
+     <li><strong>Färglista</strong>  - Ange en kommaavgränsad lista. För vitt, grått och svart skriver du <code>000000,888888,ffffff</code>.</li>
     </ul>
     <div>
       Välja
