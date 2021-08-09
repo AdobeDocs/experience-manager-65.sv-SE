@@ -6,9 +6,9 @@ seo-description: En lista över de klient- och serverplattformar som stöds för
 content-type: reference
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 5ce72a51d69e97d7e07e9f734bfd7547fccd51f1
+source-git-commit: 0f0dfe8af5feed5227a091b89d65ef58d71eb299
 workflow-type: tm+mt
-source-wordcount: '3273'
+source-wordcount: '3266'
 ht-degree: 0%
 
 ---
@@ -132,7 +132,7 @@ Adobe Experience Manager arbetar med följande versioner av Java Virtual Machine
  </tbody>
 </table>
 
-1. Stöd för och distribution av Azul Zulu Builds of OpenJDK, inklusive alla underhållsuppdateringar av LTS-versioner, kommer att stödjas av Adobe direkt för alla AEM som använder Azul Zulu Builds of OpenJDK, med början AEM 6.5 SP9-svar. AEM 6.5 SP10 for AEM Forms Java EE. Mer information finns i [Azul Java-stödet för Adobe Experience Manager Q&amp;A](assets/adobe-azul-openjdk-license-agreement.pdf).
+1. Stöd för och distribution av Azul Zulu Builds of OpenJDK, inklusive alla underhållsuppdateringar av LTS-versioner, kommer att stödjas av Adobe direkt för alla AEM som använder Azul Zulu Builds of OpenJDK, med början AEM 6.5 SP9-svar. Mer information finns i [Azul Java-stödet för Adobe Experience Manager Q&amp;A](assets/adobe-azul-openjdk-license-agreement.pdf).
 
 1. Oraclet har flyttat till en LTS-modell (Long Term Support) för Oracle Java SE-produkter. Java 9, Java 10 och Java 12 är icke-LTS-versioner som Oracle (se [Oracle Java SE support roadmap](https://www.oracle.com/technetwork/java/eol-135779.html)). För att driftsätta AEM i produktionsmiljön tillhandahåller Adobe endast stöd för LTS-versionerna av Java. Stöd och distribution av Oraclet Java SE JDK, inklusive alla underhållsuppdateringar av LTS-versioner efter slutet av de offentliga uppdateringarna, kommer att stödjas av Adobe direkt för alla AEM som använder Oraclet Java SE-teknik **till december 2022**. Mer information finns i [Oraclets Java-stöd för Adobe Experience Manager Q&amp;A](assets/adobe-oracle-java-license-agreement.pdf).
 
@@ -210,7 +210,7 @@ Den lägsta servlet API-version som krävs är Servlet 3.1
 1. Rekommenderas för driftsättningar med AEM Forms.
 1. Från och med AEM 6.5-distributioner på programservrar går det till begränsad support. Befintliga kunder kan uppgradera till AEM 6.5 och fortsätta använda programservrar. För nya kunder innehåller det supportkriterier och ett supportprogram enligt beskrivningen ovan.
 
-### Serveroperativsystem {#server-operating-systems}
+### Operativsystem för servrar {#server-operating-systems}
 
 Adobe Experience Manager fungerar med följande serverplattformar för produktionsmiljöer:
 
@@ -231,7 +231,7 @@ Adobe Experience Manager fungerar med följande serverplattformar för produktio
 1. Microsoft Windows-produktionsdistributioner stöds för kunder som uppgraderar till 6.5 och för icke-produktionsanvändning. Nya driftsättningar är på begäran för AEM Sites och Assets.
 1. AEM Forms stöds på Microsoft Windows Server utan begränsningar på supportnivå R
 
-### Virtuella miljöer och datormiljöer i molnet {#virtual-cloud-computing-environments}
+### Virtuella miljöer och molnmiljöer {#virtual-cloud-computing-environments}
 
 Adobe Experience Manager stöds i en virtuell dator i molnmiljöer som Microsoft Azure och Amazon Web Services (AWS), i enlighet med de tekniska krav som anges på den här sidan och i enlighet med Adobe standardsupportvillkoren.
 
@@ -262,7 +262,7 @@ Följande webbservrar kan användas med Dispatcher version 4.3.2:
 
 ## Klientplattformar som stöds {#supported-client-platforms}
 
-### Webbläsare som stöds för redigeringsanvändargränssnittet {#supported-browsers-for-authoring-user-interface}
+### Webbläsare som stöds för redigeringsgränssnittet {#supported-browsers-for-authoring-user-interface}
 
 Adobe Experience Manager användargränssnitt fungerar med följande klientplattformar. Alla webbläsare testas med standarduppsättningen med plugin-program och tillägg.
 
@@ -350,7 +350,7 @@ Om du vill ansluta med Microsoft Windows 7+ till en AEM som inte är säker med 
 
 Mer information om hur du kan förbättra WebDav-klientens svar i Windows finns i [Microsoft Support KB 2445570](https://support.microsoft.com/kb/2445570)
 
-## Ytterligare information om plattformen {#additional-platform-notes}
+## Information om ytterligare plattformar {#additional-platform-notes}
 
 I det här avsnittet finns specialanteckningar och mer detaljerad information om hur du kör Adobe Experience Manager och dess tillägg.
 
@@ -374,7 +374,7 @@ till exempel `https://www.yourserver.com:4502`
 * standardfallet för `localhost` tolkas för både IPv4- och IPv6-nätverksinstallationer
 till exempel `https://localhost:4502`
 
-### Krav för AEM Dynamic Media-tillägg {#requirements-for-aem-dynamic-media-add-on}
+### Krav för AEM Dynamic Media Add-on {#requirements-for-aem-dynamic-media-add-on}
 
 AEM Dynamic Media är inaktiverat som standard. Se här för att [aktivera Dynamic Media](/help/assets/config-dynamic.md#enabling-dynamic-media).
 
