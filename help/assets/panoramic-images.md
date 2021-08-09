@@ -11,7 +11,7 @@ docset: aem65
 feature: Panoramabilder,Resurshantering
 role: User, Admin
 exl-id: 4d6fbeb1-94db-4154-9e41-b76033fb4398
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 363e5159d290ecfbf4338f6b9793e11b613389a5
 workflow-type: tm+mt
 source-wordcount: '548'
 ht-degree: 4%
@@ -26,7 +26,7 @@ Se även [Hantera visningsförinställningar](/help/assets/managing-viewer-prese
 
 ![panoramabild2](assets/panoramic-image2.png)
 
-## Överföra resurser som ska användas med panoramabildsvisningsprogrammet {#uploading-assets-for-use-with-the-panoramic-image-viewer}
+## Överför resurser som ska användas med panoramabildsvisningsprogrammet {#uploading-assets-for-use-with-the-panoramic-image-viewer}
 
 För att en överförd resurs ska kvalificeras som en sfärisk panoramabild som du tänker använda med panoramabildsvisningsprogrammet måste resursen ha antingen ett eller båda av följande:
 
@@ -38,7 +38,7 @@ Du kan åsidosätta standardinställningen för proportioner på 2 i CRXDE Lite 
 
 Kriterierna för proportioner och nyckelord gäller även för panoramaresurser på sidan med resursinformation och för komponenten `Panoramic Media` i innehållshanteringssystemet.
 
-Information om hur du överför resurser som ska användas med visningsprogrammet för panoramabilder finns i [Överföra resurser](/help/assets/manage-assets.md#uploading-assets).
+Information om hur du överför resurser som ska användas med visningsprogrammet för panoramabilder finns i [Överför resurser](/help/assets/manage-assets.md#uploading-assets).
 
 ## Konfigurera Dynamic Media Classic {#configuring-dynamic-media-classic-scene}
 
@@ -46,7 +46,7 @@ För att visningsprogrammet för panoramabilder ska fungera på rätt sätt i Ad
 
 1. Öppna [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och logga sedan in på ditt konto.
 
-1. Klicka på **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL Publish Setup]** > **[!UICONTROL Image Server]** i sidans övre högra hörn.
+1. I det övre högra hörnet av sidan väljer du **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL Publish Setup]** > **[!UICONTROL Image Server]**.
 1. Välj **[!UICONTROL Image Serving]** i listrutan **[!UICONTROL Publish Context]** på sidan Image Server Publish.
 
 1. Gå till rubriken **[!UICONTROL Request Attributes]** på samma Image Server Publish-sida.
@@ -65,9 +65,9 @@ För att visningsprogrammet för panoramabilder ska fungera på rätt sätt i Ad
 
    Dessa inställningar är nödvändiga för att du ska kunna använda WCM-komponenten `Panoramic Media` i Experience Manager.
 
-1. Klicka på **[!UICONTROL Save]** längst ned på sidan Image Server Publish (Publicera på vänster sida).
+1. Längst ned på sidan Image Server Publish väljer du **[!UICONTROL Save]** till vänster.
 
-1. Klicka på **[!UICONTROL Close]** i det nedre högra hörnet.
+1. Välj **[!UICONTROL Close]** i det nedre högra hörnet.
 
 ### Felsöka komponenten Panoramic Media WCM {#troubleshooting-the-panoramic-media-wcm-component}
 
