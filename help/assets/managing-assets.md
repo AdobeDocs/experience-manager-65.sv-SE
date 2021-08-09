@@ -10,10 +10,10 @@ discoiquuid: a323bf5a-b5b2-4b15-bcf8-48d0fe819512
 feature: Resurshantering
 role: User, Admin
 exl-id: 74242ee5-1036-498b-88ef-2310ba2643ce
-source-git-commit: b0286341c1b643bd39a3009185c0d4c8d76ccba5
+source-git-commit: 363e5159d290ecfbf4338f6b9793e11b613389a5
 workflow-type: tm+mt
-source-wordcount: '118'
-ht-degree: 13%
+source-wordcount: '114'
+ht-degree: 14%
 
 ---
 
@@ -25,7 +25,7 @@ När du förhandsgranskar kan du även använda bildförinställningar (endast f
 
 Allmän information om hur du hanterar resurser finns i [Hantera resurser](/help/assets/manage-assets.md).
 
-Följande avsnitt beskriver vad du behöver göra för att hantera Dynamic Media-resurser:
+I följande avsnitt beskrivs hur du hanterar Dynamic Media-resurser:
 
 * [Bästa tillvägagångssätt för att optimera bildkvalitet](/help/assets/best-practices-for-optimizing-the-quality-of-your-images.md)
 * [Förhandsgranska Dynamic Media-resurser](/help/assets/previewing-assets.md)
