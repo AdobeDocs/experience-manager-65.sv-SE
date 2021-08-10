@@ -12,9 +12,9 @@ docset: aem65
 feature: Resurshantering
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: 3dd49715c7c3078f2ef9495c99c98d4dd566db9b
+source-git-commit: 77687a0674b939460bd34011ee1b94bd4db50ba4
 workflow-type: tm+mt
-source-wordcount: '11226'
+source-wordcount: '11224'
 ht-degree: 4%
 
 ---
@@ -306,7 +306,7 @@ For advice about video encoding, see [Video Encoding Basics](https://www.adobe.c
 
 När du kodar en videofil ska du använda en källvideofil med högsta möjliga kvalitet. Undvik att använda tidigare kodade videofiler eftersom dessa filer redan är komprimerade, och ytterligare kodning skapar en video med delkvalitet.
 
-* Dynamic Media har främst stöd för videoklipp i kort form med en maxlängd på 30 minuter.
+* Dynamic Media har stöd för videoklipp i kort form med en maxlängd på 30 minuter.
 * Du kan överföra primära källvideofiler på upp till 15 GB vardera.
 
 I följande tabell beskrivs rekommenderad storlek, proportioner och lägsta bithastighet som källvideofilerna måste ha innan du kodar dem:
@@ -423,9 +423,9 @@ Anta till exempel att källvideon är 1 920 x 1 080. I följande tabell ger de t
 
 | Videotyp | Bredd x höjd | Breddförhållande | Höjdförhållande |
 |--- |--- |--- |--- |
-| Källa | 1920 x 1080 | 1 | 1 |
+| Källa | 1920 x 1080 | 1 | 3 |
 | Kodad | 960 x 540 | 2 | 2 |
-| Kodad | 640 x 360 | 3 | 3 |
+| Kodad | 640 x 360 | 3 | 1 |
 | Kodad | 480 x 270 | 4 | 4 |
 
 ### Kodat videofilformat {#encoded-video-file-format}
@@ -572,7 +572,7 @@ Du måste ha en eller flera kanaler för att kunna publicera videofilmer på You
 
 1. Gå till [https://www.youtube.com](https://www.youtube.com/) och logga in med inloggningsuppgifterna för ditt Google-konto.
 1. Klicka på din profilbild i det övre högra hörnet på YouTube-sidan (kan också visas som en bokstav i en enfärgad cirkel) och klicka sedan på **[!UICONTROL YouTube settings]** (den runda kugghjulsikonen).
-1. På sidan Översikt, under rubriken Ytterligare funktioner, klickar du på **[!UICONTROL See all my channels or create a new channel]**.
+1. På sidan Översikt, under rubriken Ytterligare funktioner, klickar du på **[!UICONTROL See all my channels or create a channel]**.
 1. Klicka på **[!UICONTROL Create a new channel]** på sidan Kanaler.
 1. På sidan Varumärkeskonto anger du ett företagsnamn eller ett annat kanalnamn som du väljer där du vill publicera videoresurserna i fältet Märkeskontonamn. Klicka sedan på **[!UICONTROL Create]**.
 
@@ -1182,7 +1182,7 @@ Eftersom du använder ett HTML5-videovisningsprogram bör du kontrollera att den
 
 Se [WebVTT: Textspårningsformatet för webbvideo](https://w3c.github.io/webvtt/)
 
-**Så här lägger du till kapitelmarkörer i video:**
+**Så här lägger du till kapitelnavigering:**
 
 1. Spara `.vtt`-filen i UTF8-kodning så att du slipper problem med teckenåtergivning i kapiteltiteltexten.
 
@@ -1245,7 +1245,7 @@ De här stegen gäller endast för Dynamic Media som körs i läget&quot;Dynamic
 1. Kontrollera att du redan har gjort följande:
 
    * Skapade en mapp för dina videoresurser.
-   * [En videoprofil har använts på mappen](/help/assets/video-profiles.md#applying-a-video-profile-to-folders).
+   * [Använd en videoprofil för mappen](/help/assets/video-profiles.md#applying-a-video-profile-to-folders).
 
    * [Dina videoklipp har överförts till mappen](/help/assets/managing-video-assets.md#upload-and-preview-video-assets).
 
