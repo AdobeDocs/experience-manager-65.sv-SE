@@ -1,5 +1,5 @@
 ---
-title: Använda regeluppsättningar för att omforma URL:er
+title: Använd regeluppsättningar för att omforma URL:er
 description: Du kan distribuera regeluppsättningar i Dynamic Media för att omvandla URL:er. Regeluppsättningar är instruktioner skrivna i ett skriptspråk (t.ex. JavaScript) som utvärderar XML-data och utför vissa åtgärder om dessa data uppfyller vissa villkor.
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -8,14 +8,14 @@ content-type: reference
 role: User, Admin,Developer
 exl-id: b0ac587b-8592-4d37-9ce0-98a0859c367f
 feature: Konfiguration,Linjaler
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 77687a0674b939460bd34011ee1b94bd4db50ba4
 workflow-type: tm+mt
-source-wordcount: '725'
-ht-degree: 3%
+source-wordcount: '721'
+ht-degree: 0%
 
 ---
 
-# Använda regeluppsättningar för att omforma URL:er {#using-rulesets-to-transform-urls}
+# Använd regeluppsättningar för att omforma URL:er {#using-rulesets-to-transform-urls}
 
 Du kan distribuera regeluppsättningar i Dynamic Media för att omvandla URL:er. Regeluppsättningar är instruktioner skrivna i ett skriptspråk (t.ex. JavaScript) som utvärderar XML-data och utför vissa åtgärder om dessa data uppfyller vissa villkor. Varje regel består av minst ett villkor och minst en åtgärd. En regel utvärderar XML-data mot villkoren, och om ett villkor är uppfyllt utförs rätt åtgärd. Exempel på regeluppsättningar är följande:
 
@@ -45,7 +45,7 @@ Det finns exempellinjaler som kan hjälpa dig att skapa en egen linjaluppsättni
 Se [Referens för regeluppsättning](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/rule-set-reference/c-rule-set-reference.html).
 
 Precis som när du skapar alla regeluppsättningar måste du se till att XML-filen är giltig innan du överför den med ett XML-valideringsprogram som xmlvalid.
-Se även [Troubleshooting rule sets](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/scene7-ruleset-troubleshooting.html).
+Se även [Felsöka regeluppsättningar](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/scene7-ruleset-troubleshooting.html).
 
 Kontrollera också först att du testar regeluppsättningen i en staging-miljö som inte påverkar produktionsmiljön.
 Produktionsmiljöer och staging-miljöer kräver normalt olika inloggningar.
@@ -56,7 +56,7 @@ Se [Adobe Dynamic Media Classic-datorprogrammet för inloggningsinformation](htt
 * **EMEA staging environment** login page: [https://s7sps3-staging.scene7.com/IpsWeb/](https://s7sps3-staging.scene7.com/IpsWeb/)
 * **JAPAC staging environment** login page: [https://s7sps5-staging.scene7.com/IpsWeb/](https://s7sps5-staging.scene7.com/IpsWeb/) -->
 
-Se även [Använda &quot;asset&quot; i stället för &quot;is&quot;-bilden i en regeluppsättning](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/ruleset-asset-instead-image.html).
+Se även [Använd &#39;asset&#39; i stället för &#39;is&#39;-bilden i en regeluppsättning](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/ruleset-asset-instead-image.html).
 
 **Så här distribuerar du XML-regeluppsättningar:**
 
@@ -66,21 +66,21 @@ Se även [Använda &quot;asset&quot; i stället för &quot;is&quot;-bilden i en 
 
 1. Överför regeluppsättningsfilen genom att göra följande:
 
-   * Klicka på **[!UICONTROL Upload]** i fältet Global navigering.
-   * På sidan **[!UICONTROL Upload]**, nära det övre vänstra hörnet, klickar du på **[!UICONTROL Browse]**.
+   * Välj **[!UICONTROL Upload]** i fältet Global navigering.
+   * På sidan **[!UICONTROL Upload]**, nära det övre vänstra hörnet, väljer du **[!UICONTROL Browse]**.
    * Bläddra till regeluppsättningsfilen (XML) i dialogrutan **[!UICONTROL Open]**.
-   * Markera filen och klicka sedan på **[!UICONTROL Open]**.
+   * Markera filen och välj sedan **[!UICONTROL Open]**.
    * Till höger på sidan **[!UICONTROL Upload]** väljer du en målmapp för regeluppsättningsfilen.
    * Kontrollera att **[!UICONTROL Publish After Uploading]** är markerat nära sidans nederkant.
-   * Klicka på **[!UICONTROL Submit Upload]** längst ned till höger på sidan.
-   * Klicka på **[!UICONTROL Jobs]** i fältet Global navigering för att kontrollera överföringsjobbets status. När kolumnen **[!UICONTROL Status]** på sidan **[!UICONTROL Job]** säger Överför klar fortsätter du till nästa steg.
+   * Välj **[!UICONTROL Submit Upload]** längst ned till höger på sidan.
+   * I fältet Global navigering väljer du **[!UICONTROL Jobs]** för att kontrollera överföringsjobbets status. När kolumnen **[!UICONTROL Status]** på sidan **[!UICONTROL Job]** säger Överför klar fortsätter du till nästa steg.
 
-1. Klicka på **[!UICONTROL Setup > Application Setup > Publish Setup > Image Server]** i navigeringsfältet uppe på sidan.
-1. På sidan **[!UICONTROL Image Server Publish]**, under gruppen **[!UICONTROL Catalog Management]**, letar du upp **[!UICONTROL Rule Set Definition File Path]** och klickar sedan på **[!UICONTROL Select]**.
-1. På sidan **[!UICONTROL Select Rule Set Definition File (XML)]** bläddrar du till regeluppsättningsfilen och klickar sedan på **[!UICONTROL Select]** i den nedre högra hörnet av sidan.
-1. Klicka på **[!UICONTROL Close]** längst ned till höger på sidan Inställningar.
+1. Välj **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL Publish Setup]** > **[!UICONTROL Image Server]** i navigeringsfältet uppe på sidan.
+1. På sidan **[!UICONTROL Image Server Publish]**, under gruppen **[!UICONTROL Catalog Management]**, letar du reda på **[!UICONTROL Rule Set Definition File Path]** och väljer sedan **[!UICONTROL Select]**.
+1. På sidan **[!UICONTROL Select Rule Set Definition File (XML)]** bläddrar du till regeluppsättningsfilen och väljer **[!UICONTROL Select]** längst ned till höger på sidan.
+1. Välj **[!UICONTROL Close]** längst ned till höger på sidan Inställningar.
 1. Kör ett Image Server-publiceringsjobb.
 
    Regeluppsättningsvillkoren tillämpas på begäranden till Dynamic Media Image-servrar.
 
-   Om du gör ändringar i regeluppsättningsfilen tillämpas ändringarna omedelbart när du överför och publicerar den uppdaterade regeluppsättningsfilen igen.
+   Om du ändrar regeluppsättningsfilen tillämpas ändringarna omedelbart när du överför och publicerar den uppdaterade regeluppsättningsfilen igen.
