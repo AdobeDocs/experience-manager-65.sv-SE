@@ -6,26 +6,26 @@ contentOwner: rbrough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: 1601b473-7227-4a56-bb7c-289de2987e4b
 exl-id: a644558e-5be9-4ba2-b560-fc300497fbdf
-source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
+source-git-commit: 77687a0674b939460bd34011ee1b94bd4db50ba4
 workflow-type: tm+mt
-source-wordcount: '218'
+source-wordcount: '219'
 ht-degree: 0%
 
 ---
 
 # Videoåtergivningar {#video-renditions}
 
-Adobe Experience Manager (AEM) Assets genererar videoåtergivningar för videoresurser i olika format, bland annat OGG, FLV.
+Adobe Experience Manager Assets genererar videoåtergivningar för videoresurser i olika format, bland annat OGG, FLV.
 
-AEM Assets har stöd för statiska och dynamiska återgivningar (DM-kodade återgivningar) för medieresurser.
+Experience Manager Assets stöder statiska och dynamiska renderingar (DM-kodade renderingar) för medieresurser.
 
 Statiska återgivningar genereras internt med hjälp av FFMPEG (som är installerat och tillgängligt på systemsökvägen) och lagras i innehållsdatabasen.
 
 DM-kodade återgivningar lagras på proxyservern och hanteras vid körning.
 
-AEM resurser har uppspelningsstöd för dessa återgivningar på klientsidan.
+Experience Manager Assets har uppspelningsstöd för dessa återgivningar på klientsidan.
 
-Om du vill visa återgivningarna för en viss videoresurs öppnar du resurssidan och trycker på ikonen Global navigering. Välj sedan **[!UICONTROL Renditions]** i listan.
+Om du vill visa återgivningarna för en viss videoresurs öppnar du resurssidan och väljer ikonen Global navigering. Välj sedan **[!UICONTROL Renditions]** i listan.
 
 ![chlimage_1-478](assets/chlimage_1-478.png)
 
@@ -41,6 +41,6 @@ När du har konfigurerat proxyservern och skapat videoprofiler kan du ta med den
 
 >[!NOTE]
 >
->Ljuduppspelning fungerar inte för OGG- och WAV-filer i Microsoft Internet Explorer 11. Ett fel `Invalid Source` visas på sidan med resursinformation för resurser med filnamnstillägget OGG eller WAV.
+>Ljuduppspelning fungerar inte för OGG- och WAV-filer i Microsoft® Internet Explorer 11. Ett fel `Invalid Source` visas på sidan med resursinformation för resurser med filnamnstillägget OGG eller WAV.
 >
->På MS Edge och iPad spelas inte OGG-filer upp och ett formatfel som inte stöds genereras.
+>På MS® Edge och iPad spelas inte OGG-filer upp och ett formatfel som inte stöds uppstår.
