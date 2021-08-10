@@ -1,6 +1,6 @@
 ---
-title: Felsökning av Dynamic Media - Scene7-läge
-description: Felsöka Dynamic Media när det körs i Scene7-läge.
+title: Felsöka Dynamic Media - Scene7-läge
+description: Felsök Dynamic Media när det körs i Scene7-läge.
 uuid: 77e04ccf-33dc-4d2f-8950-318d4b008f74
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -11,14 +11,14 @@ docset: aem65
 role: User, Admin
 exl-id: d4507059-a54d-4dc9-a263-e55dfa27eeb1
 feature: Felsökning
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 77687a0674b939460bd34011ee1b94bd4db50ba4
 workflow-type: tm+mt
 source-wordcount: '1284'
 ht-degree: 0%
 
 ---
 
-# Felsökning av Dynamic Media - Scene7-läge{#troubleshooting-dynamic-media-scene-mode}
+# Felsöka Dynamic Media - Scene7-läge{#troubleshooting-dynamic-media-scene-mode}
 
 I följande dokument beskrivs felsökning för Dynamic Media som kör körningsläget **dynamicmedia_scene7**.
 
@@ -26,8 +26,8 @@ I följande dokument beskrivs felsökning för Dynamic Media som kör körningsl
 
 Kontrollera att Dynamic Media har konfigurerats korrekt genom att göra följande:
 
-* Kommandot Starta upp innehåller körningsargumentet `-r dynamicmedia_scene7`.
-* Alla AEM 6.4 kumulativa korrigeringspaket (CFP) har installerats först *före* alla tillgängliga Dynamic Media-funktionspaket.
+* Kommandot Starta upp innehåller argumentet `-r dynamicmedia_scene7` för körningsläge.
+* Alla kumulativa Adobe Experience Manager 6.4-korrigeringspaket (CFP) har installerats först *före* alla tillgängliga Dynamic Media-funktionspaket.
 * Tillvalspaket 18912 är installerat.
 
    Det här tillvalspaketet är till för FTP-stöd eller om du migrerar resurser till Dynamic Media från Dynamic Media Classic.
@@ -43,7 +43,7 @@ Här följer några allmänna tips och tricks för alla resurser.
 
 ### Egenskaper för resurssynkroniseringsstatus {#asset-synchronization-status-properties}
 
-Följande resursegenskaper kan granskas i CRXDE Lite för att bekräfta att du lyckats synkronisera resursen från AEM till Dynamic Media:
+Följande resursegenskaper kan granskas i CRXDE Lite för att bekräfta att synkroniseringen av resursen lyckades från Experience Manager till Dynamic Media:
 
 | **Egenskap** | **Exempel** | **Beskrivning** |
 |---|---|---|
@@ -54,7 +54,7 @@ Följande resursegenskaper kan granskas i CRXDE Lite för att bekräfta att du l
 
 ### Synkroniseringsloggning {#synchronization-logging}
 
-Synkroniseringsfel och problem loggas i `error.log` (AEM serverkatalog `/crx-quickstart/logs/`). Tillräcklig loggning finns för att fastställa orsaken till de flesta problemen, men du kan öka loggningen till DEBUG för `com.adobe.cq.dam.ips`-paketet via Sling Console ([https://localhost:4502/system/console/slinglog](https://localhost:4502/system/console/slinglog)) för att samla in mer information.
+Synkroniseringsfel och problem loggas i `error.log` (Experience Manager-serverkatalog `/crx-quickstart/logs/`). Tillräcklig loggning finns för att fastställa orsaken till de flesta problemen, men du kan öka loggningen till DEBUG för `com.adobe.cq.dam.ips`-paketet via Sling Console ([https://localhost:4502/system/console/slinglog](https://localhost:4502/system/console/slinglog)) för att samla in mer information.
 
 ### Flytta, kopiera, ta bort {#move-copy-delete}
 
@@ -62,13 +62,13 @@ Gör följande innan du utför någon av åtgärderna Flytta, Kopiera eller Ta b
 
 * För bilder och videoklipp måste du bekräfta att det finns ett `<object_node>/jcr:content/metadata/dam:scene7ID`-värde innan du utför åtgärderna flytta, kopiera eller ta bort.
 * Kontrollera att det finns ett `https://<server>/crx/de/index.jsp#/etc/dam/presets/viewer/testpreset/jcr%3Acontent/metadata`-värde för bild- och visningsförinställningar innan du utför åtgärderna flytta, kopiera eller ta bort.
-* Om ovanstående metadatavärde saknas måste du överföra resurser på nytt innan du flyttar, kopierar eller tar bort åtgärder.
+* Om metadatavärdet ovan saknas måste du överföra resurserna igen innan du kan flytta, kopiera eller ta bort åtgärder.
 
 ### Versionskontroll {#version-control}
 
 När du ersätter en befintlig Dynamic Media-resurs (samma namn och plats) kan du behålla båda resurserna eller ersätta/skapa en version:
 
-* Om båda behålls skapas en ny resurs med ett unikt namn för den publicerade resursens URL. Till exempel är `image.jpg` den ursprungliga resursen och `image1.jpg` den nyligen överförda resursen.
+* Om du behåller båda skapas en resurs med ett unikt namn för den publicerade resursens URL. Till exempel är `image.jpg` den ursprungliga resursen och `image1.jpg` den nyligen överförda resursen.
 
 * Det går inte att skapa en version i Dynamic Media - leverans i Scene7-läge. Den nya versionen ersätter den befintliga mediefilen som levereras.
 
@@ -89,7 +89,7 @@ Om du har problem med bilder och uppsättningar kan du läsa följande felsökni
     <ol>
      <li><p>Gå till CRX/DE:</p>
       <ul>
-       <li>Kontrollera om förinställningen i JCR <code>/etc/dam/presets/viewer/&lt;preset&gt; has lastReplicationAction</code> har definierats. Observera att den här platsen gäller om du har uppgraderat från AEM 6.x till 6.4 och valt att inte migrera. I annat fall är platsen <code>/conf/global/settings/dam/dm/presets/viewer</code>.</li>
+       <li>Kontrollera om förinställningen i JCR <code>/etc/dam/presets/viewer/&lt;preset&gt; has lastReplicationAction</code> har definierats. Den här platsen gäller om du har uppgraderat från Experience Manager 6.x till 6.4 och valt att inte migrera. Annars är platsen <code>/conf/global/settings/dam/dm/presets/viewer</code>.</li>
        <li>Kontrollera att resursen i JCR har <code>dam:scene7FileStatus</code><strong> </strong>under Metadata visas som <code>PublishComplete</code>.</li>
       </ul> </li>
     </ol> </td>
@@ -107,7 +107,7 @@ Om du har problem med bilder och uppsättningar kan du läsa följande felsökni
   <tr>
    <td><strong>Markeringsknappen </strong> är inte aktiv när du har markerat en resurs som en del av redigeringen av en uppsättning</td>
    <td><p> </p> <p>Känt fel som ska åtgärdas i 6.4</p> <p> </p> </td>
-   <td><p>Klicka först på en annan mapp i Resursväljaren och gå tillbaka och välj resursen.</p> </td>
+   <td><p>Välj först en annan mapp i resursväljaren och gå tillbaka och välj resursen.</p> </td>
   </tr>
   <tr>
    <td>Carousel hotspot flyttas runt efter växling mellan bildrutor</td>
@@ -161,7 +161,7 @@ Om du har problem med video kan du läsa följande felsökningsguide.
      <li>Tilldela en videoprofil till mappen.</li>
      <li>Redigera videoprofilen så att den innehåller fler än en kodningsförinställning.</li>
      <li>Vänta tills videon har bearbetats klart.</li>
-     <li>Kontrollera att arbetsflödet för videokodning inte körs när du läser in videon igen.<br /> </li>
+     <li>Kontrollera att arbetsflödet för Dynamic Media Encode-video inte körs när du läser in videon igen.<br /> </li>
      <li>Ladda upp videon igen.</li>
     </ol> </td>
   </tr>
@@ -175,7 +175,7 @@ Om du har problem med video kan du läsa följande felsökningsguide.
     </ul> </td>
    <td>
     <ol>
-     <li>Kontrollera AEM med <code>-r dynamicmedia_scene7</code></li>
+     <li>Kontrollera din Experience Manager-instans med <code>-r dynamicmedia_scene7</code></li>
      <li>Kontrollera att Dynamic Media Configuration under Cloud Services är korrekt konfigurerad.</li>
      <li>Kontrollera att mappen har en videoprofil. Kontrollera även videoprofilen.</li>
     </ol> </td>
@@ -218,12 +218,12 @@ Om du har problem med visningsprogram kan du läsa följande felsökningsguide.
   </tr>
   <tr>
    <td>Visningsförinställningar publiceras inte</td>
-   <td><p>Gå till diagnostiksidan för provhanteraren: <code>https://localhost:4502/libs/dam/gui/content/s7dam/samplemanager/samplemanager.html</code></p> <p>Lägg märke till beräknade värden. När du arbetar korrekt bör du se:</p> <p><code>_DMSAMPLE status: 0 unsyced assets - activation not necessary
-       _OOTB status: 0 unsyced assets - 0 unactivated assets</code></p> <p><strong>Obs</strong>: Det kan ta ca 10 minuter efter konfigureringen av Dynamic Media molninställningar för de visningsprogramresurser som ska synkroniseras.</p> <p>Om det finns oaktiverade resurser kvar klickar du på någon av <strong>Visa alla oaktiverade resurser</strong>-knapparna för att visa information.</p> </td>
+   <td><p>Gå till diagnostiksidan för provhanteraren: <code>https://localhost:4502/libs/dam/gui/content/s7dam/samplemanager/samplemanager.html</code></p> <p>Lägg märke till beräknade värden. När du arbetar korrekt ser du följande:</p> <p><code>_DMSAMPLE status: 0 unsyced assets - activation not necessary
+       _OOTB status: 0 unsyced assets - 0 unactivated assets</code></p> <p><strong>Obs</strong>: Det kan ta ca 10 minuter efter konfigureringen av Dynamic Media molninställningar för de visningsprogramresurser som ska synkroniseras.</p> <p>Om det finns oaktiverade resurser kvar väljer du någon av knapparna <strong>Visa alla oaktiverade resurser</strong> för att se information.</p> </td>
    <td>
     <ol>
      <li>Navigera till förinställningslistan för visningsprogrammet i administratörsverktygen: <code>https://localhost:4502/libs/dam/gui/content/s7dam/samplemanager/samplemanager.html</code></li>
-     <li>Välj alla förinställningar för visningsprogram och klicka sedan på <strong>Publicera</strong>.</li>
+     <li>Välj alla förinställningar för visningsprogram och välj sedan <strong>Publicera</strong>.</li>
      <li>Navigera tillbaka till exempelhanteraren och observera att antalet oaktiverade resurser nu är noll.</li>
     </ol> </td>
   </tr>
@@ -233,7 +233,7 @@ Om du har problem med visningsprogram kan du läsa följande felsökningsguide.
     <ol>
      <li>Navigera till mappen <code>&lt;sync-folder&gt;/_CSS/_OOTB</code> i Dynamic Media synkroniseringsmapp (t.ex. <code>/content/dam/_CSS/_OOTB</code>),</li>
      <li>Hitta metadatanoden för den problematiska resursen (till exempel <code>&lt;sync-folder&gt;/_CSS/_OOTB/CarouselDotsLeftButton_dark_sprite.png/jcr:content/metadata/</code>).</li>
-     <li>Kontrollera om det finns <code>dam:scene7*</code>-egenskaper. Om resursen synkroniserades och publicerades ser du att <code>dam:scene7FileStatus</code> är <strong>PublishComplete</strong>.</li>
+     <li>Kontrollera om det finns <code>dam:scene7*</code>-egenskaper. Om resursen synkroniserades och publicerades korrekt ser du att <code>dam:scene7FileStatus</code> är <strong>PublishComplete</strong>.</li>
      <li>Försök att begära teckningen direkt från Dynamic Media genom att sammanfoga värdena för följande egenskaper och stränglitteraler
       <ul>
        <li><code>dam:scene7Domain</code></li>
@@ -249,14 +249,14 @@ Om du har problem med visningsprogram kan du läsa följande felsökningsguide.
       <ul>
        <li>Ta bort <code>&lt;sync-folder&gt;/_CSS/_OOTB</code>.</li>
       </ul> </li>
-     <li>Navigera till CRX-pakethanteraren: <code>https://localhost:4502/crx/packmgr/</code><a href="https://localhost:4502/crx/packmgr/"></a>
+     <li>Navigera till CRX Package Manager: <code>https://localhost:4502/crx/packmgr/</code><a href="https://localhost:4502/crx/packmgr/"></a>
       <ol>
        <li>Sök efter visningsprogrampaket i listan (börjar med <code>cq-dam-scene7-viewers-content</code>)</li>
-       <li>Klicka på <strong>Installera om</strong>.</li>
+       <li>Välj <strong>Installera om</strong>.</li>
       </ol> </li>
      <li>Gå till konfigurationssidan för Dynamic Media under Cloud Services och öppna sedan konfigurationsdialogrutan för din Dynamic Media - S7-konfiguration.
       <ul>
-       <li>Klicka på <strong>Spara</strong> om du inte vill göra några ändringar. Detta utlöser logiken igen för att skapa och synkronisera exempelresurserna, CSS för visningsförinställningar och teckningar.<br />  </li>
+       <li>Välj <strong>Spara</strong> om du inte vill göra några ändringar. Den här åtgärden utlöser logiken igen för att skapa och synkronisera exempelresurser, CSS för visningsförinställningar och teckningar.<br />  </li>
       </ul> </li>
     </ol> </td>
   </tr>
