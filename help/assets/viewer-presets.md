@@ -10,10 +10,10 @@ discoiquuid: 82bed457-794e-4bf2-bc80-abde24fd2851
 feature: Förinställningar för visningsprogram
 role: User, Admin
 exl-id: daa1ffdd-de5c-470e-8875-84144b7d327f
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 77687a0674b939460bd34011ee1b94bd4db50ba4
 workflow-type: tm+mt
-source-wordcount: '215'
-ht-degree: 23%
+source-wordcount: '216'
+ht-degree: 14%
 
 ---
 
@@ -23,14 +23,14 @@ En visningsförinställning är en samling inställningar som bestämmer hur anv
 
 Om du är administratör och måste hantera, skapa, sortera och ta bort visningsförinställningar läser du [Hantera visningsförinställningar](managing-viewer-presets.md).
 
-Se även [Förinställningar för publiceringsvisningsprogram](managing-viewer-presets.md#publishing-viewer-presets).
+Se även [Publicera förinställningar för visningsprogram](managing-viewer-presets.md#publishing-viewer-presets).
 
 Du behöver inte publicera förinställningar för visningsprogrammet beroende på vilket publiceringsläge du använder.
-Eventuella problem med visningsförinställningar finns i [Felsökning av Dynamic Media - Scene7](troubleshoot-dms7.md#viewers).
+Information om problem med visningsförinställningar finns i [Felsöka Dynamic Media - Scene7](troubleshoot-dms7.md#viewers).
 
 ## Använda en förinställning för Dynamic Media-visningsprogram på en mediefil {#applying-a-viewer-preset-to-an-asset}
 
-1. Öppna resursen och tryck på **[!UICONTROL Viewers]** i den vänstra rutan.
+1. Öppna resursen och i den vänstra listen och välj **[!UICONTROL Viewers]**.
 
    ![chlimage_1-104](assets/chlimage_1-104.png)
 
