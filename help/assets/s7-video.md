@@ -8,11 +8,12 @@ topic-tags: managing-assets
 content-type: reference
 discoiquuid: 2685f9f3-0973-40a9-89b8-e7db0a6a75f2
 role: User, Admin
+mini-toc-levels: 3
 exl-id: 56009925-1a36-48b5-b96c-ec2e468da106
 feature: Video
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 77687a0674b939460bd34011ee1b94bd4db50ba4
 workflow-type: tm+mt
-source-wordcount: '1513'
+source-wordcount: '1509'
 ht-degree: 1%
 
 ---
@@ -72,9 +73,7 @@ Om du inte behöver ett arbetsflöde eller en versionshantering för dina resurs
 
 ## Konfigurera integrering med Scene7 Video {#configuring-integration-with-scene-video}
 
-Så här konfigurerar du universella förinställningar:
-
-1. I **[!UICONTROL Cloud Services]** navigerar du till din **[!UICONTROL Scene7]**-konfiguration och klickar på **[!UICONTROL Edit]**.
+1. I **[!UICONTROL Cloud Services]** navigerar du till din **[!UICONTROL Scene7]**-konfiguration och väljer **[!UICONTROL Edit]**.
 1. Välj fliken **[!UICONTROL Video]**.
 
    ![chlimage_1-363](assets/chlimage_1-363.png)
@@ -93,16 +92,16 @@ Så här konfigurerar du universella förinställningar:
 
 1. De valda kodningsprofilerna tillämpas automatiskt på alla videoklipp som överförs till CQ DAM-målmappen som du konfigurerar för den här Scene7-molnkonfigurationen. Du kan konfigurera flera Scene7 molnkonfigurationer med olika målmappar för att tillämpa olika kodningsprofiler efter behov.
 
-## Uppdatera visningsprogram och kodningsförinställningar {#updating-viewer-and-encoding-presets}
+## Uppdatera förinställningar för visningsprogram och kodning {#updating-viewer-and-encoding-presets}
 
-Om du vill uppdatera visnings- och kodningsförinställningarna för video eftersom förinställningarna har uppdaterats i Scene7 går du till Scene7-konfigurationen i molnkonfigurationen och trycker på **[!UICONTROL Update the viewer and encoding presets]**.
+Om du vill uppdatera visnings- och kodningsförinställningarna för video eftersom förinställningarna har uppdaterats i Scene7 går du till Scene7-konfigurationen i molnkonfigurationen och väljer **[!UICONTROL Update the viewer and encoding presets]**.
 
 ![chlimage_1-364](assets/chlimage_1-364.png)
 
 ## Överför din primära källvideo till Scene7 från Adobe DAM {#uploading-your-master-video}
 
 1. Navigera till målmappen för CQ DAM där du har konfigurerat molnkonfigurationen med Scene7-kodningsprofiler.
-1. Klicka på **[!UICONTROL Upload]** för att överföra primärt källvideoklipp. Överföringen och kodningen av videon är klar när arbetsflödet [!UICONTROL DAM Update Asset] är klart och **[!UICONTROL Publish to Scene7]** är markerat.
+1. Välj **[!UICONTROL Upload]** om du vill överföra primär källvideo. Överföringen och kodningen av videon är klar när arbetsflödet [!UICONTROL DAM Update Asset] är klart och **[!UICONTROL Publish to Scene7]** är markerat.
 
    >[!NOTE]
    >
@@ -150,9 +149,9 @@ De olika videokodningarna skapas enligt de kodningsförinställningar för S7 so
 >
 >Nya videoprofiler och ändringar av dem måste aktiveras för publicering.
 
-1. I Experience Manager trycker du på **[!UICONTROL Tools]** > **[!UICONTROL Configuration Console]**.
+1. I Experience Manager väljer du **[!UICONTROL Tools]** > **[!UICONTROL Configuration Console]**.
 1. I **[!UICONTROL Configuration Console]** navigerar du till **[!UICONTROL Tools]** > **[!UICONTROL DAM]** > **[!UICONTROL Video Profiles]** i navigeringsträdet.
-1. Skapa en S7-videoprofil. I **[!UICONTROL New]**. väljer du **[!UICONTROL Create Page]** och sedan Scene7 videoprofilmall. Ge den nya videoprofilsidan ett namn och klicka på **[!UICONTROL Create]**.
+1. Skapa en S7-videoprofil. I **[!UICONTROL New]**. väljer du **[!UICONTROL Create Page]** och sedan Scene7 videoprofilmall. Ge den nya videoprofilsidan ett namn och välj **[!UICONTROL Create]**.
 
    ![chlimage_1-366](assets/chlimage_1-366.png)
 
@@ -181,7 +180,7 @@ Komponenten **[!UICONTROL Foundation Video]** måste känna till vilka videoprof
 >Ändringar i designen kräver att designen aktiveras för att börja gälla vid publiceringen.
 
 1. Öppna **[!UICONTROL Foundation Video]**-komponentens designdialogruta och ändra till fliken **[!UICONTROL Profiles]**. Ta sedan bort färdiga profiler och lägg till de nya videoprofilerna för S7. Ordningen på profillistan i designdialogrutan definierar ordningen på videokällelementet vid återgivning.
-1. För webbläsare som inte stöder HTML5 kan du konfigurera ett Flash-reserv med videokomponenten. Öppna dialogrutan för design av videokomponenter och ändra till fliken **[!UICONTROL Flash]**. Konfigurera inställningarna för Flash-spelaren och tilldela en reservprofil för Flash Player.
+1. För webbläsare som inte stöder HTML5 kan du konfigurera ett Flash-reservläge med videokomponenten. Öppna dialogrutan för design av videokomponenter och ändra till fliken **[!UICONTROL Flash]**. Konfigurera inställningarna för Flash-spelaren och tilldela en reservprofil för Flash Player.
 
 #### Checklista {#checklist}
 
