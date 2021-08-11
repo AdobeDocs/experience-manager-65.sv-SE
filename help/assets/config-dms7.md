@@ -10,7 +10,7 @@ role: User, Admin
 mini-toc-levels: 3
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: Konfiguration,Scene7-läge
-source-git-commit: 5769ddeefe2d01d32bb9a0611dc06af68a848936
+source-git-commit: 6c042d2c95f18ae4a0d5fd57a048aa12761495b6
 workflow-type: tm+mt
 source-wordcount: '6509'
 ht-degree: 3%
@@ -168,7 +168,7 @@ Om du tänker använda den här funktionen bör du vara medveten om följande kr
 * Kontrollera att din Experience Manager-instans är konfigurerad med Amazon S3 eller Microsoft® Azure Blob Storage.
 
    >[!NOTE]
-   Konfigurera Azure Blob-lagringen med båda åtkomstnycklarna (nyckel1 och nyckel2) eftersom den här stora överföringsfunktionen inte stöds med AzureSas i Blob-lagringskonfigurationen.
+   Konfigurera Azure Blob-lagringen med en åtkomstnyckel och en hemlig nyckel eftersom den här stora överföringsfunktionen inte stöds med AzureSas i Blob-lagringskonfigurationen.
 
 * Hämtning [Direkt binär åtkomst ](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html) är aktiverad (Oak&#39;s *Direct Binary Access upload* krävs inte).
 
