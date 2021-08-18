@@ -12,9 +12,9 @@ discoiquuid: 97286c2c-f6e3-43ec-b1a9-2abb58616778
 docset: aem65
 role: Admin
 exl-id: ecd30f5d-ad31-4482-96d3-c92f1cf91336
-source-git-commit: f4f4be3d9885723953b1306ff25a52d27799aa93
+source-git-commit: 1d334c42088342954feb34f6179dc5b134f81bb8
 workflow-type: tm+mt
-source-wordcount: '2508'
+source-wordcount: '2490'
 ht-degree: 1%
 
 ---
@@ -119,7 +119,7 @@ Författarinstans skickar utgivarens slutpunkt. När en användare skapas eller 
 Så här konfigurerar du synkroniseringsagenter för Apache Sling:
 
 1. Logga in med administratörsbehörighet på din AEM författarinstans.
-1. Gå till [webbkonsolen](https://helpx.adobe.com/experience-manager/6-4/help/sites-deploying/configuring-osgi.html). Exempel: [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr).
+1. Gå till [webbkonsolen](/help/sites-deploying/configuring-osgi.md). Exempel: [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr).
 1. Sök efter **Apache Sling Distribution Agent - Sync Agents Factory**.
 
    * Välj den befintliga konfiguration som ska öppnas för redigering (pennikon).
@@ -165,7 +165,7 @@ Den här konfigurationen används för att konfigurera data som du vill synkroni
 Så här konfigurerar du data (nodsökvägar) att synkronisera:
 
 1. Logga in med administratörsbehörighet för din publiceringsinstans.
-1. Gå till [webbkonsolen](https://helpx.adobe.com/experience-manager/6-4/help/sites-deploying/configuring-osgi.html).
+1. Gå till [webbkonsolen](/help/sites-deploying/configuring-osgi.md).
 
    Exempel: [https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr).
 
@@ -188,7 +188,7 @@ Om medlemskapet för en grupp i en utgivare inte uppdateras av andra utgivare m�
 Så här ser du till att medlemskapet synkroniseras:
 
 1. Logga in med administratörsbehörighet för din publiceringsinstans.
-1. Gå till [webbkonsolen](https://helpx.adobe.com/experience-manager/6-4/help/sites-deploying/configuring-osgi.html).
+1. Gå till [webbkonsolen](/help/sites-deploying/configuring-osgi.md).
 
    Exempel: [https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr).
 
