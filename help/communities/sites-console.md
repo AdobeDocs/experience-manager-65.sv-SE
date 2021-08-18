@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 4130f952-5bb5-4e32-91d6-47b2885b30a4
 docset: aem65
 role: Admin
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: d42057a2f8ce50332f404388fd1cfc9b6a154765
 workflow-type: tm+mt
-source-wordcount: '3290'
+source-wordcount: '3286'
 ht-degree: 0%
 
 ---
@@ -130,7 +130,7 @@ Designpanelen innehåller två underpaneler för att välja tema och varumärkes
 
 ![sitetema](assets/sitetheme.png)
 
-Ramverket använder [Twitter Bootstrap](https://twitterbootstrap.org/) för att ge webbplatsen en responsiv, flexibel design. Ett av de många förinlästa Bootstrap-temana kan väljas för att formatera den valda communitywebbplatsmallen, eller så kan ett Bootstrap-tema överföras.
+Ramverket använder `Twitter Bootstrap` för att ge webbplatsen en responsiv, flexibel design. Ett av de många förinlästa Bootstrap-temana kan väljas för att formatera den valda communitywebbplatsmallen, eller så kan ett Bootstrap-tema överföras.
 
 När du väljer det här alternativet överlagras temat med en ogenomskinlig blå bockmarkering.
 
