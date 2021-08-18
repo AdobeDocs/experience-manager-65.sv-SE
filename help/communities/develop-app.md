@@ -9,20 +9,19 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: 910229a3-38b1-44f1-9c09-55f8fd6cbb1d
-translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+exl-id: 7ac0056c-a742-49f4-8312-2cf90ab9f23a
+source-git-commit: 1d334c42088342954feb34f6179dc5b134f81bb8
 workflow-type: tm+mt
-source-wordcount: '598'
+source-wordcount: '560'
 ht-degree: 2%
 
 ---
 
-
-# Utveckla sandlådeprogram {#develop-sandbox-application}
+# Utveckla sandlådeprogram  {#develop-sandbox-application}
 
 I det här avsnittet, nu när mallen har konfigurerats i [det inledande programavsnittet](initial-app.md), och de inledande sidorna som har skapats i [det inledande innehållet](initial-content.md), kan programmet utvecklas med grundläggande skript, inklusive möjligheten att aktivera redigering med communitykomponenter. I slutet av det här avsnittet kommer webbplatsen att fungera.
 
-## Använda Foundation Page Scripts {#using-foundation-page-scripts}
+## Använda skript för Foundation Page {#using-foundation-page-scripts}
 
 Standardskriptet, som skapades när komponenten som återger uppspelningssidmallen lades till, ändras så att det innehåller bassidans head.jsp och en local body.jsp.
 
@@ -46,7 +45,7 @@ Använda CRXDE Lite:
 
    ![page-script](assets/page-script.png)
 
-### Huvud- och brödskript {#head-and-body-scripts}
+### Head- och body-skript {#head-and-body-scripts}
 
 1. I **Utforskarfönstret i CRXDE Lite** går du till `/apps/an-scf-sandbox/components/playpage` och dubbelklickar på filen `playpage.jsp` för att öppna den i redigeringsrutan.
 
@@ -122,7 +121,7 @@ Använda CRXDE Lite:
 
 **Visa sidan i en webbläsare i redigeringsläge:**
 
-* Standardgränssnitt: [http://localhost:4502/editor.html/content/an-scf-sandbox/en/play.html](http://localhost:4502/editor.html/content/an-scf-sandbox/en/play.md)
+* Standardgränssnitt: `http://localhost:4502/editor.html/content/an-scf-sandbox/en/play.html`
 
 Du bör inte bara se rubriken **Community Play**, utan även gränssnittet för redigering av sidinnehåll.
 
@@ -130,7 +129,7 @@ Panelen Resurser/Komponenter visas när både sidopanelen är öppen och fönstr
 
 ![view-page](assets/view-page.png)
 
-* Klassiskt användargränssnitt: [http://localhost:4502/cf#/content/an-scf-sandbox/en/play.html](http://localhost:4502/cf#/content/an-scf-sandbox/en/play.html)
+* Klassiskt användargränssnitt: `http://localhost:4502/cf#/content/an-scf-sandbox/en/play.html`
 
 Så här visas uppspelningssidan i det klassiska användargränssnittet, inklusive med innehållssökaren (cf):
 
@@ -170,7 +169,7 @@ I en flerspråkig miljö innehåller rotsidan ett skript som tolkar klientens be
 
 I det här enkla exemplet ställs rotsidan in statiskt för att dirigera om till den engelska sidan, som i framtiden kan komma att bli huvudlandningssida med en länk till uppspelningssidan.
 
-Ändra webbläsarens URL till rotsidan: [http://localhost:4502/editor.html/content/an-scf-sandbox.html](https://locahost:4502/editor.html/content/an-scf-sandbox.html)
+Ändra webbläsarens URL till rotsidan: `http://localhost:4502/editor.html/content/an-scf-sandbox.html`
 
 * Välj ikonen Sidinformation
 * Välj **[!UICONTROL Open Properties]**
