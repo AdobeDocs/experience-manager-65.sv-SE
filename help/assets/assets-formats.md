@@ -6,9 +6,9 @@ mini-toc-levels: 1
 role: User, Admin
 feature: Resurshantering,Återgivningar
 exl-id: a4bcf67b-54f4-4681-9e42-fd4753acde1a
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: f0a0ea53675afa16463a3cf863257020ba5374d3
 workflow-type: tm+mt
-source-wordcount: '1571'
+source-wordcount: '1545'
 ht-degree: 2%
 
 ---
@@ -217,12 +217,8 @@ Utöver ovanstående funktioner bör du tänka på följande:
 | AVI | A/V-sammanflätning | XVID, DIVX, HDV, MiniDV (DV25), Techsmith Camtasia, Huffyuv, Fraps, Panasonic DVCPro | Indeo3 (IV30), MJPEG, Microsoft® Video 1 (MS-CRAM) |
 | WebM | WebM | Google VP8 | - |
 | OGV, OGG | Ogg | Theora, VP3, Dirac | - |
-| MXF | MXF | Sony XDCAM, MPEG-2, MPEG-4, Panasonic DVCPro | - |
-| MTS | AVCHD | H264/AVC | - |
 | MKV | Matroska | H264/AVC | - |
-| R3D, RM | Red Raw-video | MJPEG 2000 | - |
 | RAM, RM | RealVideo | Stöds inte | Real G2 (RV20), Real 8 (RV30), Real 10 (RV40) |
-| FLAC | Inbyggd Flash | Kostnadsfri förlustfri ljudkodek | - |
 | MJ2 | Motion JPEG 2000 | Motion JPEG 2000-kodek | - |
 
 ## Arkivformat som stöds {#supported-archive-formats}
@@ -307,7 +303,7 @@ En lista över MIME-typer som stöds finns i CRXDE Lite på `/conf/global/settin
 | TAR | application/x-tar |  |  |
 | TIF/TIFF | bild/tiff |  |  |
 | TTC | application/x-font-ttf |  |  |
-| TTF | application/x-font-ttf |  |  |
+| RTF | application/x-font-ttf |  |  |
 | VOB | video/dvd |  | [ExcludeMasterVideoFromAVS](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-exclude-master-video-from-avs.html) |
 | VTT | text/vtt |  |  |
 | WAV | audio/x-wav |  |  |
