@@ -12,9 +12,9 @@ discoiquuid: 97286c2c-f6e3-43ec-b1a9-2abb58616778
 docset: aem65
 role: Admin
 exl-id: ecd30f5d-ad31-4482-96d3-c92f1cf91336
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: f4f4be3d9885723953b1306ff25a52d27799aa93
 workflow-type: tm+mt
-source-wordcount: '2509'
+source-wordcount: '2508'
 ht-degree: 1%
 
 ---
@@ -130,7 +130,7 @@ Så här konfigurerar du synkroniseringsagenter för Apache Sling:
    * Välj **Använd flera köer.**
    * Ange **Exporterarslutpunkter** och **Importerarslutpunkter** (du kan lägga till fler exporterings- och importslutpunkter).
 
-      Dessa slutpunkter definierar var du vill hämta innehållet från och var du vill skicka innehållet. Författaren hämtar innehållet från den angivna exporterarens slutpunkt och skickar innehållet till utgivaren (utom den utgivare som innehållet hämtades från).
+      Dessa slutpunkter definierar varifrån du vill hämta innehållet och var du vill överföra innehållet. Författaren hämtar innehållet från den angivna exporterarens slutpunkt och skickar innehållet till utgivaren (utom den utgivare som innehållet hämtades från).
    ![sync-agent-fact](assets/sync-agent-fact.png)
 
 ### Adobe Granite-distribution - krypterad lösenordsleverantör {#adobe-granite-distribution-encrypted-password-transport-secret-provider}
@@ -164,7 +164,7 @@ Den här konfigurationen används för att konfigurera data som du vill synkroni
 
 Så här konfigurerar du data (nodsökvägar) att synkronisera:
 
-1. Logga in med administratörsbehörighet för din författarinstans.
+1. Logga in med administratörsbehörighet för din publiceringsinstans.
 1. Gå till [webbkonsolen](https://helpx.adobe.com/experience-manager/6-4/help/sites-deploying/configuring-osgi.html).
 
    Exempel: [https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr).
@@ -187,7 +187,7 @@ Om medlemskapet för en grupp i en utgivare inte uppdateras av andra utgivare m�
 
 Så här ser du till att medlemskapet synkroniseras:
 
-1. Logga in med administratörsbehörighet på din AEM författarinstans.
+1. Logga in med administratörsbehörighet för din publiceringsinstans.
 1. Gå till [webbkonsolen](https://helpx.adobe.com/experience-manager/6-4/help/sites-deploying/configuring-osgi.html).
 
    Exempel: [https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr).
