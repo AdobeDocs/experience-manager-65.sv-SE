@@ -9,16 +9,15 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: d7b5b5e3-2d84-4a6b-bcc2-d490882ff3ed
-translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+exl-id: 5ca58bc3-8505-4d91-9cd1-6b2e2671f1be
+source-git-commit: 1d5cfff10735ea31dc0289b6909851b8717936eb
 workflow-type: tm+mt
-source-wordcount: '1505'
+source-wordcount: '1501'
 ht-degree: 0%
 
 ---
 
-
-# Social Component Framework {#social-component-framework}
+# Ramverk för sociala komponenter {#social-component-framework}
 
 Det sociala ramverket (SCF) förenklar processen att konfigurera, anpassa och utöka webbgruppskomponenter på både server- och klientsidan.
 
@@ -78,7 +77,7 @@ Huvudklasserna beskrivs på sidan [Anpassning på serversidan](server-customize.
 
 Besök [Översikt över lagringsresursprovidern](srp.md) om du vill veta mer om hur du arbetar med UGC.
 
-### HTTP API {#http-api}
+### HTTP-API {#http-api}
 
 HTTP-API:t har stöd för enkel anpassning och val av klientplattformar för PhoneGap-appar, inbyggda appar och andra integreringar och mashups. Dessutom gör HTTP API det möjligt för en community-webbplats att köras som en tjänst utan en klient, så att ramverkskomponenter kan integreras i alla webbsidor som bygger på valfri teknik.
 
@@ -100,7 +99,7 @@ En standardserver för GET lyssnar på .social.json-begäranden som SocialCompon
 
 ![scf-framework](assets/scf-framework.png)
 
-### HTTP API - POST-begäranden {#http-api-post-requests}
+### HTTP API - POSTER {#http-api-post-requests}
 
 Förutom åtgärderna GET (Läs) definierar ramverket ett slutpunktsmönster som möjliggör andra åtgärder för en komponent, inklusive Skapa, Uppdatera och Ta bort. Dessa slutpunkter är HTTP-API:er som accepterar indata och svarar med antingen en HTTP-statuskod eller med ett JSON-svarsobjekt.
 
@@ -112,7 +111,7 @@ Det finns en Sling-POST:åtgärd för alla SocialComponent-åtgärder. Affärslo
 
 ![scf-post-request](assets/scf-post-request.png)
 
-### Lagringsresursprovider {#storage-resource-provider-srp}
+### Lagringsresursleverantör (SRP) {#storage-resource-provider-srp}
 
 Mer information om hur du hanterar UGC som lagras i [community-innehållslagret](working-with-srp.md) finns i:
 
@@ -124,9 +123,9 @@ Mer information om hur du hanterar UGC som lagras i [community-innehållslagret]
 
 Besök [Anpassningar på serversidan](server-customize.md) om du vill ha information om hur du anpassar affärslogiken och beteendet för en Communities-komponent på serversidan.
 
-## Hanteringsfält, JS-mallspråk {#handlebars-js-templating-language}
+## Hanterarfält - språk för JS-mallar {#handlebars-js-templating-language}
 
-En av de mest märkbara förändringarna i det nya ramverket är användningen av [Handlebars JS templating language (HBS)](https://www.handlebarsjs.com/), en populär öppen källkod-teknik för serverklientåtergivning.
+En av de mest märkbara förändringarna i det nya ramverket är användningen av mallspråket `Handlebars JS` (HBS), en populär öppen källkod-teknik för serverklientåtergivning.
 
 HBS-skript är enkla, logikfria, kompilerade på både server och klient, är enkla att överlagra och anpassa och binds naturligt med klientens användargränssnitt eftersom HBS stöder rendering på klientsidan.
 
@@ -184,7 +183,7 @@ I [Community Components Guide](components-guide.md) kan inkluderbara komponenter
 >
 >Om du vill lägga till en komponent dynamiskt på en sida, i stället för att lägga till eller ta med den i en mall, läser du [Komponentsidinläsning](sideloading.md).
 
-### Handtag, hjälp {#handlebars-helpers}
+### Handtag {#handlebars-helpers}
 
 I [SCF Handlebars Helpers](handlebars-helpers.md) finns en lista och en beskrivning av anpassade hjälpredor som är tillgängliga i SCF.
 
@@ -224,4 +223,3 @@ Ytterligare utvecklarinformation finns i [riktlinjerna för kodning](code-guide.
 ## Felsökning {#troubleshooting}
 
 Vanliga problem och kända problem beskrivs i avsnittet [Felsökning](troubleshooting.md).
-
