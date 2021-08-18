@@ -10,16 +10,15 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 6bac681e-59e1-4786-9c50-6679c936cfd1
 docset: aem65
-translation-type: tm+mt
-source-git-commit: c897f034edbdbeee74869165ed384c3408a857e0
+exl-id: 75cef5da-4f93-4721-99c0-ad44c8ab76d4
+source-git-commit: 1d334c42088342954feb34f6179dc5b134f81bb8
 workflow-type: tm+mt
-source-wordcount: '221'
+source-wordcount: '222'
 ht-degree: 0%
 
 ---
 
-
-# Grundläggande om tilldelningar {#assignments-essentials}
+# Grundläggande om uppdrag {#assignments-essentials}
 
 Läs vidare om du vill veta mer om den viktiga informationen för att arbeta med tilldelningsfunktionen i [aktiveringscommunityn](/help/communities/overview.md#enablement-community).
 
@@ -94,5 +93,4 @@ En community-platsstruktur som innehåller [uppdragsfunktionen](/help/communitie
 
 * [Rapporterings-API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/reporting/dv/api/package-summary.html)
 
-* [API för rapporteringsanalys](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/reporting/analytics/api/package-summary.html)
-
+* [API för rapporteringsanalys](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/reporting/dv/model/api/package-summary.html)
