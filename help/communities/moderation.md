@@ -12,9 +12,9 @@ discoiquuid: 404582ab-bb4c-4775-9ae3-17356d376dca
 docset: aem65
 role: Admin
 exl-id: 829da16a-4083-43c1-857d-f2666b363bfc
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 1d334c42088342954feb34f6179dc5b134f81bb8
 workflow-type: tm+mt
-source-wordcount: '2108'
+source-wordcount: '2048'
 ht-degree: 1%
 
 ---
@@ -242,11 +242,11 @@ Förutom filtren i rutan [Filterspår](/help/communities/moderation.md#ootbfilte
 
 Så här installerar du exemplet för taggfiltret:
 
-1. Öppna pakethanteraren på AEM Author-instansen ([https://[aem-author]:4502/crx/packmgr/index.jsp](https://aem65-communities-demo.corp.adobe.com:4502/crx/packmgr/index.jsp)) och AEM Publish-instansen ([https://[aem-publish]:4503/crx/packmgr/index.jsp](https://aem65-communities-demo.corp.adobe.com:4502/crx/packmgr/index.jsp)).
+1. Öppna pakethanteraren på AEM Author-instansen (`https://[aem-author]:4502/crx/packmgr/index.jsp`) och AEM Publish-instansen (`https://[aem-publish]:4503/crx/packmgr/index.jsp`).
 1. Bygg paketet `com.adobe.social.sample.moderation.filter.ui.apps-1.0-SNAPSHOT.zip` från Github-koden och installera och aktivera det.
 1. Öppna paketkonsolen på AEM Author-instansen ( `https://[aem-author]:4502/system/console/bundles`) och AEM Publish-instansen ( `https://[aem-publish]:4503/system/console/bundles`).
-1. Bygg paketet ` [com](https://sample-moderation-filter.com/).adobe.social.sample.moderation.filter.core-1.0-SNAPSHOT.jar` från Github och installera och aktivera det.
-1. Gå till instansen **/apps/social/moderation/facets** på AEM Author ([https://[aem-author]:4502/crx/de/index.jsp#/apps/social/moderation/facets](https://aem65-communities-demo.corp.adobe.com:4502/crx/de/index.jsp#/apps/social/moderation/facets)) och AEM Publish ([https://[aem-publish]:4502/crx/de/index.jsp#/apps/social/moderation/facets](https://aem65-communities-demo.corp.adobe.com:4502/crx/de/index.jsp#/apps/social/moderation/facets)).
+1. Bygg paketet (`[com](https://sample-moderation-filter.com/).adobe.social.sample.moderation.filter.core-1.0-SNAPSHOT.jar`) från Github och installera och aktivera det.
+1. Gå till **/apps/social/moderation/facets**-noden på AEM Author (`https://[aem-author]:4502/crx/de/index.jsp#/apps/social/moderation/facets`) och AEM Publish (`https://[aem-publish]:4502/crx/de/index.jsp#/apps/social/moderation/facets`)-instansen.
 1. Lägg till en teknisk användare **communities-utility-reader** med `jcr:read` behörigheter.
 
 Så här visar du anpassade filter på befintliga communityplatser:
