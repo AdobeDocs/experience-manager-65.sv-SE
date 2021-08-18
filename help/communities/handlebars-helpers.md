@@ -9,16 +9,15 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: 8b6c1697-d693-41f4-8337-f41658465107
-translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+exl-id: bfb95cae-4b0f-4521-a113-042dc4005a63
+source-git-commit: 1d334c42088342954feb34f6179dc5b134f81bb8
 workflow-type: tm+mt
-source-wordcount: '1534'
+source-wordcount: '1521'
 ht-degree: 2%
 
 ---
 
-
-# SCF Handlebars Helper {#scf-handlebars-helpers}
+# Hjälpmedel för SCF-handtag {#scf-handlebars-helpers}
 
 | **[⇐ - funktioner](essentials.md)** | **[Anpassning på serversidan](server-customize.md)** |
 |---|---|
@@ -341,7 +340,7 @@ Den här hjälpen, som bara är lämplig på serversidan, innehåller funktioner
     <link href="/etc/clientlibs/social/hbs/comments.css" rel="stylesheet" type="text/css">
 ```
 
-## Vacker tid {#pretty-time}
+## Vackert {#pretty-time}
 
 En hjälpfunktion som visar hur mycket tid som har gått upp till en brytpunkt, efter vilken ett vanligt datumformat visas.
 
@@ -450,8 +449,6 @@ OBS! detta kan returnera en tom sträng
 
 ## Handlebars.js Basic Overview {#handlebars-js-basic-overview}
 
-En snabb översikt över hjälpfunktioner från [Handlebars.js-dokumentation](https://handlebarsjs.com/expressions.html):
-
 * Ett hjälpanrop till en handledare är en enkel identifierare (hjälpens *namn*) följt av noll eller flera blankstegsavgränsade parametrar.
 * Parametrar kan vara ett enkelt String-, number-, boolean- eller JSON-objekt, samt en valfri sekvens av nyckelvärdepar (hash-argument) som den sista parametern/de sista.
 * Nycklarna i hash-argumenten måste vara enkla identifierare.
@@ -527,7 +524,7 @@ template(data);
 
 Anpassade hjälpprogram måste implementeras både på serversidan och på klientsidan, särskilt när data skickas. För SCF kompileras och återges de flesta mallar på serversidan när servern genererar HTML-koden för en viss komponent när sidan begärs.
 
-### Anpassade stödprocesser på serversidan {#server-side-custom-helpers}
+### Anpassade hjälpmedel på serversidan {#server-side-custom-helpers}
 
 Om du vill implementera och registrera en anpassad SCF-hjälp på servern implementerar du bara Java-gränssnittet [TemplateHelper](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/handlebars/api/TemplateHelper.html), gör det till en [OSGi-tjänst](../../help/sites-developing/the-basics.md#osgi) och installerar det som en del av ett OSGi-paket.
 
@@ -575,7 +572,7 @@ public class FooTextHelper implements TemplateHelper<String>{
 >
 >Komponenten återges på nytt på klientsidan för den inloggade användaren, och om hjälpen på klientsidan inte hittas försvinner komponenten.
 
-### Anpassade hjälp på klientsidan {#client-side-custom-helpers}
+### Anpassade hjälpmedel på klientsidan {#client-side-custom-helpers}
 
 Hjälpprogram på klientsidan är Handlebars-skript som registreras genom att anropa `Handlebars.registerHelper()`.
 Till exempel:
@@ -607,4 +604,3 @@ Obs! Hjälpprogrammen för SCF definieras i `/etc/clientlibs/social/commons/scf/
 | **[⇐ - funktioner](essentials.md)** | **[Anpassning på serversidan](server-customize.md)** |
 |---|---|
 |  | **[Anpassning på klientsidan](client-customize.md)** |
-
