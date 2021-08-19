@@ -10,14 +10,13 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: b53348ca-fc50-4e7d-953d-b4c03a5025bb
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 149cdd00f745ad897f506434d7156b8147ef5bae
+exl-id: 363b8fab-6ce7-4338-8478-3f25f2a1f117
+source-git-commit: 840ea373537799af995c3b8ce0c8bf575752775b
 workflow-type: tm+mt
 source-wordcount: '4901'
 ht-degree: 9%
 
 ---
-
 
 # Skapa sidmallar{#creating-page-templates}
 
@@ -128,7 +127,7 @@ När du skapar en ny redigerbar mall:
    * Eller direkt på: [https://localhost:4502/libs/wcm/core/content/sites/templates.html/conf](https://localhost:4502/libs/wcm/core/content/sites/templates.html/conf)
 
 * Kan [skapa en mapp för mallarna](#creating-a-template-folder-admin) om det behövs
-* [Skapa en ny mall](#creatinganewtemplateauthor) som till att börja med är tom  [](#templatedefinitions)
+* [Skapa en ny mall](#creatinganewtemplateauthor) som till att börja med är tom
 
 * [Definiera ytterligare ](#definingtemplatepropertiesauthor) egenskaper för mallen om det behövs
 * [Redigera ](#editingtemplates) mallen för att definiera:
@@ -150,11 +149,11 @@ När du skapar en ny redigerbar mall:
 >
 >Ange aldrig någon information som behöver vara [internationaliserad](/help/sites-developing/i18n.md) i en mall. För internalisering rekommenderas [lokaliseringsfunktionerna för kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html).
 
-### Skapar en mallmapp - administratör {#creating-a-template-folder-admin}
+### Skapa en mallmapp - administratör {#creating-a-template-folder-admin}
 
 Du bör skapa en mallmapp för ditt projekt för dina projektspecifika mallar. Detta är en administratörsåtgärd och beskrivs i dokumentet [Sidmallar - Redigerbar](/help/sites-developing/page-templates-editable.md#template-folders).
 
-### Skapar en ny mall - mallskapare {#creating-a-new-template-template-author}
+### Skapa en ny mall - mallskapare {#creating-a-new-template-template-author}
 
 1. Öppna **mallkonsolen** (via **Verktyg ->** **Allmänt**) och navigera sedan till önskad mapp.
 
@@ -235,14 +234,14 @@ Så här definierar du mallminiatyrbilden:
 
 1. När du är nöjd med miniatyrbilden klickar eller trycker du på **Spara och stäng**.
 
-### Aktivera och tillåta en mall - mallskapare {#enabling-and-allowing-a-template-template-author}
+### Aktivera och tillåta en mall - mallförfattare {#enabling-and-allowing-a-template-template-author}
 
 För att kunna använda en mall när du skapar en sida måste du:
 
 * [Aktivera ](#enablingatemplate) mallen för att göra den tillgänglig för användning när du skapar sidor.
 * [Tillåt att ](#allowingatemplate) mallen anger de innehållsgrenar där mallen kan användas.
 
-#### Aktivera en mall - mallskapare {#enabling-a-template-template-author}
+#### Aktivera en mall - mallförfattare {#enabling-a-template-template-author}
 
 En mall kan aktiveras eller inaktiveras för att bli tillgänglig eller inte tillgänglig i guiden **Skapa sida**.
 
@@ -575,7 +574,7 @@ I **strukturläge** för mallredigeraren:
 
    ![chlimage_1-149](assets/chlimage_1-149.png)
 
-### Redigera en mall - Inledande innehåll - Författare {#editing-a-template-initial-content-author}
+### Redigera en mall - Ursprungligt innehåll - Författare {#editing-a-template-initial-content-author}
 
 **Ursprungligt** innehållsläge används för att definiera innehåll som ska visas när en sida skapas baserat på mallen. Det ursprungliga innehållet kan sedan redigeras av sidförfattare.
 
@@ -617,7 +616,7 @@ Du kan definiera mallayouten för ett antal olika enheter. [Responsiv ](/help/si
 
 ![chlimage_1-154](assets/chlimage_1-154.png)
 
-### Redigera en mall - Siddesign - Mallförfattare/Utvecklare {#editing-a-template-page-design-template-author-developer}
+### Redigera en mall - Siddesign - Mallförfattare/utvecklare {#editing-a-template-page-design-template-author-developer}
 
 Siddesignen med nödvändiga klientbibliotek och sidpolicyer hanteras under alternativet **Siddesign** på menyn **Sidinformation**.
 
@@ -682,7 +681,7 @@ Med hjälp av sidegenskaper kan du definiera nödvändiga klientbibliotek genom 
 
 >[!NOTE]
 >
->Även om mallskaparen kan ange sidprincipen för mallen måste han eller hon hämta information om lämpliga klientbibliotek från utvecklaren.
+>Mallförfattaren kan ange sidprincipen för mallen, men han eller hon måste få information om lämpliga klientbibliotek från utvecklaren.
 
 ### Redigera en mall - Inledande sidegenskaper - Författare {#editing-a-template-initial-page-properties-author}
 
