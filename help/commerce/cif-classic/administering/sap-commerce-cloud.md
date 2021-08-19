@@ -7,8 +7,8 @@ uuid: cee1a781-fcba-461e-a0a4-c561a1dbcbf3
 contentOwner: Guillaume Carlino
 topic-tags: e-commerce
 content-type: reference
-translation-type: tm+mt
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+exl-id: c342f789-2ff7-4802-99c7-c3699218fe47
+source-git-commit: 61691c300322edcdee33b121ca400e4c89256e45
 workflow-type: tm+mt
 source-wordcount: '1726'
 ht-degree: 1%
@@ -27,7 +27,7 @@ Efter installationen kan du konfigurera instansen:
 1. [Konfigurera katalogimporteraren](#configure-the-catalog-importer).
 1. Använd [importeraren för att importera katalogen](#catalog-import) till en specifik plats i AEM.
 
-## Konfigurera den motstående sökningen efter Geometrixx Outdoors {#configure-the-facetted-search-for-geometrixx-outdoors}
+## Konfigurera den motsatta sökningen efter Geometrixx Outdoors {#configure-the-facetted-search-for-geometrixx-outdoors}
 
 >[!NOTE]
 >
@@ -166,7 +166,7 @@ Strukturen som ska skapas vid import kan konfigureras för:
 
 När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Mer information finns i [Konfigurera OSGi](/help/sites-deploying/configuring-osgi.md). Se även konsolen för en fullständig lista över konfigurerbara parametrar och deras standardvärden.
 
-## Konfigurera produktattribut att läsa in {#configure-the-product-attributes-to-load}
+## Konfigurera de produktattribut som ska läsas in {#configure-the-product-attributes-to-load}
 
 Svarsparsern kan konfigureras för att definiera egenskaper och attribut som ska läsas in för (variant) produkter:
 
@@ -181,7 +181,7 @@ Svarsparsern kan konfigureras för att definiera egenskaper och attribut som ska
    >
    >När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Mer information finns i [Konfigurera OSGi](/help/sites-deploying/configuring-osgi.md). Se även konsolen för en fullständig lista över konfigurerbara parametrar och deras standardvärden.
 
-## Importerar produktdata {#importing-the-product-data}
+## Importera produktdata {#importing-the-product-data}
 
 Det finns flera olika sätt att importera produktdata. Produktdata kan importeras när miljön först konfigureras eller efter att hybris-data har ändrats:
 
@@ -309,8 +309,6 @@ Importprocessen kan ta lång tid, så som ett tillägg till produktsynkroniserin
        /etc/commerce/products
    ```
 
-   ` [](http://localhost:4502/crx/de/index.jsp#/etc/commerce/products)`
-
 ## Konfigurera katalogimporteraren {#configure-the-catalog-importer}
 
 hybriskatalogen kan importeras till AEM med hjälp av satsimportör för hybris-kataloger, kategorier och produkter.
@@ -343,7 +341,7 @@ KatalogIdentifieraren för den katalog som ska importeras.
 * **Rotsökväg:**
 Sökvägen dit katalogen ska importeras.
 
-## Tar bort en produkt från katalogen {#removing-a-product-from-the-catalog}
+## Ta bort en produkt från katalogen {#removing-a-product-from-the-catalog}
 
 Så här tar du bort en eller flera produkter från katalogen:
 
