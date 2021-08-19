@@ -10,18 +10,17 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: dd0cbc05-a361-46bc-b9f1-d045f8f23890
 docset: aem65
-translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+exl-id: ebc4e1e7-34f0-4f4e-9f00-178dfda23ce4
+source-git-commit: 840ea373537799af995c3b8ce0c8bf575752775b
 workflow-type: tm+mt
 source-wordcount: '1202'
 ht-degree: 0%
 
 ---
 
-
 # Upplev den publicerade webbplatsen {#experience-the-published-site}
 
-## Bläddra till ny webbplats vid publicering {#browse-to-new-site-on-publish}
+## Bläddra till Ny webbplats vid publicering {#browse-to-new-site-on-publish}
 
 Nu när den nyligen skapade communitywebbplatsen har publicerats bläddrar du till den URL som visas när du skapar webbplatsen, men på publiceringsservern, till exempel:
 
@@ -76,11 +75,11 @@ Följ de här stegen för att skydda communityplatsens innehåll från anonyma a
 1. Lägg till inloggningssidans sökväg. Till exempel **/content/....../GetStarted**.
 1. Publicera sidan.
 
-## Betrodd community-medlem {#trusted-community-member}
+## Betrodd medlem i användargruppen {#trusted-community-member}
 
 Den här upplevelsen förutsätter att [Aaron McDonald](/help/communities/tutorials.md#demo-users) har tilldelats rollerna [community manager och moderator](/help/communities/create-site.md#roles). Om inte, går du tillbaka till författarmiljön för att [ändra webbplatsinställningarna](/help/communities/sites-console.md#modifying-site-properties) och väljer Aaron McDonald som både community manager och moderator.
 
-I det övre högra hörnet väljer du `Log in` och signerar med användarnamn (aaron.mcdonald@mailinator.com) och lösenord (lösenord). Lägg märke till möjligheten att logga in med Twitter- eller Facebook-inloggningsuppgifter.
+I det övre högra hörnet väljer du `Log in` och signerar med användarnamn (aaron.mcdonald@mailinator.com) och lösenord (lösenord). Lägg märke till möjligheten att logga in med Twitter eller Facebook.
 
 ![inloggning](assets/login.png)
 
@@ -119,7 +118,7 @@ Besökarna kan visa inlägg och sortera dem på olika sätt.
 
 ![forumlink](assets/forumlink.png)
 
-### Grupplänk {#groups-link}
+### Länken Grupper {#groups-link}
 
 Eftersom Aaron är gruppadministratör kan Aron skapa en ny community-grupp genom att välja länken Grupper, välja en gruppmall, bild, om gruppen är öppen eller hemlig och bjuda in medlemmar.
 
@@ -194,7 +193,7 @@ Logga in som Weston McCall (weston.mccall@dodgit.com / lösenord) och navigera t
 
 ![grouplink3](assets/grouplink3.png)
 
-### Webbsideslänk {#web-page-link}
+### Länk till webbsida {#web-page-link}
 
 Visa den grundläggande webbsidan som finns på webbplatsen genom att välja länken Webbsida. Standardverktygen AEM kan användas för att lägga till innehåll på den här sidan i författarmiljön.
 
@@ -202,11 +201,11 @@ Till exempel går du till **author**-instansen, öppnar mappen `engage` i [Webbp
 
 ![webpagelink](assets/webpagelink.png)
 
-### Moderationslänk {#moderationlink}
+### Modereringslänk {#moderationlink}
 
 När communitymedlemmen har modereringsbehörighet visas länken Moderering och om du väljer den visas det communityinnehåll som publicerats och det kan vara [modererat](/help/communities/moderate-ugc.md) på ett sätt som liknar [moderationskonsolen](/help/communities/moderation.md) i författarmiljön.
 
-Använd webbläsarens bakåtknapp för att gå tillbaka till den publicerade webbplatsen. De flesta konsoler är inte tillgängliga via global navigering i publiceringsmiljön. [](/help/communities/moderate-ugc.md)
+Använd webbläsarens bakåtknapp för att gå tillbaka till den publicerade webbplatsen. De flesta konsoler är inte tillgängliga via global navigering i publiceringsmiljön.
 
 ![moderationlink](assets/moderationlink.png)
 
@@ -232,4 +231,3 @@ När du är inloggad är den första sidan deras `Profile`-sida, som de kan anpa
 Om medlemmen glömmer sitt inloggnings-ID är det möjligt att återställa med sin e-postadress.
 
 ![forgotusername](assets/forgotusername.png)
-
