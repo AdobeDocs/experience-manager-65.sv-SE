@@ -12,7 +12,7 @@ discoiquuid: e6fdaf56-402f-418d-96d8-e46bd3ad1e8c
 docset: aem65
 role: Admin
 exl-id: 7d54928b-6512-4da9-a209-eb4488bf2b64
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: fcdadcf691ed5a569a5a40ca070f8ec266ec3eb9
 workflow-type: tm+mt
 source-wordcount: '2742'
 ht-degree: 2%
@@ -154,7 +154,7 @@ Så här aktiverar du rapporter om pulsslag för video efter [att Analytics-rapp
 * Aktivera [Analys för en community-webbplats](#enable-analytics-for-a-community-site)
 * Associera `Marketing Cloud Org Id` med communitywebbplatsen
 
-`Marketing Cloud Org Id` kan anges när [en community-webbplats skapas](/help/communities/sites-console.md#enablement) eller senare av [ändra](/help/communities/sites-console.md#modifying-site-properties) community-webbplatsegenskaperna. [](#aem-analytics-cloud-service-configuration)
+`Marketing Cloud Org Id` kan anges när [en community-webbplats skapas](/help/communities/sites-console.md#enablement) eller senare av [ändra](/help/communities/sites-console.md#modifying-site-properties) community-webbplatsegenskaperna.
 
 ![marketing-org-id](assets/marketing-org-id.png)
 
