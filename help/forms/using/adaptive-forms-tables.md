@@ -8,15 +8,14 @@ topic-tags: author
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: fc418da9-496f-4a2b-bfe4-2add3ac4f468
 docset: aem65
-feature: Adaptive Forms
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+feature: Adaptiv Forms
+exl-id: 1a139530-27bd-44da-8bf4-5b375e75cf32
+source-git-commit: 840ea373537799af995c3b8ce0c8bf575752775b
 workflow-type: tm+mt
 source-wordcount: '2424'
 ht-degree: 0%
 
 ---
-
 
 # Tabeller i anpassningsbara former{#tables-in-adaptive-forms}
 
@@ -40,7 +39,7 @@ Om du vill skapa en tabell drar och släpper du tabellkomponenten från komponen
 
 ![Tabellkomponent i AEM](assets/sidebar-tables.png)
 
-### Om huvud- och brödceller {#about-header-and-body-cells}
+### Om rubrik- och brödceller {#about-header-and-body-cells}
 
 Rubrikcellerna är textfält. Om du vill ändra rubrikens etikett högerklickar du på rubrikcellen och klickar på **Redigera**. Uppdatera etiketten i fältet **Värde** i dialogrutan Redigera och klicka på **OK**.
 
@@ -52,7 +51,7 @@ Den första innehållsraden i följande tabell innehåller till exempel textruta
 
 Du kan sammanfoga två eller flera innehållsceller genom att markera cellerna som du vill sammanfoga, högerklicka och välja **Sammanfoga**. Du kan även dela en sammanfogad cell genom att högerklicka på den och välja **Dela celler**.
 
-### Lägg till, ta bort, flytta rader och kolumner {#add-delete-move-rows-and-columns}
+### Lägga till, ta bort, flytta rader och kolumner {#add-delete-move-rows-and-columns}
 
 Du kan lägga till och ta bort en rad eller kolumn och flytta en rad uppåt och nedåt i en tabell.
 
@@ -130,9 +129,9 @@ Du kan se formategenskaperna i sidofältet.
 
 >[!NOTE]
 >
->Du kan ändra färgtemat för huvud- och innehållsrader genom att ändra värdena för LESS-variabler. Mer information finns i [Teman i AEM Forms](/help/forms/using/themes.md) [](/help/forms/using/creating-custom-adaptive-form-themes.md).
+>Du kan ändra färgtemat för huvud- och innehållsrader genom att ändra värdena för LESS-variabler. Mer information finns i [Teman i AEM Forms](/help/forms/using/themes.md).
 
-## Lägg till eller ta bort en rad dynamiskt {#add-or-delete-a-row-dynamically}
+## Lägga till eller ta bort en rad dynamiskt {#add-or-delete-a-row-dynamically}
 
 Tabeller har färdiga funktioner för att dynamiskt lägga till eller ta bort rader vid körning.
 
@@ -288,7 +287,7 @@ Om du vill sammanfoga dessa data med tabellen vid körning måste vi peka det ad
 
 ![datasammanfogad tabell](assets/data-merged-table.png)
 
-## Använd XDP-komponenter och XSD-komplexa typer {#use-xdp-components-and-xsd-complex-types}
+## Använd XDP-komponenter och komplexa XSD-typer {#use-xdp-components-and-xsd-complex-types}
 
 Om du har skapat ett adaptivt formulär baserat på en XFA-formulärmall är XFA-elementen tillgängliga på fliken Datamodell AEM Content Finder. Du kan dra och släppa dessa XFA-element, inklusive tabeller, i det anpassningsbara formuläret.
 
@@ -314,4 +313,3 @@ Dessutom kan du dra och släppa en grupp XSD-element med komplex typ för att sk
 * Varje tabellcell i standardtabellen har ett fördefinierat elementnamn kopplat till sig. Om du lägger till en annan tabell i det adaptiva formuläret får standardcellerna i den nya tabellen samma elementnamn som i den första tabellen. I sådana fall kommer de data som genereras när formuläret skickas att innehålla data i standardcellerna i endast en av tabellerna. Se därför till att du byter namn på elementnamnen för standardcellerna för brödtext så att de är unika i alla tabeller och undvika dataförlust.
 
    Observera att detta endast gäller för standardcellerna. Om du lägger till fler rader eller kolumner i en tabell genereras unika elementnamn automatiskt för brödtextceller som inte är standard.
-
