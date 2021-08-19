@@ -10,26 +10,25 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 67625e62-7035-4eb5-8dd5-6840d775a547
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 801d57bbe8a1bede6dcb4bf7884e5f71ddea1e83
+exl-id: 5d7b6b2e-d1d8-4efe-b9ff-c9542b4e67d7
+source-git-commit: 840ea373537799af995c3b8ce0c8bf575752775b
 workflow-type: tm+mt
 source-wordcount: '933'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
-
 
 # Redigering - miljö och verktyg {#authoring-the-environment-and-tools}
 
 I redigeringsmiljön i AEM finns olika sätt att ordna och redigera ditt innehåll. Verktygen som tillhandahålls är tillgängliga från olika konsoler och sidredigerare.
 
-## Platsadministration {#site-administration}
+## Webbplatsadministration {#site-administration}
 
 Med konsolen **Webbplatser** kan du hantera och navigera på webbplatsen. Med hjälp av de två rutorna kan webbplatsens struktur utökas och åtgärder vidtas för det element som krävs:
 
 ![chlimage_1-108](assets/chlimage_1-108.png)
 
-## Redigera sidinnehållet {#editing-your-page-content}
+## Redigera sidinnehåll {#editing-your-page-content}
 
 Det finns en separat sidredigerare med det klassiska användargränssnittet som använder innehållssökaren och sidbrytaren:
 
@@ -63,10 +62,10 @@ Du kan använda innehållssökaren för att hitta en rad olika resurser. Om det 
 * [Dokument](#finding-documents)
 * [Filmer](#finding-movies)
 * [Dynamic Media webbläsare](/help/sites-administering/scene7.md#scene7contentbrowser)
-* [](#products) [Sidor](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#finding-pages)
+* [Sidor](#finding-pages)
 
 * [Stycken](#referencing-paragraphs-from-other-pages)
-* [Produkter](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#products)
+* [Produkter](#products)
 * Eller [gå till webbplatsen via databasstruktur](#the-content-finder)
 
 Med alla alternativ kan du [söka efter specifika objekt](#the-content-finder).
@@ -79,7 +78,7 @@ När du har skapat ett bildstycke på sidan kan du dra ett objekt och släppa de
 
 ![chlimage_1-111](assets/chlimage_1-111.png)
 
-### Söker efter dokument {#finding-documents}
+### Söka efter dokument {#finding-documents}
 
 På den här fliken visas alla dokument i databasen.
 
@@ -87,7 +86,7 @@ När du har skapat ett nedladdningsstycke på sidan kan du dra ett objekt och sl
 
 ![chlimage_1-112](assets/chlimage_1-112.png)
 
-### Söker efter filmer {#finding-movies}
+### Söka efter filmer {#finding-movies}
 
 På den här fliken visas alla filmer (till exempel Flash) i databasen.
 
@@ -119,7 +118,7 @@ På den här fliken visas alla resurser i databasen.
 
 ![chlimage_1-117](assets/chlimage_1-117.png)
 
-### Använda Sök med innehållsläsaren {#using-search-with-the-content-browser}
+### Använda Söka med Innehållsläsaren {#using-search-with-the-content-browser}
 
 På alla alternativ kan du söka efter specifika objekt. Alla taggar och resurser som matchar sökmönstret visas:
 
@@ -209,9 +208,9 @@ DesignI det här läget kan du redigera sidans design genom att konfigurera de k
 >Andra alternativ är också tillgängliga:
 >
 >* [Ställning](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md)
->* [Klientkontext](/help/sites-administering/client-context.md)
->* Webbplatser - öppnar webbplatskonsolen.
->* Läs in igen - uppdaterar sidan.
+* [Klientkontext](/help/sites-administering/client-context.md)
+* Webbplatser - öppnar webbplatskonsolen.
+* Läs in igen - uppdaterar sidan.
 
 
 ## Kortkommandon {#keyboard-shortcuts}
