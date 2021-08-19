@@ -8,10 +8,9 @@ topic-tags: e-commerce
 content-type: reference
 docset: aem65
 exl-id: c29f6213-1df6-45af-91c8-14b255276d82
-translation-type: tm+mt
-source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
+source-git-commit: 812d1a43176a75ff22e3a0bc07bc658cb5070a62
 workflow-type: tm+mt
-source-wordcount: '3009'
+source-wordcount: '3002'
 ht-degree: 1%
 
 ---
@@ -61,7 +60,7 @@ Det behövs ett ställningar för varje enskild produkttyp. Den lämpliga strukt
 
 ### Importerar produkter {#importing-products}
 
-#### Importerar produkter - Touchoptimerat användargränssnitt {#importing-products-touch-optimized-ui}
+#### Importera produkter - Touchoptimerat användargränssnitt {#importing-products-touch-optimized-ui}
 
 1. Navigera till konsolen **Produkter** via **Commerce**.
 1. Använd konsolen **Produkter** för att navigera till önskad plats.
@@ -135,7 +134,7 @@ Det behövs ett ställningar för varje enskild produkttyp. Den lämpliga strukt
 >
 >Standardprodukthanteringen är grundläggande eftersom produktuppsättningen för Geometrixx-utomhusbruk har hållits grundläggande. Komplexiteten baseras på produktens [byggnadsställning](/help/sites-authoring/scaffolding.md), så med din egen produktstruktur är det möjligt att få en mer avancerad redigering.
 
-#### Skapar produktinformation - Touchoptimerat gränssnitt {#creating-product-information-touch-optimized-ui}
+#### Skapa produktinformation - Touchoptimerat gränssnitt {#creating-product-information-touch-optimized-ui}
 
 1. Använd konsolen **Produkter** (via **Commerce**) för att navigera till önskad plats.
 1. Använd ikonen **Skapa** för att välja (beroende på struktur och plats):
@@ -185,7 +184,7 @@ Det behövs ett ställningar för varje enskild produkttyp. Den lämpliga strukt
 
 ### Visar produktreferenser {#showing-product-references}
 
-#### Visar produktreferenser - Touchoptimerat gränssnitt {#showing-product-references-touch-optimized-ui}
+#### Visar produktreferenser - Touchoptimerat användargränssnitt {#showing-product-references-touch-optimized-ui}
 
 1. Använd konsolen **Produkter** (via **Commerce**) för att navigera till produktinformationen.
 1. Öppna den sekundära listen för referenser med ikonen:
@@ -238,7 +237,7 @@ Du kan lägga till flera resurser i produktkomponenten och sedan ange vilken res
 >
 >Allt som rör flera resurser görs med det pekoptimerade användargränssnittet.
 
-#### Lägger till flera resurser {#adding-multiple-assets}
+#### Lägga till flera resurser {#adding-multiple-assets}
 
 1. Navigera till konsolen **Produkter** via **Commerce**.
 1. Navigera till önskad produkt med konsolen **Produkter**.
@@ -301,7 +300,7 @@ Mekanismen för att välja den bild som ska visas är följande:
 1. Skriv den **bildkategori** du valde ( `cat1` till exempel).
 1. Tryck/klicka på **Klar**. Sidan uppdateras och rätt resurs ska visas.
 
-#### Katalog {#catalog}
+#### Katalog  {#catalog}
 
 1. Navigera till katalogen.
 1. Tryck/klicka på **Visa egenskaper**.
@@ -372,7 +371,7 @@ Du kan titta på dem i webbkonsolen i OSGI-händelser ( `/system/console/events`
 
 >[!NOTE]
 >
->Läs även [Händelsehantering i AEM](https://blogs.adobe.com/experiencedelivers/experience-management/event_handling_incq/). [](https://blogs.adobe.com/experiencedelivers/experience-management/event_handling_incq/)
+>Läs även [Händelsehantering i AEM](https://blogs.adobe.com/experiencedelivers/experience-management/event_handling_incq/).
 
 ### Bild med Lägg till i kundvagnslänkar {#image-with-add-to-cart-links}
 
@@ -444,7 +443,7 @@ Du kan konfigurera hur dialogrutan ser ut när du klickar på hotspot-området:
 
 ## Kataloger {#catalogs}
 
-### Generera en katalog {#generating-a-catalog}
+### Skapa en katalog {#generating-a-catalog}
 
 #### Generera en katalog - Touchoptimerat användargränssnitt {#generating-a-catalog-touch-optimized-ui}
 
@@ -479,7 +478,7 @@ Så här skapar du en katalog:
 
    Om du trycker/klickar på **Öppna katalog** öppnas katalogen (till exempel `http://localhost:4502/editor.html/content/test-catalog.html`).
 
-#### Genererar en katalog - Classic-gränssnitt {#generating-a-catalog-classic-ui}
+#### Generera en katalog - Classic UI {#generating-a-catalog-classic-ui}
 
 >[!NOTE]
 >
@@ -509,9 +508,9 @@ Så här skapar du en katalog:
 1. Klicka på **OK** för att spara dina egenskaper; banderollinformation visas under **Product Selection Criteria** på ritningssidan.
 1. Utför de här nya ändringarna.
 
-### Släpper ut en katalog {#rolling-out-a-catalog}
+### Stänger ut en katalog {#rolling-out-a-catalog}
 
-#### Öppnar en katalog - Touchoptimerat gränssnitt {#rolling-out-a-catalog-touch-optimized-ui}
+#### Skapa en katalog - Touchoptimerat användargränssnitt {#rolling-out-a-catalog-touch-optimized-ui}
 
 Så här distribuerar du en katalog:
 
@@ -543,7 +542,7 @@ Så här distribuerar du en katalog:
 
 ### Blueprint Importer {#blueprint-importer}
 
-#### Blueprint Importer - Touchoptimerat gränssnitt {#blueprint-importer-touch-optimized-ui}
+#### Blueprint Importer - pekoptimerat användargränssnitt {#blueprint-importer-touch-optimized-ui}
 
 1. Navigera till konsolen **Kataloger** via **Commerce**.
 1. Navigera till den plats där du vill importera katalogplanen.
@@ -569,11 +568,11 @@ Så här distribuerar du en katalog:
 1. Ställ in importen efter behov.
 1. Klicka på **Importera katalogutkast**.
 
-## Kampanjer {#promotions}
+## Erbjudanden {#promotions}
 
 ### Skapa en kampanj {#creating-a-promotion}
 
-#### Skapa en kampanj - Klassiskt gränssnitt {#creating-a-promotion-classic-ui}
+#### Skapa en kampanj - klassiskt användargränssnitt {#creating-a-promotion-classic-ui}
 
 >[!NOTE]
 >
@@ -603,7 +602,7 @@ Så här distribuerar du en katalog:
 
 ### Skapa en voucher {#creating-a-voucher}
 
-#### Skapa en voucher - Classic-gränssnitt {#creating-a-voucher-classic-ui}
+#### Skapa en kupong - klassiskt användargränssnitt {#creating-a-voucher-classic-ui}
 
 1. Öppna konsolen **Webbplatser** för författarinstansen.
 1. Välj önskad **kampanj** i den vänstra rutan.
@@ -615,7 +614,7 @@ Så här distribuerar du en katalog:
 
 1. Nu kan du aktivera din voucher så att kunderna kan använda den i sina kundvagnar i publiceringsinstansen.
 
-### Tar bort Vouchers {#removing-vouchers}
+### Tar bort verifikationer {#removing-vouchers}
 
 #### Tar bort Vouchers - klassiskt gränssnitt {#removing-vouchers-classic-ui}
 
@@ -626,9 +625,9 @@ För att göra en voucher otillgänglig för kunderna kan du antingen:
 
 Båda åtgärderna kan utföras från konsolen **Webbplatser**.
 
-### Ändra Vouchers {#modifying-vouchers}
+### Ändra verifikationer {#modifying-vouchers}
 
-#### Modifiera vouchers - klassiskt användargränssnitt {#modifying-vouchers-classic-ui}
+#### Ändra Vouchers - klassiskt användargränssnitt {#modifying-vouchers-classic-ui}
 
 Om du vill ändra egenskaperna för en voucher eller kampanj kan du dubbelklicka på den på konsolen **Webbplatser** och klicka på **Redigera**. När du har sparat den bör du aktivera den så att ändringarna överförs till publiceringsinstansen.
 
@@ -657,7 +656,7 @@ På demowebbplatsen (Geometrixx Outdoors - engelska) kan du se kupongformuläret
 
 ### Skapar orderinformation {#creating-order-information}
 
-#### Skapar beställningsinformation - Touchoptimerat gränssnitt {#creating-order-information-touch-optimized-ui}
+#### Skapa beställningsinformation - Touchoptimerat gränssnitt {#creating-order-information-touch-optimized-ui}
 
 1. Använd konsolen **Beställningar** för att navigera till önskad plats.
 1. Använd ikonen **Skapa** för att välja **Skapa ordning**.
@@ -670,7 +669,7 @@ På demowebbplatsen (Geometrixx Outdoors - engelska) kan du se kupongformuläret
 
 ### Redigera orderinformation {#editing-order-information}
 
-#### Redigera orderinformation - Touchoptimerat gränssnitt {#editing-order-information-touch-optimized-ui}
+#### Redigera beställningsinformation - Touchoptimerat gränssnitt {#editing-order-information-touch-optimized-ui}
 
 1. Använd konsolen **Beställningar** för att navigera till ordningen.
 1. Använd antingen:
