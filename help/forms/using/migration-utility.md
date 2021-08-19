@@ -13,7 +13,7 @@ discoiquuid: 39dfef85-d047-4b6d-a0f5-92bd77df103b
 docset: aem65
 role: Admin
 exl-id: 0f9aab7d-8e41-449a-804b-7e1bfa90befd
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 840ea373537799af995c3b8ce0c8bf575752775b
 workflow-type: tm+mt
 source-wordcount: '1809'
 ht-degree: 0%
@@ -191,7 +191,7 @@ När du kör migreringsverktyget för första gången skapas en logg med följan
 
 ### Hushållsuppgifter efter att migreringsverktyget har körts {#housekeepingtasks}
 
-När du har kört migreringsverktyget ska du sköta följande uppgifter: [](../../forms/using/import-export-forms-templates.md)
+När du har kört migreringsverktyget ska du sköta följande uppgifter:
 
 1. Kontrollera att XFA-versionen av layouter och fragmentlayouter är 3.3 eller senare. Om du använder layouter och fragmentlayouter av en äldre version kan det uppstå problem när bokstaven återges. Så här uppdaterar du en äldre XFA-version till den senaste versionen:
 
