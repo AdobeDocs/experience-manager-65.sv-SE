@@ -10,17 +10,16 @@ topic-tags: configuring
 content-type: reference
 discoiquuid: 5d2364b7-4497-4f8b-85ef-6e780bfb8c36
 docset: aem65
-feature: Configuring
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+feature: Konfigurerar
+exl-id: d3375935-090d-4052-8234-68ef4ddbab6a
+source-git-commit: 83383d46a4200eb3d21deee15c71032314694860
 workflow-type: tm+mt
-source-wordcount: '5892'
+source-wordcount: '5878'
 ht-degree: 0%
 
 ---
 
-
-# Övervaka och underhålla din AEM{#monitoring-and-maintaining-your-aem-instance}
+# Övervaka och underhålla AEM{#monitoring-and-maintaining-your-aem-instance}
 
 När AEM har distribuerats behövs vissa uppgifter för att övervaka och underhålla deras åtgärder, prestanda och integritet.
 
@@ -87,7 +86,7 @@ Om du vill göra det måste du [säkerhetskopiera hela databasen](#backing-up-yo
 >
 >Diskspegling kan också användas som en säkerhetskopieringsmekanism.
 
-### Säkerhetskopierar databasen {#backing-up-your-repository}
+### Säkerhetskopiera databasen {#backing-up-your-repository}
 
 Avsnittet [Säkerhetskopiering och återställning](/help/sites-administering/backup-and-restore.md) i CRX-dokumentationen omfattar alla problem som rör säkerhetskopiering av CRX-databasen.
 
@@ -119,7 +118,7 @@ Verktyget **Rensa versioner** finns i **[Verktyg](/help/sites-administering/tool
 
 **** RensaStarta rensningen av versionerna på noden som definieras av startsökvägen.
 
-### Rensningsversioner av en webbplats {#purging-versions-of-a-web-site}
+### Rensa versioner av en webbplats {#purging-versions-of-a-web-site}
 
 Så här rensar du versioner av en webbplats:
 
@@ -177,7 +176,7 @@ AEM WCM registrerar detaljerade loggar. När du har packat upp och startat Quick
 
 * `<cq-installation-dir>/crx-quickstart/repository/`
 
-#### Loggfilsrotation {#log-file-rotation}
+#### Rotation av loggfil {#log-file-rotation}
 
 Rotation av loggfiler avser den process som begränsar filens tillväxt genom att skapa nya filer med jämna mellanrum. I AEM kommer en loggfil med namnet `error.log` att roteras en gång om dagen enligt följande regler:
 
@@ -189,7 +188,7 @@ Rotation av loggfiler avser den process som begränsar filens tillväxt genom at
 >
 >Om du uppgraderar AEM kommer alla befintliga loggfiler som inte längre används av AEM att finnas kvar på disken. Du kan ta bort dem utan risk. Alla nya loggposter skrivs i de nya loggfilerna.
 
-### Söker efter loggfilerna {#finding-the-log-files}
+### Hitta loggfilerna {#finding-the-log-files}
 
 Olika loggfiler finns på den filserver där du installerade AEM:
 
@@ -233,7 +232,7 @@ Information om revideringsjournaler.
 >
 >ImageServer- och s7access-loggarna ingår inte i **Download Full **paketet som genereras från sidan **system/console/status-Bundlelist **. Om du har [!DNL Dynamic Media]-problem ska du av supportskäl även bifoga loggarna för ImageServer och s7access när du kontaktar kundsupport.
 
-### Aktivera loggnivån för felsökning {#activating-the-debug-log-level}
+### Aktivera felsökningsloggnivån {#activating-the-debug-log-level}
 
 Standardloggnivån ([Konfiguration av Apache Sling-loggning](/help/sites-deploying/osgi-configuration-settings.md#apacheslingloggingconfiguration)) är Information, så felsökningsmeddelanden loggas inte.
 
@@ -438,7 +437,7 @@ I vissa fall kanske du vill skapa en anpassad loggfil med en annan loggnivå. Du
 
 Felix Console innehåller även information om stöd för att lagra loggar på `../system/console/slinglog`; till exempel `https://localhost:4502/system/console/slinglog`.
 
-### Söker efter granskningsposter {#finding-the-audit-records}
+### Söka efter granskningsposter {#finding-the-audit-records}
 
 Granskningsregister förs för att visa vem som gjorde vad och när. Olika granskningsposter genereras för både AEM WCM- och OSGi-händelser.
 
@@ -464,7 +463,7 @@ OSGi-händelser genererar också granskningsposter som kan visas på fliken **Ko
 
 ![screen_shot_2012-02-13at50346pm](assets/screen_shot_2012-02-13at50346pm.png)
 
-## Övervaka dina replikeringsagenter {#monitoring-your-replication-agents}
+## Övervaka replikeringsagenter {#monitoring-your-replication-agents}
 
 Du kan övervaka dina [replikeringsköer](/help/sites-deploying/replication.md) för att identifiera när en kö är avstängd eller blockerad, vilket i sin tur kan tyda på ett problem med en publiceringsinstans eller ett externt system:
 
@@ -651,7 +650,7 @@ Vissa av dessa kommer att vara beroende av operativsystemet.
  </tbody>
 </table>
 
-### Tolkar request.log {#interpreting-the-request-log}
+### Tolka request.log {#interpreting-the-request-log}
 
 Den här filen registrerar grundläggande information om varje begäran som görs till AEM. Denna värdefulla slutsats kan extraheras.
 
@@ -717,7 +716,7 @@ Så som ovan kan du använda skript för att extrahera relevant information och 
 
 När du väl har bestämt svarstiden kan du behöva analysera varför begäran tar den tid som behövs och vad som kan göras för att förbättra svaret.
 
-#### Övervaka antalet samtidiga användare och deras påverkan {#monitoring-the-number-and-impact-of-concurrent-users}
+#### Övervaka antalet samtidiga användare och deras inverkan {#monitoring-the-number-and-impact-of-concurrent-users}
 
 Återigen kan `request.log` användas för att övervaka samtidighet och systemets reaktion på den.
 
@@ -1103,7 +1102,7 @@ I dessa fall ska du kontrollera:
 
    * [Analysera minnesproblem](https://helpx.adobe.com/experience-manager/kb/AnalyzeMemoryProblems.html)
 
-### Skiva I/O {#disk-i-o}
+### Skiva-I/O {#disk-i-o}
 
 Om det inte finns tillräckligt med diskutrymme på datorn eller om disktrassel börjar visas följande:
 
@@ -1114,7 +1113,7 @@ Om det inte finns tillräckligt med diskutrymme på datorn eller om disktrassel 
    * [Konfiguration av Apache Sling-loggning](/help/sites-deploying/osgi-configuration-settings.md#apacheslingloggingconfiguration)
    * [CQ HTML Library Manager](/help/sites-deploying/osgi-configuration-settings.md#daycqhtmllibrarymanager)
    * [CQ WCM-felsökningsfilter](/help/sites-deploying/osgi-configuration-settings.md#daycqwcmdebugfilter)
-   * [Loggare](/help/sites-deploying/monitoring-and-maintaining.md#activating-the-debug-log-level) [](/help/sites-deploying/configuring.md#loggersandwritersforindividualservices)
+   * [Loggare](/help/sites-deploying/monitoring-and-maintaining.md#activating-the-debug-log-level)
 
 * Om och hur du har konfigurerat [versionsrensning](/help/sites-deploying/version-purging.md)
 * Kunskapsbasen:
