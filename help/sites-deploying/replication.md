@@ -10,15 +10,14 @@ content-type: reference
 topic-tags: configuring
 discoiquuid: 3cae081e-93e3-4317-b307-1316283c307a
 docset: aem65
-feature: Configuring
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+feature: Konfigurerar
+exl-id: 09943de5-8d62-4354-a37f-0521a66b4c49
+source-git-commit: 840ea373537799af995c3b8ce0c8bf575752775b
 workflow-type: tm+mt
-source-wordcount: '3435'
+source-wordcount: '3428'
 ht-degree: 0%
 
 ---
-
 
 # Replikering{#replication}
 
@@ -63,7 +62,7 @@ I andra fall, t.ex. för communityfunktioner (t.ex. forum, bloggar, kommentarer 
 
 AEM [Communities](/help/communities/overview.md) använder aldrig replikering för UGC. Distributionen för Communities kräver i stället en gemensam lagringsplats för UGC (se [Community Content Storage](/help/communities/working-with-srp.md)).
 
-### Replikering - utanför rutan {#replication-out-of-the-box}
+### Replikering - utanför lådan {#replication-out-of-the-box}
 
 Webbplatsen för webbutiker som ingår i en standardinstallation av AEM kan användas för att illustrera replikering.
 
@@ -107,7 +106,7 @@ Information om detta (konfiguration och loggar) finns på verktygskonsolen i fö
 
    `https://localhost:4502/etc/replication/agents.author/publish.html`.
 
-#### Replikeringsagenter - utanför rutan {#replication-agents-out-of-the-box}
+#### Replikeringsagenter - utanför lådan {#replication-agents-out-of-the-box}
 
 Följande agenter finns i en AEM standardinstallation:
 
@@ -353,7 +352,7 @@ De här inställningarna används för att definiera utlösare för automatisera
 
    När det här alternativet är markerat framtvingar agenten inte versionshantering av aktiverade sidor.
 
-## Konfigurerar dina replikeringsagenter {#configuring-your-replication-agents}
+## Konfigurera replikeringsagenter {#configuring-your-replication-agents}
 
 Mer information om hur du ansluter replikeringsagenter till publiceringsinstansen med MSSL finns i [Replikera med Mutual SSL](/help/sites-deploying/mssl-replication.md).
 
@@ -363,7 +362,7 @@ På fliken Verktyg i författarmiljön kan du konfigurera replikeringsagenter so
 
 >[!NOTE]
 >
->När en dispatcher hanterar HTTP-begäranden för författare- eller publiceringsinstanser måste HTTP-begäran från replikeringsagenten innehålla PATH-huvudet. Utöver följande procedur måste du lägga till PATH-huvudet i avsändarlistan med klientrubriker. (Se [/clientheaders (Klientrubriker)](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#specifying-the-http-headers-to-pass-through-clientheaders). [](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#specifying-the-http-headers-to-pass-through-clientheaders)
+>När en dispatcher hanterar HTTP-begäranden för författare- eller publiceringsinstanser måste HTTP-begäran från replikeringsagenten innehålla PATH-huvudet. Utöver följande procedur måste du lägga till PATH-huvudet i avsändarlistan med klientrubriker. (Se [/clientheaders (Klientrubriker)](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#specifying-the-http-headers-to-pass-through-clientheaders).
 
 
 1. Gå till fliken **Verktyg** i AEM.
@@ -409,7 +408,7 @@ Om du vill använda omvänd replikering kontrollerar du att agenten är aktivera
 
 ![chlimage_1-1](assets/chlimage_1-1.jpeg)
 
-### Konfigurerar replikering för flera publiceringsinstanser {#configuring-replication-for-multiple-publish-instances}
+### Konfigurera replikering för flera publiceringsinstanser {#configuring-replication-for-multiple-publish-instances}
 
 >[!NOTE]
 >
@@ -527,7 +526,7 @@ De två `agents` innehåller konfigurationsinformation om lämplig miljö och ä
 
 ![chlimage_1-24](assets/chlimage_1-24.png)
 
-## Övervaka dina replikeringsagenter {#monitoring-your-replication-agents}
+## Övervaka replikeringsagenter {#monitoring-your-replication-agents}
 
 Så här övervakar du en replikeringsagent:
 
@@ -566,7 +565,7 @@ Så här övervakar du en replikeringsagent:
    >
    >`/jcr:root/var/replication/outbox//*[@cq:repActionType='TEST']`
 
-## Gruppreplikering {#batch-replication}
+## Batchreplikering {#batch-replication}
 
 Gruppreplikeringen replikerar inte enskilda sidor eller resurser, men väntar på att det första tröskelvärdet för de två sidorna, baserat på tid eller storlek, ska aktiveras.
 
