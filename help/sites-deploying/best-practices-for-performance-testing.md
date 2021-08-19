@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 discoiquuid: 669018a0-f6ef-42b2-9c6f-83d7dd5a7095
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: fcac75e1-15c1-4a37-8d43-93c95267b903
+source-git-commit: 840ea373537799af995c3b8ce0c8bf575752775b
 workflow-type: tm+mt
-source-wordcount: '1925'
+source-wordcount: '1920'
 ht-degree: 0%
 
 ---
-
 
 # Bästa metoder för prestandatestning{#best-practices-for-performance-testing}
 
@@ -66,8 +65,8 @@ Det finns många kommersiellt tillgängliga verktyg för prestandatestning på m
 * Molnbaserade lasttestningsverktyg som [Neustar](https://www.neustar.biz/services/web-performance/load-testing) kan också användas.
 * När det gäller att testa mobila eller responsiva webbplatser måste en separat uppsättning verktyg användas. De fungerar genom att begränsa nätverksbandbredden och simulera långsammare mobilanslutningar som 3G eller EDGE. Bland de verktyg som används mest finns följande:
 
-   * **[Nätverkslänkvillkor](https://nshipster.com/network-link-conditioner/)**  - Det är ett enkelt användargränssnitt och fungerar på en ganska låg nivå i nätverksstacken. Den innehåller versioner för OS X och iOS; [](https://nshipster.com/network-link-conditioner/)
-   * [**Charles**](https://www.charlesproxy.com/)  - en proxyapplikation för webbfelsökning som förutom flera andra användningsområden ger nätverksbegränsning. Versioner finns för Windows, OS X och Linux. [](https://www.charlesproxy.com/)
+   * **[Nätverkslänkvillkor](https://nshipster.com/network-link-conditioner/)**  - Det är ett enkelt användargränssnitt och fungerar på en ganska låg nivå i nätverksstacken. Den innehåller versioner för OS X och iOS;
+   * [**Charles**](https://www.charlesproxy.com/)  - en proxyapplikation för webbfelsökning som förutom flera andra användningsområden ger nätverksbegränsning. Versioner finns för Windows, OS X och Linux.
 
 #### Optimeringsverktyg {#optimization-tools}
 
@@ -93,7 +92,7 @@ Googles PageSpeed-verktyg erbjuder webbplatsanalys för att följa vedertagna st
 
 ## Författarmiljö {#author-environment}
 
-### Utför tester {#performing-tests}
+### Utföra tester {#performing-tests}
 
 För att kunna utföra prestandatestning i författarmiljön måste du simulera upplevelsen hos författare. Detta innebär att författarinstallationerna måste innehålla alla komponenter, OSGi-paket, gränssnittsanpassning, anpassade index och andra tillägg som du har gjort för produktionsförfattarinstanserna.
 
@@ -119,7 +118,7 @@ Avsnittet **ObservationQueueMaxLength** visar antalet händelser i Oaks observat
 
 ## Publiceringsmiljö {#publish-environment}
 
-### Utför tester {#performing-tests-1}
+### Utföra tester {#performing-tests-1}
 
 Den viktigaste delen av en distribution som behöver genomgå inläsningstester är den publicerings- eller utskicksmiljö som slutanvändaren är intresserad av.
 
