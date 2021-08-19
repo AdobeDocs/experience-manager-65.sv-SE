@@ -10,16 +10,15 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: c097b60f-bcdf-45de-babe-b4c2e2b746a1
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 9f260d3ccb98409790cd18b2540329fc36a07c05
+exl-id: 6790202f-0542-4779-b3ce-d394cdba77b4
+source-git-commit: 840ea373537799af995c3b8ce0c8bf575752775b
 workflow-type: tm+mt
 source-wordcount: '2448'
 ht-degree: 0%
 
 ---
 
-
-# Skapar arbetsflödesmodeller{#creating-workflow-models}
+# Skapa arbetsflödesmodeller{#creating-workflow-models}
 
 >[!CAUTION]
 >
@@ -68,7 +67,7 @@ Om du redigerar ett [**standard- och/eller äldre**-arbetsflöde](#editing-a-def
 
 När uppdateringarna av arbetsflödet är klara måste du använda **Synkronisera** till **Generera en körningsmodell**. Mer information finns i [Synkronisera arbetsflödet](#sync-your-workflow-generate-a-runtime-model).
 
-### Synkronisera arbetsflödet - Generera en körningsmodell {#sync-your-workflow-generate-a-runtime-model}
+### Synkronisera arbetsflödet - Skapa en körningsmodell {#sync-your-workflow-generate-a-runtime-model}
 
 **Synkronisering**  (direkt i redigeringsverktygsfältet) genererar en  [körningsmodell](/help/sites-developing/workflows.md#runtime-model). Körningsmodellen är den modell som faktiskt används när en användare startar ett arbetsflöde. Om du inte **Synkroniserar** dina ändringar är ändringarna inte tillgängliga vid körning.
 
@@ -182,9 +181,9 @@ Du kan skapa en [tillfällig](/help/sites-developing/workflows.md#transient-work
 
 >[!NOTE]
 >
->När du kör ett arbetsflöde i [tillfälligt](/help/sites-developing/workflows.md#transient-workflows)-läge sparas ingen arbetsflödeshistorik AEM. [Tidslinjen](/help/sites-authoring/basic-handling.md#timeline) visar därför ingen information om det arbetsflödet. [](/help/sites-authoring/basic-handling.md#timeline)
+>När du kör ett arbetsflöde i [tillfälligt](/help/sites-developing/workflows.md#transient-workflows)-läge sparas ingen arbetsflödeshistorik AEM. [Tidslinjen](/help/sites-authoring/basic-handling.md#timeline) visar därför ingen information om det arbetsflödet.
 
-## Gör arbetsflödesmodeller tillgängliga i Touch UI {#classic2touchui}
+## Göra arbetsflödesmodeller tillgängliga i Touch UI {#classic2touchui}
 
 Om det finns en arbetsflödesmodell i det klassiska användargränssnittet, men den saknas på snabbmenyn för val i **[!UICONTROL Timeline]**-listen i Touch UI, följer du konfigurationen för att göra den tillgänglig. Följande steg visar hur du använder arbetsflödesmodellen **[!UICONTROL Request for Activation]**.
 
@@ -221,7 +220,7 @@ Du kan konfigurera en arbetsflödesmodell för [Multi Resource Support](/help/si
 
    Mer information finns i [Synkronisera arbetsflödet](#sync-your-workflow-generate-a-runtime-model).
 
-### Konfigurera arbetsflödessteg (som visar arbetsflödesförlopp) {#configuring-workflow-stages-that-show-workflow-progress}
+### Konfigurera arbetsflödessteg (som visar förlopp för arbetsflöde) {#configuring-workflow-stages-that-show-workflow-progress}
 
 [Arbetsflödessteg ](/help/sites-developing/workflows.md#workflow-stages) hjälper dig att visualisera förloppet för ett arbetsflöde när du hanterar uppgifter.
 
@@ -294,7 +293,7 @@ Så här exporterar du en arbetsflödesmodell i ett paket:
 1. Välj **Build** i verktygsfältet för paketdefinitionen.
 1. Välj **Hämta** från paketets verktygsfält.
 
-## Använda arbetsflöden för att bearbeta formulärinskickat {#using-workflows-to-process-form-submissions}
+## Använda arbetsflöden för att bearbeta inskickade formulär {#using-workflows-to-process-form-submissions}
 
 Du kan konfigurera ett formulär som ska bearbetas av det valda arbetsflödet. När användare skickar formuläret skapas en ny arbetsflödesinstans med data från formuläröverföringen som nyttolast.
 
@@ -393,7 +392,7 @@ För att illustrera några av möjligheterna att skapa ett arbetsflöde skapar f
 
    ![wf-13](assets/wf-13.png)
 
-1. Använd det här arbetsflödet på sidan så att användaren kan välja om han/hon vill **slutföra** steget **Verifiera innehåll** ska **publicera sidan som begärd** eller **Avvisa publiceringsbegäran** när användaren flyttar till &lt;a0/>Slutför&lt;a1/>.
+1. Använd det här arbetsflödet på sidan så att användaren kan välja om han/hon vill **slutföra** steget **Verifiera innehåll** ska **publicera sidan som begärd** eller **Avvisa publiceringsbegäran** när användaren flyttar till Slutför.
 
    ![chlimage_1-72](assets/chlimage_1-72.png)
 
