@@ -8,20 +8,19 @@ topic-tags: forms-manager
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: c04c488b-73f3-49ba-9e89-f97497965757
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 4ee3b99a3f0a5d37441eee76c3ec747afcf2e32e
+exl-id: 3c7cbe1f-ac81-4df9-96b2-662cbc5f2075
+source-git-commit: 75e1697c301dca3a649833a45caa1753fdc81514
 workflow-type: tm+mt
-source-wordcount: '857'
+source-wordcount: '883'
 ht-degree: 0%
 
 ---
 
-
 # Visa och förstå transaktionsrapporter{#viewing-and-understanding-transaction-reports}
 
-Med transaktionsrapporter kan du samla in och spåra antalet skickade formulär, bearbetade dokument och återgivna dokument. Målet med att spåra dessa transaktioner är att fatta ett välgrundat beslut om produktanvändningen och att balansera investeringar i maskinvara och programvara. Mer information finns i [Översikt över AEM Forms transaktionsrapporter](../../forms/using/transaction-reports-overview.md).
+Med transaktionsrapporter kan du samla in och spåra antalet skickade formulär, bearbetade dokument och återgivna dokument. Målet med att spåra dessa transaktioner är att fatta ett välgrundat beslut om produktanvändningen och att balansera investeringar i maskinvara och programvara. Mer information finns i [AEM Forms Transaction Reports Overview](../../forms/using/transaction-reports-overview.md).
 
-## Ställa in transaktionsrapporter {#setting-up-transaction-reports}
+## Ställa in transaktionsrapporter  {#setting-up-transaction-reports}
 
 Funktionen för transaktionsrapporter är tillgänglig som en del av AEM paket. Information om hur du installerar tilläggspaketet på alla författare- och publiceringsinstanser finns i [Installera och konfigurera AEM formulär](/help/forms/using/installing-configuring-aem-forms-osgi.md). När du har AEM tilläggspaket för formulär installerat gör du följande:
 
@@ -54,13 +53,13 @@ Transaktionsrapporter är inaktiverade som standard. Du kan aktivera rapporter f
 
    Upprepa steg 1-3 för alla författare- och publiceringsinstanser.
 
-### Ge behörighet att visa en transaktionsrapport {#provide-rights-to-view-a-transaction-report}
+### Ange rättigheter för att visa en transaktionsrapport {#provide-rights-to-view-a-transaction-report}
 
 Det är bara medlemmar i gruppen som har administratörer som kan visa transaktionsrapporter. Om du vill att en användare ska kunna visa transaktionsrapporter måste användaren vara medlem i gruppen med dvd-administratörer. Instruktioner om hur du gör en användare till medlem i en AEM grupp finns i [Administrera användare, grupp och åtkomsträttigheter](/help/sites-administering/user-group-ac-admin.md).
 
 ### (Valfritt) Konfigurera tömningsperiod och utkorgar för transaktioner {#optional-configure-transaction-flush-period-and-outboxes}
 
-Transaktioner cachelagras i minnet innan de lagras i databasen. Som standard är cachelagringsperioden (perioden för tömning av transaktion) inställd på 60 sekunder. Utför följande steg för att ändra standardcachelagringsperioden:
+Transaktioner cachelagras i minnet innan de lagras i databasen. Processen utförs för att säkerställa att det inte ofta förekommer några skrivningar i databasen. Som standard är cachelagringsperioden (perioden för tömning av transaktion) inställd på 60 sekunder. Du kan ändra standardperioden så att den passar din miljö. Utför följande steg för att ändra standardcachelagringsperioden:
 
 1. Logga in för att skapa instanser som administratör. Gå till **Verktyg** > **Åtgärder** > **Webbkonsol**.
 1. Leta reda på och öppna tjänsten **Forms Transaction Repository Storage Provider**.
@@ -98,4 +97,3 @@ Transaktionsrapportering placerar all information som visas i rapporten och viss
 * [Översikt över transaktionsrapporter](../../forms/using/transaction-reports-overview.md)
 * [Fakturerbara API:er för transaktionsrapporter](../../forms/using/transaction-reports-billable-apis.md)
 * [Registrera en transaktion för anpassade implementeringar](/help/forms/using/record-transaction-custom-implementation.md)
-
