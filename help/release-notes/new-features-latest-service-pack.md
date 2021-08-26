@@ -4,9 +4,9 @@ description: Nyheter i [!DNL Experience Manager] 6.5 Service Pack 10
 contentOwner: AK
 mini-toc-levels: 1
 exl-id: 32470e6e-8a66-4670-82da-2259f6e001c3
-source-git-commit: d83f8d6e4b99ac7f287c0f091b84bbbf9d82fc75
+source-git-commit: 79d8b5896f5f8eb7a22dccea81acf0656d435f2b
 workflow-type: tm+mt
-source-wordcount: '3919'
+source-wordcount: '3928'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,6 @@ ht-degree: 0%
 [!DNL Adobe Experience Manager] 6.5 Service Packs innehåller nya funktioner, förbättringar som kunderna efterfrågat samt prestanda-, stabilitets- och säkerhetsförbättringar med kvartalsvisa intervall. Den kvartalsvisa tillgängligheten gör det enkelt att komma åt och anta nya funktioner och innovationer.
 
 I den här artikeln beskrivs de funktioner som ingår i det senaste Service Pack, [nyckelfunktioner som ingår i det föregående 6.5 Service Pack](#key-features-previous-service-packs) och [nyckelversionerna sedan den senaste Service Pack](#key-releases-since-last-sp)-versionen.
-
 
 ## [!DNL Adobe Experience Manager Sites] {#aem-sites}
 
@@ -41,13 +40,13 @@ I den här artikeln beskrivs de funktioner som ingår i det senaste Service Pack
 
 * [!DNL Experience Manager] utökar funktionen för sammankopplade resurser till användning av  [!DNL Dynamic Media] bilder i de tillämpliga kärnkomponenterna. Se [använd anslutna resurser](/help/assets/use-assets-across-connected-assets-instances.md).
 
-* När du delar enskilda resurser och samlingar som en länk (med [!UICONTROL Link Sharing]-dialogrutan) kan användarna välja om de vill att mottagaren ska kunna hämta originalresurserna, sina återgivningar eller både och.
+* När du delar enskilda resurser och samlingar som en länk (med [!UICONTROL Link Sharing]-dialogrutan) kan användarna välja om de vill att mottagaren ska kunna hämta originalresurserna, sina återgivningar eller både och. Se [Dela resurser via länk](/help/assets/link-sharing.md).
 
-   ![möjlighet att endast hämta ursprungliga resurser, endast återgivningar, eller både och](/help/assets/assets/share-renditions.png)
+   ![möjlighet att endast tillåta hämtning av ursprungliga resurser, endast återgivningar, eller båda](/help/release-notes/assets/share-assets-as-link.png)
 
 * När användare hämtar resurser som delas med dem som en länk kan de välja att hämta de ursprungliga resurserna, återgivningarna eller båda.
 
-* Administratörer kan begränsa antalet underresurser som [!DNL Experience Manager] genererar för sammansatta resurser som PDF-, PowerPoint-, InDesign- och Keynote-filer.
+* **Begränsa genererade** delresurser: Administratörer kan begränsa antalet underresurser som  [!DNL Experience Manager] genereras för sammansatta resurser som PDF-, PowerPoint-, InDesign och Keynote-filer.
 
    ![begränsa produktionen av undertillgångar](/help/assets/assets/sub-asset-limit.png)
 

@@ -3,11 +3,11 @@ title: Hantera sammansatta resurser med referenser och flera sidor
 description: Lär dig hur du skapar referenser till digitala resurser inifrån [!DNL Adobe InDesign], [!DNL Adobe Illustrator], and [!DNL Adobe Photoshop]. Använd funktionen för sidvisningsprogram för att visa enskilda underresurssidor för flersidiga filer som PDF-, INDD-, PPT-, PPTX- och AI-filer.
 contentOwner: AG
 role: User, Admin
-feature: Resurshantering
+feature: Asset Management
 exl-id: 1ea9d8fe-602c-452b-9a24-4125b705aedf
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 79d8b5896f5f8eb7a22dccea81acf0656d435f2b
 workflow-type: tm+mt
-source-wordcount: '1317'
+source-wordcount: '1353'
 ht-degree: 0%
 
 ---
@@ -102,7 +102,11 @@ Gör något av följande om du vill generera delresurserna:
    * Markera en resurs och klicka på [!UICONTROL Timeline] för att öppna den vänstra panelen. Du kan även använda kortkommandot `alt + 3`. Klicka på [!UICONTROL Start Workflow], välj [!UICONTROL DAM Update Asset], klicka på [!UICONTROL Start] och klicka på [!UICONTROL Proceed].
    * Markera en resurs och klicka på [!UICONTROL Create] > [!UICONTROL Workflow] i verktygsfältet. Välj [!UICONTROL DAM Update Asset]-arbetsflöde i popup-dialogrutan, klicka på [!UICONTROL Start] och klicka på [!UICONTROL Proceed].
 
-Kör arbetsflödet **[!UICONTROL DAM Parse Word Documents]** för Microsoft Word-dokument. Den genererar en `cq:Page`-komponent från innehållet i Microsoft Word-dokumentet. De bilder som extraheras från dokumentet refereras från `cq:Page`-komponenten. Dessa bilder extraheras även om generering av delresurser är inaktiverat.
+Kör arbetsflödet **[!UICONTROL DAM Parse Word Documents]** för Microsoft Word-dokument. Den genererar en `cq:Page`-komponent från innehållet i Microsoft Word-dokumentet. De bilder som extraheras från dokumentet refereras från `cq:Page`-komponenten. Dessa bilder extraheras även om underresursgenerering är inaktiverad.
+
+>[!NOTE]
+>
+>I [!UICONTROL Create Sub Asset Process - Step Properties] i [!UICONTROL Process Arguments] kan du ange antalet underresurser som [!DNL Experience Manager] genererar. Standardvärdet är 5. Om du vill generera alla underordnade resurser lämnar du fältet tomt. Om fältet har negativ genereras inga delresurser.
 
 ## Visa delresurser {#viewing-subassets}
 

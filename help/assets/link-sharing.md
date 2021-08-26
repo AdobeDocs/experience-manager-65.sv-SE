@@ -3,11 +3,11 @@ title: Dela resurser via en länk
 description: Dela resurser, mappar och samlingar som en URL-adress.
 contentOwner: AG
 role: User
-feature: Länkdelning,Resurshantering
+feature: Link Sharing,Asset Management
 exl-id: 20370b00-862e-4d04-af2f-7d1c74a842dd
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 79d8b5896f5f8eb7a22dccea81acf0656d435f2b
 workflow-type: tm+mt
-source-wordcount: '938'
+source-wordcount: '903'
 ht-degree: 3%
 
 ---
@@ -24,20 +24,17 @@ ht-degree: 3%
 
 ## Dela resurser {#share-assets}
 
-Använd dialogrutan Länkdelning för att generera URL:en för resurser som du vill dela med användare. Användare med administratörsbehörighet eller läsbehörighet på `/var/dam/share` plats kan visa de länkar som delas med dem.
+Använd dialogrutan [!UICONTROL Link Sharing] för att generera URL:en för resurser som du vill dela med användare. Användare med administratörsbehörighet eller läsbehörighet på `/var/dam/share` plats kan visa de länkar som delas med dem.
 
 1. I [!DNL Assets]-användargränssnittet väljer du resursen som ska delas som en länk.
-1. Klicka på ikonen **[!UICONTROL Share Link]** ![Dela resurser](assets/do-not-localize/assets_share.png) i verktygsfältet. Länken som skapas när du klickar på **[!UICONTROL Share]** visas i förväg i fältet [!UICONTROL Share Link]. Länken skapas inte förrän du klickar på **[!UICONTROL Submit]**.
 
-   ![Dialogruta med länkresurs](assets/Link-sharing-dialog-box.png)
+1. Klicka på ikonen **[!UICONTROL Share Link]** ![Dela resurser](assets/do-not-localize/assets_share.png) i verktygsfältet. Länken som skapas när du klickar på **[!UICONTROL Share]** visas i förväg i fältet [!UICONTROL Share Link]. Länken skapas inte förrän du väljer **[!UICONTROL Submit]**.
+
+   ![Dialogruta med länkresurs](/help/assets/assets/share-assets-as-link.png)
 
    *Bild: Dialogrutan där du kan dela resurser som en länk.*
 
 1. Skriv e-post-ID:t för den användare som du vill dela länken med i rutan för e-postadress i dialogrutan **[!UICONTROL Link Sharing]**. Du kan lägga till en eller flera användare.
-
-   ![Dela länkar till resurser direkt från dialogrutan Länkdelning](assets/Asset-Sharing-LinkShareDialog.png)
-
-   *Bild: Dela länkar till resurser direkt från  [!UICONTROL Link Sharing] dialogrutan.*
 
    >[!NOTE]
    >
@@ -51,7 +48,7 @@ Använd dialogrutan Länkdelning för att generera URL:en för resurser som du v
 
    ![Ange förfallodatum för delad länk](assets/Set-shared-link-expiration.png)
 
-1. Om du vill att användarna ska kunna hämta den ursprungliga resursen tillsammans med återgivningarna väljer du **[!UICONTROL Allow download of original file]**. Som standard kan användare bara hämta återgivningar av resursen som du delar som en länk.
+1. Om du vill att användarna ska kunna hämta den ursprungliga resursen väljer du **[!UICONTROL Allow download of original file]**. Välj **[!UICONTROL Allow download of renditions of file]** om du bara vill att användarna ska kunna hämta återgivningarna av de delade resurserna.
 
 1. Klicka på **[!UICONTROL Share]**. Ett meddelande bekräftar att länken delas med användarna via ett e-postmeddelande.
 

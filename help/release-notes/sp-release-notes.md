@@ -4,9 +4,9 @@ description: Versionsinformation som är specifik för  [!DNL Adobe Experience M
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: 4fca7799bf33bf90f601ab72a354f76e48ccdb04
+source-git-commit: 79d8b5896f5f8eb7a22dccea81acf0656d435f2b
 workflow-type: tm+mt
-source-wordcount: '3521'
+source-wordcount: '3525'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ De viktigaste funktionerna och förbättringarna i [!DNL Adobe Experience Manage
 
 * **Alternativ för länkdelning för att hämta resurser eller återgivningar**: När du delar resurser och samlingar som länkar kan användarna välja om de vill tillåta hämtning av originalresurser, deras återgivningar eller båda med hjälp av den delade länken. Dessutom kan användare som hämtar resurser som delas med dem via länken välja att bara hämta de ursprungliga resurserna, endast återgivningarna eller båda.
 
-* **Begränsa genererade** delresurser: Administratörer kan begränsa antalet underresurser som  [!DNL Experience Manager] genereras för sammansatta resurser som PDF-, PowerPoint-, InDesign och Keynote-filer.
+* **Begränsa genererade** delresurser: Administratörer kan begränsa antalet underresurser som  [!DNL Experience Manager] genereras för sammansatta resurser som PDF-, PowerPoint-, InDesign och Keynote-filer. Se [Hantera sammansatta resurser](/help/assets/managing-linked-subassets.md#generate-subassets).
 
 * **Camera Raw stöd**: Det finns ett nytt  [!DNL Camera Raw] paket med stöd för  [!DNL Adobe Camera Raw] v10.4. Se  [Bearbeta bilder med [!DNL Camera Raw]](/help/assets/camera-raw.md).
 
@@ -263,7 +263,7 @@ Need to verify with Engineering, the status is currently showing as Resolved
 * Ändrade sidor uppdateras men motsvarande länkade produkter uppdateras inte vid kataloglansering (CQ-4321409, NPR-36422).
 * Arbetsflödena **[!UICONTROL Publish later]** och **[!UICONTROL Unpublish later]** fungerar inte (CQ-4327679).
 
-Mer information om säkerhetsuppdateringar finns på [[!DNL Experience Manager] sidan Säkerhetsbulletiner](https://helpx.adobe.com/security/products/experience-manager.html).
+Information om säkerhetsuppdateringar finns på [[!DNL Experience Manager] sidan Säkerhetsbulletiner](https://helpx.adobe.com/security/products/experience-manager.html).
 
 ## Installera 6.5.10.0 {#install}
 
