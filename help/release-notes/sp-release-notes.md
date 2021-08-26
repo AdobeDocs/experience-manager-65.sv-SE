@@ -4,7 +4,7 @@ description: Versionsinformation som är specifik för  [!DNL Adobe Experience M
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: 79d8b5896f5f8eb7a22dccea81acf0656d435f2b
+source-git-commit: 861f5f4ae87da106bc42895e03bc42c0b17bd9fc
 workflow-type: tm+mt
 source-wordcount: '3525'
 ht-degree: 0%
@@ -30,7 +30,7 @@ De viktigaste funktionerna och förbättringarna i [!DNL Adobe Experience Manage
 
 * **Förbättrade  [!DNL Content Fragment] modeller och redigerare**: Nu kan du skapa komplexa och anpassade modeller för strukturerat innehåll med hjälp av kapslade  [!DNL Content Fragment] modeller. Innehållsstrukturer modulariseras till grundläggande element som modelleras som underfragment. Fragment på högre nivå refererar till dessa delfragment. Fler datatypsförbättringar som avancerade valideringsregler ger större flexibilitet vid innehållsmodellering med [!DNL Content Fragments]. Redigeraren [!DNL Experience Manager] [!DNL Content Fragment] har stöd för kapslade fragmentstrukturer i en gemensam redigeringssession, med förbättringar som strukturträdvyn och tabbad kolumnnavigering via fragmenthierarkier.
 
-* **GraphQL API för[!DNL Content Fragments]**: Det nya GraphQL API:t är standardmetoden för att leverera strukturerat innehåll i JSON-format. GraphQL-frågor gör att klienter bara kan begära relevanta innehållsobjekt för att återge en upplevelse. En sådan markering eliminerar överleverans av innehåll (möjlig med HTTP REST API:er) som kräver att innehåll analyseras på klientsidan. GraphQL-scheman härleds från [!DNL Content Fragment]-modeller, och API-svar görs i JSON-format. I [!DNL Experience Manager] som [!DNL Cloud Service] finns [GraphQL-frågor kvar](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/graphql-api-content-fragments.html#persisted-queries-caching) och processcacheanpassade GET-begäranden. Det är ännu inte möjligt i [!DNL Experience Manager] 6.5.
+* **GraphQL API för[!DNL Content Fragments]**: Det nya GraphQL API:t är standardmetoden för att leverera strukturerat innehåll i JSON-format. GraphQL-frågor gör att klienter bara kan begära relevanta innehållsobjekt för att återge en upplevelse. En sådan markering eliminerar överleverans av innehåll (möjlig med HTTP REST API:er) som kräver att innehåll analyseras på klientsidan. GraphQL-scheman härleds från [!DNL Content Fragment]-modeller, och API-svar görs i JSON-format. I [!DNL Experience Manager] som [!DNL Cloud Service] finns [GraphQL-frågor kvar](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/graphql-api-content-fragments.html#persisted-queries-caching) och processcacheanpassade GET-begäranden. Det är ännu inte möjligt i [!DNL Experience Manager] 6.5.10.0.
 
 * **Hierarkihantering och framtida förhandsgranskning**: Användarna har nu ett gränssnitt för att komma åt innehållsstrukturerna när de  [!DNL Experience Manager] startar, inklusive möjligheten att lägga till och ta bort sidor vid en start. Den här funktionen förbättrar flexibiliteten i [!DNL Experience Manager]-lanseringar att skapa innehållsversioner för framtida publicering. [Funktionerna för ](/help/sites-authoring/working-with-page-versions.md#timewarp) tidsförvrängning gör att användarna kan förhandsgranska när framtida innehållslägen visas.
 
@@ -263,7 +263,7 @@ Need to verify with Engineering, the status is currently showing as Resolved
 * Ändrade sidor uppdateras men motsvarande länkade produkter uppdateras inte vid kataloglansering (CQ-4321409, NPR-36422).
 * Arbetsflödena **[!UICONTROL Publish later]** och **[!UICONTROL Unpublish later]** fungerar inte (CQ-4327679).
 
-Information om säkerhetsuppdateringar finns på [[!DNL Experience Manager] sidan Säkerhetsbulletiner](https://helpx.adobe.com/security/products/experience-manager.html).
+Mer information om säkerhetsuppdateringar finns på [[!DNL Experience Manager] sidan Säkerhetsbulletiner](https://helpx.adobe.com/security/products/experience-manager.html).
 
 ## Installera 6.5.10.0 {#install}
 
