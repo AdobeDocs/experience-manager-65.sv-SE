@@ -5,10 +5,10 @@ contentOwner: AG
 role: User, Admin, Leader
 feature: Connected Assets,User and Groups
 exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
-source-git-commit: 37073594b45995ade7f0e73c519feb21adf48482
+source-git-commit: 3e4e9ab8b3940f539228bccf759dcade03a8b015
 workflow-type: tm+mt
-source-wordcount: '2645'
-ht-degree: 27%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +20,7 @@ Funktionen för anslutna resurser stöder ovanstående användningsfall genom at
 
 ## Översikt över Connected Assets {#overview-of-connected-assets}
 
-När du redigerar sidor i [!UICONTROL Page Editor] som målmål kan författarna sömlöst söka efter, bläddra bland och bädda in resurser från en annan [!DNL Assets]-distribution som fungerar som en källa för resurser. Administratörerna skapar en engångsintegrering av en distribution av [!DNL Experience Manager] med [!DNL Sites]-funktioner med en annan distribution av [!DNL Experience Manager] med [!DNL Assets]-funktioner.
+När du redigerar sidor i [!UICONTROL Page Editor] som målmål kan författarna sömlöst söka efter, bläddra bland och bädda in resurser från en annan [!DNL Assets]-distribution som fungerar som en källa för resurser. Administratörerna skapar en engångsintegrering av en distribution av [!DNL Experience Manager] med [!DNL Sites]-funktioner med en annan distribution av [!DNL Experience Manager] med [!DNL Assets]-funktioner. Man kan också använda Dynamic Media-bilder på webbplatsens webbsidor med hjälp av uppkopplade resurser och utnyttja Dynamic Media funktioner, som smart beskärning och bildförinställningar.
 
 För [!DNL Sites]-författare är fjärrresurserna tillgängliga som skrivskyddade lokala resurser. Funktionen stöder enkel sökning och användning av ett fåtal fjärresurser i taget. Om du vill göra många fjärrresurser tillgängliga för en [!DNL Sites]-distribution på en gång bör du överväga att migrera resurserna samtidigt. Se [Migreringsguide för Experience Manager-resurser](/help/assets/assets-migration-guide.md).
 
@@ -115,6 +115,25 @@ Du kan kontrollera anslutningen mellan konfigurerade [!DNL Sites]-distributioner
 
 ![Anslutningstest för konfigurerade  [!DNL Sites]](assets/connected-assets-multiple-config.png)
 *resurser: Anslutningstest för konfigurerade anslutna resurser  [!DNL Sites].*
+
+### Konfigurera en anslutning för dynamiska medieresurser{#sites-dynamic-media-connected-assets}
+
+Du kan konfigurera en anslutning mellan [!DNL Sites]-distribution och [!DNL Dynamic Media]-distribution som tillåter webbsideförfattare att använda [!DNL Dynamic Media]-bilder på sina webbsidor. När du skapar webbsidor är upplevelsen av att använda fjärrresurser och fjärdistributioner av [!DNL Dynamic Media] densamma.
+
+Så här konfigurerar du funktionerna för anslutna resurser för dynamiska mediedatabilder:
+
+1. Aktivera och konfigurera [!DNL Dynamic Media] som global konfiguration på fjärrdistribution av [!DNL Assets] författare. Mer information om hur du konfigurerar Dynamic Media finns i [Konfigurera Dynamic Media](/help/assets/config-dynamic.md#configuring-dynamic-media-cloud-services).<br/>
+I  [!DNL Assets] fjärrdistribution  [!UICONTROL Dynamic Media sync mode]väljer du  **[!UICONTROL Enabled by default]**.
+
+1. Skapa konfiguration för anslutna resurser enligt beskrivningen i [Konfigurera anslutning mellan platser och resursdistributioner](#configure-a-connection-between-sites-and-assets-deployments). Välj även **[!UICONTROL Fetch Original Rendition for Dynamic Media Connected Assets]**-alternativet.
+
+1. Konfigurera [!DNL Dynamic Media] på lokala [!DNL Sites]- och fjärdistributioner av [!DNL Assets]. Följ instruktionerna för att [konfigurera [!DNL Dynamic Media]](/help/assets/config-dynamic.md#configuring-dynamic-media-cloud-services).
+
+   * Använd samma företagsnamn i alla konfigurationer.
+   * På lokal [!DNL Sites] i [!UICONTROL Dynamic Media sync mode] väljer du **[!UICONTROL Disabled by default]**. Distributionen [!DNL Sites] behöver bara skrivskyddad åtkomst till kontot [!DNL Dynamic Media].
+   * Välj **[!UICONTROL Selective Publish]** i alternativet **[!UICONTROL Publish Assets]** på lokal [!DNL Sites]. Välj inte **[!UICONTROL Sync All Content]**.
+
+1. Aktivera [[!DNL Dynamic Media] stöd i Image Core Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html#dynamic-media). Med den här funktionen aktiveras [Image component](https://www.aemcomponents.dev/content/core-components-examples/library/page-authoring/image.html) som standard att visa [!DNL Dynamic Media]-bilder när [!DNL Dynamic Media]-bilder används av författare på webbsidor i lokal [!DNL Sites]-distribution.
 
 ## Använda fjärresurser {#use-remote-assets}
 
@@ -226,3 +245,6 @@ Följ de här stegen för att felsöka vanliga fel:
 * Om fjärrreferenser inte hämtas och leder till ett felmeddelande, kontrollerar du om [!DNL Sites]-distributionen är tillgänglig och söker efter nätverksanslutningsproblem. Försök igen senare för att kontrollera. [!DNL Assets] Två försök görs att upprätta en anslutning till  [!DNL Sites] distributionen och ett fel rapporteras sedan.
 
    ![det gick inte att hämta resursfjärrreferenser](assets/reference-report-failure.png)
+
+
+
