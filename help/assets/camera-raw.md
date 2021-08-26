@@ -1,18 +1,18 @@
 ---
-title: '[!DNL Adobe Camera Raw] support.'
-description: Lär dig hur du aktiverar [!DNL Adobe Camera Raw] stöd i [!DNL Adobe Experience Manager Assets].
+title: '[!DNL Adobe Camera Raw] stöd för bearbetning av digitalt material'
+description: Lär dig hur du aktiverar [!DNL Adobe Camera Raw] stöd i [!DNL Adobe Experience Manager Assets]
 contentOwner: AG
 role: Admin
-feature: Utvecklarverktyg
+feature: Developer Tools
 exl-id: 7159a908-4c36-42b4-bbb4-d7fb1be4ee1b
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 73e53f516d8e10b548f913db079c7e9812deb907
 workflow-type: tm+mt
-source-wordcount: '334'
+source-wordcount: '332'
 ht-degree: 2%
 
 ---
 
-# Bearbeta bilder med Camera Raw {#camera-raw-support}
+# Bearbeta bilder med [!DNL Adobe Camera Raw] {#camera-raw-support}
 
 Du kan aktivera [!DNL Adobe Camera Raw]-stödet för att bearbeta råfilsformat, som CR2, NEF och RAF, och återge bilderna i JPEG-format. Funktionen stöds i [!DNL Adobe Experience Manager Assets] med det [Camera Raw paketet](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg) som är tillgängligt från programvarudistribution.
 
@@ -22,9 +22,9 @@ Du kan aktivera [!DNL Adobe Camera Raw]-stödet för att bearbeta råfilsformat,
 
 Gör så här för att aktivera stöd för [!DNL Camera Raw] i [!DNL Experience Manager Assets]:
 
-1. Hämta [det Camera Raw paketet](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg) från Software Distribution.
+1. Hämta det Camera Raw [paketet](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg) från [!DNL Software Distribution].
 1. Öppna `https://[aem_server]:[port]/workflow`. Öppna arbetsflödet för **[!UICONTROL DAM Update Asset]**.
-1. Öppna steget **[!UICONTROL Process Thumbnails]**.
+1. Redigera **[!UICONTROL Process Thumbnails]**-steget.
 1. Ange följande konfiguration på fliken **[!UICONTROL Thumbnails]**:
 
    * **[!UICONTROL Thumbnails]**: `140:100:false, 48:48:false, 319:319:false`
@@ -36,7 +36,7 @@ Gör så här för att aktivera stöd för [!DNL Camera Raw] i [!DNL Experience 
 
    ![chlimage_1-129](assets/chlimage_1-335.png)
 
-1. På sidopanelen lägger du till **[!UICONTROL Camera Raw/DNG Handler]**-steget under **[!UICONTROL Thumbnail creation]**-steget.
+1. På sidopanelen lägger du till **[!UICONTROL Camera Raw/DNG Handler]**-steget under **[!UICONTROL Process Thumbnails]**-steget.
 1. I steget **[!UICONTROL Camera Raw/DNG Handler]** lägger du till följande konfiguration på fliken **[!UICONTROL Arguments]**:
 
    * **[!UICONTROL Mime Types]**:  `image/dng` och  `image/x-raw-(.*)`

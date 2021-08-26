@@ -2,12 +2,12 @@
 title: Resurshandbok
 description: Den här guiden täcker alla Experience Manager Assets-uppgifter, t.ex. hur du skapar, hanterar, levererar och optimerar digitala resurser.
 user-guide-title: Resurshandbok
-feature: Resurshantering
+feature: Asset Management
 role: User, Architect, Admin
 exl-id: f4016056-47a2-4d86-b12b-90d062d6a21a
-source-git-commit: 19dd081674b4954498d6aa62335f6b5a9f2a4146
+source-git-commit: 883c279330b199d4e3a301e240cae02a6e04fd20
 workflow-type: tm+mt
-source-wordcount: '335'
+source-wordcount: '333'
 ht-degree: 4%
 
 ---
@@ -17,9 +17,6 @@ ht-degree: 4%
 Den här guiden täcker alla [!DNL Experience Manager Assets]-uppgifter, t.ex. hur du skapar, hanterar, levererar och optimerar digitala resurser.
 
 ## Viktiga [!DNL Experience Manager]-artiklar
-
-<!-- TBD: Some of these links will soon be updated. Change these when new articles go live on docs.adobe.com.
--->
 
 * [Versionsinformation om Experience Manager 6.5](/help/release-notes/home.md)
 * [Senaste dokumentationsuppdateringarna](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html)

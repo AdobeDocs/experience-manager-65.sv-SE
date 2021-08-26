@@ -3,11 +3,11 @@ title: Använd Connected Assets när du vill dela DAM-resurser i [!DNL Sites]
 description: Använd resurser som är tillgängliga på en fjärrdistribution av [!DNL Adobe Experience Manager Assets] deployment when creating your web pages on another [!DNL Adobe Experience Manager Sites] data.
 contentOwner: AG
 role: User, Admin, Leader
-feature: Anslutna resurser,Användare och grupper
+feature: Connected Assets,User and Groups
 exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 37073594b45995ade7f0e73c519feb21adf48482
 workflow-type: tm+mt
-source-wordcount: '2655'
+source-wordcount: '2645'
 ht-degree: 27%
 
 ---
@@ -41,7 +41,7 @@ Innan du använder eller konfigurerar den här funktionen bör du kontrollera f�
 
 Författare söker efter bilder och följande typer av dokument i Content Finder och använder de sökbara resurserna i Page Editor. Dokument läggs till i `Download`-komponenten och bilder till `Image`-komponenten. Författare lägger också till fjärrresurserna i valfri anpassad [!DNL Experience Manager]-komponent som utökar standardkomponenterna för `Download` eller `Image`. De format som stöds är:
 
-* **Bildformat**: De format som  [Image-](https://www.aemcomponents.dev/content/core-components-examples/library/page-authoring/image.html) komponenten stöder. [!DNL Dynamic Media] bilder stöds inte.
+* **Bildformat**: De format som  [Image-](https://www.aemcomponents.dev/content/core-components-examples/library/page-authoring/image.html) komponenten stöder.
 * **Dokumentformat**: Se vilka  [dokumentformat](assets-formats.md#supported-document-formats) som stöds.
 
 ### Användare och grupper som krävs {#users-and-groups-involved}
@@ -188,7 +188,7 @@ Följ de här stegen för att visa och hantera referenser i [!DNL Assets]-distri
 * Lokala resurser synkroniseras inte med de ursprungliga resurserna i fjärrdistributionen. Ändringar, borttagningar eller återkallande av behörigheter i DAM-distributionen sprids inte längre ned i kedjan.
 * Lokala resurser är skrivskyddade kopior. [!DNL Experience Manager] -komponenter gör icke-förstörande redigeringar av resurser. Inga andra redigeringar tillåts.
 * Lokalt hämtade resurser är endast tillgängliga för redigeringsändamål. Det går inte att använda arbetsflöden för resursuppdatering och metadata kan inte redigeras.
-* Endast bilder och dokumentformaten i listan stöds. [!DNL Dynamic Media] resurser,  [!DNL Content Fragments]och  [!DNL Experience Fragments] stöds inte.
+* Endast bilder och dokumentformaten i listan stöds. [!DNL Content Fragments] och  [!DNL Experience Fragments] stöds inte.
 * [!DNL Experience Manager] hämtar inte metadatamatcheman. Det innebär att alla hämtade metadata inte visas. Om schemat uppdateras separat för [!DNL Sites]-distributionen visas alla metadataegenskaper.
 * Alla [!DNL Sites]-författare har läsbehörighet för de hämtade kopiorna, även om författare inte har åtkomst till fjärr-DAM-distributionen.
 * Det finns inte API-stöd för att anpassa integreringen.
