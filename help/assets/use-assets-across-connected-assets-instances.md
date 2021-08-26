@@ -5,10 +5,10 @@ contentOwner: AG
 role: User, Admin, Leader
 feature: Connected Assets,User and Groups
 exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
-source-git-commit: 3e4e9ab8b3940f539228bccf759dcade03a8b015
+source-git-commit: 218e97eb31061e833f3b291a6607b2ebf4762471
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '2851'
+ht-degree: 25%
 
 ---
 
@@ -116,7 +116,7 @@ Du kan kontrollera anslutningen mellan konfigurerade [!DNL Sites]-distributioner
 ![Anslutningstest för konfigurerade  [!DNL Sites]](assets/connected-assets-multiple-config.png)
 *resurser: Anslutningstest för konfigurerade anslutna resurser  [!DNL Sites].*
 
-### Konfigurera en anslutning för dynamiska medieresurser{#sites-dynamic-media-connected-assets}
+### Konfigurera en anslutning för dynamiska medieresurser {#sites-dynamic-media-connected-assets}
 
 Du kan konfigurera en anslutning mellan [!DNL Sites]-distribution och [!DNL Dynamic Media]-distribution som tillåter webbsideförfattare att använda [!DNL Dynamic Media]-bilder på sina webbsidor. När du skapar webbsidor är upplevelsen av att använda fjärrresurser och fjärdistributioner av [!DNL Dynamic Media] densamma.
 
