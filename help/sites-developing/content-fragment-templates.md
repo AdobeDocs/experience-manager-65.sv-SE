@@ -1,8 +1,8 @@
 ---
 title: Mallar för innehållsfragment
-seo-title: Mallar för innehållsfragment
+seo-title: Content Fragment Templates
 description: Mallar väljs när du skapar ett innehållsfragment och tillhandahåller det nya fragmentet den grundläggande strukturen, elementet och variationen
-seo-description: Mallar väljs när du skapar ett innehållsfragment och tillhandahåller det nya fragmentet den grundläggande strukturen, elementet och variationen
+seo-description: Templates are selected when creating a content fragmen and provide the new fragment with the basic structure, element, and variation
 uuid: d147bac8-b710-40ed-9664-decb5ffcf8e7
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,14 +10,13 @@ topic-tags: platform
 content-type: reference
 discoiquuid: a975ea2e-5e24-4a96-bd62-63bb98836ff2
 docset: aem65
-translation-type: tm+mt
-source-git-commit: a430c4de89bde3b907d342106465d3b5a7c75cc8
+exl-id: 1b75721c-b223-41f0-88d9-bd855b529f31
+source-git-commit: 2ec9625d480eb8cae23f44aa247fce2a519dec31
 workflow-type: tm+mt
-source-wordcount: '644'
+source-wordcount: '656'
 ht-degree: 4%
 
 ---
-
 
 # Mallar för innehållsfragment{#content-fragment-templates}
 
@@ -26,6 +25,10 @@ ht-degree: 4%
 >[Modellerna för ](/help/assets/content-fragments/content-fragments-models.md) innehållsfragment rekommenderas nu för att skapa alla dina fragment.
 >
 >Modeller för innehållsfragment används för alla exempel i We.Retail.
+
+>[!NOTE]
+>
+>Före AEM 6.3 skapades innehållsfragment med hjälp av mallar i stället för modeller. Mallar är inte längre tillgängliga för att skapa nya fragment, men fragment som skapats med en sådan mall stöds fortfarande.
 
 Mallar väljs när ett innehållsfragment skapas. De ger det nya fragmentet grundläggande struktur, element och variation. Mallarna som används för innehållsfragment omfattas av Granite Configuration Manager.
 
@@ -52,12 +55,10 @@ Prioritetsordningen är (i fallande ordning) `/conf`, `/apps`, `/libs`.
 >Den rekommenderade metoden för konfiguration och andra ändringar är:
 >
 >1. Återskapa önskat objekt (t.ex. som det finns i `/libs`) under `/apps`
-   >
-   >
-1. Gör ändringar i `/apps`
+>
+>1. Gör ändringar i `/apps`
 
 >
-
 
 
 En malls grundläggande struktur hålls under

@@ -1,8 +1,8 @@
 ---
 title: Anpassa och utöka Content Fragments
-seo-title: Anpassa och utöka Content Fragments
+seo-title: Customizing and Extending Content Fragments
 description: Ett innehållsfragment utökar en standardresurs.
-seo-description: Ett innehållsfragment utökar en standardresurs.
+seo-description: A content fragment extends a standard asset.
 uuid: f72c3a23-9b0d-4fab-a960-bb1350f01175
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,14 +10,13 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: d0770bee-4be5-4a6a-8415-70fdfd75015c
 docset: aem65
-translation-type: tm+mt
-source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+exl-id: 08c88e70-4df9-4627-8a66-1fabe3aee50b
+source-git-commit: 2ec9625d480eb8cae23f44aa247fce2a519dec31
 workflow-type: tm+mt
-source-wordcount: '2749'
-ht-degree: 1%
+source-wordcount: '2772'
+ht-degree: 0%
 
 ---
-
 
 # Anpassa och utöka Content Fragments{#customizing-and-extending-content-fragments}
 
@@ -42,6 +41,10 @@ Beroende på fragmenttypen används även modeller eller mallar:
 >[Modellerna för ](/help/assets/content-fragments/content-fragments-models.md) innehållsfragment rekommenderas nu för att skapa alla dina fragment.
 >
 >Modeller för innehållsfragment används för alla exempel i We.Retail.
+
+>[!NOTE]
+>
+>Före AEM 6.3 skapades innehållsfragment med hjälp av mallar i stället för modeller. Mallar är inte längre tillgängliga för att skapa nya fragment, men fragment som skapats med en sådan mall stöds fortfarande.
 
 * Modeller för innehållsfragment:
 
@@ -115,7 +118,7 @@ Precis som med standardresurser finns ett innehållsavdrag under:
 
 `/content/dam`
 
-#### Resursbehörigheter {#asset-permissions}
+#### Tillgångsbehörigheter {#asset-permissions}
 
 Mer information finns i [Innehållsfragment - Ta bort överväganden](/help/assets/content-fragments/content-fragments-delete.md).
 
@@ -155,7 +158,7 @@ Innehållsfragment kan refereras från AEM sidor, precis som andra resurstyper. 
 >
 >När du använder ett innehållsfragment som har baserats på en mall för innehållsfragment på en sida, finns det ingen referens när mallen kopierades när fragmentet skapades.
 
-#### Konfiguration med OSGi-konsolen {#configuration-using-osgi-console}
+#### Konfiguration med OSGi-konsol {#configuration-using-osgi-console}
 
 Serverdelsimplementeringen av innehållsfragment ansvarar till exempel för att göra instanser av ett fragment som används på en sida sökbara eller för hantering av blandat medieinnehåll. Den här implementeringen behöver veta vilka komponenter som används för att återge fragment och hur återgivningen är parametriserad.
 
@@ -193,7 +196,7 @@ Det finns fortfarande några riktlinjer som du måste följa för att se till at
 
    * om `paragraphScope` == `range` definierar egenskapen `paragraphRange` intervallet för stycken som ska återges
 
-### Integrering med andra ramverk {#integration-with-other-frameworks}
+### Integrering med andra ramar {#integration-with-other-frameworks}
 
 Innehållsfragment kan integreras med:
 
@@ -224,9 +227,8 @@ Innehållsfragment kan integreras med:
    >Det AEM arbetsflödet för översättning fungerar med `/content`:
    >
    >    * Eftersom innehållsfragmentmodellerna finns i `/conf` inkluderas de inte i sådana översättningar. Du kan [internationalisera gränssnittssträngarna](/help/sites-developing/i18n-dev.md).
-      >
-      >    
-   * Mallar kopieras för att skapa fragmentet så detta är implicit.
+   >
+   >    * Mallar kopieras för att skapa fragmentet så detta är implicit.
 
 
 * **Metadata-scheman**
@@ -359,7 +361,7 @@ Följande tre gränssnitt kan fungera som startpunkter:
 
 
 
-### Anpassning - Använder customito() {#adapting-using-adaptto}
+### Adapting - Using customito() {#adapting-using-adaptto}
 
 Följande kan anpassas:
 
@@ -397,7 +399,7 @@ Det bör noteras att
 
    * Om du tar bort befintliga varianter uppdateras inte datastrukturen.
 
-## API för hantering av innehållsfragment - klientsidan {#the-content-fragment-management-api-client-side}
+## API:t för hantering av innehållsfragment - klientsidan {#the-content-fragment-management-api-client-side}
 
 >[!CAUTION]
 >

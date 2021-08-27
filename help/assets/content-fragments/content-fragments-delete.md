@@ -1,26 +1,18 @@
 ---
 title: Innehållsfragment – ta bort överväganden
-seo-title: Innehållsfragment – ta bort överväganden
-description: Innehållsfragment – ta bort överväganden
-seo-description: Innehållsfragment – ta bort överväganden
-uuid: e7ac1809-159f-4d02-ad30-dc6c246e8a04
-contentOwner: aheimoz
-topic-tags: content-fragments
-products: SG_EXPERIENCEMANAGER/6.5/ASSETS
-content-type: reference
-discoiquuid: ec21237f-9186-49b4-8039-99df4db7c14a
-docset: aem65
-feature: Innehållsfragment
-role: User, Admin
-exl-id: cc212f95-0be0-4705-8dfd-beda9bfb13e0
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+description: Granska dessa viktiga aspekter innan du definierar dina regler för borttagning av innehållsfragment i AEM. Content Fragments är ett kraftfullt verktyg för att leverera headless-innehåll, och konsekvenserna av att ta bort dem måste noggrant övervägas.
+feature: Content Fragments
+role: User
+source-git-commit: 94145c6428f61e31f6784a3d6ea67aa8d81cedd6
 workflow-type: tm+mt
-source-wordcount: '457'
-ht-degree: 13%
+source-wordcount: '509'
+ht-degree: 9%
 
 ---
 
-# Innehållsfragment – ta bort överväganden{#content-fragments-delete-considerations}
+# Innehållsfragment – ta bort överväganden {#content-fragments-delete-considerations}
+
+Granska dessa viktiga aspekter innan du definierar dina regler för borttagning av innehållsfragment i AEM. Content Fragments är ett kraftfullt verktyg för att leverera headless-innehåll, och konsekvenserna av att ta bort dem måste noggrant övervägas.
 
 ## Behörigheter - ta bort eller inte ta bort {#permissions-delete-or-not-delete}
 
@@ -33,12 +25,12 @@ När det gäller borttagningsbehörigheter måste innehållsfragment beaktas på
    * **Användningsfall**: En användare som behöver redigera/uppdatera ett innehållsfragment -  **och ta bort ett helt fragment**.
    * **Behörigheter**: Behörigheten  [](/help/sites-administering/security.md#actions) Ta bort kan  [tilldelas via användar- och/eller grupphantering](/help/sites-administering/security.md#managing-permissions).
 
-1. **De flera underenheter som utgör ett innehållsfragment. till exempel variationer, undernoder.**
+2. **De flera underenheter som utgör ett innehållsfragment. till exempel variationer, undernoder.**
 
    Den grundläggande åtgärden i redigeraren för innehållsfragment kräver att sådana tillfälliga underelement kan tas bort. t.ex. vid manipulering av variationer, även när du redigerar metadata eller hanterar associerat innehåll.
 
    * **Användningsfall**: En användare som behöver redigera/uppdatera ett innehållsfragment -  **utan att kunna ta bort ett helt fragment**.
-   * **Behörigheter**: Se  [Behörigheter krävs endast](/help/assets/content-fragments/content-fragments-delete.md#permissions-required-for-editor-functionality-only) för redigeringsfunktionen.
+   * **Behörigheter**: Se  [Behörigheter krävs endast](#permissions-required-for-editor-functionality-only) för redigeringsfunktionen.
 
 >[!NOTE]
 >

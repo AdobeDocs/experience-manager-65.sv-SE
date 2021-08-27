@@ -1,28 +1,19 @@
 ---
-title: Stöd för Content Fragments i AEM Assets HTTP API
-seo-title: Stöd för Content Fragments i AEM Assets HTTP API
-description: Läs mer om stöd för innehållsfragment i AEM Assets HTTP API.
-seo-description: Läs mer om stöd för innehållsfragment i AEM Assets HTTP API.
-uuid: c500d71e-ceee-493a-9e4d-7016745c544c
-contentOwner: aheimoz
-products: SG_EXPERIENCEMANAGER/6.5/ASSETS
-content-type: reference
-topic-tags: extending-assets
-discoiquuid: 03502b41-b448-47ab-9729-e0a66a3389fa
-docset: aem65
-feature: Innehållsfragment
-role: User, Admin
-exl-id: 0f9efb47-a8d1-46d9-b3ff-a6c0741ca138
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+title: Stöd för Adobe Experience Manager Content Fragments i Assets HTTP API
+description: Lär dig mer om stöd för innehållsfragment i Assets HTTP API, en viktig del AEM headless delivery feature.
+feature: Content Fragments,Assets HTTP API
+source-git-commit: 2f647fc640d3809dc684bce397831ab37fb94b07
 workflow-type: tm+mt
-source-wordcount: '1861'
-ht-degree: 2%
+source-wordcount: '1934'
+ht-degree: 1%
 
 ---
 
-# Stöd för Content Fragments i AEM Assets HTTP API{#content-fragments-support-in-aem-assets-http-api}
+# Stöd för Content Fragments i AEM Assets HTTP API {#content-fragments-support-in-aem-assets-http-api}
 
 ## Översikt {#overview}
+
+Lär dig mer om stöd för innehållsfragment i Assets HTTP API, en viktig del AEM headless delivery feature.
 
 >[!NOTE]
 >
@@ -32,18 +23,23 @@ ht-degree: 2%
 >* inklusive stöd för innehållsfragment
 
 >
->
-Den aktuella implementeringen av AEM Assets HTTP API är REST.
+>Den aktuella implementeringen av Assets HTTP API baseras på arkitekturstilen [REST](https://en.wikipedia.org/wiki/Representational_state_transfer).
 
-Med Adobe Experience Manager (AEM) [Assets REST API](/help/assets/mac-api-assets.md) kan utvecklare komma åt innehåll (som lagras i AEM) direkt via HTTP API, via CRUD-åtgärder (Create, Read, Update, Delete).
+Med [Resursens REST API](/help/assets/mac-api-assets.md) kan utvecklare av Adobe Experience Manager komma åt innehåll (som lagras i AEM) direkt via HTTP-API:t via CRUD-åtgärder (Skapa, Läs, Uppdatera, Ta bort).
 
-Med API:t kan du använda AEM som headless CMS (Content Management System) genom att tillhandahålla Content Services till ett JavaScript-klientprogram. Eller något annat program som kan köra HTTP-begäranden och hantera JSON-svar.
+Med API kan du använda Adobe Experience Manager som headless CMS (Content Management System) genom att tillhandahålla Content Services till ett JavaScript-klientprogram. Eller något annat program som kan köra HTTP-begäranden och hantera JSON-svar.
 
 Enkelsidiga program (SPA), ramverksbaserade eller anpassade, kräver till exempel innehåll som tillhandahålls via HTTP API, ofta i JSON-format.
 
-AEM Core Components har ett mycket omfattande, flexibelt och anpassningsbart API som kan hantera de nödvändiga läsåtgärderna i detta syfte, och vars JSON-utdata kan anpassas, men kräver AEM WCM-kunskaper (Web Content Management) för implementering eftersom de måste finnas på API-sidor som baseras på dedikerade AEM. Alla SPA har inte tillgång till sådana resurser.
+Även om [AEM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) är en mycket omfattande, flexibel och anpassningsbar API som kan hantera nödvändiga läsåtgärder i detta syfte, och vars JSON-utdata kan anpassas, kräver de AEM WCM-kunskaper (Web Content Management) för implementering eftersom de måste finnas på sidor som är baserade på dedikerade AEM-mallar. Det är inte varje SPA utvecklingsorganisation som har direkt tillgång till sådan kunskap.
 
-Detta är när REST API:t för resurser kan användas. Med den kan utvecklare komma åt resurser (till exempel bilder och innehållsfragment) direkt, utan att först behöva bädda in dem på en sida, och leverera innehållet i serialiserat JSON-format. (Observera att det inte går att anpassa JSON-utdata från Resurser REST API). Med Assets REST API kan utvecklare ändra innehåll genom att skapa nya, uppdatera eller ta bort befintliga resurser, innehållsfragment och mappar.
+Detta är när REST API:t för resurser kan användas. Med det kan utvecklare komma åt resurser (till exempel bilder och innehållsfragment) direkt, utan att först behöva bädda in dem på en sida, och leverera innehållet i serialiserat JSON-format.
+
+>[!NOTE]
+>
+>Det går inte att anpassa JSON-utdata från Assets REST API.
+
+Med Assets REST API kan utvecklare ändra innehåll genom att skapa nya, uppdatera eller ta bort befintliga resurser, innehållsfragment och mappar.
 
 Resursens REST API:
 
@@ -57,7 +53,23 @@ Resursens REST API är tillgängligt för varje körklar installation av en nyli
 
 ## Viktiga begrepp {#key-concepts}
 
-Resursens REST API ger [REST](https://en.wikipedia.org/wiki/Representational_state_transfer)-åtkomst till resurser som lagras i en AEM. Slutpunkten `/api/assets` används och resursens sökväg krävs för att komma åt den (utan inledande `/content/dam`).
+Resursens REST API ger [REST](https://en.wikipedia.org/wiki/Representational_state_transfer)-åtkomst till resurser som lagras i en AEM.
+
+Slutpunkten `/api/assets` används och resursens sökväg krävs för att komma åt den (utan inledande `/content/dam`).
+
+* Det innebär att du kan få tillgång till resursen på:
+   * `/content/dam/path/to/asset`
+* Du måste begära:
+   * `/api/assets/path/to/asset`
+
+Om du till exempel vill komma åt `/content/dam/wknd/en/adventures/cycling-tuscany` begär du `/api/assets/wknd/en/adventures/cycling-tuscany.json`
+
+>[!NOTE]
+>Åtkomst över:
+>
+>* `/api/assets` **använder** inte  `.model` väljaren.
+>* `/content/path/to/page` **kräver** att du använder  `.model` väljaren.
+
 
 HTTP-metoden avgör vilken åtgärd som ska utföras:
 
@@ -81,12 +93,14 @@ Det innebär att efterföljande (`write`)-begäranden inte kan kombineras till e
 ### AEM (Resurser) REST API jämfört med AEM komponenter {#aem-assets-rest-api-versus-aem-components}
 
 <table>
- <tbody>
+ <thead>
   <tr>
    <td>Proportioner</td>
-   <td>Resurser REST API<br /> </td>
-   <td>AEM<br /> (komponenter med Sling Models)</td>
+   <td>Resurser REST API<br/> </td>
+   <td>AEM<br/> (komponenter med Sling Models)</td>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>Användningsfall som stöds</td>
    <td>Allmänt syfte.</td>
@@ -99,9 +113,11 @@ Det innebär att efterföljande (`write`)-begäranden inte kan kombineras till e
   </tr>
   <tr>
    <td>Åtkomst</td>
-   <td><p>Kan nås direkt.</p> <p>Använder <code>/api/assets </code>slutpunkten, mappad till <code>/content/dam</code> (i databasen).</p> <p>Till exempel för att få åtkomst till:<code class="code">
-       /content/dam/we-retail/en/experiences/arctic-surfing-in-lofoten</code><br />-begäran:<br /> <code>/api/assets/we-retail/en/experiences/arctic-surfing-in-lofoten.model.json</code></p> </td>
-   <td><p>Måste refereras via en AEM på en AEM.</p> <p>Använder <code>.model</code>-väljaren för att skapa JSON-representationen.</p> <p>En exempel-URL skulle se ut så här:<br /> <code>https://localhost:4502/content/we-retail/language-masters/en/experience/arctic-surfing-in-lofoten.model.json</code></p> </td>
+   <td><p>Kan nås direkt.</p> <p>Använder <code>/api/assets </code>slutpunkten, mappad till <code>/content/dam</code> (i databasen).</p> 
+   <p>En exempelsökväg skulle se ut så här: <code>/api/assets/wknd/en/adventures/cycling-tuscany.json</code></p>
+   </td>
+    <td><p>Måste refereras via en AEM på en AEM.</p> <p>Använder <code>.model</code>-väljaren för att skapa JSON-representationen.</p> <p>En exempelsökväg skulle se ut så här:<br/> <code>/content/wknd/language-masters/en/adventures/cycling-tuscany.model.json</code></p> 
+   </td>
   </tr>
   <tr>
    <td>Dokumentskydd</td>
@@ -129,11 +145,10 @@ Om REST API:t för Resurser används i en miljö utan särskilda autentiseringsk
 >
 >Mer information finns i:
 >
->* [CORS/AEM](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/cors-security-article-understand.html)
->* [Video - Utveckla för CORS med AEM](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/cors-security-technical-video-develop.html)
+>* [CORS/AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html)
+>* [Video - Utveckla för CORS med AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/develop-for-cross-origin-resource-sharing.html)
 
 >
-
 
 
 I miljöer med specifika autentiseringskrav rekommenderas OAuth.
@@ -144,8 +159,8 @@ Innehållsfragment är en specifik typ av resurs, se [Arbeta med innehållsfragm
 
 Mer information om funktioner som är tillgängliga via API finns i:
 
-* [Tillgängliga funktioner ](/help/assets/mac-api-assets.md#assets) för REST API:t för resurser
-* [Enhetstyper](/help/assets/assets-api-content-fragments.md#entity-types)
+* [Resursens REST API](/help/assets/mac-api-assets.md)
+* [Enhetstyper](/help/assets/assets-api-content-fragments.md#entity-types), där funktioner som är specifika för varje typ som stöds (som är relevant för innehållsfragment) förklaras
 
 ### Sidindelning {#paging}
 
@@ -164,7 +179,7 @@ Svaret kommer att innehålla växlingsinformation som en del av `properties`-avs
 
 `GET /api/assets.json?offset=2&limit=3`
 
-```
+```json
 ...
 "properties": {
     ...
@@ -184,17 +199,17 @@ Svaret kommer att innehålla växlingsinformation som en del av `properties`-avs
 
 Mappar fungerar som behållare för resurser och andra mappar. De återspeglar strukturen i AEM innehållsdatabas.
 
-Resursens REST API ger åtkomst till en mapps egenskaper. till exempel namn, titel osv. Resurser visas som underordnade enheter till mappar.
+Resursens REST API ger åtkomst till en mapps egenskaper. till exempel namn, titel osv. Resurser visas som underordnade enheter till mappar och undermappar.
 
 >[!NOTE]
 >
->Beroende på resurstypen kan listan med underordnade enheter redan innehålla den fullständiga uppsättningen egenskaper som definierar respektive underordnade enhet. Alternativt kan bara en reducerad uppsättning egenskaper visas för en enhet i den här listan över underordnade enheter.
+>Beroende på resurstypen för de underordnade resurserna och mapparna kan listan med underordnade enheter redan innehålla den fullständiga uppsättningen egenskaper som definierar respektive underordnade enhet. Alternativt kan bara en reducerad uppsättning egenskaper visas för en enhet i den här listan över underordnade enheter.
 
 ### Assets {#assets}
 
-Om en resurs begärs returneras dess metadata. som titel, namn och annan information som definieras i respektive resursschema.
+Om en resurs begärs returneras dess metadata. som titel, namn och annan information som definieras av respektive resursschema.
 
-Den binära informationen för en resurs visas som en SIREN-länk av typen `content` (kallas även `rel attribute`).
+Binära data för en resurs visas som en SIREN-länk av typen `content`.
 
 Resurser kan ha flera renderingar. Dessa visas vanligtvis som underordnade enheter, ett undantag är en miniatyrrendering som visas som en länk av typen `thumbnail` ( `rel="thumbnail"`).
 
@@ -217,7 +232,7 @@ Innehållsfragment:
 
 För närvarande visas inte modellerna som definierar strukturen för ett innehållsfragment via ett HTTP-API. Därför måste *konsumenten* känna till modellen för ett fragment (åtminstone ett minimum), även om den mesta informationen kan härledas från nyttolasten. som datatyper, osv. är en del av definitionen.
 
-Om du vill skapa ett nytt innehållsfragment måste sökvägen (intern databas) anges.
+Om du vill skapa ett nytt innehållsfragment måste modellens (interna databas) sökväg anges.
 
 #### Associerat innehåll {#associated-content}
 
@@ -227,15 +242,16 @@ Associerat innehåll visas för närvarande inte.
 
 Användningen kan variera beroende på om du använder en AEM författare eller publiceringsmiljö, tillsammans med ditt specifika användningsexempel.
 
-* Skapandet är strikt bundet till en författarinstans ([och det finns för närvarande inget sätt att replikera ett fragment för publicering med denna API](/help/assets/assets-api-content-fragments.md#limitations)).
+* Vi rekommenderar att skapandet binds till en författarinstans ([och att det för närvarande inte finns något sätt att replikera ett fragment för publicering med denna API](/help/assets/assets-api-content-fragments.md#limitations)).
 * Leverans är möjlig från båda, eftersom AEM endast skickar begärt innehåll i JSON-format.
 
    * Lagring och leverans från en AEM författarinstans bör räcka för program som ligger bakom brandväggen och mediabibliotek.
+
    * För direktwebbleverans rekommenderas en publiceringsinstans AEM.
 
 >[!CAUTION]
 >
->Dispatcher-konfigurationen på AEM molninstanser kan blockera åtkomsten till `/api`.
+>Dispatcher-konfigurationen på AEM instanser kan blockera åtkomst till `/api`.
 
 >[!NOTE]
 >
@@ -249,7 +265,7 @@ Användning sker via:
 
 Till exempel:
 
-`https://localhost:4502/api/assets/we-retail/en/experiences/arctic-surfing-in-lofoten.json`
+`http://<host>/api/assets/wknd/en/adventures/cycling-tuscany.json`
 
 Svaret är serialiserat JSON med innehållet strukturerat som i innehållsfragmentet. Referenser levereras som referens-URL:er.
 
@@ -274,7 +290,7 @@ Användning sker via
 
 Brödtexten måste innehålla en JSON-representation av vad som ska uppdateras för det angivna innehållsfragmentet.
 
-Detta kan helt enkelt vara titeln eller beskrivningen av ett innehållsfragment, ett enskilt element eller alla elementvärden och/eller metadata. Det är också obligatoriskt att ange en giltig `cq:model`-egenskap för uppdateringar.
+Detta kan helt enkelt vara titeln eller beskrivningen av ett innehållsfragment, ett enskilt element eller alla elementvärden och/eller metadata.
 
 ### Ta bort {#delete}
 
@@ -286,55 +302,44 @@ Användning sker via:
 
 Det finns några begränsningar:
 
-* **Variationer kan inte skrivas och uppdateras.** Om dessa variationer läggs till i en nyttolast (t.ex. för uppdateringar) kommer de att ignoreras. Variationen hanteras dock via leverans ( `GET`).
-
 * **Modeller för innehållsfragment stöds** inte för närvarande: kan inte läsas eller skapas. För att kunna skapa ett nytt, eller uppdatera ett befintligt, innehållsfragment, måste utvecklarna veta rätt sökväg till innehållsfragmentmodellen. För närvarande är det enda sättet att få en översikt över dessa genom administrationsgränssnittet.
-* **Referenser ignoreras**. För närvarande finns det inga kontroller för om ett befintligt innehållsfragment refereras. Om du t.ex. tar bort ett innehållsfragment kan det leda till problem på en sida som innehåller en referens.
+* **Referenser ignoreras**. För närvarande finns det inga kontroller för om ett befintligt innehållsfragment refereras. Om du t.ex. tar bort ett innehållsfragment kan det leda till problem på en sida som innehåller en referens till det borttagna innehållsfragmentet.
+* **JSON-** datatypREST API-utdata för  *JSON-* datatypen är för närvarande  *strängbaserade utdata*.
 
 ## Statuskoder och felmeddelanden {#status-codes-and-error-messages}
 
 Följande statuskoder kan ses under de relevanta omständigheterna:
 
-* **200 (OK)**
-
-   Returneras när:
+* **200** (OK) returnerades när:
 
    * begära ett innehållsfragment via `GET`
-
    * uppdaterar ett innehållsfragment via `PUT`
 
-* **201 (skapad)**
-
-   Returneras när:
+* **201** (Skapad) returnerades:
 
    * har skapat ett innehållsfragment via `POST`
 
-* **404 (Hittades inte)**
-
-   Returneras när:
+* **404** (Hittades inte) returnerades när:
 
    * det begärda innehållsfragmentet inte finns
 
-* **500 (Internt serverfel)**
+* **500** (Internt serverfel)
 
    >[!NOTE]
    >
    >Detta fel returneras:
    >
-   >
-   >
-   >    * när ett fel som inte kan identifieras med en viss kod har inträffat
-   >    * när den angivna nyttolasten inte var giltig
+   >* när ett fel som inte kan identifieras med en viss kod har inträffat
+   >* när den angivna nyttolasten inte var giltig
 
 
    I följande exempel visas vanliga scenarier när den här felstatusen returneras, tillsammans med felmeddelandet (monospace) som genereras:
 
    * Den överordnade mappen finns inte (när du skapar ett innehållsfragment via `POST`)
-   * Ingen innehållsfragmentmodell har angetts (null-värde), resursen är null (eventuellt ett behörighetsproblem) eller resursen är ingen giltig fragmentmall:
+   * Ingen innehållsfragmentmodell har angetts (cq:model saknas), kan inte läsas (på grund av en ogiltig sökväg eller ett behörighetsproblem) eller så finns det ingen giltig fragmentmodell:
 
       * `No content fragment model specified`
       * `Cannot create a resource of given model '/foo/bar/qux'`
-      * `Cannot adapt the resource '/foo/bar/qux' to a content fragment template`
    * Det gick inte att skapa innehållsfragmentet (eventuellt ett behörighetsproblem):
 
       * `Could not create content fragment`

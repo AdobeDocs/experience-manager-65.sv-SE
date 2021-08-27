@@ -6,10 +6,10 @@ audience: end-user
 user-guide-title: Resurshandbok
 breadcrumb-title: Resurshandbok
 user-guide-description: Skapa, hantera, bearbeta och distribuera digitalt material.
-source-git-commit: 363e5159d290ecfbf4338f6b9793e11b613389a5
+source-git-commit: 85736791b7a8f518b57180b0139d6a76ebf1c6dc
 workflow-type: tm+mt
-source-wordcount: '590'
-ht-degree: 16%
+source-wordcount: '629'
+ht-degree: 15%
 
 ---
 
@@ -91,6 +91,9 @@ ht-degree: 16%
    + [Utöka resursredigeraren](asseteditorx.md)
    + [[!DNL Assets] HTTP-API](mac-api-assets.md)
    + [Stöd för innehållsfragment i [!DNL Assets] HTTP API](assets-api-content-fragments.md)
+   + [GraphQL API för innehållsfragment](content-fragments/graphql-api-content-fragments.md)
+   + [Autentisering för fjärrGraphQL-frågor för innehållsfragment](content-fragments/graphql-authentication-content-fragments.md)
+   + [GraphQL API med innehållsfragment - exempelinnehåll och frågor](/help/assets/content-fragments/content-fragments-graphql-samples.md)
    + [[!DNL Assets] proxyutveckling](proxy.md)
 + Administrera resurser {#administer}
    + [Filformat som stöds](assets-formats.md)
@@ -130,15 +133,19 @@ ht-degree: 16%
    + [Publicera resurser till [!DNL Brand Portal]](brand-portal-publish-assets.md)
    + [Publicera mappar till [!DNL Brand Portal]](brand-portal-publish-folder.md)
    + [Publicera samlingar till [!DNL Brand Portal]](brand-portal-publish-collection.md)
-+ Innehållsfragment {#fragments}
++ Innehållsfragment {#content-fragments}
    + [Arbeta med innehållsfragment](content-fragments/content-fragments.md)
-   + [Hantera innehållsfragment](content-fragments/content-fragments-managing.md)
+   + [Headless Delivery with Content Fragments and GraphQL](content-fragments/content-fragments-graphql.md)
+   + [Aktivera funktionen för innehållsfragment för instansen](content-fragments/content-fragments-configuration-browser.md)
    + [Modeller för innehållsfragment](content-fragments/content-fragments-models.md)
+   + [Hantera innehållsfragment](content-fragments/content-fragments-managing.md)
    + [Variationer – redigera innehållsfragment](content-fragments/content-fragments-variations.md)
    + [Innehållsfragment med associerat innehåll](content-fragments/content-fragments-assoc-content.md)
    + [Metadata – fragmentegenskaper](content-fragments/content-fragments-metadata.md)
    + [Innehållsfragment – ta bort överväganden](content-fragments/content-fragments-delete.md)
-   + [Content Fragments - Markdown](content-fragments/content-fragments-markdown.md)
+   + [Markdown](content-fragments/content-fragments-markdown.md)
+   + [Strukturträd](/help/assets/content-fragments/content-fragments-structure-tree.md)
+   + [Förhandsgranska - JSON-representation](/help/assets/content-fragments/content-fragments-json-preview.md)
    + [Skapa översättningsprojekt för innehållsfragment](creating-translation-projects-for-content-fragments.md)
 + Hantera resurser {#managing}
    + [Hantera digitala resurser](manage-assets.md)
