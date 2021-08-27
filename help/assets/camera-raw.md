@@ -5,9 +5,9 @@ contentOwner: AG
 role: Admin
 feature: Developer Tools
 exl-id: 7159a908-4c36-42b4-bbb4-d7fb1be4ee1b
-source-git-commit: 73e53f516d8e10b548f913db079c7e9812deb907
+source-git-commit: 9e1eea90945bb77e83e15d25708e47f2f3009fd8
 workflow-type: tm+mt
-source-wordcount: '332'
+source-wordcount: '331'
 ht-degree: 2%
 
 ---
@@ -22,7 +22,7 @@ Du kan aktivera [!DNL Adobe Camera Raw]-stödet för att bearbeta råfilsformat,
 
 Gör så här för att aktivera stöd för [!DNL Camera Raw] i [!DNL Experience Manager Assets]:
 
-1. Hämta det Camera Raw [paketet](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg) från [!DNL Software Distribution].
+1. Hämta [[!DNL Camera Raw] paketet](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/product/assets/aem-assets-cameraraw-pkg-1.4.8.zip) från [!DNL Software Distribution].
 1. Öppna `https://[aem_server]:[port]/workflow`. Öppna arbetsflödet för **[!UICONTROL DAM Update Asset]**.
 1. Redigera **[!UICONTROL Process Thumbnails]**-steget.
 1. Ange följande konfiguration på fliken **[!UICONTROL Thumbnails]**:
