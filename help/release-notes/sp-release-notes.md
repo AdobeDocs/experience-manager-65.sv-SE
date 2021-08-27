@@ -4,7 +4,7 @@ description: Versionsinformation som är specifik för  [!DNL Adobe Experience M
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: 861f5f4ae87da106bc42895e03bc42c0b17bd9fc
+source-git-commit: 9c262f57b3c3b7a1d2deaba78d13d02b74c5208d
 workflow-type: tm+mt
 source-wordcount: '3525'
 ht-degree: 0%
@@ -263,7 +263,7 @@ Need to verify with Engineering, the status is currently showing as Resolved
 * Ändrade sidor uppdateras men motsvarande länkade produkter uppdateras inte vid kataloglansering (CQ-4321409, NPR-36422).
 * Arbetsflödena **[!UICONTROL Publish later]** och **[!UICONTROL Unpublish later]** fungerar inte (CQ-4327679).
 
-Mer information om säkerhetsuppdateringar finns på [[!DNL Experience Manager] sidan Säkerhetsbulletiner](https://helpx.adobe.com/security/products/experience-manager.html).
+Information om säkerhetsuppdateringar finns på [[!DNL Experience Manager] sidan Säkerhetsbulletiner](https://helpx.adobe.com/security/products/experience-manager.html).
 
 ## Installera 6.5.10.0 {#install}
 
@@ -359,7 +359,7 @@ Om du vill använda UberJar i ett Maven-projekt läser du [hur du använder Uber
 <dependency>
      <groupId>com.adobe.aem</groupId>
      <artifactId>uber-jar</artifactId>
-     <version>6.5.10.0</version>
+     <version>6.5.10</version>
      <scope>provided</scope>
 </dependency>
 ```
@@ -376,7 +376,7 @@ Granska om du använder en funktion eller en funktion i en distribution. Planera
 
 | Yta | Funktion | Ersättning |
 |---|---|---|
-| Integreringar | Skärmen **[!UICONTROL AEM Cloud Services Opt-In]** är föråldrad eftersom integreringen [!DNL Experience Manager] och [!DNL Adobe Target] har uppdaterats i Experience Manager 6.5. Integreringen stöder Adobe Target Standard API. API:t använder autentisering via Adobe IMS och [!DNL Adobe I/O] och stöder den växande rollen hos Adobe Launch till instrumentets [!DNL Experience Manager]-sidor för analys och personalisering. Anmälningsguiden är inte funktionellt relevant. | Konfigurera systemanslutningar, Adobe IMS-autentisering och [!DNL Adobe I/O]-integreringar via respektive [!DNL Experience Manager]-molntjänster. |
+| Integreringar | Skärmen **[!UICONTROL AEM Cloud Services Opt-In]** är föråldrad eftersom integreringen [!DNL Experience Manager] och [!DNL Adobe Target] har uppdaterats i Experience Manager 6.5. Integreringen stöder Adobe Target Standard API. API:t använder autentisering via Adobe IMS och [!DNL Adobe I/O] och stöder den växande rollen hos Adobe Launch till instrumentets [!DNL Experience Manager]-sidor för analys och personalisering. Anmälningsguiden är funktionellt irrelevant. | Konfigurera systemanslutningar, Adobe IMS-autentisering och [!DNL Adobe I/O]-integreringar via respektive [!DNL Experience Manager]-molntjänster. |
 | Anslutningar | Adobe JCR Connector för Microsoft® SharePoint 2010 och Microsoft® SharePoint 2013 är föråldrad för Experience Manager 6.5. | Ej tillämpligt |
 
 ## Kända fel {#known-issues}
