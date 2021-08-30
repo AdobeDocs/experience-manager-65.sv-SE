@@ -3,11 +3,10 @@ title: Generera renderingar endast för placering för Adobe InDesign
 description: Generera FPO-återgivningar av nya och befintliga resurser med hjälp av arbetsflödet Experience Manager Assets och ImageMagick.
 contentOwner: Vishabh Gupta
 role: Admin
-feature: Återgivningar
-exl-id: null
-source-git-commit: 1e8b5ab66668215e0eeed676b42f533d4e210e1c
+feature: Renditions
+source-git-commit: 08de462ead66cfc8f0cadbd1070bfa12f7c0d3d6
 workflow-type: tm+mt
-source-wordcount: '979'
+source-wordcount: '978'
 ht-degree: 0%
 
 ---
