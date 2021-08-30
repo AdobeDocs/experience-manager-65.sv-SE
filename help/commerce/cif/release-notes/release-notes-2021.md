@@ -2,9 +2,9 @@
 title: AEM Content and Commerce Release Notes 2021
 description: AEM Content and Commerce Release Notes 2021
 exl-id: ec47c5f8-d4dd-469f-94df-5ee28f25d696
-source-git-commit: d1e2a2b11bd4eaece80a2538ddc34ada59e63578
+source-git-commit: b6703f519295eef728d5504360d99de69438064c
 workflow-type: tm+mt
-source-wordcount: '867'
+source-wordcount: '989'
 ht-degree: 7%
 
 ---
@@ -29,12 +29,38 @@ Den gamla AEM CIF Connector försätts i underhållsläge och ska inte användas
 | CIF-kärnkomponenter | [Systemkrav](https://github.com/adobe/aem-core-cif-components/blob/master/VERSIONS.md) |
 | AEM Project Archetype | [Systemkrav](https://github.com/adobe/aem-project-archetype/blob/master/VERSIONS.md) |
 
+## Releasedatum: Augusti 2021
+
+| Komponent | Version | Information |
+|:-------|:-----:|---------------------:|
+| CIF-tillägg | 2021.08.20 | [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.08.20.zip) |
+| CIF-kärnkomponenter | 2.1.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.1.0) |
+| CIF Venias referenswebbplats | 2021.08.27 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2021.08.27) |
+
+### Nyheter {#what-is-new-august}
+
+* Nytt användargränssnitt för kategoriväljare för förbättrad användarupplevelse, ökad effektivitet och bättre stöd för komplexa produktkataloger
+
+   ![Ny kategoriväljare](/help/assets/CIF/category-picker.png)
+
+* Bättre stöd för A11Y för CIF Core-komponenter
+
+### Felkorrigeringar {#bug-fixes-august}
+
+* Det går inte att stänga kategorifilterdragspelet när det har öppnats
+
+* Egenskapen Call to action text bruten i produktsuddgummi
+
+* CIF JS-fel under AEM CS-driftsättning
+
+* Korrigera åtkomst till råprodukt för mappade produktlisteobjekt
+
 ## Releasedatum: Juli 2021
 
 | Komponent | Version | Information |
 |:-------|:-----:|---------------------:|
 | CIF-tillägg | 2021.07.21 | [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.07.21.zip) |
-| CIF-kärnkomponenter | 1.13.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-1.13.0) |
+| CIF-kärnkomponenter | 2.0.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.0.0) |
 | CIF Venias referenswebbplats | 2021.07.22 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2021.07.22) |
 
 ### Nyheter {#what-is-new-july}
