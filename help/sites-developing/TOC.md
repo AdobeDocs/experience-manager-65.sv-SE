@@ -6,11 +6,11 @@ audience: end-user
 user-guide-title: AEM 6.5 Developing User Guide
 breadcrumb-title: Utvecklingshandbok
 user-guide-description: Den här guiden beskriver hur du skapar AEM.
-feature: Utveckling
+feature: Developing
 role: Developer
-source-git-commit: 5536ee27ad51356c2dcd0f0f36b91025bf1d228c
+source-git-commit: 1eb2ef06ed0541026ff3ba436dfab0d261af7356
 workflow-type: tm+mt
-source-wordcount: '910'
+source-wordcount: '909'
 ht-degree: 6%
 
 ---
@@ -119,7 +119,7 @@ ht-degree: 6%
       + [Sammansatta komponenter i SPA](spa-composite-component.md)
       + [SPA referensmaterial](spa-reference-materials.md)
    + [HTTP-API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/mac-api-assets.html)
-   + [Innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-65/assets/fragments/content-fragments.html)
+   + [Innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments.html)
    + [Experience Fragments](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/experience-fragments.html)
    + [Förstå innehållsfragment och innehållstjänster i AEM](https://helpx.adobe.com/experience-manager/kt/sites/using/content-fragments-content-services-feature-video-understand.html)
 + Utvecklingsverktyg{#devtools}
