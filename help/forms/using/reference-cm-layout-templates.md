@@ -1,27 +1,26 @@
 ---
 title: Mallar för referensbrev
-seo-title: Mallar för referensbrev
+seo-title: Reference letter templates
 description: 'AEM Forms innehåller layoutmallar för Correspondence Management-brev som du kan använda för att snabbt skapa brev. '
-seo-description: 'AEM Forms innehåller layoutmallar för Correspondence Management-brev som du kan använda för att snabbt skapa brev. '
+seo-description: AEM Forms provides Correspondence Management letter layout templates that you can use to create letters quickly.
 uuid: 3b2312d9-daa0-435b-976f-4969b54c5056
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 content-type: reference
 topic-tags: correspondence-management
 discoiquuid: afeb9f4d-3feb-4a0e-8884-e3ec1309b33b
-translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+exl-id: 40d127b5-1ce6-41fb-ac4c-2bf7ae79da82
+source-git-commit: 1def8ff7bc90e2ab82ce8b50277a97da9709c78c
 workflow-type: tm+mt
-source-wordcount: '496'
+source-wordcount: '461'
 ht-degree: 0%
 
 ---
 
-
-# Referensbokstavsmallar {#reference-letter-templates}
+# Mallar för referensbrev {#reference-letter-templates}
 
 I Correspondence Management innehåller en brevmall typiska formulärfält, layoutfunktioner som sidhuvud och sidfot samt tomma målområden för innehållsplacering.
 
-Correspondence Management tillhandahåller brevmallar i AEM Forms-paketet [AEM-FORMS-REFERENCE-LAYOUT-TEMPLATES](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/fd/AEM-FORMS-6.3-REFERENCE-LAYOUT-TEMPLATES). Information om hur du installerar ett paket finns i [Arbeta med paket](/help/sites-administering/package-manager.md). Du kan anpassa mallarna i Designer efter företagets grafiska profil och behov. Paketet innehåller följande mallar:
+Correspondence Management tillhandahåller brevmallar i [AEM Forms-tilläggspaketet](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en). Du kan anpassa mallarna i Designer efter företagets grafiska profil och behov. Paketet innehåller följande mallar:
 
 * Klassisk
 * Klassisk enkel
@@ -78,7 +77,7 @@ Mallen Balanced Right har företagslogotypen till vänster och ger utrymme för 
 
 PDF-förhandsgranskning av ett brev som skapats med mallen för balanserat höger
 
-## Visuell vänster {#visual-left}
+## Visual Left {#visual-left}
 
 Mallen Visual Left har ett sidohuvud till vänster på sidan med företagets logotyp placerad över sidhuvudet. Mallen Visual Left har ett ämnesfält men ingen sidfot.
 
@@ -101,4 +100,3 @@ Mallen Visual Top - Classic har en rubrik ovanför sidan med företagslogotypen.
 ![visualtopclassic](assets/visualtopclassic.png)
 
 PDF-förhandsgranskning av ett brev som skapats med mallen Visual Top - Classic
-
