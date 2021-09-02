@@ -1,8 +1,8 @@
 ---
 title: Skapa dokumentutdataströmmar
-seo-title: Skapa dokumentutdataströmmar
+seo-title: Creating Document Output Streams
 description: Använd utdatatjänsten för att konvertera dokument som PDF (inklusive PDF/A-dokument), PostScript, Printer Control Language (PCL) och Zebra - ZPL, Intermec - IPL, Datamax - DPL och TecToshiba - TPCL-etikettformat.
-seo-description: Använd utdatatjänsten för att konvertera dokument som PDF (inklusive PDF/A-dokument), PostScript, Printer Control Language (PCL) och Zebra - ZPL, Intermec - IPL, Datamax - DPL och TecToshiba - TPCL-etikettformat.
+seo-description: Use the Output service to convert documents as PDF (including PDF/A documents), PostScript, Printer Control Language (PCL), and Zebra - ZPL, Intermec - IPL, Datamax - DPL, and TecToshiba - TPCL label formats.
 uuid: 80c28efa-35ce-4073-9ca6-2d93bcd67fdd
 contentOwner: admin
 content-type: reference
@@ -10,16 +10,15 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: de527d50-991b-4ca3-a8ac-44d5cab988e9
 role: Developer
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: a521bfac-f417-4002-9c5c-8d7794d3eec7
+source-git-commit: 74882ccf78a62d543f1598f12ee009f9922c18a4
 workflow-type: tm+mt
-source-wordcount: '19045'
+source-wordcount: '19016'
 ht-degree: 0%
 
 ---
 
-
-# Skapar dokumentutdataströmmar {#creating-document-output-streams}
+# Skapa dokumentutdataströmmar  {#creating-document-output-streams}
 
 **Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
 
@@ -74,7 +73,7 @@ Du kan utföra följande uppgifter med hjälp av utdatatjänsten:
 >
 >Mer information om utdatatjänsten finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
-## Skapar PDF-dokument {#creating-pdf-documents}
+## Skapa PDF-dokument {#creating-pdf-documents}
 
 Du kan använda utdatatjänsten för att skapa ett PDF-dokument som är baserat på en formulärdesign och XML-formulärdata som du anger. Det PDF-dokument som skapas av Output-tjänsten är inte ett interaktivt PDF-dokument. en användare inte kan ange eller ändra formulärdata.
 
@@ -292,7 +291,7 @@ Skapa ett PDF-dokument med hjälp av utdata-API (Java):
 
 [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### Skapa ett PDF-dokument med webbtjänstens API {#create-a-pdf-document-using-the-web-service-api}
+### Skapa ett PDF-dokument med hjälp av webbtjänstens API {#create-a-pdf-document-using-the-web-service-api}
 
 Skapa ett PDF-dokument med hjälp av Output API (webbtjänsten):
 
@@ -374,17 +373,17 @@ Skapa ett PDF-dokument med hjälp av Output API (webbtjänsten):
 
    Se även
 
-   [Sammanfattning av steg](creating-document-output-streams.md#summary-of-steps)
+[Sammanfattning av steg](creating-document-output-streams.md#summary-of-steps)
 
-   [Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-   [Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
    >[!NOTE]
    >
    >`OutputServiceService`-objektets `generateOutput`-metod är föråldrad.
 
-## Skapar PDF/A-dokument {#creating-pdf-a-documents}
+## Skapa PDF/A-dokument {#creating-pdf-a-documents}
 
 Du kan använda utdatatjänsten för att skapa ett PDF/A-dokument. Eftersom PDF/A är ett arkiveringsformat för långvarig lagring av dokumentets innehåll, bäddas alla teckensnitt in och filen är okomprimerad. Därför är ett PDF/A-dokument vanligtvis större än ett vanligt PDF-dokument. Dessutom innehåller ett PDF/A-dokument inte ljud- och videoinnehåll. Precis som med andra Output Service-uppgifter tillhandahåller du både en formulärdesign och data som ska sammanfogas med en formulärdesign för att skapa ett PDF/A-dokument.
 
@@ -402,11 +401,11 @@ När ett PDF/A-dokument öppnas i Acrobat visas ett meddelande som bekräftar at
 
 >[!NOTE]
 >
->AIIM-webbplatsen har ett avsnitt med vanliga frågor om PDF/A som du kan få åtkomst till på [https://www.aiim.org/documents/standards/19005-1_FAQ.pdf](https://www.aiim.org/documents/standards/19005-1_FAQ.pdf).
+>AIIM-webbplatsen har ett avsnitt med vanliga frågor om PDF/A som du kan få åtkomst till på [https://www.loc.gov/preservation/digital/formats/fdd/fdd000125.shtml](https://www.loc.gov/preservation/digital/formats/fdd/fdd000125.shtml).
 
 >[!NOTE]
 >
->Mer information om utdatatjänsten finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om utdatatjänsten finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_65).
 
 ### Sammanfattning av steg {#summary_of_steps-1}
 
@@ -631,7 +630,7 @@ Skapa ett PDF/A-dokument med hjälp av Output API (webbtjänsten):
 
 [Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## Skickar dokument i innehållstjänster (borttaget) till utdatatjänsten {#passing-documents-located-in-content-services-deprecated-to-the-output-service}
+## Skicka dokument som finns i innehållstjänster (borttagna) till utdatatjänsten {#passing-documents-located-in-content-services-deprecated-to-the-output-service}
 
 Output-tjänsten återger ett icke-interaktivt PDF-formulär som är baserat på en formulärdesign som vanligtvis sparas som en XDP-fil och skapas i Designer. Du kan skicka ett `com.adobe.idp.Document`-objekt som innehåller formulärdesignen till utdatatjänsten. Utdatatjänsten återger sedan formulärdesignen som finns i `com.adobe.idp.Document`-objektet.
 
@@ -1145,7 +1144,7 @@ Skapa ett PDF-dokument baserat på fragment med hjälp av API:t för utdatatjän
 
 [Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-## Skriver ut till filer {#printing-to-files}
+## Skriva ut till filer {#printing-to-files}
 
 Du kan använda utdatatjänsten för att skriva ut strömmar som PostScript, Printer Control Language (PCL) eller följande etikettformat till en fil:
 
@@ -1282,7 +1281,7 @@ Skriva ut till en fil med hjälp av utdata-API (Java):
 
 [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-### Skriv ut till filer med webbtjänstens API {#print-to-files-using-the-web-service-api}
+### Skriva ut till filer med webbtjänstens API {#print-to-files-using-the-web-service-api}
 
 Skriva ut till en fil med hjälp av Output API (webbtjänsten):
 
@@ -1569,7 +1568,7 @@ Skicka en utskriftsström till en nätverksskrivare med hjälp av utdata-API (Ja
    >
    >Metoden `sendToPrinter` har lagts till i AEM Forms API i version 8.2.1.
 
-### Skicka en utskriftsström till en skrivare med webbtjänstens API {#send-a-print-stream-to-a-printer-using-the-web-service-api}
+### Skicka en utskriftsström till en skrivare med hjälp av webbtjänstens API {#send-a-print-stream-to-a-printer-using-the-web-service-api}
 
 Skicka en utskriftsström till en nätverksskrivare med hjälp av Output API (webbtjänsten):
 
@@ -1640,7 +1639,7 @@ Skicka en utskriftsström till en nätverksskrivare med hjälp av Output API (we
    >
    >Metoden `sendToPrinter` har lagts till i AEM Forms API i version 8.2.1.
 
-## Skapar flera utdatafiler {#creating-multiple-output-files}
+## Skapa flera utdatafiler {#creating-multiple-output-files}
 
 Utdatatjänsten kan skapa separata dokument för varje post i en XML-datakälla eller en enda fil som innehåller alla poster (den här funktionen är standard). Anta till exempel att tio poster finns i en XML-datakälla och att du instruerar Output-tjänsten att skapa separata PDF-dokument (eller andra typer av utdata) för varje post med hjälp av API:t för utdatatjänsten. Resultatet blir att Output-tjänsten genererar tio PDF-dokument. (I stället för att skapa dokument kan du skicka flera utskriftsströmmar till en skrivare.)
 
@@ -1939,7 +1938,7 @@ Skapa flera PDF-filer med hjälp av Output API (webbtjänsten):
 
 [Anropa AEM Forms med SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## Skapar sökregler {#creating-search-rules}
+## Skapa sökregler {#creating-search-rules}
 
 Du kan skapa sökregler som resulterar i att Output-tjänsten undersöker indata och använder olika formulärdesigner baserade på datainnehållet för att generera utdata. Om texten *inteckning* till exempel finns i indata kan utdatatjänsten använda formulärdesignen Mortgage.xdp. Om texten *car* finns i indata kan Output-tjänsten använda en formulärdesign som sparas som AutomobleLoan.xdp. Även om utdatatjänsten kan generera olika utdatatyper förutsätter det här avsnittet att utdatatjänsten genererar en PDF-fil. I följande diagram visas hur Output-tjänsten genererar en PDF-fil genom att bearbeta en XML-datafil och använda en av många formulärdesigner.
 
@@ -2312,7 +2311,7 @@ Förenkla ett interaktivt PDF-dokument till ett icke-interaktivt PDF-dokument me
 
 [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### Förenkla ett PDF-dokument med webbtjänste-API:t {#flatten-a-pdf-document-using-the-web-service-api}
+### Förenkla ett PDF-dokument med hjälp av webbtjänstens API {#flatten-a-pdf-document-using-the-web-service-api}
 
 Förenkla ett interaktivt PDF-dokument till ett icke-interaktivt PDF-dokument med hjälp av Output API (webbtjänsten):
 
