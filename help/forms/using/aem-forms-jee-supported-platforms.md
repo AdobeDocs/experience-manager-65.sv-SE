@@ -11,7 +11,7 @@ discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: 0b5b545f796a5a36f7e7f160c11ebd64e5a3c2ce
+source-git-commit: 54ace42972b2d6c7b807dbb2c7a40c2542c0b7c0
 workflow-type: tm+mt
 source-wordcount: '3250'
 ht-degree: 0%
@@ -526,8 +526,8 @@ Följande delsystem i AEM Forms är inte [508](https://www.section508.gov/)-komp
 
 Ytterligare krav finns i:
 
-* [Systemkrav för en enda server-AEM Forms för JEE-distribution](https://www.adobe.com/go/learn_aemforms_sysreq_single_63)
-* [Systemkrav för klustrade AEM Forms vid JEE-driftsättning](https://www.adobe.com/go/learn_aemforms_sysreq_cluster_63)
+* [Systemkrav för en enda server-AEM Forms för JEE-distribution](https://www.adobe.com/go/learn_aemforms_sysreq_single_65)
+* [Systemkrav för klustrade AEM Forms vid JEE-driftsättning](https://www.adobe.com/go/learn_aemforms_sysreq_cluster_65)
 
 ## Klienter som stöds för AEM Forms i JEE {#supported-clients-for-aem-forms-on-jee}
 
