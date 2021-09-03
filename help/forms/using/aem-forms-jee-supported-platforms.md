@@ -11,9 +11,9 @@ discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: 2095159a76380f7d17abcea9965ed6f82da69c8c
+source-git-commit: 0b5b545f796a5a36f7e7f160c11ebd64e5a3c2ce
 workflow-type: tm+mt
-source-wordcount: '3248'
+source-wordcount: '3250'
 ht-degree: 0%
 
 ---
@@ -470,7 +470,7 @@ AEM Forms App har nu stöd för Apache Cordova. Följande plattformsspecifika ve
 >
 >Dessutom:
 >
->* PDF Generator kräver 32-bitarsversionen av [Acrobat 2017 version 17.011.30078](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html) för att kunna utföra konverteringen.
+>* PDF Generator kräver 32-bitarsversionen av [Acrobat 2017 version 17.011.30078 eller senare](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html) för att kunna utföra konverteringen.
 >* PDF Generator stöder endast 32-bitarsversionen av Microsoft Office Professional Plus och andra program som krävs för konvertering.
 >* PDF Generator stöder inte Microsoft Office 365.
 >* PDF Generator-konverteringar för OpenOffice stöds bara i Windows och Linux.
