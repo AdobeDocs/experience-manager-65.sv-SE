@@ -4,9 +4,9 @@ description: Versionsinformation som är specifik för  [!DNL Adobe Experience M
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: a3d52ecf9284ba22cac3739ba543e5dd5c855331
+source-git-commit: 2095159a76380f7d17abcea9965ed6f82da69c8c
 workflow-type: tm+mt
-source-wordcount: '4077'
+source-wordcount: '4117'
 ht-degree: 0%
 
 ---
@@ -272,8 +272,7 @@ Need to verify with Engineering, the status is currently showing as Resolved
 
 >[!NOTE]
 >
->* [!DNL Experience Manager Forms] släpper tilläggspaketen en vecka efter det schemalagda datumet för  [!DNL Experience Manager] Service Pack.
-
+>Service Pack gör att du kan köra [!DNL AEM Forms] på de senaste serveroperativsystemen, programservrarna och databaserna. Den innehåller även vissa funktioner som är tillgängliga på Cloud Servicen i en lokal miljö och innehåller korrigeringar för problem som rapporterats av kunden. [!DNL AEM Forms] i OSGi-Service Pack finns tillgängligt för hämtning och installation. [!DNL AEM Forms on JEE]  Service Pack finns tillgänglig den 9 september 2021.
 
 **Adaptiv Forms**
 
@@ -359,7 +358,7 @@ Need to verify with Engineering, the status is currently showing as Resolved
 * Ändrade sidor uppdateras men motsvarande länkade produkter uppdateras inte vid kataloglansering (CQ-4321409, NPR-36422).
 * Arbetsflödena **[!UICONTROL Publish later]** och **[!UICONTROL Unpublish later]** fungerar inte (CQ-4327679).
 
-Mer information om säkerhetsuppdateringar finns på [[!DNL Experience Manager] sidan Säkerhetsbulletiner](https://helpx.adobe.com/security/products/experience-manager.html).
+Information om säkerhetsuppdateringar finns på [[!DNL Experience Manager] sidan Säkerhetsbulletiner](https://helpx.adobe.com/security/products/experience-manager.html).
 
 ## Installera 6.5.10.0 {#install}
 
