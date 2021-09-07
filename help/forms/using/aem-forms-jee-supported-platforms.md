@@ -11,9 +11,9 @@ discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: 7d727f4e3e71fac241ed1409caf0fa19355354b9
+source-git-commit: f75c6898eee9bbd6cdf9ce5e21dacc7898b80938
 workflow-type: tm+mt
-source-wordcount: '3249'
+source-wordcount: '3471'
 ht-degree: 0%
 
 ---
@@ -185,7 +185,7 @@ Adobe Experience Manager Forms kräver att en Java Virtual Machine körs, vilket
    <td>R: Begränsat stöd</td>
   </tr>
   <tr>
-   <td>MySQL 5.7.19 </td>
+   <td>MySQL 5.7.34 </td>
    <td>-</td>
    <td>R: Begränsat stöd</td>
   </tr>  
@@ -277,14 +277,29 @@ Adobe Experience Manager Forms kräver att en Java Virtual Machine körs, vilket
    <th><p><strong> Plattform</strong></p> </th>
    <th><p><strong>Supportnivå</strong></p> </th>
    <th><p><strong>Patch-definitioner som stöds</strong></p> </th>
-  </tr>   
-  <tr>
-   <td>Microsoft Windows Server 2016 (64-bitars)</td>
+  </tr>
+   <tr>
+   <td>Microsoft Windows Server 2019 (64-bitars)</td>
    <td>S: Stöds</td>
    <td>Service Pack och viktiga uppdateringar</td>
-  </tr>  
+  </tr>
   <tr>
-   <td><p>Red Hat Enterprise Linux 7 (Kernel 3.x) (64-bitars)</td>
+   <td>Ubuntu 20.04</td>
+   <td>S: Stöds</td>
+   <td>Service Pack och viktiga uppdateringar</td>
+  </tr>
+  <tr>
+   <td>Microsoft Windows Server 2016 (64-bitars) (borttagen)</td>
+   <td>S: Stöds</td>
+   <td>Service Pack och viktiga uppdateringar</td>
+  </tr>
+  <tr>
+   <td><p>Red Hat Enterprise Linux 8 (Kernel 4.x) (64 bitar)</p> </td>
+   <td><p>S: Stöds</p> </td>
+   <td><p>Mindre releaser, kumulativa uppdateringar och viktiga uppdateringar</p> </td>
+  </tr>
+  <tr>
+   <td><p>Red Hat Enterprise Linux 7 (Kernel 3.x) (64-bitars) (borttaget)</td>
    <td><p>S: Stöds</p> </td>
    <td><p>Mindre releaser, kumulativa uppdateringar och viktiga uppdateringar</p> </td>
   </tr>
@@ -432,33 +447,57 @@ AEM Forms App har nu stöd för Apache Cordova. Följande plattformsspecifika ve
   <tr>
    <th><p><strong>Produkt</strong></p> </th>
    <th><p><strong>Format som stöds för konvertering till PDF</strong></p> </th>
-  </tr>  
+  </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2017 Classic </a> tracklatest version</td>
+   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2020 Classic </a> tracklatest version</td>
    <td>XPS, bildformat (BMP, GIF, JPEG, JPG, TIF, TIFF, PNG, JPF, JPX, JP2, J2K, J2C, JPC), HTML, HTM, DWG, DXF och DWF</td>
-  </tr> 
+  </tr>
   <tr>
-   <td>Microsoft® Office 2016</td>
+   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2017 classic </a> tracklatest version (utgått)</td>
+   <td>XPS, bildformat (BMP, GIF, JPEG, JPG, TIF, TIFF, PNG, JPF, JPX, JP2, J2K, J2C, JPC), HTML, HTM, DWG, DXF och DWF</td>
+  </tr>
+  <tr>
+   <td>Microsoft® Office 2019</td>
+   <td>DOC, DOCX, XLS, XLSX, PPT, PPTX, RTF och TXT</td>
+  </tr>
+  <tr>
+   <td>Microsoft® Office 2016 (inaktuellt)</td>
    <td>DOC, DOCX, XLS, XLSX, PPT, PPTX, RTF och TXT</td>
   </tr>
   <tr>
    <td>WordPerfect X7</td>
    <td>WP, WPD</td>
-  </tr>  
+  </tr>
   <tr>
-   <td>Microsoft® Office Visio 2016<br /> </td>
+   <td>Microsoft® Office Visio 2019<br /> </td>
    <td>VSD, VSDX</td>
-  </tr>  
+  </tr>
   <tr>
-   <td>Microsoft® Publisher 2016<br /> </td>
+   <td>Microsoft® Office Visio 2016 (inaktuellt)<br /> </td>
+   <td>VSD, VSDX</td>
+  </tr>
+  <tr>
+   <td>Microsoft® Publisher 2019<br /> </td>
    <td>PUB</td>
-  </tr>  
+  </tr>
   <tr>
-   <td>Microsoft® Project 2016<br /> </td>
+   <td>Microsoft® Publisher 2016 (utgått)<br /> </td>
+   <td>PUB</td>
+  </tr>
+  <tr>
+   <td>Microsoft® Project 2019<br /> </td>
    <td>MPP</td>
-  </tr>  
+  </tr>
   <tr>
-   <td>OpenOffice 4.1.2</td>
+   <td>Microsoft® Project 2016 (utgått)<br /> </td>
+   <td>MPP</td>
+  </tr>
+  <tr>
+   <td>OpenOffice 4.1.10</td>
+   <td>ODT, ODP, ODS, ODG, ODF, SXW, SXI, SXC, SXD, XLS, XLSX, DOC, DOCX, PPT, PPTX, bildformat (BMP, GIF, JPEG, JPG, TIF, TIFF, PNG, JPX, JP2, J2K, J2C, JPC), HTML, HTM, RTF och TXT</td>
+  </tr>
+  <tr>
+   <td>OpenOffice 4.1.2 (inaktuellt)</td>
    <td>ODT, ODP, ODS, ODG, ODF, SXW, SXI, SXC, SXD, XLS, XLSX, DOC, DOCX, PPT, PPTX, bildformat (BMP, GIF, JPEG, JPG, TIF, TIFF, PNG, JPX, JP2, J2K, J2C, JPC), HTML, HTM, RTF och TXT</td>
   </tr>  
  </tbody>
@@ -470,7 +509,7 @@ AEM Forms App har nu stöd för Apache Cordova. Följande plattformsspecifika ve
 >
 >Dessutom:
 >
->* PDF Generator kräver 32-bitarsversionen av [Acrobat 2017 version 17.011.30078 eller senare](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html) för att kunna utföra konverteringen.
+>* PDF Generator kräver 32-bitarsversionen av [Acrobat 2020 Classic track version 20.004.30006](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html) eller Acrobat 2017 version 17.011.30078 för att kunna utföra konverteringen.
 >* PDF Generator stöder endast 32-bitarsversionen av Microsoft Office Professional Plus och andra program som krävs för konvertering.
 >* PDF Generator stöder inte Microsoft Office 365.
 >* PDF Generator-konverteringar för OpenOffice stöds bara i Windows och Linux.
@@ -579,8 +618,12 @@ Ytterligare krav finns i:
    <th><p><strong>Acrobat och Adobe Reader (bas)</strong></p> </th>
    <th><p><strong>Patch-definitioner som stöds</strong></p> </th>
   </tr>
-    <tr>
-   <td>Acrobat 2017 (klassiskt spår)</td>
+  <tr>
+   <td>Acrobat 2020 (klassiskt spår)</td>
+   <td>Version 20.004.30006 eller senare<br /> </td>
+  </tr>
+  <tr>
+   <td>Acrobat 2017 (Classic-spår) (borttaget)</td>
    <td>Version 17.011.30078 eller senare<br /> </td>
   </tr>
 
@@ -743,9 +786,37 @@ Adobe förbehåller sig rätten att ändra de referensplattformar från tredje p
 
 Ytterligare information om patchar från tredje part finns också på Adobe Enterprise Support-webbplatsen för kunskapsdatabasartiklar om din produkt.
 
+## Plattformsuppdateringar {#platform-updates}
+
+Följande plattformar är markerade som borttagna i AEM Forms 6.5.10.0 den 7 september 2021:
+
+* Adobe Acrobat 2017 - [Core support för Adobe Acrobat 2017 upphör 6 juni 2022](https://helpx.adobe.com/support/programs/eol-matrix.html).
+
+* Microsoft Windows Server 2016 (64-bitars)
+
+* Red Hat Enterprise Linux 7 (Kernel 3.x) (64-bitars)
+
+* Microsoft® Office 2016
+
+* OpenOffice 4.1.2
+
+>[!NOTE]
+>
+>De plattformar som är markerade som [inaktuella har fortfarande stöd tills AEM Forms 6.5 Service Pack 15 (6.5.15.0) har släppts](https://helpx.adobe.com/support/programs/eol-matrix.html).
+
+
+
 ## Revisionshistorik {#revision-history}
 
 * 9 september 2020
    * Ändrad version av iOS för AEM Forms App som stöds till iOS 12. Den tidigare versionen var iOS 11.
 
+* 7 september 2021
+   * **Plattformsuppdateringar**:  [!DNL Adobe Experience Manager Forms] på JEE har lagt till stöd för följande plattformar:
+      * [!DNL Adobe Acrobat 2020]
+      * [!DNL Ubuntu 20.04]
+      * [!DNL Open Office 4.1.10]
+      * [!DNL Microsoft Office 2019]
+      * [!DNL Microsoft Windows Server 2019]
+      * [!DNL RHEL8]
 

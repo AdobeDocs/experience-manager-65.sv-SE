@@ -4,9 +4,9 @@ description: Versionsinformation som är specifik för  [!DNL Adobe Experience M
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: 2095159a76380f7d17abcea9965ed6f82da69c8c
+source-git-commit: f75c6898eee9bbd6cdf9ce5e21dacc7898b80938
 workflow-type: tm+mt
-source-wordcount: '4117'
+source-wordcount: '4264'
 ht-degree: 0%
 
 ---
@@ -64,17 +64,13 @@ De viktigaste funktionerna och förbättringarna i [!DNL Adobe Experience Manage
 
 * **Stöd för att använda det literala alternativet för att ange ett värde för en JSON-typvariabel**: Du kan använda det literala alternativet för att ange ett värde för en JSON-typvariabel i det angivna variabelsteget i ett AEM arbetsflöde. Med det literala alternativet kan du ange en JSON i form av en sträng.
 
-<!--
-
-* [Platform Updates](../forms/using/aem-forms-jee-supported-platforms.md): [!DNL Adobe Experience Manager Forms] on JEE has added support for the following platforms:
-  * [!DNL Adobe Acrobat 2020]
-  * [!DNL Ubuntu 20.04]
-  * [!DNL Open Office 4.1.10]
-  * [!DNL Microsoft Office 2019]
-  * [!DNL Microsoft Windows Server 2019]
-  * [!DNL RHEL8]
-
-  -->
+* [Plattformsuppdateringar](../forms/using/aem-forms-jee-supported-platforms.md):  [!DNL Adobe Experience Manager Forms] på JEE har lagt till stöd för följande plattformar:
+   * [!DNL Adobe Acrobat 2020]
+   * [!DNL Ubuntu 20.04]
+   * [!DNL Open Office 4.1.10]
+   * [!DNL Microsoft Office 2019]
+   * [!DNL Microsoft Windows Server 2019]
+   * [!DNL RHEL8]
 
 En lista över alla funktioner och förbättringar som introducerats i [!DNL Experience Manager] 6.5.10.0 finns i [vad som är nytt i [!DNL Adobe Experience Manager] 6.5 Service Pack 10](new-features-latest-service-pack.md).
 
@@ -270,17 +266,21 @@ Need to verify with Engineering, the status is currently showing as Resolved
 
 ### [!DNL Forms] {#forms-65100}
 
+
 >[!NOTE]
 >
->Service Pack gör att du kan köra [!DNL AEM Forms] på de senaste serveroperativsystemen, programservrarna och databaserna. Den innehåller även vissa funktioner som är tillgängliga på Cloud Servicen i en lokal miljö och innehåller korrigeringar för problem som rapporterats av kunden. [!DNL AEM Forms] i OSGi-Service Pack finns tillgängligt för hämtning och installation. [!DNL AEM Forms on JEE]  Service Pack finns tillgänglig den 9 september 2021.
+>* [!DNL Experience Manager Forms] släpper tilläggspaketen en vecka efter det schemalagda datumet för  [!DNL Experience Manager] Service Pack.
+
+
+[!DNL AEM Forms 6.5.10.0] innehåller följande felkorrigeringar:
+
+* När du installerar [!DNL AEM Forms 6.5] installeras följande tredjepartsbibliotek automatiskt (CQDOC-18373):
+   * [!DNL Microsoft Visual C++ 2008 Service Pack 1 (x86)]
+   * [!DNL Microsoft Visual C++ 2010 Service Pack 1 (x86)]
 
 **Adaptiv Forms**
 
-<!--
-
-* When the validations performed on the field values in an adaptive form are successful, [!DNL AEM Forms] fails to invoke the Form Data Model (CQ-4325491).
-
--->
+* Om valideringarna som utförs på fältvärdena i ett adaptivt formulär lyckas kan [!DNL AEM Forms] inte anropa formulärdatamodellen (CQ-4325491).
 
 * När du lägger till en språkordlista i ett översättningsprojekt och sedan öppnar projektet visas ett felmeddelande i [!DNL AEM Forms] (CQ-4324933):
 
@@ -315,26 +315,19 @@ Need to verify with Engineering, the status is currently showing as Resolved
 
 * När du markerar all text i en redigerare kan du inte ändra teckensnittstexten till Arial (NPR-36646).
 
-<!--
-
-* When you create a URL in an editor and preview the changes, a black background displays instead of the URL text (NPR-36640).
-
--->
+* När du skapar en URL i en redigerare och förhandsgranskar ändringarna visas en svart bakgrund i stället för URL-texten (NPR-36640).
 
 * När du kopierar och klistrar in text i en redigerare finns det problem med att ändra teckensnittet till Arial för punkter som är tillgängliga i dokumentet (NPR-36628).
 
 * Problem med indrag för punkter i textredigeraren (NPR-36513).
 
-<!--
 **Designer**
 
-* Screen Reader fails to read floating field data placed inside text label on the Master page or on Subform pages in a dynamic PDF (CQ-4321587).
-
--->
+* Skärmen Reader kan inte läsa flytande fältdata som placerats i textetiketten på den Överordnad sidan eller på delformulärssidor i en dynamisk PDF-fil (CQ-4321587).
 
 **Dokumenttjänster**
 
-* När du konverterar XDP-filer till PDF-filer och sedan sätter ihop den resulterande PDF-filen misslyckas PDF-generationen och följande felmeddelande visas (CQ-4328666):
+* När du konverterar XDP-filer till PDF-filer och sedan sätter ihop den resulterande PDF-filen misslyckas PDF-generationen och följande felmeddelande visas:
 
    ```TXT
    Caused by: com.adobe.fd.assembler.client.AssemblerException$ClientException: Document is in a disposed state!
@@ -428,21 +421,18 @@ Information om vilka plattformar som är certifierade för att fungera med den h
 >
 >Experience Manager 6.5.10.0 innehåller en ny version av [AEM Forms-kompatibilitetspaket](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html#aem-65-forms-releases). Om du använder en äldre version av AEM Forms Compatibility Package och uppdaterar till Experience Manager 6.5.10.0 installerar du den senaste versionen av paketet efter installationen av Forms Add-On Package.
 
-<!--
-
-### Install Adobe Experience Manager Forms on JEE {#install-aem-forms-jee-installer}
+### Installera Adobe Experience Manager Forms i JEE {#install-aem-forms-jee-installer}
 
 >[!NOTE]
 >
->Skip if you are not using AEM Forms on JEE. Fixes in Adobe Experience Manager Forms on JEE are delivered through a separate installer.
+>Hoppa över om du inte använder AEM Forms på JEE. Korrigeringar i Adobe Experience Manager Forms på JEE levereras via ett separat installationsprogram.
 
-For information about installing the cumulative installer for Experience Manager Forms on JEE and post-deployment configuration, see the [release notes](jee-patch-installer-65.md).
+Information om hur du installerar det kumulativa installationsprogrammet för Experience Manager Forms på JEE och konfigurationen efter distributionen finns i [versionsinformationen](jee-patch-installer-65.md).
 
 >[!NOTE]
 >
->After installing the cumulative installer for Experience Manager Forms on JEE, install the latest Forms add-on package, delete the Forms add-on package from the `crx-repository\install` folder, and restart the server.
+>När du har installerat det kumulativa installationsprogrammet för Experience Manager Forms på JEE installerar du det senaste Forms-tilläggspaketet, tar bort Forms-tilläggspaketet från mappen `crx-repository\install` och startar om servern.
 
--->
 
 ### UberJar {#uber-jar}
 
@@ -476,14 +466,7 @@ Granska om du använder en funktion eller en funktion i en distribution. Planera
 
 ## Kända fel {#known-issues}
 
-<!--
-
-* (For JBoss on Microsoft Windows only) To continue using the Create PDF service on [!DNL AEM Forms on JEE], download [omniORB_4.1.1_x86_win32_vc10.zip](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/omniORB_4.1.1_x86_win32_vc10.zip) from Software Distribution, extract and copy the folder available in the Zip file to the following location:
-`[AEM Forms Installation]\Adobe\Adobe_Experience_Manager_Forms\jboss\standalone\svcnative\CommonNatives\lib`
-
-* As [!DNL Microsoft Windows Server 2019] does not support [!DNL MySQL 5.7] and [!DNL JBoss EAP 7.1], [!DNL Microsoft Windows Server 2019] does not support turnkey installations for [!DNL AEM Forms 6.5.10.0].
-
--->
+* Eftersom [!DNL Microsoft Windows Server 2019] inte stöder [!DNL MySQL 5.7] och [!DNL JBoss EAP 7.1] stöder [!DNL Microsoft Windows Server 2019] inte körklara installationer för [!DNL AEM Forms 6.5.10.0].
 
 * Om du uppgraderar din [!DNL Experience Manager]-instans från version 6.5 till version 6.5.10.0 kan du visa `RRD4JReporter`-undantag i `error.log`-filen. Starta om instansen för att lösa problemet.
 
