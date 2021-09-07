@@ -3,11 +3,11 @@ title: Integrera [!DNL Assets] med [!DNL InDesign Server]
 description: Lär dig hur du integrerar [!DNL Adobe Experience Manager Assets] med [!DNL Adobe InDesign Server].
 contentOwner: AG
 role: Admin
-feature: Publicering
+feature: Publishing
 exl-id: 5ba020a3-c36c-402b-a11b-d6b0426b03bf
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: f74190692d718da6074affa87d283f326eca7faa
 workflow-type: tm+mt
-source-wordcount: '1533'
+source-wordcount: '1545'
 ht-degree: 1%
 
 ---
@@ -172,7 +172,9 @@ Om [!DNL InDesign Server] och [!DNL Experience Manager] finns på olika värdar 
 
 1. Gå till webbkonsolen på `https://[aem_server]:[port]/system/console/configMgr`.
 1. Leta reda på konfigurationen **[!UICONTROL Day CQ Link Externalizer]**. Klicka på **[!UICONTROL Edit]** för att öppna.
-1. Med inställningarna för länkutjämnaren kan du skapa absoluta URL:er för [!DNL Experience Manager]-distributionen och för [!DNL InDesign Server]. Använd fältet **[!UICONTROL Domains]** för att ange värdnamnet och kontextsökvägen för [!DNL Adobe InDesign Server]. Klicka på **Spara**.
+1. Med inställningarna för länkutjämnaren kan du skapa absoluta URL:er för [!DNL Experience Manager]-distributionen och för [!DNL InDesign Server]. Använd fältet **[!UICONTROL Domains]** för att ange värdnamnet för [!DNL Adobe InDesign Server]. Klicka på **Spara**.
+
+   När du skapar absoluta URL:er måste du använda värdnamnet `localhost` för lokala instanser, författare och publiceringsinstanser.
 
    ![Inställning för extern länkning](assets/link-externalizer-config.png)
 
