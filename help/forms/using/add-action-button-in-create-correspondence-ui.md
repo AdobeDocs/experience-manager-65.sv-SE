@@ -11,14 +11,14 @@ discoiquuid: 046e3314-b436-47ed-98be-43d85f576789
 docset: aem65
 feature: Correspondence Management
 exl-id: a582ba41-83cb-46f2-9de9-3752f6a7820a
-source-git-commit: 9f3ca2da0828ce5170622852220a1926df0d5150
+source-git-commit: ba2c753cfd041ccfcd6ba7a45648234290b99d25
 workflow-type: tm+mt
-source-wordcount: '1868'
+source-wordcount: '1881'
 ht-degree: 0%
 
 ---
 
-# Lägg till anpassad åtgärd/knapp i användargränssnittet Skapa korrespondens {#add-custom-action-button-in-create-correspondence-ui}
+# Lägga till en anpassad åtgärdsknapp i användargränssnittet för Skapa korrespondens {#add-custom-action-button-in-create-correspondence-ui}
 
 ## Översikt {#overview}
 
@@ -360,7 +360,7 @@ Den obligatoriska LiveCycle-processen som möjliggör e-posttjänstprocessen.
 >
 >Om du vill se vad den här processen gör eller skapa en egen liknande process behöver du Workbench.
 
-1. Logga in som administratör för LiveCycle Server-administratörer på `https:/[lc server]/:[lc port]/adminui`.
+1. Logga in som administratör för LiveCycle® Server-administratörer på `https:/[lc server]/:[lc port]/adminui`.
 
 1. Gå till **Hem > Tjänster > Program och tjänster > Programhantering**.
 
@@ -382,7 +382,7 @@ Den obligatoriska LiveCycle-processen som möjliggör e-posttjänstprocessen.
 
 #### Lägger till ServiceName i listan över tjänster i Tillåtelselista {#adding-servicename-to-the-allowlist-service-list}
 
-Ange de LiveCycle-tjänster som du vill få åtkomst till AEM på AEM server.
+På Experience Manager-servern anger du de LiveCycle-tjänster som du vill använda Experience Manager-servern.
 
 1. Logga in som administratör på `https:/[host]:'port'/system/console/configMgr`.
 
@@ -407,30 +407,30 @@ I det här fallet måste du konfigurera e-posttjänsten på LiveCycle-servern f�
 
 #### Konfigurera DSC-tjänsten {#configure-the-dsc-service}
 
-Om du vill använda Correspondence Management API hämtar du DSCSample.jar (som bifogas i det här dokumentet som en del av components.zip) och överför den till LiveCycle-servern. När filen DSCSample.jar har överförts till LiveCycle-servern använder AEM filen DSCSample.jar för att komma åt API:t renderLetter.
+Om du vill använda Correspondence Management API hämtar du DSCSample.jar (som bifogas i det här dokumentet som en del av components.zip) och överför den till LiveCycle-servern. När filen DSCSample.jar har överförts till LiveCycle-servern använder Experience Manager-servern filen DSCSample.jar för att komma åt API:t renderLetter.
 
 Mer information finns i [Ansluta AEM Forms till Adobe LiveCycle](/help/forms/using/aem-livecycle-connector.md).
 
-1. Uppdatera URL:en för AEM server i cmsa.properties i DSCSample.jar, som finns på följande plats:
+1. Uppdatera URL:en för Experience Manager-servern i cmsa.properties i DSCSample.jar, som finns på följande plats:
 
    DSCSample.jar\com\adobe\livecycle\cmsa.properties
 
 1. Ange följande parametrar i konfigurationsfilen:
 
    * **crx.serverUrl**=https:/host:port/[kontextsökväg]/[AEM URL]
-   * **crx.username**= AEM användarnamn
-   * **crx.password**= AEM lösenord
+   * **crx.username**= Experience Manager-användarnamn
+   * **crx.password**= Experience Manager-lösenord
    * **crx.appRoot**=/content/apps/cm
 
    >[!NOTE]
    >
    >Starta om LiveCycle Server varje gång du gör några ändringar på serversidan.
 
-   Filen DSCSample.jar använder API:t renderLetter. Mer information om API:t renderLetter finns i [Interface LetterRenderService](https://helpx.adobe.com/aem-forms/6-2/javadocs/com/adobe/icc/ddg/api/LetterRenderService.html).
+   Filen DSCSample.jar använder API:t renderLetter. Mer information om API:t renderLetter finns i [Interface LetterRenderService](https://www.adobe.io/experience-manager/reference-materials/6-5/forms/javadocs/index.html?com/adobe/icc/ddg/api/LetterRenderService.html).
 
 #### Importera DSC till LiveCyle {#import-dsc-to-livecyle}
 
-DSCSample.jar-filen använder API:t renderLetter för att återge bokstaven som PDF-byte från XML-data som C anger som indata. Mer information om renderLetter och andra API:er finns i [tjänsten Letter Render](https://helpx.adobe.com/aem-forms/6-2/javadocs/com/adobe/icc/ddg/api/LetterRenderService.html).
+DSCSample.jar-filen använder API:t renderLetter för att återge bokstaven som PDF-byte från XML-data som DSC anger som indata. Mer information om renderLetter och andra API:er finns i [tjänsten Letter Render](https://www.adobe.io/experience-manager/reference-materials/6-5/forms/javadocs/index.html?com/adobe/icc/ddg/api/LetterRenderService.html).
 
 1. Starta Workbench och logga in.
 1. Välj **Fönster > Visa vyer > Komponenter**. Vyn Komponenter läggs till i Workbench ES2.
