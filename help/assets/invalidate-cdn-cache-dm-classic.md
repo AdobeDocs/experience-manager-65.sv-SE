@@ -5,12 +5,12 @@ contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
-feature: CDN-cache,Dynamic Media Classic
+feature: CDN Cache,Dynamic Media Classic
 role: User, Admin
 exl-id: 7020343a-b556-4091-9717-93fcc55e623b
-source-git-commit: 4b8369de9e6a10b73115d53358ce98729d92ed44
+source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
 workflow-type: tm+mt
-source-wordcount: '700'
+source-wordcount: '693'
 ht-degree: 12%
 
 ---
@@ -31,7 +31,7 @@ Se även [Cacheöversikt i Dynamic Media Classic (Scene7)](https://helpx.adobe.c
 
 **Så här gör du CDN-cachen ogiltig med Dynamic Media Classic:**
 
-1. Öppna [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html?lang=en#system-requirements-dmc-app) och logga sedan in på ditt konto.
+1. Öppna [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html#system-requirements-dmc-app) och logga sedan in på ditt konto.
 
    Dina autentiseringsuppgifter och din inloggning tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kontaktar du teknisk support.
 

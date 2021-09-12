@@ -9,10 +9,10 @@ docset: aem65
 role: User, Admin
 mini-toc-levels: 3
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
-feature: Konfiguration,Scene7-läge
-source-git-commit: 6c042d2c95f18ae4a0d5fd57a048aa12761495b6
+feature: Configuration,Scene7 Mode
+source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
 workflow-type: tm+mt
-source-wordcount: '6509'
+source-wordcount: '6504'
 ht-degree: 3%
 
 ---
@@ -39,11 +39,11 @@ Med den nya arkitekturen ansvarar Experience Manager för de viktigaste källres
 >Följande funktionslista kräver att du använder det färdiga CDN som medföljer Adobe Experience Manager - Dynamic Media. Andra anpassade CDN stöds inte med dessa funktioner.
 >
 >* [Smart bildbehandling](/help/assets/imaging-faq.md)
-* [Cacheogiltigförklaring](/help/assets/invalidate-cdn-cache-dynamic-media.md)
-* [Hotlänksskydd](/help/assets/hotlink-protection.md)
-* [HTTP/2-leverans av innehåll](/help/assets/http2.md)
-* URL-omdirigering på CDN-nivå
-* Akamai ChinaCDN (för optimal leverans i Kina)
+>* [Cacheogiltigförklaring](/help/assets/invalidate-cdn-cache-dynamic-media.md)
+>* [Hotlänksskydd](/help/assets/hotlink-protection.md)
+>* [HTTP/2-leverans av innehåll](/help/assets/http2.md)
+>* URL-omdirigering på CDN-nivå
+>* Akamai ChinaCDN (för optimal leverans i Kina)
 
 
 ## Aktivera Dynamic Media i Scene7-läge {#enabling-dynamic-media-in-scene-mode}
@@ -51,7 +51,8 @@ Med den nya arkitekturen ansvarar Experience Manager för de viktigaste källres
 [Dynamic ](https://business.adobe.com/products/experience-manager/assets/dynamic-media.html) Mediais är inaktiverat som standard. Om du vill utnyttja Dynamic Media funktioner måste du aktivera dem.
 
 >[!WARNING]
-Dynamic Media - Scene7-läget är endast för *författarinstansen av Experience Manager*. Därför måste du konfigurera `runmode=dynamicmedia_scene7` på Experience Manager Author-instansen *inte* Experience Manager Publish-instansen.
+>
+>Dynamic Media - Scene7-läget är endast för *författarinstansen av Experience Manager*. Därför måste du konfigurera `runmode=dynamicmedia_scene7` på Experience Manager Author-instansen *inte* Experience Manager Publish-instansen.
 
 Om du vill aktivera Dynamic Media måste du starta Experience Manager med körningsläget `dynamicmedia_scene7` från kommandoraden genom att ange följande i ett terminalfönster (exempelporten som används är 4502):
 
@@ -64,7 +65,8 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 Uppgradering av Experience Manager Dynamic Media från 6.3 till 6.4 eller 6.5 innefattar nu möjligheten till driftsättning utan driftstopp. Om du vill migrera alla förinställningar och konfigurationer från `/etc` till `/conf` i CRXDE Lite ska du köra följande kommando.
 
 >[!NOTE]
-Om du kör Experience Manager-instansen i kompatibilitetsläge, d.v.s. har kompatibilitetspaketet installerat, behöver du inte köra dessa kommandon.
+>
+>Om du kör Experience Manager-instansen i kompatibilitetsläge, d.v.s. har kompatibilitetspaketet installerat, behöver du inte köra dessa kommandon.
 
 För alla uppgraderingar, antingen med eller utan kompatibilitetspaketet, kan du kopiera de förinställningar för visningsprogram som ursprungligen ingick i Dynamic Media genom att köra följande kommando för Linux®-kurva:
 
@@ -273,7 +275,7 @@ Bildserverskärmen anger standardinställningar för att leverera bilder. I grä
 * **[!UICONTROL Defaults for Catalog Fields]**- De här inställningarna gäller bildernas upplösning och standardtyp av miniatyrbilder.
 * **[!UICONTROL Color Management Attributes]** - De här inställningarna avgör vilka ICC-färgprofiler som används.
 * **[!UICONTROL Compatibility Attributes]** - Den här inställningen gör att inledande och avslutande stycken i textlager kan hanteras som de var i version 3.6 för bakåtkompatibilitet.
-* **[!UICONTROL Localization Support]** - Med de här inställningarna kan du hantera flera språkattribut. Här kan du också ange en sträng för språkområdeskarta så att du kan definiera vilka språk du vill ha stöd för de olika verktygstipsen i visningsprogram. Mer information om hur du konfigurerar **[lokaliseringsstöd]** finns i [Att tänka på när du konfigurerar lokalisering av resurser](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/publish-setup.html?lang=en#considerations-when-setting-up-localization-of-assets).
+* **[!UICONTROL Localization Support]** - Med de här inställningarna kan du hantera flera språkattribut. Här kan du också ange en sträng för språkområdeskarta så att du kan definiera vilka språk du vill ha stöd för de olika verktygstipsen i visningsprogram. Mer information om hur du konfigurerar **[lokaliseringsstöd]** finns i [Att tänka på när du konfigurerar lokalisering av resurser](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/publish-setup.html#considerations-when-setting-up-localization-of-assets).
 
 #### Konfigurera allmänna inställningar för program {#configuring-application-general-settings}
 
@@ -295,7 +297,6 @@ Välj alltid den här inställningen om du vill att den ska vara konsekvent med 
 
 >[!NOTE]
 Som standard visas 15 återgivningar när du väljer **[!UICONTROL Renditions]** och 15 visningsförinställningar när du väljer **[!UICONTROL Viewers]** i resursens detaljvy. Du kan öka den här gränsen. Se [Öka antalet bildförinställningar som visas](/help/assets/managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display) eller [Öka antalet visningsförinställningar som visas](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display).
-
 
 #### Konfigurera färghantering {#configuring-color-management}
 

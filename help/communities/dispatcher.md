@@ -1,24 +1,23 @@
 ---
 title: Konfigurera Dispatcher för Communities
-seo-title: Konfigurera Dispatcher för Communities
+seo-title: Configuring Dispatcher for Communities
 description: Konfigurera dispatchern för AEM Communities
-seo-description: Konfigurera dispatchern för AEM Communities
+seo-description: Configure the dispatcher for AEM Communities
 uuid: c17daca9-3244-4b10-9d4e-2e95df633dd9
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 content-type: reference
 topic-tags: deploying
 discoiquuid: 23745dd3-1424-4d22-8456-d2dbd42467f4
-translation-type: tm+mt
-source-git-commit: 7f5bfce7fb9d7056e7c0848f92eac3f8c31aad24
+exl-id: fb4e3973-2193-4bb5-8120-bf2f3ec80112
+source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
 workflow-type: tm+mt
-source-wordcount: '680'
+source-wordcount: '668'
 ht-degree: 0%
 
 ---
 
-
-# Konfigurerar Dispatcher för Communities {#configuring-dispatcher-for-communities}
+# Konfigurera Dispatcher för Communities {#configuring-dispatcher-for-communities}
 
 ## AEM Communities {#aem-communities}
 
@@ -71,7 +70,7 @@ OSGi-konfigurationen **ACS AEM Commons - Dispatcher Cache Control Header - Max A
 
    *(obligatoriskt)* Den maximala ålder (i sekunder) som ska läggas till i huvudet Cachekontroll. Värdet måste vara större än noll (0).
 
-## Skicka klientrubriker {#dispatcher-client-headers}
+## Dispatcher-klienthuvuden {#dispatcher-client-headers}
 
 I avsnittet /clientheaders i `dispatcher.any` måste du ta med `"CSRF-Token"` om du vill visa en viss rubrikuppsättning för att [aktiveringsfunktionen](enablement.md) ska fungera korrekt.
 
@@ -94,11 +93,9 @@ Se även:
 >**Exempel på egenskapsnamn**
 >Alla egenskapsnamn som visas, t.ex. **/0050** och **/0170**, bör justeras så att de passar i en befintlig dispatcher.any-konfigurationsfil.
 
-
 >[!CAUTION]
 >
->Se [Dispatcher Security Checklist](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html?lang=en) om du vill veta mer när du begränsar åtkomsten med Dispatcher. Läs även [AEM Security Cheklist](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/security-checklist.html) om du vill ha mer säkerhetsinformation om din AEM installation.
-
+>Se [Dispatcher Security Checklist](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html) om du vill veta mer när du begränsar åtkomsten med Dispatcher. Läs även [AEM Security Cheklist](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/security-checklist.html) om du vill ha mer säkerhetsinformation om din AEM installation.
 
 Följande poster ska läggas till i slutet av /filter-avsnittet, särskilt efter alla neka-poster.
 
@@ -250,7 +247,7 @@ Följande poster ska läggas till i slutet av /filter-avsnittet, särskilt efter
 ```
 -->
 
-## Dispatcher-regler {#dispatcher-rules}
+## Dispatcher Rules {#dispatcher-rules}
 
 Regelavsnittet i `dispatcher.any` definierar vilka svar som ska cachas baserat på den begärda URL:en. För Communities används regelavsnittet för att definiera vad som aldrig ska cachas.
 
@@ -957,4 +954,3 @@ Nedan följer ett exempel på en `dispatcher.any`-fil som innehåller Communitie
 ```
 
 -->
-

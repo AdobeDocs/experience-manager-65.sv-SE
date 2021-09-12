@@ -1,8 +1,8 @@
 ---
 title: Konfigurera AEM Assets med varumärkesportalen
-seo-title: Konfigurera AEM Assets med varumärkesportalen
+seo-title: Configure AEM Assets with Brand Portal
 description: Lär dig hur du konfigurerar AEM Assets med Brand Portal för publicering av resurser och samlingar till Brand Portal.
-seo-description: Lär dig hur du konfigurerar AEM Assets med Brand Portal för publicering av resurser och samlingar till Brand Portal.
+seo-description: Learn how to configure AEM Assets with Brand Portal for publishing assets and Collections to Brand Portal.
 uuid: b95c046e-9988-444c-b50e-ff5ec8cafe14
 topic-tags: brand-portal
 content-type: reference
@@ -12,9 +12,9 @@ docset: aem65
 feature: Brand Portal
 role: Admin
 exl-id: ae33181c-9eec-421c-be55-4bd019de40b8
-source-git-commit: aed6e28d7ff228ecbaeaf0d468d1d9bcb4373f90
+source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
 workflow-type: tm+mt
-source-wordcount: '1959'
+source-wordcount: '1930'
 ht-degree: 10%
 
 ---
@@ -70,7 +70,7 @@ Vi rekommenderar att AEM 6.5 konfigurerar en AEM författarinstans. Om du inte h
 
 * Om du är Adobe-partner använder du [Adobe Partner Training Program](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=82357Q) för att begära AEM 6.5.
 
-När du har laddat ned AEM finns instruktioner om hur du konfigurerar en AEM författarinstans i [distribuera och underhålla](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html?lang=en#default-local-install).
+När du har laddat ned AEM finns instruktioner om hur du konfigurerar en AEM författarinstans i [distribuera och underhålla](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html#default-local-install).
 
 ### Hämta och installera AEM senaste Service Pack {#servicepack}
 
@@ -337,7 +337,7 @@ Utför följande steg för att validera konfigurationen:
    >
    >Undvik att inaktivera någon av replikeringsagenterna eftersom det kan göra att replikeringen av resurserna (som körs i kö) misslyckas.
    >
-   >Se till att alla fyra replikeringsagenterna är konfigurerade för att undvika timeout-fel. Se [felsöka problem vid parallell publicering till Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/publish/troubleshoot-parallel-publishing.html?lang=en#connection-timeout).
+   >Se till att alla fyra replikeringsagenterna är konfigurerade för att undvika timeout-fel. Se [felsöka problem vid parallell publicering till Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/publish/troubleshoot-parallel-publishing.html#connection-timeout).
 
 Du kan nu:
 

@@ -8,9 +8,9 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: dfaa4b3f-f65a-4fe3-87a7-f3bc71015e56
 exl-id: c540aa49-9981-4e8c-97df-972085b26490
-source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
+source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
 workflow-type: tm+mt
-source-wordcount: '1634'
+source-wordcount: '1629'
 ht-degree: 0%
 
 ---
@@ -63,7 +63,7 @@ Om du behöver ett arbetsflöde eller en versionshantering för dina resurser b�
 
 Om du inte behöver ett arbetsflöde eller en versionshantering för dina resurser bör du överföra dina resurser till Dynamic Media Classic. Här följer det rekommenderade arbetsflödet:
 
-1. [Konfigurera en schemalagd FTP-överföring och -kodning till Dynamic Media Classic (automatiskt system)](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html?lang=en#upload-options) i Dynamic Media Classic-datorprogrammet.
+1. [Konfigurera en schemalagd FTP-överföring och -kodning till Dynamic Media Classic (automatiskt system)](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html#upload-options) i Dynamic Media Classic-datorprogrammet.
 1. I Experience Manager får du åtkomst till videomaterial i WCM på fliken **[!UICONTROL Dynamic Media Classic]** i Content Finder.
 1. Skapa med videokomponenten i Dynamic Media Classic.
 
@@ -80,7 +80,7 @@ Om du inte behöver ett arbetsflöde eller en versionshantering för dina resurs
 
    >[!NOTE]
    >
-   >Mer information om vad videoförinställningarna betyder finns i [Videoförinställningar för kodning av videofiler](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html?lang=en#video-presets-for-encoding-video-files).
+   >Mer information om vad videoförinställningarna betyder finns i [Videoförinställningar för kodning av videofiler](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html#video-presets-for-encoding-video-files).
    >
    >Adobe rekommenderar att du antingen markerar båda adaptiva videouppsättningar när du konfigurerar de universella förinställningarna eller väljer alternativet **[!UICONTROL Adaptive Video Encoding]**.
 
@@ -118,7 +118,6 @@ I följande matris förklaras när du bör använda vilken komponent:
 >[!NOTE]
 >
 >Dynamic Media Classic-videokomponenten använder den universella videoprofilen. Du kan dock hämta den HTML5-baserade videospelaren som ska användas av Experience Manager. I Dynamic Media Classic kopierar du inbäddningskoden för den färdiga HTML5-videospelaren och placerar den på Experience Manager-sidan.
-
 
 ## Videokomponent för Experience Manager {#aem-video-component}
 

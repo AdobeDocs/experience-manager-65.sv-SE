@@ -12,10 +12,10 @@ docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/config-dynamic
 role: User, Admin
 exl-id: 5719d32c-4f19-47c1-bea9-8fd0bc8439ed
-feature: Konfiguration,Hybrid-läge
-source-git-commit: 5192a284c38eb10c214c67a8727de0f7dd4d1ee2
+feature: Configuration,Hybrid Mode
+source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
 workflow-type: tm+mt
-source-wordcount: '7563'
+source-wordcount: '7558'
 ht-degree: 1%
 
 ---
@@ -44,8 +44,7 @@ Läs mer om att arbeta med [video](/help/assets/video.md) i Dynamic Media.
 >* `ImageServing.log`
 
 >
->
-De finns dokumenterade i [Övervaka och underhålla din Experience Manager-instans](/help/sites-deploying/monitoring-and-maintaining.md).
+>De finns dokumenterade i [Övervaka och underhålla din Experience Manager-instans](/help/sites-deploying/monitoring-and-maintaining.md).
 
 Hybridpublicering och -leverans är en av grundfunktionerna i Dynamic Media tillägg till Adobe Experience Manager. Med hybridpublicering kan ni leverera Dynamic Media-material, som bilder, uppsättningar och video, från molnet i stället för från Experience Manager publiceringsnoderna.
 
@@ -344,7 +343,6 @@ Replication test succeeded
 Du kan även kontrollera genom att göra något av följande:
 * Kontrollera replikeringsloggarna för att se till att resursen är replikerad.
 * Publicera en bild. Markera bilden och välj **[!UICONTROL Viewers]** i listrutan och välj sedan en visningsförinställning. Välj **[!UICONTROL URL]**. Verifiera att bilden visas genom att kopiera och klistra in URL-sökvägen i webbläsaren.
-
 
 
 ### Felsök autentisering {#troubleshooting-authentication}
@@ -869,7 +867,7 @@ Manifestinställningar och deras standardvärden:
 | `defaultthumbpix` | `100,100` | Standardstorlek för miniatyrbild. Används i stället för attribut::DefaultPix för miniatyrbegäranden (`req=tmb`).<br>Servern begränsar svarsbilder till att inte vara större än denna bredd och höjd. Den här åtgärden är true om en miniatyrbegäran (`req=tmb`) inte uttryckligen anger storleken och inte uttryckligen anger visningsstorleken med `wid=`, `hei=` eller `scl=`.<br>Anges som två heltal, 0 eller större, avgränsade med kommatecken. Bredd och höjd i pixlar. Antingen eller båda värdena kan anges till 0 för att behålla dem obegränsade.<br>Gäller inte kapslade/inbäddade begäranden.<br>Se även  [](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultthumbpix.html#image-serving-api) DefaultThumbPixin i Image Serving API. |
 | `expiration` | `36000000` | Klientens standardtid för cache till livstid. Anger ett standardintervall för förfallodatum om en viss katalogpost inte innehåller en giltig katalog::Förfallovärde.<br>Reellt tal, 0 eller högre. Antal millisekunder till förfallodatum sedan svarsdata genererades. Ange 0 om du alltid vill att svarsbilden ska upphöra att gälla omedelbart, vilket i praktiken inaktiverar klientcache-lagring. Som standard är det här värdet inställt på 10 timmar, vilket innebär att om en ny bild publiceras tar det 10 timmar för den gamla bilden att lämna användarens cache. Kontakta kundtjänst om du behöver rensa cachen tidigare.<br>Se även  [](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-expiration.html) Förfallotid i API:t för bildservrar. |
 | `jpegquality` | `80` | Standardattribut för JPEG-kodning. Anger standardattributen för JPEG-svarsbilder.<br>Heltal och flagga, avgränsade med kommatecken. Det första värdet ligger inom intervallet 1..100 och definierar kvaliteten. Det andra värdet kan vara 0 för normalt beteende, eller 1 för att inaktivera nedsampling av RGB-kromaticitet som används av JPEG-kodare.<br>Se även  [](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-jpegquality.html#image-serving-api) JpegQuality i API:t för bildservrar. |
-| `maxpix` | `2000,2000` | Storleksgräns för svarsbild. Maximal bredd och höjd för svarsbilden som returneras till klienten.<br>Servern returnerar ett fel om en begäran orsakar en svarsbild vars bredd eller höjd är större än attributet::MaxPix.<br>Se även  [](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-maxpix.html?lang=en#image-serving-api) MaxPixin i API:t för bildservrar. |
+| `maxpix` | `2000,2000` | Storleksgräns för svarsbild. Maximal bredd och höjd för svarsbilden som returneras till klienten.<br>Servern returnerar ett fel om en begäran orsakar en svarsbild vars bredd eller höjd är större än attributet::MaxPix.<br>Se även  [](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-maxpix.html#image-serving-api) MaxPixin i API:t för bildservrar. |
 | `resmode` | `SHARP2` | Standardläge för omsampling. Anger de standardattribut för omsampling och interpolation som ska användas för skalning av bilddata.<br>Används när  `resMode=` inte anges i en begäran.<br>Tillåtna värden är  `BILIN`,  `BICUB` eller  `SHARP2`.<br>Enum. Ange 2 för interpolationsläget `bilin`, 3 för `bicub` eller 4 för interpolationsläget `sharp2`. Använd `sharp2` för bästa resultat.<br>Se även  [](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-is-cat-resmode.html#image-serving-api) ResMode i API:t för bildservrar. |
 | `resolution` | `72` | Standardobjektsupplösning. Anger en standardobjektupplösning om en viss katalogpost inte innehåller ett giltigt katalogvärde::Upplösning.<br>Reellt tal, större än 0. Uttrycks vanligtvis som pixlar per tum, men kan även finnas i andra enheter, till exempel pixlar per meter.<br>Se även  [](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-resolution.html#image-serving-api) Upplösning i Image Serving API. |
 | `thumbnailtime` | `1%,11%,21%,31%,41%,51%,61%,71%,81%,91%` | Dessa värden representerar en ögonblicksbild av videouppspelningstiden och skickas till [encoding.com](https://www.encoding.com/). Mer information finns i [Om videominiatyr](/help/assets/video.md#about-video-thumbnails-in-dynamic-media-hybrid-mode). |
