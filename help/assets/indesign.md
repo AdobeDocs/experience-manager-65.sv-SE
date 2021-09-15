@@ -5,9 +5,9 @@ contentOwner: AG
 role: Admin
 feature: Publishing
 exl-id: 5ba020a3-c36c-402b-a11b-d6b0426b03bf
-source-git-commit: 610f294c314489032ec71b863542d269d302ee01
+source-git-commit: 0a4c27432e4005fa3999f7c6a776ef51b10d9746
 workflow-type: tm+mt
-source-wordcount: '1545'
+source-wordcount: '1557'
 ht-degree: 1%
 
 ---
@@ -174,7 +174,7 @@ Om [!DNL InDesign Server] och [!DNL Experience Manager] finns på olika värdar 
 1. Leta reda på konfigurationen **[!UICONTROL Day CQ Link Externalizer]**. Klicka på **[!UICONTROL Edit]** för att öppna.
 1. Med inställningarna för länkutjämnaren kan du skapa absoluta URL:er för [!DNL Experience Manager]-distributionen och för [!DNL InDesign Server]. Använd fältet **[!UICONTROL Domains]** för att ange värdnamnet för [!DNL Adobe InDesign Server]. Klicka på **Spara**.
 
-   I absoluta URL:er måste du använda `localhost` som värdnamn för lokala instanser, författare och publiceringsinstanser.
+   I absoluta URL:er använder du `localhost` som värdnamn för din lokala (författare) instans och värdnamn eller IP-adress för publiceringsinstansen, vilket visas på följande bild.
 
    ![Inställning för extern länkning](assets/link-externalizer-config.png)
 
