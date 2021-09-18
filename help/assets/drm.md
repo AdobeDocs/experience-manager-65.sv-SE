@@ -3,11 +3,11 @@ title: Digital Rights Management tillgångar
 description: Lär dig hur du hanterar förfallotillstånd för mediefiler och information för licensierade mediefiler i [!DNL Experience Manager].
 contentOwner: AG
 role: User, Admin
-feature: DRM,Resurshantering
+feature: DRM,Asset Management
 exl-id: a49cfd25-e8d9-492f-be5e-acab0cf67a28
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: e87facbad559aa7e45656f621de17e6ef3109273
 workflow-type: tm+mt
-source-wordcount: '1323'
+source-wordcount: '1320'
 ht-degree: 6%
 
 ---
@@ -69,7 +69,7 @@ Om du vill att [!DNL Assets]-konsolen ska visa de sammansatta resurserna tillsam
 1. Öppna [!DNL Experience Manager] Configuration Manager.
 1. Välj **[!UICONTROL Adobe CQ DAM Expiry Notification]**. Som standard är **[!UICONTROL Time based Scheduler]** markerat, vilket schemalägger ett jobb att vid en viss tidpunkt kontrollera om en resurs har upphört att gälla för delresurser. När jobbet har slutförts visas resurser som har upphört att gälla och refererade resurser som utgångna i sökresultaten.
 
-1. Om du vill köra jobbet regelbundet avmarkerar du fältet **[!UICONTROL Time Based Scheduler Rule]** och ändrar tiden i sekunder i fältet **[!UICONTROL Periodic Scheduler]**. Exempeluttrycket `0 0 0 &ast; &ast; ?` utlöser till exempel jobbet vid 00 timmar.
+1. Om du vill köra jobbet regelbundet avmarkerar du fältet **[!UICONTROL Time Based Scheduler Rule]** och ändrar tiden i sekunder i fältet **[!UICONTROL Periodic Scheduler]**. Exempeluttrycket `0 0 0 * * ?` utlöser till exempel jobbet vid 00 timmar.
 1. Välj **[!UICONTROL send email]** om du vill ta emot e-postmeddelanden när en resurs upphör att gälla.
 
    >[!NOTE]
