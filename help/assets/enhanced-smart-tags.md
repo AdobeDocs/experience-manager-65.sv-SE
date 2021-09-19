@@ -2,12 +2,12 @@
 title: Förbättrade smarta taggar
 description: Förbättrade smarta taggar
 contentOwner: AG
-feature: Smarta taggar, sökning
+feature: Smart Tags, Search
 role: User
 exl-id: 5eff4a0f-30b1-4753-ad0b-002656eed972
-source-git-commit: 20442918270b484e0b3c3ce8e68df90e0f305a52
+source-git-commit: fbb27348df0b9d5f93d186acbce45fcf88197c5e
 workflow-type: tm+mt
-source-wordcount: '1596'
+source-wordcount: '1508'
 ht-degree: 3%
 
 ---
@@ -47,30 +47,30 @@ Innan du kan använda Smart Content Service måste du ha/se till/göra följande
 
 Tjänsten använder smarta taggar för resurser av följande MIME-typer:
 
-* image/jpeg
-* bild/tiff
-* bild/png
-* image/bmp
-* image/gif
-* image/pjpeg
-* image/x-portable-anymap
-* image/x-portable-bitmap
-* image/x-portable-graymap
-* image/x-portable-pixmap
-* image/x-rgb
-* image/x-xbitmap
-* image/x-xpixmap
-* image/x-icon
-* image/photoshop
-* image/x-photoshop
-* image/psd
-* image/vnd.adobe.photoshop
+* `image/jpeg`
+* `image/tiff`
+* `image/png`
+* `image/bmp`
+* `image/gif`
+* `image/pjpeg`
+* `image/x-portable-anymap`
+* `image/x-portable-bitmap`
+* `image/x-portable-graymap`
+* `image/x-portable-pixmap`
+* `image/x-rgb`
+* `image/x-xbitmap`
+* `image/x-xpixmap`
+* `image/x-icon`
+* `image/photoshop`
+* `image/x-photoshop`
+* `image/psd`
+* `image/vnd.adobe.photoshop`
 
 Tjänsten använder smarta taggar för resursåtergivningar av följande MIME-typer:
 
-* image/jpeg
-* image/pjpeg
-* bild/png
+* `image/jpeg`
+* `image/pjpeg`
+* `image/png`
 
 ## Onboarding {#onboarding}
 
@@ -79,10 +79,6 @@ Tjänsten Smart Content Service kan köpas som tillägg till [!DNL Experience Ma
 Administratören kan följa länken för att integrera Smart Content Service med [!DNL Experience Manager]. Information om hur du integrerar tjänsten med [!DNL Experience Manager Assets] finns i [Konfigurera smarta taggar](config-smart-tagging.md).
 
 Startprocessen är klar när administratören konfigurerar tjänsten och lägger till användare i [!DNL Experience Manager].
-
->[!NOTE]
->
->Om du använder [!DNL Experience Manager] 6.3 eller tidigare version och behöver en taggningstjänst för dina resurser kan du läsa [Smarta taggar](https://helpx.adobe.com/experience-manager/6-3/assets/using/touch-ui-smart-tags.html). Smarta taggar använder inte de senaste AI-funktionerna och är därför mindre exakta än den förbättrade smarta taggningstjänsten.
 
 ## Granska resurser och taggar {#reviewing-assets-and-tags}
 
