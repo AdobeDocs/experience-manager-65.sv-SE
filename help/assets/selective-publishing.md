@@ -8,10 +8,10 @@ content-type: reference
 docset: aem65
 role: User, Admin
 exl-id: cd025e9d-6fb1-436c-9e78-795f2daaf345
-feature: Publicering
-source-git-commit: 77687a0674b939460bd34011ee1b94bd4db50ba4
+feature: Publishing
+source-git-commit: a5164c0c2ef175f1bf63ef911bf92df36e413a6f
 workflow-type: tm+mt
-source-wordcount: '2543'
+source-wordcount: '2558'
 ht-degree: 1%
 
 ---
@@ -70,6 +70,8 @@ När du har konfigurerat selektiv publicering i en mapp kan du göra något av f
    >[!IMPORTANT]
    >
    >Oavsett vilket alternativ för publiceringsläget i Dynamic Media du väljer publiceras uppdateringar som du senare gör på en resurs som *redan* har publicerats omedelbart utan någon ytterligare användaråtgärd.
+   >
+   >Om en publicerad video uppdateras måste den publiceras igen för att återspegla leveransändringar.
 
    | Publiceringsläge för Dynamic Media | Beskrivning |
    | --- | --- |
