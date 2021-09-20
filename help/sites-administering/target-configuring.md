@@ -1,24 +1,23 @@
 ---
 title: Konfigurera integreringen med Adobe Target manuellt
-seo-title: Konfigurera integreringen med Adobe Target manuellt
+seo-title: Manually Configuring the Integration with Adobe Target
 description: Lär dig hur du konfigurerar integreringen med Adobe Target manuellt.
-seo-description: Lär dig hur du konfigurerar integreringen med Adobe Target manuellt.
+seo-description: Learn how to manually configure the integration with Adobe Target.
 uuid: 0bb76a65-f981-4cc5-bee8-5feb3297137c
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 discoiquuid: 20c8eb1d-5847-4902-b7d3-4c3286423b46
-translation-type: tm+mt
-source-git-commit: a8ba56849f6bb9f0cf6571fc51f4b5cae71620e0
+exl-id: 0f710685-dc4f-4333-9847-d002b2637d08
+source-git-commit: 6850fc2e4251ad408936ee71600ab8923f54e9a3
 workflow-type: tm+mt
-source-wordcount: '2202'
+source-wordcount: '2210'
 ht-degree: 0%
 
 ---
 
-
-# Konfigurera integreringen med Adobe Target {#manually-configuring-the-integration-with-adobe-target} manuellt
+# Konfigurera integreringen med Adobe Target manuellt {#manually-configuring-the-integration-with-adobe-target}
 
 Du kan antingen ändra inställningarna för guiden för deltagande som du gjorde när du använde guiden, eller så kan du integrera manuellt med Adobe Target utan att använda guiden.
 
@@ -71,6 +70,10 @@ Du kan konfigurera ramverket så att ytterligare kontextinformation skickas till
 
 Du kan konfigurera Adobe Target att använda Adobe Analytics som rapportkälla när du riktar in dig på innehåll.
 
+>[!NOTE]
+>
+>Autentisering med användarautentiseringsuppgifter (äldre) fungerar inte med A4T (för både Target och Analytics). Kunder bör därför använda [IMS-autentisering](/help/sites-administering/integration-ims-adobe-io.md) i stället för autentisering med användarautentiseringsuppgifter.
+
 För att göra detta måste du ange vilken A4T-molnkonfiguration som ska ansluta din Adobe Target-molnkonfiguration med:
 
 1. Navigera till **Cloud Services** via **AEM logotyp** > **Verktyg** > **Distribution** > **Cloud Services**.
@@ -105,7 +108,6 @@ AT.js har flera förbättringar jämfört med mbox.js-biblioteket:
 * Förbättrad säkerhet
 * Bättre implementeringsalternativ för single-page-applikationer
 * AT.js innehåller komponenterna som ingick i target.js, så det finns inte längre något anrop till target.js
-
 Du kan välja AT.js eller mbox.js i listrutan **Klientbibliotek**.
 
 ### Skapa en målmolnkonfiguration {#creating-a-target-cloud-configuration}
@@ -199,19 +201,17 @@ Du kan skapa flera ramverk för en enda Target-konfiguration. Flera ramverk är 
 
 Ditt ramverk skapas. Om du vill replikera ramverket till publiceringsinstansen använder du alternativet **Aktivera ramverk** från sidosparken.
 
-### Associera aktiviteter med målmolnkonfigurationen {#associating-activities-with-the-target-cloud-configuration}
+### Associera aktiviteter med målmolnkonfigurationen  {#associating-activities-with-the-target-cloud-configuration}
 
 Associera dina [AEM aktiviteter](/help/sites-authoring/activitylib.md) med din Target-molnkonfiguration så att du kan spegla aktiviteterna i [Adobe Target](https://docs.adobe.com/content/help/en/target/using/experiences/offers/manage-content.html).
 
 >[!NOTE]
 Vilka typer av aktiviteter som är tillgängliga bestäms av följande:
 * Om alternativet **xt_only** är aktiverat på Adobe Target-klienten (clientcode) som används på AEM för att ansluta till Adobe Target, kan du bara skapa **XT-aktiviteter i AEM.**
-
 * Om alternativen **xt_only** är **inte** aktiverade för Adobe Target-klienten (klientkod) kan du skapa **både** XT- och A/B-aktiviteter i AEM.
-
 **Ytterligare information:** **xt_** onlyoptions är en inställning som används för en viss målklient (clientcode) och kan bara ändras direkt i Adobe Target. Du kan inte aktivera eller inaktivera det här alternativet i AEM.
 
-### Associera målramverket med din plats {#associating-the-target-framework-with-your-site}
+### Koppla målramverket till din webbplats {#associating-the-target-framework-with-your-site}
 
 När du har skapat ett Target-ramverk i AEM kopplar du dina webbsidor till ramverket. Målkomponenterna på sidorna skickar ramverksdefinierade data till Adobe Target för spårning. (Se [Innehållsmål](/help/sites-authoring/content-targeting-touch.md).)
 
@@ -236,7 +236,7 @@ När du associerar en sida med ramverket ärver de underordnade sidorna associat
    >[!NOTE]
    Om ramverket som du kopplade till sidan inte har aktiverats ännu öppnas en guide där du även kan publicera det.
 
-## Felsökning av problem med målanslutning {#troubleshooting-target-connection-problems}
+## Felsöka problem med målanslutning {#troubleshooting-target-connection-problems}
 
 Utför följande åtgärder för att felsöka problem som uppstår vid anslutning till Target:
 
@@ -244,4 +244,3 @@ Utför följande åtgärder för att felsöka problem som uppstår vid anslutnin
 * Kontrollera att AEM kan ansluta till målservern. Kontrollera till exempel att brandväggsreglerna inte blockerar utgående AEM eller att AEM har konfigurerats att använda nödvändiga proxy.
 * Sök efter användbara meddelanden i AEM fellogg. Filen error.log finns i katalogen **crx-quickstart/logs** där AEM är installerad.
 * När du redigerar aktiviteten i Adobe Target pekar URL:en mot localhost. Du kan undvika detta genom att ange rätt URL för AEM externalizer.
-

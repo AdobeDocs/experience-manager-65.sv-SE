@@ -1,8 +1,8 @@
 ---
 title: Integrering med Adobe Target med Adobe I/O
-seo-title: Integrering med Adobe Target med Adobe I/O
+seo-title: Integration with Adobe Target using Adobe I/O
 description: Läs om hur du integrerar AEM med Adobe Target med Adobe I/O
-seo-description: Läs om hur du integrerar AEM med Adobe Target med Adobe I/O
+seo-description: Learn about integrating AEM with Adobe Target using Adobe I/O
 uuid: dd4ed638-e182-4d7e-9c98-282431812467
 contentOwner: aheimoz
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,18 +10,17 @@ content-type: reference
 topic-tags: integration
 discoiquuid: 3b9285db-8fba-4d12-8f52-41daa50a5403
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 498896dccf80065195cc945b01cb8d037b8f6dab
+exl-id: ba7abc53-7db8-41b1-a0fa-4e4dbbeca402
+source-git-commit: baf68f43decec6631516442c3f9e319ce879696f
 workflow-type: tm+mt
-source-wordcount: '1557'
+source-wordcount: '1563'
 ht-degree: 0%
 
 ---
 
-
 # Integrering med Adobe Target med Adobe I/O{#integration-with-adobe-target-using-adobe-i-o}
 
-Integreringen av AEM med Adobe Target via Target Standard API kräver att Adobe IMS (Identity Management System) och Adobe I/O konfigureras.
+Integreringen av AEM med Adobe Target via Target Standard API kräver att du konfigurerar Adobe IMS (Identity Management System) och Adobe I/O.
 
 >[!NOTE]
 >
@@ -54,7 +53,7 @@ Innan du börjar med den här proceduren:
 Det första steget i konfigurationen är att skapa en IMS-konfiguration i AEM och generera den offentliga nyckeln.
 
 1. Öppna menyn **Verktyg** i AEM.
-1. I avsnittet **Security** väljer du **Adobe IMS Configurations**.
+1. I avsnittet **Säkerhet** väljer du **Adobe IMS-konfigurationer**.
 1. Välj **Skapa** för att öppna **Adobe IMS Technical Account Configuration**.
 1. Använd listrutan under **Molnkonfiguration** och välj **Adobe Target**.
 1. Aktivera **Skapa nytt certifikat** och ange ett nytt alias.
@@ -70,11 +69,11 @@ Det första steget i konfigurationen är att skapa en IMS-konfiguration i AEM oc
 
    ![](assets/integrate-target-io-02.png)
 
-## Konfigurera integrering av Adobe I/O för Adobe Target med AEM {#configuring-adobe-i-o-for-adobe-target-integration-with-aem}
+## Konfigurera Adobe I/O för Adobe Target-integrering med AEM {#configuring-adobe-i-o-for-adobe-target-integration-with-aem}
 
 Du måste skapa det Adobe I/O-projekt (integrering) med Adobe Target som AEM ska använda och sedan tilldela de behörigheter som krävs.
 
-### Skapar projektet {#creating-the-project}
+### Skapa projektet {#creating-the-project}
 
 Öppna konsolen Adobe I/O för att skapa ett I/O-projekt med Adobe Target som AEM ska använda:
 
@@ -231,7 +230,7 @@ Det går nu att referera till konfigurationen för en Cloud Service som använde
 1. Ange informationen på fliken **Adobe Target Settings**:
 
    * **Autentisering**: IMS
-   * **Klient-ID**: Klient-ID för Adobe IMS. Se även avsnittet [Klient-ID och Klientkod](#tenant-client).
+   * **Klient-ID**: Adobe IMS-klientens ID. Se även avsnittet [Klient-ID och Klientkod](#tenant-client).
 
       >[!NOTE]
       >
@@ -246,6 +245,9 @@ Det går nu att referera till konfigurationen för en Cloud Service som använde
    * **IMS-konfiguration**: välj namnet på IMS-konfigurationen
    * **API-typ**: REST
    * **A4T Analytics Cloud-konfiguration**: Välj den Analytics-molnkonfiguration som används för målaktivitetsmål och -mått. Du behöver detta om du använder Adobe Analytics som rapportkälla när du skapar innehåll för målgruppsanpassning. Om du inte ser din molnkonfiguration läser du i [Konfigurera A4T Analytics Cloud Configuration](/help/sites-administering/target-configuring.md#configuring-a-t-analytics-cloud-configuration).
+
+   >[!NOTE]
+   >Autentisering med användarautentiseringsuppgifter (äldre) fungerar inte med A4T (för både Target och Analytics). Därför bör kunderna använda     IMS-autentisering i stället för autentisering med användarautentiseringsuppgifter.
    * **Använd exakt målgruppsanpassning**: Som standard är den här kryssrutan markerad. Om du väljer det här alternativet väntar molntjänstkonfigurationen på att kontexten ska läsas in innan innehållet läses in. Se följande.
    * **Synkronisera segment från Adobe Target**: Välj det här alternativet om du vill hämta segment som har definierats i Target för att använda dem i AEM. Du måste välja det här alternativet när API-typegenskapen är REST, eftersom infogade segment inte stöds och du alltid måste använda segment från Target. (Observera att den AEM termen segment motsvarar målgruppen.)
    * **Klientbibliotek**: Välj om du vill ha klientbiblioteket AT.js eller mbox.js (utgått).
