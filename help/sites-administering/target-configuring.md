@@ -10,9 +10,9 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 20c8eb1d-5847-4902-b7d3-4c3286423b46
 exl-id: 0f710685-dc4f-4333-9847-d002b2637d08
-source-git-commit: 6850fc2e4251ad408936ee71600ab8923f54e9a3
+source-git-commit: baacb6623757c4a7a67ae2be4232a36c4a509b69
 workflow-type: tm+mt
-source-wordcount: '2210'
+source-wordcount: '2196'
 ht-degree: 0%
 
 ---
@@ -72,7 +72,7 @@ Du kan konfigurera Adobe Target att använda Adobe Analytics som rapportkälla n
 
 >[!NOTE]
 >
->Autentisering med användarautentiseringsuppgifter (äldre) fungerar inte med A4T (för både Target och Analytics). Kunder bör därför använda [IMS-autentisering](/help/sites-administering/integration-ims-adobe-io.md) i stället för autentisering med användarautentiseringsuppgifter.
+>Autentisering med användarautentiseringsuppgifter (äldre) fungerar inte med A4T (för både Target och Analytics). Kunder bör därför använda IMS-autentisering i stället för autentisering med användarautentiseringsuppgifter.
 
 För att göra detta måste du ange vilken A4T-molnkonfiguration som ska ansluta din Adobe Target-molnkonfiguration med:
 
@@ -88,7 +88,7 @@ För att göra detta måste du ange vilken A4T-molnkonfiguration som ska ansluta
    >När du konfigurerar A4T med AEM kan du se att en Configuration-referens saknas. Så här kan du välja analysramverket:
    >
    >1. Navigera till **Verktyg** > **Allmänt** > **CRXDE Lite**.
-   1. Navigera till **/libs/cq/analytics/components/the standtarget page/dialog/items/tabs/items/tab1_general/items/a4tAnalyticsConfig**
+   1. Navigera till `/libs/cq/analytics/components/testandtargetpage/dialog/items/tabs/items/tab1_general/items/a4tAnalyticsConfig`
    1. Ange egenskapen **disable** till **false**.
    1. Tryck eller klicka på **Spara alla**.
 
