@@ -2,14 +2,14 @@
 title: Borttagna funktioner i Adobe Experience Manager 6.5.
 description: Versionsinformation om borttagna funktioner i Adobe Experience Manager 6.5.
 exl-id: d9b6140a-c37d-4b90-a60c-01f471d65621
-source-git-commit: d19b203ffe75a5628f350113d4d74a2916beffc8
+source-git-commit: becdfee534e4464147811302ed67de74b8044a24
 workflow-type: tm+mt
-source-wordcount: '1736'
+source-wordcount: '1745'
 ht-degree: 2%
 
 ---
 
-# Inaktuella och borttagna funktioner {#deprecated-and-removed-features}
+# Föråldrade och borttagna funktioner {#deprecated-and-removed-features}
 
 Adobe utvärderar ständigt produktfunktioner för att så småningom förnya eller ersätta äldre funktioner med modernare alternativ för att förbättra det totala kundvärdet, alltid med noggrant övervägande av bakåtkompatibilitet.
 
@@ -20,7 +20,7 @@ Följande regler gäller för att informera om den förestående borttagningen e
 
 Den här processen ger kunderna minst en releasecykel för att anpassa implementeringen till en ny version eller en efterföljare till en borttagningsfunktion, innan den faktiska borttagningen.
 
-## Inaktuella funktioner {#deprecated-features}
+## Föråldrade funktioner {#deprecated-features}
 
 I det här avsnittet visas funktioner som har markerats som borttagna i AEM 6.5. I allmänhet är funktioner som ska tas bort i en framtida version först inaktuella, med ett alternativ.
 
@@ -28,6 +28,7 @@ Kunderna rekommenderas att granska om de använder funktionen/funktionen i den a
 
 | Yta | Funktion | Ersättning |
 |---|---|---|
+| [!DNL Sites] | Mallbaserade enkla innehållsfragment. | [Modellbaserat strukturerat innehåll ](/help/assets/content-fragments/content-fragments-models.md) fragmenterar snön. |
 | Integrering med Creative Cloud | AEM till Mappdelning i Creative Cloud introducerades i AEM 6.2 som ett sätt att ge kreativa användare åtkomst till resurser från AEM, så att de kan öppna dem i CC-program och överföra nya filer eller spara ändringar i AEM. En ny funktion i Creative Cloud, Adobe Asset Link, ger en mycket bättre användarupplevelse och kraftfullare åtkomst till AEM direkt inifrån Photoshop, InDesign och Illustrator. Adobe planerar inte att göra ytterligare förbättringar av integrationen mellan AEM och Creative Cloud Mappdelning. Funktionen ingår i AEM, men kunderna rekommenderas att använda ersättningslösningar. | Kunder rekommenderas att byta till nya integrationsfunktioner för Creative Cloud, som Adobe Asset Link eller AEM. |
 | Assets | `AssetDownloadServlet` är inaktiverat som standard för publiceringsinstanserna. Mer information finns i [AEM checklista för säkerhet](/help/sites-administering/security-checklist.md). | Konfiguration som beskrivs i [AEM checklista för säkerhet](/help/sites-administering/security-checklist.md). |
 | Resurser | Om en användare inte har tillräcklig behörighet (läs- och skrivbehörighet) för `/content/dam/collections` kan användaren inte skapa en samling. | Följ användarens inställningar för åtkomstkontroll och se till att du har rätt behörigheter. |
@@ -70,7 +71,7 @@ I det här avsnittet visas funktioner som har tagits bort från AEM 6.5. Tidigar
 | [!DNL Assets] | Funktionen för avlastning av resurser har tagits bort i [!DNL Adobe Experience Manager] 6.5. | Det finns ingen ersättning. |
 | Cache | `system/console/slingjsp` är inte längre tillgängligt i AEM 6.5. | Klasser och något cacheminne lagras under paketet Apache Sling Commons FileSystem ClassLoader. Du kan kontrollera paketnumret i AEM webbkonsol och ta bort cachemappen direkt från filsystemet (`crx-quickstart/launchpad/felix/bundle<ID>`). |
 
-## Förhandsmeddelande för nästa version {#pre-announcement-for-next-release}
+## Förhandsmeddelande för nästa release {#pre-announcement-for-next-release}
 
 Det här avsnittet används för att i förväg meddela kommande ändringar i framtida versioner. De förändringar som annonserats är ännu inte effektiva, men kommer att påverka kunderna. Funktionerna är till exempel inte föråldrade än, men påverkar användarna efter borttagning. Uppdateringarna tillhandahålls för planeringsändamål.
 
