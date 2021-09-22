@@ -88,8 +88,7 @@ För att göra detta måste du ange vilken A4T-molnkonfiguration som ska ansluta
    >När du konfigurerar A4T med AEM kan du se att en Configuration-referens saknas. Så här kan du välja analysramverket:
    >
    >1. Navigera till **Verktyg** > **Allmänt** > **CRXDE Lite**.
-   1. Navigera till:
-      `/libs/cq/analytics/components/testandtargetpage/dialog/items/tabs/items/tab1_general/items/a4tAnalyticsConfig`
+   1. Navigera till: `/libs/cq/analytics/components/testandtargetpage/dialog/items/tabs/items/tab1_general/items/a4tAnalyticsConfig`
    1. Ange egenskapen **disable** till **false**.
    1. Tryck eller klicka på **Spara alla**.
 
