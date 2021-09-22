@@ -6,12 +6,12 @@ topic-tags: dynamic-media
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
-feature: Resurshantering,Återgivningar
+feature: Asset Management,Renditions
 role: User, Admin
 exl-id: e427d4ee-d5c8-421b-9739-f3cf2de36e41
-source-git-commit: a166ea9e56ba6b69793e9949a920a7a24b5b9b25
+source-git-commit: cd0ff8f3f595e4c97668abc8c296b2f15f9d4810
 workflow-type: tm+mt
-source-wordcount: '2556'
+source-wordcount: '2567'
 ht-degree: 1%
 
 ---
@@ -198,7 +198,7 @@ Som standard är DPR för Smart Imaging och nätverksoptimering inaktiverat (ina
 | Europe, Middle East, Africa | 13 Aug 2021 |
 | Asia-Pacific | 22 Jul 2021 | -->
 
-1. [Använd Admin Console för att skapa ett supportärende](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html).
+1. [Använd Admin Console för att skapa ett supportärende](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html).
 1. Ange följande information i ditt supportärende:
 
    1. Primärt kontaktnamn, e-postadress, telefon.
@@ -288,3 +288,9 @@ Smart bildbehandling avgör om konverteringen är bra eller inte. Den nya bilden
 * DPR-optimering på visningsprogramsidan fungerar tillsammans med DPR-optimering på serversidan, och leder inte till alltför stora bilder. DPR-värdena på serversidan aktiveras alltså inte, oavsett var DPR hanteras av visningsprogrammet, t.ex. huvudvyn i ett zoomaktiverat visningsprogram. På samma sätt aktiveras DPR-värdet på serversidan när visningsprogramelementen, t.ex. färgrutor och miniatyrbilder, inte har någon DPR-hantering.
 
 Se även [När du arbetar med bilder](/help/assets/adding-dynamic-media-assets-to-pages.md#when-working-with-images) och [När du arbetar med smart beskärning](/help/assets/adding-dynamic-media-assets-to-pages.md#when-working-with-smart-crop).
+
+>[!MORELIKETHIS]
+>
+>* [Bildoptimering med nästa generations bildformat WebP och AVIF.](https://medium.com/adobetech/image-optimisation-with-next-gen-image-formats-webp-and-avif-248c75afacc4)
+>
+
