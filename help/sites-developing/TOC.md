@@ -8,9 +8,9 @@ breadcrumb-title: Utvecklingshandbok
 user-guide-description: Den här guiden beskriver hur du skapar AEM.
 feature: Developing
 role: Developer
-source-git-commit: 1eb2ef06ed0541026ff3ba436dfab0d261af7356
+source-git-commit: b82544398ca414afab867f188f33ae60989596f3
 workflow-type: tm+mt
-source-wordcount: '909'
+source-wordcount: '910'
 ht-degree: 6%
 
 ---
@@ -97,7 +97,7 @@ ht-degree: 6%
       + [Använda xtypes (Classic UI)](xtypes.md)
       + [Utveckla Forms (Classic UI)](developing-forms.md)
 + Headless Experience Management{#headless}
-   + [Headless och Hybrid with AEM](https://www.adobe.com/content/dam/www/us/en/marketing/experience-manager-sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
+   + [Headless och Hybrid with AEM](https://business.adobe.com/content/dam/dx/us/en/products/experience-manager/sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
    + [Aktivera JSON-export för en komponent](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/json-exporter-components.html)
    + Enkelsidiga program{#spas}
       + [SPA introduktion och genomgång](spa-walkthrough.md)
