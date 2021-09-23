@@ -10,9 +10,9 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 20c8eb1d-5847-4902-b7d3-4c3286423b46
 exl-id: 0f710685-dc4f-4333-9847-d002b2637d08
-source-git-commit: e2b13bf47a2a816add7678587d51347266cc3552
+source-git-commit: 1a3430ef3d9e9f4fcd0aaced904644b36953292b
 workflow-type: tm+mt
-source-wordcount: '2210'
+source-wordcount: '2198'
 ht-degree: 0%
 
 ---
@@ -88,15 +88,18 @@ För att göra detta måste du ange vilken A4T-molnkonfiguration som ska ansluta
    >När du konfigurerar A4T med AEM kan du se att en Configuration-referens saknas. Så här kan du välja analysramverket:
    >
    >1. Navigera till **Verktyg** > **Allmänt** > **CRXDE Lite**.
-   1. Navigera till:
-/libs/cq/analytics/components/testandtarget page/dialog/items/tabs/items/tab1_general/items/a4tAnalyticsConfig
+   1. Navigera till [1] (se nedan)
    1. Ange egenskapen **disable** till **false**.
    1. Tryck eller klicka på **Spara alla**.
 
 
-   ![chlimage_1-159](assets/chlimage_1-159.png)
+```
+/libs/cq/analytics/components/testandtargetpage/dialog/items/tabs/items/tab1_general/items/a4tAnalyticsConfig
+```
 
-   Klicka på **OK**. När du skapar innehåll med Adobe Target kan du [välja rapportkälla](/help/sites-authoring/content-targeting-touch.md).
+![chlimage_1-159](assets/chlimage_1-159.png)
+
+Klicka på **OK**. När du skapar innehåll med Adobe Target kan du [välja rapportkälla](/help/sites-authoring/content-targeting-touch.md).
 
 ## Integrera manuellt med Adobe Target {#manually-integrating-with-adobe-target}
 
