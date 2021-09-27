@@ -1,8 +1,8 @@
 ---
 title: SPA
-seo-title: SPA
+seo-title: SPA Page Component
 description: I en SPA tillhandahåller inte sidkomponenten HTML-elementen för dess underordnade komponenter, utan delegerar i stället detta till det SPA ramverket. Det här dokumentet förklarar hur det gör sidkomponenten i ett SPA unik.
-seo-description: I en SPA tillhandahåller inte sidkomponenten HTML-elementen för dess underordnade komponenter, utan delegerar i stället detta till det SPA ramverket. Det här dokumentet förklarar hur det gör sidkomponenten i ett SPA unik.
+seo-description: In an SPA the page component doesn't provide the HTML elements of its child components, but instead delegates this to the SPA framework. This document explains how this makes the page component of an SPA unique.
 uuid: d444527a-e883-4873-a55b-c2bc140d8d7f
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,22 +10,21 @@ topic-tags: spa
 content-type: reference
 discoiquuid: 6329301c-1a26-4a46-99ae-1b7cc15b08be
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 14cc66dfef7bc7781907bdd6093732912c064579
+exl-id: 0e9e2350-67ef-45c3-991f-6c1cd98fe93d
+source-git-commit: 17c198c744111753ffffcc0758f98859524c964e
 workflow-type: tm+mt
-source-wordcount: '771'
+source-wordcount: '730'
 ht-degree: 0%
 
 ---
 
-
-# SPA sidkomponent{#spa-page-component}
+# SPA{#spa-page-component}
 
 I en SPA tillhandahåller inte sidkomponenten HTML-elementen för dess underordnade komponenter, utan delegerar i stället detta till det SPA ramverket. Det här dokumentet förklarar hur det gör sidkomponenten i ett SPA unik.
 
 >[!NOTE]
 >
->SPA Editor är den rekommenderade lösningen för projekt som kräver SPA ramverksbaserad återgivning på klientsidan (t.ex. Reaktion eller Vinkel).
+>SPA Editor är den rekommenderade lösningen för projekt som kräver SPA ramverksbaserad återgivning på klientsidan (t.ex. Reaktion eller Angular).
 
 ## Introduktion {#introduction}
 
@@ -94,7 +93,7 @@ Meta-resursegenskaperna som beskriver SPA innehåll:
 >
 >Det här dokumentet använder appen We.Retail Journal endast i demonstrationssyfte. Det ska inte användas för något projektarbete.
 >
->Alla AEM projekt ska utnyttja [AEM Project Archetype](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html), som stöder SPA projekt som använder React eller Angular och utnyttjar SPA SDK. Alla SPA projekt på AEM ska baseras på Maven Archetype för SPA Starter Kit.
+>Alla AEM projekt ska utnyttja [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html), som stöder SPA projekt med React eller Angular och utnyttjar SPA SDK. Alla SPA projekt på AEM ska baseras på Maven Archetype för SPA Starter Kit.
 
 ## Synkronisering av sidredigeringsövertäckning {#page-editor-overlay-synchronization}
 

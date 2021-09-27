@@ -1,8 +1,8 @@
 ---
 title: Prestandaoptimering
-seo-title: Prestandaoptimering
+seo-title: Performance Optimization
 description: Lär dig hur du konfigurerar vissa aspekter av AEM för att optimera prestanda.
-seo-description: Lär dig hur du konfigurerar vissa aspekter av AEM för att optimera prestanda.
+seo-description: Learn how to configure certain aspects of AEM to optimize performance.
 uuid: a4d9fde4-a4c7-4ee5-99b6-29b0ee7dc35b
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,14 +10,13 @@ content-type: reference
 topic-tags: configuring
 discoiquuid: 80118cd1-73e1-4675-bbdf-85d66d150abc
 feature: Configuring
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 5b0c9a8c-0f5f-46ee-a455-adb9b9d27270
+source-git-commit: 4fc42469e4b97f2f2c5d7489837012d31c63f86d
 workflow-type: tm+mt
-source-wordcount: '6659'
+source-wordcount: '6645'
 ht-degree: 1%
 
 ---
-
 
 # Prestandaoptimering {#performance-optimization}
 
@@ -79,7 +78,7 @@ Om du publicerar en webbplats och efter lanseringen får reda på att du stöter
 
 Det är svårt att simulera verkligheten och hur mycket arbete du rimligen kommer att vilja göra för att bli&quot;verklig&quot; beror på projektets karaktär. &quot;Real&quot; betyder inte bara&quot;riktig kod&quot; och&quot;verklig trafik&quot;, utan även&quot;verkligt innehåll&quot;, särskilt när det gäller innehållets storlek och struktur. Tänk på att mallarna kan uppträda helt olika beroende på databasens storlek och struktur.
 
-### Fastställ heldragna mål {#establish-solid-goals}
+### Fastställ solida mål {#establish-solid-goals}
 
 ![chlimage_1-5](assets/chlimage_1-5.jpeg)
 
@@ -93,7 +92,7 @@ Att uppnå goda, gedigna prestationsmål är verkligen ett av de svåraste områ
 
 Det är viktigt att optimera en flaskhals i taget. Om du försöker göra saker parallellt utan att validera effekten av den optimerade optimeringen, kommer du att förlora räkningen på vilken optimeringsåtgärd som faktiskt hjälpte.
 
-### Automatiska itereringscykler {#agile-iteration-cycles}
+### Flexibla itereringscykler {#agile-iteration-cycles}
 
 ![chlimage_1-7](assets/chlimage_1-7.jpeg)
 
@@ -201,7 +200,7 @@ Vissa regler bör beaktas vid prestandaoptimering:
 >
 >Tänk på att den mekanism du använder för att mäta prestanda ofta kommer att påverka exakt det du försöker mäta. Du bör alltid försöka ta hänsyn till dessa skillnader och eliminera så mycket av deras effekt som möjligt. särskilt bör webbläsarplugin-program avaktiveras när det är möjligt.
 
-## Konfigurerar för prestanda {#configuring-for-performance}
+## Konfigurera för prestanda {#configuring-for-performance}
 
 Vissa aspekter av AEM (och/eller den underliggande databasen) kan konfigureras för att optimera prestanda. Följande är möjligheter och förslag. Du måste veta om, eller hur, du använder funktionerna i fråga innan du gör några ändringar.
 
@@ -218,7 +217,7 @@ Den uppdaterade indexeringsinformationen finns här:
 * [Metodtips för frågor och indexering](/help/sites-deploying/best-practices-for-queries-and-indexing.md)
 * [Frågor och indexering](/help/sites-deploying/queries-and-indexing.md)
 
-### Samtidig bearbetning av arbetsflöde {#concurrent-workflow-processing}
+### Samtidig bearbetning av arbetsflöden {#concurrent-workflow-processing}
 
 Begränsa antalet arbetsflödesprocesser som körs samtidigt för att förbättra prestandan. Som standard bearbetar arbetsflödesmotorn så många arbetsflöden parallellt som det finns processorer tillgängliga för Java VM. När arbetsflödessteg kräver stora mängder bearbetningsresurser (RAM eller CPU) kan flera av dessa arbetsflöden köras parallellt, ställa höga krav på tillgängliga serverresurser.
 
@@ -260,7 +259,7 @@ Faktiska jobbämnen som arbetsflödesmodeller genererar innehåller modellspecif
 
 `com/adobe/granite/workflow/job/etc/workflow/models/dam/update_asset/jcr_content/model`
 
-Därför kan du skapa en jobbkö för ämnet som matchar jobbavsnitten i arbetsflödesmodellen. När du konfigurerar de prestandarelaterade egenskaperna för kön påverkas endast arbetsflödesmodellen som genererar jobben som matchar köavsnittet.
+Därför kan du skapa en jobbkö för ämnet som matchar jobbavsnitten i arbetsflödesmodellen. Om du konfigurerar de prestandarelaterade egenskaperna för kön påverkas bara arbetsflödesmodellen som genererar jobben som matchar köavsnittet.
 
 Följande procedur skapar en jobbkö för ett arbetsflöde med arbetsflödet **DAM Update Asset** som exempel.
 
@@ -276,7 +275,7 @@ Följande procedur skapar en jobbkö för ett arbetsflöde med arbetsflödet **D
 
    Fabrikskonfigurationerna liknar den Beviljade arbetsflödeskö som beskrivs i [Samtidig arbetsflödesbearbetning](/help/sites-deploying/configuring-performance.md#concurrent-workflow-processing), förutom att egenskapen Ämnen matchar ämnet för dina arbetsflödesjobb.
 
-### AEM DAM Asset Synchronization Service {#cq-dam-asset-synchronization-service}
+### Tjänsten AEM DAM Asset Synchronization {#cq-dam-asset-synchronization-service}
 
 `AssetSynchronizationService` används för att synkronisera resurser från monterade databaser (inklusive LiveLink, Documentum, bland annat). Som standard utförs en vanlig kontroll var 300:e sekund (5 minuter), så om du inte använder monterade databaser kan du inaktivera den här tjänsten.
 
@@ -310,7 +309,7 @@ Nedan beskrivs en standardiserad metod för prestandatester för ett AEM program
 
 Kontrollen är en extra, heltäckande process - nödvändig men inte begränsad till testning.
 
-### Verifiering av kunskap {#verification-of-knowledge}
+### Kunskapsverifiering {#verification-of-knowledge}
 
 Ett första steg är att dokumentera den grundläggande information som du behöver känna till innan du kan börja testa:
 
@@ -329,7 +328,7 @@ Om du vill få en tydlig översikt kan du skapa en karta över hela programmet (
 
 En diagramrepresentation av applikationens interna delar kan ge en översikt över testkraven. med färgkodning kan den också fungera som grund för rapporter.
 
-### Scope-definition {#scope-definition}
+### Omfattningsdefinition {#scope-definition}
 
 Ett program har vanligtvis ett urval av användningsfall. Vissa kommer att vara mycket viktiga, andra mindre viktiga.
 
@@ -389,21 +388,21 @@ I båda fallen kan du definiera det förväntade antalet transaktioner per sekun
 
 | Komponent | Testtyp | Nej. Användare | Tx/sek (förväntas) | Tx/sek (testad) | Beskrivning |
 |---|---|---|---|---|---|
-| Startsida - en användare | Medel | 1 | 3 |  |  |
-|  | Toppvärde | 3 | 3 |  |  |
+| Startsida - en användare | Medel | 1 | 1 |  |  |
+|  | Toppvärde | 1 | 3 |  |  |
 | Startsida 100 användare | Medel | 100 | 1 |  |  |
-|  | Toppvärde | 100 | 3 |  |
+|  | Toppvärde | 100 | 1 |  |
 
-#### Kombinerade komponenttester {#combined-component-tests}
+#### Komponenttester {#combined-component-tests}
 
 Genom att testa komponenterna i kombination får du en närmare bild av hur programmen fungerar. Även här måste man testa genomsnittliga och högsta förhållanden.
 
 | Scenario | Komponent | Nej. Användare | Tx/sek (förväntas) | Tx/sek (testad) | Beskrivning |
 |---|---|---|---|---|---|
-| Blandat genomsnitt | Hemsida | 10 | 3 |  |  |
-|  | Sökning | 10 | 3 |  |  |
+| Blandat genomsnitt | Hemsida | 10 | 1 |  |  |
+|  | Sökning | 10 | 1 |  |  |
 |  | Nyheter | 10 | 2 |  |  |
-|  | Händelser | 10 | 3 |  |  |
+|  | Händelser | 10 | 1 |  |  |
 |  | Aktiveringar | 10 | 3 |  | Simulering av författarbeteende. |
 | Blandad topp | Hemsida | 100 | 5 |  |  |
 |  | Sökning | 50 | 5 |  |  |
@@ -411,7 +410,7 @@ Genom att testa komponenterna i kombination får du en närmare bild av hur prog
 |  | Händelser | 100 | 10 |  |  |
 |  | Aktiveringar | 20 | 20 |  | Simulering av författarbeteende. |
 
-#### Går igenom direkttester {#going-live-tests}
+#### Pågående direkttester {#going-live-tests}
 
 Under de första dagarna efter det att webbplatsen har tillgängliggjorts kan du förvänta dig ett ökat intresse. Detta kommer förmodligen att vara ännu större än de toppvärden som du har testat för. Vi rekommenderar att du testar Going Live-scenarier för att se till att systemet klarar detta.
 
@@ -436,20 +435,20 @@ När man utformar dessa tester bör man komma ihåg att inte alla scenarier komm
 |---|---|---|---|---|---|
 | Överlagring av sökkomponent | Sök på globalt jokertecken (asterisk) | 10 | 1 |  | Endast &amp;stämpel;ast;&amp;ast;&amp;ast; söks igenom. |
 |  | Stoppord | 20 | 2 |  | Söker efter ett stoppord. |
-|  | Tom sträng | 10 | 1 |  | Söker efter en tom sträng. |
-|  | Specialtecken | 10 | 3 |  | Söker efter specialtecken. |
+|  | Tom sträng | 10 | 3 |  | Söker efter en tom sträng. |
+|  | Specialtecken | 10 | 1 |  | Söker efter specialtecken. |
 
-#### Bevarandetest {#endurance-tests}
+#### Bevarandetester {#endurance-tests}
 
 Vissa problem kommer inte att uppstå förrän systemet har körts under en kontinuerlig period. det är timmar eller till och med dagar. En uthållighetsprovning används för att testa en konstant genomsnittlig belastning under en viss tidsperiod. Alla prestandaförsämringar kan sedan analyseras.
 
 | Scenario | Testtyp | Nej. Användare | Tx/sek (förväntas) | Tx/sek (testad) | Beskrivning |
 |---|---|---|---|---|---|
 | Varaktighetsprovning (72 timmar) | Hemsida | 10 | 3 |  |  |
-|  | Sökning | 10 | 1 |  |  |
+|  | Sökning | 10 | 3 |  |  |
 |  | Nyheter | 20 | 2 |  |  |
-|  | Händelser | 10 | 3 |  |  |
-|  | Aktiveringar | 1 | 3 |  | Simulering av författarbeteende. |
+|  | Händelser | 10 | 1 |  |  |
+|  | Aktiveringar | 3 | 3 |  | Simulering av författarbeteende. |
 
 ### Optimering {#optimization}
 
@@ -502,13 +501,11 @@ Dispatcher har ett antal inbyggda funktioner som du kan använda för att optime
 >* Det går inte att lagra andra saker, som cookies, sessionsdata och formulärdata.
 
 >
->
-I allmänhet handlar många cachelagringsstrategier om att välja bra URL:er och inte förlita sig på dessa ytterligare data.
+>I allmänhet handlar många cachelagringsstrategier om att välja bra URL:er och inte förlita sig på dessa ytterligare data.
 >
 >Med Dispatcher version 4.1.11 kan du även cachelagra svarshuvuden, se [Cachelagra HTTP-svarshuvuden](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#configuring-the-dispatcher-cache-cache).
 
-
-### Beräknar Dispatcher-cacheförhållandet {#calculating-the-dispatcher-cache-ratio}
+### Beräkna Dispatcher-cachens proportioner {#calculating-the-dispatcher-cache-ratio}
 
 Cachekvotsformeln uppskattar procentandelen begäranden som hanteras av cachen av det totala antalet begäranden som kommer in i systemet. För att beräkna cachekvoten behöver du följande:
 
@@ -579,7 +576,7 @@ www.myCompany.com/news/main.large.html
 >
 >Med hjälp av skriptordlistan för malldefinitionen kan du ange ett separat skript som återger utskriftssidorna.
 
-#### Ogiltiga bildfiler som används som titlar {#invalidating-image-files-used-as-titles}
+#### Invaliderar bildfiler som används som titlar {#invalidating-image-files-used-as-titles}
 
 Om du återger sidrubriker, eller annan text, som bilder bör du lagra filerna så att de tas bort vid en innehållsuppdatering på sidan:
 
@@ -627,7 +624,7 @@ När det gäller att blanda begränsat och offentligt innehåll på en sida kans
 >
 >Information om hur du hanterar blandat offentligt och begränsat innehåll finns i [Konfigurera dynamisk SSLING-infogning.](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-sling-dynamic-include.html)
 
-#### Sticky Connections {#sticky-connections}
+#### Fästiga anslutningar {#sticky-connections}
 
 [Anteckningar ](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html#the-benefits-of-load-balancing) gör att dokumenten för en användare kan sammanställas på samma server. Om en användare lämnar den här mappen och senare återgår till den, stannar anslutningen fortfarande kvar. Definiera en mapp för alla dokument som kräver klisterlappar för webbplatsen. Försök att inte ha med andra dokument i den. Detta påverkar belastningsutjämningen om du använder personaliserade sidor och sessionsdata.
 
@@ -703,7 +700,7 @@ Inläsningens inverkan på säkerhetskopieringsprestanda kan uppskattas av skill
 
 ### Sammanfattning av resultat {#summary-of-results}
 
-#### Säkerhetskopieringstid och dataflöde {#backup-time-and-throughput}
+#### Tid och genomströmning för säkerhetskopiering {#backup-time-and-throughput}
 
 Det främsta resultatet av dessa prestandatester är att visa hur tiden för säkerhetskopiering varierar beroende på säkerhetskopieringstyp och total datamängd. I följande diagram visas säkerhetskopieringstiden som hämtats med standardkonfigurationen för säkerhetskopiering, som en funktion av det totala antalet sidor.
 
