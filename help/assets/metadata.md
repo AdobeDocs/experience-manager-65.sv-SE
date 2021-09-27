@@ -3,12 +3,12 @@ title: Hantera metadata för dina digitala resurser
 description: Lär dig mer om metadatatyperna och hur du hanterar metadata för resurser för att enkelt ordna och bearbeta resurser.
 contentOwner: AG
 mini-toc-levels: 1
-feature: Taggar, metadata
+feature: Tagging, Metadata
 role: Architect, Leader
 exl-id: c630709a-7e8b-417c-83a4-35ca9be832a0
-source-git-commit: 124f44b7893631703b1bd79e5c78976463f01efc
+source-git-commit: afc72fb6b324cf2e0ad8168f783d9c1a6f96c614
 workflow-type: tm+mt
-source-wordcount: '2238'
+source-wordcount: '2235'
 ht-degree: 10%
 
 ---
@@ -110,7 +110,7 @@ Import av metadata är asynkron och påverkar inte systemets prestanda. Samtidig
    | [!UICONTROL Batch Size] | Antal resurser i en grupp som metadata ska importeras för. Standardvärdet är 50. Maxvärdet är 100. |
    | [!UICONTROL Field Separator] | Standardvärdet är `,` (ett komma). Du kan ange andra tecken. |
    | [!UICONTROL Multi Value Delimiter] | Avgränsare för metadatavärden. Standardvärdet är `|`. |
-   | [!UICONTROL Launch Workflows] | Falskt som standard. När det är inställt på `true` och standardinställningarna för startprogrammet används för arbetsflödet [!UICONTROL DAM Metadata WriteBack] (som skriver metadata till binära XMP). Om du aktiverar startarbetsflöden blir systemet långsammare. |
+   | [!UICONTROL Launch Workflows] | Falskt som standard. När det är inställt på `true` och standardinställningarna används för arbetsflödet [!UICONTROL DAM Metadata WriteBack] (som skriver metadata till binära XMP). Om du aktiverar arbetsflödena blir systemet långsammare. |
    | [!UICONTROL Asset Path Column Name] | Definierar kolumnnamnet för CSV-filen med resurser. |
 
 1. Klicka på **[!UICONTROL Import]** i verktygsfältet. När metadata har importerats visas ett meddelande i inkorgen [!UICONTROL Notification].
@@ -234,7 +234,7 @@ Du kan ta bort en metadataprofil från en mapp från menyn **[!UICONTROL Tools]*
 >
 >* [Metadata-koncept och -förståelse](metadata-concepts.md).
 >* [Redigera metadataegenskaper för flera samlingar](manage-collections.md#editing-collection-metadata-in-bulk)
-* [Import och export av metadata i Experience Manager Assets](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/metadata-import-feature-video-use.html)
+>* [Import och export av metadata i Experience Manager Assets](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/metadata-import-feature-video-use.html)
 
 
 <!-- TBD: Try filling the available information in these topics to the extent possible. As and when complete, publish the sections live.

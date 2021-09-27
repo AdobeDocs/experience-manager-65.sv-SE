@@ -3,11 +3,11 @@ title: Aktivera resursinsikter via DTM
 description: Lär dig hur du använder Adobe Dynamic Tag Management (DTM) för att aktivera resursinsikter.
 contentOwner: AG
 role: User, Admin
-feature: Resursinsikter,Resursrapporter
+feature: Asset Insights,Asset Reports
 exl-id: 80e8f84e-3235-4212-9dcd-6acdb9067893
-source-git-commit: b3acfdba41e1bd94c65bb7a87f63b9c326a80dd2
+source-git-commit: afc72fb6b324cf2e0ad8168f783d9c1a6f96c614
 workflow-type: tm+mt
-source-wordcount: '590'
+source-wordcount: '586'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ Adobe Dynamic Tag Management är ett verktyg som aktiverar era digitala marknads
 
 >[!CAUTION]
 >
->Adobe DTM är ersatt med [!DNL Adobe Experience Platform Launch] och kommer snart att nå [slutet av livet](https://medium.com/launch-by-adobe/dtm-plans-for-a-sunset-3c6aab003a6f). Adobe rekommenderar att du [använder [!DNL Launch] för resursinsikter](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/advanced/asset-insights-launch-tutorial.html).
+>Adobe DTM är ersatt med [!DNL Adobe Experience Platform] och kommer snart att nå [slutet av livet](https://medium.com/launch-by-adobe/dtm-plans-for-a-sunset-3c6aab003a6f). Adobe rekommenderar att du [använder [!DNL Adobe Experience Platform] för resursinsikter](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/advanced/asset-insights-launch-tutorial.html).
 
 Utför dessa steg för att aktivera Assets Insights via DTM.
 
