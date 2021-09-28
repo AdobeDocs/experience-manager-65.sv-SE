@@ -1,22 +1,21 @@
 ---
 title: Anpassa sidredigering
-seo-title: Anpassa sidredigering
+seo-title: Customizing Page Authoring
 description: AEM innehåller olika mekanismer som gör att du kan anpassa sidredigeringsfunktionerna
-seo-description: AEM innehåller olika mekanismer som gör att du kan anpassa sidredigeringsfunktionerna
+seo-description: AEM provides various mechanisms to enable you to customize page authoring functionality
 uuid: 9dc72d98-c5ff-4a00-b367-688ccf896526
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 discoiquuid: 6825dcd6-fa75-4410-b6b2-e7bd4a391224
-translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+exl-id: 90594588-db8e-4d4c-a208-22c1c6ea2a2d
+source-git-commit: 273836ad0afd6466eac437bf7711e7dbabc1d5e9
 workflow-type: tm+mt
-source-wordcount: '1375'
+source-wordcount: '1383'
 ht-degree: 0%
 
 ---
-
 
 # Anpassa sidredigering{#customizing-page-authoring}
 
@@ -53,8 +52,7 @@ De kan användas på många sätt för att utöka sidredigeringsfunktionen i AEM
 >* [Struktur för det AEM Touch-aktiverade ](/help/sites-developing/touch-ui-structure.md) användargränssnittet för information om de strukturella områden som används för sidredigering.
 
 >
->
-Det här avsnittet behandlas också i [AEM Gems](https://docs.adobe.com/content/ddc/en/gems.html)-sessionen - [Anpassning av användargränssnittet för AEM 6.0](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-user-interface-customization-for-aem6.html).
+>Det här avsnittet behandlas också i [AEM Gems](https://docs.adobe.com/content/ddc/en/gems.html)-sessionen - [Anpassning av användargränssnittet för AEM 6.0](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-user-interface-customization-for-aem6.html).
 
 >[!CAUTION]
 >
@@ -243,7 +241,11 @@ Koden för den här sidan finns på GitHub
 
 ## Anpassa arbetsflödet för begäran om aktivering {#customizing-the-request-for-activation-workflow}
 
-Det färdiga arbetsflödet, **Begäran om aktivering**, aktiveras automatiskt när en innehållsförfattare inte har rätt replikeringsbehörighet.
+Det färdiga arbetsflödet, **Begär aktivering**:
+
+* Visas automatiskt på rätt meny när en innehållsförfattare **inte har** rätt replikeringsbehörighet, men **inte har** medlemskap i DAM-användare och författare.
+
+* I annat fall visas ingenting eftersom replikeringsrättigheterna har tagits bort.
 
 Om du vill ha ett anpassat beteende vid en sådan aktivering kan du täcka över arbetsflödet **Begär aktivering**:
 
@@ -259,4 +261,3 @@ Om du vill ha ett anpassat beteende vid en sådan aktivering kan du täcka över
 
 1. Uppdatera [arbetsflödesmodellen](/help/sites-developing/workflows-models.md) och relaterade konfigurationer/skript efter behov.
 1. Ta bort rättigheten till [ `replicate`-åtgärden](/help/sites-administering/security.md#actions) från alla lämpliga användare för alla relevanta sidor, om du vill att det här arbetsflödet ska utlösas som en standardåtgärd när någon av användarna försöker publicera (eller replikera) en sida.
-
