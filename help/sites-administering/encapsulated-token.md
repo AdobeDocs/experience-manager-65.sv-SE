@@ -1,22 +1,21 @@
 ---
 title: Stöd för inkapslad token
-seo-title: Stöd för inkapslad token
+seo-title: Encapsulated Token Support
 description: Läs mer om stödet för Encapsulated Token i AEM.
-seo-description: Läs mer om stödet för Encapsulated Token i AEM.
+seo-description: Learn about the Encapsulated Token support in AEM.
 uuid: a7c6f269-bb5a-49ba-abef-ea029202ab6d
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 content-type: reference
 discoiquuid: 2c263c0d-2521-49df-88ba-f304a25af8ab
-translation-type: tm+mt
-source-git-commit: 215f062f80e7abfe35698743ce971394d01d0ed6
+exl-id: e24d815c-83e2-4639-8273-b4c0a6bb008a
+source-git-commit: 32e2a30d9f3327d26b81a07730ace04e4e68b0d1
 workflow-type: tm+mt
-source-wordcount: '844'
+source-wordcount: '833'
 ht-degree: 0%
 
 ---
-
 
 # Stöd för inkapslad token{#encapsulated-token-support}
 
@@ -52,16 +51,14 @@ Du kan se hur detta fungerar i en geografiskt distribuerad distribution med Mong
 >
 >Om en ny användare till exempel skapas på publiceringsinstans nummer ett på grund av hur den inkapslade token fungerar, kommer den att autentiseras korrekt på publiceringsinstans nummer två. Om användaren inte finns i den andra publiceringsinstansen kommer begäran fortfarande inte att lyckas.
 
-
-## Konfigurerar den inkapslade token {#configuring-the-encapsulated-token}
+## Konfigurera den inkapslade token {#configuring-the-encapsulated-token}
 
 >[!NOTE]
 >Alla autentiseringshanterare som synkroniserar användare och förlitar sig på tokenautentisering (som SAML och OAuth) fungerar bara med inkapslade tokens om:
 >
 >* Anteckningssessioner är aktiverade, eller
-   >
-   >
-* Användare skapas redan i AEM när synkroniseringen startar. Detta innebär att inkapslade token inte stöds i situationer där hanterarna **skapar**-användare under synkroniseringsprocessen.
+>
+>* Användare skapas redan i AEM när synkroniseringen startar. Detta innebär att inkapslade token inte stöds i situationer där hanterarna **skapar**-användare under synkroniseringsprocessen.
 
 
 Det finns några saker du behöver tänka på när du konfigurerar den inkapslade token:
@@ -98,11 +95,10 @@ För att replikera nyckeln mellan instanser måste du:
 
 1. Upprepa stegen ovan för alla förekomster som du vill replikera nyckeln till.
 
-#### Aktiverar den inkapslade token {#enabling-the-encapsulated-token}
+#### Aktivera den inkapslade token {#enabling-the-encapsulated-token}
 
 När HMAC-nyckeln har replikerats kan du aktivera den inkapslade token via webbkonsolen:
 
 1. Peka webbläsaren på `https://serveraddress:port/system/console/configMgr`
-1. Leta efter en post med namnet **Day CRX Token Authentication Handler** och klicka på den.
+1. Leta efter en post med namnet **Autentiseringshanterare för Adobe Granite-token** och klicka på den.
 1. I följande fönster: markera rutan **Aktivera inkapslat tokenstöd** och tryck på **Spara**.
-
