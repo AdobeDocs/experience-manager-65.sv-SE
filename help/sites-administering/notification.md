@@ -1,8 +1,8 @@
 ---
 title: Konfigurerar e-postmeddelande
-seo-title: Konfigurerar e-postmeddelande
+seo-title: Configuring Email Notification
 description: Lär dig hur du konfigurerar e-postmeddelanden i AEM.
-seo-description: Lär dig hur du konfigurerar e-postmeddelanden i AEM.
+seo-description: Learn how to configure Email Notification in AEM.
 uuid: 6cbdc312-860b-4a69-8bbe-2feb32204a27
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,9 +10,9 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 6466d7b8-e308-43c5-acdc-dec15f796f64
 exl-id: 918fcbbc-a78a-4fab-a933-f183ce6a907f
-source-git-commit: 2a866e82a059184ea86f22646e4a20406ad109e8
+source-git-commit: 1ae4e3b898f1d0a27fa72a7d8db01f638d4c6f7a
 workflow-type: tm+mt
-source-wordcount: '2097'
+source-wordcount: '2086'
 ht-degree: 0%
 
 ---
@@ -56,7 +56,7 @@ Konfigurationen ser ut så här i webbkonsolen:
 
 ![chlimage_1-276](assets/chlimage_1-276.png)
 
-## Konfigurerar e-postmeddelandekanalen {#configuring-the-email-notification-channel}
+## Konfigurera e-postmeddelandekanalen {#configuring-the-email-notification-channel}
 
 När du prenumererar på en sida eller ett forumhändelsemeddelande anges från-e-postadressen till `no-reply@acme.com` som standard. Du kan ändra det här värdet genom att konfigurera tjänsten **Notification Email Channel** i webbkonsolen.
 
@@ -82,7 +82,7 @@ Använd följande procedur för att definiera noden i innehållspaketets källma
 
 1. Spara filen.
 
-## Konfigurerar e-postmeddelandetjänsten för arbetsflöde {#configuring-the-workflow-email-notification-service}
+## Konfigurera e-postmeddelandetjänsten för arbetsflöde {#configuring-the-workflow-email-notification-service}
 
 När du får e-postmeddelanden om arbetsflöden anges standardvärden för både from-email-adressen och värd-URL-prefixet. Du kan ändra dessa värden genom att konfigurera **Day CQ Workflow Email Notification Service** i webbkonsolen. Om du gör det bör du behålla ändringen i databasen.
 
@@ -90,11 +90,11 @@ Standardkonfigurationen ser ut så här i webbkonsolen:
 
 ![chlimage_1-277](assets/chlimage_1-277.png)
 
-### E-postmallar för sidmeddelande {#email-templates-for-page-notification}
+### E-postmallar för sidmeddelanden {#email-templates-for-page-notification}
 
 E-postmallar för sidmeddelanden finns nedan:
 
-`/etc/notification/email/default/com.day.cq.wcm.core.page`
+`/libs/settings/notification-templates/com.day.cq.wcm.core.page`
 
 Standardmallen för engelska ( `en.txt`) definieras så här:
 
@@ -121,7 +121,7 @@ Så här anpassar du den engelska e-postmallen för sidmeddelanden:
 
 1. Öppna filen i CRXDE:
 
-   `/etc/notification/email/default/com.day.cq.wcm.core.page/en.txt`
+   `/libs/settings/notification-templates/com.day.cq.wcm.core.page/en.txt`
 
 1. Ändra filen efter dina behov.
 1. Spara ändringarna.
@@ -150,7 +150,7 @@ Där &lt;text_x> kan vara en blandning av statisk text och dynamiska strängvari
 
    PageModified => /content/geometrixx/en/products
 
-### E-postmallar för forummeddelande {#email-templates-for-forum-notification}
+### E-postmallar för forummeddelanden {#email-templates-for-forum-notification}
 
 E-postmallar för forummeddelanden finns under:
 
@@ -201,11 +201,11 @@ Följande variabler kan användas i e-postmallen för forummeddelanden:
 
 * `${forum.path}`, vägen till forumsidan.
 
-### E-postmallar för arbetsflödesmeddelande {#email-templates-for-workflow-notification}
+### E-postmallar för arbetsflödesmeddelanden {#email-templates-for-workflow-notification}
 
 E-postmallen för arbetsflödesmeddelanden (engelska) finns på:
 
-`/etc/workflow/notification/email/default/en.txt`
+`/libs/settings/workflow/notification/email/default/en.txt`
 
 Den definieras enligt följande:
 
@@ -228,13 +228,13 @@ View the overview in your ${host.prefix}/aem/inbox\n \
 This is an automatically generated message. Please do not reply.
 ```
 
-#### Anpassa e-postmallar för arbetsflödesmeddelande {#customizing-email-templates-for-workflow-notification}
+#### Anpassa e-postmallar för arbetsflödesmeddelanden {#customizing-email-templates-for-workflow-notification}
 
 Så här anpassar du den engelska e-postmallen för meddelanden om arbetsflödeshändelser:
 
 1. Öppna filen i CRXDE:
 
-   `/etc/workflow/notification/email/default/en.txt`
+   `/libs/settings/workflow/notification/email/default/en.txt`
 
 1. Ändra filen efter dina behov.
 1. Spara ändringarna.
@@ -292,9 +292,9 @@ Så här lägger du till en mall för ett nytt språk:
 
 1. Lägg till en fil `<language-code>.txt` nedan i CRXDE:
 
-   * `/etc/notification/email/default/com.day.cq.wcm.core.page` : för sidmeddelanden
+   * `/libs/settings/notification-templates/com.day.cq.wcm.core.page` : för sidmeddelanden
    * `/etc/notification/email/default/com.day.cq.collab.forum` : för forummeddelanden
-   * `/etc/workflow/notification/email/default` : för arbetsflödesmeddelanden
+   * `/libs/settings/workflow/notification/email/default` : för arbetsflödesmeddelanden
 
 1. Anpassa filen till språket.
 1. Spara ändringarna.
@@ -311,7 +311,7 @@ När samlingar i AEM Assets delas eller inte delas kan användare få e-postmedd
 1. Logga in AEM som administratör. Klicka på **Verktyg** > **Åtgärder** > **Webbkonsol** för att öppna Konfiguration av webbkonsol.
 1. Redigera **Day CQ DAM Resource Collection-server**. Välj **skicka e-post**. Klicka på **Spara**.
 
-## Konfigurerar OAuth {#setting-up-oauth}
+## Konfigurera OAuth {#setting-up-oauth}
 
 AEM erbjuder OAuth2-stöd för den integrerade Mailer-tjänsten, så att organisationer kan följa e-postkraven.
 
