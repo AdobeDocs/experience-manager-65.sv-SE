@@ -1,8 +1,8 @@
 ---
 title: Fråga och indexering
-seo-title: Fråga och indexering
+seo-title: Oak Queries and Indexing
 description: Lär dig hur du konfigurerar index i AEM.
-seo-description: Lär dig hur du konfigurerar index i AEM.
+seo-description: Learn how to configure indexes in AEM.
 uuid: a1233d2e-1320-43e0-9b18-cd6d1eeaad59
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,16 +11,15 @@ topic-tags: deploying
 discoiquuid: 492741d5-8d2b-4a81-8f21-e621ef3ee685
 legacypath: /content/docs/en/aem/6-0/deploy/upgrade/queries-and-indexing
 feature: Configuring
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: d9ec7728-84f7-42c8-9c80-e59e029840da
+source-git-commit: 7cd4b6918a8b0de68f9f5c6a79ab3b49e8ef6fc1
 workflow-type: tm+mt
-source-wordcount: '2881'
+source-wordcount: '2868'
 ht-degree: 0%
 
 ---
 
-
-# Fråga och indexera{#oak-queries-and-indexing}
+# Fråga och indexering{#oak-queries-and-indexing}
 
 >[!NOTE]
 >
@@ -69,7 +68,7 @@ Därefter används varje index för att beräkna kostnaden för frågan. När de
 
 >[!NOTE]
 >
->För stora databaser är det tidskrävande att skapa ett index. Detta gäller både när ett index skapas första gången och när ett index indexeras om (när definitionen har ändrats). Se även [Felsökning av ekningsindex](/help/sites-deploying/troubleshooting-oak-indexes.md) och [Förhindra långsam omindexering](/help/sites-deploying/troubleshooting-oak-indexes.md#preventing-slow-re-indexing).
+>För stora databaser är det tidskrävande att skapa ett index. Detta gäller både när ett index skapas första gången och när ett index indexeras om (ett index återskapas efter att definitionen ändrats). Se även [Felsökning av ekningsindex](/help/sites-deploying/troubleshooting-oak-indexes.md) och [Förhindra långsam omindexering](/help/sites-deploying/troubleshooting-oak-indexes.md#preventing-slow-re-indexing).
 
 Om omindexering behövs i mycket stora databaser, särskilt när du använder MongoDB och fulltextindex, bör du överväga att extrahera text och använda eko-run för att skapa det ursprungliga indexet och indexera om.
 
@@ -102,9 +101,9 @@ Egenskapsindexet har följande konfigurationsalternativ:
 * Flaggan **unique** som, om den är inställd på **true**, lägger till en unik begränsning i egenskapsindexet.
 
 * Med egenskapen **DeclaringNodeTypes** kan du ange en viss nodtyp som indexet bara gäller för.
-* Flaggan **reindex** som, om den är inställd på **true**, utlöser ett fullständigt innehållsomindex.
+* Flaggan **reindex** som, om den är inställd på **true**, utlöser en omindexering av fullständigt innehåll.
 
-### Det sorterade indexet {#the-ordered-index}
+### Orderat index {#the-ordered-index}
 
 Det sorterade indexet är ett tillägg till egenskapsindexet. Den har dock tagits bort. Index av den här typen måste ersättas med [Lucene-egenskapsindex](#the-lucene-property-index).
 
@@ -149,7 +148,7 @@ Ta följande exempelfråga:
 select * from [nt:base] where [alias] = '/admin'
 ```
 
-Om du vill definiera ett Lucene-egenskapsindex för frågan ovan kan du lägga till följande definition genom att skapa en ny nod under **oak:index:**
+Om du vill definiera ett Lucene-egenskapsindex för frågan ovan kan du lägga till följande definition genom att skapa en ny nod under **eke:index:**
 
 * **Namn:** `LucenePropertyIndex`
 * **Typ:** `oak:QueryIndexDefinition`
@@ -158,19 +157,19 @@ När noden har skapats lägger du till följande egenskaper:
 
 * **type:**
 
-   ```
+   ```xml
    lucene (of type String)
    ```
 
 * **asynk:**
 
-   ```
+   ```xml
    async (of type String)
    ```
 
 * **fulltextEnabled:**
 
-   ```
+   ```xml
    false (of type Boolean)
    ```
 
@@ -229,7 +228,7 @@ Om du vill använda någon av de färdiga analysverktygen kan du konfigurera den
    * **Namn:** `stopwords`
    * **Typ:** `nt:file`
 
-#### Skapa analytiker via komposition {#creating-analyzers-via-composition}
+#### Skapa analytiker via Composition {#creating-analyzers-via-composition}
 
 Analysatorer kan också sättas samman baserat på `Tokenizers`, `TokenFilters` och `CharFilters`. Du kan göra detta genom att ange en analysator och skapa underordnade noder till dess tillvalstokensorer och filter som ska användas i listordning. Se även [https://wiki.apache.org/solr/AnalyzersTokenizersTokenFilters#Specifying_an_Analyzer_in_the_schema](https://wiki.apache.org/solr/AnalyzersTokenizersTokenFilters#Specifying_an_Analyzer_in_the_schema)
 
@@ -295,7 +294,7 @@ Den kan konfigureras för att fungera som en inbäddad server med AEM eller som 
 
 >[!CAUTION]
 >
->Använd inte en inbäddad Solr-server i en produktionsmiljö. Det ska endast användas i utvecklingsmiljö.
+>Använd inte en inbäddad Solr-server i en produktionsmiljö. Det ska endast användas i en utvecklingsmiljö.
 
 AEM kan användas med en inbäddad Solr-server som kan konfigureras via webbkonsolen. I det här fallet körs Solr-servern i samma JVM som den AEM instansen den är inbäddad i.
 
@@ -322,10 +321,10 @@ Du kan konfigurera den inbäddade Solr-servern genom att:
 
 ### Konfigurera AEM med en enda fjärr-Solr-server {#configuring-aem-with-a-single-remote-solr-server}
 
-AEM kan också konfigureras för att fungera med en fjärrinstans av en Solr-server:
+AEM kan även konfigureras för att fungera med en fjärrserver för Solr:
 
 1. Hämta och extrahera den senaste versionen av Solr. Mer information om hur du gör detta finns i [dokumentationen för installation av Apache Solr](https://cwiki.apache.org/confluence/display/solr/Installing+Solr).
-1. Skapa nu två Solr-kort. Du kan göra detta genom att skapa mappar för varje delning i mappen där Solr har uppgraderats:
+1. Skapa nu två Solr-kort. Du kan göra detta genom att skapa mappar för varje delning i mappen där Solr har packats upp:
 
    * Skapa mappen för det första delfönstret:
 
@@ -393,7 +392,7 @@ Rekommenderade Solr-konfigurationsfiler
 
 [Hämta fil](assets/recommended-conf.zip)
 
-### AEM för indexering {#aem-indexing-tools}
+### AEM {#aem-indexing-tools}
 
 AEM 6.1 integrerar även två indexeringsverktyg som finns i AEM 6.0 som en del av verktygsuppsättningen Adobe Consulting Services Commons:
 
@@ -489,4 +488,3 @@ Du kan samla in ytterligare information för att hjälpa till att felsöka probl
 
 1. Den Oak-version som instansen körs på. Du kan se detta genom att öppna CRXDE och titta på versionen i det nedre högra hörnet av välkomstsidan, eller genom att kontrollera versionen av `org.apache.jackrabbit.oak-core`-paketet.
 1. Felsökningsutdata för QueryBuilder-felsökningsfrågan. Felsökaren finns på: `https://serveraddress:port/libs/cq/search/content/querydebug.html`
-
