@@ -1,22 +1,21 @@
 ---
 title: SAML 2.0-autentiseringshanterare
-seo-title: SAML 2.0-autentiseringshanterare
+seo-title: SAML 2.0 Authentication Handler
 description: Läs mer om autentiseringshanteraren för SAML 2.0 i AEM.
-seo-description: Läs mer om autentiseringshanteraren för SAML 2.0 i AEM.
+seo-description: Learn about the SAML 2.0 Authentication Handler in AEM.
 uuid: 51f97315-350a-42a4-af2c-2de87307c6ad
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 content-type: reference
 discoiquuid: 6ed09b5d-5089-43d2-b9d5-e7db57be5c02
-translation-type: tm+mt
-source-git-commit: d559a15e3c1c65c39e38935691835146f54a356e
+exl-id: 8e54bccf-0ff1-448d-a237-ec42fd3bfa23
+source-git-commit: 6bc60122d2512a6f58c0204cd240a1b99a37ed93
 workflow-type: tm+mt
-source-wordcount: '846'
+source-wordcount: '835'
 ht-degree: 0%
 
 ---
-
 
 # SAML 2.0-autentiseringshanterare{#saml-authentication-handler}
 
@@ -37,7 +36,7 @@ Den här hanteraren lagrar det krypterade SAML-svarsmeddelandet i användarnoden
 >
 >Om du vill läsa en community-artikel från början till slut klickar du på: [Integrera SAML med Adobe Experience Manager](https://helpx.adobe.com/experience-manager/using/aem63_saml.html).
 
-## Konfigurerar SAML 2.0-autentiseringshanteraren {#configuring-the-saml-authentication-handler}
+## Konfigurera autentiseringshanteraren för SAML 2.0 {#configuring-the-saml-authentication-handler}
 
 [Webbkonsolen](/help/sites-deploying/configuring-osgi.md) ger åtkomst till autentiseringshanterarkonfigurationen [SAML](http://saml.xml.org/saml-specifications) 2.0 med namnet **Adobe Granite SAML 2.0 Authentication Handler**. Följande egenskaper kan anges.
 
@@ -49,7 +48,6 @@ Den här hanteraren lagrar det krypterade SAML-svarsmeddelandet i användarnoden
 >* Tjänstleverantörens enhets-ID.
 
 >
-
 
 
 >[!NOTE]
@@ -139,4 +137,3 @@ Du kan konfigurera en loggare för att felsöka problem som kan uppstå när SAM
    * **loggnivå:** felsökning
    * **loggfil:** logs/saml.log
    * **Logger:** com.adobe.granite.auth.saml
-
