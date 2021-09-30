@@ -5,9 +5,9 @@ contentOwner: AG
 role: Admin
 feature: Publishing
 exl-id: 5ba020a3-c36c-402b-a11b-d6b0426b03bf
-source-git-commit: 0a4c27432e4005fa3999f7c6a776ef51b10d9746
+source-git-commit: 67e145e250bbe386168ab2c0f8967f91aa9d8a36
 workflow-type: tm+mt
-source-wordcount: '1557'
+source-wordcount: '1559'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ För att överföra filer till [!DNL Experience Manager Assets] som du har skapa
 
 >[!NOTE]
 >
->[!DNL Adobe InDesign] erbjuds som två separata erbjudanden. [Adobe ](https://www.adobe.com/products/indesign.html) InDesign-datorprogram som används för att utforma sidlayouter för tryck och digital distribution. [Med Adobe InDesign ](https://www.adobe.com/products/indesignserver.html) Server kan ni programmässigt skapa automatiserade dokument baserat på det ni skapat med  [!DNL InDesign]. Det fungerar som en tjänst som erbjuder ett gränssnitt till sin [ExtendScript](https://www.adobe.com/devnet/scripting.html)-motor. Skripten är skrivna i [!DNL ExtendScript], som liknar [!DNL JavaScript]. Mer information om [!DNL InDesign] skript finns i [https://www.adobe.com/devnet/indesign/documentation.html#idscripting](https://www.adobe.com/devnet/indesign/documentation.html#idscripting).
+>[!DNL Adobe InDesign] erbjuds som två separata erbjudanden. [Adobe ](https://www.adobe.com/products/indesign.html) InDesign-datorprogram som används för att utforma sidlayouter för tryck och digital distribution. [Med Adobe InDesign ](https://www.adobe.com/products/indesignserver.html) Server kan ni programmässigt skapa automatiserade dokument baserat på det ni skapat med  [!DNL InDesign]. Det fungerar som en tjänst som erbjuder ett gränssnitt till sin [ExtendScript](https://www.adobe.com/devnet/indesign/documentation.html#idscripting)-motor. Skripten är skrivna i [!DNL ExtendScript], som liknar [!DNL JavaScript]. Mer information om [!DNL InDesign] skript finns i [https://www.adobe.com/devnet/indesign/documentation.html#idscripting](https://www.adobe.com/devnet/indesign/documentation.html#idscripting).
 
 ## Hur extraheringen fungerar {#how-the-extraction-works}
 

@@ -12,7 +12,7 @@ docset: aem65
 feature: Brand Portal
 role: Admin
 exl-id: ae33181c-9eec-421c-be55-4bd019de40b8
-source-git-commit: d995173140237f34a03c8e84128ad9d657c9a026
+source-git-commit: 67e145e250bbe386168ab2c0f8967f91aa9d8a36
 workflow-type: tm+mt
 source-wordcount: '1936'
 ht-degree: 10%
@@ -66,7 +66,7 @@ Du behöver följande för att konfigurera AEM Assets med varumärkesportalen:
 
 Vi rekommenderar att AEM 6.5 konfigurerar en AEM författarinstans. Om du inte har AEM igång kan du hämta det från följande platser:
 
-* Om du redan är AEM kan du hämta AEM 6.5 från [Adobe Licensing website](http://licensing.adobe.com).
+* Om du redan är AEM kan du hämta AEM 6.5 från [Adobe Licensing website](https://licensing.adobe.com).
 
 * Om du är Adobe-partner använder du [Adobe Partner Training Program](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=82357Q) för att begära AEM 6.5.
 
