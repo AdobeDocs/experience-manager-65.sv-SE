@@ -1,8 +1,8 @@
 ---
 title: Utveckla AEM
-seo-title: Utveckla AEM
+seo-title: Developing AEM Components
 description: AEM används för att lagra, formatera och återge innehåll som är tillgängligt på dina webbsidor.
-seo-description: AEM används för att lagra, formatera och återge innehåll som är tillgängligt på dina webbsidor.
+seo-description: AEM components are used to hold, format, and render the content made available on your webpages.
 uuid: 1f39daa6-7277-45a2-adcc-74b58c93b8e4
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,10 +12,9 @@ discoiquuid: 8cdb6db4-adaa-4eda-af7d-310a0b44b80b
 docset: aem65
 legacypath: /content/docs/en/aem/6-2/develop/components/components-touch-optimized
 exl-id: 573cdc36-e9c3-4803-9c4e-cebd0cf0a56f
-translation-type: tm+mt
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+source-git-commit: f2a208acfa28f23cbf63d055c5d28698df476892
 workflow-type: tm+mt
-source-wordcount: '3533'
+source-wordcount: '3485'
 ht-degree: 1%
 
 ---
@@ -130,13 +129,11 @@ Komponenter med en återgivning som är känslig för WCM-läget måste definier
 
 I dialogrutor kan författaren interagera med komponenten. Med en dialogruta kan författare och/eller administratörer redigera innehåll, konfigurera komponenten eller definiera designparametrar (med en [designdialogruta](#creating-and-configuring-a-design-dialog))
 
-### Gränssnittet Coral och GRE-gränssnittet {#coral-ui-and-granite-ui}
+### Gränssnittet för korall och GRENITE {#coral-ui-and-granite-ui}
 
 [Gränssnittet Coral ](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/index.html) UI och  [Granite ](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html) definierar det moderna AEM.
 
 [I Granite-gränssnittet finns ett stort urval av de grundläggande komponenter (widgetar) som ](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html) behövs för att skapa en dialogruta i redigeringsmiljön. Vid behov kan du utöka den här markeringen och [skapa en egen widget](#creatinganewwidget).
-
-Mer information om hur du utvecklar komponenter med resurstyperna Koral och Granite finns i: [Skapa Experience Manager-komponenter med resurstyperna Koral/Granite](https://helpx.adobe.com/experience-manager/using/aem64_coral_resourcetypes.html).
 
 Mer information finns i:
 
@@ -156,7 +153,7 @@ Mer information finns i:
 >
 >På grund av typen av GRE-komponenter (och skillnader i ExtJS-widgetar) finns det vissa skillnader mellan hur komponenterna interagerar med det beröringsaktiverade gränssnittet och det [klassiska användargränssnittet](/help/sites-developing/developing-components-classic.md).
 
-### Skapar en ny dialogruta {#creating-a-new-dialog}
+### Skapa en ny dialogruta {#creating-a-new-dialog}
 
 Dialogrutor för det beröringskänsliga användargränssnittet:
 
@@ -207,7 +204,6 @@ Se till exempel:
 >
 
 
-
 #### Skapa ett nytt fält {#creating-a-new-field}
 
 Widgetar för det beröringsaktiverade användargränssnittet implementeras som GRE-komponenter.
@@ -244,7 +240,7 @@ Se följande exempel:
 
    * tillhandahålls av [kodexempel](/help/sites-developing/developing-components-samples.md#code-sample-how-to-customize-dialog-fields)
 
-#### Utöka (ärver från) ett fält {#extending-inheriting-from-a-field}
+#### Utöka (ärva från) ett fält {#extending-inheriting-from-a-field}
 
 Beroende på dina behov kan du antingen:
 
@@ -288,7 +284,7 @@ I det klassiska användargränssnittet med ExtJS var det vanligt att ha avlyssna
 
 Innehållsstrukturen beskriver den semantiska strukturen. det ska (måste) inte antyda den underliggande widgetens karaktär. Genom att inte ha JS-kod i innehållsstrukturen kan du ändra implementeringsinformationen utan att behöva ändra innehållsstrukturen. Du kan med andra ord ändra widgetbiblioteket utan att behöva ändra innehållsstrukturen.
 
-#### Identifiera tillgänglighet för dialogrutan {#dialog-ready}
+#### Dialogrutans tillgänglighet identifieras {#dialog-ready}
 
 Om du har ett anpassat JavaScript som bara behöver köras när dialogrutan är tillgänglig och klar bör du avlyssna händelsen `dialog-ready`.
 
@@ -311,7 +307,7 @@ Se följande exempel:
 /libs/foundation/components/page/cq:dialog/content/items/tabs/items/basic/items/column/items/title/items/title
 ```
 
-#### Fältvalidering (Granite UI) {#field-validation-granite-ui}
+#### Fältvalidering (GRÄNSSNITT) {#field-validation-granite-ui}
 
 Fältvalidering i GRA-gränssnittet och GRA-gränssnittskomponenterna (motsvarar widgetar) görs med hjälp av API:t `foundation-validation`. [Mer information finns i dokumentationen för  `foundation-valdiation` Granite.](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/clientlibs/foundation/js/validation/index.html)
 
@@ -369,7 +365,7 @@ Detta kan göras antingen genom att:
 * med [Designläge](/help/sites-authoring/default-components-designmode.md) när du redigerar en viss sida.
 * [definiera  `components` egenskapen i en malls](/help/sites-developing/components-basics.md#adding-your-component-to-the-paragraph-system) styckesystem.
 
-## Konfigurera ett styckesystem så att en komponentinstans skapas {#configuring-a-paragraph-system-so-that-dragging-an-asset-creates-a-component-instance} när du drar en resurs
+## Konfigurera ett styckesystem så att en komponentinstans skapas när en resurs dras {#configuring-a-paragraph-system-so-that-dragging-an-asset-creates-a-component-instance}
 
 AEM erbjuder möjlighet att konfigurera ett styckesystem på sidan så att [en instans av den nya komponenten skapas automatiskt när en användare drar en (lämplig) resurs till en instans av sidan](/help/sites-authoring/editing-content.md#insertingacomponenttouchoptimizedui) (i stället för att alltid behöva dra en tom komponent till sidan).
 
@@ -476,7 +472,7 @@ När du migrerar en komponent som har utformats för användning med det klassis
    * Migrera från typer till [Bevilja gränssnittsvalidering](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/foundation/clientlibs/foundation/js/validation/index.html)
    * Mer information om hur du använder JS-avlyssnare finns i [Hantera fälthändelser](#handling-field-events) och AEM Gems-sessionen på [Anpassa dialogrutefält](https://docs.adobe.com/content/ddc/en/gems/customizing-dialog-fields-in-touch-ui.html).
 
-### Migrerar cq:listener-kod {#migrating-cq-listener-code}
+### Migrera cq:avlyssnarkod {#migrating-cq-listener-code}
 
 Om du migrerar ett projekt som är utformat för det klassiska användargränssnittet kan `cq:listener`-koden (och komponentrelaterade klientlistor) använda funktioner som är specifika för det klassiska användargränssnittet (till exempel `CQ.wcm.*`). För migreringen måste du uppdatera sådan kod med motsvarande objekt/funktioner i det beröringsaktiverade användargränssnittet.
 
@@ -494,7 +490,7 @@ if (Granite.author) {
 }
 ```
 
-## Dokumenterar komponenten {#documenting-your-component}
+## Dokumentera komponenten {#documenting-your-component}
 
 Som utvecklare vill du ha enkel åtkomst till komponentdokumentation så att du snabbt kan förstå:
 
