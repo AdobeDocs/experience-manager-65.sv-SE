@@ -1,8 +1,8 @@
 ---
 title: Publicera sidor
-seo-title: Publicera sidor
+seo-title: Publishing Pages
 description: Publicera sidor
-seo-description: 'null'
+seo-description: null
 uuid: 57795e4a-e528-4e74-ad9c-e13f868daebb
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,14 +10,13 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 1f5eb646-acc7-49d5-b839-e451e68ada9e
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 61144bbe-6710-4cae-a63e-e708936ff360
+source-git-commit: 9946bfd3c2701a37d13e6eb6b4c19562ef77d24c
 workflow-type: tm+mt
-source-wordcount: '1612'
-ht-degree: 7%
+source-wordcount: '1661'
+ht-degree: 6%
 
 ---
-
 
 # Publicera sidor {#publishing-pages}
 
@@ -33,16 +32,13 @@ Du kan även publicera/avpublicera en sida direkt eller vid ett fördefinierat d
 >
 >* **Publicera/avpublicera**
    >  Detta är de primära villkoren för de åtgärder som gör innehållet tillgängligt för allmänheten i publiceringsmiljön (eller inte).
-   >
-   >
-* **Aktivera/inaktivera**
+>
+>* **Aktivera/inaktivera**
    >  Dessa termer är synonyma med publicera/avpublicera.
-   >
-   >
-* **Replikering/replikering**
+>
+>* **Replikering/replikering**
    >  Detta är de tekniska termer som beskriver hur data (t.ex. sidinnehåll, filer, kod, användarkommentarer) flyttas från en miljö till en annan, t.ex. vid publicering eller omvänd replikering av användarkommentarer.
 >
-
 
 
 >[!NOTE]
@@ -56,7 +52,6 @@ Du kan även publicera/avpublicera en sida direkt eller vid ett fördefinierat d
 >
 
 
-
 ## Publicera sidor {#publishing-pages-1}
 
 Beroende på var du befinner dig kan du publicera:
@@ -64,7 +59,7 @@ Beroende på var du befinner dig kan du publicera:
 * [Från sidredigeraren](/help/sites-authoring/publishing-pages.md#publishing-from-the-editor)
 * [Från webbplatskonsolen](/help/sites-authoring/publishing-pages.md#publishing-from-the-console)
 
-### Publicera från redigeraren {#publishing-from-the-editor}
+### Publicera från Redigeraren {#publishing-from-the-editor}
 
 Om du redigerar en sida kan den publiceras direkt från redigeraren.
 
@@ -94,6 +89,10 @@ Om du redigerar en sida kan den publiceras direkt från redigeraren.
 >[!NOTE]
 >
 >Publicering från redigeraren är en ytlig publicering, dvs endast den valda sidan/de markerade sidorna publiceras och inga underordnade sidor publiceras.
+
+>[!NOTE]
+>
+>Sidor som används av [alias](/help/sites-authoring/editing-page-properties.md#advanced) i redigeraren kan inte publiceras. Publiceringsalternativen i redigeraren är bara tillgängliga för sidor som du kommer åt via de faktiska sökvägarna.
 
 ### Publicera från konsolen {#publishing-from-the-console}
 
@@ -216,11 +215,15 @@ På ett [sätt som liknar publicering](/help/sites-authoring/publishing-pages.md
 * [Från sidredigeraren](/help/sites-authoring/publishing-pages.md#unpublishing-from-the-editor)
 * [Från webbplatskonsolen](/help/sites-authoring/publishing-pages.md#unpublishing-from-the-console)
 
-### Avpublicerar från redigeraren {#unpublishing-from-the-editor}
+### Avpublicera från redigeraren {#unpublishing-from-the-editor}
 
 Om du vill avpublicera sidan när du redigerar den väljer du **Avpublicera sida** på menyn **Sidinformation**, på samma sätt som du skulle [publicera sidan](/help/sites-authoring/publishing-pages.md#publishing-from-the-editor).
 
-### Avpublicerar från konsolen {#unpublishing-from-the-console}
+>[!NOTE]
+>
+>Sidor som används av [alias](/help/sites-authoring/editing-page-properties.md#advanced) i redigeraren kan inte avpubliceras. Publiceringsalternativen i redigeraren är bara tillgängliga för sidor som du kommer åt via de faktiska sökvägarna.
+
+### Avpublicera från konsolen {#unpublishing-from-the-console}
 
 Precis som du [använder alternativet Hantera publikation för att publicera](/help/sites-authoring/publishing-pages.md#manage-publication) kan du även använda det för att avpublicera.
 

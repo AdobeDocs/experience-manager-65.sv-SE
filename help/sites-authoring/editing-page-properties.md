@@ -1,8 +1,8 @@
 ---
 title: Redigera sidegenskaper
-seo-title: Redigera sidegenskaper
+seo-title: Editing Page Properties
 description: Definiera de egenskaper som krävs för en sida
-seo-description: Definiera de egenskaper som krävs för en sida
+seo-description: Define the required properties for a page
 uuid: d3a2183b-8082-4cfc-aeed-26facbf3f3e6
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,14 +10,13 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 1e9dd0d7-209a-4989-b66b-bca0d04b437a
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 7fed51b68c626b54565b9120f69229872946016f
+exl-id: 3cd9374f-6f16-40fb-97cf-5f9a750b8dd2
+source-git-commit: 9946bfd3c2701a37d13e6eb6b4c19562ef77d24c
 workflow-type: tm+mt
-source-wordcount: '1883'
+source-wordcount: '1898'
 ht-degree: 4%
 
 ---
-
 
 # Redigera sidegenskaper{#editing-page-properties}
 
@@ -132,13 +131,10 @@ Egenskaperna fördelas på flera flikar.
 
    Ange ett alias som ska användas med den här sidan.
 
-   >[!NOTE]
-   >
-   >Alias anger egenskapen `sling:alias` för att definiera ett aliasnamn för resursen (detta påverkar bara resursen, inte sökvägen).
-   >
-   >Till exempel: Om du definierar ett alias på `latin-lang` för noden `/content/we-retail/spanish` kan du komma åt den här sidan via `/content/we-retail/latin-language`
-   >
-   >Mer information finns i [Lokaliserade sidnamn under SEO och URL Management Best Practices](/help/managing/seo-and-url-management.md#localized-page-names).
+   * Om du till exempel definierar ett alias på `private` för sidan `/content/wknd/us/en/magazine/members-only` kan du även komma åt den här sidan via `/content/wknd/us/en/magazine/private`
+   * Om du skapar ett alias anges egenskapen `sling:alias` på sidnoden, vilket bara påverkar resursen, inte databassökvägen.
+   * Sidor som används av alias i redigeraren kan inte publiceras. [Publiceringsalternativen ](/help/sites-authoring/publishing-pages.md) i redigeraren är bara tillgängliga för sidor som du kommer åt via de faktiska sökvägarna.
+   * Mer information finns i [Lokaliserade sidnamn under SEO och URL Management Best Practices](/help/managing/seo-and-url-management.md#localized-page-names).
 
 * **Ärvs från  &lt;>sökväg *>***
 
@@ -252,13 +248,13 @@ variationDefiniera variant av upplevelsefragment som används för att generera 
 
    Definiera egenskaper för en designsida i [hantering av flera webbplatser](/help/sites-administering/msm.md). Styr under vilka omständigheter ändringar ska spridas till Live Copy.
 
-### Live-kopia {#live-copy}
+### Live Copy {#live-copy}
 
 * **Livecopy**
 
    Definiera egenskaper för en Live Copy-sida i [hantering av flera webbplatser](/help/sites-administering/msm.md). Styr under vilka omständigheter ändringar ska spridas från utkast.
 
-### Platsstruktur {#site-structure}
+### Webbplatsstruktur {#site-structure}
 
 * Tillhandahåll länkar till sidor som innehåller funktioner för hela webbplatsen, till exempel **Registreringssida**, **Offline Page**.
 
@@ -279,7 +275,7 @@ Du kan definiera sidegenskaper:
 
    * Med **Sidinformation** (och sedan **Öppna egenskaper**)
 
-### På webbplatskonsolen - en sida {#from-the-sites-console-single-page}
+### Från webbplatskonsolen - en sida {#from-the-sites-console-single-page}
 
 Klicka eller tryck på **Egenskaper** för att definiera sidegenskaperna:
 
@@ -296,7 +292,7 @@ Klicka eller tryck på **Egenskaper** för att definiera sidegenskaperna:
 
 1. Använd sedan **Spara** för att spara uppdateringar följt av **Stäng** för att återgå till konsolen.
 
-### När du redigerar en sida {#when-editing-a-page}
+### När en sida redigeras {#when-editing-a-page}
 
 När du redigerar en sida kan du använda **Sidinformation** för att definiera sidegenskaperna:
 
