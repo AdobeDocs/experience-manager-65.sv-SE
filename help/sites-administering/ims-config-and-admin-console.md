@@ -1,8 +1,8 @@
 ---
 title: Adobe IMS-autentisering och [!DNL Admin Console] Stöd för AEM Managed Services
-seo-title: Adobe IMS-autentisering och [!DNL Admin Console] Stöd för AEM Managed Services
+seo-title: Adobe IMS Authentication and [!DNL Admin Console] Support for AEM Managed Services
 description: Lär dig hur du använder  [!DNL Admin Console] AEM.
-seo-description: Lär dig hur du använder  [!DNL Admin Console] AEM.
+seo-description: Learn how to use the [!DNL Admin Console] in AEM.
 uuid: 3f5b32c7-cf62-41a4-be34-3f71bbf224eb
 contentOwner: sarchiz
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,10 +11,9 @@ content-type: reference
 discoiquuid: f6112dea-a1eb-4fd6-84fb-f098476deab7
 exl-id: 95eae97c-01c2-4f5c-8068-f504eab7c49e
 feature: Security
-translation-type: tm+mt
-source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
+source-git-commit: 3f55ebfe3b1603a573fcb77155227c449c6c0fbb
 workflow-type: tm+mt
-source-wordcount: '1692'
+source-wordcount: '1688'
 ht-degree: 11%
 
 ---
@@ -24,6 +23,10 @@ ht-degree: 11%
 >[!NOTE]
 >
 >Observera att den här funktionen endast är tillgänglig för Adobe Managed Services-kunder.
+
+>[!NOTE]
+>
+>IMS-inloggning för AEM stöder inte kapslade grupper i Admin Console.
 
 ## Introduktion {#introduction}
 
@@ -55,7 +58,7 @@ Inloggningsflödet för användaren visas nedan. Användaren omdirigeras till IM
 
 Kunden måste registrera sig för [!DNL Admin Console] för att kunna använda Adobe IMS för AEM autentisering.
 
-Som ett första steg bör kunden ha en organisation i Adobe IMS. Adobe Enterprise-kunder representeras som IMS-organisationer i [Adobe [!DNL Admin Console]](https://helpx.adobe.com/enterprise/using/admin-console.html).
+Som ett första steg bör kunden ha en organisation som är etablerad i Adobe IMS. Adobe Enterprise-kunder representeras som IMS-organisationer i [Adobe [!DNL Admin Console]](https://helpx.adobe.com/enterprise/using/admin-console.html).
 
 AEM Managed Services-kunder bör redan ha en organisation etablerad, och som en del av IMS-etableringen kommer kundinstanserna att vara tillgängliga i [!DNL Admin Console] för hantering av användarberättiganden och åtkomst.
 
@@ -85,7 +88,7 @@ Det finns tre sätt att introducera användare beroende på kundens storlek och 
 1. Överföra en CSV-fil med användare
 1. Synkronisera användare och grupper från kundens Enterprise Active Directory.
 
-#### Manuell addition via [!DNL Admin Console]-gränssnitt {#manual-addition-through-admin-console-ui}
+#### Manuell addition via användargränssnittet [!DNL Admin Console] {#manual-addition-through-admin-console-ui}
 
 Användare och grupper kan skapas manuellt i användargränssnittet för [!DNL Admin Console]. Den här metoden kan användas om de inte har ett stort antal användare att hantera. Ett antal färre än 50 AEM användare.
 
@@ -93,7 +96,7 @@ Användare kan också skapas manuellt om kunden redan använder den här metoden
 
 ![image2018-9-23_20-39-9](assets/image2018-9-23_20-39-9.png)
 
-#### Filöverföring i [!DNL Admin Console]-gränssnittet {#file-upload-in-the-admin-console-ui}
+#### Filöverföring i användargränssnittet för [!DNL Admin Console] {#file-upload-in-the-admin-console-ui}
 
 En CSV-fil kan laddas upp för att användarna ska kunna lägga till flera användare samtidigt:
 
@@ -163,7 +166,7 @@ Alla användare och grupper som läggs till under den här produktprofilen kan l
 
 ![screen_shot_2018-09-17at105623pm](assets/screen_shot_2018-09-17at105623pm.png)
 
-### Loggar in i AEM {#logging-into-aem}
+### Loggar in AEM {#logging-into-aem}
 
 #### Inloggning för lokal administratör {#local-admin-login}
 
