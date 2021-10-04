@@ -8,9 +8,9 @@ breadcrumb-title: Utvecklingshandbok
 user-guide-description: Den här guiden beskriver hur du skapar AEM.
 feature: Developing
 role: Developer
-source-git-commit: b82544398ca414afab867f188f33ae60989596f3
+source-git-commit: eda59d12d96ecc55bd58749985d2c15706344fe0
 workflow-type: tm+mt
-source-wordcount: '910'
+source-wordcount: '917'
 ht-degree: 6%
 
 ---
@@ -151,6 +151,7 @@ ht-degree: 6%
       + [Klientkontext i detalj](client-context.md)
       + [JavaScript-API för klientkontext](ccjsapi.md)
 + Utöka AEM{#extending-aem}
+   + [Utöka AEM med Adobe Developer App Builder](app-builder.md)
    + [Anpassa sidredigering](customizing-page-authoring-touch.md)
    + [Anpassa konsolerna](customizing-consoles-touch.md)
    + [Anpassa vyer av Sidegenskaper](page-properties-views.md)
