@@ -2,9 +2,9 @@
 title: Borttagna funktioner i Adobe Experience Manager 6.5.
 description: Versionsinformation om borttagna funktioner i Adobe Experience Manager 6.5.
 exl-id: d9b6140a-c37d-4b90-a60c-01f471d65621
-source-git-commit: becdfee534e4464147811302ed67de74b8044a24
+source-git-commit: a76772b8761e35a828814ffe0ac3b019266ff008
 workflow-type: tm+mt
-source-wordcount: '1745'
+source-wordcount: '1744'
 ht-degree: 2%
 
 ---
@@ -29,7 +29,7 @@ Kunderna rekommenderas att granska om de använder funktionen/funktionen i den a
 | Yta | Funktion | Ersättning |
 |---|---|---|
 | [!DNL Sites] | Mallbaserade enkla innehållsfragment. | [Modellbaserat strukturerat innehåll ](/help/assets/content-fragments/content-fragments-models.md) fragmenterar snön. |
-| Integrering med Creative Cloud | AEM till Mappdelning i Creative Cloud introducerades i AEM 6.2 som ett sätt att ge kreativa användare åtkomst till resurser från AEM, så att de kan öppna dem i CC-program och överföra nya filer eller spara ändringar i AEM. En ny funktion i Creative Cloud, Adobe Asset Link, ger en mycket bättre användarupplevelse och kraftfullare åtkomst till AEM direkt inifrån Photoshop, InDesign och Illustrator. Adobe planerar inte att göra ytterligare förbättringar av integrationen mellan AEM och Creative Cloud Mappdelning. Funktionen ingår i AEM, men kunderna rekommenderas att använda ersättningslösningar. | Kunder rekommenderas att byta till nya integrationsfunktioner för Creative Cloud, som Adobe Asset Link eller AEM. |
+| Integrering med Creative Cloud | AEM till Mappdelning i Creative Cloud introducerades i AEM 6.2 som ett sätt att ge kreativa användare åtkomst till resurser från AEM, så att de kan öppna dem i [!DNL Creative Cloud]-program och överföra nya filer eller spara ändringar i AEM. En ny funktion i Creative Cloud, Adobe Asset Link, ger en mycket bättre användarupplevelse och kraftfullare åtkomst till AEM direkt inifrån Photoshop, InDesign och Illustrator. Adobe planerar inte att göra ytterligare förbättringar av integrationen mellan AEM och Creative Cloud Mappdelning. Funktionen ingår i AEM, men kunderna rekommenderas att använda ersättningslösningar. | Kunder rekommenderas att byta till nya integrationsfunktioner för Creative Cloud, som Adobe Asset Link eller AEM. |
 | Assets | `AssetDownloadServlet` är inaktiverat som standard för publiceringsinstanserna. Mer information finns i [AEM checklista för säkerhet](/help/sites-administering/security-checklist.md). | Konfiguration som beskrivs i [AEM checklista för säkerhet](/help/sites-administering/security-checklist.md). |
 | Resurser | Om en användare inte har tillräcklig behörighet (läs- och skrivbehörighet) för `/content/dam/collections` kan användaren inte skapa en samling. | Följ användarens inställningar för åtkomstkontroll och se till att du har rätt behörigheter. |
 | Adobe Search &amp; Promote | Integreringen med Adobe Search &amp; Promote är föråldrad. Adobe planerar inte att göra ytterligare förbättringar av integrationen av Sök och Befordra. Observera att integrering med Sök och Befordra fortfarande stöds fullt ut när den är inaktuell. |  |
@@ -46,7 +46,7 @@ Kunderna rekommenderas att granska om de använder funktionen/funktionen i den a
 | Utvecklare | Klientbibliotek för hanteringsfält. Adobe planerar inte att underhålla och uppdatera Handlebar-klientbiblioteket som levereras som en del av distributionen (Quickstart) ytterligare | Adobe rekommenderar att användare som fortfarande behöver Handlebars för sin kod lägger till den i sin projektkodbas. |
 | Utvecklare | Advokatklientbiblioteket. Adobe planerar inte att vidare underhålla och uppdatera juristklientbiblioteket som levereras som en del av distributionen (Quickstart) | Adobe rekommenderar att kunder som fortfarande kräver att Lawndog lägger till koden i sin projektkodbas. |
 | Utvecklare | `Granite.Sling.js` klientbibliotek. Adobe planerar inte att ytterligare förbättra klientbiblioteket Granite.Sling.js som levereras som en del av distributionen (Quickstart) | Adobe rekommenderar att kunder som förlitar sig på att biblioteket kan koda om för att inte längre använda det. |
-| Utvecklare | Använda YUI för att komprimera/minimera JavaScript-klientbibliotek. Adobe planerar inte att uppdatera YUI-biblioteket ytterligare. Fram till AEM 6.4 var YUI standard att minifiera JavaScript med alternativet att byta till Google Closure Compiler (GCC). Från och med AEM 6.5 är GCC standard. | Adobe rekommenderar att man uppgraderar till AEM 6.5 för att gå över till GCC för implementering |
+| Utvecklare | Använda YUI för att komprimera/minimera JavaScript-klientbibliotek. Adobe planerar inte att uppdatera YUI-biblioteket ytterligare. Fram till AEM 6.4 var YUI standardinställning för att minimera JavaScript med möjlighet att växla till Google Closure Compiler (GCC). Från och med AEM 6.5 är GCC standard. | Adobe rekommenderar att man uppgraderar till AEM 6.5 för att gå över till GCC för implementering |
 | Utvecklare | Klassiskt redigeringsprogram för användargränssnittsdialogrutor i CRXDE-listan. Adobe planerar inte att ytterligare förbättra den klassiska dialogruteredigeraren för användargränssnittet som levereras som en del av distributionen (QuickStart) | Det finns ingen ersättning. |
 | Forms | AEM Forms integrering med AEM Mobile är föråldrad. | Det finns ingen ersättare. |  | Utvecklare | Klassiskt redigeringsprogram för användargränssnittsdialogrutor i CRXDE-listan. Adobe planerar inte att ytterligare förbättra den klassiska dialogruteredigeraren för användargränssnittet som levereras som en del av distributionen (QuickStart) | Det finns ingen ersättning. |
 | Utvecklare | Klientbibliotek med Lodash/underscore. Adobe planerar inte att ytterligare underhålla och uppdatera Lodash-/understreckklientbiblioteket som levereras som en del av distributionen (QuickStart) | Adobe rekommenderar att kunder som fortfarande behöver Lodash/underscore för sin kod lägger till den i sin projektkodbas. |
@@ -67,7 +67,7 @@ I det här avsnittet visas funktioner som har tagits bort från AEM 6.5. Tidigar
 | Forms | Uppgradering från LiveCycle ES4 SP1 till AEM 6.5 Forms på JEE är inte tillgänglig | Se [tillgängliga uppgraderingssökvägar](../forms/using/upgrade.md) i uppgraderingsdokumentationen för AEM Forms. |
 | Forms | UPD-baserat klusterstöd har tagits bort från AEM Forms på JEE | Du kan bara använda TCP-baserad klustring i AEM Forms på JEE. Om du uppgraderar en UDP-multicast-server från en tidigare version till AEM 5.5 Forms på JEE utförs manuella konfigurationer för att växla till TCP-baserad gemfire-klustring. Mer information finns i [Uppgradera till AEM 6.5-formulär på JEE](../forms/using/upgrade-forms-jee.md) |
 | Utvecklare | Firebug Lite har tagits bort från standarddistributionen (Quickstart) | Använd de inbyggda webbläsarkonsolerna för utvecklare |
-| Utvecklare | Ta bort `customJavaScriptPath`-stödet i HTML Client Library Manager. | Ingen ersättning |
+| Utvecklare | Ta bort `customJavaScriptPath`-stöd i HTML Client Library Manager. | Ingen ersättning |
 | [!DNL Assets] | Funktionen för avlastning av resurser har tagits bort i [!DNL Adobe Experience Manager] 6.5. | Det finns ingen ersättning. |
 | Cache | `system/console/slingjsp` är inte längre tillgängligt i AEM 6.5. | Klasser och något cacheminne lagras under paketet Apache Sling Commons FileSystem ClassLoader. Du kan kontrollera paketnumret i AEM webbkonsol och ta bort cachemappen direkt från filsystemet (`crx-quickstart/launchpad/felix/bundle<ID>`). |
 

@@ -3,12 +3,12 @@ title: Sök efter digitala resurser och bilder i [!DNL Adobe Experience Manager]
 description: Lär dig hur du söker efter de nödvändiga resurserna i [!DNL Adobe Experience Manager] genom att använda panelen Filter och hur du använder de resurser som visas i sökningen.
 contentOwner: AG
 mini-toc-levels: 1
-feature: Sök, metadata
+feature: Search, Metadata
 role: User
 exl-id: 588433b2-564a-430f-9d04-480465ece2ad
-source-git-commit: 19dd081674b4954498d6aa62335f6b5a9f2a4146
+source-git-commit: a76772b8761e35a828814ffe0ac3b019266ff008
 workflow-type: tm+mt
-source-wordcount: '5524'
+source-wordcount: '5521'
 ht-degree: 4%
 
 ---
@@ -42,7 +42,7 @@ Använd panelen **[!UICONTROL Filters]** för att söka efter resurser, mappar, 
 
 Bekanta dig med sökgränssnittet och de tillgängliga åtgärderna.
 
-![Förstå gränssnittet för sökresultat i Experience Manager Assets](assets/aem_search_results.png)
+![Experience Manager Assets sökresultatgränssnitt](assets/aem_search_results.png)
 
 *Bild: Förstå gränssnittet för  [!DNL Experience Manager Assets] sökresultat.*
 
@@ -161,7 +161,7 @@ Du kan söka efter resurser baserat på exakta värden för metadatafält, som t
 | Originalformat | skapare:John |
 | Plats | plats:NA |
 | Beskrivning | description:&quot;Sample Image&quot; |
-| Skapare | creatortool:&quot;Adobe Photoshop CC 2015&quot; |
+| Skapare | creatortool:&quot;Adobe Photoshop&quot; |
 | Copyright-ägare | copyrightowner:&quot;Adobe Systems&quot; |
 | Medarbetare | medarbetare:John |
 | Användningsvillkor | usageterms:&quot;CopyRights Reserved&quot; |
@@ -171,7 +171,7 @@ Du kan söka efter resurser baserat på exakta värden för metadatafält, som t
 | Fråntid | offtime:YYY-MM-DDTHH |
 | Tidsintervall (förfaller dateontime, offtime) | faktafält: nedsänkt..upperbound |
 | Bana | /content/dam/&lt;mappnamn> |
-| PDF-titel | pdftitle:&quot;Adobe-dokument&quot; |
+| PDF | pdftitle:&quot;Adobe-dokument&quot; |
 | Ämne | ämne:&quot;Utbildning&quot; |
 | Taggar | taggar:&quot;Plats och resa&quot; |
 | Typ | type:&quot;image\png&quot; |
@@ -206,7 +206,7 @@ Med Adobe Asset Link kan formgivare nu komma åt innehåll som lagras i [!DNL Ex
 
 ### Sök efter resurser i [!DNL Experience Manager]-datorprogrammet {#desktop-app}
 
-Kreatörer använder datorprogrammet för att göra [!DNL Experience Manager Assets] enkelt sökbart och tillgängligt på sin lokala dator (Win eller Mac). Det är enkelt att visa de önskade resurserna i Finder eller Utforskaren i Windows, som öppnats i skrivbordsprogram och ändrats lokalt. Ändringarna sparas sedan till [!DNL Experience Manager] med en ny version som skapas i databasen. Programmet stöder enkla sökningar med ett eller flera nyckelord, jokertecken `*` och `?` och operatorn `AND`. Se [bläddra bland, söka efter och förhandsgranska resurser](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#browse-search-preview-assets) i skrivbordsappen.
+Kreatörer använder datorprogrammet för att göra [!DNL Experience Manager Assets] enkelt sökbart och tillgängligt på sin lokala dator (Win eller Mac). Kreatörerna kan enkelt visa de önskade resurserna i Mac Finder eller Utforskaren i Windows, som har öppnats i skrivbordsprogram och ändrats lokalt. Ändringarna sparas sedan till [!DNL Experience Manager] med en ny version som har skapats i databasen. Programmet stöder enkla sökningar med ett eller flera nyckelord, jokertecken `*` och `?` och operatorn `AND`. Se [bläddra bland, söka efter och förhandsgranska resurser](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#browse-search-preview-assets) i skrivbordsappen.
 
 ### Sök efter resurser i [!DNL Brand Portal] {#brand-portal}
 
@@ -378,7 +378,7 @@ Affärsanvändare, administratörer och DAM-bibliotek kan definiera vissa metada
 
 ### Extrahera text när resurser överförs {#extracttextupload}
 
-Du kan konfigurera [!DNL Experience Manager] så att texten extraheras från resurserna när användare överför resurser, till exempel PSD- eller PDF-filer. [!DNL Experience Manager] indexerar den extraherade texten och hjälper användarna att söka efter dessa resurser baserat på den extraherade texten. Se [överföra resurser](/help/assets/manage-assets.md#uploading-assets).
+Du kan konfigurera [!DNL Experience Manager] så att texten extraheras från resurserna när användare överför resurser, till exempel PSD eller PDF. [!DNL Experience Manager] indexerar den extraherade texten och hjälper användarna att söka efter dessa resurser baserat på den extraherade texten. Se [överföra resurser](/help/assets/manage-assets.md#uploading-assets).
 
 Om textextraheringen blir alltför resurskrävande för distributionen bör du överväga att [inaktivera textrahering](https://helpx.adobe.com/experience-manager/kb/Disable-binary-text-extraction-to-optimize-Lucene-indexing-AEM.html).
 

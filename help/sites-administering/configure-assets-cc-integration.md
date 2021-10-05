@@ -2,12 +2,12 @@
 title: Konfigurera AEM Assets-integrering med Experience Cloud
 description: Lär dig hur du konfigurerar AEM Assets-integrering med Experience Cloud.
 contentOwner: AG
-feature: Resurshantering
+feature: Asset Management
 role: User, Architect, Admin
 exl-id: d167cf97-6829-45a7-ba46-2239d530b060
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: a76772b8761e35a828814ffe0ac3b019266ff008
 workflow-type: tm+mt
-source-wordcount: '906'
+source-wordcount: '905'
 ht-degree: 1%
 
 ---
@@ -55,7 +55,7 @@ I backend autentiserar AEM din profil med gatewayen och synkroniserar sedan data
 1. I listan **[!UICONTROL Scope]** väljer du **[!UICONTROL dam-read]**, **[!UICONTROL dam-sync]**, **[!UICONTROL dam-write]** och **[!UICONTROL cc-share]**.
 1. Klicka på **[!UICONTROL Create]**. Ett meddelande meddelar att programmet har skapats.
 
-   ![Meddelande om att programmet har skapats för att integrera AEM Assets med Adobe CC](assets/chlimage_1-50.png)
+   ![Meddelande om att programmet har skapats för att integrera AEM Assets med Creative Cloud](assets/chlimage_1-50.png)
 
 1. Kopiera **[!UICONTROL Application ID]** som genereras för det nya programmet.
 
@@ -75,13 +75,13 @@ I backend autentiserar AEM din profil med gatewayen och synkroniserar sedan data
 
 1. I dialogrutan **[!UICONTROL Create Configuration]** anger du en titel och ett namn för den nya konfigurationen och klickar på **[!UICONTROL Create]**.
 
-   ![Namnge en ny konfiguration för integrering av AEM Assets och CC](assets/aem-ec-integration-config1.png)
+   ![Namnge en ny konfiguration för integrering av AEM Assets och Creative Cloud](assets/aem-ec-integration-config1.png)
 
 1. I fältet **[!UICONTROL Tenant URL]** anger du URL:en för AEM Assets. Tidigare, om URL-adressen har definierats som `https://<tenant_id>.marketing.adobe.com`, ändrar du den till `https://<tenant_id>.experiencecloud.adobe.com`.
 
    1. Navigera till **Verktyg > Cloud Services > Äldre Cloud Services**. Klicka på **Visa konfigurationer** under Adobe Experience Cloud.
    1. Välj den befintliga konfiguration som ska redigeras. Redigera konfigurationen och ersätt `marketing.adobe.com` till `experiencecloud.adobe.com`.
-   1. Spara konfigurationen. Testa replikeringsagenterna för MAC-synk.
+   1. Spara konfigurationen. Testa replikeringsagenterna för MAC-synkronisering.
 
 1. Klistra in det program-ID som du kopierade i slutet av proceduren [skapa ett program](#create-an-application) i fältet **[!UICONTROL Client ID]**.
 

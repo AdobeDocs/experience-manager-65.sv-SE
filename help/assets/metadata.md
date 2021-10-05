@@ -6,7 +6,7 @@ mini-toc-levels: 1
 feature: Tagging, Metadata
 role: Architect, Leader
 exl-id: c630709a-7e8b-417c-83a4-35ca9be832a0
-source-git-commit: afc72fb6b324cf2e0ad8168f783d9c1a6f96c614
+source-git-commit: a76772b8761e35a828814ffe0ac3b019266ff008
 workflow-type: tm+mt
 source-wordcount: '2235'
 ht-degree: 10%
@@ -29,9 +29,9 @@ Metadata är ytterligare information om resursen som kan sökas igenom. Den läg
 
 Följande metoder kan användas för att lägga till metadata i digitala resurser:
 
-* Till att börja med lägger de program som skapar resurser till metadata i det. [Acrobat lägger till exempel till metadata](https://helpx.adobe.com/acrobat/using/pdf-properties-metadata.html) i PDF-filer eller så lägger en kamera till några grundläggande metadata i fotona. När du genererar resurser kan du lägga till metadata i de ursprungliga programmen. Du kan till exempel [lägga till IPTC-metadata i Adobe Lightroom](https://helpx.adobe.com/lightroom-classic/help/metadata-basics-actions.html).
+* Till att börja med lägger de program som skapar resurser till metadata i det. [Acrobat lägger till exempel till metadata](https://helpx.adobe.com/acrobat/using/pdf-properties-metadata.html) i PDF-filer eller så lägger en kamera till vissa grundläggande metadata i fotona. När du genererar resurser kan du lägga till metadata i de ursprungliga programmen. Du kan till exempel [lägga till IPTC-metadata i Adobe Lightroom](https://helpx.adobe.com/lightroom-classic/help/metadata-basics-actions.html).
 
-* Innan du överför en resurs till [!DNL Experience Manager] kan du redigera och ändra metadata med hjälp av det ursprungliga programmet som användes för att skapa en resurs eller med något annat metadataredigeringsprogram. När du överför en resurs till Experience Manager bearbetas metadata. Se till exempel hur du [arbetar med metadata i [!DNL Adobe Bridge]](https://helpx.adobe.com/bridge/user-guide.html/bridge/using/metadata-adobe-bridge.ug.html) och se [taggpanelen för [!DNL Bridge CC]](https://exchange.adobe.com/creativecloud.details.20009.aem-tags-panel-for-bridge-cc.html) i [!DNL Adobe Exchange].
+* Innan du överför en resurs till [!DNL Experience Manager] kan du redigera och ändra metadata med hjälp av det ursprungliga programmet som användes för att skapa en resurs eller med något annat metadataredigeringsprogram. När du överför en resurs till Experience Manager bearbetas metadata. Se till exempel hur du [arbetar med metadata i [!DNL Adobe Bridge]](https://helpx.adobe.com/bridge/user-guide.html/bridge/using/metadata-adobe-bridge.ug.html) och se [taggpanelen för [!DNL Adobe Bridge]](https://exchange.adobe.com/creativecloud.details.20009.aem-tags-panel-for-bridge-cc.html) i [!DNL Adobe Exchange].
 
 * I [!DNL Experience Manager Assets] kan du lägga till eller redigera metadata för resurser manuellt på sidan [!UICONTROL Properties].
 
