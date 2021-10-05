@@ -1,7 +1,7 @@
 ---
 title: Utöka [!DNL Adobe Experience Manager] 6.5 med Adobe Developer App Builder.
 description: Utöka [!DNL Adobe Experience Manager] 6.5 med Adobe Developer App Builder.
-source-git-commit: aab7d4aaf11b6aef3b729f906259a76c152fd6f0
+source-git-commit: e6153e1a816bb9169f96fa75827593485a6ddbd4
 workflow-type: tm+mt
 source-wordcount: '577'
 ht-degree: 0%
@@ -27,7 +27,7 @@ App Builder (tidigare kallat Project Fire) har varit tillgängligt för företag
 
 >[!NOTE]
 >
-> AEM som Cloud Service-kunder som vill utnyttja App Builder går du till [Extending Adobe Experience Manager som Cloud Service med Adobe Developer App Builder](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/configuring-and-extending/app-builder.html).
+> För AEM as a Cloud Service kunder som vill utnyttja App Builder går du till [Extending Adobe Experience Manager as a Cloud Service med Adobe Developer App Builder](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/configuring-and-extending/app-builder.html).
 
 ## Arkitektur {#architecture}
 
@@ -42,26 +42,26 @@ Följande diagram visar hur ett standardprogram som är byggt på App Builder ut
 
 ![Arkitektur](assets/firefly-architecture.jpg)
 
-Mer information om App Builder-arkitekturen finns i [Architecture Overview](https://www.adobe.io/project-firefly/docs/guides/).
+Mer information om App Builder-arkitekturen finns i [Architecture Overview](https://www.adobe.io/app-builder/docs/guides/).
 
 ## Kom igång med App Builder {#additional-resources}
 
 Vi har skapat en serie dokumentation som hjälper dig att komma igång med App Builder:
 
-* [App Builder - komma igång](https://www.adobe.io/project-firefly/docs/getting_started/)
+* [App Builder - komma igång](https://www.adobe.io/app-builder/docs/getting_started/)
 
 ## Fortsätta inlärningen med dokumentation {#appbuilder-documentation}
 
 App Builder innehåller videor och dokumentation för utvecklare, inklusive guider och referensdokumentation, som hjälper dig att börja utveckla egna program:
 
-* [App Builder-dokumentation](https://www.adobe.io/project-firefly/docs/overview/)
+* [App Builder-dokumentation](https://www.adobe.io/app-builder/docs/overview/)
 * [App Builder-videor](https://www.youtube.com/playlist?list=PLcVEYUqU7VRfDij-Jbjyw8S8EzW073F_o)
 
 ## Testa ett av exempelprogrammen {#appbuilder-codesamples}
 
 Vill du börja utveckla? Vi har massor av exempelprogram som hjälper dig att komma igång snabbt:
 
-* [App Builder Code Labs på Adobe Developer Website](https://www.adobe.io/project-firefly/docs/resources/)
+* [App Builder Code Labs på Adobe Developer Website](https://www.adobe.io/app-builder/docs/resources/)
 
 ## Stöd {#support}
 
