@@ -1,8 +1,8 @@
 ---
 title: Tålig dag
-seo-title: Tålig dag
+seo-title: Tough Day
 description: Tough Day-testet simulerar den dagliga belastningen för cirka 1 000 författare i ett värsta scenario där alla åtgärder utförs samtidigt.
-seo-description: Tough Day-testet simulerar den dagliga belastningen för cirka 1 000 författare i ett värsta scenario där alla åtgärder utförs samtidigt.
+seo-description: The Tough Day test simulates the daily load of around 1000 authors in a worst-case scenario with all the operations going on at the same time.
 uuid: 1b672182-40f5-4580-b038-2e3c8fbfb8b7
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,19 +11,18 @@ content-type: reference
 discoiquuid: ea6b40fe-b6e1-495c-b34f-8815a4e2e42e
 docset: aem65
 exl-id: ceb9671c-57f9-4d81-94c0-0dbccd4d90a2
-translation-type: tm+mt
-source-git-commit: 3727b561a2ee9778d75f18530caf16c6c3ef846a
+source-git-commit: e1f9cf160892c2fa5c7cc7f80f998166dbc877e6
 workflow-type: tm+mt
-source-wordcount: '1909'
+source-wordcount: '1883'
 ht-degree: 1%
 
 ---
 
 # Tålig dag{#tough-day}
 
-## Vad är Tough Day 2 {#what-is-tough-day}?
+## Vad är Tom Dag 2? {#what-is-tough-day}
 
-&quot;Tough Day 2&quot; är ett program som gör att du kan stresstesta gränserna för din AEM. Den kan köras direkt med testsviten eller konfigureras för att passa dina testbehov. Du kan titta på [den här inspelningen](https://docs.adobe.com/ddc/en/gems/Toughday2---A-new-and-improved-stress-testing-and-benchmarking-tool.html) om du vill se en presentation av programmet.
+&quot;Tough Day 2&quot; är ett program som gör att du kan stresstesta gränserna för din AEM. Den kan köras direkt med testsviten eller konfigureras för att passa dina testbehov. Du kan titta på [den här inspelningen](https://repo1.maven.org/maven2/com/adobe/qe/toughday2/) om du vill se en presentation av programmet.
 
 ## Köra tuff dag 2 {#how-to-run-tough-day}
 
@@ -55,8 +54,7 @@ java -jar toughday2.jar [--help | --help_full | --help_tests | --help_publish]  
 >
 >Grovdag 2 har inget upprensningssteg. Därför bör du köra Tough Day 2 på en klonad mellanlagringsinstans och inte på huvudproduktionsinstansen. Mellanlagringsinstansen bör tas bort efter testerna.
 
-
-### Hämta hjälp {#getting-help}
+### Få hjälp {#getting-help}
 
 Dag 2 erbjuder en mängd hjälpalternativ som du kan komma åt från kommandoraden. Till exempel:
 
@@ -148,7 +146,7 @@ Anpassning kan göras på två sätt: kommandoradsparametrar eller dynamiska kon
 
 Det enda sättet att spara en testkonfiguration är att kopiera den i yaml-format. Mer information finns i den här [toughday.yaml](https://repo.adobe.com/nexus/service/local/repositories/releases/content/com/adobe/qe/toughday2/0.2.1/toughday2-0.2.1.yaml)-konfigurationen och i exemplen på yaml-konfiguration i avsnitten nedan.
 
-### Lägger till ett nytt test {#adding-a-new-test}
+### Lägga till ett nytt test {#adding-a-new-test}
 
 Om du inte vill använda standardsviten `toughday` kan du lägga till ett test med parametern `add`. I exemplen nedan visas hur du lägger till `CreateAssetTreeTest`-testet antingen med kommandoradsparametrar eller en gul konfigurationsfil.
 
@@ -167,7 +165,7 @@ tests:
   - add : CreateAssetTreeTest
 ```
 
-### Lägga till flera instanser av samma test {#adding-multiple-instances-of-the-same-test}
+### Lägga till flera instanser av samma test  {#adding-multiple-instances-of-the-same-test}
 
 Du kan också lägga till och köra flera instanser av samma test, men varje instans måste ha ett unikt namn. I exemplen nedan visas hur du lägger till två instanser av samma test antingen med kommandoradsparametrar eller en gul konfigurationsfil.
 
@@ -191,7 +189,7 @@ tests:
       name : SecondAssetTree
 ```
 
-### Ändra testegenskaperna {#changing-the-test-properties}
+### Ändra testegenskaper {#changing-the-test-properties}
 
 Om du behöver ändra en eller flera av testegenskaperna kan du lägga till den egenskapen på kommandoraden eller i yaml-konfigurationsfilen. Om du vill visa alla tillgängliga testegenskaper lägger du till parametern `--help <TestClass/PublisherClass>` på kommandoraden, till exempel:
 
@@ -397,7 +395,7 @@ publishmode:
         -add : CreatePageTreeTest
 ```
 
-### Loggar {#logging}
+### Loggning {#logging}
 
 Tough Day 2 skapar en loggmapp i samma katalog som du körde Tough Day 2. Den här mappen innehåller två typer av loggar:
 
@@ -406,7 +404,7 @@ Tough Day 2 skapar en loggmapp i samma katalog som du körde Tough Day 2. Den h�
 
 Loggarna skrivs inte över, efterföljande körningar lägger till meddelanden i befintliga loggar. Loggarna har flera nivåer. Mer information finns i ` [loglevel parameter](/help/sites-developing/tough-day.md#global-parameters)`.
 
-#### Exempelanvändning {#example-usage}
+#### Exempel på användning {#example-usage}
 
 #### Kända fel {#known-issues}
 
