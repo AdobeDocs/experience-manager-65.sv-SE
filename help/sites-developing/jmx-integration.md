@@ -1,23 +1,17 @@
 ---
 title: Integrera tjänster med JMX-konsolen
-seo-title: Integrera tjänster med JMX-konsolen
+seo-title: Integrating Services with the JMX Console
 description: Visa tjänstattribut och åtgärder så att administrationsåtgärder kan utföras genom att skapa och distribuera MBeans för att hantera tjänster med JMX Console
-seo-description: Visa tjänstattribut och åtgärder så att administrationsåtgärder kan utföras genom att skapa och distribuera MBeans för att hantera tjänster med JMX Console
-uuid: 4a489a24-af10-4505-8333-aafc0c81dd3e
-contentOwner: Guillaume Carlino
-products: SG_EXPERIENCEMANAGER/6.5/SITES
+seo-description: Expose service attributes and operations to enable administration tasks to be performed by creating and deploying MBeans to manage services using the JMX Console
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: 83c590e0-2e6c-4499-a6ea-216e4c7bc43c
-docset: aem65
-translation-type: tm+mt
-source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
+exl-id: fe727406-09cb-4516-8278-806fd78cfc12
+source-git-commit: a2e5a5ae7585299de869dbf8744d7be4b86c5bf8
 workflow-type: tm+mt
-source-wordcount: '1689'
+source-wordcount: '1659'
 ht-degree: 0%
 
 ---
-
 
 # Integrera tjänster med JMX-konsolen{#integrating-services-with-the-jmx-console}
 
@@ -31,7 +25,7 @@ På Apache Felix-plattformen driftsätter du MBeans som OSGi-tjänster. När en 
 
 ![jmxwhiteboard](assets/jmxwhiteboard.png)
 
-## Skapar MBeans för CQ5 och CRX {#creating-mbeans-for-cq-and-crx}
+## Skapa MBeans för CQ5 och CRX {#creating-mbeans-for-cq-and-crx}
 
 De MBeans du skapar för CQ5- eller CRX-resurser baseras på gränssnittet javax.management.DynamicMBean. För att skapa dem följer du de vanliga designmönstren i JMX-specifikationen:
 
@@ -41,7 +35,7 @@ De MBeans du skapar för CQ5- eller CRX-resurser baseras på gränssnittet javax
 
 Förutom att definiera hanteringsgränssnittet definierar gränssnittet även OSGi-tjänstgränssnittet. Implementeringsklassen implementerar OSGi-tjänsten.
 
-### Använda anteckningar för att ange MBean-information {#using-annotations-to-provide-mbean-information}
+### Använda anteckningar för att tillhandahålla MBean-information {#using-annotations-to-provide-mbean-information}
 
 Paketet [com.adobe.granite.jmx.annotation](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/jmx/annotation/package-summary.html) innehåller flera anteckningar och klasser för att enkelt ge JMX-konsolen MBean-metadata. Använd dessa anteckningar och klasser i stället för att lägga till information direkt i MBeanInfo-objektet.
 
@@ -289,7 +283,6 @@ WorkflowMBeanManager-tjänsten innehåller komponentaktiveringsmetoden som skapa
 >[!NOTE]
 >
 >Implementeringen av WorkflowMBeanManager skapar bara MBean-tjänster för modellkonfigurationer som finns när komponenten aktiveras. En mer robust implementering lyssnar efter databashändelser för nya modellkonfigurationer och ändringar eller borttagningar av befintlig modellkonfiguration. När en ändring inträffar kan hanteraren skapa, ändra eller ta bort motsvarande WorkflowMBean-tjänst.
-
 
 #### WorkflowMBeanManager-gränssnitt {#workflowmbeanmanager-interface}
 
@@ -551,7 +544,7 @@ För enkelhetens skull kan du kopiera och klistra in följande XML-kod i din pom
 
 Lägg till följande profil i din maven-inställningsfil för att använda databasen för publika Adobe.
 
-#### Maskprofil {#maven-profile}
+#### Maven Profile {#maven-profile}
 
 ```xml
 <profile>
@@ -562,13 +555,13 @@ Lägg till följande profil i din maven-inställningsfil för att använda datab
     <properties>
          <releaseRepository-Id>adobe-public-releases</releaseRepository-Id>
          <releaseRepository-Name>Adobe Public Releases</releaseRepository-Name>
-         <releaseRepository-URL>https://repo.adobe.com/nexus/content/groups/public</releaseRepository-URL>
+         <releaseRepository-URL>https://repo1.maven.org/maven2/com/adobe/</releaseRepository-URL>
     </properties>
     <repositories>
          <repository>
              <id>adobe-public-releases</id>
-             <name>Adobe Basel Public Repository</name>
-             <url>https://repo.adobe.com/nexus/content/groups/public</url>
+             <name>Adobe  Public Repository</name>
+             <url>https://repo1.maven.org/maven2/com/adobe/</url>
              <releases>
                  <enabled>true</enabled>
                  <updatePolicy>never</updatePolicy>
@@ -581,8 +574,8 @@ Lägg till följande profil i din maven-inställningsfil för att använda datab
      <pluginRepositories>
          <pluginRepository>
              <id>adobe-public-releases</id>
-             <name>Adobe Basel Public Repository</name>
-             <url>https://repo.adobe.com/nexus/content/groups/public</url>
+             <name>Adobe Public Repository</name>
+             <url>https://repo1.maven.org/maven2/com/adobe/</url>
              <releases>
                  <enabled>true</enabled>
                  <updatePolicy>never</updatePolicy>

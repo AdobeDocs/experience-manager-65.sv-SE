@@ -1,34 +1,32 @@
 ---
 title: Bevakad mapp i AEM Forms
-seo-title: Bevakad mapp i AEM Forms
+seo-title: Watched folder in AEM Forms
 description: En administratör kan placera en mapp på bevakning och starta en arbetsflödes-, tjänst- eller skriptåtgärd när en fil placeras i den mapp som bevakas.
-seo-description: En administratör kan placera en mapp på bevakning och starta en arbetsflödes-, tjänst- eller skriptåtgärd när en fil placeras i den mapp som bevakas.
+seo-description: An administrator can put a folder on watch and start a workflow, service, or script operation when a file is placed in the folder being watched.
 uuid: 39eac0fd-8212-46ff-b75d-8b4320d448a9
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 discoiquuid: db38972c-be3f-49fd-8cc1-45b16ed244af
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+exl-id: fbf5c7c3-cb01-4fda-8e5d-11d56792d4bf
+source-git-commit: 79dcba8e14eac39467510416bf31737ac721b07f
 workflow-type: tm+mt
-source-wordcount: '7153'
+source-wordcount: '7118'
 ht-degree: 0%
 
 ---
 
-
 # Bevakad mapp i AEM Forms{#watched-folder-in-aem-forms}
 
-En administratör kan konfigurera en nätverksmapp, en s.k. bevakad mapp, så att när en användare monterar en fil (t.ex. en PDF-fil) i den bevakade mappen så startas ett förkonfigurerat arbetsflöde, en tjänst eller ett skript för att bearbeta den tillagda filen. När tjänsten har utfört den angivna åtgärden sparas resultatfilen i en angiven utdatamapp. Mer information om arbetsflöde, tjänst och skript finns i [Olika metoder för att bearbeta filer](#variousmethodsforprocessingfiles).
+En administratör kan konfigurera en nätverksmapp, en så kallad bevakad mapp, så att när en användare placerar en fil (till exempel en PDF-fil) i den bevakade mappen så startas ett förkonfigurerat arbetsflöde, en tjänst eller en skriptåtgärd för att bearbeta den tillagda filen. När tjänsten har utfört den angivna åtgärden sparas resultatfilen i en angiven utdatamapp. Mer information om arbetsflöde, tjänst och skript finns i [Olika metoder för att bearbeta filer](#variousmethodsforprocessingfiles).
 
 ## Skapa en bevakad mapp {#create-a-watched-folder}
 
 Du kan använda någon av följande metoder för att skapa en bevakad mapp i filsystemet:
 
 * När du konfigurerar egenskaperna för en nod för konfiguration av bevakad mapp anger du den fullständiga sökvägen till den överordnade katalogen i egenskapen folderPath och lägger till namnet på den bevakade mapp som ska skapas, vilket visas i följande exempel: `C:/MyPDFs/MyWatchedFolder`
-The 
-`MyWatchedFolder`finns inte, AEM Forms försöker skapa mappen med den angivna sökvägen.
+Mappen `MyWatchedFolder`finns inte. AEM Forms försöker skapa mappen med den angivna sökvägen.
 
 * Skapa en mapp på filsystemet innan du konfigurerar en bevakad mappslutpunkt och ange sedan den fullständiga sökvägen i egenskapen folderPath. Mer information om egenskapen folderPath finns i [Egenskaper för bevakad mapp](#watchedfolderproperties).
 
@@ -54,14 +52,13 @@ Om du vill konfigurera en bevakad mapp skapar du en konfigurationsnod för bevak
    * `inputProcessorType`
    * `inputProcessorId`
    * `outputFilePattern`
-
    En fullständig lista över egenskaper som stöds finns i [Egenskaper för bevakad mapp](#watchedfolderproperties).
 
 1. Klicka på **Spara alla**. När noden har skapats och egenskaperna har sparats. Mapparna `input`, `result`, `failure`, `preserve` och `stage` skapas med den sökväg som anges i egenskapen `folderPath`.
 
    Sökningsjobbet startar skanningen av den bevakade mappen med ett angivet tidsintervall.
 
-## Bevakade mappegenskaper {#watchedfolderproperties}
+## Egenskaper för bevakad mapp {#watchedfolderproperties}
 
 Du kan konfigurera följande egenskaper för en bevakad mapp.
 
@@ -143,7 +140,6 @@ Mer information om filmönster finns i [Om filmönster](../../forms/using/watche
    * %l = millisekund
    * %R = slumptal (mellan 0 och 9)
    * %P = process- eller jobb-ID
-
    Om den till exempel är 2009-08-17 och du anger C:/Test/WF0/error/%Y/%M/%D/%H/ är resultatmappen C:/Test/WF0/error/2009/07/17/20
 
    Om sökvägen inte är absolut men relativ skapas mappen i den bevakade mappen. Standardvärdet är result/%Y/%M/%D/, som är resultatmappen i den bevakade mappen. Mer information om filmönster finns i [Om filmönster](../../forms/using/watched-folder-in-aem-forms.md#p-file-and-folder-patterns-p).
@@ -158,7 +154,7 @@ Mer information om filmönster finns i [Om filmönster](../../forms/using/watche
 
    Inställningarna för avsökningsintervall och Gruppstorlek avgör hur många filer i Bevakade mappar som ska tas upp vid varje avsökning. Bevakad mapp använder en Quartz-trådpool för att skanna indatamappen. Trådpoolen delas med andra tjänster. Om skanningsintervallet är litet genomsöks indatamappen ofta av trådarna. Om filer ofta placeras i den bevakade mappen bör du hålla sökintervallet litet. Om filerna tas bort sällan bör du använda ett större inläsningsintervall så att de andra tjänsterna kan använda trådarna.
 
-   Om det finns en stor mängd filer som tas bort gör du gruppstorleken stor. Om till exempel tjänsten som startas av slutpunkten Bevakade mappar kan bearbeta 700 filer per minut, och användarna släpper filer i indatamappen i samma takt, och du sedan anger värdet 350 för Gruppstorlek och 30 sekunder för att få prestandan Bevakade mappar utan att kostnaden för att skanna den Bevakade mappen för ofta påverkas.
+   Om det finns en stor mängd filer som tas bort gör du gruppstorleken stor. Om till exempel tjänsten som startas av slutpunkten Bevakade mappar kan bearbeta 700 filer per minut, och användare släpper filer i indatamappen i samma takt, och sedan ställer du in batchstorleken på 350 och avsökningsintervallet på 30 sekunder, kan du förbättra prestandan för Bevakade mappar utan att det kostar för mycket att skanna den bevakade mappen.
 
    När filer släpps i den bevakade mappen listas filerna i indata, vilket kan försämra prestanda om skanningen sker varje sekund. Om du ökar skanningsintervallet kan prestandan förbättras. Om filvolymen som tas bort är liten justerar du batchstorleken och avsökningsintervallet. Om till exempel 10 filer tas bort varje sekund, kan du prova att ange pollInterval till 1 sekund och Batch Size till 10
 
@@ -404,7 +400,7 @@ Om nyttolastens struktur skiljer sig från den bevakade mappens struktur kan du 
 
 #### Skapa ett anpassat nyttolastmappningsfilter {#creating-a-custom-payload-mapper-filter}
 
-1. Hämta [Adobe Client SDK](https://repo.adobe.com/nexus/content/groups/public/com/adobe/aemfd/aemfd-client-sdk/6.3.0/aemfd-client-sdk-6.3.0.jar).
+1. Hämta [Adobe Client SDK](https://repo1.maven.org/maven2/com/adobe/aemfd/aemfd-client-sdk/).
 1. Konfigurera klient-SDK i byggsökvägen för det maven-baserade projektet. För att komma igång kan du ladda ned och öppna följande maven-baserade projekt i den utvecklingsmiljö du vill.
 1. Redigera filterkoden för nyttolastsmappare som finns i exempelpaketet efter dina behov.
 1. Använd maven för att skapa ett paket med det anpassade nyttolastmappningsfiltret.
@@ -510,17 +506,17 @@ När du har aktiverat begränsning för en bevakad mappslutpunkt begränsas anta
 >
 >Begränsningen skalas inte med ett kluster. När du har aktiverat begränsning kommer klustret som helhet inte att bearbeta mer än det antal jobb som har angetts i gruppstorleken vid en given tidpunkt. Den här gränsen är klusterbred och gäller inte för alla noder i klustret. Om du till exempel har en gruppstorlek på 2 kan begränsningen nås med en enda nod som bearbetar två jobb, och inga andra noder kommer att anropa indatakatalogen tills ett av jobben är klart.
 
-#### Så här fungerar begränsningen {#how-throttling-works}
+#### Så här fungerar strypning {#how-throttling-works}
 
 Bevakad mapp skannar indatamappen vid varje pollInterval, hämtar antalet filer som anges i gruppstorleken och anropar måltjänsten för var och en av dessa filer. Om till exempel gruppstorleken är fyra hämtar Bevakad mapp fyra filer vid varje skanning, skapar fyra anropsbegäranden och anropar måltjänsten. Om Bevakade mappar anropas startas fyra jobb igen innan dessa begäranden har slutförts, oavsett om de föregående fyra jobben har slutförts eller inte.
 
 Begränsning förhindrar att bevakad mapp anropar nya jobb när tidigare jobb inte har slutförts. Bevakade mappar identifierar pågående jobb och bearbetar nya jobb baserat på batchstorleken minus pågående jobb. I det andra anropet anropas bara tre jobb till om antalet slutförda jobb är tre och ett jobb fortfarande pågår.
 
-* Bevakad mapp är beroende av antalet filer som finns i scenmappen för att ta reda på hur många jobb som pågår. Om filerna inte bearbetas i scenmappen anropas inga fler jobb av den bevakade mappen. Om batchstorleken till exempel är fyra och tre jobb stoppas, kommer Bevakad mapp endast att anropa ett jobb i efterföljande anrop. Det finns flera scenarier som kan göra att filer förblir obearbetade i scenmappen. När jobb har stoppats kan administratören avsluta processen på sidan Processhantering, så att Bevakad mapp flyttar filerna från scenmappen.
+* Bevakad mapp är beroende av antalet filer som finns i scenmappen för att ta reda på hur många jobb som pågår. Om filerna inte bearbetas i scenmappen anropas inga fler jobb av den bevakade mappen. Om batchstorleken till exempel är fyra och tre jobb stoppas, kommer Bevakade mappar endast att anropa ett jobb i efterföljande anrop. Det finns flera scenarier som kan göra att filer förblir obearbetade i scenmappen. När jobb har stoppats kan administratören avsluta processen på sidan Processhantering, så att Bevakad mapp flyttar filerna från scenmappen.
 * Om AEM Forms-servern kraschar innan Bevakade mappar anropar jobben kan administratören flytta filerna från scenmappen. Mer information finns i [Felpunkter och återställning](../../forms/using/watched-folder-in-aem-forms.md#p-failure-points-and-recoveryfailure-points-and-recovery-p).
 * Om AEM Forms-servern körs men Bevakade mappar inte körs när tjänsten Job Manager anropas tillbaka, vilket inträffar när tjänster inte startar i den ordnade sekvensen, kan administratören flytta filerna från scenmappen. Mer information finns i [Felpunkter och återställning](../../forms/using/watched-folder-in-aem-forms.md#p-failure-points-and-recoveryfailure-points-and-recovery-p).
 
-### Felpunkter och återställningspunkterFelpunkter och återställning {#failure-points-and-recoveryfailure-points-and-recovery}
+### Felpunkter och återställningFelpunkter och återställning {#failure-points-and-recoveryfailure-points-and-recovery}
 
 Vid varje omröstning låses indatamappen av Bevakad mapp, filerna som matchar inkluderingsfilmönstret flyttas till scenmappen och indatamappen låses upp. Låsning krävs så att två trådar inte kan hämta samma uppsättning filer och bearbeta dem två gånger. Chansen att detta händer ökar med ett litet pollInterval och en stor batchstorlek. När filer har flyttats till scenmappen låses indatamappen upp så att andra trådar kan skanna in mappen. Det här steget ger hög genomströmning eftersom andra trådar kan skanna medan en tråd bearbetar filerna.
 
@@ -543,7 +539,6 @@ Om den bevakade mappen inte kan bearbeta källfilerna i scenmappen kan du åters
 
    * Ändra egenskapen includeFilePattern för den bevakade mappen till något som inte matchar någon av de nya indatafilerna (ange till exempel NOMATCH).
    * Skjut upp processen som skapar nya indatafiler.
-
    Vänta tills AEM Forms återställer och bearbetar alla filer. De flesta filerna bör återställas och alla nya indatafiler bearbetas korrekt. Hur lång tid du väntar på att Bevakade mappar ska återställas och bearbetas beror på hur lång åtgärden ska vara och hur många filer som ska återställas.
 
 1. Avgör vilka filer som inte kan bearbetas. Om du väntade en viss tid och slutförde det föregående steget och det fortfarande finns obearbetade filer kvar i scenmappen går du till nästa steg.
@@ -556,7 +551,7 @@ Om den bevakade mappen inte kan bearbeta källfilerna i scenmappen kan du åters
 
 1. Om du förhindrade att Bevakad mapp bearbetar nya indatafiler i steg 2, ändrar du Inkludera filmönster till dess tidigare värde eller återaktiverar den process som du inaktiverade.
 
-### Bevakade mappar i kedjan {#chain-watched-folders-together}
+### Kedja bevakade mappar tillsammans {#chain-watched-folders-together}
 
 Bevakade mappar kan sammanfogas så att ett resultatdokument för en bevakad mapp är indatadokumentet för nästa bevakade mapp. Varje bevakad mapp kan anropa en annan tjänst. Genom att konfigurera bevakade mappar på det här sättet kan flera tjänster anropas. En bevakad mapp kan till exempel konvertera PDF-filer till Adobe PostScript® och en andra bevakad mapp kan konvertera PostScript-filerna till PDF/A-format. Det gör du genom att ställa in resultatmappen för den bevakade mappen som definieras av din första slutpunkt så att den pekar på indatamappen för den bevakade mappen som definieras av din andra slutpunkt.
 
@@ -593,13 +588,13 @@ Mappningar av utdataparametrar kan även ange ytterligare mönster, som:
 * %F = Källfilens namn
 * %E = Filnamnstillägg för källa
 
-Om mappningsmönstret för utdataparametrar avslutas med &quot;File.separator&quot; (som är sökvägsavgränsaren) skapas en mapp och innehållet kopieras till den mappen. Om mönstret inte avslutas med &quot;File.separator&quot; skapas innehållet (resultatfilen eller mappen) med det namnet.
+Om mappningsmönstret för utdataparametrar slutar med &quot;File.separator&quot; (som är sökvägsavgränsaren) skapas en mapp och innehållet kopieras till den mappen. Om mönstret inte avslutas med &quot;File.separator&quot; skapas innehållet (resultatfilen eller mappen) med det namnet.
 
 ## Använda PDF Generator med en bevakad mapp {#using-pdf-generator-with-a-watched-folder}
 
 Du kan konfigurera en bevakad mapp för att initiera ett arbetsflöde, en tjänst eller ett skript för att bearbeta indatafilerna. I följande avsnitt konfigurerar vi en bevakad mapp att initiera ett ECMAScript. ECMAScript använder PDF Generator för att konvertera Microsoft Word-dokument (.docx) till PDF-dokument.
 
-Utför följande steg för att konfigurera en bevakad mapp med PDF Generator:
+Så här konfigurerar du en bevakad mapp med PDF Generator:
 
 1. [Skapa ett ECMAScript](../../forms/using/watched-folder-in-aem-forms.md#p-create-an-ecmascript-p)
 1. [Skapa ett arbetsflöde](../../forms/using/watched-folder-in-aem-forms.md#p-create-a-workflow-p)
@@ -678,4 +673,3 @@ inputProcessorType (String): Den typ av process som ska startas. I den här sjä
 
    * outputFilePattern (String): Utdatafilens mönster. Du kan ange en mapp eller ett filmönster. Om ett mappmönster anges har utdatafilerna namn enligt arbetsflödena. Om ett filmönster anges har utdatafilerna namn som beskrivs i filmönstret.
    Förutom de obligatoriska egenskaper som nämns ovan, har Bevakade mappar även stöd för några valfria egenskaper. En fullständig lista och en beskrivning av valfria egenskaper finns i [Egenskaper för bevakad mapp](#watchedfolderproperties).
-

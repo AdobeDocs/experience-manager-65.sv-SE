@@ -1,22 +1,21 @@
 ---
 title: Skapa anpassade utseenden för anpassade formulärfält
-seo-title: Skapa anpassade utseenden för anpassade formulärfält
+seo-title: Create custom appearances for adaptive form fields
 description: Anpassa utseendet på färdiga komponenter i Adaptive Forms.
-seo-description: Anpassa utseendet på färdiga komponenter i Adaptive Forms.
+seo-description: Customize appearance of out-of-the-box components in Adaptive Forms.
 uuid: 1aa36443-774a-49fb-b3d1-d5a2d5ff849a
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
 discoiquuid: d388acef-7313-4e68-9395-270aef6ef2c6
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+exl-id: 770e257a-9ffd-46a4-9703-ff017ce9caed
+source-git-commit: 8a24ca02762e7902b7d0033b36560629ee711de1
 workflow-type: tm+mt
-source-wordcount: '1718'
+source-wordcount: '1703'
 ht-degree: 0%
 
 ---
-
 
 # Skapa anpassade utseenden för anpassade formulärfält{#create-custom-appearances-for-adaptive-form-fields}
 
@@ -53,14 +52,14 @@ Stegen på en hög nivå för att skapa ett anpassat utseende är följande:
 
 En maven-arkityp är en startpunkt för att skapa ett anpassat utseende. Följande detaljer gäller för den arkitetyp som ska användas:
 
-* **Databas**: https://repo.adobe.com/nexus/content/groups/public/
+* **Databas**: https://repo1.maven.org/maven2/com/adobe/
 * **Artefakt-ID**: custom-appearance-archietype
 * **Grupp-ID**: com.adobe.aemforms
 * **Version**: 1.0.4
 
 Kör följande kommando för att skapa ett lokalt projekt baserat på typen av arkiv:
 
-`mvn archetype:generate -DarchetypeRepository=https://repo.adobe.com/nexus/content/groups/public/ -DarchetypeGroupId=com.adobe.aemforms -DarchetypeArtifactId=custom-appearance-archetype -DarchetypeVersion=1.0.4`
+`mvn archetype:generate -DarchetypeRepository=https://repo1.maven.org/maven2/com/adobe/ -DarchetypeGroupId=com.adobe.aemforms -DarchetypeArtifactId=custom-appearance-archetype -DarchetypeVersion=1.0.4`
 
 Kommandot hämtar Maven-pluginer och arkivtypsinformation från databasen och genererar ett projekt baserat på följande information:
 
@@ -108,7 +107,7 @@ Det genererade projektet har följande struktur:
                                      └───javascript
 ```
 
-### Utöka en befintlig widgetklass {#extend-an-existing-widget-class}
+### Utöka en befintlig widget-klass {#extend-an-existing-widget-class}
 
 När projektmallen har skapats gör du följande ändringar efter behov:
 
@@ -128,7 +127,7 @@ När projektmallen har skapats gör du följande ändringar efter behov:
   </tr>
   <tr>
    <td><code>render</code></td>
-   <td>Återgivningsfunktionen returnerar jQuery-objektet för standard-HTML-elementet i widgeten. HTML-standardelementet ska vara av fokuserbar typ. Till exempel <code>&lt;a&gt;</code>, <code>&lt;input&gt;</code> och <code>&lt;li&gt;</code>. Det returnerade elementet används som <code>$userControl</code>. Om <code>$userControl</code> anger begränsningen ovan fungerar funktionerna i klassen <code>AbstractWidget</code> som förväntat, annars kräver vissa av de gemensamma API:erna (focus, click) ändringar. </td>
+   <td>Återgivningsfunktionen returnerar jQuery-objektet för widgetens standardelement HTML. Standardelementet för HTML ska vara av fokuserbar typ. Till exempel <code>&lt;a&gt;</code>, <code>&lt;input&gt;</code> och <code>&lt;li&gt;</code>. Det returnerade elementet används som <code>$userControl</code>. Om <code>$userControl</code> anger begränsningen ovan fungerar funktionerna i klassen <code>AbstractWidget</code> som förväntat, annars kräver vissa av de gemensamma API:erna (focus, click) ändringar. </td>
   </tr>
   <tr>
    <td><code>getEventMap</code></td>
@@ -162,7 +161,7 @@ När projektmallen har skapats gör du följande ändringar efter behov:
    * Utöka `render`-metoden för att skapa ett alternativt användargränssnitt. Det är den plats från vilken jQuery-plugin-programmet anropas för att uppdatera användargränssnittet eller interaktionsbeteendet. Metoden `render` ska returnera ett användarkontrollelement.
 
    * Utöka metoden `getOptionsMap` om du vill åsidosätta en alternativinställning som påverkas på grund av en ändring i widgeten. Funktionen returnerar en mappning som innehåller information om åtgärden som ska utföras vid ändring av ett alternativ. Tangenterna är alternativen som tillhandahålls widgeten och värdena är de funktioner som anropas när en ändring av alternativet upptäcks.
-   * Metoden `getEventMap` mappar händelser som utlöses av widgeten, med de händelser som krävs av den adaptiva formulärmodellen. Standardvärdet mappar standard-HTML-händelser för standardwidgeten och måste uppdateras om en alternativ händelse aktiveras.
+   * Metoden `getEventMap` mappar händelser som utlöses av widgeten, med de händelser som krävs av den adaptiva formulärmodellen. Standardvärdet mappar HTML-standardhändelser för standardwidgeten och måste uppdateras om en alternativ händelse aktiveras.
    * `showDisplayValue` och `showValue` tillämpar satsen för visning och redigering av bild och kan åsidosättas om du vill ha ett alternativt beteende.
 
    * Metoden `getCommitValue` anropas av det adaptiva formulärramverket när händelsen `commit`inträffar. Vanligtvis är det händelsen exit (utom för elementen för listrutor, alternativknappar och kryssrutor där det sker vid ändring). Mer information finns i [Adaptiva Forms-uttryck](../../forms/using/adaptive-form-expressions.md#p-value-commit-script-p).
@@ -173,7 +172,7 @@ När projektmallen har skapats gör du följande ändringar efter behov:
 
 Exempelprojektet som skapas av Maven-arkitypen skapar automatiskt nödvändiga klientbibliotek och omsluter dem till ett klientbibliotek med en kategori `af.customwidgets`. JavaScript- och CSS-filerna som finns i `af.customwidgets` inkluderas automatiskt vid körning.
 
-### Skapa och installera {#build-and-install}
+### Bygg och installera {#build-and-install}
 
 Om du vill skapa projektet kör du följande kommando på skalet för att generera ett CRX-paket som måste installeras på AEM.
 
@@ -197,7 +196,7 @@ Nu ska vi titta på ett exempel för att skapa ett anpassat utseende så att ett
 
 1. Kör följande kommando för att skapa ett lokalt projekt baserat på Maven-arkityp:
 
-   `mvn archetype:generate -DarchetypeRepository=https://repo.adobe.com/nexus/content/groups/public/ -DarchetypeGroupId=com.adobe.aemforms -DarchetypeArtifactId=custom-appearance-archetype -DarchetypeVersion=1.0.4`
+   `mvn archetype:generate -DarchetypeRepository=https://repo1.maven.org/maven2/com/adobe/ -DarchetypeGroupId=com.adobe.aemforms -DarchetypeArtifactId=custom-appearance-archetype -DarchetypeVersion=1.0.4`
 
    Du uppmanas att ange värden för följande parametrar.
    *Värdena som används i det här exemplet är markerade med fet stil*.

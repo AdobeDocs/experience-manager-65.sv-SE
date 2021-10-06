@@ -1,20 +1,19 @@
 ---
 title: 'Använd metadata i ett e-postmeddelande '
-seo-title: 'Använd metadata i ett e-postmeddelande '
+seo-title: Use metadata in an email notification
 description: Använd metadata för att fylla i information i e-postmeddelanden i formulärarbetsflödet
-seo-description: Använd metadata för att fylla i information i e-postmeddelanden i formulärarbetsflödet
+seo-description: Use metadata to populate information in a forms workflow email notification
 uuid: 9075b64e-1934-44d5-8b16-aa6e95e93da9
 topic-tags: publish
 discoiquuid: d48b5137-c866-43cd-925b-7a6a8eac8c0b
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+exl-id: 18cfc4be-676d-4f08-afc1-4f11bb48dab6
+source-git-commit: 9cf4a68a2b3312fe53282e2fd4ec81988f2fd453
 workflow-type: tm+mt
-source-wordcount: '913'
+source-wordcount: '894'
 ht-degree: 0%
 
 ---
-
 
 # Använd metadata i ett e-postmeddelande {#use-metadata-in-an-email-notification}
 
@@ -154,7 +153,7 @@ Ett AEM Forms-program innehåller flera metadatavariabler (nyckelvärdepar). Du 
 
 Du kan också använda anpassade metadata i ett e-postmeddelande. Anpassade metadata innehåller information utöver systemgenererade metadata. Exempel: principinformation som hämtats från en databas. Du kan använda ett ECMAScript- eller OSGi-paket för att lägga till anpassade metadata i crx-databasen:
 
-### Använd ECMAScript för att lägga till anpassade metadata {#use-ecmascript-to-add-custom-metadata}
+### Använd ECMAScript för att lägga till anpassade metadata  {#use-ecmascript-to-add-custom-metadata}
 
 [](https://en.wikipedia.org/wiki/ECMAScript) ECMAScript är ett skriptspråk. Det används för skript och serverprogram på klientsidan. Utför följande steg för att använda ECMAScript för att lägga till anpassade metadata för en e-postmall:
 
@@ -199,7 +198,7 @@ Du kan också använda anpassade metadata i ett e-postmeddelande. Anpassade meta
 
 Du kan använda Java-gränssnittet WorkitemUserMetadataService för att lägga till anpassade metadata för e-postmallar. Du kan skapa ett OSGi-paket som använder Java-gränssnittet WorkitemUserMetadataService och distribuera det till AEM Forms-servern. Metadata blir tillgängliga för val i steget Tilldela uppgift.
 
-Om du vill skapa ett OSGi-paket med Java-gränssnitt lägger du till filerna [AEM Forms Client SDK](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) jar och [granite jar](https://repo.adobe.com/nexus/content/groups/public/com/adobe/granite/com.adobe.granite.workflow.api/1.0.2/) som externa beroenden till OSGi-paketprojektet. Du kan använda vilken Java-utvecklingsmiljö som helst för att skapa ett OSGi-paket. I följande procedur beskrivs hur du använder Eclipse för att skapa ett OSGi-paket:
+Om du vill skapa ett OSGi-paket med Java-gränssnitt lägger du till filerna [AEM Forms Client SDK](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) jar och [granite jar](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.workflow.api/1.0.2/) som externa beroenden till OSGi-paketprojektet. Du kan använda vilken Java-utvecklingsmiljö som helst för att skapa ett OSGi-paket. I följande procedur beskrivs hur du använder Eclipse för att skapa ett OSGi-paket:
 
 1. Öppna Eclipse IDE. Navigera till Arkiv > Nytt projekt.
 

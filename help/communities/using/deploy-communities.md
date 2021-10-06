@@ -1,25 +1,19 @@
 ---
 title: Distribuera webbgrupper
-seo-title: Distribuera webbgrupper
+seo-title: Deploying Communities
 description: Så här distribuerar du AEM Communities
-seo-description: Så här distribuerar du AEM Communities
-uuid: 18d9b424-004d-43b2-968a-318e27a93759
-contentOwner: msm-service
-products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
+seo-description: How to deploy AEM Communities
 content-type: reference
 topic-tags: deploying
-discoiquuid: c8d7355f-5a70-40d1-bf22-62fab8002ea0
-docset: aem65
-translation-type: tm+mt
-source-git-commit: b29945dc73e85504cd42102eafb9e2bf6198c9cc
+source-git-commit: 14a33b14043869614efcdbf8cb413333d0fa644b
 workflow-type: tm+mt
-source-wordcount: '1890'
+source-wordcount: '1881'
 ht-degree: 1%
 
 ---
 
 
-# Distribuerar communities{#deploying-communities}
+# Distribuera webbgrupper{#deploying-communities}
 
 ## Förutsättningar {#prerequisites}
 
@@ -89,11 +83,11 @@ ht-degree: 1%
 
 
 
-## Senaste versionerna {#latest-releases}
+## Senaste releaser {#latest-releases}
 
 AEM 6.5 Communities GA innehåller Communities-paketet. Mer information om uppdateringar av AEM 6.5 [Communities](/help/release-notes/release-notes.md#experiencemanagercommunities) finns i [AEM 6.5 Release Notes](/help/release-notes/release-notes.md#communities-release-notes.html).
 
-### AEM 6.5-uppdateringar {#aem-updates}
+### AEM 6.5 - uppdateringar {#aem-updates}
 
 Från och med AEM 6.4 levereras uppdateringar av Communities som en del av AEM Cumulative Fix Packs och Service Packs.
 
@@ -124,7 +118,7 @@ Nödvändiga steg är:
    * Till exempel https://localhost:4502/system/console/bundles
    * Välj **`Install/Update`**
    * Bläddra.. för att välja det paket som extraherats från det hämtade ZIP-arkivet
-   * Kontrollera att *Oracle Corporations JDBC-drivrutin för MySQLcom.mysql.jdbc* är aktiv och starta den om inte (eller kontrollera loggarna)
+   * Kontrollera att *Oraclets JDBC-drivrutin för MySQLcom.mysql.jdbc* är aktiv och starta om inte (eller kontrollera loggarna)
 
 1. Om du installerar på en befintlig distribution efter att JDBC har konfigurerats, binder du om JDBC till den nya anslutningen genom att spara om JDBC-konfigurationen från webbkonsolen:
 
@@ -162,20 +156,20 @@ Om du vill kan du ange loggnivån till WARN för `RusticiSoftware.*`-paketet.
 
 Mer information om hur du arbetar med loggar finns i [Arbeta med granskningsposter och loggfiler](/help/sites-deploying/monitoring-and-maintaining.md#working-with-audit-records-and-log-files).
 
-### AEM Advanced MLS {#aem-advanced-mls}
+### AEM avancerad MLS {#aem-advanced-mls}
 
 För att SRP-samlingen (MSRP eller DSRP) ska ha stöd för avancerad flerspråkig sökning (MLS) krävs nya Solr-plugin-program förutom ett anpassat schema och en Solr-konfiguration. Alla nödvändiga objekt paketeras i en nedladdningsbar zip-fil.
 
 Den avancerade MLS-nedladdningen (kallas även &quot;phasetwo&quot;) är tillgänglig från Adobe-databasen:
 
-* [AEM-SOLR-MLS-phasetwo](https://repo.adobe.com/nexus/content/repositories/releases/com/adobe/tat/AEM-SOLR-MLS-phasetwo/1.2.40/)
+* [AEM-SOLR-MLS-phasetwo](https://repo1.maven.org/maven2/com/adobe/tat/AEM-SOLR-MLS-phasetwo/1.2.40/)
 
    * Version 1.2.40, 6 april 2016
    * Ladda ned AEM-SOLR-MLS-phasetwo-1.2.40.zip
 
 Mer information och installationsinformation finns på [Solr Configuration](/help/communities/solr.md) för SRP.
 
-### Om länkar till paketresurs {#about-links-to-package-share}
+### Om länkar att paketera resurs {#about-links-to-package-share}
 
 **Paket synliga i Adobe AEM Cloud**
 
@@ -236,7 +230,7 @@ För alla andra (sekundära) publiceringsinstanser i en publiceringsgrupp:
 * Avmarkera kryssrutan **Primär utgivare**
 * Välj **Spara**
 
-### Replikeringsagenter på författaren {#replication-agents-on-author}
+### Replikeringsagenter på författare {#replication-agents-on-author}
 
 Replikering används för webbplatsinnehåll som skapas i publiceringsmiljön, t.ex. communitygrupper, samt för att hantera medlemmar och medlemsgrupper från författarmiljön med hjälp av [tunneltjänsten](#tunnel-service-on-author).
 
@@ -268,11 +262,11 @@ I följande bilder visas resultatet av en ändring av porten från 4503 till 610
 
 ![configure-limits](../assets/default-agent-publish.png)
 
-#### Omvänd replikeringsagent (återpublicera) {#reverse-replication-agent-publish-reverse}
+#### Agenten för omvänd replikering (publicera omvänd) {#reverse-replication-agent-publish-reverse}
 
 ![](../assets/reverse-replication-agent.png)
 
-### Tunneltjänsten på författaren {#tunnel-service-on-author}
+### Tunneltjänst på författare {#tunnel-service-on-author}
 
 När du använder författarmiljön för att [skapa webbplatser](/help/communities/sites-console.md), [ändra webbplatsegenskaper](/help/communities/sites-console.md#modifying-site-properties) eller [hantera communitymedlemmar](/help/communities/members.md), måste du få åtkomst till medlemmar (användare) som är registrerade i publiceringsmiljön, inte till användare som är registrerade hos författaren.
 
@@ -370,7 +364,7 @@ Använda [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md):
 * Efter en stund visas en **dialogruta** Slutfört:
    `Operation completed successfully.`
 
-### Apache HTTP Server {#apache-http-server}
+### Apache HTTP-server {#apache-http-server}
 
 Om du använder Apache HTTP-servern måste du använda rätt servernamn för alla relevanta poster.
 

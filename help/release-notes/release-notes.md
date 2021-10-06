@@ -1,14 +1,13 @@
 ---
 title: Allmän versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: '[!DNL Adobe Experience Manager] 6.5 som beskriver versionsinformation, nyheter, hur man installerar och detaljerade ändringslistor.'
-translation-type: tm+mt
-source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
+exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
+source-git-commit: f8fcfa9e09167cd4dbaafe938bcbe3ee6ece270f
 workflow-type: tm+mt
 source-wordcount: '2150'
 ht-degree: 1%
 
 ---
-
 
 # Allmän versionsinformation för [!DNL Adobe Experience Manager] 6.5{#general-release-notes-for-adobe-experience-manager}
 
@@ -43,11 +42,11 @@ Plattformen [!DNL Adobe Experience Manager] 6.5 bygger på uppdaterade versioner
 
 Quickstart använder Eclipse Jetty 9.4.15 som servermotor.
 
-#### Java-stöd {#java-support}
+#### Java-stöd  {#java-support}
 
 * Nytt stöd för Java 11 och Java 8 som redan stöds.
 * För optimala prestanda bör du åsidosätta GC-standardvärden med andra värden. Mer information finns i avsnittet [installera och uppdatera](/help/sites-deploying/custom-standalone-install.md).
-* Underhållsuppdateringar för Java 11 och Java 8 distribueras av Adobe för kundanvändning i AEM projekt, när de inte är allmänt tillgängliga från Oracle.
+* Underhållsuppdateringar för Java 11 och Java 8 distribueras av Adobe för kundanvändning i AEM projekt, när de inte är allmänt tillgängliga från Oraclet.
 
 #### Java Development {#java-development}
 
@@ -67,7 +66,7 @@ Ett antal förbättringar har gjorts i användargränssnittet för att göra det
 >
 >Adobe planerar inte att göra fler förbättringar av det klassiska användargränssnittet. AEM 6.5 innehåller det klassiska användargränssnittet och kunder som uppgraderar från tidigare versioner kan fortsätta använda det som det är. Observera att Classic-användargränssnittet fortfarande stöds fullt ut när det är inaktuellt. [Läs mer](/help/sites-deploying/ui-recommendations.md).
 
-#### Söka och indexera {#indexing-and-search}
+#### Sökning och indexering {#indexing-and-search}
 
 * Sök i Oak har nu stöd för dynamiska aspekter. Filterfältet i resurssökningen visar t.ex. den uppskattade mängden resultat.
 * QueryBuilder utökades för att ge resultat med dynamiska aspekter.
@@ -84,9 +83,9 @@ Ett antal förbättringar har gjorts i användargränssnittet för att göra det
 
 Fullständig lista över ändringar i [AEM Sites och tillägg](/help/release-notes/sites.md).
 
-#### Hanterade ensidiga appar {#managed-single-page-apps}
+#### Hanterade single-page-appar {#managed-single-page-apps}
 
-Page Editor lägger till möjligheten att redigera innehåll i sitt sammanhang och skapa/layouta i renderade upplevelser på klientsidan (kallas även [SPA Editor](/help/sites-developing/spa-architecture.md)). Befintliga enkelsidiga appar som byggs med JavaScript-ramverket React eller Angular kan utökas med AEM SJ SDK för att göras redigerbara för användare.
+Page Editor lägger till möjligheten att redigera innehåll i sitt sammanhang och skapa/layouta i renderade upplevelser på klientsidan (kallas även [SPA Editor](/help/sites-developing/spa-architecture.md)). Befintliga ensidiga appar som byggs med JavaScript-ramverket React eller Angular kan utökas med AEM SJ SDK för att göras redigerbara för användare.
 
 Först levererad som en del av AEM 6.4 SP2, med AEM 6.5 får SPA support följande fördelar:
 
@@ -103,7 +102,7 @@ Nya HTTP API-funktioner:
 * Visa listor med innehållsfragment via Content Services med huvudkomponenten [Content Fragment List](https://opensource.adobe.com/aem-core-wcm-components/library/content-fragment-list.html).
 * [Core Component ](https://opensource.adobe.com/aem-core-wcm-components/library.html) Library som visar standardutdata för Content Services JSON för varje komponent
 
-#### Skärmtillägg {#screens-add-on}
+#### Tillägget Skärmar {#screens-add-on}
 
 Designa, leverera och optimera effektivt upplevelser på alla digitala skärmar, från interaktiva kioskdatorer till digitala skyltar.
 
@@ -144,7 +143,7 @@ Funktionen för sammankopplade resurser är avsedd för större driftsättningar
 
 ### Dynamic Media {#dynamic-media}
 
-Dynamic Media ger förbättrad multimedieproduktion i AEM Assets och skapar banbrytande upplevelser som är både engagerande och personaliserade. Med en enda högklassig överordnad resurs kan ni utnyttja vår avancerade molnrendering, Smart Crop och förstklassiga visningsprogram för att leverera de mest engagerande upplevelserna med branschledande prestanda.
+Dynamic Media har förbättrat redigeringen och leveransen av multimedia i AEM Assets för att skapa avancerade upplevelser som är både engagerande och personaliserade. Med en enda högklassig överordnad resurs kan ni utnyttja vår avancerade molnrendering, Smart Crop och förstklassiga visningsprogram för att leverera de mest engagerande upplevelserna med branschledande prestanda.
 
 Nya funktioner:
 
@@ -195,11 +194,11 @@ Du kan integrera Livefyre med AEM 6.5-instansen. Se [hur du integrerar Livefyre 
 
 Adobe använder en kundfokuserad utvecklingsmodell som gör det möjligt för kunderna att bidra till alla faser i utvecklingsprocessen, under specifikation, utveckling och testning. Vi tackar alla kunder och partners som deltar i den här processen.
 
-Adobe har de rutiner och processer som behövs för att kunna samla in, prioritera och spåra kundfokuserade fellösningar och utveckla förbättringsförfrågningar. [Adobe Marketing Cloud supportportal](https://helpx.adobe.com/se/contact/enterprise-support.ec.html) är integrerad med Adobe Enhancement and Defect Tracking System. Kundfrågor identifieras och löses med kundtjänst där det är möjligt. När den eskaleras till FoU hämtas all kundinformation in och används för prioritering och rapportering. Vid utveckling av betald support, garantifrågor och kundbetalda förbättringar prioriteras.
+Adobe har de rutiner och processer som behövs för att kunna samla in, prioritera och spåra kundfokuserade fellösningar och utveckla förbättringsförfrågningar. [Experience Manager supportportal](https://experienceleague.adobe.com/?support-solution=Experience+Manager#support) är integrerad med Adobe Enhancement and Defect Tracking System. Kundfrågor identifieras och löses av kundsupportteamet där det är möjligt. När den eskaleras till FoU hämtas all kundinformation in och används för prioritering och rapportering. Vid utveckling av betald support, garantifrågor och kundbetalda förbättringar prioriteras.
 
 Denna prioriteringsprocess har resulterat i över 750 kundfokuserade förändringar som fastslagits i AEM 6.5.
 
-## Lista över filer som ingår i versionen {#list-of-files-that-are-part-of-the-release}
+## Lista över filer som ingår i releasen {#list-of-files-that-are-part-of-the-release}
 
 **Foundation**
 
@@ -209,7 +208,7 @@ Denna prioriteringsprocess har resulterat i över 750 kundfokuserade förändrin
 * Plugin-program för Eclipse IDE ([läs mer och ladda ned](/help/sites-developing/aem-eclipse.md))
 
 * Tillägg för Brackets Code Editor ([läs mer och ladda ned](/help/sites-developing/aem-brackets.md))
-* Maven/Gradle-beroenden ([nedladdningslänk](https://repo.adobe.com/nexus/content/repositories/releases/com/adobe/aem/uber-jar/6.5.0/))
+* Maven/Gradle-beroenden ([nedladdningslänk](https://repo1.maven.org/maven2/com/adobe/aem/uber-jar/6.5.0/))
 
 **Sites**
 
@@ -238,8 +237,8 @@ Denna prioriteringsprocess har resulterat i över 750 kundfokuserade förändrin
 
 **Forms**
 
-* [Paket för AEM Forms](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)
-* [AEM Forms OSGi Client SDK](https://repo.adobe.com/nexus/content/repositories/public/com/adobe/aemfd/aemfd-client-sdk/6.0.80/)
+* [Paket för AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)
+* [AEM Forms OSGi Client SDK](https://repo1.maven.org/maven2/com/adobe/aemfd/aemfd-client-sdk/)
 
 ## Språk {#languages}
 
@@ -270,7 +269,7 @@ Den fullständiga matrisen med plattformar som stöds, inklusive support på [AE
 
 >[!NOTE]
 >
->Oracle har övergått till en LTS-modell (Long Term Support) för Oracle Java SE-produkter. Java 9 och 10 är icke-LTS-versioner från Oracle. Se [Oracle Java SE support roadmap](https://www.oracle.com/technetwork/java/eol-135779.html). Adobe har stöd för LTS-versioner av Java som endast kan köras AEM i produktionen. Java 11 är den rekommenderade versionen som ska användas med AEM 6.5.
+>Oraclet har flyttat till en LTS-modell (Long Term Support) för Oracle Java SE-produkter. Java 9 och 10 är icke-LTS-versioner som Oracle. Se [Oracle Java SE - supportfärdplan](https://www.oracle.com/technetwork/java/eol-135779.html). Adobe har stöd för LTS-versioner av Java som endast kan köras AEM i produktionen. Java 11 är den rekommenderade versionen som ska användas med AEM 6.5.
 
 ## Föråldrade och borttagna funktioner {#deprecated-and-removed-features}
 
