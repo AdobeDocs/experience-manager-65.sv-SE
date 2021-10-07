@@ -2,9 +2,9 @@
 title: AEM Content and Commerce Release Notes 2021
 description: AEM Content and Commerce Release Notes 2021
 exl-id: ec47c5f8-d4dd-469f-94df-5ee28f25d696
-source-git-commit: fd973cb3693872e4850f860a625cab70553d2754
+source-git-commit: a401955e4b163a8062a498ea897d4a3d95ae0208
 workflow-type: tm+mt
-source-wordcount: '989'
+source-wordcount: '1135'
 ht-degree: 7%
 
 ---
@@ -28,6 +28,34 @@ Den gamla AEM CIF Connector försätts i underhållsläge och ska inte användas
 | CIF-tillägg | Minimum: AEM 6.5.7, Magento 2.3.5 GraphQL scheman |
 | CIF-kärnkomponenter | [Systemkrav](https://github.com/adobe/aem-core-cif-components/blob/master/VERSIONS.md) |
 | AEM Project Archetype | [Systemkrav](https://github.com/adobe/aem-project-archetype/blob/master/VERSIONS.md) |
+
+## Releasedatum: September 2021
+
+| Komponent | Version | Information |
+|:-------|:-----:|---------------------:|
+| CIF-tillägg | 2021.09.27 | [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.09.27.zip) |
+| CIF-kärnkomponenter | 2.2.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.2.0) |
+| CIF Venias referenswebbplats | 2021.09.23 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2021.09.23) |
+
+### Nyheter {#what-is-new-september}
+
+* Ny flik för associerat e-handelsinnehåll i Sites editor ökar redigeringens effektivitet genom att snabbt få tillgång till relevant AEM för det aktuella sammanhanget
+
+   ![Associerat e-handelsinnehåll](/help/assets/CIF/associated-commerce-content.png)
+
+* Förbättrat användargränssnitt för produktväljare för bättre användarupplevelse, ökad effektivitet och stöd för komplexa produktkataloger
+
+   ![Ny produktväljare](/help/assets/CIF/product-picker.png)
+
+* Respektera egenskapen include_in_menu i navigeringskomponenten
+
+### Felkorrigeringar {#bug-fixes-september}
+
+* Borttagning av menycache fungerar inte som förväntat
+
+* JS-fel under AEM CS-driftsättningssteg och när komponenter på klientsidan inte används
+
+* Det går inte att skapa CIF-molnkonfigurationen i mappar som har en sling:configs-nod
 
 ## Releasedatum: Augusti 2021
 
@@ -70,7 +98,7 @@ Den gamla AEM CIF Connector försätts i underhållsläge och ska inte användas
    * Visuell indikator för mellanlagrade produktdata i redigeringsläge för bättre synlighet för kommande ändringar
    * Ny platskarta för innehålls- och e-handelssidor
 
-* Stöd för [Adobe Commerce Sensei-produktrekommendation, som drivs av Adobe Sensei](https://business.adobe.com/products/magento/product-recommendations.html) i AEM Storefront med fördefinierade eller direkt skapade rekommendationer
+* Stöd för [Adobe Commerce Sensei produktrekommendation från Adobe Sensei](https://business.adobe.com/products/magento/product-recommendations.html) i AEM Storefront med fördefinierade eller direkt skapade rekommendationer
 
 ## Releasedatum: Juni 2021
 
