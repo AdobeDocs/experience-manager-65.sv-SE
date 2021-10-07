@@ -1,8 +1,8 @@
 ---
 title: Stängda användargrupper i AEM
-seo-title: Stängda användargrupper i AEM
+seo-title: Closed User Groups in AEM
 description: Läs mer om stängda användargrupper i AEM.
-seo-description: Läs mer om stängda användargrupper i AEM.
+seo-description: Learn about Closed User Groups in AEM.
 uuid: 83396163-86ce-406b-b797-2457ed975ccd
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,11 +11,10 @@ content-type: reference
 discoiquuid: a2bd7045-970f-4245-ad5d-a272a654df0a
 docset: aem65
 exl-id: 39e35a07-140f-4853-8f0d-8275bce27a65
-feature: Dokumentskydd
-translation-type: tm+mt
-source-git-commit: cb4b0cb60b8709beea3da70495a15edc8c4831b8
+feature: Security
+source-git-commit: 2bae11eafb875f01602c39c0dba00a888e11391a
 workflow-type: tm+mt
-source-wordcount: '6886'
+source-wordcount: '6872'
 ht-degree: 0%
 
 ---
@@ -39,7 +38,7 @@ Målet med den nya implementeringen är att vid behov ta med befintliga funktion
 * Dedikerat nodtypstillägg som markerar autentiseringskravet.
 * Valfri inloggningssökväg som är associerad med autentiseringskravet.
 
-### Implementeringen av den nya anpassade användargruppen {#the-new-custom-user-group-implementation}
+### Implementering av ny anpassad användargrupp {#the-new-custom-user-group-implementation}
 
 En CUG som den är känd i AEM består av följande steg:
 
@@ -112,7 +111,7 @@ Följande bästa metoder bör beaktas vid definition av begränsad läsåtkomst 
 * Begränsa sökvägarna som stöds för CUG-principer till några få träd i databasen för optimerade prestanda. Tillåt t.ex. bara CUG:er under noden /content som levererats som standardvärde sedan AEM 6.3.
 * CUG-profiler är utformade för att ge läsåtkomst till en liten uppsättning huvuden. Behovet av ett stort antal huvudansvariga kan lyfta fram frågor i innehållet eller programdesignen och bör omprövas.
 
-### Autentisering: Definiera autentiseringskravet {#authentication-defining-the-auth-requirement}
+### Autentisering: Definiera autentiseringskrav {#authentication-defining-the-auth-requirement}
 
 De autentiseringsrelaterade delarna av CUG-funktionen gör det möjligt att markera träd som kräver autentisering och eventuellt ange en dedikerad inloggningssida. I enlighet med den tidigare versionen kan den nya implementeringen markera träd som kräver autentisering i innehållsdatabasen och villkorligt aktivera synkronisering med `Sling org.apache.sling.api.auth.Authenticator`som är ansvarig för att slutligen verkställa kravet och omdirigera till en inloggningsresurs.
 
@@ -128,7 +127,7 @@ Samma sak gäller för egenskapen `granite:loginPath`. Den kommer endast att res
 >
 >Inställningen av inloggningssökvägsegenskapen är valfri och behövs bara om trädet som kräver autentisering inte kan återgå till standardsidan eller en på annat sätt ärvd inloggningssida. Se [Utvärdering av inloggningssökväg](/help/sites-administering/closed-user-groups.md#evaluation-of-login-path) nedan.
 
-#### Registrerar autentiseringskravet och inloggningssökvägen med SALING-autentiseraren {#registering-the-authentication-requirement-and-login-path-with-the-sling-authenticator}
+#### Registrerar autentiseringskravet och inloggningssökvägen med SSLING-autentiseraren {#registering-the-authentication-requirement-and-login-path-with-the-sling-authenticator}
 
 Eftersom den här typen av autentiseringskrav förväntas begränsas till vissa körningslägen och till en liten delmängd av träd i innehållsdatabasen, är spårning av den obligatoriska blandningstypen och inloggningssökvägsegenskaperna villkorliga och bundna till en motsvarande konfiguration som definierar de sökvägar som stöds (se Konfigurationsalternativ nedan). Följaktligen kommer endast ändringar inom omfånget för de här sökvägarna som stöds att utlösa en uppdatering av OSGi-registreringen, i andra delar kommer både mixin-typen och egenskapen att ignoreras.
 
@@ -136,7 +135,7 @@ Standardinställningen för AEM använder nu den här konfigurationen genom att 
 
 Om du lägger till blandningstypen `granite:AuthenticationRequired` i de sökvägar som stöds, uppdateras OSGi-registreringen för den ansvariga hanteraren med en ny, extra post med egenskapen `sling.auth.requirements`. Om ett givet autentiseringskrav anger den valfria egenskapen `granite:loginPath`, registreras värdet dessutom med autentiseraren med ett &#39;-&#39;-prefix för att undantas från autentiseringskravet.
 
-#### Utvärdering och arv av autentiseringskravet {#evaluation-and-inheritance-of-the-authentication-requirement}
+#### Utvärdering och arv av autentiseringskrav {#evaluation-and-inheritance-of-the-authentication-requirement}
 
 Autentiseringskraven för Apache Sling förväntas ärvas genom sid- eller nodhierarkin. Själva detaljerna om arvet och utvärderingen av autentiseringskrav som ordning och prioritet betraktas som en implementeringsdetalj och kommer inte att dokumenteras i den här artikeln.
 
@@ -208,7 +207,7 @@ Sidan som är kopplad till inloggningssökvägen kan finnas inuti eller utanför
 
 ### Hantera CUG-principer {#managing-cug-policies}
 
-Den nya typen av åtkomstkontrollprinciper som begränsar läsåtkomst för en CUG hanteras med hjälp av JCR-åtkomstkontrollsgränssnittet och följer de mekanismer som beskrivs i [JCR 2.0-specifikationen](https://docs.adobe.com/content/docs/en/spec/jcr/2.0/16_Access_Control_Management.html).
+Den nya typen av åtkomstkontrollprinciper som begränsar läsåtkomst för en CUG hanteras med hjälp av JCR-åtkomstkontrollsgränssnittet och följer de mekanismer som beskrivs i [JCR 2.0-specifikationen](https://www.adobe.io/experience-manager/reference-materials/spec/jcr/2.0/16_Access_Control_Management.html).
 
 #### Ange en ny CUG-princip {#set-a-new-cug-policy}
 
@@ -325,13 +324,13 @@ while (isSupportedPath(path)) {
 }
 ```
 
-#### Hantera CUG-principer av Pincipal {#managing-cug-policies-by-pincipal}
+#### Hantera CUG-principer efter huvudnamn {#managing-cug-policies-by-pincipal}
 
 De tillägg som definieras av `JackrabbitAccessControlManager` och som gör det möjligt att redigera åtkomstkontrollprinciper efter huvudobjekt implementeras inte med CUG-åtkomstkontrollhantering, eftersom en CUG-princip per definition alltid påverkar alla principer: de som anges med `PrincipalSetPolicy` beviljas läsåtkomst medan alla andra huvudkonton inte kan läsa innehåll i trädet som definieras av målnoden.
 
 Motsvarande metoder returnerar alltid en tom principarray, men genererar inga undantag.
 
-### Hantera autentiseringskravet {#managing-the-authentication-requirement}
+### Hantera autentiseringskrav {#managing-the-authentication-requirement}
 
 De nya autentiseringskraven skapas, ändras eller tas bort genom att målnodens effektiva nodtyp ändras. Egenskapen för den valfria inloggningssökvägen kan sedan skrivas med det vanliga JCR-API:t.
 
@@ -341,7 +340,7 @@ De nya autentiseringskraven skapas, ändras eller tas bort genom att målnodens 
 >
 >Mer information finns i [Tilldela mixnodtyper](https://docs.adobe.com/docs/en/spec/jcr/2.0/10_Writing.html#10.10.3 Tilldela mixnodtyper) och [Lägga till noder och ange egenskaper](https://docs.adobe.com/docs/en/spec/jcr/2.0/10_Writing.html#10.4 Lägga till noder och ange egenskaper)
 
-#### Lägger till ett nytt autentiseringsbehov {#adding-a-new-auth-requirement}
+#### Lägga till ett nytt verifieringskrav {#adding-a-new-auth-requirement}
 
 Steg för att skapa ett nytt autentiseringskrav beskrivs nedan. Observera att kravet bara registreras med Apache Sling Authenticator om `RequirementHandler` har konfigurerats för trädet som innehåller målnoden.
 
@@ -352,7 +351,7 @@ targetNode.addMixin("granite:AuthenticationRequired");
 session.save();
 ```
 
-#### Lägg till ett nytt autentiseringskrav med inloggningssökvägen {#add-a-new-auth-requirement-with-login-path}
+#### Lägg till ett nytt autentiseringskrav med inloggningssökväg {#add-a-new-auth-requirement-with-login-path}
 
 Steg för att skapa ett nytt autentiseringskrav, inklusive en inloggningssökväg. Observera att kravet och undantaget för inloggningssökvägen endast registreras med Apache Sling Authenticator om `RequirementHandler` har konfigurerats för trädet som innehåller målnoden.
 
@@ -441,7 +440,7 @@ Det finns för närvarande inget offentligt API för att hämta inloggningssökv
 
 Observera dock att utöver inloggningssökvägarna som definieras med den här funktionen finns det andra sätt att ange omdirigering till inloggningen, vilket bör beaktas när innehållsmodellen och autentiseringskraven för en viss AEM designas.
 
-#### Hämta det ärvda autentiseringskravet {#retrieve-the-inherited-auth-requirement}
+#### Hämta det ärvda autentiseringsbehovet {#retrieve-the-inherited-auth-requirement}
 
 Precis som med inloggningssökvägen finns det inget offentligt API för att hämta de ärvda autentiseringskrav som definierats i innehållet. Följande exempel visar hur du listar alla autentiseringskrav som har definierats med en viss hierarki oavsett om de börjar gälla eller inte. Mer information finns i [Konfigurationsalternativ](/help/sites-administering/closed-user-groups.md#configuration-options).
 
@@ -467,7 +466,7 @@ while (isSupported(node)) {
 }
 ```
 
-### Kombinera CUG-principer och autentiseringskravet {#combining-cug-policies-and-the-authentication-requirement}
+### Kombinera CUG-principer och autentiseringskrav {#combining-cug-policies-and-the-authentication-requirement}
 
 I följande tabell visas giltiga kombinationer av CUG-principer och autentiseringskrav i en AEM som har båda modulerna aktiverade via konfigurationen.
 
@@ -489,7 +488,7 @@ I det här avsnittet finns en översikt över OSGi-komponenterna och de enskilda
 
 Se även dokumentationen för CUG-mappning för en omfattande mappning av konfigurationsalternativen mellan den gamla och den nya implementeringen.
 
-### Behörighet: Konfigurera {#authorization-setup-and-configuration}
+### Behörighet: Installation och konfiguration {#authorization-setup-and-configuration}
 
 De nya, auktoriseringsrelaterade delarna finns i **Oak CUG Authorization**-paketet ( `org.apache.jackrabbit.oak-authorization-cug`), som är en del av AEM standardinstallation. Paketet definierar en separat auktoriseringsmodell som ska användas som ett ytterligare sätt att hantera läsåtkomst.
 
@@ -507,7 +506,7 @@ Om referensfiltret inte är konfigurerat visas fel, som följande, när en anvä
 31.01.2017 13:49:42.321 *INFO* [qtp1263731568-346] org.apache.sling.security.impl.ReferrerFilter Rejected referrer header for POST request to /libs/granite/core/content/login.html/j_security_check : https://hostname/libs/granite/core/content/login.html?resource=%2Fcontent%2Fgeometrixx%2Fen%2Ftest-site%2Ftest-page.html&$$login$$=%24%24login%24%24&j_reason=unknown&j_reason_code=unknown
 ```
 
-#### Egenskaper för OSGi-komponenter {#characteristics-of-osgi-components}
+#### Egenskaper hos OSGi-komponenter {#characteristics-of-osgi-components}
 
 Följande två OSGi-komponenter har introducerats för att definiera autentiseringskrav och ange dedikerade inloggningssökvägar:
 
@@ -585,7 +584,7 @@ Nyckelkonfigurationsalternativen är:
 
 De tillgängliga konfigurationsalternativen som är kopplade till modulen CUG-auktorisering listas och beskrivs mer ingående i [Apache Oak Documentation](https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html#configuration).
 
-#### Utesluta huvudkonton från CUG-utvärdering {#excluding-principals-from-cug-evaluation}
+#### Utesluta huvudkonton från CUG-utvärderingen {#excluding-principals-from-cug-evaluation}
 
 Undantaget av enskilda huvudkonton från CUG-utvärderingen har antagits från den tidigare tillämpningen. Den nya CUG-auktoriseringen täcker detta med ett dedikerat gränssnitt som heter CugExclude. Apache Jackrabbit Oak 1.4 levereras med en standardimplementering som utesluter en fast uppsättning huvuduppgifter samt en utökad implementering som tillåter konfigurering av enskilda huvudnamn. Den senare konfigureras i AEM publiceringsinstanser.
 
@@ -601,7 +600,7 @@ Exkluderingen av gruppen &#39;administratörer&#39; kan ändras eller utökas i 
 
 Det går också att tillhandahålla och distribuera en anpassad implementering av gränssnittet CugExclude för att justera uppsättningen med uteslutna principer om det finns särskilda behov. Mer information och ett exempel på implementering finns i dokumentationen för [CUG-plug-ability](https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html#pluggability).
 
-### Autentisering: Konfigurera {#authentication-setup-and-configuration}
+### Autentisering: Installation och konfiguration {#authentication-setup-and-configuration}
 
 De nya autentiseringsrelaterade delarna finns i **Adobe Granite Authentication Handler**-paketet ( `com.adobe.granite.auth.authhandler` version 5.6.48). Det här paketet ingår i AEM standardinstallation.
 
@@ -697,7 +696,7 @@ Nya installationer av AEM använder som standard de nya implementeringarna för 
 >
 >Ingen konfiguration finns för **Apache Jackrabbit Oak CUG Exclude List** och **Adobe Granite Authentication Requirement och Login Path Handler** i standardredigeringsinstanserna.
 
-### Publiceringsförekomster {#publish-instances}
+### Publicera instanser {#publish-instances}
 
 | **&quot;Konfiguration av Apache Jackrabbit Oak CUG&quot;** | **Förklaring** |
 |---|---|
@@ -775,7 +774,7 @@ Båda dessa element skapas under `cq:Page`. Med den aktuella designen hanterar M
 
 Därför kan CUG-grupper inte rullas ut till Live-kopior från utkast. Se till att du undviker detta när du konfigurerar Live Copy.
 
-## Ändringar med den nya CUG-implementeringen {#changes-with-the-new-cug-implementation}
+## Ändringar i den nya CUG-implementeringen {#changes-with-the-new-cug-implementation}
 
 Syftet med detta avsnitt är att ge en översikt över de ändringar som gjorts i CUG-funktionen samt en jämförelse mellan den gamla och den nya implementeringen. Här listas de ändringar som påverkar hur CUG-stöd konfigureras och hur och av vilka CUG-grupper hanteras i databasinnehållet.
 
@@ -787,7 +786,7 @@ Den inaktuella OSGi-komponenten **CUG-stöd (Adobe Granite Closed User Group)** 
 
 I följande avsnitt beskrivs skillnaderna mellan den gamla och den nya implementeringen i implementerings- och säkerhetsperspektiven. Den nya implementeringen har samma funktionalitet, men det finns små förändringar som är viktiga att känna till när den nya CUG-filen används.
 
-### Skillnader i fråga om auktorisering {#differences-with-regards-to-authorization}
+### Skillnader i fråga om tillstånd {#differences-with-regards-to-authorization}
 
 De viktigaste skillnaderna från ett auktoriseringsperspektiv sammanfattas i listan nedan:
 
@@ -832,7 +831,7 @@ Skillnaderna när det gäller autentisering beskrivs nedan.
 
 I den tidigare implementeringen utlöstes både auktoriserings- och autentiseringsaspekterna för en CUG av en enda JCR-egenskap ( `cq:cugEnabled`). När det gäller autentisering resulterade detta i en uppdaterad lista över autentiseringskrav som lagrats med implementeringen av Apache Sling Authenticator. I och med den nya implementeringen uppnås samma resultat genom att målnoden markeras med en dedikerad blandningstyp ( `granite:AuthenticationRequired`).
 
-#### Egenskap för att exkludera inloggningssökvägen {#property-for-excluding-login-path}
+#### Egenskap för att exkludera inloggningssökväg {#property-for-excluding-login-path}
 
 Med mixin-typen definieras en enda valfri egenskap med namnet `granite:loginPath`, som i princip motsvarar egenskapen `cq:cugLoginPage`. Till skillnad från den tidigare implementeringen kommer egenskapen för inloggningssökväg endast att respekteras om dess deklarerande nodtyp är den ovannämnda mixin. Om du lägger till en egenskap med det namnet utan att ange blandningstypen får det ingen effekt och varken ett nytt krav eller ett undantag för inloggningssökvägen rapporteras till autentiseraren.
 
@@ -864,7 +863,7 @@ CUG-mappning sedan AEM 6.3
 
 ## Uppgradera CUG {#upgrade-cug}
 
-### Befintliga installationer med den inaktuella CUG-filen {#existing-installations-using-the-deprecated-cug}
+### Befintliga installationer som använder den inaktuella CUG-filen {#existing-installations-using-the-deprecated-cug}
 
 Den gamla CUG-supportimplementeringen har tagits bort och kommer att tas bort i framtida versioner. Vi rekommenderar att du går över till de nya implementeringarna när du uppgraderar från versioner som är äldre än AEM 6.3.
 

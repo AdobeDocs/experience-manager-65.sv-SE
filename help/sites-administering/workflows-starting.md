@@ -1,24 +1,23 @@
 ---
 title: Starta arbetsflöden
-seo-title: Starta arbetsflöden
+seo-title: Starting Workflows
 description: Lär dig hur du startar arbetsflöden i AEM.
-seo-description: Lär dig hur du startar arbetsflöden i AEM.
+seo-description: Learn how to start Workflows in AEM.
 uuid: 0648d335-ecce-459d-95fd-3d4d76181b32
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 discoiquuid: e9ab4796-a050-40de-b073-af7d33cff009
-translation-type: tm+mt
-source-git-commit: 967018907e32e5916df72ff16dfc7bc06f8dbed8
+exl-id: 84a1964c-4121-4763-b946-9eee6093747d
+source-git-commit: 2bae11eafb875f01602c39c0dba00a888e11391a
 workflow-type: tm+mt
-source-wordcount: '804'
+source-wordcount: '794'
 ht-degree: 1%
 
 ---
 
-
-# Startar arbetsflöden{#starting-workflows}
+# Starta arbetsflöden{#starting-workflows}
 
 När du administrerar arbetsflöden kan du starta dem på flera olika sätt:
 
@@ -41,7 +40,6 @@ När du administrerar arbetsflöden kan du starta dem på flera olika sätt:
 >* [Översättningsprojekt](/help/sites-administering/tc-manage.md)
 
 >
-
 
 
 ## Arbetsflödesmodeller {#workflow-models}
@@ -176,7 +174,7 @@ Ett arbetsflödespaket:
       Den här startegenskapen är en kommaavgränsad lista med objekt: &quot;
 
       * `property-name` ignorera alla  `jcr` händelser som utlöses för det angivna egenskapsnamnet. &quot;
-      * `event-user-data:<*someValue*>` ignorerar alla händelser som innehåller  `*<someValue*`>- `user-data` uppsättningen via  [ `ObservationManager` API](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/observation/ObservationManager.html#setUserData(java.lang.String).
+      * `event-user-data:<*someValue*>` ignorerar alla händelser som innehåller  `*<someValue*`>- `user-data` uppsättningen via  [ `ObservationManager` API](https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/observation/ObservationManager.html#setUserData(java.lang.String.
 
       Till exempel:
 

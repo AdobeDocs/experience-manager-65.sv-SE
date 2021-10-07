@@ -1,24 +1,23 @@
 ---
 title: Predikatreferens för Query Builder
-seo-title: Predikatreferens för Query Builder
+seo-title: Query Builder Predicate Reference
 description: Fullständig predikatreferens för Query Builder API.
-seo-description: Fullständig predikatreferens för Query Builder API.
+seo-description: Complete predicate reference for the Query Builder API.
 uuid: af0e269e-7d52-4032-b22e-801c7b5dccfa
 contentOwner: sarchiz
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: platform
 discoiquuid: 94a05894-743a-4ace-a292-bfee90ba9068
-translation-type: tm+mt
-source-git-commit: 054b49fb8aacb9e267ed23552d788f72123ed3b3
+exl-id: 54b942f9-5dd9-4826-9a0a-028f2d7b8e41
+source-git-commit: 2bae11eafb875f01602c39c0dba00a888e11391a
 workflow-type: tm+mt
-source-wordcount: '2323'
+source-wordcount: '2310'
 ht-degree: 2%
 
 ---
 
-
-# Predikatreferens för frågeverktyget{#query-builder-predicate-reference}
+# Predikatreferens för Query Builder{#query-builder-predicate-reference}
 
 ## Allmänt {#general}
 
@@ -26,7 +25,7 @@ ht-degree: 2%
 * [grupp](#group)
 * [orderby](#orderby)
 
-## Förutser {#predicates}
+## Predikat {#predicates}
 
 * [boolproperty](/help/sites-developing/querybuilder-predicate-reference.md#boolproperty)
 * [innehållfragment](/help/sites-developing/querybuilder-predicate-reference.md#contentfragment)
@@ -61,12 +60,12 @@ Stöder facetextrahering. Tillhandahåller bucket för varje `true`- eller `fals
 
 #### Egenskaper {#properties}
 
-* **boolproperty-**
-relativ sökväg till egenskap, till exempel 
+* ****
+boolpropertyRelativ sökväg till egenskap, till exempel 
 `myFeatureEnabled` eller `jcr:content/myFeatureEnabled`
 
 * ****
-värdevärde att kontrollera egenskap för, &quot; 
+valueValue to check property for, &quot; 
 `true`&quot; eller &quot; `false`&quot;
 
 ### innehållfragment {#contentfragment}
@@ -79,8 +78,8 @@ Stöder inte facetextrahering.
 
 #### Egenskaper {#properties-1}
 
-* **content**
-fragmentIt kan användas med valfritt värde för att kontrollera om det finns innehållsfragment.
+* ****
+contentfragmentDen kan användas med valfritt värde för att kontrollera om det finns innehållsfragment.
 
 ### dateComparison {#datecomparison}
 
@@ -222,7 +221,7 @@ Detta är begreppsmässigt `fulltext AND ( (path AND type) OR (path AND type) )`
 
 ### hasPermission {#haspermission}
 
-Begränsar resultatet till objekt där den aktuella sessionen har de angivna [JCR-behörigheterna.](https://docs.adobe.com/content/docs/en/spec/jcr/2.0/16_Access_Control_Management.html#16.2.3%20Standard%20Privileges)
+Begränsar resultatet till objekt där den aktuella sessionen har de angivna [JCR-behörigheterna.](https://www.adobe.io/experience-manager/reference-materials/spec/jcr/2.0/16_Access_Control_Management.html#16.2.3%20Standard%20Privileges)
 
 Detta är ett predikat som bara kan filtreras och kan inte utnyttja ett sökindex. Det stöder inte facetextrahering.
 
@@ -232,7 +231,7 @@ Detta är ett predikat som bara kan filtreras och kan inte utnyttja ett sökinde
 
    kommaavgränsade JCR-behörigheter som den aktuella användarsessionen måste ha för noden i fråga. till exempel `jcr:write`, `jcr:modifyAccessControl`
 
-### language {#language}
+### språk {#language}
 
 Söker efter CQ-sidor på ett visst språk. Det här tittar både på sidspråksegenskapen och sidsökvägen, som ofta innehåller språket eller språket i en webbplatsstruktur på den översta nivån.
 
@@ -242,11 +241,11 @@ Stöder facetextrahering. Ger buketter för varje unik språkkod.
 
 #### Egenskaper {#properties-8}
 
-* **språk**
+* **language**
 
    ISO-språkkod, till exempel &quot; `de`&quot;
 
-### huvudresurs {#mainasset}
+### huvudtillgång {#mainasset}
 
 Kontrollerar om en nod är en DAM-huvudresurs och inte en underresurs. Detta är i stort sett alla noder som inte finns i en delresursnod. Observera att detta inte söker efter nodtypen `dam:Asset`. Om du vill använda det här predikatet anger du &quot; `mainasset=true`&quot; eller &quot; `mainasset=false`&quot;. Det finns inga fler egenskaper.
 
@@ -284,7 +283,7 @@ Stöder facetextrahering. Tillhandahåller bucket för varje unikt nodnamn (filn
 
    nodnamnsmönster som tillåter jokertecken: `*` = ett eller inga tecken, `?` = ett tecken, `[abc]` = endast tecken inom hakparenteser
 
-### inte utgången {#notexpired}
+### inte utgånget {#notexpired}
 
 Matchar objekt genom att kontrollera om en JCR DATE-egenskap är större eller lika med den aktuella servertiden. Detta kan användas för att kontrollera en &quot; `expiresAt`&quot;-liknande datumegenskap och begränsa till endast de som ännu inte har gått ut ( `notexpired=true`) eller som redan har gått ut ( `notexpired=false`).
 
@@ -320,7 +319,7 @@ Sortera resultatet. Om det krävs en ordning med flera egenskaper måste det hä
 
    om den anges till `ignore` blir sorteringsskiftläget okänsligt, vilket innebär att&quot;a&quot; kommer före&quot;B&quot;, om den är tom eller utelämnad är sorteringen skiftlägeskänslig, vilket betyder &quot;B&quot; kommer före &quot;a&quot;
 
-### path {#path}
+### bana {#path}
 
 Söker i en viss bana.
 
@@ -328,7 +327,7 @@ Stöder inte facetextrahering.
 
 #### Egenskaper {#properties-14}
 
-* **bana**
+* **path**
 
    banmönster, Beroende på exakt kommer antingen hela underträdet att matcha (som att lägga till `//*` i XPath, men observera att detta inte inkluderar bassökvägen) (exact=false, default) eller endast en exakt sökvägsmatchning, som kan innehålla jokertecken ( `*`). om self anges söks hela underträdet inklusive basnoden igenom
 
@@ -344,7 +343,7 @@ Stöder inte facetextrahering.
 
    söker i underträdet men inkluderar basnoden som angetts som sökväg (inga jokertecken)
 
-### egenskap {#property}
+### property {#property}
 
 Matchar JCR-egenskaper och deras värden.
 
@@ -376,7 +375,7 @@ Stöder facetextrahering. Ger bucket för varje unikt egenskapsvärde i resultat
 
    antal jokernivåer under vilka egenskapen/den relativa sökvägen kan finnas (t.ex. `property=size depth=2` kontrollerar nod/storlek, nod/&amp;ast;/size and node/&amp;ast;/&amp;ast;/size)
 
-### intervalleproperty {#rangeproperty}
+### rangegenskap {#rangeproperty}
 
 Matchar en JCR-egenskap mot ett intervall. Detta gäller för egenskaper med linjära typer som `LONG`, `DOUBLE` och `DECIMAL`. För `DATE`, se daterange-predikatet som har optimerade indata för datumformat.
 
@@ -410,7 +409,7 @@ Stöder inte facetextrahering.
 
    &quot; `true`&quot; om egenskapen checked är av typen Decimal
 
-### relativ{#relativedaterange}
+### relativ {#relativedaterange}
 
 Matchar `JCR DATE`-egenskaper mot ett datum/tidsintervall med tidsförskjutningar i förhållande till den aktuella servertiden. Du kan ange `lowerBound` och `upperBound` antingen med ett millisekundvärde eller bugzilla-syntaxen `1s 2m 3h 4d 5w 6M 7y` (en sekund, två minuter, tre timmar, fyra dagar, fem veckor, sex månader, sju år). Använd prefixet `-` för att ange en negativ förskjutning före den aktuella tiden. Om du bara anger `lowerBound` eller `upperBound` blir det andra standardvärdet 0, vilket innebär den aktuella tiden.
 
@@ -438,7 +437,7 @@ Stöder facet-extrahering på samma sätt som daterange-predikatet.
 
    nedre datumgräns i millisekunder eller `1s 2m 3h 4d 5w 6M 7y` (en sekund, två minuter, tre timmar, fyra dagar, fem veckor, sex månader, sju år) i förhållande till aktuell servertid, använd &quot;-&quot; för negativ offset
 
-### rot {#root}
+### root {#root}
 
 Rotpredikatgrupp. Stöder alla funktioner i en grupp och tillåter att globala frågeparametrar ställs in.
 
@@ -478,7 +477,7 @@ Namnet &quot;root&quot; används aldrig i en fråga, det är underförstått.
 
       Endast egenskaper som anges i `p.properties`, som är blankstegsavgränsade (använd &quot;+&quot; i URL:er) med relativa sökvägar. Om den relativa sökvägen har ett djup > 1 representeras dessa som underordnade objekt. den speciella jcr:path-egenskapen innehåller träffens sökväg
 
-### sparedquery {#savedquery}
+### sparad fråga {#savedquery}
 
 Inkluderar alla predikat för en beständig querybuilder-fråga i den aktuella frågan som ett undergruppsprediat.
 
@@ -502,14 +501,14 @@ Filtrering stöds inte. Stöder inte facetextrahering.
 
 #### Egenskaper {#properties-20}
 
-* **liknande**
-absolut sökväg till noden som liknande noder ska hittas för
+* ****
+liknande absolut sökväg till noden som liknande noder ska hittas för
 
-* **lokal relativ**
-sökväg till en underordnad nod eller 
+* ****
+lokal relativ sökväg till en underordnad nod eller 
 `.` för den aktuella noden (valfritt, standardvärdet är &quot;  `.`&quot;)
 
-### tagg {#tag}
+### tag {#tag}
 
 Söker efter innehåll som har taggats med en eller flera taggar genom att ange sökvägar för taggtiteln.
 
@@ -573,7 +572,7 @@ Stöder inte facetextrahering.
 
    (bool) söka efter hela taggens fulltext, dvs. alla titlar, beskrivning osv. (har företräde framför&quot;l `ang`&quot;)
 
-### typ {#type}
+### type {#type}
 
 Begränsar resultaten till en viss JCR-nodtyp, både primär nodtyp och blandningstyp. Detta söker även efter undertyper av den nodtypen. Observera att databasens sökindex måste omfatta nodtyperna för effektiv körning.
 

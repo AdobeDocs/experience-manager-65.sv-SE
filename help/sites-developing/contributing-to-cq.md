@@ -1,22 +1,21 @@
 ---
 title: Bidrar till AEM
-seo-title: Bidrar till AEM
+seo-title: Contributing to AEM
 description: AEM utvecklas enligt beprövade metoder som ofta används i stora öppen källkodsprojekt
-seo-description: AEM utvecklas enligt beprövade metoder som ofta används i stora öppen källkodsprojekt
+seo-description: AEM is developed following proven methodologies commonly practiced in large open source projects
 uuid: ffef60ae-8a9a-4c4b-8cbd-3cd72792a42e
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
 discoiquuid: f52402df-f6dc-4c62-82bc-cbce489b2b74
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 43fb4fa3-269a-4635-b055-4b7d787da21f
+source-git-commit: 2bae11eafb875f01602c39c0dba00a888e11391a
 workflow-type: tm+mt
-source-wordcount: '2726'
+source-wordcount: '2709'
 ht-degree: 0%
 
 ---
-
 
 # Bidrar till AEM{#contributing-to-aem}
 
@@ -46,7 +45,7 @@ På den högsta nivån bör du alltså ha en god förståelse för:
 * Webbläsarcookies
 * och andra moderna webbutvecklingskoncept
 
-Adobe Experience Manager teknikstack baseras på [Apache Felix](https://felix.apache.org/) OSGI-behållaren med webbramverket [Apache Sling](https://sling.apache.org/site/index.html) och bäddar in en Java-innehållsdatabas ([JCR](https://docs.adobe.com/content/docs/en/spec/jcr/2.0/index.html)) baserad på [Apache Jackrabbit](https://jackrabbit.apache.org/jcr-api.html). Du bör bekanta dig med dessa enskilda projekt, liksom med andra komponenter med öppen källkod (t.ex. Apache Lucene) som används i området där du tänker bidra.
+Adobe Experience Manager teknikstack baseras på [Apache Felix](https://felix.apache.org/) OSGI-behållaren med webbramverket [Apache Sling](https://sling.apache.org/site/index.html) och bäddar in en Java-innehållsdatabas ([JCR](https://www.adobe.io/experience-manager/reference-materials/spec/jcr/2.0/index.html)) baserad på [Apache Jackrabbit](https://jackrabbit.apache.org/jcr-api.html). Du bör bekanta dig med dessa enskilda projekt, liksom med andra komponenter med öppen källkod (t.ex. Apache Lucene) som används i området där du tänker bidra.
 
 ## Tribal Knowledge {#tribal-knowledge}
 
@@ -66,7 +65,7 @@ REST-strategin är djupt inrotad i det vi gör. Detta innebär bland annat att m
 
 REST (REpresentational State Transfer) avser den programarkitekturstil som World Wide Web bygger på. Den beskriver de viktigaste elementen som får webben att fungera och innehåller därför en uppsättning principer för hur webbaserade program ska utformas. När du utformar ett API som ska användas via webben är det därför klokt att följa dessa&quot;bästa praxis&quot;.
 
-Eftersom REST ger en vägledande filosofi bakom så mycket av det vi gör, bör ni se det som viktigt att bli väl insatt i de stora delarna av RESTful-design. En bra startpunkt är med Roy Fielding avhandling[.](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)
+Eftersom REST ger en vägledande filosofi bakom så mycket av det vi gör, bör ni se det som viktigt att bli väl insatt i de stora delarna av RESTful-design. En bra startpunkt är med Roy Fielding avhandling](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm).[
 
 ### Sling Request Resolution {#sling-request-resolution}
 
@@ -74,7 +73,7 @@ En viktig aspekt när det gäller AEM är hur inkommande begäranden relaterar t
 
 Viktiga aspekter att förstå om Apache Sling:s begäranupplösning är hur begäranden primärt mappas till en viss resurs i innehållsdatabasen, hur ytterligare egenskaper i begäran tillsammans med egenskaper för dessa innehållsobjekt avgör vilken programkod som ska anropas för att återge innehållet och hur kod i /apps åsidosätter kod i /libs.
 
-### Snabbstart {#quickstart}
+### Quickstart {#quickstart}
 
 Inget steg tre: Om du vill installera och köra programmet hämtar och dubbelklickar du på JAR-filen Quickstart. Det finns inget steg tre. Ytterligare valfria funktioner behöver bara installera rätt paket från paketresursen.
 
@@ -82,7 +81,7 @@ Liten snabbstartsstorlek: Behåll storleken på JAR-filen för QuickStart med et
 
 Snabbare starttid: När du gör en ändring som kan påverka starttiden måste du se till att den blir kortare, inte längre.
 
-### Medel och medel {#lean-and-mean}
+### Medel {#lean-and-mean}
 
 Vi föredrar kod och projekt som är lätta, små, snabba och eleganta. &quot;Bra nog&quot; är inte tillräckligt bra.
 
@@ -140,7 +139,7 @@ Det går också att kombinera flera instanser av innehållsdatabasen för att sk
 
 **JCR, Java Content Repository**  - Java Content Repository-specifikationen (JSR-283) tillhandahåller både en abstrakt datamodell och ett Application Programming-gränssnitt för att skapa en enormt skalbar NoSQL-datalager som kombinerar funktioner i ett filsystem och en objektdatabas. Även om ni inte behöver förstå JSR-283 i detalj, bör ni ta er tid att bekanta er med de grundläggande funktionerna i JCR och den underliggande datamodellen, eftersom JCR är det som gör det möjligt att använda AEM&quot;allt är innehåll&quot;-filosofi.
 
-JCR är alltså ett system med noder och egenskaper, där noder kan ärva från andra noder och allt innehåll lagras som egenskapen *värden*. Observera, att JCR förutom vanliga arv även tillåter konceptet &quot;mixin&quot;-noder, som möjliggör modellering av flera arv.
+JCR är alltså ett system med noder och egenskaper, där noder kan ärva från andra noder och allt innehåll lagras som egenskapen *värden*. Observera, att JCR, förutom vanliga arv, även innehåller konceptet&quot;mixin&quot;-noder, som möjliggör modellering av flera arv.
 
 JCR har ett antal fördefinierade nodtyper och egenskapstyper, men i allmänhet är typningssystemet relativt flexibelt och (faktiskt) en av styrkorna hos JCR är att det gör det möjligt att lagra och hantera både strukturerat och ostrukturerat innehåll lika enkelt. JCR kan alltså rymma mycket strukturerade data, men kan även rymma godtyckliga dynamiska datastrukturer utan schemabegränsningar.
 

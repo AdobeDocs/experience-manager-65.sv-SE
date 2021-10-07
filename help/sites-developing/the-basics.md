@@ -1,8 +1,8 @@
 ---
 title: AEM kärnbegrepp
-seo-title: Grunderna
+seo-title: The Basics
 description: En översikt över de centrala begreppen för hur AEM är uppbyggt och hur de kan utvecklas vidare, inklusive förståelse av JCR, Sling, OSGi, dispatchern, arbetsflöden och MSM
-seo-description: En översikt över de centrala begreppen för hur AEM är uppbyggt och hur de kan utvecklas vidare, inklusive förståelse av JCR, Sling, OSGi, dispatchern, arbetsflöden och MSM
+seo-description: An overview of the core concepts of how AEM is structured and how to develop on top of it including understanding the JCR, Sling, OSGi, the dispatcher, workflows, and MSM
 uuid: e49f29db-a5d6-48a0-af32-f8785156746e
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,21 +10,20 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 6e913190-be92-4862-a8b9-517f8bde0044
 exl-id: f6f32290-422e-4037-89d8-d9f414332e8e
-translation-type: tm+mt
-source-git-commit: 78e28636eec331314c2f29c93d516215b1572f20
+source-git-commit: 2bae11eafb875f01602c39c0dba00a888e11391a
 workflow-type: tm+mt
-source-wordcount: '3367'
+source-wordcount: '3334'
 ht-degree: 0%
 
 ---
 
-# AEM Core Concepts {#aem-core-concepts}
+# AEM kärnbegrepp {#aem-core-concepts}
 
 >[!NOTE]
 >
 >Innan du fördjupar dig i AEM grundläggande begrepp rekommenderar Adobe att du slutför WKND-självstudiekursen i [Getting Started Developing AEM Sites](/help/sites-developing/getting-started.md)-dokumentet för en översikt över AEM utvecklingsprocess och introduktion till centrala koncept.
 
-## Krav för utveckling på AEM {#prerequisites-for-developing-on-aem}
+## Krav för utveckling av AEM {#prerequisites-for-developing-on-aem}
 
 Du behöver följande kunskaper för att kunna utveckla AEM:
 
@@ -42,7 +41,7 @@ Du bör även läsa och följa [riktlinjerna och bästa praxis](/help/sites-deve
 
 ## Java Content Repository {#java-content-repository}
 
-Java Content Repository (JCR)-standarden, [JSR 283](https://docs.adobe.com/content/docs/en/spec/jcr/2.0/index.html), anger ett leverantörsoberoende och implementeringsoberoende sätt att komma åt innehåll dubbelriktat på en detaljnivå i en innehållsdatabas.
+Java Content Repository (JCR)-standarden, [JSR 283](https://www.adobe.io/experience-manager/reference-materials/spec/jcr/2.0/index.html), anger ett leverantörsoberoende och implementeringsoberoende sätt att komma åt innehåll dubbelriktat på en detaljnivå i en innehållsdatabas.
 
 Adobe Research (Schweiz) AG har en ledande specialiseringsbefattning.
 
@@ -54,7 +53,7 @@ Experience Server innehåller de Experience Services som AEM bygger på, och som
 
 [Apache ](https://jackrabbit.apache.org/) Jackrabbitis är en öppen källkodsimplementering av JCR API 2.0 som följer alla regler.
 
-## Sling Request Processing {#sling-request-processing}
+## Bearbetning av försäljningsbegäran {#sling-request-processing}
 
 ### Introduktion till Sling {#introduction-to-sling}
 
@@ -74,7 +73,7 @@ I följande diagram förklaras alla dolda, men kraftfulla, frågeparametrar som 
 
 ![Använda SlingPostServlet](assets/sling-cheatsheet-02.png)
 
-### Sling är innehållscentrerad {#sling-is-content-centric}
+### Sling är innehållscentrerat {#sling-is-content-centric}
 
 Sling är *innehållscentrerad*. Detta innebär att bearbetningen är inriktad på innehållet eftersom varje HTTP-begäran mappas till innehåll i form av en JCR-resurs (en databasnod):
 
@@ -109,15 +108,15 @@ Vi kan dela upp det i dess sammansatta delar:
 
 **** protocolHTTP
 
-**webbplatsens** hostName.
+**** hostName för webbplatsen.
 
 **content** pathPath som anger innehållet som ska återges. Används tillsammans med tillägget. i det här exemplet översätts de till tools/spy.html.
 
 **väljare** som används för alternativa metoder för återgivning av innehållet, i det här exemplet en utskriftsvänlig version i A4-format.
 
-**** extensionContent format; anger också det skript som ska användas för återgivning.
+**** extensionContent-format; anger också det skript som ska användas för återgivning.
 
-**Suffix** Kan användas för att ange ytterligare information.
+**** suffixKan användas för att ange ytterligare information.
 
 **parametrar** som krävs för dynamiskt innehåll.
 
@@ -144,7 +143,7 @@ Begäran har delats upp och nödvändig information har extraherats. Databasen g
 
 Med Sling kan även andra saker än JCR-noder vara resurser, men det här är en avancerad funktion.
 
-### Leta reda på skriptet {#locating-the-script}
+### Hitta skriptet {#locating-the-script}
 
 När rätt resurs (innehållsnod) finns extraheras resurstypen **sling**. Detta är en sökväg som letar upp skriptet som ska användas för återgivning av innehållet.
 
@@ -162,7 +161,7 @@ Några andra punkter att notera är:
 * när metoden (GET, POST) krävs, anges den med versaler enligt HTTP-specifikationen, t.ex. job.POST.esp (se nedan)
 * olika skriptmotorer stöds:
 
-   * HTML (HTML-mallspråk - Adobe Experience Manager rekommenderade och rekommenderade serversidesmallsystem för HTML): `.html`
+   * HTML (HTML Template Language - Adobe Experience Manager&#39; preferred and recommended server-side template system for HTML): `.html`
    * ECMAScript-sidor (JavaScript) (körning på serversidan): `.esp, .ecma`
    * Java Server Pages (körning på serversidan): `.jsp`
    * Java Servlet Compiler (körning på serversidan): `.java`
@@ -289,7 +288,7 @@ Om du anropar representationen (skriptet) direkt döljer du resursen i skriptet,
 
 Detta använder Sling API-paketet org.apache.sling.&amp;ast; och taggbibliotek.
 
-### Referera till befintliga element med sling:include {#referencing-existing-elements-using-sling-include}
+### referera till befintliga element med sling:include {#referencing-existing-elements-using-sling-include}
 
 En sista sak är behovet av att referera till befintliga element i skripten.
 
@@ -332,7 +331,7 @@ Detta gör att du kan utföra följande åtgärder på något av paketen i din i
 
 Mer information finns i [konfigurationsinställningarna för webbkonsolen](/help/sites-deploying/web-console.md), [OSGI](/help/sites-deploying/configuring-osgi.md) och [OSGi](/help/sites-deploying/osgi-configuration-settings.md).
 
-## Utvecklingsobjekt i AEM{#development-objects-in-the-aem-environment}
+## Utvecklingsobjekt i AEM {#development-objects-in-the-aem-environment}
 
 Följande är av intresse för utvecklingen:
 
@@ -356,19 +355,19 @@ Med currentNode som aktuellt nodobjekt.
 
 Mer information om hur du manipulerar Node-objekt finns i [Javadocs](https://docs.adobe.com/docs/en/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/Node.html).
 
-**Widget** I AEM alla användarindata hanteras av widgetar. De används ofta för att styra redigeringen av ett visst innehåll.
+**** WidgetI AEM alla användarindata hanteras av widgetar. De används ofta för att styra redigeringen av ett visst innehåll.
 
 Dialogrutor skapas genom att widgetar kombineras.
 
 AEM har utvecklats med ExtJS-biblioteket med widgetar.
 
-**DialogEn** dialogruta är en speciell typ av widget.
+**** DialogEn dialogruta är en speciell typ av widget.
 
 För att redigera innehåll använder AEM dialogrutor som definieras av programutvecklaren. Dessa kombinerar en serie widgetar för att ge användaren alla fält och åtgärder som behövs för att redigera det relaterade innehållet.
 
 Dialogrutor används också för att redigera metadata och för olika administrationsverktyg.
 
-**Programvarukomponenten** ComponentA är ett systemelement som erbjuder en fördefinierad tjänst eller händelse och kan kommunicera med andra komponenter.
+**** ComponentA software component är ett systemelement som erbjuder en fördefinierad tjänst eller händelse och kan kommunicera med andra komponenter.
 
 I AEM används en komponent ofta för att återge innehållet i en resurs. När resursen är en sida, kallas komponentåtergivningen för en komponent på översta nivån eller en PageComponent. En komponent behöver dock inte återge innehåll eller vara länkad till en viss resurs. En navigeringskomponent visar till exempel information om flera resurser.
 
@@ -377,7 +376,7 @@ Definitionen av en komponent omfattar
 * koden som används för att återge innehållet
 * en dialogruta för användarindata och konfigurationen av det resulterande innehållet.
 
-**TemplateA** template är basen för en viss typ av sida. När du skapar en sida på fliken Webbplatser måste användaren välja en mall. Den nya sidan skapas sedan genom att den här mallen kopieras.
+**** TemplateA template is the base for a specific type of page. När du skapar en sida på fliken Webbplatser måste användaren välja en mall. Den nya sidan skapas sedan genom att den här mallen kopieras.
 
 En mall är en hierarki med noder som har samma struktur som den sida som ska skapas, men utan något verkligt innehåll.
 
@@ -385,7 +384,7 @@ Den definierar den sidkomponent som används för att återge sidan och standard
 
 **Sidkomponent (komponent på översta nivån)** Komponenten som ska användas för att återge sidan.
 
-**PageA-** sidan är en instans av en mall.
+**** PageA-sidan är en instans av en mall.
 
 En sida har en hierarkinod av typen cq:Page och en innehållsnod av typen cq:PageContent. Egenskapen sling:resourceType för innehållsnoden pekar på den sidkomponent som används för återgivning av sidan.
 
@@ -463,7 +462,7 @@ Ditt innehåll omfattas ofta av organisatoriska processer, inklusive steg som go
 
 Arbetsflödesmotorn används för att hantera implementeringen av dina arbetsflöden och deras efterföljande program till ditt innehåll.
 
-## Hantering av flera platser {#multi-site-management}
+## Hantering av flera webbplatser {#multi-site-management}
 
 Med Multi Site Manager (MSM) kan du enkelt hantera flera webbplatser som delar gemensamt innehåll. Med MSM kan du definiera relationer mellan platserna så att innehållsändringar på en plats automatiskt replikeras på andra platser.
 

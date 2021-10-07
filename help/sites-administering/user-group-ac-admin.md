@@ -1,8 +1,8 @@
 ---
 title: Behörighetsadministration för användare, grupp och åtkomst
-seo-title: Behörighetsadministration för användare, grupp och åtkomst
+seo-title: User, Group and Access Rights Administration
 description: Läs mer om administration av användare, grupper och åtkomsträttigheter i AEM.
-seo-description: Läs mer om administration av användare, grupper och åtkomsträttigheter i AEM.
+seo-description: Learn about user, group and access rights administration in AEM.
 uuid: 26d7bb25-5a38-43c6-bd6a-9ddba582c60f
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
@@ -11,15 +11,14 @@ discoiquuid: 66674e47-d19f-418f-857f-d91cf8660b6d
 docset: aem65
 exl-id: 5808b8f9-9b37-4970-b5c1-4d33404d3a8b
 feature: Security
-translation-type: tm+mt
-source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
+source-git-commit: 2bae11eafb875f01602c39c0dba00a888e11391a
 workflow-type: tm+mt
-source-wordcount: '3138'
+source-wordcount: '3120'
 ht-degree: 0%
 
 ---
 
-# Administrering av användar-, grupp- och åtkomsträttigheter{#user-group-and-access-rights-administration}
+# Behörighetsadministration för användare, grupp och åtkomst{#user-group-and-access-rights-administration}
 
 Att ge åtkomst till en CRX-databas omfattar flera ämnen:
 
@@ -63,7 +62,7 @@ Med CRX kan du konfigurera åtkomsträttigheter för både användar- och gruppk
 
 >[!NOTE]
 >
->CRX implementerar [åtkomstkontroll enligt definitionen i JSR-283](https://docs.adobe.com/content/docs/en/spec/jcr/2.0/16_Access_Control_Management.html).
+>CRX implementerar [åtkomstkontroll enligt definitionen i JSR-283](https://www.adobe.io/experience-manager/reference-materials/spec/jcr/2.0/16_Access_Control_Management.html).
 >
 >En standardinstallation av en CRX-databas är konfigurerad att använda resursbaserade åtkomstkontrollistor. Detta är en möjlig implementering av åtkomstkontrollen JSR-283 och en av implementeringarna i Jackrabbit.
 
@@ -114,8 +113,7 @@ Den förteckning över åtkomsträttigheter som är tillämpliga för föremåle
 >
 
 
-
-### Åtgärdar begäran och åtkomsträttigheter {#resolving-request-and-access-rights}
+### Löser begäran och åtkomsträttigheter {#resolving-request-and-access-rights}
 
 När CRX hanterar begäran jämför den åtkomstbegäran från ämnet med åtkomstkontrollistan på databasnoden:
 
@@ -264,8 +262,8 @@ Om ett konto personifierar ett annat är det väldigt svårt att se. Loggfilerna
 1. Klicka på **Skapa användare**.
 1. Sedan kan du ange Egenskaper:
 
-   * **** Användar-ID som används som kontonamn.
-   * **Lösenord** krävs vid inloggning.
+   * **** Används som kontonamn.
+   * **** Lösenord krävs vid inloggning.
    * **Principal** Name för att ange ett fullständigt textnamn.
    * **Mellanliggande** sökväg som kan användas för att skapa en trädstruktur.
 
@@ -286,8 +284,7 @@ Om ett konto personifierar ett annat är det väldigt svårt att se. Loggfilerna
 >
 
 
-
-### Uppdaterar ett användarkonto {#updating-a-user-account}
+### Uppdatera ett användarkonto {#updating-a-user-account}
 
 1. Med dialogrutan **Användaradministration** öppnar du listvyn för alla konton.
 1. Navigera genom trädstrukturen.
@@ -295,7 +292,7 @@ Om ett konto personifierar ett annat är det väldigt svårt att se. Loggfilerna
 1. Gör en ändring och klicka sedan på Spara (grön bocksymbol) för den posten.
 1. Klicka på **Stäng** för att slutföra, eller **Lista...** om du vill återgå till listan över alla användarkonton.
 
-### Tar bort ett användarkonto {#removing-a-user-account}
+### Ta bort ett användarkonto {#removing-a-user-account}
 
 1. Med dialogrutan **Användaradministration** öppnar du listvyn för alla konton.
 1. Navigera genom trädstrukturen.
@@ -381,7 +378,7 @@ Kolumnen **Ärvd** anger medlemskap som har ärvts som ett resultat av medlemska
 >
 >När rollen Ägare, Redigerare eller Visningsprogram tilldelas till en användare i en resursmapp skapas en ny grupp. Gruppnamnet har formatet `mac-default-<foldername>` för varje mapp som rollerna är definierade för.
 
-### Skapar ett gruppkonto {#creating-a-group-account}
+### Skapa ett gruppkonto {#creating-a-group-account}
 
 1. Öppna dialogrutan **Gruppadministration**.
 1. Klicka på **Skapa grupp**.
@@ -397,7 +394,7 @@ Kolumnen **Ärvd** anger medlemskap som har ärvts som ett resultat av medlemska
    1. Se **Gruppmedlemskap**.
    1. Hantera **medlemmar**.
 
-### Uppdaterar ett gruppkonto {#updating-a-group-account}
+### Uppdatera ett gruppkonto {#updating-a-group-account}
 
 1. Med dialogrutan **Gruppadministration** öppnar du listvyn för alla konton.
 1. Navigera genom trädstrukturen.
@@ -405,7 +402,7 @@ Kolumnen **Ärvd** anger medlemskap som har ärvts som ett resultat av medlemska
 1. Gör en ändring och klicka sedan på Spara (grön bocksymbol) för den posten.
 1. Klicka på **Stäng** för att slutföra, eller **Lista...** om du vill återgå till listan över alla gruppkonton.
 
-### Tar bort ett gruppkonto {#removing-a-group-account}
+### Ta bort ett gruppkonto {#removing-a-group-account}
 
 1. Med dialogrutan **Gruppadministration** öppnar du listvyn för alla konton.
 1. Navigera genom trädstrukturen.
@@ -443,7 +440,7 @@ Du kan lägga till medlemmar i den aktuella gruppen:
 
 Eller ta bort en befintlig medlem med papperskorgssymbolen.
 
-## Hantering av åtkomsträttighet {#access-right-management}
+## Behörighetshantering {#access-right-management}
 
 Med fliken **Åtkomstkontroll** på CRXDE Lite kan du definiera åtkomstkontrollprinciper och tilldela de relaterade behörigheterna.
 
@@ -469,7 +466,7 @@ Policyerna kategoriseras enligt:
 
    Detta är de åtkomstkontrollprinciper som nu gäller för alla åtkomstbegäranden. De visar de aggregerade policyer som härletts från både lokala policyer och eventuella ärvda från det överordnade.
 
-### Principval {#policy-selection}
+### Välj profil {#policy-selection}
 
 Du kan välja profiler för:
 
@@ -497,7 +494,7 @@ Du kan välja profiler för:
 >
 >Det är enklare att hantera ett fåtal grupper än många användarkonton.
 
-### Behörigheter {#privileges}
+### Behörighet {#privileges}
 
 Följande behörigheter är tillgängliga när du lägger till en åtkomstkontrollpost (mer information finns i [API](https://docs.adobe.com/docs/en/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/security/Privilege.html)):
 
@@ -608,7 +605,7 @@ Du kan även registrera nya behörigheter:
 
 1. Klicka på **OK** för att spara. Privilegiet är nu tillgängligt för val.
 
-### Lägger till en åtkomstkontrollpost {#adding-an-access-control-entry}
+### Lägga till en åtkomstkontrollpost {#adding-an-access-control-entry}
 
 1. Markera resursen och öppna fliken **Åtkomstkontroll**.
 
@@ -637,7 +634,7 @@ Du kan även registrera nya behörigheter:
 
 CRX validerar ditt val; för ett givet huvudkonto finns (högst) 1 neka och 1 tillåt post på en viss nod. Implementeringen rensar alltid bort redundanta poster och ser till att samma privilegium inte finns med i både Tillåt- och Neka-posterna.
 
-### Beställa lokala åtkomstkontrollprinciper {#ordering-local-access-control-policies}
+### Principer för lokal åtkomstkontroll vid beställning {#ordering-local-access-control-policies}
 
 Ordningen i listan anger i vilken ordning profilerna tillämpas.
 
@@ -647,7 +644,7 @@ Ordningen i listan anger i vilken ordning profilerna tillämpas.
 
 1. Ändringarna visas i båda tabellerna för **Local** och **Effektiva åtkomstkontrollprinciper**.
 
-### Tar bort en åtkomstkontrollprincip {#removing-an-access-control-policy}
+### Ta bort en åtkomstkontrollprincip {#removing-an-access-control-policy}
 
 1. I tabellen **Local Access Control Policies** klickar du på den röda ikonen (-) till höger om posten.
 1. Posten tas bort från båda tabellerna för **Local** och **Effektiva åtkomstkontrollprinciper**.

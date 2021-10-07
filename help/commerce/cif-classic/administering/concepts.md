@@ -6,15 +6,14 @@ topic-tags: e-commerce
 content-type: reference
 docset: aem65
 exl-id: 290b2af6-257f-42f2-b809-1248227a4795
-translation-type: tm+mt
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+source-git-commit: 2bae11eafb875f01602c39c0dba00a888e11391a
 workflow-type: tm+mt
-source-wordcount: '4525'
+source-wordcount: '4524'
 ht-degree: 0%
 
 ---
 
-# Koncept{#concepts}
+# Concepts{#concepts}
 
 Integreringsramverket innehåller mekanismer och komponenter för att
 
@@ -39,7 +38,6 @@ Detta innebär att
 >* [Salesforce Commerce Cloud](https://github.com/adobe/commerce-salesforce)
 
 >
-
 
 
 >[!CAUTION]
@@ -130,12 +128,11 @@ AEM e-handel genomförs med en e-handelsmotor:
 >
 >AEM eCommerce som genomförs inom AEM med allmän utveckling baserad på JCR är:
 >
->* Ett fristående, AEM e-handelsexempel som visar hur API används. Detta kan användas för att kontrollera produktdata, varukorgar och utcheckning i samband med befintliga dataspresentations- och marknadsföringskampanjer. I det här fallet lagras produktdatabasen i databasen native to AEM (Adobe implementation av [JCR](https://docs.adobe.com/content/docs/en/spec/jcr/2.0/index.html)).
+>* Ett fristående, AEM e-handelsexempel som visar hur API används. Detta kan användas för att kontrollera produktdata, varukorgar och utcheckning i samband med befintliga dataspresentations- och marknadsföringskampanjer. I det här fallet lagras produktdatabasen i databasen native to AEM (Adobe implementation av [JCR](https://www.adobe.io/experience-manager/reference-materials/spec/jcr/2.0/index.html)).
 >
->  
-Standardinstallationen AEM innehåller grunderna i [den generiska e-handelsimplementeringen](/help/commerce/cif-classic/administering/generic.md).
+>  Standardinstallationen AEM innehåller grunderna i [den generiska e-handelsimplementeringen](/help/commerce/cif-classic/administering/generic.md).
 
-### Commerce Providers {#commerce-providers}
+### Leverantörer av handel {#commerce-providers}
 
 När du importerar data från en e-handelsmotor till din AEM e-handelsplats används en e-handelsleverantör för att förse importörerna med data. En e-handelsleverantör kan stödja flera importörer.
 
@@ -199,7 +196,7 @@ Det integrerade systemet fångar upp följande roller för att underhålla data:
 
 ## Produkter {#products}
 
-### Produkt Data kontra marknadsföringsdata {#product-data-versus-marketing-data}
+### Produktdata kontra marknadsföringsdata {#product-data-versus-marketing-data}
 
 #### Strukturella kontra marknadsföringskategorier {#structural-versus-marketing-categories}
 
@@ -211,7 +208,7 @@ Om följande två kategorier kan särskiljas kan du på så sätt skapa tydliga 
 
    `/products/mens/shoes/sneakers`
 
-* ** marknadsföringskategorier
+* ** Marknadskategorier
 
    Alla andra kategorier i en *produkt kan tillhöra*; till exempel:
 
@@ -312,7 +309,7 @@ Liksom för språk kan stora flernationella företag behöva ta hand om flera va
 
 Taggar kan också användas för att gruppera produkter i en katalog. De kan användas för mer dynamiska kataloger, till exempel säsongserbjudanden.
 
-### Kataloginställning (inledande import) {#catalog-setup-initial-import}
+### Kataloginställningar (inledande import) {#catalog-setup-initial-import}
 
 Beroende på implementeringen kan du importera produktdata som krävs för din baskatalog till AEM från:
 
@@ -353,13 +350,13 @@ Det finns olika strategier du kan välja mellan för att lösa dessa problem:
 * [Prestandatestning](#performance-testing)
 * [Prestanda - övriga](#performance-miscellaneous)
 
-#### Buckling {#bucketing}
+#### Bucketing {#bucketing}
 
 Om en JCR-nod har många direkta underordnade noder (t.ex. 1000 eller fler) krävs det bucket (phantom-mappar) för att säkerställa att prestandan inte påverkas. Dessa genereras enligt en algoritm vid import.
 
 De här bucklarna har formen av fantommappar som introduceras i katalogstrukturen, men kan konfigureras så att de inte visas i offentliga URL:er.
 
-#### Avlasta resurshanteringen till en dedikerad instans {#offload-asset-post-processing-to-a-dedicated-instance}
+#### Avlasta efterbearbetning av resurser till en dedikerad instans {#offload-asset-post-processing-to-a-dedicated-instance}
 
 I det här scenariot ställs två författarinstanser in:
 
@@ -531,7 +528,7 @@ I AEM:
 >
 >AEM använder termen **Voucher**, som är synonym med termen **Kupong**.
 
-### Kampanjer {#promotions}
+### Erbjudanden {#promotions}
 
 Kampanjer, tillsammans med kuponger, gör att du kan förverkliga scenarier som:
 
@@ -560,7 +557,7 @@ Kampanjer underhålls vanligtvis inte av produktinformationsansvariga, utan av m
 I AEM är kampanjerna också integrerade i [Campaign Management](/help/sites-authoring/personalization.md):
 
 * en [kampanj](/help/sites-authoring/personalization.md) anger på/av-tider
-* [De ](/help/sites-authoring/personalization.md) ** upplevelser som finns i kampanjen används för att gruppera resurser (testsidor, kampanjer osv.) utifrån det målgruppssegment som de motsvarar
+* [](/help/sites-authoring/personalization.md) ** upplevelser i kampanjen används för att gruppera resurser (scensidor, kampanjer osv.) efter vilket målgruppssegment de motsvarar
 
 En kampanj kan hållas antingen som en upplevelse eller direkt i kampanjen:
 
@@ -682,7 +679,7 @@ E-handelsmotorn använder kontexten (i huvudsak kundinformationen) för att avg�
 
 När kunden handlar hittar han/hon produktsidorna och väljer artiklar som ska placeras i kundvagnen. När de går vidare till kassan kan en beställning placeras.
 
-### Anonyma shoppare {#anonymous-shoppers}
+### Anonyma köpare {#anonymous-shoppers}
 
 En anonym kund kan
 
@@ -745,7 +742,7 @@ I båda fallen behålls objekten i vagnen (och kan återställas) mellan inloggn
 
 Före utcheckningen återspeglas prisförändringarna (i båda systemen) när de inträffar.
 
-### Orderinformation {#order-information}
+### Beställningsinformation {#order-information}
 
 Beroende på din implementeringsinformation om en beställning finns antingen i eCommerce-motorn eller AEM återges den här informationen av AEM.
 
@@ -843,7 +840,7 @@ Beställningsleveranser och -spårning hanteras vanligtvis av e-handelsmotorn. I
 
 ![chlimage_1-17](/help/sites-administering/assets/chlimage_1-17.png)
 
-## Kassa {#checkout}
+## Utcheckning {#checkout}
 
 Utcheckning implementeras med AEM. På så sätt kan marknadschefen anpassa upplevelsen av marknadsföringsmaterialet.
 

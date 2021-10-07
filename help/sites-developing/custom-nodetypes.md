@@ -1,8 +1,8 @@
 ---
 title: Anpassade nodtyper
-seo-title: Anpassade nodtyper
+seo-title: Custom Node Types
 description: AEM baseras på Sling och använder en JCR-databas med nodtyper som erbjuds av båda, men AEM innehåller även en rad anpassade nodtyper
-seo-description: AEM baseras på Sling och använder en JCR-databas med nodtyper som erbjuds av båda, men AEM innehåller även en rad anpassade nodtyper
+seo-description: AEM is based on Sling and uses a JCR repository with node types offered by both, but AEM also provides a range of custom node types
 uuid: f2022504-e433-4b42-9cc1-eef41086483a
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,9 +10,9 @@ topic-tags: platform
 content-type: reference
 discoiquuid: aae186eb-e059-4a9d-b02d-86a86c86589d
 exl-id: bfd50aa9-579e-47d5-997d-ec764c782497
-source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
+source-git-commit: 2bae11eafb875f01602c39c0dba00a888e11391a
 workflow-type: tm+mt
-source-wordcount: '1907'
+source-wordcount: '1877'
 ht-degree: 7%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 7%
 
 Eftersom AEM baseras på Sling och använder en JCR-databas är de nodtyper som erbjuds av båda dessa tillgängliga för användning:
 
-* [JCR-nodtyper](https://docs.adobe.com/content/docs/en/spec/jcr/2.0/3_Repository_Model.html#3.1.7-Node-Types)
+* [JCR-nodtyper](https://www.adobe.io/experience-manager/reference-materials/spec/jcr/2.0/3_Repository_Model.html#3.1.7-Node-Types)
 * [Sling Node Types](https://cwiki.apache.org/confluence/display/SLING/Sling+Node+Types)
 
 Förutom dessa. AEM innehåller ett antal anpassade nodtyper.
@@ -119,7 +119,7 @@ En blandning som definierar en geografisk plats i decimalgrader (DD)
 * `- latitude (double)`
 * `- longitude (double)`
 
-### cq:Trackback {#cq-trackback}
+### cq:bakåtspårning {#cq-trackback}
 
 **Beskrivning**
 
@@ -131,7 +131,7 @@ Definierar nodtypen för en bakåtspårningsnod.
 
 ## Core {#core}
 
-### cq:Sida {#cq-page}
+### cq:Page {#cq-page}
 
 **Beskrivning**
 
@@ -417,7 +417,7 @@ DAM-resurs.
 `+ jcr:content (dam:AssetContent) = dam:AssetContent copy primary`
 `+ * (nt:base) = nt:base version`
 
-### dam:Thumbnail {#dam-thumbnail}
+### dam:Miniatyr {#dam-thumbnail}
 
 **Beskrivning**
 
@@ -780,7 +780,7 @@ Definierar en enskild tagg, men kan även innehålla taggar, vilket skapar en ta
    * `- * (undefined)`
    * `+ * (nt:base) = cq:Tag version`
 
-### cq:Taggable {#cq-taggable}
+### cq:Taggbar {#cq-taggable}
 
 **Beskrivning**
 
@@ -927,7 +927,7 @@ Panelen Tabb
 * `[cq:TabPanel]` > `cq:Panel orderable`
    * `- activeTab (long)`
 
-### cq:Field {#cq-field}
+### cq:Fält {#cq-field}
 
 **Beskrivning**
 
@@ -963,7 +963,7 @@ Wiki-ämne
    * `- wiki:logMessage (string)`
    * `- wiki:quietSave (boolean)`
 
-### wiki:Användare {#wiki-user}
+### wiki:användare {#wiki-user}
 
 **Beskrivning**
 
@@ -974,7 +974,7 @@ Wiki-användare
 * `[wiki:User] mixin`
    * `- wiki:subscriptions (string) multiple`
 
-### wiki:Egenskaper {#wiki-properties}
+### wiki:egenskaper {#wiki-properties}
 
 **Beskrivning**
 
