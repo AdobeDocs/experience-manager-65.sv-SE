@@ -3,11 +3,11 @@ title: Installera och konfigurera ImageMagick
 description: Läs om programmet ImageMagick, hur du installerar det, konfigurerar kommandoradsprocessen och använder det för att redigera, skapa och generera miniatyrbilder från bilder.
 contentOwner: AG
 role: Admin
-feature: Återgivningar,Utvecklarverktyg
+feature: Renditions,Developer Tools
 exl-id: 6c149d31-1e64-4d29-a32a-58bd69e9fa98
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: b2faf81983216bef9151548d90ae86f1c26a9f91
 workflow-type: tm+mt
-source-wordcount: '658'
+source-wordcount: '655'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Om du vill bearbeta stora filer med ImageMagick bör du tänka på högre minnes
 
 >[!NOTE]
 >
->Om du använder [!DNL Experience Manager] på [!DNL Adobe Managed Services] (AMS) kontaktar du kundtjänst på Adobe om du tänker bearbeta många högupplösta PSD- eller PSB-filer. [!DNL Experience Manager] kan inte bearbeta PSB-filer med hög upplösning som är större än 30000 x 23000 pixlar.
+>Om du använder [!DNL Experience Manager] på [!DNL Adobe Managed Services] (AMS) kontaktar du Adobe kundsupport om du tänker bearbeta många högupplösta PSD eller PSB-filer. [!DNL Experience Manager] kan inte bearbeta PSB-filer med hög upplösning som är större än 30000 x 23000 pixlar.
 
 ## Installera ImageMagick {#installing-imagemagick}
 
@@ -36,7 +36,7 @@ Det finns flera versioner av installationsfilerna för ImageMagic för olika ope
 
 ## Ställa in kommandoradens processsteg {#set-up-the-command-line-process-step}
 
-Du kan ställa in kommandoradens processsteg för ditt särskilda användningsfall. Följ de här stegen för att skapa en vänd bild och miniatyrbilder (140x100, 48x48, 319x319 och 1280x1280) varje gång du lägger till en JPEG-bildfil i `/content/dam` på [!DNL Experience Manager]-servern:
+Du kan ställa in kommandoradens processsteg för ditt särskilda användningsfall. Följ de här stegen för att skapa en speglad bild och miniatyrbilder (140x100, 48x48, 319x319 och 1280x1280) varje gång du lägger till en JPEG-bildfil i `/content/dam` på [!DNL Experience Manager]-servern:
 
 1. Gå till arbetsflödeskonsolen (`https://[aem_server]:[port]/workflow`) på [!DNL Experience Manager]-servern och öppna arbetsflödesmodellen för **[!UICONTROL DAM Update Asset]**.
 1. Öppna steget **[!UICONTROL EPS thumbnails (powered by ImageMagick)]** i arbetsflödesmodellen **[!UICONTROL DAM Update Asset]**.
@@ -75,7 +75,7 @@ Du kan ställa in kommandoradens processsteg för ditt särskilda användningsfa
 
 1. Spara arbetsflödet.
 
-1. Om du vill verifiera att bearbetningen är korrekt överför du en JPG-bild till [!DNL Assets]. När bearbetningen är klar kontrollerar du om en bild som har vänts och återgivningarna har genererats eller inte.
+1. Om du vill verifiera att bearbetningen är korrekt överför du en JPG-avbildning till [!DNL Assets]. När bearbetningen är klar kontrollerar du om en bild som har vänts och återgivningarna har genererats eller inte.
 
 ## Minska säkerhetsluckor {#mitigating-security-vulnerabilities}
 

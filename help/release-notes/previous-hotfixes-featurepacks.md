@@ -4,7 +4,7 @@ description: Versionsinformation för  [!DNL Adobe Experience Manager] 6.5 Servi
 contentOwner: AK
 mini-toc-levels: 2
 exl-id: aeed49a0-c7c2-44da-b0b8-ba9f6b6f7101
-source-git-commit: 97d0b0d85276c733b487a8f3c5095bc4feb7e08d
+source-git-commit: 99d38dddbcd06fecb82c744d446b9cef981e0781
 workflow-type: tm+mt
 source-wordcount: '22693'
 ht-degree: 0%
@@ -397,7 +397,7 @@ Nedan följer en lista över korrigeringar i [!DNL Experience Manager] 6.5.8.0-v
 * När du drar in vissa objekt i en numrerad lista behåller alla objekt samma nummer, men numreringen ska börja från 1 för objekt med samma indrag (CQ-4313011).
 * När miniatyrbilder är aktiverade kan du inte redigera någon sida eller komponent. Problemet uppstod efter installation av AEM 6.5 Service Pack 7 (CQ-431133).
 * Omni sök- och resursfilter returnerar irrelevanta eller inga resultat (CQ-4312322, NPR-35793).
-* När flera sidor samtidigt kommer åt ett klientbibliotek, kan HTML-bibliotekshanteraren inte läsa in klientbiblioteket. Det leder till felaktig återgivning av sidor (NPR-35538).
+* När flera sidor samtidigt kommer åt ett klientbibliotek kan bibliotekshanteraren i HTML inte läsa in klientbiblioteket. Det leder till felaktig återgivning av sidor (NPR-35538).
 * Kontextsökvägen tas bort automatiskt när du ställer in en SSL i [!DNL Experience Manager] (NPR-35294).
 * Pakethanteraren loggar inte ut användare efter att ha klickat på alternativet Logout (NPR-35160).
 
@@ -421,7 +421,7 @@ Nedan följer en lista över korrigeringar i [!DNL Experience Manager] 6.5.8.0-v
 * Hanteringsfält JavaScript-biblioteket uppgraderas till v4.7.6 (NPR-35333).
 * Gränssnittet för metadataredigeraren slutar fungera som förväntat när du startar från redigering av massmetadata och avmarkerar objekt tills ett enda objekt förblir markerat (NPR-35144).
 * Global navigering öppnar inte rätt konsol när användaren klickar på den på sidan `assets.html` (CQ-4312311).
-* [!DNL Assets] RGB-återgivning visas inte för en resurs som har RGB-återgivning (CQ-4310190).
+* [!DNL Assets] visar inte RGB-återgivning för en resurs som har RGB (CQ-4310190).
 * Alternativet [!UICONTROL Relate] på menyn visas inte korrekt på sidan [!UICONTROL Properties] (CQ-4310188).
 * Om filtypsfilter för dokument används för att söka efter resurser och skapa en smart samling används inte filtret när samlingen används. I stället visas alla typer av resurser i sökningen (NPR-35759).
 * Du kan inte dra och lägga till resurser i en ljuslåda från användargränssnittet [!DNL Assets] (NPR-35901).
@@ -523,7 +523,7 @@ Nedan följer en lista över korrigeringar i [!DNL Experience Manager] 6.5.8.0-v
 
 * När du försöker öppna ett anpassat formulär i ett [!DNL Experience Manager Forms]-mobilprogram för iOS slutar programmet svara (CQ-4314825).
 
-* Fliken [!UICONTROL To-do] på arbetsytan HTML visar HTML-tecken (NPR-35298).
+* På fliken [!UICONTROL To-do] på arbetsytan HTML visas HTML-tecken (NPR-35298).
 
 **XMLFM**
 
@@ -557,7 +557,7 @@ Nedan följer en lista över korrigeringar i [!DNL Experience Manager] 6.5.8.0-v
 Om du vill hämta körtidskopian rekommenderar Adobe att du synkroniserar designtidskopian av den anpassade arbetsflödesmodellen med körtidskopian med hjälp av HTTP API:
    `<designModelPath>/jcr:content.generate.json`.
 
-* Kontakta Adobe kundtjänst om du stöter på problem när du redigerar och skapar överlappande regler i [!UICONTROL Folder Metadata Schema Forms Editor] och [!UICONTROL Metadata Schema Forms Editor] med hjälp av dialogrutan [!UICONTROL Define Rule]. Reglerna som redan har skapats och sparats fungerar som förväntat.
+* Kontakta Adobe kundsupport om du stöter på problem när du redigerar och skapar överlappande regler i [!UICONTROL Folder Metadata Schema Forms Editor] och [!UICONTROL Metadata Schema Forms Editor] med hjälp av dialogrutan [!UICONTROL Define Rule]. Reglerna som redan har skapats och sparats fungerar som förväntat.
 
 * Om en mapp i hierarkin byter namn i [!DNL Experience Manager Assets] och den kapslade mappen som innehåller en resurs publiceras i [!DNL Brand Portal], uppdateras inte mappens namn i [!DNL Brand Portal] förrän rotmappen publiceras igen.
 
@@ -593,7 +593,7 @@ De viktigaste funktionerna och förbättringarna i [!DNL Adobe Experience Manage
 
    * Validerar fältvärdena på servern när du skickar ett anpassat formulär.
 
-   * Konvertera ett PDF-formulär till ett anpassat formulär med [!DNL Automated Forms Conversion service].
+   * Konverterar ett PDF-formulär till ett adaptivt formulär med [!DNL Automated Forms Conversion service].
 
 * Stöd för [!DNL Microsoft SQL Server] 2019 i [!DNL Experience Manager Forms].
 
@@ -772,7 +772,7 @@ Nedan följer en lista över korrigeringar i [!DNL Experience Manager] 6.5.7.0-v
 
 * Om en resurs flyttas till en mapp där automatisk synkronisering till [!DNL Dynamic Media] är konfigurerad synkroniseras inte resursen (CQ-4307122).
 
-* [!DNL Dynamic Media] video spelas inte upp på iOS-enheter med de inbyggda HTML5-videokontrollerna (CQ-4306977, CQ-4306727).
+* [!DNL Dynamic Media] video spelas inte upp på iOS-enheter med inbyggda HTML5-videokontroller (CQ-4306977, CQ-4306727).
 
 * Det går inte att hämta bilder som SmartCrop används på (CQ-4304558).
 
@@ -868,7 +868,7 @@ Nedan följer en lista över korrigeringar i [!DNL Experience Manager] 6.5.7.0-v
 
 * Det går inte att redigera ett anpassat formulär med hjälp av det klassiska användargränssnittet när du har använt [!DNL Experience Manager] Service Pack 6 (NPR-35126).
 
-* När du konverterar en PDF-fil till ett anpassat formulär kan du inte ange ett värde för en kapslad panel med hjälp av en formulärdatamodell i fliklayouten. Det finns dessutom problem när du ställer in ett värde för alternativknappsgrupper dynamiskt med en statisk array med kodredigeraren (NPR-35062).
+* När du konverterar ett PDF till ett anpassat formulär kan du inte ange ett värde för en kapslad panel med hjälp av en formulärdatamodell i fliklayouten. Det finns dessutom problem när du ställer in ett värde för alternativknappsgrupper dynamiskt med en statisk array med kodredigeraren (NPR-35062).
 
 * När du anger japanska tecken i en textfältskomponent i ett anpassat format kan du ange fler tecken än maxgränsen på 35 tecken (NPR-35039).
 
@@ -900,9 +900,9 @@ Nedan följer en lista över korrigeringar i [!DNL Experience Manager] 6.5.7.0-v
 
 **Dokumentsäkerhet**
 
-* När du sparar en ny dokumentsäkerhetsprofil visas felmeddelandet `Relative validity period is required` i Experience Manager Forms (NPR-34679).
+* När du sparar en ny dokumentsäkerhetsprofil visas felmeddelandet `Relative validity period is required` (NPR-34679) i Experience Manager Forms.
 
-* Dokumentsäkerhet kan inte skydda PDF 2.0-dokument (CQ-4305851).
+* Dokumentsäkerhet kan inte skydda dokument från PDF 2.0 (CQ-4305851).
 
 Mer information om säkerhetsuppdateringar finns på [Experience Manager-säkerhetsbulletinsidan](https://helpx.adobe.com/security/products/experience-manager.html).
 
@@ -949,7 +949,7 @@ Nedan följer en lista över korrigeringar i [!DNL Experience Manager] 6.5.6.0-v
 * I [!DNL Sites] eller [!DNL Screens] väljer du ett projekt och klickar på [!UICONTROL Management Publications]. Användarna kan inte gå vidare i [!UICONTROL Manage Publication]-guiden på grund av gränssnittsfel. Alternativet [!UICONTROL Publish] fungerar inte (NPR-34099).
 * Positionen för iParsys (ärvt styckesystem) återställs inte till den ursprungliga standardpositionen efter att alternativen [!UICONTROL Cancel Inheritance] eller [!UICONTROL Disable Inheritance] har avmarkerats (NPR-34097).
 * Om `RolloutConfigManagerFactoryImpl` inte kan läsa in en rollout-konfiguration försöker den inte läsa in de saknade konfigurationerna. Den returnerar de cachelagrade konfigurationerna (NPR-34092).
-* I huvudkomponenten för text tas klassen från taggen `em` bort (NPR-34081) när du har använt HTML-källredigeringsalternativet.
+* I huvudkomponenten för text tas klassen från taggen `em` bort (NPR-34081) när du har använt redigeringsalternativet HTML för källan.
 * Efter uppgradering från Experience Manager 6.3.3 till Experience Manager 6.5.3 tar utrullningsprocessen mycket längre tid och utrullningen misslyckas med ett timeoutfel (NPR-34049).
 * `htmlwriter` kodar inte tillbaka attributvärdena. Den kod som finns i XF-koden exporteras med avkodade attributvärden (d.v.s. `"` i stället för `&#34`). Det orsakar problem på målsidan med Visual Experience Composer som använder den exporterade XF-filen (NPR-34048).
 * När du flyttar sidor i [!DNL Experience Manager Sites] bör du förbättra loggningen för att fånga upp det fel som uppstod när versionen skapades (NPR-34014).
@@ -1070,7 +1070,7 @@ Nedan följer en lista över korrigeringar i [!DNL Experience Manager] 6.5.6.0-v
 
 * Förhandsgranskning av marknadsföringsmaterial (t.ex. broschyr, flygblad och visitkort) som skapats med mallen [!DNL Adobe InDesign] visar inte radbrytningar och styckebrytningar (NPR-34268).
 
-* Textextrahering och därmed fulltextsökning för de överförda PDF-filerna fungerar inte (NPR-34164). Åtgärda problemet genom att starta om distributionen av [!DNL sAdobe Experience Manager] efter installation av Service Pack 6.
+* Textextrahering och därmed textsökning för överförda PDF-filer fungerar inte (NPR-34164). Åtgärda problemet genom att starta om distributionen av [!DNL sAdobe Experience Manager] efter installation av Service Pack 6.
 
 * På tidslinjen för flersidiga resurser visas anteckningar som används för alla underresurser när du bläddrar bland resursen i tidslinjevyn i stället för att anteckningarna som är specifika för de specifika underresurserna visas (NPR-34100).
 
@@ -1082,7 +1082,7 @@ Nedan följer en lista över korrigeringar i [!DNL Experience Manager] 6.5.6.0-v
 
 * Om användaren flyttar en publicerad resurs till en ny plats publiceras resursen om, även om alternativet [!UICONTROL Republish] är avmarkerat. Detta leder till att många överblivna resurser ligger i publiceringsinstansen. Standardbeteendet är dock att om du flyttar en åtgärd på en publicerad resurs återpubliceras den automatiskt. den här resursen publiceras om författaren väljer alternativet [!UICONTROL Republish] när resursen flyttas (NPR-33934).
 
-* Sidan [!UICONTROL Move Assets] för resurser i samlingar läser inte in allt HTML-innehåll, till exempel alternativet [!UICONTROL Adjust/ Republish]. Därför kan användare inte slutföra flyttåtgärden (NPR-33860).
+* Sidan [!UICONTROL Move Assets] för resurser i samlingar läser inte in allt innehåll i HTML, till exempel alternativet [!UICONTROL Adjust/ Republish]. Därför kan användare inte slutföra flyttåtgärden (NPR-33860).
 
 * Om du flyttar en resurs och lägger till specialtecken i namnet och titeln på de flyttade resurserna skapas en extra mapp (med samma namn) på den nya platsen för resursen (NPR-33826).
 
@@ -1209,7 +1209,7 @@ När du har installerat tilläggspaketet [!DNL Experience Manager Forms] 6.5.6.0
 
 * Om det saknas ett adaptivt formulärfragment återges inte det adaptiva formuläret (NPR-34302).
 
-* Hjälpinnehållsbeskrivningen för adaptiva formulärfält visar en HTML-stycketagg (NPR-34116).
+* Hjälpinnehållsbeskrivningen för adaptiva formulärfält visar taggen HTML (NPR-34116).
 
 * När du väljer egenskapen **[!UICONTROL Revalidate on Server]** skickas inte det adaptiva formuläret (NPR-33876).
 
@@ -1263,7 +1263,7 @@ När du har installerat tilläggspaketet [!DNL Experience Manager Forms] 6.5.6.0
 
 * När du konverterar en HTML-fil till PDF går det inte att konfigurera attributet `MaxReuseCount` (NPR-33470).
 
-* När du laddar ned en PDF-fil som innehåller interaktiva funktioner för Reader-tillägg kan du inte lägga till en bifogad fil i PDF-filen med [!DNL Adobe Reader] (NPR-33729).
+* När du laddar ned en PDF-fil som innehåller interaktiva funktioner för Reader-tillägg kan du inte lägga till en bifogad fil i PDF med [!DNL Adobe Reader] (NPR-33729).
 
 **Dokumentsäkerhet**
 
@@ -1311,17 +1311,17 @@ Nedan följer en lista över korrigeringar i [!DNL Experience Manager] 6.5.5.0-v
 
 ### [!DNL Sites] {#sites-6550}
 
-* Med Experience Manager Sites kan du publicera eller avpublicera en sida från dess alias. Alternativet fungerar inte (NPR-33415).
+* Experience Manager Sites erbjuder ett alternativ för att publicera eller avpublicera en sida från dess alias. Alternativet fungerar inte (NPR-33415).
 * När en layoutbehållare tas bort från en mall som innehåller flera mallar återges inte mallen korrekt (NPR-33347).
 * När en Experience Manager Sites-sida är en del av en stor innehållsuppsättning med flera live-kopior går det inte att läsa in förhandsgranskningen av sidversionshistoriken (NPR-33311).
-* När du använder kommandot Flytta för att byta namn på en Experience Manager-platssida uppdateras inte sidtiteln (NPR-33264).
+* När du använder kommandot Flytta för att byta namn på en Experience Manager Sites-sida uppdateras inte sidtiteln (NPR-33264).
 * När du flyttar sidor genom kolumnvyn försvinner kolumnerna (NPR-33216).
 * När namnet på en lokal komponent i en språkkopia är identiskt med namnet på en komponent i utkastet och komponenten rullas ut från utkast, läggs inte termen `_msm_moved` till i namnet på den lokala komponenten (NPR-33208).
-* Servern för sidomdirigering lägger till .html till en URL för Experience Manager-platser där ResourceType inte är `cq:Page` (NPR-33176).
+* Servern för sidomdirigering lägger till .html till en Experience Manager Sites-URL där ResourceType inte är `cq:Page` (NPR-33176).
 * När du klistrar in ett underträd finns det inget alternativ för att bestämma om motsvarande undersidor ska klistras in eller inte (NPR-33149).
 * Antalet resultat i direktanvändning av en komponent är begränsat till nummer 49 (NPR-33058).
 * När du baserar ett innehållsfragment på ett schema och det innehåller ett obligatoriskt textområde eller ett sökvägsfält, kan innehållsfragmentet inte sparas (NPR-33007).
-* När du skapar en anpassad komponent med hjälp av standardkomponenten för Experience Fragment och använder den på Experience Manager Sites-sidor, visar inte Experience Manager referenser (användning) för den anpassade komponenten (NPR-32852).
+* När du skapar en anpassad komponent med standardkomponenten för Experience Fragment och använder den på Experience Manager Sites-sidor, visar inte Experience Manager referenser (användning) för den anpassade komponenten (NPR-32852).
 * När du byter namn på en mapp med ett stort antal referenser uppdateras inte många referenser till mappen (NPR-32765).
 * När du aktiverar källredigeringsalternativet blir det tillgängligt för alternativ för helskärmsvisning, men saknas för redigeringsdialogruta och helskärmsalternativ i textredigeraren (NPR-32763).
 * Om du har ett flerfält och det innehåller ett obligatoriskt fält (till exempel en listruta eller ett sökvägsfält) i sidegenskaperna för en plan, sparas inte sidegenskaperna för live-kopian när en sida som innehåller ett sådant flerfält öppnas (NPR-32751).
@@ -1330,7 +1330,7 @@ Nedan följer en lista över korrigeringar i [!DNL Experience Manager] 6.5.5.0-v
 * Författarbehörigheter för att läsa, ändra, skapa och ta bort live-kopior återkallas. Varje författare måste uttryckligen ange läs- och ändringsbehörigheter för att kunna flytta sidor i en utkast (NPR-32550).
 * Innehållsförfattare kan inte skapa Launch för en sida som är integrerad med Adobe Analytics (NPR-32548).
 * När en användare återupptar arv med synkronisering synkroniseras inte den överordnade sidans live-kopia med ritningen och visar en felaktig status (NPR-32500).
-* Det tar mer än 15 sekunder att läsa in redigeringssidan för Experience Manager Sites (NPR-32413).
+* Det tar mer än 15 sekunder att läsa in Experience Manager Sites redigeringssida (NPR-32413).
 * I vissa fält visas inte alternativet Avbryt arv (NPR-32362).
 * När du markerar en sökväg för en Experience Fragment-komponent och markerar kryssrutan Öppna dialogrutan Markering, navigeras du inte till den valda sökvägen i sökvägsläsaren (NPR-32308).
 * När du uppgraderar från Experience Manager 6.2 till Experience Manager 6.5 visas inte Parsys-komponenten för statiska mallar korrekt. Parsys-komponentens höjd anges till 0 och komponenterna i den är inte synliga (NPR-33663).
@@ -1475,7 +1475,7 @@ Nedan följer en lista över korrigeringar i [!DNL Experience Manager] 6.5.5.0-v
 
 * Smart Crop-renderingar är inte tillgängliga i dialogrutan för hämtning av resurser (NPR-33167).
 
-* Undantag observeras i loggar vid öppning av renderingsspår för en PDF-fil i en mapp med en smart beskärningsprofil (CQ-4294201).
+* Undantag observeras i loggar vid öppning av renderingsspår för en PDF under en mapp med en smart beskärningsprofil (CQ-4294201).
 
 * Bildförinställningar publiceras inte om [!UICONTROL Dynamic Media sync mode] är inaktiverat som standard på Experience Manager med Dynamic Media Scene7 runmode (CQ-4294200).
 
@@ -1483,7 +1483,7 @@ Nedan följer en lista över korrigeringar i [!DNL Experience Manager] 6.5.5.0-v
 
 * Det går att skapa en Dynamic Media-konfiguration i Experience Manager, men i användargränssnittet händer inget när du väljer Spara (CQ-4292442).
 
-* Förhandsgranskning av F4V-videomaterial fungerar inte i progressiv uppspelning på Safari/Mac (CQ-4289844).
+* Förhandsgranskning av F4V-videomaterial fungerar inte i progressiv uppspelning i Safari/Mac (CQ-4289844).
 
 * En extra mapp skapas vid smart beskärning av en resurs som finns i en överordnad mapp med punkten `.` i namnet (CQ-4289337).
 
@@ -1580,15 +1580,15 @@ Nedan följer en lista över korrigeringar i [!DNL Experience Manager] 6.5.5.0-v
 * Adaptiv Forms: Användaren kan inte spara ett anpassat formulär med mer än en bifogad fil (NPR-32997).
 * Adaptiv Forms: Om du ändrar panellayouten i ett adaptivt formulär uppstår ett fel (CQ-4293880).
 * Adaptiv Forms: En ny rad i en sträng i en ordlista med adaptiva formulär lägger till `&#xa;` tecken i ordlistan (NPR-33266).
-* Adaptiv tillgänglighet för Forms: När en användare förhandsgranskar ett anpassat formulär som ett HTML-formulär kan inte fältet [!UICONTROL Scribble Signature] behålla tabbfokus (NPR-33159).
+* Adaptiv tillgänglighet för Forms: När en användare förhandsgranskar ett anpassat formulär som ett HTML kan inte fältet [!UICONTROL Scribble Signature] behålla tabbfokus (NPR-33159).
 * Adaptiv tillgänglighet för Forms: Felmeddelandena som visas när ett anpassat formulär skickas länkar inte till ett `aria-describedBy`-attribut (NPR-33071).
 * Adaptiv tillgänglighet för Forms: Fält som markerats som obligatoriska i en adaptiv form har inte det obligatoriska attributet inställt på True i ARIA-hjälpmedelsschemat (NPR-33070).
-* PDFG-tjänst: När en användare konverterar en textfil till en PDF-fil återges inte japanska tecken korrekt (NPR-33238).
+* PDFG-tjänst: När en användare konverterar en textfil till PDF återges inte japanska tecken korrekt (NPR-33238).
 * PDFG-tjänst: `CreatePDF`-åtgärden kan inte konvertera en PDF-fil till PDF OCR-format (NPR-32994).
 * PDFG-tjänst: PDF-konverteringen misslyckas för den 200:e instansen av ett [!DNL OpenOffice]-dokument (NPR-32766).
 * BackendIntegration: Begäranden från formulärdatamodellen misslyckas eftersom uppdateringstoken förfaller på grund av ett inaktivt tillstånd (NPR-33169).
 * Designer: Skärmläsare kör tabbordningen baserat på den geografiska standardordningen i stället för den anpassade tabbordningen som definieras i XDP-filen (NPR-32160).
-* Designer: Om taggningsalternativet är aktiverat försvinner delformulärsramen i den genererade PDF-utdatafilen (NPR-32778).
+* Designer: Om taggningsalternativet är aktiverat försvinner delformulärens kantlinje i utdata från PDF (NPR-32778).
 * Lagrade XSS med GuideSOMProviderServlet (NPR-32700).
 
 ## Adobe Experience Manager 6.5.4.0 {#experience-manager-6540}
@@ -1683,7 +1683,7 @@ En fullständig lista över funktioner och viktiga högdagrar som introducerats 
 
 * Flera sökfrågor utlöses när flera taggar väljs från sökfiltret (NPR-32143).
 
-* Användargränssnittet för Experience Manager-resurser visar trunkerade filnamn när resurser med fler än 50 tecken i filnamnet överförs (NPR-32054).
+* Experience Manager Assets-användargränssnitt visar trunkerade filnamn när resurser med fler än 50 tecken i filnamnet överförs (NPR-32054).
 
 * Alla kryssrutor på panelen Filter avmarkeras när den första och den andra kryssrutan avmarkeras när du har markerat två kryssrutor i kryssruteträdet i Adobe Stock (NPR-31919).
 
@@ -1697,7 +1697,7 @@ En fullständig lista över funktioner och viktiga högdagrar som introducerats 
 
 * Touch UI-sökning (utförd via Omnissearch)-resultatsidan rullar automatiskt upp och förlorar användarens rullningsposition (NPR-31307).
 
-* Assets detail page of PDF assets does not show action buttons except To Collection and Add Rendition buttons in Experience Manager running mode (CQ-4286705).
+* Assets detail page of PDF assets does not show action buttons except To Collection and Add Rendition buttons in Experience Manager running on Dynamic Media Scene7 run mode (CQ-4286705).
 
 * Resurserna tar för lång tid att bearbeta genom batchöverföringen i Scene7 (CQ-4286445).
 
@@ -1785,7 +1785,7 @@ En fullständig lista över funktioner och viktiga högdagrar som introducerats 
 
 ### Oak-indexering och frågor {#oak-indexing-6540}
 
-* MS Word- och MS Excel-dokument som innehåller JPEG-bilder kan inte tolkas när de tolkas med Tika-tolken, och fel som inte hittas av klassen observeras (NPR-31952).
+* MS Word- och MS Excel-dokument som innehåller JPEG-bilder kan inte tolkas när de tolkas med Tika-tolken, och ett klassfel som inte hittas observeras (NPR-31952).
 
 ### Forms {#forms-6540}
 
@@ -1815,11 +1815,11 @@ En fullständig lista över funktioner och viktiga högdagrar som introducerats 
 
 * Dokumentsäkerhet: En skyddad PDF-fil kan inte öppnas offline med alternativet DisableGlobalOfflineSynchronizationData inställt på True (NPR-32078).
 
-* Designer: Om taggningsalternativet är aktiverat försvinner delformulärsramen i den genererade PDF-utdatafilen (NPR-32547, NPR-31983, NPR-31950).
+* Designer: Om taggningsalternativet är aktiverat försvinner delformulärsramen i utdata från PDF (NPR-32547, NPR-31983, NPR-31950).
 
-* Designer: Om det finns sammanfogade celler i en tabell misslyckas hjälpmedelstestet för PDF-utdatafilen som konverterats från ett XDP-formulär med hjälp av utdatatjänsten (CQ-4285372).
+* Designer: Om det finns sammanfogade celler i en tabell misslyckas hjälpmedelstestet för utdatafilen som konverterats från ett XDP-formulär med hjälp av utdatatjänsten (CQ-4285372).
 
-* Foundation JEE: Om en Experience Manager Forms-server är frånkopplad från ett kluster kan cachelagring förhindra att den återansluter till servern (NPR-32412).
+* Foundation JEE: Om en Experience Manager Forms-server är frånkopplad från ett kluster förhindrar cachelagring att den återansluter till servern (NPR-32412).
 
 ## Adobe Experience Manager 6.5.3.0 {#experience-manager-6530}
 
@@ -1869,7 +1869,7 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 
 **Korrigeringar**
 
-* Metadata för vissa PDF-dokument uppdateras inte och sparas i PDF-filen när titeln ändras (NPR-31629).
+* Metadata för vissa PDF-dokument uppdateras inte och sparas i PDF när titeln ändras (NPR-31629).
 
 * Resursdelning fungerar inte för en resurs som har ett plustecken (`+`) i filnamnet (NPR-31547).
 
@@ -1895,7 +1895,7 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 
 * DAM-arbetsflöden försätts i viloläge när vissa mp4-resurser överförs, vilket gör att alla återstående arbetsflöden försätts i viloläge (NPR-30662).
 
-* Slut på minne uppstår när stora PDF-filer (av flera gigabyte) överförs till DAM och dess underresurser bearbetas (NPR-30614).
+* Slut på minnesfel uppstår när stora PDF-filer (av flera gigabyte) överförs till DAM och dess underresurser bearbetas (NPR-30614).
 
 * Massförflyttning av resurser misslyckas och ett varningsmeddelande visas (NPR-30610).
 
@@ -1941,7 +1941,7 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 
 * Touch UI-sökning (utförd via Omnissearch)-resultatsidan rullar automatiskt upp och förlorar användarens rullningsposition i innehållsfragment (CQ-4282898).
 
-* PDF-filer är inte indexerade och innehållet i dem är inte sökbart (CQ-4278916).
+* PDF-filer är inte indexerade och innehåll i är inte sökbart (CQ-4278916).
 
 * Felmeddelandet&quot;Grupp visas inte av användarväljaren: false förväntas vara lika med true&quot; när en stängd användargrupp läggs till med olika `principalName` och `authorizableId` (CQ-4278177).
 
@@ -2062,7 +2062,7 @@ Remove one mention of this fix.
 
 * **MissingNode.toString()** returnerar felaktiga resultat efter uppgradering av Jackson-bibliotek till 2.10.0 (NPR-31549).
 
-* Textredigeraren tar slumpmässigt bort blankstegstecken från text som kopieras från Microsoft Word (NPR-31113).
+* Textredigeraren tar slumpmässigt bort blankstegstecken från den text som kopieras från Microsoft Word (NPR-3113).
 
 **Korrespondenshantering**
 
@@ -2076,7 +2076,7 @@ Remove one mention of this fix.
 
 **HTML5 Forms**
 
-* När du genererar HTML5-förhandsgranskning av ett XDP-formulär visas ett flimmer när instanser av ett delformulär läggs till (NPR-30909).
+* När du genererar HTML5-förhandsgranskning av ett XDP-formulär visas ett flimmer medan instanser av ett delformulär läggs till (NPR-30909).
 
 #### Forms på JEE-installationsprogram {#forms-jee-installer-6530}
 
@@ -2168,7 +2168,7 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 * Om du konfigurerar [!DNL Dynamic Media]-Cloud Services i läget [!DNL Dynamic Media]-Hybrid skapas flera tomma rapportsviter som skapats i [!DNL Analytics], och inget ID för rapportsviten sparas i [!DNL Experience Manager], vilket resulterar i dubbletter av rapportsviten. Programfix för CQ-4249780
 * Det går inte att synkronisera om namnbytet i [!DNL Experience Manager]-resursen till det duplicerade namnet till Scene7. Programfix för CQ-4276763
 * Användargenererat innehåll visas felaktigt på sökfilterpanelen. Programfix för CQ-4273875
-* Alternativet Sök efter liknande är inte tillgängligt för TIFF-bilder. Programfix för CQ-4278238
+* Alternativet Sök efter liknande är inte tillgängligt för bilder i TIFF. Programfix för CQ-4278238
 * Implementerat alternativ för att stänga av video vid inläsning i VideoPlayer. Programfix för CQ-4266465
 * Visare - VideoViewer: affisch=none fungerar inte korrekt om en extern video används. Programfix för CQ-4265536
 * Vänteikonen visas när videon spelas upp i IE11- och MS Edge-webbläsare. Programfix för CQ-4251539
@@ -2217,7 +2217,7 @@ Några viktiga höjdpunkter i den här Service Pack-versionen är:
 ### Projekt {#projects-6520}
 
 * dam:folderThumbnailPaths-värden uppdateras inte och gamla miniatyrer visas inte ens när resurserna i mappen har tagits bort. NPR-30424: Programfix för CQ-4273667
-* När du slutför alternativet &quot;flytta&quot; ändras inte resursens namn och namn. NPR-30647: Programfix för CQ-4276265
+* När du slutför flyttalternativet ändras inte resursens namn och namn. NPR-30647: Programfix för CQ-4276265
 
 ### Communities {#communities-6520}
 
@@ -2246,7 +2246,7 @@ De viktigaste markeringarna för [!DNL Experience Manager] 6.5.2.0-formulär är
 
 **Integrering med back end**
 
-* Det går inte att konfigurera formulärdatamodellen med en värdbaserad, belastningsutjämnad URL. NPR-30123: Programfix för CQ-4273359
+* Det går inte att konfigurera formulärdatamodellen med en AWS-värdbaserad belastningsutjämnad URL. NPR-30123: Programfix för CQ-4273359
 * När formulärdatamodellen (FDM) skapas med WSDL (Web Service Definition Language) returneras felmeddelandet `Caused by: com.adobe.aem.dermis.exception.DermisException: java.lang.Exception: Unable to handle content type`: NPR-30477: Programfix för CQ-4272921
 
 **Korrespondenshantering**
@@ -2418,7 +2418,7 @@ De viktigaste högdagrarna för [!DNL Experience Manager Forms] 6.5.1.0 är:
 
 * Endast OSGi: Ett nytt attribut, `PAGECOUNT`, har lagts till i Output och Forms Service.
 
-* Endast OSGI: Stöd för att skapa statiska PDF-filer med Forms Service har aktiverats.
+* Endast OSGI: Stöd för att skapa statiska PDF-filer med Forms Service.
 * Behörigheter för XMLForm.exe har aktiverats för administratör och rotanvändare.
 * Aktiverat stöd för ADFS v3.0 för Dynamics lokal integrering.
 
@@ -2497,23 +2497,23 @@ De viktigaste högdagrarna för [!DNL Experience Manager Forms] 6.5.1.0 är:
 
 **Forms - Designer**
 
-* När en fullständig tillgänglighetskontroll utförs för den statiska PDF-filen som skapats med [!DNL Experience Manager Forms Designer] misslyckas kontrollen för primärt språk på grund av att språkattribut saknas. Programfix för CQ-4272923, CQ-4271002
+* När en fullständig tillgänglighetskontroll utförs på det statiska PDF som skapats med [!DNL Experience Manager Forms Designer] misslyckas kontrollen för primärt språk på grund av att språkattribut saknas. Programfix för CQ-4272923, CQ-4271002
 
 **Forms - dokumentsäkerhet**
 
 * Digital signatur med HSM (Hardware Security Module) fungerar inte med OSGi Linux på Java 11 och Java 8\. NPR-29838: Programfix för CQ-4270441
 * Digital signatur med HSM (Hardware Security Module) fungerar inte med JEE Linux och alla appservrar som stöds, dvs. JBoss och Websphere. NPR-29839: Programfix för CQ-4266721
-* Verifiering av signaturer i en PDF med hjälp av PDF Advanced Electronic Signatures (PAdES) genererar InvalidOperationException. NPR-29842: Programfix för CQ-4244837
+* Verifiering av signaturer i PDF med PDF Advanced Electronic Signatures (PAdES) genererar InvalidOperationException. NPR-29842: Programfix för CQ-4244837
 * Utökat stöd för Document Security Extension för Office 2019\. Programfix för CQ-4254369, CQ-4259764
 
 **Forms - dokumenttjänster**
 
-* PDF-filen kan inte konverteras till PDF/A-1b med formulärfältet har ingen utseendeordlista. NPR-29940: Programfix för CQ-4269618
+* PDF kan inte konvertera till PDF/A-1b med formulärfältet har ingen utseendeordlista. NPR-29940: Programfix för CQ-4269618
 
 * OSGi: Det går inte att avgöra antalet sidor som genereras under återgivningen. NPR-28922: Programfix för CQ-4270870
-* Aktiverat stöd för statiska PDF-filer med Forms Service i [!DNL Experience Manager Forms OSGi]. NPR-28572: Programfix för CQ-4270869
+* Aktiverat stöd för Static PDF-filer med Forms Service i [!DNL Experience Manager Forms OSGi]. NPR-28572: Programfix för CQ-4270869
 * Det går inte att ändra behörigheten för XMLForm.exe. NPR-29828, NPR-29237: Programfix för Q-4267080
-* Den statiska PDF-fil som skapas av [!DNL Experience Manager Forms]-serverns utdatamoddul fyller inte i språkattributet/taggen med språket för det dokument som skapas. NPR-27332: Programfix för CQ-4271002
+* Det statiska PDF som skapas av [!DNL Experience Manager Forms]-serverns utdatamoddul fyller inte i språkattributet/-taggen med språket för det dokument som skapas. NPR-27332: Programfix för CQ-4271002
 
 **Forms - Foundation JEE**
 
@@ -2534,7 +2534,7 @@ De viktigaste högdagrarna för [!DNL Experience Manager Forms] 6.5.1.0 är:
 #### Forms - dokumenttjänster - ingår
 
 * Endast OSGi: Ett nytt attribut, PAGECOUNT, har lagts till i Output och Forms Service. NPR-28922: Programfix för CQ-4270870
-* Endast OSGi: Stöd för att skapa statiska PDF-filer med Forms Service har aktiverats. NPR-28572: Programfix för CQ-4270869
+* Endast OSGi: Stöd för att skapa statiska PDF-filer med Forms Service. NPR-28572: Programfix för CQ-4270869
 * Behörigheter för XMLForm.exe har aktiverats för administratör och rotanvändare. NPR-29237: Programfix för CQ-4267080
 
 ### OSGi-paket och innehållspaket

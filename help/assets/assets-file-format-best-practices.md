@@ -3,11 +3,11 @@ title: Bästa tillvägagångssätt för att bearbeta de filformat som stöds
 description: Bästa tillvägagångssätt för att bearbeta de olika filtyper som stöds med [!DNL Experience Manager Assets].
 contentOwner: AG
 role: Admin
-feature: Resurshantering,Utvecklarverktyg
+feature: Asset Management,Developer Tools
 exl-id: da080f12-4cf7-4c26-901b-cd40d9c00bcb
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: b2faf81983216bef9151548d90ae86f1c26a9f91
 workflow-type: tm+mt
-source-wordcount: '469'
+source-wordcount: '465'
 ht-degree: 0%
 
 ---
@@ -20,13 +20,13 @@ Information om vilka filformat som stöds finns i [Format för resurser som stö
 
 >[!TIP]
 >
->Om du använder [!DNL Experience Manager] på Adobe Managed Services (AMS) kan du kontakta Adobe kundtjänst om du tänker bearbeta många stora PSD- eller PSB-filer. Samarbeta med Adobe kundtjänstrepresentant för att implementera de bästa metoderna för driftsättningen av AMS och för att välja bästa möjliga verktyg och modeller för Adobe egna format. [!DNL Experience Manager] kan inte bearbeta PSB-filer med hög upplösning som är större än 30000 x 23000 pixlar.
+>Om du använder [!DNL Experience Manager] på Adobe Managed Services (AMS) kan du kontakta Adobe kundsupport om du tänker bearbeta många stora PSD- eller PSB-filer. Samarbeta med Adobe kundsupportrepresentant för att implementera de bästa metoderna för driftsättningen av AMS och för att välja de bästa möjliga verktygen och modellerna för Adobe egna format. [!DNL Experience Manager] kan inte bearbeta PSB-filer med hög upplösning som är större än 30000 x 23000 pixlar.
 
 ## [!DNL Adobe Camera Raw] bibliotek {#adobe-camera-raw-library}
 
 Adobe rekommenderar att du använder biblioteket [!DNL Adobe Camera Raw] för RAW- och DNG-filer för optimala prestanda.
 
-[!DNL Adobe Camera Raw] biblioteket stöder CMYK-färgprofil som indata. Däremot genereras utdata i RGB-färgrymd och endast JPEG-format stöds. Källfilens färgrymd (till exempel CMYK) behålls inte i miniatyrbilderna.
+[!DNL Adobe Camera Raw] biblioteket stöder CMYK-färgprofil som indata. Däremot genereras utdata i färgrymden RGB och endast utdata i JPEG-format stöds. Källfilens färgrymd (till exempel CMYK) behålls inte i miniatyrbilderna.
 
 Mer information finns i [Camera Raw stöd](/help/assets/camera-raw.md).
 
@@ -38,7 +38,7 @@ För att få bästa möjliga resultat rekommenderar Adobe att du använder Adobe
 * AI-filer med miniatyrbilder som inte genererats direkt från paketet
 * För AI-filer med SPOT-färger (PMS)
 
-Miniatyrbilder och förhandsgranskningar som genererats med PDF Rasterizer har bättre kvalitet än färdiga rasterutdata. Adobe PDF Rasterizer-biblioteket stöder inte någon färgutrymmeskonvertering. Oavsett färgrymden i PDF-källfilen genererar Adobe PDF Rasterizer endast RGB-utdata.
+Miniatyrbilder och förhandsgranskningar som genererats med PDF Rasterizer har bättre kvalitet jämfört med färdiga rasterutdata. Adobe PDF Rasterizer-biblioteket stöder inte någon färgutrymmeskonvertering. Oavsett färgrymden i källfilen genereras endast utdata från RGB i Adobe PDF Rasterizer.
 
 ## [!DNL Adobe InDesign Server] {#adobe-indesign-server}
 
@@ -54,10 +54,10 @@ För närvarande kan [!DNL Dynamic Media] ha stöd för videoklipp med upp till 
 
 Adobe rekommenderar att du använder ImageMagick-biblioteket i följande scenarier:
 
-* Om du vill generera miniatyrbildsrenderingar för EPS-filer.
+* Generera miniatyrbildsrenderingar för EPS-filer.
 * Bevara bildprofilsinformation.
 * För att bevara genomskinlighet.
-* Så här bearbetar du PSD- och PSB-filer.
+* Om du vill bearbeta PSD- och PSB-filer.
 
 Mer information om hur du konfigurerar [!DNL ImageMagick]-biblioteket i [!DNL Experience Manager] finns i [Använda ImageMagick](/help/assets/media-handlers.md#an-example-using-imagemagick). Mer information finns i [Bästa metoder för att konfigurera ImageMagick](/help/assets/best-practices-for-imagemagick.md).
 
@@ -75,4 +75,4 @@ Bildbiblioteket Transcoding Library har stöd för följande MIME-typer:
 * ICO
 * ICN
 
-Mer information finns i [Bildkonverteringsbibliotek](/help/assets/imaging-transcoding-library.md).
+Mer information finns i [Imaging Transcoding Library](/help/assets/imaging-transcoding-library.md).

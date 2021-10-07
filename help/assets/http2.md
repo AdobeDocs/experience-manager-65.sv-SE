@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: c8e145ad-f021-4043-8190-62151775e296
 role: User, Admin
 exl-id: 9eb9f309-33e5-4694-84d2-fb2cd3de50a6
-feature: Publicering,Konfiguration
-source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
+feature: Publishing,Configuration
+source-git-commit: 65af6e33ae3897519491952f4d3a6832700f77b2
 workflow-type: tm+mt
-source-wordcount: '732'
+source-wordcount: '731'
 ht-degree: 0%
 
 ---
@@ -54,7 +54,7 @@ Om du vill använda HTTP/2 måste du uppfylla följande krav:
 * Använd det Adobe-paketerade CDN (content delivery network) som en del av din Dynamic Media-licens.
 * Använd en dedikerad domän (non-company-h.assetsadobe#.com).
 
-   Om du redan har en dedikerad domän kan du anmäla dig via teknisk support.
+   Om du redan har en dedikerad domän kan du anmäla dig via Adobe kundsupport.
 
    Om du inte har någon dedikerad domän planerar Adobe att schemalägga din övergång till HTTP/2 under 2018.
 
@@ -62,7 +62,7 @@ Om du vill använda HTTP/2 måste du uppfylla följande krav:
 
 Du initierar begäran om att växla över till HTTP/2; det görs inte automatiskt åt dig.
 
-1. Om du vill växla till HTTP/2 startar du en kundtjänstbegäran i Adobe. Se [Gå till Adobe Experience Manager supportportal](https://helpx.adobe.com/experience-manager/kb/accessing-aem-support-portal.html).
+1. Om du vill gå över till HTTP/2 initierar du en Adobe kundsupportförfrågan. Se [Gå till Adobe Experience Manager supportportal](https://helpx.adobe.com/experience-manager/kb/accessing-aem-support-portal.html).
 
    1. Ange följande information i din supportförfrågan:
 
@@ -71,8 +71,8 @@ Du initierar begäran om att växla över till HTTP/2; det görs inte automatisk
       1. Kontrollera att du använder säkra HTTPS för multimedieförfrågningar.
       1. Kontrollera att du använder CDN via Adobe och inte hanteras med en direkt relation.
       1. Kontrollera att du använder en dedikerad domän. Om du använder Dynamic Media använder du en dedikerad domän.
-   1. Kundtjänst lägger till dig i HTTP/2-väntelistan baserat på i vilken ordning förfrågningarna skickades.
-   1. När Adobe är redo att hantera din begäran kontaktar kundtjänst dig för att koordinera övergången och ange ett måldatum.
+   1. Kundsupport lägger till dig i HTTP/2-väntelistan baserat på i vilken ordning förfrågningarna skickades.
+   1. När Adobe är redo att hantera din begäran kontaktar kundsupporten dig för att koordinera övergången och ange ett måldatum.
    1. Du meddelas när du är klar och kan verifiera att övergången har slutförts till HTTP2.
 
       Eftersom webbläsaren inte anger detta måste du hämta ett tillägg.
@@ -82,7 +82,7 @@ Du initierar begäran om att växla över till HTTP/2; det görs inte automatisk
 
 ## När kan jag förvänta mig att gå över till HTTP/2? {#when-can-i-expect-to-be-transitioned-over-to-http}
 
-Förfrågningar behandlas i den ordning som de tas emot av kundtjänst.
+Förfrågningar behandlas i den ordning som de tas emot av kundsupporten.
 
 >[!NOTE]
 >

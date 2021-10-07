@@ -4,7 +4,7 @@ description: Versionsinformation som är specifik för  [!DNL Adobe Experience M
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
+source-git-commit: 99d38dddbcd06fecb82c744d446b9cef981e0781
 workflow-type: tm+mt
 source-wordcount: '4264'
 ht-degree: 0%
@@ -38,7 +38,7 @@ De viktigaste funktionerna och förbättringarna i [!DNL Adobe Experience Manage
 
 * **Alternativ för länkdelning för att hämta resurser eller återgivningar**: När du delar resurser och samlingar som länkar kan användarna välja om de vill tillåta hämtning av originalresurser, deras återgivningar eller båda med hjälp av den delade länken. Dessutom kan användare som hämtar resurser som delas med dem via länken välja att bara hämta de ursprungliga resurserna, endast återgivningarna eller båda.
 
-* **Begränsa genererade** delresurser: Administratörer kan begränsa antalet underresurser som  [!DNL Experience Manager] genereras för sammansatta resurser som PDF-, PowerPoint-, InDesign och Keynote-filer. Se [Hantera sammansatta resurser](/help/assets/managing-linked-subassets.md#generate-subassets).
+* **Begränsa genererade** delresurser: Administratörer kan begränsa antalet underresurser som  [!DNL Experience Manager] genereras för sammansatta resurser som PDF, PowerPoint, InDesign och Keynote-filer. Se [Hantera sammansatta resurser](/help/assets/managing-linked-subassets.md#generate-subassets).
 
 * **Camera Raw stöd**: Det finns ett nytt  [!DNL Camera Raw] paket med stöd för  [!DNL Adobe Camera Raw] v10.4. Se  [Bearbeta bilder med [!DNL Camera Raw]](/help/assets/camera-raw.md).
 
@@ -104,7 +104,7 @@ Nedan följer en lista över korrigeringar i [!DNL Experience Manager] 6.5.10.0-
 * När en användare skriver i en on demand-tagg som innehåller utrymme (taggen som inte finns i systemet) och trycker på Retur, visas taggen under fältet. Men när [!DNL Content Fragment] sparas och öppnas igen visas inte on-demand-taggen (NPR-36441).
 * Mallen kan inte tas bort när instansen nås via Dispatcher (NPR-36385).
 * När en sida flyttas krävs en manuell uppdatering av webbläsaren för att återge ändringarna (NPR-36381).
-* När du markerar en komponent kan du klippa ut eller kopiera den med Ctrl+X eller Ctrl+C (och Kommando+X eller Kommando+C på Mac). När du klickar på en annan komponent kan du klistra in med verktygsfältet, men inte med tangentbordet (Ctrl+V eller Kommando+V) (NPR-36379).
+* När du markerar en komponent kan du klippa ut eller kopiera den med Ctrl+X eller Ctrl+C (och Kommando+X eller Kommando+C i Mac). När du klickar på en annan komponent kan du klistra in med verktygsfältet, men inte med tangentbordet (Ctrl+V eller Kommando+V) (NPR-36379).
 * När en användare försöker klippa ut komponenter med saxikonen för att flytta dem någon annanstans inträffar ett konsolfel. När du klistrar in flyttas dessutom bara en komponent (NPR-36378).
 * [!DNL Experience Manager] har en fråga utan index på WCM eller meddelanden, vilket saktar ned prestanda (NPR-36303).
 * När en författare återställer arvet för den borttagna ärvda komponenten är det tillgängliga alternativet att synkronisera allt sidinnehåll. Innehållsförfattarna måste synkronisera hela sidan även om arvet bara återställs på en komponent. En fullständig synkronisering kan leda till att oönskat innehåll synkroniseras (NPR-34456, CQ-4310183).
@@ -294,13 +294,13 @@ Need to verify with Engineering, the status is currently showing as Resolved
 
 **Korrespondenshantering**
 
-* Fördröjning av visning av tecken på fliken [!UICONTROL Data] och i förhandsvisningen av HTML-bokstav (NPR-37020).
+* Fördröjning av visning av tecken på fliken [!UICONTROL Data] och i förhandsvisningen av HTML-tecken (NPR-37020).
 
 * När du redigerar ett textdokumentfragment visas de nya orden som HTML-taggar efter att fragmentet har sparats (NPR-36837).
 
 * Det går inte att visa bokstäverna som har sparats som utkast (NPR-36816).
 
-* När du redigerar ett textdokumentfragment och sedan förhandsgranskar brevet, visas uttrycksspråket i HTML-förhandsvisningen (CQ-4322331) i AEM Forms.
+* När du redigerar ett textdokumentfragment och sedan förhandsgranskar brevet, visar AEM Forms uttrycksspråket i förhandsgranskningen av HTML-bokstaven (CQ-4322331).
 
 * Problem vid återgivning av data med en mall för självbetjäningsbrev (NPR-37161).
 
@@ -323,11 +323,11 @@ Need to verify with Engineering, the status is currently showing as Resolved
 
 **Designer**
 
-* Skärmen Reader kan inte läsa flytande fältdata som placerats i textetiketten på den Överordnad sidan eller på delformulärssidor i en dynamisk PDF-fil (CQ-4321587).
+* Skärmen Reader kan inte läsa flytande fältdata som placerats i textetiketten på den Överordnad sidan eller på delformulärssidor i ett dynamiskt PDF (CQ-4321587).
 
 **Dokumenttjänster**
 
-* När du konverterar XDP-filer till PDF-filer och sedan sätter ihop den resulterande PDF-filen misslyckas PDF-generationen och följande felmeddelande visas:
+* När du konverterar XDP-filer till PDF-filer och sedan sätter ihop det resulterande PDF misslyckas PDF-generationen och följande felmeddelande visas:
 
    ```TXT
    Caused by: com.adobe.fd.assembler.client.AssemblerException$ClientException: Document is in a disposed state!
@@ -339,9 +339,9 @@ Need to verify with Engineering, the status is currently showing as Resolved
 
 **HTML5 Forms**
 
-* När du anger värdet för egenskapen `mfAllowAttachments` som `True` i CRX DE-databasen skadas `dataXml` när HTML5-formuläret skickas (NPR-37035).
+* När du anger värdet för egenskapen `mfAllowAttachments` som `True` i CRX DE-databasen, skadas `dataXml` när du skickar HTML5-formuläret (NPR-37035).
 
-* När du återger en XDP som HTML med `dataXml` visar [!DNL AEM Forms] ett `Page Unresponsive`-fel (NPR-36631).
+* När du återger en XDP som HTML med `dataXml`, visar [!DNL AEM Forms] ett `Page Unresponsive`-fel (NPR-36631).
 
 ### Handel {#commerce-65100}
 
@@ -351,7 +351,7 @@ Need to verify with Engineering, the status is currently showing as Resolved
 * Ändrade sidor uppdateras men motsvarande länkade produkter uppdateras inte vid kataloglansering (CQ-4321409, NPR-36422).
 * Arbetsflödena **[!UICONTROL Publish later]** och **[!UICONTROL Unpublish later]** fungerar inte (CQ-4327679).
 
-Information om säkerhetsuppdateringar finns på [[!DNL Experience Manager] sidan Säkerhetsbulletiner](https://helpx.adobe.com/security/products/experience-manager.html).
+Mer information om säkerhetsuppdateringar finns på [[!DNL Experience Manager] sidan Säkerhetsbulletiner](https://helpx.adobe.com/security/products/experience-manager.html).
 
 ## Installera 6.5.10.0 {#install}
 
@@ -427,7 +427,7 @@ Information om vilka plattformar som är certifierade för att fungera med den h
 >
 >Hoppa över om du inte använder AEM Forms på JEE. Korrigeringar i Adobe Experience Manager Forms på JEE levereras via ett separat installationsprogram.
 
-Information om hur du installerar det kumulativa installationsprogrammet för Experience Manager Forms på JEE och konfigurationen efter distributionen finns i [versionsinformationen](jee-patch-installer-65.md).
+Information om hur du installerar det kumulativa installationsprogrammet för Experience Manager Forms i JEE och konfigurationen efter distributionen finns i [versionsinformationen](jee-patch-installer-65.md).
 
 >[!NOTE]
 >
@@ -462,7 +462,7 @@ Granska om du använder en funktion eller en funktion i en distribution. Planera
 | Yta | Funktion | Ersättning |
 |---|---|---|
 | Integreringar | Skärmen **[!UICONTROL AEM Cloud Services Opt-In]** är föråldrad eftersom integreringen [!DNL Experience Manager] och [!DNL Adobe Target] har uppdaterats i Experience Manager 6.5. Integreringen stöder Adobe Target Standard API. API:t använder autentisering via Adobe IMS och [!DNL Adobe I/O] och stöder den växande rollen hos Adobe Launch till instrumentets [!DNL Experience Manager]-sidor för analys och personalisering. Anmälningsguiden är funktionellt irrelevant. | Konfigurera systemanslutningar, Adobe IMS-autentisering och [!DNL Adobe I/O]-integreringar via respektive [!DNL Experience Manager]-molntjänster. |
-| Anslutningar | Adobe JCR Connector för Microsoft® SharePoint 2010 och Microsoft® SharePoint 2013 är föråldrad för Experience Manager 6.5. | Ej tillämpligt |
+| Anslutningar | Adobe JCR Connector för Microsoft® SharePoint 2010 och Microsoft® SharePoint 2013 är borttagen för Experience Manager 6.5. | Ej tillämpligt |
 
 ## Kända fel {#known-issues}
 
@@ -499,7 +499,7 @@ Följande textdokument innehåller en lista över de OSGi-paket och innehållspa
 Dessa webbplatser är bara tillgängliga för kunder. Om du är kund och behöver åtkomst kontaktar du din kontoansvarige på Adobe.
 
 * [Nedladdning av produkt på licensing.adobe.com](https://licensing.adobe.com/)
-* Se [hur du kontaktar Adobe kundtjänst](https://experienceleague.adobe.com/docs/customer-one/using/home.html).
+* Se [hur du kontaktar Adobe kundsupport](https://experienceleague.adobe.com/docs/customer-one/using/home.html).
 
 >[!MORELIKETHIS]
 >

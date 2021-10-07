@@ -4,11 +4,11 @@ description: Lär dig resurshanteringsåtgärder som överföring, hämtning, re
 contentOwner: AG
 mini-toc-levels: 1
 role: User
-feature: Resurshantering, sökning
+feature: Asset Management,Search
 exl-id: 158607e6-b4e9-4a3f-b023-4023d60c97d2
-source-git-commit: 9dc61a66a79004013d8cff89c4607f7aafad08df
+source-git-commit: b2faf81983216bef9151548d90ae86f1c26a9f91
 workflow-type: tm+mt
-source-wordcount: '9611'
+source-wordcount: '9609'
 ht-degree: 3%
 
 ---
@@ -96,9 +96,8 @@ Om du vill konfigurera rensningsaktiviteten för de oavslutade segmentöverföri
 >Med tanke på tidsgräns, fördröjning, bandbredd och förväntade samtidiga överföringar för autentiseringsuppgifter, är det högsta värdet som gör att du kan säkerställa att följande väljs:
 >
 >* För att säkerställa att segmentöverföring är aktiverad för filer med storlekar som kan orsaka att autentiseringsuppgifterna förfaller när överföringen pågår.
-   >
-   >
-* För att säkerställa att varje segment avslutas innan autentiseringsuppgifterna upphör att gälla.
+>
+>* För att säkerställa att varje segment avslutas innan autentiseringsuppgifterna upphör att gälla.
 
 
 Om du överför en resurs med samma namn som en resurs som redan är tillgänglig på den plats där du överför resursen visas en varningsdialogruta.
@@ -160,9 +159,9 @@ Dynamic Media möjliggör batchöverföring av resurser via FTP-server. Om du t�
 
 >[!NOTE]
 >
->Om du vill överföra resurser via FTP i Dynamic Media - Scene7-läge installerar du Feature Pack 18912 på [!DNL Experience Manager]-författarinstanserna. Kontakta [Adobe kundtjänst](https://experienceleague.adobe.com/?support-solution=General#support) för att få tillgång till FP-18912 och slutföra konfigurationen av ditt FTP-konto. Mer information finns i [Installera funktionspaket 18912 för migrering av gruppresurser](/help/assets/bulk-ingest-migrate.md).
+>Om du vill överföra resurser via FTP i Dynamic Media - Scene7-läge installerar du Feature Pack 18912 på [!DNL Experience Manager]-författarinstanserna. Kontakta [Adobe kundsupport](https://experienceleague.adobe.com/?support-solution=General#support) för att få tillgång till FP-18912 och slutföra konfigurationen av ditt FTP-konto. Mer information finns i [Installera funktionspaket 18912 för migrering av gruppresurser](/help/assets/bulk-ingest-migrate.md).
 >
->Om du använder FTP för att överföra resurser ignoreras de överföringsinställningar som anges i [!DNL Experience Manager]. I stället används filbearbetningsregler, enligt definitionen i Dynamic Media Classic,.
+>Om du använder FTP för att överföra resurser ignoreras de överföringsinställningar som anges i [!DNL Experience Manager]. I stället används filbearbetningsregler, som de definieras i Dynamic Media Classic.
 
 **Så här överför du resurser med FTP**
 
@@ -170,7 +169,7 @@ Dynamic Media möjliggör batchöverföring av resurser via FTP-server. Om du t�
 
 1. Öppna [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html#system-requirements-dmc-app) och logga sedan in på ditt konto.
 
-   Dina autentiseringsuppgifter och din inloggning tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kontaktar du teknisk support.
+   Dina autentiseringsuppgifter och din inloggning tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kan du kontakta Adobe kundsupport.
 
 1. Klicka på **[!UICONTROL Upload]** i det globala navigeringsfältet.
 1. Klicka på fliken **[!UICONTROL Via FTP]** på sidan Överför, i det övre vänstra hörnet.
@@ -186,7 +185,7 @@ Dynamic Media möjliggör batchöverföring av resurser via FTP-server. Om du t�
 1. Klicka på **[!UICONTROL Save]** längst ned till höger i dialogrutan Alternativ för överföringsjobb.
 1. Klicka på **[!UICONTROL Submit Upload]** längst ned till höger på sidan Överför.
 
-   Om du vill visa överföringsförloppet klickar du på **[!UICONTROL Jobs]** i det globala navigeringsfältet. På sidan Jobb visas överföringsförloppet. Du kan fortsätta arbeta i [!DNL Experience Manager] och gå tillbaka till jobbsidan i Dynamic Media Classic när som helst för att granska ett pågående jobb.
+   Om du vill visa överföringsförloppet klickar du på **[!UICONTROL Jobs]** i det globala navigeringsfältet. På sidan Jobb visas överföringsförloppet. Du kan fortsätta arbeta i [!DNL Experience Manager] och gå tillbaka till Jobs-sidan i Dynamic Media Classic när som helst för att granska ett pågående jobb.
 Om du vill avbryta ett pågående överföringsjobb klickar du på **[!UICONTROL Cancel]** bredvid Varaktighet.
 
 #### Alternativ för överföringsjobb {#upload-job-options}
@@ -205,7 +204,7 @@ Om du vill avbryta ett pågående överföringsjobb klickar du på **[!UICONTROL
 |  | Bildredigeringsalternativ | Du kan bevara urklippsmaskerna i bilder och välja en färgprofil.<br> Se  [Ange alternativ för bildredigering vid överföring](#setting-image-editing-options-at-upload). |
 |  | PostScript-alternativ | Du kan rastrera PostScript®, beskära filer, behålla genomskinliga bakgrunder, välja en upplösning och välja en färgrymd.<br> Se  [Ange överföringsalternativ](#setting-postscript-and-illustrator-upload-options) för PostScript och Illustrator. |
 |  | Photoshop-alternativ | Du kan skapa mallar från Adobe® Photoshop®-filer, behålla lager, ange hur lager ska namnges, extrahera text och ange hur bilder ska förankras i mallar.<br> Mallar stöds inte i  [!DNL Experience Manager].<br> Se  [Ange överföringsalternativ](#setting-photoshop-upload-options) för Photoshop. |
-|  | PDF-alternativ | Du kan rastrera filerna, extrahera sökord och länkar, automatiskt generera en e-katalog, ange upplösningen och välja en färgrymd.<br>eCatalogs stöds inte i  [!DNL Experience Manager]. <br> Se  [Ange överföringsalternativ](#setting-pdf-upload-options) för PDF. |
+|  | Alternativ för PDF | Du kan rastrera filerna, extrahera sökord och länkar, automatiskt generera en e-katalog, ange upplösningen och välja en färgrymd.<br>eCatalogs stöds inte i  [!DNL Experience Manager]. <br> Se  [Ange överföringsalternativ](#setting-pdf-upload-options) för PDF. |
 |  | Illustrator-alternativ | Du kan rastrera Adobe Illustrator®-filer, behålla genomskinliga bakgrunder, välja en upplösning och välja en färgrymd.<br> Se  [Ange överföringsalternativ](#setting-postscript-and-illustrator-upload-options) för PostScript och Illustrator. |
 |  | EVideoalternativ | Du kan omkoda en videofil genom att välja en videoförinställning.<br> Se  [Ange alternativ](#setting-evideo-upload-options) för eVideo-överföring. |
 |  | Förinställningar för gruppuppsättning | Om du vill skapa en bilduppsättning, eller en snurra uppsättning, från de överförda filerna klickar du på kolumnen Aktiv för den förinställning som du vill använda. Du kan markera flera förinställningar. Du skapar förinställningarna på sidan Programinställningar/Gruppinställningar i Dynamic Media Classic.<br> Mer information om hur du skapar förinställningar för gruppuppsättningar finns i  [Konfigurera förinställningar för gruppuppsättningar för att automatiskt generera ](config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets) bilduppsättningar och snurra uppsättningar.<br> Se  [Ställa in förinställningar för gruppuppsättning vid överföring](#setting-batch-set-presets-at-upload). |
@@ -238,7 +237,7 @@ När du överför bildfiler, inklusive AI-, EPS- och PSD-filer, kan du utföra f
 
 #### Ange överföringsalternativ för PostScript och Illustrator {#setting-postscript-and-illustrator-upload-options}
 
-När du överför bildfiler från PostScript (EPS) eller Illustrator (AI) kan du formatera dem på olika sätt. Du kan rastrera filerna, behålla den genomskinliga bakgrunden, välja en upplösning och välja en färgrymd. Formateringsalternativ för PostScript- och Illustrator-filer finns i dialogrutan [!UICONTROL Upload Job Options] under [!UICONTROL PostScript Options] och [!UICONTROL Illustrator Options].
+När du överför PostScript-bildfiler (EPS) eller Illustrator-bildfiler (AI) kan du formatera dem på olika sätt. Du kan rastrera filerna, behålla den genomskinliga bakgrunden, välja en upplösning och välja en färgrymd. Formateringsalternativ för PostScript- och Illustrator-filer finns i dialogrutan [!UICONTROL Upload Job Options] under [!UICONTROL PostScript Options] och [!UICONTROL Illustrator Options].
 
 | Alternativ | Delalternativ | Beskrivning |
 |---|---|---|
@@ -247,13 +246,13 @@ När du överför bildfiler från PostScript (EPS) eller Illustrator (AI) kan du
 | Upplösning |  | Anger upplösningsinställningen. Den här inställningen avgör hur många pixlar som visas per tum i filen. |
 | Färgrymd |  | Välj menyn Färgrymd och välj bland följande alternativ för färgrymd: |
 |  | Identifiera automatiskt | Bevarar filens färgrymd. |
-|  | Tvinga som RGB | Konverterar till RGB-färgmodellen. |
+|  | Tvinga som RGB | Konverterar till färgmodellen RGB. |
 |  | Tvinga som CMYK | Konverterar till CMYK-färgmodellen. |
 |  | Tvinga som gråskala | Konverterar till gråskalefärgrymden. |
 
 #### Ange överföringsalternativ för Photoshop {#setting-photoshop-upload-options}
 
-PSD-filer (Photoshop Document) används oftast för att skapa bildmallar. När du överför en PSD-fil kan du skapa en bildmall automatiskt från filen (välj alternativet [!UICONTROL Create Template] på skärmen Överför).
+Photoshop Document-filer (PSD) används oftast för att skapa bildmallar. När du överför en PSD-fil kan du skapa en bildmall automatiskt från filen (välj alternativet [!UICONTROL Create Template] på skärmen Överför).
 
 Dynamic Media skapar flera bilder från en PSD-fil med lager om du använder filen för att skapa en mall. skapas en bild för varje lager.
 
@@ -265,15 +264,15 @@ Använd [!UICONTROL Crop Options] och [!UICONTROL Color Profile Options], som be
 
 | Alternativ | Delalternativ | Beskrivning |
 |---|---|---|
-| Behåll lager |  | Rippar lagren i PSD-filen, om det finns några, till enskilda resurser. Resurslagren förblir kopplade till PSD-filen. Du kan visa dem genom att öppna PSD-filen i detaljvyn och välja lagerpanelen. |
-| Skapa mall |  | Skapar en mall från lagren i PSD-filen. |
+| Behåll lager |  | Rippar lagren i PSD, om det finns några, till enskilda resurser. Resurslagren förblir kopplade till PSD. Du kan visa dem genom att öppna filen PSD i detaljvyn och välja lagerpanelen. |
+| Skapa mall |  | Skapar en mall från lagren i filen PSD. |
 | Extrahera text |  | Extraherar texten så att användare kan söka efter text i ett visningsprogram. |
 | Utöka lager till bakgrundsstorlek |  | Utökar storleken på överlappade bildlager till storleken på bakgrundslagret. |
-| Namnge lager |  | Lager i PSD-filen överförs som separata bilder. |
-|  | Lagernamn | Namnger bilderna efter deras lagernamn i PSD-filen. Ett lager med namnet Price Tag i den ursprungliga PSD-filen blir till exempel en bild med namnet Price Tag. Om lagernamnen i PSD-filen däremot är Photoshop standardlagernamn (Bakgrund, Lager 1, Lager 2 och så vidare) får bilderna namn efter sina lagernummer i PSD-filen. De namnges inte efter sina standardlagernamn. |
-|  | Photoshop och lagernummer | Namnger bilderna efter deras lagernummer i PSD-filen och ignorerar de ursprungliga lagernamnen. Bilderna får samma namn som Photoshop-filnamnet och ett nummer i det tillagda lagret. Det andra lagret i en fil som heter Spring Ad.psd får till exempel namnet Spring Ad_2 även om det har ett icke-standardnamn i Photoshop. |
-|  | Photoshop- och lagernamn | Namnger bilderna efter PSD-filen följt av lagernamnet eller lagernumret. Lagernumret används om lagernamnen i PSD-filen är Photoshop standardlagernamn. Ett lager med namnet Price Tag i en PSD-fil med namnet SpringAd får till exempel namnet Spring Ad_Price Tag. Ett lager med standardnamnet Lager2 kallas Spring Ad_2. |
-| Fästpunkt |  | Ange hur bilder ska förankras i mallar som genereras från lagerkompositionen som skapas från PSD-filen. Som standard är ankarpunkten i mitten. Med en central ankarpunkt kan ersättningsbilder bäst fylla samma område, oavsett ersättningsbildens proportioner. Bilder med en annan aspekt som ersätter den här bilden upptar i själva verket samma utrymme när de refererar till mallen och använder parameterersättning. Ändra till en annan inställning om ditt program kräver att ersättningsbilderna fyller ut det tilldelade utrymmet i mallen. |
+| Namnge lager |  | Lager i filen PSD överförs som separata bilder. |
+|  | Lagernamn | Namnger bilderna efter deras lagernamn i filen PSD. Ett lager med namnet Price Tag i den ursprungliga PSD-filen blir till exempel en bild med namnet Price Tag. Om lagernamnen i filen PSD är Photoshop standardlagernamn (Bakgrund, Lager 1, Lager 2 och så vidare) får bilderna namn efter sina lagernummer i filen PSD. De namnges inte efter sina standardlagernamn. |
+|  | Photoshop och lagernummer | Namnger bilderna efter deras lagernummer i filen PSD och ignorerar de ursprungliga lagernamnen. Bilderna får samma namn som Photoshop-filnamnet och ett nummer i det tillagda lagret. Det andra lagret i en fil som heter Spring Ad.psd får till exempel namnet Spring Ad_2 även om det har ett icke-standardnamn i Photoshop. |
+|  | Photoshop- och lagernamn | Namnger bilderna efter PSD-filen följt av lagernamnet eller lagernumret. Lagernumret används om lagernamnen i filen PSD är Photoshop standardlagernamn. Ett lager med namnet Price Tag i en PSD-fil med namnet SpringAd får till exempel namnet Spring Ad_Price Tag. Ett lager med standardnamnet Lager2 kallas Spring Ad_2. |
+| Fästpunkt |  | Ange hur bilder ska förankras i mallar som genereras från lagerkompositionen som skapas från filen PSD. Som standard är ankarpunkten i mitten. Med en central ankarpunkt kan ersättningsbilder bäst fylla samma område, oavsett ersättningsbildens proportioner. Bilder med en annan aspekt som ersätter den här bilden upptar i själva verket samma utrymme när de refererar till mallen och använder parameterersättning. Ändra till en annan inställning om ditt program kräver att ersättningsbilderna fyller ut det tilldelade utrymmet i mallen. |
 
 #### Ange överföringsalternativ för PDF {#setting-pdf-upload-options}
 
@@ -287,14 +286,14 @@ Välj bland följande alternativ:
 
 | Alternativ | Delalternativ | Beskrivning |
 |---|---|---|
-| Bearbetar | Rastrera | (Standard) Rippar ned sidorna i PDF-filen och konverterar vektorgrafik till bitmappsbilder. Välj det här alternativet om du vill skapa en e-katalog. |
+| Bearbetar | Rastrera | (Standard) Rippar sidorna i filen PDF och konverterar vektorgrafik till bitmappsbilder. Välj det här alternativet om du vill skapa en e-katalog. |
 | Extract | Sök efter ord | Extraherar ord från PDF-filen så att filen kan genomsökas efter nyckelord i en eCatalog Viewer. |
-|  | Länkar | Extraherar länkar från PDF-filerna och konverterar dem till bildscheman som används i en eCatalog Viewer. |
-| Generera eCatalog automatiskt från PDF med flera sidor |  | Skapar automatiskt en e-katalog från PDF-filen. eCatalog namnges efter den PDF-fil du överförde. (Det här alternativet är bara tillgängligt om du rastrerar PDF-filen när du överför den.) |
-| Upplösning |  | Anger upplösningsinställningen. Den här inställningen avgör hur många pixlar som visas per tum i PDF-filen. Standardvärdet är 150. |
-| Färgrymd |  | Välj menyn Färgrymd och välj en färgrymd för PDF-filen. De flesta PDF-filer har både RGB- och CMYK-färgbilder. RGB-färgmodellen är att föredra när du vill visa bilden online. |
-|  | Identifiera automatiskt | Behåller PDF-filens färgrymd. |
-|  | Tvinga som RGB | Konverterar till RGB-färgmodellen. |
+|  | Länkar | Extraherar länkar från PDF-filerna och konverterar dem till Image Maps som används i en eCatalog Viewer. |
+| Skapa eCatalog automatiskt från PDF med flera sidor |  | Skapar automatiskt en e-katalog från PDF-filen. eCatalog namnges efter den överförda PDF-filen. (Det här alternativet är bara tillgängligt om du rastrerar PDF-filen när du överför den.) |
+| Upplösning |  | Anger upplösningsinställningen. Den här inställningen avgör hur många pixlar som visas per tum i filen PDF. Standardvärdet är 150. |
+| Färgrymd |  | Välj menyn Färgrymd och välj en färgrymd för filen PDF. De flesta PDF-filer har både RGB och CMYK-färgbilder. Färgrymden RGB är att föredra när du vill visa bilden online. |
+|  | Identifiera automatiskt | Bevarar färgrymden för PDF-filen. |
+|  | Tvinga som RGB | Konverterar till färgmodellen RGB. |
 |  | Tvinga som CMYK | Konverterar till CMYK-färgmodellen. |
 |  | Tvinga som gråskala | Konverterar till gråskalefärgrymden. |
 
@@ -307,8 +306,8 @@ Om du vill omkoda en videofil väljer du bland olika förinställningar för vid
 | Adaptiv video |  | En enda förinställning för kodning som fungerar med alla proportioner för att skapa videor som ska skickas till mobilen, surfplattan och datorn. Överförda källvideor som är kodade med den här förinställningen har en fast höjd. Bredden skalas dock automatiskt så att videons proportioner bevaras. <br>Det bästa sättet är att använda adaptiv videokodning. |
 | Förinställningar för enskild kodning | Sortera kodningsförinställningar | Välj **[!UICONTROL Name]** eller **[!UICONTROL Size]** om du vill sortera kodningsförinställningarna under Skrivbord, Mobil och Surfplatta efter namn eller efter upplösningsstorlek. |
 |  | Skrivbord | Skapa en MP4-fil för att leverera strömmande eller progressiv videoupplevelse till stationära datorer. Välj en eller flera proportioner med den upplösning och datahastighet du vill ha. |
-|  | Mobil | Skapa en MP4-fil för iPhone- eller Android™-enheter. Välj en eller flera proportioner med den upplösning och datahastighet du vill ha. |
-|  | Tablet | Skapa en MP4-fil för iPad eller Android™-surfplattor. Välj en eller flera proportioner med den upplösning och datahastighet du vill ha. |
+|  | Mobil | Skapa en MP4-fil för användning på mobila enheter från iPhone eller Android™. Välj en eller flera proportioner med den upplösning och datahastighet du vill ha. |
+|  | Tablet | Skapa en MP4-fil för distribution på iPad- eller Android™-surfplattor. Välj en eller flera proportioner med den upplösning och datahastighet du vill ha. |
 
 #### Ange förinställningar för gruppuppsättning vid överföring {#setting-batch-set-presets-at-upload}
 
@@ -771,7 +770,7 @@ Du kan bara visa en anteckning åt gången.
 >
 >Om du markerar flera anteckningar visas den senaste anteckningen i användargränssnittet.
 >
->Flerval stöds endast för utskrift av kommenterade resurser som PDF.
+>Flerval stöds bara för utskrift av kommenterade objekt som PDF.
 
 **Så här visar du sparade anteckningar för en resurs:**
 
@@ -794,7 +793,7 @@ Du kan också välja att bara skriva ut anteckningarna eller granskningsstatusen
 
 >[!NOTE]
 >
->Du kan välja flera anteckningar när du skriver ut den kommenterade resursen som PDF.
+>Du kan markera flera anteckningar när du skriver ut den kommenterade resursen som PDF.
 
 Om du vill skriva ut anteckningarna och granskningsstatusen klickar du på **[!UICONTROL Print]** och följer instruktionerna i guiden. Alternativet **[!UICONTROL Print]** visas bara i verktygsfältet när resursen har minst en antecknings- eller granskningsstatus tilldelad.
 
@@ -812,15 +811,15 @@ Om du vill skriva ut anteckningarna och granskningsstatusen klickar du på **[!U
 
 1. Klicka på **[!UICONTROL Print]** i verktygsfältet.
 
-1. I dialogrutan Skriv ut väljer du den position du vill att anteckningarna/granskningsstatusen ska visas i PDF-filen. Om du till exempel vill att anteckningarna/statusen ska skrivas ut längst upp till höger på sidan som innehåller den utskrivna bilden använder du inställningen **Övre vänster**. Det är markerat som standard.
+1. I dialogrutan Skriv ut väljer du den position du vill att anteckningarna/granskningsstatusen ska visas på PDF. Om du till exempel vill att anteckningarna/statusen ska skrivas ut längst upp till höger på sidan som innehåller den utskrivna bilden använder du inställningen **Övre vänster**. Det är markerat som standard.
 
    Du kan välja andra inställningar beroende på var du vill att anteckningarna/statusen ska visas i den utskrivna PDF-filen. Om du vill att anteckningarna/statusen ska visas på en sida som är skild från den utskrivna resursen väljer du **[!UICONTROL Next Page]**.
 
 1. Klicka på **[!UICONTROL Print]**. Beroende på vilket alternativ du väljer i steg 2 visar den genererade PDF-filen anteckningarna/statusen vid den angivna positionen. Om du till exempel väljer att skriva ut både anteckningar och granskningsstatus med inställningen **Överst till vänster** liknar genererade utdata den PDF-fil som återges här.
 
-   ![Antecknings- och granskningsstatus för genererad PDF](assets/annotation-status-pdf.png)
+   ![Antecknings- och granskningsstatus för genererade PDF](assets/annotation-status-pdf.png)
 
-1. Ladda ned ![Ladda ned PDF](assets/do-not-localize/download.png) eller skriv ut ![utskriftsalternativ på PDF](assets/do-not-localize/print.png) med alternativen överst till höger.
+1. Ladda ned ![Ladda ned alternativ för PDF](assets/do-not-localize/download.png) eller skriv ut ![utskriftsalternativ på PDF](assets/do-not-localize/print.png) på PDF med alternativen längst upp till höger.
 
    >[!NOTE]
    >
@@ -830,20 +829,20 @@ Om du vill skriva ut anteckningarna och granskningsstatusen klickar du på **[!U
 
    ![Konfiguration för att skriva ut resursanteckning i PDF-dokument](assets/annotation-print-pdf-config.png)
 
-   Återgå till den återgivna PDF-filen och uppdatera den. Den uppdaterade PDF-filen återspeglar de ändringar du har gjort.
+   Återgå till den återgivna PDF-filen och uppdatera den. Det uppdaterade PDF återspeglar de ändringar du gjorde.
 
 Om en resurs innehåller anteckningar på främmande språk (särskilt icke-latinska språk) måste du först konfigurera tjänsten CQ-DAM-Handler-Gibson Font Manager på [!DNL Experience Manager]-servern så att den kan skriva ut anteckningarna. När du konfigurerar Font Manager-tjänsten CQ-DAM-Handler-Gibson anger du sökvägen till teckensnitten för de önskade språken.
 
 1. Öppna konfigurationssidan för tjänsten CQ-DAM-Handler-Gibson Font Manager från URL:en `https://[aem_server]:[port]/system/console/configMgr/com.day.cq.dam.handler.gibson.fontmanager.impl.FontManagerServiceImpl`.
 1. Gör något av följande om du vill konfigurera tjänsten CQ-DAM-Handler-Gibson Font Manager:
 
-   * I katalogalternativet Systemteckensnitt anger du den fullständiga sökvägen till teckensnittskatalogen på datorn. Om du till exempel är Mac-användare kan du ange sökvägen som */Library/Fonts* i katalogalternativet Systemteckensnitt. [!DNL Experience Manager] hämtar teckensnitten från den här katalogen.
+   * I katalogalternativet Systemteckensnitt anger du den fullständiga sökvägen till teckensnittskatalogen på datorn. Om du till exempel är en Mac-användare kan du ange sökvägen som */Library/Fonts* i katalogalternativet Systemteckensnitt. [!DNL Experience Manager] hämtar teckensnitten från den här katalogen.
    * Skapa en katalog med namnet `fonts` i mappen `crx-quickstart`. Font Manager-tjänsten CQ-DAM-Handler-Gibson hämtar automatiskt teckensnitten på platsen `crx-quickstart/fonts`. Du kan åsidosätta den här standardsökvägen inifrån katalogalternativet Adobe Server Fonts.
 
    * Skapa en mapp för teckensnitt i datorn och lagra önskade teckensnitt i mappen. Ange sedan den fullständiga sökvägen till mappen i katalogalternativet Kundteckensnitt.
 
-1. Öppna PDF-konfigurationen för anteckningen från URL:en `https://[aem_server]:[4502]/system/console/configMgr/com.day.cq.dam.core.impl.annotation.pdf.AnnotationPdfConfig`.
-1. Konfigurera Antecknings-PDF:en med rätt uppsättning teckensnittsfamiljer enligt följande:
+1. Gå till konfigurationen Annotation PDF från URL:en `https://[aem_server]:[4502]/system/console/configMgr/com.day.cq.dam.core.impl.annotation.pdf.AnnotationPdfConfig`.
+1. Konfigurera Annotation PDF med rätt uppsättning teckensnittsfamiljer enligt följande:
 
    * Inkludera strängen `<font_family_name_of_custom_font, sans-serif>` i alternativet för teckensnittsfamilj. Om du till exempel vill skriva ut anteckningar i CJK (kinesiska, japanska och koreanska), inkluderar du strängen `Arial Unicode MS, Noto Sans, Noto Sans CJK JP, sans-serif` i alternativet för teckensnittsfamilj. Om du vill skriva ut anteckningar på hindi hämtar du rätt teckensnitt och konfigurerar teckensnittsfamiljen som Arial® Unicode MS®, Noto Sans, Noto Sans CJK JP, Noto Sans Devanagari, sans-serif.
 
@@ -857,7 +856,7 @@ Här är ett exempel på hur du kan konfigurera [!DNL Experience Manager] för a
    * Noto Sans (för europeiska språk): [https://www.google.com/get/noto/](https://www.google.com/get/noto/)
    * Teckensnitt för valfritt språk: [https://www.google.com/get/noto/](https://www.google.com/get/noto/)
 
-1. Konfigurera PDF-filen med anteckningen genom att ange parametern font-family till `Arial Unicode MS, Noto Sans, Noto Sans CJK JP, sans-serif`. Den här konfigurationen är tillgänglig som standard och fungerar för alla europeiska språk och CJK-språk.
+1. Konfigurera filen annotation PDF genom att ange parametern font-family till `Arial Unicode MS, Noto Sans, Noto Sans CJK JP, sans-serif`. Den här konfigurationen är tillgänglig som standard och fungerar för alla europeiska språk och CJK-språk.
 1. Om det språk du väljer skiljer sig från de språk som nämns i steg 2 lägger du till en lämplig (kommaseparerad) post i standardteckensnittsfamiljen.
 
 ## Skapa, hantera, förhandsgranska och återställa resursversioner {#asset-versioning}

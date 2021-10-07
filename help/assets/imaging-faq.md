@@ -9,7 +9,7 @@ discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
 feature: Asset Management,Renditions
 role: User, Admin
 exl-id: e427d4ee-d5c8-421b-9739-f3cf2de36e41
-source-git-commit: cd0ff8f3f595e4c97668abc8c296b2f15f9d4810
+source-git-commit: 65af6e33ae3897519491952f4d3a6832700f77b2
 workflow-type: tm+mt
 source-wordcount: '2567'
 ht-degree: 1%
@@ -39,7 +39,7 @@ I följande bildresursexempel visas den nya optimeringen av smarta bilder:
 | [Bild 4](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_1?hei=500&amp;qlt=85&amp;resmode=bisharp&amp;op_usm=5,0.125,5,0) | ![picture4](/help/assets/assets-dm/picture4.png) | 315,80 kB | 178,19 kB | 44 % |
 |  |  |  |  | Genomsnitt = 51 % |
 
-På samma sätt som ovanstående testade Adobe också 7 009 URL:er från kundsajter. De kunde i genomsnitt optimera JPEG med 38 % ytterligare. För PNG med WebP-format kunde de i genomsnitt optimera filstorleken med 31 %. Den här typen av optimering är möjlig tack vare funktionen för smart bildbehandling.
+På samma sätt som ovanstående testade Adobe också 7 009 URL:er från kundsajter. De kunde i genomsnitt optimera filstorleken 38 % för JPEG. För PNG med WebP-format kunde de i genomsnitt optimera filstorleken med 31 %. Den här typen av optimering är möjlig tack vare funktionen för smart bildbehandling.
 
 På mobilnätet förvärras problemen av två faktorer:
 
@@ -86,7 +86,7 @@ Om du vill kan ditt företag välja att inte optimera nätverksbandbredden på d
 
 >[!NOTE]
 >
->DPR- och nätverksbandbreddsvärdena baseras på de värden som identifierats på klientsidan för det paketerade CDN. Dessa värden är ibland felaktiga. I iPhone5 med DPR=2 och iPhone12 med DPR=3 visar båda DPR=2. För högupplösta enheter är det ändå bättre att skicka DPR=2 än att skicka DPR=1. Kommer snart: Adobe arbetar med kod på klientsidan för att exakt fastställa slutanvändarens DPR.
+>DPR- och nätverksbandbreddsvärdena baseras på de värden som identifierats på klientsidan för det paketerade CDN. Dessa värden är ibland felaktiga. iPhone5 med DPR=2 och iPhone12 med DPR=3 visar båda DPR=2. För högupplösta enheter är det ändå bättre att skicka DPR=2 än att skicka DPR=1. Kommer snart: Adobe arbetar med kod på klientsidan för att exakt fastställa slutanvändarens DPR.
 
 ## Vilka är de viktigaste fördelarna med den senaste Smart Imaging? {#what-are-the-key-benefits-of-smart-imaging}
 
@@ -94,7 +94,7 @@ Eftersom bilder utgör det mesta av en sidas laddningstid kan prestandaförbätt
 
 Förbättringar i den senaste versionen av Smart Imaging:
 
-* Förbättrad Google SEO-rankning för webbsidor som använder den senaste Smart Imaging.
+* Förbättrad Google SEO-rankning för webbsidor som använder den senaste Smart Imaging-funktionen.
 * Serverar optimerat innehåll direkt (vid körning).
 * Använder Adobe Sensei-teknik för att konvertera enligt den kvalitet (qlt) som anges i bildbegäran.
 * Smart Imaging kan inaktiveras med URL-parametern &quot;bfc&quot;.
@@ -104,7 +104,7 @@ Förbättringar i den senaste versionen av Smart Imaging:
 
 ## Kostar licensieringen för smart bildbehandling några? {#are-there-any-licensing-costs-associated-with-smart-imaging}
 
-Nej. Smart Imaging ingår i din befintliga licens av Dynamic Media Classic eller Adobe Experience Manager - Dynamic Media (On-prem, AMS och Adobe Experience Manager som Cloud Service).
+Nej. Smart Imaging ingår i din befintliga licens för antingen Dynamic Media Classic eller Adobe Experience Manager - Dynamic Media (On-prem, AMS och Adobe Experience Manager as a Cloud Service).
 
 >[!NOTE]
 >
@@ -151,7 +151,7 @@ Adobe is working on a permanent fix that does not require you to append `bfc=off
 
 ## Hur fungerar Smart Imaging med befintliga bildförinställningar som redan används? {#how-does-smart-imaging-work-with-our-existing-image-presets-that-are-already-in-use}
 
-Smart Imaging fungerar med dina befintliga &quot;bildförinställningar&quot; och alla bildinställningar registreras förutom för kvalitet (`qlt`) och format (`fmt`) om det begärda filformatet är JPEG eller PNG. Vid formatkonvertering bevarar Smart Imaging den fullständiga visuella återgivningen enligt inställningarna för bildförinställningarna, men med en mindre filstorlek. Om den ursprungliga bildstorleken är mindre än vad Smart Imaging skapar, behålls originalbilden.
+Smart Imaging fungerar med dina befintliga&quot;bildförinställningar&quot; och alla bildinställningar kontrolleras förutom för kvalitet (`qlt`) och format (`fmt`) om det begärda filformatet är JPEG eller PNG. Vid formatkonvertering bevarar Smart Imaging den fullständiga visuella återgivningen enligt inställningarna för bildförinställningarna, men med en mindre filstorlek. Om den ursprungliga bildstorleken är mindre än vad Smart Imaging skapar, behålls originalbilden.
 
 <!-- CQDOC-15846 In addition, if your image presets are used to return `fmt !=JPEG` or `fmt !=PNG`, be sure append `bfc=off` in the preset modifier field to return the requested file format. -->
 
@@ -219,10 +219,10 @@ Som standard är DPR för Smart Imaging och nätverksoptimering inaktiverat (ina
       Leta efter fältet **[!UICONTROL Published Server Name]**. Om du för närvarande använder en allmän Dynamic Media Classic-domän kan du begära att du flyttar över till din egen anpassade domän som en del av den här övergången.
    1. Ange om du även behöver Smart Imaging för att arbeta över HTTP/2.
 
-1. Adobe kundtjänst lägger till dig i väntelistan för Smart Imaging baserat på i vilken ordning begäranden skickades.
+1. Adobe kundsupport lägger till dig i kundväntelistan för Smart Imaging baserat på i vilken ordning begäranden skickades.
 1. När Adobe är redo att hantera din begäran kontaktar supporten dig för att koordinera och ange ett måldatum.
 1. **Valfritt**  - Du kan testa smart bildåtergivning i mellanlagring innan Adobe överför den nya funktionen till produktion.
-1. Du meddelas när du är klar av Kundtjänst.
+1. Du meddelas när du är klar av kundsupporten.
 1. För att maximera prestandaförbättringarna av Smart Imaging rekommenderar Adobe att TTL (Time To Live) ställs in på 24 timmar eller längre. TTL-värdet definierar hur länge resurser cachas av CDN. Så här ändrar du den här inställningen:
 
    1. Om du använder Dynamic Media Classic går du till **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL Publish Setup]** > **[!UICONTROL Image Server]**. Ange **[!UICONTROL Default Client Cache Time To Live]**-värdet till 24 eller längre.
@@ -230,7 +230,7 @@ Som standard är DPR för Smart Imaging och nätverksoptimering inaktiverat (ina
 
 ## När kan jag förvänta mig att mitt konto ska aktiveras med Smart Imaging? {#when-can-i-expect-my-account-to-be-enabled-with-smart-imaging}
 
-Förfrågningar behandlas i den ordning som de tas emot av kundtjänst, enligt väntelistan.
+Förfrågningar behandlas i den ordning som de tas emot av kundsupporten, enligt väntelistan.
 
 >[!NOTE]
 >
@@ -244,13 +244,13 @@ Under den inledande övergången kommer de icke-cachelagrade bilderna direkt til
 
 ## Hur kan jag verifiera om smart bildbehandling fungerar som väntat?{#how-can-i-verify-whether-smart-imaging-is-working-as-expected}
 
-1. När ditt konto har konfigurerats med smart bildbehandling läser du in en Dynamic Media Classic- eller Adobe Experience Manager-Dynamic Media-bild-URL i webbläsaren.
+1. När ditt konto har konfigurerats med smart bildbehandling läser du in en bild-URL för Dynamic Media Classic eller Adobe Experience Manager - Dynamic Media i webbläsaren.
 1. Öppna Chrome-utvecklarfönstret genom att gå till **[!UICONTROL View]** > **[!UICONTROL Developer]** > **[!UICONTROL Developer Tools]** i webbläsaren. Eller välj ett valfritt verktyg för webbläsare.
 
 1. Kontrollera att cache är inaktiverat när utvecklingsverktygen är öppna.
 
    * I Windows® går du till inställningarna i rutan för utvecklarverktyget och markerar kryssrutan **[!UICONTROL Disable cache (while devtools is open)]**.
-   * I macOS väljer du **[!UICONTROL disable cache]** under fliken **[!UICONTROL Network]** i utvecklarfönstret.
+   * I macOS väljer du **[!UICONTROL disable cache]** i utvecklarfönstret under fliken **[!UICONTROL Network]**.
 
 1. Observera att innehållstypen har omvandlats till lämpligt format. På följande skärmbild visas en PNG-bild som konverteras dynamiskt till WebP i Chrome.
 1. Upprepa testet i olika webbläsare och under olika användarförhållanden.
@@ -277,13 +277,13 @@ För närvarande kan du välja att aktivera eller inaktivera Smart bildbehandlin
 
 Det finns ingen sådan provisioneringsmöjlighet i den aktuella funktionen för smart bildbehandling.
 
-## Ibland returneras en JPEG-bild till Chrome i stället för till en WebP-bild. Varför händer det där? (#jpeg-webp)
+## Ibland returneras en JPEG-bild till Chrome i stället för en WebP-bild. Varför händer det där? (#jpeg-webp)
 
 Smart bildbehandling avgör om konverteringen är bra eller inte. Den nya bilden returneras bara om konverteringen resulterar i en mindre filstorlek med jämförbar kvalitet.
 
 ## Hur fungerar optimeringen av DPR för Smart Imaging med Adobe Experience Manager Sites-komponenter och Dynamic Media-visningsprogram?
 
-* Experience Manager Sites Core Components är konfigurerade som standard för DPR-optimering. För att undvika alltför stora bilder på grund av DPR-optimering på serversidan läggs `dpr=off` alltid till i Dynamic Media-bilder för grundkomponenterna för Experience Manager Sites.
+* Experience Manager Sites Core Components är konfigurerade som standard för DPR-optimering. För att undvika alltför stora bilder på grund av DPR-optimering på serversidan läggs `dpr=off` alltid till i Dynamic Media-bilder för Experience Manager Sites Core Components.
 * Eftersom Dynamic Media Foundation-komponenten är konfigurerad som standard för DPR-optimering, kommer `dpr=off` alltid att läggas till i Dynamic Media Foundation-komponentbilder för att undvika överdimensionerade bilder på grund av DPR-optimering på serversidan. Även om kunden avmarkerar DPR-optimering i DM Foundation Component får inte serversidan DPR fart. Sammanfattningsvis gäller DM Foundation-komponenten DPR-optimering endast baserat på DM Foundation-komponentnivåinställning.
 * DPR-optimering på visningsprogramsidan fungerar tillsammans med DPR-optimering på serversidan, och leder inte till alltför stora bilder. DPR-värdena på serversidan aktiveras alltså inte, oavsett var DPR hanteras av visningsprogrammet, t.ex. huvudvyn i ett zoomaktiverat visningsprogram. På samma sätt aktiveras DPR-värdet på serversidan när visningsprogramelementen, t.ex. färgrutor och miniatyrbilder, inte har någon DPR-hantering.
 

@@ -4,11 +4,11 @@ description: Förslag och vägledning om [!DNL Experience Manager] konfiguration
 contentOwner: AG
 mini-toc-levels: 1
 role: Architect, Admin
-feature: Resurshantering
+feature: Asset Management
 exl-id: 1d9388de-f601-42bf-885b-6a7c3236b97e
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: b2faf81983216bef9151548d90ae86f1c26a9f91
 workflow-type: tm+mt
-source-wordcount: '2677'
+source-wordcount: '2675'
 ht-degree: 0%
 
 ---
@@ -119,7 +119,7 @@ Adobe rekommenderar att du aktiverar HTTPS eftersom många företag har brandvä
 Din nätverksoptimeringsstrategi beror i första hand på den tillgängliga bandbredden och belastningen på din [!DNL Experience Manager]-instans. Gemensamma konfigurationsalternativ, inklusive brandväggar och proxies, kan förbättra nätverkets prestanda. Här följer några viktiga punkter att tänka på:
 
 * Beroende på vilken instanstyp du har (liten, måttlig, stor) kontrollerar du att du har tillräcklig nätverksbandbredd för instansen Experience Manager. Lämplig bandbreddsallokering är särskilt viktig om [!DNL Experience Manager] finns på AWS.
-* Om din [!DNL Experience Manager]-instans finns på AWS kan du dra nytta av en flexibel skalförändringsprincip. Överför instansen om användarna förväntar sig hög belastning. Minska storleken för måttlig/låg belastning.
+* Om din [!DNL Experience Manager]-instans finns på AWS kan du dra nytta av en mångsidig skalningsprincip. Överför instansen om användarna förväntar sig hög belastning. Minska storleken för måttlig/låg belastning.
 * HTTPS: De flesta användare har brandväggar som tolkar HTTP-trafik, vilket kan påverka överföringen av filer negativt eller till och med skada filer under överföringen.
 * Stora filöverföringar: Se till att användarna har kabelanslutna anslutningar till nätverket (WiFi-anslutningar blir snabbt mättade).
 
@@ -212,7 +212,7 @@ Dessutom anger du sökvägen till ImageMagick:s temporära mapp i filen `configu
 >
 >ImageMagick `policy.xml`- och `configure.xml`-filerna är tillgängliga på `/usr/lib64/ImageMagick-&#42;/config/` i stället för `/etc/ImageMagick/`.Mer information om var konfigurationsfilerna finns i [ImageMagick-dokumentationen](https://www.imagemagick.org/script/resources.php).
 
-Om du använder [!DNL Experience Manager] på Adobe Managed Services (AMS) kan du kontakta Adobe kundtjänst om du tänker bearbeta många stora PSD- eller PSB-filer. Samarbeta med Adobe kundtjänstrepresentant för att implementera de bästa metoderna för driftsättningen av AMS och för att välja bästa möjliga verktyg och modeller för Adobe egna format. [!DNL Experience Manager] kan inte bearbeta PSB-filer med hög upplösning som är större än 30000 x 23000 pixlar.
+Om du använder [!DNL Experience Manager] på Adobe Managed Services (AMS) kan du kontakta Adobe kundsupport om du tänker bearbeta många stora PSD- eller PSB-filer. Samarbeta med Adobe kundsupportrepresentant för att implementera de bästa metoderna för driftsättningen av AMS och för att välja de bästa möjliga verktygen och modellerna för Adobe egna format. [!DNL Experience Manager] kan inte bearbeta PSB-filer med hög upplösning som är större än 30000 x 23000 pixlar.
 
 ### XMP {#xmp-writeback}
 
@@ -306,6 +306,6 @@ För att minimera latensen och uppnå hög genomströmning genom effektiv proces
 * Konfigurera [!DNL ImageMagick] för att begränsa resursförbrukningen.
 * Ta bort onödiga steg från [!UICONTROL DAM Update Asset]-arbetsflödet.
 * Konfigurera arbetsflöde och versionsrensning.
-* Optimera index med de senaste Service Pack-uppdateringarna och snabbkorrigeringarna. Kontakta Adobe kundtjänst om du har ytterligare indexoptimeringar som kan vara tillgängliga.
+* Optimera index med de senaste Service Pack-uppdateringarna och snabbkorrigeringarna. Kontakta Adobe kundsupport för eventuella ytterligare indexoptimeringar.
 * Använd gissningTotal för att optimera frågeprestanda.
 * Om du konfigurerar [!DNL Experience Manager] för att identifiera filtyper från innehållet i filerna (genom att aktivera **[!UICONTROL Day CQ DAM Mime Type Service]** i **[!UICONTROL AEM Web Console]**), överför många filer samtidigt under icke-toppvärdesdagar eftersom det är resurskrävande.

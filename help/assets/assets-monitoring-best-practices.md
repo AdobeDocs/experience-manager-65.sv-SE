@@ -3,11 +3,11 @@ title: Bästa tillvägagångssätt för att övervaka [!DNL Assets] distribution
 description: Bästa tillvägagångssätt för att övervaka miljön och prestandan för din  [!DNL Adobe Experience Manager] distribution efter att den har distribuerats.
 contentOwner: AG
 role: Admin, Architect
-feature: Resurshantering
+feature: Asset Management
 exl-id: a9e1bd6b-c768-4faa-99a3-7110693998dc
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: b2faf81983216bef9151548d90ae86f1c26a9f91
 workflow-type: tm+mt
-source-wordcount: '1670'
+source-wordcount: '1668'
 ht-degree: 0%
 
 ---
@@ -199,5 +199,5 @@ Om du råkar ut för problem i samband med övervakningen finns det några fels�
 * Använd arbetsflödeskonsolen för att verifiera att arbetsflödena fungerar som förväntat. Om det är möjligt kan du komprimera flera arbetsflöden till ett enda arbetsflöde.
 * Läs om live-övervakning och leta efter fler flaskhalsar eller konsumenter av specifika resurser.
 * Undersök ingångspunkterna från klientnätverket och ingångspunkterna till [!DNL Experience Manager]-distributionsnätverket, inklusive dispatchern. Det är ofta flaskhalsar. Mer information finns i [Resursnätverkshänsyn](/help/assets/assets-network-considerations.md).
-* Storleksändra din [!DNL Experience Manager]-server. Din [!DNL Experience Manager]-distribution kan ha en otillräckligt stor storlek. Adobe kundtjänst kan hjälpa dig att identifiera om din server är för liten.
+* Storleksändra din [!DNL Experience Manager]-server. Din [!DNL Experience Manager]-distribution kan ha en otillräckligt stor storlek. Adobe kundsupport kan hjälpa dig att identifiera om din server är för liten.
 * Undersök `access.log`- och `error.log`-filerna för att se om det finns poster runt tiden när något gick fel. Leta efter mönster som kan indikera anpassade kodavvikelser. Lägg till dem i listan med händelser som du övervakar.

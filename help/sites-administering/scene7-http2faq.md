@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 exl-id: 2428914c-5fb0-439e-a1ef-8ee30b890f58
-source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
+source-git-commit: 65af6e33ae3897519491952f4d3a6832700f77b2
 workflow-type: tm+mt
-source-wordcount: '747'
+source-wordcount: '749'
 ht-degree: 1%
 
 ---
@@ -64,13 +64,13 @@ Om du vill använda HTTP/2 måste du uppfylla följande krav:
 
       Om du vill hitta dina domäner öppnar du [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och loggar sedan in på ditt eller dina företagskonton. Navigera sedan till **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL General Settings]**. Leta efter fältet **[!UICONTROL Published Server Name]**. Om du för närvarande använder en allmän Dynamic Media-domän kan du begära att du flyttar över till din egen anpassade domän som en del av den här övergången.
 
-1. Teknisk support lägger till dig i HTTP/2-väntelistan baserat på i vilken ordning förfrågningarna skickades.
+1. Adobe kundsupport lägger till dig i HTTP/2-väntelistan baserat på i vilken ordning begäranden skickades.
 1. När Adobe är redo att hantera din begäran kontaktar supporten dig för att koordinera övergången och ange ett måldatum.
 1. Du får ett meddelande när du är klar och du kan verifiera en lyckad övergång till HTTP2.
 
 ## När kan jag förvänta mig att gå över till HTTP/2? {#when-can-i-expect-to-be-transitioned-over-to-http}
 
-Förfrågningar behandlas i den ordning som de tas emot av teknisk support.
+Förfrågningar behandlas i den ordning som de tas emot av Adobe kundsupport.
 
 >[!NOTE]
 >

@@ -10,9 +10,9 @@ role: User, Admin
 mini-toc-levels: 3
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: Configuration,Scene7 Mode
-source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
+source-git-commit: 65af6e33ae3897519491952f4d3a6832700f77b2
 workflow-type: tm+mt
-source-wordcount: '6504'
+source-wordcount: '6508'
 ht-degree: 3%
 
 ---
@@ -94,7 +94,7 @@ Mer information finns i [Installera funktionspaket 18912 för migrering av grupp
 
 1. I läget Experience Manager Author väljer du Experience Manager logotypen för att få åtkomst till den globala navigeringskonsolen och väljer sedan Verktyg-ikonen och går till **[!UICONTROL Cloud Services]** > **[!UICONTROL Dynamic Media Configuration]**.
 1. På sidan Dynamic Media Configuration Browser väljer du **[!UICONTROL global]** i den vänstra rutan (markera inte mappikonen till vänster om **[!UICONTROL global]**) och sedan **[!UICONTROL Create]**.
-1. På sidan **[!UICONTROL Create Dynamic Media Configuration]** anger du en titel, e-postadress för Dynamic Media-konto, lösenord och väljer sedan region. Den här informationen tillhandahålls av Adobe i e-postmeddelandet om etablering. Kontakta Adobe kundtjänst om du inte har fått e-postmeddelandet.
+1. På sidan **[!UICONTROL Create Dynamic Media Configuration]** anger du en titel, e-postadress för Dynamic Media-konto, lösenord och väljer sedan region. Den här informationen tillhandahålls av Adobe i e-postmeddelandet om etablering. Kontakta Adobe kundsupport om du inte fått e-postmeddelandet.
 
    Välj **[!UICONTROL Connect to Dynamic Media]**.
 
@@ -134,7 +134,7 @@ Markera en markerad mapp för synkronisering till Dynamic Media genom att marker
 1. Välj **[!UICONTROL Save]**.
 1. Om du vill förhandsgranska Dynamic Media-innehåll på ett säkert sätt innan det publiceras måste du tillåtslista författarinstansen Experience Manager för att ansluta till Dynamic Media:
 
-   * Öppna [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och logga sedan in på ditt konto. Dina autentiseringsuppgifter och inloggningsuppgifter tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kontaktar du teknisk support.
+   * Öppna [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och logga sedan in på ditt konto. Dina autentiseringsuppgifter och inloggningsuppgifter tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kan du kontakta Adobe kundsupport.
 
    * Navigera till **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL Publish Setup]** > **[!UICONTROL Image Server]** i navigeringsfältet uppe till höger på sidan.
 
@@ -248,7 +248,7 @@ Du kan ange ett värde på upp till 15 GB (`2013265920` byte). I det här fallet
 
 ### (Valfritt) Installation och konfiguration av Dynamic Media - inställningar för Scene7-läge {#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings}
 
-När du är i körläge `dynamicmedia_scene7` använder du användargränssnittet i Dynamic Media Classic för att ändra dina Dynamic Media-inställningar.
+När du är i körläge `dynamicmedia_scene7` använder du Dynamic Media Classic användargränssnitt för att ändra dina Dynamic Media-inställningar.
 
 Vissa av ovanstående uppgifter kräver att du öppnar [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och sedan loggar in på ditt konto.
 
@@ -279,9 +279,9 @@ Bildserverskärmen anger standardinställningar för att leverera bilder. I grä
 
 #### Konfigurera allmänna inställningar för program {#configuring-application-general-settings}
 
-Om du vill öppna sidan Allmänna inställningar för programmet går du till **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL General Settings]** i det globala navigeringsfältet i Dynamic Media Classic.
+Gå till **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL General Settings]** för att öppna sidan Allmänna inställningar för programmet.
 
-**[!UICONTROL Servers]** - Vid kontoetablering tillhandahåller Dynamic Media automatiskt de tilldelade servrarna för ditt företag. De här servrarna används för att skapa URL-strängar för din webbplats och dina program. Dessa URL-anrop är specifika för ditt konto. Ändra inte något av servernamnen om du inte uttryckligen har fått instruktioner från Adobe kundtjänst om att göra det.
+**[!UICONTROL Servers]** - Vid kontoetablering tillhandahåller Dynamic Media automatiskt de tilldelade servrarna för ditt företag. De här servrarna används för att skapa URL-strängar för din webbplats och dina program. Dessa URL-anrop är specifika för ditt konto. Ändra inte något av servernamnen om du inte uttryckligen har fått instruktioner från Adobe kundsupport om att göra det.
 
 **[!UICONTROL Overwrite Images]** - Dynamic Media tillåter inte att två filer har samma namn. Varje objekts URL-ID (filnamnet minus filtillägget) måste vara unikt. De här alternativen anger hur ersättningsresurser överförs: om de ersätter originalet eller blir dubbletter. Duplicerade resurser får ett nytt namn med namnet&quot;-1&quot; (till exempel heter stol.tif stol-1.tif). Dessa alternativ påverkar resurser som överförts till en annan mapp än den ursprungliga eller resurser med ett annat filnamnstillägg än den ursprungliga (till exempel JPG, TIF eller PNG).
 
@@ -322,10 +322,10 @@ Du kan till exempel ställa in **[!UICONTROL RGB Default Color Space]** på *sRG
 
 Om du gör det gör du så här:
 
-* Aktiverar färgkorrigering för RGB- och CMYK-bilder.
+* Aktiverar färgkorrigering för RGB och CMYK-bilder.
 * RGB-bilder som inte har någon färgprofil antas finnas i färgrymden *sRGB*.
 * CMYK-bilder som inte har någon färgprofil antas finnas i färgrymden *WebCoated*.
-* Dynamiska återgivningar som returnerar RGB-utdata returnerar det i färgrymden *sRGB*.
+* Dynamiska återgivningar som returnerar utdata från RGB, returnerar det i färgrymden *sRGB*.
 * Dynamiska återgivningar som returnerar CMYK-utdata returnerar det i färgrymden *WebCoated*.
 
 #### Redigera MIME-typer för format som stöds {#editing-mime-types-for-supported-formats}
@@ -436,7 +436,7 @@ Det finns två element för definition, Matcha och Basnamn. Med dessa fält kan 
 
 1. Öppna [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och logga sedan in på ditt konto.
 
-   Dina autentiseringsuppgifter och inloggningsuppgifter tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kontaktar du teknisk support.
+   Dina autentiseringsuppgifter och inloggningsuppgifter tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kan du kontakta Adobe kundsupport.
 
 1. Navigera till **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL Batch Set Presets]** > **[!UICONTROL Default Naming]** i navigeringsfältet uppe på sidan.
 1. Välj **[!UICONTROL View Form]** eller **[!UICONTROL View Code]** för att ange hur du vill visa och ange information om varje element.
@@ -469,7 +469,7 @@ Du kan antingen använda formulärfältsmetoden för att definiera en gruppupps�
 
 1. Öppna [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och logga sedan in på ditt konto.
 
-   Dina autentiseringsuppgifter och inloggningsuppgifter tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kontaktar du teknisk support.
+   Dina autentiseringsuppgifter och inloggningsuppgifter tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kan du kontakta Adobe kundsupport.
 
 1. Navigera till **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL Batch Set Presets]** > **[!UICONTROL Batch Set Preset]** i navigeringsfältet uppe på sidan.
 
@@ -525,7 +525,7 @@ När rotationsuppsättningen har överförts och publicerats aktiverar du namnet
 
 1. Öppna [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och logga sedan in på ditt konto.
 
-   Dina autentiseringsuppgifter och inloggningsuppgifter tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kontaktar du teknisk support.
+   Dina autentiseringsuppgifter och inloggningsuppgifter tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kan du kontakta Adobe kundsupport.
 
 1. Navigera till **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL Batch Set Presets]** > **[!UICONTROL Batch Set Preset]** i navigeringsfältet uppe på sidan.
 
@@ -569,7 +569,7 @@ När rotationsuppsättningen har överförts och publicerats aktiverar du namnet
 
 1. Ange suffixet eller prefixet till basnamnet som du definierade i konventionen om namngivning av tillgångar för Ange namngivning och skapande.
 
-   Ange också var rotationsuppsättningen ska skapas i mappstrukturen för Dynamic Media Classic.
+   Du kan även definiera var rotationsuppsättningen skapas i mappstrukturen för Dynamic Media Classic.
 
    Om du definierar ett stort antal uppsättningar ska uppsättningarna hållas åtskilda från de mappar som innehåller själva resurserna. Du kan till exempel skapa en mapp för snurruppsättningar där du kan placera genererade uppsättningar här.
 
@@ -595,7 +595,7 @@ Om du vill aktivera mallskapande använder du följande parametrar: `process=Mai
 
 <!-- THIS PARAGRAPH WAS REPLACED WITH THE TWO PARAGRAPHS DIRECTLY ABOVE BASED ON CQDOC-17657 You can tune job parameters for faster processing when you upload files. For example, if you are uploading PSD files, but do not want to process them as templates, you can set layer extraction to false (off). In such case, the tuned job parameter would appear as `process=None&createTemplate=false`. -->
 
-Adobe rekommenderar att du använder följande&quot;justerade&quot; jobbparametrar för PDF-, PostScript®- och PSD-filer:
+Adobe rekommenderar att du använder följande &quot;justerade&quot; jobbparametrar för PDF, PostScript® och PSD:
 
 <!-- OLD PDF JOB PARAMETERS `pdfprocess=Rasterize&resolution=150&colorspace=Auto&pdfbrochure=false&keywords=false&links=false` -->
 
@@ -609,7 +609,7 @@ Adobe rekommenderar att du använder följande&quot;justerade&quot; jobbparametr
 
 <!-- CQDOC-17657 for PSD entry in table above -->
 
-Om du vill uppdatera någon av de här parametrarna följer du stegen i [Aktivera stöd för MIME-typbaserade resurser/Dynamic Media Classic-överföringsjobbparametrar](/help/sites-administering/scene7.md#enabling-mime-type-based-assets-scene-upload-job-parameter-support).
+Om du vill uppdatera någon av de här parametrarna följer du stegen i [Aktivera stöd för MIME-typbaserade resurser/Dynamic Media Classic överföringsjobbparametrar](/help/sites-administering/scene7.md#enabling-mime-type-based-assets-scene-upload-job-parameter-support).
 
 #### Uppdatera den tillfälliga arbetsflödeskön för Granite {#updating-the-granite-transient-workflow-queue}
 
@@ -653,11 +653,11 @@ Beviljad arbetsflödeskö används för icke-tillfälliga arbetsflöden. I Dynam
 
 1. Välj **[!UICONTROL Save]**.
 
-#### Uppdatera Dynamic Media Classic-uppladdningsanslutningen {#updating-the-scene-upload-connection}
+#### Uppdatera Dynamic Media Classic överföringsanslutning {#updating-the-scene-upload-connection}
 
-Inställningen Scene7 Upload Connection synkroniserar Experience Manager-resurser till Dynamic Media Classic-servrar.
+Inställningen Scene7 Upload Connection synkroniserar Experience Manager-resurser med Dynamic Media Classic-servrar.
 
-**Så här uppdaterar du uppladdningsanslutningen för Dynamic Media Classic:**
+**Så här uppdaterar du Dynamic Media Classic överföringsanslutning:**
 
 1. Navigera till `https://<server>/system/console/configMgr/com.day.cq.dam.scene7.impl.Scene7UploadServiceImpl`
 1. I fältet **[!UICONTROL Number of connections]** och/eller fältet **[!UICONTROL Active job timeout]** ändrar du talet efter behov.

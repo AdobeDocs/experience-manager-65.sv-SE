@@ -13,7 +13,7 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/config
 role: User, Admin
 exl-id: 5719d32c-4f19-47c1-bea9-8fd0bc8439ed
 feature: Configuration,Hybrid Mode
-source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
+source-git-commit: 65af6e33ae3897519491952f4d3a6832700f77b2
 workflow-type: tm+mt
 source-wordcount: '7558'
 ht-degree: 1%
@@ -263,11 +263,11 @@ Om du vill ändra minnesgränsen för att skapa PTIFF går du till **[!UICONTROL
 
 ### Konfigurera autentisering {#setting-up-authentication}
 
-Konfigurera replikeringsautentisering för författaren så att du kan replikera bilder till tjänsten för leverans av bilder från Dynamic Media. Du får först en KeyStore och sparar den sedan under **[!UICONTROL dynamic-media-replication]**-användaren och konfigurerar den. Företagsadministratören fick ett välkomstmeddelande med KeyStore-filen och de nödvändiga autentiseringsuppgifterna under etableringsprocessen. Kontakta Adobe kundtjänst om du inte fått någon sådan information.
+Konfigurera replikeringsautentisering för författaren så att du kan replikera bilder till tjänsten för leverans av bilder från Dynamic Media. Du får först en KeyStore och sparar den sedan under **[!UICONTROL dynamic-media-replication]**-användaren och konfigurerar den. Företagsadministratören fick ett välkomstmeddelande med KeyStore-filen och de nödvändiga autentiseringsuppgifterna under etableringsprocessen. Kontakta Adobe kundsupport om du inte har fått den här informationen.
 
 **Så här konfigurerar du autentisering:**
 
-1. Kontakta Adobe kundtjänst för din KeyStore-fil och ditt lösenord om du inte redan har filen och lösenordet. Den här informationen är en nödvändig del av provisioneringen. Den kopplar nycklarna till ditt konto.
+1. Kontakta Adobe kundsupport för din KeyStore-fil och ditt lösenord om du inte redan har filen och lösenordet. Den här informationen är en nödvändig del av provisioneringen. Den kopplar nycklarna till ditt konto.
 
 1. I Experience Manager väljer du Experience Manager logotypen för att komma åt den globala navigeringskonsolen och navigerar sedan till **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Users]**.
 
@@ -290,9 +290,9 @@ Konfigurera replikeringsautentisering för författaren så att du kan replikera
 
    * I fältet **[!UICONTROL New Alias]** anger du namnet på ett alias som du vill använda senare i replikeringskonfigurationen. Du kan till exempel använda `replication` som alias.
    * Välj **[!UICONTROL KeyStore File]**. Navigera till KeyStore-filen som du får från Adobe, markera den och välj **[!UICONTROL Open]**.
-   * I fältet **[!UICONTROL KeyStore File Password]** anger du lösenordet för KeyStore-filen. Det här lösenordet är **inte** det KeyStore-lösenord som du skapade i steg 5, men är det KeyStore-lösenord som Adobe tillhandahåller i det välkomstmeddelande som skickas till dig under etableringen. Kontakta Adobe kundtjänst om du inte har fått något lösenord för KeyStore-filen.
-   * I fältet **[!UICONTROL Private Key Password]** anger du lösenordet för den privata nyckeln (kan vara samma lösenord för den privata nyckeln som angavs i föregående steg). Adobe anger lösenordet för den privata nyckeln i det välkomstmeddelande som skickas till dig under etableringen. Kontakta Adobe kundtjänst om du inte fått något lösenord för den privata nyckeln.
-   * Ange alias för den privata nyckeln i fältet **[!UICONTROL Private Key Alias]**. Till exempel, `*companyname*-alias`. Adobe tillhandahåller det privata nyckelaliaset i välkomstmeddelandet som skickas till dig under etableringen. Kontakta Adobe kundtjänst om du inte har fått något alias för privat nyckel.
+   * I fältet **[!UICONTROL KeyStore File Password]** anger du lösenordet för KeyStore-filen. Det här lösenordet är **inte** det KeyStore-lösenord som du skapade i steg 5, men är det KeyStore-lösenord som Adobe tillhandahåller i det välkomstmeddelande som skickas till dig under etableringen. Kontakta Adobe kundsupport om du inte har fått något lösenord för KeyStore-filen.
+   * I fältet **[!UICONTROL Private Key Password]** anger du lösenordet för den privata nyckeln (kan vara samma lösenord för den privata nyckeln som angavs i föregående steg). Adobe anger lösenordet för den privata nyckeln i det välkomstmeddelande som skickas till dig under etableringen. Kontakta Adobe kundsupport om du inte har fått något lösenord för den privata nyckeln.
+   * Ange alias för den privata nyckeln i fältet **[!UICONTROL Private Key Alias]**. Till exempel, `*companyname*-alias`. Adobe tillhandahåller det privata nyckelaliaset i välkomstmeddelandet som skickas till dig under etableringen. Kontakta Adobe kundsupport om du inte har fått något alias för privat nyckel.
 
    ![edit_settings_for dynamic-media-replication2](assets/edit_settings_fordynamic-media-replication2.png)
 
@@ -309,7 +309,7 @@ Konfigurera replikeringsautentisering för författaren så att du kan replikera
 
    * **[!UICONTROL Enabled]** - Markera den här kryssrutan om du vill aktivera replikeringsagenten.
    * **[!UICONTROL Region]** - Ange lämplig region: Nordamerika, Europa eller Asien
-   * **[!UICONTROL Tenant ID]** - Det här värdet är namnet på det företag/den klient som publicerar till replikeringstjänsten. Det här värdet är det klient-ID som Adobe tillhandahåller i välkomstmeddelandet som skickas till dig under etableringen. Kontakta Adobe kundtjänst om du inte fått någon sådan information.
+   * **[!UICONTROL Tenant ID]** - Det här värdet är namnet på det företag/den klient som publicerar till replikeringstjänsten. Det här värdet är det klient-ID som Adobe tillhandahåller i välkomstmeddelandet som skickas till dig under etableringen. Kontakta Adobe kundsupport om du inte har fått den här informationen.
    * **[!UICONTROL Key Store Alias]** - Det här värdet är samma som det  **nya** aliasvärdet som anges när nyckeln skapas i  [Konfigurera autentisering](#setting-up-authentication). till exempel  `replication`. (Se steg 7 i [Konfigurera autentisering](#setting-up-authentication).)
    * **[!UICONTROL Key Store Password]** - Det KeyStore-lösenord som skapades när du knackade på  **[!UICONTROL Create KeyStore]**. Adobe anger inte det här lösenordet. Se steg 5 i [Konfigurera autentisering](#setting-up-authentication).
 
@@ -501,7 +501,7 @@ Ett annat sätt att testa att dina resurser har levererats är att lägga till r
 
 Dynamic Media-Cloud Servicen stöder hybridpublicering och leverans av bilder, video, videoanalyser och videokodning, bland annat.
 
-Som en del av konfigurationen måste du ange ett registrerings-ID, en URL för videotjänst, en URL för bildtjänst, en URL för replikeringstjänsten och ställa in autentisering. Den här informationen har skickats till dig via e-post som en del av kontoetableringsprocessen. Om du inte har fått den här informationen kontaktar du Adobe Experience Manager Administrator eller Adobe Customer Care för att få informationen.
+Som en del av konfigurationen måste du ange ett registrerings-ID, en URL för videotjänst, en URL för bildtjänst, en URL för replikeringstjänsten och ställa in autentisering. Den här informationen har skickats till dig via e-post som en del av kontoetableringsprocessen. Om du inte har fått den här informationen kontaktar du Adobe Experience Manager Administrator eller Adobe Customer Support för att få informationen.
 
 >[!NOTE]
 Innan du konfigurerar Dynamic Media-Cloud Services bör du kontrollera att publiceringsinstansen är konfigurerad. Du måste också ha konfigurerat replikeringen innan du konfigurerar Dynamic Media-Cloud Services.
@@ -697,8 +697,8 @@ Om du använder Dynamic Media för (1) bildåtergivning i produktionen *eller* (
    <td><p>Börjar med <strong>image/</strong></p> <p>Innehåller <strong>program/</strong> och avslutas med <strong>uppsättning</strong>.</p> <p>Börjar med <strong>video/</strong></p> </td>
    <td><p>Du konfigurerar transport-URI:n så att den pekar på Experience Manager-publiceringsservern i stället för Adobe Dynamic Media Cloud-replikeringstjänstens URL. Om du konfigurerar det här filtret kan Dynamic Media Classic leverera resurser i stället för publiceringsinstansen Experience Manager.</p> <p>De färdiga filterbilderna, filteruppsättningarna och filtervideon kommer att:</p>
     <ul>
-     <li>Inkludera PTIFF-bild, proxyvideorenderingar och metadata för replikering. Men eftersom de inte finns i JCR-rapporterna för dem som kör Experience Manager - Dynamic Media Classic-integrering - gör det ingenting alls.</li>
-     <li>Undvik replikering av originalbilden, statiska bildåtergivningar, originalvideo och statiska miniatyråtergivningar. I stället levererar Dynamic Media Classic bild- och videomaterial.</li>
+     <li>Inkludera PTIFF-bild, proxyvideorenderingar och metadata för replikering. Men eftersom de inte finns i JCR-rapporterna för dem som kör Experience Manager gör Dynamic Media Classic-integreringen ingenting alls.</li>
+     <li>Undvik replikering av originalbilden, statiska bildåtergivningar, originalvideo och statiska miniatyråtergivningar. Istället levererar Dynamic Media Classic bild- och videomaterial.</li>
     </ul> </td>
   </tr>
  </tbody>
@@ -842,7 +842,7 @@ Så här konfigurerar du inställningarna för Dynamic Media Image Server:
 
 ### Standardinställningar för manifest {#default-manifest-settings}
 
-Med standardmanifestet kan du konfigurera standardinställningarna som används för att generera Dynamic Media Delivery-svar. Du kan finjustera kvaliteten (JPEG-kvalitet, upplösning, omsamplingsläge), cachning (förfaller) och förhindra återgivning av bilder som är för stora (standardvärde, standardvärde för miniatyrbild, maxpix).
+Med standardmanifestet kan du konfigurera standardinställningarna som används för att generera Dynamic Media Delivery-svar. Du kan finjustera kvaliteten (JPEG-kvalitet, upplösning, omsamplingsläge), cachning (förfallodatum) och förhindra återgivning av bilder som är för stora (standardvärde, standardvärde för miniatyrbild, maxpix).
 
 Platsen för standardmanifestkonfigurationen hämtas från **[!UICONTROL Catalog root]**-standardvärdet för **[!UICONTROL Adobe CQ Scene7 PlatformServer]**-paketet. Som standard finns det här värdet i följande sökväg inom **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL CRXDE Lite]**
 
@@ -862,11 +862,11 @@ Manifestinställningar och deras standardvärden:
 
 | Egenskap | Standardvärde | Beskrivning |
 | --- | --- | --- |
-| `bkgcolor` | `FFFFFF` | Standardbakgrundsfärg. RGB-värde som används för att fylla i områden i en svarsbild som inte innehåller verkliga bilddata. Se även [BkgColor](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-bkgcolor.html#image-serving-api) i Image Serving API. |
+| `bkgcolor` | `FFFFFF` | Standardbakgrundsfärg. RGB som används för att fylla i områden i en svarsbild som inte innehåller verkliga bilddata. Se även [BkgColor](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-bkgcolor.html#image-serving-api) i Image Serving API. |
 | `defaultpix` | `300,300` | Standardvisningsstorlek. Servern begränsar svarsbilder till att inte vara större än den här bredden och höjden om begäran inte uttryckligen anger visningsstorleken med wid=, hei= eller scl=.<br>Anges som två heltal, 0 eller större, avgränsade med kommatecken. Bredd och höjd i pixlar. Antingen eller båda värdena kan anges till 0 för att behålla dem obegränsade. Gäller inte kapslade/inbäddade begäranden.<br>Se även  [](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultpix.html#image-serving-api) DefaultPixin i Image Serving API.<br>Vanligtvis använder du en visningsförinställning eller bildförinställning för att leverera resursen. StandardPix gäller bara för en resurs som inte använder en visningsförinställning eller bildförinställning. |
 | `defaultthumbpix` | `100,100` | Standardstorlek för miniatyrbild. Används i stället för attribut::DefaultPix för miniatyrbegäranden (`req=tmb`).<br>Servern begränsar svarsbilder till att inte vara större än denna bredd och höjd. Den här åtgärden är true om en miniatyrbegäran (`req=tmb`) inte uttryckligen anger storleken och inte uttryckligen anger visningsstorleken med `wid=`, `hei=` eller `scl=`.<br>Anges som två heltal, 0 eller större, avgränsade med kommatecken. Bredd och höjd i pixlar. Antingen eller båda värdena kan anges till 0 för att behålla dem obegränsade.<br>Gäller inte kapslade/inbäddade begäranden.<br>Se även  [](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultthumbpix.html#image-serving-api) DefaultThumbPixin i Image Serving API. |
-| `expiration` | `36000000` | Klientens standardtid för cache till livstid. Anger ett standardintervall för förfallodatum om en viss katalogpost inte innehåller en giltig katalog::Förfallovärde.<br>Reellt tal, 0 eller högre. Antal millisekunder till förfallodatum sedan svarsdata genererades. Ange 0 om du alltid vill att svarsbilden ska upphöra att gälla omedelbart, vilket i praktiken inaktiverar klientcache-lagring. Som standard är det här värdet inställt på 10 timmar, vilket innebär att om en ny bild publiceras tar det 10 timmar för den gamla bilden att lämna användarens cache. Kontakta kundtjänst om du behöver rensa cachen tidigare.<br>Se även  [](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-expiration.html) Förfallotid i API:t för bildservrar. |
-| `jpegquality` | `80` | Standardattribut för JPEG-kodning. Anger standardattributen för JPEG-svarsbilder.<br>Heltal och flagga, avgränsade med kommatecken. Det första värdet ligger inom intervallet 1..100 och definierar kvaliteten. Det andra värdet kan vara 0 för normalt beteende, eller 1 för att inaktivera nedsampling av RGB-kromaticitet som används av JPEG-kodare.<br>Se även  [](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-jpegquality.html#image-serving-api) JpegQuality i API:t för bildservrar. |
+| `expiration` | `36000000` | Klientens standardtid för cache till livstid. Anger ett standardintervall för förfallodatum om en viss katalogpost inte innehåller en giltig katalog::Förfallovärde.<br>Reellt tal, 0 eller högre. Antal millisekunder till förfallodatum sedan svarsdata genererades. Ange 0 om du alltid vill att svarsbilden ska upphöra att gälla omedelbart, vilket i praktiken inaktiverar klientcache-lagring. Som standard är det här värdet inställt på 10 timmar, vilket innebär att om en ny bild publiceras tar det 10 timmar för den gamla bilden att lämna användarens cache. Kontakta kundsupport om du behöver rensa cacheminnet tidigare.<br>Se även  [](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-expiration.html) Förfallotid i API:t för bildservrar. |
+| `jpegquality` | `80` | Standardkodningsattribut för JPEG. Anger standardattributen för svarsbilder i JPEG.<br>Heltal och flagga, avgränsade med kommatecken. Det första värdet ligger inom intervallet 1..100 och definierar kvaliteten. Det andra värdet kan vara 0 för normalt beteende eller 1 för att inaktivera nedsampling av kromaticitet i RGB som används av JPEG-kodare.<br>Se även  [](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-jpegquality.html#image-serving-api) JpegQuality i API:t för bildservrar. |
 | `maxpix` | `2000,2000` | Storleksgräns för svarsbild. Maximal bredd och höjd för svarsbilden som returneras till klienten.<br>Servern returnerar ett fel om en begäran orsakar en svarsbild vars bredd eller höjd är större än attributet::MaxPix.<br>Se även  [](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-maxpix.html#image-serving-api) MaxPixin i API:t för bildservrar. |
 | `resmode` | `SHARP2` | Standardläge för omsampling. Anger de standardattribut för omsampling och interpolation som ska användas för skalning av bilddata.<br>Används när  `resMode=` inte anges i en begäran.<br>Tillåtna värden är  `BILIN`,  `BICUB` eller  `SHARP2`.<br>Enum. Ange 2 för interpolationsläget `bilin`, 3 för `bicub` eller 4 för interpolationsläget `sharp2`. Använd `sharp2` för bästa resultat.<br>Se även  [](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-is-cat-resmode.html#image-serving-api) ResMode i API:t för bildservrar. |
 | `resolution` | `72` | Standardobjektsupplösning. Anger en standardobjektupplösning om en viss katalogpost inte innehåller ett giltigt katalogvärde::Upplösning.<br>Reellt tal, större än 0. Uttrycks vanligtvis som pixlar per tum, men kan även finnas i andra enheter, till exempel pixlar per meter.<br>Se även  [](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-resolution.html#image-serving-api) Upplösning i Image Serving API. |
@@ -876,7 +876,7 @@ Manifestinställningar och deras standardvärden:
 
 Med Dynamic Media färghantering kan du färgkorrigera resurser för förhandsgranskning.
 
-Med färgkorrigering behåller inkapslade resurser sin färgrymd (RGB, CMYK, Grå) och inbäddade färgprofil i den genererade TIFF-pyramidåtergivningen. När du begär en dynamisk återgivning korrigeras bildfärgen till målfärgrymden. Du konfigurerar utdatafärgprofilen i Dynamic Media publiceringsinställningar i JCR.
+Med färgkorrigering behåller inkapslade resurser sin färgmodell (RGB, CMYK, Grå) och inbäddade färgprofil i den genererade pyramidåtergivningen i TIFF. När du begär en dynamisk återgivning korrigeras bildfärgen till målfärgrymden. Du konfigurerar utdatafärgprofilen i Dynamic Media publiceringsinställningar i JCR.
 
 Adobe färghantering använder ICC-profiler (International Color Consortium), ett format som definieras av ICC.
 
@@ -906,7 +906,7 @@ Installera funktionspaket 12445 om du vill använda Dynamic Media färghantering
 
 ### Konfigurera standardfärgprofiler {#configuring-the-default-color-profiles}
 
-När du har installerat funktionspaketet konfigurerar du lämpliga standardfärgprofiler för att aktivera färgkorrigering när du begär RGB- eller CMYK-bilddata.
+När du har installerat funktionspaketet konfigurerar du lämpliga standardfärgprofiler så att färgkorrigering aktiveras när du begär RGB eller CMYK-bilddata.
 
 **Så här konfigurerar du standardfärgprofiler:**
 
@@ -954,7 +954,7 @@ När du har installerat funktionspaketet konfigurerar du lämpliga standardfärg
    <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilesrcrgb.html">iccprofilerrgb</a></td>
    <td>Sträng</td>
    <td>&lt;empty&gt;</td>
-   <td>Namn på den RGB-standardfärgprofil som används för RGB-bilder som inte har någon inbäddad färgprofil</td>
+   <td>Namn på den standardfärgprofil för RGB som används för RGB-bilder som inte har en inbäddad färgprofil</td>
   </tr>
   <tr>
    <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilesrccmyk.html">iccprofilesrccmyk</a></td>
@@ -1161,7 +1161,7 @@ Följande färgprofiler är installerade:
   <tr>
    <td>WideGamutRGB</td>
    <td>RGB</td>
-   <td>Bred tryckbarhet, RGB</td>
+   <td>Bred färgomfång RGB</td>
   </tr>
  </tbody>
 </table>
@@ -1172,10 +1172,10 @@ Du kan till exempel ställa in **[!UICONTROL iccprofilergb]** på `sRGB` och **[
 
 Om du gör det gör du så här:
 
-* Aktiverar färgkorrigering för RGB- och CMYK-bilder.
+* Aktiverar färgkorrigering för RGB och CMYK-bilder.
 * RGB-bilder som inte har någon färgprofil antas finnas i färgrymden *sRGB*.
 * CMYK-bilder som inte har någon färgprofil antas finnas i färgrymden *WebCoated*.
-* Dynamiska återgivningar som returnerar RGB-utdata returnerar det i färgrymden *sRGB *.
+* Dynamiska återgivningar som returnerar utdata från RGB returnerar den i färgrymden *sRGB *.
 * Dynamiska återgivningar som returnerar CMYK-utdata returnerar det i färgrymden *WebCoated*.
 
 ## Leverera resurser {#delivering-assets}
