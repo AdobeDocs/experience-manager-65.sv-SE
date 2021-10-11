@@ -1,18 +1,18 @@
 ---
 title: Översikt över interaktiv kommunikation
-seo-title: Översikt över interaktiv kommunikation
+seo-title: Interactive Communications Overview
 description: Den här artikeln innehåller översikt, exempel på användningsområden, arbetsflöde för att skapa och skillnader mellan interaktiv kommunikation och brev.
-seo-description: Nyckelfunktioner för interaktiv kommunikation, exempel på användning, arbetsflöde för att skapa och skillnader mellan interaktiv kommunikation och korrespondenshantering
+seo-description: Interactive Communication key capabilities, sample use cases, creation workflow, and differences between Interactive Communication and Correspondence Management
 uuid: a06b4ac7-ca20-4d6d-b2b7-87b21e2f5cf9
 contentOwner: gtalwar
 topic-tags: interactive-communications, introduction
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 67b03098-c58d-4a57-90e0-e4ddd78e5d99
-translation-type: tm+mt
-source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
+exl-id: 6cfbeec0-0be3-48b2-a4bb-fd19c69c92c7
+source-git-commit: dc8e3ed70ebaf064993ef5af910430b7fc2e521d
 workflow-type: tm+mt
-source-wordcount: '505'
-ht-degree: 2%
+source-wordcount: '489'
+ht-degree: 4%
 
 ---
 
@@ -25,16 +25,16 @@ Den här artikeln innehåller översikt, exempel på användningsområden, arbet
 
 Interactive Communications centraliserar och hanterar framtagning, sammanställning och leverans av säkra, personaliserade och interaktiva korrespondenser som affärskorrespondens, dokument, kontoutdrag, förmånsmeddelanden, marknadsföringsmejl, räkningar och välkomstpaket.
 
-## Nyckelfunktioner {#key-capabilities}
+## Viktiga funktioner {#key-capabilities}
 
 Här följer några av de viktigaste funktionerna i Interactive Communications:
 
-* Enkel integrering med formulärdatamodellen för enkel och smidig åtkomst till backend-databaser och andra CRM-system, som MS® Dynamics
-* Integrerat redigeringsgränssnitt för tryck- och webbkanaler med möjlighet att automatiskt generera webbkanaler från tryckkanalen
-* Diagram som visar information i lättbegripliga visuella format i tryck och på webben
-* Dokumentfragment har stöd för regelredigerare och formulärdatamodell
-* Agentanvändargränssnittet visar förhandsgranskning av interaktiv kommunikation i tryck och på webben
-* Dra och släpp komponenter för att snabbt skapa utskrifts- och webbkanaler
+- Enkel integrering med formulärdatamodellen för enkel och smidig åtkomst till backend-databaser och andra CRM-system, som MS® Dynamics
+- Integrerat redigeringsgränssnitt för tryck- och webbkanaler med möjlighet att automatiskt generera webbkanaler från tryckkanalen
+- Diagram som visar information i lättbegripliga visuella format i tryck och på webben
+- Dokumentfragment har stöd för regelredigerare och formulärdatamodell
+- Agentanvändargränssnittet visar förhandsgranskning av interaktiv kommunikation i tryck och på webben
+- Dra och släpp komponenter för att snabbt skapa utskrifts- och webbkanaler
 
 ## Skapa interaktiv kommunikation {#interactive-communication-creation}
 
@@ -63,11 +63,11 @@ Om du vill skapa en interaktiv kommunikation ska du ha byggstenarna [för intera
 
 Följande byggstenar krävs för att skapa en interaktiv kommunikation:
 
-* [Formulärdatamodell](/help/forms/using/data-integration.md)
-* [Mallar för tryck och webbkanal](/help/forms/using/web-channel-print-channel.md)
-* [Dokumentfragment](/help/forms/using/document-fragments.md)
-* Bilder
-* [Teman ](/help/forms/using/themes.md) för webbkanalen
+- [Formulärdatamodell](/help/forms/using/data-integration.md)
+- [Mallar för tryck och webbkanal](/help/forms/using/web-channel-print-channel.md)
+- [Dokumentfragment](/help/forms/using/document-fragments.md)
+- Bilder
+- [](/help/forms/using/themes.md) Teman för webbkanalen
 
 ## Interaktiv kommunikation jämfört med korrespondenshantering {#interactive-communications-vs-correspondence-management}
 
@@ -119,14 +119,24 @@ Interaktiv kommunikation är standardmetoden och rekommenderas för att skapa ku
    <td>Använder teman för att utforma webbkanaler</td>
    <td>Stöder inte teman</td>
   </tr>
-  <tr>
-   <td>Granskning och versionshantering</td>
-   <td>Stöds inte</td>
+   <tr>
+   <td>Utkast</td>
+   <td>Stöds</td>
    <td>Stöds</td>
   </tr>
   <tr>
-   <td>Utkast och hantering av instans</td>
-   <td>Stöds inte</td>
+   <td>Granskning</td>
+   <td>Stöds ej</td>
+   <td>Stöds</td>
+  </tr>
+   <tr>
+   <td>Versionshantering</td>
+   <td>Stöds ej</td>
+   <td>Stöds</td>
+  </tr>
+   <tr>
+   <td>Utkast Hantera instanser</td>
+   <td>Stöds ej</td>
    <td>Stöds</td>
   </tr>
   <tr>
@@ -146,4 +156,3 @@ Interaktiv kommunikation är standardmetoden och rekommenderas för att skapa ku
   </tr>
  </tbody>
 </table>
-
