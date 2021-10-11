@@ -1,22 +1,21 @@
 ---
 title: Konfigurerar autentiseringsproviders
-seo-title: Konfigurerar autentiseringsproviders
+seo-title: Configuring authentication providers
 description: Lägg till, redigera eller ta bort autentiseringsproviders, ändra autentiseringsinställningar och läs om just-in-time-etablering av användare.
-seo-description: Lägg till, redigera eller ta bort autentiseringsproviders, ändra autentiseringsinställningar och läs om just-in-time-etablering av användare.
+seo-description: Add, edit, or delete authentication providers, change authentication settings, and read about just-in-time provisioning of users.
 uuid: 90e7690b-1ce0-4604-b58f-6dca4f2372cf
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/setting_up_and_managing_domains
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 31dd8db3-ddac-429e-82f8-8c5dc4ffc186
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: d72a3977-1423-49e0-899b-234bb76be378
+source-git-commit: 1cdd15800548362ccdd9e70847d9df8ce93ee06e
 workflow-type: tm+mt
-source-wordcount: '1595'
+source-wordcount: '1576'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurerar autentiseringsproviders {#configuring-authentication-providers}
 
@@ -59,7 +58,7 @@ Om du vill använda den LDAP-server som anges i katalogkonfigurationen väljer d
 
 Om du vill använda en annan LDAP-server för autentisering, markerar du LDAP som autentiseringsprovider och markerar kryssrutan Anpassad LDAP-autentisering. Följande konfigurationsinställningar visas.
 
-**Server:** (Obligatoriskt) Fullständigt kvalificerat domännamn (FQDN) för katalogservern. För en dator som till exempel kallas x i corp.example.com-nätverket är FQDN x.corp.example.com. En IP-adress kan användas i stället för FQDN-servernamnet.
+**Server:** (Obligatoriskt) Fullständigt kvalificerat domännamn (FQDN) för katalogservern. För en dator som till exempel heter x i example.com-nätverket är FQDN x.example.com. En IP-adress kan användas i stället för FQDN-servernamnet.
 
 **Port:** (obligatoriskt) Den port som katalogservern använder. Vanligtvis 389, eller 636, om SSL-protokollet (Secure Sockets Layer) används för att skicka autentiseringsinformation över nätverket.
 
@@ -87,7 +86,7 @@ Om du konfigurerar autentisering för en företagsdomän eller hybriddomän och 
 
 **KDC-värd:** Fullständigt kvalificerat värdnamn eller IP-adress för den Active Directory-server som används för autentisering.
 
-**Tjänstanvändare:** Om du använder Active Directory 2003 är det här värdet mappningen som skapas för tjänstens huvudnamn i formuläret  `HTTP/<server name>`. Om du använder Active Directory 2008 är det här värdet användar-ID:t för tjänstens huvudnamn. Anta till exempel att tjänstens huvudnamn heter um spnego, att användar-ID är spnegodemo och att mappningen är HTTP/example.corp.your.company.com. Med Active Directory 2003 anger du tjänstanvändaren till HTTP/example.corp.dincompany.com. Med Active Directory 2008 anger du tjänstanvändaren till spnegodemo. (Se Aktivera enkel inloggning med SPNEGO.)
+**Tjänstanvändare:** Om du använder Active Directory 2003 är det här värdet mappningen som skapas för tjänstens huvudnamn i formuläret  `HTTP/<server name>`. Om du använder Active Directory 2008 är det här värdet användar-ID:t för tjänstens huvudnamn. Anta till exempel att tjänstens huvudnamn heter um spnego, att användar-ID är spnegodemo och att mappningen är HTTP/example.yourcompany.com. Med Active Directory 2003 anger du tjänstanvändaren till HTTP/example.yourcompany.com. Med Active Directory 2008 anger du tjänstanvändaren till spnegodemo. (Se Aktivera enkel inloggning med SPNEGO.)
 
 **Tjänstsfär:** domännamn för Active Directory
 
@@ -132,7 +131,7 @@ Den här proceduren beskriver hur traditionell autentisering fungerar i AEM form
 1. Autentiseringsprovidern validerar inloggningsuppgifterna.
 1. Autentiseringsprovidern kontrollerar sedan om användaren finns i databasen för användarhantering. Följande statusvärden är möjliga:
 
-   **ExistsOm användaren är** aktuell och olåst returnerar Hantering av användare autentiseringen. Om användaren inte är aktuell eller låst returneras ett autentiseringsfel.
+   **** ExistsOm användaren är aktuell och olåst returnerar Hantering av användare autentiseringen. Om användaren inte är aktuell eller låst returneras ett autentiseringsfel.
 
    **Finns inte** Användarhantering returnerar autentiseringsfel.
 
@@ -160,4 +159,3 @@ Autentiseringen misslyckas om en användare autentiseras utan att etablera just-
 
 1. Lägg till autentiseringsproviders. När du lägger till autentiseringsproviders väljer du en registrerad identitetsskapare och tilldelningsprovider på skärmen Ny autentisering. (Se [Konfigurera autentiseringsproviders](configuring-authentication-providers.md#configuring-authentication-providers).)
 1. Spara domänen.
-

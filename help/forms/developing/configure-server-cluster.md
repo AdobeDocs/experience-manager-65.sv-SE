@@ -1,7 +1,8 @@
 ---
 title: Hur konfigurerar och felsöker man ett AEM Forms på JEE-serverkluster?
 description: Lär dig hur du konfigurerar och felsöker ett AEM Forms på JEE-serverkluster
-source-git-commit: 8502e0227819372db4120d3995fba51c7401d944
+exl-id: 230fc2f1-e6e5-4622-9950-dae9449ed3f6
+source-git-commit: 1cdd15800548362ccdd9e70847d9df8ce93ee06e
 workflow-type: tm+mt
 source-wordcount: '4033'
 ht-degree: 0%
@@ -266,7 +267,7 @@ Om du vill se hur Quartz har konfigurerat sig själv måste du titta på de medd
 INFO `[com.adobe.idp.scheduler.SchedulerServiceImpl]` IDPSchedulerService onLoad
 Det är viktigt att hitta den första raden i loggarna eftersom vissa programservrar använder Quartz, och deras Quartz-instanser inte ska blandas ihop med den instans som används av AEM Forms i JEE Scheduler-tjänsten. Det här är indikationen på att schemaläggningstjänsten startas och de rader som följer efter den talar om för dig om den startar i grupperat läge eller inte. Flera meddelanden visas i den här sekvensen, och det är det sista&quot;startade&quot; meddelandet som visar hur Quartz är konfigurerat:
 
-Här anges namnet på Quartz-instansen: `IDPSchedulerService_$_ap-hp8.ottperflab.corp.adobe.com1312883903975`. Namnet på schemaläggarens Quartz-instans börjar alltid med strängen `IDPSchedulerService_$_`. Strängen som läggs till i slutet av detta anger om Quartz körs i grupperat läge eller inte. Den långa unika identifieraren som genereras från nodens värdnamn och en lång sträng med siffror, här `ap-hp8.ottperflab.corp.adobe.com1312883903975`, anger att den körs i ett kluster. Om den fungerar som en enda nod blir identifieraren ett tvåsiffrigt nummer, &quot;20&quot;:
+Här anges namnet på Quartz-instansen: `IDPSchedulerService_$_ap-hp8.ottperflab.adobe.com1312883903975`. Namnet på schemaläggarens Quartz-instans börjar alltid med strängen `IDPSchedulerService_$_`. Strängen som läggs till i slutet av detta anger om Quartz körs i grupperat läge eller inte. Den långa unika identifieraren som genereras från nodens värdnamn och en lång sträng med siffror, här `ap-hp8.ottperflab.adobe.com1312883903975`, anger att den körs i ett kluster. Om den fungerar som en enda nod blir identifieraren ett tvåsiffrigt nummer, &quot;20&quot;:
 
 INFO `[org.quartz.core.QuartzScheduler]` Schemaläggaren `IDPSchedulerService_$_20` har startats.
 Den här kontrollen måste göras separat på alla klusternoder, eftersom varje nods schemaläggare avgör separat om de ska användas i klusterläge.
@@ -332,19 +333,3 @@ Klustret har bara en sökvägsinställning för var och en av dessa konfiguratio
 Den tillfälliga katalogsökvägen bör inte delas mellan noder. En procedur som liknar den som beskrivs för att verifiera GDS bör användas för att verifiera att den tillfälliga katalogen inte delas: gå till varje nod, skapa en temporär fil i sökvägen som anges av sökvägsinställningen och kontrollera sedan att de andra noderna inte delar filen. Den tillfälliga katalogsökvägen bör referera till lokal disklagring på varje nod, om det är möjligt, och bör kontrolleras.
 
 För varje sökvägsinställning kontrollerar du att sökvägen finns och att den är åtkomlig från alla noder i klustret med den användaridentitet som AEM Forms i JEE körs under. Innehållet i teckensnittskatalogen måste vara läsbart. Den tillfälliga katalogen måste tillåta läsning, skrivning och kontroll.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

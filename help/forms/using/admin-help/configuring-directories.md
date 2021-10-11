@@ -1,28 +1,27 @@
 ---
 title: Konfigurera kataloger
-seo-title: Konfigurera kataloger
+seo-title: Configuring directories
 description: Lär dig hur du lägger till, redigerar och tar bort kataloger och konfigurerar användarhantering så att den virtuella listvyn används.
-seo-description: Lär dig hur du lägger till, redigerar och tar bort kataloger och konfigurerar användarhantering så att den virtuella listvyn används.
+seo-description: Learn how to add, edit and delete directories and configure user management to use virtual list view.
 uuid: 0bf1a8a7-c917-4248-9937-d24e31c5ba17
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/setting_up_and_managing_domains
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 1f15f028-aa81-478e-97eb-f83a4dc0418c
-translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+exl-id: 30edcef2-e8fa-403a-9850-b8dfeeb9ac65
+source-git-commit: 1cdd15800548362ccdd9e70847d9df8ce93ee06e
 workflow-type: tm+mt
-source-wordcount: '3246'
+source-wordcount: '3227'
 ht-degree: 0%
 
 ---
 
-
-# Konfigurerar kataloger {#configuring-directories}
+# Konfigurera kataloger {#configuring-directories}
 
 Ange de kataloger som autentiseringsprovidern efterfrågar användarinformation för varje företagsdomän som du konfigurerar. Du kan konfigurera flera kataloger för en domän.
 
-## Lägga till kataloger eller anpassade SPI:er {#adding-directories-or-custom-spis}
+## Lägga till kataloger eller anpassade SPI-filer {#adding-directories-or-custom-spis}
 
 Ange de kataloger som autentiseringsprovidern efterfrågar användarinformation för varje företagsdomän som du konfigurerar. Du kan lägga till en katalog i en befintlig företagsdomän eller i en ny företagsdomän som du lägger till. Du kan konfigurera flera kataloger för en domän. Du kan också konfigurera en domän så att den använder ett anpassat SPI (Service Provider Interface) för synkronisering.
 
@@ -42,7 +41,7 @@ Ange de kataloger som autentiseringsprovidern efterfrågar användarinformation 
 1. Välj Gruppinställningar och konfigurera inställningarna efter behov. (Se [Kataloginställningar](configuring-directories.md#directory-settings).)
 1. Om du vill verifiera att det grundläggande unika namnet och andra konfigurerade attribut samlar in rätt gruppuppsättning klickar du på Testa. Om grupper returneras visar resultaten de värden som tilldelas varje fält enligt attributuppsättningen. Klicka på Stäng.
 
-### Lägg till en anpassad SPI {#add-a-custom-spi}
+### Lägga till en anpassad SPI {#add-a-custom-spi}
 
 Mer information om hur du skapar en anpassad SPI finns i&quot;Developing SPIs for AEM forms&quot; i [Programmering med AEM formulär](https://www.adobe.com/go/learn_aemforms_programming_63). Om du vill göra en nyligen distribuerad anpassad SPI tillgänglig för association med domänen startar du om servern.
 
@@ -79,7 +78,7 @@ När du synkroniserar dina domäner efter att ha tagit bort en katalog markeras 
 
 När du lägger till en katalog i en domän anger du följande kataloginställningar.
 
-**Server:** (Obligatoriskt) Fullständigt kvalificerat domännamn (FQDN) för katalogservern. För en dator som till exempel kallas x i corp.adobe.com-nätverket är FQDN x.corp.adobe.com. En IP-adress kan användas i stället för FQDN-servernamnet.
+**Server:** (Obligatoriskt) Fullständigt kvalificerat domännamn (FQDN) för katalogservern. För en dator som till exempel heter x i adobe.com-nätverket är FQDN x.adobe.com. En IP-adress kan användas i stället för FQDN-servernamnet.
 
 **Port:** (obligatoriskt) Den port som katalogservern använder. Vanligtvis 389, eller 636, om SSL-protokollet (Secure Sockets Layer) används för att skicka autentiseringsinformation över nätverket.
 
@@ -91,7 +90,7 @@ När du lägger till en katalog i en domän anger du följande kataloginställni
 
 **Användare:** Autentisering krävs. Ange namnet på den användarpost som har åtkomst till katalogen i rutan Namn. Det är bäst att ange det fullständiga unika namnet (DN) för användarkontot, till exempel cn=Jane Doe, ou=användare, dc=can, dc=com. Ange det associerade lösenordet i rutan Lösenord. Dessa inställningar krävs när du väljer Användare som bindningsalternativ.
 
-**Namn:** Namn som kan användas för att ansluta till LDAP-databasen när anonym åtkomst inte är aktiverad. Ange `[domain name]\[userid]` för Active Directory 2003. För Sun™ One, eDirectory eller IBM Tivoli Directory Server anger du användarens kvalificerade namn, till exempel uid=lcuser,ou=it,o=company.com.
+**Namn:** Namn som kan användas för att ansluta till LDAP-databasen när anonym åtkomst inte är aktiverad. Ange `[domain name]\[userid]` för Active Directory 2003. För Sun™ One, eDirectory eller IBM Tivoli Directory Server anger du det fullständiga, kvalificerade namnet på användaren, till exempel uid=lcuser,ou=it,o=company.com.
 
 **Lösenord:** Lösenord som motsvarar det namn du angett för att ansluta till LDAP-databasen när anonym åtkomst inte är aktiverat.
 
@@ -121,7 +120,7 @@ Om du valde alternativet Aktivera hänvisning i kataloginställningarna anger du
 >
 >Inkludera inte användarens unika namn i den här inställningen. Om du vill synkronisera en viss användare använder du inställningen Sökfilter.
 
-Även om Base DN är en obligatorisk inställning i administrationskonsolen kan vissa katalogservrar, som IBM Domino Enterprise Server, kräva ett tomt BaseDN. Om du vill ange ett tomt Base-DN exporterar du filen config.xml, redigerar inställningen i filen config.xml och importerar den sedan på nytt. (Se [Importera och exportera konfigurationsfilen](/help/forms/using/admin-help/importing-exporting-configuration-file.md#importing-and-exporting-the-configuration-file).)
+Även om Base DN är en obligatorisk inställning i administrationskonsolen kan vissa katalogservrar som IBM Domino Enterprise Server kräva ett tomt BaseDN. Om du vill ange ett tomt Base-DN exporterar du filen config.xml, redigerar inställningen i filen config.xml och importerar den sedan på nytt. (Se [Importera och exportera konfigurationsfilen](/help/forms/using/admin-help/importing-exporting-configuration-file.md#importing-and-exporting-the-configuration-file).)
 
 **Sökfilter:** (obligatoriskt) Sökfiltret som ska användas för att hitta posten som är associerad med användaren. Du kan göra en sökning på en nivå eller en sökning på undernivå. (Se Sökfiltersyntax eller RFC 2254.) Mer information om Microsoft AD-schemat finns i Active Directory-schema.
 
@@ -332,4 +331,3 @@ När du har konfigurerat kataloginställningarna och skapat LDAP VLV-poster för
         config
     1 matches
    ```
-

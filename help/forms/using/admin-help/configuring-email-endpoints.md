@@ -1,30 +1,29 @@
 ---
 title: Konfigurera e-postslutpunkter
-seo-title: Konfigurera e-postslutpunkter
+seo-title: Configuring email endpoints
 description: Lär dig hur du konfigurerar e-postslutpunkter.
-seo-description: Lär dig hur du konfigurerar e-postslutpunkter.
+seo-description: Learn how to configure email endpoints.
 uuid: d47bb45b-0e0e-43ca-9e25-e347d0e60206
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/managing_endpoints
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: dcf15c42-9ec6-4d1c-ad41-083aa0b8c7ae
-translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+exl-id: 33583a12-4f20-4146-baa4-c9854e454bbf
+source-git-commit: 1cdd15800548362ccdd9e70847d9df8ce93ee06e
 workflow-type: tm+mt
-source-wordcount: '3766'
+source-wordcount: '3757'
 ht-degree: 0%
 
 ---
 
-
-# Konfigurerar e-postslutpunkter {#configuring-email-endpoints}
+# Konfigurera e-postslutpunkter {#configuring-email-endpoints}
 
 Med e-postslutpunkter kan användare anropa en tjänst genom att skicka ett eller flera dokument (som e-postbilagor) till ett angivet e-postkonto. Inkorgen för e-post fungerar som en samlingspunkt för de bifogade filerna. Tjänsten övervakar inkorgen och bearbetar de bifogade filerna. Resultatet av konverteringen vidarebefordras till den användare som är definierad i slutpunkten.
 
 För e-postslutpunkter kan behöriga användare anropa en process genom att skicka filer till rätt konto. Resultatet returneras till den avsändande användaren (som standard) eller till den användare som definierats i slutpunktsinställningarna.
 
-Innan du konfigurerar en e-postslutpunkt skapar du ett POP3- eller IMAP-e-postkonto som ska användas av slutpunkten. Skapa ett separat konto för varje typ av konvertering. Ett konto kan till exempel konfigureras för att generera standarddokument i PDF-format från inkommande bifogade filer, och ett annat konto kan konfigureras för att generera säkra PDF-dokument.
+Innan du konfigurerar en e-postslutpunkt skapar du ett POP3- eller IMAP-e-postkonto som ska användas av slutpunkten. Skapa ett separat konto för varje typ av konvertering. Ett konto kan till exempel konfigureras för att generera PDF-dokument från inkommande bifogade filer, och ett annat konto kan konfigureras för att generera säkra PDF-dokument.
 
 >[!NOTE]
 >
@@ -47,7 +46,7 @@ Du kan konfigurera POP3, IMAP eller SMTP så att Secure Sockets Layer (SSL) anv�
 1. Exportera ett klientcertifikat från e-postservern.
 1. Använd nyckelverktygsprogrammet för att importera klientcertifikatfilen till programserverns JVM-certifikatarkiv (Java Virtual Machine). Hur det här steget utförs beror på sökvägarna till JVM och klientinstallation.
 
-   Om du till exempel använder en standardinstallation av Oracle WebLogic Server med JDK 1.5.0 i Microsoft Windows Server® 2003 skriver du följande text i en kommandotolk:
+   Om du till exempel använder en standardinstallation av Oracle WebLogic Server med JDK 1.5.0 i Microsoft Windows Server® 2003 skriver du följande  i en kommandotolk:
 
    `keytool -import -file client_certificate -alias myalias -keystore BEA_HOME\jdk150_04\jre\security\cacerts`
 
@@ -57,7 +56,7 @@ Du kan konfigurera POP3, IMAP eller SMTP så att Secure Sockets Layer (SSL) anv�
 
 >[!NOTE]
 >
->Tips: Om du får problem när du använder SSL kan du använda en e-postklient som Microsoft Outlook för att kontrollera om den kan komma åt e-postservern med SSL. Om e-postklienten inte har åtkomst till e-postservern är problemet relaterat till konfigurationen av antingen ditt certifikat eller e-postservern.
+>Tips: Om du får problem när du använder SSL kan du använda en e-postklient som Microsoft Outlook för att kontrollera om den har åtkomst till e-postservern med SSL. Om e-postklienten inte har åtkomst till e-postservern är problemet relaterat till konfigurationen av antingen ditt certifikat eller e-postservern.
 
 ## Konfigurera standardinställningar för e-postslutpunkt {#configure-default-email-endpoint-settings}
 
@@ -107,7 +106,7 @@ För att formulärarbetsflöden ska kunna ta emot och hantera inkommande e-postm
 
 **POP3/IMAP SSL aktiverat:** När det här alternativet är markerat aktiveras SSL.
 
-**SMTP-värd:** Värdnamnet på den e-postserver som e-postleverantören använder för att skicka resultat och felmeddelanden. Till exempel mail.corp.example.com.
+**SMTP-värd:** Värdnamnet på den e-postserver som e-postleverantören använder för att skicka resultat och felmeddelanden. Till exempel mail.example.com.
 
 **SMTP-port:** Den port som används för att ansluta till e-postservern. Standardvärdet är 25.
 
@@ -205,7 +204,7 @@ Om du vill inaktivera den här inställningen lämnar du inställningen tom. I v
 
 **asynkron:** När det är synkront bearbetas alla indatadokument och ett enda svar returneras. När inställningen är asynkron skickas ett svar för varje dokument som bearbetas.
 
-En e-postslutpunkt skapas till exempel för en tjänst som tar ett enstaka Word-dokument och returnerar det dokumentet som en PDF-fil. Ett e-postmeddelande kan skickas till slutpunktens inkorg som innehåller flera (3) Word-dokument. När alla tre dokument har bearbetats och slutpunkten har konfigurerats som synkron, skickas ett e-postmeddelande med alla tre bifogade dokument. Om slutpunkten är asynkron skickas ett e-postmeddelande när varje Word-dokument har konverterats till PDF. Resultatet är tre e-postmeddelanden, vart och ett med en enda bifogad PDF-fil.
+En e-postslutpunkt skapas till exempel för en tjänst som tar ett enstaka Word-dokument och returnerar det dokumentet som en PDF-fil. Ett e-postmeddelande kan skickas till slutpunktens inkorg som innehåller flera (3) Word-dokument. När alla tre dokument har bearbetats och slutpunkten har konfigurerats som synkron, skickas ett e-postmeddelande med alla tre bifogade dokument. Om slutpunkten är asynkron skickas ett e-postmeddelande när varje Word-dokument har konverterats till PDF. Resultatet är tre e-postmeddelanden, var och en med en bifogad PDF.
 
 Standardvärdet är asynkront.
 
@@ -253,7 +252,7 @@ Följande värden är tillgängliga:
 
 **Karta:** Mönstret är Result/%F/ och källmålet är Result%%sourcefilename%%file1 och Result%%sourcefilename%%file2. Om kartan innehåller mer än ett objekt och mönstret är Result/%F.ps, är de bifogade svarsfilerna Result%%sourcefilename1.ps (output 1) och Result%%sourcefilename2.ps (output 2).
 
-## Skapa en e-postslutpunkt för tjänsten Complete Task {#create-an-email-endpoint-for-the-complete-task-service}
+## Skapa en e-postslutpunkt för tjänsten Slutför uppgift {#create-an-email-endpoint-for-the-complete-task-service}
 
 För att formulärarbetsflöden ska kunna ta emot och hantera inkommande e-postmeddelanden från användare måste du skapa en e-postslutpunkt för tjänsten Complete Task.
 
@@ -272,4 +271,3 @@ För att formulärarbetsflöden ska kunna ta emot och hantera inkommande e-postm
 1. Välj Variabel i listan mailFrom och skriv `%SENDER%` i den intilliggande rutan. Detta mappar avsändaradressen till processdata för en fullständig uppgift.
 1. Skriv `results` i resultatrutan. Detta gör att en resultatsträng returneras av den fullständiga uppgiften eller Starta process.
 1. Klicka på Lägg till
-
