@@ -1,16 +1,15 @@
 ---
 title: Versionsinformation om [!DNL Adobe Experience Manager Assets] 6.5.
 description: De nya funktionerna och förbättringarna i [!DNL Adobe Experience Manager] 6.5 [!DNL Assets].
-translation-type: tm+mt
-source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
+exl-id: 6d9c9f09-ea42-43fb-98f7-12ce82d308bf
+source-git-commit: 62544559020b0c0afd7bb31fb832b82ba3d47919
 workflow-type: tm+mt
 source-wordcount: '897'
 ht-degree: 2%
 
 ---
 
-
-# [!DNL Adobe Experience Manager Assets] versionsinformation  {#aem-assets-release-notes}
+# [!DNL Adobe Experience Manager Assets] versionsinformation {#aem-assets-release-notes}
 
 Här är de viktigaste funktionerna och högdagrarna i [!DNL Adobe Experience Manager] 6.5 [!DNL Assets]-versionen.
 
@@ -18,7 +17,7 @@ Här är de viktigaste funktionerna och högdagrarna i [!DNL Adobe Experience Ma
 
 [!DNL Adobe Experience Manager] erbjuder olika sätt att integrera med  [!DNL Adobe Creative Cloud] och dela resurser för användning i arbetsflöden där kreatörer och marknadsförare eller affärsteam samarbetar nära. [!DNL Experience Manager] 6.5 fortsätter att förbättra integreringen och effektivisera den ytterligare för att ge fler möjligheter och effektivisera befintliga metoder.
 
-Läs vidare för att lära dig mer om de specifika funktioner och integreringar i [!DNL Experience Manager] 6.5 som du kan använda för att få bästa möjliga stöd för dina användningsfall inom snabbhet.
+Läs vidare för att lära dig mer om de specifika funktioner och integreringar i [!DNL Experience Manager] 6.5 som du kan använda för att bäst stödja dina användningsfall för innehåll snabbt.
 
 ### Adobe Asset Link {#aal}
 
@@ -28,13 +27,13 @@ Läs vidare för att lära dig mer om de specifika funktioner och integreringar 
 
 ![Söka efter resurser i Adobe Photoshop](assets/asset_search_photoshop.png)
 
-### [!DNL Adobe Stock] integration  {#stock}
+### [!DNL Adobe Stock] integration {#stock}
 
 Organisationen kan använda sin [!DNL Adobe Stock] Enterprise-plan i [!DNL Experience Manager Assets] för att se till att licensierade mediefiler finns tillgängliga i stor omfattning för kreativa projekt och marknadsföringsprojekt. Du kan snabbt hitta, förhandsgranska och licensiera [!DNL Adobe Stock]-resurser som har sparats i Experience Manager med de kraftfulla DAM-funktionerna i [!DNL Experience Manager].
 
 [!DNL Adobe Stock] ger designers och företag tillgång till miljontals utvalda och royaltyfria foton, vektorer, illustrationer, videor, mallar och 3D-resurser av hög kvalitet för alla kreativa projekt.
 
-Mer information finns i [Använda Adobe Stock-resurser i Experience Manager Resurser](/help/assets/aem-assets-adobe-stock.md).
+Mer information finns i [Använda Adobe Stock-resurser i Experience Manager Assets](/help/assets/aem-assets-adobe-stock.md).
 
 ![Förhandsgranska Adobe Stock-bilder och licenser inifrån Experience Manager Assets](assets/stock_image_preview_license_options.png)
 
@@ -48,11 +47,11 @@ Mer information finns i [Använda Adobe Stock-resurser i Experience Manager Resu
 
 [!DNL Experience Manager Assets] som används i  [!DNL Adobe InDesign] filer är dynamiska. Referenserna uppdateras automatiskt om de refererade resurserna flyttas i databasen. Mer information finns i [Hantera sammansatta resurser](/help/assets/managing-linked-subassets.md).
 
-## Funktioner för varumärkesportalen {#brand-portal-capabilities}
+## Brand Portal-funktioner {#brand-portal-capabilities}
 
 [!DNL Experience Manager Assets Brand Portal] hjälper er att enkelt skaffa, effektivt kontrollera och på ett säkert sätt distribuera godkända resurser till externa leverantörer/myndigheter och interna företagsanvändare på olika enheter. Det bidrar till att effektivisera tillgångsdelningen, snabbar upp time-to-market för tillgångar och eliminerar risken för otillåten användning och obehörig åtkomst.
 
-Mer information finns i [Nyheter i Varumärkesportalen](https://helpx.adobe.com/experience-manager/brand-portal/using/whats-new.html).
+Mer information finns i [Nyheter i Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/introduction/whats-new.html?lang=en).
 
 ## Anslutna resurser {#connectedassets}
 
@@ -66,9 +65,9 @@ I stora företag kan den infrastruktur som krävs för att skapa webbplatser dis
 
 ## Dynamic Media {#dynamic-media}
 
-[!DNL Dynamic Media] ger förbättrad multimediaproduktion och leverans  [!DNL Experience Manager Assets] för att skapa engagerande och personaliserade upplevelser. Genom att överföra en enda högkvalitativ överordnad resurs och använda vår avancerade molnrendering och våra visningsprogram kan ni leverera vilken kombination av renderingar som helst direkt för att stödja er organisations mediestrategi.
+[!DNL Dynamic Media] ger förbättrad multimediaproduktion och leverans  [!DNL Experience Manager Assets] för att skapa engagerande och personaliserade upplevelser. Genom att ladda upp en primär resurs av hög kvalitet och använda avancerad molnrendering och visningsprogram i Adobe kan ni leverera vilken kombination av renderingar som helst direkt som stöd för er organisations mediestrategi.
 
-Mer information om de nya [!DNL Dynamic Media]-funktionerna finns i [Versionsinformation för Dynamic Media](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/release-notes/s7rn2017.html).
+Mer information om nya [!DNL Dynamic Media]-funktioner finns i [Versionsinformation för Dynamic Media](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/release-notes/s7rn2017.html).
 
 ### Stöd för 360-video {#video-support}
 
@@ -78,9 +77,9 @@ Hantera dina 360-videofiler direkt i [!DNL Experience Manager] med de allra sena
 
 Nu kan du anpassa miniatyrbilderna för videomaterialet med hjälp av bildrutor från själva videon eller annat innehåll som lagras i DAM. Mer information finns i [Om videominiatyrer](/help/assets/video.md#about-video-thumbnails-in-dynamic-media-scene-mode).
 
-### Tillgänglighetsförbättringar {#accessibility-enhancements}
+### Förbättrad tillgänglighet {#accessibility-enhancements}
 
-[!DNL Dynamic Media] visningsprogrammen har nu stöd för förbättrade hjälpmedelsfunktioner som Aria-support, skärmläsare och Alt-text. Mer information finns i [Versionsinformation för Dynamic Media-visningsprogram](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html).
+[!DNL Dynamic Media] visningsprogrammen har nu stöd för förbättrade hjälpmedelsfunktioner som Aria-support, skärmläsare och Alt-text. Mer information finns i [Referenshandbok för visningsprogram](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/homeviewers.html).
 
 ## Förbättrad sökupplevelse {#experience-enhancement-for-searching}
 
@@ -92,7 +91,7 @@ Nu kan du anpassa miniatyrbilderna för videomaterialet med hjälp av bildrutor 
 
 ## Förbättrad användbarhet {#usability-enhancement}
 
-Du kan nu välja alla inlästa resurser i en mapp eller från ett sökresultat på en gång. Det hjälper dig att hantera flera resurser snabbt. Kryssrutan markerar alla resurser som passar scenariot, till exempel ett sökresultat och inte bara de resurser som är synliga i [!DNL Experience Manager]-gränssnittet.
+Du kan nu välja alla inlästa resurser i en mapp eller från ett sökresultat på en gång. Det hjälper dig att hantera flera resurser snabbt. Kryssrutan markerar alla resurser som passar scenariot, till exempel ett sökresultat, och inte bara de resurser som är synliga i [!DNL Experience Manager]-gränssnittet.
 
 ![Använd alternativet Markera alla för att markera alla inlästa resurser med ett klick.](assets/select-all-in-aem-assets.gif)
 
@@ -100,7 +99,7 @@ Du kan nu välja alla inlästa resurser i en mapp eller från ett sökresultat p
 
 ## Förbättringar av metadata {#metadata-enhancements}
 
-[!DNL Assets] Med kan du skapa metadatascheman för resursmappar, som definierar layouten och metadata som visas på mappegenskapssidor. Du kan nu tilldela ett mappmetadatchema till en befintlig mapp eller när du skapar en ny mapp. Mer information finns i [Mapp metadata schema](/help/assets/metadata-config.md#folder-metadata-schema).
+[!DNL Assets] gör att du kan skapa metadatamappar för resursmappar, som definierar layouten och metadata som visas på mappegenskapssidor. Du kan nu tilldela ett mappmetadatchema till en befintlig mapp eller när du skapar en mapp. Mer information finns i [Mapp metadata schema](/help/assets/metadata-config.md#folder-metadata-schema).
 
 När du anger överlappande metadata kan alternativen läsas in från en JSON-fil vid körningen, till exempel i stället för att du skriver manuellt i formuläret. Mer information finns i [överlappande metadata](/help/assets/metadata-schemas.md#cascading-metadata).
 

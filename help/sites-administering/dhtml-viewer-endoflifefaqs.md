@@ -6,20 +6,19 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 discoiquuid: d94244ac-a5f6-4c95-ab8c-26b41d25863f
-translation-type: tm+mt
-source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
+exl-id: 06b74770-1f96-4f6b-98c0-afef7000e42b
+source-git-commit: 62544559020b0c0afd7bb31fb832b82ba3d47919
 workflow-type: tm+mt
 source-wordcount: '42'
 ht-degree: 0%
 
 ---
 
-
-# Slutdatum för DHTML-visningsprogrammet {#dhtml-viewer-end-of-life}
+# Slutet av DHTML-visningsprogrammet {#dhtml-viewer-end-of-life}
 
 Från och med den 31 januari 2014 är DHTML-visningsplattformen officiellt utgånget.
 
-Se [Referenshandboken för Dynamic Media-visningsprogram](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html) för de senaste visningsprogrammen som stöds.
+Se [Referenshandboken för Dynamic Media-visningsprogram](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/homeviewers.html) för de senaste visningsprogrammen som stöds.
 
 <!-- OBSOLETE CONTENT **What is the change?**
 
