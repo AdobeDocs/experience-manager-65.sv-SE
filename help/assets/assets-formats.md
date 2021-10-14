@@ -4,11 +4,11 @@ description: Filformat och MIME-typer stöds av [!DNL Assets] and [!DNL Dynamic 
 contentOwner: AG
 mini-toc-levels: 1
 role: User, Admin
-feature: Resurshantering,Återgivningar
+feature: Asset Management,Renditions
 exl-id: a4bcf67b-54f4-4681-9e42-fd4753acde1a
-source-git-commit: f0a0ea53675afa16463a3cf863257020ba5374d3
+source-git-commit: c8e83622070572d104f2cdc20c592ac2e9d0d31b
 workflow-type: tm+mt
-source-wordcount: '1545'
+source-wordcount: '1525'
 ht-degree: 2%
 
 ---
@@ -45,7 +45,7 @@ De rasterbildformat som stöds i [!DNL Assets] är:
 | PICT | - | - | - | - | - | - | ✓ |
 | PSB | ✓ | ✓ | ✓ | ✓ | - | - | - |
 
-‡ Den sammanfogade bilden extraheras från PSD-filen. Det är en bild som genereras av Adobe Photoshop och inkluderas i PSD-filen. Beroende på inställningarna kan den sammanfogade bilden vara den faktiska bilden eller inte.
+‡ Den sammanfogade bilden extraheras från filen PSD. Det är en bild som genereras av Adobe Photoshop och inkluderas i filen PSD. Beroende på inställningarna kan den sammanfogade bilden vara den faktiska bilden eller inte.
 
 De rasterbildformat som stöds i [!DNL Dynamic Media] är:
 
@@ -60,7 +60,7 @@ De rasterbildformat som stöds i [!DNL Dynamic Media] är:
 | [EPS](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | ✓ |
 | PICT | ✓ | - | - | - | - |
 
-‡ Den sammanfogade bilden extraheras från PSD-filen. Det är en bild som genereras av Adobe Photoshop och inkluderas i PSD-filen. Beroende på inställningarna kan den sammanfogade bilden vara den faktiska bilden eller inte.
+‡ Den sammanfogade bilden extraheras från filen PSD. Det är en bild som genereras av Adobe Photoshop och inkluderas i filen PSD. Beroende på inställningarna kan den sammanfogade bilden vara den faktiska bilden eller inte.
 
 Utöver informationen ovan bör du tänka på följande:
 
@@ -68,7 +68,7 @@ Utöver informationen ovan bör du tänka på följande:
 
 * Metadatatillbakaskrivning fungerar för PSB-filformat när det läggs till i `NComm`-hanteraren.
 
-* Information om hur du använder [!DNL Dynamic Media] för att förhandsgranska och generera dynamiska återgivningar för EPS-filer finns i [Filformaten Adobe Illustrator (AI), Postscript (EPS) och PDF.](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
+* Information om hur du använder [!DNL Dynamic Media] för att förhandsgranska och generera dynamiska återgivningar för EPS-filer finns i [Adobe Illustrator (AI), Postscript (EPS) och PDF-filformat.](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats).
 
 * För EPS-filer stöds tillbakaskrivning av metadata i PostScript Document Structuring Convention (PS-Adobe) version 3.0 eller senare.
 
@@ -95,9 +95,9 @@ Se även [Identifiera filformat som inte stöds för Dynamic Media](https://help
 
 * PNG-filer som har en IDAT-segmentstorlek som är större än 100 MB.
 * PSB-filer.
-* PSD-filer med en annan färgrymd än CMYK, RGB, Gråskala eller Bitmapp stöds inte. Färgrymderna DuoTone, Lab och Indexed stöds inte.
+* PSD-filer med en annan färgmodell än CMYK, RGB, Gråskala eller Bitmapp stöds inte. Färgrymderna DuoTone, Lab och Indexed stöds inte.
 * PSD-filer med ett bitdjup som är större än 16.
-* TIFF-filer som har flyttalsdata.
+* TIFF-filer med flyttalsdata.
 * TIFF-filer med Lab-färgrymd.
 
 <!-- Topic commented out for now as of March 31, 2020. The topic may still need adjustment so it can be published live, or it may be moved into a KB article instead. Just waiting on feedback in CQDOC-15657. - Rick
@@ -118,21 +118,21 @@ The following table describes the sub-types of raster image formats that are *no
 |  | Files that have Lab color space. | Use ExifTool if the color mode is Lab.<br>Example in an ExifTool log:<br>1. Color mode: `Lab` |
 -->
 
-## PDF Rasterizer-bibliotek som stöds {#supported-pdf-rasterizer-library}
+## Biblioteket PDF Rasterizer stöds {#supported-pdf-rasterizer-library}
 
-Adobe PDF Rasterizer-biblioteket genererar högkvalitativa miniatyrbilder och förhandsgranskningar för stora och innehållsintensiva [!DNL Adobe Illustrator]- och PDF-filer. Adobe rekommenderar att du använder PDF-rastreringsbiblioteket för följande:
+Adobe PDF Rasterizer-biblioteket genererar högkvalitativa miniatyrbilder och förhandsvisningar för stora och innehållsintensiva [!DNL Adobe Illustrator]- och PDF-filer. Adobe rekommenderar att du använder PDF rastrerarbiblioteket för följande:
 
 * Innehållsintensiva AI/PDF-filer som är resurskrävande att bearbeta.
-* AI/PDF-filer, för vilka miniatyrer inte genereras som standard.
+* AI/PDF-filer, för vilka miniatyrbilder inte genereras som standard.
 * AI-filer med Pantone Matching System-färger (PMS).
 
-Se [Använda PDF-rastrering](aem-pdf-rasterizer.md).
+Se [Använda rastreraren PDF](aem-pdf-rasterizer.md).
 
 ## Bildkodningsbibliotek som stöds {#supported-image-transcoding-library}
 
 Biblioteket Adobe Imaging Transcoding är en bildbehandlingslösning som utför viktiga bildhanteringsfunktioner, som kodning, omkodning, omsampling och storleksändring.
 
-Bildkonverteringsbiblioteket stöder JPG/JPEG, PNG (8-bitars och 16-bitars), GIF, BMP, TIFF/komprimerad TIFF (förutom 32-bitars TIFF-filer och PTIFF-filer), ICO- och ICN MIME-typer.
+Biblioteket för bildkonvertering har stöd för JPG/JPEG, PNG (8-bitars och 16-bitars), GIF, BMP, TIFF/komprimerad TIFF (förutom 32-bitars TIFF och PTIFF-filer), ICO och ICN MIME.
 
 Se [Bildkonverteringsbibliotek](imaging-transcoding-library.md).
 
@@ -163,7 +163,7 @@ Dokumentformat som stöds för filhanteringsfunktioner är följande:
 | [INDD](managing-image-presets.md#indesign-indd-file-format) | ✓ | ✓ | - | ✓ | ✓ | ✓ | ✓ | - |
 | PS | ✓ | ✓ | - | - | - | - | - | - |
 | QXP | ✓ | ✓ | - | - | - | - | - | - |
-| EPUB | ✓ | ✓ | - | ✓ | ✓ | - | - | - |
+| ePub | ✓ | ✓ | - | ✓ | ✓ | - | - | - |
 
 ## Dokumentformat som stöds i Dynamic Media {#supported-document-formats-dynamic-media}
 
@@ -175,9 +175,9 @@ Dokumentformat som stöds för filhanteringsfunktioner är följande:
 
 Utöver ovanstående funktioner bör du tänka på följande:
 
-* Information om hur du använder Dynamic Media för att generera dynamiska återgivningar för PDF-filer finns i [Adobe Illustrator (AI), Postscript (EPS) och PDF-filformat.](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats).
+* Information om hur du använder Dynamic Media för att generera dynamiska renderingar för PDF-filer finns i [Adobe Illustrator (AI), Postscript (EPS) och PDF-filformat.](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
 
-* Information om hur du använder Dynamic Media för att förhandsgranska och generera dynamiska återgivningar för AI-filer finns i [Adobe Illustrator (AI), Postscript (EPS) och PDF-filformat.](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
+* Information om hur du använder Dynamic Media för att förhandsgranska och generera dynamiska återgivningar för AI-filer finns i [Adobe Illustrator (AI), Postscript (EPS) och PDF.](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
 
 * Information om hur du använder Dynamic Media för att generera dynamiska återgivningar för INDD-filer finns i [InDesign (INDD)-filformat](../assets/managing-image-presets.md#indesign-indd-file-format).
 
@@ -218,8 +218,6 @@ Utöver ovanstående funktioner bör du tänka på följande:
 | WebM | WebM | Google VP8 | - |
 | OGV, OGG | Ogg | Theora, VP3, Dirac | - |
 | MKV | Matroska | H264/AVC | - |
-| RAM, RM | RealVideo | Stöds inte | Real G2 (RV20), Real 8 (RV30), Real 10 (RV40) |
-| MJ2 | Motion JPEG 2000 | Motion JPEG 2000-kodek | - |
 
 ## Arkivformat som stöds {#supported-archive-formats}
 
@@ -303,7 +301,7 @@ En lista över MIME-typer som stöds finns i CRXDE Lite på `/conf/global/settin
 | TAR | application/x-tar |  |  |
 | TIF/TIFF | bild/tiff |  |  |
 | TTC | application/x-font-ttf |  |  |
-| RTF | application/x-font-ttf |  |  |
+| TTF | application/x-font-ttf |  |  |
 | VOB | video/dvd |  | [ExcludeMasterVideoFromAVS](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-exclude-master-video-from-avs.html) |
 | VTT | text/vtt |  |  |
 | WAV | audio/x-wav |  |  |
@@ -315,6 +313,6 @@ En lista över MIME-typer som stöds finns i CRXDE Lite på `/conf/global/settin
 
 >[!MORELIKETHIS]
 >
->* [Aktivera stöd](/help/sites-administering/scene7.md#enabling-mime-type-based-assets-scene-upload-job-parameter-support) för MIME-typbaserade resurser och Dynamic Media Classic-överföringsjobbparametrar.
+>* [Aktivera stöd](/help/sites-administering/scene7.md#enabling-mime-type-based-assets-scene-upload-job-parameter-support) för MIME-typbaserade resurser och Dynamic Media Classic överföringsjobbparametrar.
 >* [Konfigurera MIME-typbaserad för stöd](config-dynamic.md) för överföringsjobbparametrar.
 
