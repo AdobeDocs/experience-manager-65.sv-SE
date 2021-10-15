@@ -3,9 +3,10 @@ title: Modeller för innehållsfragment
 description: Lär dig hur Content Fragment Models fungerar som grund för ditt headless-innehåll i AEM och hur du skapar innehållsfragment med strukturerat innehåll.
 feature: Content Fragments
 role: User
-source-git-commit: 251bf0ac672d516dd6b2018fc9cc804822f48e4c
+exl-id: 6fd1fdb2-d1d3-4f97-b119-ecfddcccec9e
+source-git-commit: 924b30680b189ec5061eb0bd664165793a9dbd9c
 workflow-type: tm+mt
-source-wordcount: '2256'
+source-wordcount: '2334'
 ht-degree: 4%
 
 ---
@@ -73,6 +74,9 @@ Modellen för innehållsfragment definierar effektivt strukturen för de resulte
       * Många egenskaper är självförklarande. Mer information finns i [Egenskaper](#properties).
       * Om du skriver en **fältetikett** slutförs **egenskapsnamnet** automatiskt, om det är tomt, och den kan uppdateras manuellt senare.
 
+         >[!CAUTION]
+         När du uppdaterar en datatyp **Egenskapsnamn** manuellt måste du tänka på att namn bara får innehålla latinska tecken, numeriska siffror och understreck&quot;_&quot; som specialtecken.
+         Om modeller som skapats i tidigare versioner av AEM innehåller ogiltiga tecken tar du bort eller uppdaterar dessa tecken.
       Till exempel:
 
       ![fältegenskaper](assets/cfm-models-05.png)
@@ -133,6 +137,10 @@ I fragmentredigeraren visas varje instans som en flik.
 
 Många egenskaper är självförklarande, för vissa egenskaper finns ytterligare information nedan:
 
+>[!CAUTION]
+När du uppdaterar **egenskapsnamnet** manuellt bör du tänka på att namn endast får innehålla latinska tecken, numeriska siffror och understreck&quot;_&quot; som specialtecken.
+Om modeller som skapats i tidigare versioner av AEM innehåller ogiltiga tecken tar du bort eller uppdaterar dessa tecken.
+
 * **Återge**
 somDe olika alternativen för att realisera/återge fältet i ett fragment. Detta gör ofta att du kan ange om författaren ska se en enda instans av fältet eller om den ska kunna skapa flera instanser.
 
@@ -140,8 +148,8 @@ somDe olika alternativen för att realisera/återge fältet i ett fragment. Dett
 LabelAnge en 
 **Fältetiketter** genererar automatiskt ett  **egenskapsnamn** som sedan kan uppdateras manuellt om det behövs.
 
-* **Validering av**
-Basic är tillgängligt med hjälp av mekanismer som  **** egenskapen Required. Vissa datatyper har ytterligare valideringsfält. Mer information finns i [Validering](#validation).
+* ****
+ValidationBasic-validering är tillgänglig via mekanismer som egenskapen  **** Required. Vissa datatyper har ytterligare valideringsfält. Mer information finns i [Validering](#validation).
 
 * För datatypen **Flerradig text** går det att definiera **standardtypen** som endera:
 
@@ -153,8 +161,8 @@ Basic är tillgängligt med hjälp av mekanismer som  **** egenskapen Required. 
 
    Om du ändrar **standardtypen** i en innehållsfragmentmodell börjar detta bara gälla för ett befintligt, relaterat innehållsfragment efter att fragmentet har öppnats i redigeraren och sparats.
 
-* **Unikt**
-innehåll (för det specifika fältet) måste vara unikt för alla innehållsfragment som skapas från den aktuella modellen.
+* ****
+UniqueContent (för det specifika fältet) måste vara unikt för alla innehållsfragment som skapas från den aktuella modellen.
 
    Detta används för att säkerställa att innehållsförfattare inte kan upprepa innehåll som redan har lagts till i ett annat fragment av samma modell.
 
@@ -351,7 +359,7 @@ Så här konfigurerar du **principer** för **Tillåtna modeller för innehålls
       Flera modeller kan tillåtas.
    ![Princip för innehållsfragmentmodell](assets/cfm-model-policy-assets-folder.png)
 
-1. **** Spara ändringar.
+1. **** Spara eventuella ändringar.
 
 De Content Fragment-modeller som tillåts för en mapp löses enligt följande:
 * **Profiler** för **Tillåtna modeller för innehållsfragment**.
