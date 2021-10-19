@@ -1,8 +1,8 @@
 ---
 title: Huvudvy för behörighetshantering
-seo-title: Huvudvy för behörighetshantering
+seo-title: Principal View for Permissions Management
 description: Lär dig mer om det nya Touch-gränssnittet som underlättar behörighetshantering.
-seo-description: Lär dig mer om det nya Touch-gränssnittet som underlättar behörighetshantering.
+seo-description: Learn about the new Touch UI interface that facilitates permissions management.
 uuid: 16c5889a-60dd-4b66-bbc4-74fbdb5fc32f
 contentOwner: sarchiz
 content-type: reference
@@ -10,14 +10,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 discoiquuid: db8665fa-353f-45c2-8e37-169d5c1df873
 docset: aem65
-translation-type: tm+mt
-source-git-commit: a156e09e77951041dce017f2f78069bc050b6bdb
+exl-id: 4ce19c95-32cb-4bb8-9d6f-a5bc08a3688d
+source-git-commit: 4ea49fe6745b23f01f46edfe07ff3dd8c8299729
 workflow-type: tm+mt
-source-wordcount: '702'
+source-wordcount: '699'
 ht-degree: 1%
 
 ---
-
 
 # Huvudvy för behörighetshantering{#principal-view-for-permissions-management}
 
@@ -39,7 +38,7 @@ CRXDE för att hantera avancerade behörigheter och begränsningar. Den har kons
 
 ![](assets/unu-1.png)
 
-Det finns ett filter som gör att användaren kan välja vilken typ av huvudobjekt som ska användas för att kontrollera **Användare**, **Grupper** eller **Alla** och söka efter ett huvudnamn **.**
+Det finns ett filter som gör att användaren kan välja vilken typ av huvudobjekt som ska undersökas **Användare**, **Grupper**, eller **Alla** och söka efter huvudnamn **.**
 
 ![](assets/image2019-3-20_23-52-51.png)
 
@@ -53,7 +52,7 @@ Om du klickar på namnet visas de tilldelade behörigheterna till höger. I beh�
 
 ![](assets/trei-1.png)
 
-### Lägger till ny åtkomstkontrollpost för ett huvudkonto {#adding-new-access-control-entry-for-a-principal}
+### Lägga till ny åtkomstkontrollpost för ett huvudkonto {#adding-new-access-control-entry-for-a-principal}
 
 Du kan lägga till nya behörigheter genom att lägga till en ny åtkomstkontrollpost genom att klicka på knappen Lägg till ACE.
 
@@ -67,7 +66,7 @@ Här väljer vi en sökväg där vi vill konfigurera behörighet för **dam-user
 
 ![](assets/sase-1.png)
 
-När sökvägen har valts återgår arbetsflödet till den här skärmen, där användaren kan välja en eller flera av de tillgängliga namnutrymmena (som `jcr`, `rep` eller `crx`) enligt nedan.
+När sökvägen har valts går arbetsflödet tillbaka till den här skärmen där användaren kan välja en eller flera av de tillgängliga namnutrymmena (som `jcr`, `rep` eller `crx`) enligt nedan.
 
 Du kan lägga till behörigheter genom att söka i textfältet och sedan välja från listan.
 
@@ -89,33 +88,35 @@ Förutom en lista över behörigheter och behörighetstypen för en viss sökvä
 
 >[!NOTE]
 >
->Mer information om vad varje begränsning innebär finns på [den här sidan](/help/sites-administering/user-group-ac-admin.md#restrictions).
+>Mer information om vad varje begränsning innebär finns i [The Jackrabbit Oak Documentation](http://jackrabbit.apache.org/oak/docs/security/authorization/restriction.html).
 
-Du kan lägga till begränsningar enligt nedan genom att välja begränsningstyp, ange värdet och klicka på ikonen **+**. ![](assets/sapte-1.png) ![](assets/opt-1.png)
+Du kan lägga till begränsningar enligt nedan genom att välja begränsningstyp, ange värdet och trycka på **+** ikon.
 
-Den nya åtkomstkontrollistan visas i åtkomstkontrollistan enligt nedan. Observera att `jcr:write` är ett aggregeringsprivilegium som inkluderar `jcr:removeNode` som lades till ovan, men som inte visas nedan som det beskrivs under `jcr:write`.
+![](assets/sapte-1.png) ![](assets/opt-1.png)
 
-### Redigera ACE:er {#editing-aces}
+Den nya åtkomstkontrollistan visas i åtkomstkontrollistan enligt nedan. Observera att `jcr:write` är ett aggregerat privilegium som inkluderar `jcr:removeNode` som lades till ovan, men inte visas nedan som det omfattas av `jcr:write`.
+
+### Redigera ACE {#editing-aces}
 
 Du kan redigera åtkomstkontrollposter genom att markera ett huvudnamn och välja det ACE som du vill redigera.
 
-Här kan vi till exempel redigera posten nedan för **dam-users** genom att klicka på pennikonen till höger:
+Här kan du till exempel redigera posten nedan för **dam-users** genom att klicka på pennikonen till höger:
 
-![](assets/image2019-3-21_0-35-39.png)
+![Lägg till begränsning](assets/image2019-3-21_0-35-39.png)
 
 Redigeringsskärmen visas med konfigurerade ACE-adresser förmarkerade. Du kan ta bort dem genom att klicka på kryssikonen bredvid dem eller genom att lägga till nya behörigheter för den angivna sökvägen enligt nedan.
 
-![](assets/noua-1.png)
+![Redigera post](assets/noua-1.png)
 
-Här lägger vi till privilegiet `addChildNodes` för **dam-users** på den angivna sökvägen.
+Här lägger vi till `addChildNodes` privilegium för **dam-users** på den angivna sökvägen.
 
 ![](assets/image2019-3-21_0-45-35.png)
 
-Du kan spara ändringarna genom att klicka på knappen **Spara** överst till höger, och ändringarna återspeglas i de nya behörigheterna för **dam-users **enligt nedan:
+Du kan spara ändringarna genom att klicka på **Spara** överst till höger så återspeglas ändringarna i de nya behörigheterna för **dam-users **enligt nedan:
 
 ![](assets/zece-1.png)
 
-### Tar bort ACE:er {#deleting-aces}
+### Ta bort ACE {#deleting-aces}
 
 Åtkomstkontrollposter kan tas bort om du vill ta bort alla behörigheter som tilldelats ett huvudkonto på en viss sökväg. X-ikonen bredvid ACE kan användas för att ta bort den så som visas nedan:
 
@@ -163,4 +164,3 @@ Det orsakade förvirring om exakt vad som konfigureras. I följande tabell visas
   </tr>
  </tbody>
 </table>
-
