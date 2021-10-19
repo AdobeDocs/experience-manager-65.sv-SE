@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 3f06f7a1-bdf0-4700-8a7f-1d73151893ba
 exl-id: 6dfaa14d-5dcf-4e89-993a-8d476a36d668
-source-git-commit: 52c8d4c425213718678543e9e9e8e5a4c2af4f95
+source-git-commit: 9f7bd996d2ec77d29fbee3ee51ac6469f94e9bd7
 workflow-type: tm+mt
-source-wordcount: '4684'
+source-wordcount: '4679'
 ht-degree: 0%
 
 ---
@@ -215,19 +215,19 @@ När du tar bort ett index för en MongoDB-instans är borttagningskostnaden pro
 
 ### JCR-frågechebladet {#jcrquerycheatsheet}
 
-För att skapa effektiva JCR-frågor och indexdefinitioner har [JCR-frågekortablad|assets/JCR_query_cheatsheet-v1.0.pdf] finns att hämta och använda som referens under utvecklingen. Den innehåller exempelfrågor för QueryBuilder, XPath och SQL-2, som omfattar flera scenarier som beter sig på olika sätt när det gäller frågeprestanda. Här finns också rekommendationer för hur du skapar eller anpassar ekindexeringar. Innehållet i detta värmeblad gäller AEM 6.5 och AEM as a Cloud Service.
+För att skapa effektiva JCR-frågor och indexdefinitioner har [JCR Query Cheat Sheet](assets/JCR_query_cheatsheet-v1.0.pdf) finns att hämta och använda som referens under utvecklingen. Den innehåller exempelfrågor för QueryBuilder, XPath och SQL-2, som omfattar flera scenarier som beter sig på olika sätt när det gäller frågeprestanda. Här finns också rekommendationer för hur du skapar eller anpassar ekindexeringar. Innehållet i detta värmeblad gäller AEM 6.5 och AEM as a Cloud Service.
 
 ## Omindexering {#re-indexing}
 
 I det här avsnittet beskrivs **endast** godtagbara skäl att indexera om index för ekv-index.
 
-Utanför de orsaker som anges nedan kommer omindexering av index för Oak att påbörjas **not** ändra beteende eller åtgärda problem och öka belastningen på AEM onaturligt.
+Utanför de orsaker som anges nedan kommer omindexering av index för Oak att påbörjas **not** ändra beteende eller lösa problem och öka belastningen på AEM i onödan.
 
 Omindexering av index för eke ska undvikas såvida inte detta omfattas av en motivering i tabellen nedan.
 
 >[!NOTE]
 >
->Innan du läser tabellerna nedan för att avgöra om omindexering är användbart,** alltid **verifiera:
+>Innan du läser tabellerna nedan för att avgöra om omindexering är användbart, **alltid** verifiera:
 >
 >* frågan är korrekt
 >* frågan löses till förväntat index (med [Förklara fråga](/help/sites-administering/operations-dashboard.md#diagnosis-tools))
