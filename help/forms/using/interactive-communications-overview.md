@@ -9,9 +9,9 @@ topic-tags: interactive-communications, introduction
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 67b03098-c58d-4a57-90e0-e4ddd78e5d99
 exl-id: 6cfbeec0-0be3-48b2-a4bb-fd19c69c92c7
-source-git-commit: dc8e3ed70ebaf064993ef5af910430b7fc2e521d
+source-git-commit: 415744ca5c46a1495fe90369c162158c7fc2f1d4
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '486'
 ht-degree: 4%
 
 ---
@@ -42,22 +42,22 @@ Här följer några av de viktigaste funktionerna i Interactive Communications:
 
 ### Arbetsflöde {#workflow}
 
-Om du vill skapa en interaktiv kommunikation ska du ha byggstenarna [för interaktiv kommunikation ](#buildingblocks) och sedan utföra följande steg:
+Skapa en interaktiv kommunikation med [byggstenar](#buildingblocks) för Interactive Communication och utför sedan följande steg:
 
-1. Välj att [skapa en interaktiv kommunikation](/help/forms/using/create-interactive-communication.md).
+1. Välj [skapa en interaktiv kommunikation](/help/forms/using/create-interactive-communication.md).
 
-1. Ange [formulärdatamodell](/help/forms/using/data-integration.md), förifyllningstjänst och [utskrifts- och webbkanalsmallar](/help/forms/using/web-channel-print-channel.md). Du kan välja att generera en webbkanal från utskriftskanalen.
+1. Ange [formulärdatamodell](/help/forms/using/data-integration.md), förifyllningstjänst och [mallar för tryck och webbkanaler](/help/forms/using/web-channel-print-channel.md). Du kan välja att generera en webbkanal från utskriftskanalen.
 
-1. Använd gränssnittet [dra och släpp](/help/forms/using/introduction-interactive-communication-authoring.md) för att lägga till dokumentfragment, bilder, komponenter i utskriften och webbkanalen i den interaktiva kommunikationen efter behov.
+1. Använda [dra-och-släpp-gränssnitt](/help/forms/using/introduction-interactive-communication-authoring.md), lägger till dokumentfragment, bilder, komponenter i utskriften och webbkanalen i interaktiv kommunikation efter behov.
 1. Konfigurera egenskaperna för de infogade komponenterna, till exempel följande:
 
    1. [Bilder](/help/forms/using/create-interactive-communication.md#step2)
-   1. [Tabeller](/help/forms/using/create-interactive-communication.md#tables)  (inklusive layoutfragment)
+   1. [Tabeller](/help/forms/using/create-interactive-communication.md#tables) (inklusive layoutfragment)
    1. [Diagram](/help/forms/using/chart-component-interactive-communications.md)
    1. [Dokumentfragment](/help/forms/using/create-interactive-communication.md#document-fragment-properties)
 
 1. Förhandsgranska tryck- och webbkanaler och redigera vid behov interaktiv kommunikation.
-1. Agentens användargränssnitt används för att [förbereda interaktiv kommunikation](/help/forms/using/prepare-send-interactive-communication.md) för att skicka den till mottagar-/postprocessen.
+1. Agentens användargränssnitt används för att [förbereda interaktiv kommunikation](/help/forms/using/prepare-send-interactive-communication.md) för att skicka det till mottagar-/postprocessen.
 
 ### Byggklossarna {#buildingblocks}
 
@@ -67,7 +67,7 @@ Följande byggstenar krävs för att skapa en interaktiv kommunikation:
 - [Mallar för tryck och webbkanal](/help/forms/using/web-channel-print-channel.md)
 - [Dokumentfragment](/help/forms/using/document-fragments.md)
 - Bilder
-- [](/help/forms/using/themes.md) Teman för webbkanalen
+- [Teman](/help/forms/using/themes.md) för webbkanalen
 
 ## Interaktiv kommunikation jämfört med korrespondenshantering {#interactive-communications-vs-correspondence-management}
 
@@ -124,6 +124,12 @@ Interaktiv kommunikation är standardmetoden och rekommenderas för att skapa ku
    <td>Stöds</td>
    <td>Stöds</td>
   </tr>
+   <tr>
+   <td>Inlämningar</td>
+   <td>Stöds</td>
+   <td>Stöds</td>
+  </tr>
+  <tr>
   <tr>
    <td>Granskning</td>
    <td>Stöds ej</td>
@@ -134,12 +140,6 @@ Interaktiv kommunikation är standardmetoden och rekommenderas för att skapa ku
    <td>Stöds ej</td>
    <td>Stöds</td>
   </tr>
-   <tr>
-   <td>Utkast Hantera instanser</td>
-   <td>Stöds ej</td>
-   <td>Stöds</td>
-  </tr>
-  <tr>
    <td>Gruppbearbetning</td>
    <td>Stöds </td>
    <td>Stöds</td>
