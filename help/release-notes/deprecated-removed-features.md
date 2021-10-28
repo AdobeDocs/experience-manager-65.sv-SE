@@ -2,7 +2,7 @@
 title: Borttagna funktioner i Adobe Experience Manager 6.5.
 description: Versionsinformation om borttagna funktioner i Adobe Experience Manager 6.5.
 exl-id: d9b6140a-c37d-4b90-a60c-01f471d65621
-source-git-commit: bfe5bb744223be1ff9a00c382734abd9bf4db59a
+source-git-commit: 1e02ad94459ff2893d96055c026d0873b1d69991
 workflow-type: tm+mt
 source-wordcount: '1752'
 ht-degree: 2%
@@ -63,7 +63,7 @@ I det här avsnittet visas funktioner som har tagits bort från AEM 6.5. Tidigar
 | Integreringar | Integreringen av Salesforce Force API har tagits bort från standarddistributionen (Quickstart) och är nu ett extra paket att installera från [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html). | Funktionen är fortfarande tillgänglig. |
 | Forms | Stöd för tjänsten Adobe Central Migration Bridge har tagits bort eftersom Adobe Central inte längre stöds. | Ingen ersättning. |  |
 | Forms | `com.adobe.fd.df.fdinternal.model.ConfigurationInstance` | Ingen ersättning. |  |
-| Forms | `com.adobe.fd.ccm.channels.print.fdinternal.api.service.PrintDataTransformer` | Ingen ersättning |
+| Forms | `com.adobe.fd.ccm.channels.print.fdinternal.api.service.PrintDataTransformer` | Ingen ersättning |  |
 | Forms | Uppgradering från LiveCycle ES4 SP1 till AEM 6.5 Forms på JEE är inte tillgänglig | Se [tillgängliga uppgraderingssökvägar](../forms/using/upgrade.md) i uppgraderingsdokumentationen för AEM Forms. |  |
 | Forms | UPD-baserat klusterstöd har tagits bort från AEM Forms på JEE | Du kan bara använda TCP-baserad klustring i AEM Forms på JEE. Om du uppgraderar en UDP-multicast-server från en tidigare version till AEM 5.5 Forms på JEE utförs manuella konfigurationer för att växla till TCP-baserad gemfire-klustring. Detaljerade anvisningar finns i [Uppgradera till AEM 6.5-formulär på JEE](../forms/using/upgrade-forms-jee.md) |  |
 | Utvecklare | Firebug Lite har tagits bort från standarddistributionen (Quickstart) | Använd de inbyggda webbläsarkonsolerna för utvecklare |
