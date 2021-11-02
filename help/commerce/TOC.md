@@ -1,12 +1,12 @@
 ---
-sub-product: AEM innehåll och handel
+sub-product: AEM Content and Commerce
 user-guide-title: AEM innehåll och handel
 breadcrumb-title: Commerce Guide
 user-guide-description: Förstå hur ni använder och administrerar AEM innehåll och handel.
-source-git-commit: a5bf6a1a6e9013e44209ea865145af1557445318
+source-git-commit: 5678d20fa0a7e8a709b02a2f6cbbeffbd4a26cbd
 workflow-type: tm+mt
-source-wordcount: '111'
-ht-degree: 7%
+source-wordcount: '109'
+ht-degree: 8%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 7%
    + [Commerce Solution från tredje part](cif/integrating/third-party.md)
 + AEM Storefront {#storefront}
    + [Komma igång](cif/getting-started.md)
-   + Administrera {#administering}
+   + Administratör {#administering}
       + [Installation i flera butiker](cif/configuring/multi-store-setup.md)
       + [Användning i flera mallar](cif/configuring/multi-template-usage.md)
       + [Konfigurera URL:er för SEO](cif/configuring/advanced-url-configuration.md)
@@ -39,11 +39,12 @@ ht-degree: 7%
    + [2020](cif/release-notes/release-notes-2020.md)
    + [2019](cif/release-notes/release-notes-2019.md)
 + [Vanliga frågor](cif/faq.md)
-+ Klassisk CIF {#classic}
++ AEM CIF Classic {#classic}
+   + [Översikt](/help/commerce/cif-classic/home.md)
    + Distribuerar {#deploying}
       + [e-handel - översikt](/help/commerce/cif-classic/deploying/ecommerce.md)
       + [SAP Commerce Cloud](/help/commerce/cif-classic/deploying/sap-commerce-cloud.md)
-   + Administrera {#administering}
+   + Administratör {#administering}
       + [eCommerce](/help/commerce/cif-classic/administering/ecommerce.md)
       + [Concepts](/help/commerce/cif-classic/administering/concepts.md)
       + [Administrera allmän e-handel](/help/commerce/cif-classic/administering/generic.md)
