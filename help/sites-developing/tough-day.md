@@ -6,9 +6,9 @@ seo-description: The Tough Day test simulates the daily load of around 1000 auth
 topic-tags: testing
 content-type: reference
 exl-id: ceb9671c-57f9-4d81-94c0-0dbccd4d90a2
-source-git-commit: 8b72715c15a65794bb6d1497961071aaea96c35e
+source-git-commit: 36c0728908e24a13d08c1eaed4e39542f5b61df5
 workflow-type: tm+mt
-source-wordcount: '1881'
+source-wordcount: '1885'
 ht-degree: 1%
 
 ---
@@ -17,17 +17,21 @@ ht-degree: 1%
 
 ## Vad är Tom Dag 2? {#what-is-tough-day}
 
-&quot;Tough Day 2&quot; är ett program som gör att du kan stresstesta gränserna för din AEM. Den kan köras direkt med testsviten eller konfigureras för att passa dina testbehov. Du kan titta på [den här inspelningen](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-toughday2-stress-testing-benchmarking-tool.html) om du vill se en presentation av programmet.
+&quot;Tough Day 2&quot; är ett program som gör att du kan stresstesta gränserna för din AEM. Den kan köras direkt med testsviten eller konfigureras för att passa dina testbehov. Du kan titta [den här inspelningen](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-toughday2-stress-testing-benchmarking-tool.html) för en presentation av ansökan.
+
+>[!CAUTION]
+>
+>Dag 2 kräver Java 8.
 
 ## Köra tuff dag 2 {#how-to-run-tough-day}
 
-Hämta den senaste versionen av Tough Day 2 från [Adobe-databasen](https://repo1.maven.org/maven2/com/adobe/qe/toughday2/). När du har hämtat programmet kan du köra det direkt genom att ange parametern `host`. I följande exempel körs den AEM instansen lokalt så att `localhost`-värdet används:
+Ladda ned den senaste versionen av Tough Day 2 från [Adobe-databas](https://repo1.maven.org/maven2/com/adobe/qe/toughday2/). När du har laddat ned programmet kan du köra det direkt genom att ange `host` parameter. I följande exempel körs den AEM instansen lokalt så att `localhost` värde används:
 
 ```xml
 java -jar toughday2.jar --host=localhost
 ```
 
-Standardsviten som körs när du lägger till parametrarna heter `toughday`. Det innehåller följande användningsfall:
+Standardsviten som körs när du lägger till parametrar får namnet `toughday`. Det innehåller följande användningsfall:
 
 * Skapa sidor och live-kopior för dem (inklusive rollouts)
 * Hämta hemsida
@@ -37,7 +41,7 @@ Standardsviten som körs när du lägger till parametrarna heter `toughday`. Det
 
 Programsviten innehåller 15 % skrivåtgärder och 85 % läsåtgärder.
 
-För att köra testerna av sviten installerar Tough Day 2 standardinnehållspaketet. Detta kan undvikas genom att ställa in parametern `installsamplecontent`på `false`, men kom ihåg att du också bör ändra standardsökvägarna för de tester som du tänker köra. Om burken körs utan parametrar visas [hjälpinformationen](/help/sites-developing/tough-day.md#getting-help) på Tough Day 2.
+För att köra testerna av sviten installerar Tough Day 2 standardinnehållspaketet. Detta kan undvikas genom att ställa in `installsamplecontent`parameter till `false`men kom ihåg att du också bör ändra standardsökvägarna för de tester som du tänker köra. Om burken körs utan parametrar visar Tough Day 2 [hjälpinformation](/help/sites-developing/tough-day.md#getting-help).
 
 Som regel kan du använda programmet genom att följa det här mönstret:
 
@@ -87,22 +91,22 @@ I tabellen nedan hittar du relevanta hjälpparametrar.
    <td> </td>
   </tr>
   <tr>
-   <td> —help —runmode/publishmode type=&lt;Mode&gt;</td>
+   <td> —help —runmode/publishmode type=&lt;mode&gt;</td>
    <td>Visar information om det angivna körnings- eller publiceringsläget.</td>
    <td><p>java -jar toughday2.jar —help —runmode type=konstantload</p> <p>java -jar toughday2.jar —help —publishmode type=interval</p> </td>
   </tr>
   <tr>
-   <td>—help —suite=&lt;SuiteName&gt;</td>
+   <td>—help —suite=&lt;suitename&gt;</td>
    <td>Listar alla tester av en given svit och deras respektive konfigurerbara egenskaper.</td>
    <td><br /> java -jar toughday2.jar —help —suite=get_tests</td>
   </tr>
   <tr>
-   <td> —help —tag=&lt;Tag&gt;</td>
+   <td> —help —tag=&lt;tag&gt;</td>
    <td><br /> Visar alla objekt som har den angivna taggen.</td>
    <td>java -jar toughday2.jar —help —tag=publish</td>
   </tr>
   <tr>
-   <td>—help &lt;TestClass/PublisherClass&gt;</td>
+   <td>—help &lt;testclass publisherclass=""&gt;</td>
    <td><br /> Visar alla konfigurerbara egenskaper för det angivna testet eller utgivaren.</td>
    <td><p>java -jar toughday2.jar —help UploadPDFTest</p> <p>java -jar toughday2.jar —help CSVPublisher</p> </td>
   </tr>
@@ -127,7 +131,7 @@ Du hittar de relevanta parametrarna i listan nedan:
 | `--port=<Val>` | Värdens port. | 4502 |  |
 | `--user=<Val>` | Användarnamnet för instansen. | admin |  |
 | `--password=<Val>` | Lösenord för den angivna användaren. | admin |  |
-| `--duration=<Val>` | Provningens varaktighet. Kan uttryckas i (**s**)sekunder, (**m**)minuter, (**h**)timmar och (**d**)dagar. | 1d |  |
+| `--duration=<Val>` | Provningens varaktighet. Kan uttryckas i (**s**)sekunder, (**m**)minuter, (**h**)ours och (**d**)dagar. | 1d |  |
 | `--timeout=<Val>` | Hur länge ett test ska köras innan det avbryts och markeras som misslyckat. Uttryckt i sekunder. | 180 |  |
 | `--suite=<Val>` | Värdet kan vara en eller en lista (avgränsad med kommatecken) med fördefinierade testsviter. | tuffing |  |
 | `--configfile=<Val>` | Den målformade dynamiska konfigurationsfilen. |  |  |
@@ -139,11 +143,11 @@ Du hittar de relevanta parametrarna i listan nedan:
 
 Anpassning kan göras på två sätt: kommandoradsparametrar eller dynamiska konfigurationsfiler. **Konfigurationsfiler används vanligtvis för stora anpassade programsviter och de åsidosätter standardparametrarna för Tough Day 2. Kommandoradsparametrar åsidosätter både konfigurationsfiler och standardparametrar.**
 
-Det enda sättet att spara en testkonfiguration är att kopiera den i yaml-format. Mer information finns i den här [toughday.yaml](https://repo.adobe.com/nexus/service/local/repositories/releases/content/com/adobe/qe/toughday2/0.2.1/toughday2-0.2.1.yaml)-konfigurationen och i exemplen på yaml-konfiguration i avsnitten nedan.
+Det enda sättet att spara en testkonfiguration är att kopiera den i yaml-format. Mer information finns i [toughday.yaml](https://repo.adobe.com/nexus/service/local/repositories/releases/content/com/adobe/qe/toughday2/0.2.1/toughday2-0.2.1.yaml) konfiguration och yaml-konfigurationsexempel i avsnitten nedan.
 
 ### Lägga till ett nytt test {#adding-a-new-test}
 
-Om du inte vill använda standardsviten `toughday` kan du lägga till ett test med parametern `add`. I exemplen nedan visas hur du lägger till `CreateAssetTreeTest`-testet antingen med kommandoradsparametrar eller en gul konfigurationsfil.
+Om du inte vill använda standardinställningen `toughday` du kan lägga till ett test med `add` parameter. Exemplen nedan visar hur du lägger till `CreateAssetTreeTest` testa antingen med kommandoradsparametrar eller en gul konfigurationsfil.
 
 Genom att använda kommandoradsparametrar:
 
@@ -186,7 +190,7 @@ tests:
 
 ### Ändra testegenskaper {#changing-the-test-properties}
 
-Om du behöver ändra en eller flera av testegenskaperna kan du lägga till den egenskapen på kommandoraden eller i yaml-konfigurationsfilen. Om du vill visa alla tillgängliga testegenskaper lägger du till parametern `--help <TestClass/PublisherClass>` på kommandoraden, till exempel:
+Om du behöver ändra en eller flera av testegenskaperna kan du lägga till den egenskapen på kommandoraden eller i yaml-konfigurationsfilen. Om du vill visa alla tillgängliga testegenskaper lägger du till `--help <TestClass/PublisherClass>` parameter till kommandoraden, till exempel:
 
 ```xml
 java -jar toughday2.jar --help CreatePageTreeTest
@@ -194,7 +198,7 @@ java -jar toughday2.jar --help CreatePageTreeTest
 
 Tänk på att standardparametrarna Tough Day 2 skrivs över av standardkonfigurationsfilerna för Yaml och kommandoradsparametrarna åsidosätter både konfigurationsfilerna och standardvärdena.
 
-I exemplen nedan visas hur du ändrar egenskapen `template` för testet `CreatePageTreeTest` antingen med kommandoradsparametrar eller en gul konfigurationsfil.
+Exemplen nedan visar hur du ändrar `template` -egenskapen för `CreatePageTreeTest` testa antingen med kommandoradsparametrar eller en gul konfigurationsfil.
 
 Genom att använda kommandoradsparametrar:
 
@@ -217,7 +221,7 @@ tests:
 
 I exemplen nedan visas hur du lägger till ett test i en fördefinierad svit och hur du konfigurerar om och exkluderar ett befintligt test från en fördefinierad svit.
 
-Du kan lägga till ett nytt test i en fördefinierad svit med parametern `add` och ange den fördefinierade målsviten.
+Du kan lägga till ett nytt test i en fördefinierad svit med `add` och ange den fördefinierade målsviten.
 
 Genom att använda kommandoradsparametrar:
 
@@ -235,9 +239,9 @@ tests:
   - add : CreatePageTreeTest
 ```
 
-Befintliga tester i en given programsvit kan även konfigureras om med parametern `config`* *. Observera att du också måste ange namnet på sviten och det faktiska namnet på testet (inte testklassens namn). Du kan hitta testnamnet i egenskapen `name` i testklassen. Mer information om hur du söker efter testegenskaper finns i avsnittet [Ändra testegenskaper](/help/sites-developing/tough-day.md#changing-the-test-properties).
+Befintliga tester i en viss programsvit kan även konfigureras om med `config`* *parameter. Observera att du också måste ange namnet på sviten och det faktiska namnet på testet (inte testklassens namn). Testnamnet finns i `name` egenskapen för klassen Test. Mer information om hur du söker efter testegenskaper finns i [Ändra testegenskaper](/help/sites-developing/tough-day.md#changing-the-test-properties) -avsnitt.
 
-I exemplet nedan ändras standardresurstiteln för `CreatePageTreeTest` (med namnet `UploadAsset`) till &quot;NewAsset&quot;.
+I exemplet nedan visas standardresursens namn för `CreatePageTreeTest` (namngiven `UploadAsset`) ändras till&quot;NewAsset&quot;.
 
 Genom att använda kommandoradsparametrar:
 
@@ -257,7 +261,7 @@ tests:
       title : NewAsset
 ```
 
-Du kan även ta bort test från fördefinierade sviter eller utgivare från standardkonfigurationen med hjälp av parametern `exclude`. Observera att du också måste ange namnet på sviten och testets faktiska namn (inte namnet på test C `lass`). Du hittar testnamnet i egenskapen `name` för testklassen. I exemplet nedan tas `CreatePageTreeTest`-testet (med namnet `UploadAsset`) bort från toughday-sviten.
+Du kan även ta bort tester från fördefinierade sviter eller utgivare från standardkonfigurationen med hjälp av `exclude` parameter. Observera att du också måste ange namnet på sviten och det faktiska namnet på testet (inte test C) `lass` namn). Testnamnet finns i `name` egenskapen för klassen test. I exemplet nedan är `CreatePageTreeTest` (namngiven `UploadAsset`)-testet tas bort från den tuffa sviten.
 
 Genom att använda kommandoradsparametrar:
 
@@ -279,7 +283,7 @@ tests:
 
 Dag 2 kan köras i något av följande lägen: **normal** och **konstant belastning**.
 
-Körningsläget **normal** har två parametrar:
+The **normal** körningsläget har två parametrar:
 
 * `concurrency` - samtidig representerar antalet trådar som Tough Day 2 skapar för testkörning. På dessa trådar kommer tester att utföras tills antingen varaktigheten är slut eller tills det inte finns fler tester att köra.
 
@@ -300,13 +304,13 @@ runmode:
   concurrency : 200
 ```
 
-Körningsläget **för konstantbelastningen** skiljer sig från det normala körningsläget genom att generera ett konstant antal startade testkörningar i stället för ett konstant antal trådar. Du kan ställa in inläsningen med parametern för körningsläge med samma namn.
+The **konstant belastning** körningsläget skiljer sig från det normala körningsläget genom att generera ett konstant antal startade testkörningar i stället för ett konstant antal trådar. Du kan ställa in inläsningen med parametern för körningsläge med samma namn.
 
 ### Testa markering {#test-selection}
 
-Testmarkeringsprocessen är densamma för båda körningslägena och följande fungerar: alla tester har en `weight`-egenskap som avgör sannolikheten för körning i en tråd. Om vi till exempel har två tester, ett med en vikt på 5 och det andra med en vikt på 10, är det två gånger mer troligt att det senare utförs än det första.
+Testmarkeringsprocessen är densamma för båda körningslägena och följande fungerar: alla tester har `weight` som avgör sannolikheten för körning i en tråd. Om vi till exempel har två tester, ett med en vikt på 5 och det andra med en vikt på 10, är det två gånger mer troligt att det senare utförs än det första.
 
-Dessutom kan tester ha en `count`-egenskap, som begränsar antalet körningar till ett visst antal. När detta antal har passerats kommer inga fler testkörningar att utföras. Alla testinstanser som redan körs kommer att slutföra körningen enligt konfigurationen. I följande exempel visas hur du lägger till de här parametrarna antingen på kommandoraden eller med hjälp av en dynamisk konfigurationsfil.
+Dessutom kan tester ha en `count` -egenskap, som begränsar antalet körningar till ett givet tal. När detta antal har passerats kommer inga fler testkörningar att utföras. Alla testinstanser som redan körs kommer att slutföra körningen enligt konfigurationen. I följande exempel visas hur du lägger till de här parametrarna antingen på kommandoraden eller med hjälp av en dynamisk konfigurationsfil.
 
 ```xml
 java -jar toughday2.jar --host=localhost --add CreateAssetTreeTest weight=5 --add CreatePageTreeTest weight=10 count=100 --runmode=normal concurrency=20
@@ -327,7 +331,7 @@ eller
 
 >[!NOTE]
 >
->På grund av parallella körningar kommer det faktiska antalet testkörningar inte att vara exakt den mängd som konfigurerats i parametern `count`. Förväntade en avvikelse som är proportionerlig till antalet pågående trådar (styrs av `concurrency parameter`).
+>På grund av parallella körningar kommer det faktiska antalet testkörningar inte att vara exakt den mängd som konfigurerats i `count` parameter. Förväntade en avvikelse som är proportionerlig till antalet pågående trådar (styrs av `concurrency parameter`).
 
 ### Torr körning {#dry-run}
 
@@ -343,7 +347,7 @@ Dag 2 ger både testvärden och loggar. Mer information finns i följande avsnit
 
 ### Testmått {#test-metrics}
 
-Tuff dag 2 rapporterar för närvarande 9 testvärden som du kan utvärdera. Mätvärden med symbolen ***** rapporteras endast efter lyckade körningar:
+Tuff dag 2 rapporterar för närvarande 9 testvärden som du kan utvärdera. Mätvärden med ***** symbolen rapporteras endast efter lyckade körningar:
 
 | **Namn** | **Beskrivning** |
 |---|---|
@@ -360,19 +364,19 @@ Tuff dag 2 rapporterar för närvarande 9 testvärden som du kan utvärdera. Mä
 | 99,9p* | 99,9 percentil. |
 | Verkligt dataflöde* | Antal körningar delat med förfluten körningstid. |
 
-Dessa mått skrivs med hjälp av utgivare som kan läggas till med parametern `add` (på samma sätt som när du lägger till tester). Det finns för närvarande två alternativ:
+Dessa mätvärden skrivs med hjälp av utgivare som kan läggas till med `add` parameter (på samma sätt som när du lägger till tester). Det finns för närvarande två alternativ:
 
-* **CSVPublisher**  - utdata är en CSV-fil.
-* **ConsolePublisher**  - Utdata visas i konsolen.
+* **CSVPublisher** - utdata är en CSV-fil.
+* **ConsolePublisher** - utdata visas i konsolen.
 
 Som standard är båda utgivare aktiverade.
 
 Det finns dessutom två lägen där mätvärdena rapporteras:
 
-* Publiceringsläget **simple** - rapporterar resultatet från körningens början till publiceringspunkten.
-* Publiceringsläget **interval** - rapporterar resultatet i en given tidsram. Du kan ställa in tidsramen med parametern **interval** för publiceringsläge.
+* The **enkel** publiceringsläge - Rapporterar resultaten från körningens början till publiceringspunkten.
+* The **intervall** publiceringsläge - Rapporterar resultaten i en given tidsram. Du kan ställa in tidsramen med **intervall** parameter för publiceringsläge.
 
-I följande exempel visas hur du konfigurerar parametern `intervals` antingen på kommandoraden eller genom att använda en dynamisk konfigurationsfil.
+I följande exempel visas hur du konfigurerar `intervals` parametern antingen på kommandoraden eller med hjälp av en dynamisk konfigurationsfil.
 
 Genom att använda kommandoradsparametrar:
 
