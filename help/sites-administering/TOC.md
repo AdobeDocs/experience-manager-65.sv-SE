@@ -6,11 +6,11 @@ audience: admin-user
 user-guide-title: Användarhandbok för AEM 6.5
 breadcrumb-title: Administratörshandbok
 user-guide-description: Läs om hur du administrerar AEM.
-feature: Administratör
+feature: Administering
 role: Admin
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 48abd410e293a193abc34a1bd4f038a121e58490
 workflow-type: tm+mt
-source-wordcount: '627'
+source-wordcount: '623'
 ht-degree: 6%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 6%
    + [Identifiera innehåll som ska översättas](tc-rules.md)
    + [Förbereder innehåll för översättning](tc-prep.md)
    + [Skapa en språkrot med det klassiska användargränssnittet](tc-lroot-classic.md)
-   + [Ansluter till Microsoft Translator](tc-msconf.md)
+   + [Ansluta till Microsoft Translator](tc-msconf.md)
    + [Konfigurera översättningsintegreringsramverket](tc-tic.md)
    + [Guiden Kopiera språk](tc-wizard.md)
    + [Översättningsförbättringar](tc-enhancements.md)
@@ -78,7 +78,7 @@ ht-degree: 6%
    + [OWASP Top 10](owasp-top10.md)
    + [Köra AEM i produktionsklart läge](production-ready.md)
    + [Identity Management](identity-management.md)
-   + [Adobe IMS-autentisering och stöd för Admin Console för AEM Managed Services](ims-config-and-admin-console.md)
+   + [Adobe IMS-autentisering och Admin Console-stöd för AEM Managed Services](ims-config-and-admin-console.md)
    + [Skapa en stängd användargrupp](cug.md)
    + [Åtgärda serialiseringsproblem i AEM](mitigating-serialization-issues.md)
    + [Användarsynkronisering](sync.md)
@@ -120,7 +120,7 @@ ht-degree: 6%
    + [Vanliga frågor om leverans av innehåll med HTTP2](scene7-http2faq.md)
    + [Felsöka Adobe Campaign-integreringen](troubleshooting-campaignintegration.md)
    + [SharePoint Connector-licenser, copyrightmeddelanden och friskrivningsklausuler](sharepoint-connector-licenses.md)
-   + [SharePoint-anslutning](sharepoint-connector.md)
+   + [SharePoint Connector](sharepoint-connector.md)
    + [Vanliga frågor om att DHTML Viewer upphör](dhtml-viewer-endoflifefaqs.md)
    + [Integrera med Adobe Campaign Classic](campaignonpremise.md)
    + [Relaterade artiklar i communityn](related-community-articles.md)
@@ -157,7 +157,7 @@ ht-degree: 6%
    + [Hantera GDPR-begäranden för AEM Foundation](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/handling-gdpr-requests-for-aem-platform.html)
    + [AEM Commerce - GDPR-beredskap](gdpr-compliance-commerce.md)
 + Innehållshantering {#contentmanagement}
-   + [Så här arbetar du med paket](package-manager.md)
+   + [Pakethanteraren](package-manager.md)
    + [Administrera taggar](tags.md)
    + [Sidexporteraren](page-exporter.md)
    + [Klassiskt gränssnitt, taggningskonsol](classic-console.md)
