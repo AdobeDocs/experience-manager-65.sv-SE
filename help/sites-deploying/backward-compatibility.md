@@ -1,8 +1,8 @@
 ---
 title: Bakåtkompatibilitet i AEM 6.5
-seo-title: Bakåtkompatibilitet i AEM 6.5
+seo-title: Backward Compatibility in AEM 6.5
 description: Lär dig hur du kan göra dina program och konfigurationer kompatibla med AEM 6.5
-seo-description: Lär dig hur du kan göra dina program och konfigurationer kompatibla med AEM 6.5
+seo-description: Learn how to keep your apps and configurations compatible with AEM 6.5
 uuid: 81dc2771-f59b-4b24-8932-9e938cba05e0
 contentOwner: sarchiz
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,14 +11,13 @@ content-type: reference
 discoiquuid: f3b4ec1d-9054-47d4-afcb-0a0121b94190
 docset: aem65
 feature: Upgrading
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: c432a014-2dab-4c49-a25b-e4f461d13f9b
+source-git-commit: 50a11e30ccd720065962e8dd03cbcc71ec9f715a
 workflow-type: tm+mt
-source-wordcount: '503'
-ht-degree: 0%
+source-wordcount: '500'
+ht-degree: 1%
 
 ---
-
 
 # Bakåtkompatibilitet i AEM 6.5{#backward-compatibility-in-aem}
 
@@ -26,7 +25,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->En lista över innehåll- och konfigurationsändringar som inte omfattas av kompatibilitetspaketet finns i [Databasomstrukturering i AEM](/help/sites-deploying/repository-restructuring.md).
+>En lista över innehåll- och konfigurationsändringar som inte omfattas av kompatibilitetspaketet finns i [Omstrukturering av lager i AEM](/help/sites-deploying/repository-restructuring.md).
 
 I AEM 6.5 har alla funktioner utvecklats med bakåtkompatibilitet i åtanke.
 
@@ -64,10 +63,10 @@ Kompatibilitetsläget är avsett för kunder som har anpassat gränssnitt som in
 
 ## Konfigurera {#how-to-set-up}
 
-Kompatibilitetspaketet AEM 6.3 kan installeras som ett paket med hjälp av pakethanteraren. Du kan hämta [AEM 6.3-kompatibilitetspaketet från platsen Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/compatpack/aem-compat-cq64-to-cq63).
+The **AEM 6.4 Kompatibilitetspaket för 6.5** kan installeras som ett paket med pakethanteraren. Du kan ladda ned [AEM 6.4 Compatability Pack for 6.5 from the Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?fulltext=compat*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=20&amp;package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fcompatpack%2Faem-compat-cq65-to-cq64) webbplats.
 
 När Kompatibilitetspaketet har installerats kan routningen aktiveras eller inaktiveras med en växel i OSGI-konfigurationen enligt nedan:
 
-![screen_shot_2017-11-27at122421pm](assets/screen_shot_2017-11-27at122421pm.png)
+![Jämför växlar](assets/compat-switches.png)
 
 När Kompatibilitetspaketet har installerats och konfigurerats används funktionerna baserat på det kompatibilitetsläge som har valts.
