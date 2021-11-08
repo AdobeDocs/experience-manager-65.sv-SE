@@ -1,9 +1,9 @@
 ---
 title: Uppdaterar tjänstcertifikat för Reader Extension som upphört att gälla
 description: 'Reader utökade dokument fungerar inte, uppdatera certifikat '
-source-git-commit: 5f2fc6a32f67cfed3bc4b09b63bcf9689659a99d
+source-git-commit: a26e4fb53458beae9b259e5ee5dc74a95264f9e1
 workflow-type: tm+mt
-source-wordcount: '1572'
+source-wordcount: '1575'
 ht-degree: 0%
 
 ---
@@ -15,10 +15,10 @@ Adobe Experience Manager Forms (AEM Forms)-kunder med Adobe Managed Services ell
 
 Adobe använder en PKI (Public Key Infrastructure) för att utfärda digitala certifikat för användning vid licensiering och funktionshantering. Adobe har utfärdat certifikat under certifikatutfärdaren&quot;Adobe Root CA&quot;, som enligt planerna ska upphöra att gälla den 7 januari 2023. Det kommer att leda till att alla certifikat som utfärdas under den här certifikatutfärdaren upphör att gälla. När certifikatet har upphört att gälla fungerar inte längre alla funktioner som är beroende av certifikatet. Ett läsarutökat PDF-dokument som tillåter att du lägger till kommentarer med Adobe Acrobat Reader slutar fungera för kunder efter 7 januari 2023. För att lösa problemet bör administratören för Reader Extension Service, som använder gamla certifikat, erhålla och återanvända nya certifikat som utfärdas av nya Adobe Root CA G2 i sina PDF-dokument (läsaren utökar PDF-dokumenten med nya certifikat).
 
-Certifikatets förfallodatum påverkar både AEM Forms på JEE och AEM Forms på OSGi-stackar. Båda högarna har olika instruktioner. Välj en av följande sökvägar beroende på vilken hög du använder:
+Certifikatets förfallodatum påverkar både AEM Forms på JEE och AEM Forms på OSGi-stackar. Båda högarna har olika instruktioner. När du har mött [krav](#Pre-requisites) och [skaffa nya certifikat](#obtain-the-certificates)Välj en av följande sökvägar, beroende på vilken hög du har:
 
-* Uppdatera certifikat för en AEM Forms i JEE-miljö
-* Uppdatera certifikat för en AEM Forms i OSGi-miljö
+* [Uppdatera certifikat för en AEM Forms i JEE-miljö](#Updating-and-Applying-certificates-for-an-AEM-Forms-on-JEE-environment)
+* [Uppdatera certifikat för en AEM Forms i OSGi-miljö](#Updating-and-applying-certificates-for-an-AEM-Forms-on-OSGi-environment)
 
 >[!NOTE]
 >
@@ -97,14 +97,14 @@ Uppdatering och tillämpning av nya certifikat på AEM Forms i OSGi-stacken krä
 I en AEM Forms-miljö på OSGi är autentiseringsuppgifter för Reader Extension associerade med fd-service-användare. Innan du lägger till autentiseringsuppgifter för nyckelbehållaren för fd-användare gör du så här för att skapa en nyckelbehållare:
 
 1. Logga in på din AEM Author-instans som administratör.
-1. Gå till Verktyg > Säkerhet > Användare.
+1. Gå till **[!UICONTROL Tools]**> **[!UICONTROL Security]**>**[!UICONTROL Users]**.
 1. Bläddra nedåt i listan över användare tills du hittar användarkontot för tjänsten.
-1. Klicka på användaren av fd-service.
-1. Klicka på fliken för nyckelbehållaren.
-1. Klicka på Create KeyStore.
+1. Klicka **[!UICONTROL fd-service]** användare.
+1. Klicka på fliken för nyckelbehållare.
+1. Klicka på **[!UICONTROL Create KeyStore]**.
 1. Ange lösenordet för KeyStore-åtkomst och spara inställningarna för att skapa KeyStore-lösenordet.
 
-När du har skapat nyckelbehållaren lägger du till autentiseringsuppgifter till användaren för fd-service.
+När du har skapat nyckelbehållaren lägger du till autentiseringsuppgifter till användaren för fd-service. I följande video förklaras stegen:
 
 >[!VIDEO](https://images-tv.adobe.com/mpcv3/5577/8db8e554-f04b-4fae-8108-b9b5e0eb03ad_1627925794.854x480at800_h264.mp4)
 
