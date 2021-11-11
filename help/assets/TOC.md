@@ -6,9 +6,9 @@ audience: end-user
 user-guide-title: Resurshandbok
 breadcrumb-title: Resurshandbok
 user-guide-description: Skapa, hantera, bearbeta och distribuera digitalt material.
-source-git-commit: 85736791b7a8f518b57180b0139d6a76ebf1c6dc
+source-git-commit: 8353e6fcc76dd63a0816babbe593f474abbc4508
 workflow-type: tm+mt
-source-wordcount: '629'
+source-wordcount: '637'
 ht-degree: 15%
 
 ---
@@ -20,13 +20,13 @@ ht-degree: 15%
 + [[!DNL Experience Manager] 6.5 Versionsinformation om resurser](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/assets.html)
 + [Om DAM](assets.md)
 + [Metodtips för resurser](best-practices-for-assets.md)
-+ [Hjälpmedel i [!DNL Assets]](accessibility.md)
-+ Använd Experience Manager-resurser {#using}
++ [Tillgänglighet i [!DNL Assets]](accessibility.md)
++ Använd Experience Manager Assets {#using}
    + [[!DNL Assets] upplevelse på hemsidan](assets-home-page.md)
    + [Söka efter digitala resurser](search-assets.md)
    + [Arbeta med metadata för resurser](metadata.md)
    + [Flerspråkiga resurser](multilingual-assets.md)
-   + [Använd [!DNL Adobe Stock] resurser i resurser](aem-assets-adobe-stock.md)
+   + [Använd [!DNL Adobe Stock] resurser i Assets](aem-assets-adobe-stock.md)
    + [Förhandsgranska 3D-resurser](previewing-3d-assets.md)
    + [Granska resurser i mappar och samlingar](bulk-approval.md)
    + [Förbättrade smarta taggar](enhanced-smart-tags.md)
@@ -36,11 +36,13 @@ ht-degree: 15%
    + [Återanvända resurser med MSM](reuse-assets-using-msm.md)
    + [Anslutna resurser med [!DNL Sites]](use-assets-across-connected-assets-instances.md)
 + Dynamic Media{#dynamic}
-   + [Dynamic Media nyhetsbrevarkiv från Experience League](dynamic-media-newsletter.md)
+   + [Arkiv med nyhetsbrev från Experience League](dynamic-media-newsletter.md)
    + [Konfigurera Dynamic Media](administering-dynamic-media.md)
    + [Arbeta med Dynamic Media](dynamic-media.md)
    + [Konfigurera Dynamic Media - Scene7-läge](config-dms7.md)
    + [Konfigurera Dynamic Media - hybridläge](config-dynamic.md)
+   + [Konfigurera allmän Dynamic Media-inställning](dm-general-settings.md)
+   + [Konfigurera Dynamic Media Publish Setup](dm-publish-settings.md)
    + [Felsöka Dynamic Media - Scene7-läge](troubleshoot-dms7.md)
    + [Tillgänglighet i Dynamic Media](accessibility-dm.md)
    + [Migrera från Dynamic Media - hybrid-läge till Dynamic Media - S7-läge](migrate-from-hybrid-to-dms7.md)
@@ -86,11 +88,11 @@ ht-degree: 15%
    + [Anpassa och utöka [!DNL Assets]](extending-assets.md)
    + [Bearbeta resurser med mediehanterare och arbetsflöden](media-handlers.md)
    + [Utöka sökfunktionen](searchx.md)
-   + [Installera och konfigurera [!DNL ImageMagick] för att arbeta med [!DNL Assets]](best-practices-for-imagemagick.md)
+   + [Installera och konfigurera [!DNL ImageMagick] att arbeta med [!DNL Assets]](best-practices-for-imagemagick.md)
    + [Integrera resurser med aktivitetsströmmen](extending-activity-stream.md)
    + [Utöka resursredigeraren](asseteditorx.md)
    + [[!DNL Assets] HTTP-API](mac-api-assets.md)
-   + [Stöd för innehållsfragment i [!DNL Assets] HTTP API](assets-api-content-fragments.md)
+   + [Content Fragments support in [!DNL Assets] HTTP-API](assets-api-content-fragments.md)
    + [GraphQL API för innehållsfragment](content-fragments/graphql-api-content-fragments.md)
    + [Autentisering för fjärrGraphQL-frågor för innehållsfragment](content-fragments/graphql-authentication-content-fragments.md)
    + [GraphQL API med innehållsfragment - exempelinnehåll och frågor](/help/assets/content-fragments/content-fragments-graphql-samples.md)
@@ -113,7 +115,7 @@ ht-degree: 15%
    + [[!DNL Assets] migreringsguide](assets-migration-guide.md)
    + [[!DNL Assets] nätverksaspekter](assets-network-considerations.md)
    + [[!DNL Assets] och MediaLibrary](medialibrary.md)
-   + [Använd PDF-rastrering](aem-pdf-rasterizer.md)
+   + [Använda rastrering i PDF](aem-pdf-rasterizer.md)
    + [Konfigurera överföringsbegränsningar](configuring-asset-upload-restrictions.md)
    + [[!DNL Experience Manager] and [!DNL Creative Cloud] integration](aem-cc-integration-best-practices.md)
    + [Integrera med [!DNL InDesign Server]](indesign.md)
@@ -130,7 +132,7 @@ ht-degree: 15%
    + [Resursmallar](asset-templates.md)
 + Brand Portal {#brandportal}
    + [Konfigurera [!DNL Assets] med [!DNL Brand Portal]](configure-aem-assets-with-brand-portal.md)
-   + [Publicera resurser till [!DNL Brand Portal]](brand-portal-publish-assets.md)
+   + [Publicera resurser på [!DNL Brand Portal]](brand-portal-publish-assets.md)
    + [Publicera mappar till [!DNL Brand Portal]](brand-portal-publish-folder.md)
    + [Publicera samlingar till [!DNL Brand Portal]](brand-portal-publish-collection.md)
 + Innehållsfragment {#content-fragments}
