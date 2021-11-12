@@ -10,9 +10,9 @@ role: User, Admin
 hide: true
 hidefromtoc: true
 exl-id: null
-source-git-commit: e3067a17153864babaf0243c4c3f6cf9cd8d30bc
+source-git-commit: 1985058faa2a85a4544b35f2a6925670207df9e1
 workflow-type: tm+mt
-source-wordcount: '2913'
+source-wordcount: '2927'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,6 @@ ht-degree: 0%
 >* Du är systemadministratör för Experience Manager med administratörsbehörighet.
 
 
-
 Inställningarna på sidan Publiceringsinställningar för Dynamic Media avgör hur resurser levereras som standard från Adobe Dynamic Media-servrar till webbplatser eller program. Om ingen inställning har angetts levererar Adobe Dynamic Media-servern en resurs enligt en standardinställning på en publiceringsinställningssida. En begäran om att leverera en bild som inte innehåller ett upplösningsattribut ger till exempel en bild med inställningen för standardobjektupplösning på sidan Bildserver.
 
 Administratörer kan ändra standardinställningarna på sidorna Image Server, Image Renderer och Vinjettering för att skapa standardinställningar för att leverera resurser från servrar.
@@ -42,7 +41,7 @@ Administratörer kan ändra standardinställningarna på sidorna Image Server, I
 
 1. I läget Experience Manager Author väljer du logotypen Experience Manager för att komma åt den globala navigeringskonsolen.
 1. Välj ikonen Verktyg i den vänstra listen och gå sedan till **[!UICONTROL Assets]** > **[!UICONTROL Dynamic Media Publish Setup]**.
-1. På sidan Image Server anger du din Image Server-publiceringskontext och använder sedan de fem flikarna för att konfigurera standardpubliceringsinställningarna.
+1. Ange din Image Server - publiceringskontext på sidan Image Server och använd sedan de fem flikarna för att konfigurera standardpubliceringsinställningarna.
 
    * [Bildserver](#image-server)
    * [Säkerhet](#security-tab) tab
@@ -50,6 +49,9 @@ Administratörer kan ändra standardinställningarna på sidorna Image Server, I
    * [Attribut för begäran](#request-attributes-tab) tab
    * [Vanliga miniatyrattribut](#common-thumbnail-attributes-tab) tab
    * [Färghanteringsattribut](#color-management-attributes-tab) tab
+
+   ![Dynamic Media Publish Setup page](/help/assets/assets-dm/dm-publish-setup.png)
+   *Dynamic Media Publish Setup-sidan med **[!UICONTROL Request Attributes]**har valts.*<br><br>
 
 1. När du är klar väljer du **[!UICONTROL Save]**.
 

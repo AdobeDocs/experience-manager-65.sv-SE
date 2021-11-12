@@ -10,9 +10,9 @@ role: User, Admin
 hide: true
 hidefromtoc: true
 exl-id: null
-source-git-commit: bbced918e67c64c0bf2f5a3de8cbcb9063fff669
+source-git-commit: 1985058faa2a85a4544b35f2a6925670207df9e1
 workflow-type: tm+mt
-source-wordcount: '2029'
+source-wordcount: '2043'
 ht-degree: 0%
 
 ---
@@ -46,6 +46,9 @@ Se även [Testa tjänsten Secure Testing](/help/assets/dm-publish-settings.md#te
    * [Photoshop](#photoshop-tab) tab
    * [PDF](#pdf-tab) tab
    * [Illustrator](#illustrator-tab) tab
+
+   ![Dynamic Media General Settings page](/help/assets/assets-dm/dm-general-settings.png)
+   *Dynamic Media General Settings page, with the **[!UICONTROL Image Editing]**har valts.*<br><br>
 
 1. När du är klar väljer du **[!UICONTROL Save]**.
 
