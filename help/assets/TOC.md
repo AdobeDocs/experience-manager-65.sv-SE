@@ -6,9 +6,9 @@ audience: end-user
 user-guide-title: Resurshandbok
 breadcrumb-title: Resurshandbok
 user-guide-description: Skapa, hantera, bearbeta och distribuera digitalt material.
-source-git-commit: 8353e6fcc76dd63a0816babbe593f474abbc4508
+source-git-commit: bfa41deb156ffd0adb8138c11548912bc954f084
 workflow-type: tm+mt
-source-wordcount: '637'
+source-wordcount: '641'
 ht-degree: 15%
 
 ---
@@ -43,6 +43,8 @@ ht-degree: 15%
    + [Konfigurera Dynamic Media - hybridläge](config-dynamic.md)
    + [Konfigurera allmän Dynamic Media-inställning](dm-general-settings.md)
    + [Konfigurera Dynamic Media Publish Setup](dm-publish-settings.md)
+   + [Alternativ A](option-a-config-dms7.md)
+   + [Alternativ B](option-b-config-dms7.md)
    + [Felsöka Dynamic Media - Scene7-läge](troubleshoot-dms7.md)
    + [Tillgänglighet i Dynamic Media](accessibility-dm.md)
    + [Migrera från Dynamic Media - hybrid-läge till Dynamic Media - S7-läge](migrate-from-hybrid-to-dms7.md)
