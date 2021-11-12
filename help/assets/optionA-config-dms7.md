@@ -1,5 +1,5 @@
 ---
-title: Konfigurera Dynamic Media - Scene7-läge
+title: Alternativ A - Konfigurera Dynamic Media - Scene7-läge
 description: Lär dig hur du konfigurerar läget Dynamic Media - Scene7.
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -8,20 +8,28 @@ content-type: reference
 docset: aem65
 role: User, Admin
 mini-toc-levels: 3
-exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
+hide: true
+hidefromtoc: true
 feature: Configuration,Scene7 Mode
-source-git-commit: b5835d16efb0f2112ec8a6917e8cf2529cbf19c7
+exl-id: null
+source-git-commit: b151ae21761328ac0734f192ac51ffcc8807123f
 workflow-type: tm+mt
-source-wordcount: '6508'
-ht-degree: 3%
+source-wordcount: '10861'
+ht-degree: 1%
 
 ---
 
-# Konfigurera Dynamic Media - Scene7-läge{#configuring-dynamic-media-scene-mode}
+# Alternativ A - Konfigurera Dynamic Media - Scene7-läge{#configuring-dynamic-media-scene-mode}
+
+>[!NOTE]
+>
+>ALTERNATIV A - DE TVÅ NYA ÄMNEN SOM JAG SKRIVER TAS BORT. MEN INNAN DU TAR BORT ÄMNENA FLYTTADES ALLT DERAS INNEHÅLL TILL DETTA ÄMNE, TILL RESPEKTIVE OMRÅDE DÄR JAG REDAN PRATAR OM ALLMÄNNA INSTÄLLNINGAR OCH PUBLICERINGSINSTÄLLNINGAR.
 
 Om du använder Adobe Experience Manager för olika miljöer, som utveckling, staging och produktion, konfigurerar du Dynamic Media-Cloud Services för var och en av dessa miljöer.
 
 ## Arkitekturdiagram över Dynamic Media - Scene7-läge {#architecture-diagram-of-dynamic-media-scene-mode}
+
+**RICK: BEHÅLL SOM DET ÄR**
 
 I följande arkitekturdiagram beskrivs hur läget Dynamic Media - Scene7 fungerar.
 
@@ -48,6 +56,8 @@ Med den nya arkitekturen ansvarar Experience Manager för de viktigaste källres
 
 ## Aktivera Dynamic Media i Scene7-läge {#enabling-dynamic-media-in-scene-mode}
 
+**RICK: BEHÅLL SOM DET ÄR**
+
 [Dynamic Media](https://business.adobe.com/products/experience-manager/assets/dynamic-media.html) är inaktiverat som standard. Om du vill utnyttja Dynamic Media funktioner måste du aktivera dem.
 
 >[!WARNING]
@@ -61,6 +71,8 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 ```
 
 ## (Valfritt) Migrera förinställningar och konfigurationer för Dynamic Media från 6.3 till 6.5 nolltid {#optional-migrating-dynamic-media-presets-and-configurations-from-to-zero-downtime}
+
+**RICK: BEHÅLL SOM DET ÄR**
 
 Uppgradering av Experience Manager Dynamic Media från 6.3 till 6.4 eller 6.5 innefattar nu möjligheten till driftsättning utan driftstopp. Migrera alla förinställningar och konfigurationer från `/etc` till `/conf` i CRXDE Lite, se till att du kör följande kommando.
 
@@ -78,6 +90,8 @@ Migrera anpassade förinställningar och konfigurationer för visningsprogram so
 
 ## Installera funktionspaket 18912 för migrering av gruppresurser {#installing-feature-pack-for-bulk-asset-migration}
 
+**RICK: BEHÅLL SOM DET ÄR**
+
 Installation av funktionspaket 18912 är *valfri*.
 
 Med funktionspaketet 18912 kan du antingen importera resurser gruppvis via FTP eller migrera resurser från antingen Dynamic Media - hybrid- eller Dynamic Media Classic till Dynamic Media - Scene7-läge på Experience Manager. Det finns på [Adobe Professional Services](https://business.adobe.com/customers/consulting-services/main.html).
@@ -85,6 +99,8 @@ Med funktionspaketet 18912 kan du antingen importera resurser gruppvis via FTP e
 Se [Installera funktionspaket 18912 för migrering av gruppresurser](/help/assets/bulk-ingest-migrate.md) för mer information.
 
 ## Skapa en Dynamic Media-konfiguration i Cloud Services {#configuring-dynamic-media-cloud-services}
+
+**RICK: BEHÅLL SOM DET ÄR**
 
 **Innan du konfigurerar Dynamic Media** - När du har fått ditt e-postmeddelande med Dynamic Media-autentiseringsuppgifter måste du öppna [Dynamic Media Classic desktop application](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)och logga sedan in på ditt konto för att ändra ditt lösenord. Lösenordet som anges i e-postmeddelandet om etablering genereras av systemet och är endast avsett som ett tillfälligt lösenord. Det är viktigt att du uppdaterar lösenordet så att Dynamic Media Cloud Service har rätt autentiseringsuppgifter.
 
@@ -99,7 +115,7 @@ Se [Installera funktionspaket 18912 för migrering av gruppresurser](/help/asset
    Välj **[!UICONTROL Connect to Dynamic Media]**.
 
    >[!NOTE]
-   När du har fått ditt e-postmeddelande med Dynamic Media-autentiseringsuppgifter öppnar du [Dynamic Media Classic desktop application](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)och logga sedan in på ditt konto för att ändra ditt lösenord. Lösenordet som anges i e-postmeddelandet om etablering genereras av systemet och är endast avsett som ett tillfälligt lösenord. Det är viktigt att du uppdaterar lösenordet så att Dynamic Media Cloud Service har rätt autentiseringsuppgifter.
+   **RICK: BEHÅLL SOM DET ÄR?** När du har fått ditt e-postmeddelande med Dynamic Media-autentiseringsuppgifter öppnar du [Dynamic Media Classic desktop application](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)och logga sedan in på ditt konto för att ändra ditt lösenord. Lösenordet som anges i e-postmeddelandet om etablering genereras av systemet och är endast avsett som ett tillfälligt lösenord. Det är viktigt att du uppdaterar lösenordet så att Dynamic Media Cloud Service har rätt autentiseringsuppgifter.
 
 1. Ange följande när anslutningen lyckas. Rubriker med asterisk (*) krävs:
 
@@ -134,7 +150,7 @@ Om du vill markera en markerad mapp för synkronisering till Dynamic Media välj
 1. Välj **[!UICONTROL Save]**.
 1. Om du vill förhandsgranska Dynamic Media-innehåll på ett säkert sätt innan det publiceras måste du tillåtslista författarinstansen Experience Manager för att ansluta till Dynamic Media:
 
-   * Öppna [Dynamic Media Classic desktop application](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)och logga sedan in på ditt konto. Dina autentiseringsuppgifter och inloggningsuppgifter tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kan du kontakta Adobe kundsupport.
+   * **RICK: LÄNKA TILL NYTT PUBLICERINGSINSTÄLLNINGSÄMNE** Öppna [Dynamic Media Classic desktop application](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)och logga sedan in på ditt konto. Dina autentiseringsuppgifter och inloggningsuppgifter tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kan du kontakta Adobe kundsupport.
 
    * Navigera till i navigeringsfältet uppe till höger på sidan **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL Publish Setup]** > **[!UICONTROL Image Server]**.
 
@@ -149,6 +165,8 @@ Om du vill anpassa konfigurationen ytterligare kan du utföra alla uppgifter und
 
 ## (Valfritt) Konfigurera avancerade inställningar i Dynamic Media - Scene7-läge {#optional-configuring-advanced-settings-in-dynamic-media-scene-mode}
 
+**RICK: BEHÅLL SOM DET ÄR**
+
 Om du vill anpassa konfigurationen och konfigurationen av Dynamic Media - Scene7 eller optimera prestandan ytterligare kan du göra något av följande: *valfri* uppgifter:
 
 * [(Valfritt) Konfigurera Dynamic Media - Scene7-läge för överföring av resurser som är större än 2 GB](#optional-config-dms7-assets-larger-than-2gb)
@@ -160,6 +178,8 @@ Om du vill anpassa konfigurationen och konfigurationen av Dynamic Media - Scene7
 * [(Valfritt) Filtrera resurser för replikering](#optional-filtering-assets-for-replication)
 
 ### (Valfritt) Konfigurera Dynamic Media - Scene7-läge för överföring av resurser som är större än 2 GB {#optional-config-dms7-assets-larger-than-2gb}
+
+**RICK: BEHÅLL SOM DET ÄR**
 
 I Dynamic Media - Scene7-läge är standardfilstorleken för överföring av resurser 2 GB eller mindre. Du kan dock välja att konfigurera överföring av resurser som är större än 2 GB och upp till 15 GB.
 
@@ -246,79 +266,110 @@ Du kan ange ett värde på upp till 15 GB (`2013265920` byte). I det här fallet
 1. Välj **[!UICONTROL Sync]**.
 1. Upprepa steg 14-21 för **[!UICONTROL DAM Update Asset]** arbetsflödesmodell och **[!UICONTROL Dynamic Media Reprocess]** arbetsflödesmodell.
 
-### (Valfritt) Installation och konfiguration av Dynamic Media - inställningar för Scene7-läge {#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings}
+### (Valfritt) Konfigurera Dynamic Media Publish Setup {#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings}
 
-När du är i körningsläge `dynamicmedia_scene7`använder du Dynamic Media Classic användargränssnitt för att ändra dina Dynamic Media-inställningar.
+**RICK: HELA INNEHÅLLET FRÅN DET NYA PUBLICERINGSINSTÄLLNINGSÄMNET SOM LÄGGS TILL HÄR**
 
-Vissa av ovanstående uppgifter kräver att du öppnar [Dynamic Media Classic desktop application](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)och logga sedan in på ditt konto.
+>[!IMPORTANT]
+Dynamic Media Publish Setup är endast tillgänglig om:
+* Du kör Dynamic Media i Scene7-läge.
+* Du har en *befintlig* **[!UICONTROL Dynamic Media Configuration]** (in **[!UICONTROL Cloud Services]**) i Adobe Experience Manager 6.5 eller Experience Manager as a Cloud Service.
+* Du är systemadministratör för Experience Manager med administratörsbehörighet.
 
-Installations- och konfigureringsuppgifter omfattar följande:
 
-* [Publiceringskonfiguration för Image Server](#publishing-setup-for-image-server)
-* [Konfigurera allmänna inställningar för program](#configuring-application-general-settings)
-* [Konfigurera färghantering](#configuring-color-management)
-* [Redigera MIME-typer för format som stöds](#editing-mime-types-for-supported-formats)
-* [Lägg till MIME-typer för format som inte stöds](#adding-mime-types-for-unsupported-formats)
-* [Skapa gruppuppsättningsförinställningar för automatisk generering av bilduppsättningar och snurpuppsättningar](#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)
+Inställningarna på sidan Publiceringsinställningar för Dynamic Media avgör hur resurser levereras som standard från Adobe Dynamic Media-servrar till webbplatser eller program. Om ingen inställning har angetts levererar Adobe Dynamic Media-servern en resurs enligt en standardinställning på en publiceringsinställningssida. En begäran om att leverera en bild som inte innehåller ett upplösningsattribut ger till exempel en bild med inställningen för standardobjektupplösning på sidan Bildserver.
 
-#### Publiceringskonfiguration för Image Server {#publishing-setup-for-image-server}
-
-Publiceringsinställningarna avgör hur resurser levereras som standard från Dynamic Media. Om ingen inställning anges levererar Dynamic Media en resurs enligt standardinställningarna som definierats i Publiceringsinställningar. En begäran om att leverera en bild som inte innehåller ett upplösningsattribut ger till exempel en bild med inställningen för standardobjektupplösning.
-
-Så här konfigurerar du publiceringsinställningar: i Dynamic Media Classic, navigera till **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL Publish Setup]** > **[!UICONTROL Image Server]**.
-
-Bildserverskärmen anger standardinställningar för att leverera bilder. I gränssnittsskärmen finns en beskrivning av varje inställning.
-
-* **[!UICONTROL Request Attributes]** - De här inställningarna begränsar antalet bilder som kan levereras från servern.
-* **[!UICONTROL Default Request Attributes]** - De här inställningarna gäller standardutseendet för bilder.
-* **[!UICONTROL Common Thumbnail Attributes]** - De här inställningarna gäller för miniatyrbildernas standardutseende.
-* **[!UICONTROL Defaults for Catalog Fields]**- De här inställningarna gäller bildernas upplösning och standardtyp av miniatyrbilder.
-* **[!UICONTROL Color Management Attributes]** - De här inställningarna avgör vilka ICC-färgprofiler som används.
-* **[!UICONTROL Compatibility Attributes]** - Den här inställningen gör att inledande och avslutande stycken i textlager kan hanteras som de var i version 3.6 för bakåtkompatibilitet.
-* **[!UICONTROL Localization Support]** - Med de här inställningarna kan du hantera flera språkattribut. Här kan du också ange en sträng för språkområdeskarta så att du kan definiera vilka språk du vill ha stöd för de olika verktygstipsen i visningsprogram. Mer information om konfiguration **[Lokaliseringsstöd]**, se [Att tänka på när lokalisering av resurser konfigureras](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/publish-setup.html#considerations-when-setting-up-localization-of-assets).
-
-#### Konfigurera allmänna inställningar för program {#configuring-application-general-settings}
-
-Om du vill öppna sidan Allmänna inställningar för programmet går du till **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL General Settings]**.
-
-**[!UICONTROL Servers]** - Vid kontoetablering tillhandahåller Dynamic Media automatiskt de tilldelade servrarna för ditt företag. De här servrarna används för att skapa URL-strängar för din webbplats och dina program. Dessa URL-anrop är specifika för ditt konto. Ändra inte något av servernamnen om du inte uttryckligen har fått instruktioner från Adobe kundsupport om att göra det.
-
-**[!UICONTROL Overwrite Images]** - Dynamic Media tillåter inte att två filer har samma namn. Varje objekts URL-ID (filnamnet minus filtillägget) måste vara unikt. De här alternativen anger hur ersättningsresurser överförs: om de ersätter originalet eller blir dubbletter. Duplicerade resurser får ett nytt namn med namnet&quot;-1&quot; (till exempel heter stol.tif stol-1.tif). Dessa alternativ påverkar resurser som överförts till en annan mapp än den ursprungliga eller resurser med ett annat filnamnstillägg än den ursprungliga (till exempel JPG, TIF eller PNG).
-
-* **[!UICONTROL Overwrite in current folder, same base image name/extension]** - Det här alternativet är den striktaste regeln för ersättning. Det kräver att du överför ersättningsbilden till samma mapp som originalbilden och att ersättningsbilden har samma filnamnstillägg som originalbilden. Om dessa krav inte uppfylls skapas en dubblett.
+Administratörer kan ändra standardinställningarna på sidorna Image Server, Image Renderer och Vinjettering för att skapa standardinställningar för att leverera resurser från servrar.
 
 >[!NOTE]
-Välj alltid den här inställningen om du vill att den ska vara konsekvent med Experience Manager: **Skriv över i den aktuella mappen, samma basbildens namn/tillägg**
+Dynamic Media Publish Setup är avsedd för erfarna webbplatsutvecklare och programmerare. Adobe rekommenderar att användare som ändrar någon av dessa standardinställningar för publicering känner till Adobe Dynamic Media, HTTP-protokollets standarder och konventioner samt grundläggande bildbehandlingsteknik.
 
-* **[!UICONTROL Overwrite in any folder, same base asset name/extension]** - Kräver att ersättningsbilden har samma filnamnstillägg som originalbilden (t.ex. måste stol.jpg ersätta stol.jpg, inte stol.tif). Du kan dock överföra ersättningsbilden till en annan mapp än den ursprungliga. Den uppdaterade bilden finns i den nya mappen; filen inte längre kan hittas på sin ursprungliga plats
-* **[!UICONTROL Overwrite in any folder, same base asset name regardless of extension]** - Det här alternativet är den mest omfattande ersättningsregeln. Du kan överföra en ersättningsbild till en annan mapp än den ursprungliga, överföra en fil med ett annat filnamnstillägg och ersätta den ursprungliga filen. Om originalfilen finns i en annan mapp finns ersättningsbilden i den nya mappen som den överfördes till.
+**Så här konfigurerar du Dynamic Media Publish Setup:**
 
-**[!UICONTROL Default Color Profiles]** - Se [Konfigurera färghantering](#configuring-color-management) för ytterligare information.
+1. I läget Experience Manager Author väljer du logotypen Experience Manager för att komma åt den globala navigeringskonsolen.
+1. Välj ikonen Verktyg i den vänstra listen och gå sedan till **[!UICONTROL Assets]** > **[!UICONTROL Dynamic Media Publish Setup]**.
+1. Ange din Image Server - publiceringskontext på sidan Image Server och använd sedan de fem flikarna för att konfigurera standardpubliceringsinställningarna.
 
->[!NOTE]
-Som standard visas 15 återgivningar när du väljer **[!UICONTROL Renditions]** och 15 visningsförinställningar när du väljer **[!UICONTROL Viewers]** i resursens detaljvy. Du kan öka den här gränsen. Se [Öka antalet bildförinställningar som visas](/help/assets/managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display) eller [Öka antalet visningsförinställningar som visas](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display).
+   * [Bildserver](#image-server)
+   * [Säkerhet](#security-tab) tab
+   * [Kataloghantering](#catalog-management-tab) tab
+   * [Attribut för begäran](#request-attributes-tab) tab
+   * [Vanliga miniatyrattribut](#common-thumbnail-attributes-tab) tab
+   * [Färghanteringsattribut](#color-management-attributes-tab) tab
 
-#### Konfigurera färghantering {#configuring-color-management}
+   ![Dynamic Media Publish Setup page](/help/assets/assets-dm/dm-publish-setup.png)
+   *Dynamic Media Publish Setup-sidan med **[!UICONTROL Request Attributes]**har valts.*<br><br>
 
-Med Dynamic Media färghantering kan du färgkorrigera resurser. Med färgkorrigering behåller inkapslade resurser sin färgmodell (RGB, CMYK, Grå) och inbäddad färgprofil. När du begär en dynamisk återgivning korrigeras bildfärgen till målfärgrymden med hjälp av CMYK-, RGB- eller grå utdata. Se [Konfigurera bildförinställningar](/help/assets/managing-image-presets.md).
+1. När du är klar väljer du **[!UICONTROL Save]**.
 
-Så här konfigurerar du standardfärgegenskaperna så att färgkorrigering aktiveras när bilder begärs:
+#### Bildserver {#image-server}
 
-1. Öppna [Dynamic Media Classic desktop application](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)loggar sedan in på ditt konto med de autentiseringsuppgifter som anges under etableringen.
-1. Navigera till **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]**.
-1. Expandera området **[!UICONTROL Publish Setup]** och markera **[!UICONTROL Image Server]**. Ange **[!UICONTROL Publish Context]** som **[!UICONTROL Image Serving]** när du anger standardvärden för publiceringsinstanser.
-1. Bläddra till den egenskap som du vill ändra. En egenskap i **[!UICONTROL Color Management Attributes]** område.
+Sidan Image Server används för att ange standardinställningar för att leverera bilder från bildservrar. Inställningarna är tillgängliga i fem kategorier
 
-   Du kan ange följande egenskaper för färgkorrigering:
+| Publicera kontext | Beskrivning |
+| --- | --- |
+| Bildredigering | Anger kontext för publiceringsinställningar. |
+| Testa bildvisning | Anger kontexten för testning av publiceringsinställningar.<br>Se [Testa resurser innan du gör dem offentliga](#test-assets-before-making-public). |
 
-   * **[!UICONTROL CMYK Default Color Space]** - Namn på CMYK-standardfärgprofil
-   * **[!UICONTROL Gray-Scale Default Color Space]** - Namn på standardfärgprofilen för gråskala
-   * **[!UICONTROL RGB Default Color Space]** - Namn på standardfärgprofilen för RGB
-   * **[!UICONTROL Color Conversion Rendering Intent]** - Anger återgivningsmetod. Godtagbara värden är: **[!UICONTROL perceptual]**, **[!UICONTROL relative colometric]**, **[!UICONTROL saturation]**, **[!UICONTROL absolute colometric]**. Adobe rekommenderar **[!UICONTROL relative]** som standard.
+#### Fliken Säkerhet {#security-tab}
 
-1. Välj **[!UICONTROL Save]**.
+**[!UICONTROL Client address]** - Gör att du kan ange en eller flera IP-adresser eller IP-adressintervall. När det anges avvisas begäranden till den här bildkatalogen som kommer från en klient till en IP-adress som inte finns med i listan. Den här regeln gäller både för leverans av bilder och återgivna bilder.
 
-Du kan till exempel ställa in **[!UICONTROL RGB Default Color Space]** på *sRGB* och **[!UICONTROL CMYK Default Color Space]** på *WebCoated*.
+#### Fliken Kataloghantering {#catalog-management-tab}
+
+**[!UICONTROL Rule set definition file path]** - Anger filen som innehåller regeluppsättningsdefinitionerna för bildkatalogen.
+
+Se även [RuleSetFile](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-rulesetfile.html) i referenshandboken för Dynamic Media Viewer.
+
+#### Fliken Attribut för begäran {#request-attributes-tab}
+
+De här inställningarna gäller standardutseendet för bilder.
+
+| Inställning | Beskrivning |
+| --- | --- |
+| **[!UICONTROL Reply image size limit]** | Krävs.<br>Anger den maximala svarsbildens bredd och höjd som returneras till klienten. Servern returnerar ett fel om en begäran orsakar en svarsbild vars bredd, höjd eller båda är större än den här inställningen.<br>Se även [MaxPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-maxpix.html) i referenshandboken för Dynamic Media Viewer. |
+| **[!UICONTROL Request obfuscation mode]** | Aktivera om du vill att base64-kodning ska användas på giltiga begäranden.<br>Se även [RequestObfuscation](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-requestobfuscation.html) i referenshandboken för Dynamic Media Viewer. |
+| **[!UICONTROL Request locking mode]** | Aktivera om du vill att ett enkelt hash-lås ska inkluderas i begäranden.<br>Se även [RequestLock](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-requestlock.html) i referenshandboken för Dynamic Media Viewer. |
+| **[!UICONTROL Default Request Attributes]** |  |
+| **[!UICONTROL Default image file suffix]** | Krävs.<br>Standarddatafiltillägg som läggs till i fältvärdena katalogsökväg och MaskPath om sökvägen inte innehåller något filsuffix.<br>Se även [DefaultExt](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultext.html) i referenshandboken för Dynamic Media Viewer. |
+| **[!UICONTROL Default font face name]** | Anger vilket teckensnitt som ska användas om inget teckensnitt anges i en textlagerbegäran. Om du anger det måste det vara ett giltigt teckensnittsnamnvärde i teckensnittskartan för den här bildkatalogen eller i teckensnittskartan för standardkatalogen.<br>Se även [DefaultFont](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultfont.html) i referenshandboken för Dynamic Media Viewer. |
+| **[!UICONTROL Default image]** | Tillhandahåller en standardbild som returneras som svar på en begäran där den begärda bilden inte hittas.<br>Se även [DefaultImage](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-is-cat-defaultimage.html) i referenshandboken för Dynamic Media Viewer. |
+| **[!UICONTROL Default image mode]** | När skjutreglaget är aktiverat (skjutreglage till höger) visas **[!UICONTROL Default image]** ersätter varje lager som saknas i källbilden med standardbilden och returnerar den sammansatta bilden som vanligt. När skjutreglaget är inaktiverat (skjutreglage till vänster) ersätter standardbilden hela den sammansatta bilden, även om den saknade bilden bara är ett av flera lager.<br>Se även [DefaultImageMode](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultimagemode.html) i referenshandboken för Dynamic Media Viewer. |
+| **[!UICONTROL Default view size]** | Krävs.<br>Servern begränsar svarsbilderna till att inte vara större än den här bredden och höjden om begäran inte uttryckligen anger visningsstorleken med `wid=`, `hei=`, eller `scl=`.<br>Se även [DefaultPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultpix.html) i referenshandboken för Dynamic Media Viewer. |
+| **[!UICONTROL Default thumbnail size]** | Krävs.<br>Används i stället för attribut **[!UICONTROL Default view size]** för miniatyrbegäranden (`req=tmb`). Servern begränsar svarsbilderna så att de inte är större än den här bredden och höjden, om en miniatyrbildsbegäran (`req=tmb`) anger inte storleken explicit med `wid=`, `hei=`, eller `scl=`.<br>Se även [DefaultThumbPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultthumbpix.html) i referenshandboken för Dynamic Media Viewer. |
+| **[!UICONTROL Default background color]** | Anger RGB som används för att fylla i områden i en svarsbild som inte innehåller verkliga bilddata.<br>Se även [BkgColor](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-bkgcolor.html) i referenshandboken för Dynamic Media Viewer. |
+| **[!UICONTROL JPEG Encoding Attributes]** |  |
+| **[!UICONTROL Quality]** | Anger standardattributen för svarsbilder i JPEG. The **[!UICONTROL Quality]** -fältet definieras i intervallet 1-100.<br>Se även [JpegQuality](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-jpegquality.html) i referenshandboken för Dynamic Media Viewer. |
+| **[!UICONTROL Chromatically downsampling]** | Aktivera eller inaktivera kromatisk nedsampling som används av JPEG-kodare. |
+| **[!UICONTROL Default resampling mode]** | Anger de standardattribut för omsampling och interpolation som ska användas för skalning av bilddata. Använd när `resMode` har inte angetts i en begäran.<br>Se även [ResMode](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-is-cat-resmode.html) i referenshandboken för Dynamic Media Viewer. |
+
+#### fliken Vanliga miniatyrattribut {#common-thumbnail-attributes-tab}
+
+De här inställningarna gäller för miniatyrbildernas standardutseende och -justering.
+
+| Inställning | Beskrivning |
+| --- | --- |
+| **[!UICONTROL Default background color for thumbnail]** | Anger det RGB-värde som används för att fylla i en miniatyrbilds utdataområde som inte innehåller verkliga bilddata. Används endast för miniatyrbildsbegäranden (`req=tmb`) och när **[!UICONTROL Default Thumbnail Type]** inställningen är inställd på **[!UICONTROL Fit]** eller **[!UICONTROL Texture]**.<br>Se även [ThumbBkgColor](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-thumbbkgcolor.html) i referenshandboken för Dynamic Media Viewer. |
+| **[!UICONTROL Horizontal alignment]** | Anger den vågräta justeringen för miniatyrbilden i svarsbildsrektangeln som anges av `wid=` och `hei=` värden.<br>Används endast för miniatyrbildsbegäranden (`req=tmb`) och när **[!UICONTROL Default Thumbnail Type]** inställningen är inställd på **[!UICONTROL Fit]**.<br>Det finns tre horisontella justeringar att välja mellan: **[!UICONTROL Center alignment]**, **[!UICONTROL Left alignment]** och **[!UICONTROL Right alignment]**.<br>Se även [ThumbHorizAlign](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-thumbhorizalign.html) i referenshandboken för Dynamic Media Viewer. |
+| **[!UICONTROL Vertical alignment]** | Anger den lodräta justeringen för miniatyrbilden i svarsbildsrektangeln som anges av `wid=` och `hei=` värden. Används endast för miniatyrbildsbegäranden (`req=tmb`) och när **[!UICONTROL Default Thumbnail Type]** inställningen är inställd på **[!UICONTROL Fit]**.<br>Det finns tre lodräta justeringar att välja mellan: **[!UICONTROL Top alignment]**, **[!UICONTROL Center alignment]** och **[!UICONTROL Bottom alignment]**.<br>Se även [ThumbVertAlign](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-thumbvertalign.html) i referenshandboken för Dynamic Media Viewer. |
+| **[!UICONTROL Default cache time to live]** | Anger ett standardutgångsintervall i timmar om en viss katalogpost inte innehåller ett giltigt värde för katalogförfallotid. Ange till `-1` för att markera som aldrig förfaller. <br>Se även [Förfaller](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-expiration.html) i referenshandboken för Dynamic Media Viewer. |
+| **[!UICONTROL Default thumbnail type]** | Anger ett standardvärde för miniatyrbildstypen om en viss katalogpost inte innehåller ett giltigt katalogvärde för ThumbType. Används endast för miniatyrbildsbegäranden (`req=tmb`).<br>Det finns tre typer av miniatyrer att välja bland: **[!UICONTROL Crop]**, **[!UICONTROL Fit]** och **[!UICONTROL Texture]**.<br>Se även [ThumbType](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-thumbtype.html) i referenshandboken för Dynamic Media Viewer. |
+| **[!UICONTROL Default thumbnail resolution]** | Anger ett standardvärde för upplösningen av miniatyrbildobjektet om en viss katalogpost inte innehåller ett giltigt ThumbRes-katalogvärde. Används endast för miniatyrbildsbegäranden (`req=tmb`) och när **[!UICONTROL Default thumbnail type]** inställningen är inställd på **[!UICONTROL Texture]**.<br>Se även [ThumbRes](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-thumbres.html) i referenshandboken för Dynamic Media Viewer. |
+
+#### Fliken Färghanteringsattribut {#color-management-attributes-tab}
+
+De här inställningarna avgör vilka ICC-färgprofiler som används för bilder.
+
+**Återgivningsmetod för färgkonvertering**
+En färgkonverteringsåtergivningsmetod tillåter åsidosättning av standardåtergivningsmetoden för arbetsprofilerna för att bestämma hur källfärgerna justeras. Används när:
+
+1. En av standardprofilerna för ICC är målfärgrymden för en färgkonvertering.
+1. En utdataenhet (skrivare eller bildskärm) kännetecknas av den här profilen.
+1. Den angivna återgivningsmetoden gäller även för den här profilen.
+
+Olika återgivningsmetoder använder olika regler för att bestämma hur källfärgerna justeras.
+
+Du kan till exempel ange **[!UICONTROL RGB default color space]** till **[!UICONTROL sRGB]** och **[!UICONTROL CMYK default color space]** till **[!UICONTROL WebCoated]**.
 
 Om du gör det gör du så här:
 
@@ -328,7 +379,284 @@ Om du gör det gör du så här:
 * Dynamiska återgivningar som returnerar utdata från RGB, returnerar det i dialogrutan *sRGB* färgrymd.
 * Dynamiska återgivningar som returnerar CMYK-utdata och returnerar dem i *WebCoated* färgrymd.
 
+Se även [IccRenderIntent](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccrenderintent.html) i referenshandboken för Dynamic Media Viewer.
+
+>[!NOTE]
+I allmänhet är det bäst att använda standardåtergivningsmetoden för den valda färginställningen, som har testats av Adobe för att uppfylla branschstandarder. Om du t.ex. väljer en färginställning för Nordamerika eller Europa är standardåtergivningsmetoden för färgkonvertering **[!UICONTROL Relative Colormetric]**. Om du väljer en färginställning för Japan är standardåtergivningsmetoden för färgkonvertering **[!UICONTROL Perceptual]**.
+
+| Inställning | Egenskaper |
+| --- | --- |
+| **[!UICONTROL CMYK default color space]** | Anger namnet på ICC-färgprofilen som ska användas som arbetsprofil för CMYK-data. If **[!UICONTROL None Specified]** väljs inaktiveras färghantering för den här bildkatalogen när det gäller CMYK-källbilder. Alla CMYK-arbetsfärgrymder är enhetsberoende, vilket innebär att de baseras på faktiska kombinationer av bläck och papper. CMYK-arbetsfärgrymderna Adobe bygger på standardtryckeriet.<br> Se även [IccProfileCMYK](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilecmyk.html) i referenshandboken för Dynamic Media Viewer. |
+| **[!UICONTROL Gray-Scale default color space]** | Anger namnet på ICC-färgprofilen som ska användas som arbetsprofil för gråskaledata. If **[!UICONTROL None Specified]** väljs inaktiveras färghantering för den här bildkatalogen när källbilder i gråskala används.<br>Se även [IccProfileGray](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilegray.html) i referenshandboken för Dynamic Media Viewer. |
+| **[!UICONTROL RGB default color space]** | Anger namnet på ICC-färgprofilen som ska användas som arbetsprofil för RGB data. If **[!UICONTROL None Specified]** väljs inaktiveras färghantering för den här bildkatalogen när bilder från RGB-källor används. I allmänhet är det bäst att välja **[!UICONTROL Adobe RGB]** eller **[!UICONTROL sRGB]** i stället för profilen för en viss enhet (till exempel en bildskärmsprofil). **[!UICONTROL sRGB]** rekommenderas när du förbereder bilder för webben eller mobila enheter, eftersom färgrymden definieras för den standardbildskärm som används för att visa bilder på webben. **[!UICONTROL sRGB]** är också ett bra val när du arbetar med bilder från vanliga digitalkameror, eftersom sRGB används som standardfärgrymd i de flesta av dessa.<br>Se även [IccProfileRBG](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilergb.html) i referenshandboken för Dynamic Media Viewer. |
+| **[!UICONTROL Color conversion rendering intent]** | **[!UICONTROL Perceptual]** - Avsikten är att bevara den visuella relationen mellan färger så att de uppfattas som naturliga för det mänskliga ögat, även om färgvärdena i sig kan ändras. Den här metoden är lämplig för fotografiska bilder med många ej tryckbara färger. Den här inställningen är standardåtergivningsmetoden för den japanska tryckeribranschen. |
+|  | **[!UICONTROL Relative Colorimetric]** - Jämför de extrema färgerna i källfärgrymden med målfärgrymden och anpassar färgerna. Färger utanför färgomfånget ändras till den närmast reproducerbara färgen i målfärgrymden. Med Relativa färgvärden bevaras mer av de ursprungliga färgerna i en bild än med Perceptuell. Den här inställningen är standardåtergivningsmetoden för utskrift i Nordamerika och Europa. |
+|  | **[!UICONTROL Saturation]** - Försöker producera levande färger i en bild på bekostnad av färgnoggrannheten. Den här återgivningsmetoden är lämplig för affärsgrafik som diagram och diagram där klara, mättade färger är viktigare än det exakta förhållandet mellan färger. |
+|  | **[!UICONTROL Absolute Colorimetric]** - Ändrar inte färger som ligger inom målfärgomfånget. Ej tryckbara färger beskärs. Ingen skalning av färger till målvitpunkten utförs. Den här metoden syftar till att bibehålla färgnoggrannheten på bekostnad av att förhållandet mellan färger bevaras och är lämplig för korrektur för att simulera utdata från en viss enhet. Den här metoden är användbar när du vill förhandsgranska hur pappersfärgen påverkar tryckta färger. |
+
+### Testa resurser innan du gör dem offentliga {#test-assets-before-making-public}
+
+Säker testning hjälper er att definiera en säker testmiljö och bygga en robust affärs-till-business-lösning som bygger på en konfigurerbar uppsättning IP-adresser och intervall. Med den här funktionaliteten kan ni matcha era Adobe Dynamic Media-installationer med arkitekturen i ert innehållshantering och affärssystem.
+
+Med Säker testning kan du förhandsgranska testversionen av webbplatsen med opublicerat innehåll.
+
+Om du vill kan du skapa en staging-miljö i stället för att göra resurserna allmänt tillgängliga av följande skäl:
+
+* Förhandsgranska webbplatser innan den offentliga lanseringen (testwebbplatsen).
+* Tjäna resurser som kräver begränsad åtkomst, till exempel e-kataloger som visar priser i B2B-webbprogram.
+* Använd material bakom en brandvägg som en del av produktinformationshanteringssystemet, kundtjänstprogrammet, utbildningswebbplatsen osv.
+
+>[!NOTE]
+Säker testning påverkar inte åtkomsten till Adobe Dynamic Media Classic. Adobe Dynamic Media Classic säkerhet är konsekvent och kräver de vanliga inloggningsuppgifterna för åtkomst till Adobe Dynamic Media Classic och relaterade webbtjänster.
+
+#### Så här fungerar säkra tester {#how-test-assets-works}
+
+De flesta företag använder internet bakom en brandvägg. Tillgång till Internet är möjlig via vissa vägar och vanligtvis via ett begränsat antal offentliga IP-adresser.
+
+I företagsnätverket kan du räkna ut din offentliga IP-adress med webbplatser som [https://www.whatismyip.com](https://www.whatismyip.com/) eller begär den här informationen från IT-avdelningen.
+
+Med säker testning skapar Adobe Dynamic Media en dedikerad Image Server för testmiljöer eller interna program. Alla förfrågningar till den här servern kontrollerar den ursprungliga IP-adressen. Om den inkommande begäran inte finns i den godkända listan över IP-adresser returneras ett felsvar. Adobe Dynamic Media företagsadministratör konfigurerar den godkända listan över IP-adresser för företagets säkra testmiljö.
+
+Eftersom platsen för den ursprungliga begäran måste bekräftas, dirigeras inte trafiken för tjänsten för säker testning via ett nätverk för innehållsdistribution, t.ex. offentlig Dynamic Media Image Server-trafik. Begäranden till tjänsten för säker testning har en något högre fördröjning än de offentliga Dynamic Media Image-servrarna.
+
+Opublicerade resurser är omedelbart tillgängliga från tjänsterna för säker testning, utan att behöva publicera. På så sätt kan du köra en förhandsvisning innan resurser publiceras på den offentliga bildservern.
+
+>[!NOTE]
+Tjänster för säker testning använder katalogservern som är konfigurerad med en intern publiceringskontext. Om ditt företag är konfigurerat att publicera till Säker testning blir därför alla överförda resurser i Adobe Dynamic Media omedelbart tillgängliga på Säker testning. Den här funktionen är sann oavsett om resurserna har markerats för publicering vid överföring.
+
+Tjänster för säker testning stöder för närvarande följande resurstyper och funktioner:
+
+* Bilder.
+* Vinjetter (renderingsserverbegäranden).
+* Rendera serverförfrågningar (stöds, men måste begäras uttryckligen av kunden).
+* Uppsättningar, inklusive bilduppsättningar, eCatalog, renderingsuppsättningar och medieuppsättningar.
+* Adobe Dynamic Media multimedievisningsprogram som standard.
+* Adobe Dynamic Media OnDemand JSP pages.
+* Statiskt innehåll, till exempel PDF-filer och progressivt levererade videor.
+* HTTP-videoströmning.
+* Progressiv videoströmning.
+
+Följande tillgångstyper och funktioner stöds för närvarande inte:
+
+* Adobe Dynamic Media Classic Info- eller eCatalog-sökning
+* RTMP-videoströmning
+* Webb-till-tryck
+* UGC-tjänster (användargenererat innehåll)
+
+>[!IMPORTANT]
+Stöd för nya eller befintliga UGC-vektorbildresurser i Adobe Dynamic Media upphörde den 30 september 2021.
+
+#### Testa tjänsten för säker testning {#test-secure-testing-service}
+
+Så här ser du till att tjänsten Secure Testing fungerar som förväntat:
+
+##### Förbered ditt konto
+
+1. Kontakta Adobe kundtjänst och begär att de aktiverar säker testning på ditt konto.
+1. I Adobe Experience Manager väljer du **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Dynamic Media Publish Setup]**.
+1. På sidan Image Server finns **[!UICONTROL Publish Context]** nedrullningsbar lista, välja **[!UICONTROL Test Image Serving]**.
+1. Välj **[!UICONTROL Security]** -fliken.
+1. För **[!UICONTROL Client address]** filter, markera **[!UICONTROL Add]**.
+1. I **[!UICONTROL IP Address]** anger du en IP-adress.
+1. I **[!UICONTROL Mask]** skriver du en nätmask.
+
+   >[!NOTE]
+   Om du lägger till mer än en IP-adress och nätmask tillåts *alla* IP-adresser för att göra tillgångsanrop, och de visas alla.
+
+1. Gör något av följande:
+
+   * Om du vill lägga till fler IP-adresser upprepar du de tre föregående stegen.
+   * Fortsätt till nästa steg.
+
+1. I det övre högra hörnet på sidan Image Server väljer du **[!UICONTROL Save]**.
+1. Ladda upp bilderna till ditt Adobe Dynamic Media-konto.
+
+<!--    See [Upload files](uploading-files.md#uploading_files). -->
+
+1. Se till att vissa bilder är markerade för publicering och att andra är omarkerade och skicka sedan publiceringsjobbet.
+
+<!--    See [Publish files](publishing-files.md#publishing_files). -->
+
+1. Bestäm namnet på tjänsten för säker testning genom att gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Dynamic Media General Setting]**.
+1. På **[!UICONTROL Server]** sidan, hitta servernamnet till höger om **[!UICONTROL Published Server Name]**.
+
+Kontakta Adobe Care om servernamnet saknas eller om URL:en till inte fungerar.
+
+##### Förbered webbplatsvarianter
+
+Du behöver två varianter av en webbplats som länkar de publicerade och opublicerade resurserna:
+
+* Offentlig version - Länka resurser med den traditionella URL-syntaxen för Adobe Dynamic Media.
+* Mellanlagringsversion - Länka resurser med samma syntax men med namnet på platsen för säker testning.
+
+##### Kör testerna
+
+Utför följande tester:
+
+1. Kontrollera om resurser är synliga inifrån företagets nätverk.
+
+   I företagsnätverket som identifieras av det tidigare definierade IP-adressintervallet visar mellanlagringsversionen av webbplatsen alla bilder, oavsett om de är markerade för publicering eller inte. Därför kan du testa utan att oavsiktligt göra bilder tillgängliga innan du förhandsgranskar eller startar produkten.
+
+   Bekräfta att den offentliga versionen av din webbplats visar publicerade resurser så som de har varit med Adobe Dynamic Media tidigare.
+
+1. Verifiera att icke-publicerade resurser (dvs. omärkta för publicering) är skyddade från åtkomst från tredje part utanför företagets nätverk.
+
+   Få åtkomst till nätverket från utsidan (till exempel från din hemdator eller via en 4G/5G-anslutning) och kontrollera sedan att den offentliga versionen av webbplatsen visar alla publicerade resurser, men inget av det opublicerade innehållet.
+
+   Bekräfta att mellanlagringsversionen inte visar någon resurs eftersom du använder tjänsten för säker testning från en ej godkänd IP-adress.
+
+### Konfigurera allmänna inställningar för Dynamic Media {#configuring-application-general-settings}
+
+>[!IMPORTANT]
+Allmänna inställningar för Dynamic Media är endast tillgängliga om:
+* Du kör Dynamic Media i Scene7-läge.
+* Du har en *befintlig* **[!UICONTROL Dynamic Media Configuration]** (in **[!UICONTROL Cloud Services]**) i Adobe Experience Manager 6.5 eller Experience Manager as a Cloud Service.
+* Du är systemadministratör för Experience Manager med administratörsbehörighet.
+
+
+När du skapar ett konto tillhandahåller Adobe Dynamic Media automatiskt de tilldelade servrarna för ditt företag. De här servrarna används för att skapa URL-strängar för din webbplats och dina program. Dessa URL-anrop är specifika för ditt konto.
+
+Se även [Testa tjänsten Secure Testing](/help/assets/dm-publish-settings.md#test-assets-before-making-public).
+
+**Så här konfigurerar du den allmänna inställningen för Dynamic Media:**
+
+1. I läget Experience Manager Author väljer du logotypen Experience Manager för att komma åt den globala navigeringskonsolen.
+1. Välj ikonen Verktyg i den vänstra listen och gå sedan till **[!UICONTROL Assets]** > **[!UICONTROL Dynamic Media General Setting]**.
+1. Ange din **[!UICONTROL Published Server Name]** och **[!UICONTROL Origin Server Name]** och använd sedan de fem flikarna för att konfigurera standardinställningar för publicering.
+
+   * [Server](#server-general-setting)
+   * [Överför till program](#upload-to-application)
+   * [Bildredigering](#image-editing-tab) tab
+   * [PostScript](#postscript-tab) tab
+   * [Photoshop](#photoshop-tab) tab
+   * [PDF](#pdf-tab) tab
+   * [Illustrator](#illustrator-tab) tab
+
+   ![Dynamic Media General Settings page](/help/assets/assets-dm/dm-general-settings.png)
+   *Dynamic Media General Settings page, with the **[!UICONTROL Image Editing]**har valts.*<br><br>
+
+1. När du är klar väljer du **[!UICONTROL Save]**.
+
+#### Server {#server-general-setting}
+
+När du skapar ett konto tillhandahåller Adobe Dynamic Media automatiskt de tilldelade servrarna för ditt företag. De här servrarna används för att skapa URL-strängar för din webbplats och dina program. Dessa URL-anrop är specifika för ditt konto.
+
+| Alternativ | Beskrivning |
+| --- | --- |
+| **[!UICONTROL Published Server Name]** | Krävs.<br>Den här servern är den CDN-server (Content Deliver Network) som används i alla systemgenererade URL-anrop som är specifika för ditt konto. Ändra inte det här servernamnet om du inte har fått instruktioner om att göra det av Adobe tekniska support. Namnet måste använda `https://` i banan. |
+| **[!UICONTROL Origin Server Name]** | Krävs.<br>Den här servern används endast för kvalitetstestning. Ändra inte det här servernamnet om du inte har fått instruktioner om att göra det från Adobe tekniska support. |
+
+#### Överför till program {#upload-to-application}
+
+* **[!UICONTROL Overwrite Images]**
+
+   Adobe Dynamic Media tillåter inte att två filer har samma namn. Varje objekts Adobe Dynamic Media-ID (bildnamn minus filnamnstillägg) måste vara unikt. På grund av den här regeln **[!UICONTROL Upload to Application]** har en överskrivning. Den exakta effekten av det här alternativet beror på det angivna alternativet Skriv över bilder som du har valt. De här alternativen anger hur ersättningsbilder överförs: om de ersätter originalbilderna eller blir dubblettbilder. Namnet på duplicerade bilder ändras med ett `-1`. Till exempel: `chair.tif` har bytt namn `chair-1.tif`. De här alternativen påverkar bilder som har överförts till en annan mapp än den ursprungliga eller bilder med ett annat filnamnstillägg än den ursprungliga, till exempel JPG, TIF eller PNG.
+
+   | Skriv över bilder, alternativ | Beskrivning |
+   | --- | --- |
+   | **[!UICONTROL Overwrite in current folder, same base name/extension]** | Standard.<br>Det här alternativet är den striktaste regeln för ersättning. Det kräver att du överför ersättningsbilden till samma mapp som originalbilden och att ersättningsbilden har samma filnamnstillägg som originalbilden. Om dessa krav inte uppfylls skapas en dubblett. |
+   | **[!UICONTROL Overwrite in current folder, same base name regardless of extension]** | Kräver att du överför ersättningsbilden till samma mapp som originalet, men filnamnstillägget kan skilja sig från originalet. Till exempel ersätter stol.tif stol.jpg. |
+   | **[!UICONTROL Overwrite in any folder, same base asset name/extension]** | Kräver att ersättningsbilden har samma filnamnstillägg som den ursprungliga bilden (t.ex. måste stol.jpg ersätta stol.jpg, inte stol.tif). Du kan dock överföra ersättningsbilden till en annan mapp än den ursprungliga. Den uppdaterade bilden finns i den nya mappen; filen inte längre kan hittas på sin ursprungliga plats. |
+   | **[!UICONTROL Overwrite in any folder, same base asset name regardless of extension]** | Det här alternativet är den mest omfattande ersättningsregeln. Du kan överföra en ersättningsbild till en annan mapp än den ursprungliga, överföra en fil med ett annat filnamnstillägg och ersätta den ursprungliga filen. Om originalfilen finns i en annan mapp finns ersättningsbilden i den nya mappen som den överfördes till. |
+
+* **[!UICONTROL Preserve Crop]**
+
+   Kontrollerar bevarande av befintliga manuella beskärningsdefinitioner.
+
+   Se även `preserveCrop` in [UploadPostJob](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-upload-post-job.html) och [ÅterbearbetaResurserJobb](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-reprocess-assets-job.html), båda i referenshandboken för Dynamic Media Viewer.
+
+#### Standardalternativ för överföring {#default-upload-options}
+
+##### Fliken Bildredigering {#image-editing-tab}
+
+Med det här filtret kan du finjustera en skärpefiltereffekt på den slutliga nedsamplade bilden. Det hjälper dig att styra intensiteten i effekten, radien för effekten (mätt i pixlar) och ett tröskelvärde för kontrast som ignoreras.
+
+För effekten Oskarp mask används samma alternativ som för filtret Oskarp mask i Photoshop. Till skillnad från vad namnet antyder är Oskarp mask ett skärpefilter.
+
+| Oskarp mask, alternativ | Beskrivning |
+| --- | --- |
+| **[!UICONTROL Amount]** | Krävs.<br>Styr mängden kontrast som används på kantpixlar.<br>Tänk på det som intensiteten i effekten. Den största skillnaden mellan mängdvärdena för Oskarp mask i Adobe Dynamic Media och mängdvärdena i Adobe Photoshop är att Photoshop har ett intervall på 1 till 500 %. I Adobe Dynamic Media är värdeintervallet `0.0` till `5.0`. Värdet 5.0 i Adobe Dynamic Media motsvarar 500 % i Photoshop. värdet 0,9 motsvarar 90 % och så vidare. |
+| **[!UICONTROL Radius]** | Krävs.<br>Styr radien för effekten.<br>Värdeintervallet är `0` till `250`. Effekten körs på alla pixlar i en bild och strålar ut från alla pixlar i alla riktningar. Radien mäts i pixlar. Om du till exempel vill få en liknande skärpeeffekt för en bild på 2 000 x 2 000 pixlar och en bild på 500 x 500 pixlar anger du en radie på två pixlar för bilden på 2 000 x 2 000 pixlar. Ange sedan radien 1 pixel på bilden med 500 x 500 pixlar. Ett större värde används för en bild som har fler pixlar. |
+| **[!UICONTROL Threshold]** | Krävs.<br>Tröskelvärde är ett kontrastintervall som ignoreras när filtret Oskarp mask används. Den här effekten är viktig så att inget &quot;brus&quot; uppstår i en bild när filtret används. Värdeintervallet är `0` - `255`, vilket är antalet steg för intensitet i en gråskalebild. `0`=svart, `128`=50% grå och `255`=vitt.<br>Ett tröskelvärde på `12` ignorerar små variationer i hudtonens ljusstyrka för att undvika att lägga till brus, men ändå ger kantkontrast till kontrastrika områden som där ögonfransar möter hud.<br>Om du har ett foto av någon annans ansikte påverkar Oskarp mask de kontrastrika delarna av bilden. Till exempel där ögonfransar och hud möts för att skapa ett tydligt kontrastområde och den utjämnade huden. Även den jämnaste huden uppvisar subtila förändringar i intensitetsvärden. Om du inte använder ett tröskelvärde framhäver filtret dessa subtila ändringar i hudpixlar. I sin tur skapas en högljudd och oönskad effekt medan kontrasten på ögonfransarna ökar, vilket ökar skärpan.<br>För att undvika det här problemet introduceras ett tröskelvärde som instruerar filtret att ignorera pixlar som inte förändrar kontrasten dramatiskt, som mjuk hud.<br>Lägg märke till texturen bredvid dragkedjan i zippargrafiken som visades tidigare. Bildbrus visas eftersom tröskelvärdena var för låga för att undertrycka bruset. |
+| **[!UICONTROL Monochrome]** | Markera för att få bildintensiteten oskarp mask (intensitet).<br>Avmarkera alternativet om du vill skapa en oskarp mask för varje färgkomponent separat. |
+
+Se även [Öka skärpan i bilder i Adobe Dynamic Media och på Image Server](/help/assets/assets/sharpening_images.pdf).
+
+##### PostScript-flik {#postscript-tab}
+
+Du kan rastrera Adobe PostScript®-filer, behålla genomskinliga bakgrunder, välja en upplösning och välja en färgrymd.
+
+Du kan använda Adobe PostScript®-filer (EPS) i Adobe Dynamic Media. I Adobe Dynamic Media finns kommandon för att konfigurera de här filerna när du överför dem.
+
+När du överför PostScript-bildfiler (EPS) kan du formatera dem på olika sätt. Du kan rastrera filerna, behålla den genomskinliga bakgrunden, välja en upplösning och välja en färgrymd.
+
+| PostScript, alternativ | Beskrivning |
+| --- | --- |
+| **[!UICONTROL Processing]** | Välj Rastrera om du vill konvertera vektorgrafik i filen till bitmappsformat. |
+| **[!UICONTROL Maintain transparent background in rendered images]** | Bevarar filens genomskinlighet i bakgrunden. |
+| **[!UICONTROL Resolution (pixel/inch)]** | Anger upplösningsinställningen. Den här inställningen avgör hur många pixlar som visas per tum i filen. |
+| **[!UICONTROL Color space]** | ・ **[!UICONTROL Detect automatically]** - Behåller filens färgrymd.<br>・ **[!UICONTROL Force as RGB]** - Konverterar till färgmodellen RGB.<br>・ **[!UICONTROL Force as CMYK]** - Konverterar till CMYK-färgmodellen.<br>・ **[!UICONTROL Force as Grayscale]** - Konverterar till färgmodellen Gråskala. |
+
+##### Fliken Photoshop {#photoshop-tab}
+
+Du kan skapa mallar från Adobe® Photoshop®-filer, behålla lager, ange hur lager ska namnges, extrahera text och ange hur bilder ska förankras i mallar.
+
+| Photoshop | Beskrivning |
+| --- | --- |
+| **[!UICONTROL Maintain layers]** | Rippar lagren i PSD, om det finns några, till enskilda resurser. Resurslagren förblir kopplade till PSD. Du kan visa dem genom att öppna filen PSD i detaljvyn och välja lagerpanelen. Se Visa och redigera lager i en PSD-fil. |
+| **[!UICONTROL Create template]** | Skapar en mall från lagren i filen PSD. |
+| **[!UICONTROL Extract text]** | Extraherar texten så att användare kan söka efter text i ett visningsprogram. |
+| **[!UICONTROL Extend layers to background size]** | Utökar storleken på överlappade bildlager till storleken på bakgrundslagret. |
+| **[!UICONTROL Layer naming]** | Utökar storleken på överlappade bildlager till storleken på bakgrundslagret.<br>・ **[!UICONTROL Layer name]** - Namnger bilderna efter deras lagernamn i filen PSD. Ett lager med namnet Price Tag i den ursprungliga PSD-filen blir till exempel en bild med namnet Price Tag. Om lagernamnen i filen PSD är Photoshop standardlagernamn (Bakgrund, Lager 1, Lager 2 och så vidare) får bilderna namn efter sina lagernummer i filen PSD. <br>・ **[!UICONTROL Photoshop and layer number]** - Namnger bilderna efter deras lagernummer i filen PSD och ignorerar de ursprungliga lagernamnen. Bilderna får samma namn som Photoshop-filnamnet och ett nummer i det tillagda lagret. Det andra lagret i en fil med namnet `Spring Ad.psd` är namngiven `Spring Ad_2` även om det har ett icke-standardnamn i Photoshop.<br>・ **[!UICONTROL Photoshop and layer name]** - Namnger bilderna efter PSD-filen följt av lagernamnet eller lagernumret. Lagernumret används om lagernamnen i filen PSD är Photoshop standardlagernamn. Ett lager med namnet `Price Tag` i en PSD-fil med namnet `SpringAd` är namngiven `Spring Ad_Price Tag`. Ett lager med standardnamnet Lager2 anropas `Spring Ad_2`. |
+| **[!UICONTROL Anchor]** | Ange hur bilder ska förankras i mallar som genereras från lagerkompositionen som skapas från filen PSD. Som standard är ankarpunkten i mitten. Med en central ankarpunkt kan ersättningsbilder bäst fylla samma område, oavsett ersättningsbildens proportioner. Bilder med en annan aspekt som ersätter den här bilden upptar i själva verket samma utrymme när de refererar till mallen och använder parameterersättning. Ändra till en annan inställning om ditt program kräver att ersättningsbilderna fyller ut det tilldelade utrymmet i mallen. |
+
+##### PDF, flik {#pdf-tab}
+
+Du kan välja att rastrera filerna, extrahera sökord och länkar, ange upplösning och välja en färgrymd.
+
+| PDF, alternativ | Beskrivning |
+| --- | --- |
+| **[!UICONTROL Processing]** | ・ **[!UICONTROL None]** - Ingen bearbetning av PDF görs.<br>・ **[!UICONTROL Thumbnail]** - Rippar varje sida i filen PDF och konverterar den till en miniatyrbild.<br> ・ **[!UICONTROL Rasterize]** - Rippar sidorna i PDF-filen och konverterar vektorgrafik till bitmappsbilder. Välj det här alternativet om du vill skapa en e-katalog. |
+| **[!UICONTROL Extract]** | ・ **[!UICONTROL None]** - Inga sökord eller länkar extraheras från PDF.<br>・ **[!UICONTROL Search words]** - Extraherar sökord från PDF-filen så att filen kan genomsökas efter nyckelord i en eCatalog Viewer.<br>・ **[!UICONTROL Links]** - Extraherar länkar från PDF-filerna och konverterar dem till Image Maps som används i en eCatalog Viewer.<br>・ **[!UICONTROL Search words and links]** - Extraherar både sökord och länkar för användning i ett eCatalog-visningsprogram. |
+| **[!UICONTROL Resolution (pixel/inch)]** | Anger upplösningsinställningen. Den här inställningen avgör hur många pixlar som visas per tum i filen PDF. Standardvärdet är 150. |
+| **[!UICONTROL Color space]** | ・ **[!UICONTROL Detect automatically]** - Behåller färgrymden för PDF-filen.<br>・ **[!UICONTROL Force as RGB]** - Konverterar till färgmodellen RGB.<br>・ **[!UICONTROL Force as CMYK]** - Konverterar till CMYK-färgmodellen.<br>・ **[!UICONTROL Force as Grayscale]** - Konverterar till färgmodellen Gråskala. |
+
+##### Fliken Illustrator {#illustrator-tab}
+
+Du kan rastrera Adobe Illustrator®-filer, behålla genomskinliga bakgrunder, välja en upplösning och välja en färgrymd.
+
+Du kan använda Adobe® Illustrator®-filer (AI) i Adobe Dynamic Media. I Adobe Dynamic Media finns kommandon för att konfigurera de här filerna när du överför dem.
+
+När du överför Illustrator-bildfiler (AI) kan du formatera dem på olika sätt. Du kan rastrera filerna, behålla den genomskinliga bakgrunden, välja en upplösning och välja en färgrymd. Formateringsalternativ för PostScript- och Illustrator-filer finns på överföringsskärmen under PostScript-alternativ och Illustrator-alternativ i rutan Överför jobbalternativ.
+
+
+| Illustrator | Beskrivning |
+| --- | --- |
+| **[!UICONTROL Processing]** | Välj Rastrera om du vill konvertera vektorgrafik i filen till bitmappsformat. |
+| **[!UICONTROL Maintain transparent background in rendered images]** | Bevarar filens genomskinlighet i bakgrunden. |
+| **[!UICONTROL Resolution (pixel/inch)]** | Anger upplösningsinställningen. Den här inställningen avgör hur många pixlar som visas per tum i filen. |
+| **[!UICONTROL Color space]** | ・ **[!UICONTROL Detect automatically]** - Behåller filens färgrymd.<br>・ **[!UICONTROL Force as RGB]** - Konverterar till färgmodellen RGB.<br>・ **[!UICONTROL Force as CMYK]** - Konverterar till CMYK-färgmodellen.<br>・ **[!UICONTROL Force as Grayscale]** - Konverterar till färgmodellen Gråskala. |
+
+
+**[!UICONTROL Default Color Profiles]** - Se [Konfigurera färghantering](#configuring-color-management) för ytterligare information.
+
+>[!NOTE]
+Som standard visas 15 återgivningar när du väljer **[!UICONTROL Renditions]** och 15 visningsförinställningar när du väljer **[!UICONTROL Viewers]** i resursens detaljvy. Du kan öka den här gränsen. Se [Öka antalet bildförinställningar som visas](/help/assets/managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display) eller [Öka antalet visningsförinställningar som visas](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display).
+
+### (Valfritt) Ytterligare konfigurationsuppgifter
+
+Tillvalsuppgifter för konfiguration och konfiguration omfattar följande:
+
+* [Redigera MIME-typer för format som stöds](#editing-mime-types-for-supported-formats) **RICK: BEHÅLL?**
+* [Lägg till MIME-typer för format som inte stöds](#adding-mime-types-for-unsupported-formats) **RICK: BEHÅLL?**
+* [Skapa gruppuppsättningsförinställningar för automatisk generering av bilduppsättningar och snurpuppsättningar](#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets) **RICK: BEHÅLL?**
+
+* **[!UICONTROL Compatibility Attributes]** - **RICK: BEHÖVER DU FORTFARANDE? VAR I KLASSISK** Med den här inställningen kan inledande och avslutande stycken i textlager hanteras som i version 3.6 för bakåtkompatibilitet.
+* **[!UICONTROL Localization Support]** - **RICK: BEHÖVER DU FORTFARANDE? VAR I KLASSISK** Med de här inställningarna kan du hantera flera språkattribut. Här kan du också ange en sträng för språkområdeskarta så att du kan definiera vilka språk du vill ha stöd för de olika verktygstipsen i visningsprogram. Mer information om konfiguration **[Lokaliseringsstöd]**, se [Att tänka på när lokalisering av resurser konfigureras](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/publish-setup.html#considerations-when-setting-up-localization-of-assets).
+
 #### Redigera MIME-typer för format som stöds {#editing-mime-types-for-supported-formats}
+
+**RICK: BEHÅLL SOM DET ÄR?**
 
 Du kan definiera vilka resurstyper som bearbetas av Dynamic Media och anpassa avancerade parametrar för resurshantering. Du kan till exempel ange parametrar för tillgångsbearbetning för att göra följande:
 
@@ -363,6 +691,8 @@ Se [Överför resurser](/help/assets/manage-assets.md#uploading-assets).
 1. I det övre vänstra hörnet på sidan väljer du **[!UICONTROL CRXDE Lite]** för att återvända till Experience Manager.
 
 #### Lägga till MIME-typer för format som inte stöds {#adding-mime-types-for-unsupported-formats}
+
+**RICK: BEHÅLL SOM DET ÄR?**
 
 Du kan lägga till anpassade MIME-typer för format som inte stöds i Experience Manager Assets. Se till att alla nya noder som du lägger till i CRXDE Lite inte tas bort av Experience Manager genom att flytta MIME-typen före `image_`. Kontrollera också att dess aktiverade värde är inställt på **[!UICONTROL false]**.
 
@@ -416,6 +746,8 @@ Du kan lägga till anpassade MIME-typer för format som inte stöds i Experience
 
 #### Skapa gruppuppsättningsförinställningar för automatisk generering av bilduppsättningar och snurpuppsättningar {#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets}
 
+**RICK: BEHÅLL SOM DET ÄR?**
+
 Använd förinställningar för gruppuppsättningar för att automatisera skapandet av bilduppsättningar eller snurra uppsättningar medan resurserna överförs till Dynamic Media.
 
 Definiera först namnkonventionen för hur resurser grupperas i en uppsättning. Skapa sedan en förinställning för gruppuppsättning som är en unik, självständig uppsättning instruktioner. Det måste definiera hur uppsättningen ska skapas med bilder som matchar de definierade namnkonventionerna i förinställningsreceptet.
@@ -433,6 +765,8 @@ Du kan också använda **[!UICONTROL View Code]** utan formulärfält tillgängl
 Det finns två element för definition, Matcha och Basnamn. Med dessa fält kan du definiera alla element i en namnkonvention och identifiera den del av konventionen som används för att namnge den uppsättning i vilken de finns. Ett företags namnkonvention använder ofta en eller flera definitionsrader för vart och ett av dessa element. Du kan använda så många rader för din unika definition och gruppera dem i distinkta element, t.ex. för Huvudbild, Färgelement, Alternativa vyer och Färgruteelement.
 
 **Så här konfigurerar du standardnamn:**
+
+**RICK: BEHÅLL SOM DET ÄR?**
 
 1. Öppna [Dynamic Media Classic desktop application](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)och logga sedan in på ditt konto.
 
@@ -466,6 +800,8 @@ Du kan skapa, redigera och hantera dina gruppuppsättningsförinställningar. De
 Du kan antingen använda formulärfältsmetoden för att definiera en gruppuppsättningsförinställning eller kodmetoden, som gör att du kan använda reguljära uttryck. Precis som i Standardnamn kan du välja Visa kod samtidigt som du definierar i formulärvyn och använda reguljära uttryck för att skapa definitioner. Du kan också avmarkera en vy om du vill använda den ena eller den andra enbart.
 
 **Så här skapar du en förinställning för gruppuppsättning:**
+
+**RICK: BEHÅLL SOM DET ÄR?**
 
 1. Öppna [Dynamic Media Classic desktop application](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)och logga sedan in på ditt konto.
 
@@ -522,6 +858,8 @@ Gruppering för den delade resursnamndelen i rotationsuppsättningen läggs till
 När snurruppsättningen överförs och publiceras aktiverar du namnet på det tvådimensionella snurrreceptet som visas under **[!UICONTROL Batch Set Presets]** i **[!UICONTROL Upload Job Options]** -dialogrutan.
 
 **Så här skapar du en gruppuppsättningsförinställning för automatisk generering av en 2D-snurpuppsättning:**
+
+**RICK: BEHÅLL SOM DET ÄR?**
 
 1. Öppna [Dynamic Media Classic desktop application](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)och logga sedan in på ditt konto.
 
@@ -580,6 +918,8 @@ När snurruppsättningen överförs och publiceras aktiverar du namnet på det t
 
 ### (Valfritt) Justera prestanda för Dynamic Media - Scene7-läge {#optional-tuning-the-performance-of-dynamic-media-scene-mode}
 
+**RICK: BEHÅLL SOM DET ÄR?**
+
 Adobe rekommenderar följande finjusteringstips för synkroniseringsprestanda/skalbarhet för att Dynamic Media - Scene7-läget ska fungera smidigt:
 
 * Uppdaterar de fördefinierade jobbparametrarna för bearbetning av olika filformat.
@@ -588,6 +928,8 @@ Adobe rekommenderar följande finjusteringstips för synkroniseringsprestanda/sk
 * Uppdaterar de maximala överföringsanslutningarna till Dynamic Media Classic-servern.
 
 #### Uppdatera de fördefinierade jobbparametrarna för bearbetning av olika filformat
+
+**RICK: BEHÅLL SOM DET ÄR?**
 
 Du kan justera jobbparametrar för snabbare bearbetning när du överför filer. Om du till exempel överför PSD-filer, men inte vill bearbeta dem som mallar, kan du ange att lagerextraheringen ska vara false (av). I så fall visas den justerade jobbparametern enligt följande: `process=None&createTemplate=false`.
 
@@ -613,6 +955,8 @@ Om du vill uppdatera någon av de här parametrarna följer du stegen i [Aktiver
 
 #### Uppdatera den tillfälliga arbetsflödeskön för Granite {#updating-the-granite-transient-workflow-queue}
 
+**RICK: BEHÅLL SOM DET ÄR?**
+
 Kön för Bevilja övergång används för **[!UICONTROL DAM Update Asset]** arbetsflöde. I Dynamic Media används den för bildhantering.
 
 **Så här uppdaterar du den tillfälliga arbetsflödeskön för Granite:**
@@ -636,6 +980,8 @@ Kön för Bevilja övergång används för **[!UICONTROL DAM Update Asset]** arb
 
 #### Uppdatera arbetsflödeskön för Granite {#updating-the-granite-workflow-queue}
 
+**RICK: BEHÅLL SOM DET ÄR?**
+
 Beviljad arbetsflödeskö används för icke-tillfälliga arbetsflöden. I Dynamic Media bearbetar man video med **[!UICONTROL Dynamic Media Encode Video]** arbetsflöde.
 
 **Så här uppdaterar du arbetsflödeskön för Granite:**
@@ -654,6 +1000,8 @@ Beviljad arbetsflödeskö används för icke-tillfälliga arbetsflöden. I Dynam
 1. Välj **[!UICONTROL Save]**.
 
 #### Uppdatera Dynamic Media Classic överföringsanslutning {#updating-the-scene-upload-connection}
+
+**RICK: BEHÅLL SOM DET ÄR?**
 
 Inställningen Scene7 Upload Connection synkroniserar Experience Manager-resurser med Dynamic Media Classic-servrar.
 
@@ -674,6 +1022,8 @@ Inställningen Scene7 Upload Connection synkroniserar Experience Manager-resurse
 
 ### (Valfritt) Filtrera resurser för replikering {#optional-filtering-assets-for-replication}
 
+**RICK: BEHÅLL SOM DET ÄR**
+
 I distributioner som inte är från Dynamic Media replikerar du *alla* resurser (både bilder och video) från Experience Manager-redigeringsmiljön till Experience Manager-publiceringsnoden. Det här arbetsflödet är nödvändigt eftersom publiceringsservrarna i Experience Manager också levererar resurserna.
 
 I Dynamic Media-distributioner finns det dock inget behov av att replikera samma resurser till publiceringsnoderna i Experience Manager eftersom resurserna levereras via Cloud Servicen. Ett sådant&quot;hybridpubliceringsarbetsflöde&quot; undviker extra lagringskostnader och längre bearbetningstider för att replikera resurser. Annat innehåll, t.ex. webbplatssidor, fortsätter att hanteras från Experience Manager-publiceringsnoderna.
@@ -681,6 +1031,8 @@ I Dynamic Media-distributioner finns det dock inget behov av att replikera samma
 Med filtren kan du *exclude* resurser från att replikeras till publiceringsnoden Experience Manager.
 
 #### Använd standardfiltren för replikering {#using-default-asset-filters-for-replication}
+
+**RICK: BEHÅLL SOM DET ÄR**
 
 Om du använder Dynamic Media för bilder, video eller båda, kan du använda standardfiltren som finns i Adobe. Följande filter är aktiva som standard:
 
@@ -693,6 +1045,8 @@ Om du använder Dynamic Media för bilder, video eller båda, kan du använda st
 Filter gäller för MIME-typer och kan inte vara sökvägsspecifika.
 
 #### Anpassa resursfilter för replikering {#customizing-asset-filters-for-replication}
+
+**RICK: BEHÅLL SOM DET ÄR**
 
 1. I Experience Manager väljer du Experience Manager logotypen för att komma åt den globala navigeringskonsolen och navigera till **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL CRXDE Lite]**.
 1. I det vänstra mappträdet navigerar du till `/etc/replication/agents.author/publish/jcr:content/damRenditionFilters` för att granska filtren.
