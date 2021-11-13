@@ -12,9 +12,9 @@ hide: true
 hidefromtoc: true
 feature: Configuration,Scene7 Mode
 exl-id: null
-source-git-commit: bfa41deb156ffd0adb8138c11548912bc954f084
+source-git-commit: b6000516b88342d6abf8072623cfece43e2ba19d
 workflow-type: tm+mt
-source-wordcount: '10861'
+source-wordcount: '10874'
 ht-degree: 1%
 
 ---
@@ -115,7 +115,7 @@ Se [Installera funktionspaket 18912 för migrering av gruppresurser](/help/asset
    Välj **[!UICONTROL Connect to Dynamic Media]**.
 
    >[!NOTE]
-   **RICK: BEHÅLL SOM DET ÄR?** När du har fått ditt e-postmeddelande med Dynamic Media-autentiseringsuppgifter öppnar du [Dynamic Media Classic desktop application](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)och logga sedan in på ditt konto för att ändra ditt lösenord. The password provided in the provisioning email is system-generated and intended to be a temporary password only. Det är viktigt att du uppdaterar lösenordet så att Dynamic Media Cloud Service har rätt autentiseringsuppgifter.
+   **RICK: BEHÅLL SOM DET ÄR?** När du har fått ditt e-postmeddelande med Dynamic Media-autentiseringsuppgifter öppnar du [Dynamic Media Classic desktop application](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)och logga sedan in på ditt konto för att ändra ditt lösenord. Lösenordet som anges i e-postmeddelandet om etablering genereras av systemet och är endast avsett som ett tillfälligt lösenord. Det är viktigt att du uppdaterar lösenordet så att Dynamic Media Cloud Service har rätt autentiseringsuppgifter.
 
 1. Ange följande när anslutningen lyckas. Rubriker med asterisk (*) krävs:
 
@@ -170,11 +170,11 @@ Om du vill anpassa konfigurationen ytterligare kan du utföra alla uppgifter und
 Om du vill anpassa konfigurationen och konfigurationen av Dynamic Media - Scene7 eller optimera prestandan ytterligare kan du göra något av följande: *valfri* uppgifter:
 
 * [(Valfritt) Konfigurera Dynamic Media - Scene7-läge för överföring av resurser som är större än 2 GB](#optional-config-dms7-assets-larger-than-2gb)
-
-* [(Valfritt) Installation och konfiguration av Dynamic Media - inställningar för Scene7-läge](#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings)
-
+* [(Valfritt) Konfigurera Dynamic Media Publish Setup](#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings)
+   * [(Valfritt) Testa resurser innan du publicerar dem](#test-assets-before-making-public)
+* [(Valfritt) Konfigurera allmänna inställningar för Dynamic Media](#configuring-application-general-settings)
+* [(Valfritt) Ytterligare konfigurationsuppgifter](#additional-configuration-tasks)
 * [(Valfritt) Justera prestanda för Dynamic Media - Scene7-läge](#optional-tuning-the-performance-of-dynamic-media-scene-mode)
-
 * [(Valfritt) Filtrera resurser för replikering](#optional-filtering-assets-for-replication)
 
 ### (Valfritt) Konfigurera Dynamic Media - Scene7-läge för överföring av resurser som är större än 2 GB {#optional-config-dms7-assets-larger-than-2gb}
@@ -197,7 +197,7 @@ Om du tänker använda den här funktionen bör du vara medveten om följande kr
    Om du vill aktivera hämtning av direkt binär åtkomst anger du egenskapen `presignedHttpDownloadURIExpirySeconds > 0` i datalagerkonfigurationen. Värdet måste vara tillräckligt långt för att ladda ned större binärfiler och eventuellt försöka igen.
 
 * Resurser som är större än 15 GB överförs inte. (Storleksgränsen anges i steg 8 nedan.)
-* När **[!UICONTROL Dynamic Media Reprocess]** arbetsflödet för resurser aktiveras för en mapp, och stora resurser som redan är synkroniserade med Dynamic Media-företaget bearbetas om. However, if any large assets are not yet synced in the folder, it does not upload the asset. Therefore, to sync existing large assets in Dynamic Media, you can run **[!UICONTROL Dynamic Media Reprocess]** assets workflow on individual assets.
+* När **[!UICONTROL Dynamic Media Reprocess]** arbetsflödet för resurser aktiveras för en mapp, och stora resurser som redan är synkroniserade med Dynamic Media-företaget bearbetas om. Om stora resurser ännu inte har synkroniserats i mappen överförs inte resursen. Om du vill synkronisera stora resurser i Dynamic Media kan du därför köra **[!UICONTROL Dynamic Media Reprocess]** arbetsflöde för resurser på enskilda resurser.
 
 **Så här konfigurerar du Dynamic Media - Scene7-läge för överföring av resurser som är större än 2 GB:**
 
@@ -353,7 +353,7 @@ De här inställningarna gäller för miniatyrbildernas standardutseende och -ju
 | **[!UICONTROL Horizontal alignment]** | Anger den vågräta justeringen för miniatyrbilden i svarsbildsrektangeln som anges av `wid=` och `hei=` värden.<br>Används endast för miniatyrbildsbegäranden (`req=tmb`) och när **[!UICONTROL Default Thumbnail Type]** inställningen är inställd på **[!UICONTROL Fit]**.<br>Det finns tre horisontella justeringar att välja mellan: **[!UICONTROL Center alignment]**, **[!UICONTROL Left alignment]** och **[!UICONTROL Right alignment]**.<br>Se även [ThumbHorizAlign](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-thumbhorizalign.html) i referenshandboken för Dynamic Media Viewer. |
 | **[!UICONTROL Vertical alignment]** | Anger den lodräta justeringen för miniatyrbilden i svarsbildsrektangeln som anges av `wid=` och `hei=` värden. Används endast för miniatyrbildsbegäranden (`req=tmb`) och när **[!UICONTROL Default Thumbnail Type]** inställningen är inställd på **[!UICONTROL Fit]**.<br>Det finns tre lodräta justeringar att välja mellan: **[!UICONTROL Top alignment]**, **[!UICONTROL Center alignment]** och **[!UICONTROL Bottom alignment]**.<br>Se även [ThumbVertAlign](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-thumbvertalign.html) i referenshandboken för Dynamic Media Viewer. |
 | **[!UICONTROL Default cache time to live]** | Anger ett standardutgångsintervall i timmar om en viss katalogpost inte innehåller ett giltigt värde för katalogförfallotid. Ange till `-1` för att markera som aldrig förfaller. <br>Se även [Förfaller](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-expiration.html) i referenshandboken för Dynamic Media Viewer. |
-| **[!UICONTROL Default thumbnail type]** | Anger ett standardvärde för miniatyrbildstypen om en viss katalogpost inte innehåller ett giltigt katalogvärde för ThumbType. Used only for thumbnail requests (`req=tmb`).<br>Det finns tre typer av miniatyrer att välja bland: **[!UICONTROL Crop]**, **[!UICONTROL Fit]** och **[!UICONTROL Texture]**.<br>Se även [ThumbType](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-thumbtype.html) i referenshandboken för Dynamic Media Viewer. |
+| **[!UICONTROL Default thumbnail type]** | Anger ett standardvärde för miniatyrbildstypen om en viss katalogpost inte innehåller ett giltigt katalogvärde för ThumbType. Används endast för miniatyrbildsbegäranden (`req=tmb`).<br>Det finns tre typer av miniatyrer att välja bland: **[!UICONTROL Crop]**, **[!UICONTROL Fit]** och **[!UICONTROL Texture]**.<br>Se även [ThumbType](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-thumbtype.html) i referenshandboken för Dynamic Media Viewer. |
 | **[!UICONTROL Default thumbnail resolution]** | Anger ett standardvärde för upplösningen av miniatyrbildobjektet om en viss katalogpost inte innehåller ett giltigt ThumbRes-katalogvärde. Används endast för miniatyrbildsbegäranden (`req=tmb`) och när **[!UICONTROL Default thumbnail type]** inställningen är inställd på **[!UICONTROL Texture]**.<br>Se även [ThumbRes](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-thumbres.html) i referenshandboken för Dynamic Media Viewer. |
 
 #### Fliken Färghanteringsattribut {#color-management-attributes-tab}
@@ -634,8 +634,8 @@ När du överför Illustrator-bildfiler (AI) kan du formatera dem på olika sät
 | --- | --- |
 | **[!UICONTROL Processing]** | Välj Rastrera om du vill konvertera vektorgrafik i filen till bitmappsformat. |
 | **[!UICONTROL Maintain transparent background in rendered images]** | Bevarar filens genomskinlighet i bakgrunden. |
-| **[!UICONTROL Resolution (pixel/inch)]** | Determines the resolution setting. This setting determines how many pixels are displayed per inch in the file. |
-| **[!UICONTROL Color space]** | • **[!UICONTROL Detect automatically]** - Retains the color space of the file.<br>• **[!UICONTROL Force as RGB]** - Converts to the RGB color space.<br>・ **[!UICONTROL Force as CMYK]** - Konverterar till CMYK-färgmodellen.<br>・ **[!UICONTROL Force as Grayscale]** - Konverterar till färgmodellen Gråskala. |
+| **[!UICONTROL Resolution (pixel/inch)]** | Anger upplösningsinställningen. Den här inställningen avgör hur många pixlar som visas per tum i filen. |
+| **[!UICONTROL Color space]** | ・ **[!UICONTROL Detect automatically]** - Behåller filens färgrymd.<br>・ **[!UICONTROL Force as RGB]** - Konverterar till färgmodellen RGB.<br>・ **[!UICONTROL Force as CMYK]** - Konverterar till CMYK-färgmodellen.<br>・ **[!UICONTROL Force as Grayscale]** - Konverterar till färgmodellen Gråskala. |
 
 
 **[!UICONTROL Default Color Profiles]** - Se [Konfigurera färghantering](#configuring-color-management) för ytterligare information.
@@ -643,7 +643,7 @@ När du överför Illustrator-bildfiler (AI) kan du formatera dem på olika sät
 >[!NOTE]
 Som standard visas 15 återgivningar när du väljer **[!UICONTROL Renditions]** och 15 visningsförinställningar när du väljer **[!UICONTROL Viewers]** i resursens detaljvy. Du kan öka den här gränsen. Se [Öka antalet bildförinställningar som visas](/help/assets/managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display) eller [Öka antalet visningsförinställningar som visas](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display).
 
-### (Valfritt) Ytterligare konfigurationsuppgifter
+### (Valfritt) Ytterligare konfigurationsuppgifter {#additional-configuration-tasks}
 
 Tillvalsuppgifter för konfiguration och konfiguration omfattar följande:
 
@@ -824,11 +824,11 @@ Du kan antingen använda formulärfältsmetoden för att definiera en gruppupps�
 
    Som standard sorteras dina resurser alfanumeriskt. Du kan dock använda en kommaavgränsad lista med reguljära uttryck för att definiera ordningen.
 
-1. For Set Naming and Creation Convention, specify the suffix or prefix to the base name you defined in the Asset Naming Convention. Ange också var uppsättningen ska skapas i mappstrukturen för Dynamic Media.
+1. Ange suffixet eller prefixet till basnamnet som du definierade i konventionen om namngivning av tillgångar för Ange namngivning och skapande. Ange också var uppsättningen ska skapas i mappstrukturen för Dynamic Media.
 
    Om du definierar ett stort antal uppsättningar ska uppsättningarna hållas åtskilda från de mappar som innehåller själva resurserna. Skapa till exempel en mapp för bilduppsättningar och placera genererade uppsättningar här.
 
-1. In the Details panel, select **[!UICONTROL Save]**.
+1. På panelen Detaljer väljer du **[!UICONTROL Save]**.
 1. Välj **[!UICONTROL Active]** bredvid den nya förinställningens namn.
 
    När du aktiverar förinställningen används den för att generera uppsättningen när du överför resurser till Dynamic Media.
