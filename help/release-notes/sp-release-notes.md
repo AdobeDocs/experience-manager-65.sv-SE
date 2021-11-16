@@ -4,9 +4,9 @@ description: Versionsinformation som är specifik för [!DNL Adobe Experience Ma
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: 14339f6a34952c00351c6dee8537b5df6f6fbcd3
+source-git-commit: 0a35b26c5f790d67db55421b8f3e98e5ddb30528
 workflow-type: tm+mt
-source-wordcount: '4308'
+source-wordcount: '4302'
 ht-degree: 0%
 
 ---
@@ -92,7 +92,7 @@ Nedan följer en lista över korrigeringar i [!DNL Experience Manager] 6.5.10.0.
 * När du befordrar en programstart kommer ändringarna i den befordrade programstarten att introduceras till andra programstarter. Om en användare befordrar den dubbla lanseringen återspeglas det fördubblade innehållet på källsidan (NPR-36893).
 * [!DNL Experience Manager] lägger till en grå kant i vissa PNG-bilder med genomskinlighet om du lägger till bilderna på en sida med Image Core-komponenten eller om du ändrar storlek med Foundation Image-komponenten (NPR-36879).
 * [!DNL Experience Manager Sites] Administratörsgränssnitt med ett stort antal mallar resulterar i långsam navigering (NPR-36870).
-* Uppgradera till Service Pack 9 så går det inte att skapa ett fåtal komponenter. Problemet tillåter inte [!DNL Sites] användare för att skapa nya sidor (NPR-36857).
+* Webbsidor återges inte när deras länkar ändras av anpassade serverfilterpaket (NPR-36857).
 * The `ContextHubImpl` metod skapar en `ResourceResolver` som inte är stängd. Det leder till varningsmeddelanden om långvarig körning `ResourceResolver` och tjänsten returnerar oväntade resultat vid tidpunkter (NPR-36853).
 * Vid synkronisering av en enda live-kopia från egenskaperna för en ritningssida synkroniseras även alla andra live-kopior (NPR-36829, NPR-36522).
 * När bara XLS MIME-typen används fungerar inte filöverföringsfunktionen som förväntat (NPR-36785).
@@ -157,7 +157,7 @@ Följande problem har åtgärdats i [!DNL Assets]:
 
 Följande tillgänglighetsförbättringar är tillgängliga i [!DNL Dynamic Media Viewers].
 
-* Skärmläsare lägger nu till en berättarröst i platshållartexten för att söka efter och lägga till e-postadress som ett obligatoriskt fält i Dela resurser som en länkdialogruta. Dessutom visas [!UICONTROL Please fill out this field] tooltip (CQ-4327761).
+* Skärmläsare lägger nu till en berättarröst i platshållartexten för att söka efter och lägga till e-postadress som ett obligatoriskt fält i Dela resurser som en länkdialogruta, och meddelar även [!UICONTROL Please fill out this field] tooltip (CQ-4327761).
 
 * Skärmläsare lägger nu in en korrekt berättarröst i namn och syften för olika fält i [!UICONTROL Image Preset Editor] om hur du får åtkomst till gränssnittsfält med tangentbordet (CQ-4325677).
 
