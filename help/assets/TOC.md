@@ -6,9 +6,9 @@ audience: end-user
 user-guide-title: Resurshandbok
 breadcrumb-title: Resurshandbok
 user-guide-description: Skapa, hantera, bearbeta och distribuera digitalt material.
-source-git-commit: 468a8d96153c67232524eea6f180c9ceb364d60a
+source-git-commit: 37d298378b7d33ec7c9803cbf9f4f7eb4d2193f9
 workflow-type: tm+mt
-source-wordcount: '649'
+source-wordcount: '651'
 ht-degree: 15%
 
 ---
@@ -173,5 +173,5 @@ ht-degree: 15%
    + [Videoåtergivningar](video-renditions.md)
 + Integration med andra lösningar {#integrations}
    + [Integrering med [!DNL Adobe Workfront]](workfront-integrations.md)
-   + [Installera [!DNL enhanced connector for [!DNL Workfront]]](workfront-connector-install.md)
-   + [Konfigurera [!DNL enhanced connector for [!DNL Workfront]]](workfront-connector-configure.md)
+   + [Installera [!DNL enhanced connector] for [!DNL Workfront]](workfront-connector-install.md)
+   + [Konfigurera [!DNL enhanced connector] for [!DNL Workfront]](workfront-connector-configure.md)

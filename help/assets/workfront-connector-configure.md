@@ -3,7 +3,7 @@ title: Konfigurera [!DNL Workfront for Experience Manager enhanced connector]
 description: Konfigurera [!DNL Workfront for Experience Manager enhanced connector]
 role: Admin
 feature: Integrations
-source-git-commit: 468a8d96153c67232524eea6f180c9ceb364d60a
+source-git-commit: 8d39e1c86e5185a181400f10b7822a57c9d3aeae
 workflow-type: tm+mt
 source-wordcount: '1519'
 ht-degree: 0%
@@ -19,7 +19,7 @@ En användare med administratörsåtkomst i [!DNL Adobe Experience Manager] konf
 >
 >Adobe kräver installation och konfiguration av [!DNL Adobe Workfront for Experience Manager enhanced connector] endast via certifierade partners eller [!DNL Adobe Professional Services]. Om den distribueras och konfigureras utan en certifierad partner eller [!DNL Adobe Professional Services], stöds den inte av Adobe.
 >
->Adobe kan släppa uppdateringar av [!DNL Adobe Workfront] och [!DNL Adobe Experience Manager] som gör denna koppling överflödig, Om detta inträffar kan kunderna behöva gå över från att använda denna koppling.
+>Adobe kan släppa uppdateringar av [!DNL Adobe Workfront] och [!DNL Adobe Experience Manager] som gör denna koppling redundant, Om detta inträffar kan kunderna behöva gå över från att använda denna koppling.
 
 ## Konfigurera händelseprenumerationer {#event-subscriptions}
 
