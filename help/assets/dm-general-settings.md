@@ -1,5 +1,5 @@
 ---
-title: Konfigurera allmän Dynamic Media-inställning
+title: Konfigurera allmänna inställningar för Dynamic Media
 description: Lär dig hur du hanterar allmänna inställningar i Dynamic Media. Du kan ange namnet på publiceringsservern och namnet på den ursprungliga servern här och ange ett alternativ för att skriva över bilder. Det finns också standardalternativ för överföring av oskarp maskering av bilder och överföringsalternativ för hur du vill bearbeta PostScript-, Adobe Photoshop-, PDF- och Adobe Illustrator-filer.
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -7,37 +7,43 @@ topic-tags: administering
 content-type: reference
 feature: Image Profiles
 role: User, Admin
+mini-toc-levels: 4
 hide: true
 hidefromtoc: true
 exl-id: null
-source-git-commit: 1985058faa2a85a4544b35f2a6925670207df9e1
+source-git-commit: 26f521868d0b983a05579d0d4c1ef50684b721ee
 workflow-type: tm+mt
-source-wordcount: '2043'
+source-wordcount: '2271'
 ht-degree: 0%
 
 ---
 
 
-# Konfigurera allmän Dynamic Media-inställning
+# Konfigurera allmänna inställningar för Dynamic Media
 
->[!IMPORTANT]
->
->Allmänna inställningar för Dynamic Media är endast tillgängliga om:
->
->* Du kör Dynamic Media i Scene7-läge.
->* Du har en *befintlig* **[!UICONTROL Dynamic Media Configuration]** (in **[!UICONTROL Cloud Services]**) i Adobe Experience Manager 6.5 eller Experience Manager as a Cloud Service.
->* Du är systemadministratör för Experience Manager med administratörsbehörighet.
+Konfigurerar **[!UICONTROL Dynamic Media General Settings]** är bara tillgängligt om:
 
+* Du kör Dynamic Media i Scene7-läge. Se [Aktivera Dynamic Media i Scene7-läge](/help/assets/config-dms7.md#enabling-dynamic-media-in-scene-mode)
+* Du har en *befintlig* **[!UICONTROL Dynamic Media Configuration]** (in **[!UICONTROL Cloud Services]**) i Adobe Experience Manager 6.5 eller Experience Manager as a Cloud Service.
+* Du är systemadministratör för Experience Manager med administratörsbehörighet.
+
+Allmänna inställningar i Dynamic Media är avsedda att användas av erfarna webbplatsutvecklare och programmerare. Adobe Dynamic Media rekommenderar användare som ändrar dessa publiceringsinställningar att känna till Dynamic Media om Adobe Experience Manager och grundläggande bildbehandlingsteknik.
 
 När du skapar ett konto tillhandahåller Adobe Dynamic Media automatiskt de tilldelade servrarna för ditt företag. De här servrarna används för att skapa URL-strängar för din webbplats och dina program. Dessa URL-anrop är specifika för ditt konto.
 
-Se även [Testa tjänsten Secure Testing](/help/assets/dm-publish-settings.md#test-assets-before-making-public).
+På sidan Dynamic Media Publish Setup (Publiceringsinställningar) anges standardinställningar som avgör hur resurser levereras från Adobe Dynamic Media-servrar till webbplatser eller program. Om ingen inställning har angetts levererar Adobe Dynamic Media-servern en resurs enligt en standardinställning som har konfigurerats på Dynamic Media publiceringskonfiguration.
 
-**Så här konfigurerar du den allmänna inställningen för Dynamic Media:**
+Se även [Installation och konfigurering av Dynamic Media - Scene7 lägesinställningar](/help/assets/option-b-config-dms7.md#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings).
+
+>[!NOTE]
+>
+>Vill du uppgradera från Dynamic Media Classic till Dynamic Media på Adobe Experience Manager? Sidorna Allmänna inställningar och Publiceringsinställningar i Dynamic Media är förifyllda med värdena från ditt Dynamic Media Classic-konto. Undantag är alla värden som anges under **[!UICONTROL Default upload options]** på sidan Allmänna inställningar. Dessa värden finns redan i Experience Manager. Alla ändringar du gör under **[!UICONTROL Default upload options]**, på alla fem flikarna, visas i Dynamic Media via användargränssnittet i Experience Manager, inte i Dynamic Media Classic. Alla andra inställningar och värden på sidan Allmänna inställningar och Publiceringsinställningar finns mellan Dynamic Media Classic och Dynamic Media på Experience Manager.
+
+**Så här konfigurerar du allmänna inställningar för Dynamic Media:**
 
 1. I läget Experience Manager Author väljer du logotypen Experience Manager för att komma åt den globala navigeringskonsolen.
-1. Välj ikonen Verktyg i den vänstra listen och gå sedan till **[!UICONTROL Assets]** > **[!UICONTROL Dynamic Media General Setting]**.
-1. Ange din **[!UICONTROL Published Server Name]** och **[!UICONTROL Origin Server Name]** och använd sedan de fem flikarna för att konfigurera standardinställningar för publicering.
+1. Välj ikonen Verktyg i den vänstra listen och gå sedan till **[!UICONTROL Assets]** > **[!UICONTROL Dynamic Media General Settings]**.
+1. Ange din **[!UICONTROL Published Server Name]** och **[!UICONTROL Origin Server Name]** och använd sedan de fem flikarna för att konfigurera standardalternativ för överföring av bildredigering och för PostScript-, Photoshop-, PDF- och Illustrator-filer.
 
    * [Server](#server-general-setting)
    * [Överför till program](#upload-to-application)
@@ -58,7 +64,7 @@ När du skapar ett konto tillhandahåller Adobe Dynamic Media automatiskt de til
 
 | Alternativ | Beskrivning |
 | --- | --- |
-| **[!UICONTROL Published Server Name]** | Krävs.<br>Den här servern är den CDN-server (Content Deliver Network) som används i alla systemgenererade URL-anrop som är specifika för ditt konto. Ändra inte det här servernamnet om du inte har fått instruktioner om att göra det av Adobe tekniska support. Namnet måste använda `https://` i banan. |
+| **[!UICONTROL Published Server Name]** | Krävs.<br>Namnet måste använda `https://` i banan.<br>Den här servern är den CDN-server (Content Deliver Network) som används i alla systemgenererade URL-anrop som är specifika för ditt konto. Ändra inte det här servernamnet om du inte har fått instruktioner om att göra det av Adobe tekniska support. |
 | **[!UICONTROL Origin Server Name]** | Krävs.<br>Den här servern används endast för kvalitetstestning. Ändra inte det här servernamnet om du inte har fått instruktioner om att göra det från Adobe tekniska support. |
 
 ## Överför till program {#upload-to-application}
@@ -69,7 +75,7 @@ När du skapar ett konto tillhandahåller Adobe Dynamic Media automatiskt de til
 
    | Skriv över bilder, alternativ | Beskrivning |
    | --- | --- |
-   | **[!UICONTROL Overwrite in current folder, same base name/extension]** | Standard.<br>Det här alternativet är den striktaste regeln för ersättning. Det kräver att du överför ersättningsbilden till samma mapp som originalbilden och att ersättningsbilden har samma filnamnstillägg som originalbilden. Om dessa krav inte uppfylls skapas en dubblett. |
+   | **[!UICONTROL Overwrite in current folder, same base name/extension]** | Standard för nya Dynamic Media-konton.<br>Det här alternativet är den striktaste regeln för ersättning. Det kräver att du överför ersättningsbilden till samma mapp som originalbilden och att ersättningsbilden har samma filnamnstillägg som originalbilden. Om dessa krav inte uppfylls skapas en dubblett. |
    | **[!UICONTROL Overwrite in current folder, same base name regardless of extension]** | Kräver att du överför ersättningsbilden till samma mapp som originalet, men filnamnstillägget kan skilja sig från originalet. Till exempel ersätter stol.tif stol.jpg. |
    | **[!UICONTROL Overwrite in any folder, same base asset name/extension]** | Kräver att ersättningsbilden har samma filnamnstillägg som den ursprungliga bilden (t.ex. måste stol.jpg ersätta stol.jpg, inte stol.tif). Du kan dock överföra ersättningsbilden till en annan mapp än den ursprungliga. Den uppdaterade bilden finns i den nya mappen; filen inte längre kan hittas på sin ursprungliga plats. |
    | **[!UICONTROL Overwrite in any folder, same base asset name regardless of extension]** | Det här alternativet är den mest omfattande ersättningsregeln. Du kan överföra en ersättningsbild till en annan mapp än den ursprungliga, överföra en fil med ett annat filnamnstillägg och ersätta den ursprungliga filen. Om originalfilen finns i en annan mapp finns ersättningsbilden i den nya mappen som den överfördes till. |

@@ -6,10 +6,10 @@ audience: end-user
 user-guide-title: Resurshandbok
 breadcrumb-title: Resurshandbok
 user-guide-description: Skapa, hantera, bearbeta och distribuera digitalt material.
-source-git-commit: 37d298378b7d33ec7c9803cbf9f4f7eb4d2193f9
+source-git-commit: 41ffd39d6815988b2b172d7dc1748570eb5ef584
 workflow-type: tm+mt
-source-wordcount: '651'
-ht-degree: 15%
+source-wordcount: '657'
+ht-degree: 14%
 
 ---
 
@@ -39,11 +39,11 @@ ht-degree: 15%
    + [Arkiv med nyhetsbrev från Experience League](dynamic-media-newsletter.md)
    + [Konfigurera Dynamic Media](administering-dynamic-media.md)
    + [Arbeta med Dynamic Media](dynamic-media.md)
-   + [Konfigurera Dynamic Media - Scene7-läge](config-dms7.md)
+   + [Konfigurera Dynamic Media - Scene7-läge]{#config-scene7-mode}
+      + [Konfigurera Dynamic Media - Scene7-läge](config-dms7.md)
+      + [Valfritt - Konfigurera allmänna inställningar för Dynamic Media](dm-general-settings.md)
+      + [Valfritt - Dynamic Media Publish Setup Image Server](dm-publish-settings.md)
    + [Konfigurera Dynamic Media - hybridläge](config-dynamic.md)
-   + [Konfigurera allmän Dynamic Media-inställning](dm-general-settings.md)
-   + [Konfigurera Dynamic Media Publish Setup](dm-publish-settings.md)
-   + [Alternativ A](option-a-config-dms7.md)
    + [Alternativ B](option-b-config-dms7.md)
    + [Felsöka Dynamic Media - Scene7-läge](troubleshoot-dms7.md)
    + [Tillgänglighet i Dynamic Media](accessibility-dm.md)
