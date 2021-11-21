@@ -12,9 +12,9 @@ hide: true
 hidefromtoc: true
 feature: Configuration,Scene7 Mode
 exl-id: null
-source-git-commit: b1f2a6b8fecd9ee98f345d1de8c26c6f42a44823
+source-git-commit: 3b5e65efc9aaedbc3385cc348ead80afecae2f06
 workflow-type: tm+mt
-source-wordcount: '5787'
+source-wordcount: '5739'
 ht-degree: 2%
 
 ---
@@ -101,7 +101,7 @@ Se [Installera funktionspaket 18912 för migrering av gruppresurser](/help/asset
    Välj **[!UICONTROL Connect to Dynamic Media]**.
 
    >[!NOTE]
-   **RICK: BEHÅLL DIG SOM DET ÄR?** När du har fått ditt e-postmeddelande med Dynamic Media-autentiseringsuppgifter öppnar du [Dynamic Media Classic desktop application](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)och logga sedan in på ditt konto för att ändra ditt lösenord. Lösenordet som anges i e-postmeddelandet om etablering genereras av systemet och är endast avsett som ett tillfälligt lösenord. Det är viktigt att du uppdaterar lösenordet så att Dynamic Media Cloud Service har rätt autentiseringsuppgifter.
+   När du har fått ditt e-postmeddelande med Dynamic Media-autentiseringsuppgifter öppnar du [Dynamic Media Classic desktop application](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)och logga sedan in på ditt konto för att ändra ditt lösenord. Lösenordet som anges i e-postmeddelandet om etablering genereras av systemet och är endast avsett som ett tillfälligt lösenord. Det är viktigt att du uppdaterar lösenordet så att Dynamic Media Cloud Service har rätt autentiseringsuppgifter.
 
 1. Ange följande när anslutningen lyckas. Rubriker med asterisk (*) krävs:
 
@@ -136,14 +136,13 @@ Om du vill markera en markerad mapp för synkronisering till Dynamic Media välj
 1. Välj **[!UICONTROL Save]**.
 1. Om du vill förhandsgranska Dynamic Media-innehåll på ett säkert sätt innan det publiceras måste du tillåtslista författarinstansen Experience Manager för att ansluta till Dynamic Media:
 
-   * **RICK: LÄNKA TILL NYTT PUBLICERINGSINSTÄLLNINGSÄMNE** Öppna [Dynamic Media Classic desktop application](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)och logga sedan in på ditt konto. Dina autentiseringsuppgifter och inloggningsuppgifter tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kan du kontakta Adobe kundsupport.
-
-   * Navigera till i navigeringsfältet uppe till höger på sidan **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL Publish Setup]** > **[!UICONTROL Image Server]**.
-
-   * På sidan Image Server Publish (Publicera kontext) väljer du **[!UICONTROL Test Image Serving]**.
-   * För klientadressfiltret väljer du **[!UICONTROL Add]**.
-   * Markera kryssrutan om du vill aktivera (aktivera) adressen. Ange IP-adressen för Experience Manager Author-instansen (inte Dispatcher IP).
-   * Välj **[!UICONTROL Save]**.
+   * I läget Experience Manager Author väljer du logotypen Experience Manager för att komma åt den globala navigeringskonsolen.
+   * I den vänstra listen väljer du **[!UICONTROL Tools]** ikonen och sedan gå till **[!UICONTROL Assets]** > **[!UICONTROL Dynamic Media Publish Setup]**.
+   * På Dynamic Media Image Server-sidan finns **[!UICONTROL Publish Context]** nedrullningsbar lista, välja **[!UICONTROL Test Image Serving]**.
+   * Välj **[!UICONTROL Security]** -fliken.
+   * För **[!UICONTROL Client address]**, markera **[!UICONTROL Add]**.
+   * Ange IP-adressen för Experience Manager Author-instansen (inte Dispatcher IP).
+   * I det övre högra hörnet på sidan väljer du **[!UICONTROL Save]**.
 
 Du är nu klar med den grundläggande konfigurationen; är du redo att använda Dynamic Media - Scene7.
 
