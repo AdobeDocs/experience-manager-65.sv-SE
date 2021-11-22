@@ -2,45 +2,48 @@
 title: Autentisering för AEM GraphQL-frågor om innehållsfragment
 description: Förstå den autentisering som krävs för GraphQL-frågor AEM fjärranslutet för att skydda din headless-innehållsleverans.
 feature: Content Fragments,GraphQL API
-source-git-commit: 2f647fc640d3809dc684bce397831ab37fb94b07
+exl-id: 167f3318-7bc7-48fc-aaa9-73da43433f2f
+source-git-commit: 9278ba4fe85edca4ab5741f89c0fc0ef2cf2764d
 workflow-type: tm+mt
-source-wordcount: '216'
+source-wordcount: '111'
 ht-degree: 0%
 
 ---
 
 # Autentisering för AEM GraphQL-frågor om innehållsfragment {#authentication-for-remote-aem-graphql-queries-on-content-fragments}
 
-Ett primärt användningsexempel för Adobe Experience Manager GraphQL API för Content Fragment Delivery](/help/assets/content-fragments/graphql-api-content-fragments.md) är att ta emot fjärrfrågor från tredjepartsprogram eller -tjänster. [ Dessa fjärrfrågor kan kräva autentiserad API-åtkomst för att säkra headless-innehållsleverans.
+Ett primärt användningsexempel för [Adobe Experience Manager (AEM) GraphQL API for Content Fragment Delivery](/help/assets/content-fragments/graphql-api-content-fragments.md) tar emot fjärrfrågor från program eller tjänster från tredje part. Dessa fjärrfrågor kan kräva autentiserad API-åtkomst för att säkra headless-innehållsleverans.
 
 >[!NOTE]
 >
->För testning och utveckling kan du även komma åt AEM GraphQL API direkt via gränssnittet [GraphiQL](/help/assets/content-fragments/graphql-api-content-fragments.md#graphiql-interface).
+>För testning och utveckling kan du även komma åt AEM GraphQL API direkt med [GraphiQL-gränssnitt](/help/assets/content-fragments/graphql-api-content-fragments.md#graphiql-interface) gränssnitt.
 
-För autentisering måste tredjepartstjänsten [hämta en åtkomsttoken](#retrieving-access-token) som sedan kan användas i GraphQL-begäran](#use-access-token-in-graphql-request).[
+För autentisering måste tredjepartstjänsten autentisera med användarnamnet och lösenordet för AEM.
 
-## Hämtar en åtkomsttoken {#retrieving-access-token}
-
-<!-- 6.5.10.0 - does this page need to be migrated? -->
+<!-- 6.5.10.0 - does this content/page need to be migrated? -->
 
 <!--
+For authentication the third party service needs to [retrieve an Access Token](#retrieving-access-token), that can then be [used in the GraphQL Request](#use-access-token-in-graphql-request).
+
+## Retrieving an Access Token {#retrieving-access-token}
+
 See [Generating Access Tokens for Server Side APIs](/help/sites-developing/generating-access-tokens-for-server-side-apis.md) for full details.
--->
 
-## Använda åtkomsttoken i en GraphQL-begäran {#use-access-token-in-graphql-request}
+## Using the Access Token in a GraphQL Request {#use-access-token-in-graphql-request}
 
-För att en tredjepartstjänst ska kunna ansluta till en AEM måste den ha en *åtkomsttoken*. Tjänsten måste sedan lägga till denna token i rubriken `Authorization` på begäran om POST.
+For a third party service to connect with an AEM instance it needs to have an *Access Token*. The service must then add this token to the `Authorization` header on the POST request. 
 
-Ett GraphQL Authorization Header:
+For example, a GraphQL Authorization Header:
 
 ```xml
 Authorization: Bearer <access_token>
 ```
 
-## Behörighetskrav {#permission-requirements}
+## Permission Requirements {#permission-requirements}
 
-Alla förfrågningar som görs med åtkomsttoken kommer faktiskt att göras *av användarkontot som genererade token*.
+All requests made using the access token will actually be made *by the user account that generated the token*. 
 
-Det innebär att du måste kontrollera att kontot har de behörigheter som krävs för att köra GraphQL-frågor.
+This means that you need to check that the account has the permissions required to run GraphQL queries. 
 
-Du kan kontrollera detta med GraphiQL på den lokala instansen.
+You can check this by using GraphiQL on the local instance.
+-->
