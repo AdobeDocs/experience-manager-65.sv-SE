@@ -11,7 +11,7 @@ mini-toc-levels: 4
 hide: true
 hidefromtoc: true
 exl-id: null
-source-git-commit: f76f02f97de477af80666ea76a499578c36fb09e
+source-git-commit: 343b48a4ec5e7124aaa48b7550465982d61fa5ab
 workflow-type: tm+mt
 source-wordcount: '3207'
 ht-degree: 0%
@@ -24,7 +24,7 @@ ht-degree: 0%
 Konfigurera Dynamic Media Publish Setup är endast tillgängligt om:
 
 * Du kör Dynamic Media i Scene7-läge. Se [Aktivera Dynamic Media i Scene7-läge](/help/assets/config-dms7.md#enabling-dynamic-media-in-scene-mode).
-* Du har en *befintlig* **[!UICONTROL Dynamic Media Configuration]** (in **[!UICONTROL Cloud Services]**) i Adobe Experience Manager 6.5 eller senare.
+* Du har en *befintlig* **[!UICONTROL Dynamic Media Configuration]** (in **[!UICONTROL Cloud Services]**) i Adobe Experience Manager 6.5.11 eller senare.
 * Du är systemadministratör för Experience Manager med administratörsbehörighet.
 
 Dynamic Media Publish Setup är avsedd för erfarna webbplatsutvecklare och programmerare. Adobe Dynamic Media rekommenderar användare som ändrar dessa publiceringsinställningar att känna till Adobe Dynamic Media, HTTP-protokollets standarder och konventioner samt grundläggande bildbehandlingsteknik.

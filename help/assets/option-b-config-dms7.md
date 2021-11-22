@@ -12,9 +12,9 @@ hide: true
 hidefromtoc: true
 feature: Configuration,Scene7 Mode
 exl-id: null
-source-git-commit: 3b5e65efc9aaedbc3385cc348ead80afecae2f06
+source-git-commit: 343b48a4ec5e7124aaa48b7550465982d61fa5ab
 workflow-type: tm+mt
-source-wordcount: '5739'
+source-wordcount: '5746'
 ht-degree: 2%
 
 ---
@@ -265,7 +265,7 @@ Se [Konfigurera Dynamic Media Publish Setup för Image Server](/help/assets/dm-p
 
 #### Konfigurera allmänna inställningar för Dynamic Media {#configuring-application-general-settings}
 
-Konfigurera standardfärgegenskaperna så att färgkorrigering aktiveras när bilder begärs.
+Konfigurera Dynamic Media **[!UICONTROL Publish Server Name]** URL och **[!UICONTROL Origin Server Name]** URL. Du kan också ange **[!UICONTROL Upload to Application]** inställningar och **[!UICONTROL Default Upload Options]** allt baserat på ditt specifika användningsfall.
 
 Se [Konfigurera allmänna inställningar för Dynamic Media](/help/assets/dm-general-settings.md).
 
