@@ -8,9 +8,9 @@ breadcrumb-title: Utvecklingshandbok
 user-guide-description: Den här guiden beskriver hur du skapar AEM.
 feature: Developing
 role: Developer
-source-git-commit: eda59d12d96ecc55bd58749985d2c15706344fe0
+source-git-commit: a95cf285be84f6aed194f3ae904556f5d017c7be
 workflow-type: tm+mt
-source-wordcount: '917'
+source-wordcount: '920'
 ht-degree: 6%
 
 ---
@@ -50,7 +50,7 @@ ht-degree: 6%
    + [Övertäckningar](overlays.md)
    + [Namnkonventioner](naming-conventions.md)
    + [Skapa en ny GRE-fältkomponent](granite-ui-component.md)
-   + Frågebyggaren{#query-builder}
+   + Query Builder{#query-builder}
       + [Implementera en anpassad predikatutvärderare för Query Builder](implementing-custom-predicate-evaluator.md)
       + [Predikatreferens för Query Builder](querybuilder-predicate-reference.md)
       + [Query Builder API](querybuilder-api.md)
@@ -97,6 +97,7 @@ ht-degree: 6%
       + [Använda xtypes (Classic UI)](xtypes.md)
       + [Utveckla Forms (Classic UI)](developing-forms.md)
 + Headless Experience Management{#headless}
+   + [Headless och AEM](headless/introduction.md)
    + [Headless och Hybrid with AEM](https://business.adobe.com/content/dam/dx/us/en/products/experience-manager/sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
    + [Aktivera JSON-export för en komponent](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/json-exporter-components.html)
    + Enkelsidiga program{#spas}
