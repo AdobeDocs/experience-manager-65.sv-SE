@@ -11,9 +11,9 @@ mini-toc-levels: 4
 hide: true
 hidefromtoc: true
 exl-id: null
-source-git-commit: 26f521868d0b983a05579d0d4c1ef50684b721ee
+source-git-commit: f76f02f97de477af80666ea76a499578c36fb09e
 workflow-type: tm+mt
-source-wordcount: '2271'
+source-wordcount: '2278'
 ht-degree: 0%
 
 ---
@@ -23,8 +23,8 @@ ht-degree: 0%
 
 Konfigurerar **[!UICONTROL Dynamic Media General Settings]** är bara tillgängligt om:
 
-* Du kör Dynamic Media i Scene7-läge. Se [Aktivera Dynamic Media i Scene7-läge](/help/assets/config-dms7.md#enabling-dynamic-media-in-scene-mode)
-* Du har en *befintlig* **[!UICONTROL Dynamic Media Configuration]** (in **[!UICONTROL Cloud Services]**) i Adobe Experience Manager 6.5 eller Experience Manager as a Cloud Service.
+* Du kör Dynamic Media i Scene7-läge. Se [Aktivera Dynamic Media i Scene7-läge](/help/assets/config-dms7.md#enabling-dynamic-media-in-scene-mode).
+* Du har en *befintlig* **[!UICONTROL Dynamic Media Configuration]** (in **[!UICONTROL Cloud Services]**) i Adobe Experience Manager 6.5 eller senare.
 * Du är systemadministratör för Experience Manager med administratörsbehörighet.
 
 Allmänna inställningar i Dynamic Media är avsedda att användas av erfarna webbplatsutvecklare och programmerare. Adobe Dynamic Media rekommenderar användare som ändrar dessa publiceringsinställningar att känna till Dynamic Media om Adobe Experience Manager och grundläggande bildbehandlingsteknik.
@@ -33,11 +33,11 @@ När du skapar ett konto tillhandahåller Adobe Dynamic Media automatiskt de til
 
 På sidan Dynamic Media Publish Setup (Publiceringsinställningar) anges standardinställningar som avgör hur resurser levereras från Adobe Dynamic Media-servrar till webbplatser eller program. Om ingen inställning har angetts levererar Adobe Dynamic Media-servern en resurs enligt en standardinställning som har konfigurerats på Dynamic Media publiceringskonfiguration.
 
-Se även [Installation och konfigurering av Dynamic Media - Scene7 lägesinställningar](/help/assets/option-b-config-dms7.md#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings).
+Se även [Valfritt - Konfigurera och konfigurera Dynamic Media - Scene7-lägesinställningar](/help/assets/option-b-config-dms7.md#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings) för fler valfria konfigurationsuppgifter.
 
 >[!NOTE]
 >
->Vill du uppgradera från Dynamic Media Classic till Dynamic Media på Adobe Experience Manager? Sidorna Allmänna inställningar och Publiceringsinställningar i Dynamic Media är förifyllda med värdena från ditt Dynamic Media Classic-konto. Undantag är alla värden som anges under **[!UICONTROL Default upload options]** på sidan Allmänna inställningar. Dessa värden finns redan i Experience Manager. Alla ändringar du gör under **[!UICONTROL Default upload options]**, på alla fem flikarna, visas i Dynamic Media via användargränssnittet i Experience Manager, inte i Dynamic Media Classic. Alla andra inställningar och värden på sidan Allmänna inställningar och Publiceringsinställningar finns mellan Dynamic Media Classic och Dynamic Media på Experience Manager.
+>Vill du uppgradera från Dynamic Media Classic till Dynamic Media på Adobe Experience Manager? Sidan Allmänna inställningar och [Publiceringsinställningar](/help/assets/dm-publish-settings.md) sidan i Dynamic Media är förifylld med värdena från ditt Dynamic Media Classic-konto. Undantag är alla värden som anges under **[!UICONTROL Default upload options]** på sidan Allmänna inställningar. Dessa värden finns redan i Experience Manager. Alla ändringar du gör under **[!UICONTROL Default upload options]**, på vilken av de fem flikarna som helst, via användargränssnittet i Experience Manager, visas i Dynamic Media, inte i Dynamic Media Classic. Alla andra inställningar och värden på sidan Allmänna inställningar och på sidan [Publiceringsinställningar](/help/assets/dm-publish-settings.md) mellan Dynamic Media Classic och Dynamic Media på Experience Manager.
 
 **Så här konfigurerar du allmänna inställningar för Dynamic Media:**
 
