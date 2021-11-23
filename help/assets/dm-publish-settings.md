@@ -11,7 +11,7 @@ mini-toc-levels: 4
 hide: true
 hidefromtoc: true
 exl-id: null
-source-git-commit: 343b48a4ec5e7124aaa48b7550465982d61fa5ab
+source-git-commit: f5989e182ee0d9075251b582fa618af5efcb9f8a
 workflow-type: tm+mt
 source-wordcount: '3207'
 ht-degree: 0%
@@ -31,7 +31,7 @@ Dynamic Media Publish Setup är avsedd för erfarna webbplatsutvecklare och prog
 
 På sidan Dynamic Media Publish Setup (Publiceringsinställningar) anges standardinställningar som avgör hur resurser levereras från Adobe Dynamic Media-servrar till webbplatser eller program. Om ingen inställning har angetts levererar Adobe Dynamic Media-servern en resurs enligt en standardinställning som har konfigurerats på Dynamic Media publiceringskonfiguration.
 
-Se även [Valfritt - Konfigurera och konfigurera Dynamic Media - Scene7-lägesinställningar](/help/assets/option-b-config-dms7.md#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings) för fler valfria konfigurationsuppgifter.
+Se även [Valfritt - Konfigurera och konfigurera Dynamic Media - Scene7-lägesinställningar](/help/assets/config-dms7.md#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings) för fler valfria konfigurationsuppgifter.
 
 >[!NOTE]
 >
