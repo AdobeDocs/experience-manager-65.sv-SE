@@ -11,12 +11,13 @@ content-type: reference
 discoiquuid: d0770bee-4be5-4a6a-8415-70fdfd75015c
 docset: aem65
 exl-id: 08c88e70-4df9-4627-8a66-1fabe3aee50b
-source-git-commit: a2b1bd5462ae1837470e31cfeb87a95af1c69be5
+source-git-commit: e68f6203d7629cab16e59778ce64908f943d5b3f
 workflow-type: tm+mt
 source-wordcount: '2789'
 ht-degree: 0%
 
 ---
+
 
 # Anpassa och utöka Content Fragments{#customizing-and-extending-content-fragments}
 
@@ -226,9 +227,9 @@ Innehållsfragment kan integreras med:
    >
    >Det AEM arbetsflödet för översättning fungerar med `/content`:
    >
-   >    * När innehållsfragmentsmodellerna finns i `/conf`, ingår de inte i sådana översättningar. Du kan [Internationalisera gränssnittssträngar](/help/sites-developing/i18n-dev.md).
+   >* När innehållsfragmentsmodellerna finns i `/conf`, ingår de inte i sådana översättningar. Du kan [Internationalisera gränssnittssträngar](/help/sites-developing/i18n-dev.md).
    >
-   >    * Mallar kopieras för att skapa fragmentet så detta är implicit.
+   >* Mallar kopieras för att skapa fragmentet så detta är implicit.
 
 
 * **Metadata-scheman**
