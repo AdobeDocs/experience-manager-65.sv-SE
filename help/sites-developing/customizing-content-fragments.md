@@ -3,17 +3,13 @@ title: Anpassa och utöka Content Fragments
 seo-title: Customizing and Extending Content Fragments
 description: Ett innehållsfragment utökar en standardresurs.
 seo-description: A content fragment extends a standard asset.
-uuid: f72c3a23-9b0d-4fab-a960-bb1350f01175
-contentOwner: User
-products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: d0770bee-4be5-4a6a-8415-70fdfd75015c
 docset: aem65
 exl-id: 08c88e70-4df9-4627-8a66-1fabe3aee50b
-source-git-commit: e68f6203d7629cab16e59778ce64908f943d5b3f
+source-git-commit: 9ad531738ac5e3c9d888f685b47c8b322712a89e
 workflow-type: tm+mt
-source-wordcount: '2789'
+source-wordcount: '2778'
 ht-degree: 0%
 
 ---
@@ -133,9 +129,9 @@ Mer information finns i [Innehållsfragment - Ta bort överväganden](/help/asse
 
 >[!CAUTION]
 >
->The [Kärnkomponent för innehållsfragment](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html) rekommenderas nu. Se [Utveckla kärnkomponenter](https://helpx.adobe.com/experience-manager/core-components/using/developing.html) för mer information.
+>The [Kärnkomponent för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html) rekommenderas nu. Se [Utveckla kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html) för mer information.
 
-Innehållsfragment kan refereras från AEM sidor, precis som andra resurstyper. AEM tillhandahåller [**Innehållsfragment** kärnkomponent](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html) - en [som gör att du kan ta med innehållsfragment på sidorna](/help/sites-authoring/content-fragments.md#adding-a-content-fragment-to-your-page). Du kan också utöka **Innehållsfragment** kärnkomponent.
+Innehållsfragment kan refereras från AEM sidor, precis som andra resurstyper. AEM tillhandahåller [**Innehållsfragment** kärnkomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html) - en [som gör att du kan ta med innehållsfragment på sidorna](/help/sites-authoring/content-fragments.md#adding-a-content-fragment-to-your-page). Du kan också utöka **Innehållsfragment** kärnkomponent.
 
 * Komponenten använder `fragmentPath` -egenskap som refererar till det faktiska innehållsfragmentet. The `fragmentPath` Egenskapen hanteras på samma sätt som liknande egenskaper för andra tillgångstyper. till exempel när innehållsfragmentet flyttas till en annan plats.
 
@@ -247,7 +243,7 @@ Innehållsfragment kan integreras med:
 
 Du kan använda serversidans API för att komma åt dina innehållsfragment; se:
 
-[com.adobe.cq.dam.cfm](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/dam/cfm/package-summary.html)
+[com.adobe.cq.dam.cfm](https://www.adobe.io/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/dam/cfm/package-summary.html)
 
 >[!CAUTION]
 >
@@ -257,7 +253,7 @@ Du kan använda serversidans API för att komma åt dina innehållsfragment; se:
 
 Följande tre gränssnitt kan fungera som startpunkter:
 
-* **Fragmentmall** ([FragmentTemplate](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/dam/cfm/FragmentTemplate.html))
+* **Fragmentmall** ([FragmentTemplate](https://www.adobe.io/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/dam/cfm/FragmentTemplate.html))
 
    Använd `FragmentTemplate.createFragment()` för att skapa ett nytt fragment.
 
@@ -302,7 +298,7 @@ Följande tre gränssnitt kan fungera som startpunkter:
 
 
 
-* **Innehållsfragment** ([ContentFragment](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/dam/cfm/ContentFragment.html))
+* **Innehållsfragment** ([ContentFragment](https://www.adobe.io/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/dam/cfm/ContentFragment.html))
 
    Med det här gränssnittet kan du arbeta med ett innehållsfragment på ett abstrakt sätt.
 
@@ -332,7 +328,7 @@ Följande tre gränssnitt kan fungera som startpunkter:
 
    Gränssnitt som representerar de primära elementen i ett fragment är:
 
-   * **Innehållselement** ([ContentElement](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/dam/cfm/ContentElement.html))
+   * **Innehållselement** ([ContentElement](https://www.adobe.io/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/dam/cfm/ContentElement.html))
 
       * Hämta grundläggande data (namn, titel, beskrivning)
       * Hämta/ange innehåll
@@ -344,7 +340,7 @@ Följande tre gränssnitt kan fungera som startpunkter:
          * Ta bort variationer (se [Caveats](#caveats))
          * Åtkomst till variantdata (se `ContentVariation`)
       * Kortkommando för att matcha variationer (tillämpa ytterligare, implementeringsspecifik reservlogik om den angivna varianten inte är tillgänglig för ett element)
-   * **Innehållsvariation** ([ContentVariation](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/dam/cfm/ContentVariation.html))
+   * **Innehållsvariation** ([ContentVariation](https://www.adobe.io/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/dam/cfm/ContentVariation.html))
 
       * Hämta grundläggande data (namn, titel, beskrivning)
       * Hämta/ange innehåll
@@ -542,5 +538,5 @@ Se [Mallar för innehållsfragment](/help/sites-developing/content-fragment-temp
 
 Mer information finns i
 
-* [Kärnkomponenter - komponent för innehållsfragment](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html) (rekommenderas)
+* [Kärnkomponenter - komponent för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html) (rekommenderas)
 * [Content Fragment Components - Components for Page Authoring](/help/sites-developing/components-content-fragments.md#components-for-page-authoring)
