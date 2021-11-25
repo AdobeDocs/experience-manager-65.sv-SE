@@ -4,9 +4,9 @@ description: Versionsinformation som är specifik för [!DNL Adobe Experience Ma
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: c0393e614cf96066dfd765cc00dc8ad370755a27
+source-git-commit: 35260325b583bd047f22ffa88afb9469b2023e60
 workflow-type: tm+mt
-source-wordcount: '3307'
+source-wordcount: '3306'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ De viktigaste funktionerna och förbättringarna i [!DNL Adobe Experience Manage
 
 * En förbättring av användarupplevelsen visar antalet resurser i en mapp. För mer än 1000 resurser i en mapp, [!DNL Assets] visar 1000+.
 
-* Nu kan du återge sorteringsalternativet i kort- och kolumnvyn (NPR-37199).
+* Nu kan du återge sorteringsalternativet i kort- och kolumnvyn.
 
 * Du kan nu använda [!DNL Dynamic Media] för att konfigurera allmänna inställningar i stället för att behöva gå igenom [!DNL Dynamic Media Classic] datorprogram. Se [Konfigurera allmänna inställningar för Dynamic Media](/help/assets/dm-general-settings.md).
 
