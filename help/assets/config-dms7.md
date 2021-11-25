@@ -7,13 +7,13 @@ topic-tags: dynamic-media
 content-type: reference
 docset: aem65
 role: User, Admin
-mini-toc-levels: 3
+mini-toc-levels: 4
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: Configuration,Scene7 Mode
-source-git-commit: b5835d16efb0f2112ec8a6917e8cf2529cbf19c7
+source-git-commit: b7762a44d7b572d784dda2220530b21f9c46e7ab
 workflow-type: tm+mt
-source-wordcount: '6508'
-ht-degree: 3%
+source-wordcount: '5744'
+ht-degree: 2%
 
 ---
 
@@ -54,7 +54,7 @@ Med den nya arkitekturen ansvarar Experience Manager för de viktigaste källres
 >
 >Dynamic Media - Scene7 *Endast författarinstans i Experience Manager*. Därför måste du konfigurera `runmode=dynamicmedia_scene7` på Experience Manager Author-instansen, *not* Experience Manager Publish-instansen.
 
-Om du vill aktivera Dynamic Media måste du starta Experience Manager med `dynamicmedia_scene7` körningsläge från kommandoraden genom att ange följande i ett terminalfönster (den exempelport som används är 4502):
+Aktivera Dynamic Media genom att starta Experience Manager med `dynamicmedia_scene7` körningsläge från kommandoraden genom att ange följande i ett terminalfönster (den exempelport som används är 4502):
 
 ```shell
 java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=500000 -jar cq-quickstart-6.5.0.jar -gui -r author,dynamicmedia_scene7 -p 4502
@@ -128,20 +128,19 @@ Om du vill markera en markerad mapp för synkronisering till Dynamic Media välj
          * **[!UICONTROL Disabled for subfolders]** - Uteslut allt i det här underträdet från synkronisering till Dynamic Media.
 
    >[!NOTE]
-   Det finns inget stöd för versionshantering i DMS7. Dessutom gäller fördröjd aktivering endast om **[!UICONTROL Publish Assets]** på sidan Redigera Dynamic Media-konfiguration är inställd på **[!UICONTROL Upon Activation]** och då endast tills resursen aktiveras första gången.
+   Det finns inget stöd för versionshantering i Dynamic Media - Scene7. Dessutom gäller fördröjd aktivering endast om **[!UICONTROL Publish Assets]** på sidan Redigera Dynamic Media-konfiguration är inställd på **[!UICONTROL Upon Activation]** och då endast tills resursen aktiveras första gången.
    När en mediefil har aktiverats publiceras uppdateringar direkt till S7 Delivery.
 
 1. Välj **[!UICONTROL Save]**.
 1. Om du vill förhandsgranska Dynamic Media-innehåll på ett säkert sätt innan det publiceras måste du tillåtslista författarinstansen Experience Manager för att ansluta till Dynamic Media:
 
-   * Öppna [Dynamic Media Classic desktop application](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)och logga sedan in på ditt konto. Dina autentiseringsuppgifter och inloggningsuppgifter tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kan du kontakta Adobe kundsupport.
-
-   * Navigera till i navigeringsfältet uppe till höger på sidan **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL Publish Setup]** > **[!UICONTROL Image Server]**.
-
-   * På sidan Image Server Publish (Publicera kontext) väljer du **[!UICONTROL Test Image Serving]**.
-   * För klientadressfiltret väljer du **[!UICONTROL Add]**.
-   * Markera kryssrutan om du vill aktivera (aktivera) adressen. Ange IP-adressen för Experience Manager Author-instansen (inte Dispatcher IP).
-   * Välj **[!UICONTROL Save]**.
+   * I läget Experience Manager Author väljer du logotypen Experience Manager för att komma åt den globala navigeringskonsolen.
+   * I den vänstra listen väljer du **[!UICONTROL Tools]** ikonen och sedan gå till **[!UICONTROL Assets]** > **[!UICONTROL Dynamic Media Publish Setup]**.
+   * På Dynamic Media Image Server-sidan finns **[!UICONTROL Publish Context]** nedrullningsbar lista, välja **[!UICONTROL Test Image Serving]**.
+   * Välj **[!UICONTROL Security]** -fliken.
+   * För **[!UICONTROL Client address]**, markera **[!UICONTROL Add]**.
+   * Ange IP-adressen för Experience Manager Author-instansen (inte Dispatcher IP).
+   * I det övre högra hörnet på sidan väljer du **[!UICONTROL Save]**.
 
 Du är nu klar med den grundläggande konfigurationen; är du redo att använda Dynamic Media - Scene7.
 
@@ -212,7 +211,6 @@ Om du tänker använda den här funktionen bör du vara medveten om följande kr
 1. Ange lämpligt värde i byte så att du kan öka storleksgränsen till den önskade överföringsstorleken. Om du till exempel vill öka storleken på överföringsresursen till 10 GB anger du `10737418240` i värdefältet.
 Du kan ange ett värde på upp till 15 GB (`2013265920` byte). I det här fallet överförs inte överförda resurser som är större än 15 GB.
 
-
    ![Gränsvärde för storlek](/help/assets/assets-dm/uploadassets15gb_c.png)
 
 1. I närheten av det övre vänstra hörnet av CRXDE Lite-fönstret väljer du **[!UICONTROL Save All]**.
@@ -248,85 +246,35 @@ Du kan ange ett värde på upp till 15 GB (`2013265920` byte). I det här fallet
 
 ### (Valfritt) Installation och konfiguration av Dynamic Media - inställningar för Scene7-läge {#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings}
 
-När du är i körningsläge `dynamicmedia_scene7`använder du Dynamic Media Classic användargränssnitt för att ändra dina Dynamic Media-inställningar.
+<!-- When you are in run mode `dynamicmedia_scene7`, use the Dynamic Media Classic user interface to change your Dynamic Media settings. -->
 
-Vissa av ovanstående uppgifter kräver att du öppnar [Dynamic Media Classic desktop application](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)och logga sedan in på ditt konto.
-
-Installations- och konfigureringsuppgifter omfattar följande:
-
-* [Publiceringskonfiguration för Image Server](#publishing-setup-for-image-server)
-* [Konfigurera allmänna inställningar för program](#configuring-application-general-settings)
+* [Konfigurera Dynamic Media Publish Setup för Image Server](/help/assets/dm-publish-settings.md)
+* [Konfigurera allmänna inställningar för Dynamic Media](/help/assets/dm-general-settings.md)
 * [Konfigurera färghantering](#configuring-color-management)
 * [Redigera MIME-typer för format som stöds](#editing-mime-types-for-supported-formats)
 * [Lägg till MIME-typer för format som inte stöds](#adding-mime-types-for-unsupported-formats)
-* [Skapa gruppuppsättningsförinställningar för automatisk generering av bilduppsättningar och snurpuppsättningar](#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)
+* [Skapa gruppuppsättningsförinställningar för automatisk generering av bilduppsättningar och snurpuppsättningar](#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets) (klart i Dynamic Media Classic användargränssnitt)
 
-#### Publiceringskonfiguration för Image Server {#publishing-setup-for-image-server}
+#### Konfigurera Dynamic Media Publish Setup för Image Server {#publishing-setup-for-image-server}
 
-Publiceringsinställningarna avgör hur resurser levereras som standard från Dynamic Media. Om ingen inställning anges levererar Dynamic Media en resurs enligt standardinställningarna som definierats i Publiceringsinställningar. En begäran om att leverera en bild som inte innehåller ett upplösningsattribut ger till exempel en bild med inställningen för standardobjektupplösning.
+På sidan Dynamic Media Publish Setup (Publiceringsinställningar) anges standardinställningar som avgör hur resurser levereras från Adobe Dynamic Media-servrar till webbplatser eller program.
 
-Så här konfigurerar du publiceringsinställningar: i Dynamic Media Classic, navigera till **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL Publish Setup]** > **[!UICONTROL Image Server]**.
+Se [Konfigurera Dynamic Media Publish Setup för Image Server](/help/assets/dm-publish-settings.md).
 
-Bildserverskärmen anger standardinställningar för att leverera bilder. I gränssnittsskärmen finns en beskrivning av varje inställning.
+#### Konfigurera allmänna inställningar för Dynamic Media {#configuring-application-general-settings}
 
-* **[!UICONTROL Request Attributes]** - De här inställningarna begränsar antalet bilder som kan levereras från servern.
-* **[!UICONTROL Default Request Attributes]** - De här inställningarna gäller standardutseendet för bilder.
-* **[!UICONTROL Common Thumbnail Attributes]** - De här inställningarna gäller för miniatyrbildernas standardutseende.
-* **[!UICONTROL Defaults for Catalog Fields]**- De här inställningarna gäller bildernas upplösning och standardtyp av miniatyrbilder.
-* **[!UICONTROL Color Management Attributes]** - De här inställningarna avgör vilka ICC-färgprofiler som används.
-* **[!UICONTROL Compatibility Attributes]** - Den här inställningen gör att inledande och avslutande stycken i textlager kan hanteras som de var i version 3.6 för bakåtkompatibilitet.
-* **[!UICONTROL Localization Support]** - Med de här inställningarna kan du hantera flera språkattribut. Här kan du också ange en sträng för språkområdeskarta så att du kan definiera vilka språk du vill ha stöd för de olika verktygstipsen i visningsprogram. Mer information om konfiguration **[Lokaliseringsstöd]**, se [Att tänka på när lokalisering av resurser konfigureras](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/publish-setup.html#considerations-when-setting-up-localization-of-assets).
+Konfigurera Dynamic Media **[!UICONTROL Publish Server Name]** URL och **[!UICONTROL Origin Server Name]** URL. Du kan också ange **[!UICONTROL Upload to Application]** inställningar och **[!UICONTROL Default Upload Options]** allt baserat på ditt specifika användningsfall.
 
-#### Konfigurera allmänna inställningar för program {#configuring-application-general-settings}
-
-Om du vill öppna sidan Allmänna inställningar för programmet går du till **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL General Settings]**.
-
-**[!UICONTROL Servers]** - Vid kontoetablering tillhandahåller Dynamic Media automatiskt de tilldelade servrarna för ditt företag. De här servrarna används för att skapa URL-strängar för din webbplats och dina program. Dessa URL-anrop är specifika för ditt konto. Ändra inte något av servernamnen om du inte uttryckligen har fått instruktioner från Adobe kundsupport om att göra det.
-
-**[!UICONTROL Overwrite Images]** - Dynamic Media tillåter inte att två filer har samma namn. Varje objekts URL-ID (filnamnet minus filtillägget) måste vara unikt. De här alternativen anger hur ersättningsresurser överförs: om de ersätter originalet eller blir dubbletter. Duplicerade resurser får ett nytt namn med namnet&quot;-1&quot; (till exempel heter stol.tif stol-1.tif). Dessa alternativ påverkar resurser som överförts till en annan mapp än den ursprungliga eller resurser med ett annat filnamnstillägg än den ursprungliga (till exempel JPG, TIF eller PNG).
-
-* **[!UICONTROL Overwrite in current folder, same base image name/extension]** - Det här alternativet är den striktaste regeln för ersättning. Det kräver att du överför ersättningsbilden till samma mapp som originalbilden och att ersättningsbilden har samma filnamnstillägg som originalbilden. Om dessa krav inte uppfylls skapas en dubblett.
-
->[!NOTE]
-Välj alltid den här inställningen om du vill att den ska vara konsekvent med Experience Manager: **Skriv över i den aktuella mappen, samma basbildens namn/tillägg**
-
-* **[!UICONTROL Overwrite in any folder, same base asset name/extension]** - Kräver att ersättningsbilden har samma filnamnstillägg som originalbilden (t.ex. måste stol.jpg ersätta stol.jpg, inte stol.tif). Du kan dock överföra ersättningsbilden till en annan mapp än den ursprungliga. Den uppdaterade bilden finns i den nya mappen; filen inte längre kan hittas på sin ursprungliga plats
-* **[!UICONTROL Overwrite in any folder, same base asset name regardless of extension]** - Det här alternativet är den mest omfattande ersättningsregeln. Du kan överföra en ersättningsbild till en annan mapp än den ursprungliga, överföra en fil med ett annat filnamnstillägg och ersätta den ursprungliga filen. Om originalfilen finns i en annan mapp finns ersättningsbilden i den nya mappen som den överfördes till.
-
-**[!UICONTROL Default Color Profiles]** - Se [Konfigurera färghantering](#configuring-color-management) för ytterligare information.
-
->[!NOTE]
-Som standard visas 15 återgivningar när du väljer **[!UICONTROL Renditions]** och 15 visningsförinställningar när du väljer **[!UICONTROL Viewers]** i resursens detaljvy. Du kan öka den här gränsen. Se [Öka antalet bildförinställningar som visas](/help/assets/managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display) eller [Öka antalet visningsförinställningar som visas](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display).
+Se [Konfigurera allmänna inställningar för Dynamic Media](/help/assets/dm-general-settings.md).
 
 #### Konfigurera färghantering {#configuring-color-management}
 
-Med Dynamic Media färghantering kan du färgkorrigera resurser. Med färgkorrigering behåller inkapslade resurser sin färgmodell (RGB, CMYK, Grå) och inbäddad färgprofil. När du begär en dynamisk återgivning korrigeras bildfärgen till målfärgrymden med hjälp av CMYK-, RGB- eller grå utdata. Se [Konfigurera bildförinställningar](/help/assets/managing-image-presets.md).
+Med Dynamic Media färghantering kan du färgkorrigera resurser. Med färgkorrigering behåller inkapslade resurser sin färgmodell (RGB, CMYK, Grå) och inbäddad färgprofil. När du begär en dynamisk återgivning korrigeras bildfärgen till målfärgrymden med hjälp av CMYK-, RGB- eller grå utdata.
 
-Så här konfigurerar du standardfärgegenskaperna så att färgkorrigering aktiveras när bilder begärs:
+Se [Konfigurera bildförinställningar](/help/assets/managing-image-presets.md).
 
-1. Öppna [Dynamic Media Classic desktop application](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)loggar sedan in på ditt konto med de autentiseringsuppgifter som anges under etableringen.
-1. Navigera till **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]**.
-1. Expandera området **[!UICONTROL Publish Setup]** och markera **[!UICONTROL Image Server]**. Ange **[!UICONTROL Publish Context]** som **[!UICONTROL Image Serving]** när du anger standardvärden för publiceringsinstanser.
-1. Bläddra till den egenskap som du vill ändra. En egenskap i **[!UICONTROL Color Management Attributes]** område.
-
-   Du kan ange följande egenskaper för färgkorrigering:
-
-   * **[!UICONTROL CMYK Default Color Space]** - Namn på CMYK-standardfärgprofil
-   * **[!UICONTROL Gray-Scale Default Color Space]** - Namn på standardfärgprofilen för gråskala
-   * **[!UICONTROL RGB Default Color Space]** - Namn på standardfärgprofilen för RGB
-   * **[!UICONTROL Color Conversion Rendering Intent]** - Anger återgivningsmetod. Godtagbara värden är: **[!UICONTROL perceptual]**, **[!UICONTROL relative colometric]**, **[!UICONTROL saturation]**, **[!UICONTROL absolute colometric]**. Adobe rekommenderar **[!UICONTROL relative]** som standard.
-
-1. Välj **[!UICONTROL Save]**.
-
-Du kan till exempel ställa in **[!UICONTROL RGB Default Color Space]** på *sRGB* och **[!UICONTROL CMYK Default Color Space]** på *WebCoated*.
-
-Om du gör det gör du så här:
-
-* Aktiverar färgkorrigering för RGB och CMYK-bilder.
-* RGB-bilder som inte har någon färgprofil antas finnas i *sRGB* färgrymd.
-* CMYK-bilder som inte har någon färgprofil antas finnas i *WebCoated* färgrymd.
-* Dynamiska återgivningar som returnerar utdata från RGB, returnerar det i dialogrutan *sRGB* färgrymd.
-* Dynamiska återgivningar som returnerar CMYK-utdata och returnerar dem i *WebCoated* färgrymd.
+>[!NOTE]
+Som standard visas 15 renderingar när du väljer **[!UICONTROL Renditions]** och 15 visningsförinställningar när du väljer **[!UICONTROL Viewers]** i resursens detaljvy. Du kan öka den här gränsen. Se [Öka antalet bildförinställningar som visas](/help/assets/managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display) eller [Öka antalet visningsförinställningar som visas](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display).
 
 #### Redigera MIME-typer för format som stöds {#editing-mime-types-for-supported-formats}
 
@@ -458,6 +406,8 @@ Det finns två element för definition, Matcha och Basnamn. Med dessa fält kan 
    * Välj **[!UICONTROL Save]** om du redigerar en befintlig förinställning.
 
 ##### Skapa en förinställning för gruppuppsättning
+
+
 
 I Dynamic Media används gruppuppsättningsförinställningar för att ordna resurser i uppsättningar med bilder (alternativa bilder, färgalternativ, 360 rotationer) för visning i visningsprogram. Förinställningarna för gruppuppsättningar körs automatiskt tillsammans med överföringsprocesserna för resurser i Dynamic Media.
 

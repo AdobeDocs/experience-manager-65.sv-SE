@@ -8,12 +8,10 @@ content-type: reference
 feature: Image Profiles
 role: User, Admin
 mini-toc-levels: 4
-hide: true
-hidefromtoc: true
 exl-id: null
-source-git-commit: f5989e182ee0d9075251b582fa618af5efcb9f8a
+source-git-commit: b7762a44d7b572d784dda2220530b21f9c46e7ab
 workflow-type: tm+mt
-source-wordcount: '3207'
+source-wordcount: '3216'
 ht-degree: 0%
 
 ---
@@ -24,7 +22,7 @@ ht-degree: 0%
 Konfigurera Dynamic Media Publish Setup är endast tillgängligt om:
 
 * Du kör Dynamic Media i Scene7-läge. Se [Aktivera Dynamic Media i Scene7-läge](/help/assets/config-dms7.md#enabling-dynamic-media-in-scene-mode).
-* Du har en *befintlig* **[!UICONTROL Dynamic Media Configuration]** (in **[!UICONTROL Cloud Services]**) i Adobe Experience Manager 6.5.11 eller senare.
+* Du har en *befintlig* **[!UICONTROL Dynamic Media Configuration]** (in **[!UICONTROL Cloud Services]**) i Adobe Experience Manager 6.5.11 eller senare. Se [Skapa en Dynamic Media-konfiguration i Cloud Services](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services).
 * Du är systemadministratör för Experience Manager med administratörsbehörighet.
 
 Dynamic Media Publish Setup är avsedd för erfarna webbplatsutvecklare och programmerare. Adobe Dynamic Media rekommenderar användare som ändrar dessa publiceringsinställningar att känna till Adobe Dynamic Media, HTTP-protokollets standarder och konventioner samt grundläggande bildbehandlingsteknik.
