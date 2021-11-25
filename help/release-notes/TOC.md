@@ -7,7 +7,7 @@ breadcrumb-title: Versionsinformation
 user-guide-description: Läs om de senaste nya funktionerna i AEM 6.5 i versionsinformationen.
 feature: Release Information
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 4fca7799bf33bf90f601ab72a354f76e48ccdb04
+source-git-commit: 63b19027e5b13dfb97fd59145de75fbc6d246b93
 workflow-type: tm+mt
 source-wordcount: '75'
 ht-degree: 8%
@@ -21,7 +21,7 @@ ht-degree: 8%
 + [Allmän versionsinformation](release-notes.md)
 + Versionsinformation för Service Pack {#service-pack}
    + [Nyheter](new-features-latest-service-pack.md)
-   + [Versionsinformation för Service Pack 10](sp-release-notes.md)
+   + [Versionsinformation för Service Pack 1](sp-release-notes.md)
    + [Versionsinformation för föregående Service Pack](previous-hotfixes-featurepacks.md)
 + [Versionsinformation för AEM Sites](sites.md)
 + [Versionsinformation för AEM Assets](assets.md)

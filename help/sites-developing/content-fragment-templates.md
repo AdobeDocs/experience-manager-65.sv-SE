@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: a975ea2e-5e24-4a96-bd62-63bb98836ff2
 docset: aem65
 exl-id: 1b75721c-b223-41f0-88d9-bd855b529f31
-source-git-commit: 2ec9625d480eb8cae23f44aa247fce2a519dec31
+source-git-commit: a2b1bd5462ae1837470e31cfeb87a95af1c69be5
 workflow-type: tm+mt
-source-wordcount: '656'
+source-wordcount: '674'
 ht-degree: 4%
 
 ---
@@ -22,13 +22,15 @@ ht-degree: 4%
 
 >[!CAUTION]
 >
->[Modellerna för ](/help/assets/content-fragments/content-fragments-models.md) innehållsfragment rekommenderas nu för att skapa alla dina fragment.
+>[Modeller för innehållsfragment](/help/assets/content-fragments/content-fragments-models.md) Vi rekommenderar att du skapar alla nya innehållsfragment.
 >
->Modeller för innehållsfragment används för alla exempel i We.Retail.
+>Modeller för innehållsfragment används för alla exempel i WKND.
 
 >[!NOTE]
 >
->Före AEM 6.3 skapades innehållsfragment med hjälp av mallar i stället för modeller. Mallar är inte längre tillgängliga för att skapa nya fragment, men fragment som skapats med en sådan mall stöds fortfarande.
+>Före AEM 6.3 skapades innehållsfragment baserade på mallar i stället för modeller.
+>
+>Mallar för innehållsfragment är nu föråldrade. De kan fortfarande användas för att skapa fragment, men du bör använda Content Fragment Models i stället. Inga nya funktioner kommer att läggas till i fragmentmallar och de kommer att tas bort i en framtida version.
 
 Mallar väljs när ett innehållsfragment skapas. De ger det nya fragmentet grundläggande struktur, element och variation. Mallarna som används för innehållsfragment omfattas av Granite Configuration Manager.
 
@@ -48,13 +50,13 @@ Prioritetsordningen är (i fallande ordning) `/conf`, `/apps`, `/libs`.
 
 >[!CAUTION]
 >
->Du ***får*** inte ändra något i `/libs`-sökvägen.
+>Du ***måste*** ändrar ingenting i `/libs` bana.
 >
->Detta beror på att innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan mycket väl skrivas över när du använder en snabbkorrigering eller ett funktionspaket).
+>Detta beror på innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan mycket väl skrivas över när du använder en snabbkorrigering eller ett funktionspaket).
 >
 >Den rekommenderade metoden för konfiguration och andra ändringar är:
 >
->1. Återskapa önskat objekt (t.ex. som det finns i `/libs`) under `/apps`
+>1. Återskapa önskat objekt (d.v.s. som det finns i `/libs`) under `/apps`
 >
 >1. Gör ändringar i `/apps`
 
@@ -122,12 +124,12 @@ Mer information om noderna och deras egenskaper är:
     <tr>
      <td><code>jcr:title</code></td>
      <td><p><code>String</code></p> <p>required<br /> </p> </td>
-     <td>Mallens titel (visas i guiden <strong>Skapa fragment</strong>).</td>
+     <td>Mallens titel (visas i <strong>Skapa fragment</strong> guide).</td>
     </tr>
     <tr>
      <td><code>jcr:description</code></td>
      <td><p><code>String</code></p> <p>valfritt</p> </td>
-     <td>En text som beskriver syftet med mallen (visas i guiden <strong>Skapa fragment</strong>).</td>
+     <td>En text som beskriver syftet med mallen (visas i <strong>Skapa fragment</strong> guide).</td>
     </tr>
     <tr>
      <td><code>initialAssociatedContent</code></td>
@@ -137,12 +139,12 @@ Mer information om noderna och deras egenskaper är:
     <tr>
      <td><code>precreateElements</code></td>
      <td><p><code>Boolean</code></p> <p>required</p> </td>
-     <td><p><code>true</code>, om de delresurser som representerar elementen (utom det överordnad elementet) i innehållsfragmentet ska skapas när innehållsfragmentet skapas, <em>false</em> om de ska skapas "i farten".</p> <p><strong>Obs</strong>: för närvarande måste den här parametern anges till  <code>true</code>.</p> </td>
+     <td><p><code>true</code>, om de delresurser som representerar elementen (utom det överordnad elementet) i innehållsfragmentet ska skapas när innehållsfragmentet skapas, <em>false</em> om de ska skapas "i farten".</p> <p><strong>Anteckning</strong>: för närvarande måste den här parametern anges till <code>true</code>.</p> </td>
     </tr>
     <tr>
      <td><code>version</code></td>
      <td><p><code>Long</code></p> <p>obligatoriskt</p> </td>
-     <td><p>Innehållsstrukturens version. stöds för närvarande:</p> <p><strong>Obs</strong>: för närvarande måste den här parametern anges till  <code>2</code>.<br /> </p> </td>
+     <td><p>Innehållsstrukturens version. stöds för närvarande:</p> <p><strong>Anteckning</strong>: för närvarande måste den här parametern anges till <code>2</code>.<br /> </p> </td>
     </tr>
    </tbody>
   </table>
@@ -159,7 +161,7 @@ Mer information om noderna och deras egenskaper är:
     <tr>
      <td><code>elements</code> </td>
      <td><p><code>nt:unstructured</code></p> <p>obligatoriskt</p> </td>
-     <td><p>En nod som innehåller definitionen av elementen i innehållsfragmentet. Det är obligatoriskt och måste innehålla minst en underordnad nod för <strong>Main</strong>-elementet, men kan innehålla [1..n] underordnade noder.</p> <p>När mallen används kopieras elementundergrenen till fragmentets modellundergren.</p> <p>Det första elementet (som det visas i CRXDE Lite) anses automatiskt vara <i>main</i>-elementet. nodnamnet är irrelevant och noden i sig inte har någon särskild betydelse, förutom det faktum att den representeras av huvudtillgången, övriga element hanteras som undertillgångar.</p> </td>
+     <td><p>En nod som innehåller definitionen av elementen i innehållsfragmentet. Det är obligatoriskt och måste innehålla minst en underordnad nod för <strong>Huvud</strong> -element, men kan innehålla [1..n] underordnade noder.</p> <p>När mallen används kopieras elementundergrenen till fragmentets modellundergren.</p> <p>Det första elementet (som det visas i CRXDE Lite) anses automatiskt vara <i>main</i> element, nodnamnet är irrelevant och noden i sig inte har någon särskild betydelse, förutom det faktum att den representeras av huvudtillgången, övriga element hanteras som undertillgångar.</p> </td>
     </tr>
    </tbody>
   </table>
@@ -235,18 +237,18 @@ Mer information om noderna och deras egenskaper är:
     <tr>
      <td><code>&lt;<i>variation-name</i>&gt;</code> </td>
      <td><p><code>nt:unstructured</code></p> <p>krävs om det finns en variantnod</p> </td>
-     <td><p>Definierar en ursprunglig variation.<br /> Variationen läggs som standard till i alla element i innehållsfragmentet.</p> <p>Variationen kommer att ha samma inledande innehåll som respektive element (se <code class="code">defaultContent/
+     <td><p>Definierar en ursprunglig variation.<br /> Variationen läggs som standard till i alla element i innehållsfragmentet.</p> <p>Variationen kommer att ha samma ursprungliga innehåll som respektive element (se <code class="code">defaultContent/
        initialContentType</code>)</p> </td>
     </tr>
     <tr>
      <td><code>jcr:title</code></td>
      <td><p><code>String</code></p> <p>obligatoriskt</p> </td>
-     <td>Variantens titel (visas på fliken <strong>Variation</strong> i fragmentredigeraren (vänster rad)).</td>
+     <td>Variantens titel (visas i fragmentredigerarens <strong>Variation</strong> tabbtangenten.</td>
     </tr>
     <tr>
      <td><code>jcr:desciption</code></td>
      <td><p><code>String</code></p> <p>valfritt</p> <p>standard: ""</p> </td>
-     <td>En text som innehåller en beskrivning av variationen <span>(som visas på fliken <strong>Variation</strong> i fragmentredigeraren (vänster)).</code></td>
+     <td>En text som innehåller en beskrivning av variationen <span>(visas i fragmentredigerarens <strong>Variation</strong> tabbtangenten.</code></td>
     </tr>
    </tbody>
   </table>
