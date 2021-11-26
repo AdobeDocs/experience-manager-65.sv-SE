@@ -8,10 +8,10 @@ breadcrumb-title: Utvecklingshandbok
 user-guide-description: Den här guiden beskriver hur du skapar AEM.
 feature: Developing
 role: Developer
-source-git-commit: a95cf285be84f6aed194f3ae904556f5d017c7be
+source-git-commit: 879e69aa17c7142c2b1e86b72ce23226a7f09a88
 workflow-type: tm+mt
-source-wordcount: '920'
-ht-degree: 6%
+source-wordcount: '1055'
+ht-degree: 7%
 
 ---
 
@@ -98,31 +98,45 @@ ht-degree: 6%
       + [Utveckla Forms (Classic UI)](developing-forms.md)
 + Headless Experience Management{#headless}
    + [Headless och AEM](headless/introduction.md)
-   + [Headless och Hybrid with AEM](https://business.adobe.com/content/dam/dx/us/en/products/experience-manager/sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
+   + [Innehållsfragment]{#content-fragments}
+      + [Headless Delivery with Content Fragments and GraphQL](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-graphql.html)
+      + [Arbeta med innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments.html)
+      + [Aktivera funktionen för innehållsfragment för instansen](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-configuration-browser.html)
+      + [Modeller för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-models.html)
+      + [Hantera innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-managing.html)
+      + [Variationer – redigera innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-variations.html)
+      + [Markdown](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-markdown.html)
+      + [Använda associerat innehåll](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-assoc-content.html)
+      + [Metadata – fragmentegenskaper](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-metadata.html)
+      + [Strukturträd](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-structure-tree.html)
+      + [Förhandsgranska - JSON-representation](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-json-preview.html)
+   + [Leverans-API]{#delivery-api}
+      + [HTTP API för Assets](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/mac-api-assets.html)
+      + [Innehållsfragment REST API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html)
+      + [Content Fragments GraphQL API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/graphql-api-content-fragments.html)
+      + [AEM GraphQL API med innehållsfragment - exempelinnehåll och frågor](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/content-fragments-graphql-samples.html)
+      + [Autentisering för AEM GraphQL-frågor om innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/graphql-authentication-content-fragments.html)
++ Hybrid- och SPA AEM{#spas}
+   + [Hybrid och SPA med AEM](https://business.adobe.com/content/dam/dx/us/en/products/experience-manager/sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
+   + [SPA introduktion och genomgång](spa-walkthrough.md)
+   + [SPA WKND - självstudiekurs](spa-wknd.md)
+   + [Komma igång med React](spa-getting-started-react.md)
+   + [Implementera en React Component for SPA](spa-implementing-react-component.md)
+   + [Komma igång med Angular](spa-getting-started-angular.md)
+   + [SPA djupdykning](spa-deep-dives.md)
+   + [Utveckla SPA för AEM](spa-architecture.md)
+   + [SPA](spa-overview.md)
+   + [SPA Blueprint](spa-blueprint.md)
+   + [SPA](spa-page-component.md)
+   + [Dynamisk mappning av modell till komponent för SPA](spa-dynamic-model-to-component-mapping.md)
+   + [SPA](spa-routing.md)
+   + [RemotePage-komponenten](spa-remote-page.md)
+   + [Redigera en extern SPA i AEM](spa-edit-external.md)
+   + [Sammansatta komponenter i SPA](spa-composite-component.md)
+   + [SPA- och serveråtergivning](spa-ssr.md)
    + [Aktivera JSON-export för en komponent](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/json-exporter-components.html)
-   + Enkelsidiga program{#spas}
-      + [SPA introduktion och genomgång](spa-walkthrough.md)
-      + [SPA WKND - självstudiekurs](spa-wknd.md)
-      + [Getting Started with SPA in AEM - React](spa-getting-started-react.md)
-      + [Komma igång med SPA i AEM - Angular](spa-getting-started-angular.md)
-      + [Implementera en React Component for SPA](spa-implementing-react-component.md)
-      + [SPA djupdykning](spa-deep-dives.md)
-      + [SPA](spa-overview.md)
-      + [Utveckla SPA för AEM](spa-architecture.md)
-      + [SPA Blueprint](spa-blueprint.md)
-      + [SPA](spa-page-component.md)
-      + [Dynamisk mappning av modell till komponent för SPA](spa-dynamic-model-to-component-mapping.md)
-      + [SPA](spa-routing.md)
-      + [SPA och Adobe Experience Platform Launch Integration](spa-launch.md)
-      + [SPA- och serveråtergivning](spa-ssr.md)
-      + [RemotePage-komponenten](spa-remote-page.md)
-      + [Redigera en extern SPA i AEM](spa-edit-external.md)
-      + [Sammansatta komponenter i SPA](spa-composite-component.md)
-      + [SPA referensmaterial](spa-reference-materials.md)
-   + [HTTP-API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/mac-api-assets.html)
-   + [Innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments.html)
-   + [Experience Fragments](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/experience-fragments.html)
-   + [Förstå innehållsfragment och innehållstjänster i AEM](https://helpx.adobe.com/experience-manager/kt/sites/using/content-fragments-content-services-feature-video-understand.html)
+   + [Starta integrering](spa-launch.md)
+   + [SPA referensmaterial](spa-reference-materials.md)
 + Utvecklingsverktyg{#devtools}
    + [Utvecklingsverktyg](dev-tools.md)
    + [AEM Modernization Tools](modernization-tools.md)
