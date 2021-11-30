@@ -8,9 +8,9 @@ breadcrumb-title: Utvecklingshandbok
 user-guide-description: Den här guiden beskriver hur du skapar AEM.
 feature: Developing
 role: Developer
-source-git-commit: ba6b910add6770753efeb576d9df1db42d5720b8
+source-git-commit: cf7e9061bac9004c7efd2f045b4900e4a92d67e9
 workflow-type: tm+mt
-source-wordcount: '1080'
+source-wordcount: '1085'
 ht-degree: 7%
 
 ---
@@ -96,6 +96,7 @@ ht-degree: 7%
       + [Använda och utöka widgetar (Classic UI)](widgets.md)
       + [Använda xtypes (Classic UI)](xtypes.md)
       + [Utveckla Forms (Classic UI)](developing-forms.md)
++ [Headless and Headless in AEM](headful-headless.md)
 + Headless Experience Management{#headless}
    + [Headless och AEM](headless/introduction.md)
    + Komma igång-guider {#getting-started}
