@@ -2,10 +2,10 @@
 title: AEM Content and Commerce Release Notes 2021
 description: AEM Content and Commerce Release Notes 2021
 exl-id: ec47c5f8-d4dd-469f-94df-5ee28f25d696
-source-git-commit: 7261a71769dfb968c768e0cb4835d7d4cca97b1a
+source-git-commit: 98ba3edb3b9e93fa13a0f0418f1b17323d5a7233
 workflow-type: tm+mt
-source-wordcount: '1327'
-ht-degree: 6%
+source-wordcount: '1311'
+ht-degree: 7%
 
 ---
 
@@ -15,19 +15,29 @@ ht-degree: 6%
 
 Granska de lägsta systemkraven i tabellen nedan för den CIF-version som du använder eller planerar att använda i framtiden.
 
-**I aprilversionen har vi ersatt CIF Connector från GitHub med CIF-tillägget** som finns på [Adobe Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html). Övergången till tillägget ger stora fördelar för projekten:
-
-* De flesta av de nya funktionerna är omedelbart tillgängliga AEM 6.5 (ingen mer väntan på sidoport för funktionen)
-* Enkelt att uppgradera till nya tilläggsversioner
-* Klar för Cloud Service
-
-Den gamla AEM CIF Connector försätts i underhållsläge och ska inte användas längre. Ersätt CIF Connector med det nya CIF-tillägget. Det är enkelt att ersätta paket för de flesta projekt.
-
 | Komponent | Systemkrav |
 |:-------|:-----:|
 | CIF-tillägg | Minimum: AEM 6.5.7, Magento 2.3.5 GraphQL scheman |
 | CIF-kärnkomponenter | [Systemkrav](https://github.com/adobe/aem-core-cif-components/blob/master/VERSIONS.md) |
 | AEM Project Archetype | [Systemkrav](https://github.com/adobe/aem-project-archetype/blob/master/VERSIONS.md) |
+
+## Releasedatum: November 2021
+
+| Komponent | Version | Information |
+|:-------|:-----:|---------------------:|
+| CIF-tillägg | 2021.11.18.00 | [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.11.18.00.zip) |
+| CIF-kärnkomponenter | 2.4.2 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.4.2) |
+| CIF Venias referenswebbplats | 2021.12.01 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2021.12.01) |
+
+### Nyheter {#what-is-new-november}
+
+* Utökade myAccount-komponenter som baseras på Commerce:s utökningsbara Premiere-komponenter
+
+![Utökade komponenter för myAccount](/help/assets/CIF/extended-myAccount-components.png)
+
+* Författare kan skapa ad hoc-Commerce Product Recommendations med hjälp av ytterligare rekommendationstyper
+
+* Stöd för presentkort i AEM Storefront
 
 ## Releasedatum: Oktober 2021
 
