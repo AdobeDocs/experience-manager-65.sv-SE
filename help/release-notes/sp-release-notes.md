@@ -4,9 +4,9 @@ description: Versionsinformation som är specifik för [!DNL Adobe Experience Ma
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: 35260325b583bd047f22ffa88afb9469b2023e60
+source-git-commit: c7fdfeae785ad044437d065a8da6bdcbaf00d4c4
 workflow-type: tm+mt
-source-wordcount: '3306'
+source-wordcount: '3613'
 ht-degree: 0%
 
 ---
@@ -320,91 +320,58 @@ Need to verify with Engineering, the status is currently showing as Resolved
 >* [!DNL Experience Manager Forms] släpper tilläggspaketen en vecka efter den schemalagda [!DNL Experience Manager] Lanseringsdatum för Service Pack.
 
 
-<!--
+**Adaptiv Forms**
 
-[!DNL AEM 6.5.10.0 Forms] includes the following bug fixes:
+* Tillgänglighet - När du anger `Wizard` navigeringsknapparnas layout för en panel i adaptiv form saknar Aria-etiketter och roll (NPR-37613).
 
-* When you install [!DNL AEM 6.5 Forms], the following third-party libraries are installed automatically (CQDOC-18373):
-  * [!DNL Microsoft Visual C++ 2008 Service Pack 1 (x86)]
-  * [!DNL Microsoft Visual C++ 2010 Service Pack 1 (x86)]
+* Valideringar i ett datumfält i en adaptiv form fungerar inte som väntat (NPR-37556).
 
-**Adaptive Forms**
+* När etikettexten för komponenterna Kryssruta och Alternativknapp är lång passar texten inte (NPR-37294).
 
-* If the validations performed on the field values in an adaptive form are successful, [!DNL AEM Forms] fails to invoke the Form Data Model (CQ-4325491).
+* När du tillämpar formatändringar i Tack-meddelandet för AEM Forms Container-komponenten, återges inte ändringarna i källadaptiv form (NPR-37284).
 
-* When you add a language dictionary to a translation project and then open the project, [!DNL AEM Forms] displays an error message (CQ-4324933):
+* Skillnader i värdet på `Switch` i användargränssnittet och i serverdelen (NPR-37268).
 
-   ```TXT
-   Uncaught TypeError: Cannot read property 'PROJECT_LISTING_PATH' of undefined
-   at openButtonClickHandler (clientlibs.js:245)
-   at HTMLButtonElement.onclick (clientlibs.js:258)
+* När du använder tangentbordstangenterna för att navigera till `Submit` och tryck på `Enter` kan du skicka in det adaptiva formuläret flera gånger (CQ-4333993).
 
-   ```
+* Borttagningsåtgärden för den bifogade filkomponenten fungerar inte som förväntat (NPR-37376).
 
-* Performance issues after installing [!DNL AEM Forms] Service Pack 7 (CQ-4326828).
+* När en etikett för ett fält innehåller fler än 1 000 tecken i en adaptiv form som översätts till olika språk, kan ordlistan inte hämta översättningen av etiketten (CQ-4329290).
 
-* When you submit a form containing a standard HTML upload field from an Apple iOS device, sometimes, the content of the file is not sent and a 0-byte file is received at the other end. Apple iOS 15.1 provides a fix for the issue (CQ-4325361).
+**Dokumenttjänster**
 
-**Correspondence Management**
-
-* Delay in the display of characters in the [!UICONTROL Data] tab as well as in the HTML letter preview (NPR-37020).
-
-* When you are editing a text document fragment, the new words display as HTML tags after saving the fragment (NPR-36837).
-
-* Unable to view the letters that are saved as drafts (NPR-36816).
-
-* When you edit a text document fragment and then preview the letter, AEM Forms displays the expression language in the HTML letter preview (CQ-4322331).
-
-* Issues while rendering data with a self-service letter template (NPR-37161).
-
-
-**Interactive Communications**
-
-* A tab character duplicates between two words each time you print preview an Interactive Communication after editing a text document fragment (NPR-37021).
-
-* [!DNL AEM Forms] displays an error when you save a text document fragment that exceeds the maximum size limit (NPR-36874).
-
-* When you add an image to an Interactive Communication, an additional empty block displays after the image (NPR-36659).
-
-* When you select all text in an editor, you cannot change the font text to Arial (NPR-36646).
-
-* When you create a URL in an editor and preview the changes, a black background displays instead of the URL text (NPR-36640).
-
-* When you copy and paste text to an editor, there are issues while changing the font to Arial for bullets available in the document (NPR-36628). 
-
-* Indentation issues for bullets in the text editor (NPR-36513).
-
-**Designer**
-
-* Screen Reader fails to read floating field data placed inside text label on the Master page or on Subform pages in a dynamic PDF (CQ-4321587).
-
-**Document Services**
-
-* When you convert XDP files to PDF files and then assemble the resultant PDF, the PDF generations fails and displays the following error message:
+* Ett fel visas när Assembler-tjänsten används (NPR-37606):
 
    ```TXT
-   Caused by: com.adobe.fd.assembler.client.AssemblerException$ClientException: Document is in a disposed state!
+     500 Internal Server Error
    ```
 
-**Forms Workflow**
+* När dokumentbilagor skickas till Assembler-tjänsten visas följande undantag (NPR-37582):
 
-* Unable to submit a form to a Workbench process after upgrading to AEM Forms Service Pack 8 (CQ-4325846).
+   ```TXT
+     com.adobe.livecycle.assembler.client.ProcessingException: ⁪: Failed to execute the DDX
+   ```
+
+* Avslutande parentes saknas från data efter konvertering av ett PDF-dokument till ett PDF-A/1B PDF-dokument (NPR-37608).
 
 **HTML5 Forms**
 
-* When you set the value for the `mfAllowAttachments` property as `True` in the CRX DE repository, the `dataXml` gets corrupted on submitting the HTML5 form (NPR-37035).
+* När du installerar AEM 6.5.10.0 fungerar inte förhandsgranskningen i HTML för ett XDP-formulär (NPR-37503, CQ-4331926).
 
-* When you render an XDP as HTML using `dataXml`, [!DNL AEM Forms] displays a `Page Unresponsive` error (NPR-36631).
+* Överlappande textproblem vid migrering av PDF forms till HTML 5-formulär på olika språk (NPR-37173).
 
-### Commerce {#commerce-65110}
+**Bokstäver**
 
-* The value in the **[!UICONTROL Published By]** field displayed is incorrect in the Column view (NPR-36902).
-* When a Catalog is rolled out, new products are incorrectly marked as modified products (NPR-36666).
-* When you recreate a deleted product, the product page is not recreated (NPR-36665).
-* Modified pages are updated but the corresponding linked products are not updated on Catalog rollout (CQ-4321409, NPR-36422).
-* The **[!UICONTROL Publish later]** and **[!UICONTROL Unpublish later]** workflows do not work (CQ-4327679).
+* När du skickar ett brev och öppnar det igen i vyn HTML ändras inte textdokumentfragmentens position (NPR-37307).
 
--->
+**Forms Workflow**
+
+* Om det finns ett inbäddat arbetsflöde för behållare får du flera e-postmeddelanden om arbetsflödesslutförande, även efter att du har valt `Notify on Complete of Container Workflow` option (NPR-37280).
+
+**Foundation JEE**
+
+* Efter installation av AEM 6.5 Forms Service Pack 9 är URL:erna för CRX-databasen inte längre tillgängliga (NPR-37592).
+
 
 Mer information om säkerhetsuppdateringar finns i [[!DNL Experience Manager] säkerhetsbulletinsida](https://helpx.adobe.com/security/products/experience-manager.html).
 
