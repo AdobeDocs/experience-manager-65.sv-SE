@@ -12,9 +12,9 @@ discoiquuid: 9559e837-a87e-4ee7-8ca6-13b42c74e6bf
 docset: aem65
 feature: Configuring
 exl-id: dadde3ee-d60c-4b87-9af0-a12697148161
-source-git-commit: 687203bf418962877a63b2fe77d8bdd3791cd4d9
+source-git-commit: 88e4d8b56aa844e9a264615250971d0afdb68137
 workflow-type: tm+mt
-source-wordcount: '2733'
+source-wordcount: '2730'
 ht-degree: 0%
 
 ---
@@ -31,17 +31,15 @@ Innehållet synkroniseras linjärt mellan den primära instansen och standby-ins
 
 >[!NOTE]
 >
->Funktionen för vänteläge i kallt format är avsedd att skydda scenarier där hög tillgänglighet krävs för **författare**-instanser. I situationer där hög tillgänglighet krävs för **publicera**-instanser med hjälp av Tjärmikrokärnan rekommenderar Adobe att du använder en publiceringsgrupp.
+>Funktionen för vänteläge i kylskåp är avsedd att skydda scenarier där hög tillgänglighet krävs för **författare** -instanser. I situationer där hög tillgänglighet krävs **publicera** instanser som använder Tjärmikrokanalen rekommenderar Adobe att du använder en publiceringsgrupp.
 >
->Mer information om fler tillgängliga distributioner finns på sidan [Rekommenderade distributioner](/help/sites-deploying/recommended-deploys.md).
+>Mer information om fler tillgängliga distributioner finns i [Rekommenderade distributioner](/help/sites-deploying/recommended-deploys.md) sida.
 
 >[!NOTE]
 >
->När standby-instansen är konfigurerad, eller härleds från den primära noden, ger den endast åtkomst till följande två konsoler (för administrationsrelaterade aktiviteter):
+>När standby-instansen har konfigurerats, eller härletts från den primära noden, ger den endast åtkomst till följande konsol (för administrationsrelaterade aktiviteter):
 >
->* CRXDE Lite
 >* OSGI Web Console
-
 >
 >Andra konsoler är inte tillgängliga.
 
@@ -82,7 +80,7 @@ Du kan dessutom ange vilka standby-instanser som tillåts ansluta genom att begr
 
 >[!NOTE]
 >
->Vi rekommenderar att en belastningsutjämnare läggs till mellan Dispatcher och servrarna som ingår i konfigurationen för vänteläge i molnet. Belastningsutjämnaren bör konfigureras så att den endast dirigerar användartrafik till den primära **instansen** för att säkerställa konsekvens och förhindra att innehåll kopieras i standby-instansen på något annat sätt än i Cold Standby-mekanismen.
+>Vi rekommenderar att en belastningsutjämnare läggs till mellan Dispatcher och servrarna som ingår i konfigurationen för vänteläge i molnet. Belastningsutjämnaren bör konfigureras för att dirigera användartrafik endast till **primär** -instans för att säkerställa konsekvens och förhindra att innehåll kopieras i standby-instansen på annat sätt än med Cold Standby-mekanismen.
 
 ## Skapa en AEM Stjärtöverläge i Cold {#creating-an-aem-tarmk-cold-standby-setup}
 
@@ -90,8 +88,8 @@ Du kan dessutom ange vilka standby-instanser som tillåts ansluta genom att begr
 >
 >PID för segmentnodarkivet och tjänsten Standby Store har ändrats i AEM 6.3 jämfört med tidigare versioner enligt följande:
 >
->* från org.apache.jackrabbit.oak.**plugins**.segment.standby.store.StandbyStoreService to org.apache.jackrabbit.oak.segment.standby.store.StandbyStoreService
->* från org.apache.jackrabbit.oak.**plugins**.segment.SegmentNodeStoreService to org.apache.jackrabbit.oak.segment.SegmentNodeStoreService
+>* från org.apache.jackrabbit.oak.**plugin-program**.segment.standby.store.StandbyStoreService to org.apache.jackrabbit.oak.segment.standby.store.StandbyStoreService
+>* från org.apache.jackrabbit.oak.**plugin-program**.segment.SegmentNodeStoreService to org.apache.jackrabbit.oak.segment.SegmentNodeStoreService
 
 >
 >Se till att du gör de nödvändiga konfigurationsjusteringarna för att återspegla den här ändringen.
@@ -102,7 +100,7 @@ Nedan visas proceduren som måste följas för att skapa en konfiguration med en
 
 1. Installera AEM.
 
-1. Stäng instansen och kopiera installationsmappen till den plats där instansen av kallstart ska köras. Även om du kör från olika datorer måste du ge varje mapp ett beskrivande namn (som *aem-primär* eller *aem-standby*) för att skilja mellan instanserna.
+1. Stäng instansen och kopiera installationsmappen till den plats där instansen av kallstart ska köras. Även om du kör från olika datorer måste du ge varje mapp ett beskrivande namn (som *aem-primär* eller *aem-standby*) för att skilja mellan förekomsterna.
 1. Gå till installationsmappen för den primära instansen och:
 
    1. Kontrollera och ta bort tidigare OSGi-konfigurationer som du har under `aem-primary/crx-quickstart/install`
@@ -112,9 +110,9 @@ Nedan visas proceduren som måste följas för att skapa en konfiguration med en
    1. Skapa de konfigurationer som krävs för det önskade nodarkivet och datalagret under `aem-primary/crx-quickstart/install/install.primary`
    1. Skapa en fil med namnet `org.apache.jackrabbit.oak.segment.standby.store.StandbyStoreService.config` på samma plats och konfigurera den därefter. Mer information om konfigurationsalternativen finns i [Konfiguration](/help/sites-deploying/tarmk-cold-standby.md#configuration).
 
-   1. Om du använder en AEM tarMK-instans med ett externt datalager skapar du en mapp med namnet `crx3` under `aem-primary/crx-quickstart/install` som heter `crx3`
+   1. Om du använder en AEM tarMK-instans med ett externt datalager skapar du en mapp med namnet `crx3` under `aem-primary/crx-quickstart/install` namngiven `crx3`
 
-   1. Placera konfigurationsfilen för datalagret i mappen `crx3`.
+   1. Placera konfigurationsfilen för datalagret i `crx3` mapp.
 
    Om du till exempel kör en AEM tarMK-instans med ett externt fildatalager behöver du följande konfigurationsfiler:
 
@@ -124,7 +122,7 @@ Nedan visas proceduren som måste följas för att skapa en konfiguration med en
 
    Här nedan hittar du exempelkonfigurationer för den primära instansen:
 
-   **Exempel** **på oforg.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config**
+   **Exempel på** **org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config**
 
    ```xml
    org.apache.sling.installer.configuration.persist=B"false"
@@ -154,12 +152,12 @@ Nedan visas proceduren som måste följas för att skapa en konfiguration med en
    java -jar quickstart.jar -r primary,crx3,crx3tar
    ```
 
-1. Skapa en ny loggningslogg för Apache Sling för **org.apache.jackrabbit.oak.segment**-paketet. Ställ in loggnivån på &quot;Debug&quot; och peka loggutdata på en separat loggfil, som */logs/tarmk-coldstandby.log*. Mer information finns i [Loggning](/help/sites-deploying/configure-logging.md).
-1. Gå till platsen för **standby**-instansen och starta den genom att köra burken.
+1. Skapa en ny loggningslogg för Apache Sling för **org.apache.jackrabbit.oak.segment** paket. Ställ in loggnivån på &quot;Felsök&quot; och peka loggutdata på en separat loggfil, som */logs/tarmk-coldstandby.log*. Mer information finns i [Loggning](/help/sites-deploying/configure-logging.md).
+1. Gå till platsen för **vänteläge** och börja med att köra burken.
 1. Skapa samma loggningskonfiguration som för den primära. Stoppa sedan instansen.
 1. Förbered sedan standby-instansen. Du kan göra detta genom att utföra samma steg som för den primära instansen:
 
-   1. Ta bort alla filer som du har under `aem-standby/crx-quickstart/install`.
+   1. Ta bort alla filer du har under `aem-standby/crx-quickstart/install`.
    1. Skapa en ny mapp med namnet `install.standby` under `aem-standby/crx-quickstart/install`
 
    1. Skapa två konfigurationsfiler med namnet:
@@ -205,7 +203,7 @@ Nedan visas proceduren som måste följas för att skapa en konfiguration med en
    minRecordLength=I"16384"
    ```
 
-1. Starta instansen **i vänteläge** med vänteläget:
+1. Starta **vänteläge** instans med vänteläge:
 
    ```xml
    java -jar quickstart.jar -r standby,crx3,crx3tar
@@ -214,20 +212,20 @@ Nedan visas proceduren som måste följas för att skapa en konfiguration med en
 Tjänsten kan även konfigureras via webbkonsolen genom att:
 
 1. Gå till webbkonsolen på: *https://serveraddress:serverport/system/console/configMgr*
-1. Söker efter en tjänst som heter **Apache Jackrabbit Oak Segment tar Standby Service** och dubbelklickar på den för att redigera inställningarna.
+1. Söker efter en tjänst som anropats **Apache Jackrabbit Oak Segment tar i vänteläge** och dubbelklicka på den för att redigera inställningarna.
 1. Spara inställningarna och starta om instanserna så att de nya inställningarna kan börja gälla.
 
 >[!NOTE]
 >
->Du kan när som helst kontrollera rollen för en instans genom att kontrollera om det finns **primära** eller **väntelägen** i webbkonsolen för delningsinställningar.
+>Du kan när som helst kontrollera rollen för en instans genom att kontrollera förekomsten av **primär** eller **vänteläge** runmodes i webbkonsolen Sling Settings.
 >
->Detta kan du göra genom att gå till *https://localhost:4502/system/console/status-slingsettings* och kontrollera raden **&quot;Run Modes&quot;**.
+>Detta kan du göra genom att gå till *https://localhost:4502/system/console/status-slingsettings* och kontrollera **&quot;Körningslägen&quot;** linje.
 
 ## Första synkroniseringen {#first-time-synchronization}
 
 När beredningen är klar och standby-läget startas för första gången kommer det att uppstå en kraftig nätverkstrafik mellan instanserna när standby-läget fångar upp till primärt läge. Du kan läsa loggarna för att se synkroniseringens status.
 
-I vänteläge *target-coldstandby.log* visas poster som:
+I vänteläge *tarmk-coldstandby.log* kommer du att se bl.a. följande:
 
 ```xml
     *DEBUG* [defaultEventExecutorGroup-2-1] org.apache.jackrabbit.oak.segment.standby.store.StandbyStore trying to read segment ec1f739c-0e3c-41b8-be2e-5417efc05266
@@ -239,15 +237,15 @@ I vänteläge *target-coldstandby.log* visas poster som:
     *DEBUG* [defaultEventExecutorGroup-2-1] org.apache.jackrabbit.oak.segment.file.TarWriter Writing segment ec1f739c-0e3c-41b8-be2e-5417efc05266 to /mnt/crx/author/crx-quickstart/repository/segmentstore/data00016a.tar
 ```
 
-I väntelägets *error.log* bör du se en post som den här:
+I vänteläget *error.log* bör du se en sådan här post:
 
 ```xml
 *INFO* [FelixStartLevel] org.apache.jackrabbit.oak.segment.standby.store.StandbyStoreService started standby sync with 10.20.30.40:8023 at 5 sec.
 ```
 
-I ovanstående loggutdrag är *10.20.30.40* den primära IP-adressen.
+I loggfragmentet ovan *10.20.30.40* är den primära IP-adressen.
 
-I **primär** *target-coldstandby.log* visas poster som:
+I **primär** *tarmk-coldstandby.log* kommer du att se bl.a. följande:
 
 ```xml
     *DEBUG* [nioEventLoopGroup-3-2] org.apache.jackrabbit.oak.segment.standby.store.CommunicationObserver got message ‘s.d45f53e4-0c33-4d4d-b3d0-7c552c8e3bbd’ from client c7a7ce9b-1e16-488a-976e-627100ddd8cd
@@ -259,7 +257,7 @@ I **primär** *target-coldstandby.log* visas poster som:
     *DEBUG* [nioEventLoopGroup-3-2] org.apache.jackrabbit.oak.segment.standby.store.CommunicationObserver did send segment with 262144 bytes to client c7a7ce9b-1e16-488a-976e-627100ddd8cd
 ```
 
-I det här fallet är &quot;klienten&quot; som nämns i loggen **standby**-instansen.
+I det här fallet är &quot;klienten&quot; som anges i loggen **vänteläge** -instans.
 
 När de här posterna inte längre visas i loggen kan du anta att synkroniseringsprocessen är slutförd.
 
@@ -269,7 +267,7 @@ Ovanstående poster visar att avsökningsfunktionen fungerar som den ska, men de
 *DEBUG* [defaultEventExecutorGroup-156-1] org.apache.jackrabbit.oak.segment.file.TarWriter Writing segment 3a03fafc-d1f9-4a8f-a67a-d0849d5a36d5 to /<<CQROOTDIRECTORY>>/crx-quickstart/repository/segmentstore/data00014a.tar
 ```
 
-När du kör med en icke delad `FileDataStore` kommer meddelanden som följande att bekräfta att binära filer överförs korrekt:
+Dessutom, vid körning med en ej delad `FileDataStore`, som följande kommer att bekräfta att de binära filerna överförs på rätt sätt:
 
 ```xml
 *DEBUG* [nioEventLoopGroup-228-1] org.apache.jackrabbit.oak.segment.standby.codec.ReplyDecoder received blob with id eb26faeaca7f6f5b636f0ececc592f1fd97ea1a9#169102 and size 169102
@@ -279,26 +277,26 @@ När du kör med en icke delad `FileDataStore` kommer meddelanden som följande 
 
 Följande OSGi-inställningar är tillgängliga för tjänsten Cold Standby:
 
-* **Beständig konfiguration:** om den är aktiverad lagras konfigurationen i databasen i stället för i de traditionella OSGi-konfigurationsfilerna. Vi rekommenderar att den här inställningen är inaktiverad på produktionssystem så att den primära konfigurationen inte hämtas i vänteläge.
+* **Beständig konfiguration:** om det är aktiverat lagras konfigurationen i databasen i stället för de traditionella OSGi-konfigurationsfilerna. Vi rekommenderar att den här inställningen är inaktiverad på produktionssystem så att den primära konfigurationen inte hämtas i vänteläge.
 
-* **Läge (`mode`):** då väljs instansens körningsläge.
+* **Läge (`mode`):** Då väljs instansens körningsläge.
 
-* **Port (port):** den port som ska användas för kommunikation. Standardvärdet är `8023`.
+* **Port (port):** den hamn som ska användas för kommunikation. Standardvärdet är `8023`.
 
 * **Primär värd (`primary.host`):** - den primära instansens värd. Den här inställningen gäller endast för vänteläge.
-* **Synkroniseringsintervall (`interval`):** - den här inställningen bestämmer intervallet mellan synkroniseringsbegäranden och gäller endast för standby-instansen.
+* **Synkroniseringsintervall (`interval`):** - den här inställningen avgör intervallet mellan synkroniseringsbegäranden och gäller endast för standby-instansen.
 
-* **Tillåtna IP-intervall (`primary.allowed-client-ip-ranges`):**  - IP-intervall som den primära servern tillåter anslutningar från.
+* **Tillåtna IP-intervall (`primary.allowed-client-ip-ranges`):** - IP-intervallen som den primära servern tillåter anslutningar från.
 * **Säker (`secure`):** Aktivera SSL-kryptering. För att den här inställningen ska kunna användas måste den vara aktiverad i alla instanser.
 * **Timeout för vänteläsning (`standby.readtimeout`):** Timeout för begäranden som utfärdas från standby-instansen i millisekunder. Standardvärdet är 60000 (en minut).
 
-* **Standby Automatic Cleanup (`standby.autoclean`):** Anropa rensningsmetoden om storleken på butiken ökar under en synkroniseringscykel.
+* **Automatisk rensning i vänteläge (`standby.autoclean`):** Anropa rensningsmetoden om storleken på butiken ökar under en synkroniseringscykel.
 
 >[!NOTE]
 >
 >Vi rekommenderar att primär data och vänteläge har olika databas-ID för att göra dem separat oidentifierbara för tjänster som Offloading.
 >
->Det bästa sättet att se till att detta täcks är att ta bort filen *sling.id* i vänteläge och starta om instansen.
+>Det bästa sättet att vara säker på att det här täcks är att ta bort *sling.id* filen i vänteläge och instansen startas om.
 
 ## Redundansprocedurer {#failover-procedures}
 
@@ -311,16 +309,16 @@ Om den primära instansen av någon anledning inte fungerar kan du ställa in en
 1. Gå till den plats där standby-instansen är installerad och stoppa den.
 
 1. Om du har konfigurerat en belastningsutjämnare med konfigurationen kan du ta bort den primära från belastningsutjämnarens konfiguration nu.
-1. Säkerhetskopiera mappen `crx-quickstart` från installationsmappen i vänteläge. Den kan användas som utgångspunkt när du skapar ett nytt vänteläge.
+1. Säkerhetskopiera `crx-quickstart` från installationsmappen i vänteläge. Den kan användas som utgångspunkt när du skapar ett nytt vänteläge.
 
-1. Starta om instansen med körningsläget `primary`:
+1. Starta om instansen med `primary` runmode:
 
    ```shell
    java -jar quickstart.jar -r primary,crx3,crx3tar
    ```
 
 1. Lägg till den nya primära till belastningsutjämnaren.
-1. Skapa och starta en ny standby-instans. Mer information finns i proceduren ovan på [Skapa en AEM Stenk Cold Standby Setup](/help/sites-deploying/tarmk-cold-standby.md#creating-an-aem-tarmk-cold-standby-setup).
+1. Skapa och starta en ny standby-instans. Mer information finns i proceduren ovan på [Skapa en AEM väntelägesinställning för TARMK](/help/sites-deploying/tarmk-cold-standby.md#creating-an-aem-tarmk-cold-standby-setup).
 
 ## Använda snabbkorrigeringar i en konfiguration för vänteläge i kallt format {#applying-hotfixes-to-a-cold-standby-setup}
 
@@ -328,9 +326,9 @@ Det rekommenderade sättet att tillämpa snabbkorrigeringar på en kallstartsins
 
 Du kan göra detta genom att följa stegen nedan:
 
-1. Stoppa synkroniseringsprocessen på den kalla standby-instansen genom att gå till JMX-konsolen och använda **org.apache.jackrabbit.oak: Status (&quot;Standby&quot;)**bean. Mer information om hur du gör detta finns i avsnittet [Övervakning](#monitoring).
+1. Stoppa synkroniseringsprocessen på den kalla standby-instansen genom att gå till JMX-konsolen och använda **org.apache.jackrabbit.oak: Status (&quot;Standby&quot;)**bean. Mer information om hur du gör detta finns i avsnittet om [Övervakning](#monitoring).
 1. Stoppa kallstartsinstansen.
-1. Installera snabbkorrigeringen på den primära instansen. Mer information om hur du installerar en snabbkorrigering finns i [Arbeta med paket](/help/sites-administering/package-manager.md).
+1. Installera snabbkorrigeringen på den primära instansen. Mer information om hur du installerar en snabbkorrigering finns i [Så här arbetar du med paket](/help/sites-administering/package-manager.md).
 1. Testa instansen efter problem efter installationen.
 1. Ta bort instansen av det kalla vänteläget genom att ta bort installationsmappen.
 1. Stoppa den primära instansen och klona den genom att utföra en kopia av hela installationsmappen i filsystemet till platsen för det kalla vänteläget.
@@ -339,7 +337,7 @@ Du kan göra detta genom att följa stegen nedan:
 
 ## Övervakning {#monitoring}
 
-Funktionen visar information med JMX eller MBeans. Detta gör att du kan kontrollera det aktuella läget för standby och överordnad med hjälp av [JMX-konsolen](/help/sites-administering/jmx-console.md). Informationen finns i MBean `type org.apache.jackrabbit.oak:type="Standby"`med namnet `Status`.
+Funktionen visar information med JMX eller MBeans. Det gör att du kan kontrollera det aktuella läget för standby och överordnad med hjälp av [JMX-konsol](/help/sites-administering/jmx-console.md). Informationen finns i MBean av `type org.apache.jackrabbit.oak:type="Standby"`namngiven `Status`.
 
 **Standby**
 
@@ -351,10 +349,10 @@ Den här noden har fem skrivskyddade attribut:
 
 * `Mode:` Klient: följt av det UUID som används för att identifiera instansen. Observera att detta UUID ändras varje gång konfigurationen uppdateras.
 
-* `Status:` en textbeteckning för det aktuella läget (som  `running` eller  `stopped`).
+* `Status:` en textbeteckning för det aktuella läget (som `running` eller `stopped`).
 
 * `FailedRequests:`antalet på varandra följande fel.
-* `SecondsSinceLastSuccess:` antalet sekunder som gått sedan den senaste kommunikationen med servern. Det visas `-1` om kommunikationen inte har slutförts.
+* `SecondsSinceLastSuccess:` antalet sekunder som gått sedan den senaste kommunikationen med servern. Den visas `-1` om ingen framgångsrik kommunikation har gjorts.
 
 Det finns också tre anropbara metoder:
 
@@ -366,7 +364,7 @@ Det finns också tre anropbara metoder:
 
 När du observerar det primära exponeras viss allmän information via ett MBean vars ID-värde är det portnummer som standbytjänsten tarMK använder (8023 som standard). De flesta metoder och attribut är desamma som i vänteläge, men vissa skiljer sig åt:
 
-* `Mode:` visar alltid värdet  `primary`.
+* `Mode:` kommer alltid att visa värdet `primary`.
 
 Dessutom kan information för upp till 10 klienter (standby-instanser) som är anslutna till överordnad hämtas. MBean-ID:t är instansens UUID. Det finns inga anropbara metoder för dessa MBeans, men några mycket användbara skrivskyddade attribut:
 
@@ -384,7 +382,7 @@ Dessutom kan information för upp till 10 klienter (standby-instanser) som är a
 
 >[!NOTE]
 >
->Om du kör [Online Revision Cleanup](/help/sites-deploying/revision-cleanup.md) på den primära instansen behövs inte den manuella procedur som beskrivs nedan. Om du använder onlinesensning för revision utförs dessutom åtgärden `cleanup ()` i standby-instansen automatiskt.
+>Om du kör [Rensa onlineändringar](/help/sites-deploying/revision-cleanup.md) I det primära fallet behövs inte den manuella procedur som beskrivs nedan. Om du använder onlineredigering kan du även `cleanup ()` åtgärden i standby-instansen utförs automatiskt.
 
 >[!NOTE]
 >
@@ -392,14 +390,14 @@ Dessutom kan information för upp till 10 klienter (standby-instanser) som är a
 
 Adobe rekommenderar regelbundet underhåll för att förhindra alltför stor databastillväxt över tid. Följ stegen nedan om du vill utföra underhåll i vänteläge manuellt:
 
-1. Stoppa standbyprocessen i standby-instansen genom att gå till JMX-konsolen och använda **org.apache.jackrabbit.oak: Status (&quot;Standby&quot;)**-böna. Mer information om hur du gör detta finns i avsnittet ovan om [övervakning](/help/sites-deploying/tarmk-cold-standby.md#monitoring).
+1. Stoppa standbyprocessen i standby-instansen genom att gå till JMX-konsolen och använda **org.apache.jackrabbit.oak: Status (&quot;Standby&quot;)** böna. Mer information om hur du gör detta finns i ovanstående avsnitt på [Övervakning](/help/sites-deploying/tarmk-cold-standby.md#monitoring).
 
 1. Stoppa den primära AEM.
 1. Kör ekkomprimeringsverktyget på den primära instansen. Mer information finns i [Underhålla databasen](/help/sites-deploying/storage-elements-in-aem-6.md#maintaining-the-repository).
 1. Starta den primära instansen.
 1. Starta standby-processen i standby-instansen med samma JMX-böna som i det första steget.
 1. Se loggarna och vänta tills synkroniseringen är klar. Det är möjligt att en avsevärd ökning av beredskapslagringsplatsen kommer att ses just nu.
-1. Kör åtgärden `cleanup()` på standby-instansen med samma JMX-böna som i det första steget.
+1. Kör `cleanup()` i standby-instansen, med samma JMX-böna som i det första steget.
 
 Det kan ta längre tid än vanligt för standby-instansen att slutföra synkroniseringen med den primära, eftersom offlinekomprimeringen effektivt skriver om databashistoriken, vilket gör att beräkning av ändringarna i databaserna tar längre tid. Det bör också noteras att när processen är slutförd kommer storleken på databasen i vänteläge att vara ungefär lika stor som databasen på den primära databasen.
 
