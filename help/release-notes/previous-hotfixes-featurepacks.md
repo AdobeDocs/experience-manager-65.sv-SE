@@ -4,9 +4,9 @@ description: Versionsinformation för [!DNL Adobe Experience Manager] 6.5 servic
 contentOwner: AK
 mini-toc-levels: 2
 exl-id: aeed49a0-c7c2-44da-b0b8-ba9f6b6f7101
-source-git-commit: 45673270ec839377f941860c098f965f7b35c59e
+source-git-commit: 80f4e8c857fe9e0dfe344042fc1db81dde721e18
 workflow-type: tm+mt
-source-wordcount: '26016'
+source-wordcount: '26073'
 ht-degree: 0%
 
 ---
@@ -22,6 +22,9 @@ De viktigaste funktionerna och förbättringarna i [!DNL Adobe Experience Manage
 * **Förbättrat [!DNL Content Fragment] Modeller och redigerare**: Nu kan du skapa komplexa och anpassade modeller för strukturerat innehåll med hjälp av kapslade [!DNL Content Fragment] modeller. Innehållsstrukturer modulariseras till grundläggande element som modelleras som underfragment. Fragment på högre nivå refererar till dessa delfragment. Fler datatypsförbättringar som avancerade valideringsregler ger större flexibilitet vid innehållsmodellering med [!DNL Content Fragments]. The [!DNL Experience Manager] [!DNL Content Fragment] redigeraren stöder kapslade fragmentstrukturer i en gemensam redigeringssession, med förbättringar som strukturträdvyn och tabbad breadcrumb-navigering via fragmenthierarkier.
 
 * **GraphQL API for[!DNL Content Fragments]**: Det nya GraphQL API:t är standardmetoden för att leverera strukturerat innehåll i JSON-format. GraphQL-frågor gör att klienter bara kan begära relevanta innehållsobjekt för att återge en upplevelse. En sådan markering eliminerar överleverans av innehåll (möjlig med HTTP REST API:er) som kräver att innehåll analyseras på klientsidan. GraphQL-scheman är härledda från [!DNL Content Fragment] modeller och API-svar görs i JSON-format. I [!DNL Experience Manager] som [!DNL Cloud Service], [GraphQL-frågor finns kvar](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/graphql-api-content-fragments.html#persisted-queries-caching) och bearbeta cacheanpassade GETTER. Det är ännu inte möjligt i [!DNL Experience Manager] 6.5.10.0
+
+* **GraphQL API for[!DNL Content Fragments]**: Bindestreck tillåts inte längre i egenskapsfältet för innehållsfragmentmodellen för att ge stöd för GraphQL API. GraphQL-frågor kan returnera oönskade resultat om det finns ett bindestreck i något av egenskapsnamnen för Content Fragment Model.
+Endast följande tecken tillåts för egenskapsnamn: A-Za-z0-9_. En siffra kan inte vara på den första positionen.
 
 * **Hierarkihantering och framtida förhandsgranskning**: Användarna har nu ett gränssnitt för att komma åt innehållsstrukturerna i [!DNL Experience Manager] startar, inklusive möjligheten att lägga till och ta bort sidor vid en start. Den här funktionen gör att [!DNL Experience Manager] startar för att skapa innehållsversioner för framtida publicering. [Funktion för tidsförvrängning](/help/sites-authoring/working-with-page-versions.md#timewarp) gör att användarna kan förhandsgranska när framtida innehåll visas.
 
