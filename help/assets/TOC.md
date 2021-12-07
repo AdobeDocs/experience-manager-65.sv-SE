@@ -6,10 +6,10 @@ audience: end-user
 user-guide-title: Resurshandbok
 breadcrumb-title: Resurshandbok
 user-guide-description: Skapa, hantera, bearbeta och distribuera digitalt material.
-source-git-commit: 71c91d0284508463ea7746b6fe0ba82372005c81
+source-git-commit: a98ee0c090c299bc86bf027f69b2e191b716707a
 workflow-type: tm+mt
-source-wordcount: '653'
-ht-degree: 15%
+source-wordcount: '657'
+ht-degree: 14%
 
 ---
 
@@ -121,6 +121,7 @@ ht-degree: 15%
    + [Integrera med [!DNL InDesign Server]](indesign.md)
    + [Digital Rights Management i tillgångar](drm.md)
    + [Använd demopaket för resursinsikter](use-demo-package-for-asset-insights.md)
+   + [Konfigurera Adobe-resurslänk](configure-asset-link.md)
    + [Generera FPO-återgivningar för Adobe InDesign](configure-fpo-renditions.md)
    + [Bästa metoder för att använda filformat](assets-file-format-best-practices.md)
    + [Metodtips för att övervaka resurser](assets-monitoring-best-practices.md)
