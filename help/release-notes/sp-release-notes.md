@@ -4,9 +4,9 @@ description: Versionsinformation som är specifik för [!DNL Adobe Experience Ma
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: c7fdfeae785ad044437d065a8da6bdcbaf00d4c4
+source-git-commit: f2ccc77393e7fc1f53f9976076ec3c66c3f74189
 workflow-type: tm+mt
-source-wordcount: '3613'
+source-wordcount: '3667'
 ht-degree: 0%
 
 ---
@@ -512,6 +512,16 @@ Om du vill hämta körtidskopian rekommenderar Adobe att du synkroniserar design
    * `com.adobe.granite.maintenance.impl.TaskScheduler` - Inga underhållsfönster hittades vid granit/drift/underhåll.
    * Aktiveringspunkten i en interaktiv Dynamic Media-bild syns inte när du förhandsvisar mediefilen via Shoppable Banner Viewer.
    * `com.adobe.cq.social.cq-social-jcr-provider bundle com.adobe.cq.social.cq-social-jcr-provider:1.3.5 (395)[com.adobe.cq.social.provider.jcr.impl.SpiSocialJcrResourceProviderImpl(2302)]` : Tidsgränsen överskreds i väntan på att reg.ändringen skulle slutföras utan registrering.
+
+* När du försöker flytta/ta bort/publicera antingen innehållsfragment eller webbplatser/sidor uppstår ett problem när referenser för innehållsfragment hämtas, eftersom bakgrundsfrågan misslyckas. d.v.s. funktionen fungerar inte.
+Du måste lägga till följande egenskaper i indexdefinitionsnoden för att försäkra dig om att åtgärden är korrekt `/oak:index/damAssetLucene` (ingen omindexering krävs):
+
+   ```xml
+   "tags": [
+       "visualSimilaritySearch"
+     ]
+   "refresh": true
+   ```
 
 ## OSGi-paket och innehållspaket som ingår {#osgi-bundles-and-content-packages-included}
 
