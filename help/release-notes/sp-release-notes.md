@@ -4,9 +4,9 @@ description: Versionsinformation som är specifik för [!DNL Adobe Experience Ma
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: f2ccc77393e7fc1f53f9976076ec3c66c3f74189
+source-git-commit: 5b62efe65be44416335c6dbbde23ee6a7e5a8fd7
 workflow-type: tm+mt
-source-wordcount: '3667'
+source-wordcount: '3761'
 ht-degree: 0%
 
 ---
@@ -371,6 +371,17 @@ Need to verify with Engineering, the status is currently showing as Resolved
 **Foundation JEE**
 
 * Efter installation av AEM 6.5 Forms Service Pack 9 är URL:erna för CRX-databasen inte längre tillgängliga (NPR-37592).
+
+**Problem som har korrigerats i AEM Forms 6.5.11.1**
+
+>[!NOTE]
+>
+>Om du inte har uppgraderat till AEM 6.5.11.0 Forms installerar du tilläggspaketet AEM Forms 6.5.11.1 direkt. Om du har AEM 6.5.11.0 Forms rekommenderar Adobe att du uppgraderar till AEM 6.5.11.1 Forms.
+
+* Skicka funktionsmakron, Skicka e-post och Anropa ett AEM arbetsflöde fungerar inte när tilläggspaketet Forms 6.5.11.0 har installerats.
+* CreatePDF-åtgärden avbryter konverteringen av Microsoft Word-dokument till PDF-dokument när tilläggspaketet för Forms 6.5.11.0 har installerats.
+* (Endast JEE) Allvarliga säkerhetsluckor (CVE-2021-44228 och CVE-2021-45046) rapporterades för Apache Log4j2.
+* (Endast JEE) Assembler DSC i patchen 6.5.11.0 innehåller felaktig metainfo som specifikationsversion och impl-version.
 
 
 Mer information om säkerhetsuppdateringar finns i [[!DNL Experience Manager] säkerhetsbulletinsida](https://helpx.adobe.com/security/products/experience-manager.html).
