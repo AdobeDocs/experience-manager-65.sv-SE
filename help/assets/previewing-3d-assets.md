@@ -1,14 +1,14 @@
 ---
 title: Förhandsgranska 3D-resurser
-description: Lär dig hur du förhandsgranskar 3D-resurser
+description: Lär dig hur du förhandsgranskar 3D-resurser i Experience Manager.
 contentOwner: Rick Brough
 docset: aem65
-feature: 3D-resurser
+feature: 3D Assets
 role: User
 exl-id: fdebbc2b-c04d-4cdd-b7c2-8e9a2a854e79
-source-git-commit: 363e5159d290ecfbf4338f6b9793e11b613389a5
+source-git-commit: 32e637463a2f68a48b39c5dea9cc3cc4d1596d9b
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Interaktiv 3D-förhandsgranskning stöder följande filformat:
 | 3D-filtillägg | Filformat | MIME-typ | Anteckningar |
 |---|---|---|---|
 | GLB | Binär GL-överföring | model/gltf-binary |  |
-| GLTF | GL-överföringsformat | model/gltf+json | Se **Kommentar** nedan. |
+| GLTF | GL-överföringsformat | model/gltf+json | Se **Anteckning** nedan. |
 | OBJ | WaveFront 3D-objektfil | application/x-tgif |  |
 | STL | Stereolitografi | application/vnd.ms-pki.stl |  |
 | DN | Adobe Dimension | model/x-adobe-dn | Stöd endast för förtäring. förhandsgranskning är inte tillgänglig. |
@@ -36,14 +36,14 @@ Interaktiv 3D-förhandsgranskning stöder följande filformat:
 
 >[!NOTE]
 >
->Om materialet inte återges i förhandsgranskningen av en gLTF-modell måste du se till att de har rätt namn och i en `textures`-mapp i samma rotmapp som modellen, som i följande:
+>Om materialet inte återges i förhandsgranskning av en gLTF-modell måste du se till att de namnges korrekt och i en `textures` i samma rotmapp som modellen, som följande:
 
     Resurs (mapp)
-    modell.
-    gltfmodel.
-    bintextures (mapp)
-    material_0_baseColor.
-    jpegmaterial_0_normal.jpeg
+    model.gltf
+    model.bin
+    texturer (mapp)
+    material_0_baseColor.jpeg
+    material_0_normal.jpeg
 
 ## Prestandaöverväganden när du förhandsgranskar 3D-resurser i Experience Manager{#performance-3d-previewing-assets}
 
@@ -55,11 +55,11 @@ Dessutom är funktioner i klientdatorn - som en arbetsstation, bärbar dator ell
 
 1. Se till att du har överfört 3D-resurser till Experience Manager.
 Se [Format som stöds för 3D-förhandsgranskning](#supported-3d-previewing-assets) och [Överför resurser](/help/assets/manage-assets.md#uploading-assets).
-1. På sidan **[!UICONTROL Navigation]** väljer du **[!UICONTROL Assets]** > **[!UICONTROL Files]** från Experience Manager.
+1. Från Experience Manager, på **[!UICONTROL Navigation]** sida, markera **[!UICONTROL Assets]** > **[!UICONTROL Files]**.
 
    ![Navigeringssida](/help/assets/assets-dm/navigation-assets.png)
 
-1. I den nedrullningsbara listan Visa i det övre högra hörnet på sidan väljer du **[!UICONTROL Card View]** och navigerar sedan till en 3D-resurs som du vill förhandsgranska.
+1. I den övre högra hörnet av sidan väljer du **[!UICONTROL Card View]** navigera sedan till en 3D-resurs som du vill förhandsgranska.
 
    ![Välj 3D-kort](/help/assets/assets-dm/3d-card-select.png)
    _I kortvyn väljer du kortet för den 3D-resurs som du vill förhandsgranska._
@@ -67,7 +67,7 @@ Se [Format som stöds för 3D-förhandsgranskning](#supported-3d-previewing-asse
 1. Välj kortet för 3D-resursen.
 
    ![Interaktiv förhandsvisning av 3D](/help/assets/assets-dm/3d-preview.png)
-   _Interaktiv förhandsgranskning av en 3D-resurs på sidan med resursinformationsvyn._
+   _Interaktiv förhandsvisning av en 3D-resurs på sidan med resursinställningsvyn._
 1. Gör något av följande på sidan med resursinformationsvyn för 3D-resursen:
 
    | Visa | Beskrivning | Musåtgärd | Åtgärd på pekskärmen |
@@ -79,4 +79,4 @@ Se [Format som stöds för 3D-förhandsgranskning](#supported-3d-previewing-asse
    | **Återställ** | I närheten av det nedre högra hörnet av sidan väljer du ikonen Återställ om du vill återställa målpunkten till mitten av 3D-resursen. Återställ flyttar också kameran närmare eller längre bort för att visa resursen i dess helhet och med en rimlig visningsstorlek. |  |  |
    | **Helskärmsläge** | Om du vill aktivera helskärmsläget väljer du Helskärmsikonen längst ned till höger på sidan. |  |  |
 
-1. När du är klar väljer du **[!UICONTROL Close]** längst upp till höger på sidan.
+1. När du är klar väljer du **[!UICONTROL Close]**.
