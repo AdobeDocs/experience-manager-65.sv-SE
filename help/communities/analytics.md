@@ -1,8 +1,8 @@
 ---
 title: Analyskonfiguration för communityfunktioner
-seo-title: Analyskonfiguration för communityfunktioner
+seo-title: Analytics Configuration for Communities Features
 description: Konfigurera analys för Communities
-seo-description: Konfigurera analys för Communities
+seo-description: Configure analytics for Communities
 uuid: 5a083645-9de6-4ecd-a94e-a40143f92edf
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -12,9 +12,9 @@ discoiquuid: e6fdaf56-402f-418d-96d8-e46bd3ad1e8c
 docset: aem65
 role: Admin
 exl-id: 7d54928b-6512-4da9-a209-eb4488bf2b64
-source-git-commit: fcdadcf691ed5a569a5a40ca070f8ec266ec3eb9
+source-git-commit: 0f7d4aba0b8c79039918e1338007a4277a5030f2
 workflow-type: tm+mt
-source-wordcount: '2742'
+source-wordcount: '2717'
 ht-degree: 2%
 
 ---
@@ -39,8 +39,8 @@ Dessutom krävs analyser för att
 
 * I redigeringsmiljön:
 
-   * Visning av deltagardata i [medlemshanteringskonsolen](/help/communities/members.md) (vyer, inlägg, följare, gilla-markeringar)
-   * Trendsammanfattning, videominnesslag och videoenhet för aktiveringsresurs [rapporter](/help/communities/reports.md)
+   * Visning av deltagardata i [administrationskonsol för medlemmar](/help/communities/members.md) (vyer, inlägg, följare, gilla-markeringar)
+   * Trend summary, video heartbeat and video device for enable resource [rapporter](/help/communities/reports.md)
 
 Funktioner som stöds för Communities är:
 
@@ -53,19 +53,19 @@ Funktioner som stöds för Communities är:
 
 I det här avsnittet av dokumentationen beskrivs hur du kopplar samman en Analytics-rapportsserie med communityfunktioner. De grundläggande stegen är:
 
-1. [Replikera ](#replicate-the-crypto-key) krypteringsnyckeln för att säkerställa att kryptering/dekryptering sker korrekt på alla AEM
-1. Förbered en Adobe Analytics [rapportserie](#adobe-analytics-report-suite-for-video-reporting)
+1. [Replikera krypteringsnyckeln](#replicate-the-crypto-key) för att säkerställa att kryptering/dekryptering sker korrekt på alla AEM instanser
+1. Förbered en Adobe Analytics [rapportsvit](#adobe-analytics-report-suite-for-video-reporting)
 1. Skapa en AEM Analytics [molntjänst](#aem-analytics-cloud-service-configuration) och [ramverk](#aem-analytics-framework-configuration)
 
-1. [Aktivera ](#enable-analytics-for-a-community-site) analyser för en community-webbplats
-1. [****](#verify-analytics-to-aem-variable-mapping) VerifyAnalytics AEM variabelmappning
+1. [Aktivera analys](#enable-analytics-for-a-community-site) för en community-webbplats
+1. [**Verifiera**](#verify-analytics-to-aem-variable-mapping) Analys för AEM variabelmappning
 1. Identifiera [primär utgivare](#primary-publisher)
-1. [Publicera ](#publish-community-site-and-analytics-cloud-service) communitywebbplatsen
-1. Konfigurera [import av rapportdata](#obtaining-reports-from-analytics) från Adobe Analytics till communitywebbplatsen
+1. [Publicera](#publish-community-site-and-analytics-cloud-service) communitywebbplatsen
+1. Konfigurera [import av rapportdata](#obtaining-reports-from-analytics) från Adobe Analytics till communitysajten
 
 ## Förutsättningar {#prerequisites}
 
-Om du vill konfigurera Analytics för communityfunktioner måste du samarbeta med din kontorepresentant för att skapa ett Adobe Analytics-konto och [rapporteringsprogram](#adobe-analytics-report-suite-for-video-reporting). När den är etablerad ska följande information finnas tillgänglig:
+Om du vill konfigurera funktioner i Analytics for Communities måste du samarbeta med din kontorepresentant för att skapa ett Adobe Analytics-konto och [rapportsvit](#adobe-analytics-report-suite-for-video-reporting). När den är etablerad ska följande information finnas tillgänglig:
 
 * **Företag**
 
@@ -73,8 +73,7 @@ Om du vill konfigurera Analytics för communityfunktioner måste du samarbeta me
 
 * **Användarnamn**
 
-   Inloggningsanvändarnamnet för den användare som har behörighet att hantera Analytics-kontot
-(bör inkludera behörighet för webbtjänståtkomst).
+   Inloggningsanvändarnamnet för den användare som har behörighet att hantera Analytics-kontot (bör inkludera behörighet för Web Service Access).
 
 * **Lösenord**
 
@@ -90,27 +89,27 @@ Om du vill konfigurera Analytics för communityfunktioner måste du samarbeta me
 
 ## Adobe Analytics Report Suite for Video Reporting {#adobe-analytics-report-suite-for-video-reporting}
 
-Med hjälp av Adobe Marketing Clouds [Report Suite Manager](https://docs.adobe.com/content/help/en/analytics/admin/manage-report-suites/new-report-suite/new-report-suite.html) kan analysrapportsviter konfigureras så att en communitywebbplats kan aktiveras för att tillhandahålla rapporter om communityfunktioner.
+Använda Adobe Marketing Clouds [Report Suite Manager](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/new-report-suite/new-report-suite.html)kan Analytics-rapportsviter konfigureras så att en communitywebbplats kan aktiveras för att ge rapporter om communityfunktioner.
 
-Genom att logga in på [Adobe Experience Cloud](https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/home.html) med [Företagsnamn och användarnamn](/help/communities/analytics.md#prerequisites) kan du konfigurera en ny eller befintlig rapportserie så att den har:
+Genom att logga in på [Adobe Experience Cloud](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/home.html) med [Företagsnamn och användarnamn](/help/communities/analytics.md#prerequisites)kan du konfigurera en ny eller befintlig rapportserie så att den har:
 
-* [11 Konverteringsvariabler](https://docs.adobe.com/content/help/en/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html)  (eVars)
+* [11 Konverteringsvariabler](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html) (Varor)
 
-   * **`evar1`** via  **`evar11`** aktiverad
+   * **`evar1`** via **`evar11`** aktiverad
 
    * Kan återanvända (byta namn på) befintliga e-variabler eller skapa nya som kan användas för webbgruppsfunktioner
 
-* [7 Success Events](https://docs.adobe.com/content/help/en/analytics/admin/admin-tools/success-events/success-event.html) (events)
+* [7 Success Events](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/success-events/success-event.html) (händelser)
 
-   * **`event1`** via  **`event7`** aktiverad
+   * **`event1`** via **`event7`** aktiverad
 
-   * typ **`Counter`**
+   * type **`Counter`**
 
       * not **`Counter (no subrelations)`**
    * Kan återanvända (byta namn på) befintliga händelser eller skapa nya som kan användas för communityfunktioner
 
 
-* [Videohantering](https://docs.adobe.com/content/help/en/media-analytics/using/media-overview.html)
+* [Videohantering](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html)
 
    * Videorapportkonsol
 
@@ -122,9 +121,9 @@ Genom att logga in på [Adobe Experience Cloud](https://docs.adobe.com/content/h
       * Välj Spara
 
 
-Om du använder en **ny rapportsserie** bör du tänka på att en ny rapportsvit bara kan ha 4 variabler och 6 händelsvariabler, medan 11 variabler och 7 händelsvariabler krävs för Communities.
+Om du använder en **ny rapportsvit** ska du vara medveten om att en ny rapportserie bara kan innehålla 4 variabler och 6 händelsvariabler, medan 11 variabler och 7 händelsvariabler krävs för Communities.
 
-Om du använder en **befintlig rapportserie** kan det vara nödvändigt att [ändra variabelmappningen](#modifying-analytics-variable-mapping) innan Analytics-ramverket aktiveras för en community-webbplats.
+Om du använder en **befintlig rapportsvit** kan det vara nödvändigt att [ändra variabelmappningen](#modifying-analytics-variable-mapping) innan Analytics-ramverket aktiveras för en communitywebbplats.
 
 Kontakta din kontorepresentant om du har några frågor om de variabler som är dedikerade till Communities.
 
@@ -132,29 +131,28 @@ Kontakta din kontorepresentant om du har några frågor om de variabler som är 
 >
 >**Om du använder en befintlig rapportserie som redan använder variabler i**
 >
->* **`evar1`** via  **`evar11`**
-   >
-   >
-* **`event1`** via  **`event7`**
+>* **`evar1`** via **`evar11`**
 >
+>* **`event1`** via **`event7`**
+
 >
-**Innan communitywebbplatsen publiceras är** det viktigt att återställa den befintliga mappningen genom att flytta de AEM variablerna som automatiskt mappades till Analytics-variabler när Analytics aktiverades för en community-webbplats.
+>**Innan communitywebbplatsen publiceras** det är viktigt att återställa den befintliga mappningen genom att flytta de AEM variablerna som automatiskt mappades till analysvariabler när Analytics aktiverades för en communitywebbplats.
 >
->Om du vill återställa den befintliga mappningen och flytta AEM till andra Analytics-variabler läser du avsnittet [Ändra analysvariabelmappning](#modifying-analytics-variable-mapping).
+>Om du vill återställa den befintliga mappningen och flytta AEM till andra Analytics-variabler läser du avsnittet om [Ändra variabelmappning för analys](#modifying-analytics-variable-mapping).
 >
 >Om detta inte görs kan data gå förlorade.
 
 ### Analys av pulsslag för video {#video-heartbeat-analytics}
 
-När Video Heartbeat Analytics licensieras tilldelas en `Marketing Cloud Org Id`.
+När Video Heartbeat Analytics är licensierad, `Marketing Cloud Org Id` är tilldelad.
 
-Så här aktiverar du rapporter om pulsslag för video efter [att Analytics-rapportsviten har konfigurerats för videorapportering](#adobe-analytics-report-suite-for-video-reporting):
+Aktivera rapportering av pulsslag för video efter [konfigurera Analytics-rapportsviten för videorapportering](#adobe-analytics-report-suite-for-video-reporting):
 
-* Skapa en [molntjänst för analys](#aem-analytics-cloud-service-configuration)
-* Aktivera [Analys för en community-webbplats](#enable-analytics-for-a-community-site)
+* Skapa en [Molntjänst för Analytics](#aem-analytics-cloud-service-configuration)
+* Aktivera [Analyser för en community-webbplats](#enable-analytics-for-a-community-site)
 * Associera `Marketing Cloud Org Id` med communitywebbplatsen
 
-`Marketing Cloud Org Id` kan anges när [en community-webbplats skapas](/help/communities/sites-console.md#enablement) eller senare av [ändra](/help/communities/sites-console.md#modifying-site-properties) community-webbplatsegenskaperna.
+The `Marketing Cloud Org Id` kan anges vid [communitysajt](/help/communities/sites-console.md#enablement) eller senare av [ändra](/help/communities/sites-console.md#modifying-site-properties) egenskaperna för communitywebbplatsen.
 
 ![marketing-org-id](assets/marketing-org-id.png)
 
@@ -174,7 +172,7 @@ Så här skapar du en ny Analytics-integrering, som integrerar Adobe Analytics m
 
 ### Dialogrutan Skapa konfiguration {#create-configuration-dialog}
 
-* Välj `[+]`-ikonen bredvid **[!UICONTROL  Available Configurations]** för att skapa en ny konfiguration
+* Välj `[+]` ikon bredvid **[!UICONTROL  Available Configurations]** för att skapa en ny konfiguration
 
 I dialogrutan Skapa konfiguration anger de värden som ska anges konfigurationen.
 
@@ -183,12 +181,12 @@ I dialogrutan Skapa konfiguration anger de värden som ska anges konfigurationen
 * **Titel**
 
    (Obligatoriskt) En visningsrubrik för konfigurationen.
-Ange till exempel *Aktivera communityanalys*
+Skriv till exempel *Aktivera communityanalys*
 
 * **Namn**
 
    (Valfritt) Om inget anges används som standard ett giltigt nodnamn som härleds från titeln.
-Ange till exempel *communities*
+Skriv till exempel *communities*
 
 * **Mall**
 
@@ -196,11 +194,11 @@ Ange till exempel *communities*
 
 * Välj **Skapa**
 
-   * Startar konfigurationssidan och öppnar dialogrutan `Analytics Settings`
+   * Öppnar konfigurationssidan `Analytics Settings` dialog
 
 ### Dialogrutan Analysinställningar {#analytics-settings-dialog}
 
-När en ny Analytics-konfiguration skapas första gången visas konfigurationen och en ny dialogruta där Analytics-inställningarna kan anges. Den här dialogrutan kräver den [nödvändiga kontoinformationen](#prerequisites) som hämtats från kontoombudet.
+När en ny Analytics-konfiguration skapas första gången visas konfigurationen och en ny dialogruta där Analytics-inställningarna kan anges. Den här dialogrutan kräver [information om förutsättningskonto](#prerequisites) som erhållits från kontoombudet.
 
 ![analytics-settings](assets/analytics-settings.png)
 
@@ -238,7 +236,7 @@ När en ny Analytics-konfiguration skapas första gången visas konfigurationen 
 
 Så här sparar du inställningarna:
 
-* Välj **Anslut till analys**
+* Välj **Anslut till Analytics**
 
    * Om det inte lyckas
 
@@ -253,19 +251,18 @@ Så här sparar du inställningarna:
 
 När du har konfigurerat den grundläggande anslutningen till Adobe Analytics måste du skapa eller redigera ett ramverk för communitywebbplatsen. Syftet med ramverket är att mappa AEM (Communities feature)-variabler till analysvariabler (report suite).
 
-* Välj `[+]`-ikonen bredvid **[!UICONTROL  Available Frameworks]** för att skapa ett nytt ramverk
+* Välj `[+]` ikon bredvid **[!UICONTROL  Available Frameworks]** skapa ett nytt ramverk
 
    ![analytics-framework](assets/analytics-framework.png)
 
 * **Titel**
 
-   (Obligatoriskt) En visningsrubrik för ramverket
-Ange till exempel *Aktivera Community Framework*.
+   (Obligatoriskt) En visningsrubrik för ramverket Skriv t.ex. *Aktivera EU-ramverk*.
 
 * **Namn**
 
    (Valfritt) Om inget anges används som standard ett giltigt nodnamn som härleds från titeln.
-Ange till exempel *communities*.
+Skriv till exempel *communities*.
 
 * *Mall*
 
@@ -277,7 +274,7 @@ Om du skapar Analytics Framework öppnas ramverket för konfiguration.
 
 ## Konfiguration av AEM Analytics Framework {#aem-analytics-framework-configuration}
 
-Syftet med ramverket är att mappa AEM till analysvariabler (eVars och events). Analysvariablerna som är tillgängliga för mappning är [definierade i rapportsviten](#adobe-analytics-report-suite-for-video-reporting).
+Syftet med ramverket är att mappa AEM till analysvariabler (eVars och events). Analysvariablerna som är tillgängliga för mappning är [som definieras i rapportsviten](#adobe-analytics-report-suite-for-video-reporting).
 
 ![analytics-enablement-framework](assets/analytics-framework1.png)
 
@@ -302,7 +299,7 @@ Den idekiske behövs inte och kan minimeras så att den inte förhindrar åtkoms
 
    Rapportsviterna som är kopplade till företagskontot kan väljas.
 
-1. Välj **Ja** i den dialogruta som öppnas:
+1. Välj **Ja** i dialogrutan som öppnas:
 
    ```
    Load default server settings?
@@ -321,30 +318,30 @@ Molntjänsten och ramverket för Analytics är nu färdiga. Mappningarna definie
 
 ### Aktivera för ny community-plats {#enable-for-new-community-site}
 
-Så här lägger du till molntjänsten Analytics när du [skapar en ny community-webbplats](/help/communities/sites-console.md):
+Lägga till molntjänsten Analytics under [skapa en ny communitywebbplats](/help/communities/sites-console.md):
 
-* I steg 3, under fliken [ANALYTICS](/help/communities/sites-console.md#analytics):
-   * Markera kryssrutan **Aktivera analys**.
+* I steg 3, under [Fliken ANALYTICS](/help/communities/sites-console.md#analytics):
+   * Välj **Aktivera analys** kryssruta.
    * Välj ramverket i listrutan.
 
 * Om du vill kan du gå tillbaka till Analytics-ramverkskonfigurationen och justera variabelmappningarna.
 
 ### Aktivera för befintlig communitywebbplats {#enable-for-existing-community-site}
 
-Så här lägger du till molntjänsten Analytics i en [befintlig community-webbplats](/help/communities/sites-console.md#modifying-site-properties):
+Lägga till molntjänsten Analytics i en [befintlig communitywebbplats](/help/communities/sites-console.md#modifying-site-properties):
 
-* Navigera till konsolen **Communities > Sites**.
+* Navigera till **Communities > Sites** konsol.
 * Välj ikonen Redigera webbplats för communitywebbplatsen.
 * Välj INSTÄLLNINGAR.
 * I avsnittet Analytics:
-   * Markera kryssrutan **Aktivera analys**.
+   * Välj **Aktivera analys** kryssruta.
    * Välj ramverket i listrutan.
 
 * Om du vill kan du gå tillbaka till Analytics-ramverkskonfigurationen och justera variabelmappningarna.
 
 ### Aktivera för anpassade platser {#enable-for-customized-sites}
 
-För att Analytics-spårning och -import ska fungera korrekt för en community-webbplats måste det finnas ett sidelement med attributen `scf-js-site-title` och href. Det får bara finnas ett sådant element på sidan, t.ex. det i ett oändrat `sitepage.hbs`-skript för en community-webbplats. Värdet för `siteUrl` extraheras och skickas till Adobe Analytics som *webbplatssökväg*.
+För att Analytics-spårning och -import ska fungera på rätt sätt för en community-webbplats måste du skapa ett sidelement med `scf-js-site-title` class- och href-attribut måste finnas. Det får bara finnas ett sådant element på sidan, t.ex. i en oförändrad `sitepage.hbs` skript för en communitywebbplats. Värdet för `siteUrl` extraheras och skickas till Adobe Analytics som *webbplatssökväg*.
 
 ```xml
 # present in default sitepage.hbs
@@ -358,9 +355,9 @@ För att Analytics-spårning och -import ska fungera korrekt för en community-w
 </div>
 ```
 
-Kontrollera att elementet finns för en **anpassad communitywebbplats** som täcker `sitepage.hbs`-skriptet. Variabeln `siteUrl` ställs in när den återges på servern innan den skickas till klienten.
+För **anpassad communitywebbplats** som övertäcker `sitepage.hbs` kontrollerar du att elementet finns. The `siteUrl` variabeln ställs in när den återges på servern innan den skickas till klienten.
 
-För en **allmän AEM**-plats som innehåller webbgruppskomponenter, men som inte har skapats med guiden [Skapa plats](/help/communities/sites-console.md), måste elementet läggas till. Värdet för href bör vara sökvägen till platsen. Om till exempel platssökvägen är `/content/my/company/en` använder du:
+För **allmän AEM** som innehåller webbgruppskomponenter, men som inte har skapats med [guide för att skapa webbplatser](/help/communities/sites-console.md)måste elementet läggas till. Värdet för href bör vara sökvägen till platsen. Om platssökvägen till exempel är `/content/my/company/en`och sedan använda:
 
 ```xml
 <div
@@ -375,7 +372,7 @@ För en **allmän AEM**-plats som innehåller webbgruppskomponenter, men som int
 
 Analyser används automatiskt för flera communityfunktioner.
 
-Författarmiljöns [OSGi-konfiguration](/help/sites-deploying/configuring-osgi.md), `AEM Communities Analytics Component Configuration`, innehåller en lista över de komponenter som har instrumenterats för Analytics. Den automatiska mappningen av variabler bestäms av komponenterna i listan.
+Författarmiljöns [OSGi-konfiguration](/help/sites-deploying/configuring-osgi.md), `AEM Communities Analytics Component Configuration`, innehåller en lista med de komponenter som har instrumenterats för Analytics. Den automatiska mappningen av variabler bestäms av komponenterna i listan.
 
 Om nya anpassade komponenter skapas som är instrumenterade för Analytics, bör de läggas till i den här listan med konfigurerade komponenter.
 
@@ -391,9 +388,9 @@ Om nya anpassade komponenter skapas som är instrumenterade för Analytics, bör
 
 När communitywebbplatsen har sparats med Analytics aktiverat och molnkonfigurationsramverket valt mappas AEM automatiskt till eVars och events som börjar med evar1 respektive event1 och ökar med 1.
 
-Om du använder en befintlig rapportserie som har mappat någon av variablerna inom var1 till var11 och event1 till och med event7, måste du [mappa om AEM variabler](#modifying-analytics-variable-mapping) och återställa den ursprungliga mappningen.
+Om du använder en befintlig rapportserie som har mappat någon av variablerna inom var1 till var11 och event1 till och med event7, måste du [mappa om AEM](#modifying-analytics-variable-mapping) och återställa den ursprungliga mappningen.
 
-Följande är ett exempel på standardmappningar efter att du följt självstudiekursen [Komma igång](/help/communities/getting-started-enablement.md):
+Följande är ett exempel på standardmappningar efter följande [komma igång, självstudiekurs](/help/communities/getting-started-enablement.md):
 
 ![map-analytics](assets/map-analytics1.png)
 
@@ -403,16 +400,16 @@ Följande är ett exempel på standardmappningar efter att du följt självstudi
  <tbody>
   <tr>
    <td><strong> </strong></td>
-   <td><strong>Typ av aktivering<br /> resurs<br /></strong></td>
-   <td><strong>Platsens<br />-titel</strong></td>
+   <td><strong>Aktivera<br /> Resurs<br /> Typ</strong></td>
+   <td><strong>Plats<br /> Titel</strong></td>
    <td><strong>Funktion<br /> Typ</strong></td>
-   <td><strong>Grupptitel<br /></strong></td>
-   <td><strong>Grupp<br />-sökväg</strong></td>
-   <td><strong>UGC<br />-typ</strong></td>
-   <td><strong>UGC<br />-titel</strong></td>
-   <td><strong>Användare<br /> (medlem)</strong></td>
-   <td><strong>UGC<br />-sökväg</strong></td>
-   <td><strong>Sökväg till plats<br /></strong></td>
+   <td><strong>Grupp<br /> Titel</strong></td>
+   <td><strong>Grupp<br /> Bana</strong></td>
+   <td><strong>UGC<br /> Typ</strong></td>
+   <td><strong>UGC<br /> Titel</strong></td>
+   <td><strong>Användare<br /> (Medlem)</strong></td>
+   <td><strong>UGC<br /> Bana</strong></td>
+   <td><strong>Plats<br /> Bana</strong></td>
   </tr>
   <tr>
    <td><strong> </strong></td>
@@ -428,7 +425,7 @@ Följande är ett exempel på standardmappningar efter att du följt självstudi
    <td><strong>eVar10</strong></td>
   </tr>
   <tr>
-   <td><strong>event1<br /> Resursuppspelning</strong></td>
+   <td><strong>event1<br /> Resurs - uppspelning</strong></td>
    <td><em>(en)</em></td>
    <td><em>-</em></td>
    <td><em>-</em></td>
@@ -524,18 +521,18 @@ Följande är ett exempel på standardmappningar efter att du följt självstudi
 **Exempel på eVar:**
 
 * *[MIME-typ](https://www.iana.org/assignments/media-types)*: video/mp4
-* *[community site title](/help/communities/sites-console.md#step13asitetemplate)*: Geometrixx Communities
+* *[communitytitel](/help/communities/sites-console.md#step13asitetemplate)*: Geometrixx Communities
 * *[communityfunktionsnamn](/help/communities/functions.md)*: Forum
 * *[communitygruppsnamn](/help/communities/creating-groups.md#creating-a-new-group)*: Vattna
-* *väg till communitygruppsinnehåll*:  `/content/sites/<site name>/en/groups/hiking`
-* *[Resurstyp](/help/communities/essentials.md)* för UGC-komponent:  `social/forum/components/hbs/topic`
-* *UGC-komponenttitel*: Hiking Topics
-* *login (authzableId)*:  `aaron.mcdonald@mailinator.com`
-* *SRP-sökväg till UGC*:  `/content/usergenerated/asi/.../forum/jmtz-topic3`
+* *sökväg till communitygruppsinnehåll*: `/content/sites/<site name>/en/groups/hiking`
+* *[UGC-komponentresurstyp](/help/communities/essentials.md)*: `social/forum/components/hbs/topic`
+* *Rubrik för UGC-komponent*: Hiking Topics
+* *login (authzableId)*: `aaron.mcdonald@mailinator.com`
+* *SRP-sökväg till UGC*: `/content/usergenerated/asi/.../forum/jmtz-topic3`
 eller 
-*Komponentsökväg som ska följas*:  `/content/sites/<site name>/en/jcr:content/content/primary/forum`
+*sökväg för komponenten som ska följas*: `/content/sites/<site name>/en/jcr:content/content/primary/forum`
 
-* *sökväg till innehåll* på communitywebbplatsen:  `/content/sites/<site name>/en`
+* *sökväg till innehåll på communitysajten*: `/content/sites/<site name>/en`
 
 ### Ändra variabelmappning för analys {#modifying-analytics-variable-mapping}
 
@@ -549,7 +546,7 @@ Om Communities eVars och events skriver över mappningar som fanns tidigare i ra
 
 >[!CAUTION]
 >
->Det är viktigt att tänka på innan communitywebbplatsen [publiceras](#publishing-the-community-site) med Analytics aktiverat, annars finns det risk för dataförlust.
+>Det är viktigt att fortsätta innan communitywebbplatsen är [publicerad](#publishing-the-community-site) med Analytics aktiverat, annars finns det risk för dataförlust.
 
 #### Exempelsteg 1: Dra Analytics evar14 till mappningstabellen {#example-step-dragging-analytics-evar-into-mapping-table}
 
@@ -578,25 +575,24 @@ Se avsnitt:
 >
 >**Om du använder en befintlig rapportserie som redan använder variabler i**
 >
->* **`evar1`** via  **`evar11`**
-   >
-   >
-* **`event1`** via  **`event7`**
+>* **`evar1`** via **`evar11`**
 >
+>* **`event1`** via **`event7`**
+
 >
-**Innan communitywebbplatsen publiceras är** det viktigt att återställa den befintliga mappningen och flytta de Communities-AEM-variabler som automatiskt mappades (när Analytics aktiverades för communitywebbplatsen) till andra Analytics-variabler. Den här ommappningen bör vara konsekvent för alla webbgruppskomponenter.
+>**Innan communitywebbplatsen publiceras** Det är viktigt att återställa den befintliga mappningen och flytta de Web AEM-variabler som automatiskt mappades (när Analytics aktiverades för communitywebbplatsen) till andra Analytics-variabler. Den här ommappningen bör vara konsekvent för alla webbgruppskomponenter.
 >
 >Om detta inte görs kan data gå förlorade.
 
 ### Primär utgivare {#primary-publisher}
 
-När den valda distributionen är en [publiceringsgrupp](/help/communities/topologies.md#tarmk-publish-farm) måste en AEM publiceringsinstans identifieras som primär utgivare för att avfråga Adobe Analytics efter rapportdata som ska skrivas till [SRP](/help/communities/working-with-srp.md).
+När den valda distributionen är en [publicera servergrupp](/help/communities/topologies.md#tarmk-publish-farm)måste en AEM publiceringsinstans identifieras som primär utgivare för att avfråga Adobe Analytics efter rapportdata att skriva till [SRP](/help/communities/working-with-srp.md).
 
-Som standard identifierar OSGi-konfigurationen sin publiceringsinstans som primär utgivare, så att alla publiceringsinstanser i en publiceringsgrupp identifierar sig själva som primär.`AEM Communities Publisher Configuration`
+Som standard är `AEM Communities Publisher Configuration` OSGi-konfigurationen identifierar sin publiceringsinstans som primär utgivare, så att alla publiceringsinstanser i en publiceringsgrupp identifierar sig själva som primär.
 
-Det är därför nödvändigt att redigera konfigurationen för alla sekundära publiceringsinstanser för att avmarkera kryssrutan **Primär utgivare**.
+Det är därför nödvändigt att redigera konfigurationen på alla sekundära publiceringsinstanser för att avmarkera **Primär utgivare** kryssruta.
 
-Mer information finns i den primära utgivardelen i [Distribuera communities](/help/communities/deploy-communities.md#primary-publisher).
+Specifika anvisningar finns i avsnittet om primär utgivare i [Distribuera webbgrupper](/help/communities/deploy-communities.md#primary-publisher).
 
 >[!CAUTION]
 >
@@ -604,19 +600,19 @@ Mer information finns i den primära utgivardelen i [Distribuera communities](/h
 
 ### Replikera krypteringsnyckeln {#replicate-the-crypto-key}
 
-Adobe Analytics-autentiseringsuppgifterna är krypterade. För att underlätta replikering eller överföring av krypterade autentiseringsuppgifter för analys mellan författare och utgivare måste alla AEM instanser ha samma primära krypteringsnyckel.
+Adobe Analytics-autentiseringsuppgifterna är krypterade. För att underlätta replikering eller överföring av krypterade analysreferenser mellan författare och utgivare måste alla AEM instanser ha samma primära krypteringsnyckel.
 
 Följ instruktionerna på [Replikera krypteringsnyckeln](/help/communities/deploy-communities.md#replicate-the-crypto-key).
 
 ### Publicera communitywebbplats och Analytics Cloud-tjänst {#publish-community-site-and-analytics-cloud-service}
 
-När molntjänsten Analytics har aktiverats för en community-webbplats och, om det behövs, [mappningen av Analytics till AEM variabler har justerats](#mapped-analytics-to-aem-variables), är det nödvändigt att replikera konfigurationen till publiceringsmiljön genom att [(re)publicera communitywebbplatsen](/help/communities/sites-console.md#publishing-the-site).
+När molntjänsten Analytics har aktiverats för en community-webbplats och, om det behövs, för [mappning av analyser till AEM variabler har justerats](#mapped-analytics-to-aem-variables)måste konfigurationen replikeras till publiceringsmiljön med [publicera communitywebbplatsen](/help/communities/sites-console.md#publishing-the-site).
 
 ## Få rapporter från Analytics {#obtaining-reports-from-analytics}
 
 ### Rapporthantering {#report-management}
 
-Författaren och den primära utgivarens [OSGi-konfiguration](/help/sites-deploying/configuring-osgi.md), `AEM Communities Analytics Report Management` används för att fråga Analytics.
+Författaren och den primära utgivarens [OSGi-konfiguration](/help/sites-deploying/configuring-osgi.md), `AEM Communities Analytics Report Management`, används för att fråga Analytics.
 
 Frågorna gäller för realtidsrapporter.
 
@@ -626,13 +622,13 @@ Frågeintervallet är som standard 10 sekunder.
 
 ### Rapportimporteraren {#report-importer}
 
-När en communitywebbplats aktiverad med Analytics har publicerats kan den primära utgivarens [OSGi-konfiguration](/help/sites-deploying/configuring-osgi.md), `AEM Communities Analytics Report Importer`, konfigureras att ange standardavsökningsintervallet för de konfigurationer som inte är individuellt konfigurerade i CRXDE.
+När en webbplats som aktiverats i Analytics har publicerats är den primära utgivarens [OSGi-konfiguration](/help/sites-deploying/configuring-osgi.md), `AEM Communities Analytics Report Importer`, kan konfigureras för att ange standardavsökningsintervallet för de konfigurationer som inte konfigureras individuellt i CRXDE.
 
-Avsökningsintervallet styr frekvensen av förfrågningar till Adobe Analytics om data som ska hämtas och sparas i [SRP](/help/communities/working-with-srp.md).
+Avsökningsintervallet styr hur ofta förfrågningar till Adobe Analytics om data ska hämtas och sparas i [SRP](/help/communities/working-with-srp.md).
 
 När data kan kategoriseras som&quot;big data&quot; kan en mer frekvent undersökning innebära en stor belastning på communitywebbplatsen.
 
-Standardavsökningen **Importintervallet** är inställt på 12 timmar.
+Standardavsökningen **Importintervall** är inställt på 12 timmar.
 
 ![rapportör](assets/report-importer.png)
 
@@ -643,7 +639,7 @@ För att anpassa mätvärdena för att spåra skapas för närvarande noder i da
 Forum-ämnet är för närvarande det enda exemplet på den här anpassningen:
 
 * Logga in med administratörsbehörighet på den primära utgivaren.
-* Navigera till [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md). Exempel: [https://localhost:4503/crx/de](https://localhost:4503/crx/de).
+* Navigera till [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md). Till exempel: [https://localhost:4503/crx/de](https://localhost:4503/crx/de).
 
 * Under jcr:content-noden i språkroten (till exempel `/content/sites/engage/en/jcr:content),`navigera till komponenten som konfigurerats för Analytics-rapportering.
 Till exempel, **`analytics/reportConfigs/social_forum_components_hbs_topic`**
@@ -654,19 +650,19 @@ Till exempel, **`analytics/reportConfigs/social_forum_components_hbs_topic`**
    * `last90Days`
    * `thisYear`
 
-* Observera `total`noden.
+* Lägg märke till `total`nod.
 
-   * Om du ändrar egenskapen **`interval`** åsidosätts intervallet för rapportimporteraren.
+   * Ändra **`interval`** egenskapen åsidosätter rapportimporterarens intervall.
    * Värdet anges i sekunder och är inställt på 4 timmar (1 400 sekunder).
 
 ![komponentrapport](assets/component-report.png)
 
 ## Hantera användardata i Analytics {#manage-user-data-in-analytics}
 
-Adobe Analytics tillhandahåller API:er som gör att du kan komma åt, exportera och ta bort användardata. Mer information finns i [Skicka in åtkomst- och borttagningsbegäranden](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/gdpr-submit-access-delete.html).
+Adobe Analytics tillhandahåller API:er som gör att du kan komma åt, exportera och ta bort användardata. Mer information finns i [Skicka in begäran om åtkomst och borttagning](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-submit-access-delete.html).
 
 ## Resurser {#resources}
 
-* Adobe Experience Cloud: [Hjälp och referens för analys](https://docs.adobe.com/content/help/en/analytics/landing/home.html)
+* Adobe Experience Cloud: [Hjälp och referens för analyser](https://experienceleague.adobe.com/docs/analytics.html)
 * AEM: [Integrera med Adobe Analytics](/help/sites-administering/adobeanalytics.md)
 * AEM: [Analyser med externa leverantörer](/help/sites-administering/external-providers.md)
