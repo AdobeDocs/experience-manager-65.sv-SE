@@ -6,9 +6,9 @@ seo-description: The Tough Day test simulates the daily load of around 1000 auth
 topic-tags: testing
 content-type: reference
 exl-id: ceb9671c-57f9-4d81-94c0-0dbccd4d90a2
-source-git-commit: 36c0728908e24a13d08c1eaed4e39542f5b61df5
+source-git-commit: 0b1f28963d9294c7aa9ae45c6b9fc9a9b8b4f6e6
 workflow-type: tm+mt
-source-wordcount: '1885'
+source-wordcount: '1879'
 ht-degree: 1%
 
 ---
@@ -239,7 +239,7 @@ tests:
   - add : CreatePageTreeTest
 ```
 
-Befintliga tester i en viss programsvit kan även konfigureras om med `config`* *parameter. Observera att du också måste ange namnet på sviten och det faktiska namnet på testet (inte testklassens namn). Testnamnet finns i `name` egenskapen för klassen Test. Mer information om hur du söker efter testegenskaper finns i [Ändra testegenskaper](/help/sites-developing/tough-day.md#changing-the-test-properties) -avsnitt.
+Befintliga tester i en viss programsvit kan även konfigureras om med `config`* *parameter. Observera att du också måste ange namnet på programsviten och testets faktiska namn (inte testklassens namn). Testnamnet finns i `name` egenskapen för klassen Test. Mer information om hur du söker efter testegenskaper finns i [Ändra testegenskaper](/help/sites-developing/tough-day.md#changing-the-test-properties) -avsnitt.
 
 I exemplet nedan visas standardresursens namn för `CreatePageTreeTest` (namngiven `UploadAsset`) ändras till&quot;NewAsset&quot;.
 
@@ -403,8 +403,10 @@ Tough Day 2 skapar en loggmapp i samma katalog som du körde Tough Day 2. Den h�
 
 Loggarna skrivs inte över, efterföljande körningar lägger till meddelanden i befintliga loggar. Loggarna har flera nivåer. Mer information finns i ` [loglevel parameter](/help/sites-developing/tough-day.md#global-parameters)`.
 
-#### Exempel på användning {#example-usage}
+<!--
+#### Example Usage {#example-usage}
 
-#### Kända fel {#known-issues}
+#### Known Issues {#known-issues}
 
-[Hämta fil](assets/toughday-6_1.jar)
+[Get File](assets/toughday-6_1.jar)
+-->
