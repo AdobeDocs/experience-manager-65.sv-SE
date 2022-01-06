@@ -1,10 +1,7 @@
 ---
 title: Konfigurera översättningsregler
 description: Lär dig hur du definierar översättningsregler för att identifiera innehåll för översättning.
-index: true
-hide: false
-hidefromtoc: false
-source-git-commit: 7cf68868e0963930bde9fcda647822a03914b61d
+source-git-commit: 38525b6cc14e9f6025564c060b8cfb4f9e0ea473
 workflow-type: tm+mt
 source-wordcount: '872'
 ht-degree: 0%

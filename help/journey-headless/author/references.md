@@ -1,10 +1,7 @@
 ---
 title: Läs om hur du använder referenser i innehållsfragment
 description: Lär dig hur du använder referenser i innehållsfragment, för innehåll, andra fragment och andra resurser (media). Lägg in behovet av och mekanismerna i kapslade fragment för Headless CMS Authoring.
-index: true
-hide: false
-hidefromtoc: false
-source-git-commit: 9661061a98c31fbb74bd0716dbedc7abef298f44
+source-git-commit: 38525b6cc14e9f6025564c060b8cfb4f9e0ea473
 workflow-type: tm+mt
 source-wordcount: '731'
 ht-degree: 1%

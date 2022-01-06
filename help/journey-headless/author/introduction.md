@@ -1,10 +1,7 @@
 ---
 title: AEM Headless Content Author Journey
 description: En introduktion till de kraftfulla och flexibla headlessfunktionerna i Adobe Experience Manager och hur du skapar innehåll för ditt projekt.
-index: true
-hide: false
-hidefromtoc: false
-source-git-commit: 867b0a5a4c660a069e54094ed003cd93289048c7
+source-git-commit: 38525b6cc14e9f6025564c060b8cfb4f9e0ea473
 workflow-type: tm+mt
 source-wordcount: '630'
 ht-degree: 0%
