@@ -1,7 +1,6 @@
 ---
-source-git-commit: 107ad4d7f875d27d392212f5fb8ca9b39aae3857
+source-git-commit: 41011e538104405c954761d9adc270e774e8a9a1
 workflow-type: tm+mt
-translation-type: tm+mt
 source-wordcount: '84'
 ht-degree: 0%
 
@@ -12,7 +11,6 @@ Det här är arkivet för Adobe Experience Manager 6.5-dokumentation. Den här d
 
 Dina bidrag till dokumentationen är välkomna. Se följande resurser:
 
-* [contribute.](contributing.md) mdEn översikt över hur du kan bidra till dokumentationen.
-* [guidelines.](guidelines.md) mdEn översikt över vad som förväntas i bidragen och hur du komponerar dokumentationsbidragen.
-* [code-of-behavior.](code-of-conduct.md) mdFör en översikt över de beteendestandarder vi förväntar oss när du bidrar till detta dokumentationsprojekt.
-
+* [contribute.md](contributing.md) En översikt över hur du bidrar till dokumentationen.
+* [riktlinjer.md](guidelines.md) En översikt över vad som förväntas i bidragen och hur du sammanställer dina dokumentationsbidrag.
+* [uppförandekod.md](code-of-conduct.md) En översikt över de beteendestandarder vi förväntar oss när du bidrar till det här dokumentationsprojektet.
