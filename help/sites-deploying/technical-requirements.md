@@ -6,9 +6,9 @@ seo-description: A list of the supported client and server platforms for AEM.
 content-type: reference
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 0a28a2cf1184ebdbbc907a661f2d0a2c18775822
+source-git-commit: 41a9ab1dd37c135be73fe47bc36ceb4845e13379
 workflow-type: tm+mt
-source-wordcount: '3486'
+source-wordcount: '3427'
 ht-degree: 0%
 
 ---
@@ -90,60 +90,60 @@ Adobe Experience Manager arbetar med följande versioner av Java Virtual Machine
 >
 >Vi rekommenderar att du följer säkerhetsbulletinerna från Java-leverantören för att säkerställa säkerheten i produktionsmiljöer och installerar de senaste Java-uppdateringarna.
 
-<table>
+<!--- <table>
  <tbody>
   <tr>
-   <td><strong>Plattform</strong></td>
-   <td><strong>Supportnivå</strong></td>
-   <td><strong>Länk</strong></td>
+   <td><strong>Platform</strong></td>
+   <td><strong>Support Level</strong></td>
+   <td><strong>Link</strong></td>
   </tr>
   <tr>
-   <td>Azul Zulu OpenJDK 11 - 64 bitar</td>
-   <td>S: Stöds [1]</td>
-   <td> https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Azul*+Zulu*+JDK*+11*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=24</td>
+   <td>Azul Zulu OpenJDK 11 - 64bit</td>
+   <td>A: Supported [1]</td>
+   <td> https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Azul*+Zulu*+JDK*+11*&orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&orderby.sort=desc&layout=list&p.offset=0&p.limit=24</td>
   </tr>
   <tr>
-   <td>Azul Zulu OpenJDK 8 - 64 bitar</td>
-   <td>S: Stöds [1]</td>
-   <td> https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Azul*+Zulu*+JDK*+8*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=18</td>
+   <td>Azul Zulu OpenJDK 8 - 64bit</td>
+   <td>A: Supported [1]</td>
+   <td> https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Azul*+Zulu*+JDK*+8*&orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&orderby.sort=desc&layout=list&p.offset=0&p.limit=18</td>
   </tr>
   <tr>
-   <td>Oracle Java SE 11 JDK - 64 bitar</td>
-   <td>S: Stöds [2]</td>
-   <td> https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Oracle*+JDK*+11*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=24<td>
+   <td>Oracle Java SE 11 JDK - 64bit</td>
+   <td>A: Supported [2]</td>
+   <td> https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Oracle*+JDK*+11*&orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&orderby.sort=desc&layout=list&p.offset=0&p.limit=24<td>
   </tr>
   <tr>
    <td>Oracle Java SE 10 JDK</td>
-   <td>Z: Stöds inte [2]</td>
+   <td>Z: Not supported [2]</td>
   </tr>
   <tr>
    <td>Oracle Java SE 9 JDK</td>
-   <td>Z: Stöds inte [2]</td>
+   <td>Z: Not supported [2]</td>
   </tr>
   <tr>
-   <td>Oracle Java SE 8 JDK - 64 bitar</td>
-   <td>S: Stöds [2]</td>
-   <td> https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Oracle*+JDK*+8*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=10<td>
+   <td>Oracle Java SE 8 JDK - 64bit</td>
+   <td>A: Supported [2]</td>
+   <td> https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Oracle*+JDK*+8*&orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&orderby.sort=desc&layout=list&p.offset=0&p.limit=10<td>
   </tr>
   <tr>
    <td>IBM J9 VM - build 2.9, JRE 1.8.0</td>
-   <td>S: Stöds [3]</td>
+   <td>A: Supported [3]</td>
   </tr>
   <tr>
    <td>IBM J9 VM - build 2.8, JRE 1.8.0</td>
-   <td>S: Stöds [3]</td>
+   <td>A: Supported [3]</td>
   </tr>
  </tbody>
-</table>
+</table> --->
 
-| **Plattform** | **Supportnivå** | **Länkar** |
+| **Plattform** | **Supportnivå** | **Länk** |
 |---|---|---|
 | Azul Zulu OpenJDK 11 - 64 bitar | S: Stöds `[1]` | [https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Azul*+Zulu*+JDK*+11*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=24](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Azul*+Zulu*+JDK*+11*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=24) |
 | Azul Zulu OpenJDK 8 - 64 bitar | S: Stöds `[1]` | [https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Azul*+Zulu*+JDK*+8*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=18](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Azul*+Zulu*+JDK*+8*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=18) |
-| Oracle Java SE 11 JDK - 64 bitar | S: Stöds `[2]` |
+| Oracle Java SE 11 JDK - 64 bitar | S: Stöds `[2]` | [https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Oracle*+JDK*+11*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=24](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Oracle*+JDK*+11*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=24&lt;td>) |
 | Oracle Java SE 10 JDK | Z: Stöds inte `[2]` |
 | Oracle Java SE 9 JDK | Z: Stöds inte `[2]` |
-| Oracle Java SE 8 JDK - 64 bitar | S: Stöds `[2]` |
+| Oracle Java SE 8 JDK - 64 bitar | S: Stöds `[2]` | [https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Oracle*+JDK*+8*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=10](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Oracle*+JDK*+8*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=10) |
 | IBM J9 VM - build 2.9, JRE 1.8.0 | S: Stöds `[3]` |
 | IBM J9 VM - build 2.8, JRE 1.8.0 | S: Stöds `[3]` |
 
