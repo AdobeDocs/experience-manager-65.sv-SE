@@ -1,22 +1,21 @@
 ---
 title: Läs om AEM 6.5-funktioner
-seo-title: Läs om AEM 6.5-funktioner
+seo-title: Learn About AEM 6.5 Capabilities
 description: En beskrivning av de viktigaste funktionerna i AEM 6.5
-seo-description: En beskrivning av de viktigaste funktionerna i AEM 6.5
-translation-type: tm+mt
-source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+seo-description: An description of the essential capabilities of AEM 6.5
+exl-id: dc3b8690-f664-4ffa-993b-7a8634e6fe6b
+source-git-commit: d1b4cf87291f7e4a0670a21feca1ebf8dd5e0b5e
 workflow-type: tm+mt
-source-wordcount: '413'
-ht-degree: 1%
+source-wordcount: '400'
+ht-degree: 2%
 
 ---
 
-
-# Läs mer om AEM 6.5-funktioner {#learn-about-aem-64-capabilities}
+# Läs om AEM 6.5-funktioner {#learn-about-aem-64-capabilities}
 
 ## AEM Sites {#aem-sites}
 
-AEM Sites är ett innehållshanteringssystem i Adobe Experience Manager som ger er en plats där ni kan skapa, hantera och leverera digitala upplevelser på webbplatser, mobilsajter och skärmar på plats för att göra dem globala, men ändå personligt relevanta och engagerande. [Lär dig ](http://www.adobe.com/marketing-cloud/enterprise-content-management/web-cms.html) mer eller  [lär dig mer om några av våra nya videofunktionsjälvstudiekurser.](https://helpx.adobe.com/experience-manager/kt/sites/index/aem-6-5-sites.html)
+AEM Sites är ett innehållshanteringssystem i Adobe Experience Manager som ger er en plats där ni kan skapa, hantera och leverera digitala upplevelser på webbplatser, mobilsajter och skärmar på plats för att göra dem globala, men ändå personligt relevanta och engagerande. [Läs mer](http://www.adobe.com/marketing-cloud/enterprise-content-management/web-cms.html) eller [fördjupa dig i några av våra nya självstudiekurser om videofunktioner.](https://helpx.adobe.com/experience-manager/kt/sites/index/aem-6-5-sites.html)
 
 ## AEM Assets {#aem-assets}
 
@@ -24,7 +23,7 @@ Med AEM Assets kan ni enkelt skapa, hantera, leverera och optimera digitala resu
 
 * [Arbeta med AEM Assets](/help/assets/manage-assets.md)
 * [Arbeta med Dynamic Media](/help/assets/dynamic-media.md)
-* [Versionsinformation för AEM Assets](/help/release-notes/assets.md)
+* [AEM Versionsinformation](/help/release-notes/release-notes.md)
 
 ## AEM Forms {#aem-forms}
 
@@ -47,8 +46,8 @@ Communities är en Adobe Experience Manager-funktion som hjälper er att skapa o
 
 ## AEM Livefyre {#aem-livefyre}
 
-AEM Livefyre är en helt ny Adobe Experience Manager-funktion som gör att du kan utnyttja allt som delas på webben och skapa ett konstant flöde av nytt högkvalitativt innehåll på dina egna webbplatser. [Läs ](http://www.adobe.com/marketing-cloud/enterprise-content-management/ugc-content-platform.html) mer eller  [gå direkt in i våra guider.](https://answers.livefyre.com/product/livefyre-for-adobe-experience-manager-aem/)
+AEM Livefyre är en helt ny Adobe Experience Manager-funktion som gör att du kan utnyttja allt som delas på webben och skapa ett konstant flöde av nytt högkvalitativt innehåll på dina egna webbplatser. [Läs mer](http://www.adobe.com/marketing-cloud/enterprise-content-management/ugc-content-platform.html) eller [gå direkt in i våra guider.](https://answers.livefyre.com/product/livefyre-for-adobe-experience-manager-aem/)
 
-## AEM Foundation {#aem-foundation}
+## AEM {#aem-foundation}
 
-Läs mer om [Adobe Experience Manager 6.5 Foundation](/help/sites-deploying/home.md) och vår driftsättningsmodell för hanterade tjänster eller dyk in i några av våra [nya videopresentationer av funktionerna i den här versionen.](https://helpx.adobe.com/experience-manager/kt/sites/index/aem-6-5-sites.html)
+Läs mer om [Adobe Experience Manager 6.5 Foundation](/help/sites-deploying/home.md) och vår driftsättningsmodell för hanterade tjänster eller dyka upp i några av våra [nya videopresentationer av funktionerna i den här versionen.](https://helpx.adobe.com/experience-manager/kt/sites/index/aem-6-5-sites.html)

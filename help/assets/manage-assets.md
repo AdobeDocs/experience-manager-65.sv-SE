@@ -6,7 +6,7 @@ mini-toc-levels: 1
 role: User
 feature: Asset Management,Search
 exl-id: 158607e6-b4e9-4a3f-b023-4023d60c97d2
-source-git-commit: eb7051582a51d983851c876025770668b258bff5
+source-git-commit: d1b4cf87291f7e4a0670a21feca1ebf8dd5e0b5e
 workflow-type: tm+mt
 source-wordcount: '9641'
 ht-degree: 3%
@@ -338,7 +338,7 @@ Vissa begränsningar för funktionen är:
 * Om det finns en mapp med samma namn på målet extraheras resurserna från ZIP-filen i den befintliga mappen.
 * Om du avbryter extraheringen tas de redan extraherade resurserna inte bort.
 * Du kan inte markera två ZIP-filer samtidigt och extrahera dem. Du kan bara extrahera ett ZIP-arkiv åt gången.
-* När du överför ett ZIP-arkiv och dialogrutan för överföring visar ett 500-serverfel, försöker du igen efter installationen [senaste Service Pack](/help/release-notes/sp-release-notes.md).
+* När du överför ett ZIP-arkiv och dialogrutan för överföring visar ett 500-serverfel, försöker du igen efter installationen [senaste Service Pack](/help/release-notes/release-notes.md).
 
 ## Förhandsgranska resurser {#previewing-assets}
 

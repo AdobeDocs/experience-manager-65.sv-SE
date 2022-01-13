@@ -2,11 +2,10 @@
 title: Versionsinformation om Adobe Experience Manager 6.5
 description: AEM versionsinformation innehåller viktig information om den senaste versionen av AEM, inklusive vad som är nytt, vilka plattformar som stöds, borttagna och borttagna funktioner samt kända fel.
 exl-id: 2fc93249-9bd0-4e34-83b2-80f51c102ed1
-translation-type: tm+mt
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+source-git-commit: a2b3cb81fb15a1f03004e42cafbf92c84c9d7b89
 workflow-type: tm+mt
-source-wordcount: '384'
-ht-degree: 13%
+source-wordcount: '391'
+ht-degree: 12%
 
 ---
 
@@ -14,10 +13,12 @@ ht-degree: 13%
 
 AEM versionsinformation innehåller viktig information om den senaste versionen av AEM, inklusive vad som är nytt, vilka plattformar som stöds, borttagna och borttagna funktioner samt kända fel.
 
+* [Aktuell versionsinformation](/help/release-notes/release-notes.md)
+
 ## Viktiga AEM
 
-* [Kom igång med AEM](https://helpx.adobe.com/experience-manager/get-started.html)
-* [Senaste dokumentationsuppdateringarna](https://helpx.adobe.com/experience-manager/documentation-updates.html)
+* [Kom igång med AEM](https://experienceleague.adobe.com/docs/experience-manager-65.html)
+* [Senaste dokumentationsuppdateringarna](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html)
 * [AEM](/help/sites-administering/security-checklist.md)
 
 ## AEM 6.5 användarhandböcker
@@ -51,6 +52,6 @@ AEM versionsinformation innehåller viktig information om den senaste versionen 
 
 ## Copyright, licenser och friskrivningsklausuler {#copyright-licenses-and-disclaimers}
 
-Mer information finns i [https://www.adobe.com/legal/terms/enterprise-licensing.html](https://www.adobe.com/legal/terms/enterprise-licensing.html)
+Mer information finns på [https://www.adobe.com/legal/terms/enterprise-licensing.html](https://www.adobe.com/legal/terms/enterprise-licensing.html)
 
 Meddelande om tredjepartslicenser: [https://www.adobe.com/products/eula/third_party/](https://www.adobe.com/products/eula/third_party/)
