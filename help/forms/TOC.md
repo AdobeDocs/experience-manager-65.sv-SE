@@ -8,9 +8,9 @@ user-guide-title: Adobe Experience Manager 6.5 Forms Guide
 breadcrumb-title: Forms Guide
 user-guide-description: Skapa, hantera, publicera och uppdatera digitala formulär.
 role: User
-source-git-commit: d010b2a20e40fabe40f67d60ef0b6fab245be60f
+source-git-commit: 7962d076135bcbac821ff85fd1831ee2c444ff00
 workflow-type: tm+mt
-source-wordcount: '3777'
+source-wordcount: '3772'
 ht-degree: 1%
 
 ---
@@ -19,9 +19,9 @@ ht-degree: 1%
 
 + [AEM 6.5 Forms Guide](home.md)
 + Versionsinformation {#release-notes-new-features}
-   + [Versionsinformation](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/release-notes.html#experience-manager-forms)
+   + [Versionsinformation](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html)
    + [Sammanfattning av nya funktioner](using/whats-new.md)
-   + [Föråldrade funktioner](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/deprecated-removed-features.html)
+   + [Föråldrade funktioner](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/deprecated-removed-features.html)
 + Komma igång {#getting-started}
    + [Introduktion till AEM Forms](using/introduction-aem-forms.md)
    + [Introduktion till utveckling av anpassningsbara formulär](using/introduction-forms-authoring.md)
@@ -67,7 +67,7 @@ ht-degree: 1%
       + [Plattformar som stöds för AEM formulär på JEE](using/aem-forms-jee-supported-platforms.md)
       + [Installera och distribuera AEM Forms på JEE med JBoss Turnkey](http://www.adobe.com/go/learn_aemforms_installTurnkey_65)
       + [Installera och konfigurera AEM Forms Document Security-servern](using/installing-and-configuring-the-document-security-server.md)
-      + [Installation av AEM Forms (Single Server) förbereds](http://www.adobe.com/go/learn_aemforms_prepareInstallsingle_65)
+      + [Installationen av AEM Forms (Single Server) förbereds](http://www.adobe.com/go/learn_aemforms_prepareInstallsingle_65)
       + [Installera och distribuera Adobe Experience Manager Forms på JEE för JBoss](http://www.adobe.com/go/learn_aemforms_installJBoss_65)
       + [Installera och distribuera Adobe Experience Manager-formulär på JEE för WebSphere](http://www.adobe.com/go/learn_aemforms_installWebSphere_65)
       + [Installera och distribuera AEM Forms på JEE för WebLogic](http://www.adobe.com/go/learn_aemforms_installWebLogic_65)
@@ -84,7 +84,7 @@ ht-degree: 1%
       + [Konfigurera synkroniseringsplaneraren](using/configure-synchronization-scheduler.md)
       + [Konfigurera anslutningsprogrammet för Microsoft SharePoint](http://help.adobe.com/en_US/AEMForms/6.1/SharePointConfig/index.html)
       + [Ansluta AEM Forms till Adobe LiveCycle](using/aem-livecycle-connector.md)
-      + [Konfigurera AEM Forms för att skicka formulärdata till en JEE-process i AEM Forms](using/submit-form-data-livecycle-process.md)
+      + [Konfigurera AEM Forms för att skicka formulärdata till en JEE-process från AEM Forms](using/submit-form-data-livecycle-process.md)
       + [AEM datorprogram för AEM Forms](/help/forms/using/aem-desktop-app-for-aem-forms.md)
 + Uppgradera AEM Forms {#upgrade-aem-forms}
    + [Tillgängliga uppgraderingssökvägar](using/upgrade.md)
@@ -94,7 +94,7 @@ ht-degree: 1%
       + [Migrera AEM Forms-resurser och -dokument](using/migration-utility.md)
    + Uppgradera AEM Forms på JEE {#aem-forms-jee-upgrade}
       + [Förbereder uppgradering av AEM Forms](http://www.adobe.com/go/learn_aemforms_prepareupgrade_65)
-      + [Adobe Experience Manager Forms i JEE-uppgraderingar - checklista och planering](http://www.adobe.com/go/learn_aemforms_upgrade_checklist_65)
+      + [Adobe Experience Manager Forms i JEE - checklista och planering för uppgradering](http://www.adobe.com/go/learn_aemforms_upgrade_checklist_65)
       + [Uppgradera till AEM 6.5-formulär på JEE](using/upgrade-forms-jee.md)
       + [Uppgradera till Adobe Experience Manager Forms på JEE för JBoss](http://www.adobe.com/go/learn_aemforms_upgradeJBoss_65)
       + [Uppgradera till AEM Forms on JEE for JBoss Turnkey](http://www.adobe.com/go/learn_aemforms_upgradeTurnkey_65)
