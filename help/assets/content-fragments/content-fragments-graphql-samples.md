@@ -2,9 +2,10 @@
 title: Att lära sig använda GraphQL med AEM - exempelinnehåll och frågor
 description: Lär dig använda GraphQL med AEM för att leverera innehåll utan problem genom att utforska exempelinnehåll och frågor.
 feature: Content Fragments,GraphQL API
-source-git-commit: 94145c6428f61e31f6784a3d6ea67aa8d81cedd6
+exl-id: 91c5f61c-9c15-4d72-9b9b-0c23f31e7cdc
+source-git-commit: 1a3d5a6b3b4f7af67d6a62cdaab484daa536cb63
 workflow-type: tm+mt
-source-wordcount: '1418'
+source-wordcount: '1416'
 ht-degree: 2%
 
 ---
@@ -26,9 +27,9 @@ Om du vill komma igång med GraphQL-frågor och hur de fungerar med AEM innehål
 
 Mer information finns i:
 
-* A [sample Content Fragment structure](#content-fragment-structure-graphql)
+* A [exempel på struktur för innehållsfragment](#content-fragment-structure-graphql)
 
-* Och några [exempel på GraphQL-frågor](#graphql-sample-queries), baserade på fragmentstrukturen för exempelinnehåll (modeller för innehållsfragment och relaterade innehållsfragment).
+* Och några [sampla GraphQL-frågor](#graphql-sample-queries), baserat på fragmentstrukturen för exempelinnehåll (modeller för innehållsfragment och relaterade innehållsfragment).
 
 
 ## GraphQL - Exempelfrågor med strukturen för exempelinnehållsfragment {#graphql-sample-queries-sample-content-fragment-structure}
@@ -37,13 +38,13 @@ I de här exempelfrågorna finns illustrationer av hur du skapar frågor, tillsa
 
 >[!NOTE]
 >
->Beroende på din instans kan du komma åt det [Graph *i* QL-gränssnitt som ingår i AEM GraphQL API](/help/assets/content-fragments/graphql-api-content-fragments.md#graphiql-interface) för att skicka och testa frågor.
+>Beroende på din instans kan du komma åt [GraphiQL-gränssnittet ingår i AEM GraphQL API](/help/assets/content-fragments/graphql-api-content-fragments.md#graphiql-interface) för att skicka och testa frågor.
 >
 >Till exempel: `http://localhost:4502/content/graphiql.html`
 
 >[!NOTE]
 >
->Exempelfrågorna är baserade på [strukturen för exempelinnehållsfragment för användning med GraphQL](#content-fragment-structure-graphql)
+>Exempelfrågorna baseras på [Exempel på struktur för innehållsfragment som ska användas med GraphQL](#content-fragment-structure-graphql)
 
 ### Exempelfråga - Alla tillgängliga scheman och datatyper {#sample-all-schemes-datatypes}
 
@@ -223,7 +224,7 @@ När den körs utökas frågan automatiskt så att den omfattar alla fält:
 
 ### Exempelfråga - namn på alla städer {#sample-names-all-cities}
 
-Detta är en enkel fråga som returnerar `name`alla poster i `city`schemat.
+Det här är en enkel fråga som returnerar `name`av alla poster i `city`schema.
 
 **Exempelfråga**
 
@@ -314,7 +315,7 @@ Det här är en fråga som returnerar information om en enskild fragmentpost på
 
 ### Exempelfråga - Alla städer med en namngiven variant {#sample-cities-named-variation}
 
-Om du skapar en ny variant med namnet&quot;Berlin Center&quot; (`berlin_centre`) för `city` Berlin kan du använda en fråga för att returnera information om variationen.
+Om du skapar en ny variant som heter &quot;Berlin Center&quot; (`berlin_centre`), för `city` I Berlin kan du använda en fråga för att returnera information om variationen.
 
 **Exempelfråga**
 
@@ -485,7 +486,7 @@ query {
 
 ### Exempelfråga - Alla personer som har namnet &quot;Jobs&quot; eller &quot;Smith&quot; {#sample-all-persons-jobs-smith}
 
-Detta filtrerar alla `persons` för alla som har namnet `Jobs`eller `Smith`.
+Detta kommer att filtrera alla `persons` för alla som har ett namn `Jobs`eller `Smith`.
 
 **Exempelfråga**
 
@@ -539,7 +540,7 @@ query {
 
 ### Exempelfråga - Alla personer som inte har namnet &quot;Jobs&quot; {#sample-all-persons-not-jobs}
 
-Detta filtrerar alla `persons` för alla som har namnet `Jobs`eller `Smith`.
+Detta kommer att filtrera alla `persons` för alla som har ett namn `Jobs`eller `Smith`.
 
 **Exempelfråga**
 
@@ -604,9 +605,9 @@ query {
 }
 ```
 
-### Exempelfråga - Alla tillägg vars `_path` börjar med ett visst prefix {#sample-wknd-all-adventures-cycling-path-filter}
+### Exempelfråga - Alla annonser vars `_path` börjar med ett visst prefix {#sample-wknd-all-adventures-cycling-path-filter}
 
-Alla `adventures` där `_path` börjar med ett specifikt prefix (`/content/dam/wknd/en/adventures/cycling`).
+Alla `adventures` där `_path` börjar med ett visst prefix (`/content/dam/wknd/en/adventures/cycling`).
 
 **Exempelfråga**
 
@@ -651,7 +652,7 @@ query {
 
 ### Exempelfråga - Alla städer i Tyskland eller Schweiz med en befolkning på mellan 400000 och 99999 {#sample-all-cities-d-ch-population}
 
-Här filtreras en kombination av fält. Ett `AND`-värde (implicit) används för att välja `population`intervallet, medan ett `OR` (explicit) används för att välja önskade städer.
+Här filtreras en kombination av fält. An `AND` (implicit) används för att välja `population`omfång, medan `OR` (explicit) används för att välja önskade städer.
 
 **Exempelfråga**
 
@@ -765,7 +766,7 @@ query {
 
 ### Exempelfråga - Filtrera en array med ett objekt som måste förekomma minst en gång {#sample-array-item-occur-at-least-once}
 
-Den här frågan filtrerar en array med ett objekt (`city:na`) som måste förekomma minst en gång.
+Den här frågan filtrerar en array med ett objekt (`city:na`) som måste inträffa minst en gång.
 
 **Exempelfråga**
 
@@ -875,7 +876,7 @@ query {
 
 ### Exempelfråga för kapslade innehållsfragment - Alla företag som har minst en anställd med namnet &quot;Smith&quot; {#sample-companies-employee-smith}
 
-Den här frågan visar filtrering för `person` av `name` &quot;Smith&quot;, vilket returnerar information från två kapslade fragment - `company` och `employee`.
+Den här frågan visar filtrering för alla `person` av `name` &quot;Smith&quot;, returnera information från två kapslade fragment - `company` och `employee`.
 
 **Exempelfråga**
 
@@ -941,7 +942,7 @@ query {
 
 ### Exempelfråga för kapslade innehållsfragment - Alla företag där alla anställda har vunnit utmärkelsen&quot;Gamestar&quot; {#sample-all-companies-employee-gamestar-award}
 
-Den här frågan visar filtrering över tre kapslade fragment - `company`, `employee` och `award`.
+Den här frågan visar filtrering över tre kapslade fragment - `company`, `employee`och `award`.
 
 **Exempelfråga**
 
@@ -1033,7 +1034,7 @@ query {
 
 ### Exempelfråga för metadata - Ange metadata för utmärkelserna med namnet GB {#sample-metadata-awards-gb}
 
-Den här frågan visar filtrering över tre kapslade fragment - `company`, `employee` och `award`.
+Den här frågan visar filtrering över tre kapslade fragment - `company`, `employee`och `award`.
 
 **Exempelfråga**
 
@@ -1110,7 +1111,7 @@ Dessa exempelfrågor är baserade på WKND-projektet. Detta har:
 Detta exempel på frågor intervjuar:
 
 * för alla innehållsfragment av typen `article`
-* med egenskaperna `path`och `author`.
+* med `path`och `author` egenskaper.
 
 **Exempelfråga**
 
@@ -1190,7 +1191,7 @@ Den här frågan förhör:
 
 Detta exempel på frågor intervjuar:
 
-* för ett enda innehållsfragment av typen `article` vid en specifik sökväg
+* för ett enda innehållsfragment av typen `article` vid en viss sökväg
    * där alla format:
       * HTML
       * Markdown
@@ -1244,7 +1245,7 @@ Detta exempel på frågor intervjuar:
 
 Den här frågan förhör:
 
-* för ett enda innehållsfragment av typen `article` vid en specifik sökväg
+* för ett enda innehållsfragment av typen `article` vid en viss sökväg
    * i det, sökvägen och författaren till det refererade (kapslade) fragmentet
 
 >[!NOTE]
@@ -1277,7 +1278,7 @@ Den här frågan förhör:
 
 >[!NOTE]
 >
->Fältet `fragments` har datatypen `fragment-reference`, med modellerna `Article`, `Adventure` markerad.
+>Fältet `fragments` har datatypen `fragment-reference`, med modellerna `Article`, `Adventure` markerat.
 
 ```xml
 {
@@ -1303,7 +1304,7 @@ Den här frågan förhör:
 Det finns två varianter av den här frågan:
 
 1. Returnera alla innehållsreferenser.
-1. Returnerar de specifika innehållsreferenserna av typen `attachments`.
+1. Returnera de specifika innehållsreferenserna av typen `attachments`.
 
 De här frågorna förhör:
 
@@ -1312,7 +1313,7 @@ De här frågorna förhör:
 
 #### Exempelfråga för flera innehållsfragment med förhämtade referenser {#sample-wknd-multiple-fragments-prefetched-references}
 
-Följande fråga returnerar alla innehållsreferenser med `_references`:
+Följande fråga returnerar alla innehållsreferenser genom att använda `_references`:
 
 ```xml
 {
@@ -1352,7 +1353,7 @@ Följande fråga returnerar alla `attachments` - ett specifikt fält (undergrupp
 
 >[!NOTE]
 >
->Fältet `attachments` har datatypen `content-reference`, där olika formulär är markerade.
+>Fältet `attachments` har datatypen `content-reference`, med olika formulär markerade.
 
 ```xml
 {
@@ -1389,12 +1390,12 @@ Följande fråga returnerar alla `attachments` - ett specifikt fält (undergrupp
 
 Den här frågan förhör:
 
-* för ett enda innehållsfragment av typen `bookmark` vid en specifik sökväg
+* för ett enda innehållsfragment av typen `bookmark` vid en viss sökväg
    * i det, textbundna RTE-referenser
 
 >[!NOTE]
 >
->De textbundna RTE-referenserna är hydrerade i `_references`.
+>De textbundna RTE-referenserna är hydratiserade i `_references`.
 
 **Exempelfråga**
 
@@ -1435,7 +1436,7 @@ Den här frågan förhör:
 
 Den här frågan förhör:
 
-* för ett enda innehållsfragment av typen `article` vid en specifik sökväg
+* för ett enda innehållsfragment av typen `article` vid en viss sökväg
    * inom detta, de uppgifter som avser variationen: `variation1`
 
 **Exempelfråga**
@@ -1486,7 +1487,7 @@ Den här frågan förhör:
 
 Den här frågan förhör:
 
-* för innehållsfragment av typen `article` inom språket `fr`
+* för innehållsfragment av typen `article` inom `fr` locale
 
 **Exempelfråga**
 
@@ -1511,17 +1512,17 @@ Den här frågan förhör:
 
 Exempelfrågorna baseras på följande struktur som använder:
 
-* En eller flera [modeller för exempelinnehållsfragment](#sample-content-fragment-models-schemas) - utgör grunden för GraphQL-scheman
+* en eller flera, [Exempel på modeller för innehållsfragment](#sample-content-fragment-models-schemas) - utgör grunden för GraphQL-scheman
 
-* [Exempelinnehåll ](#sample-content-fragments) fragmenterbaserat på ovanstående modeller
+* [Exempel på innehållsfragment](#sample-content-fragments) baserat på ovanstående modeller
 
 ### Exempel på modeller för innehållsfragment (scheman) {#sample-content-fragment-models-schemas}
 
 För exempelfrågorna använder vi följande innehållsmodeller och deras inbördes relationer (referenser ->):
 
-* [Company](#model-company)
-->  [Person](#model-person)
-    ->  [Award](#model-award)
+* [Företag](#model-company)
+-> [Person](#model-person)
+    -> [Utmärkelse](#model-award)
 
 * [Ort](#model-city)
 
@@ -1573,8 +1574,8 @@ Följande fragment används för rätt modell.
 
 | Företag | VD | Anställda |
 |--- |--- |--- |
-| Apple | Steve Jobs | Duke Marsh<br>Max Caulfield |
-|  Little Pony Inc. | Adam Smith | Lara Crop<br>Städerplatta |
+| Apple | Steve Jobs | Duke Marsh<br>Max. textfält |
+|  Little Pony Inc. | Adam Smith | Lara Croft<br>Cutter Slade |
 | NextStep Inc. | Steve Jobs | Joe Smith<br>Abe Lincoln |
 
 #### Person {#fragment-person}
@@ -1605,7 +1606,7 @@ Följande fragment används för rätt modell.
 | Basel | Schweiz | 172258 | stad:emea |
 | Berlin | Tyskland | 3669491 | stad:huvudstad<br>stad:emea |
 | Bucharest | Rumänien | 1821000 |  stad:huvudstad<br>stad:emea |
-| San Francisco |  USA |  883306 |  city:beach<br>city:na |
+| San Francisco |  USA |  883306 |  stad:strand<br>stad:na |
 | San Jose |  USA |  102635 |  stad:na |
 | Stuttgart |  Tyskland |  634830 |  stad:emea |
 |  Zürich |  Schweiz |  415367 |  stad:huvudstad<br>stad:emea |
