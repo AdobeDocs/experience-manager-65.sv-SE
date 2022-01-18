@@ -2,9 +2,9 @@
 title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: '[!DNL Adobe Experience Manager] 6.5 som beskriver versionsinformation, nyheter, hur man installerar och detaljerade ändringslistor.'
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: 13c76122a38e32783bca248597a16f0512dae44c
+source-git-commit: 1cfa01544ad8bf0adafd55e696a6844a8edf1007
 workflow-type: tm+mt
-source-wordcount: '3845'
+source-wordcount: '3833'
 ht-degree: 0%
 
 ---
@@ -35,8 +35,6 @@ De viktigaste funktionerna och förbättringarna i [!DNL Adobe Experience Manage
 * En förbättring av användarupplevelsen visar antalet resurser i en mapp. För mer än 1000 resurser i en mapp, [!DNL Assets] visar 1000+.
 
    ![Antal resurser i en mapp](/help/assets/assets/browse-folder-number-of-assets.png)
-
-* Nu kan du återge sorteringsalternativet i kort- och kolumnvyn.
 
 * Affärsprofiler som stöder Adobe Asset Link.
 
