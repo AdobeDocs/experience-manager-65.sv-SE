@@ -1,7 +1,7 @@
 ---
 title: Allmän versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: '[!DNL Adobe Experience Manager] 6.5 som beskriver versionsinformation, nyheter, hur man installerar och detaljerade ändringslistor.'
-source-git-commit: 9b15215a68495a800e94a58b523e1b7baa0c0203
+source-git-commit: 37f1df9f9421ff18fff45723b6eb081f0192520a
 workflow-type: tm+mt
 source-wordcount: '4696'
 ht-degree: 1%
@@ -335,7 +335,7 @@ Läs vidare för att lära dig mer om de specifika funktionerna och integreringa
 
 ##### [!DNL Adobe Stock] integration {#stock}
 
-Din organisation kan använda [!DNL Adobe Stock] företagsplan inom [!DNL Experience Manager Assets] för att se till att licensierat material finns tillgängligt för dina kreativa projekt och marknadsföringsprojekt. Du kan snabbt hitta, förhandsgranska och licensiera [!DNL Adobe Stock] resurser som har sparats i Experience Manager, med de kraftfulla DAM-funktionerna i [!DNL Experience Manager].
+Din organisation kan använda [!DNL Adobe Stock] företagsplan inom [!DNL Experience Manager Assets] för att säkerställa att licensierat material finns tillgängligt för alla era kreativa projekt och marknadsföringsprojekt. Du kan snabbt hitta, förhandsgranska och licensiera [!DNL Adobe Stock] resurser som har sparats i Experience Manager, med de kraftfulla DAM-funktionerna i [!DNL Experience Manager].
 
 [!DNL Adobe Stock] ger designers och företag tillgång till miljontals utvalda och royaltyfria foton, vektorer, illustrationer, videor, mallar och 3D-resurser av hög kvalitet för alla kreativa projekt.
 
@@ -552,9 +552,9 @@ org.osgi.framework.bootdelegation=sun.*,com.sun.*,jdk.internal.reflect,jdk.inter
 
 1. Spara filen och starta om AEM.
 
-## Sites {#sites}
+### Sites {#sites}
 
-* **Arbeta med sidversioner**: Om en sida har flyttats kan du inte längre förhandsgranska versioner som gjorts före flyttningen.
+* **Arbeta med sidversioner**: [Om en sida har flyttats kan du inte längre förhandsgranska versioner som gjorts före flyttningen](/help/sites-authoring/working-with-page-versions.md#previewing-a-version).
 
 ### Assets {#assets}
 
@@ -586,7 +586,7 @@ org.osgi.framework.bootdelegation=sun.*,com.sun.*,jdk.internal.reflect,jdk.inter
    * Flera: Falskt
    * Automatiskt skapad: Falskt
 
-   Egenskapen gör att klientbiblioteken under körningsmappen kan komma åt proxy. (CQ-4268679)
+   Egenskapen gör att klientbiblioteken under körningsmappen kan komma åt proxies. (CQ-4268679)
 
 * När AEM Forms startas `SAX Security Manager could not be setup` visas.
 * När du öppnar ett PDF som är skyddat med AEM Forms Document Security på en Apple iOS eller iPadOS som kör Adobe Acrobat Reader version 20.10.00.
