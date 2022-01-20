@@ -6,9 +6,9 @@ seo-description: A list of the supported client and server platforms for AEM.
 content-type: reference
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 610e37571df168bba91f2c2fe5b41e2f70ba748e
+source-git-commit: ab89683610a896e73c219c1fde4dde16dd8fbec6
 workflow-type: tm+mt
-source-wordcount: '3345'
+source-wordcount: '3358'
 ht-degree: 0%
 
 ---
@@ -165,16 +165,18 @@ Det finns olika alternativ för att distribuera Adobe Experience Manager-databas
 | Lagra binärfiler i TAR-filer i filsystemet `[1]` | Binärfiler | Z: Stöds inte för produktion |
 | Amazon S3 | Binärfiler | S: Stöds |
 | Microsoft Azure Blob Storage | Binärfiler | S: Stöds |
-| MongoDB Enterprise 4.0 | Databas | S: Stöds `[2, 3]` |
+| MongoDB Enterprise 4.2 | Databas | S: Stöds `[2, 3, 4]` |
+| MongoDB Enterprise 4.0 | Databas | Z: Stöds inte |
 | MongoDB Enterprise 3.6 | Databas | Z: Stöds inte |
 | MongoDB Enterprise 3.4 | Databas | Z: Stöds inte |
-| IBM DB2 10.5 | Databas och databas för Forms | R: Begränsat stöd `[4]` |
+| IBM DB2 10.5 | Databas och databas för Forms | R: Begränsat stöd `[5]` |
 | Oracle Database 12c (12.1.x) | Databas och databas för Forms | R: Begränsat stöd |
 | Microsoft SQL Server 2016 | Forms-databas | S: Stöds |
 | **Apache Lucene (inbyggt i Quickstart)** | Söktjänst | S: Stöds |
 | Apache Solr | Söktjänst | S: Stöds |
 
 1. &#39;Filsystem&#39; inkluderar blocklagring som är POSIX-kompatibel. Detta inkluderar nätverkslagringsteknik. Tänk på att filsystemets prestanda kan variera och påverka den övergripande prestandan. Vi rekommenderar att du läser in AEM i kombination med nätverks-/fjärrfilsystemet.
+1. MongoDB Enterprise 4.2 kräver minst AEM 6.5 SP9.
 1. MongoDB-delning stöds inte i AEM.
 1. MongoDB-lagringsmotorn WiredTiger stöds endast.
 1. Stöds för AEM Forms uppgraderingskunder. Stöds inte för nya installationer.
