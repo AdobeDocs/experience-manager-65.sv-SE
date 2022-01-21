@@ -3,9 +3,9 @@ title: AEM GraphQL API för användning med innehållsfragment
 description: Lär dig hur du använder innehållsfragment i Adobe Experience Manager (AEM) med det AEM GraphQL-API:t för leverans av headless-innehåll.
 feature: Content Fragments,GraphQL API
 exl-id: beae1f1f-0a76-4186-9e58-9cab8de4236d
-source-git-commit: 6c75af3957c319c38177cd62c90e781a982ba91b
+source-git-commit: e7a2a4ad89a58e5fad0acb521adb100cf0bcd1d8
 workflow-type: tm+mt
-source-wordcount: '3919'
+source-wordcount: '3942'
 ht-degree: 0%
 
 ---
@@ -586,6 +586,10 @@ Den grundläggande åtgärden för frågor med GraphQL för AEM följer standard
 
    * use `... on`
       * Se [Exempelfråga för ett innehållsfragment för en viss modell med en innehållsreferens](#sample-wknd-fragment-specific-model-content-reference)
+
+* Reservation vid fråga om kapslade fragment:
+
+   * Om den begärda varianten inte finns i ett kapslat fragment, kommer **Överordnad** kommer att returneras.
 
 ## Beständiga frågor (cachelagring) {#persisted-queries-caching}
 
