@@ -1,8 +1,6 @@
 ---
 title: Arbeta med 3D-resurser i Dynamic Media
-seo-title: Working with 3D assets in Dynamic Media
 description: Lär dig hur du arbetar med 3D-resurser i Dynamic Media
-seo-description: Learn how to work with 3D assets in Dynamic Media
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: introduction
@@ -10,9 +8,9 @@ content-type: reference
 feature: 3D Assets,Asset Management
 role: User, Admin
 exl-id: 01c96f1e-c0e6-497d-bd7a-c0fd547a34da
-source-git-commit: 9f08d529af0ec37d2bd2a4f479a172c6c950c47d
+source-git-commit: a13d6d10dd10605d2cb83a8622fae3a7e2590c93
 workflow-type: tm+mt
-source-wordcount: '2238'
+source-wordcount: '2246'
 ht-degree: 2%
 
 ---
@@ -27,7 +25,7 @@ Med Dynamic Media kan du överföra, hantera, visa och leverera 3D-resurser som 
 
 Det krävs ingen ytterligare konfiguration för att använda 3D-resurser i Dynamic Media.
 
-![Visa i 3d](/help/assets/assets-dm/3d-dimensional-viewer-quickpublish-url-embed2.png)
+![Visa i 3d](/help/assets/assets-dm/3d-dimensional-viewer-quickpublish-url-embed2.png) *Detaljsida för en tredimensionell sko.*
 
 <!-- See also [Dynamic Media 3D Release Notes](/help/release-notes/aem3d-release-notes.md). -->
 
@@ -43,6 +41,10 @@ Se även [Stöd för 3D-format](/help/assets/assets-formats.md).
 | OBJ | WaveFront 3D-objektfil | application/x-tgif |  |
 | STL | Stereolitografi | application/vnd.ms-pki.stl |  |
 | USDZ | Zip-arkiv för universell scenbeskrivning | model/vnd.usdz+zip | *Stöd endast för förtäring. ingen visning eller interaktion är tillgänglig.* USDZ är ett tillverkarspecifikt 3D-format som kan visas direkt på enheter med Safari och iOS. |
+
+<!-- >[!NOTE]
+>
+>The 3D Media WCM component and 3D preview on an asset's Details page is not compatible with the latest version of Chrome (97.x). Instead, to work with 3D assets, use Firefox or Safari, or use an earlier version of Chrome (96.x). -->
 
 ## Snabbstart: 3D-resurser i Dynamic Media {#quick-start-three-d}
 
@@ -86,7 +88,7 @@ Se [Konfigurera Dynamic Media-Cloud Services](/help/assets/config-dms7.md#config
 
 ## Visa och interagera med 3D-resurser {#viewing-three-d-assets}
 
-I det här avsnittet beskrivs hur du visar och interagerar med 3D-resurser på två olika sätt: från sidan med resursinformation och från 3D-mediekomponenten i Sites.
+I det här avsnittet beskrivs hur du visar och interagerar med 3D-resurser på två olika sätt: från sidan med resursinformation och från 3D Media-komponenten i Experience Manager Sites.
 
 Det interaktiva 3D-visningsprogrammet innehåller bland annat en samling interaktiva kamerakontroller där du kan omforma, zooma och panorera 3D-resursen.
 
