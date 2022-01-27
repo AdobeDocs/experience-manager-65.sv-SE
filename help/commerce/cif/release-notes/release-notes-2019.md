@@ -1,11 +1,11 @@
 ---
 title: AEM Content and Commerce Release Notes 2021
 description: AEM Content and Commerce Release Notes 2021
-translation-type: tm+mt
-source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
+exl-id: 7e61a75d-6b35-46ee-b88a-444c10b2708f
+source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
 workflow-type: tm+mt
-source-wordcount: '973'
-ht-degree: 7%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -29,9 +29,9 @@ ht-degree: 7%
 
 * Betalningsstöd för Braintree har lagts till AEM Venia store front.
 
-### Förbättrade {#what-is-improved-november}
+### Vad har förbättrats {#what-is-improved-november}
 
-* Kategori-/produktväljare har förbättrats så att den angivna Magento-butiksvyn respekteras i en konfiguration med flera butiker.
+* Kategori-/produktväljare har förbättrats så att den angivna vyn för Adobe Commerce Store respekteras i en konfiguration för flera butiker.
 
 * Reaktionsbaserade komponenter som finns som nPM-paket. Detta gör att utvecklare kan använda React Components-paketet som ett beroende för ett nytt React-projekt för att anpassa befintliga komponenter eller utveckla nya React-baserade komponenter.
 
@@ -49,11 +49,11 @@ ht-degree: 7%
 
 * Helt redigerbara mallar för produktinformationssidor och produktlistsidor. Nu kan författare skapa nya mallar och dra och släppa produktlistor och produktinformationskomponenter på dessa mallar. Förutom att lägga till andra komponenter kan författarna nu ändra layouten på mallarna också, vilket ger dem obegränsad frihet att skapa fantastiska upplevelser som kombinerar marknadsförings- och e-handelsinnehåll.
 
-* Alla redigeringsvänliga CIF-kärnkomponenter har förbättrats med stöd för [AEM Style System](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/style-system.html). Exempelformat har angetts för produktlistkomponenten.
+* Alla redigeringsvänliga CIF-kärnkomponenter har förbättrats med stöd för [AEM](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/style-system.html). Exempelformat har angetts för produktlistkomponenten.
 
 * Reaktionsbaserade komponenter på klientsidan för kontohantering. Den här versionen har stöd för följande funktioner: Logga in, Glömt lösenordet och Skapa konto.
 
-### Förbättrade {#what-is-improved-october}
+### Vad har förbättrats {#what-is-improved-october}
 
 * Produktinformation och produktlistekomponenter har förbättrats så att man kan visa dummy-data och ge författarna en förhandsgranskning av layouten när dessa komponenter placeras på en mall/sida.
 
@@ -77,7 +77,7 @@ ht-degree: 7%
 
 * Utcheckningskomponenten innehåller adressformulär, betalningsval och val av leveransmetod.
 
-### Förbättrade {#what-is-improved-september}
+### Vad har förbättrats {#what-is-improved-september}
 
 * Product Teaser- och Product Carousel-komponenterna har stöd för produktvarianter.
 
@@ -95,7 +95,7 @@ ht-degree: 7%
 
 * CIF-komponenter som inte är kopplade till den lokala CSS-formateringen så att utvecklare kan använda valfri CSS-formatering.
 
-* Funktion för flera butiker/sajter som tillåter användning av CIF Core-komponenter på flera AEM platsstrukturer och gör det möjligt för den underliggande GraphQL-klientimplementeringen att ansluta till olika Magento store-/store-vyer.
+* Funktion för flera butiker/sajter som tillåter användning av CIF Core-komponenter på flera AEM webbplatsstrukturer och gör det möjligt för den underliggande GraphQL-klientimplementeringen att ansluta till olika Adobe Commerce-butiksvyer.
 
 * GraphQL-cachelagring aktiverad för vissa GraphQL-frågor via HTTP-GET för att minska svarstiden.
 
@@ -105,9 +105,9 @@ ht-degree: 7%
 
 * Knapp som tillåter författare att placera på en AEM sida och länka till antingen en AEM, produktinformationssida, produktlistsida eller en extern länk.
 
-### Förbättrade {#what-is-improved-august}
+### Vad har förbättrats {#what-is-improved-august}
 
-* Magento store-konfigurationen flyttades från OSGi till AEM produktkonsolen för att göra integreringskonfigurationen mer författarvänlig.
+* Konfigurationen av Adobe Commerce Store har flyttats från OSGi till AEM produktkonsolen för att göra integreringskonfigurationen mer författarvänlig.
 
 ## Releasedatum: Juli 2019
 
@@ -131,9 +131,9 @@ ht-degree: 7%
 
 * Aktuell kategorilista på serversidan om du vill visa en lista över kategorier på en AEM.
 
-### Förbättrade {#what-is-improved-july}
+### Vad har förbättrats {#what-is-improved-july}
 
-* Stöd för Magento 2.3.2 och felkorrigeringar för produktegenskaper visas i produktkonsolen.
+* Stöd för Adobe Commerce 2.3.2 och felkorrigeringar för produktegenskaper visas i produktkonsolen.
 
 ## Releasedatum: Juni 2019
 
@@ -148,11 +148,10 @@ ht-degree: 7%
 
 * CIF Connector och redigeringsverktyg (produktkonsol, produktväljare och kategoriväljare) som gör att författare kan skapa upplevelser i AEM med e-handelsinnehåll.
 
-* Första versionen av CIF Core Components kompatibel med Magento 2.3.1:
+* Första versionen av CIF Core Components kompatibel med Adobe Commerce 2.3.1:
    * Produktinformation
    * Produktlista
    * Product Teaser
    * Navigering
    * Produktsökning
    * Kundvagn (REST)
-

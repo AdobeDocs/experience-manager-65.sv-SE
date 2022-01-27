@@ -1,13 +1,13 @@
 ---
 title: Anpassade HTTP-huvuden
 description: Konfigurera anpassade HTTP-huvuden
-source-git-commit: 7d174be35cb99d802e4aeff6f4d955b1b92cab74
+exl-id: 834aadac-c3be-4e7a-a3cb-349608810b40
+source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
 workflow-type: tm+mt
-source-wordcount: '269'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
-
 
 # Anpassade HTTP-huvuden {#custom-http-headers}
 
@@ -19,10 +19,9 @@ För att få bättre kontroll över sin serverdel kan författare konfigurera an
 >
 >Utvecklare kan alltid konfigurera anpassade HTTP-huvuden med GraphQL-klientkonfigurationen.
 
-
 ## Konfiguration {#configuration}
 
-För att kunna konfigurera anpassade HTTP-huvuden måste du först definiera dem. De anpassade HTTP-rubrikerna måste först definieras genom att lägga till dem i `com.adobe.cq.cif.http.internal.HttpHeadersConfigProviderImpl`-tjänstkonfigurationen med en OSGi-konfiguration.
+För att kunna konfigurera anpassade HTTP-huvuden måste du först definiera dem. De anpassade HTTP-rubrikerna måste först definieras genom att de läggs till i `com.adobe.cq.cif.http.internal.HttpHeadersConfigProviderImpl` tjänstkonfiguration med en OSGi-konfiguration.
 
 Du kan konfigurera värdena för HTTP-rubrikerna på Cloud Servicens konfigurationssida för ditt projekt:
 
@@ -36,5 +35,5 @@ Komponenterna som använder molntjänstkonfigurationen ovan skickar dessa HTTP-h
 
 Även om tjänsten tillåter att rubriknamn definieras, inklusive standardnamn, är de inte tillgängliga för konfigurering. Du kan alltså inte åsidosätta de vanliga HTTP-rubrikerna med den här funktionen. En lista med begränsade rubriknamn finns [här](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers). Det finns ytterligare två rubriker som inte kan användas:
 
-* &quot;Store&quot; - används av CIF för att identifiera Magento-butiken
+* &quot;Store&quot; - används av CIF för att identifiera Adobe Commerce-butiken
 * &quot;Preview-Version&quot; - används av CIF för att hämta mellanlagrade produkter

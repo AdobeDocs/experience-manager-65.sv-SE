@@ -1,10 +1,10 @@
 ---
 title: Migrering till tillägget AEM Commerce Integration Framework (CIF)
 description: Så här migrerar du till CIF-tillägget (AEM Commerce Integration Framework) från en gammal version
-translation-type: tm+mt
-source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
+exl-id: c6c0c2fc-6cfa-4c64-b3d8-7e428b2a4b2e
+source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
 workflow-type: tm+mt
-source-wordcount: '264'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -15,11 +15,11 @@ Den här guiden hjälper dig att identifiera de områden du behöver uppdatera f
 
 ## CIF-tillägg
 
-CIF-tillägg är tillgängligt för AEM 6.5 via [portalen för programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html). Den är kompatibel och har samma funktioner som CIF-tillägget för Experience Manager som en Cloud Service.
+CIF-tillägg är tillgängligt för AEM 6.5 via [Programdistributionsportal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html). Den är kompatibel och har samma funktioner som CIF-tillägget för Experience Manager as a Cloud Service.
 
 Se [Komma igång med AEM innehåll och handel](getting-started.md).
 
-För att stödja projekt som distribuerar CIF tillhandahåller Adobe [AEM CIF Core Components](https://github.com/adobe/aem-core-cif-components).
+För att stödja projekt som distribuerar CIF tillhandahåller Adobe [AEM CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components).
 
 ## Produktkatalog
 
@@ -27,7 +27,7 @@ Import av produktkatalogdata stöds inte av CIF-tillägget. Med hjälp av CIF-ti
 
 >[!TIP]
 >
->Om det inte finns några API:er i realtid bör en extern produktcache med API:er användas för integreringen. Exempel [Magento öppen källkod](https://magento.com/products/magento-open-source).
+>Om det inte finns några API:er i realtid bör en extern produktcache med API:er användas för integreringen. Exempel [Magento öppen källkod](https://business.adobe.com/products/magento/open-source.html).
 
 ## Produktkatalogupplevelser med AEM rendering
 

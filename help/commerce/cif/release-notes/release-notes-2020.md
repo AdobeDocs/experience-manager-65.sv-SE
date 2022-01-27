@@ -1,14 +1,13 @@
 ---
 title: AEM Content and Commerce Release Notes 2021
 description: AEM Content and Commerce Release Notes 2021
-translation-type: tm+mt
-source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
+exl-id: 440ecd8e-55dc-4606-8678-c65cda1d2b3a
+source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
 workflow-type: tm+mt
-source-wordcount: '1324'
-ht-degree: 9%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
-
 
 # GitHub-versionsöversikt för Commerce Integration Framework
 
@@ -26,7 +25,7 @@ ht-degree: 9%
 
 * Platinas referensarkiv har uppdaterats för att använda Experience Fragment för sidfoten. Affärsanvändare kan redigera sidfoten med hjälp AEM redigeringsverktyg.
 
-### Förbättrade {#what-is-improved-november}
+### Vad har förbättrats {#what-is-improved-november}
 
 * Utcheckningskomponenten har förbättrats för att ge kunderna möjlighet att komma in i destinationslandet för att tillåta fakturerings-/leveransadresser utanför USA.
 
@@ -46,9 +45,9 @@ ht-degree: 9%
 
 * En ny kategoriCarousel-komponent har lagts till för att göra det möjligt för affärsanvändare att dra och släppa den här komponenten på AEM innehållssidor för att berika innehållssidor med handelsdata.
 
-* CIF-kärnkomponenter har utökats för att hydratisera Adobe Client Data Layer genom att skicka e-handelsdata. Adobe Client Data Layer är en standardiserad metod för att samla in data och kommunicera data till digitala analyser och rapportservrar. Mer information finns i [Adobe Client Data Layer](https://github.com/adobe/adobe-client-data-layer/wiki).
+* CIF-kärnkomponenter har utökats för att hydratisera Adobe Client Data Layer genom att skicka e-handelsdata. Adobe Client Data Layer är en standardiserad metod för att samla in data och kommunicera data till digitala analyser och rapportservrar. Mer information finns i [Adobe-klientdatalager](https://github.com/adobe/adobe-client-data-layer/wiki).
 
-* Sidorna Produktinformation och Produktlista utökas för att automatiskt fylla i SEO-metadata (som titel, metabeskrivning, meta-nyckelord) som konfigurerats inifrån Magento Admin UI
+* Sidorna Produktinformation och Produktlista utökas för att automatiskt fylla i SEO-metadata (som titel, metabeskrivning, meta-nyckelord) som konfigurerats inifrån Adobe Commerce administratörsgränssnitt
 
 * Fel i Commerce teaser-komponent har åtgärdats.
 
@@ -62,7 +61,7 @@ ht-degree: 9%
 
 ### Nyheter {#what-is-new-september}
 
-* Stöder frågor för Magento 2.4.0 Schema.
+* Stöder frågor för Adobe Commerce 2.4.0 Schema.
 
 * Funktioner för kontoinformation har lagts till så att kunderna kan uppdatera personlig information.
 
@@ -114,13 +113,13 @@ ht-degree: 9%
 
 * CIF Venia Reference Site extraherades från CIF Archetype-repo och är nu en fristående GitHub-databas.
 
-* CIF-arkityp som sammanfogats med AEM Project Archetype. Använd [AEM Project Archetype](https://github.com/adobe/aem-project-archetype) som startpunkt för nya projekt.
+* CIF-arkityp som sammanfogats med AEM Project Archetype. Använd för nya projekt [AEM Project Archetype](https://github.com/adobe/aem-project-archetype) som startpunkt.
 
 * Adressbokshantering har lagts till för att tillåta inloggade användare att hantera sina adresser.
 
 * CIF Cloud Configuration UI har stöd för publicerings-/avpubliceringsåtgärder.
 
-### Förbättrade {#what-is-improved-july}
+### Vad har förbättrats {#what-is-improved-july}
 
 * Inloggningskomponenten har flyttats till listrutan Användare för enkel åtkomst.
 
@@ -146,7 +145,7 @@ Detta är den första versionen av CIF Core Components som stöds i Adobe Experi
 
 * Tjänstanvändarmappning har lagts till som en del av säkerhetskraven för att säkerställa åtkomst till /conf via tjänstanvändare och inte genom att direkt ändra åtkomstkontrollistor. CIF Core Components måste nu använda en tjänstanvändare för att få åtkomst till konfigurationer.
 
-### Förbättrade {#what-is-improved-june}
+### Vad har förbättrats {#what-is-improved-june}
 
 * Sidan Produktlista och sidan Sökresultat visar totalt antal objekt. Antalet objekt uppdateras när användaren använder filter.
 
@@ -166,11 +165,11 @@ Detta är den första versionen av CIF Core Components som stöds i Adobe Experi
 
 ### Nyheter {#what-is-new-may}
 
-* Stöder frågor för Magento 2.3.5 Schema.
+* Stöder frågor för Adobe Commerce 2.3.5 Schema.
 
 * Stöd för fasetterad sökning har lagts till i sidan Sök och produktlista så att kunderna kan filtrera sökresultat baserat på produktaspekter.
 
-* Ny OSGi-tjänst har lagts till för att anpassa PDP/PLP-URL:er för SEO. Mer information finns i den här [dokumentationen](https://github.com/adobe/aem-core-cif-components/wiki/configuration).
+* Ny OSGi-tjänst har lagts till för att anpassa PDP/PLP-URL:er för SEO. Mer information finns i [dokumentation](https://github.com/adobe/aem-core-cif-components/wiki/configuration).
 
 * Produktbindning skapas automatiskt när en molnkonfiguration skapas.
 
@@ -190,9 +189,9 @@ Detta är den första versionen av CIF Core Components som stöds i Adobe Experi
 
 ### Nyheter {#what-is-new-april}
 
-* Konfigurationsinställningar för CIF Connector är enhetliga och förenklade. Mer information finns i avsnittet [Komma igång](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/getting-started.html) eller [Nya AEM CIF-projektinställningar](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/getting-started.html#!AdobeDocs/commerce-cif-documentation/master/getting-started/02-new-cif-project.md)
+* Konfigurationsinställningar för CIF Connector är enhetliga och förenklade. Mer info: utcheckning [Komma igång](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/getting-started.html) eller [Ny inställning AEM CIF-projekt](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/getting-started.html#!AdobeDocs/commerce-cif-documentation/master/getting-started/02-new-cif-project.md)
 
-### Förbättrade {#what-is-improved-april}
+### Vad har förbättrats {#what-is-improved-april}
 
 * Kundvagn- och utcheckningsflödet har utökats för att stödja registrerade kunder.
 
@@ -214,13 +213,13 @@ Detta är den första versionen av CIF Core Components som stöds i Adobe Experi
 
 ### Nyheter {#what-is-new-february}
 
-* Stöder frågor för Magento 2.3.4 Schema.
+* Stöder frågor för Adobe Commerce 2.3.4 Schema.
 
 * Tillagt sökstöd i kategoriväljaren.
 
 * Sidindelning i kategorilistkomponenten som stöder stora kataloguppsättningar.
 
-### Förbättrade {#what-is-improved-february}
+### Vad har förbättrats {#what-is-improved-february}
 
 * Kundvagnen har förbättrats och visar rabatter.
 
@@ -248,7 +247,7 @@ Detta är den första versionen av CIF Core Components som stöds i Adobe Experi
 
 * Allmän relaterad produktkomponent tillgänglig.
 
-### Förbättrade {#what-is-improved-january}
+### Vad har förbättrats {#what-is-improved-january}
 
 * Stöd för att visa CTA-knappen på produktsuddgummit.
 

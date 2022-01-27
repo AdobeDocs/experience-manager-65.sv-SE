@@ -4,8 +4,8 @@ description: AEM e-handel hjälper marknadsförare att leverera varumärkesanpas
 topic-tags: e-commerce
 content-type: reference
 docset: aem65
-translation-type: tm+mt
-source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
+exl-id: d995f0d6-9e48-4228-ac82-f33a0b25b9d3
+source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
 workflow-type: tm+mt
 source-wordcount: '733'
 ht-degree: 0%
@@ -41,7 +41,7 @@ Adobe tillhandahåller två versioner av Commerce Integration Framework:
     </ul> </td>
    <td>
     <ul>
-     <li>Magento</li>
+     <li>Adobe Commerce</li>
      <li>Java &amp; Javascript</li>
      <li>Inga e-handelsdata lagras i JCR-databasen</li>
     </ul> </td>
@@ -81,12 +81,12 @@ Adobe tillhandahåller två versioner av Commerce Integration Framework:
   <tr>
    <td>Standardiserad datamodell</td>
    <td>Nej</td>
-   <td>Ja, Magento GraphQL-schema</td>
+   <td>Ja, Adobe Commerce GraphQL-schema</td>
   </tr>
   <tr>
    <td>Tillgänglighet</td>
    <td><p>Ja. SAP Commerce Cloud (tillägget har uppdaterats för att stödja AEM 6.4 och Hybris 5 (standard) och bibehåller kompatibiliteten med Hybris 4</p> <p>Salesforce Commerce Cloud (Connector open-sourced to support AEM 6.4)</p> </td>
-   <td>Ja via öppen källkod via GitHub. Magento Commerce (Stöder Magento 2.3.2 (standard) och är kompatibelt med Magento 2.3.1).</td>
+   <td>Ja via öppen källkod via GitHub. Adobe Commerce (Stöder 2.3.2 (standard) och är kompatibelt med 2.3.1).</td>
   </tr>
   <tr>
    <td>När ska användas</td>
@@ -122,13 +122,13 @@ Implementeringen ger åtkomst i realtid till produktinformation. Detta kan anvä
 >
 >Om du vill använda integreringsramverket med externa e-handelsleverantörer måste du först installera de paket som krävs. Mer information finns i [Distribuera e-handel](/help/commerce/cif-classic/deploying/ecommerce.md).
 >
->Mer information om hur du utökar e-handelsfunktionerna finns i [Utveckla e-handel](/help/commerce/cif-classic/developing/ecommerce.md).
+>Mer information om hur du utökar e-handelsfunktionerna finns i [Utveckla e-handeln](/help/commerce/cif-classic/developing/ecommerce.md).
 
 ## Huvudfunktioner {#main-features}
 
 AEM eCommerce tillhandahåller:
 
-* Ett antal **färdiga AEM**-komponenter för att visa vad som kan göras i ditt projekt:
+* Ett antal **färdiga AEM** för att illustrera vad du kan göra med ditt projekt:
 
    * Produktvisning
    * Kundvagn
@@ -143,7 +143,7 @@ AEM eCommerce tillhandahåller:
    >
    >Integreringsramverket som AEM tillhandahåller gör det även möjligt att skapa ytterligare AEM komponenter för handelsfunktioner oberoende av din specifika e-handelsmotor.
 
-* **Sök**  med antingen:
+* **Sök** - med antingen:
 
    * AEM
    * sökningen i e-handelssystemet
@@ -152,15 +152,15 @@ AEM eCommerce tillhandahåller:
 
    ![](/help/sites-administering/assets/chlimage_1-131.png)
 
-* Använder AEM möjlighet att **presentera ditt innehåll i flera kanaler**, oavsett om det är hela webbläsarfönstret eller den mobila enheten. Detta levererar innehållet i det format som besökarna behöver.
+* Använder AEM möjlighet att **presentera innehållet i flera kanaler**, vara hela webbläsarfönstret eller den mobila enheten. Detta levererar innehållet i det format som besökarna behöver.
 
    ![](/help/sites-administering/assets/chlimage_1-132.png)
 
-* Möjligheten att **utveckla din egen integreringsimplementering baserat på [AEM eCommerce-ramverket](#the-framework)**.
+* Möjlighet att **utveckla er egen integrationsimplementering baserat på [AEM eCommerce Framework](#the-framework)**.
 
    De två implementeringar som är tillgängliga för närvarande är båda byggda på samma grund - utöver det allmänna API:t (ramverket). Implementering av en ny integrering innebär bara implementering av de funktioner som din integrering behöver. Front end-komponenter kan användas av alla nya implementeringar när de använder gränssnitt (så är oberoende av implementeringen).
 
-* Möjligheten att utveckla **upplevelsestyrd e-handel baserat på kunddata och aktivitet**. På så sätt kan du förverkliga många scenarier:
+* Möjligheten att utveckla **upplevelsestyrd e-handel baserad på kunddata och -aktivitet**. På så sätt kan du förverkliga många scenarier:
 
    * Ett exempel kan vara minskade fraktkostnader när den totala ordern överstiger ett visst belopp.
    * Ett annat kan göra att du kan erbjuda säsongserbjudanden som använder profildata (t.ex. plats). Dessa kan sedan markeras ytterligare, beroende på andra faktorer vid behov.
@@ -181,7 +181,7 @@ AEM eCommerce tillhandahåller:
 
 ## Ramverket {#the-framework}
 
-Avsnittet [Koncepts](/help/commerce/cif-classic/administering/concepts.md) beskriver ramverket mer ingående, men följande ger en snabb vy av ramverket på hög nivå:
+The [Concepts](/help/commerce/cif-classic/administering/concepts.md) -avsnittet innehåller mer detaljerad information om ramverket, men följande ger en snabb översikt av ramverket på hög nivå:
 
 ### Vad? {#what}
 
