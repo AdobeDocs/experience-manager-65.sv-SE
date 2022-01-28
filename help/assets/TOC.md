@@ -6,9 +6,9 @@ audience: end-user
 user-guide-title: Resurshandbok
 breadcrumb-title: Resurshandbok
 user-guide-description: Skapa, hantera, bearbeta och distribuera digitalt material.
-source-git-commit: 3cf3a05afd92f2992312ecfb931ef38278c5436c
+source-git-commit: d947bd98b3a0f6fd79cde5b5b2fca23487077da3
 workflow-type: tm+mt
-source-wordcount: '657'
+source-wordcount: '658'
 ht-degree: 14%
 
 ---
@@ -56,7 +56,6 @@ ht-degree: 14%
    + [Bildprofiler för Dynamic Media](image-profiles.md)
    + [Smart bildbehandling](imaging-faq.md)
    + [Video](s7-video.md)
-   + [Lägg till Dynamic Media-funktioner på din sida](scene7.md)
    + [Leverera innehåll med HTTP2](http2.md)
    + [Leverera Dynamic Media-material](delivering-dynamic-media-assets.md)
    + [Aktivera hotlink-skydd i Dynamic Media](hotlink-protection.md)
@@ -75,6 +74,7 @@ ht-degree: 14%
    + [Leverera optimerade bilder för en responsiv webbplats](responsive-site.md)
    + [Förhandsgranska Dynamic Media-resurser](previewing-assets.md)
    + [Lägga till Dynamic Media-resurser på sidor](adding-dynamic-media-assets-to-pages.md)
+   + [Lägga till Dynamic Media Classic-funktioner på sidor](scene7.md)
    + [Bädda in det dynamiska video- eller bildvisningsprogrammet på en webbsida](embed-code.md)
    + [Länka URL:er till ditt webbprogram](linking-urls-to-yourwebapplication.md)
    + [Omforma URL:er med regeluppsättningar](using-rulesets-to-transform-urls.md)
@@ -117,7 +117,7 @@ ht-degree: 14%
    + [[!DNL Assets] och MediaLibrary](medialibrary.md)
    + [Använda rastrering i PDF](aem-pdf-rasterizer.md)
    + [Konfigurera överföringsbegränsningar](configuring-asset-upload-restrictions.md)
-   + [[!DNL Experience Manager] and [!DNL Creative Cloud] integration](aem-cc-integration-best-practices.md)
+   + [[!DNL Experience Manager] och [!DNL Creative Cloud] integration](aem-cc-integration-best-practices.md)
    + [Integrera med [!DNL InDesign Server]](indesign.md)
    + [Digital Rights Management i tillgångar](drm.md)
    + [Använd demopaket för resursinsikter](use-demo-package-for-asset-insights.md)
