@@ -10,9 +10,9 @@ role: User, Admin
 mini-toc-levels: 4
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: Configuration,Scene7 Mode
-source-git-commit: b7762a44d7b572d784dda2220530b21f9c46e7ab
+source-git-commit: 270219c8baedd4b72a256e6318d89154d6dadb0b
 workflow-type: tm+mt
-source-wordcount: '5744'
+source-wordcount: '5774'
 ht-degree: 2%
 
 ---
@@ -132,7 +132,7 @@ Om du vill markera en markerad mapp för synkronisering till Dynamic Media välj
    När en mediefil har aktiverats publiceras uppdateringar direkt till S7 Delivery.
 
 1. Välj **[!UICONTROL Save]**.
-1. Om du vill förhandsgranska Dynamic Media-innehåll på ett säkert sätt innan det publiceras måste du tillåtslista författarinstansen Experience Manager för att ansluta till Dynamic Media:
+1. Som standard kan Experience Manager Author inte förhandsgranska Dynamic Media-innehåll. För att kunna förhandsgranska Dynamic Media-material innan det publiceras måste du därför *tillåtelselista* Experience Manager Author-instansen för att ansluta till Dynamic Media. Om du dessutom vill ge användarna tillgång till säkert förhandsgranskningsmaterial kan du *tillåtelselista* ytterligare IP-adresser:
 
    * I läget Experience Manager Author väljer du logotypen Experience Manager för att komma åt den globala navigeringskonsolen.
    * I den vänstra listen väljer du **[!UICONTROL Tools]** ikonen och sedan gå till **[!UICONTROL Assets]** > **[!UICONTROL Dynamic Media Publish Setup]**.
