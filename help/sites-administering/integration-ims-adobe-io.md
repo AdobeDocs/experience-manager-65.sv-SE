@@ -11,7 +11,7 @@ topic-tags: integration
 discoiquuid: 3b9285db-8fba-4d12-8f52-41daa50a5403
 docset: aem65
 exl-id: ba7abc53-7db8-41b1-a0fa-4e4dbbeca402
-source-git-commit: d1b4cf87291f7e4a0670a21feca1ebf8dd5e0b5e
+source-git-commit: 9fbf338b18e73fbd272af061381baf34b694239a
 workflow-type: tm+mt
 source-wordcount: '1538'
 ht-degree: 0%
@@ -175,7 +175,7 @@ Om du går tillbaka till AEM kan du slutföra IMS-konfigurationen genom att läg
 1. Här kan du använda [uppgifter från Adobe I/O](#details-stored-for-the-adobe-io-integration-project):
 
    * **Titel**: Din text.
-   * **Auktoriseringsserver**: Kopiera/klistra in detta från `"aud"` rad i **Nyttolast** avsnitt nedan, t.ex. `"https://ims-na1.adobelogin.com"` i exemplet nedan
+   * **Auktoriseringsserver**: Kopiera/klistra in detta från `aud` rad i **Nyttolast** avsnitt nedan, t.ex. `https://ims-na1.adobelogin.com` i exemplet nedan
    * **API-nyckel**: Kopiera detta från [Översikt](#details-stored-for-the-adobe-io-integration-project) del av Adobe I/O-integrering för Target
    * **Klienthemlighet**: Generera detta i [Översikt](#details-stored-for-the-adobe-io-integration-project) i Adobe I/O-integreringen för Target, och copy
    * **Nyttolast**: Kopiera detta från [Generera JWT](#details-stored-for-the-adobe-io-integration-project) del av Adobe I/O-integrering för Target
@@ -230,6 +230,7 @@ Det går nu att referera till konfigurationen för en Cloud Service som använde
 1. Ange informationen i dialogrutan **Adobe Target-inställningar** tab:
 
    * **Autentisering**: IMS
+
    * **Klient-ID**: Adobe IMS-klientens ID. Se även [Klient-ID och klientkod](#tenant-client) -avsnitt.
 
       >[!NOTE]
@@ -241,24 +242,34 @@ Det går nu att referera till konfigurationen för en Cloud Service som använde
       >`https://experience.adobe.com/#/@yourtenantid/target/activities`
       >
       >Då använder du `yourtenantid`.
-   * **Klientkod**: Se [Klient-ID och klientkod](#tenant-client) -avsnitt.
-   * **IMS-konfiguration**: välj namnet på IMS-konfigurationen
-   * **API-typ**: REST
-   * **A4T Analytics Cloud-konfiguration**: Välj den Analytics-molnkonfiguration som används för målaktivitetsmål och -mått. Du behöver detta om du använder Adobe Analytics som rapportkälla när du skapar innehåll för målgruppsanpassning. Om du inte ser din molnkonfiguration kan du läsa mer i [Konfigurera A4T Analytics Cloud-konfiguration](/help/sites-administering/target-configuring.md#configuring-a-t-analytics-cloud-configuration).
-   * **Använd exakt målinriktning**: Som standard är den här kryssrutan markerad. Om du väljer det här alternativet väntar molntjänstkonfigurationen på att kontexten ska läsas in innan innehållet läses in. Se följande.
-   * **Synkronisera segment från Adobe Target**: Välj det här alternativet om du vill hämta segment som har definierats i Target för att använda dem i AEM. Du måste välja det här alternativet när API-typegenskapen är REST, eftersom infogade segment inte stöds och du alltid måste använda segment från Target. (Observera att den AEM termen segment motsvarar målgruppen.)
-   * **Klientbibliotek**: Välj om du vill ha klientbiblioteket AT.js eller mbox.js (utgått).
-   * **Använd tagghanteringssystemet för att leverera klientbiblioteket**: Använd DTM (utgått), Adobe Launch eller något annat tagghanteringssystem.
-   * **Anpassad AT.js**: Lämna tomt om du har markerat rutan Tagghantering eller om du vill använda AT.js som standard. Du kan även överföra dina anpassade AT.js. Visas bara om du har valt AT.js.
 
+   * **Klientkod**: Se [Klient-ID och klientkod](#tenant-client) -avsnitt.
+
+   * **IMS-konfiguration**: välj namnet på IMS-konfigurationen
+
+   * **API-typ**: REST
+
+   * **A4T Analytics Cloud-konfiguration**: Välj den Analytics-molnkonfiguration som används för målaktivitetsmål och -mått. Du behöver detta om du använder Adobe Analytics som rapportkälla när du skapar innehåll för målgruppsanpassning. Om du inte ser din molnkonfiguration kan du läsa mer i [Konfigurera A4T Analytics Cloud-konfiguration](/help/sites-administering/target-configuring.md#configuring-a-t-analytics-cloud-configuration).
+
+   * **Använd exakt målinriktning**: Som standard är den här kryssrutan markerad. Om du väljer det här alternativet väntar molntjänstkonfigurationen på att kontexten ska läsas in innan innehållet läses in. Se följande.
+
+   * **Synkronisera segment från Adobe Target**: Välj det här alternativet om du vill hämta segment som har definierats i Target för att använda dem i AEM. Du måste välja det här alternativet när API-typegenskapen är REST, eftersom infogade segment inte stöds och du alltid måste använda segment från Target. (Observera att den AEM termen segment motsvarar målgruppen.)
+
+   * **Klientbibliotek**: Välj om du vill ha klientbiblioteket AT.js eller mbox.js (utgått).
+
+   * **Använd tagghanteringssystemet för att leverera klientbiblioteket**: Använd DTM (utgått), Adobe Launch eller något annat tagghanteringssystem.
+
+   * **Anpassad AT.js**: Lämna tomt om du har markerat rutan Tagghantering eller om du vill använda AT.js som standard. Du kan även överföra dina anpassade AT.js. Visas bara om du har valt AT.js.
    >[!NOTE]
    >
    >[Konfiguration av en Cloud Service som ska använda API:t för klassiska mål](/help/sites-administering/target-configuring.md#manually-integrating-with-adobe-target) har tagits bort (använder fliken Adobe Recommendations-inställningar).
+
 1. Klicka **Anslut till mål** för att initiera anslutningen till Adobe Target.
 
    Om anslutningen lyckas visas meddelandet **Anslutningen lyckades** visas.
 
 1. Välj **OK** i meddelandet, följt av **OK** i dialogrutan för att bekräfta konfigurationen.
+
 1. Du kan nu fortsätta till [Lägga till ett målramverk](/help/sites-administering/target-configuring.md#adding-a-target-framework) för att konfigurera ContextHub- eller ClientContext-parametrar som ska skickas till Target. Observera att detta kanske inte behövs för att exportera AEM Experience Fragments till Target.
 
 ### Klient-ID och klientkod {#tenant-client}
