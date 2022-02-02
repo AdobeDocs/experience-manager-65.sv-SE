@@ -12,7 +12,7 @@ docset: aem65
 feature: Asset Management
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: e8270ad3f658236184467eda9f25c2ec0e6787ba
+source-git-commit: 128358e17aa6166c81e0979825ee81d029418f22
 workflow-type: tm+mt
 source-wordcount: '11291'
 ht-degree: 4%
@@ -34,12 +34,10 @@ Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma ig�
 >* Se [Konfigurera Dynamic Media-Cloud Services](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services) i Konfigurera Dynamic Media - Scene7-läge och [Felsöka Dynamic Media - Scene7-läge](/help/assets/troubleshoot-dms7.md).
 >
 >* Se [Konfigurera Dynamic Media-Cloud Services](/help/assets/config-dynamic.md#configuring-dynamic-media-cloud-services) i Konfigurera Dynamic Media - hybrid-läge.
-
 >
 >Problem med videouppspelning i Dynamic Media *endast på Experience Manager 6.5.9.0*:
 >
 >* Om en publicerad video uppdateras måste den publiceras igen för att återspegla leveransändringar.
-
 >
 
 
@@ -56,7 +54,7 @@ Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma ig�
       * Läs mer om [Ordna digitala resurser](/help/assets/organize-assets.md).
    * Överför dina primära källvideor till mapparna. När du lägger till videofilmer i mappen kodas de enligt den videobearbetningsprofil som du tilldelade mappen.
 
-      * Dynamic Media har främst stöd för videoklipp i kort form med en maxlängd på 30 minuter och en minimiupplösning på mer än 50 x 50.
+      * Dynamic Media har främst stöd för videoklipp i kort form med en maxlängd på 30 minuter och en minimiupplösning på mer än 25 x 25.
       * Du kan överföra videofiler som är upp till 15 GB vardera.
       * [Ladda upp videor](/help/assets/managing-video-assets.md#upload-and-preview-video-assets).
       * Läs mer om [Indatafilformat som stöds](/help/assets/assets-formats.md#supported-multimedia-formats).
@@ -300,7 +298,7 @@ For advice about video encoding, see [Video Encoding Basics](https://www.adobe.c
 
 När du kodar en videofil ska du använda en källvideofil med högsta möjliga kvalitet. Undvik att använda tidigare kodade videofiler eftersom dessa filer redan är komprimerade, och ytterligare kodning skapar en video med delkvalitet.
 
-* Dynamic Media har främst stöd för videoklipp i kort form med en maxlängd på 30 minuter och en minimiupplösning på mer än 50 x 50.
+* Dynamic Media har främst stöd för videoklipp i kort form med en maxlängd på 30 minuter och en minimiupplösning på mer än 25 x 25.
 * Du kan överföra primära källvideofiler på upp till 15 GB vardera.
 
 I följande tabell beskrivs rekommenderad storlek, proportioner och lägsta bithastighet som källvideofilerna måste ha innan du kodar dem:
