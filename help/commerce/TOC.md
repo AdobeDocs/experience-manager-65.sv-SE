@@ -3,10 +3,10 @@ sub-product: AEM Content and Commerce
 user-guide-title: AEM innehåll och handel
 breadcrumb-title: Commerce Guide
 user-guide-description: Förstå hur ni använder och administrerar AEM innehåll och handel.
-source-git-commit: 9c4edf1d1482923856e56cdadfe1a2a903e782bc
+source-git-commit: 0ae78938641c383a65462096235e3b62d6b67e23
 workflow-type: tm+mt
-source-wordcount: '121'
-ht-degree: 9%
+source-wordcount: '123'
+ht-degree: 8%
 
 ---
 
@@ -25,6 +25,7 @@ ht-degree: 9%
       + [Commerce Experiences](cif/authoring/authoring-commerce-experiences.md)
       + [Product Cockpit](cif/authoring/product-cockpit.md)
       + [Berika produktdata med tillhörande innehåll](cif/authoring/enrich-product-associated-content.md)
+      + [Recommendations](cif/authoring/product-recommendations.md)
    + Administratör {#administering}
       + [Installation i flera butiker](cif/configuring/multi-store-setup.md)
       + [Användning av flera mallar](cif/configuring/multi-template-usage.md)
