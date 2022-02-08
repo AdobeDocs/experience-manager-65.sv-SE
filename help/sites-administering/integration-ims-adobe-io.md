@@ -11,9 +11,9 @@ topic-tags: integration
 discoiquuid: 3b9285db-8fba-4d12-8f52-41daa50a5403
 docset: aem65
 exl-id: ba7abc53-7db8-41b1-a0fa-4e4dbbeca402
-source-git-commit: 9fbf338b18e73fbd272af061381baf34b694239a
+source-git-commit: bf55553f48c1eddf5dec503fb105cf35ff26677d
 workflow-type: tm+mt
-source-wordcount: '1538'
+source-wordcount: '1539'
 ht-degree: 0%
 
 ---
@@ -143,7 +143,7 @@ Du måste nu tilldela nödvändig behörighet till integreringen:
 
 1. Navigera till **Produkter** (övre verktygsfältet) och sedan välja **Adobe Target - &lt;*din-tenant-id*>** (från den vänstra panelen).
 1. Välj **Produktprofiler** och sedan den arbetsyta du behöver i den lista som visas. Exempel: Standardarbetsyta.
-1. Välj **Integreringar** och sedan den integreringskonfiguration som krävs.
+1. Välj **API-autentiseringsuppgifter** och sedan den integreringskonfiguration som krävs.
 1. Välj **Redigerare** som **Produktroll**; i stället för **Observer**.
 
 ## Information lagrad för Adobe I/O-integreringsprojektet {#details-stored-for-the-adobe-io-integration-project}
