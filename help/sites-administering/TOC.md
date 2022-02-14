@@ -8,9 +8,9 @@ breadcrumb-title: Administratörshandbok
 user-guide-description: Läs om hur du administrerar AEM.
 feature: Administering
 role: Admin
-source-git-commit: 48abd410e293a193abc34a1bd4f038a121e58490
+source-git-commit: 7af09e73f40c2d947c9ccce000174155ef67137f
 workflow-type: tm+mt
-source-wordcount: '623'
+source-wordcount: '631'
 ht-degree: 6%
 
 ---
@@ -143,6 +143,7 @@ ht-degree: 6%
    + [Konfigurera integreringen med Adobe Target manuellt](target-configuring.md)
    + [Krav för integrering med Adobe Target](target-requirements.md)
    + [Integrering med Adobe Target med Adobe I/O](integration-ims-adobe-io.md)
+   + [Integrering med Adobe Target med Adobe I/O](integration-target-ims-adobe-io.md)
    + [Adobe-klassificeringar](adobeanalytics-classifications.md)
    + [Integrera med Adobe Search &amp; Promote](search-and-promote.md)
    + [Lösningsintegrering](integration.md)
