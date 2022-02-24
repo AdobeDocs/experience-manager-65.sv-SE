@@ -1,8 +1,8 @@
 ---
 title: Experience Fragments
-seo-title: Upplevelsefragment
+seo-title: Experience Fragments
 description: Upplevelsefragment
-seo-description: 'null'
+seo-description: null
 uuid: 9a1d12ef-5690-4a2e-8635-a710775efa39
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,16 +10,15 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 4c5b52c3-5e23-4125-9306-48bf2ded23cb
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 1ff9ac47-9a3a-4a4e-8af8-bc73048e0409
+source-git-commit: ab6fd8ca02d2a24e5973b5d78bc75288b5cc26c0
 workflow-type: tm+mt
-source-wordcount: '1398'
-ht-degree: 8%
+source-wordcount: '1440'
+ht-degree: 7%
 
 ---
 
-
-# Experience Fragments{#experience-fragments}
+# Upplevelsefragment{#experience-fragments}
 
 Ett Experience Fragment är en grupp med en eller flera komponenter, inklusive innehåll och layout, som kan refereras till på sidor. De kan innehålla alla komponenter.
 
@@ -28,10 +27,12 @@ An Experience Fragment:
 * Är en del av en upplevelse (sida).
 * Kan användas på flera sidor.
 * Är baserad på en mall (endast redigerbar) för att definiera struktur och komponenter.
+* Den här mallen används för att skapa *rotsida* av Experience Fragment.
 * Består av en eller flera komponenter, med layout, i ett styckesystem.
 * Kan innehålla andra upplevelsefragment.
 * Kan kombineras med andra komponenter (inklusive andra Experience Fragments) för att skapa en komplett sida (upplevelse).
-* Kan ha olika variationer, som kan dela innehåll och/eller komponenter.
+* En eller flera varianter kan skapas baserat på rotsidan.
+* Dessa variationer kan dela innehåll och/eller komponenter.
 * Kan delas upp i byggstenar som kan användas i flera varianter av fragmentet.
 
 Du kan använda Experience Fragments:
@@ -66,7 +67,7 @@ Experience Fragments ska användas:
 
 * När ni använder Omnichannel Commerce.
 
-   * Dela e-handelsrelaterat innehåll på [sociala medier](/help/sites-developing/experience-fragments.md#social-variations) kanaler i stor skala
+   * Dela e-handelsrelaterat innehåll på [sociala medier](/help/sites-developing/experience-fragments.md#social-variations) kanaler i skala
    * Göra kontaktytor transaktionella
 
 ## Organisera dina upplevelsefragment {#organizing-your-experience-fragments}
@@ -86,7 +87,7 @@ Om du skapar mappar kan du:
 * [allokera tillåtna mallar på mappnivå](#configure-allowed-templates-folder)
 
    >[!NOTE]
-   Du kan använda [mallredigeraren](/help/sites-authoring/templates.md) för att skapa en egen mall.
+   Du kan använda [mallredigerare](/help/sites-authoring/templates.md) för att skapa en egen mall.
 
 WKND-projektet strukturerar vissa Experience Fragments enligt `Contributors`. Den struktur som används visar också hur andra funktioner, som Multi Site Management (inklusive språkkopior), kan användas.
 
@@ -105,18 +106,18 @@ Om du vill skapa och konfigurera en mapp för dina Experience Fragments bör du:
 1. [Konfigurera tillåtna Experience Fragment-mallar för den mappen](#configure-allowed-templates-folder).
 
 >[!NOTE]
-Det går också att konfigurera [tillåtna mallar för din instans](#configure-allowed-templates-instance), men den här metoden **rekommenderas inte** eftersom värdena kan skrivas över vid uppgradering.
+Det går också att konfigurera [Tillåtna mallar för din instans](#configure-allowed-templates-instance), men den här metoden är **not** rekommenderas eftersom värdena kan skrivas över vid uppgradering.
 
 ### Konfigurera tillåtna mallar för mappen {#configure-allowed-templates-folder}
 
 >[!NOTE]
-Det här är den rekommenderade metoden för att ange **tillåtna mallar**, eftersom värdena inte skrivs över vid uppgradering.
+Detta är den rekommenderade metoden för att ange **Tillåtna mallar**, eftersom värdena inte skrivs över vid uppgraderingen.
 
-1. Navigera till mappen **Experience Fragments**.
+1. Navigera till önskad **Upplevelsefragment** mapp.
 
-1. Markera mappen och **Egenskaper**.
+1. Markera mappen och sedan **Egenskaper**.
 
-1. Ange det reguljära uttrycket för att hämta de nödvändiga mallarna i fältet **Tillåtna mallar**.
+1. Ange det reguljära uttrycket för hämtning av de nödvändiga mallarna i **Tillåtna mallar** fält.
 
    Till exempel:
    `/conf/(.*)/settings/wcm/templates/experience-fragment(.*)?`
@@ -127,32 +128,32 @@ Det här är den rekommenderade metoden för att ange **tillåtna mallar**, efte
    ![Upplevelsefragmentegenskaper - tillåtna mallar](/help/sites-authoring/assets/xf-folders-templates.png)
 
    >[!NOTE]
-   Mer information finns i [Mallar för Experience Fragments](/help/sites-developing/experience-fragments.md#templates-for-experience-fragments).
+   Se [Mallar för Experience Fragments](/help/sites-developing/experience-fragments.md#templates-for-experience-fragments) för mer information.
 
 1. Välj **Spara och stäng**.
 
 ### Konfigurera tillåtna mallar för din instans {#configure-allowed-templates-instance}
 
 >[!CAUTION]
-Du bör inte ändra **Tillåtna mallar** med den här metoden eftersom de angivna mallarna kan skrivas över vid uppgradering.
+Vi rekommenderar inte att du ändrar **Tillåtna mallar** den här metoden eftersom de angivna mallarna kan skrivas över vid uppgradering.
 Använd den här dialogrutan endast i informationssyfte.
 
-1. Navigera till den obligatoriska **Experience Fragments**-konsolen.
+1. Navigera till önskad **Upplevelsefragment** konsol.
 
 1. Välj **Konfigurationsalternativ**:
 
    ![Knappen Konfiguration](assets/ef-02.png)
 
-1. Ange de mallar som krävs i dialogrutan **Konfigurera Experience Fragments**:
+1. Ange de mallar som krävs i **Konfigurera Experience Fragments** dialog:
 
    ![Konfigurera Experience Fragments](assets/ef-01.png)
 
    >[!NOTE]
-   Mer information finns i [Mallar för Experience Fragments](/help/sites-developing/experience-fragments.md#templates-for-experience-fragments).
+   Se [Mallar för Experience Fragments](/help/sites-developing/experience-fragments.md#templates-for-experience-fragments) för mer information.
 
 1. Välj **Spara**.
 
-## Skapa ett Experience Fragment {#creating-an-experience-fragment}
+## Skapa ett upplevelsefragment {#creating-an-experience-fragment}
 
 Så här skapar du ett Experience Fragment:
 
@@ -160,11 +161,11 @@ Så här skapar du ett Experience Fragment:
 
    ![xf-01](assets/xf-01.png)
 
-1. Navigera till önskad mapp och välj **Skapa**.
+1. Navigera till önskad mapp och markera **Skapa**.
 
    ![xf-02](assets/xf-02.png)
 
-1. Välj **Experience Fragment** för att öppna guiden **Skapa Experience Fragment**.
+1. Välj **Experience Fragment** för att öppna **Skapa upplevelsefragment** guide.
 
    Välj önskad **mall** och sedan **Nästa**:
 
@@ -172,46 +173,50 @@ Så här skapar du ett Experience Fragment:
 
 1. Ange **egenskaperna** för **upplevelsefragmentet**.
 
-   En **titel** är obligatorisk. Om **namnet** lämnas tomt hämtas det från **titeln**.
+   A **Titel** är obligatoriskt. Om **Namn** är tom kommer den att härledas från **Titel**.
 
    ![xf-04](assets/xf-04.png)
 
-1. Klicka på **Skapa**.
+   >[!NOTE]
+   Taggar från Experience Fragment-mallen kommer inte att sammanfogas med taggar på den här Experience Fragment-rotsidan.
+   De här är helt separata.
+
+1. Klicka **Skapa**.
 
    Ett meddelande visas. Välj:
 
-   * **Återgå** inte till konsolen
+   * **Klar** för att återgå till konsolen
 
-   * **Öppna** fragmentredigeraren
+   * **Öppna** för att öppna fragmentredigeraren
 
 ## Redigera din upplevelsefragment {#editing-your-experience-fragment}
 
 Experience Fragment Editor har funktioner som liknar den vanliga sidredigeraren.
 
 >[!NOTE]
-Mer information om hur du använder sidredigeraren finns i [Redigera sidinnehåll](/help/sites-authoring/editing-content.md).
+Se [Redigera sidinnehåll](/help/sites-authoring/editing-content.md) om du vill ha mer information om hur du använder sidredigeraren.
 
 Följande exempelprocedur visar hur du skapar ett teaser för en produkt:
 
-1. Dra och släpp en **Teaser** från [komponentwebbläsaren](/help/sites-authoring/author-environment-tools.md#components-browser).
+1. Dra och släpp en **Teaser** från [Komponentbläddraren](/help/sites-authoring/author-environment-tools.md#components-browser).
 
    ![xf-05](assets/xf-05.png)
 
 1. Välj **[Konfigurera](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste)** i komponentens verktygsfält.
 1. Lägg till **resursen** och definiera **egenskaperna** efter behov.
-1. Bekräfta definitionerna med **Klar** (bock-ikon).
+1. Bekräfta definitionerna med **Klar** (bockikon).
 1. Lägg till fler komponenter efter behov.
 
 ## Skapa en upplevelsefragmentvariant {#creating-an-experience-fragment-variation}
 
 Ni kan skapa variationer av ert Experience Fragment, beroende på era behov:
 
-1. Öppna fragmentet för [redigering](/help/sites-authoring/experience-fragments.md#editing-your-experience-fragment).
-1. Öppna fliken **Variationer**.
+1. Öppna fragmentet för [redigera](/help/sites-authoring/experience-fragments.md#editing-your-experience-fragment).
+1. Öppna **Variationer** -fliken.
 
    ![xf-authoring-06](assets/xf-authoring-06.png)
 
-1. **Med** CreateCreatekan du skapa:
+1. **Skapa** kan du skapa:
 
    * **Variant**
    * **Variation som live-copy**.
@@ -226,7 +231,7 @@ Ni kan skapa variationer av ert Experience Fragment, beroende på era behov:
 
    ![xf-06](assets/xf-06.png)
 
-1. Bekräfta med **Klar** (bockikon), så visas den nya varianten på panelen:
+1. Bekräfta med **Klar** (bock-ikon) visas den nya varianten på panelen:
 
    ![xf-07](assets/xf-07.png)
 
@@ -245,7 +250,7 @@ Nu kan du använda din Experience Fragment när du redigerar dina sidor:
 1. Lägg till den faktiska Experience Fragment-funktionen i komponentinstansen. antingen:
 
    * Dra det önskade fragmentet från Resursläsaren och släpp det på komponenten
-   * Välj **Konfigurera** i komponentverktygsfältet och ange vilket fragment som ska användas, bekräfta med **Klar** (tick)
+   * Välj **Konfigurera** från komponentverktygsfältet och ange vilket fragment som ska användas, bekräfta med **Klar** (tick)
 
    ![xf-09](assets/xf-09.png)
 
@@ -256,7 +261,7 @@ Nu kan du använda din Experience Fragment när du redigerar dina sidor:
 
 Du kan välja en eller flera komponenter för att skapa en byggsten för återvinning i fragmentet:
 
-### Skapar ett byggblock {#creating-a-building-block}
+### Skapa ett byggblock {#creating-a-building-block}
 
 Så här skapar du ett nytt byggblock:
 
@@ -264,7 +269,7 @@ Så här skapar du ett nytt byggblock:
 
    ![xf-10](assets/xf-10.png)
 
-1. Välj **Konvertera till byggblock** i komponentverktygsfältet:
+1. Välj **Konvertera till byggblock**:
 
    ![xf-authoring-13-icon](assets/xf-authoring-13-icon.png)
 
@@ -278,9 +283,9 @@ Så här skapar du ett nytt byggblock:
 
 #### Hantera ett byggblock {#managing-a-building-block}
 
-Byggblocket visas på fliken **Byggblock**. Följande åtgärder är tillgängliga för varje block:
+Byggblocket visas i **Byggblock** -fliken. Följande åtgärder är tillgängliga för varje block:
 
-* Gå till master: öppna mastervarianten på en ny flik
+* Gå till överordnad: öppna rotsidvarianten på en ny flik
 * Byt namn på
 * Ta bort
 
@@ -290,7 +295,7 @@ Byggblocket visas på fliken **Byggblock**. Följande åtgärder är tillgängli
 
 Du kan dra byggblocket till styckesystemet för vilket fragment som helst, precis som med vilken komponent som helst.
 
-## Information om ditt Experience Fragment {#details-of-your-experience-fragment}
+## Information om ert Experience Fragment {#details-of-your-experience-fragment}
 
 Information om ditt fragment kan ses:
 
@@ -298,35 +303,35 @@ Information om ditt fragment kan ses:
 
    ![ef-03](assets/ef-03.png)
 
-1. När du öppnar **Egenskaper** för Experience Fragment:
+1. När du öppnar **Egenskaper** av Experience Fragment:
 
    ![ef-04](assets/ef-04.png)
 
    Egenskaperna är tillgängliga på olika flikar:
 
    >[!CAUTION]
-   Dessa flikar visas när du öppnar **Egenskaper** från konsolen Experience Fragments.
+   De här flikarna visas när du öppnar **Egenskaper** från Experience Fragments-konsolen.
    Om du **öppnar egenskaperna** när du redigerar ett upplevelsefragment visas rätt [Sidegenskaper](/help/sites-authoring/editing-page-properties.md).
 
    ![ef-05](assets/ef-05.png)
 
    * **Grundläggande**
 
-      * **Titel**  - obligatoriskt
+      * **Titel** - obligatoriskt
 
       * **Beskrivning**
       * **Taggar**
-      * **Totalt antal varianter**  - endast information
+      * **Totalt antal varianter** - endast information
 
-      * **Antal webbvarianter**  - endast information
-      * **Antal icke-webbvarianter**  - endast **information**
+      * **Antal webbvarianter** - endast information
+      * **Antal icke-webbvarianter** - inf **endast organisation**
 
-      * **Antal sidor som använder detta fragment**  - endast information
+      * **Antal sidor som använder det här fragmentet** - endast information
    * **Cloud Services**
 
       * **Molnkonfiguration**
       * **Cloud Service Configurations**
-      * **ID för Facebook-sida**
+      * **Facebook page ID**
       * **Pinterest board**
    * **Referenser**
 
@@ -338,15 +343,15 @@ Information om ditt fragment kan ses:
 
 
 
-## Den vanliga HTML-återgivningen {#the-plain-html-rendition}
+## The Plain HTML Rendition {#the-plain-html-rendition}
 
-Om du använder `.plain.`-väljaren i URL:en kan du komma åt den vanliga HTML-återgivningen från webbläsaren.
+Använda `.plain.` -väljaren i URL-adressen kan du komma åt den vanliga HTML-återgivningen från webbläsaren.
 
 >[!NOTE]
-Även om detta är direkt tillgängligt från webbläsaren är [det primära syftet att tillåta andra program (till exempel webbprogram från tredje part, anpassade mobilimplementeringar) att komma åt innehållet i Experience Fragment direkt, med enbart URL:en](/help/sites-developing/experience-fragments.md#the-plain-html-rendition).
+Även om detta är tillgängligt direkt från webbläsaren, [det främsta syftet är att tillåta andra program (till exempel webbprogram från tredje part, anpassade mobilimplementeringar) att få tillgång till innehållet i Experience Fragment direkt, med endast URL:en](/help/sites-developing/experience-fragments.md#the-plain-html-rendition).
 
-## Exporterar Experience Fragments {#exporting-experience-fragments}
+## Exportera Experience Fragments {#exporting-experience-fragments}
 
 Som standard levereras Experience Fragments i HTML-format. Detta kan användas av både AEM och tredjepartskanaler.
 
-JSON kan även användas för export till Adobe Target. Mer information finns i [Målintegrering med Experience Fragments](/help/sites-administering/experience-fragments-target.md).
+JSON kan även användas för export till Adobe Target. Se [Målintegrering med upplevelsefragment](/help/sites-administering/experience-fragments-target.md) för fullständig information.

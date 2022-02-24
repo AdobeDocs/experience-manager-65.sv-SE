@@ -8,9 +8,9 @@ breadcrumb-title: Administratörshandbok
 user-guide-description: Läs om hur du administrerar AEM.
 feature: Administering
 role: Admin
-source-git-commit: d4f5cebc76ed9348a17efc07443cd82317f24368
+source-git-commit: 206df4237e0e6959389dd0128c79c8f64bc4a0e4
 workflow-type: tm+mt
-source-wordcount: '623'
+source-wordcount: '631'
 ht-degree: 6%
 
 ---
@@ -117,6 +117,7 @@ ht-degree: 6%
    + [Konfigurera länkspårning för Adobe Analytics](adobeanalytics-link.md)
    + [Mappa komponentdata med Adobe Analytics-egenskaper](adobeanalytics-mapping.md)
    + [Konfigurera videospårning för Adobe Analytics](adobeanalytics-video.md)
+   + [Integrering med Adobe Analytics med Adobe I/O](integration-analytics-ims-adobe-io.md)
    + [Vanliga frågor om leverans av innehåll med HTTP2](scene7-http2faq.md)
    + [Felsöka Adobe Campaign-integreringen](troubleshooting-campaignintegration.md)
    + [SharePoint Connector-licenser, copyrightmeddelanden och friskrivningsklausuler](sharepoint-connector-licenses.md)

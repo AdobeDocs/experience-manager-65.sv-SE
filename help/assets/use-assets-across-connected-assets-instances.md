@@ -5,10 +5,10 @@ contentOwner: AG
 role: User, Admin, Leader
 feature: Connected Assets,User and Groups
 exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
-source-git-commit: b4c3f4c393d9b34acaadc375d20738ead42e481d
+source-git-commit: 72b39fd0263347c5bfe98fe2fdaf8999d7d40a96
 workflow-type: tm+mt
-source-wordcount: '2863'
-ht-degree: 25%
+source-wordcount: '3099'
+ht-degree: 23%
 
 ---
 
@@ -197,6 +197,22 @@ Så här visar och hanterar du referenser på [!DNL Assets] -distribution, följ
 1. Användare kan flytta eller ta bort resursen. När du flyttar eller tar bort en resurs visas det totala antalet referenser för alla markerade resurser/mappar i en varningsdialogruta. När du tar bort en resurs för vilken referenser ännu inte visas visas en varningsdialogruta.
 
    ![varning om force delete](assets/delete-referenced-asset.png)
+
+### Hantera uppdateringar av resurser i fjärr-DAM {#manage-updates-in-remote-dam}
+
+Efter [konfigurera en anslutning](#configure-a-connection-between-sites-and-assets-deployments) mellan fjärr-DAM och [!DNL Sites] distribuerar, blir resurserna på fjärr-DAM tillgängliga på [!DNL Sites] distribution. Du kan sedan uppdatera, ta bort, byta namn på och flytta åtgärder på fjärr-DAM-resurser eller -mappar. Uppdateringarna, med viss fördröjning, är automatiskt tillgängliga på [!DNL Sites] distribution. Dessutom, om en resurs på en fjärr-DAM används på en lokal [!DNL Experience Manager Sites] sidan visas uppdateringarna av resursen på fjärr-DAM på [!DNL Sites] sida.
+
+När du flyttar en resurs från en plats till en annan bör du se till att du [justera referenser](/help/assets/manage-assets.md) så att resursen visas på [!DNL Sites] sida. Om du flyttar en resurs till en plats som inte är tillgänglig från den lokala [!DNL Sites] distributionen, kan resursen inte visas i Sites-distributionen.
+
+Du kan även uppdatera metadataegenskaperna för en resurs på en fjärr-DAM och ändringarna är tillgängliga på den lokala [!DNL Sites] distribution.
+
+[!DNL Sites] författare kan förhandsgranska de tillgängliga uppdateringarna på [!DNL Sites] distribuera och publicera sedan ändringarna igen för att göra dem tillgängliga på [!DNL Experience Manager] publiceringsinstans.
+
+[!DNL Experience Manager] visar en visuell indikator för förfallen status för resurser i `Remote Assets Content Finder` för att hindra webbplatsförfattare från att använda resursen på en [!DNL Sites] sida. Om du använder en resurs med en utgången status på en [!DNL Sites] sidan, resursen visas inte på [!DNL Experience Manager] publiceringsinstans.
+
+>[!NOTE]
+>
+>Uppdateringarna av resurser i fjärr-DAM är tillgängliga för [!DNL Sites] distribution endast om fjärr-DAM och [!DNL Sites] distributioner är aktiverade [!DNL Experience Manager].
 
 ## Begränsningar och bästa metoder {#tip-and-limitations}
 
