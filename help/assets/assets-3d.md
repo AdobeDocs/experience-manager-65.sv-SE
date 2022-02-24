@@ -8,9 +8,9 @@ content-type: reference
 feature: 3D Assets,Asset Management
 role: User, Admin
 exl-id: 01c96f1e-c0e6-497d-bd7a-c0fd547a34da
-source-git-commit: a13d6d10dd10605d2cb83a8622fae3a7e2590c93
+source-git-commit: 787c0c25da2258f234d3c821038d62bf8ef68932
 workflow-type: tm+mt
-source-wordcount: '2246'
+source-wordcount: '2287'
 ht-degree: 2%
 
 ---
@@ -42,9 +42,9 @@ Se även [Stöd för 3D-format](/help/assets/assets-formats.md).
 | STL | Stereolitografi | application/vnd.ms-pki.stl |  |
 | USDZ | Zip-arkiv för universell scenbeskrivning | model/vnd.usdz+zip | *Stöd endast för förtäring. ingen visning eller interaktion är tillgänglig.* USDZ är ett tillverkarspecifikt 3D-format som kan visas direkt på enheter med Safari och iOS. |
 
-<!-- >[!NOTE]
+>[!NOTE]
 >
->The 3D Media WCM component and 3D preview on an asset's Details page is not compatible with the latest version of Chrome (97.x). Instead, to work with 3D assets, use Firefox or Safari, or use an earlier version of Chrome (96.x). -->
+>3D Media WCM-komponenten och 3D-förhandsvisningen på en tillgångs informationssida är inte kompatibla med den senaste versionen av Chrome (97.x). Om du i stället vill arbeta med 3D-resurser använder du Firefox eller Safari, eller en tidigare version av Chrome (96.x).
 
 ## Snabbstart: 3D-resurser i Dynamic Media {#quick-start-three-d}
 
