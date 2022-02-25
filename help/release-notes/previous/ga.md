@@ -1,7 +1,7 @@
 ---
 title: Allmän versionsinformation för [!DNL Adobe Experience Manager] 6.5
-description: '[!DNL Adobe Experience Manager] 6.5 som beskriver versionsinformation, nyheter, hur man installerar och detaljerade ändringslistor.'
-source-git-commit: 37f1df9f9421ff18fff45723b6eb081f0192520a
+description: '"[!DNL Adobe Experience Manager] 6.5 som beskriver versionsinformation, nyheter, hur man installerar och detaljerade ändringslistor."'
+source-git-commit: e24316cb9495a552960ae0620e4198f10a08b691
 workflow-type: tm+mt
 source-wordcount: '4696'
 ht-degree: 1%
@@ -335,7 +335,7 @@ Läs vidare för att lära dig mer om de specifika funktionerna och integreringa
 
 ##### [!DNL Adobe Stock] integration {#stock}
 
-Din organisation kan använda [!DNL Adobe Stock] företagsplan inom [!DNL Experience Manager Assets] för att säkerställa att licensierat material finns tillgängligt för alla era kreativa projekt och marknadsföringsprojekt. Du kan snabbt hitta, förhandsgranska och licensiera [!DNL Adobe Stock] resurser som har sparats i Experience Manager, med de kraftfulla DAM-funktionerna i [!DNL Experience Manager].
+Din organisation kan använda [!DNL Adobe Stock] företagsplan inom [!DNL Experience Manager Assets] för att se till att licensierat material finns tillgängligt för dina kreativa projekt och marknadsföringsprojekt. Du kan snabbt hitta, förhandsgranska och licensiera [!DNL Adobe Stock] resurser som har sparats i Experience Manager, med de kraftfulla DAM-funktionerna i [!DNL Experience Manager].
 
 [!DNL Adobe Stock] ger designers och företag tillgång till miljontals utvalda och royaltyfria foton, vektorer, illustrationer, videor, mallar och 3D-resurser av hög kvalitet för alla kreativa projekt.
 
