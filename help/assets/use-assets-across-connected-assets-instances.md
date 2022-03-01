@@ -5,10 +5,10 @@ contentOwner: AG
 role: User, Admin, Leader
 feature: Connected Assets,User and Groups
 exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
-source-git-commit: 72b39fd0263347c5bfe98fe2fdaf8999d7d40a96
+source-git-commit: 6b9f0836ae61fdaa1aaf89434d76be5925970088
 workflow-type: tm+mt
-source-wordcount: '3099'
-ht-degree: 23%
+source-wordcount: '3695'
+ht-degree: 19%
 
 ---
 
@@ -17,6 +17,10 @@ ht-degree: 23%
 I stora företag kan den infrastruktur som krävs för att skapa webbplatser vara distribuerad. Ibland kan funktionerna för att skapa webbplatser och de digitala resurser som används för att skapa webbplatserna finnas i olika distributioner. En orsak kan vara att befintliga distributioner som krävs för att fungera tillsammans distribueras geografiskt. En annan orsak kan vara förvärv som leder till heterogen infrastruktur, inklusive olika [!DNL Experience Manager] versioner som huvudföretaget vill använda tillsammans.
 
 Funktionen för anslutna resurser har stöd för ovanstående användningsfall genom att integrera [!DNL Experience Manager Sites] och [!DNL Experience Manager Assets]. Användare kan skapa webbsidor i [!DNL Sites] som använder digitala resurser från en separat [!DNL Assets] distributioner.
+
+>[!NOTE]
+>
+>Konfigurera bara anslutna resurser när du behöver använda de resurser som är tillgängliga på en fjärrdistribution av DAM på en separat webbplatsdistribution för att skapa webbsidor.
 
 ## Översikt över Connected Assets {#overview-of-connected-assets}
 
@@ -56,6 +60,18 @@ De olika roller som krävs för att konfigurera och använda funktionen och mots
 | [!DNL Assets] administratör | Fjärr | [!DNL Experience Manager] `administrators` | `admin` på fjärrkontrollen [!DNL Experience Manager] | Konfigurerar CORS (Cross-Origin Resource Sharing). |
 | DAM-användare | Fjärr | `Authors` | `ksaner` på fjärrkontrollen [!DNL Experience Manager] | Författarroll på fjärrkontrollen [!DNL Experience Manager] distribution. Söker efter och bläddrar bland resurser i Connected Assets med hjälp av [!UICONTROL Content Finder]. |
 | DAM-distributör (teknisk användare) | Fjärr | [!DNL Sites] `Authors` | `ksaner` på fjärrkontrollen [!DNL Experience Manager] | Den här användaren som finns på fjärrdistributionen används av [!DNL Experience Manager] lokal server (inte [!DNL Sites] författarroll) för att hämta fjärrresurserna, för [!DNL Sites] författare. Den här rollen är inte densamma som de två `ksaner`-rollerna ovan och den tillhör en annan användargrupp. |
+
+### Arkitektur för anslutna resurser {#connected-assets-architecture}
+
+Med Experience Manager kan du ansluta en fjärrdistribution av DAM som en källa till flera Experience Manager [!DNL Sites] distributioner. Du kan ansluta högst fyra [!DNL Sites] distributioner till en fjärr-DAM. Du kan dock ansluta en [!DNL Sites] driftsättning med endast en fjärrdistribution av DAM.
+
+Följande diagram visar vilka scenarier som stöds:
+
+![Arkitektur för anslutna resurser](assets/connected-assets-architecture.png)
+
+I följande diagram visas ett scenario som inte stöds:
+
+![Arkitektur för anslutna resurser](assets/connected-assets-architecture-unsupported.png)
 
 ## Konfigurera en anslutning mellan [!DNL Sites] och [!DNL Assets] distributioner {#configure-a-connection-between-sites-and-assets-deployments}
 
@@ -116,11 +132,24 @@ Du kan kontrollera anslutningen mellan konfigurerade [!DNL Sites] driftsättning
 ![Anslutningstest för konfigurerade anslutna resurser [!DNL Sites]](assets/connected-assets-multiple-config.png)
 *Bild: Anslutningstest för konfigurerade anslutna resurser [!DNL Sites].*
 
-### Konfigurera en anslutning för dynamiska medieresurser {#sites-dynamic-media-connected-assets}
+## Använda Dynamic Media-resurser {#dynamic-media-assets}
 
-Du kan konfigurera en anslutning mellan [!DNL Sites] driftsättning och [!DNL Dynamic Media] distribution som tillåter webbsideskonstruktörer att använda [!DNL Dynamic Media] bilder på sina webbsidor. När du skapar webbsidor är upplevelsen av att använda fjärrresurser och fjärranslutna resurser [!DNL Dynamic Media] distributioner förblir desamma.
 
-Så här konfigurerar du funktionerna för anslutna resurser för dynamiska mediedatabilder:
+Med sammankopplade resurser kan du använda bildresurser som bearbetats av [!DNL Dynamic Media] från fjärrdistribution av DAM på Sites-sidor och utnyttja Dynamic Media-funktioner, som smarta beskärnings- och bildförinställningar.
+
+Används [!DNL Dynamic Media] med anslutna resurser:
+
+1. Konfigurera [!DNL Dynamic Media] på fjärrdistribution av DAM med Sync-läge aktiverat.
+1. Konfigurera [Anslutna resurser](#configure-a-connection-between-sites-and-assets-deployments).
+1. Konfigurera [!DNL Dynamic Media] på Sites-instansen med samma företagsnamn som konfigurerats på fjärr-DAM. Webbplatsdistributionen måste ha skrivskyddad åtkomst till Dynamic Media-kontot för att kunna arbeta med anslutna resurser. Se därför till att inaktivera synkroniseringsläget i Dynamic Media-konfigurationen på platsinstansen.
+
+>[!CAUTION]
+>
+>Med sammankopplade resurser och [!DNL Dynamic Media] konfiguration, du kan inte använda [!DNL Dynamic Media] för att bearbeta lokala resurser som finns på [!DNL Sites] distribution.
+
+## Konfigurera [!DNL Dynamic Media] {#configure-dynamic-media}
+
+Konfigurera [!DNL Dynamic Media] på [!DNL Assets] och [!DNL Sites] distributioner:
 
 1. Aktivera och konfigurera [!DNL Dynamic Media] som global konfiguration på fjärrkontrollen [!DNL Assets] driftsättning. Information om hur du konfigurerar Dynamic Media finns i [Konfigurera Dynamic Media](/help/assets/config-dynamic.md#configuring-dynamic-media-cloud-services).<br/>
 På fjärrkontrollen [!DNL Assets] distribution, in [!UICONTROL Dynamic Media sync mode], markera **[!UICONTROL Enabled by default]**.
@@ -213,6 +242,48 @@ Du kan även uppdatera metadataegenskaperna för en resurs på en fjärr-DAM och
 >[!NOTE]
 >
 >Uppdateringarna av resurser i fjärr-DAM är tillgängliga för [!DNL Sites] distribution endast om fjärr-DAM och [!DNL Sites] distributioner är aktiverade [!DNL Experience Manager].
+
+## Vanliga frågor {#frequently-asked-questions}
+
+### Ska du konfigurera anslutna resurser om du behöver använda resurser som är tillgängliga på din [!DNL Sites] distribution?
+
+I så fall behöver du inte konfigurera anslutna resurser. Du kan använda resurser som finns på [!DNL Sites] distribution.
+
+### När behöver du konfigurera funktionen för anslutna resurser?
+
+Konfigurera bara funktionen för anslutna resurser när du behöver använda resurserna som finns på en fjärr-DAM-distribution på en [!DNL Sites] distribution.
+
+### Hur många [!DNL Sites] kan du ansluta till en fjärr-DAM-distribution efter att ha konfigurerat anslutna resurser?
+
+Du kan ansluta högst fyra [!DNL Sites] distributioner till en fjärr-DAM-distribution efter konfigurering av anslutna resurser. Mer information finns i [Arkitektur för anslutna resurser](#connected-assets-architecture).
+
+### Hur många fjärr-DAM-distributioner kan du ansluta till en [!DNL Sites] distribueras efter konfigurering av anslutna resurser?
+
+Du kan ansluta en fjärr-DAM-distribution till en [!DNL Sites] efter konfigurering av anslutna resurser. Mer information finns i [Arkitektur för anslutna resurser](#connected-assets-architecture).
+
+### Kan du använda Dynamic Media-resurser från dina [!DNL Sites] distribueras efter konfigurering av anslutna resurser?
+
+När du har konfigurerat anslutna resurser [!DNL Dynamic Media] resurser är tillgängliga på [!DNL Sites] i skrivskyddat läge. Därför kan du inte använda [!DNL Dynamic Media] för att bearbeta resurser på [!DNL Sites] distribution. Mer information finns i [Konfigurera en anslutning mellan platser och Dynamic Media-distributioner](#dynamic-media-assets).
+
+### Kan du använda material för formaten Image och Document från DAM-fjärrdistributionen på [!DNL Sites] distribueras efter konfigurering av anslutna resurser?
+
+Ja, du kan använda resurserna för formaten Image och Document från DAM-fjärrdistributionen på [!DNL Sites] efter konfigurering av anslutna resurser.
+
+### Kan ni använda innehållsfragment och videomaterial från den fjärranslutna DAM-distributionen på [!DNL Sites] distribueras efter konfigurering av anslutna resurser?
+
+Nej, du kan inte använda innehållsfragment och videomaterial från fjärr-DAM-distributionen på [!DNL Sites] efter konfigurering av anslutna resurser.
+
+### Kan du använda Dynamic Media-resurser från fjärr-DAM-distributionen på [!DNL Sites] distribueras efter konfigurering av anslutna resurser?
+
+Ja, du kan konfigurera och använda Dynamic Media-resurser från den fjärranslutna DAM-distributionen på [!DNL Sites] efter konfigurering av anslutna resurser. Mer information finns i [Konfigurera en anslutning mellan platser och Dynamic Media-distributioner](#dynamic-media-assets).
+
+### När du har konfigurerat anslutna resurser, kan du uppdatera, ta bort, byta namn på och flytta åtgärder på fjärr-DAM-resurser eller -mappar?
+
+Ja, när du har konfigurerat anslutna resurser kan du uppdatera, ta bort, byta namn på och flytta resurser eller mappar i fjärr-DAM. Uppdateringarna, med viss fördröjning, är automatiskt tillgängliga i Sites-distributionen. Mer information finns i [Hantera uppdateringar av resurser i fjärr-DAM](#handling-updates-to-remote-assets).
+
+### När du har konfigurerat anslutna resurser, kan du lägga till eller ändra resurser i [!DNL Sites] driftsätta och göra dem tillgängliga på fjärrdistribution av DAM?
+
+Du kan lägga till resurser i [!DNL Sites] distribution, men dessa resurser kan inte göras tillgängliga för den fjärranslutna DAM-distributionen.
 
 ## Begränsningar och bästa metoder {#tip-and-limitations}
 
