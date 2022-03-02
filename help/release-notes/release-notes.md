@@ -2,9 +2,9 @@
 title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: '"[!DNL Adobe Experience Manager] 6.5 som beskriver versionsinformation, nyheter, hur man installerar och detaljerade ändringslistor."'
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: 498e00ab7838de675771224204726a51e68d4a57
+source-git-commit: 6a89cb79ccfbcec7385832d5682bf61895253718
 workflow-type: tm+mt
-source-wordcount: '2631'
+source-wordcount: '2630'
 ht-degree: 0%
 
 ---
@@ -18,15 +18,15 @@ ht-degree: 0%
 | Version | 6.5.12.0 |
 | Typ | Service Pack-version |
 | Date | 24 februari 2022 |
-| Hämta URL | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.12.0.zip) |
+| Hämta URL | [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.12.0.zip) |
 
 ## Vad ingår i [!DNL Adobe Experience Manager] 6.5.12.0 {#what-is-included-in-aem}
 
-[!DNL Adobe Experience Manager] 6.5.12.0 includes new features, key customer-requested enhancements, and performance, stability, and security improvements, that are released since the availability of 6.5 release in April 2019. Service Pack är installerat på [!DNL Adobe Experience Manager] 6.5.
+[!DNL Adobe Experience Manager] 6.5.12.0 innehåller nya funktioner, viktiga förbättringar som kunderna efterfrågat samt prestanda, stabilitet och säkerhetsförbättringar som släppts sedan 6.5-utgåvan släpptes i april 2019. Service Pack är installerat på [!DNL Adobe Experience Manager] 6.5.
 
-The key features and enhancements introduced in [!DNL Adobe Experience Manager] 6.5.12.0 are:
+De viktigaste funktionerna och förbättringarna i [!DNL Adobe Experience Manager] 6.5.12.0 är:
 
-* När du har konfigurerat en anslutning mellan distributioner av fjärr-DAM och platser, blir resurserna på fjärr-DAM tillgängliga i Sites-distributionen. Nu kan du uppdatera, ta bort, byta namn på och flytta resurser eller mappar i fjärr-DAM. The updates, with some delay, are available automatically on the Sites deployment (NPR-37816).
+* När du har konfigurerat en anslutning mellan distributioner av fjärr-DAM och platser, blir resurserna på fjärr-DAM tillgängliga i Sites-distributionen. Nu kan du uppdatera, ta bort, byta namn på och flytta resurser eller mappar i fjärr-DAM. Uppdateringarna, med viss fördröjning, är automatiskt tillgängliga i Sites-distributionen (NPR-37816).
 
 * Det går nu som standard att överföra en live-kopieringskälla till flera live-kopior, utan att en ritningskonfiguration krävs (CQ-4259951).
 * Statusen för pågående asynkrona åtgärder visas nu i användargränssnittet för att förhindra att användare av misstag utlöser flera asynkrona åtgärder på samma sökväg (NPR-37611).
@@ -96,14 +96,14 @@ The following accessibility enhancements are available in [!DNL Assets]:
 Följande problem har åtgärdats i [!DNL Assets]:
 
 * När du lägger till en resurs eller mapp (som innehåller `single quote` i namnet) i Anslutna resurser misslyckas referenssökvägen och resulterar som ett undantag (NPR-37712).
-* When adding watermark to an asset, the watermark is always displayed in black color irrespective of the color defined by the user (NPR-37720).
-* When using Connected Assets, a non-admin user is able to search for an asset even when the non-admin users are restricted to access the DAM repository (NPR-37644).
+* När du lägger till en vattenstämpel i en resurs visas vattenstämpeln alltid i svart färg oavsett vilken färg användaren har definierat (NPR-37720).
+* När du använder anslutna resurser kan en icke-adminanvändare söka efter en resurs även när icke-adminanvändare är begränsade till åtkomst till DAM-databasen (NPR-37644).
 * När du uppdaterar metadata för resurser med hjälp av massredigering sparas inte ändringarna som används i listrutefälten och återställs till standardvärdena (NPR-37345).
 * Om du tar bort en mapp som tar för lång tid vilket påverkar den övergripande prestandan (NPR-37107).
 * När användaren tillämpar regler i metadataschemat kan användaren inte visa hela värdet för listrutan `Field Value` och `Field Choices` om värdet är större än textrutan (CQ-4338074).
-* After upgrading to version 6.5.10.0, the asset properties page reflects an unnecessary HTML rendering message (CQ-4336994).
-* Sorting the assets in `List View` does not work effectively (CQ-4335298).
-* When sharing assets using share link, the assets are downloaded in separate folders (CQ-4335000).
+* När du har uppgraderat till version 6.5.10.0 visar sidan med resursegenskaper ett återgivningsmeddelande i onödan HTML (CQ-4336994).
+* Sortera resurserna i `List View` fungerar inte effektivt (CQ-4335298).
+* När du delar resurser med hjälp av en delad länk hämtas resurserna i separata mappar (CQ-4335000).
 * Vid verifiering av [!DNL Experience Manager] `Inbox` inställningar, `Share` och `Out of office` -flikar återspeglar oöversatt innehåll (CQ-4334858).
 
 * Följande korrigeringar är relaterade till överlappande metadata i resursegenskaper.
@@ -118,10 +118,10 @@ Följande problem har åtgärdats i [!DNL Dynamic Media]:
 
 * Resurserna i en mapp som innehåller `renditions` i mappnamnet är inte synkroniserat i `Dynamic Media` (CQ-4338428).
 * När du skapar en bildförinställning i `tiff` format, skapas förinställningen men formatet ändras till `jpeg` (CQ-4335985).
-* When modifying the `Progressive JPEG Scan` value in Image Preset Editor, the dropdown value always resets to `auto`(CQ-4335971).
-* The video metadata is not visible for the `mxf` videos on the asset properties page (CQ-4335499).
+* När du ändrar `Progressive JPEG Scan` värdet i bildförinställningsredigeraren återställs alltid listrutans värde till `auto`(CQ-4335971).
+* Videometadata är inte synliga för `mxf` videor på sidan med resursegenskaper (CQ-4335499).
 * När videoresurserna bearbetas på nytt avpubliceras AVS-filerna (Adaptive Video Set) och videoåtergivningarna från publiceringsservern (CQ-4335461).
-* The PDF thumbnails generated are different from the first page of the actual PDF. Vissa delar av bilden saknas i miniatyrbilden (CQ-431554).
+* De PDF-miniatyrbilder som skapas skiljer sig från den första sidan i PDF. Vissa delar av bilden saknas i miniatyrbilden (CQ-431554).
 * CDN-ogiltigförklaring misslyckas med ett felaktigt URL-svar om `companyName` och `companyRoot` är annorlunda (CQ-4339896).
 
 ### Arbetsflöden {#workflows-65120}
@@ -134,7 +134,7 @@ Följande problem har åtgärdats i [!DNL Dynamic Media]:
 
 >[!NOTE]
 >
->* [!DNL Experience Manager Forms] releases the add-on packages one week after the scheduled [!DNL Experience Manager] Service Pack release date.
+>* [!DNL Experience Manager Forms] släpper tilläggspaketen en vecka efter den schemalagda [!DNL Experience Manager] Lanseringsdatum för Service Pack.
 
 
 <!--
@@ -314,7 +314,7 @@ Information om hur du använder UberJar i ett Maven-projekt finns i [använda Ub
 
 Nedan finns en lista över funktioner som är markerade som borttagna [!DNL Experience Manager] 6.5.7.0 Funktioner markeras som borttagna från början och senare i en framtida version. Ett alternativt alternativ anges.
 
-Granska om du använder en funktion eller en funktion i en distribution. Also, plan to change the implementation to use an alternate option.
+Granska om du använder en funktion eller en funktion i en distribution. Planera också att ändra implementeringen så att ett alternativt alternativ används.
 
 | Yta | Funktion | Ersättning |
 |---|---|---|
@@ -329,7 +329,7 @@ Granska om du använder en funktion eller en funktion i en distribution. Also, p
    >
    >En ny version av indexdefinitionspaketet håller på att utvecklas. Länken nedan kommer att publiceras så snart den blir tillgänglig.
    >
-   >Till dess kan du kontakta kundtjänst för att få en snabbkorrigering.
+   >Till dess ber vi dig kontakta kundtjänst för att få en snabbkorrigering.
 
    <!--
   Download and install [AEM Sites SEO Index Package](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/sites-seo-index-content-1.0.0.zip) on your AEM instance before downloading the ZIP file to resolve the issue.
@@ -345,7 +345,7 @@ Granska om du använder en funktion eller en funktion i en distribution. Also, p
 Om du vill hämta körtidskopian rekommenderar Adobe att du synkroniserar designtidskopian av den anpassade arbetsflödesmodellen med körtidskopian med hjälp av HTTP API:
    `<designModelPath>/jcr:content.generate.json`.
 
-* Users can rename a folder in a hierarchy in [!DNL Assets] and publish a nested folder to [!DNL Brand Portal]. Mappens namn uppdateras dock inte i [!DNL Brand Portal] tills rotmappen publiceras på nytt.
+* Användare kan byta namn på en mapp i en hierarki i [!DNL Assets] och publicera en kapslad mapp i [!DNL Brand Portal]. Mappens namn uppdateras dock inte i [!DNL Brand Portal] tills rotmappen publiceras på nytt.
 
 * När en användare väljer att konfigurera ett fält för första gången i ett adaptivt formulär visas inte alternativet att spara en konfiguration i egenskapsläsaren. Om du väljer att konfigurera ett annat fält i det adaptiva formuläret i samma redigerare åtgärdas problemet.
 
