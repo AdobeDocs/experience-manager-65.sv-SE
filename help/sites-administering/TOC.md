@@ -8,9 +8,9 @@ breadcrumb-title: Administratörshandbok
 user-guide-description: Läs om hur du administrerar AEM.
 feature: Administering
 role: Admin
-source-git-commit: 206df4237e0e6959389dd0128c79c8f64bc4a0e4
+source-git-commit: eb05fb92491932e4c2489c5adb533bbbae1d2870
 workflow-type: tm+mt
-source-wordcount: '631'
+source-wordcount: '627'
 ht-degree: 6%
 
 ---
@@ -117,7 +117,7 @@ ht-degree: 6%
    + [Konfigurera länkspårning för Adobe Analytics](adobeanalytics-link.md)
    + [Mappa komponentdata med Adobe Analytics-egenskaper](adobeanalytics-mapping.md)
    + [Konfigurera videospårning för Adobe Analytics](adobeanalytics-video.md)
-   + [Integrering med Adobe Analytics med Adobe I/O](integration-analytics-ims-adobe-io.md)
+   + [Integrering med Adobe Analytics med IMS](integration-analytics-ims.md)
    + [Vanliga frågor om leverans av innehåll med HTTP2](scene7-http2faq.md)
    + [Felsöka Adobe Campaign-integreringen](troubleshooting-campaignintegration.md)
    + [SharePoint Connector-licenser, copyrightmeddelanden och friskrivningsklausuler](sharepoint-connector-licenses.md)
@@ -143,7 +143,7 @@ ht-degree: 6%
    + [Integrera med Adobe Marketing Cloud](marketing-cloud.md)
    + [Konfigurera integreringen med Adobe Target manuellt](target-configuring.md)
    + [Krav för integrering med Adobe Target](target-requirements.md)
-   + [Integrering med Adobe Target med Adobe I/O](integration-target-ims-adobe-io.md)
+   + [Integrering med Adobe Target med IMS](integration-target-ims.md)
    + [Adobe-klassificeringar](adobeanalytics-classifications.md)
    + [Integrera med Adobe Search &amp; Promote](search-and-promote.md)
    + [Lösningsintegrering](integration.md)
