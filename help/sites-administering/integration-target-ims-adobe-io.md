@@ -1,25 +1,17 @@
 ---
-title: Integrering med Adobe Target med Adobe I/O
-seo-title: Integration with Adobe Target using Adobe I/O
-description: Läs om hur du integrerar AEM med Adobe Target med Adobe I/O
-seo-description: Learn about integrating AEM with Adobe Target using Adobe I/O
-uuid: dd4ed638-e182-4d7e-9c98-282431812467
-contentOwner: aheimoz
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-content-type: reference
-topic-tags: integration
-discoiquuid: 3b9285db-8fba-4d12-8f52-41daa50a5403
-docset: aem65
-source-git-commit: e6f4f3cf31c39853b45450e0c925694fc45f7aec
+title: Integrering med Adobe Target med IMS
+description: Läs om hur du integrerar AEM med Adobe Target med IMS
+exl-id: 8ddd86d5-a5a9-4907-b07b-b6552d7afdc8
+source-git-commit: e3f99c250934f796be404d947503d9367f2c510d
 workflow-type: tm+mt
-source-wordcount: '1539'
+source-wordcount: '1500'
 ht-degree: 0%
 
 ---
 
-# Integrering med Adobe Target med Adobe I/O{#integration-with-adobe-target-using-adobe-i-o}
+# Integrering med Adobe Target med IMS{#integration-with-adobe-target-using-ims}
 
-Integreringen av AEM med Adobe Target via Target Standard API kräver att du konfigurerar Adobe IMS (Identity Management System) och Adobe I/O.
+För att integrera AEM med Adobe Target via Target Standard API måste du konfigurera Adobe IMS (Identity Management System) med Adobe Developer Console.
 
 >[!NOTE]
 >
@@ -37,13 +29,13 @@ Innan du börjar med den här proceduren:
 * [Stöd för Adobe](https://helpx.adobe.com/se/contact/enterprise-support.ec.html) måste tillhandahålla ditt konto för:
 
    * Adobe Console
-   * Adobe I/O
+   * Adobe Developer Console
    * Adobe Target och
    * Adobe IMS (Identity Management System)
 
 * Din organisations systemadministratör bör använda Admin Console för att lägga till de utvecklare som behövs i organisationen till de relevanta produktprofilerna.
 
-   * Detta ger specifika utvecklare tillstånd att aktivera integreringar inom Adobe I/O.
+   * Detta ger specifika utvecklare behörighet att aktivera integreringar i Adobe Developer Console.
    * Mer information finns i [Hantera utvecklare](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html).
 
 
@@ -60,7 +52,7 @@ Det första steget i konfigurationen är att skapa en IMS-konfiguration i AEM oc
 
    ![](assets/integrate-target-io-01.png)
 
-1. Välj **Hämta** (eller **Hämta offentlig nyckel**) för att hämta filen till den lokala hårddisken, så att den är klar att användas när [konfigurera Adobe I/O för Adobe Target-integrering med AEM](#configuring-adobe-i-o-for-adobe-target-integration-with-aem).
+1. Välj **Hämta** (eller **Hämta offentlig nyckel**) för att hämta filen till den lokala hårddisken, så att den är klar att användas när [konfigurera IMS för Adobe Target-integrering med AEM](#configuring-ims-for-adobe-target-integration-with-aem).
 
    >[!CAUTION]
    >
@@ -68,21 +60,17 @@ Det första steget i konfigurationen är att skapa en IMS-konfiguration i AEM oc
 
    ![](assets/integrate-target-io-02.png)
 
-## Konfigurera Adobe I/O för Adobe Target-integrering med AEM {#configuring-adobe-i-o-for-adobe-target-integration-with-aem}
+## Konfigurera IMS för Adobe Target-integrering med AEM {#configuring-ims-for-adobe-target-integration-with-aem}
 
-Du måste skapa det Adobe I/O-projekt (integrering) med Adobe Target som AEM ska använda och sedan tilldela de behörigheter som krävs.
+Med Adobe Developer Console måste du skapa ett projekt (integration) med Adobe Target som AEM ska använda och sedan tilldela de behörigheter som krävs.
 
 ### Skapa projektet {#creating-the-project}
 
-Öppna konsolen Adobe I/O för att skapa ett I/O-projekt med Adobe Target som AEM ska använda:
+Öppna Adobe Developer Console för att skapa ett projekt med Adobe Target som AEM ska använda:
 
->[!NOTE]
->
->Se även [Självstudiekurser för Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html).
+1. Öppna Adobe Developer Console for Projects:
 
-1. Öppna Adobe I/O-konsolen för projekt:
-
-   [https://console.adobe.io/projects](https://console.adobe.io/projects)
+   [https://developer.adobe.com/console/projects](https://developer.adobe.com/console/projects)
 
 1. Alla projekt du har visas. Välj **Skapa nytt projekt** - platsen och användningen beror på:
 
@@ -145,11 +133,11 @@ Du måste nu tilldela nödvändig behörighet till integreringen:
 1. Välj **API-autentiseringsuppgifter** och sedan den integreringskonfiguration som krävs.
 1. Välj **Redigerare** som **Produktroll**; i stället för **Observer**.
 
-## Information lagrad för Adobe I/O-integreringsprojektet {#details-stored-for-the-adobe-io-integration-project}
+## Information lagrad för integreringsprojektet i Adobe Developer Console {#details-stored-for-the-ims-integration-project}
 
-På projektkonsolen i Adobe I/O kan du se en lista över alla dina integrationsprojekt:
+På Adobe Developer Console - Projekt kan du se en lista över alla dina integrationsprojekt:
 
-* [https://console.adobe.io/projects](https://console.adobe.io/projects)
+* [https://developer.adobe.com/console/projects](https://developer.adobe.com/console/projects)
 
 Välj **Visa** (till höger om en viss projektpost) om du vill visa mer information om konfigurationen. Bland dessa finns:
 
@@ -162,22 +150,22 @@ Välj **Visa** (till höger om en viss projektpost) om du vill visa mer informat
 * APIS
    * Exempel: Adobe Target
 
-Vissa av dessa behöver du för att slutföra integreringen av Target i AEM med Adobe I/O.
+Vissa av dessa behöver du för att slutföra integreringen av Adobe Target i AEM baserat på IMS.
 
 ## Slutför IMS-konfigurationen i AEM {#completing-the-ims-configuration-in-aem}
 
-Om du går tillbaka till AEM kan du slutföra IMS-konfigurationen genom att lägga till obligatoriska värden från Adobe I/O-integreringen för Target:
+Om du går tillbaka till AEM kan du slutföra IMS-konfigurationen genom att lägga till obligatoriska värden från Adobe Developer Console-integrering för Target:
 
 1. Återgå till [IMS-konfiguration öppnas i AEM](#configuring-an-ims-configuration-generating-a-public-key).
 1. Välj **Nästa**.
 
-1. Här kan du använda [uppgifter från Adobe I/O](#details-stored-for-the-adobe-io-integration-project):
+1. Här kan du använda [information från projektkonfigurationen i Adobe Developer Console](#details-stored-for-the-ims-integration-project):
 
    * **Titel**: Din text.
    * **Auktoriseringsserver**: Kopiera/klistra in detta från `aud` rad i **Nyttolast** avsnitt nedan, t.ex. `https://ims-na1.adobelogin.com` i exemplet nedan
-   * **API-nyckel**: Kopiera detta från [Översikt](#details-stored-for-the-adobe-io-integration-project) del av Adobe I/O-integrering för Target
-   * **Klienthemlighet**: Generera detta i [Översikt](#details-stored-for-the-adobe-io-integration-project) i Adobe I/O-integreringen för Target, och copy
-   * **Nyttolast**: Kopiera detta från [Generera JWT](#details-stored-for-the-adobe-io-integration-project) del av Adobe I/O-integrering för Target
+   * **API-nyckel**: Kopiera detta från [Översikt](#details-stored-for-the-ims-integration-project) section
+   * **Klienthemlighet**: Generera detta i [Översikt](#details-stored-for-the-ims-integration-project) och kopiera
+   * **Nyttolast**: Kopiera detta från [Generera JWT](#details-stored-for-the-ims-integration-project) section
 
    ![](assets/integrate-target-io-10.png)
 

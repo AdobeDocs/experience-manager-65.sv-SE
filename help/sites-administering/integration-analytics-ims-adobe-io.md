@@ -1,16 +1,16 @@
 ---
-title: Integrering med Adobe Analytics med Adobe I/O
-description: Läs om hur du integrerar AEM med Adobe Analytics med Adobe I/O
-source-git-commit: 5a253147baf64bf1b12b3ea6387f4b377e5d421f
+title: Integrering med Adobe Analytics med IMS
+description: Läs om hur du integrerar AEM med Adobe Analytics med IMS
+source-git-commit: e3f99c250934f796be404d947503d9367f2c510d
 workflow-type: tm+mt
-source-wordcount: '1052'
+source-wordcount: '1040'
 ht-degree: 0%
 
 ---
 
-# Integrering med Adobe Analytics med Adobe I/O {#integration-with-adobe-analytics-using-adobe-i-o}
+# Integrering med Adobe Analytics med IMS {#integration-with-adobe-analytics-using-ims}
 
-Integreringen av AEM med Adobe Analytics via API:t för Analytics Standard kräver att du konfigurerar Adobe IMS (Identity Management System) och Adobe I/O.
+Integreringen av AEM med Adobe Analytics via API:t för Analytics Standard kräver att du konfigurerar Adobe IMS (Identity Management System) med Adobe Developer Console.
 
 >[!NOTE]
 >
@@ -29,13 +29,13 @@ Innan du börjar med den här proceduren:
 * [Stöd för Adobe](https://helpx.adobe.com/se/contact/enterprise-support.ec.html) måste tillhandahålla ditt konto för:
 
    * Adobe Console
-   * Adobe I/O
+   * Adobe Developer Console
    * Adobe Analytics och
    * Adobe IMS (Identity Management System)
 
 * Din organisations systemadministratör bör använda Admin Console för att lägga till de utvecklare som behövs i organisationen till de relevanta produktprofilerna.
 
-   * Detta ger specifika utvecklare tillstånd att aktivera integreringar inom Adobe I/O.
+   * Detta ger specifika utvecklare behörighet att aktivera integreringar i Adobe Developer Console.
    * Mer information finns i [Hantera utvecklare](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html).
 
 
@@ -52,7 +52,7 @@ Det första steget i konfigurationen är att skapa en IMS-konfiguration i AEM oc
 
    ![](assets/integrate-analytics-io-01.png)
 
-1. Välj **Hämta** (eller **Hämta offentlig nyckel**) för att hämta filen till den lokala hårddisken, så att den är klar att användas när [konfigurera Adobe I/O för Adobe Analytics-integrering med AEM](#configuring-adobe-i-o-for-adobe-analytics-integration-with-aem).
+1. Välj **Hämta** (eller **Hämta offentlig nyckel**) för att hämta filen till den lokala hårddisken, så att den är klar att användas när [konfigurera IMS för Adobe Analytics-integrering med AEM](#configuring-ims-for-adobe-analytics-integration-with-aem).
 
    >[!CAUTION]
    >
@@ -60,23 +60,17 @@ Det första steget i konfigurationen är att skapa en IMS-konfiguration i AEM oc
 
    ![](assets/integrate-analytics-io-02.png)
 
-## Konfigurera Adobe I/O för Adobe Analytics-integrering med AEM {#configuring-adobe-i-o-for-adobe-analytics-integration-with-aem}
+## Konfigurera IMS för Adobe Analytics-integrering med AEM {#configuring-ims-for-adobe-analytics-integration-with-aem}
 
-Du måste skapa det Adobe I/O-projekt (integrering) med Adobe Analytics som AEM ska använda och sedan tilldela de behörigheter som krävs.
+Med Adobe Developer Console måste du skapa ett projekt (integration) med Adobe Analytics (för AEM) och sedan tilldela de behörigheter som krävs.
 
 ### Skapa projektet {#creating-the-project}
 
-Öppna konsolen Adobe I/O för att skapa ett I/O-projekt med Adobe Analytics som AEM ska använda:
+Öppna Adobe Developer Console för att skapa ett projekt med Adobe Analytics som AEM ska använda:
 
-<!--
->[!NOTE]
->
->See also the [Adobe I/O tutorials](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html).
--->
+1. Öppna Adobe Developer Console for Projects:
 
-1. Öppna Adobe I/O-konsolen för projekt:
-
-   [https://console.adobe.io/projects](https://console.adobe.io/projects)
+   [https://developer.adobe.com/console/projects](https://developer.adobe.com/console/projects)
 
 1. Alla projekt du har visas. Välj **Skapa nytt projekt** - platsen och användningen beror på:
 
@@ -129,11 +123,11 @@ Du måste nu tilldela nödvändig behörighet till integreringen:
 1. Välj **API-autentiseringsuppgifter** och sedan den integreringskonfiguration som krävs.
 1. Välj **Redigerare** som **Produktroll**; i stället för **Observer**.
 
-## Information lagrad för Adobe I/O-integreringsprojektet {#details-stored-for-the-adobe-io-integration-project}
+## Information lagrad för integreringsprojektet i Adobe Developer Console {#details-stored-for-the-ims-integration-project}
 
-På projektkonsolen i Adobe I/O kan du se en lista över alla dina integrationsprojekt:
+På konsolen Adobe Developer Projects ser du en lista över alla dina integreringsprojekt:
 
-* [https://console.adobe.io/projects](https://console.adobe.io/projects)
+* [https://developer.adobe.com/console/projects](https://developer.adobe.com/console/projects)
 
 Välj en specifik projektpost om du vill visa mer information om konfigurationen. Bland dessa finns:
 
@@ -146,22 +140,22 @@ Välj en specifik projektpost om du vill visa mer information om konfigurationen
 * APIS
    * Exempel: Adobe Analytics
 
-Vissa av dessa behöver du för att slutföra integreringen av Adobe I/O för Adobe Analytics i AEM.
+Några av dessa behöver du för att slutföra integreringen av Adobe Analytics i AEM.
 
 ## Slutför IMS-konfigurationen i AEM {#completing-the-ims-configuration-in-aem}
 
-Om du går tillbaka till AEM kan du slutföra IMS-konfigurationen genom att lägga till obligatoriska värden från Adobe I/O-integreringen för Analytics:
+Om du går tillbaka till AEM kan du slutföra IMS-konfigurationen genom att lägga till obligatoriska värden från integrationsprojektet för Analytics:
 
 1. Återgå till [IMS-konfiguration öppnas i AEM](#configuring-an-ims-configuration-generating-a-public-key).
 1. Välj **Nästa**.
 
-1. Här kan du använda [information från projektkonfigurationen i Adobe I/O](#details-stored-for-the-adobe-io-integration-project):
+1. Här kan du använda [Information lagrad för integreringsprojektet i Adobe Developer Console](#details-stored-for-the-ims-integration-project):
 
    * **Titel**: Din text.
    * **Auktoriseringsserver**: Kopiera/klistra in detta från `aud` rad i **Nyttolast** avsnitt nedan, t.ex. `https://ims-na1.adobelogin.com` i exemplet nedan
-   * **API-nyckel**: Kopiera detta från **Autentiseringsuppgifter** i [Projektöversikt](#details-stored-for-the-adobe-io-integration-project)
-   * **Klienthemlighet**: Generera detta i [Fliken Klienthemlighet i avsnittet Tjänstkonto (JWT)](#details-stored-for-the-adobe-io-integration-project)och kopiera
-   * **Nyttolast**: Kopiera detta från [Generera JWT-flik i avsnittet Tjänstkonto (JWT)](#details-stored-for-the-adobe-io-integration-project)
+   * **API-nyckel**: Kopiera detta från **Autentiseringsuppgifter** i [Projektöversikt](#details-stored-for-the-ims-integration-project)
+   * **Klienthemlighet**: Generera detta i [Fliken Klienthemlighet i avsnittet Tjänstkonto (JWT)](#details-stored-for-the-ims-integration-project)och kopiera
+   * **Nyttolast**: Kopiera detta från [Generera JWT-flik i avsnittet Tjänstkonto (JWT)](#details-stored-for-the-ims-integration-project)
 
    ![Information om AEM IMS-konfiguration](assets/integrate-analytics-io-10.png)
 
