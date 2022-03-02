@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: d4152b4d-531b-4b62-8807-a5bc5afe94c6
 docset: aem65
 exl-id: f2921349-de8f-4bc1-afa2-aeace99cfc5c
-source-git-commit: 079b7b1e386ac2d02026ee2d8db411e517168b00
+source-git-commit: 72012fa441edb01deb7e557b707fb068d8e9892e
 workflow-type: tm+mt
-source-wordcount: '1223'
+source-wordcount: '1220'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ ht-degree: 0%
    >   * en namngiven arbetsyta som anges i molnkonfigurationen.
    >   * **Obs!** För export till särskilda arbetsytor krävs Adobe Target Premium.
 >
->* AEM måste vara [integrerat med Adobe Target med Adobe I/O](/help/sites-administering/integration-target-ims.md).
+>* AEM måste vara [integrerat med Adobe Target med IMS](/help/sites-administering/integration-target-ims.md).
 >
 >AEM 6.5.0.0 och 6.5.1.0:
 >
@@ -53,11 +53,11 @@ Det finns tre formatalternativ för att exportera ett Experience Fragment till A
 * JSON: Stöd för leverans av headless-material
 * HTML &amp; JSON
 
-AEM Experience Fragments kan exporteras till standardarbetsytan i Adobe Target eller till användardefinierade arbetsytor för Adobe Target. Detta görs via Adobe I/O, för vilket AEM måste [integrerat med Adobe Target med Adobe I/O](/help/sites-administering/integration-target-ims.md).
+AEM Experience Fragments kan exporteras till standardarbetsytan i Adobe Target eller till användardefinierade arbetsytor för Adobe Target. Detta görs med Adobe Developer Console, som AEM måste använda [integrerat med Adobe Target med IMS](/help/sites-administering/integration-target-ims.md).
 
 >[!NOTE]
 >
->Adobe Target arbetsytor finns inte i själva Adobe Target. De definieras och hanteras i Adobe IMS (Identity Management System) och väljs sedan ut för användning i olika lösningar med hjälp av Adobe I/O-integreringar.
+>Adobe Target arbetsytor finns inte i själva Adobe Target. De definieras och hanteras i Adobe IMS (Identity Management System) och väljs sedan ut för användning i olika lösningar med hjälp av integreringar från Adobe Developer Console.
 
 >[!NOTE]
 >
@@ -80,7 +80,7 @@ AEM Experience Fragments kan exporteras till standardarbetsytan i Adobe Target e
 
 Du måste utföra olika åtgärder:
 
-1. Du måste [integrera AEM med Adobe Target med Adobe I/O](/help/sites-administering/integration-target-ims.md).
+1. Du måste [integrera AEM med Adobe Target med IMS](/help/sites-administering/integration-target-ims.md).
 2. Experience Fragments exporteras från AEM författarinstans, så du måste [Konfigurera AEM Link Externalizer](/help/sites-administering/target-requirements.md#configuring-the-aem-link-externalizer) på författarinstansen för att säkerställa att alla referenser i Experience Fragment är externaliserade för webbleverans.
 
    >[!NOTE]
