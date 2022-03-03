@@ -2,9 +2,9 @@
 title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: '"[!DNL Adobe Experience Manager] 6.5 som beskriver versionsinformation, nyheter, hur man installerar och detaljerade ändringslistor."'
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: 6a89cb79ccfbcec7385832d5682bf61895253718
+source-git-commit: b1e38323fbbb268de76067eb85596119b44221c2
 workflow-type: tm+mt
-source-wordcount: '2630'
+source-wordcount: '2651'
 ht-degree: 0%
 
 ---
@@ -325,17 +325,11 @@ Granska om du använder en funktion eller en funktion i en distribution. Planera
 
 * När du installerar AEM 6.5 Service Pack 12 och försöker hämta status-ZIP-filen hämtar Experience Manager en skadad fil.
 
-   >[!CAUTION]
-   >
-   >En ny version av indexdefinitionspaketet håller på att utvecklas. Länken nedan kommer att publiceras så snart den blir tillgänglig.
-   >
-   >Till dess ber vi dig kontakta kundtjänst för att få en snabbkorrigering.
+   Du undviker detta genom att hämta och installera följande två objekt på AEM **före** hämtar status-ZIP-filen:
 
-   <!--
-  Download and install [AEM Sites SEO Index Package](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/sites-seo-index-content-1.0.0.zip) on your AEM instance before downloading the ZIP file to resolve the issue.
-  -->
+   * följande [snabbkorrigering](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fhotfix%2Faem-service-pkg-6.5.12.0-NPR-38144-B0002.zip)
 
-   Ladda ned och installera AEM Sites SEO Index Package på din AEM innan du hämtar ZIP-filen för att lösa problemet.
+   * den [AEM Sites SEO-indexpaket](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.4.zip)
 
 * Som [!DNL Microsoft Windows Server 2019] stöder inte [!DNL MySQL 5.7] och [!DNL JBoss EAP 7.1], [!DNL Microsoft Windows Server 2019] stöder inte körklara installationer för [!DNL AEM Forms 6.5.10.0].
 
