@@ -11,7 +11,7 @@ discoiquuid: f89921ef-c638-4a07-88d5-3dd8614c5166
 docset: aem65
 role: Admin
 exl-id: 2fc8abec-8ba6-40b7-bbb1-4288eeea7c86
-source-git-commit: 96ba82e984d061d41bb55814d9e573326f9eaf67
+source-git-commit: 2e6d688818e9cc337444bcda2a49485e9167a113
 workflow-type: tm+mt
 source-wordcount: '0'
 ht-degree: 0%
@@ -47,6 +47,7 @@ Du kan uppgradera direkt från:
 
 * AEM 6.3 Forms on JEE
 * AEM 6.4 Forms on JEE
+* AEM 6.5.x.x i JEE
 
 Du kan också utföra en uppgradering från
 
@@ -59,11 +60,11 @@ Du kan också utföra en uppgradering från
 
 AEM 6.5.12.0 Forms on JEE innehåller två typer av installationsprogram: Fullständigt installationsprogram och korrigeringsprogram.
 
-**Fullständig installationsfil**: Du kan använda det fullständiga installationsprogrammet för att uppgradera från AEM 6.3 Forms på JEE eller AEM 6.4 på JEE till AEM 6.5.12.0 Forms på JEE. Det är också till för kunder som skapar nya AEM Forms-instanser och utför uppgraderingar som inte är på plats.
+**Fullständig installationsfil**: Du kan använda det fullständiga installationsprogrammet för att ställa in nya AEM Forms-instanser eller utföra uppgraderingar från AEM 6.3 Forms på JEE, AEM 6.4 på JEE och uppgradering från AEM 6.5.x.x på JEE till AEM 6.5.12.0 Forms på JEE.
 
 **Installationsprogram för korrigeringsfiler**: Patch installer är avsett för kunder som redan använder AEM 6.5.x.x. Du kan använda installationsprogrammet för korrigeringsfilen för att uppgradera till den senaste versionen av AEM Forms.
 
-I följande tabell visas avsändare som använder fullständig installation och korrigeringsinstallation.
+I följande bild visas avsändare som använder det fullständiga installationsprogrammet och korrigeringsprogrammet.
 
 ![](assets/full-and-patch-installer.png)
 

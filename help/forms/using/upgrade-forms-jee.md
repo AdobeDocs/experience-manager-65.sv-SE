@@ -11,7 +11,7 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: e745033f-8015-4fae-9d82-99d35802c0a6
 role: Admin
 exl-id: 722e75a0-bcb3-465e-bb74-ea94a3b99fd3
-source-git-commit: 96ba82e984d061d41bb55814d9e573326f9eaf67
+source-git-commit: 2e6d688818e9cc337444bcda2a49485e9167a113
 workflow-type: tm+mt
 source-wordcount: '0'
 ht-degree: 0%
@@ -22,9 +22,9 @@ ht-degree: 0%
 
 AEM 6.5.12.0 Forms on JEE innehåller två typer av installationsprogram: Fullständigt installationsprogram och korrigeringsprogram.
 
-**Fullständig installationsfil**: Du kan använda det fullständiga installationsprogrammet för att uppgradera från AEM 6.3 Forms på JEE eller AEM 6.4 på JEE till AEM 6.5.12.0 Forms på JEE. Det är också till för kunder som skapar nya AEM Forms-instanser och utför uppgraderingar som inte är på plats.
+**Fullständig installationsfil**: Du kan använda [AEM 6.5.12.0 i JEE-fullversionen](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) för att skapa nya AEM Forms-instanser eller utföra uppgraderingar från AEM 6.3 Forms på JEE, AEM 6.4 på JEE och uppgradering från AEM 6.5.x.x Forms på JEE till AEM 6.5.12.0 Forms på JEE.
 
-**Installationsprogram för korrigeringsfiler**: Patch installer är avsett för kunder som redan använder AEM 6.5.x.x. Du kan använda installationsprogrammet för korrigeringsfilen för att uppgradera till den senaste versionen av AEM Forms.
+**Installationsprogram för korrigeringsfiler**: [AEM 6.5.12.0 i JEE patch installer](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) är till för kunder som redan använder AEM 6.5.x.x. Du kan använda installationsprogrammet för korrigeringsfilen för att uppgradera till den senaste versionen av AEM Forms.
 
 I följande tabell visas avsändare som använder fullständig installation och korrigeringsinstallation.
 
@@ -41,4 +41,4 @@ Utför följande procedur för att använda det fullständiga installationsprogr
    * [Uppgradera från AEM 6.3 eller AEM 6.4 Forms till AEM 6.5 Forms för WebSphere](http://www.adobe.com/go/learn_aemforms_upgradeWebSphere_65)
    * [Uppgradera från AEM 6.3 eller AEM 6.4 Forms till AEM 6.5 Forms for JBoss Turnkey](http://www.adobe.com/go/learn_aemforms_upgradeTurnkey_65)
 
-Direktuppgradering från LiveCycle ES2, LiveCycle ES3, AEM 6.0 Forms, AEM 6.1 Forms, AEM 6.2 Forms till AEM 6.5 Forms är inte tillgängligt. Du kan uppgradera till en eller flera versioner av LiveCycle eller AEM Forms och sedan uppgradera från AEM 6.5 Forms. En lista över mellanversioner och motsvarande uppgraderingsinstruktioner finns i [Välj en uppgraderingssökväg](upgrade.md).
+Direktuppgradering från LiveCycle ES2, LiveCycle ES3, AEM 6.0 Forms, AEM 6.1 Forms, AEM 6.2 Forms till AEM 6.5 Forms är inte tillgängligt. Du kan uppgradera till en eller flera versioner av LiveCycle eller AEM Forms och sedan uppgradera till AEM 6.5 Forms. En lista över mellanversioner och motsvarande uppgraderingsinstruktioner finns i [Välj en uppgraderingssökväg](upgrade.md).
