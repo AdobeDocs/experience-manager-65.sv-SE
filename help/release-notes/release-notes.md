@@ -2,9 +2,9 @@
 title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: '"[!DNL Adobe Experience Manager] 6.5 som beskriver versionsinformation, nyheter, hur man installerar och detaljerade ändringslistor."'
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: 7649b9a36fbf47ec92bd4c33cd7590d9934aa169
+source-git-commit: 23b5f83e598210f14ee20e8fa5fb01434b93faae
 workflow-type: tm+mt
-source-wordcount: '3193'
+source-wordcount: '3143'
 ht-degree: 0%
 
 ---
@@ -111,7 +111,6 @@ Följande problem har åtgärdats i [!DNL Assets]:
    * Endast det sista urvalet av det överordnade fältet sparas för det beroende icke-redigerbara fältet (NPR-37858).
    * Den beroende listrutan (fältet för flera värden) visar standardvärdet för den valda överordnade listrutan (NPR-37791).
 
-
 ### [!DNL Dynamic Media] {#dynamic-media-65120}
 
 Följande problem har åtgärdats i [!DNL Dynamic Media]:
@@ -128,9 +127,7 @@ Följande problem har åtgärdats i [!DNL Dynamic Media]:
 
 * Rullning fungerar inte som förväntat om du använder filter på inkorgsobjekt (CQ-4333594).
 
-
 ### [!DNL Forms] {#forms-65120}
-
 
 >[!NOTE]
 >
@@ -200,7 +197,6 @@ Följande problem har åtgärdats i [!DNL Dynamic Media]:
 
 * Problem med XPath/Dot Notation Browser med Set Variable step i Workflow i AEM 6.5.9.0 Forms och AEM 6.5.10.0 Forms (CQ-4336582).
 
-
 Mer information om säkerhetsuppdateringar finns i [[!DNL Experience Manager] säkerhetsbulletinsida](https://helpx.adobe.com/security/products/experience-manager.html).
 
 ## Installera 6.5.12.0 {#install}
@@ -266,10 +262,6 @@ Om du vill veta vilka plattformar som är certifierade för att fungera med den 
 1. Kontrollera att du har installerat Adobe Experience Manager Service Pack.
 1. Ladda ned motsvarande tilläggspaket från Forms på [AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html#forms-updates) för ditt operativsystem.
 1. Installera Forms tilläggspaket enligt beskrivningen i [Installera AEM Forms tilläggspaket](/help/forms/using/installing-configuring-aem-forms-osgi.md#install-aem-forms-add-on-package).
-
->[!NOTE]
->
->Experience Manager 6.5.12.0 innehåller en ny version av [AEM Forms-kompatibilitetspaket](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html#aem-65-forms-releases). Om du använder en äldre version av AEM Forms Compatibility Package och uppdaterar till Experience Manager 6.5.10.0 installerar du den senaste versionen av paketet efter installationen av Forms Add-On Package.
 
 ### Installera Adobe Experience Manager Forms i JEE {#install-aem-forms-jee-installer}
 
