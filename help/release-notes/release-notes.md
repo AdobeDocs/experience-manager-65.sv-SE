@@ -2,9 +2,9 @@
 title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: '"[!DNL Adobe Experience Manager] 6.5 som beskriver versionsinformation, nyheter, hur man installerar och detaljerade ändringslistor."'
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: 23b5f83e598210f14ee20e8fa5fb01434b93faae
+source-git-commit: 9a3f26b6709461a911e833f7e340d11c759c7dae
 workflow-type: tm+mt
-source-wordcount: '3143'
+source-wordcount: '3169'
 ht-degree: 0%
 
 ---
@@ -84,6 +84,7 @@ Följande problem har åtgärdats i [!DNL Sites]:
 * [Communities] Det går inte att klicka på innehållet i tabellen för gruppmedlemmar (CQ-4334404).
 * [Oak] Synkroniseringsprocessen i kalla vänteläge fungerar inte och loggningsfel (CQ-433868).
 * [Plattformsbasens användargränssnitt] [!DNL Experience Manager] startsidan visas igen när användaren väljer [!DNL Adobe Experience Manager] -ikonen finns redan på startsidan (CQ-4317409).
+* Om en användare (utan replikeringsbehörighet) vill ta bort eller flytta sidor (även om sidorna inte är aktiverade) kan du `Page Subtree Activation Check` under Konfiguration `Page Manager Factory` måste aktiveras (NPR-37936).
 
 ### [!DNL Assets] {#assets-65120}
 
