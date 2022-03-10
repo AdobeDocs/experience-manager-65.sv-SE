@@ -2,9 +2,9 @@
 title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: '"[!DNL Adobe Experience Manager] 6.5 som beskriver versionsinformation, nyheter, hur man installerar och detaljerade ändringslistor."'
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: 9a3f26b6709461a911e833f7e340d11c759c7dae
+source-git-commit: 2a6b92ecd40ae108aee019bcba939a470b66d1b5
 workflow-type: tm+mt
-source-wordcount: '3169'
+source-wordcount: '3307'
 ht-degree: 0%
 
 ---
@@ -150,6 +150,12 @@ Följande problem har åtgärdats i [!DNL Dynamic Media]:
 * När du aktiverar egenskapen Tillåt RTF för en textruta uppstår problem med den tillåtna maxlängden (NPR-37825).
 
 * CSS-problem när du kopierar en komponent i en adaptiv form (NPR-37812).
+
+* När du genererar en översättning av adaptiva formulär innehåller den genererade XLIFF-filen inte samma textsekvens som i det adaptiva formuläret. I vissa fall krävs det att textens kontext visas. Detta är inte möjligt om sekvensen i XLIFF är alfabetisk. (NPR-37435).
+
+* När ett anpassningsbart formulär översätts är HTML-taggarna en del av översättningen. Om en användare gör ett misstag och taggarna inte är giltiga visas inte hela texten i postdokumentet. (NPR-37499)
+
+* När ett anpassningsbart formulär skapas och färdigställs på basspråket och översättningen görs av ett externt team och importeras. Om det till och med sker en liten textändring, t.ex. att en punkt läggs till eller saknas (.) används för basspråket, och den fullständiga översättningen saknas för alla andra språk. (NPR-37189)
 
 **Formulärdatamodell**
 
