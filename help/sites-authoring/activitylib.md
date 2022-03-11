@@ -11,10 +11,10 @@ topic-tags: personalization
 discoiquuid: ef2321a3-cd51-4298-8782-e1a2ca721868
 docset: aem65
 exl-id: f510ca08-977d-45d5-86af-c4b7634b01ba
-source-git-commit: 10e46fe60edcaa116978173b8c61542653f6a551
+source-git-commit: 084e5d561e25dcbaee4489b65f423fc9166832be
 workflow-type: tm+mt
-source-wordcount: '2001'
-ht-degree: 13%
+source-wordcount: '2000'
+ht-degree: 12%
 
 ---
 
@@ -97,7 +97,7 @@ Lägg till en aktivitet eller redigera en befintlig aktivitet för att fokusera 
 
 Så här lägger du till en aktivitet:
 
-1. Klicka eller tryck på det varumärke som du skapar aktiviteten för och klicka eller tryck sedan på **Skapa** och slutligen på **Skapa aktivitet**. Om du redigerar markerar du aktiviteten och klickar eller trycker på **Redigera**.
+1. Klicka på eller tryck på det varumärke som du skapar aktiviteten för, klicka eller tryck **Skapa** och sedan **Skapa aktivitet**. Om du redigerar markerar du aktiviteten och klickar eller trycker på **Redigera**.
 1. Ange följande information och klicka eller tryck sedan på **Nästa**:
 
    * Ett namn för aktiviteten.
