@@ -6,10 +6,10 @@ mini-toc-levels: 2
 role: User, Admin, Leader
 feature: Connected Assets,User and Groups
 exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
-source-git-commit: 19eaabb55f11ea8080a545d994795e30817a51fb
+source-git-commit: f4e6a1855fad76df8102751b14e9ac6982315937
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '3670'
+ht-degree: 17%
 
 ---
 
@@ -246,45 +246,65 @@ Du kan även uppdatera metadataegenskaperna för en resurs på en fjärr-DAM och
 
 ## Vanliga frågor {#frequently-asked-questions}
 
-### Ska du konfigurera anslutna resurser om du behöver använda resurser som är tillgängliga på din [!DNL Sites] distribution?
++++**Ska du konfigurera anslutna resurser om du behöver använda resurser som är tillgängliga på din [!DNL Sites] distribution?**
 
 I så fall behöver du inte konfigurera anslutna resurser. Du kan använda resurser som finns på [!DNL Sites] distribution.
 
-### När behöver du konfigurera funktionen för anslutna resurser?
++++
+
++++**När behöver du konfigurera funktionen för anslutna resurser?**
 
 Konfigurera bara funktionen för anslutna resurser när du behöver använda resurserna som finns på en fjärr-DAM-distribution på en [!DNL Sites] distribution.
 
-### Hur många [!DNL Sites] kan du ansluta till en fjärr-DAM-distribution efter att ha konfigurerat anslutna resurser?
++++
+
++++**Hur många [!DNL Sites] kan du ansluta till en fjärr-DAM-distribution efter att ha konfigurerat anslutna resurser?**
 
 Du kan ansluta högst fyra [!DNL Sites] distributioner till en fjärr-DAM-distribution efter konfigurering av anslutna resurser. Mer information finns i [Arkitektur för anslutna resurser](#connected-assets-architecture).
 
-### Hur många fjärr-DAM-distributioner kan du ansluta till en [!DNL Sites] distribueras efter konfigurering av anslutna resurser?
++++
+
++++**Hur många fjärr-DAM-distributioner kan du ansluta till en [!DNL Sites] distribueras efter konfigurering av anslutna resurser?**
 
 Du kan ansluta en fjärr-DAM-distribution till en [!DNL Sites] efter konfigurering av anslutna resurser. Mer information finns i [Arkitektur för anslutna resurser](#connected-assets-architecture).
 
-### Kan du använda Dynamic Media-resurser från dina [!DNL Sites] distribueras efter konfigurering av anslutna resurser?
++++
+
++++**Kan du använda Dynamic Media-resurser från dina [!DNL Sites] distribueras efter konfigurering av anslutna resurser?**
 
 När du har konfigurerat anslutna resurser [!DNL Dynamic Media] resurser är tillgängliga på [!DNL Sites] i skrivskyddat läge. Därför kan du inte använda [!DNL Dynamic Media] för att bearbeta resurser på [!DNL Sites] distribution. Mer information finns i [Konfigurera en anslutning mellan platser och Dynamic Media-distributioner](#dynamic-media-assets).
 
-### Kan du använda material för formaten Image och Document från DAM-fjärrdistributionen på [!DNL Sites] distribueras efter konfigurering av anslutna resurser?
++++
+
++++**Kan du använda material för formaten Image och Document från DAM-fjärrdistributionen på [!DNL Sites] distribueras efter konfigurering av anslutna resurser?**
 
 Ja, du kan använda resurserna för formaten Image och Document från DAM-fjärrdistributionen på [!DNL Sites] efter konfigurering av anslutna resurser.
 
-### Kan ni använda innehållsfragment och videomaterial från den fjärranslutna DAM-distributionen på [!DNL Sites] distribueras efter konfigurering av anslutna resurser?
++++
+
++++**Kan ni använda innehållsfragment och videomaterial från den fjärranslutna DAM-distributionen på [!DNL Sites] distribueras efter konfigurering av anslutna resurser?**
 
 Nej, du kan inte använda innehållsfragment och videomaterial från fjärr-DAM-distributionen på [!DNL Sites] efter konfigurering av anslutna resurser.
 
-### Kan du använda Dynamic Media-resurser från fjärr-DAM-distributionen på [!DNL Sites] distribueras efter konfigurering av anslutna resurser?
++++
+
++++**Kan du använda Dynamic Media-resurser från fjärr-DAM-distributionen på [!DNL Sites] distribueras efter konfigurering av anslutna resurser?**
 
 Ja, du kan konfigurera och använda Dynamic Media-bildresurser från fjärrdistributionen av DAM på [!DNL Sites] efter konfigurering av anslutna resurser. Mer information finns i [Konfigurera en anslutning mellan platser och Dynamic Media-distributioner](#dynamic-media-assets).
 
-### När du har konfigurerat anslutna resurser, kan du uppdatera, ta bort, byta namn på och flytta åtgärder på fjärr-DAM-resurser eller -mappar?
++++
+
++++**När du har konfigurerat anslutna resurser, kan du uppdatera, ta bort, byta namn på och flytta åtgärder på fjärr-DAM-resurser eller -mappar?**
 
 Ja, när du har konfigurerat anslutna resurser kan du uppdatera, ta bort, byta namn på och flytta resurser eller mappar i fjärr-DAM. Uppdateringarna, med viss fördröjning, är automatiskt tillgängliga i Sites-distributionen. Mer information finns i [Hantera uppdateringar av resurser i fjärr-DAM](#handling-updates-to-remote-assets).
 
-### När du har konfigurerat anslutna resurser, kan du lägga till eller ändra resurser i [!DNL Sites] driftsätta och göra dem tillgängliga på fjärrdistribution av DAM?
++++
+
++++**När du har konfigurerat anslutna resurser, kan du lägga till eller ändra resurser i [!DNL Sites] driftsätta och göra dem tillgängliga på fjärrdistribution av DAM?**
 
 Du kan lägga till resurser i [!DNL Sites] distribution, men dessa resurser kan inte göras tillgängliga för den fjärranslutna DAM-distributionen.
+
++++
 
 ## Begränsningar och bästa metoder {#tip-and-limitations}
 
