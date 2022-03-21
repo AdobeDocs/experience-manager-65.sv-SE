@@ -6,9 +6,9 @@ seo-description: A list of the supported client and server platforms for AEM.
 content-type: reference
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: cda5e0b545903333d928f14e043a931898d87dc3
+source-git-commit: 077540ed65f31f1bb4f0063fb6ac8bddb76595da
 workflow-type: tm+mt
-source-wordcount: '3362'
+source-wordcount: '3314'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,6 @@ Lägsta krav för att köra Adobe Experience Manager:
 >
 >* Användningsexempel för digitala resurser kräver mer basminne. Se [Driftsättning och underhåll](/help/sites-deploying/deploy.md#default-local-install) för mer information.
 >* [AEM Forms tilläggspaket](/help/forms/using/installing-configuring-aem-forms-osgi.md) kräver 15 GB temporärt utrymme.
-
 >
 
 
@@ -138,8 +137,8 @@ Adobe Experience Manager arbetar med följande versioner av Java Virtual Machine
 
 | **Plattform** | **Supportnivå** | **Länk** |
 |---|---|---|
-| Azul Zulu OpenJDK 11 - 64 bitar | S: Stöds `[1]` | [Hämta](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Azul*+Zulu*+JDK*+11*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=24) |
-| Azul Zulu OpenJDK 8 - 64 bitar | S: Stöds `[1]` | [Hämta](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Azul*+Zulu*+JDK*+8*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=18) |
+| Azul Zulu OpenJDK 11 - 64 bitar | S: Stöds `[1]` |  |
+| Azul Zulu OpenJDK 8 - 64 bitar | S: Stöds `[1]` |  |
 | Oracle Java SE 11 JDK - 64 bitar | S: Stöds `[2]` | [Hämta](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Oracle*+JDK*+11*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=24&lt;td>) |
 | Oracle Java SE 10 JDK | Z: Stöds inte `[2]` |
 | Oracle Java SE 9 JDK | Z: Stöds inte `[2]` |
@@ -149,7 +148,7 @@ Adobe Experience Manager arbetar med följande versioner av Java Virtual Machine
 
 1. Stöd för och distribution av Azul Zulu Builds of OpenJDK, inklusive alla underhållsuppdateringar av LTS-versioner, kommer att stödjas av Adobe direkt för alla AEM som använder Azul Zulu Builds of OpenJDK, med början AEM 6.5 SP9-svar. Se [Azul Java-stöd för Adobe Experience Manager Q&amp;A](assets/adobe-azul-openjdk-license-agreement.pdf) för mer information.
 
-1. Oraclet har flyttat till en LTS-modell (Long Term Support) för Oracle Java SE-produkter. Java 9, Java 10 och Java 12 är icke-LTS-versioner som Oracle (se [Oracle Java SE - supportöversikt](https://www.oracle.com/technetwork/java/eol-135779.html)). För att driftsätta AEM i produktionsmiljön tillhandahåller Adobe endast stöd för LTS-versionerna av Java. Stöd för och distribution av Oraclet Java SE JDK, inklusive alla underhållsuppdateringar av LTS-releaser efter slutet av de offentliga uppdateringarna, kommer att stödjas av Adobe direkt för alla AEM som använder Oraclet Java SE-teknik **till december 2022**. Se [Stöd för Oracle Java i Adobe Experience Manager Q&amp;A](assets/adobe-oracle-java-license-agreement.pdf) för mer information.
+1. Oraclet har flyttat till en LTS-modell (Long Term Support) för Oracle Java SE-produkter. Java 9, Java 10 och Java 12 är icke-LTS-versioner som Oracle (se [Oracle Java SE - supportöversikt](https://www.oracle.com/technetwork/java/eol-135779.html)). För att driftsätta AEM i produktionsmiljön tillhandahåller Adobe endast stöd för LTS-versionerna av Java. Stöd för och distribution av Oraclet Java SE JDK, inklusive alla underhållsuppdateringar av LTS-releaser efter slutet av de offentliga uppdateringarna, kommer att stödjas av Adobe direkt för alla AEM som använder Oraclet Java SE. Se [Stöd för Oracle Java i Adobe Experience Manager Q&amp;A](assets/adobe-oracle-java-license-agreement.pdf) för mer information.
 
 1. IBM JRE stöds endast tillsammans med WebSphere Application Server.
 
@@ -517,7 +516,6 @@ För Windows x86:
 >* En version av Acrobat medföljer AEM Forms för att aktivera PDF Generator-funktionaliteten. Programmeringsversionen ska endast användas med AEM Forms under AEM Forms-licensens löptid, för användning med AEM Forms PDF Generator. Mer information finns i AEM Forms produktbeskrivning för din distribution ([Lokal](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html) eller [Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))&quot;
 >
 >* PDF Generator-tjänsten stöder inte Microsoft Windows 10.
-
 >
 
 
