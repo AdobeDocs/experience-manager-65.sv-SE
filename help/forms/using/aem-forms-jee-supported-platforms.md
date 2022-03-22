@@ -11,7 +11,7 @@ discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: 2a6b92ecd40ae108aee019bcba939a470b66d1b5
+source-git-commit: 73d5b894dfa1bbb3ae3f2973cc4f9db1ace90ef8
 workflow-type: tm+mt
 source-wordcount: '3515'
 ht-degree: 0%
@@ -116,12 +116,11 @@ Adobe Experience Manager Forms kräver att en Java Virtual Machine körs, vilket
    <td>Mindre releaser och uppdateringar</td>
   </tr>
   <tr>
-   <td> IBM JAVA1.8.0_291(build 8.0.6.30)<br /> </td>
+   <td>IBM JAVA1.8.0_291(build 8.0.6.30)<br /> </td>
    <td>S: Stöds</td>
    <td>Mindre releaser och uppdateringar</td>
   </tr>
-
-</tbody>
+ </tbody>
 </table>
 
 >[!NOTE]
@@ -649,7 +648,7 @@ Ytterligare krav finns i:
    <td>Alla uppdateringar</td>
   </tr>
   <tr>
-   <td>Microsoft Firefox ESR</td>
+   <td>Mozilla Firefox ESR</td>
    <td>E: Arbetet förväntas</td>
    <td> Alla uppdateringar</td>
   </tr>
@@ -687,7 +686,7 @@ Ytterligare krav finns i:
 > - Forms portal stöder JAWS 14.0 skärmläsarprogram i Internet Explorer 11.
 
 
-#### Mobila kunder {#mobile-clients}
+#### Mobile-klienter {#mobile-clients}
 
 <table>
  <tbody>
@@ -721,7 +720,7 @@ Ytterligare krav finns i:
 
 ### AEM Forms {#aem-forms-workspace-app}
 
-#### Stöd för mobila enheter {#mobile-device-support}
+#### Stöd för Mobile {#mobile-device-support}
 
 AEM Forms finns på följande plattformar:
 
