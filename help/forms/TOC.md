@@ -8,9 +8,9 @@ user-guide-title: Adobe Experience Manager 6.5 Forms Guide
 breadcrumb-title: Forms Guide
 user-guide-description: Skapa, hantera, publicera och uppdatera digitala formulär.
 role: User
-source-git-commit: 7962d076135bcbac821ff85fd1831ee2c444ff00
+source-git-commit: 290ae422e1136ea28ab21c3031ab66fb5405f1d3
 workflow-type: tm+mt
-source-wordcount: '3772'
+source-wordcount: '3775'
 ht-degree: 1%
 
 ---
@@ -173,7 +173,6 @@ ht-degree: 1%
    + [Använda SOM-uttryck i adaptiva former](using/using-som-expressions-adaptive-forms.md)
    + [Lägga till information från användardata i metadata för att skicka formulär](using/form-submission-metadata.md)
    + [XFA-stöd i XDP-baserade adaptiva formulär](using/xfa-api-supported-in-adaptive-form.md)
-   + [Ändra sidans nollinnehåll i Designer](using/changing-page-zero-content-designer.md)
    + [Bevilja regelredigeraråtkomst för valda användargrupper](using/rule-editor-access-user-groups.md)
    + [Använda arbetsflöde för AEM översättning för att lokalisera anpassningsbara formulär och urkunder](using/using-aem-translation-workflow-to-localize-adaptive-forms.md)
    + [Automatisera testning av anpassningsbara formulär](using/calvin.md)
@@ -373,6 +372,7 @@ ht-degree: 1%
    + [Aktivera AEM för att söka efter dokumentsäkerhetsskyddade PDF- och Microsoft Office-dokument](using/enable-search-for-drm-protected-pdf-and-office-documents-in-aem.md)
    + [Protect ett dokument för en annan användares räkning](using/protect-document-on-behalf-of-another-user.md)
 + Forms Designer {#use-forms-designer}
+   + [Hjälp för Forms Designer](using/forms-designer-help.md)
    + [Använda Designer](http://www.adobe.com/go/learn_aemforms_designer_65)
    + [Självstudier för att komma igång med Designer ](http://www.adobe.com/go/learn_aemforms_designer_quick_start_65)
    + [Exempel för Designer ](http://www.adobe.com/go/learn_aemforms_designer_samples_65)
@@ -380,6 +380,7 @@ ht-degree: 1%
    + [Skriptreferens för Designer ](http://www.adobe.com/go/learn_aemforms_scriptingReference_65)
    + [FormCalc-referens för Designer ](http://www.adobe.com/go/learn_aemforms_formCalc_65)
    + [Använda klottrar i HTML5-formulär](using/scribble-signature.md)
+   + [Ändra sidans nollinnehåll i Designer](using/changing-page-zero-content-designer.md)
 + Anpassa AEM Forms {#customize-aem-forms}
    + [Appearance Framework for adaptive and HTML5 forms](using/introduction-widgets.md)
    + [Skapa en anpassad anpassad formulärmall](using/custom-adaptive-forms-templates.md)
@@ -686,4 +687,3 @@ ht-degree: 1%
          + [Konfigurera och felsöka ett AEM Forms i JEE-serverkluster](developing/configure-server-cluster.md)
          + [Generera och arbeta med hashvärden i dynamisk PDF forms](developing/hashing-forms.md)
          + [Skicka inloggningsuppgifter med WS-Security-huvuden](developing/passing-credentials.md)
-
