@@ -6,7 +6,7 @@ seo-description: A list of the supported client and server platforms for AEM.
 content-type: reference
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 9e9a01cddf56d23bfe4e84812534c295be1595f4
+source-git-commit: cffec7ce415d00ab483b31d763ff2cdaa1eb16de
 workflow-type: tm+mt
 source-wordcount: '3294'
 ht-degree: 0%
@@ -100,7 +100,8 @@ Adobe Experience Manager arbetar med följande versioner av Java Virtual Machine
 | Azul Zulu OpenJDK 11 - 64 bitar | S: Stöds `[3]` |  |
 | Azul Zulu OpenJDK 8 - 64 bitar | S: Stöds `[3]` |  |
 
-1. Oraclet har flyttat till en LTS-modell (Long Term Support) för Oracle Java SE-produkter. Java 9, Java 10 och Java 12 är icke-LTS-versioner som Oracle (se [Oracle Java SE - supportöversikt](https://www.oracle.com/technetwork/java/eol-135779.html)). För att driftsätta AEM i produktionsmiljön tillhandahåller Adobe endast stöd för LTS-versionerna av Java. Stöd för och distribution av Oraclet Java SE JDK, inklusive alla underhållsuppdateringar av LTS-releaser efter slutet av de offentliga uppdateringarna, kommer att stödjas av Adobe direkt för alla AEM som använder Oraclet Java SE. Se [Stöd för Oracle Java i Adobe Experience Manager Q&amp;A](assets/adobe-oracle-java-license-agreement.pdf) för mer information.
+1. Oraclet har flyttat till en LTS-modell (Long Term Support) för Oracle Java SE-produkter. Java 9, Java 10 och Java 12 är icke-LTS-versioner som Oracle (se [Oracle Java SE - supportöversikt](https://www.oracle.com/technetwork/java/eol-135779.html)). För att driftsätta AEM i produktionsmiljön tillhandahåller Adobe endast stöd för LTS-versionerna av Java. Stöd för och distribution av Oraclet Java SE JDK, inklusive alla underhållsuppdateringar av LTS-releaser efter slutet av de offentliga uppdateringarna, kommer att stödjas av Adobe direkt för alla AEM som använder Oraclet Java SE-teknik **till december 2022**. Se [Java - supportpolicy för Adobe Experience Manager](assets/Java_Policy_for_Adobe_Experience_Manager.pdf) för mer information.
+
 
 1. IBM JRE stöds endast tillsammans med WebSphere Application Server.
 
