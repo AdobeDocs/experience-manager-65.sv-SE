@@ -1,17 +1,17 @@
 ---
 cloud: Experience Cloud
 product: adobe experience manager
-solution: Experience Manager, Experience Manager Sites, Experience Manager 6.5
+solution: Experience Manager, Experience Manager Sites
 audience: end-user
 user-guide-title: AEM 6.5 Developing User Guide
 breadcrumb-title: Utvecklingshandbok
 user-guide-description: Den här guiden beskriver hur du skapar AEM.
 feature: Developing
 role: Developer
-source-git-commit: b924dc186497b6dfa4c2d2bb675f5029f8fc3617
+source-git-commit: f29612ee633d2a62144b770f3c225fc82b9174f8
 workflow-type: tm+mt
-source-wordcount: '1299'
-ht-degree: 5%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -261,9 +261,9 @@ ht-degree: 5%
    + [JCR-integrering](jcr-integration.md)
    + [Kodexempel](code-samples.md)
    + [Felsöka långsamma frågor](troubleshooting-slow-queries.md)
-+ Mobil webb{#mobileweb}
-   + [Mobil webb](mobile-web.md)
++ Mobile Web{#mobileweb}
+   + [Mobile Web](mobile-web.md)
    + [Skapa enhetsgruppsfilter](groupfilters.md)
    + [Responsiv design för webbsidor](responsive.md)
-   + [Skapa platser för mobila enheter](mobile.md)
+   + [Skapa platser för Mobile-enheter](mobile.md)
    + [Emulatorer](emulators.md)

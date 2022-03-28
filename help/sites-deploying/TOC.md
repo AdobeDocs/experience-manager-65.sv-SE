@@ -1,17 +1,17 @@
 ---
 cloud: Experience Cloud
 product: adobe experience manager
-solution: Experience Manager, Experience Manager Sites, Experience Manager 6.5
+solution: Experience Manager, Experience Manager Sites
 audience: end-user
 user-guide-title: AEM 6.5 Deployment Guide
 breadcrumb-title: Distributionsguide
 user-guide-description: Läs mer om installation, distribution och arkitekturen för Adobe Experience Manager 6.5, inklusive vår molndistribution av Adobe Managed Services.
-feature: Distribuerar
+feature: Deploying
 role: Architect
-source-git-commit: 5536ee27ad51356c2dcd0f0f36b91025bf1d228c
+source-git-commit: f29612ee633d2a62144b770f3c225fc82b9174f8
 workflow-type: tm+mt
-source-wordcount: '328'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -19,12 +19,12 @@ ht-degree: 1%
 # Användarhandbok för distribution av AEM 6.5 {#deploying}
 
 + [Distribuera användarhandbok](home.md)
-+ Introduktion till AEM{#introduction}
++ Introduktion till AEM {#introduction}
    + [Introduktion till AEM](platform.md)
    + [Tekniska krav](technical-requirements.md)
    + [Lagringselement i AEM 6.5](storage-elements-in-aem-6.md)
    + [AEM med MongoDB](aem-with-mongodb.md)
-+ Distribuerar AEM {#deploying}
++ Distribuera AEM {#deploying}
    + [Driftsättning och underhåll](deploy.md)
    + [Rekommenderade distributioner](recommended-deploys.md)
    + [Installation av programserver](application-server-install.md)
@@ -40,7 +40,7 @@ ht-degree: 1%
    + [Felsöka ekindex](troubleshooting-oak-indexes.md)
    + [Insamling av aggregerad användningsstatistik](opt-in-aggregated-usage-statistics.md)
    + [Felsökning](troubleshooting.md)
-+ Konfigurerar AEM {#configuring}
++ Konfigurera AEM {#configuring}
    + [Grundläggande konfigurationskoncept](configuring.md)
    + [Loggning](configure-logging.md)
    + [Konfigurerar OSGi](configuring-osgi.md)
@@ -63,7 +63,7 @@ ht-degree: 1%
    + [Prestandahandbok för resurser](assets-performance-sizing.md)
    + [Instruktionsartiklar för konfiguration](ht-deploy.md)
    + [Konfigurerar webbkonsolen](configuring-web-console.md)
-+ Uppgraderar till AEM 6.5 {#upgrading}
++ Uppgradera till AEM 6.5 {#upgrading}
    + [Uppgradera till AEM 6.5](upgrade.md)
    + [Planera din uppgradering](upgrade-planning.md)
    + [Utvärdera uppgraderingskomplexiteten med mönsteravkännaren](pattern-detector.md)
@@ -80,7 +80,7 @@ ht-degree: 1%
    + [Uppgradera kod och anpassningar](upgrading-code-and-customizations.md)
    + [Uppgradera steg för programserverinstallationer](app-server-upgrade.md)
    + [Lista över föråldrade paket som avinstallerats efter uppgraderingen](obsolete-bundles.md)
-+ Databasomstrukturering {#restructuring}
++ Omstrukturering av lager {#restructuring}
    + [Omstrukturering av lager i AEM 6.5](repository-restructuring.md)
    + [Omstrukturering av de gemensamma tillgångarna i AEM 6.5](all-repository-restructuring-in-aem-6-5.md)
    + [Omstrukturering av anläggningar Repository i AEM 6.5](sites-repository-restructuring-in-aem-6-5.md)

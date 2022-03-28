@@ -1,16 +1,16 @@
 ---
 cloud: Experience Cloud
 product: adobe experience manager
-solution: Experience Manager, Experience Manager Sites, Experience Manager 6.5
+solution: Experience Manager, Experience Manager Sites
 audience: end-user
 user-guide-title: Användarhandbok för redigering av AEM 6.5 Classic UI
 user-guide-description: Den här handboken beskriver koncepten för redigering i AEM i det klassiska användargränssnittet.
-feature: Redigering
+feature: Authoring
 role: User
-source-git-commit: 5192a284c38eb10c214c67a8727de0f7dd4d1ee2
+source-git-commit: f29612ee633d2a62144b770f3c225fc82b9174f8
 workflow-type: tm+mt
-source-wordcount: '272'
-ht-degree: 20%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 20%
 # Användarhandbok för redigering av AEM 6.5 Classic UI {#classic-ui}
 
 + [Översikt över redigeringshandboken för det klassiska användargränssnittet](home.md)
-+ Introduktion till redigering av klassiskt användargränssnitt {#introduction}
++ Introduktion till klassisk gränssnittsredigering {#introduction}
    + [Steg 1 för författare](classic-page-author-first-steps.md)
    + [Om du skriver i det klassiska gränssnittet](classicui.md)
    + [Arbeta med författarmiljön](author-env.md)
@@ -39,7 +39,7 @@ ht-degree: 20%
    + [Anteckningar vid redigering av en sida](classic-page-author-annotations.md)
    + [Felsöka AEM vid redigering](classic-page-author-troubleshooting.md)
    + [Skapa tillgängligt innehåll (WCAG 2.0-överensstämmelse)](classic-page-author-accessible-content.md)
-   + [Skapa en sida för mobila enheter](classic-feature-mobile.md)
+   + [Skapa en sida för Mobile-enheter](classic-feature-mobile.md)
    + [Komponenter för sidredigering](classic-page-author-edit-mode.md)
    + [Kortkommandon vid sidredigering](classic-page-author-keyboard-shortcuts.md)
 + Webbplats- och sidfunktioner {#siteandpage}
@@ -62,7 +62,7 @@ ht-degree: 20%
    + [Marknadsföra Launches](classic-launches-promoting.md)
 + Personanpassning {#personalization}
    + [Förstå segmentering](classic-personalization-campaigns-segmentation.md)
-   + [Kampanjhantering](classic-personalization-campaigns.md)
+   + [Campaign Management](classic-personalization-campaigns.md)
    + [Landningssidor](classic-personalization-campaigns-landingpage.md)
    + [Målerbjudanden](classic-personalization-campaigns-target-offers.md)
    + [E-postmarknadsföring](classic-personalization-campaigns-email.md)
@@ -79,7 +79,7 @@ ht-degree: 20%
    + [Adobe Campaign Components](classic-personalization-ac-components.md)
    + [Inrikta er på Adobe Campaign](classic-personalization-ac-target.md)
    + [Skapa Adobe Campaign Forms i AEM](classic-personalization-ac-forms.md)
-+ Funktionsredigering i det klassiska användargränssnittet {#assets}
++ Skapa resurser i det klassiska användargränssnittet {#assets}
    + [Arbeta med resurser](classicui-assets.md)
    + [Leverera Dynamic Media Assets](dynamic-media-assets-delivering.md)
    + [Lägga till Dynamic Media-resurser på sidor](dynamic-media-assets-adding-to-page.md)

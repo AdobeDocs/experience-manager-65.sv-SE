@@ -1,17 +1,17 @@
 ---
 cloud: Experience Cloud
 product: adobe experience manager
-solution: Experience Manager, Experience Manager Sites, Experience Manager 6.5
+solution: Experience Manager, Experience Manager Sites
 audience: end-user
 user-guide-title: Användarhandbok för redigering av AEM 6.5
 breadcrumb-title: Redigeringshandbok
 user-guide-description: Lär dig grunderna för att skapa innehåll och redigering i AEM.
-feature: Redigering
+feature: Authoring
 role: User
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: f29612ee633d2a62144b770f3c225fc82b9174f8
 workflow-type: tm+mt
-source-wordcount: '299'
-ht-degree: 38%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 38%
 # Användarhandbok för redigering av AEM 6.5 {#authoring}
 
 + [Översikt över användarhandboken för redigering](home.md)
-+ Viktiga uppgifter, verktyg och koncept för redigering AEM {#essentials}
++ Viktiga uppgifter, verktyg och begrepp för AEM {#essentials}
    + [Steg 1 för författare](first-steps.md)
    + [Sidredigering](page-authoring.md)
    + [Snabbguide till framtagning av sidor](qg-page-authoring.md)
@@ -42,7 +42,7 @@ ht-degree: 38%
    + [Experience Fragments](experience-fragments.md)
    + [Exportera till CSV](csv-export.md)
    + [Komponenter](default-components.md)
-   + [Skapa en sida för mobila enheter](mobile.md)
+   + [Skapa en sida för Mobile-enheter](mobile.md)
    + [Felsöka AEM vid redigering](troubleshooting.md)
    + [Kortkommandon vid sidredigering](page-authoring-keyboard-shortcuts.md)
    + [Bästa praxis](best-practices.md)
