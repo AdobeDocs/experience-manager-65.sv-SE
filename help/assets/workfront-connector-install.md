@@ -3,17 +3,21 @@ title: Installera [!DNL Workfront for Experience Manager enhanced connector]
 description: Installera [!DNL Workfront for Experience Manager enhanced connector]
 role: Admin
 feature: Integrations
-source-git-commit: 8d39e1c86e5185a181400f10b7822a57c9d3aeae
+exl-id: 087bc811-e8f8-4db5-b066-627a9b082f57
+source-git-commit: a589836c77fd919838dce60a1eaf676683c165c0
 workflow-type: tm+mt
-source-wordcount: '296'
+source-wordcount: '390'
 ht-degree: 0%
 
 ---
 
-
 # Installera [!DNL Workfront for Experience Manager enhanced connector] {#assets-integration-overview}
 
 En användare med administratörsåtkomst i [!DNL Adobe Experience Manager] installerar den utökade anslutningen. Innan du installerar bör du granska plattformsstödet och andra [krav för kopplingen](https://one.workfront.com/s/csh?context=2467&amp;pubname=the-new-workfront-experience).
+
+>[!TIP]
+>
+>Söker du efter [!DNL Workfront for Experience Manager enhanced connector] dokumentation för AEM as a Cloud Service? Klicka [här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/integrations/workfront-connector-install.html?lang=en).
 
 >[!IMPORTANT]
 >
@@ -56,3 +60,15 @@ Så här skapar du en anslutning till Workfront:
    ![Anslut [!DNL Experience Manager] och [!DNL Workfront]](/help/assets/assets/wf-connection-config.png)
 
 1. Om du vill verifiera anslutningen öppnar du den i [!DNL Workfront] och verifiera att API-nyckeln är densamma och att anslutningen är **[!UICONTROL Enabled]**. Om du vill göra det väljer du **[!UICONTROL Setup]** > **[!UICONTROL Documents]** > **[!UICONTROL Custom Integrations]** in [!DNL Workfront].
+
+## Uppdatera [!DNL Workfront for Experience Manager enhanced connector] {#update-enhanced-connector-for-workfront}
+
+Med Experience Manager Assets kan du uppdatera [!DNL Workfront for Experience Manager enhanced connector] från en tidigare version till den senaste versionen.
+
+Så här uppdaterar du [!DNL Workfront for Experience Manager enhanced connector] till den senaste versionen:
+
+1. Hämta den senaste versionen av den förbättrade anslutningen från [[!DNL Software Distribution] link](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/product/assets/workfront-tools.ui.apps.zip).
+
+1. Installera paketet med [!UICONTROL Package Manager]. Mer information om hur du installerar paket finns i [Pakethanterarens dokumentation](/help/sites-administering/package-manager.md).
+
+
