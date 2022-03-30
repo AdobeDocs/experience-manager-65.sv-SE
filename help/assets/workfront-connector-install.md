@@ -4,7 +4,7 @@ description: Installera [!DNL Workfront for Experience Manager enhanced connecto
 role: Admin
 feature: Integrations
 exl-id: 087bc811-e8f8-4db5-b066-627a9b082f57
-source-git-commit: a589836c77fd919838dce60a1eaf676683c165c0
+source-git-commit: 679ad8f1fec1abe97dfc90b6318c3f3c4ab85b7f
 workflow-type: tm+mt
 source-wordcount: '390'
 ht-degree: 0%
@@ -28,11 +28,8 @@ En användare med administratörsåtkomst i [!DNL Adobe Experience Manager] inst
 Så här installerar du kopplingen:
 
 1. Hämta anslutningen från [[!DNL Software Distribution] link](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/product/assets/workfront-tools.ui.apps.zip).
-
 1. [Konfigurera brandväggen](https://one.workfront.com/s/document-item?bundleId=the-new-workfront-experience&amp;topicId=Content%2FAdministration_and_Setup%2FGet_started-WF_administration%2Fconfigure-your-firewall.html).
-
 1. Tillåt HTTP-huvuden med namnet i dispatchern `authorization`, `username`och `apikey`. Tillåt `GET`, `POST`och `PUT` förfrågningar till `/bin/workfront-tools`.
-
 1. Kontrollera att följande sökvägar inte finns i [!DNL Experience Manager] databas:
 
    * `/apps/dam/gui/coral/components/admin/schemaforms/formbuilder`
@@ -42,7 +39,6 @@ Så här installerar du kopplingen:
    * `/apps/settings/dam/cfm/models/formbuilderconfig`
 
 1. Installera paketet med [!UICONTROL Package Manager]. Mer information om hur du installerar paket finns i [Pakethanterarens dokumentation](/help/sites-administering/package-manager.md).
-
 1. Skapa `wf-workfront-users` in [!DNL Experience Manager] Användargrupp och tilldela behörighet `jcr:all` till `/content/dam`.
 
 En systemanvändare `workfront-tools` skapas automatiskt och de behörigheter som krävs hanteras automatiskt. Alla användare från [!DNL Workfront] som använder kopplingen läggs automatiskt till som en del av den här gruppen.
@@ -68,7 +64,4 @@ Med Experience Manager Assets kan du uppdatera [!DNL Workfront for Experience Ma
 Så här uppdaterar du [!DNL Workfront for Experience Manager enhanced connector] till den senaste versionen:
 
 1. Hämta den senaste versionen av den förbättrade anslutningen från [[!DNL Software Distribution] link](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/product/assets/workfront-tools.ui.apps.zip).
-
 1. Installera paketet med [!UICONTROL Package Manager]. Mer information om hur du installerar paket finns i [Pakethanterarens dokumentation](/help/sites-administering/package-manager.md).
-
-
