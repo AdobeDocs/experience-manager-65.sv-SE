@@ -1,20 +1,19 @@
 ---
 title: AEM 6.5 Developing User Guide
 seo-title: AEM 6.5 Developing User Guide
-description: Den här guiden beskriver hur du skapar AEM.
-seo-description: Innehåller information om hur du skapar AEM.
-translation-type: tm+mt
-source-git-commit: 4dd47341ad1c966e8db6ef7ed1da93bf4e9abb52
+description: Lär dig hur du bygger ut AEM. Läs mer om plattformen och komponenterna och hitta information om utvecklingsverktyg och personalisering.
+seo-description: Covers how to build out your AEM instance.
+exl-id: 4413f5e8-7e52-4ea7-8be3-5717b780a6e2
+source-git-commit: 8a51bbf3cea999f77e6eea41e184926121d6a866
 workflow-type: tm+mt
-source-wordcount: '357'
+source-wordcount: '371'
 ht-degree: 18%
 
 ---
 
-
 # AEM 6.5 Developing User Guide
 
-Den här guiden beskriver hur du skapar AEM.
+Lär dig hur du bygger ut AEM. Läs mer om plattformen och komponenterna och hitta information om utvecklingsverktyg och personalisering.
 
 ## Viktiga AEM
 
@@ -39,7 +38,7 @@ Den här guiden beskriver hur du skapar AEM.
 | [Utveckla användarhandbok](/help/sites-developing/home.md) | Lär dig hur du bygger ut AEM. |
 | [Hantera användarhandbok](/help/managing/home.md) | I den här guiden beskrivs hur du hanterar ett AEM projekt. |
 | [Handbok för Commerce](/help/commerce/home.md) | Läs mer om Commerce Integration Framework på AEM. |
-| [Användarhandbok för mobiler](/help/mobile/home.md) | I den här guiden beskrivs hur du skapar och hanterar innehåll för mobilprogram. |
+| [Mobile Användarhandbok](/help/mobile/home.md) | I den här guiden beskrivs hur du skapar och hanterar innehåll för mobilprogram. |
 | [AEM Livefyre](https://docs.adobe.com/content/help/en/livefyre/using/home.html) | Den här guiden visar hur du delar användargenererat innehåll med Livefyre. |
 
 ## Viktiga AEM

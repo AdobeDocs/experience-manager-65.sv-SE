@@ -1,20 +1,19 @@
 ---
 title: AEM 6.5 Mobile User Guide
 seo-title: AEM 6.5 Mobile User Guide
-description: I den här guiden beskrivs hur du skapar och hanterar innehåll för mobilprogram.
-seo-description: Beskriver hur du skapar och hanterar innehåll för mobilprogram.
+description: Dra nytta av AEM stöd för att skapa och hantera innehåll för mobilappar. Få en introduktion till och lär dig hur du skapar, utvecklar och administrerar i On-Demand Services-appen och Adobe PhoneGap Enterprise.
+seo-description: Describes how to create and manage content for mobile applications.
 exl-id: 3531d8ea-614d-465a-8b4a-e3e3f3461e94
-translation-type: tm+mt
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+source-git-commit: 8a51bbf3cea999f77e6eea41e184926121d6a866
 workflow-type: tm+mt
-source-wordcount: '369'
-ht-degree: 18%
+source-wordcount: '391'
+ht-degree: 17%
 
 ---
 
 # AEM 6.5 Mobile User Guide
 
-Den här guiden täcker alla AEM Mobile-uppgifter, t.ex. hur du skapar och hanterar innehåll för mobilprogram.
+Dra nytta av AEM stöd för att skapa och hantera innehåll för mobilappar. Få en introduktion till och lär dig hur du skapar, utvecklar och administrerar i On-Demand Services-appen och Adobe PhoneGap Enterprise.
 
 ## Viktiga AEM
 

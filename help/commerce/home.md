@@ -1,23 +1,21 @@
 ---
 title: AEM innehåll och handel
-description: AEM självhjälp och dokumentationslänkar för innehåll och handel
-translation-type: tm+mt
-source-git-commit: 809789d268deb4d77bbb5101265a1a0d7268b748
+description: Lär dig hur du använder och administrerar AEM innehåll och handel, med våra praktiska artiklar om integreringar och hur du kommer igång med AEM Storefront.
+exl-id: b5b074e7-6da7-49ed-9cdb-f7c37d08e08c
+source-git-commit: 8a51bbf3cea999f77e6eea41e184926121d6a866
 workflow-type: tm+mt
-source-wordcount: '337'
-ht-degree: 19%
+source-wordcount: '367'
+ht-degree: 17%
 
 ---
 
-
 # AEM innehåll och handel {#commerce-guide}
 
-På den här sidan visas självhjälpsresurser för AEM.
+Lär dig hur du använder och administrerar AEM innehåll och handel, med våra praktiska artiklar om integreringar och hur du kommer igång med AEM Storefront.
 
 >[!NOTE]
 >
->AEM innehåll och handel med AEM som Cloud Service finns i [AEM innehåll och handel](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content-and-commerce/home.html).
-
+>AEM innehåll och handel med AEM as a Cloud Service finns på [AEM innehåll och handel](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content-and-commerce/home.html).
 
 ## Nyckelhandelsartiklar {#key-articles}
 
@@ -39,7 +37,7 @@ På den här sidan visas självhjälpsresurser för AEM.
 | [Distribuera användarhandbok](/help/sites-deploying/home.md) | Den här guiden visar grunderna i AEM. |
 | [Utveckla användarhandbok](/help/sites-developing/home.md) | Lär dig hur du bygger ut AEM. |
 | [Hantera användarhandbok](/help/managing/home.md) | I den här guiden beskrivs hur du hanterar ett AEM projekt. |
-| [Användarhandbok för mobiler](/help/mobile/home.md) | I den här guiden beskrivs hur du skapar och hanterar innehåll för mobilprogram. |
+| [Mobile Användarhandbok](/help/mobile/home.md) | I den här guiden beskrivs hur du skapar och hanterar innehåll för mobilprogram. |
 | [AEM Livefyre](https://docs.adobe.com/content/help/en/livefyre/using/home.html) | Den här guiden visar hur du delar användargenererat innehåll med Livefyre. |
 
 ## Viktiga AEM

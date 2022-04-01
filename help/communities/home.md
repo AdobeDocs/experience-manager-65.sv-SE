@@ -1,20 +1,19 @@
 ---
 title: Adobe Experience Manager 6.5 Communities Guide
 seo-title: Adobe Experience Manager 6.5 Communities Guide
-description: Den här guiden täcker alla AEM Communities-uppgifter, t.ex. att skapa onlineupplevelser som forum, användargrupper, utbildningsresurser och andra sociala funktioner.
-seo-description: Omfattar alla AEM Communities-uppgifter, t.ex. att skapa onlineupplevelser som forum, användargrupper, utbildningsresurser och andra sociala funktioner.
+description: Skapa onlineupplevelser som forum, användargrupper, utbildningsresurser och andra sociala funktioner. Bläddra i vår guide som förklarar hur du distribuerar, administrerar, utvecklar och utvecklar användargrupper.
+seo-description: Covers all AEM Communities tasks, such as creating online experiences such as forums, user groups, learning resources, and other social features.
 exl-id: 63040353-d34c-4306-9e7a-584ba48d8ad5
-translation-type: tm+mt
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+source-git-commit: 8a51bbf3cea999f77e6eea41e184926121d6a866
 workflow-type: tm+mt
-source-wordcount: '399'
-ht-degree: 16%
+source-wordcount: '381'
+ht-degree: 17%
 
 ---
 
 # Adobe Experience Manager 6.5 Communities Guide
 
-Den här guiden täcker alla AEM Communities-uppgifter, t.ex. att skapa onlineupplevelser som forum, användargrupper, utbildningsresurser och andra sociala funktioner.
+Skapa onlineupplevelser som forum, användargrupper, utbildningsresurser och andra sociala funktioner. Bläddra i vår guide som förklarar hur du distribuerar, administrerar, utvecklar och utvecklar användargrupper.
 
 ## Viktiga AEM
 

@@ -1,20 +1,17 @@
 ---
 title: Användarhandbok för AEM 6.5
-seo-title: Användarhandbok för AEM 6.5
-description: AEM administrerar
-seo-description: AEM administrerar
-translation-type: tm+mt
-source-git-commit: 4dd47341ad1c966e8db6ef7ed1da93bf4e9abb52
+description: Läs om hur du administrerar AEM 6.5. Dessa handledningar täcker webbplatsfunktioner, driftsättningsåtgärder, säkerhetsfunktioner, personalisering, integrering med mera.
+exl-id: 299c783a-1495-4c0d-8431-cd7de142a163
+source-git-commit: 8a51bbf3cea999f77e6eea41e184926121d6a866
 workflow-type: tm+mt
-source-wordcount: '339'
-ht-degree: 19%
+source-wordcount: '358'
+ht-degree: 18%
 
 ---
 
-
 # Användarhandbok för AEM 6.5
 
-Den här guiden täcker alla AEM administrativa uppgifter.
+Läs om hur du administrerar AEM 6.5. Dessa handledningar täcker webbplatsfunktioner, driftsättningsåtgärder, säkerhetsfunktioner, personalisering, integrering med mera.
 
 ## Viktiga artiklar
 
@@ -39,7 +36,7 @@ Den här guiden täcker alla AEM administrativa uppgifter.
 | [Utveckla användarhandbok](/help/sites-developing/home.md) | Lär dig hur du bygger ut AEM. |
 | [Hantera användarhandbok](/help/managing/home.md) | I den här guiden beskrivs hur du hanterar ett AEM projekt. |
 | [Handbok för Commerce](/help/commerce/home.md) | Läs mer om Commerce Integration Framework på AEM. |
-| [Användarhandbok för mobiler](/help/mobile/home.md) | I den här guiden beskrivs hur du skapar och hanterar innehåll för mobilprogram. |
+| [Mobile Användarhandbok](/help/mobile/home.md) | I den här guiden beskrivs hur du skapar och hanterar innehåll för mobilprogram. |
 | [AEM Livefyre](https://docs.adobe.com/content/help/en/livefyre/using/home.html) | Den här guiden visar hur du delar användargenererat innehåll med Livefyre. |
 
 ## Viktiga AEM

@@ -1,16 +1,14 @@
 ---
 title: Användarhandbok för distribution av AEM 6.5
-seo-title: Användarhandbok för distribution av AEM 6.5
-description: Den här guiden täcker alla AEM driftsättningsåtgärder, som att installera och distribuera AEM.
-seo-description: Täcker alla AEM driftsättningsåtgärder, som att installera och distribuera AEM.
-translation-type: tm+mt
-source-git-commit: 4dd47341ad1c966e8db6ef7ed1da93bf4e9abb52
+seo-title: AEM 6.5 Deploying User Guide
+description: Lär dig hur du installerar och distribuerar Adobe Experience Manager 6.5 och dess arkitektur, inklusive vår molndistribution av Adobe Managed Services.
+exl-id: 4a82008c-af69-414e-bd98-c7f683a74905
+source-git-commit: 8a51bbf3cea999f77e6eea41e184926121d6a866
 workflow-type: tm+mt
-source-wordcount: '400'
-ht-degree: 16%
+source-wordcount: '391'
+ht-degree: 17%
 
 ---
-
 
 # Användarhandbok för distribution av AEM 6.5
 
@@ -39,7 +37,7 @@ Den här guiden täcker alla AEM driftsättningsåtgärder, som att installera o
 | [Utveckla användarhandbok](/help/sites-developing/home.md) | Lär dig hur du bygger ut AEM. |
 | [Hantera användarhandbok](/help/managing/home.md) | I den här guiden beskrivs hur du hanterar ett AEM projekt. |
 | [Handbok för Commerce](/help/commerce/home.md) | Läs mer om Commerce Integration Framework på AEM. |
-| [Användarhandbok för mobiler](/help/mobile/home.md) | I den här guiden beskrivs hur du skapar och hanterar innehåll för mobilprogram. |
+| [Mobile Användarhandbok](/help/mobile/home.md) | I den här guiden beskrivs hur du skapar och hanterar innehåll för mobilprogram. |
 | [AEM Livefyre](https://docs.adobe.com/content/help/en/livefyre/using/home.html) | Den här guiden visar hur du delar användargenererat innehåll med Livefyre. |
 
 ## Viktiga AEM
@@ -55,6 +53,6 @@ Den här guiden täcker alla AEM driftsättningsåtgärder, som att installera o
 
 ## Copyright, licenser och friskrivningsklausuler {#copyright-licenses-and-disclaimers}
 
-Mer information finns i [https://www.adobe.com/legal/terms/enterprise-licensing.html](https://www.adobe.com/legal/terms/enterprise-licensing.html)
+Mer information finns på [https://www.adobe.com/legal/terms/enterprise-licensing.html](https://www.adobe.com/legal/terms/enterprise-licensing.html)
 
 Meddelande om tredjepartslicenser: [https://www.adobe.com/products/eula/third_party/](https://www.adobe.com/products/eula/third_party/)

@@ -1,11 +1,10 @@
 ---
 title: Adobe Experience Manager 6.5 Forms Guide
 seo-title: AEM 6.5 Forms Guide
-description: Den här guiden täcker alla uppgifter som AEM Forms utför, inklusive hur man skapar, hanterar, publicerar och uppdaterar digitala formulär.
-seo-description: Omfattar alla AEM Forms-uppgifter, inklusive hur man skapar, hanterar, publicerar och uppdaterar digitala formulär.
+description: Använd den här guiden AEM 6.5 för att skapa, hantera, publicera och uppdatera digitala formulär. Hitta hjälp med att installera, uppgradera och konfigurera dem och lär dig mer om att skapa adaptiva formulär.
+seo-description: Covers all AEM Forms tasks, including how to create, manage, publish, and update digital forms.
 exl-id: e66383b0-ae58-4cfe-8f1b-28b4e124fd06
-translation-type: tm+mt
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+source-git-commit: 8a51bbf3cea999f77e6eea41e184926121d6a866
 workflow-type: tm+mt
 source-wordcount: '378'
 ht-degree: 17%
@@ -14,7 +13,7 @@ ht-degree: 17%
 
 # Adobe Experience Manager 6.5 Forms Guide
 
-Den här guiden täcker alla uppgifter som AEM Forms utför, inklusive hur man skapar, hanterar, publicerar och uppdaterar digitala formulär.
+Använd den här guiden AEM 6.5 för att skapa, hantera, publicera och uppdatera digitala formulär. Hitta hjälp med att installera, uppgradera och konfigurera dem och lär dig mer om att skapa adaptiva formulär.
 
 ## Viktiga AEM
 
@@ -39,7 +38,7 @@ Den här guiden täcker alla uppgifter som AEM Forms utför, inklusive hur man s
 | [Utveckla användarhandbok](/help/sites-developing/home.md) | Lär dig hur du bygger ut AEM. |
 | [Hantera användarhandbok](/help/managing/home.md) | I den här guiden beskrivs hur du hanterar ett AEM projekt. |
 | [Handbok för Commerce](/help/commerce/home.md) | Läs mer om Commerce Integration Framework på AEM. |
-| [Användarhandbok för mobiler](/help/mobile/home.md) | I den här guiden beskrivs hur du skapar och hanterar innehåll för mobilprogram. |
+| [Mobile Användarhandbok](/help/mobile/home.md) | I den här guiden beskrivs hur du skapar och hanterar innehåll för mobilprogram. |
 | [AEM Livefyre](https://docs.adobe.com/content/help/en/livefyre/using/home.html) | Den här guiden visar hur du delar användargenererat innehåll med Livefyre. |
 
 ## Viktiga AEM

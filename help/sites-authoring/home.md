@@ -1,20 +1,19 @@
 ---
 title: Användarhandbok för redigering av AEM 6.5
-seo-title: Användarhandbok för redigering av AEM 6.5
-description: 'I den här handboken förklaras begreppen för redigering i AEM. '
-seo-description: 'Beskriver begreppen för redigering i AEM. '
-translation-type: tm+mt
-source-git-commit: 4dd47341ad1c966e8db6ef7ed1da93bf4e9abb52
+seo-title: AEM 6.5 Authoring User Guide
+description: Upptäck de viktigaste begreppen för att skapa innehåll och redigering i AEM 6.5. Du hittar även information om hur du använder taggar, mallar och andra sidfunktioner.
+seo-description: Explains the concepts of authoring in AEM.
+exl-id: 38f229b4-10b2-4a67-9821-a03718b82215
+source-git-commit: 8a51bbf3cea999f77e6eea41e184926121d6a866
 workflow-type: tm+mt
-source-wordcount: '354'
-ht-degree: 18%
+source-wordcount: '373'
+ht-degree: 17%
 
 ---
 
-
 # Användarhandbok för redigering av AEM 6.5
 
-I den här handboken förklaras begreppen för redigering i AEM.
+Upptäck de viktigaste begreppen för att skapa innehåll och redigering i AEM 6.5. Du hittar även information om hur du använder taggar, mallar och andra sidfunktioner.
 
 ## Viktiga AEM
 
@@ -39,7 +38,7 @@ I den här handboken förklaras begreppen för redigering i AEM.
 | [Utveckla användarhandbok](/help/sites-developing/home.md) | Lär dig hur du bygger ut AEM. |
 | [Hantera användarhandbok](/help/managing/home.md) | I den här guiden beskrivs hur du hanterar ett AEM projekt. |
 | [Handbok för Commerce](/help/commerce/home.md) | Läs mer om Commerce Integration Framework på AEM. |
-| [Användarhandbok för mobiler](/help/mobile/home.md) | I den här guiden beskrivs hur du skapar och hanterar innehåll för mobilprogram. |
+| [Mobile Användarhandbok](/help/mobile/home.md) | I den här guiden beskrivs hur du skapar och hanterar innehåll för mobilprogram. |
 | [AEM Livefyre](https://docs.adobe.com/content/help/en/livefyre/using/home.html) | Den här guiden visar hur du delar användargenererat innehåll med Livefyre. |
 
 ## Viktiga AEM
