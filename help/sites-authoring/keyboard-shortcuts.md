@@ -1,30 +1,29 @@
 ---
 title: Kortkommandon för konsoler
-seo-title: Kortkommandon för konsoler
+seo-title: Keyboard Shortcuts for Consoles
 description: Spara tid när du redigerar med dessa kortkommandon
-seo-description: Spara tid när du redigerar med dessa kortkommandon
+seo-description: Save time when authoring by using these keyboard shortcuts
 uuid: 3b90570f-e187-4f09-9ccf-838e5657de2f
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
 discoiquuid: f5ab3f61-aa5a-49ae-a976-6ab7f0d11ea6
-translation-type: tm+mt
-source-git-commit: 34aadbc35d7aad127fe98211a5f37d623d101c0c
+exl-id: c58981a0-cdde-4593-b633-7f6898f8f5f5
+source-git-commit: ad8f98d22c2f2095ee92741331170be996103d95
 workflow-type: tm+mt
-source-wordcount: '391'
+source-wordcount: '378'
 ht-degree: 2%
 
 ---
 
-
 # Kortkommandon för konsoler{#keyboard-shortcuts-for-consoles}
 
-Olika kortkommandon finns i hela AEM. Vissa gäller för användning av konsoler, andra för [sidredigering](/help/sites-authoring/page-authoring-keyboard-shortcuts.md).
+Olika kortkommandon finns i hela AEM. Vissa gäller användning av konsoler, andra för [sidredigering](/help/sites-authoring/page-authoring-keyboard-shortcuts.md).
 
 >[!NOTE]
 >
->[modifieringstangenterna](/help/sites-authoring/keyboard-shortcuts.md#os-specific-modifier-keys) som krävs för AEM kortkommandon varierar beroende på operativsystem.
+>The [modifieringstangenter](/help/sites-authoring/keyboard-shortcuts.md#os-specific-modifier-keys) som krävs för AEM kortkommandon varierar beroende på operativsystem.
 
 ## Kortkommandon {#keyboard-shortcuts}
 
@@ -40,9 +39,9 @@ Följande genvägar är tillgängliga för konsolerna Webbplatser, Handel, Skär
 | Konsol - kolumnvy | `Shift-Up/Down Arrow` | Flytta upp en lista med sidor på samma nivå |
 |  | `Esc` | Flytta upp en lista med sidor på samma nivå |
 | Konsoler | `?` | Hjälp för kortkommandon |
-|  | `/` | Anropa [sökning](/help/sites-authoring/search.md) |
-|  | `Alt+`&lt;`Number`> | Växla vilken [järnvägsväljare](/help/sites-authoring/basic-handling.md#rail-selector) som ska visas |
-|  | &grave; | Göm rälsstöd |
+|  | `/` | Anropa [sök](/help/sites-authoring/search.md) |
+|  | `Alt+`&lt;`Number`> | Växla vilket [järnvägsväljare](/help/sites-authoring/basic-handling.md#rail-selector) alternativ att visa |
+|  | ``` ` ``` | Göm rälsstöd |
 |  | `e` | Redigera |
 |  | `p` | Egenskaper |
 |  | `m` | Flytta |
@@ -51,9 +50,9 @@ Följande genvägar är tillgängliga för konsolerna Webbplatser, Handel, Skär
 |  | `Backspace` | Ta bort |
 | Egenskapssidor | `Ctrl+s` | Spara |
 
-Tangentkombinationerna visas med Windows [modifieringstangenterna](/help/sites-authoring/keyboard-shortcuts.md#os-specific-modifier-keys).
+Tangentkombinationerna visas i Windows [modifieringstangenter](/help/sites-authoring/keyboard-shortcuts.md#os-specific-modifier-keys).
 
-Du kan även använda olika kortkommandon för skrivbordsanvändare när du använder [sidredigeraren](/help/sites-authoring/page-authoring-keyboard-shortcuts.md) för att skapa sidor.
+Du kan även använda olika kortkommandon för skrivbordsanvändare när du använder [sidredigerare](/help/sites-authoring/page-authoring-keyboard-shortcuts.md) för att skapa sidor.
 
 ## Operativspecifika modifieringstangenter {#os-specific-modifier-keys}
 
@@ -80,7 +79,7 @@ Dessutom är kortkommandon samma för alla språk och tangentbordslayouter.
 >
 >AEM kortkommandon kan störa skärmläsare, vissa webbläsarfunktioner och andra tillgänglighetsverktyg.
 >
->Adobe rekommenderar [att du inaktiverar AEM kortkommandon](/help/sites-authoring/keyboard-shortcuts.md#deactivating-keyboard-shortcuts) när du använder en skärmläsare.
+>Adobe rekommenderar [inaktivera AEM kortkommandon](/help/sites-authoring/keyboard-shortcuts.md#deactivating-keyboard-shortcuts) när du använder en skärmläsare.
 
 ## Inaktivera kortkommandon {#deactivating-keyboard-shortcuts}
 
@@ -91,9 +90,8 @@ För användare som inte använder kortkommandon eller har vissa tillgänglighet
 Du kan inaktivera kortkommandon på två platser:
 
 * [Mina inställningar](/help/sites-authoring/user-properties.md#my-preferences)
-* [hjälpmenyn](/help/sites-authoring/basic-handling.md#accessing-help)
+* The [hjälpmeny](/help/sites-authoring/basic-handling.md#accessing-help)
 
 >[!NOTE]
 >
 >Kortkommandon för navigering för kolumnvyn och innehållsträdet är alltid aktiva.
-
