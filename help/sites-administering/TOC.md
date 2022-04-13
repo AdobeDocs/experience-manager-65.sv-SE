@@ -8,10 +8,10 @@ breadcrumb-title: Administratörshandbok
 user-guide-description: Läs om hur du administrerar AEM.
 feature: Administering
 role: Admin
-source-git-commit: f29612ee633d2a62144b770f3c225fc82b9174f8
+source-git-commit: a1821ab210b3735ca5b59b075659ff30d5872b8e
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '632'
+ht-degree: 6%
 
 ---
 
@@ -27,6 +27,7 @@ ht-degree: 0%
    + [Konfigurera Live Copy-synkronisering](msm-sync.md)
    + [Skapa och synkronisera Live-kopior](msm-livecopy.md)
    + [MSM-utrullningskonflikter](msm-rollout-conflicts.md)
+   + [Felsökning av MSM-problem och vanliga frågor](troubleshoot-msm.md)
    + [MSM Best Practices](msm-best-practices.md)
    + [Översätta innehåll för flerspråkiga webbplatser](translation.md)
    + [Hantera översättningsprojekt](tc-manage.md)
@@ -128,7 +129,7 @@ ht-degree: 0%
    + [Integrera med Adobe Campaign Standard](campaignstandard.md)
    + [Meddelande om att Flash Viewer har upphört](flash-viewers-eol.md)
    + [Produktfeed](product-feed.md)
-   + [Integrera med Adobe Dynamic Tag Management](dtm.md)
+   + [Integrera med dynamisk tagghantering i Adobe](dtm.md)
    + [Ingå i Adobe Analytics och Adobe Target](opt-in.md)
    + [AEM portaler och portlets](aem-as-portal.md)
    + [Integrera med Dynamic Media Classic (Scene7)](scene7.md)
