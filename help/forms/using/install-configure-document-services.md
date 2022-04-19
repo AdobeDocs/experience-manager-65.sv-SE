@@ -8,9 +8,9 @@ topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: 8fcbdb4d00a5ddffadf5b4a099454dc795999769
+source-git-commit: 81008366b7d5edaf1d2f83ccd2ba6237c2e96fad
 workflow-type: tm+mt
-source-wordcount: '4927'
+source-wordcount: '4934'
 ht-degree: 0%
 
 ---
@@ -677,13 +677,23 @@ Om du får problem även efter att du har åtgärdat alla problem som rapportera
 
 +++
 
-+++HTMLtoPDF
++++HTML till konverteringsproblem i PDF
 
 * Se till att teckensnittskataloger läggs till i användargränssnittet för PDF Generator-konfigurationen.
 
-+++
+**Linux och Solaris (PhantomJS-konverteringsväg)**
 
-+++Linux® och Solaris™ (WebKit-konvertering)
+* Kontrollera att det finns ett 32-bitars bibliotek (libicudata.so.42) för Webkit-baserad HTMLToPDF-konvertering och att det finns 64-bitars (libicudata.so.42 libs för PhantomJS-baserad HTMLToPDF-konvertering.
+
+* Kör följande kommando för att lista saknade bibliotek för skenobjekt:
+
+   ```
+   ldd phantomjs | grep not
+   ```
+
+* Kontrollera att miljövariabeln JAVA_HOME_32 pekar på rätt plats.
+
+**Linux® och Solaris™ (WebKit-konverteringsväg)**
 
 * Se till att katalogerna `/usr/lib/X11/fonts` och `/usr/share/fonts` finns. Om katalogerna inte finns skapar du en symbolisk länk från `/usr/share/X11/fonts` till `/usr/lib/X11/fonts` och en annan symbolisk länk från `/usr/share/fonts` till `/usr/share/X11/fonts`.
 
@@ -724,27 +734,13 @@ Om du får problem även efter att du har åtgärdat alla problem som rapportera
 
 +++
 
-+++Linux® och Solaris(PhantomJS)HTMLtoPDF
-
-* Kontrollera att det finns ett 32-bitars bibliotek (libicudata.so.42) för Webkit-baserad HTMLToPDF-konvertering och att det finns 64-bitars (libicudata.so.42 libs för PhantomJS-baserad HTMLToPDF-konvertering.
-
-* Kör följande kommando för att lista saknade bibliotek för skenobjekt:
-
-```
-ldd phantomjs | grep not
-```
-
-* Kontrollera att miljövariabeln JAVA_HOME_32 pekar på rätt plats.
-
-+++
-
 +++ Det går inte att lägga till en PDFG-användare (PDF Generator)
 
 * Kontrollera att återdistribuerbara Microsoft® Visual C++ 2008 x86, Microsoft® Visual C++ 2010 x86, Microsoft® Visual C++ 2012 x86 och Microsoft® Visual C++ 2013 x86 (32-bitars) är installerade på Windows.
 
 +++
 
-+++Automatiseringstester misslyckas
++++Fel vid automatiseringstest
 
 * För Microsoft® Office och OpenOffice utför du minst en konvertering manuellt (som varje användare) för att säkerställa att ingen dialogruta öppnas under konverteringen. Om någon dialogruta visas, stänger du den. Ingen sådan dialogruta ska visas vid automatisk konvertering.
 
@@ -752,7 +748,7 @@ ldd phantomjs | grep not
 
 +++
 
-+++Konverteringar för flera användare misslyckas
++++Flera användarkonverteringsfel
 
 * Kontrollera serverloggarna för att kontrollera om konverteringen misslyckas för en viss användare.(Process Explorer kan hjälpa dig att kontrollera processen för olika användare)
 
