@@ -1,33 +1,33 @@
 ---
 title: Arbeta med projektarbetsflöden
-seo-title: Arbeta med projektarbetsflöden
+seo-title: Working with Project Workflows
 description: Det finns en mängd olika projektarbetsflöden att välja mellan.
-seo-description: Det finns en mängd olika projektarbetsflöden att välja mellan.
+seo-description: A variety of project workflows are available out of the box.
 uuid: 376922ca-e09e-4ac8-88c8-23dac2b49dbe
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: projects
 content-type: reference
 discoiquuid: 9d2bf30c-5190-4924-82cd-bcdfde24eb39
-translation-type: tm+mt
-source-git-commit: 0033dfac2540f56b3903c19f6ca19677af050db3
+exl-id: 407fc164-291d-42f6-8c46-c1df9ba3d454
+source-git-commit: 200b47070b7ead54ee54eea504bd960d4e0731d9
 workflow-type: tm+mt
-source-wordcount: '739'
-ht-degree: 8%
+source-wordcount: '798'
+ht-degree: 2%
 
 ---
 
 
-# Arbeta med projektarbetsflöden{#working-with-project-workflows}
+# Arbeta med projektarbetsflöden {#working-with-project-workflows}
 
 De projektarbetsflöden som är tillgängliga från paketet innehåller följande:
 
-* **Arbetsflöde**  för projektgodkännande - Med det här arbetsflödet kan du tilldela innehåll till en användare, granska och sedan godkänna.
-* **Begär start**  - Ett arbetsflöde som begär start.
-* **Begär landningssida**  - Den här arbetsflödet begär en landningssida.
-* **Begär e-post**  - Arbetsflöde för att begära e-post.
-* **Fotofoto och produktfoto (handel)**  - mappar resurser med produkter
-* **DAM Skapa och översätt kopia och DAM Skapa språkkopia**  - Skapar översatta binärfiler, metadata och taggar för resurser och mappar.
+* **Arbetsflöde för projektgodkännande** - Med det här arbetsflödet kan du tilldela innehåll till en användare, granska och sedan godkänna.
+* **Begär start** - Ett arbetsflöde som begär en start.
+* **Begär landningssida** - Det här arbetsflödet begär en landningssida.
+* **Begär e-post** - Arbetsflöde för att begära e-post.
+* **Fotofoto och fotografering av produkter (handel)** - Mappar resurser med produkter
+* **DAM Skapa och översätt kopia och DAM Skapa språkkopia** - Skapar översatta binärfiler, metadata och taggar för resurser och mappar.
 
 Beroende på vilken projektmall du väljer finns det vissa arbetsflöden:
 
@@ -40,18 +40,18 @@ Beroende på vilken projektmall du väljer finns det vissa arbetsflöden:
 | Begär start | x |  |  |  |
 | Begär landningssida | x |  |  |  |
 | Begär e-post | x |  |  |  |
-| DAM - skapa språkkopia&amp;ast; |  |  |  | x |
-| DAM Skapa och översätt språkkopia&amp;ast; |  |  |  | x |
+| DAM - skapa &amp;språkkopia; |  |  |  | x |
+| DAM Skapa och översätt &amp;språkkopia; |  |  |  | x |
 
 >[!NOTE]
 >
->&amp;ast; Dessa arbetsflöden startas inte från **arbetsflödets**-panel i Projekt. Se [Skapa språkkopior för resurser.](/help/sites-administering/tc-manage.md)
+>&amp;ast; De här arbetsflödena har inte startats från **Arbetsflöde** i Projekt. Se [Skapa språkkopior för resurser.](/help/sites-administering/tc-manage.md)
 
 Stegen för att starta och slutföra arbetsflöden är desamma oavsett vilket arbetsflöde du väljer. Bara stegen ändras.
 
-Du startar ett arbetsflöde direkt i Projekt (förutom för DAM Create Language Copy eller DAM Create och Translate Language Copy). Information om väntande uppgifter i ett projekt visas i rutan **Uppgifter**. Meddelanden om uppgifter som behöver slutföras visas bredvid användarikonen.
+Du startar ett arbetsflöde direkt i Projekt (förutom för DAM Create Language Copy eller DAM Create och Translate Language Copy). Information om utestående uppgifter i ett projekt finns i **Uppgifter** platta. Meddelanden om uppgifter som behöver slutföras visas bredvid användarikonen.
 
-Mer information om hur du arbetar med arbetsflöden i AEM finns i:
+Mer information om hur du arbetar med arbetsflöden i AEM finns i följande dokument:
 
 * [Delta i arbetsflöden](/help/sites-authoring/workflows-participating.md)
 * [Tillämpa arbetsflöden på sidor](/help/sites-authoring/workflows-applying.md)
@@ -59,71 +59,80 @@ Mer information om hur du arbetar med arbetsflöden i AEM finns i:
 
 I det här avsnittet beskrivs de arbetsflöden som är tillgängliga för projekt.
 
-## Arbetsflödet Begär kopia {#request-copy-workflow}
+## Begär kopieringsarbetsflöde {#request-copy-workflow}
 
 Med det här arbetsflödet kan du begära ett manuskript från en användare och sedan godkänna det. Så här startar du arbetsflödet för begärandekopia:
 
-1. I medieprojektet väljer du plustecknet (**+**) i rutan **Arbetsflöden** och väljer **arbetsflödet Begär kopiering**.
+1. I ett medieprojekt trycker eller klickar du på nedåtpilen längst upp till höger på **Arbetsflöden** platta och markera **Starta arbetsflöde**.
+1. Välj **Begär kopia** och klicka **Nästa**.
 1. Ange en titel och en kort sammanfattning av vad du begär. Ange ett målordsantal, uppgiftsprioritet och ett förfallodatum om tillämpligt.
 
-   ![chlimage_1-321](assets/chlimage_1-321.png)
+   ![Arbetsflödet Begär kopia](assets/project-request-copy-workflow.png)
 
-1. Klicka på **Skapa**. Arbetsflödet startar. Aktiviteten visas i rutan **Aktiviteter**.
+1. Klicka **Skicka**.
 
-   ![chlimage_1-322](assets/chlimage_1-322.png)
+Arbetsflödet startar. Uppgiften visas på **Uppgifter** kort.
 
 ## Arbetsflöde för fotografering {#product-photo-shoot-workflow}
 
-Arbetsflödena för fotografering av produktfoton (både inom och utan handel) beskrivs närmare i [Creative Project](/help/sites-authoring/managing-product-information.md).
+The **Fotofotografering** arbetsflöden (både handel och utan handel) beskrivs i detalj i dokumentet [Kreativa projekt](/help/sites-authoring/managing-product-information.md)
 
 ## Arbetsflöde för projektgodkännande {#project-approval-workflow}
 
-I arbetsflödet för projektgodkännande tilldelar du innehåll till en användare, granskar och godkänner sedan innehållet.
+I **Projektgodkännande** arbetsflöde kan du tilldela innehåll till en användare, granska och sedan godkänna innehållet.
 
-1. I ditt enkla projekt väljer du **`+`**-tecknet i rutan **Arbetsflöden** och väljer **Arbetsflöde för projektgodkännande**.
-1. Ange en titel och välj vem du vill tilldela den till i grupplistan. Ange en beskrivning, innehållssökväg, uppgiftsprioritet och ett förfallodatum om tillämpligt.
+1. I ett enkelt projekt: tryck eller klicka på nedåtpilen längst upp till höger i **Arbetsflöden** platta och markera **Starta arbetsflöde**.
+1. Välj **Arbetsflöde för projektgodkännande** och klicka **Nästa**.
+1. Ange en titel och välj vem den ska tilldelas till. Ange en beskrivning, innehållssökväg, uppgiftsprioritet och ett förfallodatum om tillämpligt.
 
-   ![chlimage_1-323](assets/chlimage_1-323.png)
+   ![Arbetsflöde för projektgodkännande](assets/project-approval-workflow.png)
 
-1. Klicka på **Skapa**. Arbetsflödet startar. Aktiviteten visas i rutan **Aktiviteter**.
+1. Klicka **Skicka**.
 
-   ![chlimage_1-324](assets/chlimage_1-324.png)
+Arbetsflödet startar. Uppgiften visas på **Uppgifter** kort.
 
 ## Begär startarbetsflöde {#request-launch-workflow}
 
 Med det här arbetsflödet kan du begära att programmet startas.
 
-1. I det enkla projektet väljer du plustecknet (**+**) i rutan **Arbetsflöden** och väljer **arbetsflödet Begär start**.
+1. I ett enkelt projekt: tryck eller klicka på nedåtpilen längst upp till höger i **Arbetsflöden** platta och markera **Starta arbetsflöde**.
+1. Välj **Begär startarbetsflöde** och klicka **Nästa**.
 1. Ange en rubrik för startprogrammet och ange startkällans sökväg. Du kan också lägga till en beskrivning och ett live-datum, om du vill. Välj Ärv källsidans livedata eller exkludera undersidor beroende på hur du vill att startsidan ska fungera.
 
-   ![chlimage_1-325](assets/chlimage_1-325.png)
+   ![Begär startarbetsflöde](assets/project-request-launch-workflow.png)
 
-1. Klicka på **Skapa**. Arbetsflödet startar. Arbetsflödet visas i listan **Arbetsflöden** (klicka på ellipser **..).** på panelen **Arbetsflöden** för att komma åt den här listan).
+1. Klicka **Skicka**.
 
-## Begär startsidans arbetsflöde {#request-landing-page-workflow}
+Arbetsflödet startar. Arbetsflödet visas i **Arbetsflöden** lista.
+
+## Begär arbetsflöde för landningssida {#request-landing-page-workflow}
 
 Med det här arbetsflödet kan du begära en landningssida.
 
-1. I ditt enkla projekt väljer du **+**-tecknet i rutan **Arbetsflöden** och väljer Begär arbetsflöde för landningssida.
+1. I ett enkelt projekt: tryck eller klicka på nedåtpilen längst upp till höger i **Arbetsflöden** platta och markera **Starta arbetsflöde**.
+1. Välj **Begär landningssida** och klicka **Nästa**.
 1. Ange en rubrik för landningssidan och den överordnade sökvägen. Ange eventuellt ett live-datum eller välj en fil för landningssidan.
 
-   ![chlimage_1-326](assets/chlimage_1-326.png)
+   ![Begär arbetsflöde för landningssida](assets/project-request-landing-page-workflow.png)
 
-1. Klicka på **Skapa**. Arbetsflödet startar. Aktiviteten visas i rutan **Aktiviteter**.
+1. Klicka **Skicka**.
+
+Arbetsflödet startar. Uppgiften visas på **Uppgifter** kort.
 
 ## Begär e-postarbetsflöde {#request-email-workflow}
 
-Med det här arbetsflödet kan du begära ett e-postmeddelande. Det är samma arbetsflöde som visas i rutan **E-post**.
+Med det här arbetsflödet kan du begära ett e-postmeddelande. Det är samma arbetsflöde som visas i **E-post** platta.
 
-1. I ditt Media- eller Simple-projekt väljer du **+**-tecknet i rutan **Arbetsflöden** och väljer **Begär e-postarbetsflöde**.
+1. I ett enkelt projekt: tryck eller klicka på nedåtpilen längst upp till höger i **Arbetsflöden** platta och markera **Starta arbetsflöde**.
+1. Välj **Begär e-post** och klicka **Nästa**.
 1. Ange en e-posttitel samt kampanj- och mallsökvägar. Dessutom kan du ange namn, beskrivning och live-datum.
 
-   ![chlimage_1-327](assets/chlimage_1-327.png)
+   ![Begär e-postarbetsflöde](assets/project-request-email-workflow.png)
 
-1. Klicka på **Skapa**. Arbetsflödet startar. Aktiviteten visas i rutan **Aktiviteter**.
+1. Klicka **Skicka**.
 
-   ![chlimage_1-328](assets/chlimage_1-328.png)
+Arbetsflödet startar. Uppgiften visas på **Uppgifter** kort.
 
 ## Skapa (och översätt) språkkopieringsarbetsflöde för resurser {#create-and-translate-language-copy-workflow-for-assets}
 
-Arbetsflödena **Skapa språkkopia** och **Skapa och översätt språkkopia** beskrivs i detalj i [Skapa språkkopior för resurser.](/help/assets/translation-projects.md)
+The **Skapa språkkopia** och **Skapa och översätta språkkopia** arbetsflöden beskrivs i detalj i dokumentet [Skapa språkkopior för resurser.](/help/assets/translation-projects.md)

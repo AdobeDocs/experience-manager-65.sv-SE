@@ -1,48 +1,48 @@
 ---
 title: Arbeta med uppgifter
-seo-title: Arbeta med uppgifter
+seo-title: Working with Tasks
 description: Uppgifter representerar arbetsuppgifter som ska utföras på innehåll och används i projekt för att fastställa slutförandenivån för aktuella uppgifter
-seo-description: Uppgifter representerar arbetsuppgifter som ska utföras på innehåll och används i projekt för att fastställa slutförandenivån för aktuella uppgifter
+seo-description: Tasks represent items of work to be done on content and are used in projects to determine the level of completeness of current tasks
 uuid: df4efb3f-8298-4159-acfe-305ba6b46791
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: projects
 content-type: reference
 discoiquuid: 1b79d373-73f4-4228-b309-79e74d191f3e
-translation-type: tm+mt
-source-git-commit: e3f1c932a5937e8a115e2849935b8f5ea5c2613d
+exl-id: a0719745-8d67-44bc-92ba-9ab07f31f8d2
+source-git-commit: 200b47070b7ead54ee54eea504bd960d4e0731d9
 workflow-type: tm+mt
-source-wordcount: '596'
-ht-degree: 13%
+source-wordcount: '597'
+ht-degree: 3%
 
 ---
 
 
-# Arbeta med uppgifter{#working-with-tasks}
+# Arbeta med uppgifter {#working-with-tasks}
 
-Uppgifter representerar arbetsuppgifter som ska utföras på innehåll. När du tilldelas en uppgift visas den i Inkorgen för arbetsflöde. Uppgiftsobjekt har värdet för uppgiften i kolumnen Typ.
+Uppgifter representerar arbetsuppgifter som ska utföras med avseende på innehåll. När du tilldelas en uppgift visas den i Inkorgen för arbetsflöde. Uppgiftsobjekt kan särskiljas från arbetsflödesobjekt med värdet för **Typ** kolumn.
 
-Uppgifter används också i projekt för att avgöra hur fullständiga de aktuella uppgifterna är, inklusive arbetsflödesuppgifter.
+Uppgifter används också i projekt för att fastställa projektets fullständighetsnivå.
 
-## Spårar projektförlopp {#tracking-project-progress}
+## Spåra projektförlopp {#tracking-project-progress}
 
-Du kan spåra projektförloppet genom att titta på de aktiva/slutförda aktiviteterna i ett projekt som representeras av **aktivitetspanelen**. Projektets förlopp kan avgöras av:
+Du kan spåra projektförloppet genom att titta på aktiva/slutförda uppgifter i ett projekt som representeras av **Uppgifter** platta. Projektets förlopp kan avgöras av:
 
-* **Uppgiftsruta:** Ett övergripande förlopp för projektet visas i uppgiftsrutan på sidan med projektinformation.
+* **Åtgärdsfönster:** Ett övergripande förlopp för projektet visas i aktivitetspanelen, som finns på sidan med projektinformation.
 
-* **Uppgiftsruta:** När du klickar på uppgiftsrutan visas en lista med uppgifter. Den här listan innehåller detaljerad information om alla uppgifter som rör projektet.
+* **Uppgiftslista:** När du klickar på aktivitetspanelen visas en lista med uppgifter. Den här listan innehåller detaljerad information om alla uppgifter som rör projektet.
 
-Båda listar arbetsflödesuppgifter och uppgifter som du skapar direkt i rutan **Uppgifter**.
+Båda alternativen listar arbetsflödesuppgifter och uppgifter som du skapar direkt i aktivitetspanelen.
 
-### Aktivitetsruta {#task-tile}
+### Åtgärdsfönster {#task-tile}
 
-Om ett projekt innehåller några relaterade uppgifter visas en åtgärdsruta i projektet. Åtgärdsrutan visar projektets aktuella status. Detta baseras på befintliga uppgifter i arbetsflödet och inkluderar inga uppgifter som kommer att genereras i framtiden allt eftersom arbetsflödet fortsätter. Följande information visas i åtgärdsrutan:
+Om ett projekt innehåller några relaterade uppgifter visas en aktivitetspanel i projektet. Aktivitetsrutan visar projektets aktuella status. Detta baseras på befintliga uppgifter i arbetsflödet och inkluderar inga uppgifter som kommer att genereras i framtiden allt eftersom arbetsflödet fortsätter. Följande information visas i åtgärdsrutan:
 
 * Procent slutförda uppgifter
 * Procent av aktiva uppgifter
 * Procent av försenade uppgifter
 
-![chlimage_1-98](assets/chlimage_1-98a.png)
+![Aktivitetspanelen](assets/project-tile-tasks.png)
 
 ### Visa eller ändra uppgifter i ett projekt {#viewing-or-modifying-the-tasks-in-a-project}
 
@@ -50,41 +50,43 @@ Förutom att följa upp förloppet kanske du också vill visa mer information om
 
 #### Uppgiftslista {#task-list}
 
-Klicka på ellipsen (..) i aktivitetspanelen för att visa en lista med uppgifter som hör till projektet. Uppgifterna delas upp i överordnade arbetsflöden. Uppgiftsinformationen visas tillsammans med metadata som förfallodatum, tilldelad, prioritet och status.
+Klicka på ellipsknappen längst ned till höger i aktivitetspanelen för att visa den inkorg som är filtrerad på uppgifter som rör projektet. Uppgiftsinformationen visas tillsammans med metadata som förfallodatum, tilldelad, prioritet och status.
 
-![chlimage_1-99](assets/chlimage_1-99a.png)
+![Inkorg för projektuppgift](assets/project-tasks.png)
 
 #### Uppgiftsinformation {#task-details}
 
-Mer information om en viss uppgift får du om du trycker/klickar på uppgiften i uppgiftslistan och **Aktivitetsinformation** öppnas.
+Mer information om en viss uppgift får du om du trycker eller klickar på uppgiften i inkorgen för att markera den. Tryck sedan på eller klicka på **Öppna** i verktygsfältet.
 
-![chlimage_1-100](assets/chlimage_1-100a.png)
+![Uppgiftsinformation](assets/project-task-detail.png)
 
-### Visa och ändra aktivitetskommentarer {#viewing-and-modifying-task-comments}
+Du kan visa, redigera och lägga till information i en uppgift via olika flikar.
 
-I Uppgiftsinformation kan du redigera eller lägga till kommentarer. Alla kommentarer i ett projekt visas dessutom i kommentarsområdet.
+* **Uppgift** - Allmän uppgiftsinformation
+* **Projektinformation** - Sammanfattning av projektet som aktiviteten är kopplad till
+* **Arbetsflöde in** - Sammanfattning av arbetsflödet som aktiviteten är kopplad till (om tillämpligt)
+* **Kommentarer** - Allmänna kommentarer om själva uppgiften
 
-![chlimage_1-101](assets/chlimage_1-101a.png)
+### Lägga till uppgifter {#adding-tasks}
 
-### Lägger till uppgifter {#adding-tasks}
-
-Du kan lägga till nya uppgifter i projekt. Dessa uppgifter visas sedan på aktivitetspanelen och är tillgängliga i inkorgen Meddelanden för att utföra åtgärder.
+Du kan lägga till nya uppgifter i projekt. Dessa uppgifter visas sedan i aktivitetspanelen och är tillgängliga i inkorgen för meddelanden så att du är medveten om dina utestående uppgifter.
 
 Så här lägger du till en uppgift:
 
-1. Tryck/klicka på ikonen + i rutan **Uppgifter** i projektet. Fönstret **Lägg till uppgift** öppnas.
-1. Ange information om uppgiften. Titeln på uppgiften och vilken grupp den har tilldelats är obligatoriska. Ytterligare information som innehållssökväg, beskrivning, uppgiftsprioritet och förfallodatum är valfria. Du kan dessutom välja fliken **Avancerat** och ange namnet på uppgiften, som används för att namnge URL:en.
+1. Leta reda på **Uppgifter** panel
+1. Tryck eller klicka på nedåtvinklingen längst upp till höger på plattan och välj **Skapa uppgift**.
+1. I **Lägg till uppgift** -fönstret, ange uppgiftsinformation som prioritet, tilldelad och förfallodatum.
 
-   ![chlimage_1-102](assets/chlimage_1-102a.png)
+   ![Lägga till en uppgift](assets/project-add-task.png)
 
-1. Tryck/klicka på **Skapa**.
+1. Tryck eller klicka **Skicka**.
 
-## Arbeta med uppgifter i inkorgen {#working-with-tasks-in-the-inbox}
+## Arbeta med uppgifter i Inkorgen {#working-with-tasks-in-the-inbox}
 
-Ett annat sätt att komma åt uppgifter är via Inkorgen. I inkorgen kan du öppna innehållet för att implementera ändringarna. När du är klar anger du aktivitetsstatus till Slutförd. Uppgifter visas också i inkorgen när de tilldelas till en användargrupp som du tillhör. I det här fallet kan alla medlemmar i gruppen utföra arbetet och slutföra uppgiften.
+I stället för att komma åt dina projektuppgifter från själva projektet kan du komma åt dem direkt från din inkorg. Inkorgen ger dig en översikt över dina uppgifter i olika projekt så att du kan förstå hela arbetsflödet.
 
-![chlimage_1-103](assets/chlimage_1-103a.png)
+I inkorgen kan du öppna uppgifterna och ange aktivitetsstatus. Uppgifter visas också i inkorgen när de tilldelas till en användargrupp som du tillhör. I det här fallet kan alla medlemmar i gruppen utföra arbetet och slutföra uppgiften.
 
-Slutför en uppgift genom att markera uppgiften och klicka på **Fullständig**. Lägg till information för aktiviteten och klicka sedan på **Klar**. Mer information finns i [Inkorgen](/help/sites-authoring/inbox.md).
+![Inkorg](assets/project-inbox.png)
 
-![chlimage_1-104](assets/chlimage_1-104.png)
+Om du vill slutföra en uppgift markerar du uppgiften och klickar på **Slutförd** i verktygsfältet. Lägg till information till uppgiften och klicka sedan på **Klar**. Se [Din inkorg](/help/sites-authoring/inbox.md) för mer information.
