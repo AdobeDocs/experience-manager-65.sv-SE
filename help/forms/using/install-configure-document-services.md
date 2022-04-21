@@ -8,9 +8,9 @@ topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: a23b3648b2687bcdbb46ea5e0bb42090822e1dd9
+source-git-commit: 4b3327ed46024662813bb538f8338c59e508e10e
 workflow-type: tm+mt
-source-wordcount: '5247'
+source-wordcount: '5157'
 ht-degree: 0%
 
 ---
@@ -223,11 +223,6 @@ Ange miljövariabler för 32- och 64-bitars Java Development Kit, tredjepartspro
    <td><p><strong>JDK (64-bitars)</strong></p> </td>
    <td><p>JAVA_HOME</p> </td>
    <td><p>C:\Program Files\Java\jdk1.8.0_74</p> </td>
-  </tr>
-  <tr>
-   <td><p><strong>JDK (32-bitars)</strong></p> </td>
-   <td><p>JAVA_HOME_32</p> </td>
-   <td><p>C:\Program Files (x86)\Java\jdk1.8.0_74</p> </td>
   </tr>
   <tr>
    <td><p><strong>Adobe Acrobat</strong></p> </td>
@@ -596,7 +591,20 @@ Assembler-tjänsten är beroende av tjänsten Reader Extensions, tjänsten Signa
 
 Verktyget Systemberedskap kontrollerar om datorn är korrekt konfigurerad för att köra konverteringar i PDF Generator. Verktyget genererar en rapport vid den angivna sökvägen. Så här kör du verktyget:
 
-1. Skapa en konfigurationsfil för verktyget Systemberedskap. Exempel: srt_config.yaml. Filformatet är:
+1. Öppna kommandotolken. Navigera till `[extracted-adobe-aemfd-pdfg-common-pkg]\jcr_root\libs\fd\pdfg\tools` mapp.
+
+1. Kör följande kommando från kommandotolken:
+
+   `java -jar forms-srt-[version].jar [Path_of_reports_folder] en`
+
+   Kommandot genererar en rapport och skapar även filen srt_config.yaml.
+
+   >[!NOTE]
+   >
+   > * Om systemberedskapsverktyget rapporterar att filen pdfgen.api inte är tillgänglig i Acrobat plug-ins-mappen kopierar du filen pdfgen.api från `[extracted-adobe-aemfd-pdfg-common-pkg]\jcr_root\libs\fd\pdfg\tools\adobe-aemfd-pdfg-utilities-[version]\plugins\x86_win32` till `[Acrobat_root]\Acrobat\plug_ins` katalog.
+   >
+   > * Du kan använda filen srt_config.yaml för att konfigurera olika inställningar för . Filformatet är:
+
 
    ```
       # =================================================================
@@ -623,19 +631,13 @@ Verktyget Systemberedskap kontrollerar om datorn är korrekt konfigurerad för a
       outputDir:
    ```
 
-1. Öppna kommandotolken. Navigera till `[extracted-adobe-aemfd-pdfg-common-pkg]\jcr_root\libs\fd\pdfg\tools` mapp. Kör följande kommando från kommandotolken:
-
-   `java -jar forms-srt-[version].jar [Path_of_reports_folder] en`
-
-   >[!NOTE]
-   >
-   >Om systemberedskapsverktyget rapporterar att filen pdfgen.api inte är tillgänglig i Acrobat plug-ins-mappen kopierar du filen pdfgen.api från `[extracted-adobe-aemfd-pdfg-common-pkg]\jcr_root\libs\fd\pdfg\tools\adobe-aemfd-pdfg-utilities-[version]\plugins\x86_win32` till `[Acrobat_root]\Acrobat\plug_ins` katalog.
-
 1. Navigera till `[Path_of_reports_folder]`. Öppna filen SystemReadinessTool.html. Verifiera rapporten och åtgärda problemen.
 
 ## Felsökning
 
 Om du får problem även efter att du har åtgärdat alla problem som rapporterats av SRT-verktyget utför du följande kontroller:
+
+Innan du utför följande kontroller bör du kontrollera att [Systemberedskap](#SRT) rapporterar inga fel.
 
 +++ Adobe Acrobat
 
@@ -644,9 +646,7 @@ Om du får problem även efter att du har åtgärdat alla problem som rapportera
 * Se till att [Acrobat_for_PDFG_Configuration.bat](#configure-acrobat-for-the-pdf-generator-service) gruppfilen kördes med administratörsbehörighet.
 * Se till att en PDF Generator-användare läggs till i användargränssnittet för PDF-konfigurationen.
 * Se till att [Ersätta en processnivåtoken](#grant-the-replace-a-process-level-token-privilege) behörighet läggs till för PDF Generator-användaren.
-* (För programserverbaserade installationer) Kontrollera att programservern körs som en tjänst.
-* Se till att användarna har läs- och skrivbehörigheter i PDF Generators tillfälliga katalog och tillfälliga katalog för operativsystem. Till exempel: `<crx-quickstart-home>\temp` och `C:\Windows\Temp`
-* Kontrollera att Office COM-tillägget för Acrobat PDFMaker är aktiverat för Microsoft Office-program. Om tillägget inte är aktiverat kör du Adobe Acrobat Reparation och kör [Acrobat_for_PDFG_Configuration.bat](#configure-acrobat-for-the-pdf-generator-service) och starta om AEM Forms Server.
+* Kontrollera att Office COM-tillägget för Acrobat PDFMaker är aktiverat för Microsoft Office-program.
 
 +++
 
@@ -654,12 +654,9 @@ Om du får problem även efter att du har åtgärdat alla problem som rapportera
 
 **Microsoft® Windows**
 
-* Se till att [version som stöds](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator) för Open Office är installerat och dialogrutor för att öppna avbryts för alla program.
+* Se till att [version som stöds](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator) av Microsoft Office är installerat och dialogrutor för att öppna avbryts för alla program.
 * Se till att en PDF Generator-användare läggs till i användargränssnittet för PDF-konfigurationen.
-* Se till att [Systemberedskap](#SRT) rapporterar inga fel.
 * Kontrollera att PDF Generator-användaren är medlem i en administratörsgrupp och att [Ersätta en processnivåtoken](#grant-the-replace-a-process-level-token-privilege) privilegium har angetts för användaren.
-* Se till att `\Windows\SysWOW64\config\systemprofile\Deskop` finns. Om mappen inte finns skapar du den.
-* Bevilja full kontroll på `\Windows\SysWOW64\config\systemprofile`, `<crx-quickstart-home>\temp`och `\Windows\Temp` till PDF Generator-användaren.
 * Kontrollera att användaren är konfigurerad i användargränssnittet för PDF Generator och utför följande åtgärder:
    1. Logga in på Microsoft® Windows med PDF Generator-användare.
    1. Öppna Microsoft® Office- eller Open Office-program och avbryt alla dialogrutor.
@@ -673,7 +670,6 @@ Om du får problem även efter att du har åtgärdat alla problem som rapportera
 
 * Se till att [version som stöds](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator) av Open Office är installerat avbryts öppningsdialogrutorna för alla program och Office-programmen har startats.
 * Skapa en miljövariabel `OpenOffice_PATH` och ange att den ska peka på OpenOffice-installationen anges i [konsol](https://linuxize.com/post/how-to-set-and-list-environment-variables-in-linux/) eller dt-profilen (enhetsträd).
-* Använd 32-bitars Java™ för att starta AEM Forms Server.
 * Om det uppstår problem när du installerar OpenOffice bör du kontrollera att [32-bitars bibliotek](#extrarequirements) som krävs för OpenOffice-installation finns tillgängligt.
 
 +++
@@ -709,7 +705,7 @@ Om du får problem även efter att du har åtgärdat alla problem som rapportera
 * Kontrollera att de senaste versionerna av 32-bitars lib curl, libcrypto och libssl-bibliotek är installerade på datorn. Skapa också symboler `/usr/lib/libcurl.so` (eller libcurl.a för AIX®), `/usr/lib/libcrypto.so` (eller libcrypto.a för AIX®) och `/usr/lib/libssl.so` (eller libssl.a för AIX®) som pekar på de senaste versionerna (32 bitar) av respektive bibliotek.
 
 * Utför följande steg för IBM® SSL Socket Provider:
-   1. Kopiera java.security-filen från `<WAS_Installed_JAVA>\jre\lib\security` till vilken plats som helst på din AEM Forms Server. Standardplatsen är Standardplats = `<WAS_Installed>\Appserver\java_1.7_64\jre\lib\security`.
+   1. Kopiera java.security-filen från `<WAS_Installed_JAVA>\jre\lib\security` till vilken plats som helst på din AEM Forms Server. Standardplatsen är Standardplats = `<WAS_Installed>\Appserver\java_[version]\jre\lib\security`.
 
    1. Redigera java.security-filen på den kopierade platsen och ändra standardfabrikerna för SSL Socket med JSSE2-fabriker (använd JSSE2-fabriker i stället för WebSphere®).
 
@@ -737,7 +733,7 @@ Om du får problem även efter att du har åtgärdat alla problem som rapportera
 
 +++ Det går inte att lägga till en PDFG-användare (PDF Generator)
 
-* Kontrollera att återdistribuerbara Microsoft® Visual C++ 2008 x86, Microsoft® Visual C++ 2010 x86, Microsoft® Visual C++ 2012 x86 och Microsoft® Visual C++ 2013 x86 (32-bitars) är installerade på Windows.
+* Kontrollera att omdistribuerbara Microsoft® Visual C++ 2012 x86 och Microsoft® Visual C++ 2013 x86 (32-bitars) är installerade på Windows.
 
 +++
 
