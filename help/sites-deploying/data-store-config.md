@@ -13,9 +13,9 @@ docset: aem65
 legacypath: /deploy/platform/data-store-config
 feature: Configuring
 exl-id: c1c90d6a-ee5a-487d-9a8a-741b407c8c06
-source-git-commit: d1b4cf87291f7e4a0670a21feca1ebf8dd5e0b5e
+source-git-commit: 9d8387934e2eab61191bd66c625a9fa52b686e37
 workflow-type: tm+mt
-source-wordcount: '3461'
+source-wordcount: '3471'
 ht-degree: 0%
 
 ---
@@ -206,7 +206,7 @@ Om du behöver uppgradera till en ny version av 1.10.x S3-kontakten (till exempe
    >
    >Filnamnen ovan används endast som illustrationer.
 
-1. Ladda ned den senaste versionen av funktionspaketet 1.8.x från [Adobe-databas](https://repo.adobe.com/nexus/content/groups/public/com/adobe/granite/com.adobe.granite.oak.s3connector/).
+1. Ladda ned den senaste versionen av funktionspaketet 1.8.x från [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/granite/com.adobe.granite.oak.s3connector).
 1. Zippa upp innehållet i en separat mapp och navigera sedan till `jcr_root/libs/system/install/15`.
 1. Kopiera jar-filerna till **&lt;aem-install>**/crx-quickstart/install/15 i AEM installationsmapp.
 1. Starta AEM och kontrollera anslutningsfunktionen.
@@ -286,7 +286,7 @@ Den lokala cachen kontrolleras för posten för den begärda filen/blobben innan
 
 **Asynkron överföring**
 
-Cachen stöder asynkrona överföringar till DataStore. Filerna mellanlagras lokalt i cachen (i filsystemet) och ett asynkront jobb börjar överföra filen. Antalet asynkrona överföringar begränsas av mellanlagringscachens storlek. Mellanlagringscachens storlek konfigureras med `stagingSplitPercentage` parameter. Den här parametern definierar den procentandel av cachestorleken som ska användas för mellanlagringscachen. Dessutom beräknas procentandelen cacheminne som är tillgängligt för nedladdningar som **(100 - `stagingSplitPercentage`) *`cacheSize`**.
+Cachen stöder asynkrona överföringar till DataStore. Filerna mellanlagras lokalt i cachen (i filsystemet) och ett asynkront jobb börjar överföra filen. Antalet asynkrona överföringar begränsas av mellanlagringscachens storlek. Mellanlagringscachens storlek konfigureras med `stagingSplitPercentage` parameter. Den här parametern definierar den procentandel av cachestorleken som ska användas för mellanlagringscachen. Dessutom beräknas procentandelen cacheminne som är tillgängligt för nedladdningar som **(100 - `stagingSplitPercentage`) &#42;`cacheSize`**.
 
 De asynkrona överföringarna är flertrådiga och antalet trådar konfigureras med `uploadThreads` parameter.
 
