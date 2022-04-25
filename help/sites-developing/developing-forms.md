@@ -1,8 +1,8 @@
 ---
 title: Utveckla Forms (Classic UI)
-seo-title: Utveckla Forms (Classic UI)
+seo-title: Developing Forms (Classic UI)
 description: Lär dig utveckla formulär
-seo-description: Lär dig utveckla formulär
+seo-description: Learn how to develop forms
 uuid: 33859f29-edc5-4bd5-a634-35549f3b5ccf
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,14 +10,13 @@ topic-tags: components
 content-type: reference
 discoiquuid: 6ee3bd3b-51d1-462f-b12e-3cbe24898b85
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+exl-id: f43e9491-aa8f-40af-9800-123695142559
+source-git-commit: 4df14f837569997c3e4da8161ac2b099c39d89a6
 workflow-type: tm+mt
-source-wordcount: '1952'
+source-wordcount: '1942'
 ht-degree: 0%
 
 ---
-
 
 # Utveckla Forms (Classic UI){#developing-forms-classic-ui}
 
@@ -27,9 +26,9 @@ En formulärs grundläggande struktur är:
 * Formulärelement
 * Formulärslut
 
-Alla dessa implementeras med en serie [standardkomponenter](/help/sites-authoring/default-components.md#form) som finns i en AEM standardinstallation.
+Alla dessa realiseras med en serie standardinställningar [Formulärkomponenter](/help/sites-authoring/default-components.md#form)som finns i en AEM standardinstallation.
 
-Förutom att [utveckla nya komponenter](/help/sites-developing/developing-components-samples.md) för användning i dina formulär kan du även:
+Förutom [utveckla nya komponenter](/help/sites-developing/developing-components-samples.md) för användning i formulären kan man också
 
 * [Läs in formuläret i förväg med värden](#preloading-form-values)
 * [Förhandsladda (vissa fält) fält med flera värden](#preloading-form-fields-with-multiple-values)
@@ -37,15 +36,15 @@ Förutom att [utveckla nya komponenter](/help/sites-developing/developing-compon
 * [Utveckla nya begränsningar](#developing-your-own-form-constraints)
 * [Visa eller dölja specifika formulärfält](#showing-and-hiding-form-components)
 
-[Använda ](#developing-scripts-for-use-with-forms) skript för att utöka funktionaliteten där det behövs.
+[Använda skript](#developing-scripts-for-use-with-forms) för att vid behov utöka funktionaliteten.
 
 >[!NOTE]
 >
->Det här dokumentet fokuserar på att utveckla formulär med [Foundation Components](/help/sites-authoring/default-components-foundation.md) i det klassiska användargränssnittet. Adobe rekommenderar att du använder de nya [kärnkomponenterna](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) och [Dölj villkor](/help/sites-developing/hide-conditions.md) för formulärutveckling i det beröringskänsliga användargränssnittet.
+>Det här dokumentet fokuserar på att utveckla formulär med [Foundation Components](/help/sites-authoring/default-components-foundation.md) i det klassiska användargränssnittet. Adobe rekommenderar att du utnyttjar nya [Kärnkomponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) och [Dölj villkor](/help/sites-developing/hide-conditions.md) för formulärutveckling i det beröringskänsliga användargränssnittet.
 
 ## Förhandsladda formulärvärden {#preloading-form-values}
 
-Formulärstartkomponenten innehåller ett fält för **Läs in sökväg**, en valfri sökväg som pekar på en nod i databasen.
+Startkomponenten för formuläret innehåller ett fält för **Läs in bana**, en valfri sökväg som pekar på en nod i databasen.
 
 Läs in sökväg är sökvägen till nodegenskaper som används för att läsa in fördefinierade värden till flera fält i formuläret.
 
@@ -53,35 +52,33 @@ Detta är ett valfritt fält som anger sökvägen till en nod i databasen. När 
 
 >[!NOTE]
 >
->En [formuläråtgärd](#developing-your-own-form-actions) kan även ange resursen som de ursprungliga värdena ska läsas in från. Detta görs med `FormsHelper#setFormLoadResource` inuti `init.jsp`.
+>A [formuläråtgärd](#developing-your-own-form-actions) kan också ange från vilken resurs de initiala värdena ska läsas in. Detta görs med `FormsHelper#setFormLoadResource` inuti `init.jsp`.
 >
 >Formuläret fylls i av författaren från den sökväg som angetts i startformulärkomponenten endast om detta inte anges.
 
 ### Förhandsladda formulärfält med flera värden {#preloading-form-fields-with-multiple-values}
 
-Olika formulärfält har även **objektets inläsningssökväg**, som är en valfri sökväg som pekar på en nod i databasen.
+Olika formulärfält har även **Inläsningssökväg för objekt**, en valfri sökväg som pekar på en nod i databasen.
 
-**Sökväg till objektinläsning** är sökvägen till nodegenskaper som används för att läsa in fördefinierade värden i det specifika fältet i formuläret, till exempel en [listruta](/help/sites-authoring/default-components-foundation.md#dropdown-list), [kryssrutegrupp](/help/sites-authoring/default-components-foundation.md#checkbox-group) eller [alternativgrupp](/help/sites-authoring/default-components-foundation.md#radio-group).
+The **Inläsningssökväg för objekt** är sökvägen till nodegenskaper som används för att läsa in fördefinierade värden i det specifika fältet i formuläret, till exempel en [nedrullningsbar lista](/help/sites-authoring/default-components-foundation.md#dropdown-list), [kryssrutegrupp](/help/sites-authoring/default-components-foundation.md#checkbox-group) eller [alternativgrupp](/help/sites-authoring/default-components-foundation.md#radio-group).
 
 #### Exempel - Förhandsladda en listruta med flera värden {#example-preloading-a-dropdown-list-with-multiple-values}
 
 En nedrullningsbar lista kan konfigureras med ditt värdeintervall för val.
 
-**Sökvägen för objektinläsning** kan användas för att komma åt en lista från en mapp i databasen och läsa in dessa i fältet i förväg:
+The **Inläsningssökväg för objekt** kan användas för att komma åt en lista från en mapp i databasen och läsa in dessa i fältet i förväg:
 
-1. Skapa en ny signeringsmapp ( `sling:Folder`)
-till exempel `/etc/designs/<myDesign>/formlistvalues`
+1. Skapa en ny försäljningsmapp ( `sling:Folder`), till exempel `/etc/designs/<myDesign>/formlistvalues`
 
-1. Lägg till en ny egenskap (till exempel `myList`) av typen flervärdessträng ( `String[]`) som innehåller listan med nedrullningsbara objekt. Innehåll kan också importeras med hjälp av ett skript, t.ex. med ett JSP-skript eller cURL i ett gränssnittsskript.
+1. Lägg till en ny egenskap (till exempel `myList`) av typen sträng med flera värden ( `String[]`) som innehåller listan med nedrullningsbara objekt. Innehåll kan också importeras med hjälp av ett skript, t.ex. med ett JSP-skript eller cURL i ett gränssnittsskript.
 
-1. Använd den fullständiga sökvägen i fältet **Objektets inläsningssökväg**:
-till exempel `/etc/designs/geometrixx/formlistvalues/myList`
+1. Använd hela sökvägen i **Inläsningssökväg för objekt** fält: till exempel `/etc/designs/geometrixx/formlistvalues/myList`
 
-Observera att om värdena i `String[]` är formaterade så här:
+Observera att om värdena i `String[]` har följande format:
 
 * `AL=Alabama`
 * `AK=Alaska`
-* *osv.*
+* osv.
 
 kommer AEM att generera listan som:
 
@@ -98,7 +95,7 @@ En rad åtgärder ingår i en standardinstallation av AEM, som beskrivs nedan:
 
 `/libs/foundation/components/form/actions`
 
-och i listan **Åtgärdstyp** för komponenten **Form**:
+och i **Åtgärdstyp** listan med **Formulär** komponent:
 
 ![chlimage_1-8](assets/chlimage_1-8.png)
 
@@ -114,9 +111,9 @@ Du kan lägga till en egen åtgärd under `/apps` enligt följande:
 
 1. På den här noden definierar du följande egenskaper och klickar sedan på **Spara alla** för att behålla ändringarna:
 
-   * `sling:resourceType` - ange som  `foundation/components/form/action`
+   * `sling:resourceType` - ange som `foundation/components/form/action`
 
-   * `componentGroup` - definiera som  `.hidden`
+   * `componentGroup` - definiera som `.hidden`
 
    * Valfritt:
 
@@ -131,21 +128,21 @@ Du kan lägga till en egen åtgärd under `/apps` enligt följande:
 1. I mappen skapar du antingen:
 
    1. Ett postskript.
-Skriptets namn är `post.POST.<extension>`, t.ex. `post.POST.jsp`
+Skriptnamnet är `post.POST.<extension>`, t.ex. `post.POST.jsp`
 Bokföringsskriptet anropas när ett formulär skickas för att bearbeta formuläret, det innehåller koden som hanterar data som kommer från formuläret 
 `POST`.
 
    1. Lägg till ett framåt-skript som anropas när formuläret skickas.
-Skriptets namn är `forward.<extension`>, t.ex. `forward.jsp`
+Skriptnamnet är `forward.<extension`>, t.ex. `forward.jsp`
 Skriptet kan definiera en sökväg. Den aktuella begäran vidarebefordras sedan till den angivna sökvägen.
-   Det nödvändiga anropet är `FormsHelper#setForwardPath` (2 varianter). Ett typiskt fall är att utföra viss validering, eller logik, för att hitta målsökvägen och sedan gå vidare till den sökvägen, så att standardserverservern för Sling-POST kan utföra den faktiska lagringen i JCR.
+   Det nödvändiga samtalet är `FormsHelper#setForwardPath` (2 varianter). Ett typiskt fall är att utföra viss validering, eller logik, för att hitta målsökvägen och sedan gå vidare till den sökvägen, så att standardserverservern för Sling-POST kan utföra den faktiska lagringen i JCR.
 
-   Det kan också finnas en annan server som utför själva bearbetningen, i så fall fungerar formuläråtgärden och `forward.jsp` bara som&quot;limkod&quot;. Ett exempel på detta är e-poståtgärden på `/libs/foundation/components/form/actions/mail`, som vidarebefordrar information till `<currentpath>.mail.html`där en e-postserver finns.
+   Det kan också finnas en annan server som utför själva bearbetningen, i så fall formuläråtgärden och `forward.jsp` fungerar bara som&quot;limkod&quot;. Ett exempel på detta är e-poståtgärden på `/libs/foundation/components/form/actions/mail`som skickar information till `<currentpath>.mail.html`där en e-postserver sitter.
 
    Så:
 
-   * en `post.POST.jsp` är användbar för små åtgärder som utförs helt av själva åtgärden
-   * medan `forward.jsp` är användbart när endast delegering krävs.
+   * a `post.POST.jsp` är användbart för små åtgärder som utförs helt och hållet av själva åtgärden
+   * while `forward.jsp` är användbart när endast delegering krävs.
 
    Körningsordningen för skripten är:
 
@@ -155,16 +152,16 @@ Skriptet kan definiera en sökväg. Den aktuella begäran vidarebefordras sedan 
       1. för alla fältbegränsningar: `clientvalidation.jsp`
       1. formulärets valideringRT: `clientvalidation.jsp`
       1. formuläret läses in via inläsningsresurs om det är inställt
-      1. `addfields.jsp` vid återgivning  `<form></form>`
+      1. `addfields.jsp` vid återgivning `<form></form>`
    * vid hantering av ett formulär `POST`:
 
       1. `init.jsp`
       1. för alla fältbegränsningar: `servervalidation.jsp`
       1. formulärets valideringRT: `servervalidation.jsp`
       1. `forward.jsp`
-      1. om en sökväg angavs ( `FormsHelper.setForwardPath`) vidarebefordrar du begäran och anropar sedan `cleanup.jsp`
+      1. om en framåtriktad bana har angetts ( `FormsHelper.setForwardPath`), vidarebefordra begäran och sedan ringa `cleanup.jsp`
 
-      1. om ingen framåtriktad sökväg har angetts, anropa `post.POST.jsp` (avslutas här, ingen `cleanup.jsp` har anropats)
+      1. om ingen framåtriktad sökväg har angetts, ring `post.POST.jsp` (slutar här, nej `cleanup.jsp` )
 
 
 
@@ -172,18 +169,19 @@ Skriptet kan definiera en sökväg. Den aktuella begäran vidarebefordras sedan 
 1. Lägg till igen i mappen om du vill:
 
    1. Ett skript för att lägga till fält.
-Skriptets namn är `addfields.<extension>`, t.ex. `addfields.jsp`
-Ett tilläggsfältsskript anropas omedelbart efter att HTML-koden för formulärstarten har skrivits. Detta gör att åtgärden kan lägga till anpassade inmatningsfält eller annan sådan HTML-kod i formuläret.
+Skriptnamnet är `addfields.<extension>`, t.ex. `addfields.jsp`
+An 
+`addfields` skriptet anropas omedelbart efter att HTML för att starta formuläret har skrivits. Detta gör att åtgärden kan lägga till anpassade inmatningsfält eller andra liknande HTML i formuläret.
 
    1. Ett initieringsskript.
-Skriptets namn är `init.<extension>`, t.ex. `init.jsp`
-Skriptet anropas när formuläret återges. Den kan användas för att initiera åtgärdsinformation. &quot;
+Skriptnamnet är `init.<extension>`, t.ex. `init.jsp`
+Skriptet anropas när formuläret återges. Den kan användas för att initiera åtgärdsinformation.
 
    1. Ett rensningsskript.
-Skriptets namn är `cleanup.<extension>`, t.ex. `cleanup.jsp`
+Skriptnamnet är `cleanup.<extension>`, t.ex. `cleanup.jsp`
 Skriptet kan användas för att rensa.
 
-1. Använd komponenten **Forms** i en parsys. Listrutan **Åtgärdstyp** innehåller nu din nya åtgärd.
+1. Använd **Forms** i en parsys. The **Åtgärdstyp** kommer nu att innehålla din nya åtgärd.
 
    >[!NOTE]
    >
@@ -197,7 +195,7 @@ Skriptet kan användas för att rensa.
 Begränsningar kan införas på två nivåer:
 
 * För [enskilda fält (se följande procedur)](#constraints-for-individual-fields)
-* Som [formulärglobal validering](#form-global-constraints)
+* Som [global validering av formulär](#form-global-constraints)
 
 #### Begränsningar för enskilda fält {#constraints-for-individual-fields}
 
@@ -211,7 +209,7 @@ Du kan lägga till egna begränsningar för ett enskilt fält (under `/apps`) en
 
 1. På den här noden definierar du följande egenskaper och klickar sedan på **Spara alla** för att behålla ändringarna:
 
-   * `sling:resourceType` - ställs in på  `foundation/components/form/constraint`
+   * `sling:resourceType` - ställs in på `foundation/components/form/constraint`
 
    * `constraintMessage` - ett anpassat meddelande som visas om fältet inte är giltigt, enligt villkoret, när formuläret skickas
 
@@ -222,12 +220,10 @@ Du kan lägga till egna begränsningar för ett enskilt fält (under `/apps`) en
 
 1. I den här mappen kan du behöva följande skript:
 
-   * Ett klientvalideringsskript:
-Skriptets namn är `clientvalidation.<extension>`, t.ex. `clientvalidation.jsp`
-Detta anropas när formulärfältet återges. Den kan användas för att skapa javascript för klienten för att validera fältet på klienten.
+   * Ett klientvalideringsskript: Skriptnamnet är `clientvalidation.<extension>`, t.ex. `clientvalidation.jsp`
+Detta anropas när formulärfältet återges. Den kan användas för att skapa klient-javascript för att validera fältet på klienten.
 
-   * Ett servervalideringsskript:
-Skriptets namn är `servervalidation.<extension>`, t.ex. `servervalidation.jsp`
+   * Ett servervalideringsskript: Skriptnamnet är `servervalidation.<extension>`, t.ex. `servervalidation.jsp`
 Detta anropas när formuläret skickas. Den kan användas för att validera fältet på servern efter att det har skickats.
 
 >[!NOTE]
@@ -238,14 +234,14 @@ Detta anropas när formuläret skickas. Den kan användas för att validera fäl
 
 #### Formulärglobala begränsningar {#form-global-constraints}
 
-Den globala valideringen av formulär anges genom att en resurstyp konfigureras i startformulärkomponenten ( `validationRT`). Till exempel:
+Den globala valideringen av formuläret anges genom att en resurstyp konfigureras i startformulärkomponenten ( `validationRT`). Till exempel:
 
 `apps/myProject/components/form/validation`
 
 Sedan kan du definiera:
 
 * a `clientvalidation.jsp` - injicerat efter fältets klientvalideringsskript
-* och en `servervalidation.jsp` - anropas även efter att den enskilda fältservern har validerats på en `POST`.
+* och `servervalidation.jsp` - anropas även efter att den enskilda fältservern validerats på en `POST`.
 
 ### Visa och dölja formulärkomponenter {#showing-and-hiding-form-components}
 
@@ -253,7 +249,7 @@ Du kan konfigurera formuläret så att det visar eller döljer formulärkomponen
 
 Att ändra synligheten för ett formulärfält är användbart när fältet bara behövs under specifika förhållanden. Till exempel frågar en fråga kunderna om de vill ha produktinformation som de får via e-post. När du väljer Ja visas ett textfält där kunden kan ange sin e-postadress.
 
-Använd dialogrutan **Redigera visa/dölj regler** för att ange under vilka förhållanden en formulärkomponent visas eller döljs.
+Använd **Redigera Visa/dölj regler** för att ange under vilka förhållanden en formulärkomponent visas eller döljs.
 
 ![showhideeditor](assets/showhideeditor.png)
 
@@ -268,11 +264,11 @@ Ett eller flera villkor visas under dessa fält. Ett villkor jämför värdet f�
 * En operator.
 * Ett värde jämförs med fältvärdet.
 
-En Radio Group-komponent med titeln `Receive email notifications?`* * innehåller till exempel alternativknapparna `Yes` och `No`. En textfältskomponent med titeln `Email Address` använder följande villkor så att den är synlig om `Yes` är markerad:
+En Radio Group-komponent med titeln `Receive email notifications?`* * innehåller `Yes` och `No` alternativknappar. En textfältskomponent med titeln `Email Address` använder följande villkor så att det är synligt om `Yes` är markerat:
 
 ![showhidecondition](assets/showhidecondition.png)
 
-I Javascript används värdet för elementnamnsegenskapen för att referera till fält. I föregående exempel är elementnamnsegenskapen för komponenten Valideringsalternativknappar `contact`. Följande kod motsvarar JavaScript-koden för det exemplet:
+I Javascript används värdet för elementnamnsegenskapen för att referera till fält. I föregående exempel är elementnamnsegenskapen för komponenten Grupp med alternativknappar `contact`. Följande kod motsvarar JavaScript-koden för det exemplet:
 
 `((contact == "Yes"))`
 
@@ -280,26 +276,26 @@ I Javascript används värdet för elementnamnsegenskapen för att referera till
 
 1. Redigera den specifika formulärkomponenten.
 
-1. Välj **Visa/Dölj** för att öppna dialogrutan **Redigera visa/dölj regler**:
+1. Välj **Visa/dölj** för att öppna **Redigera visa/dölj regler** dialog:
 
-   * I den första listrutan väljer du antingen **Visa** eller **Dölj** för att ange om villkoren avgör om komponenten ska visas eller döljas.
+   * I den första listrutan väljer du antingen **Visa** eller **Dölj** för att ange om villkoren ska avgöra om komponenten ska visas eller döljas.
 
    * I listrutan i slutet av den översta raden väljer du:
 
-      * **all** - om alla villkor måste vara true för att komponenten ska kunna visas eller döljas
-      * **any** - om bara ett eller flera villkor måste vara true för att komponenten ska kunna visas eller döljas
+      * **alla** - om alla villkor måste vara true för att komponenten ska kunna visas eller döljas
+      * **alla** - om bara ett eller flera villkor måste vara true för att komponenten ska kunna visas eller döljas
    * Markera en komponent, operator och ange sedan ett värde på villkorslinjen (en visas som standard).
-   * Lägg till fler villkor om det behövs genom att klicka på **Lägg till villkor**.
+   * Lägg till fler villkor om det behövs genom att klicka **Lägg till villkor**.
 
    Till exempel:
 
    ![chlimage_1-9](assets/chlimage_1-9.png)
 
-1. Klicka på **OK** för att spara definitionen.
+1. Klicka **OK** för att spara definitionen.
 
-1. När du har sparat definitionen visas länken **Redigera regler** bredvid alternativet **Visa/Dölj** i egenskaperna för formulärkomponenten. Klicka på den här länken för att öppna dialogrutan **Redigera visa/dölj regler** för att göra ändringar.
+1. När du har sparat definitionen kan du **Redigera regler** visas bredvid **Visa/dölj** i formulärkomponentens egenskaper. Klicka på den här länken för att öppna **Redigera visa/dölj regler** för att göra ändringar.
 
-   Klicka på **OK** om du vill spara alla ändringar.
+   Klicka **OK** om du vill spara alla ändringar.
 
    ![chlimage_1-10](assets/chlimage_1-10.png)
 
@@ -307,12 +303,9 @@ I Javascript används värdet för elementnamnsegenskapen för att referera till
    >
    >Effekterna av Visa/dölj-definitioner kan ses och testas:
    >
+   >* in **Förhandsgranska** läge i redigeringsmiljön (kräver att sidan laddas om när du först växlar till förhandsgranskning)
    >
-   >
-   >    * i **Förhandsgranska**-läge i författarmiljön (kräver att sidan läses in igen när du först växlar till förhandsgranskning)
-      >
-      >    
-   * publiceringsmiljön
+   >* publiceringsmiljön
 
 
 #### Hantera brutna komponentreferenser {#handling-broken-component-references}
@@ -330,4 +323,4 @@ Du kan använda detta för åtgärder som att anropa en tjänst innan formuläre
 * Definiera valideringsresurstypen
 * Inkludera ett skript för validering:
 
-   * Ring webbtjänsten i din JSP och skapa ett `com.day.cq.wcm.foundation.forms.ValidationInfo`-objekt som innehåller dina felmeddelanden. Om fel uppstår bokförs inte formulärdata.
+   * Ring webbtjänsten i din JSP och skapa en `com.day.cq.wcm.foundation.forms.ValidationInfo` -objekt som innehåller dina felmeddelanden. Om fel uppstår bokförs inte formulärdata.
