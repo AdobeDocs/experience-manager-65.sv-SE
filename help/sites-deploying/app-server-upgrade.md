@@ -1,18 +1,11 @@
 ---
 title: Uppgradera steg för programserverinstallationer
 description: Lär dig hur du uppgraderar instanser av AEM som distribueras via programservrar.
-uuid: e4020966-737c-40ea-bfaa-c63ab9a29cee
-contentOwner: sarchiz
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-topic-tags: upgrading
-content-type: reference
-discoiquuid: 1876d8d6-bffa-4a1c-99c0-f6001acea825
-docset: aem65
-feature: Uppgraderar
+feature: Upgrading
 exl-id: 86dd10ae-7f16-40c8-84b6-91ff2973a523
-source-git-commit: 69d960da90176058e8bb8b685325529e6cc10a31
+source-git-commit: 5e875e0420540ca209e7d677046e8d010ae4e145
 workflow-type: tm+mt
-source-wordcount: '455'
+source-wordcount: '452'
 ht-degree: 0%
 
 ---
@@ -21,9 +14,9 @@ ht-degree: 0%
 
 I det här avsnittet beskrivs den procedur som måste följas för att uppdatera AEM för programserverinstallationer.
 
-I alla exemplen i den här proceduren används Tomcat som Application Server och du antyder att du har en fungerande version av AEM redan distribuerad. Proceduren är avsedd att dokumentera uppgraderingar som utförts från **AEM version 6.4 till 6.5**.
+I alla exemplen i den här proceduren används Tomcat som Application Server och du antyder att du har en fungerande version av AEM redan distribuerad. Proceduren är avsedd att dokumentera uppgraderingar som gjorts från **AEM version 6.4 till 6.5**.
 
-1. Börja med TomCat. I de flesta fall kan du göra detta genom att köra startskriptet `./catalina.sh` genom att köra det här kommandot från terminalen:
+1. Börja med TomCat. I de flesta fall kan du göra detta genom att köra `./catalina.sh` starta startskriptet genom att köra det här kommandot från terminalen:
 
    ```shell
    $CATALINA_HOME/bin/catalina.sh start
@@ -37,7 +30,7 @@ I alla exemplen i den här proceduren används Tomcat som Application Server och
 
 1. Avinstallera sedan AEM 6.4. Detta kan du göra med TomCat App Manager (`http://serveraddress:serverport/manager/html`)
 
-1. Nu kan du migrera databasen med hjälp av crx2oak-migreringsverktyget. Om du vill göra det hämtar du den senaste versionen av crx2oak från [den här platsen](https://repo.adobe.com/nexus/content/groups/public/com/adobe/granite/crx2oak).
+1. Nu kan du migrera databasen med hjälp av crx2oak-migreringsverktyget. Om du vill göra det hämtar du den senaste versionen av crx2oak från [den här platsen](https://repo1.maven.org/maven2/com/adobe/granite/crx2oak/).
 
    ```shell
    SLING_HOME= $AEM-HOME/crx-quickstart java -Xmx4096m -XX:MaxPermSize=2048M -jar crx2oak.jar --load-profile segment-fds
@@ -66,11 +59,11 @@ I alla exemplen i den här proceduren används Tomcat som Application Server och
 
 1. Ta bort filer och mappar som inte längre behövs. De objekt du behöver ta bort är:
 
-   * Mappen **launchpad/startup**. Du kan ta bort den genom att köra följande kommando i terminalen: `rm -rf crx-quickstart/launchpad/startup`
+   * The **startplatta/startmapp**. Du kan ta bort den genom att köra följande kommando i terminalen: `rm -rf crx-quickstart/launchpad/startup`
 
-   * Filen **base.jar**: `find crx-quickstart/launchpad -type f -name "org.apache.sling.launchpad.base.jar*" -exec rm -f {} \`
+   * The **base.jar-fil**: `find crx-quickstart/launchpad -type f -name "org.apache.sling.launchpad.base.jar*" -exec rm -f {} \`
 
-   * Filen **BootstrapCommandFile_timestamp.txt**: `rm -f crx-quickstart/launchpad/felix/bundle0/BootstrapCommandFile_timestamp.txt`
+   * The **BootstrapCommandFile_timestamp.txt, fil**: `rm -f crx-quickstart/launchpad/felix/bundle0/BootstrapCommandFile_timestamp.txt`
 
    * Ta bort **sling.options.file** genom att köra: `find crx-quickstart/launchpad -type f -name "sling.options.file" -exec rm -rf`
 
@@ -94,13 +87,13 @@ I alla exemplen i den här proceduren används Tomcat som Application Server och
       minRecordLength=4096
       ```
 
-1. Nu måste du ändra körningslägena i AEM 6.5-filen. För att göra det skapar du först en tillfällig mapp som ska rymma AEM 6.5-kriget. Namnet på mappen i det här exemplet är `temp`. När krigsfilen har kopierats kan du extrahera innehållet genom att köra det inifrån den tillfälliga mappen:
+1. Nu måste du ändra körningslägena i AEM 6.5-filen. För att göra det skapar du först en tillfällig mapp som ska rymma AEM 6.5-kriget. Namnet på mappen i det här exemplet blir `temp`. När krigsfilen har kopierats kan du extrahera innehållet genom att köra det inifrån den tillfälliga mappen:
 
    ```
    jar xvf aem-quickstart-6.5.0.war
    ```
 
-1. När innehållet har extraherats går du till mappen **WEB-INF** och redigerar filen web.xml och ändrar körningslägena. Om du vill hitta platsen där de anges i XML söker du efter strängen `sling.run.modes`. När du har hittat den ändrar du körningslägena i nästa kodrad, som som standard är inställd på författare:
+1. När innehållet har extraherats går du till **WEB-INF** och redigera filen web.xml för att ändra körningslägena. Om du vill hitta den plats där de finns i XML-filen söker du efter `sling.run.modes` sträng. När du har hittat den ändrar du körningslägena i nästa kodrad, som som standard är inställd på författare:
 
    ```bash
    <param-value >author</param-value>

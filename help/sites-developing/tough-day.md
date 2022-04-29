@@ -1,14 +1,12 @@
 ---
 title: Tålig dag
-seo-title: Tough Day
 description: Tough Day-testet simulerar den dagliga belastningen för cirka 1 000 författare i ett värsta scenario där alla åtgärder utförs samtidigt.
-seo-description: The Tough Day test simulates the daily load of around 1000 authors in a worst-case scenario with all the operations going on at the same time.
 topic-tags: testing
 content-type: reference
 exl-id: ceb9671c-57f9-4d81-94c0-0dbccd4d90a2
-source-git-commit: 0b1f28963d9294c7aa9ae45c6b9fc9a9b8b4f6e6
+source-git-commit: ca6d41740dbb24dbba7cf7691c51435cc40d3ead
 workflow-type: tm+mt
-source-wordcount: '1879'
+source-wordcount: '1849'
 ht-degree: 1%
 
 ---
@@ -143,7 +141,7 @@ Du hittar de relevanta parametrarna i listan nedan:
 
 Anpassning kan göras på två sätt: kommandoradsparametrar eller dynamiska konfigurationsfiler. **Konfigurationsfiler används vanligtvis för stora anpassade programsviter och de åsidosätter standardparametrarna för Tough Day 2. Kommandoradsparametrar åsidosätter både konfigurationsfiler och standardparametrar.**
 
-Det enda sättet att spara en testkonfiguration är att kopiera den i yaml-format. Mer information finns i [toughday.yaml](https://repo.adobe.com/nexus/service/local/repositories/releases/content/com/adobe/qe/toughday2/0.2.1/toughday2-0.2.1.yaml) konfiguration och yaml-konfigurationsexempel i avsnitten nedan.
+Det enda sättet att spara en testkonfiguration är att kopiera den i yaml-format.
 
 ### Lägga till ett nytt test {#adding-a-new-test}
 
@@ -347,22 +345,22 @@ Dag 2 ger både testvärden och loggar. Mer information finns i följande avsnit
 
 ### Testmått {#test-metrics}
 
-Tuff dag 2 rapporterar för närvarande 9 testvärden som du kan utvärdera. Mätvärden med ***** symbolen rapporteras endast efter lyckade körningar:
+Tuff dag 2 rapporterar för närvarande 9 testvärden som du kan utvärdera. Mätvärden med **&#42;** symbolen rapporteras endast efter lyckade körningar:
 
 | **Namn** | **Beskrivning** |
 |---|---|
 | Tidsstämpel | Tidsstämpel för den senaste slutförda testkörningen. |
 | Godkänd | Antal lyckade körningar. |
 | Misslyckades | Antal misslyckade körningar. |
-| Min* | Testkörningens kortaste varaktighet. |
-| Max* | Testkörningens längsta varaktighet. |
-| Median* | Beräknad medianduration för alla testkörningar. |
-| Medel* | Beräknad genomsnittlig varaktighet för alla testkörningar. |
-| StdDev* | Standardavvikelsen. |
-| 90p* | 90-percentil. |
-| 99p* | 99-percentil. |
-| 99,9p* | 99,9 percentil. |
-| Verkligt dataflöde* | Antal körningar delat med förfluten körningstid. |
+| Min&#42; | Testkörningens kortaste varaktighet. |
+| Max&#42; | Testkörningens längsta varaktighet. |
+| Median&#42; | Beräknad medianduration för alla testkörningar. |
+| Medel&#42; | Beräknad genomsnittlig varaktighet för alla testkörningar. |
+| StdDev&#42; | Standardavvikelsen. |
+| 90p&#42; | 90-percentil. |
+| 99p&#42; | 99-percentil. |
+| 99.9p&#42; | 99,9 percentil. |
+| Reellt dataflöde&#42; | Antal körningar delat med förfluten körningstid. |
 
 Dessa mätvärden skrivs med hjälp av utgivare som kan läggas till med `add` parameter (på samma sätt som när du lägger till tester). Det finns för närvarande två alternativ:
 
