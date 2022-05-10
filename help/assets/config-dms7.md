@@ -10,9 +10,9 @@ role: User, Admin
 mini-toc-levels: 4
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: Configuration,Scene7 Mode
-source-git-commit: f2cfe62c561e772a10ede4f76314a5904d6d64ff
+source-git-commit: 5c29ac6b87b818e168a746827624b65c6ba3b2f7
 workflow-type: tm+mt
-source-wordcount: '5728'
+source-wordcount: '5729'
 ht-degree: 2%
 
 ---
@@ -134,7 +134,7 @@ Om du vill markera en markerad mapp för synkronisering till Dynamic Media välj
    När en mediefil har aktiverats publiceras uppdateringar direkt till S7 Delivery.
 
 1. Välj **[!UICONTROL Save]**.
-1. Som standard kan Experience Manager Author inte förhandsgranska Dynamic Media-innehåll. För att kunna förhandsgranska Dynamic Media-material innan det publiceras måste du därför *tillåtelselista* Experience Manager Author-instansen för att ansluta till Dynamic Media. Om du dessutom vill ge användarna tillgång till säkert förhandsgranskningsmaterial kan du *tillåtelselista* ytterligare IP-adresser.
+1. Som standard kan Experience Manager Author inte förhandsgranska Dynamic Media-innehåll. Om du vill förhandsgranska Dynamic Media-innehåll på ett säkert sätt innan det publiceras måste du tillåtslista Experience Manager Author-instansen för att ansluta till Dynamic Media. Om du dessutom vill ge användarna tillgång till säkert förhandsgranskningsinnehåll kan du tillåtslista ytterligare IP-adresser. <!-- CQDOC-19254 UNHIDE ON MAY 26, 2022 To securely preview Dynamic Media content before it gets published, Experience Manager Author uses token-based validation and hence Experience Manager Author previews Dynamic Media content by default. However, you can allowlist more IPs to provide users access to securely preview content. -->
 Information om hur du konfigurerar den här åtgärden i Experience Manager finns i [Konfigurera Dynamic Media Publish Setup för Image Server - fliken Säkerhet](/help/assets/dm-publish-settings.md#security-tab).
 
 <!-- 1. To securely preview Dynamic Media content before it gets published, Experience Manager uses token-based validation and hence Experience Manager Author previews Dynamic Media content by default. However, you can *allowlist* more IPs to provide users access to securely preview content. To set up this action in Experience Manager, see [Configure Dynamic Media Publish Setup for Image Server - Security tab](/help/assets/dm-publish-settings.md#security-tab).     * In Experience Manager Author mode, select the Experience Manager logo to access the global navigation console.
@@ -395,7 +395,7 @@ Det finns två element för definition, Matcha och Basnamn. Med dessa fält kan 
    Du kan välja **[!UICONTROL View Code]** om du vill visa värdeuppbyggnaden för reguljära uttryck tillsammans med dina formulärval. Du kan ange eller ändra dessa värden för att underlätta definitionen av elementen i namnkonventionen, om formulärvyn begränsar dig av någon anledning. Om dina värden inte kan tolkas i formulärvyn blir formulärfälten inaktiva.
 
    >[!NOTE]
-   Inaktiverade formulärfält verifierar inte att reguljära uttryck är korrekta. Resultaten av det reguljära uttryck som du skapar för varje element efter resultatraden visas. Det fullständiga reguljära uttrycket visas längst ned på sidan.
+   Inaktiverade formulärfält verifierar inte att reguljära uttryck är korrekta. Resultatet av det reguljära uttryck som du skapar för varje element efter resultatraden visas. Det fullständiga reguljära uttrycket visas längst ned på sidan.
 
 1. Expandera varje element efter behov och ange de namnkonventioner som du vill använda.
 1. Gör något av följande om det behövs:
@@ -409,8 +409,6 @@ Det finns två element för definition, Matcha och Basnamn. Med dessa fält kan 
    * Välj **[!UICONTROL Save]** om du redigerar en befintlig förinställning.
 
 ##### Skapa en förinställning för gruppuppsättning
-
-
 
 I Dynamic Media används gruppuppsättningsförinställningar för att ordna resurser i uppsättningar med bilder (alternativa bilder, färgalternativ, 360 rotationer) för visning i visningsprogram. Förinställningarna för gruppuppsättningar körs automatiskt tillsammans med överföringsprocesserna för resurser i Dynamic Media.
 
