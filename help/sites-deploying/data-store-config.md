@@ -6,9 +6,9 @@ topic-tags: deploying
 docset: aem65
 feature: Configuring
 exl-id: c1c90d6a-ee5a-487d-9a8a-741b407c8c06
-source-git-commit: 0c9d436d863d55f94e16f5c0f570251e2fb3d805
+source-git-commit: 6257b56c61ae14889d9ecefed5030e123a415fd7
 workflow-type: tm+mt
-source-wordcount: '3467'
+source-wordcount: '3455'
 ht-degree: 0%
 
 ---
@@ -199,7 +199,7 @@ Om du behöver uppgradera till en ny version av 1.10.x S3-kontakten (till exempe
    >
    >Filnamnen ovan används endast som illustrationer.
 
-1. Ladda ned den senaste versionen av funktionspaketet 1.8.x från [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/granite/com.adobe.granite.oak.s3connector).
+1. Ladda ned den senaste versionen av funktionspaketet 1.10.x från [Adobe-databas](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.oak.s3connector/).
 1. Zippa upp innehållet i en separat mapp och navigera sedan till `jcr_root/libs/system/install/15`.
 1. Kopiera jar-filerna till **&lt;aem-install>**/crx-quickstart/install/15 i AEM installationsmapp.
 1. Starta AEM och kontrollera anslutningsfunktionen.
