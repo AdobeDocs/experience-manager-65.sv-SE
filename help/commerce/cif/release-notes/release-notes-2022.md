@@ -2,10 +2,10 @@
 title: AEM Content and Commerce Release Notes 2022
 description: AEM Content and Commerce Release Notes 2022
 exl-id: d0a66e70-c4f1-4051-8161-11f07dad0612
-source-git-commit: 1a82930d9f0aa84cea590782aba2e70ec23b41c3
+source-git-commit: aacb497b10f46be3157aae86a5973aa277fda967
 workflow-type: tm+mt
-source-wordcount: '361'
-ht-degree: 3%
+source-wordcount: '458'
+ht-degree: 4%
 
 ---
 
@@ -20,6 +20,24 @@ Granska de lägsta systemkraven i tabellen nedan för den CIF-version som du anv
 | CIF-tillägg | Minimum: AEM 6.5.7, Magento 2.3.5 GraphQL scheman |
 | CIF-kärnkomponenter | [Systemkrav](https://github.com/adobe/aem-core-cif-components/blob/master/VERSIONS.md) |
 | AEM Project Archetype | [Systemkrav](https://github.com/adobe/aem-project-archetype/blob/master/VERSIONS.md) |
+
+## Releasedatum: April, 2022
+
+| Komponent | Version | Information |
+|:-------|:-----:|---------------------:|
+| CIF-tillägg | 2022.04.28.00 | [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2022.04.28.00.zip) |
+| CIF-kärnkomponenter | 2.8.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.8.0) |
+| CIF Venias referenswebbplats | 2022.04.28 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2022.04.28) |
+
+### Nyheter {#what-is-new}
+
+* Snabb åtkomst till produktcockpit: Få enkelt tillgång till detaljerad produktinformation med ett enda klick i Sites Editor
+
+   ![Aktivera önskelista](/help/assets/CIF/enable-wishlist.png)
+
+* Stöd för ytterligare marknadsföringskomponenter: Komponenter kan konfigureras för att visa ett anrop till åtgärd för tillägg i varukorgen och tilläggslistan
+
+   ![Kortkommando för webbplatsredigeraren till produktcockpit](/help/assets/CIF/sites-editor-shortcut-to-cockpit.png)
 
 ## Releasedatum: Mars 2022
 
@@ -48,7 +66,7 @@ Granska de lägsta systemkraven i tabellen nedan för den CIF-version som du anv
 ### Nyheter {#what-is-new-january}
 
 * Förbättrade komponenter för myAccount
-* Produktrekommendationskomponenten stöder ytterligare sidtyper (hemsida, kundvagn, orderbekräftelse)
+* Produktrekommendationskomponenten har stöd för ytterligare sidtyper (hemsida, kundvagn, orderbekräftelse)
 * **Önsklista**
    * Inloggade besökare kan lägga till produkter i en önskelista
    * Du kan hantera önskelistan och dess produkter via mitt konto
