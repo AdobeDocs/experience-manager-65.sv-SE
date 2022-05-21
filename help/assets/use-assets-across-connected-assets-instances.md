@@ -6,9 +6,9 @@ mini-toc-levels: 2
 role: User, Admin, Leader
 feature: Connected Assets,User and Groups
 exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
-source-git-commit: f4e6a1855fad76df8102751b14e9ac6982315937
+source-git-commit: e486e5336edc28137b93d5263faf86c63a790528
 workflow-type: tm+mt
-source-wordcount: '3670'
+source-wordcount: '3663'
 ht-degree: 17%
 
 ---
@@ -46,7 +46,7 @@ Innan du använder eller konfigurerar den här funktionen bör du kontrollera f�
 
 Författare söker efter bilder och följande typer av dokument i Content Finder och drar de sökbara resurserna i Page Editor. Dokument läggs till i `Download` och bilder till `Image` -komponenten. Författare kan även lägga till fjärrresurserna i valfri anpassad [!DNL Experience Manager] som utökar standardkomponenten `Download` eller `Image` -komponenter. De format som stöds är:
 
-* **Bildformat**: Formaten som [Bildkomponent](https://www.aemcomponents.dev/content/core-components-examples/library/page-authoring/image.html) stöder.
+* **Bildformat**: Formaten som [Bildkomponent](assets-formats.md#supported-raster-image-formats) stöder.
 * **Dokumentformat**: Se [dokumentformat som stöds](assets-formats.md#supported-document-formats).
 
 ### Användare och grupper som krävs {#users-and-groups-involved}
