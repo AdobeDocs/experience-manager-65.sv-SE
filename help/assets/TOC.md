@@ -6,9 +6,9 @@ audience: end-user
 user-guide-title: Resurshandbok
 breadcrumb-title: Resurshandbok
 user-guide-description: Skapa, hantera, bearbeta och distribuera digitalt material.
-source-git-commit: ee6e408668a523464632e53a01ba11eddec103f6
+source-git-commit: 66958dc5328177d27dbdddf0c8983096e38f76b6
 workflow-type: tm+mt
-source-wordcount: '665'
+source-wordcount: '672'
 ht-degree: 14%
 
 ---
@@ -56,6 +56,7 @@ ht-degree: 14%
    + [Videoprofiler för Dynamic Media](video-profiles.md)
    + [Bildprofiler för Dynamic Media](image-profiles.md)
    + [Smart bildbehandling](imaging-faq.md)
+   + [Smart bildbehandling med enhetspixelproportioner på klientsidan](client-side-dpr.md)
    + [Video](s7-video.md)
    + [Leverera innehåll med HTTP2](http2.md)
    + [Leverera Dynamic Media-material](delivering-dynamic-media-assets.md)
