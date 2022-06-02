@@ -8,10 +8,10 @@ user-guide-title: Adobe Experience Manager 6.5 Forms Guide
 breadcrumb-title: Forms Guide
 user-guide-description: Skapa, hantera, publicera och uppdatera digitala formulär.
 role: User
-source-git-commit: f29612ee633d2a62144b770f3c225fc82b9174f8
+source-git-commit: 91b012f8024350effc19613bcecfc42dee4130d9
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '3788'
+ht-degree: 1%
 
 ---
 
@@ -94,7 +94,7 @@ ht-degree: 0%
       + [Migrera AEM Forms-resurser och -dokument](using/migration-utility.md)
    + Uppgradera AEM Forms på JEE {#aem-forms-jee-upgrade}
       + [Förbereder uppgradering av AEM Forms](http://www.adobe.com/go/learn_aemforms_prepareupgrade_65)
-      + [Adobe Experience Manager Forms i JEE - checklista och planering för uppgradering](http://www.adobe.com/go/learn_aemforms_upgrade_checklist_65)
+      + [Adobe Experience Manager Forms i JEE-uppgraderingar - checklista och planering](http://www.adobe.com/go/learn_aemforms_upgrade_checklist_65)
       + [Uppgradera till AEM 6.5-formulär på JEE](using/upgrade-forms-jee.md)
       + [Uppgradera till Adobe Experience Manager Forms på JEE för JBoss](http://www.adobe.com/go/learn_aemforms_upgradeJBoss_65)
       + [Uppgradera till AEM Forms on JEE for JBoss Turnkey](http://www.adobe.com/go/learn_aemforms_upgradeTurnkey_65)
@@ -681,9 +681,12 @@ ht-degree: 0%
          + [Hantera inställningsnoderna programmatiskt](developing/programmatically-preferences-nodes.md)
          + [Skydda dokument med regler](developing/protecting-documents-policies.md)
          + [Validera ett DX-dokument med webbtjänstens API](developing/validate-ddx-document-using-web.md)
-      + Äldre dokumentation {#legacy-documentation}
-         + [Använda den körda skripttjänsten i AEM Forms på JEE Workbench för att skapa XML-data](developing/building-xml.md)
-         + [Komprimera och dekomprimera filer med en AEM Forms på en anpassad JEE DSC](developing/compressing-decompressing-custom-dsc.md)
-         + [Konfigurera och felsöka ett AEM Forms i JEE-serverkluster](developing/configure-server-cluster.md)
-         + [Generera och arbeta med hashvärden i dynamisk PDF forms](developing/hashing-forms.md)
-         + [Skicka inloggningsuppgifter med WS-Security-huvuden](developing/passing-credentials.md)
++ Felsökning {#troubleshooting}
+   + [Det går inte att använda vissa formulärfunktioner med vissa versioner av Oracle-JDK](using/unable-to-use-forms-features-with-certain-versions-of-oracle-jdk.md)
++ Äldre dokumentation {#legacy-documentation}
+   + [Använda den körda skripttjänsten i AEM Forms på JEE Workbench för att skapa XML-data](developing/building-xml.md)
+   + [Komprimera och dekomprimera filer med en AEM Forms på en anpassad JEE DSC](developing/compressing-decompressing-custom-dsc.md)
+   + [Konfigurera och felsöka ett AEM Forms i JEE-serverkluster](developing/configure-server-cluster.md)
+   + [Generera och arbeta med hashvärden i dynamisk PDF forms](developing/hashing-forms.md)
+   + [Skicka inloggningsuppgifter med WS-Security-huvuden](developing/passing-credentials.md)
+

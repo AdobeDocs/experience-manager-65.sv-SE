@@ -3,9 +3,9 @@ title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: '"[!DNL Adobe Experience Manager] 6.5 som beskriver versionsinformation, nyheter, hur man installerar och detaljerade ändringslistor."'
 mini-toc-levels: 3
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: 6c9e8f1e62fe1a193cb9938e5f789e1e08b8339d
+source-git-commit: db94e464b130c6ca223314c3c5ffb8893a92a142
 workflow-type: tm+mt
-source-wordcount: '3522'
+source-wordcount: '3728'
 ht-degree: 0%
 
 ---
@@ -24,6 +24,22 @@ ht-degree: 0%
 ## Vad ingår i [!DNL Experience Manager] 6.5.13.0 {#what-is-included-in-aem}
 
 [!DNL Experience Manager] 6.5.13.0 innehåller nya funktioner, viktiga förbättringar som kunderna efterfrågat samt prestanda-, stabilitets- och säkerhetsförbättringar som släppts sedan den första tillgängligheten av 6.5 i april 2019. [Installera detta Service Pack](#install) på [!DNL Experience Manager] 6.5.
+
+De viktigaste funktionerna och förbättringarna i [!DNL Adobe Experience Manager] 6.5.13.0 är:
+
+* Använd osynlig CAPTCHA i adaptiv form: Du kan nu använda en osynlig CAPTCHA för att visa CAPTCHA-utmaningen endast om en misstänkt aktivitet inträffar. Om ingen misstänkt aktivitet hittas visas inte CAPTCHA-utmaningen. Det gör det lättare att bedöma om formulär ska fyllas i av människor utan att det behövs kryssrutor, minska anpassningsarbetet och förbättra slutanvändarens upplevelse. (NPR-38500)
+
+* Stöd har lagts till för att hämta svarshuvuden i efterbearbetningen av formulärdatamodellen för REST-slutpunkter. (NPR-38275)
+
+* När du genererar en adaptiv formuläröversättningsfil är nu samma textsekvens som den genererade XLIFF-filen identisk med komponentsekvensen i motsvarande adaptiva formulär. (NPR-37700)
+
+* När du lokaliserar ett adaptivt formulär och gör en liten ändring av texten i basspråket, saknas den fullständiga översättningen för alla andra språk. Problemet är åtgärdat i [!DNL Experience Manager] 6.5.13.0 (NPR-37189)
+
+* Tillgänglighetsförbättringar för Forms:
+
+   * Stöd för skärmläsare har lagts till för att identifiera tabellens rubrik och brödtext som fortsätter och anslutna enheter. Det hjälper skärmläsare att navigera i tabellerna på rätt sätt. (NPR-37139)
+   * Stöd för att skärmläsare ska sluta navigera på arbetsytan i HTML tills en dialogruta är öppen har lagts till. (NPR-37134)
+   * Lagt till möjlighet att ange Reader-text på skärmen för hyperlänkar i Forms Designer.(NPR-36221)
 
 Följande felkorrigeringar, viktiga funktioner och förbättringar introducerades i [!DNL Experience Manager] 6.5.13.0:
 
@@ -120,20 +136,6 @@ Följande felkorrigeringar, viktiga funktioner och förbättringar introducerade
 >
 >* [!DNL Experience Manager Forms] släpper tilläggspaketen en vecka efter den schemalagda [!DNL Experience Manager] Lanseringsdatum för Service Pack.
 
-
-<!-- **Adaptive Forms**
-
-**Form Data Model**
-
-**Interactive Communication**
-
-**Document Services**
-
-**Document Security**
-
-**Foundation JEE**
-
-**Workflow** -->
 
 ## Granit {#granite-6513}
 
