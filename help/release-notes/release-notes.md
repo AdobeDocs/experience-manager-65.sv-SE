@@ -3,9 +3,9 @@ title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: '"[!DNL Adobe Experience Manager] 6.5 som beskriver versionsinformation, nyheter, hur man installerar och detaljerade ändringslistor."'
 mini-toc-levels: 3
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: a45d66dc2226dbe2879aa61d95cc5379dce882bb
+source-git-commit: f78d12d6fa1daa1c1b3afdfe22ecb8c183e8e1d0
 workflow-type: tm+mt
-source-wordcount: '3750'
+source-wordcount: '3713'
 ht-degree: 0%
 
 ---
@@ -92,9 +92,9 @@ Följande felkorrigeringar, viktiga funktioner och förbättringar introducerade
 
 ## [!DNL Forms] {#forms-65130}
 
-* När du använder förifyllningstjänsten för att fylla i ett adaptivt formulär som innehåller ett fragment och fragmentet innehåller en textruta som stöder formaterad text, skickas inte formuläret och följande fel inträffar:
+<!-- * When you use the prefill service to fill an adaptive form that contains a fragment and the fragment contains a Text box that supports rich text, the form fails to submit, and the following error occurs:
 
-   `[AF] [AEM-AF-901-004]: Encountered an internal error while submitting the form.` (NPR-38542)
+  `[AF] [AEM-AF-901-004]: Encountered an internal error while submitting the form.` (NPR-38542) -->
 
 * Komponenterna Radio button, Checkbox, and File Upload är inte korrekt översatta från tyska till engelska. (NPR-38527)
 * PDF417-streckkodskodningen som produceras av [!DNL Experience Manager] Forms är ogiltigt för en alternativknappsgrupp. (NPR-38525)
