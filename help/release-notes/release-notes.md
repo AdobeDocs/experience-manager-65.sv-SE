@@ -3,9 +3,9 @@ title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: '"[!DNL Adobe Experience Manager] 6.5 som beskriver versionsinformation, nyheter, hur man installerar och detaljerade ändringslistor."'
 mini-toc-levels: 3
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: db94e464b130c6ca223314c3c5ffb8893a92a142
+source-git-commit: a45d66dc2226dbe2879aa61d95cc5379dce882bb
 workflow-type: tm+mt
-source-wordcount: '3728'
+source-wordcount: '3750'
 ht-degree: 0%
 
 ---
@@ -371,6 +371,7 @@ Om du vill veta vilka plattformar som är certifierade för att fungera med den 
 1. Kontrollera att du har installerat [!DNL Experience Manager] Service Pack.
 1. Ladda ned motsvarande tilläggspaket från Forms på [AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html#forms-updates) för ditt operativsystem.
 1. Installera Forms tilläggspaket enligt beskrivningen i [Installera AEM Forms tilläggspaket](/help/forms/using/installing-configuring-aem-forms-osgi.md#install-aem-forms-add-on-package).
+1. Om du använder bokstäver i Experience Manager 6.5 Forms installerar du [senaste AEMFD-kompatibilitetspaket](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html#forms-updates).
 
 ### Installera [!DNL Experience Manager] Forms på JEE {#install-aem-forms-jee-installer}
 
