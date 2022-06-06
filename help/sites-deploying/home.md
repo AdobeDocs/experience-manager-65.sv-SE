@@ -3,10 +3,10 @@ title: Användarhandbok för distribution av AEM 6.5
 seo-title: AEM 6.5 Deploying User Guide
 description: Lär dig hur du installerar och distribuerar Adobe Experience Manager 6.5 och dess arkitektur, inklusive vår molndistribution av Adobe Managed Services.
 exl-id: 4a82008c-af69-414e-bd98-c7f683a74905
-source-git-commit: 8a51bbf3cea999f77e6eea41e184926121d6a866
+source-git-commit: eb00c8004558b8809fb21d6d6e435d8837319b51
 workflow-type: tm+mt
-source-wordcount: '391'
-ht-degree: 17%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +16,7 @@ Den här guiden täcker alla AEM driftsättningsåtgärder, som att installera o
 
 ## Viktiga AEM
 
-* [Komma igång med AEM](https://helpx.adobe.com/experience-manager/get-started.html)
+* [Komma igång med AEM](https://experienceleague.adobe.com/docs/experience-manager-65.html)
 * [Versionsinformation för AEM 6.5](/help/release-notes/home.md)
 * [Senaste dokumentationsuppdateringarna](https://helpx.adobe.com/experience-manager/documentation-updates.html)
 * [AEM](/help/sites-administering/security-checklist.md)
@@ -37,7 +37,7 @@ Den här guiden täcker alla AEM driftsättningsåtgärder, som att installera o
 | [Utveckla användarhandbok](/help/sites-developing/home.md) | Lär dig hur du bygger ut AEM. |
 | [Hantera användarhandbok](/help/managing/home.md) | I den här guiden beskrivs hur du hanterar ett AEM projekt. |
 | [Handbok för Commerce](/help/commerce/home.md) | Läs mer om Commerce Integration Framework på AEM. |
-| [Mobile Användarhandbok](/help/mobile/home.md) | I den här guiden beskrivs hur du skapar och hanterar innehåll för mobilprogram. |
+| [Användarhandbok för mobiler](/help/mobile/home.md) | I den här guiden beskrivs hur du skapar och hanterar innehåll för mobilprogram. |
 | [AEM Livefyre](https://docs.adobe.com/content/help/en/livefyre/using/home.html) | Den här guiden visar hur du delar användargenererat innehåll med Livefyre. |
 
 ## Viktiga AEM

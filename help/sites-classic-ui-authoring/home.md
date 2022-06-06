@@ -1,16 +1,15 @@
 ---
 title: Användarhandbok för redigering av AEM 6.5 Classic UI
-seo-title: Användarhandbok för redigering av AEM 6.5 Classic UI
-description: 'Den här handboken beskriver koncepten för redigering i AEM i det klassiska användargränssnittet. '
-seo-description: 'Täcker begreppet redigering i AEM i det klassiska användargränssnittet. '
-translation-type: tm+mt
-source-git-commit: 4dd47341ad1c966e8db6ef7ed1da93bf4e9abb52
+seo-title: AEM 6.5 Classic UI Authoring User Guide
+description: Den här handboken beskriver koncepten för redigering i AEM i det klassiska användargränssnittet.
+seo-description: Covers the concepts of authoring in AEM in the classic UI.
+exl-id: 4ce591f1-a361-473a-b07d-a618f5c57f58
+source-git-commit: eb00c8004558b8809fb21d6d6e435d8837319b51
 workflow-type: tm+mt
-source-wordcount: '374'
-ht-degree: 17%
+source-wordcount: '358'
+ht-degree: 18%
 
 ---
-
 
 # Användarhandbok för redigering av AEM 6.5 Classic UI
 
@@ -18,7 +17,7 @@ Den här handboken beskriver koncepten för redigering i AEM i det klassiska anv
 
 ## Viktiga AEM
 
-* [Komma igång med AEM](https://helpx.adobe.com/experience-manager/get-started.html)
+* [Komma igång med AEM](https://experienceleague.adobe.com/docs/experience-manager-65.html)
 * [Versionsinformation för AEM 6.5](/help/release-notes/home.md)
 * [Senaste dokumentationsuppdateringarna](https://helpx.adobe.com/experience-manager/documentation-updates.html)
 * [AEM](/help/sites-administering/security-checklist.md)

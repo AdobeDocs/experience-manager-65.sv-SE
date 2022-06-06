@@ -4,10 +4,10 @@ seo-title: AEM 6.5 Forms Guide
 description: Använd den här guiden AEM 6.5 för att skapa, hantera, publicera och uppdatera digitala formulär. Hitta hjälp med att installera, uppgradera och konfigurera dem och lär dig mer om att skapa adaptiva formulär.
 seo-description: Covers all AEM Forms tasks, including how to create, manage, publish, and update digital forms.
 exl-id: e66383b0-ae58-4cfe-8f1b-28b4e124fd06
-source-git-commit: 8a51bbf3cea999f77e6eea41e184926121d6a866
+source-git-commit: eb00c8004558b8809fb21d6d6e435d8837319b51
 workflow-type: tm+mt
-source-wordcount: '378'
-ht-degree: 17%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -17,7 +17,7 @@ Använd den här guiden AEM 6.5 för att skapa, hantera, publicera och uppdatera
 
 ## Viktiga AEM
 
-* [Komma igång med AEM](https://helpx.adobe.com/experience-manager/get-started.html)
+* [Komma igång med AEM](https://experienceleague.adobe.com/docs/experience-manager-65.html)
 * [Versionsinformation för AEM 6.5](/help/release-notes/home.md)
 * [Senaste dokumentationsuppdateringarna](https://helpx.adobe.com/experience-manager/documentation-updates.html)
 * [AEM](/help/sites-administering/security-checklist.md)
@@ -38,7 +38,7 @@ Använd den här guiden AEM 6.5 för att skapa, hantera, publicera och uppdatera
 | [Utveckla användarhandbok](/help/sites-developing/home.md) | Lär dig hur du bygger ut AEM. |
 | [Hantera användarhandbok](/help/managing/home.md) | I den här guiden beskrivs hur du hanterar ett AEM projekt. |
 | [Handbok för Commerce](/help/commerce/home.md) | Läs mer om Commerce Integration Framework på AEM. |
-| [Mobile Användarhandbok](/help/mobile/home.md) | I den här guiden beskrivs hur du skapar och hanterar innehåll för mobilprogram. |
+| [Användarhandbok för mobiler](/help/mobile/home.md) | I den här guiden beskrivs hur du skapar och hanterar innehåll för mobilprogram. |
 | [AEM Livefyre](https://docs.adobe.com/content/help/en/livefyre/using/home.html) | Den här guiden visar hur du delar användargenererat innehåll med Livefyre. |
 
 ## Viktiga AEM

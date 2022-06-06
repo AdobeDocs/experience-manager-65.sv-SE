@@ -4,9 +4,9 @@ seo-title: Adobe Experience Manager 6.5 Communities Guide
 description: Skapa onlineupplevelser som forum, användargrupper, utbildningsresurser och andra sociala funktioner. Bläddra i vår guide som förklarar hur du distribuerar, administrerar, utvecklar och utvecklar användargrupper.
 seo-description: Covers all AEM Communities tasks, such as creating online experiences such as forums, user groups, learning resources, and other social features.
 exl-id: 63040353-d34c-4306-9e7a-584ba48d8ad5
-source-git-commit: 8a51bbf3cea999f77e6eea41e184926121d6a866
+source-git-commit: eb00c8004558b8809fb21d6d6e435d8837319b51
 workflow-type: tm+mt
-source-wordcount: '381'
+source-wordcount: '382'
 ht-degree: 17%
 
 ---
@@ -17,7 +17,7 @@ Skapa onlineupplevelser som forum, användargrupper, utbildningsresurser och and
 
 ## Viktiga AEM
 
-* [Komma igång med AEM](https://helpx.adobe.com/experience-manager/get-started.html)
+* [Komma igång med AEM](https://experienceleague.adobe.com/docs/experience-manager-65.html)
 * [Versionsinformation för AEM 6.5](/help/release-notes/home.md)
 * [Senaste dokumentationsuppdateringarna](https://helpx.adobe.com/experience-manager/documentation-updates.html)
 * [AEM](/help/sites-administering/security-checklist.md)

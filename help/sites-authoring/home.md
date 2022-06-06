@@ -4,9 +4,9 @@ seo-title: AEM 6.5 Authoring User Guide
 description: Upptäck de viktigaste begreppen för att skapa innehåll och redigering i AEM 6.5. Du hittar även information om hur du använder taggar, mallar och andra sidfunktioner.
 seo-description: Explains the concepts of authoring in AEM.
 exl-id: 38f229b4-10b2-4a67-9821-a03718b82215
-source-git-commit: 8a51bbf3cea999f77e6eea41e184926121d6a866
+source-git-commit: eb00c8004558b8809fb21d6d6e435d8837319b51
 workflow-type: tm+mt
-source-wordcount: '373'
+source-wordcount: '374'
 ht-degree: 17%
 
 ---
@@ -17,7 +17,7 @@ Upptäck de viktigaste begreppen för att skapa innehåll och redigering i AEM 6
 
 ## Viktiga AEM
 
-* [Komma igång med AEM](https://helpx.adobe.com/experience-manager/get-started.html)
+* [Komma igång med AEM](https://experienceleague.adobe.com/docs/experience-manager-65.html)
 * [Versionsinformation för AEM 6.5](/help/release-notes/home.md)
 * [Senaste dokumentationsuppdateringarna](https://helpx.adobe.com/experience-manager/documentation-updates.html)
 * [AEM](/help/sites-administering/security-checklist.md)
@@ -38,7 +38,7 @@ Upptäck de viktigaste begreppen för att skapa innehåll och redigering i AEM 6
 | [Utveckla användarhandbok](/help/sites-developing/home.md) | Lär dig hur du bygger ut AEM. |
 | [Hantera användarhandbok](/help/managing/home.md) | I den här guiden beskrivs hur du hanterar ett AEM projekt. |
 | [Handbok för Commerce](/help/commerce/home.md) | Läs mer om Commerce Integration Framework på AEM. |
-| [Mobile Användarhandbok](/help/mobile/home.md) | I den här guiden beskrivs hur du skapar och hanterar innehåll för mobilprogram. |
+| [Användarhandbok för mobiler](/help/mobile/home.md) | I den här guiden beskrivs hur du skapar och hanterar innehåll för mobilprogram. |
 | [AEM Livefyre](https://docs.adobe.com/content/help/en/livefyre/using/home.html) | Den här guiden visar hur du delar användargenererat innehåll med Livefyre. |
 
 ## Viktiga AEM
