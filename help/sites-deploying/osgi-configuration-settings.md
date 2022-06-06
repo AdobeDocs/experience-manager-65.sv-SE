@@ -12,9 +12,9 @@ discoiquuid: ed3a858c-7a43-4515-a2ff-43ca465c7d7d
 docset: aem65
 feature: Configuring
 exl-id: 19eedcf2-140a-452d-aa8f-6fd7f219e5f8
-source-git-commit: 9a3f26b6709461a911e833f7e340d11c759c7dae
+source-git-commit: e8320b1dac681fd2c9e749344e8c126487d840ba
 workflow-type: tm+mt
-source-wordcount: '3558'
+source-wordcount: '3557'
 ht-degree: 0%
 
 ---
@@ -98,7 +98,7 @@ Det rekommenderade värdet är `-1` eftersom kön då är obegränsad, om en gr�
 **Apache Sling GET Servlet** Konfigurera vissa återgivningsaspekter:
 
 * **Automatiskt index** om du vill aktivera/inaktivera katalogåtergivning för bläddring.
-* **Aktivera** (eller inaktivera) standardåtergivningar, som **HMTL**, **Oformaterad text**, **JSON** eller **XML**.
+* **Aktivera** (eller inaktivera) standardåtergivningar, som **HTML**, **Oformaterad text**, **JSON** eller **XML**.
 Du bör inte inaktivera JSON.
 
 >[!NOTE]
@@ -109,7 +109,7 @@ Du bör inte inaktivera JSON.
 
 Vissa inställningar kan påverka prestandan. De bör inaktiveras där det är möjligt, särskilt för en produktionsinstans.
 
-* S **Käll-VM** och **Mål-VM** definierar du JDK-versionen som den som används som JVM vid körning
+* **Käll-VM** och **Mål-VM** definierar du JDK-versionen som den som används som JVM vid körning
 
 * för produktionsinstanser:
 
@@ -117,7 +117,7 @@ Vissa inställningar kan påverka prestandan. De bör inaktiveras där det är m
 
 **Installationsprogram för Apache Sling JCR** De här parametrarna behöver förmodligen inte konfigureras, men de kan vara användbara när du utvecklar eller felsöker. Installationsmappen kan till exempel vara användbar för att checka in/ut eller skapa ett paket.
 
-* **Installationsmappens namn regexp** och **Maximalt hierarkidjup för installationsmappar** - ange var, och till vilket djup, databasmappar söks efter resurser som ska installeras. När ett jokertecken används (som i .*/install) söks igenom alla matchningar, till exempel `/libs/sling/install` och `/libs/cq/core/install`.
+* **Installationsmappens namn regexp** och **Maximalt hierarkidjup för installationsmappar** - ange var, och till vilket djup, databasmappar söks efter resurser som ska installeras. När ett jokertecken används (som i .&#42;/install) söks igenom alla matchningar, till exempel `/libs/sling/install` och `/libs/cq/core/install`.
 
 * **Sökväg**, en lista med sökvägar som installeras söker efter resurser som ska installeras, tillsammans med en siffra som anger viktningsfaktorn för sökvägen.
 
@@ -326,13 +326,13 @@ Med hjälp AEM rotmappning kan du konfigurera det användargränssnitt som du vi
 
 * Om du vill att det pekaktiverade användargränssnittet ska vara standardanvändargränssnittet **Målsökväg** ska peka på:
 
-   ```
+   ```shell
       /projects.html
    ```
 
 * Om du vill att det klassiska användargränssnittet ska vara standardanvändargränssnittet **Målsökväg** ska peka på:
 
-   ```
+   ```shell
       /welcome.html
    ```
 
