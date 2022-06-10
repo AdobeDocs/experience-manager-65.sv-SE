@@ -1,15 +1,15 @@
 ---
-title: '"[!DNL Experience Manager Assets] integrering med [!DNL Adobe Workfront]"'
+title: '''[!DNL Experience Manager Assets] integrering med [!DNL Adobe Workfront]'''
 description: Introduktion till integrering mellan [!DNL Assets] och [!DNL Workfront]
 role: Admin,Leader,Architect
 feature: Integrations
-source-git-commit: e24316cb9495a552960ae0620e4198f10a08b691
+exl-id: 57e2bffe-8094-4557-99c8-7b482681687e
+source-git-commit: 57304cfb7706377fa5dd7cce0e5863839ffee553
 workflow-type: tm+mt
-source-wordcount: '888'
-ht-degree: 2%
+source-wordcount: '967'
+ht-degree: 1%
 
 ---
-
 
 # [!DNL Adobe Experience Manager Assets] integrering med [!DNL Adobe Workfront] {#assets-integration-overview}
 
@@ -29,9 +29,14 @@ Se plattformsstödet och [krav för den förbättrade anslutningen](https://one.
 
 >[!IMPORTANT]
 >
->Adobe kräver installation och konfiguration av [!DNL Adobe Workfront for Experience Manager enhanced connector] endast via certifierade partners eller [!DNL Adobe Professional Services]. Om den distribueras och konfigureras utan en certifierad partner eller [!DNL Adobe Professional Services], stöds den inte av Adobe.
+>* Adobe kräver installation och konfiguration av [!DNL Adobe Workfront for Experience Manager enhanced connector] endast via certifierade partners eller [!DNL Adobe Professional Services]. Om den distribueras och konfigureras utan en certifierad partner eller [!DNL Adobe Professional Services], stöds den inte av Adobe.
 >
->Adobe kan släppa uppdateringar av [!DNL Adobe Workfront] och [!DNL Adobe Experience Manager] som gör denna koppling redundant, Om detta inträffar kan kunderna behöva gå över från att använda denna koppling.
+>* Adobe kan släppa uppdateringar av [!DNL Adobe Workfront] och [!DNL Adobe Experience Manager] som gör denna koppling redundant, Om detta inträffar kan kunderna behöva gå över från att använda denna koppling.
+>
+>* Adobe har stöd för utökade anslutningsversioner 1.7.4 och senare. Tidigare förhandsversioner och anpassade versioner stöds inte. Om du vill kontrollera den utökade anslutningsversionen går du till `digital.hoodoo` grupp tillgänglig i den vänstra rutan i [Pakethanteraren](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=en).
+>
+>* Se [Partnercertifieringsprov för Workfront för Experience Manager Assets förbättrad anslutning](https://solutionpartners.adobe.com/solution-partners/home/applications/experience_cloud/workfront/journey/dev_core.html). Mer information om provet finns i [Provguide](https://express.adobe.com/page/Tc7Mq6zLbPFy8/).
+
 
 ## Jämför olika integreringar mellan [!DNL Assets] och [!DNL Workfront] {#feature-parity-matrix}
 
