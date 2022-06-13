@@ -8,9 +8,9 @@ topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: 57bccab9b95d328591e6cbb1070fd9e59712c016
+source-git-commit: 2d12f1652a3b8ec4e6ca9c737dc844d1f53f7d08
 workflow-type: tm+mt
-source-wordcount: '5191'
+source-wordcount: '5192'
 ht-degree: 0%
 
 ---
@@ -479,7 +479,7 @@ I Microsoft® Windows använder PDF Generator-tjänsten Adobe Acrobat för att k
 
    1. Öppna [AEM](http://localhost:4502/crx/packmgr/index.jsp) och ladda ned `adobe-aemfd-pdfg-common-pkg-[version].zip` från Package Manager.
    1. Zippa upp den nedladdade ZIP-filen. Öppna kommandotolken med administratörsbehörighet.
-   1. Navigera till `[extracted-zip-file]\jcr_root\etc\packages\day\cq60\fd\adobe-aemds-common-pkg-[version]\jcr_root\etc\packages\day\cq60\fd\adobe-aemfd-pdfg-common-pkg-[version]\jcr_root\libs\fd\pdfg\tools\adobe-aemfd-pdfg-utilities-[version]` katalog. Kör följande kommandofil:
+   1. Navigera till [extraherad-zip-fil]`\jcr_root\etc\packages\day\cq60\fd\adobe-aemds-common-pkg-[version]\jcr_root\etc\packages\day\cq60\fd\adobe-aemfd-pdfg-common-pkg-[version]\jcr_root\libs\fd\pdfg\tools\adobe-aemfd-pdfg-utilities-[version]` katalog. Kör följande kommandofil:
 
       `Acrobat_for_PDFG_Configuration.bat`
 
