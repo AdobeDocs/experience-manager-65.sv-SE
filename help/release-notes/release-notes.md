@@ -3,9 +3,9 @@ title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: '"[!DNL Adobe Experience Manager] 6.5 som beskriver versionsinformation, nyheter, hur man installerar och detaljerade ändringslistor."'
 mini-toc-levels: 3
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: f78d12d6fa1daa1c1b3afdfe22ecb8c183e8e1d0
+source-git-commit: 6b75c41cf796b28409c263175cf3f3a2044422ff
 workflow-type: tm+mt
-source-wordcount: '3713'
+source-wordcount: '3709'
 ht-degree: 0%
 
 ---
@@ -281,8 +281,9 @@ Följande felkorrigeringar, viktiga funktioner och förbättringar introducerade
 
 ## Sling {#sling-6513}
 
-* Minnesläcka in `DiscoveryLiteDescriptor`. (NPR-38288)
+<!-- OBSOLETE BASED ON CQDOC-19400 * Memory leak in `DiscoveryLiteDescriptor`. (NPR-38288) -->
 * Uppdatera `sling-javax.activation` paket med fix SLING-8777. (NPR-38077)
+
 <!-- VULNERABILITY ISSUE - REMOVED AND ADDED TO https://wiki.corp.adobe.com/display/DXContent/Security+and+Vulnerability+issues+for+SP+and+CFP+releases * Security issues reported under `org.apache.sling.scripting.jst`. (NPR-38067) -->
 
 ## Översättningsprojekt {#translation-6513}
