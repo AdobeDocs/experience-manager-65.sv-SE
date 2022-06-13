@@ -8,9 +8,9 @@ topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: 4b3327ed46024662813bb538f8338c59e508e10e
+source-git-commit: 57bccab9b95d328591e6cbb1070fd9e59712c016
 workflow-type: tm+mt
-source-wordcount: '5157'
+source-wordcount: '5191'
 ht-degree: 0%
 
 ---
@@ -765,18 +765,19 @@ Innan du utför följande kontroller bör du kontrollera att [Systemberedskap](#
 
    * Använd följande kommandon för att generera prov.xml och serialisera den befintliga installationen med prov.xml i stället för kommandona i [migrera ditt serienummer](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number) nummerartikel.
 
-      * Generera prov.xml
+          &quot;
+          
+          adobe_prtk —tool=VolumeSerialize —generate —serial=&lt;serialnum> [—leid=&lt;leid>] [—regsuppress=ss] [—eulasuppress] [—locales=limited list of locales in xx_XX format or ALL>] [—provfile=&lt;absolute path=&quot;&quot; to=&quot;&quot; prov.xml=&quot;&quot;>]
+          
+          &quot;
+      
+   * Volymserialisera paketet (serialisera om den befintliga installationen med prov.xml-filen och den nya serienumret): Kör följande kommando från installationsmappen för PRTK som administratör för att serialisera och aktivera distribuerade paket på klientdatorer:
 
-         ```
-         adobe_prtk --tool=VolumeSerialize --generate --serial=<serialnum> [--leid=<LEID>] [--regsuppress=ss] [--eulasuppress] [--locales=limited list of locales in xx_XX format or ALL>] [--provfile=<Absolute path to prov.xml>]
-         ```
-
-      * Volymserialisera paketet (serialisera om den befintliga installationen med prov.xml-filen och den nya serienumret): Kör följande kommando från installationsmappen för PRTK som administratör för att serialisera och aktivera distribuerade paket på klientdatorer:
-
-         ```
-         adobe_prtk --tool=VolumeSerialize --provfile=C:\prov.xml –stream
-         ```
-
+          &quot;
+          adobe_prtk —tool=VolumeSerialize —provfile=C:\prov.xml -stream
+          
+          &quot;
+      
 * För storskaliga installationer använder du [Acrobat Customization Wizard](https://www.adobe.com/devnet-docs/acrobatetk/tools/Wizard/index.html) för att ta bort tidigare versioner av Reader och Acrobat. Anpassa installationsprogrammet och distribuera det till alla datorer i organisationen.
 
 +++
