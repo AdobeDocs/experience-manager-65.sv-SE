@@ -2,10 +2,10 @@
 title: AEM Content and Commerce Release Notes 2022
 description: AEM Content and Commerce Release Notes 2022
 exl-id: d0a66e70-c4f1-4051-8161-11f07dad0612
-source-git-commit: aacb497b10f46be3157aae86a5973aa277fda967
+source-git-commit: f6a16e5744222600b3a1760efe3c61619160b6cd
 workflow-type: tm+mt
-source-wordcount: '458'
-ht-degree: 4%
+source-wordcount: '573'
+ht-degree: 5%
 
 ---
 
@@ -21,6 +21,30 @@ Granska de lägsta systemkraven i tabellen nedan för den CIF-version som du anv
 | CIF-kärnkomponenter | [Systemkrav](https://github.com/adobe/aem-core-cif-components/blob/master/VERSIONS.md) |
 | AEM Project Archetype | [Systemkrav](https://github.com/adobe/aem-project-archetype/blob/master/VERSIONS.md) |
 
+## Releasedatum: Maj 2022
+
+| Komponent | Version | Information |
+|:-------|:-----:|---------------------:|
+| CIF-tillägg | 2022.05.31.00 | [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2022.05.31.00.zip) |
+| CIF-kärnkomponenter | 2.9.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.9.0) |
+| CIF Venias referenswebbplats | 2022.05.30 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2022.05.30) |
+
+### Nyheter {#what-is-new-may}
+
+* Ny egenskapssida för produktcockpit för bättre och enklare översikt
+
+![översikt över egenskaper för produktcockpit](/help/assets/CIF/product_cockpit_properties_overview.png)
+
+* Förbättrad kompatibilitet och tillförlitlighet för anslutningar från tredje part vid I/O-körning
+
+* Förbättra stödet för överskrivningar av GQL-klientkonfiguration (t.ex. ange anpassad cachelagring)
+
+### Felkorrigeringar {#bug-fixes-may}
+
+* Produktväljarfältet för flera värden visar att andra och ytterligare produkter är ogiltiga
+
+* Produktväljaren döljs ibland bakom komponenter
+
 ## Releasedatum: April, 2022
 
 | Komponent | Version | Information |
@@ -29,7 +53,7 @@ Granska de lägsta systemkraven i tabellen nedan för den CIF-version som du anv
 | CIF-kärnkomponenter | 2.8.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.8.0) |
 | CIF Venias referenswebbplats | 2022.04.28 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2022.04.28) |
 
-### Nyheter {#what-is-new}
+### Nyheter {#what-is-new-april}
 
 * Snabb åtkomst till produktcockpit: Få enkelt tillgång till detaljerad produktinformation med ett enda klick i Sites Editor
 
