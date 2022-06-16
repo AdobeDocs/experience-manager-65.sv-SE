@@ -1,8 +1,8 @@
 ---
 title: Arbeta med sidversioner
-seo-title: Arbeta med sidversioner
+seo-title: Working with Page Versions
 description: Skapa, jämföra och återställa versioner av en sida
-seo-description: Skapa, jämföra och återställa versioner av en sida
+seo-description: Create, compare, and restore versions of a page
 uuid: 29e049f0-532c-4e3b-b64f-5be88ee6b08c
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 1368347a-9b65-4cfc-87e1-62993dc627fd
 docset: aem65
 exl-id: cb7a9da2-7112-4ef0-b1cf-211a7df93625
-source-git-commit: 4d5f7057178ea0a1f00ea363b76dacdfb714b5e3
+source-git-commit: b11a97b9b00e6f80fb0243e234ed1dc2c004ed3a
 workflow-type: tm+mt
-source-wordcount: '1487'
+source-wordcount: '1491'
 ht-degree: 4%
 
 ---
@@ -30,20 +30,20 @@ Versionshantering skapar en ögonblicksbild av en sida vid en viss tidpunkt. Med
 
 Du kan skapa en version av resursen från:
 
-* [Tidslinjerska](#creating-a-new-version-timeline)
-* alternativet [Skapa](#creating-a-new-version-create-with-a-selected-resource) (när en resurs är markerad)
+* den [Tidslinjespår](#creating-a-new-version-timeline)
+* den [Skapa](#creating-a-new-version-create-with-a-selected-resource) alternativ (när en resurs har valts)
 
-### Skapar en ny version - Tidslinje {#creating-a-new-version-timeline}
+### Skapa en ny version - Tidslinje {#creating-a-new-version-timeline}
 
 1. Navigera till sidan som du vill skapa en version för.
 1. Markera sidan i [markeringsläge](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources).
-1. Öppna kolumnen **Tidslinje**.
+1. Öppna **Tidslinje** kolumn.
 1. Klicka/tryck på pilen vid kommentarfältet för att visa alternativen:
 
    ![screen-shot_2019-03-05at112335](assets/screen-shot_2019-03-05at112335.png)
 
 1. Välj **Spara som version**.
-1. Ange en **etikett** och **Kommentar** om det behövs.
+1. Ange **Etikett** och **Kommentar** vid behov.
 
    ![chlimage_1-42](assets/chlimage_1-42.png)
 
@@ -55,8 +55,8 @@ Du kan skapa en version av resursen från:
 
 1. Navigera till sidan som du vill skapa en version för.
 1. Markera sidan i [markeringsläge](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources).
-1. Välj alternativet **Skapa** i verktygsfältet.
-1. Dialogrutan öppnas. Du kan ange en **etikett** och en **kommentar** om det behövs:
+1. Välj **Skapa** i verktygsfältet.
+1. Dialogrutan öppnas. Du kan ange en **Etikett** och **Kommentar** vid behov:
 
    ![screen_shot_2012-02-15at105050am](assets/screen_shot_2012-02-15at105050am.png)
 
@@ -68,11 +68,11 @@ Du kan skapa en version av resursen från:
 
 När du har skapat en version av sidan finns det olika metoder för att återställa en tidigare version:
 
-* alternativet **Återställ till denna version** från [tidslinjen](/help/sites-authoring/basic-handling.md#timeline)
+* den **Återgå till den här versionen** från [Tidslinje](/help/sites-authoring/basic-handling.md#timeline) järnväg
 
    Återskapa en tidigare version av en markerad sida.
 
-* **Återställ**-alternativen i det övre [verktygsfältet Åtgärder](/help/sites-authoring/basic-handling.md#actions-toolbar)
+* den **Återställ** från början [åtgärdsverktygsfält](/help/sites-authoring/basic-handling.md#actions-toolbar)
 
    * **Återställ version**
 
@@ -95,9 +95,9 @@ När du har skapat en version av sidan finns det olika metoder för att återst�
 >1. De genererade etiketterna och nodnamnen blir nu 1.0.0, 1.0.1, 1.0.2 osv.
 
 
-### Återgå till version {#revert-to-a-version}
+### Återgå till en version {#revert-to-a-version}
 
-Om du vill **återställa** den markerade sidan till en tidigare version:
+Till **Återställ** den markerade sidan till en tidigare version:
 
 1. Navigera till sidan som du vill återställa till en tidigare version.
 1. Markera sidan i [markeringsläge](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources).
@@ -106,15 +106,15 @@ Om du vill **återställa** den markerade sidan till en tidigare version:
 
    ![Återgå till den här versionen](assets/screen-shot_2019-03-05at112505.png)
 
-1. Välj **Återställ till denna version**. Den valda versionen återställs och informationen på tidslinjen uppdateras.
+1. Välj **Återgå till den här versionen**. Den valda versionen återställs och informationen på tidslinjen uppdateras.
 
 ### Återställ version {#restore-version}
 
 Denna metod kan användas för att återställa versioner av angivna sidor i den aktuella mappen; Detta kan även omfatta återställning av sidor som tidigare har tagits bort:
 
-1. Navigera till och [markera](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources) den obligatoriska mappen.
+1. Navigera till och [välj](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources), den obligatoriska mappen.
 
-1. Välj **Återställ** och sedan **Återställ version** i det övre verktygsfältet för [åtgärder](/help/sites-authoring/basic-handling.md#actions-toolbar).
+1. Välj **Återställ** sedan **Återställ version** uppifrån [åtgärdsverktygsfält](/help/sites-authoring/basic-handling.md#actions-toolbar).
 
    >[!NOTE]
    >
@@ -124,13 +124,13 @@ Denna metod kan användas för att återställa versioner av angivna sidor i den
    >* eller ingen av sidorna i mappen har versioner,
 
    >
-   >Då är visningen tom eftersom det inte finns några tillämpliga versioner.
+   >Sedan är visningen tom eftersom det inte finns några tillämpliga versioner.
 
 1. De tillgängliga versionerna visas:
 
    ![Återställ version - Lista över alla sidor i mappen](/help/sites-authoring/assets/versions-restore-version-01.png)
 
-1. Använd listruteväljaren under **ÅTERSTÄLL TILL VERSION** för att välja önskad version för en viss sida.
+1. För en viss sida använder du listruteväljaren under **ÅTERSTÄLL TILL VERSION** för att välja önskad version för den sidan.
 
    ![Återställ version - Välj version](/help/sites-authoring/assets/versions-restore-version-02.png)
 
@@ -138,7 +138,7 @@ Denna metod kan användas för att återställa versioner av angivna sidor i den
 
    ![Återställ version - Välj sida](/help/sites-authoring/assets/versions-restore-version-03.png)
 
-1. Välj **Återställ** för den valda versionen av den valda sidan som ska återställas som den aktuella versionen.
+1. Välj **Återställ** för den valda versionen av den valda sidan, som ska återställas som den aktuella versionen.
 
 >[!NOTE]
 >
@@ -148,23 +148,23 @@ Denna metod kan användas för att återställa versioner av angivna sidor i den
 
 Den här metoden kan användas för att återställa en version av ett träd vid ett angivet datum och en viss tidpunkt. detta kan omfatta sidor som tidigare har tagits bort:
 
-1. Navigera till och [markera](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources) den obligatoriska mappen.
+1. Navigera till och [välj](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources), den obligatoriska mappen.
 
-1. Välj **Återställ** och **Återställ träd** i det övre verktygsfältet för [åtgärder](/help/sites-authoring/basic-handling.md#actions-toolbar). Trädets senaste version visas:
+1. Välj **Återställ** sedan **Återställ träd** uppifrån [åtgärdsverktygsfält](/help/sites-authoring/basic-handling.md#actions-toolbar). Trädets senaste version visas:
 
    ![Återställ träd](/help/sites-authoring/assets/versions-restore-tree-02.png)
 
-1. Använd datum- och tidsväljaren på **Senaste versioner på Date** för att välja en annan version av trädet - den som ska återställas.
+1. Använd datum- och tidsväljaren vid **Senaste versioner på datum** om du vill välja en annan version av trädet - den som ska återställas.
 
-1. Ange flaggan **Bevarade icke-versionshanterade sidor** efter behov:
+1. Ange flaggan **Bevarade sidor som inte är versionshanterade** efter behov:
 
    * Om den är aktiv (markerad) bevaras alla sidor som inte är versionshanterade och påverkas inte av återställningen.
 
    * Om alternativet är inaktivt (omarkerat) tas alla sidor som inte är versionshanterade bort eftersom de inte fanns i versionsträdet.
 
-1. Välj **Återställ** för den valda versionen av trädet som ska återställas som den *aktuella* versionen.
+1. Välj **Återställ** för den valda versionen av trädet som ska återställas som *aktuell* version.
 
-## Förhandsgranska version {#previewing-a-version}
+## Förhandsgranska en version {#previewing-a-version}
 
 Du kan förhandsgranska en viss version:
 
@@ -181,7 +181,7 @@ Du kan förhandsgranska en viss version:
    >
    >Om en sida har flyttats kan du inte längre förhandsgranska versioner som gjorts före flyttningen.
    >
-   >* Om du får problem med en förhandsgranskning kan du kontrollera [tidslinjen](/help/sites-authoring/basic-handling.md#timeline) för sidan för att se om sidan har flyttats.
+   >* Om du får problem med en förhandsgranskning bör du kontrollera [Tidslinje](/help/sites-authoring/basic-handling.md#timeline) för att se om sidan har flyttats.
 
 
 ## Jämföra en version med den aktuella sidan {#comparing-a-version-with-current-page}
@@ -195,26 +195,30 @@ Så här jämför du en tidigare version med den aktuella sidan:
 
    ![screen-shot_2019-03-05at112505-2](assets/screen-shot_2019-03-05at112505-2.png)
 
-1. Välj **Jämför med aktuell**. Skillnaden mellan [sidorna](/help/sites-authoring/page-diff.md) öppnas och visas.
+1. Välj **Jämför med aktuell**. The [sidskillnader](/help/sites-authoring/page-diff.md) öppnar och visar skillnaderna.
 
 ## Timewarp {#timewarp}
 
-Timewarp är en funktion som är utformad för att simulera *publicerat*-läge för en sida vid en viss tidpunkt.
+Timewarp är en funktion som simulerar *publicerad* en sidas status vid en viss tidpunkt tidigare.
+
+>[!TIP]
+>
+>[Timewarp kan även användas med Launches för att förhandsgranska framtiden](/help/sites-authoring/launches.md) vid körning AEM 6.5.10.0 eller senare.
 
 Eftersom framtagning av innehåll är en pågående och samarbetsorienterad process är syftet med Timewarp att tillåta författare att spåra den publicerade webbplatsen över tid för att förstå hur innehållet har ändrats. Den här funktionen använder sidversionerna för att avgöra publiceringsmiljöns tillstånd.
 
 Så här gör du:
 
 * Systemet söker efter den sidversion som var aktiv vid den valda tidpunkten.
-* Det innebär att den visade versionen skapades/aktiverades *före* den tidpunkt som valdes i Timewarp.
+* Detta innebär att den visade versionen skapades/aktiverades *före* den tidpunkt som valts i Timewarp.
 * När du navigerar till en sida som har tagits bort återges den också, så länge som de gamla versionerna av sidan fortfarande är tillgängliga i databasen.
 * Om ingen publicerad version hittas återgår Timewarp till sidans aktuella status i redigeringsmiljön (detta för att förhindra ett fel/404-sida, vilket skulle förhindra bläddring).
 
 ### Använda Timewarp {#using-timewarp}
 
-Timewarp är ett [läge](/help/sites-authoring/author-environment-tools.md#page-modes) för sidredigeraren. Du startar det genom att helt enkelt växla det på samma sätt som andra lägen.
+Timewarp är en [läge](/help/sites-authoring/author-environment-tools.md#page-modes) för sidredigeraren. Du startar det genom att helt enkelt växla det på samma sätt som andra lägen.
 
-1. Starta redigeraren för sidan där du vill starta Timewarp och välj sedan **Timewarp** i lägesvalet.
+1. Starta redigeraren för sidan där du vill starta Timewarp och välj sedan **Timewarp** i lägesmarkeringen.
 
    ![wwpv-01](assets/wwpv-01.png)
 
@@ -230,13 +234,13 @@ Timewarp är ett [läge](/help/sites-authoring/author-environment-tools.md#page-
 
 Med Timewarp kan du göra ett bra försök att återskapa en sida vid en viss tidpunkt. På grund av komplexiteten i den kontinuerliga redigeringen av innehåll i AEM är detta dock inte alltid möjligt. Dessa begränsningar bör beaktas när du använder Timewarp.
 
-* **Timewarp fungerar baserat på publicerade sidor**  - Timewarp fungerar bara helt om du tidigare har publicerat sidan. I annat fall visas den aktuella sidan i författarmiljön.
-* **Vid tidsförvrängning används sidversioner** - Om du navigerar till en sida som har tagits bort/tagits bort från databasen kommer den att återges korrekt om gamla versioner av sidan fortfarande är tillgängliga i databasen.
+* **Timewarp fungerar baserat på publicerade sidor** - Timewarp fungerar bara helt om du tidigare har publicerat sidan. I annat fall visas den aktuella sidan i författarmiljön.
+* **Timewarp använder sidversioner** - Om du navigerar till en sida som har tagits bort/tagits bort från databasen kommer den att återges korrekt om det fortfarande finns äldre versioner av sidan i databasen.
 * **Borttagna versioner påverkar Timewarp** - Om versioner tas bort från databasen kan inte Timewarp visa rätt vy.
 
-* **Timewarp är skrivskyddat**  - Du kan inte redigera den gamla versionen av sidan. Det är bara tillgängligt för visning. Om du vill återställa den äldre versionen måste du göra det manuellt med [restore](#reverting-to-a-page-version).
+* **Timewarp är skrivskyddat** - Du kan inte redigera den gamla versionen av sidan. Det är bara tillgängligt för visning. Om du vill återställa den äldre versionen måste du göra det manuellt med [återställ](#reverting-to-a-page-version).
 
-* **Timewarp baseras bara på sidinnehåll**  - Om element (som kod, css, resurser/bilder osv.) för återgivning av webbplatsen har ändrats, skiljer sig vyn från den ursprungliga vyn eftersom objekten inte har versionsindelats i databasen.
+* **Timewarp baseras bara på sidinnehåll** - Om element (som kod, css, resurser/bilder osv.) för återgivning av webbplatsen har ändrats, skiljer sig vyn från den ursprungliga, eftersom objekten inte versionsindelas i databasen.
 
 >[!CAUTION]
 >

@@ -1,22 +1,21 @@
 ---
 title: Kodexempel
-seo-title: Kodexempel
-description: Adobe Consulting Services-teamet har genererat ett antal AEM kodexempel
-seo-description: Adobe Consulting Services-teamet har genererat ett antal AEM kodexempel
+seo-title: Code Samples
+description: Adobe Consulting Services Team har genererat en serie AEM kodexempel.
+seo-description: The Adobe Consulting Services Team has generated a series of AEM code samples.
 uuid: 16f23fa6-5a3c-4697-87de-86db37b3ec1b
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 discoiquuid: 07bf0224-6744-42d4-861f-d656ccfad171
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: d77e9e39-6117-4d09-b34b-a97ab347397e
+source-git-commit: 317c0a50631a983469729d5eb37760d8a3c30e98
 workflow-type: tm+mt
-source-wordcount: '238'
+source-wordcount: '149'
 ht-degree: 0%
 
 ---
-
 
 # Kodexempel{#code-samples}
 
@@ -24,22 +23,10 @@ Adobe Consulting Services Team har genererat en serie AEM kodexempel. Dessa exem
 
 En självstudiekurs i flera delar som är utformad för utvecklare som inte är vana att AEM grundläggande ämnen som projektkonfiguration, kärnkomponenter, redigerbara mallar, klientbibliotek och komponentutveckling: [Komma igång med AEM Sites - WKND självstudiekurs](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)
 
-Adobe AEM Community-teamet skapar artiklar om hur man gör för utvecklare. Du hittar artiklarna [här](https://helpx.adobe.com/experience-manager/topics/how-to.html).
+En Maven-mall där du kan skapa ett nytt AEM som utgångspunkt för att utveckla egna funktioner finns tillgänglig [här](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype).
 
-Det finns en Maven-mall som du kan använda för att skapa ett nytt AEM som utgångspunkt för att utveckla egna funktioner [här](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype).
-
-Exemplen med gränssnittskod som har pekfunktion är tillgängliga [här](/help/sites-developing/developing-components.md).
-
-Ytterligare kodexempel finns:
-
-* [https://github.com/Netcentric/accesscontroltool](https://github.com/Netcentric/accesscontroltool)
-* [https://blogs.adobe.com/aemtutorials/](https://blogs.adobe.com/aemtutorials/)
-* [https://www.hsufengko.com/home/cq5-code-samples](https://www.hsufengko.com/home/cq5-code-samples)
-* [https://github.com/code-distillery/aem-sample-project](https://github.com/code-distillery/aem-sample-project)
-* [https://github.com/Adobe-Marketing-Cloud/aem-samples](https://github.com/Adobe-Marketing-Cloud/aem-samples)
-* [https://github.com/Adobe-Marketing-Cloud/aem-htl-sample-todomvc](https://github.com/Adobe-Marketing-Cloud/aem-htl-sample-todomvc)
+Exemplen med gränssnittskod som har pekfunktion finns som standard [här](/help/sites-developing/developing-components.md).
 
 >[!NOTE]
 >
 >Dessa kodexempel är avsedda endast för utbildningsändamål och bör inte användas i en produktionsinstans av AEM.
-
