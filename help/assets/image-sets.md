@@ -11,9 +11,9 @@ docset: aem65
 feature: Image Sets,Asset Management
 role: User, Admin
 exl-id: 2a536745-fa13-4158-8761-2ac5b6e1893e
-source-git-commit: 7b29fc96768dc2238ebf9596b136ec10fa71aca9
+source-git-commit: cd3dcd0232e1ecf69c79b03ab960cfbfc283ee76
 workflow-type: tm+mt
-source-wordcount: '2013'
+source-wordcount: '2127'
 ht-degree: 6%
 
 ---
@@ -35,6 +35,15 @@ Anta till exempel att du vill visa bilder med olika färgskalor; räkningarna ä
 >[!NOTE]
 >
 >Mer information om gränssnittet Resurser finns i [Hantera resurser](/help/assets/manage-assets.md).
+
+När du skapar en bilduppsättning rekommenderar Adobe följande metodtips och tillämpar följande begränsningar:
+
+| Resurs - begränsningstyp | Bästa praxis | Implementerad gräns | Ändringar av begränsningen 31 december 2022 |
+| --- | --- | --- | --- |
+| **Bilduppsättning** - Antal dubblettresurser per uppsättning | Inga dubbletter | 100 | 20 |
+| **Bilduppsättning** - Maximalt antal bilder per uppsättning | 5-10 bilder per uppsättning | 1000 |
+
+Se även [Dynamic Media begränsningar](/help/assets/limitations.md).
 
 ## Snabbstart: Bilduppsättningar {#quick-start-image-sets}
 
@@ -130,6 +139,15 @@ När du lägger till resurser i uppsättningen läggs de automatiskt till i alfa
 >[!NOTE]
 >
 >Bilduppsättningar stöds inte för resurser med &quot;,&quot; (komma) i filnamnet.
+
+När du skapar en bilduppsättning rekommenderar Adobe följande metodtips och tillämpar följande begränsningar:
+
+| Resurs - begränsningstyp | Bästa praxis | Implementerad gräns | Ändringar av begränsningen 31 december 2022 |
+| --- | --- | --- | --- |
+| **Bilduppsättning** - Antal dubblettresurser per uppsättning | Inga dubbletter | 100 | 20 |
+| **Bilduppsättning** - Maximalt antal bilder per uppsättning | 5-10 bilder per uppsättning | 1000 |
+
+Se även [Dynamic Media begränsningar](/help/assets/limitations.md).
 
 **Så här skapar du bilduppsättningar:**
 

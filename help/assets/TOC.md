@@ -6,9 +6,9 @@ audience: end-user
 user-guide-title: Resurshandbok
 breadcrumb-title: Resurshandbok
 user-guide-description: Skapa, hantera, bearbeta och distribuera digitalt material.
-source-git-commit: 66958dc5328177d27dbdddf0c8983096e38f76b6
+source-git-commit: cd3dcd0232e1ecf69c79b03ab960cfbfc283ee76
 workflow-type: tm+mt
-source-wordcount: '672'
+source-wordcount: '675'
 ht-degree: 14%
 
 ---
@@ -62,6 +62,7 @@ ht-degree: 14%
    + [Leverera Dynamic Media-material](delivering-dynamic-media-assets.md)
    + [Aktivera hotlink-skydd i Dynamic Media](hotlink-protection.md)
    + [Stöd för 3D](/help/assets/assets-3d.md)
+   + [Dynamic Media begränsningar](limitations.md)
    + [Bilduppsättningar](image-sets.md)
    + [Panoramabilder](panoramic-images.md)
    + [Blandade medieuppsättningar](mixed-media-sets.md)

@@ -11,10 +11,10 @@ docset: aem65
 feature: Spin Sets,Asset Management
 role: User, Admin
 exl-id: 758ad754-15de-4e72-9b7d-ab49c51d7d4f
-source-git-commit: 7b29fc96768dc2238ebf9596b136ec10fa71aca9
+source-git-commit: cd3dcd0232e1ecf69c79b03ab960cfbfc283ee76
 workflow-type: tm+mt
-source-wordcount: '1802'
-ht-degree: 9%
+source-wordcount: '1882'
+ht-degree: 8%
 
 ---
 
@@ -31,6 +31,14 @@ Snurra uppsättningar anges av en banderoll med ordet **[!UICONTROL SPINSET]**. 
 >[!NOTE]
 >
 >Mer information om gränssnittet Resurser finns i [Hantera resurser](/help/assets/manage-assets.md).
+
+När du skapar en snurrsuppsättning rekommenderar Adobe följande bästa praxis och tillämpar följande gräns:
+
+| Begränsningstyp | Bästa praxis | Implementerad gräns |
+| --- | --- | --- |
+| Maximalt antal rader/kolumner per 2D-uppsättning | 12-18 bilder per uppsättning | 1000 |
+
+Se även [Dynamic Media begränsningar](/help/assets/limitations.md).
 
 ## Snabbstart: Snurra uppsättningar {#quick-start-spin-sets}
 
@@ -113,6 +121,14 @@ I det här avsnittet beskrivs hur du skapar en snurra uppsättning i Experience 
 >[!NOTE]
 >
 >Den ordning i vilken bilderna visas i en snurrfunktion. Se till att ordna dem så att snurret blir en mjuk 360-gradersvy.
+
+När du skapar en snurrsuppsättning rekommenderar Adobe följande bästa praxis och tillämpar följande gräns:
+
+| Begränsningstyp | Bästa praxis | Implementerad gräns |
+| --- | --- | --- |
+| Maximalt antal rader/kolumner per 2D-uppsättning | 12-18 bilder per uppsättning | 1000 |
+
+Se även [Dynamic Media begränsningar](/help/assets/limitations.md).
 
 **Så här skapar du en snurra:**
 
