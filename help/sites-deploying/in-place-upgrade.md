@@ -4,7 +4,7 @@ description: Lär dig hur du utför en uppgradering på plats.
 topic-tags: upgrading
 feature: Upgrading
 exl-id: aef6ef00-993c-4252-b0ad-ddc4917beaf7
-source-git-commit: 64c9296554c55b539145dd59a14b2255b1750e47
+source-git-commit: 6d2b7e341dcdedf3c000b9fb0ecd21722bdf2a27
 workflow-type: tm+mt
 source-wordcount: '1256'
 ht-degree: 0%
@@ -187,7 +187,7 @@ Observera att AEM från startskriptet inte startar uppgraderingen. De flesta kun
 1. Ändra kommandot genom att ersätta sökvägen till den befintliga behållaren ( `crx-quickstart/app/aem-quickstart*.jar` i det här fallet) med den nya burken som motsvarar `crx-quickstart` mapp. Om du använder vårt tidigare kommando som exempel blir vårt kommando:
 
    ```shell
-   /usr/bin/java -server -Xmx1024m -XX:MaxPermSize=256M -Djava.awt.headless=true -Dsling.run.modes=author,crx3,crx3tar -jar cq-quickstart-6.5.0.jar -c crx-quickstart -p 4502 -Dsling.properties=conf/sling.properties
+   /usr/bin/java -server -Xmx1024m -Djava.awt.headless=true -Dsling.run.modes=author,crx3,crx3tar -jar cq-quickstart-6.5.0.jar -c crx-quickstart -p 4502 -Dsling.properties=conf/sling.properties
    ```
 
    Detta säkerställer att alla korrekta minnesinställningar, anpassade körningslägen och andra miljöparametrar används för uppgraderingen. När uppgraderingen har slutförts kan instansen startas från startskriptet vid framtida starter.
