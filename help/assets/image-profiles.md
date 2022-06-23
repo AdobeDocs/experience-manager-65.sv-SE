@@ -10,9 +10,9 @@ discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
 feature: Image Profiles
 role: User, Admin
 exl-id: 67240ad0-1a7c-4e58-a518-1e36d771f1a1
-source-git-commit: cd3dcd0232e1ecf69c79b03ab960cfbfc283ee76
+source-git-commit: d83a647d8ac5466ba09230c584d5d501aab55274
 workflow-type: tm+mt
-source-wordcount: '2736'
+source-wordcount: '2742'
 ht-degree: 7%
 
 ---
@@ -33,9 +33,9 @@ När du överför bilder kan du beskära bilden automatiskt vid överföring gen
 
 När du implementerar Smart Crop på bilder rekommenderar Adobe följande bästa praxis och tillämpar följande gräns:
 
-| Begränsningstyp | Bästa praxis | Implementerad gräns |
-| --- | --- | --- |
-| Antal smarta beskärningar per bild | 5 | 100 |
+| Begränsningstyp | Bästa praxis | Begränsning har införts | Ändring till begränsning den 31 december 2022 |
+| --- | --- | --- | --- |
+| Antal smarta beskärningar per bild | 5 | 100 | 20 |
 
 Se även [Dynamic Media begränsningar](/help/assets/limitations.md).
 

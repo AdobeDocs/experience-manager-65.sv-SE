@@ -1,16 +1,17 @@
 ---
 title: Dynamic Media begränsningar
-description: 'Lär dig mer om de effektivaste strategierna och de tvingande gränserna när du skapar en bilduppsättning eller en snurruppsättning, eller överför en PDF. Läs också om webbläsarkombinationer och operativsystemkombinationer som inte stöds för Dynamic Media Viewer. '
+description: Lär dig mer om de effektivaste strategierna och de tvingande gränserna när du skapar en bilduppsättning eller en snurruppsättning, eller överför en PDF. Läs också om webbläsarkombinationer och operativsystemkombinationer som inte stöds för Dynamic Media Viewer.
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/Dynamic-Media-Classic
 geptopics: SG_SCENESEVENONDEMAND_PK/categories/ecatalogs
 feature: Dynamic Media Classic,Asset Management,Viewers,Image Sets,Spin Sets,eCatalog
 role: User
-source-git-commit: cd3dcd0232e1ecf69c79b03ab960cfbfc283ee76
+exl-id: e4d4059e-ac0b-42e7-910c-001310796574
+source-git-commit: 7a800199b0d3a9dce0a8a31d14f07326b56050ba
 workflow-type: tm+mt
-source-wordcount: '180'
-ht-degree: 3%
+source-wordcount: '189'
+ht-degree: 6%
 
 ---
 
@@ -28,13 +29,13 @@ Det här avsnittet innehåller följande avsnitt:
 
 När du skapar en snurra uppsättning eller en bilduppsättning, eller överför PDF för sidextrahering, rekommenderar Adobe följande metodtips och tillämpar följande begränsningar:
 
-| Resurs - begränsningstyp | Bästa praxis | Implementerad gräns | Ändringar av begränsningen 31 december 2022 |
+| Resurs - begränsningstyp | Bästa praxis | Begränsning har införts | Ändring till begränsning den 31 december 2022 |
 | --- | --- | --- | --- |
-| **Bild** - Antal smarta beskärningar per bild | 5 | 100 |  |
-| **Bilduppsättning** - Antal dubblettresurser per uppsättning | Inga dubbletter | 100 | 20 |
-| **Bilduppsättning** - Maximalt antal bilder per uppsättning | 5-10 bilder per uppsättning | 1000 |
-| **Snurra uppsättning** - Maximalt antal rader/kolumner per 2D-uppsättning | 12-18 bilder per uppsättning | 1000 |
-| **PDF** - Maximalt antal sidor för PDF som ska användas för extrahering |  | 5000 (för nya överföringar) | 100 |
+| **Bild** - Antal smarta beskärningar per bild | 5 | 100 | 20 |
+| **Alla uppsättningar** - Antal dubblettresurser per uppsättning | Inga dubbletter | 20 | Ej relevant |
+| **Alla uppsättningar** - Maximalt antal resurser per uppsättning | 5-10 bilder per uppsättning | 1000 | Ej relevant |
+| **Snurra uppsättning** - Maximalt antal rader/kolumner per 2D-uppsättning | 12-18 bilder per uppsättning | 1000 | Ej relevant |
+| **PDF** - Maximalt antal sidor för PDF som ska användas för extrahering |  | 5000 (för nya överföringar) | 100 (för alla PDF) |
 
 <!-- See also [Dynamic Media limitations](/help/assets/limitations.md). -->
 

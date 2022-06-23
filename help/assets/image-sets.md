@@ -11,9 +11,9 @@ docset: aem65
 feature: Image Sets,Asset Management
 role: User, Admin
 exl-id: 2a536745-fa13-4158-8761-2ac5b6e1893e
-source-git-commit: cd3dcd0232e1ecf69c79b03ab960cfbfc283ee76
+source-git-commit: d83a647d8ac5466ba09230c584d5d501aab55274
 workflow-type: tm+mt
-source-wordcount: '2127'
+source-wordcount: '2117'
 ht-degree: 6%
 
 ---
@@ -38,10 +38,10 @@ Anta till exempel att du vill visa bilder med olika färgskalor; räkningarna ä
 
 När du skapar en bilduppsättning rekommenderar Adobe följande metodtips och tillämpar följande begränsningar:
 
-| Resurs - begränsningstyp | Bästa praxis | Implementerad gräns | Ändringar av begränsningen 31 december 2022 |
-| --- | --- | --- | --- |
-| **Bilduppsättning** - Antal dubblettresurser per uppsättning | Inga dubbletter | 100 | 20 |
-| **Bilduppsättning** - Maximalt antal bilder per uppsättning | 5-10 bilder per uppsättning | 1000 |
+| Begränsningstyp | Bästa praxis | Begränsning har införts |
+| --- | --- | --- |
+| Antal dubblettresurser per uppsättning | Inga dubbletter | 20 |
+| Maximalt antal bilder per uppsättning | 5-10 bilder per uppsättning | 1000 |
 
 Se även [Dynamic Media begränsningar](/help/assets/limitations.md).
 
@@ -57,7 +57,7 @@ Se även [Dynamic Media begränsningar](/help/assets/limitations.md).
 
 <!--    Adobe Experience Manager Assets supports many image file formats, but lossless TIFF, PNG, and EPS images are recommended. -->
 
-1. [Skapa bilduppsättningar](#creating-image-sets).
+1. [Skapa en bilduppsättning](#creating-image-sets).
 
    I Bilduppsättningar väljer användare miniatyrbilder i Bilduppsättningsvisningsprogrammet.
 
@@ -78,12 +78,12 @@ Se även [Dynamic Media begränsningar](/help/assets/limitations.md).
 
    Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Viewer Presets]** om du vill skapa eller redigera visningsförinställningar.
 
-1. (Valfritt) [Visa bilduppsättningar](/help/assets/image-sets.md#viewing-image-sets) som skapades med gruppuppsättningsförinställningar.
+1. (Valfritt) [Visa en bilduppsättning](/help/assets/image-sets.md#viewing-image-sets) som skapades med gruppuppsättningsförinställningar.
 1. [Förhandsvisa bilduppsättningar](/help/assets/previewing-assets.md).
 
    Markera bilduppsättningen och du kan förhandsgranska den. Markera miniatyrbildikonerna så att du kan undersöka bilduppsättningen i det valda visningsprogrammet. Du kan välja olika visningsprogram från **[!UICONTROL Viewers]** som finns på den vänstra menyn.
 
-1. [Publicera bilduppsättningar](/help/assets/publishing-dynamicmedia-assets.md).
+1. [Publicera en bilduppsättning](/help/assets/publishing-dynamicmedia-assets.md).
 
    När du publicerar en bilduppsättning aktiveras URL-adressen och inbäddningskoden. Dessutom måste du [publicera anpassade visningsprogramförinställningar](/help/assets/managing-viewer-presets.md) som du har skapat. Visningsförinställningarna som är färdiga för leverans har redan publicerats.
 
@@ -125,7 +125,7 @@ Eftersom användare kan zooma bilder i bilduppsättningar bör du se till att bi
 >* En svart, brun och grön färgminiatyrbild.
 
 
-## Skapa bilduppsättningar {#creating-image-sets}
+## Skapa en bilduppsättning {#creating-image-sets}
 
 Du kan skapa bilduppsättningar via användargränssnittet eller API:t. I det här avsnittet beskrivs hur du skapar bilduppsättningar i användargränssnittet.
 
@@ -142,14 +142,14 @@ När du lägger till resurser i uppsättningen läggs de automatiskt till i alfa
 
 När du skapar en bilduppsättning rekommenderar Adobe följande metodtips och tillämpar följande begränsningar:
 
-| Resurs - begränsningstyp | Bästa praxis | Implementerad gräns | Ändringar av begränsningen 31 december 2022 |
-| --- | --- | --- | --- |
-| **Bilduppsättning** - Antal dubblettresurser per uppsättning | Inga dubbletter | 100 | 20 |
-| **Bilduppsättning** - Maximalt antal bilder per uppsättning | 5-10 bilder per uppsättning | 1000 |
+| Begränsningstyp | Bästa praxis | Begränsning har införts |
+| --- | --- | --- |
+| Antal dubblettresurser per uppsättning | Inga dubbletter | 20 |
+| Maximalt antal bilder per uppsättning | 5-10 bilder per uppsättning | 1000 |
 
 Se även [Dynamic Media begränsningar](/help/assets/limitations.md).
 
-**Så här skapar du bilduppsättningar:**
+**Så här skapar du en bilduppsättning:**
 
 1. I Experience Manager väljer du Experience Manager logotypen för att komma åt den globala navigeringskonsolen och går sedan till **[!UICONTROL Navigation]** > **[!UICONTROL Assets]**. Navigera till den plats där du vill skapa en bilduppsättning och gå sedan till **[!UICONTROL Create]** > **[!UICONTROL Image Set]** för att öppna sidan Bilduppsättningsredigerare.
 
@@ -193,7 +193,7 @@ Se även [Dynamic Media begränsningar](/help/assets/limitations.md).
 
 1. Välj **[!UICONTROL Save]**. Den nya bilduppsättningen visas i den mapp du skapade den i.
 
-## Visa bilduppsättningar {#viewing-image-sets}
+## Visa en bilduppsättning {#viewing-image-sets}
 
 Du kan skapa bilduppsättningar antingen i användargränssnittet eller automatiskt med [gruppuppsättningsförinställningar](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets).
 
@@ -221,7 +221,7 @@ Men uppsättningar som skapats med gruppuppsättningsförinställningar gör *no
 >
 >Du kan visa uppsättningar via användargränssnittet enligt beskrivningen i [Redigera bilduppsättningar](#editing-image-sets).
 
-## Redigera bilduppsättningar {#editing-image-sets}
+## Redigera en bilduppsättning {#editing-image-sets}
 
 Du kan utföra olika redigeringsåtgärder på bilduppsättningar, till exempel:
 
@@ -231,7 +231,7 @@ Du kan utföra olika redigeringsåtgärder på bilduppsättningar, till exempel:
 * Använd förinställningar för visningsprogram.
 * Ta bort bilduppsättningen.
 
-**Så här redigerar du bilduppsättningar:**
+**Så här redigerar du en bilduppsättning:**
 
 1. Gör något av följande:
 
@@ -259,10 +259,10 @@ Du kan utföra olika redigeringsåtgärder på bilduppsättningar, till exempel:
 
 1. Välj **[!UICONTROL Save]** när du är klar med redigeringen.
 
-## Förhandsvisa bilduppsättningar {#previewing-image-sets}
+## Förhandsvisa en bilduppsättning {#previewing-image-sets}
 
 Se [Förhandsgranska resurser](/help/assets/previewing-assets.md).
 
-## Publicera bilduppsättningar {#publishing-image-sets}
+## Publicera en bilduppsättning {#publishing-image-sets}
 
 Se [Publicera resurser](/help/assets/publishing-dynamicmedia-assets.md).

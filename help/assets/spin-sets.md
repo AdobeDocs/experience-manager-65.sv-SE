@@ -11,9 +11,9 @@ docset: aem65
 feature: Spin Sets,Asset Management
 role: User, Admin
 exl-id: 758ad754-15de-4e72-9b7d-ab49c51d7d4f
-source-git-commit: cd3dcd0232e1ecf69c79b03ab960cfbfc283ee76
+source-git-commit: d83a647d8ac5466ba09230c584d5d501aab55274
 workflow-type: tm+mt
-source-wordcount: '1882'
+source-wordcount: '1888'
 ht-degree: 8%
 
 ---
@@ -34,7 +34,7 @@ Snurra uppsättningar anges av en banderoll med ordet **[!UICONTROL SPINSET]**. 
 
 När du skapar en snurrsuppsättning rekommenderar Adobe följande bästa praxis och tillämpar följande gräns:
 
-| Begränsningstyp | Bästa praxis | Implementerad gräns |
+| Begränsningstyp | Bästa praxis | Begränsning har införts |
 | --- | --- | --- |
 | Maximalt antal rader/kolumner per 2D-uppsättning | 12-18 bilder per uppsättning | 1000 |
 
@@ -50,7 +50,7 @@ Så här kommer du igång snabbt med Spin Sets:
 
    Se [Dynamic Media - Rasterbildformat som stöds](/help/assets/assets-formats.md#supported-raster-image-formats-dynamic-media) om du vill visa en lista över format som kan användas i snurruppsättningar.
 
-1. [Skapa snurruppsättningar](#creating-spin-sets).
+1. [Skapa en snurruppsättning](#creating-spin-sets).
 
    Om du vill skapa en snurruppsättning väljer du **[!UICONTROL Create > Spin Set]** och namnge uppsättningen, välja resurser och välj i vilken ordning bilderna ska visas.
 
@@ -68,15 +68,15 @@ Så här kommer du igång snabbt med Spin Sets:
 
    Se [Lägga till och redigera visningsprogramförinställningar](/help/assets/managing-viewer-presets.md).
 
-1. [Visa snurruppsättningar](#viewing-spin-sets).
+1. [Visa en snurruppsättning](#viewing-spin-sets).
 
    Du kan visa och komma åt uppsättningar som skapats med hjälp av gruppuppsättningsförinställningar på tre olika sätt. (Uppsättningar som skapats med gruppuppsättningsförinställningar, gör *not* visas i användargränssnittet.)
 
-1. [Förhandsgranska snurra uppsättningar](/help/assets/previewing-assets.md).
+1. [Förhandsgranska en snurra uppsättning](/help/assets/previewing-assets.md).
 
    Markera rotationsuppsättningen så kan du förhandsgranska den. Rotera snurrsuppsättningen. Du kan välja olika visningsprogram från **[!UICONTROL Viewers]** som finns på den vänstra menyn.
 
-1. [Publicera snurruppsättningar](/help/assets/publishing-dynamicmedia-assets.md).
+1. [Publicera en snurruppsättning](/help/assets/publishing-dynamicmedia-assets.md).
 
    När du publicerar en snurruppsättning aktiveras URL-adressen och strängen Embed. Dessutom måste du [publicera visningsförinställningen](/help/assets/managing-viewer-presets.md).
 
@@ -88,9 +88,9 @@ Så här kommer du igång snabbt med Spin Sets:
 
    Se [Länka en snurruppsättning till en webbsida](/help/assets/linking-urls-to-yourwebapplication.md) och [Bädda in video- eller bildvisningsprogrammet](/help/assets/embed-code.md).
 
-Om det behövs kan du [redigera snurra uppsättningar](#editing-spin-sets). Dessutom kan du visa och ändra [Snurra uppsättningsegenskaper](/help/assets/manage-assets.md#editing-properties).
+Om det behövs kan du [redigera en snurruppsättning](#editing-spin-sets). Dessutom kan du visa och ändra [Snurra uppsättningsegenskaper](/help/assets/manage-assets.md#editing-properties).
 
-## Överför resurser för snurruppsättningar {#uploading-assets-for-spin-sets}
+## Överför resurser för en snurruppsättning {#uploading-assets-for-spin-sets}
 
 Du behöver minst 8-12 tagningar av ett objekt för en endimensionell snurra och 16-24 för en tvådimensionell snurra uppsättning. Fotografierna måste tas med jämna mellanrum för att ge intryck av att objektet roteras och vändas. Om en endimensionell snurra t.ex. innehåller 12 tagningar roterar du objektet 30° (360/12) för varje tagning.
 
@@ -124,7 +124,7 @@ I det här avsnittet beskrivs hur du skapar en snurra uppsättning i Experience 
 
 När du skapar en snurrsuppsättning rekommenderar Adobe följande bästa praxis och tillämpar följande gräns:
 
-| Begränsningstyp | Bästa praxis | Implementerad gräns |
+| Begränsningstyp | Bästa praxis | Begränsad |
 | --- | --- | --- |
 | Maximalt antal rader/kolumner per 2D-uppsättning | 12-18 bilder per uppsättning | 1000 |
 
