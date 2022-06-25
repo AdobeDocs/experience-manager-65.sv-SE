@@ -6,9 +6,9 @@ role: User
 feature: Asset Management,Search
 mini-toc-levels: 4
 exl-id: 158607e6-b4e9-4a3f-b023-4023d60c97d2
-source-git-commit: dabd27389c9fc5f30589d554ba4da8fce041dd4b
+source-git-commit: d43bd3ae17c81c5ed8eed2568e085c29fb924326
 workflow-type: tm+mt
-source-wordcount: '9737'
+source-wordcount: '9743'
 ht-degree: 3%
 
 ---
@@ -210,7 +210,7 @@ Om du vill avbryta ett pågående överföringsjobb klickar du på **[!UICONTROL
 |  | Bildredigeringsalternativ | Du kan bevara urklippsmaskerna i bilder och välja en färgprofil.<br> Se [Ange alternativ för bildredigering vid överföring](#setting-image-editing-options-at-upload). |
 |  | PostScript-alternativ | Du kan rastrera PostScript®, beskära filer, behålla genomskinliga bakgrunder, välja en upplösning och välja en färgrymd.<br> Se [Ange överföringsalternativ för PostScript och Illustrator](#setting-postscript-and-illustrator-upload-options). |
 |  | Photoshop-alternativ | Du kan skapa mallar från Adobe® Photoshop®-filer, behålla lager, ange hur lager ska namnges, extrahera text och ange hur bilder ska förankras i mallar.<br> Mallar stöds inte i [!DNL Experience Manager].<br> Se [Ange överföringsalternativ för Photoshop](#setting-photoshop-upload-options). |
-|  | Alternativ för PDF | Du kan rastrera filerna, extrahera sökord och länkar, automatiskt generera en e-katalog, ange upplösningen och välja en färgrymd.<br>eCatalogs stöds inte i [!DNL Experience Manager]. <br> Se [Ange överföringsalternativ för PDF](#setting-pdf-upload-options).<br>**Anteckning**: Det högsta antalet sidor för en PDF som ska övervägas för extrahering är 5000 för nya överföringar. Denna gräns kommer att ändras till 100 sidor den 31 december 2022. Se även [Dynamic Media begränsningar](/help/assets/limitations.md). |
+|  | Alternativ för PDF | Du kan rastrera filerna, extrahera sökord och länkar, automatiskt generera en e-katalog, ange upplösningen och välja en färgrymd.<br>eCatalogs stöds inte i [!DNL Experience Manager]. <br> Se [Ange överföringsalternativ för PDF](#setting-pdf-upload-options).<br>**Anteckning**: Det högsta antalet sidor för en PDF som ska övervägas för extrahering är 5000 för nya överföringar. Denna gräns kommer att ändras till 100 sidor (för alla PDF) den 31 december 2022. Se även [Dynamic Media begränsningar](/help/assets/limitations.md). |
 |  | Illustrator-alternativ | Du kan rastrera Adobe Illustrator®-filer, behålla genomskinliga bakgrunder, välja en upplösning och välja en färgrymd.<br> Se [Ange överföringsalternativ för PostScript och Illustrator](#setting-postscript-and-illustrator-upload-options). |
 |  | EVideoalternativ | Du kan omkoda en videofil genom att välja en videoförinställning.<br> Se [Ange överföringsalternativ för eVideo](#setting-evideo-upload-options). |
 |  | Förinställningar för gruppuppsättning | Om du vill skapa en bilduppsättning, eller en snurra uppsättning, från de överförda filerna klickar du på kolumnen Aktiv för den förinställning som du vill använda. Du kan markera flera förinställningar. Du skapar förinställningarna på sidan Programinställningar/Gruppinställningar i Dynamic Media Classic.<br> Se [Konfigurera förinställningar för gruppuppsättningar för att automatiskt generera bilduppsättningar och snurruppsättningar](config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets) om du vill veta mer om hur du skapar gruppuppsättningsförinställningar.<br> Se [Ställa in förinställningar för gruppuppsättning vid överföring](#setting-batch-set-presets-at-upload). |
@@ -284,7 +284,7 @@ Använd [!UICONTROL Crop Options] och [!UICONTROL Color Profile Options], som be
 
 När du överför en PDF-fil kan du formatera den på olika sätt. Du beskär sidorna, extraherar sökord, anger en pixel per tum-upplösning och väljer en färgrymd. PDF-filer innehåller ofta en ytmarginal, skärmärken, passmärken och andra skrivarmärken. Du kan beskära dessa märken från sidorna när du överför en PDF-fil.
 
-Det högsta antalet sidor för en PDF som ska övervägas för extrahering är 5000 för nya överföringar. Denna gräns kommer att ändras till 100 sidor den 31 december 2022. Se även [Dynamic Media begränsningar](/help/assets/limitations.md).
+Det högsta antalet sidor för en PDF som ska övervägas för extrahering är 5000 för nya överföringar. Denna gräns kommer att ändras till 100 sidor (för alla PDF) den 31 december 2022. Se även [Dynamic Media begränsningar](/help/assets/limitations.md).
 
 >[!NOTE]
 >
