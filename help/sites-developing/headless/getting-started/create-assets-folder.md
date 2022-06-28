@@ -2,7 +2,7 @@
 title: Skapa en startguide för en resursmapp utan rubrik
 description: Använd AEM Content Fragment Models för att definiera strukturen för Content Fragments, som är grunden för ditt headless-innehåll.
 exl-id: 9a156a17-8403-40fc-9bd0-dd82fb7b2235
-source-git-commit: a5cb385aa369a5e59889e77597119358b77b55be
+source-git-commit: 40922b222e15aa3ef12b54d65addff32b679d36e
 workflow-type: tm+mt
 source-wordcount: '379'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Använd AEM Content Fragment Models för att definiera strukturen för Content Fragments, som är grunden för ditt headless-innehåll. Innehållsfragment lagras sedan i resursmappar.
 
-##  Vad är en resursmapp? {#what-is-an-assets-folder}
+## Vad är en resursmapp? {#what-is-an-assets-folder}
 
 [Nu när du har skapat modeller för innehållsfragment](create-content-model.md) som definierar den struktur du vill ha för framtida innehållsfragment, är du antagligen glad att kunna skapa några fragment.
 
