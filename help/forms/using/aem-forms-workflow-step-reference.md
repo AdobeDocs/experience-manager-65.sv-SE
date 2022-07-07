@@ -9,7 +9,7 @@ topic-tags: publish
 discoiquuid: f0a5588d-f210-4f04-bc35-b62834f90ab1
 docset: aem65
 exl-id: 470fcfda-dfde-437c-b539-d5af1e13a7d6
-source-git-commit: e3bc820dd9bfce95cdc0c8c58c075893a1f0a625
+source-git-commit: de7b1d2d0f3863f9554b346204c18cc57d4bf814
 workflow-type: tm+mt
 source-wordcount: '7452'
 ht-degree: 0%
@@ -288,7 +288,7 @@ Med steget Signera dokument kan du använda Adobe Sign för att signera dokument
 * **Välj sökväg för bifogad fil med:** Sökväg till de bifogade filerna. Dessa bilagor inkluderas i signeringsdokumentet. Du kan behålla de bifogade filerna på en plats i förhållande till nyttolasten, ange en absolut sökväg för de bifogade filerna eller hämta bifogade filer som lagras i en variabel av dokumentdatatypen.
 
 
-Om du anger sökvägen till en mapp, till exempel bilagor, bifogas alla filer som är direkt tillgängliga i mappen till Signera dokument. Om några filer är tillgängliga i de mappar som är direkt tillgängliga i den angivna sökvägen för bifogade filer, inkluderas filerna i Signera dokument som bifogade filer. Om det finns mappar i direkt tillgängliga mappar hoppas de över.
+   Om du anger sökvägen till en mapp, till exempel bilagor, bifogas alla filer som är direkt tillgängliga i mappen till Signera dokument. Om några filer är tillgängliga i de mappar som är direkt tillgängliga i den angivna sökvägen för bifogade filer, inkluderas filerna i Signera dokument som bifogade filer. Om det finns mappar i direkt tillgängliga mappar hoppas de över.
 
 * **Dagar till deadline:** Ett dokument markeras som förfallet (passerat deadline) efter det att det inte finns någon aktivitet för uppgiften för det antal dagar som anges i **Dagar till deadline** fält. Antalet dagar räknas efter att den dokumenterade har tilldelats en användare för signering.
 * **E-postfrekvens för påminnelse:** Du kan skicka en påminnelse via e-post varje dag eller vecka. Veckan räknas från den dag som den dokumenterade tilldelas en användare för signering.
