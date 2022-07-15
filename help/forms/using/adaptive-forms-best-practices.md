@@ -9,9 +9,9 @@ topic-tags: author
 discoiquuid: 43c431e4-5286-4f4e-b94f-5a7451c4a22c
 feature: Adaptive Forms
 exl-id: 5c75ce70-983e-4431-a13f-2c4c219e8dde
-source-git-commit: 64ba9b1082e39552cd27e5616de2a35f7870270b
+source-git-commit: 0f1724cbb7ef4fec366fb8b63511a981b47b5429
 workflow-type: tm+mt
-source-wordcount: '4398'
+source-wordcount: '4322'
 ht-degree: 0%
 
 ---
@@ -134,7 +134,7 @@ Regelredigeraren innehåller en visuell redigerare och en kodredigerare för att
    * Du kan dessutom använda följande fältegenskaper:
 
       * `field.value` om du vill ändra ett fälts värde.
-      * f `ield.enabled` för att aktivera/inaktivera ett fält.
+      * `field.enabled` för att aktivera/inaktivera ett fält.
       * `field.visible` om du vill ändra synlighet för ett fält.
 
 * Anpassa formulärförfattare kan behöva skriva JavaScript-kod för att skapa affärslogik i ett formulär. JavaScript är kraftfullt och effektivt, men det kan troligtvis påverka säkerheten. Därför måste du se till att formulärförfattaren är en betrodd person och det finns processer för att granska och godkänna JavaScript-koden innan ett formulär börjar användas. Administratören kan begränsa åtkomsten till regelredigeraren till användargrupper baserat på deras roll eller funktion. Se [Bevilja regelredigeraråtkomst för valda användargrupper](/help/forms/using/rule-editor-access-user-groups.md).
@@ -228,17 +228,6 @@ Ett urkunder är en förenklad PDF-version av ett adaptivt formulär som du kan 
 * Utforska och lär dig mer om guideBridge API:er
 
 Mer information finns i [AEM Chrome Plug-in - Adaptiv form](https://adobe-consulting-services.github.io/acs-aem-tools/aem-chrome-plugin/adaptive-form/).
-
-Calvin SDK är ett program-API för Adaptiva Forms-utvecklare som testar Adaptiv Forms. Calvin SDK är byggt ovanpå [Testramverket i Hobbes.js](https://docs.adobe.com/docs/en/aem/6-3/develop/ref/test-api/index.html). Du kan använda ramverket för att testa följande:
-
-* Återgivning av ett adaptivt formulär
-* Förifyll upplevelsen av ett adaptivt formulär
-* Skicka in ett anpassat formulär
-* Uttrycksregler
-* Valideringar
-* Lazy Loading
-
-Mer information finns i [Automatisera testning av anpassningsbara formulär](/help/forms/using/calvin.md).
 
 ### Validerar anpassningsbara formulär på AEM server {#validating-adaptive-forms-on-aem-server}
 

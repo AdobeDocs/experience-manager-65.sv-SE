@@ -8,9 +8,9 @@ user-guide-title: Adobe Experience Manager 6.5 Forms Guide
 breadcrumb-title: Forms Guide
 user-guide-description: Skapa, hantera, publicera och uppdatera digitala formulär.
 role: User
-source-git-commit: 91b012f8024350effc19613bcecfc42dee4130d9
+source-git-commit: 471d7f48dc4653000b4852dbbeb886b05e28e644
 workflow-type: tm+mt
-source-wordcount: '3788'
+source-wordcount: '3778'
 ht-degree: 1%
 
 ---
@@ -35,7 +35,6 @@ ht-degree: 1%
       + [Självstudiekurs: Tillämpa regler på anpassningsbara formulärfält l](using/apply-rules-to-adaptive-form-fields.md)
       + [Självstudiekurs: Formatera ditt anpassningsbara formulär](using/style-your-adaptive-form.md)
       + [Självstudiekurs: Publicera ditt adaptiva formulär](/help/forms/using/publish-your-adaptive-form.md)
-      + [Självstudiekurs: Testa ditt adaptiva formulär](/help/forms/using/testing-your-adaptive-form.md)
    + Självstudiekurs: Skapa din första interaktiva kommunikation {#create-first-interactive-communication}
       + [Självstudiekurs: Skapa din första interaktiva kommunikation](using/create-your-first-interactive-communication.md)
       + [Självstudiekurs: Planera interaktiv kommunikation](using/planning-interactive-communications.md)
@@ -94,7 +93,7 @@ ht-degree: 1%
       + [Migrera AEM Forms-resurser och -dokument](using/migration-utility.md)
    + Uppgradera AEM Forms på JEE {#aem-forms-jee-upgrade}
       + [Förbereder uppgradering av AEM Forms](http://www.adobe.com/go/learn_aemforms_prepareupgrade_65)
-      + [Adobe Experience Manager Forms i JEE-uppgraderingar - checklista och planering](http://www.adobe.com/go/learn_aemforms_upgrade_checklist_65)
+      + [Adobe Experience Manager Forms i JEE - checklista och planering för uppgradering](http://www.adobe.com/go/learn_aemforms_upgrade_checklist_65)
       + [Uppgradera till AEM 6.5-formulär på JEE](using/upgrade-forms-jee.md)
       + [Uppgradera till Adobe Experience Manager Forms på JEE för JBoss](http://www.adobe.com/go/learn_aemforms_upgradeJBoss_65)
       + [Uppgradera till AEM Forms on JEE for JBoss Turnkey](http://www.adobe.com/go/learn_aemforms_upgradeTurnkey_65)
@@ -175,7 +174,6 @@ ht-degree: 1%
    + [XFA-stöd i XDP-baserade adaptiva formulär](using/xfa-api-supported-in-adaptive-form.md)
    + [Bevilja regelredigeraråtkomst för valda användargrupper](using/rule-editor-access-user-groups.md)
    + [Använda arbetsflöde för AEM översättning för att lokalisera anpassningsbara formulär och urkunder](using/using-aem-translation-workflow-to-localize-adaptive-forms.md)
-   + [Automatisera testning av anpassningsbara formulär](using/calvin.md)
    + [Formateringskonstruktioner för adaptiva formulär](using/styling-constructs-adaptive-forms.md)
    + [Synkronisera adaptiv Forms med XFA-formulärmallar](using/synchronizing-adaptive-forms-xfa.md)
    + [Integrera Adobe Sign med AEM Forms](using/adobe-sign-integration-adaptive-forms.md)
