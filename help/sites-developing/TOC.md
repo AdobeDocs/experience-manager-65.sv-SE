@@ -261,9 +261,9 @@ ht-degree: 0%
    + [JCR-integrering](jcr-integration.md)
    + [Kodexempel](code-samples.md)
    + [Felsöka långsamma frågor](troubleshooting-slow-queries.md)
-+ Mobile Web{#mobileweb}
-   + [Mobile Web](mobile-web.md)
++ Mobil webb{#mobileweb}
+   + [Mobil webb](mobile-web.md)
    + [Skapa enhetsgruppsfilter](groupfilters.md)
    + [Responsiv design för webbsidor](responsive.md)
-   + [Skapa platser för Mobile-enheter](mobile.md)
+   + [Skapa platser för mobila enheter](mobile.md)
    + [Emulatorer](emulators.md)

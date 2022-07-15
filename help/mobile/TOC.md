@@ -5,11 +5,11 @@ audience: end-user
 user-guide-title: AEM 6.5 Mobile User Guide
 breadcrumb-title: Mobilguide
 user-guide-description: Skapa och hantera innehåll för mobilappar.
-feature: Mobil
+feature: Mobile
 role: User
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '332'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 0%
    + [AEM Adobe PhoneGap](getting-started-aem-mobile-phonegap.md)
    + [AEM Mobile - GDPR-beredskap](aem-mobile-gdpr-compliance.md)
    + [Utveckla mobilappar](develop-mobile-apps.md)
-+ Redigeringsapp för On Demand Services {#authoring}
++ App för redigering av On Demand Services {#authoring}
    + [Mobile On-Demand](mobile-apps-ondemand.md)
    + [Hantera innehåll](mobile-apps-ondemand-manage-content-ondemand.md)
    + [Publicera inte publicera innehåll](mobile-on-demand-publishing-unpublishing.md)
@@ -58,7 +58,7 @@ ht-degree: 0%
    + [Modeller - översikt](model-management.md)
    + [Blanksteg och entiteter](spaces-and-entities.md)
    + [Hantera samlingar](mobile-on-demand-managing-collections.md)
-+ Skapar Adobe PhoneGap Enterprise {#author-phonegap}
++ Skapa Adobe PhoneGap Enterprise {#author-phonegap}
    + [PhoneGap](phonegap.md)
    + [Redigera appmetadata](phonegap-editmetadata.md)
    + [Programdefinitioner](phonegap-app-definitions.md)

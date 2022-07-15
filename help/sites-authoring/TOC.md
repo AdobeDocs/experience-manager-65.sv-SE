@@ -42,7 +42,7 @@ ht-degree: 0%
    + [Experience Fragments](experience-fragments.md)
    + [Exportera till CSV](csv-export.md)
    + [Komponenter](default-components.md)
-   + [Skapa en sida för Mobile-enheter](mobile.md)
+   + [Skapa en sida för mobila enheter](mobile.md)
    + [Felsöka AEM vid redigering](troubleshooting.md)
    + [Kortkommandon vid sidredigering](page-authoring-keyboard-shortcuts.md)
    + [Bästa praxis](best-practices.md)

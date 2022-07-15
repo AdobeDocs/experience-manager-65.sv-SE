@@ -5,12 +5,12 @@ audience: end-user
 user-guide-title: AEM 6.5 Handbok för användarhantering
 breadcrumb-title: Handbok
 user-guide-description: Lär dig hantera ett AEM projekt.
-feature: Distribuerar
+feature: Deploying
 role: User
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '73'
-ht-degree: 17%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 

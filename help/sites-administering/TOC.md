@@ -10,8 +10,8 @@ feature: Administering
 role: Admin
 source-git-commit: a1821ab210b3735ca5b59b075659ff30d5872b8e
 workflow-type: tm+mt
-source-wordcount: '632'
-ht-degree: 6%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -129,7 +129,7 @@ ht-degree: 6%
    + [Integrera med Adobe Campaign Standard](campaignstandard.md)
    + [Meddelande om att Flash Viewer har upphört](flash-viewers-eol.md)
    + [Produktfeed](product-feed.md)
-   + [Integrera med dynamisk tagghantering i Adobe](dtm.md)
+   + [Integrera med Adobe Dynamic Tag Management](dtm.md)
    + [Ingå i Adobe Analytics och Adobe Target](opt-in.md)
    + [AEM portaler och portlets](aem-as-portal.md)
    + [Integrera med Dynamic Media Classic (Scene7)](scene7.md)
