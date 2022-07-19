@@ -2,9 +2,9 @@
 title: AEM Content and Commerce Release Notes 2022
 description: AEM Content and Commerce Release Notes 2022
 exl-id: d0a66e70-c4f1-4051-8161-11f07dad0612
-source-git-commit: f6a16e5744222600b3a1760efe3c61619160b6cd
+source-git-commit: 600a836ff7ae0be9fde107ff2828bb41e8eed98f
 workflow-type: tm+mt
-source-wordcount: '573'
+source-wordcount: '660'
 ht-degree: 5%
 
 ---
@@ -20,6 +20,26 @@ Granska de lägsta systemkraven i tabellen nedan för den CIF-version som du anv
 | CIF-tillägg | Minimum: AEM 6.5.7, Magento 2.3.5 GraphQL scheman |
 | CIF-kärnkomponenter | [Systemkrav](https://github.com/adobe/aem-core-cif-components/blob/master/VERSIONS.md) |
 | AEM Project Archetype | [Systemkrav](https://github.com/adobe/aem-project-archetype/blob/master/VERSIONS.md) |
+
+## Releasedatum: Juni 2022
+
+| Komponent | Version | Information |
+|:-------|:-----:|---------------------:|
+| CIF-tillägg | 2022.06.xx.00 | [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2022.07.05.00.zip) |
+| CIF-kärnkomponenter | 2.10.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.10.0) |
+| CIF Venias referenswebbplats | 2022.07.04 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2022.07.04) |
+
+### Nyheter {#what-is-new-june}
+
+* Mallnamnet visas nu som webbplatsredigerare när du redigerar produktkatalogmallen
+
+* Olika förbättringar av CIF-kärnkomponenten
+
+### Felkorrigeringar {#bug-fixes-june}
+
+* Lägg till inloggningstoken till prishämtning på klientsidan
+
+* Fel sidkomponent i datalagret
 
 ## Releasedatum: Maj 2022
 
@@ -63,7 +83,7 @@ Granska de lägsta systemkraven i tabellen nedan för den CIF-version som du anv
 
    ![Kortkommando för webbplatsredigeraren till produktcockpit](/help/assets/CIF/sites-editor-shortcut-to-cockpit.png)
 
-## Releasedatum: Mars 2022
+## Releasedatum: Februari 2022
 
 | Komponent | Version | Information |
 |:-------|:-----:|---------------------:|
