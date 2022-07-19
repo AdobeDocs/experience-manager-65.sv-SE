@@ -3,9 +3,9 @@ title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: '"[!DNL Adobe Experience Manager] 6.5 som beskriver versionsinformation, nyheter, hur man installerar och detaljerade ändringslistor."'
 mini-toc-levels: 3
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: 6b75c41cf796b28409c263175cf3f3a2044422ff
+source-git-commit: 9f957175573eeb2b40d79a5087dc3034c56819cc
 workflow-type: tm+mt
-source-wordcount: '3709'
+source-wordcount: '3718'
 ht-degree: 0%
 
 ---
@@ -298,10 +298,10 @@ Följande felkorrigeringar, viktiga funktioner och förbättringar introducerade
 
 ## Användargränssnitt {#ui-6513}
 
+* Uppdatera till `favicon.ico` som används i Experience Manager. (CQ-4315324)
 * När du är på startsidan > Verktyg och klickar på [!DNL Experience Manager] -ikonen [!DNL Experience Manager] Navigeringsskärmen ska visas. (NPR-38417)
 * Aktivera ES6 för `/libs/granite/ui/references/clientlibs/coral/references`. (NPR-38303)
 * Aktivera ES6 för `/libs/granite/datavisualization/clientlibs/d3-3.x`. (NPR-38302)
-
 <!-- VULNERABILITY ISSUE - REMOVED AND ADDED TO https://wiki.corp.adobe.com/display/DXContent/Security+and+Vulnerability+issues+for+SP+and+CFP+releases * AEM‑OP‑09 ‑ Persistent cross‑site scripting selecting paths in templates. (NPR-38301) -->
 * Datumväljaren med pekskärmsgränssnitt visas på koreanska. (NPR-38079)
 * Dialogrutan för redigering med multifält visas när du ändrar ordning på fälten och alternativknappens markeringsvärde försvinner. (NPR-38063)
