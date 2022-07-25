@@ -2,9 +2,9 @@
 title: AEM Content and Commerce Release Notes 2022
 description: AEM Content and Commerce Release Notes 2022
 exl-id: d0a66e70-c4f1-4051-8161-11f07dad0612
-source-git-commit: 600a836ff7ae0be9fde107ff2828bb41e8eed98f
+source-git-commit: b493e7bd73d679aa46bf41fad105f13215226dd4
 workflow-type: tm+mt
-source-wordcount: '660'
+source-wordcount: '663'
 ht-degree: 5%
 
 ---
@@ -31,7 +31,7 @@ Granska de lägsta systemkraven i tabellen nedan för den CIF-version som du anv
 
 ### Nyheter {#what-is-new-june}
 
-* Mallnamnet visas nu som webbplatsredigerare när du redigerar produktkatalogmallen
+* Produktkatalogsberikning har nu stöd för AEM sidor. Detta gör att författare kan hantera sida - produktassociation.
 
 * Olika förbättringar av CIF-kärnkomponenten
 
