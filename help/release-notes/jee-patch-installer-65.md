@@ -5,7 +5,7 @@ uuid: 76662858-afca-4ba3-883b-9b9a61874f15
 content-type: reference
 discoiquuid: b0283feb-c3ec-4ef0-885c-46bc83a61e26
 exl-id: 6b17472b-9226-4319-b305-4dba862d21af
-source-git-commit: d28d78e426f1e89caa8bd28b067765d40b95cb8a
+source-git-commit: 3af8a2425596ff6c15fb49fed66e9fbd0e9d391e
 workflow-type: tm+mt
 source-wordcount: '487'
 ht-degree: 0%
@@ -72,7 +72,7 @@ Navigera till rätt katalog och skriv i en kommandotolk
 1. (Endast JBoss) När du har installerat korrigeringen och konfigurerat servern tar du bort tmp och arbetskataloger för JBoss-programservern.
 
 >**Obs!** Innan du startar **Konfigurationshanteraren**, hämta och ersätta [ConfigurationManager.lax](/help/assets/ConfigurationManager.lax) -fil.
-
+>
 ## Konfigurationer efter distributionen {#post-deployment-configurations}
 
 ### SAML-konfigurationer {#saml-configurations}
