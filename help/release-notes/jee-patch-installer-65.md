@@ -5,9 +5,9 @@ uuid: 76662858-afca-4ba3-883b-9b9a61874f15
 content-type: reference
 discoiquuid: b0283feb-c3ec-4ef0-885c-46bc83a61e26
 exl-id: 6b17472b-9226-4319-b305-4dba862d21af
-source-git-commit: 2c2277f43fe12c4d4fa655c0666519e3608ba3f9
+source-git-commit: c425caa9aadd8bae3c2863f24e73b5265ec0b358
 workflow-type: tm+mt
-source-wordcount: '486'
+source-wordcount: '466'
 ht-degree: 0%
 
 ---
@@ -52,17 +52,12 @@ Navigera till rätt katalog och skriv i en kommandotolk
 1. Läs mer i Sammanfattning av förinstallation och klicka på **[!UICONTROL Install]**.
 1. När installationen är klar klickar du på **[!UICONTROL Next]** för att använda snabbkorrigeringsuppdateringar på dina installerade filer.
 
-1. Avmarkera alternativet Starta Configuration Manager innan du klickar på Klar. Innan du kör konfigurationshanteraren med **ConfigurationManager.exe** eller **ConfigurationManager_IPv6.exe**, navigera till *&lt;aemforms_install_dir>\configurationManager\bin* katalog och uppdatering `ConfigurationManager.lax` och `ConfigurationManager_IPv6.lax` filer med följande namnbytesåtgärder:
+1. **[Endast Windows]** Utför följande steg:
 
-   * `axis.jar` till `axis-1.4.1.1.jar`
-   * `serializer-2.7.1.jar` till `serializer-2.7.2.jar`
-   * `xalan-2.7.1.jar` till `xalan-2.7.2.jar`
-   * `xercesImpl-2.9.1.jar` till `xercesImpl-2.12.0.jar`
-   * `xml-apis-2.7.1.jar` till `xml-apis-2.7.2.jar`
-
+   Avmarkera **Starta Configuration Manager** innan du klickar **[!UICONTROL Done]**. Innan du kör konfigurationshanteraren med **ConfigurationManager.exe** eller **ConfigurationManager_IPv6.exe**, navigera till `<AEMForms_Install_Dir>\configurationManager\bin` katalog och ersätt [ConfigurationManager.lax](/help/assets/ConfigurationManager.lax) -fil.
 1. Kryssrutan Starta Configuration Manager är markerad som standard. Klicka **[!UICONTROL Done]** för att köra Configuration Manager.
 
-1. Om du vill köra Configuration Manager senare avmarkerar du alternativet Starta Configuration Manager innan du klickar på Klar. Du kan starta Configuration Manager senare med rätt skript i `[AEM_forms_root]/configurationManager/bin` katalog.
+1. Om du vill köra Configuration Manager senare avmarkerar du alternativet Starta Configuration Manager innan du klickar på **[!UICONTROL Done]**. Du kan starta Configuration Manager senare med rätt skript i `[AEM_forms_root]/configurationManager/bin` katalog.
 
 1. Beroende på programservern väljer du ett av följande dokument och följer instruktionerna i *Konfigurera och distribuera AEM formulär* -avsnitt.
 
@@ -70,9 +65,6 @@ Navigera till rätt katalog och skriv i en kommandotolk
    * [Installera och distribuera AEM formulär för WebSphere](http://www.adobe.com/go/learn_aemforms_installWebSphere_65)
 
 1. (Endast JBoss) När du har installerat korrigeringen och konfigurerat servern tar du bort tmp och arbetskataloger för JBoss-programservern.
-
->[!NOTE]
->Innan du startar **Konfigurationshanteraren**, hämta och ersätta [ConfigurationManager.lax](/help/assets/ConfigurationManager.lax) -fil.
 
 ## Konfigurationer efter distributionen {#post-deployment-configurations}
 
