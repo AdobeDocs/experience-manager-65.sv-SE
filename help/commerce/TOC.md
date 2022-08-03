@@ -5,8 +5,8 @@ breadcrumb-title: Commerce Guide
 user-guide-description: Förstå hur ni använder och administrerar AEM innehåll och handel.
 source-git-commit: 0ae78938641c383a65462096235e3b62d6b67e23
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '123'
+ht-degree: 8%
 
 ---
 
