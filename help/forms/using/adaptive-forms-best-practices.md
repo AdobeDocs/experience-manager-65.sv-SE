@@ -9,9 +9,9 @@ topic-tags: author
 discoiquuid: 43c431e4-5286-4f4e-b94f-5a7451c4a22c
 feature: Adaptive Forms
 exl-id: 5c75ce70-983e-4431-a13f-2c4c219e8dde
-source-git-commit: 0f1724cbb7ef4fec366fb8b63511a981b47b5429
+source-git-commit: f05ddd2fb72258b7de5d361eb87f5e68e7ddd7ff
 workflow-type: tm+mt
-source-wordcount: '4322'
+source-wordcount: '4529'
 ht-degree: 0%
 
 ---
@@ -95,6 +95,19 @@ Mer information finns i [Skapa ett anpassat formulär](/help/forms/using/creatin
    * Lägg in anpassade interaktiva funktioner genom att skapa anpassade widgetar eller utseenden. Du bör inte ändra standardkomponenter. Mer information finns i [Utseenderamverk](/help/forms/using/introduction-widgets.md).
 
 * Se [Hantera personligt identifierbar information](/help/forms/using/adaptive-forms-best-practices.md#p-handling-personally-identifiable-information-p) för rekommendationer om hur PII-data ska hanteras.
+
+### Skapa formulärmallar
+
+Du kan skapa ett anpassat formulär med formulärmallarna som är aktiverade i **Konfigurationsläsaren**. Information om hur du aktiverar formulärmallarna finns i [Skapa anpassad formulärmall](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-adaptive-form/create-adaptive-form-template.html?lang=en).
+
+Formulärmallarna kan också laddas upp från adaptiva formulärpaket som skapats på en annan författardator. Formulärmallar är tillgängliga genom installation [aemforms-references-*-paket](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en). Några av de bästa metoderna som rekommenderas är:
+* The **nosamplingContent** runmode rekommenderas endast för författaren och inte för publiceringsnoderna.
+* Redigering av resurser som anpassningsbara formulär, teman, mallar eller molnkonfigurationer utförs endast via redigeringsnoder, som kan publiceras på de konfigurerade publiceringsnoderna.
+Mer information finns i [Publicera och avpublicera formulär och dokument](https://experienceleague.adobe.com/docs/experience-manager-65/forms/publish-process-aem-forms/publishing-unpublishing-forms.html?lang=en)
+* Forms tilläggspaket krävs för redigering och publicering för att stödja dokumenttjänstens verksamhet. Därför kan det betraktas som ett beroende.
+Om du bara vill hämta Forms-relaterade exempelmallar, teman och DOR-paket kan du hämta dem från [aemforms-references-*-paket](https://experienceleague.adobe.com/docs/experience-manager-65/forms/publish-process-aem-forms/publishing-unpublishing-forms.html?lang=en).
+
+Mer information finns i de effektivaste strategierna i [Introduktion till utveckling av anpassningsbara formulär](/help/forms/using/introduction-forms-authoring.md).
 
 ## Skapa anpassningsbara formulär {#author-adaptive-forms}
 
@@ -309,3 +322,5 @@ En av de största utmaningarna för organisationer är att hantera personligt id
 
 * Använd en säker, extern lagringsplats som databas för att lagra data från utkast och skickade formulär. Se [Konfigurera extern lagring för utkast och skickade formulärdata](/help/forms/using/adaptive-forms-best-practices.md#external-storage).
 * Använd formulärkomponenten Villkor om du vill få uttryckligt medgivande från användaren innan du aktiverar automatiskt sparande. I det här fallet aktiverar du bara Spara automatiskt när användaren godkänner villkoren i villkorskomponenten.
+
+
