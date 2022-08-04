@@ -10,9 +10,9 @@ content-type: reference
 discoiquuid: 42df2db3-4d3c-4954-a03e-221e2f548305
 feature: Language Copy
 exl-id: 2011a976-d506-4c0b-9980-b8837bdcf5ad
-source-git-commit: 3de9f3c97b99644297a2f07344f6aebae1c5ae83
+source-git-commit: 1be3d394283493f7c282ea4c3d794458d88e1ac3
 workflow-type: tm+mt
-source-wordcount: '609'
+source-wordcount: '681'
 ht-degree: 0%
 
 ---
@@ -73,12 +73,20 @@ Manuella redigeringar av översatt innehåll kan synkroniseras tillbaka till öv
 
    ![screen_shot_2018-04-22at235024](assets/screen_shot_2018-04-22at235024.jpg)
 
-AEM skickar tillbaka de markerade strängarna till översättningshanteringssystemet.
+AEM uppdaterar översättningen av de befintliga strängarna i översättningsminnet för den konfigurerade TMS:en.
 
-* Åtgärden uppdaterar översättningen av befintliga strängar i översättningsminnet för konfigurerade översättningshanteringssystem (TMS).
+* Åtgärden uppdaterar översättningen av befintliga strängar i översättningsminnet för den konfigurerade TMS:en.
 * Det skapar inte nya översättningsjobb.
-* Det skickar värdeparen för strängar och deras översättningar tillbaka till TMS via AEM översättnings-API.
-* Den här funktionen kräver att ett översättningshanteringssystem har konfigurerats för användning med AEM.
+* Det skickar översättningarna tillbaka till TMS via AEM översättnings-API (se nedan).
+
+Så här använder du den här funktionen:
+
+* En TMS måste konfigureras för användning med AEM.
+* Kopplingen måste implementera metoden [`storeTranslation`](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/adobe/granite/translation/api/TranslationService.html).
+   * Koden i den här metoden avgör vad som händer med uppdateringsbegäran för översättningsminnet.
+   * Det AEM översättningsramverket skickar strängvärdepar (original och uppdaterad översättning) tillbaka till TMS via den här metodimplementeringen.
+
+Uppdateringarna av översättningsminnet kan fångas upp och skickas till en anpassad destination, i de fall där ett tillverkarspecifikt översättningsminne används.
 
 ## Språkkopior på flera nivåer {#language-copies-on-multiple-levels}
 
