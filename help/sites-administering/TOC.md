@@ -8,10 +8,10 @@ breadcrumb-title: Administratörshandbok
 user-guide-description: Läs om hur du administrerar AEM.
 feature: Administering
 role: Admin
-source-git-commit: a1821ab210b3735ca5b59b075659ff30d5872b8e
+source-git-commit: 9a164f92b6d5a927d1cb4ead2f119cc094180713
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '637'
+ht-degree: 6%
 
 ---
 
@@ -113,6 +113,7 @@ ht-degree: 0%
    + [Integrera med tredjepartstjänster](third-party-services.md)
    + [Integrera med Salesforce](salesforce.md)
    + [Integrera med Adobe Target](target.md)
+   + [Integrera med Adobe Learning Manager](adobe-learningmanager.md)
    + [Integrera med Adobe Analytics](adobeanalytics.md)
    + [Ansluta till Adobe Analytics och skapa ramverk](adobeanalytics-connect.md)
    + [Konfigurera länkspårning för Adobe Analytics](adobeanalytics-link.md)
