@@ -4,7 +4,7 @@ description: Tough Day-testet simulerar den dagliga belastningen för cirka 1 00
 topic-tags: testing
 content-type: reference
 exl-id: ceb9671c-57f9-4d81-94c0-0dbccd4d90a2
-source-git-commit: ca6d41740dbb24dbba7cf7691c51435cc40d3ead
+source-git-commit: 1b92b973209fdbd2509b1c644c1064a1e9224a9e
 workflow-type: tm+mt
 source-wordcount: '1849'
 ht-degree: 1%
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 ## Vad är Tom Dag 2? {#what-is-tough-day}
 
-&quot;Tough Day 2&quot; är ett program som gör att du kan stresstesta gränserna för din AEM. Den kan köras direkt med testsviten eller konfigureras för att passa dina testbehov. Du kan titta [den här inspelningen](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-toughday2-stress-testing-benchmarking-tool.html) för en presentation av ansökan.
+&quot;Tough Day 2&quot; är ett program som gör att du kan stresstesta gränserna för din AEM. Den kan köras direkt med testsviten eller konfigureras för att passa dina testbehov. Du kan titta [den här inspelningen](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2017/aem-toughday2-stress-testing-benchmarking-tool.html) för en presentation av ansökan.
 
 >[!CAUTION]
 >
