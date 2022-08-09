@@ -3,9 +3,9 @@ title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: '"[!DNL Adobe Experience Manager] 6.5 som beskriver versionsinformation, nyheter, hur man installerar och detaljerade ändringslistor."'
 mini-toc-levels: 3
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: 9f957175573eeb2b40d79a5087dc3034c56819cc
+source-git-commit: e51cf7a5b7d14bc4aed053496c7fe6685dd2b0b8
 workflow-type: tm+mt
-source-wordcount: '3718'
+source-wordcount: '3629'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,12 @@ De viktigaste funktionerna och förbättringarna i [!DNL Adobe Experience Manage
 
    * Stöd för skärmläsare har lagts till för att identifiera tabellens rubrik och brödtext som fortsätter och anslutna enheter. Det hjälper skärmläsare att navigera i tabellerna på rätt sätt. (NPR-37139)
    * Stöd för att skärmläsare ska sluta navigera på arbetsytan i HTML tills en dialogruta är öppen har lagts till. (NPR-37134)
-   * Lagt till möjlighet att ange Reader-text på skärmen för hyperlänkar i Forms Designer.(NPR-36221)
+
+   <!-- 
+
+    * Added ability to specify Screen Reader Text for Hyperlinks in Forms Designer.(NPR-36221)
+  
+  -->
 
 Följande felkorrigeringar, viktiga funktioner och förbättringar introducerades i [!DNL Experience Manager] 6.5.13.0:
 
@@ -123,11 +128,19 @@ Följande felkorrigeringar, viktiga funktioner och förbättringar introducerade
 * När en användare lägger till HTML-taggar i kommentaravsnittet när ett arbetsflöde körs återges HTML-taggarna. (NPR-37591)
 * Om du importerar och publicerar ett brev som innehåller en ny XDP-fil kan bokstäverna inte förhandsgranskas i Publish-instansen. Om bokstäverna importeras och publiceras en andra gång med samma CMP-fil kommer bokstäverna att förhandsgranskas korrekt. (CQ-4343599)
 * Ett formulär med egenskapen Förbered dataprocess angiven kan inte återges i HTML Workspace. (CQ-4343294)
-* För statisk PDF forms som skapats med Forms 6.5 Designer misslyckas tillgängligheten för PDF med fel `Tab order entry in page with annotations not set to "S"`. (CQ-4343117)
+<!--
+For static PDF forms that are created with Forms 6.5 Designer, PDF accessibility fails with error `Tab order entry in page with annotations not set to "S"`. (CQ-4343117) 
+ -->
 * Det går inte att konvertera en bild till PDF med PDFG-tjänsten med OCR efter att korrigeringsfilen AEMForms-6.5.0-0038 (log4jv2.16) har tillämpats. (CQ-4342450)
-* Felaktigt värde visas för streckkoden SSCC-18. Forms-servrar utelämnar värdet till höger om streckkoden. (CQ-4342400)
+
+<!-- 
+* Incorrect value is displayed for barcode SSCC-18. Forms servers omit the value on the right part of the barcode. (CQ-4342400)
+-->
 * Det går inte att importera en Microsoft® Word-fil till Forms Designer. Fel vid användarstöttningar `Word (version XP or onwards) could not be found on the machine`. (CQ-4342146)
-* När du öppnar ett formulär som har skapats med Forms 6.1 Designer i Forms 6.5 Designer och redigerar en textruta överskrider styckeavståndet det angivna utrymmet. Alla tidigare inställningar för utrymmet tas bort och du måste formatera om textrutan manuellt. (CQ-4341899)
+
+<!-- 
+* In Forms 6.5 Designer, when you open a form created with Forms 6.1 Designer and edit a textbox, paragraph spacing exceeds the specified space. All previous settings to the space are removed and manual reformatting of the text box is required. (CQ-4341899) 
+-->
 * Användaren kan inte ange anpassad tid i schemaläggaren för jobbrensning. (CQ-4339192)
 * Användaren kan inte uppdatera någon konfiguration under användargränssnittet för slutpunktshantering och stöttningsfel ` Uncaught ReferenceError: updateEndpoint_required is not defined`. (CQ-4331523)
 * För ogiltiga taggar fungerar inte felmeddelandet korrekt. (NPR-38106 och CQ-4337173)
