@@ -6,9 +6,9 @@ topic-tags: deploying
 docset: aem65
 feature: Configuring
 exl-id: c1c90d6a-ee5a-487d-9a8a-741b407c8c06
-source-git-commit: 6257b56c61ae14889d9ecefed5030e123a415fd7
+source-git-commit: 4e68a8a8d84d0ffa1d28ab13c196731e58b4cf9a
 workflow-type: tm+mt
-source-wordcount: '3455'
+source-wordcount: '3447'
 ht-degree: 0%
 
 ---
@@ -207,8 +207,7 @@ Om du behöver uppgradera till en ny version av 1.10.x S3-kontakten (till exempe
 Du kan använda konfigurationsfilen med följande alternativ:
 
 * accessKey: Åtkomstnyckeln till AWS.
-* secretsKey: AWS hemliga åtkomstnyckel. **Obs!** Alternativt kan [IAM-roller](https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/java-dg-roles.html) kan användas för autentisering. Om du använder IAM-roller behöver du inte längre ange `accessKey` och `secretKey`.
-
+* secretsKey: AWS hemliga åtkomstnyckel. **Obs!** När `accessKey` eller `secretKey` har inte angetts [IAM-roll](https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/java-dg-roles.html) används för autentisering.
 * s3Bucket: Bucketnamnet.
 * s3Region: Bucketregionen.
 * sökväg: Datalagrets sökväg. Standardvärdet är **&lt;aem install=&quot;&quot; folder=&quot;&quot;>/databas/datastore**
