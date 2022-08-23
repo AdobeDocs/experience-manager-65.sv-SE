@@ -3,7 +3,7 @@ title: Anpassa CIF-kärnkomponenter
 description: Lär dig hur du anpassar AEM CIF Core Components. Självstudiekursen handlar om hur du på ett säkert sätt kan utöka en CIF Core-komponent för att uppfylla företagsspecifika krav. Lär dig hur du utökar en GraphQL-fråga för att returnera ett anpassat attribut och visa det nya attributet i en CIF Core-komponent.
 sub-product: Commerce
 topics: Development
-version: cloud-service
+version: Cloud Service
 doc-type: tutorial
 activity: develop
 audience: developer
@@ -11,7 +11,7 @@ feature: Commerce Integration Framework
 kt: 4279
 thumbnail: customize-aem-cif-core-component.jpg
 exl-id: 8933942e-be49-49d3-bf0a-7225257e2803
-source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
+source-git-commit: dceb187ba28ad7c377e98d29d6c815fe37e23077
 workflow-type: tm+mt
 source-wordcount: '2604'
 ht-degree: 0%
