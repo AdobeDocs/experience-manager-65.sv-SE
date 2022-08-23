@@ -1,11 +1,11 @@
 ---
 title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
-description: '"[!DNL Adobe Experience Manager] 6.5 som beskriver versionsinformation, nyheter, hur man installerar och detaljerade ändringslistor."'
+description: '"Hitta versionsinformation, nyheter, installationsguider och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5."'
 mini-toc-levels: 3
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: e51cf7a5b7d14bc4aed053496c7fe6685dd2b0b8
+source-git-commit: 3c3efe108b020d9c64e456d409f114c8969f2723
 workflow-type: tm+mt
-source-wordcount: '3629'
+source-wordcount: '3628'
 ht-degree: 0%
 
 ---
