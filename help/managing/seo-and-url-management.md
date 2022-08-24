@@ -7,10 +7,10 @@ topic-tags: managing
 content-type: reference
 docset: aem65
 exl-id: b138f6d1-0870-4071-b96e-4a759ad9a76e
-source-git-commit: 8cb016eefc2699ffb3dfa926a289123b96927055
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
 source-wordcount: '3802'
-ht-degree: 75%
+ht-degree: 74%
 
 ---
 
@@ -30,7 +30,7 @@ Det finns vissa allmänt vedertagna bästa metoder för URL:er.
 
 Ställ följande fråga när du utvärderar URL:er i ett AEM-projekt:
 
-”Skulle en användare kunna beskriva vad sidan är om han/hon bara kunde se URL:en och inget av sidans innehåll?”
+&quot;Om en användare skulle se den här URL:en och inget av innehållet på sidan, kunde de då beskriva vad sidan var?&quot;
 
 Om svaret är ja är det troligt att URL:en är lämplig för en sökmotor.
 
@@ -156,7 +156,7 @@ Med **Sling**-servletar kan du registrera en servlet på motsatt sätt. I ställ
 SCR-anteckningen för den här typen av servlet skulle se ut ungefär så här:
 
 ```
-@SlingServlet(resourceTypes = "myBrand/components/pages/myPageType", selectors = "myRenderer", extensions = "json”, methods=”GET”)
+@SlingServlet(resourceTypes = "myBrand/components/pages/myPageType", selectors = "myRenderer", extensions = "json", methods="GET")
 ```
 
 I det här fallet är den resurs som URL:en adresserar (en instans av resursen `myPageType`) automatiskt tillgänglig i servleten. För att få åtkomst till den ska du anropa:
@@ -320,7 +320,7 @@ Exempel:
 Båda skulle använda följande tagg i sidans sidhuvud:
 
 ```xml
-<link rel=”canonical” href=”my-brand/my-page.html”/>
+<link rel="canonical" href="my-brand/my-page.html"/>
 ```
 
 `href` kan vara relativt eller absolut. Koden bör inkluderas i sidmarkeringen för att fastställa sidans kanoniska URL och returnera den här taggen.

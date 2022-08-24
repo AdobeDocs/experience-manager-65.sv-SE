@@ -1,8 +1,8 @@
 ---
 title: Allmänna säkerhetsfrågor för AEM Forms i JEE
-seo-title: Allmänna säkerhetsfrågor för AEM Forms i JEE
+seo-title: General Security Considerations for AEM Forms on JEE
 description: Lär dig hur du förbereder dig för att härska din AEM Forms i JEE-miljö.
-seo-description: Lär dig hur du förbereder dig för att härska din AEM Forms i JEE-miljö.
+seo-description: Learn how to prepare for hardening your AEM Forms on JEE environment.
 uuid: 4d098731-fc8f-41d7-98b5-5c2e31211614
 content-type: reference
 topic-tags: Security
@@ -11,9 +11,9 @@ discoiquuid: 64bc6018-2828-4634-9275-48f1d411452b
 docset: aem65
 role: Admin
 exl-id: 3f150dd5-f486-4f16-9de9-035cde53b034
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
-source-wordcount: '1082'
+source-wordcount: '1062'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ Säkerhetsinformation om operativsystem som stöds av AEM Forms på JEE finns i 
  <tbody>
   <tr>
    <td><p>IBM® AIX® 7.2</p> </td>
-   <td><p><a href="https://www.ibm.com/support/knowledgecenter/ssw_aix_72/com.ibm.aix.security/security-kickoff.htm" target="_blank">IBM AIX Security Benefits</a></p> </td>
+   <td><p><a href="https://www.ibm.com/support/knowledgecenter/ssw_aix_72/com.ibm.aix.security/security-kickoff.htm" target="_blank">IBM AIX - säkerhetsfördelar</a></p> </td>
   </tr>
   <tr>
    <td><p>Microsoft Windows Server® 2016 </p> </td>
@@ -144,12 +144,12 @@ Säkerhetsinformation om databaser som stöds av AEM Forms på JEE finns i resur
   </tr>
   <tr>
    <td><p>Oracle® 12c</p> </td>
-   <td><p>Se kapitlet om säkerhet i <a href="https://docs.oracle.com/database/121/TDPSG/GUID-6E2F4E53-5D87-4FCD-9C9C-6792217D7014.htm#TDPSG94426" target="_blank">Oraclets 12g-dokumentation</a></p> </td>
+   <td><p>Se kapitlet Säkerhet i <a href="https://docs.oracle.com/database/121/TDPSG/GUID-6E2F4E53-5D87-4FCD-9C9C-6792217D7014.htm#TDPSG94426" target="_blank">Oraclets 12g-dokumentation</a></p> </td>
   </tr>
  </tbody>
 </table>
 
-I den här tabellen beskrivs de standardportar som krävs för att vara öppna under konfigurationsprocessen för AEM Forms on JEE. Om du ansluter via https kan du justera portinformationen och IP-adresserna därefter. Mer information om hur du konfigurerar portar finns i dokumentet *Installera och distribuera AEM Forms på JEE* för programservern.
+I den här tabellen beskrivs de standardportar som krävs för att vara öppna under konfigurationsprocessen för AEM Forms on JEE. Om du ansluter via https kan du justera portinformationen och IP-adresserna därefter. Mer information om hur du konfigurerar portar finns i *Installera och distribuera AEM Forms på JEE* -dokument för programservern.
 
 <table>
  <thead>
@@ -216,9 +216,9 @@ JBoss Application Server använder 8080 som standard-HTTP-port. JBoss har även 
 
    Klusterinstallationer: [JBoss-rot]/domain/configuration/domain.xml
 
-1. Ändra värdet för **port**-attributet i taggen **&lt;socket-binding>** till ett anpassat portnummer. I följande exempel används port 8090:
+1. Ändra värdet för **port** i **&lt;socket-binding>** -taggen till ett anpassat portnummer. I följande exempel används port 8090:
 
-   &lt;socket-binding name=&quot;http&quot; port=&quot;8090&quot; />
+   &lt;socket-binding name=&quot;http&quot; port=&quot;8090&quot;/>
 
 1. Spara och stäng filen.
 1. Starta om JBoss-programservern.
@@ -239,7 +239,7 @@ AEM Forms on JEE använder AEM Forms on JEE-databasen för att lagra känslig do
 
 Programservern som används för att köra AEM Forms på JEE kräver en egen konfiguration för åtkomst till databasen via en datakälla som är konfigurerad på programservern. Se till att programservern inte visar databaslösenordet i klartext i sin datakällkonfigurationsfil.
 
-Filen lc_[database].xml får inte innehålla lösenord i klartextformat. Kontakta programserverleverantören om hur du krypterar dessa lösenord för programservern.
+The lc_[databas]XML-filen får inte innehålla lösenord i klartextformat. Kontakta programserverleverantören om hur du krypterar dessa lösenord för programservern.
 
 >[!NOTE]
 >

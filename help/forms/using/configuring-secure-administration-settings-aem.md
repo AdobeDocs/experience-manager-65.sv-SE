@@ -1,8 +1,8 @@
 ---
 title: Konfigurera inställningar för säker administration för AEM Forms på JEE
-seo-title: Konfigurera inställningar för säker administration för AEM Forms på JEE
+seo-title: Configuring Secure Administration Settings for AEM Forms on JEE
 description: Lär dig hur du administrerar användarkonton och tjänster som, trots att de krävs i en privat utvecklingsmiljö, inte krävs i en produktionsmiljö i AEM Forms på JEE.
-seo-description: Lär dig hur du administrerar användarkonton och tjänster som, trots att de krävs i en privat utvecklingsmiljö, inte krävs i en produktionsmiljö i AEM Forms på JEE.
+seo-description: Learn how to administer user accounts and services that, although required in a private development environment, are not required in a production environment of AEM Forms on JEE.
 uuid: 04e45d06-f57d-406c-8228-15f483199430
 content-type: reference
 topic-tags: Security
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: d211d8b0-e75f-49c3-808d-5d0e26ad3a6b
 role: Admin
 exl-id: 40bc01b4-a59e-4420-81d6-2887857bddce
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
-source-wordcount: '884'
+source-wordcount: '847'
 ht-degree: 0%
 
 ---
@@ -41,13 +41,13 @@ Gör så här med webbsidan Program och tjänster i administrationskonsolen:
             https://[host name]:'port'/adminui
    ```
 
-1. Klicka på **Tjänster > Program och tjänster > Inställningar**.
+1. Klicka **Tjänster > Program och tjänster > Inställningar**.
 1. Ställ in inställningarna så att upp till 200 tjänster och slutpunkter visas på samma sida.
-1. Klicka på **Tjänster** > **Program och tjänster** > **Endpoint Management**.
-1. Välj **EJB** i listan **Provider** och klicka sedan på **Filter**.
+1. Klicka **Tjänster** > **Program och tjänster** > **Hantering av slutpunkter**.
+1. Välj **EJB** från **Provider** lista och klicka sedan på **Filter**.
 1. Om du vill inaktivera alla EJB-slutpunkter markerar du kryssrutan bredvid var och en av dem i listan och klickar på **Inaktivera**.
-1. Klicka på **Nästa** och upprepa föregående steg för alla EJB-slutpunkter. Kontrollera att EJB finns med i leverantörskolumnen innan du inaktiverar slutpunkterna.
-1. Välj **SOAP** i listan **Provider** och klicka sedan på **Filter**.
+1. Klicka **Nästa** och upprepa föregående steg för alla EJB-slutpunkter. Kontrollera att EJB finns med i leverantörskolumnen innan du inaktiverar slutpunkterna.
+1. Välj **SOAP** från **Provider** lista och klicka sedan på **Filter**.
 1. Om du vill ta bort SOAP-slutpunkter markerar du kryssrutan bredvid var och en av dem i listan och klickar på **Ta bort**. Ta inte bort följande slutpunkter:
 
    * AuthenticationManagerService
@@ -64,7 +64,7 @@ Gör så här med webbsidan Program och tjänster i administrationskonsolen:
    * WorkspaceSingleSignOn
    * ApplicationManager
 
-1. Klicka på **Nästa** och upprepa föregående steg för SOAP-slutpunkter som inte finns i ovanstående lista. Kontrollera att SOAP finns med i leverantörskolumnen innan du tar bort slutpunkterna.
+1. Klicka **Nästa** och upprepa föregående steg för SOAP-slutpunkter som inte finns i ovanstående lista. Kontrollera att SOAP finns med i leverantörskolumnen innan du tar bort slutpunkterna.
 
 ## Inaktiverar onödvändig anonym åtkomst till tjänster {#disabling-non-essential-anonymous-access-to-services}
 
@@ -76,9 +76,9 @@ Vissa formulärservertjänster tillåter oautentiserade (anonyma) anrop för vis
             https://[host name]:'port'/adminui
    ```
 
-1. Klicka på **Tjänster > Program och tjänster > Tjänsthantering**.
+1. Klicka **Tjänster > Program och tjänster > Tjänsthantering**.
 1. Klicka på namnet på den tjänst som du vill inaktivera (till exempel AuthenticationManagerService).
-1. Klicka på fliken **Säkerhet**, avmarkera **Anonym åtkomst tillåten** och klicka på **Spara**.
+1. Klicka på **Fliken Säkerhet**, avmarkera **Anonym åtkomst tillåten** och klicka **Spara**.
 1. Slutför steg 3 och 4 för följande tjänster:
 
    * AuthenticationManagerService
@@ -119,13 +119,13 @@ Slutanvändare kan autentisera till AEM Forms via Workbench, AEM Forms webbprogr
             https://[host name]:'port'/adminui
    ```
 
-1. Klicka på **Inställningar > Användarhantering > Konfiguration > Importera och exportera konfigurationsfiler**.
-1. Klicka på **Exportera** om du vill skapa en config.xml-fil med de befintliga AEM Forms-inställningarna.
+1. Klicka **Inställningar > Användarhantering > Konfiguration > Importera och exportera konfigurationsfiler**.
+1. Klicka **Exportera** för att skapa en config.xml-fil med de befintliga AEM Forms-inställningarna.
 1. Öppna XML-filen i en redigerare och leta reda på följande post:
 
-   `<entry key=”assertionValidityInMinutes” value=”120”/>`
+   `<entry key="assertionValidityInMinutes" value="120"/>`
 
 1. Ändra värdet till ett tal som är större än 5 (i minuter) och spara filen.
 1. Gå till sidan Importera och exportera konfigurationsfiler i administrationskonsolen.
 1. Ange sökvägen till den ändrade filen config.xml eller klicka på Bläddra för att navigera till den.
-1. Klicka på **Importera** för att överföra den ändrade config.xml-filen och klicka sedan på **OK**.
+1. Klicka **Importera** för att ladda upp den ändrade filen config.xml och sedan klicka på **OK**.

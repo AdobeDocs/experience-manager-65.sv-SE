@@ -1,22 +1,21 @@
 ---
 title: Texter i interaktiv kommunikation
-seo-title: Text i interaktiv kommunikation
+seo-title: Text in Interactive Communications
 description: 'Att skapa och redigera textdokumentfragment som ska användas i interaktiv kommunikation - text är en av de fyra typer av dokumentfragment som används för att skapa interaktiv kommunikation. De andra tre är villkor, listor och layoutfragment.  '
-seo-description: Skapa och redigera textdokumentfragment som ska användas i interaktiv kommunikation
+seo-description: Creating and editing text document fragments to be used in Interactive Communications
 uuid: fdac3dd8-c6d0-418e-b969-fc791b7bd509
 topic-tags: interactive-communications
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: f04050f8-42de-4ef0-b6ed-145d59bbffce
 docset: aem65
 feature: Interactive Communication
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: b8e84c5d-2ec8-4575-9eed-6b37b04e5d66
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
-source-wordcount: '2441'
+source-wordcount: '2423'
 ht-degree: 0%
 
 ---
-
 
 # Texter i interaktiv kommunikation{#texts-in-interactive-communications}
 
@@ -41,7 +40,7 @@ Textdokumentavsnittet i Interaktiv kommunikation har stöd för följande typer 
    * **[!UICONTROL Name]**: Det unika namnet på texten, i en mapp. Det får inte finnas två dokumentfragment (text, villkor eller lista) i något läge med samma namn i en mapp. I fältet Namn kan du bara ange engelska tecken, siffror och bindestreck. Fältet Namn fylls i automatiskt baserat på fältet Titel. De specialtecken, blanksteg, siffror och icke-engelska tecken som anges i fältet Titel ersätts med bindestreck i fältet Namn. Även om värdet i fältet Titel automatiskt kopieras till namnet kan du redigera värdet.
 
    * **[!UICONTROL Description]**: Skriv en beskrivning av texten.
-   * **[!UICONTROL Form Data Model]**: Du kan också välja alternativknappen Formulärdatamodell om du vill skapa texten baserat på en formulärdatamodell. När du väljer alternativknappen Formulärdatamodell visas **[!UICONTROL Form Data Model]**-fältet. Bläddra och välj en formulärdatamodell. När du skapar text och villkor för en interaktiv kommunikation måste du se till att du använder samma datamodell som du tänker använda i den interaktiva kommunikationen. Mer information om formulärdatamodell finns i [Dataintegrering](/help/forms/using/data-integration.md).
+   * **[!UICONTROL Form Data Model]**: Du kan också välja alternativknappen Formulärdatamodell om du vill skapa texten baserat på en formulärdatamodell. När du väljer alternativknappen Formulärdatamodell **[!UICONTROL Form Data Model]** visas. Bläddra och välj en formulärdatamodell. När du skapar text och villkor för en interaktiv kommunikation måste du se till att du använder samma datamodell som du tänker använda i den interaktiva kommunikationen. Mer information om formulärdatamodell finns i [Dataintegrering](/help/forms/using/data-integration.md).
 
    * **[!UICONTROL Tags]**: Om du vill skapa en egen tagg anger du ett värde i textfältet och trycker på Retur. När du sparar den här texten skapas de nya taggarna.
 
@@ -66,7 +65,7 @@ Textdokumentavsnittet i Interaktiv kommunikation har stöd för följande typer 
 
    >[!NOTE]
    >
-   >Du kan lägga till element i formulärdatamodellen, element i dataordlistan och variabler med symbolen @ i textredigeraren. När du anger en sträng som föregås av @ i textredigeraren genomsöks alla datamodellselement, datamordlisteelement och variabler, och element eller variabler som innehåller den sökda strängen visas. Du kan navigera bland sökresultaten och välja ett element eller en variabel. Om det inte finns något matchande resultat visas meddelandet *Inga matchande resultat*.
+   >Du kan lägga till element i formulärdatamodellen, element i dataordlistan och variabler med symbolen @ i textredigeraren. När du anger en sträng som föregås av @ i textredigeraren genomsöks alla datamodellselement, datamordlisteelement och variabler, och element eller variabler som innehåller den sökda strängen visas. Du kan navigera bland sökresultaten och välja ett element eller en variabel. Om det inte finns något matchande resultat *Inga matchande resultat hittades* meddelandet visas.
 
 1. Tryck på **[!UICONTROL Save]**.
 
@@ -80,21 +79,21 @@ Du kan redigera ett befintligt textdokumentfragment genom att följa stegen neda
 1. Navigera till ett textdokumentfragment och markera det.
 1. Tryck på **[!UICONTROL Edit]**.
 1. Gör de ändringar som krävs. Mer information om alternativ i text finns i [Skapa text](#createtext).
-1. Tryck på **[!UICONTROL Save]** och sedan på **[!UICONTROL Close]**.
+1. Tryck **[!UICONTROL Save]** och sedan trycka **[!UICONTROL Close]**.
 
-## Anpassa ett textdokumentfragment med hjälp av formulärdatamodellens egenskaper {#formdatamodel}
+## Anpassa ett textdokumentfragment med hjälp av egenskaper för formulärdatamodell {#formdatamodel}
 
-Du kan anpassa textdokumentfragment genom att infoga egenskaper för formulärdatamodellen. Genom att infoga egenskaper för formulärdatamodellen i text kan du hämta och fylla i mottagarspecifika data från den associerade datakällan samtidigt som du förhandsgranskar en interaktiv kommunikation. Mer information om formulärdatamodell finns i [AEM Forms Data Integration](/help/forms/using/data-integration.md).
+Du kan anpassa textdokumentfragment genom att infoga egenskaper för formulärdatamodellen. Genom att infoga egenskaper för formulärdatamodellen i text kan du hämta och fylla i mottagarspecifika data från den associerade datakällan samtidigt som du förhandsgranskar en interaktiv kommunikation. Mer information om formulärdatamodell finns i [AEM Forms dataintegrering](/help/forms/using/data-integration.md).
 
 Om du har angett en formulärdatamodell när du skapar en text visas egenskaperna i formulärdatamodellen i den vänstra rutan i textredigeraren. Den angivna formulärdatamodellen ska vara densamma för textdokumentfragmentet och den interaktiva kommunikation som innehåller det.
 
 ![insertfdmelementtext](assets/insertfdmelementtext.png)
 
-* Om du vill infoga en formulärdatamodellegenskap i text placerar du markören där du vill infoga egenskapen, markerar sedan egenskapen **[A]** i den vänstra rutan genom att trycka på den och trycker sedan på **[!UICONTROL [B] Add Selected]**. Du kan också bara dubbeltrycka på egenskapen för att infoga den vid markörpositionen **[C]**. Egenskaper för formulärdatamodellen markeras med en bakgrundsfärg i webbläsaren.
+* Om du vill infoga en formulärdatamodellsegenskap i text placerar du markören där du vill infoga egenskapen och markerar sedan **[A]** egenskapen i den vänstra rutan genom att trycka på den och trycka på **[!UICONTROL [B] Add Selected]**. Du kan också bara dubbeltrycka på egenskapen för att infoga den på **[C]** markörposition. Egenskaper för formulärdatamodellen markeras med en bakgrundsfärg i webbläsaren.
 
 Du kan också söka efter och lägga till en formulärdatamodellsegenskap med symbolen @ i textredigeraren. Placera markören där du vill infoga egenskapen. Skriv @ följt av söksträngen. Sökåtgärden utförs på alla formulärdatamodegenskaper och variabler som är tillgängliga i dokumentfragmentet. Egenskaperna eller variablerna som innehåller söksträngen hämtas och visas som en nedrullningsbar lista. Navigera genom sökresultaten och klicka på den egenskap som du vill infoga vid markörens plats. Tryck på Esc för att dölja sökresultaten.
 
-* Om du vill att agenterna ska kunna redigera en formulärdatamodellegenskaps värde i agentens användargränssnitt medan [Förbered och skicka interaktiv kommunikation](/help/forms/using/prepare-send-interactive-communication.md) med agentanvändargränssnittet, trycker du på låsikonen **[D]** för den egenskapen och ser till att den är i olåst läge. Egenskapens standardläge är låst och en agent kan inte redigera egenskapen i agentens användargränssnitt.
+* Så här kan agenterna redigera en formulärdatamodellegenskaps värde i agentens användargränssnitt medan [Förbered och skicka interaktiv kommunikation](/help/forms/using/prepare-send-interactive-communication.md) med hjälp av agentgränssnittet trycker du på **[D]** låsikon för den egenskapen och kontrollera att den är i olåst läge. Egenskapens standardläge är låst och en agent kan inte redigera egenskapen i agentens användargränssnitt.
 
 Du kan också använda egenskaper för formulärdatamodell för att konstruera regler för att visa eller dölja delar av innehåll. Mer information finns i [Skapa regler i text](#rules).
 
@@ -108,11 +107,11 @@ Du kan använda variabler i stället för formulärdatamodellsegenskaper när:
 * Textdokumentfragmentet har ingen formulärdatamodell när det skapas. Du kan infoga variabler och senare binda dem till egenskaperna för formulärdatamodellen när du skapar den interaktiva kommunikationen.
 * Du måste binda och hämta text från ett textdokumentfragment. Endast de textdokumentfragment som kan bindas till variabler ska inte ha några variabler inuti.
 
-När du skapar eller redigerar ett textdokumentfragment kan du skapa och infoga variabler. Variablerna som du skapar visas på fliken Data i agentens användargränssnitt. Agenten anger värdena för variablerna medan [Förbered och skicka interaktiv kommunikation med agentens användargränssnitt](/help/forms/using/prepare-send-interactive-communication.md).
+När du skapar eller redigerar ett textdokumentfragment kan du skapa och infoga variabler. Variablerna som du skapar visas på fliken Data i agentens användargränssnitt. Agenten anger värdena för variablerna medan [Förbereda och skicka interaktiv kommunikation med agentens användargränssnitt](/help/forms/using/prepare-send-interactive-communication.md).
 
 ### Skapa variabler {#createvariables}
 
-1. Tryck på **[!UICONTROL Variables]** i den vänstra rutan.
+1. Tryck på i den vänstra rutan **[!UICONTROL Variables]**.
 
    Rutan Variabler visas.
 
@@ -127,7 +126,7 @@ När du skapar eller redigerar ett textdokumentfragment kan du skapa och infoga 
    * **[!UICONTROL Name]** : Variabelns namn.
    * **[!UICONTROL Description]** : Du kan också ange en beskrivning av variabeln.
    * **[!UICONTROL Type]** : Välj en typ av variabel: Sträng, Nummer, Boolean eller Datum.
-   * **[!UICONTROL Allow Specific Values Only]** : För String- och Number-variabler kan du se till att agenten väljer från en viss uppsättning värden för en platshållare i agentens användargränssnitt. Om du vill ange värdeuppsättningen väljer du det här alternativet och anger sedan kommaavgränsade värden som tillåts i fältet **[!UICONTROL Values]**.
+   * **[!UICONTROL Allow Specific Values Only]** : För String- och Number-variabler kan du se till att agenten väljer från en viss uppsättning värden för en platshållare i agentens användargränssnitt. Om du vill ange värdeuppsättningen markerar du det här alternativet och anger sedan kommaavgränsade värden som är tillåtna i **[!UICONTROL Values]** fält.
 
 1. Tryck på **[!UICONTROL Create]**.
 
@@ -143,9 +142,9 @@ När du skapar eller redigerar ett textdokumentfragment kan du skapa och infoga 
 
 1. Tryck på **[!UICONTROL Save]**.
 
-## Skapa regler i texten {#rules}
+## Skapa regler i text {#rules}
 
-Med hjälp av regelredigeraren i en text kan du skapa regler för att visa eller dölja strängar med text eller innehållsdelar baserat på **förinställda villkor**. Dessa villkor kan utformas utifrån:
+Med hjälp av regelredigeraren i en text kan du skapa regler som visar eller döljer textsträngar eller innehållsdelar baserat på **förinställda villkor**. Dessa villkor kan utformas utifrån:
 
 * Strängar
 * Nummer
@@ -154,7 +153,7 @@ Med hjälp av regelredigeraren i en text kan du skapa regler för att visa eller
 * Egenskaper för associerad formulärdatamodell
 * Alla variabler som du kan ha skapat i texten
 
-### Skapa regler i texten {#create-rules-in-text}
+### Skapa regler i text {#create-rules-in-text}
 
 1. När du skapar eller redigerar en text markerar du den textsträng, det stycke eller det innehåll som du vill göra villkorsstyrd med hjälp av regeln.
 
@@ -169,7 +168,7 @@ Med hjälp av regelredigeraren i en text kan du skapa regler för att visa eller
 
    Välj lämpligt alternativ som ska utvärderas.
 
-   ![](assets/ruleeditor.png) ![ruleeditorruleeditorfdm](assets/ruleeditorfdm.png)
+   ![linjalredigerare](assets/ruleeditor.png) ![ruleeditorfdm](assets/ruleeditorfdm.png)
 
    >[!NOTE]
    >
@@ -223,9 +222,9 @@ Markera texten och tryck på Markeringsfärg om du vill framhäva delar av text 
 
 ![textbakgrundsgrundfärgtillämpad-1](assets/textbackgroundcolorapplied-1.png)
 
-Du kan antingen trycka direkt på en grundfärg `**[A]**` som finns på paletten Grundfärger eller trycka på **Välj** efter att du har använt reglaget `**[B]**` för att välja rätt färgton.
+Du kan antingen trycka direkt på en grundfärg `**[A]**` finns på paletten Grundläggande färger eller trycker **Välj** efter användning av skjutreglaget `**[B]**` för att välja lämplig ton för färgen.
 
-Du kan också gå till fliken Avancerat och välja lämplig nyans, ljushet och mättnad `**[C]**` för att skapa den exakta färgen och sedan trycka på Välj `**[D]**` för att använda färgen för att markera texten.
+Du kan också gå till fliken Avancerat och välja lämplig nyans, ljushet och mättnad `**[C]**` för att skapa en exakt färg och sedan trycka på Välj `**[D]**` om du vill använda färgen för att markera texten.
 
 ![textbakgrundsfärg-2](assets/textbackgroundcolor-2.png)
 
@@ -237,7 +236,7 @@ Du kan kopiera och klistra in ett eller flera textstycken i ett redigerbart text
 
 ![pastetextmsword-2](assets/pastetextmsword-2.png)
 
-Du kan kopiera och klistra in texten direkt från Microsoft® Word-dokumentet i ett redigerbart textdokumentfragment. Formateringen som punktlistor, teckensnitt och textfärger behålls i textdokumentfragmentet.
+Du kan kopiera och klistra in text direkt från Microsoft® Word-dokumentet i ett redigerbart textdokumentfragment. Formateringen som punktlistor, teckensnitt och textfärger behålls i textdokumentfragmentet.
 
 ![pastetexteditablemodul-1](assets/pastetexteditablemodule-1.png)
 
@@ -245,17 +244,17 @@ Du kan kopiera och klistra in texten direkt från Microsoft® Word-dokumentet i 
 >
 >Formateringen av inklistrad text har dock vissa [begränsningar](https://helpx.adobe.com/aem-forms/kb/cm-copy-paste-text-limitations.html).
 
-## Infoga specialtecken i texten {#special}
+## Infoga specialtecken i text {#special}
 
 Infoga vid behov specialtecken i dokumentfragmentet. Du kan till exempel använda paletten Specialtecken för att infoga:
 
 * Valutasymboler som €,¥ och £
 * Matematiska symboler som t.ex.¥, Ð och ^
-* Interpunktionssymboler som ‟ och&quot;
+* Interpunktionssymboler som ‟ och &quot;
 
 ![specialtecken-2](assets/specialcharacters-2.png)
 
-Textredigeraren har inbyggt stöd för 210 specialtecken. Administratören kan [lägga till stöd för fler/anpassade specialtecken genom anpassning](/help/forms/using/custom-special-characters.md).
+Textredigeraren har inbyggt stöd för 210 specialtecken. Administratören kan [lägg till stöd för fler/anpassade specialtecken genom anpassning](/help/forms/using/custom-special-characters.md).
 
 ## Söka och ersätta text {#searching}
 
@@ -263,17 +262,16 @@ När du arbetar med textdokumentfragment som innehåller en stor mängd text må
 
 Med funktionen Sök och ersätt kan du söka efter (och ersätta) valfri textsträng i ett textdokumentfragment. Funktionen innehåller även en kraftfull sökning efter reguljära uttryck.
 
-1. Öppna ett textdokumentfragment för [redigering](#edittext).
+1. Öppna ett textdokumentfragment för [redigera](#edittext).
 1. Tryck på **[!UICONTROL Find & Replace]**.
 
-1. Ange texten som ska sökas i textrutan **[!UICONTROL Find]** och den nya texten (ersättningstext) i textrutan **[!UICONTROL Replace]** och tryck på **[!UICONTROL Replace]**.
+1. Ange texten som ska sökas i **[!UICONTROL Find]** textruta och ny text (ersättningstext) i **[!UICONTROL Replace]** textruta och tryck **[!UICONTROL Replace]**.
 
 1. Om den sökta texten hittas ersätts texten med ersättningstexten.
 
-   * Om en annan förekomst av söktexten hittas markeras den förekomsten i textdokumentfragmentet. Om du trycker på **[!UICONTROL Replace]** igen ersätts den markerade instansen och markören flyttas framåt, om en tredje instans hittas.
+   * Om en annan förekomst av söktexten hittas markeras den förekomsten i textdokumentfragmentet. Om du trycker **[!UICONTROL Replace]** igen ersätts den markerade instansen och markören flyttas framåt om en tredje instans hittas.
    * Om det inte går att hitta någon annan instans visas ett meddelande i dialogrutan Sök och ersätt: Slutet av modulen har nåtts.
 
    Du kan också trycka på Ersätt alla om du vill ersätta alla matchningar på en gång.
 
-   Sök och ersätt innehåller även en kraftfull sökning efter reguljära uttryck. Om du vill använda regex i sökningen väljer du **[!UICONTROL Reg ex]** och trycker sedan på **[!UICONTROL Find]** eller **[!UICONTROL Replace]**.
-
+   Sök och ersätt innehåller även en kraftfull sökning efter reguljära uttryck. Om du vill använda regex i sökningen väljer du **[!UICONTROL Reg ex]** och sedan trycka **[!UICONTROL Find]** eller **[!UICONTROL Replace]**.

@@ -1,25 +1,24 @@
 ---
 title: Dokumentfragment
-seo-title: Dokumentfragment
+seo-title: Document Fragments
 description: Med dokumentfragment som text, listor, villkor och layoutfragment i Correspondence Management kan du skapa statiska, dynamiska och repeterbara komponenter i kundens korrespondens.
-seo-description: Med dokumentfragment som text, listor, villkor och layoutfragment i Correspondence Management kan du skapa statiska, dynamiska och repeterbara komponenter i kundens korrespondens.
+seo-description: Document Fragments, such as Text, lists, conditions, and layout fragments, in Correspondence Management let you form the static, dynamic, and repeatable components of customer correspondence.
 uuid: 053a17e5-69a5-463d-af4f-46a86534158f
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
 discoiquuid: 1f48548c-4222-454d-ad16-53da37170de2
 feature: Correspondence Management
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: ff3a4cba-a1a6-4fc9-8466-da7f28a74fb5
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
-source-wordcount: '268'
+source-wordcount: '239'
 ht-degree: 0%
 
 ---
 
-
 # Dokumentfragment {#document-fragments}
 
-Dokumentfragment är återanvändbara delar/komponenter av en korrespondens som du kan använda för att skapa interaktiv kommunikation/brev. Dokumentfragmenten är av följande typer:
+Dokumentfragment är återanvändbara delar/komponenter i en korrespondens som du kan använda för att skapa interaktiv kommunikation/brev. Dokumentfragmenten är av följande typer:
 
 * **Text**: En textresurs är en del av innehållet som består av ett eller flera textstycken. Ett stycke kan vara statiskt eller dynamiskt.
 
@@ -29,6 +28,5 @@ Dokumentfragment är återanvändbara delar/komponenter av en korrespondens som 
 
    * [Villkor i interaktiv kommunikation](/help/forms/using/conditions-interactive-communications.md)
 
-* **List:** List är en grupp dokumentfragment, inklusive text, listor, villkor och bilder. Ordningen på listelementen kan vara fast eller redigerbar. När du skapar en bokstav kan du använda några eller alla listelement för att återanvända ett mönster med element.
+* **Lista:** List är en grupp dokumentfragment, inklusive text, listor, villkor och bilder. Ordningen på listelementen kan vara fast eller redigerbar. När du skapar en bokstav kan du använda några eller alla listelement för att återanvända ett mönster med element.
 * **Layoutfragment**: Ett layoutfragment är en layout som kan användas i en eller flera bokstäver. Ett layoutfragment används för att skapa repeterbara mönster, särskilt dynamiska tabeller. Layouten kan innehålla typiska formulärfält som &quot;Adress&quot; och &quot;Referensnummer&quot;. Den innehåller också tomma delformulär som anger målområden. Layouterna (XDP) skapas i Designer och överförs sedan till AEM Forms.
-

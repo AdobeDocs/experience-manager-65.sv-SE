@@ -1,22 +1,21 @@
 ---
 title: Säkerhetskopierings- och återställningsstrategi för AEM formulär
-seo-title: Säkerhetskopierings- och återställningsstrategi för AEM formulär
+seo-title: Backup and recovery strategy for AEM forms
 description: Lär dig hur du implementerar en strategi för att säkerhetskopiera data och se till att de är synkroniserade med AEM formulärdata.
-seo-description: Lär dig hur du implementerar en strategi för att säkerhetskopiera data och se till att de är synkroniserade med AEM formulärdata.
+seo-description: Learn how to implement a strategy to back up data and ensuring that it remains in sync with the AEM forms data.
 uuid: 98fc3115-76e5-4e58-aa30-3601866a441f
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: f192a8a3-1116-4d32-9b57-b53d532c0dbf
-translation-type: tm+mt
-source-git-commit: b703c59d7d913fc890c713c6e49e7d89211fd998
+exl-id: 01ec6ebc-6d80-4417-9604-c8571aebb57e
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
-source-wordcount: '1520'
+source-wordcount: '1491'
 ht-degree: 0%
 
 ---
-
 
 # Säkerhetskopierings- och återställningsstrategi för AEM formulär{#backup-and-recovery-strategy-for-aem-forms}
 
@@ -30,13 +29,13 @@ När du har identifierat hur AEM formulär ska användas, bestämmer du vilka fi
 
 Adobe Experience Manager (AEM) är en integrerad del av AEM formulär. Därför måste du även säkerhetskopiera AEM och synkronisera med säkerhetskopiering AEM formulär som Correspondence Management-lösning och -tjänster, t.ex. formulärhanterare, baserat på data som lagras i AEM del av AEM formulär. För att förhindra dataförlust måste AEM formulärspecifika data säkerhetskopieras på ett sätt som säkerställer att GDS och AEM (databasen) korrelerar med databasreferenser. Databasen, GDS, AEM och Content Storage Root-katalogerna måste återställas till en dator med samma DNS namnet som original.
 
-## Typer av säkerhetskopiering {#types-of-backups}
+## Olika typer av säkerhetskopiering {#types-of-backups}
 
 AEM strategi för säkerhetskopiering av formulär omfattar två typer av säkerhetskopiering:
 
-**Systemavbildning:** En fullständig säkerhetskopia av systemet som du kan använda för att återställa datorns innehåll om hårddisken eller hela datorn slutar fungera. Säkerhetskopiering av systemavbildning krävs endast innan AEM distribueras. Interna regler styr sedan hur ofta säkerhetskopiering av systemavbildningar krävs.
+**Systemavbildning:** En fullständig säkerhetskopia av systemet som du kan använda för att återställa datorns innehåll om hårddisken eller hela datorn slutar att fungera. Säkerhetskopiering av systemavbildning krävs endast innan AEM distribueras. Interna regler styr sedan hur ofta säkerhetskopiering av systemavbildningar krävs.
 
-**AEM formulärspecifika data:** Programdata finns i databasen, GDS (Global Document Storage) och AEM och måste säkerhetskopieras i realtid. GDS är en katalog som används för att lagra långlivade filer som används i en process. Dessa filer kan innehålla PDF-filer, profiler eller formulärmallar.
+**AEM blanketterar specifika data:** Programdata finns i databasen, GDS (Global Document Storage) och AEM och måste säkerhetskopieras i realtid. GDS är en katalog som används för att lagra långlivade filer som används i en process. Dessa filer kan innehålla PDF, profiler eller formulärmallar.
 
 >[!NOTE]
 >
@@ -44,17 +43,17 @@ AEM strategi för säkerhetskopiering av formulär omfattar två typer av säker
 
 Databasen används för att lagra formulärartefakter, tjänstkonfigurationer, processtillstånd och databasreferenser till GDS-filer. Om du har aktiverat dokumentlagring i databasen lagras beständiga data och dokument i GDS också i databasen. Databasen kan säkerhetskopieras och återställas på följande sätt:
 
-* **Snapshot** backupmode indikerar att systemet för AEM formulär är i säkerhetskopieringsläge antingen oändligt eller under ett visst antal minuter, varefter säkerhetskopieringsläget inte längre är aktiverat. Om du vill gå in i eller lämna läget för säkerhetskopiering av ögonblicksbilder kan du använda något av följande alternativ. Efter ett återställningsscenario bör läget för ögonblicksbildssäkerhetskopiering inte aktiveras.
+* **Säkerhetskopiering av ögonblicksbild** I det här läget anges att systemet för AEM formulär är i säkerhetskopieringsläge antingen oändligt eller under ett visst antal minuter. Därefter är säkerhetskopieringsläget inte längre aktiverat. Om du vill gå in i eller lämna läget för säkerhetskopiering av ögonblicksbilder kan du använda något av följande alternativ. Efter ett återställningsscenario bör läget för ögonblicksbildssäkerhetskopiering inte aktiveras.
 
    * Använd sidan Inställningar för säkerhetskopiering i administrationskonsolen. Markera kryssrutan Använd i säkert säkerhetskopieringsläge om du vill aktivera ögonblicksbildläge. Avmarkera kryssrutan för att avsluta läget för ögonblicksbild.
-   * Använd skriptet LCBackupMode (se [Säkerhetskopiera katalogerna database, GDS och Content Storage Root](/help/forms/using/admin-help/backing-aem-forms-data.md#back-up-the-database-gds-aem-repository-and-content-storage-root-directories)). Om du vill avsluta läget för säkerhetskopiering av ögonblicksbilder anger du `continuousCoverage`-parametern till `false` i skriptargumentet eller använder alternativet `leaveContinuousCoverage`.
+   * Använd skriptet LCBackupMode (se [Säkerhetskopiera katalogerna database, GDS och Content Storage Root](/help/forms/using/admin-help/backing-aem-forms-data.md#back-up-the-database-gds-aem-repository-and-content-storage-root-directories)). Om du vill avsluta läget för säkerhetskopiering av ögonblicksbilder anger du i skriptargumentet `continuousCoverage` parameter till `false` eller använder `leaveContinuousCoverage` alternativ.
    * Använd det angivna API:t för säkerhetskopiering/återställning. <!-- Fix broken link(see AEM forms API Reference section on AEM Forms Help and Tutorials page).-->
 
-* **Det rullande** säkerhetskopieringsläget anger att systemet alltid är i säkerhetskopieringsläge, med en ny session i säkerhetskopieringsläge initierad så snart som föregående session släpps. Ingen timeout är associerad med rullande säkerhetskopieringsläge. När skriptet eller API:erna för LCBackupMode anropas för att lämna det rullande säkerhetskopieringsläget påbörjas en ny session för rullande säkerhetskopieringsläge. Det här läget är användbart när du vill ha stöd för kontinuerlig säkerhetskopiering men ändå vill att gamla och obehövliga dokument ska rensas bort från GDS-katalogen. Läget för rullande säkerhetskopiering stöds inte via sidan Säkerhetskopiering och återställning. Efter ett återställningsscenario är läget för rullande säkerhetskopiering fortfarande aktiverat. Du kan lämna läget för kontinuerlig säkerhetskopiering (rullande säkerhetskopieringsläge) genom att använda skriptet LCBackupMode med alternativet `leaveContinuousCoverage`.
+* **Rullande säkerhetskopiering** -läget anger att systemet alltid är i säkerhetskopieringsläge, med en ny session för säkerhetskopieringsläge initierad så snart som föregående session släpps. Ingen timeout är associerad med rullande säkerhetskopieringsläge. När skriptet eller API:erna för LCBackupMode anropas för att lämna det rullande säkerhetskopieringsläget påbörjas en ny session för rullande säkerhetskopieringsläge. Det här läget är användbart när du vill ha stöd för kontinuerlig säkerhetskopiering men ändå vill att gamla och obehövliga dokument ska rensas bort från GDS-katalogen. Läget för rullande säkerhetskopiering stöds inte via sidan Säkerhetskopiering och återställning. Efter ett återställningsscenario är läget för rullande säkerhetskopiering fortfarande aktiverat. Du kan lämna det kontinuerliga säkerhetskopieringsläget (rullande säkerhetskopieringsläge) genom att använda skriptet LCBackupMode med `leaveContinuousCoverage` alternativ.
 
 >[!NOTE]
 >
->Om du lämnar det rullande säkerhetskopieringsläget omedelbart startas en ny session i säkerhetskopieringsläge. Om du vill inaktivera rullande säkerhetskopieringsläge helt använder du alternativet `leaveContinuousCoverage` i skriptet, som skriver över den befintliga rullande säkerhetskopieringssessionen. I läget för säkerhetskopiering av ögonblicksbilder kan du lämna säkerhetskopieringsläget som vanligt.
+>Om du lämnar det rullande säkerhetskopieringsläget omedelbart startas en ny session i säkerhetskopieringsläge. Om du vill inaktivera läget för rullande säkerhetskopiering fullständigt använder du `leaveContinuousCoverage` i skriptet, som skriver över den befintliga rullande säkerhetskopieringssessionen. I läget för säkerhetskopiering av ögonblicksbilder kan du lämna säkerhetskopieringsläget som vanligt.
 
 För att förhindra dataförlust måste de AEM formulärspecifika data säkerhetskopieras på ett sätt som säkerställer att dokument i GDS- och Content Storage Root-katalogen korrelerar med databasreferenser.
 
@@ -76,17 +75,17 @@ Sådana återställningsscenarier orsakas vanligtvis av maskinvarufel på server
 
 Även om du kan ändra databasservern och många andra parametrar kan du inte ändra programservertypen eller databastypen när du återställer AEM från en säkerhetskopia. Om du till exempel återställer en säkerhetskopia av AEM kan du inte ändra programservern från JBoss till WebLogic eller databasen från Oracle till DB2. Dessutom måste återskapade AEM använda samma sökvägar i filsystemet som teckensnittskatalogen.
 
-### Startar om efter en återställning {#restarting-after-a-recovery}
+### Starta om efter återställning {#restarting-after-a-recovery}
 
 Innan du startar om formulärservern efter en återställning gör du följande:
 
 1. Starta systemet i underhållsläge.
 1. Gör följande för att se till att Form Manager synkroniseras med AEM formulär i underhållsläge:
 
-   1. Gå till https://&lt;*server*:&lt;*port*>/lc/fm och logga in med autentiseringsuppgifter för adminstrator/lösenord.
+   1. Gå till https://&lt;*server*>:&lt;*port*>/lc/fm och logga in med autentiseringsuppgifter för adminstrator/password.
    1. Klicka på namnet på användaren (superadministratör i det här fallet) i det övre högra hörnet.
-   1. Klicka på **Administratörsalternativ**.
-   1. Klicka på **Starta** för att synkronisera resurser från databasen.
+   1. Klicka **Administratörsalternativ**.
+   1. Klicka **Starta** för att synkronisera resurser från databasen.
 
 1. I en klustrad miljö ska den primära noden (med avseende på AEM) vara uppe före de sekundära noderna.
 1. Se till att inga processer initieras från interna eller externa källor som Web-, SOAP- eller EJB-processinitierare förrän systemets normala funktion har validerats.
@@ -97,13 +96,13 @@ Om huvuddatabasen AEM formulär flyttas eller ändras läser du de installations
 
 Om du använder TCP-cachelagring i stället för UDP i ett kluster måste du uppdatera cachepositionerarkonfigurationen. Mer information finns i&quot;Konfigurera cachelagringsplatser (endast cachelagring med TCP)&quot; i den konfigurationsguide som är relevant för programservern.
 
-### Ändra systemsökvägar för AEM formulärnod {#changing-the-aem-forms-node-file-system-paths}
+### Ändra sökvägar för AEM formulärnodfil {#changing-the-aem-forms-node-file-system-paths}
 
 Om du ändrar filsystemsökvägarna för en fristående nod måste du uppdatera lämpliga referenser i inställningar, andra systemkonfigurationer, anpassade program och distribuerade AEM formulärprogram. Å andra sidan måste alla noder använda samma sökvägskonfiguration för filsystemet för ett kluster. Du måste ange rotkatalogen för GDS (Global Document Storage) och se till att den pekar på en kopia av den återställda GDS-servern som är synkroniserad med den återställda databasen. Det är viktigt att ange GDS-sökvägen eftersom GDS kan innehålla data som ska finnas kvar mellan omstarter av programservern.
 
 I en klustrad miljö bör databasens filsystemskonfiguration vara densamma för alla klusternoder före och efter säkerhetskopieringen.
 
-Använd `LCSetGDS`skriptet i mappen `[*aem-forms root]*\sdk\misc\Foundation\SetGDSCommandline` för att ange GDS-sökvägen när du har ändrat sökvägarna i filsystemet. Mer information finns i `ReadMe.txt`-filen i samma mapp. Om den gamla GDS-katalogsökvägen inte kan användas måste `LCSetGDS`-skriptet användas för att ange den nya sökvägen till GDS innan du börjar AEM formulär.
+Använd `LCSetGDS`skript i `[*aem-forms root]*\sdk\misc\Foundation\SetGDSCommandline` mapp för att ange GDS-sökvägen när du har ändrat filsystemsökvägarna. Se `ReadMe.txt` i samma mapp för mer information. Om den gamla GDS-katalogsökvägen inte kan användas, `LCSetGDS` måste användas för att ange den nya sökvägen till GDS innan du börjar AEM formulär.
 
 >[!NOTE]
 >

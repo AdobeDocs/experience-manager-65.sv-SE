@@ -1,26 +1,25 @@
 ---
 title: Utvecklingspraxis
-seo-title: Utvecklingspraxis
+seo-title: Development Practices
 description: Bästa tillvägagångssätt för att utveckla AEM
-seo-description: Bästa tillvägagångssätt för att utveckla AEM
+seo-description: Best practices for developing on AEM
 uuid: 27a75f7f-6e2c-4113-9e9f-c5013a4594c2
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 discoiquuid: 8b0297a1-d922-410f-9aaf-3a6b87e11dc0
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 65b2029e-03c9-4df4-8579-2b15dbee1035
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
-source-wordcount: '637'
+source-wordcount: '629'
 ht-degree: 0%
 
 ---
 
-
 # Utvecklingspraxis{#development-practices}
 
-## Arbeta enligt en definition av Klar {#work-according-to-a-definition-of-done}
+## Arbeta enligt definitionen Klar {#work-according-to-a-definition-of-done}
 
 Varje team har en egen definition av vad&quot;gjort&quot; innebär, men det är viktigt att ha en sådan och se till att en berättelse uppfyller de definierade kriterierna innan den godkänns.
 
@@ -35,11 +34,11 @@ Några kriterier som vanligtvis anges av team är:
 
 Utan en väldefinierad DoD är det lätt att hamna i en situation där mycket av saker är halvvägs och inget är helt färdigt.
 
-### Definiera och följ konventionerna för kodning och formatering {#define-and-adhere-to-coding-and-formatting-conventions}
+### Definiera och följ kodnings- och formateringskonventioner {#define-and-adhere-to-coding-and-formatting-conventions}
 
 Det kanske inte verkar viktigt med indragsnivåer och tomt utrymme, men att ha rätt formaterad kod går långt i fråga om läsbarhet och underhåll. Konventioner bör diskuteras och godkännas som ett team och sedan följas i koden.
 
-### Sikta för hög testtäckning {#aim-for-high-test-coverage}
+### Syfte med hög testtäckning  {#aim-for-high-test-coverage}
 
 När en projektimplementering växer i storlek ökar också den tid som krävs för att testa den. Utan god testtäckning kommer testteamet inte att kunna skalas om och utvecklarna kommer till slut att begravas i buggar.
 
@@ -55,7 +54,7 @@ Systemet bör vara tillgängligt för demonstration till företaget i slutet av 
 
 Genom att implementera en kontinuerlig integreringsmiljö kan du enkelt och repeterbart köra enhetstester och integrationstester. Det kommer också att frigöra driftsättningar från utvecklingsteamet, vilket gör att andra delar av teamet kan bli mer effektiva och göra driftsättningen mer stabil och förutsägbar.
 
-### Håll utvecklingscykeln snabb genom att hålla byggtiden låg {#keep-the-development-cycle-fast-by-keeping-build-times-low}
+### Håll utvecklingscykeln snabb genom att hålla byggtiderna låga {#keep-the-development-cycle-fast-by-keeping-build-times-low}
 
 Om enhetstester tar lång tid att köra undviker utvecklarna att köra dem och de förlorar sitt värde. Om det tar lång tid att skapa koden och distribuera den gör man det mindre ofta. Att prioritera korta byggtider säkerställer att den tid vi har investerat i vår testtäckning och CI-infrastruktur kommer att fortsätta göra teamet mer produktivt.
 

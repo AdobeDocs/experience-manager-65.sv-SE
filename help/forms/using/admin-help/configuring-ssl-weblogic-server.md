@@ -1,24 +1,23 @@
 ---
 title: Konfigurera SSL för WebLogic Server
-seo-title: Konfigurera SSL för WebLogic Server
+seo-title: Configuring SSL for WebLogic Server
 description: Lär dig hur du skapar en SSL-autentiseringsuppgift som ska användas på WebLogic-servern och hur du konfigurerar SSL för WebLogic Server.
-seo-description: Lär dig hur du skapar en SSL-autentiseringsuppgift som ska användas på WebLogic-servern och hur du konfigurerar SSL för WebLogic Server.
+seo-description: Learn how to create an SSL credential for use on WebLogic server and how to configure SSL for WebLogic Server.
 uuid: 8ee979fd-2615-451b-a607-4f73ecfed4f9
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_ssl
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 968c2574-ec9a-45ca-9c64-66f4caeec285
-translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
-source-wordcount: '1074'
+source-wordcount: '1049'
 ht-degree: 0%
 
 ---
 
 
-# Konfigurerar SSL för WebLogic Server {#configuring-ssl-for-weblogic-server}
+# Konfigurera SSL för WebLogic Server {#configuring-ssl-for-weblogic-server}
 
 Om du vill konfigurera SSL på WebLogic-servern behöver du en SSL-autentiseringsuppgift för autentisering. Du kan använda Java-nyckelverktyget för att utföra följande åtgärder för att skapa en referens:
 
@@ -27,7 +26,7 @@ Om du vill konfigurera SSL på WebLogic-servern behöver du en SSL-autentisering
 
 Konfigurera sedan WebLogic så att den använder nyckelbehållaren Custom Identity och Custom Trust som du skapade. Inaktivera även funktionen för verifiering av WebLogic-värdnamn eftersom det unika namn som användes för att skapa nyckelbehållarfilerna inte innehöll namnet på den dator som är värd för WebLogic.
 
-## Skapar en SSL-autentiseringsuppgift för användning på WebLogic-servern {#creating-an-ssl-credential-for-use-on-weblogic-server}
+## Skapa en SSL-autentiseringsuppgift som ska användas på WebLogic-servern {#creating-an-ssl-credential-for-use-on-weblogic-server}
 
 Nyckelverktygskommandot finns vanligtvis i Java-katalogen jre/bin och måste innehålla flera alternativ och alternativvärden, som visas i följande tabell.
 
@@ -85,7 +84,7 @@ Nyckelverktygskommandot finns vanligtvis i Java-katalogen jre/bin och måste inn
   <tr>
    <td><p>-keypass</p></td>
    <td><p>Lösenordet som skyddar nyckelparets privata nyckel.</p></td>
-   <td><p>Använd samma lösenord som du använde för alternativet <code>-storepass</code>. Nyckellösenordet måste innehålla minst sex tecken.</p></td>
+   <td><p>Använd samma lösenord som du använde för <code>-storepass</code> alternativ. Nyckellösenordet måste innehålla minst sex tecken.</p></td>
   </tr>
   <tr>
    <td><p>-dname</p></td>
@@ -105,7 +104,7 @@ Nyckelverktygskommandot finns vanligtvis i Java-katalogen jre/bin och måste inn
 
 Mer information om hur du använder kommandot keytool finns i filen keytool.html som är en del av JDK-dokumentationen.
 
-## Skapa nyckelbehållarna Custom Identity och Trust {#create-the-custom-identity-and-trust-keystores}
+## Skapa nyckelbehållare för anpassad identitet och pålitlighet {#create-the-custom-identity-and-trust-keystores}
 
 1. Navigera från en kommandotolk till *[appserverdomain]*/adobe/*[servernamn]*.
 1. Ange följande kommando:
@@ -114,7 +113,7 @@ Mer information om hur du använder kommandot keytool finns i filen keytool.html
 
    >[!NOTE]
    >
-   >Ersätt `[JAVA_HOME]`*med katalogen där JDK är installerad och ersätt texten i kursiv stil med värden som motsvarar din miljö.*
+   >Ersätt `[JAVA_HOME]`*med den katalog där JDK är installerat och ersätt texten i kursiv stil med värden som motsvarar din miljö.*
 
    Till exempel:
 
@@ -122,7 +121,7 @@ Mer information om hur du använder kommandot keytool finns i filen keytool.html
    C:\Program Files\Java\jrockit-jdk1.6.0_24-R28\bin\keytool" -genkey -v -alias ads-credentials -keyalg RSA -keystore "ads-credentials.jks" -validity 3650 -storepass P@ssw0rd -keypass P@ssw0rd -dname "CN=wasnode01, OU=LC, O=Adobe, L=Noida, S=UP,C=91
    ```
 
-   Nyckelfilen för den anpassade identiteten med namnet &quot;ads-credentials.jks&quot; skapas i katalogen [appserverdomain]/adobe/[servernamn].
+   Nyckelfilen för den anpassade identiteten med namnet&quot;ads-credentials.jks&quot; skapas i [appserverdomain]/adobe/[servernamn] katalog.
 
 1. Extrahera certifikatet från nyckelbehållaren med annonsuppgifter genom att ange följande kommando:
 
@@ -134,7 +133,7 @@ Mer information om hur du använder kommandot keytool finns i filen keytool.html
 
    >[!NOTE]
    >
-   >Ersätt `[JAVA_HOME]` med katalogen där JDK är installerat och ersätt `store`*_* `password`* med lösenordet för nyckelbehållaren Anpassad identitet.*
+   >Ersätt `[JAVA_HOME]` med den katalog där JDK är installerat och ersätta `store`*_* `password`* med lösenordet för nyckelbehållaren Custom Identity.*
 
    Till exempel:
 
@@ -142,7 +141,7 @@ Mer information om hur du använder kommandot keytool finns i filen keytool.html
    C:\Program Files\Java\jrockit-jdk1.6.0_24-R28\bin\keytool" -export -v -alias ads-credentials -file "ads-ca.cer" -keystore "ads-credentials.jks" -storepass P@ssw0rd
    ```
 
-   Certifikatfilen med namnet &quot;ads-ca.cer&quot; skapas i katalogen [appserverdomain]/adobe/[*servernamn*].
+   Certifikatfilen med namnet &quot;ads-ca.cer&quot; skapas i [appserverdomain]/adobe/[*servernamn*] katalog.
 
 1. Kopiera filen ads-ca.cer till alla värddatorer som behöver säker kommunikation med programservern.
 1. Infoga certifikatet i en ny nyckelfil (nyckelbehållaren Anpassat förtroende) genom att ange följande kommando:
@@ -151,7 +150,7 @@ Mer information om hur du använder kommandot keytool finns i filen keytool.html
 
    >[!NOTE]
    >
-   >Ersätt `[JAVA_HOME]` med katalogen där JDK är installerat och ersätt `store`*_* `password` och `key`*_* `password` *med dina egna lösenord.*
+   >Ersätt `[JAVA_HOME]` med den katalog där JDK är installerat och ersätta `store`*_* `password` och `key`*_* `password` *med dina egna lösenord.*
 
    Till exempel:
 
@@ -159,50 +158,50 @@ Mer information om hur du använder kommandot keytool finns i filen keytool.html
    C:\Program Files\Java\jrockit-jdk1.6.0_24-R28\bin\keytool" -import -v -noprompt -alias bedrock -file "ads-ca.cer" -keystore "ads-ca.jks" -storepass Password1 -keypass Password1
    ```
 
-Nyckelfilen för anpassat förtroende med namnet&quot;ads-ca.jks&quot; skapas i katalogen [appserverdomain]/adobe/&#39;server&#39;.
+Nyckelfilen för anpassat förtroende med namnet&quot;ads-ca.jks&quot; skapas i [appserverdomain]/adobe/&#39;server&#39;-katalog.
 
 Konfigurera WebLogic så att den använder nyckelbehållaren Custom Identity och Custom Trust som du skapade. Inaktivera även funktionen för verifiering av WebLogic-värdnamn eftersom det unika namn som användes för att skapa nyckelbehållarfilerna inte innehöll namnet på den dator som är värd för WebLogic-servern.
 
 ## Konfigurera WebLogic att använda SSL {#configure-weblogic-to-use-ssl}
 
 1. Starta administrationskonsolen för WebLogic Server genom att skriva `https://`*[värdnamn ]*`:7001/console` på URL-raden i en webbläsare.
-1. Under Miljö, i Domänkonfigurationer, väljer du **Servrar > &#39;server&#39; > Konfiguration > Allmänt**.
-1. Under Allmänt, under Konfiguration, kontrollerar du att **lyssningsporten är aktiverad** och **SSL-lyssningsporten är aktiverad** är markerade. Om det inte är aktiverat gör du följande:
+1. Under Miljö, under Domänkonfigurationer, väljer du **Servrar > &#39;server&#39; > Konfiguration > Allmänt**.
+1. Under Allmänt, under Konfiguration, ser du till att **Lyssna-port aktiverad** och **SSL-lyssningsporten aktiverad** är markerade. Om det inte är aktiverat gör du följande:
 
-   1. Klicka på **Lås och redigera** under Change Center om du vill ändra markeringar och värden.
-   1. Markera kryssrutorna **avlyssningsporten är aktiverad** och **SSL avlyssningsporten är aktiverad**.
+   1. Klicka på under Ändringscenter **Lås och redigera** om du vill ändra markeringar och värden.
+   1. Kontrollera **Lyssna-port aktiverad** och **SSL-lyssningsporten aktiverad** kryssrutor.
 
 1. Om den här servern är en hanterad server ändrar du lyssningsporten till ett oanvänt portvärde (till exempel 8001) och SSL-lyssningsporten till ett oanvänt portvärde (till exempel 8002). På en fristående server är SSL-standardporten 7002.
-1. Klicka på **Versionskonfiguration**.
+1. Klicka **Versionskonfiguration**.
 1. Under Miljö, i Domänkonfigurationer, klickar du på **Servrar > [*Hanterad server*] > Konfiguration > Allmänt**.
 1. Under Allmänt, under Konfiguration, väljer du **Nyckelbehållare**.
-1. Klicka på **Lås och redigera** under Change Center om du vill ändra markeringar och värden.
-1. Klicka på **Ändra** för att hämta nyckelbehållarlistan som nedrullningsbar lista och välj **Anpassad identitet och anpassat förtroende**.
+1. Klicka på under Ändringscenter **Lås och redigera** om du vill ändra markeringar och värden.
+1. Klicka **Ändra** för att hämta nyckelbehållarlistan som nedrullningsbar lista och välja **Anpassad identitet och anpassat förtroende**.
 1. Ange följande värden under Identitet:
 
-   **Nyckelbehållare** för anpassad identitet:  *[appserverdomain]*/adobe/*[server name]*/ads-credentials.jks, där *[appserverdomain] *är den faktiska sökvägen och  *[servernamnet]* är programserverns namn.
+   **Nyckelbehållare för anpassad identitet**: *[appserverdomain]*/adobe/*[servernamn]*/ads-credentials.jks, var *[appserverdomain] *är den faktiska sökvägen och *[servernamn]* är namnet på programservern.
 
-   **Nyckellagringstyp** för anpassad identitet: JKS
+   **Nyckellagringstyp för anpassad identitet**: JKS
 
-   **Lösenfras** för anpassad identitet för nyckelbehållare:  *mypassword*  (lösenord för anpassad identitetsnyckelbehållare)
+   **Lösenfras för anpassad identitetsnyckelbehållare**: *mypassword* (lösenord för anpassad identitetsnyckelbehållare)
 
 1. Ange följande värden under Lita på:
 
-   **Namn** på nyckelfil för anpassat förtroende:  `*[appserverdomain]*/adobe/*'server'*/ads-ca.jks`, där  `*[appserverdomain]*` är den faktiska banan
+   **Namn på nyckelfil för anpassat förtroende**: `*[appserverdomain]*/adobe/*'server'*/ads-ca.jks`, där `*[appserverdomain]*` är den faktiska banan
 
-   **Nyckellagringstyp** för anpassat förtroende: JKS
+   **Nyckellagringstyp för anpassat förtroende**: JKS
 
-   **Nyckelarkivlösenfras** för anpassat förtroende:  *mypassword*  (lösenord för anpassad nyckel)
+   **Nyckelarkivlösenfras för anpassat förtroende**: *mypassword* (lösenord för nyckel för anpassat förtroende)
 
-1. Välj **SSL** under Allmänt i Konfiguration.
+1. Under Allmänt, under Konfiguration, väljer du **SSL**.
 1. Som standard är Keystore valt för Identity and Trust Locations. Om inte, ändra den till nyckelbehållare.
 1. Ange följande värden under Identitet:
 
    **Alias för privat nyckel**: reklamreferenser
 
-   **Lösenfras**:  *mypassword*
+   **Lösenfras**: *mypassword*
 
-1. Klicka på **Versionskonfiguration**.
+1. Klicka **Versionskonfiguration**.
 
 ## Inaktivera funktionen för värdnamnsverifiering {#disable-the-hostname-verification-feature}
 

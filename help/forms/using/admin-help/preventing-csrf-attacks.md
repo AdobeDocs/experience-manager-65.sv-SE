@@ -1,22 +1,21 @@
 ---
 title: Förhindra CSRF-attacker
-seo-title: Förhindra CSRF-attacker
+seo-title: Preventing CSRF attacks
 description: Lär dig hur du förhindrar att CSRF-attacker (Cross-site Request ForVerification) angriper webbplatser och skyddar användardata från att äventyras.
-seo-description: Lär dig hur du förhindrar att CSRF-attacker (Cross-site Request ForVerification) angriper webbplatser och skyddar användardata från att äventyras.
+seo-description: Learn how to prevent Cross-site request forgery (CSRF) attacks and safeguard user data from being compromised.
 uuid: f3553826-f5eb-40ea-aeb7-90e4ad30598c
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_user_management
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: a3cbffb7-c1d1-47c2-bcfd-70f1e2d81ac9
-translation-type: tm+mt
-source-git-commit: b703c59d7d913fc890c713c6e49e7d89211fd998
+exl-id: e17fc114-eba5-4e1b-8e70-ad6af7008018
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
-source-wordcount: '990'
+source-wordcount: '971'
 ht-degree: 0%
 
 ---
-
 
 # Förhindra CSRF-attacker {#preventing-csrf-attacks}
 
@@ -30,7 +29,7 @@ Tänk dig till exempel ett scenario där du är inloggad på administrationskons
 
 **Referens:** Adressen till källsidan som en begäran kommer från. En webbsida på webbplats1.com innehåller till exempel en länk till webbplats2.com. När du klickar på länken skickas en begäran till site2.com. Referenten till denna begäran är site1.com eftersom begäran görs från en sida vars källa är site1.com.
 
-**Tillåtslista URI:** er:URI:er identifierar resurser på formulärservern som begärs, till exempel /adminui eller /contentspace. Vissa resurser kan tillåta att en begäran skickas till programmet från externa platser. Dessa resurser betraktas som tillåtslista URI:er. Formulärservern utför aldrig någon referenskontroll från tillåtslista URI:er.
+**Tillåtslista URI:er:** URI:er identifierar resurser på formulärservern som begärs, till exempel /adminui eller /contentspace. Vissa resurser kan tillåta att en begäran skickas till programmet från externa platser. Dessa resurser betraktas som tillåtslista URI:er. Formulärservern utför aldrig någon referenskontroll från tillåtslista URI:er.
 
 **Null-referens:** När du öppnar ett nytt webbläsarfönster eller en ny flik, skriver en adress och trycker på Retur är referenten null. Begäran är helt ny och kommer inte från en överordnad webbsida. Det finns därför ingen hänvisning till begäran. Formulärservern kan ta emot en null-referens från:
 
@@ -38,9 +37,9 @@ Tänk dig till exempel ett scenario där du är inloggad på administrationskons
 * alla skrivbordsklienter som gör en HTTP-begäran på en AEM formulerar SOAP- eller REST-slutpunkt
 * när ett nytt webbläsarfönster öppnas och URL:en för AEM formulär, inloggningssida för webbprogram anges
 
-Tillåt en null-referens för SOAP- och REST-slutpunkter. Tillåt även en null-referens på alla URI-inloggningssidor som /adminui och /contentspace och deras motsvarande mappade resurser. Den mappade serverleten för /contentspace är till exempel /contentspace/faces/jsp/login.jsp, som bör vara ett null-referensundantag. Det här undantaget är bara nödvändigt om du aktiverar GET-filtrering för webbprogrammet. Programmen kan ange om null-referenser ska tillåtas. Se&quot;Skydda mot attacker från attacker med smidning av förfrågningar mellan webbplatser&quot; i [Förbättring och säkerhet för AEM formulär](https://help.adobe.com/en_US/livecycle/11.0/HardeningSecurity/index.html).
+Tillåt en null-referens för SOAP- och REST-slutpunkter. Tillåt även en null-referens på alla URI-inloggningssidor som /adminui och /contentspace och deras motsvarande mappade resurser. Den mappade serverleten för /contentspace är till exempel /contentspace/faces/jsp/login.jsp, som bör vara ett null-referensundantag. Det här undantaget är bara nödvändigt om du aktiverar GET-filtrering för webbprogrammet. Programmen kan ange om null-referenser ska tillåtas. Se&quot;Skydda mot attacker med förfalskade förfrågningar på webbplatser&quot; i [Förbättring och säkerhet för AEM formulär](https://help.adobe.com/en_US/livecycle/11.0/HardeningSecurity/index.html).
 
-**Tillåtet referensundantag:** Tillåtet referensundantag är en underlista till listan över tillåtna referenter, från vilka begäranden blockeras. Tillåtna referensundantag gäller endast för webbprogram. Om en delmängd av Tillåtna referenter inte ska kunna anropa ett visst webbprogram kan du blocklist referenterna via Tillåtna referensundantag. Tillåtna referensundantag anges i filen web.xml för ditt program. (Se&quot;Skydda mot attacker från attacker med smidning av förfrågningar på olika webbplatser&quot; i Förbättring och säkerhet för AEM formulär på hjälpsidan och Tutorials-sidan.)
+**Undantag för tillåten referens:** Tillåtet referensundantag är en underlista till listan över tillåtna referenser, från vilka begäranden blockeras. Tillåtna referensundantag gäller endast för webbprogram. Om en delmängd av Tillåtna referenter inte ska kunna anropa ett visst webbprogram kan du blocklist referenterna via Tillåtna referensundantag. Tillåtna referensundantag anges i filen web.xml för ditt program. (Se&quot;Skydda mot attacker från attacker med smidning av förfrågningar på olika webbplatser&quot; i Förbättring och säkerhet för AEM formulär på hjälpsidan och Tutorials-sidan.)
 
 ## Hur tillåtna referenser fungerar {#how-allowed-referers-work}
 
@@ -49,7 +48,7 @@ AEM innehåller referensfiltrering som kan förhindra CSRF-attacker. Så här fu
 1. Formulärservern kontrollerar HTTP-metoden som används för anrop:
 
    * Om det är POST utför formulärservern en kontroll av referensrubriken.
-   * Om det är GET åsidosätter formulärservern referenskontrollen, såvida inte CSRF_CHECK_GETS är inställt på true. I så fall utförs referenthuvudekontrollen. CSRF_CHECK_GETS anges i filen web.xml för ditt program. (Se &quot;Skydda mot attacker med smidning av korsbegäran på en webbplats&quot; i [Härdning och säkerhetsguide](https://help.adobe.com/en_US/livecycle/11.0/HardeningSecurity/index.html).)
+   * Om det är GET åsidosätter formulärservern referenskontrollen, såvida inte CSRF_CHECK_GETS är inställt på true. I så fall utförs referenthuvudekontrollen. CSRF_CHECK_GETS anges i filen web.xml för ditt program. (Se &quot;Skydda mot attacker med förfalskning av förfrågningar mellan webbplatser&quot; i [Handbok om skärpning och säkerhet](https://help.adobe.com/en_US/livecycle/11.0/HardeningSecurity/index.html).)
 
 1. Formulärservern kontrollerar om den begärda URI:n är tillåtslista:
 
@@ -82,4 +81,3 @@ När du kör Configuration Manager läggs standardvärden och IP-adressen eller 
    Om listan över tillåtna referenser är tom slutar CSRF-funktionen att fungera och systemet blir osäkert.
 
 1. När du har ändrat listan över tillåtna referenser startar du om AEM.
-

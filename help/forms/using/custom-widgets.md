@@ -1,8 +1,8 @@
 ---
 title: Skapa anpassade utseenden i HTML5-formulär
-seo-title: Skapa anpassade utseenden i HTML5-formulär
+seo-title: Create custom appearances in HTML5 forms
 description: Du kan koppla anpassade widgetar till en Mobile Forms. Du kan utöka befintliga jQuery-widgetar eller utveckla egna widgetar.
-seo-description: Du kan koppla anpassade widgetar till en Mobile Forms. Du kan utöka befintliga jQuery-widgetar eller utveckla egna widgetar.
+seo-description: You can plug in custom widgets to a Mobile Forms. You can extend existing jQuery Widgets or develop your own custom widgets.
 uuid: a9013c3d-20c7-45c9-be24-8e9d4525eff8
 contentOwner: robhagat
 content-type: reference
@@ -11,18 +11,17 @@ topic-tags: hTML5_forms
 discoiquuid: 17a86543-30d3-4e16-a373-67b46d551da9
 docset: aem65
 feature: Mobile Forms
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 76bd1e2d-9e65-452c-8cef-123d28886a62
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
-source-wordcount: '669'
+source-wordcount: '639'
 ht-degree: 0%
 
 ---
 
-
 # Skapa anpassade utseenden i HTML5-formulär{#create-custom-appearances-in-html-forms}
 
-Du kan koppla anpassade widgetar till en Mobile Forms. Du kan utöka befintliga jQuery-widgetar eller utveckla egna widgetar med hjälp av utseenderamverket. XFA-motorn använder olika widgetar. Mer information finns i [Utseenderamverket för adaptiva formulär och HTML5-formulär](/help/forms/using/introduction-widgets.md).
+Du kan koppla anpassade widgetar till en Mobile Forms. Du kan utöka befintliga jQuery-widgetar eller utveckla egna widgetar med hjälp av utseenderamverket. XFA-motorn använder olika widgetar, se [Appearance Framework for adaptive and HTML5 forms](/help/forms/using/introduction-widgets.md) för detaljerad information.
 
 ![Ett exempel på standardwidget och anpassad widget](assets/custom-widgets.jpg)
 
@@ -46,7 +45,7 @@ HTML5-formulär innehåller en implementering av widgetramverket som kan utökas
   </tr>
   <tr>
    <td>återge</td>
-   <td>Återgivningsfunktionen returnerar jQuery-objektet för standard-HTML-elementet i widgeten. HTML-standardelementet ska vara av fokuserbar typ. Till exempel &lt;a&gt;, &lt;input&gt; och &lt;li&gt;. Det returnerade elementet används som $userControl. Om $userControl anger begränsningen ovan fungerar funktionerna i klassen AbstractWidget som förväntat, i annat fall kräver vissa av de vanliga API:erna (focus, click) ändringar. </td>
+   <td>Återgivningsfunktionen returnerar jQuery-objektet för widgetens standardelement HTML. Standardelementet för HTML ska vara av fokuserbar typ. Till exempel: &lt;a&gt;, &lt;input&gt;och &lt;li&gt;. Det returnerade elementet används som $userControl. Om $userControl anger begränsningen ovan fungerar funktionerna i klassen AbstractWidget som förväntat, i annat fall kräver vissa av de vanliga API:erna (focus, click) ändringar. </td>
   </tr>
   <tr>
    <td>getEventMap</td>
@@ -71,7 +70,7 @@ HTML5-formulär innehåller en implementering av widgetramverket som kan utökas
  </tbody>
 </table>
 
-Om du vill skapa en egen widget inkluderar du referenser till JavaScript-filen som innehåller åsidosatta funktioner och nyligen tillagda funktioner i den profil som skapas ovan. Exempelvis är *sliderNumericFieldWidget* en widget för numeriska fält. Om du vill använda widgeten i din profil i rubrikavsnittet inkluderar du följande rad:
+Om du vill skapa en egen widget inkluderar du referenser till JavaScript-filen som innehåller åsidosatta funktioner och nyligen tillagda funktioner i den profil som skapas ovan. Till exempel *sliderNumericFieldWidget* är en widget för numeriska fält. Om du vill använda widgeten i din profil i rubrikavsnittet inkluderar du följande rad:
 
 ```javascript
 window.formBridge.registerConfig("widgetConfig" , widgetConfigObject);
@@ -79,7 +78,7 @@ window.formBridge.registerConfig("widgetConfig" , widgetConfigObject);
 
 ### Registrera anpassad widget med XFA Scripting Engine  {#register-custom-widget-with-xfa-scripting-engine-nbsp}
 
-När den anpassade widgetkoden är klar registrerar du widgeten med skriptmotorn genom att använda `registerConfig`API för [Form Bridge](/help/forms/using/form-bridge-apis.md). WidgetConfigObject används som indata.
+När den anpassade widgetkoden är klar registrerar du widgeten med skriptmotorn med hjälp av `registerConfig`API för [Form Bridge](/help/forms/using/form-bridge-apis.md). WidgetConfigObject används som indata.
 
 ```javascript
 window.formBridge.registerConfig("widgetConfig",
@@ -96,8 +95,8 @@ Widgetkonfigurationen tillhandahålls som ett JSON-objekt (en samling nyckelvär
 ```
 *{*
 
-*“identifier1” : “customwidgetname”,
-“identifier2” : “customwidgetname2”,
+*"identifier1" : "customwidgetname",
+"identifier2" : "customwidgetname2",
 ..
 }*
 ```

@@ -2,7 +2,7 @@
 title: Fjärrfunktioner i Expression Builder
 seo-title: Expression Builder
 description: Med Expression Builder i Correspondence Management kan du skapa uttryck och fjärrfunktioner.
-seo-description: Med Expression Builder i Correspondence Management kan du skapa uttryck och fjärrfunktioner.
+seo-description: Expression Builder in Correspondence Management lets you create expressions and remote functions.
 uuid: 6afb84c0-ad03-4bb1-a154-d46cc47650ae
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,14 +10,13 @@ topic-tags: correspondence-management
 discoiquuid: 68e3071e-7ce6-4bdc-8561-14bcaeae2b6c
 docset: aem65
 feature: Correspondence Management
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: b41af9fe-c698-44b3-9ac6-97d42cdc02d4
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
-source-wordcount: '802'
+source-wordcount: '786'
 ht-degree: 1%
 
 ---
-
 
 # Fjärrfunktioner i Expression Builder{#remote-functions-in-expression-builder}
 
@@ -41,9 +40,9 @@ Här är några vanliga JSP EL-exempel som du kan använda i din Correspondence 
 * Så här sammanfogar du två strängar: ${str1} ${str2}
 * Så här jämför du två tal: ${age &lt; 18}
 
-Mer information finns i [JSP EL-specifikationen](https://download.oracle.com/otn-pub/jcp/jsp-2.1-fr-spec-oth-JSpec/jsp-2_1-fr-spec-el.pdf). Uttryckshanteraren på klientsidan stöder inte vissa variabler och funktioner i JSP EL-specifikationen, närmare bestämt:
+Mer information finns i [JSP EL-specifikation](https://download.oracle.com/otn-pub/jcp/jsp-2.1-fr-spec-oth-JSpec/jsp-2_1-fr-spec-el.pdf). Uttryckshanteraren på klientsidan stöder inte vissa variabler och funktioner i JSP EL-specifikationen, närmare bestämt:
 
-* Samlingsindex och kartnycklar (med []-notation) stöds inte i variabelnamn för uttryck som utvärderas på klientsidan.
+* Samlingsindex och kartnycklar (med [] notation) stöds inte i variabelnamn för uttryck som utvärderas på klientsidan.
 * Följande är parametertyper eller returtyper för funktioner som används i uttryck:
 
    * java.lang.String
@@ -130,7 +129,7 @@ Du kan skapa ett anpassat paket för att exportera dina egna fjärrfunktioner f�
   @org.apache.felix.scr.annotations.Property(name = "exm.service", boolValue = true)})
 ```
 
-Posten exm.service=true instruerar Expression Manager att tjänsten innehåller fjärrfunktioner som är lämpliga att använda i uttryck. Värdet för &lt;service_id> måste vara en giltig Java-identifierare (alfanumerisk,$, _ utan andra specialtecken). Det här värdet, som har nyckelordet REMOTE_ som prefix, utgör prefixet som används i uttryck. Ett gränssnitt med en kommenterad metod bar() och tjänst-ID:t foo i tjänsteegenskaperna kan till exempel refereras inuti uttryck med REMOTE_foo:bar().
+Posten exm.service=true instruerar Expression Manager att tjänsten innehåller fjärrfunktioner som är lämpliga att använda i uttryck. The &lt;service_id> värdet måste vara en giltig Java-identifierare (alfanumerisk,$, _ utan andra specialtecken). Det här värdet, som har nyckelordet REMOTE_ som prefix, utgör prefixet som används i uttryck. Ett gränssnitt med en kommenterad metod bar() och tjänst-ID:t foo i tjänsteegenskaperna kan till exempel refereras inuti uttryck med REMOTE_foo:bar().
 
 ```java
 package mergeandfuse.com;
@@ -158,8 +157,8 @@ public class RemoteFuntionImpl implements RemoteFunction {
 
 Nedan finns exempelarkiv att använda:
 
-* **GoodFunctions.jar.** zipis the jar file with bundle containing a sample remote function definition. Ladda ned filen GoodFunctions.jar.zip och zippa upp den för att få filen jar.
-* **GoodFunctions.** zipis är det paket med källkod som används för att definiera en anpassad fjärrfunktion och skapa ett paket för den.
+* **GoodFunctions.jar.zip** är jar-filen med ett paket som innehåller en fjärrfunktionsdefinition. Ladda ned filen GoodFunctions.jar.zip och zippa upp den för att få filen jar.
+* **GoodFunctions.zip** är det paket med källkod som används för att definiera en anpassad fjärrfunktion och skapa ett paket för den.
 
 GoodFunctions.jar.zip
 

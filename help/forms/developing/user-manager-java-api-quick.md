@@ -1,8 +1,8 @@
 ---
 title: Java API-snabbstart för användarhanteraren (SOAP)
-seo-title: Java API-snabbstart för användarhanteraren (SOAP)
+seo-title: User Manager Java API Quick Start(SOAP)
 description: Använd API:t för användarhanteraren för att lägga till användare, ta bort användare, skapa grupper, hantera användare och grupper, hantera roller och behörigheter, synkronisera användare programmatiskt och hantera inställningsnoderna programmatiskt.
-seo-description: Använd API:t för användarhanteraren för att lägga till användare, ta bort användare, skapa grupper, hantera användare och grupper, hantera roller och behörigheter, synkronisera användare programmatiskt och hantera inställningsnoderna programmatiskt.
+seo-description: Use User Manager API to add users, delete users, create groups, manage users and groups, manage roles and permissions, synchronize users programmatically, and manage the Preferences Nodes programmatically.
 uuid: 0a2aa4ab-9329-485f-a30e-47bb471ce1b5
 contentOwner: admin
 content-type: reference
@@ -10,14 +10,13 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: e0c20fd2-b084-4f61-936c-5282826a8d3d
 role: Developer
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 7f622371-0f0f-4789-b2e7-e4b536a21c4d
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
-source-wordcount: '530'
+source-wordcount: '494'
 ht-degree: 0%
 
 ---
-
 
 # Snabbstart för Java API för användarhanteraren (SOAP) {#user-manager-java-api-quick-start-soap}
 
@@ -526,7 +525,7 @@ I följande kodexempel tilldelas användarrollen Tjänster till ett huvudkonto, 
 
 ## Snabbstart (SOAP-läge): Synkronisera användare programmatiskt med Java API {#quick-start-soap-mode-programmatically-synchronizing-users-using-the-java-api}
 
-I följande Java-kodexempel synkroniseras användare med hjälp av API:er för användarhantering. (Se [Programmatisk synkronisering av användare](/help/forms/developing/users.md#programmatically-synchronizing-users).)
+I följande Java-kodexempel synkroniseras användare med hjälp av API:er för användarhantering. (Se [Synkronisera användare programmatiskt](/help/forms/developing/users.md#programmatically-synchronizing-users).)
 
 ```java
  /*
@@ -905,7 +904,7 @@ I följande kodexempel skapas en grupp med namnet AdobeGroup till AEM Forms. (Se
 
 ## Snabbstart (SOAP-läge) Hantera inställningsnoder {#quick-start-soap-mode-managing-preferences-nodes}
 
-Följande Java-kodmodeller hanterar Preferences Nodes med API:erna för användarhantering. ( Se [Programmatisk hantering av inställningsnoder](/help/forms/developing/programmatically-preferences-nodes.md#programmatically-managing-the-preferences-nodes))
+Följande Java-kodmodeller hanterar Preferences Nodes med API:erna för användarhantering. ( Se [Hantera inställningsnoderna programmatiskt](/help/forms/developing/programmatically-preferences-nodes.md#programmatically-managing-the-preferences-nodes))
 
 ```java
 /*
@@ -982,7 +981,7 @@ public class ManagePreferences {
         map = pmutil.getPreferences(path);
         for(String str:map.keySet()) {
             //assert on the key as "ReverseOrder"
-            //assert on the value[map.get(str)] as "false”
+            //assert on the value[map.get(str)] as "false"
         }
     } catch (UMException e) {
         e.printStackTrace();
@@ -1008,7 +1007,7 @@ public class ManagePreferences {
 
 ## Snabbstart (SOAP-läge): Hantera inställningsnoderna programmatiskt med Java API {#quick-start-soap-mode-programmatically-managing-the-preferences-nodes-using-the-java-api}
 
-Följande Java-kodmodeller hanterar inställningsnoder med API:erna för användarhantering ( Se [Programmatisk hantering av inställningsnoderna](/help/forms/developing/programmatically-preferences-nodes.md#programmatically-managing-the-preferences-nodes))
+Följande Java-kodmodeller hanterar Preferences Nodes med API:er för användarhantering ( Se [Hantera inställningsnoderna programmatiskt](/help/forms/developing/programmatically-preferences-nodes.md#programmatically-managing-the-preferences-nodes))
 
 ```java
 /*
@@ -1092,4 +1091,3 @@ public class ManagePreferences {
 }
 }
 ```
-

@@ -1,19 +1,18 @@
 ---
 title: AEM Mobile - GDPR-beredskap
-seo-title: AEM Mobile - GDPR-beredskap
+seo-title: AEM Mobile - GDPR Readiness
 description: '"AEM Mobile - GDPR-beredskap"'
-seo-description: 'null'
+seo-description: null
 uuid: 817c434f-4b78-40f7-99d6-6efafdedb77e
 contentOwner: trushton
 discoiquuid: 9399dd3d-a485-4f53-a6f2-7b190da4235b
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: d06e675f-fb61-47da-85de-e0b50dd44153
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
-source-wordcount: '697'
+source-wordcount: '692'
 ht-degree: 0%
 
 ---
-
 
 # AEM Mobile - GDPR-beredskap {#aem-mobile-gdpr-readiness}
 
@@ -35,7 +34,7 @@ För att vara säker på att du inte blandar ihop AEM Mobile med den äldre Digi
 
 [https://digitalpublishing.acrobat.com/welcome.html](https://digitalpublishing.acrobat.com/welcome.html)
 
-### Initierar en GDPR-begäran {#initiating-a-gdpr-request}
+### Initiera en GDPR-begäran {#initiating-a-gdpr-request}
 
 Kontakta Adobe kundtjänst för att starta en GDPR-förfrågan om Digital Publishing Suite.
 
@@ -48,7 +47,7 @@ Obligatorisk:
 Ange minst 1 av följande:
 
 * Slutanvändarens kund tillhandahöll OAuth ID (det ID som används i kundens system för direkttillstånd): *dpsc-directEntitlementId*
-* För Windows-appanvändare, slutanvändarens App Store-ID: *dpsc-windowsAppStoreId*
+* För Windows-appanvändare gäller slutanvändarens App Store-ID: *dpsc-windowsAppStoreId*
 * E-postadressen som slutanvändaren använde för att interagera med DPS-appen: *e-post*
 
 ### Vanliga frågor och svar (FAQ) {#frequently-asked-questions-faq}
@@ -86,10 +85,10 @@ Här följer ett exempel på indata och resultat från en Digital Publishing Sui
 #### Indata: {#inputs}
 
 ```
-dpsc-contractId = “12345-1234-12416234” 
-directEntitlementId = “1234-1234-1234” 
-windowsAppStoreId = “testWinAppStoreId” 
-email = “test@what.com”
+dpsc-contractId = "12345-1234-12416234" 
+directEntitlementId = "1234-1234-1234" 
+windowsAppStoreId = "testWinAppStoreId" 
+email = "test@what.com"
 ```
 
 #### Utdata {#outputs}
@@ -303,4 +302,3 @@ email = “test@what.com”
 
 }
 ```
-

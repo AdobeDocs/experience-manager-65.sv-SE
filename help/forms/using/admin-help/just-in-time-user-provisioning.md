@@ -1,28 +1,27 @@
 ---
 title: Alltid användaretablering
-seo-title: Alltid användaretablering
+seo-title: Just-in-time user provisioning
 description: Använd tidsbestämd etablering för att lägga till användare i användarhantering efter lyckad autentisering och tilldela dynamiskt relevanta roller och grupper till den nya användaren.
-seo-description: Använd tidsbestämd etablering för att lägga till användare i användarhantering efter lyckad autentisering och tilldela dynamiskt relevanta roller och grupper till den nya användaren.
+seo-description: Use just-in-time provisioning to add users to User Management after successfull authentication and dynamically assign relevant roles and groups to the new user.
 uuid: a5ad4698-70bb-487b-a069-7133e2f420c2
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/setting_up_and_organizing_users
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: e80c3f98-baa1-45bc-b713-51a2eb5ec165
-translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+exl-id: 7bde0a09-192a-44a8-83d0-c18e335e9afa
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
-source-wordcount: '599'
+source-wordcount: '573'
 ht-degree: 0%
 
 ---
 
-
-# Alltid aktivering av användare {#just-in-time-user-provisioning}
+# Alltid användaretablering {#just-in-time-user-provisioning}
 
 AEM formulär har stöd för etablering i realtid av användare som ännu inte finns i användarhantering. Med just-in-time-etablering läggs användare automatiskt till i användarhanteringen efter att inloggningsuppgifterna har autentiserats. Dessutom tilldelas relevanta roller och grupper dynamiskt till den nya användaren.
 
-## Behov av användaretablering just-in-time {#need-for-just-in-time-user-provisioning}
+## Behovet av användarprovisionering i precis tid {#need-for-just-in-time-user-provisioning}
 
 Så här fungerar traditionell autentisering:
 
@@ -32,7 +31,7 @@ Så här fungerar traditionell autentisering:
 
    **Finns:** Om användaren är aktuell och olåst returnerar Hantering av användare autentiseringen. Om användaren inte är aktuell eller låst returneras ett autentiseringsfel.
 
-   **Finns inte:** Användarhantering returnerar ett autentiseringsfel.
+   **Finns inte:** Användarhantering returnerar autentiseringsfel.
 
    **Ogiltig:** Användarhantering returnerar autentiseringsfel.
 
@@ -43,7 +42,7 @@ När etablering bara är i tid implementeras skapas en ny användare dynamiskt i
 
 ## Implementera etablering av användare som är just-in-time {#implement-just-in-time-user-provisioning}
 
-### API:er för just-in-time-etablering {#apis-for-just-in-time-provisioning}
+### API:er för etablering i precis tid {#apis-for-just-in-time-provisioning}
 
 AEM innehåller följande API:er för etablering i precis tid:
 
@@ -82,9 +81,9 @@ public Boolean assign(User user);
 }
 ```
 
-### Att tänka på när du skapar en just-in-time-aktiverad domän {#considerations-while-creating-a-just-in-time-enabled-domain}
+### Att tänka på när du skapar en domän som bara är aktiverad vid en viss tidpunkt {#considerations-while-creating-a-just-in-time-enabled-domain}
 
-* När du skapar ett anpassat `IdentityCreator` för en hybriddomän måste du se till att ett dummy-lösenord anges för den lokala användaren. Lämna inte lösenordsfältet tomt.
+* När du skapar en anpassad `IdentityCreator` för en hybriddomän, se till att ett dummy-lösenord anges för den lokala användaren. Lämna inte lösenordsfältet tomt.
 * Rekommendation: Använd `DomainSpecificAuthentication` för att validera inloggningsuppgifter mot en specifik domän.
 
 ### Skapa en domän som är aktiverad just-in-time {#create-a-just-in-time-enabled-domain}
@@ -103,13 +102,12 @@ public Boolean assign(User user);
 
 Anta att en användare försöker logga in AEM formulär och att en autentiseringsleverantör accepterar sina användaruppgifter. Om användaren inte finns i databasen för användarhantering än misslyckas identitetskontrollen för användaren. AEM utför nu följande åtgärder:
 
-1. Skapa ett `UserProvisioningBO`-objekt med autentiseringsdata och placera det i en autentiseringskarta.
-1. Baserat på domäninformation som returnerats av `UserProvisioningBO`, hämtar och anropar du den registrerade `IdentityCreator` och `AssignmentProvider` för domänen.
-1. Anropa `IdentityCreator`. Extrahera `UserInfo` från autentiseringsuppgiftskartan om den returnerar en lyckad `AuthResponse`. Skicka det till `AssignmentProvider` för grupp-/rolltilldelning och annan efterbearbetning när användaren har skapats.
+1. Skapa en `UserProvisioningBO` objektet med autentiseringsdata och placera det i en autentiseringsuppgiftskarta.
+1. Baserat på domäninformation som returneras av `UserProvisioningBO`, hämta och anropa den registrerade `IdentityCreator` och `AssignmentProvider` för domänen.
+1. Anropa `IdentityCreator`. Om det returnerar en lyckad `AuthResponse`, extrahera `UserInfo` från referenskartan. Skicka det till `AssignmentProvider` för grupp-/rolltilldelning och annan efterbearbetning efter att användaren har skapats.
 1. Om användaren har skapats utan fel returnerar du användarens inloggningsförsök.
 1. För hybriddomäner hämtar du användarinformation från autentiseringsdata som tillhandahålls till autentiseringsprovidern. Om den här informationen har hämtats kan du skapa användaren direkt.
 
 >[!NOTE]
 >
->Etableringsfunktionen för just-in-time levereras med en standardimplementering av `IdentityCreator` som du kan använda för att dynamiskt skapa användare. Användare skapas med den information som är associerad med katalogerna i domänen.
-
+>Etableringsfunktionen i precis tid levereras med en standardimplementering av `IdentityCreator` som du kan använda för att dynamiskt skapa användare. Användare skapas med den information som är associerad med katalogerna i domänen.

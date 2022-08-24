@@ -1,8 +1,8 @@
 ---
 title: Bästa praxis för översättning
-seo-title: Bästa praxis för översättning
+seo-title: Translation Best Practices
 description: Här hittar du de bästa arbetssätten som skapats av Adobe tekniker och konsultteam så att du kan komma igång med översättningsprojekt.
-seo-description: Här hittar du de bästa arbetssätten som skapats av Adobe tekniker och konsultteam så att du kan komma igång med översättningsprojekt.
+seo-description: Find best practices compiled by Adobe engineering and consulting teams to help you get up and running with translation projects.
 uuid: 3bac1d73-9696-4c9b-8bdd-6f00fac40cf7
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,14 +10,13 @@ topic-tags: site-features, best-practices
 content-type: reference
 discoiquuid: 1554010e-a1d1-4edf-b28f-9eead8f83b4a
 feature: Language Copy
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 01a81c4b-cb30-4f7e-b281-7194ebb5fc70
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
-source-wordcount: '861'
+source-wordcount: '836'
 ht-degree: 0%
 
 ---
-
 
 # Bästa praxis för översättning{#translation-best-practices}
 
@@ -25,25 +24,25 @@ ht-degree: 0%
 
 Att skapa eller utöka en global webbnärvaro kan vara en komplex process, men med bra planering och planering kan AEM förenkla arbetet och stödja företagets globala mål.
 
-* **Planera för global** expansion innan du implementerar din första webbplats. Att anpassa en befintlig webbplats för global täckning när webbplatsen implementerades med kort varsel är vanligtvis svårare än att planera för global expansion i början:
+* **Plan för global expansion** innan du implementerar din första webbplats. Att anpassa en befintlig webbplats för global täckning när webbplatsen implementerades med kort varsel är vanligtvis svårare än att planera för global expansion i början:
 
-   * Utvärdera det aktuella läget för organisationens lokaliseringslösning. Kontrollera om du har **verktygen**, **processerna** och **resurserna** på plats för att stödja global expansion.
-   * Var uppmärksam på **globala regler** och **regionala språkinställningar**. Designa flexibla innehållsstrukturer och processer som kan hantera en föränderlig global affärsmiljö.
+   * Utvärdera det aktuella läget för organisationens lokaliseringslösning. Kontrollera om du har **verktyg**, **processer** och **resurser** på plats för att stödja global expansion.
+   * Var medveten om **global reglering** och **regional språkinställning**. Designa flexibla innehållsstrukturer och processer som kan hantera en föränderlig global affärsmiljö.
 
-* Fastställ en **styrningsmodell** som stöder din globala verksamhet och använder AEM som MSM och användarbehörigheter för att framtvinga den valda modellen. Du kan till exempel avgöra om innehållet ska redigeras centralt och&quot;pushas&quot; eller&quot;hämtas&quot; till regioner/länder. Bestäm vilket innehåll som kan låsas upp och ändras i olika geografiska områden. Bestäm vem som ansvarar för att initiera och hantera översättningar.
+* Bestämma en **styrning** modell som stöder er globala verksamhet och använder AEM som MSM och användarbehörigheter för att tillämpa den valda modellen. Du kan till exempel avgöra om innehållet ska redigeras centralt och&quot;pushas&quot; eller&quot;hämtas&quot; till regioner/länder. Bestäm vilket innehåll som kan låsas upp och ändras i olika geografiska områden. Bestäm vem som ansvarar för att initiera och hantera översättningar.
 * Om resurserna tillåter är det bäst att hantera översättningsaktiviteter från ett centralt team som kan utveckla expertis i de verktyg, processer och leverantörsrelationer som behövs.
-* **Planera**,  **** skapa prototyper och testa  **** er globala struktur och processer för att säkerställa att de stöder verksamheten och att ni har den support som krävs från intressenter i olika länder.
+* **Plan**, **prototype** och **test** er globala struktur och processer för att säkerställa att de stöder företaget och att ni har den support som krävs från intressenter i de olika geografiska områdena.
 
-## Platsstruktur {#site-structure}
+## Webbplatsstruktur {#site-structure}
 
-* När du utformar din webbplatsstruktur börjar du med att undersöka ditt innehåll och avgör var och på vilket språk innehållet skrivs. Platsen bör vara den översta nivån på din plats.
-* Det bästa sättet är en **språkbaserad struktur** med högst tre nivåer mellan den översta utvecklingsnivån och landsplatser.
-* Använd en namngivningskonvention för språk/land som följer **W3C-standarden**.
+* När du utformar webbplatsstrukturen börjar du med att undersöka ditt innehåll och avgör var och på vilket språk innehållet skrivs. Platsen bör vara den översta nivån på din plats.
+* Det bästa sättet är att **språkbaserad struktur** med högst tre nivåer mellan den högsta utvecklingsnivån och landsinställningarna.
+* Använd en namngivningskonvention för språk/land som följer **W3C-standarder**.
 * Bestäm hur innehållet ska distribueras mellan regioner och länder. Tänk på vilka länder som delar språk. Vi rekommenderar att du skapar språkmallsidor, ett lager med oaktiverade sidor, där översatt innehåll kan granskas och ändras och sedan pushas eller dras till en landsplats där det språket delas.
 * Det finns två sätt att skapa språkmallar: använda språkkopior och använda MSM/live-kopior.
 
    * Språkkopieringsmetoden är den som används i AEM körklara ramverk för översättningsintegrering, och därför är det enklaste sättet att komma igång. Ramverket har ett användargränssnitt som gör det till att börja med enkelt att sprida och översätta innehållsändringar från huvudspråket (t.ex. engelska) till mallsidor på överordnad språk. I takt med att projektet växer blir det dock allt viktigare att automatisera arbetsflödet för att hantera översättningen av det ökade antalet sidor och/eller språk.
-   * Metoden med MSM/live-kopia kan vara ett alternativ för avancerade användningsområden, där webbplatser är större och mer komplexa. Stabil styrning och automatisering av arbetsflöden krävs från början för att hantera komplexa arvsrelationer mellan engelska och språkmallsidor och för att minska risken för att skriva över befintliga översättningar. Den här hanteringen kan utföras med hjälp av vissa översättningskontakter. Mer information finns i [MSM och flerspråkiga platser](/help/sites-administering/msm-best-practices.md#msm-and-multilingual-websites).
+   * Metoden med MSM/live-kopia kan vara ett alternativ för avancerade användningsområden, där webbplatser är större och mer komplexa. Stabil styrning och automatisering av arbetsflöden krävs från början för att hantera komplexa arvsrelationer mellan engelska och språkmallsidor och för att minska risken för att skriva över befintliga översättningar. Den här hanteringen kan utföras med hjälp av vissa översättningskontakter. Se [MSM och flerspråkiga webbplatser](/help/sites-administering/msm-best-practices.md#msm-and-multilingual-websites) för mer information.
 
 * Om ditt överordnad språk har globala variationer är det möjligt att använda MSM för att skapa en live-kopia från den globala överordnad som ska användas för översättning. Om global redigering till exempel utförs på en amerikansk engelska-överordnad skapar du en internationell engelska-överordnad som en live-kopia och bas för översättning till andra språk.
 * Använd MSM för att skapa landsplatser från översatta språkmallar och för att lansera innehåll på webbplatser som delar samma språk. Till exempel kan den franska överordnad användas på webbplatser i Frankrike, Belgien och Schweiz.
@@ -51,16 +50,15 @@ Att skapa eller utöka en global webbnärvaro kan vara en komplex process, men m
 
 ## Översättningsprocesser och metoder {#translation-processes-and-methods}
 
-* Engagera en **lokaliseringstjänstleverantör (LSP)** med expertis inom översättning och relaterade lokaliseringsaktiviteter. LSP-leverantörer kan hjälpa er att skalförändra er globala verksamhet genom att tillhandahålla en rad resurser och tekniker som förbättrar effektiviteten och sparar översättningskostnader:
+* Aktivera en **lokaliseringstjänsteleverantör (LSP)** med expertis inom översättning och tillhörande lokaliseringsverksamhet. LSP-leverantörer kan hjälpa er att skalförändra er globala verksamhet genom att tillhandahålla en rad resurser och tekniker som förbättrar effektiviteten och sparar översättningskostnader:
 
    * Vissa leverantörer av lågprisleverantörer är både tjänste- och teknikleverantörer. Det finns också fristående teknikleverantörer som tillåter många lågprisleverantörer att delta i deras översättningsplattformar.
-   * **AEM Translation Framework** stöder integrering med en mängd olika leverantörer av översättningsteknik för både maskinöversättning och mänsklig översättning.
-   * Lär dig hur du [integrerar LSP-anslutningar i ditt AEM](/help/sites-administering/translation.md) för att automatisera innehållsöversättning, eller hur du manuellt skapar, exporterar och importerar översättningsprojekt för testning och i de fall där det inte finns någon leverantör av LSP- eller översättningsteknik.
+   * The **AEM Translation Framework** har stöd för integrering med en mängd olika leverantörer av översättningsteknik för både maskinöversättning och mänsklig översättning.
+   * Lär dig hur [integrera LSP-anslutningar i ditt AEM system](/help/sites-administering/translation.md) för att automatisera översättning av innehåll, eller hur du manuellt skapar, exporterar och importerar översättningsprojekt för testning och i de fall där det inte finns någon leverantör av LSP- eller översättningsteknik.
 
-* Välj den **översättningsmetod** som bäst passar innehållet.
+* Välj en **översättningsmetod** som bäst passar innehållet.
 
-   * **Personlig** översättning passar bäst för innehåll där meddelanden och kvalitetskrav är höga och där innehållet kommer att finnas kvar en tid på webbplatsen, till exempel marknadsföringssidor.
-   * **Maskinöversättning** kan vara ett bra val för massvolymer av översättning när publiceringstiden är kritisk, kvalitetsförväntningarna är avspända eller personalens översättningskostnader är oöverkomliga. Support-kunskapsbasen och användargenererat innehåll är vanligtvis maskinöversatta.
+   * **Personlig översättning** är bäst lämpat för innehåll där meddelanden och kvalitetskrav är höga och innehållet kommer att finnas kvar på webbplatsen under en tid, till exempel marknadsföringssidor.
+   * **Maskinöversättning** kan vara ett bra val för massvolymer av översättning när publiceringstiden är viktig, kvalitetsförväntningarna är avspända eller de mänskliga översättningskostnaderna är oöverkomliga. Support-kunskapsbasen och användargenererat innehåll är vanligtvis maskinöversatta.
 
 * Använd expertis från lokaliseringsleverantörer, Adobe Consulting och systemintegratörer för att planera, skapa prototyper och testa din flerspråkiga webbplatsstruktur.
-

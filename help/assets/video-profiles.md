@@ -8,13 +8,13 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 3b8791c8-2c97-42b7-b4a9-e1157ac9ea02
 docset: aem65
-feature: Videoprofiler
+feature: Video Profiles
 role: User, Admin
 mini-toc-levels: 3
 exl-id: b290fac2-7259-45d7-b733-70419d632b07
-source-git-commit: 77687a0674b939460bd34011ee1b94bd4db50ba4
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
-source-wordcount: '3510'
+source-wordcount: '3508'
 ht-degree: 8%
 
 ---
@@ -33,19 +33,19 @@ Följande är andra faktorer som avgör kvaliteten på videoklipp:
 
    Som standard är &quot;Bredd&quot; i profilen Adaptiv videokodning inställd på &quot;Auto&quot;. Under uppspelningen används återigen den bästa kvaliteten baserat på spelarens storlek.
 
-Se [Bästa praxis för videokodning](/help/assets/video.md#best-practices-for-encoding-videos).
+Se [Bästa tillvägagångssätt för videokodning](/help/assets/video.md#best-practices-for-encoding-videos).
 
-Se även [Bästa metoder för att ordna dina digitala resurser så att du kan använda Bearbeta profiler](/help/assets/organize-assets.md).
+Se även [Bästa metoderna för att ordna dina digitala resurser så att du kan använda Bearbeta profiler](/help/assets/organize-assets.md).
 
 >[!NOTE]
 >
->Om du vill generera videons metadata och tillhörande videobildminiatyrer måste själva videon gå igenom kodningsprocessen i Dynamic Media. I Adobe Experience Manager kodar arbetsflödet **[!UICONTROL Dynamic Media Encode Video]** video om du har aktiverat Dynamic Media och konfigurerat videolmolntjänster. Det här arbetsflödet innehåller information om arbetsflödets processhistorik och fel. Se [Övervaka videokodning och YouTube publiceringsförlopp](/help/assets/video.md#monitoring-video-encoding-and-youtube-publishing-progress). Om du har aktiverat Dynamic Media och konfigurerat videolmolntjänster börjar arbetsflödet **[!UICONTROL Dynamic Media Encode Video]** automatiskt gälla när du överför en video. (Om du inte använder Dynamic Media börjar arbetsflödet **[!UICONTROL DAM Update Asset]** gälla.)
+>Om du vill generera videons metadata och tillhörande videobildminiatyrer måste själva videon gå igenom kodningsprocessen i Dynamic Media. I Adobe Experience Manager **[!UICONTROL Dynamic Media Encode Video]** arbetsflödet kodar video om du har aktiverat Dynamic Media och konfigurerat videolmolntjänster. Det här arbetsflödet innehåller information om arbetsflödets processhistorik och fel. Se [Övervaka videokodning och YouTube publiceringsförlopp](/help/assets/video.md#monitoring-video-encoding-and-youtube-publishing-progress). Om du har aktiverat Dynamic Media och konfigurerat videolmolntjänster kan du **[!UICONTROL Dynamic Media Encode Video]** arbetsflödet aktiveras automatiskt när du överför en video. (Om du inte använder Dynamic Media **[!UICONTROL DAM Update Asset]** arbetsflödet börjar gälla.)
 >
 >Metadata är användbara när du söker efter resurser. Miniatyrbilderna är statiska videobilder som genereras under kodningen. De krävs av Experience Manager-systemet och används i användargränssnittet för att hjälpa dig att visuellt identifiera videofilmer i kortvyn, sökresultatvyn och resurslista. Du kan se de genererade miniatyrbilderna när du väljer ikonen Återgivningar (färgpaletten) för en kodad video.
 
-När du har skapat videoprofilen kan du använda den på en eller flera mappar. Se [Använd en videoprofil på mappar](#applying-a-video-profile-to-folders).
+När du har skapat videoprofilen kan du använda den på en eller flera mappar. Se [Använda en videoprofil på mappar](#applying-a-video-profile-to-folders).
 
-Mer information om hur du definierar avancerade bearbetningsparametrar för andra resurstyper finns i [Konfigurera resursbearbetning](/help/assets/config-dms7.md#configuring-asset-processing).
+Mer information om hur du definierar avancerade bearbetningsparametrar för andra resurstyper finns i [Konfigurera tillgångsbearbetning](/help/assets/config-dms7.md#configuring-asset-processing).
 
 Se även [Profiler för bearbetning av metadata, bilder och video](processing-profiles.md).
 
@@ -118,15 +118,15 @@ Adobe Sensei är begränsat till 9 000 bildrutor. Fem minuter vid 30 bildrutor/s
 >
 >För att smart beskärning av video ska fungera måste du inkludera en eller flera förinställningar för videokodning i videoprofilen.
 
-Om du vill använda smart beskärning för video skapar du en adaptiv eller progressiv videokodningsprofil. Som en del av din profil använder du verktyget **[!UICONTROL Smart Crop Ratio]** för att välja fördefinierade proportioner. När du har definierat dina förinställningar för videokodning kan du till exempel lägga till en&quot;Mobile Landscape&quot;-definition med proportionerna 16x9 och en&quot;Mobile Portrait&quot;-definition med proportionerna 9x16. Andra proportioner eller beskärningsproportioner som du kan välja mellan är 1x1, 4x3 och 4x5.
+Om du vill använda smart beskärning för video skapar du en adaptiv eller progressiv videokodningsprofil. Som en del av din profil använder du **[!UICONTROL Smart Crop Ratio]** för att markera fördefinierade proportioner. När du har definierat dina förinställningar för videokodning kan du till exempel lägga till en&quot;Mobile Landscape&quot;-definition med proportionerna 16x9 och en&quot;Mobile Portrait&quot;-definition med proportionerna 9x16. Andra proportioner eller beskärningsproportioner som du kan välja mellan är 1x1, 4x3 och 4x5.
 
 ![Redigera en videokodningsprofil med smart beskärning](assets/edit-smart-crop-video2.png)
 
-Du kan växla videomaterifiens smarta beskärning till antingen på eller av med skjutreglaget längst till höger om **[!UICONTROL Smart Crop Ratio]** i användargränssnittet.
+Du kan aktivera eller inaktivera videomarkering för smart beskärning i videoprofilen med reglaget längst till höger om **[!UICONTROL Smart Crop Ratio]** i användargränssnittet.
 
 När du har skapat och sparat videoprofilen kan du använda den på de mappar du vill använda.
 
-Se [Använd videoprofiler på specifika mappar](#applying-video-profiles-to-specific-folders) eller [Använd en videoprofil globalt](#applying-a-video-profile-globally).
+Se [Använd videoprofiler på specifika mappar](#applying-video-profiles-to-specific-folders) eller [Använda en videoprofil globalt](#applying-a-video-profile-globally).
 
 Se även [Smart beskärning för bilder](image-profiles.md).
 
@@ -134,7 +134,7 @@ Se även [Smart beskärning för bilder](image-profiles.md).
 
 Dynamic Media har redan en fördefinierad Adaptive Video Encoding-profil - en grupp inställningar för videoöverföring för MP4 H.264 - som är optimerade för bästa möjliga visningsupplevelse. Du kan använda den här profilen när du överför videoklipp.
 
-Om den här fördefinierade profilen inte uppfyller dina behov kan du välja att skapa en egen adaptiv videokodningsprofil. När du använder inställningen **[!UICONTROL Encode for adaptive streaming]** - som en god praxis - valideras alla kodningsförinställningar som du lägger till i profilen så att alla videoklipp har samma proportioner. Dessutom hanteras de kodade videoklippen som en uppsättning med flera bithastigheter för direktuppspelning.
+Om den här fördefinierade profilen inte uppfyller dina behov kan du välja att skapa en egen adaptiv videokodningsprofil. När du använder inställningen **[!UICONTROL Encode for adaptive streaming]** - det bästa sättet att göra detta är att alla kodningsförinställningar som du lägger till i profilen valideras så att alla videofilmer har samma proportioner. Dessutom hanteras de kodade videoklippen som en uppsättning med flera bithastigheter för direktuppspelning.
 
 När du skapar videokodningsprofilen bör du tänka på att de flesta kodningsalternativen är förifyllda med rekommenderade standardinställningar. Om du väljer ett annat värde än det rekommenderade kan det emellertid ge sämre videokvalitet vid uppspelning och andra prestandaproblem.
 
@@ -155,28 +155,28 @@ Se även [Skapa en videokodningsprofil för progressiv direktuppspelning](#creat
 
 Se även [Bästa tillvägagångssätt för videokodning](/help/assets/video.md#best-practices-for-encoding-videos).
 
-Mer information om hur du definierar avancerade bearbetningsparametrar för andra resurstyper finns i [Konfigurera resursbearbetning](/help/assets/config-dms7.md#configuring-asset-processing).
+Mer information om hur du definierar avancerade bearbetningsparametrar för andra resurstyper finns i [Konfigurera tillgångsbearbetning](/help/assets/config-dms7.md#configuring-asset-processing).
 
-**Om du vill skapa en videoprofil för adaptiv direktuppspelning**,
+**Skapa en videoprofil för adaptiv direktuppspelning**,
 
-1. Markera Experience Manager-logotypen och gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles]**.
-1. Välj **[!UICONTROL Create]** om du vill lägga till en videoprofil.
+1. Markera logotypen för Experience Manager och navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles]**.
+1. Välj **[!UICONTROL Create]** för att lägga till en videoprofil.
 
 1. Ange ett namn och en beskrivning för profilen.
-1. Välj **[!UICONTROL Add Video Encoding Preset]** på sidan Skapa/redigera förinställningar för videokodning.
-1. Ange alternativen för video och ljud på fliken **[!UICONTROL Basic]**.
+1. På sidan Skapa/redigera förinställningar för videokodning väljer du **[!UICONTROL Add Video Encoding Preset]**.
+1. På **[!UICONTROL Basic]** anger du alternativen för video och ljud.
 Välj informationsikonen bredvid varje alternativ för ytterligare beskrivningar eller rekommenderade inställningar baserat på den valda videoformatskoden.
-1. Kontrollera att **[!UICONTROL Keep aspect ratio]** är markerat under rubriken Videostorlek.
-1. Ställ in videobildrutans upplösning i pixlar. Använd värdet **[!UICONTROL Auto]** för att automatiskt skala så att det matchar källproportionerna (bredd/höjd). Exempel: Auto x 480 eller 640 x Auto.
+1. Under rubriken Videostorlek ser du till att **[!UICONTROL Keep aspect ratio]** är markerad.
+1. Ställ in videobildrutans upplösning i pixlar. Använd **[!UICONTROL Auto]** värdet skalas automatiskt så att det matchar källproportionerna (bredd-/höjdförhållandet). Exempel: Auto x 480 eller 640 x Auto.
 
 1. Gör något av följande:
 
-   * I fältet **[!UICONTROL Width]** anger du **[!UICONTROL auto]**. Ange ett värde i pixlar i fältet **[!UICONTROL Height]**.
+   * I **[!UICONTROL Width]** fält, ange **[!UICONTROL auto]**. I **[!UICONTROL Height]** anger du ett värde i pixlar.
 
-   * Om du vill få hjälp med att visualisera storleken på videon väljer du informationsikonen (i) till höger om **[!UICONTROL Height]** för att öppna sidan Storlekskalkylator. Använd **[!UICONTROL Size Calculator]** för att ange de videodimensioner (som representeras av den blå rutan) som du vill använda. Välj **[!UICONTROL X]** i det övre högra hörnet när du är klar.
+   * Om du vill få hjälp med att visualisera videons storlek väljer du informationsikonen (i) till höger om **[!UICONTROL Height]** för att öppna sidan för storlekskalkylatorn. Använd **[!UICONTROL Size Calculator]** för att ange de videodimensioner (som representeras av den blå rutan) som du vill använda. Välj **[!UICONTROL X]** i det övre högra hörnet när du är klar.
 
-1. (Valfritt) Markera fliken **[!UICONTROL Advanced]** och kontrollera att kryssrutan **[!UICONTROL Use Default Values]** är markerad (rekommenderas). Du kan också ändra avancerade video- och ljudinställningar.
-1. Välj **[!UICONTROL Save]** längst upp till höger på sidan om du vill spara förinställningen.
+1. (Valfritt) Välj **[!UICONTROL Advanced]** och se till att **[!UICONTROL Use Default Values]** är markerad (rekommenderas). Du kan också ändra avancerade video- och ljudinställningar.
+1. I det övre högra hörnet på sidan väljer du **[!UICONTROL Save]** för att spara förinställningen.
 1. Gör något av följande:
    * Upprepa steg 4-10 för att skapa ytterligare kodningsförinställningar. (Adaptiv videoströmning kräver mer än en videoförinställning.)
    * Fortsätt till nästa steg.
@@ -184,7 +184,7 @@ Välj informationsikonen bredvid varje alternativ för ytterligare beskrivningar
 1. (Valfritt) Gör så här om du vill lägga till videomaterial i videoklipp som den här profilen tillämpas på:
    * På sidan Redigera videoprofil, till höger om rubriken Smarta beskärningsproportioner, väljer du **[!UICONTROL Add New]**.
    * I fältet Namn anger du ett namn på beskärningsförhållandet som gör det lättare att identifiera det.
-   * Välj den proportion du vill använda i listrutan **[!UICONTROL Crop Ratio]**.
+   * Från **[!UICONTROL Crop Ratio]** väljer du den proportion som du vill använda.
 
 1. Gör något av följande:
 
@@ -193,44 +193,44 @@ Välj informationsikonen bredvid varje alternativ för ytterligare beskrivningar
 
 1. I det övre högra hörnet på sidan väljer du **[!UICONTROL Save]** igen för att spara profilen.
 
-Nu kan du använda profilen för mappar som innehåller videoklipp. Se [Använd en videoprofil på mappar](#applying-a-video-profile-to-folders) eller [Använd en videoprofil globalt](#applying-a-video-profile-globally).
+Nu kan du använda profilen för mappar som innehåller videoklipp. Se [Använda en videoprofil på mappar](#applying-a-video-profile-to-folders) eller [Använda en videoprofil globalt](#applying-a-video-profile-globally).
 
 ## Skapa en videoprofil för progressiv direktuppspelning {#creating-a-video-encoding-profile-for-progressive-streaming}
 
-Om du väljer att inte använda alternativet **[!UICONTROL Encode for adaptive streaming]** behandlas alla kodningsförinställningar som du lägger till i profilen som enskilda videoåtergivningar för direktuppspelad video med en bithastighet eller progressiv videoleverans. Dessutom går det inte att kontrollera att alla videoåtergivningar har samma proportioner.
+Om du väljer att inte använda alternativet **[!UICONTROL Encode for adaptive streaming]**, behandlas alla kodningsförinställningar som du lägger till i profilen som enskilda videoåtergivningar för direktuppspelning med en bithastighet eller progressiv videoleverans. Dessutom går det inte att kontrollera att alla videoåtergivningar har samma proportioner.
 
 Beroende på vilket läge du använder är videoformatets kodekar följande:
 
 * Dynamic Media-Scene7-läge: H.264 (.mp4)
 * Dynamic Media-hybridläge: H.264 (.mp4), WebM
 
-Se även [Skapa en videokodningsprofil för adaptiv direktuppspelning](#creating-a-video-encoding-profile-for-adaptive-streaming).
+Se även [Skapa en videokodningsprofil för adaptiv strömning](#creating-a-video-encoding-profile-for-adaptive-streaming).
 
 Se även [Bästa tillvägagångssätt för videokodning](/help/assets/video.md#best-practices-for-encoding-videos).
 
-Mer information om hur du definierar avancerade bearbetningsparametrar för andra resurstyper finns i [Konfigurera resursbearbetning](/help/assets/config-dms7.md#configuring-asset-processing).
+Mer information om hur du definierar avancerade bearbetningsparametrar för andra resurstyper finns i [Konfigurera tillgångsbearbetning](/help/assets/config-dms7.md#configuring-asset-processing).
 
 **Så här skapar du en videoprofil för progressiv direktuppspelning:**
 
-1. Markera Experience Manager-logotypen och gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles]**.
-1. Välj **[!UICONTROL Create]** om du vill lägga till en videoprofil.
+1. Markera logotypen för Experience Manager och navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles]**.
+1. Välj **[!UICONTROL Create]** för att lägga till en videoprofil.
 1. Ange ett namn och en beskrivning för profilen.
-1. Välj **[!UICONTROL Add Video Encoding Preset]** på sidan Skapa/redigera förinställningar för videokodning.
-1. Ange alternativen för video och ljud på fliken **[!UICONTROL Basic]**.
+1. På sidan Skapa/redigera förinställningar för videokodning väljer du **[!UICONTROL Add Video Encoding Preset]**.
+1. På **[!UICONTROL Basic]** anger du alternativen för video och ljud.
 Välj informationsikonen bredvid varje alternativ för ytterligare beskrivningar eller rekommenderade inställningar baserat på den valda videoformatskoden.
-1. (Valfritt) Avmarkera **[!UICONTROL Keep aspect ratio]** under rubriken Videostorlek.
+1. (Valfritt) Avmarkera under rubriken Videostorlek **[!UICONTROL Keep aspect ratio]**.
 1. Gör följande:
-   * I fältet **[!UICONTROL Width]** anger du **[!UICONTROL auto]**.
-   * Ange ett värde i pixlar i fältet **[!UICONTROL Height]**.
-Om du vill få hjälp med att visualisera storleken på videon väljer du informationsikonen för höjden för att öppna sidan **[!UICONTROL Size Calculator]**. Använd sidan **[!UICONTROL Size Calculator]** för att ytterligare ange videodimensionen (blå ruta) som du vill ha den. När du är klar väljer du **[!UICONTROL X]** i dialogrutans övre högra hörn.
+   * I **[!UICONTROL Width]** fält, ange **[!UICONTROL auto]**.
+   * I **[!UICONTROL Height]** anger du ett värde i pixlar.
+Om du vill få hjälp med att visualisera storleken på videon väljer du informationsikonen för höjden för att öppna **[!UICONTROL Size Calculator]** sida. Använd **[!UICONTROL Size Calculator]** för att ytterligare ange videodimensionen (blå ruta). När du är klar väljer du **[!UICONTROL X]**.
 1. (Valfritt) Gör något av följande:
 
-   * Markera fliken **[!UICONTROL Advanced]** och kontrollera att kryssrutan **[!UICONTROL Use Default Values]** är markerad (rekommenderas).
+   * Välj **[!UICONTROL Advanced]** och se till att **[!UICONTROL Use Default Values]** är markerad (rekommenderas).
 
-   * Avmarkera kryssrutan **[!UICONTROL Use Default Values]** och ange önskade videoinställningar och ljudinställningar.
+   * Rensa **[!UICONTROL Use Default Values]** och ange önskade videoinställningar och ljudinställningar.
 Välj informationsikonen bredvid varje alternativ för ytterligare beskrivningar eller rekommenderade inställningar baserat på den valda videoformatskoden.
 
-1. Välj **[!UICONTROL Save]** längst upp till höger på sidan om du vill spara förinställningen.
+1. I det övre högra hörnet på sidan väljer du **[!UICONTROL Save]** för att spara förinställningen.
 1. Gör något av följande:
 
    * Upprepa steg 4-9 för att skapa ytterligare kodningsförinställningar.
@@ -240,14 +240,14 @@ Välj informationsikonen bredvid varje alternativ för ytterligare beskrivningar
 
    * På sidan Redigera videoprofil, till höger om rubriken Smarta beskärningsproportioner, väljer du **[!UICONTROL Add New]**.
    * I fältet Namn anger du ett namn på beskärningsförhållandet som gör det lättare att identifiera det.
-   * Välj den proportion du vill använda i listrutan **[!UICONTROL Crop Ratio]**.
+   * Från **[!UICONTROL Crop Ratio]** väljer du den proportion som du vill använda.
 
 1. Gör något av följande:
 
    * Fortsätt lägga till nya beskärningsproportioner efter behov.
    * Fortsätt till nästa steg.
 
-1. Välj **[!UICONTROL Save]** längst upp till höger på sidan för att spara profilen.
+1. I det övre högra hörnet på sidan väljer du **[!UICONTROL Save]** för att spara profilen.
 
 Nu kan du använda profilen för mappar som innehåller videoklipp. Se [Tillämpa en videoprofil på mappar](#applying-a-video-profile-to-folders) eller [Tillämpa en videoprofil globalt](#applying-a-video-profile-globally).
 
@@ -258,7 +258,7 @@ Du kan redigera en befintlig videokodningsprofil för att dra nytta av avancerad
 **Så här använder du anpassade kodningsparametrar för video:**
 
 1. Markera Experience Manager-logotypen och navigera sedan till **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL CRXDE Lite]**.
-1. Gå till följande på CRXDE Lite-sidan i Utforskaren till vänster:
+1. Gå till följande på Utforskarpanelen till vänster på CRXDE Lite-sidan:
 
    `/conf/global/settings/dam/dm/presets/video/*name_of_video_encoding_profile_to_edit`
 
@@ -300,67 +300,67 @@ Du kan redigera en befintlig videokodningsprofil för att dra nytta av avancerad
   </tr>
   <tr>
    <td><code>audioBitrateCustom</code></td>
-   <td>Ange värdet <code>true</code> för att tvinga fram en konstant bithastighet för ljudströmmen, om det stöds av ljudkodeken.</td>
+   <td>Ange värde till <code>true</code> för att tvinga fram en konstant bithastighet för ljudströmmen, om detta stöds av ljudkodeken.</td>
    <td><code>String</code></td>
-   <td><p><code>true</code>/<code>false</code></p> <p>Standardvärdet är <code>false</code>.</p> <p>Rekommenderat värde för HLS (HTTP Live Streaming) är <code>false</code>.</p> <p> </p> </td>
+   <td><p><code>true</code>/<code>false</code></p> <p>Standard är <code>false</code>.</p> <p>Rekommenderat värde för HLS (HTTP Live Streaming) är <code>false</code>.</p> <p> </p> </td>
   </tr>
  </tbody>
 </table>
 
 ![chlimage_1-516](assets/chlimage_1-516.png)
 
-1. Välj **[!UICONTROL Add]** längst ned till höger på sidan.
+1. I det nedre högra hörnet av sidan väljer du **[!UICONTROL Add]**.
 1. Gör något av följande:
 
    * Upprepa steg 3 och 4 för att lägga till ytterligare en parameter i videokodningsprofilen.
-   * Välj **[!UICONTROL Save All]** längst upp till vänster på sidan.
+   * I närheten av sidans övre vänstra hörn väljer du **[!UICONTROL Save All]**.
 
-1. I det övre vänstra hörnet på CRXDE Lite-sidan väljer du ikonen **[!UICONTROL Back Home]** för att gå tillbaka till Experience Manager.
+1. I det övre vänstra hörnet på CRXDE Lite-sidan väljer du **[!UICONTROL Back Home]** -ikon för att återgå till Experience Manager.
 
 ### Redigera en videoprofil {#editing-a-video-encoding-profile}
 
 Du kan redigera alla videoprofiler som du har skapat för att lägga till, redigera eller ta bort förinställningar för video i den profilen.
 
-Som standard kan du inte redigera den fördefinierade **[!UICONTROL Adaptive Video Encoding]**-profilen som medföljde Dynamic Media. I stället kan du enkelt kopiera profilen och spara den med ett nytt namn. Du kan sedan redigera de önskade förinställningarna i den kopierade profilen.
+Som standard kan du inte redigera de fördefinierade, färdiga **[!UICONTROL Adaptive Video Encoding]** profil som medföljde Dynamic Media. I stället kan du enkelt kopiera profilen och spara den med ett nytt namn. Du kan sedan redigera de önskade förinställningarna i den kopierade profilen.
 
 Se även [Bästa tillvägagångssätt för videokodning](/help/assets/video.md#best-practices-for-encoding-videos).
 
-Mer information om hur du definierar avancerade bearbetningsparametrar för andra resurstyper finns i [Konfigurera resursbearbetning](/help/assets/config-dms7.md#configuring-asset-processing).
+Mer information om hur du definierar avancerade bearbetningsparametrar för andra resurstyper finns i [Konfigurera tillgångsbearbetning](/help/assets/config-dms7.md#configuring-asset-processing).
 
 **Så här redigerar du en videoprofil:**
 
-1. Markera Experience Manager-logotypen och gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles]**.
+1. Markera logotypen för Experience Manager och navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles]**.
 1. Markera ett videoprofilnamn på sidan Videoprofiler.
-1. Välj **[!UICONTROL Edit]** i verktygsfältet.
+1. I verktygsfältet väljer du **[!UICONTROL Edit]**.
 1. Redigera namn och beskrivning på sidan Video Encoding Profile.
 1. Det är en god idé att se till att kryssrutan **[!UICONTROL Encode for adaptive streaming]** är markerad.
 Välj informationsikonen om du vill ha en beskrivning av adaptiv direktuppspelning. (Om du redigerar en progressiv videoprofil ska du inte markera den här kryssrutan.)
 1. Under rubriken Förinställningar för videokodning lägger du till, redigerar eller tar bort förinställningar för videokodning som utgör profilen.
 
-   Välj informationsikonen bredvid varje alternativ på flikarna **[!UICONTROL Basic]** och **[!UICONTROL Advanced]** om du vill ha ytterligare beskrivningar eller rekommenderade inställningar baserade på den valda videoformatkodeken.
+   Välj informationsikonen bredvid varje alternativ på **[!UICONTROL Basic]** och **[!UICONTROL Advanced]** om du vill ha mer information eller rekommenderade inställningar baserat på den valda videoformatkodeken.
 
-1. Välj **[!UICONTROL Save]** i sidans övre högra hörn.
+1. I sidans övre högra hörn väljer du **[!UICONTROL Save]**.
 
 ### Kopiera en videoprofil {#copying-a-video-encoding-profile}
 
-1. Markera Experience Manager-logotypen och gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles]**.
+1. Markera logotypen för Experience Manager och navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles]**.
 1. Markera ett videoprofilnamn på sidan Videoprofiler.
-1. Välj **[!UICONTROL Copy]** i verktygsfältet.
+1. I verktygsfältet väljer du **[!UICONTROL Copy]**.
 1. Ange ett nytt namn för profilen på sidan Video Encoding Profile.
 1. Det är en god idé att se till att kryssrutan **[!UICONTROL Encode for adaptive streaming]** är markerad. Välj informationsikonen om du vill ha en beskrivning av adaptiv direktuppspelning. (Om du kopierar en progressiv videoprofil markerar du inte kryssrutan.)
 
-   I Dynamic Media - hybrid-läge är **[!UICONTROL Encode for adaptive streaming]** inte möjligt om en WebM-videoförinställning är en del av videoprofilen eftersom alla förinställningar måste vara MP4.
+   I Dynamic Media - hybrid-läge, om en WebM-videoförinställning är en del av videoprofilen, **[!UICONTROL Encode for adaptive streaming]** är inte möjligt eftersom alla förinställningar måste vara MP4.
 1. Under rubriken Förinställningar för videokodning lägger du till, redigerar eller tar bort förinställningar för videokodning som utgör profilen.
 
    Välj informationsikonen bredvid varje alternativ på flikarna Grundläggande och Avancerat för rekommenderade inställningar och beskrivningar.
 
-1. Välj **[!UICONTROL Save]** i sidans övre högra hörn.
+1. I sidans övre högra hörn väljer du **[!UICONTROL Save]**.
 
 ### Ta bort en videoprofil {#deleting-a-video-encoding-profile}
 
-1. Markera Experience Manager-logotypen och gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles]**.
+1. Markera logotypen för Experience Manager och navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles]**.
 1. Markera ett eller flera videoprofilnamn på sidan Videoprofiler.
-1. Välj **[!UICONTROL Delete]** i verktygsfältet.
+1. I verktygsfältet väljer du **[!UICONTROL Delete]**.
 1. Välj **[!UICONTROL OK]**.
 
 ## Använda en videoprofil på mappar {#applying-a-video-profile-to-folders}
@@ -383,33 +383,33 @@ Du kan använda en videoprofil på en mapp från menyn **[!UICONTROL Tools]** el
 
 För mappar som redan har tilldelats en profil visas profilens namn direkt under mappnamnet.
 
-Se även [Bearbeta resurser igen i en mapp efter att du har redigerat dess bearbetningsprofil](processing-profiles.md#reprocessing-assets).
+Se även [Bearbeta resurser i en mapp igen när du har redigerat dess bearbetningsprofil](processing-profiles.md#reprocessing-assets).
 
 #### Använda en videoprofil på mappar med hjälp av användargränssnittet Profiler {#applying-video-profiles-to-folders-by-way-of-the-profiles-user-interface}
 
-1. Markera Experience Manager-logotypen och gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles]**.
+1. Markera logotypen för Experience Manager och navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles]**.
 1. Välj den videoprofil som du vill använda för en eller flera mappar.
-1. Välj **[!UICONTROL Apply Profile to Folders]** och markera den eller de mappar som du vill använda för att ta emot de nyligen överförda resurserna och välj **[!UICONTROL Apply]**. För mappar som redan har tilldelats en profil visas profilens namn direkt under mappnamnet i **[!UICONTROL Card View]**.
+1. Välj **[!UICONTROL Apply Profile to Folders]** och markera den eller de mappar som du vill använda för att ta emot de nyligen överförda resurserna och markera **[!UICONTROL Apply]**. För mappar som redan har tilldelats en profil visas profilens namn direkt under mappnamnet i **[!UICONTROL Card View]**.
 Du kan [övervaka förloppet för ett videoprofilbearbetningsjobb](#monitoring-the-progress-of-an-encoding-job).
 
 #### Använda en videoprofil på mappar från Egenskaper {#applying-video-profiles-to-folders-from-properties}
 
-1. Markera Experience Manager-logotypen, navigera till **[!UICONTROL Assets]** och sedan till den mapp som du vill använda en videoprofil på.
-1. Markera den markerade kryssrutan i mappen och välj sedan **[!UICONTROL Properties]**.
-1. Välj fliken **[!UICONTROL Video Profiles]** och välj profilen i listrutan och välj **[!UICONTROL Save & Close]**. För mappar som redan har tilldelats en profil visas profilens namn direkt under mappnamnet.
+1. Markera logotypen för Experience Manager och navigera till **[!UICONTROL Assets]** och sedan till den mapp som du vill använda en videoprofil på.
+1. Markera kryssrutan i mappen och markera den sedan **[!UICONTROL Properties]**.
+1. Välj **[!UICONTROL Video Profiles]** och väljer profilen i listrutan och väljer **[!UICONTROL Save & Close]**. För mappar som redan har tilldelats en profil visas profilens namn direkt under mappnamnet.
 
    ![chlimage_1-518](assets/chlimage_1-518.png)
-Du kan  [övervaka förloppet för ett videoprofilbearbetningsjobb](#monitoring-the-progress-of-an-encoding-job).
+Du kan [övervaka förloppet för ett videoprofilbearbetningsjobb](#monitoring-the-progress-of-an-encoding-job).
 
 ### Tillämpa en videoprofil globalt {#applying-a-video-profile-globally}
 
-Förutom att tillämpa en profil på en mapp kan du även tillämpa en profil globalt så att allt innehåll som överförs till Experience Manager Assets i en mapp har den valda profilen.
+Förutom att tillämpa en profil på en mapp kan du även tillämpa en profil globalt så att allt innehåll som överförs till Experience Manager Assets i någon mapp har den valda profilen.
 
-Se även [Bearbeta resurser igen i en mapp efter att du har redigerat dess bearbetningsprofil](processing-profiles.md#reprocessing-assets).
+Se även [Bearbeta resurser i en mapp igen när du har redigerat dess bearbetningsprofil](processing-profiles.md#reprocessing-assets).
 
 **Så här använder du en videoprofil globalt:**
 
-* Navigera till CRXDE Lite till följande nod: `/content/dam/jcr:content`. Lägg till egenskapen `videoProfile:/libs/settings/dam/video/dynamicmedia/<name of video encoding profile>` och välj **[!UICONTROL Save All]**.
+* Navigera till CRXDE Lite till följande nod: `/content/dam/jcr:content`. Lägg till egenskapen `videoProfile:/libs/settings/dam/video/dynamicmedia/<name of video encoding profile>` och markera **[!UICONTROL Save All]**.
 
    ![chlimage_1-519](assets/chlimage_1-519.png)
 * Du kan [övervaka förloppet för ett videoprofilbearbetningsjobb](#monitoring-the-progress-of-an-encoding-job).
@@ -418,7 +418,7 @@ Se även [Bearbeta resurser igen i en mapp efter att du har redigerat dess bearb
 
 En bearbetningsindikator (eller förloppsindikator) visas så att du visuellt kan övervaka förloppet för ett videoprofilbearbetningsjobb.
 
-Du kan också visa filen `error.log` för att övervaka förloppet för ett kodningsjobb, för att se om kodningen är klar eller för att se eventuella jobbfel. `error.log` finns i mappen `logs` där din instans av Experience Manager är installerad.
+Du kan även visa `error.log` för att övervaka förloppet för ett kodningsjobb, för att se om kodningen är klar eller för att se eventuella jobbfel. The `error.log` finns i `logs` mapp där din instans av Experience Manager är installerad.
 
 ## Ta bort en videoprofil från mappar {#removing-a-video-profile-from-folders}
 
@@ -428,14 +428,14 @@ Du kan ta bort en videoprofil från en mapp från menyn **[!UICONTROL Tools]** e
 
 ### Ta bort en videoprofil från mappar via profilens användargränssnitt {#removing-video-profiles-from-folders-by-way-of-the-profiles-user-interface}
 
-1. Markera Experience Manager-logotypen och gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles]**.
+1. Markera logotypen för Experience Manager och navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles]**.
 1. Markera den videoprofil som du vill ta bort från en eller flera mappar.
-1. Välj **[!UICONTROL Remove Profile from Folders]** och markera den eller de mappar som du vill ta bort profilen från och välj **[!UICONTROL Remove]**.
+1. Välj **[!UICONTROL Remove Profile from Folders]** och markera den eller de mappar som du vill använda för att ta bort profilen från och markera **[!UICONTROL Remove]**.
 
    Du kan bekräfta att videoprofilen inte längre används för en mapp eftersom namnet inte längre visas under mappnamnet.
 
 ### Ta bort en videoprofil från mappar med hjälp av Egenskaper {#removing-video-profiles-from-folders-by-way-of-properties}
 
-1. Markera Experience Manager-logotypen, navigera till **[!UICONTROL Assets]** och sedan till den mapp som du vill ta bort en videoprofil från.
-1. Markera bockmarkeringen i mappen och välj sedan **[!UICONTROL Properties]**.
-1. Välj fliken **[!UICONTROL Video Profiles]** och välj **[!UICONTROL None]** i listrutan och välj **[!UICONTROL Save & Close]**. För mappar som redan har tilldelats en profil visas profilens namn direkt under mappnamnet.
+1. Markera logotypen för Experience Manager och navigera till **[!UICONTROL Assets]** och sedan till mappen som du vill ta bort en videoprofil från.
+1. Markera bockmarkeringen i mappen och markera sedan **[!UICONTROL Properties]**.
+1. Välj **[!UICONTROL Video Profiles]** och markera **[!UICONTROL None]** i listrutan och väljer **[!UICONTROL Save & Close]**. För mappar som redan har tilldelats en profil visas profilens namn direkt under mappnamnet.

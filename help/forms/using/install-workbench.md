@@ -1,14 +1,14 @@
 ---
 title: Installera workbench
-seo-title: Installera workbench
+seo-title: Install workbench
 description: Installera workbench.
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 role: Admin
 exl-id: d530dbb9-f95e-4329-9665-37faf8f7931b
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
-source-wordcount: '2246'
+source-wordcount: '2244'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,11 @@ Det här dokumentet innehåller anvisningar om hur du installerar och konfigurer
 
 ## Vem ska läsa det här dokumentet? {#who-should-read-this-doc}
 
-Det här dokumentet är avsett för administratörer och utvecklare som ansvarar för att installera, konfigurera, administrera eller distribuera Workbench. Här finns också information som behövs för att konfigurera systemet så att det stöder de uppgraderade AEM Forms-processerna. Informationen baseras på antagandet att alla som läser det här dokumentet känner till operativsystemet Microsoft® Windows®.
+Det här dokumentet är avsett för administratörer och utvecklare som ansvarar för att installera, konfigurera, administrera eller distribuera Workbench. Här finns också information som behövs för att konfigurera systemet så att det stöder de uppgraderade AEM Forms-processerna. Informationen baseras på antagandet att alla som läser det här dokumentet känner till Microsoft® Windows®.
 
 ## Ytterligare information {#additional-information}
 
-Resurserna i den här tabellen kan hjälpa dig att lära dig mer om och komma igång med AEM Forms.
+Resurserna i den här tabellen kan hjälpa dig att lära dig mer om och komma igång med att använda AEM Forms.
 <table>
  <tbody>
   <tr>
@@ -75,8 +75,8 @@ I det här avsnittet beskrivs maskinvaru- och programvarukraven samt vilka platt
 
 ### Lägsta maskin- och programvarukrav {#minimum-hardware-software-requirements}
 
-****
-WorkbenchFöljande krav rekommenderas som minimum: Diskutrymme för installation:
+**Workbench**
+Följande krav rekommenderas som minimum: Diskutrymme för installation:
 * 680 MB endast för Workbench.
 * 2,15 GB på en enda enhet för en fullständig installation av Workbench, Designer och exempelpaketet.
 * 400 MB för temporära installationskataloger - 200 MB i användarens \temp-katalog och 200 MB i Windows temporära katalog.
@@ -98,7 +98,7 @@ WorkbenchFöljande krav rekommenderas som minimum: Diskutrymme för installation
 
 ### Plattformar som stöds {#supported-platforms}
 
-Se den fullständiga listan över plattformar som stöds för Workbench på [AEM Forms Supported Platforms](http://adobe.com/go/learn_aemforms_supportedplatforms_65).
+Se hela listan över plattformar som stöds för Workbench på [Plattformar som stöds av AEM Forms](http://adobe.com/go/learn_aemforms_supportedplatforms_65).
 
 ## Installationsfrågor för Designer {#designer-installation-considerations}
 
@@ -120,7 +120,7 @@ Olika versioner av Designer kan finnas samtidigt i samma system, till exempel De
   </tr>
   <tr>
    <td><p>Designer (fristående)</p> </td>
-   <td><p>Inget. <br />Den version av Designer som ingår i Workbench är endast engelsk. <br />Installationsprogrammet för Workbench kommer inte att installera om en ny version av Designer. Istället kommer en uppdaterad version, som medföljer installationsprogrammet för Workbench, att korrigeras. Detta gör även att du kan använda din lokaliserade version av Designer i Workbench.<br /> </p> </td>
+   <td><p>Inget. <br />Den version av Designer som ingår i Workbench är endast engelsk. <br />Installationsprogrammet för Workbench kommer inte att installera om en ny version av Designer. Istället kommer en uppdaterad version, som medföljer installationsprogrammet för Workbench, att korrigeras. På så sätt kan du även använda din lokaliserade version av Designer i Workbench.<br /> </p> </td>
   </tr>
  </tbody>
 </table>
@@ -128,8 +128,8 @@ Olika versioner av Designer kan finnas samtidigt i samma system, till exempel De
 ### Så här avinstallerar du Designer (fristående) i Windows 10 {#uninstall-designer-standalone-windows10}
 
 1. Gå till **Kontrollpanelen > Program > Program och funktioner**
-1. I listan Installerade program väljer du **Adobe Designer**.
-1. Klicka på **Avinstallera** och klicka sedan på **Ja**.
+1. I listan Aktuella installerade program väljer du **Adobe Designer**.
+1. Klicka **Avinstallera** och sedan klicka **Ja**.
 
 ## Installerar Workbench {#installing-workbench}
 
@@ -161,7 +161,7 @@ Innan du installerar Workbench måste du kontrollera att miljön innehåller den
    >
    >Du kan fortsätta använda Designer som installerats med Acrobat 10 genom att lämna det här alternativet avmarkerat.
 
-1. Acceptera standardkatalogen enligt listan eller   Klicka på Välj och navigera till den katalog där du ska installera Workbench och klicka sedan på Nästa.
+1. Acceptera standardkatalogen enligt listan eller klicka på Välj och navigera till den katalog där du ska installera Workbench. Klicka sedan på Nästa.
 
    >[!NOTE]
    >
@@ -171,9 +171,9 @@ Innan du installerar Workbench måste du kontrollera att miljön innehåller den
 1. Granska installationssammanfattningen. Välj Starta AEM Forms Workbench för att starta Workbench och klicka på Nästa.
 1. Granska versionsinformationen och klicka på Klar.
 1. Följande objekt är nu installerade på datorn:
-   * **Workbench**: Om du vill köra Workbench från Start-menyn väljer du Alla program > AEM Forms > Workbench, om du väljer att spara genvägsmappen där. För information   se <a href="https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/WorkbenchHelp.pdf">Använda Workbench</a>-dokumentationen.
-   * **Designer**: Du kan öppna Designer inifrån Workbench. Mer information finns i avsnittet Komma igång i <a href="https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/using-designer.pdf">Designer-hjälpen</a>.
-   * **AEM Forms SDK**: Mer information om hur du använder SDK finns i  <a href="http://www.adobe.com/go/learn_aemforms_programming_65">Programmering med AEM Forms</a>.
+   * **Workbench**: Om du vill köra Workbench från Start-menyn väljer du Alla program > AEM Forms > Workbench, om du väljer att spara genvägsmappen där. Mer information finns i <a href="https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/WorkbenchHelp.pdf">Använda Workbench</a> dokumentation.
+   * **Designer**: Du kan öppna Designer inifrån Workbench. Mer information finns i avsnittet Komma igång i <a href="https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/using-designer.pdf">Designer - hjälp</a>.
+   * **AEM Forms SDK**: Mer information om hur du använder SDK finns i <a href="http://www.adobe.com/go/learn_aemforms_programming_65">Programmera med AEM Forms</a>.
 
 ## Uppgraderingsprocesser {#upgrading-processes}
 
@@ -185,30 +185,30 @@ Om du vill använda Workbench måste du ha en instans av AEM Forms igång, vanli
 
 >[!NOTE]
 >
->Om du har konfigurerat AEM Forms att använda databasprovidern EMC Documentum eller IBM FileNet och du vill logga in i en annan databas än den som är konfigurerad som standard i administrationskonsolen för formulär, anger du användarnamnet som username@Repository.
+>Om du har konfigurerat AEM Forms att använda databasprovidern EMC Documentum eller IBM FileNet och du vill logga in i en annan databas än den som är konfigurerad som standard i administrationskonsolen för formulär, anger du användarnamnet username@Repository.
 
 ### Konfigurera timeout-inställningar {#configuring-timeout-settings}
 
-Workbench gör som standard en timeout efter två timmar, oavsett aktivitet eller inaktivitet. Information om hur du redigerar timeout-inställningen finns i&quot;Konfigurera användarhantering > Konfigurera avancerade systemattribut&quot; i <a href="https://docs.adobe.com/content/help/en/experience-manager-65/forms/administrator-help/configure-user-management/configure-advanced-system-attributes.html">administrationskonsolens hjälp</a>.
+Workbench gör som standard en timeout efter två timmar, oavsett aktivitet eller inaktivitet. Mer information om hur du redigerar timeout-inställningen finns i&quot;Konfigurera användarhantering > Konfigurera avancerade systemattribut&quot; i <a href="https://docs.adobe.com/content/help/en/experience-manager-65/forms/administrator-help/configure-user-management/configure-advanced-system-attributes.html">Hjälp för administrationskonsol</a>.
 
 ### Konfigurera Workbench för anslutning via HTTPS {#configuring-workbench-to-connect-over-HTTPS}
 
-Om du vill ansluta Workbench till en AEM Forms-server via HTTPS måste du se till att den certifikatutfärdare (CA) som utfärdade den offentliga nyckeln tolkas som tillförlitlig av Workbench. Om certifikatet inte identifieras som om det kommer från en betrodd källa måste du uppdatera cacert-filen som finns i katalogen [Workbench_HOME]/workbench/jre/lib/security.
+Om du vill ansluta Workbench till en AEM Forms-server via HTTPS måste du se till att den certifikatutfärdare (CA) som utfärdade den offentliga nyckeln tolkas som tillförlitlig av Workbench. Om certifikatet inte identifieras som att det kommer från en betrodd källa måste du uppdatera cacert-filen som finns i [Workbench_HOME]/workbench/jre/lib/security directory.
 
 >[!NOTE]
 >
->[Workbench_] HOME representerar katalogen där du installerade Workbench. Standardplatsen är C:\Program Files (x86)\Adobe Experience Manager forms Workbench.
+>[Workbench_HOME] representerar den katalog där du installerade Workbench. Standardplatsen är C:\Program Files (x86)\Adobe Experience Manager forms Workbench.
 
 Kontrollera att du ansluter till HTTPS med det namn som anges i certifikatet. Det här namnet är vanligtvis det fullständiga, kvalificerade värdnamnet.
 
-**Så här uppdaterar du cacert-filen**:
+**Uppdatera cacert-filen**:
 1. Kontrollera att du har en kopia av SSL-certifikatet (Secure Sockets Layer). Kontakta antingen administratören som konfigurerade SSL-servern eller exportera certifikatet med en webbläsare.
 
    >[!NOTE]
    >
-   >Om du vill exportera certifikatet öppnar du en webbläsare och loggar in på administrationskonsolen, installerar certifikatet i webbläsaren och exporterar sedan certifikatet från webbläsaren till en tillfällig lagringsplats (eller direkt till katalogen [Workbench_HOME]/workbench/jre/lib/security).
+   >Om du vill exportera certifikatet öppnar du en webbläsare och loggar in på administrationskonsolen, installerar certifikatet i webbläsaren och exporterar sedan certifikatet från webbläsaren till en tillfällig lagringsplats (eller direkt till [Workbench_HOME]/workbench/jre/lib/security directory).
 
-1. Kopiera certifikatet till katalogen [Workbench_HOME]/workbench/jre/lib/security.
+1. Kopiera certifikatet till [Workbench_HOME]/workbench/jre/lib/security directory.
 
 1. Öppna ett kommandotolkfönster, navigera till [Workbench_HOME]/workbench/jre/bin och skriv sedan följande kommando:
    `keytool -import -storepass changeit -file [Workbench_HOME]\workbench\jre\lib\security\ssl_cert_for_certname.cer -keystore [Workbench_HOME]\workbench\jre\lib\security\cacerts -alias example`
@@ -217,7 +217,7 @@ Var:
    * certname är det certifikat du valde i steg 1.
    * är ett exempel på det alias som du väljer för certifikatet. Det här värdet kan ändras
 
-1. När du uppmanas att lita på certifikatet skriver du Ja och trycker på Retur. Nyckelverktyget fortsätter att importera cacerfilen till katalogen [Workbench_HOME]/workbench/jre/lib/security.
+1. När du uppmanas att lita på certifikatet skriver du Ja och trycker på Retur. Nyckelverktyget fortsätter att importera kontofilen till [Workbench_HOME]/workbench/jre/lib/security directory.
 
 1. Stäng och starta om Workbench för att tillämpa ändringarna.
 
@@ -227,7 +227,7 @@ Följande aspekter av cacheåtgärden bör beaktas om programmet genererar unika
 
 När formulärgeneratorn eller utdataanvändaren söker efter, eller uppdaterar, poster i cachen efter en viss formulärmall, används flera nyckelvärden för att hitta den specifika cachepost som ska användas.
 
-* **Mallfilens namn**: Plats och filnamn för mallen som används som primär unik identifierare för det cachelagrade formuläret.
+* **Mallfilnamn**: Plats och filnamn för mallen som används som primär unik identifierare för det cachelagrade formuläret.
 * **Tidsstämpel**: Mallfilen innehåller en tidsstämpel som används för att bestämma formulärets senaste uppdateringstid.
 * **Mall-UID**: Designer infogar en unik identifierare (UUID) för formuläret och dess version i varje mall. Varje gång formuläret uppdateras uppdateras det inbäddade UUID:t. En XDP-mall kan till exempel visa följande innehåll:
 
@@ -266,10 +266,10 @@ Med XDC-redigeringsprogrammet kan nätverksskrivaradministratörer skapa och än
 
 Innan administratören för nätverksskrivaren använder XDC-redigeringsprogrammet ska du flytta XDC-exempelfilerna och läsa Skapa enhetsprofiler med XDC-redigeringsprogrammet.
 
-**Så här hämtar du XDC-exempelfilerna**:
+**Hämta XDC-exempelfilerna**:
 1. På AEM Forms-servern letar du reda på XDC-mappen i [AEM Forms root]\sdk\samples\Output\IVS.
 1. Kopiera innehållet i den här mappen till en katalog som är tillgänglig från Workbench- eller Eclipse-systemet.
 
-**Så här får du hjälp** om XDC Editor:
+**Få hjälp om XDC Editor**:
 1. Gå till AEM Forms dokumentationswebbplats.
-1. Klicka på fliken **Utveckla** och navigera till Skapa enhetsprofiler med XDC-redigeringsprogrammet. Hämta filen xdc_editor_help_web.zip och installera hjälpfilerna genom att följa instruktionerna i Viktigt-filen.
+1. Klicka på **Utveckla** och navigera till Skapa enhetsprofiler med XDC-redigeringsprogrammet. Hämta filen xdc_editor_help_web.zip och installera hjälpfilerna genom att följa instruktionerna i Viktigt-filen.
