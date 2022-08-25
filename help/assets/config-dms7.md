@@ -10,9 +10,9 @@ role: User, Admin
 mini-toc-levels: 4
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: Configuration,Scene7 Mode
-source-git-commit: b14cbc4cad15b06754db8b8c992a596d4d64c096
+source-git-commit: 6c6f67929b774492d8caa052598b8c33e9a41710
 workflow-type: tm+mt
-source-wordcount: '5717'
+source-wordcount: '5881'
 ht-degree: 2%
 
 ---
@@ -86,11 +86,11 @@ Se [Installera funktionspaket 18912 för migrering av gruppresurser](/help/asset
 
 ## Skapa en Dynamic Media-konfiguration i Cloud Services {#configuring-dynamic-media-cloud-services}
 
-**Innan du konfigurerar Dynamic Media** - När du har fått ditt e-postmeddelande med Dynamic Media-autentiseringsuppgifter måste du öppna [Dynamic Media Classic desktop application](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)och logga sedan in på ditt konto för att ändra ditt lösenord. Lösenordet som anges i e-postmeddelandet om etablering genereras av systemet och är endast avsett som ett tillfälligt lösenord. Det är viktigt att du uppdaterar lösenordet så att Dynamic Media Cloud Service har rätt autentiseringsuppgifter.
+<!-- **Before you configure Dynamic Media** - After you receive your provisioning email with Dynamic Media credentials, you must open the [Dynamic Media Classic desktop application](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started), then sign in to your account to change your password. The password provided in the provisioning email is system-generated and intended to be a temporary password only. It is important that you update the password so that Dynamic Media Cloud Service is set up with the correct credentials.
 
-![dynamicmediaconfiguration2uppdaterad](assets/dynamicmediaconfiguration2updated.png)
+   ![dynamicmediaconfiguration2updated](assets/dynamicmediaconfiguration2updated.png)
 
-**Så här skapar du en Dynamic Media-konfiguration i Cloud Services:**
+**To create a Dynamic Media Configuration in Cloud Services:** -->
 
 1. I läget Experience Manager Author väljer du logotypen Experience Manager för att komma åt den globala navigeringskonsolen, väljer ikonen Tools och går sedan till **[!UICONTROL Cloud Services]** > **[!UICONTROL Dynamic Media Configuration]**.
 1. På sidan Dynamic Media Configuration Browser väljer du **[!UICONTROL global]** (markera inte mappikonen till vänster om **[!UICONTROL global]**) och sedan väljer **[!UICONTROL Create]**.
@@ -98,8 +98,24 @@ Se [Installera funktionspaket 18912 för migrering av gruppresurser](/help/asset
 
    Välj **[!UICONTROL Connect to Dynamic Media]**.
 
-   >[!NOTE]
-   När du har fått ditt e-postmeddelande med Dynamic Media-autentiseringsuppgifter öppnar du [Dynamic Media Classic desktop application](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)och logga sedan in på ditt konto för att ändra ditt lösenord. Lösenordet som anges i e-postmeddelandet om etablering genereras av systemet och är endast avsett som ett tillfälligt lösenord. Det är viktigt att du uppdaterar lösenordet så att Dynamic Media Cloud Service har rätt autentiseringsuppgifter.
+1. I **[!UICONTROL Change Password]** i **[!UICONTROL New Password]** anger du ett nytt lösenord som består av 8-25 tecken. Lösenordet måste innehålla minst ett av följande:
+
+   * Versaler
+   * Gemener
+   * Siffra
+   * Specialtecken: `# $ & . - _ : { }`
+
+   The **[!UICONTROL Current Password]** fältet är avsiktligt ifyllt och dolt för interaktion.
+
+   Om det behövs kan du kontrollera stavningen av ett lösenord som du har skrivit eller skrivit in igen genom att markera lösenordsikonen för att visa lösenordet. Klicka på ikonen igen om du vill dölja lösenordet.
+
+1. I **[!UICONTROL Repeat Password]** anger du det nya lösenordet igen och väljer **[!UICONTROL Done]**.
+
+   Det nya lösenordet sparas när du väljer **[!UICONTROL Save]** i det övre högra hörnet av **[!UICONTROL Create Dynamic Media Configuration]** sida.
+
+   Om du valde **[!UICONTROL Cancel]** i **[!UICONTROL Change Password]** måste du fortfarande ange ett nytt lösenord när du sparar den nya Dynamic Media-konfigurationen.
+
+   Se även [Ändra lösenordet till Dynamic Media](#change-dm-password).
 
 1. Ange följande när anslutningen lyckas. Rubriker med asterisk (*) krävs:
 
@@ -147,6 +163,37 @@ Om du vill markera en markerad mapp för synkronisering till Dynamic Media välj
 Du är nu klar med den grundläggande konfigurationen; är du redo att använda Dynamic Media - Scene7.
 
 Om du vill anpassa konfigurationen ytterligare kan du utföra alla uppgifter under [(Valfritt) Konfigurera avancerade inställningar i Dynamic Media - Scene7-läge](#optional-configuring-advanced-settings-in-dynamic-media-scene-mode).
+
+### Ändra lösenordet till Dynamic Media {#change-dm-password}
+
+Lösenordets giltighetstid i Dynamic Media är inställd på 100 år från det aktuella systemdatumet.
+
+Lösenordet måste innehålla minst ett av följande:
+
+* Versaler
+* Gemener
+* Siffra
+* Specialtecken: `# $ & . - _ : { }`
+
+Om det behövs kan du kontrollera stavningen av ett lösenord som du har skrivit eller skrivit in igen genom att markera lösenordsikonen för att visa lösenordet. Klicka på ikonen igen om du vill dölja lösenordet.
+
+Det ändrade lösenordet sparas när du väljer **[!UICONTROL Save]** i det övre högra hörnet av **[!UICONTROL Edit Dynamic Media Configuration]** sida.
+
+**Så här ändrar du lösenordet till Dynamic Media:**
+
+1. I läget Experience Manager Author väljer du logotypen Experience Manager för att komma åt den globala navigeringskonsolen.
+1. Till vänster om konsolen väljer du verktygsikonen och går till **[!UICONTROL Cloud Services]>[!UICONTROL Dynamic Media Configuration]**.
+1. På sidan Dynamic Media Configuration Browser väljer du **[!UICONTROL global]**. Markera inte mappikonen till vänster om **[!UICONTROL global]**. Välj sedan **[!UICONTROL Edit]**.
+1. På **[!UICONTROL Edit Dynamic Media Configuration]** sida, direkt nedanför **[!UICONTROL Password]** fält, markera **[!UICONTROL Change Password]**.
+1. I **[!UICONTROL Change Password]** gör du följande:
+
+   * I **[!UICONTROL New Password]** anger du ett nytt lösenord.
+
+      The **[!UICONTROL Current Password]** fältet är avsiktligt ifyllt och dolt för interaktion.
+
+   * I **[!UICONTROL Repeat Password]** anger du det nya lösenordet igen och väljer **[!UICONTROL Done]**.
+
+1. I det övre högra hörnet av **[!UICONTROL Edit Dynamic Media Configuration]** sida, markera **[!UICONTROL Save]** väljer **[!UICONTROL OK]**.
 
 ## (Valfritt) Konfigurera avancerade inställningar i Dynamic Media - Scene7-läge {#optional-configuring-advanced-settings-in-dynamic-media-scene-mode}
 
