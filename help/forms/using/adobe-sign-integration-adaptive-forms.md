@@ -11,9 +11,9 @@ discoiquuid: 1f28b257-5419-4a21-a54a-b20bf35530ac
 docset: aem65
 feature: Adaptive Forms, Adobe Sign
 exl-id: 52146038-1582-41b8-aee0-215d04bb91d7
-source-git-commit: 51801dfae47e82f31042f48b113332783464bafb
+source-git-commit: e46d77caf831324f077315df43b8f3a0267bef9a
 workflow-type: tm+mt
-source-wordcount: '870'
+source-wordcount: '1002'
 ht-degree: 0%
 
 ---
@@ -59,6 +59,23 @@ Utför följande steg för att konfigurera [!DNL Adobe Sign] med AEM [!DNL Forms
 
 1. Kopiera URL-adressen i det aktuella webbläsarfönstret till en anteckningsruta. Du måste konfigurera [!DNL Adobe Sign] program med AEM[!DNL Forms].
 
+1. I **[!UICONTROL Settings]** -fliken **[!UICONTROL OAuth URL]** -fältet innehåller standard-URL:en. URL-formatet är:
+
+   `https://<shard>/public/oAuth/v2`
+
+   Till exempel:
+   `https://secure.na1.echosign.com/public/oauth/v2`
+
+   där:
+
+   **na1** refererar till standarddatabasfragmentet. Du kan ändra värdet för databasdelningen. Se till att [!DNL  Adobe Sign] Molnkonfigurationer pekar mot [korrigera Shard](https://helpx.adobe.com/sign/using/identify-account-shard.html).
+
+   Om du skapar en annan [!DNL Adobe Sign] för en Adobe Experience Manager-funktion eller -komponent, se till att alla [!DNL Adobe Sign] Molnkonfigurationer pekar på samma fragment.
+
+   >[!NOTE]
+   Behåll **Skapa Adobe Sign-konfiguration** sidan öppnas. Stäng den inte. Du kan hämta **Klient-ID** och **Klienthemlighet** efter konfigurering av OAuth-inställningar för [!DNL Adobe Sign] som beskrivs i kommande steg.
+
+
 1. Konfigurera OAuth-inställningar för [!DNL Adobe Sign] program:
 
    1. Öppna ett webbläsarfönster och logga in på [!DNL Adobe Sign] utvecklarkonto.
@@ -92,11 +109,13 @@ Utför följande steg för att konfigurera [!DNL Adobe Sign] med AEM [!DNL Forms
    >[!NOTE]
    Se till att författaren och publicera instanskonfigurationer pekar på samma nivå. Om du skapar flera Adobe Sign-konfigurationer för en organisation måste du se till att alla konfigurationer använder samma fragment.
 
-1. Ange **Klient-ID** (kallas även program-ID) och **Klienthemlighet** i steg 8. Välj **[!UICONTROL Enable Adobe Sign for attachments also]** möjlighet att lägga till filer som är kopplade till ett adaptivt formulär i motsvarande [!DNL Adobe Sign] dokumentet har skickats för signering.
+1. Gå tillbaka till **[!UICONTROL Create Adobe Sign Configuration]** sida. I **[!UICONTROL Settings]** -fliken, ange **Klient-ID** (kallas även program-ID) och **Klienthemlighet**. Använd [Klient-ID och klienthemlighet för Adobe Sign-program](https://opensource.adobe.com/acrobat-sign/developer_guide/helloworld.html#get-the-app-id-and-secret) som skapats för AEM Forms.
 
-   Tryck på **[!UICONTROL Connect to Adobe Sign]**. Ange användarnamn och lösenord för kontot som används när du skapar inloggningsuppgifter [!DNL Adobe Sign] program.
+1. Välj **[!UICONTROL Enable Adobe Sign for attachments also]** möjlighet att lägga till filer som är kopplade till ett adaptivt formulär i motsvarande [!DNL Adobe Sign] dokumentet har skickats för signering.
 
-   Tryck **[!UICONTROL Create]** för att skapa [!DNL Adobe Sign] konfiguration.
+1. Tryck på **[!UICONTROL Connect to Adobe Sign]**. Ange användarnamn och lösenord för kontot som används när du skapar inloggningsuppgifter [!DNL Adobe Sign] program.
+
+1. Tryck **[!UICONTROL Create]** för att skapa [!DNL Adobe Sign] konfiguration.
 
 1. Öppna AEM webbkonsol. URL:en är `https://'[server]:[port]'/system/console/configMgr`
 1. Öppna **[!UICONTROL Forms Common Configuration Service].**
