@@ -6,9 +6,9 @@ mini-toc-levels: 2
 role: User, Admin, Leader
 feature: Connected Assets,User and Groups
 exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
-source-git-commit: 9d5440747428830a3aae732bec47d42375777efd
+source-git-commit: e3caa3e3067cf5e29cfcdf4286047eb346aefa23
 workflow-type: tm+mt
-source-wordcount: '3686'
+source-wordcount: '3687'
 ht-degree: 17%
 
 ---
@@ -33,14 +33,14 @@ Funktionen för anslutna resurser har stöd för ovanstående användningsfall g
 
 Vid redigering av sidor i [!UICONTROL Page Editor] som målmål kan författarna söka, bläddra bland och bädda in resurser från ett annat [!DNL Assets] driftsättning som fungerar som en källa till resurser. Administratörerna skapar en engångsintegrering av en distribution av [!DNL Experience Manager] med [!DNL Sites] med en annan driftsättning av [!DNL Experience Manager] med [!DNL Assets] funktioner. Man kan också använda Dynamic Media-bilder på webbplatsens webbsidor med hjälp av uppkopplade resurser och utnyttja Dynamic Media funktioner, som smart beskärning och bildförinställningar.
 
-För [!DNL Sites] författare är fjärrresurserna tillgängliga som skrivskyddade lokala resurser. Funktionen stöder smidig sökning och åtkomst till fjärrresurser i Site Editor. För andra användningsområden där det kan krävas att hela resursen är tillgänglig på Sites bör du överväga att migrera resurserna satsvis i stället för att utnyttja anslutna resurser. Se [Migreringsguide för Experience Manager Assets](/help/assets/assets-migration-guide.md).
+För [!DNL Sites] författare är fjärrresurserna tillgängliga som skrivskyddade lokala resurser. Funktionen stöder smidig sökning och åtkomst till fjärrresurser i Site Editor. För andra användningsområden där det kan krävas att hela resursen är tillgänglig på platser bör du överväga att migrera resurserna satsvis i stället för att använda anslutna resurser. Se [Migreringsguide för Experience Manager Assets](/help/assets/assets-migration-guide.md).
 
 ### Förutsättningar och distributioner som stöds {#prerequisites}
 
 Innan du använder eller konfigurerar den här funktionen bör du kontrollera följande:
 
 * Användarna ingår i rätt användargrupper för varje distribution.
-* För [!DNL Adobe Experience Manager] distributionstyper, ett av villkoren är uppfyllt. [!DNL Experience Manager] 6.5 [!DNL Assets] fungerar med [!DNL Experience Manager] as a Cloud Service. Mer information om hur den här funktionen fungerar i [!DNL Experience Manager] som [!DNL Cloud Service], se [Anslutna resurser i Experience Manager as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/use-assets-across-connected-assets-instances.html).
+* För [!DNL Adobe Experience Manager] distributionstyper, ett av villkoren är uppfyllt. [!DNL Experience Manager] 6.5 [!DNL Assets] fungerar med [!DNL Experience Manager] as a Cloud Service. Mer information om hur den här funktionen fungerar i [!DNL Experience Manager] som [!DNL Cloud Service], se [Anslutna resurser i Experience Manager as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/use-assets-across-connected-assets-instances.html).
 
    |  | [!DNL Sites] som [!DNL Cloud Service] | [!DNL Experience Manager] 6.5 [!DNL Sites] på AMS | [!DNL Experience Manager] 6.5 [!DNL Sites] lokal |
    |---|---|---|---|
@@ -63,7 +63,7 @@ De olika roller som krävs för att konfigurera och använda funktionen och mots
 |---|---|---|---|---|
 | [!DNL Sites] administratör | Lokalt | [!DNL Experience Manager] `administrators` | `admin` | Konfigurera [!DNL Experience Manager] och konfigurera integrering med fjärrkontrollen [!DNL Assets] distribution. |
 | DAM-användare | Lokalt | `Authors` | `ksaner` | Används för att visa och duplicera de hämtade resurserna i `/content/DAM/connectedassets/`. |
-| [!DNL Sites] author | Lokalt | <ul><li>`Authors` (med läsåtkomst på fjärr-DAM och författaråtkomst på lokal [!DNL Sites]) </li> <li>`dam-users` på lokal [!DNL Sites]</li></ul> | `ksaner` | Slutanvändaren är [!DNL Sites] författare som använder den här integreringen för att förbättra innehållets hastighet. Författarna söker efter och bläddrar bland resurser i fjärr-DAM med [!UICONTROL Content Finder] och använda de bilder som behövs på lokala webbsidor. Autentiseringsuppgifterna för `ksaner` DAM-användaren används. |
+| [!DNL Sites] author | Lokalt | <ul><li>`Authors` (med läsåtkomst på fjärr-DAM och författaråtkomst på lokal [!DNL Sites]) </li> <li>`dam-users` på lokal [!DNL Sites]</li></ul> | `ksaner` | Slutanvändarna är [!DNL Sites] författare som använder den här integreringen för att förbättra innehållets hastighet. Författarna söker efter och bläddrar bland resurser i fjärr-DAM med [!UICONTROL Content Finder] och använda de bilder som behövs på lokala webbsidor. Autentiseringsuppgifterna för `ksaner` DAM-användaren används. |
 | [!DNL Assets] administratör | Fjärr | [!DNL Experience Manager] `administrators` | `admin` på fjärrkontrollen [!DNL Experience Manager] | Konfigurerar CORS (Cross-Origin Resource Sharing). |
 | DAM-användare | Fjärr | `Authors` | `ksaner` på fjärrkontrollen [!DNL Experience Manager] | Författarroll på fjärrkontrollen [!DNL Experience Manager] distribution. Söker efter och bläddrar bland resurser i Connected Assets med hjälp av [!UICONTROL Content Finder]. |
 | DAM-distributör (teknisk användare) | Fjärr | [!DNL Sites] `Authors` | `ksaner` på fjärrkontrollen [!DNL Experience Manager] | Den här användaren som finns på fjärrdistributionen används av [!DNL Experience Manager] lokal server (inte [!DNL Sites] författarroll) för att hämta fjärrresurserna, för [!DNL Sites] författare. Den här rollen är inte densamma som de två `ksaner`-rollerna ovan och den tillhör en annan användargrupp. |
@@ -158,7 +158,7 @@ Används [!DNL Dynamic Media] med anslutna resurser:
 
 Konfigurera [!DNL Dynamic Media] på [!DNL Assets] och [!DNL Sites] distributioner:
 
-1. Aktivera och konfigurera [!DNL Dynamic Media] som global konfiguration på fjärrkontrollen [!DNL Assets] driftsättning. Information om hur du konfigurerar Dynamic Media finns i [Konfigurera Dynamic Media](/help/assets/config-dynamic.md#configuring-dynamic-media-cloud-services).<br/>
+1. Aktivera och konfigurera [!DNL Dynamic Media] som global konfiguration på fjärrkontrollen [!DNL Assets] driftsättning. Information om hur du konfigurerar Dynamic Media finns i [Konfigurera Dynamic Media](/help/assets/config-dynamic.md#configuring-dynamic-media-cloud-services).
 På fjärrkontrollen [!DNL Assets] distribution, in [!UICONTROL Dynamic Media sync mode], markera **[!UICONTROL Enabled by default]**.
 
 1. Skapa konfiguration för anslutna resurser enligt beskrivningen i [Konfigurera anslutning mellan platser och distributioner av resurser](#configure-a-connection-between-sites-and-assets-deployments). Välj även **[!UICONTROL Fetch Original Rendition for Dynamic Media Connected Assets]** alternativ.
@@ -169,7 +169,7 @@ På fjärrkontrollen [!DNL Assets] distribution, in [!UICONTROL Dynamic Media sy
    * På lokal [!DNL Sites], in [!UICONTROL Dynamic Media sync mode], markera **[!UICONTROL Disabled by default]**. The [!DNL Sites] distributionen måste ha skrivskyddad åtkomst till [!DNL Dynamic Media] konto.
    * På lokal [!DNL Sites], i **[!UICONTROL Publish Assets]** alternativ, markera **[!UICONTROL Selective Publish]**. Markera inte **[!UICONTROL Sync All Content]**.
 
-1. Aktivera [[!DNL Dynamic Media] stöd i Image Core Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html#dynamic-media). Den här funktionen aktiverar standardinställningen [Bildkomponent](https://www.aemcomponents.dev/content/core-components-examples/library/page-authoring/image.html) att visa [!DNL Dynamic Media] bilder när [!DNL Dynamic Media] bilder används av författare på webbsidor på lokala [!DNL Sites] distribution.
+1. Aktivera [[!DNL Dynamic Media] stöd i Image Core Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html#dynamic-media). Den här funktionen aktiverar standardinställningen [Bildkomponent](https://www.aemcomponents.dev/content/core-components-examples/library/core-content/image.html) att visa [!DNL Dynamic Media] bilder när [!DNL Dynamic Media] bilder används av författare på webbsidor på lokala [!DNL Sites] distribution.
 
 ## Använda fjärresurser {#use-remote-assets}
 

@@ -5,9 +5,9 @@ contentOwner: AG
 role: Admin, Architect
 feature: Asset Management
 exl-id: a9e1bd6b-c768-4faa-99a3-7110693998dc
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: e3caa3e3067cf5e29cfcdf4286047eb346aefa23
 workflow-type: tm+mt
-source-wordcount: '1668'
+source-wordcount: '1670'
 ht-degree: 0%
 
 ---
@@ -193,7 +193,7 @@ Här följer några färdiga hälsokontroller som är bra att övervaka:
 Om du råkar ut för problem i samband med övervakning finns det några felsökningsuppgifter som du kan utföra för att lösa vanliga problem med [!DNL Experience Manager] distributioner:
 
 * Om du använder tarMK ska du köra Tjärkomprimering ofta. Mer information finns i [Underhåll databasen](/help/sites-deploying/storage-elements-in-aem-6.md#maintaining-the-repository).
-* Kontrollera `OutOfMemoryError` loggar. Mer information finns i [Analysera minnesproblem](https://helpx.adobe.com/experience-manager/kb/AnalyzeMemoryProblems.html).
+* Kontrollera `OutOfMemoryError` loggar. Mer information finns i [Analysera minnesproblem](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html).
 
 * Kontrollera loggarna om det finns referenser till oindexerade frågor, trädgenomgångar eller indexgenomgångar. Dessa indikerar oindexerade frågor eller otillräckligt indexerade frågor. Mer information om hur du optimerar fråga- och indexeringsprestanda finns i [Bästa tillvägagångssätt för frågor och indexering](/help/sites-deploying/best-practices-for-queries-and-indexing.md).
 * Använd arbetsflödeskonsolen för att verifiera att arbetsflödena fungerar som förväntat. Om det är möjligt kan du komprimera flera arbetsflöden till ett enda arbetsflöde.

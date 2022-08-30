@@ -10,9 +10,9 @@ discoiquuid: c8e145ad-f021-4043-8190-62151775e296
 role: User, Admin
 exl-id: 9eb9f309-33e5-4694-84d2-fb2cd3de50a6
 feature: Publishing,Configuration
-source-git-commit: 65af6e33ae3897519491952f4d3a6832700f77b2
+source-git-commit: a78de999992d4ab2fc63b5f7e796aa0d5527cb26
 workflow-type: tm+mt
-source-wordcount: '731'
+source-wordcount: '732'
 ht-degree: 0%
 
 ---
@@ -62,7 +62,7 @@ Om du vill använda HTTP/2 måste du uppfylla följande krav:
 
 Du initierar begäran om att växla över till HTTP/2; det görs inte automatiskt åt dig.
 
-1. Om du vill gå över till HTTP/2 initierar du en Adobe kundsupportförfrågan. Se [Gå till Adobe Experience Manager supportportal](https://helpx.adobe.com/experience-manager/kb/accessing-aem-support-portal.html).
+1. Om du vill gå över till HTTP/2 initierar du en Adobe kundsupportförfrågan. Se [Öppna en supportanmälan](https://experienceleague.adobe.com/?support-solution=General&amp;lang=en&amp;support-tab=home#support).
 
    1. Ange följande information i din supportförfrågan:
 
@@ -98,4 +98,4 @@ Det icke-cachelagrade innehållet träffar direkt på Adobe-servrar tills cachen
 
 Eftersom webbläsaren inte anger detta måste du hämta ett tillägg.
 
-För Firefox och Chrome finns det ett tillägg som heter HTTP/2 och SPDY Indicator. Webbläsarna stöder bara http/2 säkert, så det är nödvändigt att anropa en URL med https för att verifiera. Om http/2 stöds anges det av tillägget i form av en blå Flash-symbol och ett huvud `X-Firefox-Spdy`: `h2`.
+För Firefox och Chrome finns det ett tillägg som heter HTTP/2 och SPDY Indicator. Webbläsarna stöder bara http/2 säkert, så det är nödvändigt att anropa en URL med https för att verifiera. Om http/2 stöds anges det av tillägget i form av en blå Flash-symbol och en rubrik `X-Firefox-Spdy` : `h2`.

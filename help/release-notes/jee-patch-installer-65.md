@@ -5,7 +5,7 @@ uuid: 76662858-afca-4ba3-883b-9b9a61874f15
 content-type: reference
 discoiquuid: b0283feb-c3ec-4ef0-885c-46bc83a61e26
 exl-id: 6b17472b-9226-4319-b305-4dba862d21af
-source-git-commit: 495b9a006f5288ad6579e13aaea82ace6d6f0e91
+source-git-commit: e3caa3e3067cf5e29cfcdf4286047eb346aefa23
 workflow-type: tm+mt
 source-wordcount: '512'
 ht-degree: 0%
@@ -65,8 +65,8 @@ Navigera till rätt katalog och skriv i en kommandotolk
 
 1. Beroende på programservern väljer du ett av följande dokument och följer instruktionerna i *Konfigurera och distribuera AEM formulär* -avsnitt.
 
-   * [Installera och distribuera AEM formulär för JBoss](http://www.adobe.com/go/learn_aemforms_installJBoss_65)
-   * [Installera och distribuera AEM formulär för WebSphere](http://www.adobe.com/go/learn_aemforms_installWebSphere_65)
+   * [Installera och distribuera AEM formulär för JBoss](https://www.adobe.com/go/learn_aemforms_installJBoss_65)
+   * [Installera och distribuera AEM formulär för WebSphere](https://www.adobe.com/go/learn_aemforms_installWebSphere_65)
 
 1. (Endast JBoss) När du har installerat korrigeringen och konfigurerat servern tar du bort tmp och arbetskataloger för JBoss-programservern.
 

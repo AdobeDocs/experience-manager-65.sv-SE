@@ -6,9 +6,9 @@ mini-toc-levels: 1
 role: Architect, Admin
 feature: Asset Management
 exl-id: 1d9388de-f601-42bf-885b-6a7c3236b97e
-source-git-commit: 35639a818f58923ae9ad099752d359e7795be60b
+source-git-commit: e3caa3e3067cf5e29cfcdf4286047eb346aefa23
 workflow-type: tm+mt
-source-wordcount: '2675'
+source-wordcount: '2687'
 ht-degree: 0%
 
 ---
@@ -222,7 +222,7 @@ XMP återföring uppdaterar originalresursen när metadata ändras i [!DNL Exper
 * En version av resursen skapas
 * [!UICONTROL DAM Update Asset] körs mot resursen
 
-De listade resultaten kräver stora resurser. Adobe rekommenderar därför [inaktivera XMP](https://helpx.adobe.com/experience-manager/kb/disable-xmp-writeback.html), om det inte är nödvändigt.
+De listade resultaten kräver stora resurser. Adobe rekommenderar därför att XMP avaktiveras om det inte behövs. Mer information finns i [XMP](https://experienceleague.adobe.com/docs/experience-manager-64/assets/administer/xmp-writeback.html).
 
 Om du importerar en stor mängd metadata kan det leda till resurskrävande XMP återskrivningsaktivitet om körningsarbetsflödesflaggan är markerad. Planera en sådan import under begränsad serveranvändning så att prestanda för andra användare inte påverkas.
 
@@ -242,7 +242,7 @@ När du replikerar resurser till ett stort antal publiceringsinstanser, till exe
 
 ## Sökindex {#search-indexes}
 
-Installera [senaste Service Pack](/help/release-notes/release-notes.md) och prestandarelaterade snabbkorrigeringar, eftersom de ofta innehåller uppdateringar av systemindex. Se [tips för prestandajustering](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html) för vissa indexoptimeringar.
+Installera [senaste Service Pack](/help/release-notes/release-notes.md) och prestandarelaterade snabbkorrigeringar, eftersom de ofta innehåller uppdateringar av systemindex. Se [tips för prestandajustering](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/performance-tuning-guidelines.html?lang=en) för vissa indexoptimeringar.
 
 Skapa anpassade index för frågor som du kör ofta. Mer information finns i [metod för att analysera långsamma frågor](https://aemfaq.blogspot.com/2014/08/oak-query-log-file-analyzer-tool.html) och [skapa egna index](/help/sites-deploying/queries-and-indexing.md). Mer information om metodtips för frågor och index finns i [Metodtips för frågor och indexering](/help/sites-deploying/best-practices-for-queries-and-indexing.md).
 
