@@ -10,7 +10,7 @@ role: User, Admin
 mini-toc-levels: 4
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: Configuration,Scene7 Mode
-source-git-commit: 6c6f67929b774492d8caa052598b8c33e9a41710
+source-git-commit: 74e3d4204166280e8624298098042b8cb222c034
 workflow-type: tm+mt
 source-wordcount: '5881'
 ht-degree: 2%
@@ -119,9 +119,9 @@ Se [Installera funktionspaket 18912 för migrering av gruppresurser](/help/asset
 
 1. Ange följande när anslutningen lyckas. Rubriker med asterisk (*) krävs:
 
-   * **[!UICONTROL Company]** - namnet på Dynamic Media-kontot. Du har flera Dynamic Media-konton. Du kan till exempel ha olika undervarumärken, divisioner, mellanlagrings- eller produktionsmiljöer.
+   * **[!UICONTROL Company]** - namnet på Dynamic Media-kontot. Du kan ha ett Dynamic Media-konto i Experience Manager. <!-- CQDOC-19579 and CQDOC-19612 -->
 
-   <!-- UNHIDE FEBRUARY 24, 2022 See also [Configure Dynamic Media company alias account](/help/assets/dm-alias-account.md). -->
+      Se även [Konfigurera Dynamic Media alias-konto](/help/assets/dm-alias-account.md).
 
    * **[!UICONTROL Company Root Folder Path]**
 
