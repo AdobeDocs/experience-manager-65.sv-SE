@@ -11,9 +11,9 @@ topic-tags: deploying
 discoiquuid: f03ebe60-88c0-4fc0-969f-949490a8e768
 feature: Configuring
 exl-id: e53c4c81-f62e-4b6d-929a-6649c8ced23c
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 550e7993f88367ec4b5c1d024dc742c087c1a9eb
 workflow-type: tm+mt
-source-wordcount: '5904'
+source-wordcount: '5912'
 ht-degree: 0%
 
 ---
@@ -128,7 +128,7 @@ I vissa fall kan rensningsprocessen fördröjas om du växlar mellan svansen och
 
 ### AEM 6.5 Upgrade Considerations {#aem-upgrade-considerations}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td>Frågor </td>
@@ -143,7 +143,7 @@ I vissa fall kan rensningsprocessen fördröjas om du växlar mellan svansen och
 
 ### Migrera till Oak Segment tar {#migrating-to-oak-segment-tar}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>Frågor</strong></td>
@@ -205,7 +205,7 @@ I vissa fall kan rensningsprocessen fördröjas om du växlar mellan svansen och
 
 ### Online Revision Cleanup körs {#running-online-revision-cleanup}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>Frågor</strong></td>
@@ -368,7 +368,7 @@ I vissa fall kan rensningsprocessen fördröjas om du växlar mellan svansen och
 
 ### Övervaka rensning av onlineändringar {#monitoring-online-revision-cleanup}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>Vad behöver övervakas under rensning av onlineversioner?</strong></td>
@@ -453,7 +453,7 @@ I vissa fall kan rensningsprocessen fördröjas om du växlar mellan svansen och
 
 ### Felsökning av rensning av onlineversioner {#troubleshooting-online-revision-cleanup}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>Vad är det värsta som kan hända om du inte kör Online Revision Cleanup?</strong></td>
@@ -507,15 +507,68 @@ I vissa fall kan rensningsprocessen fördröjas om du växlar mellan svansen och
 
 error.log blir mycket detaljerad om det uppstår incidenter under rensningen av onlineändringar. Följande matris syftar till att förklara de vanligaste budskapen och ge möjliga lösningar:
 
-| **Fas** | **Loggmeddelanden** | **Förklaring** | **Nästa steg** |
+<!---| **Phase** |**Log Messages** |**Explanation** |**Next Steps** |
 |---|---|---|---|
-|  |  |  |  |
-| Uppskattning | TjärMK GC #2: uppskattningen hoppades över eftersom komprimeringen har pausats | Uppskattningsfasen hoppas över när komprimering är inaktiverat i systemet efter konfiguration. | Aktivera rensning av onlineversioner. |
-|  | TjärMK GC #2: Uppskattningen avbröts: ${REASON}. Hoppar över komprimering. | Uppskattningsfasen avslutades i förtid. Exempel på händelser som kan avbryta beräkningsfasen: det finns inte tillräckligt med minne eller diskutrymme på värdsystemet. | Beroende på den angivna orsaken. |
-| Komprimering | TjärMK GC #2: komprimering pausad | Så länge komprimeringsfasen pausas av konfigurationen kommer varken beräkningsfasen eller komprimeringsfasen att utföras. | Aktivera rensning av onlineversioner. |
-|  | TjärMK GC #2: komprimeringen avbröts: ${REASON}. | Komprimeringsfasen avslutades för tidigt. Exempel på händelser som kan avbryta kompaktionsfasen: det finns inte tillräckligt med minne eller diskutrymme på värdsystemet. Komprimering kan också avbrytas genom att systemet stängs av eller genom att det uttryckligen avbryts via administrativa gränssnitt som underhållsperioden i Operations Dashobard. | Beroende på den angivna orsaken. |
-|  | TjärMK GC #2: komprimering misslyckades med 32,902 min (1974140 ms), efter 5 cykler | Det här meddelandet betyder inte att det fanns ett oåterkalleligt fel, men bara den komprimeringen avslutades efter ett visst antal försök. Läs även [efter stycke](https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#how-does-compaction-works-with-concurrent-writes). | Läs följande [Oak-dokumentation](https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#how-does-compaction-works-with-concurrent-writes)och den sista frågan i [Online Revision Cleanup körs](/help/sites-deploying/revision-cleanup.md#running-online-revision-cleanup) -avsnitt. |
-| Rensa | TjärMK GC #2: rensning avbruten | Rensningen avbröts genom att databasen stängdes av. Ingen påverkan på konsekvensen förväntas. Dessutom återkrävs troligtvis inte diskutrymmet till fullo. Den kommer att återvinnas under nästa revisionsrensningscykel. | Undersök varför databasen har stängts av och gå framåt för att undvika att stänga av databasen under underhållsfönstren. |
+|   |  |  |  |
+| Estimation |TarMK GC #2: estimation skipped because compaction is paused |The estimation phase is skipped when compaction is disabled on the system by configuration. |Enable Online Revision Cleanup. |
+|   |TarMK GC #2: estimation interrupted: ${REASON}. Skipping compaction. |The estimation phase terminated prematurely. Some examples of events that could interrupt the estimation phase: not enough memory or disk space on the host system. |Depends on the given reason. |
+| Compaction |TarMK GC #2: compaction paused |As long as the compaction phase is paused by configuration, neither the estimation phase nor the compaction phase will be executed. |Enable online revision cleanup. |
+|   |TarMK GC #2: compaction cancelled: ${REASON}. |The compaction phase terminated prematurely. Some examples of events that could interrupt the compaction phase: not enough memory or disk space on the host system. Moreover, compaction can also be cancelled by shutting down the system or by explicitly cancelling it via administrative interfaces such as the Maintenance Window within the Operations Dashobard. |Depends on the given reason. |
+|   |TarMK GC #2: compaction failed in 32.902 min (1974140 ms), after 5 cycles |This message doesn’t mean that there was an unrecoverable error, but only that compaction was terminated after a certain amount of attempts. Also, read the [following paragraph](https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#how-does-compaction-works-with-concurrent-writes). |Read the following [Oak documentation](https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#how-does-compaction-works-with-concurrent-writes), and the last question of the [Running Online Revision Cleanup](/help/sites-deploying/revision-cleanup.md#running-online-revision-cleanup) section. |
+| Cleanup |TarMK GC #2: cleanup interrupted |Cleanup has been cancelled by shutting down the repository. No impact on consistency is expected. Also, disk space is most likely not reclaimed to full extent. It will be reclaimed during next revision cleanup cycle. |Investigate why repository has been shut down and going forward try to avoid shutting down the repository during maintenance windows. |-->
+
+<table style="table-layout:auto">
+ <tbody>
+  <tr>
+    <th>Fas</th>
+    <th>Loggmeddelanden</th>
+    <th>Förklaring</th>
+    <th>Nästa steg</th>
+  </tr>  
+  <tr>
+    <td>Uppskattning</td>
+    <td>TjärMK GC #2: uppskattningen hoppades över eftersom komprimeringen har pausats.</td>
+    <td>Uppskattningsfasen hoppas över när komprimering är inaktiverat i systemet efter konfiguration.</td>
+    <td>Aktivera rensning av onlineversioner.</td>
+  </td>
+  </tr>
+  <tr>
+    <td>Ej tillämpligt</td>
+    <td>TjärMK GC #2: Uppskattningen avbröts: ${REASON}. Hoppar över komprimering.</td>
+    <td>Uppskattningsfasen avslutades i förtid. Exempel på händelser som kan avbryta beräkningsfasen: det finns inte tillräckligt med minne eller diskutrymme på värdsystemet.</td>
+    <td>Beroende på den angivna orsaken.</td>
+  </td>
+  </tr>
+  <tr>
+    <td>Komprimering</td>
+    <td>TjärMK GC #2: komprimering pausad.</td>
+    <td>Så länge komprimeringsfasen pausas av konfigurationen kommer varken beräkningsfasen eller komprimeringsfasen att utföras.</td>
+    <td>Aktivera rensning av onlineversioner.</td>
+  </td>
+  </tr>
+   <tr>
+    <td>Ej tillämpligt</td>
+    <td>TjärMK GC #2: komprimeringen avbröts: ${REASON}.</td>
+    <td>Komprimeringsfasen avslutades för tidigt. Exempel på händelser som kan avbryta kompaktionsfasen: det finns inte tillräckligt med minne eller diskutrymme på värdsystemet. Komprimeringen kan också avbrytas genom att systemet stängs av eller genom att det uttryckligen avbryts via administrativa gränssnitt som underhållspanelen i Operations Dashboard.</td>
+    <td>Beroende på den angivna orsaken.</td>
+  </td>
+  </tr>
+  <tr>
+    <td>Ej tillämpligt</td>
+    <td>TjärMK GC #2: komprimering misslyckades med 32,902 min (1974140 ms), efter 5 cykler.</td>
+    <td>Det här meddelandet betyder inte att det fanns ett oåterkalleligt fel, men bara den komprimeringen avslutades efter ett visst antal försök. Läs även <a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#how-does-compaction-works-with-concurrent-writes">efter stycke.</a></td>
+    <td>Läs följande <a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#how-does-compaction-works-with-concurrent-writes">Oak-dokumentation</a>och den sista frågan i avsnittet Running Online Revision Cleanup.</a></td>
+  </td>
+  </tr>
+  <tr>
+    <td>Rensa</td>
+    <td>TjärMK GC #2: rensningen avbröts.</td>
+    <td>Rensningen avbröts genom att databasen stängdes av. Ingen påverkan på konsekvensen förväntas. Dessutom kommer diskutrymmet troligtvis inte att återvinnas i full utsträckning. Den kommer att återvinnas under nästa revisionsrensningscykel.</td>
+    <td>Undersök varför databasen har stängts av och gå framåt för att undvika att stänga av databasen under underhållsfönster.</td>
+  </td>
+  </tr>
+  </tbody>
+</table>
 
 ## Så här kör du borttagning av offlinerevision {#how-to-run-offline-revision-cleanup}
 
@@ -601,7 +654,7 @@ Förutom metoderna ovan kan du även aktivera funktionen för revisionsrensning 
 
 ### Vanliga frågor och svar om rensning av offlinerevision {#offline-revision-cleanup-frequently-asked-questions}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>Vilka faktorer avgör varaktigheten för rensningen av offlineredigering?</strong></td>
