@@ -10,7 +10,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: f52402df-f6dc-4c62-82bc-cbce489b2b74
 exl-id: 43fb4fa3-269a-4635-b055-4b7d787da21f
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
 workflow-type: tm+mt
 source-wordcount: '2709'
 ht-degree: 0%
@@ -143,7 +143,7 @@ JCR är i själva verket ett system med noder och egenskaper, där noder kan är
 
 JCR har ett antal fördefinierade nodtyper och egenskapstyper, men i allmänhet är typningssystemet relativt flexibelt och (faktiskt) en av styrkorna hos JCR är att det gör det möjligt att lagra och hantera både strukturerat och ostrukturerat innehåll lika enkelt. JCR kan alltså rymma mycket strukturerade data, men kan även rymma godtyckliga dynamiska datastrukturer utan schemabegränsningar.
 
-JavaDoc för JCR:s Java API är [här](http://jackrabbit.apache.org/jcr/jcr-api.html).
+JavaDoc för JCR:s Java API är [här](https://jackrabbit.apache.org/jcr/jcr-api.html).
 
 Innan du försöker läsa JavaDoc eller JCR-specifikationen i sig bör du kanske titta på [den här förklaringen på hög nivå](/help/sites-developing/the-basics.md#java-content-repository) av JCR i enlighet med Adobe Experience Services.
 

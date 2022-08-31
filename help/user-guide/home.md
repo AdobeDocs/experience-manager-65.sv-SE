@@ -2,15 +2,14 @@
 title: AEM 6.5 User Guide Hub
 seo-title: AEM 6.5 User Guide Hub
 description: Översikt över alla nödvändiga resurser för att förstå, installera, hantera och använda AEM 6.5
-seo-description: Översikt över alla nödvändiga resurser för att förstå, installera, hantera och använda AEM 6.5
-translation-type: tm+mt
-source-git-commit: 315d1ac1a00da474f535087eff49c2be8fee8c37
+seo-description: An overview of all of the essential resources for understanding, installing, managing, and using AEM 6.5
+exl-id: 51788662-6214-408e-98d9-692950c366be
+source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
 workflow-type: tm+mt
-source-wordcount: '233'
+source-wordcount: '214'
 ht-degree: 1%
 
 ---
-
 
 # AEM 6.5 User Guide Hub {#aem-64-user-guide}
 
@@ -43,14 +42,14 @@ Supportrepresentant kan få assisterad support via:
 
 >[!NOTE]
 >
->Är du inte säker på om du är **supportrepresentant**? Ta reda på om denna [användartyp gäller dig](https://helpx.adobe.com/experience-cloud/supported-users.html) och läs mer om våra [företagssupportvillkor](https://helpx.adobe.com/support/programs/enterprise-support-terms.html).
+>Är du osäker på om du är **supportrepresentant**? Ta reda på om detta [användartypen gäller dig](https://helpx.adobe.com/experience-cloud/supported-users.html) och få veta mer om våra [Enterprise Support-villkor](https://helpx.adobe.com/support/programs/enterprise-support-terms.html).
 
 ## Community {#community}
 
 Delta i konversationen!
 
-* [AEM Sites Forum](http://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.html)
-* [AEM Communities Forum](http://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/aem-communities.html)
-* [AEM Forms Forum](http://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/aem-forms.html)
-* [AEM Assets Forum](http://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/aem-assets.html)
-* [AEM Mobile Forum](http://forums.adobe.com/community/experiencemanagermobile)
+* [AEM Sites Forum](https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.html)
+* [AEM Communities Forum](https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/aem-communities.html)
+* [AEM Forms Forum](https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/aem-forms.html)
+* [AEM Assets Forum](https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/aem-assets.html)
+* [AEM Mobile Forum](https://forums.adobe.com/community/experiencemanagermobile)

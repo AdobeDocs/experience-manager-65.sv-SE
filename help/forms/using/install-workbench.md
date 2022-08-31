@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 role: Admin
 exl-id: d530dbb9-f95e-4329-9665-37faf8f7931b
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
 workflow-type: tm+mt
 source-wordcount: '2244'
 ht-degree: 0%
@@ -36,11 +36,11 @@ Resurserna i den här tabellen kan hjälpa dig att lära dig mer om och komma ig
   </tr>
   <tr>
    <td><p>Allmän information om AEM Forms och hur det integreras med andra Adobe-produkter</p> </td>
-   <td><p><a href="http://adobe.com/go/learn_aemforms_introduction_65">AEM Forms - översikt</a><br /> <br /> </p> </td>
+   <td><p><a href="https://adobe.com/go/learn_aemforms_introduction_65">AEM Forms - översikt</a><br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>All tillgänglig dokumentation för AEM Forms</p> </td>
-   <td><p><a href="http://adobe.com/go/learn_aemforms_introduction_65">AEM Forms-dokumentation</a><br /> <br /> </p> </td>
+   <td><p><a href="https://adobe.com/go/learn_aemforms_introduction_65">AEM Forms-dokumentation</a><br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>Lappa uppdateringar, tekniska anteckningar och ytterligare information om den här produktversionen</p> </td>
@@ -98,7 +98,7 @@ Följande krav rekommenderas som minimum: Diskutrymme för installation:
 
 ### Plattformar som stöds {#supported-platforms}
 
-Se hela listan över plattformar som stöds för Workbench på [Plattformar som stöds av AEM Forms](http://adobe.com/go/learn_aemforms_supportedplatforms_65).
+Se hela listan över plattformar som stöds för Workbench på [Plattformar som stöds av AEM Forms](https://adobe.com/go/learn_aemforms_supportedplatforms_65).
 
 ## Installationsfrågor för Designer {#designer-installation-considerations}
 
@@ -173,7 +173,7 @@ Innan du installerar Workbench måste du kontrollera att miljön innehåller den
 1. Följande objekt är nu installerade på datorn:
    * **Workbench**: Om du vill köra Workbench från Start-menyn väljer du Alla program > AEM Forms > Workbench, om du väljer att spara genvägsmappen där. Mer information finns i <a href="https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/WorkbenchHelp.pdf">Använda Workbench</a> dokumentation.
    * **Designer**: Du kan öppna Designer inifrån Workbench. Mer information finns i avsnittet Komma igång i <a href="https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/using-designer.pdf">Designer - hjälp</a>.
-   * **AEM Forms SDK**: Mer information om hur du använder SDK finns i <a href="http://www.adobe.com/go/learn_aemforms_programming_65">Programmera med AEM Forms</a>.
+   * **AEM Forms SDK**: Mer information om hur du använder SDK finns i <a href="https://www.adobe.com/go/learn_aemforms_programming_65">Programmera med AEM Forms</a>.
 
 ## Uppgraderingsprocesser {#upgrading-processes}
 
@@ -232,7 +232,7 @@ När formulärgeneratorn eller utdataanvändaren söker efter, eller uppdaterar,
 * **Mall-UID**: Designer infogar en unik identifierare (UUID) för formuläret och dess version i varje mall. Varje gång formuläret uppdateras uppdateras det inbäddade UUID:t. En XDP-mall kan till exempel visa följande innehåll:
 
    `<?xml version="1.0" encoding="UTF-8"?>`
-   `<?xfa generator="AdobeAEM formsDesignerES_V8.2" APIVersion="2.6.7185.0"?><xdp:xdp xmlns:xdp=http://ns.adobe.com/xdp/ timeStamp="2008-07-29T21:22:12Z" uuid="823e538f-ff6c-4961-b759-f7626978a223"><template xmlns="http://www.xfa.org/schema/xfa-template/2.6/">`
+   `<?xfa generator="AdobeAEM formsDesignerES_V8.2" APIVersion="2.6.7185.0"?><xdp:xdp xmlns:xdp=https://ns.adobe.com/xdp/ timeStamp="2008-07-29T21:22:12Z" uuid="823e538f-ff6c-4961-b759-f7626978a223"><template xmlns="https://www.xfa.org/schema/xfa-template/2.6/">`
 
 * **Återgivningsalternativ**: I den återgivna formulärcachen lagras cacheinnehållet separat för varje uppsättning unika återgivningsalternativ.
 

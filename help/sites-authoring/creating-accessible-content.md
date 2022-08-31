@@ -2,7 +2,7 @@
 title: Creating Accessible Content for Adobe Experience Manager (WCAG 2.1-överensstämmelse)
 description: Använd AEM för att göra webbinnehåll tillgängligt för och användbart för personer med funktionshinder
 exl-id: 2145d761-f51d-482b-a0e7-ef7500c4872f
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
 workflow-type: tm+mt
 source-wordcount: '13956'
 ht-degree: 5%
@@ -558,7 +558,7 @@ Se till att texten kontrasterar tillräckligt med bakgrunden. Kontrastförhålla
 >
 >* [Px to Em Calculater - Omni](https://www.omnicalculator.com/conversion/px-to-em)
 >* [Konvertering av teckenstorlek: pixel-point-em-rem-percent](https://websemantics.uk/tools/font-size-conversion-pixel-point-em-rem-percent/)
->* [PMtoEM.com: Konvertering från PX till EM på ett enkelt sätt](http://pxtoem.com)
+>* [PMtoEM.com: Konvertering från PX till EM på ett enkelt sätt](https://pxtoem.com)
 
 
 Om du vill kontrollera kontrastförhållanden använder du ett färgkontrastverktyg, till exempel [Pacific Group Color Contrast Analyser](https://www.paciellogroup.com/resources/contrast-analyser.html) eller [WebAIM-färgkontrastkontroll](https://www.webaim.org/resources/contrastchecker/). Med dessa verktyg kan du kontrollera färgpar och rapportera om eventuella kontrastproblem.

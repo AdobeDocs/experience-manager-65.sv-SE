@@ -1,18 +1,17 @@
 ---
 title: AEM
-seo-title: AEM
+seo-title: The AEM Community
 description: AEM
-seo-description: AEM
-translation-type: tm+mt
-source-git-commit: 315d1ac1a00da474f535087eff49c2be8fee8c37
+seo-description: The AEM Community
+exl-id: 2e73572c-78de-4c20-ada8-d95f7fd16dc9
+source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
 workflow-type: tm+mt
-source-wordcount: '330'
+source-wordcount: '324'
 ht-degree: 1%
 
 ---
 
-
-# Den AEM communityn {#the-aem-community}
+# AEM {#the-aem-community}
 
 ## Vad är AEM community? {#what-is}
 
@@ -22,9 +21,9 @@ AEM har tusentals medlemmar världen över. De kan vara allt från människor so
 
 ## Vilka händelser finns det för AEM användare? {#events}
 
-Det finns en mängd händelser för medlemmarna! Varje månad håller vi sessioner där du kan ställa frågor till experten i specifika AEM. Vi kommer även att informera dig om större händelser, som [Immerse](http://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.topic.html/forum__fb7p-the_immerseagendai.html) eller [Adobe Summit](http://summit.adobe.com/na/?promoid=6JMR7JQY&amp;mv=other), eller till och med användargrupphändelser i ditt område.
+Det finns en mängd händelser för medlemmarna! Varje månad håller vi sessioner där du kan ställa frågor till experten i specifika AEM. Vi kommer också att informera dig om större händelser, som [Immerse](https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.topic.html/forum__fb7p-the_immerseagendai.html) eller [Adobe Summit](https://summit.adobe.com/na/?promoid=6JMR7JQY&amp;mv=other)eller till och med användargruppshändelser i ditt område.
 
-Det bästa är att [besöka AEM Community idag och se vad som pågår.](http://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.html)
+Det bästa att göra är [Besök AEM Community idag och se vad som pågår.](https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.html)
 
 ## Kan jag få kodexempel som hjälp? {#code-samples}
 

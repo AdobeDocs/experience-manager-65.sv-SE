@@ -1,32 +1,31 @@
 ---
 title: Skärmläsare för HTML5-formulär
-seo-title: Skärmläsare för HTML5-formulär
-description: Visar de skärmläsare som stöds i HTML5-formulär.
-seo-description: Visar de skärmläsare som stöds i HTML5-formulär.
+seo-title: Screen readers for HTML5 forms
+description: Visar en lista över skärmläsare som kan användas med HTML5-formulär.
+seo-description: Lists the screen readers supported with HTML5 forms.
 uuid: 035354e2-957f-4eb6-bc16-4ca96ec7ac74
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 53c57180-7004-4534-9146-603f7770a6fe
 feature: Mobile Forms
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 07d20c2f-7d13-48ac-8d58-b367eb194558
+source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
 workflow-type: tm+mt
-source-wordcount: '347'
+source-wordcount: '335'
 ht-degree: 0%
 
 ---
 
-
 # Skärmläsare för HTML5-formulär {#screen-readers-for-html-forms}
 
-HTML5-formulärkomponenter återger XFA-formulärmallen till ett HTML5-format. Alla standardwebbläsare som stöder HTML5 kan återge dessa formulär. För att ge stöd för liknande datainhämtning i olika PDF- och HTML5-formulär behålls layouten för PDF forms i HTML5-formulär.
+Formulärkomponenter i HTML5 återger XFA-formulärmallen till HTML5-format. Alla standardwebbläsare som stöder HTML5 kan återge dessa formulär. För att ge stöd för liknande datainhämtning i PDF och HTML 5 behålls layouten för PDF forms i HTML5-formulär.
 
-HTML5-formulär använder HTML-standardkonstruktioner som tillåter vanliga hjälpmedelsverktyg för HTML att användas med dessa formulär. Om ett formulär är utformat enligt bästa praxis för hjälpmedelsförberedda formulär fungerar det med alla skärmläsare som stöds. Dessutom är sådana formulär aktiverade för tangentbordsnavigering.
+HTML5-formulär använder HTML som standard och gör det möjligt att använda vanliga hjälpmedelsverktyg för HTML för dessa formulär. Om ett formulär är utformat enligt bästa praxis för hjälpmedelsförberedda formulär fungerar det med alla skärmläsare som stöds. Dessutom är sådana formulär aktiverade för tangentbordsnavigering.
 
 ## Tillgänglighetsstandarder {#accessibility-standards}
 
-HTML5-formulär uppfyller kraven i avsnitt 508 för tillgänglighet med kända undantag. Mer information finns i [VPAT för HTML5-formulär](https://www.adobe.com/mena_en/accessibility/compliance/livecycle-mobile-forms-es4-section-508-vpat.html).
+HTML5-formulär uppfyller kraven i avsnitt 508 för tillgänglighet med kända undantag. Se [VPAT för HTML5-formulär](https://wwwimages.adobe.com/content/dam/acom/en/accessibility/compliance/pdfs/livecycle-mobile-forms-es4-section-508-vpat.pdf) för mer information.
 
 ## Certifierade skärmläsare för HTML5-formulär {#certified-screen-readers-for-html-forms}
 
@@ -39,11 +38,11 @@ Alla standardtangenttryckningar och kortkommandon fungerar för HTML5-formulär.
 
 ### VoiceOver {#voiceover}
 
-HTML5-formulär har stöd för alla standardtangenttryckningar och -gester för Voice over. Mer information om hur du konfigurerar och använder VoiceOver finns i [https://www.apple.com/accessibility/voiceover/](https://www.apple.com/accessibility/voiceover/).
+HTML5-formulär har stöd för alla standardtangenttryckningar och -gester i Voice over. Mer information om hur du konfigurerar och använder VoiceOver finns i [https://www.apple.com/accessibility/voiceover/](https://www.apple.com/accessibility/voiceover/).
 
 ## Kända fel {#known-issues}
 
-* **(Endast i Utforskaren 9)** I HTML5-formulär läses sidorna in vid behov (dynamiskt). Sidinläsning on demand orsakar problem med skärmläsarnas funktion. När skärmläsarens fokus är på det sista fältet på sidan och användaren trycker på fliken, återgår skärmläsaren fokus till det första fältet på formulärets första sida i stället för att fokusera på det första fältet på nästa sida.
-* **(Endast internt Explorer 9)** Datumväljarkontrollen i HTML5-formulär är inte helt tillgänglig med tangentbordet. Om du trycker på upp-/nedtangenterna flera gånger i datumväljaren stängs datumväljaren och fokus flyttas till nästa/sista fält.
+* **(Endast Internet Explorer 9)** I HTML5-formulär läses sidorna in vid behov (dynamiskt). Sidinläsning on demand orsakar problem med skärmläsarnas funktion. När skärmläsarens fokus är på det sista fältet på sidan och användaren trycker på fliken, återgår skärmläsaren fokus till det första fältet på formulärets första sida i stället för att fokusera på det första fältet på nästa sida.
+* **(Endast Internet Explorer 9)** Datumväljarkontrollen i HTML5-formulär är inte helt tillgänglig med tangentbordet. Om du trycker på upp-/nedtangenterna flera gånger i datumväljaren stängs datumväljaren och fokus flyttas till nästa/sista fält.
 
-* VoiceOver kan inte identifiera piltangenter på datumwidgeten på iPad safari.
+* VoiceOver kan inte identifiera piltangenter på datumwidgeten i iPad Safari.

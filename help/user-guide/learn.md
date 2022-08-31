@@ -4,7 +4,7 @@ seo-title: Learn About AEM 6.5 Capabilities
 description: En beskrivning av de viktigaste funktionerna i AEM 6.5
 seo-description: An description of the essential capabilities of AEM 6.5
 exl-id: dc3b8690-f664-4ffa-993b-7a8634e6fe6b
-source-git-commit: d1b4cf87291f7e4a0670a21feca1ebf8dd5e0b5e
+source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
 workflow-type: tm+mt
 source-wordcount: '400'
 ht-degree: 2%
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 ## AEM Sites {#aem-sites}
 
-AEM Sites är ett innehållshanteringssystem i Adobe Experience Manager som ger er en plats där ni kan skapa, hantera och leverera digitala upplevelser på webbplatser, mobilsajter och skärmar på plats för att göra dem globala, men ändå personligt relevanta och engagerande. [Läs mer](http://www.adobe.com/marketing-cloud/enterprise-content-management/web-cms.html) eller [fördjupa dig i några av våra nya självstudiekurser om videofunktioner.](https://helpx.adobe.com/experience-manager/kt/sites/index/aem-6-5-sites.html)
+AEM Sites är ett innehållshanteringssystem i Adobe Experience Manager som ger er en plats där ni kan skapa, hantera och leverera digitala upplevelser på webbplatser, mobilsajter och skärmar på plats för att göra dem globala, men ändå personligt relevanta och engagerande. [Läs mer](https://www.adobe.com/marketing-cloud/enterprise-content-management/web-cms.html) eller [fördjupa dig i några av våra nya självstudiekurser om videofunktioner.](https://helpx.adobe.com/experience-manager/kt/sites/index/aem-6-5-sites.html)
 
 ## AEM Assets {#aem-assets}
 
@@ -42,11 +42,11 @@ Skärmar är en funktion hos Adobe Experience Manager som gör att ni kan public
 
 ## AEM Communities {#aem-communities}
 
-Communities är en Adobe Experience Manager-funktion som hjälper er att skapa onlinecommunityn som forum, användargrupper, utbildningsresurser och andra sociala funktioner som är värdefulla för kunder, anställda och ert varumärke. [Läs mer.](http://www.adobe.com/marketing-cloud/enterprise-content-management/social-community-cms.html)
+Communities är en Adobe Experience Manager-funktion som hjälper er att skapa onlinecommunityn som forum, användargrupper, utbildningsresurser och andra sociala funktioner som är värdefulla för kunder, anställda och ert varumärke. [Läs mer.](https://www.adobe.com/marketing-cloud/enterprise-content-management/social-community-cms.html)
 
 ## AEM Livefyre {#aem-livefyre}
 
-AEM Livefyre är en helt ny Adobe Experience Manager-funktion som gör att du kan utnyttja allt som delas på webben och skapa ett konstant flöde av nytt högkvalitativt innehåll på dina egna webbplatser. [Läs mer](http://www.adobe.com/marketing-cloud/enterprise-content-management/ugc-content-platform.html) eller [gå direkt in i våra guider.](https://answers.livefyre.com/product/livefyre-for-adobe-experience-manager-aem/)
+AEM Livefyre är en helt ny Adobe Experience Manager-funktion som gör att du kan utnyttja allt som delas på webben och skapa ett konstant flöde av nytt högkvalitativt innehåll på dina egna webbplatser. [Läs mer](https://www.adobe.com/marketing-cloud/enterprise-content-management/ugc-content-platform.html) eller [gå direkt in i våra guider.](https://answers.livefyre.com/product/livefyre-for-adobe-experience-manager-aem/)
 
 ## AEM {#aem-foundation}
 

@@ -1,7 +1,8 @@
 ---
-title: Hur skickar jag autentiseringsuppgifter med WS-security headers?
+title: Hur skickar jag inloggningsuppgifter med WS-security headers?
 description: Lär dig hur du skickar inloggningsuppgifter med WS-security headers
-source-git-commit: 730ae7cd6cd04eb6377b37eafe29db597e93cce3
+exl-id: 1b950d8f-6b54-452a-831b-f5644370691d
+source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 0%
@@ -16,7 +17,7 @@ Upplev AEM Forms i JEE Process Management, grundläggande Java-programmering och
 
 **Ytterligare obligatoriska andra produkter**
 
-Java-redigerare som [Eclipse](https://www.eclipse.org/) eller [Netbeans IDE](https://netbeans.apache.org/)
+Java editor som [Eclipse](https://www.eclipse.org/) eller [Netbeans IDE](https://netbeans.apache.org/)
 
 ## Användarnivå {#user-level}
 
@@ -127,7 +128,7 @@ Filen component.xml visas här:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<component xmlns="http://adobe.com/idp/dsc/component/document">
+<component xmlns="https://adobe.com/idp/dsc/component/document">
 <!-- Unique id identifying this component -->
    <component-id>ZipService</component-id>
 
@@ -194,7 +195,7 @@ Filen component.xml visas här:
 
 ## Använda ZIP-tjänsten i arbetsflöden {#using-zip-service-in-workflows}
 
-UnzipDocument-åtgärden för den anpassade tjänsten kan nu acceptera en dokumentvariabel som indata och returnera en lista med dokumentvariabler som utdata.
+UnzipDocument-åtgärden i den anpassade tjänsten kan nu acceptera en dokumentvariabel som indata och returnera en lista med dokumentvariabler som utdata.
 
 ![Zippa upp dokument](assets/unzip-doc.jpg)
 
@@ -212,13 +213,10 @@ Du kan använda den här ZIP-tjänsten för följande användningsområden:
 
 * Sök efter alla filer i en viss mapp och returnera filerna som ett komprimerat dokument.
 
-* Ange en ZIP-fil som innehåller ett antal PDF-dokument som kan läsas upp när de har dekomprimerats. Detta kräver AEM Forms på JEE Reader Extensions-modulen.
+* Ange en ZIP-fil som innehåller ett antal PDF-dokument som kan läsas upp när de har expanderats. Detta kräver AEM Forms på JEE Reader Extensions-modulen.
 
-* Ange en ZIP-fil som innehåller heterogena dokumenttyper som kan dekomprimeras och konverteras som PDF-dokument med hjälp av tjänsten Generera PDF.
+* Ange en ZIP-fil som innehåller heterogena dokumenttyper som kan dekomprimeras och konverteras som PDF-dokument med hjälp av tjänsten Generate PDF.
 
 * Skydda en lista med dokument och returnera som en ZIP-fil.
 
 * Tillåt användare att hämta alla bilagor för en processinstans som en enskild ZIP-fil.
-
-
-

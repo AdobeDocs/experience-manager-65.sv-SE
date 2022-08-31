@@ -9,7 +9,7 @@ topic-tags: correspondence-management
 discoiquuid: 6cef0bcf-e2f0-4a5a-85a1-6d8a5dd9bd01
 feature: Correspondence Management
 exl-id: 2f996a50-7c7d-41b6-84b2-523b6609254b
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
 workflow-type: tm+mt
 source-wordcount: '3979'
 ht-degree: 1%
@@ -230,7 +230,7 @@ Du behöver följande innan du kan skapa en korrespondens:
 
 * [Kompatibilitetspaket](compatibility-package.md). Installera Kompatibilitetspaketet för att visa **Bokstäver** på **Forms** sida.
 * Bokstaven XDP ([layout](/help/forms/using/document-fragments.md)).
-* Andra XDP-filer ([layoutfragment](document-fragments.md#document-fragments)) som utgör delar av brevet. XDP:er\Layouts skapas i [Designer](http://www.adobe.com/go/learn_aemforms_designer_65).
+* Andra XDP-filer ([layoutfragment](document-fragments.md#document-fragments)) som utgör delar av brevet. XDP:er\Layouts skapas i [Designer](https://www.adobe.com/go/learn_aemforms_designer_65).
 * Den relevanta [dataordlista](/help/forms/using/data-dictionary.md) (Valfritt).
 * The [datamoduler](/help/forms/using/document-fragments.md) som du vill använda i korrespondensen.
 * [Testdata](/help/forms/using/data-dictionary.md#p-working-with-test-data-p) är XML-filen med de testdata som finns i den. Du måste testa data om du använder ett datalexikon.

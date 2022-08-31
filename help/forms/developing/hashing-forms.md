@@ -2,7 +2,7 @@
 title: Hur skapar och arbetar man med hasharna i dynamiska PDF forms?
 description: Generera och arbeta med hashvärden i dynamisk PDF forms
 exl-id: 026f5686-39ea-4798-9d1f-031f15941060
-source-git-commit: 135f50cc80f8bb449b2f1621db5e2564f5075968
+source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
 workflow-type: tm+mt
 source-wordcount: '1249'
 ht-degree: 0%
@@ -120,5 +120,5 @@ Jag rekommenderar att du fortsätter utforska de två exempelfilerna för PDF.  
 * [NIST](https://csrc.nist.gov/projects/cryptographic-standards-and-guidelines)
 * [Hash-kollision](https://en.wikipedia.org/wiki/Hash_collision)
 * [Regnbågsbord](https://en.wikipedia.org/wiki/Rainbow_table)
-* [Startsida för JavaScript MD5-projekt](http://pajhome.org.uk/crypt/md5/)
+* [Startsida för JavaScript MD5-projekt](https://pajhome.org.uk/crypt/md5/)
 * [jsSHA2 project home page](https://anmar.eu.org/projects/jssha2/)
