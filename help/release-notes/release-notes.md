@@ -1,10 +1,11 @@
 ---
 title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
-description: '"Hitta versionsinformation, nyheter, installationsguider och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5."'
+description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
-source-git-commit: 783edcdf0f96426008b6f824a7aa0aa0deb5c613
+exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
+source-git-commit: 0bd7c444bf0424b60c11b7171b7ea7ae9d7f3926
 workflow-type: tm+mt
-source-wordcount: '2548'
+source-wordcount: '2549'
 ht-degree: 0%
 
 ---
@@ -52,7 +53,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Smarta innehållstjänster kommer inte att vara tillgängliga för nya Experience Manager Assets On-Premise-kunder från och med den 1 september 2022. Ingen påverkan på befintliga kunder med lokal och Adobe Managed Services som redan aktiverat den här funktionen.
+>Smarta innehållstjänster kommer inte att vara tillgängliga för nya Experience Manager Assets On-Premise-kunder från och med den 1 september 2022. Ingen påverkan på befintliga kunder med lokal och Adobe Managed Services som redan har den här funktionen aktiverad.
 
 ### [!DNL Dynamic Media] {#dynamic-media-6514}
 
