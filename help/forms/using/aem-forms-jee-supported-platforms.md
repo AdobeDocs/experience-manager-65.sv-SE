@@ -11,9 +11,9 @@ discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 9ee8e79777b89fbf4d6e5b5fd1dbb1ef3bc9ad5d
 workflow-type: tm+mt
-source-wordcount: '3550'
+source-wordcount: '3583'
 ht-degree: 0%
 
 ---
@@ -91,9 +91,9 @@ Adobe Experience Manager Forms kräver att en Java Virtual Machine körs, vilket
    <th><p><strong>Patch-definitioner som stöds</strong></p> </th>
   </tr>
   <tr>
-   <td><p>Oracle Java™ SE 11 (64 bitar)</p> </td>
-   <td><p>Z: Stöds inte</p> </td>
-   <td><p> </p> </td>
+   <td><p>Oracle Java™ SE 11 (64 bitar) <sup> [8] </sup> </p>  </td>
+   <td><p>S: Stöds</p> </td>
+   <td><p>Mindre releaser och uppdateringar </p> </td>
   </tr>
   <tr>
    <td>Azul Zulu OpenJDK 11 - 64 bitar</td>
@@ -361,6 +361,7 @@ Tänk på följande undantag när du väljer en plattform för att konfigurera A
 1. CRX-databasen har stöd för beständighet av typen tarMK, MongoDB och relationsdatabaser (RDBMK). Du kan inte ha två olika databassystem mellan programservern och CRX-databasen. I en AEM Forms-miljö för JEE kan du emellertid använda MongoMK med CRX-databas och en relationsdatabas som stöds med programserver.
 1. AEM Forms i JEE stöder inte WebSphere-programserver i CentOS.
 1. AEM Forms på JEE stöder inte JBoss-rollbaserad åtkomstkontroll (RBAC).
+1. AEM Forms på JEE stöder endast Java™ SE 11 (64 bitar) SDK för programserverns JBoss EAP 7.4.
 
 Tänk dessutom på följande när du väljer program för Adobe AEM Forms i JEE-distributioner:
 
@@ -794,6 +795,10 @@ Följande plattformar är markerade som borttagna i AEM Forms 6.5.10.0 den 7 sep
 > Plattformarna är markerade som [som inte längre används i AEM Forms 6.5.12.0 och 6.5.10.0 har stöd tills AEM Forms 6.5 Service Pack 18 (6.5.18.0) har släppts](https://helpx.adobe.com/support/programs/eol-matrix.html).
 
 ## Revisionshistorik {#revision-history}
+
+- 1 september 2022
+
+   - Stöd för Java™ SE 11 (64 bitar) SDK för JBoss EAP 7.4 på programservern har lagts till.
 
 - 3 mars 2022
 
