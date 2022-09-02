@@ -8,9 +8,9 @@ user-guide-title: Adobe Experience Manager 6.5 Forms Guide
 breadcrumb-title: Forms Guide
 user-guide-description: Skapa, hantera, publicera och uppdatera digitala formulär.
 role: User
-source-git-commit: 3f7191ecdddf7325f2c1153f1ec733893cc649dc
+source-git-commit: 966a3ea6b8cb9b42e21f8e3eb3fee1c7ca93cf51
 workflow-type: tm+mt
-source-wordcount: '3795'
+source-wordcount: '3791'
 ht-degree: 1%
 
 ---
@@ -332,7 +332,6 @@ ht-degree: 1%
    + [Konfigurera analyser och rapporter](using/configure-analytics-forms-documents.md)
    + [Visa och förstå AEM Forms analysrapporter](using/view-understand-aem-forms-analytics-reports.md)
    + [Skapa och hantera A/B-tester för adaptiva formulär](using/ab-testing-adaptive-forms.md)
-   + [Integrera med Adobe Analytics](using/integrate-aem-forms-with-adobe-analytics.md)
 + Publicera och bearbeta AEM Forms {#publish-process-aem-forms}
    + [Introduktion till att publicera formulär på en portal](using/introduction-publishing-forms.md)
    + [Exempel för att integrera komponent för utkast och inlämning med databas](using/integrate-draft-submission-database.md)
