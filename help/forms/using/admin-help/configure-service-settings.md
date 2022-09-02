@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/managing_services
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 2fab4b0c-e5db-47cd-b85a-4ff5ad6eb178
 exl-id: a6a10ff0-6f4d-42df-9b4e-f98a53cf1806
-source-git-commit: 9ee8e79777b89fbf4d6e5b5fd1dbb1ef3bc9ad5d
+source-git-commit: 3e6eba85dbd9e98ac29fed55c1787e5633bafc04
 workflow-type: tm+mt
-source-wordcount: '10769'
+source-wordcount: '10683'
 ht-degree: 0%
 
 ---
@@ -186,16 +186,6 @@ Följande inställningar är tillgängliga för e-posttjänsten.
 **SMTP-användare:** Användarnamnet för det användarkonto som ska användas för att logga in på SMTP-servern.
 
 **SMTP-lösenord:** Lösenordet som är associerat med SMTP-användarkontot.
-
-**0Auth2.0-autentisering:** Autentiseringstjänsten Auth2.0 ger stöd till den integrerade e-posttjänsten så att organisationer kan följa e-postkraven.
-
-**Klient-ID:** Azure-portalen genererar ett program-ID, som används för autentisering.
-
-**Klienthemlighet:** Azure-portalen genererar en hemlig nyckel som används för autentisering.
-
-**Uppdatera token:**  OAuth-klienten använder en sträng för att hämta en ny åtkomsttoken utan användarens interaktion.
-
-Mer information om hur du hämtar och använder klient-ID, klienthemlighet och uppdateringstoken finns i [OAuth2.0-autentiseringsstöd för e-posttjänster](/help/forms/using/oauth2-support-for-mail-service.md).
 
 **SMTP-transportsäkerhet:** Det säkerhetsprotokoll som ska användas för att ansluta till SMTP-servern:
 

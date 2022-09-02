@@ -8,9 +8,9 @@ user-guide-title: Adobe Experience Manager 6.5 Forms Guide
 breadcrumb-title: Forms Guide
 user-guide-description: Skapa, hantera, publicera och uppdatera digitala formulär.
 role: User
-source-git-commit: 9ee8e79777b89fbf4d6e5b5fd1dbb1ef3bc9ad5d
+source-git-commit: 3f7191ecdddf7325f2c1153f1ec733893cc649dc
 workflow-type: tm+mt
-source-wordcount: '3801'
+source-wordcount: '3795'
 ht-degree: 1%
 
 ---
@@ -122,7 +122,6 @@ ht-degree: 1%
       + [Allmänna säkerhetsfrågor för AEM Forms i JEE](using/general-security-considerations.md)
       + [Förbättra din AEM Forms på JEE-miljö](using/hardening-aem-forms-jee-environment.md)
       + [Konfigurera inställningar för säker administration för AEM Forms på JEE](using/configuring-secure-administration-settings-aem.md)
-      + [OAuth2-stöd för e-posttjänsten](using/oauth2-support-for-mail-service.md)
 + Formulärdatamodell {#form-data-model}
    + [Introduktion till AEM Forms dataintegrering](using/data-integration.md)
    + [Konfigurera datakällor](using/configure-data-sources.md)
