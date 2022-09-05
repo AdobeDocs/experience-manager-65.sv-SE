@@ -3,9 +3,9 @@ title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: 081b0c70ceca0502cb84d7e1b68b0b12dc45a4e7
+source-git-commit: 381ab110ccf5605b17382b9c77693c819e31e3b6
 workflow-type: tm+mt
-source-wordcount: '3162'
+source-wordcount: '3149'
 ht-degree: 0%
 
 ---
@@ -152,7 +152,6 @@ ht-degree: 0%
 * Textkomponenten är feljusterad när den läggs till i kapslade layoutbehållare. (NPR-38193)
 * En tom formatflik visades när det inte fanns någon formatsystemskonfiguration för en komponent. Fliken är nu dold när ingen konfiguration finns. (NPR-38218) <!-- version 2 (old) of description above * Style tab is blank on components without styles/policies. (NPR-38218) -->
 * Egenskapen `useLegacyResponsiveBehaviour` fungerar bara när de autentiseras. (NPR-37996)
-* Uppgraderingen av jquery-ui till den senaste versionen ledde till att redigeraren bröts. (SITES-5647)
 
 ### [!DNL Content Fragments] {#sites-contentfragments-6514}
 
