@@ -11,9 +11,9 @@ discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: 966a3ea6b8cb9b42e21f8e3eb3fee1c7ca93cf51
+source-git-commit: 081b0c70ceca0502cb84d7e1b68b0b12dc45a4e7
 workflow-type: tm+mt
-source-wordcount: '3559'
+source-wordcount: '3583'
 ht-degree: 0%
 
 ---
@@ -89,6 +89,11 @@ Adobe Experience Manager Forms kräver att en Java Virtual Machine körs, vilket
    <th><p><strong>Plattform</strong></p> </th>
    <th><p><strong>Supportnivå</strong></p> </th>
    <th><p><strong>Patch-definitioner som stöds</strong></p> </th>
+  </tr>
+  <tr> 
+   <td><p>Oracle Java™ SE 11 (64 bitar) <sup> [8] </sup> </p>  </td>
+   <td><p>S: Stöds</p> </td>
+   <td><p>Mindre releaser och uppdateringar </p> </td>
   </tr>
   <tr>
    <td>Azul Zulu OpenJDK 11 - 64 bitar</td>
@@ -791,12 +796,9 @@ Följande plattformar är markerade som borttagna i AEM Forms 6.5.10.0 den 7 sep
 
 ## Revisionshistorik {#revision-history}
 
-<!-- 
-- Sep 01, 2022
-  
-  - Added support for Oracle Java™ SE 11 (64 bit) SDK for application server JBoss EAP 7.4.
+- 1 september 2022
 
-  -->
+   - Stöd för Java™ SE 11 (64 bitar) SDK för JBoss EAP 7.4 på programservern har lagts till.
 
 - 3 mars 2022
 

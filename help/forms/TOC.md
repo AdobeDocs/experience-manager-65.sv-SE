@@ -8,9 +8,9 @@ user-guide-title: Adobe Experience Manager 6.5 Forms Guide
 breadcrumb-title: Forms Guide
 user-guide-description: Skapa, hantera, publicera och uppdatera digitala formulär.
 role: User
-source-git-commit: 966a3ea6b8cb9b42e21f8e3eb3fee1c7ca93cf51
+source-git-commit: 081b0c70ceca0502cb84d7e1b68b0b12dc45a4e7
 workflow-type: tm+mt
-source-wordcount: '3791'
+source-wordcount: '3797'
 ht-degree: 1%
 
 ---
@@ -85,6 +85,7 @@ ht-degree: 1%
       + [Ansluta AEM Forms till Adobe LiveCycle](using/aem-livecycle-connector.md)
       + [Konfigurera AEM Forms för att skicka formulärdata till en JEE-process från AEM Forms](using/submit-form-data-livecycle-process.md)
       + [AEM datorprogram för AEM Forms](/help/forms/using/aem-desktop-app-for-aem-forms.md)
+      + [OAuth2-stöd för posttjänsten](/help/forms/using//oauth2-support-for-mail-service.md)
 + Uppgradera AEM Forms {#upgrade-aem-forms}
    + [Tillgängliga uppgraderingssökvägar](using/upgrade.md)
    + Uppgradera AEM Forms på OSGi {#aem-forms-osgi-upgrade}

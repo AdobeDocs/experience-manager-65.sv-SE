@@ -3,9 +3,9 @@ title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: 966a3ea6b8cb9b42e21f8e3eb3fee1c7ca93cf51
+source-git-commit: 081b0c70ceca0502cb84d7e1b68b0b12dc45a4e7
 workflow-type: tm+mt
-source-wordcount: '2528'
+source-wordcount: '3162'
 ht-degree: 0%
 
 ---
@@ -80,9 +80,49 @@ ht-degree: 0%
 
 ## [!DNL Forms] {#forms-6514}
 
+<!--
+
 >[!NOTE]
 >
-> Korrigeringar i [!DNL Experience Manager] Forms levereras via ett separat tilläggspaket en vecka efter den schemalagda [!DNL Experience Manager] Service Pack-version.
+> Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on package a week after the scheduled [!DNL Experience Manager] Service Pack release.
+
+>[!NOTE]
+>
+>* [!DNL Experience Manager Forms] releases the add-on packages one week after the scheduled [!DNL Experience Manager] Service Pack release date. In this case, the add-on packages will release Thursday, September 1, 2022. In addition, a list of Forms fixes and enhancements will also be added to this section.
+
+-->
+
+* När en fil bifogas till ett adaptivt formulär med flera paneler och ett utkast av det adaptiva formuläret sparas, inträffar ett fel. (NPR-38978)
+* När en användare konverterar RGB-profil till CMYK-profil med createPDF2 Java API med Adobe PDF-inställningar fungerar inte alternativet med Java API. Alternativet fungerar bra med det fristående DistillerClient-programmet. (NPR-38858, CQ-4346181)
+* När du har installerat AEM 6.5 Forms Service Pack 12 (6.5.12.0) blir alla alternativ utom att stänga uppgiften otillgängliga i steget Tilldela uppgift AEM Arbetsflöden. (NPR-38743)
+* I en DoR (Document of Record) trunkeras vissa värden i en tabell. (NPR-38657)
+* När du förhandsgranskar FormSet med Data XML och XDP innehåller ett flytande fält visas inga data när du förhandsgranskar en FormSet, men data visas när alternativet Förhandsgranska PDF används.
+* I Adaptiv Forms är alternativknappen och kryssrutan inte i tabbordning. (NPR-38645)
+* När du använder `Summary Step` om du vill generera en DoR-fil (Document of Record) för ett översatt anpassat formulär efter att formuläret har skickats, översätts inte till det lokaliserade språket. (NPR-38567)
+* Alternativet för att inaktivera återförsök AEM arbetsflödesstegen fungerar inte som förväntat. Problemet uppstår ibland. (NPR-38547)
+* När adaptiv form skickas med RTF-fält `an Internal Error while Submitting a Form` fel inträffar. När användaren fokuserar på RTF-fältet inträffar inte felet innan formuläret skickas. (NPR-38542)
+* Ett fel `sling-default-3-AdobeSignRefreshTokenScheduleJob com.adobe.forms.foundation.oauth.model.OAuthConfigSlingModel Refresh Token not present for: /conf/gws-eform/cashlite/settings/cloudconfigs/fdm/cashlite/jcr:content occurs` loggas. (NPR-38541)
+* När en användare överför ett PDF till ett adaptivt formulär slutar AEM Forms-servern att svara. (NPR-38398)
+* När du använder API:t för Document Service för att certifiera PDF i en AEM Forms på OSGi-server misslyckas det med felet: com.adobe.fd.signatures.truststore.errors.exception.CredentialRetrievalException: AEM-DSS-311. (CQ-4346252)
+* När du skickar in utkastet till breven `Could not upload asset from xml input` fel inträffar. Det påverkar inte funktionaliteten. När du öppnar ett utkast återges brevet korrekt. (CQ-4345979, CQ-4344418)
+* När ett datum anges i tyskt format och `Preview with Data` alternativet används för en bokstav och datumfältet återges inte. (CQ-4345783)
+* När du skapar en webbportal och genererar streckkoder baserade på data, avkodas vissa streckkoder inte korrekt. (CQ-4345743)
+* PostScript-konvertering till PDF återger inte utdatadokument med förväntade färger. (CQ-4345074)
+* Resurslösaren orsakar återkommande misslyckade överföringar och resulterar i samma stackspårning som visas flera gånger för en enda sändning. (CQ-4344764)
+* Användarna kan inte öppna de ändrade utkasten som använder `cmDataUrl` parameter. Utkasten öppnas bra för första gången. Utgåvorna börjar visas vid efterföljande försök. (CQ-4344418)
+* När användaren skriver `&` -symbolen i ett interaktivt meddelande (IC). Motsvarande IC-kort läses inte in. (CQ-4343969)
+* När du använder formatalternativ i AEM Forms Designer för att generera PCL-filer används inte det angivna formatet för genererade filer. (CQ-4339573)
+* När sidantalet är över 15 misslyckas automatiserad konvertering av dynamiska XDP-formulär till adaptiv form. Detta fungerar bra när sidantalet är mindre än 15. (NPR-35337)
+* När alternativet Lägg till i Favoriter används visas inte statusen för växlingen till skärmläsaren. (NPR-37137)
+* I formulärdatamodellen trunkeras värdena efter decimalerna i databasbaserade formulärdatamodeller för datatypen pengar och liten kostnad. . (CQDOC-19509)
+* När du väljer en navigeringslänk för arbetsflödet i HTML Workspace visas inte att navigeringslänken är markerad. (NPR-37138)
+* Funktionen Klottra signaturer är inte kompatibel med riktlinjerna för hjälpmedel. (NPR-37596)
+* AEM Forms använder log4j 1.x. Stöd för log4j 1.x har nått slutet av livscykeln. (NPR-38273)
+* När du använder MSSQL-databasen som en datakälla i en formulärdatamodell och hämtar värden, kommer siffror efter decimaltalet i hämtningsvärdena att aktiveras. (CQ-4346190)
+* När du öppnar ett formulär som har skapats med Forms 6.1 Designer i Forms 6.5 Designer och redigerar en textruta överskrider styckeavståndet det angivna utrymmet. Alla tidigare inställningar för utrymmet tas bort och du måste formatera om textrutan manuellt. (CQ-4341899)
+* Felaktigt värde visas för streckkoden SSCC-18. Forms-servrar utelämnar värdet till höger om streckkoden. (CQ-4342400)
+* För statisk PDF forms som skapats med Forms 6.5 Designer misslyckas tillgängligheten för PDF med fel `Tab order entry in page with annotations not set to "S"`. (CQ-4343117)
+* Lagt till möjlighet att ange Reader-text på skärmen för hyperlänkar i Forms Designer.(NPR-36221)
 
 ## Integreringar {#integrations-6514}
 
@@ -215,7 +255,11 @@ Om du vill veta vilka plattformar som är certifierade för att fungera med den 
 >
 >Hoppa över om du inte använder [!DNL Experience Manager] Forms.
 
-Korrigeringar i [!DNL Experience Manager] Forms levereras via ett separat tilläggspaket en vecka efter den schemalagda [!DNL Experience Manager] Service Pack-version.
+<!-- 
+
+Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on package a week after the scheduled [!DNL Experience Manager] Service Pack release.
+
+-->
 
 1. Kontrollera att du har installerat [!DNL Experience Manager] Service Pack.
 1. Ladda ned motsvarande tilläggspaket från Forms på [AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html#forms-updates) för ditt operativsystem.
