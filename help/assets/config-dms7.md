@@ -10,9 +10,9 @@ role: User, Admin
 mini-toc-levels: 4
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: Configuration,Scene7 Mode
-source-git-commit: 74e3d4204166280e8624298098042b8cb222c034
+source-git-commit: b33c42edb44617d26ead0df3a9de7bdb39c2e9f4
 workflow-type: tm+mt
-source-wordcount: '5881'
+source-wordcount: '5910'
 ht-degree: 2%
 
 ---
@@ -119,7 +119,11 @@ Se [Installera funktionspaket 18912 för migrering av gruppresurser](/help/asset
 
 1. Ange följande när anslutningen lyckas. Rubriker med asterisk (*) krävs:
 
-   * **[!UICONTROL Company]** - namnet på Dynamic Media-kontot. Du kan ha ett Dynamic Media-konto i Experience Manager. <!-- CQDOC-19579 and CQDOC-19612 -->
+   * **[!UICONTROL Company]** - namnet på Dynamic Media-kontot.
+      >[!IMPORTANT]
+      Endast en Dynamic Media-konfiguration i Cloud Services stöds i en instans av Experience Manager. lägger inte till mer än en konfiguration. Flera Dynamic Media-konfigurationer i en Experience Manager-instans är _not_ som stöds eller rekommenderas av Adobe.
+
+      <!-- CQDOC-19579 and CQDOC-19612 -->
 
       Se även [Konfigurera Dynamic Media alias-konto](/help/assets/dm-alias-account.md).
 
