@@ -8,10 +8,10 @@ breadcrumb-title: Administratörshandbok
 user-guide-description: Läs om hur du administrerar AEM.
 feature: Administering
 role: Admin
-source-git-commit: 8e8c829779e172441605a8abd2ef73623b95462d
+source-git-commit: 58594be73372e128ba999a8290615fbcb447084e
 workflow-type: tm+mt
-source-wordcount: '637'
-ht-degree: 6%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -128,7 +128,6 @@ ht-degree: 6%
    + [Relaterade artiklar i communityn](related-community-articles.md)
    + [Integrera med Adobe Campaign Standard](campaignstandard.md)
    + [Meddelande om att Flash Viewer har upphört](flash-viewers-eol.md)
-   + [Produktfeed](product-feed.md)
    + [Integrera med Adobe Dynamic Tag Management](dtm.md)
    + [Ingå i Adobe Analytics och Adobe Target](opt-in.md)
    + [AEM portaler och portlets](aem-as-portal.md)
@@ -146,7 +145,6 @@ ht-degree: 6%
    + [Krav för integrering med Adobe Target](target-requirements.md)
    + [Integrering med Adobe Target med IMS](integration-target-ims.md)
    + [Adobe-klassificeringar](adobeanalytics-classifications.md)
-   + [Integrera med Adobe Search &amp; Promote](search-and-promote.md)
    + [Lösningsintegrering](integration.md)
    + [Exportera Experience Fragments till Adobe Target](experience-fragments-target.md)
    + [Metodtips för e-postmallar](best-practices-for-email-templates.md)

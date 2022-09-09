@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 6c1f8869-62d9-4fac-aa0d-b99bb0e86d6b
 docset: aem65
 exl-id: c7c0c705-ec16-40f5-ad08-193f82d01263
-source-git-commit: 085e77b7b831d6be626a46d3de215aedb50f6178
+source-git-commit: 58594be73372e128ba999a8290615fbcb447084e
 workflow-type: tm+mt
-source-wordcount: '1457'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ Använd följande procedur för att mappa CQ-komponentvariabler med Adobe Analyt
 
    ![aa-13](assets/aa-13.png)
 
-   Det finns flera standardkomponentgrupper: **Allmänt**, **Handel**, **Communities**, **Search &amp; Promote** och **Övriga**. Din AEM kan vara konfigurerad att visa olika grupper och komponenter.
+   Det finns flera standardkomponentgrupper: **Allmänt**, **Handel**, **Communities** och **Övriga**. Din AEM kan vara konfigurerad att visa olika grupper och komponenter.
 
 1. Om du vill mappa Adobe Analytics-variabler med variabler som är definierade i komponenten drar du i en **Analysvariabel** från innehållssökaren till ett fält i spårningskomponenten. Dra till exempel `Page Name (pageName)` till `pagedata.title`.
 
@@ -121,10 +121,6 @@ Listan kan ändras på följande sätt:
    >[!NOTE]
    >
    >Endast en filterknapp kan vara aktiv samtidigt.
-
-   >[!NOTE]
-   >
-   >Search &amp; Promote-variabler tillhör även avsnittet Konvertering.
 
    1. Listan har också en sökfunktion som filtrerar elementen efter den text som anges i sökfältet.
    1. Om ett filteralternativ är aktiverat när du söker efter element i listan, filtreras även de resultat som visas enligt den aktiva knappen.

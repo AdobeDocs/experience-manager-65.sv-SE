@@ -7,10 +7,10 @@ user-guide-title: Användarhandbok för redigering av AEM 6.5 Classic UI
 user-guide-description: Den här handboken beskriver koncepten för redigering i AEM i det klassiska användargränssnittet.
 feature: Authoring
 role: User
-source-git-commit: f29612ee633d2a62144b770f3c225fc82b9174f8
+source-git-commit: 58594be73372e128ba999a8290615fbcb447084e
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '264'
+ht-degree: 21%
 
 ---
 
@@ -39,7 +39,7 @@ ht-degree: 0%
    + [Anteckningar vid redigering av en sida](classic-page-author-annotations.md)
    + [Felsöka AEM vid redigering](classic-page-author-troubleshooting.md)
    + [Skapa tillgängligt innehåll (WCAG 2.0-överensstämmelse)](classic-page-author-accessible-content.md)
-   + [Skapa en sida för Mobile-enheter](classic-feature-mobile.md)
+   + [Skapa en sida för mobila enheter](classic-feature-mobile.md)
    + [Komponenter för sidredigering](classic-page-author-edit-mode.md)
    + [Kortkommandon vid sidredigering](classic-page-author-keyboard-shortcuts.md)
 + Webbplats- och sidfunktioner {#siteandpage}
@@ -49,7 +49,6 @@ ht-degree: 0%
    + [Använda taggar](classic-feature-tags.md)
    + [Ställning](classic-feature-scaffolding.md)
    + [Konfigurera komponenter i designläge](classic-page-author-design-mode.md)
-   + [Lägga till Search &amp; Promote på sidan](classic-feature-search-promote.md)
    + [Komponenter](classic-page-author-default-components.md)
 + Arbetsflöden {#workflows}
    + [Delta i arbetsflöden](classic-workflows-participating.md)

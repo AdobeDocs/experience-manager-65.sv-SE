@@ -1,17 +1,17 @@
 ---
 title: Utveckla med SAP Commerce Cloud
-seo-title: Utveckla med SAP Commerce Cloud
+seo-title: Developing with SAP Commerce Cloud
 description: Integreringsramverket för SAP Commerce Cloud innehåller ett integreringslager med ett API
-seo-description: Integreringsramverket för SAP Commerce Cloud innehåller ett integreringslager med ett API
+seo-description: The SAP Commerce Cloud integration framework includes an integration layer with an API
 uuid: a780dd17-027a-4a61-af8f-3e2f600524c7
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: platform
-translation-type: tm+mt
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+exl-id: b3de1a4a-f334-44bd-addc-463433204c99
+source-git-commit: 58594be73372e128ba999a8290615fbcb447084e
 workflow-type: tm+mt
-source-wordcount: '2329'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->e-handelsramverket kan användas med alla e-handelslösningar. Vissa specificeringar och exempel som behandlas här avser [hybris](https://www.hybris.com/)-lösningen.
+>e-handelsramverket kan användas med alla e-handelslösningar. Vissa detaljer och exempel som behandlas här kommer att avse [hybris](https://www.hybris.com/) lösning.
 
 Integreringsramverket innehåller ett integreringslager med ett API. På så sätt kan du:
 
@@ -32,7 +32,7 @@ Integreringsramverket innehåller ett integreringslager med ett API. På så sä
 
 >[!NOTE]
 >
->[API-](/help/commerce/cif-classic/developing/ecommerce.md#api-documentation) dokumentation finns också tillgänglig.
+>[API-dokumentation](/help/commerce/cif-classic/developing/ecommerce.md#api-documentation) finns också.
 
 Det finns ett antal färdiga AEM för att använda integreringslagret. För närvarande är följande:
 
@@ -40,31 +40,31 @@ Det finns ett antal färdiga AEM för att använda integreringslagret. För när
 * en kundvagn
 * utcheckning
 
-För sökningar finns en integreringsfunktion som gör att du kan använda AEM sökning, sökning i e-handelssystemet, en sökning från tredje part (som Search &amp; Promote) eller en kombination av dessa.
+För sökning tillhandahålls en integreringsfunktion som gör att du kan använda AEM, sökning i e-handelssystemet, en sökning från tredje part eller en kombination av dessa.
 
-## Val av eCommerce-motor {#ecommerce-engine-selection}
+## Val av e-handelsmotor {#ecommerce-engine-selection}
 
 eCommerce-ramverket kan användas tillsammans med alla e-handelslösningar, och den motor som används måste kunna identifieras av AEM:
 
-* eCommerce Engines är OSGi-tjänster som stöder `CommerceService`-gränssnittet
+* eCommerce Engines är OSGi-tjänster som stöder `CommerceService` gränssnitt
 
-   * Motorer kan särskiljas med en `commerceProvider`-tjänsteegenskap
+   * Motorer kan särskiljas av en `commerceProvider` service, egenskap
 
-* AEM har stöd för `Resource.adaptTo()` för `CommerceService` och `Product`
+* AEM `Resource.adaptTo()` for `CommerceService` och `Product`
 
-   * Implementeringen `adaptTo` söker efter en `cq:commerceProvider`-egenskap i resursens hierarki:
+   * The `adaptTo` implementering söker efter en `cq:commerceProvider` i resursens hierarki:
 
       * Om det hittas används värdet för att filtrera e-handelstjänstens sökning.
 
       * Om den inte hittas används den mest rankade e-handelstjänsten.
-   * En `cq:Commerce`-blandning används så att `cq:commerceProvider` kan läggas till i starkt typbestämda resurser.
+   * A `cq:Commerce` mixin används så att `cq:commerceProvider` kan läggas till i starkt typbestämda resurser.
 
 
-* Egenskapen `cq:commerceProvider` används också för att referera till lämplig definition för handelsfabrik.
+* The `cq:commerceProvider` -egenskapen används också för att referera till lämplig definition för handelsfabrik.
 
-   * En `cq:commerceProvider`-egenskap med värdet `hybris` korrelerar till exempel OSGi-konfigurationen för **Day CQ Commerce Factory för hybris** (com.adobe.cq.commerce.hybris.impl.HybrisServiceFactory) - där parametern `commerceProvider` också har värdet `hybris`.
+   * Till exempel en `cq:commerceProvider` egenskap med värdet `hybris` kommer att korrelera OSGi-konfigurationen för **Day CQ Commerce Factory for Hybris** (com.adobe.cq.commerce.hybris.impl.HybrisServiceFactory) - där parametern `commerceProvider` har även värdet `hybris`.
 
-   * Här finns ytterligare egenskaper, som **Katalogversion**, som kan konfigureras (när det är lämpligt och tillgängligt).
+   * Här finns ytterligare egenskaper, som **Katalogversion** kan konfigureras (när det är lämpligt och tillgängligt).
 
 Se följande exempel nedan:
 
@@ -100,7 +100,7 @@ Se följande exempel nedan:
 >
 >`/apps/geometrixx-outdoors/components/hybris/product/product.jsp`
 
-### Utveckla för hybris 4 {#developing-for-hybris}
+### Utveckling för hybris 4 {#developing-for-hybris}
 
 Utbyggnaden av hybris i eCommerce Integration Framework har uppdaterats för att stödja Hybris 5, samtidigt som bakåtkompatibiliteten med Hybris 4 bibehålls.
 
@@ -112,7 +112,7 @@ För att utveckla för Hybris 4 krävs följande:
 
    `-P hybris4`
 
-   Den hämtar den förkonfigurerade hybris 4-distributionen och bäddar in den i paketet `cq-commerce-hybris-server`.
+   Den laddar ned den förkonfigurerade hybris 4-distributionen och bäddar in den i paketet `cq-commerce-hybris-server`.
 
 * I OSGi-konfigurationshanteraren:
 
@@ -122,13 +122,13 @@ För att utveckla för Hybris 4 krävs följande:
 
 ### Sessionshantering {#session-handling}
 
-hybris använder en användarsession för att lagra information som kundens kundvagn. Sessions-ID returneras från hybris i en `JSESSIONID`-cookie som måste skickas på efterföljande förfrågningar till hybris. För att undvika att lagra sessions-ID i databasen kodas det i en annan cookie som lagras i kundens webbläsare. Följande steg utförs:
+hybris använder en användarsession för att lagra information som kundens kundvagn. sessions-ID returneras från hybris i en `JSESSIONID` cookie som ska skickas på efterföljande förfrågningar till hybris. För att undvika att lagra sessions-ID i databasen kodas det i en annan cookie som lagras i kundens webbläsare. Följande steg utförs:
 
 * På den första begäran anges ingen cookie på köparens begäran. så att en begäran skickas till hybris-instansen för att skapa en session.
 
-* Sessionskakorna extraheras från svaret, kodas i en ny cookie (till exempel `hybris-session-rest`) och anges på svaret till användaren. Kodningen i en ny cookie krävs eftersom den ursprungliga cookien bara är giltig för en viss sökväg och annars inte skulle skickas tillbaka från webbläsaren i efterföljande begäranden. Sökvägsinformationen måste också läggas till i cookie-filens värde.
+* Sessionscookies extraheras från svaret, kodas i en ny cookie (till exempel `hybris-session-rest`) och anpassa sig till kundresponsen. Kodningen i en ny cookie krävs eftersom den ursprungliga cookien bara är giltig för en viss sökväg och annars inte skulle skickas tillbaka från webbläsaren i efterföljande begäranden. Sökvägsinformationen måste också läggas till i cookie-filens värde.
 
-* På efterföljande begäranden avkodas cookies från `hybris-session-<*xxx*>`-cookies och anges på HTTP-klienten som används för att begära data från hybris.
+* På efterföljande begäranden avkodas cookies från `hybris-session-<*xxx*>` cookies och anges på HTTP-klienten som används för att begära data från hybris.
 
 >[!NOTE]
 >
@@ -136,7 +136,7 @@ hybris använder en användarsession för att lagra information som kundens kund
 
 #### CommerceSession {#commercesession}
 
-* Den här sessionen äger **kundvagnen**
+* Den här sessionen&quot;äger&quot; **kundvagn**
 
    * utför Lägg till/ta bort/etc
 
@@ -144,13 +144,13 @@ hybris använder en användarsession för att lagra information som kundens kund
 
       `commerceSession.getProductPrice(Product product)`
 
-* Äger *lagringsplatsen* för **ordern**-data
+* Äger *lagringsplats* för **order** data
 
    `CommerceSession.getUserContext()`
 
-* Äger även **betalningen**-bearbetningsanslutningen
+* Äger även **betalning** bearbetningsanslutning
 
-* Äger även anslutningen **fulfillment**
+* Äger även **uppfyllelse** anslutning
 
 ### Produktsynkronisering och -publicering {#product-synchronization-and-publishing}
 
@@ -184,21 +184,21 @@ Produktdata som bevaras i hybris måste finnas tillgängliga i AEM. Följande me
         }
    ```
 
-* Katalogkonfigurationen i AEM känner igen katalogversionerna **Staged** och **Online**.
+* Katalogkonfigurationen i AEM känner igen **Mellanlagrad** och **Online** katalogversioner.
 
-* För att kunna synkronisera produkter mellan katalogversioner måste man (ta bort) aktivera motsvarande AEM (a, c)
+* För att kunna synkronisera produkter mellan katalogversioner krävs en (avaktivering) av motsvarande AEM (a, c)
 
-   * Om du lägger till en produkt i en **Online**-katalogversion måste du aktivera produktens sida.
+   * Lägga till en produkt i en **Online** katalogversionen kräver aktivering av produktens sida.
 
    * Borttagning av en produkt kräver inaktivering.
 
-* Aktivering av en sida i AEM c kräver en kontroll (b) och är endast möjlig om
+* Aktivering av en sida i AEM c kräver en kontroll b och är endast möjlig om
 
-   * Produkten finns i en **Online**-katalogversion för produktsidor.
+   * Produkten finns i **Online** katalogversion för produktsidor.
 
-   * Produkterna som det hänvisas till finns i en **Online**-katalogversion för andra sidor (t.ex. kampanjsidor).
+   * De refererade produkterna är tillgängliga i en **Online** katalogversion för andra sidor (t.ex. kampanjsidor).
 
-* Aktiverade produktsidor måste ha tillgång till produktdatans **Online** version (d).
+* Aktiverade produktsidor behöver åtkomst till produktdata **Online** version (d).
 
 * Den AEM publiceringsinstansen kräver tillgång till hybris för hämtning av produktdata och personaliserade data (d).
 
@@ -206,7 +206,7 @@ Produktdata som bevaras i hybris måste finnas tillgängliga i AEM. Följande me
 
 #### Arkitektur för produkt och varianter {#architecture-of-product-and-variants}
 
-En och samma produkt kan ha flera variationer. den kan till exempel variera beroende på färg och/eller storlek. En produkt måste definiera vilka egenskaper som driver variationen. vi kallar dessa *variantaxlar*.
+En och samma produkt kan ha flera variationer. den kan till exempel variera beroende på färg och/eller storlek. En produkt måste definiera vilka egenskaper som driver variationen. vi kallar dem *variantaxlar*.
 
 Alla egenskaper är dock inte olika axlar. Variationer kan också påverka andra egenskaper. Priset kan till exempel vara beroende av storleken. Dessa egenskaper kan inte väljas av kunden och betraktas därför inte som olika axlar.
 
@@ -214,23 +214,21 @@ Varje produkt och/eller variant representeras av en resurs och mappar därför 1
 
 Produkt-/variantresursen innehåller inte alltid den faktiska produktinformationen. Det kan vara en representation av data som faktiskt finns i ett annat system (t.ex. hybris). Produktbeskrivningar, priser osv. lagras inte i AEM utan hämtas i realtid från eCommerce-motorn.
 
-Alla produktresurser kan representeras av en `Product API`. De flesta anrop i produkt-API:t är variationsspecifika (även om variationer kan ärva delade värden från ett överordnat element), men det finns även anrop som listar variantuppsättningen ( `getVariantAxes()`, `getVariants()`, osv.).
+Alla produktresurser kan representeras av en `Product API`. De flesta anrop i produkt-API:t är variationsspecifika (även om variationer kan ärva delade värden från ett överordnat objekt), men det finns också anrop som listar variantuppsättningen ( `getVariantAxes()`, `getVariants()`, osv.).
 
 >[!NOTE]
 >
->I själva verket bestäms en variantaxel av vad `Product.getVariantAxes()` returnerar:
+>I själva verket bestäms en variantaxel av vad som helst `Product.getVariantAxes()` returnerar:
 >* hybris definierar den för hybris-implementeringen
 >
->
-Produkter (i allmänhet) kan ha många olika axlar, men produktkomponenten som finns i paketet hanterar bara två:
+>Produkter (i allmänhet) kan ha många olika axlar, men produktkomponenten som finns i paketet hanterar bara två:
 >
 >1. `size`
-   >
-   >
-1. plus ytterligare
 >
+>1. plus ytterligare
+
 >
-Den här ytterligare varianten väljs via egenskapen `variationAxis` för produktreferensen (vanligtvis `color` för Geometrixx Outdoors).
+>Den här extra varianten markeras via `variationAxis` egenskap för produktreferensen (vanligtvis `color` för Geometrixx Outdoors).
 
 #### Produktreferenser och produktdata {#product-references-and-product-data}
 
@@ -289,7 +287,7 @@ public interface Product extends Adaptable {
 }
 ```
 
-#### com.adobe.cq.commerce.api.VariantFilter {#com-adobe-cq-commerce-api-variantfilter}
+#### com.adobe.cq.commerce.api.VariantFilter  {#com-adobe-cq-commerce-api-variantfilter}
 
 ```java
 /**
@@ -346,14 +344,14 @@ public class AxisFilter implements VariantFilter {
 
       * En referens med produktdata lagrade någon annanstans:
 
-         * Produktreferenser innehåller en `productData`-egenskap som pekar på produktdata (vanligtvis under `/etc/commerce/products`).
+         * Produktreferenser innehåller en `productData` -egenskap, som pekar på produktdata (vanligtvis under `/etc/commerce/products`).
 
          * Produktinformationen är hierarkisk. produktattribut ärvs från en produktdatanodens överordnade.
 
          * Produktreferenser kan också innehålla lokala egenskaper som åsidosätter de som anges i deras produktdata.
       * En produkt i sig:
 
-         * Utan en `productData`-egenskap.
+         * Utan `productData` -egenskap.
 
          * En produktnod som innehåller alla egenskaper lokalt (och inte innehåller någon productData-egenskap) ärver produktattribut direkt från sina egna överordnade.
 
@@ -415,10 +413,10 @@ public class AxisFilter implements VariantFilter {
 
 * Kundvagnen ägs av `CommerceSession:`
 
-   * `CommerceSession` utför add/remove/etc.
-   * `CommerceSession` utför även de olika beräkningarna på kundvagnen. &quot;
+   * The `CommerceSession` utför Lägg till/ta bort/etc.
+   * The `CommerceSession` utför även de olika beräkningarna på kundvagnen. &quot;
 
-* Även om den inte är direkt kundvagnsrelaterad måste `CommerceSession` även tillhandahålla katalogprisinformation (eftersom den äger priser)
+* Även om de inte är direkt kundvagnsrelaterade är `CommerceSession` måste även tillhandahålla information om katalogpriser (eftersom den äger priser)
 
    * Priset kan innehålla flera modifieringar:
 
@@ -436,14 +434,14 @@ public class AxisFilter implements VariantFilter {
 * Lagring
 
    * I hybris-fallet äger hybris-servern kundvagnen.
-   * I de AEM generiska fotona sparas kundvagnarna i [ClientContext](/help/sites-administering/client-context.md).
+   * I det AEM generiska fallet lagras varukorgar i [ClientContext](/help/sites-administering/client-context.md).
 
 **Personanpassning**
 
-* Personalisering ska alltid drivas via [ClientContext](/help/sites-administering/client-context.md).
-* En ClientContext `/version/` av vagnen skapas i samtliga fall:
+* Personalisering bör alltid styras av [ClientContext](/help/sites-administering/client-context.md).
+* A ClientContext `/version/` av kundvagnen skapas i samtliga fall:
 
-   * Produkter ska läggas till med metoden `CommerceSession.addCartEntry()`.
+   * Produkterna ska läggas till med `CommerceSession.addCartEntry()` -metod.
 
 * Följande illustrerar ett exempel på kundvagnsinformation i kundvagnen i ClientContext:
 
@@ -453,7 +451,7 @@ public class AxisFilter implements VariantFilter {
 
 **Kundvagn- och orderdata**
 
-`CommerceSession` äger de tre elementen:
+The `CommerceSession` äger de tre elementen:
 
 1. Kundvagnsinnehåll
 1. Priser
@@ -484,7 +482,7 @@ public class AxisFilter implements VariantFilter {
 
 1. **Beställningsinformation**
 
-   Orderinformationen är *inte* fast av API:t:
+   Beställningsinformationen är dock *not* åtgärdat av API:
 
    ```java
    public void updateOrderDetails(Map<String, String> orderDetails);
@@ -496,9 +494,9 @@ public class AxisFilter implements VariantFilter {
 
 * Beställningsblanketter måste ofta innehålla flera olika leveransalternativ (och priser).
 * Priserna kan baseras på artiklar och detaljer i beställningen, t.ex. vikt och/eller leveransadress.
-* `CommerceSession` har tillgång till alla beroenden, så den kan behandlas på liknande sätt som produktpriser:
+* The `CommerceSession` har tillgång till alla beroenden, så det kan behandlas på liknande sätt som produktpriser:
 
-   * `CommerceSession` äger fraktpriser.
+   * The `CommerceSession` äger fraktpriser.
    * Kan hämta/uppdatera leveransinformation med `updateOrder(Map<String, Object> delta)`
 
 >[!NOTE]
@@ -507,24 +505,23 @@ public class AxisFilter implements VariantFilter {
 >
 >`yourProject/commerce/components/shippingpicker`:
 >
->* Detta kan i princip vara en kopia av `foundation/components/form/radio`, men med återanrop till `CommerceSession` för:
-   >
-   >
-* Kontrollera om metoden är tillgänglig
+>* Det här kan vara en kopia av `foundation/components/form/radio`, men med återanrop till `CommerceSession` for:
+>
+>* Kontrollera om metoden är tillgänglig
 >* Lägga till prisinformation
->* För att ge kunderna möjlighet att uppdatera beställningssidan i AEM (inklusive den överordnade texten för leveransmetoder och den text som beskriver dem), samtidigt som de fortfarande har möjlighet att visa relevant `CommerceSession`-information.
+>* Att göra det möjligt för kunderna att uppdatera beställningssidan i AEM (inklusive överflödet av leveransmetoder och texten som beskriver dem), samtidigt som de fortfarande har möjlighet att visa de relevanta `CommerceSession` information.
 
 
 **Betalningshantering**
 
-* `CommerceSession` äger även anslutningen för betalningsbearbetning.
+* The `CommerceSession` äger också anslutningen för betalningshantering.
 
-* Implementerare måste lägga till specifika anrop (till den valda betalningshanteringstjänsten) i `CommerceSession`-implementeringen.
+* Implementerare måste lägga till specifika samtal (till den valda betalningstjänsten) i `CommerceSession` implementering.
 
 **Orderuppfyllelse**
 
-* `CommerceSession` äger även leveransanslutningen.
-* Implementerare måste lägga till specifika anrop (till den valda betalningshanteringstjänsten) i `CommerceSession`-implementeringen.
+* The `CommerceSession` äger också leveransanslutningen.
+* Implementerare måste lägga till specifika samtal (till den valda betalningstjänsten) i `CommerceSession` implementering.
 
 ### Sökdefinition {#search-definition}
 
@@ -542,7 +539,7 @@ eCommerce-projektet innehåller en standardsökkomponent som finns i:
 
 ![chlimage_1-14](/help/sites-developing/assets/chlimage_1-14a.png)
 
-Detta använder söknings-API:t för att fråga den valda e-handelsmotorn (se [eCommerce Engine Selection](#ecommerce-engine-selection)):
+Detta använder sökgränssnittet för att fråga den valda e-handelsmotorn (se [Val av e-handelsmotor](#ecommerce-engine-selection)):
 
 #### Söknings-API {#search-api}
 
@@ -550,13 +547,13 @@ Det finns flera allmänna/hjälpklasser i huvudprojektet:
 
 1. `CommerceQuery`
 
-   Används för att beskriva en sökfråga (innehåller information om frågetext, aktuell sida, sidstorlek, sortering och valda aspekter). Alla e-handelstjänster som implementerar söknings-API:t får instanser av den här klassen för att kunna utföra sökningen. En `CommerceQuery` kan instansieras från ett begäranobjekt ( `HttpServletRequest`).
+   Används för att beskriva en sökfråga (innehåller information om frågetext, aktuell sida, sidstorlek, sortering och valda aspekter). Alla e-handelstjänster som implementerar söknings-API:t får instanser av den här klassen för att kunna utföra sökningen. A `CommerceQuery` kan instansieras från ett begäranobjekt ( `HttpServletRequest`).
 
 1. `FacetParamHelper`
 
-   Är en verktygsklass som innehåller en statisk metod - `toParams` - som används för att generera `GET` parametersträngar från en lista med facets och ett växlat värde. Detta är användbart på användargränssnittssidan, där du behöver visa en hyperlänk för varje värde i varje aspekt, så att respektive värde växlas när användaren klickar på hyperlänken (d.v.s. om den markerats tas det bort från frågan, annars läggs det till). Detta tar hand om all logik för hantering av flera-/enkelvärdesfaktorer, åsidosättningsvärden osv.
+   Är en verktygsklass som innehåller en statisk metod - `toParams` - som används för att generera `GET` parametersträngar från en lista med facets och ett sammankopplat värde. Detta är användbart på användargränssnittssidan, där du behöver visa en hyperlänk för varje värde i varje aspekt, så att respektive värde växlas när användaren klickar på hyperlänken (d.v.s. om den markerats tas det bort från frågan, annars läggs det till). Detta tar hand om all logik för hantering av flera-/enkelvärdesfaktorer, åsidosättningsvärden osv.
 
-Startpunkten för söknings-API är metoden `CommerceService#search` som returnerar ett `CommerceResult`-objekt. Mer information om det här avsnittet finns i [API-dokumentationen](/help/commerce/cif-classic/developing/ecommerce.md#api-documentation).
+Startpunkten för sökgränssnittet är `CommerceService#search` metod som returnerar en `CommerceResult` -objekt. Se [API-dokumentation](/help/commerce/cif-classic/developing/ecommerce.md#api-documentation) om du vill ha mer information om det här avsnittet.
 
 ### Användarintegrering {#user-integration}
 
@@ -564,7 +561,7 @@ Integrering sker mellan AEM och olika e-handelssystem. Detta kräver en strategi
 
 * Autentisering
 
-   AEM antas bara vara *webbfrontend* och utför därför *all* autentisering.
+   AEM antas vara *endast* webbgränssnitt och därför *alla* autentisering.
 
 * Konton i Hybris
 
@@ -598,7 +595,7 @@ En AEM kan placeras framför en befintlig hybris-implementering. En hybris-motor
 
 Så här bygger du på befintliga funktioner i din anpassade importhanterare:
 
-* måste implementera gränssnittet `ImportHandler`
+* måste implementera `ImportHandler` gränssnitt
 
 * kan utöka `DefaultImportHandler`.
 
@@ -662,7 +659,7 @@ public interface ImportHandler {
 }
 ```
 
-För att din anpassade hanterare ska identifieras av importören måste den ange egenskapen `service.ranking`med ett värde som är högre än 0. till exempel.
+För att din anpassade hanterare ska identifieras av importören måste den ange `service.ranking`Egenskaper med ett värde högre än 0. till exempel.
 
 ```java
 @Component
