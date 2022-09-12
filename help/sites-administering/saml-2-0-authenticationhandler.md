@@ -10,9 +10,9 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 6ed09b5d-5089-43d2-b9d5-e7db57be5c02
 exl-id: 8e54bccf-0ff1-448d-a237-ec42fd3bfa23
-source-git-commit: ffabf5a9e3b08f60394cecfe540692b161437362
+source-git-commit: c73d39a1c88c914cd63bc08fe8daf0ff37b4bf7c
 workflow-type: tm+mt
-source-wordcount: '822'
+source-wordcount: '824'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ The [Webbkonsol](/help/sites-deploying/configuring-osgi.md) ger åtkomst till [S
 >
 >Autentiseringshanteraren för SAML 2.0 är inaktiverad som standard. Du måste ange minst en av följande egenskaper för att kunna aktivera hanteraren:
 >
->* Identitetsleverantörens POST-URL.
+>* Identitetsleverantörens POST-URL eller IDP-URL.
 >* Tjänstleverantörens enhets-ID.
 >
 
@@ -57,7 +57,7 @@ The [Webbkonsol](/help/sites-deploying/configuring-osgi.md) ger åtkomst till [S
 
 **IDP-certifikatalias** Aliaset för IdP:s certifikat i det globala förtroendearkivet. Om den här egenskapen är tom inaktiveras autentiseringshanteraren. Se kapitlet&quot;Add the IdP Certificate to the AEM TrustStore&quot; nedan om hur du konfigurerar det.
 
-**URL för identitetsleverantör** URL för den IDP dit SAML-autentiseringsbegäran ska skickas. Om den här egenskapen är tom inaktiveras autentiseringshanteraren.
+**IDP-URL** URL för den IDP dit SAML-autentiseringsbegäran ska skickas. Om den här egenskapen är tom inaktiveras autentiseringshanteraren.
 
 >[!CAUTION]
 >
