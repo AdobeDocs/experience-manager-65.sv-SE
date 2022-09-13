@@ -11,9 +11,9 @@ discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: 081b0c70ceca0502cb84d7e1b68b0b12dc45a4e7
+source-git-commit: 060bfb2ed3288b0ef9fbb5ba7f6b06ee027062b6
 workflow-type: tm+mt
-source-wordcount: '3583'
+source-wordcount: '3624'
 ht-degree: 0%
 
 ---
@@ -22,6 +22,14 @@ ht-degree: 0%
 # Plattformar som stöds för AEM Forms på JEE {#supported-platforms-for-aem-forms-on-jee}
 
 ## Plattformar som stöds {#supported-platforms}
+
+<div class="preview">
+
+AEM 6.5 Forms Service Pack 12 (6.5.12.0) innehåller det senaste fullständiga installationsprogrammet för AEM 6.5 Forms i JEE.
+
+Adobe rekommenderar att du använder <a href="https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html"> AEM 6.5.12.0 Forms om JEE </a> fullständigt installationsprogram (släppt den 3 mars 2022) istället för AEM 6.5. installationsprogram (släppt den 8 april 2019).
+
+</div>
 
 ### Supportnivåer {#support-levels}
 
