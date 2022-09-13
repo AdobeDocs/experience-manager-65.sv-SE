@@ -8,9 +8,9 @@ topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: 2d12f1652a3b8ec4e6ca9c737dc844d1f53f7d08
+source-git-commit: 2bad64ebc94cf5b09149a8216648de763a6e30d0
 workflow-type: tm+mt
-source-wordcount: '5192'
+source-wordcount: '5196'
 ht-degree: 0%
 
 ---
@@ -654,7 +654,7 @@ Innan du utför följande kontroller bör du kontrollera att [Systemberedskap](#
 
 **Microsoft® Windows**
 
-* Se till att [version som stöds](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator) av Microsoft Office är installerat och dialogrutor för att öppna avbryts för alla program.
+* Kontrollera att 32-bitars [version som stöds ](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator) av Microsoft Office är installerat och dialogrutor för att öppna avbryts för alla program.
 * Se till att en PDF Generator-användare läggs till i användargränssnittet för PDF-konfigurationen.
 * Kontrollera att PDF Generator-användaren är medlem i en administratörsgrupp och att [Ersätta en processnivåtoken](#grant-the-replace-a-process-level-token-privilege) privilegium har angetts för användaren.
 * Kontrollera att användaren är konfigurerad i användargränssnittet för PDF Generator och utför följande åtgärder:
@@ -668,7 +668,7 @@ Innan du utför följande kontroller bör du kontrollera att [Systemberedskap](#
 
 **Linux®**
 
-* Se till att [version som stöds](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator) av Open Office är installerat avbryts öppningsdialogrutorna för alla program och Office-programmen har startats.
+* Kontrollera att 32- eller 64-bitars [version som stöds](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator) av Open Office är installerat avbryts öppningsdialogrutorna för alla program och Office-programmen har startats.
 * Skapa en miljövariabel `OpenOffice_PATH` och ange att den ska peka på OpenOffice-installationen anges i [konsol](https://linuxize.com/post/how-to-set-and-list-environment-variables-in-linux/) eller dt-profilen (enhetsträd).
 * Om det uppstår problem när du installerar OpenOffice bör du kontrollera att [32-bitars bibliotek](#extrarequirements) som krävs för OpenOffice-installation finns tillgängligt.
 
