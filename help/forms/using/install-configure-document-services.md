@@ -8,9 +8,9 @@ topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: 477e3d6d7e64a86726a71a8c554593441c94d5bc
+source-git-commit: a0612d10c91cf096403dad1c50b0884feeb10ec2
 workflow-type: tm+mt
-source-wordcount: '5215'
+source-wordcount: '5288'
 ht-degree: 0%
 
 ---
@@ -605,32 +605,29 @@ Verktyget Systemberedskap kontrollerar om datorn är korrekt konfigurerad för a
    >
    > * Du kan använda filen srt_config.yaml för att konfigurera olika inställningar för . Filformatet är:
 
-
-   ```
-      # =================================================================
-      # SRT Configuration
-      # =================================================================
-      #Note - follow correct format to avoid parsing failures
-      #e.g. <param name>:<space><param value> 
-      #locale: (mandatory field)Locale to be used for SRT. Supported locales [en/fr/de/ja].
-      locale: en
-   
-      #aemTempDir: AEM Temp direcotry
-      aemTempDir:
-   
-      #users: provide PDFG converting users list
-      #users:
-      # - user1
-      # - user2
-      users:
-   
-      #profile: select profile to run specific checks. Choose from [LCM], more will be added soon 
-      profile:
-   
-      #outputDir: directory where output files will be saved
-      outputDir:
-   ```
-
+       #===============================================================================
+       # SRT Configuration
+       #===============================================================================
+       #Note - följ rätt format för att undvika parsningsfel
+       #e.g. &lt;param name=&quot;&quot;>:&lt;space>&lt;param value=&quot;&quot;>
+       #locale: (obligatoriskt fält)Språk som ska användas för SRT. Språk som stöds [en/fr/de/ja].
+       locale: en
+       
+       #aemTempDir: AEM temporär katalog
+       aemTempDir:
+       
+       #users: tillhandahåller PDFG-konvertering av användarlista
+       #users:
+       # - användare1
+       # - användare2
+       användare:
+       
+       #profile: välj profil för att köra specifika kontroller. Välj från [LCM], fler kommer snart
+       profil:
+       
+       #outputDir: katalog där utdatafiler ska sparas
+       outputDir:
+   >
 1. Navigera till `[Path_of_reports_folder]`. Öppna filen SystemReadinessTool.html. Verifiera rapporten och åtgärda problemen.
 
 ## Felsökning
