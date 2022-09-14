@@ -8,9 +8,9 @@ topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: 32b97aeff398a19556d46ff6c905dc3019988bc1
+source-git-commit: e5b78a6f84fa0f9de746ca4ae69a8df4f474e305
 workflow-type: tm+mt
-source-wordcount: '5216'
+source-wordcount: '5215'
 ht-degree: 0%
 
 ---
@@ -659,7 +659,7 @@ Innan du utför följande kontroller bör du kontrollera att [Systemberedskap](#
 * Kontrollera att PDF Generator-användaren är medlem i en administratörsgrupp och att [Ersätta en processnivåtoken](#grant-the-replace-a-process-level-token-privilege) privilegium har angetts för användaren.
 * Kontrollera att användaren är konfigurerad i användargränssnittet för PDF Generator och utför följande åtgärder:
    1. Logga in på Microsoft® Windows med PDF Generator-användare.
-   1. Öppna Microsoft® Office- eller Open Office-program och avbryt alla dialogrutor.
+   1. Öppna Microsoft® Office- eller OpenOffice-program och avbryt alla dialogrutor.
    1. Ange Adobe PDF som standardskrivare.
    1. Ange Acrobat som standardprogram för PDF-filer.
    1. Utför manuell konvertering med menyalternativet Arkiv > Skriv ut och Acrobat i Microsoft Office-program och avbryt alla dialogrutor.
