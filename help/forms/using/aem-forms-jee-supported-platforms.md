@@ -11,9 +11,9 @@ discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: bc9168eb22f2ebe7ae5408d5e033e085e47c7438
+source-git-commit: 923ee0e20a6e41c9493a77b179f93dd81ff91020
 workflow-type: tm+mt
-source-wordcount: '3636'
+source-wordcount: '3683'
 ht-degree: 0%
 
 ---
@@ -25,9 +25,9 @@ ht-degree: 0%
 
 <div class="preview">
 
-AEM 6.5 Forms Service Pack 12 (6.5.12.0) innehåller det senaste fullständiga installationsprogrammet för AEM 6.5 Forms i JEE.
+Adobe har släppt en [fullständig installationsfil](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) med AEM 6.5 Forms Service Pack 12 (6.5.12.0) på JEE tillsammans med patch-installerarna. Det fullständiga installationsprogrammet har stöd för nya plattformar medan installationsprogrammet för korrigeringsfilen endast innehåller felkorrigeringar.
 
-Adobe rekommenderar att du använder <a href="https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html"> AEM 6.5.12.0 Forms om JEE </a> fullständigt installationsprogram (släppt den 3 mars 2022) istället för AEM 6.5. installationsprogram (släppt den 8 april 2019).
+Om du gör en ny installation eller planerar att använda den senaste programvaran för din AEM 6.5 Forms i JEE-miljö rekommenderar Adobe att du använder [AEM 6.5.12.0 Forms i JEE-fullversionen](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) släppt den 3 mars 2022 i stället för AEM 6.5 Forms installationsprogram som släpptes den 8 april 2019.
 
 </div>
 

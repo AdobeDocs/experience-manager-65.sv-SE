@@ -8,9 +8,9 @@ topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: 2bad64ebc94cf5b09149a8216648de763a6e30d0
+source-git-commit: 32b97aeff398a19556d46ff6c905dc3019988bc1
 workflow-type: tm+mt
-source-wordcount: '5196'
+source-wordcount: '5216'
 ht-degree: 0%
 
 ---
@@ -650,7 +650,7 @@ Innan du utför följande kontroller bör du kontrollera att [Systemberedskap](#
 
 +++
 
-+++Öppna Office
++++OpenOffice
 
 **Microsoft® Windows**
 
@@ -668,7 +668,8 @@ Innan du utför följande kontroller bör du kontrollera att [Systemberedskap](#
 
 **Linux®**
 
-* Kontrollera att 32- eller 64-bitars [version som stöds](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator) av Open Office är installerat avbryts öppningsdialogrutorna för alla program och Office-programmen har startats.
+* Installera [version som stöds](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator) för OpenOffice. AEM Forms stöder både 32- och 64-bitarsversioner. När du har installerat öppnar du alla OpenOffice-program, avbryter alla dialogrutor och stänger programmen. Öppna programmen igen och se till att ingen dialogruta visas när du öppnar ett OpenOffice-program.
+
 * Skapa en miljövariabel `OpenOffice_PATH` och ange att den ska peka på OpenOffice-installationen anges i [konsol](https://linuxize.com/post/how-to-set-and-list-environment-variables-in-linux/) eller dt-profilen (enhetsträd).
 * Om det uppstår problem när du installerar OpenOffice bör du kontrollera att [32-bitars bibliotek](#extrarequirements) som krävs för OpenOffice-installation finns tillgängligt.
 
