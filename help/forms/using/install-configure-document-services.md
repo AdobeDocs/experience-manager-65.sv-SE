@@ -8,7 +8,7 @@ topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: a0612d10c91cf096403dad1c50b0884feeb10ec2
+source-git-commit: 26fbf8629715c983ccae9dcdee1defb279849107
 workflow-type: tm+mt
 source-wordcount: '5288'
 ht-degree: 0%
@@ -605,11 +605,12 @@ Verktyget Systemberedskap kontrollerar om datorn är korrekt konfigurerad för a
    >
    > * Du kan använda filen srt_config.yaml för att konfigurera olika inställningar för . Filformatet är:
 
-       #===============================================================================
        # SRT Configuration
-       #===============================================================================
-       #Note - följ rätt format för att undvika parsningsfel
-       #e.g. &lt;param name=&quot;&quot;>:&lt;space>&lt;param value=&quot;&quot;>
+       
+       # Note - Följ rätt format för att undvika parsningsfel
+       
+       # t.ex. &lt;param name=&quot;&quot;>:&lt;space>&lt;param value=&quot;&quot;>
+       
        #locale: (obligatoriskt fält)Språk som ska användas för SRT. Språk som stöds [en/fr/de/ja].
        locale: en
        
