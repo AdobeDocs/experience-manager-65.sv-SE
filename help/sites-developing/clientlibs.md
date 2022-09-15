@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 3d14837d-41a8-480a-83ba-392e32f84c65
 docset: aem65
 exl-id: 408ac30c-60ab-4d6c-855c-d544af8d5cf9
-source-git-commit: 4789b2b5105e5a883ab816c82c9ff07ea76978ff
+source-git-commit: 684474d764ac2a2c187827382e0180e6c0d5259b
 workflow-type: tm+mt
-source-wordcount: '2848'
+source-wordcount: '2861'
 ht-degree: 0%
 
 ---
@@ -224,7 +224,7 @@ Inbäddning av kod är användbart för att ge åtkomst till bibliotek som lagra
 
 #### Appspecifika klientbiblioteksmappar {#app-specific-client-library-folders}
 
-Det är en god vana att behålla alla programrelaterade filer i programmappen nedan `/app`. Det är också en god vana att neka åtkomst för webbplatsbesökare till `/app` mapp. Skapa en klientbiblioteksmapp under `/etc` mapp som bäddar in klientbiblioteket som finns under `/app`.
+Det är en god vana att behålla alla programrelaterade filer i programmappen nedan `/apps`. Det är också en god vana att neka åtkomst för webbplatsbesökare till `/app` mapp. Skapa en klientbiblioteksmapp nedan för att uppfylla båda de bästa sätten `/apps`och göra den åtkomlig via proxyservleten enligt beskrivningen i [Hitta en klientbiblioteksmapp och använda servern för proxyklientbibliotek](/help/sites-developing/clientlibs.md#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet).
 
 Använd egenskapen categories för att identifiera klientbiblioteksmappen som ska bäddas in. Om du vill bädda in biblioteket lägger du till en egenskap i inbäddningen `cq:ClientLibraryFolder` nod, med följande egenskapsattribut:
 
