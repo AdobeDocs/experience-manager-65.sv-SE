@@ -3,9 +3,9 @@ title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: 935698e6c8caabccb7bbe0aa9f45012d07163660
+source-git-commit: 48f898a774d2ddd6d2c31f6a4107c71e4032cfc2
 workflow-type: tm+mt
-source-wordcount: '3182'
+source-wordcount: '3206'
 ht-degree: 0%
 
 ---
@@ -118,7 +118,7 @@ ht-degree: 0%
 * När du väljer en navigeringslänk för arbetsflödet i HTML Workspace visas inte att navigeringslänken är markerad. (NPR-37138)
 * Funktionen Klottra signaturer är inte kompatibel med riktlinjerna för hjälpmedel. (NPR-37596)
 * AEM Forms använder log4j 1.x. Stöd för log4j 1.x har nått slutet av livscykeln. (NPR-38273)
-* När du använder MSSQL-databasen som en datakälla i en formulärdatamodell och hämtar värden, kommer siffror efter decimaltalet i hämtningsvärdena att aktiveras. (CQ-4346190)
+* När du använder MSSQL-databasen som en datakälla i en formulärdatamodell och hämtar värden, trunkeras siffror efter decimaltalet i de hämtade värdena. (CQ-4346190)
 * När du öppnar ett formulär som har skapats med Forms 6.1 Designer i Forms 6.5 Designer och redigerar en textruta överskrider styckeavståndet det angivna utrymmet. Alla tidigare inställningar för utrymmet tas bort och du måste formatera om textrutan manuellt. (CQ-4341899)
 * Felaktigt värde visas för streckkoden SSCC-18. Forms-servrar utelämnar värdet till höger om streckkoden. (CQ-4342400)
 * För statisk PDF forms som skapats med Forms 6.5 Designer misslyckas tillgängligheten för PDF med fel `Tab order entry in page with annotations not set to "S"`. (CQ-4343117)
@@ -317,7 +317,8 @@ Granska om du använder en funktion eller en funktion i en distribution. Planera
 <!-- THESE KNOWN ISSUES CARRY OVER EACH RELEASE. THE "PRODUCT UPDATES TEAM" IS SUPPOSED TO VERIFY EACH ISSUE AND LET YOU KNOW IF ANYTHING NEEDS TO BE ADDED, DELETED, OR CHANGED IN THE LIST.
  -->
 
-* [AEM innehållsfragment med GraphQL-indexpaket 1.0.3](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.3.zip)
+* [AEM innehållsfragment med GraphQL-indexpaket 1.0.5](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.5.zip)
+Det här paketet behövs för kunder som använder GraphQL. på så sätt kan de lägga till den indexdefinition som behövs baserat på de funktioner de faktiskt använder.
 
 * Som [!DNL Microsoft® Windows Server 2019] stöder inte [!DNL MySQL 5.7] och [!DNL JBoss® EAP 7.1], [!DNL Microsoft® Windows Server 2019] stöder inte körklara installationer för [!DNL AEM Forms 6.5.10.0].
 
