@@ -10,9 +10,9 @@ discoiquuid: 87742cb2-357b-421f-b79d-e355887ddec0
 docset: aem65
 feature: Correspondence Management
 exl-id: da966787-a3b9-420f-8b7c-f00d05c61d43
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 11bad847558d295d1cf38aa9e8f246fc6fc3877b
 workflow-type: tm+mt
-source-wordcount: '3674'
+source-wordcount: '3805'
 ht-degree: 0%
 
 ---
@@ -288,6 +288,22 @@ Sådana instanser kan bara sparas när brevet visas på en publiceringsinstans. 
 1. I AEM öppnar du Adobe Experience Manager Web Console Configuration för servern med följande URL: https://&lt;server>:&lt;port>/&lt;contextpath>/system/console/configMgr
 1. Sök **[!UICONTROL Correspondence Management Configurations]** och klicka på den.
 1. Kontrollera **[!UICONTROL Manage Letter Instances on Publish]** konfiguration och klicka sedan på **[!UICONTROL Save]**.
+
+### Aktivera funktionen Spara utkast {#enable-save-draft-feature}
+
+Innan du publicerar brev eller sparar utkast i publiceringsinstansen utför du följande steg för att aktivera funktionen Spara som utkast:
+
+1. Öppna Konfiguration av webbkonsol för servern med följande URL: https://&lt;server>:&lt;port>/&lt;contextpath>/system/console/configMgr.
+
+1. Sök och klicka på **Redigera** -ikonen bredvid *com.adobe.livecycle.content.activate.impl.VersionRestoreManagerImpl.name* inställning.
+
+1. I *VersionRestoreManager-författar-URL* anger du URL:en för motsvarande författarinstans.
+
+1. Klicka på Spara .
+
+The *cq:lastReplicationAction*, *cq:lastreplikerad* och *cq:lastReplicatedBy* egenskaperna överförs inte som standard till publiceringsinstansen. Om du vill aktivera ominläsning av utkast vid publiceringsinstansen krävs dessa egenskaper vid publiceringsinstansen.
+
+För att föra över *cq:lastReplicationAction*, *cq:lastreplikerad* och *cq:lastReplicatedBy* egenskaper för att publicera instansen, inaktivera komponenten som *com.day.cq.replikation.impl.ReplicationPropertiesFilterFactory* på Author-instansen med URL:`http://server:port/system/console/components`
 
 När du har aktiverat funktionen för att spara bokstäver kan du välja var du vill spara bokstavsinstanserna. Det finns två alternativ för att spara bokstavsinstanser: Spara lokalt eller Fjärrspara.
 
