@@ -10,9 +10,9 @@ discoiquuid: 87742cb2-357b-421f-b79d-e355887ddec0
 docset: aem65
 feature: Correspondence Management
 exl-id: da966787-a3b9-420f-8b7c-f00d05c61d43
-source-git-commit: 11bad847558d295d1cf38aa9e8f246fc6fc3877b
+source-git-commit: 1a6881b29024799c44b2068ea82750c983a012e5
 workflow-type: tm+mt
-source-wordcount: '3805'
+source-wordcount: '3825'
 ht-degree: 0%
 
 ---
@@ -291,19 +291,29 @@ Sådana instanser kan bara sparas när brevet visas på en publiceringsinstans. 
 
 ### Aktivera funktionen Spara utkast {#enable-save-draft-feature}
 
-Innan du publicerar brev eller sparar utkast i publiceringsinstansen utför du följande steg för att aktivera funktionen Spara som utkast:
+Innan du publicerar brev eller sparar utkast på publiceringsinstansen utför du följande steg på författaren och publiceringsinstansen för att aktivera funktionen Spara som utkast:
 
-1. Öppna Konfiguration av webbkonsol för servern med följande URL: https://&lt;server>:&lt;port>/&lt;contextpath>/system/console/configMgr.
+The *cq:lastReplicationAction*, *cq:lastreplikerad* och *cq:lastReplicatedBy* egenskaperna överförs inte som standard till publiceringsinstansen. För att föra över *cq:lastReplicationAction*, *cq:lastreplikerad* och *cq:lastReplicatedBy* egenskaper för publiceringsinstans, inaktivera [!UICONTROL com.day.cq.replication.impl.ReplicationPropertiesFilterFactory] -komponenten. Så här inaktiverar du komponenten:
 
-1. Sök och klicka på **Redigera** -ikonen bredvid *com.adobe.livecycle.content.activate.impl.VersionRestoreManagerImpl.name* inställning.
+1. Öppna Adobe Experience Manager Web Console Components-konsolen på författarinstansen. Standardwebbadressen är `http://author-server:port/system/console/components`
 
-1. I *VersionRestoreManager-författar-URL* anger du URL:en för motsvarande författarinstans.
+1. Sök efter **[!UICONTROL com.day.cq.replication.impl.ReplicationPropertiesFilterFactory]** -komponenten.
 
-1. Klicka på Spara .
+1. Klicka ![Inaktivera knapp](/help/forms/using/assets/enablebutton.png) ikonen för att inaktivera [!UICONTROL com.day.cq.replication.impl.ReplicationPropertiesFilterFactory] -komponenten.
 
-The *cq:lastReplicationAction*, *cq:lastreplikerad* och *cq:lastReplicatedBy* egenskaperna överförs inte som standard till publiceringsinstansen. Om du vill aktivera ominläsning av utkast vid publiceringsinstansen krävs dessa egenskaper vid publiceringsinstansen.
+![Författarinstans](/help/forms/using/assets/replicationproperties.png)
 
-För att föra över *cq:lastReplicationAction*, *cq:lastreplikerad* och *cq:lastReplicatedBy* egenskaper för att publicera instansen, inaktivera komponenten som *com.day.cq.replikation.impl.ReplicationPropertiesFilterFactory* på Author-instansen med URL:`http://server:port/system/console/components`
+Om du vill aktivera Spara som utkast-funktionen ersätter du den befintliga URL:en på [!UICONTROL VersionRestoreManager Author URL] med URL:en till din författarinstans. Så här ersätter du URL-adressen:
+
+1. Öppna i publiceringsinstansen [!UICONTROL Aode Manager Web Console Configuration]. Standardwebbadressen är `https://publish-server:port/system/console/configMgr`
+
+1. Sök och öppna **[!UICONTROL Correspondence Management - Author instance Version Restore configurations]** -komponenten.
+
+1. Leta reda på **[!UICONTROL VersionRestoreManager Author URL]** och ange URL:en för författarinstansen.
+
+1. Klicka på Spara.
+
+![Publiceringsinstans](/help/forms/using/assets/correspondencemanagement.png)
 
 När du har aktiverat funktionen för att spara bokstäver kan du välja var du vill spara bokstavsinstanserna. Det finns två alternativ för att spara bokstavsinstanser: Spara lokalt eller Fjärrspara.
 
@@ -323,7 +333,7 @@ Det här alternativet finns för personer som har problem med att spara använda
 
 #### Ange inställningar för bearbetningsförfattare {#specify-processing-author-settings}
 
-1. I AEM öppnar du Adobe Experience Manager Web Console Configuration för servern med följande URL: `https://<server>:<port>/<contextpath>/system/console/configMgr`
+1. I AEM öppnar du Adobe Experience Manager Web Console Configuration för servern med följande URL: `https://<server>:<port>/system/console/configMgr`
 
    ![Konfiguration av Adobe Experience Manager Web Console](assets/2configmanager.png)
 
