@@ -10,9 +10,9 @@ discoiquuid: dfc473eb-6091-4f5d-a5a0-789972c513a9
 docset: aem65
 role: Admin
 exl-id: 19b5765e-50bc-4fed-8af5-f6bb464516c8
-source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
+source-git-commit: 126d5309fe3c3b6474e180d21f5c7d1697d9e08a
 workflow-type: tm+mt
-source-wordcount: '1855'
+source-wordcount: '1869'
 ht-degree: 0%
 
 ---
@@ -105,6 +105,9 @@ Innan du börjar installera och konfigurera datainhämtningsfunktionen i AEM For
 
    * libicu
 
+* Installera [Microsoft Visual Studio 2019 32-bitars Redistributable](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170).
+
+
 ## Installera AEM Forms tilläggspaket {#install-aem-forms-add-on-package}
 
 AEM Forms tilläggspaket är ett program som distribueras till AEM. Paketet innehåller AEM Forms datainhämtning och andra funktioner. Så här installerar du tilläggspaketet:
@@ -124,7 +127,7 @@ AEM Forms tilläggspaket är ett program som distribueras till AEM. Paketet inne
 
 ### (Endast Windows) Automatisk installation av Visual Studio-omdistribuerbara filer {#automatic-installation-visual-studio-redistributables}
 
-Om du installerar en AEM i förhöjt läge installeras de saknade Visual Studio-omdistribuerbara komponenterna automatiskt när AEM Forms tilläggspaket installeras.
+Om du installerar en AEM i förhöjt läge installeras 32-bitars visuella Studio-omdistribuerbara automatiskt under installationen av AEM Forms tilläggspaket.
 
 Om du vill utvärdera om Visual Studio-omdistribuerbara filer installeras automatiskt öppnar du `error.log` filen finns på `/crx-repository/logs/` katalog. Loggarna innehåller följande meddelande:
 
