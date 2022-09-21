@@ -8,9 +8,9 @@ topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: 26fbf8629715c983ccae9dcdee1defb279849107
+source-git-commit: 652f2f9b55857b8962f5bfd4edb85f3700866485
 workflow-type: tm+mt
-source-wordcount: '5288'
+source-wordcount: '5362'
 ht-degree: 0%
 
 ---
@@ -786,6 +786,15 @@ Innan du utför följande kontroller bör du kontrollera att [Systemberedskap](#
 * Du kan gå online inom 7 dagar efter det att du startat Adobe för att slutföra aktiveringen och registreringen online eller använda en internetaktiverad enhet och produktens serienummer för att slutföra processen. Detaljerade anvisningar finns i [Aktivering offline](https://exception.licenses.adobe.com/aoes/aoes/v1/t1?locale=en).
 
 +++
+
++++ Det går inte att konvertera Word- eller Excel-filen till PDF på Windows Server
+
+När en användare försöker konvertera Word- eller Excel-filer till PDF på Microsoft Windows Server, uppstår följande fel:
+
+*Felmeddelande från den primära konverteraren: ALC-PDG-015-003-Systemet kan inte öppna indatafilen. Skicka filen igen eller kontakta systemadministratören.*
+
+Information om hur du löser problemet finns i [Det går inte att konvertera Word- eller Excel-filen till PDF på Windows Server](/help/forms/using/disable-uac-for-pdfgconfiguration.md).
+
 
 ## Nästa steg {#next-steps}
 

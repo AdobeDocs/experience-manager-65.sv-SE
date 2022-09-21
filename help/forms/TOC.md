@@ -8,9 +8,9 @@ user-guide-title: Adobe Experience Manager 6.5 Forms Guide
 breadcrumb-title: Forms Guide
 user-guide-description: Skapa, hantera, publicera och uppdatera digitala formulär.
 role: User
-source-git-commit: 081b0c70ceca0502cb84d7e1b68b0b12dc45a4e7
+source-git-commit: 633a9b6d972cf8b0bb102a7efd5eeb8e0b71a19e
 workflow-type: tm+mt
-source-wordcount: '3797'
+source-wordcount: '3814'
 ht-degree: 1%
 
 ---
@@ -330,7 +330,8 @@ ht-degree: 1%
 + Integrera AEM Forms med Experience Cloud-lösningar {#integrate-aem-forms-with-experience-cloud-solutions}
    + [Skapa riktade upplevelser i AEM Forms](/help/forms/using/experience-targeting-forms.md)
    + [Mät och förbättra effektiviteten och konverteringen av blanketter](using/measure-improve-performance-forms-documents.md)
-   + [Konfigurera analyser och rapporter](using/configure-analytics-forms-documents.md)
+   + [Analytics Using Cloud Service Framework](using/configure-analytics-forms-documents.md)
+   + [Analyser med Adobe Launch](using/integrate-aem-forms-with-adobe-analytics.md)
    + [Visa och förstå AEM Forms analysrapporter](using/view-understand-aem-forms-analytics-reports.md)
    + [Skapa och hantera A/B-tester för adaptiva formulär](using/ab-testing-adaptive-forms.md)
 + Publicera och bearbeta AEM Forms {#publish-process-aem-forms}
@@ -683,6 +684,7 @@ ht-degree: 1%
 + Felsökning {#troubleshooting}
    + [Det går inte att använda vissa formulärfunktioner med vissa versioner av Oracle-JDK](using/unable-to-use-forms-features-with-certain-versions-of-oracle-jdk.md)
    + [Ytterligare steg för att få e-post med bifogad fil för den adaptiva versionen av Forms On JEE](/help/forms/using/additional-steps-to-use-email-with-attachments.md)
+   + [Det går inte att konvertera Word- eller Excel-filen till PDF på Windows Server](/help/forms/using/disable-uac-for-pdfgconfiguration.md)
 + Äldre dokumentation {#legacy-documentation}
    + [Använda den körda skripttjänsten i AEM Forms på JEE Workbench för att skapa XML-data](developing/building-xml.md)
    + [Komprimera och dekomprimera filer med en AEM Forms på en anpassad JEE DSC](developing/compressing-decompressing-custom-dsc.md)
