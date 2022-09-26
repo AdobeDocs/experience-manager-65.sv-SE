@@ -6,7 +6,7 @@ topic-tags: deploying
 docset: aem65
 feature: Configuring
 exl-id: c1c90d6a-ee5a-487d-9a8a-741b407c8c06
-source-git-commit: 4e68a8a8d84d0ffa1d28ab13c196731e58b4cf9a
+source-git-commit: 1a383f0e620adf6968d912a9a1759e5ee020c908
 workflow-type: tm+mt
 source-wordcount: '3447'
 ht-degree: 0%
@@ -183,7 +183,7 @@ När du har laddat ned den kan du installera och konfigurera S3 Connector på f�
 1. Redigera filen och lägg till de konfigurationsalternativ som krävs för installationen.
 1. Börja AEM.
 
-### Uppgradera till en ny version av 1.10.x S3 Connector {#upgrading-to-a-new-version-of-the-s-connector}
+## Uppgradera till en ny version av 1.10.x S3 Connector {#upgrading-to-a-new-version-of-the-s-connector}
 
 Om du behöver uppgradera till en ny version av 1.10.x S3-kontakten (till exempel från 1.10.0 till 1.10.4) följer du dessa steg:
 
@@ -260,7 +260,7 @@ Du kan använda konfigurationsfilen med följande alternativ:
  </tbody>
 </table>
 
-**DataStore-cachelagring**
+### DataStore-cachelagring {#data-store-caching}
 
 >[!NOTE]
 >
@@ -272,11 +272,11 @@ Du kan även uppgradera cacheminnet offline med `datastorecacheupgrade` kommando
 
 Cachen har en storleksgräns och kan konfigureras med parametern cacheSize.
 
-**Nedladdningar**
+#### Nedladdningar {#downloads}
 
 Den lokala cachen kontrolleras för posten för den begärda filen/blobben innan den hämtas från DataStore. När cacheminnet överskrider den konfigurerade gränsen (se `cacheSize` parameter) när du lägger till en fil i cacheminnet kommer vissa filer att tas bort för att frigöra utrymme.
 
-**Asynkron överföring**
+#### Asynkron överföring {#async-upload}
 
 Cachen stöder asynkrona överföringar till DataStore. Filerna mellanlagras lokalt i cachen (i filsystemet) och ett asynkront jobb börjar överföra filen. Antalet asynkrona överföringar begränsas av mellanlagringscachens storlek. Mellanlagringscachens storlek konfigureras med `stagingSplitPercentage` parameter. Den här parametern definierar den procentandel av cachestorleken som ska användas för mellanlagringscachen. Dessutom beräknas procentandelen cacheminne som är tillgängligt för nedladdningar som **(100 - `stagingSplitPercentage`) &#42;`cacheSize`**.
 
