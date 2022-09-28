@@ -6,10 +6,10 @@ topic-tags: deploying
 docset: aem65
 feature: Configuring
 exl-id: c1c90d6a-ee5a-487d-9a8a-741b407c8c06
-source-git-commit: 1a383f0e620adf6968d912a9a1759e5ee020c908
+source-git-commit: 1a741ff01fcf17dfdcc8c1cebcd858052d07361c
 workflow-type: tm+mt
-source-wordcount: '3447'
-ht-degree: 0%
+source-wordcount: '3583'
+ht-degree: 1%
 
 ---
 
@@ -204,24 +204,55 @@ Om du behöver uppgradera till en ny version av 1.10.x S3-kontakten (till exempe
 1. Kopiera jar-filerna till **&lt;aem-install>**/crx-quickstart/install/15 i AEM installationsmapp.
 1. Starta AEM och kontrollera anslutningsfunktionen.
 
-Du kan använda konfigurationsfilen med följande alternativ:
+Du kan använda konfigurationsfilen med alternativen nedan.
 
-* accessKey: Åtkomstnyckeln till AWS.
-* secretsKey: AWS hemliga åtkomstnyckel. **Obs!** När `accessKey` eller `secretKey` har inte angetts [IAM-roll](https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/java-dg-roles.html) används för autentisering.
-* s3Bucket: Bucketnamnet.
-* s3Region: Bucketregionen.
-* sökväg: Datalagrets sökväg. Standardvärdet är **&lt;aem install=&quot;&quot; folder=&quot;&quot;>/databas/datastore**
-* minRecordLength: Den minsta storleken för ett objekt som ska lagras i datalagret. Minimivärdet/standardvärdet är **16 kB.**
-* maxCachedBinarySize: Binärfiler som är mindre än eller lika stora som den här storleken lagras i minnescachen. Storleken anges i byte. Standardvärdet är **17408 **(17 kB).
+<!--
+* accessKey: The AWS access key.
+* secretKey: The AWS secret access key. **Note:** When the `accessKey` or `secretKey` is not specified then the [IAM role](https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/java-dg-roles.html) is used for authentication.
+* s3Bucket: The bucket name.
+* s3Region: The bucket region.
+* path: The path of the data store. The default is **&lt;AEM install folder&gt;/repository/datastore**
+* minRecordLength: The minimum size of an object that should be stored in the data store. The minimum/default is **16KB.**
+* maxCachedBinarySize: Binaries with size less than or equal to this size will be stored in memory cache. The size is in bytes. The default is **17408 **(17 KB).
+* cacheSize: The size of the cache. The value is specified in bytes. The default is **64GB**.
+* secret: Only to be used if using binaryless replication for shared datastore setup.
+* stagingSplitPercentage: The percentage of cache size configured to be used for staging asynchronous uploads. The default value is **10**.
+* uploadThreads: The number of uploads threads that are used for asynchronous uploads. The default value is **10**.
+* stagingPurgeInterval: The interval in seconds for purging finished uploads from the staging cache. The default value is **300** seconds (5 minutes).
+* stagingRetryInterval: The retry interval in seconds for failed uploads. The default value is **600** seconds (10 minutes).
+-->
 
-* cacheSize: Cachens storlek. Värdet anges i byte. Standardvärdet är **64 GB**.
-* hemlighet: Ska endast användas om binär replikering används för konfiguration av delade datalager.
-* stagingSplitPercentage: Procentandel av cachestorleken som är konfigurerad att användas för att mellanlagra asynkrona överföringar. Standardvärdet är **10**.
-* uploadThreads: Antalet överförda trådar som används för asynkrona överföringar. Standardvärdet är **10**.
-* stagingPurgeInterval: Intervallet i sekunder för tömning av slutförda överföringar från mellanlagringscachen. Standardvärdet är **300** sekunder (5 minuter).
-* stagingRetryInterval: Återförsöksintervallet i sekunder för misslyckade överföringar. Standardvärdet är **600** sekunder (10 minuter).
+### Alternativ för konfigurationsfil för S3 Connector {#s3-connector-configuration-file-options}
 
-### Alternativ för Bucket-område {#bucket-region-options}
+>[!NOTE]
+>
+>S3-anslutningen stöder både IAM-användarautentisering och IAM-rollautentisering. Om du vill använda IAM-rollautentisering utelämnar du `accessKey` och `secretKey` värden från konfigurationsfilen. S3-kopplingen får då standardvärdet [IAM-roll](https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/java-dg-roles.html) som tilldelats instansen.
+
+| Nyckel | Beskrivning | Standard | Krävs |
+| --- | --- | --- | --- |
+| accessKey | Åtkomstnyckel-ID för IAM-användaren med åtkomst till bucket. |  | Ja, när IAM-roller inte används. |
+| secretsKey | Hemlig åtkomstnyckel för IAM-användaren med åtkomst till bucket. |  | Ja, när IAM-roller inte används. |
+| cacheSize | Storleken (i byte) på det lokala cacheminnet. | 64 GB | Nej. |
+| connectionTimeout | Ange väntetiden (i millisekunder) före timeout när anslutningen upprättas första gången. | 10000 | Nej. |
+| maxCachedBinarySize | Binärfiler som är mindre än eller lika med det här värdet (i byte) lagras i minnescachen. | 17408 (17 kB) | Nej. |
+| maxConnections | Ange maximalt antal tillåtna öppna HTTP-anslutningar. | 50 | Nej. |
+| maxErrorRetry | Ange det maximala antalet försök för misslyckade (hämtningsbara) begäranden. | 3 | Nej. |
+| minRecordLength | Den minsta storleken för ett objekt (i byte) som ska lagras i datalagret. | 16384 | Nej. |
+| path | Den lokala sökvägen för AEM. | `crx-quickstart/repository/datastore` | Nej. |
+| proxyHost | Ange den valfria proxyvärd som klienten ansluter via. |  | Nej. |
+| proxyPort | Ange den valfria proxyport som klienten ansluter via. |  | Nej. |
+| s3Bucket | Namn på S3-bucket. |  | Ja |
+| s3EndPoint | S3 REST API-slutpunkt. |  | Nej. |
+| s3Region | Region där bucket finns. Se det här [page](https://docs.aws.amazon.com/general/latest/gr/s3.html) för mer information. | Region där AWS-instansen körs. | Nej. |
+| socketTimeout | Ställ in väntetiden (i millisekunder) för data som ska överföras via en etablerad, öppen anslutning innan anslutningens timeout inträffar och stängs. | 50000 | Nej. |
+| stagingPurgeInterval | Intervallet (i sekunder) för tömning av slutförda överföringar från mellanlagringscachen. | 300 | Nej. |
+| stagingRetryInterval | Intervallet (i sekunder) för återförsök av misslyckade överföringar. | 600 | Nej. |
+| stagingSplitPercentage | Procentandel av `cacheSize` som används för att mellanlagra asynkrona överföringar. | 10 | Nej. |
+| uploadThreads | Antalet överföringstrådar som används för asynkrona överföringar. | 10 | Nej. |
+| writeThreads | Antalet samtidiga trådar som används för att skriva via S3 Transfer Manager. | 10 | Nej. |
+
+<!---
+### Bucket region options {#bucket-region-options}
 
 <table>
  <tbody>
@@ -230,35 +261,36 @@ Du kan använda konfigurationsfilen med följande alternativ:
    <td><code>us-standard</code></td>
   </tr>
   <tr>
-   <td>USA, västra</td>
+   <td>US West</td>
    <td><code>us-west-2</code></td>
   </tr>
   <tr>
-   <td>Västra USA (norra Kalifornien)</td>
+   <td>US West (Northern California)</td>
    <td><code>us-west-1</code></td>
   </tr>
   <tr>
-   <td>EU (Irland)<br /> </td>
+   <td>EU (Ireland)<br /> </td>
    <td><code>EU</code></td>
   </tr>
   <tr>
-   <td>Asien/Stillahavsområdet (Singapore)<br /> </td>
+   <td>Asia Pacific (Singapore)<br /> </td>
    <td><code>ap-southeast-1</code></td>
   </tr>
   <tr>
-   <td>Asien/Stillahavsområdet (Sydney)<br /> </td>
+   <td>Asia Pacific (Sydney)<br /> </td>
    <td><code>ap-southeast-2</code></td>
   </tr>
   <tr>
-   <td>Asien/Stillahavsområdet (Tokyo)</td>
+   <td>Asia Pacific (Tokyo)</td>
    <td><code>ap-northeast-1</code></td>
   </tr>
   <tr>
-   <td>Sydamerika (Sao Paulo)<br /> </td>
+   <td>South America (Sao Paolo)<br /> </td>
    <td><code>sa-east-1</code></td>
   </tr>
  </tbody>
 </table>
+-->
 
 ### DataStore-cachelagring {#data-store-caching}
 
