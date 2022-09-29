@@ -12,9 +12,9 @@ discoiquuid: ed3a858c-7a43-4515-a2ff-43ca465c7d7d
 docset: aem65
 feature: Configuring
 exl-id: 19eedcf2-140a-452d-aa8f-6fd7f219e5f8
-source-git-commit: e8320b1dac681fd2c9e749344e8c126487d840ba
+source-git-commit: 71c318e59f39b091f52650853be2d472354c2f1c
 workflow-type: tm+mt
-source-wordcount: '3557'
+source-wordcount: '3474'
 ht-degree: 0%
 
 ---
@@ -59,8 +59,6 @@ Följande OSGi-konfigurationsinställningar (listade efter paket) är relevanta 
 
 * The **Administratörslösenord** bör ändras efter installationen för att säkerställa att [säkerhet](/help/sites-administering/security-checklist.md) av din instans.
 * Andra ändringar bör inte vara nödvändiga och försiktighet måste vidtas eftersom de kan påverka åtkomsten till databasen.
-
-**Wiki Mail-tjänst** Konfigurera e-postinställningarna för e-post som skickas av en wiki.
 
 **Apache Felix OSGi Management Console** Konfigurera:
 
@@ -245,11 +243,6 @@ Om ett konfigurerat sökvägsvärde avslutas med ett snedstreck genomsöks hela 
 * **Skriptanvändare** - den här valfria egenskapen kan ange det databasanvändarkonto som används för att läsa skripten. Om inget konto anges `admin` används som standard.
 
 * **Standardtillägg** Listan över tillägg som standardbeteendet ska användas för. Det innebär att det sista sökvägssegmentet i resurstypen kan användas som skriptnamn.
-
-**Day Commons GFX Font Helper** När du återger bilder kan du använda DrawText för att bädda in text. För detta kan du även installera egna teckensnitt:
-
-* Definiera **Teckensnittssökväg** som ska genomsökas efter projektspecifika teckensnitt.
-Till exempel, `/apps/myapp/fonts`.
 
 **Proxykonfiguration för Apache HTTP-komponenter** Proxykonfiguration för all kod med Apache HTTP-klienten som används när en HTTP görs. till exempel vid replikering.
 
@@ -447,10 +440,6 @@ Styr HTML-parsern för CQ-omskrivaren.
 **JDBC-anslutningspool för dagkommentarer** Konfigurera åtkomst till en extern databas som används som innehållskälla.
 
 Detta är en fabrikskonfiguration, så det går att konfigurera flera instanser.
-
-**Tjänsten Adobe CQ Media DPS Sessions** Hantera DPS-sessioner för användning med publikationer.
-
-I synnerhet kan du definiera `dps.session.service.url.name`: standard är inställd på [https://dpsapi2.digitalpublishing.acrobat.com/webservices/sessions](https://dpsapi2.digitalpublishing.acrobat.com/webservices/sessions)
 
 **CDN Rewriter** Kommunikation mellan AEM och CDN måste säkerställas så att resurser och binära filer levereras till slutanvändaren på ett säkert sätt. Detta innebär två uppgifter:
 
