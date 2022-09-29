@@ -2,9 +2,9 @@
 title: AEM Content and Commerce Release Notes 2022
 description: AEM Content and Commerce Release Notes 2022
 exl-id: d0a66e70-c4f1-4051-8161-11f07dad0612
-source-git-commit: 6c5c37c1c365e1f03ea9b5c935adf63a33faba5d
+source-git-commit: 0fdff88695646603cec120d25f156f8c918686df
 workflow-type: tm+mt
-source-wordcount: '715'
+source-wordcount: '812'
 ht-degree: 6%
 
 ---
@@ -20,6 +20,21 @@ Granska de lägsta systemkraven i tabellen nedan för den CIF-version som du anv
 | CIF-tillägg | Minimum: AEM 6.5.7, Magento 2.3.5 GraphQL scheman |
 | CIF-kärnkomponenter | [Systemkrav](https://github.com/adobe/aem-core-cif-components/blob/master/VERSIONS.md) |
 | AEM Project Archetype | [Systemkrav](https://github.com/adobe/aem-project-archetype/blob/master/VERSIONS.md) |
+
+## Releasedatum: September 2022
+
+| Komponent | Version | Information |
+|:-------|:-----:|---------------------:|
+| CIF-tillägg | 2022.09.20.00 | [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2022.09.20.00.zip) |
+| CIF-kärnkomponenter | 2.11.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.11.0) |
+| CIF Venias referenswebbplats | 2022.09.02 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2022.09.02) |
+
+### Nyheter {#what-is-new-september}
+
+* Författare kan dynamiskt berika produktlistor med Experience Fragments (Exempel: Placera banner mellan produktlistor)
+* List-komponenten stöder kopplade produkt-/kategorisidor för att dynamiskt visa relaterade sidor
+* Stöd för komponenter i Peregrine 12.5
+* Stöd för prissättning på klientsidan i produktlasrar och karuseller
 
 ## Releasedatum: Juli 2022
 
