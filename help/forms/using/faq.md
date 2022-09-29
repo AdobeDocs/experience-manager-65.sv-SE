@@ -12,9 +12,9 @@ discoiquuid: 4b676e7e-191f-4a19-8b8f-fc3e30244b59
 docset: aem65
 feature: Mobile Forms
 exl-id: 85c9315e-1bc8-44a9-937e-af6fc7cf54d1
-source-git-commit: f39102c938107b8ce01325499f29f00e287b5bcc
+source-git-commit: a90ea57142110ebd11a8a9580c29df1698b8dce1
 workflow-type: tm+mt
-source-wordcount: '1995'
+source-wordcount: '2005'
 ht-degree: 0%
 
 ---
@@ -103,11 +103,11 @@ Det finns några vanliga frågor och svar om layout, skriptstöd och HTML5-formu
 
 1. Stöds vAlign- och hAlign-attribut i HTML-formulär?
 
-   Ja, attributen vAlign och hAlign stöds. Attributet vAlign stöds inte i Internet Explorer och i flerradsfält.
+   Svar: Ja, attributen vAlign och hAlign stöds. Attributet vAlign stöds inte i Internet Explorer och i flerradsfält.
 
 1. Har HTML5-formulär stöd för hebreiska tecken?
 
-   HTML5-formulär stöder hebreiska tecken i alla webbläsare utom Microsoft Internet Explorer.
+   Svar: HTML5-formulär stöder hebreiska tecken i alla webbläsare utom Microsoft Internet Explorer.
 
 1. Har HTML5-formulär några begränsningar för numeriska fält?
 
@@ -115,7 +115,7 @@ Det finns några vanliga frågor och svar om layout, skriptstöd och HTML5-formu
 
 1. Varför är HTML formulär större än PDF forms?
 
-   Det krävs många mellanliggande datastrukturer och objekt som blankettdom, datatilldom och layoutdom för att kunna återge en XDP till ett HTML-formulär.
+   Svar: Det krävs många mellanliggande datastrukturer och objekt som blankettdom, datatilldom och layoutdom för att kunna återge en XDP till ett HTML-formulär.
 
    För PDF forms har Adobe Acrobat en inbyggd XTG-motor för att skapa mellanliggande datastrukturer och objekt. Acrobat hanterar också layout och skript.
 
@@ -142,12 +142,13 @@ Det finns några vanliga frågor och svar om layout, skriptstöd och HTML5-formu
 
 1. Vilken läsordning har skärmläsare verktygstips och bildtexter?
 
+   Svar:
    * När både bildtext och verktygstips finns, läses den enda bildtexten. Om bildtexten inte är tillgänglig läses funktionsbeskrivningen. Du kan också ange prioritet för läsning i en XDP-fil med hjälp av formulärdesignern
    * När du håller muspekaren över ett element visas verktygstipset. Om funktionsbeskrivningen inte är tillgänglig visas taltext. Om taltext inte är tillgänglig visas fältnamnet.
 
 1. När du håller pekaren över ett fält visas ett verktygstips. Hur inaktiverar man det?
 
-   Om du vill inaktivera verktygstipset vid hovring väljer du ingen på hjälpmedelspanelen i Designer.
+   Svar: Om du vill inaktivera verktygstipset vid hovring väljer du ingen på hjälpmedelspanelen i Designer.
 
 1. I Designer kan en användare konfigurera anpassade utseendeegenskaper för alternativknappar och kryssrutor. Tar HTML 5-formulär hänsyn till anpassade utseendeegenskaper när formulären återges?
 
@@ -155,7 +156,7 @@ Det finns några vanliga frågor och svar om layout, skriptstöd och HTML5-formu
 
 1. När ett HTML5-formulär öppnas i en webbläsare som stöds justeras inte kantlinjen för de fält som placeras intill korrekt, eller så visas delformulär som överlappande. När samma HTML5-formulär förhandsgranskas i Forms Designer ser inte fält och layout feljusterade ut och delformulär visas i rätt position. Hur löser jag problemet?
 
-   När ett delformulär är inställt på att flöda innehåll och delformuläret har ett dolt ramelement, justeras inte kanten på de fält som placeras inåt korrekt eller så visas delformulär som överlappande. För att lösa problemet kan du ta bort eller kommentera det dolda &lt;border> -element från motsvarande XDP. Till exempel följande &lt;border> -elementet markeras som en kommentar:
+   Svar: När ett delformulär är inställt på att flöda innehåll och delformuläret har ett dolt ramelement, justeras inte kanten på de fält som placeras inåt korrekt eller så visas delformulär som överlappande. För att lösa problemet kan du ta bort eller kommentera det dolda &lt;border> -element från motsvarande XDP. Till exempel följande &lt;border> -elementet markeras som en kommentar:
 
    ```xml
                <!--<border>
@@ -166,7 +167,7 @@ Det finns några vanliga frågor och svar om layout, skriptstöd och HTML5-formu
 
 1. Varför fungerar inte skärmläsare korrekt med fältobjektet Datum/tid?
 
-   Skärmläsare stöder inte datum-/tidsfält. Du kan dock manuellt ange datum/tid för fältet så att skärmläsaren läser det. Använd verktygstips eller skärmläsartext för att instruera användaren att manuellt välja datum/tid för fältet.
+   Svar: Skärmläsare stöder inte datum-/tidsfält. Du kan dock manuellt ange datum/tid för fältet så att skärmläsaren läser det. Använd verktygstips eller skärmläsartext för att instruera användaren att manuellt välja datum/tid för fältet.
 
 1. Har HTML5-formulär stöd för visningsmönster för flytande fält?
 
@@ -192,12 +193,13 @@ Svar: Datumfältet accepterar ISO-formatet ÅÅÅÅ-MM-DD. Om du anger ett datum
 
 1. Finns det någon rekommenderad namnkonvention och finns det några reserverade nyckelord att undvika?
 
+   Svar:
    * I AEM Forms Designer rekommenderas att namnet på ett objekt (till exempel ett delformulär eller ett textfält) inte inleds med ett understreck (_). Om du vill använda understreck i början av namnet lägger du till ett prefix efter understrecket,_&lt;prefix>&lt;objectname>.
    * Alla HTML5-formulär-API:er är reserverade nyckelord. Använd ett namn som inte är identiskt med [HTML5-formulär-API:er](/help/forms/using/scripting-support.md).
 
 1. Har HTML5-formulär stöd för flytande fält?
 
-   Ja, HTML5 Forms har stöd för flytande fält. Om du vill aktivera flytande fält lägger du till följande egenskap i återgivningsprofilen:
+   Svar: Ja, HTML5 Forms har stöd för flytande fält. Om du vill aktivera flytande fält lägger du till följande egenskap i återgivningsprofilen:
 
    >[!NOTE]
    >
@@ -213,7 +215,7 @@ Svar: Datumfältet accepterar ISO-formatet ÅÅÅÅ-MM-DD. Om du anger ett datum
 
 1. Körs initieringsskriptet och formulärready-händelsen flera gånger i HTML5-formulär?
 
-   Ja, initieringsskripten och formulärfärdiga händelser körs flera gånger, minst en gång på servern och en gång på klientsidan. Det rekommenderas att skriva skript som initialize eller form:ready-händelser baserat på viss affärslogik (formulär- eller fältdata) så att åtgärden utförs baserat på data och idempotent (om data är samma).
+   Svar: Ja, initieringsskripten och formulärfärdiga händelser körs flera gånger, minst en gång på servern och en gång på klientsidan. Det rekommenderas att skriva skript som initialize eller form:ready-händelser baserat på viss affärslogik (formulär- eller fältdata) så att åtgärden utförs baserat på data och idempotent (om data är samma).
 
 ### Utforma XDP {#designing-xdp}
 
