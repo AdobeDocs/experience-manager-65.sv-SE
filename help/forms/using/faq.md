@@ -12,7 +12,7 @@ discoiquuid: 4b676e7e-191f-4a19-8b8f-fc3e30244b59
 docset: aem65
 feature: Mobile Forms
 exl-id: 85c9315e-1bc8-44a9-937e-af6fc7cf54d1
-source-git-commit: 1e301f3991a18a594ac10a6548a0a645327dd4dd
+source-git-commit: f39102c938107b8ce01325499f29f00e287b5bcc
 workflow-type: tm+mt
 source-wordcount: '1995'
 ht-degree: 0%
@@ -99,7 +99,7 @@ Det finns några vanliga frågor och svar om layout, skriptstöd och HTML5-formu
 
 1. Varför visas vissa teckensnitt i HTML som skiljer sig från dem som används när formuläret utformas?
 
-   Svar: HTML5-formulär bäddar inte in teckensnitt (till skillnad från PDF forms där teckensnitt är inbäddade i formuläret). Kontrollera att teckensnitten som anges i XDP-filen är tillgängliga på HTML och på klientdatorn för att formulärversionen ska återges som förväntat. Om de nödvändiga teckensnitten inte finns på servern används de som standard. Om du dessutom använder teckensnitt i formulärmallen som inte finns på klientenheten, används webbläsarens standardteckensnitt för att återge texten.
+   Svar: HTML5 Forms tillåter inte inbäddning av teckensnitt (till skillnad från PDF forms där teckensnitt är inbäddade i formuläret). För att HTML-versionen av ett formulär ska kunna återges som förväntat måste teckensnitten vara tillgängliga i CRX-databasen (AEM Content Repository) på AEM Forms-servern och på den dator där AEM Designer är installerat. När teckensnitten inte är tillgängliga i CRX-databasen på din AEM Forms-server eller på den plats där AEM Designer är installerat, återges formuläret med reservteckensnitt.
 
 1. Stöds vAlign- och hAlign-attribut i HTML-formulär?
 
