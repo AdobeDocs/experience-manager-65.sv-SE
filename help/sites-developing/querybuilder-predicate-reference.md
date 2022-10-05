@@ -10,14 +10,26 @@ content-type: reference
 topic-tags: platform
 discoiquuid: 94a05894-743a-4ace-a292-bfee90ba9068
 exl-id: 54b942f9-5dd9-4826-9a0a-028f2d7b8e41
-source-git-commit: 2bae11eafb875f01602c39c0dba00a888e11391a
+source-git-commit: f97eb2e028263016131b0c86be5a0508ae4def9b
 workflow-type: tm+mt
-source-wordcount: '2310'
+source-wordcount: '2371'
 ht-degree: 2%
 
 ---
 
 # Predikatreferens för Query Builder{#query-builder-predicate-reference}
+
+>[!CAUTION]
+>
+>Informationen på denna sida är inte uttömmande.
+>
+>Mer information finns i listan under **Tillgängliga predikat** på felsökningskonsolen i Query Builder, till exempel:
+>* [http://localhost:4502/libs/cq/search/content/querydebug.html](http://localhost:4502/libs/cq/search/content/querydebug.html)
+>
+>Se till exempel:
+>
+>* [http://localhost:4502/system/console/services?filter=%28component.factory%3Dcom.day.cq.search.eval.PredicateEvaluator%2F*%29](http://localhost:4502/system/console/services?filter=%28component.factory%3Dcom.day.cq.search.eval.PredicateEvaluator%2F*%29)
+
 
 ## Allmänt {#general}
 
@@ -52,20 +64,20 @@ ht-degree: 2%
 
 ### boolproperty {#boolproperty}
 
-Matchar JCR BOOLEAN-egenskaper. Endast värdena `true` och `false` accepteras. Om det är `false` matchar det om egenskapen har värdet `false` eller om den inte finns alls. Detta kan vara användbart för att kontrollera om det finns booleska flaggor som bara är inställda när de är aktiverade.
+Matchar JCR BOOLEAN-egenskaper. Accepterar endast värdena &quot; `true`&quot; och &quot; `false`&quot;. Vid &quot; `false`&quot;, matchar det om egenskapen har värdet &quot; `false`&quot; eller om den inte finns alls. Detta kan vara användbart för att kontrollera om det finns booleska flaggor som bara är inställda när de är aktiverade.
 
-Den ärvda parametern `operation` har ingen betydelse.
+Ärvda &quot; `operation`parametern har ingen betydelse.
 
-Stöder facetextrahering. Tillhandahåller bucket för varje `true`- eller `false`-värde, men bara för befintliga egenskaper.
+Stöder facetextrahering. Tillhandahåller bucklar för varje `true` eller `false` värde, men bara för befintliga egenskaper.
 
 #### Egenskaper {#properties}
 
-* ****
-boolpropertyRelativ sökväg till egenskap, till exempel 
+* **boolproperty**
+relativ sökväg till egenskap, till exempel 
 `myFeatureEnabled` eller `jcr:content/myFeatureEnabled`
 
-* ****
-valueValue to check property for, &quot; 
+* **value**
+värde att kontrollera egenskap för, &quot; 
 `true`&quot; eller &quot; `false`&quot;
 
 ### innehållfragment {#contentfragment}
@@ -78,8 +90,8 @@ Stöder inte facetextrahering.
 
 #### Egenskaper {#properties-1}
 
-* ****
-contentfragmentDen kan användas med valfritt värde för att kontrollera om det finns innehållsfragment.
+* **innehållfragment**
+Den kan användas med vilket värde som helst för att kontrollera om det finns innehållsfragment.
 
 ### dateComparison {#datecomparison}
 
@@ -99,12 +111,11 @@ Detta är ett predikat som bara kan filtreras och kan inte utnyttja ett sökinde
 
 * **operation**
 
-   &quot; `equals`&quot; för exakt matchning, &quot; `!=`&quot; för jämförelse av olikhet, &quot; `greater`&quot; för egenskap1 större än egenskap 2, &quot; `>=`&quot; för egenskap1 större än eller lika med egenskap 2. Standardvärdet är &quot; `equals`&quot;.
+   &quot; `equals`&quot; för exakt matchning, &quot; `!=`&quot; för jämförelse av skillnader, &quot; `greater`&quot; for property1 större än property2, &quot; `>=`&quot; för property1 större än eller lika med property2. Standardvärdet är &quot; `equals`&quot;.
 
 ### daterange {#daterange}
 
-Matchar JCR DATE-egenskaper mot ett datum/tidsintervall. Detta använder ISO8601
-format för datum och tid ( `YYYY-MM-DDTHH:mm:ss.SSSZ`) och tillåter även partiella representationer, som `YYYY-MM-DD`. Alternativt kan tidsstämpeln anges i antal millisekunder sedan 1970 i UTC-tidszonen, det unika tidsformatet.
+Matchar JCR DATE-egenskaper mot ett datum/tidsintervall. Detta använder ISO8601-formatet för datum och tider ( `YYYY-MM-DDTHH:mm:ss.SSSZ`) och tillåter även partiella representationer, som `YYYY-MM-DD`. Alternativt kan tidsstämpeln anges i antal millisekunder sedan 1970 i UTC-tidszonen, det unika tidsformatet.
 
 Du kan söka efter vad som helst mellan två tidsstämplar, vad som helst nyare eller äldre än ett visst datum, och du kan även välja mellan inkluderande och öppna intervall.
 
@@ -116,15 +127,15 @@ Filtrering stöds inte.
 
 * **property**
 
-   relativ sökväg till en `DATE`-egenskap, till exempel `jcr:lastModified`
+   relativ sökväg till en `DATE` egenskap, till exempel `jcr:lastModified`
 
 * **lowerBound**
 
-   nedre gräns för kontrollegenskap, till exempel `2014-10-01`
+   nedre gräns för att kontrollera egenskap för, till exempel `2014-10-01`
 
 * **lowerOperation**
 
-   &quot; `>`&quot; (nyare) eller &quot; `>=`&quot; (på eller nyare) gäller för `lowerBound`. Standardvärdet är `>`.
+   &quot; `>`&quot; (nyare) eller &quot; `>=`&quot; (på eller nyare), gäller för `lowerBound`. Standardvärdet är &quot; `>`&quot;.
 
 * **upperBound**
 
@@ -132,7 +143,7 @@ Filtrering stöds inte.
 
 * **upperOperation**
 
-   &quot; `<`&quot; (äldre) eller &quot; `<=`&quot; (tidigare) gäller för `upperBound`. Standardvärdet är `<`.
+   &quot; `<`&quot; (äldre) eller &quot; `<=`&quot; (vid eller äldre), gäller för `upperBound`. Standardvärdet är &quot; `<`&quot;.
 
 * **timeZone**
 
@@ -172,7 +183,7 @@ Stöder inte facetextrahering.
 
 ### grupp {#group}
 
-Tillåter att kapslade villkor skapas. Grupper kan innehålla kapslade grupper. Allt i en querybuilder-fråga finns implicit i en rotgrupp som även kan ha parametrarna `p.or` och `p.not`.
+Tillåter att kapslade villkor skapas. Grupper kan innehålla kapslade grupper. Allt i en fråga finns implicit i en rotgrupp som kan ha `p.or` och `p.not` parametrar också.
 
 Exempel på matchning av en av två egenskaper mot ett värde:
 
@@ -197,7 +208,7 @@ group.2_group.path=/content/dam/geometrixx
 group.2_group.type=dam:Asset
 ```
 
-Detta söker efter termen &quot;**Hantering**&quot; på sidor i `/content/geometrixx/en` eller i resurser i `/content/dam/geometrixx`.
+Detta söker efter termen &quot;**Förvaltning**&quot; på sidor i `/content/geometrixx/en` eller i tillgångar i `/content/dam/geometrixx`.
 
 Detta är begreppsmässigt `fulltext AND ( (path AND type) OR (path AND type) )`. Observera att sådana OR-kopplingar behöver bra index för att fungera.
 
@@ -205,11 +216,11 @@ Detta är begreppsmässigt `fulltext AND ( (path AND type) OR (path AND type) )`
 
 * **p.or**
 
-   om det anges till `true`, får bara ett predikat i gruppen matcha. Standardvärdet är `false`, vilket innebär att alla måste matcha
+   om inställt på &quot; `true`&quot;, måste bara ett predikat i gruppen matcha. Standardvärdet är &quot; `false`&quot;, vilket betyder att alla måste matcha
 
 * **p.not**
 
-   om den anges till `true` negeras gruppen (standardvärdet är `false`)
+   om inställt på &quot; `true`&quot;, negeras gruppen (standardvärdet är &quot; `false`&quot;)
 
 * **&lt;predicate>**
 
@@ -221,7 +232,7 @@ Detta är begreppsmässigt `fulltext AND ( (path AND type) OR (path AND type) )`
 
 ### hasPermission {#haspermission}
 
-Begränsar resultatet till objekt där den aktuella sessionen har de angivna [JCR-behörigheterna.](https://www.adobe.io/experience-manager/reference-materials/spec/jcr/2.0/16_Access_Control_Management.html#16.2.3%20Standard%20Privileges)
+Begränsar resultatet till objekt där den aktuella sessionen har den angivna [JCR-behörighet.](https://www.adobe.io/experience-manager/reference-materials/spec/jcr/2.0/16_Access_Control_Management.html#16.2.3%20Standard%20Privileges)
 
 Detta är ett predikat som bara kan filtreras och kan inte utnyttja ett sökindex. Det stöder inte facetextrahering.
 
@@ -247,7 +258,7 @@ Stöder facetextrahering. Ger buketter för varje unik språkkod.
 
 ### huvudtillgång {#mainasset}
 
-Kontrollerar om en nod är en DAM-huvudresurs och inte en underresurs. Detta är i stort sett alla noder som inte finns i en delresursnod. Observera att detta inte söker efter nodtypen `dam:Asset`. Om du vill använda det här predikatet anger du &quot; `mainasset=true`&quot; eller &quot; `mainasset=false`&quot;. Det finns inga fler egenskaper.
+Kontrollerar om en nod är en DAM-huvudresurs och inte en underresurs. Detta är i stort sett alla noder som inte finns i en delresursnod. Observera att detta inte kontrollerar `dam:Asset` nodtyp. Ange bara &quot; `mainasset=true`&quot; eller &quot; `mainasset=false`&quot;, det finns inga fler egenskaper.
 
 Detta är ett predikat som bara kan filtreras och kan inte utnyttja ett sökindex.
 
@@ -257,11 +268,11 @@ Stöder facetextrahering. Tillhandahåller 2 bucket för huvud- och deltillgång
 
 * **huvudtillgång**
 
-   booleskt, &quot; `true`&quot; för huvudresurser, &quot; `false`&quot; för underresurser
+   boolesk, &quot; `true`&quot; for main assets, &quot; `false`&quot; för undertillgångar
 
 ### medlemOf {#memberof}
 
-Söker efter objekt som är medlemmar i en specifik [sling-resurssamling](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/resource/collection/ResourceCollection.html).
+Söker efter objekt som tillhör en viss [resursinsamling för sling](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/resource/collection/ResourceCollection.html).
 
 Detta är ett predikat som bara kan filtreras och kan inte utnyttja ett sökindex. Stöder inte facetextrahering.
 
@@ -281,11 +292,11 @@ Stöder facetextrahering. Tillhandahåller bucket för varje unikt nodnamn (filn
 
 * **nodename**
 
-   nodnamnsmönster som tillåter jokertecken: `*` = ett eller inga tecken, `?` = ett tecken, `[abc]` = endast tecken inom hakparenteser
+   nodnamnsmönster som tillåter jokertecken: `*` = ett eller inga tecken, `?` = any char, `[abc]` = endast tecken inom hakparentes
 
 ### inte utgånget {#notexpired}
 
-Matchar objekt genom att kontrollera om en JCR DATE-egenskap är större eller lika med den aktuella servertiden. Detta kan användas för att kontrollera en &quot; `expiresAt`&quot;-liknande datumegenskap och begränsa till endast de som ännu inte har gått ut ( `notexpired=true`) eller som redan har gått ut ( `notexpired=false`).
+Matchar objekt genom att kontrollera om en JCR DATE-egenskap är större eller lika med den aktuella servertiden. Detta kan användas för att kontrollera en `expiresAt`&quot; som date-egenskap och begränsa till endast de som ännu inte har gått ut ( `notexpired=true`) eller som redan har gått ut ( `notexpired=false`).
 
 Filtrering stöds inte.
 
@@ -295,11 +306,11 @@ Stöder facet-extrahering på samma sätt som daterange-predikatet.
 
 * **inte utgånget**
 
-   boolesk, `true` för ännu inte förfallit (datum i framtiden eller lika med), `false` för utgången (tidigare datum) (obligatoriskt)
+   boolesk, &quot; `true`&quot; för ännu inte förfallit (datum i framtiden eller lika med), &quot; `false`&quot; för utgången (tidigare datum) (obligatoriskt)
 
 * **property**
 
-   relativ sökväg till egenskapen `DATE` som ska kontrolleras (obligatoriskt)
+   relativ sökväg till `DATE` egenskap som ska kontrolleras (obligatoriskt)
 
 ### orderby {#orderby}
 
@@ -309,15 +320,15 @@ Sortera resultatet. Om det krävs en ordning med flera egenskaper måste det hä
 
 * **orderby**
 
-   antingen JCR-egenskapsnamnet som anges av en inledande @, t.ex. `@jcr:lastModified` eller `@jcr:content/jcr:title`, eller ett annat predikat i frågan, t.ex. `2_property`, som ska sorteras
+   antingen JCR-egenskapsnamnet som anges av ett radavstånd på @, till exempel `@jcr:lastModified` eller `@jcr:content/jcr:title`eller ett annat predikat i frågan, till exempel `2_property`som sorteringen ska göras på
 
 * **sortera**
 
-   sorteringsriktning, antingen `desc` för fallande eller `asc` för stigande (standard)
+   sorteringsriktning, antingen &quot; `desc`&quot; för fallande eller &quot; `asc`&quot; for ascending (default)
 
 * **case**
 
-   om den anges till `ignore` blir sorteringsskiftläget okänsligt, vilket innebär att&quot;a&quot; kommer före&quot;B&quot;, om den är tom eller utelämnad är sorteringen skiftlägeskänslig, vilket betyder &quot;B&quot; kommer före &quot;a&quot;
+   om inställt på &quot; `ignore`&quot; kommer att göra sorteringsskiftläget okänsligt, vilket innebär att &quot;a&quot; kommer före &quot;B&quot;, om den är tom eller utelämnad är sorteringen skiftlägeskänslig, vilket betyder &quot;B&quot; kommer före &quot;a&quot;
 
 ### bana {#path}
 
@@ -329,15 +340,15 @@ Stöder inte facetextrahering.
 
 * **path**
 
-   banmönster, Beroende på exakt kommer antingen hela underträdet att matcha (som att lägga till `//*` i XPath, men observera att detta inte inkluderar bassökvägen) (exact=false, default) eller endast en exakt sökvägsmatchning, som kan innehålla jokertecken ( `*`). om self anges söks hela underträdet inklusive basnoden igenom
+   banmönster, beroende på exakt, kommer antingen hela underträdet att matcha (som att lägga till `//*` in xpath, but note that this does not include the base path) (exact=false, default) or only an exact path matching, which can include wilcards ( `*`). om self anges söks hela underträdet inklusive basnoden igenom
 
 * **exakt**
 
-   Om `exact` är true/on måste den exakta sökvägen matcha, men den kan innehålla enkla jokertecken ( `*`) som matchar namn, men inte &quot; `/`&quot;; om det är false (standard) inkluderas alla underordnade (valfritt)
+   if `exact` är true/on, den exakta sökvägen måste matcha, men den kan innehålla enkla jokertecken ( `*`), som matchar namn, men inte &quot; `/`&quot;; om det är false (standard) inkluderas alla underordnade (valfritt)
 
 * **platt**
 
-   söker bara efter direkt underordnad (som att lägga till &quot; `/*`&quot; i xpath) (används bara om &quot; `exact`&quot; inte är true, valfritt)
+   söker bara efter direkt underordnade objekt (som att lägga till &quot; `/*`&quot; in xpath) (används endast om &quot; `exact`&#39; är inte sant, valfritt)
 
 * **self**
 
@@ -361,23 +372,23 @@ Stöder facetextrahering. Ger bucket för varje unikt egenskapsvärde i resultat
 
 * **N_värde**
 
-   använd `1_value`, `2_value`, ... om du vill söka efter flera värden (i kombination med `OR` som standard med `AND` if och=true) (sedan 5.3)
+   use `1_value`, `2_value`, ... för att kontrollera om det finns flera värden (i kombination med `OR` som standard, med `AND` if och=true) (sedan 5.3)
 
 * **and**
 
-   anges till true för att kombinera flera värden ( `N_value`) med AND (sedan 5.3)
+   anges till true för att kombinera flera värden ( `N_value`) med OCH (sedan 5.3)
 
 * **operation**
 
-   &quot;`equals`&quot; för exakt matchning (standard), &quot; `unequals`&quot; för jämförelsen av olikheter, &quot; `like`&quot; för användning av xpath-funktionen `jcr:like` (valfritt), &quot; `not`&quot; för ingen matchning (t.ex. &quot;`not(@prop)`&quot; i xpath ignoreras value param) eller &quot; `exists`&quot; för existenskontroll (värdet kan vara true - egenskapen måste finnas, standardvärdet - eller false - samma som &quot; `not`&quot;)
+   &quot;`equals`&quot; för exakt matchning (standard), &quot; `unequals`&quot; för jämförelse av skillnader, &quot; `like`&quot; för att använda `jcr:like` xpath-funktion (valfri), &quot; `not`&quot; utan matchning (t.ex. &quot;`not(@prop)`&quot; in xpath, value param will be ignore) or &quot; `exists`&quot; for exist check (value can be true - property must exist, the default - or false - same as &quot; `not`&quot;)
 
 * **djup**
 
-   antal jokernivåer under vilka egenskapen/den relativa sökvägen kan finnas (t.ex. `property=size depth=2` kontrollerar nod/storlek, nod/&amp;ast;/size and node/&amp;ast;/&amp;ast;/size)
+   antal jokernivåer under vilka egenskapen/den relativa sökvägen kan finnas (till exempel `property=size depth=2` kommer att kontrollera nod/storlek, nod/&amp;ast;/size och nod/&amp;ast;/&amp;ast;/size)
 
 ### rangegenskap {#rangeproperty}
 
-Matchar en JCR-egenskap mot ett intervall. Detta gäller för egenskaper med linjära typer som `LONG`, `DOUBLE` och `DECIMAL`. För `DATE`, se daterange-predikatet som har optimerade indata för datumformat.
+Matchar en JCR-egenskap mot ett intervall. Detta gäller egenskaper med linjär typ som `LONG`, `DOUBLE` och `DECIMAL`. För `DATE` se daterange-predikatet som har optimerade indata för datumformat.
 
 Du kan definiera en nedre gräns och en övre gräns eller endast en av dem. Åtgärden (t.ex. &quot;mindre än&quot; eller &quot;mindre eller lika med&quot;) kan också anges för enskilt nedre och övre gräns.
 
@@ -395,7 +406,7 @@ Stöder inte facetextrahering.
 
 * **lowerOperation**
 
-   &quot; `>`&quot; (standard) eller &quot; `>=`&quot; gäller för `lowerValue`
+   &quot; `>`&quot; (standard) eller &quot; `>=`&quot;, gäller `lowerValue`
 
 * **upperBound**
 
@@ -403,7 +414,7 @@ Stöder inte facetextrahering.
 
 * **upperOperation**
 
-   &quot; `<`&quot; (standard) eller &quot; `<=`&quot; gäller för `lowerValue`
+   &quot; `<`&quot; (standard) eller &quot; `<=`&quot;, gäller `lowerValue`
 
 * **decimal**
 
@@ -411,15 +422,15 @@ Stöder inte facetextrahering.
 
 ### relativ {#relativedaterange}
 
-Matchar `JCR DATE`-egenskaper mot ett datum/tidsintervall med tidsförskjutningar i förhållande till den aktuella servertiden. Du kan ange `lowerBound` och `upperBound` antingen med ett millisekundvärde eller bugzilla-syntaxen `1s 2m 3h 4d 5w 6M 7y` (en sekund, två minuter, tre timmar, fyra dagar, fem veckor, sex månader, sju år). Använd prefixet `-` för att ange en negativ förskjutning före den aktuella tiden. Om du bara anger `lowerBound` eller `upperBound` blir det andra standardvärdet 0, vilket innebär den aktuella tiden.
+Matchar `JCR DATE` egenskaper mot ett datum/tidsintervall med tidsförskjutningar i förhållande till den aktuella servertiden. Du kan ange `lowerBound` och `upperBound` med ett millisekundvärde eller bugzillasyntax `1s 2m 3h 4d 5w 6M 7y` (en sekund, två minuter, tre timmar, fyra dagar, fem veckor, sex månader, sju år). Prefix med &quot; `-`&quot; om du vill ange en negativ förskjutning före den aktuella tiden. Om du bara anger `lowerBound` eller `upperBound`blir det andra standardvärdet 0, vilket innebär den aktuella tiden.
 
 Till exempel:
 
-* `upperBound=1h` (och nej  `lowerBound`) väljer något under nästa timme
-* `lowerBound=-1d` (och nej  `upperBound`) väljer något under de senaste 24 timmarna
-* `lowerBound=-6M` och  `upperBound=-3M` skulle välja mellan sex månaders och tre månaders ålder
-* `lowerBound=-1500` och  `upperBound=5500` skulle välja mellan 1 500 millisekunder tidigare och 5 500 millisekunder i framtiden
-* `lowerBound=1d` och  `upperBound=2d` skulle välja vad som helst i övermorgon
+* `upperBound=1h` (och nej) `lowerBound`) skulle välja vad som helst under nästa timme
+* `lowerBound=-1d` (och nej) `upperBound`) skulle välja vad som helst de senaste 24 timmarna
+* `lowerBound=-6M` och `upperBound=-3M` väljer du mellan 6 månader och 3 månader
+* `lowerBound=-1500` och `upperBound=5500` kan välja mellan 1 500 millisekunder tidigare och 5 500 millisekunder i framtiden
+* `lowerBound=1d` och `upperBound=2d` skulle välja vad som helst i övermorgon
 
 Observera att programmet inte tar hänsyn till skottår och att alla månader är 30 dagar.
 
@@ -431,11 +442,11 @@ Stöder facet-extrahering på samma sätt som daterange-predikatet.
 
 * **upperBound**
 
-   övre datumgräns i millisekunder eller `1s 2m 3h 4d 5w 6M 7y` (en sekund, två minuter, tre timmar, fyra dagar, fem veckor, sex månader, sju år) i förhållande till aktuell servertid, använd &quot;-&quot; för negativ offset
+   övre gräns för datum i millisekunder eller `1s 2m 3h 4d 5w 6M 7y` (en sekund, två minuter, tre timmar, fyra dagar, fem veckor, sex månader, sju år) i förhållande till aktuell servertid, använd &quot;-&quot; för negativ offset
 
 * **lowerBound**
 
-   nedre datumgräns i millisekunder eller `1s 2m 3h 4d 5w 6M 7y` (en sekund, två minuter, tre timmar, fyra dagar, fem veckor, sex månader, sju år) i förhållande till aktuell servertid, använd &quot;-&quot; för negativ offset
+   nedre gräns i millisekunder eller `1s 2m 3h 4d 5w 6M 7y` (en sekund, två minuter, tre timmar, fyra dagar, fem veckor, sex månader, sju år) i förhållande till aktuell servertid, använd &quot;-&quot; för negativ offset
 
 ### root {#root}
 
@@ -455,11 +466,11 @@ Namnet &quot;root&quot; används aldrig i en fråga, det är underförstått.
 
 * **p.gissningTotal**
 
-   rekommenderas: Undvik att beräkna det totala resultatet som kan vara kostsamt. antingen en siffra som anger den högsta summa som ska räknas upp till (t.ex. 1000, ett tal som ger användarna tillräckligt med feedback på grovstorleken och exakta tal för mindre resultat) eller &quot; `true`&quot; för att bara räkna upp till det minsta nödvändiga `p.offset` + `p.limit`
+   rekommenderas: Undvik att beräkna det totala resultatet som kan vara kostsamt. antingen en siffra som anger den högsta summan att räkna upp till (t.ex. 1000, ett tal som ger användarna tillräckligt med feedback på grovstorleken och exakta tal för mindre resultat) eller &quot; `true`&quot; för att endast räkna upp till det minsta nödvändiga `p.offset` + `p.limit`
 
 * **p.excerpt**
 
-   om det är inställt på `true`, inkludera utdrag av fullständig text i resultatet
+   om inställt på &quot; `true`&quot;, ta med utdrag av fullständig text i resultatet
 
 * **p.hits**
 
@@ -467,15 +478,15 @@ Namnet &quot;root&quot; används aldrig i en fråga, det är underförstått.
 
    * **enkel**:
 
-      minimala objekt som `path`, `title`, `lastmodified`, `excerpt` (om de anges)
+      minimala objekt som `path`, `title`, `lastmodified`, `excerpt` (om angivet)
 
    * **full**:
 
-      snedställ JSON-återgivning av noden, där `jcr:path` anger träffens sökväg: Som standard anges bara nodens direkta egenskaper, inklusive ett djupare träd med `p.nodedepth=N`, där 0 betyder hela det oändliga underträdet. lägg till `p.acls=true` för att inkludera JCR-behörigheterna för den aktuella sessionen i det angivna resultatobjektet (mappningar: `create` = `add_node`, `modify` = `set_property`, `delete` = `remove`)
+      sling JSON rendering of the node, with `jcr:path` som anger träffens sökväg: som standard visas bara de direkta egenskaperna för noden, inklusive ett djupare träd med `p.nodedepth=N`, med 0 avses hela det oändliga underträdet, add `p.acls=true` för att inkludera JCR-behörigheterna för den aktuella sessionen för det angivna resultatobjektet (mappningar: `create` = `add_node`, `modify` = `set_property`, `delete` = `remove`)
 
    * **selektiv**:
 
-      Endast egenskaper som anges i `p.properties`, som är blankstegsavgränsade (använd &quot;+&quot; i URL:er) med relativa sökvägar. Om den relativa sökvägen har ett djup > 1 representeras dessa som underordnade objekt. den speciella jcr:path-egenskapen innehåller träffens sökväg
+      endast egenskaper som anges i `p.properties`, som är en blankstegsavgränsad (använd&quot;+&quot; i URL-adresser) lista med relativa sökvägar, Om den relativa sökvägen har ett djup > 1 representeras dessa som underordnade objekt. den speciella jcr:path-egenskapen innehåller träffens sökväg
 
 ### sparad fråga {#savedquery}
 
@@ -483,7 +494,7 @@ Inkluderar alla predikat för en beständig querybuilder-fråga i den aktuella f
 
 Observera att detta inte kör en extra fråga utan utökar den aktuella frågan.
 
-Frågor kan sparas programmatiskt med `QueryBuilder#storeQuery()`. Formatet kan vara en strängegenskap med flera rader eller en `nt:file`-nod som innehåller frågan som en textfil i Java-egenskapsformat.
+Frågor kan sparas programmatiskt med `QueryBuilder#storeQuery()`. Formatet kan antingen vara en flerradig String-egenskap eller en `nt:file` nod som innehåller frågan som en textfil i Java-egenskapsformat.
 
 Stöder inte facetextrahering för predikaten i den sparade frågan.
 
@@ -491,22 +502,22 @@ Stöder inte facetextrahering för predikaten i den sparade frågan.
 
 * **sparad fråga**
 
-   sökväg till den sparade frågan (String-egenskapen eller `nt:file`-noden)
+   sökväg till den sparade frågan (egenskapen String eller `nt:file` nod)
 
 ### liknande {#similar}
 
-Likhetssökning med JCR XPath:s `rep:similar()`.
+Likhetssökning med JCR XPath `rep:similar()`.
 
 Filtrering stöds inte. Stöder inte facetextrahering.
 
 #### Egenskaper {#properties-20}
 
-* ****
-liknande absolut sökväg till noden som liknande noder ska hittas för
+* **liknande**
+absolut sökväg till noden som liknande noder ska hittas för
 
-* ****
-lokal relativ sökväg till en underordnad nod eller 
-`.` för den aktuella noden (valfritt, standardvärdet är &quot;  `.`&quot;)
+* **lokal**
+en relativ sökväg till en underordnad nod eller 
+`.` för den aktuella noden (valfritt) är &quot; `.`&quot;)
 
 ### tag {#tag}
 
@@ -522,11 +533,11 @@ Stöder facetextrahering. Tillhandahåller bucket för varje unik tagg med hjäl
 
 * **N_värde**
 
-   använd `1_value`, `2_value`, ... om du vill söka efter flera taggar (i kombination med `OR` som standard med `AND` if och=true) (sedan 5.6)
+   use `1_value`, `2_value`, ... att söka efter flera taggar (i kombination med `OR` som standard, med `AND` if och=true) (sedan 5.6)
 
 * **property**
 
-   egenskap (eller relativ sökväg till egenskap) som ska undersökas (standard &quot; `cq:tags`&quot;)
+   egenskap (eller relativ sökväg till egenskap) att titta på (standard) `cq:tags`&quot;)
 
 ### tagid {#tagid}
 
@@ -542,11 +553,11 @@ Stöder facetextrahering. Tillhandahåller bucket för varje unik tagg med deras
 
 * **N_värde**
 
-   använd `1_value`, `2_value`, ... om du vill söka efter flera taggar (i kombination med `OR` som standard med `AND` if och=true) (sedan 5.6)
+   use `1_value`, `2_value`, ... att söka efter flera taggar (i kombination med `OR` som standard, med `AND` if och=true) (sedan 5.6)
 
 * **property**
 
-   egenskap (eller relativ sökväg till egenskap) som ska undersökas (standard &quot; `cq:tags`&quot;)
+   egenskap (eller relativ sökväg till egenskap) att titta på (standard) `cq:tags`&quot;)
 
 ### tagsearch {#tagsearch}
 
@@ -562,7 +573,7 @@ Stöder inte facetextrahering.
 
 * **property**
 
-   egenskap (eller relativ sökväg till egenskap) som ska undersökas (standard &quot; `cq:tags`&quot;)
+   egenskap (eller relativ sökväg till egenskap) att titta på (standard) `cq:tags`&quot;)
 
 * **lang**
 
@@ -570,7 +581,7 @@ Stöder inte facetextrahering.
 
 * **all**
 
-   (bool) söka efter hela taggens fulltext, dvs. alla titlar, beskrivning osv. (har företräde framför&quot;l `ang`&quot;)
+   (bool) söka efter hela taggens fulltext, dvs. alla titlar, beskrivning osv. (har företräde framför&quot;l&quot; `ang`&quot;)
 
 ### type {#type}
 
@@ -582,4 +593,4 @@ Stöder facetextrahering. Tillhandahåller bucket för varje unik typ i resultat
 
 * **type**
 
-   nodtyp eller mixnamn att söka efter, till exempel `cq:Page`
+   nodtyp eller blandnamn att söka efter, till exempel `cq:Page`
