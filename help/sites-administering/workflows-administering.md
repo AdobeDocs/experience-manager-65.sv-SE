@@ -10,9 +10,9 @@ topic-tags: operations
 content-type: reference
 discoiquuid: d9c96e7f-9416-48e1-a6af-47384f7bee92
 exl-id: 90923d39-3ac5-4028-976c-d011f0404476
-source-git-commit: 8b4459c69b73159ce5afd819dfb772df5c51cd16
+source-git-commit: 1b57fca352457e973bd7395e060e3d0495a9d920
 workflow-type: tm+mt
-source-wordcount: '1136'
+source-wordcount: '1134'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ Det finns en rad konsoler som du kan använda för att administrera dina arbetsf
    * Arbetsflödesmodell: Välj en arbetsflödesmodell
    * Uppdragare: Välj en arbetsflödestilldelare
    * Typ: Aktivitet, arbetsflödesobjekt eller arbetsflödesfel
-   * Aktivitetsstatus: Aktiv, fullständig eller avslutad
+   * Aktivitetsstatus: Aktiv, Fullständig eller Avbruten
    * Var jag är: Ägare OCH tilldelad, endast ägare, endast tilldelad
    * Startdatum: Startdatum före eller efter ett angivet datum
    * Slutdatum: Slutdatum före eller efter ett angivet datum
@@ -104,7 +104,7 @@ När ett arbetsflöde misslyckas, innehåller AEM **Fel** så att du kan unders�
 Visar information om arbetsflödeshistoriken.
 
 * **Försök igen** Kör komponentinstansen Script Step igen. Använd kommandot Försök igen när du har åtgärdat orsaken till det ursprungliga felet. Du kan till exempel försöka utföra steget igen när du har åtgärdat ett fel i skriptet som utförs av processteget.
-* **Avsluta** Avsluta arbetsflödet om felet har orsakat en oåterkallelig situation för arbetsflödet. Arbetsflödet kan t.ex. vara beroende av miljöförhållanden, t.ex. information i databasen som inte längre är giltig för arbetsflödesinstansen.
+* **Avsluta** Avsluta arbetsflödet om felet har orsakat en oförenlig situation för arbetsflödet. Arbetsflödet kan t.ex. förlita sig på miljöförhållanden som information i databasen som inte längre är giltig för arbetsflödesinstansen.
 * **Avsluta och försök igen** Liknar **Avsluta** förutom att en ny arbetsflödesinstans startas med den ursprungliga nyttolasten, titeln och beskrivningen.
 
 Så här undersöker du fel och sedan återupptar eller avslutar du arbetsflödet:
@@ -159,7 +159,7 @@ Om du vill konfigurera tjänsten kan du använda [Webbkonsol](/help/sites-deploy
   <tr>
    <td>Modeller att tömma</td>
    <td>scheduledpurge.modelIds</td>
-   <td><p>ID:t för arbetsflödesmodellerna som ska rensas. ID är sökvägen till modellnoden, till exempel:<br /> /conf/global/settings/workflow/models/dam/update_asset/jcr:content/model<br /> Ange inget värde för att rensa instanser av alla arbetsflödesmodeller.</p> <p>Om du vill ange flera modeller klickar du på plusknappen (+) i webbkonsolen. </p> </td>
+   <td><p>ID:t för arbetsflödesmodellerna som ska rensas. ID är sökvägen till modellnoden, till exempel:<br /> /var/workflow/models/dam/update_asset<br /> </p> <p>Om du vill ange flera modeller klickar du på plusknappen (+) i webbkonsolen. </p> <p>Ange inget värde för att rensa instanser av alla arbetsflödesmodeller.</p> </td>
   </tr>
   <tr>
    <td>Arbetsflödesålder</td>
@@ -185,7 +185,7 @@ Du kan ange den maximala storleken för inkorgen genom att konfigurera **Adobe G
 
 ## Använda arbetsflödesvariabler för kundägda datalager {#using-workflow-variables-customer-datastore}
 
-Data som bearbetas av arbetsflöden lagras i den Adobe-tillhandahållna lagringen (JCR). Dessa data kan vara känsliga till sin natur. Du kanske vill spara alla användardefinierade metadata/data i ditt egna hanterade lagringsutrymme i stället för det lagringsutrymme som tillhandahålls av Adobe. I dessa avsnitt beskrivs hur du konfigurerar dessa variabler för extern lagring.
+Data som bearbetas av arbetsflöden lagras i den Adobe-tillhandahållna lagringen (JCR). Dessa data kan vara känsliga till sin natur. Du kanske vill spara alla användardefinierade metadata/data i ditt egna hanterade lagringsutrymme i stället för det lagringsutrymme som tillhandahålls av Adobe. I dessa avsnitt beskrivs hur du ställer in dessa variabler för extern lagring.
 
 ### Ange modellen för extern lagring av metadata {#set-model-for-external-storage}
 
@@ -193,7 +193,7 @@ På arbetsflödesmodellnivån anges en flagga som anger att modellen (och dess k
 
 Egenskapen *userMetadataPersistenceEnabled* lagras på *jcr:innehållsnod* av arbetsflödesmodellen. Den här flaggan bevaras i arbetsflödets metadata som *cq:userMetaDataCustomPersistenceEnabled*.
 
-Bilden nedan måste ange flaggan i ett arbetsflöde.
+Bilden nedan visar hur du anger flaggan i ett arbetsflöde.
 
 ![workflow-externalize-config](assets/workflow-externalize-config.png)
 
