@@ -12,9 +12,9 @@ discoiquuid: 5d2364b7-4497-4f8b-85ef-6e780bfb8c36
 docset: aem65
 feature: Configuring
 exl-id: d3375935-090d-4052-8234-68ef4ddbab6a
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: ad0f5f536657a90a8b2476b43576060f3dc85868
 workflow-type: tm+mt
-source-wordcount: '5866'
+source-wordcount: '5868'
 ht-degree: 0%
 
 ---
@@ -100,48 +100,68 @@ I det här avsnittet behandlas underhållsåtgärder som rör versionsfunktionen
 
 ### Översikt {#overview}
 
-The **Rensa versioner** finns i **[verktyg](/help/sites-administering/tools-consoles.md) konsol** under **Versionshantering** eller direkt på
-
-`https://<server>:<port>/etc/versioning/purge.html`
-
-![screen_shot_2012-03-15at14418pm](assets/screen_shot_2012-03-15at14418pm.png)
-
-**Startbana** En absolut väg som rensningen måste göras på. Du kan välja Startsökväg genom att klicka på databasträdnavigatören.
-
-**Rekursiv** När du rensar data kan du välja mellan att utföra åtgärden på en nod eller på en hel hierarki genom att välja Rekursiv. I det sista fallet definierar den angivna sökvägen rotnoden i hierarkin.
-
-**Högsta antal versioner att behålla** Det högsta antalet versioner som kan behållas för en nod. När de här siffrorna överskrider det här värdet rensas de äldsta versionerna.
-
-**Högsta versionsålder** Högsta ålder för en nods version. När en versions ålder överskrider det här värdet rensas den.
-
-**Torr körning** Eftersom borttagning av versioner av ditt innehåll är definierat och inte kan återställas utan att du återställer en säkerhetskopia har verktyget Rensa versioner ett torrt körningsläge som gör att du kan förhandsgranska rensade versioner. Klicka på Torr körning om du vill starta en torr tömningsprocess.
-
-**Rensa** Starta rensningen av versionerna på noden som definieras av startsökvägen.
+The **Rensa versioner** finns som en underhållsåtgärd varje vecka. Innan den används för första gången måste den läggas till och sedan konfigureras. Därefter kan det köras på begäran eller varje vecka.
 
 ### Rensa versioner av en webbplats {#purging-versions-of-a-web-site}
 
 Så här rensar du versioner av en webbplats:
 
-1. Navigera till **[verktyg](/help/sites-administering/tools-consoles.md)** **konsol**, markera **Versionshantering** och dubbelklicka **Rensa versioner.**
-1. Ange startsökvägen för innehållet som ska rensas (t.ex. `/content/geometrixx-outdoors`).
+1. Navigera till **[verktyg](/help/sites-administering/tools-consoles.md)** **konsol**, markera **Åtgärd**, **Underhåll** sedan **Underhållsfönster varje vecka**.
 
-   * Om du bara vill rensa den nod som definieras av sökvägen avmarkerar du **Rekursiv**.
-   * Om du vill rensa noden som definieras av din sökväg och dess underordnade ska du markera **Rekursiv**.
+1. Välj **+ Lägg till** i det övre verktygsfältet.
 
-1. Ange maximalt antal versioner (för varje nod) som du vill behålla. Lämna tomt om du inte vill använda den här inställningen.
+   ![Lägg till versionsrensning](assets/version-purge-add.png)
 
-1. Ange den maximala versionsåldern i dagar (för varje nod) som du vill behålla. Lämna tomt om du inte vill använda den här inställningen.
+1. Välj **Rensa version** från listrutan i **Lägg till ny aktivitet** -dialogrutan. Sedan **Spara**.
 
-1. Klicka **Torr körning** för att förhandsgranska vad rensningsprocessen skulle göra.
-1. Klicka **Rensa** för att starta processen.
+   ![Lägg till versionsrensning](assets/version-purge-add-new-task.png)
+
+1. The **Rensa version** kommer att läggas till. Använd kortåtgärder för att:
+   * Markera - visar ytterligare åtgärder i det övre verktygsfältet
+   * Kör - för att köra den konfigurerade rensningen omedelbart
+   * Konfigurera - för att konfigurera veckorensningsaktiviteten
+
+   ![Rensningsåtgärder för version](assets/version-purge-actions.png)
+
+1. Välj **Konfigurera** åtgärd för att öppna webbkonsolen för **CQ WCM-versionsrensningsaktivitet för dag**, där du kan konfigurera:
+
+   ![Konfiguration för versionsrensning](assets/version-purge-configuration.png)
+
+   * **Rensa banor**
+Ange startsökvägen för innehållet som ska rensas (t.ex. 
+`/content/geometrixx-outdoors`).
+
+   * **Rensa versioner rekursivt**
+
+      * Avmarkera alternativet om du bara vill rensa den nod som definieras av sökvägen.
+      * Välj det här alternativet om du vill rensa noden som definieras av sökvägen och dess underordnade noder.
+   * **Högsta antal versioner**
+Ange maximalt antal versioner (för varje nod) som du vill behålla. Lämna tomt om du inte vill använda den här inställningen.
+
+   * **Minsta antal versioner**
+Ange det minsta antal versioner (för varje nod) som du vill behålla. Lämna tomt om du inte vill använda den här inställningen.
+
+   * **Högsta versionsålder**
+Ange den maximala versionsåldern i dagar (för varje nod) som du vill behålla. Lämna tomt om du inte vill använda den här inställningen.
+   Sedan **Spara**.
+
+1. Navigera/gå tillbaka till **Underhållsfönster varje vecka** fönster och markera **Kör** för att starta processen direkt.
 
 >[!CAUTION]
 >
+>Du kan använda dialogrutan Klassiskt användargränssnitt för att utföra en [Torr körning](#analyzing-the-console) av din konfiguration:
+>
+>* http://localhost:4502/etc/versioning/purge.html
+>
 >Det går inte att återställa rensade noder utan att återställa databasen. Du bör ta hand om konfigurationen, så vi rekommenderar att du alltid utför en torr körning innan du tömmer den.
 
-### Analyserar konsolen {#analyzing-the-console}
+#### Torr körning - Analyserar konsolen {#analyzing-the-console}
 
-The **Torr körning** och **Rensa** I visas alla noder som har bearbetats. Under processen kan en nod ha någon av följande status:
+Det klassiska användargränssnittet har en **Torr körning** från:
+
+* http://localhost:4502/etc/versioning/purge.html
+
+Processen visar alla noder som har bearbetats. Under processen kan en nod ha någon av följande status:
 
 * `ignore (not versionnable)`: noden stöder inte versionshantering och ignoreras under processen.
 
@@ -650,7 +670,7 @@ Vissa av dessa kommer att vara beroende av operativsystemet.
 
 ### Tolka request.log {#interpreting-the-request-log}
 
-Den här filen registrerar grundläggande information om varje begäran som görs till AEM. Denna värdefulla slutsats kan extraheras.
+Den här filen registrerar grundläggande information om varje begäran som görs till AEM. Därigenom kan värdefulla slutsatser dras.
 
 The `request.log` erbjuder ett inbyggt sätt att se hur lång tid det tar att begära. I utvecklingssyfte är det användbart att `tail -f` den `request.log` och hålla utkik efter långsamma svarstider. Analysera en större `request.log` rekommenderar vi [användning av `rlog.jar` som gör att du kan sortera och filtrera efter svarstider](#using-rlog-jar-to-find-requests-with-long-duration-times).
 
@@ -665,7 +685,7 @@ Begärandeloggen registrerar varje begäran som gjorts, tillsammans med svaret:
 09:43:41 [66] <- 200 text/html 797ms
 ```
 
-Genom att summera alla GETTER under en viss period (t.ex. under olika 24-timmarsperioder) kan du göra utdrag om den genomsnittliga trafiken på webbplatsen.
+Genom att summera alla GETTER inom specifika perioder (t.ex. under olika 24-timmarsperioder) kan du göra utdrag om den genomsnittliga trafiken på din webbplats.
 
 #### Övervaka svarstider med request.log {#monitoring-response-times-with-the-request-log}
 
