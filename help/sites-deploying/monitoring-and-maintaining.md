@@ -12,9 +12,9 @@ discoiquuid: 5d2364b7-4497-4f8b-85ef-6e780bfb8c36
 docset: aem65
 feature: Configuring
 exl-id: d3375935-090d-4052-8234-68ef4ddbab6a
-source-git-commit: fd9661ee94edf8f88a93ae35ba2563b3021add4d
+source-git-commit: 85987222e8b216f22ae1fec4e080488d01f23063
 workflow-type: tm+mt
-source-wordcount: '5901'
+source-wordcount: '5905'
 ht-degree: 0%
 
 ---
@@ -128,14 +128,14 @@ Så här rensar du versioner av en webbplats:
    ![Konfiguration för versionsrensning](assets/version-purge-configuration.png)
 
    * **Rensa banor**
-Ange startsökvägen för innehållet som ska rensas (t.ex. 
-`/content/wknd`).
+Ange startsökvägen för det innehåll som ska rensas. till exempel 
+`/content/wknd`.
 
       >[!CAUTION]
       >
       >Vi rekommenderar att du definierar flera sökvägar för varje webbplats.
       >
-      >Om du definierar en bana med för många underordnade objekt förlängs tiden för rensning.
+      >Om du definierar en bana med för många underordnade objekt kan det ta lång tid att tömma den.
 
    * **Rensa versioner rekursivt**
 
