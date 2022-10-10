@@ -12,9 +12,9 @@ discoiquuid: 5d2364b7-4497-4f8b-85ef-6e780bfb8c36
 docset: aem65
 feature: Configuring
 exl-id: d3375935-090d-4052-8234-68ef4ddbab6a
-source-git-commit: ad0f5f536657a90a8b2476b43576060f3dc85868
+source-git-commit: a6067ebb1b5be67515cd3567f56c72463c5f7123
 workflow-type: tm+mt
-source-wordcount: '5868'
+source-wordcount: '5901'
 ht-degree: 0%
 
 ---
@@ -131,6 +131,12 @@ Så här rensar du versioner av en webbplats:
 Ange startsökvägen för innehållet som ska rensas (t.ex. 
 `/content/geometrixx-outdoors`).
 
+      >[!CAUTION]
+      >
+      >Vi rekommenderar att du definierar flera sökvägar för varje webbplats.
+      >
+      >Om du definierar en bana med för många underordnade objekt förlängs tiden för rensning.
+
    * **Rensa versioner rekursivt**
 
       * Avmarkera alternativet om du bara vill rensa den nod som definieras av sökvägen.
@@ -173,7 +179,7 @@ Processen visar alla noder som har bearbetats. Under processen kan en nod ha nå
 Konsolen ger dessutom användbar information om versionerna:
 
 * `V 1.0`: versionsnumret.
-* `V 1.0.1`&#42;: stjärnan anger att versionen är den aktuella.
+* `V 1.0.1`&#42;: stjärnan anger att versionen är den aktuella (bas) versionen och inte kan rensas.
 
 * `Thu Mar 15 2012 08:37:32 GMT+0100`: datum för versionen.
 
