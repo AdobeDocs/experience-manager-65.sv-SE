@@ -12,9 +12,9 @@ discoiquuid: 5d2364b7-4497-4f8b-85ef-6e780bfb8c36
 docset: aem65
 feature: Configuring
 exl-id: d3375935-090d-4052-8234-68ef4ddbab6a
-source-git-commit: 85987222e8b216f22ae1fec4e080488d01f23063
+source-git-commit: b9a3db4144a571291bdf1c9a9f0e841f284df0c8
 workflow-type: tm+mt
-source-wordcount: '5905'
+source-wordcount: '5972'
 ht-degree: 0%
 
 ---
@@ -609,12 +609,12 @@ Vissa av dessa kommer att vara beroende av operativsystemet.
   <tr>
    <td>Tråddumpar</td>
    <td>Observera JVM-trådar. Identifiera innehåll, lås och långa löptider.</td>
-   <td><p>Beroende på operativsystem:<br /> - Unix/Linux: <code>kill -QUIT &lt;<em>pid</em>&gt;</code><br /> - Windows (konsolläge): Ctrl-Break<br /> </p> <p>Analysverktyg finns också tillgängliga, till exempel <a href="https://java.net/projects/tda/">TDA</a>.<br /> </p> </td>
+   <td><p>Beroende på operativsystem:<br /> - Unix/Linux: <code>kill -QUIT &lt;<em>pid</em>&gt;</code><br /> - Windows (konsolläge): Ctrl-Break<br /> </p> <p>Analysverktyg finns också tillgängliga, till exempel <a href="https://github.com/irockel/tda">TDA</a>.<br /> </p> </td>
   </tr>
   <tr>
    <td>Heap Dumps</td>
    <td>Slut på minne som orsakar långsamma prestanda.</td>
-   <td><p>Lägg till:<br /> <code>-XX:+HeapDumpOnOutOfMemoryError</code><br /> till java-anropet till AEM.</p> <p>Se <a href="https://java.sun.com/javase/6/webnotes/trouble/TSG-VM/html/clopts.html#gbzrr">Felsökningsguide för Java SE 6 med HotSpot VM</a>.</p> </td>
+   <td><p>Lägg till:<br /> <code>-XX:+HeapDumpOnOutOfMemoryError</code><br /> till java-anropet till AEM.</p> <p>Se <a href="https://docs.oracle.com/javase/8/docs/technotes/guides/troubleshoot/prepapp002.html#CEGBHDFH">Alternativ/flaggor för felsökningssidan för JVM</a>.</p> </td>
   </tr>
   <tr>
    <td>Systemanrop</td>
@@ -624,7 +624,7 @@ Vissa av dessa kommer att vara beroende av operativsystemet.
   <tr>
    <td>Apache Bench</td>
    <td>Identifiera minnesläckor och analysera responstiden selektivt.</td>
-   <td><p>grundanvändningen är:</p> <p><code>ab -k -n &lt;<em>requests</em>&gt; -c &lt;<em>concurrency</em>&gt; &lt;<em>url</em>&gt;</code></p> <p>Se <a href="#apache-bench">Apache Bench</a> och <a href="https://httpd.apache.org/docs/2.2/programs/ab.html">ab man page</a> för fullständig information.</p> </td>
+   <td><p>grundanvändningen är:</p> <p><code>ab -k -n &lt;<em>requests</em>&gt; -c &lt;<em>concurrency</em>&gt; &lt;<em>url</em>&gt;</code></p> <p>Se <a href="#apache-bench">Apache Bench</a> och <a href="https://httpd.apache.org/docs/2.4/programs/ab.html">ab man page</a> för fullständig information.</p> </td>
   </tr>
   <tr>
    <td>Sökanalys</td>
@@ -634,7 +634,7 @@ Vissa av dessa kommer att vara beroende av operativsystemet.
   <tr>
    <td>JMeter</td>
    <td>Belastnings- och funktionstester.</td>
-   <td><a href="https://jakarta.apache.org/jmeter/">https://jakarta.apache.org/jmeter/</a></td>
+   <td><a href="https://jmeter.apache.org/">https://jmeter.apache.org/</a></td>
   </tr>
   <tr>
    <td>JProfiler</td>
@@ -642,14 +642,19 @@ Vissa av dessa kommer att vara beroende av operativsystemet.
    <td><a href="https://www.ej-technologies.com/">https://www.ej-technologies.com/</a></td>
   </tr>
   <tr>
+   <td>Java Flight Recorder</td>
+   <td>Java Flight Recorder (JFR) är ett verktyg för att samla in diagnostik- och profileringsdata om ett Java-program som körs.</td>
+   <td><a href="https://docs.oracle.com/javase/8/docs/technotes/guides/troubleshoot/tooldescr004.html#BABJJEEE">https://docs.oracle.com/javase/8/docs/technotes/guides/troubleshoot/tooldescr004.html#BABJJEEE</a></td>
+  </tr>
+  <tr>
    <td>JConsole</td>
    <td>Observera JVM-statistik och trådar.</td>
-   <td><p>Användning: jconsole</p> <p>Se <a href="https://java.sun.com/developer/technicalArticles/J2SE/jconsole.html">jconsole</a> och <a href="#monitoring-performance-using-jconsole">Övervaka prestanda med JConsole</a>.</p> <p><strong>Obs!</strong> Med JDK 1.6 kan JConsole byggas ut med plugin-program. till exempel Top eller TDA (Thread Dump Analyzer).</p> </td>
+   <td><p>Användning: jconsole</p> <p>Se <a href="https://docs.oracle.com/javase/8/docs/technotes/guides/management/jconsole.html">jconsole</a> och <a href="#monitoring-performance-using-jconsole">Övervaka prestanda med JConsole</a>.</p> <p><strong>Obs!</strong> Med JDK 1.8 kan JConsole byggas ut med plugin-program. till exempel Top eller TDA (Thread Dump Analyzer).</p> </td>
   </tr>
   <tr>
    <td>Java VisualVM</td>
    <td>Observera JVM-statistik, trådar, minne och profilering.</td>
-   <td><p>Användning: jvisualvm eller visualvm<br /> </p> <p>Se <a href="https://java.sun.com/javase/6/docs/technotes/tools/share/jvisualvm.html">jvisualvm</a>, <a href="https://visualvm.dev.java.net/">visualvm</a> och <a href="#monitoring-performance-using-j-visualvm">Övervakningsprestanda med (J)VisualVM</a>.</p> <p><strong>Obs!</strong> Med JDK 1.6 kan VisualVM utökas med plugin-program.</p> </td>
+   <td><p>Användning: visualvm eller visualvm<br /> </p> <p>Se <a href="https://docs.oracle.com/javase/8/docs/technotes/guides/visualvm/">visualvm</a> och <a href="#monitoring-performance-using-j-visualvm">Övervakningsprestanda med (J)VisualVM</a>.</p> <p><strong>Obs!</strong> Med JDK 1.8 kan VisualVM utökas med plugin-program. VisualVM avbryts efter JDK 9. Använd Java Flight Recorder i stället.</p> </td>
   </tr>
   <tr>
    <td>truss/strace, lsof</td>
@@ -664,7 +669,7 @@ Vissa av dessa kommer att vara beroende av operativsystemet.
   <tr>
    <td>Verktyg för processor- och minnesprofilering<br /> </td>
    <td><a href="#interpreting-the-request-log">Används vid analys av långsamma begäranden under utveckling</a>.</td>
-   <td>Till exempel: <a href="https://www.yourkit.com/">YourKit</a>.</td>
+   <td>Till exempel: <a href="https://www.yourkit.com/">YourKit</a>. eller <a href="https://docs.oracle.com/javase/8/docs/technotes/guides/troubleshoot/tooldescr004.html#BABJJEEE">Java Flight Recorder</a>.</td>
   </tr>
   <tr>
    <td><a href="#information-collection">Informationsinsamling</a></td>
@@ -810,7 +815,7 @@ Du kan behöva sammanfoga den enskilda personen `request.log` filer om du behöv
 
 ### Apache Bench {#apache-bench}
 
-För att minimera specialfall (t.ex. skräpinsamling) rekommenderar vi att du använder ett verktyg som `apachebench` (se t.ex. [ab](https://httpd.apache.org/docs/2.2/programs/ab.html) för ytterligare dokumentation) för att identifiera minnesläckor och selektivt analysera svarstiden.
+För att minimera specialfall (t.ex. skräpinsamling) rekommenderar vi att du använder ett verktyg som `apachebench` (se t.ex. [ab](https://httpd.apache.org/docs/2.4/programs/ab.html) för ytterligare dokumentation) för att identifiera minnesläckor och selektivt analysera svarstiden.
 
 Apache Bench kan användas på följande sätt:
 
@@ -921,7 +926,7 @@ Verktygskommandot `jconsole` är tillgängligt med JDK.
 
 ### Övervakningsprestanda med (J)VisualVM {#monitoring-performance-using-j-visualvm}
 
-Sedan JDK 1.6 kommando för verktyget `jvisualvm` är tillgängligt. När du har installerat JDK 1.6 kan du:
+För JDK 6-8, kommandot tool `visualvm` är tillgängligt. När du har installerat en JDK kan du:
 
 1. Starta AEM.
 
@@ -932,7 +937,7 @@ Sedan JDK 1.6 kommando för verktyget `jvisualvm` är tillgängligt. När du har
 1. Kör antingen:
 
    * `jvisualvm`: i mappen JDK 1.6 bin (testversion)
-   * `visualvm`: kan hämtas från [VisualVM](https://visualvm.dev.java.net/) (avskalningsversion)
+   * `visualvm`: kan hämtas från [VisualVM](https://docs.oracle.com/javase/8/docs/technotes/guides/visualvm/) (avskalningsversion)
 
 1. Från `Local` program, dubbelklicka `com.day.crx.quickstart.Main`; Översikten visas som standard:
 
@@ -1185,7 +1190,7 @@ Eller JConsole:
    ```
 
 * Anslut sedan till JVM med JConsole; se:
-   ` [https://docs.oracle.com/javase/6/docs/technotes/guides/management/jconsole.html](https://docs.oracle.com/javase/6/docs/technotes/guides/management/jconsole.html)`
+   ` [https://docs.oracle.com/javase/8/docs/technotes/guides/management/jconsole.html](https://docs.oracle.com/javase/8/docs/technotes/guides/management/jconsole.html)`
 
 Detta hjälper dig att se hur mycket minne som används, vilka GC-algoritmer som används, hur lång tid det tar att köra dem och vilken effekt detta har på programmets prestanda. Utan detta är finjustering bara &quot;slumpmässigt virvlande knoppar&quot;.
 
@@ -1193,4 +1198,4 @@ Detta hjälper dig att se hur mycket minne som används, vilka GC-algoritmer som
 >
 >För Oraclets virtuella dator finns även information på:
 >
->[https://docs.oracle.com/javase/7/docs/technotes/guides/vm/server-class.html](https://docs.oracle.com/javase/7/docs/technotes/guides/vm/server-class.html)
+>[https://docs.oracle.com/javase/8/docs/technotes/guides/vm/server-class.html](https://docs.oracle.com/javase/8/docs/technotes/guides/vm/server-class.html)
