@@ -4,7 +4,7 @@ seo-title: Learn About AEM 6.5 Capabilities
 description: En beskrivning av de viktigaste funktionerna i AEM 6.5
 seo-description: An description of the essential capabilities of AEM 6.5
 exl-id: dc3b8690-f664-4ffa-993b-7a8634e6fe6b
-source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
+source-git-commit: 52385af23b04cda33a88ec42bb150650eb58fe4e
 workflow-type: tm+mt
 source-wordcount: '400'
 ht-degree: 2%
