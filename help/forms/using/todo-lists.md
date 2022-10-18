@@ -11,9 +11,9 @@ topic-tags: forms-workspace
 discoiquuid: d8546227-d78d-4fe2-a092-222482bb69c9
 docset: aem65
 exl-id: c80bf347-d1ed-488f-a41a-ceb05a6df9e4
-source-git-commit: 51e36e874fe84eab8558271b5c84b1c2e2f58ef0
+source-git-commit: e961ce67e5b1a71e3af6dded304d99cd9e6896bc
 workflow-type: tm+mt
-source-wordcount: '4034'
+source-wordcount: '4033'
 ht-degree: 0%
 
 ---
@@ -40,16 +40,16 @@ Du kan utföra vissa åtgärder utan att öppna uppgiften genom att klicka på d
 
 När du öppnar och arbetar med en uppgift beror de verktyg som är tillgängliga på uppgiften. Olika åtgärder kräver att du utför olika åtgärder och av den anledningen kanske vissa verktyg inte är tillgängliga. De typiska uppgifter du kan få beskrivs nedan.
 
-**Ange information**: Du får en uppgift som kräver att du fyller i och skickar ett formulär.
+* **Ange information**: Du får en uppgift som kräver att du fyller i och skickar ett formulär.
 
-**Granska information**: Du får en uppgift som kräver att du granskar informationen och signerar innehållet.
+* **Granska information**: Du får en uppgift som kräver att du granskar informationen och signerar innehållet.
 
-**Fleranvändargranskning**: Du får en uppgift samtidigt som andra användare tar emot uppgiften. Du och de andra användarna måste antingen ange information eller granska innehållet, eller båda. Följande verktyg kan vara tillgängliga för den här typen av uppgifter:
+* **Fleranvändargranskning**: Du får en uppgift samtidigt som andra användare tar emot uppgiften. Du och de andra användarna måste antingen ange information eller granska innehållet, eller båda. Följande verktyg kan vara tillgängliga för den här typen av uppgifter:
 
-* Visa instruktionerna för uppgiften
-* Visa slutförandestatus för alla användare som har tilldelats uppgiften
-* Visa kommentarer för alla användare som har tilldelats uppgiften
-* Lägga till kommentarer till uppgiften själv
+   * Visa instruktionerna för uppgiften
+   * Visa slutförandestatus för alla användare som har tilldelats uppgiften
+   * Visa kommentarer för alla användare som har tilldelats uppgiften
+   * Lägga till kommentarer till uppgiften själv
 
 Ytterligare verktyg som kan vara tillgängliga med någon av ovanstående åtgärder är bland annat följande:
 
@@ -106,17 +106,17 @@ När du öppnar och gör anspråk på en uppgift från en grupp eller delad list
 
 När du har öppnat en uppgift beror uppgiften på vilka flikar som visas i huvudrutan och vilka verktyg som är tillgängliga. Flikarna som du kan se beskrivs nedan:
 
-**Sammanfattning av uppgifter**: När en uppgift öppnas kan du i rutan Sammanfattning av uppgifter visa information om uppgiften, om den finns, med en URL som anges i processen vid steget Tilldela uppgift. Om du använder åtgärdssammanfattningsfönstret kan ytterligare och relevant information för en uppgift visas för att öka värdet för slutanvändaren av arbetsytan i AEM Forms. Fliken är inte tillgänglig om URL:en för uppgiftssammanfattning inte finns.
+* **Sammanfattning av uppgifter**: När en uppgift öppnas kan du i rutan Sammanfattning av uppgifter visa information om uppgiften, om den finns, med en URL som anges i processen vid steget Tilldela uppgift. Om du använder åtgärdssammanfattningsfönstret kan ytterligare och relevant information för en uppgift visas för att öka värdet för slutanvändaren av arbetsytan i AEM Forms. Fliken är inte tillgänglig om URL:en för uppgiftssammanfattning inte finns.
 
-**Detaljer**: Ger information om den aktuella uppgiften och processen som den tillhör.
+* **Detaljer**: Ger information om den aktuella uppgiften och processen som den tillhör.
 
-**Formulär**: Visar formuläret som är associerat med uppgiften. Formuläret kan vara av många filtyper, bland annat PDF, HTML, Guide och SWF. Formuläret kan se ut som ett vanligt utskrivbart eller webbaserat formulär eller vägleda dig genom en serie guideliknande paneler för att samla in information.
+* **Formulär**: Visar formuläret som är associerat med uppgiften. Formuläret kan vara av många filtyper, bland annat PDF, HTML, Guide och SWF. Formuläret kan se ut som ett vanligt utskrivbart eller webbaserat formulär eller vägleda dig genom en serie guideliknande paneler för att samla in information.
 
-**Historik**: Visar de uppgifter som ingår i processinstansen och det tillhörande formuläret, uppgiftstilldelningar och bilagor för varje uppgift.
+* **Historik**: Visar de uppgifter som ingår i processinstansen och det tillhörande formuläret, uppgiftstilldelningar och bilagor för varje uppgift.
 
-**Bifogade filer**: Visar befintliga bilagor som är associerade med uppgiften och lägger till bilagor, om det behövs.
+* **Bifogade filer**: Visar befintliga bilagor som är associerade med uppgiften och lägger till bilagor, om det behövs.
 
-**Anteckningar**: Visar befintliga anteckningar som är associerade med uppgiften och lägger till anteckningar om det behövs.
+* **Anteckningar**: Visar befintliga anteckningar som är associerade med uppgiften och lägger till anteckningar om det behövs.
 
 När du arbetar med en uppgift beskrivs de verktyg du kan se och de åtgärder du kan vidta nedan.
 
@@ -283,7 +283,7 @@ E-postmeddelandena kan innehålla en länk som öppnar uppgiften i AEM Forms arb
 >
 >* Information om hur du konfigurerar arbetsytan att använda rätt e-postmallar finns i [Administratörshandbok för AEM Forms JEE](https://help.adobe.com/en_US/AEMForms/6.1/AdminHelp/).
 >
->* Om utkast vidarebefordras efter att uppgiften har skickats in på arbetsytan i AEM Forms skickas e-postmeddelanden. Om utkasten vidarebefordras från startpunkten på AEM Forms-arbetsytan skickas inga e-postmeddelanden.
+>* Om utkast vidarebefordras efter att uppgiften har skickats in på arbetsytan i AEM Forms skickas e-postmeddelanden. Om utkast vidarebefordras från startpunkten för AEM Forms-arbetsytan skickas inga e-postmeddelanden.
 
 
 När du slutför en uppgift via e-post tas uppgiften bort från din att göra-lista i AEM Forms arbetsyta.
