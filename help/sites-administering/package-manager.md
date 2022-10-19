@@ -10,9 +10,9 @@ content-type: reference
 discoiquuid: 6694a135-d1e1-4afb-9f5b-23991ee70eee
 docset: aem65
 exl-id: e8929d7c-9920-4c02-95a9-6f7f7a365203
-source-git-commit: de58ba638c22b7148e1349417d1f514c26c5887e
+source-git-commit: d303a374fd4ab8e398fd909dec4ce6155a2163f5
 workflow-type: tm+mt
-source-wordcount: '3525'
+source-wordcount: '3573'
 ht-degree: 0%
 
 ---
@@ -506,6 +506,16 @@ Innan du installerar paketet skapas ett ögonblicksbildspaket som innehåller de
 1. Klicka **Installera**.
 
 1. Aktivitetsloggen visar installationsförloppet.
+
+>[!CAUTION]
+>
+>* Om du installerar digitala resurser måste du:
+   >  Inaktivera först WorkflowLauncher.
+   >  Använd menyalternativet Komponenter i OSGi-konsolen för att inaktivera
+   >  `com.day.cq.workflow.launcher.impl.WorkflowLauncherImpl.`
+>* När installationen är klar återaktiverar du WorkflowLauncher.
+>
+>Genom att inaktivera WorkflowLauncher säkerställer du att Assets-importimeringsramverket inte (oavsiktligt) manipulerar resurserna vid installationen.
 
 När installationen är klar och slutförd uppdateras paketlistan och ordet **Installerad** visas i paketstatusen.
 
