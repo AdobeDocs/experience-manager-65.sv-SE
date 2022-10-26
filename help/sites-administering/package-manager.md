@@ -10,7 +10,7 @@ content-type: reference
 discoiquuid: 6694a135-d1e1-4afb-9f5b-23991ee70eee
 docset: aem65
 exl-id: e8929d7c-9920-4c02-95a9-6f7f7a365203
-source-git-commit: d303a374fd4ab8e398fd909dec4ce6155a2163f5
+source-git-commit: b48b7631c501cea7e4ef1133a452fb6984e4547f
 workflow-type: tm+mt
 source-wordcount: '3573'
 ht-degree: 0%
@@ -489,6 +489,16 @@ När du överför ett paket läggs bara paketinnehållet till i databasen, men d
 
 Innan du installerar paketet skapas ett ögonblicksbildspaket som innehåller det innehåll som ska skrivas över automatiskt av Package Manager. Den här ögonblicksbilden installeras om du avinstallerar paketet.
 
+>[!CAUTION]
+>
+>* Om du installerar digitala resurser måste du:
+   >  Inaktivera först WorkflowLauncher.
+   >  Använd menyalternativet Komponenter i OSGi-konsolen för att inaktivera
+   >  `com.day.cq.workflow.launcher.impl.WorkflowLauncherImpl.`
+>* När installationen är klar återaktiverar du WorkflowLauncher.
+>
+>Genom att inaktivera WorkflowLauncher säkerställer du att Assets-importimeringsramverket inte (oavsiktligt) manipulerar resurserna vid installationen.
+
 1. [Access Package Manager.](#accessing)
 
 1. Öppna paketinformationen för det paket som du vill installera från paketlistan genom att klicka på paketnamnet.
@@ -506,16 +516,6 @@ Innan du installerar paketet skapas ett ögonblicksbildspaket som innehåller de
 1. Klicka **Installera**.
 
 1. Aktivitetsloggen visar installationsförloppet.
-
->[!CAUTION]
->
->* Om du installerar digitala resurser måste du:
-   >  Inaktivera först WorkflowLauncher.
-   >  Använd menyalternativet Komponenter i OSGi-konsolen för att inaktivera
-   >  `com.day.cq.workflow.launcher.impl.WorkflowLauncherImpl.`
->* När installationen är klar återaktiverar du WorkflowLauncher.
->
->Genom att inaktivera WorkflowLauncher säkerställer du att Assets-importimeringsramverket inte (oavsiktligt) manipulerar resurserna vid installationen.
 
 När installationen är klar och slutförd uppdateras paketlistan och ordet **Installerad** visas i paketstatusen.
 
