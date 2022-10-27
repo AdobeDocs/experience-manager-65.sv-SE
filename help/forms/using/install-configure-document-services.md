@@ -8,12 +8,13 @@ topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: 652f2f9b55857b8962f5bfd4edb85f3700866485
+source-git-commit: b80886f1e45e0ed65ce2309ef6ea43bfa373a52b
 workflow-type: tm+mt
-source-wordcount: '5362'
+source-wordcount: '5372'
 ht-degree: 0%
 
 ---
+
 
 # Installera och konfigurera dokumenttjänster {#installing-and-configuring-document-services}
 
@@ -286,14 +287,6 @@ Utför följande steg för att konfigurera IBM® SSL-socketprovidern:
 
    `-Djava.security.properties= [path of newly created Java.security file].`
 
-### (Endast Windows) Konfigurera tjänsten Installera bläck och handskrift {#configure-install-ink-and-handwriting-service}
-
-Om du kör Microsoft® Windows Server konfigurerar du bläck- och handskriftstjänsten. Tjänsten krävs för att öppna Microsoft® PowerPoint-filer som använder bläckfunktioner i Microsoft® Office:
-
-1. Öppna Serverhanteraren. Klicka på **[!UICONTROL Server Manager]** -ikonen i snabbstartsfältet.
-1. Klicka **[!UICONTROL Add Features]** i **[!UICONTROL Features]** -menyn. Välj **[!UICONTROL Ink and Handwriting Services]** kryssruta.
-1. **[!UICONTROL Select Features]** dialogruta med **[!UICONTROL Ink and Handwriting Services]** markerat. Klicka **[!UICONTROL Install]** och tjänsten är installerad.
-
 ### (Endast Windows) Konfigurera filblocksinställningarna för Microsoft® Office {#configure-the-file-block-settings-for-microsoft-office}
 
 Ändra inställningarna för Microsoft® Office Trust Center så att tjänsten PDF Generator kan konvertera filer som skapats med äldre versioner av Microsoft® Office.
@@ -479,7 +472,9 @@ I Microsoft® Windows använder PDF Generator-tjänsten Adobe Acrobat för att k
 
    1. Öppna [AEM](http://localhost:4502/crx/packmgr/index.jsp) och ladda ned `adobe-aemfd-pdfg-common-pkg-[version].zip` från Package Manager.
    1. Zippa upp den nedladdade ZIP-filen. Öppna kommandotolken med administratörsbehörighet.
-   1. Navigera till [extraherad-zip-fil]`\jcr_root\etc\packages\day\cq60\fd\adobe-aemds-common-pkg-[version]\jcr_root\etc\packages\day\cq60\fd\adobe-aemfd-pdfg-common-pkg-[version]\jcr_root\libs\fd\pdfg\tools\adobe-aemfd-pdfg-utilities-[version]` katalog. Kör följande kommandofil:
+   1. Navigera till `[extracted-zip-file]\jcr_root\etc\packages\day\cq60\fd\adobe-aemds-common-pkg-[version]\jcr_root\etc\packages\day\cq60\fd\`
+   1. Zippa upp `adobe-aemfd-pdfg-common-pkg-[version]`.
+   1. Navigera till `[downloaded-adobe-aemfd-pdfg-common-pkg]\jcr_root\libs\fd\pdfg\tools\adobe-aemfd-pdfg-utilities-[version]` katalog. Kör följande kommandofil:
 
       `Acrobat_for_PDFG_Configuration.bat`
 
@@ -589,7 +584,7 @@ Assembler-tjänsten är beroende av tjänsten Reader Extensions, tjänsten Signa
 
 ## Systemberedskap (SRT) {#SRT}
 
-Verktyget Systemberedskap kontrollerar om datorn är korrekt konfigurerad för att köra konverteringar i PDF Generator. Verktyget genererar en rapport vid den angivna sökvägen. Så här kör du verktyget:
+The [Verktyget Systemberedskap](#srt-configuration) kontrollerar om datorn är korrekt konfigurerad för att köra PDF Generator-konverteringar. Verktyget genererar en rapport vid den angivna sökvägen. Så här kör du verktyget:
 
 1. Öppna kommandotolken. Navigera till `[extracted-adobe-aemfd-pdfg-common-pkg]\jcr_root\libs\fd\pdfg\tools` mapp.
 
@@ -597,39 +592,47 @@ Verktyget Systemberedskap kontrollerar om datorn är korrekt konfigurerad för a
 
    `java -jar forms-srt-[version].jar [Path_of_reports_folder] en`
 
-   Kommandot genererar en rapport och skapar även filen srt_config.yaml.
+   Kommandot genererar en rapport och skapar även filen srt_config.yaml. Du kan använda den för att konfigurera alternativ för SRT-verktyget. Det är valfritt att konfigurera alternativ för SRT-verktyget.
 
    >[!NOTE]
    >
    > * Om systemberedskapsverktyget rapporterar att filen pdfgen.api inte är tillgänglig i Acrobat plug-ins-mappen kopierar du filen pdfgen.api från `[extracted-adobe-aemfd-pdfg-common-pkg]\jcr_root\libs\fd\pdfg\tools\adobe-aemfd-pdfg-utilities-[version]\plugins\x86_win32` till `[Acrobat_root]\Acrobat\plug_ins` katalog.
-   >
-   > * Du kan använda filen srt_config.yaml för att konfigurera olika inställningar för . Filformatet är:
 
-       # SRT Configuration
-       
-       # Note - Följ rätt format för att undvika parsningsfel
-       
-       # t.ex. &lt;param name=&quot;&quot;>:&lt;space>&lt;param value=&quot;&quot;>
-       
-       #locale: (obligatoriskt fält)Språk som ska användas för SRT. Språk som stöds [en/fr/de/ja].
-       locale: en
-       
-       #aemTempDir: AEM temporär katalog
-       aemTempDir:
-       
-       #users: tillhandahåller PDFG-konvertering av användarlista
-       #users:
-       # - användare1
-       # - användare2
-       användare:
-       
-       #profile: välj profil för att köra specifika kontroller. Välj från [LCM], fler kommer snart
-       profil:
-       
-       #outputDir: katalog där utdatafiler ska sparas
-       outputDir:
-   >
 1. Navigera till `[Path_of_reports_folder]`. Öppna filen SystemReadinessTool.html. Verifiera rapporten och åtgärda problemen.
+
+### Konfigurera alternativ för SRT-verktyget {#srt-configuration}
+
+Du kan använda filen srt_config.yaml för att konfigurera olika inställningar för SRT-verktyget. Filformatet är:
+
+```shell
+   # =================================================================
+   # SRT Configuration
+   # =================================================================
+   #Note - follow correct format to avoid parsing failures
+   #e.g. <param name>:<space><param value> 
+   #locale: (mandatory field)Locale to be used for SRT. Supported locales [en/fr/de/ja].
+   locale: en
+   
+   #aemTempDir: AEM Temp direcotry
+   aemTempDir:
+   
+   #users: provide PDFG converting users list
+   #users:
+   # - user1
+   # - user2
+   users:
+   
+   #profile: select profile to run specific checks. Choose from [LCM], more will be added soon 
+   profile:
+   
+   #outputDir: directory where output files will be saved
+   outputDir:
+```
+
+* **Språk:** Det är en obligatorisk parameter. Det har stöd för engelska (en), tyska (de), franska (fr) och japanska (ja). Standardvärdet är en. Den påverkar inte PDF Generator-tjänster som körs på AEM Forms i OSGi.
+* **aemTempDir:** Det är en valfri parameter. Den anger tillfällig lagringsplats för Adobe Experience Manager.
+* **användare:** Det är en valfri parameter. Du kan ange en användare som ska kontrollera om användaren har nödvändig behörighet och läs-/skrivåtkomst för kataloger som krävs för att köra PDF Generator. Om ingen användare anges hoppas användarspecifika kontroller över och visas som misslyckade i rapporten.
+* **outputDir:** Ange platsen där SRT-rapporten ska sparas. Standardplatsen är den aktuella arbetskatalogen för SRT-verktyget.
 
 ## Felsökning
 
