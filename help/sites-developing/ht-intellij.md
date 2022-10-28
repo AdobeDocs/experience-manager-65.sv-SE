@@ -1,22 +1,21 @@
 ---
 title: Utveckla AEM projekt med IntelliJ IDEA
-seo-title: Utveckla AEM projekt med IntelliJ IDEA
+seo-title: How to Develop AEM Projects using IntelliJ IDEA
 description: Använda IntelliJ IDEA för att utveckla AEM projekt
-seo-description: Använda IntelliJ IDEA för att utveckla AEM projekt
+seo-description: Using IntelliJ IDEA to develop AEM projects
 uuid: 382b5008-2aed-4e08-95be-03c48f2b549e
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: development-tools
 content-type: reference
 discoiquuid: df6410a2-794e-4fa2-ae8d-37271274d537
-translation-type: tm+mt
-source-git-commit: b3e1493811176271ead54bae55b1cd0cf759fe71
+exl-id: 5a79c79b-df65-4cb2-b9d4-eda994c992ec
+source-git-commit: bb8dbb9069c4575af62a4d0b21195cee75944fea
 workflow-type: tm+mt
-source-wordcount: '657'
+source-wordcount: '642'
 ht-degree: 1%
 
 ---
-
 
 # Utveckla AEM projekt med IntelliJ IDEA{#how-to-develop-aem-projects-using-intellij-idea}
 
@@ -37,7 +36,7 @@ Var och en av dem förklaras mer ingående i resten av handboken.
 
 ### Installera IntelliJ IDEA {#install-intellij-idea}
 
-Hämta IntelliJ IDEA från [hämtningssidan på JetBrains](https://www.jetbrains.com/idea/download/index.html).
+Hämta IntelliJ IDEA från [nedladdningssidan på JetBrains](https://www.jetbrains.com/idea/download/index.html).
 
 Följ sedan installationsanvisningarna på den sidan.
 
@@ -45,7 +44,7 @@ Följ sedan installationsanvisningarna på den sidan.
 
 Konfigurera sedan projektet med Maven enligt beskrivningen i [Så här skapar du AEM projekt med Apache Maven](/help/sites-developing/ht-projects-maven.md).
 
-Om du vill börja arbeta med AEM projekt i IntelliJ IDEA räcker det med grundinställningen [Komma igång på 5 minuter](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html).
+För att börja arbeta med AEM projekt i IntelliJ IDEA är grundinställningarna i [Komma igång om 5 minuter](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html) är tillräckligt.
 
 ### Förbered JSP-stöd för IntelliJ IDEA {#prepare-jsp-support-for-intellij-idea}
 
@@ -54,14 +53,14 @@ IntelliJ IDEA kan också ge stöd vid arbete med JSP, t.ex.
 * automatisk komplettering av taggbibliotek
 * medvetenhet om objekt som definieras av `<cq:defineObjects />` och `<sling:defineObjects />`
 
-För att det ska fungera följer du instruktionerna i [Så här arbetar du med JSP:er](/help/sites-developing/ht-projects-maven.md#how-to-work-with-jsps) i [Så här skapar du AEM projekt med Apache Maven](/help/sites-developing/ht-projects-maven.md).
+För att det ska fungera, följ instruktionerna på [Så här arbetar du med JSP:er](/help/sites-developing/ht-projects-maven.md#how-to-work-with-jsps) in [Så här skapar du AEM projekt med Apache Maven](/help/sites-developing/ht-projects-maven.md).
 
-### Importera Maven Project {#import-the-maven-project}
+### Importera projektet Maven {#import-the-maven-project}
 
-1. Öppna dialogrutan **Importera** i IntelliJ IDEA av
+1. Öppna **Importera** i IntelliJ IDEA genom
 
    * markera **Importera projekt** på välkomstskärmen om du inte har något projekt öppet än
-   * välj **Arkiv -> Importera projekt** på huvudmenyn
+   * markera **Arkiv -> Importera projekt** på huvudmenyn
 
 1. Välj POM-filen för projektet i dialogrutan Importera.
 
@@ -85,22 +84,22 @@ Följande steg är nödvändiga för att felsöka JSP:er med IntelliJ IDEA
 * Konfigurera en felsökningsprofil
 * Konfigurera AEM för felsökningsläge
 
-#### Konfigurera en webbfaktor i projektet {#set-up-a-web-facet-in-the-project}
+#### Konfigurera en webbaspekt i projektet {#set-up-a-web-facet-in-the-project}
 
-IntelliJ IDEA behöver förstå var JSP:er för felsökning ska hittas. Eftersom IDEA inte kan tolka `content-package-maven-plugin`-inställningarna måste detta konfigureras manuellt.
+IntelliJ IDEA behöver förstå var JSP:er för felsökning ska hittas. Eftersom IDEA inte kan tolka `content-package-maven-plugin` -inställningar, måste konfigureras manuellt.
 
 1. Gå till **Arkiv -> Projektstruktur**
-1. Välj modulen **Innehåll**
-1. Klicka på **+** ovanför listan med moduler och välj **Webb**
-1. Som webbresurskatalog väljer du `content/src/main/content/jcr_root subdirectory` för projektet enligt skärmbilden nedan.
+1. Välj **Innehåll** modul
+1. Klicka **+** ovanför listan med moduler och välj **Webb**
+1. Som webbresurskatalog väljer du `content/src/main/content/jcr_root subdirectory` av ditt projekt enligt skärmbilden nedan.
 
 ![chlimage_1-48](assets/chlimage_1-48a.png)
 
 #### Installera JSR45 support-plugin {#install-the-jsr-support-plugin}
 
-1. Gå till rutan **Plugins** i IntelliJ IDEA-inställningarna
-1. Navigera till plugin-programmet **JSR45 Integration** och markera kryssrutan bredvid det
-1. Klicka på **Använd**
+1. Gå till **Plugins** i IntelliJ IDEA-inställningarna
+1. Navigera till **JSR45-integrering** Plugin-program och markera kryssrutan bredvid det
+1. Klicka **Använd**
 1. Starta om IntelliJ IDEA när du ombeds att
 
 ![chlimage_1-49](assets/chlimage_1-49a.png)
@@ -108,11 +107,11 @@ IntelliJ IDEA behöver förstå var JSP:er för felsökning ska hittas. Eftersom
 #### Konfigurera en felsökningsprofil {#configure-a-debug-profile}
 
 1. Gå till **Kör -> Redigera konfigurationer**
-1. Tryck på **+** och välj **JSR45 Remote**
-1. I konfigurationsdialogrutan väljer du **Konfigurera** bredvid **Programserver** och konfigurerar en allmän server
+1. Träffa **+** och markera **JSR45-fjärr**
+1. I konfigurationsdialogrutan väljer du **Konfigurera** nästa **Programserver** och konfigurera en allmän server
 1. Ange en lämplig URL för startsidan om du vill öppna en webbläsare när du startar felsökningen
-1. Ta bort alla **Före start**-åtgärder om du använder VLT autosync, eller konfigurera lämpliga Maven-åtgärder om du inte gör det
-1. Justera porten vid behov i rutan **Start/Anslutning**
+1. Ta bort alla **Före start** uppgifter om du använder vlt autosync eller konfigurerar lämpliga Maven-uppgifter om du inte gör det
+1. På **Start/anslutning** ruta, justera porten om det behövs
 1. Kopiera kommandoradsargumenten som IntelliJ IDEA föreslår
 
 ![chlimage_1-50](assets/chlimage_1-50a.png) ![chlimage_1-51](assets/chlimage_1-51a.png)
@@ -123,7 +122,7 @@ Det sista steget är att börja AEM med de JVM-alternativ som IntelliJ IDEA för
 
 Du kan göra detta genom att starta AEM jar-filen direkt och lägga till dessa alternativ, till exempel med följande kommandorad:
 
-`java -Xdebug -Xrunjdwp:transport=dt_socket,address=58242,suspend=n,server=y -Xmx1024m -XX:MaxPermSize=256M -jar cq-quickstart-5.6.1.jar`
+`java -Xdebug -Xrunjdwp:transport=dt_socket,address=58242,suspend=n,server=y -Xmx1024m -jar cq-quickstart-6.5.0.jar`
 
 Du kan också lägga till dessa alternativ i startskriptet i `crx-quickstart/bin/start` enligt nedan.
 
@@ -132,7 +131,7 @@ Du kan också lägga till dessa alternativ i startskriptet i `crx-quickstart/bin
 
 # default JVM options
 if [ -z "$CQ_JVM_OPTS" ]; then
- CQ_JVM_OPTS='-server -Xmx1024m -XX:MaxPermSize=256M -Djava.awt.headless=true'
+ CQ_JVM_OPTS='-server -Xmx1024m -Djava.awt.headless=true'
 fi
 
 CQ_JVM_OPTS="$CQ_JVM_OPTS -Xdebug -Xrunjdwp:transport=dt_socket,address=58242,suspend=n,server=y"
@@ -152,4 +151,4 @@ Du är nu redo att felsöka JSP:er i AEM.
 
 ### Felsökningspaket med IntelliJ IDEA {#debugging-bundles-with-intellij-idea}
 
-Kod i paket kan felsökas med en allmän fjärrfelsökningsanslutning som standard. Du kan följa [Jetbrain-dokumentationen för fjärrfelsökning](https://www.jetbrains.com/idea/webhelp/run-debug-configuration-remote.html).
+Kod i paket kan felsökas med en allmän fjärrfelsökningsanslutning som standard. Du kan följa [Jetbrain-dokumentation om fjärrfelsökning](https://www.jetbrains.com/idea/webhelp/run-debug-configuration-remote.html).

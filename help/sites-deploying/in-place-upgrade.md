@@ -4,9 +4,9 @@ description: Lär dig hur du utför en uppgradering på plats.
 topic-tags: upgrading
 feature: Upgrading
 exl-id: aef6ef00-993c-4252-b0ad-ddc4917beaf7
-source-git-commit: 6d2b7e341dcdedf3c000b9fb0ecd21722bdf2a27
+source-git-commit: c0574b50f3504a4792405d6fcd8aa3a2e8e6c686
 workflow-type: tm+mt
-source-wordcount: '1256'
+source-wordcount: '1244'
 ht-degree: 0%
 
 ---
@@ -116,8 +116,6 @@ Plats `<<YOUR_PROFILE>>` och `<<ADDITIONAL_FLAGS>>` ersätts med profilen och fl
 
 * Om du utför uppgraderingen på ett Windows-system där Java-minnesmappningen inte hanteras på rätt sätt lägger du till `--disable-mmap` -parametern till kommandot.
 
-* Om du använder Java 7 lägger du till `-XX:MaxPermSize=2048m` parametern precis efter `-Xmx` parameter.
-
 Mer information om hur du använder verktyget crx2oak finns i Använda [CRX2Oak Migration Tool](/help/sites-deploying/using-crx2oak.md). JAR-hjälpfilen för crx2oak kan vid behov uppgraderas manuellt genom att manuellt ersätta den med senare versioner efter att snabbstarten har packats upp. Sökvägen i AEM installationsmapp är: `<aem-install>/crx-quickstart/opt/extensions/crx2oak.jar`. Den senaste versionen av CRX2Oak-migreringsverktyget kan hämtas från Adobe-databasen på: [https://repo1.maven.org/maven2/com/adobe/granite/crx2oak/](https://repo1.maven.org/maven2/com/adobe/granite/crx2oak/)
 
 Om migreringen har slutförts avslutas verktyget med en avslutningskod på noll. Kontrollera dessutom om det finns WARN- och ERROR-meddelanden i `upgrade.log` fil, som finns under `crx-quickstart/logs` i AEM installationskatalog, eftersom dessa kan tyda på icke-allvarliga fel som uppstod under migreringen.
@@ -181,7 +179,7 @@ Observera att AEM från startskriptet inte startar uppgraderingen. De flesta kun
 1. Leta efter AEM. Det ser ut ungefär så här:
 
    ```shell
-   /usr/bin/java -server -Xmx1024m -XX:MaxPermSize=256M -Djava.awt.headless=true -Dsling.run.modes=author,crx3,crx3tar -jar crx-quickstart/app/cq-quickstart-6.2.0-standalone-quickstart.jar start -c crx-quickstart -i launchpad -p 4502 -Dsling.properties=conf/sling.properties
+   /usr/bin/java -server -Xmx1024m -Djava.awt.headless=true -Dsling.run.modes=author,crx3,crx3tar -jar crx-quickstart/app/cq-quickstart-6.5.0-standalone-quickstart.jar start -c crx-quickstart -i launchpad -p 4502 -Dsling.properties=conf/sling.properties
    ```
 
 1. Ändra kommandot genom att ersätta sökvägen till den befintliga behållaren ( `crx-quickstart/app/aem-quickstart*.jar` i det här fallet) med den nya burken som motsvarar `crx-quickstart` mapp. Om du använder vårt tidigare kommando som exempel blir vårt kommando:
