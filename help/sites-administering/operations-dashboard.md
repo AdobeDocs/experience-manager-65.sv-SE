@@ -12,9 +12,9 @@ discoiquuid: b210f5d7-1d68-49ee-ade7-667c6ab11d2b
 docset: aem65
 exl-id: f9a88156-91a2-4c85-9bc9-8f23700c2cbd
 feature: Operations
-source-git-commit: 891cb5bb8cc9b7114d23617c9164fd428718b302
+source-git-commit: ee45113daee495d9b56a0f6e2c463d9cca006540
 workflow-type: tm+mt
-source-wordcount: '6200'
+source-wordcount: '6230'
 ht-degree: 0%
 
 ---
@@ -81,7 +81,7 @@ Du skapar en enskild hälsokontroll i två steg: implementera en kontroll av ski
 
 1. För att kunna skapa en Sling Health Check måste du skapa en OSGI-komponent som implementerar Sling HealthCheck-gränssnittet. Du lägger till den här komponenten i ett paket. Komponentens egenskaper identifierar hälsokontrollen fullständigt. När komponenten har installerats skapas en JMX MBean automatiskt för hälsokontrollen. Se [Dokumentation för hälsokontroll vid segmentering](https://sling.apache.org/documentation/bundles/sling-health-check-tool.html) för mer information.
 
-   Exempel på en Sling Health Check-komponent, skriven med OSGI-tjänstkomponentsanteckningar:
+   Exempel på en Sling Health Check-komponent, skriven med OSGI-tjänstkomponentanteckningar:
 
    ```java
    @Component(service = HealthCheck.class,
@@ -324,6 +324,12 @@ En sammansatt hälsokontroll har till uppgift att sammanställa ett antal enskil
   </tr>
  </tbody>
 </table>
+
+### Konfiguration av hälsokontroll {#health-check-configuration}
+
+Som standard körs hälsokontrollerna var 60:e sekund för en AEM.
+
+Du kan konfigurera **Period** med [OSGi-konfiguration](/help/sites-deploying/configuring-osgi.md) **Konfiguration av hälsokontroll av fråga** (com.adobe.granite.queries.impl.hc.QueryHealthCheckMetrics).
 
 ## Övervakning med Nagios {#monitoring-with-nagios}
 
