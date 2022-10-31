@@ -2,7 +2,7 @@
 title: Integrering med Adobe Target med IMS
 description: Läs om hur du integrerar AEM med Adobe Target med IMS
 exl-id: 8ddd86d5-a5a9-4907-b07b-b6552d7afdc8
-source-git-commit: eb05fb92491932e4c2489c5adb533bbbae1d2870
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '1500'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Integrering med Adobe Target med IMS{#integration-with-adobe-target-using-ims}
 
-För att integrera AEM med Adobe Target via Target Standard API måste du konfigurera Adobe IMS (Identity Management System) med Adobe Developer Console.
+Integreringen av AEM med Adobe Target via Target Standard API kräver att Adobe IMS (Identity Management System) konfigureras med Adobe Developer Console.
 
 >[!NOTE]
 >
@@ -66,7 +66,7 @@ Med Adobe Developer Console måste du skapa ett projekt (integration) med Adobe 
 
 ### Skapa projektet {#creating-the-project}
 
-Öppna Adobe Developer Console för att skapa ett projekt med Adobe Target som AEM ska använda:
+Öppna Adobe Developer Console och skapa ett projekt med Adobe Target som AEM ska använda:
 
 1. Öppna Adobe Developer Console for Projects:
 
@@ -133,9 +133,9 @@ Du måste nu tilldela nödvändig behörighet till integreringen:
 1. Välj **API-autentiseringsuppgifter** och sedan den integreringskonfiguration som krävs.
 1. Välj **Redigerare** som **Produktroll**; i stället för **Observer**.
 
-## Information lagrad för integreringsprojektet i Adobe Developer Console {#details-stored-for-the-ims-integration-project}
+## Information lagrad för Adobe Developer Console Integration Project {#details-stored-for-the-ims-integration-project}
 
-På Adobe Developer Console - Projekt kan du se en lista över alla dina integrationsprojekt:
+I Adobe Developer Console - Projekt kan du se en lista över alla dina integreringsprojekt:
 
 * [https://developer.adobe.com/console/projects](https://developer.adobe.com/console/projects)
 
@@ -154,7 +154,7 @@ Vissa av dessa behöver du för att slutföra integreringen av Adobe Target i AE
 
 ## Slutför IMS-konfigurationen i AEM {#completing-the-ims-configuration-in-aem}
 
-Om du går tillbaka till AEM kan du slutföra IMS-konfigurationen genom att lägga till obligatoriska värden från Adobe Developer Console-integrering för Target:
+Om du går tillbaka till AEM kan du slutföra IMS-konfigurationen genom att lägga till obligatoriska värden från Adobe Developer Console-integreringen för Target:
 
 1. Återgå till [IMS-konfiguration öppnas i AEM](#configuring-an-ims-configuration-generating-a-public-key).
 1. Välj **Nästa**.
@@ -244,9 +244,9 @@ Det går nu att referera till konfigurationen för en Cloud Service som använde
 
    * **Klientbibliotek**: Välj om du vill ha klientbiblioteket AT.js eller mbox.js (utgått).
 
-   * **Använd tagghanteringssystemet för att leverera klientbiblioteket**: Använd DTM (utgått), Adobe Launch eller något annat tagghanteringssystem.
+   * **Använd Tag Management System för att leverera klientbibliotek**: Använd DTM (utgått), Adobe Launch eller något annat tagghanteringssystem.
 
-   * **Anpassad AT.js**: Lämna tomt om du har markerat rutan Tagghantering eller om du vill använda AT.js som standard. Du kan även överföra dina anpassade AT.js. Visas bara om du har valt AT.js.
+   * **Anpassad AT.js**: Lämna tomt om du har markerat rutan Tag Management eller om du vill använda AT.js som standard. Du kan även överföra dina anpassade AT.js. Visas bara om du har valt AT.js.
    >[!NOTE]
    >
    >[Konfiguration av en Cloud Service som ska använda API:t för klassiska mål](/help/sites-administering/target-configuring.md#manually-integrating-with-adobe-target) har tagits bort (använder fliken Adobe Recommendations-inställningar).
@@ -278,9 +278,9 @@ Som tidigare nämnts är det första fallet det vanligaste för AEM 6.5. Oavsett
 
 >[!NOTE]
 >
-> Om du vill ändra en befintlig målkonfiguration:
+>Om du vill ändra en befintlig målkonfiguration:
 >
-> 1. Ange klientorganisations-ID:t igen.
-> 2. Återanslut till mål.
-> 3. Spara konfigurationen.
+>1. Ange klientorganisations-ID:t igen.
+>2. Återanslut till mål.
+>3. Spara konfigurationen.
 

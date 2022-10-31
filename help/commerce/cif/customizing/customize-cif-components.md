@@ -11,7 +11,7 @@ feature: Commerce Integration Framework
 kt: 4279
 thumbnail: customize-aem-cif-core-component.jpg
 exl-id: 8933942e-be49-49d3-bf0a-7225257e2803
-source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '2604'
 ht-degree: 0%
@@ -24,7 +24,7 @@ The [CIF Venia Project](https://github.com/adobe/aem-cif-guides-venia) är en re
 
 >[!TIP]
 >
-> Använd [AEM](https://github.com/adobe/aem-project-archetype) när du startar en egen implementering av e-handeln.
+>Använd [AEM](https://github.com/adobe/aem-project-archetype) när du startar en egen implementering av e-handeln.
 
 ## Vad du ska bygga
 
@@ -44,7 +44,7 @@ Vi klonar [Venedig-projektet](https://github.com/adobe/aem-cif-guides-venia) och
 
 >[!NOTE]
 >
-> **Du kan använda ett befintligt projekt** (baserat på AEM Project Archetype med CIF inkluderat) och hoppa över det här avsnittet.
+>**Du kan använda ett befintligt projekt** (baserat på AEM Project Archetype med CIF inkluderat) och hoppa över det här avsnittet.
 
 1. Kör följande Git-kommando för att klona projektet:
 
@@ -83,7 +83,7 @@ Product Teaser Component kommer att byggas ut genom hela kursen. Som ett första
 
    >[!NOTE]
    >
-   > Observera att du även kan konfigurera den visade produkten genom att konfigurera komponenten med hjälp av dialogrutan (klicka på _wrench_ ikon).
+   >Observera att du även kan konfigurera den visade produkten genom att konfigurera komponenten med hjälp av dialogrutan (klicka på _wrench_ ikon).
 
 4. Du bör nu se en produkt som visas av Product Teaser. Produktens namn och produktens pris är standardattribut som visas.
 
@@ -95,7 +95,7 @@ De produkter och produktdata som visas i AEM lagras i Adobe Commerce. Lägg seda
 
 >[!TIP]
 >
-> Har redan en anpassad **Ja/Nej** som en del av din produktattributuppsättning? Du kan använda den och hoppa över det här avsnittet.
+>Har redan en anpassad **Ja/Nej** som en del av din produktattributuppsättning? Du kan använda den och hoppa över det här avsnittet.
 
 1. Logga in på din Adobe Commerce-instans.
 1. Navigera till **Katalog** > **Produkter**.
@@ -124,7 +124,7 @@ De produkter och produktdata som visas i AEM lagras i Adobe Commerce. Lägg seda
 
    >[!TIP]
    >
-   > Mer information om hantering [Produktattribut finns i användarhandboken för Adobe Commerce](https://docs.magento.com/user-guide/catalog/attribute-best-practices.html).
+   >Mer information om hantering [Produktattribut finns i användarhandboken för Adobe Commerce](https://docs.magento.com/user-guide/catalog/attribute-best-practices.html).
 
 1. Navigera till **System** > **verktyg** > **Cachehantering**. Eftersom en uppdatering har gjorts av dataschemat måste vissa cachetyper i Adobe Commerce göras ogiltiga.
 1. Markera rutan bredvid **Konfiguration** och skicka cachetypen för **Uppdatera**
@@ -133,7 +133,7 @@ De produkter och produktdata som visas i AEM lagras i Adobe Commerce. Lägg seda
 
    >[!TIP]
    >
-   > Mer information om [Cachehantering finns i användarhandboken för Adobe Commerce](https://docs.magento.com/user-guide/system/cache-management.html).
+   >Mer information om [Cachehantering finns i användarhandboken för Adobe Commerce](https://docs.magento.com/user-guide/system/cache-management.html).
 
 ## Använd en GraphQL IDE för att verifiera attribut {#use-graphql-ide}
 
@@ -182,7 +182,7 @@ Använd sedan en GraphQL IDE för att verifiera att `eco_friendly` har lagts til
 
    >[!TIP]
    >
-   > Mer detaljerad dokumentation om [Adobe Commerce GraphQL finns här](https://devdocs.magento.com/guides/v2.4/graphql/index.html).
+   >Mer detaljerad dokumentation om [Adobe Commerce GraphQL finns här](https://devdocs.magento.com/guides/v2.4/graphql/index.html).
 
 ## Uppdatera produktundervisningsmodellen {#updating-sling-model-product-teaser}
 
@@ -289,7 +289,7 @@ Använd [den utvecklingsmiljö du vill](https://docs.adobe.com/content/help/en/e
 
    >[!NOTE]
    >
-   > The `createdAt()` metoden har faktiskt implementerats som en del av [Produktgränssnitt](https://github.com/adobe/commerce-cif-magento-graphql/blob/master/src/main/java/com/adobe/cq/commerce/magento/graphql/ProductInterface.java). De flesta av de vanligaste schemaattributen har implementerats, så använd bara `addCustomSimpleField` för verkligt anpassade attribut.
+   >The `createdAt()` metoden har faktiskt implementerats som en del av [Produktgränssnitt](https://github.com/adobe/commerce-cif-magento-graphql/blob/master/src/main/java/com/adobe/cq/commerce/magento/graphql/ProductInterface.java). De flesta av de vanligaste schemaattributen har implementerats, så använd bara `addCustomSimpleField` för verkligt anpassade attribut.
 
 1. Lägg till en loggare som kan hjälpa dig att felsöka Java-koden:
 
@@ -336,7 +336,7 @@ I det här fallet vill vi återge en banderoll ovanpå teaser för att ange att 
 
 >[!NOTE]
 >
-> Om du anpassar en komponent med CIF-produkt- och kategoriväljare som denna Product Teaser eller CIF-sidkomponenten måste du inkludera den `cif.shell.picker` clientlib för komponentdialogrutorna. Se [Användning av CIF-produkt- och kategoriväljare](use-cif-pickers.md) för mer information.
+>Om du anpassar en komponent med CIF-produkt- och kategoriväljare som denna Product Teaser eller CIF-sidkomponenten måste du inkludera den `cif.shell.picker` clientlib för komponentdialogrutorna. Se [Användning av CIF-produkt- och kategoriväljare](use-cif-pickers.md) för mer information.
 
 1. Navigera i och expandera dialogrutan `ui.apps` och expandera mapphierarkin till: `ui.apps/src/main/content/jcr_root/apps/venia/components/commerce/productteaser` och inspektera `.content.xml` -fil.
 
@@ -430,7 +430,7 @@ I det här fallet vill vi återge en banderoll ovanpå teaser för att ange att 
 
    >[!CAUTION]
    >
-   > Du kan också se vissa stackspår om den produkt som används i teaser inte har `eco_friendly` som en del av dess attributuppsättning.
+   >Du kan också se vissa stackspår om den produkt som används i teaser inte har `eco_friendly` som en del av dess attributuppsättning.
 
 ## Lägg till stilar för etiketten Eco Friendly {#add-styles}
 
@@ -471,7 +471,7 @@ I det här läget är logiken för när **Miljövänlig** emblemet fungerar, men
 
    >[!NOTE]
    >
-   > Checka ut [Utforma CIF-kärnkomponenter](./style-cif-component.md) för mer information om arbetsflöden.
+   >Checka ut [Utforma CIF-kärnkomponenter](./style-cif-component.md) för mer information om arbetsflöden.
 
 1. Spara ändringarna och distribuera uppdateringarna till AEM med dina Maven-kunskaper från en kommandoradsterminal:
 

@@ -7,7 +7,7 @@ topic-tags: managing
 content-type: reference
 docset: aem65
 exl-id: b138f6d1-0870-4071-b96e-4a759ad9a76e
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '3802'
 ht-degree: 74%
@@ -366,9 +366,9 @@ AEM använder [Modulen Apache Sling Sitemap](https://github.com/apache/sling-org
 
 >[!NOTE]
 >
-> Det här finns som produktfunktion sedan Adobe Experience Manager version 6.5.11.0.
+>Det här finns som produktfunktion sedan Adobe Experience Manager version 6.5.11.0.
 > 
-> För äldre versioner kan du registrera en Sling Servlet själv för att lyssna efter en `sitemap.xml` anropa och använd resursen som tillhandahålls via serverletens API för att söka efter den aktuella sidan och dess underordnade för att skapa en sitemap.xml-fil.
+>För äldre versioner kan du registrera en Sling Servlet själv för att lyssna efter en `sitemap.xml` anropa och använd resursen som tillhandahålls via serverletens API för att söka efter den aktuella sidan och dess underordnade för att skapa en sitemap.xml-fil.
 
 Modulen Apache Sling Sitemap skiljer mellan en webbplatskarta på den översta nivån och en kapslad platskarta, som båda genereras för en resurs som har den `sling:sitemapRoot` egenskap inställd på `true`. I allmänhet återges platskartor med hjälp av väljare på sökvägen till platskartan på den översta nivån i trädet, vilket är den resurs som inte har något annat överordnat platskarta. Denna platskarta på den översta nivån visar också platskartsindexet, som vanligtvis är det som en webbplatsägare konfigurerar i sökmotorns konfigurationsportal eller lägger till i webbplatsens `robots.txt`.
 
@@ -380,7 +380,7 @@ Ta till exempel en plats som definierar en platskarta på den översta nivån p�
 
 >[!NOTE]
 >
-> Väljarna `sitemap` och `sitemap-index` kan störa anpassade implementeringar. Om du inte vill använda produktfunktionen konfigurerar du en egen servertjänst som servar väljarna med en `service.ranking` högre än 0.
+>Väljarna `sitemap` och `sitemap-index` kan störa anpassade implementeringar. Om du inte vill använda produktfunktionen konfigurerar du en egen servertjänst som servar väljarna med en `service.ranking` högre än 0.
 
 I standardkonfigurationen finns ett alternativ i dialogrutan Sidegenskaper för att markera en sida som en platskarta och på så sätt generera en platskarta för sig själv och dess underordnade. Detta beteende implementeras av implementeringar av `SitemapGenerator` gränssnitt och kan utökas genom att man lägger till alternativa implementeringar. Men eftersom hur ofta XML-webbplatskartorna ska genereras om beror på arbetsflödena och arbetsbelastningarna för att skapa innehåll, levereras inte produkten `SitemapScheduler` konfiguration. Detta gör att funktionen effektivt kan välja att delta.
 

@@ -9,7 +9,7 @@ feature: Commerce Integration Framework
 kt: 4933
 thumbnail: 34350.jpg
 exl-id: 0125021a-1c00-4ea3-b7fb-1533b7b9f4f2
-source-git-commit: 014731aa9c5c4d7d419ff8b037142b47e7b7da01
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '910'
 ht-degree: 3%
@@ -20,7 +20,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
-> Sökmotoroptimering (SEO) har blivit en viktig fråga för många marknadsförare. Därför måste SEO:s problem hanteras i många AEM projekt. Läs [Bästa praxis för hantering av SEO och URL](https://experienceleague.adobe.com/docs/experience-manager-65/managing/managing-further-reference/seo-and-url-management.html) för ytterligare information.
+>Sökmotoroptimering (SEO) har blivit en viktig fråga för många marknadsförare. Därför måste SEO:s problem hanteras i många AEM projekt. Läs [Bästa praxis för hantering av SEO och URL](https://experienceleague.adobe.com/docs/experience-manager-65/managing/managing-further-reference/seo-and-url-management.html) för ytterligare information.
 
 [AEM CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components) innehåller avancerade konfigurationer för att anpassa URL:er för produkt- och kategorisidor. Många implementeringar anpassar dessa URL:er för sökmotoroptimering (SEO). Följande video visar hur du konfigurerar `UrlProvider` Service och funktioner i [Samlingsmappning](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html) för att anpassa URL:er för produkt- och kategorisidor.
 
@@ -32,7 +32,7 @@ Så här konfigurerar du `UrlProvider` enligt SEO-kraven och ett projekt måste 
 
 >[!NOTE]
 >
-> Sedan version 2.0.0 av AEM CIF Core Components finns det bara fördefinierade url-format i URL-providerkonfigurationen, i stället för det kostnadsfria format som kan konfigureras från 1.x-versioner. Dessutom har användningen av väljare för att skicka data i URL-adresser ersatts med suffix.
+>Sedan version 2.0.0 av AEM CIF Core Components finns det bara fördefinierade url-format i URL-providerkonfigurationen, i stället för det kostnadsfria format som kan konfigureras från 1.x-versioner. Dessutom har användningen av väljare för att skicka data i URL-adresser ersatts med suffix.
 
 ### URL-format för produktsida {#product}
 
@@ -58,7 +58,7 @@ Med exempeldata ovan ser en produktvariant-URL som är formaterad med standardfo
 
 ### URL-format för kategorisida {#product-list}
 
-Detta konfigurerar URL:erna för kategorierna eller produktlistsidorna och stöder följande alternativ:
+Detta konfigurerar URL:erna för kategori- eller produktlistsidorna och stöder följande alternativ:
 
 * `{{page}}.html/{{url_path}}.html` (standard)
 * `{{page}}.html/{{url_key}}.html`
@@ -73,7 +73,7 @@ Med exempeldata ovan ser en kategorisidas URL-adress formaterad med standardform
 
 >[!NOTE]
 > 
-> The `url_path` är en sammanfogning av `url_keys` för en produkts eller kategoris överordnade och produkten eller kategorin `url_key` avgränsad med `/` snedstreck.
+>The `url_path` är en sammanfogning av `url_keys` för en produkts eller kategoris överordnade och produkten eller kategorin `url_key` avgränsad med `/` snedstreck.
 
 ### Specifik kategori-/produktsida {#specific-pages}
 

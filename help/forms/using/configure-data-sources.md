@@ -10,7 +10,7 @@ discoiquuid: 9d78a6dc-fc9c-415b-b817-164fe6648b30
 docset: aem65
 feature: Form Data Model
 exl-id: 7a1d9d57-66f4-4f20-91c2-ace5a71a52f2
-source-git-commit: 98854fa3b852f511cf95adc13b945c06b1afff96
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '1834'
 ht-degree: 0%
@@ -190,7 +190,7 @@ En OData-tjänst identifieras av tjänstens rot-URL. Om du vill konfigurera en O
 
 >[!NOTE]
 >
-> Formulärdatamodellen stöder [OData version 4](https://www.odata.org/documentation/).
+>Formulärdatamodellen stöder [OData version 4](https://www.odata.org/documentation/).
 >Stegvisa anvisningar om hur du konfigurerar Microsoft Dynamics 365, online eller lokalt, finns i [Konfiguration av Microsoft Dynamics OData](/help/forms/using/ms-dynamics-odata-configuration.md).
 
 1. Gå till **[!UICONTROL Tools > Cloud Services > Data Sources]**. Tryck för att välja den mapp där du vill skapa en molnkonfiguration.

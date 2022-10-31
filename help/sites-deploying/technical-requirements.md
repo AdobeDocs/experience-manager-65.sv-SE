@@ -6,7 +6,7 @@ seo-description: A list of the supported client and server platforms for AEM.
 content-type: reference
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 9a74a92262a1ee8dd651965b3a770c4c843f7980
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '3452'
 ht-degree: 0%
@@ -487,18 +487,18 @@ För Windows x86:
 
 >[!NOTE]
 >
-> PDF Generator stöder endast engelska, franska, tyska och japanska versioner av de operativsystem och program som stöds.
+>PDF Generator stöder endast engelska, franska, tyska och japanska versioner av de operativsystem och program som stöds.
 >
-> Dessutom:
+>Dessutom:
 >
-> * PDF Generator kräver 32-bitarsversionen av [Acrobat 2020 Classic track version 20.004.30006](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html) eller Acrobat 2017 version 17.011.30078 för konverteringen.
-> * PDF Generator-konverteringar för OpenOffice stöds bara i Windows och Linux.
-> * PDF Generator stöder endast 32-bitarsversionen av Microsoft Office Professional Plus och andra program som krävs för konvertering i Windows.
-> * PDF Generator stöder 32- och 64-bitarsversionerna av OpenOffice i Linux.
-> * PDF Generator stöder inte Microsoft Office 365.
-> * Funktionerna OCR PDF, Optimize PDF och Export PDF stöds endast i Windows.
-> * En version av Acrobat medföljer AEM Forms för att aktivera PDF Generator-funktionaliteten. Programmeringsversionen ska endast användas med AEM Forms under AEM Forms-licensens löptid, för användning med AEM Forms PDF Generator. Mer information finns i AEM Forms produktbeskrivning för din distribution ([Lokal](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html) eller [Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))
-> * PDF Generator-tjänsten stöder inte Microsoft Windows 10.
+>* PDF Generator kräver 32-bitarsversionen av [Acrobat 2020 Classic track version 20.004.30006](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html) eller Acrobat 2017 version 17.011.30078 för konverteringen.
+>* PDF Generator-konverteringar för OpenOffice stöds bara i Windows och Linux.
+>* PDF Generator stöder endast 32-bitarsversionen av Microsoft Office Professional Plus och andra program som krävs för konvertering i Windows.
+>* PDF Generator stöder 32- och 64-bitarsversionerna av OpenOffice i Linux.
+>* PDF Generator stöder inte Microsoft Office 365.
+>* Funktionerna OCR PDF, Optimize PDF och Export PDF stöds endast i Windows.
+>* En version av Acrobat medföljer AEM Forms för att aktivera PDF Generator-funktionaliteten. Programmeringsversionen ska endast användas med AEM Forms under AEM Forms-licensens löptid, för användning med AEM Forms PDF Generator. Mer information finns i AEM Forms produktbeskrivning för din distribution ([Lokal](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html) eller [Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))
+>* PDF Generator-tjänsten stöder inte Microsoft Windows 10.
 >
 
 

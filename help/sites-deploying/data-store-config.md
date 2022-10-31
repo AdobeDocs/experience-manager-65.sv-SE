@@ -6,7 +6,7 @@ topic-tags: deploying
 docset: aem65
 feature: Configuring
 exl-id: c1c90d6a-ee5a-487d-9a8a-741b407c8c06
-source-git-commit: bb8dbb9069c4575af62a4d0b21195cee75944fea
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '3583'
 ht-degree: 1%
@@ -493,11 +493,12 @@ Du kan köra skräpinsamling för datalager genom att:
 >När du utför skräpinsamling i ett klustrat eller delat datalager (med mongo- eller segmentmål) kan loggen visa varningar om att vissa blob-ID inte kan tas bort. Detta beror på att blob-ID:n som tagits bort i en tidigare skräpinsamling felaktigt refereras igen av andra kluster eller delade noder som inte har information om ID-borttagningar. När skräpinsamlingen utförs loggas därför en varning när den försöker ta bort ett ID som redan har tagits bort i den senaste körningen. Det här beteendet påverkar inte prestanda eller funktioner.
 
 >[!NOTE]
-> Om du använder en delad datalagerinställning och datalagrets skräpinsamling är inaktiverad kan rensningen av Lucene-binärfilen plötsligt öka diskutrymmet som används. För att undvika detta måste du inaktivera BlobTracker på alla författare- och publiceringsinstanser enligt följande:
 >
-> 1. Stoppa AEM.
-> 2. Lägg till `blobTrackSnapshotIntervalInSecs=L"0"` -parametern i `crx-quickstart/install/org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config` -fil. Den här parametern kräver Oak 1.12.0, 1.10.2 eller senare.
-> 3. Starta om AEM.
+>Om du använder en delad datalagerinställning och datalagrets skräpinsamling är inaktiverad kan rensningen av Lucene-binärfilen plötsligt öka diskutrymmet som används. För att undvika detta måste du inaktivera BlobTracker på alla författare- och publiceringsinstanser enligt följande:
+>
+>1. Stoppa AEM.
+>2. Lägg till `blobTrackSnapshotIntervalInSecs=L"0"` -parametern i `crx-quickstart/install/org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config` -fil. Den här parametern kräver Oak 1.12.0, 1.10.2 eller senare.
+>3. Starta om AEM.
 
 
 Med senare versioner av AEM kan skräpinsamlingen i datalagret även köras på datalager som delas av mer än en databas. Gör så här för att kunna köra skräpinsamling i datalager på ett delat datalager:

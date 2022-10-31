@@ -12,7 +12,7 @@ discoiquuid: 5d2364b7-4497-4f8b-85ef-6e780bfb8c36
 docset: aem65
 feature: Configuring
 exl-id: d3375935-090d-4052-8234-68ef4ddbab6a
-source-git-commit: b9a3db4144a571291bdf1c9a9f0e841f284df0c8
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '5972'
 ht-degree: 0%
@@ -448,11 +448,12 @@ I vissa fall kanske du vill skapa en anpassad loggfil med en annan loggnivå. Du
    >| `'.'yyyy-MM-dd-HH-mm` | Rotation i början av varje minut. |
    >
    >Obs! När du anger tid/datum:
-   > 1. Du bör&quot;escape&quot;-text inom ett par enkla citattecken (&#39; &#39;);
-      >
-      >     om du vill undvika att vissa tecken tolkas som mönsterbokstäver.
    >
-   >  1. Använd bara tecken som är tillåtna för ett giltigt filnamn var som helst i alternativet.
+   >1. Du bör&quot;escape&quot;-text inom ett par enkla citattecken (&#39; &#39;);
+      >
+      >    om du vill undvika att vissa tecken tolkas som mönsterbokstäver.
+   >
+   >1. Använd bara tecken som är tillåtna för ett giltigt filnamn var som helst i alternativet.
 
 
 1. Läs den nya loggfilen med det verktyg du valt.

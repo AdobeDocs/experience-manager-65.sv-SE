@@ -4,9 +4,9 @@ description: Här hittar du de bästa arbetssätten som skapats av Adobe teknike
 topic-tags: site-features, best-practices
 feature: Multi Site Manager
 exl-id: 3fedc1ba-64f5-4fbe-9ee5-9b96b75dda58
-source-git-commit: c6ccd204dbd514d6195424aff495bc38f1f31bce
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
-source-wordcount: '1617'
+source-wordcount: '1616'
 ht-degree: 0%
 
 ---
@@ -56,9 +56,9 @@ Om det inte finns någon referens till en ritningskonfiguration kan rollouts bar
 
 När du skapar en ny webbplats med en live-kopia är det fördelaktigt att skapa designkonfigurationer för att säkerställa att hela MSM-funktionsuppsättningen är tillgänglig.
 
->[OBS!]
+>[!NOTE]
 >
-> Observera att CUG-filer på fliken Behörigheter inte kan rullas ut till Live-kopior från utkast. Se till att du undviker detta när du konfigurerar Live Copy.
+>Observera att CUG-filer på fliken Behörigheter inte kan rullas ut till Live-kopior från utkast. Se till att du undviker detta när du konfigurerar Live Copy.
 
 ## Komponenter- och behållarsynkronisering {#components-and-container-synchronization}
 

@@ -1,7 +1,8 @@
 ---
 title: AEM Headless Developer Journey
 description: AEM Headless CMS Documentation. Börja här för en guidad resa med de kraftfulla och flexibla headless-funktionerna i AEM, deras funktioner och hur du kan utnyttja dem i ditt första utvecklingsprojekt.
-source-git-commit: 919cef01470dd930884e97b15f2d40a38872c0d0
+exl-id: f24fb308-daa7-426f-ba45-37a236b5a500
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '1212'
 ht-degree: 1%
@@ -26,13 +27,13 @@ Den här guiden leder dig igenom de mest rubrikfria implementeringsämnena i AEM
 
 [En dokumentationsresa](/help/journey-documentation/home.md) binder samman många olika och kanske komplicerade ämnen och funktioner genom att tillhandahålla en berättarröst som hjälper läsaren, som kan vara ny att AEM, förstå och lösa ett affärsproblem från början till slut, samtidigt som man antar minimala tidigare ämnesområden eller AEM kunskap.
 
-Dokumentation Journeys bygger på principer för god praxis, grundade på Adobe senaste forskning, beprövade implementeringserfarenheter från Adobe konsulter och återkoppling från kundprojekt.
+Dokumentation Journeys bygger på principer för god praxis, grundade på Adobe senaste forskning, beprövade implementeringserfarenheter från Adobe-konsulter och återkoppling från kundprojekt.
 
 Om du vill veta hur Adobe rekommenderar att man löser problem med headless business case med AEM, [AEM Headless Journeys](/help/journey-headless/home.md) var du ska börja.
 
 >[!TIP]
 >
-> Om du föredrar att **lära sig göra** och tekniskt sett finns med på självstudiekurserna AEM Headless, som är ordnade i API och ramverk och finns i [Avsnittet Ytterligare resurser](#additional-resources) i slutet av det här dokumentet.
+>Om du föredrar att **lära sig göra** och tekniskt sett finns med på självstudiekurserna AEM Headless, som är ordnade i API och ramverk och finns i [Avsnittet Ytterligare resurser](#additional-resources) i slutet av det här dokumentet.
 
 ## Målgrupp {#audience}
 

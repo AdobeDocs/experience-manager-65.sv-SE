@@ -12,7 +12,7 @@ discoiquuid: f69db472-9f5c-4c0d-9292-2920ef69feeb
 docset: aem65
 feature: Tagging
 exl-id: 53a37449-ef87-4fa6-82de-88fdc24cf988
-source-git-commit: 4db9279f2d15f2e08939ba453ae8ddbbc3c3d69f
+source-git-commit: efb4f9f8a97baf8d3d02160226e4f4d3f8f64c89
 workflow-type: tm+mt
 source-wordcount: '1883'
 ht-degree: 0%
@@ -183,7 +183,6 @@ The `cq:OwnerTaggable` mixin, som ärver från `cq:Taggable`, är avsedd att ind
 >* sidor ( `cq:Page`) där `jcr:content`noden är av typen `cq:PageContent` som innehåller `cq:Taggable` blanda.
 >
 >* resurser ( `cq:Asset`) där `jcr:content/metadata` noden har alltid `cq:Taggable` blanda.
-
 >
 
 
@@ -231,8 +230,9 @@ Ett specialvärde för `cq:movedTo` egenskapen är `nirvana`: används när tagg
    >[!NOTE]
    >
    >The `cq:movedTo` egenskapen läggs bara till i den flyttade eller sammanfogade taggen om något av dessa villkor uppfylls:
-   > 1. Taggen används i innehåll (vilket betyder att den har en referens) ELLER
-   > 1. Taggen har underordnade objekt som redan har flyttats.
+   >
+   >1. Taggen används i innehåll (vilket betyder att den har en referens) ELLER
+   >1. Taggen har underordnade objekt som redan har flyttats.
 
 
 * `cq:backlinks` behåller referenserna i den andra riktningen, dvs. en lista över alla taggar som har flyttats till eller sammanfogats med tagg B. Detta krävs oftast för att behålla `cq:movedTo`egenskaperna är uppdaterade även när tagg B flyttas/sammanfogas/tas bort eller när tagg B aktiveras, och då måste även alla dess bakåttaggar aktiveras.
@@ -241,8 +241,8 @@ Ett specialvärde för `cq:movedTo` egenskapen är `nirvana`: används när tagg
    >
    >The `cq:backlinks` egenskapen läggs bara till i den flyttade eller sammanfogade taggen om något av dessa villkor uppfylls:
    >
-   > 1. Taggen används i innehåll (vilket innebär att den har en referens) ELLER >
-   > 1. Taggen har underordnade objekt som redan har flyttats.
+   >1. Taggen används i innehåll (vilket betyder att den har en referens) ELLER
+   >1. Taggen har underordnade objekt som redan har flyttats.
 
 
 * Läsa en `cq:tags` egenskapen för en innehållsnod omfattar följande matchning:

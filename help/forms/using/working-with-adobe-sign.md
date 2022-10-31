@@ -11,7 +11,7 @@ discoiquuid: f79828d8-2230-4477-8ffa-eeb6a0413acd
 docset: aem65
 feature: Adaptive Forms, Acrobat Sign
 exl-id: a8decba9-229d-40a2-992a-3cc8ebefdd6d
-source-git-commit: 28d092a7713438c27213766f0bb702b699305b88
+source-git-commit: 4714554609a10e58b1c7141696d694fac46887a6
 workflow-type: tm+mt
 source-wordcount: '3624'
 ht-degree: 0%
@@ -295,15 +295,17 @@ Utför följande steg för att konfigurera signaturstegskomponenten:
 
    >[!NOTE]
    >
-   > * När du drar och släpper **[!UICONTROL Signature Step]** -komponenten till formuläret, **[!UICONTROL Is the signer and the person filling the form same?]** option is automatically set to **Ja**. Det krävs för att formuläret ska fungera.
+   >* När du drar och släpper **[!UICONTROL Signature Step]** -komponenten till formuläret, **[!UICONTROL Is the signer and the person filling the form same?]** option is automatically set to **Ja**. Det krävs för att formuläret ska fungera.
+   >* Använd komponenten Sammanfattningssteg efter signatursteget för att få en så bra upplevelse som möjligt. Sammanfattningssteget skickar automatiskt och omedelbart formuläret när du har signerat ett formulär i signeringssteget. Om du inte använder sammanfattningssteget aktiveras en automatisk överföring endast efter det intervall som angetts med [Konfigurationstjänst för Adobe Sign](../../forms/using/adobe-sign-integration-adaptive-forms.md#configure-adobe-sign-scheduler-to-sync-the-signing-status).
+
    >
-   > * Använd komponenten Sammanfattningssteg efter signatursteget för att få en så bra upplevelse som möjligt. Sammanfattningssteget skickar automatiskt och omedelbart formuläret när du har signerat ett formulär i signeringssteget. Om du inte använder sammanfattningssteget aktiveras en automatisk överföring endast efter det intervall som angetts med [Konfigurationstjänst för Adobe Sign](../../forms/using/adobe-sign-integration-adaptive-forms.md#configure-adobe-sign-scheduler-to-sync-the-signing-status).
-      > Några bra strategier är:
-   > * Anpassad formulärpanel som innehåller signeringssteget finns alltid i den sista eller andra panelen i ett anpassat formulär. Det kan bara vara den andra sista panelen när den sista panelen innehåller steget Sammanfattning.
-   > * Panelen som innehåller signatur- eller sammanfattningssteget får inte innehålla några andra komponenter.
-   > * Anpassningsbara formulär som innehåller signatursteget kan inte ha en skicka-knapp.
-   > * Inlämningen av anpassade formulär som innehåller signeringssteget hanteras via en bakgrundstjänst eller sammanfattningssteget. Om det finns en konfigurerad signerare som också fyller i formuläret, är fördelen med att hantera den adaptiva formuläröverföringen med steget Sammanfattning att den omedelbart utvärderar att signeraren har signerat formuläret och anropar åtgärden skicka. En bakgrundstjänst tar längre tid att utvärdera om alla konfigurerade signerare har signerat formuläret och fördröjer överföringen av det adaptiva formuläret.
-   > * Utforma formuläret så att användaren inte kan navigera tillbaka från en panel som innehåller signatur- eller sammanfattningssteget.
+   >Några bra strategier är:
+   >
+   >* Anpassad formulärpanel som innehåller signeringssteget finns alltid i den sista eller andra panelen i ett anpassat formulär. Det kan bara vara den andra sista panelen när den sista panelen innehåller steget Sammanfattning.
+   >* Panelen som innehåller signatur- eller sammanfattningssteget får inte innehålla några andra komponenter.
+   >* Anpassningsbara formulär som innehåller signatursteget kan inte ha en skicka-knapp.
+   >* Inlämningen av anpassade formulär som innehåller signeringssteget hanteras via en bakgrundstjänst eller sammanfattningssteget. Om det finns en konfigurerad signerare som också fyller i formuläret, är fördelen med att hantera den adaptiva formuläröverföringen med steget Sammanfattning att den omedelbart utvärderar att signeraren har signerat formuläret och anropar åtgärden skicka. En bakgrundstjänst tar längre tid att utvärdera om alla konfigurerade signerare har signerat formuläret och fördröjer överföringen av det adaptiva formuläret.
+   >* Utforma formuläret så att användaren inte kan navigera tillbaka från en panel som innehåller signatur- eller sammanfattningssteget.
 
 
 

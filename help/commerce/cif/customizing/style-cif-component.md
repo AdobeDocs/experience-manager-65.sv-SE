@@ -9,7 +9,7 @@ feature: Commerce Integration Framework
 kt: 3456
 thumbnail: 3456-style-cif.jpg
 exl-id: 04d553be-c67d-4ecb-a23f-2694c2adfc2b
-source-git-commit: dceb187ba28ad7c377e98d29d6c815fe37e23077
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '2567'
 ht-degree: 0%
@@ -22,7 +22,7 @@ The [CIF Venia Project](https://github.com/adobe/aem-cif-guides-venia) är en re
 
 >[!TIP]
 >
-> Använd [AEM](https://github.com/adobe/aem-project-archetype) när du startar en egen implementering av e-handeln.
+>Använd [AEM](https://github.com/adobe/aem-project-archetype) när du startar en egen implementering av e-handeln.
 
 ## Vad du ska bygga
 
@@ -40,7 +40,7 @@ Vi klonar [Venedig-projektet](https://github.com/adobe/aem-cif-guides-venia) och
 
 >[!NOTE]
 >
-> **Du kan använda ett befintligt projekt** (baserat på AEM Project Archetype med CIF inkluderat) och hoppa över det här avsnittet.
+>**Du kan använda ett befintligt projekt** (baserat på AEM Project Archetype med CIF inkluderat) och hoppa över det här avsnittet.
 
 1. Kör följande Git-kommando för att klona projektet:
 
@@ -137,7 +137,7 @@ Gör sedan en liten ändring av Teaser-stilen för att se hur `ui.frontend` modu
 
    >[!NOTE]
    >
-   > Filer som detta ignoreras från källkontrollen eftersom de ska genereras under byggtiden.
+   >Filer som detta ignoreras från källkontrollen eftersom de ska genereras under byggtiden.
 
 1. Inspect filen `ui.frontend/clientlib.config.js`.
 
@@ -168,7 +168,7 @@ Gör sedan en liten ändring av Teaser-stilen för att se hur `ui.frontend` modu
 
    >[!NOTE]
    >
-   > Filer som detta ignoreras också i källkontrollen eftersom de ska genereras under byggtiden.
+   >Filer som detta ignoreras också i källkontrollen eftersom de ska genereras under byggtiden.
 
 1. Kontrollera sedan de andra klientbiblioteken som genereras av projektet:
 
@@ -190,7 +190,7 @@ Gör sedan en liten ändring av Teaser-stilen för att se hur `ui.frontend` modu
 
    >[!NOTE]
    >
-   > Endast basbiblioteken är&quot;hårdkodade&quot; som en del av sidskripten. `venia.site` tas inte med i de här filerna utan inkluderas i sidmallen för större flexibilitet. Detta kommer att inspekteras senare.
+   >Endast basbiblioteken är&quot;hårdkodade&quot; som en del av sidskripten. `venia.site` tas inte med i de här filerna utan inkluderas i sidmallen för större flexibilitet. Detta kommer att inspekteras senare.
 
 1. Bygg och distribuera hela projektet till en lokal instans av AEM:
 
@@ -265,7 +265,7 @@ Det finns flera alternativ för hur du inkluderar ett klientbibliotek. Kontrolle
 
    >[!NOTE]
    >
-   > Om du vill visa alla tillgängliga mallar från AEM startskärmen går du till **verktyg** > **Allmänt** > **Mallar**.
+   >Om du vill visa alla tillgängliga mallar från AEM startskärmen går du till **verktyg** > **Allmänt** > **Mallar**.
 
 1. I det övre vänstra hörnet väljer du **Sidinformation** ikon och klicka **Sidprofil**.
 
@@ -328,7 +328,7 @@ Webbpack-dev-server-proxies bilder och en del CSS/JavaScript från den lokala in
 
    >[!CAUTION]
    >
-   > Om du får ett Sass-relaterat fel stoppar du servern och kör kommandot `npm rebuild node-sass` och upprepa stegen ovan. Detta kan inträffa om du har en annan version av `npm` och `node` anges sedan i projektet `aem-cif-guides-venia/pom.xml`.
+   >Om du får ett Sass-relaterat fel stoppar du servern och kör kommandot `npm rebuild node-sass` och upprepa stegen ovan. Detta kan inträffa om du har en annan version av `npm` och `node` anges sedan i projektet `aem-cif-guides-venia/pom.xml`.
 
 1. Navigera till [http://localhost:8080/](http://localhost:8080/) på en ny flik med samma webbläsare som en inloggad instans av AEM. Webbsidan Venia finns på webbpack-dev-server:
 

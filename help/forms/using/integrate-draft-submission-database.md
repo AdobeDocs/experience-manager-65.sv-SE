@@ -1,23 +1,22 @@
 ---
 title: Exempel för att integrera komponent för utkast och inlämning med databas
-seo-title: Exempel för att integrera komponent för utkast och inlämning med databas
+seo-title: Sample for integrating drafts & submissions component with database
 description: Referera till implementering av anpassade data- och metadatatjänster för att integrera komponenter för utkast och inlämning i en databas.
-seo-description: Referera till implementering av anpassade data- och metadatatjänster för att integrera komponenter för utkast och inlämning i en databas.
+seo-description: Reference implementation of customized data and metadata services to integrate drafts and submissions component with a database.
 uuid: ccdb900e-2c2e-4ed3-8a88-5c97aa0092a1
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 discoiquuid: da96d3d8-a338-470a-8d20-55ea39bd15bf
-translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+exl-id: 2e4f8f51-df02-4bbb-99bb-30181facd1e0
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
-source-wordcount: '1439'
+source-wordcount: '1413'
 ht-degree: 1%
 
 ---
 
-
-# Exempel för att integrera komponent för utkast och inskickning med databas {#sample-for-integrating-drafts-submissions-component-with-database}
+# Exempel för att integrera komponent för utkast och inlämning med databas {#sample-for-integrating-drafts-submissions-component-with-database}
 
 ## Exempelöversikt {#sample-overview}
 
@@ -28,27 +27,27 @@ Exemplet, som behandlas i det här dokumentet, är en referensimplementering av 
 >[!NOTE]
 >
 >* De exempel och konfigurationer som beskrivs i det här dokumentet är enligt MySQL 5.6.24 och du måste ersätta dem på lämpligt sätt för ditt databassystem.
->* Kontrollera att du har installerat den senaste versionen av AEM Forms tilläggspaket. En lista över tillgängliga paket finns i artikeln [AEM Forms-releaser](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html).
+>* Kontrollera att du har installerat den senaste versionen av AEM Forms tilläggspaket. En lista över tillgängliga paket finns i [AEM Forms](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) artikel.
 >* Exempelpaketet fungerar bara med adaptiva Forms-sändningsåtgärder.
 
 
-## Konfigurera och konfigurera {#set-up-and-configure-the-sample}-exemplet
+## Konfigurera och konfigurera exemplet {#set-up-and-configure-the-sample}
 
 Utför följande steg på alla författare- och publiceringsinstanser för att installera och konfigurera exemplet:
 
-1. Hämta följande **aem-fp-db-integration-sample-pkg-6.1.2.zip**-paket till filsystemet.
+1. Hämta följande **aem-fp-db-integration-sample-pkg-6.1.2.zip** till filsystemet.
 
    Exempelpaket för databasintegrering
 
-   [Hämta fil](assets/aem-fp-db-integration-sample-pkg-6.1.2.zip)
+[Hämta fil](assets/aem-fp-db-integration-sample-pkg-6.1.2.zip)
 
-1. Gå till AEM på https://[*host*]:[*port*]/crx/packmgr/.
+1. Gå till AEM på https://[*värd*]:[*port*]/crx/packmgr/.
 1. Klicka på **[!UICONTROL Upload Package]**.
 
-1. Bläddra till **aem-fp-db-integration-sample-pkg-6.1.2.zip**-paketet och klicka på **[!UICONTROL OK]**.
-1. Klicka på **[!UICONTROL Install]** bredvid paketet för att installera paketet.
+1. Bläddra för att välja **aem-fp-db-integration-sample-pkg-6.1.2.zip** paketera och klicka på **[!UICONTROL OK]**.
+1. Klicka **[!UICONTROL Install]** till bredvid paketet för att installera paketet.
 1. Gå till **[!UICONTROL AEM Web Console Configuration]**
-på https://[*host*]:[*port*]/system/console/configMgr.
+på https://[*värd*]:[*port*]/system/console/configMgr.
 1. Klicka för att öppna **[!UICONTROL Forms Portal Draft and Submission Configuration]** i redigeringsläge.
 
 1. Ange värdena för egenskaperna enligt följande tabell:
@@ -64,7 +63,7 @@ på https://[*host*]:[*port*]/system/console/configMgr.
 
    >[!NOTE]
    >
-   >Tjänsterna matchas av deras namn som anges som värde för `aem.formsportal.impl.prop`-nyckeln enligt följande:
+   >Tjänsterna löses av deras namn som anges som värde för `aem.formsportal.impl.prop` enligt följande:
 
    ```java
    @Service(value = {SubmitDataService.class, DraftDataService.class})
@@ -99,15 +98,15 @@ på https://[*host*]:[*port*]/system/console/configMgr.
   </tr>
   <tr>
    <td>Datakällans namn</td>
-   <td><p>Ett datakällnamn för filtrering av drivrutiner från datakällpoolen</p> <p><strong>Obs!  </strong><em>I exempelimplementeringen används FormsPortal som datakällnamn.</em></p> </td>
+   <td><p>Ett datakällnamn för filtrering av drivrutiner från datakällpoolen</p> <p><strong>Obs! </strong><em>I exempelimplementeringen används FormsPortal som datakällnamn.</em></p> </td>
   </tr>
   <tr>
    <td>JDBC-drivrutinsklass</td>
    <td>com.mysql.jdbc.Driver</td>
   </tr>
   <tr>
-   <td>JDBC-anslutnings-URI<br /> </td>
-   <td>jdbc:mysql://[<em>värd</em>]:[<em>port</em>]/[<em>schemanamn</em>]</td>
+   <td>URI för JDBC-anslutning<br /> </td>
+   <td>jdbc:mysql://[<em>värd</em>]:[<em>port</em>]/[<em>schema_name</em>]</td>
   </tr>
   <tr>
    <td>Användarnamn</td>
@@ -162,11 +161,8 @@ på https://[*host*]:[*port*]/system/console/configMgr.
 
 >[!NOTE]
 >
-> * JDBC-drivrutinen för MySQL ingår inte i exemplet. Se till att du har etablerat dig för den och ange den information som krävs för att konfigurera JDBC-anslutningspoolen.
-> * Peka författaren och publicera instanser för att använda samma databas. Värdet för URI-fältet för JDBC-anslutningen måste vara samma för alla författare- och publiceringsinstanser.
-
->
-
+>* JDBC-drivrutinen för MySQL ingår inte i exemplet. Se till att du har etablerat dig för den och ange den information som krävs för att konfigurera JDBC-anslutningspoolen.
+>* Peka författaren och publicera instanser för att använda samma databas. Värdet för URI-fältet för JDBC-anslutningen måste vara samma för alla författare- och publiceringsinstanser.
 
 
 1. Låt andra konfigurationer vara som de är och klicka på **[!UICONTROL Save]**.
@@ -309,43 +305,43 @@ Exempelimplementeringen är nu konfigurerad, som du kan använda för att lista 
 
 Utför följande steg på alla författare- och publiceringsinstanser för att installera filen mysql-connector-java-5.1.39-bin.jar:
 
-1. Navigera till `https://'[server]:[port]'/system/console/depfinder` och sök efter paketet com.mysql.jdbc.
+1. Navigera till `https://'[server]:[port]'/system/console/depfinder` och söka efter paketet com.mysql.jdbc.
 1. I kolumnen Exporterad av kontrollerar du om paketet exporteras av något paket.
 
    Fortsätt om paketet inte exporteras av något paket.
 
-1. Navigera till `https://'[server]:[port]'/system/console/bundles` och klicka på **[!UICONTROL Install/Update]**.
-1. Klicka på **[!UICONTROL Choose File]** och bläddra till filen mysql-connector-java-5.1.39-bin.jar. Markera även kryssrutorna **[!UICONTROL Start Bundle]** och **[!UICONTROL Refresh Packages]**.
+1. Navigera till `https://'[server]:[port]'/system/console/bundles` och klicka **[!UICONTROL Install/Update]**.
+1. Klicka **[!UICONTROL Choose File]** och bläddra till filen mysql-connector-java-5.1.39-bin.jar. Välj även **[!UICONTROL Start Bundle]** och **[!UICONTROL Refresh Packages]** kryssrutor.
 1. Klicka på **[!UICONTROL Install or Update]**. Starta om servern när du är klar.
-1. (*Endast Windows*) Inaktivera systemets brandvägg för ditt operativsystem.
+1. (*Endast Windows*) Stäng av operativsystemets brandvägg.
 
-## Exempelkod för formulärportaldata och metadatatjänsten {#sample-code-for-forms-portal-data-and-metadata-service}
+## Exempelkod för formulärportaldata och metadatatjänst {#sample-code-for-forms-portal-data-and-metadata-service}
 
-Följande zip innehåller `FormsPortalSampleDataServiceImpl` och `FormsPortalSampleMetadataServiceImpl` (implementeringsklasser) för gränssnitt för data- och metadatatjänster. Dessutom innehåller den alla klasser som krävs för kompilering av ovannämnda implementeringsklasser.
+Följande ZIP innehåller `FormsPortalSampleDataServiceImpl` och `FormsPortalSampleMetadataServiceImpl` (implementeringsklasser) för gränssnitt för data- och metadatatjänster. Dessutom innehåller den alla klasser som krävs för kompilering av ovannämnda implementeringsklasser.
 
 [Hämta fil](assets/sample_package.zip)
 
-## Verifiera längden på filnamnet {#verify-length-of-the-file-name}
+## Verifiera längden på filnamnet  {#verify-length-of-the-file-name}
 
 Databasimplementeringen av Forms Portal använder ytterligare metadatatabell. Tabellen har en sammansatt primärnyckel baserad på kolumnerna Key och id i tabellen. MySQL tillåter primärnycklar upp till 255 tecken. Du kan använda följande valideringsskript på klientsidan för att kontrollera längden på filnamnet som är kopplat till filwidgeten. Valideringen körs när en fil bifogas. Skriptet som ges i följande procedur visar ett meddelande när filnamnet är större än 150 (inklusive filtillägg). Du kan ändra skriptet för att kontrollera om det innehåller ett annat antal tecken.
 
-Utför följande steg för att skapa [ett klientbibliotek](/help/sites-developing/clientlibs.md) och använda skriptet:
+Utför följande steg för att skapa [ett klientbibliotek](/help/sites-developing/clientlibs.md) och använd skriptet:
 
 1. Logga in på CRXDE och navigera till /etc/clientlibs/
-1. Skapa en nod av typen **cq:ClientLibraryFolder** och ange namnet på noden. Till exempel, `validation`.
+1. Skapa en nod av typen **cq:ClientLibraryFolder** och ange nodens namn. Till exempel, `validation`.
 
    Klicka på **[!UICONTROL Save All]**.
 
-1. Högerklicka på noden, klicka på **[!UICONTROL create new file]** och skapa en fil med filnamnstillägget .txt. Du kan till exempel `js.txt`lägga till följande kod i den nyligen skapade TXT-filen och klicka på **[!UICONTROL Save All]**.
+1. Högerklicka på noden och klicka på **[!UICONTROL create new file]** och skapa en fil med tillägget .txt. Till exempel: `js.txt`Lägg till följande kod i den nyligen skapade TXT-filen och klicka på **[!UICONTROL Save All]**.
 
    ```javascript
    #base=util
     util.js
    ```
 
-   I ovanstående kod är `util` namnet på mappen och `util.js` namnet på filen i mappen `util`. Mappen `util` och filen `util.js` skapas i följande steg.
+   I ovanstående kod `util` är namnet på mappen och `util.js` filens namn i `util` mapp. The `util` mapp och `util.js` filen skapas i följande steg.
 
-1. Högerklicka på noden `cq:ClientLibraryFolder` som skapades i steg 2 och välj Skapa > Skapa mapp. Skapa en mapp med namnet `util`. Klicka på **[!UICONTROL Save All]**. Högerklicka på mappen `util` och välj Skapa > Skapa fil. Skapa en fil med namnet `util.js`. Klicka på **[!UICONTROL Save All]**.
+1. Högerklicka på `cq:ClientLibraryFolder` som skapades i steg 2 väljer du Skapa > Skapa mapp. Skapa en mapp med namnet `util`. Klicka på **[!UICONTROL Save All]**. Högerklicka på `util` väljer du Skapa > Skapa fil. Skapa en fil med namnet `util.js`. Klicka på **[!UICONTROL Save All]**.
 
 1. Lägg till följande kod i filen util.js och klicka på **[!UICONTROL Save All]**. Koden verifierar längden på filnamnet.
 
@@ -414,13 +410,12 @@ Utför följande steg för att skapa [ett klientbibliotek](/help/sites-developin
 
    * **[!UICONTROL multi option:]** Aktiverad
 
-1. Navigera till `/libs/fd/af/runtime/clientlibs/guideRuntime`och lägg till `fp.validation`-värdet till egenskapen embed.
+1. Navigera till `/libs/fd/af/runtime/clientlibs/guideRuntime`och lägg till `fp.validation` värdet till egenskapen embed.
 
-1. Navigera till /libs/fd/af/runtime/clientlibs/guideRuntimeWithXFA och lägg till `fp.validation`-värdet för att bädda in egenskapen.
+1. Navigera till /libs/fd/af/runtime/clientlibs/guideRuntimeWithXFA och lägg till `fp.validation` värde för att bädda in egenskap.
 
    >[!NOTE]
    >
    >Om du använder anpassade klientbibliotek i stället för klientbiblioteken guideRuntime och guideRuntimeWithXfa använder du kategorinamnet för att bädda in klientbiblioteket som skapas i den här proceduren i dina anpassade bibliotek som läses in vid körning.
 
-1. Klicka på **[!UICONTROL Save All.]**. När filnamnet är större än 150 tecken (inklusive filtillägg) visas ett meddelande.
-
+1. Klicka **[!UICONTROL Save All.]** När filnamnet är större än 150 tecken (inklusive filtillägg) visas nu ett meddelande.
