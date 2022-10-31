@@ -10,9 +10,9 @@ topic-tags: integration
 content-type: reference
 discoiquuid: df94dd1b-1b65-478b-a28d-81807a8084b1
 exl-id: a7281ca0-461f-4762-a631-6bb539596200
-source-git-commit: 7fed5ce55f6ee7638d2578ee7ef2d84deb24277f
+source-git-commit: 4712f57808ae769646b00d1098648686815121b6
 workflow-type: tm+mt
-source-wordcount: '1554'
+source-wordcount: '1556'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Genom att integrera AEM med Adobe Campaign kan ni hantera e-postleveranser, innehåll och formulär direkt i AEM. Konfigurationssteg i både Adobe Campaign Classic och AEM behövs för att möjliggöra dubbelriktad kommunikation mellan lösningar.
 
-Tack vare den här integreringen kan AEM och Adobe Campaign Classic användas oberoende av varandra. Marknadsförare kan skapa kampanjer och använda målinriktning i Adobe Campaign, medan innehållsskapare kan arbeta parallellt med innehållsdesign i AEM. Tack vare integreringen kan innehåll och utformning av kampanjen i AEM riktas mot och levereras av Adobe Campaign.
+Tack vare den här integreringen kan AEM och Adobe Campaign Classic användas oberoende av varandra. Marknadsförare kan skapa kampanjer och använda målinriktning i Adobe Campaign, medan innehållsskapare kan arbeta parallellt med innehållsdesign i AEM. Tack vare integreringen kan innehållet i och utformningen av kampanjen som skapats i AEM målinrikta och levereras av Adobe Campaign.
 
 ## Integreringssteg {#integration-steps}
 
@@ -68,7 +68,7 @@ The **AEM** i Adobe Campaign innehåller ett antal standardkonfigurationer som k
 
 Integrationspaketet är nu installerat.
 
-## Skapa en operator för AEM i Campaign {#create-operator}
+## Skapa operatorn för AEM i Campaign {#create-operator}
 
 Integrationspaketet skapar automatiskt `aemserver` som AEM använder för att ansluta till Adobe Campaign. Du måste definiera en säkerhetszon för den här operatorn och ange dess lösenord.
 
@@ -122,7 +122,7 @@ Integrationspaketet skapar automatiskt `aemserver` som AEM använder för att an
 
 1. Klicka **OK** för att spara lösenordet för `aemserver` -operator.
 
-## Konfigurera kampanjintegrering i AEM {#campaign-integration}
+## Konfigurera Campaign-integrering i AEM {#campaign-integration}
 
 AEM [operatorn som du redan har ställt in i Campaign](#create-operator) för att kommunicera med Campaign
 
@@ -152,7 +152,7 @@ AEM kan nu kommunicera med Adobe Campaign.
 >
 >Se till att din Adobe Campaign-server är tillgänglig via Internet. AEM har inte åtkomst till privata nätverk.
 
-## Konfigurerar replikering till AEM Publish Instance {#replication}
+## Konfigurera replikering till AEM Publish Instance {#replication}
 
 Kampanjinnehåll skapas av innehållsförfattare i AEM. Den här instansen är vanligtvis endast tillgänglig internt i din organisation. För att innehåll som bilder och resurser ska vara tillgängliga för mottagarna av kampanjen måste ni publicera det innehållet.
 
@@ -182,7 +182,7 @@ Du har konfigurerat replikering till AEM publiceringsinstans så att kampanjmott
 >
 >Välj **verktyg** > **Operationer** > **Webbkonsol** > **OSGi-konfiguration** och söka efter **AEM Campaign Integration - Configuration**. Redigera konfigurationen och ändra fältet **Offentlig URL** (`com.day.cq.mcm.campaign.impl.IntegrationConfigImpl#aem.mcm.campaign.publicUrl`).
 
-## Konfigurera AEM Externalizer {#externalizer}
+## Konfigurera AEM {#externalizer}
 
 [Externalizer](/help/sites-developing/externalizer.md) är en OSGi-tjänst i AEM som omvandlar en resurssökväg till en extern och absolut URL-adress, vilket krävs för att AEM ska kunna hantera innehåll som Campaign kan använda. Du måste konfigurera det för att Campaign-integreringen ska fungera.
 
@@ -194,12 +194,12 @@ Du har konfigurerat replikering till AEM publiceringsinstans så att kampanjmott
 
 1. Tryck eller klicka **Spara**.
 
-Du har konfigurerat Externalizer och Adobe Campaign kan inte komma åt ditt innehåll.
+Du har konfigurerat Externalizer och Adobe Campaign kan nu komma åt ditt innehåll.
 
 >[!NOTE]
 Publiceringsinstansen måste kunna nås från Adobe Campaign-servern. Om den pekar på `localhost:4503` eller en annan server som Adobe Campaign inte kan nå visas inte bilder från AEM i Adobe Campaign-konsolen.
 
-## Konfigurera användaren på AEM {#configure-user}
+## Konfigurera användaren som är fjärransluten till kampanjen i AEM {#configure-user}
 
 För att Campaign ska kunna kommunicera med AEM måste du ange ett lösenord för `campaign-remote` användare i AEM.
 
