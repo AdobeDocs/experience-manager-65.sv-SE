@@ -12,7 +12,7 @@ role: User, Admin
 exl-id: d4507059-a54d-4dc9-a263-e55dfa27eeb1
 feature: Troubleshooting
 mini-toc-levels: 3
-source-git-commit: d5824078ca3e1ff2b48874446aaebe3fdd60cfdc
+source-git-commit: 9c3df2491f99fe31e4b64b47442dd583af06974e
 workflow-type: tm+mt
 source-wordcount: '1378'
 ht-degree: 0%
@@ -48,7 +48,7 @@ Följande resursegenskaper kan granskas i CRXDE Lite för att bekräfta att synk
 
 | **Egenskap** | **Exempel** | **Beskrivning** |
 |---|---|---|
-| `<object_node>/jcr:content/metadata/dam:scene7ID` | **`a|364266`** | En allmän indikator på att noden är länkad till Dynamic Media. |
+| `<object_node>/jcr:content/metadata/dam:scene7ID` | **`a\|364266`** | En allmän indikator på att noden är länkad till Dynamic Media. |
 | `<object_node>/jcr:content/metadata/dam:scene7FileStatus` | **PublishComplete** eller feltext | Status för överföring av resurs till Dynamic Media. |
 | `<object_node>/jcr:content/metadata/dam:scene7File` | **myCompany/myAssetID** | Måste fyllas i för att URL:er ska kunna genereras till Dynamic Media fjärråtkomst. |
 | `<object_node>/jcr:content/dam:lastSyncStatus` | **framgång** eller **misslyckades:`<error text>`** | Synkroniseringsstatus för uppsättningar (snurra uppsättningar, bilduppsättningar o.s.v.), bildförinställningar, visningsförinställningar, uppdateringar av bildscheman för en resurs eller bilder som har redigerats. |
