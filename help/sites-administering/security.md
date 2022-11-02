@@ -1,8 +1,8 @@
 ---
 title: Användaradministration och -säkerhet
-seo-title: Användaradministration och -säkerhet
+seo-title: User Administration and Security
 description: Läs mer om användaradministration och säkerhet i AEM.
-seo-description: Läs mer om användaradministration och säkerhet i AEM.
+seo-description: Learn about User Administration and Security in AEM.
 uuid: 4512c0bf-71bf-4f64-99f6-f4fa5a61d572
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,10 +12,9 @@ discoiquuid: e72da81b-4085-49b0-86c3-11ad48978a8a
 docset: aem65
 exl-id: 53d8c654-8017-4528-a44e-e362d8b59f82
 feature: Security
-translation-type: tm+mt
-source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
+source-git-commit: bc3dd7d229a75323b98a96d60dcbb3ae2b8c09ab
 workflow-type: tm+mt
-source-wordcount: '5488'
+source-wordcount: '5469'
 ht-degree: 0%
 
 ---
@@ -56,7 +55,7 @@ I följande tabeller visas varje objekt tillsammans med:
 * en kort beskrivning
 * rekommendationer om nödvändiga ändringar
 
-*Ändra alla standardlösenord*  (om du inte tar bort själva kontot under vissa omständigheter).
+*Ändra alla standardlösenord* (om du inte tar bort själva kontot under vissa omständigheter).
 
 <table>
  <tbody>
@@ -88,13 +87,13 @@ I följande tabeller visas varje objekt tillsammans med:
    <td>administratörer</td>
    <td>Grupp</td>
    <td><p>Grupp som ger administratörsbehörighet till alla dess medlemmar. Det är bara administratörer som kan redigera den här gruppen.</p> <p>Har fullständig behörighet.</p> </td>
-   <td>Om du anger Neka alla för en nod får administratörerna bara åtkomst om det aktiveras igen för den gruppen.</td>
+   <td>Även om du anger"Neka alla" på en nod kan administratörerna fortfarande komma åt noden</td>
   </tr>
   <tr>
    <td>innehållsförfattare</td>
    <td>Grupp</td>
    <td><p>Grupp ansvarig för innehållsredigering. Kräver behörighet att läsa, ändra, skapa och ta bort.</p> </td>
-   <td>Du kan skapa egna grupper med innehållsförfattare med projektspecifika åtkomsträttigheter, förutsatt att du lägger till behörighet för att läsa, ändra, skapa och ta bort.</td>
+   <td>Du kan skapa egna grupper med innehållsförfattare med projektspecifik behörighet, förutsatt att du lägger till behörighet för att läsa, ändra, skapa och ta bort.</td>
   </tr>
   <tr>
    <td>medverkande</td>
@@ -146,15 +145,15 @@ AEM använder åtkomstkontrollistor för att avgöra vilka åtgärder en använd
 
 ### Behörigheter och åtkomstkontrollistor {#permissions-and-acls}
 
-Behörigheter definierar vem som får utföra vilka åtgärder på en resurs. Behörigheterna är resultatet av [åtkomstkontroll](#access-control-lists-and-how-they-are-evaluated)-utvärderingar.
+Behörigheter definierar vem som får utföra vilka åtgärder på en resurs. Behörigheterna är resultatet av [åtkomstkontroll](#access-control-lists-and-how-they-are-evaluated) utvärderingar.
 
-Du kan ändra behörigheterna som beviljas/nekas till en viss användare genom att markera eller avmarkera kryssrutorna för de enskilda AEM [åtgärderna](security.md#actions). En bock anger att en åtgärd är tillåten. Ingen bock indikerar att en åtgärd nekas.
+Du kan ändra behörigheterna som beviljas/nekas till en viss användare genom att markera eller avmarkera kryssrutorna för den enskilda AEM [funktionsmakron](security.md#actions). En bock anger att en åtgärd är tillåten. Ingen bock indikerar att en åtgärd nekas.
 
 Där bockmarkeringen finns i rutnätet visas även vilka behörigheter användarna har på vilka platser i AEM (d.v.s. vilka sökvägar).
 
 ### Åtgärder {#actions}
 
-Åtgärder kan utföras på en sida (resurs). För varje sida i hierarkin kan du ange vilken åtgärd användaren får utföra på sidan. [Du ](#permissions-and-acls) kan tillåta eller neka en åtgärd.
+Åtgärder kan utföras på en sida (resurs). För varje sida i hierarkin kan du ange vilken åtgärd användaren får utföra på sidan. [Behörigheter](#permissions-and-acls) gör att du kan tillåta eller neka en åtgärd.
 
 <table>
  <tbody>
@@ -179,7 +178,7 @@ Där bockmarkeringen finns i rutnätet visas även vilka behörigheter användar
    <td><p>Användaren kan:</p>
     <ul>
      <li>skapa en ny sida eller underordnad sida.</li>
-    </ul> <p>Om <strong>modify</strong> nekas, exkluderas underträden under jcr:content eftersom skapandet av jcr:content och dess underordnade noder betraktas som en sidändring. Detta gäller endast noder som definierar en jcr:content child-nod.</p> </td>
+    </ul> <p>If <strong>ändra</strong> nekas underträd under jcr:innehåll exkluderas specifikt eftersom skapandet av jcr:content och dess underordnade noder betraktas som en sidändring. Detta gäller endast noder som definierar en jcr:content child-nod.</p> </td>
   </tr>
   <tr>
    <td>Ta bort</td>
@@ -187,7 +186,7 @@ Där bockmarkeringen finns i rutnätet visas även vilka behörigheter användar
     <ul>
      <li>ta bort befintliga stycken från sidan eller en underordnad sida.</li>
      <li>ta bort en sida eller underordnad sida.</li>
-    </ul> <p>Om <strong>modify</strong> nekas, exkluderas alla underträd under jcr:content specifikt eftersom jcr:content tas bort och dess underordnade noder betraktas som en sidändring. Detta gäller endast noder som definierar en jcr:content child-nod.</p> </td>
+    </ul> <p>If <strong>ändra</strong> nekas alla underträd under jcr:innehåll exkluderas specifikt eftersom jcr:content tas bort och dess underordnade noder betraktas som en sidändring. Detta gäller endast noder som definierar en jcr:content child-nod.</p> </td>
   </tr>
   <tr>
    <td>Läs ACL</td>
@@ -206,7 +205,7 @@ Där bockmarkeringen finns i rutnätet visas även vilka behörigheter användar
 
 >[!NOTE]
 >
->AEM genererar automatiskt användargrupper för rolltilldelning (ägare, redigerare, visningsprogram) i [samlingar](/help/assets/manage-collections.md). Om du lägger till åtkomstkontrollistor manuellt för sådana grupper kan det dock medföra säkerhetsluckor i AEM. Adobe rekommenderar att du undviker att lägga till åtkomstkontrollistor manuellt.
+>AEM genererar automatiskt användargrupper för rolltilldelning (ägare, redigerare, visningsprogram) i [Samlingar](/help/assets/manage-collections.md). Om du lägger till åtkomstkontrollistor manuellt för sådana grupper kan det dock medföra säkerhetsluckor i AEM. Adobe rekommenderar att du undviker att lägga till åtkomstkontrollistor manuellt.
 
 ### Åtkomstkontrollistor och hur de utvärderas {#access-control-lists-and-how-they-are-evaluated}
 
@@ -216,7 +215,7 @@ AEM WCM använder ACL-listor (Access Control Lists) för att organisera de behö
 
 >[!NOTE]
 >
->Det finns åtkomstkontrollistor som ingår i exemplen. Vi rekommenderar att du granskar och fastställer vad som är lämpligt för dina program. Om du vill granska de åtkomstkontrollistor som ingår går du till **CRXDE **och väljer fliken **Åtkomstkontroll** för följande noder:
+>Det finns åtkomstkontrollistor som ingår i exemplen. Vi rekommenderar att du granskar och fastställer vad som är lämpligt för dina program. Gå till **CRXDE **och välj **Åtkomstkontroll** för följande noder:
 >
 >`/etc/cloudservices/facebookconnect/geometrixx-outdoorsfacebookapp`: Tillåter alla läsåtkomst.
 >`/etc/cloudservices/twitterconnect/geometrixx-outdoors-twitter-app`: Tillåter alla läsåtkomst.
@@ -225,17 +224,17 @@ AEM WCM använder ACL-listor (Access Control Lists) för att organisera de behö
 >
 >Ditt anpassade program kan ange åtkomst för andra relationer, som `*/social/relationships/friend/*` eller `*/social/relationships/pending-following/*`.
 >
->När du skapar åtkomstkontrollistor som är specifika för communities, kan medlemmar som ansluter till de communityn beviljas ytterligare behörigheter. Detta kan till exempel vara fallet när användare ansluter till communities på `/content/geometrixx-outdoors/en/community/hiking` eller `/content/geometrixx-outdoors/en/community/winter-sports`.
+>När du skapar åtkomstkontrollistor som är specifika för communities, kan medlemmar som ansluter till de communityn beviljas ytterligare behörigheter. Detta kan till exempel vara fallet när användare går med i communities på `/content/geometrixx-outdoors/en/community/hiking` eller `/content/geometrixx-outdoors/en/community/winter-sports`.
 
-### Behörighetstillstånd {#permission-states}
+### Behörighetsstater {#permission-states}
 
 >[!NOTE]
 >
 >För CQ 5.3-användare:
 >
->Till skillnad från tidigare CQ-versioner bör **create** och **delete** inte längre beviljas om en användare bara behöver ändra sidor. I stället ska du bara bevilja åtgärden **Ändra** om du vill att användarna ska kunna skapa, ändra eller ta bort komponenter på befintliga sidor.
+>Till skillnad från tidigare CQ-versioner **skapa** och **delete** ska inte längre beviljas om en användare bara behöver ändra sidor. I stället ger du **ändra** bara om du vill att användarna ska kunna skapa, ändra eller ta bort komponenter på befintliga sidor.
 >
->Av bakåtkompatibilitetsskäl tar inte funktionsmakrotesterna särskild behandling av noder som definierar **jcr:content** i beaktande.
+>Av bakåtkompatibilitetsskäl utförs inte den speciella behandlingen av noder som definierar i funktionsmakrotesten. **jcr:innehåll** med hänsyn till.
 
 | **Åtgärd** | **Beskrivning** |
 |---|---|
@@ -293,9 +292,9 @@ Nedan följer några rekommendationer om hur du hanterar åtkomstkontrollistor:
 
    Om du använder Neka kan det orsaka oväntade effekter om behörigheterna tillämpas i en annan ordning än den förväntade. Om en användare är medlem i mer än en grupp kan programsatserna Neka från en grupp avbryta programsatsen Tillåt från en annan grupp eller vice versa. Det är svårt att behålla en översikt när detta händer och kan enkelt leda till oförutsedda resultat, medan Tillåt tilldelningar inte orsakar sådana konflikter.
 
-   Adobe rekommenderar att du arbetar med Tillåt i stället för Neka. Se [God praxis](#best-practices).
+   Adobe rekommenderar att du arbetar med Tillåt i stället för Neka [Bästa praxis](#best-practices).
 
-Innan du ändrar någon av behörigheterna måste du se till att du förstår hur de fungerar och fungerar tillsammans. Se dokumentationen för CRX för att illustrera hur AEM WCM [utvärderar åtkomsträttigheter](/help/sites-administering/user-group-ac-admin.md#how-access-rights-are-evaluated) och exempel på hur du ställer in åtkomstkontrollistor.
+Innan du ändrar någon av behörigheterna måste du se till att du förstår hur de fungerar och fungerar tillsammans. Se CRX-dokumentationen för att illustrera hur AEM WCM [utvärderar åtkomsträttigheter](/help/sites-administering/user-group-ac-admin.md#how-access-rights-are-evaluated) och exempel på hur du ställer in åtkomstkontrollistor.
 
 ### Behörigheter {#permissions}
 
@@ -313,7 +312,7 @@ Tillsammans med stödrastervyn AEM en detaljerad vy över behörigheter för en 
 
 Förutom att visa information kan du även inkludera eller exkludera den aktuella användaren eller gruppen från en grupp. Se [Lägga till användare eller grupper när behörigheter läggs till](#adding-users-or-groups-while-adding-permissions). Ändringarna som görs här visas omedelbart i den övre delen av den detaljerade vyn.
 
-Du öppnar vyn Detalj genom att klicka på **Behörigheter** på fliken **Information** för en markerad grupp/användare och sökväg.
+Om du vill öppna detaljvyn går du till **Behörigheter** flik, klicka **Detaljer** för alla valda grupper/användare och sökvägar.
 
 ![behörighetsinformation](assets/permissiondetails.png)
 
@@ -343,7 +342,7 @@ Detaljerna delas upp i två delar:
 
 ### Personifiera en annan användare {#impersonating-another-user}
 
-Med [personifieringsfunktionen](/help/sites-authoring/user-properties.md#user-settings) kan en användare arbeta för en annan användares räkning.
+Med [Personifiera funktionalitet](/help/sites-authoring/user-properties.md#user-settings) en användare kan arbeta för en annan användares räkning.
 
 Det innebär att ett användarkonto kan ange andra konton som kan fungera med deras konto. Med andra ord, om användare-B tillåts personifiera användare-A, kan användare-B vidta åtgärder med hjälp av den fullständiga kontoinformationen för användare-A.
 
@@ -351,9 +350,9 @@ Detta gör att persondatorkonton kan slutföra uppgifter som om de använde det 
 
 >[!NOTE]
 >
->För att personifiering ska fungera för icke-adminanvändare måste personifieraren (i det här fallet user-B) ha läsbehörighet i sökvägen `/home/users`.
+>För att personifiering ska fungera för icke-adminanvändare måste personifieraren (i det här fallet user-B) ha läsbehörighet i `/home/users` bana.
 >
->Mer information om hur du gör detta finns i [Behörigheter i AEM](/help/sites-administering/security.md#permissions-in-aem).
+>Mer information om hur du uppnår detta finns i [Behörigheter i AEM](/help/sites-administering/security.md#permissions-in-aem).
 
 >[!CAUTION]
 >
@@ -418,17 +417,17 @@ Flikarna ger åtkomst till olika konfigurationer:
 | Egenskaper | Visar information om användaren eller gruppen som kan innehålla e-postinformation, en beskrivning och namninformation. Du kan även ändra en användares lösenord. Se [Skapa användare och grupper](#creating-users-and-groups), [Ändra användar- och gruppegenskaper](#modifying-user-and-group-properties) och [Ändra ett användarlösenord](#changing-a-user-password). |
 | Grupper | Visar alla grupper som den markerade användaren eller gruppen tillhör. Du kan tilldela den eller de markerade användarna till ytterligare grupper eller ta bort dem från grupper. Se [Grupper](#adding-users-or-groups-to-a-group). |
 | Medlemmar | Endast tillgängligt för grupper. Visar medlemmarna i en viss grupp. Se [Medlemmar](#members-adding-users-or-groups-to-a-group). |
-| Behörigheter | Du kan tilldela behörigheter till en användare eller grupp. Här kan du styra följande:<ul><li>Behörigheter för särskilda sidor/noder. Se [Ange behörigheter](#setting-permissions). </li><li>Behörigheter för att skapa och ta bort sidor och ändra hierarkin. ?? använder du [för att tilldela behörigheter](#settingprivileges), till exempel för att ändra i hierarkin, så att du kan skapa och ta bort sidor,</li><li>Behörigheter som är relaterade till [replikeringsbehörighet](#setting-replication-privileges) (vanligtvis från författare till publicering) enligt en sökväg.</li></ul> |
+| Behörigheter | Du kan tilldela behörigheter till en användare eller grupp. Här kan du styra följande:<ul><li>Behörigheter för särskilda sidor/noder. Se [Ange behörigheter](#setting-permissions). </li><li>Behörigheter för att skapa och ta bort sidor och ändra hierarkin. ?? låter dig [tilldela behörigheter](#settingprivileges), t.ex. ändrad hierarki, med vilken du kan skapa och ta bort sidor,</li><li>Behörigheter relaterade till [replikeringsbehörigheter](#setting-replication-privileges) (vanligtvis från författare till publicering) enligt en sökväg.</li></ul> |
 | Personifierare | Tillåter en annan användare att personifiera kontot. Användbar när du behöver en användare för att agera för en annan användares räkning. Se [Personifiera användare](#impersonating-another-user). |
-| Inställningar | Anger [inställningar för gruppen eller användaren](#setting-user-and-group-preferences). Till exempel språkinställningar. |
+| Inställningar | Uppsättningar [inställningar för gruppen eller användaren](#setting-user-and-group-preferences). Till exempel språkinställningar. |
 
 ### Filtrera användare och grupper {#filtering-users-and-groups}
 
-Du kan filtrera listan genom att ange ett filteruttryck som döljer alla användare och grupper som inte matchar uttrycket. Du kan också dölja användare och grupper med knapparna [Dölj användare och Dölj grupp](#hiding-users-and-groups).
+Du kan filtrera listan genom att ange ett filteruttryck som döljer alla användare och grupper som inte matchar uttrycket. Du kan även dölja användare och grupper med [Dölj användare och dölj grupp](#hiding-users-and-groups) knappar.
 
 Så här filtrerar du användare eller grupper:
 
-1. I den vänstra trädlistan skriver du filteruttrycket i det angivna utrymmet. Om du till exempel anger **admin** visas alla användare och grupper som innehåller den här strängen.
+1. I den vänstra trädlistan skriver du filteruttrycket i det angivna utrymmet. Ange till exempel **admin** visar alla användare och grupper som innehåller den här strängen.
 1. Klicka på förstoringsglaset för att filtrera listan.
 
    ![cqsecurityfilter](assets/cqsecurityfilter.png)
@@ -441,23 +440,23 @@ Att dölja användare eller grupper är ett annat sätt att filtrera listan öve
 
 Så här döljer du användare och grupper:
 
-1. Klicka på **Dölj användare** eller **Dölj grupper** i konsolen **Säkerhet**. Den valda knappen visas markerad.
+1. I **Säkerhet** konsol, klicka **Dölj användare** eller **Göm grupper**. Den valda knappen visas markerad.
 
    ![cqsecurityhideanvändare](assets/cqsecurityhideusers.png)
 
 1. Om du vill visa användare eller grupper igen klickar du på motsvarande knapp igen.
 
-### Skapar användare och grupper {#creating-users-and-groups}
+### Skapa användare och grupper {#creating-users-and-groups}
 
 Så här skapar du en ny användare eller grupp:
 
-1. I listan **Security**-konsolträd klickar du på **Redigera** och sedan på **Skapa användare** eller **Skapa grupp**.
+1. I **Säkerhet** lista över konsolträd, klicka på **Redigera** och sedan antingen **Skapa användare** eller **Skapa grupp**.
 
    ![cqseruityeditcontextmenu](assets/cqseruityeditcontextmenu.png)
 
 1. Ange nödvändig information beroende på om du skapar en användare eller en grupp.
 
-   * Om du väljer **Skapa användare** anger du inloggnings-ID, för- och efternamn, e-postadress och lösenord. Som standard skapar AEM en bana som baseras på den första bokstaven i efternamnet, men du kan välja en annan bana.
+   * Om du väljer **Skapa användare,** Ange inloggnings-ID, för- och efternamn, e-postadress och ett lösenord. Som standard skapar AEM en bana som baseras på den första bokstaven i efternamnet, men du kan välja en annan bana.
 
    ![createusdialog](assets/createuserdialog.png)
 
@@ -465,23 +464,23 @@ Så här skapar du en ny användare eller grupp:
 
    ![creategroupdialog](assets/creategroupdialog.png)
 
-1. Klicka på **Skapa**. Användaren eller gruppen som du skapade visas i trädlistan.
+1. Klicka **Skapa**. Användaren eller gruppen som du skapade visas i trädlistan.
 
-### Tar bort användare och grupper {#deleting-users-and-groups}
+### Ta bort användare och grupper {#deleting-users-and-groups}
 
 Så här tar du bort en användare eller grupp:
 
-1. I **Security**-konsolen väljer du den användare eller grupp som du vill ta bort. Om du vill ta bort flera objekt Skift-klickar eller Ctrl-klickar du för att markera dem.
-1. Klicka på **Redigera,** och välj sedan Ta bort. AEM frågar om du vill ta bort användaren eller gruppen.
-1. Klicka på **OK** för att bekräfta eller Avbryt för att avbryta åtgärden.
+1. I **Säkerhet** markerar du den användare eller grupp som du vill ta bort. Om du vill ta bort flera objekt Skift-klickar eller Ctrl-klickar du för att markera dem.
+1. Klicka **Redigera,** och välj sedan Ta bort. AEM frågar om du vill ta bort användaren eller gruppen.
+1. Klicka **OK** för att bekräfta eller avbryta för att avbryta åtgärden.
 
 ### Ändra användar- och gruppegenskaper {#modifying-user-and-group-properties}
 
 Så här ändrar du användar- och gruppegenskaper:
 
-1. Dubbelklicka på det användar- eller gruppnamn som du vill ändra i **Security**-konsolen.
+1. I **Säkerhet** dubbelklicka på det användar- eller gruppnamn som du vill ändra.
 
-1. Klicka på fliken **Egenskaper**, gör önskade ändringar och klicka på **Spara**.
+1. Klicka på **Egenskaper** gör du ändringarna och klickar på **Spara**.
 
    ![cqsecurityuserprops](assets/cqsecurityuserprops.png)
 
@@ -495,18 +494,18 @@ Använd följande procedur för att ändra en användares lösenord.
 
 >[!NOTE]
 >
->Du kan inte använda säkerhetskonsolen för att ändra administratörslösenordet. Om du vill ändra lösenordet för administratörskontot använder du [användarkonsolen](/help/sites-administering/granite-user-group-admin.md#changing-the-password-for-an-existing-user) som Granite-åtgärder tillhandahåller.
+>Du kan inte använda säkerhetskonsolen för att ändra administratörslösenordet. Om du vill ändra lösenordet för administratörskontot använder du [Användarkonsol](/help/sites-administering/granite-user-group-admin.md#changing-the-password-for-an-existing-user) som Granite Operations tillhandahåller.
 >
 >Om du använder AEM Forms på JEE ska du inte använda nedanstående instruktioner för att ändra lösenord, utan i stället använda AEM Forms på JEE Admin Console (/adminui) för att ändra lösenordet.
 
-1. Dubbelklicka på det användarnamn du vill ändra lösenordet för i **Security**-konsolen.
-1. Klicka på fliken **Egenskaper** (om den inte redan är aktiv).
-1. Klicka på **Ange lösenord**. Fönstret Ange lösenord öppnas där du kan ändra ditt lösenord.
+1. I **Säkerhet** dubbelklicka på det användarnamn du vill ändra lösenordet för.
+1. Klicka på **Egenskaper** -flik (om den inte redan är aktiv).
+1. Klicka **Ange lösenord**. Fönstret Ange lösenord öppnas där du kan ändra ditt lösenord.
 
    ![cqsecurityuslösenord](assets/cqsecurityuserpassword.png)
 
 1. Ange det nya lösenordet två gånger; eftersom de inte visas i klartext är detta för bekräftelse - om de inte matchar visas ett fel.
-1. Klicka på **Ange** för att aktivera det nya lösenordet för kontot.
+1. Klicka **Ange** för att aktivera det nya lösenordet för kontot.
 
 ### Lägga till användare eller grupper i en grupp {#adding-users-or-groups-to-a-group}
 
@@ -516,46 +515,46 @@ AEM erbjuder tre olika sätt att lägga till användare eller grupper i en befin
 * När du är medlem kan du lägga till medlemmar i grupper.
 * När du arbetar med behörigheter kan du lägga till medlemmar i grupper.
 
-### Grupper - Lägga till användare eller grupper i en grupp {#groups-adding-users-or-groups-to-a-group}
+### Grupper - lägga till användare eller grupper i en grupp {#groups-adding-users-or-groups-to-a-group}
 
-På fliken **Grupper** visas vilka grupper det aktuella kontot tillhör. Du kan använda den för att lägga till det valda kontot i en grupp:
+The **Grupper** visas vilka grupper det aktuella kontot tillhör. Du kan använda den för att lägga till det valda kontot i en grupp:
 
 1. Dubbelklicka på namnet på kontot (användaren eller gruppen) som du vill tilldela en grupp.
-1. Klicka på fliken **Grupper**. Du ser en lista över grupper som kontot redan tillhör.
-1. I trädlistan klickar du på namnet på gruppen som du vill lägga till i kontot och drar den till rutan **Grupper**. (Om du vill lägga till flera användare Skift-klickar eller Ctrl-klickar du på namnen och drar dem.)
+1. Klicka på **Grupper** -fliken. Du ser en lista över grupper som kontot redan tillhör.
+1. Klicka på namnet på gruppen som du vill lägga till i kontot i trädlistan och dra den till **Grupper** fönster. (Om du vill lägga till flera användare Skift-klickar eller Ctrl-klickar du på namnen och drar dem.)
 
    ![cqsecurityaddusertogroup](assets/cqsecurityaddusertogroup.png)
 
-1. Klicka på **Spara** för att spara ändringarna.
+1. Klicka **Spara** för att spara ändringarna.
 
-### Medlemmar - Lägga till användare eller grupper i en grupp {#members-adding-users-or-groups-to-a-group}
+### Medlemmar - lägga till användare eller grupper i en grupp {#members-adding-users-or-groups-to-a-group}
 
-Fliken **Medlemmar** fungerar bara för grupper och visar vilka användare och grupper som tillhör den aktuella gruppen. Du kan använda den för att lägga till konton i en grupp:
+The **Medlemmar** Fliken fungerar bara för grupper och visar vilka användare och grupper som tillhör den aktuella gruppen. Du kan använda den för att lägga till konton i en grupp:
 
 1. Dubbelklicka på namnet på gruppen som du vill lägga till medlemmar i.
-1. Klicka på fliken **Medlemmar**. En lista över medlemmar som redan tillhör den här gruppen visas.
-1. I trädlistan klickar du på namnet på den medlem du vill lägga till i gruppen och drar den till rutan **Medlemmar**. (Om du vill lägga till flera användare Skift-klickar eller Ctrl-klickar du på namnen och drar dem.)
+1. Klicka på **Medlemmar** -fliken. En lista över medlemmar som redan tillhör den här gruppen visas.
+1. Klicka på namnet på den medlem du vill lägga till i gruppen i trädlistan och dra det till **Medlemmar** fönster. (Om du vill lägga till flera användare Skift-klickar eller Ctrl-klickar du på namnen och drar dem.)
 
    ![cqsecurityadduserasmember](assets/cqsecurityadduserasmember.png)
 
-1. Klicka på **Spara** för att spara ändringarna.
+1. Klicka **Spara** för att spara ändringarna.
 
-### Lägga till användare eller grupper medan behörigheter läggs till {#adding-users-or-groups-while-adding-permissions}
+### Lägga till användare eller grupper när behörigheter läggs till {#adding-users-or-groups-while-adding-permissions}
 
 Så här lägger du till medlemmar i en grupp på en viss sökväg:
 
 1. Dubbelklicka på namnet på gruppen eller användaren som du vill lägga till användare i.
 
-1. Klicka på fliken **Behörigheter**.
+1. Klicka på **Behörigheter** -fliken.
 
-1. Navigera till sökvägen som du vill lägga till behörigheter i och klicka på **Information**. Den nedre delen av informationsfönstret innehåller information om vem som har behörighet för den sidan.
+1. Navigera till sökvägen som du vill lägga till behörigheter i och klicka på **Detaljer**. Den nedre delen av informationsfönstret innehåller information om vem som har behörighet för den sidan.
 
    ![chlimage_1-113](assets/chlimage_1-113.png)
 
-1. Markera kryssrutan i kolumnen **Medlem** för de medlemmar som du vill ska ha behörighet till den sökvägen. Avmarkera kryssrutan för den medlem som du vill ta bort behörigheter för. En röd triangel visas i cellen som du har ändrat i.
-1. Klicka på **OK** för att spara ändringarna.
+1. Markera kryssrutan i dialogrutan **medlem** -kolumn för de medlemmar som du vill ska ha behörighet till den sökvägen. Avmarkera kryssrutan för den medlem som du vill ta bort behörigheter för. En röd triangel visas i cellen som du har ändrat i.
+1. Klicka **OK** för att spara ändringarna.
 
-### Tar bort användare eller grupper från grupper {#removing-users-or-groups-from-groups}
+### Ta bort användare eller grupper från grupper {#removing-users-or-groups-from-groups}
 
 AEM erbjuder tre olika sätt att ta bort användare eller grupper från en grupp:
 
@@ -568,43 +567,43 @@ AEM erbjuder tre olika sätt att ta bort användare eller grupper från en grupp
 Så här tar du bort en användare eller ett gruppkonto från en grupp:
 
 1. Dubbelklicka på namnet på gruppen eller användarkontot som du vill ta bort från en grupp.
-1. Klicka på fliken **Grupper**. Du ser vilka grupper det valda kontot tillhör.
-1. I rutan **Grupper** klickar du på namnet på den användare eller grupp som du vill ta bort från gruppen och sedan på **Ta bort**. (Om du vill ta bort flera konton Skift-klickar eller Ctrl-klickar du på dessa namn och klickar på **Ta bort**.)
+1. Klicka på **Grupper** -fliken. Du ser vilka grupper det valda kontot tillhör.
+1. I **Grupper** klickar du på namnet på den användare eller grupp som du vill ta bort från gruppen och klickar på **Ta bort**. (Om du vill ta bort flera konton Skift-klickar eller Ctrl-klickar du på dessa namn och klickar på **Ta bort**.)
 
    ![cqsecurityremoveuserfromgrp](assets/cqsecurityremoveuserfromgrp.png)
 
-1. Klicka på **Spara** för att spara ändringarna.
+1. Klicka **Spara** för att spara ändringarna.
 
 ### Medlemmar - Tar bort användare eller grupper från grupper {#members-removing-users-or-groups-from-groups}
 
 Så här tar du bort konton från en grupp:
 
 1. Dubbelklicka på namnet på gruppen som du vill ta bort medlemmar från.
-1. Klicka på fliken **Medlemmar**. En lista över medlemmar som redan tillhör den här gruppen visas.
-1. I rutan **Medlemmar** klickar du på namnet på den medlem du vill ta bort från gruppen och sedan på **Ta bort**. (Om du vill ta bort flera användare Skift-klickar eller Ctrl-klickar du på namnen och klickar på **Ta bort**.)
+1. Klicka på **Medlemmar** -fliken. En lista över medlemmar som redan tillhör den här gruppen visas.
+1. I **Medlemmar** klickar du på namnet på den medlem du vill ta bort från gruppen och klickar på **Ta bort**. (Om du vill ta bort flera användare Skift-klickar eller Ctrl-klickar du på namnen och klickar på **Ta bort**.)
 
    ![cqsecurityremoveMember](assets/cqsecurityremovemember.png)
 
-1. Klicka på **Spara** för att spara ändringarna.
+1. Klicka **Spara** för att spara ändringarna.
 
-### Tar bort användare eller grupper när behörigheter läggs till {#removing-users-or-groups-while-adding-permissions}
+### Ta bort användare eller grupper när behörigheter läggs till {#removing-users-or-groups-while-adding-permissions}
 
 Så här tar du bort medlemmar från en grupp på en viss sökväg:
 
 1. Dubbelklicka på namnet på gruppen eller användaren som du vill ta bort användare från.
 
-1. Klicka på fliken **Behörigheter**.
+1. Klicka på **Behörigheter** -fliken.
 
-1. Navigera till sökvägen som du vill ta bort behörigheter till och klicka på **Information**. Den nedre delen av informationsfönstret innehåller information om vem som har behörighet för den sidan.
+1. Navigera till sökvägen som du vill ta bort behörigheter till och klicka på **Detaljer**. Den nedre delen av informationsfönstret innehåller information om vem som har behörighet för den sidan.
 
    ![chlimage_1-114](assets/chlimage_1-114.png)
 
-1. Markera kryssrutan i kolumnen **Medlem** för de medlemmar som du vill ska ha behörighet till den sökvägen. Avmarkera kryssrutan för den medlem som du vill ta bort behörigheter för. En röd triangel visas i cellen som du har ändrat i.
-1. Klicka på **OK** för att spara ändringarna.
+1. Markera kryssrutan i dialogrutan **medlem** -kolumn för de medlemmar som du vill ska ha behörighet till den sökvägen. Avmarkera kryssrutan för den medlem som du vill ta bort behörigheter för. En röd triangel visas i cellen som du har ändrat i.
+1. Klicka **OK** för att spara ändringarna.
 
 ### Användarsynkronisering {#user-synchronization}
 
-När distributionen är en [publiceringsgrupp](/help/sites-deploying/recommended-deploys.md#tarmk-farm) måste användare och grupper synkroniseras mellan alla publiceringsnoder.
+När distributionen är en [publicera servergrupp](/help/sites-deploying/recommended-deploys.md#tarmk-farm)måste användare och grupper synkroniseras mellan alla publiceringsnoder.
 
 Mer information om användarsynkronisering och hur du aktiverar den finns i [Användarsynkronisering](/help/sites-administering/sync.md).
 
@@ -612,27 +611,27 @@ Mer information om användarsynkronisering och hur du aktiverar den finns i [Anv
 
 >[!NOTE]
 >
->Adobe har introducerat en ny Touch UI-baserad huvudvy för behörighetshantering. Mer information om hur du använder den finns på [den här sidan](/help/sites-administering/touch-ui-principal-view.md).
+>Adobe har introducerat en ny Touch UI-baserad huvudvy för behörighetshantering. Mer information om hur du använder programmet finns i [den här sidan](/help/sites-administering/touch-ui-principal-view.md).
 
 I det här avsnittet beskrivs hur du anger behörigheter, inklusive replikeringsbehörigheter.
 
-### Anger behörigheter {#setting-permissions}
+### Ange behörigheter {#setting-permissions}
 
 Med behörigheter kan användare utföra vissa åtgärder på resurser på vissa sökvägar. Den innehåller även möjlighet att skapa eller ta bort sidor.
 
 Så här lägger du till, ändrar eller tar bort behörigheter:
 
-1. I **Security**-konsolen dubbelklickar du på namnet på den användare eller grupp som du vill ange behörigheter för eller [sök efter noder](#searching-for-nodes).
+1. I **Säkerhet** dubbelklicka på namnet på den användare eller grupp som du vill ange behörigheter för eller [sök efter noder](#searching-for-nodes).
 
-1. Klicka på fliken **Behörigheter**.
+1. Klicka på **Behörigheter** -fliken.
 
    ![cquserpermissions](assets/cquserpermissions.png)
 
-1. Markera en kryssruta i trädstödrastret om du vill att den markerade användaren eller gruppen ska kunna utföra en åtgärd, eller avmarkera en kryssruta om du vill neka användaren eller gruppen att utföra en åtgärd. Mer information får du om du klickar på **Information**.
+1. Markera en kryssruta i trädstödrastret om du vill att den markerade användaren eller gruppen ska kunna utföra en åtgärd, eller avmarkera en kryssruta om du vill neka användaren eller gruppen att utföra en åtgärd. Mer information finns på **Detaljer**.
 
 1. När du är klar klickar du på **Spara**.
 
-### Anger replikeringsbehörighet {#setting-replication-privileges}
+### Ange replikeringsprivilegier {#setting-replication-privileges}
 
 Replikeringsprivilegium är rätten att publicera innehåll, och det kan anges för grupper och användare.
 
@@ -640,22 +639,20 @@ Replikeringsprivilegium är rätten att publicera innehåll, och det kan anges f
 >
 >* Alla replikeringsrättigheter som tillämpas på en grupp gäller för alla användare i gruppen.
 >* En användares replikeringsbehörighet åsidosätter en grupps replikeringsbehörighet.
->* Tillåt replikeringsrättigheter har en högre prioritet än Neka-replikeringsrättigheter. Mer information finns i [Behörigheter i AEM](#permissions-in-aem).
-
+>* Tillåt replikeringsrättigheter har en högre prioritet än Neka-replikeringsrättigheter. Se [Behörigheter i AEM](#permissions-in-aem) för mer information.
 >
-
 
 
 Så här anger du replikeringsbehörighet:
 
 1. Markera användaren eller gruppen i listan, dubbelklicka för att öppna och klicka på **Behörigheter**.
-1. I rutnätet navigerar du till den sökväg där du vill att användaren ska ha replikeringsbehörighet eller [sök efter noder.](#searching-for-nodes)
+1. Navigera till den sökväg där du vill att användaren ska ha replikeringsbehörighet eller [sök efter noder.](#searching-for-nodes)
 
-1. I kolumnen **Replikera** på den valda sökvägen markerar du en kryssruta för att lägga till replikeringsbehörighet för den användaren eller gruppen, eller avmarkerar kryssrutan för att ta bort replikeringsbehörighet. AEM visar en röd triangel var som helst där du har gjort ändringar som ännu inte har sparats.
+1. I **Replikera** vid den valda sökvägen markerar du en kryssruta för att lägga till replikeringsbehörighet för den användaren eller gruppen, eller avmarkerar kryssrutan för att ta bort replikeringsbehörighet. AEM visar en röd triangel var som helst där du har gjort ändringar som ännu inte har sparats.
 
    ![cquserreplikerbehörigheter](assets/cquserreplicatepermissions.png)
 
-1. Klicka på **Spara** för att spara ändringarna.
+1. Klicka **Spara** för att spara ändringarna.
 
 ### Söker efter noder {#searching-for-nodes}
 
@@ -681,11 +678,11 @@ I sökrutan kan du göra följande:
 
 Så här söker du efter banor eller fulltext:
 
-1. Markera en användare eller grupp i säkerhetskonsolen och klicka sedan på fliken **Behörigheter**.
+1. Välj en användare eller grupp i säkerhetskonsolen och klicka sedan på knappen **Behörigheter** -fliken.
 
 1. Ange en sökterm i sökrutan.
 
-### Personifierar användare {#impersonating-users}
+### Personifiera användare {#impersonating-users}
 
 Du kan ange en eller flera användare som får personifiera den aktuella användaren. Det innebär att de kan ändra sina kontoinställningar till den aktuella användarens och agera för den här användarens räkning.
 
@@ -699,23 +696,23 @@ Det finns olika scenarier när du kanske vill använda den här funktionen, blan
 Så här personifierar du en befintlig användare:
 
 1. I trädlistan markerar du namnet på den person som du vill tilldela andra användare personifiering. Dubbelklicka för att öppna.
-1. Klicka på fliken **Personifierare**.
+1. Klicka på **Personifierare** -fliken.
 1. Klicka på den användare som du vill ska kunna personifiera den valda användaren. Dra användaren (som ska personifiera) från listan till rutan Personifiera. Namnet visas i listan.
 
    ![chlimage_1-115](assets/chlimage_1-115.png)
 
-1. Klicka på **Spara**.
+1. Klicka **Spara**.
 
-### Inställningar för användare och grupp {#setting-user-and-group-preferences}
+### Ange inställningar för användare och grupper {#setting-user-and-group-preferences}
 
 Så här anger du användar- och gruppinställningar, inklusive språk, fönsterhantering och verktygsfältsinställningar:
 
 1. Markera den användare eller grupp vars inställningar du vill ändra i det vänstra trädet. Om du vill markera flera användare eller grupper Ctrl-klickar eller Skift-klickar du på dina val.
-1. Klicka på fliken **Inställningar**.
+1. Klicka på **Inställningar** -fliken.
 
    ![cqsecuritypreferences](assets/cqsecuritypreferences.png)
 
-1. Gör de ändringar som behövs i grupp- eller användarinställningarna och klicka på **Spara** när du är klar.
+1. Gör de ändringar som behövs för gruppen eller användarinställningarna och klicka på **Spara** när du är klar.
 
 ### Ange att användare eller administratörer ska ha behörighet att hantera andra användare {#setting-users-or-administrators-to-have-the-privilege-to-manage-other-users}
 
@@ -725,7 +722,7 @@ Så här anger du att användare eller administratörer ska ha behörighet att t
 
    ![cqsecurityaddmedlemstoadmin](assets/cqsecurityaddmembertoadmin.png)
 
-1. Gå till / på fliken **Behörigheter** och markera kryssrutan Tillåt replikering på / i kolumnen Replikera och klicka på **Spara**.
+1. I användarens **Behörigheter** navigerar du till&quot;/&quot; och markerar kryssrutan för replikering vid &quot;/&quot; i kolumnen Replikera och klickar på **Spara**.
 
    ![cqsecurityreplikerbehörigheter](assets/cqsecurityreplicatepermissions.png)
 
@@ -735,13 +732,13 @@ Så här anger du att användare eller administratörer ska ha behörighet att t
 
 Om du planerar att implementera programspecifika behörigheter beskriver följande information vad du behöver veta för att implementera ett anpassat privilegium och hur du tillämpar det i CQ:
 
-Privilegiet för att ändra hierarkin täcks av en kombination av jcr-privilegier. Replikeringsprivilegiet heter **crx:replicate** som lagras/utvärderas tillsammans med andra behörigheter i jcr-databasen. Den tillämpas dock inte på jcr-nivån.
+Privilegiet för att ändra hierarkin täcks av en kombination av jcr-privilegier. Replikeringsprivilegiet är namngivet **crx:replikera** som lagras/utvärderas tillsammans med andra behörigheter i jcr-databasen. Den tillämpas dock inte på jcr-nivån.
 
 Definitionen och registreringen av anpassade behörigheter är officiellt en del av [Jackrabbit API](https://jackrabbit.apache.org/api/2.8/org/apache/jackrabbit/api/security/authorization/PrivilegeManager.html) från och med version 2.4 (se även [JCR-2887](https://issues.apache.org/jira/browse/JCR-2887)). Ytterligare användning täcks av JCR Access Control Management som definieras av [JSR 283](https://jcp.org/en/jsr/detail?id=283) (avsnitt 16). API:t Jackrabbit definierar dessutom ett par tillägg.
 
 Behörighetsregistreringsmekanismen återspeglas i användargränssnittet under **Databaskonfiguration**.
 
-Registreringen av nya (anpassade) behörigheter skyddas av ett inbyggt privilegium som måste beviljas på databasnivån (i JCR: skicka &#39;null&#39; som &#39;absPath&#39;-parameter i ac mgt api, se jsr 333 för mer information). Som standard har **admin** och alla administratörer denna behörighet.
+Registreringen av nya (anpassade) behörigheter skyddas av ett inbyggt privilegium som måste beviljas på databasnivån (i JCR: skicka &#39;null&#39; som &#39;absPath&#39;-parameter i ac mgt api, se jsr 333 för mer information). Som standard **admin** och alla administratörer har denna behörighet.
 
 >[!NOTE]
 >
