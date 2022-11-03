@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 6ae57874-a9a1-4208-9001-7f44a1f57cbe
 docset: aem65
 exl-id: 9efba91d-45e8-42e1-9db6-490d21bf7412
-source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
+source-git-commit: 64d174cc824c8bf200cece4e29f60f946ee5560e
 workflow-type: tm+mt
-source-wordcount: '794'
+source-wordcount: '753'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,8 @@ Om du vill konfigurera ett sådant område på din webbplats:
 
 * [använd den här gruppen på de obligatoriska sidorna](#applying-your-closed-user-group-to-content-pages) och välja (eller skapa) inloggningssidan som ska användas av medlemmarna i CUG-gruppen, anges också när en CUG används på en innehållssida.
 
-* [skapa en länk, av någon form, till minst en sida inom det skyddade området](#linking-to-the-realm), annars syns den inte.
+* [skapa en länk, av någon form, till minst en sida inom det skyddade området](#linking-to-the-cug-pages), annars syns den inte.
+
 * [konfigurera Dispatcher](#configure-dispatcher-for-cugs) om den används.
 
 >[!CAUTION]
@@ -67,58 +68,63 @@ Så här skapar du en sluten användargrupp:
 
 ## Använda din stängda användargrupp på innehållssidor {#applying-your-closed-user-group-to-content-pages}
 
-Så här använder du CUG-filen på en sida:
+Så här använder du CUG-filen på en sida eller sidor:
 
 1. Navigera till rotsidan för det begränsade avsnitt som du vill tilldela din CUG.
-1. Markera sidan genom att klicka på dess miniatyrbild och sedan klicka på **Egenskaper** i den övre panelen.
+1. Markera sidan genom att klicka på dess miniatyrbild och sedan markera **Egenskaper** i det övre verktygsfältet.
 
    ![screenshot_2018-10-30at162632](assets/screenshot_2018-10-30at162632.png)
 
-1. I följande fönster går du till **Avancerat** -fliken.
-1. Bläddra nedåt och aktivera kryssrutan i dialogrutan **Autentiseringskrav** -avsnitt.
+1. I följande fönster öppnar du **Avancerat** -fliken.
 
-1. Lägg till konfigurationssökvägen nedan och tryck sedan på Save.
-1. Gå till **Behörigheter** och trycker på **Redigera stängd användargrupp** -knappen.
+1. Bläddra nedåt till **Autentiseringskrav** -avsnitt.
+
+   1. Aktivera **Aktivera** kryssruta.
+
+   1. Lägg till sökvägen till **Inloggningssida**.
+Detta är valfritt. Om det lämnas tomt används standardinloggningssidan.
+
+   ![CUG har lagts till](assets/cug-authentication-requirement.png)
+
+1. Gå till **Behörigheter** och markera **Redigera stängd användargrupp**.
 
    ![screenshot_2018-10-30at163003](assets/screenshot_2018-10-30at163003.png)
 
    >[!NOTE]
    >
-   >Observera att CUG-filer på fliken Behörigheter inte kan rullas ut till Live-kopior från utkast. Se till att du undviker detta när du konfigurerar Live Copy.
+   >CUG-filer på fliken Behörigheter kan inte rullas ut till Live-kopior från utkast. Se till att du undviker detta när du konfigurerar Live Copy.
    >
    >Mer information finns i [den här sidan](closed-user-groups.md#aem-livecopy).
 
-1. Sök efter och lägg till CUG-filen i följande fönster - lägg i det här fallet till gruppen med namnet **cug_access**. Äntligen trycker du **Spara**.
-1. Klicka **Aktiverad** för att definiera att den här sidan (och eventuella underordnade sidor) ska tillhöra en CUG.
-1. Ange **Inloggningssida** att medlemmarna i gruppen kommer att använda sig av till exempel:
+1. The **Redigera stängd användargrupp** öppnas. Här kan du söka efter och välja din CUG och sedan bekräfta gruppmarkeringen med **Spara**.
 
-   `/content/geometrixx/en/toolbar/login.html`
+   Gruppen skall läggas till i förteckningen. till exempel gruppen **cug_access**.
 
-   Detta är valfritt. Om det lämnas tomt används standardinloggningssidan.
+   ![CUG har lagts till](assets/cug-added.png)
 
-1. Lägg till **Tillåtna grupper**. Använd + för att lägga till grupper eller - för att ta bort. Endast medlemmar i dessa grupper tillåts logga in och få åtkomst till sidorna.
-1. Tilldela en **Sfär** (ett namn för sidgrupperna) om det behövs. Lämna tomt om du vill använda sidrubriken.
-1. Klicka **OK** för att spara specifikationen.
+1. Bekräfta ändringarna med **Spara och stäng**.
 
-Se [Identity Management](/help/sites-administering/identity-management.md) om du vill ha information om profiler i publiceringsmiljön och om hur du loggar in och ut.
+>[!NOTE]
+>
+>Se [Identity Management](/help/sites-administering/identity-management.md) om du vill ha information om profiler i publiceringsmiljön och om hur du loggar in och ut.
 
-## Länka till sfären {#linking-to-the-realm}
+## Länka till CUG-sidor {#linking-to-the-cug-pages}
 
-Eftersom målet för länkar till CUG-miljön inte är synligt för den anonyma användaren, kommer länkkontrollen att ta bort sådana länkar.
+Eftersom målet för länkarna till CUG-sidorna inte är synligt för den anonyma användaren kommer länkkontrollen att ta bort sådana länkar.
 
-För att undvika detta bör du skapa oskyddade omdirigeringssidor som pekar mot sidor i CUG-serien. Navigeringsposterna återges sedan utan att länkkontrollen orsakar några problem. Det är bara när användaren faktiskt kommer åt omdirigeringssidan som omdirigeras inuti CUG-butiken, efter att inloggningsuppgifterna har angetts.
+För att undvika detta bör du skapa oskyddade omdirigeringssidor som pekar mot sidor i CUG-området. Navigeringsposterna återges sedan utan att länkkontrollen orsakar några problem. Det är bara när användaren faktiskt kommer åt omdirigeringssidan som omdirigeras inuti CUG-området, efter att inloggningsuppgifterna har angetts.
 
 ## Konfigurera Dispatcher för CUG:er {#configure-dispatcher-for-cugs}
 
 Om du använder Dispatcher måste du definiera en Dispatcher-servergrupp med följande egenskaper:
 
-* [virtualhosts](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#identifying-virtual-hosts-virtualhosts): Matchar sökvägen till sidorna som CUG gäller för.
+* [virtualhosts](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#identifying-virtual-hosts-virtualhosts): Matchar sökvägen till sidorna som CUG gäller för.
 * \sessionshantering: se nedan.
-* [cache](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#configuring-the-dispatcher-cache-cache): En cachekatalog som är dedikerad till de filer som CUG gäller för.
+* [cache](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache): En cachekatalog som är dedikerad till de filer som CUG gäller för.
 
 ### Konfigurera Dispatcher Session Management för CUG:er {#configuring-dispatcher-session-management-for-cugs}
 
-Konfigurera [sessionshantering i dispatcher.alla filer](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#enabling-secure-sessions-sessionmanagement) för CUG. Den autentiseringshanterare som används när åtkomst begärs för CUG-sidor avgör hur du konfigurerar sessionshanteringen.
+Konfigurera [sessionshantering i dispatcher.alla filer](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#enabling-secure-sessions-sessionmanagement) för CUG. Den autentiseringshanterare som används när åtkomst begärs för CUG-sidor avgör hur du konfigurerar sessionshanteringen.
 
 ```xml
 /sessionmanagement
@@ -132,7 +138,7 @@ Konfigurera [sessionshantering i dispatcher.alla filer](https://helpx.adobe.com/
 >När en Dispatcher-servergrupp har sessionshantering aktiverat cachelagras inte alla sidor som servergruppen hanterar. Om du vill cachelagra sidor som ligger utanför CUG skapar du en andra grupp i dispatcher.any
 >som hanterar icke-CUG-sidor.
 
-1. Konfigurera [/sessionmanagement](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#enabling-secure-sessions-sessionmanagement) efter definition `/directory`; till exempel:
+1. Konfigurera [/sessionmanagement](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#enabling-secure-sessions-sessionmanagement) efter definition `/directory`; till exempel:
 
    ```xml
    /sessionmanagement
@@ -142,4 +148,4 @@ Konfigurera [sessionshantering i dispatcher.alla filer](https://helpx.adobe.com/
      }
    ```
 
-1. Ange [/allowAuthorized](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#caching-when-authentication-is-used) till `0`.
+1. Ange [/allowAuthorized](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#caching-when-authentication-is-used) till `0`.
