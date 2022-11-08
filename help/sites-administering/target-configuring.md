@@ -10,9 +10,9 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 20c8eb1d-5847-4902-b7d3-4c3286423b46
 exl-id: 0f710685-dc4f-4333-9847-d002b2637d08
-source-git-commit: 813441a61baa560c9d317a5519b9e0c0d1da7a6e
+source-git-commit: f64319e88687ba1f53c98d4768492a0b4f4b08b8
 workflow-type: tm+mt
-source-wordcount: '2209'
+source-wordcount: '2210'
 ht-degree: 0%
 
 ---
@@ -126,9 +126,9 @@ Du kan konfigurera molnkonfigurationen så att segment från Adobe Target synkro
 
 Använd följande procedur för att skapa en Target-molnkonfiguration i AEM:
 
-1. Navigera till **Cloud Services** via **AEM logotyp** > **verktyg** > **Distribution** > **Cloud Services**. ([http://localhost:4502/libs/cq/core/content/tools/cloudservices.html](http://localhost:4502/libs/cq/core/content/tools/cloudservices.html))
+1. Navigera till **Cloud Services** via **AEM logotyp** > **verktyg** > **Cloud Services** > **Äldre Cloud Services**. ([http://localhost:4502/libs/cq/core/content/tools/cloudservices.html](http://localhost:4502/libs/cq/core/content/tools/cloudservices.html))
 
-   The **Adobe Marketing Cloud** översiktssidan öppnas.
+   The **Cloud Services** översiktssidan öppnas.
 
 1. I **Adobe Target** avsnitt, klicka **Konfigurera nu**.
 1. I **Skapa konfiguration** dialog:
