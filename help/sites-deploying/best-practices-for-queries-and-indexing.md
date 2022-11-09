@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 3f06f7a1-bdf0-4700-8a7f-1d73151893ba
 exl-id: 6dfaa14d-5dcf-4e89-993a-8d476a36d668
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: b60278940f48731ee9085635c0d4a3d7da24ebc8
 workflow-type: tm+mt
-source-wordcount: '4679'
+source-wordcount: '4664'
 ht-degree: 0%
 
 ---
@@ -176,7 +176,7 @@ Solr-index kan konfigureras för att köras inbäddade på AEM server för utvec
 
 >[!NOTE]
 >
->När du använder den integrerade Solr-sökmetoden kan du avlasta indexering till en Solr-server. Om de mer avancerade funktionerna i Solr-servern används via en crawlningsbaserad metod krävs ytterligare konfigurationsarbete. Headwire har skapat en [öppen källkodsanslutning](https://www.aemsolrsearch.com/#/) för att snabba upp dessa typer av implementeringar.
+>När du använder den integrerade Solr-sökmetoden kan du avlasta indexering till en Solr-server. Om de mer avancerade funktionerna i Solr-servern används via en crawlningsbaserad metod krävs ytterligare konfigurationsarbete.
 
 Nackdelen med det här tillvägagångssättet är att även om AEM frågor som standard respekterar åtkomstkontrollistor och därmed döljer resultat som en användare inte har tillgång till, så kommer inte den här funktionen att stödjas genom extern sökning till en Solr-server. Om sökningen ska göras externt på det här sättet måste man se till att användarna inte får resultat som de inte ska se.
 
