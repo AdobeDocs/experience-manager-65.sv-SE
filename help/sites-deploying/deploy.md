@@ -11,9 +11,9 @@ topic-tags: deploying
 discoiquuid: e48cc0ed-688c-44c8-b6d6-5f3c8593a295
 docset: aem65
 exl-id: 3df0662a-0768-4b56-8b94-c517657b4bd9
-source-git-commit: bb8dbb9069c4575af62a4d0b21195cee75944fea
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '1808'
+source-wordcount: '1802'
 ht-degree: 1%
 
 ---
@@ -58,7 +58,7 @@ När du har lärt dig grunderna hittar du mer avancerad och detaljerad informati
 * [Introduktion till AEM](/help/sites-deploying/platform.md)
 * [Riktlinjer för prestanda](/help/sites-deploying/performance-guidelines.md)
 * [Komma igång med AEM Mobile](/help/mobile/getting-started-aem-mobile.md)
-* [Vad är AEM Screens?](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/aem-screens-introduction.html)
+* [Vad är AEM Screens?](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html)
 
 ## Grundläggande begrepp {#basic-concepts}
 
@@ -127,7 +127,7 @@ Med AEM Managed Services kan man dra nytta av följande fördelar:
 
 **Cloud Manager**: Cloud Manager, som ingår i Adobe Experience Manager Managed Services-erbjudandet, är en självbetjäningsportal som ytterligare gör det möjligt för organisationer att självhantera Adobe Experience Manager i molnet. Den innehåller en modern pipeline för kontinuerlig integrering och kontinuerlig leverans (CI/CD) som gör att IT-team och implementeringspartners kan snabba upp leveransen av anpassningar eller uppdateringar utan att kompromissa med prestanda eller säkerhet. Cloud Manager är bara tillgängligt för Adobe-kunder med hanterade tjänster.
 
-Mer information om Cloud Manager och dess resurser finns i [**Användarhandbok för Cloud Manager**](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html).
+Mer information om Cloud Manager och dess resurser finns i [**Användarhandbok för Cloud Manager**](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html).
 
 ## Komma igång {#getting-started}
 
@@ -159,7 +159,7 @@ I följande avsnitt beskriver vi **fristående installation**. Mer information o
 
    Installationsplats för Windows: **`C:\Program Files\aem`**
 
-   Det är också vanligt att du installerar exempelinstanser i en mapp direkt på skrivbordet. I vilket fall som helst kommer vi att i allmänhet hänvisa till den här platsen som:
+   Det är också vanligt att du installerar exempelinstanser i en mapp direkt på skrivbordet. I vilket fall som helst ska vi i allmänhet hänvisa till den här platsen som:
 
    `<aem-install>`
 
@@ -313,4 +313,4 @@ Ovanstående avsnitt bör ge dig en god förståelse för grunderna i AEM instal
 * [Introduktion till AEM](/help/sites-deploying/platform.md)
 * [Riktlinjer för prestanda](/help/sites-deploying/performance-guidelines.md)
 * [Komma igång med AEM Mobile](/help/mobile/getting-started-aem-mobile.md)
-* [Vad är AEM Screens?](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/aem-screens-introduction.html)
+* [Vad är AEM Screens?](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html)

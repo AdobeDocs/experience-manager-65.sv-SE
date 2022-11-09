@@ -1,26 +1,25 @@
 ---
 title: Bästa praxis
-seo-title: Bästa praxis
+seo-title: Best Practices
 description: Adobe tekniker och konsultteam har utvecklat en omfattande uppsättning bästa metoder för AEM utvecklare
-seo-description: Adobe tekniker och konsultteam har utvecklat en omfattande uppsättning bästa metoder för AEM utvecklare
+seo-description: Adobe Engineering and Consulting teams have developed a comprehensive set of best practices for AEM developers
 uuid: f962c31f-8140-482f-b189-16376e23bfed
 contentOwner: Justin Edelson
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 discoiquuid: 99678c1a-81f3-4fb3-bf73-98f0691c3fb6
-translation-type: tm+mt
-source-git-commit: e562939f1c64d8345b4c2a28e4b882200d9e4c07
+exl-id: 0a478e80-c1b2-46c1-a6be-794d78b85d69
+source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
 workflow-type: tm+mt
-source-wordcount: '485'
-ht-degree: 3%
+source-wordcount: '463'
+ht-degree: 1%
 
 ---
 
-
 # Bästa praxis{#best-practices}
 
-## Bästa praxis för utvecklare - Komma igång {#best-practices-for-developers-getting-started}
+## Best Practices for Developers - Getting Started {#best-practices-for-developers-getting-started}
 
 Adobe tekniker och konsultteam har utvecklat en omfattande uppsättning bästa metoder för AEM utvecklare. Utvecklaren av Adobe följer de bästa metoderna när de utvecklar AEM produktuppdateringar och kundkod för kundimplementeringar.
 
@@ -33,7 +32,7 @@ Innan du börjar AEM utvecklingsprojektet bör du först granska följande metod
 * [Code Pitfalls](/help/sites-developing/code-pitfalls.md)
 * [JCR-interaktion](/help/sites-developing/jcr-integration.md)
 * [OSGi Bundles](/help/sites-developing/osgi-bundles.md)
-* [Java API Best Practices](https://docs.adobe.com/content/help/en/experience-manager-learn/foundation/development/understand-java-api-best-practices.html)
+* [Java API Best Practices](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/understand-java-api-best-practices.html)
 
 ### Ytterligare metodinformation {#additional-best-practices-information}
 
@@ -51,7 +50,7 @@ De bästa sätten att administrera, distribuera och underhålla, eller att skapa
 * [Bästa tillvägagångssätt](/help/sites-authoring/best-practices.md)
 * [Effektiva rutiner](/help/sites-deploying/best-practices.md)
 
-## Sites {#sites}
+## Webbplatser {#sites}
 
 Hantering och redigering av webbplatsinnehåll har några beprövade metoder:
 
@@ -82,26 +81,25 @@ Hantering och redigering av webbplatsinnehåll har några beprövade metoder:
 
 ## Communities {#communities}
 
-[AEM ](/help/communities/overview.md) förenklar framtagning och hantering av lokala communityn.
+[AEM Communities](/help/communities/overview.md) förenklar framtagning och hantering av lokala communityn.
 
 Här beskrivs några tips för Communities:
 
 |  |  |  |
 |---|---|---|
-| Bästa tillvägagångssätt för att arbeta med användargenererat innehåll (UGC) | [Riktlinjer för kodning](/help/communities/code-guide.md) | Riktlinjer för utveckling av flexibel, portabel kod för [ramverket för sociala komponenter](/help/communities/scf.md) (SCF). |
+| Bästa tillvägagångssätt för att arbeta med användargenererat innehåll (UGC) | [Riktlinjer för kodning](/help/communities/code-guide.md) | Riktlinjer för utveckling av flexibel, portabel kod för [ramverk för sociala komponenter](/help/communities/scf.md) (SCF). |
 | Exempel på användning av webbgruppskomponenter | [Community Components Guide](/help/communities/components-guide.md) | Ett interaktivt utvecklingsverktyg. |
 
 ## Verktyg/HTML {#tooling-htl}
 
-HTML-mallspråk (HTL) är ett nytt HTML-mallsystem som introducerades med AEM 6.0. Den ersätter JSP och ESP som det förvalda mallsystemet för AEM.
+HTML Template Language (HTL) är ett nytt mallsystem för HTML, som introducerades med AEM 6.0. Den ersätter JSP och ESP som det förvalda mallsystemet för AEM.
 
 |  |  |  |
 |---|---|---|
-| HTML - översikt | [HTML-översikt och -syntax](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html) | Det här dokumentet beskriver vad HTML är, hur du går till HTML, ett exempelprojekt, syntax, uttryck och programsatser |
+| HTML - översikt | [HTML-översikt och -syntax](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) | Det här dokumentet beskriver vad HTML är, hur du går till HTML, ett exempelprojekt, syntax, uttryck och programsatser |
 | Använda API i java | [HTL Java Use-API](https://helpx.adobe.com/experience-manager/htl/using/use-api.html) | Med HTL Java Use-API:t kan en HTML-fil få åtkomst till hjälpmetoder i en anpassad Java-klass. |
 
 >[!NOTE]
 >
 >Följande självstudiekurs i flera delar kan vara av intresse för den bästa metoden för att skapa ett nytt AEM, med information om kärnkomponenter, redigerbara mallar, klientbibliotek och komponentutveckling:
 >[Komma igång med AEM Sites - WKND självstudiekurs](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)
-

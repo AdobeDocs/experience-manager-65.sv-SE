@@ -1,8 +1,8 @@
 ---
 title: Användargränssnitt Recommendations för kunder
-seo-title: Användargränssnitt Recommendations för kunder
+seo-title: User Interface Recommendations for Customers
 description: En lista med rekommendationer relaterade till de klassiska och pekoptimerade användargränssnitten.
-seo-description: En lista med rekommendationer relaterade till de klassiska och pekoptimerade användargränssnitten.
+seo-description: A list of recommendations related to the classic and touch-optimized user interfaces.
 uuid: 9ec2c9de-a79e-4f2c-a90f-b38ba9553e07
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,14 +10,13 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 8f06d4b6-7d30-4ebc-9c6a-3bb8607a9be8
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 7035c19a109ff67655ee0419aa37d1723e2189cc
+exl-id: 7b71119a-ff58-47c0-aeef-a705ed8c40e0
+source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '784'
 ht-degree: 0%
 
 ---
-
 
 # Användargränssnitt Recommendations för kunder{#user-interface-recommendations-for-customers}
 
@@ -30,20 +29,20 @@ Intressevillkor:
 * **Användargränssnitt (eller standardgränssnitt)**
 Modernt användargränssnitt som introducerades i 5.6.0 som en förhandstitt på teknik och utökades i efterföljande versioner. Det bygger på den enhetliga användarupplevelsen för Adobe Experience Cloud, som tidigare kallades användargränssnitt med pekfunktion eller användargränssnitt.
 
-* **Klassiskt**
-användargränssnitt baserat på ExtJS-teknik som introducerades med CQ 5.1 2008.
+* **Klassiskt användargränssnitt**
+Användargränssnitt som bygger på ExtJS-teknik som introducerades med CQ 5.1 2008.
 
-* **Site**
-AdminCapabilities för att hantera platshierarkin (flytta, aktivera, hantera referenser) och skapa nya sidor.
+* **Webbplatsadministratör**
+Möjlighet att hantera platshierarkin (flytta, aktivera, hantera referenser) och skapa nya sidor.
 
-* **Page**
-AuthoringCapabilities för att lägga till/redigera innehållet på en sida.
+* **Sidredigering**
+Möjlighet att lägga till/redigera innehållet på en sida.
 
-* **DAM/Assets**
-AdminCapabilities för hantering av digitala resurser (inklusive bilder, video, dokument, nedladdningar).
+* **DAM-/resursadministratör**
+Möjlighet att hantera digitalt material (inklusive bilder, video, dokument, nedladdningar).
 
-* ****
-ContextHubCapabilities för att samla information om besökaren och använda den för olika syften. Tillhandahåller ett användargränssnitt för att simulera personer som besöker webbplatsen. Med början AEM 6.2 ersatte ContextHub den tidigare tekniken, Client Context.
+* **ContextHub**
+Möjlighet att samla information om besökaren och använda den för olika syften. Tillhandahåller ett användargränssnitt för att simulera personer som besöker webbplatsen. Med början AEM 6.2 ersatte ContextHub den tidigare tekniken, Client Context.
 
 ## Allmänt {#general}
 
@@ -70,15 +69,15 @@ Nedan följer en lista över rekommendationer från Product Management för Adob
    <td>Använd standardgränssnittet.</td>
   </tr>
   <tr>
-   <td><p>Har använt AEM ett tag.</p> <p>Har använt produktgränssnittet som det är färdigt och utvecklat anpassade komponenter för webbplatserna.<br /> </p> </td>
+   <td><p>Har använt AEM ett tag.</p> <p>Har använt produktgränssnittet som det är tänkt och utvecklat anpassade komponenter för webbplatserna.<br /> </p> </td>
    <td>
     <ol>
      <li>Uppdatera till 6.5</li>
-     <li>Använd standardgränssnittet för platsadministration, resurser, ... etc.<br /> </li>
+     <li>Använd standardgränssnittet för platsadministration, resurser, ... osv.<br /> </li>
      <li>Konfigurera åtgärden Redigera sida för att öppna den klassiska sidredigeraren i användargränssnittet. Se <a href="#selecting-your-ui">Välja användargränssnitt</a>.</li>
     </ol> <p>I en andra fas:</p>
     <ol>
-     <li>Uppdatera komponentdialogrutorna så att de använder Dialogrutan Coral 3. Adobe rekommenderar att du använder <a href="/help/sites-developing/modernization-tools.md">AEM Moderniseringsverktyg</a> för att uppdatera komponenterna.</li>
+     <li>Uppdatera komponentdialogrutorna så att de använder Dialogrutan Coral 3. Adobe rekommenderar att du använder <a href="/help/sites-developing/modernization-tools.md">AEM</a> för att uppdatera komponenterna.</li>
     </ol> </td>
   </tr>
   <tr>
@@ -90,7 +89,7 @@ Nedan följer en lista över rekommendationer från Product Management för Adob
      <li>Konfigurera åtgärden Redigera sida för att öppna den klassiska sidredigeraren i användargränssnittet. Se <a href="#selecting-your-ui">Välja användargränssnitt</a>.</li>
     </ol> <p>I en andra fas:</p>
     <ol>
-     <li>Uppdatera komponentdialogrutorna så att de använder Dialogrutan Coral 3. Adobe rekommenderar att du använder <a href="/help/sites-developing/modernization-tools.md">AEM Moderniseringsverktyg</a> för att uppdatera komponenterna.</li>
+     <li>Uppdatera komponentdialogrutorna så att de använder Dialogrutan Coral 3. Adobe rekommenderar att du använder <a href="/help/sites-developing/modernization-tools.md">AEM</a> för att uppdatera komponenterna.</li>
      <li>Konfigurera ContextHub (ersättning för ClientContext) och uppdatera sidmallarna så att ContextHub används. Observera att ContextHub har ett kompatibilitetsläge som tillåter inläsning av anpassade ClientContext-arkiv.</li>
     </ol> </td>
   </tr>
@@ -101,21 +100,21 @@ Nedan följer en lista över rekommendationer från Product Management för Adob
  </tbody>
 </table>
 
-### Vanliga frågor och svar {#faq}
+### Vanliga frågor {#faq}
 
-Mer information finns i artikeln [Touch UI Authoring FAQ](https://helpx.adobe.com/experience-manager/kb/index/touchui_faq.html) i kunskapsbasen. inklusive information om det klassiska användargränssnittets borttagningsschema.
+Läs artikeln i kunskapsbasen [Vanliga frågor om redigering av Touch UI](https://helpx.adobe.com/experience-manager/kb/index/touchui_faq.html), för närmare uppgifter, inklusive information om det klassiska användargränssnittets borttagningsschema.
 
 ### Välja användargränssnitt {#selecting-your-ui}
 
-Se [Välja användargränssnitt](/help/sites-authoring/select-ui.md) för information om hur du konfigurerar systemet efter behov.
+Se [Välja användargränssnitt](/help/sites-authoring/select-ui.md) om du vill ha information om hur du konfigurerar systemet.
 
-### Pekaktiverat användargränssnittsstatus {#touch-enabled-ui-status}
+### Pekaktiverad gränssnittsstatus {#touch-enabled-ui-status}
 
 Mer information om förbättringarna av det beröringsaktiverade användargränssnittet i AEM 6.5 finns i [Nyheter](/help/release-notes/release-notes.md#what-s-new) i versionsinformationen.
 
-En fullständig översikt finns på sidan [Touch UI Feature Status](/help/release-notes/touch-ui-features-status.md)
+En fullständig översikt finns i [Funktionsstatus för Touch UI](/help/release-notes/touch-ui-features-status.md) page
 
-### Resurser att hjälpa till med {#resources-to-help}
+### Resurser att hjälpa {#resources-to-help}
 
 För bakgrundsinformation om grundläggande hantering:
 
@@ -123,15 +122,13 @@ För bakgrundsinformation om grundläggande hantering:
 
 Detaljerad utvecklingsinformation:
 
-* [Pekaktiverad gränssnittsarkitektur](/help/sites-developing/touch-ui-concepts.md).
-* Använd [AEM Moderniseringsverktyg](/help/sites-developing/modernization-tools.md) för att konvertera komponentredigeringsdialogrutor från det klassiska användargränssnittet till det beröringsaktiverade användargränssnittet.
+* [UI-arkitektur med pekskärmsfunktioner](/help/sites-developing/touch-ui-concepts.md).
+* Använd [AEM](/help/sites-developing/modernization-tools.md) om du vill konvertera komponentredigeringsdialogrutor från det klassiska användargränssnittet till det beröringsaktiverade användargränssnittet.
 
 * [Struktur för det beröringskänsliga användargränssnittet](/help/sites-developing/touch-ui-structure.md).
 
-* [Anpassa konsolerna i det beröringsaktiverade användargränssnittet](/help/sites-developing/customizing-consoles-touch.md)  (inklusive exempelkod).
+* [Anpassa konsolerna i det pekaktiverade användargränssnittet](/help/sites-developing/customizing-consoles-touch.md) (innehåller exempelkod).
 
-* [Anpassa sidredigering i det beröringsaktiverade användargränssnittet](/help/sites-developing/customizing-page-authoring-touch.md)  (inklusive exempelkod).
+* [Anpassa sidredigering i det beröringsaktiverade användargränssnittet](/help/sites-developing/customizing-page-authoring-touch.md) (innehåller exempelkod).
 
-* [AEM Gem Session vid anpassning](https://docs.adobe.com/content/ddc/en/gems/user-interface-customization-for-aem-6.html) med pekskärm.
-* [Bevilja gränssnittsdokumentation](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html).
-
+* [Granite UI-dokumentation](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html).

@@ -1,8 +1,8 @@
 ---
 title: Checklista - ytterligare referens
-seo-title: Checklista - ytterligare referens
+seo-title: The Checklist - Further Reference
 description: Läs mer om detaljerad information som går igenom och/eller förstärker de dokument och principer som omfattas av checklistan Hantera projekt - Bästa metoder.
-seo-description: Läs mer om detaljerad information som går igenom och/eller förstärker de dokument och principer som omfattas av checklistan Hantera projekt - Bästa metoder.
+seo-description: Learn about further details that elaborate on and/or augment the documents and principles covered by the Managing Projects - Best Practices Checklist.
 uuid: 58a8b4ab-e447-4a12-b9e9-4cd3db11e06a
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/MANAGING
@@ -10,17 +10,16 @@ topic-tags: managing-checklist
 content-type: reference
 discoiquuid: 6fc2751e-f42a-4519-bc8c-695057f21b69
 exl-id: 36620e3e-ecdf-4062-bbef-65513362d691
-translation-type: tm+mt
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '3783'
+source-wordcount: '3755'
 ht-degree: 0%
 
 ---
 
-# Checklistan - ytterligare referens{#the-checklist-further-reference}
+# Checklista - ytterligare referens{#the-checklist-further-reference}
 
-På den här sidan finns mer information om hur du kan arbeta vidare med och/eller förstärka de dokument och principer som omfattas av [Managing Projects - Best Practices Checklist](/help/managing/best-practices.md).
+På denna sida finns mer information för att gå närmare igenom och/eller förstärka de dokument och principer som omfattas av [Hantera projekt - checklista för bästa praxis](/help/managing/best-practices.md).
 
 ## AEM - Vad ska du använda? {#aem-what-will-you-be-using}
 
@@ -30,12 +29,12 @@ På den här sidan finns mer information om hur du kan arbeta vidare med och/ell
 
 ### Funktioner i AEM {#features-within-aem}
 
-När du implementerar AEM (särskilt för första gången) måste du granska [funktionerna och arbetsflödena i AEM](https://www.adobe.com/marketing/experience-manager.html) för att vara säker på vilka områden du vill/behöver.
+När du implementerar AEM (särskilt för första gången) måste du granska [AEM och arbetsflöden](https://www.adobe.com/marketing/experience-manager.html) för att vara säker på vilka områden du vill/behöver.
 
 Fundera på AEM funktioner du kommer att använda och hur designen påverkas. till exempel:
 
 * [Handel](/help/commerce/cif-classic/administering/ecommerce.md)
-* [Skärmar](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/aem-screens-introduction.html)
+* [Skärmar](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html)
 * [Assets](/help/assets/assets.md)
 * [Taggar](/help/sites-administering/tags.md)
 * [Hantering och översättning av flera webbplatser](/help/sites-administering/msm-and-translation.md)
@@ -43,13 +42,13 @@ Fundera på AEM funktioner du kommer att använda och hur designen påverkas. ti
 * [Communities](/help/communities/deploy-communities.md)
 * [Livefyre](https://answers.livefyre.com/product/livefyre-for-adobe-experience-manager-aem/livefyre-for-adobe-experience-manager/)
 
-Kontrollera dessutom [versionsinformationen](/help/release-notes/release-notes.md) för de olika versionerna av AEM för att se när nya funktioner lades till.
+Kontrollera dessutom [Versionsinformation](/help/release-notes/release-notes.md), för de olika versionerna av AEM, för att se när nya funktioner lades till.
 
 ### Integreringar {#integrations}
 
 AEM kan integreras med andra Adobe-produkter och/eller tredjepartstjänster. De kan öka den kraft och funktionalitet du har till ditt förfogande.
 
-Mer information finns i [Lösningsintegrering](/help/sites-administering/integration.md).
+Se [Lösningsintegrering](/help/sites-administering/integration.md) för fullständig information.
 
 ## Migrera eller uppgradera? {#migrate-or-upgrade}
 
@@ -60,8 +59,8 @@ Det är viktigt att tänka på om du vill:
 
 När du går från en tidigare version till den aktuella versionen finns det två alternativ:
 
-* Använd [Package Manager](/help/sites-administering/package-manager.md) för att exportera allt innehåll och all programkod från det gamla systemet till det nya.
-* [Uppgradera ](/help/sites-deploying/upgrade.md) det gamla systemet på plats. Detta är det rekommenderade alternativet i de flesta fall.
+* Använd [Pakethanteraren](/help/sites-administering/package-manager.md) för att exportera allt innehåll och all programkod från det gamla systemet till det nya.
+* [Uppgradera](/help/sites-deploying/upgrade.md) det gamla systemet på plats. Detta är det rekommenderade alternativet i de flesta fall.
 
 ## Grundregler {#basic-ground-rules}
 
@@ -69,7 +68,7 @@ Precis som med andra projekt är det viktigt att fastställa grundregler så sna
 
 >[!NOTE]
 >
->Dessa punkter är generiska och [checklistan för bästa praxis](/help/managing/best-practices.md) behandlar specifika AEM.
+>Dessa punkter är allmänna, [Checklista för bästa praxis](/help/managing/best-practices.md) hanterar specifika AEM.
 
 * **Roller**
 
@@ -84,7 +83,7 @@ Precis som med andra projekt är det viktigt att fastställa grundregler så sna
 
 * **Deltagande**
 
-   Genom att involvera berörda parter så snart som möjligt kan du uppmuntra dem att bli *intressenter* i projektet och på så sätt öka deras engagemang för att projektet ska lyckas.
+   Genom att involvera berörda parter så snart som möjligt kan ni uppmuntra dem att bli *intressenter* i projektet och därmed öka deras engagemang för att projektet ska lyckas.
 
    * På kundsidan omfattar detta författarna - som måste arbeta med systemet dagligen.
    * I ditt eget projektteam kommer detta även att omfatta de personer som ansvarar för kvalitetssäkring. Ju mer de förstår kundens krav, desto bättre kan de planera testerna.
@@ -113,7 +112,7 @@ Precis som med andra projekt är det viktigt att fastställa grundregler så sna
    * de enskilda releaserna (om en iterativ versionsprocess används och oavsett om de levereras till kunder eller till ditt interna testteam).
    * AEM.
    * Hela projektet. inklusive eventuella tredjepartsprogram, deras inverkan på testning, organisatoriska frågor och många andra.
-   * För vissa aspekter kan det också vara användbart att ange vad som är *inte* inom projektets omfång. Detta kan bidra till att förhindra förvirring och felaktiga antaganden, även om det bör begränsas till väsentliga frågor.
+   * För vissa aspekter kan det också vara användbart att ange vad som *not* inom projektets räckvidd. Detta kan bidra till att förhindra förvirring och felaktiga antaganden, även om det bör begränsas till väsentliga frågor.
 
 * **Rapportering**
 
@@ -133,7 +132,7 @@ Denna information kan definieras i en projekthandbok. en Wiki kan också bidra t
 * Alla berörda personer informeras tydligt om informationen. Även om det är en vanlig projekthanteringspraxis kan den inte upprepas tillräckligt ofta, så att en tydlig rolldefinition och bra kommunikation kan skapa, eller bryta, ett projekt.
 * Endast en version av all information som spåras behålls. till exempel felspårning, problemspårning osv.
 
-## Prestandaindikatorer och målmått {#key-performance-indicators-and-target-metrics}
+## Viktiga resultatindikatorer och målvärden {#key-performance-indicators-and-target-metrics}
 
 Organisationer använder nyckeltal (KPI:er) för att utvärdera hur de lyckades uppnå sina mål. Dessa indikatorer är mätbara värden som kan användas för att visa hur effektivt specifika mål uppfylls.
 
@@ -151,24 +150,24 @@ Dessa indikatorer kan vara
 
 Vissa indikatorer, men inte alla, kan baseras på målmåtten som du identifierar och definierar.
 
-### Målmått {#target-metrics}
+### Måttmål {#target-metrics}
 
-Mätvärden används för att definiera kvantitativa mått för kvaliteten på din webbplats - de är i princip en definition av de prestandamål du vill uppnå och kan användas för att definiera dina [KPI:er (Key Performance Indicators)](#key-performance-indicators-and-target-metrics).
+Mätvärden används för att definiera kvantitativa mått för kvaliteten på din webbplats - de är i princip en definition av de prestationsmål som du vill uppnå och kan användas för att definiera dina [KPI (Key Performance Indicators)](#key-performance-indicators-and-target-metrics).
 
 Många mätvärden kan definieras, men ofta täcker de mål som du har satt upp för prestanda och samtidighet. Detta gäller särskilt faktorer som kan vara svåra att kvantifiera och som ofta är benägna att *känslomässig* bedömning:
 
-* &quot;vår webbplats är *mycket för långsam* idag&quot; - när är *långsam* kvalificerat?
+* &quot;vår webbplats är *för långsam* idag&quot; - när gör det *långsam* kvalificera dig?
 
-* &quot;allt *smetar till ett stopp* när min kollega loggar in&quot; - hur många samtidiga användare kan systemsupporten?
-* &quot;när jag söker efter systemet *glider till ett stopp* &quot; - vilken typ av sökförfrågningar påverkar systemet?
-* &quot;det tar *åldrar* att hämta filen&quot; - vilka hämtningstider är tillåtna (under normala nätverksförhållanden)?
+* &quot;allt *stilla galler* när min kollega loggar in&quot; - hur många samtidiga användare kan systemsupporten?
+* &quot;när jag söker, systemet *stilla galler* &quot; - Vilken typ av sökförfrågningar påverkar systemet?
+* &quot;det krävs *sidor* för att ladda ned filen&quot; - vilka är tillåtna nedladdningstider (under normala nätverksförhållanden)?
 
 Målmått definieras i början av ett projekt till:
 
 * ange de förväntade dimensionerna för den webbplats du kommer att erbjuda
 * ange den minimikvalitet som du vill uppnå
 * definiera hur dessa faktorer faktiskt ska mätas
-* användas som bas för [nyckelresultatindikatorer](#key-performance-indicators-and-target-metrics)
+* användas som grund för [Viktiga prestandaindikatorer](#key-performance-indicators-and-target-metrics)
 
 Som alltid måste man vara försiktig när man definierar målmåtten:
 
@@ -188,11 +187,11 @@ När dessa mätvärden används på rätt sätt kan de ge ett användbart verkty
 >
 >Detta avsnitt kommer att behandla de grundläggande principer och frågor som ska övervägas. Alla installationer är olika, så de faktiska värden som ska mätas är olika.
 
-### Allt finns i din projektdesign {#everything-rests-on-your-project-design}
+### Allt hänger på din projektdesign {#everything-rests-on-your-project-design}
 
 Alla mätvärden kommer på något sätt att påverkas av projektets utformning. Omvänt löses många problem bäst genom designändringar.
 
-Därför bör du definiera målmåtten *innan* bestämmer dig för din design. På så sätt kan du optimera din design baserat på dessa faktorer. När projektet väl har utvecklats är det svårt att ändra de grundläggande designprinciperna.
+Därför bör du definiera målvärden *före* bestämmer dig för din design. På så sätt kan du optimera din design baserat på dessa faktorer. När projektet väl har utvecklats är det svårt att ändra de grundläggande designprinciperna.
 
 När du skapar webbplatsens struktur följer du den rekommenderade strukturen för AEM webbplatser. Se till att du förstår följande:
 
@@ -230,7 +229,7 @@ Det finns flera faktorer som kan utvärderas:
 
 * svarstider för sökbegäranden
 
-Det här avsnittet kan läsas tillsammans med [Prestandaoptimering](/help/sites-deploying/configuring-performance.md) som utökar den tekniska informationen för att mäta prestanda.
+Det här avsnittet kan läsas tillsammans med [Prestandaoptimering](/help/sites-deploying/configuring-performance.md) som utökar de tekniska detaljerna för att mäta prestanda.
 
 #### Svarstider för enskilda sidor {#response-times-for-individual-pages}
 
@@ -240,7 +239,7 @@ Ett viktigt problem är den tid det tar för er webbplats att svara på besökar
 
 Olika mål för skribent- och publiceringsmiljöer
 
-De svarstider du vill ha skiljer sig åt mellan skribent- och publiceringsmiljöerna, vilket återspeglar målgruppen:
+De svarstider du vill använda skiljer sig åt mellan skribent- och publiceringsmiljöerna, vilket återspeglar målgruppen:
 
 * **Författarmiljö**
 
@@ -287,15 +286,15 @@ Det finns flera sätt att övervaka svarstiderna:
 
 * **Övervaka svarstider med AEM request.log**
 
-   En bra utgångspunkt för prestandaanalys är begärandeloggen. Du kan bland annat använda den här informationen för att se svarstiderna för enskilda begäranden. Mer information finns i [Prestandaoptimering](/help/sites-deploying/configuring-performance.md).
+   En bra utgångspunkt för prestandaanalys är begärandeloggen. Du kan bland annat använda den här informationen för att se svarstiderna för enskilda begäranden. Se [Prestandaoptimering](/help/sites-deploying/configuring-performance.md) för mer information.
 
-* **Övervaka svarstider med HTML-kommentarer**
+* **Övervaka svarstider med HTML kommentarer**
 
    HTML-kommentarer kan användas för att inkludera information om svarstid i källan för varje sida:
 
    `</body> </html>v <-- Page took 58 milliseconds to be rendered by the server --> Response times for search requests`
 
-#### Sökförfrågningar {#search-requests}
+#### Sökbegäranden {#search-requests}
 
 Sökförfrågningar kan ha stor effekt på din webbplats, både när det gäller:
 
@@ -319,15 +318,15 @@ Dessa bör planeras och integreras redan från början av projektet. De övervak
 
 * **Övervaka söksvarstider med AEM request.log**
 
-   Även här kan request.log användas för att övervaka svarstiderna för sökbegäranden. Mer information finns i [Prestandaoptimering](/help/sites-deploying/configuring-performance.md).
+   Även här kan request.log användas för att övervaka svarstiderna för sökbegäranden. se [Prestandaoptimering](/help/sites-deploying/configuring-performance.md) för mer information.
 
 * **Programmerade mekanismer för mätning av svarstider för sökningar**
 
-   Om du vill anpassa den information du samlar in om sökförfrågningar och hur de fungerar rekommenderar vi att du inkluderar informationsinsamling i projektets källkod. Mer information finns i [Prestandaoptimering](/help/sites-deploying/configuring-performance.md).
+   Om du vill anpassa den information du samlar in om sökförfrågningar och hur de fungerar rekommenderar vi att du inkluderar informationsinsamling i projektets källkod. se [Prestandaoptimering](/help/sites-deploying/configuring-performance.md) för mer information.
 
 ### Samtidighet {#concurrency}
 
-Din webbplats kommer att vara tillgänglig för ett antal användare/besökare, både i skribent- och publiceringsmiljöer. Siffrorna är ofta mer än du använde när du testade, men de varierar också och är svåra att förutse. Webbplatsen måste utformas för ett genomsnittligt antal samtidiga användare/besökare utan att märka någon negativ inverkan på prestandan. Även här kan `request.log` användas för att utföra samtidighetstester. Mer information finns i [Prestandaoptimering](/help/sites-deploying/configuring-performance.md).
+Din webbplats kommer att vara tillgänglig för ett antal användare/besökare, både i skribent- och publiceringsmiljöer. Siffrorna är ofta mer än du använde när du testade, men de varierar också och är svåra att förutse. Webbplatsen måste utformas för ett genomsnittligt antal samtidiga användare/besökare utan att märka någon negativ inverkan på prestandan. Igen `request.log` kan användas för samtidighetstester, se [Prestandaoptimering](/help/sites-deploying/configuring-performance.md) för mer information.
 
 Målen för antalet samtidiga användare beror på miljötypen:
 
@@ -375,9 +374,9 @@ Men det är bättre att ha en liten uppsättning exakta, viktiga mätvärden som
 
 ## Dokumentskydd {#security}
 
-Säkerhet är avgörande och en ständigt ökande utmaning. Det ***måste*** övervägas och planeras från de första stegen i projektet.
+Säkerhet är avgörande och en ständigt ökande utmaning. Den ***måste*** kan övervägas och planeras från de tidigaste projektfaserna.
 
-[Säkerhetschecklistan](/help/sites-administering/security-checklist.md) innehåller anvisningar som du bör vidta för att säkerställa att AEM är säker vid distributionen. Andra säkerhetsaspekter beskrivs under [Säkerhet (vid utveckling)](/help/sites-developing/security.md) och [Användaradministration och -säkerhet](/help/sites-administering/security.md).
+The [Säkerhetschecklista](/help/sites-administering/security-checklist.md) detaljerade anvisningar som du bör vidta för att säkerställa att AEM är säker vid driftsättningen. Andra säkerhetsaspekter omfattas av [Säkerhet (vid utveckling)](/help/sites-developing/security.md) och [Användaradministration och -säkerhet](/help/sites-administering/security.md).
 
 ## Parallella och interaktiva uppgifter {#parallel-and-iterative-tasks}
 
@@ -385,21 +384,19 @@ Säkerhet är avgörande och en ständigt ökande utmaning. Det ***måste*** öv
 >
 >Följande:
 >
->* Erbjuder en översikt relaterad till den första *implementeringen av ett AEM projekt.*
->* är avsedd som en abstrakt översikt, i [Projektchecklista](/help/managing/best-practices.md) för specifika faser/milstolpar/uppgifter.
+>* Erbjuder en översikt relaterad till *först* implementering av ett AEM projekt.
+>* är avsedd som en abstrakt översikt, se [Projektchecklista](/help/managing/best-practices.md) för specifika faser/milstolpar/uppgifter.
 >* Alla tidsskalor är teoretiska.
-
 >
-
 
 
 För en ny implementering av ett AEM-projekt måste du överväga uppgifter som:
 
 * Överleverans från försäljningsprocessen.
-* Implementering av kundprogrammet (**Utveckling**).
+* Implementering av kundapplikationen (**Utveckling**).
 * Installation och konfigurering av infrastrukturen (och relaterade processer) på kundplatsen (**Infrastruktur**).
 * Skapande (eller migrering) av innehållet (**Innehåll**).
-* Lämna över till åtgärder (**Maintenance/Support**).
+* Överför till åtgärder (**Underhåll/support**).
 * Följ upp releaser.
 
 ![chlimage_1-2](assets/chlimage_1-2.png)
@@ -410,7 +407,7 @@ För alla aspekter rekommenderas en iterativ metod:
 
 >[!NOTE]
 >
->Dela projektstarten i **Soft Launch(s)** (reducerad tillgänglighet, flera iterationer) och **Hard Launch** (full tillgänglighet - Live) för att möjliggöra justering, optimering och användarutbildning under realistiska förhållanden i produktionsmiljön.
+>Dela projektstarten i **Mjuk start(ar)** (minskad tillgänglighet, flera iterationer) och **Hård start** (full tillgänglighet - Live) för anpassning, optimering och användarutbildning under realistiska förhållanden i produktionsmiljön.
 
 >[!NOTE]
 >
@@ -471,7 +468,7 @@ Några punkter att notera för varje kategori är:
    * Planera för&quot;in-sprint-migration&quot; efter omfaktorisering.
    * Planera&quot;content burndown&quot; (platskarta för publicerat innehåll).
 
-## Beräknar tid och arbete {#estimating-time-and-effort}
+## Beräknar tid och insats {#estimating-time-and-effort}
 
 Beroende på vilken uppgiftslista du skapar kan du sedan göra en första uppskattning av tid och arbete för (hög nivå) uppgiftsdefinitioner. Dessa bör innehålla en indikation på vem (kund eller partner) som kommer att göra vad och när.
 
@@ -530,10 +527,10 @@ Följande lista innehåller information om verktyg som kan användas. Den är av
    <td><p>AEM innehåller en mängd mekanismer som hjälper dig att övervaka, testa, undersöka och felsöka programmet. inklusive:</p>
     <ul>
      <li><a href="/help/sites-developing/developer-mode.md">Utvecklarläge</a></li>
-     <li><a href="/help/sites-developing/hobbes.md">Testkonsolen</a></li>
+     <li>The <a href="/help/sites-developing/hobbes.md">Testningskonsolen</a></li>
      <li><a href="/help/sites-administering/operations-dashboard.md">Instrumentpanel för åtgärder</a></li>
      <li><a href="/help/sites-authoring/content-insights.md">Content Insight</a></li>
-     <li><a href="/help/sites-authoring/author-environment-tools.md#content-tree">Innehållsträdet</a></li>
+     <li>The <a href="/help/sites-authoring/author-environment-tools.md#content-tree">Innehållsträd</a></li>
     </ul> </td>
   </tr>
   <tr>
@@ -542,7 +539,7 @@ Följande lista innehåller information om verktyg som kan användas. Den är av
   </tr>
   <tr>
    <td>Selen</td>
-   <td><a href="https://docs.seleniumhq.org/">Seleniumis </a> är ett testverktyg med öppen källkod. Testerna körs direkt i webbläsaren och emulerar hur användarna arbetar.</td>
+   <td><a href="https://docs.seleniumhq.org/">Selen</a> är ett testverktyg för öppen källkod. Testerna körs direkt i webbläsaren och emulerar hur användarna arbetar.</td>
   </tr>
   <tr>
    <td>Microsoft Project</td>
@@ -550,23 +547,23 @@ Följande lista innehåller information om verktyg som kan användas. Den är av
   </tr>
   <tr>
    <td>Jira</td>
-   <td><a href="https://www.atlassian.com/software/jira">Jirais </a> är ett verktyg med öppen källkod som du kan använda för att spåra och hantera information om programvarufel. Arbetsflöden kan vid behov läggas på felinformationen.</td>
+   <td><a href="https://www.atlassian.com/software/jira">Jira</a> är ett verktyg med öppen källkod som du kan använda för att spåra och hantera information om programvarufel. Arbetsflöden kan vid behov läggas på felinformationen.</td>
   </tr>
   <tr>
    <td>Git</td>
-   <td><a href="https://git-scm.com/">Gitis </a> a revision control software.</td>
+   <td><a href="https://git-scm.com/">Git</a> är ett program för revisionskontroll.</td>
   </tr>
   <tr>
    <td>Eclipse</td>
-   <td><p>Eclipse är en IDE med öppen källkod, som består av olika projekt. Dessa fokuserar på att bygga en öppen utvecklingsplattform som består av utbyggbara ramverk, verktyg och miljöer för att bygga, driftsätta och hantera programvara under hela livscykeln.</p> <p>Mer information finns i <a href="/help/sites-developing/howto-projects-eclipse.md">Utveckla AEM projekt med Eclipse</a>.</p> </td>
+   <td><p>Eclipse är en IDE med öppen källkod, som består av olika projekt. Dessa fokuserar på att bygga en öppen utvecklingsplattform som består av utbyggbara ramverk, verktyg och miljöer för att bygga, driftsätta och hantera programvara under hela livscykeln.</p> <p>Se <a href="/help/sites-developing/howto-projects-eclipse.md">Utveckla AEM projekt med Eclipse</a> för mer information.</p> </td>
   </tr>
   <tr>
    <td>IntelliJ</td>
-   <td><p>En professionell utvecklingsmiljö (som därför kan ge upphov till licenskostnader) med ett omfattande utbud av funktioner. </p> <p>Mer information finns i <a href="/help/sites-developing/ht-intellij.md">Utveckla AEM med IntelliJ IDEA</a>.</p> </td>
+   <td><p>En professionell utvecklingsmiljö (som därför kan ge upphov till licenskostnader) med ett omfattande utbud av funktioner. </p> <p>Se <a href="/help/sites-developing/ht-intellij.md">Utveckla AEM projekt med IntelliJ IDEA</a> för mer information.</p> </td>
   </tr>
   <tr>
    <td>Maven</td>
-   <td><a href="https://maven.apache.org/">Mavenär </a> ett verktyg för projektledning och programförståelse som kan hantera byggprocessen (programvara och dokumentation).</td>
+   <td><a href="https://maven.apache.org/">Maven</a> är ett verktyg för projektledning och -förståelse som kan hantera byggprocessen (programvara och dokumentation).</td>
   </tr>
  </tbody>
 </table>

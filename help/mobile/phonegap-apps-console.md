@@ -1,22 +1,21 @@
 ---
 title: Skapa och redigera appar med Apps-konsolen
-seo-title: Skapa och redigera appar med Apps-konsolen
+seo-title: Creating and Editing Apps Using the Apps Console
 description: Följ den här sidan om du vill veta mer om hur du skapar och redigerar program med hjälp av appkonsolen.
-seo-description: Följ den här sidan om du vill veta mer om hur du skapar och redigerar program med hjälp av appkonsolen.
+seo-description: Follow this page to learn about creating and editing apps using apps console.
 uuid: 4f7db978-ae2b-4ca6-89f1-26e091d9140a
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: 9890d045-cead-4d70-b797-95319284e0d8
-translation-type: tm+mt
-source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+exl-id: 49e0b3f6-7ac7-4417-9c31-cc3d3c2305f3
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '2638'
+source-wordcount: '2615'
 ht-degree: 0%
 
 ---
-
 
 # Skapa och redigera appar med Apps-konsolen{#creating-and-editing-apps-using-the-apps-console}
 
@@ -42,7 +41,7 @@ AEM Mobile tillhandahåller en plan för PhoneGap-appen för att skapa mobilappa
 
 Rotsidan för de mobilprogram du skapar i AEM visas i Apps-konsolen.
 
-Rotsidan lagras under egenskapen Målsökväg i programmet som angavs när programmet skapades (standardsökvägen är /content/phonegap/apps). Sidnamnet är egenskapen Name för programmet. Till exempel är standard-URL:en för webbplatsens rotsida `myphonegapapp` `http://localhost:4502/content/phonegap/apps/myphonegapapp.html`.
+Rotsidan lagras under egenskapen Målsökväg i programmet som angavs när programmet skapades (standardsökvägen är /content/phonegap/apps). Sidnamnet är egenskapen Name för programmet. Till exempel standardwebbadressen för rotsidan på webbplatsen med namnet `myphonegapapp` är `http://localhost:4502/content/phonegap/apps/myphonegapapp.html`.
 
 ![chlimage_1-146](assets/chlimage_1-146.png)
 
@@ -69,19 +68,19 @@ Startsidan, eller index.html-sidan för en språkvariant av ett program, visas n
 
 Mobilprogram bygger på en plan som definierar en sidstruktur och egenskaper. Du kan konfigurera följande programegenskaper:
 
-* **Title:** The application title.
-* **Målsökväg:** Den plats i databasen där programmet lagras. Låt standardinställningen vara om du vill skapa en sökväg baserat på programnamnet.
+* **Titel:** Programtitel.
+* **Målsökväg:** Platsen i databasen där programmet lagras. Låt standardinställningen vara om du vill skapa en sökväg baserat på programnamnet.
 
-* **Namn:** Standardvärdet är värdet för egenskapen Title där blankstegstecken tas bort. Namnet används i CQ för att referera till programmet, till exempel för databasnoden som representerar programmet.
+* **Namn:** Standardvärdet är värdet för egenskapen Title med blankstegstecken borttagna. Namnet används i CQ för att referera till programmet, till exempel för databasnoden som representerar programmet.
 * **Beskrivning:** En beskrivning av programmet.
-* **Server-URL:** Den URL som innehåller OTA-innehållsuppdateringar (Over-the-Air) för programmet. Standardvärdet är publiceringsserverns URL-adress för instansen som används för att skapa ett program (hämtas från externaliseringstjänsten). Observera att detta måste vara en publiceringsserverinstans i stället för en författare, vilket kräver autentisering.
+* **Server-URL:** Den URL som innehåller OTA-innehåll (Over-the-Air) uppdateras i programmet. Standardvärdet är publiceringsserverns URL-adress för instansen som används för att skapa ett program (hämtas från externaliseringstjänsten). Observera att detta måste vara en publiceringsserverinstans i stället för en författare, vilket kräver autentisering.
 
 Du kan också tillhandahålla en bildfil som du kan använda som programminiatyrbild, välja vilken PhoneGap Build som ska användas och välja vilken mobilappsanalyskonfiguration som ska användas. Den här bilden används bara som miniatyrbild för att representera ditt mobilprogram i mobilappskonsolen i Experience Manager.
 
 Det finns ytterligare (och valfria) flikar för att bygga molntjänster och integrera plugin-programmet Adobe Mobile Services SDK i appen.
 
 * Bygg: Klicka på Hantera konfigurationer och konfigurera bygg.phonegap.com här. I listrutan kan du sedan välja den nya molntjänsten PhoneGap build.
-* Analyser: Klicka på Hantera konfigurationer och konfigurera molntjänsten [Adobe Mobile Services SDK](https://docs.adobe.com/content/help/en/mobile-services/using/home.html). I listrutan kan du sedan välja den nya mobiltjänsten som ska integreras i din mobilapp.
+* Analyser: Klicka på Hantera konfigurationer och konfigurera [Adobe Mobile Services SDK](https://experienceleague.adobe.com/docs/mobile-services/using/home.html) molntjänst. I listrutan kan du sedan välja den nya mobiltjänsten som ska integreras i din mobilapp.
 
 >[!NOTE]
 >
@@ -140,7 +139,7 @@ När du har skapat ett mobilprogram kan du ändra egenskaperna.
 
    ![](do-not-localize/chlimage_1-13.png)
 
-### Om du redigerar innehållet i ett mobilprogram {#authoring-the-content-of-a-mobile-application}
+### Skapa innehåll för ett mobilprogram {#authoring-the-content-of-a-mobile-application}
 
 När du har skapat mobilprogrammet lägger du till innehåll som används som programgränssnitt.
 
@@ -148,7 +147,7 @@ När du har skapat mobilprogrammet lägger du till innehåll som används som pr
 1. Klicka eller tryck på programmet och sedan på engelska.
 1. Redigera hemsidan eller lägg till underordnade sidor efter behov.
 
-### Flyttar innehåll till mobilprogram {#moving-content-to-mobile-applications}
+### Flytta innehåll till mobilprogram {#moving-content-to-mobile-applications}
 
 Cacheminnet för innehållssynkronisering på den AEM publiceringsinstansen används som en databas för innehåll för mobilprogram:
 
@@ -212,13 +211,13 @@ Steg för att skapa ett nytt program baserat på en appmall:
 >
 >Om du avinstallerar referenspaketet för Geometrixx Outdoors från AEM och har ett program som skapats baserat på dess mall kommer det programmet inte längre att fungera. Appen Geometrixx Outdoors kan tas bort, men appmallen måste finnas kvar om den används av andra mobilprogram.
 
-## Utforska exempelappen för Geometrixx Outdoors {#exploring-the-sample-geometrixx-outdoors-app}
+## Utforska exempelappen Geometrixx Outdoors {#exploring-the-sample-geometrixx-outdoors-app}
 
 Geometrixx Outdoors App är ett exempel på PhoneGap-program som demonstrerar funktionerna i standardprogrammet för PhoneGap och de mobila komponenterna i exemplet.
 
 Om du vill öppna programmet går du till fliken Mobilprogram och väljer sedan Geometrixx Outdoors App.
 
-### Funktioner för gemensamma sidor - Geometrixx Mobile App {#common-page-features-geometrixx-mobile-app}
+### Funktioner för vanliga sidor - Geometrixx Mobile App {#common-page-features-geometrixx-mobile-app}
 
 Varje sida i mobilappen innehåller följande funktioner:
 
@@ -232,14 +231,14 @@ Varje sida i mobilappen innehåller följande funktioner:
 
 * Styckesystemet för att lägga till komponenter och skapa innehåll.
 
-### Startsidan - Geometrixx Mobile App {#the-home-page-geometrixx-mobile-app}
+### Hemsidan - Geometrixx Mobile App {#the-home-page-geometrixx-mobile-app}
 
 Innehållet på hemsidan består av följande navigeringsverktyg:
 
 * En menylistekomponent som innehåller länkar till de underordnade sidorna Kugghjulet, Recensioner, Nyheter och Om oss.
 * En Swipe Carousel-komponent som visar de underordnade sidorna.
 
-### Kugghjulssidan - Geometrixx Mobile App {#the-gear-page-geometrixx-mobile-app}
+### The Gear Page - Geometrixx Mobile App {#the-gear-page-geometrixx-mobile-app}
 
 På sidan Kugghjulet får användarna tillgång till produktsidor. En menylistekomponent ger åtkomst till de underordnade sidorna på sidan Kugghjul. De underordnade sidorna är produktkategorier som webbplatsen har.
 
@@ -268,7 +267,7 @@ Innehåller en bakåtknapp. Med styckesystemet kan du lägga till komponenter.
 
 När du använder programmet är News page tillgängligt från karusellen på den engelska sidan.
 
-### Sidan Om oss - Geometrixx Mobile App {#the-about-us-page-geometrixx-mobile-app}
+### Sidan Om oss - mobilappen Geometrixx {#the-about-us-page-geometrixx-mobile-app}
 
 Sidan Om oss innehåller serverkomponenter med två spalter. Varje kolumn innehåller antingen en bild- eller en textkomponent. Komponenterna kan redigeras och styckesystemet gör att du kan lägga till komponenter.
 
@@ -308,7 +307,7 @@ Ange hur sidlistan ska genereras:
 * Ordna efter: Välj en sidegenskap som ska användas för att sortera sidlistan. Välj t.ex. jcr:title om du vill sortera sidor i bokstavsordning efter rubrik.
 * Gräns: Det maximala antalet sidor som ska inkluderas. Den här egenskapen är lämplig för sökbaserade metoder för att skapa sidlistan.
 
-#### Bygger sidlistan {#building-the-page-list}
+#### Bygga sidlistan {#building-the-page-list}
 
 Komponenten Swipe Carousel innehåller följande värden för egenskapen Build List Using. Redigeringsdialogrutan ändras beroende på vilket värde du väljer:
 
@@ -335,7 +334,7 @@ Fyll i listan med resultatet av en nyckelordssökning. Sökningen utförs på de
 
 **Avancerad sökning**
 
-Fyll i listan med en [Querybuilder](/help/sites-developing/querybuilder-api.md)-fråga.
+Fyll i listan med en [Querybuilder](/help/sites-developing/querybuilder-api.md) fråga.
 
 ### Bild {#image}
 
@@ -354,7 +353,7 @@ Komponenten Store Locations ger användarna verktyg för att hitta affärsplatse
 
 Komponenten kräver att databasen innehåller platsinformation för varje butik. Exempelplatser installeras på noden /etc/commerce/locations/adobe. ![chlimage_1-152](assets/chlimage_1-152.png)
 
-### Två kolumnrader {#two-column-row}
+### Två kolumner, rad {#two-column-row}
 
 Gör att du kan lägga till komponenter sida vid sida på en sida.
 

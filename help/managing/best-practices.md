@@ -1,8 +1,8 @@
 ---
 title: Hantera projekt - checklista för bästa praxis
-seo-title: Hantera projekt - checklista för bästa praxis
+seo-title: Managing Projects - Best Practices Checklist
 description: Planering och förståelse krävs för att hantera ett projekt som ska implementera Adobe Experience Manager (AEM). Projektchecklistor är avsedda som en uppsättning bästa metoder för projektleverans. De vägleder dig genom alla faser i projektets livscykel och ger dig möjlighet att övervaka din nuvarande status på hög nivå.
-seo-description: Planering och förståelse krävs för att hantera ett projekt som ska implementera Adobe Experience Manager (AEM). Projektchecklistor är avsedda som en uppsättning bästa metoder för projektleverans. De vägleder dig genom alla faser i projektets livscykel och ger dig möjlighet att övervaka din nuvarande status på hög nivå.
+seo-description: Managing a project to implement Adobe Experience Manager (AEM) requires planning and understanding. The Project Checklists are intended as a set of best practices for project delivery. They guide you through all phases of the project life cycle and provide high level monitoring of your current status.
 uuid: 859f73f4-535a-49a1-9ae4-a4aacd7f36dd
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/MANAGING
@@ -10,14 +10,13 @@ topic-tags: managing-checklist, introduction
 content-type: reference
 discoiquuid: 2bfa287a-aad0-4681-9f9c-d48e8179684c
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
+exl-id: 94b91996-d2b2-4d4a-b770-334cfa2dc0b7
+source-git-commit: 43a30b5ba76ea470cc50a962d4f04b4a1508964d
 workflow-type: tm+mt
-source-wordcount: '3316'
+source-wordcount: '3262'
 ht-degree: 0%
 
 ---
-
 
 # Hantera projekt - checklista för bästa praxis{#managing-projects-best-practices-checklist}
 
@@ -25,28 +24,28 @@ För att hantera ett projekt som ska implementera Adobe Experience Manager (AEM)
 
 De bästa sätten är att
 
-* En [interaktiv checklista](/help/managing/best-practices-checklist.md) som gör att du kan spåra och övervaka dina framsteg med dessa bästa metoder.
+* An [interaktiv checklista](/help/managing/best-practices-checklist.md) som gör att du kan följa upp och övervaka dina framsteg med dessa bästa metoder.
 
    * Definierar indata och slutprodukter utifrån fas, milstolpe och personlighet.
    * Ger automatiska översikter (kvalitet, hälsa och fullständighet) som visar på framsteg och projekthälsa.
 
-* Dokumentation som baseras direkt på [checklistan](/help/managing/best-practices-checklist.md) och som anger:
+* Dokumentation som bygger direkt på [checklista](/help/managing/best-practices-checklist.md), som innehåller information om
 
-   * [Projektanalys ](#projectheartbeat) av beslag.
-   * [Status efter ](#status-by-role) rollöversikt.
+   * [Projektpulsslag](#projectheartbeat) analys.
+   * [Status efter roll](#status-by-role) översikt.
    * [Faser och milstolpar](#phases-and-milestones).
-   * [Nyckelpersonal ](#persona) och deras medverkan i varje (relevant) skede.
-   * En [ordlista](/help/managing/best-practices-glossary.md) för [Obligatoriska dokument och slutprodukter](#required-documents-and-deliverables).
+   * [Nyckelpersona](#persona) och deras engagemang i varje (relevant) skede.
+   * A [Ordlista](/help/managing/best-practices-glossary.md) i [Begärda dokument och slutprodukter](#required-documents-and-deliverables).
 
-* [Ytterligare ](/help/managing/best-practices-further-reference.md) referensmaterial för att ge mer information om specifika områden.
+* [Ytterligare referens](/help/managing/best-practices-further-reference.md) material som ger mer information om specifika områden.
 
-## Kontrollpanel för pulsslag för projekt {#project-heartbeat-dashboard}
+## Kontrollpanel för projektpulsslag {#project-heartbeat-dashboard}
 
-Kalkylbladet **Projektpulsslag** ger en grafisk översikt över kritiska mätvärden för ditt projekt:
+The **Projektpulsslag** -kalkylbladet innehåller en grafisk översikt över kritiska mätvärden för ditt projekt:
 
 * **Faskvalitet**
 
-   * Anger kvaliteten på [Begärda dokument och slutprodukter](#required-documents-and-deliverables) i projektet.
+   * Anger kvaliteten på [Begärda dokument och slutprodukter](#required-documents-and-deliverables) i hela projektet.
 
 * **Phase Health**
 
@@ -58,13 +57,13 @@ Kalkylbladet **Projektpulsslag** ger en grafisk översikt över kritiska mätvä
 
 ## Status efter roll {#status-by-role}
 
-I kalkylbladet **Status efter roll** visas en detaljerad beskrivning av [**Hälsa**, **Kvalitet** och **Fullständighet**](#projectheartbeat) av **[Fas](#phases-and-milestones)** och **[Persona](#persona)**.
+The **Status efter roll** kalkylblad med detaljerad beskrivning av [**Hälsa**, **Kvalitet** och **Fullständighet**](#projectheartbeat) av **[Fas](#phases-and-milestones)** och **[Persona](#persona)**.
 
 ## Faser och milstolpar {#phases-and-milestones}
 
 Projektplanen är uppdelad i olika faser (på hög nivå).
 
-Varje fas innehåller sina egna milstolpar. För varje [persona](#persona) (eller roll) visas de relevanta milstolparna tillsammans med de dokument som krävs för att skapa de definierade slutprodukterna.
+Varje fas innehåller sina egna milstolpar. För varje [persona](#persona) (eller roll) listas de relevanta milstolparna tillsammans med de dokument som krävs för att producera de definierade slutprodukterna.
 
 >[!NOTE]
 >
@@ -158,7 +157,7 @@ När du planerar projektet konsolideras förberedelsen. Här måste ni börja ko
 
       * Genom att involvera huvudaktörer (inklusive potentiella författare) i början av projektet ökar ni chanserna att få dem engagerade i projektet.
 
-### Utvecklingsförberedelse {#development-preparation}
+### Utvecklingsförberedelser {#development-preparation}
 
 Att planera utvecklingsarbetet är avgörande för att säkerställa att projektet byggs på en stabil design av ett team som har den kunskap som krävs.
 
@@ -173,7 +172,7 @@ Att planera utvecklingsarbetet är avgörande för att säkerställa att projekt
    Innehållsarkitekturen definierar och beskriver innehållets framtida arkitektur. inklusive:
 
    * Innehållsträdet. inklusive tillgångar
-   * Grundläggande strukturer. inklusive kampanjer etc.
+   * Grundläggande strukturer. inklusive kampanjer, etc.
    * Strukturer för flera webbplatser och språk (MSM, översättning osv.)
    * Innehåll som stöds (inklusive taggar och taggar)
    * Strategier för cachning och återanvändning av innehåll
@@ -182,16 +181,16 @@ Att planera utvecklingsarbetet är avgörande för att säkerställa att projekt
 
    Systemarkitekturen definierar den konceptuella vyn för ditt system. inklusive (bland annat information):
 
-   * [Systemstruktur ](/help/sites-deploying/recommended-deploys.md#deployment-scenarios) för alla obligatoriska miljöer
+   * [Systemstruktur](/help/sites-deploying/recommended-deploys.md#deployment-scenarios) för alla obligatoriska miljöer
    * Delsystem
    * Tredjepartssystem
    * gränssnitt, maskinvara, programvara och mänsklig interaktion
-   * Servrar för varje miljö. se [Tekniska krav](/help/sites-deploying/technical-requirements.md) och [Riktlinjer för maskinvarustorlek](/help/managing/hardware-sizing-guidelines.md)
+   * Servrar för varje miljö. se [Tekniska krav](/help/sites-deploying/technical-requirements.md) och [Riktlinjer för maskinvarans storlek](/help/managing/hardware-sizing-guidelines.md)
 
    * Processer för varje miljö. t.ex. krav på driftsättning och underhåll
    * Underhållsaktiviteter (GC för datastore, optimering av TPM osv.)
-   * [](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html) Skicka cachelagring
-   * [](/help/sites-deploying/recommended-deploys.md#deployment-scenarios) ClusteringPublicera/Authorshare
+   * [Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html) cachelagring
+   * [Klustring](/help/sites-deploying/recommended-deploys.md#deployment-scenarios) Publicera/auktorisera resurs
    * Prestanda för klientsidan (JS minify, concat, css sprites, total number of http requests, and others)
 
 * **Programarkitektur**
@@ -217,12 +216,12 @@ Att planera utvecklingsarbetet är avgörande för att säkerställa att projekt
 
    Systemintegrering kräver att du planerar (och sedan implementerar):
 
-   * Hur alla delsystem och [lösningsintegreringar](/help/sites-administering/integration.md) ska sammanföras för att fungera som ett sammanhängande system
+   * Hur alla delsystem och [lösningar](/help/sites-administering/integration.md) kommer att samlas för att fungera som ett enda sammanhängande system
    * Hur eventuella tredjepartssystem kommer att integreras. tillsammans med eventuella specialöverväganden, som offline/online, hantering på klientsidan/webbläsarsidan eller hantering av reservsidan när ett system från tredje part är offline/online
 
 * **Testkoncept**
 
-   Innan du börjar utveckla bör du skapa ett ingående och omfattande koncept för alla [testningskrav](/help/sites-developing/planning.md) för ditt projekt.
+   Innan du börjar utveckla bör du ta fram ett ingående och heltäckande koncept för alla [testning](/help/sites-developing/planning.md) krav för ditt projekt.
 
    Detta bör bland annat omfatta följande:
 
@@ -244,7 +243,7 @@ Att planera utvecklingsarbetet är avgörande för att säkerställa att projekt
 
    Se även [Adobe supportportal](https://helpx.adobe.com/marketing-cloud/contact-support.html).
 
-### Planering och åtgärder {#operations-planning-and-operations}
+### Planering och drift {#operations-planning-and-operations}
 
 På liknande sätt måste åtgärderna planeras på rätt sätt för att säkerställa att du har de miljöer du behöver - för alla faser av projektets livscykel. Ni behöver också rätt processer för att underhålla dem.
 
@@ -256,11 +255,11 @@ På liknande sätt måste åtgärderna planeras på rätt sätt för att säkers
 
    Till exempel:
 
-   * En lista över roller (dvs. grupper) med åtkomstdefinitionerna `read`/ `write` för varje
+   * En lista med roller (dvs. grupper) med `read`/ `write` åtkomstdefinitioner för varje
 
    * Fastställande av användningen av befogenheter som påverkar publiceringsmiljön. till exempel `replicate`
    * För användare med minimal behörighet bör arbetsflöden definieras
-   * Användare i gruppen `editor` ska inte ha `admin`-rättigheter eller vara en del av gruppen `administrators`
+   * Användare i `editor` gruppen ska inte ha `admin` rättigheter eller ingår i `administrators` grupp
 
    Mer information finns i [Användaradministration och -säkerhet](/help/sites-administering/security.md).
 
@@ -325,16 +324,16 @@ Utveckling är en avgörande fas som kräver mer än bara kodning.
    * Distributionsplats
    * Programintegrering/beroenden från tredje part
    * Säkerhetsinställningar
-   * Baslinjeprestanda verifierat genom att köra [Tough Day-tester](/help/sites-developing/tough-day.md) i produktionsinställningarna
+   * Baslinjeprestanda verifierat genom att köra [Tågdagstester](/help/sites-developing/tough-day.md) i produktionsinställningarna
    * Krav för prestandatester. se [Bästa metoder för kvalitetssäkring](/help/sites-deploying/configuring-performance.md#best-practices-for-quality-assurance)
 
 * **Integrering**
 
-   Planera, dokumentera och testa alla aspekter av systemet och [lösningsintegrering](/help/sites-administering/integration.md), inklusive:
+   Planera, dokumentera och testa alla aspekter av systemet och [integrering av lösningar](/help/sites-administering/integration.md), inklusive:
 
    * En automatiserad testningsstrategi
-   * Automatiserade processer för att [flytta program från utveckling till test och sedan produktion](/help/managing/enterprise-devops.md#code-movement)
-   * Automatiserade processer för att [flytta innehåll från produktion till testning och utveckling](/help/managing/enterprise-devops.md#content-movement)
+   * Automatiserade processer till [flytta applikationer från utveckling till testning och sedan produktion](/help/managing/enterprise-devops.md#code-movement)
+   * Automatiserade processer till [flytta innehåll från produktion till testning och utveckling](/help/managing/enterprise-devops.md#content-movement)
 
 * **Migrering**
 
@@ -357,7 +356,7 @@ Utveckling är en avgörande fas som kräver mer än bara kodning.
 
 ### Prestanda och testning {#performance-and-testing}
 
-När det nya programmet är tillgängligt måste det genomgå strikta tester, både för funktionalitet och [prestanda](/help/sites-deploying/configuring-performance.md).
+När den nya applikationen är tillgänglig måste den genomgå strikta tester, både för funktionalitet och [prestanda](/help/sites-deploying/configuring-performance.md).
 
 >[!NOTE]
 >
@@ -369,7 +368,7 @@ När det nya programmet är tillgängligt måste det genomgå strikta tester, b�
 
 * **Test av godkännande av slutanvändare**
 
-   [UAT (User accept testing](/help/sites-developing/acceptance-signoff.md) ) är avgörande för att säkerställa att
+   [Testning av godkännande av användare](/help/sites-developing/acceptance-signoff.md) (UAT) är avgörande för att säkerställa att
 
    * Lösningen uppfyller användar-/kundkraven
    * Kunden/användarna accepterar lösningen (funktion, design och prestanda)
@@ -430,7 +429,7 @@ För att lansera ditt nya program krävs noggrann planering för att säkerstäl
 
    För att försäkra dig om att din lösning är säker ska du utföra specifika penetrationstester tillsammans med ett större antal säkerhetstester.
 
-   Se [Säkerhetschecklistan](/help/sites-administering/security-checklist.md) för mer information.
+   Se [Säkerhetschecklista](/help/sites-administering/security-checklist.md) för mer information.
 
 ### Go Live {#go-live}
 
@@ -466,7 +465,7 @@ Du vill att ditt Go Live ska vara så smidigt som möjligt. Återigen behöver d
 
 Checklistorna har utformats av en person. Detta är de roller som är mycket involverade i projektets livscykel.
 
-Det finns också [andra profiler](#other-persona) som är involverade i specifika uppgifter.
+Det finns också några [annan persona](#other-persona) som ingår i specifika uppgifter.
 
 ### Projektsponsorer {#project-sponsor}
 
@@ -511,7 +510,7 @@ Affärsanalytiker:
    * Kriterierna för framgång.
    * KPI:er (både affärs- och prestandabaserade).
 
-### Utvecklingslead {#development-lead}
+### Utvecklingsansvarig {#development-lead}
 
 Utvecklingsledd:
 
@@ -544,14 +543,14 @@ Systemteknikern:
 
 * Tillhandahåller maskinvarurekommendationer, övervakar de olika implementeringarna och tillhandahåller driftstöd både före och efter körning.
 
-### Säkerhetslead {#security-lead}
+### Säkerhetsansvarig {#security-lead}
 
 Säkerhetsledaren:
 
 * Ansvarar för lösningens övergripande säkerhetskoncept och ser till att det är i linje med alla krav och policyer från kunden.
 * levererar ett säkerhetskoncept, säkerhetsfunktioner och rekommendationer för alla maskinvarubaserade säkerhetsbegrepp, som zoner och brandväggar.
 
-### Annan persona {#other-persona}
+### Annan person {#other-persona}
 
 * intressenter
 
@@ -577,33 +576,33 @@ Säkerhetsledaren:
 
    * De personer som ska använda systemet för att skapa och underhålla webbplatsinnehållet.
 
-## Obligatoriska dokument och slutprodukter {#required-documents-and-deliverables}
+## Begärda dokument och slutprodukter {#required-documents-and-deliverables}
 
-Checklistorna omfattar **Obligatoriska dokument** och **Leveranser** för varje milstolpe.
+Checklistorna täcker **Obligatoriska dokument** och **Leveranser** för varje milstolpe.
 
 * Det finns ingen 1:1-relation mellan dessa; En grupp av obligatoriska dokument kan till exempel resultera i en enda slutprodukt.
 * En slutprodukt från en person kan vara ett obligatoriskt dokument för en annan person under samma milstolpe.
 
 ### Obligatoriska dokument {#required-documents}
 
-**Begärda dokument** behövs av rätt person när deras produkter produceras.
+The **Obligatoriska dokument** behövs av rätt person när de producerar sina produkter.
 
-För varje **obligatoriskt dokument** ska personen ange:
+För varje **Obligatoriskt dokument** Personen ska ange
 
 * **J/N**: om den har tagits emot.
 * **1-3**: En uppgift om kvaliteten på det mottagna dokumentet.
 
-### Slutprodukter {#deliverables}
+### Leveranser {#deliverables}
 
 För varje milstolpe ansvarar rätt person för att leverera specifika dokument och därmed ta sitt ansvar för en viss milstolpe.
 
-För varje **slutprodukt** måste personen ange:
+För varje **Slutprodukt** Personen måste ange
 
 * **J/N**: om den är slutförd.
 
-Slutprodukter används ofta som **Obligatoriska dokument** för antingen den aktuella eller en senare milstolpen.
+Leveranser används ofta som **Obligatoriska dokument** för den aktuella eller en senare milstolpe.
 
-## Relaterade metodtips {#related-best-practices}
+## Relaterad bästa praxis {#related-best-practices}
 
 De bästa sätten att distribuera, administrera, utveckla eller skapa finns i följande:
 
@@ -612,15 +611,14 @@ De bästa sätten att distribuera, administrera, utveckla eller skapa finns i f�
    * [Enterprise DevOps](/help/managing/enterprise-devops.md)
    * [Bästa praxis för hantering av SEO och URL](/help/managing/seo-and-url-management.md)
    * [AEM och riktlinjerna för webbtillgänglighet](/help/managing/web-accessibility.md)
-   * [Allmänna dataskyddsförordningen](/help/managing/data-protection-and-privacy.md)*  [Distribuera och underhålla bästa praxis](/help/sites-deploying/best-practices.md)
+   * [Allmän dataskyddsförordning](/help/managing/data-protection-and-privacy.md)* [Driftsätta och underhålla bästa praxis](/help/sites-deploying/best-practices.md)
 * [Administrera metodtips](/help/sites-administering/administer-best-practices.md)
 * [Utveckla bästa praxis](/help/sites-developing/best-practices.md)
 * [Bästa tillvägagångssätt](/help/sites-authoring/best-practices.md)
 
 ## Viktiga dokumentationsområden {#key-documentation-areas}
 
-* AEM
-Dessutom är följande avsnitt av AEM dokumentation av särskilt intresse (denna förteckning är dock inte uttömmande):
+* AEM Dokumentation Dessutom är följande avsnitt i AEM dokumentation av särskilt intresse (listan är dock inte uttömmande):
 
    * [Dokumentskydd](/help/sites-developing/security.md)
    * [Rekommenderade distributioner](/help/sites-deploying/recommended-deploys.md)
@@ -630,9 +628,8 @@ Dessutom är följande avsnitt av AEM dokumentation av särskilt intresse (denna
 
       * [Utveckla - grunderna](/help/sites-developing/the-basics.md)
       * [MSM-koncept](/help/sites-administering/msm.md)
-      * [HTML-mallspråk (HTL)](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html)
+      * [HTML-mallspråk (HTL)](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)
 
 * Relaterad dokumentation
 
    * Adobe Experience Cloud - [Planering för Adobe Experience Cloud](https://helpx.adobe.com/marketing-cloud/how-to/planning.html)
-

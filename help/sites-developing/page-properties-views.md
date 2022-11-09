@@ -1,26 +1,25 @@
 ---
 title: Anpassa vyer av Sidegenskaper
-seo-title: Anpassa vyer av Sidegenskaper
+seo-title: Customizing Views of Page Properties
 description: Varje sida har en uppsättning egenskaper som du kan redigera efter behov
-seo-description: Varje sida har en uppsättning egenskaper som du kan redigera efter behov
+seo-description: Every page has a set of properties that you can edit as required
 uuid: cbfca6e6-cb9e-43b1-8889-09a7cc9f8a51
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 discoiquuid: 6f8e08d1-831e-441a-ad1a-f5c8788f32d7
-translation-type: tm+mt
-source-git-commit: c38c27d6f7172734f80735dd2f42cfa7bf58ad1d
+exl-id: 292874bf-2ee6-4638-937c-f8f26c93ca65
+source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
 workflow-type: tm+mt
-source-wordcount: '499'
+source-wordcount: '479'
 ht-degree: 1%
 
 ---
 
+# Anpassa vyer av Sidegenskaper{#customizing-views-of-page-properties}
 
-# Anpassa vyer av sidegenskaper{#customizing-views-of-page-properties}
-
-Varje sida har en uppsättning [egenskaper](/help/sites-authoring/editing-page-properties.md) som kan visas och redigeras av användare; vissa krävs när du skapar sidan (skapar vy), andra kan visas och redigeras (redigeringsvy) i ett senare skede. De här sidegenskaperna definieras och görs tillgängliga i dialogrutan ( `cq:dialog`) för rätt sidkomponent.
+Varje sida har en uppsättning [egenskaper](/help/sites-authoring/editing-page-properties.md) som kan visas och redigeras av användare, vissa krävs när du skapar sidan (skapar vy), andra kan visas och redigeras (redigeringsvy) i ett senare skede. Dessa sidegenskaper definieras och görs tillgängliga i dialogrutan ( `cq:dialog`) för rätt sidkomponent.
 
 >[!CAUTION]
 >
@@ -28,23 +27,23 @@ Varje sida har en uppsättning [egenskaper](/help/sites-authoring/editing-page-p
 
 Standardläget för varje sidegenskap är:
 
-* dolda i vyn Skapa (t.ex. **Guiden Skapa sida**
+* dolda i vyn Skapa (t.ex. **Skapa sida** guide)
 
 * som är tillgängliga i redigeringsvyn (t.ex. **Visa egenskaper**)
 
 Fälten måste vara specifikt konfigurerade om någon ändring krävs. Detta görs med lämpliga nodegenskaper:
 
-* Sidegenskap som ska vara tillgänglig i vyn Skapa (t.ex. **Guiden Skapa sida**):
+* Sidegenskap som ska vara tillgänglig i vyn Skapa (t.ex. **Skapa sida** guide):
 
    * Namn: `cq:showOnCreate`
    * Typ: `Boolean`
 
-* Sidegenskap som ska vara tillgänglig i redigeringsvyn (t.ex. **Visa**/**Redigera**) **Egenskaper** (alternativ):
+* Sidegenskap som ska vara tillgänglig i redigeringsvyn (t.ex. **Visa**/**Redigera**) **Egenskaper** alternativ):
 
    * Namn: `cq:hideOnEdit`
    * Typ: `Boolean`
 
-Se till exempel inställningarna för fält som är grupperade under **Fler titlar och beskrivning** på fliken **Grundläggande** för bassidkomponenten. Dessa är synliga i guiden **Skapa sida** eftersom `cq:showOnCreate` har angetts till `true`:
+Se till exempel inställningarna för fält som grupperats under **Fler rubriker och beskrivning** på **Grundläggande** -fliken för grundsidkomponenten. De här är synliga i **Skapa sida** guide som `cq:showOnCreate` har angetts till `true`:
 
 ```xml
 /libs/foundation/components/page/cq:dialog/content/items/tabs/items/basic/items/column/items/moretitles
@@ -52,16 +51,16 @@ Se till exempel inställningarna för fält som är grupperade under **Fler titl
 
 >[!TIP]
 >
->I självstudiekursen [Extending Page Properties](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/developing/page-properties-technical-video-develop.html) finns en guide om hur du anpassar sidegenskaper.
+>Se [Utöka Sidegenskaper, genomgång](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/page-properties-technical-video-develop.html) för att få hjälp med att anpassa sidegenskaper.
 
 ## Konfigurera dina sidegenskaper {#configuring-your-page-properties}
 
 Du kan också konfigurera fälten som är tillgängliga genom att konfigurera dialogrutan för sidkomponenten och använda lämpliga nodegenskaper.
 
-Som standard visar guiden [**Skapa sida**](/help/sites-authoring/managing-pages.md#creating-a-new-page) de fält som är grupperade under **Fler titlar och beskrivning**. Så här döljer du dessa konfigurationer:
+Som standard är [**Skapa sida** guide](/help/sites-authoring/managing-pages.md#creating-a-new-page) visar fält grupperade under **Fler rubriker och beskrivning**. Så här döljer du dessa konfigurationer:
 
 1. Skapa sidkomponenten under `/apps`.
-1. Skapa en åsidosättning (med *dialogrutan diff* från [Sling Resource Merger](/help/sites-developing/sling-resource-merger.md)) för `basic`-delen av sidkomponenten; till exempel:
+1. Skapa en åsidosättning (med *dialogruta* från [Samla resurser](/help/sites-developing/sling-resource-merger.md)) för `basic` del av sidkomponenten, till exempel:
 
    ```xml
    <your-page-component>/cq:dialog/content/items/tabs/items/basic
@@ -72,20 +71,20 @@ Som standard visar guiden [**Skapa sida**](/help/sites-authoring/managing-pages.
    >Se följande som referens:
    >
    >    `/libs/wcm/foundation/components/basicpage/v1/basicpage/cq:dialog`
-   Du ***får*** inte ändra något i `/libs`-sökvägen.
-   Detta beror på att innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan mycket väl skrivas över när du använder en snabbkorrigering eller ett funktionspaket).
+   Men du ***måste*** ändrar ingenting i `/libs` bana.
+   Detta beror på innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan mycket väl skrivas över när du använder en snabbkorrigering eller ett funktionspaket).
    Den rekommenderade metoden för konfiguration och andra ändringar är:
-   1. Återskapa önskat objekt (t.ex. som det finns i `/libs`) under `/apps`
+   1. Återskapa önskat objekt (d.v.s. som det finns i `/libs`) under `/apps`
    1. Gör ändringar i `/apps`
 
 
-1. Ställ in egenskapen `path` på `basic` så att den pekar på åsidosättningen av den grundläggande fliken (se även nästa steg). Till exempel:
+1. Ange `path` egenskap på `basic` för att peka på åsidosättningen av den grundläggande fliken (se även nästa steg). Till exempel:
 
    ```xml
    /apps/demos/components/page/tabs/basic
    ```
 
-1. Skapa en åsidosättning av `basic` - `moretitles`-avsnittet på motsvarande sökväg; till exempel:
+1. Skapa en åsidosättning av `basic` - `moretitles` avsnitt vid motsvarande sökväg, till exempel:
 
    ```xml
    /apps/demos/components/page/tabs/basic/items/column/items/moretitles
@@ -93,18 +92,18 @@ Som standard visar guiden [**Skapa sida**](/help/sites-authoring/managing-pages.
 
 1. Använd lämplig nodegenskap:
 
-   * **Namn**:  `cq:showOnCreate`
-   * **Typ**:  `Boolean`
-   * **Värde**:  `false`
+   * **Namn**: `cq:showOnCreate`
+   * **Typ**: `Boolean`
+   * **Värde**: `false`
 
-   Avsnittet **Fler titlar och beskrivning** visas inte längre i guiden **Skapa sida**.
+   The **Fler rubriker och beskrivning** -avsnittet visas inte längre i **Skapa sida** guide.
 
 >[!NOTE]
-Mer information finns i [Konfigurera MSM-lås på Sidegenskaper](/help/sites-developing/extending-msm.md#configuring-msm-locks-on-page-properties-touch-enabled-ui) när du konfigurerar sidegenskaper för användning med live-kopior.
+Information om hur du konfigurerar sidegenskaper för användning med live-kopior finns i [Konfigurera MSM-lås på sidegenskaper](/help/sites-developing/extending-msm.md#configuring-msm-locks-on-page-properties-touch-enabled-ui) för mer information.
 
 ## Exempelkonfiguration av sidegenskaper {#sample-configuration-of-page-properties}
 
-I det här exemplet visas dialogtekniken för [Sling Resource Merger](/help/sites-developing/sling-resource-merger.md). inklusive användning av [`sling:orderBefore`](/help/sites-developing/sling-resource-merger.md#properties). Det visar också hur både `cq:showOnCreate` och `cq:hideOnEdit` används.
+I det här exemplet visas tekniken för dialogrutor i [Samla resurser](/help/sites-developing/sling-resource-merger.md); inklusive användning av [`sling:orderBefore`](/help/sites-developing/sling-resource-merger.md#properties). Det visar också hur man använder båda `cq:showOnCreate` och `cq:hideOnEdit`.
 
 KOD PÅ GITHUB
 

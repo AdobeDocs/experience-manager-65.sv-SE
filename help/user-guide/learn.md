@@ -4,9 +4,9 @@ seo-title: Learn About AEM 6.5 Capabilities
 description: En beskrivning av de viktigaste funktionerna i AEM 6.5
 seo-description: An description of the essential capabilities of AEM 6.5
 exl-id: dc3b8690-f664-4ffa-993b-7a8634e6fe6b
-source-git-commit: 52385af23b04cda33a88ec42bb150650eb58fe4e
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '400'
+source-wordcount: '398'
 ht-degree: 2%
 
 ---
@@ -38,7 +38,7 @@ AEM Forms kombinerar framtagning, hantering och publicering av blanketter med fu
 
 ## AEM Screens {#aem-screens}
 
-Skärmar är en funktion hos Adobe Experience Manager som gör att ni kan publicera dynamiska och interaktiva digitala upplevelser och interaktioner som involverar olika typer av skärmar i kombination med en omfattande digital marknadsföringsplattform.  [Läs mer.](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/aem-screens-introduction.html)
+Skärmar är en funktion hos Adobe Experience Manager som gör att ni kan publicera dynamiska och interaktiva digitala upplevelser och interaktioner som involverar olika typer av skärmar i kombination med en omfattande digital marknadsföringsplattform.  [Läs mer.](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html)
 
 ## AEM Communities {#aem-communities}
 

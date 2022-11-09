@@ -2,9 +2,9 @@
 title: Creating Accessible Content for Adobe Experience Manager (WCAG 2.1-överensstämmelse)
 description: Använd AEM för att göra webbinnehåll tillgängligt för och användbart för personer med funktionshinder
 exl-id: 2145d761-f51d-482b-a0e7-ef7500c4872f
-source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '13956'
+source-wordcount: '13950'
 ht-degree: 5%
 
 ---
@@ -66,11 +66,11 @@ En annan fördel är att textalternativ gör det möjligt att indexera icke-text
 
 #### Så här möts du - innehåll som inte är text (1.1.1) {#how-to-meet-non-text-content}
 
-För statisk grafik är det grundläggande kravet att tillhandahålla ett motsvarande textalternativ för grafiken. Detta kan du göra i **Alternativ text** fält, se till exempel kärnkomponenten **[Bild](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/image.html)**.
+För statisk grafik är det grundläggande kravet att tillhandahålla ett motsvarande textalternativ för grafiken. Detta kan du göra i **Alternativ text** fält, se till exempel kärnkomponenten **[Bild](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html)**.
 
 >[!NOTE]
 >
->Vissa färdiga kärnkomponenter, som **[Carousel](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/carousel.html)** tillhandahåller inte **Alternativ text** fält för att lägga till alternativa textbeskrivningar till enskilda bilder, men det finns **Etikett** fält (**[Tillgänglighet](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/carousel.html#accessibility-tab)** för hela komponenten.
+>Vissa färdiga kärnkomponenter, som **[Carousel](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/carousel.html)** tillhandahåller inte **Alternativ text** fält för att lägga till alternativa textbeskrivningar till enskilda bilder, men det finns **Etikett** fält (**[Tillgänglighet](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/carousel.html#accessibility-tab)** för hela komponenten.
 >
 >När versioner av dessa implementeras för er AEM-instans måste ert utvecklingsteam konfigurera dessa komponenter så att de stöder attributet `alt`[, så att författare kan lägga till det i innehållet (se Lägga till stöd för ytterligare HTML-element och attribut](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)).
 

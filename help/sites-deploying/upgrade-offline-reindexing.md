@@ -7,9 +7,9 @@ topic-tags: upgrading
 content-type: reference
 feature: Upgrading
 exl-id: 85bc041e-0ab1-42de-8bcc-c98a175d7494
-source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '1343'
+source-wordcount: '1341'
 ht-degree: 0%
 
 ---
@@ -178,7 +178,7 @@ Vi rekommenderar att du klonar produktionssystemet och skapar offlineindexet med
 
 ### Förbered en körning av en Runbook och en testversion {#prepare-a-runbook-and-trial-run}
 
-Vi rekommenderar att du förbereder en [Runbook](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/upgrading/upgrade-planning.html#building-the-upgrade-and-rollback-runbook) och utför några försök innan uppgraderingen körs.
+Vi rekommenderar att du förbereder en [Runbook](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/upgrading/upgrade-planning.html#building-the-upgrade-and-rollback-runbook) och utför några försök innan uppgraderingen körs.
 
 ### Dokumentspårningsläge med offlineindexering {#doc-traversal-mode-with-offline-indexing}
 

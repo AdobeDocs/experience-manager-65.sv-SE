@@ -11,9 +11,9 @@ feature: Commerce Integration Framework
 kt: 4279
 thumbnail: customize-aem-cif-core-component.jpg
 exl-id: 8933942e-be49-49d3-bf0a-7225257e2803
-source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
+source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
 workflow-type: tm+mt
-source-wordcount: '2604'
+source-wordcount: '2592'
 ht-degree: 0%
 
 ---
@@ -190,7 +190,7 @@ Därefter ska vi utöka produktTeaser affärslogik genom att implementera en Sli
 
 Sling Models implementeras som Java och finns i **kärna** för det genererade projektet.
 
-Använd [den utvecklingsmiljö du vill](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html#set-up-the-development-ide) för att importera Venia-projektet. Skärmbilder som används finns i [Visual Studio Code IDE](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html#microsoft-visual-studio-code).
+Använd [den utvecklingsmiljö du vill](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html?lang=en#set-up-the-development-ide) för att importera Venia-projektet. Skärmbilder som används finns i [Visual Studio Code IDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html?#microsoft-visual-studio-code).
 
 1. I din utvecklingsmiljö navigerar du under **kärna** till: `core/src/main/java/com/venia/core/models/commerce/MyProductTeaser.java`.
 
@@ -330,9 +330,9 @@ Använd [den utvecklingsmiljö du vill](https://docs.adobe.com/content/help/en/e
 
 ## Anpassa koden för Product Teaser {#customize-markup-product-teaser}
 
-Ett vanligt tillägg för AEM är att ändra den kod som genereras av komponenten. Detta görs genom att åsidosätta [HTL-skript](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html) som komponenten använder för att återge sin kod. HTML (HTML Template Language) är ett lättviktsmallspråk som används AEM komponenter för att dynamiskt återge kod baserat på det innehåll som skapats, vilket gör att komponenterna kan återanvändas. Product Teaser kan till exempel återanvändas om och om igen för att visa olika produkter.
+Ett vanligt tillägg för AEM är att ändra den kod som genereras av komponenten. Detta görs genom att åsidosätta [HTL-skript](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) som komponenten använder för att återge sin kod. HTML (HTML Template Language) är ett lättviktsmallspråk som används AEM komponenter för att dynamiskt återge kod baserat på det innehåll som skapats, vilket gör att komponenterna kan återanvändas. Product Teaser kan till exempel återanvändas om och om igen för att visa olika produkter.
 
-I det här fallet vill vi återge en banderoll ovanpå teaser för att ange att produkten är&quot;miljövänlig&quot; baserat på ett anpassat attribut. Designmönstret för [anpassa markeringen](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/customizing.html#customizing-the-markup) för en komponent är faktiskt standard för alla AEM, inte bara för AEM CIF Core Components.
+I det här fallet vill vi återge en banderoll ovanpå teaser för att ange att produkten är&quot;miljövänlig&quot; baserat på ett anpassat attribut. Designmönstret för [anpassa markeringen](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/customizing.html#customizing-the-markup) för en komponent är faktiskt standard för alla AEM, inte bara för AEM CIF Core Components.
 
 >[!NOTE]
 >
@@ -352,7 +352,7 @@ I det här fallet vill vi återge en banderoll ovanpå teaser för att ange att 
        componentGroup="Venia - Commerce"/>
    ```
 
-   Ovanför finns komponentdefinitionen för Product Teaser Component i vårt projekt. Observera egenskapen `sling:resourceSuperType="core/cif/components/commerce/productteaser/v1/productteaser"`. Det här är ett exempel på hur du skapar en [Proxy-komponent](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/get-started/using.html#create-proxy-components). I stället för att kopiera och klistra in alla Product Teaser HTML-skript från AEM CIF Core Components kan vi använda `sling:resourceSuperType` för att ärva alla funktioner.
+   Ovanför finns komponentdefinitionen för Product Teaser Component i vårt projekt. Observera egenskapen `sling:resourceSuperType="core/cif/components/commerce/productteaser/v1/productteaser"`. Det här är ett exempel på hur du skapar en [Proxy-komponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/using.html#create-proxy-components). I stället för att kopiera och klistra in alla Product Teaser HTML-skript från AEM CIF Core Components kan vi använda `sling:resourceSuperType` för att ärva alla funktioner.
 
 1. Öppna filen `productteaser.html`. Det här är en kopia av `productteaser.html` från [CIF Product Teaser](https://github.com/adobe/aem-core-cif-components/blob/master/ui.apps/src/main/content/jcr_root/apps/core/cif/components/commerce/productteaser/v1/productteaser/productteaser.html)
 
@@ -392,7 +392,7 @@ I det här fallet vill vi återge en banderoll ovanpå teaser för att ange att 
 
    När en Sling Model-metod anropas i HTML-koden `get` och `is` del av metoden tas bort och den första bokstaven minskas. Så `isShowBadge()` blir `.showBadge` och `isEcoFriendly` blir `.ecoFriendly`. Baserat på det booleska värdet som returneras från `.isEcoFriendly()` avgör om `<span>Eco Friendly</span>` visas.
 
-   Mer information om `data-sly-test` och andra [HTML-blockprogramsatser finns här](https://docs.adobe.com/content/help/en/experience-manager-htl/using/htl/block-statements.html#test).
+   Mer information om `data-sly-test` och andra [HTML-blockprogramsatser finns här](https://experienceleague.adobe.com/docs/experience-manager-htl/content/specification.html).
 
 1. Spara ändringarna och distribuera uppdateringarna till AEM med dina Maven-kunskaper från en kommandoradsterminal:
 

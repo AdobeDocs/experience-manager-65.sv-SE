@@ -8,10 +8,10 @@ user-guide-title: Adobe Experience Manager 6.5 Forms Guide
 breadcrumb-title: Forms Guide
 user-guide-description: Skapa, hantera, publicera och uppdatera digitala formulär.
 role: User
-source-git-commit: 99c9eddad7a2ec7eb23b3c374a1c0e65e141da20
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '3811'
-ht-degree: 1%
+source-wordcount: '3801'
+ht-degree: 0%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 1%
    + [Introduktion till utveckling av anpassningsbara formulär](using/introduction-forms-authoring.md)
    + [Introduktion till interaktiv kommunikation](using/interactive-communications-overview.md)
    + [Introduktion till hantering av formulär](using/introduction-managing-forms.md)
-   + [Introduktion till den automatiserade konverteringstjänsten för formulär](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/table-of-contents/introduction.html)
+   + [Introduktion till den automatiserade konverteringstjänsten för formulär](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/table-of-contents/introduction.html)
    + Självstudiekurs: Skapa ditt första adaptiva formulär {#create-first-adaptive-form}
       + [Självstudiekurs: Skapa ditt första anpassningsbara formulär](using/create-your-first-adaptive-form.md)
       + [Självstudiekurs: Skapa ett anpassat formulär](using/create-adaptive-form.md)
@@ -57,12 +57,12 @@ ht-degree: 1%
    + [Arkitektur och driftsättningstopologier för AEM Forms](using/aem-forms-architecture-deployment.md)
    + [Välja en beständig typ för en AEM Forms-installation](using/choosing-persistence-type-for-aem-forms.md)
    + Installera AEM Forms på OSGi {#osgi-installation}
-      + [Plattformar som stöds för AEM formulär på OSGi](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/introduction/technical-requirements.html)
+      + [Plattformar som stöds för AEM formulär på OSGi](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/introduction/technical-requirements.html)
       + [Installera och konfigurera dokumenttjänster](using/install-configure-document-services.md)
       + [Installera och konfigurera datainhämtningsfunktioner](using/installing-configuring-aem-forms-osgi.md)
       + [Installera och konfigurera ett Forms-centrerat arbetsflöde i OSGi](using/installing-configuring-forms-centric-workflow-on-osgi.md)
       + [Installera och konfigurera interaktiv kommunikation](using/installing-configuring-intreactive-communication-correspondence-management.md)
-      + [Installera och konfigurera tjänsten Automated forms conversion](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/table-of-contents/configure-service.html)
+      + [Installera och konfigurera tjänsten Automated forms conversion](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/table-of-contents/configure-service.html)
    + Installera AEM Forms i JEE {#jee-installation}
       + [Plattformar som stöds för AEM formulär på JEE](using/aem-forms-jee-supported-platforms.md)
       + [Installera och distribuera AEM Forms på JEE med JBoss Turnkey](https://www.adobe.com/go/learn_aemforms_installTurnkey_65)
@@ -578,8 +578,8 @@ ht-degree: 1%
    + [Ad hoc-frågor i processrapportering](/help/forms/using/process-reporting/adhoc-queries-in-process-reporting.md)
    + [Felsökning av processrapportering](/help/forms/using/process-reporting/troubleshooting-process-management.md)
 + Referens för utvecklare {#developer-reference}
-   + [Grundläggande om utvecklare](https://docs.adobe.com/content/help/en/experience-manager-65/developing/home.html)
-   + [HTML mallspråk](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html)
+   + [Grundläggande om utvecklare](https://experienceleague.adobe.com/docs/experience-manager-65/developing/home.html)
+   + [HTML mallspråk](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)
    + [AEM plugin-program för att felsöka adaptiva formulär](https://adobe-consulting-services.github.io/acs-aem-tools/aem-chrome-plugin/adaptive-form/)
    + [AEM Forms Java API Reference](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html)
    + [AEM Forms on JEE Java API Reference](https://helpx.adobe.com/experience-manager/6-5/forms/programlc/javadoc/index.html)

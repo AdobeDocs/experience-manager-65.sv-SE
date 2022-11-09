@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: 6825dcd6-fa75-4410-b6b2-e7bd4a391224
 exl-id: 90594588-db8e-4d4c-a208-22c1c6ea2a2d
-source-git-commit: 273836ad0afd6466eac437bf7711e7dbabc1d5e9
+source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
 workflow-type: tm+mt
-source-wordcount: '1383'
+source-wordcount: '1354'
 ht-degree: 0%
 
 ---
@@ -23,22 +23,22 @@ ht-degree: 0%
 >
 >I det här dokumentet beskrivs hur du anpassar sidredigering i det moderna, pekaktiverade användargränssnittet och det gäller inte det klassiska användargränssnittet.
 
-AEM innehåller olika mekanismer som gör att du kan anpassa sidredigeringsfunktionen (och [konsolerna](/help/sites-developing/customizing-consoles-touch.md)) för redigeringsinstansen.
+AEM innehåller olika mekanismer som du kan använda för att anpassa sidredigeringsfunktionen (och [konsoler](/help/sites-developing/customizing-consoles-touch.md)) i din redigeringsinstans.
 
 * Clientlibs
 
-   Med Clientlibs kan du utöka standardimplementeringen för att få nya funktioner, samtidigt som du återanvänder standardfunktioner, objekt och standardmetoder. När du anpassar kan du skapa ett eget klientlib under `/apps.` Det nya klientlib måste:
+   Med Clientlibs kan du utöka standardimplementeringen för att få nya funktioner, samtidigt som du återanvänder standardfunktioner, objekt och standardmetoder. När du anpassar kan du skapa en egen klientlib under `/apps.` Den nya klientlib måste:
 
    * är beroende av redigeringsklientlib `cq.authoring.editor.sites.page`
-   * ingå i lämplig `cq.authoring.editor.sites.page.hook`-kategori
+   * vara en del av `cq.authoring.editor.sites.page.hook` kategori
 
 * Övertäckningar
 
-   Övertäckningar baseras på noddefinitioner och gör att du kan täcka över standardfunktionerna (i `/libs`) med din egen anpassade funktion (i `/apps`). När du skapar en övertäckning krävs inte en 1:1-kopia av originalet, eftersom [sling-resurskonfusion](/help/sites-developing/sling-resource-merger.md) tillåter arv.
+   Övertäckningar baseras på noddefinitioner och gör att du kan täcka över standardfunktionerna (i `/libs`) med din egen anpassade funktionalitet (i `/apps`). När du skapar en övertäckning krävs ingen 1:1-kopia av originalet, eftersom [sammanslagning av säljresurser](/help/sites-developing/sling-resource-merger.md) tillåter arv.
 
 >[!NOTE]
 >
->Mer information finns i [JS-dokumentationsuppsättningen](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html).
+>Mer information finns i [JS-dokumentationsuppsättning](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html).
 
 De kan användas på många sätt för att utöka sidredigeringsfunktionen i AEM. En markering beskrivs nedan (på en hög nivå).
 
@@ -49,20 +49,20 @@ De kan användas på många sätt för att utöka sidredigeringsfunktionen i AEM
 >* Använda och skapa [klientlibs](/help/sites-developing/clientlibs.md).
 >* Använda och skapa [övertäckningar](/help/sites-developing/overlays.md).
 >* [Granit](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/index.html)
->* [Struktur för det AEM Touch-aktiverade ](/help/sites-developing/touch-ui-structure.md) användargränssnittet för information om de strukturella områden som används för sidredigering.
-
+>* [Struktur för det AEM användargränssnittet med pekskärm](/help/sites-developing/touch-ui-structure.md) om du vill ha information om de strukturella områden som används för sidredigering.
 >
->Det här avsnittet behandlas också i [AEM Gems](https://docs.adobe.com/content/ddc/en/gems.html)-sessionen - [Anpassning av användargränssnittet för AEM 6.0](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-user-interface-customization-for-aem6.html).
+
+
 
 >[!CAUTION]
 >
->Du ***får*** inte ändra något i `/libs`-sökvägen.
+>Du ***måste*** ändrar ingenting i `/libs` bana.
 >
->Detta beror på att innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan mycket väl skrivas över när du använder en snabbkorrigering eller ett funktionspaket).
+>Detta beror på innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan mycket väl skrivas över när du använder en snabbkorrigering eller ett funktionspaket).
 >
 >Den rekommenderade metoden för konfiguration och andra ändringar är:
 >
->1. Återskapa önskat objekt (t.ex. som det finns i `/libs`) under `/apps`
+>1. Återskapa önskat objekt (d.v.s. som det finns i `/libs`) under `/apps`
 >1. Gör ändringar i `/apps`
 
 
@@ -72,9 +72,9 @@ När du redigerar en sida finns det olika [lägen](/help/sites-authoring/author-
 
 ### Exempel på lager: Live Copy-status {#layer-example-live-copy-status}
 
-En AEM standardinstans innehåller MSM-lagret. Detta ger åtkomst till data som är relaterade till [hantering av flera platser](/help/sites-administering/msm.md) och markerar dem i lagret.
+En AEM standardinstans innehåller MSM-lagret. Detta ger åtkomst till data relaterade till [hantering av flera webbplatser](/help/sites-administering/msm.md) och markerar det i lagret.
 
-För att se hur det fungerar kan du redigera en [webbsida (eller någon annan live-kopia) och välja läget **Live Copy Status**.](/help/sites-developing/we-retail-globalized-site-structure.md)
+För att se hur det fungerar kan du redigera [We.Retail Language copy](/help/sites-developing/we-retail-globalized-site-structure.md) sida (eller någon annan live-kopia-sida) och markera **Live Copy-status** läge.
 
 MSM-lagerdefinitionen (som referens) finns i:
 
@@ -97,7 +97,7 @@ Resursläsaren visar resurser av olika typer/kategorier (t.ex. bilder, dokument 
 
 ### Kodexempel {#code-sample-1}
 
-`aem-authoring-extension-assetfinder-flickr` är ett exempelpaket som visar hur du lägger till en ny grupp i tillgångssökaren. Det här exemplet ansluter till den allmänna dataströmmen för [Flickr](https://www.flickr.com) och visar dem på sidopanelen.
+`aem-authoring-extension-assetfinder-flickr` är ett exempelpaket som visar hur du lägger till en ny grupp i tillgångssökaren. Det här exemplet ansluter till [Flickr](https://www.flickr.com)Det är publika strömmar och visar dem på sidopanelen.
 
 KOD PÅ GITHUB
 
@@ -110,18 +110,18 @@ Koden för den här sidan finns på GitHub
 
 När användaren redigerar sidor måste han eller hon ofta välja bland resurser (t.ex. sidor, komponenter, resurser osv.). Detta kan vara en lista som författaren till exempel måste välja ett objekt från.
 
-För att hålla listan i en rimlig storlek och även relevant för användningsfallet kan ett filter implementeras i form av ett anpassat predikat. Om till exempel [`pathbrowser`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html) [Granite](/help/sites-developing/touch-ui-concepts.md#granite-ui)-komponenten används för att låta användaren välja sökvägen till en viss resurs, kan sökvägarna som visas filtreras på följande sätt:
+För att hålla listan i en rimlig storlek och även relevant för användningsfallet kan ett filter implementeras i form av ett anpassat predikat. Om [`pathbrowser`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html) [Granit](/help/sites-developing/touch-ui-concepts.md#granite-ui) -komponenten används för att användaren ska kunna välja sökvägen till en viss resurs. Sökvägarna kan filtreras på följande sätt:
 
-* Implementera det anpassade predikatet genom att implementera gränssnittet [`com.day.cq.commons.predicate.AbstractNodePredicate`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/predicate/package-summary.html).
+* Implementera det anpassade predikatet genom att implementera [`com.day.cq.commons.predicate.AbstractNodePredicate`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/predicate/package-summary.html) gränssnitt.
 * Ange ett namn för predikatet och referera det namnet när du använder `pathbrowser`.
 
 Mer information om hur du skapar ett anpassat predikat finns i [den här artikeln](/help/sites-developing/implementing-custom-predicate-evaluator.md).
 
 >[!NOTE]
 >
->Implementering av ett anpassat predikat genom implementering av gränssnittet `com.day.cq.commons.predicate.AbstractNodePredicate` fungerar även i det klassiska användargränssnittet.
+>Implementera ett anpassat predikat genom att implementera `com.day.cq.commons.predicate.AbstractNodePredicate` -gränssnittet fungerar även i det klassiska användargränssnittet.
 >
->I [den här kunskapsbasartikeln](https://helpx.adobe.com/experience-manager/using/creating-custom-cq-tree.html) finns ett exempel på hur du implementerar ett anpassat predikat i det klassiska användargränssnittet.
+>Se [den här kunskapsbasartikeln](https://helpx.adobe.com/experience-manager/using/creating-custom-cq-tree.html) som ett exempel på implementering av ett anpassat predikat i det klassiska användargränssnittet.
 
 ## Lägg till ny åtgärd i ett komponentverktygsfält {#add-new-action-to-a-component-toolbar}
 
@@ -161,7 +161,7 @@ I en vanlig AEM-installation:
 
             Definierar vilken typ av infogad redigerare som ska användas när redigeringen på plats aktiveras för den komponenten. t.ex. `text`, `textimage`, `image`, `title`.
 
-1. Ytterligare konfigurationsinformation om redigeraren kan konfigureras med en `config`-nod som innehåller konfigurationer samt en annan `plugin`-nod som innehåller nödvändig konfigurationsinformation för plugin-programmet.
+1. Ytterligare konfigurationsinformation om redigeraren kan konfigureras med en `config` nod som innehåller konfigurationer samt ytterligare `plugin` nod som innehåller nödvändig konfigurationsinformation för plugin-programmet.
 
    Följande är ett exempel på hur du definierar bildproportioner för bildbeskärningsplugin-programmet för bildkomponenten. Observera att beskärningsproportionerna flyttades till helskärmsredigeraren på grund av risken för mycket begränsad skärmstorlek och att de bara kan ses där.
 
@@ -187,7 +187,7 @@ I en vanlig AEM-installation:
 
    >[!CAUTION]
    >
-   >Observera att i AEM beskärningsproportioner, som anges av egenskapen `ratio`, definieras som **height/width**. Detta skiljer sig från den vanliga definitionen av bredd/höjd och görs av äldre kompatibilitetsskäl. Redigeringsanvändarna kommer inte att vara medvetna om några skillnader förutsatt att du definierar egenskapen `name` tydligt eftersom detta visas i användargränssnittet.
+   >Observera att i AEM beskärningsproportioner, enligt inställningen i `ratio` egenskap, definieras som **höjd/bredd**. Detta skiljer sig från den vanliga definitionen av bredd/höjd och görs av äldre kompatibilitetsskäl. Redigeringsanvändarna kommer inte att vara medvetna om några skillnader förutsatt att du definierar `name` egenskapen tydligt eftersom detta är vad som visas i användargränssnittet.
 
 #### Skapa en ny lokal redigerare {#creating-a-new-in-place-editor}
 
@@ -222,11 +222,11 @@ Koden för den här sidan finns på GitHub
 
 #### Konfigurera flera redigerare på plats {#configuring-multiple-in-place-editors}
 
-Det går att konfigurera en komponent så att den har flera redigerare på plats. När flera redigerare på plats har konfigurerats kan du välja rätt innehåll och öppna rätt redigerare. Mer information finns i [Configuring Multiple In-Place Editors](/help/sites-developing/multiple-inplace-editors.md)-dokumentationen.
+Det går att konfigurera en komponent så att den har flera redigerare på plats. När flera redigerare på plats har konfigurerats kan du välja rätt innehåll och öppna rätt redigerare. Se [Konfigurera flera redigerare på plats](/help/sites-developing/multiple-inplace-editors.md) mer information.
 
 ## Lägg till en ny sidåtgärd {#add-a-new-page-action}
 
-Om du vill lägga till en ny sidåtgärd i sidverktygsfältet, till exempel en **Gå tillbaka till platser** (konsol)-åtgärd.
+Lägga till en ny sidåtgärd i verktygsfältet, till exempel en **Tillbaka till platser** (konsol).
 
 ### Kodexempel {#code-sample-3}
 
@@ -241,15 +241,15 @@ Koden för den här sidan finns på GitHub
 
 ## Anpassa arbetsflödet för begäran om aktivering {#customizing-the-request-for-activation-workflow}
 
-Det färdiga arbetsflödet, **Begär aktivering**:
+färdiga arbetsflöden, **Aktiveringsbegäran**:
 
-* Visas automatiskt på rätt meny när en innehållsförfattare **inte har** rätt replikeringsbehörighet, men **inte har** medlemskap i DAM-användare och författare.
+* Visas automatiskt på rätt meny när en innehållsförfattare **har inte** rätt replikeringsrättigheter, men **har** medlemskap för DAM-användare och författare.
 
 * I annat fall visas ingenting eftersom replikeringsrättigheterna har tagits bort.
 
-Om du vill ha ett anpassat beteende vid en sådan aktivering kan du täcka över arbetsflödet **Begär aktivering**:
+Om du vill ha ett anpassat beteende vid en sådan aktivering kan du täcka över **Aktiveringsbegäran** arbetsflöde:
 
-1. I `/apps`-övertäckningen **Platser**-guiden:
+1. I `/apps` överlägg **Webbplatser** guide:
 
    `/libs/wcm/core/content/common/managepublicationwizard`
 
@@ -259,5 +259,5 @@ Om du vill ha ett anpassat beteende vid en sådan aktivering kan du täcka över
    >
    >`/libs/cq/gui/content/common/managepublicationwizard`
 
-1. Uppdatera [arbetsflödesmodellen](/help/sites-developing/workflows-models.md) och relaterade konfigurationer/skript efter behov.
-1. Ta bort rättigheten till [ `replicate`-åtgärden](/help/sites-administering/security.md#actions) från alla lämpliga användare för alla relevanta sidor, om du vill att det här arbetsflödet ska utlösas som en standardåtgärd när någon av användarna försöker publicera (eller replikera) en sida.
+1. Uppdatera [arbetsflödesmodell](/help/sites-developing/workflows-models.md) och relaterade konfigurationer/skript efter behov.
+1. Ta bort höger till [ `replicate` åtgärd](/help/sites-administering/security.md#actions) från alla lämpliga användare för alla relevanta sidor, om du vill att det här arbetsflödet ska utlösas som en standardåtgärd när någon av användarna försöker publicera (eller replikera) en sida.

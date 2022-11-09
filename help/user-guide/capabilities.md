@@ -1,28 +1,27 @@
 ---
 title: Användarhandbok för AEM 6.5 Capabilities
-seo-title: Användarhandbok för AEM 6.5 Capabilities
+seo-title: AEM 6.5 Capabilities User Guide
 description: En översikt över de viktigaste funktionerna i AEM 6.5
-seo-description: En översikt över de viktigaste funktionerna i AEM 6.5
+seo-description: An overview of the essential capabilities of AEM 6.5
 exl-id: d9941242-a01d-48fa-bad0-4c5b9dd16f4c
-translation-type: tm+mt
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '157'
+source-wordcount: '143'
 ht-degree: 2%
 
 ---
 
 # AEM 6.5 Capabilities User Guides {#aem-65-capabilities-user-guides}
 
-## AEM Foundation {#aem-foundation}
+## AEM {#aem-foundation}
 
-[Läs mer om installation, distribution och arkitekturen för Adobe Experience Manager 6.5](/help/sites-deploying/home.md), inklusive vår molndistribution av Adobe Managed Services.
+[Läs mer om installation, driftsättning och arkitekturen i Adobe Experience Manager 6.5](/help/sites-deploying/home.md), inklusive vår molndistribution av Adobe Managed Services.
 
 [Lär dig hantera ett AEM projekt](/help/managing/home.md).
 
 ## AEM Sites {#aem-sites}
 
-[Lär dig grunderna för att skapa innehåll och redigering i AEM](/help/sites-authoring/home.md).
+[Lär dig viktiga begrepp för att skapa innehåll och innehåll i AEM](/help/sites-authoring/home.md).
 
 [Läs om hur du administrerar AEM](/help/sites-administering/home.md).
 
@@ -38,7 +37,7 @@ ht-degree: 2%
 
 [Lär dig mer om den digitala signeringslösningen för att publicera dynamiska och interaktiva upplevelser.](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html)
 
-## AEM Commerce {#aem-commerce}
+## AEM {#aem-commerce}
 
 [Läs om AEM.](/help/commerce/home.md)
 
@@ -48,7 +47,7 @@ ht-degree: 2%
 
 ## AEM Livefyre {#aem-livefyre}
 
-[Dela användargenererat innehåll med AEM Livefyre.](https://docs.adobe.com/content/help/en/livefyre/using/home.html)
+[Dela användargenererat innehåll med AEM Livefyre.](https://experienceleague.adobe.com/docs/livefyre/using/home.html)
 
 ## AEM Mobile {#aem-mobile}
 

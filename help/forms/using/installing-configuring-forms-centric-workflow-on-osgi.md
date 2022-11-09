@@ -1,17 +1,17 @@
 ---
 title: Installera och konfigurera ett Forms-centrerat arbetsflöde i OSGi
-seo-title: Installera och konfigurera ett Forms-centrerat arbetsflöde i OSGi
+seo-title: Installing and Configuring Forms-centric workflow on OSGi
 description: Installera och konfigurera AEM Forms Interactive Communications för att skapa affärskorrespondenser, dokument, kontoutdrag, förmånsmeddelanden, marknadsföringsmejl, fakturor och välkomstpaket.
-seo-description: Installera och konfigurera AEM Forms Interactive Communications för att skapa affärskorrespondenser, dokument, kontoutdrag, förmånsmeddelanden, marknadsföringsmejl, fakturor och välkomstpaket.
+seo-description: Install and configure AEM Forms Interactive Communications to create business correspondences, documents, statements, benefit notices, marketing mails, bills, and welcome kits.
 uuid: 1ceae822-215a-4b83-a562-4609a09c3a54
 topic-tags: installing
 discoiquuid: de292a19-07db-4ed3-b13a-7a2f1cd9e0dd
 docset: aem65
 role: Admin
 exl-id: 4b24a38a-c1f0-4c81-bb3a-39ce2c4892b1
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '1619'
+source-wordcount: '1589'
 ht-degree: 0%
 
 ---
@@ -20,25 +20,25 @@ ht-degree: 0%
 
 ## Introduktion {#introduction}
 
-Företag samlar in och bearbetar data från olika typer av formulär, bakomliggande system och andra datakällor. Bearbetningen av data innefattar rutiner för granskning och godkännande, repetitiva uppgifter och arkivering av data. Du kan till exempel granska ett formulär och konvertera det till ett PDF-dokument. När du gör det manuellt kan de repetitiva uppgifterna ta lång tid och ta lång tid och resurser.
+Företag samlar in och bearbetar data från olika typer av formulär, bakomliggande system och andra datakällor. Bearbetningen av data innefattar rutiner för granskning och godkännande, repetitiva uppgifter och arkivering av data. Du kan till exempel granska ett formulär och konvertera det till PDF. När du gör det manuellt kan de repetitiva uppgifterna ta lång tid och ta lång tid och resurser.
 
-Du kan använda [Forms-baserat arbetsflöde i OSGi](../../forms/using/aem-forms-workflow.md) för att snabbt skapa anpassningsbara formulärbaserade arbetsflöden. Dessa arbetsflöden kan hjälpa er att automatisera gransknings- och godkännandearbetsflöden, affärsprocessarbetsflöden och andra repetitiva uppgifter. Med dessa arbetsflöden kan man också bearbeta dokument (skapa, sammanställa, distribuera och arkivera PDF-dokument, lägga in digitala signaturer för att begränsa tillgången till dokument, avkoda streckkodsblanketter med mera) och använda Adobe Sign signaturarbetsflöde med formulär och dokument.
+Du kan använda [Forms-centrerat arbetsflöde i OSGi](../../forms/using/aem-forms-workflow.md) för att snabbt skapa anpassningsbara formulärbaserade arbetsflöden. Dessa arbetsflöden kan hjälpa er att automatisera gransknings- och godkännandearbetsflöden, affärsprocessarbetsflöden och andra repetitiva uppgifter. Dessa arbetsflöden hjälper dig även att bearbeta dokument (skapa, sammanställa, distribuera och arkivera PDF-dokument, lägga till digitala signaturer för att begränsa tillgången till dokument, avkoda streckkodsformulär med mera) och använda Adobe Sign signaturarbetsflöde med formulär och dokument.
 
 När du väl har konfigurerat arbetsflödena kan de aktiveras manuellt för att slutföra en definierad process eller köras programmatiskt när användare skickar ett formulär eller en interaktiv kommunikation. Funktionen ingår i AEM Forms tilläggspaket.
 
-AEM Forms är en kraftfull plattform för större företag. Forms-centrerat arbetsflöde i OSGi är bara en av funktionerna i AEM Forms. En fullständig lista över funktioner finns i [Introduktion till AEM Forms](introduction-aem-forms.md).
+AEM Forms är en kraftfull plattform för större företag. Forms-centrerat arbetsflöde i OSGi är bara en av funktionerna i AEM Forms. En fullständig lista över funktioner finns på [Introduktion till AEM Forms](introduction-aem-forms.md).
 
 >[!NOTE]
 >
->Med Forms-baserade arbetsflöden i OSGi kan du snabbt skapa och distribuera arbetsflöden för olika uppgifter i OSGi-stacken, utan att behöva installera den fullständiga processhanteringsfunktionen i JEE-stacken. Se en [jämförelse](capabilities-osgi-jee-workflows.md) av de Forms-centrerade AEM arbetsflödena i OSGi och Process Management i JEE för att lära dig skillnaden och likheterna i funktionerna.
+>Med Forms-baserade arbetsflöden i OSGi kan du snabbt skapa och distribuera arbetsflöden för olika uppgifter i OSGi-stacken, utan att behöva installera den fullständiga processhanteringsfunktionen i JEE-stacken. Se en [jämförelse](capabilities-osgi-jee-workflows.md) av Forms-centrerade arbetsflöden AEM OSGi och Process Management på JEE för att lära sig skillnaden och likheterna i funktionerna.
 >
->Efter jämförelsen finns mer detaljerad information om hur du installerar och konfigurerar JEE-stacken i [Installera eller uppgradera AEM Forms på JEE](/help/forms/home.md) om du väljer att installera processhanteringsfunktionen på JEE-stacken.
+>Efter jämförelsen finns mer information om hur du installerar processhanteringsfunktionen i JEE-stacken i [Installera eller uppgradera AEM Forms på JEE](/help/forms/home.md) om du vill ha detaljerad information om hur du installerar och konfigurerar JEE-stacken och processhanteringsfunktionerna.
 
 ## Distributionstopologi {#deployment-topology}
 
-AEM Forms tilläggspaket är ett program som distribueras till AEM. Du behöver bara minst en AEM Author- eller Processing-instans (produktionsförfattare) för att köra det Forms-centrerade arbetsflödet på OSGi-funktionen. En bearbetningsinstans är en [härdad AEM Author](/help/forms/using/hardening-securing-aem-forms-environment.md)-instans. Gör inga riktiga redigeringsfunktioner, som att skapa arbetsflöden eller anpassningsbara formulär, på produktionsförfattaren.
+AEM Forms tilläggspaket är ett program som distribueras till AEM. Du behöver bara minst en AEM Author- eller Processing-instans (produktionsförfattare) för att köra det Forms-centrerade arbetsflödet på OSGi-funktionen. En bearbetningsinstans är en [härdad AEM-författare](/help/forms/using/hardening-securing-aem-forms-environment.md) -instans. Gör inga riktiga redigeringsfunktioner, som att skapa arbetsflöden eller anpassningsbara formulär, på produktionsförfattaren.
 
-Följande topologi är en indikativ topologi för att köra AEM Forms Interactive Communications, Correspondence Management, AEM Forms datainhämtning och Forms-Centric-arbetsflöden för OSGi-funktioner. Mer information om topologin finns i [Arkitektur och distributionstopologier för AEM Forms](/help/forms/using/aem-forms-architecture-deployment.md).
+Följande topologi är en indikativ topologi för att köra AEM Forms Interactive Communications, Correspondence Management, AEM Forms datainhämtning och Forms-Centric-arbetsflöden för OSGi-funktioner. Mer information om topologin finns i [Arkitektur och driftsättningstopologier för AEM Forms](/help/forms/using/aem-forms-architecture-deployment.md).
 
 ![rekommenderad topologi](assets/recommended-topology.png)
 
@@ -48,17 +48,17 @@ AEM Forms Forms-baserade arbetsflöden i OSGi kör AEM Inbox och AEM Workflow Mo
 
 >[!NOTE]
 >
->Gå till avsnittet [Nästa steg](../../forms/using/installing-configuring-forms-centric-workflow-on-osgi.md#next-steps) i dokumentet om du redan har installerat AEM Forms på OSGi enligt beskrivningen i [Installera och konfigurera datainhämtningsfunktioner](../../forms/using/installing-configuring-aem-forms-osgi.md)-artikeln.
+>Gå till [Nästa steg](../../forms/using/installing-configuring-forms-centric-workflow-on-osgi.md#next-steps) om du redan har installerat AEM Forms på OSGi enligt anvisningarna i [installera och konfigurera datainhämtningsfunktioner](../../forms/using/installing-configuring-aem-forms-osgi.md) artikel.
 
 Innan du börjar installera och konfigurera ett Forms-centrerat arbetsflöde i OSGi måste du se till att:
 
-* Maskinvaru- och programvaruinfrastruktur finns på plats. En detaljerad lista över maskin- och programvara som stöds finns i [tekniska krav](/help/sites-deploying/technical-requirements.md).
+* Maskinvaru- och programvaruinfrastruktur finns på plats. En detaljerad lista över maskin- och programvara som stöds finns på [tekniska krav](/help/sites-deploying/technical-requirements.md).
 
 * Installationssökvägen för AEM-instansen innehåller inte blanksteg.
 * En AEM körs. I AEM är &quot;instance&quot; en kopia av AEM som körs på en server i författar- eller publiceringsläge. Du måste ha minst en AEM (Författare eller Bearbetning) för att köra Forms-centrerade arbetsflöden på OSGi:
 
-   * **Författare**: En AEM som används för att skapa, överföra och redigera innehåll och för att administrera webbplatsen. När innehållet är klart att publiceras replikeras det till publiceringsinstansen.
-   * **Bearbetning:** En bearbetningsinstans är en  [härdad AEM ](/help/forms/using/hardening-securing-aem-forms-environment.md) Authorinstance. Du kan ställa in en Author-instans och göra den oskarp efter att du har utfört installationen.
+   * **Upphovsman**: En AEM som används för att skapa, överföra och redigera innehåll och för att administrera webbplatsen. När innehållet är klart att publiceras replikeras det till publiceringsinstansen.
+   * **Bearbetar:** En bearbetningsinstans är en [härdad AEM-författare](/help/forms/using/hardening-securing-aem-forms-environment.md) -instans. Du kan ställa in en Author-instans och göra den oskarp efter att du har utfört installationen.
 
    * **Publicera**: En AEM som skickar det publicerade innehållet till allmänheten via Internet eller ett internt nätverk.
 
@@ -103,17 +103,17 @@ Innan du börjar installera och konfigurera ett Forms-centrerat arbetsflöde i O
 AEM Forms tilläggspaket är ett program som distribueras till AEM. Paketet innehåller ett Forms-orienterat arbetsflöde för OSGi och andra funktioner. Så här installerar du tilläggspaketet:
 
 1. Öppna [Programvarudistribution](https://experience.adobe.com/downloads). Du behöver en Adobe ID för att logga in på Software Distribution.
-1. Tryck på **[!UICONTROL Adobe Experience Manager]** som finns i rubrikmenyn.
-1. I avsnittet **[!UICONTROL Filters]**:
-   1. Välj **[!UICONTROL Forms]** i listrutan **[!UICONTROL Solution]**.
-   2. Välj version och typ för paketet. Du kan också använda alternativet **[!UICONTROL Search Downloads]** för att filtrera resultaten.
-1. Tryck på det paketnamn som gäller för ditt operativsystem, välj **[!UICONTROL Accept EULA Terms]** och tryck på **[!UICONTROL Download]**.
-1. Öppna [Pakethanteraren](https://docs.adobe.com/content/help/en/experience-manager-65/administering/contentmanagement/package-manager.html) och klicka på **[!UICONTROL Upload Package]** för att överföra paketet.
+1. Tryck **[!UICONTROL Adobe Experience Manager]** finns i rubrikmenyn.
+1. I **[!UICONTROL Filters]** avsnitt:
+   1. Välj **[!UICONTROL Forms]** från **[!UICONTROL Solution]** nedrullningsbar lista.
+   2. Välj version och typ för paketet. Du kan också använda **[!UICONTROL Search Downloads]** för att filtrera resultaten.
+1. Tryck på det paketnamn som gäller för operativsystemet och välj **[!UICONTROL Accept EULA Terms]** och trycka **[!UICONTROL Download]**.
+1. Öppna [Pakethanteraren](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)  och klicka **[!UICONTROL Upload Package]** för att överföra paketet.
 1. Markera paketet och klicka på **[!UICONTROL Install]**.
 
-   Du kan även hämta paketet via den direktlänk som visas i [AEM Forms-releaserna](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)-artikeln.
+   Du kan även hämta paketet via länken direkt i [AEM Forms](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) artikel.
 
-1. När paketet har installerats uppmanas du att starta om AEM. **Starta inte om servern omedelbart.** Innan du stoppar AEM Forms-servern väntar du tills meddelandena ServiceEvent REGISTERED och ServiceEvent UNREGISTERED inte visas i filen  [AEM-Installation-Directory]/crx-quickstart/logs/error.log och loggen är stabil.
+1. När paketet har installerats uppmanas du att starta om AEM. **Starta inte om servern omedelbart.** Innan du stoppar AEM Forms-servern väntar du tills meddelandena ServiceEvent REGISTERED och ServiceEvent UNREGISTERED inte visas i [AEM-installationskatalog]/crx-quickstart/logs/error.log och loggen är stabil.
 1. Upprepa steg 1-7 för alla författare- och publiceringsinstanser.
 
 ## Konfiguration efter installation {#post-installation-configurations}
@@ -127,9 +127,9 @@ AEM Forms har några obligatoriska och valfria konfigurationer. De obligatoriska
 Utför följande steg på alla författare- och publiceringsinstanser för att starta delegeringen av biblioteken:
 
 1. Stoppa den underliggande AEM.
-1. Öppna [AEM installationskatalog]\crx-quickstart\conf\sling.properties för redigering.
+1. Öppna [AEM installationskatalog]\crx-quickstart\conf\sling.properties fil för redigering.
 
-   Om du använde [AEM installationskatalog]\crx-quickstart\bin\start.bat för att starta AEM redigerar du sling.properties som finns på [AEM_root]\crx-quickstart\.
+   Om du använt [AEM installationskatalog]\crx-quickstart\bin\start.bat här startar du AEM och redigerar sedan sling.properties som finns på [AEM_root]\crx-quickstart\.
 
 1. Lägg till följande egenskaper i filen sling.properties:
 
@@ -145,15 +145,15 @@ Utför följande steg på alla författare- och publiceringsinstanser för att s
 Utför följande steg på alla Author- och Publish-instanser för att lägga till paketet i tillåtelselista:
 
 1. Öppna AEM Configuration Manager i ett webbläsarfönster. Standardwebbadressen är https://&#39;[server]:[port]&#39;/system/console/configMgr.
-1. Sök och öppna **Konfiguration av brandväggen för deserialisering**.
-1. Lägg till **sun.util.calendar**-paketet i **tillåtelselista**-fältet. Klicka på Spara.
+1. Söka och öppna **Konfiguration av brandvägg för deserialisering**.
+1. Lägg till **sun.util.calendar** till **tillåtelselista** fält. Klicka på Spara.
 1. Upprepa steg 1-3 för alla författare- och publiceringsinstanser.
 
 ### Ytterligare konfigurationer efter installation {#optional-post-installation-configurations}
 
 #### Konfigurera Dispatcher {#configure-dispatcher}
 
-Dispatcher är ett verktyg för cachelagring och lastbalansering för AEM. AEM Dispatcher skyddar också AEM från attacker. Du kan öka säkerheten för AEM genom att använda Dispatcher tillsammans med en webbserver i företagsklass. Om du använder [Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html) ska du göra följande konfigurationer för AEM Forms:
+Dispatcher är ett verktyg för cachelagring och lastbalansering för AEM. AEM Dispatcher skyddar också AEM från attacker. Du kan öka säkerheten för AEM genom att använda Dispatcher tillsammans med en webbserver i företagsklass. Om du använder [Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html)och sedan utföra följande konfigurationer för AEM Forms:
 
 1. Konfigurera åtkomst för AEM Forms:
 
@@ -161,35 +161,35 @@ Dispatcher är ett verktyg för cachelagring och lastbalansering för AEM. AEM D
 
    `/0025 { /type "allow" /glob "* /bin/xfaforms/submitaction*" } # to enable AEM Forms submission`
 
-   Spara och stäng filen. Mer information om filter finns i [Dispatcher documentation](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html).
+   Spara och stäng filen. Mer information om filter finns i [Dispatcher-dokumentation](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html).
 
 1. Konfigurera tjänsten för refererarfilter:
 
-   Logga in som administratör i konfigurationshanteraren för Apache Felix. Konfigurationshanterarens standard-URL är https://&#39;server&#39;:[port_number]/system/console/configMgr. Välj alternativet **Refererarfilter för Apache Sling** på menyn **Konfigurationer**. I fältet Tillåt värdar anger du värdnamnet för dispatchern så att den kan användas som referent och klickar på **Spara**. Postens format är `https://'[server]:[port]'`.
+   Logga in som administratör i konfigurationshanteraren för Apache Felix. Konfigurationshanterarens standard-URL är https://&#39;server&#39;:[portnummer]/system/console/configMgr. I **Konfigurationer** väljer du **Apache Sling Referer-filter** alternativ. I fältet Tillåt värdar anger du avsändarens värdnamn för att tillåta det som referent och klickar på **Spara**. Formatet på posten är `https://'[server]:[port]'`.
 
 #### Konfigurera cache {#configure-cache}
 
-Cachelagring är en mekanism som förkortar dataåtkomsttider, minskar fördröjningen och förbättrar in-/utdatahastigheter (I/O). Cacheminnet för adaptiva formulär lagrar endast HTML-innehåll och JSON-strukturen i ett adaptivt formulär utan att några förfyllda data sparas. Det minskar tiden som krävs för att återge ett anpassat formulär.
+Cachelagring är en mekanism som förkortar dataåtkomsttider, minskar fördröjningen och förbättrar in-/utdatahastigheter (I/O). Cacheminnet för adaptiva formulär lagrar endast HTML-innehåll och JSON-struktur i ett adaptivt formulär utan att några förfyllda data sparas. Det minskar tiden som krävs för att återge ett anpassat formulär.
 
-* När du använder cacheminnet för adaptiva formulär använder du [AEM Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html) för att cachelagra klientbibliotek (CSS och JavaScript) för ett adaptivt formulär.
+* När du använder cacheminnet för anpassade formulär använder du [AEM Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html) för att cachelagra klientbibliotek (CSS och JavaScript) för ett adaptivt formulär.
 * När du utvecklar anpassade komponenter bör du se till att cachen för anpassade formulär är inaktiverad på servern som används för utveckling.
 
 Utför följande steg för att konfigurera cachen för adaptiva formulär:
 
 1. Gå till konfigurationshanteraren AEM webbkonsolen på `https://'[server]:[port]'/system/console/configMgr`.
-1. Klicka på **[!UICONTROL Adaptive Form and Interactive Communication Web Channel Configuration]** om du vill redigera dess konfigurationsvärden. I dialogrutan Redigera konfigurationsvärden anger du det maximala antalet formulär eller dokument som en instans av AEM Forms-servern kan cachelagra i fältet **Antal adaptiva Forms**. Standardvärdet är 100. Klicka på **Spara**.
+1. Klicka **[!UICONTROL Adaptive Form and Interactive Communication Web Channel Configuration]** om du vill redigera dess konfigurationsvärden. I dialogrutan Redigera konfigurationsvärden anger du det maximala antalet formulär eller dokument som en instans av AEM Forms-servern kan cachelagra i **Antal adaptiva Forms** fält. Standardvärdet är 100. Klicka **Spara**.
 
    >[!NOTE]
    >
-   >Om du vill inaktivera cachen anger du värdet **0** i fältet Antal adaptiva Forms. Cacheminnet återställs och alla formulär och dokument tas bort från cacheminnet när du inaktiverar eller ändrar cachekonfigurationen.
+   >Om du vill inaktivera cachen anger du värdet i fältet Antal adaptiva Forms till **0**. Cacheminnet återställs och alla formulär och dokument tas bort från cacheminnet när du inaktiverar eller ändrar cachekonfigurationen.
 
 #### Konfigurera Adobe Sign {#configure-adobe-sign}
 
 Adobe Sign möjliggör e-signaturarbetsflöden för anpassningsbara formulär. E-signaturer förbättrar arbetsflödena för att bearbeta dokument inom juridik, försäljning, löneadministration, personaladministration och många andra områden.
 
-I ett typiskt Adobe Sign- och Forms-orienterat arbetsflöde i OSGi-scenarier fyller en användare i ett anpassningsbart formulär som **ansöker om en tjänst**. Till exempel kan en kreditkortsansökan och en medborgare få förmåner. När en användare fyller i, skickar och signerar ansökningsformuläret startas ett arbetsflöde för godkännande/avvisning. Tjänsteleverantören granskar programmet i AEM Inbox och använder Adobe Sign för att signera programmet elektroniskt. För att möjliggöra liknande arbetsflöden för elektroniska signaturer kan du integrera Adobe Sign med AEM Forms.
+I ett typiskt Adobe Sign- och Forms-orienterat arbetsflöde i OSGi-scenarier fyller en användare i ett anpassat formulär till **ansöka om en tjänst**. Till exempel kan en kreditkortsansökan och en medborgare få förmåner. När en användare fyller i, skickar och signerar ansökningsformuläret startas ett arbetsflöde för godkännande/avvisning. Tjänsteleverantören granskar programmet i AEM Inbox och använder Adobe Sign för att signera programmet elektroniskt. För att möjliggöra liknande arbetsflöden för elektroniska signaturer kan du integrera Adobe Sign med AEM Forms.
 
-[Integrera Adobe Sign med AEM Forms](../../forms/using/adobe-sign-integration-adaptive-forms.md) om du vill använda Adobe Sign med AEM Forms.
+Om du vill använda Adobe Sign med AEM Forms [Integrera Adobe Sign med AEM Forms](../../forms/using/adobe-sign-integration-adaptive-forms.md).
 
 ## Nästa steg {#next-steps}
 

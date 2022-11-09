@@ -3,9 +3,9 @@ title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
+source-git-commit: d31fef1fe7023dfa5129bb8d136550b43ef197d1
 workflow-type: tm+mt
-source-wordcount: '3206'
+source-wordcount: '3227'
 ht-degree: 0%
 
 ---
@@ -53,7 +53,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Smarta innehållstjänster kommer inte att vara tillgängliga för nya Experience Manager Assets On-Premise-kunder från och med den 1 september 2022. Ingen påverkan på befintliga kunder med lokal och Adobe Managed Services som redan har den här funktionen aktiverad.
+>Smarta innehållstjänster kommer inte att vara tillgängliga för nya Experience Manager Assets On-Premise-kunder från och med den 1 september 2022. Ingen påverkan på befintliga kunder med anläggningsarbeten och Adobe Managed Services som redan har aktiverat den här funktionen.
 
 ### [!DNL Dynamic Media] {#dynamic-media-6514}
 
@@ -93,7 +93,7 @@ ht-degree: 0%
 -->
 
 * När en fil bifogas till ett adaptivt formulär med flera paneler och ett utkast av det adaptiva formuläret sparas, inträffar ett fel. (NPR-38978)
-* När en användare konverterar RGB-profil till CMYK-profil med createPDF2 Java API med Adobe PDF-inställningar fungerar inte alternativet med Java API. Alternativet fungerar bra med det fristående DistillerClient-programmet. (NPR-38858, CQ-4346181)
+* När en användare konverterar RGB-profil till CMYK-profil med createPDF2 Java™ API med Adobe PDF-inställningar fungerar inte alternativet med Java™ API. Alternativet fungerar bra med det fristående DistillerClient-programmet. (NPR-38858, CQ-4346181)
 * När du har installerat AEM 6.5 Forms Service Pack 12 (6.5.12.0) blir alla alternativ utom att stänga uppgiften otillgängliga i steget Tilldela uppgift AEM Arbetsflöden. (NPR-38743)
 * I en DoR (Document of Record) trunkeras vissa värden i en tabell. (NPR-38657)
 * När du förhandsgranskar FormSet med Data XML och XDP innehåller ett flytande fält visas inga data när du förhandsgranskar en FormSet, men data visas när alternativet Förhandsgranska PDF används.
@@ -109,12 +109,12 @@ ht-degree: 0%
 * När du skapar en webbportal och genererar streckkoder baserade på data, avkodas vissa streckkoder inte korrekt. (CQ-4345743)
 * PostScript-konvertering till PDF återger inte utdatadokument med förväntade färger. (CQ-4345074)
 * Resurslösaren orsakar återkommande misslyckade överföringar och resulterar i samma stackspårning som visas flera gånger för en enda sändning. (CQ-4344764)
-* Användarna kan inte öppna de ändrade utkasten som använder `cmDataUrl` parameter. Utkasten öppnas bra för första gången. Utgåvorna börjar visas vid efterföljande försök. (CQ-4344418)
+* Användarna kan inte öppna de ändrade utkasten som använder `cmDataUrl` parameter. Utkastet öppnas som det ska för första gången. Utgåvorna börjar visas vid efterföljande försök. (CQ-4344418)
 * När användaren skriver `&` -symbolen i ett interaktivt meddelande (IC). Motsvarande IC-kort läses inte in. (CQ-4343969)
 * När du använder formatalternativ i AEM Forms Designer för att generera PCL-filer används inte det angivna formatet för genererade filer. (CQ-4339573)
 * När sidantalet är över 15 misslyckas automatiserad konvertering av dynamiska XDP-formulär till adaptiv form. Detta fungerar bra när sidantalet är mindre än 15. (NPR-35337)
 * När alternativet Lägg till i Favoriter används visas inte statusen för växlingen till skärmläsaren. (NPR-37137)
-* I formulärdatamodellen trunkeras värdena efter decimalerna i databasbaserade formulärdatamodeller för datatypen pengar och liten kostnad. . (CQDOC-19509)
+* I formulärdatamodellen trunkeras värdena efter decimalerna i databasbaserade formulärdatamodeller för datatypen pengar och liten kostnad. (CQDOC-19509)
 * När du väljer en navigeringslänk för arbetsflödet i HTML Workspace visas inte att navigeringslänken är markerad. (NPR-37138)
 * Funktionen Klottra signaturer är inte kompatibel med riktlinjerna för hjälpmedel. (NPR-37596)
 * AEM Forms använder log4j 1.x. Stöd för log4j 1.x har nått slutet av livscykeln. (NPR-38273)
@@ -122,8 +122,8 @@ ht-degree: 0%
 * När du öppnar ett formulär som har skapats med Forms 6.1 Designer i Forms 6.5 Designer och redigerar en textruta överskrider styckeavståndet det angivna utrymmet. Alla tidigare inställningar för utrymmet tas bort och du måste formatera om textrutan manuellt. (CQ-4341899)
 * Felaktigt värde visas för streckkoden SSCC-18. Forms-servrar utelämnar värdet till höger om streckkoden. (CQ-4342400)
 * För statisk PDF forms som skapats med Forms 6.5 Designer misslyckas tillgängligheten för PDF med fel `Tab order entry in page with annotations not set to "S"`. (CQ-4343117)
-* Lagt till möjlighet att ange Reader-text på skärmen för hyperlänkar i Forms Designer.(NPR-36221)
-* När du lägger till en upprepningsbar panel i en icke-XFA adaptiv form och antalet upprepningsbara paneler i ett icke-XFA-formulär är mer än 15, kan det ta upp till 7-8 sekunder att lägga till en ny instans. (NPR-37346)
+* Lagt till möjlighet att ange Reader-text på skärmen för hyperlänkar i Forms Designer. (NPR-36221)
+* När du lägger till en upprepningsbar panel i en icke-XFA adaptiv form och antalet upprepningsbara paneler i ett icke-XFA-formulär är mer än 15, kan det ta upp till 7-8 sekunder att lägga till en instans. (NPR-37346)
 
 ## Integreringar {#integrations-6514}
 
@@ -206,9 +206,9 @@ ht-degree: 0%
 * Service Pack-nedladdning finns på Adobe [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html).
 * På en distribution med MongoDB och flera instanser installerar du [!DNL Experience Manager] 6.5.14.0 på en av författarinstanserna med hjälp av Package Manager.<!-- UPDATE FOR EACH NEW RELEASE -->
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Adobe rekommenderar inte att du tar bort eller avinstallerar [!DNL Experience Manager] 6.5.14.0-paket. <!-- UPDATE FOR EACH NEW RELEASE -->
+>Adobe rekommenderar inte att du tar bort eller avinstallerar [!DNL Experience Manager] 6.5.14.0-paket. Innan du installerar Service Pack bör du skapa en säkerhetskopia av `crx-repository` om du behöver rulla tillbaka den. <!-- UPDATE FOR EACH NEW RELEASE -->
 
 ### Installera Service Pack på [!DNL Experience Manager] 6.5 {#install-service-pack}
 
@@ -284,7 +284,7 @@ UberJar för [!DNL Experience Manager] 6.5.13.0 finns i [Maven Central-arkivet](
 
 >[!NOTE]
 >
->I Experience Manager 6.5.14.0 bör du vara medveten om att UberJar-versionen (6.5.13.0) fortfarande är densamma som den tidigare versionen.
+>I Experience Manager 6.5.14.0 är UberJar-versionen (6.5.13.0) densamma som i den tidigare versionen.
 
 Information om hur du använder UberJar i ett Maven-projekt finns i [använda UberJar](/help/sites-developing/ht-projects-maven.md) och inkludera följande beroende i projektens POM: <!-- CHECK FOR UPDATE EACH NEW RELEASE -->
 

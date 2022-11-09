@@ -9,9 +9,9 @@ feature: Commerce Integration Framework
 kt: 3456
 thumbnail: 3456-style-cif.jpg
 exl-id: 04d553be-c67d-4ecb-a23f-2694c2adfc2b
-source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '2567'
+source-wordcount: '2551'
 ht-degree: 0%
 
 ---
@@ -69,7 +69,7 @@ Den CSS och JavaScript som ansvarar för återgivningen av temat/formaten för b
 
 Märkesspecifika format kan användas på AEM CIF Core-komponenter genom att lägga till och åsidosätta den CSS som hanteras av dessa klientbibliotek. Det är viktigt att förstå hur klientbibliotek är strukturerade och inkluderas på sidan.
 
-The [ui.front](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend.html) är en dedikerad [webbpaket](https://webpack.js.org/) projekt för att hantera alla resurser i ett projekt. Detta gör att gränssnittsutvecklare kan använda valfritt antal språk och tekniker som [TypeScript](https://www.typescriptlang.org/), [Sass](https://sass-lang.com/) och mycket annat.
+The [ui.front](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html) är en dedikerad [webbpaket](https://webpack.js.org/) projekt för att hantera alla resurser i ett projekt. Detta gör att gränssnittsutvecklare kan använda valfritt antal språk och tekniker som [TypeScript](https://www.typescriptlang.org/), [Sass](https://sass-lang.com/) och mycket annat.
 
 The `ui.frontend` modulen är också en Maven-modul och integrerad med det större projektet genom att använda en NPM-modul i [aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator). Under en byggprocess `aem-clientlib-generator` kopierar de kompilerade CSS- och JavaScript-filerna till ett klientbibliotek i `ui.apps` -modul.
 
@@ -79,7 +79,7 @@ The `ui.frontend` modulen är också en Maven-modul och integrerad med det stör
 
 ## Uppdatera Teaser Style {#ui-frontend-module}
 
-Gör sedan en liten ändring av Teaser-stilen för att se hur `ui.frontend` modul- och klientbibliotek fungerar. Använd [den utvecklingsmiljö du vill](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html#set-up-the-development-ide) för att importera Venia-projektet. Skärmbilder som används finns i [Visual Studio Code IDE](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html#microsoft-visual-studio-code).
+Gör sedan en liten ändring av Teaser-stilen för att se hur `ui.frontend` modul- och klientbibliotek fungerar. Använd [den utvecklingsmiljö du vill](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html#set-up-the-development-ide) för att importera Venia-projektet. Skärmbilder som används finns i [Visual Studio Code IDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html#microsoft-visual-studio-code).
 
 1. Navigera och expandera **ui.front** och expandera mapphierarkin till: `ui.frontend/src/main/styles/commerce`:
 
@@ -176,7 +176,7 @@ Gör sedan en liten ändring av Teaser-stilen för att se hur `ui.frontend` modu
 
    Dessa klientbibliotek hanteras inte av `ui.frontend` -modul. I stället innehåller dessa klientbibliotek CSS- och JavaScript-beroenden från Adobe. Definitionen för dessa klientbibliotek finns i `.content.xml` under varje mapp.
 
-   **clientlib-base** - Det här är ett tomt klientbibliotek som helt enkelt bäddar in nödvändiga beroenden från [AEM kärnkomponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html). Kategorin är `venia.base`.
+   **clientlib-base** - Det här är ett tomt klientbibliotek som helt enkelt bäddar in nödvändiga beroenden från [AEM kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html). Kategorin är `venia.base`.
 
    **klientlib-cif** - Det här är också ett tomt klientbibliotek som helt enkelt bäddar in nödvändiga beroenden från [AEM CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components). Kategorin är `venia.cif`.
 
@@ -443,7 +443,7 @@ Webbpack-dev-server-proxies bilder och en del CSS/JavaScript från den lokala in
    ```
 
    >[!NOTE]
-   >Det finns ytterligare [IDE-inställningar och -verktyg](https://docs.adobe.com/content/help/en/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html#set-up-an-integrated-development-environment) som kan synkronisera projektfiler direkt till en lokal AEM utan att behöva utföra en fullständig Maven-konstruktion.
+   >Det finns ytterligare [IDE-inställningar och -verktyg](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html#set-up-an-integrated-development-environment) som kan synkronisera projektfiler direkt till en lokal AEM utan att behöva utföra en fullständig Maven-konstruktion.
 
 ## Visa uppdaterad Product Teaser {#view-updated-product-teaser}
 
@@ -471,7 +471,7 @@ Du formaterade just din första AEM CIF Core Component och du använde en webbpa
 
 ## Bonus Challenge {#bonus-challenge}
 
-Använd [AEM](/help/sites-authoring/style-system.md) om du vill skapa två format som kan aktiveras/inaktiveras av en innehållsförfattare. [Utveckla med Style System](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/style-system.html) innehåller detaljerade steg och information om hur du uppnår detta.
+Använd [AEM](/help/sites-authoring/style-system.md) om du vill skapa två format som kan aktiveras/inaktiveras av en innehållsförfattare. [Utveckla med Style System](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/style-system.html) innehåller detaljerade steg och information om hur du uppnår detta.
 
 ![Bonus Challenge - system av olika slag](../assets/style-cif-component/bonus-challenge.png)
 
@@ -479,7 +479,7 @@ Använd [AEM](/help/sites-authoring/style-system.md) om du vill skapa två forma
 
 * [AEM Project Archetype](https://github.com/adobe/aem-project-archetype)
 * [AEM CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components)
-* [Konfigurera en lokal AEM utvecklingsmiljö](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)
+* [Konfigurera en lokal AEM utvecklingsmiljö](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)
 * [Klientbibliotek](/help/sites-developing/clientlibs.md)
-* [Komma igång med AEM Sites](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
-* [Utveckla med Style System](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/style-system.html)
+* [Komma igång med AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
+* [Utveckla med Style System](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/style-system.html)

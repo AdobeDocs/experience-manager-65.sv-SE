@@ -1,25 +1,24 @@
 ---
 title: AEM 6.5 God praxis
-seo-title: AEM 6.5 God praxis
+seo-title: AEM 6.5 Best Practices
 description: Resurser för bästa praxis, felsökning och utbildning för AEM 6.5
-seo-description: Resurser för bästa praxis, felsökning och utbildning för AEM 6.5
-translation-type: tm+mt
-source-git-commit: 315d1ac1a00da474f535087eff49c2be8fee8c37
+seo-description: Resources for best practices, troubleshooting and training for AEM 6.5
+exl-id: 077c00b9-f2ec-49a3-8d85-a3d3ecf287bb
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '439'
+source-wordcount: '425'
 ht-degree: 0%
 
 ---
 
-
-# AEM 6.5 Best Practices {#aem-65-best-practices}
+# AEM 6.5 God praxis {#aem-65-best-practices}
 
 ## Var kan jag lära mig mer om utbildning och AEM? {#training}
 
 Adobe har ett antal viktiga resurser som hjälper dig att få ut det mesta av AEM.
 
 * [Vår officiella AEM är här.](https://training.adobe.com/training/current-courses.html#solution=adobeExperienceManager&amp;p=1)
-* Om du vill bli certifierad på AEM finns vår [fullständiga guide till officiella AEM-certifieringar här.](https://training.adobe.com/certification/exams.html#p=1&amp;solution=adobeExperienceManager)
+* Om du vill bli certifierad AEM [En fullständig guide till officiella AEM finns här.](https://training.adobe.com/certification/exams.html#p=1&amp;solution=adobeExperienceManager)
 
 Den AEM communityn producerar ständigt exempelarbetsflöden, självstudiekurser och kodexempel från förslag och samarbetsarbeten.
 
@@ -47,16 +46,16 @@ AEM har många användningsområden i organisationer och är tillräckligt brett
 * [AEM Communities Getting Started](/help/communities/getting-started.md)
 * [AEM Livefyre Komma igång](https://answers.livefyre.com/developers/getting-started/)
 
-Vi har också en ny [WKND-självstudiekurs, som är en steg-för-steg-guide till hur du skapar din första webbplats med AEM](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) och ett [steg-för-steg-recept för att distribuera vår lösning för digital grund](https://helpx.adobe.com/marketing-cloud/how-to/digital-foundation.html), där AEM är en viktig byggsten.
+Vi har också en ny [WKND-självstudiekurs, som är en steg-för-steg-guide till hur du skapar din första webbplats med AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) samt [stegvis implementering av vår lösning Digital Foundation](https://helpx.adobe.com/marketing-cloud/how-to/digital-foundation.html), som AEM är en viktig byggsten för.
 
-## Rekommenderade distributioner för AEM {#deployments}
+## Rekommenderade driftsättningar för AEM {#deployments}
 
 MicroKernels fungerar som uthålliga chefer och det är avgörande för en framgångsrik AEM. Vilken som passar dina behov beror på syftet med instansen och vilken distributionstyp du överväger. [Läs mer om deras rekommenderade användningsområden i de vanligaste AEM.](/help/sites-deploying/recommended-deploys.md)
 
-## AEM checklista för säkerhet {#security-checklist}
+## AEM {#security-checklist}
 
 Säkerhet är en viktig faktor när du installerar AEM. [Lär dig mer om de olika steg och åtgärder som krävs för att säkerställa att AEM är säker vid driftsättning.](/help/sites-administering/security-checklist.md) Checklistan ska användas uppifrån och ned.
 
 ## AEM frågor och svar {#faq}
 
-Läs [AEM FAQs](/help/sites-administering/aem-faqs.md) för att få svar på några av de vanligaste frågorna om AEM.
+Kontrollera [AEM frågor och svar](/help/sites-administering/aem-faqs.md) för att få svar på några av de vanligaste frågorna om AEM.

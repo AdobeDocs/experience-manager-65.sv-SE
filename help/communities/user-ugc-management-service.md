@@ -1,8 +1,8 @@
 ---
 title: Tjänsten för hantering av användare och användargenererat innehåll i AEM Communities
-seo-title: Tjänsten för hantering av användare och användargenererat innehåll i AEM Communities
+seo-title: User and UGC Management Service in AEM Communities
 description: Använd API:er för att massexportera användargenererat innehåll och inaktivera användarkontot.
-seo-description: Använd API:er för att massexportera användargenererat innehåll och inaktivera användarkontot.
+seo-description: Use APIs to bulk delete and bulk export user generated content, and disable user account.
 uuid: 91180659-617d-4f6c-9a07-e680770d0d8f
 contentOwner: mgulati
 content-type: reference
@@ -12,9 +12,9 @@ discoiquuid: d305821d-1371-4e4a-8b28-8eee8fafa43b
 docset: aem65
 role: Admin
 exl-id: 526ef0fa-3f20-4de4-8bc5-f435c60df0d0
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '589'
 ht-degree: 0%
 
 ---
@@ -25,15 +25,15 @@ ht-degree: 0%
 >
 >GDPR används som exempel i avsnitten nedan, men de ingående detaljerna är tillämpliga på alla dataskydds- och sekretessbestämmelser. såsom GDPR, CCPA osv.
 
-AEM Communities visar användningsklara API:er för hantering av användarprofiler och grupphantering av användargenererat innehåll (UGC). När tjänsten **UserUgcManagement** har aktiverats kan behöriga användare (community-administratörer och moderatorer) inaktivera användarprofiler och massborttagning eller massexport av UGC för specifika användare. Dessa API:er gör det även möjligt för personuppgiftsansvariga och personuppgiftsbiträden att följa EU:s allmänna dataskyddsförordningar (GDPR) och andra GDPR-inspirerade sekretessbestämmelser.
+AEM Communities visar användningsklara API:er för hantering av användarprofiler och grupphantering av användargenererat innehåll (UGC). När den är aktiverad visas **UserUgcManagement** Med kan behöriga användare (community-administratörer och moderatorer) inaktivera användarprofiler och massta bort eller massexportera UGC för specifika användare. Dessa API:er gör det även möjligt för personuppgiftsansvariga och personuppgiftsbiträden att följa EU:s allmänna dataskyddsförordningar (GDPR) och andra GDPR-inspirerade sekretessbestämmelser.
 
-Mer information finns på sidan [GDPR på Adobe Privacy Center](https://www.adobe.com/privacy/general-data-protection-regulation.html).
+Mer information finns i [GDPR-sidan på Adobe Privacy Center](https://www.adobe.com/privacy/general-data-protection-regulation.html).
 
 >[!NOTE]
 >
->Om du konfigurerade [Adobe Analytics på AEM Communities](/help/communities/analytics.md)-platsen skickas den hämtade användarinformationen till Adobe Analytics-servern. Adobe Analytics tillhandahåller API:er som gör att du kan komma åt, exportera och ta bort användardata och följa GDPR. Mer information finns i [Skicka in åtkomst- och borttagningsbegäranden](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/gdpr-submit-access-delete.html).
+>Om du konfigurerade [Adobe Analytics i AEM Communities](/help/communities/analytics.md) -platsen skickas inhämtade användardata till Adobe Analytics-servern. Adobe Analytics tillhandahåller API:er som gör att du kan komma åt, exportera och ta bort användardata och följa GDPR. Mer information finns i [Skicka in begäran om åtkomst och borttagning](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-submit-access-delete.html).
 
-Om du vill använda dessa API:er måste du aktivera slutpunkten `/services/social/ugcmanagement` genom att aktivera tjänsten UserUgcManagement. Om du vill aktivera den här tjänsten installerar du [exempelservleten](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/main/bundles/communities-ugc-management-servlet) som finns på [GitHub.com](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/main/bundles/communities-ugc-management-servlet). Tryck sedan på slutpunkten på publiceringsinstansen av communitywebbplatsen med lämpliga parametrar med en http-begäran, som:
+Om du vill använda dessa API:er måste du aktivera `/services/social/ugcmanagement` slutpunkten genom att aktivera tjänsten UserUgcManagement. Om du vill aktivera den här tjänsten installerar du [samplingsservlet](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/main/bundles/communities-ugc-management-servlet) tillgänglig den [GitHub.com](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/main/bundles/communities-ugc-management-servlet). Tryck sedan på slutpunkten på publiceringsinstansen av communitywebbplatsen med lämpliga parametrar med en http-begäran, som:
 
 `https://localhost:port/services/social/ugcmanagement?user=<authorizable ID>&operation=<getUgc>`. Du kan även skapa ett användargränssnitt (användargränssnitt) för att hantera användarprofiler och användargenererat innehåll i systemet.
 
@@ -41,7 +41,7 @@ Dessa API:er gör det möjligt att utföra följande funktioner.
 
 ## Hämta användargenererat innehåll för en användare {#retrieve-the-ugc-of-a-user}
 
-**getUserUgc(ResourceResolver resourceResolver, String user, OutputStream outputStream)** hjälper till att exportera all UGC för en användare från systemet.
+**getUserUgc(ResourceResolver resourceResolver, String user, OutputStream outputStream)** hjälper till att exportera all användargenererat innehåll från systemet.
 
 * **användare**: Auktoriserbart ID för en användare.
 * **outputStream**: Resultatet returneras som utdataström, vilket är en zip-fil som innehåller det användargenererade innehållet (som json-fil) och bilagor (som innehåller bilder eller videor som överförts av användaren).
@@ -52,7 +52,7 @@ Om du till exempel vill exportera användargenererat innehåll för en användar
 
 ## Ta bort användargränssnittets innehållsförteckning {#delete-the-ugc-of-a-user}
 
-**deleteUserUgc(ResourceResolver resourceResolver, String user)** hjälper till att ta bort all UGC för en användare från systemet.
+**deleteUserUgc(ResourceResolver resourceResolver, String user)** används för att ta bort all UGC för en användare från systemet.
 
 * **användare**: Användarens autentiserbara ID.
 
@@ -63,7 +63,7 @@ Om du till exempel vill ta bort användargränssnittskontrollen för en använda
 
 ### Ta bort användargenererat innehåll från Adobe Analytics {#delete-ugc-from-adobe-analytics}
 
-Om du vill ta bort användardata från Adobe Analytics följer du arbetsflödet [GDPR Analytics](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/an-gdpr-workflow.html); eftersom API inte tar bort användardata från Adobe Analytics.
+Ta bort användardata från Adobe Analytics genom att följa [Arbetsflöde för GDPR-analys](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/an-gdpr-workflow.html); eftersom API inte tar bort användardata från Adobe Analytics.
 
 För Adobe Analytics-variabelmappningar som används av AEM Communities, se följande bild:
 
@@ -71,7 +71,7 @@ För Adobe Analytics-variabelmappningar som används av AEM Communities, se föl
 
 ## Inaktivera ett användarkonto {#disable-a-user-account}
 
-**deleteUserAccount(ResourceResolver resourceResolver, String user)** hjälper till att inaktivera ett användarkonto.
+**deleteUserAccount(ResourceResolver resourceResolver, String user)** används för att inaktivera ett användarkonto.
 
 * **användare**: Användarens autentiserbara ID.
 
@@ -79,11 +79,11 @@ För Adobe Analytics-variabelmappningar som används av AEM Communities, se föl
 >
 >Om du inaktiverar en användare tas allt användargenererat innehåll som användaren har på servern bort.
 
-Om du till exempel vill ta bort profilen för en användare som har ett autentiserbart ID `weston.mccall@dodgit.com` via http-POST-begäran använder du följande parametrar:
+Om du till exempel vill ta bort profilen för en användare med ett autentiserbart ID `weston.mccall@dodgit.com` Använd följande parametrar via http-POST-begäran:
 
 * användare = `weston.mccall@dodgit.com`
 * operation = `deleteUser`
 
 >[!NOTE]
 >
->deleteUserAccount() API inaktiverar bara en användarprofil i systemet och tar bort UGC. Om du vill ta bort en användarprofil från systemet går du till **CRXDE Lite**: [https://&lt;server>/crx/de](https://localhost:4502/crx/de), leta reda på användarnoden och ta bort den.
+>deleteUserAccount() API inaktiverar bara en användarprofil i systemet och tar bort UGC. Om du vill ta bort en användarprofil från systemet går du till **CRXDE Lite**: [https://&lt;server>/crx/de](https://localhost:4502/crx/de), letar upp användarnoden och tar bort den.

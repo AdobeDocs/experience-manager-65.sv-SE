@@ -3,9 +3,9 @@ title: Konfigurera RTF-redigeraren för att skapa innehåll i Adobe Experience M
 description: Lär dig konfigurera Adobe Experience Manager RTF-redigeraren så att du kan skapa innehåll i Adobe Experience Manager.
 contentOwner: AG
 exl-id: 2e7ec22f-0856-44c4-bb15-1086dae0b85a
-source-git-commit: d1b4cf87291f7e4a0670a21feca1ebf8dd5e0b5e
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '3022'
+source-wordcount: '3020'
 ht-degree: 0%
 
 ---
@@ -145,7 +145,6 @@ The [RTE-redigeringsläge (och användargränssnittet)](#editingmodes) som du an
 >* **Namn**: `configPath`
 >* **Typ**: `String`
 >* **Värde**: sökväg till noden som innehåller den faktiska konfigurationen
-
 >
 >Namnge inte RTE-konfigurationsnoden som `config`. I annat fall gäller RTE-konfigurationerna bara för administratörerna och inte för användarna i gruppen `content-author`.
 
@@ -182,9 +181,9 @@ Detaljerade konfigurationer av RTE-plugin-program finns i [hur du aktiverar och 
 
 >[!NOTE]
 >
->The [Textkomponent för kärnkomponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/text.html#the-text-component-and-the-rich-text-editor) I kan mallredigerare konfigurera många RTE-plugin-program i ett GUI som innehållsprinciper, vilket eliminerar behovet av teknisk konfiguration. Innehållsprinciper kan fungera med gränssnittskonfigurationer för textredigering enligt beskrivningen i det här dokumentet.
+>The [Textkomponent för kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html?lang=en#the-text-component-and-the-rich-text-editor) I kan mallredigerare konfigurera många RTE-plugin-program i ett GUI som innehållsprinciper, vilket eliminerar behovet av teknisk konfiguration. Innehållsprinciper kan fungera med gränssnittskonfigurationer för textredigering enligt beskrivningen i det här dokumentet.
 >
->Mer information finns i [Inställningar för RTE-användargränssnitt och innehållsprinciper](/help/sites-administering/rich-text-editor.md) dokumentets avsnitt [Skapa sidmallar](/help/sites-authoring/templates.md) och [Dokumentation för grundkomponentutvecklare](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/developing.html).
+>Mer information finns i [Inställningar för RTE-användargränssnitt och innehållsprinciper](/help/sites-administering/rich-text-editor.md) dokumentets avsnitt [Skapa sidmallar](/help/sites-authoring/templates.md) och [Dokumentation för grundkomponentutvecklare](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/developing.html).
 
 >[!NOTE]
 >
@@ -192,7 +191,6 @@ Detaljerade konfigurationer av RTE-plugin-program finns i [hur du aktiverar och 
 >
 >* `/libs/wcm/foundation/components/text`
 >* `/libs/foundation/components/text`
-
 >
 >Om du vill skapa en egen textkomponent kopierar du ovanstående komponent i stället för att redigera de här komponenterna.
 

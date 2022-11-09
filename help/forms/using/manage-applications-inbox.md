@@ -1,22 +1,21 @@
 ---
 title: Hantera Forms-program och -uppgifter i AEM Inkorg
-seo-title: Hantera Forms-program och -uppgifter i AEM Inkorg
+seo-title: Manage Forms applications and tasks in AEM Inbox
 description: Med AEM Inbox kan du starta Forms-centrerade arbetsflöden genom att skicka program och hantera uppgifter.
-seo-description: Med AEM Inbox kan du starta Forms-centrerade arbetsflöden genom att skicka program och hantera uppgifter.
+seo-description: AEM Inbox allows you to launch Forms-centric workflows through submitting applications and manage tasks.
 uuid: c6c0d8ea-743f-4852-99d1-69fd50a0994e
 contentOwner: vishgupt
 topic-tags: document_services, publish
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: dd11fd83-3df1-4727-8340-8c5426812823
 docset: aem65
-translation-type: tm+mt
-source-git-commit: d324586eb1d4fb809bf87641001b92a1941e6548
+exl-id: 8d17194b-8baf-4878-b3ae-d351a056aebf
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '1115'
-ht-degree: 0%
+source-wordcount: '1089'
+ht-degree: 1%
 
 ---
-
 
 # Hantera Forms-program och -uppgifter i AEM Inkorg{#manage-forms-applications-and-tasks-in-aem-inbox}
 
@@ -24,7 +23,7 @@ Ett av många sätt att starta eller utlösa ett Forms-centrerat arbetsflöde ä
 
 Dessutom konsoliderar AEM Inkorg meddelanden och uppgifter från olika AEM komponenter, inklusive Forms-arbetsflöden. När ett formulärarbetsflöde som innehåller ett tilldelningssteg aktiveras, visas det associerade programmet som en uppgift i den tilldelades inkorg. Om den som tilldelats är en grupp visas uppgiften i Inkorgen för alla gruppmedlemmar tills en enskild person gör anspråk på eller delegerar uppgiften.
 
-Användargränssnittet i Inkorgen innehåller lista- och kalendervyer för att visa uppgifter. Du kan också konfigurera visningsinställningarna. Du kan filtrera uppgifter baserat på olika parametrar. Mer information om visning och filter finns i [Inkorgen](/help/sites-authoring/inbox.md).
+Användargränssnittet i Inkorgen innehåller lista- och kalendervyer för att visa uppgifter. Du kan också konfigurera visningsinställningarna. Du kan filtrera uppgifter baserat på olika parametrar. Mer information om visning och filter finns i [Din inkorg](/help/sites-authoring/inbox.md).
 
 Sammanfattningsvis kan du i Inkorgen skapa ett nytt program och hantera tilldelade uppgifter.
 
@@ -34,17 +33,17 @@ Sammanfattningsvis kan du i Inkorgen skapa ett nytt program och hantera tilldela
 
 ## Skapa program {#create-application}
 
-1. Gå till AEM Inkorg på https://&#39;[server]:[port]&#39;/aem/inbox.
-1. Tryck på **[!UICONTROL Create > Application]** i Inkorgen. Sidan Välj program visas.
-1. Markera ett program och klicka på **[!UICONTROL Create]**. Det adaptiva formulär som är associerat med programmet öppnas. Fyll i informationen i det adaptiva formuläret och tryck på **[!UICONTROL Submit]**. Det startar det associerade arbetsflödet och skapar en uppgift i den tilldelades inkorg.
+1. Gå till AEM Inkorg på https://&#39;[server]:[port]/aem/inbox.
+1. Tryck på i Inkorgen **[!UICONTROL Create > Application]**. Sidan Välj program visas.
+1. Välj ett program och klicka på **[!UICONTROL Create]**. Det adaptiva formulär som är associerat med programmet öppnas. Fyll i informationen i det adaptiva formuläret och tryck **[!UICONTROL Submit]**. Det startar det associerade arbetsflödet och skapar en uppgift i den tilldelades inkorg.
 
 ## Hantera uppgifter {#manage-tasks}
 
 När ett Forms-arbetsflöde utlöses och du är tilldelad eller en del av den tilldelade gruppen, visas en uppgift i Inkorgen. Du kan visa uppgiftsinformation och utföra tillgängliga åtgärder för uppgiften inifrån Inkorgen.
 
-### Göra anspråk på eller delegera uppgifter {#claim-or-delegate-tasks}
+### Anspråk eller delegera uppgifter {#claim-or-delegate-tasks}
 
-Uppgifter som tilldelats en grupp visas i Inkorgen för alla gruppmedlemmar. Alla gruppmedlemmar kan göra anspråk på den uppgiften eller delegera den till en annan gruppmedlem. Så här gör du:
+Uppgifter som tilldelas en grupp visas i Inkorgen för alla gruppmedlemmar. Alla gruppmedlemmar kan göra anspråk på den uppgiften eller delegera den till en annan gruppmedlem. Så här gör du:
 
 1. Tryck för att markera aktivitetens miniatyrbild. Alternativ för att öppna eller delegera uppgiften visas högst upp.
 
@@ -52,11 +51,11 @@ Uppgifter som tilldelats en grupp visas i Inkorgen för alla gruppmedlemmar. All
 
 1. Gör något av följande:
 
-   * Om du vill delegera uppgiften trycker du på **[!UICONTROL Delegate]**. Dialogrutan Delegera objekt öppnas. Välj en användare, lägg till en kommentar om du vill och tryck på **[!UICONTROL OK]**.
+   * Om du vill delegera uppgiften trycker du **[!UICONTROL Delegate]**. Dialogrutan Delegera objekt öppnas. Välj en användare, lägg till en kommentar och tryck på **[!UICONTROL OK]**.
 
    ![delegera](assets/delegate.png)
 
-   * Tryck på **[!UICONTROL Open]** om du vill göra anspråk på uppgiften. Dialogrutan Tilldela till mig själv öppnas. Tryck på **[!UICONTROL Proceed]** för att göra anspråk på aktiviteten. Uppgiften visas med dig som tilldelad i din inkorg.
+   * Tryck för att göra anspråk på uppgiften **[!UICONTROL Open]**. Dialogrutan Tilldela till mig själv öppnas. Tryck **[!UICONTROL Proceed]** för att göra anspråk på uppgiften. Uppgiften visas med dig som tilldelad i din inkorg.
 
    ![krav](assets/claim.png)
 
@@ -65,7 +64,7 @@ Uppgifter som tilldelats en grupp visas i Inkorgen för alla gruppmedlemmar. All
 När du öppnar en uppgift kan du visa uppgiftsinformation och utföra tillgängliga åtgärder. Vilka åtgärder som är tillgängliga för en uppgift definieras i steget Tilldela uppgift i det associerade Forms-arbetsflödet.
 
 1. Tryck för att markera aktivitetens miniatyrbild. Alternativ för att öppna eller delegera den valda uppgiften visas högst upp.
-1. Tryck på **Öppna** om du vill visa aktivitetsinformation och vidta åtgärder. Den detaljerade uppgiftsvyn öppnas. I den här vyn kan du visa aktivitetsinformation och vidta åtgärder för uppgiften.
+1. Tryck **Öppna** för att visa information om uppgifter och vidta åtgärder. Den detaljerade uppgiftsvyn öppnas. I den här vyn kan du visa aktivitetsinformation och vidta åtgärder för uppgiften.
 
    >[!NOTE]
    >
@@ -82,17 +81,17 @@ Den detaljerade uppgiftsvyn innehåller följande avsnitt:
 
 #### Uppgiftsinformation {#task-details}
 
-I avsnittet Uppgiftsinformation visas information om uppgiften. Vilken information som visas beror på konfigurationsinställningarna för [Tilldela aktivitetssteget](/help/sites-developing/workflows-step-ref.md) i arbetsflödet. I exemplet ovan visas beskrivning, status, startdatum och arbetsflöde som används för uppgiften. Det gör det även möjligt att bifoga en fil till uppgiften.
+I avsnittet Uppgiftsinformation visas information om uppgiften. Vilken information som visas beror på konfigurationsinställningarna för [Tilldela aktivitetssteg](/help/sites-developing/workflows-step-ref.md) i arbetsflödet. I exemplet ovan visas beskrivning, status, startdatum och arbetsflöde som används för uppgiften. Det gör det även möjligt att bifoga en fil till uppgiften.
 
 #### Formulär {#form}
 
 Fliken Formulär i området för huvudinnehållet visar eventuella bifogade formulär och fältnivåbilagor.
 
-#### Arbetsflödesinformation {#workflow-details}
+#### Information om arbetsflöde {#workflow-details}
 
 Fliken Arbetsflödesinformation överst visar förloppet för uppgiften genom olika steg i arbetsflödet. Här visas slutförda, aktuella och väntande faser för uppgiften. Stegen för ett arbetsflöde definieras i [Tilldela aktivitetssteg](/help/sites-developing/workflows-step-ref.md) för det associerade arbetsflödet.
 
-Fliken visar också aktivitetshistorik för varje slutförd fas i arbetsflödet. Du kan trycka på **[!UICONTROL View Details]** för att få information om den scenen. Här visas kommentarer, formulär och uppgiftsbilagor, status, start- och slutdatum och så vidare om uppgiften.
+Fliken visar också aktivitetshistorik för varje slutförd fas i arbetsflödet. Du kan trycka **[!UICONTROL View Details]** för att få information om det stadiet. Här visas kommentarer, formulär och uppgiftsbilagor, status, start- och slutdatum och så vidare om uppgiften.
 
 ![arbetsflödesinformation](assets/workflow-details.png)
 
@@ -106,20 +105,20 @@ När du utför en åtgärd fortsätter den i arbetsflödet.
 
 AEM Inkorg visar bara aktiva uppgifter. Slutförda uppgifter visas inte i listan. Du kan emellertid använda inkorgsfilter för att filtrera uppgifter baserat på flera parametrar, t.ex. uppgiftstyp, status, start- och slutdatum. Så här visar du slutförda uppgifter:
 
-1. I AEM Inkorg trycker du på ![toggle-side-panel1](assets/toggle-side-panel1.png) för att öppna filterväljaren.
-1. Tryck på dragspelet **[!UICONTROL Task Status]** och välj **[!UICONTROL Complete]**. Alla slutförda uppgifter visas.
+1. I AEM Inkorg trycker du ![toggle-side-panel1](assets/toggle-side-panel1.png) för att öppna filterväljaren.
+1. Tryck **[!UICONTROL Task Status]** dragspelspanel och markera **[!UICONTROL Complete]**. Alla slutförda uppgifter visas.
 
    ![filter](assets/filter.png)
 
 1. Tryck för att markera en uppgift och klicka på **[!UICONTROL Open]**.
 
-Uppgiften öppnas och visar dokumentet eller det adaptiva formulär som är kopplat till uppgiften. För anpassningsbara formulär visar uppgiften det skrivskyddade anpassningsbara formuläret eller dess PDF-postdokument som konfigurerats på fliken Formulär/Dokument i [arbetsflödessteget Tilldela uppgift](/help/sites-developing/workflows-step-ref.md).
+Uppgiften öppnas och visar dokumentet eller det adaptiva formulär som är kopplat till uppgiften. För anpassningsbara formulär visar uppgiften det skrivskyddade adaptiva formuläret eller dess PDF-postdokument som konfigurerats på fliken Formulär/Dokument i [Tilldela arbetsflödessteg för uppgift](/help/sites-developing/workflows-step-ref.md).
 
 I avsnittet med aktivitetsinformation visas information om till exempel åtgärd, aktivitetsstatus, startdatum och slutdatum.
 
 ![slutförd uppgift](assets/completed-task.png)
 
-På fliken **[!UICONTROL Workflow Details]** visas varje steg i arbetsflödet. Tryck **[!UICONTROL View details]** om du vill se detaljerad information.
+The **[!UICONTROL Workflow Details]** -fliken visar varje steg i arbetsflödet. Tryck **[!UICONTROL View details]** om du vill få detaljerad information.
 
 ![complete-task-workflow](assets/completed-task-workflow.png)
 
@@ -131,7 +130,7 @@ En arbetsflödesmodellägare kan inte visa objekt som är relaterade till AEM ar
 
 1. Använd någon av följande metoder för att lägga till index:
 
-   * Skapa följande noder i CRX DE vid `/oak:index/workflowDataLucene/indexRules/granite:InboxItem/properties` med respektive egenskaper enligt följande tabell:
+   * Skapa följande noder i CRX DE på `/oak:index/workflowDataLucene/indexRules/granite:InboxItem/properties` med respektive egenskaper enligt följande tabell:
 
       | Nod | Egenskap | Typ |
       |---|---|---|
@@ -142,7 +141,7 @@ En arbetsflödesmodellägare kan inte visa objekt som är relaterade till AEM ar
       | allowExplicitSharing | allowExplicitSharing | BOOLEAN |
 
 
-   * Distribuera indexen via ett AEM. Du kan använda ett [AEM Archetype](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype)-projekt för att skapa ett distribuerbart AEM. Använd följande exempelkod för att lägga till index i ett AEM Archetype-projekt:
+   * Distribuera indexen via ett AEM. Du kan använda en [AEM](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype) för att skapa ett AEM som kan distribueras. Använd följande exempelkod för att lägga till index i ett AEM Archetype-projekt:
 
    ```Java
       .property("sharedWith", "sharedWith").type(TYPENAME_STRING).propertyIndex()
@@ -152,8 +151,8 @@ En arbetsflödesmodellägare kan inte visa objekt som är relaterade till AEM ar
       .property("allowExplicitSharing", "allowExplicitSharing").type(TYPENAME_BOOLEAN).propertyIndex()
    ```
 
-1. [Skapa ett egenskapsindex och ange det till true](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/deploying/queries-and-indexing.html#the-property-index).
+1. [Skapa ett egenskapsindex och ange det som true](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/queries-and-indexing.html#the-property-index).
 
-1. När du har konfigurerat index i CRX DE eller distribuerat via ett paket, [indexerar du om databasen](https://helpx.adobe.com/in/experience-manager/kb/HowToCheckLuceneIndex.html#Completelyrebuildtheindex).
+1. När index i CRX DE har konfigurerats eller distribuerats via ett paket [indexera om databasen](https://helpx.adobe.com/in/experience-manager/kb/HowToCheckLuceneIndex.html#Completelyrebuildtheindex).
 
-https://docs.adobe.com/content/help/en/experience-manager-65/deploying/deploying/queries-and-indexing.html
+https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/queries-and-indexing.html

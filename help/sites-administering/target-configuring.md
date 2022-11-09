@@ -10,9 +10,9 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 20c8eb1d-5847-4902-b7d3-4c3286423b46
 exl-id: 0f710685-dc4f-4333-9847-d002b2637d08
-source-git-commit: f64319e88687ba1f53c98d4768492a0b4f4b08b8
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '2210'
+source-wordcount: '2204'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ Följande egenskapsvärden används i den konfiguration av molnet för konfigura
 
 >[!NOTE]
 >
->I AEM 6.3 kan du välja målbiblioteksfilen, [AT.JS](https://docs.adobe.com/content/help/en/target/using/implement-target/client-side/mbox-implement/mbox-download.html), som är ett nytt implementeringsbibliotek för Adobe Target som är utformat för både vanliga webbimplementeringar och ensidiga program.
+>I AEM 6.3 kan du välja målbiblioteksfilen, [AT.JS](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/mbox-download.html), som är ett nytt implementeringsbibliotek för Adobe Target som är utformat för både vanliga webbimplementeringar och ensidiga program.
 >
 >AT.js har flera förbättringar jämfört med mbox.js-biblioteket:
 >
@@ -107,7 +107,7 @@ Klicka **OK**. När du skapar innehåll med Adobe Target kan du [välj rapportk�
 Integrera manuellt med Adobe Target i stället för att använda anmälningsguiden.
 
 >[!NOTE]
-Målbiblioteksfilen, [AT.JS](https://docs.adobe.com/content/help/en/target/using/implement-target/client-side/mbox-implement/mbox-download.html), är ett nytt implementeringsbibliotek för Adobe Target som är utformat för både vanliga webbimplementeringar och ensidiga program. Adobe rekommenderar att du använder AT.js i stället för mbox.js som klientbibliotek.
+Målbiblioteksfilen, [AT.JS](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/mbox-download.html), är ett nytt implementeringsbibliotek för Adobe Target som är utformat för både vanliga webbimplementeringar och ensidiga program. Adobe rekommenderar att du använder AT.js i stället för mbox.js som klientbibliotek.
 AT.js har flera förbättringar jämfört med mbox.js-biblioteket:
 * Förbättrade sidladdningstider för webbimplementeringar
 * Förbättrad säkerhet
@@ -209,7 +209,7 @@ Ditt ramverk skapas. Om du vill replikera ramverket till publiceringsinstansen a
 
 ### Associera aktiviteter med målmolnkonfigurationen  {#associating-activities-with-the-target-cloud-configuration}
 
-Associera dina [AEM](/help/sites-authoring/activitylib.md) med din Target-molnkonfiguration så att du kan spegla aktiviteterna i [Adobe Target](https://docs.adobe.com/content/help/en/target/using/experiences/offers/manage-content.html).
+Associera dina [AEM](/help/sites-authoring/activitylib.md) med din Target-molnkonfiguration så att du kan spegla aktiviteterna i [Adobe Target](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html).
 
 >[!NOTE]
 Vilka typer av aktiviteter som är tillgängliga bestäms av följande:

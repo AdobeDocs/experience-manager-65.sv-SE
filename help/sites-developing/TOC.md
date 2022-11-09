@@ -8,10 +8,10 @@ breadcrumb-title: Utvecklingshandbok
 user-guide-description: Den här guiden beskriver hur du skapar AEM.
 feature: Developing
 role: Developer
-source-git-commit: f29612ee633d2a62144b770f3c225fc82b9174f8
+source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1297'
+ht-degree: 5%
 
 ---
 
@@ -70,7 +70,7 @@ ht-degree: 0%
    + [Developing the Bulk Editor](dev-bulk-editor.md)
    + [Utveckla rapporter](dev-reports.md)
 + Komponenter{#components}
-   + [Kärnkomponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)
+   + [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
    + [Formatsystem](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html)
    + [Komponenter - översikt](components.md)
    + [AEM - Grunderna](components-basics.md)

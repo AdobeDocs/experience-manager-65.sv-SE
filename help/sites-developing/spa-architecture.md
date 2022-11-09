@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 9584392a-d8a3-45a4-9cdf-fd211c8e6091
 docset: aem65
 exl-id: c1429889-e2ed-4e2f-a45f-33f8a6a52745
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
 workflow-type: tm+mt
-source-wordcount: '2074'
+source-wordcount: '2072'
 ht-degree: 0%
 
 ---
@@ -67,7 +67,7 @@ Alla statiska routningar fungerar mot [bärbarhetsprincip](/help/sites-developin
 
 ## AEM Project Archetype {#aem-project-archetype}
 
-Alla AEM ska utnyttja [AEM Project Archetype](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html), som stöder SPA projekt med React eller Angular och använder SPA SDK.
+Alla AEM ska utnyttja [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html), som stöder SPA projekt med React eller Angular och använder SPA SDK.
 
 ## SPA designmodeller {#spa-design-models}
 

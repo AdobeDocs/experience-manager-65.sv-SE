@@ -2,27 +2,26 @@
 title: AEM Brackets Extension
 seo-title: AEM Brackets Extension
 description: AEM Brackets Extension
-seo-description: 'null'
+seo-description: null
 uuid: 2f0dfa42-eb34-44ae-90eb-b5f321c03b79
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: development-tools
 content-type: reference
 discoiquuid: 8231a30a-dcb7-4156-bb45-c5a23e5b56ef
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 829d8256-b415-4a44-a353-455ac16950f3
+source-git-commit: 43a30b5ba76ea470cc50a962d4f04b4a1508964d
 workflow-type: tm+mt
-source-wordcount: '931'
-ht-degree: 1%
+source-wordcount: '925'
+ht-degree: 0%
 
 ---
-
 
 # AEM Brackets Extension{#aem-brackets-extension}
 
 ## Översikt {#overview}
 
-AEM Brackets Extension ger ett smidigt arbetsflöde för att redigera AEM komponenter och klientbibliotek och utnyttjar kraften i [Brackets](https://brackets.io/)-kodredigeraren som ger åtkomst till Photoshop-filer och -lager inifrån kodredigeraren. Den enkla synkronisering som tillägget ger (ingen Maven eller filvalv krävs) ökar utvecklarens effektivitet och hjälper även gränssnittsutvecklare med begränsade AEM att delta i projekt. Det här tillägget har också stöd för [HTML-mallspråket (HTL)](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html), vilket gör JSP-komponentutvecklingen enklare och säkrare.
+Tillägget AEM Brackets ger ett smidigt arbetsflöde för att redigera AEM komponenter och klientbibliotek och utnyttjar kraften i [Hakparenteser](https://brackets.io/) kodredigeraren som ger åtkomst från kodredigeraren till Photoshop-filer och -lager. Den enkla synkronisering som tillägget ger (ingen Maven eller filvalv krävs) ökar utvecklarens effektivitet och hjälper även gränssnittsutvecklare med begränsade AEM att delta i projekt. Det här tillägget har även stöd för [HTML-mallspråk (HTL)](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html), vilket minskar komplexiteten i JSP och gör komponentutvecklingen enklare och säkrare.
 
 ![chlimage_1-53](assets/chlimage_1-53a.png)
 
@@ -37,8 +36,8 @@ De viktigaste funktionerna i AEM Brackets Extension är:
 
 Brackets innehåller dessutom många användbara funktioner för AEM teckensnittsutvecklare:
 
-* Stöd för Photoshop-filer för att extrahera information från PSD-filer som lager, mått, färger, teckensnitt, texter m.m.
-* Kodtips från PSD-filen för att enkelt återanvända den extraherade informationen i koden.
+* Photoshop filstöd för att extrahera information från en PSD-fil, som lager, mått, färger, teckensnitt, texter m.m.
+* Kodtips från PSD för att enkelt återanvända den extraherade informationen i koden.
 * Stöd för CSS-preprocessorer, som LESS och SCSS.
 * Och hundratals tillägg som täcker mer specifika behov.
 
@@ -48,18 +47,18 @@ Brackets innehåller dessutom många användbara funktioner för AEM teckensnitt
 
 AEM Brackets Extension stöder Brackets version 1.0 eller senare.
 
-Hämta den senaste Brackets-versionen från [brackets.io](https://brackets.io/).
+Hämta den senaste Brackets-versionen från [hakparenteser.io](https://brackets.io/).
 
 ### Tillägget {#the-extension}
 
 Så här installerar du tillägget:
 
-1. Öppna hakparenteser. I menyn **Arkiv** väljer du **Extension Manager...**
-1. Ange **AEM** i sökfältet och sök efter **AEM Brackets Extension**.
+1. Öppna hakparenteser. På menyn **Fil**, markera **Extension Manager...**
+1. Retur **AEM** i sökfältet och leta efter **AEM Brackets Extension**.
 
    ![chlimage_1-54](assets/chlimage_1-54a.png)
 
-1. Klicka på **Installera**.
+1. Klicka **Installera**.
 1. Stäng dialogrutan och Extension Manager när installationen är klar.
 
 ## Komma igång {#getting-started}
@@ -70,21 +69,21 @@ När tillägget har installerats kan du börja utveckla AEM komponenter genom at
 
 Projektet måste innehålla minst följande:
 
-1. en `jcr_root`-mapp (t.ex. `myproject/jcr_root`)
+1. a `jcr_root` mapp (t.ex. `myproject/jcr_root`)
 
-1. en `filter.xml`-fil (t.ex. `myproject/META-INF/vault/filter.xml`); Mer information om strukturen för `filter.xml`-filen finns i [filterdefinitionen för arbetsyta](https://jackrabbit.apache.org/filevault/filter.html).
+1. a `filter.xml` fil (t.ex. `myproject/META-INF/vault/filter.xml`). för mer information om strukturen i `filter.xml` se filen [Filterdefinition för arbetsyta](https://jackrabbit.apache.org/filevault/filter.html).
 
-Välj **Öppna mapp..** på menyn **Arkiv** och välj antingen mappen `jcr_root` eller den överordnade projektmappen.
+I hakparenteser **Fil** meny, välja **Öppna mapp...** och välj `jcr_root` eller den överordnade projektmappen.
 
 >[!NOTE]
 >
->Om du inte har ett eget projekt med ett innehållspaket kan du prova [HTL TodoMVC-exemplet](https://github.com/Adobe-Marketing-Cloud/aem-sightly-sample-todomvc). Klicka på **Hämta ZIP** på GitHub, extrahera filerna lokalt och öppna mappen `jcr_root` i Brackets enligt instruktionerna ovan. Följ sedan stegen nedan för att konfigurera **projektinställningarna** och överför slutligen hela paketet till din AEM-utvecklingsinstans genom att göra ett **Exportera innehållspaket** enligt instruktionerna längre ned i avsnittet Fullständig synkronisering av innehållspaket.
+>Om du inte har ett eget projekt med ett innehållspaket kan du testa [HTL TodoMVC-exempel](https://github.com/Adobe-Marketing-Cloud/aem-sightly-sample-todomvc). På GitHub klickar du på **Ladda ned ZIP**, extrahera filerna lokalt och enligt instruktionerna ovan öppnar du `jcr_root` i Brackets. Följ sedan stegen nedan för att konfigurera **Projektinställningar** och slutligen överföra hela paketet till din AEM genom att göra en **Exportera innehållspaket** enligt instruktionerna längre ned i avsnittet Fullständig synkronisering av innehållspaket.
 >
->Efter dessa steg bör du kunna komma åt URL:en `/content/todo.html` för din AEM-utvecklingsinstans och du kan börja göra ändringar i koden i hakparenteser och se hur ändringarna synkroniserades direkt till AEM-servern när du har gjort en uppdatering i webbläsaren.
+>Efter dessa steg bör du kunna komma åt `/content/todo.html` URL-adressen till din AEM-utvecklingsinstans och du kan börja göra ändringar i koden i hakparenteser och se hur ändringarna synkroniserades direkt till AEM-servern när du har gjort en uppdatering i webbläsaren.
 
 ### Projektinställningar {#project-settings}
 
-Om du vill synkronisera ditt innehåll till och från en AEM utvecklingsinstans måste du definiera dina projektinställningar. Detta kan du göra genom att gå till menyn **AEM** och välja **Projektinställningar..**
+Om du vill synkronisera ditt innehåll till och från en AEM utvecklingsinstans måste du definiera dina projektinställningar. Detta kan du göra genom att gå till **AEM** meny och välja **Projektinställningar...**
 
 ![chlimage_1-55](assets/chlimage_1-55a.png)
 
@@ -105,17 +104,17 @@ Detta synkroniserar endast ändringar från hakparenteser till AEM, men inte tv�
 
 ### Manuell dubbelriktad synkronisering {#manual-bidirectional-synchronization}
 
-I projektutforskaren öppnar du snabbmenyn genom att högerklicka på en fil eller mapp och alternativen **Exportera till server** eller **Importera från server** kan nås.
+Öppna snabbmenyn i projektutforskaren genom att högerklicka på en fil eller mapp och på **Exportera till server** eller **Importera från server** finns.
 
 ![chlimage_1-56](assets/chlimage_1-56a.png)
 
 >[!NOTE]
 >
->Om den markerade posten ligger utanför mappen `jcr_root` inaktiveras sammanhangsberoende menyposter för **Exportera till server** och **Importera från server**.
+>Om den markerade posten ligger utanför `jcr_root` mapp, **Exportera till server** och **Importera från server** sammanhangsbaserade menyposter är inaktiverade.
 
 ### Fullständig synkronisering av innehållspaket {#full-content-package-synchronization}
 
-På menyn **AEM** kan alternativen **Exportera innehållspaket** eller **Importera innehållspaket** synkronisera hela projektet med servern.
+I **AEM** -menyn, **Exportera innehållspaket** eller **Importera innehållspaket** kan du synkronisera hela projektet med servern.
 
 ![chlimage_1-57](assets/chlimage_1-57a.png)
 
@@ -134,9 +133,9 @@ Om du klickar på meddelandeikonen öppnas dialogrutan Synkroniseringsstatus med
 
 >[!NOTE]
 >
->Endast innehåll som markerats som inkluderat av filtreringsreglerna från `filter.xml` kommer att synkroniseras, oavsett vilken synkroniseringsmetod som används.
+>Endast innehåll som markerats som inkluderat av filtreringsreglerna från `filter.xml` synkroniseras, oavsett vilken synkroniseringsmetod som används.
 >
->Dessutom stöds `.vltignore`-filer för att utesluta innehåll från synkronisering till och från databasen.
+>Dessutom `.vltignore` filer kan användas för att utesluta innehåll från synkronisering till och från databasen.
 
 ## Redigera HTML-kod {#editing-htl-code}
 
@@ -149,16 +148,16 @@ AEM Brackets Extension innehåller även vissa funktioner för automatisk komple
 
 ### Automatisk komplettering av uttryck {#expression-auto-completion}
 
-Inom ett uttryck `${}` slutförs vanliga variabelnamn automatiskt.
+Inom ett uttryck `${}`, vanliga variabelnamn slutförs automatiskt.
 
 ## Mer information {#more-information}
 
-AEM Brackets Extension är ett öppen källkodsprojekt som hanteras av organisationen [Adobe Marketing Cloud](https://github.com/Adobe-Marketing-Cloud) under Apache License, version 2.0:
+AEM Brackets Extension är ett öppen källkodsprojekt som hanteras av GitHub av [Adobe Marketing Cloud](https://github.com/Adobe-Marketing-Cloud) organisation, under Apache License, version 2.0:
 
 * Koddatabas: [https://github.com/Adobe-Marketing-Cloud/aem-sightly-brackets-extension](https://github.com/Adobe-Marketing-Cloud/aem-sightly-brackets-extension)
 * Apache License, version 2.0: [https://www.apache.org/licenses/LICENSE-2.0.html](https://www.apache.org/licenses/LICENSE-2.0.html)
 
-Kodredigeraren Brackets är även ett öppen källkodsprojekt som hanteras av [Adobe Systems Incorporated](https://github.com/adobe)-organisationen på GitHub:
+Kodredigeraren Brackets är även ett öppen källkodsprojekt som hanteras av GitHub av [Adobe Systems Incorporated](https://github.com/adobe) organisation:
 
 * Koddatabas: [https://github.com/adobe/brackets](https://github.com/adobe/brackets)
 

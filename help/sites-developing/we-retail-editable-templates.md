@@ -1,22 +1,21 @@
 ---
 title: Provar Editable Templates in We.Retail
-seo-title: Provar Editable Templates in We.Retail
+seo-title: Trying out Editable Templates in We.Retail
 description: Provar Editable Templates in We.Retail
-seo-description: 'null'
+seo-description: null
 uuid: 0d4b97cb-efcc-4312-a783-eae3ecd6f889
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 discoiquuid: 3cc8ac23-98ff-449f-bd76-1203c7cbbed7
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: efebe66d-3d30-4033-9c4c-ae347e134f2f
+source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
 workflow-type: tm+mt
-source-wordcount: '490'
-ht-degree: 10%
+source-wordcount: '481'
+ht-degree: 9%
 
 ---
-
 
 # Provar Editable Templates in We.Retail{#trying-out-editable-templates-in-we-retail}
 
@@ -31,7 +30,7 @@ Alla sidor i We.Retail baseras på redigerbara mallar, vilket gör att icke-utve
    http://localhost:4502/editor.html/content/we-retail/language-masters/en/equipment.html
 
 1. Observera att lägesväljaren inte längre har något designläge. Alla sidor för webben.Detaljhandel baseras på redigerbara mallar och för att ändra designen av redigerbara mallar måste de redigeras i mallredigeraren.
-1. Välj **Redigera mall** på menyn **Sidinformation**.
+1. Från **Sidinformation** menyval **Redigera mall**.
 1. Nu redigerar du Hero Page-mallen.
 
    Med hjälp av sidans strukturläge kan du ändra mallens struktur. Detta inkluderar till exempel de komponenter som är tillåtna i layoutbehållaren.
@@ -68,13 +67,12 @@ Alla sidor i We.Retail baseras på redigerbara mallar, vilket gör att icke-utve
 
    ![chlimage_1-141](assets/chlimage_1-141.png)
 
-1. I mallredigeraren kan du använda lägesväljaren för att ändra till läget **Inledande innehåll** för att definiera vilket innehåll som krävs på sidan.
+1. I mallredigeraren kan du använda lägesväljaren för att ändra till **Ursprungligt innehåll** läge för att definiera vilket innehåll som krävs på sidan.
 
-   **Layoutläget** kan användas som det är på en normal sida för att definiera mallens layout.
+   **Layout** kan användas som på en normal sida för att definiera mallens layout.
 
 ## Mer information {#more-information}
 
-Mer information finns i redigeringsdokumentet [Creating Page Templates](/help/sites-authoring/templates.md) eller i utvecklardokumentet Page [Templates - Editable](/help/sites-developing/page-templates-editable.md) för fullständig teknisk information om redigerbara mallar.
+Mer information finns i dokumentet [Skapa sidmallar](/help/sites-authoring/templates.md) eller utvecklardokumentsidan [Mallar - redigerbara](/help/sites-developing/page-templates-editable.md) för fullständig teknisk information om redigerbara mallar.
 
-Du kanske också vill undersöka [kärnkomponenter](/help/sites-developing/we-retail-core-components.md). En teknisk översikt finns i redigeringsdokumentet [Core Components](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html).[](https://helpx.adobe.com/experience-manager/core-components/using/developing.html)
-
+Du kanske också vill undersöka [kärnkomponenter](/help/sites-developing/we-retail-core-components.md). Se redigeringsdokumentet [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) för en översikt över de viktigaste komponenternas och utvecklardokumentets funktioner [Utveckla kärnkomponenter](https://helpx.adobe.com/experience-manager/core-components/using/developing.html) för en teknisk översikt.
