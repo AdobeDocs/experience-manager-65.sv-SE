@@ -1,22 +1,21 @@
 ---
 title: AEM Sites - GDPR-beredskap
-seo-title: AEM Sites - GDPR-beredskap
+seo-title: AEM Sites - GDPR Readiness
 description: Läs mer om GDPR-beredskap för AEM Sites.
-seo-description: Läs mer om GDPR-beredskap för AEM Sites.
+seo-description: Learn about the details of GDPR Readiness for AEM Sites.
 uuid: 00d1fdce-ef9a-4902-a7a5-7225728e8ffc
-contentOwner: aheimoz
+contentOwner: AEM Docs
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 discoiquuid: 772f6188-5e0b-4e66-b94a-65a0cc267ed3
-translation-type: tm+mt
-source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+exl-id: 8c1ea483-7319-4e5c-be4c-d43a2b67d316
+source-git-commit: 53c39e4aa250b18d4fae0327b313b18901677f2c
 workflow-type: tm+mt
-source-wordcount: '850'
+source-wordcount: '836'
 ht-degree: 0%
 
 ---
-
 
 # AEM Sites - GDPR-beredskap{#aem-sites-gdpr-readiness}
 
@@ -28,37 +27,37 @@ Europeiska unionens allmänna dataskyddsförordning om integritetsskydd får ver
 
 AEM Sites är redo att hjälpa kunderna med deras GDPR-efterlevnadsskyldigheter. På den här sidan får kunderna hjälp med hur de hanterar GDPR-förfrågningar i AEM Sites. Den beskriver platsen för privata data som lagras och hur du tar bort dem manuellt eller med kod.
 
-Mer information finns på sidan [GDPR på Adobe Privacy Center](https://www.adobe.com/privacy/general-data-protection-regulation.html).
+Mer information finns i [GDPR-sidan på Adobe Privacy Center](https://www.adobe.com/privacy/general-data-protection-regulation.html).
 
 >[!NOTE]
 >
->Mer information finns i [AEM GDPR-beredskap](/help/managing/data-protection-and-privacy.md).
+>Se [AEM GDPR-beredskap](/help/managing/data-protection-and-privacy.md) för mer information.
 
 ## Författarserver {#author-server}
 
-Användarkonton och UGC-innehåll på författarservern beskrivs i [Platform GDPR-dokumentationen](/help/managing/data-protection-and-privacy.md).
+Användarkonton och UGC-innehåll på författarservern beskrivs i [Plattforms-GDPR-dokumentation](/help/managing/data-protection-and-privacy.md).
 
-## Publiceringsserver {#publish-server}
+## Publish Server {#publish-server}
 
-Användarkonton som används för att autentisera besökare på webbplatsen och UGC-innehåll på publiceringsservern beskrivs i [GDPR-dokumentationen för plattformen](/help/managing/data-protection-and-privacy.md).
+Användarkonton som används för att autentisera besökare på webbplatsen, och UGC-innehåll på publiceringsservern omfattas av [Plattforms-GDPR-dokumentation](/help/managing/data-protection-and-privacy.md).
 
 Som standard lagrar inte AEM Sites-komponenter formulärdata som anges av besökare på publiceringsservern. Vi rekommenderar att du vidarebefordrar data till ett tredjepartssystem eller Adobe Campaign för vidare behandling.
 
-## Opt-in/Opt-Out {#opt-in-opt-out}
+## Opt-In/Opt-Out {#opt-in-opt-out}
 
-AEM har en [anmälningstjänst för cookies](/help/sites-developing/cookie-optout.md) som kan användas för att hantera avanmälan/avanmälan för användare.
+AEM har en [anmälningstjänst för cookie](/help/sites-developing/cookie-optout.md) som kan användas för att hantera anmälan/avanmälan för användare.
 
 ## Förbättrade insikter från Analytics {#enhanced-insights-by-analytics}
 
 AEM Sites innehåller en valfri integrering med Enhanced Insights by Analytics som använder funktioner i Adobe Analytics On-Demand Service.
 
-Mer information om hur du hanterar förfrågningar från registrerade GDPR-data relaterade till Adobe Analytics finns i [Adobe Analytics och GDPR](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/an-gdpr-overview.html).
+Mer information om hur man hanterar förfrågningar från registrerade GDPR gällande Adobe Analytics finns på [Adobe Analytics och GDPR](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/an-gdpr-overview.html).
 
-## Förbättrad personalisering med målet {#enhanced-personalization-by-target}
+## Förbättrad personalisering med Target {#enhanced-personalization-by-target}
 
 AEM Sites innehåller en valfri integrering med Förbättrad personalisering via Target som använder funktioner i Adobe Target On-Demand Service.
 
-Mer information om hur du hanterar förfrågningar från registrerade GDPR-data relaterade till Adobe Target finns i [Adobe Target - Privacy and General Data Protection Regulation](https://docs.adobe.com/content/help/en/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html).
+Mer information om hur man hanterar förfrågningar från registrerade GDPR gällande Adobe Target finns på [Adobe Target - Sekretess och allmänna dataskyddsförordningen](https://docs.adobe.com/content/help/en/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html).
 
 ## ContextHub {#contexthub}
 
@@ -72,7 +71,7 @@ Som standard lagras dessa besökardata inte i AEM. AEM skickar regler till datal
 >
 >Adobe CQ 5.5 och tidigare är nu EOL och omfattas inte av denna dokumentation.
 
-### Implementera Opt-in/Opt-Out {#implementing-opt-in-opt-out}
+### Implementera anmälan/avanmälan {#implementing-opt-in-opt-out}
 
 Webbplatsägaren måste implementera en avanmälningskomponent enligt följande riktlinjer.
 
@@ -226,4 +225,3 @@ Så här rensar du ContextHub-beständighet:
    * ContextHub.Utils.Persistence.Modes.SESSION
    * ContextHub.Utils.Persistence.Modes.COOKIE
    * ContextHub.Utils.Persistence.Modes.WINDOW
-

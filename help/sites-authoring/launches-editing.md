@@ -1,24 +1,23 @@
 ---
 title: Redigera Launches
-seo-title: Redigera Launches
-description: 'När du har skapat en startsida för sidan (eller en uppsättning sidor) kan du redigera innehållet i startkopian av sidorna. '
-seo-description: 'När du har skapat en startsida för sidan (eller en uppsättning sidor) kan du redigera innehållet i startkopian av sidorna. '
+seo-title: Editing Launches
+description: När du har skapat en startsida för sidan (eller en uppsättning sidor) kan du redigera innehållet i startkopian av sidorna.
+seo-description: After creating a launch for your page (or set of pages) you can edit the content in the launch copy of the page(s).
 uuid: 1f2c2e53-73a3-4bd7-b2c7-425491bc0118
-contentOwner: Alison Heimoz
+contentOwner: AEM Docs
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: site-features
 discoiquuid: 30aa3177-bcf4-4260-8f64-e73bc907942a
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
-translation-type: tm+mt
-source-git-commit: 6f1f4fbaf9ee4b5ab073a27a58cb040c76230ebd
+exl-id: 2d441820-b394-47c8-b4ca-a8aede590937
+source-git-commit: 53c39e4aa250b18d4fae0327b313b18901677f2c
 workflow-type: tm+mt
-source-wordcount: '551'
+source-wordcount: '525'
 ht-degree: 18%
 
 ---
-
 
 # Redigera Launches{#editing-launches}
 
@@ -26,7 +25,7 @@ ht-degree: 18%
 
 När en startsida har skapats för en sida (eller en uppsättning sidor) kan du redigera innehållet i startkopian av sidorna.
 
-1. Gå till [Starta från Referenser (Sites-konsolen)](/help/sites-authoring/launches.md#launches-in-references-sites-console) för att visa tillgängliga åtgärder.
+1. Öppna [Starta från referenser (platskonsolen)](/help/sites-authoring/launches.md#launches-in-references-sites-console) för att visa tillgängliga åtgärder.
 1. Välj **Gå till sidan** för att öppna sidan för redigering.
 
 >[!NOTE]
@@ -36,12 +35,12 @@ När en startsida har skapats för en sida (eller en uppsättning sidor) kan du 
 >* Varning: Den här sidan är startkällan. Det är inte tillåtet att flytta sidan.
 
 
-### Redigering av startsidor som omfattas av en Live-kopia {#editing-launch-pages-subject-to-a-live-copy}
+### Redigera startsidor som är beroende av en Live-kopia {#editing-launch-pages-subject-to-a-live-copy}
 
-Om din start baseras på en [live-kopia](/help/sites-administering/msm.md) kommer du att:
+Om din lansering baseras på en [live copy](/help/sites-administering/msm.md) då kommer du att:
 
 * se låssymboler (små hänglås) när du redigerar en komponent (innehåll och/eller egenskaper).
-* se fliken **Live Copy** i **Sidegenskaper**
+* se **Live Copy** tabba in **Sidegenskaper**
 
 En live-kopia används för att synkronisera innehåll *från* källgrenen *till* startgrenen (för att hålla startsidan uppdaterad med ändringarna i källan).
 
@@ -50,21 +49,21 @@ Du kan göra ändringar på samma sätt som du kan redigera en vanlig Live-kopia
 * Om du klickar på ett stängt hänglås bryts synkroniseringen och du kan göra nya uppdateringar av innehållet när du startar programmet. När du har låst upp (öppet hänglås) skrivs inte ändringarna över av ändringar som gjorts på samma plats i källgrenen.
 * **Gör uppehåll i** (och **återuppta**) arv för en viss sida.
 
-Mer information finns i [Ändra Live Copy-innehåll](/help/sites-administering/msm-livecopy.md#changing-live-copy-content).
+Se [Ändra innehåll i Live Copy](/help/sites-administering/msm-livecopy.md#changing-live-copy-content) för ytterligare information.
 
 ## Jämföra en startsida med dess källsida {#comparing-a-launch-page-to-its-source-page}
 
 Om du vill spåra de ändringar du har gjort kan du visa startsidan i **Referenser** och jämföra startsidan med dess källsida:
 
-1. I konsolen **Platser**, [navigerar du till startsidan och väljer den](/help/sites-authoring/basic-handling.md#viewingandselectingyourresources).
-1. Öppna panelen **[Referenser](/help/sites-authoring/basic-handling.md#references)** och välj **Starta**.
+1. I **Webbplatser** konsol, [navigera till startsidan och markera den](/help/sites-authoring/basic-handling.md#viewingandselectingyourresources).
+1. Öppna **[Referenser](/help/sites-authoring/basic-handling.md#references)** panel och markera **Startar**.
 1. Välj en specifik start och sedan **Jämför med källa**:
 
    ![screen-shot_2019-03-05at121952](assets/screen-shot_2019-03-05at121952.png)
 
 1. De två sidorna (start och källa) öppnas sida vid sida.
 
-   Mer information om hur du använder den här funktionen finns i [Sidskillnad](/help/sites-authoring/page-diff.md).
+   Mer information om hur du använder funktionen finns i [Sidskillnader](/help/sites-authoring/page-diff.md).
 
 ## Ändra använda källsidor {#changing-the-source-pages-used}
 
@@ -72,10 +71,10 @@ Du kan när som helst lägga till eller ta bort sidor till/från intervallet med
 
 1. Öppna och välj programstart från:
 
-   * [Startar konsolen](/help/sites-authoring/launches.md#the-launches-console):
+   * den [Startar konsolen](/help/sites-authoring/launches.md#the-launches-console):
 
       * Välj **Redigera**.
-   * [Referenser (Sites console)](/help/sites-authoring/launches.md#launches-in-references-sites-console) för att visa tillgängliga åtgärder:
+   * [Referenser (platskonsolen)](/help/sites-authoring/launches.md#launches-in-references-sites-console) för att visa tillgängliga åtgärder:
 
       * Välj **Redigera start**.
 
@@ -93,10 +92,10 @@ Du kan när som helst redigera egenskaperna för en start:
 
 1. Öppna och välj programstart från:
 
-   * [Startar konsolen](/help/sites-authoring/launches.md#the-launches-console):
+   * den [Startar konsolen](/help/sites-authoring/launches.md#the-launches-console):
 
       * Välj **Egenskaper**.
-   * [Referenser (Sites console)](/help/sites-authoring/launches.md#launches-in-references-sites-console) för att visa tillgängliga åtgärder:
+   * [Referenser (platskonsolen)](/help/sites-authoring/launches.md#launches-in-references-sites-console) för att visa tillgängliga åtgärder:
 
       * Välj **Redigera egenskaper**.
 
@@ -108,6 +107,6 @@ Du kan när som helst redigera egenskaperna för en start:
 
 ## Identifiera startstatus för en sida {#discovering-the-launch-status-of-a-page}
 
-Statusen visas när du väljer en specifik start på fliken Inställningar (se [Startar i Referenser (platskonsolen)](/help/sites-authoring/launches.md#launches-in-references-sites-console)).
+Statusen visas när du väljer en viss start på fliken Inställningar (se [Startar i referenser (platskonsolen)](/help/sites-authoring/launches.md#launches-in-references-sites-console)).
 
 ![screen-shot_2019-03-05at121901](assets/screen-shot_2019-03-05at121901.png)

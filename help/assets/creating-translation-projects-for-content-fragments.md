@@ -1,20 +1,20 @@
 ---
 title: Skapa översättningsprojekt för innehållsfragment
-seo-title: Skapa översättningsprojekt för innehållsfragment
+seo-title: Creating Translation Projects for Content Fragments
 description: Lär dig hur du översätter innehållsfragment.
-seo-description: Lär dig hur du översätter innehållsfragment.
+seo-description: Learn how to translate content fragments.
 uuid: 23176e70-4003-453c-af25-6499a5ed3f6d
-contentOwner: heimoz
+contentOwner: AEM Docs
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: managing-assets
 content-type: reference
 discoiquuid: d2decc31-a04b-4a8e-bb19-65f21cf7107e
-feature: Innehållsfragment
+feature: Content Fragments
 role: User, Admin
 exl-id: 19bb58da-8220-404e-bddb-34be94a3a7d7
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 53c39e4aa250b18d4fae0327b313b18901677f2c
 workflow-type: tm+mt
-source-wordcount: '931'
+source-wordcount: '917'
 ht-degree: 3%
 
 ---
@@ -39,16 +39,16 @@ När källinnehållets fragment uppdateras eller ändras kräver motsvarande spr
 
 Arbetsflödet Skapa och översätt innehåller följande alternativ. Procedurstegen som är kopplade till varje alternativ liknar dem som är kopplade till motsvarande alternativ för tillgångar.
 
-* Skapa endast struktur: Anvisningar om procedurer finns i [Skapa struktur endast för resurser](translation-projects.md#create-structure-only).
-* Skapa ett nytt översättningsprojekt: Anvisningar om procedurer finns i [Skapa ett nytt översättningsprojekt för resurser](translation-projects.md#create-a-new-translation-project).
-* Lägg till i befintligt översättningsprojekt: Om du vill veta mer om procedurer läser du i [Lägg till i det befintliga översättningsprojektet för resurser](translation-projects.md#add-to-existing-translation-project).
+* Skapa endast struktur: Information om steg för procedurer finns i [Skapa struktur endast för resurser](translation-projects.md#create-structure-only).
+* Skapa ett nytt översättningsprojekt: Information om steg för procedurer finns i [Skapa ett nytt översättningsprojekt för resurser](translation-projects.md#create-a-new-translation-project).
+* Lägg till i befintligt översättningsprojekt: Information om steg för procedurer finns i [Lägg till i befintligt översättningsprojekt för resurser](translation-projects.md#add-to-existing-translation-project).
 
 ## Uppdatera arbetsflödet för språkkopior {#update-language-copies-workflow}
 
 Arbetsflödet för att uppdatera språkkopior innehåller följande alternativ. Procedurstegen som är kopplade till varje alternativ liknar dem som är kopplade till motsvarande alternativ för tillgångar.
 
-* Skapa ett nytt översättningsprojekt: Anvisningar om procedurer finns i [Skapa ett nytt översättningsprojekt för resurser](translation-projects.md#create-a-new-translation-project) (uppdatera arbetsflöde).
-* Lägg till i befintligt översättningsprojekt: Anvisningar om procedurer finns i [Lägg till i befintligt översättningsprojekt för resurser](translation-projects.md#add-to-existing-translation-project) (uppdateringsarbetsflöde).
+* Skapa ett nytt översättningsprojekt: Information om steg för procedurer finns i [Skapa ett nytt översättningsprojekt för resurser](translation-projects.md#create-a-new-translation-project) (uppdateringsarbetsflöde).
+* Lägg till i befintligt översättningsprojekt: Information om steg för procedurer finns i [Lägg till i befintligt översättningsprojekt för resurser](translation-projects.md#add-to-existing-translation-project) (uppdateringsarbetsflöde).
 
 Du kan också skapa tillfälliga språkkopior för fragment som liknar det sätt som du skapar tillfälliga kopior för resurser. Mer information finns i [Skapa tillfälliga språkkopior för resurser](translation-projects.md#creating-temporary-language-copies).
 
@@ -61,19 +61,19 @@ Om innehållsfragmentet innehåller en samling, översätts resurserna i samling
 Om du vill kunna översätta innehållsfragment som innehåller blandade media måste du först redigera standardöversättningsramverket för att aktivera översättning av textbundna resurser och samlingar som är kopplade till innehållsfragment.
 
 1. Klicka/tryck på AEM logotyp och navigera till **[!UICONTROL Tools > Deployment > Cloud Services]**.
-1. Gå till **[!UICONTROL Translation Integration]** under **[!UICONTROL Adobe Marketing Cloud]** och klicka/tryck på **[!UICONTROL Show Configurations]**.
+1. Sök **[!UICONTROL Translation Integration]** under **[!UICONTROL Adobe Marketing Cloud]** och klicka/peka **[!UICONTROL Show Configurations]**.
 
    ![chlimage_1-444](assets/chlimage_1-444.png)
 
-1. Öppna sidan **[!UICONTROL Default configuration]** genom att klicka/trycka på **[!UICONTROL Default configuration (Translation Integration configuration)]** i listan över tillgängliga konfigurationer.
+1. Klicka/tryck i listan över tillgängliga konfigurationer **[!UICONTROL Default configuration (Translation Integration configuration)]** för att öppna **[!UICONTROL Default configuration]** sida.
 
    ![chlimage_1-445](assets/chlimage_1-445.png)
 
-1. Klicka på **[!UICONTROL Edit]** i verktygsfältet för att visa dialogrutan **[!UICONTROL Translation Config]**.
+1. Klicka **[!UICONTROL Edit]** i verktygsfältet för att visa **[!UICONTROL Translation Config]** -dialogrutan.
 
    ![chlimage_1-446](assets/chlimage_1-446.png)
 
-1. Navigera till fliken **[!UICONTROL Assets]** och välj **[!UICONTROL Inline Media Assets and Associated Collections]** i listan **[!UICONTROL Translate Content Fragment Assets]**. Klicka/tryck på **[!UICONTROL OK]** för att spara ändringarna.
+1. Navigera till **[!UICONTROL Assets]** och välja **[!UICONTROL Inline Media Assets and Associated Collections]** från **[!UICONTROL Translate Content Fragment Assets]** lista. Klicka/tryck på **[!UICONTROL OK]** för att spara ändringarna.
 
    ![chlimage_1-447](assets/chlimage_1-447.png)
 
@@ -81,7 +81,7 @@ Om du vill kunna översätta innehållsfragment som innehåller blandade media m
 
    ![chlimage_1-448](assets/chlimage_1-448.png)
 
-1. Klicka/tryck på ikonen **[!UICONTROL Insert Asset]**.
+1. Klicka/tryck på **[!UICONTROL Insert Asset]** ikon.
 
    ![chlimage_1-449](assets/chlimage_1-449.png)
 
@@ -89,7 +89,7 @@ Om du vill kunna översätta innehållsfragment som innehåller blandade media m
 
    ![infoga resurs i innehållsfragment](assets/column-view.png)
 
-1. Klicka/tryck på ikonen **[!UICONTROL Associate Content]**.
+1. Klicka/tryck på **[!UICONTROL Associate Content]** ikon.
 
    ![chlimage_1-451](assets/chlimage_1-451.png)
 
@@ -101,32 +101,32 @@ Om du vill kunna översätta innehållsfragment som innehåller blandade media m
 
    ![chlimage_1-453](assets/chlimage_1-453.png)
 
-1. Markera innehållsfragmentet och klicka/tryck på ikonen **[!UICONTROL GlobalNav]**.
-1. Välj **[!UICONTROL References]** på menyn för att visa rutan **[!UICONTROL References]**.
+1. Markera innehållsfragmentet och klicka/tryck på **[!UICONTROL GlobalNav]** ikon.
+1. Välj **[!UICONTROL References]** från menyn för att visa **[!UICONTROL References]** fönster.
 
    ![chlimage_1-454](assets/chlimage_1-454.png)
 
-1. Klicka/tryck på **[!UICONTROL Language Copies]** under **[!UICONTROL Copies]** för att visa språkkopiorna.
+1. Klicka/tryck **[!UICONTROL Language Copies]** under **[!UICONTROL Copies]** för att visa språkkopiorna.
 
    ![chlimage_1-455](assets/chlimage_1-455.png)
 
-1. Klicka/tryck på **[!UICONTROL Create & Translate]** längst ned på panelen för att visa dialogrutan **[!UICONTROL Create & Translate]**.
+1. Klicka/tryck **[!UICONTROL Create & Translate]** längst ned på panelen för att visa **[!UICONTROL Create & Translate]** -dialogrutan.
 
    ![chlimage_1-456](assets/chlimage_1-456.png)
 
-1. Välj målspråk i listan **[!UICONTROL Target Languages]**.
+1. Välj målspråk på menyn **[!UICONTROL Target Languages]** lista.
 
    ![chlimage_1-457](assets/chlimage_1-457.png)
 
-1. Välj översättningsprojekttyp i listan **[!UICONTROL Project]**.
+1. Välj översättningsprojekttyp på menyn **[!UICONTROL Project]** lista.
 
    ![chlimage_1-458](assets/chlimage_1-458.png)
 
-1. Ange projektets titel i rutan **[!UICONTROL Project Title]** och klicka/tryck sedan på **Skapa**.
+1. Ange projektets namn i **[!UICONTROL Project Title]** och sedan klicka/peka **Skapa**.
 
    ![chlimage_1-459](assets/chlimage_1-459.png)
 
-1. Navigera till **[!UICONTROL Projects]**-konsolen och öppna projektmappen för översättningsprojektet som du skapade.
+1. Navigera till **[!UICONTROL Projects]** och öppna projektmappen för det översättningsprojekt du har skapat.
 
    ![chlimage_1-460](assets/chlimage_1-460.png)
 
@@ -135,7 +135,7 @@ Om du vill kunna översätta innehållsfragment som innehåller blandade media m
    ![chlimage_1-461](assets/chlimage_1-461.png)
 
 1. Kontrollera antalet resurser som ska översättas i rutan Översättningsjobb.
-1. Starta översättningsjobbet från **[!UICONTROL Translation Job]**-panelen.
+1. Från **[!UICONTROL Translation Job]** starta översättningsjobbet.
 
    ![chlimage_1-462](assets/chlimage_1-462.png)
 

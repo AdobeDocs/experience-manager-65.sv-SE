@@ -1,27 +1,26 @@
 ---
 title: Översiktskonsol för Live Copy
-seo-title: Översiktskonsol för Live Copy
+seo-title: Live Copy Overview Console
 description: Lär dig grunderna i Live Copy Overview Console.
-seo-description: Lär dig grunderna i Live Copy Overview Console.
+seo-description: Learn about the basics of the Live Copy Overview Console.
 uuid: 6b1841ec-950e-455b-9b30-b5f5050a67b8
-contentOwner: Alison Heimoz
+contentOwner: AEM Docs
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: site-features
 content-type: reference
 discoiquuid: 3763e985-7dd8-47fd-bfdf-2368b424c270
 feature: Multi Site Manager
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 0c3488bd-5f32-4956-882c-93326a45b379
+source-git-commit: 53c39e4aa250b18d4fae0327b313b18901677f2c
 workflow-type: tm+mt
-source-wordcount: '551'
+source-wordcount: '534'
 ht-degree: 1%
 
 ---
 
+# Översiktskonsol för Live Copy{#live-copy-overview-console}
 
-# Översiktskonsol för Live-kopia{#live-copy-overview-console}
-
-Med **Live Copy Overview** kan du:
+The **Live Copy - översikt** gör att du kan:
 
 * Visa/hantera arv på en webbplats:
 
@@ -31,7 +30,7 @@ Med **Live Copy Overview** kan du:
 
 * Utför utrullningsåtgärder
 
-## Öppnar Live Copy-översikt {#opening-the-live-copy-overview}
+## Öppna Live Copy-översikt {#opening-the-live-copy-overview}
 
 Du kan öppna Live-kopieringsöversikt från:
 
@@ -40,10 +39,10 @@ Du kan öppna Live-kopieringsöversikt från:
 
 ### Öppna Live Copy-översikt - referenser för en designsida {#opening-live-copy-overview-references-for-a-blueprint-page}
 
-Översikt över Live-kopian **kan öppnas från panelen** Referenser **i konsolen** Platser **:**
+The **Live Copy - översikt** kan öppnas från **Referenser** sidpanelen på **Webbplatser** konsol:
 
-1. I konsolen **Platser**, [navigerar du till din ritningssida och markerar den](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources).
-1. Öppna panelen **[Referenser](/help/sites-authoring/basic-handling.md#references)** och välj **Live-kopior**.
+1. I **Webbplatser** konsol, [navigera till din ritningssida och markera den](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources).
+1. Öppna **[Referenser](/help/sites-authoring/basic-handling.md#references)** panel och markera **Live-kopior**.
 
    ![chlimage_1-359](assets/chlimage_1-359.png)
 
@@ -51,34 +50,34 @@ Du kan öppna Live-kopieringsöversikt från:
    >
    >Du kan också öppna Referenser först och sedan välja en plan.
 
-1. Välj **Översikt över Live-kopia** om du vill visa och använda översikten över alla live-kopior som hör till den valda planen.
-1. Använd **Stäng** för att avsluta och återgå till konsolen **Platser**.
+1. Välj **Live Copy - översikt** om du vill visa och använda översikten över alla live-kopior som hör till den valda planen.
+1. Använd **Stäng** för att avsluta och återgå till **Webbplatser** konsol.
 
-### Öppna Live Copy-översikt - Egenskaper för en designsida {#opening-live-copy-overview-properties-of-a-blueprint-page}
+### Öppna Live Copy-översikt - egenskaper för en designsida {#opening-live-copy-overview-properties-of-a-blueprint-page}
 
-**Översikt över Live-kopian** kan öppnas när du visar egenskaper för en översiktssida:
+The **Live Copy - översikt** kan öppnas när du visar egenskaper för en ritningssida:
 
 1. Öppna **Egenskaper** för lämplig ritningssida.
-1. Öppna fliken **Design** - alternativet **Live Copy Overview** visas i det övre verktygsfältet:
+1. Öppna **Blueprint** -fliken - **Live Copy - översikt** visas i det övre verktygsfältet:
 
    ![chlimage_1-360](assets/chlimage_1-360.png)
 
-1. Välj **Översikt över Live-kopia** om du vill visa och använda översikten över alla live-kopior som hör till den aktuella planen.
+1. Välj **Live Copy - översikt** för att visa och använda översikten över alla live-kopior som hör till den aktuella planen.
 
    >[!NOTE]
    >
-   >Mer information finns också i kunskapsbasartikeln [Livecopy status message - Update/Green/In Sync](https://helpx.adobe.com/experience-manager/kb/livecopy-status-message---up-to-date-green-in-sync.html).
+   >Mer information finns även i artikeln i kunskapsbasen [LiveCopy-statusmeddelande - uppdaterad/grön/synkroniserad](https://helpx.adobe.com/experience-manager/kb/livecopy-status-message---up-to-date-green-in-sync.html).
 
-1. Använd **Stäng** för att avsluta och återgå till konsolen **Platser**.
+1. Använd **Stäng** för att avsluta och återgå till **Webbplatser** konsol.
 
 ## Använda Live Copy-översikt {#using-the-live-copy-overview}
 
-**Översikt över Live-kopian** kan även användas för att utföra åtgärder på den aktiva kopian:
+The **Live Copy - översikt** kan även användas för att utföra åtgärder på live-kopian:
 
-1. Öppna **Live Copy Overview**.
-1. Välj önskad skiss- eller Live copy-sida - verktygsfältet uppdateras för att visa tillgängliga åtgärder. Vilka [åtgärder](/help/sites-administering/msm.md#terms-used) som är tillgängliga beror på om du väljer en [ritning](#actions-for-a-blueprint-page)- eller [live-kopia](#actions-for-a-live-copy-page)-sida:
+1. Öppna **Live Copy - översikt**.
+1. Välj önskad skiss- eller Live copy-sida - verktygsfältet uppdateras för att visa tillgängliga åtgärder. The [funktionsmakron](/help/sites-administering/msm.md#terms-used) beroende på om du väljer [skiss](#actions-for-a-blueprint-page) eller [live copy](#actions-for-a-live-copy-page) sida:
 
-### Åtgärder för en blå sida {#actions-for-a-blueprint-page}
+### Åtgärder för en designsida {#actions-for-a-blueprint-page}
 
 När du väljer en ritningssida är följande åtgärder tillgängliga:
 
@@ -128,7 +127,7 @@ När du väljer en live-kopieringssida är följande åtgärder tillgängliga:
 
 ## Relationsstatus {#relationship-status}
 
-Konsolen **Relationsstatus** har två flikar med en rad funktioner:
+The **Relationsstatus** konsolen har två flikar med en rad funktioner:
 
 * [Statusinformation för relation](#relationship-status-information)
 * [Live Copy-information](#live-copy-information)
@@ -144,4 +143,3 @@ På den här fliken finns detaljerad information om relationen mellan ritningen 
 På den här fliken kan du visa och redigera konfigurationen av live-kopian:
 
 ![chlimage_1-364](assets/chlimage_1-364.png)
-

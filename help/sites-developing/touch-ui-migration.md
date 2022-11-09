@@ -1,35 +1,34 @@
 ---
 title: Migrering till Touch UI
-seo-title: Migrering till Touch UI
+seo-title: Migration to the Touch UI
 description: Migrering till Touch UI
-seo-description: Migrering till Touch UI
+seo-description: Migration to the Touch UI
 uuid: 47c43b56-532b-4ada-8503-04d66bab3564
-contentOwner: aheimoz
+contentOwner: AEM Docs
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: introduction
 discoiquuid: b315720f-e9b8-4063-99e2-1b9aa6bba460
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 7035c19a109ff67655ee0419aa37d1723e2189cc
+exl-id: 33dc1ee7-1e34-43d8-9265-c66535f5e002
+source-git-commit: 53c39e4aa250b18d4fae0327b313b18901677f2c
 workflow-type: tm+mt
-source-wordcount: '685'
+source-wordcount: '673'
 ht-degree: 4%
 
 ---
 
-
 # Migrering till Touch UI{#migration-to-the-touch-ui}
 
-Från och med version 6.0 introducerade Adobe Experience Manager (AEM) ett nytt användargränssnitt som kallas *användargränssnittet med pekfunktioner* (kallas även *användargränssnittet*). Den är anpassad efter Adobe Marketing Cloud och Adobe användargränssnittets allmänna riktlinjer. Detta har blivit standardgränssnittet i AEM med det äldre skrivbordsorienterade gränssnittet som kallas *klassiskt användargränssnitt*.
+Från och med version 6.0 har Adobe Experience Manager (AEM) infört ett nytt användargränssnitt som kallas *pekaktiverat användargränssnitt* (kallas även *pekgränssnitt*). Den är anpassad efter Adobe Marketing Cloud och Adobe användargränssnittets allmänna riktlinjer. Det här har blivit standardgränssnittet i AEM med det äldre, skrivbordsorienterade gränssnittet som kallas *klassiskt användargränssnitt*.
 
 Om du har använt AEM med klassiskt gränssnitt måste du vidta åtgärder för att migrera instansen. Den här sidan är avsedd att fungera som en språngbräda genom länkar till enskilda resurser.
 
 >[!NOTE]
 >
->Ett sådant migreringsprojekt kan få stor effekt på din instans. Se [Hantera projekt - Bästa metoder](/help/managing/best-practices.md) för rekommenderade riktlinjer.
+>Ett sådant migreringsprojekt kan få stor effekt på din instans. Se [Hantera projekt - bästa praxis](/help/managing/best-practices.md) för rekommenderade riktlinjer.
 
-## Grundläggande {#the-basics}
+## Grunderna {#the-basics}
 
 När du migrerar bör du vara medveten om följande (stora) skillnader mellan det klassiska gränssnittet och det pekande gränssnittet:
 
@@ -40,7 +39,7 @@ När du migrerar bör du vara medveten om följande (stora) skillnader mellan de
    <td>Pekaktiverat användargränssnitt</td>
   </tr>
   <tr>
-   <td>Beskrivs i JCR-databasen som en nodstruktur. Alla noder som representerar ett element i användargränssnittet kallas för en <em>ExtJS-widget</em> och återges på klientsidan av <code>ExtJS</code>.</td>
+   <td>Beskrivs i JCR-databasen som en nodstruktur. Varje nod som representerar ett element i användargränssnittet kallas för <em>ExtJS-widget</em> och återges på klientsidan av <code>ExtJS</code>.</td>
    <td>Beskrivs också i JCR-databasen som en nodstruktur. I det här fallet refererar alla noder till en Sling-resurstyp (Sling-komponent), som ansvarar för återgivningen. Gränssnittet renderas alltså (i stort) på serversidan.</td>
   </tr>
   <tr>
@@ -58,12 +57,12 @@ När du migrerar bör du vara medveten om följande (stora) skillnader mellan de
    <td><p>Dialognoder:</p>
     <ul>
      <li>Namn: <code>dialog</code></li>
-     <li>jcr:primärTyp: <code>cq:Dialog</code></li>
+     <li>jcr:primaryType: <code>cq:Dialog</code></li>
     </ul> </td>
    <td><p>Dialognoder:</p>
     <ul>
      <li>Namn: <code>cq:dialog</code></li>
-     <li>jcr:primärTyp: <code>nt:unstructured</code></li>
+     <li>jcr:primaryType: <code>nt:unstructured</code></li>
     </ul> </td>
   </tr>
   <tr>
@@ -101,7 +100,7 @@ När du migrerar bör du vara medveten om följande (stora) skillnader mellan de
  </tbody>
 </table>
 
-Att migrera ett avsnitt i användargränssnittet från det klassiska gränssnittet till pekgränssnittet innebär med andra ord att en *ExtJS-widget* porteras till en *Sling-komponent*. För att underlätta detta baseras pekgränssnittet på GRE-ramverket (Granite UI Framework), som redan innehåller vissa Sling-komponenter för användargränssnittet (kallas GRE UI-komponenter).
+Med andra ord innebär migrering av ett avsnitt i användargränssnittet från det klassiska användargränssnittet till pekgränssnittet att ett *ExtJS-widget* till *Sling-komponent*. För att underlätta detta baseras pekgränssnittet på GRE-ramverket (Granite UI Framework), som redan innehåller vissa Sling-komponenter för användargränssnittet (kallas GRE UI-komponenter).
 
 Kontrollera status och relaterade rekommendationer innan du börjar:
 
@@ -117,33 +116,33 @@ Grundläggande information om hur du utvecklar användargränssnittet för peksk
 
 Dialogrutor är en viktig faktor när du migrerar komponenter:
 
-* [Utveckla AEM komponenter](/help/sites-developing/developing-components.md)  (med det beröringsaktiverade användargränssnittet)
+* [Utveckla AEM](/help/sites-developing/developing-components.md) (med det pekaktiverade användargränssnittet)
 * [Migrera från en klassisk komponent](/help/sites-developing/developing-components.md#migrating-from-a-classic-component)
-* [Verktyg](/help/sites-developing/modernization-tools.md)  för AEM - som hjälper dig att konvertera dialogrutorna för dina klassiska användargränssnittskomponenter till användargränssnitt
+* [AEM](/help/sites-developing/modernization-tools.md) - för att hjälpa dig att konvertera dialogrutorna för dina klassiska användargränssnittskomponenter till touchgränssnitt
 
    * Det finns ett kompatibilitetslager med pekfunktion för att öppna en klassisk användargränssnittsdialogruta i en&quot;Touch UI wrapper&quot;, men det har begränsad funktionalitet och rekommenderas inte på lång sikt.
 
 * [Anpassa dialogrutefält i Touch UI](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-customizing-dialog-fields-in-touch-ui.html)
 * [Skapa en ny GRE-fältkomponent](/help/sites-developing/granite-ui-component.md)
-* [Anpassa sidredigering](/help/sites-developing/customizing-page-authoring-touch.md)  (med det pekaktiverade användargränssnittet)
+* [Anpassa sidredigering](/help/sites-developing/customizing-page-authoring-touch.md) (med det pekaktiverade användargränssnittet)
 
-## Migrerar konsoler {#migrating-consoles}
+## Migrera konsoler {#migrating-consoles}
 
 Du kan också anpassa konsolerna:
 
-* [Anpassa konsolerna](/help/sites-developing/customizing-consoles-touch.md)  (för det beröringsaktiverade användargränssnittet)
+* [Anpassa konsolerna](/help/sites-developing/customizing-consoles-touch.md) (för det beröringsaktiverade användargränssnittet)
 
 ## Relaterade överväganden {#related-considerations}
 
 Även om det inte är direkt relaterat till en migrering till pekgränssnittet finns det relaterade problem som är värda att ta hänsyn till samtidigt, eftersom de också rekommenderas:
 
-* [Mallar](/help/sites-developing/templates.md)  -  [Redigerbara mallar](/help/sites-developing/page-templates-editable.md)
+* [Mallar](/help/sites-developing/templates.md) - [Redigerbara mallar](/help/sites-developing/page-templates-editable.md)
 * [Kärnkomponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)
 * [HTL](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html)
 
 >[!NOTE]
 >
->Se även [Utveckla - Bästa metoder](/help/sites-developing/best-practices.md).
+>Se även [Utveckla - bästa praxis](/help/sites-developing/best-practices.md).
 
 ## Ytterligare resurser {#further-resources}
 
@@ -159,4 +158,3 @@ Fullständig information om hur du utvecklar AEM finns i samlingen av resurser u
 >[!CAUTION]
 >
 >AEM är en gemenskapsinsats som inte stöds eller motiveras av Adobe.
-
