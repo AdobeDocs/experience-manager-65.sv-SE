@@ -10,16 +10,16 @@ discoiquuid: 9d78a6dc-fc9c-415b-b817-164fe6648b30
 docset: aem65
 feature: Form Data Model
 exl-id: 7a1d9d57-66f4-4f20-91c2-ace5a71a52f2
-source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
+source-git-commit: e4aaef48ce7d6e49e9a76f78a74b7dea127f6cce
 workflow-type: tm+mt
-source-wordcount: '1834'
+source-wordcount: '1865'
 ht-degree: 0%
 
 ---
 
 # Konfigurera datakällor{#configure-data-sources}
 
-![](do-not-localize/data-integeration.png)
+![Dataintegrering](do-not-localize/data-integeration.png)
 
 Med AEM Forms dataintegrering kan du konfigurera och ansluta till olika datakällor. Följande typer stöds inte. Men med liten anpassning kan ni också integrera andra datakällor.
 
@@ -35,7 +35,7 @@ Dataintegrering har stöd för autentiseringstyperna OAuth2.0, Grundläggande au
 
 Du kan konfigurera relationsdatabaser med hjälp AEM Konfiguration av webbkonsol. Gör följande:
 
-1. Gå till AEM webbkonsol på https://server:host/system/console/configMgr.
+1. Gå till AEM webbkonsol på `https://server:host/system/console/configMgr`.
 1. Sök efter **[!UICONTROL Apache Sling Connection Pooled DataSource]** konfiguration. Tryck för att öppna konfigurationen i redigeringsläge.
 1. I konfigurationsdialogrutan anger du information för den databas som du vill konfigurera, till exempel:
 
@@ -49,14 +49,10 @@ Du kan konfigurera relationsdatabaser med hjälp AEM Konfiguration av webbkonsol
    >
    >Kontrollera att du krypterar känslig information, t.ex. lösenord, innan du konfigurerar datakällan. Så här krypterar du:
    >
-   >    
-   >    
-   >    1. Gå till https://&#39;[server]:[port]/system/console/crypto.
-   >    1. I **[!UICONTROL Plain Text]** anger du lösenordet eller en sträng som ska krypteras och trycker på **[!UICONTROL Protect]**.
+   > 1. Gå till https://&#39;[server]:[port]/system/console/crypto.
+   > 1. I **[!UICONTROL Plain Text]** anger du lösenordet eller en sträng som ska krypteras och trycker på **[!UICONTROL Protect]**.
 
-   >    
-   >    
-   >    
+   >
    >Den krypterade texten visas i fältet Skyddad text som du kan ange i konfigurationen.
 
 1. Aktivera **[!UICONTROL Test on Borrow]** eller **[!UICONTROL Test on Return]** för att ange att objekten valideras innan de lånas eller returneras från respektive till poolen.
@@ -67,13 +63,17 @@ Du kan konfigurera relationsdatabaser med hjälp AEM Konfiguration av webbkonsol
 
 1. Tryck **[!UICONTROL Save]** för att spara konfigurationen.
 
+   >[!NOTE]
+   >
+   > Om din Forms datamodell innehåller ett objekt som är ett reserverat nyckelord för relationsdatabasen kan det leda till problem med tillägg, uppdatering eller hämtning av data. Undvik därför att använda sådana objekt i formulärdatamodellen.
+
 ## Konfigurera AEM användarprofil {#configure-aem-user-profile}
 
 Du kan konfigurera AEM användarprofil med hjälp av konfigurationen för anslutning av användarprofil i AEM webbkonsol. Gör följande:
 
 1. Gå till AEM webbkonsol på https://&#39;[server]:[port]system/console/configMgr.
 1. Sök efter **[!UICONTROL AEM Forms Data Integrations - User Profile Connector Configuration]** och tryck för att öppna konfigurationen i redigeringsläge.
-1. I dialogrutan Konfiguration av anslutning till användarprofil kan du lägga till, ta bort eller uppdatera egenskaper för användarprofiler. De angivna egenskaperna kommer att vara tillgängliga för användning i formulärdatamodellen. Använd följande format för att ange egenskaper för användarprofiler:
+1. I dialogrutan Konfiguration av anslutning till användarprofil kan du lägga till, ta bort eller uppdatera egenskaper för användarprofiler. De angivna egenskaperna är tillgängliga för användning i formulärdatamodellen. Använd följande format för att ange egenskaper för användarprofiler:
 
    `name=[property_name_with_location_in_user_profile],type=[property_type]`
 
@@ -161,7 +161,6 @@ Utför följande steg för att konfigurera HTTP-klienten för formulärdatamodel
 
    * Ange den maximala tidsperioden för inaktivitet mellan två datapaket i **[!UICONTROL Socket timeout]** fält. Standardvärdet är 30 sekunder.
 
-
 ## Konfigurera SOAP-webbtjänster {#configure-soap-web-services}
 
 SOAP-baserade webbtjänster beskrivs med [WSDL-specifikationer (Web Services Description Language)](https://www.w3.org/TR/wsdl). Om du vill konfigurera en SOAP-baserad webbtjänst i AEM-molntjänster kontrollerar du att du har WSDL-webbadressen för webbtjänsten och gör följande:
@@ -224,4 +223,4 @@ När du aktiverar ömsesidig autentisering för formulärdatamodell autentiserar
 
 ## Nästa steg {#next-steps}
 
-Du har konfigurerat datakällorna. Därefter kan du skapa en formulärdatamodell eller, om du redan har skapat en formulärdatamodell utan en datakälla, associera den med de datakällor du just konfigurerade. Se [Skapa formulärdatamodell](/help/forms/using/create-form-data-models.md) för mer information.
+Du har konfigurerat datakällorna. Därefter kan du skapa en formulärdatamodell eller, om du redan har skapat en formulärdatamodell utan en datakälla, associera den med de datakällor du konfigurerade. Se [Skapa formulärdatamodell](/help/forms/using/create-form-data-models.md) för mer information.
