@@ -8,9 +8,9 @@ user-guide-title: Adobe Experience Manager 6.5 Forms Guide
 breadcrumb-title: Forms Guide
 user-guide-description: Skapa, hantera, publicera och uppdatera digitala formulär.
 role: User
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: 55e9344c088a38bc4c9f916a13c310a029b3b2f4
 workflow-type: tm+mt
-source-wordcount: '3801'
+source-wordcount: '3819'
 ht-degree: 0%
 
 ---
@@ -685,6 +685,7 @@ ht-degree: 0%
    + [Det går inte att använda vissa formulärfunktioner med vissa versioner av Oracle-JDK](using/unable-to-use-forms-features-with-certain-versions-of-oracle-jdk.md)
    + [Ytterligare steg för att få e-post med bifogad fil för den adaptiva versionen av Forms On JEE](/help/forms/using/additional-steps-to-use-email-with-attachments.md)
    + [Det går inte att konvertera Word- eller Excel-filen till PDF på Windows Server](/help/forms/using/disable-uac-for-pdfgconfiguration.md)
+   + [Det går inte att öppna XFA-baserad PDF forms i Google Chrome, Firefox, Microsoft Edge, Microsoft Internet Explorer eller Apple Safari](/help/forms/using/xfa-based-forms-in-chrome-firefox-ie-internet-explorter-safari-edge.md)
 + Äldre dokumentation {#legacy-documentation}
    + [Använda den körda skripttjänsten i AEM Forms på JEE Workbench för att skapa XML-data](developing/building-xml.md)
    + [Komprimera och dekomprimera filer med en AEM Forms på en anpassad JEE DSC](developing/compressing-decompressing-custom-dsc.md)
