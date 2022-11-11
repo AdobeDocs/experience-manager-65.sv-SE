@@ -10,7 +10,7 @@ discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
 feature: Image Profiles
 role: User, Admin
 exl-id: 67240ad0-1a7c-4e58-a518-1e36d771f1a1
-source-git-commit: d83a647d8ac5466ba09230c584d5d501aab55274
+source-git-commit: 3b869153e0fdee08df2a4aaf73fe3ce9fbebaad7
 workflow-type: tm+mt
 source-wordcount: '2742'
 ht-degree: 7%
@@ -21,13 +21,10 @@ ht-degree: 7%
 
 När du överför bilder kan du beskära bilden automatiskt vid överföring genom att tillämpa en bildprofil på mappen.
 
->[!NOTE]
->
->Smart Crop är bara tillgängligt i Dynamic Media - Scene7-läge.
-
 >[!IMPORTANT]
 >
->Bildprofiler kan inte användas för PDF, animerade GIF eller INDD-filer (Adobe InDesign).
+>・ Smart beskärning är endast tillgängligt i Dynamic Media - Scene7-läge.
+・ Bildprofiler kan inte användas för PDF-, animerade GIF- eller INDD-filer (Adobe InDesign).
 
 ## Beskärningsalternativ {#crop-options}
 
@@ -58,8 +55,7 @@ Du kan välja mellan två bildbeskärningsalternativ. Du kan också automatisera
 Du använder **[!UICONTROL Unsharp mask]** för att finjustera en skärpefiltereffekt på den slutliga nedsamplade bilden. Du kan styra intensiteten för effekten, radien för effekten (mätt i pixlar) och ett tröskelvärde för kontrast som ignoreras. Effekten har samma alternativ som Adobe Photoshop *Oskarp mask* filter.
 
 >[!NOTE]
->
->Oskarp mask används endast för nedskalade återgivningar i PTIFF (pyramidformade gånger) som nedsamplas till mer än 50 %. Det innebär att de största återgivningarna i mönstret inte påverkas av oskarp mask, medan mindre återgivningar som miniatyrbilder ändras (och den oskarpa masken visas).
+Oskarp mask används endast för nedskalade återgivningar i PTIFF (pyramidformade gånger) som nedsamplas till mer än 50 %. Det innebär att de största återgivningarna i mönstret inte påverkas av oskarp mask, medan mindre återgivningar som miniatyrbilder ändras (och den oskarpa masken visas).
 
 I **[!UICONTROL Unsharp Mask]** har du följande filtreringsalternativ:
 
@@ -163,9 +159,8 @@ Du kan bearbeta resurser i en mapp som redan har en befintlig videoprofil som du
 
 ## Redigera smart beskärning eller smarta färgrutor för en enskild bild {#editing-the-smart-crop-or-smart-swatch-of-a-single-image}
 
->[!NOTE]
->
->Smart Crop är bara tillgängligt i Dynamic Media - Scene7-läge.
+>[!IMPORTANT]
+Smart beskärning är bara tillgängligt i Dynamic Media - Scene7-läge.
 
 Du kan justera eller ändra storlek på bildens smarta beskärningsfönster manuellt för att ytterligare förfina fokalpunkten.
 
