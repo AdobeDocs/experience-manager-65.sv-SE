@@ -8,9 +8,9 @@ topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
+source-git-commit: 3a745e8255580778e30abaa72d7d0453e574f341
 workflow-type: tm+mt
-source-wordcount: '5372'
+source-wordcount: '5374'
 ht-degree: 0%
 
 ---
@@ -89,7 +89,7 @@ Innan du börjar installera och konfigurera AEM Forms Document Services bör du 
 
 ### Extra krav för UNIX-baserat operativsystem {#extrarequirements}
 
-Om du använder det UNIX-baserade operativsystemet installerar du följande paket från installationsmediet för respektive operativsystem:
+Om du använder ett UNIX-baserat operativsystem installerar du följande 32-bitarspaket från installationsmediet för respektive operativsystem:
 
 <table>
  <tbody>
