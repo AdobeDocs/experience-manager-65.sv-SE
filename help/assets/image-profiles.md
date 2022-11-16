@@ -10,9 +10,9 @@ discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
 feature: Image Profiles
 role: User, Admin
 exl-id: 67240ad0-1a7c-4e58-a518-1e36d771f1a1
-source-git-commit: 3b869153e0fdee08df2a4aaf73fe3ce9fbebaad7
+source-git-commit: 008a27c6a1c818a96a24dfcc7f5650409d31e7c2
 workflow-type: tm+mt
-source-wordcount: '2742'
+source-wordcount: '2746'
 ht-degree: 7%
 
 ---
@@ -23,16 +23,16 @@ När du överför bilder kan du beskära bilden automatiskt vid överföring gen
 
 >[!IMPORTANT]
 >
->・ Smart beskärning är endast tillgängligt i Dynamic Media - Scene7-läge.
+>・ Smart Crop är endast tillgängligt i Dynamic Media - Scene7-läge.
 ・ Bildprofiler kan inte användas för PDF-, animerade GIF- eller INDD-filer (Adobe InDesign).
 
 ## Beskärningsalternativ {#crop-options}
 
 När du implementerar Smart Crop på bilder rekommenderar Adobe följande bästa praxis och tillämpar följande gräns:
 
-| Begränsningstyp | Bästa praxis | Begränsning har införts | Ändring till begränsning den 31 december 2022 |
-| --- | --- | --- | --- |
-| Antal smarta beskärningar per bild | 5 | 100 | 20 |
+| Begränsningstyp | Bästa praxis | Begränsning har införts |
+| --- | --- | --- |
+| Antal smarta beskärningar per bild | 5 | 100 |
 
 Se även [Dynamic Media begränsningar](/help/assets/limitations.md).
 
@@ -160,7 +160,7 @@ Du kan bearbeta resurser i en mapp som redan har en befintlig videoprofil som du
 ## Redigera smart beskärning eller smarta färgrutor för en enskild bild {#editing-the-smart-crop-or-smart-swatch-of-a-single-image}
 
 >[!IMPORTANT]
-Smart beskärning är bara tillgängligt i Dynamic Media - Scene7-läge.
+・ Smart beskärning är endast tillgängligt i Dynamic Media - Scene7-läge.
 
 Du kan justera eller ändra storlek på bildens smarta beskärningsfönster manuellt för att ytterligare förfina fokalpunkten.
 
@@ -188,6 +188,9 @@ Se även [Redigera smart beskärning eller smart färgruta för flera bilder](#e
 1. I sidans övre högra hörn väljer du **[!UICONTROL Save]** väljer **[!UICONTROL Close]** för att återgå till resursmappen.
 
 ## Redigera smart beskärning eller smart färgruta för flera bilder {#editing-the-smart-crop-or-smart-swatch-of-multiple-images}
+
+>[!IMPORTANT]
+・ Smart beskärning är endast tillgängligt i Dynamic Media - Scene7-läge.
 
 När du har tillämpat en bildprofil - som innehåller Smart beskärning - på en mapp tillämpas en beskärning på alla bilder i den mappen. Om du vill kan du *manuellt* justera om eller ändra storlek på det smarta beskärningsfönstret i flera bilder för att ytterligare förfina fokalpunkten.
 
