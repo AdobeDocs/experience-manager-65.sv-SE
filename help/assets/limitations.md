@@ -8,9 +8,9 @@ geptopics: SG_SCENESEVENONDEMAND_PK/categories/ecatalogs
 feature: Dynamic Media Classic,Asset Management,Image Sets,Spin Sets,eCatalog
 role: User
 exl-id: e4d4059e-ac0b-42e7-910c-001310796574
-source-git-commit: 7c0d5f7d1286bdcc0189f3c6ffecbd2149d6a78a
+source-git-commit: cd4342740a09cb5315c640768bf24af6c7788a48
 workflow-type: tm+mt
-source-wordcount: '278'
+source-wordcount: '279'
 ht-degree: 4%
 
 ---
@@ -30,7 +30,7 @@ När du skapar en snurra uppsättning eller en bilduppsättning, eller överför
 
 | Resurs - begränsningstyp | Bästa praxis | Begränsning har införts | Ändring till begränsning den 31 december 2022 |
 | --- | --- | --- | --- |
-| **Bild** - Antal smarta beskärningar per bild | 5 | 100 | 20 |
+| **Bild** - Antal smarta beskärningar per bild | 5 | 100 | Ej relevant |
 | **Alla uppsättningar** - Antal dubblettresurser per uppsättning | Inga dubbletter | 20 | Ej relevant |
 | **Alla uppsättningar** - Maximalt antal resurser per uppsättning | 5-10 bilder per uppsättning | 1000 | Ej relevant |
 | **Snurra uppsättning** - Maximalt antal rader/kolumner per 2D-uppsättning | 12-18 bilder per uppsättning | 1000 | Ej relevant |
