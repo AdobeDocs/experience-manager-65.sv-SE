@@ -4,9 +4,9 @@ description: Lär dig hur Content Fragment Models fungerar som grund för ditt h
 feature: Content Fragments
 role: User
 exl-id: 6fd1fdb2-d1d3-4f97-b119-ecfddcccec9e
-source-git-commit: 9b3e30f7523ff86fd1ed1b5fc55ce22b8e9f3429
+source-git-commit: 6b9eb1a6df7cc4a8afab1c83d93d8a53bd94f6f5
 workflow-type: tm+mt
-source-wordcount: '2338'
+source-wordcount: '2332'
 ht-degree: 3%
 
 ---
@@ -19,7 +19,7 @@ Så här använder du modeller för innehållsfragment:
 
 1. [Aktivera funktionen Content Fragment Model för instansen](/help/assets/content-fragments/content-fragments-configuration-browser.md)
 1. [Skapa](#creating-a-content-fragment-model)och [konfigurera](#defining-your-content-fragment-model), era modeller för innehållsfragment
-1. [Aktivera modeller för innehållsfragment](#enabling-disabling-a-content-fragment-model) för användning när du skapar innehållsfragment för användning när du skapar innehållsfragment
+1. [Aktivera modeller för innehållsfragment](#enabling-disabling-a-content-fragment-model) för användning när du skapar innehållsfragment
 1. [Tillåt dina modeller för innehållsfragment i de resursmappar som krävs](#allowing-content-fragment-models-assets-folder) efter konfiguration **Profiler**.
 
 ## Skapa en innehållsfragmentmodell {#creating-a-content-fragment-model}
