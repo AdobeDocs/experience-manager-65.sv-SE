@@ -2,9 +2,9 @@
 title: Utgångsdatum för Reader Extensions-certifikat och dess effekt
 description: Utgångsdatum för Reader Extensions-certifikat och dess effekt
 exl-id: 4e14e0dc-f248-4f6e-a075-6012b6792d9d
-source-git-commit: bbc8fdf2eb7dd35600e2e2a87550e9de557f0eb0
+source-git-commit: f35a35577f06686558bb1277b0d9bb17f6f0b7bf
 workflow-type: tm+mt
-source-wordcount: '1109'
+source-wordcount: '1114'
 ht-degree: 0%
 
 ---
@@ -26,9 +26,8 @@ Alla PDF-dokument som har utökats med hjälp av de äldre certifikaten före de
 
 S. Adobe Root CA är den certifikatutfärdare från vilken ett Acrobat Reader Extensions-certifikat utfärdas. Den 7 januari 2023 upphör&quot;Adobe Root CA&quot; och alla certifikat som utfärdas från den att gälla.
 
-**Fråga. Har Adobe tidigare meddelat att certifikaten har upphört att gälla och att PDF har påverkats av användningen/öppnandet? Ska den kommunikationen ignoreras?**
-S. På grundval av en ny bedömning av situationen fortsätter alla dokument från PDF som byggts ut med hjälp av tillverkningscertifikat som utfärdats från det gamla Adobe Root CA före den 7 januari 2023 att fungera utan ändringar efter den 7 januari 2023. Om du redan har uppdaterat din PDF förändras inte upplevelsen
-
+**Fråga. Det fanns ett tidigare meddelande från Adobe om att certifikaten skulle upphöra att gälla och om hur de påverkat användningen/öppnandet av dokument i PDF. Ska den kommunikationen ignoreras?**
+S. På grundval av den nya bedömningen av situationen fortsätter alla dokument från PDF som byggts ut med hjälp av tillverkningscertifikat som utfärdats från det gamla&quot;Adobe Root CA&quot; före den 7 januari 2023 att fungera utan ändringar efter den 7 januari 2023. Om du redan har uppdaterat din PDF förändras inte upplevelsen
 
 **Fråga. Vem ska jag kontakta om jag har ytterligare frågor?**
 
@@ -46,9 +45,9 @@ S. Beskrivningen av de nya Acrobat Reader Extensions-certifikaten **G3-P24** som
 
 S. Alla berättigade Forms-kunder (med aktiv licens) kan hämta de nya certifikaten (certifikat som baseras på&quot;Adobe Root CA G2&quot;) från [Adobe licenswebbplats](https://licensing.adobe.com/). Om du inte kan hitta certifikatet på Adobe licenswebbplats kontaktar du [Stöd för Adobe](https://experienceleague.adobe.com/?support-solution=Experience+Manager&amp;lang=en#support) eller skaffa en supportanmälan.
 
-**Fråga. Fortsätter mina PDF-dokument som utökats med certifikat som utfärdats av Adobe Root CA (gammal certifikatutfärdare) att fungera efter 7 januari 2023?**
+**Fråga. Fortsätter mina PDF-dokument som utökats med certifikat som utfärdats av&quot;Adobe Root CA&quot; (den gamla certifikatutfärdaren) att fungera efter den 7 januari 2023?**
 
-S. Ja, alla PDF-dokument som har utökats med hjälp av produktionscertifikat som utfärdats av&quot;Adobe Root CA&quot; (den gamla certifikatutfärdaren) före den 7 januari 2023 fortsätter att fungera utan ändringar efter den 7 januari 2023. PDF-dokument som har förlängts med utvärderingscertifikat slutar att fungera efter förfallodatumet.
+S. Ja, alla dokument från PDF som har utökats med hjälp av produktionscertifikat som utfärdats av&quot;Adobe Root CA&quot; (den gamla certifikatutfärdaren) före den 7 januari 2023 fortsätter att fungera utan ändringar efter den 7 januari 2023. PDF-dokument som har förlängts med utvärderingscertifikat slutar att fungera efter förfallodatumet.
 
 **Fråga. Vilken version av Adobe Acrobat Reader krävs för att fortsätta använda PDF-dokument som har utökats med certifikat som har utfärdats från&quot;Adobe Root CA&quot; (den gamla certifikatutfärdaren)?**
 
