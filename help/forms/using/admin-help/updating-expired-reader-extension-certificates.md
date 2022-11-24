@@ -2,7 +2,7 @@
 title: Utgångsdatum för Reader Extensions-certifikat och dess effekt
 description: Utgångsdatum för Reader Extensions-certifikat och dess effekt
 exl-id: 4e14e0dc-f248-4f6e-a075-6012b6792d9d
-source-git-commit: f35a35577f06686558bb1277b0d9bb17f6f0b7bf
+source-git-commit: bcbfdcd305b7319506a11677909895c38f92a6cf
 workflow-type: tm+mt
 source-wordcount: '1114'
 ht-degree: 0%
@@ -27,7 +27,9 @@ Alla PDF-dokument som har utökats med hjälp av de äldre certifikaten före de
 S. Adobe Root CA är den certifikatutfärdare från vilken ett Acrobat Reader Extensions-certifikat utfärdas. Den 7 januari 2023 upphör&quot;Adobe Root CA&quot; och alla certifikat som utfärdas från den att gälla.
 
 **Fråga. Det fanns ett tidigare meddelande från Adobe om att certifikaten skulle upphöra att gälla och om hur de påverkat användningen/öppnandet av dokument i PDF. Ska den kommunikationen ignoreras?**
-S. På grundval av den nya bedömningen av situationen fortsätter alla dokument från PDF som byggts ut med hjälp av tillverkningscertifikat som utfärdats från det gamla&quot;Adobe Root CA&quot; före den 7 januari 2023 att fungera utan ändringar efter den 7 januari 2023. Om du redan har uppdaterat din PDF förändras inte upplevelsen
+
+S. På grundval av den nya bedömningen av situationen fortsätter alla dokument från PDF som byggts ut med hjälp av tillverkningscertifikat som utfärdats från det gamla&quot;Adobe Root CA&quot; före den 7 januari 2023 att fungera utan ändringar efter den 7 januari 2023. Om du redan har uppdaterat din PDF förändras inte upplevelsen.
+
 
 **Fråga. Vem ska jag kontakta om jag har ytterligare frågor?**
 
