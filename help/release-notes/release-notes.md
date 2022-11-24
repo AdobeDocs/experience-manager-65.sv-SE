@@ -3,9 +3,9 @@ title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: d31fef1fe7023dfa5129bb8d136550b43ef197d1
+source-git-commit: 3fff3ac4e09058a6c7f7bf4a99f85b3aab0ab1a9
 workflow-type: tm+mt
-source-wordcount: '3227'
+source-wordcount: '3139'
 ht-degree: 0%
 
 ---
@@ -18,14 +18,14 @@ ht-degree: 0%
 
 | Produkt | [!DNL Adobe Experience Manager] 6.5 |
 | -------- | ---------------------------- |
-| Version | 6.5.14.0 <!-- UPDATE FOR EACH NEW RELEASE --> |
+| Version | 6.5.15.0 <!-- UPDATE FOR EACH NEW RELEASE --> |
 | Typ | Service Pack-version |
-| Date | 25 augusti 2022 <!-- UPDATE FOR EACH NEW RELEASE --> |
-| Hämta URL | [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.14.0.zip) <!-- UPDATE FOR EACH NEW RELEASE --> |
+| Date | 24 november 2022 <!-- UPDATE FOR EACH NEW RELEASE --> |
+| Hämta URL | [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip) <!-- UPDATE FOR EACH NEW RELEASE --> |
 
-## Vad ingår i [!DNL Experience Manager] 6.5.14.0 {#what-is-included-in-aem-6514}
+## Vad ingår i [!DNL Experience Manager] 6.5.15.0 {#what-is-included-in-aem-6515}
 
-[!DNL Experience Manager] 6.5.14.0 innehåller nya funktioner, viktiga förbättringar som kunderna efterfrågat, felkorrigeringar, prestanda, stabilitet och säkerhetsförbättringar som släppts sedan den första tillgängligheten av 6.5 i april 2019. [Installera detta Service Pack](#install) på [!DNL Experience Manager] 6.5. <!-- UPDATE FOR EACH NEW RELEASE -->
+[!DNL Experience Manager] 6.5.15.0 innehåller nya funktioner, viktiga förbättringar som kunderna efterfrågat, felkorrigeringar, prestanda, stabilitet och säkerhetsförbättringar som släppts sedan den första tillgängligheten av 6.5 i april 2019. [Installera detta Service Pack](#install) på [!DNL Experience Manager] 6.5. <!-- UPDATE FOR EACH NEW RELEASE -->
 
 <!-- Some of the key features and improvements are the following:
 
@@ -35,180 +35,154 @@ ht-degree: 0%
 
 <!-- UPDATE BELOW FOR EACH NEW RELEASE -->
 
-## [!DNL Assets] {#assets-6514}
+## [!DNL Assets] {#assets-6515}
 
-* Det går inte att lägga till eller visa taggar för PDF-filer. (NPR-38452)
-* När du konfigurerar anslutna resurser, sparar konfigurationen, öppnar konfigurationssidan igen och testar den redan sparade konfigurationen misslyckas testanslutningen. (NPR-38507)
-* Det går inte att lägga till användare med numeriskt användar-ID i samlingar. (NPR-38538)
-* Experience Manager kan inte bearbeta filen FFmpeg som är installerad på författarinstansen. (NPR-38568)
-* Bearbetningen av PDF misslyckas med `NoClassDefFoundError` felmeddelande. (NPR-38741)
-* Knappen Lägg till under Anpassade kolumner visas inte korrekt när du skapar en resursrapport för `de_DE` språkinställning. (ASSETS-10641)
-* När du överför en duplicerad resurs till Digital Asset Management-databasen och Experience Manager identifierar och tillhandahåller ett alternativ för att ta bort den duplicerade resursen, tas även den ursprungliga resursen bort från databasen. (ASSETS-10826)
-* Experience Manager sparar inte mappens metadata korrekt när du anger specialtecken i flera fält. (ASSETS-10721)
-* Det går inte att spara resursegenskaper förrän du klickar på **[!UICONTROL Save & Close]** två gånger. (ASSETS-12040)
-* Skärmläsaren meddelar bara `Relate` -knappen. Men `Relate` -knappen innehåller även en undermeny och kan expanderas och komprimeras. (ASSETS-6938)
-* Attribut som krävs för ARIA (Accessible Rich Internet Applications) `aria-expanded` for `role="combo box"` saknas. (ASSETS-6928)
-* I kortvyn, i huvudfilens navigeringsområde, textinnehållet **[!UICONTROL Sort by]** har inte minst kontrastförhållandet 4,5:1 mot bakgrundsfärgen. (ASSETS-6926)
-* Experience Manager identifierar inte **[!UICONTROL Select a Workflow model]** listrutan som ett obligatoriskt fält när du skapar en arbetsflödesmodell. (ASSETS-6871)
+* Om rörelsen av en resurs i Experience Manager misslyckas kan resursen fortfarande byta namn. (NPR-38753)
+* När du visar resurserna i en [!UICONTROL List View], vissa av titlarna saknas. (CQ-4345746)
+* Skärmläsaren meddelar inte undermenyn till [!UICONTROL Relate] på fliken Grundläggande på sidan Resursegenskaper. (ASSETS-6938)
+* Skärmläsaren identifierar felaktigt mappikonerna på navigeringssidan Resurser med listan över mappar. (ASSETS-6936)
+* När du kopierar en samling saknar bilden en tom `alt` attribute or role=&quot;presentation&quot;. Därför visas bilden för skärmläsaranvändare. (ASSETS-6932)
+* Texten som visas när en resurs kommenteras har inte en 4:5:1 kontrastförhållande jämfört med bakgrundsfärgen. (ASSETS-6931)
+* När du justerar sidbredden på fliken IPTC på sidan Resursegenskaper passas inte sidinnehållet korrekt och resultatet blir vågrät rullning. (ASSETS-6929)
+* När du filtrerar resurser visas filtertexten i [!UICONTROL min] och [!UICONTROL max] fält försvinner när ett värde har angetts. (ASSETS-6925)
+* I Experience Manager-samlingar visas inte skärmläsaren [!UICONTROL email] på hämtningsskärmen. (ASSETS-6923)
+* En alternativ text saknas när elementen kommenteras. (ASSETS-6922)
+* Om texten skrivs i fältet Timmar och Minuter i datumväljaren visas inget textfelmeddelande. Felet identifieras bara med den röda färgen. (ASSETS-6852, ASSETS-6921, ASSETS-6920, ASSETS-6907)
+* Alternativ text i `[role='img']` i filtret Filer saknas. (ASSETS-6919)
+* Felaktigt skärmläsarmeddelande för [!UICONTROL Create] undermeny. (ASSETS-6916)
+* Ta bort-knappen i Experience Manager-samlingar `X` har ingen text att meddela skärmläsarna. (ASSETS-6912)
+* När du använder Color Contrast Analyzer i Experience Manager finns det ingen färgskillnad mellan det aktuella datumet och det valda datumet i datumväljaren i kalenderwidgeten. Det saknas minst 3:1 kontrastförhållande i förhållande till de intilliggande färgerna. (ASSETS-6911)
+* I Experience Manager-filer när du väljer något av alternativen i [!UICONTROL Scheduling] alternativknappen i Hantera publikation visas alternativknappens namn och läge av skärmläsaren. Men **Schemaläggning** etiketten visas inte. (ASSETS-6908, ASSETS-6906)
+* Den alternativa texten saknas för sorteringsikonen. (ASSETS-6904)
+* På sidan Resursegenskaper anger fältnamnet `Person` i fliketiketterna för IPTC-tillägg visas inte av skärmläsarna. Skärmläsaren meddelar endast redigerbara och tomma fält, men inte etikettnamnet. (ASSETS-6903, ASSETS-6848)
+* Anteckningsverktyget kan inte visas med tangentbordet. En mus används för att rita en bild som visar anteckningsverktyget. (ASSETS-6899)
+* I Experience Manager Collections (Samlingar) finns ett tomt fält på **Avancerat** på fliken visas ett felaktigt kontrastförhållande mellan gränsen och en intilliggande färg. (ASSETS-6895)
+* Felaktiga ARIA-attributvärden för vissa element när du redigerar resurser. (ASSETS-6894)
+* Skärmläsaren identifierar inte rubriken korrekt när ett arbetsflöde skapas. (ASSETS-6892)
+* När du kopierar en samling tar du bort SVG-knappen `X` with role=&quot;img&quot; saknar en role=&quot;presentation&quot;. Därför visas bilden för skärmläsaranvändare. (ASSETS-6890)
+* I **Grundläggande** på fliken Resursegenskaper kan skärmläsaren inte meddela att fältet Taggar är expanderat eller komprimerat på rätt sätt. (ASSETS-6889)
+* The **Grundläggande** under Resursegenskaper innehåller sidor med duplicerat ID. (ASSETS-6888)
+* Etiketten för textfältet som definierar en titel när du skapar ett arbetsflöde försvinner när du anger ett värde i textrutan. (ASSETS-6887)
+* Listan över mottagare när en länk delas visas som en datatabell med rubriker, men identifieras inte semantiskt som en datatabell för skärmläsaranvändare. (ASSETS-6886)
+* Inget felmeddelande som representerar ett tomt fält visas i `Add Email Address` fält. Felet representeras bara av en färg. (ASSETS-6885, ASSETS-6843)
+* Platshållartexter, Bana och Alt-text har inte minst kontrastförhållandet 4,5:1 jämfört med bakgrundsfärgen. (ASSETS-6884, ASSETS-6865)
+* Ogiltiga värden för vissa ARIA-attribut när en smart samling sparas. (ASSETS-6882)
+* När du sparar en smart samling är vissa av etiketterna inte korrekt kopplade till skärmläsaren. (ASSETS-6881)
+* På IPTC-fliken i Resursegenskaper meddelar skärmläsaren inte etiketten för nyckelordsformulärfälten. (ASSETS-6879)
+* I Experience Manager-samlingar finns [!UICONTROL Email] fältet identifieras inte som ett obligatoriskt fält och inget felmeddelande visas om du inte anger något värde. (ASSETS-6877)
+* I Experience Manager-filer visas inget felmeddelande i **Länkdelning** skärm visas i `Add Email Address`. Felet identifieras bara när en färg används. (ASSETS-6876, ASSETS-6875)
+* [!UICONTROL Crop and Map] alternativ har inte programmatiska namn när en resurs redigeras. (ASSETS-6874)
+* Filtertexten saknar kontrastförhållande på 4,5:1 jämfört med bakgrundsfärgen. (ASSETS-6873)
+* Texten för mappnamnet på huvudnavigeringssidan har inte ett kontrastförhållande på 4,5:1 jämfört med bakgrundsfärgen. (ASSETS-6872)
+* När du utför [!UICONTROL Copy] för samlingar, **[!UICONTROL Add User]** formulärkontroll för kombinationsruta är inte korrekt kopplad till dess synliga etikett. (ASSETS-6870)
+* Skärmläsaren meddelar inte [!UICONTROL Create] alternativ på undermenyn. (ASSETS-6869)
+* Alternativen Omfång, Arbetsflöden och Tidszon har inte ett kontrastförhållande på 4,5:1 jämfört med bakgrundsfärgen. (ASSETS-6868)
+* Skärmläsaren meddelar felaktigt komprimeringsläget för **Tidslinje** kolumn. (ASSETS-6864)
+* Underordnade element saknas för vissa ARIA-roller när en smart samling sparas. (ASSETS-6862)
+* Nödvändiga ARIA-attribut för när en resurs delas `Search/Add Email Address` har inte angetts. (ASSETS-6860)
+* The **map** kan inte visas med tangentbordet. Du måste i stället klicka med musen för att visa kartdialogrutan. (ASSETS-6859)
+* Underordnade element saknas för vissa ARIA-roller på fliken Grundläggande på sidan Resursegenskaper. (ASSETS-6858)
+* De tomma textinmatningsfälten, som finns på IPTC-fliken i Resursegenskaper, har inte ett kontrastförhållande på 3:1 jämfört med de intilliggande färgerna. (ASSETS-6854, ASSETS-6847)
+* Profilikonerna i **Tidslinje** -avsnittet identifieras felaktigt av skärmläsarna. (ASSETS-6850)
+* Skärmläsaren meddelar inte att kombinationsrutan Granskningsstatus, som finns på fliken Grundläggande i Resursegenskaper, är ett skrivskyddat fält. (ASSETS-6849)
+* Skärmläsaren meddelar inte etiketten för kryssrutorna Markera alla och Anteckning korrekt. (ASSETS-6846)
+* Tangentbordsfokus hoppar över `About Adobe Experience Manager` finns i **Visa hjälpen** -menyn. (ASSETS-6845)
+* Skärmläsare meddelar inte de valda mapparna korrekt när de navigerar i mapplistan med tangentbordspilarna i kortvyn. (ASSETS-6844)
+* När du överför ett PDF till Experience Manager ökar minnesanvändningen hela tiden. (ASSETS-16889)
+* När ett arbetsflöde konverterar en ZIP-fil till ett mappnamn i Resurser, behålls inte skiftläget för ZIP-filnamnet. (ASSETS-16712)
+* När du växlar från Brand Portal till Experience Manager 6.5 visas inte rätt resultat i predikatfiltret när du tillämpar filtret för första gången. (ASSETS-15932)
+* Det går inte att kommentera en video. (ASSETS-15217)
+* **Hantera publikation** alternativet försvinner för en användare utan replikåtkomst och `READ` och `WRITE` behörighet till `ETC` och `VAR`. (ASSETS-15007)
+* Inläsningstiden för egenskapssidan ökar för en resurs med flera referenser. (ASSETS-14182)
+* När en bild avpubliceras från Brand Portal återpubliceras den även av Experience Manager från Dynamic Media, och därför visas ingen bild på den publicerade webbplatsen. (ASSETS-14118)
+* XSS-problem med Smart Crop-kort i Dynamic Media. (ASSETS-14212, ASSETS-14208, ASSETS-13704)
+* XSS-problem i visningsförinställningar i Dynamic Media. (ASSETS-13822)
+* Validera användaråtkomst när du förhandsgranskar DM-resurser på AEM. (CQ-4314757)
+
+
+## Handel {#commerce-6515}
+
+* Det gick inte att skapa en butikssida, vilket stoppar den övergripande katalogdistributionsprocessen. (CQ-4347181)
+
+## [!DNL Forms] {#forms-6515}
 
 >[!NOTE]
 >
->Smarta innehållstjänster kommer inte att vara tillgängliga för nya Experience Manager Assets On-Premise-kunder från och med den 1 september 2022. Ingen påverkan på befintliga kunder med anläggningsarbeten och Adobe Managed Services som redan har aktiverat den här funktionen.
+>Korrigeringar i [!DNL Experience Manager] Forms levereras via ett separat tilläggspaket en vecka efter den schemalagda [!DNL Experience Manager] Lanseringsdatum för Service Pack. I detta fall kommer tilläggspaketen att släppas torsdagen den 1 december 2022. Dessutom kommer en lista över Forms-korrigeringar och förbättringar att läggas till i det här avsnittet.
 
-### [!DNL Dynamic Media] {#dynamic-media-6514}
+## [!DNL Sites] {#sites-6515}
 
-* Lägg till stöd för lösenordsåterställning för Dynamic Media Classic-användare i Experience Manager. (ASSETS-10298)
-* Smarta beskärningar som genereras för bilder med genomskinlig bakgrund har vit bakgrund. (ASSETS-13148)
-* Dynamic Media genererar inga miniatyrbilder för EPS-filer. (ASSETS-10959)
-* Resurser som inte överförs till Dynamic Media-kontot på grund av att en överföringsparameter saknas. (ASSETS-13165)
-* Tillåt att resurser med namn som är längre än 127 tecken överförs till Dynamic Media. (ASSETS-9991)
-* Aktivera JavaScript ES6 (ECMAScript 6) för Dynamic Media-visningsprogram på Experience Manager 6.5.14.0. (NPR-38393)
-* Konfigurera alternativen i Dynamic Media **[!UICONTROL General Settings]** och **[!UICONTROL Publish Setup]** bör inte vara åtkomligt för icke-administratörsanvändare. (ASSETS-8628)
-* Dynamic Media **[!UICONTROL General settings]** sidan visar inte de redan konfigurerade överföringsparametrarna korrekt. (ASSETS-10245)
-* Experience Manager-användargränssnittet visar inget felmeddelande om det inte går att skapa/uppdatera uppsättningen. (ASSETS-10264)
-* Det går inte att använda en sparad princip på någon av behållarna i en redigerbar mall för att lägga till Dynamic Media-komponenter. (ASSETS-11044)
-* Resurser som inte överförs till Dynamic Media-kontot efter att arbetsflödet Dynamic Media Reprocess Assets körs på resurser med felaktig jobbreferens. (ASSETS-12084, ASSETS-9877)
-* Skärmläsaranvändare påverkas av `title` attribut har inte angetts `<frame>` och `<iframe>` i **[!UICONTROL Type to Search]** -dialogrutan. (ASSETS-5483)
-* I skärmläsare, relaterade och meningsfulla `alt=` ska anges för flera bilder som finns under **[!UICONTROL Assets]** i den vänstra rutan. (ASSETS-5644)
-* Skärmläsaren läser inte **[!UICONTROL Mute]** och **[!UICONTROL Unmute]** på video med Dynamic Media. (ASSETS-10169)
+* Experience Manager Sites Launches console was getting up blank. (NPR-39188)
+* Referenserna justerades inte när sidan som hade referensen också behövde aktiveras när sidan flyttades. (NPR-39061)
+* När en layoutbehållare inte döljs med den överordnade behållaren tillämpas inte layoutändringar på alla komponenter i den kapslade behållaren. (NPR-39041)
+* Innehållet överlappar nu inte längre annat innehåll med en bredd på 320 pixlar. (SITES-8885)
+* Fokus har lagts till efter att en dialogruta stängts. (SITES-8885)
 
-## Handel {#commerce-6514}
+### Tillgänglighet {#access-6515}
 
-* Handelsprodukter sorteras inte med kolumnrubriken och använder _fjärr_ sorteringsläge, i stället bör Commerce-produkter sorteras med kolumnrubriker med _lokal_ sorteringsläge. (CQ-4343750, NPR-38498)
+<!-- REMOVED FROM TOTAL RELEASE CANDIDATE LIST * The scrollable region of the Page Editor did not have keyboard access. (SITES-2936) -->
+<!-- REMOVED FROM TOTAL RELEASE CANDIDATE LIST * The color input field of the Page Editor is not labeled or visible on the screen. (SITES-2925) -->
+<!-- REMOVED FROM TOTAL RELEASE CANDIDATE LIST * The iframe in the Page Editor is missing a title attribute; it must have an accessible name. (SITES-2894) -->
+* The **[!UICONTROL Annotation]** knappens hjälpmedelsnamn saknas. (SITES-2892)
+* Status för en ACTIVE-användargränssnittskomponent (**[!UICONTROL Cut]**, **[!UICONTROL Copy]**, **[!UICONTROL Paste]**, **[!UICONTROL Insert Components]**, **[!UICONTROL Group]** och så vidare) har inte minst tre till ett luminiscensförhållande med antingen den inre eller yttre intilliggande bakgrunden. (SITES-8889, SITES-8756, SITES-8885)
+* Statusmeddelandet har inte annonserats automatiskt. (SITES-8889, SITES-8756, SITES-8885)
+* Textinnehållet saknar kontrastförhållande på 4,5:1. (SITES-8756, SITES-8885)
+* Länk- eller knapptext saknar kontrastförhållande på 4,5:1 vid hovring eller fokus. (SITES-8756, SITES-8885)
 
+### [!DNL Content Fragments] {#sites-contentfragments-6515}
 
+* GraphQL genererar ett undantag. Du kan till exempel inte hämta varianttaggar från ett innehållsfragment. Det finns ingen variation med namnet&quot;elektrisk&quot;. Problemet beror på att du ringer `getVariationTags` för en icke-befintlig variation som ger upphov till ett undantag. (SITES-8898)
+* Sortera titelordning i listvyn, både stigande och fallande, och hur rubrikerna med ordningen A, C och B ska se ut. (SITES-7585)
+* Taggningsstöd för varianter av innehållsfragment har lagts till. (SITES-8168)
+* Identifierade och tog bort Odin-specifik kod från Experience Manager 6.5 som inte behövdes. (SITES-3574)
+* När du publicerade ett fragment av en språkkopia från användargränssnittet i Content Fragment Editor publicerades de associerade referenserna i mappen English. (NPR-39182)
+* Datumfält fylls i med ett datum. (NPR-39124)
+* Taggar försvann den andra gången du markerar alternativknappsalternativet. (NPR-39071)
 
-## [!DNL Forms] {#forms-6514}
+### Fluid XP {#sites-fluidxp-6515}
 
-<!--
+* Aktivera stöd för ES6-kompilering för klientbiblioteket `/libs/cq/gui/components/siteadmin/admin/restoretree/clientlibs/restoretree.js`. (NPR-39067)
+* Multifältet i en innehållsfragmentmodell kan inte tömmas och sparas eftersom valideringen sker även om **[!UICONTROL Required]** är inte markerat. (NPR-39063)
+* I antingen **[!UICONTROL Copy]** eller **[!UICONTROL Livecopy]** uppgifter, `cq:targetMetadata` informationen duplicerades felaktigt. Den här funktionen gjorde att två eller flera Experience Fragments i Experience Manager pekade på samma erbjudande som exporterades som mål. (NPR-38970)
+* Efter en åtgärd av typen Återställ träd visas meddelandet `Un-publication pending. #0 in the queue` visas i användargränssnittet för en sida som inte har publicerats alls. (NPR-38847)
 
->[!NOTE]
->
->Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on package a week after the scheduled [!DNL Experience Manager] Service Pack release.
+### Page Editor {#sites-pageeditor-6515}
 
->[!NOTE]
->
->* [!DNL Experience Manager Forms] releases the add-on packages one week after the scheduled [!DNL Experience Manager] Service Pack release date. In this case, the add-on packages will release Thursday, September 1, 2022. In addition, a list of Forms fixes and enhancements will also be added to this section.
+* Ångra tog inte bort den senaste ändringen av text som lades till i komponenten. När sidan uppdaterades togs i stället hela komponenten bort. (SITES-8597)
+* Uppgraderar `jquery-ui` till den senaste versionen resulterade i att sidredigeraren inte fungerade korrekt. (NPR-38596)
+* Innehållet överlappar nu inte längre annat innehåll med en bredd på 320 pixlar. (SITES-8756)
+* lade till fokus efter att dialogrutan stängts (SITES-8756)
 
--->
+## Sling {#sling-6515}
 
-* När en fil bifogas till ett adaptivt formulär med flera paneler och ett utkast av det adaptiva formuläret sparas, inträffar ett fel. (NPR-38978)
-* När en användare konverterar RGB-profil till CMYK-profil med createPDF2 Java™ API med Adobe PDF-inställningar fungerar inte alternativet med Java™ API. Alternativet fungerar bra med det fristående DistillerClient-programmet. (NPR-38858, CQ-4346181)
-* När du har installerat AEM 6.5 Forms Service Pack 12 (6.5.12.0) blir alla alternativ utom att stänga uppgiften otillgängliga i steget Tilldela uppgift AEM Arbetsflöden. (NPR-38743)
-* I en DoR (Document of Record) trunkeras vissa värden i en tabell. (NPR-38657)
-* När du förhandsgranskar FormSet med Data XML och XDP innehåller ett flytande fält visas inga data när du förhandsgranskar en FormSet, men data visas när alternativet Förhandsgranska PDF används.
-* I Adaptiv Forms är alternativknappen och kryssrutan inte i tabbordning. (NPR-38645)
-* När du använder `Summary Step` om du vill generera en DoR-fil (Document of Record) för ett översatt anpassat formulär efter att formuläret har skickats, översätts inte till det lokaliserade språket. (NPR-38567)
-* Alternativet för att inaktivera återförsök AEM arbetsflödesstegen fungerar inte som förväntat. Problemet uppstår ibland. (NPR-38547)
-* När adaptiv form skickas med RTF-fält `an Internal Error while Submitting a Form` fel inträffar. När användaren fokuserar på RTF-fältet inträffar inte felet innan formuläret skickas. (NPR-38542)
-* Ett fel `sling-default-3-AdobeSignRefreshTokenScheduleJob com.adobe.forms.foundation.oauth.model.OAuthConfigSlingModel Refresh Token not present for: /conf/gws-eform/cashlite/settings/cloudconfigs/fdm/cashlite/jcr:content occurs` loggas. (NPR-38541)
-* När en användare överför ett PDF till ett adaptivt formulär slutar AEM Forms-servern att svara. (NPR-38398)
-* När du använder API:t för Document Service för att certifiera PDF i en AEM Forms på OSGi-server misslyckas det med felet: com.adobe.fd.signatures.truststore.errors.exception.CredentialRetrievalException: AEM-DSS-311. (CQ-4346252)
-* När du skickar in utkastet till breven `Could not upload asset from xml input` fel inträffar. Det påverkar inte funktionaliteten. När du öppnar ett utkast återges brevet korrekt. (CQ-4345979, CQ-4344418)
-* När ett datum anges i tyskt format och `Preview with Data` alternativet används för en bokstav och datumfältet återges inte. (CQ-4345783)
-* När du skapar en webbportal och genererar streckkoder baserade på data, avkodas vissa streckkoder inte korrekt. (CQ-4345743)
-* PostScript-konvertering till PDF återger inte utdatadokument med förväntade färger. (CQ-4345074)
-* Resurslösaren orsakar återkommande misslyckade överföringar och resulterar i samma stackspårning som visas flera gånger för en enda sändning. (CQ-4344764)
-* Användarna kan inte öppna de ändrade utkasten som använder `cmDataUrl` parameter. Utkastet öppnas som det ska för första gången. Utgåvorna börjar visas vid efterföljande försök. (CQ-4344418)
-* När användaren skriver `&` -symbolen i ett interaktivt meddelande (IC). Motsvarande IC-kort läses inte in. (CQ-4343969)
-* När du använder formatalternativ i AEM Forms Designer för att generera PCL-filer används inte det angivna formatet för genererade filer. (CQ-4339573)
-* När sidantalet är över 15 misslyckas automatiserad konvertering av dynamiska XDP-formulär till adaptiv form. Detta fungerar bra när sidantalet är mindre än 15. (NPR-35337)
-* När alternativet Lägg till i Favoriter används visas inte statusen för växlingen till skärmläsaren. (NPR-37137)
-* I formulärdatamodellen trunkeras värdena efter decimalerna i databasbaserade formulärdatamodeller för datatypen pengar och liten kostnad. (CQDOC-19509)
-* När du väljer en navigeringslänk för arbetsflödet i HTML Workspace visas inte att navigeringslänken är markerad. (NPR-37138)
-* Funktionen Klottra signaturer är inte kompatibel med riktlinjerna för hjälpmedel. (NPR-37596)
-* AEM Forms använder log4j 1.x. Stöd för log4j 1.x har nått slutet av livscykeln. (NPR-38273)
-* När du använder MSSQL-databasen som en datakälla i en formulärdatamodell och hämtar värden, trunkeras siffror efter decimaltalet i de hämtade värdena. (CQ-4346190)
-* När du öppnar ett formulär som har skapats med Forms 6.1 Designer i Forms 6.5 Designer och redigerar en textruta överskrider styckeavståndet det angivna utrymmet. Alla tidigare inställningar för utrymmet tas bort och du måste formatera om textrutan manuellt. (CQ-4341899)
-* Felaktigt värde visas för streckkoden SSCC-18. Forms-servrar utelämnar värdet till höger om streckkoden. (CQ-4342400)
-* För statisk PDF forms som skapats med Forms 6.5 Designer misslyckas tillgängligheten för PDF med fel `Tab order entry in page with annotations not set to "S"`. (CQ-4343117)
-* Lagt till möjlighet att ange Reader-text på skärmen för hyperlänkar i Forms Designer. (NPR-36221)
-* När du lägger till en upprepningsbar panel i en icke-XFA adaptiv form och antalet upprepningsbara paneler i ett icke-XFA-formulär är mer än 15, kan det ta upp till 7-8 sekunder att lägga till en instans. (NPR-37346)
+* `Repoinit` stöder inte skapande eller hantering av grupper med tomt utrymme i huvudnamnet eftersom gruppnamnet behandlades som en sträng och det gick inte att citera. (SLING-10952)
+* Loggar fylls av misstag med felmeddelanden och undantag. (NPR-39024)
 
-## Integreringar {#integrations-6514}
+## Översättningsprojekt {#translation-6515}
 
-* Aktivera stöd för JavaScript ES6-kompilering (ECMAScript6-läge eller bättre) för minimering av `/libs/cq/analytics/widgets.js` bibliotek. (NPR-38433)
-* Aktivera stöd för JavaScript ES6-kompilering (ESMAScript6-läge eller bättre) för minimering av `/libs/cq/testandtarget/clientlibs/testandtarget/util.js` bibliotek. (NPR-38435)
-* Mer innehåll finns i `/content/campaigns`, desto längre blir anropet till `targeteditor.html` (`/libs/cq/personalization/touch-ui/content/targeteditor.html`) tas när du öppnar sidredigeraren. (NPR-38663)
+* Målsidan lades till i översättningsjobbet för uppdaterade språkkopior via projektpanelen. källsidan uppdaterades inte. (NPR-39278)
+* Översättningsprocessen misslyckades när en förhandsgranskning genererades för alla sidor i ett översättningsprojekt. (NPR-39059)
+* Om språkinställningen inte finns skapas den fortfarande i en språkområdesmapp när referensregler har konfigurerats för en händelse. (NPR-39054)
 
-## Plattform {#platform-6514}
+## Användargränssnitt {#ui-6515}
 
-* Det går inte att logga in på Package Manager för att distribuera uppdateringar. (NPR-38646)
-* I användargränssnittet för resurstaggväljaren visas taggarna i den ordning de skapades. Men om det finns många taggar är det svårt att visa och hantera taggarna eftersom de inte kan sorteras. (CQ-4344279)
-* Skapa ett meddelande i användargränssnittet när en användare personifieras av en administratör eller någon annan som använder **[!UICONTROL Impersonate as]** fält. (CQ-4345288)
-* I en smart samling visades alla resurser vid filtrering med hjälp av en sparad sökning. (CQ-4345326)
-* Ett felaktigt antal valda resurser visas för **[!UICONTROL Add to collection]** när **[!UICONTROL Select All]** är markerat. (CQ-4345424)
-* Ett undantagsmeddelande inträffade när **[!UICONTROL Impersonate as]** fält med en grupp eller en användare som inte finns. (CQ-4346098)
+* JavaScript-fel inträffar i filen `multifield.js` för vissa fält i modellen för innehållsfragment i modellredigeraren för innehållsfragment och även i redigeraren för innehållsfragment. (NPR-39350)
 
-## [!DNL Sites] {#sites-6514}
+## Arbetsflöde {#workflow-6515}
 
-* Oväntade borttagningar av sökvägar inträffade när Experience Manager uppgraderades från 6.5.12.0 till 6.5.13.0. (NPR-38532)
+* Arbetsflödena som gick bra på Experience Manager 6.5.11 kördes inte enhetligt på 6.5.13 i Experience Manager. (NPR-39023)
 
-### Tillgänglighet {#access-6514}
-
-* När du expanderar **[!UICONTROL Switch display format and adjust display setting]** knapp, markera **[!UICONTROL List View]**, **[!UICONTROL Drag and Drop]** ett hjälpmedelsnamn saknas för knappen. (SITES-2863, NPR-38760)
-* Skärmläsaren måste ange ett hjälpmedelsnamn som `Show description for Archive` eller `Show description for mini shopping cart`. Det aktuella hjälpmedelsnamnet visas dock som `Info Circle button show description` for _alla_ knapparna för information om verktygstipset. (SITES-3104)
-* Förbättra ångra för komponenter som inte har funktionen inlineEditing eller dropTarget i `cq:editConfig`. (NPR-38361) <!-- version 2 (old) of the description above * When out of the box components that don't have inlineEditing or dropTarget feature in the _cq_editConfig file (navigation, breadcrumb, embed) are deleted > undeleted (by way of Undo), all configurations are lost and empty placeholder reappears. Component must be reconfigured from scratch. (NPR-38361) -->
-* Listrutan Formatsystem kan ha placerats högst upp på sidan i stället för i sitt sammanhang för komponenten - för komponenter som använder `cq:editConfig` &quot;afteredit: REFRESH_PAGE&quot;. (NPR-38384) <!-- version 2 (old) of description above* When selecting a style option on a component, the Styles box shifts to the upper left corner of the screen, rather than staying put below the style icon. Happens for components that have  cq:editConfig "afteredit: REFRESH_PAGE". (NPR-38384) -->
-* Textkomponenten är feljusterad när den läggs till i kapslade layoutbehållare. (NPR-38193)
-* En tom formatflik visades när det inte fanns någon formatsystemskonfiguration för en komponent. Fliken är nu dold när ingen konfiguration finns. (NPR-38218) <!-- version 2 (old) of description above * Style tab is blank on components without styles/policies. (NPR-38218) -->
-* Egenskapen `useLegacyResponsiveBehaviour` fungerar bara när de autentiseras. (NPR-37996)
-
-### [!DNL Content Fragments] {#sites-contentfragments-6514}
-
-* Fältvalidering för uppräkning av innehållsfragment utfärdas första gången som innehållsfragmentet läses in. (SITES-7140)
-* Kampanjanpassningsfält måste läggas till i RTF-redigeraren i innehållsfragmentsredigeraren. (NPR-38526)
-* När du skapar eller redigerar ett nytt innehållsfragment i Content Fragment-redigeraren sparas inte innehållsfragmentmodellen med Dispatcher. Dessutom stängs inte Content Fragment-redigeraren och ett fel visas i webbläsarloggen. (NPR-38691)
-* Valideringsfel för beständig fråga. (NPR-38523)
-* I dialogrutan Innehållsfragment, under **[!UICONTROL Properties]**, **[!UICONTROL Content Fragment]** fältet behåller inte den sparade banan i markeringspopup-fönstret. (NPR-38632)
-* När du skapar en modell för innehållsfragment och lägger till ett uppräkningsfält av den nedrullningsbara typen, är det den korrekta valideringen för _`is required`_misslyckas. (NPR-38237)
-
-### Kärnkomponenter {#sites-corecomponents-6514}
-
-* Den nya sidans e-postkomponent ska inte tvinga dig till det klassiska användargränssnittet när du redigerar `/etc`. (NPR-38648)
-
-### Page Editor {#sites-pageeditor-6514}
-
-* Användaren kan inte ändra storlek på komponenten till det önskade antalet kolumner. (NPR-38688)
-
-### Mallredigerare {#sites-templateeditor-6514}
-
-* Saknas **[!UICONTROL Delete]** och **[!UICONTROL Cut]** knappar på menyraden i en redigerbar mall efter `cq:actions` egenskapen har anpassats. (NPR-38521)
-* Om en komponent innehåller en annan komponent går det inte att ta bort komponenten i mallstrukturen eftersom **[!UICONTROL Delete]** saknas i menyraden. (NPR-38585)
-
-## Sling {#sling-6514}
-
-* Ett ökat antal öppna filer i produktionen uppstod på grund av en minnesläcka i modulen `DiscoveryLiteDescriptor` in `org.apache.sling.discovery.commons`, version 1.0.20. (NPR-38288)
-* I Experience Manager, från **[!UICONTROL Operations]** > **[!UICONTROL Diagnosis]** uppstår ett fel när du väljer **[!UICONTROL Download Status ZIP]** > **[!UICONTROL Download]**. (NPR-38514)
-
-## Översättningsprojekt {#translation-6514}
-
-* Start för undersidor som lagts till som en referens på en överordnad sida befordrades inte när `isDeep` egenskapen har angetts till `false`. (NPR-38531)
-
-## Användargränssnitt {#ui-6514}
-
-* När du använder **[!UICONTROL Select All]** > **[!UICONTROL Quick Publish]**, publicerade inte Experience Manager alla resurser och visade inte hur många resurser som skulle publiceras i **[!UICONTROL Card]** visa eller **[!UICONTROL List]** vy. (NPR-38546)
-* Felaktigt antal valda resurser visas för **[!UICONTROL Add to collection]** in **[!UICONTROL Select All]** case. (NPR-38633)
-* Inaktiverade användare kan fortfarande läggas till i Samlingar och Projekt. (NPR-38651)
-* Om du tar bort ett filter utan att spara sökformuläret skapas ett fel. (NPR-38698)
-* En användarsession kan inte hämta en `ModifiableValueMap` instans för grupperna för att upprätta det direkta gruppmedlemskapet. (NPR-38710)
-
-## Arbetsflöde {#workflow-6514}
-
-* Aktivera stöd för JavaScript ES6-kompilering (ESMAScript6-läge eller bättre) för minimering av `/libs/cq/inbox/gui/components/inbox/clientlibs/commons.js` bibliotek. (NPR-38304)
-* När arbetsflödet har körts och processtegen är slutförda upprepas samma kommentar flera gånger. (NPR-38364)
-
-## Installera [!DNL Experience Manager] 6.5.14.0 {#install}
+## Installera [!DNL Experience Manager] 6.5.15.0 {#install}
 
 <!-- Remaining content from here to bottom stays the same except for version updating as needed as per update team feedback. -->
 
-* [!DNL Experience Manager] 6.5.14.0 kräver [!DNL Experience Manager] 6.5. Se [uppgraderingsdokumentation](/help/sites-deploying/upgrade.md) för detaljerade anvisningar. <!-- UPDATE FOR EACH NEW RELEASE -->
+* [!DNL Experience Manager] 6.5.15.0 kräver [!DNL Experience Manager] 6.5. Se [uppgraderingsdokumentation](/help/sites-deploying/upgrade.md) för detaljerade anvisningar. <!-- UPDATE FOR EACH NEW RELEASE -->
 * Service Pack-nedladdning finns på Adobe [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html).
-* På en distribution med MongoDB och flera instanser installerar du [!DNL Experience Manager] 6.5.14.0 på en av författarinstanserna med hjälp av Package Manager.<!-- UPDATE FOR EACH NEW RELEASE -->
+* På en distribution med MongoDB och flera instanser installerar du [!DNL Experience Manager] 6.5.15.0 på en av författarinstanserna med hjälp av Package Manager.<!-- UPDATE FOR EACH NEW RELEASE -->
 
 >[!IMPORTANT]
 >
->Adobe rekommenderar inte att du tar bort eller avinstallerar [!DNL Experience Manager] 6.5.14.0-paket. Innan du installerar Service Pack bör du skapa en säkerhetskopia av `crx-repository` om du behöver rulla tillbaka den. <!-- UPDATE FOR EACH NEW RELEASE -->
+>Adobe rekommenderar inte att du tar bort eller avinstallerar [!DNL Experience Manager] 6.5.15.0-paket. Innan du installerar paketet bör du skapa en säkerhetskopia av `crx-repository` om du behöver rulla tillbaka den. <!-- UPDATE FOR EACH NEW RELEASE -->
 
 ### Installera Service Pack på [!DNL Experience Manager] 6.5 {#install-service-pack}
 
@@ -216,7 +190,7 @@ ht-degree: 0%
 
 1. Ta en ögonblicksbild eller en ny säkerhetskopia av din [!DNL Experience Manager] -instans.
 
-1. Hämta Service Pack från [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.14.0.zip). <!-- UPDATE FOR EACH NEW RELEASE -->
+1. Hämta Service Pack från [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip). <!-- UPDATE FOR EACH NEW RELEASE -->
 
 1. Öppna Pakethanteraren och välj **[!UICONTROL Upload Package]** för att överföra paketet. Mer information finns på [Pakethanteraren](/help/sites-administering/package-manager.md).
 
@@ -230,24 +204,24 @@ ht-degree: 0%
 
 **Automatisk installation**
 
-Det finns två olika metoder som du kan använda för att installera automatiskt [!DNL Experience Manager] 6.5.14.0<!-- UPDATE FOR EACH NEW RELEASE -->
+Det finns två olika metoder som du kan använda för att installera automatiskt [!DNL Experience Manager] 6.5.15.0<!-- UPDATE FOR EACH NEW RELEASE -->
 
 * Placera paketet i `../crx-quickstart/install` när servern är tillgänglig online. Paketet installeras automatiskt.
 * Använd [HTTP-API från Package Manager](/help/sites-administering/package-manager.md#package-share). Använd `cmd=install&recursive=true` så att de kapslade paketen installeras.
 
 >[!NOTE]
 >
->Experience Manager 6.5.14.0 stöder inte installation av Bootstrap. <!-- UPDATE FOR EACH NEW RELEASE -->
+>Experience Manager 6.5.15.0 stöder inte installation av Bootstrap. <!-- UPDATE FOR EACH NEW RELEASE -->
 
 **Validera installationen**
 
 Om du vill veta vilka plattformar som är certifierade för att fungera med den här versionen kan du läsa [tekniska krav](/help/sites-deploying/technical-requirements.md).
 
-1. Produktinformationssidan (`/system/console/productinfo`) visar den uppdaterade versionssträngen `Adobe Experience Manager (6.5.14.0)` under [!UICONTROL Installed Products]. <!-- UPDATE FOR EACH NEW RELEASE -->
+1. Produktinformationssidan (`/system/console/productinfo`) visar den uppdaterade versionssträngen `Adobe Experience Manager (6.5.15.0)` under [!UICONTROL Installed Products]. <!-- UPDATE FOR EACH NEW RELEASE -->
 
 1. Alla OSGi-paket är antingen **[!UICONTROL ACTIVE]** eller **[!UICONTROL FRAGMENT]** i OSGi Console (Use Web Console: `/system/console/bundles`).
 
-1. OSGi-paketet `org.apache.jackrabbit.oak-core` är version 1.2.2.12 eller senare (Använd webbkonsol: `/system/console/bundles`). <!-- NPR-38747 -->
+1. OSGi-paketet `org.apache.jackrabbit.oak-core` är version 1.2.2.13 eller senare (Använd webbkonsol: `/system/console/bundles`). <!-- NPR-39436 for 6.5.15.0 --> <!-- OAK VERSION -MAY- NEED TO BE UPDATED FOR EACH NEW RELEASE -->
 
 ### Installera [!DNL Experience Manager] Forms tilläggspaket {#install-aem-forms-add-on-package}
 
@@ -256,9 +230,7 @@ Om du vill veta vilka plattformar som är certifierade för att fungera med den 
 >Hoppa över om du inte använder [!DNL Experience Manager] Forms.
 
 <!-- 
-
 Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on package a week after the scheduled [!DNL Experience Manager] Service Pack release.
-
 -->
 
 1. Kontrollera att du har installerat [!DNL Experience Manager] Service Pack.
@@ -280,11 +252,7 @@ Mer information om hur du installerar det kumulativa installationsprogrammet fö
 
 ### UberJar {#uber-jar}
 
-UberJar för [!DNL Experience Manager] 6.5.13.0 finns i [Maven Central-arkivet](https://repo.maven.apache.org/maven2/com/adobe/aem/uber-jar/6.5.13/). <!-- CHECK FOR UPDATE EACH NEW RELEASE -->
-
->[!NOTE]
->
->I Experience Manager 6.5.14.0 är UberJar-versionen (6.5.13.0) densamma som i den tidigare versionen.
+UberJar för [!DNL Experience Manager] 6.5.15.0 finns i [Maven Central-arkivet](https://repo.maven.apache.org/maven2/com/adobe/aem/uber-jar/6.5.15/). <!-- CHECK FOR UPDATE EACH NEW RELEASE -->
 
 Information om hur du använder UberJar i ett Maven-projekt finns i [använda UberJar](/help/sites-developing/ht-projects-maven.md) och inkludera följande beroende i projektens POM: <!-- CHECK FOR UPDATE EACH NEW RELEASE -->
 
@@ -292,7 +260,7 @@ Information om hur du använder UberJar i ett Maven-projekt finns i [använda Ub
 <dependency>
      <groupId>com.adobe.aem</groupId>
      <artifactId>uber-jar</artifactId>
-     <version>6.5.13</version>
+     <version>6.5.15</version>
      <scope>provided</scope>
 </dependency>
 ```
@@ -314,7 +282,7 @@ Granska om du använder en funktion eller en funktion i en distribution. Planera
 
 ## Kända fel {#known-issues}
 
-<!-- THESE KNOWN ISSUES CARRY OVER EACH RELEASE. THE "PRODUCT UPDATES TEAM" IS SUPPOSED TO VERIFY EACH ISSUE AND LET YOU KNOW IF ANYTHING NEEDS TO BE ADDED, DELETED, OR CHANGED IN THE LIST.
+<!-- THESE KNOWN ISSUES CARRY OVER EACH RELEASE. THE "PRODUCT UPDATES TEAM" IS SUPPOSED TO VERIFY EACH ISSUE AND LET YOU KNOW IF ANYTHING NEEDS TO BE ADDED, DELETED, OR CHANGED IN THIS LIST.
  -->
 
 * [AEM innehållsfragment med GraphQL-indexpaket 1.0.5](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.5.zip)
@@ -352,10 +320,10 @@ Du måste lägga till följande egenskaper i indexdefinitionsnoden för att få 
 
 ## OSGi-paket och innehållspaket som ingår {#osgi-bundles-and-content-packages-included}
 
-Följande textdokument listar de OSGi-paket och innehållspaket som ingår i [!DNL Experience Manager] 6.5.14.0: <!-- UPDATE FOR EACH NEW RELEASE -->
+Följande textdokument listar de OSGi-paket och innehållspaket som ingår i [!DNL Experience Manager] 6.5.15.0: <!-- UPDATE FOR EACH NEW RELEASE -->
 
-* [Förteckning över OSGi-paket som ingår i Experience Manager 6.5.14.0](/help/release-notes/assets/65140_bundles.txt) <!-- UPDATE FOR EACH NEW RELEASE -->
-* [Förteckning över innehållspaket som ingår i Experience Manager 6.5.14.0](/help/release-notes/assets/65140_packages.txt) <!-- UPDATE FOR EACH NEW RELEASE -->
+* [Förteckning över OSGi-paket som ingår i Experience Manager 6.5.15.0](/help/release-notes/assets/65150_bundles.txt) <!-- UPDATE FOR EACH NEW RELEASE -->
+* [Förteckning över innehållspaket som ingår i Experience Manager 6.5.15.0](/help/release-notes/assets/65150_packages.txt) <!-- UPDATE FOR EACH NEW RELEASE -->
 
 ## Begränsade webbplatser {#restricted-sites}
 

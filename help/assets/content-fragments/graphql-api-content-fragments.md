@@ -3,9 +3,9 @@ title: AEM GraphQL API för användning med innehållsfragment
 description: Lär dig hur du använder innehållsfragment i Adobe Experience Manager (AEM) med det AEM GraphQL-API:t för leverans av headless-innehåll.
 feature: Content Fragments,GraphQL API
 exl-id: beae1f1f-0a76-4186-9e58-9cab8de4236d
-source-git-commit: 6f3f88ea0f07c97fa8d7ff3bdd1c89114d12a8a1
+source-git-commit: bb5d39277db10fd8d3b436c8d1f40d9d2010adee
 workflow-type: tm+mt
-source-wordcount: '3986'
+source-wordcount: '4089'
 ht-degree: 0%
 
 ---
@@ -543,6 +543,11 @@ Den grundläggande åtgärden för frågor med GraphQL för AEM följer standard
    * add `List` till modellnamnet, till exempel  `cityList`
    * Se [Exempelfråga - All information om alla städer](#sample-all-information-all-cities)
 
+* Filtret `includeVariations` ingår i `List` frågetyp.  Om du vill hämta variationer för innehållsfragment i frågeresultaten väljer du `includeVariations` filter måste anges till `true`.
+
+   >[!CAUTION]
+   >Filtret `includeVariations` kan inte användas tillsammans med det systemgenererade fältet `_variation`.
+
 * Om du vill använda ett logiskt OR:
    * use ` _logOp: OR`
    * Se [Exempelfråga - Alla personer som har namnet &quot;Jobs&quot; eller &quot;Smith&quot;](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-all-persons-jobs-smith)
@@ -572,7 +577,18 @@ Den grundläggande åtgärden för frågor med GraphQL för AEM följer standard
          >
          >Om den angivna varianten inte finns för ett innehållsfragment returneras den överordnad varianten som ett (fallback) standardvärde.
 
+         >[!CAUTION]
+         >Det systemgenererade fältet `_variation` kan inte användas tillsammans med filtret `includeVariations`.
+
          * Se [Exempelfråga - Alla städer med en namngiven variant](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-cities-named-variation)
+      * `_tags` : visa ID:n för innehållsfragment eller variationer som innehåller taggar, this is an array of `cq:tags` identifierare.
+
+         * Se [Exempelfråga - namn på alla städer som taggats som stadbrytningar](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-names-all-cities-tagged-city-breaks)
+         * Se [Exempelfråga för innehållsfragmentvariationer för en viss modell som har en specifik tagg bifogad](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-wknd-fragment-variations-given-model-specific-tag)
+
+         >[!NOTE]
+         >
+         >Taggar kan också efterfrågas genom att en lista med metadata för ett innehållsfragment visas.
    * Och åtgärder:
 
       * `_operator` : tillämpa särskilda operatörer, `EQUALS`, `EQUALS_NOT`, `GREATER_EQUAL`, `LOWER`, `CONTAINS`, `STARTS_WITH`
@@ -582,6 +598,8 @@ Den grundläggande åtgärden för frågor med GraphQL för AEM följer standard
          * Se [Exempelfråga - Filtrera en array med ett objekt som måste förekomma minst en gång](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-array-item-occur-at-least-once)
       * `_ignoreCase` : för att ignorera skiftläget vid fråga
          * Se [Exempelfråga - Alla städer med SAN i namnet, oavsett fall](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-all-cities-san-ignore-case)
+
+
 
 
 
