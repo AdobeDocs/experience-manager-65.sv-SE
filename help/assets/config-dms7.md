@@ -10,9 +10,9 @@ role: User, Admin
 mini-toc-levels: 4
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: Configuration,Scene7 Mode
-source-git-commit: b33c42edb44617d26ead0df3a9de7bdb39c2e9f4
+source-git-commit: 89bb9223bb5e1e1d8719c5d957ec380872ed3e96
 workflow-type: tm+mt
-source-wordcount: '5910'
+source-wordcount: '6102'
 ht-degree: 2%
 
 ---
@@ -156,6 +156,8 @@ Om du vill markera en markerad mapp för synkronisering till Dynamic Media välj
 1. Välj **[!UICONTROL Save]**.
 1. För att på ett säkert sätt förhandsgranska Dynamic Media-innehåll innan det publiceras använder Experience Manager Author tokenbaserad validering och Experience Manager Author förhandsgranskar därmed Dynamic Media-innehåll som standard. Du kan dock tillåtslista fler IP-adresser för att ge användarna tillgång till säkert förhandsgranskningsmaterial. Information om hur du konfigurerar den här åtgärden i Experience Manager finns i [Konfigurera Dynamic Media Publish Setup för Image Server - fliken Säkerhet](/help/assets/dm-publish-settings.md#security-tab).
 
+Om du vill anpassa konfigurationen ytterligare, t.ex. aktivera åtkomstkontrollistor (ACL), kan du utföra någon av uppgifterna under [(Valfritt) Konfigurera avancerade inställningar i Dynamic Media - Scene7-läge](#optional-configuring-advanced-settings-in-dynamic-media-scene-mode).
+
 <!-- 1. To securely preview Dynamic Media content before it gets published, Experience Manager uses token-based validation and hence Experience Manager Author previews Dynamic Media content by default. However, you can *allowlist* more IPs to provide users access to securely preview content. To set up this action in Experience Manager, see [Configure Dynamic Media Publish Setup for Image Server - Security tab](/help/assets/dm-publish-settings.md#security-tab).     * In Experience Manager Author mode, select the Experience Manager logo to access the global navigation console.
     * In the left rail, select the **[!UICONTROL Tools]** icon, then go to **[!UICONTROL Assets]** > **[!UICONTROL Dynamic Media Publish Setup]**.
     * On the Dynamic Media Image Server page, in the **[!UICONTROL Publish Context]** drop-down list, select **[!UICONTROL Test Image Serving]**.
@@ -165,8 +167,6 @@ Om du vill markera en markerad mapp för synkronisering till Dynamic Media välj
     * In the upper-right corner of the page, select **[!UICONTROL Save]**. -->
 
 Du är nu klar med den grundläggande konfigurationen; är du redo att använda Dynamic Media - Scene7.
-
-Om du vill anpassa konfigurationen ytterligare kan du utföra alla uppgifter under [(Valfritt) Konfigurera avancerade inställningar i Dynamic Media - Scene7-läge](#optional-configuring-advanced-settings-in-dynamic-media-scene-mode).
 
 ### Ändra lösenordet till Dynamic Media {#change-dm-password}
 
@@ -203,6 +203,8 @@ Det ändrade lösenordet sparas när du väljer **[!UICONTROL Save]** i det övr
 
 Om du vill anpassa konfigurationen och konfigurationen av Dynamic Media - Scene7 eller optimera prestandan ytterligare kan du göra något av följande: *valfri* uppgifter:
 
+* [(Valfritt) Aktivera ACL-behörighet i Dynamic Media - Scene7-läge](#optional-enable-acl)
+
 * [(Valfritt) Konfigurera Dynamic Media - Scene7-läge för överföring av resurser som är större än 2 GB](#optional-config-dms7-assets-larger-than-2gb)
 
 * [(Valfritt) Installation och konfiguration av Dynamic Media - inställningar för Scene7-läge](#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings)
@@ -210,6 +212,33 @@ Om du vill anpassa konfigurationen och konfigurationen av Dynamic Media - Scene7
 * [(Valfritt) Justera prestanda för Dynamic Media - Scene7-läge](#optional-tuning-the-performance-of-dynamic-media-scene-mode)
 
 * [(Valfritt) Filtrera resurser för replikering](#optional-filtering-assets-for-replication)
+
+### (Valfritt) Aktivera behörigheter i åtkomstkontrollistan i Dynamic Media - Scene7-läge {#optional-enable-acl}
+
+När du kör Dynamic Media - Scene7-läge på AEM vidarebefordras det för närvarande `/is/image` begäranden om att skydda förhandsvisningsbildservern utan att kontrollera ACL-behörigheter (Access Control List) på PlatformServerServlet. Du kan dock *enable* ACL-behörigheter. Vidarebefordra de behöriga `/is/image` förfrågningar. Om en användare inte har behörighet att komma åt resursen visas felet&quot;403 - Ej tillåtet&quot;.
+
+**Så här aktiverar du ACL-behörigheter i Dynamic Media - Scene7-läge:**
+
+1. Navigera från Experience Manager till **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
+
+   ![2019-08-02_16-13-14](assets/2019-08-02_16-13-14.png)
+
+1. En ny flik i webbläsaren öppnas **[!UICONTROL Adobe Experience Manager Web Console Configuration]** sida.
+
+   ![2019-08-02_16-17-29](assets/2019-08-02_16-17-29.png)
+
+1. Bläddra till namnet på sidan *Adobe CQ Scene7 PlatformServer*.
+
+1. Till höger om namnet väljer du pennikonen (**[!UICONTROL Edit the configuration values]**).
+
+1. På **com.adobe.cq.dam.s7imaging.impl.ps.PlatformServerServlet.name** markerar du kryssrutan för följande två inställningar:
+
+   * `com.adobe.cq.dam.s7imaging.impl.ps.PlatformServerServlet.cache.enable.name` - När den här inställningen är aktiverad cachelagras behörighetsresultatet i två minuter (standard) för att spara.
+   * `com.adobe.cq.dam.s7imaging.impl.ps.PlatformServerServlet.validate.userAccess.name` - När den här inställningen är aktiverad valideras användarens åtkomst medan användaren förhandsgranskar resurser via Dynamic Media Image Server.
+
+   ![Aktivera inställningar för åtkomstkontrollistan i Dynamic Media - Scene7-läge](/help/assets/assets-dm/acl.png)
+
+1. I det nedre högra hörnet av sidan väljer du **[!UICONTROL Save]**.
 
 ### (Valfritt) Konfigurera Dynamic Media - Scene7-läge för överföring av resurser som är större än 2 GB {#optional-config-dms7-assets-larger-than-2gb}
 
