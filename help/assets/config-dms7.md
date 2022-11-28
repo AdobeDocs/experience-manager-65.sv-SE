@@ -10,7 +10,7 @@ role: User, Admin
 mini-toc-levels: 4
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: Configuration,Scene7 Mode
-source-git-commit: 89bb9223bb5e1e1d8719c5d957ec380872ed3e96
+source-git-commit: d3045e1a68d05eb257a6444f75a30faae4950db1
 workflow-type: tm+mt
 source-wordcount: '6102'
 ht-degree: 2%
@@ -203,7 +203,7 @@ Det ändrade lösenordet sparas när du väljer **[!UICONTROL Save]** i det övr
 
 Om du vill anpassa konfigurationen och konfigurationen av Dynamic Media - Scene7 eller optimera prestandan ytterligare kan du göra något av följande: *valfri* uppgifter:
 
-* [(Valfritt) Aktivera ACL-behörighet i Dynamic Media - Scene7-läge](#optional-enable-acl)
+* [(Valfritt) Aktivera ACL-behörigheter i Dynamic Media - Scene7-läge](#optional-enable-acl)
 
 * [(Valfritt) Konfigurera Dynamic Media - Scene7-läge för överföring av resurser som är större än 2 GB](#optional-config-dms7-assets-larger-than-2gb)
 
