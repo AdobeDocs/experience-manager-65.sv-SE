@@ -12,9 +12,9 @@ discoiquuid: e72da81b-4085-49b0-86c3-11ad48978a8a
 docset: aem65
 exl-id: 53d8c654-8017-4528-a44e-e362d8b59f82
 feature: Security
-source-git-commit: bc3dd7d229a75323b98a96d60dcbb3ae2b8c09ab
+source-git-commit: 97b0cec1c8091bbc5736bd68bdee257ca423f93e
 workflow-type: tm+mt
-source-wordcount: '5469'
+source-wordcount: '5454'
 ht-degree: 0%
 
 ---
@@ -215,16 +215,17 @@ AEM WCM använder ACL-listor (Access Control Lists) för att organisera de behö
 
 >[!NOTE]
 >
->Det finns åtkomstkontrollistor som ingår i exemplen. Vi rekommenderar att du granskar och fastställer vad som är lämpligt för dina program. Gå till **CRXDE **och välj **Åtkomstkontroll** för följande noder:
+>Det finns åtkomstkontrollistor som ingår i exemplen. Vi rekommenderar att du granskar och fastställer vad som är lämpligt för dina program. Om du vill granska de åtkomstkontrollistor som ingår går du till **CRXDE** och väljer **Åtkomstkontroll** för följande noder:
 >
->`/etc/cloudservices/facebookconnect/geometrixx-outdoorsfacebookapp`: Tillåter alla läsåtkomst.
->`/etc/cloudservices/twitterconnect/geometrixx-outdoors-twitter-app`: Tillåter alla läsåtkomst.
->`/home/users/geometrixx-outdoors`: Tillåter alla läsåtkomst för `*/profile*` och
->`*/social/relationships/following/*`.
+>* `/etc/cloudservices`
+>* `/home/users/we-retail`
 >
->Ditt anpassade program kan ange åtkomst för andra relationer, som `*/social/relationships/friend/*` eller `*/social/relationships/pending-following/*`.
+>Ditt anpassade program kan ange åtkomst för andra relationer, till exempel:
 >
->När du skapar åtkomstkontrollistor som är specifika för communities, kan medlemmar som ansluter till de communityn beviljas ytterligare behörigheter. Detta kan till exempel vara fallet när användare går med i communities på `/content/geometrixx-outdoors/en/community/hiking` eller `/content/geometrixx-outdoors/en/community/winter-sports`.
+>* `*/social/relationships/friend/*`
+>* eller `*/social/relationships/pending-following/*`.
+>
+>När du skapar åtkomstkontrollistor som är specifika för communities, kan medlemmar som ansluter till de communityn beviljas ytterligare behörigheter. Detta kan till exempel vara fallet när användare går med i communities på: `/content/we-retail/us/en/community`
 
 ### Behörighetsstater {#permission-states}
 
