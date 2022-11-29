@@ -1,9 +1,10 @@
 ---
 title: Det går inte att återställa en skadad CRX-databas som kan användas på JEE-klusterservern
 description: Steg för att återställa skadad CRX-databas
-source-git-commit: a7d125503b0bd3c52cb3a959e2f0dde1a69cbe2b
+exl-id: 212f61f1-360f-4abe-b874-055ec65454c7
+source-git-commit: cf034e8765317ee022aad4693ced37c3fa793ff2
 workflow-type: tm+mt
-source-wordcount: '185'
+source-wordcount: '182'
 ht-degree: 0%
 
 ---
@@ -12,27 +13,26 @@ ht-degree: 0%
 
 ## Problem {#issue}
 
-För AEM Forms som körs på JEE med RDB-beständighet måste AEM Forms värddatorer och databasdatorer vara synkroniserade i absolut tid. Men om det av någon anledning inte längre finns någon synk möjlighet blir CRX-databasen skadad och URL:erna blir otillgängliga. Felet som `AuthenticationsupportService missing` inträffar i loggfiler.
+För AEM Forms på JEE som använder en relationsdatabas ska tiden på den dator som är värd för AEM Forms och relationsdatabasen alltid vara i absolut synk. Om tiden på dessa datorer blir osynkroniserad kan AEM Forms CRX-databas på JEE-servern bli otillgänglig. Den kan vara skadad och oåtkomlig via URL. The `AuthenticationsupportService missing` fel loggas.
+
+## Förutsättningar {#prerequisites}
+
+Säkerhetskopiera din CRX-databas innan du utför stegen nedan.
 
 ## Lösning {#solution}
 
 Utför följande steg för att lösa problemet:
-1. Gå till  [https://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles).
+1. Gå till  `https://[AEM Forms Server]:[port]/system/console/bundles`.
 
 1. Leta reda på `oak-core` paketera och kontrollera om det körs.
 
-1. Starta om `oak-core` paket om det inte körs. Om pausknappen finns framför `oak-core` paketet, då anger det att paketet körs.
+1. Starta om `oak-core` paket om det inte körs. If  ![Pausa](/help/forms/using/assets/stop.png) ikonen visas framför `oak-core` paketet, och då anger det att paketet körs.
 
 1. Om problemet fortfarande inte är löst kan du återställa från CRX-databasen från säkerhetskopian eller återskapa CRX-databasen om det inte finns någon säkerhetskopia.
 
-   >[!NOTE]
-   >
-   >Säkerhetskopiera din CRX-databas innan du utför ovanstående steg.
 
 ## Gäller för {#applies-to}
 
 Denna lösning gäller
 
-* AEM Forms på JEE Cluster Server
-
-
+* AEM Forms i JEE-klustermiljö
