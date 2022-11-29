@@ -2,9 +2,9 @@
 title: Det går inte att återställa en skadad CRX-databas som kan användas på JEE-klusterservern
 description: Steg för att återställa skadad CRX-databas
 exl-id: 212f61f1-360f-4abe-b874-055ec65454c7
-source-git-commit: cf034e8765317ee022aad4693ced37c3fa793ff2
+source-git-commit: c4f776b08cb8cc8c6eea78a3757735e063bec20c
 workflow-type: tm+mt
-source-wordcount: '182'
+source-wordcount: '179'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Utför följande steg för att lösa problemet:
 
 1. Leta reda på `oak-core` paketera och kontrollera om det körs.
 
-1. Starta om `oak-core` paket om det inte körs. If  ![Pausa](/help/forms/using/assets/stop.png) ikonen visas framför `oak-core` paketet, och då anger det att paketet körs.
+1. Starta om `oak-core` paket om det inte körs. If  ![Pausa](/help/forms/using/assets/stop.png) ikonen visas framför `oak-core` paketet, då anger det att paketet körs.
 
 1. Om problemet fortfarande inte är löst kan du återställa från CRX-databasen från säkerhetskopian eller återskapa CRX-databasen om det inte finns någon säkerhetskopia.
 
@@ -35,4 +35,4 @@ Utför följande steg för att lösa problemet:
 
 Denna lösning gäller
 
-* AEM Forms i JEE-klustermiljö
+* AEM Forms i JEE-kluster
