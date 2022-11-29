@@ -1,22 +1,21 @@
 ---
 title: Utvecklingsverktyg
-seo-title: Utvecklingsverktyg
+seo-title: Development Tools
 description: Det finns ett antal tillgängliga verktygsuppsättningar för att utveckla dina JCR-, Apache Sling- eller AEM-program
-seo-description: Det finns ett antal tillgängliga verktygsuppsättningar för att utveckla dina JCR-, Apache Sling- eller AEM-program
+seo-description: To develop your JCR, Apache Sling or AEM applications, a number of tool sets are available
 uuid: 1bee3a52-5d76-4b0c-a222-a02e12ff3a43
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: development-tools
 content-type: reference
 discoiquuid: 76c570e5-46ed-46be-9864-4fe4a83f0caf
-translation-type: tm+mt
-source-git-commit: 7035c19a109ff67655ee0419aa37d1723e2189cc
+exl-id: 97310ed5-f8fb-416c-8a66-68f652abeaa0
+source-git-commit: 4967a6d9ad92272a1ff442456fe65de51cc46a73
 workflow-type: tm+mt
-source-wordcount: '410'
+source-wordcount: '373'
 ht-degree: 0%
 
 ---
-
 
 # Utvecklingsverktyg{#development-tools}
 
@@ -36,7 +35,6 @@ Adobe har släppt följande tillägg:
 
 * [AEM Eclipse-tillägg](/help/sites-developing/aem-eclipse.md)
 * [AEM Brackets Extension](/help/sites-developing/aem-brackets.md)
-* [AEM IntelliJ Extension](https://github.com/headwirecom/aem-ide-tooling-4-intellij/blob/master/documenation/AEM%20Tooling%20Plugin%20for%20IntelliJ%20IDEA.pdf)  (från Headwire)
 
 ### Andra verktyg {#other-tools}
 
@@ -62,4 +60,3 @@ Verktyg som underlättar skapandet av nya projekt:
 >
 >Följande självstudiekurser kan vara intressanta när du startar ett nytt AEM:
 >[Komma igång med AEM Sites del 1 - Projektinställningar](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop/part1.html)
-
