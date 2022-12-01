@@ -1,18 +1,16 @@
 ---
-title: OAuth2-stöd för e-postserverprotokoll i Microsoft® Office 365
-description: Oauth2-stöd för e-postserverprotokoll i Microsoft® Office 365
-source-git-commit: 85189a4c35d1409690cbb93946369244e8848340
+title: Konfigurera OAuth2-baserad autentisering för e-postserverprotokoll i Microsoft® Office 365
+description: Konfigurera OAuth2-baserad autentisering för e-postserverprotokoll i Microsoft® Office 365
+source-git-commit: 35595ffca9d2f6fd80bfe93bade247f5b4600469
 workflow-type: tm+mt
-source-wordcount: '940'
+source-wordcount: '938'
 ht-degree: 0%
 
 ---
 
-# OAuth 2.0-stöd för e-postserverprotokoll för Microsoft® Office 365 {#oauth2-support-for-the-microsoft-mail-server-protocols}
+# Integrera med e-postserverprotokoll för Microsoft® Office 365 {#oauth2-support-for-the-microsoft-mail-server-protocols}
 
-AEM Forms erbjuder OAuth 2.0-stöd för integrering med e-postserverprotokoll för Microsoft® Office 365 så att organisationer kan följa e-postkraven. Azure Active Directory (Azure AD) erbjuder autentiseringstjänsten OAuth 2.0, som gör att ditt program kan ansluta till olika protokoll som IMAP, POP eller SMTP och få åtkomst till e-postdata för Office 365-användare.
-
-Nedan finns stegvisa instruktioner för hur du konfigurerar e-postserverprotokoll för Microsoft® Office 365 för autentisering via OAuth 2.0-tjänsten:
+AEM Forms erbjuder OAuth 2.0-stöd för integrering med Microsoft® Office 365-protokoll för e-postservrar, så att organisationer kan uppfylla kraven för e-post. Du kan använda Azure Active Directory (Azure AD) OAuth 2.0-autentiseringstjänsten för att ansluta till olika protokoll som IMAP, POP eller SMTP och komma åt e-postdata för Office 365-användare. Nedan finns stegvisa instruktioner för hur du konfigurerar e-postserverprotokoll för Microsoft® Office 365 för autentisering via OAuth 2.0-tjänsten:
 
 1. Inloggning [https://portal.azure.com/](https://portal.azure.com/) och söka efter **Azure Active Directory** i sökfältet och klicka på resultatet.
 Du kan även bläddra direkt till [https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview)
@@ -22,9 +20,8 @@ Du kan även bläddra direkt till [https://portal.azure.com/#blade/Microsoft_AAD
 
 1. Fyll i informationen enligt dina krav och klicka sedan **Registrera**.
    ![Konto som stöds](/help/forms/using/assets/azure_suuportedaccountype.png)
-
-
-   I ovanstående fall **Konton i alla organisationskataloger (alla Azure AD-kataloger - Multitenant) och personliga Microsoft®-konton (till exempel Skype, Xbox)** är markerat.
+I ovanstående fall 
+**Konton i alla organisationskataloger (alla Azure AD-kataloger - Multitenant) och personliga Microsoft®-konton (till exempel Skype, Xbox)** är markerat.
 
    >[!NOTE]
    >
@@ -88,7 +85,9 @@ Därefter måste du generera auktoriseringskoden, vilket förklaras i följande 
 ## Genererar uppdateringstoken {#generating-the-refresh-token}
 
 Därefter måste du generera en uppdateringstoken, som beskrivs i följande steg:
+
 1. Öppna kommandotolken och använd följande cURL-kommando för att hämta refreshToken.
+
 1. Ersätt `clientID`, `client_secret` och `redirect_uri` med värdena för programmet tillsammans med värdet för `<code>`:
 
    `curl -H “ContentType application/x-www-form-urlencoded” -d “client_id=[client-id]&scope=https%3A%2F%2Foutlook.office.com%2FIMAP.AccessAsUser.All%20https%3A%2F%2Foutlook.office.com%2FPOP.AccessAsUser.All%20https%3A%2F%2Foutlook.office.com%2FSMTP.Send%20https%3A%2F%2Foutlook.office.com%2FUser.Read%20https%3A%2F%2Foutlook.office.com%2FMail.Read%20offline_access&code=[code]&grant_type=authorization_code&redirect_uri=[redirect_uri]&client_secret=[secretkey_value]” -X POST https://login.microsoftonline.com/common/oauth2/v2.0/token`
@@ -163,9 +162,4 @@ Nu måste du konfigurera e-posttjänsten på den senaste JEE-servern genom att l
 * Om e-posttjänsten inte fungerar som den ska. Försök att återskapa `Refresh Token` enligt ovan. Det tar några minuter innan det nya värdet distribueras.
 
 * Ett fel uppstod när e-postserverinformation konfigurerades i e-postslutpunkten med Workbench.Försök att konfigurera slutpunkten via administratörsgränssnittet i stället för Workbench.
-
-
-
-
-
 

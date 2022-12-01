@@ -8,9 +8,9 @@ user-guide-title: Adobe Experience Manager 6.5 Forms Guide
 breadcrumb-title: Forms Guide
 user-guide-description: Skapa, hantera, publicera och uppdatera digitala formulär.
 role: User
-source-git-commit: 85189a4c35d1409690cbb93946369244e8848340
+source-git-commit: 35595ffca9d2f6fd80bfe93bade247f5b4600469
 workflow-type: tm+mt
-source-wordcount: '3830'
+source-wordcount: '3827'
 ht-degree: 0%
 
 ---
@@ -371,7 +371,6 @@ ht-degree: 0%
    + [Reader utökar policyskyddade PDF-dokument med hjälp av Portable Protection Library](using/reader-extending-policy-protected-pdf-documents-using-ppl.md)
    + [Aktivera AEM för att söka efter dokumentsäkerhetsskyddade PDF- och Microsoft Office-dokument](using/enable-search-for-drm-protected-pdf-and-office-documents-in-aem.md)
    + [Protect ett dokument för en annan användares räkning](using/protect-document-on-behalf-of-another-user.md)
-   + [Stöd för Auth2.0 i Microsoft Mail Service](/help/forms/using/oauth2-support-for-mail-service.md)
 + Forms Designer {#use-forms-designer}
    + [Hjälp för Forms Designer](using/forms-designer-help.md)
    + [Använda Designer](https://www.adobe.com/go/learn_aemforms_designer_65)
@@ -453,6 +452,7 @@ ht-degree: 0%
    + Hantera slutpunkter {#manage-endpoints}
       + [Lägga till, aktivera, ändra eller ta bort slutpunkter](/help/forms/using/admin-help/adding-enabling-modifying-or-removing.md)
       + [Konfigurera e-postslutpunkter](/help/forms/using/admin-help/configuring-email-endpoints.md)
+      + [Konfigurera autentisering av oAuth2.0](/help/forms/using/oauth2-support-for-mail-service.md)
       + [Konfigurerar fjärrslutpunkter](/help/forms/using/admin-help/configuring-remoting-endpoints.md)
       + [Konfigurera bevakade mappslutpunkter](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md)
       + [Konfigurera slutpunkter för Aktivitetshanteraren](/help/forms/using/admin-help/configuring-task-manager-endpoints.md)

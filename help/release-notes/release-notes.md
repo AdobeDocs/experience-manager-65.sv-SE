@@ -2,9 +2,9 @@
 title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
-source-git-commit: 85189a4c35d1409690cbb93946369244e8848340
+source-git-commit: 35595ffca9d2f6fd80bfe93bade247f5b4600469
 workflow-type: tm+mt
-source-wordcount: '3816'
+source-wordcount: '3821'
 ht-degree: 0%
 
 ---
@@ -107,9 +107,9 @@ ht-degree: 0%
 
 ### Viktiga funktioner {#keyfeatures}
 
-* AEM Forms Designer finns nu på spanska. (LC-3920051)
-* Nu kan du använda OAuth2 för att autentisera med Microsoft Office 365 e-postserverprotokoll (SMTP och IMAP). (NPR-35177)
-* Du kan ange [Återvalidera på servern](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/create-an-adaptive-form/configure-submit-actions-and-metadata-submission/configuring-submit-actions.html?lang=en#server-side-revalidation-in-adaptive-form-server-side-revalidation-in-adaptive-form) egenskapen true för att identifiera dolda fält som ska uteslutas från ett postdokument på serversidan. (NPR-38149)
+* AEM Forms Designer finns nu i [Spanska](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html). (LC-3920051)
+* Du kan nu använda [OAuth2 för autentisering med e-postserverprotokoll för Microsoft Office 365 (SMTP och IMAP)](/help/forms/using/oauth2-support-for-mail-service.md). (NPR-35177)
+* Du kan ange [Återvalidera på servern](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/create-an-adaptive-form/configure-submit-actions-and-metadata-submission/configuring-submit-actions.html#enabling-server-side-validation-br) egenskapen true för att identifiera dolda fält som ska uteslutas från ett postdokument på serversidan. (NPR-38149)
 * AEM Forms Designer kräver 32-bitarsversionen av Visual C++ 2019 Redistributable (x86).  (NPR-36690)
 
 ### Korrigeringar {#fixes}
@@ -320,7 +320,7 @@ Granska om du använder en funktion eller en funktion i en distribution. Planera
  -->
 
 * [AEM innehållsfragment med GraphQL-indexpaket 1.0.5](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.5.zip)
-Detta paket behövs för kunder som använder GraphQL; på så sätt kan de lägga till den indexdefinition som behövs baserat på de funktioner de faktiskt använder.
+Det här paketet behövs för kunder som använder GraphQL. på så sätt kan de lägga till den indexdefinition som behövs baserat på de funktioner de faktiskt använder.
 
 * Som [!DNL Microsoft® Windows Server 2019] stöder inte [!DNL MySQL 5.7] och [!DNL JBoss® EAP 7.1], [!DNL Microsoft® Windows Server 2019] stöder inte körklara installationer för [!DNL AEM Forms 6.5.10.0].
 
