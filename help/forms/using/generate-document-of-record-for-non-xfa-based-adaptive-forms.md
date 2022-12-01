@@ -11,9 +11,9 @@ discoiquuid: ce65cb5f-94ec-4423-9fa9-d617e9703091
 docset: aem65
 feature: Adaptive Forms
 exl-id: 7240897f-6b3a-427a-abc6-66310c2998f3
-source-git-commit: 9ee8e79777b89fbf4d6e5b5fd1dbb1ef3bc9ad5d
+source-git-commit: 85189a4c35d1409690cbb93946369244e8848340
 workflow-type: tm+mt
-source-wordcount: '3360'
+source-wordcount: '3337'
 ht-degree: 1%
 
 ---
@@ -298,10 +298,10 @@ När du genererar ett postdokument kan du ändra profileringsinformationen för 
 Om du vill lokalisera den varumärkesinformation som du anger på fliken Dokument av post måste du se till att webbläsarens språkområde är korrekt inställt. Följ de här stegen för att anpassa profileringsinformationen för urkunder:
 
 1. Markera en panel (rotpanelen) i postdokumentet och tryck sedan på ![konfigurera](assets/configure.png).
-1. Tryck ![dortab](assets/dortab.png). Fliken Dokument för post visas.
+1. Tryck ![dortab](/help/forms/using/assets/dortab.png). Fliken Dokument för post visas.
 1. Välj antingen standardmallen eller en anpassad mall för återgivning av postdokumentet. Om du väljer standardmallen visas en miniatyrförhandsvisning av postdokumentet under listrutan Mall.
 
-   ![brandingtemplate](assets/brandingtemplate.png)
+   ![brandingtemplate](/help/forms/using/assets/brandingtemplate.png)
 
    Om du väljer en anpassad mall bläddrar du till en XDP-fil på AEM Forms-servern. Om du vill använda en mall som inte redan finns på din AEM Forms-server måste du först överföra XDP-filen till din AEM Forms-server.
 
@@ -396,7 +396,7 @@ Mer information om hur du använder sidbrytningar och använder flera överordna
 **Inställningar för formulärnivå**
 
 * **Inkludera obundna fält i DoR:** När du anger egenskapen inkluderas obundna fält från schemabaserade adaptiva formulär i postdokumentet. Som standard är det sant.
-* **Uteslut fält från DoR om de är dolda:** Om du ställer in egenskapen åsidosätts beteendet för fältnivåegenskapen Exkludera från dokument för post när det inte är sant. Om fälten är dolda när formuläret skickas, kommer de att exkluderas från postdokumentet om egenskapen är true, förutsatt att egenskapen Exkludera från postdokument inte är inställd.
+* **Uteslut fält från DoR om de är dolda:** Ange egenskapen för att exkludera dolda fält från [!UICONTROL Document of Record] när formulär skickas. När du aktiverar [Återvalidera på servern](/help/forms/using/configuring-submit-actions.md#server-side-revalidation-in-adaptive-form-server-side-revalidation-in-adaptive-form)beräknas de dolda fälten på nytt innan de utesluts från [!UICONTROL Document of Record].
 
 ## Använda en sidbrytning i ett postdokument {#apply-page-breaks-in-dor}
 
@@ -404,13 +404,12 @@ Du kan använda flera metoder för att tillämpa sidbrytningar i ett postdokumen
 
 Så här använder du en sidbrytning på ett postdokument:
 
-1. Tryck på panelen och välj ![Konfigurera](assets/configure-icon.svg).
-
+1. Tryck på panelen och välj ![Konfigurera](/help/forms/using/assets/configure.png)
 1. Expandera **[!UICONTROL Document of Record]** för att visa egenskaperna.
 
-1. I **[!UICONTROL Pagination]** sektion, trycka ![Mapp](assets/folder-icon.svg) i **[!UICONTROL Place]** fält.
+1. I **[!UICONTROL Pagination]** sektion, trycka ![Mapp](/help/forms/using/assets/folder-icon.png) i **[!UICONTROL Place]** fält.
 1. Tryck **[!UICONTROL Top of Next page]** och trycka **[!UICONTROL Select]**. Du kan också trycka **[!UICONTROL Top of Page]**, markerar den överordnad sidan och trycker på **[!UICONTROL Select]** för att använda sidbrytningen.
-1. Tryck ![Spara](assets/save_icon.svg) för att spara egenskaperna.
+1. Tryck ![Spara](/help/forms/using/assets/save_icon.png) för att spara egenskaperna.
 
 Den valda panelen flyttas till nästa sida.
 
@@ -424,13 +423,13 @@ Följande är ett exempel på hur du använder flera överordnad sidor i ett pos
 
 Om du vill använda den andra överordnad sidegenskapen på en panel och den tredje överordnad sidegenskapen på de paneler som följer, ska du utföra följande steg:
 
-1. Tryck på panelen för att använda den andra överordnad sidan och markera ![Konfigurera](assets/configure-icon.svg).
-1. I **[!UICONTROL Pagination]** sektion, trycka ![Mapp](assets/folder-icon.svg) i **[!UICONTROL Place]** fält.
+1. Tryck på panelen för att använda den andra överordnad sidan och markera ![Konfigurera](assets/cmppr.png).
+1. I **[!UICONTROL Pagination]** sektion, trycka ![Mapp](/help/forms/using/assets/folder-icon.png) i **[!UICONTROL Place]** fält.
 1. Tryck **[!UICONTROL On page]** markerar du den andra överordnad sidan och trycker på **[!UICONTROL Select]**.
 AEM Forms använder den andra överordnad sidan på panelen och alla efterföljande paneler i det anpassade formuläret.
-1. I **[!UICONTROL Pagination]** sektion, trycka ![Mapp](assets/folder-icon.svg) i **[!UICONTROL After]** fält.
+1. I **[!UICONTROL Pagination]** sektion, trycka ![Mapp](/help/forms/using/assets/folder-icon.png) i **[!UICONTROL After]** fält.
 1. Tryck **[!UICONTROL Go To page]**, markerar den tredje överordnad sidan och trycker på **[!UICONTROL Select]**.
-1. Tryck ![Spara](assets/save_icon.svg) för att spara egenskaperna.
+1. Tryck ![Spara](/help/forms/using/assets/save_icon.png) för att spara egenskaperna.
 AEM Forms lägger till den tredje överordnad sidan på panelen och alla efterföljande paneler i det anpassade formuläret.
 
 

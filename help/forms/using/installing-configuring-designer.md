@@ -1,7 +1,7 @@
 ---
 title: Installera och konfigurera Designer
 seo-title: Installing and configuring Designer
-description: 'Designer finns som fristående installationsprogram och medföljer också Workbench. Lär dig hur du installerar fristående Designer.  '
+description: Designer finns som fristående installationsprogram och medföljer också Workbench. Lär dig hur du installerar fristående Designer.
 seo-description: Designer is available as a stand-alone installer and is also bundled with Workbench. Learn how to install stand-alone Designer.
 uuid: c5b779d1-cb6a-48f4-87d6-48464753e516
 contentOwner: gtalwar
@@ -12,10 +12,10 @@ discoiquuid: f3a5b5ce-2262-4d5d-a8ae-d59a3a4229e7
 docset: aem65
 role: Admin
 exl-id: 90503d29-e079-43f4-a5dc-ce90ed7844c6
-source-git-commit: a3cf926bde4a4b3a0810058e84ac01012a4a3a57
+source-git-commit: 85189a4c35d1409690cbb93946369244e8848340
 workflow-type: tm+mt
-source-wordcount: '280'
-ht-degree: 26%
+source-wordcount: '290'
+ht-degree: 25%
 
 ---
 
@@ -23,19 +23,20 @@ ht-degree: 26%
 
 ## Krav {#pre-requisites}
 
-AEM Forms Designer-installationsprogrammet kräver 32-bitarsversionen av [Visual C++ redistributable runtime package 2012](https://support.microsoft.com/en-us/topic/the-latest-supported-visual-c-downloads-2647da03-1eea-4433-9aff-95f26a218cc0) och [Visual C++ redistributable runtime package 2013](https://support.microsoft.com/en-in/help/3179560/update-for-visual-c-2013-and-visual-c-redistributable-package). Kontrollera att tidigare nämnda omdistribuerbara körtidspaket är installerade innan du startar installationen.
-
-Du behöver administratörsbehörighet för att installera eller avinstallera Designer.
+* Installera 32-bitarsversionen av  [Visual C++ 2019 Redistributable (x86)](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170). Kontrollera att tidigare nämnda omdistribuerbara körtidspaket är installerade innan du startar installationen.
+* En användare med administratörsbehörighet för att installera eller avinstallera Designer.
 
 ## Installera Designer {#install-designer}
 
 Designer är tillgängligt som ett fristående installationsprogram och ingår även i WorkBench. Om du använder ett fristående installationsprogram för Designer utför du följande steg:
 
-1. Hämta Designer från Adobe [Licenswebbplats](https://licensing.adobe.com/).
+1. Avinstallera den tidigare versionen av AEM Forms Designer, om den redan är installerad.
+1. Hämta Designer från [Adobe licenswebbplats](https://licensing.adobe.com/).
 
    >[!NOTE]
    >
-   >Om du har en tidigare version av Designer installerad avinstallerar du den tidigare versionen innan du fortsätter.
+   > * Adobe Experience Manager 6.5 Forms Service Pack 15 (6.5.15.0) och senare Forms Designer-version innehåller även Service Pack-versionen. Exempel: för Service Pack 15 är versionsnumret 6.5.15.2022112.1.0. I det här exemplet är 6.5.15 Service Pack-version.
+
 
 1. Starta installationen av Designer genom att dubbelklicka på setup.exe.
 1. Gå vidare genom att ange dina uppgifter samt serienummer på den anpassade skärmen.
@@ -57,5 +58,3 @@ msiexec /i "<absolute path>\Designer.msi" /passive SERIALNUMBER=****-****-****-*
 ```shell
 msiexec /i "<absolute path>\Designer.msi" /quiet SERIALNUMBER=****-****-****-****-****-****
 ```
-
-

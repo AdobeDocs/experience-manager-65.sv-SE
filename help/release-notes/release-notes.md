@@ -2,9 +2,9 @@
 title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
-source-git-commit: 937af2df46b93aab6c9010814175d72a9bd583db
+source-git-commit: 85189a4c35d1409690cbb93946369244e8848340
 workflow-type: tm+mt
-source-wordcount: '3139'
+source-wordcount: '3816'
 ht-degree: 0%
 
 ---
@@ -105,9 +105,44 @@ ht-degree: 0%
 
 ## [!DNL Forms] {#forms-6515}
 
->[!NOTE]
->
->Korrigeringar i [!DNL Experience Manager] Forms levereras via ett separat tilläggspaket en vecka efter den schemalagda [!DNL Experience Manager] Lanseringsdatum för Service Pack. I detta fall kommer tilläggspaketen att släppas torsdagen den 1 december 2022. Dessutom kommer en lista över Forms-korrigeringar och förbättringar att läggas till i det här avsnittet.
+### Viktiga funktioner {#keyfeatures}
+
+* AEM Forms Designer finns nu på spanska. (LC-3920051)
+* Nu kan du använda OAuth2 för att autentisera med Microsoft Office 365 e-postserverprotokoll (SMTP och IMAP). (NPR-35177)
+* Du kan ange [Återvalidera på servern](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/create-an-adaptive-form/configure-submit-actions-and-metadata-submission/configuring-submit-actions.html?lang=en#server-side-revalidation-in-adaptive-form-server-side-revalidation-in-adaptive-form) egenskapen true för att identifiera dolda fält som ska uteslutas från ett postdokument på serversidan. (NPR-38149)
+* AEM Forms Designer kräver 32-bitarsversionen av Visual C++ 2019 Redistributable (x86).  (NPR-36690)
+
+### Korrigeringar {#fixes}
+
+* När egenskapen data-disabled i ett adaptivt formulär är aktiverad ändras inte utseendet på alternativknappar och grupper med kryssrutor. (NPR-39368)
+* När ett adaptivt formulär översätts saknas vissa översättningar och visas inte korrekt. (NPR-39367)
+* När en sidas egenskap är dold tas sidan inte bort från formatuppsättningen. (NPR-39325)
+* I ett postdokument finns inte det dynamiska fotnotsavsnittet i slutet av sidan. (NPR-39322)
+* När ett postdokument genereras för ett anpassat formulär tillåts endast vertikal justering för alternativknappar och kryssrutor. Användaren kan inte ange vågrät justering för alternativknappar och kryssrutor. (NPR-39321)
+* Efter driftsättning av Correspondence Management blir org.apache.sling.i18n.impl.JcrResourceBundle.loadPotentialLanguageRoots flaskhals och en majoritet av trådarna nås om flera användare försöker få åtkomst till ett formulär. Det tog ofta mer än en minut att läsa in olika förfrågningar från formulärsidor, även när servern har mycket låg belastning. (NPR-39176, CQ-4347710)
+* När du använder ett RTF-fält i ett lazy loaded Adaptive Form-fragment i ett adaptivt format kan följande fel uppstå:
+   * Du kan inte redigera innehållet eller lägga till något till RTF-fältet.
+   * Visningsmönstret som används på den formaterade texten respekteras inte. 
+   * Felmeddelandet för minsta fältlängd visas inte när formuläret skickas.
+   * Innehållet i det här RTF-fältet tas med flera gånger i den färdiga submit-XML-filen. (NPR-39168)
+* När datumväljaralternativet används i ett adaptivt formulär konverteras inte värdet till rätt format. (NPR-39156)
+* När du förhandsgranskar ett anpassat formulär som ett HTML återges det inte korrekt, eftersom vissa av delformulären överlappar det överordnade formuläret. (NPR-39046)
+* Om panelen har dold tabell och anpassningsbara formulär återges i tabellvy, visas inte fälten på den första fliken korrekt. (NPR-39025)
+* The `Body` -taggen saknas för OTB-mallen (Out-of-the-Box). (NPR-39022)
+* Registreringsdokumentet genereras inte på det anpassade formulärets språk. Den genereras alltid på engelska. (NPR-39020)
+* När ett adaptivt formulär har flera paneler och vissa paneler använder de medföljande **Bifogad fil** -komponenten, `Error occurred while draft saving` fel inträffar. (NPR-38978)
+* När `=` -tecknet används i fälten för kryssrutor, nedrullningsbara listor eller alternativknappar i ett adaptivt formulär och dokumentet för registrering genereras. `=` -tecknet är inte synligt i det genererade postdokumentet.(NPR-38859)
+* Antalet meddelandebatchbearbetningsfel ökar dubbelt efter uppgraderingen av Service Pack 6.5.11.0. (NPR-39636)
+* Om du inte anger testdata går det inte att läsa in Correspondence Management-brev i agentens användargränssnitt. (CQ-4348702)
+* När en användare tillämpar AEM Forms Service Pack 14 (SP14) från AEM Forms som distribuerats med IBM® WebSphere® misslyckas startkomponenten när en databas initieras och `java.lang.NoClassDefFoundError:org/apache/log4j/Logger` fel inträffar.(NPR-39414)
+* När du använder API:t för Document Service för att certifiera PDF misslyckas det på ett AEM formulär på OSGi-servern med följande fel: com.adobe.fd.signatures.truststore.errors.exception.CredentialRetrievalException: AEM-DSS-311-003. (NPR-38855)
+* När användaren försöker använda wrapper-tjänsten för att återge bokstäver med AEM 6.3 Forms `java.lang.reflect.UndeclaredThrowableException` fel inträffar. (CQ-4347259)
+* När en XDP återges som HTML5-formulär återges innehållet på den överordnad sidan först oavsett var objekten finns i ett anpassat formulär. (CQ-4345218)
+* Konfigurationen av programmet på målservern ändras till de inställningar som definierats på källservern även om **Skriv över konfigurationen när importen är klar** alternativet är inte markerat när programmet importeras. (NPR-39044)
+* När en användare försöker uppdatera kopplingskonfigurationen med Configuration Manager misslyckas det.(CQ-4347077)
+* När en användare försöker köra en AEM Forms på JEE-korrigering efter att ha ändrat administratörsanvändarens standardlösenord är ett undantag `com.adobe.livecycle.lcm.core.LCMException[ALC-LCM-200-003]: Failed to whitelist the classes` inträffar. (CQ-4348277)
+* I AEM Designer placeras formulärfält utan bildtexter i tabellceller, inklusive kryssrutor.(LC-3920410)
+* När användaren försöker öppna hjälpen i AEM Forms Designer visas den inte korrekt. (CQ-4341996)
 
 ## [!DNL Sites] {#sites-6515}
 
@@ -285,7 +320,7 @@ Granska om du använder en funktion eller en funktion i en distribution. Planera
  -->
 
 * [AEM innehållsfragment med GraphQL-indexpaket 1.0.5](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.5.zip)
-Det här paketet behövs för kunder som använder GraphQL. på så sätt kan de lägga till den indexdefinition som behövs baserat på de funktioner de faktiskt använder.
+Detta paket behövs för kunder som använder GraphQL; på så sätt kan de lägga till den indexdefinition som behövs baserat på de funktioner de faktiskt använder.
 
 * Som [!DNL Microsoft® Windows Server 2019] stöder inte [!DNL MySQL 5.7] och [!DNL JBoss® EAP 7.1], [!DNL Microsoft® Windows Server 2019] stöder inte körklara installationer för [!DNL AEM Forms 6.5.10.0].
 

@@ -8,9 +8,9 @@ user-guide-title: Adobe Experience Manager 6.5 Forms Guide
 breadcrumb-title: Forms Guide
 user-guide-description: Skapa, hantera, publicera och uppdatera digitala formulär.
 role: User
-source-git-commit: 43a1cff0d7c2fe1d25e41cff3d02d1a55e6792c5
+source-git-commit: 85189a4c35d1409690cbb93946369244e8848340
 workflow-type: tm+mt
-source-wordcount: '3824'
+source-wordcount: '3830'
 ht-degree: 0%
 
 ---
@@ -371,6 +371,7 @@ ht-degree: 0%
    + [Reader utökar policyskyddade PDF-dokument med hjälp av Portable Protection Library](using/reader-extending-policy-protected-pdf-documents-using-ppl.md)
    + [Aktivera AEM för att söka efter dokumentsäkerhetsskyddade PDF- och Microsoft Office-dokument](using/enable-search-for-drm-protected-pdf-and-office-documents-in-aem.md)
    + [Protect ett dokument för en annan användares räkning](using/protect-document-on-behalf-of-another-user.md)
+   + [Stöd för Auth2.0 i Microsoft Mail Service](/help/forms/using/oauth2-support-for-mail-service.md)
 + Forms Designer {#use-forms-designer}
    + [Hjälp för Forms Designer](using/forms-designer-help.md)
    + [Använda Designer](https://www.adobe.com/go/learn_aemforms_designer_65)
