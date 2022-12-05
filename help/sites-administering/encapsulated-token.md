@@ -10,9 +10,9 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 2c263c0d-2521-49df-88ba-f304a25af8ab
 exl-id: e24d815c-83e2-4639-8273-b4c0a6bb008a
-source-git-commit: 32e2a30d9f3327d26b81a07730ace04e4e68b0d1
+source-git-commit: f8d249f5d3fac243b4989c3eca4be2730dcf16ec
 workflow-type: tm+mt
-source-wordcount: '833'
+source-wordcount: '801'
 ht-degree: 0%
 
 ---
@@ -58,7 +58,7 @@ Du kan se hur detta fungerar i en geografiskt distribuerad distribution med Mong
 >
 >* Anteckningssessioner är aktiverade, eller
 >
->* Användare skapas redan i AEM när synkroniseringen startar. Detta innebär att inkapslade token inte stöds i situationer där hanterarna **skapar**-användare under synkroniseringsprocessen.
+>* Användare skapas redan i AEM när synkroniseringen startar. Detta innebär att inkapslade token inte stöds i situationer där hanterarna **skapa** -användare under synkroniseringsprocessen.
 
 
 Det finns några saker du behöver tänka på när du konfigurerar den inkapslade token:
@@ -68,18 +68,14 @@ Det finns några saker du behöver tänka på när du konfigurerar den inkapslad
 
 ### Replikerar HMAC-nyckeln {#replicating-the-hmac-key}
 
-HMAC-nyckeln finns som en binär egenskap på `/etc/key` i databasen. Du kan hämta den separat genom att trycka på länken **view** bredvid den:
-
-![chlimage_1-35](assets/chlimage_1-35a.png)
-
 För att replikera nyckeln mellan instanser måste du:
 
 1. få åtkomst till AEM, vanligtvis en författarinstans, som innehåller det nyckelmaterial som ska kopieras,
-1. Leta reda på `com.adobe.granite.crypto.file`-paketet i det lokala filsystemet. Under den här sökvägen:
+1. Leta reda på `com.adobe.granite.crypto.file` i det lokala filsystemet. Under den här sökvägen:
 
-   * &lt;author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21
+   * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21`
 
-   `bundle.info`-filen i varje mapp identifierar paketnamnet.
+   The `bundle.info` filen i varje mapp identifierar paketnamnet.
 
 1. Navigera till datamappen. Till exempel:
 
@@ -91,7 +87,7 @@ För att replikera nyckeln mellan instanser måste du:
    * `<publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
 
 1. Klistra in de två filer som du kopierade tidigare.
-1. [Uppdatera Crypto ](/help/communities/deploy-communities.md#refresh-the-granite-crypto-bundle) Bundleom målinstansen redan körs.
+1. [Uppdatera krypteringspaketet](/help/communities/deploy-communities.md#refresh-the-granite-crypto-bundle) om målinstansen redan körs.
 
 1. Upprepa stegen ovan för alla förekomster som du vill replikera nyckeln till.
 
@@ -99,6 +95,6 @@ För att replikera nyckeln mellan instanser måste du:
 
 När HMAC-nyckeln har replikerats kan du aktivera den inkapslade token via webbkonsolen:
 
-1. Peka webbläsaren på `https://serveraddress:port/system/console/configMgr`
-1. Leta efter en post med namnet **Autentiseringshanterare för Adobe Granite-token** och klicka på den.
-1. I följande fönster: markera rutan **Aktivera inkapslat tokenstöd** och tryck på **Spara**.
+1. Peka webbläsaren till `https://serveraddress:port/system/console/configMgr`
+1. Leta efter en post som anropas **Autentiseringshanterare för Adobe Granite-token** och klicka på den.
+1. I följande fönster: **Aktivera stöd för inkapslad token** och tryck **Spara**.
