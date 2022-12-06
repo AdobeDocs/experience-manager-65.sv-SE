@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: c02e713e-15f3-408b-879a-d5eb014aef02
 docset: aem65
 exl-id: c4fb1b5e-e15e-450e-b882-fe27b165ff9f
-source-git-commit: 53c39e4aa250b18d4fae0327b313b18901677f2c
+source-git-commit: 6e54073a0c1d67218283b096db3f2e5597f10376
 workflow-type: tm+mt
-source-wordcount: '1660'
+source-wordcount: '1784'
 ht-degree: 0%
 
 ---
@@ -57,6 +57,19 @@ Till exempel:
 Väljaren för ren återgivning använder en transformator i stället för ytterligare skript. den [Sling Rewriter](https://sling.apache.org/documentation/bundles/output-rewriting-pipelines-org-apache-sling-rewriter.html) används som transformator. Detta är konfigurerat på
 
 * `/libs/experience-fragments/config/rewriter/experiencefragments`
+
+### Konfigurera generering av HTML-återgivning {#configuring-html-rendition-generation}
+
+Återgivningen av HTML genereras med Sling Rewriter-pipelines. Rörledningen definieras på `/libs/experience-fragments/config/rewriter/experiencefragments`. Transformatorn HTML stöder följande alternativ:
+
+* `allowedCssClasses`
+   * Ett RegEx-uttryck som matchar CSS-klasserna som ska lämnas i den slutliga återgivningen.
+   * Detta är användbart om kunden vill ta bort vissa specifika CSS-klasser
+* `allowedTags`
+   * En lista över HTML-taggar som ska tillåtas i den slutliga återgivningen.
+   * Som standard är följande taggar tillåtna (ingen konfiguration behövs): html, head, title, body, img, p, span, ul, li, a, b, i, em, strong, h1, h2, h3, h4, h5, h6, br, noscript, div, link och script
+
+Vi rekommenderar att du konfigurerar omskrivaren med en övertäckning. Se [Övertäckningar i AEM as a Cloud Service](/help/sites-developing/overlays.md)
 
 ## Sociala variationer {#social-variations}
 
