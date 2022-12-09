@@ -10,9 +10,9 @@ discoiquuid: 1b905e66-dc05-4f14-8025-62a78feef12a
 docset: aem65
 feature: Adaptive Forms
 exl-id: c611a1f8-9d94-47f3-bed3-59eef722bf98
-source-git-commit: 84ae92f889661a639e931b2a7ba9a999d5258841
+source-git-commit: 26403941129f3a80fdb3e9b964cb943a04b3bfa1
 workflow-type: tm+mt
-source-wordcount: '6742'
+source-wordcount: '6836'
 ht-degree: 0%
 
 ---
@@ -572,6 +572,9 @@ Visar parametrar som används av funktionen. En funktion kan ha flera parametert
    1. string
    1. tal
    1. boolean
+   1. scope
+
+   Omfång används för att referera till fält i ett adaptivt formulär. När ett formulär använder lazy loading kan du använda `scope` för att komma åt fälten. Du kan komma åt fält antingen när fälten läses in eller om fälten markeras som globala.
 
    Alla andra parametertyper kategoriseras under någon av ovanstående. Ingen stöds inte. Välj en av typerna ovan. Typer är inte skiftlägeskänsliga. Blanksteg tillåts inte i parametern `name`. `<Parameter Descrption>` `<parameter>  can have multiple words. </parameter>`
 
@@ -586,6 +589,29 @@ Lägger till information om funktionen, till exempel dess mål.
    1. boolesk
 
    Alla andra returtyper kategoriseras under en av ovanstående. Ingen stöds inte. Välj en av typerna ovan. Returtyperna är inte skiftlägeskänsliga.
+
+* **Detta**
+Syntax: 
+`@this currentComponent`
+
+   Använd @this för att referera till den adaptiva formulärkomponenten som regeln är skriven för.
+
+   Följande exempel baseras på fältvärdet. I följande exempel döljer regeln ett fält i formuläret. The `this` del av `this.value` refererar till den underliggande adaptiva formulärkomponenten, som regeln är skriven för.
+
+   ```
+      /**
+      * @function myTestFunction
+      * @this currentComponent
+      * @param {scope} scope in which code inside function will be executed.
+      */
+      myTestFunction = function (scope) {
+         if(this.value == "O"){
+               scope.age.visible = true;
+         } else {
+            scope.age.visible = false;
+         }
+      }
+   ```
 
 >[!NOTE]
 >
