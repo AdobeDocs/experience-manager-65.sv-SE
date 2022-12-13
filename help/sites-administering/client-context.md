@@ -1,8 +1,8 @@
 ---
 title: Klientkontext
-seo-title: Klientkontext
+seo-title: Client Context
 description: Lär dig hur du använder klientkontexten i AEM.
-seo-description: Lär dig hur du använder klientkontexten i AEM.
+seo-description: Learn how to use the Client Context in AEM.
 uuid: 82b2f976-cb41-42f8-ad4b-3a5cd23cc5f5
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,26 +10,25 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: 7a3322fe-554e-479e-a27c-4259cdd3ba2e
 docset: aem65
-translation-type: tm+mt
-source-git-commit: a8ba56849f6bb9f0cf6571fc51f4b5cae71620e0
+exl-id: 69c66c82-fbd6-406e-aefd-b85480a62109
+source-git-commit: 02afc4eb78acaacc40d3ba1830ccb1e9c3907d0f
 workflow-type: tm+mt
-source-wordcount: '1889'
+source-wordcount: '1877'
 ht-degree: 0%
 
 ---
-
 
 # Klientkontext{#client-context}
 
 >[!NOTE]
 >
->Klientkontext har ersatts av ContextHub. Mer information finns i den relaterade [konfigurationen]ch-configuring.md) och [utvecklardokumentationen](/help/sites-developing/contexthub.md).
+>Klientkontext har ersatts av ContextHub. Mer information finns i relaterade [konfiguration](/help/sites-developing/ch-configuring.md) och [utvecklare](/help/sites-developing/contexthub.md) dokumentation.
 
-Klientkontexten är en mekanism som ger dig viss information om den aktuella sidan och besökaren. Den kan öppnas med **Ctrl-Alt-c** (Windows) eller **control-option-c** (Mac):
+Klientkontexten är en mekanism som ger dig viss information om den aktuella sidan och besökaren. Den kan öppnas med **Ctrl-Alt-c** (fönster) eller **control-option-c** (Mac):
 
 ![](assets/clientcontext_alisonparker.png)
 
-I både [publicerings- och författarmiljön visas information](#propertiesavailableintheclientcontext) om:
+I båda [publicerings- och författarmiljö som visar information](#propertiesavailableintheclientcontext) om:
 
 * Besökaren. beroende på din instans, begärs viss information eller hämtas.
 * Sida-taggar och det antal gånger som den aktuella besökaren har haft åtkomst till dessa taggar (visas när du flyttar musen över en viss tagg).
@@ -41,60 +40,60 @@ Med ikonerna (endast tillgängliga i författarmiljön) kan du konfigurera infor
 
 ![](do-not-localize/clientcontext_icons.png)
 
-* ****
-RedigeraEn ny sida öppnas där du kan  [redigera, lägga till eller ta bort en profilegenskap](#editingprofiledetails).
+* **Redigera**
+En ny sida öppnas där du kan [redigera, lägga till eller ta bort en profilegenskap](#editingprofiledetails).
 
-* **Läs**
-inDu kan  [välja i en lista med profiler och läsa in den profil ](#loading-a-new-user-profile) du vill testa.
+* **Läs in**
+Du kan [välj i en lista över profiler och läsa in profilen](#loading-a-new-user-profile) du vill testa.
 
-* ****
-ÅterställDu kan  [återställa ](#resetting-the-profile-to-the-current-user) profilen till den aktuella användarens profil.
+* **Återställ**
+Du kan [återställa profilen](#resetting-the-profile-to-the-current-user) till den aktuella användarens.
 
 ## Tillgängliga klientkontextkomponenter {#available-client-context-components}
 
-Klientkontexten kan visa följande egenskaper ([beroende på vad som har valts med Redigera](#adding-a-property-component)):
+Klientkontexten kan visa följande egenskaper ([beroende på vad som har markerats med Redigera](#adding-a-property-component)):
 
-**Mer** informationVisar följande information på klientsidan:
+**Surfarinformation** Visar följande klientinformation:
 
-* den **IP-adressen**
-* **** nyckelord som används för sökmotorreferens
-* den **webbläsare** som används
-* det **operativsystem** (operativsystem) som används
-* skärmupplösningen **upplösningen**
-* **musens X**-position
-* placeringen av **musen Y**
+* den **IP-adress**
+* **nyckelord** används för sökmotorreferens
+* den **webbläsare** används
+* den **OS** (operativsystem) som används
+* skärmen **upplösning**
+* den **mus X** position
+* den **mus Y** position
 
-**Aktivitetsström** Här finns information om användarens sociala aktivitet på olika plattformar. till exempel AEM forum, bloggar, omdömen etc.
+**Aktivitetsström** Detta ger information om användarens sociala aktivitet på olika plattformar. till exempel AEM forum, bloggar, omdömen etc.
 
-**** CampaignGör att författare kan simulera en specifik upplevelse för en kampanj. Den här komponenten åsidosätter normal kampanjupplösning och val av upplevelse för att möjliggöra testning av olika permutationer.
+**Campaign** Gör att författare kan simulera en specifik upplevelse för en kampanj. Den här komponenten åsidosätter normal kampanjupplösning och val av upplevelse för att möjliggöra testning av olika permutationer.
 
 Kampanjupplösning baseras vanligtvis på kampanjens prioritetsegenskap. Upplevelsen väljs vanligtvis baserat på segmentering.
 
-**** KundvagnVisar kundvagnsinformation inklusive produktposter (titel, kvantitet, prisFormaterat osv.), lösta kampanjer (titel, meddelande osv.) och verifikationer (kod, beskrivning osv.).
+**Kundvagn** Visar kundvagnsinformation, inklusive produktposter (titel, kvantitet, prisFormaterat osv.), lösta kampanjer (titel, meddelande osv.) och verifikationer (kod, beskrivning osv.).
 
 Kundsessionslagringen meddelar också servern om lösta kampanjändringar (baserat på segmenteringsändringar) med hjälp av ClientContextCartServlet.
 
-**Generic** StoreÄr en allmän komponent som visar innehållet i en butik. Det är en version på lägre nivå av den allmänna lagringsegenskapskomponenten.
+**Allmän butik** Är en allmän komponent som visar innehållet i en butik. Det är en version på lägre nivå av den allmänna lagringsegenskapskomponenten.
 
 Det allmänna arkivet måste konfigureras med en JS-renderare som visar data på ett anpassat sätt.
 
-**Egenskaper** för allmän lagringÄr en allmän komponent som visar innehållet i en butik. Det är en senare version av den allmänna lagringskomponenten.
+**Egenskaper för allmänt arkiv** Är en allmän komponent som visar innehållet i en butik. Det är en senare version av den allmänna lagringskomponenten.
 
 Komponenten Egenskaper för allmän lagring innehåller en standardåtergivning som visar de konfigurerade egenskaperna (tillsammans med en miniatyrbild).
 
-**** GeolocationVisar klientens latitud och longitud. Det använder API:t för geopositionering i HTML5 för att fråga webbläsaren om den aktuella platsen. Detta resulterar i att ett popup-fönster visas för besökaren, där webbläsaren frågar om de godkänner att dela sin plats.
+**Geolokalisering** Visar klientens latitud och longitud. Det använder API:t för geopositionering HTML5 för att fråga webbläsaren om den aktuella platsen. Detta resulterar i att ett popup-fönster visas för besökaren, där webbläsaren frågar om de godkänner att dela sin plats.
 
-När komponenten visas i Context Cloud används ett Google API för att visa en karta som miniatyrbild. Komponenten omfattas av Googles API [användarbegränsningar](https://developers.google.com/maps/documentation/staticmaps/intro#Limits).
+När komponenten visas i Context Cloud används ett Google-API för att visa en karta som miniatyrbild. Komponenten omfattas av Google API [användningsbegränsningar](https://developers.google.com/maps/documentation/staticmaps/intro#Limits).
 
 >[!NOTE]
 >
 >I AEM 6.1 innehåller Geolocation-butiken inte längre funktionen för omvänd geokodning. Geolocation-arkivet hämtar därför inte längre information om den aktuella platsen, till exempel ort eller landskod. Segment som använder dessa lagringsdata kommer inte att fungera korrekt. Geolocation-butiken innehåller endast latitud- och longitudvärdena för en plats.
 
-**JSONP** StoreEn komponent som visar innehåll som är beroende av din installation.
+**JSONP Store** En komponent som visar innehåll som är beroende av installationen.
 
-JSONP-standarden är ett komplement till JSON som gör det möjligt att kringgå samma ursprungspolicy (vilket gör det omöjligt för ett webbprogram att kommunicera med servrar som finns på en annan domän). Det består av att kapsla JSON-objektet i ett funktionsanrop för att kunna läsa in det som `<script>` från den andra domänen (vilket är ett tillåtet undantag till samma ursprungsprincip).
+JSONP-standarden är ett komplement till JSON som gör det möjligt att kringgå samma ursprungspolicy (vilket gör det omöjligt för ett webbprogram att kommunicera med servrar som finns på en annan domän). Den består av att kapsla JSON-objektet i ett funktionsanrop för att kunna läsa in det som en `<script>` från den andra domänen (vilket är ett tillåtet undantag till samma ursprungspolicy).
 
-JSONP Store är som vilken annan butik som helst, men den läser in information som kommer från en annan domän utan att du behöver ha en proxy för den informationen på den aktuella domänen. Se exemplet i [Lagra data i klientkontexten via JSONP](/help/sites-administering/client-context.md#storing-data-in-client-context-via-jsonp).
+JSONP Store är som vilken annan butik som helst, men den läser in information som kommer från en annan domän utan att du behöver ha en proxy för den informationen på den aktuella domänen. Se exemplet i [Lagra data i klientkontext via JSONP](/help/sites-administering/client-context.md#storing-data-in-client-context-via-jsonp).
 
 >[!NOTE]
 >
@@ -102,11 +101,11 @@ JSONP Store är som vilken annan butik som helst, men den läser in information 
 
 **Profildata** Visar information som samlats in i användarprofilen. Till exempel kön, ålder, e-postadress.
 
-**Lösta** segmentVisar vilka segment som för närvarande tolkas (ofta beroende av annan information som visas i klientkontexten). Detta är intressant när man konfigurerar en kampanj.
+**Lösta segment** Visar vilka segment som för närvarande tolkas (ofta beroende på annan information som visas i klientkontexten). Detta är intressant när man konfigurerar en kampanj.
 
 Om musen till exempel befinner sig över den vänstra eller högra delen av fönstret. Det här segmentet används främst för testning eftersom ändringarna kan ses omedelbart.
 
-**Socialt** diagramVisar det sociala diagrammet för användarens vänner och följare.
+**Social Graph** Visar det sociala diagrammet för användarens vänner och följare.
 
 >[!NOTE]
 >
@@ -114,21 +113,21 @@ Om musen till exempel befinner sig över den vänstra eller högra delen av fön
 >
 >`/home/users/geometrixx/aparker@geometrixx.info/profile` Egenskapen => för vänner
 
-**Tagga** molnetVisar taggar som är inställda på den aktuella sidan och de som samlas in när du surfar på webbplatsen. När du för musen över en tagg visas antalet gånger som den aktuella användaren har kommit åt sidor som innehåller den aktuella taggen.
+**Tag Cloud** Visar taggar som angetts på den aktuella sidan och de som samlats in medan webbplatsen surrades. När du för musen över en tagg visas antalet gånger som den aktuella användaren har kommit åt sidor som innehåller den aktuella taggen.
 
 >[!NOTE]
 Taggar som anges för DAM-resurser som visas på de besökta sidorna räknas inte.
 
-**Technographics** StoreDen här komponenten är beroende av din installation.
+**Technographics Store** Den här komponenten är beroende av din installation.
 
-**Viewed** ProductsHåller reda på vilka produkter kunden har tittat på. Kan frågas efter den senast visade produkten eller den senast visade produkten som inte redan finns i kundvagnen.
+**ViewedProducts** Håll koll på de produkter kunden har tittat på. Kan frågas efter den senast visade produkten eller den senast visade produkten som inte redan finns i kundvagnen.
 
 Det här sessionsarkivet har ingen standardklientkontextkomponent.
 
 Mer information finns i [Klientkontext i detalj](/help/sites-developing/client-context.md).
 
 >[!NOTE]
-Siddata är inte längre en standardkomponent i klientkontexten. Om det behövs kan du lägga till detta genom att redigera klientkontexten, lägga till komponenten **Egenskaper för allmän lagring** och sedan konfigurera detta för att definiera **butiken** som `pagedata`.
+Siddata är inte längre en standardkomponent i klientkontexten. Om det behövs kan du lägga till detta genom att redigera klientkontexten och lägga till **Egenskaper för allmänt arkiv** och sedan konfigurera detta för att definiera **Butik** as `pagedata`.
 
 ## Ändra klientkontextprofilen {#changing-the-client-context-profile}
 
@@ -137,7 +136,7 @@ Med klientkontexten kan du interaktivt ändra information:
 * Genom att ändra profilen som används i klientkontexten kan du se de olika upplevelser som olika användare ser för den aktuella sidan.
 * Förutom att ändra användarprofilen kan du ändra viss profilinformation för att se hur sidupplevelsen skiljer sig under olika förhållanden.
 
-### Läser in en ny användarprofil {#loading-a-new-user-profile}
+### Läsa in en ny användarprofil {#loading-a-new-user-profile}
 
 Du kan ändra profilen genom att antingen:
 
@@ -156,7 +155,7 @@ När du är klar kan du [återställa profilen](#resetting-the-profile-to-the-cu
 
    ![](assets/clientcontext_profileloader.png)
 
-1. Klicka på **OK** för att läsa in.
+1. Klicka **OK** att läsa in.
 
 #### Läsa in en ny användarprofil med markeringsreglaget {#loading-a-new-user-profile-with-the-selection-slider}
 
@@ -174,7 +173,7 @@ Du kan också välja en profil med markeringsreglaget:
 
    ![](do-not-localize/clientcontext_resetprofile.png)
 
-### Ändra webbläsarplattformen {#changing-the-browser-platform}
+### Ändra webbläsarplattform {#changing-the-browser-platform}
 
 1. Dubbelklicka på ikonen som representerar webbläsarplattformen. Väljaren öppnas, använder pilarna för att navigera och ser vilka plattformar/webbläsare som är tillgängliga:
 
@@ -182,7 +181,7 @@ Du kan också välja en profil med markeringsreglaget:
 
 1. Klicka på den webbläsare som du vill läsa in. När detaljerna har lästs in klickar du utanför väljaren för att stänga.
 
-### Ändra geopositioneringen {#changing-the-geolocation}
+### Ändra geolokalisering {#changing-the-geolocation}
 
 1. Dubbelklicka på geopositioneringsikonen. En expanderad karta öppnas, där du kan dra markören till en ny plats:
 
@@ -210,13 +209,13 @@ När du redigerar en klientkontext kan du ange (eller återställa) värden för
 
 ### Lägga till en egenskapskomponent {#adding-a-property-component}
 
-När du har öppnat **ClientContext-designsidan** kan du även **lägga till en helt ny egenskap med de tillgängliga komponenterna (komponenterna listas både på sidosparken eller i dialogrutan** Infoga ny komponent **som öppnas efter att du dubbelklickat på** Dra komponenter eller resurser här **-rutan):**
+När du har öppnat **ClientContext designsida** kan du också **Lägg till** en helt ny egenskap som använder de tillgängliga komponenterna (komponenterna listas både på sidosparken eller från **Infoga ny komponent** som öppnas när du dubbelklickar på **Dra komponenter eller resurser hit** box):
 
 ![](assets/clientcontext_alisonparker_new.png)
 
-### Tar bort en egenskapskomponent {#removing-a-property-component}
+### Ta bort en egenskapskomponent {#removing-a-property-component}
 
-När du har öppnat designsidan **ClientContext** kan du även **ta bort en egenskap om den inte längre behövs.** Detta omfattar egendomar som levereras färdiga för leverans. **Återställ** återskapar dessa om de har tagits bort.
+När du har öppnat **ClientContext designsida** kan du också **Ta bort** en egenskap om den inte längre behövs. Detta omfattar egendomar som levereras färdiga för leverans. **Återställ** återskapar dessa om de har tagits bort.
 
 ## Lagra data i klientkontext via JSONP {#storing-data-in-client-context-via-jsonp}
 
@@ -283,4 +282,3 @@ Använd data från det sessionsarkiv som du skapade med JSONP-lagringskomponente
 1. Dra skriptkomponenten till samma AND-behållare och öppna redigeringsdialogrutan. Lägg till följande skript och klicka sedan på OK:
 
    `3 < new Date().getMonth() < 12`
-
