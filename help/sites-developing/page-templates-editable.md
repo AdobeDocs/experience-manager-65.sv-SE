@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 1099cc44-de6d-499e-8b52-f2f5811ae086
 docset: aem65
 exl-id: dcb66b6d-d731-493e-8936-12d529f6cbde
-source-git-commit: 2801ef5ec5ed7b01f4eb046baa439f6d5de56b75
+source-git-commit: d30bfb9e67d0a2a0e870ee0841ed14060def7756
 workflow-type: tm+mt
-source-wordcount: '3249'
+source-wordcount: '3252'
 ht-degree: 0%
 
 ---
@@ -435,7 +435,7 @@ Om du har skapat en mall som kan användas som bas för andra mallar kan du kopi
 1. Skapa en mall precis som vilken redigerbar mall som helst [dokumenteras här](/help/sites-authoring/templates.md#creating-a-new-template-template-author), som kommer att fungera som bas för din malltyp.
 1. Kopiera den nya mallen från CRXDE Lite med hjälp av `templates` nod till `template-types` noden under [mallmapp](/help/sites-developing/page-templates-editable.md#template-folders).
 1. Ta bort mallen från `templates` noden under [mallmapp](/help/sites-developing/page-templates-editable.md#template-folders).
-1. I kopian av mallen som finns under `template-types` nod, ta bort alla `cq:template` och `cq:templateType` `jcr:content` egenskaper.
+1. I kopian av mallen som finns under `template-types` nod, ta bort alla `cq:template` och `cq:templateType` egenskaper från alla `jcr:content` noder.
 
 Du kan också utveckla en egen malltyp med en exempelredigerbar mall som bas, som finns på GitHub.
 
