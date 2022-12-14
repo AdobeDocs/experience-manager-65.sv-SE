@@ -1,8 +1,8 @@
 ---
 title: Revision Cleanup
 seo-title: Revision Cleanup
-description: Lär dig hur du använder funktionen Revision Cleanup i AEM 6.3.
-seo-description: Learn how to use the Revision Cleanup functionality in AEM 6.3.
+description: Lär dig hur du använder funktionen Revision Cleanup i AEM 6.5.
+seo-description: Learn how to use the Revision Cleanup functionality in AEM 6.5.
 uuid: 321f5038-44b0-4f1e-a1aa-2d29074eed70
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,9 +11,9 @@ topic-tags: deploying
 discoiquuid: f03ebe60-88c0-4fc0-969f-949490a8e768
 feature: Configuring
 exl-id: e53c4c81-f62e-4b6d-929a-6649c8ced23c
-source-git-commit: 550e7993f88367ec4b5c1d024dc742c087c1a9eb
+source-git-commit: b7f9b5256e07d4bfbc0c3454e8d2fe112ea650e8
 workflow-type: tm+mt
-source-wordcount: '5912'
+source-wordcount: '5918'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 Varje uppdatering av databasen skapar en ny innehållsrevision. Det innebär att databasstorleken ökar för varje uppdatering. För att undvika okontrollerad databastillväxt måste gamla ändringar rensas bort för att frigöra diskutrymme. Den här underhållsfunktionen kallas Revision Cleanup. Det har funnits som en offlinerutrutin sedan AEM 6.0.
 
-Med AEM 6.3 introducerades en onlineversion av den här funktionen som kallas Online Revision Cleanup. Jämfört med funktionen för rensning av offlineredigering, där AEM ska stängas av, kan rensning av onlinerevision köras när den AEM instansen är online. Rensa onlineändringar är aktiverat som standard och det är det rekommenderade sättet att rensa en revision.
+Med AEM 6.3 och senare introducerades en onlineversion av den här funktionen som kallas Online Revision Cleanup. Jämfört med funktionen för rensning av offlineredigering, där AEM ska stängas av, kan rensning av onlinerevision köras när den AEM instansen är online. Rensa onlineändringar är aktiverat som standard och det är det rekommenderade sättet att rensa en revision.
 
 **Anteckning**: [Se videon](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/revision-cleanup-technical-video-use.html) om du vill ha en introduktion och hur du använder funktionen för rensning av onlineversioner.
 
@@ -162,7 +162,7 @@ I vissa fall kan rensningsprocessen fördröjas om du växlar mellan svansen och
   </tr>
   <tr>
    <td><strong>Stöds det tidigare tjärformatet fortfarande?</strong></td>
-   <td>Endast den nya Oak Segment-taggen stöds med AEM 6.3.</td>
+   <td>Endast den nya Oak Segment-taggen stöds med AEM 6.3 eller senare.</td>
    <td> </td>
   </tr>
   <tr>
@@ -171,7 +171,7 @@ I vissa fall kan rensningsprocessen fördröjas om du växlar mellan svansen och
    <td> </td>
   </tr>
   <tr>
-   <td><strong>Kan jag uppgradera till 6.3 och göra migreringen senare (till exempel genom att använda ett annat underhållsfönster)?</strong></td>
+   <td><strong>Kan jag uppgradera till 6.3 eller senare och göra migreringen senare (till exempel genom att använda ett annat underhållsfönster)?</strong></td>
    <td>Nej, som förklaras ovan är innehållsmigrering obligatorisk.</td>
    <td> </td>
   </tr>
