@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 discoiquuid: 8a5e038e-b39a-41de-88a0-47642e5bd5bf
 exl-id: adff5339-e026-4924-a401-f249f37fc6e6
-source-git-commit: 3c691a9e8673f3229368abbd550982d207eb8ac6
+source-git-commit: eb71119474f03a969a721c792b6f1ac330f9dbf3
 workflow-type: tm+mt
 source-wordcount: '399'
 ht-degree: 0%
@@ -32,7 +32,7 @@ Om du vill synkronisera flera formulär väljer du flera formulär i formulärha
 
 Om ditt AFA-program (AEM Form Application) inte kan synkroniseras utför du följande steg för att åtgärda synkroniseringsproblemet:
 
-1. Gå till **https://&#39;[server]:[port]system/console/configMgr**.
+1. Gå till **https://[server]:[port]/system/console/configMgr**.
 1. Sök efter **[!UICONTROL Adobe Granite Token Authentication Handler]** och klicka **[!UICONTROL Edit]**.
 1. Välj **[!UICONTROL None]** i listrutan för **[!UICONTROL SameSite attribute for the login-token cookie]** -attribut.
 1. Klicka på **[!UICONTROL Save]**.
