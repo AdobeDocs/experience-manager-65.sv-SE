@@ -1,10 +1,10 @@
 ---
 title: CRX/bundle och Start page service unavailable errors once latest 6.5.15.0 service pack is installed
 description: CRX/bundle och Start page service unavailable errors once latest 6.5.15.0 service pack is installed
-source-git-commit: 4e4dca8ae8ed49c5b81934f22572c84938f4f676
+source-git-commit: be7a9cfc226537ab4b360064220fa03bf2045310
 workflow-type: tm+mt
-source-wordcount: '312'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -31,9 +31,9 @@ Efter installation [AEM 6.5.15.0 Service Pack](https://experience.adobe.com/#/do
 1. Leta reda på `bundle.info` -fil.
 1. Öppna `bundle.info` i redigeraren för ant-text och sök efter paketnamnet som `org.apache.felix.http.bridge`.
 
->[!NOTE]
->
->Om `bundle.info` under `bundle52` innehåller inte `org.apache.felix.http.bridge` paket, kontrollera paketnumret inom hakparentes bredvid `org.apache.felix.http.bridge`. Navigera sedan till [aem-forms root]\crx-repository\launchpad\felix\bundle[x] och utför nästa steg på den här platsen.
+   >[!NOTE]
+   >
+   >Om `bundle.info` under `bundle52` innehåller inte `org.apache.felix.http.bridge` paket, kontrollera paketnumret inom hakparentes bredvid `org.apache.felix.http.bridge`. Navigera sedan till [aem-forms root]\crx-repository\launchpad\felix\bundle[x] och utför nästa steg på den här platsen.
 
 1. Navigera till URL: `[aem-forms root]\crx-repository\launchpad\felix\bundle[x]\version0.1`.
 1. Sök efter `bundle.jar` och ändra namn på `bundle.jar` till `bundle.jar.bak`.
