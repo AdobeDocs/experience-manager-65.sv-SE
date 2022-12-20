@@ -2,9 +2,10 @@
 title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
-source-git-commit: 35595ffca9d2f6fd80bfe93bade247f5b4600469
+exl-id: 38227a66-f2a9-4909-9297-1eced4ed6e8c
+source-git-commit: a0e9bfd4bcbf7091d5537c6d88025ef4d6046b4d
 workflow-type: tm+mt
-source-wordcount: '3821'
+source-wordcount: '3952'
 ht-degree: 0%
 
 ---
@@ -220,6 +221,15 @@ ht-degree: 0%
 
 ### Installera Service Pack på [!DNL Experience Manager] 6.5 {#install-service-pack}
 
+>[!NOTE]
+>
+> Innan du installerar den senaste [AEM 6.5.15.0 Service Pack](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip)utför du följande steg:
+> 1. Installera [org.apache.felix.http.servlet-api-1.2.0_fragment-full.jar](https://jira.corp.adobe.com/secure/attachment/9396977/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar) serletfragment.
+> 1. Vänta tills programservern har stabiliserats.
+> 1. Installera [AEM 6.5.15.0 Service Pack](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip).
+
+
+
 1. Starta om instansen innan installationen om instansen är i uppdateringsläge (när instansen uppdaterades från en tidigare version). Adobe rekommenderar att du startar om om den aktuella upptiden för en instans är hög.
 
 1. Ta en ögonblicksbild eller en ny säkerhetskopia av din [!DNL Experience Manager] -instans.
@@ -257,6 +267,11 @@ Om du vill veta vilka plattformar som är certifierade för att fungera med den 
 
 1. OSGi-paketet `org.apache.jackrabbit.oak-core` är version 1.2.2.13 eller senare (Använd webbkonsol: `/system/console/bundles`). <!-- NPR-39436 for 6.5.15.0 --> <!-- OAK VERSION -MAY- NEED TO BE UPDATED FOR EACH NEW RELEASE -->
 
+>[!NOTE]
+>
+>Om du installerar den senaste [AEM Service Pack (6.5.15.0)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip), CRX/bundle och startsidan visar fel som inte är tillgängliga för tjänsten, [klicka här](/help/forms/using/aem-service-pack-installation-solution.md).
+
+
 ### Installera [!DNL Experience Manager] Forms tilläggspaket {#install-aem-forms-add-on-package}
 
 >[!NOTE]
@@ -282,7 +297,7 @@ Mer information om hur du installerar det kumulativa installationsprogrammet fö
 
 >[!NOTE]
 >
->Efter installation av det kumulativa installationsprogrammet för [!DNL Experience Manager] Forms på JEE, installera det senaste Forms-tilläggspaketet, ta bort Forms-tilläggspaketet från `crx-repository\install` och starta om servern.
+>Efter installation av det kumulativa installationsprogrammet för [!DNL Experience Manager] Forms på JEE,installera senaste Service Pack. När installationen av Service Pack är klar installerar du det senaste Forms-tilläggspaketet och tar bort Forms-tilläggspaketet från `crx-repository\install` och starta om servern.
 
 ### UberJar {#uber-jar}
 
