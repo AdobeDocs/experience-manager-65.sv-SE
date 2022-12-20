@@ -3,9 +3,9 @@ title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
 exl-id: 38227a66-f2a9-4909-9297-1eced4ed6e8c
-source-git-commit: a0e9bfd4bcbf7091d5537c6d88025ef4d6046b4d
+source-git-commit: 214c5e27567a515837c0ab52601f3491a9144120
 workflow-type: tm+mt
-source-wordcount: '3952'
+source-wordcount: '3909'
 ht-degree: 0%
 
 ---
@@ -109,7 +109,7 @@ ht-degree: 0%
 ### Viktiga funktioner {#keyfeatures}
 
 * AEM Forms Designer finns nu i [Spanska](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html). (LC-3920051)
-* Du kan nu använda [OAuth2 för autentisering med e-postserverprotokoll för Microsoft Office 365 (SMTP och IMAP)](/help/forms/using/oauth2-support-for-mail-service.md). (NPR-35177)
+* Du kan nu använda [OAuth2 för autentisering med Microsoft® Office 365 e-postserverprotokoll (SMTP och IMAP)](/help/forms/using/oauth2-support-for-mail-service.md). (NPR-35177)
 * Du kan ange [Återvalidera på servern](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/create-an-adaptive-form/configure-submit-actions-and-metadata-submission/configuring-submit-actions.html#enabling-server-side-validation-br) egenskapen true för att identifiera dolda fält som ska uteslutas från ett postdokument på serversidan. (NPR-38149)
 * AEM Forms Designer kräver 32-bitarsversionen av Visual C++ 2019 Redistributable (x86).  (NPR-36690)
 
@@ -141,7 +141,7 @@ ht-degree: 0%
 * När en XDP återges som HTML5-formulär återges innehållet på den överordnad sidan först oavsett var objekten finns i ett anpassat formulär. (CQ-4345218)
 * Konfigurationen av programmet på målservern ändras till de inställningar som definierats på källservern även om **Skriv över konfigurationen när importen är klar** alternativet är inte markerat när programmet importeras. (NPR-39044)
 * När en användare försöker uppdatera kopplingskonfigurationen med Configuration Manager misslyckas det.(CQ-4347077)
-* När en användare försöker köra en AEM Forms på JEE-korrigering efter att ha ändrat administratörsanvändarens standardlösenord är ett undantag `com.adobe.livecycle.lcm.core.LCMException[ALC-LCM-200-003]: Failed to whitelist the classes` inträffar. (CQ-4348277)
+* När en användare försöker köra ett AEM formulär på en JEE-korrigering efter att administratörsanvändarens standardlösenord ändrats, uppstår ett undantag `com.adobe.livecycle.lcm.core.LCMException[ALC-LCM-200-003]: Failed to whitelist the classes` inträffar. (CQ-4348277)
 * I AEM Designer placeras formulärfält utan bildtexter i tabellceller, inklusive kryssrutor.(LC-3920410)
 * När användaren försöker öppna hjälpen i AEM Forms Designer visas den inte korrekt. (CQ-4341996)
 
@@ -221,15 +221,6 @@ ht-degree: 0%
 
 ### Installera Service Pack på [!DNL Experience Manager] 6.5 {#install-service-pack}
 
->[!NOTE]
->
-> Innan du installerar den senaste [AEM 6.5.15.0 Service Pack](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip)utför du följande steg:
-> 1. Installera [org.apache.felix.http.servlet-api-1.2.0_fragment-full.jar](https://jira.corp.adobe.com/secure/attachment/9396977/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar) serletfragment.
-> 1. Vänta tills programservern har stabiliserats.
-> 1. Installera [AEM 6.5.15.0 Service Pack](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip).
-
-
-
 1. Starta om instansen innan installationen om instansen är i uppdateringsläge (när instansen uppdaterades från en tidigare version). Adobe rekommenderar att du startar om om den aktuella upptiden för en instans är hög.
 
 1. Ta en ögonblicksbild eller en ny säkerhetskopia av din [!DNL Experience Manager] -instans.
@@ -269,7 +260,7 @@ Om du vill veta vilka plattformar som är certifierade för att fungera med den 
 
 >[!NOTE]
 >
->Om du installerar den senaste [AEM Service Pack (6.5.15.0)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip), CRX/bundle och startsidan visar fel som inte är tillgängliga för tjänsten, [klicka här](/help/forms/using/aem-service-pack-installation-solution.md).
+>Om du installerar den senaste [AEM Service Pack (6.5.15.0)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip), CRX/bundle och startsidan visar fel som inte är tillgängliga för tjänsten, [klicka här](/help/forms/using/aem-service-pack-installation-solution.md) för att få information om felsökningsstegen.
 
 
 ### Installera [!DNL Experience Manager] Forms tilläggspaket {#install-aem-forms-add-on-package}
@@ -293,11 +284,13 @@ Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on
 >
 >Hoppa över om du inte använder AEM Forms på JEE. Korrigeringar i [!DNL Experience Manager] Forms på JEE levereras via ett separat installationsprogram.
 
-Mer information om hur du installerar det kumulativa installationsprogrammet för [!DNL Experience Manager] Forms on JEE och konfiguration efter driftsättning finns i [versionsinformation](jee-patch-installer-65.md).
+Utför följande steg för alla AEM Forms i JEE-miljöer med andra programservrar än JBoss EAP 7.4.0.
 
->[!NOTE]
->
->Efter installation av det kumulativa installationsprogrammet för [!DNL Experience Manager] Forms på JEE,installera senaste Service Pack. När installationen av Service Pack är klar installerar du det senaste Forms-tilläggspaketet och tar bort Forms-tilläggspaketet från `crx-repository\install` och starta om servern.
+1. Installera det kumulativa installationsprogrammet för [!DNL Experience Manager] Forms on JEE och konfiguration efter driftsättning finns i [versionsinformation](jee-patch-installer-65.md).
+
+1. Installera [org.apache.felix.http.servlet-api-1.2.0_fragment-full.jar](https://jira.corp.adobe.com/secure/attachment/9396977/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar) serverfragmentet och väntar på att programservern ska stabiliseras.
+1. Installera [AEM 6.5.15.0 Service Pack](#install-service-pack).
+1. Installera [senaste Forms-tilläggspaketet](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html), tar du bort Forms-tilläggspaketet från `crx-repository\install` och starta om servern.
 
 ### UberJar {#uber-jar}
 
@@ -334,7 +327,7 @@ Granska om du använder en funktion eller en funktion i en distribution. Planera
 <!-- THESE KNOWN ISSUES CARRY OVER EACH RELEASE. THE "PRODUCT UPDATES TEAM" IS SUPPOSED TO VERIFY EACH ISSUE AND LET YOU KNOW IF ANYTHING NEEDS TO BE ADDED, DELETED, OR CHANGED IN THIS LIST.
  -->
 
-* [AEM innehållsfragment med GraphQL-indexpaket 1.0.5](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.5.zip)
+* [AEM innehållsfragment med GraphQL indexpaket 1.0.5](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.5.zip)
 Det här paketet behövs för kunder som använder GraphQL. på så sätt kan de lägga till den indexdefinition som behövs baserat på de funktioner de faktiskt använder.
 
 * Som [!DNL Microsoft® Windows Server 2019] stöder inte [!DNL MySQL 5.7] och [!DNL JBoss® EAP 7.1], [!DNL Microsoft® Windows Server 2019] stöder inte körklara installationer för [!DNL AEM Forms 6.5.10.0].
