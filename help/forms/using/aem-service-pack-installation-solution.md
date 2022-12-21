@@ -1,10 +1,10 @@
 ---
 title: CRX/bundle och Start page service unavailable errors once latest 6.5.15.0 service pack is installed
 description: CRX/bundle och Start page service unavailable errors once latest 6.5.15.0 service pack is installed
-source-git-commit: be7a9cfc226537ab4b360064220fa03bf2045310
+source-git-commit: f5bf33e0a2ff73b8884a55bbe77e87ee991aeef9
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '344'
+ht-degree: 1%
 
 ---
 
@@ -22,7 +22,7 @@ När du har installerat AEM 6.5.15.0 Service Pack visar CRX/bundle och startsida
 
 >[!NOTE]
 >
->Felsökningsstegen gäller för alla programservrar utom JBoss EAP 7.4.
+>Felsökningsstegen gäller alla programservrar utom JBoss EAP 7.4.
 
 Efter installation [AEM 6.5.15.0 Service Pack](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip)Om det uppstår fel i CRX/bundle och startsidan när tjänsten inte är tillgänglig utför du följande steg:
 
@@ -37,10 +37,9 @@ Efter installation [AEM 6.5.15.0 Service Pack](https://experience.adobe.com/#/do
 
 1. Navigera till URL: `[aem-forms root]\crx-repository\launchpad\felix\bundle[x]\version0.1`.
 1. Sök efter `bundle.jar` och ändra namn på `bundle.jar` till `bundle.jar.bak`.
-1. Kopiera `bundle.jar` på den här platsen från [Programvarudistribution](https://jira.corp.adobe.com/secure/attachment/9402702/bundle.jar).
-1. Starta programservern, vänta tills loggarna har stabiliserats och kontrollera pakettillståndet.
-1. När alla paket är aktiverade installerar du `org.apache.felix.http.servlet-api-1.2.0_fragment-full.jar` serletfragment från `system/console/bundles` hämtat från [Programvarudistribution.](https://jira.corp.adobe.com/secure/attachment/9396977/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar)
-1. Vänta igen på att programservern ska stabiliseras.
+1. Kopiera `bundle.jar` på den här platsen från [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/bundle.jar).
+1. Starta programservern, vänta på att loggarna ska stabiliseras och kontrollera paketläget.
+1. När alla paket är aktiverade installerar du `org.apache.felix.http.servlet-api-1.2.0_fragment-full.jar` serletfragment från `system/console/bundles` hämtat från [Programvarudistribution.](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar) och vänta på att programservern ska stabiliseras.
 1. Stoppa programservern.
 1. Navigera till `[aem-forms root]\crx-repository\launchpad\felix\bundle52\version0.1` och ta bort `bundle.jar`.
 1. Byt namn på `bundle.jar.bak` till `bundle.jar`.
