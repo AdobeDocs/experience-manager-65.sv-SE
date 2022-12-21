@@ -1,8 +1,8 @@
 ---
 title: ASRP - Adobe lagringsresursleverantör
-seo-title: ASRP - Adobe lagringsresursleverantör
+seo-title: ASRP - Adobe Storage Resource Provider
 description: Konfigurera AEM Communities för att använda en relationsdatabas som gemensam lagringsplats
-seo-description: Konfigurera AEM Communities för att använda en relationsdatabas som gemensam lagringsplats
+seo-description: Set up AEM Communities to use a relational database as its common store
 uuid: abe47ad9-9f72-4dad-a5e9-6d621a9722d4
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -12,9 +12,9 @@ discoiquuid: 3e81b519-57ca-4ee1-94bd-7adac4605407
 docset: aem65
 role: Admin
 exl-id: 6430ed96-5d96-41b6-866f-90b34ff84f7a
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 42feafa381c129117dae5345255702f0b0951a17
 workflow-type: tm+mt
-source-wordcount: '821'
+source-wordcount: '803'
 ht-degree: 0%
 
 ---
@@ -44,18 +44,18 @@ Konsumentnycklarna och de hemliga nycklarna delas över alla rapporteringsprogra
 
 ### Välj ASRP {#select-asrp}
 
-Med konsolen [Lagringskonfiguration](/help/communities/srp-config.md) kan du välja standardlagringskonfiguration, som identifierar vilken implementering av SRP som ska användas.
+The [Konsol för lagringskonfiguration](/help/communities/srp-config.md) gör det möjligt att välja standardlagringskonfiguration, som identifierar vilken implementering av SRP som ska användas.
 
 **I AEM Author-instans:**
 
-* Navigera från global navigering till **[!UICONTROL Tools > Communities > Storage Configuration]** och välj **[!UICONTROL Adobe Storage Resource Provider (ASRP)]**.
+* Navigera från global navigering till **[!UICONTROL Tools > Communities > Storage Configuration]** och markera **[!UICONTROL Adobe Storage Resource Provider (ASRP)]**.
 
 ![asrp-default](assets/asrp-default.png)
 
 Följande information kommer från provisioneringsprocessen:
 
-* **URL** för datacenter: Nedrullningsbar meny för att välja det produktionsdatacenter som din kontorepresentant har identifierat.
-* **Standardrapportsvit**: Ange namnet på standardrapportsviten.
+* **URL för datacenter**: Nedrullningsbar meny för att välja det produktionsdatacenter som din kontorepresentant har identifierat.
+* **Standard Report Suite**: Ange namnet på standardrapportsviten.
 * **Konsumentnyckel**: Ange konsumentnyckeln.
 * **Hemlighet**: Ange hemligheten.
 * Välj **Skicka**.
@@ -67,11 +67,11 @@ Förbered publiceringsinstanserna:
 
 Testa anslutningen när konfigurationen har skickats:
 
-* Välj **Testa konfiguration**.
+* Välj **Test Config**.
 
-   Testa anslutningen till datacentret från konsolen Lagringskonfiguration för varje författare och publiceringsinstans.
+   Testa anslutningen till datacentret från lagringskonsolen för varje författare och publiceringsinstans.
 
-* Se till att URL:er för platsen för profildata kan dirigeras från datacentret genom att [externalisera länkar](#externalize-links).
+* Se till att URL:er för webbplatsen för profildata kan dirigeras från datacentret av [externalisera länkar](#externalize-links).
 
 ### Replikera krypteringsnyckeln {#replicate-the-crypto-key}
 
@@ -81,13 +81,13 @@ Följ instruktionerna på [Replikera krypteringsnyckeln](/help/communities/deplo
 
 ### Gör länkar externt {#externalize-links}
 
-Korrigera profil- och profilbildslänkar genom att [konfigurera länkutjämnaren](/help/sites-developing/externalizer.md).
+Korrigera profil- och profilbildslänkar genom att kontrollera att [Konfigurera länkfunktionen](/help/sites-developing/externalizer.md).
 
 Var noga med att ange att domänerna ska vara URL:er som är routningsbara från URL:en för datacenter (ASRP-slutpunkt).
 
 ### Tidssynkronisering {#time-synchronization}
 
-För att autentiseringen med ASRP-slutpunkten ska lyckas måste datorerna som kör ditt värdbaserade AEM Communities vara tidssynkroniserade, till exempel med [NTP-protokollet (Network Time Protocol)](https://www.ntp.org/).
+För att autentiseringen med ASRP-slutpunkten ska lyckas måste datorerna som kör ditt värdbaserade AEM Communities vara tidssynkroniserade, till exempel med [NTP (Network Time Protocol)](https://www.ntp.org/).
 
 ### Publicera konfigurationen {#publishing-the-configuration}
 
@@ -97,25 +97,25 @@ Så här gör du den identiska konfigurationen tillgänglig i publiceringsmiljö
 
 I AEM Author-instans:
 
-* Navigera från huvudmenyn till **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Replication]**
+* Navigera från huvudmenyn till **[!UICONTROL Tools]** > **[!UICONTROL Deployment]** > **[!UICONTROL Replication]**
 * Välj **Aktivera träd**
-* **Startsökväg**: bläddra till  `/conf/global/settings/communities/srpc/`
-* Avmarkera **Bara ändrad**
+* **Startbana**: bläddra till `/conf/global/settings/communities/srpc/`
+* Avmarkera **Endast ändrad**
 * Välj **Aktivera**
 
 ## Uppgradera från AEM 6.0 {#upgrading-from-aem}
 
 >[!CAUTION]
 >
->Om du aktiverar ASRP på en publicerad communitywebbplats visas inte längre någon UGC som redan lagrats i [JCR](/help/communities/jsrp.md), eftersom det inte finns någon synkronisering av data mellan lokal lagring och molnlagring.
+>Om du aktiverar ASRP på en publicerad communitywebbplats lagras eventuell UGC i [JCR](/help/communities/jsrp.md) är inte längre synlig eftersom det inte finns någon synkronisering av data mellan lokal lagring och molnlagring.
 
-**`AEM Communities Extension`** introducerades tidigare i AEM 6.0 sociala communities som en molntjänst. Från och med AEM 6.1 Communities behövs ingen molnkonfiguration. Välj bara ASRP från [lagringskonfigurationskonsolen](/help/communities/srp-config.md).
+**`AEM Communities Extension`** introducerades tidigare i AEM 6.0 sociala communities som en molntjänst. Från och med AEM 6.1 Communities behövs ingen molnkonfiguration. Välj bara ASRP från [lagringskonfigurationskonsol](/help/communities/srp-config.md).
 
-På grund av den nya lagringsstrukturen är det nödvändigt att följa [uppgraderingsinstruktionerna](/help/communities/upgrade.md#adobe-cloud-storage) när du uppgraderar från sociala communities till Communities.
+På grund av den nya lagringsstrukturen är det nödvändigt att följa [uppgradera](/help/communities/upgrade.md#adobe-cloud-storage) Instruktioner när du uppgraderar från sociala communityn till Communities.
 
 ## Hantera användardata {#managing-user-data}
 
-Mer information om *användare*, *användarprofiler* och *användargrupper*, som ofta anges i publiceringsmiljön, finns på
+För information om *användare*, *användarprofiler* och *användargrupper*, som ofta används i publiceringsmiljön, besök
 
 * [Användarsynkronisering](/help/communities/sync.md)
 * [Hantera användare och användargrupper](/help/communities/users.md)
@@ -124,17 +124,17 @@ Mer information om *användare*, *användarprofiler* och *användargrupper*, som
 
 ### UGC försvinner efter uppgradering {#ugc-disappears-after-upgrade}
 
-Om du uppgraderar från en befintlig AEM 6.0 social communitywebbplats ska du följa [uppgraderingsinstruktionerna](/help/communities/upgrade.md#adobe-cloud-storage), annars verkar UGC gå förlorat.
+Om du uppgraderar från en befintlig AEM 6.0 social community ska du följa [uppgraderingsinstruktioner](/help/communities/upgrade.md#adobe-cloud-storage), annars verkar användargenererat innehåll gå förlorat.
 
 ### Autentiseringsfel {#authentication-errors}
 
 Om du får autentiseringsfel mot datacenter-URL:en, och AEM error.log innehåller meddelanden om inaktuella tidsstämplar, kontrollerar du att tidssynkronisering pågår.
 
-Använd ett verktyg som [NTP (Network Time Protocol)](https://www.ntp.org/) för att synkronisera tiden för alla AEM författare- och publiceringsservrar.
+Använd ett verktyg som [NTP (Network Time Protocol)](https://www.ntp.org/) för att synkronisera alla AEM författare och publiceringsservrar.
 
 ### Nytt innehåll visas inte i sökningar {#new-content-does-not-appear-in-searches}
 
-Lagringsinfrastrukturen i Adobe använder *slutlig konsekvens* för att uppnå sina mål för skalning och prestanda. Därför är nytt innehåll inte tillgängligt direkt och det tar flera sekunder innan det visas i sökresultaten.
+Adobe molnlagringsinfrastruktur använder *slutlig konsekvens* för att uppnå sina mål för skalning och prestanda. Därför är nytt innehåll inte tillgängligt direkt och det tar flera sekunder innan det visas i sökresultaten.
 
 Medan intervallet som påverkar den slutliga konsekvensen övervakas, ska du kontakta din kontorepresentant om det tar längre tid än några sekunder innan nytt innehåll visas i sökningar.
 
@@ -146,5 +146,5 @@ Gå till konsolen Lagringskonfiguration på alla författare och publicera AEM e
 
 I JCR, om [/conf/global/settings/communities](https://localhost:4502/crx/de/index.jsp#/etc/socialconfig/):
 
-* Innehåller ingen [srpc](https://localhost:4502/crx/de/index.jsp#/conf/global/settings/communities/srp)-nod, vilket betyder att lagringsprovidern är JSRP.
-* Om srpc-noden finns och innehåller [defaultconfiguration](https://localhost:4502/crx/de/index.jsp#/conf/global/settings/communities/srp/defaultconfiguration)-noden definierar standardkonfigurationens egenskaper att ASRP ska vara standardprovider.
+* Innehåller inte [srpc](https://localhost:4502/crx/de/index.jsp#/conf/global/settings/communities/srp) -nod betyder det att lagringsprovidern är JSRP.
+* Om srpc-noden finns och innehåller [defaultconfiguration](https://localhost:4502/crx/de/index.jsp#/conf/global/settings/communities/srp/defaultconfiguration) -nod definierar standardkonfigurationens egenskaper att ASRP ska vara standardprovider.
