@@ -1,7 +1,7 @@
 ---
 title: CRX/bundle och Start page service unavailable errors once latest 6.5.15.0 service pack is installed
 description: CRX/bundle och Start page service unavailable errors once latest 6.5.15.0 service pack is installed
-source-git-commit: f5bf33e0a2ff73b8884a55bbe77e87ee991aeef9
+source-git-commit: 813d8ffc53dc1928674367c9568b6269642cecb7
 workflow-type: tm+mt
 source-wordcount: '344'
 ht-degree: 1%
@@ -17,6 +17,11 @@ När du har installerat [AEM 6.5.15.0 Service Pack](https://experience.adobe.com
 * FEL [FelixDispatchQueue] org.apache.sling.scripting.console FrameworkEvent ERROR (org.osgi.framework.BundleException: Det går inte att lösa org.apache.sling.scripting.console
 
 När du har installerat AEM 6.5.15.0 Service Pack visar CRX/bundle och startsidan fel som inte är tillgängliga för tjänsten.
+
+## Gäller för {#applies-to}
+
+Denna lösning gäller
+* AEM Forms på alla JEE-servrar utom de som körs på JBoss EAP 7.4.0
 
 ## Lösning {#solution}
 
@@ -39,13 +44,8 @@ Efter installation [AEM 6.5.15.0 Service Pack](https://experience.adobe.com/#/do
 1. Sök efter `bundle.jar` och ändra namn på `bundle.jar` till `bundle.jar.bak`.
 1. Kopiera `bundle.jar` på den här platsen från [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/bundle.jar).
 1. Starta programservern, vänta på att loggarna ska stabiliseras och kontrollera paketläget.
-1. När alla paket är aktiverade installerar du `org.apache.felix.http.servlet-api-1.2.0_fragment-full.jar` serletfragment från `system/console/bundles` hämtat från [Programvarudistribution.](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar) och vänta på att programservern ska stabiliseras.
+1. När alla paket är aktiverade installerar du `org.apache.felix.http.servlet-api-1.2.0_fragment-full.jar` serletfragment från `system/console/bundles` hämtat från [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar) och vänta på att programservern ska stabiliseras.
 1. Stoppa programservern.
 1. Navigera till `[aem-forms root]\crx-repository\launchpad\felix\bundle52\version0.1` och ta bort `bundle.jar`.
 1. Byt namn på `bundle.jar.bak` till `bundle.jar`.
 1. Starta programservern.
-
-## Gäller för {#applies-to}
-
-Denna lösning gäller
-* AEM Forms på alla JEE-servrar utom de som körs på JBoss EAP 7.4.0
