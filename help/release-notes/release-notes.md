@@ -3,9 +3,9 @@ title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
 exl-id: 38227a66-f2a9-4909-9297-1eced4ed6e8c
-source-git-commit: 5d04a479001c5ea6423599969b39a4697a2da590
+source-git-commit: 3e0380e85c300305cbb97e4d0a0918a60542610b
 workflow-type: tm+mt
-source-wordcount: '3937'
+source-wordcount: '3933'
 ht-degree: 0%
 
 ---
@@ -258,10 +258,6 @@ Om du vill veta vilka plattformar som är certifierade för att fungera med den 
 
 1. OSGi-paketet `org.apache.jackrabbit.oak-core` är version 1.2.2.13 eller senare (Använd webbkonsol: `/system/console/bundles`). <!-- NPR-39436 for 6.5.15.0 --> <!-- OAK VERSION -MAY- NEED TO BE UPDATED FOR EACH NEW RELEASE -->
 
->[!NOTE]
->
->Om du installerar den senaste [AEM Service Pack (6.5.15.0)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip), före fragmentserverleten `org.apache.felix.http.servlet-api-1.2.0_fragment-full.jar` för AEM Forms i JEE-miljö, visar CRX/bundle och startsidan fel som inte är tillgängliga för tjänsten, [klicka här](/help/forms/using/aem-service-pack-installation-solution.md) för att få information om felsökningsstegen.
-
 ### Installera [!DNL Experience Manager] Forms tilläggspaket {#install-aem-forms-add-on-package}
 
 >[!NOTE]
@@ -289,6 +285,11 @@ Utför följande steg för alla AEM Forms i JEE-miljöer med andra programservra
 
 1. Installera [org.apache.felix.http.servlet-api-1.2.0_fragment-full.jar](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar) serverfragmentet och väntar på att programservern ska stabiliseras.
 1. Installera [AEM 6.5.15.0 Service Pack](#install-service-pack).
+
+   >[!NOTE]
+   >
+   >Om du installerar den senaste [AEM Service Pack (6.5.15.0)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip), före fragmentserverleten `org.apache.felix.http.servlet-api-1.2.0_fragment-full.jar` i JEE-miljö visar CRX/bundle och startsidan fel som inte är tillgängliga för tjänsten, [klicka här](/help/forms/using/aem-service-pack-installation-solution.md) för att få information om felsökningsstegen.
+
 1. Installera [senaste Forms-tilläggspaketet](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html), tar du bort Forms-tilläggspaketet från `crx-repository\install` och starta om servern.
 
 ### UberJar {#uber-jar}
@@ -326,7 +327,7 @@ Granska om du använder en funktion eller en funktion i en distribution. Planera
 <!-- THESE KNOWN ISSUES CARRY OVER EACH RELEASE. THE "PRODUCT UPDATES TEAM" IS SUPPOSED TO VERIFY EACH ISSUE AND LET YOU KNOW IF ANYTHING NEEDS TO BE ADDED, DELETED, OR CHANGED IN THIS LIST.
  -->
 
-* [AEM innehållsfragment med GraphQL-indexpaket 1.0.5](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.5.zip)
+* [AEM innehållsfragment med GraphQL indexpaket 1.0.5](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.5.zip)
 Det här paketet behövs för kunder som använder GraphQL. på så sätt kan de lägga till den indexdefinition som behövs baserat på de funktioner de faktiskt använder.
 
 * Som [!DNL Microsoft® Windows Server 2019] stöder inte [!DNL MySQL 5.7] och [!DNL JBoss® EAP 7.1], [!DNL Microsoft® Windows Server 2019] stöder inte körklara installationer för [!DNL AEM Forms 6.5.10.0].

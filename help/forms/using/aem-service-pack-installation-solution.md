@@ -1,9 +1,9 @@
 ---
 title: CRX/bundle och Start page service unavailable errors once latest 6.5.15.0 service pack is installed
 description: CRX/bundle och Start page service unavailable errors once latest 6.5.15.0 service pack is installed
-source-git-commit: 813d8ffc53dc1928674367c9568b6269642cecb7
+source-git-commit: 3c04322ef2801246044f9b316962d4d37b972213
 workflow-type: tm+mt
-source-wordcount: '344'
+source-wordcount: '342'
 ht-degree: 1%
 
 ---
@@ -44,7 +44,7 @@ Efter installation [AEM 6.5.15.0 Service Pack](https://experience.adobe.com/#/do
 1. Sök efter `bundle.jar` och ändra namn på `bundle.jar` till `bundle.jar.bak`.
 1. Kopiera `bundle.jar` på den här platsen från [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/bundle.jar).
 1. Starta programservern, vänta på att loggarna ska stabiliseras och kontrollera paketläget.
-1. När alla paket är aktiverade installerar du `org.apache.felix.http.servlet-api-1.2.0_fragment-full.jar` serletfragment från `system/console/bundles` hämtat från [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar) och vänta på att programservern ska stabiliseras.
+1. När alla paket är aktiva installerar du [org.apache.felix.http.servlet-api-1.2.0_fragment-full.jar](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar) serletfragment från `system/console/bundles` och vänta på att programservern ska stabiliseras.
 1. Stoppa programservern.
 1. Navigera till `[aem-forms root]\crx-repository\launchpad\felix\bundle52\version0.1` och ta bort `bundle.jar`.
 1. Byt namn på `bundle.jar.bak` till `bundle.jar`.
