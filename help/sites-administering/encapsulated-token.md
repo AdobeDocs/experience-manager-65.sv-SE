@@ -10,7 +10,7 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 2c263c0d-2521-49df-88ba-f304a25af8ab
 exl-id: e24d815c-83e2-4639-8273-b4c0a6bb008a
-source-git-commit: f8d249f5d3fac243b4989c3eca4be2730dcf16ec
+source-git-commit: ed2cb35593780cd627c15f493e58d3b68c55519b
 workflow-type: tm+mt
 source-wordcount: '801'
 ht-degree: 0%
@@ -73,18 +73,18 @@ För att replikera nyckeln mellan instanser måste du:
 1. få åtkomst till AEM, vanligtvis en författarinstans, som innehåller det nyckelmaterial som ska kopieras,
 1. Leta reda på `com.adobe.granite.crypto.file` i det lokala filsystemet. Under den här sökvägen:
 
-   * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21`
+   * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle25`
 
    The `bundle.info` filen i varje mapp identifierar paketnamnet.
 
 1. Navigera till datamappen. Till exempel:
 
-   * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
+   * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle25/data`
 
 1. Kopiera HMAC-filer och överordnad filer.
 1. Gå sedan till den målinstans som du vill duplicera HMAC-nyckeln till och navigera till datamappen. Till exempel:
 
-   * `<publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
+   * `<publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle25/data`
 
 1. Klistra in de två filer som du kopierade tidigare.
 1. [Uppdatera krypteringspaketet](/help/communities/deploy-communities.md#refresh-the-granite-crypto-bundle) om målinstansen redan körs.
