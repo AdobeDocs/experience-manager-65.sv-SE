@@ -11,9 +11,9 @@ discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
+source-git-commit: e8026cb0c7de3b1c903bf95dc31e567076e837eb
 workflow-type: tm+mt
-source-wordcount: '3683'
+source-wordcount: '3720'
 ht-degree: 0%
 
 ---
@@ -482,10 +482,6 @@ AEM Forms App har nu stöd för Apache Cordova. Följande plattformsspecifika ve
    <td>WP, WPD</td>
   </tr>
   <tr>
-   <td>Microsoft® Office Visio 2019<br /> </td>
-   <td>VSD, VSDX</td>
-  </tr>
-  <tr>
    <td>Microsoft® Office Visio 2016 (inaktuellt)<br /> </td>
    <td>VSD, VSDX</td>
   </tr>
@@ -530,6 +526,9 @@ AEM Forms App har nu stöd för Apache Cordova. Följande plattformsspecifika ve
 >- En version av Acrobat medföljer AEM Forms för att aktivera PDF Generator-funktionaliteten. Programmeringsversionen ska endast användas med AEM Forms under AEM Forms-licensens löptid, för användning med AEM Forms PDF Generator. Mer information finns i AEM Forms produktbeskrivning för din distribution ([Lokal](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html) eller [Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))&quot;
 >
 >- PDF Generator-tjänsten stöder inte Microsoft Windows 10.
+>- PDF Generator kan inte konvertera filer med Microsoft Visio 2019. Du kan fortsätta använda Microsoft Visio 2016 för att konvertera VSD- och VSDX-filer.
+>- PDF Generator kan inte konvertera filer med Microsoft Project 2019. Du kan fortsätta använda Microsoft Project 2016 för att konvertera MPP-filer.
+>
 
 
 ### Undantag från tillgänglighetsstöd {#exceptions-to-accessibility-support}

@@ -6,9 +6,9 @@ seo-description: A list of the supported client and server platforms for AEM.
 content-type: reference
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 33b8cf60e2a6ae13c103040d96b0e2db487ddd99
+source-git-commit: e8026cb0c7de3b1c903bf95dc31e567076e837eb
 workflow-type: tm+mt
-source-wordcount: '3452'
+source-wordcount: '3488'
 ht-degree: 0%
 
 ---
@@ -451,10 +451,6 @@ För Windows x86:
    <td>WP, WPD</td>
   </tr>
   <tr>
-   <td>Microsoft® Office Visio 2019<br /> </td>
-   <td>VSD, VSDX</td>
-  </tr>
-  <tr>
    <td>Microsoft® Office Visio 2016 (inaktuellt)<br /> </td>
    <td>VSD, VSDX</td>
   </tr>
@@ -465,10 +461,6 @@ För Windows x86:
   <tr>
    <td>Microsoft® Publisher 2016 (utgått)<br /> </td>
    <td>PUB</td>
-  </tr>
-  <tr>
-   <td>Microsoft® Project 2019<br /> </td>
-   <td>MPP</td>
   </tr>
   <tr>
    <td>Microsoft® Project 2016 (utgått)<br /> </td>
@@ -499,6 +491,8 @@ För Windows x86:
 >* Funktionerna OCR PDF, Optimize PDF och Export PDF stöds endast i Windows.
 >* En version av Acrobat medföljer AEM Forms för att aktivera PDF Generator-funktionaliteten. Programmeringsversionen ska endast användas med AEM Forms under AEM Forms-licensens löptid, för användning med AEM Forms PDF Generator. Mer information finns i AEM Forms produktbeskrivning för din distribution ([Lokal](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html) eller [Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))
 >* PDF Generator-tjänsten stöder inte Microsoft Windows 10.
+>* PDF Generator kan inte konvertera filer med Microsoft Visio 2019. Du kan fortsätta använda Microsoft Visio 2016 för att konvertera VSD- och VSDX-filer.
+>* PDF Generator kan inte konvertera filer med Microsoft Project 2019. Du kan fortsätta använda Microsoft Project 2016 för att konvertera VSD- och VSDX-filer.
 >
 
 
