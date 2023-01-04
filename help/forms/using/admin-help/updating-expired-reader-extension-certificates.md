@@ -2,9 +2,9 @@
 title: Utgångsdatum för Reader Extensions-certifikat och dess effekt
 description: Utgångsdatum för Reader Extensions-certifikat och dess effekt
 exl-id: 4e14e0dc-f248-4f6e-a075-6012b6792d9d
-source-git-commit: 5f8061ebd2143f11567ac5b78162bdd02106d2e3
+source-git-commit: 6e9a7f3307ed05f887d60c7c7310100cd4596b23
 workflow-type: tm+mt
-source-wordcount: '1115'
+source-wordcount: '1121'
 ht-degree: 0%
 
 ---
@@ -14,11 +14,9 @@ ht-degree: 0%
 
 Adobe Experience Manager Forms (AEM Forms)-kunder med Adobe Managed Services eller On-Local Enterprise Base-licenser har rätt att använda tjänsten Acrobat Reader DC Extensions. Med tjänsten kan man enkelt utbyta interaktiva PDF-dokument genom att utöka Acrobat Reader funktionalitet med ytterligare användarrättigheter. Tjänsten lägger till användarrättigheter i ett PDF-dokument och aktiverar funktioner som inte är tillgängliga när ett PDF-dokument öppnas med Adobe Acrobat Reader, till exempel för att lägga till kommentarer i ett dokument, fylla i formulär och spara dokumentet. Tredjepartsanvändare behöver inte ytterligare programvara eller plugin-program för att kunna arbeta med upphovsrättsaktiverade dokument. PDF-dokument som har användarrättigheter tillagda kallas för rättighetsaktiverade dokument. En användare som öppnar ett rättighetsaktiverat PDF-dokument i Acrobat Reader kan utföra de åtgärder som är aktiverade för det dokumentet.
 
-Adobe utnyttjar en infrastruktur för publika nycklar (PKI) för att utfärda digitala certifikat för användning vid licensiering och aktivering av funktioner. Adobe har utfärdat certifikat under certifikatutfärdaren &quot;Adobe Root CA&quot;, som upphör att gälla den 7 januari 2023. Nu finns en ny certifikatutfärdare, &quot;Adobe Root CA G2&quot;, och certifikat som baseras på den nya certifikatutfärdaren.
+Adobe utnyttjar en infrastruktur för publika nycklar (PKI) för att utfärda digitala certifikat för användning vid licensiering och aktivering av funktioner. Adobe har utfärdat certifikat under certifikatutfärdaren **Adobe Root CA**, som upphör den 7 januari 2023. Certifikatets giltighetstid påverkar inte PDF-dokument som har utökats med hjälp av tillverkningscertifikat som utfärdats från **Adobe Root CA** baserade certifikat (gamla certifikat). Alla PDF-dokument som har utökats med hjälp av de gamla certifikaten före den 7 januari 2023, inklusive de som hämtats av dina kunder, fortsätter att arbeta med alla användningsrättigheter som gäller för dem och behöver inte uppdateras.
 
-Gamla certifikat (certifikat baserade på Adobe Root CA) fungerar inte längre efter den 7 januari 2023. Adobe rekommenderar att du börjar använda de nya certifikaten - de som är baserade på&quot;Adobe Root CA G2&quot; - för att utöka dina PDF-dokument från och med den 7 januari 2023.  Du kan [skaffa nya certifikat från Adobe licenswebbplats](https://licensing.adobe.com/) eller Adobe Support.
-
-Alla PDF-dokument som har utökats med hjälp av de äldre certifikaten före den 7 januari 2023, inklusive de som hämtats av dina kunder, fortsätter att arbeta med alla användningsrättigheter som gäller för dem och behöver inte uppdateras.
+En ny certifikatutfärdare, **Adobe Root CA G2** och certifikat som baseras på den nya certifikatutfärdaren är nu tillgängliga. Från och med den 7 januari 2023 börjar man använda de nya certifikaten - de som bygger på **Adobe Root CA G2** - för att Reader ska kunna lägga ut dina nya PDF-dokument.  Du kan [skaffa nya certifikat från Adobe licenswebbplats](https://licensing.adobe.com/) eller Adobe Support.
 
 ## Vanliga frågor
 
