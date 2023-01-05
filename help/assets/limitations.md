@@ -8,10 +8,10 @@ geptopics: SG_SCENESEVENONDEMAND_PK/categories/ecatalogs
 feature: Dynamic Media Classic,Asset Management,Image Sets,Spin Sets,eCatalog
 role: User
 exl-id: e4d4059e-ac0b-42e7-910c-001310796574
-source-git-commit: 9604d950d33e1b5d32ba8141a35059c6e5787aeb
+source-git-commit: 9247a81a518b1bd6e037c234a6c67f95209bfde8
 workflow-type: tm+mt
-source-wordcount: '251'
-ht-degree: 5%
+source-wordcount: '235'
+ht-degree: 2%
 
 ---
 
@@ -28,13 +28,13 @@ Det här avsnittet innehåller följande avsnitt:
 
 När du skapar en snurra uppsättning eller en bilduppsättning, eller överför PDF för sidextrahering, rekommenderar Adobe följande metodtips och tillämpar följande begränsningar:
 
-| Resurs - begränsningstyp | Bästa praxis | Begränsning har införts | Ändring till begränsning den 31 december 2022 |
-| --- | --- | --- | --- |
-| **Bild** - Antal smarta beskärningar per bild | 5 | 100 | Ej relevant |
-| **Alla uppsättningar** - Antal dubblettresurser per uppsättning | Inga dubbletter | 20 | Ej relevant |
-| **Alla uppsättningar** - Maximalt antal resurser per uppsättning | 5-10 bilder per uppsättning | 1000 | Ej relevant |
-| **Snurra uppsättning** - Maximalt antal rader/kolumner per 2D-uppsättning | 12-18 bilder per uppsättning | 1000 | Ej relevant |
-| **PDF** - Maximalt antal sidor för PDF som ska användas för extrahering |  | 5000 (för nya överföringar) | 100 (för alla PDF) |
+| Resurs - begränsningstyp | Bästa praxis | Begränsning har införts |
+| --- | --- | --- |
+| **Bild** - Antal smarta beskärningar per bild | 5 | 100 |
+| **Alla uppsättningar** - Antal dubblettresurser per uppsättning | Inga dubbletter | 20 |
+| **Alla uppsättningar** - Maximalt antal resurser per uppsättning | 5-10 bilder per uppsättning | 1000 |
+| **Snurra uppsättning** - Maximalt antal rader/kolumner per 2D-uppsättning | 12-18 bilder per uppsättning | 1000 |
+| **PDF** - Maximalt antal sidor för PDF som ska användas för extrahering |  | 100 (för alla PDF) |
 
 <!-- See also [Dynamic Media limitations](/help/assets/limitations.md). -->
 

@@ -10,10 +10,10 @@ discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
 feature: Image Profiles
 role: User, Admin
 exl-id: 67240ad0-1a7c-4e58-a518-1e36d771f1a1
-source-git-commit: 008a27c6a1c818a96a24dfcc7f5650409d31e7c2
+source-git-commit: 9247a81a518b1bd6e037c234a6c67f95209bfde8
 workflow-type: tm+mt
-source-wordcount: '2746'
-ht-degree: 7%
+source-wordcount: '2916'
+ht-degree: 6%
 
 ---
 
@@ -42,7 +42,20 @@ Koordinaterna för smart beskärning är proportionella. För de olika inställn
 
 Varje generering av Smart Crop som du skapar kräver extra bearbetning. Om du till exempel lägger till mer än fem proportioner för smart beskärning kan det leda till en långsam intag av resurser. Det medför också ökad belastning på systemen. Eftersom du kan använda SmartCrop på mappnivå rekommenderar Adobe att du använder det på mappar *endast* där det behövs.
 
-Du kan välja mellan två bildbeskärningsalternativ. Du kan också automatisera skapandet av färg- och bildfärgrutor.
+**Riktlinjer för att definiera smart beskärning i en bildprofil**
+För att behålla kontrollen över användningen av Smart Crop och för att optimera bearbetningstiden och lagringen av beskärningar rekommenderar Adobe följande riktlinjer och tips:
+
+* Undvik att skapa duplicerade smarta beskärningsprofiler med samma bredd- och höjdvärden.
+* Namnge smarta beskärningar baserat på beskärningsdimensioner, inte på slutanvändning. På så sätt kan du optimera för dubbletter där en enda dimension används på flera sidor.
+* Skapa sidvisa/resurstypsvisa bildprofiler för specifika mappar och undermappar i stället för en gemensam smart beskärningsprofil som tillämpas på alla mappar eller alla resurser.
+* En bildprofil som du använder för undermappar åsidosätter en bildprofil som används för mappen.
+* Helst bör du ha 10-15 smarta beskärningar per bild som optimerar för skärmproportioner och bearbetningstid.
+
+Du kan välja mellan två bildbeskärningsalternativ. Du kan också välja att automatisera skapandet av färg- och bildfärgrutor eller bevara beskärningsinnehållet i olika upplösningar.
+
+>[!IMPORTANT]
+・ Adobe rekommenderar att ni granskar alla genererade grödor och färgrutor för att säkerställa att de är lämpliga och relevanta för ert varumärke och era värden.
+・ CMYK-bildformatet stöds inte med smart beskärning.
 
 | Alternativ | När ska användas | Beskrivning |
 | --- | --- | --- |
