@@ -1,6 +1,6 @@
 ---
-title: '"Självstudiekurs: Skapa ditt första adaptiva formulär"'
-seo-title: 'Tutorial: Create your first adaptive form'
+title: "Självstudiekurs: Skapa ditt första adaptiva formulär"
+seo-title: "Tutorial: Create your first adaptive form"
 description: Lär dig skapa interaktiva och responsiva blanketter i affärsklass.
 seo-description: Learn to create business class, interactive, and responsive forms.
 uuid: ee351a3f-ea6a-4b4c-8045-4948ad51b7c1
@@ -9,9 +9,9 @@ discoiquuid: 1142bcd4-e3a7-41ce-a710-132ae6c21dbe
 docset: aem65
 feature: Adaptive Forms
 exl-id: 77a05f83-ac9a-4221-85ac-439e82623a28
-source-git-commit: 471d7f48dc4653000b4852dbbeb886b05e28e644
+source-git-commit: 318347178fd626dea8e5a15caa7cdad8fe353eba
 workflow-type: tm+mt
-source-wordcount: '957'
+source-wordcount: '965'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ Webbplatsen körs på Adobe Experience Manager (AEM) och använder AEM [!DNL For
 
 ### Förutsättning {#prerequisite}
 
-* Konfigurera en AEM författarinstans.
+* Konfigurera en [AEM författarinstans](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html#author-and-publish-installs)
 * Installera [AEM Forms-tillägg](../../forms/using/installing-configuring-aem-forms-osgi.md) on author instance.
 * Hämta JDBC-databasdrivrutin (JAR-fil) från databasprovidern. Exemplen i självstudiekursen är baserade på [!DNL MySQL] databas och användning [!DNL Oracle's] [MySQL JDBC-databasdrivrutin](https://dev.mysql.com/downloads/connector/j/5.1.html).
 
