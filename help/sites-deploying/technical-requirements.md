@@ -6,9 +6,9 @@ seo-description: A list of the supported client and server platforms for AEM.
 content-type: reference
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: e8026cb0c7de3b1c903bf95dc31e567076e837eb
+source-git-commit: 72ed4ceee560839c6573461cb5d4d6cbccfd696f
 workflow-type: tm+mt
-source-wordcount: '3488'
+source-wordcount: '3525'
 ht-degree: 0%
 
 ---
@@ -201,6 +201,16 @@ Adobe Experience Manager fungerar med följande serverplattformar för produktio
 1. Linux-distribution stöds av Adobe Managed Services.
 1. Produktionsinstallationer i Microsoft Windows stöds för kunder som uppgraderar till 6.5 och för icke-produktionsanvändning. Nya driftsättningar är på begäran för AEM Sites och Assets.
 1. AEM Forms stöds på Microsoft Windows Server utan begränsningar på supportnivå R.
+
+>[!NOTE]
+>
+>Om du installerar AEM Forms 6.5 ska du kontrollera att du har installerat följande 32-bitars omdistribuerbara Microsoft Visual C++.
+>
+>* Microsoft Visual C++ 2008 återdistribuerbar
+>* Microsoft Visual C++ 2010 återdistribuerbar
+>* Microsoft Visual C++ 2012 återdistribuerbar
+>* Microsoft Visual C++ 2013 återdistribuerbar (från och med 6.5)
+
 
 
 ### Virtuella miljöer och molnmiljöer {#virtual-cloud-computing-environments}
