@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: d4152b4d-531b-4b62-8807-a5bc5afe94c6
 docset: aem65
 exl-id: f2921349-de8f-4bc1-afa2-aeace99cfc5c
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: 88763b318e25efb16f61bc16530082877392c588
 workflow-type: tm+mt
-source-wordcount: '1216'
+source-wordcount: '1553'
 ht-degree: 0%
 
 ---
@@ -210,3 +210,85 @@ För att undvika sådana situationer:
       * Erbjudandet kommer troligtvis fortfarande att återges eftersom Experience Fragment HTML flyttades till Target
       * Eventuella referenser i Experience Fragment kanske inte fungerar korrekt om refererade resurser också tas bort i AEM.
    * Det är förstås inte möjligt att göra ytterligare ändringar i Experience Fragment eftersom Experience Fragment inte längre finns i AEM.
+
+
+
+## Ta bort ClientLibs från Experience Fragments som exporterats till Target {#removing-clientlibs-from-fragments-exported-target}
+
+Experience Fragments innehåller fullständiga html-taggar och alla nödvändiga klientbibliotek (CSS/JS) för att återge fragmentet exakt som det skapades av Experience Fragment Content Author. Det här är underdesign.
+
+När du använder ett Experience Fragment-erbjudande med Adobe Target på en sida som levereras av AEM innehåller målsidan redan alla nödvändiga klientbibliotek. Dessutom behövs inte heller den överflödiga HTML-koden i Experience Fragment-erbjudandet (se [Överväganden](#considerations)).
+
+Här följer ett pseudoexempel på html i ett Experience Fragment-erbjudande:
+
+```html
+<!DOCTYPE>
+<html>
+   <head>
+      <title>…</title>
+      <!-- all of the client libraries (css/js) -->
+      …
+   </head>
+   <body>
+        <!--/* Actual XF Offer content would appear here... */-->
+   </body>
+</html>
+```
+
+När AEM exporterar ett Experience Fragment till Adobe Target sker detta på en hög nivå med hjälp av flera ytterligare Sling Selectors. URL:en för det exporterade Experience Fragment kan till exempel se ut så här (observera `nocloudconfigs.atoffer`):
+
+* http://www.your-aem-instance.com/content/experience-fragments/my-offers/my-xf-offer.nocloudconfigs.atoffer.html
+
+The `nocloudconfigs` -väljaren definieras med hjälp av HTML och kan överlappas genom att den kopieras från:
+
+* /libs/cq/experience-fragments/components/xfpage/nocloudconfigs.html
+
+The `atoffer` väljaren faktiskt används efter bearbetning med [Sling Rewriter](/help/sites-developing/experience-fragments.md#the-experience-fragment-link-rewriter-provider-html). Båda kan användas för att ta bort klientbiblioteken.
+
+### Exempel {#example}
+
+I det här fallet ska vi visa hur man gör detta med `nocloudconfigs`.
+
+>[!NOTE]
+>
+>Se [Redigerbara mallar](/help/sites-developing/templates.md#editable-templates) för mer information.
+
+#### Övertäckningar {#overlays}
+
+I just det här exemplet [övertäckningar](/help/sites-developing/overlays.md) som inkluderas tar bort klientbiblioteken *och* den ovidkommande html. Du förutsätts redan ha skapat malltypen Experience Fragment. De filer som behövs och som ska kopieras från `/libs/cq/experience-fragments/components/xfpage/` inkludera:
+
+* `nocloudconfigs.html`
+* `head.nocloudconfigs.html`
+* `body.nocloudconfigs.html`
+
+#### Malltypsövertäckningar {#template-type-overlays}
+
+I det här exemplet ska vi använda följande struktur:
+
+![Malltypsövertäckningar](assets/xf-target-integration-02.png "Malltypsövertäckningar")
+
+Innehållet i dessa filer är följande:
+
+* `body.nocloudconfigs.html`
+
+   ![body.nocloudconfigs.html](assets/xf-target-integration-03.png "body.nocloudconfigs.html")
+
+* `head.nocloudconfigs.html`
+
+   ![head.nocloudconfigs.html](assets/xf-target-integration-04.png "head.nocloudconfigs.html")
+
+* `nocloudconfigs.html`
+
+   ![nocloudconfigs.html](assets/xf-target-integration-05.png "nocloudconfigs.html")
+
+>[!NOTE]
+>
+>Används `data-sly-unwrap` för att ta bort den body-tagg du behöver `nocloudconfigs.html`.
+
+### Överväganden {#considerations}
+
+Om du behöver stöd för både AEM och icke-AEM webbplatser med Experience Fragment Offers i Adobe Target måste du skapa två Experience Fragments (två olika malltyper):
+
+* En med övertäckningen som tar bort clientlibs/extra html
+
+* En som inte har övertäckningen och därför innehåller de nödvändiga klientlibs
