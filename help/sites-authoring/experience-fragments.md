@@ -1,7 +1,7 @@
 ---
 title: Experience Fragments
 seo-title: Experience Fragments
-description: Upplevelsefragment
+description: Experience Fragments
 seo-description: null
 uuid: 9a1d12ef-5690-4a2e-8635-a710775efa39
 contentOwner: User
@@ -11,14 +11,14 @@ content-type: reference
 discoiquuid: 4c5b52c3-5e23-4125-9306-48bf2ded23cb
 docset: aem65
 exl-id: 1ff9ac47-9a3a-4a4e-8af8-bc73048e0409
-source-git-commit: ab6fd8ca02d2a24e5973b5d78bc75288b5cc26c0
+source-git-commit: 2f635d5c856b35794ef2d62c15bc7cf4f4e57773
 workflow-type: tm+mt
 source-wordcount: '1440'
 ht-degree: 7%
 
 ---
 
-# Upplevelsefragment{#experience-fragments}
+# Experience Fragments{#experience-fragments}
 
 Ett Experience Fragment är en grupp med en eller flera komponenter, inklusive innehåll och layout, som kan refereras till på sidor. De kan innehålla alla komponenter.
 
@@ -219,7 +219,7 @@ Ni kan skapa variationer av ert Experience Fragment, beroende på era behov:
 1. **Skapa** kan du skapa:
 
    * **Variant**
-   * **Variation som live-copy**.
+   * **Variation som [live-copy](/help/sites-administering/msm.md#live-copies)**.
 
 1. Definiera de nödvändiga egenskaperna:
 
