@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 1099cc44-de6d-499e-8b52-f2f5811ae086
 docset: aem65
 exl-id: dcb66b6d-d731-493e-8936-12d529f6cbde
-source-git-commit: d30bfb9e67d0a2a0e870ee0841ed14060def7756
+source-git-commit: ae56ffafff38fe60530a8850732de58ba8c8f8f9
 workflow-type: tm+mt
 source-wordcount: '3252'
 ht-degree: 0%
@@ -539,7 +539,7 @@ När [redigera en mall kan du definiera layouten](/help/sites-authoring/template
 
 ### Innehållsprofiler {#content-policies}
 
-Innehållets (eller designens) profiler definierar en komponents designegenskaper. Till exempel de tillgängliga komponenterna eller minimi-/maximidimensionerna. Dessa gäller för mallen (och sidor som skapas med mallen). Du kan skapa och välja innehållsprinciper i mallredigeraren.
+Innehållets (eller designens) profiler definierar designegenskaperna för en komponent, t.ex. komponentens tillgänglighet eller min-/maxmått. Dessa gäller för mallen (och sidor som skapas med mallen). Du kan skapa och välja innehållsprinciper i mallredigeraren.
 
 * Egenskapen `cq:policy`, på `root` nod
    `/conf/<your-folder>/settings/wcm/templates/<your-template>/policies/jcr:content/root`

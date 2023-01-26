@@ -11,7 +11,7 @@ topic-tags: deploying
 discoiquuid: e48cc0ed-688c-44c8-b6d6-5f3c8593a295
 docset: aem65
 exl-id: 3df0662a-0768-4b56-8b94-c517657b4bd9
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: 85a0c578a2cf57e2b4d65123cffe3816624211c8
 workflow-type: tm+mt
 source-wordcount: '1802'
 ht-degree: 1%
@@ -82,7 +82,7 @@ AEM bygger på denna bas och erbjuder även ett antal funktioner på programniv�
 * **Communities**
 * **Online Commerce**
 
-Slutligen kan kunderna använda dessa infrastruktur- och programnivåbyggstenar för att skapa anpassade lösningar genom att bygga egna applikationer.
+Slutligen kan kunderna använda dessa byggstenar på infrastruktur- och applikationsnivå för att skapa anpassade lösningar genom att bygga egna applikationer.
 
 AEM server är **Java-baserad** och kan köras på de flesta operativsystem som stöder den plattformen. All kundinteraktion med AEM sker via en **webbläsare**.
 
@@ -159,13 +159,13 @@ I följande avsnitt beskriver vi **fristående installation**. Mer information o
 
    Installationsplats för Windows: **`C:\Program Files\aem`**
 
-   Det är också vanligt att du installerar exempelinstanser i en mapp direkt på skrivbordet. I vilket fall som helst ska vi i allmänhet hänvisa till den här platsen som:
+   Det är också vanligt att du installerar exempelinstanser i en mapp direkt på skrivbordet. I vilket fall som helst kommer vi att i allmänhet hänvisa till den här platsen som:
 
    `<aem-install>`
 
    *Observera att sökvägen till filkatalogen endast får bestå av ASCII-tecken från USA.*
 
-1. Placera **jar** och **license **filer i den här katalogen:
+1. Placera **jar** och **licens** filer i den här katalogen:
 
    ```shell
    <aem-install>/
