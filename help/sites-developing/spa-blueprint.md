@@ -10,7 +10,7 @@ content-type: reference
 discoiquuid: 04ac8203-320b-4671-aaad-6e1397b12b6f
 docset: aem65
 exl-id: 383f84fd-455c-49a4-9e2b-1c4757cc188b
-source-git-commit: e13953bed73481738832a00a7563a07149c2d3bd
+source-git-commit: afd2afe182d65e64c0ad851b86021886078a9dd5
 workflow-type: tm+mt
 source-wordcount: '2079'
 ht-degree: 0%
@@ -150,7 +150,7 @@ Varje komponent måste utökas med en funktion som dekorerar det yttre HTML-elem
 
 En behållare är en komponent som ska innehålla och återge underordnade komponenter. För att göra det upprepas behållaren över `:itemsOrder`, `:items` och `:children` modellens egenskaper.
 
-Behållaren hämtar de underordnade komponenterna dynamiskt från arkivet i ` [ComponentMapping](/help/sites-developing/spa-blueprint.md#componentmapping)` bibliotek. Behållaren utökar sedan den underordnade komponenten med modellproviderfunktionerna och instansierar den till slut.
+Behållaren hämtar de underordnade komponenterna dynamiskt från arkivet i [`ComponentMapping`](/help/sites-developing/spa-blueprint.md#componentmapping) bibliotek. Behållaren utökar sedan den underordnade komponenten med modellproviderfunktionerna och instansierar den till slut.
 
 ### Sidan {#page}
 
