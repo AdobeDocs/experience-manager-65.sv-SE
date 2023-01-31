@@ -10,9 +10,9 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 6ed09b5d-5089-43d2-b9d5-e7db57be5c02
 exl-id: 8e54bccf-0ff1-448d-a237-ec42fd3bfa23
-source-git-commit: 2a889134943d75d147af6d06ea67397f75158d40
+source-git-commit: 6fa3679429527e026313b22d953267503598d1a9
 workflow-type: tm+mt
-source-wordcount: '818'
+source-wordcount: '843'
 ht-degree: 0%
 
 ---
@@ -117,7 +117,15 @@ SAML-försäkringar är signerade och kan eventuellt krypteras. För att detta s
 >
 >Stegen nedan är bara obligatoriska om hanteraren ska kunna signera eller dekryptera meddelanden.
 
-1. Överför filen med den privata nyckeln genom att klicka på **Välj privat nyckelfil**. Nyckeln måste vara i PKCS#8-format med DER-kodning.
+1. Skapa certifikat/nyckelpar för AEM. Kommandot för att generera det via openssl bör likna exemplet nedan:
+
+   `openssl req -newkey rsa:2048 -new -x509 -days 3652 -nodes -out certificate.crt -keyout key.pem`
+
+1. Konvertera nyckeln till PKCS#8-format med DER-kodning. Detta är det format som krävs för AEM nyckelbehållare.
+
+   `openssl pkcs8 -topk8 -inform PEM -outform DER -in key.pem -out key.der -nocrypt`
+
+1. Överför filen med den privata nyckeln genom att klicka på **Välj privat nyckelfil**.
 1. Överför certifikatfilen genom att klicka på **Välj filer för certifikatkedja**.
 1. Tilldela ett alias enligt nedan:
 
