@@ -11,9 +11,9 @@ discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: b2c8cf2fbc4db1d9f1b013fb93d71ed5c08eab59
+source-git-commit: 26e71c5f09eb9fa3f3eda01deb871ac63e348a30
 workflow-type: tm+mt
-source-wordcount: '3717'
+source-wordcount: '3699'
 ht-degree: 0%
 
 ---
@@ -509,21 +509,17 @@ AEM Forms App har nu stöd för Apache Cordova. Följande plattformsspecifika ve
 </table>
 
 >[!NOTE]
->
->PDF Generator stöder endast engelska, franska, tyska och japanska versioner av de operativsystem och program som stöds.
->
->Dessutom:
->
->- PDF Generator kräver 32-bitarsversionen av [Acrobat 2020 Classic track version 20.004.30006](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html) eller Acrobat 2017 version 17.011.30078 för konverteringen.
->- PDF Generator stöder endast 32-bitarsversionen av Microsoft Office Professional Plus och andra program som krävs för konvertering.
->- PDF Generator stöder inte Microsoft Office 365.
->- PDF Generator-konverteringar för OpenOffice stöds bara i Windows och Linux.
->- Funktionerna OCR PDF, Optimize PDF och Export PDF stöds endast i Windows.
->- En version av Acrobat medföljer AEM Forms för att aktivera PDF Generator-funktionaliteten. Programmeringsversionen ska endast användas med AEM Forms under AEM Forms-licensens löptid, för användning med AEM Forms PDF Generator. Mer information finns i AEM Forms produktbeskrivning för din distribution ([Lokal](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html) eller [Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))&quot;
->
->- PDF Generator-tjänsten stöder inte Microsoft Windows 10.
->- PDF Generator kan inte konvertera filer med Microsoft Visio 2019. Du kan fortsätta använda Microsoft Visio 2016 för att konvertera VSD- och VSDX-filer.
->- PDF Generator kan inte konvertera filer med Microsoft Project 2019. Du kan fortsätta använda Microsoft Project 2016 för att konvertera MPP-filer.
+PDF Generator stöder endast engelska, franska, tyska och japanska versioner av de operativsystem och program som stöds.
+Dessutom:
+- PDF Generator kräver 32-bitarsversionen av [Acrobat 2020 Classic track version 20.004.30006](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html) eller Acrobat 2017 version 17.011.30078 för konverteringen.
+- PDF Generator stöder endast 32-bitarsversionen av Microsoft Office Professional Plus och andra program som krävs för konvertering.
+- PDF Generator stöder inte Microsoft Office 365.
+- PDF Generator-konverteringar för OpenOffice stöds bara i Windows och Linux.
+- Funktionerna OCR PDF, Optimize PDF och Export PDF stöds endast i Windows.
+- En version av Acrobat medföljer AEM Forms för att aktivera PDF Generator-funktionaliteten. Programmeringsversionen ska endast användas med AEM Forms under AEM Forms-licensens löptid, för användning med AEM Forms PDF Generator. Mer information finns i AEM Forms produktbeskrivning för din distribution ([Lokal](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html) eller [Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))&quot;
+- PDF Generator-tjänsten stöder inte Microsoft Windows 10.
+- PDF Generator kan inte konvertera filer med Microsoft Visio 2019. Du kan fortsätta använda Microsoft Visio 2016 för att konvertera VSD- och VSDX-filer.
+- PDF Generator kan inte konvertera filer med Microsoft Project 2019. Du kan fortsätta använda Microsoft Project 2016 för att konvertera MPP-filer.
 >
 
 
@@ -637,8 +633,7 @@ Ytterligare krav finns i:
 </table>
 
 >[!NOTE]
->
->Acrobat DC produktfamilj presenterar två banor för både Acrobat och Reader, vilka i huvudsak är olika produkter: &quot;Classic&quot; och &quot;Continuous.&quot; Mer information och en jämförelse av de två spåren finns i [https://www.adobe.com/go/acrobatdctracks.](https://www.adobe.com/go/acrobatdctracks)
+Acrobat DC produktfamilj presenterar två banor för både Acrobat och Reader, vilka i huvudsak är olika produkter: &quot;Classic&quot; och &quot;Continuous.&quot; Mer information och en jämförelse av de två spåren finns i [https://www.adobe.com/go/acrobatdctracks.](https://www.adobe.com/go/acrobatdctracks)
 
 ### Webbläsare {#browsers}
 
@@ -672,17 +667,7 @@ Ytterligare krav finns i:
    <td>Alla uppdateringar</td>
   </tr>
   <tr>
-   <td>Google Chrome och Firefox på MAC OS X</td>
-   <td>S: Stöds<br /> <br /> </td>
-   <td>Alla uppdateringar</td>
-  </tr>
-  <tr>
-   <td>Apple Safari 11.x</td>
-   <td>S: Stöds</td>
-   <td>Alla uppdateringar</td>
-  </tr>
-  <tr>
-   <td>Apple Safari 12.x<br /> <br /> </td>
+   <td>Apple Safari på macOS</td>
    <td>S: Stöds</td>
    <td>Alla uppdateringar</td>
   </tr>
@@ -690,14 +675,12 @@ Ytterligare krav finns i:
 </table>
 
 >[!NOTE]
->
->Vissa webbläsarrelaterade undantag för stationära datorer är följande:
->
->- Safari stöds bara på Macintosh OS X.
->- Arbetsytan stöder Safari 5.1 i Macintosh OS X 10.6 och 10.7 med Acrobat DC eller senare. Mer information om Safari 5.1-kompatibilitet med Adobe Reader, Acrobat finns i [https://helpx.adobe.com/x-productkb/multi/safari-5-1-incompatible-reader.html](https://helpx.adobe.com/x-productkb/multi/safari-5-1-incompatible-reader.html).
->- Administration Console stöds inte i Safari.
->- Correspondence Management stöder inte Windows® Internet Explorer 9.0 för AEM 6.1-formulär.
->- Forms portal stöder JAWS 14.0 skärmläsarprogram i Internet Explorer 11.
+Vissa webbläsarrelaterade undantag för stationära datorer är följande:
+- Safari stöds bara på Macintosh OS X.
+- Arbetsytan stöder Safari 5.1 i Macintosh OS X 10.6 och 10.7 med Acrobat DC eller senare. Mer information om Safari 5.1-kompatibilitet med Adobe Reader, Acrobat finns i [https://helpx.adobe.com/x-productkb/multi/safari-5-1-incompatible-reader.html](https://helpx.adobe.com/x-productkb/multi/safari-5-1-incompatible-reader.html).
+- Administration Console stöds inte i Safari.
+- Correspondence Management stöder inte Windows® Internet Explorer 9.0 för AEM 6.1-formulär.
+- Forms portal stöder JAWS 14.0 skärmläsarprogram i Internet Explorer 11.
 
 
 #### Mobila kunder {#mobile-clients}
@@ -728,8 +711,7 @@ Ytterligare krav finns i:
 </table>
 
 >[!NOTE]
->
->- Forms Portal stöds endast i Safari på iPad.
+- Forms Portal stöds endast i Safari på iPad.
 
 
 ### AEM Forms {#aem-forms-workspace-app}
@@ -762,7 +744,7 @@ Adobe stöder brådskande eller rekommenderade patchar som utfärdas av tredjepa
 
 I vissa fall stöder inte Adobe tredjepartsuppdateringar som förändrar de viktigaste funktionerna och därför inte fullständig bakåtkompatibilitet. Mer information om vilka uppdateringar som stöds finns i [Korrigeringsdefinitioner som stöds](https://helpx.adobe.com/aem-forms/aem-forms-third-party-software-patch.html) för specifika leverantörsprodukter och korrigeringstyperna som Adobe stöder.
 
-Under omständigheter som Adobe inte kan styra kan korrigeringsfiler från tredje part som gör anspråk på bakåtkompatibilitet ha negativ inverkan på Adobe-produkterna eller kundmiljön. I sådana fall rekommenderar Adobe att man utvärderar effekten av en brådskande korrigering från en tredje part innan man lägger in den i kritiska system. Adobe kommer att arbeta tillsammans med tredje part och göra rimliga affärsinsatser för att lösa sådana problem, antingen genom normala stödprogram för Adobe eller genom att tredje part åtgärdar problemet i sina lappar. Detta garanterar inte att en nyligen släppt korrigeringsfil från tredje part som kommer att stödjas av Adobe kommer att fungera enligt dokumentation från leverantören eller AEM Forms på JEE.
+Under omständigheter som ligger utanför Adobe kontroll kan korrigeringsfiler från tredje part som gör anspråk på bakåtkompatibilitet ha negativ inverkan på Adobe-produkter eller kundmiljöer. I sådana fall rekommenderar Adobe att man utvärderar effekten av en brådskande korrigering från en tredje part innan man lägger in den i kritiska system. Adobe kommer att arbeta tillsammans med tredje part och göra rimliga affärsinsatser för att lösa sådana problem, antingen genom normala stödprogram för Adobe eller genom att tredje part åtgärdar problemet i sina lappar. Detta garanterar inte att en nyligen släppt korrigeringsfil från tredje part som kommer att stödjas av Adobe kommer att fungera enligt dokumentation från leverantören eller AEM Forms på JEE.
 
 Adobe förbehåller sig rätten att ändra de referensplattformar från tredje part som stöds av en AEM Forms on JEE-release och de korrigeringsdefinitioner som stöds vid varje given tidpunkt.
 
@@ -795,8 +777,7 @@ Följande plattformar är markerade som borttagna i AEM Forms 6.5.10.0 den 7 sep
 - OpenOffice 4.1.2
 
 >[!NOTE]
->
->Plattformarna är markerade som [som inte längre används i AEM Forms 6.5.12.0 och 6.5.10.0 har stöd tills AEM Forms 6.5 Service Pack 18 (6.5.18.0) har släppts](https://helpx.adobe.com/support/programs/eol-matrix.html).
+Plattformarna är markerade som [som inte längre används i AEM Forms 6.5.12.0 och 6.5.10.0 har stöd tills AEM Forms 6.5 Service Pack 18 (6.5.18.0) har släppts](https://helpx.adobe.com/support/programs/eol-matrix.html).
 
 ## Revisionshistorik {#revision-history}
 

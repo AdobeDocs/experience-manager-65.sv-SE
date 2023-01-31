@@ -6,9 +6,9 @@ seo-description: A list of the supported client and server platforms for AEM.
 content-type: reference
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 72ed4ceee560839c6573461cb5d4d6cbccfd696f
+source-git-commit: 26e71c5f09eb9fa3f3eda01deb871ac63e348a30
 workflow-type: tm+mt
-source-wordcount: '3525'
+source-wordcount: '3529'
 ht-degree: 0%
 
 ---
@@ -196,7 +196,7 @@ Adobe Experience Manager fungerar med följande serverplattformar för produktio
 | Oracle Solaris 11 | Z: Stöds inte |
 | IBM AIX 7.2 | Z: Stöds inte |
 
-1. Linux Kernel 2.6, 3.x, 4.x och 5.x innehåller derivat från Red Hat-distributionen, inklusive Red Hat Enterprise Linux, CentOS, Oracle Linux och Amazon Linux. AEM Forms tilläggsfunktioner stöds endast i CentOS 7, Red Hat Enterprise Linux 7 och Red Hat Enterprise Linux 8.
+1. Linux Kernel 2.6, 3. x, 4. x och 5. x innehåller derivat från Red Hat-distributionen, inklusive Red Hat Enterprise Linux, CentOS, Oracle Linux och Amazon Linux. AEM Forms tilläggsfunktioner stöds endast i CentOS 7, Red Hat Enterprise Linux 7, Red Hat Enterprise Linux 8 och Red Hat Enterprise Linux 9.
 1. AEM Forms stöds på Ubuntu 20.04 LTS.
 1. Linux-distribution stöds av Adobe Managed Services.
 1. Produktionsinstallationer i Microsoft Windows stöds för kunder som uppgraderar till 6.5 och för icke-produktionsanvändning. Nya driftsättningar är på begäran för AEM Sites och Assets.
@@ -215,7 +215,7 @@ Adobe Experience Manager fungerar med följande serverplattformar för produktio
 
 ### Virtuella miljöer och molnmiljöer {#virtual-cloud-computing-environments}
 
-Adobe Experience Manager stöds i en virtuell dator i molnmiljöer som Microsoft Azure och Amazon Web Services (AWS), i enlighet med de tekniska krav som anges på den här sidan och i enlighet med Adobe standardsupportvillkoren.
+Adobe Experience Manager stöds i en virtuell dator i molnmiljöer som Microsoft Azure och Amazon Web Services (AWS), i enlighet med de tekniska krav som anges på den här sidan och i enlighet med Adobe standardsupportvillkor.
 
 Om du vill ha en molnbaserad miljö kan du titta på det senaste erbjudandet från AEM produktserie: Adobe Experience Manager as a Cloud Service. Se [Adobe Experience Manager as a Cloud Service Documentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service.html?lang=en) för mer information.
 
