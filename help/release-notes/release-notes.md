@@ -3,7 +3,7 @@ title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
 exl-id: 38227a66-f2a9-4909-9297-1eced4ed6e8c
-source-git-commit: ec9094f25cfbcd1497a6bbc87cce9754e247a770
+source-git-commit: f0746c6b7ada548c47d13089160ecccec5f2bd2b
 workflow-type: tm+mt
 source-wordcount: '3722'
 ht-degree: 0%
@@ -259,7 +259,7 @@ Om du vill veta vilka plattformar som är certifierade för att fungera med den 
 
 1. Alla OSGi-paket är antingen **[!UICONTROL ACTIVE]** eller **[!UICONTROL FRAGMENT]** i OSGi Console (Use Web Console: `/system/console/bundles`).
 
-1. OSGi-paketet `org.apache.jackrabbit.oak-core` är version 1.2.2.13 eller senare (Använd webbkonsol: `/system/console/bundles`). <!-- NPR-39436 for 6.5.15.0 --> <!-- OAK VERSION -MAY- NEED TO BE UPDATED FOR EACH NEW RELEASE -->
+1. OSGi-paketet `org.apache.jackrabbit.oak-core` är version 1.2.2.13 eller senare (Använd webbkonsol: `/system/console/bundles`).
 
 ### Installera Service Pack på [!DNL Experience Manager] Forms {#install-service-pack-on-aemforms}
 
