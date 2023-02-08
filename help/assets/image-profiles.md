@@ -10,9 +10,9 @@ discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
 feature: Image Profiles
 role: User, Admin
 exl-id: 67240ad0-1a7c-4e58-a518-1e36d771f1a1
-source-git-commit: 9247a81a518b1bd6e037c234a6c67f95209bfde8
+source-git-commit: 1759b6b2a0360b6fc173e711aaf88484c554eae8
 workflow-type: tm+mt
-source-wordcount: '2916'
+source-wordcount: '2911'
 ht-degree: 6%
 
 ---
@@ -78,7 +78,7 @@ I **[!UICONTROL Unsharp Mask]** har du följande filtreringsalternativ:
 | Radie | Anger antalet pixlar runt kantpixlarna som påverkar skärpan. För högupplösta bilder anger du 1 till 2. Med ett lågt värde ökas endast kantpixlarna skärpan. ett högt värde ökar skärpan i ett större antal pixlar. Vilket värde som är korrekt beror på bildens storlek. Standardvärdet är 0,2. Intervallet är 0-250. |
 | Tröskelvärde | Anger det kontrastintervall som ska ignoreras när det oskarpa maskfiltret används. Med andra ord, det här alternativet avgör hur olika de pixlar som ska göras skarpare måste vara från det omgivande området innan de betraktas som kantpixlar och blir skarpare. Experimentera med värden mellan 0 och 255 för att undvika brus. |
 
-Skärpa beskrivs i [Skärpa bilder](/help/assets/assets/sharpening_images.pdf.
+Skärpa beskrivs i [Skärpa bilder](/help/assets/assets/sharpening_images.pdf).
 
 ## Skapa Dynamic Media bildprofiler {#creating-image-profiles}
 
