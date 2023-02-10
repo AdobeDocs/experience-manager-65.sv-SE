@@ -1,20 +1,17 @@
 ---
 title: Skapa anpassade popup-fönster med snabbvyn
-seo-title: Använd snabbvyn för att skapa anpassade popup-fönster
 description: Standardsnabbvyn används i e-handelsupplevelser där ett popup-fönster visas med produktinformation som driver ett köp. Du kan aktivera anpassat innehåll som ska visas i popup-fönstren.
-seo-description: Standardsnabbvyn används i e-handelsupplevelser där ett popup-fönster visas med produktinformation som driver ett köp. Du kan aktivera anpassat innehåll som ska visas i popup-fönstren.
-uuid: b906cfff-ac44-4989-b6da-8a9bbf02af03
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 4bcab3f4-500f-432e-b16b-cdc26b9bab4d
-feature: Tittare
+feature: Viewers
 role: User, Admin
 exl-id: 4e7f17ea-6985-4644-b91c-2c1299d01321
-source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
+source-git-commit: 05af34f8be6a4e32c3488ec05bc0133154caff7f
 workflow-type: tm+mt
-source-wordcount: '1088'
+source-wordcount: '1052'
 ht-degree: 0%
 
 ---
@@ -35,7 +32,7 @@ Quickview stöds av följande visningsprogram i Dynamic Media:
 
 1. Skapa en snabbvy för en överförd resurs.
 
-   Vanligtvis skapar du en snabbvy samtidigt som du redigerar en resurs för användning med det visningsprogram du använder.
+   Vanligtvis skapar du en snabbvy samtidigt som du redigerar en resurs som ska användas med det visningsprogram du använder.
 
    <table>
     <tbody>
@@ -83,10 +80,10 @@ Quickview stöds av följande visningsprogram i Dynamic Media:
 
 1. Visningsprogrammet som du använder nu måste kunna använda snabbvyn.
 
-   Visningsprogrammet använder en hanterare med namnet `QuickViewActive`.
+   Visningsprogrammet använder en hanterare som kallas `QuickViewActive`.
 
-   ****
-ExempelAnta att du använder följande exempelkod för inbäddning på webbsidan för en interaktiv bild:
+   **Exempel**
+Anta att du använder följande exempelkod för inbäddning på webbsidan för en interaktiv bild:
 
    ![chlimage_1-291](assets/chlimage_1-291.png)
 
@@ -107,17 +104,17 @@ ExempelAnta att du använder följande exempelkod för inbäddning på webbsidan
    })
    ```
 
-   Läs mer om metoden `setHandlers()` på följande sätt:
+   Läs mer om `setHandlers()` metod på följande sätt:
 
    * Interaktivt bildvisningsprogram: [https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-sethandlers.html](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-sethandlers.html)
    * Interaktivt visningsprogram för video: [https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-sethandlers.html](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-sethandlers.html)
 
-1. Du måste nu konfigurera `quickViewActivate`-hanteraren.
+1. Du måste nu konfigurera `quickViewActivate` hanterare.
 
-   Hanteraren `quickViewActivate` styr snabbvyn i visningsprogrammet. Hanteraren innehåller variabellistan och funktionsanrop som kan användas med snabbvyn. Inbäddningskoden tillhandahåller mappning för SKU-variabeluppsättningen i snabbvyn och ett exempel på `loadQuickView`-funktionsanrop.
+   The `quickViewActivate` -hanteraren styr snabbvyn i visningsprogrammet. Hanteraren innehåller variabellistan och funktionsanrop som kan användas med snabbvyn. Inbäddningskoden innehåller mappning för SKU-variabeluppsättningen i snabbvyn och ett exempel `loadQuickView` funktionsanrop.
 
-   **Variable**
-mappingMap-variabler som ska användas på webbsidan till SKU-värdet och generiska variabler som finns i QuickView:
+   **Variabelmappning**
+Mappa variabler för användning på webbsidan till SKU-värdet och generiska variabler som finns i snabbvyn:
 
    `var *variable1*= inData.*quickviewVariable*`
 
@@ -137,9 +134,9 @@ Hanteraren kräver också ett funktionsanrop för att snabbvyn ska fungera. Funk
 
    `loadQuickView(sku)`
 
-   Samplingsfunktionsanropet förutsätter att funktionen `loadQuickView()` finns och är tillgänglig.
+   Samplingsfunktionsanropet förutsätter funktionen `loadQuickView()` finns och är tillgänglig.
 
-   Läs mer om metoden `quickViewActivate` på följande sätt:
+   Läs mer om `quickViewActivate` metod på följande sätt:
 
    * Interaktivt bildvisningsprogram: [https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-event-callbacks.html](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-event-callbacks.html)
    * Interaktivt visningsprogram för video: [https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video-event-callbacks.html](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video-event-callbacks.html)
@@ -150,8 +147,8 @@ Hanteraren kräver också ett funktionsanrop för att snabbvyn ska fungera. Funk
    * Avkommentera avsnittet setHandlers i den inbäddade koden.
    * Mappa eventuella ytterligare variabler som finns i snabbvyn.
 
-      * Uppdatera `loadQuickView(sku,*var1*,*var2*)`-anropet om du lägger till ytterligare variabler.
-   * Skapa en enkel `loadQuickView` ()-funktion på sidan, utanför visningsprogrammet.
+      * Uppdatera `loadQuickView(sku,*var1*,*var2*)` anropa om du lägger till ytterligare variabler.
+   * Skapa en enkel `loadQuickView` () på sidan, utanför visningsprogrammet.
 
       Följande skriver till exempel värdet på SKU till webbläsarkonsolen:
 
@@ -161,13 +158,13 @@ Hanteraren kräver också ett funktionsanrop för att snabbvyn ska fungera. Funk
    }
    ```
 
-   * Överför en testsida i HTML-format till en webbserver och öppna den.
+   * Ladda upp en testsida för HTML till en webbserver och öppna den.
 
       När variablerna från snabbvyn är mappade och funktionsanropet är på plats, skriver webbläsarkonsolen variabelvärdet till webbläsarkonsolen med den angivna exempelfunktionen.
 
 
 
-1. Du kan nu använda en funktion för att anropa ett enkelt popup-fönster i snabbvyn. I följande exempel används en `DIV` för ett popup-fönster.
+1. Du kan nu använda en funktion för att anropa ett enkelt popup-fönster i snabbvyn. I följande exempel används en `DIV` för en popup.
 1. Formatera popup-fönstret `DIV` på följande sätt. Lägg till egen formatering efter behov.
 
    ```xml
@@ -180,7 +177,7 @@ Hanteraren kräver också ett funktionsanrop för att snabbvyn ska fungera. Funk
    </style>
    ```
 
-1. Placera popup-fönstret `DIV` i HTML-sidans brödtext.
+1. Placera popup-fönstret `DIV` på HTML-sidan.
 
    Ett av elementen anges med ett ID som uppdateras med SKU-värdet när användaren anropar en snabbvy. Exemplet innehåller också en enkel knapp som döljer popup-fönstret igen när det är synligt.
 
@@ -211,13 +208,13 @@ Hanteraren kräver också ett funktionsanrop för att snabbvyn ska fungera. Funk
 
    Om du vill att popup-fönstret ska visas i både standardläge och helskärmsläge, kopplar du popup-fönstret till visningsbehållaren. Använd en andra hanterarmetod, `initComplete`.
 
-   Hanteraren `initComplete` anropas efter att visningsprogrammet har initierats.
+   The `initComplete` hanteraren anropas efter att visningsprogrammet har initierats.
 
    ```xml
    "initComplete":function() { code block }
    ```
 
-   Läs mer om metoden `init()` på följande sätt:
+   Läs mer om `init()` metod på följande sätt:
 
    * Interaktivt bildvisningsprogram: [https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-init.html](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-init.html)
    * Interaktivt visningsprogram för video: [https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-init.html](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-init.html)
@@ -264,8 +261,8 @@ Hanteraren kräver också ett funktionsanrop för att snabbvyn ska fungera. Funk
 
    `*viewerInstance.*init()`
 
-   ****
-ExempelI det här exemplet används visningsprogrammet för interaktiv bild.
+   **Exempel**
+I det här exemplet används visningsprogrammet för interaktiv bild.
 
    `s7interactiveimageviewer.init()`
 
