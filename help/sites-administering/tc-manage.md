@@ -1,29 +1,19 @@
 ---
 title: Hantera översättningsprojekt
-seo-title: Hantera översättningsprojekt
 description: Lär dig hantera översättningsprojekt i AEM.
-seo-description: Lär dig hantera översättningsprojekt i AEM.
-uuid: f6f79b5b-dc08-4dde-b464-719345d233a6
-contentOwner: msm-service
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-topic-tags: site-features
-content-type: reference
-discoiquuid: c8672774-6911-497d-837b-1e5953c4226a
-feature: Language Copy
-translation-type: tm+mt
-source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
+exl-id: 968bba02-98fe-4eaf-9937-ce5cfdf5b413
+source-git-commit: 7efb1b8d345b07835e5f45a1afe9da13163411b2
 workflow-type: tm+mt
-source-wordcount: '3455'
+source-wordcount: '3536'
 ht-degree: 1%
 
 ---
-
 
 # Hantera översättningsprojekt{#managing-translation-projects}
 
 När du har förberett innehåll för översättning måste du slutföra språkstrukturen genom att skapa saknade språkkopior och skapa översättningsprojekt.
 
-Med översättningsprojekt kan du hantera översättning av AEM. Ett översättningsprojekt är en typ av AEM [projekt](/help/sites-authoring/projects.md) som innehåller resurser som ska översättas till andra språk. Dessa resurser är de sidor och resurser i [språkkopiorna](/help/sites-administering/tc-prep.md) som skapas från överordnad.
+Med översättningsprojekt kan du hantera översättning av AEM. Ett översättningsprojekt är en typ av AEM [projekt](/help/sites-authoring/projects.md) som innehåller resurser som ska översättas till andra språk. Dessa resurser är sidorna och resurserna i [språkversioner](/help/sites-administering/tc-prep.md) som har skapats från överordnad.
 
 När resurser läggs till i ett översättningsprojekt skapas ett översättningsjobb för dem. Jobb innehåller kommandon och statusinformation som du använder för att hantera de mänskliga översättnings- och maskinöversättningsarbetsflödena som körs på resurserna.
 
@@ -47,7 +37,7 @@ När resurser läggs till i ett översättningsprojekt skapas ett översättning
 
 AEM identifierar om ett översättningsprojekt skapas för den inledande översättningen av innehåll eller för att uppdatera redan översatta språkkopior. När du skapar ett översättningsprojekt för en sida och anger vilka språkkopior du översätter för, identifierar AEM om källsidan redan finns i målspråkskopiorna:
 
-* **Språkkopian innehåller inte sidan:** AEM behandlar den här situationen som den inledande översättningen. Sidan kopieras omedelbart till språkkopian och inkluderas i projektet. När den översatta sidan importeras till AEM kopieras AEM den direkt till språkkopian.
+* **Språkkopian innehåller inte sidan:** AEM behandlar denna situation som den inledande översättningen. Sidan kopieras omedelbart till språkkopian och inkluderas i projektet. När den översatta sidan importeras till AEM kopieras AEM den direkt till språkkopian.
 * **Språkkopian innehåller redan sidan:** AEM behandlar den här situationen som en uppdaterad översättning. En startsida skapas och en kopia av sidan läggs till i startprogrammet och ingår i projektet. Med det här programmet kan du granska uppdaterade översättningar innan du implementerar dem i språkkopian:
 
    * När den översatta sidan importeras till AEM, skrivs sidan över vid start.
@@ -68,11 +58,11 @@ Skapa översättningsprojekt så att du kan köra och hantera arbetsflödet för
 
 Du kan ange att de underordnade sidorna för den markerade sidan också ska vara markerade. I det här fallet läggs kopior av de underordnade sidorna också till i varje projekt så att de översätts. När underordnade sidor är kopplade till olika konfigurationer för översättningsintegreringsramverk skapar AEM ytterligare projekt.
 
-Du kan även [skapa översättningsprojekt](#creating-a-translation-project-using-the-projects-console) manuellt.
+Du kan också [skapa översättningsprojekt manuellt](#creating-a-translation-project-using-the-projects-console).
 
 >[!NOTE]
 >
->Om du vill skapa ett projekt måste ditt konto vara medlem i gruppen `project-administrators`.
+>Om du vill skapa ett projekt måste ditt konto vara medlem i `project-administrators` grupp.
 
 **Initiala översättningar och uppdatering av översättningar**
 
@@ -80,7 +70,7 @@ Referenspanelen anger om du uppdaterar befintliga språkkopior eller skapar den 
 
 ![chlimage_1-239](assets/chlimage_1-239.png)
 
-Efter översättning kan du [granska översättningen](#reviewing-and-promoting-updated-content) innan du skriver över språkkopian med den. Om det inte finns någon språkkopia för den valda sidan visas fliken Skapa och översätt för att ge åtkomst till projektrelaterade kommandon.
+Efter översättning kan du [granska översättningen](#reviewing-and-promoting-updated-content) innan språkkopian skrivs över med den. Om det inte finns någon språkkopia för den valda sidan visas fliken Skapa och översätt för att ge åtkomst till projektrelaterade kommandon.
 
 ![chlimage_1-240](assets/chlimage_1-240.png)
 
@@ -97,7 +87,7 @@ Efter översättning kan du [granska översättningen](#reviewing-and-promoting-
 1. Välj Språkkopior och sedan de språkkopior som du översätter källsidorna för.
 1. Klicka eller tryck på Skapa och översätt och konfigurera sedan översättningsjobbet:
 
-   * Använd listrutan Språk för att välja en språkkopia som du vill översätta för. Välj ytterligare språk efter behov. Språk som visas i listan motsvarar de [språkrötter som du har skapat](/help/sites-administering/tc-prep.md#creating-a-language-root).
+   * Använd listrutan Språk för att välja en språkkopia som du vill översätta för. Välj ytterligare språk efter behov. De språk som visas i listan motsvarar [språktrötter som du har skapat](/help/sites-administering/tc-prep.md#creating-a-language-root).
    * Om du vill översätta den markerade sidan och alla underordnade sidor väljer du Markera alla underordnade sidor. Om du bara vill översätta den markerade sidan avmarkerar du alternativet.
    * För Projekt väljer du Skapa nytt översättningsprojekt.
    * Ange ett namn för projektet.
@@ -205,7 +195,7 @@ Din ordbok är nu i ditt översättningsjobb.
 
 >[!NOTE]
 >
->Mer information om i18n-ordlistor finns i [Använda Translator för att hantera ordlistor](/help/sites-developing/i18n-translator.md).
+>Mer information om i18n-ordlistor finns i [Använda översättare för att hantera ordlistor](/help/sites-developing/i18n-translator.md).
 
 ## Lägga till taggar i ett översättningsjobb {#adding-tags-to-a-translation-job}
 
@@ -227,9 +217,9 @@ Dina taggar läggs nu till i översättningsjobbet.
 
 ![chlimage_1-257](assets/chlimage_1-257.png)
 
-## Information om visningsprojekt {#seeing-translation-project-details}
+## Visa information om översättningsprojekt {#seeing-translation-project-details}
 
-Panelen Översättningssammanfattning innehåller egenskaperna som är konfigurerade för ett översättningsprojekt. Förutom den allmänna [projektinformationen](/help/sites-authoring/projects.md#project-info) innehåller översättningsfliken översättningsspecifika egenskaper:
+Panelen Översättningssammanfattning innehåller egenskaperna som är konfigurerade för ett översättningsprojekt. Förutom generiska [projektinformation](/help/sites-authoring/projects.md#project-info)innehåller översättningsfliken översättningsspecifika egenskaper:
 
 * Källspråk: Språket för de sidor som översätts.
 * Målspråk: Språket som sidorna översätts till.
@@ -319,7 +309,7 @@ Omfånget fungerar bara korrekt när den översättningsleverantör som du anvä
 
 1. När jobbstatusen ändras till SCOPE_COMPLETED klickar du på eller trycker på kommandomenyn på panelen Översättningsjobb och sedan på Visa omfång.
 
-## Startar ett översättningsjobb {#starting-a-translation-job}
+## Starta ett översättningsjobb {#starting-a-translation-job}
 
 Starta ett översättningsjobb för att översätta källsidorna till målspråket. Översättningen utförs enligt egenskapsvärdena för översättningssammanfattningsrutan.
 
@@ -334,9 +324,9 @@ När du har startat översättningsjobbet visas statusen Översättning pågår 
 
 1. Klicka på eller tryck på Stäng i dialogrutan Åtgärd som bekräftar början av översättningen.
 
-## Avbryter ett översättningsjobb {#canceling-a-translation-job}
+## Avbryta ett översättningsjobb {#canceling-a-translation-job}
 
-Avbryt ett översättningsjobb om du vill stoppa översättningsprocessen och förhindra att översättningsleverantören utför fler översättningar. Du kan avbryta ett jobb när jobbet har statusen `Committed For Translation` eller `Translation In Progress`.
+Avbryt ett översättningsjobb om du vill stoppa översättningsprocessen och förhindra att översättningsleverantören utför fler översättningar. Du kan avbryta ett jobb när jobbet har `Committed For Translation` eller `Translation In Progress` status.
 
 1. Öppna översättningsprojektet i projektkonsolen.
 1. Klicka eller tryck på kommandomenyn på panelen Översättningsjobb och sedan på Avbryt.
@@ -354,7 +344,7 @@ Om du väljer Avvisa översättning kan du lägga till en kommentar.
 
 Om du avvisar innehåll skickas det tillbaka till översättningsleverantören där han kan se kommentaren.
 
-## Granska och marknadsför uppdaterat innehåll {#reviewing-and-promoting-updated-content}
+## Granska och marknadsföra uppdaterat innehåll {#reviewing-and-promoting-updated-content}
 
 När innehåll översätts för en befintlig språkkopia granskar du översättningarna, gör ändringar om det behövs och höjer sedan översättningarna så att de flyttas till språkkopian. Du kan granska översatta filer när översättningsjobbet visar statusen Klart för granskning.
 
@@ -370,25 +360,25 @@ När innehåll översätts för en befintlig språkkopia granskar du översättn
    ![chlimage_1-271](assets/chlimage_1-271.png)
 
 1. Klicka på Öppna sida för att öppna startkopian av sidan för att granska och redigera innehållet.
-1. När du har granskat innehållet och gjort de ändringar du behöver kan du befordra startkopian genom att klicka på Befordra.
+1. När du har granskat innehållet och gjort de ändringar som krävs för att befordra startkopian klickar du på Befordra.
 1. På sidan Befordra start anger du vilka sidor som ska befordras och klickar eller trycker sedan på Befordra.
 
 ## Jämför språkkopior {#comparing-language-copies}
 
 Så här jämför du språkkopior med Överordnad:
 
-1. Gå till den språkkopia som du vill jämföra i konsolen **Platser**.
-1. Öppna panelen **[Referenser](/help/sites-authoring/basic-handling.md#references)**.
-1. Under rubriken **Kopior** väljer du **Språkkopior.**
+1. I **Webbplatser** navigera till den språkkopia som du vill jämföra.
+1. Öppna **[Referenser](/help/sites-authoring/basic-handling.md#references)** -panelen.
+1. Under **Kopior** rubrikmarkera **Språkkopior.**
 1. Välj en språkversion och klicka sedan på **Jämför med Överordnad **eller **Jämför med tidigare **om tillämpligt.
 
    ![chlimage_1-37](assets/chlimage_1-37.jpeg)
 
 1. De två sidorna (start och källa) öppnas sida vid sida.
 
-   Mer information om hur du använder den här funktionen finns i [Sidskillnad](/help/sites-authoring/page-diff.md).
+   Mer information om hur du använder funktionen finns i [Sidskillnader](/help/sites-authoring/page-diff.md).
 
-## Slutför och arkiverar översättningsjobb {#completing-and-archiving-translation-jobs}
+## Slutföra och arkivera översättningsjobb {#completing-and-archiving-translation-jobs}
 
 Slutför ett översättningsjobb när du har granskat de översatta filerna från leverantören. För mänskliga översättningsarbetsflöden anger en översättning för leverantören att översättningsavtalet har uppfyllts och att de bör spara översättningen i sitt översättningsminne.
 
@@ -400,7 +390,7 @@ Arkivera ett översättningsjobb när det är klart och du behöver inte längre
 
 ## Skapa strukturen för en språkkopia {#creating-the-structure-of-a-language-copy}
 
-Fyll i din språkkopia så att den innehåller innehåll från det överordnad språk som du översätter. Innan du fyller i din språkkopia måste du ha [skapat språkroten](/help/sites-administering/tc-prep.md#creating-a-language-root) för språkkopian.
+Fyll i din språkkopia så att den innehåller innehåll från det överordnad språk som du översätter. Du måste ha [skapade språkroten](/help/sites-administering/tc-prep.md#creating-a-language-root) av språkversionen.
 
 1. Använd webbplatskonsolen för att välja språkroten för det överordnad språk som du använder som källa. Om du till exempel vill översätta de engelska sidorna på demowebbplatsen väljer du Innehåll > Demonsplats för Geometrixx > Engelska.
 1. Klicka på eller tryck på Referenser i verktygsfältet.
@@ -420,20 +410,30 @@ Fyll i din språkkopia så att den innehåller innehåll från det överordnad s
 
 1. Klicka eller tryck på Start.
 
+## Flytta eller byta namn på en källsida {#move-source}
+
+Om en redan översatt källsida måste [ändrat namn eller flyttat](/help/sites-authoring/managing-pages.md#moving-or-renaming-a-page)om du översätter sidan igen efter flytten skapas en ny språkkopia baserad på det nya sidnamnet/den nya platsen. Den gamla språkkopian som baseras på föregående namn/plats kommer fortfarande att finnas där.
+
+Det bästa sättet i detta scenario är att följa denna procedur:
+1. Avpublicera de språkkopior som är associerade med den källsida som du vill flytta.
+1. Ta bort dem.
+1. Skapa nya språkkopior från den nyligen flyttade källsidan.
+1. Publicera de nya språkkopiorna.
+
 ## Skapa ett översättningsprojekt med projektkonsolen {#creating-a-translation-project-using-the-projects-console}
 
 Du kan skapa ett översättningsprojekt manuellt om du föredrar att använda projektkonsolen.
 
 >[!NOTE]
 >
->Om du vill skapa ett projekt måste ditt konto vara medlem i gruppen `project-administrators`.
+>Om du vill skapa ett projekt måste ditt konto vara medlem i `project-administrators` grupp.
 
-När du skapar ett översättningsprojekt manuellt måste du ange värden för följande översättningsrelaterade egenskaper utöver de [grundläggande egenskaperna](/help/sites-authoring/touch-ui-managing-projects.md#creating-a-project):
+När du skapar ett översättningsprojekt manuellt måste du ange värden för följande översättningsrelaterade egenskaper utöver de [grundläggande egenskaper](/help/sites-authoring/touch-ui-managing-projects.md#creating-a-project):
 
 * **Namn:** Projektnamn.
-* **Källspråk:** Källinnehållets språk.
-* **Målspråk:** Det språk som innehållet översätts till.
-* **Översättningsmetod:** Markera mänsklig översättning om du vill ange att översättningen ska utföras manuellt.
+* **Källspråk:** Språket för källinnehållet.
+* **Målspråk:** Språket som innehållet översätts till.
+* **Översättningsmetod:** Välj Human Translation för att ange att översättningen ska utföras manuellt.
 
 1. Klicka eller tryck på Skapa i verktygsfältet i projektkonsolen.
 1. Välj mallen Översättningsprojekt och klicka eller tryck sedan på Nästa.
@@ -449,11 +449,10 @@ Du kan hämta innehållet i ett översättningsjobb, till exempel för att skick
 1. Klicka eller tryck på Hämta exporterad fil i dialogrutan Exportera och använd vid behov webbläsardialogrutan för att spara filen.
 1. Klicka eller tryck på Stäng i dialogrutan Exportera.
 
-## Importerar ett översättningsjobb {#importing-a-translation-job}
+## Importera ett översättningsjobb {#importing-a-translation-job}
 
 Du kan importera översatt innehåll till AEM, till exempel när översättningsleverantören skickar det till dig eftersom de inte är integrerade med AEM via en koppling.
 
 1. Klicka på eller tryck på Importera i listrutan i rutan Översättningsjobb.
 1. Använd webbläsarens dialogruta för att markera filen som ska importeras.
 1. Klicka eller tryck på Stäng i dialogrutan Importera.
-
