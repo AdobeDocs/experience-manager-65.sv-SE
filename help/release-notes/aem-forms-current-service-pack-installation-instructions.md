@@ -1,13 +1,13 @@
 ---
 title: Installationsanvisningar för AEM Forms Patch för AEM Forms
 description: Installationsanvisningar för AEM Forms Service Pack för OSGi- och JEE-miljö
-source-git-commit: a470627eb87735dd55edda93c3e2dac4a2c36752
+exl-id: ae4c7e9d-9af8-4288-a6f9-e3bcbe7d153d
+source-git-commit: 72e4d6372a013acde1c2cf7e46cc36e3525e53bf
 workflow-type: tm+mt
-source-wordcount: '1844'
+source-wordcount: '1793'
 ht-degree: 0%
 
 ---
-
 
 # Installationsanvisningar för AEM 6.5 Forms Service Pack {#aem-form-patch-installation-instructions}
 
@@ -18,11 +18,11 @@ ht-degree: 0%
 | Version | 6.5.15.0 |
 | Typ | Service Pack-version |
 | Date | 1 december 2022 |
-| Hämta URL | [Senaste AEM Forms Releases](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html) |
+| Hämta URL | [Senaste AEM Forms Releases](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) |
 
 >[!NOTE]
 >
->Se de senaste [AEM Service Pack versionsinformation](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html#forms-6515) för en fullständig lista över åtgärdade problem.
+>Se de senaste [AEM Service Pack versionsinformation](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html) för en fullständig lista över åtgärdade problem.
 
 ## Vad ingår i Experience Manager Forms 6.5
 
@@ -52,9 +52,9 @@ Adobe Experience Manager (AEM) Forms Service Pack innehåller nya och uppgradera
 
 +++2.Ladda ned nödvändig programvara:
 
-* [AEM Forms on JEE 6.5.15.0 Service Pack](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/jee-patch-installer-65.html)
-* [AEM 6.5.15.0 Service Pack](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fservicepack%2Faem-service-pkg-6.5.15.0.zip)
-* [Forms tilläggspaket](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faemcloud%2Fpublic%2Faem-forms-addon-2022.12.20.00-220900.zip)
+* [AEM Forms on JEE 6.5.15.0 Service Pack](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)
+* [AEM 6.5.15.0 Service Pack](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html)
+* [Forms tilläggspaket](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)
 * [Fragmentservervlet](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Forg.apache.felix.http.servlet-api-1.2.0_fragment_full.jar)
 
 +++
@@ -95,22 +95,20 @@ Navigera till rätt katalog och från ett skal och en typ
 
 1. **[Endast för Unix-baserade]:** The **Starta Configuration Manager** är markerad som standard. Klicka **[!UICONTROL Done]** för att köra Configuration Manager direkt eller för att köra **Konfigurationshanteraren** avmarkera **Starta Configuration Manager** innan du klickar **[!UICONTROL Done]**. Du kan börja **Konfigurationshanteraren** senare använda lämpligt skript i `[AEM_forms_root]/configurationManager/bin` katalog.
 
-   Du måste utföra de angivna åtgärderna när du kör **Konfigurationshanteraren**:
-   * Konfigurera CRX
-   * Driftsätt Adobe Experience Manager Forms EAR
-   * Initiera Adobe Experience Manager Forms-databas
-   * Distribuera Adobe Experience Manager Forms-komponenter
-   * Driftsätt och validera DSC-burkarna.
-
 1. Beroende på programservern väljer du ett av följande dokument och följer instruktionerna i *Konfigurera och distribuera AEM formulär* -avsnitt.
 
    * [Installera och distribuera AEM formulär för JBoss®](https://www.adobe.com/go/learn_aemforms_installJBoss_65)
    * [Installera och distribuera AEM för WebSphere®](https://www.adobe.com/go/learn_aemforms_installWebSphere_65)
    * [Installera och distribuera AEM Forms för WebLogic](https://www.adobe.com/go/learn_aemforms_installWebLogic_65)
+   * [Installera och distribuera AEM formulär för JBoss® Cluster](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/install-cluster-jboss.pdf)
+   * [Installera och distribuera AEM för WebSphere® Cluster](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/install-cluster-websphere.pdf)
+   * [Installera och distribuera AEM Forms för WebLogic-kluster](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/install-cluster-weblogic.pdf)
+
+Det är
 
 >[!NOTE]
 >
-> När du har installerat AEM Forms på JEE-Service Pack måste du ta bort Forms-tilläggspaketet från `crx-repository\install` innan appservern startas om. Hämta det senaste Forms-tilläggspaketet från [Programdistributionsportal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html).
+> När du har installerat AEM Forms på JEE-Service Pack måste du ta bort Forms-tilläggspaketet från `crx-repository\install` innan appservern startas om. Hämta det senaste Forms-tilläggspaketet från [Programdistributionsportal](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html).
 
 +++
 
@@ -165,8 +163,8 @@ Om du vill veta vilka plattformar som är certifierade för att fungera med den 
 +++6. Installera AEM Experience Manager Forms tilläggspaket
 
 1. Kontrollera att du har installerat [!DNL Experience Manager] Service Pack.
-1. Ladda ned motsvarande tilläggspaket från Forms på [AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en#forms-updates) för ditt operativsystem.
-1. Installera Forms tilläggspaket enligt beskrivningen i [Installera AEM Forms tilläggspaket](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html?lang=en#install-aem-forms-add-on-package).
+1. Ladda ned motsvarande tilläggspaket från Forms på [AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) för ditt operativsystem.
+1. Installera Forms tilläggspaket enligt beskrivningen i [Installera AEM Forms tilläggspaket](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html).
 1. Om du använder bokstäver i Experience Manager 6.5 Forms installerar du [senaste AEMFD-kompatibilitetspaket](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html).
 
 +++
@@ -200,8 +198,8 @@ Om du vill veta vilka plattformar som är certifierade för att fungera med den 
 
 +++2.Ladda ned nödvändig programvara:
 
-* [AEM 6.5.15.0 Service Pack](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fservicepack%2Faem-service-pkg-6.5.15.0.zip)
-* [Forms tilläggspaket](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faemcloud%2Fpublic%2Faem-forms-addon-2022.12.20.00-220900.zip)
+* [AEM 6.5.15.0 Service Pack](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html)
+* [Forms tilläggspaket](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)
 
 +++
 
@@ -240,20 +238,18 @@ Om du vill veta vilka plattformar som är certifierade för att fungera med den 
 +++4. Installera AEM Experience Manager Forms tilläggspaket
 
 1. Kontrollera att du har installerat [!DNL Experience Manager] Service Pack.
-1. Ladda ned motsvarande tilläggspaket från Forms på [AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en#forms-updates) för ditt operativsystem.
-1. Installera Forms tilläggspaket enligt beskrivningen i [Installera AEM Forms tilläggspaket](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html?lang=en#install-aem-forms-add-on-package).
+1. Ladda ned motsvarande tilläggspaket från Forms på [AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) för ditt operativsystem.
+1. Installera Forms tilläggspaket enligt beskrivningen i [Installera AEM Forms tilläggspaket](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html).
 1. Om du använder bokstäver i Experience Manager 6.5 Forms installerar du [senaste AEMFD-kompatibilitetspaket](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html).
 
 +++
 
 ## Felsökning
 
-* Installera om AEM Forms Service Pack om ett fel inträffar under installationen. Kontakta produktteamet om problemet kvarstår.
+* Installera om AEM Forms Service Pack om ett fel inträffar under installationen. Kontakta supporten för Adobe om problemet kvarstår.
 
 * If **Dialogruta för pakethanterarens användargränssnitt** avslutar under installationen av Service Pack, vänta tills felloggarna har stabiliserats innan du får åtkomst till distributionen. Vänta på de specifika loggarna för avinstallationen av uppdateringspaketet innan du försäkrar dig om att installationen lyckas. Vanligtvis inträffar det här problemet i webbläsaren Safari, men det kan inträffa i alla webbläsare.
 
 * Kontrollera övervakningsloggarna (error.log) när installationen är klar för att se om det finns några aktiviteter. Vänta i några minuter tills loggarna inte har någon aktivitet. Starta om AEM.
 
 * Om du får en **service-otillgängligt fel** efter installation av senaste AEM Forms 6.5.15.0 Service Pack, [installera serverns fragment och paket](/help/forms/using/aem-service-pack-installation-solution.md) för att åtgärda felet.
-
-
