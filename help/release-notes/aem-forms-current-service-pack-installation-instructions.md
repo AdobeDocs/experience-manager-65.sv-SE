@@ -2,9 +2,9 @@
 title: Installationsanvisningar för AEM Forms Patch för AEM Forms
 description: Installationsanvisningar för AEM Forms Service Pack för OSGi- och JEE-miljö
 exl-id: ae4c7e9d-9af8-4288-a6f9-e3bcbe7d153d
-source-git-commit: 72e4d6372a013acde1c2cf7e46cc36e3525e53bf
+source-git-commit: 0083de8ba459662d04ba80d8c63f21735d82ac82
 workflow-type: tm+mt
-source-wordcount: '1793'
+source-wordcount: '1773'
 ht-degree: 0%
 
 ---
@@ -91,7 +91,8 @@ Navigera till rätt katalog och från ett skal och en typ
 
       >[!NOTE]
       >
-      > Använda **ConfigurationManager.bat** kan du undvika att uppdatera namnet på .lax-filer manuellt.
+      >* Uppdatera eller ersätta **ConfigurationManager.bat** hjälper dig att undvika att uppdatera namnet på .lax-filer manuellt.
+
 
 1. **[Endast för Unix-baserade]:** The **Starta Configuration Manager** är markerad som standard. Klicka **[!UICONTROL Done]** för att köra Configuration Manager direkt eller för att köra **Konfigurationshanteraren** avmarkera **Starta Configuration Manager** innan du klickar **[!UICONTROL Done]**. Du kan börja **Konfigurationshanteraren** senare använda lämpligt skript i `[AEM_forms_root]/configurationManager/bin` katalog.
 
@@ -104,7 +105,6 @@ Navigera till rätt katalog och från ett skal och en typ
    * [Installera och distribuera AEM för WebSphere® Cluster](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/install-cluster-websphere.pdf)
    * [Installera och distribuera AEM Forms för WebLogic-kluster](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/install-cluster-weblogic.pdf)
 
-Det är
 
 >[!NOTE]
 >
@@ -245,8 +245,6 @@ Om du vill veta vilka plattformar som är certifierade för att fungera med den 
 +++
 
 ## Felsökning
-
-* Installera om AEM Forms Service Pack om ett fel inträffar under installationen. Kontakta supporten för Adobe om problemet kvarstår.
 
 * If **Dialogruta för pakethanterarens användargränssnitt** avslutar under installationen av Service Pack, vänta tills felloggarna har stabiliserats innan du får åtkomst till distributionen. Vänta på de specifika loggarna för avinstallationen av uppdateringspaketet innan du försäkrar dig om att installationen lyckas. Vanligtvis inträffar det här problemet i webbläsaren Safari, men det kan inträffa i alla webbläsare.
 
