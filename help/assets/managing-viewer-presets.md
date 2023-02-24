@@ -12,9 +12,9 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/viewer
 feature: Viewer Presets
 role: User, Admin
 exl-id: 0899e497-88e9-4fc3-a6be-b3a149fb5b32
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: f578a3c5dee24bbb9995329777eea02bb8f1b654
 workflow-type: tm+mt
-source-wordcount: '4223'
+source-wordcount: '4391'
 ht-degree: 8%
 
 ---
@@ -459,6 +459,19 @@ Se [Specialöverväganden när du skapar en Carousel Banner Viewer-förinställn
 
 1. (Valfritt) I början av sidan Redigera visningsförinställning väljer du **[!UICONTROL Desktop]**, **[!UICONTROL Tablet]**, eller **[!UICONTROL Phone]** för att unikt definiera visuella format för olika enhets- och skärmtyper.
 1. På sidan Redigerare för visningsförinställning väljer du **[!UICONTROL Behavior]** -fliken. Du kan också markera ett visuellt element i visningsprogrammet och välja det för konfiguration.
+För *VideoPlayer* text, under **[!UICONTROL Modifiers]** > **[!UICONTROL Playback]** kan du välja mellan tre alternativ för adaptiv direktuppspelning:
+
+   * **[!UICONTROL dash]** - Videorna spelas endast upp med bindestreck.
+   * **[!UICONTROL hls]** - Videoströmmar endast som hls.
+   * **[!UICONTROL auto]** - Bästa praxis. Skapandet av DASH- och HLS-strömmar är lagringsoptimerat. Därför rekommenderar Adobe att du alltid väljer **[!UICONTROL auto]** som uppspelningstyp. Videoklipp direktuppspelas som streck, hls eller progressiv, som i följande:
+      * Om webbläsaren stöder DASH används DASH-direktuppspelning först.
+      * Om webbläsaren inte stöder DASH används HLS-direktuppspelning, andra gången.
+      * Om webbläsaren inte stöder DASH eller HLS används den progressiva uppspelningen sist.
+
+   >[!NOTE]
+   >
+   >Så här visar och använder du **[!UICONTROL dash]** måste den först aktiveras av Adobe tekniska support på ditt konto. Se [Aktivera DASH på ditt konto](/help/assets/video.md#enable-dash).
+
 1. Välj en komponent vars beteenden du vill ändra i listrutan **[!UICONTROL Selected Type]**.
 
    Många komponenter i den visuella redigeraren har en detaljerad beskrivning. Dessa beskrivningar visas i blå rutor när du expanderar en komponent för att visa dess associerade parametrar.
@@ -476,6 +489,10 @@ Se [Specialöverväganden när du skapar en Carousel Banner Viewer-förinställn
 1. Publicera din nya visningsförinställning så att du kan använda den på webbplatsen.
 
    Se [Förinställningar för publiceringsvisningsprogram](#publishing-viewer-presets).
+
+   >[!IMPORTANT]
+   >
+   >För gamla videor som använder en adaptiv direktuppspelningsprofil fortsätter URL-adressen att spelas som vanligt - med HLS-direktuppspelning - tills du [bearbeta om videoresurserna](/help/assets/processing-profiles.md#reprocessing-assets). Efter ombearbetningen fortsätter samma URL-adress att fungera, men nu med *båda* DASH- och HLS-strömning är aktiverad.
 
 ### Specialöverväganden när du skapar en interaktiv visningsförinställning {#special-considerations-for-creating-an-interactive-viewer-preset}
 

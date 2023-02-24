@@ -12,9 +12,9 @@ feature: Video Profiles
 role: User, Admin
 mini-toc-levels: 3
 exl-id: b290fac2-7259-45d7-b733-70419d632b07
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: dacbfbc8b4677ac7b63b92c45602e030031de3a1
 workflow-type: tm+mt
-source-wordcount: '3508'
+source-wordcount: '3546'
 ht-degree: 8%
 
 ---
@@ -284,7 +284,7 @@ Du kan redigera en befintlig videokodningsprofil för att dra nytta av avancerad
    <td><code>keyframe</code></td>
    <td>Målantalet bildrutor mellan nyckelbildrutor. Beräkna det här värdet så att en nyckelbildruta kan genereras var 2:10:e sekund. Exempel: vid 30 bildrutor per sekund ska nyckelbildruteintervallet vara 60-300.<br /> <br /> Lägre intervall för nyckelrutor förbättrar strömsöknings- och strömbrytningsbeteendet för adaptiv videokodning och kan även förbättra kvaliteten för videoklipp som har mycket rörelse. Men eftersom nyckelrutor ökar filstorleken resulterar ett lägre nyckelruteintervall vanligtvis i en lägre total videokvalitet med en viss bithastighet.</td>
    <td><code>String</code></td>
-   <td><p>Positivt nummer.</p> <p>Standardvärdet är 300.</p> <p>Rekommenderat värde för HLS (HTTP Live Streaming) är 60-90.</p> </td>
+   <td><p>Positivt nummer.</p> <p>Standardvärdet är 300.</p> <p>Rekommenderat värde för DASH eller HLS är 60-90. (Om du vill använda DASH för videoklipp måste det först aktiveras på ditt konto. Se <a href="/help/assets/video.md#enable-dash">Aktivera DASH på ditt konto</a>.)</p> </td>
   </tr>
   <tr>
    <td><code>minBitrate</code></td>
@@ -302,7 +302,7 @@ Du kan redigera en befintlig videokodningsprofil för att dra nytta av avancerad
    <td><code>audioBitrateCustom</code></td>
    <td>Ange värde till <code>true</code> för att tvinga fram en konstant bithastighet för ljudströmmen, om detta stöds av ljudkodeken.</td>
    <td><code>String</code></td>
-   <td><p><code>true</code>/<code>false</code></p> <p>Standard är <code>false</code>.</p> <p>Rekommenderat värde för HLS (HTTP Live Streaming) är <code>false</code>.</p> <p> </p> </td>
+   <td><p><code>true</code>/<code>false</code></p> <p>Standard är <code>false</code>.</p> <p>Rekommenderat värde för DASH eller HLS är <code>false</code>. (Om du vill använda DASH för videoklipp måste det först aktiveras på ditt konto. Se <a href="/help/assets/video.md#enable-dash">Aktivera DASH på ditt konto</a>.)</p> <p> </p> </td>
   </tr>
  </tbody>
 </table>

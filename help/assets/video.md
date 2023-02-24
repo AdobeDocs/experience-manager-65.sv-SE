@@ -12,9 +12,9 @@ docset: aem65
 feature: Asset Management
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 2c4be989decbac2a4109e7c02cd9d6231c1d0753
 workflow-type: tm+mt
-source-wordcount: '11291'
+source-wordcount: '12065'
 ht-degree: 4%
 
 ---
@@ -142,7 +142,7 @@ Detaljerad teknisk information om algoritmen finns i [https://android.googlesour
 
 Följande stöds för hantering av enstaka video och adaptiva videouppsättningar:
 
-* Överföra video från ett antal videoformat och ljudformat som stöds och koda video till MP4 H.264-format för uppspelning på flera skärmar. Du kan använda fördefinierade adaptiva videoförinställningar, enskilda videokodningsförinställningar eller anpassa din egen kodning för att styra videons kvalitet och storlek.
+* Ladda upp video från ett antal videoformat och ljudformat som stöds och koda video till MP4 H.264-format för uppspelning på flera skärmar. Du kan använda fördefinierade adaptiva videoförinställningar, enskilda videokodningsförinställningar eller anpassa din egen kodning för att styra videons kvalitet och storlek.
 
    * När en adaptiv videouppsättning genereras innehåller den MP4-videor.
    * **Anteckning**: Överordnad videoklipp/källvideoklipp läggs inte till i en adaptiv videouppsättning.
@@ -155,7 +155,9 @@ Adaptiv videoströmning stöds på olika iOS-plattformar. Se [Referenshandbok f�
 
 Dynamic Media har stöd för videouppspelning i mobiler för MP4 H.264-video. Du kan hitta BlackBerry®-enheter som stöder det här videoformatet på följande: [Videoformat som stöds på BlackBerry®](https://support.blackberry.com/kb/articleDetail?ArticleNumber=000005482).
 
-Windows-enheter som stöder det här videoformatet finns på följande plats: [Media-codec som stöds för Windows Phone 8](https://docs.microsoft.com/en-us/windows/uwp/audio-video-camera/supported-codecs)
+Windows-enheter som stöder det här videoformatet finns på följande plats: [Media-codec som stöds för Windows Phone 8](https://learn.microsoft.com/en-us/windows/uwp/audio-video-camera/supported-codecs)
+
+
 
 * Spela upp videon med Dynamic Media Video Viewer Presets, inklusive följande:
 
@@ -175,7 +177,7 @@ Förinställningarna för videovisningsprogrammet i Dynamic Media HTML 5 är rob
 
 På designsidan av spelaren kan du utforma videospelarens funktioner med standardverktyg för webbutveckling. Du kan till exempel utforma knapparna, kontrollerna och den anpassade bakgrunden för förhandsvisningsbilder med HTML5 och CSS så att du kan nå dina kunder med ett anpassat utseende.
 
-På visningsprogrammets uppspelningssida identifieras webbläsarens videokapacitet automatiskt. Sedan visas videon med HLS (HTTP Live Streaming), som också kallas adaptiv videoströmning. Om leveransmetoderna inte finns används HTML5 progressiv i stället.
+På visningsprogrammets uppspelningssida identifieras webbläsarens videokapacitet automatiskt. Sedan visas videon med HLS eller DASH, som också kallas adaptiv videoströmning. Om leveransmetoderna inte finns används HTML5 progressiv i stället.
 
 Genom att kombinera följande i en enda spelare:
 
@@ -191,9 +193,9 @@ Se även [Om HTML5-visningsprogram](https://experienceleague.adobe.com/docs/dyna
 
 För strömning av anpassningsbara video för datorer och mobilenheter baseras de videor som används för växling av bithastighet på alla MP4-videor i den adaptiva videouppsättningen.
 
-Videouppspelning sker med HLS eller progressiv videohämtning. I tidigare versioner av Experience Manager, som 6.0, 6.1 och 6.2, strömmades videofilmer via HTTP.
+Videouppspelning sker med HLS eller DASH, eller progressiv videohämtning. I tidigare versioner av Experience Manager, som 6.0, 6.1 och 6.2, strömmades videofilmer via HTTP.
 
-I Experience Manager 6.3 och senare direktuppspelas videor nu via HTTPS (dvs. HLS) eftersom DM-gatewaytjänstens URL alltid använder HTTPS. Det här standardbeteendet påverkar inte kunderna. Det innebär att direktuppspelning av video alltid sker via HTTPS, såvida det inte stöds av webbläsaren. (se följande tabell). Därför returnerar
+I Experience Manager 6.3 och senare direktuppspelas videor nu via HTTPS (dvs. HLS eller DASH) eftersom DM-gatewaytjänstens URL alltid använder HTTPS. Det här standardbeteendet påverkar inte kunderna. Det innebär att direktuppspelning av video alltid sker via HTTPS, såvida det inte stöds av webbläsaren. (se följande tabell). Därför returnerar
 
 * Om du har en HTTPS-webbplats med HTTPS-videoströmning går det bra att strömma.
 * Om du har en HTTP-webbplats med HTTPS-videoströmning går det bra att strömma och det finns inga blandade innehållsproblem i webbläsaren.
@@ -219,7 +221,7 @@ I följande tabell beskrivs enheten, webbläsaren och uppspelningsmetoden för v
   <tr>
    <td>Skrivbord</td>
    <td>Internet Explorer 11+</td>
-   <td>I Windows 8 och Windows 10 - Tvinga användning av HTTPS när HLS begärs. Känd begränsning: HTTP på HLS fungerar inte i den här kombinationen av webbläsare och operativsystem<br /> <br /> I Windows 7 - progressiv nedladdning. Använder standardlogik för att välja HTTP- eller HTTPS-protokoll.</td>
+   <td>I Windows 8 och Windows 10 - Tvinga användning av HTTPS när DASH* eller HLS begärs. Känd begränsning: HTTP på DASH* eller HLS fungerar inte i den här kombinationen av webbläsare/operativsystem<br /> <br /> I Windows 7 - progressiv nedladdning. Använder standardlogik för att välja HTTP- eller HTTPS-protokoll.</td>
   </tr>
   <tr>
    <td>Skrivbord</td>
@@ -229,12 +231,12 @@ I följande tabell beskrivs enheten, webbläsaren och uppspelningsmetoden för v
   <tr>
    <td>Skrivbord</td>
    <td>Firefox 45 eller senare</td>
-   <td>HLS</td>
+   <td>DASH* eller HLS</td>
   </tr>
   <tr>
    <td>Skrivbord</td>
    <td>Krom</td>
-   <td>HLS</td>
+   <td>DASH* eller HLS</td>
   </tr>
   <tr>
    <td>Skrivbord</td>
@@ -249,7 +251,7 @@ I följande tabell beskrivs enheten, webbläsaren och uppspelningsmetoden för v
   <tr>
    <td>Mobil</td>
    <td>Chrome (Android™ 7 eller senare)</td>
-   <td>HLS</td>
+   <td>DASH* eller HLS</td>
   </tr>
   <tr>
    <td>Mobil</td>
@@ -264,15 +266,19 @@ I följande tabell beskrivs enheten, webbläsaren och uppspelningsmetoden för v
   <tr>
    <td>Mobil</td>
    <td>Chrome (iOS)</td>
-   <td>HLS</td>
+   <td>DASH* eller HLS</td>
   </tr>
   <tr>
    <td>Mobil</td>
    <td>BlackBerry®</td>
-   <td>HLS</td>
+   <td>DASH* eller HLS</td>
   </tr>
  </tbody>
 </table>
+
+>[!IMPORTANT]
+>
+>*Om du vill använda DASH för dina videor måste det först aktiveras av Adobe tekniska support på ditt konto. Se [Aktivera DASH på ditt konto](#enable-dash).)
 
 ## Arkitektur för Dynamic Media videolösning {#architecture-of-dynamic-media-video-solution}
 
@@ -329,10 +335,10 @@ I följande tabell beskrivs hur formelresultaten översätts till vanliga altern
 
 | Formelresultat | Proportioner |
 |--- |--- |
-| 1,33 | 4:3 |
-| 0,75 | 3:4 |
-| 1,78 | 16:9 |
-| 0,56 | 9:16 |
+| 1.33 | 4:3 |
+| 0.75 | 3:4 |
+| 1.78 | 16:9 |
+| 0.56 | 9:16 |
 
 En video som till exempel är 1440 bredd x 1080 höjd har proportionerna 1440/1080 eller 1,33. I det här fallet väljer du en förinställning för videokodning med 4:3-proportioner för att koda videofilen.
 
@@ -355,7 +361,7 @@ VBR tar längre tid att koda men ger det mest fördelaktiga resultatet. mediefil
 När använder du VBR jämfört med CRB?
 När du väljer VBR jämfört med CBR rekommenderar vi nästan alltid att du använder VBR för dina mediefiler. VBR ger filer av högre kvalitet med konkurrenskraftiga bithastigheter. När du använder VBR måste du vara säker på att du använder kodning i två omgångar och ställa in den maximala bithastigheten till 1,5 gånger målvideobithastigheten.
 
-När du väljer en förinställning för videokodning bör du komma ihåg målanvändarens anslutningshastighet. Välj en förinställning med en datahastighet som är 80 % av den hastigheten. Om målanvändarens anslutningshastighet till exempel är 1 000 kbit/s är den bästa förinställningen en med en videodatahastighet på 800 kbit/s.
+När du väljer en förinställning för videokodning bör du komma ihåg målanvändarens anslutningshastighet. Välj en förinställning med en datahastighet som är 80 % av den hastigheten. Om målanvändarens anslutningshastighet till exempel är 1000 kbit/s är den bästa förinställningen en med en videodatahastighet på 800 kbit/s.
 
 I den här tabellen beskrivs datahastigheten för typiska anslutningshastigheter.
 
@@ -374,8 +380,8 @@ Upplösning och datahastighet är två sammankopplade faktorer som avgör videok
 
 | Upplösning | Pixlar per bildruta |
 |--- |--- |
-| 320 x 240 | 76 800 |
-| 640 x 480 | 307 200 |
+| 320 x 240 | 76,800 |
+| 640 x 480 | 307,200 |
 
 Filen på 640 x 480 har fyra gånger fler pixlar per bildruta. För att uppnå samma datahastighet för dessa två exempelupplösningar tillämpar du fyra gånger komprimeringen på 640 x 480-filen, vilket kan minska videons kvalitet. En videodatahastighet på 250 kbit/s ger därför en högkvalitativ bild med upplösningen 320 x 240, men inte med upplösningen 640 x 480.
 
@@ -424,13 +430,37 @@ Anta till exempel att källvideon är 1 920 x 1 080. I följande tabell ger de t
 
 Dynamic Media rekommenderar att du använder MP4 H.264-videokodningsförinställningar. Eftersom MP4-filer använder H.264-videokodeken ger den video med hög kvalitet men i en komprimerad filstorlek.
 
+### Aktivera DASH på ditt konto {#enable-dash}
+
+DASH (Digital Adaptive Streaming over HTTP) är den internationella standarden för direktuppspelad video och används i stor utsträckning av olika videovisningsprogram. När du aktiverar DASH kan du välja mellan HLS och DASH för adaptiv videoströmning. Du kan också välja båda med automatisk växling mellan spelare.
+
+Några viktiga fördelar med att aktivera DASH på ditt konto är följande:
+
+* Paketera DASH-strömvideo för adaptiv strömning. Den här metoden leder till ökad effektivitet vid leverans. Adaptiv strömning ger bästa möjliga tittarupplevelse för dina kunder.
+* Webbläsaroptimerad direktuppspelning med Dynamic Media-spelare växlar mellan HLS- och DASH-strömning för att säkerställa bästa möjliga servicekvalitet. Videospelaren växlar automatiskt till HLS när en Safari-webbläsare används.
+* Du kan konfigurera den direktuppspelningsmetod (HLS eller DASH) som du föredrar genom att redigera visningsförinställningen för videon.
+* Optimerad videokodning säkerställer att ingen ytterligare lagring används samtidigt som DASH-funktionen aktiveras. En enda uppsättning videokodningar skapas för både HLS och DASH för att optimera lagringskostnaderna för video.
+* Gör videomaterialet mer tillgängligt för kunderna.
+* Hämta URL:en för direktuppspelning via API:er också.
+
+   >[!IMPORTANT]
+   >
+   >Det går för närvarande bara att aktivera DASH på ditt konto i Nordamerika.
+
+**Så här aktiverar du DASH på ditt konto:**
+
+1. Navigera till [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr).
+1. Sök efter **AEM Assets Dynamic Media Video Advanced Streaming** funktionsflagga.
+1. Markera kryssrutan för att aktivera (aktivera) DASH.
+1. Välj **[!UICONTROL Save]**.
+
 ## Publicera videor på YouTube {#publishing-videos-to-youtube}
 
 Du kan publicera Experience Manager-videoresurser direkt i en YouTube-kanal som du tidigare har skapat.
 
 Om du vill publicera videomaterial till YouTube skapar du Experience Manager Assets med taggar. Du kopplar dessa taggar till en YouTube-kanal. Om videoresursens tagg matchar taggen för en YouTube-kanal publiceras videon till YouTube. Publicera till YouTube sker tillsammans med en normal publicering av videon så länge en associerad tagg används.
 
-YouTube gör sin egen kodning. Det innebär att den ursprungliga videofilen som överfördes till Experience Manager publiceras till YouTube i stället för någon videoåtergivning som Dynamic Media kodning har skapat. Även om det inte krävs för att bearbeta videofilmer med Dynamic Media förväntas de göra det om en visningsförinställning behövs för uppspelning.
+YouTube gör sin egen kodning. Det innebär att den ursprungliga videofilen som överfördes till Experience Manager publiceras till YouTube i stället för någon videoåtergivning som har skapats med Dynamic Medias kodning. Även om det inte krävs för att bearbeta videofilmer med Dynamic Media förväntas de göra det om en visningsförinställning behövs för uppspelning.
 
 När du åsidosätter videobearbetningsprofilen och publicerar direkt till YouTube innebär det helt enkelt att videomaterialet i Experience Manager Asset inte får någon miniatyrbild som kan visas. Det betyder också att om du springer in `dynamicmedia` eller `dynamicmedia_scene7` körningslägen, videofilmer som inte är kodade fungerar inte med någon av Dynamic Media resurstyper.
 
@@ -983,7 +1013,7 @@ Videorapporter visar flera sammanställda mätvärden för en viss tid så att d
 
 En tabell med alla *publicerad* videofilmer visas också i en lista så att du kan spåra de mest visade videofilmerna på webbplatsen baserat på hur många videostarter som har gjorts.
 
-När du trycker på ett videonamn i listan visas videons rapport för att behålla tittare (bortfall) i form av ett linjediagram. Diagrammet visar antalet vyer för en given tidpunkt under videouppspelning. När du spelar upp videon synkroniseras det lodräta strecket med tidsindikatorn i spelaren. Släppningar i linjediagramdata indikerar var publiken slutar intressera sig.
+När du trycker på ett videonamn i listan visas videons rapport om målgruppsinnehållande (bortfall) i form av ett linjediagram. Diagrammet visar antalet vyer för en given tidpunkt under videouppspelning. När du spelar upp videon synkroniseras det lodräta strecket med tidsindikatorn i spelaren. Släppningar i linjediagramdata indikerar var publiken slutar intressera sig.
 
 Om videon kodades utanför Adobe Experience Manager Dynamic Media är inte data för målgruppsinnehållande (bortfall) och uppspelningsprocent tillgängliga i tabellen.
 
@@ -991,7 +1021,7 @@ Se även [Konfigurera Dynamic Media-Cloud Services](/help/assets/config-dynamic.
 
 >[!NOTE]
 >
->Spårnings- och rapportdata baseras uteslutande på Dynamic Media egen videospelare och tillhörande videospelarförinställning. Därför kan du inte spåra och rapportera om videofilmer som spelas upp med andra videospelare.
+>Spårnings- och rapportdata baseras uteslutande på användningen av Dynamic Medias egen videospelare och tillhörande videospelarförinställning. Därför kan du inte spåra och rapportera om videofilmer som spelas upp med andra videospelare.
 
 Första gången du anger Videorapporter visas som standard videodata från och med den första i den aktuella månaden och till och med den aktuella månadens datum. Du kan dock åsidosätta standarddatumintervallet genom att ange ett eget datumintervall. Nästa gång du anger Videorapporter används det datumintervall du har angett.
 
@@ -1077,7 +1107,7 @@ Använd [Referenshandbok för Adobe Dynamic Media-visningsprogram](https://exper
 
 ## Lägga till undertexter till video {#adding-captions-to-video}
 
-Du kan utöka räckvidden för dina videor till globala marknader genom att lägga till undertexter till enskilda videor eller till adaptiva videouppsättningar. Genom att lägga till undertextning slipper du att duplicera ljudet, och du behöver använda inbyggda högtalare för att spela in ljudet igen för varje språk. Videon spelas upp på det språk den spelades in på. Undertexter på främmande språk visas så att personer på olika språk fortfarande kan förstå ljuddelen.
+Du kan utöka räckvidden för dina videor till globala marknader genom att lägga till undertexter till enskilda videor eller till adaptiva videouppsättningar. Genom att lägga till undertextning slipper du att duplicera ljudet eller att du behöver använda inbyggda högtalare för att spela in ljudet igen för varje språk. Videon spelas upp på det språk den spelades in på. Undertexter på främmande språk visas så att personer på olika språk fortfarande kan förstå ljuddelen.
 
 Undertexter ger också bättre tillgänglighet för människor som är döva eller hörselskadade.
 
@@ -1340,3 +1370,338 @@ De här stegen gäller endast för Dynamic Media som körs i hybridläge.
 1. När du har överfört och publicerat bilden trycker du på **[!UICONTROL Save Changes]**.
 
    Den anpassade miniatyrbilden läggs till i videon.
+
+## Ändra Dynamic Media URL för Dynamic Media-resurser {#manifest-urls}
+
+Videor som bearbetas till Dynamic Media kan användas i färdiga visningsprogram och även genom direktåtkomst till manifest-URL:er och uppspelning via egna visningsprogram. Nedan följer API:t för hämtning av manifest-URL:er för en video.
+
+### Om API:t getVideoManifestURI
+
+The `getVideoManifestURI`API exponeras via c`q-scene7-api:com.day.cq.dam.scene7.api` och kan användas för att generera följande manifest-URL:er:
+
+```java
+/**   
+* Returns the manifest url for videos 
+* @param resource video resource 
+* @param manifestType type of video streaming manifest being requested 
+* @param onlyIfPublished return a manifest only if the video is published 
+* @return the manifest url for videos 
+* 
+* @throws Exception 
+*/
+@Nullable 
+String getVideoManifestURI(Resource resource, ManifestType manifestType, boolean onlyIfPublished) throws Exception;
+```
+
+#### getVideoManifestURI API-parametrar
+
+Detta API har följande tre parametrar:
+
+| Parameter | Beskrivning |
+| --- | --- |
+| `resource` | Resursen som motsvarar videon som Dynamic Media har inhämtat. |
+| `manifestType` | Kan vara antingen `ManifestType.DASH` eller `ManifestType.HLS` |
+| `onlyIfPublished` | Ange som true om manifest-URI bara genereras om den är publicerad och tillgänglig på leveransnivån. |
+
+Om du vill hämta manifest-URL:er för videofilmer med metoden ovan lägger du till en [videokodningsprofil](/help/assets/video-profiles.md#creating-a-video-encoding-profile-for-adaptive-streaming) till mappen&quot;upload videos&quot;. Dynamic Media bearbetar dessa videofilmer baserat på kodningarna i den videokodningsfil som tilldelats mappen. Nu kan du anropa ovanstående API för att hämta manifest-URL:er för de överförda videoklippen.
+
+### Felscenarier
+
+API:t returnerar null om det finns fel. Undantag loggas i felloggarna i Experience Manager. Alla sådana loggade fel börjar med `Could not generate Video Manifest URI`. Följande scenarier kan orsaka sådana fel:
+
+* An `IllegalArgumentException` loggas för något av följande:
+
+   * The `resource` parametern som skickades är null.
+   * The `resource` Den skickade parametern är inte en video.
+   * The `manifestType` parametern som skickades är null.
+   * The `onlyIfPublished` -parametern skickas som true, men videon publiceras inte.
+   * Videon har inte importerats med en adaptiv videouppsättning från Dynamic Media.
+
+* `IOException` loggas när det uppstår ett problem med att ansluta till Dynamic Media.
+* `UnsupportedOperationException` loggas när en `manifestType` parametern som skickas är `ManifestType.DASH`, medan videon inte har bearbetats i DASH-format.
+
+Nedan följer ett exempel på ovanstående API med hjälp av servrar skrivna i *HTTPWhiteBoard* -specifikation. Välj varje flik för kodsyntaxen.
+
+>[!BEGINTABS]
+
+>[!TAB Lägg till beroende i pom.xml]
+
++++**Lägg till beroende i pom.xml**
+
+```java
+dependency> 
+     <groupId>com.day.cq.dam</groupId> 
+     <artifactId>cq-scene7-api</artifactId> 
+     <version>5.12.64</version> 
+     <scope>provided</scope> 
+</dependency> 
+```
+
++++
+
+>[!TAB Exempel på serverlet]
+
++++**Exempel på serverlet**
+
+```java
+@Component
+        service = Servlet.class 
+) 
+@HttpWhiteboardServletPattern(value = ManifestServlet.SERVLET_PATTERN) 
+@HttpWhiteboardContextSelect(value = Constants.SERVLET_CONTEXT_SELECTOR) 
+public class ManifestServlet extends HttpServlet { 
+
+   private static final Logger LOGGER = LoggerFactory.getLogger(ManifestServlet.class); 
+
+   private final ObjectMapper objectMapper; 
+
+    @Reference 
+    private Scene7Service scene7Service; 
+
+   public static final String SERVLET_PATTERN = Constants.VIDEO_API_PREFIX + "/manifestUrl"; 
+
+   public ManifestServlet() {
+         this.objectMapper = new ObjectMapper(); 
+         objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL); 
+   }
+
+   @Override 
+
+   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        final ResourceResolver resolver = getResourceResolver(request); 
+        String assetPath = request.getParameter("assetPath"); 
+        String manifest = request.getParameter("manifestType"); 
+        String onlyIfPublished = request.getParameter("onlyIfPublished"); 
+        Resource resource = resolver.getResource(assetPath); 
+        response.setCharacterEncoding(StandardCharsets.UTF_8.toString()); 
+        response.setContentType("application/json"); 
+        if(resource == null) { 
+            LOGGER.info("could not retrieve the resource from JCR"); 
+            error("could not retrieve the resource from JCR", response); 
+            return; 
+        }
+
+        String manifestUri = null; 
+
+        try{ 
+            ManifestType manifestType =  ManifestType.DASH; 
+            if(manifest != null) { 
+                manifestType = ManifestType.valueOf(manifest); 
+            } 
+            manifestUri = scene7Service.getVideoManifestURI(resource, manifestType, onlyIfPublished != null); 
+            objectMapper.writeValue(response.getWriter(), new ManifestUrl(manifestUri)); 
+            response.setContentType("application/json"); 
+        } catch (Exception e) { 
+            LOGGER.error(e.getMessage(), e); 
+            error(String.format("Unable to get the manifest url for %s. %s", assetPath, e.getMessage()), response); 
+        } 
+    } 
+
+    private ResourceResolver getResourceResolver(HttpServletRequest request) { 
+        Object rr = request.getAttribute(AuthenticationSupport.REQUEST_ATTRIBUTE_RESOLVER); 
+        if (!(rr instanceof ResourceResolver)) { 
+            throw new IllegalStateException( 
+                    "The request does not seem to have been created via Apache Sling's authentication mechanism."); 
+        } else { 
+            return (ResourceResolver) rr; 
+        } 
+    } 
+
+    private void error(String errorMessage, HttpServletResponse response) throws IOException { 
+        ManifestUrl errorManifest = new ManifestUrl(null); 
+        errorManifest.setErrorMessage(errorMessage); 
+        response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR); 
+        objectMapper.writeValue(response.getWriter(), errorManifest); 
+    } 
+} 
+```
+
++++
+
+>[!TAB Svarsklass för serverlet]
+
++++**Svarsklass för serverlet**
+
+```java
+public class ManifestUrl extends VideoResponse { 
+     String manifestUrl; 
+     public ManifestUrl(String manifestUrl) { 
+         this.manifestUrl = manifestUrl; 
+     } 
+     public String getManifestUrl() { 
+         return manifestUrl; 
+     } 
+} 
+
+public abstract class VideoResponse { 
+     String errorString; 
+
+     public String getErrorString() { 
+         return errorString; 
+     } 
+
+     public void setErrorMessage(String errorString) { 
+         this.errorString = errorString; 
+     } 
+} 
+```
+
++++
+
+>[!TAB Konstanter som serverleten refererar till]
+
++++**Konstanter som serverleten refererar till**
+
+```java
+public final class Constants { 
+
+     private Constants() { 
+     } 
+
+     public static final String VIDEO_API_PREFIX = "/dynamicmedia/video"; 
+     public static final String SERVLET_CONTEXT_SELECTOR = "(" + HttpWhiteboardConstants.HTTP_WHITEBOARD_CONTEXT_NAME + "=" + 
+             DMSampleApiHttpContext.CONTEXT_NAME + ")"; 
+
+ } 
+```
+
++++
+
+>[!TAB ServletContext]
+
++++**ServletContext**
+
+Montera ovanstående servett med en `servletContext`. Följande är ett exempel på `servletContext`.
+
+```java
+public class DMSampleApiHttpContext extends ServletContextHelper { 
+
+ public static final String CONTEXT_NAME = "com.adobe.dmSample"; 
+ public static final String CONTEXT_PATH = "/dmSample"; 
+
+ private final MimeTypeService mimeTypeService; 
+
+ private final AuthenticationSupport authenticationSupport; 
+
+ /** 
+  * Constructs a new context that will use the given dependencies. 
+  * 
+  * @param mimeTypeService Used when providing mime type of requests. 
+  * @param authenticationSupport Used to authenticate requests with sling. 
+  */ 
+ @Activate 
+ public DMSampleApiHttpContext(@Reference final MimeTypeService mimeTypeService, 
+                               @Reference final AuthenticationSupport authenticationSupport) { 
+     this.mimeTypeService = mimeTypeService; 
+     this.authenticationSupport = authenticationSupport; 
+ } 
+
+ // ---------- HttpContext interface ---------------------------------------- 
+ /** 
+  * Returns the MIME type as resolved by the <code>MimeTypeService</code> or 
+  * <code>null</code> if the service is not available. 
+  */ 
+ @Override 
+ public String getMimeType(String name) { 
+     MimeTypeService mtservice = mimeTypeService; 
+     if (mtservice != null) { 
+         return mtservice.getMimeType(name); 
+     } 
+     return null; 
+ } 
+
+ /** 
+  * Returns the real context path that is used to mount this context. 
+  * @param req servlet request 
+  * @return the context path 
+  */ 
+ public static String getRealContextPath(HttpServletRequest req) { 
+     final String path = req.getContextPath(); 
+     if (path.equals(CONTEXT_PATH)) { 
+         return ""; 
+     } 
+     return path.substring(CONTEXT_PATH.length()); 
+ } 
+
+ /** 
+  * Returns a request wrapper that transforms the context path back to the original one 
+  * @param req request 
+  * @return the request wrapper 
+  */ 
+ public static HttpServletRequest createContextPathAdapterRequest(HttpServletRequest req) { 
+     return new HttpServletRequestWrapper(req) { 
+
+         @Override 
+         public String getContextPath() { 
+             return getRealContextPath((HttpServletRequest) getRequest()); 
+         } 
+
+     }; 
+
+ } 
+
+ /** 
+  * Always returns <code>null</code> because resources are all provided 
+  * through individual endpoint implementations. 
+  */ 
+ @Override 
+ public URL getResource(String name) { 
+     return null; 
+ } 
+
+ /** 
+  * Tries to authenticate the request using the 
+  * <code>SlingAuthenticator</code>. If the authenticator or the Repository 
+  * is missing this method returns <code>false</code> and sends a 503/SERVICE 
+  * UNAVAILABLE status back to the client. 
+  */ 
+ @Override 
+ public boolean handleSecurity(HttpServletRequest request, 
+                               HttpServletResponse response) throws IOException { 
+
+     final AuthenticationSupport authenticator = this.authenticationSupport; 
+     if (authenticator != null) { 
+         return authenticator.handleSecurity(createContextPathAdapterRequest(request), response); 
+     } 
+
+     // send 503/SERVICE UNAVAILABLE, flush to ensure delivery 
+     response.sendError(HttpServletResponse.SC_SERVICE_UNAVAILABLE, 
+             "AuthenticationSupport service missing. Cannot authenticate request."); 
+     response.flushBuffer(); 
+
+     // terminate this request now 
+     return false; 
+ } 
+}
+```
+
++++
+
+>[!ENDTABS]
+
+### Använda exempelservleten
+
+Du anropar servern genom att utföra en `GET` operation at `/dmSample/dynamicmedia/video/manifestUrl`. Följande frågeparametrar skickas:
+
+| Frågeparameter | Beskrivning |
+| --- | --- |
+| `assetPath` | Obligatorisk. Sökvägen till videon som `manifestUrl` genereras. |
+| `manifestType` | Valfritt. Parametern kan vara DASH eller HLS. Om det inte skickas blir standardvärdet DASH. |
+| `onlyIfPublished` | Valfritt. Om det skickas `manifestUrl` returneras bara om videon publiceras. |
+
+I det här exemplet antar vi följande inställningar:
+
+* Företaget är `samplecompany`.
+* Redigeringsinstansen är `http://sample-aem-author.com`.
+* Mappen `/content/dam/video-example` har en videokodningsprofil tillämpad på den.
+* Videon `scenery.mp4` överförs till mappen `/content/dam/video-example`.
+
+Du kan anropa servleten på följande sätt:
+
+| Typ | Beskrivning |
+| :--- | --- |
+| HLS | `http://sample-aem-author.com/dmSample/dynamicmedia/video/manifestUrl?manifestType=HLS&assetPath=/content/dam/video-example/scenery.mp4`<br><br>Om DASH-leverans är aktiverad:<br>`{"manifestUrl":"https://s7d1.scene7.com/is/content/samplecompany/scenery-AVS.m3u8?packagedStreaming=true"}`<br><br>Om DASH-leverans är inaktiverad:<br>`{"manifestUrl":"https://s7d1.scene7.com/is/content/samplecompany/scenery-AVS.m3u8"}` |
+| DASH | `http://sample-aem-author.com/dmSample/dynamicmedia/video/manifestUrl?manifestType=DASH&assetPath=/content/dam/video-example/scenery.mp4`<br><br>Om DASH-leverans är aktiverad:<br>`{"manifestUrl":"https://s7d1.scene7.com/is/content/samplecompany/scenery-AVS.mpd"}`<br><br>Om DASH-leverans är inaktiverad:<br>`{}` |
+| Fel: resurssökvägen är felaktig | `http://sample-aem-author.com/dmSample/dynamicmedia/video/manifestUrl?manifestType=DASH&assetPath=/content/dam/video-example/scennnnnnery.mp4`<br><br>`{"errorString":"could not retrieve the resource from JCR"}` |
+
+

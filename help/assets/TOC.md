@@ -3,18 +3,18 @@ cloud: Experience Cloud
 product: adobe experience manager
 solution: Experience Manager, Experience Manager Assets
 audience: end-user
-user-guide-title: Resurshandbok
-breadcrumb-title: Resurshandbok
-user-guide-description: Skapa, hantera, bearbeta och distribuera digitalt material.
-source-git-commit: cd3dcd0232e1ecf69c79b03ab960cfbfc283ee76
+user-guide-title: Användarhandbok om resurser
+breadcrumb-title: Användarhandbok om resurser
+user-guide-description: Skapa, hantera, bearbeta och distribuera digitala resurser.
+source-git-commit: 62d921df1b03520b53ceefa072530bf0214df30a
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '681'
+ht-degree: 16%
 
 ---
 
 
-# Resurshandbok {#assets}
+# Användarhandbok om resurser {#assets}
 
 + [[!DNL Assets] användarhandbok](home.md)
 + [[!DNL Experience Manager] 6.5 Versionsinformation om resurser](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/assets.html)
@@ -97,8 +97,10 @@ ht-degree: 0%
    + [[!DNL Assets] HTTP-API](mac-api-assets.md)
    + [Content Fragments support in [!DNL Assets] HTTP-API](assets-api-content-fragments.md)
    + [GraphQL API för innehållsfragment](content-fragments/graphql-api-content-fragments.md)
-   + [Autentisering för fjärrGraphQL-frågor för innehållsfragment](content-fragments/graphql-authentication-content-fragments.md)
-   + [GraphQL API med innehållsfragment - exempelinnehåll och frågor](/help/assets/content-fragments/content-fragments-graphql-samples.md)
+   + [Använda GraphiQL IDE](content-fragments/graphiql-ide.md)
+   + [Beständiga frågor](content-fragments/persisted-queries.md)
+   + [Autentisering av GraphQL-fjärrfrågor för innehållsfragment](content-fragments/graphql-authentication-content-fragments.md)
+   + [GraphQL API med innehållsfragment - exempel på innehåll och frågor](/help/assets/content-fragments/content-fragments-graphql-samples.md)
    + [[!DNL Assets] proxyutveckling](proxy.md)
 + Administrera resurser {#administer}
    + [Filformat som stöds](assets-formats.md)

@@ -4,10 +4,10 @@ description: Lär dig hur du aktiverar vissa Content Fragment-funktioner i Confi
 feature: Content Fragments
 role: User
 exl-id: a9990b0c-56c7-4e61-bae9-98e19a7f364e
-source-git-commit: 8dc8eff86ff25534a578dd227033aa185853d930
+source-git-commit: da41f48d08b7629a734e2f60077af6190a7fee8f
 workflow-type: tm+mt
-source-wordcount: '292'
-ht-degree: 17%
+source-wordcount: '271'
+ht-degree: 19%
 
 ---
 
@@ -20,7 +20,7 @@ Lär dig hur du aktiverar vissa Content Fragment-funktioner i Configuration Brow
 Innan du använder innehållsfragment måste du använda **Konfigurationsläsaren** för att aktivera:
 
 * **Modeller för innehållsfragment** - obligatoriskt
-* **Beständiga GraphQL-frågor** - valfritt
+* **GraphQL Beständiga frågor** - valfritt
 
 >[!CAUTION]
 >
@@ -43,10 +43,6 @@ Till [använda vissa funktioner för innehållsfragment](#creating-a-content-fra
 >
 >Mer information finns i [Konfigurationsläsaren:](/help/sites-administering/configurations.md#using-configuration-browser).
 
->[!CAUTION]
->
->Delkonfigurationer (en konfiguration som är kapslad i en konfiguration) stöds för användning med innehållsfragment, men kan inte användas för GraphQL-frågor.
-
 1. Navigera till **Verktyg**, **Allmänt** och öppna sedan **Konfigurationsläsaren**.
 
 1. Använd **Skapa** för att öppna dialogrutan där du:
@@ -54,7 +50,7 @@ Till [använda vissa funktioner för innehållsfragment](#creating-a-content-fra
    1. Ange en **Titel**.
    1. Om du vill aktivera deras användning väljer du
       * **Modeller för innehållsfragment**
-      * **Beständiga GraphQL-frågor**
+      * **GraphQL Beständiga frågor**
 
       ![Definiera konfiguration](assets/cfm-conf-01.png)
 
