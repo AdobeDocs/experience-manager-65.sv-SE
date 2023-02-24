@@ -12,9 +12,9 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/viewer
 feature: Viewer Presets
 role: User, Admin
 exl-id: 0899e497-88e9-4fc3-a6be-b3a149fb5b32
-source-git-commit: f578a3c5dee24bbb9995329777eea02bb8f1b654
+source-git-commit: 40ae6c06f3296bfd4affe3e862d57df747d9bb82
 workflow-type: tm+mt
-source-wordcount: '4391'
+source-wordcount: '4403'
 ht-degree: 8%
 
 ---
@@ -461,7 +461,7 @@ Se [Specialöverväganden när du skapar en Carousel Banner Viewer-förinställn
 1. På sidan Redigerare för visningsförinställning väljer du **[!UICONTROL Behavior]** -fliken. Du kan också markera ett visuellt element i visningsprogrammet och välja det för konfiguration.
 För *VideoPlayer* text, under **[!UICONTROL Modifiers]** > **[!UICONTROL Playback]** kan du välja mellan tre alternativ för adaptiv direktuppspelning:
 
-   * **[!UICONTROL dash]** - Videorna spelas endast upp med bindestreck.
+   * **[!UICONTROL dash]** - Videorna spelas endast upp med bindestreck. På Safari-/iOS-enheter måste du dock välja **[!UICONTROL hls]** som typ, i stället.
    * **[!UICONTROL hls]** - Videoströmmar endast som hls.
    * **[!UICONTROL auto]** - Bästa praxis. Skapandet av DASH- och HLS-strömmar är lagringsoptimerat. Därför rekommenderar Adobe att du alltid väljer **[!UICONTROL auto]** som uppspelningstyp. Videoklipp direktuppspelas som streck, hls eller progressiv, som i följande:
       * Om webbläsaren stöder DASH används DASH-direktuppspelning först.

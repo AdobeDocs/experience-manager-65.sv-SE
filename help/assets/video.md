@@ -12,9 +12,9 @@ docset: aem65
 feature: Asset Management
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: 2c4be989decbac2a4109e7c02cd9d6231c1d0753
+source-git-commit: 86394ab7e7de89615218d6ddd6843ec9276275cd
 workflow-type: tm+mt
-source-wordcount: '12065'
+source-wordcount: '12257'
 ht-degree: 4%
 
 ---
@@ -231,17 +231,17 @@ I följande tabell beskrivs enheten, webbläsaren och uppspelningsmetoden för v
   <tr>
    <td>Skrivbord</td>
    <td>Firefox 45 eller senare</td>
-   <td>DASH* eller HLS</td>
+   <td>DASH* eller HLS adaptiv strömning.</td>
   </tr>
   <tr>
    <td>Skrivbord</td>
    <td>Krom</td>
-   <td>DASH* eller HLS</td>
+   <td>DASH* eller HLS adaptiv strömning.</td>
   </tr>
   <tr>
    <td>Skrivbord</td>
    <td>Safari (Mac)</td>
-   <td>HLS</td>
+   <td>HLS adaptiv strömning.</td>
   </tr>
   <tr>
    <td>Mobil</td>
@@ -251,7 +251,7 @@ I följande tabell beskrivs enheten, webbläsaren och uppspelningsmetoden för v
   <tr>
    <td>Mobil</td>
    <td>Chrome (Android™ 7 eller senare)</td>
-   <td>DASH* eller HLS</td>
+   <td>DASH* eller HLS adaptiv strömning.</td>
   </tr>
   <tr>
    <td>Mobil</td>
@@ -261,17 +261,17 @@ I följande tabell beskrivs enheten, webbläsaren och uppspelningsmetoden för v
   <tr>
    <td>Mobil</td>
    <td>Safari (iOS)</td>
-   <td>HLS</td>
+   <td>HLS adaptiv strömning.</td>
   </tr>
   <tr>
    <td>Mobil</td>
    <td>Chrome (iOS)</td>
-   <td>DASH* eller HLS</td>
+   <td>HLS adaptiv strömning.</td>
   </tr>
   <tr>
    <td>Mobil</td>
    <td>BlackBerry®</td>
-   <td>DASH* eller HLS</td>
+   <td>DASH* eller HLS adaptiv strömning./td&gt;
   </tr>
  </tbody>
 </table>
@@ -432,7 +432,7 @@ Dynamic Media rekommenderar att du använder MP4 H.264-videokodningsförinställ
 
 ### Aktivera DASH på ditt konto {#enable-dash}
 
-DASH (Digital Adaptive Streaming over HTTP) är den internationella standarden för direktuppspelad video och används i stor utsträckning av olika videovisningsprogram. När du aktiverar DASH kan du välja mellan HLS och DASH för adaptiv videoströmning. Du kan också välja båda med automatisk växling mellan spelare.
+DASH (Digital Adaptive Streaming over HTTP) är den internationella standarden för direktuppspelad video och används i stor utsträckning av olika videovisningsprogram. När DASH är aktiverat för ditt konto kan du välja mellan DASH eller HLS för adaptiv videoströmning. Eller så kan du välja båda med automatisk växling mellan spelare när **[!UICONTROL auto]** är valt som uppspelningstyp i visningsförinställningen.
 
 Några viktiga fördelar med att aktivera DASH på ditt konto är följande:
 
@@ -447,12 +447,28 @@ Några viktiga fördelar med att aktivera DASH på ditt konto är följande:
    >
    >Det går för närvarande bara att aktivera DASH på ditt konto i Nordamerika.
 
+Om du vill aktivera DASH på ditt konto krävs två steg:
+
+* Konfigurera Dynamic Media att använda DASH som du enkelt kan göra själv.
+* Konfigurera Experience Manager 6.5 för att använda DASH, vilket sker via ett kundsupportärende från Adobe som du skapar och skickar in.
+
 **Så här aktiverar du DASH på ditt konto:**
 
-1. Navigera till [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr).
+1. **Konfigurera Dynamic Media** - I Dynamic Media på Experience Manager 6.5 navigerar du till [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr).
 1. Sök efter **AEM Assets Dynamic Media Video Advanced Streaming** funktionsflagga.
 1. Markera kryssrutan för att aktivera (aktivera) DASH.
 1. Välj **[!UICONTROL Save]**.
+1. **Konfigurera Experience Manager 6.5** - [Använd Admin Console för att börja skapa ett nytt supportärende](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html).
+1. Följ instruktionerna för att skapa ett supportärende och försäkra dig om att du anger följande information:
+
+   * Primärt kontaktnamn, e-postadress, telefon.
+   * Namn på ditt Dynamic Media-konto.
+   * Ange att du vill att DASH ska aktiveras på Experience Manager 6.5.
+
+1. Adobe kundsupport lägger till dig i DASH-kundens väntelista baserat på i vilken ordning begäranden skickas.
+1. När Adobe är redo att hantera din begäran kontaktar kundsupporten dig för att koordinera och ange ett måldatum för aktivering av DASH.
+1. Du meddelas när du är klar av kundsupporten.
+1. Skapa [videovisningsförinställning](/help/assets/managing-viewer-presets.md#creating-a-new-viewer-preset) som vanligt.
 
 ## Publicera videor på YouTube {#publishing-videos-to-youtube}
 
