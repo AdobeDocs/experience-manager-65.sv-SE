@@ -10,9 +10,9 @@ discoiquuid: d12e6ea3-aaf4-4672-9679-3c16c76d7d5b
 role: User, Admin
 exl-id: d62275f0-02a4-48c9-bfb1-e23d63b618c9
 feature: Configuration
-source-git-commit: dacbfbc8b4677ac7b63b92c45602e030031de3a1
+source-git-commit: 78aa7aac838dabc1c4f0329520092e4755541322
 workflow-type: tm+mt
-source-wordcount: '1214'
+source-wordcount: '1215'
 ht-degree: 5%
 
 ---
@@ -158,7 +158,7 @@ Dynamic Media stöder leverans av statiskt material, som är ytterligare materia
 
    Det här exemplet är den fullständiga video-URL:en för en publicerad videoåtergivning.
 
-## Hämta en video-URL för adaptiv direktuppspelning (DASH eller HLS) {#obtaining-a-video-url-for-adaptive-streaming-hls}
+## Hämta en video-URL för strömning med adaptiv bithastighet (DASH eller HLS) {#obtaining-a-video-url-for-adaptive-streaming-hls}
 
 1. I Experience Manager går du till **[!UICONTROL Tools]** > **[!UICONTROL Deployment]** > **[!UICONTROL Cloud]** > **[!UICONTROL Cloud Services]**.
 1. På **[!UICONTROL Cloud Services]** sida, bläddra nedåt till **[!UICONTROL Dynamic Media Cloud Services]** rubrik, markera **[!UICONTROL Show Configurations]**.

@@ -12,9 +12,9 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/viewer
 feature: Viewer Presets
 role: User, Admin
 exl-id: 0899e497-88e9-4fc3-a6be-b3a149fb5b32
-source-git-commit: 40ae6c06f3296bfd4affe3e862d57df747d9bb82
+source-git-commit: 78aa7aac838dabc1c4f0329520092e4755541322
 workflow-type: tm+mt
-source-wordcount: '4403'
+source-wordcount: '4405'
 ht-degree: 8%
 
 ---
@@ -459,7 +459,7 @@ Se [Specialöverväganden när du skapar en Carousel Banner Viewer-förinställn
 
 1. (Valfritt) I början av sidan Redigera visningsförinställning väljer du **[!UICONTROL Desktop]**, **[!UICONTROL Tablet]**, eller **[!UICONTROL Phone]** för att unikt definiera visuella format för olika enhets- och skärmtyper.
 1. På sidan Redigerare för visningsförinställning väljer du **[!UICONTROL Behavior]** -fliken. Du kan också markera ett visuellt element i visningsprogrammet och välja det för konfiguration.
-För *VideoPlayer* text, under **[!UICONTROL Modifiers]** > **[!UICONTROL Playback]** kan du välja mellan tre alternativ för adaptiv direktuppspelning:
+För *VideoPlayer* text, under **[!UICONTROL Modifiers]** > **[!UICONTROL Playback]** kan du välja mellan tre alternativ för strömning med variabel bithastighet:
 
    * **[!UICONTROL dash]** - Videorna spelas endast upp med bindestreck. På Safari-/iOS-enheter måste du dock välja **[!UICONTROL hls]** som typ, i stället.
    * **[!UICONTROL hls]** - Videoströmmar endast som hls.
@@ -492,7 +492,7 @@ För *VideoPlayer* text, under **[!UICONTROL Modifiers]** > **[!UICONTROL Playba
 
    >[!IMPORTANT]
    >
-   >För gamla videor som använder en adaptiv direktuppspelningsprofil fortsätter URL-adressen att spelas som vanligt - med HLS-direktuppspelning - tills du [bearbeta om videoresurserna](/help/assets/processing-profiles.md#reprocessing-assets). Efter ombearbetningen fortsätter samma URL-adress att fungera, men nu med *båda* DASH- och HLS-strömning är aktiverad.
+   >För gamla videor som använder en adaptiv bithastighetsströmningsprofil fortsätter URL-adressen att spelas som vanligt - med HLS-strömning - tills du [bearbeta om videoresurserna](/help/assets/processing-profiles.md#reprocessing-assets). Efter ombearbetningen fortsätter samma URL-adress att fungera, men nu med *båda* DASH- och HLS-strömning är aktiverad.
 
 ### Specialöverväganden när du skapar en interaktiv visningsförinställning {#special-considerations-for-creating-an-interactive-viewer-preset}
 
