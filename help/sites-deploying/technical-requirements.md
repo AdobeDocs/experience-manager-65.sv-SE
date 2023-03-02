@@ -6,9 +6,9 @@ seo-description: A list of the supported client and server platforms for AEM.
 content-type: reference
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 93de94bb17ea898f0fe15e62fb031cab239a3682
+source-git-commit: 74535a6ad78abf795f55f1ba4e1123b58802aefe
 workflow-type: tm+mt
-source-wordcount: '3534'
+source-wordcount: '3536'
 ht-degree: 0%
 
 ---
@@ -131,7 +131,7 @@ Det finns olika alternativ för att distribuera Adobe Experience Manager-databas
 | Apache Solr | Söktjänst | S: Stöds |
 
 1. &#39;Filsystem&#39; inkluderar blocklagring som är POSIX-kompatibel. Detta inkluderar nätverkslagringsteknik. Tänk på att filsystemets prestanda kan variera och påverka den övergripande prestandan. Vi rekommenderar att du läser in AEM i kombination med nätverks-/fjärrfilsystemet.
-1. MongoDB Enterprise 4.2 kräver minst AEM 6.5 SP9.
+1. MongoDB Enterprise version 4.2 och 4.4 kräver minst AEM 6.5 SP9.
 1. MongoDB-delning stöds inte i AEM.
 1. MongoDB-lagringsmotorn WiredTiger stöds endast.
 1. Stöds för AEM Forms uppgraderingskunder. Stöds inte för nya installationer.

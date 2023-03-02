@@ -1,9 +1,10 @@
 ---
 title: Konfigurera OAuth2-baserad autentisering för e-postserverprotokoll i Microsoft® Office 365
 description: Konfigurera OAuth2-baserad autentisering för e-postserverprotokoll i Microsoft® Office 365
-source-git-commit: 35595ffca9d2f6fd80bfe93bade247f5b4600469
+exl-id: cd3da71f-892c-4fde-905f-71a64fb5d4e4
+source-git-commit: d19de2955adef56570378a6d62ec0015718f9039
 workflow-type: tm+mt
-source-wordcount: '938'
+source-wordcount: '975'
 ht-degree: 0%
 
 ---
@@ -26,7 +27,7 @@ I ovanstående fall
    >[!NOTE]
    >
    > * För **Konton i alla organisationskataloger (alla Azure AD-kataloger - Multitenant)** rekommenderar vi att du använder ett arbetskonto i stället för ett personligt e-postkonto.
-   > * **Endast personliga Microsoft®-konton** och **Enskild innehavare** program stöds inte.
+   > * **Endast personliga Microsoft®-konton** programmet stöds inte.
    > * Det rekommenderas att använda **Multi-tenant och personligt Microsoft®-konto** program.
 
 
@@ -67,9 +68,13 @@ I ovanstående fall
 
 Därefter måste du generera auktoriseringskoden, vilket förklaras i följande steg:
 
-1. Öppna följande URL i webbläsaren när du har ersatt den `clientID` med `<client_id>` och `redirect_uri` med din omdirigerings-URI för ditt program:
+1. Öppna följande URL i webbläsaren när du har ersatt den `clientID` med `<client_id>` och `redirect_uri` med programmets omdirigerings-URI:
 
    ```https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=[clientid]&scope=IMAP.AccessAsUser.All%20POP.AccessAsUser.All%20SMTP.Send%20User.Read%20Mail.Read%20offline_access&response_type=code&redirect_uri=[redirect_uri]&prompt=login```
+
+   >[!NOTE]
+   >
+   > Om det gäller single tenant-programmet ska `common` med `[tenantid]` i följande URL för generering av auktoriseringskod: `https://login.microsoftonline.com/[tenantid]/oauth2/v2.0/authorize?client_id=[[clientid]]&scope=IMAP.AccessAsUser.All%20POP.AccessAsUser.All%20SMTP.Send%20User.Read%20Mail.Read%20openid%20offline_access&response_type=code&redirect_uri=[redirect_uri]&prompt=login`
 
 1. När du skriver ovanstående URL omdirigeras du till inloggningsskärmen:
    ![Inloggningsskärm](/help/forms/using/assets/azure_loginscreen.png)
@@ -91,6 +96,11 @@ Därefter måste du generera en uppdateringstoken, som beskrivs i följande steg
 1. Ersätt `clientID`, `client_secret` och `redirect_uri` med värdena för programmet tillsammans med värdet för `<code>`:
 
    `curl -H “ContentType application/x-www-form-urlencoded” -d “client_id=[client-id]&scope=https%3A%2F%2Foutlook.office.com%2FIMAP.AccessAsUser.All%20https%3A%2F%2Foutlook.office.com%2FPOP.AccessAsUser.All%20https%3A%2F%2Foutlook.office.com%2FSMTP.Send%20https%3A%2F%2Foutlook.office.com%2FUser.Read%20https%3A%2F%2Foutlook.office.com%2FMail.Read%20offline_access&code=[code]&grant_type=authorization_code&redirect_uri=[redirect_uri]&client_secret=[secretkey_value]” -X POST https://login.microsoftonline.com/common/oauth2/v2.0/token`
+
+   >[!NOTE]
+   >
+   > I ett single tenant-program använder du följande cURL-kommando och ersätt för att generera en uppdateringstoken `common` med `[tenantid]` in:
+   >`curl -H “ContentType application/x-www-form-urlencoded” -d “client_id=[client-id]&scope=https%3A%2F%2Foutlook.office.com%2FIMAP.AccessAsUser.All%20https%3A%2F%2Foutlook.office.com%2FPOP.AccessAsUser.All%20https%3A%2F%2Foutlook.office.com%2FSMTP.Send%20https%3A%2F%2Foutlook.office.com%2FUser.Read%20https%3A%2F%2Foutlook.office.com%2FMail.Read%20offline_access&code=[code]&grant_type=authorization_code&redirect_uri=[redirect_uri]&client_secret=[secretkey_value]” -X POST https://login.microsoftonline.com/[tenantid]/oauth2/v2.0/token`
 
 1. Notera uppdateringstoken.
 
@@ -116,7 +126,7 @@ Nu måste du konfigurera e-posttjänsten på den senaste JEE-servern genom att l
    >[!NOTE]
    >
    >* Transportsäkerhetsprotokollet har giltiga värden som: &#39;blank&#39;, &#39;SSL&#39; eller &#39;TLS&#39;. Du måste ange värden för **SMTP-transportsäkerhet** och **Ta emot transportsäkerhet** till **TLS** för att aktivera autentiseringstjänsten för autentisering.
-   >* **POP3-protokoll** stöds inte för OAuth.
+   >* **POP3-protokoll** stöds inte för OAuth när e-postslutpunkter används.
 
 
    ![Anslutningsinställningar](/help/forms/using/assets/oauth_connectionsettings.png)
@@ -162,4 +172,3 @@ Nu måste du konfigurera e-posttjänsten på den senaste JEE-servern genom att l
 * Om e-posttjänsten inte fungerar som den ska. Försök att återskapa `Refresh Token` enligt ovan. Det tar några minuter innan det nya värdet distribueras.
 
 * Ett fel uppstod när e-postserverinformation konfigurerades i e-postslutpunkten med Workbench.Försök att konfigurera slutpunkten via administratörsgränssnittet i stället för Workbench.
-

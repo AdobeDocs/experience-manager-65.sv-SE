@@ -4,18 +4,18 @@ product: adobe experience manager
 sub-product: forms
 solution: Experience Manager, Experience Manager Forms
 audience: end-user
-user-guide-title: Adobe Experience Manager 6.5 Forms Guide
-breadcrumb-title: Forms Guide
+user-guide-title: Användarhandbok om Adobe Experience Manager 6.5-formulär
+breadcrumb-title: Användarhandbok om formulär
 user-guide-description: Skapa, hantera, publicera och uppdatera digitala formulär.
 role: User
-source-git-commit: 29b283970f2c37782700b69302715e8404ce83ae
+source-git-commit: 071d7bf2e7c9ceb3328e77262cc45ed3f2e303cc
 workflow-type: tm+mt
-source-wordcount: '3835'
-ht-degree: 0%
+source-wordcount: '3846'
+ht-degree: 1%
 
 ---
 
-# Adobe Experience Manager 6.5 Forms Guide {#forms}
+# Användarhandbok om Adobe Experience Manager 6.5-formulär {#forms}
 
 + [AEM 6.5 Forms Guide](home.md)
 + Versionsinformation {#release-notes-new-features}
@@ -689,6 +689,7 @@ ht-degree: 0%
    + [Det går inte att öppna XFA-baserad PDF forms i Google Chrome, Firefox, Microsoft Edge, Microsoft Internet Explorer eller Apple Safari](/help/forms/using/xfa-based-forms-in-chrome-firefox-ie-internet-explorter-safari-edge.md)
    + [Det gick inte att återställa CRX-databasen](/help/forms/using/restore-crx-repository.md)
    + [Fel som inte är tillgängliga för tjänsten efter installation av AEM 6.5.15.0 Service Pack](/help/forms/using/aem-service-pack-installation-solution.md)
+   + [AEM Forms JEE 6.5.15.0 Service Pack - installationsproblem i JBoss Linux-miljö](/help/forms/using/linux-jboss-installation-issue-on-sp15.md)
 + Äldre dokumentation {#legacy-documentation}
    + [Använda den körda skripttjänsten i AEM Forms på JEE Workbench för att skapa XML-data](developing/building-xml.md)
    + [Komprimera och dekomprimera filer med en AEM Forms på en anpassad JEE DSC](developing/compressing-decompressing-custom-dsc.md)

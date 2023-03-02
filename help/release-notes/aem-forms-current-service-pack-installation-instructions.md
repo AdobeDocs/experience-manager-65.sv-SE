@@ -2,9 +2,9 @@
 title: Installationsanvisningar för AEM Forms Patch för AEM Forms
 description: Installationsanvisningar för AEM Forms Service Pack för OSGi- och JEE-miljö
 exl-id: ae4c7e9d-9af8-4288-a6f9-e3bcbe7d153d
-source-git-commit: c4584e34b5b12f29dc995bd5483bcbad476a82ef
+source-git-commit: b15581701aaff72db2fc0030b0062d2f12150d8f
 workflow-type: tm+mt
-source-wordcount: '1743'
+source-wordcount: '1702'
 ht-degree: 0%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 0%
 
 | Produkt | Adobe Experience Manager 6.5 Forms |
 |---|---|
-| Version | 6.5.15.0 |
+| Version | 6.5.16.0 |
 | Typ | Service Pack-version |
-| Date | 1 december 2023 |
+| Date | 2 mars 2023 |
 | Hämta URL | [Senaste AEM Forms Releases](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) |
 
 >[!NOTE]
@@ -33,7 +33,7 @@ Adobe Experience Manager (AEM) Forms Service Pack innehåller nya och uppgradera
 
 >[!NOTE]
 >
-> Adobe släpper ett fullständigt installationsprogram efter varje sjätte Service Pack. AEM 6.5 Forms Service Pack 12 (6.5.12.0) i JEE är det sista fullständiga installationsprogrammet. Det fullständiga installationsprogrammet har stöd för nya plattformar, medan det vanliga installationsprogrammet för Service Pack endast innehåller felkorrigeringar och allmänna förbättringar. Om du gör en ny installation eller planerar att använda den senaste programvaran för din AEM 6.5 Forms i JEE-miljö rekommenderar Adobe att du använder AEM 6.5.12.0 Forms i JEE-fullversionen som släpptes den 3 mars 2022 i stället för det AEM 6.5 Forms-installationsprogrammet som släpptes den 8 april 2019. Installera det senaste Service Pack-paketet när du har använt det fullständiga installationsprogrammet.
+> Adobe släpper ett fullständigt installationsprogram var sjätte service pack. AEM 6.5 Forms Service Pack 12 (6.5.12.0) i JEE var det sista fullständiga installationsprogrammet. Det fullständiga installationsprogrammet har stöd för nya plattformar medan det vanliga installationsprogrammet för Service Pack innehåller nya funktioner, felkorrigerade och allmänna förbättringar. Om du gör en ny installation eller planerar att använda den senaste programvaran för din AEM 6.5 Forms i JEE-miljö rekommenderar Adobe att du använder AEM 6.5.12.0 Forms i JEE-fullversionen som släpptes den 3 mars 2022 i stället för det AEM 6.5 Forms-installationsprogrammet som släpptes den 8 april 2019. Installera det senaste Service Pack-paketet när du har använt det fullständiga installationsprogrammet.
 
 ## Hämta och installera Service Pack på ett AEM formulär i JEE-miljö {#download-and-install-for-jee-service-pack}
 
@@ -42,7 +42,7 @@ Adobe Experience Manager (AEM) Forms Service Pack innehåller nya och uppgradera
 +++1. Säkerhetskopiera din befintliga miljö:
 
 1. Säkerhetskopiera [CRX-databas, databasschema och GDS (global dokumentlagring)](https://experienceleague.adobe.com/docs/experience-manager-65/forms/administrator-help/aem-forms-backup-recovery/backing-aem-forms-data.html).
-1. Säkerhetskopiera &lt;*AEM_forms_root*>/distribuera mapp. Det krävs om du bestämmer dig för att avinstallera Service Pack.
+1. Säkerhetskopiera &lt;*AEM_forms_root*>/distribuera mapp.
 
 >[!NOTE]
 >
@@ -52,8 +52,8 @@ Adobe Experience Manager (AEM) Forms Service Pack innehåller nya och uppgradera
 
 +++2.Ladda ned nödvändig programvara:
 
-* [AEM Forms on JEE 6.5.15.0 Service Pack](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)
-* [AEM 6.5.15.0 Service Pack](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html)
+* [AEM Forms på JEE Service Pack](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)
+* [AEM Service Pack](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html)
 * [Forms tilläggspaket](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)
 * [Fragmentservervlet](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Forg.apache.felix.http.servlet-api-1.2.0_fragment_full.jar)
 
@@ -62,7 +62,7 @@ Adobe Experience Manager (AEM) Forms Service Pack innehåller nya och uppgradera
 +++3. Installera AEM Forms på JEE-Service Pack:
 
 1. Stoppa programservern.
-1. Extrahera **AEM Forms på installationsarkiv för JEE 6.5.15.0 Service Pack** till hårddisken:
+1. Extrahera **Installationsarkiv för AEM Forms på JEE Service Pack** till hårddisken:
 
    * **Windows**
 Navigera till rätt katalog på installationsmediet eller mappen på hårddisken där du kopierade installationsprogrammet och dubbelklicka på 
@@ -91,7 +91,7 @@ Navigera till rätt katalog och från ett skal och en typ
 
       >[!NOTE]
       >
-      >* Uppdatera eller ersätta **ConfigurationManager.bat** hjälper dig att undvika att uppdatera namnet på .lax-filer manuellt.
+      >* Uppdatera eller ersätta **ConfigurationManager.bat** kan du undvika att uppdatera .lax-filerna manuellt.
 
 
 1. **[Endast för Unix-baserade]:** The **Starta Configuration Manager** är markerad som standard. Klicka **[!UICONTROL Done]** för att köra Configuration Manager direkt eller för att köra **Konfigurationshanteraren** avmarkera **Starta Configuration Manager** innan du klickar **[!UICONTROL Done]**. Du kan börja **Konfigurationshanteraren** senare använda lämpligt skript i `[AEM_forms_root]/configurationManager/bin` katalog.
@@ -116,7 +116,9 @@ Navigera till rätt katalog och från ett skal och en typ
 
 >[!NOTE]
 >
-> Det är obligatoriskt att installera **serletfragment** för alla programservrar utom de som körs på **JBoss® EAP 7.4.0**.
+> * Om du uppgraderar från **AEM Service Pack 6.5.15.0** behöver du inte installera **serletfragment**. Om du uppgraderar från en tidigare version än **AEM Service Pack 6.5.15.0**, måste du installera **serletfragment**.
+> * Det är obligatoriskt att installera **serletfragment** för alla programservrar utom de som körs på **JBoss® EAP 7.4.0**.
+
 
 
 Så här hämtar och installerar du serverletsfragmentet:
@@ -140,11 +142,10 @@ Så här hämtar och installerar du serverletsfragmentet:
 1. Hämta Service Pack från [Programvarudistribution](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html). <!-- UPDATE FOR EACH NEW RELEASE -->
 1. Öppna Pakethanteraren och välj **[!UICONTROL Upload Package]** för att överföra paketet. Mer information finns på [Pakethanteraren](/help/sites-administering/package-manager.md).
 1. Markera paketet och välj **[!UICONTROL Install]**.
-1. Om du vill uppdatera S3-anslutningen stoppar du instansen efter installationen av Service Pack, byter ut den befintliga kopplingen mot en ny binär fil som finns i installationsmappen och startar om instansen. Se [Amazon S3 - datalager](/help/sites-deploying/data-store-config.md#upgrading-to-a-new-version-of-the-s-connector).
 
 **Automatisk installation**
 
-Det finns två olika metoder som du kan använda för att installera automatiskt [!DNL ExperienceManager] 6.5.15.0<!--       UPDATE FOR EACH NEW RELEASE -->
+Det finns två olika metoder som du kan använda för att installera automatiskt [!DNL ExperienceManager] Service Pack.<!--       UPDATE FOR EACH NEW RELEASE -->
 
 * Placera paketet i `../crx-quickstart/install` när servern är tillgänglig online.
 Paketet installeras automatiskt.
@@ -153,15 +154,15 @@ Paketet installeras automatiskt.
 
    >[!NOTE]
    >
-   >Experience Manager 6.5.15.0 stöder inte installation av Bootstrap. <!-- UPDATE FOR EACHNEW RELEASE -->
+   >Service Pack för Experience Manager stöder inte installation av Bootstrap. <!-- UPDATE FOR EACH NEW RELEASE -->
 
 **Validera installationen**
 
 Om du vill veta vilka plattformar som är certifierade för att fungera med den här versionen kan du läsa [tekniska krav](/help/sites-deploying/technical-requirements.md).
 
-1. Produktinformationssidan (`/system/console/productinfo`) visar den uppdaterade versionssträngen `Adobe Experience      Manager (6.5.15.0)` under [!UICONTROL Installed Products].<!-- UPDATE FOR EACH NEW RELEASE -->
+1. Produktinformationssidan (`/system/console/productinfo`) visar den uppdaterade versionssträngen `Adobe Experience Manager (spversion)` under [!UICONTROL Installed Products].<!-- UPDATE FOR EACH NEW RELEASE -->
 1. Alla OSGi-paket är antingen **[!UICONTROL ACTIVE]** eller **[!UICONTROL FRAGMENT]** i OSGi Console (Använd webbkonsol: `/system/console/bundles`).
-1. OSGi-paketet `org.apache.jackrabbit.oak-core` är version 1.2.2.13 eller senare (Använd WebConsole: `/system/console/     bundles`).
+1. OSGi-paketet `org.apache.jackrabbit.oak-core` är version 1.2.2.14 eller senare (Använd WebConsole: `/system/console/     bundles`).
 
 +++
 
@@ -191,7 +192,7 @@ Om du vill veta vilka plattformar som är certifierade för att fungera med den 
 
 +++2.Ladda ned nödvändig programvara:
 
-* [AEM 6.5.15.0 Service Pack](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html)
+* [AEM Service Pack](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html)
 * [Forms tilläggspaket](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)
 
 +++
@@ -203,28 +204,27 @@ Om du vill veta vilka plattformar som är certifierade för att fungera med den 
 1. Hämta Service Pack från [Programvarudistribution](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html). <!-- UPDATE FOR EACH NEW RELEASE -->
 1. Öppna Pakethanteraren och välj **[!UICONTROL Upload Package]** för att överföra paketet. Mer information finns på [Pakethanteraren](/help/sites-administering/package-manager.md).
 1. Markera paketet och välj **[!UICONTROL Install]**.
-1. Om du vill uppdatera S3-anslutningen stoppar du instansen efter installationen av Service Pack, byter ut den befintliga kopplingen mot en ny binär fil som finns i installationsmappen och startar om instansen. Se [Amazon S3 - datalager](/help/sites-deploying/data-store-config.md#upgrading-to-a-new-version-of-the-s-connector).
 
 **Automatisk installation**
 
-Det finns två olika metoder som du kan använda för att installera automatiskt [!DNL Experience Manager] 6.5.15.0<!--       UPDATE FOR EACH NEW RELEASE -->
+Det finns två olika metoder som du kan använda för att installera automatiskt [!DNL Experience Manager] Service Pack.<!--  UPDATE FOR EACH NEW RELEASE -->
 
 * Placera paketet i `../crx-quickstart/install` när servern är tillgänglig online. Paketet installeras automatiskt.
 * Använd [HTTP-API från Package Manager](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html). Använd `cmd=install&recursive=true` så att de kapslade paketen installeras.
 
    >[!NOTE]
    >
-   >Experience Manager 6.5.15.0 stöder inte installation av Bootstrap. <!-- UPDATE FOR EACH NEW RELEASE -->
+   >Service Pack för Experience Manager stöder inte installation av Bootstrap. <!-- UPDATE FOR EACH NEW RELEASE -->
 
 **Validera installationen**
 
 Om du vill veta vilka plattformar som är certifierade för att fungera med den här versionen kan du läsa [tekniska krav](/help/sites-deploying/technical-requirements.md).
 
-1. Produktinformationssidan (`/system/console/productinfo`) visar den uppdaterade versionssträngen `Adobe Experience      Manager (6.5.15.0)` under [!UICONTROL Installed Products]. <!-- UPDATE FOR EACH NEW RELEASE -->
+1. Produktinformationssidan (`/system/console/productinfo`) visar den uppdaterade versionssträngen `Adobe Experience Manager (spversion)` under [!UICONTROL Installed Products]. <!-- UPDATE FOR EACH NEW RELEASE -->
 
 1. Alla OSGi-paket är antingen **[!UICONTROL ACTIVE]** eller **[!UICONTROL FRAGMENT]** i OSGi Console (Use Web Console: `/system/console/bundles`).
 
-   1. OSGi-paketet `org.apache.jackrabbit.oak-core` är version 1.2.2.13 eller senare (Använd webbkonsol: `/system/console/bundles`).
+   1. OSGi-paketet `org.apache.jackrabbit.oak-core` är version 1.2.2.14 eller senare (Använd webbkonsol: `/system/console/bundles`).
 
 +++
 
