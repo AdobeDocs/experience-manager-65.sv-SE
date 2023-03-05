@@ -11,7 +11,7 @@ topic-tags: deploying
 discoiquuid: e48cc0ed-688c-44c8-b6d6-5f3c8593a295
 docset: aem65
 exl-id: 3df0662a-0768-4b56-8b94-c517657b4bd9
-source-git-commit: 2a350548674ff3f8dc49defa47ac2b028da76f4b
+source-git-commit: 9052ed3e89fdc67d94fc60bbff64d42255565767
 workflow-type: tm+mt
 source-wordcount: '1802'
 ht-degree: 1%
@@ -117,7 +117,7 @@ AEM Managed Services är en komplett lösning för hantering av digitala uppleve
 
 Med AEM Managed Services kan man dra nytta av följande fördelar:
 
-**Snabbare time to market:** Med flexibel molninfrastruktur i Adobe Managed Services kan organisationer snabbt planera, lansera och optimera framgångsrika digitala upplevelser. Adobe hanterar molnarkitekturen utan ytterligare kapital-, maskinvaru- eller programvarubehov och Adobe&#39;s Customer Success Engineers, hjälp med AEM arkitektur, provisionering, anpassning för att ansluta till serverprogram och bästa praxis för att publicera.
+**Snabbare time to market:** Med flexibel molninfrastruktur i Adobe Managed Services kan organisationer snabbt planera, lansera och optimera framgångsrika digitala upplevelser. Adobe hanterar molnarkitekturen utan ytterligare kapital-, maskinvaru- eller programvarubehov och Adobe kundlösningstekniker, hjälp med AEM arkitektur, provisionering, anpassning för att ansluta till back-end-appar och praktiska användningsmetoder.
 
 **Högre prestanda:** Ger tillförlitliga digitala upplevelser för företaget med fyra alternativ för tillgänglighet: 99,5 %, 99,9 %, 99,95 % och 99,99 %. Dessutom kan man med programmet automatiskt säkerhetskopiera och återställa flera lägen för att säkerställa tillförlitlighet och beredskapshantering.
 
