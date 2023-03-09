@@ -11,9 +11,9 @@ topic-tags: deploying
 discoiquuid: f03ebe60-88c0-4fc0-969f-949490a8e768
 feature: Configuring
 exl-id: e53c4c81-f62e-4b6d-929a-6649c8ced23c
-source-git-commit: b7f9b5256e07d4bfbc0c3454e8d2fe112ea650e8
+source-git-commit: 28046104e75a833736f53b0e9d1edf4c8fbe6249
 workflow-type: tm+mt
-source-wordcount: '5918'
+source-wordcount: '5898'
 ht-degree: 0%
 
 ---
@@ -574,13 +574,7 @@ error.log blir mycket detaljerad om det uppstår incidenter under rensningen av 
 
 >[!CAUTION]
 >
->Olika versioner av Oak-run-verktyget måste användas beroende på vilken Oak-version du använder i AEM. Kontrollera listan över versionskrav innan du använder verktyget:
->
->* För ekversioner **1.0.0 till 1.0.11** eller **1.1.0 till 1.1.6**, använd Oak-run-version** 1.0.11**
->
->* För ekversioner **nyare än ovan** använder du den version av Oak-run som matchar Oak Core i AEM.
->
-
+>Använd en Oak-run-version som har ett versionsnummer (både större och mindre) som matchar Oak Core-versionen av din AEM. Om din AEM till exempel har Oak Core version 1.2.x bör du använda Oak-run Tool version 1.2.x.
 
 Adobe har ett verktyg som heter **Oak-run** för att rensa revisioner. Den kan laddas ned här:
 
