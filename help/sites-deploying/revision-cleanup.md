@@ -11,9 +11,9 @@ topic-tags: deploying
 discoiquuid: f03ebe60-88c0-4fc0-969f-949490a8e768
 feature: Configuring
 exl-id: e53c4c81-f62e-4b6d-929a-6649c8ced23c
-source-git-commit: 5c26a043d735921d91044156f2749dc761dbb566
+source-git-commit: 24a64e603d460c659467c7679934bbdfd381aaa8
 workflow-type: tm+mt
-source-wordcount: '5901'
+source-wordcount: '5903'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## Introduktion {#introduction}
 
-Varje uppdatering av databasen skapar en ny innehållsrevision. Det innebär att databasstorleken ökar för varje uppdatering. För att undvika okontrollerad databastillväxt måste gamla ändringar rensas bort för att frigöra diskutrymme. Den här underhållsfunktionen kallas Revision Cleanup. Det har funnits som en offlinerutrutin sedan AEM 6.0.
+Varje uppdatering av databasen skapar en ny innehållsrevision. Det innebär att databasstorleken ökar för varje uppdatering. Gamla revideringar måste rensas för att frigöra diskutrymme - det är viktigt för att undvika okontrollerad databastillväxt. Den här underhållsfunktionen kallas Revision Cleanup. Det har funnits som en offlinerutrutin sedan AEM 6.0.
 
 Med AEM 6.3 och senare introducerades en onlineversion av den här funktionen som kallas Online Revision Cleanup. Jämfört med funktionen för rensning av offlineredigering, där AEM ska stängas av, kan rensning av onlinerevision köras när den AEM instansen är online. Rensa onlineändringar är aktiverat som standard och det är det rekommenderade sättet att rensa en revision.
 
