@@ -12,9 +12,9 @@ discoiquuid: de7d7209-c194-4d19-853b-468ebf3fa4b2
 docset: aem65
 exl-id: 314a6409-398c-470b-8799-0c4e6f745141
 feature: Security
-source-git-commit: 66e9e8e1d9f43faa3d0e4fe61e8206bdab1348f6
+source-git-commit: 7efe4a011d831c34f6aafd877654e8b41fec96e0
 workflow-type: tm+mt
-source-wordcount: '2859'
+source-wordcount: '2889'
 ht-degree: 0%
 
 ---
@@ -86,19 +86,25 @@ Mer information om hur du ändrar lösenord för webbkonsolen finns i [Ändra ad
 
 #### Ändra administratörslösenordet för OSGi-webbkonsolen {#changing-the-osgi-web-console-admin-password}
 
-Du måste också ändra lösenordet som används för att komma åt webbkonsolen. Detta görs genom att konfigurera följande egenskaper för [Apache Felix OSGi Management Console](/help/sites-deploying/osgi-configuration-settings.md):
+Du måste också ändra lösenordet som används för att komma åt webbkonsolen. Detta görs med en [OSGI-konfiguration](/help/sites-deploying/configuring-osgi.md) för att uppdatera följande egenskaper för **Apache Felix OSGi Management Console**:
 
-**Användarnamn** och **Lösenord**, inloggningsuppgifterna för åtkomst till själva Apache Felix Web Management Console.
-Lösenordet måste ändras efter den första installationen för att säkerställa instansens säkerhet.
+* **Användarnamn** och **Lösenord**, inloggningsuppgifterna för åtkomst till själva Apache Felix Web Management Console.
+Lösenordet måste ändras *efter* den första installationen för att säkerställa instansens säkerhet.
 
 Så här gör du:
 
-1. Navigera till webbkonsolen på `<server>:<port>/system/console/configMgr`.
-1. Navigera till **Apache Felix OSGi Management Console** och ändra **användarnamn** och **lösenord**.
+>[!NOTE]
+>
+>Se [OSGI-konfiguration](/help/sites-deploying/configuring-osgi.md) om du vill ha fullständig information om hur du konfigurerar OSGi-inställningar.
+
+1. Använda **verktyg**, **Operationer** -menyn, öppna **Webbkonsol** och navigera till **Konfiguration** -avsnitt.
+Till exempel `<server>:<port>/system/console/configMgr`.
+1. Navigera till och öppna posten för **Apache Felix OSGi Management Console**.
+1. Ändra **användarnamn** och **lösenord**.
 
    ![chlimage_1-3](assets/chlimage_1-3.png)
 
-1. Klicka **Spara**.
+1. Välj **Spara**.
 
 ### Implementera anpassad felhanterare {#implement-custom-error-handler}
 
