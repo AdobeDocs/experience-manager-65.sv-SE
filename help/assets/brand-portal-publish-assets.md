@@ -42,7 +42,7 @@ När replikeringen är klar kan du publicera resurser, mappar och samlingar till
 
    ![publish2bp-2](assets/publish2bp.png)
 
-1. Följande två alternativ är tillgängliga när du vill publicera mediefiler till Brand Portal:
+1. Följande två alternativ är tillgängliga för att publicera resurserna på Brand Portal:
    * [Publicera resurser direkt](#publish-to-bp-now)
    * [Publicera resurser senare](#publish-to-bp-now)
 

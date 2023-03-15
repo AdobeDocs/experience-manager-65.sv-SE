@@ -6,18 +6,18 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: repo_restructuring
 discoiquuid: 61cd5751-0dc8-48e0-873e-3a64899489bb
-feature: Uppgraderar
+feature: Upgrading
 exl-id: 4e736924-74ea-431a-be19-1c4ff022f464
 source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
 workflow-type: tm+mt
-source-wordcount: '414'
+source-wordcount: '413'
 ht-degree: 1%
 
 ---
 
 # Omstrukturering av Dynamic Media-arkiv i Adobe Experience Manager 6.5 {#dynamic-media-repository-restructuring-in-aem}
 
-Så som beskrivs på den överordnade sidan [Databasomstrukturering i Adobe Experience Manager 6.5](/help/sites-deploying/repository-restructuring.md) bör kunder som uppgraderar till Experience Manager 6.5 använda den här sidan för att bedöma arbetsinsatsen i samband med databasändringar som påverkar Dynamic Media. Vissa ändringar kräver arbete under uppgraderingsprocessen för Experience Manager 6.5, medan andra kan skjutas upp till en framtida uppgradering.
+Enligt beskrivning på överordnad [Omstrukturering av lager i Adobe Experience Manager 6.5](/help/sites-deploying/repository-restructuring.md) På denna sida bör kunder som uppgraderar till Experience Manager 6.5 använda denna sida för att bedöma arbetsinsatsen i samband med databasändringar som påverkar Dynamic Media. Vissa ändringar kräver arbete under uppgraderingsprocessen för Experience Manager 6.5, medan andra kan skjutas upp till en framtida uppgradering.
 
 **Före framtida uppgradering**
 
@@ -116,7 +116,7 @@ Så som beskrivs på den överordnade sidan [Databasomstrukturering i Adobe Expe
   </tr>
   <tr>
    <td><strong>Omstruktureringsvägledning</strong></td>
-   <td><p>1. Avpublicera alla videoklipp från YouTube<br /> 2. Skapa YouTube Configuration med nya TouchUI (från <code>/conf</code>), inklusive kopiering av alla kanaler från den gamla platsen<br /> 3. Publicera alla videor på YouTube igen.</p> <p>Arbetsflödet ger nya YouTube URL:er. Om du inte avpublicerar innan du skapar en TouchUI YouTube-konfiguration har du flera YouTube-URL:er listade under Egenskaper eftersom de återskapade kanalerna publiceras igen, om du får chansen. Den här funktionen innebär att du har oanvändbara URL:er som listas under Egenskaper.</p> </td>
+   <td><p>1. Avpublicera alla videofilmer från YouTube<br /> 2. Skapa YouTube-konfigurationen med nya TouchUI (från <code>/conf</code>) inklusive kopiering av alla kanaler från den gamla platsen<br /> 3. Publicera alla videor på YouTube igen.</p> <p>Arbetsflödet ger nya YouTube URL:er. Om du inte avpublicerar innan du skapar en TouchUI YouTube-konfiguration har du flera YouTube-URL:er listade under Egenskaper eftersom de återskapade kanalerna publiceras igen, om du får chansen. Den här funktionen innebär att du har oanvändbara URL:er som listas under Egenskaper.</p> </td>
   </tr>
   <tr>
    <td><strong>Anteckningar</strong></td>

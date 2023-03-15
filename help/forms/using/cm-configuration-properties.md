@@ -1,26 +1,25 @@
 ---
 title: Egenskaper för konfiguration av korrespondenshantering
-seo-title: Egenskaper för konfiguration av korrespondenshantering
+seo-title: Correspondence Management Configuration Properties
 description: I det här avsnittet beskrivs hur du kan ändra Resursdisposition med lösningsspecifika konfigurationer. I det här avsnittet beskrivs de egenskaper som du kan redigera, med beskrivning, standardvärden och godkända värden.
-seo-description: I det här avsnittet beskrivs hur du kan ändra Resursdisposition med lösningsspecifika konfigurationer. I det här avsnittet beskrivs de egenskaper som du kan redigera, med beskrivning, standardvärden och godkända värden.
+seo-description: This topic explains how you can modify Asset Composer with solution-specific configurations. This topic details the properties you can edit, with their description, default values, and acceptable values.
 uuid: 6b401d51-9332-459b-b751-42a9b5a1462d
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
 discoiquuid: f2955419-c680-44a7-9913-c594b4577551
 feature: Correspondence Management
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: c9c007d0-c545-4738-b11b-4c50986342ee
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '879'
+source-wordcount: '845'
 ht-degree: 1%
 
 ---
 
+# Egenskaper för konfiguration av korrespondenshantering {#correspondence-management-configuration-properties}
 
-# Konfigurationsegenskaper för korrespondenshantering {#correspondence-management-configuration-properties}
-
-Om du vill konfigurera de här egenskaperna öppnar du följande URL-adress i en webbläsare: `https://<server>:<port>/<contextPath>/system/console/configMgr` och välj **Konfiguration för korrespondenshantering**.
+Om du vill konfigurera de här egenskaperna öppnar du följande URL-adress i en webbläsare: `https://<server>:<port>/<contextPath>/system/console/configMgr` och markera **Konfigurationer för korrespondenshantering**.
 
 Correspondence Management har följande konfigurationsegenskaper:
 
@@ -35,30 +34,30 @@ Correspondence Management har följande konfigurationsegenskaper:
   <tr>
    <td><p>Indrag</p> </td>
    <td>Indrag för moduler<p> </p> </td>
-   <td><p>12,7 mm</p> </td>
+   <td><p>12.7mm</p> </td>
    <td><p>Valfritt tal</p> </td>
   </tr>
   <tr>
    <td>Minsta numerisk bredd</td>
-   <td>Minsta bredd som ska användas i punkt-/nummerfältet när numrerade listor används utom latinska nummer</td>
-   <td>8,0 mm</td>
+   <td>Minsta bredd som ska användas i fältet punkt/nummer när numrerade listor används utom latinska nummer</td>
+   <td>8.0mm</td>
    <td>Valfritt tal</td>
   </tr>
   <tr>
    <td><p>Minsta bredd för romerska siffror</p> </td>
    <td><p>Minsta bredd som ska användas på punkt-/nummerfältet när romerska siffror används</p> </td>
-   <td><p>12,7 mm</p> </td>
+   <td><p>12.7mm</p> </td>
    <td><p>Valfritt tal</p> </td>
   </tr>
   <tr>
    <td>Återgivningstyp</td>
    <td>Den typ av återgivning som programmet Skapa korrespondens använder för att återge förhandsgranskningen av bokstaven. </td>
-   <td>HTML-återgivning</td>
-   <td>HTML-återgivning/PDF-återgivning</td>
+   <td>HTML Rendition</td>
+   <td>HTML Rendition/PDF Rendition</td>
   </tr>
   <tr>
    <td><p>Aktivera CCR PDF-markering</p> </td>
-   <td><p>Aktiverar markering av PDF i programmet Create Correspondence</p> </td>
+   <td><p>Aktiverar markering på PDF i Create Correspondence-programmet</p> </td>
    <td><p>true</p> </td>
    <td><p>true / false</p> </td>
   </tr>
@@ -72,7 +71,7 @@ Correspondence Management har följande konfigurationsegenskaper:
    <td><p>Markeringsfärg för mål</p> </td>
    <td><p>Målmarkeringsfärg i programmet Skapa korrespondens</p> </td>
    <td><p>90;155;245</p> </td>
-   <td><p>Alla RGB-färger i formatet R;G;B</p> </td>
+   <td><p>Valfri RGB-färg i formatet R;G;B</p> </td>
   </tr>
   <tr>
    <td><p>Markeringstyp för innehåll</p> </td>
@@ -84,7 +83,7 @@ Correspondence Management har följande konfigurationsegenskaper:
    <td><p>Markeringsfärg för innehåll</p> </td>
    <td><p>Markeringsfärg för innehåll i programmet Skapa korrespondens</p> </td>
    <td><p>210;225;245</p> </td>
-   <td><p>Alla RGB-färger i formatet R;G;B</p> </td>
+   <td><p>Valfri RGB-färg i formatet R;G;B</p> </td>
   </tr>
   <tr>
    <td><p>Markeringstyp för fält</p> </td>
@@ -96,7 +95,7 @@ Correspondence Management har följande konfigurationsegenskaper:
    <td><p>Markeringsfärg för fält</p> </td>
    <td><p>Markeringsfärg för fält i programmet Skapa korrespondens</p> </td>
    <td><p>210;225;245</p> </td>
-   <td><p>Alla RGB-färger i formatet R;G;B</p> </td>
+   <td><p>Valfri RGB-färg i formatet R;G;B</p> </td>
   </tr>
   <tr>
    <td><p>Programtimeout</p> </td>
@@ -129,8 +128,8 @@ Correspondence Management har följande konfigurationsegenskaper:
    <td><p>Valfritt strängvariabelnamn</p> </td>
   </tr>
   <tr>
-   <td><p>Typ av PDF-sändning</p> </td>
-   <td><p>Typ av PDF-överföring (typ av PDF som genereras när den skickas från programmet Skapa korrespondens)</p> </td>
+   <td><p>PDF Submit Type</p> </td>
+   <td><p>PDF Submit Type (typ av PDF som genereras när formuläret skickas från Create Correspondence-programmet)</p> </td>
    <td><p>nonInteractive</p> </td>
    <td><p>interaktiv/icke-interaktiv</p> </td>
   </tr>
@@ -162,7 +161,7 @@ Correspondence Management har följande konfigurationsegenskaper:
    <td><p>Dataredigeringsformat</p> </td>
    <td><p>Redigera dataformat. Detta används vid skrivning av data som String eller tolkning av data från String</p> </td>
    <td><p>locale=en_US; dateFormat=dd-MM-yyyy; numberDecimalSeparator=.; numberGroupSeparator=,; numberUseGroupSeparator=true</p> </td>
-   <td>—<p> </p> </td>
+   <td>--<p> </p> </td>
   </tr>
   <tr>
    <td><p>Hantera bokstavsinstanser vid publicering</p> </td>
@@ -245,18 +244,18 @@ Correspondence Management har följande konfigurationsegenskaper:
   <tr>
    <td><p>CM-användarrot</p> </td>
    <td><p>URL för mappen som innehåller alla Correspondence Management-användarresurser</p> </td>
-   <td><p>—</p> </td>
+   <td><p>--</p> </td>
    <td><p>Giltig mapplats</p> </td>
   </tr>
   <tr>
    <td><p>Storlek på bokstavscache</p> </td>
-   <td><p>Ange maximalt antal bokstäver som ska behållas i cachen.</p> <p>Om du ändrar det här värdet rensas cachen <code>in-memory</code>.</p> </td>
+   <td><p>Ange maximalt antal bokstäver som ska behållas i cachen.</p> <p>Om du ändrar det här värdet rensas <code>in-memory</code> cache.</p> </td>
    <td><p>100</p> </td>
    <td><p>Valfritt numeriskt värde</p> </td>
   </tr>
   <tr>
    <td><p>Aktivera bokstavscache</p> </td>
-   <td><p>Aktivera/inaktivera bokstavscachen.</p> <p>Om du ändrar det här värdet rensas cachen <code>in-memory </code>.</p> </td>
+   <td><p>Aktivera/inaktivera bokstavscachen.</p> <p>Om du ändrar det här värdet rensas <code>in-memory </code> cache.</p> </td>
    <td><p>true</p> </td>
    <td><p>true / false</p> </td>
   </tr>
@@ -292,7 +291,7 @@ Correspondence Management har följande konfigurationsegenskaper:
   </tr>
   <tr>
    <td><p>Felsökningskatalog </p> <p> </p> </td>
-   <td>Sökväg till filsystemmappen för felsökning. Om katalogen inte <code>exists</code> skapas inga felsökningsdumpar.</td>
+   <td>Sökväg till filsystemmappen för felsökning. Om katalogen inte gör det <code>exists</code>kommer inga felsökningsdumpar att genereras.</td>
    <td>acm.debugDirectory</td>
    <td> </td>
   </tr>

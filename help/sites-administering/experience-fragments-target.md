@@ -114,7 +114,7 @@ De obligatoriska alternativen kan väljas i **Sidegenskaper** av den mapp och/el
 
    >[!NOTE]
    >
-   >JSON-formatet i ett Experience Fragment-erbjudande kan anpassas. Om du vill göra det definierar du en Customer Experience Fragment-komponent och kommenterar sedan hur dess egenskaper ska exporteras i komponentens Sling Model.
+   >JSON-formatet i ett Experience Fragment-erbjudande kan anpassas. Om du vill göra det definierar du en Customer Experience Fragment-komponent och kommenterar sedan hur egenskaperna ska exporteras i komponentens Sling Model.
    >
    >Se kärnkomponenten:
    >

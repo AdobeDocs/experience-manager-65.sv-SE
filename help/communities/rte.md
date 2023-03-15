@@ -1,22 +1,21 @@
 ---
 title: Grundläggande om Rich Text Editor
-seo-title: Grundläggande om Rich Text Editor
+seo-title: Rich Text Editor Essentials
 description: Översikt över textredigeringsfunktionen
-seo-description: Översikt över textredigeringsfunktionen
+seo-description: Rich text Editor feature overview
 uuid: f96015cc-114b-431a-a5ba-dc195c2a0b83
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: 0225a543-0fad-488b-8b0b-8b3512d44fbe
-translation-type: tm+mt
-source-git-commit: 4b6311cbfe11a61b74f68bf5a25ad1f5faef5358
+exl-id: 821e32f4-da8d-4bbb-936a-0844b8a24cdd
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '237'
+source-wordcount: '228'
 ht-degree: 1%
 
 ---
-
 
 # Grundläggande om Rich Text Editor {#rich-text-editor-essentials}
 
@@ -24,15 +23,15 @@ ht-degree: 1%
 
 Med en textredigerare kan du skriva text med markeringar.
 
-För webbgruppskomponenter, som liknar [textredigeraren i författarmiljön](../../help/sites-authoring/rich-text-editor.md), påverkar det text som anges i publiceringsmiljön.
+För webbgruppskomponenter, men liknande [textredigerare i redigeringsmiljön](../../help/sites-authoring/rich-text-editor.md)påverkar det text som anges i publiceringsmiljön.
 
 ![textredigerare](assets/rich-text-editor.png)
 
-## Aktivera RTF-redigeraren {#enabling-rich-text-editor}
+## Aktivera RTF-redigerare {#enabling-rich-text-editor}
 
-Communities-komponenter som tillåter användargenererat innehåll (UGC) kan aktiveras för att tillåta RTE. Beroende på om komponenten har lagts till på en sida eller inkluderats i en [funktion](functions.md), kan RTE vara aktiverat som standard.
+Communities-komponenter som tillåter användargenererat innehåll (UGC) kan aktiveras för att tillåta RTE. Beroende på om komponenten har lagts till på en sida eller inkluderats i en [function](functions.md), RTE kanske är aktiverat som standard.
 
-Om den inte är aktiverad anger du bara [redigeringsläget för författare](sites-console.md#authoring-site-content), markerar komponenten för redigering och markerar kryssrutan `Rich Text Editor`.
+Om den inte är aktiverad skriver du [redigeringsläge för författare](sites-console.md#authoring-site-content), markerar komponenten för redigering och markerar `Rich Text Editor` kryssrutan.
 
 RTE är tillgängligt för följande Communities-komponenter:
 
@@ -83,4 +82,3 @@ CKRte.prototype.config = {
     resize_enabled: false
 };
 ```
-

@@ -1,8 +1,8 @@
 ---
 title: Ändra teckensnitt i gränssnittet
-seo-title: Ändra teckensnitt i gränssnittet
+seo-title: Changing the font on the interface
 description: Så här ändrar du teckensnitt i användargränssnittet selektivt.
-seo-description: Så här ändrar du teckensnitt i användargränssnittet selektivt.
+seo-description: How to change the fonts on the user interface selectively.
 uuid: 421fdd24-441a-4092-8c52-f3ed3d5d5671
 contentOwner: robhagat
 content-type: reference
@@ -10,28 +10,27 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 9fcb80b4-cbc2-48a5-afd1-4f3bc50bc503
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+exl-id: 226f70f0-8eb4-4724-b496-5801dc6b436f
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '292'
+source-wordcount: '276'
 ht-degree: 1%
 
 ---
-
 
 # Ändra teckensnitt i gränssnittet{#changing-the-font-on-the-interface}
 
 Du kan ändra vilket teckensnitt som visas på arbetsytan i AEM Forms. Teckensnitt som används i ett visst avsnitt i användargränssnittet definieras i motsvarande avsnitt i formatmallen. Du kan ändra teckensnitten i användargränssnittet selektivt.
 
-Följ de allmänna [stegen för anpassning av AEM Forms-arbetsytan](../../forms/using/generic-steps-html-workspace-customization.md) och, beroende på dina behov, följ stegen för att anpassa CSS, HTML eller båda.
+Följ [Allmänna steg för anpassning av AEM Forms arbetsyta](../../forms/using/generic-steps-html-workspace-customization.md) och beroende på dina behov följer du stegen för att anpassa CSS, HTML eller båda.
 
 1. Ändra eller lägg till teckensnittsfamiljen i en befintlig stil.
-1. Ändra eller lägg till infogad teckensnittsfamilj för HTML-elementet.
-1. Lägg till ett format och använd det för HTML-elementet.
+1. Ändra eller lägg till teckensnittsfamiljen för elementet HTML.
+1. Lägg till ett format och använd det för elementet HTML.
 
 Om du till exempel vill ändra teckensnittet för den översta navigeringsfältets ankartext till Courier New följer du de här stegen:
 
-1. Logga in på CRXDE Lite med `https://'[server]:[port]'/lc/crx/de/index.jsp`.
+1. Logga in på CRXDE Lite med åtkomst `https://'[server]:[port]'/lc/crx/de/index.jsp`.
 1. Gör något av följande:
 
    1. Om du vill ändra font-family i en befintlig stil lägger du till följande i filen newStyle.css på /apps/ws/css.
@@ -42,7 +41,7 @@ Om du till exempel vill ändra teckensnittet för den översta navigeringsfälte
       }
       ```
 
-   1. Om du vill lägga till teckensnittsfamiljen för HTML-elementet kopierar du filen `/libs/ws/js/runtime/templates/appnavigation.html` till `/apps/ws/js/runtime/templates/appnavigation.html`.
+   1. Om du vill lägga till teckensnittsfamiljen för elementet HTML kopierar du `/libs/ws/js/runtime/templates/appnavigation.html` fil till `/apps/ws/js/runtime/templates/appnavigation.html`.
 
       Uppdatera /apps/ws/js/runtime/templates/appnavigation.html så här:
 
@@ -53,7 +52,7 @@ Om du till exempel vill ändra teckensnittet för den översta navigeringsfälte
       <li class="preference"><a href="#/preferences" title="<%= $.t('index.header.topnav.preferences.detail')%>" style="font-family:Courier New;" ><%= $.t('index.header.topnav.preferences.name')%></a></li>
       ```
 
-      Öppna /apps/ws/js/registry.js för redigering och ersätt `text!/lc/libs/ws/js/runtime/templates/appnavigation.html` med `text!/lc/apps/ws/js/runtime/templates/appnavigation.html`.
+      Öppna /apps/ws/js/registry.js för redigering och ersättning `text!/lc/libs/ws/js/runtime/templates/appnavigation.html` med `text!/lc/apps/ws/js/runtime/templates/appnavigation.html`.
 
    1. Om du vill lägga till en stil som definierar teckensnittsfamiljen lägger du till följande i filen newStyle.css på /apps/ws/css.
 
@@ -63,7 +62,7 @@ Om du till exempel vill ändra teckensnittet för den översta navigeringsfälte
       }
       ```
 
-      Lägg till följande i filen appnavigation.html på /apps/ws/js/runtime/templates om du vill lägga till teckensnittsfamiljen för HTML-elementet.
+      Lägg till följande i filen appnavigation.html på /apps/ws/js/runtime/templates om du vill lägga till teckensnittsfamiljen för elementet HTML.
 
       ```jsp
       <div id="topnav" class="myNewFontStyle">

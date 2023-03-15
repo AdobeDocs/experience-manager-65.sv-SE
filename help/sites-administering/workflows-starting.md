@@ -23,12 +23,12 @@ När du administrerar arbetsflöden kan du starta dem på flera olika sätt:
 
 * Manuellt:
 
-   * Från en [arbetsflödesmodell](#workflow-models).
-   * Använder ett arbetsflödespaket för [gruppbearbetning](#workflow-packages-for-batch-processing).
+   * Från en [Arbetsflödesmodell](#workflow-models).
+   * Använda ett arbetsflödespaket för [gruppbearbetning](#workflow-packages-for-batch-processing).
 
 * Automatiskt:
 
-   * Som svar på nodändringar, [använda en startfil](#workflows-launchers).
+   * Som svar på nodändringar, [med hjälp av en Launcher](#workflows-launchers).
 
 >[!NOTE]
 >
@@ -38,19 +38,18 @@ När du administrerar arbetsflöden kan du starta dem på flera olika sätt:
 >* [Tillämpa arbetsflöden på DAM-resurser](/help/assets/assets-workflow.md)
 >* [AEM Forms](https://helpx.adobe.com/aem-forms/6-2/aem-workflows-submit-process-form.html)
 >* [Översättningsprojekt](/help/sites-administering/tc-manage.md)
-
 >
 
 
 ## Arbetsflödesmodeller {#workflow-models}
 
-Du kan starta ett arbetsflöde [baserat på en av modellerna](/help/sites-administering/workflows.md#workflow-models-and-instances) som visas i konsolen Arbetsflödesmodeller. Den enda obligatoriska informationen är nyttolasten, men du kan även lägga till en titel och/eller kommentar.
+Du kan starta ett arbetsflöde [baserat på en av modellerna](/help/sites-administering/workflows.md#workflow-models-and-instances) visas på konsolen Arbetsflödesmodeller. Den enda obligatoriska informationen är nyttolasten, men du kan även lägga till en titel och/eller kommentar.
 
 ## Starta arbetsflöden {#workflows-launchers}
 
 Workflow Launcher övervakar ändringar i innehållsdatabasen för att starta arbetsflöden beroende på platsen och resurstypen för den ändrade noden.
 
-Med **startprogrammet** kan du:
+Använda **Startprogram** du kan:
 
 * Se de arbetsflöden som redan har startats för specifika noder.
 * Välj ett arbetsflöde som ska startas när en viss nod/nodtyp har skapats/ändrats/tagits bort.
@@ -59,7 +58,7 @@ Med **startprogrammet** kan du:
 En startfil kan skapas för alla noder. Ändringar av vissa noder startar dock inte arbetsflöden. Ändringar av noder under följande sökvägar leder inte till att arbetsflöden startar:
 
 * `/var/workflow/instances`
-* Alla arbetsflödesinkorgsnoder som finns var som helst i `/home/users`-grenen
+* Alla arbetsflödesinkorgsnoder som finns var som helst i `/home/users` bankkontor
 * `/tmp`
 * `/var/audit`
 * `/var/classes`
@@ -68,7 +67,7 @@ En startfil kan skapas för alla noder. Ändringar av vissa noder startar dock i
 * `/var/mobile`
 * `/var/statistics`
 
-   * Undantag: Ändringar av noder under `/var/statistics/tracking` *do* orsakar att arbetsflöden startar.
+   * Undantag: Ändringar av noder nedan `/var/statistics/tracking` *do* gör att arbetsflöden startar.
 
 Olika definitioner ingår i standardinstallationen. Dessa används för hantering av digitala resurser och samarbete i sociala medier:
 
@@ -88,14 +87,14 @@ Ett arbetsflödespaket:
 
 ## Starta ett arbetsflöde från Models Console {#starting-a-workflow-from-the-models-console}
 
-1. Navigera till konsolen **Models** med **Verktyg**, **Arbetsflöde** och **Modeller**.
+1. Navigera till **Modeller** konsol med **verktyg**, **Arbetsflöde** sedan **Modeller**.
 1. Välj arbetsflöde (enligt konsolvyn); Du kan också använda Sök (längst upp till vänster) om det behövs:
 
    ![wf-103](assets/wf-103.png)
 
    >[!NOTE]
    >
-   >Indikatorn **[Transient](/help/sites-developing/workflows.md#transient-workflows)** visar arbetsflöden som arbetsflödeshistoriken inte kommer att sparas för.
+   >The **[Övergående](/help/sites-developing/workflows.md#transient-workflows)** indikator visar arbetsflöden som arbetsflödeshistoriken inte kommer att sparas för.
 
 1. Välj **Starta arbetsflöde** i verktygsfältet.
 1. Dialogrutan Kör arbetsflöde öppnas och du kan ange:
@@ -115,8 +114,8 @@ Ett arbetsflödespaket:
 
 ## Skapa en startkonfiguration {#creating-a-launcher-configuration}
 
-1. Gå till **Workflow Launcher**-konsolen med **Verktyg**, **Arbetsflöde** och **Startare**.
-1. Välj **Skapa** och **Lägg till startprogram** för att öppna dialogrutan:
+1. Navigera till **Starta arbetsflöden** konsol med **verktyg**, **Arbetsflöde** sedan **Startare**.
+1. Välj **Skapa** sedan **Lägg till startprogram** för att öppna dialogrutan:
 
    ![wf-105](assets/wf-105.png)
 
@@ -137,7 +136,7 @@ Ett arbetsflödespaket:
 
    * **Körningsläge(n)**
 
-      Den typ av server som arbetsflödets startprogram gäller för. Välj **Författare**, **Publicera** eller **Författare och publicera**.
+      Den typ av server som arbetsflödets startprogram gäller för. Välj **Upphovsman**, **Publicera**, eller **Skapa och publicera**.
 
    * **Villkor**
 
@@ -165,7 +164,7 @@ Ett arbetsflödespaket:
 
       Anger om arbetsflödets startprogram är aktiverat:
 
-      * Välj **Aktivera** om du vill starta arbetsflöden när konfigurationsegenskaperna är uppfyllda.
+      * Välj **Aktivera** för att starta arbetsflöden när konfigurationsegenskaperna är uppfyllda.
       * Välj **Inaktivera** när arbetsflödet inte ska köras (inte ens när konfigurationsegenskaperna är uppfyllda).
    * **Uteslut lista**
 
@@ -173,8 +172,8 @@ Ett arbetsflödespaket:
 
       Den här startegenskapen är en kommaavgränsad lista med objekt: &quot;
 
-      * `property-name` ignorera alla  `jcr` händelser som utlöses för det angivna egenskapsnamnet. &quot;
-      * `event-user-data:<*someValue*>` ignorerar alla händelser som innehåller  `*<someValue*`>- `user-data` uppsättningen via  [ `ObservationManager` API](https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/observation/ObservationManager.html#setUserData(java.lang.String.
+      * `property-name` ignorera `jcr` -händelse som utlöstes för det angivna egenskapsnamnet. &quot;
+      * `event-user-data:<*someValue*>` ignorerar alla händelser som innehåller `*<someValue*`> `user-data` genom [ `ObservationManager` API](https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/observation/ObservationManager.html#setUserData(java.lang.String.
 
       Till exempel:
 
@@ -188,10 +187,10 @@ Ett arbetsflödespaket:
 
 
 
-1. Välj **Skapa** för att skapa startprogrammet och återgå till konsolen.
+1. Välj **Skapa**, för att skapa startprogrammet och återgå till konsolen.
 
    När en lämplig händelse inträffar aktiveras startprogrammet och arbetsflödet startas.
 
 ## Hantera en startkonfiguration {#managing-a-launcher-configuration}
 
-När du har skapat startkonfigurationen kan du använda samma konsol för att markera instansen och sedan **Visa egenskaper** (och redigera dem) eller **Ta bort**.
+När du har skapat startkonfigurationen kan du använda samma konsol för att välja instansen och sedan **Visa egenskaper** (och redigera dem) eller **Ta bort**.

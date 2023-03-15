@@ -1,8 +1,8 @@
 ---
 title: Skillnaden mellan HTML5-formulär och PDF forms
-seo-title: Skillnaden mellan HTML5-formulär och PDF forms
+seo-title: Feature differentiation between HTML5 forms and PDF forms
 description: Funktion som stöds i HTML5-formulär och PDF forms
-seo-description: Funktion som stöds i HTML5-formulär och PDF forms
+seo-description: Feature supported in HTML5 forms and PDF forms
 uuid: 6ddee197-d108-4897-9976-77d115a06504
 contentOwner: robhagat
 content-type: reference
@@ -11,18 +11,17 @@ topic-tags: hTML5_forms
 discoiquuid: bdd97c20-d1f2-4898-9862-1a6a8071be88
 docset: aem65
 feature: Mobile Forms
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 3150f95f-7150-4eee-b5a9-121422dec2a1
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '444'
 ht-degree: 2%
 
 ---
 
-
 # Skillnaden mellan HTML5-formulär och PDF forms {#feature-differentiation-between-html-forms-and-pdf-forms}
 
-Följande tabell anger vilka funktioner som stöds för HTML5-formulär och PDF forms:
+I följande tabell anges funktionsstödet för HTML5-formulär och PDF forms:
 
 <table>
  <tbody>
@@ -38,8 +37,8 @@ Följande tabell anger vilka funktioner som stöds för HTML5-formulär och PDF 
   </tr>
   <tr>
    <td>Signaturfält<br /> </td>
-   <td><strong>Digitala </strong> signaturer stöds inte, men ett nytt  <strong>klottrigt </strong> signaturfält läggs till för papper som signaturer. Man kan klottra sin signatur i formuläret med fältet <strong>Klottsignatur</strong>. Signaturen sparas i formuläret som en bild. Du kan spara geopositioneringsinformation i fältet <strong>Klottsignatur</strong>.</td>
-   <td>Signaturfält är tillgängligt för <strong>digitala signaturer</strong>.</td>
+   <td><strong>Digitala signaturer</strong> stöds inte, men en ny <strong>Klottersignatur</strong> fält läggs till för papper som signaturer. Man kan klottra sin signatur i formuläret med <strong>Klottersignatur</strong> fält. Signaturen sparas i formuläret som en bild. Du kan spara geopositioneringsinformation i <strong>Klottersignatur</strong> fält.</td>
+   <td>Signaturfält är tillgängligt för <strong>Digitala signaturer</strong>.</td>
   </tr>
   <tr>
    <td>Datasammanfogning</td>
@@ -54,27 +53,27 @@ Följande tabell anger vilka funktioner som stöds för HTML5-formulär och PDF 
   <tr>
    <td>Sidnumrering<br /> </td>
    <td><p>Ett HTML5-formulär är uppdelat i paneler och rutor för att ge det ett utseende som liknar PDF forms. Sidstorleken beräknas dynamiskt. Om allt innehåll på en sida i ett HTML5-formulär tas bort eller markeras som dolt, döljs den tomma sidan och inget tomt utrymme (blanksteg) visas mellan sidorna ovanför och under den tomma sidan.</p> <p>Om datasammanfogning eller skript lägger till innehåll på en sida utökas sidans längd så att det nya innehållet får plats. Inga nya sidor läggs till i formuläret så att det nya innehållet får plats. </p> <p><strong>Obs!</strong> När allt innehåll på en sida i ett HTML5-formulär tas bort eller markeras som dolt, förblir den tomma sidan (tomt utrymme) synlig mellan första och andra sidan, men inte mellan andra sidor.</p> </td>
-   <td>Sidnumrering i PDF-dokument beror på det sammanfogade datainnehållet eller på om användarinnehållet och antalet sidor ökar eller minskar baserat på det.</td>
+   <td>Sidnumrering i PDF beror på det sammanslagna datainnehållet eller på att användarinnehållet och antalet sidor ökar/minskar baserat på det.</td>
   </tr>
   <tr>
    <td>Sidhuvuden/sidfötter </td>
-   <td>Stöds. <br /> <br /> Eftersom mobilformulär i HTML5 inte stöder sidbrytningar visas sidhuvuden och sidfötter endast en gång. Du kan dock konfigurera dem i layouten så att de visas på flera ställen i förhandsgranskningen av mobilformulär.<br /> </td>
+   <td>Stöds. <br /> <br /> Eftersom mobilformulären HTML5 inte stöder sidbrytningar visas sidhuvuden och sidfötter endast en gång. Du kan dock konfigurera dem i layouten så att de visas på flera ställen i förhandsgranskningen av mobilformulär.<br /> </td>
    <td>Stöds.</td>
   </tr>
   <tr>
    <td>Anpassade widgetar</td>
-   <td>Du kan anpassa widgetar för att förbättra användarupplevelsen på mobila enheter.<br /> </td>
+   <td>Man kan anpassa widgetar för att förbättra användarupplevelsen på mobila enheter.<br /> </td>
    <td>Alla widgetar är låsta och ingen anpassad widget kan kopplas.<br /> </td>
   </tr>
   <tr>
    <td>XFA Script API</td>
-   <td>Stöder de vanligaste XFA-skriptkonstruktionerna. Mer information finns i <a href="/help/forms/using/scripting-support.md">skriptstöd</a>.</td>
+   <td>Stöder de vanligaste XFA-skriptkonstruktionerna. Mer information om vilka konstruktioner som stöds finns i <a href="/help/forms/using/scripting-support.md">skriptstöd</a>.</td>
    <td>Stöder alla XFA-skriptkonstruktioner.</td>
   </tr>
   <tr>
    <td>Acrobat Script API:er </td>
    <td>HTML5-formulär har stöd för de vanligaste API:erna. Mer information finns i <a href="/help/forms/using/scripting-support.md">skriptstöd</a>.</td>
-   <td>Om PDF-filen öppnas i Acrobat eller Reader stöds även alla skript-API:er som finns i Acrobat.</td>
+   <td>Om PDF-filen öppnas i Acrobat eller Reader stöder den även alla skript-API:er som finns i Acrobat.</td>
   </tr>
   <tr>
    <td>Stöd för höger-till-vänster-språk </td>

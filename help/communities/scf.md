@@ -1,8 +1,8 @@
 ---
 title: Ramverk för sociala komponenter
-seo-title: Ramverk för sociala komponenter
+seo-title: Social Component Framework
 description: Det sociala ramverket (SCF) förenklar processen att konfigurera, anpassa och utöka webbgruppskomponenter
-seo-description: Det sociala ramverket (SCF) förenklar processen att konfigurera, anpassa och utöka webbgruppskomponenter
+seo-description: The social component framework (SCF) simplifies the process of configuring, customizing, and extending Communities components
 uuid: 23b4418d-b91c-46fc-bf42-1154ef79fe5a
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -12,7 +12,7 @@ discoiquuid: d7b5b5e3-2d84-4a6b-bcc2-d490882ff3ed
 exl-id: 5ca58bc3-8505-4d91-9cd1-6b2e2671f1be
 source-git-commit: 1d5cfff10735ea31dc0289b6909851b8717936eb
 workflow-type: tm+mt
-source-wordcount: '1501'
+source-wordcount: '1483'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ Fördelarna med ramverket:
 * **Tillgänglig**: HTTP-API:t stöder publicering från alla klienter, inklusive mobilappar.
 * **Portable**: Integrera/bädda in i alla webbsidor som bygger på valfri teknik.
 
-Utforska en författare eller publicera en instans med hjälp av den interaktiva [guiden Community Components](components-guide.md).
+Utforska en författare eller publicera en instans med hjälp av den interaktiva [Community Components Guide](components-guide.md).
 
 ## Översikt {#overview}
 
@@ -55,13 +55,13 @@ Om du vill anpassa eller utöka komponenterna skriver du bara övertäckningar o
 * För Look and Feel:
    * Ändra JS-mallen och CSS.
 * För Look, Feel och UX:
-   * Ändra JS-mallen, CSS och [utöka/åsidosätt JavaScript](client-customize.md#extending-javascript).
+   * Ändra JS-mall, CSS och [utöka/åsidosätta Javascript](client-customize.md#extending-javascript).
 * Så här ändrar du informationen som är tillgänglig för JS-mallen eller för GETENS slutpunkt:
    * Utöka [SocialComponent](server-customize.md#socialcomponent-interface).
 * Så här lägger du till anpassad bearbetning under åtgärder:
-   * Skriv ett [OperationExtension](server-customize.md#operationextension-class).
+   * Skriv en [OperationExtension](server-customize.md#operationextension-class).
 * Så här lägger du till en ny anpassad åtgärd:
-   * Skapa en ny [Sling Post-åtgärd](server-customize.md#postoperation-class).
+   * Skapa ett nytt [Sling-poståtgärd](server-customize.md#postoperation-class).
    * Använd befintlig [OperationServices](server-customize.md#operationservice-class) efter behov.
    * Lägg till Javascript-kod för att anropa åtgärden från klientsidan efter behov.
 
@@ -73,9 +73,9 @@ Ramverket innehåller API:er för att komma åt funktioner på servern och stöd
 
 Java-API:erna innehåller abstrakta klasser och gränssnitt som enkelt ärvs eller underklassas.
 
-Huvudklasserna beskrivs på sidan [Anpassning på serversidan](server-customize.md).
+Huvudklasserna beskrivs i [Anpassning på serversidan](server-customize.md) sida.
 
-Besök [Översikt över lagringsresursprovidern](srp.md) om du vill veta mer om hur du arbetar med UGC.
+Besök [Översikt över lagringsresursprovider](srp.md) om du vill veta mer om hur du arbetar med UGC.
 
 ### HTTP-API {#http-api}
 
@@ -83,13 +83,13 @@ HTTP-API:t har stöd för enkel anpassning och val av klientplattformar för Pho
 
 ### HTTP API - GET-begäranden {#http-api-get-requests}
 
-För varje SocialComponent tillhandahåller ramverket en HTTP-baserad API-slutpunkt. Slutpunkten nås genom att en GET-begäran skickas till resursen med väljaren .social.json + tillägget. Med Sling skickas begäran till `DefaultSocialGetServlet`.
+För varje SocialComponent tillhandahåller ramverket en HTTP-baserad API-slutpunkt. Slutpunkten nås genom att en GET-begäran skickas till resursen med väljaren .social.json + tillägget. Med Sling lämnas begäran till `DefaultSocialGetServlet`.
 
 **`DefaultSocialGetServlet`**
 
 1. Skickar resursen (resourceType) till `SocialComponentFactoryManager` och tar emot en SocialComponentFactory som kan välja en `SocialComponent` som representerar resursen.
 
-1. Anropar fabriken och tar emot en `SocialComponent` som kan hantera resursen och begäran.
+1. Anropar fabriken och tar emot en `SocialComponent` kan hantera resursen och begäran.
 1. Anropar `SocialComponent`, som bearbetar begäran och returnerar en JSON-representation av resultaten.
 1. Returnerar JSON-svaret till klienten.
 
@@ -113,23 +113,23 @@ Det finns en Sling-POST:åtgärd för alla SocialComponent-åtgärder. Affärslo
 
 ### Lagringsresursleverantör (SRP) {#storage-resource-provider-srp}
 
-Mer information om hur du hanterar UGC som lagras i [community-innehållslagret](working-with-srp.md) finns i:
+Mer information om hur du hanterar UGC som lagras i [community content store](working-with-srp.md), se:
 
-* [Översikt över](srp.md)  lagringsresursprovidern - Introduktion och översikt över databasanvändningen.
-* [SRP och UGC Essentials](srp-and-ugc.md) - SRP API-verktygsmetoder och exempel.
-* [Använder UGC med riktlinjerna för SRP](accessing-ugc-with-srp.md) -kodning.
+* [Översikt över lagringsresursprovider](srp.md) - Översikt över introduktion och databasanvändning.
+* [SRP och UGC Essentials](srp-and-ugc.md) - Verktygsmetoder och exempel för SRP API.
+* [Åtkomst till UGC med SRP](accessing-ugc-with-srp.md) - Riktlinjer för kodning.
 
 ### Anpassningar på serversidan {#server-side-customizations}
 
-Besök [Anpassningar på serversidan](server-customize.md) om du vill ha information om hur du anpassar affärslogiken och beteendet för en Communities-komponent på serversidan.
+Besök [Serveranpassning](server-customize.md) om du vill ha information om hur du anpassar affärslogiken och beteendet för en Communities-komponent på serversidan.
 
 ## Hanterarfält - språk för JS-mallar {#handlebars-js-templating-language}
 
-En av de mest märkbara förändringarna i det nya ramverket är användningen av mallspråket `Handlebars JS` (HBS), en populär öppen källkod-teknik för serverklientåtergivning.
+En av de mer märkbara förändringarna i det nya ramverket är användningen av `Handlebars JS` (HBS)mallspråk, en populär öppen källkod-teknik för server-klientåtergivning.
 
 HBS-skript är enkla, logikfria, kompilerade på både server och klient, är enkla att överlagra och anpassa och binds naturligt med klientens användargränssnitt eftersom HBS stöder rendering på klientsidan.
 
-Ramverket innehåller flera [handtag](handlebars-helpers.md) som är användbara vid utveckling av SocialComponents.
+Ramverket innehåller flera [Handtag](handlebars-helpers.md) som är användbara vid utveckling av sociala komponenter.
 
 När Sling löser en GET-begäran på servern identifieras det skript som ska användas för att svara på begäran. Om skriptet är en HBS-mall (.hbs) delegerar Sling begäran till Handlebars Engine. Handlebars Engine hämtar sedan SocialComponent från lämplig SocialComponentFactory, skapar en kontext och återger HTML.
 
@@ -143,9 +143,9 @@ HTTP-åtkomst till HBS-filer är inte förbjuden.
 
 ### Lägg till eller inkludera en webbgruppskomponent {#add-or-include-a-communities-component}
 
-De flesta webbgruppskomponenter måste vara *tillagda* som en Sling-adresserbar resurs. Ett urval av Communities-komponenter kan vara *inkluderade* i en mall som en icke-befintlig resurs för att möjliggöra dynamisk inkludering och anpassning av den plats där användargenererat innehåll (UGC) ska skrivas.
+De flesta webbgruppskomponenter måste *tillagd* som en Sling-adresserbar resurs. Ett urval av Communities-komponenter kan *ingår* i en mall som en icke-befintlig resurs för dynamisk inkludering och anpassning av den plats där användargenererat innehåll (UGC) ska skrivas.
 
-I båda fallen måste komponentens [nödvändiga klientbibliotek](clientlibs.md) också finnas.
+I båda fallen är komponentens [nödvändiga klientbibliotek](clientlibs.md) måste också finnas.
 
 **Lägg till en komponent**
 
@@ -155,7 +155,7 @@ Resultatet är en underordnad JCR-nod under en par-nod, som är Sling-adresserba
 
 **Inkludera en komponent**
 
-Att ta med en komponent hänvisar till processen att lägga till en referens till en [&quot;icke-befintlig&quot; resurs](srp.md#for-non-existing-resources-ners) (ingen JCR-nod) i mallen, till exempel med ett skriptspråk.
+Att ta med en komponent refererar till processen att lägga till en referens till en [&quot;non-existing&quot; resource](srp.md#for-non-existing-resources-ners) (ingen JCR-nod) i mallen, t.ex. med ett skriptspråk.
 
 Från och med AEM 6.1 går det att redigera komponentens egenskaper i *design-läget när en komponent inkluderas dynamiskt i stället för att läggas till.
 
@@ -166,13 +166,13 @@ Endast ett fåtal av AEM Communities-komponenterna kan inkluderas dynamiskt. De 
 * [Recensioner](reviews-basics.md)
 * [Omröstning](essentials-voting.md)
 
-I [Community Components Guide](components-guide.md) kan inkluderbara komponenter växlas från att läggas till i.
+The [Community Components Guide](components-guide.md) tillåter att komponenter som inte kan inkluderas växlas från att läggas till till.
 
-**När du använder** Handlebarstemplating Language inkluderas den icke-befintliga resursen med hjälp av  [include ](handlebars-helpers.md#include) helperby genom att ange dess resourceType:
+**När du använder handtag** mallspråk inkluderas den icke-befintliga resursen med [include helper](handlebars-helpers.md#include) genom att ange dess resourceType:
 
 `{{include this.id path="comments" resourceType="social/commons/components/hbs/comments"}}`
 
-**När du använder JSP** inkluderas en resurs med taggen  [cq:include](../../help/sites-developing/taglib.md#lt-cq-include):
+**Vid användning av JSP**, ingår en resurs med taggen [cq:include](../../help/sites-developing/taglib.md#lt-cq-include):
 
 ```
 <cq:include path="votes"
@@ -181,19 +181,19 @@ I [Community Components Guide](components-guide.md) kan inkluderbara komponenter
 
 >[!NOTE]
 >
->Om du vill lägga till en komponent dynamiskt på en sida, i stället för att lägga till eller ta med den i en mall, läser du [Komponentsidinläsning](sideloading.md).
+>Information om hur du lägger till en komponent dynamiskt på en sida, i stället för att lägga till eller ta med den i en mall, finns i [Komponentsidladdning](sideloading.md).
 
 ### Handtag {#handlebars-helpers}
 
-I [SCF Handlebars Helpers](handlebars-helpers.md) finns en lista och en beskrivning av anpassade hjälpredor som är tillgängliga i SCF.
+Se [Hjälpmedel för SCF-handtag](handlebars-helpers.md) om du vill ha en lista och en beskrivning av anpassade hjälpredor som finns i SCF.
 
 ## Klientbaserat ramverk {#client-side-framework}
 
 ### Model-View Javascript Framework {#model-view-javascript-framework}
 
-Ramverket innehåller ett tillägg till [Backbone.js](https://www.backbonejs.org/), ett JavaScript-ramverk för modellvisning, som underlättar utvecklingen av avancerade, interaktiva komponenter. Den objektorienterade naturen har stöd för ett utbyggbart/återanvändbart ramverk. Kommunikationen mellan klient och server förenklas med HTTP API.
+Ramverket innehåller en förlängning av [Backbone.js](https://www.backbonejs.org/), ett modellbaserat JavaScript-ramverk som underlättar utvecklingen av avancerade, interaktiva komponenter. Den objektorienterade naturen har stöd för ett utbyggbart/återanvändbart ramverk. Kommunikationen mellan klient och server förenklas med HTTP API.
 
-Ramverket använder mallar för serversidans handtag för att återge komponenterna för klienten. Modellerna baseras på JSON-svar som genereras av HTTP API. Vyerna binds till HTML som genereras av Handlebars-mallarna och ger interaktivitet.
+Ramverket använder mallar för serversidans handtag för att återge komponenterna för klienten. Modellerna baseras på JSON-svar som genereras av HTTP API. Vyerna binder sig till HTML som genereras av Handlebars-mallarna och ger interaktivitet.
 
 ### CSS-konventioner {#css-conventions}
 
@@ -205,21 +205,21 @@ Följande är rekommenderade konventioner för att definiera och använda CSS-kl
 
 ### Anpassningar på klientsidan {#client-side-customizations}
 
-Om du vill anpassa utseendet och beteendet för en webbgruppskomponent på klientsidan kan du läsa [Anpassningar på klientsidan](client-customize.md), som innehåller information om:
+Om du vill anpassa utseendet och beteendet för en Communities-komponent på klientsidan, se [Anpassningar på klientsidan](client-customize.md), som innehåller information om
 
 * [Övertäckningar](client-customize.md#overlays)
 * [Tillägg](client-customize.md#extensions)
-* [HTML-kod](client-customize.md#htmlmarkup)
+* [HTML Markup](client-customize.md#htmlmarkup)
 * [CSS-skal](client-customize.md#skinning-css)
 * [Utöka JavaScript](client-customize.md#extending-javascript)
 * [Clientlibs for SCF](client-customize.md#clientlibs-for-scf)
 
 ## Grundläggande funktioner och komponenter {#feature-and-component-essentials}
 
-Grundläggande information för utvecklare beskrivs i [Function and Component Essentials](essentials.md)-avsnittet.
+Viktig information för utvecklare finns i [Grundläggande funktioner och komponenter](essentials.md) -avsnitt.
 
-Ytterligare utvecklarinformation finns i [riktlinjerna för kodning](code-guide.md).
+Ytterligare utvecklarinformation finns i [Riktlinjer för kodning](code-guide.md) -avsnitt.
 
 ## Felsökning {#troubleshooting}
 
-Vanliga problem och kända problem beskrivs i avsnittet [Felsökning](troubleshooting.md).
+Vanliga problem och kända problem beskrivs i [Felsökning](troubleshooting.md) -avsnitt.

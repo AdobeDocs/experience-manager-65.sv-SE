@@ -2,7 +2,7 @@
 title: AEM Forms on OSGi Groups and Privileges
 seo-title: AEM Forms on OSGi Groups and Privileges
 description: Tilldela användare till grupperna för att hantera AEM Forms på OSGi
-seo-description: Tilldela användare till grupperna för att hantera AEM Forms på OSGi
+seo-description: Assign users to the groups to manage AEM Forms on OSGi
 uuid: f269a206-356d-4cee-b449-05c5da87121a
 contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -14,7 +14,7 @@ role: Admin
 exl-id: d802ac53-e3db-45ca-afcb-7e99d0bb7877
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '279'
+source-wordcount: '261'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 Du kan [skapa grupper](/help/sites-administering/user-group-ac-admin.md#group-administration) och tilldela profiler och [användare](/help/sites-administering/user-group-ac-admin.md#user-administration) till grupperna i AEM. Dessa profiler styr behörigheter för de användare som är en del av gruppen.
 
-När du har installerat [AEM Forms-tilläggspaket](../../forms/using/installing-configuring-aem-forms-osgi.md) blir de grupper som nämns i den här artikeln automatiskt tillgängliga för tilldelning, till exempel formuläranvändare och formuläranvändare. I följande tabell visas de uppgifter som en användare kan utföra för AEM Forms på OSGi baserat på grupptilldelningarna:
+När du har installerat [AEM Forms tilläggspaket](../../forms/using/installing-configuring-aem-forms-osgi.md), är de grupper som nämns i den här artikeln, t.ex. användare av blanketter och användare med avancerade blanketter, automatiskt tillgängliga för tilldelning. I följande tabell visas de uppgifter som en användare kan utföra för AEM Forms på OSGi baserat på grupptilldelningarna:
 
 <table>
  <tbody>
@@ -32,7 +32,7 @@ När du har installerat [AEM Forms-tilläggspaket](../../forms/using/installing-
    <td>Uppgifter</td> 
   </tr>
   <tr>
-   <td>forms-users <sup>[1]</sup></td> 
+   <td>formuläranvändare <sup>[1]</sup></td> 
    <td>
     <ul> 
      <li>Skapa, förhandsgranska, publicera och skicka adaptiva formulär</li> 
@@ -62,7 +62,7 @@ När du har installerat [AEM Forms-tilläggspaket](../../forms/using/installing-
     </ul> </td> 
   </tr>
   <tr>
-   <td>template-authors <sup>[2]</sup></td> 
+   <td>mallskapare <sup>[2]</sup></td> 
    <td>
     <ul> 
      <li>Skapa och förhandsgranska anpassningsbara formulär eller mallar för interaktiv kommunikation</li> 
@@ -94,7 +94,7 @@ När du har installerat [AEM Forms-tilläggspaket](../../forms/using/installing-
    <td>arbetsflöde-användare</td> 
    <td>
     <ul> 
-     <li>Använd AEM inkorgsprogram<br /> <strong>Obs! </strong>Du måste ha grupptilldelningar för cm-agent-users och workflow-users för att komma åt gränssnittet för Interactive Communications Agent i AEM.</li> 
+     <li>Använda AEM<br /> <strong>Obs! </strong>Du måste ha grupptilldelningar för cm-agent-users och arbetsflödesanvändare för att få åtkomst till gränssnittet för Interactive Communications Agent i AEM.</li> 
      <li>Hantera arbetsflödesinstanser</li> 
     </ul> </td> 
   </tr>

@@ -1,26 +1,25 @@
 ---
 title: Genomgång av referenswebbplats för rekrytering av medarbetare
-seo-title: Rekrytering av personal
+seo-title: Employee recruitment
 description: AEM Forms referenswebbplats visar hur man kan använda AEM Forms funktioner för att genomföra rekryteringsarbetsflöden.
-seo-description: AEM Forms referenswebbplats visar hur man kan använda AEM Forms funktioner för att genomföra rekryteringsarbetsflöden.
+seo-description: AEM Forms reference site showcases how organizations can use AEM Forms features to implement employee recruitment workflow.
 uuid: 27e456ba-3c08-4c43-ad54-1ba0070995ad
 topic-tags: introduction
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 5f04b13e-ea40-4c86-9168-e020c52435a2
-translation-type: tm+mt
-source-git-commit: af326f2d2b278fe36df05afc8c172f74c99a064c
+exl-id: bdfc0a20-1e98-47f9-a1d1-5af5b3ef15db
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1432'
+source-wordcount: '1413'
 ht-degree: 0%
 
 ---
-
 
 # Genomgång av referenswebbplats för rekrytering av medarbetare {#employee-recruitment-reference-site-walkthrough}
 
 ## Översikt {#overview}
 
-Vi.Finance är en organisation som gör det möjligt för sökande att ansöka om anställning via referensportalen på webbplatsen. Organisationen använder även portalen för att hantera de sökandes intervjuer, schemaläggning, genvägar och intern kommunikation. Webbplatsen hanterar följande:
+Vi.Finance är en organisation som gör det möjligt för sökande att ansöka om anställning via referensportalen på webbplatsen. Organisationen använder även portalen för att hantera de sökandes intervjuer, planering av slutlistning och intern kommunikation. Webbplatsen hanterar följande:
 
 * Sökande och sökande som ansöker om jobb
 * Screening och förkortning av anbudssökande
@@ -31,9 +30,9 @@ Vi.Finance är en organisation som gör det möjligt för sökande att ansöka o
 
 >[!NOTE]
 >
->Personalrekryteringsexempel finns både på referenswebbplatserna We.Finance och We.Gov. De exempel, bilder och beskrivningar som används i genomgången använder referenswebbplatsen We.Finance. Du kan dock köra de här användningsexemplen och granska artefakter med hjälp av We.Gov också. Om du vill göra det ersätter du **we-Finance** med **we-gov** i de angivna URL:erna.
+>Personalrekryteringsexempel finns både på referenswebbplatserna We.Finance och We.Gov. De exempel, bilder och beskrivningar som används i genomgången använder referenswebbplatsen We.Finance. Du kan dock köra de här användningsexemplen och granska artefakter med hjälp av We.Gov också. Om du vill göra det ersätter du **vi-finansiering** med **we-gov** i de angivna URL-adresserna.
 
-### Arbetsflödesmodeller involverade {#workflow-models-involved}
+### Arbetsflödesmodeller {#workflow-models-involved}
 
 Handlingen för rekrytering av personal omfattar två arbetsflöden:
 
@@ -44,13 +43,13 @@ Dessa arbetsflöden skapas i AEM och finns på:
 
 `https://[authorHost]:[authorPort]/libs/cq/workflow/admin/console/content/models.html/etc/workflow/models/`
 
-#### Arbetsflödet för rekrytering av medarbetare {#we-finance-employee-recruiting-workflow}
+#### Arbetsflöde för rekrytering av medarbetare {#we-finance-employee-recruiting-workflow}
 
 Här följer en modell för det arbetsflöde för rekrytering av webbpersonal som följs i det här dokumentet.
 
 ![we-Finance-employee-rekryiting-workflow](assets/we-finance-employee-recruiting-workflow.png)
 
-#### Arbetsflödet för rekrytering av medarbetare efter intervjun {#we-finance-employee-recruiting-post-interview-workflow}
+#### Arbetsflöde för rekrytering av medarbetare efter intervju {#we-finance-employee-recruiting-post-interview-workflow}
 
 Här följer en modell för det arbetsflöde för rekrytering efter intervju som följs i det här dokumentet.
 
@@ -87,11 +86,11 @@ Startsidan för We.Finance och karriärsidan är AEM Sites sidor. På karriärsi
 
 ### Se det själv {#see-it-yourself}
 
-Gå till `https://[publishHost]:[publishPort]/content/we-finance/global/en.html` och klicka på **[!UICONTROL Career]**. Klicka på **[!UICONTROL Search]** för att fylla i jobblistan och klicka sedan på **[!UICONTROL Apply]** för ett jobb. Fyll i uppgifterna i formuläret och skicka in ansökan.
+Gå till `https://[publishHost]:[publishPort]/content/we-finance/global/en.html` och klicka **[!UICONTROL Career]**. Klicka **[!UICONTROL Search]** för att fylla i jobblistan och sedan klicka på **[!UICONTROL Apply]** för ett jobb. Fyll i uppgifterna i formuläret och skicka in ansökan.
 
 Se till att du anger ett giltigt e-post-ID i programmet eftersom all kommunikation genom genomgången skickas till det angivna e-post-ID:t.
 
-## John Jacobs kortger Sarah Rose profil för rekryteringschefens screening {#john-jacobs-shortlists-sarah-rose-s-profile-for-the-hiring-manager-s-screening}
+## John Jacobs korthåller Sarah Rose profil för rekryteringschefens screening {#john-jacobs-shortlists-sarah-rose-s-profile-for-the-hiring-manager-s-screening}
 
 Organisationen får den jobbansökan som har skickats in av Sarah. John Jacobs, en rekryterare, får i uppdrag att granska Sarah profil. Han granskar uppgiften i sin AEM Inkorg, hittar profilen som matchar jobbbehovet och klickar på Kortlista. Sarah&#39;s profil vidarebefordras till Gloria Rios, anställningschef, för godkännande.
 
@@ -109,7 +108,7 @@ Skicka-åtgärden i jobbansökningsformuläret utlöser ett arbetsflöde som ska
 
 ### Se det själv {#see-it-yourself-1}
 
-Gå till `https://[publishHost]:[publishPort]/content/we-finance/global/en/login.html?resource=/aem/inbox.html`och logga in med jjjacobs/password som användarnamn/lösenord för John Jacobs. Öppna Granska kandidatprofil och korta listan med den sökande.
+Gå till `https://[publishHost]:[publishPort]/content/we-finance/global/en/login.html?resource=/aem/inbox.html`och logga in med jjacobs/password som användarnamn/lösenord för John Jacobs. Öppna Granska kandidatprofil och korta listan med den sökande.
 
 ## Gloria granskar ansökan och godkänner den som ansöker om en intervju {#gloria-reviews-the-application-and-approves-the-applicant-for-an-interview}
 
@@ -129,9 +128,9 @@ När Gloria godkänner kandidaten till en intervju skapar arbetsflödet en uppgi
 
 ### Se det själv {#see-it-yourself-2}
 
-Gå till `https://[publishHost]:[publishPort]/content/we-finance/global/en/login.html?resource=/aem/inbox.html` och logga in med jjjacobs/password som användarnamn/lösenord för John Jacobs. Öppna Granska kandidatprofil och korta listan med den sökande.
+Gå till `https://[publishHost]:[publishPort]/content/we-finance/global/en/login.html?resource=/aem/inbox.html` och logga in med jjacobs/password som användarnamn/lösenord för John Jacobs. Öppna Granska kandidatprofil och korta listan med den sökande.
 
-Gå till `https://[publishHost]:[publishPort]/content/we-finance/global/en/login.html?resource=/aem/inbox.html` och logga in med grios/password som användarnamn/lösenord för Gloria Rios. Öppna aktiviteten Granska kandidatprofil och klicka på Schemalägg intervju.
+Gå till `https://[publishHost]:[publishPort]/content/we-finance/global/en/login.html?resource=/aem/inbox.html` och logga in med stödraster/lösenord som användarnamn/lösenord för Gloria Rios. Öppna aktiviteten Granska kandidatprofil och klicka på Schemalägg intervju.
 
 ## John Doe schemalägger en intervju {#john-doe-schedules-an-interview}
 
@@ -145,7 +144,7 @@ John Does AEM inkorg
 
 John Doe schemalägger intervjun och skickar detaljerna till Sarah Rose
 
-## Sarah Rose får ett mejl med intervjuschema {#sarah-rose-receives-the-email-with-interview-schedule}
+## Sarah Rose får ett mejl med intervju {#sarah-rose-receives-the-email-with-interview-schedule}
 
 Sarah Rose får e-postmeddelandet med intervju, plats och annan information. Hon klickar på Godkänn för att bekräfta att hon är okej med intervjun och platsen. Enligt den exakta informationen gör Sarah det till intervjuerna.
 
@@ -153,7 +152,7 @@ Sarah Rose får e-postmeddelandet med intervju, plats och annan information. Hon
 
 Sarah Rose får intervjuschemat
 
-## Efter intervjuerna kortlistas Sarah Rose {#after-the-interviews-the-hiring-manager-shortlists-sarah-rose} i Hiring Manager-genvägarna
+## När intervjuerna är klara listar rekryteringshanteraren Sarah Rose {#after-the-interviews-the-hiring-manager-shortlists-sarah-rose}
 
 När Sarah Rose har gått igenom intervjuerna och rensat dem, öppnar Gloria Rios, rekryteringshanteraren, aktiviteten Kandidatval från sin inkorg och klickar på Välj. Gloria Rios beslut fattas av den höga representanten John Doe för vidare behandling.
 
@@ -169,11 +168,11 @@ Gloria Rios väljer Sarah Rose efter intervjuerna
 
 Innan du ber en kandidat att gå med i organisationen måste hennes bakgrund kontrolleras. John Doe öppnar och granskar den valda sökandes uppgifter och finner att en del av hennes anställnings- och utbildningsinformation ännu inte är ifylld. John Doe klickar på Behöver mer information.
 
-![](assets/johndoeinbox.png) ![johndoeinboxjohndoenedmoreinformation](assets/johndoeneedmoreinformation.png)
+![johndoeinbox](assets/johndoeinbox.png) ![johndoeneedmoreinformation](assets/johndoeneedmoreinformation.png)
 
 John Doe begär mer information från Sarah Rose om hennes utbildning och arbetsupplevelse
 
-## Sarah Rose får ett e-postmeddelande med en begäran om ytterligare information {#sarah-rose-receives-an-email-requesting-further-information}
+## Sarah Rose får ett mejl med en begäran om ytterligare information {#sarah-rose-receives-an-email-requesting-further-information}
 
 Sarah Rose får ett mejl som meddelar henne att ytterligare information krävs för att behandla hennes ansökan om anställning. E-postmeddelandet innehåller en länk till formuläret för att fylla i den information som krävs.
 
@@ -183,11 +182,11 @@ Sarah Rose får ett e-postmeddelande som meddelar att ytterligare information kr
 
 Sarah klickar på länken Ange detaljer i e-postmeddelandet. Ett formulär visas. Sarah fyller i de uppgifter om utbildning och anställning som krävs enligt John Doe och klickar på Submit.
 
-![ytterligare information1](assets/additionalinformation1.png)
+![additionalinformation1](assets/additionalinformation1.png)
 
 Sarah öppnar det extra informationsformuläret genom att klicka på länken i e-postmeddelandet
 
-![ytterligare information2](assets/additionalinformation2.png)
+![additionalinformation2](assets/additionalinformation2.png)
 
 Sarah fyller i ytterligare information enligt John Doe och klickar på Skicka
 
@@ -203,7 +202,7 @@ John Doe&#39;s AEM Inbox
 
 John Doe granskar den ytterligare information som Sarah lämnat och godkänner den
 
-## John Jacobs tar emot en begäran om bakgrundskontroll {#john-jacobs-receives-a-background-check-request}
+## John Jacobs får en begäran om bakgrundskontroll {#john-jacobs-receives-a-background-check-request}
 
 John Jacobs ser begäran om bakgrundskontroll i sin inkorg. John Jacobs öppnar uppgiften och läser informationen från Sarah Rose. När John Jacobs gjort en bakgrundskontroll klickar han på Gå framåt för att ange att bakgrundskontrollen har lyckats.
 
@@ -215,9 +214,9 @@ John Jacobs AEM inkorg
 
 När John Jacobs utfört bakgrundskontrollen klickar han på Gå framåt
 
-## John Doe skickar det kopplade brevet till Sarah Rose {#john-doe-sends-out-the-joining-letter-to-sarah-rose}
+## John Doe skickar ut brevet till Sarah Rose {#john-doe-sends-out-the-joining-letter-to-sarah-rose}
 
-John Doe får en begäran i sin AEM inkorg om att skicka det kopplade brevet. John öppnar förfrågan och ser detaljerna. John Doe bifogar PDF-dokumentet med det kopplade brevet och klickar sedan på Bifoga och skicka det kopplade brevet.
+John Doe får en begäran i sin AEM inkorg om att skicka det kopplade brevet. John öppnar förfrågan och ser detaljerna. John Doe bifogar det kopplade brevet PDF och klickar sedan på Bifoga och skicka det kopplade brevet.
 
 ![johndoejoiningletterinbox](assets/johndoejoiningletterinbox.png)
 
@@ -229,7 +228,7 @@ John Doe skickar ut det kopplade brevet för signering
 
 ## Sarah Rose får och signerar det kopplade brevet {#sarah-rose-receives-and-signs-the-joining-letter}
 
-Sarah Rose får det förenande brevet för undertecknande. Sarah klickar här för att granska och signera det kopplade brevet. PDF-dokumentet med det kopplade brevet öppnas med ett fält för signering av dokumentet.
+Sarah Rose får det förenande brevet för undertecknande. Sarah klickar här för att granska och signera det kopplade brevet. Det kopplade brevet PDF öppnas med ett fält för signering av dokumentet.
 
 ![sarahrosejoiningletteremail](assets/sarahrosejoiningletteremail.png)
 
@@ -244,4 +243,3 @@ Sarah skriver i sitt namn för att underteckna det kopplade brevet
 ![sarahrosejoininglettersign2](assets/sarahrosejoininglettersign2.png)
 
 Sarah klickar på Klicka för att signera för att slutföra signeringen av det kopplade brevet
-

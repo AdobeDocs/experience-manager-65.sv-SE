@@ -1,26 +1,25 @@
 ---
 title: Konfigurera certifikatbaserad autentisering
-seo-title: Konfigurera certifikatbaserad autentisering
+seo-title: Configuring certificate-based authentication
 description: Importera ett certifikatutfärdarcertifikat (CA) till förtroendearkivet och skapa en certifikatsmappning för certifikatbaserad autentisering.
-seo-description: Importera ett certifikatutfärdarcertifikat (CA) till förtroendearkivet och skapa en certifikatsmappning för certifikatbaserad autentisering.
+seo-description: Import a Certificate Authority (CA) certificate into the Trust Store and create a certificate mapping for certificate-based authentication.
 uuid: 9802a969-6d29-4b80-a4ed-06eb6e66e046
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_user_management
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: d958ae65-3008-4d68-9e11-4346e149827f
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 9cbea8c8-4d42-446b-b98d-c090709624d7
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '747'
+source-wordcount: '726'
 ht-degree: 0%
 
 ---
 
+# Konfigurera certifikatbaserad autentisering {#configuring-certificate-based-authentication}
 
-# Konfigurerar certifikatbaserad autentisering {#configuring-certificate-based-authentication}
-
-Användarhantering utför vanligtvis autentisering med ett användarnamn och lösenord. Användarhantering har även stöd för certifikatbaserad autentisering, som du kan använda för att autentisera användare via Acrobat eller för att autentisera användare programmatiskt. Mer information om programmatisk autentisering av användare finns i [Programmering med AEM](https://www.adobe.com/go/learn_aemforms_programming_63).
+Användarhantering utför vanligtvis autentisering med ett användarnamn och lösenord. Användarhantering har även stöd för certifikatbaserad autentisering, som du kan använda för att autentisera användare via Acrobat eller för att autentisera användare programmatiskt. Mer information om programautentisering av användare finns i [Programmera med AEM](https://www.adobe.com/go/learn_aemforms_programming_63).
 
 Om du vill använda certifikatbaserad autentisering importerar du ett certifikatutfärdarcertifikat (CA) som du litar på till förtroendearkivet och skapar sedan en certifikatsmappning.
 
@@ -30,7 +29,7 @@ När du importerar certifikatet väljer du alternativen Lita på för certifikat
 
 ## Konfigurerar certifikatmappning {#configuring-certificate-mapping}
 
-Om du vill aktivera certifikatbaserad autentisering för användare skapar du en certifikatmappning. En *certifikatsmappning* definierar en karta mellan ett certifikats attribut och attributen för användare i en domän. Du kan mappa mer än ett certifikat till samma domän.
+Om du vill aktivera certifikatbaserad autentisering för användare skapar du en certifikatmappning. A *certifikatmappning* definierar en karta mellan ett certifikats attribut och attributen för användare i en domän. Du kan mappa mer än ett certifikat till samma domän.
 
 När du testar ett certifikat överför Hantering av användare certifikaten för att kontrollera att det uppfyller följande krav:
 
@@ -49,9 +48,9 @@ När du testar ett certifikat överför Hantering av användare certifikaten fö
 1. Klicka på Ny certifikatsmappning och välj det certifikatalias som konfigurerats i Pålitlighetslagerhantering i listan För utfärdare.
 1. Koppla ett av certifikatets attribut till en användares attribut. Du kan till exempel mappa certifikatets vanliga namn till användarens inloggnings-ID.
 
-   Om innehållet i attributet i certifikatet skiljer sig från innehållet i användarens attribut i databasen för användarhantering, kan du använda ett reguljärt Java-uttryck (regex) för att matcha de två attributen. Om de vanliga namnen på certifikaten till exempel är namn som *Alex Pink (Authentication)* och *Alex Pink (Signing)* och det vanliga namnet i användarhanteringsdatabasen är *Alex Pink*, använder du en regex för att extrahera den nödvändiga delen av certifikatattributet (i det här exemplet *Alex Pink a7/>.)* Det reguljära uttryck du anger måste följa Java regex-specifikationen.
+   Om innehållet i attributet i certifikatet skiljer sig från innehållet i användarens attribut i databasen för användarhantering, kan du använda ett reguljärt Java-uttryck (regex) för att matcha de två attributen. Om de vanliga namnen på certifikaten till exempel är namn som *Alex Pink (autentisering)* och *Alex Pink (signerar)* och det vanliga namnet i databasen för användarhantering är *Alex Pink* använder du en regex för att extrahera den nödvändiga delen av certifikatattributet (i det här exemplet, *Alex Pink*.) Det reguljära uttryck du anger måste följa Java regex-specifikationen.
 
-   Du kan omforma uttrycket genom att ange gruppernas ordning i rutan Egen ordning. Den anpassade ordningen används med metoden `java.util.regex.Matcher.replaceAll()`. Beteendet som visas motsvarar metodens beteende, och indatasträngen (den anpassade ordningen) måste anges därefter.
+   Du kan omforma uttrycket genom att ange gruppernas ordning i rutan Egen ordning. Den anpassade ordningen används med `java.util.regex.Matcher.replaceAll()` -metod. Beteendet som visas motsvarar metodens beteende, och indatasträngen (den anpassade ordningen) måste anges därefter.
 
    Om du vill testa regex anger du ett värde i rutan Testparameter och klickar på Testa.
 
@@ -67,15 +66,15 @@ När du testar ett certifikat överför Hantering av användare certifikaten fö
 
    * Extrahera &quot;Alex Pink&quot; från &quot;Alex Pink (Authentication)&quot;
 
-      **Regex:** (.&amp;ast;) \(Authentication\)
+      **Regex:** (.&amp;ast;) \(Autentisering\)
 
    * Extrahera &quot;Alex Pink&quot; från &quot;Alex (Authentication) Pink&quot;
 
-      **Regex:** (.&amp;ast;)\(Authentication\) (.&amp;ast;)
+      **Regex:** (.&amp;ast;)\(Autentisering\) (.&amp;ast;)
 
    * Extrahera &quot;Rosa Alex&quot; från &quot;Alex (Authentication) Pink&quot;
 
-      **Regex:** (.&amp;ast;)\(Authentication\) (.&amp;ast;)
+      **Regex:** (.&amp;ast;)\(Autentisering\) (.&amp;ast;)
 
       Egen ordning: $2 $1 (returnera den andra gruppen, sammanfogad till den första gruppen, hämtad med blankstegstecken)
 
@@ -98,4 +97,3 @@ När du testar ett certifikat överför Hantering av användare certifikaten fö
 
 1. I administrationskonsolen klickar du på Inställningar > Användarhantering > Konfiguration > Certifikatmappning.
 1. Markera kryssrutan för den certifikatkoppling som ska tas bort, klicka på Ta bort och klicka sedan på OK.
-

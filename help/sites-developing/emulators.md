@@ -1,8 +1,8 @@
 ---
 title: Emulatorer
-seo-title: Emulatorer
+seo-title: Emulators
 description: AEM gör det möjligt för författare att visa en sida i en emulator som simulerar den miljö i vilken slutanvändaren ska visa sidan
-seo-description: AEM gör det möjligt för författare att visa en sida i en emulator som simulerar den miljö i vilken slutanvändaren ska visa sidan
+seo-description: AEM enables authors to view a page in an emulator that simulates the environment in which an end-user will view the page
 uuid: ee1496a5-be68-4318-b5ce-b11c41e4485c
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,14 +10,13 @@ topic-tags: mobile-web
 content-type: reference
 discoiquuid: c51fca81-5dfc-4838-9672-acb6de62778b
 legacypath: /content/docs/en/aem/6-0/develop/mobile/emulators
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 009b7e2c-ac37-4acc-a656-0a34d3853dfd
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '654'
+source-wordcount: '631'
 ht-degree: 0%
 
 ---
-
 
 # Emulatorer{#emulators}
 
@@ -50,7 +49,7 @@ En emulator:
 
 ### Hur emulatorn omformar innehållet {#how-the-emulator-transforms-the-content}
 
-Emulatorn fungerar genom att kapsla HTML-brödinnehållet i emulatorns DIV:er. Följande HTML-kod:
+Emulatorn fungerar genom att kapsla in HTML innehåll i emulatorns DIV. Följande HTML-kod:
 
 ```xml
 <body>
@@ -90,9 +89,9 @@ omvandlas till följande html-kod efter emulatorns start:
 
 Två div-taggar har lagts till:
 
-* diven med id `cq-emulator` som håller emulatorn som helhet och
+* div med id `cq-emulator` som innehåller emulatorn som helhet och
 
-* div med id `cq-emulator-content` som representerar den visningsruta/skärm/innehållsområde på enheten där sidinnehållet finns.
+* div med id `cq-emulator-content` som representerar enhetens visningsruta/skärm/innehållsområde där sidinnehållet finns.
 
 Nya CSS-klasser tilldelas också till de nya emulatordiven: de representerar namnet på den aktuella emulatorn.
 
@@ -102,7 +101,7 @@ På så sätt kan emulatorns fullständiga utseende styras genom att CSS-klasser
 
 >[!NOTE]
 >
->Vi rekommenderar att projekt-HTML kapslar in brödtextinnehållet i en enda div, precis som i exemplet ovan. Om brödtextinnehållet innehåller flera taggar kan det ge oförutsägbara resultat.
+>Vi rekommenderar att projektet HTML kapslar in brödtextinnehållet i en enda div, precis som i exemplet ovan. Om brödtextinnehållet innehåller flera taggar kan det ge oförutsägbara resultat.
 
 ### Mobila emulatorer {#mobile-emulators}
 
@@ -113,13 +112,13 @@ Befintliga mobilemulatorer:
 
    http://localhost:4502/bin/wcm/mobile/emulators.json
 
-När sidkomponenten är beroende av den mobila sidkomponenten ( `/libs/wcm/mobile/components/page`), integreras emulatorfunktionen automatiskt på sidan med följande mekanism:
+När sidkomponenten är beroende av den mobila sidkomponenten ( `/libs/wcm/mobile/components/page`) integreras emulatorfunktionen automatiskt på sidan med följande mekanism:
 
-* Den mobila sidkomponenten `head.jsp` innehåller enhetsgruppens associerade init-komponent för emulering (endast i redigeringsläge) och enhetsgruppens återgivnings-CSS via:
+* Komponenten för mobilsidan `head.jsp` innehåller enhetsgruppens associerade init-komponent för emulering (endast i författarläge) och enhetsgruppens återgivnings-CSS via:
 
    `deviceGroup.drawHead(pageContext);`
 
-* Metoden `DeviceGroup.drawHead(pageContext)` innehåller emulatorns init-komponent, d.v.s. anropar `init.html.jsp` för emulatorkomponenten. Om emulatorkomponenten inte har en egen `init.html.jsp` och är beroende av mobilbasemulatorn ( `wcm/mobile/components/emulators/base)`) anropas initieringsskriptet för mobilbasemulatorn ( `/libs/wcm/mobile/components/emulators/base/init.html.jsp`).
+* Metoden `DeviceGroup.drawHead(pageContext)` innehåller emulatorns init-komponent, d.v.s. anropar `init.html.jsp` för emulatorkomponenten. Om emulatorkomponenten inte har en egen `init.html.jsp` och förlitar sig på emulatorn för mobilbasen ( `wcm/mobile/components/emulators/base)`anropas initieringsskriptet för mobilbasemulatorn ( `/libs/wcm/mobile/components/emulators/base/init.html.jsp`).
 
 * Initieringsskriptet för mobilbasemulatorn definierar via Javascript:
 
@@ -136,11 +135,11 @@ När sidkomponenten är beroende av den mobila sidkomponenten ( `/libs/wcm/mobil
 
 Så här skapar du en anpassad mobilemulator:
 
-1. Skapa komponenten `myemulator` nedan `/apps/myapp/components/emulators` (nodtyp: `cq:Component`).
+1. Nedanför `/apps/myapp/components/emulators` skapa komponenten `myemulator` (nodtyp: `cq:Component`).
 
-1. Ställ in egenskapen `sling:resourceSuperType` på `/libs/wcm/mobile/components/emulators/base`
+1. Ange `sling:resourceSuperType` egenskap till `/libs/wcm/mobile/components/emulators/base`
 
-1. Definiera ett CSS-klientbibliotek med kategorin `cq.wcm.mobile.emulator` för emulatorns utseende: name = `css`, nodtyp = `cq:ClientLibrary`
+1. Definiera ett CSS-klientbibliotek med kategori `cq.wcm.mobile.emulator` för emulatorns utseende: name = `css`, nodtyp = `cq:ClientLibrary`
 
    Du kan till exempel referera till noden `/libs/wcm/mobile/components/emulators/iPhone/css`
 
@@ -153,6 +152,4 @@ Så här skapar du en anpassad mobilemulator:
    * Namn = `canRotate`, typ = `Boolean`, värde = `true`: för att inkludera rotationsfunktionen.
 
    * Namn = `touchScrolling`, typ = `Boolean`, värde = `true`: för att inkludera pekskärmsfunktionen.
-
    Du kan lägga till fler funktioner genom att definiera egna plugin-program.
-

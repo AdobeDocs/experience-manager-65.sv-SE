@@ -1,8 +1,8 @@
 ---
 title: Skapa en guide till Headless-konfiguration
 description: Skapa en konfiguration som ett första steg till att komma igång med headless i AEM 6.5.
-exl-id: 48801599-f279-4e55-8033-9c418d2af5bb
-source-git-commit: 8ab774b8d21dd16e4873cd39ef0175ead3f2da23
+exl-id: f1df97a1-164f-4ed4-bb63-34caf35ae27c
+source-git-commit: a2ababa9dd9115e963b91a7271d204d287557c40
 workflow-type: tm+mt
 source-wordcount: '295'
 ht-degree: 1%
@@ -32,7 +32,7 @@ En administratör behöver bara skapa en konfiguration en gång, eller mycket s�
    * Ett namn genereras automatiskt baserat på titeln och justeras enligt [AEM namnkonventioner.](/help/sites-developing/naming-conventions.md). Det blir nodnamnet i databasen.
 1. Markera följande alternativ:
    * **Modeller för innehållsfragment**
-   * **Beständiga GraphQL-frågor**
+   * **GraphQL Beständiga frågor**
 
    ![Skapa konfiguration](../assets/create-configuration.png)
 
@@ -42,7 +42,7 @@ Du kan skapa flera konfigurationer om det behövs. Konfigurationer kan också ka
 
 >[!NOTE]
 >
->Konfigurationsalternativ utöver **Modeller för innehållsfragment** och **Beständiga GraphQL-frågor** kan vara nödvändigt beroende på implementeringskraven.
+>Konfigurationsalternativ utöver **Modeller för innehållsfragment** och **GraphQL Beständiga frågor** kan vara nödvändigt beroende på implementeringskraven.
 
 ## Nästa steg {#next-steps}
 

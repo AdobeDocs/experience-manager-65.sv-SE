@@ -24,7 +24,7 @@ ht-degree: 0%
 
 Med Correspondence Management-lösningen kan du lägga till anpassade åtgärder i användargränssnittet Skapa korrespondens.
 
-Scenariot i det här dokumentet förklarar hur du kan skapa en knapp i användargränssnittet Skapa korrespondens för att dela ett brev som en gransknings-PDF bifogad till ett e-postmeddelande.
+Scenariot i det här dokumentet förklarar hur du kan skapa en knapp i användargränssnittet Skapa korrespondens för att dela ett brev som en PDF på en granskning som bifogas till ett e-postmeddelande.
 
 ### Förutsättningar {#prerequisites}
 
@@ -44,9 +44,9 @@ Om du lägger till en knapp med en åtgärd (här skickar du ett brev för grans
 ### Lägg till knappen i användargränssnittet Skapa korrespondens {#add-the-button-to-the-create-correspondence-user-interface}
 
 1. Gå till `https://'[server]:[port]'/[ContextPath]/crx/de` och logga in som administratör.
-1. I mappen apps skapar du en mapp med namnet `defaultApp` med en sökväg/struktur som liknar mappen defaultApp (som finns i config-mappen). Så här skapar du mappen:
+1. Skapa en mapp med namnet i appmappen `defaultApp` med en sökväg/struktur som liknar defaultApp-mappen (finns i config-mappen). Så här skapar du mappen:
 
-   1. Högerklicka på mappen **defaultApp** på följande sökväg och välj **Overlay Node**:
+   1. Högerklicka på **defaultApp** mapp på följande sökväg och välj **Överläggsnod**:
 
       /libs/fd/cm/config/defaultApp/
 
@@ -56,14 +56,14 @@ Om du lägger till en knapp med en åtgärd (här skickar du ett brev för grans
 
       **Sökväg:** /libs/fd/cm/config/defaultApp/
 
-      **Överläggsplats:** /appar/
+      **Plats för övertäckning:** /apps/
 
-      **Matcha nodtyper:** markerade
+      **Matcha nodtyper:** Markerad
 
       ![Överläggsnod](assets/2_defaultappoverlaynode.png)
 
-   1. Klicka på **OK**.
-   1. Klicka på **Spara alla**.
+   1. Klicka **OK**.
+   1. Klicka **Spara alla**.
 
 1. Skapa en kopia av filen acmExtensionsConfig.xml (finns under grenen /libs) under grenen /apps.
 
@@ -73,8 +73,8 @@ Om du lägger till en knapp med en åtgärd (här skickar du ett brev för grans
 
       ![Kopiera acmExtensionsConfig.xml](assets/3_acmextensionsconfig_xml_copy.png)
 
-   1. Högerklicka på mappen **defaultApp** på &quot;/apps/fd/cm/config/defaultApp/&quot; och välj **Klistra in**.
-   1. Klicka på **Spara alla**.
+   1. Högerklicka på **defaultApp** på &quot;/apps/fd/cm/config/defaultApp/,&quot; och välj **Klistra in**.
+   1. Klicka **Spara alla**.
 
 1. Dubbelklicka på den kopia av acmExtentionsConfig.xml som du nyss skapade i mappen apps. Filen öppnas för redigering.
 1. Leta reda på följande kod:
@@ -111,7 +111,7 @@ Om du lägger till en knapp med en åtgärd (här skickar du ett brev för grans
    | label | Etiketten som ska visas på åtgärdsknappen |
    | funktionsbeskrivning | Knappens knappbeskrivning, som visas när användaren håller muspekaren över knappen. |
    | styleName | Namnet på det anpassade format som används på åtgärdsknappen. |
-   | permissionName | Motsvarande åtgärd visas bara om användaren har den behörighet som anges av permissionName. När du anger permissionName som `forms-users` får alla användare åtkomst till det här alternativet. |
+   | permissionName | Motsvarande åtgärd visas bara om användaren har den behörighet som anges av permissionName. När du anger permissionName som `forms-users`, får alla användare åtkomst till det här alternativet. |
    | actionHandler | Fullständigt kvalificerat namn på ActionHandler-klassen som anropas när användaren klickar på knappen. |
 
    Förutom ovanstående parametrar kan det finnas ytterligare konfigurationer associerade med en customAction. Dessa ytterligare konfigurationer görs tillgängliga för hanteraren via objektet CustomAction.
@@ -122,13 +122,13 @@ Om du lägger till en knapp med en åtgärd (här skickar du ett brev för grans
    | Parametrar som innehåller prefixet cm_ i taggnamnet | Om en customAction innehåller en underordnad tagg som börjar med namnet cm_ är de här parametrarna tillgängliga i post-processen (vare sig det är A4 Post Process eller den speciella process som representeras av serviceName-taggen) under den aktuella taggen med cm_-prefixet borttaget. |
    | actionName | När en inläggsprocess beror på ett klick innehåller inskickad XML en speciell tagg med namnet under taggen med namnet på användaråtgärden. |
 
-1. Klicka på **Spara alla**.
+1. Klicka **Spara alla**.
 
 #### Skapa en lokal mapp med egenskapsfilen i grenen /apps {#create-a-locale-folder-with-properties-file-in-the-apps-branch}
 
 Filen ACMExtensionsMessages.properties innehåller etiketter och knappbeskrivningsmeddelanden för olika fält i användargränssnittet Create Correspondence. Gör en kopia av den här filen i grenen /apps för att de anpassade åtgärderna/knapparna ska fungera.
 
-1. Högerklicka på mappen **locale** på följande sökväg och välj **Overlay Node**:
+1. Högerklicka på **locale** mapp på följande sökväg och välj **Överläggsnod**:
 
    /libs/fd/cm/config/defaultApp/locale
 
@@ -136,17 +136,17 @@ Filen ACMExtensionsMessages.properties innehåller etiketter och knappbeskrivnin
 
    **Sökväg:** /libs/fd/cm/config/defaultApp/locale
 
-   **Överläggsplats:** /appar/
+   **Plats för övertäckning:** /apps/
 
-   **Matcha nodtyper:** markerade
+   **Matcha nodtyper:** Markerad
 
-1. Klicka på **OK**.
-1. Klicka på **Spara alla**.
+1. Klicka **OK**.
+1. Klicka **Spara alla**.
 1. Högerklicka på följande fil och välj **Kopiera**:
 
    `/libs/fd/cm/config/defaultApp/locale/ACMExtensionsMessages.properties`
 
-1. Högerklicka på mappen **locale** på följande sökväg och välj **Klistra in**:
+1. Högerklicka på **locale** mapp på följande sökväg och välj **Klistra in**:
 
    `/apps/fd/cm/config/defaultApp/locale/`
 
@@ -160,7 +160,7 @@ Filen ACMExtensionsMessages.properties innehåller etiketter och knappbeskrivnin
 
    På samma sätt kan du lägga till fler egenskaper, t.ex. för verktygstips och format, i den här filen.
 
-1. Klicka på **Spara alla**.
+1. Klicka **Spara alla**.
 
 #### Starta om paketet Adobe Asset Composer Building Block {#restart-the-adobe-asset-composer-building-block-bundle}
 
@@ -194,13 +194,13 @@ Hanteringen av åtgärd/knapp vid klickning innehåller logik för:
 
 1. Gå till `https://'[server]:[port]'/[ContextPath]/crx/de`. Logga in som administratör om det behövs.
 
-1. Skapa en mapp med namnet `js` i grenen /apps i CRX i mappen apps med en struktur som liknar den i följande mapp:
+1. Skapa en mapp med namnet i appmappen `js` i grenen /apps i CRX med struktur som liknar den i följande mapp:
 
    `/libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/js`
 
    Så här skapar du mappen:
 
-   1. Högerklicka på mappen **js** på följande sökväg och välj **Overlay Node**:
+   1. Högerklicka på **js** mapp på följande sökväg och välj **Överläggsnod**:
 
       `/libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/js`
 
@@ -208,16 +208,16 @@ Hanteringen av åtgärd/knapp vid klickning innehåller logik för:
 
       **Sökväg:** /libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/js
 
-      **Överläggsplats:** /appar/
+      **Plats för övertäckning:** /apps/
 
-      **Matcha nodtyper:** markerade
+      **Matcha nodtyper:** Markerad
 
-   1. Klicka på **OK**.
-   1. Klicka på **Spara alla**.
+   1. Klicka **OK**.
+   1. Klicka **Spara alla**.
 
 1. I mappen js skapar du en fil med namnet crcustomization.js med koden för knappens åtgärdshantering enligt följande:
 
-   1. Högerklicka på mappen **js** på följande sökväg och välj **Skapa > Skapa fil**:
+   1. Högerklicka på **js** mapp på följande sökväg och välj **Skapa > Skapa fil**:
 
       `/apps/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/js`
 
@@ -323,7 +323,7 @@ Hanteringen av åtgärd/knapp vid klickning innehåller logik för:
       '</div>';
       ```
 
-### Lägg till LiveCycle-processen för att aktivera åtgärd <span class="acrolinxCursorMarker"></code>hantering {#add-the-livecycle-process-to-enable-action-span-class-acrolinxcursormarker-span-handling}
+### Lägg till LiveCycle-processen för att aktivera åtgärden <span class="acrolinxCursorMarker"></code>hantering {#add-the-livecycle-process-to-enable-action-span-class-acrolinxcursormarker-span-handling}
 
 I det här scenariot aktiverar du följande komponenter, som är en del av den bifogade filen components.zip:
 
@@ -362,48 +362,48 @@ Den obligatoriska LiveCycle-processen som möjliggör e-posttjänstprocessen.
 
 1. Logga in som administratör för LiveCycle® Server-administratörer på `https:/[lc server]/:[lc port]/adminui`.
 
-1. Gå till **Hem > Tjänster > Program och tjänster > Programhantering**.
+1. Navigera till **Hem > Tjänster > Program och tjänster > Programhantering**.
 
 1. Om programmet SendLetterForReview redan finns hoppar du över de återstående stegen i den här proceduren, annars fortsätter du till nästa steg.
 
    ![SendLetterForReview-programmet i användargränssnittet](assets/12_applicationmanagementlc.png)
 
-1. Klicka på **Importera**.
+1. Klicka **Importera**.
 
-1. Klicka på **Välj Arkiv** och välj SendLetterForReview.lca.
+1. Klicka **Välj fil** och väljer SendLetterForReview.lca.
 
    ![Välj filen SendLetterForReview.lca](assets/14_sendletterforreview_lca.png)
 
-1. Klicka på **Förhandsgranska**.
+1. Klicka **Förhandsgranska**.
 
-1. Välj **Distribuera resurser till körning när importen är klar**.
+1. Välj **Distribuera resurser till körningsmiljön när importen är klar**.
 
-1. Klicka på **Importera**.
+1. Klicka **Importera**.
 
 #### Lägger till ServiceName i listan över tjänster i Tillåtelselista {#adding-servicename-to-the-allowlist-service-list}
 
 På Experience Manager-servern anger du de LiveCycle-tjänster som du vill använda Experience Manager-servern.
 
-1. Logga in som administratör på `https:/[host]:'port'/system/console/configMgr`.
+1. Logga in som administratör till `https:/[host]:'port'/system/console/configMgr`.
 
-1. Leta upp och klicka på **SDK-konfiguration för Adobe-klient**. Konfigurationspanelen för klient-SDK för Adobe visas.
+1. Leta reda på och klicka **SDK-konfiguration för Adobe LiveCycle-klient**. Konfigurationspanelen för klient-SDK för Adobe visas.
 1. Klicka på +-ikonen i listan Tjänstnamn och lägg till ett serviceName **SendLetterForReview/SendLetterForReviewProcess**.
 
-1. Klicka på **Spara**.
+1. Klicka **Spara**.
 
 #### Konfigurera e-posttjänsten {#configure-the-email-service}
 
 I det här fallet måste du konfigurera e-posttjänsten på LiveCycle-servern för att Correspondence Management ska kunna skicka ett e-postmeddelande.
 
-1. Logga in med administratörsuppgifter för LiveCycle Server-administratörer på `https:/[lc server]:[lc port]/adminui`.
+1. Logga in med administratörsbehörighet för LiveCycle Server-administratörer på `https:/[lc server]:[lc port]/adminui`.
 
-1. Gå till **Hem > Tjänster > Program och tjänster > Tjänsthantering**.
+1. Navigera till **Hem > Tjänster > Program och tjänster > Tjänsthantering**.
 
-1. Leta reda på och klicka på **EmailService**.
+1. Leta reda på och klicka **EmailService**.
 
-1. Konfigurera e-posttjänsten i **SMTP Host**.
+1. I **SMTP-värd**, konfigurera e-posttjänsten.
 
-1. Klicka på **Spara**.
+1. Klicka **Spara**.
 
 #### Konfigurera DSC-tjänsten {#configure-the-dsc-service}
 
@@ -417,9 +417,9 @@ Mer information finns i [Ansluta AEM Forms till Adobe LiveCycle](/help/forms/usi
 
 1. Ange följande parametrar i konfigurationsfilen:
 
-   * **crx.serverUrl**=https:/host:port/[kontextsökväg]/[AEM URL]
-   * **crx.username**= Experience Manager-användarnamn
-   * **crx.password**= Experience Manager-lösenord
+   * **crx.serverUrl**=https:/host:port/[kontextbana]/[AEM URL]
+   * **crx.username**= Experience Manager användarnamn
+   * **crx.password**= Experience Manager lösenord
    * **crx.appRoot**=/content/apps/cm
 
    >[!NOTE]
@@ -430,15 +430,15 @@ Mer information finns i [Ansluta AEM Forms till Adobe LiveCycle](/help/forms/usi
 
 #### Importera DSC till LiveCyle {#import-dsc-to-livecyle}
 
-DSCSample.jar-filen använder API:t renderLetter för att återge bokstaven som PDF-byte från XML-data som DSC anger som indata. Mer information om renderLetter och andra API:er finns i [tjänsten Letter Render](https://www.adobe.io/experience-manager/reference-materials/6-5/forms/javadocs/index.html?com/adobe/icc/ddg/api/LetterRenderService.html).
+DSCSample.jar-filen använder API:t renderLetter för att återge bokstaven som PDF byte från XML-data som DSC anger som indata. Mer information om renderLetter och andra API:er finns i [Tjänst för bokstavsåtergivning](https://www.adobe.io/experience-manager/reference-materials/6-5/forms/javadocs/index.html?com/adobe/icc/ddg/api/LetterRenderService.html).
 
 1. Starta Workbench och logga in.
 1. Välj **Fönster > Visa vyer > Komponenter**. Vyn Komponenter läggs till i Workbench ES2.
 
-1. Högerklicka på **Komponenter** och välj **Installera komponent**.
+1. Högerklicka **Komponenter** och markera **Installera komponent**.
 
-1. Markera filen **DSCSample.jar** i filläsaren och klicka på **Öppna**.
-1. Högerklicka på **RenderWrapper** och välj **Starta komponent**. Om komponenten startar visas en grön pil bredvid komponentnamnet.
+1. Välj **DSCSample.jar** via filläsaren och klicka **Öppna**.
+1. Högerklicka **RenderWrapper** och markera **Startkomponent**. Om komponenten startar visas en grön pil bredvid komponentnamnet.
 
 ## Skicka brev för granskning {#send-letter-for-review}
 
@@ -446,10 +446,10 @@ När du har konfigurerat åtgärden och knappen för att skicka brevet för gran
 
 1. Rensa webbläsarcachen.
 
-1. Klicka på **Letter Review** i användargränssnittet Create Correspondence och ange granskarens e-post-ID.
+1. Klicka på Skapa korrespondens-gränssnittet **Bokstavsgranskning** och ange granskarens e-post-ID.
 
-1. Klicka på **Skicka**.
+1. Klicka **Skicka**.
 
 ![skicka](assets/sendreview.png)
 
-Granskaren får ett e-postmeddelande från systemet med brevet som en bifogad PDF-fil.
+Granskaren får ett e-postmeddelande från systemet med bokstaven som en bifogad fil i PDF.

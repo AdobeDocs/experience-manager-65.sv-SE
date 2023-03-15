@@ -128,7 +128,6 @@ Dynamic Media-komponenten är smart. Oavsett om du lägger till en bild eller en
 >
 >* Flera instanser av Dynamic Media-komponenten som används på samma sida.
 >* Varje instans använder samma resurstyp.
-
 >
 >Det går inte att tilldela olika visningsprogramförinställningar till varje Dynamic Media-komponent på den sidan.
 >
@@ -284,7 +283,6 @@ Komponenten Interactive Media är smart. Oavsett om du lägger till en bild elle
 >
 >* Flera instanser av komponenten Interactive Media används på samma sida.
 >* Varje instans använder samma resurstyp.
-
 >
 >Det går inte att tilldela olika visningsprogramförinställningar till varje interaktiv mediekomponent på den sidan.
 >
@@ -325,7 +323,6 @@ Kriterierna för proportioner och nyckelord gäller även för panoramaresurser 
 >
 >* Flera instanser av **[!UICONTROL Panoramic Media]** som används på samma sida.
 >* Varje instans använder samma resurstyp.
-
 >
 >Tilldela olika visningsprogramförinställningar till varje **[!UICONTROL Panoramic Media]** på den sidan stöds inte.
 >

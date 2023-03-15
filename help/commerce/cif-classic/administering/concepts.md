@@ -36,7 +36,6 @@ Detta innebär att
 >* [Adobe Commerce](/help/commerce/cif/integrating/magento.md)
 >* [SAP Commerce Cloud](/help/commerce/cif-classic/administering/sap-commerce-cloud.md)
 >* [Salesforce Commerce Cloud](https://github.com/adobe/commerce-salesforce)
-
 >
 
 
@@ -554,7 +553,7 @@ Kampanjer underhålls vanligtvis inte av produktinformationsansvariga, utan av m
    * renderare och dialogrutor för kampanjadministration
    * underkomponenter för återgivning och redigering av konfigurationsparametrar som är specifika för kampanjhanterarna
 
-AEM är också integrerade i [Kampanjhantering](/help/sites-authoring/personalization.md):
+AEM är också integrerade i [Campaign Management](/help/sites-authoring/personalization.md):
 
 * a [kampanj](/help/sites-authoring/personalization.md) anger på-/avaktiveringstiderna
 * [upplevelser](/help/sites-authoring/personalization.md) *inom* kampanjen används för att gruppera resurser (scensidor, kampanjer osv.) efter vilket målgruppssegment de motsvarar

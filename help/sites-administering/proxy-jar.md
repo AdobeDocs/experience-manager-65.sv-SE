@@ -2,7 +2,7 @@
 title: Proxy Server Tool (proxy.jar)
 seo-title: Proxy Server Tool (proxy.jar)
 description: Läs mer om proxyserververktyget i AEM.
-seo-description: Läs mer om proxyserververktyget i AEM.
+seo-description: Learn about the Proxy Server Tool in AEM.
 uuid: 2fc1df24-8d5a-4be7-83fa-238ae65591b0
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,16 +10,15 @@ topic-tags: operations
 content-type: reference
 discoiquuid: ca98dc3c-7056-4cdc-b4d3-23e471da5730
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 4e5e6ef022dc9f083859e13ab9c86b622fc3d46e
+exl-id: 3df50303-5cdd-4df0-abec-80831d2ccef7
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1173'
+source-wordcount: '1161'
 ht-degree: 0%
 
 ---
 
-
-# Proxyserververktyget (proxy.jar){#proxy-server-tool-proxy-jar}
+# Proxy Server Tool (proxy.jar){#proxy-server-tool-proxy-jar}
 
 Proxyservern fungerar som en mellanliggande server som vidarebefordrar begäranden mellan en klient och en server. Proxyservern håller reda på alla klient-server-interaktioner och genererar en logg över hela TCP-kommunikationen. På så sätt kan du övervaka exakt vad som händer, utan att behöva komma åt huvudservern.
 
@@ -37,7 +36,7 @@ Du kan använda proxyservern för att övervaka all klient-server-interaktion, o
 
 Du kan till exempel placera proxyservern mellan två program som kommunicerar via ett TCP/IP-nätverk; t.ex. en webbläsare och AEM. På så sätt kan du övervaka exakt vad som händer när du begär en AEM.
 
-## Startar proxyserververktyget {#starting-the-proxy-server-tool}
+## Starta proxyserververktyget {#starting-the-proxy-server-tool}
 
 Verktyget finns i mappen /opt/help i AEM. Börja med att skriva:
 
@@ -50,8 +49,8 @@ java -jar proxy.jar <host> <remoteport> <localport> [options]
 * **q (tyst läge)** Skriver inte begäranden till konsolfönstret. Använd det här alternativet om du inte vill göra anslutningen långsammare eller om du loggar utdata till en fil (se alternativet -logfile).
 * **b (binärt läge)** Om du letar efter specifika bytekombinationer i trafiken ska du aktivera binärt läge. Utdata kommer då att innehålla hexadecimala utdata och teckenutdata.
 * **t (tidsstämpelloggposter)** Lägger till en tidsstämpel i varje loggutdata. Tidsstämpeln är i sekunder, så den kanske inte är lämplig för att kontrollera enstaka begäranden. Använd den för att hitta händelser som inträffar vid en viss tidpunkt om du använder proxyservern under en längre tidsperiod.
-* **loggfil  &lt;filename> (skriv till loggfil)** Skriver klient-server-konversationen till en loggfil. Den här parametern fungerar även i tyst läge.
-* **i  &lt;numindentions> (lägg till indrag)** Varje aktiv anslutning är indragen för bättre läsbarhet. Standardvärdet är 16 nivåer. (Nytt i proxy.jar version 1.16).
+* **loggfil &lt;filename> (skriv till loggfil)** Skriver klient-server-konversationen till en loggfil. Den här parametern fungerar även i tyst läge.
+* **i &lt;numindentions> (lägg till indrag)** Varje aktiv anslutning är indragen för bättre läsbarhet. Standardvärdet är 16 nivåer. (Nytt i proxy.jar version 1.16).
 
 ## Användning av proxyserververktyget {#uses-of-the-proxy-server-tool}
 
@@ -65,7 +64,7 @@ I följande loggpostexempel visas alla cookies och deras värden som skickats av
 C-6-#000635 -> [Cookie: cq3session=7e39bc51-ac72-3f48-88a9-ed80dbac0693; Show=ShowMode; JSESSIONID=68d78874-cabf-9444-84a4-538d43f5064d ]
 ```
 
-**Kontrollerar rubriker och deras** värdenI följande loggpostexempel visas att servern kan upprätta en keep-alive-anslutning och att innehållets längdhuvud är korrekt inställt:
+**Söker efter rubriker och deras värden** I följande exempel på loggpost visas att servern kan skapa en keep-alive-anslutning och att innehållets längdhuvud är korrekt inställt:
 
 ```xml
 S-7-#000017 -> [Connection: Keep-Alive ]
@@ -75,7 +74,7 @@ S-7-#000107 -> [Content-Length: 124 ]
 
 **Kontrollera om Keep-Alive fungerar**
 
-**Keep-** Alivemans innebär att en klient återanvänder anslutningen till servern för att överföra flera filer (sidkod, bilder, formatmallar osv.). Utan att hålla kontakten vid liv måste klienten upprätta en ny anslutning för varje begäran.
+**Behåll** innebär att en klient återanvänder anslutningen till servern för att överföra flera filer (sidkod, bilder, formatmallar osv.). Utan att hålla kontakten vid liv måste klienten upprätta en ny anslutning för varje begäran.
 
 Så här kontrollerar du om keep-alive-funktionen fungerar:
 
@@ -117,8 +116,8 @@ C-0-#000000 -> [GET /author/prox.html?CFC_cK=1102938422341 HTTP/1.1 ]
 
 * C anger att den här posten kommer från klienten (det är en begäran om en webbsida)
 * 0 är anslutningens nummer (anslutningsräknaren startar vid 0)
-* # 00000 förskjutningen i byteflödet. Detta är den första posten, så förskjutningen är 0.
-* [GET  &lt;?>] är innehållet i begäran, i exemplet en av HTTP-rubrikerna (url).
+* #00000 förskjutningen i byteflödet. Detta är den första posten, så förskjutningen är 0.
+* [GET &lt;?>] är innehållet i begäran, i exemplet en av HTTP-rubrikerna (url).
 
 När en anslutning stängs loggas följande information:
 
@@ -151,7 +150,7 @@ Om AEM körs på localhost:4303 startar du proxyservern enligt följande:
 java -jar proxy.jar localhost 4303 4444 -logfile test.log
 ```
 
-Du kan komma åt servern (`localhost:4303`) utan proxyservern, men om du kommer åt den via `localhost:4444` loggar proxyservern kommunikationen. Öppna en webbläsare och öppna en sida som skapats med mallen ovan. Titta sedan på loggfilen.
+Du kan komma åt servern (`localhost:4303`) utan proxyservern, men om du kommer åt den via `localhost:4444`loggar proxyservern kommunikationen. Öppna en webbläsare och öppna en sida som skapats med mallen ovan. Titta sedan på loggfilen.
 
 >[!NOTE]
 >
@@ -219,7 +218,7 @@ S-0-#000357 -> [.</body> ]
 S-0-#000367 -> [</html>]
 ```
 
-Anslutningen 0 stängs omedelbart efter att HTML-filen har opererats:
+Anslutningen 0 stängs omedelbart efter att HTML-filen har använts:
 
 ```xml
 C-0-Finished: 516 bytes (0.0 kb/s)

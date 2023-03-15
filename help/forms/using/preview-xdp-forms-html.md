@@ -1,30 +1,29 @@
 ---
 title: Generera HTML5-förhandsgranskning av ett XDP-formulär
-seo-title: Generera HTML5-förhandsgranskning av ett XDP-formulär
+seo-title: Generate HTML5 preview of an XDP form
 description: Fliken Förhandsgranska HTML i LiveCycle Designer kan användas för att förhandsgranska formulär så som de visas i en webbläsare.
-seo-description: Fliken Förhandsgranska HTML i LiveCycle Designer kan användas för att förhandsgranska formulär så som de visas i en webbläsare.
+seo-description: Preview HTML tab in LiveCycle Designer can be used to preview forms as they appear in a browser.
 uuid: cbee956f-bf2d-40c5-8e03-58fce0fa215b
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: 34e6d1bc-4eca-42dc-9ae5-9a2107fbefce
 docset: aem65
 feature: Mobile Forms
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 548f302b-57f0-4bdc-8a99-1a4967caa32f
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '849'
-ht-degree: 14%
+source-wordcount: '822'
+ht-degree: 15%
 
 ---
 
-
 # Generera HTML5-förhandsgranskning av ett XDP-formulär{#generate-html-preview-of-an-xdp-form}
 
-När du utformar ett formulär i AEM Forms Designer kan du, förutom att förhandsgranska PDF-återgivningen av ett formulär, även förhandsgranska en HTML5-återgivning av det. Du kan använda fliken **Förhandsgranska HTML** för att förhandsgranska ett formulär så som det skulle visas i en webbläsare.
+När du utformar ett formulär i AEM Forms Designer kan du, förutom att förhandsgranska PDF-återgivningen av ett formulär, även förhandsgranska en HTML 5-återgivning av det. Du kan använda **Förhandsgranska HTML** om du vill förhandsgranska ett formulär så som det skulle visas i en webbläsare.
 
-## Aktivera HTML-förhandsgranskning för XDP-formulär i Designer {#html-preview-of-forms-in-forms-designer}
+## Aktivera HTML Preview för XDP-formulär i Designer {#html-preview-of-forms-in-forms-designer}
 
-Utför följande konfigurationer om du vill att Designer ska kunna generera HTML-förhandsgranskning av XDP-formulär:
+Gör så här om du vill att Designer ska kunna generera en förhandsgranskning av XDP-formulär i HTML:
 
 * Konfigurera autentiseringstjänsten för Apache Sling
 * Inaktivera skyddat läge
@@ -34,9 +33,9 @@ Utför följande konfigurationer om du vill att Designer ska kunna generera HTML
 
 1. Gå till `https://'[server]:[port]'/system/console/configMgr` på AEM Forms som körs på OSGi eller
    `https://'[server]:[port]'/lc/system/console/configMgr` på AEM Forms som körs på JEE.
-1. Leta upp och klicka på **Konfiguration av Apache Sling Authentication Service** för att öppna den i redigeringsläge.
+1. Leta reda på och klicka **Autentiseringstjänst för Apache Sling** för att öppna den i redigeringsläge.
 
-1. Beroende på om du kör AEM Forms på OSGi eller JEE lägger du till följande i fältet **Autentiseringskrav**:
+1. Beroende på om du kör AEM Forms på OSGi eller JEE lägger du till följande i **Autentiseringskrav** fält:
 
    * AEM Forms på JEE
 
@@ -51,12 +50,12 @@ Utför följande konfigurationer om du vill att Designer ska kunna generera HTML
    >
    >Kopiera inte och klistra in det angivna värdet i fältet Autentiseringskrav eftersom det kan skada specialtecknen i värdet. Skriv i stället det angivna värdet i fältet.
 
-1. Ange ett användarnamn och lösenord i **[!UICONTROL Anonymous User Name]**- respektive **[!UICONTROL Anonymous User Password]**-fälten. De angivna autentiseringsuppgifterna används för att hantera anonym autentisering och ge åtkomst till anonyma användare.
-1. Klicka på **Spara** för att spara konfigurationen.
+1. Ange ett användarnamn och lösenord i **[!UICONTROL Anonymous User Name]** och **[!UICONTROL Anonymous User Password]** fält. De angivna autentiseringsuppgifterna används för att hantera anonym autentisering och ge åtkomst till anonyma användare.
+1. Klicka **Spara** för att spara konfigurationen.
 
 ### Inaktivera skyddat läge {#disable-protected-mode}
 
-Som standard är [skyddat läge](../../forms/using/get-xdp-pdf-documents-aem.md) aktiverat. Låt det vara aktiverat för produktionsmiljöerna. Du kan inaktivera det för en utvecklingsmiljö och förhandsgranska HTML5 Forms i Designer. Gör så här för att inaktivera den:
+The [skyddat läge](../../forms/using/get-xdp-pdf-documents-aem.md) är aktiverat som standard. Låt det vara aktiverat för produktionsmiljöerna. Du kan inaktivera det för en utvecklingsmiljö och förhandsgranska HTML5 Forms i Designer. Gör så här för att inaktivera den:
 
 1. Logga in på AEM webbkonsol som administratör.
 
@@ -64,48 +63,48 @@ Som standard är [skyddat läge](../../forms/using/get-xdp-pdf-documents-aem.md)
    * URL för AEM Forms på JEE är `https://'[server]:[port]'/lc/system/console/configMgr`
 
 1. Öppna **[!UICONTROL Mobile Forms Configurations]** för redigering.
-1. Avmarkera alternativet **[!UICONTROL Protected Mode]** och klicka på **[!UICONTROL Save]**.
+1. Avmarkera **[!UICONTROL Protected Mode]** och klicka **[!UICONTROL Save]**.
 
-### Ange information om AEM Forms-servern {#provide-details-of-aem-forms-server}
+### Ange information om AEM Forms-server {#provide-details-of-aem-forms-server}
 
-1. Gå till **Verktyg** > **Alternativ** i Designer.
-1. I fönstret Alternativ väljer du sidan **Serveralternativ**, anger följande information och klickar på **OK**.
+1. I Designer går du till **verktyg** > **Alternativ**.
+1. I fönstret Alternativ väljer du **Serveralternativ** sida, ange följande information och klicka på **OK**.
 
    * **Server-URL**: AEM Forms server-URL.
 
    * **HTTP-portnummer**: AEM serverport. Standardvärdet är 4502.
-   * **HTML-förhandsgranskningskontext:** Sökväg till profilen för återgivning av XFA-formulär. Följande standardprofiler används för att förhandsgranska formuläret i Designer. Du kan också ange sökvägen till en anpassad profil.
+   * **Förhandsvisningskontext för HTML:** Sökväg till profilen för återgivning av XFA-formulär. Följande standardprofiler används för att förhandsgranska formuläret i Designer. Du kan också ange sökvägen till en anpassad profil.
 
       * `/content/xfaforms/profiles/default.html` (AEM Forms on OSGi)
 
       * `/lc/content/xfaforms/profiles/default.html` (AEM Forms on JEE)
-   * **Forms Manager-kontext:** kontextsökväg där Forms Manager-gränssnittet distribueras. Standardvärdena är:
+   * **Forms Manager Context:** Den kontextsökväg där användargränssnittet för Forms Manager distribueras. Standardvärdena är:
 
       * `/aem/forms` (AEM Forms on OSGi)
       * `/lc/forms` (AEM Forms on JEE)
 
    >[!NOTE]
    >
-   >Kontrollera att AEM Forms-servern är igång. HTML-förhandsvisningen ansluter till CRX-servern för att *generera* en förhandsvisning.
+   >Kontrollera att AEM Forms-servern är igång. HTML-förhandsvisningen ansluter till CRX-servern till *generera* en förhandsgranskning.
 
-   ![AEM Forms Designer-alternativ  ](assets/server_options.png)
+   ![AEM Forms Designer-alternativ ](assets/server_options.png)
 
    AEM Forms Designer-alternativ
 
-1. Om du vill förhandsgranska ett formulär i HTML klickar du på fliken **Förhandsgranska HTML**.
+1. Om du vill förhandsgranska ett formulär i HTML klickar du på **Förhandsgranska HTML** -fliken.
 
    >[!NOTE]
    >
    >
    >
    >
-   >    * Om fliken HTML-förhandsgranskning är stängd trycker du på F4 för att öppna fliken Förhandsgranska HTML. Du kan också välja Förhandsgranska HTML på Visa-menyn för att öppna fliken Förhandsgranska HTML.
-   >    * HTML-förhandsvisningen stöder inte PDF-dokument, HTML-förhandsvisningen gäller bara XDP-dokument.
+   >    * Om fliken Förhandsgranska HTML är stängd trycker du på F4 för att öppna fliken Förhandsgranska HTML. Du kan också välja Förhandsgranska HTML på Visa-menyn för att öppna fliken Förhandsgranska HTML.
+   >    * Förhandsgranskningen i HTML stöder inte PDF-dokument, HTML är bara för XDP-dokument.
 
 
    >[!CAUTION]
    >
-   >Om du vill testa den verkliga användarupplevelsen kan du även förhandsgranska formulären i externa webbläsare (Google Chrome, Microsoft Edge, Mozilla Firefox med flera). I varje webbläsare används en separat motor för att återge HTML, så det kan finnas vissa skillnader i hur ett formulär förhandsvisas i Designer och i en extern webbläsare.
+   >Om du vill testa den verkliga användarupplevelsen kan du även förhandsgranska formulären i externa webbläsare (Google Chrome, Microsoft Edge, Mozilla Firefox med flera). I varje webbläsare används en separat motor för att återge HTML. Det kan därför finnas vissa skillnader i hur ett formulär förhandsvisas i Designer och i en extern webbläsare.
 
 ## Testa formuläret med exempeldata {#to-preview-a-form-using-sample-data}
 
@@ -117,9 +116,9 @@ Om du testar formulären med exempeldata kan du kontrollera att data och fält m
 
 1. Välj **Arkiv > Formuläregenskaper**.
 
-1. Klicka på fliken **Förhandsgranska** och skriv den fullständiga sökvägen till testdatafilen i rutan Datafil. Du kan också använda knappen Bläddra för att navigera till filen.
+1. Klicka på **Förhandsgranska** och skriv den fullständiga sökvägen till testdatafilen i rutan Datafil. Du kan också använda knappen Bläddra för att navigera till filen.
 
-1. Klicka på **OK**. Nästa gång du förhandsgranskar formuläret på fliken **Förhandsgranska HTML** visas datavärdena från XML-exempelfilen i respektive objekt.
+1. Klicka **OK**. Nästa gång du förhandsgranskar formuläret i **Förhandsgranska HTML** -fliken visas datavärdena från XML-exempelfilen i respektive objekt.
 
 ## Förhandsgranska formulär som finns i en databas {#html-preview-of-forms-in-forms-manager}
 

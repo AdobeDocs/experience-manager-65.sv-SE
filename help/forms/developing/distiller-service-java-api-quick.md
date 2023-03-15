@@ -9,16 +9,15 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 59dd61d1-c6b1-4bea-b666-4aa7897384a1
 role: Developer
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: c5bf9184-a837-4033-9962-7b3052498e75
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '183'
+source-wordcount: '176'
 ht-degree: 0%
 
 ---
 
-
-# Snabbstart för Distiller Java API (SOAP) {#distiller-service-java-api-quickstart-soap}
+# Distiller Service Java API Quick Start (SOAP) {#distiller-service-java-api-quickstart-soap}
 
 Java API Quick Start (SOAP) finns för tjänsten Distiller®:
 
@@ -28,11 +27,11 @@ AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutning
 
 >[!NOTE]
 >
->Snabbstarter som finns i Programmering med AEM baseras på den Forms-server som distribueras på JBoss Application Server och operativsystemet Microsoft Windows. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>Snabbstarter som finns i Programmering med AEM baseras på den Forms-server som distribueras på JBoss Application Server och Microsoft Windows. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## Snabbstart (SOAP-läge): Konvertera en PostScript-fil till ett PDF-dokument med Java API {#quick-start-soap-mode-converting-a-postscript-file-to-a-pdf-document-using-the-java-api}
 
-I följande kodexempel konverteras en PostScript-fil med namnet *Loan.ps* till en PDF-fil med namnet *Loan.pdf*. (Se [Konvertera PostScript till PDF-dokument](/help/forms/developing/converting-postscript-pdf-documents.md#converting-postscript-to-pdf-documents).)
+I följande kodexempel konverteras en PostScript-fil med namnet *Loan.ps* till en PDF-fil som anropas *Loan.pdf*. (Se [Konvertera PostScript till PDF-dokument](/help/forms/developing/converting-postscript-pdf-documents.md#converting-postscript-to-pdf-documents).)
 
 ```java
  /*

@@ -1,7 +1,7 @@
 ---
 title: Referera till adaptiva formulärfragment
 seo-title: Reference adaptive form fragments
-description: 'AEM Forms har adaptiva formulärfragment som du kan använda som resurser för att snabbt skapa ett formulär. '
+description: AEM Forms har adaptiva formulärfragment som du kan använda som resurser för att snabbt skapa ett formulär.
 seo-description: AEM Forms provides adaptive form fragments that you can use as assets to create a form quickly.
 uuid: 85401274-6691-4726-8b70-b93fd46de053
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -18,9 +18,9 @@ ht-degree: 0%
 
 # Referera till adaptiva formulärfragment{#reference-adaptive-form-fragments}
 
-[Anpassat ](../../forms/using/adaptive-form-fragments.md) formulärfragment är en grupp fält eller en panel som innehåller en grupp fält som du kan använda när du skapar ett formulär. Du kan skapa ett formulär snabbt och enkelt. Du kan dra och släppa ett anpassat formulärfragment i ett formulär med hjälp av resursläsaren i sidofältet, och du kan redigera det i formulärredigeraren.
+[Adaptivt formulärfragment](../../forms/using/adaptive-form-fragments.md) är en grupp med fält eller en panel som innehåller en grupp med fält som du kan använda när du skapar ett formulär. Du kan skapa ett formulär snabbt och enkelt. Du kan dra och släppa ett anpassat formulärfragment i ett formulär med hjälp av resursläsaren i sidofältet, och du kan redigera det i formulärredigeraren.
 
-För formulärförfattare med adaptiv formatering finns referensfragment i [AEM Forms-tilläggspaketet](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en). Den innehåller följande fragment:
+För formulärförfattare med adaptiv form finns referensfragment i [AEM Forms tilläggspaket](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en). Den innehåller följande fragment:
 
 * Adress
 * Kontaktinformation
@@ -33,7 +33,7 @@ För formulärförfattare med adaptiv formatering finns referensfragment i [AEM 
 * Villkor
 * Villkor med Klottra
 
-När du installerar paketet skapas en referensfragmentmapp med referensfragment under Forms &amp; Documents. Information om hur du installerar ett paket finns i [Arbeta med paket](/help/sites-administering/package-manager.md).
+När du installerar paketet skapas en referensfragmentmapp med referensfragment under Forms &amp; Documents. Information om hur du installerar ett paket finns i [Så här arbetar du med paket](/help/sites-administering/package-manager.md).
 
 ![Alla fragment listas](assets/ootb-frags.png)
 

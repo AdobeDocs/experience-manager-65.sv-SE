@@ -1,28 +1,27 @@
 ---
 title: Grundläggande om komponenter, funktioner och funktioner
-seo-title: Grundläggande om komponenter, funktioner och funktioner
+seo-title: Component, Function and Feature Essentials
 description: Hur communitysajter, mallar och grupper fungerar
-seo-description: Hur communitysajter, mallar och grupper fungerar
+seo-description: How community sites, templates, and groups function
 uuid: 6edfca2d-fe5b-4261-b033-51dc2f9dbfd7
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: 2d308756-79d1-4d69-b51c-d4b6e692a137
-translation-type: tm+mt
-source-git-commit: c897f034edbdbeee74869165ed384c3408a857e0
+exl-id: a43c1c4d-a6c2-4ef9-9047-a945978e618b
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '221'
+source-wordcount: '209'
 ht-degree: 2%
 
 ---
 
+# Grundläggande om komponenter, funktioner och funktioner  {#component-function-and-feature-essentials}
 
-# Grundläggande om komponenter, funktioner och funktioner {#component-function-and-feature-essentials}
+AEM Communities funktioner kräver att besökarna blir medlemmar och loggar in på [communitywebbplats](overview.md#communitiessites) innan du kan publicera innehåll. Således [mallar för communitysajter](sites.md), från vilken en communitywebbplats [skapad](sites-console.md), är utformade för att innehålla en inloggningsfunktion samt användarprofiler, meddelanden, sökning, moderering och översättning.
 
-AEM Communities funktioner kräver att webbplatsbesökarna blir medlemmar och loggar in på [communitywebbplatsen](overview.md#communitiessites) innan de kan publicera innehåll. Därför är [communitymallar](sites.md), från vilka en community-webbplats [skapas](sites-console.md), utformade för att innehålla en inloggningsfunktion samt användarprofiler, meddelanden, sökning, moderering och översättning.
-
-En communitywebbplats stöder medlemmar som skapar communitygrupper när [communitygruppsfunktionen](functions.md#groups-function) inkluderas i den valda communitywebbplatsmallen.
+En communitywebbplats kommer att stödja medlemmar som skapar communitygrupper när [communitygruppsfunktion](functions.md#groups-function) ingår i den valda communitywebbplatsmallen.
 
 Nedan följer länkar till viktig information för Communities-komponenter, -funktioner och -funktioner.
 
@@ -41,7 +40,7 @@ Nedan följer länkar till viktig information för Communities-komponenter, -fun
 
 * [Aktivitetsströmmar](essentials-activities.md)
 * [Uppdrag](essentials-assignments.md)
-* [Blog](blog-developer-basics.md) (  `Journal`)
+* [Blogg](blog-developer-basics.md) ( `Journal`)
 
 * [Kalender](calendar-basics-for-developers.md)
 * [Katalog](catalog-developer-essentials.md)
@@ -70,10 +69,10 @@ Nedan följer länkar till viktig information för Communities-komponenter, -fun
 
 ## Javadocs {#javadocs}
 
-[online-javadocs](../../help/sites-developing/reference-materials.md) återspeglar de API:er som finns i AEM 6.3.
-Communities-API:er finns i `com.adobe.cq.social.*`-paket.
+The [online javadocs](../../help/sites-developing/reference-materials.md) speglar de API:er som finns i AEM 6.3.
+Communities-API:er finns i `com.adobe.cq.social.*` paket.
 
-För varje [funktionspaket](deploy-communities.md#latestfeaturepack) finns en javadoc jar tillgänglig. Mer information finns på [Using Maven for Communities](maven.md#javadocs).
+För varje [funktionspaket](deploy-communities.md#latestfeaturepack), finns en javadoc burk tillgänglig. Mer information finns på [Använda Maven for Communities](maven.md#javadocs).
 
 ## Ytterligare information {#additional-information}
 
@@ -84,6 +83,5 @@ För varje [funktionspaket](deploy-communities.md#latestfeaturepack) finns en ja
    * [Översikt över lagringsresursprovider](srp.md)
 
 * [Riktlinjer för kodning](code-guide.md)
-* [Tutorials](tutorials.md)
+* [Självstudiekurser](tutorials.md)
 * [Felsökning](troubleshooting.md)
-

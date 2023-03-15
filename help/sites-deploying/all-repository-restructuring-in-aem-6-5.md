@@ -12,7 +12,7 @@ discoiquuid: 80bd707f-c02d-4616-9b45-90f6c726abea
 exl-id: 2d852d9d-9be3-487a-966a-4902bd7df7f9
 source-git-commit: 3f64bd7f5b4eb43aeefb9277a94e10ef1f0df59c
 workflow-type: tm+mt
-source-wordcount: '2693'
+source-wordcount: '2690'
 ht-degree: 1%
 
 ---
@@ -747,7 +747,7 @@ I.e. the `sling:resourceType` för ContextHub-konfigurationen måste vara relati
 | **Omstruktureringsvägledning** | Ingen åtgärd krävs. |
 | **Anteckningar** | Webbkonsolen Tree Activation (Tree Activation) är nu tillgänglig via **Verktyg > Distribution > Replikering > Aktivera träd**. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Cloud Services för leverantörsöversättningens koppling {#vendor-translation-connector-cloud-services}
 

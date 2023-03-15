@@ -1,22 +1,21 @@
 ---
 title: Optimera HTML5-formulär
-seo-title: Optimera HTML5-formulär
+seo-title: Optimizing HTML5 forms
 description: Du kan optimera utdatastorleken för HTML5-formulär.
-seo-description: Du kan optimera utdatastorleken för HTML5-formulär.
+seo-description: You can optimize the output size of the HTML5 forms.
 uuid: 959f0b6a-9e4d-478a-afa8-4c39011fdf7a
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: bdb9edc2-6a37-4d3f-97d5-0fc5664316be
 feature: Mobile Forms
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 14309ebd-8d00-4ca5-b4ab-44d80d97d066
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '298'
+source-wordcount: '283'
 ht-degree: 0%
 
 ---
-
 
 # Optimera HTML5-formulär {#optimizing-html-forms}
 
@@ -36,7 +35,7 @@ Skaffa webbserverprogrammet Apache som kan användas i ditt operativsystem:
 
 Apache kan kommunicera med JBoss med HTTP eller AJP-protokollet.
 
-1. Avkommentera följande modulkonfigurationer i filen *APACHE_HOME/conf/httpd.conf*.
+1. Avkommentera följande modulkonfigurationer i *APACHE_HOME/conf/httpd.conf* -fil.
 
    ```java
    LoadModule proxy_balancer_module modules/mod_proxy.so
@@ -50,7 +49,7 @@ Apache kan kommunicera med JBoss med HTTP eller AJP-protokollet.
 
 1. Konfigurera proxyn på port 8080 för JBoss.
 
-   Lägg till följande konfiguration i konfigurationsfilen *APACHE_HOME/conf/httpd.conf*.
+   Lägg till följande konfiguration i *APACHE_HOME/conf/httpd.conf* konfigurationsfil.
 
    ```java
    ProxyPass / https://<server_Name>:8080/
@@ -68,7 +67,7 @@ Apache kan kommunicera med JBoss med HTTP eller AJP-protokollet.
 
 1. Aktivera komprimering.
 
-   Lägg till följande konfiguration i konfigurationsfilen *APACHE_HOME/conf/httpd.conf*.
+   Lägg till följande konfiguration i *APACHE_HOME/conf/httpd.conf* konfigurationsfil.
 
    ```xml
    <Location /content/xfaforms>
@@ -86,4 +85,4 @@ Apache kan kommunicera med JBoss med HTTP eller AJP-protokollet.
    </Location>
    ```
 
-1. Använd https://[Apache_server]:80 för att få åtkomst till AEM.
+1. Använd https:// för att få åtkomst till AEM server[Apache_server]:80.

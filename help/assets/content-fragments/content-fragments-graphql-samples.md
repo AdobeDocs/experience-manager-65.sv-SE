@@ -1,5 +1,5 @@
 ---
-title: Att lära sig använda GraphQL med AEM - exempelinnehåll och frågor
+title: Lära sig använda GraphQL med AEM - exempelinnehåll och frågor
 description: Lär dig använda GraphQL med AEM för att leverera innehåll utan problem genom att utforska exempelinnehåll och frågor.
 feature: Content Fragments,GraphQL API
 exl-id: 91c5f61c-9c15-4d72-9b9b-0c23f31e7cdc
@@ -10,7 +10,7 @@ ht-degree: 2%
 
 ---
 
-# Att lära sig använda GraphQL med AEM - exempelinnehåll och frågor {#learn-graphql-with-aem-sample-content-queries}
+# Lära sig använda GraphQL med AEM - exempelinnehåll och frågor {#learn-graphql-with-aem-sample-content-queries}
 
 Lär dig använda GraphQL med AEM för att leverera innehåll utan problem genom att utforska exempelinnehåll och frågor.
 
@@ -29,7 +29,7 @@ Mer information finns i:
 
 * A [exempel på struktur för innehållsfragment](#content-fragment-structure-graphql)
 
-* Och några [sampla GraphQL-frågor](#graphql-sample-queries), baserat på fragmentstrukturen för exempelinnehåll (modeller för innehållsfragment och relaterade innehållsfragment).
+* Och några [exempelfrågor om GraphQL](#graphql-sample-queries), baserat på fragmentstrukturen för exempelinnehåll (modeller för innehållsfragment och relaterade innehållsfragment).
 
 
 ## GraphQL - Exempelfrågor med strukturen för exempelinnehållsfragment {#graphql-sample-queries-sample-content-fragment-structure}
@@ -44,7 +44,7 @@ I de här exempelfrågorna finns illustrationer av hur du skapar frågor, tillsa
 
 >[!NOTE]
 >
->Exempelfrågorna baseras på [Exempel på struktur för innehållsfragment som ska användas med GraphQL](#content-fragment-structure-graphql)
+>Exempelfrågorna baseras på [Exempel på struktur för innehållsfragment som kan användas med GraphQL](#content-fragment-structure-graphql)
 
 ### Exempelfråga - Alla tillgängliga scheman och datatyper {#sample-all-schemes-datatypes}
 
@@ -1620,7 +1620,7 @@ Den här frågan förhör:
 
 Exempelfrågorna baseras på följande struktur som använder:
 
-* en eller flera, [Exempel på modeller för innehållsfragment](#sample-content-fragment-models-schemas) - utgör grunden för GraphQL-scheman
+* en eller flera, [Exempel på modeller för innehållsfragment](#sample-content-fragment-models-schemas) - grundvalen för GraphQL-scheman
 
 * [Exempel på innehållsfragment](#sample-content-fragments) baserat på ovanstående modeller
 

@@ -1,8 +1,8 @@
 ---
 title: Verktygskonsoler
-seo-title: Verktygskonsoler
+seo-title: Tools Consoles
 description: Lär dig mer om de olika verktygskonsolerna i AEM.
-seo-description: Lär dig mer om de olika verktygskonsolerna i AEM.
+seo-description: Learn about the different tools consoles throughout AEM.
 uuid: 44439f8e-7c47-4ea9-afe1-a9a23489a20e
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,18 +10,17 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 6732ef1f-0bfd-44e6-b24d-e22fe427d8b4
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 801d57bbe8a1bede6dcb4bf7884e5f71ddea1e83
+exl-id: c9f55ec9-83ea-4115-97c2-59b5c179e90f
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '619'
-ht-degree: 26%
+source-wordcount: '609'
+ht-degree: 25%
 
 ---
 
-
 # Verktygskonsoler{#tools-consoles}
 
-Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som hjälper dig att administrera webbplatser, digitala resurser och andra aspekter av ditt innehållslager. Det finns för närvarande två varianter av **Tools**-konsolen som är beroende av det användargränssnitt du använder:
+Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som hjälper dig att administrera webbplatser, digitala resurser och andra aspekter av ditt innehållslager. Det finns för närvarande två varianter av **verktyg** beroende på vilket gränssnitt du använder:
 
 * [Verktyg - Touchoptimerat gränssnitt](#tools-touch-optimized-ui)
 * [Verktyg - Klassiskt användargränssnitt](#tools-classic-ui)
@@ -48,7 +47,7 @@ Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som h
   </tr>
   <tr>
    <td> </td>
-   <td>CRXDE LITE</td>
+   <td>CRXDE Lite</td>
   </tr>
   <tr>
    <td> </td>
@@ -312,15 +311,15 @@ Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som h
   </tr>
   <tr>
    <td> </td>
-   <td>Konfiguration för social inloggning på Facebook<br /> </td>
+   <td>Konfiguration av facebook Social Login<br /> </td>
   </tr>
   <tr>
    <td> </td>
-   <td>Konfiguration av Twitter-inloggning för sociala medier<br /> </td>
+   <td>Konfiguration av twitter Social Login<br /> </td>
   </tr>
   <tr>
    <td> </td>
-   <td>Pinterest Social Login Configuration<br /> </td>
+   <td>Konfiguration av pinterest Social Login<br /> </td>
   </tr>
   <tr>
    <td>Communities</td>
@@ -365,7 +364,7 @@ Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som h
  </tbody>
 </table>
 
-## Verktyg - Klassiskt gränssnitt {#tools-classic-ui}
+## Verktyg - Klassiskt användargränssnitt {#tools-classic-ui}
 
 <table>
  <tbody>
@@ -378,7 +377,7 @@ Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som h
    <td>Centraliserad plats för hantering av flera webbplatser.</td>
   </tr>
   <tr>
-   <td>Klientkonfigurationer<br /> </td>
+   <td>Konfigurationer av klientkontext<br /> </td>
    <td>Klientkontexten representerar en dynamiskt sammansatt samling med användardata. Standardkonfigurationerna och marknadsföringskonfigurationerna för molnet finns här.<br /> </td>
   </tr>
   <tr>
@@ -467,4 +466,3 @@ Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som h
   </tr>
  </tbody>
 </table>
-

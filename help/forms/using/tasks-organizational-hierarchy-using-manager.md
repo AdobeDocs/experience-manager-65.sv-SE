@@ -1,8 +1,8 @@
 ---
 title: Hantera uppgifter i en organisationshierarki med hjälp av hanterarvyn
-seo-title: Hantera uppgifter i en organisationshierarki med hjälp av hanterarvyn
+seo-title: Managing tasks in an organizational hierarchy using Manager View
 description: Hur chefer och organisationschefer kan komma åt och arbeta med uppgifter i sina direkta och indirekta rapporter på fliken Att göra på arbetsytan i AEM Forms.
-seo-description: Hur chefer och organisationschefer kan komma åt och arbeta med uppgifter i sina direkta och indirekta rapporter på fliken Att göra på arbetsytan i AEM Forms.
+seo-description: How managers and organization heads can access and work on the tasks of their direct and indirect reports in the To-do tab in AEM Forms workspace.
 uuid: c44c55e6-6cc1-417d-8e89-c8d5c32914c8
 contentOwner: robhagat
 content-type: reference
@@ -10,30 +10,29 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 2e60df86-d8ff-4cf9-b801-9559857b5ff4
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+exl-id: e50974a7-01ac-4a08-bea2-df9cc975c69e
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '379'
+source-wordcount: '344'
 ht-degree: 0%
 
 ---
-
 
 # Hantera uppgifter i en organisationshierarki med hjälp av hanterarvyn{#managing-tasks-in-an-organizational-hierarchy-using-manager-view}
 
 På AEM Forms arbetsyta kan chefer nu komma åt uppgifter som tilldelats alla i deras hierarki - direkta eller indirekta rapporter - och utföra olika åtgärder på dem. Uppgifterna är tillgängliga på fliken Att göra på arbetsytan i AEM Forms. De åtgärder som stöds för de direkta rapporterna är:
 
-**Vidarebefordra** en uppgift från en direkt rapport till valfri användare.
+**Framåt** Vidarebefordra en uppgift från en direkt rapport till valfri användare.
 
-**** AnspråkAnspråk en uppgift i en direkt rapport.
+**Anspråk** Gör anspråk på en uppgift som en direkt rapport.
 
-**Gör anspråk på &amp;** OpenClaim a task of a direct report and automatically open it in the To-do list of the manager.
+**Anspråk och öppna** Gör anspråk på en uppgift i en direkt rapport och öppna den automatiskt i listan Att göra i hanteraren.
 
-**Avvisa** Avvisa en uppgift som vidarebefordrats till en direkt rapport av en annan användare. Det här alternativet är tillgängligt för uppgifter som vidarebefordras av andra användare till en direkt rapport.
+**Avvisa** Avvisa en uppgift som har vidarebefordrats till en direkt rapport av en annan användare. Det här alternativet är tillgängligt för uppgifter som vidarebefordras av andra användare till en direkt rapport.
 
 AEM Forms begränsar en användares åtkomst till endast de uppgifter som användaren har åtkomstkontroll för. En sådan kontroll säkerställer att en användare bara kan hämta de uppgifter som användaren har åtkomstbehörighet för. Med hjälp av webbtjänster och implementeringar från tredje part för att definiera hierarkin kan en organisation anpassa definitionen av chef och dirigera rapporter efter deras behov.
 
-1. Skapa en DSC. Mer information finns i avsnittet Developing Components for AEM Forms i [Programming with AEM Forms](https://www.adobe.com/go/learn_aemforms_programming_63) Guide.
+1. Skapa en DSC. Mer information finns i avsnittet om att utveckla komponenter för AEM Forms i [Programmera med AEM Forms](https://www.adobe.com/go/learn_aemforms_programming_63) guide.
 1. I DSC definierar du en ny SPI för hierarkihantering för att definiera direkta rapporter och hierarkier inom AEM Forms-användarna. Här följer ett exempel på Java™-kodfragment.
 
    ```java
@@ -113,7 +112,7 @@ AEM Forms begränsar en användares åtkomst till endast de uppgifter som använ
    </component>
    ```
 
-1. Distribuera DSC via Workbench. Starta om tjänsten `ProcessManagementTeamTasksService`.
+1. Distribuera DSC via Workbench. Starta om `ProcessManagementTeamTasksService` service.
 1. Du kan behöva uppdatera webbläsaren eller logga ut/logga in med användaren igen.
 
 Följande skärm visar hur du får åtkomst till uppgifter i direkta rapporter och tillgängliga åtgärder.

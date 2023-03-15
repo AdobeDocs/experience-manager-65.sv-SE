@@ -1,32 +1,31 @@
 ---
 title: Komponenten Utöka kommentarer
-seo-title: Komponenten Utöka kommentarer
+seo-title: Extend Comments Component
 description: Utöka komponenten Kommentarer för att ändra dess utseende eller beteende för specifika användningsområden
-seo-description: Utöka komponenten Kommentarer för att ändra dess utseende eller beteende för specifika användningsområden
+seo-description: Extend the Comments component to alter its appearance or behavior for specific uses
 uuid: 6f439097-b1d0-4e7d-afcf-01d8f43aa866
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: a07a4690-0e47-4a76-84cb-96abdc70b835
-translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+exl-id: e57198cb-8fd9-43e2-b416-e40e462561c8
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '271'
+source-wordcount: '255'
 ht-degree: 0%
 
 ---
 
+# Komponenten Utöka kommentarer  {#extend-comments-component}
 
-# Utöka kommentarkomponent {#extend-comments-component}
-
-Avsikten med att [utöka](client-customize.md#extensions) en standardkomponent är att ändra en komponents utseende eller beteende för specifika användningsområden.
+Avsikten med [utöka](client-customize.md#extensions) en standardkomponent är att ändra en komponents utseende eller beteende för specifika användningsområden.
 
 Sökvägen till komponenten är unik och refererar standardkomponenten som en överordnad resurstyp. Risken är mindre eftersom omfattningen är begränsad jämfört med den globala omfattningen för en komponentövertäckning.
 
 >[!NOTE]
 >
->Det går inte att utöka en [överlagrad](client-customize.md#overlays)-komponent.
+>Utöka en [överlagrad](client-customize.md#overlays) stöds inte.
 
 ## Exempel {#example}
 
@@ -34,11 +33,10 @@ Anta att rubriken för kommentarkomponenten måste visas med ett alternativt uts
 
 Om du vill implementera den här lösningen skapar du en ny komponent som utökar (åsidosätter) den befintliga och ändrar Handlebars-skriptet. Det område på webbplatsen som använder de nya kommentarerna kan använda det utökade området, medan de webbplatser som använder standardutseendet inte påverkas.
 
-Kommentarskomponenten är i själva verket en av två komponenter som utgör kommentarssystemet. Det finns alltså två komponenter att utöka: *kommentarer* och *kommentar*. Skriptet som ska redigeras finns i *kommentaren*-komponentens `header.hbs`-fil, medan den överordnade *kommentarkomponenten* (kommentarsystemet) är det som en författare lägger till på sidan.
+Kommentarskomponenten är i själva verket en av två komponenter som utgör kommentarssystemet. Det finns alltså två komponenter att utöka: *kommentarer* och *kommentar*. Skriptet som ska redigeras finns i *kommentar* -komponenten `header.hbs` -filen, medan den överordnade *kommentarer* -komponenten (kommentarsystemet) är det som en författare faktiskt lägger till på sidan.
 
 Om du vill lägga in kommentarer måste du
 
 1. [Skapa komponenterna](extend-create-components.md)
 1. [Lägg till kommentar på exempelsida](extend-sample-page.md)
 1. [Ändra utseendet](extend-alter-appearance.md)
-

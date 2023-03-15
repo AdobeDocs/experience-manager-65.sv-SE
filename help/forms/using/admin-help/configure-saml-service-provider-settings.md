@@ -1,32 +1,31 @@
 ---
 title: Konfigurera inställningar för SAML-tjänstleverantör
-seo-title: Konfigurera inställningar för SAML-tjänstleverantör
+seo-title: Configure SAML service provider settings
 description: Du kan konfigurera inställningarna för SAML-tjänsteleverantören så att användare kan logga in och autentisera AEM formulär via en angiven tredjeparts-ID-leverantör (IDP).
-seo-description: Du kan konfigurera inställningarna för SAML-tjänsteleverantören så att användare kan logga in och autentisera AEM formulär via en angiven tredjeparts-ID-leverantör (IDP).
+seo-description: You can configure SAML service provider settings to allow users to login and authenticate to AEM forms via a specified third-party identity provider (IDP).
 uuid: 14c706ad-8b1c-4c03-9cd4-97424f2162bc
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_user_management
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 1169d0d1-cbfb-486b-acca-9b9de3d410dc
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: dd302cfb-eae1-4189-aa7b-9f2533ebd164
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '628'
+source-wordcount: '599'
 ht-degree: 0%
 
 ---
 
-
-# Konfigurera inställningar för SAML-tjänstprovider{#configure-saml-service-provider-settings}
+# Konfigurera inställningar för SAML-tjänstleverantör{#configure-saml-service-provider-settings}
 
 SAML (Security Assertion Markup Language) är ett av de alternativ som du kan välja när du konfigurerar auktorisering för en företagsdomän eller hybriddomän. SAML används främst för att stödja enkel inloggning över flera domäner. När SAML är konfigurerat som din autentiseringsleverantör loggar användare in och autentiserar till AEM formulär via en angiven identitetsleverantör (IDP).
 
-En förklaring av SAML finns i [Security Assertion Markup Language (SAML) V2.0 Technical Overview](https://www.oasis-open.org/committees/download.php/20645/sstc-saml-tech-overview-2%200-draft-10.pdf).
+En förklaring av SAML finns på [Security Assertion Markup Language (SAML) V2.0 Technical Overview](https://www.oasis-open.org/committees/download.php/20645/sstc-saml-tech-overview-2%200-draft-10.pdf).
 
 1. I administrationskonsolen klickar du på Inställningar > Användarhantering > Konfiguration > Inställningar för SAML-tjänstleverantör.
 1. Ange ett unikt ID som ska användas som identifierare för implementeringen av AEM formulärleverantör i rutan Tjänstleverantörens enhets-ID. Du anger också detta unika ID när du konfigurerar din IDP (till exempel `um.lc.com`.) Du kan också använda den URL som används för att komma åt AEM formulär (till exempel `https://AEMformsserver`).
-1. Ange bas-URL:en för formulärservern (till exempel `https://AEMformsserver:8080`) i rutan Tjänstleverantörens bas-URL.
+1. I rutan Bas-URL för tjänsteleverantör skriver du bas-URL:en för formulärservern (till exempel `https://AEMformsserver:8080`).
 1. (Valfritt) Gör så här för att aktivera AEM formulär för att skicka signerade autentiseringsbegäranden till IDP:
 
    * Använd Pålitlighetshanteraren för att importera en autentiseringsuppgift i PKCS #12-format med Dokumentsigneringsuppgifter som har valts som pålitlighetslagertyp. (Se [Hantera lokala autentiseringsuppgifter](/help/forms/using/admin-help/local-credentials.md#managing-local-credentials).)
@@ -63,4 +62,3 @@ En förklaring av SAML finns i [Security Assertion Markup Language (SAML) V2.0 T
    `saml.sp.discovery.url=/custom/custom.jsp`
 
 1. Klicka på Spara.
-

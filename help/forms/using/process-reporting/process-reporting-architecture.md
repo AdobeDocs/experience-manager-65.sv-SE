@@ -1,22 +1,21 @@
 ---
 title: Hur processrapportering fungerar
-seo-title: Hur processrapportering fungerar
+seo-title: How Process Reporting Works
 description: Beskrivning av de tjänster som utgör AEM Forms on JEE Process Reporting och en introduktion till användargränssnittet för processrapportering
-seo-description: Beskrivning av de tjänster som utgör AEM Forms on JEE Process Reporting och en introduktion till användargränssnittet för processrapportering
+seo-description: Description of the services that make up the AEM Forms on JEE Process Reporting and an introduction to the Process Reporting UI
 uuid: 37e31985-088a-4ef6-ba57-10a01597a873
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: process-reporting
 discoiquuid: a6ff50df-273d-48f7-b0c6-0e69e900b97f
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+exl-id: 66dfac36-5b7e-40be-9921-efa9f2a9521c
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '385'
+source-wordcount: '359'
 ht-degree: 0%
 
 ---
-
 
 # Hur processrapportering fungerar{#how-process-reporting-works}
 
@@ -40,13 +39,13 @@ Processrapportering består av följande moduler:
 
 ## Processrapporteringsmoduler {#process-reporting-modules}
 
-### ProcessDataPublisher-tjänsten {#processdatapublisher-service-br}
+### ProcessDataPublisher-tjänst {#processdatapublisher-service-br}
 
 ProcessDataPublisher-servern körs regelbundet på AEM Forms-databasen och extraherar de data som har ändrats sedan den senaste körningen av tjänsten. Sedan publiceras data till datalagringstjänsten för processdata.
 
 Mer information om hur du konfigurerar tjänsten finns i [Konfigurera tjänsten ProcessDataPublisher](/help/forms/using/process-reporting/install-start-process-reporting.md#p-reportconfiguration-service-p).
 
-### ProcessDataStorageProvider-tjänsten {#processdatastorageprovider-service-br}
+### Tjänsten ProcessDataStorageProvider {#processdatastorageprovider-service-br}
 
 ProcessDataStorageProvider-tjänsten tar emot processdata från ProcessDataPublisher-tjänsten och sparar data i Process Reporting-databasen.
 
@@ -56,7 +55,7 @@ Mer information om hur du konfigurerar tjänsten finns i [Konfigurera tjänsten 
 
 QueryDataServlet använder den här tjänsten för att hämta rapportdata från Process Reporting-databasen.
 
-### QueryDataServlet-tjänsten {#querydataservlet-service-br}
+### Tjänsten QueryDataServlet {#querydataservlet-service-br}
 
 Tjänsten QueryDataServlet accepterar frågor från användargränssnittet för processrapportering.
 
@@ -68,7 +67,7 @@ Användargränssnittet Process Reporting är ett webbläsarbaserat gränssnitt. 
 
 En introduktion till användargränssnittet för processrapportering finns i [Användargränssnittet för processrapportering](/help/forms/using/process-reporting/introduction-process-reporting.md).
 
-### QueryDataServlet-tjänsten {#querydataservlet-service-br-1}
+### Tjänsten QueryDataServlet {#querydataservlet-service-br-1}
 
 Tjänsten QueryDataServlet accepterar frågor från användargränssnittet för processrapportering.
 

@@ -285,7 +285,6 @@ Bläddra bland Dynamic Media Classic-resurser genom att välja **[!UICONTROL Dyn
 >
 >* Dynamic Media Classic innehållsläsare läser in cirka 100 resurser och sorterar dem efter namn.
 >* Om du har en säker förhandsgranskningsserver angiven använder webbläsaren den förhandsvisningsservern för att återge miniatyrer och resurser.
-
 >
 
 
@@ -336,7 +335,6 @@ Som standard söker Experience Manager i den markerade mappen och i alla underma
 >
 >* När du söker efter video söker du efter en enskild återgivning. Resultatet returnerar den ursprungliga återgivningen (endast &amp;ast;.mp4) och den kodade återgivningen.
 >* När du söker i en adaptiv videouppsättning söker du i mappen och i alla undermappar, men bara om du har lagt till ett nyckelord i sökningen. Om du inte har lagt till något nyckelord söker Experience Manager inte i undermapparna.
-
 >
 
 

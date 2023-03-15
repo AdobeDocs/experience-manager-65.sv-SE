@@ -1,22 +1,21 @@
 ---
 title: Grundläggande om filbibliotek
-seo-title: Grundläggande om filbibliotek
+seo-title: File Library Essentials
 description: Arbeta med filbiblioteksfunktionen
-seo-description: Arbeta med filbiblioteksfunktionen
+seo-description: Working with the file library feature
 uuid: 0630f13e-97b4-4f93-9dce-07f559287c29
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: 9019b967-fff8-4dda-bc5a-fd4a3e14a4ef
-translation-type: tm+mt
-source-git-commit: c897f034edbdbeee74869165ed384c3408a857e0
+exl-id: 6d653331-c1ce-4ccb-bb45-656b6413ac3e
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '265'
+source-wordcount: '256'
 ht-degree: 0%
 
 ---
-
 
 # Grundläggande om filbibliotek {#file-library-essentials}
 
@@ -36,7 +35,7 @@ Den här sidan innehåller viktig information om hur du arbetar med filbibliotek
   </tr>
   <tr>
    <td> <a href="clientlibs.md"><strong>klientlibs</strong></a></td>
-   <td>cq.ckeditor<br /> cq.social.hbs.voice<br /> cq.social.hbs.filelibrary</td>
+   <td>cq.ckeditor<br /> cq.social.hbs.röstning<br /> cq.social.hbs.filelibrary</td>
   </tr>
   <tr>
    <td> <strong>templates</strong></td>
@@ -65,21 +64,20 @@ Den här sidan innehåller viktig information om hur du arbetar med filbibliotek
 
 ### Filbiblioteksfunktion {#file-library-function}
 
-En community-platsstruktur som innehåller [filbiblioteksfunktionen](functions.md#file-library-function) innehåller en konfigurerad `file library`-komponent.
+En community-webbplatsstruktur som innehåller [Funktionen Filbibliotek](functions.md#file-library-function), innehåller en konfigurerad `file library` -komponenten.
 
 ### Komma åt kommentarer som har bokförts för filbibliotek (UGC) {#accessing-comments-posted-for-file-libraries-ugc}
 
 UGC bör modereras med någon av standardmetoderna för moderering.
-Se [Moderating User Generated Content](moderate-ugc.md).
+Se [Modererar användargenererat innehåll](moderate-ugc.md).
 
-Från och med AEM 6.1 Communities omfattar användningen av en [gemensam butik](working-with-srp.md) för UGC programmatisk åtkomst till UGC oavsett valt lagringsalternativ (som ASRP, MSRP eller JSRP).
+Från och med AEM 6.1 Communities används [gemensam lagringsplats](working-with-srp.md) för UGC omfattar programmatisk åtkomst till UGC oavsett vilket lagringsalternativ som valts (till exempel ASRP, MSRP eller JSRP).
 
 **Platsen och formatet för användargenererat innehåll i databasen kan ändras utan förvarning**.
 
 Se:
 
-* [Översikt över](srp.md)  lagringsresursprovidern - introduktion och översikt över databasanvändningen.
+* [Översikt över lagringsresursprovider](srp.md) - introduktion och översikt över databasanvändningen.
 * [SRP och UGC Essentials](srp-and-ugc.md) - SRP-verktygsmetoder och -exempel.
-* [Åtkomst till UGC med riktlinjerna för SRP](accessing-ugc-with-srp.md) -kodning.
-* [Omfaktorisering](socialutils.md)  för SocialUtils - mappning av utgått från verktygsmetoder till aktuella SRP-verktygsmetoder.
-
+* [Åtkomst till UGC med SRP](accessing-ugc-with-srp.md) - riktlinjer för kodning.
+* [Omfaktorisering för SocialUtils](socialutils.md) - mappning av borttagna verktygsmetoder till aktuella SRP-verktygsmetoder.

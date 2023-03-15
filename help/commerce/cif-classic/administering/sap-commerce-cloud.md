@@ -2,7 +2,7 @@
 title: SAP Commerce Cloud
 seo-title: SAP Commerce Cloud
 description: Lär dig använda AEM med SAP Commerce Cloud.
-seo-description: Lär dig använda AEM med SAP Commerce Cloud.
+seo-description: Learn how to use AEM with SAP Commerce Cloud.
 uuid: cee1a781-fcba-461e-a0a4-c561a1dbcbf3
 contentOwner: Guillaume Carlino
 topic-tags: e-commerce
@@ -10,7 +10,7 @@ content-type: reference
 exl-id: c342f789-2ff7-4802-99c7-c3699218fe47
 source-git-commit: 61691c300322edcdee33b121ca400e4c89256e45
 workflow-type: tm+mt
-source-wordcount: '1726'
+source-wordcount: '1714'
 ht-degree: 1%
 
 ---
@@ -23,9 +23,9 @@ Efter installationen kan du konfigurera instansen:
 1. [Konfigurera katalogversionen](#configure-the-catalog-version).
 1. [Konfigurera importstrukturen](#configure-the-import-structure).
 1. [Konfigurera de produktattribut som ska läsas in](#configure-the-product-attributes-to-load).
-1. [Importerar produktdata](#importing-the-product-data).
+1. [Importera produktdata](#importing-the-product-data).
 1. [Konfigurera katalogimporteraren](#configure-the-catalog-importer).
-1. Använd [importeraren för att importera katalogen](#catalog-import) till en specifik plats i AEM.
+1. Använd [importör för att importera katalogen](#catalog-import) till en specifik plats i AEM.
 
 ## Konfigurera den motsatta sökningen efter Geometrixx Outdoors {#configure-the-facetted-search-for-geometrixx-outdoors}
 
@@ -33,16 +33,16 @@ Efter installationen kan du konfigurera instansen:
 >
 >Detta behövs inte för hybris 5.3.0.1 och senare.
 
-1. I webbläsaren går du till **hybris management console** på:
+1. I webbläsaren går du till **Hanteringskonsol för hybris** vid:
 
    [http://localhost:9001/hmc/hybris](http://localhost:9001/hmc/hybris)
 
-1. I sidofältet väljer du **System**, sedan **Fasettsökning** och sedan **Konfiguration för ansiktssökning**.
-1. **Öppna** Redigeraren för  **exempelSolr-konfigurationen för klotekatalogen**.
+1. Välj **System** sedan **Fasettsökning** sedan **Konfiguration för sökning efter ansikten**.
+1. **Öppna redigeraren** för **Exempel på Solr-konfiguration för katalog**.
 
-1. Under **Katalogversioner** använder du **Lägg till katalogversion** för att lägga till `outdoors-Staged` och `outdoors-Online` i listan.
+1. Under **Katalogversioner** use **Lägg till katalogversion** lägga till `outdoors-Staged` och `outdoors-Online` till listan.
 1. **Spara konfigurationen.**
-1. Öppna **SOLR-objekttyper** om du vill lägga till **SOLR-sortering** i `ClothesVariantProduct`:
+1. Öppna **SOLR-objekttyper** lägga till **SOLR Sorts** till `ClothesVariantProduct`:
 
    * relevans (&quot;Relevans&quot;, poäng)
    * name-asc (&quot;Name (stigande)&quot;, name)
@@ -52,67 +52,67 @@ Efter installationen kan du konfigurera instansen:
 
    >[!NOTE]
    >
-   >Välj `Create Solr sort` på snabbmenyn (oftast högerklickning).
+   >Använd snabbmenyn (oftast högerklickning) för att markera `Create Solr sort`.
    >
-   >För Hybris 5.0.0 öppnar du fliken `Indexed Types`, dubbelklickar på `ClothesVariantProduct` och därefter på fliken `SOLR Sort`.
+   >För Hybris 5.0.0 öppnar du `Indexed Types` flik, dubbelklicka på `ClothesVariantProduct`och sedan fliken `SOLR Sort`.
 
    ![chlimage_1-36](/help/sites-administering/assets/chlimage_1-36a.png)
 
-1. På fliken **Indexerade typer** ställer du in **Sammansatt typ** till:
+1. I **Indexerade typer** tabbuppsättningen **Sammansatt typ** till:
 
    `Product - Product`
 
-1. På fliken **Indexerade typer** justerar du **indexeringsfrågor** för `full`:
+1. I **Indexerade typer** tabbjustera **Indexerfrågor** for `full`:
 
    ```shell
    SELECT {pk} FROM {Product} WHERE {pk} NOT IN ({{SELECT {baseProductpk} FROM {variantproduct}}})
    ```
 
-1. På fliken **Indexerade typer** justerar du **indexeringsfrågor** för `incremental`:
+1. I **Indexerade typer** tabbjustera **Indexerfrågor** for `incremental`:
 
    ```shell
    SELECT {pk} FROM {Product} WHERE {pk} NOT IN ({{SELECT {baseProductpk} FROM {variantproduct}}}) AND {modifiedtime} <= ?lastIndexTime
    ```
 
-1. Justera aspekten `category` på fliken **Indexerade typer**. Dubbelklicka på den sista posten i kategorilistan för att öppna fliken **Indexerad egenskap**:
+1. I **Indexerade typer** tabbjustera `category` facet. Dubbelklicka på den sista posten i kategorilistan för att öppna **Indexerad egenskap** tab:
 
    >[!NOTE]
    >
-   >För hybris 5.2 ska du kontrollera att attributet `Facet` i tabellen Egenskaper är markerat enligt skärmbilden nedan:
+   >För hybris 5.2 ska du se till att `Facet` i egenskapstabellen väljs enligt skärmbilden nedan:
 
    ![chlimage_1-37](/help/sites-administering/assets/chlimage_1-37a.png) ![chlimage_1-38](/help/sites-administering/assets/chlimage_1-38a.png)
 
-1. Öppna fliken **Fasettinställningar** och justera fältvärdena:
+1. Öppna **Fasettinställningar** och justera fältvärdena:
 
    ![chlimage_1-39](/help/sites-administering/assets/chlimage_1-39a.png)
 
 1. **Spara ändringarna.**
-1. Justera `price`-aspekten från **SOLR-objekttyper** enligt följande skärmbilder. Precis som med `category` dubbelklickar du på `price` för att öppna fliken **Indexed property**:
+1. Igen från **SOLR-objekttyper**, justera `price` ansiktet enligt följande skärmbilder. Som med `category`, dubbelklicka på `price` för att öppna **Indexerad egenskap** tab:
 
    ![chlimage_1-40](/help/sites-administering/assets/chlimage_1-40a.png)
 
-1. Öppna fliken **Fasettinställningar** och justera fältvärdena:
+1. Öppna **Fasettinställningar** och justera fältvärdena:
 
    ![chlimage_1-41](/help/sites-administering/assets/chlimage_1-41a.png)
 
 1. **Spara ändringarna.**
-1. Öppna **System**, **Fasettsökning** och sedan **Guiden för indexeringsåtgärd**. Starta ett cronjob:
+1. Öppna **System**, **Fasettsökning** sedan **Åtgärdsguiden för indexering**. Starta ett cronjob:
 
-   * **Indexeraråtgärd**:  `full`
-   * **Solr-konfiguration**:  `Sample Solr Config for Clothes`
+   * **Indexeringsåtgärd**: `full`
+   * **Solr-konfiguration**: `Sample Solr Config for Clothes`
 
 ## Konfigurera katalogversionen {#configure-the-catalog-version}
 
-Den **katalogversion** ( `hybris.catalog.version`) som importeras kan konfigureras för OSGi-tjänsten:
+The **Katalogversion** ( `hybris.catalog.version`) som importeras kan konfigureras för OSGi-tjänsten:
 
 **Dag CQ Commerce Hybris Configuration**
-(  `com.adobe.cq.commerce.hybris.common.DefaultHybrisConfigurationService`)
+( `com.adobe.cq.commerce.hybris.common.DefaultHybrisConfigurationService`)
 
-**Katalogversionen** är vanligtvis inställd på antingen  `Online` eller  `Staged` (standard).
+**Katalogversion** är vanligtvis inställd på antingen `Online` eller `Staged` (standard).
 
 >[!NOTE]
 >
->När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Mer information finns i [Konfigurera OSGi](/help/sites-deploying/configuring-osgi.md). Se även konsolen för en fullständig lista över konfigurerbara parametrar och deras standardvärden.
+>När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) för fullständig information. Se även konsolen för en fullständig lista över konfigurerbara parametrar och deras standardvärden.
 
 Loggutdata ger återkoppling om skapade sidor och komponenter och rapporterar potentiella fel.
 
@@ -153,7 +153,7 @@ I följande lista visas en exempelstruktur (med resurser, sidor och komponenter)
               + ...
 ```
 
-En sådan struktur skapas av OSGi-tjänsten `DefaultImportHandler` som implementerar gränssnittet `ImportHandler`. Den faktiska importören anropar en importhanterare för att skapa produkter, produktvariationer, kategorier, tillgångar osv.
+En sådan struktur skapas av OSGi-tjänsten `DefaultImportHandler` som implementerar `ImportHandler` gränssnitt. Den faktiska importören anropar en importhanterare för att skapa produkter, produktvariationer, kategorier, tillgångar osv.
 
 >[!NOTE]
 >
@@ -161,10 +161,10 @@ En sådan struktur skapas av OSGi-tjänsten `DefaultImportHandler` som implement
 
 Strukturen som ska skapas vid import kan konfigureras för:
 
-&quot;**Standardimporthanterare för handelshybris för daglig CQ**
+&quot;**Standardimporthanterare för handelshybris för dagskvot**
 `(com.adobe.cq.commerce.hybris.importer.DefaultImportHandler`)
 
-När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Mer information finns i [Konfigurera OSGi](/help/sites-deploying/configuring-osgi.md). Se även konsolen för en fullständig lista över konfigurerbara parametrar och deras standardvärden.
+När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) för fullständig information. Se även konsolen för en fullständig lista över konfigurerbara parametrar och deras standardvärden.
 
 ## Konfigurera de produktattribut som ska läsas in {#configure-the-product-attributes-to-load}
 
@@ -172,14 +172,14 @@ Svarsparsern kan konfigureras för att definiera egenskaper och attribut som ska
 
 1. Konfigurera OSGi-paketet:
 
-   **Standardsvarsparser**
-(`com.adobe.cq.commerce.hybris.impl.importer.DefaultResponseParser`) för handelshybris i dagskvot
+   **Standardsvarsparser för handelshybris i CQ**
+(`com.adobe.cq.commerce.hybris.impl.importer.DefaultResponseParser`)
 
    Här kan du definiera olika alternativ och attribut som behövs för inläsning och mappning.
 
    >[!NOTE]
    >
-   >När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Mer information finns i [Konfigurera OSGi](/help/sites-deploying/configuring-osgi.md). Se även konsolen för en fullständig lista över konfigurerbara parametrar och deras standardvärden.
+   >När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) för fullständig information. Se även konsolen för en fullständig lista över konfigurerbara parametrar och deras standardvärden.
 
 ## Importera produktdata {#importing-the-product-data}
 
@@ -218,7 +218,7 @@ Följande egenskaper anger länken till hybris:
       [`http://localhost:4502/crx/de/index.jsp#/etc/commerce/products`](http://localhost:4502/crx/de/index.jsp#/etc/commerce/products)
 
    1. Ta bort noden som innehåller produktdata, till exempel `outdoors`.
-   1. **Spara** alla om du vill behålla ändringen.
+   1. **Spara alla** för att behålla ändringen.
 
 1. Öppna hybris-importören i AEM:
 
@@ -232,7 +232,7 @@ Följande egenskaper anger länken till hybris:
 
    ![chlimage_1-42](/help/sites-administering/assets/chlimage_1-42a.png)
 
-1. Klicka på **Importera katalog** för att starta importen.
+1. Klicka **Importera katalog** för att starta importen.
 
    När du är klar kan du verifiera de data som importerats på:
 
@@ -265,7 +265,7 @@ Följande egenskaper anger länken till hybris:
    [http://localhost:4502/etc/importers/hybris.html](http://localhost:4502/etc/importers/hybris.html)
 
 1. Markera kryssrutan **Inkrementell import**.
-1. Klicka på **Importera katalog** för att starta importen.
+1. Klicka **Importera katalog** för att starta importen.
 
    När det är klart kan du verifiera de data som har uppdaterats i AEM under:
 
@@ -301,7 +301,7 @@ Importprocessen kan ta lång tid, så som ett tillägg till produktsynkroniserin
    [http://localhost:4502/etc/importers/hybris.html](http://localhost:4502/etc/importers/hybris.html)
 
 1. Markera kryssrutan **Express Update**.
-1. Klicka på **Importera katalog** för att starta importen.
+1. Klicka **Importera katalog** för att starta importen.
 
    När det är klart kan du verifiera de data som har uppdaterats i AEM under:
 
@@ -315,14 +315,14 @@ hybriskatalogen kan importeras till AEM med hjälp av satsimportör för hybris-
 
 De parametrar som används av importeraren kan konfigureras för:
 
-**Dag CQ Commerce Hybris Catalog Importer**
-(  `com.adobe.cq.commerce.hybris.impl.importer.DefaultHybrisImporter`)
+**Dag CQ Commerce Hybris Catalog Import**
+( `com.adobe.cq.commerce.hybris.impl.importer.DefaultHybrisImporter`)
 
-När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Mer information finns i [Konfigurera OSGi](/help/sites-deploying/configuring-osgi.md). Se även konsolen för en fullständig lista över konfigurerbara parametrar och deras standardvärden.
+När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) för fullständig information. Se även konsolen för en fullständig lista över konfigurerbara parametrar och deras standardvärden.
 
 ## Katalogimport {#catalog-import}
 
-hybris-paketet levereras med en katalogimporterare för att skapa den inledande sidstrukturen.
+hybris-paketet levereras med en katalogimportör för att skapa den inledande sidstrukturen.
 
 Det här är tillgängligt från:
 
@@ -332,20 +332,20 @@ Det här är tillgängligt från:
 
 Följande uppgifter måste lämnas:
 
-* **Basarkiv**
-Identifieraren för basarkivet som konfigurerats i hybris.
+* **Bas**
+Identifieraren för basbutiken som konfigurerats i hybris.
 
-* ****
-KatalogIdentifieraren för den katalog som ska importeras.
+* **Katalog**
+Identifieraren för den katalog som ska importeras.
 
-* **Rotsökväg:**
+* **Rotsökväg**
 Sökvägen dit katalogen ska importeras.
 
 ## Ta bort en produkt från katalogen {#removing-a-product-from-the-catalog}
 
 Så här tar du bort en eller flera produkter från katalogen:
 
-1. [Konfigurera för OSGi ](/help/sites-deploying/configuring-osgi.md) **serviceDay CQ Commerce Hybris Catalog Importer**. Se även  [Konfigurera katalogimporteraren](#configure-the-catalog-importer).
+1. [Konfigurera tjänsten för OSGi](/help/sites-deploying/configuring-osgi.md) **Dag CQ Commerce Hybris Catalog Import**; se även [Konfigurera katalogimporteraren](#configure-the-catalog-importer).
 
    Aktivera följande egenskaper:
 
@@ -354,7 +354,7 @@ Så här tar du bort en eller flera produkter från katalogen:
 
    >[!NOTE]
    >
-   >När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Mer information finns i [Konfigurera OSGi](/help/sites-deploying/configuring-osgi.md). Se även konsolen för en fullständig lista över konfigurerbara parametrar och deras standardvärden.
+   >När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) för fullständig information. Se även konsolen för en fullständig lista över konfigurerbara parametrar och deras standardvärden.
 
 1. Initiera importören genom att utföra två stegvisa uppdateringar (se [Katalogimport](#catalog-import)):
 
@@ -371,17 +371,17 @@ Så här tar du bort en eller flera produkter från katalogen:
 
    [http://localhost:4502/editor.html/content/geometrixx-outdoors/en_US/equipment/biking.html](http://localhost:4502/editor.html/content/geometrixx-outdoors/en_US/equipment/biking.html)
 
-1. Ta bort produkten i hybris-konsolen. Använd alternativet **Ändra godkännandestatus** för att ange statusen till `unapproved`. Produkten tas bort från liveflödet.
+1. Ta bort produkten i hybris-konsolen. Använd alternativet **Ändra godkännandestatus** för att ställa in status på `unapproved`. Produkten tas bort från liveflödet.
 
    Till exempel:
 
    * Öppna sidan [http://localhost:9001/productcockpit](http://localhost:9001/productcockpit)
-   * Välj katalogen `Outdoors Staged`
+   * Markera katalogen `Outdoors Staged`
    * Sök efter `Cajamara`
    * Välj den här produkten och ändra godkännandestatusen till `unapproved`
 
 1. Utför en annan stegvis uppdatering (se [Katalogimport](#catalog-import)). Loggen visar den borttagna produkten.
-1. [Välj ](/help/commerce/cif-classic/administering/generic.md#rolling-out-a-catalog) lämplig katalog. Produkt- och produktsidan har tagits bort från AEM.
+1. [Utrullning](/help/commerce/cif-classic/administering/generic.md#rolling-out-a-catalog) lämplig katalog. Produkt- och produktsidan har tagits bort från AEM.
 
    Till exempel:
 
@@ -389,16 +389,16 @@ Så här tar du bort en eller flera produkter från katalogen:
 
       [http://localhost:4502/aem/catalogs.html/content/catalogs/geometrixx-outdoors-hybris](http://localhost:4502/aem/catalogs.html/content/catalogs/geometrixx-outdoors-hybris)
 
-   * Utrulla katalogen `Hybris Base`
+   * Gör `Hybris Base` katalog
    * Öppna:
 
       [http://localhost:4502/editor.html/content/geometrixx-outdoors/en_US/equipment/biking.html](http://localhost:4502/editor.html/content/geometrixx-outdoors/en_US/equipment/biking.html)
 
-   * `Cajamara`-produkten kommer att ha tagits bort från kategorin `Bike`
+   * The `Cajamara` produkten kommer att ha tagits bort från `Bike` kategori
 
 1. Så här återinstallerar du produkten:
 
-   1. I hybris ställer du in godkännandestatusen till **godkänd**
+   1. I hybris ska godkännandestatusen återställas till **godkänd**
    1. I AEM:
 
       1. utföra en stegvis uppdatering
@@ -407,17 +407,17 @@ Så här tar du bort en eller flera produkter från katalogen:
 
 ## Lägg till orderhistorikspår i klientkontexten {#add-order-history-trait-to-the-client-context}
 
-Så här lägger du till orderhistorik i [klientkontexten](/help/sites-developing/client-context.md):
+Lägga till orderhistorik i [klientkontext](/help/sites-developing/client-context.md):
 
-1. Öppna [sidan för klientkontextdesign](/help/sites-administering/client-context.md) genom att antingen:
+1. Öppna [designsida för klientkontext](/help/sites-administering/client-context.md), antingen
 
-   * Öppna en sida för redigering och öppna sedan klientkontexten med **Ctrl-Alt-c** (Windows) eller **control-option-c** (Mac). Använd pennikonen i klientkontextens övre vänstra hörn för att **öppna designsidan för ClientContext**.
+   * Öppna en sida för redigering och öppna sedan klientkontexten med **Ctrl-Alt-c** (fönster) eller **control-option-c** (Mac). Använd pennikonen i klientkontextens övre vänstra hörn för att **Öppna designsidan för ClientContext**.
    * Navigera direkt till [http://localhost:4502/etc/clientcontext/default/content.html](http://localhost:4502/etc/clientcontext/default/content.html)
 
-1. [Lägg till komponenten  **Order** ](/help/sites-administering/client-context.md#adding-a-property-component) Historycomponent i  **Shopping** Cart i klientkontexten.
+1. [Lägg till **Orderhistorik** komponent](/help/sites-administering/client-context.md#adding-a-property-component) till **Kundvagn** t-komponenten i klientkontexten.
 1. Du kan bekräfta att klientkontexten visar information om din orderhistorik. Till exempel:
 
-   1. Öppna [klientkontexten](/help/sites-administering/client-context.md).
+   1. Öppna [klientkontext](/help/sites-administering/client-context.md).
    1. Lägg en artikel i kundvagnen.
    1. Slutför utcheckningen.
    1. Kontrollera klientkontexten.
@@ -436,7 +436,6 @@ Så här lägger du till orderhistorik i [klientkontexten](/help/sites-developin
    >  Kampanjen består av en upplevelse.
    >
    >* Klicka på segmentet ([http://localhost:4502/etc/segmentation/geometrixx-outdoors/returning-customer.html](http://localhost:4502/etc/segmentation/geometrixx-outdoors/returning-customer.html))
-      >
-      >
-   * Segmentet byggs med egenskapen **Orderhistorik**.
+   >
+   >* Segmentet byggs med **Egenskap för orderhistorik** egenskap.
 

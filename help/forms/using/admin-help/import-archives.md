@@ -1,22 +1,21 @@
 ---
 title: Importera och hantera arkiv
-seo-title: Importera och hantera arkiv
+seo-title: Import and manage archives
 description: Lär dig hur du importerar och hanterar arkiv.
-seo-description: Lär dig hur du importerar och hanterar arkiv.
+seo-description: Learn how to import and manage archives.
 uuid: aa1613dd-6350-49a7-9643-44365e2acdcc
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/importing_and_managing_applications_and_archives
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: b6f6463a-2ae4-43d2-8d16-cc20a954e50e
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 0c15677a-ee17-425e-a261-fb3ae8688eb2
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1465'
+source-wordcount: '1454'
 ht-degree: 0%
 
 ---
-
 
 # Importera och hantera arkiv {#import-and-manage-archives}
 
@@ -41,12 +40,12 @@ Använd fliken Arkiv för att importera och hantera LCA:er som har skapats i Wor
 1. Om du klickar på Konfigurera visas sidan Konfigurera slutpunkter där du kan göra de ändringar du behöver:
 
    * Om du vill byta namn på en slutpunkt eller redigera dess beskrivning klickar du på den.
-   * Om du vill lägga till en Task Manager-slutpunkt klickar du på Lägg till TaskManager. Mer information om inställningar för Task Manager finns i [Konfigurera slutpunkter för Task Manager](/help/forms/using/admin-help/configuring-task-manager-endpoints.md#configuring-task-manager-endpoints).
-   * Om du vill lägga till en bevakad mappslutpunkt klickar du på Lägg till bevakad mapp. Mer information om inställningarna för bevakad mapp finns i [Inställningar för övervakad mappslutpunkt](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md#watched-folder-endpoint-settings).
+   * Om du vill lägga till en Task Manager-slutpunkt klickar du på Lägg till TaskManager. Mer information om inställningar för Task Manager finns i [Konfigurera slutpunkter för Aktivitetshanteraren](/help/forms/using/admin-help/configuring-task-manager-endpoints.md#configuring-task-manager-endpoints).
+   * Om du vill lägga till en bevakad mappslutpunkt klickar du på Lägg till bevakad mapp. Mer information om inställningarna för bevakad mapp finns i [Slutpunktsinställningar för bevakad mapp](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md#watched-folder-endpoint-settings).
    * Om du vill lägga till en e-postslutpunkt klickar du på Lägg till e-post. Mer information om e-postinställningarna finns i [Inställningar för e-postslutpunkt](/help/forms/using/admin-help/configuring-email-endpoints.md#email-endpoint-settings).
    * Om du vill lägga till en EJB-slutpunkt klickar du på Lägg till EJB och anger ett namn och en beskrivning för slutpunkten.
    * Om du vill lägga till en SOAP-slutpunkt klickar du på Lägg till SOAP och anger ett namn och en beskrivning för slutpunkten.
-   * Om du vill lägga till en fjärrslutpunkt klickar du på Lägg till fjärranslutning. Mer information om fjärrinställningar finns i [Fjärrinställningar](/help/forms/using/admin-help/configuring-remoting-endpoints.md#remoting-endpoint-settings).
+   * Om du vill lägga till en fjärrslutpunkt klickar du på Lägg till fjärranslutning. Mer information om fjärrinställningar finns i [Tar bort slutpunktsinställningar](/help/forms/using/admin-help/configuring-remoting-endpoints.md#remoting-endpoint-settings).
    * Om du vill lägga till en REST-slutpunkt klickar du på Lägg till REST och anger ett namn och en beskrivning för slutpunkten. Anteckna den URL för REST-anrop som visas på sidan Lägg till REST-slutpunkt.
    * Om du vill ta bort en slutpunkt markerar du kryssrutan bredvid den och klickar på Ta bort.
 
@@ -56,15 +55,15 @@ Använd fliken Arkiv för att importera och hantera LCA:er som har skapats i Wor
 
    * **Kräv att anropare autentiserar:** Den här inställningen anger om tjänsten kan anropas med eller utan autentiseringsuppgifter.
 
-      Om *anropare krävs för att autentisera* visas, måste anroparen till tjänsten autentiseras och uppringarens huvudnamn måste ha behörighet att anropa tjänsten. I annat fall avvisas anropsförsöket. Klicka på Tillåt oautentiserade anropare för att ta bort behovet av autentisering.
+      If *Uppringare måste för närvarande autentisera* visas, uppringaren av tjänsten måste autentiseras och uppringarens huvudnamn måste vara auktoriserat att anropa tjänsten, I annat fall avvisas anropsförsöket. Klicka på Tillåt oautentiserade anropare för att ta bort behovet av autentisering.
 
-      Om *anropare inte krävs för att autentisera* visas behöver anroparen inte autentiseras. Anropet av tjänsten lyckas alltid eftersom det inte finns någon auktoriseringskontroll. Klicka på Kräv att anropare autentiserar för att begära autentisering.
+      If *Uppringare behöver inte autentisera* visas behöver anroparen inte autentiseras. Anropet av tjänsten lyckas alltid eftersom det inte finns någon auktoriseringskontroll. Klicka på Kräv att anropare autentiserar för att begära autentisering.
 
-   * **Kör som:** Anger den körtidsidentitet som används av en tjänst efter att den har anropats. Klicka på Ändra om du vill ändra det här alternativet. Välj bland följande alternativ:
+   * **Kör som:** Anger den körningsidentitet som används av en tjänst efter att den har anropats. Klicka på Ändra om du vill ändra det här alternativet. Välj bland följande alternativ:
 
       **Ospecificerad:** Standardbeteendet används.
 
-      **Anrop:** Använder samma identitet som användaren som anropade tjänsten.
+      **Anropare:** Använder samma identitet som användaren som anropade tjänsten.
 
       **System:** Kör tjänsten med fullständig behörighet. Det här är standardinställningen för långvariga processer.
 
@@ -72,7 +71,7 @@ Använd fliken Arkiv för att importera och hantera LCA:er som har skapats i Wor
 
    * Om du vill lägga till ett huvudnamn i säkerhetsprofilen klickar du på Lägg till huvudnamn och väljer den användare eller grupp som ska läggas till som huvudnamn. Klicka på Nästa och välj sedan de behörigheter du vill tilldela detta huvudkonto:
 
-      **INVOKE_PERM:** Anropa alla åtgärder på tjänsten
+      **INVOKE_PERM:** Så här anropar du alla åtgärder på tjänsten
 
       **MODIFY_CONFIG_PERM:** Ändra konfigurationen för en tjänst
 
@@ -84,36 +83,36 @@ Använd fliken Arkiv för att importera och hantera LCA:er som har skapats i Wor
 
       **CREATE_VERSION_PERM:** Skapa en ny version av tjänsten
 
-      **DELETE_VERSION_PERM:** Ta bort en version av tjänsten
+      **DELETE_VERSION_PERM:** Så här tar du bort en version av tjänsten
 
       **MODIFY_VERSION_PERM:** Ändra en version av tjänsten
 
-      **READ_PERM:** Visa tjänsten
+      **READ_PERM:** Så här visar du tjänsten
 
       Klicka på Slutför för att lägga till säkerhetsobjektet i säkerhetsprofilen.
 
 1. Klicka på Slutför för att slutföra konfigurationen.
 
-## Konfigurera de AEM som ingår i en arkivfil {#configure-the-aem-forms-that-are-part-of-an-archive-file}
+## Konfigurera AEM som ingår i en arkivfil {#configure-the-aem-forms-that-are-part-of-an-archive-file}
 
 1. I administrationskonsolen klickar du på Tjänster > Program och tjänster > Programhantering och sedan på fliken Aktiviteter.
 1. På sidan Arkivhantering väljer du den arkivfil som ska konfigureras.
 1. På sidan Visa arkiv väljer du den markerade arkivresursen.
 1. Konfigurera den importerade processarkivfilen.
 
-## Använd konfigurationsguiden för att konfigurera AEM formulär som ingår i en arkivfil {#use-the-configuration-wizard-to-configure-the-aem-forms-that-are-part-of-an-archive-file}
+## Använd konfigurationsguiden för att konfigurera AEM som ingår i en arkivfil {#use-the-configuration-wizard-to-configure-the-aem-forms-that-are-part-of-an-archive-file}
 
 1. I administrationskonsolen klickar du på Tjänster > Program och tjänster > Programhantering och sedan på fliken Aktiviteter.
 1. Klicka på Konfigurera bredvid den arkivfil som ska konfigureras.
 1. Sidan Konfigurera slutpunkter visas där du kan göra de ändringar du behöver:
 
    * Om du vill byta namn på en slutpunkt eller redigera dess beskrivning klickar du på den.
-   * Om du vill lägga till en Task Manager-slutpunkt klickar du på Lägg till TaskManager. Mer information om inställningar för Task Manager finns i [Konfigurera slutpunkter för Task Manager](/help/forms/using/admin-help/configuring-task-manager-endpoints.md#configuring-task-manager-endpoints).
-   * Om du vill lägga till en bevakad mappslutpunkt klickar du på Lägg till bevakad mapp. Mer information om inställningarna för bevakad mapp finns i [Inställningar för övervakad mappslutpunkt](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md#watched-folder-endpoint-settings).
+   * Om du vill lägga till en Task Manager-slutpunkt klickar du på Lägg till TaskManager. Mer information om inställningar för Task Manager finns i [Konfigurera slutpunkter för Aktivitetshanteraren](/help/forms/using/admin-help/configuring-task-manager-endpoints.md#configuring-task-manager-endpoints).
+   * Om du vill lägga till en bevakad mappslutpunkt klickar du på Lägg till bevakad mapp. Mer information om inställningarna för bevakad mapp finns i [Slutpunktsinställningar för bevakad mapp](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md#watched-folder-endpoint-settings).
    * Om du vill lägga till en e-postslutpunkt klickar du på Lägg till e-post. Mer information om e-postinställningarna finns i [Inställningar för e-postslutpunkt](/help/forms/using/admin-help/configuring-email-endpoints.md#email-endpoint-settings).
    * Om du vill lägga till en EJB-slutpunkt klickar du på Lägg till EJB och anger ett namn och en beskrivning för slutpunkten.
    * Om du vill lägga till en SOAP-slutpunkt klickar du på Lägg till SOAP och anger ett namn och en beskrivning för slutpunkten.
-   * Om du vill lägga till en fjärrslutpunkt klickar du på Lägg till fjärranslutning. Mer information om fjärrinställningar finns i [Fjärrinställningar](/help/forms/using/admin-help/configuring-remoting-endpoints.md#remoting-endpoint-settings).
+   * Om du vill lägga till en fjärrslutpunkt klickar du på Lägg till fjärranslutning. Mer information om fjärrinställningar finns i [Tar bort slutpunktsinställningar](/help/forms/using/admin-help/configuring-remoting-endpoints.md#remoting-endpoint-settings).
    * Om du vill lägga till en REST-slutpunkt klickar du på Lägg till REST och anger ett namn och en beskrivning för slutpunkten. Anteckna den URL för REST-anrop som visas på sidan Lägg till REST-slutpunkt.
    * Om du vill ta bort en slutpunkt markerar du kryssrutan bredvid den och klickar på Ta bort.
 
@@ -123,15 +122,15 @@ Använd fliken Arkiv för att importera och hantera LCA:er som har skapats i Wor
 
    * **Kräv att anropare autentiserar:** Den här inställningen anger om tjänsten kan anropas med eller utan autentiseringsuppgifter.
 
-      Om *anropare krävs för att autentisera* visas, måste anroparen till tjänsten autentiseras och uppringarens huvudnamn måste ha behörighet att anropa tjänsten. I annat fall avvisas anropsförsöket. Klicka på Tillåt oautentiserade anropare för att ta bort behovet av autentisering.
+      If *Uppringare måste för närvarande autentisera* visas, uppringaren av tjänsten måste autentiseras och uppringarens huvudnamn måste vara auktoriserat att anropa tjänsten, I annat fall avvisas anropsförsöket. Klicka på Tillåt oautentiserade anropare för att ta bort behovet av autentisering.
 
-      Om *anropare inte behöver autentisera* visas kan anroparen av tjänsten vara autentiserad eller inte. Anropet av tjänsten lyckas alltid eftersom det inte finns någon auktoriseringskontroll. Klicka på Kräv att anropare autentiserar för att begära autentisering.
+      If *Uppringare behöver inte autentisera* visas kan anroparen av tjänsten vara autentiserad eller inte vara det. Anropet av tjänsten lyckas alltid eftersom det inte finns någon auktoriseringskontroll. Klicka på Kräv att anropare autentiserar för att begära autentisering.
 
-   * **Kör som:** Anger den körtidsidentitet som används av en tjänst efter att den har anropats. Klicka på Ändra om du vill ändra det här alternativet. Välj bland följande alternativ:
+   * **Kör som:** Anger den körningsidentitet som används av en tjänst efter att den har anropats. Klicka på Ändra om du vill ändra det här alternativet. Välj bland följande alternativ:
 
       **Ospecificerad:** Standardbeteendet används.
 
-      **Anrop:** Använder samma identitet som användaren som anropade tjänsten.
+      **Anropare:** Använder samma identitet som användaren som anropade tjänsten.
 
       **System:** Kör tjänsten med fullständig behörighet. Det här är standardinställningen för långvariga processer.
 
@@ -139,7 +138,7 @@ Använd fliken Arkiv för att importera och hantera LCA:er som har skapats i Wor
 
    * Om du vill lägga till ett huvudnamn i säkerhetsprofilen klickar du på Lägg till huvudnamn och väljer den användare eller grupp som ska läggas till som huvudnamn. Klicka på Nästa och välj sedan de behörigheter du vill tilldela detta huvudkonto:
 
-      **INVOKE_PERM:** Anropa alla åtgärder på tjänsten
+      **INVOKE_PERM:** Så här anropar du alla åtgärder på tjänsten
 
       **MODIFY_CONFIG_PERM:** Ändra konfigurationen för en tjänst
 
@@ -151,11 +150,11 @@ Använd fliken Arkiv för att importera och hantera LCA:er som har skapats i Wor
 
       **CREATE_VERSION_PERM:** Skapa en ny version av tjänsten
 
-      **DELETE_VERSION_PERM:** Ta bort en version av tjänsten
+      **DELETE_VERSION_PERM:** Så här tar du bort en version av tjänsten
 
       **MODIFY_VERSION_PERM:** Ändra en version av tjänsten
 
-      **READ_PERM:** Visa tjänsten
+      **READ_PERM:** Så här visar du tjänsten
 
       Klicka på Slutför för att lägga till säkerhetsobjektet i säkerhetsprofilen.
 
@@ -167,4 +166,3 @@ Använd fliken Arkiv för att importera och hantera LCA:er som har skapats i Wor
 
 1. I administrationskonsolen klickar du på Tjänster > Program och tjänster > Arkivhantering.
 1. Markera kryssrutan för arkivet som ska tas bort på sidan Arkivhantering och klicka på Ta bort.
-

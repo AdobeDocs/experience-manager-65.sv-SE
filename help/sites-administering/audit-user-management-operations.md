@@ -1,8 +1,8 @@
 ---
 title: Granska åtgärder för användarhantering i AEM
-seo-title: Granska åtgärder för användarhantering i AEM
+seo-title: How to Audit User Management Operations in AEM
 description: Lär dig hur du granskar åtgärder för användarhantering i AEM.
-seo-description: Lär dig hur du granskar åtgärder för användarhantering i AEM.
+seo-description: Learn how to audit User Management Operations in AEM.
 uuid: 9d177afb-172c-4858-a678-254c97cfa472
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,11 +12,10 @@ discoiquuid: ba6a56e5-b91c-4779-9154-d4300b2827f8
 docset: aem65
 exl-id: 7a4406c9-2f98-4bf8-b32c-1ec1e7ff36f0
 feature: Operations
-translation-type: tm+mt
 source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
 workflow-type: tm+mt
-source-wordcount: '326'
-ht-degree: 1%
+source-wordcount: '308'
+ht-degree: 0%
 
 ---
 
@@ -32,22 +31,22 @@ Förbättringen möjliggör granskning av CRUD-åtgärder (Skapa, Läs, Uppdater
 * En användare läggs till i en grupp
 * Behörighetsändringar för en befintlig användare eller grupp
 
-Som standard skrivs posterna i `error.log`-filen. För att underlätta övervakningen rekommenderar vi att de dirigeras om till en separat loggfil. Mer information om hur du gör detta i stycket nedan.
+Som standard skrivs posterna till `error.log` -fil. För att underlätta övervakningen rekommenderar vi att de dirigeras om till en separat loggfil. Mer information om hur du gör detta i stycket nedan.
 
 ## Omdirigera utdata till en separat loggfil {#redirecting-the-output-to-a-separate-log-file}
 
-Om du vill omdirigera loggningsutdata till en separat loggfil måste du skapa en ny **konfiguration för Apache Sling Logging Logger**. Vi använder `useraudit.log` som namn på den separata filen i exemplet nedan.
+Om du vill omdirigera loggningsutdata till en separat loggfil måste du skapa en ny **Loggningsloggare för Apache Sling** konfiguration. Vi använder `useraudit.log` som namnet på den separata filen i exemplet nedan.
 
-1. Gå till webbkonsolen genom att gå till *https://serveraddress:serverport/system/console/configMgr*
-1. Sök efter **Loggningskonfiguration för Apache Sling**. Tryck sedan på + till höger om posten för att skapa en ny fabrikskonfiguration.
+1. Gå till webbkonsolen genom att bläddra till *https://serveraddress:serverport/system/console/configMgr*
+1. Sök efter **Konfiguration av loggningsloggare för Apache Sling**. Tryck sedan på + till höger om posten för att skapa en ny fabrikskonfiguration.
 1. Skapa följande konfiguration:
 
-   * **loggnivå:** information
-   * **loggfil:** logs/useraudit.log
+   * **Loggnivå:** Information
+   * **Loggfil:** logs/useraudit.log
    * **Meddelandemönster:** standardnivå
    * **Logger:** com.adobe.granite.security.user.internal.audit, com.adobe.granite.security.user.internal.servlets.AuthorizableServlet
 
-   Om du vill ange båda loggarna i fältet **Logger** måste du ange namnet på den första, sedan skapa ett annat fält genom att trycka på plusknappen (+) och ange namnet på den andra loggen.
+   För att kunna ange båda loggarna i **Logger** måste du ange namnet på den första, sedan skapa ett annat fält genom att trycka på plusknappen (+) och ange namnet på den andra loggaren.
 
 ## Exempelutdata {#example-output}
 
@@ -83,7 +82,7 @@ Om utdata är korrekt konfigurerade bör de se ut så här:
 19.05.2017 15:44:10.405 *INFO* [0:0:0:0:0:0:0:1 [1495197850401] POST /home/users/3/35XVpVtLRx4a5J9gKrVG.rw.userprops.html HTTP/1.1] com.adobe.granite.security.user.internal.audit.AuditAuthorizableAction Password for User 'john' was changed
 ```
 
-## Klassiskt gränssnitt {#classic-ui}
+## Klassiskt användargränssnitt {#classic-ui}
 
 I det klassiska användargränssnittet är information om CRUD-åtgärder som registreras i granskningsloggen för att lägga till och ta bort användare begränsad till ID:t för den användare som påverkas och när ändringen inträffade.
 

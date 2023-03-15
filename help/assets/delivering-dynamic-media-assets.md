@@ -10,10 +10,10 @@ discoiquuid: e3b44330-d476-49c6-b7ba-079d0d60e500
 docset: aem65
 role: User, Admin
 exl-id: 274af114-845a-46bd-b091-802cf589687a
-feature: Resurshantering,Återgivningar
+feature: Asset Management,Renditions
 source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
 workflow-type: tm+mt
-source-wordcount: '313'
+source-wordcount: '310'
 ht-degree: 1%
 
 ---
@@ -29,11 +29,11 @@ Med Dynamic Media har du flera alternativ:
 
    * Bädda in videon eller bilden på webbplatsen.
    * Länka URL:er till webbprogrammet. Använd länkning när du vill leverera en videospelare som ett popup-fönster eller modalt fönster.
-   * Om webbplatsen är responsiv kan du [leverera optimerade bilder](/help/assets/responsive-site.md).
+   * Om din webbplats är responsiv kan du [leverera optimerade bilder](/help/assets/responsive-site.md).
 
 >[!NOTE]
 >
->Smart bildbehandling fungerar med befintliga bildförinställningar och använder intelligens under de sista millisekunderna i leveransen för att ytterligare minska bildfilens storlek baserat på webbläsarens eller nätverkets anslutningshastighet. Mer information finns i [Smart bildbehandling](/help/assets/imaging-faq.md).
+>Smart bildbehandling fungerar med befintliga bildförinställningar och använder intelligens under de sista millisekunderna i leveransen för att ytterligare minska bildfilens storlek baserat på webbläsarens eller nätverkets anslutningshastighet. Se [Smart bildbehandling](/help/assets/imaging-faq.md) för mer information.
 
 Mer information finns i följande avsnitt:
 
@@ -51,4 +51,4 @@ Mer information finns i följande avsnitt:
 
 Experience Manager stöder nu leverans av allt Dynamic Media-innehåll (bilder och video) via HTTP/2. Det betyder att en publicerad URL eller inbäddningskod för bilden eller videon är tillgänglig för integrering med alla program som accepterar en värdbaserad resurs. Den publicerade resursen levereras sedan via HTTP/2-protokollet. Den här leveransmetoden förbättrar kommunikationen mellan webbläsare och servrar, vilket ger bättre respons och laddningstider för alla dina Dynamic Media-resurser.
 
-Mer information finns i [HTTP/2-leverans av innehåll, vanliga frågor och svar](/help/sites-administering/scene7-http2faq.md).
+Mer information finns på [HTTP/2-leverans av innehåll, vanliga frågor och svar](/help/sites-administering/scene7-http2faq.md).

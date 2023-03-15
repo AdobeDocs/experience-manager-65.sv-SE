@@ -143,7 +143,7 @@ Mer information om noderna och deras egenskaper är:
     </tr>
     <tr>
      <td><code>version</code></td>
-     <td><p><code>Long</code></p> <p>obligatoriskt</p> </td>
+     <td><p><code>Long</code></p> <p>required</p> </td>
      <td><p>Innehållsstrukturens version. stöds för närvarande:</p> <p><strong>Anteckning</strong>: för närvarande måste den här parametern anges till <code>2</code>.<br /> </p> </td>
     </tr>
    </tbody>
@@ -160,7 +160,7 @@ Mer information om noderna och deras egenskaper är:
     </tr>
     <tr>
      <td><code>elements</code> </td>
-     <td><p><code>nt:unstructured</code></p> <p>obligatoriskt</p> </td>
+     <td><p><code>nt:unstructured</code></p> <p>required</p> </td>
      <td><p>En nod som innehåller definitionen av elementen i innehållsfragmentet. Det är obligatoriskt och måste innehålla minst en underordnad nod för <strong>Huvud</strong> -element, men kan innehålla [1..n] underordnade noder.</p> <p>När mallen används kopieras elementundergrenen till fragmentets modellundergren.</p> <p>Det första elementet (som det visas i CRXDE Lite) anses automatiskt vara <i>main</i> element, nodnamnet är irrelevant och noden i sig inte har någon särskild betydelse, förutom det faktum att den representeras av huvudtillgången, övriga element hanteras som undertillgångar.</p> </td>
     </tr>
    </tbody>
@@ -182,7 +182,7 @@ Mer information om noderna och deras egenskaper är:
     </tr>
     <tr>
      <td><code>jcr:title</code></td>
-     <td><p><code>String</code></p> <p>obligatoriskt</p> </td>
+     <td><p><code>String</code></p> <p>required</p> </td>
      <td>Elementets rubrik (visas i fragmentredigerarens elementväljare).</td>
     </tr>
     <tr>
@@ -202,7 +202,7 @@ Mer information om noderna och deras egenskaper är:
     </tr>
     <tr>
      <td><code>name</code></td>
-     <td><p><code>String</code></p> <p>obligatoriskt</p> </td>
+     <td><p><code>String</code></p> <p>required</p> </td>
      <td>Elementets interna namn. måste vara unik för fragmenttypen.</td>
     </tr>
    </tbody>
@@ -242,12 +242,12 @@ Mer information om noderna och deras egenskaper är:
     </tr>
     <tr>
      <td><code>jcr:title</code></td>
-     <td><p><code>String</code></p> <p>obligatoriskt</p> </td>
+     <td><p><code>String</code></p> <p>required</p> </td>
      <td>Variantens titel (visas i fragmentredigerarens <strong>Variation</strong> tabbtangenten.</td>
     </tr>
     <tr>
      <td><code>jcr:desciption</code></td>
-     <td><p><code>String</code></p> <p>valfritt</p> <p>standard: ""</p> </td>
+     <td><p><code>String</code></p> <p>valfritt</p> <p>default: ""</p> </td>
      <td>En text som innehåller en beskrivning av variationen <span>(visas i fragmentredigerarens <strong>Variation</strong> tabbtangenten.</code></td>
     </tr>
    </tbody>

@@ -1,8 +1,8 @@
 ---
 title: Konfigurera layoutbehållare och layoutläge
-seo-title: Konfigurera layoutbehållare och layoutläge
+seo-title: Configuring Layout Container and Layout Mode
 description: Lär dig hur du konfigurerar layoutbehållaren och layoutläget.
-seo-description: Lär dig hur du konfigurerar layoutbehållaren och layoutläget.
+seo-description: Learn how to configure Layout Container and Layout Mode.
 uuid: 952b7c86-76ab-4699-8530-8638e46bb50f
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,30 +10,29 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 10940000-808a-48ae-8e46-61eccef71eab
 legacypath: /content/docs/en/aem/6-2/administer/operations/page-authoring/configuring-responsive-layouting
-translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+exl-id: 61152b2d-4c0b-4cfd-9669-cf03d32cb7c7
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1324'
+source-wordcount: '1309'
 ht-degree: 1%
 
 ---
 
+# Konfigurera layoutbehållare och layoutläge{#configuring-layout-container-and-layout-mode}
 
-# Konfigurerar layoutbehållaren och layoutläget{#configuring-layout-container-and-layout-mode}
-
-[Responsiv ](/help/sites-authoring/responsive-layout.md) layout är en mekanism för att förverkliga  [responsiv webbdesign](https://en.wikipedia.org/wiki/Responsive_web_design). På så sätt kan användaren skapa webbsidor som har en layout och dimensioner som är beroende av vilka enheter som användarna använder.
+[Responsiv layout](/help/sites-authoring/responsive-layout.md) är en mekanism för att implementera [responsiv webbdesign](https://en.wikipedia.org/wiki/Responsive_web_design). På så sätt kan användaren skapa webbsidor som har en layout och dimensioner som är beroende av vilka enheter som användarna använder.
 
 >[!NOTE]
 >
->Detta kan jämföras med funktionerna [Mobile Web](/help/sites-developing/mobile-web.md) som använder adaptiv webbdesign (främst för det klassiska användargränssnittet).
+>Detta kan jämföras med [Mobil webb](/help/sites-developing/mobile-web.md) som använder adaptiv webbdesign (främst för det klassiska användargränssnittet).
 
 AEM realiserar responsiv layout för dina sidor med en kombination av mekanismer:
 
-* [**Layout**](/help/sites-authoring/responsive-layout.md#adding-a-layout-container-and-its-content-edit-mode) Container-komponent
+* [**Layoutbehållare**](/help/sites-authoring/responsive-layout.md#adding-a-layout-container-and-its-content-edit-mode) komponent
 
    Den här komponenten har ett rutnätsstyckesystem där du kan lägga till och placera komponenter i ett responsivt rutnät. Den kan användas som standardparsyta för sidan och/eller göras tillgänglig för författare i komponentwebbläsaren.
 
-   * Standardkomponenten för **Layoutbehållare** definieras under:
+   * Standardvärdet **Layoutbehållare** -komponenten definieras under:
 
       /libs/wcm/foundation/components/responsivegrid
 
@@ -46,15 +45,15 @@ AEM realiserar responsiv layout för dina sidor med en kombination av mekanismer
          Du kan ha layoutbehållaren som standard för sidan, samtidigt som användaren kan lägga till fler layoutbehållare i den här versionen. till exempel för att uppnå kolumnkontroll.
 
 * **[Layoutläge](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode)**
-När layoutbehållaren har placerats på sidan kan du använda 
-**I** layoutläget kan du placera innehåll i det responsiva rutnätet.
+När layoutbehållaren är placerad på sidan kan du använda 
+**Layout** läge för att placera innehåll i det responsiva rutnätet.
 
-* [****](/help/sites-authoring/responsive-layout.md#selecting-a-device-to-emulate)
-EmulatorMed den här funktionen kan du skapa och redigera responsiva webbplatser som ordnar om layouten enligt enhetens/fönstrets storlek genom att ändra storlek på komponenterna interaktivt. Användaren kan sedan se hur innehållet återges med hjälp av emulatorn.
+* [**Emulator**](/help/sites-authoring/responsive-layout.md#selecting-a-device-to-emulate)
+På så sätt kan du skapa och redigera responsiva webbplatser som ändrar layouten efter enhetens/fönstrets storlek genom att ändra komponenternas storlek interaktivt. Användaren kan sedan se hur innehållet återges med hjälp av emulatorn.
 
 >[!CAUTION]
 >
->Även om komponenten **Layoutbehållare** är tillgänglig i det klassiska användargränssnittet, är dess fullständiga funktioner bara tillgängliga i det beröringsaktiverade användargränssnittet.
+>Även om **Layoutbehållare** finns i det klassiska användargränssnittet. Dess fullständiga funktionalitet finns bara i det beröringskänsliga användargränssnittet.
 
 Med dessa responsiva rutnätsmekanismer kan du:
 
@@ -65,27 +64,27 @@ Med dessa responsiva rutnätsmekanismer kan du:
 
 >[!NOTE]
 >
->I en körklar installation har responsiv layout konfigurerats för [webbbutikens referensplats](/help/sites-developing/we-retail.md). Du måste fortfarande [aktivera layoutbehållarkomponenten](#enable-the-layout-container-component-for-page) för andra sidor.
+>I en körklar installation har responsiv layout konfigurerats för [Referensplats för Vi.butik](/help/sites-developing/we-retail.md). Du måste fortfarande [aktivera komponenten Layoutbehållare](#enable-the-layout-container-component-for-page) för andra sidor.
 
 ## Konfigurera den responsiva emulatorn {#configuring-the-responsive-emulator}
 
-Med de här åtgärderna kan du se den responsiva **emulatorn** på din plats.
+Med de här åtgärderna kan du se de responsiva **Emulator** på din webbplats.
 
 ### Registrera dina sidkomponenter för emulering {#register-your-page-components-for-emulation}
 
-Om du vill att emulatorn ska ha stöd för dina sidor måste du registrera sidkomponenterna. Se [Registrera sidkomponenter för simulering](/help/sites-developing/responsive.md#registering-page-components-for-simulation).
+Om du vill att emulatorn ska ha stöd för dina sidor måste du registrera sidkomponenterna. Se [Registrerar sidkomponenter för simulering](/help/sites-developing/responsive.md#registering-page-components-for-simulation).
 
-### Ange enhetsgrupperna {#specify-the-device-groups}
+### Ange enhetsgrupper {#specify-the-device-groups}
 
-Information om hur du anger vilka enhetsgrupper som visas i emulatorns enhetslista finns i [Ange enhetsgrupper](/help/sites-developing/responsive.md#specifying-the-device-groups).
+Information om hur du anger enhetsgrupperna som visas i emulatorns enhetslista finns i [Ange enhetsgrupper](/help/sites-developing/responsive.md#specifying-the-device-groups).
 
 ### Länka platsen till de angivna enhetsgrupperna {#link-your-site-to-the-specified-device-groups}
 
-Om du vill inkludera emulatorn måste du länka din plats till enhetsgrupperna. Se [Lägga till enhetslistan](/help/sites-developing/responsive.md#adding-the-devices-list) (för både det klassiska och pekoptimerade gränssnittet).
+Om du vill inkludera emulatorn måste du länka din plats till enhetsgrupperna. Se [Lägga till enhetslistan](/help/sites-developing/responsive.md#adding-the-devices-list) (för både det klassiska och pekoptimerade användargränssnittet).
 
-## Aktivera layoutläge för platsen {#activate-layout-mode-for-your-site}
+## Aktivera layoutläge för webbplatsen {#activate-layout-mode-for-your-site}
 
-Dessa procedurer används för att aktivera läget **Layout** på din plats.
+Dessa procedurer används för att aktivera **Layout** läge på din webbplats.
 
 ### Konfigurera brytpunkterna {#configure-the-breakpoints}
 
@@ -104,7 +103,7 @@ Dessa procedurer används för att aktivera läget **Layout** på din plats.
 
 * Är synliga som markörer högst upp i sidredigeraren när du använder emulatorn.
 * Ärvs från den överordnade nodhierarkin och kan åsidosättas när som helst.
-* Det finns en standardbrytpunkt (som inte finns i lådan) som täcker allt ovanför den sista *konfigurerade*-brytpunkten.
+* Det finns en standardbrytpunkt som täcker allt ovanför den sista *konfigurerad* brytpunkt.
 
 De kan definieras med CRXDE Lite eller XML.
 
@@ -114,24 +113,21 @@ De kan definieras med CRXDE Lite eller XML.
 >
 >* du behöver lägga till brytpunkter i mallarna.
 >
->
-Om du migrerar ett befintligt projekt (med befintligt innehåll) måste du:
+>Om du migrerar ett befintligt projekt (med befintligt innehåll) måste du:
 >
 >* lägga till brytpunkter i mallar
 >* lägga till samma brytpunkter på befintliga sidor
-
 >
->  
-När arv används kan du begränsa detta till innehållets rotsida.
+>  När arv används kan du begränsa detta till innehållets rotsida.
 
 #### Konfigurera brytpunkter med CRXDE Lite {#configuring-breakpoints-using-crxde-lite}
 
 1. Använd CRXDE Lite (eller motsvarande) för att navigera till:
 
    * Din malldefinition.
-   * Sidans `jcr:content`-nod.
+   * The `jcr:content` sidans nod.
 
-1. Skapa noden under `jcr:content`:
+1. Under `jcr:content` skapa noden:
 
    * Namn: `cq:responsive`
    * Typ: `nt:unstructured`
@@ -150,7 +146,7 @@ När arv används kan du begränsa detta till innehållets rotsida.
 
 #### Konfigurera brytpunkter med XML {#configuring-breakpoints-using-xml}
 
-Brytpunkter finns i `<jcr:content>`-avsnittet i `.context.html` under rätt mallmapp (eller innehållsmapp).
+Brytpunkterna finns innanför `<jcr:content>` i `.context.html` under lämplig mallmapp (eller innehållsmapp).
 
 En exempeldefinition:
 
@@ -163,19 +159,19 @@ En exempeldefinition:
 </cq:responsive>
 ```
 
-### Lägg till en provider för responsiv information {#add-a-responsive-information-provider}
+### Lägg till en leverantör av responsiv information {#add-a-responsive-information-provider}
 
 >[!NOTE]
 >
 >Detta behövs bara om sidkomponenten inte är baserad på bassidans komponent.
 
-Kopiera följande `cq:infoProviders`-nodstruktur till den överordnade sidkomponenten:
+Kopiera följande `cq:infoProviders` nodstruktur i den överordnade sidkomponenten:
 
 `/libs/foundation/components/page/cq:infoProviders/responsive`
 
 ## Aktivera komponentstorleksändring för sidan {#enable-component-resizing-for-the-page}
 
-Dessa procedurer krävs så att du kan ändra storlek på komponenter i **Layout**-läget.
+Dessa procedurer krävs så att du kan ändra storlek på komponenter i **Layout** läge.
 
 ### Ange layoutbehållare som huvudparsys {#set-layout-container-as-main-parsys}
 
@@ -208,7 +204,7 @@ I följande två exempel visas definitionen:
 
 AEM använder LESS för att generera delar av den CSS som behövs, och dessa måste inkluderas i dina projekt.
 
-Du måste också skapa ett [klientbibliotek](https://docs.adobe.com/content/docs/en/aem/6-0/develop/the-basics/clientlibs.html) för att kunna tillhandahålla ytterligare konfigurations- och funktionsanrop. Följande LESS-extrakt är ett exempel på det minsta du behöver lägga till i ditt projekt:
+Du måste också skapa en [klientbibliotek](https://docs.adobe.com/content/docs/en/aem/6-0/develop/the-basics/clientlibs.html) för att tillhandahålla ytterligare konfigurations- och funktionsanrop. Följande LESS-extrakt är ett exempel på det minsta du behöver lägga till i ditt projekt:
 
 ```java
 @import (once) "/libs/wcm/foundation/clientlibs/grid/grid_base.less";
@@ -240,9 +236,9 @@ Basrutnätsdefinitionen finns under:
 
 `/libs/wcm/foundation/clientlibs/grid/grid_base.less`
 
-#### Formatöverväganden {#styling-considerations}
+#### Fundera på formatering {#styling-considerations}
 
-Komponenter som finns i en responsiv behållare ändrar storlek (tillsammans med deras respektive HTML DOM-element) beroende på stödrastrets responsiva storlek. Därför bör du under dessa omständigheter undvika (eller uppdatera) definitioner av DOM-element med fast bredd (som finns).
+Storleken på komponenter som finns i en responsiv behållare ändras (tillsammans med deras respektive HTML DOM-element) enligt den responsiva stödrasterstorleken. Därför bör du under dessa omständigheter undvika (eller uppdatera) definitioner av DOM-element med fast bredd (som finns).
 
 Till exempel:
 
@@ -264,7 +260,7 @@ Om du ändrar storlek på en komponent i rutnätet utlöses följande avlyssnare
 
 * `afterchildedit`
 
-Om du vill ändra storlek på och uppdatera innehållet i en adaptiv bild som ingår i ett responsivt stödraster måste du lägga till en `afterEdit`-uppsättning som är `REFRESH_PAGE`-avlyssnare i `EditConfig`-filen för alla ingående komponenter.
+Om du vill ändra storlek på och uppdatera innehållet i en adaptiv bild som ingår i ett responsivt rutnät måste du lägga till en `afterEdit` ange till `REFRESH_PAGE` avlyssnare i `EditConfig` fil för alla ingående komponenter.
 
 Till exempel:
 
@@ -278,7 +274,7 @@ Den adaptiva bildmekanismen görs tillgänglig via ett skript som styr valet av 
 
 ## Aktivera layoutbehållarkomponenten för sidan {#enable-the-layout-container-component-for-page}
 
-Med de här åtgärderna kan författare dra instanser av komponenten **Layoutbehållare** till sidan.
+Med dessa uppgifter kan författare dra instanser av **Layoutbehållare** på sidan.
 
 ### Aktivera layoutbehållarkomponenten för sidredigering {#enable-the-layout-container-component-for-page-editing}
 
@@ -286,11 +282,11 @@ Om du vill att författare ska kunna lägga till fler responsiva rutnät på inn
 
 * **Författarmiljö**
 
-   Använd [designläget](/help/sites-authoring/default-components-designmode.md) för att aktivera komponenten **Lagerbehållare** för en sida.
+   Använd [Designläge](/help/sites-authoring/default-components-designmode.md) för att aktivera **Lagerbehållare** -komponent för en sida.
 
 * **Komponentdefinition**
 
-   Använd `allowedComponent` eller en statisk include när du definierar komponenten.
+   Använd `allowedComponent` eller en statisk include när komponenten definieras.
 
 ### Konfigurera stödrastret för layoutbehållaren {#configure-the-grid-of-the-layout-container}
 
@@ -300,7 +296,7 @@ Du kan konfigurera antalet kolumner som är tillgängliga för varje särskild i
 
    Du kan konfigurera antalet kolumner som är tillgängliga för varje enskild instans av layoutbehållaren.
 
-   Det gör du genom att använda [designläge](/help/sites-authoring/default-components-designmode.md) och sedan öppna designdialogrutan för önskad behållare. Här kan du ange hur många kolumner som ska vara tillgängliga för placering och storleksändring. Standardvärdet är 12.
+   Om du vill göra det använder du [Designläge](/help/sites-authoring/default-components-designmode.md)öppnar du sedan designdialogrutan för önskad behållare. Här kan du ange hur många kolumner som ska vara tillgängliga för placering och storleksändring. Standardvärdet är 12.
 
 1. **XML**
 
@@ -316,5 +312,3 @@ Du kan konfigurera antalet kolumner som är tillgängliga för varje särskild i
    * Komponenter som kan läggas till i den aktuella komponenten:
 
       * `components="[/libs/wcm/foundation/components/responsivegrid, ...`
-
-

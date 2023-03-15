@@ -1,30 +1,29 @@
 ---
 title: API:er för att arbeta med inskickade formulär på formulärportalen
-seo-title: API:er för att arbeta med inskickade formulär på formulärportalen
+seo-title: APIs to work with submitted forms on forms portal
 description: AEM Forms tillhandahåller API:er som du kan använda för att fråga efter och vidta åtgärder för skickade formulärdata i formulärportalen.
-seo-description: AEM Forms tillhandahåller API:er som du kan använda för att fråga efter och vidta åtgärder för skickade formulärdata i formulärportalen.
+seo-description: AEM Forms provides APIs that you can use to query and take actions on submitted forms data in forms portal.
 uuid: c47c8392-e5a9-4c40-b65e-4a7f379a6b45
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish, developer-reference
 discoiquuid: 9457effd-3595-452f-a976-ad9eda6dc909
 feature: Forms Portal
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: a685889e-5d24-471c-926d-dbb096792bc8
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '541'
 ht-degree: 5%
 
 ---
 
-
-# API:er för att arbeta med skickade formulär på formulärportalen {#apis-to-work-with-submitted-forms-on-forms-portal}
+# API:er för att arbeta med inskickade formulär på formulärportalen {#apis-to-work-with-submitted-forms-on-forms-portal}
 
 AEM Forms tillhandahåller API:er som du kan använda för att fråga efter formulärdata som skickas via formulärportalen. Dessutom kan du publicera kommentarer eller uppdatera egenskaper för skickade formulär med de API:er som beskrivs i det här dokumentet.
 
 >[!NOTE]
 >
->Användare som ska anropa API:erna måste läggas till i granskningsgruppen enligt beskrivningen i [Associera granskare som skickar in till ett formulär](/help/forms/using/adding-reviewers-form.md).
+>Användare som anropar API:erna måste läggas till i gruppen för granskare enligt beskrivningen i [Koppla granskare som skickar in svar till ett formulär](/help/forms/using/adding-reviewers-form.md).
 
 ## GET /content/forms/portal/submission.review.json?func=getFormsForSubmissionReview {#get-content-forms-portal-submission-review-json-func-getformsforsubmissionreview-br}
 
@@ -92,7 +91,7 @@ Ange följande parametrar i begärande-URL:
   </tr>
   <tr>
    <td><code>sort</code> <br /> (valfritt)</td>
-   <td>Anger sorteringsordningen för resultat. Standardvärdet är <strong>desc</strong>, vilket sorterar resultatet i fallande ordning. Du kan ange <code>asc</code> om du vill sortera resultaten i stigande ordning.</td>
+   <td>Anger sorteringsordningen för resultat. Standardvärdet är <strong>desc</strong>, vilket sorterar resultatet i fallande ordning. Du kan ange <code>asc</code> om du vill sortera resultatet i stigande ordning.</td>
   </tr>
   <tr>
    <td><code>cutPoints</code> <br /> (valfritt)</td>
@@ -230,4 +229,3 @@ https://[host]:'port'/content/forms/portal/submission.review.json?func=updateSub
 ```json
 {"formName":"form2","owner":"admin","jcr:lastModified":1446727516593,"path":"/content/forms/fp/admin/submit/metadata/1403037413508500.html","submitID":"1403037413508500","status":"submitted"}
 ```
-

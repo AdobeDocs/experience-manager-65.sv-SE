@@ -1,24 +1,23 @@
 ---
 title: Anpassning av varumärkesprofilering
-seo-title: Anpassning av varumärkesprofilering
+seo-title: Branding Customization
 description: Anpassa programikonen, programnamnet, startbilderna och inloggningssidan för att ge AEM Forms-appen ett distinkt utseende och känsla.
-seo-description: Anpassa programikonen, programnamnet, startbilderna och inloggningssidan för att ge AEM Forms-appen ett distinkt utseende och känsla.
+seo-description: Customize the application icon, application name, launch images, and login page to provide a distinct organization-specific look and feel to AEM Forms app.
 uuid: fece0fa8-c417-45eb-93f1-a91b49835fa0
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 discoiquuid: f6440a36-719a-4f89-b7db-1af918a3469a
-translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+exl-id: 9333705b-9944-4a74-a30f-7d9ec85fd824
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '897'
+source-wordcount: '872'
 ht-degree: 1%
 
 ---
 
-
-# Anpassning av varumärke {#branding-customization}
+# Anpassning av varumärkesprofilering {#branding-customization}
 
 Du kan anpassa programikonen, programnamnet, startbilderna och inloggningssidan för att ge ett tydligt organisationsspecifikt utseende för AEM Forms-programmet. Du kan till exempel ändra bilderna så att de använder logotyper från din organisation. AEM Forms-appen stöder följande anpassningar:
 
@@ -27,7 +26,7 @@ Du kan anpassa programikonen, programnamnet, startbilderna och inloggningssidan 
 * Anpassa bilder på inloggningssidan
 * Anpassa logotypen på appmenyn
 
-## Anpassa ikonen och starta bilder {#customizing-icon-and-launch-images}
+## Anpassa ikoner och starta bilder {#customizing-icon-and-launch-images}
 
 Följ de här stegen för att anpassa standardprogramikonen och startbilden för AEM Forms-programmet:
 
@@ -35,13 +34,13 @@ Följ de här stegen för att anpassa standardprogramikonen och startbilden för
 >
 >Använd icke-sammanflätade PNG-format för alla ikoner och bilder.
 
-### Anpassa ikonen och starta bilder {#to-customize-icon-and-launch-images}
+### Anpassa ikoner och starta bilder {#to-customize-icon-and-launch-images}
 
 #### För iOS {#for-ios}
 
-1. Öppna `Capture.xcodeproj`-projektet i Xcode.
-1. (***Om du vill anpassa ikonen***) Navigera till **[!UICONTROL Capture > Capture > Supporting Files > Capture-info.plist]** i navigeringsvyn i Capture. Klicka på listrutan bredvid ikonfilerna. Ange namnet på ikonfilen (.png) och överför filen på **[!UICONTROL Capture > Capture > Resources > icons]**. De dimensioner som stöds för närvarande är: 29x29, 50x50, 58x58, 72x72, 100x100 och 144x144.
-1. (***För anpassning av startbilder***) Kontrollera att filnamnen för dina bilder är:
+1. Öppna `Capture.xcodeproj` projekt i Xcode.
+1. (***Ikon för anpassning***) I navigeringsvyn i Capture navigerar du till **[!UICONTROL Capture > Capture > Supporting Files > Capture-info.plist]**. Klicka på listrutan bredvid ikonfilerna. Ange namnet på ikonfilen (.png) och överför filen på **[!UICONTROL Capture > Capture > Resources > icons]**. De dimensioner som stöds för närvarande är: 29x29, 50x50, 58x58, 72x72, 100x100 och 144x144.
+1. (***För anpassning av startbilder***) Kontrollera att filnamnen för bilderna är:
 
    * För stående: `Default-Portrait~ipad.png` och `Default-Portrait@2x~ipad.png`
    * För liggande: `Default-Landscape~ipad.png` och `Default-Landscape@2x~ipad.png`
@@ -52,7 +51,7 @@ Följ de här stegen för att anpassa standardprogramikonen och startbilden för
    >
    >Kontrollera att namnet och upplösningen på bilden matchar den bild du ersätter i projektet.
 
-1. Bygg och kör AEM Forms på iOS-enheter eller iOS-simulatorer.
+1. Bygg och kör AEM Forms på iOS-enheter eller iOS-simulator.
 
 #### För Android {#for-android}
 
@@ -90,18 +89,18 @@ Följ de här stegen för att anpassa standardprogramikonen och startbilden för
 
 1. Återskapa AEM Forms-appen.
 
-## Anpassa programnamnet {#customize-the-app-name}
+## Anpassa appnamnet {#customize-the-app-name}
 
 ### För iOS {#for-ios-1}
 
-1. Öppna `Capture.xcodeproj`-projektet i Xcode.
-1. Navigera till **[!UICONTROL Capture > Capture > Supporting Files > InfoPlist.strings]** i navigeringsvyn i Capture.
+1. Öppna `Capture.xcodeproj` projekt i Xcode.
+1. Navigera i navigeringsvyn i Capture till **[!UICONTROL Capture > Capture > Supporting Files > InfoPlist.strings]**.
 
-   Uppdatera värdet för attributet `CFBundleDisplayName` till ett namn som du vill visa för programmet.
+   Uppdatera värdet för `CFBundleDisplayName` till ett namn som du vill visa för programmet.
 
-1. Bygg och kör AEM Forms på iOS-enheter eller iOS-simulatorer.
+1. Bygg och kör AEM Forms på iOS-enheter eller iOS-simulator.
 
-   Mer information om hur du skapar appen för iOS finns i [Konfigurera Xcode-projektet och skapa iOS-appen](/help/forms/using/setup-xcode-project-build-installer.md).
+   Mer information om hur du skapar appen för iOS finns i [Konfigurera Xcode-projektet och bygg iOS-appen](/help/forms/using/setup-xcode-project-build-installer.md).
 
 ### För Android {#for-android-1}
 
@@ -112,7 +111,7 @@ Följ de här stegen för att anpassa standardprogramikonen och startbilden för
 1. Uppdatera värdet för nyckeln `app_name`.
 1. Återskapa AEM Forms-appen.
 
-   Mer information om hur du skapar appen för Android finns i [Konfigurera Eclipse-projektet och skapa Android-appen](/help/forms/using/setup-eclipse-project-build-installer.md).
+   Mer information om hur du skapar appen för Android finns i [Konfigurera Eclipse-projektet och bygg Android-appen](/help/forms/using/setup-eclipse-project-build-installer.md).
 
 ### För Windows {#for-windows-1}
 
@@ -120,10 +119,10 @@ Följ de här stegen för att anpassa standardprogramikonen och startbilden för
 
    `%HOMEPATH%\adobe-lc-mobileworkspace-src-<version>\src\windows\MWSWindows\config.xml`
 
-1. Uppdatera värdet i taggen `<name>...</name>`.
+1. Uppdatera värdet i `<name>...</name>` -tagg.
 1. Återskapa AEM Forms-appen.
 
-   Mer information om hur du skapar programmet för Windows finns i [Konfigurera Visual Studio-projektet och bygg Windows-programmet](/help/forms/using/setup-visual-studio-project-build-installer.md).
+   Mer information om hur du skapar en app för Windows finns i [Konfigurera Visual Studio-projektet och bygg Windows-appen](/help/forms/using/setup-visual-studio-project-build-installer.md).
 
 ## Anpassa bilder på inloggningssidan {#customizing-images-on-the-login-page}
 
@@ -155,29 +154,29 @@ Kontrollera att du har följande bilder:
 
 **Anpassa bilder på inloggningssidan med Xcode**
 
-1. Öppna `Capture.xcodeproj`-projektet i Xcode.
+1. Öppna `Capture.xcodeproj` projekt i Xcode.
 
-1. Navigera till mappen `www/wsmobile/images`.
-1. Om du vill ändra logotyp ersätter du standardfilen `LC-logo.png` med den anpassade `LC-logo.png`-filen.
-1. Om du vill ändra bakgrunden ersätter du standardfilen `Landing_bg.jpeg` med den anpassade `Landing_bg.jpeg`filen.
-1. Bygg och kör AEM Forms på iOS-enheter eller iOS-simulatorer.
+1. Navigera till `www/wsmobile/images`mapp.
+1. Ersätt standardinställningen om du vill ändra logotyp `LC-logo.png` med den anpassade `LC-logo.png` -fil.
+1. Om du vill ändra bakgrunden ersätter du standardinställningen `Landing_bg.jpeg` med den anpassade `Landing_bg.jpeg`-fil.
+1. Bygg och kör AEM Forms på iOS-enheter eller iOS-simulator.
 
 ### Anpassa bilder på inloggningssidorna med Eclipse {#to-customize-images-on-the-login-pages-using-eclipse}
 
 1. Öppna Android-projektet i Eclipse.
 
-1. Navigera till mappen `assets/www/wsmobile/images`.
-1. Om du vill ändra logotyp ersätter du standardfilen `LC-logo.png` med den anpassade `LC-logo.png`-filen.
-1. Om du vill ändra bakgrunden ersätter du standardfilen `Landing_bg.jpeg` med den anpassade `Landing_bg.jpeg`filen.
+1. Navigera till `assets/www/wsmobile/images`mapp.
+1. Ersätt standardinställningen om du vill ändra logotyp `LC-logo.png` med den anpassade `LC-logo.png` -fil.
+1. Om du vill ändra bakgrunden ersätter du standardinställningen `Landing_bg.jpeg` med den anpassade `Landing_bg.jpeg`-fil.
 1. Bygg och kör AEM Forms på Android-enheter.
 
 ### Anpassa bilder på inloggningssidorna med Visual Studio {#to-customize-images-on-the-login-pages-using-visual-studio}
 
-1. Öppna `MWSWindows.sln`-projektet i Visual Studio.
+1. Öppna `MWSWindows.sln` i Visual Studio.
 
-1. Navigera till mappen `MWSWindows\www\wsmobile\images`.
-1. Om du vill ändra logotyp ersätter du standardfilen `LC-logo.png` med den anpassade `LC-logo.png`-filen.
-1. Om du vill ändra bakgrunden ersätter du standardfilen `Landing_bg.jpeg` med den anpassade `Landing_bg.jpeg`filen.
+1. Navigera till `MWSWindows\www\wsmobile\images`mapp.
+1. Ersätt standardinställningen om du vill ändra logotyp `LC-logo.png` med den anpassade `LC-logo.png` -fil.
+1. Om du vill ändra bakgrunden ersätter du standardinställningen `Landing_bg.jpeg` med den anpassade `Landing_bg.jpeg`-fil.
 1. Bygg och kör AEM Forms på Windows-enheter.
 
 ## Anpassa logotypen på appmenyn {#customizing_images_on_the_login_page-1}
@@ -205,24 +204,24 @@ Kontrollera att du har följande bild:
 
 **Anpassa bilder på inloggningssidan med Xcode**
 
-1. Öppna `Capture.xcodeproj`-projektet i Xcode.
+1. Öppna `Capture.xcodeproj` projekt i Xcode.
 
-1. Navigera till mappen `www/wsmobile/images`.
-1. Om du vill ändra logotypen ersätter du standardfilen `aem_icon.png` med den anpassade `aem_icon.png`-filen.
-1. Bygg och kör AEM Forms på iOS-enheter eller iOS-simulatorer.
+1. Navigera till `www/wsmobile/images`mapp.
+1. Ersätt standardinställningen om du vill ändra logotypen `aem_icon.png` med den anpassade `aem_icon.png` -fil.
+1. Bygg och kör AEM Forms på iOS-enheter eller iOS-simulator.
 
 ### Anpassa bilder på inloggningssidorna med Eclipse {#to-customize-images-on-the-login-pages-using-eclipse-1}
 
 1. Öppna Android-projektet i Eclipse.
 
-1. Navigera till mappen `assets/www/wsmobile/images`.
-1. Om du vill ändra logotypen ersätter du standardfilen `aem_icon.png` med den anpassade `aem_icon.png`-filen.
+1. Navigera till `assets/www/wsmobile/images`mapp.
+1. Ersätt standardinställningen om du vill ändra logotypen `aem_icon.png` med den anpassade `aem_icon.png` -fil.
 1. Bygg och kör AEM Forms på Android-enheter.
 
 ### Anpassa bilder på inloggningssidorna med Visual Studio {#to-customize-images-on-the-login-pages-using-visual-studio-1}
 
-1. Öppna `MWSWindows.sln`-projektet i Visual Studio.
+1. Öppna `MWSWindows.sln` i Visual Studio.
 
-1. Navigera till mappen `MWSWindows\www\wsmobile\images`.
-1. Om du vill ändra logotypen ersätter du standardfilen `aem_icon.png` med den anpassade `aem_icon.png`-filen.
+1. Navigera till `MWSWindows\www\wsmobile\images`mapp.
+1. Ersätt standardinställningen om du vill ändra logotypen `aem_icon.png` med den anpassade `aem_icon.png` -fil.
 1. Bygg och kör AEM Forms på Windows-enheter.

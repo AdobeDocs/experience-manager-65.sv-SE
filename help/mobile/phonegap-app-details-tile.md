@@ -1,22 +1,21 @@
 ---
 title: Hantera apppanel
-seo-title: Hantera apppanel
+seo-title: Manage App Tile
 description: Följ den här sidan om du vill veta mer om Hantera apppanel på appinstrumentpanelen som gör det möjligt att ändra information om programmet.
-seo-description: Följ den här sidan om du vill veta mer om Hantera apppanel på appinstrumentpanelen som gör det möjligt att ändra information om programmet.
+seo-description: Follow this page to learn about the Manage App Tile on the app dashboard that provides the ability to modify details about the Application.
 uuid: bde75ecd-8694-427c-9b16-2c4ab2fd4d8b
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-adobe-phonegap-enterprise
 discoiquuid: a87834c9-247c-49fa-9978-a969230db91c
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 8bcf70ef-94d2-4958-90b5-bc375b360916
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1290'
+source-wordcount: '1263'
 ht-degree: 0%
 
 ---
-
 
 # Hantera apppanel{#manage-app-tile}
 
@@ -24,17 +23,17 @@ ht-degree: 0%
 >
 >Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (t.ex. Reagera). [Läs mer](/help/sites-developing/spa-overview.md).
 
-På panelen **Hantera program** på appkontrollpanelen kan du ändra information om programmet. Om du vill öppna informationssidan klickar du på länken för information i panelen Hantera app. På sidan Hantera program kan du redigera inställningarna för PhoneGap Application Configuration (config.xml) och förbereda programmet för att skickas till olika programarkiv.
+The **Hantera program** På panelen App Dashboard kan du ändra information om programmet. Om du vill öppna informationssidan klickar du på länken för information i panelen Hantera app. På sidan Hantera program kan du redigera inställningarna för PhoneGap Application Configuration (config.xml) och förbereda programmet för att skickas till olika programarkiv.
 
 ![chlimage_1-116](assets/chlimage_1-116.png)
 
 ## Om Hantera programpanel {#understanding-the-manage-app-tile}
 
-Du kan detaljgranska varje ruta i **Manage App**-rutan för att visa eller redigera detaljer genom att klicka på.. i det nedre högra hörnet.
+Du kan gå på djupet i varje ruta i **Hantera program** om du vill visa eller redigera detaljer genom att klicka på ... i det nedre högra hörnet.
 
 ### Fliken Grundläggande {#the-basic-tab}
 
-Du kan redigera **Namn**, **Författare**, **Kort beskrivning** och **Beskrivning** för ditt program på den här fliken.
+Du kan redigera **Namn**, **Upphovsman**, **Kort beskrivning** och **Beskrivning** för din app från den här fliken.
 
 ![chlimage_1-117](assets/chlimage_1-117.png)
 
@@ -57,7 +56,7 @@ Alla leverantörsapplikationsbutiker, t.ex. Apple App Store eller Google Play St
 >
 >Med appen AEM Verifiera kan du skicka skärmbilder direkt till din appinformation i AEM.
 >
->Mer information finns i [Mobile Quickstart för AEM Verify](/help/mobile/phonegap-mobile-quickstart.md).
+>Se [Mobile Quickstart för AEM verifiera](/help/mobile/phonegap-mobile-quickstart.md) för mer information.
 
 ![chlimage_1-118](assets/chlimage_1-118.png)
 
@@ -65,7 +64,7 @@ Alla leverantörsapplikationsbutiker, t.ex. Apple App Store eller Google Play St
 
 >[!NOTE]
 >
->När du är bekant med rutan **Hantera app** läser du [Redigera appmetadata](/help/mobile/phonegap-editmetadata.md) för att visa och redigera metadata.
+>När du känner till **Hantera program** platta, se [Redigera appmetadata](/help/mobile/phonegap-editmetadata.md) för att visa och redigera metadata.
 
 #### Vanliga metadata {#common-metadata}
 
@@ -75,11 +74,11 @@ Det finns en gemensam konfiguration och metadata för alla plattformar.
 
 I det här avsnittet definierar du URL:en för Content Update Server, landningssidan för ditt mobilprogram, PhoneGap-versionen för kompilering, programversion, namn, beskrivning och mer.
 
-**App** Versionär den fungerande versionen av ditt program. Det bästa sättet är att använda en 3-decimalteckning och börja under 1.0.0 före den första versionen.
+**App-version** är programmets arbetsversion. Det bästa sättet är att använda en 3-decimalteckning och börja under 1.0.0 före den första versionen.
 
-**PhoneGap** Versionär den version i vilken du vill kompilera programmet med PhoneGap. Bästa sättet är att hålla jämna steg med den aktuella versionen för att vara säker på att du får de senaste och bästa funktionerna och felkorrigeringarna.
+**PhoneGap-version** är den version i vilken du vill kompilera programmet med PhoneGap. Bästa sättet är att hålla jämna steg med den aktuella versionen för att vara säker på att du får de senaste och bästa funktionerna och felkorrigeringarna.
 
-**URL för Content Update Server** är den URL som programmet använder för att anropa ContentSync-uppdateringar. Den måste anges till din dispatcher-URL eller, om inte en dispatcher används, till en av dina publiceringsinstanser som ska användas för ContentSync-uppdateringar av programmet.
+**URL för Content Update Server** är den URL som ditt program använder för att anropa ContentSync-uppdateringar. Den måste anges till din dispatcher-URL eller, om inte en dispatcher används, till en av dina publiceringsinstanser som ska användas för ContentSync-uppdateringar av programmet.
 
 ![chlimage_1-119](assets/chlimage_1-119.png)
 
@@ -91,7 +90,7 @@ I det här avsnittet definierar du URL:en för Content Update Server, landningss
 
 #### Plattformsmetadata {#platform-metadata}
 
-Alla plattformar som definieras i PhoneGap config.xml kan innehålla anpassade plattformsegenskaper. En AEM måste bidra med innehållsstrukturen för att kunna hämta dessa egenskaper. Ett angivet exempel på plattformsspecifika egenskaper finns för iOS.
+Alla plattformar som definieras i PhoneGap config.xml kan innehålla anpassade plattformsegenskaper. En AEM måste bidra med innehållsstrukturen för att kunna hämta dessa egenskaper. Ett exempel på plattformsspecifika egenskaper finns för iOS.
 
 Metadata för alla konfigurerade plattformar visas nu samtidigt på fliken Avancerat i panelen Hantera program.
 
@@ -103,9 +102,9 @@ För plattformar som inte AEM förstår går det fortfarande att utöka använda
 
 #### iOS-metadata {#ios-metadata}
 
-Apple AppStore kräver ytterligare metadata för att du ska kunna skicka in programmet för distribution. Metadataavsnittet iOS försöker samla in den information som krävs och som kan användas av Apples iTMSTTransporter-verktyg för att publicera metadata till det associerade Apple-utvecklarkontot.
+Apple AppStore kräver ytterligare metadata för att du ska kunna skicka in programmet för distribution. iOS metadataavsnitt försöker samla in den information som Apple iTMSTTransporter-verktyg kan använda för att publicera metadata på det associerade Apple-utvecklarkontot.
 
-För att få tillgång till Apple-specifika metadata måste du först skapa programmet på [https://itunesconnect.apple.com](https://itunesconnect.apple.com/). När du skapar ditt program genererar Apple metadata, vilket krävs i iOS-metadataavsnittet, om du vill använda Apple iTMSTTransporter-verktyget för att validera och överföra metadata till itunesconnect.apple.com. Om du bara vill hämta metadata för att samla in behöver du inte nödvändigtvis fylla i i iOS-specifika metadata. Du kan fortfarande exportera metadata som sammanfogar iOS och vanliga metadata och samla alla skärmbilder i en ZIP-fil som du kan hämta när som helst.
+För att få tillgång till de Apple-specifika metadata måste du först skapa ditt program på [https://itunesconnect.apple.com](https://itunesconnect.apple.com/). När du skapar ditt program genererar Apple metadata, vilket krävs i metadataavsnittet för iOS, om du vill använda verktyget Apple iTMSTTransporter för att validera och överföra metadata till itunesconnect.apple.com. Om du bara vill få fram metadata för att samla in behöver du inte nödvändigtvis fylla i iOS-specifika metadata. Du kan fortfarande exportera metadata som sammanfogar iOS-metadata och gemensamma metadata och samla alla skärmbilder i en zip-fil som kan laddas ned när som helst.
 
 Den hämtade zip-filen innehåller en itmsp-fil som kan inspekteras för metadata.xml. ActionScript-filen innehåller exporterade metadata (i filen metadata.xml), tillsammans med alla associerade skärmbilder.
 
@@ -121,7 +120,7 @@ Exportfunktionen används för att underlätta insamling av skärmbilder och met
 
 ![chlimage_1-121](assets/chlimage_1-121.png)
 
-### URL för innehållsuppdateringsserver {#content-update-server-url}
+### URL för Content Update Server {#content-update-server-url}
 
 En av de viktigaste funktionerna i AEM är möjligheten att låta ett mobilprogram begära nytt innehåll via ContentSync, där innehållet kan vara HTML-resurser, sidor, video, bilder, text och mycket mer. När en innehållsförfattare har uppdaterat innehållet och sedan publicerat det gör servern innehållsuppdateringen tillgänglig för det mobilprogram som ska laddas ned.
 
@@ -135,23 +134,23 @@ Egenskapen URL för Content Update Server är den URL som måste peka på en pub
 
 ### Fliken Plugins {#the-plugins-tab}
 
-Fliken **Plugins** beskriver de plugin-program som är associerade med din app. Den här informationen kommer att användas för att hämta rätt plugin-program under ett bygge.
+The **Plugins** beskriver de plugin-program som är associerade med din app. Den här informationen kommer att användas för att hämta rätt plugin-program under ett bygge.
 
 ![chlimage_1-122](assets/chlimage_1-122.png)
 
 ### Fliken Skärmbilder {#the-screenshots-tab}
 
-På fliken **Skärmbilder** visas skärmbildupplösningar som stöds på olika plattformar.
+The **Skärmbilder** På -fliken visas de skärmbildupplösningar som stöds på olika plattformar.
 
 ![chlimage_1-123](assets/chlimage_1-123.png)
 
 >[!NOTE]
 >
->Mer information om hur du lägger till och tar bort skärmbilder finns i [Redigera appmetadata](/help/mobile/phonegap-editmetadata.md).
+>Information om hur du lägger till och tar bort skärmbilder finns i [Redigera appmetadata](/help/mobile/phonegap-editmetadata.md).
 
 ### Fliken Autentisering {#the-authentication-tab}
 
-På fliken **Autentisering** kan du välja en OAuth-klient som ska associeras med ditt program och göra det möjligt för en utvecklare att använda Adobe Experience Manager OAuth-autentisering.
+The **Autentisering** På -fliken kan du välja en OAuth-klient som ska associeras med ditt program och göra det möjligt för en utvecklare att använda Adobe Experience Manager OAuth-autentisering.
 
 ![chlimage_1-124](assets/chlimage_1-124.png)
 
@@ -171,4 +170,3 @@ Mer information om roller och ansvar för en administratör och utvecklare finns
 
 * [Utveckla för Adobe PhoneGap Enterprise med AEM](/help/mobile/developing-in-phonegap.md)
 * [Administrera innehåll för Adobe PhoneGap Enterprise med AEM](/help/mobile/administer-phonegap.md)
-

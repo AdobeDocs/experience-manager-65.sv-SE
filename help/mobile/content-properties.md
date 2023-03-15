@@ -1,22 +1,21 @@
 ---
 title: Innehållsegenskaper och noder
-seo-title: Innehållsegenskaper och noder
+seo-title: Content Properties and Nodes
 description: Följ den här sidan om du vill veta mer om innehållsegenskaper och noder.
-seo-description: Följ den här sidan om du vill veta mer om innehållsegenskaper och noder.
+seo-description: Follow this page to learn about content properties and nodes.
 uuid: 2dad52c8-5b6c-4b90-8498-62217a9a27fc
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-on-demand-services-app
 discoiquuid: f5721ddc-df5c-496c-be61-38d1cab63ad4
-translation-type: tm+mt
-source-git-commit: 50c0bdfc3203410d392e53536bc7cd00245406e5
+exl-id: 05c8c846-69cc-4075-9149-33890b3d1e08
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '369'
-ht-degree: 11%
+source-wordcount: '355'
+ht-degree: 12%
 
 ---
-
 
 # Innehållsegenskaper och noder {#content-properties-and-nodes}
 
@@ -38,7 +37,7 @@ I följande tabeller beskrivs innehållsegenskaperna och noderna.
 | dps-resourceType | Sträng | dps:artikel | dps:Banner | dps:Samling | entitetstyp, egenskap |
 | dps-version | Sträng |  | version av AEM Mobile-enhet (ingår också i det fullständiga aemm-id:t) |
 | dps-lastSynced | Date |  | datum för senaste synkronisering/import från AEM Mobile till AEM |
-| dps-lastUploaded | Datum |  | datum för senaste överföring från AEM till AEM Mobile |
+| dps-lastUploaded | Date |  | datum för senaste överföring från AEM till AEM Mobile |
 | dps-lastUploadedBy | String:userid |  | ID-användare som utförde den senaste överföringsbegäran från AEM till AEM Mobile |
 
 ## Egenskaper för kärnmetadata {#core-metadata-properties}
@@ -88,7 +87,7 @@ I följande tabeller beskrivs innehållsegenskaperna och noderna.
 
 ## Innehållsnoder {#content-nodes}
 
-### Gemensamma noder {#common-nodes}
+### Vanliga noder {#common-nodes}
 
 | Nodnamn | Typ | Standardvärden eller förväntade värden | Beskrivning |
 |--- |--- |--- |--- |

@@ -1,22 +1,21 @@
 ---
 title: Anteckningar vid redigering av en sida
-seo-title: Anteckningar vid redigering av en sida
+seo-title: Annotations when Editing a Page
 description: Många komponenter som är direkt relaterade till innehåll gör att du kan lägga till en anteckning
-seo-description: Många komponenter som är direkt relaterade till innehåll gör att du kan lägga till en anteckning
+seo-description: Many components directly related to content allow you to add an annotation
 uuid: 157be55c-8ab8-472e-be32-0dcc02bfa41d
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
 discoiquuid: aa89326a-ad33-4b0b-8d09-c68c5a5c790a
-translation-type: tm+mt
-source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+exl-id: de1ae7e3-db3a-4b5e-8a4f-ae111227181f
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '634'
 ht-degree: 0%
 
 ---
-
 
 # Anteckningar vid redigering av en sida{#annotations-when-editing-a-page}
 
@@ -42,11 +41,11 @@ En anteckning placerar en färgmarkör/anteckning på sidan. Med anteckningen ka
 
 ## Anteckningar {#annotations}
 
-Ett särskilt [läge](/help/sites-authoring/author-environment-tools.md#page-modes) används för att skapa och visa anteckningar.
+En speciell [läge](/help/sites-authoring/author-environment-tools.md#page-modes) används för att skapa och visa anteckningar.
 
 >[!NOTE]
 >
->Glöm inte att [kommentarer](/help/sites-authoring/basic-handling.md#timeline) också är tillgängliga för att ge feedback på en sida.
+>Glöm inte det [kommentarer](/help/sites-authoring/basic-handling.md#timeline) finns även för att ge feedback på en sida.
 
 >[!NOTE]
 >
@@ -54,12 +53,10 @@ Ett särskilt [läge](/help/sites-authoring/author-environment-tools.md#page-mod
 >
 >* [Anteckna resurser](/help/assets/manage-assets.md#annotating)
 >* [Kommentera videomaterial](/help/assets/managing-video-assets.md#annotate-video-assets)
-
 >
 
 
-
-### Kommenterar en komponent {#annotating-a-component}
+### Kommentera en komponent {#annotating-a-component}
 
 I anteckningsläget kan du skapa, redigera, flytta eller ta bort anteckningar i ditt innehåll:
 
@@ -126,4 +123,3 @@ I anteckningsläget kan du skapa, redigera, flytta eller ta bort anteckningar i 
 Anteckningar visas inte i redigeringsläge, men märket längst upp till höger i verktygsfältet visar hur många anteckningar som finns för den aktuella sidan. Märket ersätter standardikonen för anteckningar, men fungerar fortfarande som en snabblänk som växlar till/från anteckningsläget:
 
 ![chlimage_1-242](assets/chlimage_1-242.png)
-

@@ -1,22 +1,21 @@
 ---
 title: Överför delade resurser
-seo-title: Överför delade resurser
+seo-title: Uploading Shared Resources
 description: Innehållshanteringsåtgärder är byggstenar som används för att skapa och hantera innehåll i ett program. Följ den här sidan om du vill veta mer om hur du överför delade resurser.
-seo-description: Innehållshanteringsåtgärder är byggstenar som används för att skapa och hantera innehåll i ett program. Följ den här sidan om du vill veta mer om hur du överför delade resurser.
+seo-description: Content Management actions are the building blocks that help to create and manage content within an application. Follow this page to learn about uploading shared resources.
 uuid: f3595299-1279-4b94-9a49-9d1893250549
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-on-demand-services-app
 discoiquuid: 958461b0-4cbb-452b-88ea-9b98ada14750
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 4b3acc7c-f1f7-4837-ae3a-9435d6ce1349
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '315'
+source-wordcount: '286'
 ht-degree: 0%
 
 ---
-
 
 # Överför delade resurser {#uploading-shared-resources}
 
@@ -38,16 +37,16 @@ Innehållshanteringsåtgärder är byggstenar som används för att skapa och ha
 
 Vanligtvis krävs det att innehåll som artiklar har samma utseende och känsla för alla författare och till och med appar. Därför är det viktigt att kunna erbjuda skript, CSS och teckensnitt till alla. Den här åtgärden skickar sådana delade resurser till Mobile On-Demand som sedan kan användas efter behov.
 
-När du har konfigurerat och associerat din app till en molnkonfiguration kan du överföra dina delade resurser. Klicka [här](/help/mobile/mobile-apps-ondemand-application-create-configure-action.md) om du vill veta mer om hur du kopplar din app till en molnkonfiguration.
+När du har konfigurerat och associerat din app till en molnkonfiguration kan du överföra dina delade resurser. Om du vill ha mer information om hur du kopplar din app till en molnkonfiguration klickar du på [här](/help/mobile/mobile-apps-ondemand-application-create-configure-action.md).
 
 >[!NOTE]
 >
->Delade resurser använder ContentSync för att samla in alla olika resurser. Mer information finns i [Mobile with ContentSync](/help/mobile/mobile-ondemand-contentsync.md).
+>Delade resurser använder ContentSync för att samla in alla olika resurser. Se [Mobil med ContentSync](/help/mobile/mobile-ondemand-contentsync.md) för mer information.
 
 Så här överför du dina delade resurser för en artikel:
 
-1. Markera artikeln i rutan **Hantera artiklar**.
-1. Klicka på **Överför delade resurser** för att överföra dina delade HTML-resurser.
+1. Välj artikeln från **Hantera artiklar** platta.
+1. Klicka **Överför delade resurser** för att överföra dina delade HTML-resurser.
 
    ![chlimage_1-133](assets/chlimage_1-133.png)
 

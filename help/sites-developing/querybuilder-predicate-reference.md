@@ -242,7 +242,7 @@ Detta är ett predikat som bara kan filtreras och kan inte utnyttja ett sökinde
 
    kommaavgränsade JCR-behörigheter som den aktuella användarsessionen måste ha för noden i fråga. till exempel `jcr:write`, `jcr:modifyAccessControl`
 
-### språk {#language}
+### language {#language}
 
 Söker efter CQ-sidor på ett visst språk. Det här tittar både på sidspråksegenskapen och sidsökvägen, som ofta innehåller språket eller språket i en webbplatsstruktur på den översta nivån.
 
@@ -330,7 +330,7 @@ Sortera resultatet. Om det krävs en ordning med flera egenskaper måste det hä
 
    om inställt på &quot; `ignore`&quot; kommer att göra sorteringsskiftläget okänsligt, vilket innebär att &quot;a&quot; kommer före &quot;B&quot;, om den är tom eller utelämnad är sorteringen skiftlägeskänslig, vilket betyder &quot;B&quot; kommer före &quot;a&quot;
 
-### bana {#path}
+### path {#path}
 
 Söker i en viss bana.
 
@@ -452,7 +452,7 @@ Stöder facet-extrahering på samma sätt som daterange-predikatet.
 
 Rotpredikatgrupp. Stöder alla funktioner i en grupp och tillåter att globala frågeparametrar ställs in.
 
-Namnet &quot;root&quot; används aldrig i en fråga, det är underförstått.
+Namnet &quot;root&quot; används aldrig i en fråga, det är implicit.
 
 #### Egenskaper {#properties-18}
 

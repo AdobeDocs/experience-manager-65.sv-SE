@@ -374,7 +374,7 @@ I en plan används till exempel referensplatsen We.Retail som källinnehåll. En
 
 ### Ange utrullningskonfigurationer för en Live Copy-sida {#setting-the-rollout-configurations-for-a-live-copy-page}
 
-Konfigurera en sida med en live-kopia med de utrullningskonfigurationer som ska användas när källsidan rullas ut. Underordnade sidor ärver konfigurationen som standard. När du konfigurerar utrullningskonfigurationen att använda åsidosätter du konfigurationen som den aktiva kopieringssidan ärver från sin överordnade.
+Konfigurera en live-kopieringssida med de utrullningskonfigurationer som ska användas när källsidan distribueras. Underordnade sidor ärver konfigurationen som standard. När du konfigurerar utrullningskonfigurationen att använda åsidosätter du konfigurationen som den aktiva kopieringssidan ärver från sin överordnade.
 
 Du kan också konfigurera utrullningskonfigurationerna för en live-kopia-sida när du [skapa live-kopia](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-page).
 

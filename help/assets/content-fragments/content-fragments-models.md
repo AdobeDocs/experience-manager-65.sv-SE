@@ -7,7 +7,7 @@ exl-id: 6fd1fdb2-d1d3-4f97-b119-ecfddcccec9e
 source-git-commit: 6b9eb1a6df7cc4a8afab1c83d93d8a53bd94f6f5
 workflow-type: tm+mt
 source-wordcount: '2332'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -125,7 +125,7 @@ Det finns ett urval datatyper som du kan använda för att definiera din modell:
 * **JSON-objekt**
    * Gör att innehållsfragmentets författare kan ange JSON-syntax i motsvarande element i ett fragment.
       * För att AEM ska kunna lagra direkt JSON som du har kopierat/klistrat in från en annan tjänst.
-      * JSON skickas och skrivs ut som JSON i GraphQL.
+      * JSON skickas vidare och skrivs ut som JSON i GraphQL.
       * Innehåller JSON-syntaxmarkering, automatisk komplettering och felmarkering i innehållsfragmentredigeraren.
 * **Platshållare för flik**
    * Tillåter introduktion av flikar som kan användas när innehållet i innehållsfragmentet redigeras.
@@ -319,7 +319,7 @@ När en modell har skapats måste den aktiveras så att den:
 
 * Kan markeras när du skapar ett nytt innehållsfragment.
 * Kan refereras inifrån en Content Fragment-modell.
-* Finns för GraphQL, så att schemat genereras.
+* är tillgängligt för GraphQL, så att schemat genereras.
 
 Så här aktiverar du en modell som har flaggats som antingen:
 
@@ -339,9 +339,9 @@ En modell kan också inaktiveras så att:
 
 * Modellen är inte längre tillgänglig som grund för att skapa *new* Innehållsfragment.
 * Men:
-   * GraphQL-schemat genereras och är fortfarande frågningsbart (för att inte påverka JSON API).
-   * Alla innehållsfragment som är baserade på modellen kan fortfarande efterfrågas och returneras från GraphQL-slutpunkten.
-* Det går inte att referera till modellen längre, men befintliga referenser behålls orörda och kan fortfarande frågas och returneras från GraphQL-slutpunkten.
+   * GraphQL-schemat fortsätter att genereras och är fortfarande frågningsbart (för att inte påverka JSON API).
+   * Alla innehållsfragment som är baserade på modellen kan fortfarande efterfrågas och returneras från GraphQL slutpunkt.
+* Det går inte att referera till modellen längre, men befintliga referenser behålls orörda och kan fortfarande läsas och returneras från GraphQL-slutpunkten.
 
 Inaktivera en modell som är flaggad som **Aktiverad** du använder **Inaktivera** från antingen
 

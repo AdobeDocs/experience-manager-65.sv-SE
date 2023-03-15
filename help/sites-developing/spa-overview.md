@@ -82,7 +82,7 @@ Du kan förstå interaktionsflödet mellan SPA och AEM genom att tänka på SPA 
 
 Med tanke på de viktigaste elementen i SPA Editor visas arbetsflödet på hög nivå för redigering av en SPA i AEM för författaren enligt följande.
 
-![namnlös1](assets/untitled1.gif)
+![untitled1](assets/untitled1.gif)
 
 1. SPA Editor läses in.
 1. SPA läses in i en separat ram.

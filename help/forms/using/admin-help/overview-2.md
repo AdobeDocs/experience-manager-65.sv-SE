@@ -1,30 +1,29 @@
 ---
 title: Grunderna för hantering av certifikat och autentiseringsuppgifter
-seo-title: Grunderna för hantering av certifikat och autentiseringsuppgifter
+seo-title: Basics of managing certificates and credentials
 description: Lär dig mer om grunderna för hantering av certifikat och autentiseringsuppgifter.
-seo-description: Lär dig mer om grunderna för hantering av certifikat och autentiseringsuppgifter.
+seo-description: Learn about the basics of managing certificates and credentials.
 uuid: f421e206-e7b5-416c-b9fb-974094f10a66
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/managing_certificates_and_credentials
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 986d16fc-4c81-4785-b1f3-fe8bd7ff669e
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 74bf0e77-f47b-475a-b2a7-52cfb3baaa22
+source-git-commit: 0c7dba43dad8608b4a5de271e1e44942c950fb16
 workflow-type: tm+mt
-source-wordcount: '358'
+source-wordcount: '339'
 ht-degree: 0%
 
 ---
 
-
 # Grunderna för hantering av certifikat och autentiseringsuppgifter {#basics-of-managing-certificates-and-credentials}
 
-En *autentiseringsuppgift* innehåller den privata nyckelinformation som behövs för att signera eller identifiera dokument. Ett *certifikat* är information om offentlig nyckel som du konfigurerar för förtroende. AEM använder certifikat och autentiseringsuppgifter för flera syften:
+A *autentiseringsuppgifter* innehåller den privata nyckelinformation som behövs för att signera eller identifiera dokument. A *certifikat* är information om offentlig nyckel som du konfigurerar för förtroende. AEM använder certifikat och autentiseringsuppgifter för flera syften:
 
 * Acrobat Reader DC-tillägg använder en autentiseringsuppgift för att aktivera Adobe Reader användarrättigheter i PDF-dokument. (Se [Konfigurera autentiseringsuppgifter för användning med Acrobat Reader DC-tillägg](/help/forms/using/admin-help/configuring-credentials-acrobat-reader-dc.md#configuring-credentials-for-use-with-acrobat-reader-dc-extensions).)
 * Du kan konfigurera Rights Management så att autentiseringsuppgifter endast visas för användning i Acrobat från betrodda utfärdare. (Se [Konfigurera visningsinställningar för Rights Management](/help/forms/using/admin-help/configuring-client-server-options.md#configure-document-security-display-settings).) Det allmänna namnet (CN) måste finnas i certifikatet.
-* Signaturtjänsten får åtkomst till certifikat och autentiseringsuppgifter. Mer information om signaturtjänsten finns i [Tjänstreferens](https://www.adobe.com/go/learn_aemforms_services_63).
+* Signaturtjänsten får åtkomst till certifikat och autentiseringsuppgifter. Mer information om signaturtjänsten finns i [Tjänstreferens](https://www.adobe.com/go/learn_aemforms_services_65).
 
 **Skapa en parnyckel**
 
@@ -36,7 +35,7 @@ AEM har inget alternativ för att generera nyckelpar. Du kan dock generera det m
 
 [https://docs.oracle.com/cd/E19798-01/821-1841/gjrgy/index.html](https://docs.oracle.com/cd/E19798-01/821-1841/gjrgy/index.html)
 
-[https://blogs.adobe.com/livecycle/2010/01/creating_ssl_keys_and_certific.html](https://blogs.adobe.com/livecycle/2010/01/creating_ssl_keys_and_certific.html)
+[https://helpcenter.gsx.com/hc/en-us/articles/115015960428-How-to-Generate-a-Self-Signed-Certificate-and-Private-Key-using-OpenSSL](https://helpcenter.gsx.com/hc/en-us/articles/115015960428-How-to-Generate-a-Self-Signed-Certificate-and-Private-Key-using-OpenSSL)
 
 Följande signaturtyper stöds och kan importeras i AEM:
 
@@ -54,4 +53,3 @@ Om du misstänker att nyckeln har gått förlorad eller har komprometterats ska 
 1. Informera certifikatutfärdaren så att de lägger till den kompromissade nyckeln i listan över återkallade certifikat för att återkalla nyckeln.
 1. Hämta en ny nyckel och dess certifikat från den attesterande myndigheten.
 1. Signera dokument som signerats med den kompromissade nyckeln igen med den nya nyckeln.
-

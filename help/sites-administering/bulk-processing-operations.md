@@ -1,17 +1,16 @@
 ---
 title: Gruppbearbetning
-seo-title: Gruppbearbetning
-description: 'null'
-seo-description: 'null'
+seo-title: Bulk Processing Operations
+description: null
+seo-description: null
 page-status-flag: never-activated
 uuid: 62a6c379-a460-4f8f-a909-03d04fa8944b
 contentOwner: sarchiz
 discoiquuid: 47c2a80f-78ac-4372-86b4-06351a1dd58f
 docset: aem65
-translation-type: tm+mt
 source-git-commit: 4b965d8f7814816126601f6366c1ba313e404538
 workflow-type: tm+mt
-source-wordcount: '381'
+source-wordcount: '377'
 ht-degree: 1%
 
 ---
@@ -25,7 +24,7 @@ I den senaste versionen av AEM har knappen Markera alla utökats till att omfatt
 
 Nyckelåtgärder har aktiverats för gruppåtgärden: **Flytta**, **Ta bort** och **Kopiera**. En ny dialogruta visar för kunderna vilka åtgärder som gruppbearbetning inte är tillgänglig för.
 
-## Använda {#how-to-use}
+## Så här använder du {#how-to-use}
 
 En ny knapp med namnet **Markera alla** har lagts till i kort-, list- eller kolumnvyerna. Den här knappen kan användas i alla vyer för att markera alla element i datauppsättningen.
 
@@ -48,7 +47,7 @@ Välj sedan en av vyerna enligt nedan:
 
 ### Massmarkering i kortvyn {#bulk-selection-in-card-view}
 
-Resurser eller sidor kan markeras i grupp med knappen **Markera alla** överst till höger:
+Resurser eller sidor kan markeras i grupp med **Markera alla** överst till höger:
 
 ![](assets/doi.png) ![](assets/trei.png)
 
@@ -60,7 +59,7 @@ Samma sak gäller för listvyn:
 
 ### Massmarkering i listvyn {#bulk-selection-in-list-view}
 
-Använd knappen **Markera allt** i listvyn eller använd kryssrutan till vänster för gruppval.
+I listvyn använder du antingen **Markera alla** eller använd kryssrutan till vänster för gruppval.
 
 ![](assets/cinci.png) ![](assets/sase.png)
 
@@ -76,10 +75,10 @@ Använd knappen **Markera allt** i listvyn eller använd kryssrutan till vänste
 
 Efter markeringen kan en av de tre massaktiverade åtgärderna utföras: **Flytta**, **Kopiera** eller **Ta bort**.
 
-Här utförs **Flytta**-åtgärden på de resurser som markerats ovan. I alla vyer resulterar detta i att alla resurser flyttas till den valda platsen och inte bara till de som läses in på skärmen.
+Här, **Flytta** åtgärden utförs på de tillgångar som valts ovan. I alla vyer resulterar detta i att alla resurser flyttas till den valda platsen och inte bara till de som läses in på skärmen.
 
 ![](assets/noua.png)
 
-För andra åtgärder som inte är gruppaktiverade, som **Ladda ned**, visas en varning om att endast element som lästs in i webbläsaren kommer att inkluderas i åtgärden.
+För andra åtgärder som inte är massaktiverade, som **Ladda ned** en varning visas som anger att endast element som lästs in i webbläsaren kommer att inkluderas i åtgärden.
 
 ![](assets/zece.png)

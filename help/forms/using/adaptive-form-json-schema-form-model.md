@@ -1,13 +1,13 @@
 ---
 title: Hur skapar man adaptiva Forms med JSON Schema?
 description: Lär dig hur du skapar adaptiva formulär med JSON-schema som formulärmodell. Du kan använda befintliga JSON-scheman för att skapa anpassningsbara formulär. Gräv djupare med ett exempel på ett JSON-schema, förkonfigurera fält i JSON-schemadefinitionen, begränsa godtagbara värden för en adaptiv formulärkomponent och lär dig konstruktioner som inte stöds.
-feature: Adaptiv Forms
+feature: Adaptive Forms
 role: User, Developer
 level: Beginner, Intermediate
 exl-id: 1b402aef-a319-4d32-8ada-cadc86f5c872
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '1450'
+source-wordcount: '1448'
 ht-degree: 2%
 
 ---
@@ -23,13 +23,13 @@ Om du skapar ett anpassat formulär med ett JSON-schema som formulärmodell mås
 
 ## Använda ett JSON-schema som formulärmodell  {#using-a-json-schema-as-form-model}
 
-[!DNL Adobe Experience Manager Forms] har stöd för att skapa ett anpassat formulär genom att använda ett befintligt JSON-schema som formulärmodell. Detta JSON-schema representerar strukturen i vilken data produceras eller används av det bakomliggande systemet i din organisation. Det JSON-schema som du använder ska vara kompatibelt med [v4-specifikationerna](https://json-schema.org/draft-04/schema).
+[!DNL Adobe Experience Manager Forms] har stöd för att skapa ett anpassat formulär genom att använda ett befintligt JSON-schema som formulärmodell. Detta JSON-schema representerar strukturen i vilken data produceras eller används av det bakomliggande systemet i din organisation. Det JSON-schema som du använder ska vara kompatibelt med [v4-specifikationer](https://json-schema.org/draft-04/schema).
 
 De viktigaste funktionerna i ett JSON-schema är:
 
 * Strukturen för JSON visas som ett träd på fliken Innehållssökning i redigeringsläget för ett anpassat formulär. Du kan dra och lägga till element från JSON-hierarkin i det adaptiva formuläret.
 * Du kan fylla i formuläret i förväg med JSON som är kompatibel med det associerade schemat.
-* När data skickas skickas skickas de som anges av användaren som JSON som är anpassad efter det associerade schemat.
+* När data skickas skickas skickas de som anges av användaren som JSON som är i linje med det associerade schemat.
 
 Ett JSON-schema består av enkla och komplexa elementtyper. Elementen har attribut som lägger till regler i elementet. När dessa element och attribut dras till ett adaptivt formulär mappas de automatiskt till motsvarande adaptiv formulärkomponent.
 
@@ -81,7 +81,7 @@ Den här mappningen av JSON-element med adaptiva formulärkomponenter är följa
    <td><br /> <br /> Textfält<br /> <br /> <br /> </td>
   </tr>
   <tr>
-   <td>talegenskap<br /> </td>
+   <td>number, egenskap<br /> </td>
    <td>Numeriskt fält med undertyp inställd på flytande<br /> </td>
   </tr>
   <tr>
@@ -90,10 +90,10 @@ Den här mappningen av JSON-element med adaptiva formulärkomponenter är följa
   </tr>
   <tr>
    <td>boolesk egenskap<br /> </td>
-   <td>Växla<br /> </td>
+   <td>Byt<br /> </td>
   </tr>
   <tr>
-   <td>objektegenskap<br /> </td>
+   <td>object, egenskap<br /> </td>
    <td>Panel<br /> </td>
   </tr>
   <tr>
@@ -107,17 +107,17 @@ Den här mappningen av JSON-element med adaptiva formulärkomponenter är följa
 
 Det adaptiva formuläret använder information som finns i JSON-schemat för att mappa varje genererat fält. Särskilt gäller följande:
 
-* Egenskapen `title` fungerar som etikett för adaptiva formulärkomponenter.
-* Egenskapen `description` är inställd som lång beskrivning för en adaptiv formulärkomponent.
-* Egenskapen `default` fungerar som ett initialt värde för ett adaptivt formulärfält.
-* Egenskapen `maxLength` är inställd som `maxlength`-attribut för textfältskomponenten.
-* Egenskaperna `minimum`, `maximum`, `exclusiveMinimum` och `exclusiveMaximum` används för Numerisk rutkomponent.
-* För att stöda intervall för `DatePicker component` har ytterligare JSON-schemaegenskaper `minDate` och `maxDate` angetts.
-* Egenskaperna `minItems` och `maxItems` används för att begränsa antalet objekt/fält som kan läggas till eller tas bort från en panelkomponent.
-* Egenskapen `readOnly` anger attributet `readonly` för en adaptiv formulärkomponent.
-* Egenskapen `required` anger att det adaptiva formulärfältet är obligatoriskt, medan den slutliga skickade JSON-informationen i panelen (där typen är objekt) har fält med ett tomt värde som motsvarar det objektet.
-* Egenskapen `pattern` anges som valideringsmönster (reguljärt uttryck) i adaptiv form.
-* Tillägget för JSON-schemafilen måste behållas som .schema.json. Till exempel &lt;filnamn>.schema.json.
+* The `title` fungerar som etikett för adaptiva formulärkomponenter.
+* The `description` -egenskapen anges som en lång beskrivning för en adaptiv formulärkomponent.
+* The `default` -egenskapen fungerar som ett initialt värde för ett adaptivt formulärfält.
+* The `maxLength` egenskapen anges som `maxlength` textfältskomponentens attribut.
+* The `minimum`, `maximum`, `exclusiveMinimum`och `exclusiveMaximum` -egenskaper används för NumericBox-komponenter.
+* Till supportintervall för `DatePicker component` ytterligare egenskaper för JSON-schema `minDate` och `maxDate` anges.
+* The `minItems` och `maxItems` -egenskaper används för att begränsa antalet objekt/fält som kan läggas till eller tas bort från en panelkomponent.
+* The `readOnly` egenskapen anger `readonly` -attribut för en adaptiv formulärkomponent.
+* The `required` egenskapen anger att det adaptiva formulärfältet är obligatoriskt, medan det i panelen (där typen är objekt) finns fält med tomma värden som motsvarar det objektet i de slutliga skickade JSON-data.
+* The `pattern` egenskapen ställs in som valideringsmönstret (reguljärt uttryck) i adaptiv form.
+* Tillägget för JSON-schemafilen måste behållas som .schema.json. Till exempel: &lt;filename>.schema.json.
 
 ## Exempel på JSON-schema {#sample-json-schema}
 
@@ -334,7 +334,7 @@ Exemplet ovan definierar en kundpost där varje kund har både en leveransadress
 
 ## Förkonfigurerar fält i JSON-schemadefinition {#pre-configuring-fields-in-json-schema-definition}
 
-Du kan använda egenskapen **aem:afProperties** för att förkonfigurera JSON-schemafältet för att mappa till en anpassad adaptiv formulärkomponent. Ett exempel visas nedan:
+Du kan använda **aem:afProperties** för att förkonfigurera JSON-schemafältet för mappning till en anpassad adaptiv formulärkomponent. Ett exempel visas nedan:
 
 ```json
 {
@@ -356,7 +356,7 @@ Du kan använda egenskapen **aem:afProperties** för att förkonfigurera JSON-sc
 
 ## Konfigurera skript eller uttryck för formulärobjekt  {#configure-scripts-or-expressions-for-form-objects}
 
-JavaScript är uttrycksspråket i adaptiva formulär. Alla uttryck är giltiga JavaScript-uttryck och använder API:er för skriptmodell för adaptiva formulär. Du kan förkonfigurera formulärobjekt till [utvärdera ett uttryck](adaptive-form-expressions.md) för en formulärhändelse.
+JavaScript är uttrycksspråket i adaptiva formulär. Alla uttryck är giltiga JavaScript-uttryck och använder API:er för skriptmodell för adaptiva formulär. Du kan förkonfigurera formulärobjekt till [utvärdera ett uttryck](adaptive-form-expressions.md) i en formulärhändelse.
 
 Använd egenskapen aem:afproperties för att förkonfigurera adaptiva formuläruttryck eller skript för adaptiva formulärkomponenter. När initialize-händelsen till exempel aktiveras, ställer koden nedan in värdet för telefonfältet och skriver ut ett värde till loggen:
 
@@ -376,7 +376,7 @@ Använd egenskapen aem:afproperties för att förkonfigurera adaptiva formuläru
 }
 ```
 
-Du bör vara medlem i [forms-power-user grupp](forms-groups-privileges-tasks.md) för att konfigurera skript eller uttryck för formulärobjektet. Tabellen nedan visar alla skripthändelser som stöds för en adaptiv formulärkomponent.
+Du bör vara medlem i [användargrupp](forms-groups-privileges-tasks.md) för att konfigurera skript eller uttryck för formulärobjekt. Tabellen nedan visar alla skripthändelser som stöds för en adaptiv formulärkomponent.
 
 <table>
  <tbody>
@@ -641,7 +641,7 @@ Du kan lägga till följande begränsningar i JSON-schemaelement för att begrä
    <td>
     <ul>
      <li>Numerisk ruta</li>
-     <li>Numerisk nummerlista<br /> </li>
+     <li>Numerisk stege<br /> </li>
      <li>Datumväljaren</li>
     </ul> </td>
   </tr>
@@ -744,4 +744,4 @@ Du har två alternativ:
 
 **Vad ska tillägget för JSON-schemafilen vara?**
 
-Tillägget för JSON-schemafilen måste vara .schema.json. Till exempel &lt;filnamn>.schema.json.
+Tillägget för JSON-schemafilen måste vara .schema.json. Till exempel: &lt;filename>.schema.json.

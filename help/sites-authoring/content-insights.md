@@ -2,21 +2,20 @@
 title: Content Insight
 seo-title: Content Insight
 description: Content Insight ger information om sidprestanda med hjälp av webbanalys och SEO-rekommendation
-seo-description: Content Insight ger information om sidprestanda med hjälp av webbanalys och SEO-rekommendation
+seo-description: Content Insight provides information about page performance using web analytics and SEO recommendation
 uuid: 32f5b37c-2a82-462a-9f0a-c19bed46e198
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: site-features
 discoiquuid: 60f980fd-049e-43c1-8b5d-60a8279b357a
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 187f3cde-a0db-4c02-9e8b-08272987a67d
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '536'
+source-wordcount: '521'
 ht-degree: 1%
 
 ---
-
 
 # Content Insight{#content-insight}
 
@@ -28,7 +27,7 @@ Layouten på sidan Content Insight ändras så att den passar skärmdimensionern
 
 ## Rapportdata
 
-På Content Insight-sidan finns rapporter om Adobe SiteCatalyst, Adobe Target, Adobe Social och BrightStor-data:
+På Content Insight-sidan finns rapporter som använder Adobe SiteCatalyst-, Adobe Target-, Adobe Social- och BrightEdge-data:
 
 * SiteCatalyst: Det finns rapporter om följande mätvärden:
 
@@ -47,11 +46,11 @@ Rapporterna visar data för en tidsperiod som du bestämmer. När du justerar ra
 
 Du kan också ange hur detaljerad den rapporterade informationen är, t.ex. kan du se data varje dag, vecka, månad eller år.
 
-Se [Ändra rapporteringsperiod](/help/sites-authoring/ci-analyze.md#changing-the-reporting-period).
+Se [Ändra rapporteringsperioden](/help/sites-authoring/ci-analyze.md#changing-the-reporting-period).
 
 >[!NOTE]
 >
->Content Insights-rapporterna kräver att administratören har integrerat AEM med SiteCatalyst, Target och BrightStor. Se [Integrera med SightCatalyst](/help/sites-administering/adobeanalytics.md), [Integrera med Adobe Target](/help/sites-administering/target.md) och [Integrera med BrightEdge](/help/sites-administering/brightedge.md).
+>Content Insights-rapporterna kräver att administratören har integrerat AEM med SiteCatalyst, Target och BrightStor. Se [Integrera med SightCatalyst](/help/sites-administering/adobeanalytics.md), [Integrera med Adobe Target](/help/sites-administering/target.md)och [Integrera med BrightEdge](/help/sites-administering/brightedge.md).
 
 ## Vyrapporten {#the-views-report}
 
@@ -65,7 +64,7 @@ Vyrapporten innehåller följande funktioner för utvärdering av sidtrafik:
 
 ![chlimage_1-312](assets/chlimage_1-312.png)
 
-## Sidmedelvärdet för engagerad rapport {#the-page-average-engaged-report}
+## Genomsnittlig engagerad sidrapport {#the-page-average-engaged-report}
 
 Rapporten Page Average Engaged innehåller följande funktioner för utvärdering av sideffektivitet:
 
@@ -99,4 +98,3 @@ SEO Recommendations-rapporten innehåller resultaten av BrightEdge-analysen för
 I rapporten kan du skapa uppgifter så att det görs förbättringar för att förbättra sidans sökbarhet. Recommendations anger att uppgifter har skapats för att implementera rekommendationen. Se [Tilldela uppgifter för SEO Recommendations](/help/sites-authoring/ci-analyze.md#assigning-tasks-for-seo-recommendations).
 
 ![chlimage_1-317](assets/chlimage_1-317.png)
-

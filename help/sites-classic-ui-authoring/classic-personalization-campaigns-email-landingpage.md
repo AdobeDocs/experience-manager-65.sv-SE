@@ -1,8 +1,8 @@
 ---
 title: Skapa en startsida för ett effektivt nyhetsbrev
-seo-title: Skapa en startsida för ett effektivt nyhetsbrev
+seo-title: Creating an Effective Newsletter Landing Page
 description: En effektiv startsida för nyhetsbrev hjälper er att få så många människor som möjligt att registrera sig för ert nyhetsbrev (eller andra e-postmarknadsföringskampanjer). Du kan använda den information du samlar in från nyhetsbrevet för att få leads.
-seo-description: En effektiv startsida för nyhetsbrev hjälper er att få så många människor som möjligt att registrera sig för ert nyhetsbrev (eller andra e-postmarknadsföringskampanjer). Du kan använda den information du samlar in från nyhetsbrevet för att få leads.
+seo-description: An effective newsletter landing page helps you get as many people as possible to sign up for your newsletter (or other email marketing campaign). You can use the information you gather from your newsletter sign ups to get leads.
 uuid: 0799b954-076b-4e95-8724-3661ae8fddb6
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,14 +10,13 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: b41de64a-7d27-4633-a8d5-ac91d47eb1bb
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+exl-id: c2fbf858-8815-426e-a2e5-f92bcf909ad0
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '658'
+source-wordcount: '613'
 ht-degree: 0%
 
 ---
-
 
 # Skapa en startsida för ett effektivt nyhetsbrev{#creating-an-effective-newsletter-landing-page}
 
@@ -33,11 +32,11 @@ Om du vill skapa en effektiv startsida för nyhetsbrevet måste du göra följan
 >[!NOTE]
 >
 >Adobe planerar inte att ytterligare förbättra denna funktion (Hantera leads och listor).
->Rekommendationen är att utnyttja [Adobe Campaign och integreringen till AEM](/help/sites-administering/campaign.md).
+>Rekommendationen är att [Adobe Campaign och integrationen med AEM](/help/sites-administering/campaign.md).
 
 ## Skapa en lista för nyhetsbrevet {#creating-a-list-for-the-newsletter}
 
-Skapa en lista, till exempel **Geometrixx Newsletter**, i MCM för det nyhetsbrev som andra ska prenumerera på. Att skapa listor beskrivs i [Skapa listor](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatingnewlists).
+Skapa en lista, till exempel **Geometrixx Newsletter**, i MCM för det nyhetsbrev som folk ska prenumerera på. Hur du skapar listor beskrivs i [Skapa listor](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatingnewlists).
 
 I följande exempel visas ett exempel på en lista:
 
@@ -47,7 +46,7 @@ I följande exempel visas ett exempel på en lista:
 
 Skapa ett registreringsformulär för nyhetsbrev där användarna kan prenumerera på taggar. Exempelwebbplatsen för Geometrixx innehåller en nyhetsbrevsida i verktygsfältet Geometrixx där du kan skapa ditt formulär.
 
-Om du vill skapa ett eget nyhetsbrevformulär läser du informationen om hur du skapar formulär i [Forms-dokumentationen](/help/sites-authoring/default-components.md#form). Nyhetsbrevet använder taggarna från taggbiblioteket. Mer information om hur du lägger till ytterligare taggar finns i [Taggadministration](/help/sites-authoring/tags.md#tagadministration).
+Om du vill skapa ett eget nyhetsbrevformulär läser du i informationen om hur du skapar formulär i [Forms-dokumentation](/help/sites-authoring/default-components.md#form). Nyhetsbrevet använder taggarna från taggbiblioteket. Mer information om hur du lägger till ytterligare taggar finns i [Taggsadministration](/help/sites-authoring/tags.md#tagadministration).
 
 De dolda fälten i följande exempel anger den minsta mängden information (e-post). Du kan dessutom lägga till fler fält senare, men detta påverkar konverteringsgraden.
 
@@ -57,7 +56,7 @@ Följande exempel är ett formulär som skapats på https://localhost:4502/cf#/c
 
    ![mcm_newsletterpage](assets/mcm_newsletterpage.png)
 
-1. Klicka på **Redigera** i formulärkomponenten för att konfigurera formuläret så att det går till en Tack-sida (se [Skapa Tack-sidor](#creating-a-thank-you-page)).
+1. Klicka **Redigera** i formulärkomponenten för att konfigurera formuläret så att det går till en Tack-sida (se [Skapa tacksidor](#creating-a-thank-you-page)).
 
    ![dc_formstart_thankyou](assets/dc_formstart_thankyou.png)
 
@@ -65,32 +64,32 @@ Följande exempel är ett formulär som skapats på https://localhost:4502/cf#/c
 
    ![dc_formstart_thankyouadvanced](assets/dc_formstart_thankyouadvanced.png)
 
-### Skapar en tacksida {#creating-a-thank-you-page}
+### Skapa en tacksida {#creating-a-thank-you-page}
 
-När användare klickar på **Prenumerera nu** vill du att en Tack-sida ska öppnas automatiskt. Skapa sidan Tack på sidan Geometrixx Newsletter. När du har skapat nyhetsbrevformuläret redigerar du formulärelementet och lägger till sökvägen på tacksidan.
+När användare klickar på **Prenumerera nu** vill du att sidan Tack ska öppnas automatiskt. Skapa sidan Tack på sidan Geometrixx Newsletter. När du har skapat nyhetsbrevformuläret redigerar du formulärelementet och lägger till sökvägen på tacksidan.
 
-När du skickar begäran dirigeras användaren till en **Tack**-sida efter vilken han/hon får ett e-postmeddelande. Denna tacksida skapades på /content/geometrixx/en/toolbar/newsletter/thanks_you.
+Om du skickar begäran tar det användaren till en **Tack** sida efter vilken de får ett e-postmeddelande. Denna tacksida skapades på /content/geometrixx/en/toolbar/newsletter/thanks_you.
 
 ![mcm_newsletter_thankyoupage](assets/mcm_newsletter_thankyoupage.png)
 
 ### Lägga till lärare {#adding-teasers}
 
-Lägg till [lärare](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#teasers) för att inrikta dig på specifika målgrupper. Du kan till exempel lägga till lärare på sidan Tack och på registreringssidan för nyhetsbrev.
+Lägg till [teasers](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#teasers) att inrikta sig på specifika målgrupper. Du kan till exempel lägga till lärare på sidan Tack och på registreringssidan för nyhetsbrev.
 
 Så här lägger du till testare för att skapa en effektiv startsida för nyhetsbrevet:
 
-1. Skapa en läcker paragraf för en gåva. Välj **First** som strategi och inkludera text som informerar dem om vilken gåva de får.
+1. Skapa en läcker paragraf för en gåva. Välj **Första** som strategi och innehåller text som informerar dem om vilken gåva de kommer att få.
 
    ![dc_teaser_thankyou](assets/dc_teaser_thankyou.png)
 
-1. Skapa ett underordnat stycke för sidan Tack. Välj **First** som strategi och inkludera text som anger att presenten är på väg.
+1. Skapa ett underordnat stycke för sidan Tack. Välj **Första** som strategi och inkludera text som anger att presenten är på väg.
 
    ![chlimage_1-103](assets/chlimage_1-103.png)
 
 1. Skapa en kampanj med de två teasers - tagga en med företag och en utan taggar.
 
-### Överför innehåll till prenumeranter {#pushing-content-to-subscribers}
+### Skicka innehåll till prenumeranter {#pushing-content-to-subscribers}
 
 Gör ändringar i sidorna med funktionen för nyhetsbrev i MCM. Sedan skickar du uppdaterat innehåll till prenumeranterna.
 
-Se [Skicka nyhetsbrev](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#newsletters).
+Se [Skickar nyhetsbrev](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#newsletters).

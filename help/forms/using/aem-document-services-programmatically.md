@@ -1,23 +1,22 @@
 ---
 title: Använda AEM dokumenttjänster programmatiskt
-seo-title: Använda AEM dokumenttjänster programmatiskt
+seo-title: Using AEM Document Services Programmatically
 description: Lär dig hur du använder Document Services API:er för att digitalt signera, kryptera och generera PDF-dokument.
-seo-description: Lär dig hur du använder Document Services API:er för att digitalt signera, kryptera och generera PDF-dokument.
+seo-description: Learn how to use Document Services APIs to Digitally sign, encrypt, and generate PDF documents.
 uuid: bf5ee197-4daf-4a64-8b6d-2c0d1f232b1c
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
 discoiquuid: 32118d3b-54d0-4283-b489-780bdcbfc8d2
-translation-type: tm+mt
-source-git-commit: c3fddf28c0f2f5377fff7561d29f073cc847c3ca
+exl-id: 9bf090db-2c14-439e-ad78-6832678a309d
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '6450'
+source-wordcount: '6430'
 ht-degree: 1%
 
 ---
 
-
-# Använda AEM dokumenttjänster programmatiskt {#using-aem-document-services-programmatically}
+# Använda AEM dokumenttjänster programmatiskt  {#using-aem-document-services-programmatically}
 
 Exempel och exempel i det här dokumentet hjälper dig att förstå och använda AEM Document Services i en AEM Forms-miljö i OSGi. Exempel och exempel på AEM Forms i JEE-miljö finns på
 
@@ -29,13 +28,13 @@ Exempel och exempel i det här dokumentet hjälper dig att förstå och använda
 
 ## Förutsättning {#prerequisite}
 
-* Innan du använder API:erna för tjänsten DocAssurance måste du [konfigurera tjänsten DocAssurance](/help/forms/using/install-configure-document-services.md).
+* Innan du använder API:erna för tjänsten DocAssurance, [konfigurera tjänsten DocAssurance](/help/forms/using/install-configure-document-services.md).
 
-* Ladda ned och konfigurera [AEM Forms Client SDK](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) med ditt projekt AEM Maven. De klientklasser som krävs för att skapa Maven Projects med AEM Document Services finns i [AEM Forms Client SDK](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)
+* Hämta och konfigurera [AEM Forms Client SDK](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) med dig AEM maven-projektet. De klientklasser som krävs för att skapa Maven Projects med AEM Document Services finns i [AEM Forms Client SDK](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)
 
-* Lär dig [hur du bygger AEM med Maven](/help/sites-developing/ht-projects-maven.md)
+* Lär dig [hur du bygger AEM projekt med Maven](/help/sites-developing/ht-projects-maven.md)
 
-## DocAssurance-tjänsten {#docassurance-service}
+## DocAssurance-tjänst {#docassurance-service}
 
 Tjänsten DocAssurance innehåller följande tjänster:
 
@@ -66,20 +65,20 @@ Du kan utföra följande åtgärder med tjänsten DocAssurance:
 * [Ta bort digitala signaturer](/help/forms/using/aem-document-services-programmatically.md#p-removing-digital-signatures-p)
 
 * [Hämta certifierat signaturfält](/help/forms/using/aem-document-services-programmatically.md#p-getting-certifying-signature-field-p)
-* [Hämta PDF-krypteringstyp](/help/forms/using/aem-document-services-programmatically.md#p-getting-pdf-encryption-type-p)
+* [Hämta krypteringstyp för PDF](/help/forms/using/aem-document-services-programmatically.md#p-getting-pdf-encryption-type-p)
 * [Ta bort lösenordskryptering](/help/forms/using/aem-document-services-programmatically.md#p-removing-password-encryption-from-pdf-p)
 
 * [Ta bort certifikatkryptering](/help/forms/using/aem-document-services-programmatically.md#p-removing-certificate-encryption-p)
 
 >[!NOTE]
 >
->Alla dessa tjänster använder Document-objektet som indataparameter som Javadoc finns för på URL:en [https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/index.html](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/index.html)
+>Alla dessa tjänster använder Document-objektet som indataparameter för vilken Javadoc finns på URL:en [https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/index.html](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/index.html)
 
 ### Lägga till ett osynligt signaturfält {#adding-an-invisible-signature-field}
 
 Digitala signaturer visas i signaturfält, som är formulärfält som innehåller en grafisk representation av signaturen. Signaturfält kan vara synliga eller osynliga. Signerare kan använda ett befintligt signaturfält eller ett signaturfält kan läggas till programmatiskt. I båda fallen måste signaturfältet finnas innan ett PDF-dokument kan signeras. Du kan programmässigt lägga till ett signaturfält med hjälp av Java API:t för signaturtjänsten eller API:t för signaturwebbtjänsten. Du kan lägga till mer än ett signaturfält i ett PDF-dokument. Varje signaturfältsnamn måste dock vara unikt.
 
-**Syntax**:  `addInvisibleSignatureField(Document inDoc, String signatureFieldName, FieldMDPOptionSpec fieldMDPOptionsSpec, PDFSeedValueOptionSpec seedValueOptionsSpec, UnlockOptions unlockOptions)`
+**Syntax**: `addInvisibleSignatureField(Document inDoc, String signatureFieldName, FieldMDPOptionSpec fieldMDPOptionsSpec, PDFSeedValueOptionSpec seedValueOptionsSpec, UnlockOptions unlockOptions)`
 
 **Indataparametrar**
 
@@ -99,11 +98,11 @@ Digitala signaturer visas i signaturfält, som är formulärfält som innehålle
   </tr>
   <tr>
    <td><code>fieldMDPOptionsSpec</code></td>
-   <td>Ett <code>FieldMDPOptionSpec</code>-objekt som anger PDF-dokumentfälten som är låsta efter att signaturfältet har signerats. Den här parametern är valfri och kan acceptera null-värde.</td>
+   <td>A <code>FieldMDPOptionSpec</code> objekt som anger dokumentfält i PDF som låses efter att signaturfältet har signerats. Den här parametern är valfri och kan acceptera null-värde.</td>
   </tr>
   <tr>
    <td><code>seedValueOptionsSpec</code></td>
-   <td>Ett <code>SeedValueOptions</code>-objekt som anger fältets olika dirigeringsvärden. T Den här parametern är valfri och kan acceptera null-värde.<span class="acrolinxCursorMarker"></span></td>
+   <td>A <code>SeedValueOptions</code> -objekt som anger fältets olika dirigeringsvärden. T Den här parametern är valfri och kan acceptera null-värde.<span class="acrolinxCursorMarker"></span></td>
   </tr>
   <tr>
    <td><code>unlockOptions</code></td>
@@ -239,7 +238,7 @@ public class AddInvisibleSignatureField {
 }
 ```
 
-Du kan också använda specifikationen [CAdES](https://en.wikipedia.org/wiki/CAdES_%28computing%29)för signering av dokument. Använd följande exempelkod för att konfigurera signeringsformatet till [CAdES.](https://en.wikipedia.org/wiki/CAdES_%28computing%29)
+Du kan också använda [CAdES](https://en.wikipedia.org/wiki/CAdES_%28computing%29)specifikation för signering av dokument. Använd följande exempelkod för att ställa in signeringsformat för [CAdES.](https://en.wikipedia.org/wiki/CAdES_%28computing%29)
 
 ```java
 SigningFormat signingFormat = SigningFormat.CAdES;
@@ -284,15 +283,15 @@ public Document addSignatureField(Document inDoc,
   </tr>
   <tr>
    <td><code>positionRectangle</code></td>
-   <td>A <code>PositionRectangle object</code> som anger positionen för signaturfältet. Den här parametern är obligatorisk och kan inte acceptera ett null-värde. Om den angivna rektangeln inte finns åtminstone delvis i beskärningsrutan på den angivna sidan, genereras ett <code>InvalidArgumentException</code>. Dessutom kan varken höjden eller bredden på den angivna rektangeln vara 0 eller negativ. De nedre vänstra X-koordinaterna eller de nedre vänstra Y-koordinaterna kan vara 0 eller större men inte negativa och är relativa till sidans beskärningsruta.</td>
+   <td>A <code>PositionRectangle object</code> som anger signaturfältets position. Den här parametern är obligatorisk och kan inte acceptera ett null-värde. Om den angivna rektangeln inte finns åtminstone delvis i beskärningsrutan på den angivna sidan kan du <code>InvalidArgumentException</code> kastas. Dessutom kan varken höjden eller bredden på den angivna rektangeln vara 0 eller negativ. De nedre vänstra X-koordinaterna eller de nedre vänstra Y-koordinaterna kan vara 0 eller större men inte negativa och är relativa till sidans beskärningsruta.</td>
   </tr>
   <tr>
    <td><code>fieldMDPOptionsSpec</code></td>
-   <td>Ett <code>FieldMDPOptionSpec</code>-objekt som anger PDF-dokumentfälten som är låsta efter att signaturfältet har signerats. Detta är en valfri parameter och kan vara null.</td>
+   <td>A <code>FieldMDPOptionSpec</code> objekt som anger dokumentfält i PDF som låses efter att signaturfältet har signerats. Detta är en valfri parameter och kan vara null.</td>
   </tr>
   <tr>
    <td><code>seedValueOptionsSpec</code></td>
-   <td>Ett <code>SeedValueOptions</code>-objekt som anger fältets olika dirigeringsvärden. Detta är en valfri parameter och kan vara null.</td>
+   <td>A <code>SeedValueOptions</code> -objekt som anger fältets olika dirigeringsvärden. Detta är en valfri parameter och kan vara null.</td>
   </tr>
   <tr>
    <td><code>unlockOptions</code></td>
@@ -427,11 +426,11 @@ public class AddSignatureField {
 }
 ```
 
-### Använd dokumentets tidsstämpel {#apply-document-timestamp}
+### Använd dokumenttidsstämpel {#apply-document-timestamp}
 
-Du kan tidsstämpla ett dokument enligt specifikationerna för [PAdES 4](https://en.wikipedia.org/wiki/PAdES). Du kan också använda specifikationen [CAdES](https://en.wikipedia.org/wiki/CAdES_%28computing%29) för transaktionsrelaterade dokument.
+Du kan tidsstämpla ett dokument enligt [PAdES 4](https://en.wikipedia.org/wiki/PAdES) specifikationer. Du kan också använda [CAdES](https://en.wikipedia.org/wiki/CAdES_%28computing%29) specifikation för transaktionsrelaterade dokument.
 
-**Syntax**:  `applyDocumentTimeStamp(Document doc, VerificationTime verificationTime, ValidationPreferences dssPrefs, ResourceResolver resourceResolver, UnlockOptions unlockOptions)`
+**Syntax**: `applyDocumentTimeStamp(Document doc, VerificationTime verificationTime, ValidationPreferences dssPrefs, ResourceResolver resourceResolver, UnlockOptions unlockOptions)`
 
 **Indataparametrar**
 
@@ -447,7 +446,7 @@ Du kan tidsstämpla ett dokument enligt specifikationerna för [PAdES 4](https:/
   </tr>
   <tr>
    <td><code>VerificationTime</code></td>
-   <td>Tidpunkten då signaturen ska valideras<br /> </td>
+   <td>Den tidpunkt då signaturen ska valideras<br /> </td>
   </tr>
   <tr>
    <td><code>ValidationPreferences</code> </td>
@@ -464,7 +463,7 @@ Du kan tidsstämpla ett dokument enligt specifikationerna för [PAdES 4](https:/
  </tbody>
 </table>
 
-Följande kodexempel lägger till en tidsstämpel i ett dokument enligt [PAdES 4](https://en.wikipedia.org/wiki/PAdES).
+I följande kodexempel läggs en tidsstämpel till i ett dokument enligt [PAdES 4](https://en.wikipedia.org/wiki/PAdES).
 
 ```java
 package com.adobe.signatures.test;
@@ -636,9 +635,9 @@ import com.adobe.fd.signatures.pki.client.types.prefs.TSPPreferencesImpl;
 
 ### Hämtar signatur {#getting-signature}
 
-Du kan hämta namnen på alla signaturfält som finns i ett PDF-dokument som du vill signera eller certifiera. Om du inte är säker på vilka signaturfältsnamn som finns i ett PDF-dokument eller om du vill verifiera namnen, hämtar du namnen programmatiskt. Signaturtjänsten returnerar signaturfältets kvalificerade namn, till exempel `form1[0].grantApplication[0].page1[0].SignatureField1[0]`.
+Du kan hämta namnen på alla signaturfält som finns i ett PDF-dokument som du vill signera eller certifiera. Om du inte är säker på vilka signaturfältsnamn som finns i ett PDF-dokument eller om du vill verifiera namnen hämtar du namnen programmatiskt. Signaturtjänsten returnerar signaturfältets kvalificerade namn, till exempel `form1[0].grantApplication[0].page1[0].SignatureField1[0]`.
 
-**Syntax**:  `getSignature(Document doc, String signatureFieldName, UnlockOptions unlockOptions)`
+**Syntax**: `getSignature(Document doc, String signatureFieldName, UnlockOptions unlockOptions)`
 
 **Indataparametrar**
 
@@ -654,7 +653,7 @@ Du kan hämta namnen på alla signaturfält som finns i ett PDF-dokument som du 
   </tr>
   <tr>
    <td><code>signatureFieldName</code></td>
-   <td>Namnet på det signaturfält som innehåller en signatur. Ange det fullständiga, kvalificerade namnet på signaturfältet. När du använder ett PDF-dokument som är baserat på ett XFA-formulär, kan det partiella namnet på signaturfältet användas. Du kan till exempel ange <code>form1[0].#subform[1].SignatureField3[3]</code> som <code>SignatureField3[3]</code>.</td>
+   <td>Namnet på det signaturfält som innehåller en signatur. Ange det fullständiga, kvalificerade namnet för signaturfältet. När du använder ett PDF-dokument som är baserat på ett XFA-formulär kan du använda det partiella namnet på signaturfältet. Till exempel: <code>form1[0].#subform[1].SignatureField3[3]</code> kan anges som <code>SignatureField3[3]</code>.</td>
   </tr>
   <tr>
    <td><code>UnlockOptions</code></td>
@@ -762,7 +761,7 @@ public class GetSignature {
 
 Du kan hämta namnen på alla signaturfält som finns i ett PDF-dokument som du vill signera eller certifiera. Om du är osäker på signaturfältens namn i ett PDF-dokument kan du hämta och verifiera dem programmatiskt. Signaturtjänsten returnerar signaturfältets kvalificerade namn, till exempel `form1[0].grantApplication[0].page1[0].SignatureField1[0]`.
 
-**Syntax**:  `public List <PDFSignatureField> getSignatureFieldList (Document inDoc, UnlockOptions unlockOptions)`
+**Syntax**: `public List <PDFSignatureField> getSignatureFieldList (Document inDoc, UnlockOptions unlockOptions)`
 
 **Indataparametrar**
 
@@ -771,7 +770,7 @@ Du kan hämta namnen på alla signaturfält som finns i ett PDF-dokument som du 
 | `inDoc` | Dokumentobjekt som innehåller PDF |
 | `unlockOptions` | Innehåller de parametrar som krävs för att låsa upp en krypterad fil. Detta krävs bara om filen är krypterad. |
 
-I följande Java-kodexempel hämtas namnen på signaturfält som finns i ett PDF-dokument.
+I följande Java-kodexempel hämtas namnen på signaturfälten i ett PDF-dokument.
 
 ```java
 /*************************************************************************
@@ -879,9 +878,9 @@ Du kan ändra signaturfält som finns i ett PDF-dokument. När du ändrar ett si
 
 En låsordlista för fält anger en lista med fält som är låsta när signaturfältet signeras. Ett låst fält hindrar användaren från att redigera fältet. En ordlista för dirigerade värden innehåller begränsad information som används när signaturen används. Du kan till exempel ändra behörigheter som styr vilka åtgärder som kan utföras utan att en signatur blir ogiltig.
 
-Genom att ändra ett befintligt signaturfält kan du redigera PDF-dokumentet så att det återspeglar ändrade affärskrav. Ett nytt affärskrav kräver till exempel att alla dokumentfält låses efter att dokumentet har signerats.
+Genom att ändra ett befintligt signaturfält kan du redigera PDF-dokumentet så att det återspeglar förändrade affärskrav. Ett nytt affärskrav kräver till exempel att alla dokumentfält låses efter att dokumentet har signerats.
 
-**Syntax**:  `public Document modifySignatureField(Document inDoc, String signatureFieldName, PDFSignatureFieldProperties pdfSignatureFieldProperties, UnlockOptions unlockOptions)`
+**Syntax**: `public Document modifySignatureField(Document inDoc, String signatureFieldName, PDFSignatureFieldProperties pdfSignatureFieldProperties, UnlockOptions unlockOptions)`
 
 **Indataparametrar**
 
@@ -901,7 +900,7 @@ Genom att ändra ett befintligt signaturfält kan du redigera PDF-dokumentet så
   </tr>
   <tr>
    <td><code>pdfSignatureFieldProperties</code></td>
-   <td>Objekt som anger information om signaturfältets <code>PDFSeedValueOptionSpec</code>- och <code>FieldMDPOptionSpec</code>-värden.</td>
+   <td>Objekt som anger information om <code>PDFSeedValueOptionSpec</code> och <code>FieldMDPOptionSpec</code> signaturfältets värden.</td>
   </tr>
   <tr>
    <td><code>unlockOptions</code></td>
@@ -1042,7 +1041,7 @@ public class ModifySignatureField {
 
 ### Certifiera PDF-dokument  {#certifying-pdf-documents-nbsp}
 
-Du kan skydda ett PDF-dokument genom att certifiera det med en viss typ av signatur som kallas certifierad signatur. En certifierad signatur skiljer sig från en digital signatur på följande sätt:
+Du kan skydda ett PDF-dokument genom att certifiera det med en viss typ av signatur som kallas för en certifierad signatur. En certifierad signatur skiljer sig från en digital signatur på följande sätt:
 
 * Det måste vara den första signaturen som tillämpas på PDF-dokumentet. När den certifierade signaturen tillämpas måste andra signaturfält i dokumentet alltså vara osignerade. Endast en certifierad signatur tillåts i ett PDF-dokument. Om du vill signera och certifiera ett PDF-dokument certifierar du det innan du signerar det. När du har certifierat ett PDF-dokument kan du signera ytterligare signaturfält digitalt.
 * Författaren eller författaren till dokumentet kan ange att dokumentet kan ändras på vissa sätt utan att den certifierade signaturen blir ogiltig. Dokumentet kan t.ex. tillåta ifyllnad av formulär eller kommentarer. Om författaren anger att en viss ändring inte är tillåten, begränsar Acrobat användare från att ändra dokumentet på det sättet. Om sådana ändringar görs är den certifierade signaturen ogiltig. Dessutom skickar Acrobat en varning när en användare öppnar dokumentet. (Med icke-certifierade signaturer förhindras inte ändringar och normala redigeringsåtgärder gör inte den ursprungliga signaturen ogiltig.)
@@ -1065,7 +1064,7 @@ secureDocument(Document inDoc, EncryptionOptions encryptionOptions,
   </tr>
   <tr>
    <td><code>inDoc</code> </td>
-   <td>Indata-PDF-dokument för dokument<br /> </td>
+   <td>Dokumentinmatningsdokument PDF<br /> </td>
   </tr>
   <tr>
    <td><code>encryptionOptions</code> </td>
@@ -1073,15 +1072,15 @@ secureDocument(Document inDoc, EncryptionOptions encryptionOptions,
   </tr>
   <tr>
    <td><code>signatureOptions</code></td>
-   <td>Innehåller de alternativ som krävs för att signera/certifiera ett PDF-dokument</td>
+   <td>Inkluderar de alternativ som krävs för att signera/certifiera ett PDF-dokument</td>
   </tr>
   <tr>
    <td><code>readerExtensionOptions</code></td>
-   <td>Inkluderar de alternativ som krävs för att utöka ett PDF-dokument i Reader</td>
+   <td>Innehåller de alternativ som krävs för att utöka ett PDF-dokument i Reader</td>
   </tr>
   <tr>
    <td><code>unlockOptions</code></td>
-   <td>Inkluderar de parametrar som krävs för att låsa upp en krypterad fil. Detta krävs bara om filen är krypterad.<br /> </td>
+   <td>Innehåller de parametrar som krävs för att låsa upp en krypterad fil. Detta krävs bara om filen är krypterad.<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -1374,11 +1373,11 @@ Dessutom innehåller listor över återkallade certifikat information om certifi
 >
 >Innan du kan kryptera ett PDF-dokument med ett certifikat måste du se till att du lägger till certifikatet i AEM Trust Store.
 
-**Tillämpa användningsbehörighet för PDF-dokument**
+**Tillämpa användarrättigheter på PDF-dokument**
 
-Du kan lägga till användningsrättigheter i PDF-dokument med hjälp av Java Client-API:t för Reader Extensions och webbtjänsten. Användningsrättigheterna gäller funktioner som är tillgängliga som standard i Acrobat men inte i Adobe Reader, t.ex. möjligheten att lägga till kommentarer i ett formulär eller att fylla i formulärfält och spara formuläret. PDF-dokument som har användarrättigheter är aktiverade. En användare som öppnar ett rättighetsaktiverat dokument i Adobe Reader kan utföra åtgärder som är aktiverade för det specifika dokumentet.
+Du kan lägga till användarrättigheter i PDF-dokument med hjälp av Reader Extensions Java Client API och webbtjänsten. Användningsrättigheterna gäller funktioner som är tillgängliga som standard i Acrobat men inte i Adobe Reader, t.ex. möjligheten att lägga till kommentarer i ett formulär eller att fylla i formulärfält och spara formuläret. PDF-dokument som har användarrättigheter är aktiverade. En användare som öppnar ett rättighetsaktiverat dokument i Adobe Reader kan utföra åtgärder som är aktiverade för det specifika dokumentet.
 
-Innan du kan Reader utöka ett PDF-dokument med ett certifikat måste du se till att du lägger till certifikatet AEM Keystore.
+Innan du kan Reader utöka ett PDF-dokument med ett certifikat måste du se till att du lägger till certifikatet AEM nyckelbehållaren.
 
 **Signera PDF-dokument digitalt**
 
@@ -1386,7 +1385,7 @@ Digitala signaturer kan användas i PDF-dokument för att ge en viss säkerhetsn
 
 Den teknik som används för att digitalt signera dokument gör att både signeraren och mottagaren vet vad som signerats och vet att dokumentet inte har ändrats sedan det signerades.
 
-PDF-dokument signeras med hjälp av teknik med öppen nyckel. En signerare har två nycklar: en offentlig nyckel och en privat nyckel. Den privata nyckeln lagras i en användares autentiseringsuppgifter som måste vara tillgängliga vid signeringen.
+PDF-dokument undertecknas med hjälp av teknik med öppen nyckel. En signerare har två nycklar: en offentlig nyckel och en privat nyckel. Den privata nyckeln lagras i en användares autentiseringsuppgifter som måste vara tillgängliga vid signeringen.
 
 Den offentliga nyckeln lagras i användarens certifikat som måste vara tillgängligt för mottagarna för att validera signaturen. Information om återkallade certifikat finns i listor över återkallade certifikat (CRL:er) och OCSP-svar (Online Certificate Status Protocol) som distribueras av certifikatutfärdare (CA:er). Tidpunkten för signering kan hämtas från en betrodd källa som kallas tidsstämpelutfärdare.
 
@@ -1396,13 +1395,13 @@ Den offentliga nyckeln lagras i användarens certifikat som måste vara tillgän
 
 >[!NOTE]
 >
->AEM Forms stöder även specifikationen *[CAdES](https://en.wikipedia.org/wiki/CAdES_%28computing%29)* för digitalt undertecknande av PDF-dokument.
+>AEM Forms har också stöd för *[CAdES](https://en.wikipedia.org/wiki/CAdES_%28computing%29)* för digitalt undertecknande av PDF-dokument.
 
 **Certifiera PDF-dokument**
 
-Du kan skydda ett PDF-dokument genom att certifiera det med en viss typ av signatur som kallas certifierad signatur. En certifierad signatur skiljer sig från en digital signatur på följande sätt:
+Du kan skydda ett PDF-dokument genom att certifiera det med en viss typ av signatur som kallas för en certifierad signatur. En certifierad signatur skiljer sig från en digital signatur på följande sätt:
 
-Det måste vara den första signaturen som tillämpas på PDF-dokumentet. dvs. när den certifierade signaturen tillämpas måste alla andra signaturfält i dokumentet vara osignerade.
+Det måste vara den första signaturen som gäller för PDF-dokumentet. dvs. när den certifierade signaturen tillämpas måste alla andra signaturfält i dokumentet vara osignerade.
 
 Endast en certifierad signatur tillåts i ett PDF-dokument. Om du vill signera och certifiera ett PDF-dokument måste du certifiera det innan du signerar det.
 
@@ -1442,7 +1441,7 @@ secureDocument(Document inDoc,
   </tr>
   <tr>
    <td><code>inDoc</code> </td>
-   <td>PDF-dokument för dokumentindata<br /> </td>
+   <td>Dokumentindata PDF dokument<br /> </td>
   </tr>
   <tr>
    <td><code>encryptionOptions</code> </td>
@@ -1458,12 +1457,12 @@ secureDocument(Document inDoc,
   </tr>
   <tr>
    <td><code>unlockOptions</code></td>
-   <td>Inkluderar de parametrar som krävs för att låsa upp en krypterad fil. Detta krävs bara om filen är krypterad.<br /> </td>
+   <td>Innehåller de parametrar som krävs för att låsa upp en krypterad fil. Detta krävs bara om filen är krypterad.<br /> </td>
   </tr>
  </tbody>
 </table>
 
-**Exempel 1**: Det här exemplet används för att utföra lösenordskryptering, certifiera ett signaturfält och Reader för att utöka PDF-dokumentet.
+**Exempel 1**: Det här exemplet används för att utföra lösenordskryptering, certifiera ett signaturfält och Reader för att utöka dokumentet PDF.
 
 ```java
 /*************************************************************************
@@ -1765,7 +1764,7 @@ public class PassEncryptCertifyExtend {
 }
 ```
 
-**Exempel 2**: Det här exemplet används för att utföra PKI-kryptering, signera ett signaturfält och Reader utöka PDF-dokumentet.
+**Exempel 2**: Det här exemplet används för att utföra PKI-kryptering, signera ett signaturfält och Reader utöka dokumentet PDF.
 
 ```java
 /*************************************************************************
@@ -2105,11 +2104,11 @@ optionSpec.setJsScriptExecutionTimeoutInterval(100);
 
 där 100 refererar till det tidsgränsintervall som har definierats för körning av JavaScript (i sekunder). Ange ett lämpligt värde för timeoutintervallet.
 
-### Hämtar användningsbehörighet för autentiseringsuppgifter {#getting-credential-usage-rights}
+### Hämtar användarbehörighet för autentiseringsuppgifter {#getting-credential-usage-rights}
 
-Om du vill hämta information om användningsrättigheter för de autentiseringsuppgifter som anges av angiven `credentialAlias` anropar du detta API inifrån `SecureDocument`-API:t.
+Så här hämtar du information om användningsrättigheter för de autentiseringsuppgifter som anges av den angivna `credentialAlias`anropar du detta API inifrån `SecureDocument` API.
 
-**Syntax**:  `getCredentialUsageRights(String credentialAlias, ResourceResolver resourceResolver)`
+**Syntax**: `getCredentialUsageRights(String credentialAlias, ResourceResolver resourceResolver)`
 
 **Indataparametrar**
 
@@ -2121,11 +2120,11 @@ Om du vill hämta information om användningsrättigheter för de autentiserings
   </tr>
   <tr>
    <td><code>credentialAlias</code> </td>
-   <td><code>credentialAlias</code> som anger autentiseringsuppgiften.<br /> </td>
+   <td>The <code>credentialAlias</code> som anger autentiseringsuppgifterna.<br /> </td>
   </tr>
   <tr>
    <td><code>credentialPassword</code> </td>
-   <td>Lösenordet för autentiseringsuppgiften om autentiseringsuppgiften är krypterad måste null användas om autentiseringsuppgiften inte är krypterad.<br /> </td>
+   <td>Lösenordet för autentiseringsuppgiften om autentiseringsuppgiften är krypterad, null måste användas om autentiseringsuppgiften inte är krypterad.<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -2196,11 +2195,11 @@ public void getCredentialUsageRights() {
 }
 ```
 
-### Hämtar användningsbehörighet för dokument {#getting-document-usage-rights}
+### Hämta användningsbehörighet för dokument {#getting-document-usage-rights}
 
-Om du vill hämta information om användningsrättigheter för ett visst dokument anropar du detta API inifrån `docAssuranceService`API:t.
+Om du vill hämta information om användningsrättigheter för ett visst dokument anropar du detta API inifrån `docAssuranceService`API.
 
-**Syntax**:  `getDocumentUsageRights(Document inDocument, UnlockOptions unlockOptions)`
+**Syntax**: `getDocumentUsageRights(Document inDocument, UnlockOptions unlockOptions)`
 
 **Indataparametrar**
 
@@ -2318,7 +2317,7 @@ public void getDocumentUsageRights() {
 
 ### Tar bort användningsrättigheter {#removing-usage-rights}
 
-Du kan ta bort användningsrättigheterna för ett dokument genom att anropa `removeUsageRights`API:t inifrån `docAssuranceService`API:t.
+Du kan ta bort användningsrättigheterna för ett dokument genom att anropa `removeUsageRights`API inifrån `docAssuranceService`API.
 
 **Indataparametrar**
 
@@ -2334,7 +2333,7 @@ Du kan ta bort användningsrättigheterna för ett dokument genom att anropa `re
   </tr>
   <tr>
    <td><code>unlockOptions</code> </td>
-   <td>Innehåller de parametrar som krävs för att låsa upp en krypterad fil. Detta är endast nödvändigt om filen är krypterad.<br /> </td>
+   <td>Innehåller de parametrar som krävs för att låsa upp en krypterad fil. Detta krävs bara om filen är krypterad.<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -2441,11 +2440,11 @@ public void removeDocumentUsageRights() {
 }
 ```
 
-#### Verifierar digitala signaturer {#verifying-digital-signatures}
+#### Verifiera digitala signaturer {#verifying-digital-signatures}
 
 Digitala signaturer kan verifieras för att säkerställa att ett signerat PDF-dokument inte ändras och att den digitala signaturen är giltig. När du verifierar en digital signatur kan du kontrollera signaturens status och dess egenskaper, t.ex. signerarens identitet. Innan du litar på en elektronisk underskrift bör du verifiera den. När du verifierar en digital signatur refererar du till ett PDF-dokument som innehåller en digital signatur.
 
-**Syntax**:  `verify( inDoc, signatureFieldName, revocationCheckStyle, verificationTime, dssPrefs, ResourceResolver resourceResolver)`
+**Syntax**: `verify( inDoc, signatureFieldName, revocationCheckStyle, verificationTime, dssPrefs, ResourceResolver resourceResolver)`
 
 **Indataparametrar**
 
@@ -2483,7 +2482,7 @@ Digitala signaturer kan verifieras för att säkerställa att ett signerat PDF-d
  </tbody>
 </table>
 
-I den här exempelkoden används `DocAssuranceService` för att verifiera ett signaturfält i ett krypterat PDF-dokument.
+Den här exempelkoden använder `DocAssuranceService` för att verifiera ett signaturfält i ett krypterat PDF-dokument.
 
 ```java
 /*************************************************************************
@@ -2759,11 +2758,11 @@ public class VerifyFieldEncryptedPDF {
 }
 ```
 
-### Verifierar flera digitala signaturer {#verifying-multiple-digital-signatures}
+### Verifiera flera digitala signaturer {#verifying-multiple-digital-signatures}
 
 AEM kan du verifiera digitala signaturer i PDF-dokument. Ett PDF-dokument kan innehålla flera digitala signaturer om det genomgår en affärsprocess som kräver signaturer från flera signerare. En finansiell transaktion kräver till exempel underskrifter av både lånechefen och förvaltaren. Du kan använda API:t för signaturtjänsten för att verifiera alla signaturer i PDF-dokumentet. När du verifierar flera digitala signaturer kan du kontrollera status och egenskaper för varje signatur. Innan du litar på en elektronisk underskrift rekommenderar Adobe att du kontrollerar den.
 
-**Syntax**:  `verifyDocument(Document doc, RevocationCheckStyle revocationCheckStyle, VerificationTime verificationTime, ValidationPreferences prefStore, ResourceResolver resourceResolver)`
+**Syntax**: `verifyDocument(Document doc, RevocationCheckStyle revocationCheckStyle, VerificationTime verificationTime, ValidationPreferences prefStore, ResourceResolver resourceResolver)`
 
 **Indataparametrar**
 
@@ -3061,7 +3060,7 @@ public class VerifyEncryptedPDFDoc {
 
 Du kan bara använda en ny digital signatur i ett signaturfält efter att du har tagit bort den tidigare digitala signaturen. Du kan inte skriva över en digital signatur. Om du försöker tillämpa en digital signatur på ett signaturfält som redan innehåller en signatur inträffar ett undantag.
 
-**Syntax**:  `clearSignatureField(Document inDoc, String signatureFieldName, UnlockOptions unlockOptions)`
+**Syntax**: `clearSignatureField(Document inDoc, String signatureFieldName, UnlockOptions unlockOptions)`
 
 **Indataparametrar**
 
@@ -3081,7 +3080,7 @@ Du kan bara använda en ny digital signatur i ett signaturfält efter att du har
   </tr>
   <tr>
    <td><code>unlockOptions</code> </td>
-   <td>Inkluderar de parametrar som krävs för att låsa upp en krypterad fil. Detta krävs bara om filen är krypterad<br /> </td>
+   <td>Inkluderar de parametrar som krävs för att låsa upp en krypterad fil. Detta är endast nödvändigt om filen är krypterad<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -3182,7 +3181,7 @@ public class ClearSignatureField {
 
 Du kan hämta namnen på alla signaturfält som finns i ett PDF-dokument som du vill signera eller certifiera. Om du är osäker på vilka signaturfältsnamn som finns i ett PDF-dokument eller vill verifiera namnen, kan du hämta dem programmatiskt. Signaturtjänsten returnerar signaturfältets kvalificerade namn, till exempel `form1[0].grantApplication[0].page1[0].SignatureField1[0]`.
 
-**Syntax**:  `getCertifyingSignatureField(Document inDoc, UnlockOptions unlockOptions)`
+**Syntax**: `getCertifyingSignatureField(Document inDoc, UnlockOptions unlockOptions)`
 
 **Indataparametrar**
 
@@ -3297,11 +3296,11 @@ public class GetCertifyingSignatureField {
 }
 ```
 
-### Hämtar PDF-krypteringstyp {#getting-pdf-encryption-type}
+### Hämtar krypteringstypen PDF {#getting-pdf-encryption-type}
 
-Du kan hämta namnen på alla signaturfält som finns i ett PDF-dokument som du vill signera eller certifiera. Om du är osäker på vilka signaturfältsnamn som finns i ett PDF-dokument eller vill verifiera namnen, kan du hämta dem programmatiskt. Signaturtjänsten returnerar signaturfältets kvalificerade namn, till exempel `asform1[0].grantApplication[0].page1[0].SignatureField1[0]`.
+Du kan hämta namnen på alla signaturfält som finns i ett PDF-dokument som du vill signera eller certifiera. Om du är osäker på vilka signaturfältsnamn som finns i ett PDF-dokument eller vill verifiera namnen, kan du hämta dem programmatiskt. Signaturtjänsten returnerar signaturfältets kvalificerade namn, som `asform1[0].grantApplication[0].page1[0].SignatureField1[0]`.
 
-**Syntax**:  `void getPDFEncryption(Document inDoc)`
+**Syntax**: `void getPDFEncryption(Document inDoc)`
 
 **Indataparametrar**
 
@@ -3415,9 +3414,9 @@ public class GetPDFEncryption {
 
 ### Tar bort lösenordskryptering från PDF {#removing-password-encryption-from-pdf}
 
-Ta bort lösenordsbaserad kryptering från ett PDF-dokument så att användarna kan öppna PDF-dokumentet i Adobe Reader eller Acrobat utan att behöva ange ett lösenord. När du har tagit bort lösenordsbaserad kryptering från ett PDF-dokument är dokumentet inte längre säkert.
+Ta bort lösenordsbaserad kryptering från ett PDF-dokument så att användare kan öppna PDF-dokumentet i Adobe Reader eller Acrobat utan att behöva ange ett lösenord. När du har tagit bort lösenordsbaserad kryptering från ett PDF-dokument är dokumentet inte längre säkert.
 
-**Syntax**:  `Document removePDFPasswordSecurity (Document inDoc,String password)`
+**Syntax**: `Document removePDFPasswordSecurity (Document inDoc,String password)`
 
 **Indataparametrar**
 
@@ -3429,11 +3428,11 @@ Ta bort lösenordsbaserad kryptering från ett PDF-dokument så att användarna 
   </tr>
   <tr>
    <td><code>inDoc</code> </td>
-   <td>Dokumentet tillhandahålls som indata. Det måste vara lösenordsskyddat.<br /> </td>
+   <td>Dokumentet tillhandahålls som indata. Den måste vara lösenordsskyddad.<br /> </td>
   </tr>
   <tr>
    <td><code>password</code> </td>
-   <td>Antingen en dokumentöppning eller ett behörighetslösenord som ska användas för att ta bort säkerhet från dokumentet.<br /> </td>
+   <td>Antingen ett öppet dokument eller ett behörighetslösenord som ska användas för att ta bort skyddet från dokumentet.<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -3514,9 +3513,9 @@ Följande kodexempel tar bort lösenordsbaserad kryptering från ett PDF-dokumen
 
 ### Tar bort certifikatkryptering {#removing-certificate-encryption}
 
-Du kan ta bort certifikatbaserad kryptering från ett PDF-dokument så att användarna kan öppna PDF-dokumentet i Adobe Reader eller Acrobat. Om du vill ta bort kryptering från ett PDF-dokument som är krypterat med ett certifikat refererar du till en privat nyckel. När du har tagit bort krypteringen från ett PDF-dokument är den inte längre säker.
+Du kan ta bort certifikatbaserad kryptering från ett PDF-dokument så att användare kan öppna PDF-dokumentet i Adobe Reader eller Acrobat. Om du vill ta bort kryptering från ett PDF-dokument som är krypterat med ett certifikat, refererar du till en privat nyckel. När du har tagit bort krypteringen från ett PDF-dokument är den inte längre säker.
 
-**Syntax**:  `removePDFCertificateSecurity(Document inDoc, String alias, ResourceResolver resourceResolver)`
+**Syntax**: `removePDFCertificateSecurity(Document inDoc, String alias, ResourceResolver resourceResolver)`
 
 **Indataparametrar**
 
@@ -3638,17 +3637,17 @@ Följande Java-kodexempel tar bort certifikatbaserad kryptering från ett PDF-do
 
 Tjänsten Output innehåller API:er för att återge en XDP-fil i formaten .pdf, .pcl, .zpl och .ps. Tjänsten stöder följande API:er:
 
-* **[generatePDFOutput](/help/forms/using/aem-document-services-programmatically.md#p-generatepdfoutput-p):** Skapar ett PDF-dokument genom att sammanfoga en formulärdesign med data lagrade på en nätverksplats, ett lokalt filsystem eller en HTTP-plats som litteralvärden.
+* **[generatePDFOutput](/help/forms/using/aem-document-services-programmatically.md#p-generatepdfoutput-p):** Skapar ett PDF-dokument genom att sammanfoga en formulärdesign med data som lagras på en nätverksplats, ett lokalt filsystem eller en HTTP-plats som litteralvärden.
 
 * **[generatePDFOutput](/help/forms/using/aem-document-services-programmatically.md#p-generatepdfoutput-p):** Skapar ett PDF-dokument genom att sammanfoga en formulärdesign med data som lagras i ett program.
-* **[generatePDFOutputBatch](/help/forms/using/aem-document-services-programmatically.md#p-generatepdfoutputbatch-p):** Sammanfogar en formulärdesign med data för att skapa ett PDF-dokument. Alternativt kan du generera en metadatafil för varje post eller spara utdata i en PDF-fil.
+* **[generatePDFOutputBatch](/help/forms/using/aem-document-services-programmatically.md#p-generatepdfoutputbatch-p):** Sammanfogar en formulärdesign med data för att skapa ett PDF-dokument. Om du vill kan du generera en metadatafil för varje post eller spara utdata i en PDF-fil.
 * **[generatePrintedOutput](/help/forms/using/aem-document-services-programmatically.md#p-generateprintedoutput-p):** Skapar PCL-, PostScript- eller ZPL-utdata från en formulärdesign och datafil som lagras på en nätverksplats, ett lokalt filsystem eller en HTTP-plats som litteralvärden.
 
 * **[generatePrintedOutput](/help/forms/using/aem-document-services-programmatically.md#p-generateprintedoutput-p):** Skapar PCL-, PostScript- och ZPL-utdata från en formulärdesign och datafil som lagras i ett program.
 
 ### generatePDFOutput {#generatepdfoutput}
 
-generatePDFOutput-API:t genererar ett PDF-dokument genom att sammanfoga en formulärdesign med data. Alternativt kan du generera en metadatafil för varje post eller spara utdata i en PDF-fil. Använd generatePDFOutput API för formulärdesigner eller data som lagras på en nätverksplats, ett lokalt filsystem eller en HTTP-plats som litteralvärden. Om formulärdesignen och XML-data lagras i ett program använder du API:t [generatePDFOutput](/help/forms/using/aem-document-services-programmatically.md#p-generatepdfoutput-p).
+GenereraPDFOutput-API:t genererar ett PDF-dokument genom att sammanfoga en formulärdesign med data. Om du vill kan du generera en metadatafil för varje post eller spara utdata i en PDF-fil. Använd generatePDFOutput API för formulärdesigner eller data som lagras på en nätverksplats, ett lokalt filsystem eller en HTTP-plats som litteralvärden. Om formulärdesignen och XML-data lagras i ett program använder du [generatePDFOutput](/help/forms/using/aem-document-services-programmatically.md#p-generatepdfoutput-p) API.
 
 **Syntax:** `Document generatePDFOutput(String uriOrFileName, Document data, PDFOutputOptions options);`
 
@@ -3666,7 +3665,7 @@ generatePDFOutput-API:t genererar ett PDF-dokument genom att sammanfoga en formu
   </tr>
   <tr>
    <td>data</td>
-   <td>En XML-fil som innehåller data som sammanfogas med PDF-dokumentet.<br /> </td>
+   <td>En XML-fil som innehåller data som sammanfogas med dokumentet PDF.<br /> </td>
   </tr>
   <tr>
    <td>alternativ</td>
@@ -3675,7 +3674,7 @@ generatePDFOutput-API:t genererar ett PDF-dokument genom att sammanfoga en formu
  </tbody>
 </table>
 
-Följande Java-kodexempel genererar ett PDF-dokument genom att sammanfoga en formulärdesign med data som lagras i en XML-fil.
+I följande Java-kodexempel skapas ett PDF-dokument genom att en formulärdesign sammanfogas med data som lagras i en XML-fil.
 
 ```java
     @Reference private OutputService outputService;
@@ -3755,7 +3754,7 @@ Följande Java-kodexempel genererar ett PDF-dokument genom att sammanfoga en for
 
 ### generatePDFOutput {#generatepdfoutput-1}
 
-generatePDFOutput-API:t genererar ett PDF-dokument genom att sammanfoga en formulärdesign med data. Du kan också generera en metadatafil för varje post eller spara utdata i en PDF-fil. Använd API:t generatePrintedOutput för formulärdesigner eller data som lagras i ett program. Om formulärdesignen och XML-data lagras på en nätverksplats, lokalt eller en HTTP-plats som litteralvärden använder du API:t [generatePDFOutput](/help/forms/using/aem-document-services-programmatically.md#p-generatepdfoutput-p).
+GenereraPDFOutput-API:t genererar ett PDF-dokument genom att sammanfoga en formulärdesign med data. Du kan också generera en metadatafil för varje post eller spara utdata i en PDF-fil. Använd API:t generatePrintedOutput för formulärdesigner eller data som lagras i ett program. Om formulärdesignen och XML-data lagras på en nätverksplats, lokalt eller en HTTP-plats som litteralvärden använder du [generatePDFOutput](/help/forms/using/aem-document-services-programmatically.md#p-generatepdfoutput-p) API.
 
 **Syntax:** `Document generatePDFOutput(Document inputdocument, Document data, PDFOutputOptions options)`
 
@@ -3773,7 +3772,7 @@ generatePDFOutput-API:t genererar ett PDF-dokument genom att sammanfoga en formu
   </tr>
   <tr>
    <td>data</td>
-   <td>En XML-fil som innehåller data som sammanfogas med PDF-dokumentet.<br /> </td>
+   <td>En XML-fil som innehåller data som sammanfogas med dokumentet PDF.<br /> </td>
   </tr>
   <tr>
    <td>alternativ</td>
@@ -3782,7 +3781,7 @@ generatePDFOutput-API:t genererar ett PDF-dokument genom att sammanfoga en formu
  </tbody>
 </table>
 
-Följande Java-kodexempel genererar ett PDF-dokument genom att sammanfoga en formulärdesign med data som lagras i en XML-fil.
+I följande Java-kodexempel skapas ett PDF-dokument genom att en formulärdesign sammanfogas med data som lagras i en XML-fil.
 
 ```java
     @Reference private OutputService outputService;
@@ -3865,7 +3864,7 @@ Följande Java-kodexempel genererar ett PDF-dokument genom att sammanfoga en for
 
 ### generatePDFOutputBatch {#generatepdfoutputbatch}
 
-Sammanfogar en formulärdesign med data för att skapa ett PDF-dokument. Alternativt kan du generera en metadatafil för varje post eller spara utdata i en PDF-fil. Använd API:t generatePDFOutputBatch för formulärdesigner eller data som lagras på en nätverksplats, ett lokalt filsystem eller en HTTP-plats som litteralvärden.
+Sammanfogar en formulärdesign med data för att skapa ett PDF-dokument. Om du vill kan du generera en metadatafil för varje post eller spara utdata i en PDF-fil. Använd API:t generatePDFOutputBatch för formulärdesigner eller data som lagras på en nätverksplats, ett lokalt filsystem eller en HTTP-plats som litteralvärden.
 
 **Syntax:** `BatchResult generatePDFOutputBatch(Map templates, Map data, PDFOutputOptions options, BatchOptions batchOptions);`
 
@@ -3891,12 +3890,12 @@ Sammanfogar en formulärdesign med data för att skapa ett PDF-dokument. Alterna
   </tr>
   <tr>
    <td>batchOptions</td>
-   <td>Anger värdet för variabeln <code>generateManyFiles</code>. Ange flaggan generateManyFiles om du vill generera flera filer. Parametern options accepterar objekt av typen BatchOptions.</td>
+   <td>Anger variabelns värde <code>generateManyFiles</code>. Ange flaggan generateManyFiles om du vill generera flera filer. Parametern options accepterar objekt av typen BatchOptions.</td>
   </tr>
  </tbody>
 </table>
 
-Följande Java-kodexempel genererar PDF-dokument genom att sammanfoga en formulärdesign med data lagrade i en XML-fil.
+Följande Java-kodexempel genererar PDF-dokument genom att sammanfoga en formulärdesign med data som lagras i en XML-fil.
 
 ```java
 private ArrayList generatePDFBatch(String contentRoot,String multipleFiles) {
@@ -4009,7 +4008,7 @@ Skapar PCL-, PostScript- och ZPL-utdata från en formulärdesign och datafil. Da
  </tbody>
 </table>
 
-Följande Java-kodexempel genererar PCL-, PostScript- och ZPL-utdata från en formulärdesign och data. Utdatatypen beror på det värde som skickas till parametern `printConfig`.
+Följande Java-kodexempel genererar PCL-, PostScript- och ZPL-utdata från en formulärdesign och data. Utdatatypen beror på värdet som skickas till `printConfig`parameter.
 
 ```java
 @Reference private OutputService outputService;
@@ -4100,7 +4099,7 @@ Skapar PCL-, PostScript- och ZPL-utdata utifrån en formulärdesign och datafil.
  </tbody>
 </table>
 
-Följande Java-kodexempel genererar PCL-, PostScript- och ZPL-utdata från en formulärdesign och data. Utdatatypen beror på det värde som skickas till parametern `printConfig`.
+Följande Java-kodexempel genererar PCL-, PostScript- och ZPL-utdata från en formulärdesign och data. Utdatatypen beror på värdet som skickas till `printConfig`parameter.
 
 ```java
 @Reference private OutputService outputService;
@@ -4171,12 +4170,12 @@ Skapar ett dokument i formaten PS, PCL och ZPL genom att sammanfoga en formulär
    <th>Beskrivning</th>
   </tr>
   <tr>
-   <td>mallar<br /> </td>
-   <td>Anger mappningen för nyckel- och mallfilnamnet.<br /> </td>
+   <td>templates<br /> </td>
+   <td>Anger mappningen för nyckel- och mallfilnamn.<br /> </td>
   </tr>
   <tr>
    <td>data</td>
-   <td>Anger karta över nyckel- och datadokument. Om nyckeln inte är null återges datadokumentet med mallen för motsvarande nyckel i mallkartan.<br /> </td>
+   <td>Anger karta över nyckel- och datadokument. Om nyckeln inte är null återges datadokumentet med en mall för motsvarande nyckel i mallkartan.<br /> </td>
   </tr>
   <tr>
    <td>alternativ</td>
@@ -4189,7 +4188,7 @@ Skapar ett dokument i formaten PS, PCL och ZPL genom att sammanfoga en formulär
  </tbody>
 </table>
 
-Följande Java-kodexempel genererar PCL-, PostScript- och ZPL-utdata gruppvis från flera formulärdesignmallar och datafiler. Utdatatypen beror på det värde som skickas till parametern `printConfig`.
+Följande Java-kodexempel genererar PCL-, PostScript- och ZPL-utdata gruppvis från flera formulärdesignmallar och datafiler. Utdatatypen beror på värdet som skickas till `printConfig`parameter.
 
 ```java
 @Reference private OutputService outputService;
@@ -4315,7 +4314,7 @@ Exporterar formulärdata från ett interaktivt PDF-formulär i XML- och XDP-form
    <th>Beskrivning</th>
   </tr>
   <tr>
-   <td>xdpOrPdf<br /> </td>
+   <td>xdpOrPDF<br /> </td>
    <td>Anger ett dokumentobjekt som innehåller en XDP- eller PDF-fil. </td>
   </tr>
   <tr>
@@ -4325,7 +4324,7 @@ Exporterar formulärdata från ett interaktivt PDF-formulär i XML- och XDP-form
  </tbody>
 </table>
 
-Följande Java-kodexempel exporterar formulärdata från ett interaktivt PDF-formulär i XML- och XDP-format.
+I följande Java-kodexempel exporteras formulärdata från ett interaktivt PDF-formulär i XML- och XDP-format.
 
 #### Exempel {#sample}
 
@@ -4461,23 +4460,23 @@ private File importData(File inDoc, File inXML)
 
 ## Tjänsten PDF Generator {#pdfgeneratorservice}
 
-Tjänsten PDF Generator innehåller API:er för konvertering av interna filformat till PDF. Den konverterar även PDF-filer till andra filformat och optimerar storleken på PDF-dokument.
+PDF Generator-tjänsten tillhandahåller API:er för konvertering av inbyggda filformat till PDF. Dessutom konverteras PDF till andra filformat och storleken på PDF-dokument optimeras.
 
-### GeneratePDFService {#generatepdfservice}
+### GenereraPDFService {#generatepdfservice}
 
-GeneratePDFService innehåller API:er för konvertering av olika filformat, till exempel .doc, .docx, .ppt, .pptx, .xls, .xlsx, .odp, .odt, .ods, (borttaget).swf, .jpg, .bmp, .tif, .png, .html och många andra filformat till PDF. Den innehåller även API:er för att exportera PDF-filer till olika filformat och optimera PDF-filer. Tjänsten stöder följande API:er:
+GeneratePDFService innehåller API:er för konvertering av olika filformat, till exempel .doc, .docx, .ppt, .pptx, .xls, .xlsx, .odp, .odt, .ods, (borttaget).swf, .jpg, .bmp, .tif, .png, .html och många andra filformat till PDF. Det innehåller även API:er för att exportera PDF till olika filformat och optimera PDF. Tjänsten stöder följande API:er:
 
-* **createPDF**: Konverterar en filtyp som stöds till ett PDF-dokument. Det stöder filformat som Microsoft Word, Microsoft PowerPoint, Microsoft Excel och Microsoft Project. Förutom dessa program kan alla typer av genererande PDF-program från tredje part också kopplas till API:t.
-* **exportPDF**: Konverterar ett PDF-dokument till en filtyp som stöds. Metoden godkänner en PDF-fil som indata och exporterar innehållet i PDF-filen i det angivna filformatet. Du kan exportera ett PDF-dokument i Encapsulated PostScript( eps), HTML 3.2( htm, html), HTML 4.01 med CSS 1.0( htm, html), JPEG( jpg, jpeg, jpe), JPEG2000( jpf, jpx, jp2, j2k, j2c, jpf c), Microsoft Word-dokument( doc, docx) Microsoft Excel-arbetsbok( xlsx), Microsoft PowerPoint-presentation( pptx), PNG( png), PostScript( ps), Rich Text Format( rtf), Text(Accessible)( txt), Text(Plain)( txt) TIFF( tif, tiff), XML 1.0( xml), PDF /A-1a(sRGB), PDF/A-1b, PDF/A-2a(sRGB), PDF/A-2b(sRGB), PDF/A-3a(sRGB), PDF/A-3b(sRGB). Du kan också ange [anpassade preflight-profiler](https://helpx.adobe.com/acrobat/using/preflight-profiles-acrobat-pro.html) för PDF-utdata.
+* **createPDF**: Konverterar en filtyp som stöds till ett PDF-dokument. Det stöder filformat som Microsoft Word, Microsoft PowerPoint, Microsoft Excel och Microsoft Project. Förutom dessa program kan alla andra tredje parters generiska programtyper för generering av PDF också kopplas till API:t.
+* **exportPDF**: Konverterar ett PDF-dokument till en filtyp som stöds. Metoden accepterar PDF som indata och exporterar innehållet i PDF i angivet filformat. Du kan exportera ett PDF-dokument i Encapsulated PostScript( eps), HTML 3.2( htm, html), HTML 4.01 med CSS 1.0( htm, html), JPEG( jpg, jpeg, jpe), JPEG2000( jpf, jpx, jp2, j2k, j2c, jpg) pc), Microsoft Word-dokument( doc, docx) Microsoft Excel-arbetsbok( xlsx), Microsoft PowerPoint-presentation( pptx), PNG( png), PostScript( ps), Rich Text Format( rtf), Text(Accessible)( txt), Text(Plain)( txt) TIFF(tif, tiff), XML 1.0( xml), PDF/A-1a(sRGB), PDF/A-1b, PDF/A-2a(sRGB), PDF/A-2b(sRGB), PDF/A-3a(sRGB), PDF/A-3b(sRGB). Du kan också ange [anpassade preflight-profiler](https://helpx.adobe.com/acrobat/using/preflight-profiles-acrobat-pro.html) för utdata från PDF.
 
 * **optimeraPDF**: Optimerar PDF-dokumentet och konverterar även ett PDF-dokument från en typ till en annan. Metoden accepterar ett PDF-dokument som indata.
-* **htmlToPdf2**: Konverterar en HTML-sida till ett PDF-dokument. HTML-sidans URL accepteras som indata.
+* **htmlToPdf2**: Konverterar en HTML-sida till ett PDF-dokument. URL-adressen till HTML-sidan accepteras som indata.
 
 >[!NOTE]
 >
 >API:t för HTMLtoPDF är inaktuellt för AEM Forms-servrar som körs på AIX-operativsystem.
 
-#### PDF Generator API finns i Microsoft Windows och Linux {#pdf-generator-api-available-on-microsoft-windows-and-linux}
+#### PDF Generator API finns för Microsoft Windows och Linux {#pdf-generator-api-available-on-microsoft-windows-and-linux}
 
 <table>
  <tbody>
@@ -4515,13 +4514,13 @@ GeneratePDFService innehåller API:er för konvertering av olika filformat, till
 
 #### createPDF {#createpdf}
 
-API:t createPDF konverterar en filtyp som stöds till ett PDF-dokument. Det stöder olika filformat, t.ex. Microsoft Word, Microsoft PowerPoint, Microsoft Excel och Microsoft Project. Förutom dessa program kan alla typer av genererande PDF-program från tredje part också kopplas till API:t.
+API:t createPDF konverterar en filtyp som stöds till ett PDF-dokument. Det stöder olika filformat som Microsoft Word, Microsoft PowerPoint, Microsoft Excel och Microsoft Project. Förutom dessa program kan alla andra tredje parters generiska programtyper för generering av PDF också kopplas till API:t.
 
-För konverteringen är bara ett fåtal parametrar obligatoriska. Ett indatadokument är en obligatorisk parameter. Du kan använda säkerhetsbehörigheter, PDF-utdatainställningar och metadatainformation senare för PDF-utdatadokumentet.
+För konverteringen är bara ett fåtal parametrar obligatoriska. Ett indatadokument är en obligatorisk parameter. Du kan använda säkerhetsbehörigheter, utdatainställningar för PDF och metadatainformation senare för utdatadokumentet i PDF.
 
 CreatePDF-tjänsten returnerar en java.util.Map med resultat. Kartans nycklar är:
 
-* ConvertedDoc: Den innehåller det nya PDF-dokumentet.
+* ConvertedDoc: Det innehåller det nya PDF-dokumentet.
 * LogDoc: Den innehåller loggfilen.
 
 CreatePDF-tjänsten ger följande undantag:
@@ -4554,14 +4553,14 @@ CreatePDF-tjänsten ger följande undantag:
   </tr>
   <tr>
    <td>pdfSettings</td>
-   <td><p>PDF-utdata för det konverterade dokumentet. Du kan bara använda följande inställningar:</p>
+   <td><p>PDF för det konverterade dokumentet. Du kan bara använda följande inställningar:</p>
     <ul>
-     <li>Högkvalitativ_utskrift<br /> </li>
+     <li>High_Quality_Print<br /> </li>
      <li>PDFA1b_2005_RGB<br /> </li>
      <li>PDFA1b_2005_CMYK<br /> </li>
      <li>PDFX1a_2001<br /> </li>
      <li>PDFX3_2002<br /> </li>
-     <li>Tryckkvalitet<br /> </li>
+     <li>Press_Quality<br /> </li>
      <li>Minsta_filstorlek</li>
     </ul> <p>Det är en valfri parameter.<br /> </p> </td>
   </tr>
@@ -4577,16 +4576,16 @@ CreatePDF-tjänsten ger följande undantag:
   </tr>
   <tr>
    <td>settingsDoc</td>
-   <td>Filen innehåller de inställningar som användes när PDF-dokumentet skapades (t.ex. Optimera PDF-dokument för webbvyn) och de inställningar som användes när PDF-dokumentet skapades (t.ex. Inledande vy och Dokumentskydd). Det är en valfri parameter.<br /> </td>
+   <td>Filen innehåller de inställningar som användes när dokumentet i PDF skapades (t.ex. Optimera PDF för webbvyn) och de inställningar som användes när dokumentet i PDF skapades (t.ex. Inledande vy och Dokumentskydd). Det är en valfri parameter.<br /> </td>
   </tr>
   <tr>
    <td>xmpDoc </td>
-   <td>Filen innehåller metadatainformation som används i det genererade PDF-dokumentet. Den här parametern är valfri.<br /> </td>
+   <td>Filen innehåller metadatainformation som används för det genererade PDF-dokumentet. Den här parametern är valfri.<br /> </td>
   </tr>
  </tbody>
 </table>
 
-Följande Java-kod konverterar ett dokument av den filtyp som stöds till ett PDF-dokument.
+Följande Java-kod konverterar ett dokument av en filtyp som stöds till ett PDF-dokument.
 
 ```java
 @Reference GeneratePDFService generatePdfService;
@@ -4650,7 +4649,7 @@ File createPDF(File inputFile, String inputFilename, String fileTypeSettings, St
 
 #### exportPDF {#exportpdf}
 
-Konverterar ett PDF-dokument till en filtyp som stöds. Metoden godkänner en PDF-fil som indata och exporterar innehållet i PDF-filen i det angivna filformatet.
+Konverterar ett PDF-dokument till en filtyp som stöds. Metoden accepterar PDF som indata och exporterar innehållet i PDF i angivet filformat.
 
 CreatePDF-tjänsten returnerar en java.util.Map med resultat. Kartans nycklar är:
 
@@ -4745,9 +4744,9 @@ finally {
 }
 ```
 
-#### optimizePDF {#optimizepdf}
+#### optimeraPDF {#optimizepdf}
 
-Optimera PDF-API:t optimerar PDF-filer genom att minska deras storlek. Resultatet av konverteringen är PDF-filer som kan vara mindre än originalversionerna. Den här åtgärden konverterar även PDF-dokument till den PDF-version som anges i optimeringsparametrarna. Det returnerar OptimizePDFResult-objekt som innehåller optimerad PDF.
+Optimera PDF-API:t optimerar PDF-filer genom att minska deras storlek. Resultatet av den här konverteringen är PDF-filer som kan vara mindre än originalversionerna. Den här åtgärden konverterar även PDF-dokument till den version av PDF som anges i optimeringsparametrarna. Det returnerar OptimizePDFResult-objekt som innehåller optimerad PDF.
 
 CreatePDF-tjänsten ger följande undantag:
 
@@ -4779,12 +4778,12 @@ OptimizePDFResult optimizePDF(Document inputDoc, String fileTypeSettings, Docume
   </tr>
   <tr>
    <td>settingsDoc </td>
-   <td>Filen innehåller de inställningar som användes när PDF-dokumentet skapades (t.ex. Optimera PDF-dokument för webbvyn) och de inställningar som användes när PDF-dokumentet skapades (t.ex. Inledande vy och Dokumentskydd). Det är en valfri parameter.<br /> </td>
+   <td>Filen innehåller de inställningar som användes när dokumentet i PDF skapades (t.ex. Optimera PDF för webbvyn) och de inställningar som användes när dokumentet i PDF skapades (t.ex. Inledande vy och Dokumentskydd). Det är en valfri parameter.<br /> </td>
   </tr>
  </tbody>
 </table>
 
-Följande Java-kodexempel optimerar PDF-indatafilen genom att minska dess storlek.
+I följande Java-kodexempel optimeras indatafilen PDF genom att dess storlek minskas.
 
 ```java
 @Reference GeneratePDFService generatePdfService;
@@ -4835,9 +4834,9 @@ File optimizePDF(File inputFile, String fileTypeSettings, File settingsFile) thr
 
 #### htmlToPdf2 {#htmltopdf}
 
-Konverterar en HTML-sida till ett PDF-dokument. HTML-sidans URL accepteras som indata.
+Konverterar en HTML-sida till ett PDF-dokument. URL-adressen till HTML-sidan accepteras som indata.
 
-Tjänsten htmlToPdf2 returnerar ett HtmlToPdfResult-objekt. Du kan hämta den konverterade PDF-filen via result.getConvertedDocument().
+Tjänsten htmlToPdf2 returnerar ett HtmlToPdfResult-objekt. Du kan hämta den konverterade PDF via result.getConvertedDocument().
 
 htmlToPdf2-tjänsten ger följande undantag:
 
@@ -4869,12 +4868,12 @@ HtmlToPdfResult htmlToPdf2(String inputUrl, String fileTypeSettingsName, String 
   </tr>
   <tr>
    <td>settingsDoc </td>
-   <td>Filen innehåller de inställningar som användes när PDF-dokumentet skapades (t.ex. Optimera PDF-dokument för webbvyn) och de inställningar som användes när PDF-dokumentet skapades (t.ex. Inledande vy och Dokumentskydd). Det är en valfri parameter.<br /> </td>
+   <td>Filen innehåller de inställningar som användes när dokumentet i PDF skapades (t.ex. Optimera PDF för webbvyn) och de inställningar som användes när dokumentet i PDF skapades (t.ex. Inledande vy och Dokumentskydd). Det är en valfri parameter.<br /> </td>
   </tr>
  </tbody>
 </table>
 
-Följande Java-kodexempel konverterar en HTML-sida till ett PDF-dokument.
+I följande Java-kodexempel konverteras en HTML-sida till ett PDF-dokument.
 
 ```java
 Reference GeneratePDFService generatePdfService;
@@ -4926,11 +4925,11 @@ File htmlToPdf(String inputUrl, String fileTypeSettingsName, String securitySett
 
 ### DistillerService {#distillerservice}
 
-Distiller konverterar PostScript-, Encapsulated PostScript- (EPS) och skrivartextfiler (PRN) till PDF-filer. Distiller-tjänsten används ofta för att konvertera stora volymer tryckta dokument till elektroniska dokument, som fakturor och kontoutdrag. När man konverterar dokument till PDF kan man också skicka en pappersversion och en elektronisk version av ett dokument till sina kunder. De filformat som stöds är .ps, .eps och .prn. Tjänsten stöder följande API:
+Distiller-tjänsten konverterar PostScript-, Encapsulated PostScript- (EPS) och skrivartextfiler (PRN) till PDF-filer. Distiller-tjänsten används ofta för att konvertera stora volymer tryckta dokument till elektroniska dokument, som fakturor och kontoutdrag. När man konverterar dokument till PDF kan man också skicka en pappersversion och en elektronisk version av ett dokument till sina kunder. De filformat som stöds är .ps, .eps och .prn. Tjänsten stöder följande API:
 
 CreatePDF-tjänsten returnerar en java.util.Map med resultat. Kartans nycklar är:
 
-* ConvertedDoc : Den innehåller det nya PDF-dokumentet.
+* ConvertedDoc : Det innehåller det nya PDF-dokumentet.
 * LogDoc: Den innehåller loggfilen.
 
 CreatePDF-tjänsten ger följande undantag:
@@ -4941,7 +4940,7 @@ CreatePDF-tjänsten ger följande undantag:
 
 #### createPDF {#createpdf-1}
 
-Konverterar de format som stöds till PDF-dokument. Metoden accepterar filformaten .ps, .eps och .prn som indata. Du kan använda specifika säkerhetsbehörigheter, utdatainställningar och metadatainformation i PDF-utdatadokumentet.
+Konverterar de format som stöds till PDF-dokument. Metoden accepterar filformaten .ps, .eps och .prn som indata. Du kan använda specifika säkerhetsbehörigheter, utdatainställningar och metadatainformation för utdatadokumentet i PDF.
 
 **Syntax:**
 
@@ -4967,14 +4966,14 @@ Map createPDF(Document inputDoc, String inputFileName, String pdfSettings, Strin
   </tr>
   <tr>
    <td>pdfSettings</td>
-   <td><p>PDF-utdatainställningar för det konverterade dokumentet. Du kan bara använda följande inställningar:</p>
+   <td><p>Utdatainställningar PDF för det konverterade dokumentet. Du kan bara använda följande inställningar:</p>
     <ul>
-     <li>Högkvalitativ_utskrift<br /> </li>
+     <li>High_Quality_Print<br /> </li>
      <li>PDFA1b_2005_RGB<br /> </li>
      <li>PDFA1b_2005_CMYK<br /> </li>
      <li>PDFX1a_2001<br /> </li>
      <li>PDFX3_2002<br /> </li>
-     <li>Tryckkvalitet<br /> </li>
+     <li>Press_Quality<br /> </li>
      <li>Minsta_filstorlek</li>
     </ul> <p>Det är en valfri parameter.</p> </td>
   </tr>
@@ -4990,7 +4989,7 @@ Map createPDF(Document inputDoc, String inputFileName, String pdfSettings, Strin
   </tr>
   <tr>
    <td>settingsDoc </td>
-   <td>Filen innehåller de inställningar som användes när PDF-dokumentet skapades (t.ex. Optimera PDF-dokument för webbvyn) och de inställningar som användes när PDF-dokumentet skapades (t.ex. Inledande vy och Dokumentskydd). Det är en valfri parameter.<br /> </td>
+   <td>Filen innehåller de inställningar som användes när dokumentet i PDF skapades (t.ex. Optimera PDF för webbvyn) och de inställningar som användes när dokumentet i PDF skapades (t.ex. Inledande vy och Dokumentskydd). Det är en valfri parameter.<br /> </td>
   </tr>
   <tr>
    <td>xmpDoc </td>
@@ -5060,4 +5059,3 @@ File createPDF(File inputFile, String inputFilename, String pdfSettings, String 
  }
 }
 ```
-

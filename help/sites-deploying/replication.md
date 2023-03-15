@@ -1,8 +1,8 @@
 ---
 title: Replikering
-seo-title: Replikering
+seo-title: Replication
 description: Lär dig hur du konfigurerar och övervakar replikeringsagenter i AEM.
-seo-description: Lär dig hur du konfigurerar och övervakar replikeringsagenter i AEM.
+seo-description: Learn how to configure and monitor replication agents in AEM.
 uuid: 6c0bc2fe-523a-401f-8d93-e5795f2e88b9
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,11 +10,11 @@ content-type: reference
 topic-tags: configuring
 discoiquuid: 3cae081e-93e3-4317-b307-1316283c307a
 docset: aem65
-feature: Konfigurerar
+feature: Configuring
 exl-id: 09943de5-8d62-4354-a37f-0521a66b4c49
 source-git-commit: 840ea373537799af995c3b8ce0c8bf575752775b
 workflow-type: tm+mt
-source-wordcount: '3428'
+source-wordcount: '3416'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Replikeringsagenter är centrala för Adobe Experience Manager (AEM) eftersom de
 * Rensa innehåll explicit från Dispatcher-cachen.
 * Returnera användarindata (till exempel formulärindata) från publiceringsmiljön till författarmiljön (under kontroll av författarmiljön).
 
-Begäranden är [köade](/help/sites-deploying/osgi-configuration-settings.md#apacheslingjobeventhandler) till lämplig agent för bearbetning.
+Begäranden [köad](/help/sites-deploying/osgi-configuration-settings.md#apacheslingjobeventhandler) till lämpligt ombud för behandling.
 
 >[!NOTE]
 >
@@ -42,7 +42,7 @@ Replikering till en publiceringsinstans eller dispatcher sker i flera steg:
 * författaren begär att visst innehåll ska publiceras (aktiveras), detta kan initieras av en manuell begäran eller av automatiska utlösare som har förkonfigurerats.
 * begäran skickas till lämplig standardredigeringsagent, en miljö kan ha flera standardagenter som alltid väljs för sådana åtgärder.
 * replikeringsagenten&quot;paketerar&quot; innehållet och placerar det i replikeringskön.
-* på fliken Webbplatser är den [färgade statusindikatorn](/help/sites-authoring/publishing-pages.md#determiningpagepublicationstatus) inställd för de enskilda sidorna.
+* på fliken Webbplatser [färgad statusindikator](/help/sites-authoring/publishing-pages.md#determiningpagepublicationstatus) är inställt för de enskilda sidorna.
 * innehållet tas bort från kön och transporteras till publiceringsmiljön med det konfigurerade protokollet, vanligtvis är detta HTTP.
 * en server i publiceringsmiljön tar emot begäran och publicerar det mottagna innehållet, standardservleten är `https://localhost:4503/bin/receive`.
 
@@ -60,16 +60,16 @@ Omvänd replikering använder en agent i publiceringsmiljön som refererar till 
 
 I andra fall, t.ex. för communityfunktioner (t.ex. forum, bloggar, kommentarer och granskningar), är mängden användargenererat innehåll (UGC) som anges i publiceringsmiljön svår att effektivt synkronisera mellan AEM instanser med hjälp av replikering.
 
-AEM [Communities](/help/communities/overview.md) använder aldrig replikering för UGC. Distributionen för Communities kräver i stället en gemensam lagringsplats för UGC (se [Community Content Storage](/help/communities/working-with-srp.md)).
+AEM [Communities](/help/communities/overview.md) använder aldrig replikering för UGC. Distributionen för Communities kräver i stället en gemensam butik för UGC (se [Community-innehåll](/help/communities/working-with-srp.md)).
 
 ### Replikering - utanför lådan {#replication-out-of-the-box}
 
-Webbplatsen för webbutiker som ingår i en standardinstallation av AEM kan användas för att illustrera replikering.
+Webbplatsen för webbförsäljning som ingår i en standardinstallation av AEM kan användas för att illustrera replikering.
 
-Om du vill följa det här exemplet och använda standardreplikeringsagenterna måste du [installera AEM](/help/sites-deploying/deploy.md) med:
+Om du vill följa det här exemplet och använda de standardreplikeringsagenter som du behöver [Installera AEM](/help/sites-deploying/deploy.md) med:
 
-* författarmiljön på port `4502`
-* publiceringsmiljön på port `4503`
+* författarmiljön på porten `4502`
+* publiceringsmiljön på porten `4503`
 
 >[!NOTE]
 >
@@ -77,23 +77,20 @@ Om du vill följa det här exemplet och använda standardreplikeringsagenterna m
 >
 >* Agenter på författare: Standardagent (publicera)
 >
->
-Inaktiverat som standard (från och med AEM 6.1):
+>Inaktiverat som standard (från och med AEM 6.1):
 >
 >* Agenter på författare: Agenten för omvänd replikering (publish_reverse)
 >* Agenter vid publicering: Omvänd replikering (utkorg)
-
 >
->
-Om du vill kontrollera status för agenten eller kön använder du konsolen **Verktyg**.
->Se [Övervaka dina replikeringsagenter](#monitoring-your-replication-agents).
+>Om du vill kontrollera status för agenten eller kön använder du **verktyg** konsol.
+>Se [Övervaka replikeringsagenter](#monitoring-your-replication-agents).
 
 #### Replikering (författare att publicera) {#replication-author-to-publish}
 
 1. Navigera till supportsidan i författarmiljön.
    **https://localhost:4502/content/we-retail/us/en/experience.html** `<pi>`
 1. Redigera sidan för att lägga till ny text.
-1. **Aktivera** sidan om du vill publicera ändringarna.
+1. **Aktivera sida** för att publicera ändringarna.
 1. Öppna supportsidan i publiceringsmiljön:
    **https://localhost:4503/content/we-retail/us/en/experience.html**
 1. Du kan nu se ändringarna som du har angett för författaren.
@@ -110,18 +107,16 @@ Information om detta (konfiguration och loggar) finns på verktygskonsolen i fö
 
 Följande agenter finns i en AEM standardinstallation:
 
-* [Standardagent ](#replication-author-to-publish)
-används för replikering från författare till publicering.
+* [Standardagent](#replication-author-to-publish)
+Används för replikering från författare till publicering.
 
-* Dispatcher Flush
-Detta används för att hantera Dispatcher-cachen. Mer information finns i [Invaliderar Dispatcher Cache från redigeringsmiljön](https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html#invalidating-dispatcher-cache-from-the-authoring-environment) och [Invaliderar Dispatcher Cache från en Publishing Instance](https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html#invalidating-dispatcher-cache-from-a-publishing-instance).
+* Dispatcher Flush Detta används för att hantera Dispatcher-cachen. Se [Dispatcher Cache har inte verifierats från redigeringsmiljön](https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html#invalidating-dispatcher-cache-from-the-authoring-environment) och [Invaliderar Dispatcher Cache från en publiceringsinstans](https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html#invalidating-dispatcher-cache-from-a-publishing-instance) för mer information.
 
-* [Omvänd ](#reverse-replication-publish-to-author)
-replikering används för replikering från publicering till författare. Omvänd replikering används inte för communityfunktioner som forum, bloggar och kommentarer. Den är inaktiverad eftersom utkorgen inte är aktiverad. Användning av omvänd replikering kräver anpassad konfiguration.
+* [Omvänd replikering](#reverse-replication-publish-to-author)
+Används för replikering från publicering till författare. Omvänd replikering används inte för communityfunktioner som forum, bloggar och kommentarer. Den är inaktiverad eftersom utkorgen inte är aktiverad. Användning av omvänd replikering kräver anpassad konfiguration.
 
-* Statisk agent
-Detta är en&quot;agent som lagrar en statisk representation av en nod i filsystemet.&quot;
-Med standardinställningarna lagras till exempel innehållssidor och dammresurser under `/tmp`, antingen som HTML eller i lämpligt resursformat. Se flikarna `Settings` och `Rules` för konfigurationen.
+* Statisk agent Detta är en&quot;agent som lagrar en statisk representation av en nod i filsystemet&quot;.
+Med standardinställningarna lagras till exempel innehållssidor och dammresurser under `/tmp`, antingen som HTML eller lämpligt resursformat. Se `Settings` och `Rules` -flikar för konfigurationen.
 Detta begärdes så att innehållet kan ses när sidan begärs direkt från programservern. Detta är en specialiserad agent och (troligen) krävs inte för de flesta instanser.
 
 ## Replikeringsagenter - konfigurationsparametrar {#replication-agents-configuration-parameters}
@@ -142,11 +137,11 @@ När du konfigurerar en replikeringsagent från verktygskonsolen är fyra flikar
 
    Anger om replikeringsagenten är aktiverad.
 
-   När agenten är **aktiverad** visas kön som:
+   När agenten är **aktiverad** Kön visas som:
 
-   * **Aktiveras** när artiklar bearbetas.
-   * **Inaktivera** när kön är tom.
-   * **Blockeras** när objekten finns i kön men inte kan bearbetas. till exempel när mottagande kö är inaktiverad.
+   * **Aktiv** när objekt bearbetas.
+   * **Ledig** när kön är tom.
+   * **Blockerad** när objekten finns i kön, men inte kan bearbetas, till exempel när mottagande kö är inaktiverad.
 
 * **Serialiseringstyp**
 
@@ -172,11 +167,11 @@ När du konfigurerar en replikeringsagent från verktygskonsolen är fyra flikar
 
    >[!CAUTION]
    >
-   >För en agent i författarmiljön måste det här kontot *ha läsåtkomst till alla sökvägar som du vill ha replikerade.*
+   >För en agent i författarmiljön är det här kontot *måste* har läsåtkomst till alla sökvägar som du vill ha replikerade.
 
    >[!CAUTION]
    >
-   >För en agent i publiceringsmiljön måste det här kontot *ha den behörighet att skapa/skriva som krävs för att replikera innehållet.*
+   >För en agent i publiceringsmiljön är det här kontot *måste* har den behörighet att skapa/skriva som krävs för att replikera innehållet.
 
    >[!NOTE]
    >
@@ -198,7 +193,7 @@ När du konfigurerar en replikeringsagent från verktygskonsolen är fyra flikar
 
 * **Aliasuppdatering**
 
-   Om du väljer det här alternativet aktiveras ogiltiga aliassökvägar eller ogiltiga sökvägar för Dispatcher. Se även [Konfigurera en Dispatcher Flush Agent](/help/sites-deploying/replication.md#configuring-a-dispatcher-flush-agent).
+   Om du väljer det här alternativet aktiveras ogiltiga aliassökvägar eller ogiltiga sökvägar för Dispatcher. Se även [Konfigurera en agent för utskickstömning](/help/sites-deploying/replication.md#configuring-a-dispatcher-flush-agent).
 
 #### Transport {#transport}
 
@@ -208,12 +203,12 @@ När du konfigurerar en replikeringsagent från verktygskonsolen är fyra flikar
 
    Till exempel:
 
-   * En standardagent kan replikera till `https://localhost:4503/bin/receive`
-   * En agent för utskickstömning kan replikera till `https://localhost:8000/dispatcher/invalidate.cache`
+   * En standardagent kan replikeras till `https://localhost:4503/bin/receive`
+   * En agent för utskickstömning kan replikeras till `https://localhost:8000/dispatcher/invalidate.cache`
 
    Det protokoll som anges här (HTTP eller HTTPS) avgör transportmetoden.
 
-   För Dispatcher Flush-agenter används URI-egenskapen endast om du använder sökvägsbaserade virtualhost-poster för att skilja mellan grupper, använder du det här fältet för att göra gruppen ogiltig. Servergrupp #1 har till exempel en virtuell värd på `www.mysite.com/path1/*` och servergrupp #2 har en virtuell värd på `www.mysite.com/path2/*`. Du kan använda URL:en `/path1/invalidate.cache` för att ange den första servergruppen som mål och `/path2/invalidate.cache` för den andra servergruppen.
+   För Dispatcher Flush-agenter används URI-egenskapen endast om du använder sökvägsbaserade virtualhost-poster för att skilja mellan grupper, använder du det här fältet för att göra gruppen ogiltig. Servergrupp #1 har till exempel en virtuell värd för `www.mysite.com/path1/*` och grupp 2 har en virtuell värd för `www.mysite.com/path2/*`. Du kan använda en URL med `/path1/invalidate.cache` för att rikta in sig på den första gården och `/path2/invalidate.cache` för den andra gruppen.
 
 * **Användare**
 
@@ -354,26 +349,25 @@ De här inställningarna används för att definiera utlösare för automatisera
 
 ## Konfigurera replikeringsagenter {#configuring-your-replication-agents}
 
-Mer information om hur du ansluter replikeringsagenter till publiceringsinstansen med MSSL finns i [Replikera med Mutual SSL](/help/sites-deploying/mssl-replication.md).
+Mer information om hur du ansluter replikeringsagenter till publiceringsinstansen med MSSL finns i [Replikering med ömsesidig SSL](/help/sites-deploying/mssl-replication.md).
 
 ### Konfigurera dina replikeringsagenter från författarmiljön {#configuring-your-replication-agents-from-the-author-environment}
 
-På fliken Verktyg i författarmiljön kan du konfigurera replikeringsagenter som finns antingen i författarmiljön (**Agenter på författare**) eller i publiceringsmiljön (**Agenter på publicering**). Följande procedurer illustrerar konfigurationen av en agent för författarmiljön, men kan användas för båda.
+På fliken Verktyg i redigeringsmiljön kan du konfigurera replikeringsagenter som finns i antingen författarmiljön (**Agenter på författare**) eller publiceringsmiljön (**Agenter vid publicering**). Följande procedurer illustrerar konfigurationen av en agent för författarmiljön, men kan användas för båda.
 
 >[!NOTE]
 >
->När en dispatcher hanterar HTTP-begäranden för författare- eller publiceringsinstanser måste HTTP-begäran från replikeringsagenten innehålla PATH-huvudet. Utöver följande procedur måste du lägga till PATH-huvudet i avsändarlistan med klientrubriker. (Se [/clientheaders (Klientrubriker)](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#specifying-the-http-headers-to-pass-through-clientheaders).
+>När en dispatcher hanterar HTTP-begäranden för författare- eller publiceringsinstanser måste HTTP-begäran från replikeringsagenten innehålla PATH-huvudet. Utöver följande procedur måste du lägga till PATH-huvudet i avsändarlistan med klientrubriker. (Se [/clientheaders (klientrubriker)](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#specifying-the-http-headers-to-pass-through-clientheaders).
 
-
-1. Gå till fliken **Verktyg** i AEM.
-1. Klicka på **Replikering** (vänster ruta för att öppna mappen).
-1. Dubbelklicka på **Agenter på författare** (antingen den vänstra eller den högra rutan).
+1. Öppna **verktyg** AEM.
+1. Klicka **Replikering** (vänster ruta för att öppna mappen).
+1. Dubbelklicka **Agenter på författare** (antingen vänster eller höger ruta).
 1. Klicka på lämpligt agentnamn (som är en länk) för att visa detaljerad information om agenten.
-1. Klicka på **Redigera** för att öppna konfigurationsdialogrutan:
+1. Klicka **Redigera** för att öppna konfigurationsdialogrutan:
 
    ![chlimage_1-22](assets/chlimage_1-22.png)
 
-1. De angivna värdena ska vara tillräckliga för en standardinstallation. Om du gör ändringar klickar du på **OK** för att spara dem (mer information om de enskilda parametrarna finns i [Replikeringsagenter - Konfigurationsparametrar](#replication-agents-configuration-parameters)).
+1. De angivna värdena ska vara tillräckliga för en standardinstallation. Om du gör ändringar klickar du på **OK** för att spara dem (se [Replikeringsagenter - konfigurationsparametrar](#replication-agents-configuration-parameters) för mer information om de enskilda parametrarna).
 
 >[!NOTE]
 >
@@ -385,7 +379,7 @@ På fliken Verktyg i författarmiljön kan du konfigurera replikeringsagenter so
 
 Omvänd replikering används för att hämta användarinnehåll som genererats på en publiceringsinstans tillbaka till en författarinstans. Detta används ofta för funktioner som undersökningar och registreringsformulär.
 
-Av säkerhetsskäl tillåter de flesta nätverkstopologier inte anslutningar *från* den &quot;Demilitarized Zone&quot; (ett undernätverk som exponerar de externa tjänsterna för ett ej betrott nätverk som Internet).
+Av säkerhetsskäl tillåter de flesta nätverkstopologier inte anslutningar *från* &quot;Demilitarized Zone&quot; (ett undernätverk som exponerar de externa tjänsterna för ett icke tillförlitligt nätverk som Internet).
 
 Eftersom publiceringsmiljön vanligtvis finns i DMZ måste anslutningen initieras från författarinstansen för att innehållet ska kunna skickas tillbaka till redigeringsmiljön. Detta görs med:
 
@@ -394,17 +388,17 @@ Eftersom publiceringsmiljön vanligtvis finns i DMZ måste anslutningen initiera
 
 >[!NOTE]
 >
->För AEM [Communities](/help/communities/overview.md) används inte replikering för användargenererat innehåll på en publiceringsinstans. Se [Community Content Storage](/help/communities/working-with-srp.md).
+>För AEM [Communities](/help/communities/overview.md)används inte replikering för användargenererat innehåll på en publiceringsinstans. Se [Community-innehåll](/help/communities/working-with-srp.md).
 
 För att göra detta behöver du:
 
-**En agent för omvänd replikering i** redigeringsmiljönDetta fungerar som den aktiva komponenten för att samla in information från utkorgen i publiceringsmiljön:
+**En omvänd replikeringsagent i författarmiljön** Detta fungerar som en aktiv komponent för att samla in information från utkorgen i publiceringsmiljön:
 
 Om du vill använda omvänd replikering kontrollerar du att agenten är aktiverad.
 
 ![chlimage_1-23](assets/chlimage_1-23.png)
 
-**En agent för omvänd replikering i publiceringsmiljön (en utkorg)** Detta är det passiva elementet eftersom det fungerar som en&quot;utkorg&quot;. Användarindata placeras här, där de samlas in av agenten i författarmiljön.
+**En omvänd replikeringsagent i publiceringsmiljön (en utkorg)** Detta är det passiva elementet eftersom det fungerar som en&quot;utkorg&quot;. Användarindata placeras här, där de samlas in av agenten i författarmiljön.
 
 ![chlimage_1-1](assets/chlimage_1-1.jpeg)
 
@@ -414,28 +408,28 @@ Om du vill använda omvänd replikering kontrollerar du att agenten är aktivera
 >
 >Endast innehåll replikeras - användardata är inte det (användare, användargrupper och användarprofiler).
 >
->Om du vill synkronisera användardata mellan flera publiceringsinstanser aktiverar du [Användarsynkronisering](/help/sites-administering/sync.md).
+>Om du vill synkronisera användardata över flera publiceringsinstanser aktiverar du [Användarsynkronisering](/help/sites-administering/sync.md).
 
 Vid installationen är en standardagent redan konfigurerad för replikering av innehåll till en publiceringsinstans som körs på port 4503 på den lokala värden.
 
 Så här konfigurerar du replikering av innehåll för ytterligare en publiceringsinstans som du måste skapa och konfigurera en ny replikeringsagent:
 
-1. Öppna fliken **Verktyg** i AEM.
-1. Välj **Replikering** och **Agenter på författare** i den vänstra panelen.
-1. Välj **Nytt..**.
-1. Ange **titeln** och **Namn** och välj sedan **Replikeringsagent**.
-1. Klicka på **Skapa** för att skapa den nya agenten.
+1. Öppna **verktyg** AEM.
+1. Välj **Replikering** sedan **Agenter på författare** i den vänstra panelen.
+1. Välj **Nytt...**.
+1. Ange **Titel** och **Namn** väljer **Replikeringsagent**.
+1. Klicka **Skapa** för att skapa den nya agenten.
 1. Dubbelklicka på det nya agentobjektet för att öppna konfigurationspanelen.
-1. Klicka på **Redigera** - Dialogrutan **Agentinställningar** öppnas - **Serialiseringstypen** är redan definierad som standard, detta måste finnas kvar så.
+1. Klicka **Redigera** - **Agentinställningar** öppnas **Serialiseringstyp** är redan definierad som Standard. Detta måste förbli så.
 
-   * På fliken **Inställningar**:
+   * I **Inställningar** tab:
 
       * Aktivera **Aktiverad**.
-      * Ange en **beskrivning**.
+      * Ange **Beskrivning**.
       * Ange **Återförsöksfördröjning** till `60000`.
 
-      * Låt **serialiseringstypen** vara `Default`.
-   * På fliken **Transport**:
+      * Lämna **Serialiseringstyp** as `Default`.
+   * I **Transport** tab:
 
       * Ange den URI som krävs för den nya publiceringsinstansen. till exempel
          `https://localhost:4504/bin/receive`.
@@ -444,44 +438,43 @@ Så här konfigurerar du replikering av innehåll för ytterligare en publicerin
       * Du kan konfigurera andra parametrar efter behov.
 
 
-1. Klicka på **OK** för att spara inställningarna.
+1. Klicka **OK** för att spara inställningarna.
 
 Du kan sedan testa åtgärden genom att uppdatera och sedan publicera en sida i författarmiljön.
 
 Uppdateringarna visas på alla publiceringsinstanser som har konfigurerats enligt ovan.
 
-Om du får problem kan du kontrollera loggarna på författarinstansen. Beroende på vilken detaljnivå som krävs kan du även ställa in **loggnivån** till `Debug` med dialogrutan **Agentinställningar** enligt ovan.
+Om du får problem kan du kontrollera loggarna på författarinstansen. Beroende på vilken detaljnivå som krävs kan du även ange **Loggnivå** till `Debug` med **Agentinställningar** som ovan.
 
 >[!NOTE]
 >
->Detta kan kombineras med [Agentanvändar-ID](#agentuserid) för att välja ett annat innehåll som ska replikeras till de enskilda publiceringsmiljöerna. För varje publiceringsmiljö:
+>Detta kan kombineras med [Användar-ID för agent](#agentuserid) om du vill välja ett annat innehåll som ska replikeras till de enskilda publiceringsmiljöerna. För varje publiceringsmiljö:
 >
 >1. Konfigurera en replikeringsagent för replikering till den publiceringsmiljön.
 >1. Konfigurera ett användarkonto; med de åtkomsträttigheter som krävs för att läsa det innehåll som ska replikeras till den specifika publiceringsmiljön.
->1. Tilldela användarkontot som **agentanvändar-ID** för replikeringsagenten.
+>1. Tilldela användarkontot som **Användar-ID för agent** för replikeringsagenten.
 
 >
-
 
 
 ### Konfigurera en agent för utskickstömning {#configuring-a-dispatcher-flush-agent}
 
 Standardagenter ingår i installationen. Men en viss konfiguration behövs fortfarande, och det samma gäller om du definierar en ny agent:
 
-1. Öppna fliken **Verktyg** i AEM.
-1. Klicka på **Distribution**.
+1. Öppna **verktyg** AEM.
+1. Klicka **Distribution**.
 1. Välj **Replikering** och sedan **Agenter vid publicering**.
-1. Dubbelklicka på **Dispatcher Flush**-objektet för att öppna översikten.
-1. Klicka på **Redigera** - dialogrutan **Agentinställningar** öppnas:
+1. Dubbelklicka på **Dispatcher Flush** för att öppna översikten.
+1. Klicka **Redigera** - **Agentinställningar** öppnas:
 
-   * På fliken **Inställningar**:
+   * I **Inställningar** tab:
 
       * Aktivera **Aktiverad**.
-      * Ange en **beskrivning**.
-      * Lämna **serialiseringstypen** som `Dispatcher Flush`, eller ange den som sådan om du skapar en ny agent.
+      * Ange **Beskrivning**.
+      * Lämna **Serialiseringstyp** as `Dispatcher Flush`eller ange det som en sådan om du skapar en ny agent.
 
       * (valfritt) Välj **Aliasuppdatering** om du vill aktivera aliasbegäran eller ogiltighetsbegäran för ogiltighetssökvägen till Dispatcher.
-   * På fliken **Transport**:
+   * I **Transport** tab:
 
       * Ange den URI som krävs för den nya publiceringsinstansen. till exempel
          `https://localhost:80/dispatcher/invalidate.cache`.
@@ -489,20 +482,20 @@ Standardagenter ingår i installationen. Men en viss konfiguration behövs fortf
       * Ange det platsspecifika användarkonto som används för replikering.
       * Du kan konfigurera andra parametrar efter behov.
 
-   För Dispatcher Flush-agenter används URI-egenskapen endast om du använder sökvägsbaserade virtualhost-poster för att skilja mellan grupper, använder du det här fältet för att göra gruppen ogiltig. Servergrupp #1 har till exempel en virtuell värd på `www.mysite.com/path1/*` och servergrupp #2 har en virtuell värd på `www.mysite.com/path2/*`. Du kan använda URL:en `/path1/invalidate.cache` för att ange den första servergruppen som mål och `/path2/invalidate.cache` för den andra servergruppen.
+   För Dispatcher Flush-agenter används URI-egenskapen endast om du använder sökvägsbaserade virtualhost-poster för att skilja mellan grupper, använder du det här fältet för att göra gruppen ogiltig. Servergrupp #1 har till exempel en virtuell värd för `www.mysite.com/path1/*` och grupp 2 har en virtuell värd för `www.mysite.com/path2/*`. Du kan använda en URL med `/path1/invalidate.cache` för att rikta in sig på den första gården och `/path2/invalidate.cache` för den andra gruppen.
 
    >[!NOTE]
    >
-   >Om du har installerat AEM i en annan kontext än den rekommenderade standardkontexten måste du konfigurera [HTTP-rubrikerna](#extended) på fliken **Extended**.
+   >Om du har installerat AEM i en annan kontext än den rekommenderade måste du konfigurera [HTTP-huvuden](#extended) i **Utökad** -fliken.
 
-1. Klicka på **OK** för att spara ändringarna.
-1. Gå tillbaka till fliken **Verktyg**, härifrån kan du **aktivera** **agenten Dispatcher Flush** (**Agenter on publish**).
+1. Klicka **OK** för att spara ändringarna.
+1. Återgå till **verktyg** här kan du **Aktivera** den **Dispatcher Flush** agent (**Agenter vid publicering**).
 
-Replikeringsagenten **Dispatcher Flush** är inte aktiv för författaren. Du kan komma åt samma sida i publiceringsmiljön med motsvarande URI; till exempel `https://localhost:4503/etc/replication/agents.publish/flush.html`.
+The **Dispatcher Flush** replikeringsagenten är inte aktiv på författaren. Du kan komma åt samma sida i publiceringsmiljön med motsvarande URI; till exempel `https://localhost:4503/etc/replication/agents.publish/flush.html`.
 
 ### Kontrollera åtkomst till replikeringsagenter {#controlling-access-to-replication-agents}
 
-Åtkomst till de sidor som används för att konfigurera replikeringsagenterna kan styras med användar- och/eller gruppsidbehörigheter på noden `etc/replication`.
+Åtkomst till de sidor som används för att konfigurera replikeringsagenterna kan styras med användar- och/eller gruppsidbehörigheter på `etc/replication` nod.
 
 >[!NOTE]
 >
@@ -512,17 +505,17 @@ Replikeringsagenten **Dispatcher Flush** är inte aktiv för författaren. Du ka
 
 >[!NOTE]
 >
->Det går bara att skapa replikeringsagenter på databasplatsen `/etc/replication`. Detta krävs för att de tillhörande åtkomstkontrollistorna ska hanteras på rätt sätt. Om du skapar en replikeringsagent på en annan plats i trädet kan det leda till obehörig åtkomst.
+>Det går bara att skapa replikeringsagenter i `/etc/replication` lagringsplats. Detta krävs för att de tillhörande åtkomstkontrollistorna ska hanteras på rätt sätt. Om du skapar en replikeringsagent på en annan plats i trädet kan det leda till obehörig åtkomst.
 
 Olika parametrar för replikeringsagenterna kan konfigureras med CRXDE Lite.
 
-Om du går till `/etc/replication` ser du följande tre noder:
+Om du navigerar till `/etc/replication` Följande tre noder visas:
 
 * `agents.author`
 * `agents.publish`
 * `treeactivation`
 
-De två `agents` innehåller konfigurationsinformation om lämplig miljö och är bara aktiva när den miljön körs. `agents.publish` kommer till exempel endast att användas i publiceringsmiljön. På följande skärmbild visas publiceringsagenten i författarmiljön, som i AEM WCM:
+De två `agents` innehåller konfigurationsinformation om lämplig miljö och är bara aktiv när den miljön körs. Till exempel: `agents.publish` kommer endast att användas i publiceringsmiljön. På följande skärmbild visas publiceringsagenten i författarmiljön, som i AEM WCM:
 
 ![chlimage_1-24](assets/chlimage_1-24.png)
 
@@ -530,8 +523,8 @@ De två `agents` innehåller konfigurationsinformation om lämplig miljö och ä
 
 Så här övervakar du en replikeringsagent:
 
-1. Gå till fliken **Verktyg** i AEM.
-1. Klicka på **Replikering**.
+1. Öppna **verktyg** AEM.
+1. Klicka **Replikering**.
 1. Dubbelklicka på länken till agenterna för lämplig miljö (antingen vänster eller höger ruta). till exempel **Agenter på författare**.
 
    I det resulterande fönstret visas en översikt över alla dina replikeringsagenter för redigeringsmiljön, inklusive mål och status.
@@ -546,11 +539,11 @@ Så här övervakar du en replikeringsagent:
    * Se målet för alla replikeringar.
    * Kontrollera om replikeringskön är aktiv (aktiverad).
    * Se om det finns några objekt i kön.
-   * **Uppdatera** schemat  **** för att uppdatera visningen av köposter. så att du lättare kan se objekt komma in i och lämna kön.
+   * **Uppdatera** eller **Rensa** uppdatera visningen av köposter, så att du lättare kan se objekt komma in i och lämna kön.
 
-   * **Visa** Logg för att komma åt loggen för eventuella åtgärder som utförs av replikeringsagenten.
-   * **Testa** anslutning till målinstansen.
-   * **Tvinga** återförsök av köobjekt om det behövs.
+   * **Visa logg** för att få åtkomst till loggen över eventuella åtgärder från replikeringsagenten.
+   * **Testanslutning** till målinstansen.
+   * **Tvinga återförsök** på alla köobjekt om det behövs.
 
    >[!CAUTION]
    >
@@ -576,11 +569,11 @@ Utgivaren packar upp alla artiklar, sparar dem och rapporterar tillbaka till fö
 ### Konfigurerar batchreplikering {#configuring-batch-replication}
 
 1. Gå till `http://serveraddress:serverport/siteadmin`
-1. Tryck på ikonen **[!UICONTROL Tools]** längst upp på skärmen
-1. Gå till **[!UICONTROL Replication - Agents on Author]** och dubbelklicka på **[!UICONTROL Default Agent]** från den vänstra navigeringslisten.
+1. Tryck på **[!UICONTROL Tools]** ikonen längst upp på skärmen
+1. Från vänster navigeringsspår, gå till **[!UICONTROL Replication - Agents on Author]** och dubbelklicka **[!UICONTROL Default Agent]**.
    * Du kan även nå standardagenten för publiceringsreplikering genom att gå direkt till `http://serveraddress:serverport/etc/replication/agents.author/publish.html`
-1. Tryck på knappen **[!UICONTROL Edit]** ovanför replikeringskön.
-1. Gå till fliken **[!UICONTROL Batch]** i följande fönster:
+1. Tryck på **[!UICONTROL Edit]** ovanför replikeringskön.
+1. I följande fönster går du till **[!UICONTROL Batch]** tab:
    ![batchreplikering](assets/batchreplication.png)
 1. Konfigurera agenten.
 
@@ -592,4 +585,4 @@ Utgivaren packar upp alla artiklar, sparar dem och rapporterar tillbaka till fö
 
 ## Ytterligare resurser {#additional-resources}
 
-Mer information om felsökning finns på sidan [Felsökning av replikering](/help/sites-deploying/troubleshoot-rep.md).
+Mer information om felsökning finns i [Felsökning av replikering](/help/sites-deploying/troubleshoot-rep.md) sida.

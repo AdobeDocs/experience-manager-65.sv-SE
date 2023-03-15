@@ -1,8 +1,8 @@
 ---
-title: Generera PDF Service Java API QuickStart(SOAP)
-seo-title: Generera PDF Service Java API QuickStart(SOAP)
-description: Använd tjänsten Generera PDF för att konvertera ett Microsoft Word-dokument till ett PDF-dokument, konvertera HTML-innehåll till ett PDF-dokument, konvertera ett PDF-dokument till en RTF-fil med Java API.
-seo-description: Använd tjänsten Generera PDF för att konvertera ett Microsoft Word-dokument till ett PDF-dokument, konvertera HTML-innehåll till ett PDF-dokument, konvertera ett PDF-dokument till en RTF-fil med Java API.
+title: Skapa Java API QuickStart (SOAP) för tjänsten PDF
+seo-title: Generate PDF Service Java API QuickStart(SOAP)
+description: Använd tjänsten Generate PDF för att konvertera ett Microsoft Word-dokument till ett PDF-dokument, konvertera HTML-innehåll till ett PDF-dokument, konvertera ett PDF-dokument till en RTF-fil med Java API.
+seo-description: Use the Generate PDF service to convert a Microsoft Word document to a PDF document, convert HTML content to a PDF document, convert a PDF document to an RTF file using the Java API.
 uuid: f8c4a476-de5e-440a-b419-0bd1d7fde5ca
 contentOwner: admin
 content-type: reference
@@ -10,18 +10,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: a7c0c4cf-7476-41e7-8d4e-564e6a21458d
 role: Developer
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: b856a93b-91fa-47a5-9e46-6a537218fd4e
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '366'
+source-wordcount: '324'
 ht-degree: 0%
 
 ---
 
-
 # Generera SOAP (PDF Service Java API Quick Start) {#generate-pdf-service-java-api-quickstart-soap}
 
-Java API Quick Start (SOAP) är tillgängligt för tjänsten Generera PDF.
+Java API Quick Start (SOAP) är tillgängligt för tjänsten Generate PDF.
 
 [Snabbstart (SOAP-läge): Konvertera ett Microsoft Word-dokument till ett PDF-dokument med Java API](generate-pdf-service-java-api.md#quick-start-soap-mode-converting-a-microsoft-word-document-to-a-pdf-document-using-the-java-api)
 
@@ -33,7 +32,7 @@ AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutning
 
 >[!NOTE]
 >
->Snabbstart i Programmering med AEM Forms baseras på den Forms-server som distribueras på JBoss Application Server och operativsystemet Microsoft Windows. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>Snabbstart i Programmering med AEM Forms baseras på den Forms-server som distribueras på JBoss Application Server och Microsoft Windows. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## Snabbstart (SOAP-läge): Konvertera ett Microsoft Word-dokument till ett PDF-dokument med Java API {#quick-start-soap-mode-converting-a-microsoft-word-document-to-a-pdf-document-using-the-java-api}
 
@@ -257,7 +256,7 @@ I följande Java-kodexempel konverteras HTML-innehåll som finns på https://www
 
 ## Snabbstart (SOAP-läge): Konvertera ett PDF-dokument till en RTF-fil med Java API (SOAP-läge) {#quick-start-soap-mode-converting-a-pdf-document-to-an-rtf-file-using-the-java-api-soap-mode}
 
-I följande kodexempel konverteras ett PDF-dokument med namnet *Loan.pdf* till ett RTF-dokument med namnet *Loan.rtf*. (Se [Konvertera PDF-dokument till format som inte är bildformat](/help/forms/developing/converting-file-formats-pdf.md#converting-pdf-documents-to-non-image-formats).)
+I följande kodexempel konverteras ett PDF-dokument med namnet *Loan.pdf* till ett RTF-dokument med namnet *Lån.rtf*. (Se [Konvertera PDF-dokument till andra format än bildformat](/help/forms/developing/converting-file-formats-pdf.md#converting-pdf-documents-to-non-image-formats).)
 
 ```java
  /*
@@ -361,4 +360,3 @@ I följande kodexempel konverteras ett PDF-dokument med namnet *Loan.pdf* till e
      }
  }
 ```
-

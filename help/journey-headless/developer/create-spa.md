@@ -1,8 +1,8 @@
 ---
 title: Valfritt - Så här skapar du enkelsidiga program (SPA) med AEM
 description: I den här valfria fortsättningen av den AEM Headless Developer Journey får du lära dig hur AEM kan kombinera headless-leverans med traditionella CMS-funktioner i full hög och hur du kan skapa redigerbara SPA med hjälp av AEM ramverk för SPA.
-exl-id: d74848f2-683e-49e1-9374-32596ca5d7d7
-source-git-commit: 7b97bc0ffb0df6641ae71fa36c459f1368052e12
+exl-id: 91eadda2-b881-4e4a-867f-8c5c54e8f8b4
+source-git-commit: a2ababa9dd9115e963b91a7271d204d287557c40
 workflow-type: tm+mt
 source-wordcount: '1273'
 ht-degree: 0%

@@ -1,8 +1,8 @@
 ---
 title: Konfigurera segmentering
-seo-title: Konfigurera segmentering
+seo-title: Configuring Segmentation
 description: Lär dig hur du konfigurerar segmentering för AEM Campaign.
-seo-description: Lär dig hur du konfigurerar segmentering för AEM Campaign.
+seo-description: Learn how to configure segmentation for AEM Campaign.
 uuid: 604ca34d-cdb9-49ff-8f75-02a44b60a8a2
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,38 +10,37 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: c68d5853-684f-42f2-a215-c1eaee06f58a
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 684d2d5f73d571a15c8155e7870134c28dc892b7
+exl-id: 6d759907-8796-4749-bd80-306ec7f2c819
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1080'
+source-wordcount: '1070'
 ht-degree: 0%
 
 ---
 
-
-# Konfigurerar segmentering {#configuring-segmentation}
+# Konfigurera segmentering {#configuring-segmentation}
 
 >[!NOTE]
 >
->I det här dokumentet beskrivs konfigurationen av segmentering så som den används med klientkontexten. Information om hur du konfigurerar segment med ContextHub med hjälp av pekgränssnittet finns i [Konfigurera segmentering med ContextHub](/help/sites-administering/segmentation.md).
+>I det här dokumentet beskrivs konfigurationen av segmentering så som den används med klientkontexten. Information om hur du konfigurerar segment med ContextHub med hjälp av pekrörelsegränssnittet finns i [Konfigurera segmentering med ContextHub](/help/sites-administering/segmentation.md).
 
 Segmentering är en viktig faktor när man skapar en kampanj. Se [Segmenteringsordlista](/help/sites-authoring/segmentation-overview.md) för information om hur segmentering fungerar och nyckeltermer.
 
 Beroende på den information du redan har samlat in om webbplatsbesökarna och vilka mål du vill uppnå, måste du definiera de segment och strategier som behövs för målinnehållet.
 
-Dessa segment används sedan för att förse en besökare med specifikt riktat innehåll. Innehållet finns i [Campaigns](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md)-avsnittet på webbplatsen. Teaser pages defined here can be included as teaser paragraphs on any page and define which visitor segment the specialized content is applicable for.
+Dessa segment används sedan för att förse en besökare med specifikt riktat innehåll. Det här innehållet bevaras i [Kampanjer](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md) på webbplatsen. Teaser pages defined here can be included as teaser paragraphs on any page and define which visitor segment the specialized content is applicable for.
 
 AEM gör det enkelt att skapa och uppdatera segment, teasers och kampanjer. Du kan även verifiera resultatet av dina definitioner.
 
-Med **segmentredigeraren** kan du enkelt definiera ett segment:
+The **Segmentredigerare** gör att du enkelt kan definiera ett segment:
 
 ![](assets/segmenteditor.png)
 
-Du kan **redigera** varje segment för att ange en **titel**, **Beskrivning** och **Förstärkningsfaktor**. Med hjälp av sidosparken kan du lägga till **AND** och **OR**-behållare för att definiera **segmentlogiken** och sedan lägga till de **segmentegenskaper** som krävs för att definiera urvalsvillkoren.
+Du kan **Redigera** varje segment för att ange **Titel**, **Beskrivning** och **Öka** faktor. Med hjälp av sidbrytaren kan du lägga till **OCH** och **ELLER** behållare för att definiera **Segmentlogik** och lägg sedan till **Segmentegenskaper** för att definiera urvalskriterierna.
 
 ## Förstärkningsfaktor {#boost-factor}
 
-Varje segment har en **Boost**-parameter som används som viktningsfaktor. ett högre tal anger att segmentet kommer att markeras framför ett segment med ett lägre tal.
+Varje segment har en **Öka** parameter som används som viktningsfaktor, ett högre tal anger att segmentet kommer att markeras framför ett segment med ett lägre tal.
 
 * Minsta värde: `0`
 * Högsta värde: `1000000`
@@ -54,7 +53,7 @@ Följande logikbehållare är tillgängliga när de är klara och gör att du ka
  <tbody>
   <tr>
    <td> AND-behållare<br /> </td>
-   <td> Den booleska AND-operatorn.<br /> </td>
+   <td> Den booleska operatorn AND.<br /> </td>
   </tr>
   <tr>
    <td> ELLER-behållare<br /> </td>
@@ -94,7 +93,7 @@ Följande segmentegenskaper är färdiga att användas: de kan dras från sidosp
    <td>Referens till en annan segmentdefinition.<br /> </td>
   </tr>
   <tr>
-   <td> Taggmoln<br /> </td>
+   <td> Tag Cloud<br /> </td>
    <td>Taggar som ska matchas med taggar från besökta sidor.<br /> </td>
   </tr>
   <tr>
@@ -110,7 +109,7 @@ Följande segmentegenskaper är färdiga att användas: de kan dras från sidosp
 
 Du kan kombinera dessa egenskaper med hjälp av de booleska operatorerna OR och AND (se [Skapa ett nytt segment](#creating-a-new-segment)) för att definiera det exakta scenariot för markering av det här segmentet.
 
-När hela programsatsen utvärderas till true är det här segmentet löst. Om flera segment är tillämpliga används även **[Förstärkningsfaktorn](/help/sites-administering/campaign-segmentation.md#boost-factor)**.
+När hela programsatsen utvärderas till true är det här segmentet löst. Om flera segment är tillämpliga ska **[Öka](/help/sites-administering/campaign-segmentation.md#boost-factor)** Även faktor används.
 
 >[!CAUTION]
 >
@@ -118,7 +117,7 @@ När hela programsatsen utvärderas till true är det här segmentet löst. Om f
 
 >[!NOTE]
 >
->Egenskaper med suffixet **_i18n** anges av ett skript som är en del av personaliseringens användargränssnittsklient. Alla användargränssnittsrelaterade klienter läses bara in på författaren eftersom användargränssnittet inte behövs vid publicering.
+>Egenskaper med **_i18n** suffixet anges av ett skript som är en del av personaliseringens användargränssnittsklient. Alla användargränssnittsrelaterade klienter läses bara in på författaren eftersom användargränssnittet inte behövs vid publicering.
 >
 >När du skapar ett segment med sådana egenskaper är det därför normalt nödvändigt att förlita sig på **browserFamily** i stället för **browserFamily_i18n**.
 
@@ -126,26 +125,26 @@ När hela programsatsen utvärderas till true är det här segmentet löst. Om f
 
 Så här definierar du det nya segmentet:
 
-1. Välj **Verktyg > Åtgärder > Konfiguration** i fältet.
-1. Klicka på sidan **Segmentering** i den vänstra rutan och navigera till önskad plats.
-1. Skapa en [ny sida](/help/sites-authoring/editing-content.md#creatinganewpage) med mallen **Segment**.
+1. Välj **Verktyg > Åtgärder > Konfiguration**.
+1. Klicka på **Segmentering** till vänster och navigera till önskad plats.
+1. Skapa en [ny sida](/help/sites-authoring/editing-content.md#creatinganewpage) med **Segment** mall.
 1. Öppna den nya sidan och se segmentredigeraren:
 
    ![](assets/screen_shot_2012-02-02at101726am.png)
 
-1. Använd antingen sidosparken eller snabbmenyn (oftast högerklickning med musknappen och välj sedan **Nytt..** för att öppna fönstret Infoga ny komponent) för att hitta det segment du behöver. Dra den sedan till **segmentredigeraren** som den kommer att visas i standardbehållaren **AND**.
+1. Använd antingen sidosparken eller snabbmenyn (oftast högerklickar du med musknappen och väljer sedan **Nytt...** för att öppna fönstret Infoga ny komponent) för att hitta det segment du behöver. Dra den sedan till **Segmentredigerare** kommer det att visas i standardinställningarna **OCH** behållare.
 1. Dubbelklicka på den nya egenskapen för att redigera de specifika parametrarna. till exempel musens position:
 
    ![](assets/screen_shot_2012-02-02at103135am.png)
 
-1. Klicka på **OK** för att spara definitionen:
-1. Du kan **redigera** segmentdefinitionen för att ge den en **rubrik**, **beskrivning** och **[Förstärkningsfaktor](#boost-factor)**:
+1. Klicka **OK** för att spara definitionen:
+1. Du kan **Redigera** segmentdefinitionen för att ge den en **Titel**, **Beskrivning** och **[Öka](#boost-factor)** faktor:
 
    ![](assets/screen_shot_2012-02-02at103547am.png)
 
-1. Lägg till fler egenskaper om det behövs. Du kan formulera booleska uttryck med hjälp av komponenterna **AND Container** och **OR Container** i **Segmentlogik**. Med segmentredigeraren kan du ta bort egenskaper eller behållare som inte längre behövs, eller dra dem till nya positioner i programsatsen.
+1. Lägg till fler egenskaper om det behövs. Du kan formulera booleska uttryck med **AND-behållare** och **ELLER-behållare** komponenter hittades under **Segmentlogik**. Med segmentredigeraren kan du ta bort egenskaper eller behållare som inte längre behövs, eller dra dem till nya positioner i programsatsen.
 
-### Använda AND- och OR-behållare {#using-and-and-or-containers}
+### Använda OCH- och ELLER-behållare {#using-and-and-or-containers}
 
 Du kan skapa komplexa segment i AEM. Man bör vara medveten om några grundläggande punkter:
 
@@ -160,16 +159,16 @@ ELLER
 
 Kvinnor och mellan 16 och 62 år
 
-Som huvudoperator är OR måste du börja med en **ELLER-behållare**. Här finns två AND-programsatser, för var och en av dem behöver du en **AND-behållare**, där du kan lägga till de enskilda egenskaperna.
+Som huvudoperator är OR måste du börja med ett **ELLER-behållare**. Här finns två AND-programsatser för varje programsats som du behöver en **AND-behållare** där du kan lägga till de enskilda egenskaperna.
 
 ![](assets/screen_shot_2012-02-02at105145am.png)
 
 ## Testa tillämpningen av ett segment {#testing-the-application-of-a-segment}
 
-När segmentet har definierats kan potentiella resultat testas med hjälp av **[klientkontexten](/help/sites-administering/client-context.md)**:
+När segmentet är definierat kan man testa potentiella resultat med hjälp av **[Klientkontext](/help/sites-administering/client-context.md)**:
 
 1. Välj det segment som ska testas.
-1. Tryck på **[Ctrl-Alt-C](/help/sites-authoring/page-authoring.md#keyboardshortcuts)** för att öppna **[klientkontexten](/help/sites-administering/client-context.md)**, som visar de data som har samlats in. I testsyfte kan du **redigera** vissa värden eller **läsa in** en annan profil för att se effekten där.
+1. Tryck **[Ctrl-Alt-C](/help/sites-authoring/page-authoring.md#keyboardshortcuts)** för att öppna **[Klientkontext](/help/sites-administering/client-context.md)**, som visar de data som har samlats in. I testsyfte kan du **Redigera** vissa värden, eller **Läs in** en annan profil för att se effekten där.
 
 1. Beroende på vilka egenskaper som har definierats, kanske data som är tillgängliga för den aktuella sidan inte matchar segmentdefinitionen. Status för matchningen visas under definitionen.
 
@@ -185,7 +184,7 @@ Eller inte:
 >
 >Alla egenskaper åtgärdas omedelbart, men de flesta ändras bara vid sidinläsning. Ändringar av musens position visas omedelbart, vilket är praktiskt vid testning.
 
-Sådana tester kan även utföras på innehållssidor och i kombination med **Teaser**-komponenter.
+Sådana tester kan även utföras på innehållssidor och i kombination med **Teaser** -komponenter.
 
 Om du för musen över ett teaser-stycke visas de segment som används, oavsett om de för närvarande löses och varför den aktuella teaser-instansen har valts:
 
@@ -193,4 +192,4 @@ Om du för musen över ett teaser-stycke visas de segment som används, oavsett 
 
 ### Använda ditt segment {#using-your-segment}
 
-Segment används för närvarande inom [kampanjer](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md). De används för att styra det faktiska innehåll som ses av specifika målgrupper. Mer information finns i [Förstå segment](/help/sites-authoring/segmentation-overview.md).
+Segment används för närvarande inom [Kampanjer](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md). De används för att styra det faktiska innehåll som ses av specifika målgrupper. Se [Förstå segment](/help/sites-authoring/segmentation-overview.md) för mer information.

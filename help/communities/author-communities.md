@@ -1,8 +1,8 @@
 ---
 title: Communities-komponenter
-seo-title: Communities-komponenter
+seo-title: Communities Components
 description: Lägga till communityfunktioner på alla AEM webbplatser
-seo-description: Lägga till communityfunktioner på alla AEM webbplatser
+seo-description: Adding community features to any AEM site
 uuid: 76824820-81e9-4192-8df3-dff55eaf144e
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -10,14 +10,13 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: df1ac689-33db-4e30-9f75-3bda2a485652
 docset: aem65
-translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+exl-id: 4a49d14c-e6f0-4791-904e-8f30e47f7cde
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '295'
+source-wordcount: '286'
 ht-degree: 2%
 
 ---
-
 
 # Communities-komponenter {#communities-components}
 
@@ -33,17 +32,17 @@ Mer information om hur du skapar en community-webbplats finns på:
 
 >[!NOTE]
 >
->Om du inte känner till redigeringsmiljön kan du läsa dokumentationen om [grundläggande hantering](/help/sites-authoring/basic-handling.md) och en [snabbguide till redigeringssidor](/help/sites-authoring/qg-page-authoring.md).
+>Om du inte är bekant med redigeringsmiljön kan du läsa dokumentationen om [grundläggande hantering](/help/sites-authoring/basic-handling.md) och [snabbguide till framtagning av sidor](/help/sites-authoring/qg-page-authoring.md).
 
 ## Tillgängliga webbgruppskomponenter {#available-communities-components}
 
 I följande tabell visas de communitykomponenter som är synliga för författare när de är aktiverade i komponentwebbläsaren (sidespark).
 
-Se även den interaktiva guiden [Community Components.](/help/communities/components-guide.md).
+Se även de interaktiva [Community Components Guide](/help/communities/components-guide.md).
 
 >[!NOTE]
 >
->Läs [Grunderna för communitykomponenter](/help/communities/basics.md) eftersom den innehåller information som behövs för att skapa med Communities-komponenter.
+>Läs [Grunderna för communitykomponenter](/help/communities/basics.md) eftersom den innehåller information som behövs för att skapa med komponenter i Communities.
 
 | **Komponenttitel** | **Funktion** |
 |---|---|
@@ -84,9 +83,8 @@ Se även den interaktiva guiden [Community Components.](/help/communities/compon
 
 ## Dokumentation för relaterade communities {#related-communities-documentation}
 
-* Besök [Distribuera communityn](/help/communities/deploy-communities.md) om du vill veta mer om rekommenderade distributioner.
+* Besök [Distribuera webbgrupper](/help/communities/deploy-communities.md) om du vill veta mer om rekommenderade distributioner.
 
-* Besök [Administrera communityplatser](/help/communities/administer-landing.md) om du vill veta mer om hur du skapar en community-webbplats, konfigurerar mallar för communitywebbplatser, modererar communityinnehåll, hanterar medlemmar och konfigurerar meddelanden.
+* Besök [Administrera webbgruppsplatser](/help/communities/administer-landing.md) om du vill veta mer om hur du skapar en community-webbplats, konfigurerar mallar för communitysajter, modererar communityinnehåll, hanterar medlemmar och konfigurerar meddelanden.
 
-* Besök [Utveckla communityn](/help/communities/communities.md) om du vill veta mer om ramverket för sociala komponenter (SCF) och hur du anpassar communitykomponenter och -funktioner.
-
+* Besök [Utveckla webbgrupper](/help/communities/communities.md) om du vill veta mer om ramverket för sociala komponenter (SCF) och hur du anpassar komponenter och funktioner i Communities.

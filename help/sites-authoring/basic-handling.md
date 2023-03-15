@@ -574,7 +574,7 @@ De här alternativen är tillgängliga via markören bredvid **Kommentar** fält
 
 **Referenser** visar alla anslutningar till den valda resursen. I **Webbplatser** konsol [referenser](/help/sites-authoring/author-environment-tools.md#showingpagereferences) för sidor:
 
-* [Startar](/help/sites-authoring/launches.md#launches-in-references-sites-console)
+* [Launches](/help/sites-authoring/launches.md#launches-in-references-sites-console)
 * [Live-kopior](/help/sites-administering/msm-livecopy-overview.md#openingthelivecopyoverviewfromreferences)
 * [Språkversioner](/help/sites-administering/tc-prep.md#seeing-the-status-of-language-roots)
 * Innehållsreferenser:

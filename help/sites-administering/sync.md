@@ -192,7 +192,7 @@ En auktoriserad användare, en medlem i **`administrators`** användargruppen, h
       * markera den befintliga konfiguration som ska öppnas för redigering (pennikonen) Bekräfta `Name`: `socialpubsync-reverse`
 
       * välj `Enabled` kryssruta
-      * välj `Save`
+      * select `Save`
    * **upprepa** för varje publiceringsinstans
 
 
@@ -216,7 +216,7 @@ En auktoriserad användare, en medlem i **`administrators`** användargruppen, h
          Verifiera `agent name`: `socialpubsync-reverse`
 
       * välj `Enabled` kryssruta
-      * välj `Save`
+      * select `Save`
 
 
 ![](assets/screen-shot_2019-05-24at090809.png)
@@ -239,7 +239,7 @@ Som standard kommer författaren att söka efter ändringar var 30:e sekund. Så
 
          * Verifiera `Name`: `socialpubsync-scheduled-trigger`
       * ange `Interval in Seconds` till önskat intervall
-      * välj `Save`
+      * select `Save`
 
 
 
@@ -278,7 +278,7 @@ Det ska finnas en importslutpunkt för varje publiceringsinstans. Om det till ex
    * `https://localhost:4503/libs/sling/distribution/services/importers/socialpubsync`
    * `https://localhost:4504/libs/sling/distribution/services/importers/socialpubsync`
 
-* välj `Save`
+* select `Save`
 
 ### 8. AEM Communities Sync Listener {#aem-communities-user-sync-listener}
 
@@ -515,7 +515,7 @@ Den behöriga användaren bör uttryckligen ha följande behörigheter och begr�
 
 Som medlem i `administrators` gruppen bör den auktoriserade användaren ha följande behörigheter för alla publiceringsinstanser:
 
-| **bana** | **jcr:all** | **jcr:read** | **rep:write** |
+| **path** | **jcr:all** | **jcr:read** | **rep:write** |
 |---|---|---|---|
 | /etc/packages/sling/distribution |  |  | X |
 | /libs/sling/distribution |  | X |  |

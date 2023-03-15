@@ -18,7 +18,7 @@ ht-degree: 0%
 
 Från och med den 31 januari 2014 är DHTML-visningsplattformen officiellt utgånget.
 
-Se [Referenshandboken för Dynamic Media-visningsprogram](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/homeviewers.html) för de senaste visningsprogrammen som stöds.
+Se [Referenshandbok för Dynamic Media Viewer](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/homeviewers.html) för de senaste visningsprogrammen som stöds.
 
 <!-- OBSOLETE CONTENT **What is the change?**
 

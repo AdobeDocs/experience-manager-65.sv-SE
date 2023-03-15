@@ -2,20 +2,19 @@
 title: PhoneGap
 seo-title: PhoneGap
 description: PhoneGap
-seo-description: Följ den här sidan för att komma igång med att skapa för Adobe PhoneGap Enterprise i AEM.
+seo-description: Follow this page to get started with authoring for Adobe PhoneGap Enterprise in AEM.
 uuid: 256a9f66-4c66-434c-be79-01be3c02d688
 contentOwner: msm-service
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 discoiquuid: d9ab4d38-1c17-477d-9341-02bda80f3c23
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 930a6950-150a-4670-ab48-250b655132fb
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '216'
+source-wordcount: '201'
 ht-degree: 1%
 
 ---
-
 
 # PhoneGap{#phonegap}
 
@@ -33,7 +32,7 @@ För att starta en ny AEM Mobile-appupplevelse krävs det att rollerna är enhet
 
 ## Om du redigerar PhoneGap-program {#authoring-phonegap-applications}
 
-En ***AEM Author* (eller *Marketer*)**kan använda färdiga mallar och komponenter för att lägga till och redigera sidor, dra och släppa komponenter och lägga till media av alla typer från DAM, inklusive bilder, videor och textfragment (innehållsfragment).
+An ***AEM Author* (eller *Marknadsförare*)**kan använda färdiga mallar och komponenter för att lägga till och redigera sidor, dra och släppa komponenter och lägga till media av alla typer från DAM, inklusive bilder, videor och textfragment (innehållsfragment).
 
 Se följande resurser för att komma igång:
 
@@ -45,7 +44,7 @@ Se följande resurser för att komma igång:
 * [Skapa en ny AEM Mobile-app med guiden Skapa](/help/mobile/phonegap-create-new-app.md)
 * [Importera en befintlig hybridapp](/help/mobile/phonegap-adding-content-to-imported-app.md)
 
-Mer information om **Content Services** finns i [Content Services Overview](/help/mobile/develop-content-as-a-service.md) för att komma igång.
+Mer information om **Innehållstjänster**, se [Content Services - översikt](/help/mobile/develop-content-as-a-service.md) för att komma igång.
 
 ## Ytterligare resurser {#additional-resources}
 
@@ -53,4 +52,3 @@ Mer information om administratörens och utvecklarens roller och ansvar finns i 
 
 * [Utveckla för Adobe PhoneGap Enterprise med AEM](/help/mobile/developing-in-phonegap.md)
 * [Administrera innehåll för Adobe PhoneGap Enterprise med AEM](/help/mobile/administer-phonegap.md)
-

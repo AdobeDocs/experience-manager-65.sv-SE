@@ -1,24 +1,23 @@
 ---
 title: Sammanhangsberoende hjälp för formulärfält
-seo-title: Sammanhangsberoende hjälp för formulärfält
+seo-title: Authoring in-context help for form fields
 description: Med AEM Forms kan du lägga till sammanhangsberoende hjälp till anpassningsbara formulärfält och paneler, som text eller multimedia, inklusive videor.
-seo-description: Med AEM Forms kan du lägga till sammanhangsberoende hjälp till anpassningsbara formulärfält och paneler, som text eller multimedia, inklusive videor.
+seo-description: AEM Forms allows you to add in-context help to adaptive form fields and panels, as text or rich media, including videos.
 uuid: 1865bf7b-66fc-4f89-bd98-904daa409320
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: 78000342-a6a7-4c2e-acab-a88851b82c2a
 docset: aem65
 feature: Adaptive Forms
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 6569bfba-9af5-4060-8640-e51d7af46614
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '395'
+source-wordcount: '366'
 ht-degree: 0%
 
 ---
 
-
-# Skriv sammanhangsberoende hjälp för formulärfält{#authoring-in-context-help-for-form-fields}
+# Sammanhangsberoende hjälp för formulärfält{#authoring-in-context-help-for-form-fields}
 
 ## Introduktion {#introduction}
 
@@ -47,7 +46,7 @@ Fältet Kort beskrivning ger snabba och korta tips om hur du fyller i ett formul
 
 >[!NOTE]
 >
->Välj **Visa alltid kort beskrivning** om du vill visa hjälptexten under fältet permanent.
+>Välj **Visa alltid kort beskrivning** för att permanent visa hjälptexten under fältet.
 
 ![Permanent kort sammanhangsberoende hjälp nedanför fältet](assets/short1.png)
 
@@ -70,4 +69,3 @@ Utöver sammanhangsberoende hjälp för formulärfält kan du ange hjälp på pa
 Om du lägger till hjälp för panelen visas en **?** -ikonen bredvid panelbeskrivningen. När du klickar på ikonen visas det innehåll som lagts till i hjälpdelen i dialogrutan Redigera i panelen.
 
 ![Exempel på sammanhangsberoende hjälp på formulärpanelsnivå](assets/photoshop-1.png)
-

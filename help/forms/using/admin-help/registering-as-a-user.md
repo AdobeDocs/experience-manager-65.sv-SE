@@ -1,24 +1,23 @@
 ---
 title: Registrera som användare
-seo-title: Registrera som användare
+seo-title: Registering as a User
 description: Lär dig hur du kan använda policyskyddade dokument som du får från en dokumentsäkerhetsanvändare, även om du inte är en användare i användarens organisation.
-seo-description: Lär dig hur du kan använda policyskyddade dokument som du får från en dokumentsäkerhetsanvändare, även om du inte är en användare i användarens organisation.
+seo-description: Learn how you can use policy-protected documents that you receive from an document security user, even if you are external to the user’s organization.
 uuid: 4648b358-f545-434f-a3b2-2937e961dc64
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 content-type: reference
 geptopics: SG_AEMFORMS/categories/working_with_document_security
 discoiquuid: 26e11ef4-9f8f-4b0b-b035-a498fd7d65ef
 feature: Document Security
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 320d8fa4-e200-4993-b018-a9718cddc5c1
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '730'
+source-wordcount: '700'
 ht-degree: 0%
 
 ---
 
-
-# Registrerar som en användare {#registering-as-a-user}
+# Registrera som användare {#registering-as-a-user}
 
 Du kan använda policyskyddade dokument som du får från en dokumentsäkerhetsanvändare, även om du är extern i förhållande till användarens organisation. Om du vill använda ett profilskyddat dokument måste du registrera dig med dokumentskydd. Om du inte tidigare har bjudits in att registrera dig, initierar dokumentsäkerhet registreringsprocessen när dessa händelser inträffar:
 
@@ -70,4 +69,3 @@ Information om hur du kontaktar en dokumentsäkerhetsadministratör för att få
 1. Klicka på Alternativ i det övre högra hörnet på sidan. Sidan Externa användare visas.
 1. Välj Ändra lösenord och skriv det tillfälliga lösenordet i rutan Gammalt lösenord.
 1. Skriv ett nytt lösenord i rutan Nytt lösenord och skriv det sedan i rutan Bekräfta lösenord igen.
-

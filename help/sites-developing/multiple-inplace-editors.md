@@ -2,14 +2,13 @@
 title: Konfigurera RTE för flera redigerare på plats.
 description: Skapa flera redigerare på plats i Adobe Experience Manager genom att konfigurera RTF-redigeraren.
 contentOwner: AG
-translation-type: tm+mt
-source-git-commit: e49411a99a80e91c983afc103a8ea826e75569b8
+exl-id: 03030317-8b7d-408a-bdfd-619824d7260c
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '445'
 ht-degree: 2%
 
 ---
-
 
 # Konfigurera flera redigerare på plats {#configure-multiple-in-place-editors}
 
@@ -19,7 +18,7 @@ Du kan konfigurera RTF-redigeraren i Adobe Experience Manager så att den har fl
 
 ## Konfigurera flera redigerare {#configure-multiple-editors}
 
-Om du vill aktivera flera redigerare på plats har strukturen för nodtypen `cq:InplaceEditingConfig` förbättrats med definitionen för nodtypen `cq:ChildEditorConfig`.
+Så här aktiverar du flera redigerare på plats strukturen för en `cq:InplaceEditingConfig` nodtypen har förbättrats med definitionen av `cq:ChildEditorConfig` nodtyp.
 
 Till exempel:
 
@@ -56,7 +55,7 @@ Till exempel:
 
 Så här konfigurerar du flera redigerare:
 
-1. I noden `cq:inplaceEditing` (av typen `cq:InplaceEditingConfig`) definierar du följande egenskaper:
+1. På noden `cq:inplaceEditing` (av typ `cq:InplaceEditingConfig`) definierar du följande egenskaper:
 
    * Namn:`editorType`
    * Typ: `String`
@@ -67,22 +66,22 @@ Så här konfigurerar du flera redigerare:
    * Namn: `cq:ChildEditors`
    * Typ: `nt:unstructured`
 
-1. Skapa en nod för varje lokal redigerare under `cq:childEditors`-nod:
+1. Under `cq:childEditors` skapar du en nod för varje redigerare på plats:
 
-   * Namn: Namnet på varje nod är namnet på den egenskap som den representerar, vilket är fallet med släppmål. Till exempel `image` och `text`.
+   * Namn: Namnet på varje nod är namnet på den egenskap som den representerar, vilket är fallet med släppmål. Till exempel: `image` och `text`.
    * Typ: `cq:ChildEditorConfig`
 
    >[!NOTE]
    >
-   >Det finns en korrelation mellan de definierade släppmålen och de underordnade redigerarna. Namnet på noden `cq:ChildEditorConfig` betraktas som mål-ID för släppning, som används som parameter till den markerade underordnade redigeraren. Om det redigerbara delområdet inte har något släppmål, till exempel i en textkomponent, betraktas namnet på den underordnade redigeraren fortfarande som ett ID som identifierar motsvarande redigerbara område.
+   >Det finns en korrelation mellan de definierade släppmålen och de underordnade redigerarna. Namnet på `cq:ChildEditorConfig` noden betraktas som det släppmål-ID som används som parameter till den markerade underordnade redigeraren. Om det redigerbara delområdet inte har något släppmål, till exempel i en textkomponent, betraktas namnet på den underordnade redigeraren fortfarande som ett ID som identifierar motsvarande redigerbara område.
 
-1. Definiera egenskaperna för var och en av dessa noder (`cq:ChildEditorConfig`):
+1. På var och en av dessa noder (`cq:ChildEditorConfig`) definierar egenskaperna:
 
    * Namn: `type`.
    * Värde: Namnet på den registrerade redigeraren på plats. till exempel `image` och `text`.
 
    * Namn: `title`.
-   * Värde: Titeln som visas i komponentens lista över tillgängliga redigerare. Till exempel `Image` och `Text`.
+   * Värde: Titeln som visas i komponentens lista över tillgängliga redigerare. Till exempel: `Image` och `Text`.
 
 ### Ytterligare konfiguration för RTF-redigerare {#additional-configuration-for-rich-text-editors}
 
@@ -103,21 +102,21 @@ Konfigurationen för flera textredigerare är något annorlunda eftersom du kan 
 
 >[!NOTE]
 >
->För RTE stöds emellertid egenskapen `configPath` när det bara finns en instans av textredigeraren (redigerbart delområde) i komponenten. Den här användningen av `configPath` har stöd för bakåtkompatibilitet med äldre användargränssnittsdialogrutor för komponenten.
+>För RTE gäller dock att `configPath` -egenskapen stöds när det bara finns en instans av textredigeraren (redigerbart delområde) i komponenten. Den här användningen av `configPath` har stöd för bakåtkompatibilitet med äldre användargränssnittsdialogrutor för komponenten.
 
 >[!CAUTION]
 >
->Ge inte RTE-konfigurationsnoden namnet `config`. Annars är RTE-konfigurationerna bara tillgängliga för administratörer och inte för användare i gruppen `content-author`.
+>Namnge inte RTE-konfigurationsnoden som `config`. Annars är RTE-konfigurationerna bara tillgängliga för administratörer och inte för användarna i gruppen `content-author`.
 
 ## Kodexempel {#code-samples}
 
-Koden för den här sidan finns i [aem-authoring-hybrideditors-projektet på GitHub](https://github.com/Adobe-Marketing-Cloud/aem-authoring-hybrideditors). Du kan hämta hela projektet som [ett ZIP-arkiv](https://github.com/Adobe-Marketing-Cloud/aem-authoring-hybrideditors/archive/master.zip).
+Koden för den här sidan finns på [aem-authoring-hybrideditors project on GitHub](https://github.com/Adobe-Marketing-Cloud/aem-authoring-hybrideditors). Du kan hämta hela projektet som [ett ZIP-arkiv](https://github.com/Adobe-Marketing-Cloud/aem-authoring-hybrideditors/archive/master.zip).
 
-## Lägg till en lokal redigerare {#add-an-in-place-editor}
+## Lägga till en lokal redigerare {#add-an-in-place-editor}
 
-Allmän information om hur du lägger till en lokal redigerare finns i dokumentet [customize page authoring](/help/sites-developing/customizing-page-authoring-touch.md#add-new-in-place-editor).
+Allmän information om hur du lägger till en redigerare på plats finns i dokumentet [anpassa sidredigering](/help/sites-developing/customizing-page-authoring-touch.md#add-new-in-place-editor).
 
 >[!MORELIKETHIS]
 >
->* [Konfigurera RTF-redigeraren i Experience Manager](/help/sites-administering/rich-text-editor.md).
+>* [Konfigurera RTF-redigerare i Experience Manager](/help/sites-administering/rich-text-editor.md).
 

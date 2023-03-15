@@ -1,28 +1,27 @@
 ---
 title: Delta i arbetsflöden
-seo-title: Delta i arbetsflöden
+seo-title: Participating in Workflows
 description: Arbetsflödena omfattar vanligtvis steg som kräver att en person utför en aktivitet på en sida eller en resurs. Arbetsflödet väljer en användare eller grupp som ska utföra aktiviteten och tilldelar en arbetsuppgift till den personen eller gruppen.
-seo-description: Arbetsflödena omfattar vanligtvis steg som kräver att en person utför en aktivitet på en sida eller en resurs. Arbetsflödet väljer en användare eller grupp som ska utföra aktiviteten och tilldelar en arbetsuppgift till den personen eller gruppen.
+seo-description: Workflows typically include steps that require a person to perform an activity on a page or asset. The workflow selects a user or group to perform the activity and assigns a work item to that person or group.
 uuid: 04dcc8f2-dc11-430f-b0ae-47ef2cb069a2
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: site-features
 discoiquuid: 1d7a4889-82c5-4096-8567-8f66215a8458
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 2f1a3a73-7a20-48c7-8f3e-54252f5fb71c
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '584'
+source-wordcount: '543'
 ht-degree: 4%
 
 ---
-
 
 # Delta i arbetsflöden{#participating-in-workflows}
 
 Arbetsflödena omfattar vanligtvis steg som kräver att en person utför en aktivitet på en sida eller en resurs. Arbetsflödet väljer en användare eller grupp som ska utföra aktiviteten och tilldelar en arbetsuppgift till den personen eller gruppen.
 
-## Bearbetar dina arbetsobjekt {#processing-your-work-items}
+## Bearbetar dina arbetsuppgifter {#processing-your-work-items}
 
 Du kan utföra följande åtgärder för att bearbeta ett arbetsobjekt:
 
@@ -50,7 +49,7 @@ Du kan utföra följande åtgärder för att bearbeta ett arbetsobjekt:
 
 När du tilldelas en arbetsuppgift (till exempel **Godkänn innehåll**) visas olika varningar och/eller meddelanden:
 
-* Kolumnen **Status** i webbplatskonsolen anger när en sida är i ett arbetsflöde:
+* The **Status** -kolumnen i webbplatskonsolen anger när en sida är i ett arbetsflöde:
 
    ![arbetsflödenstatus-1](assets/workflowstatus-1.png)
 
@@ -62,27 +61,27 @@ När du tilldelas en arbetsuppgift (till exempel **Godkänn innehåll**) visas o
 
 När du har vidtagit den angivna åtgärden kan du slutföra arbetsuppgiften och på så sätt tillåta arbetsflödet att fortsätta. Använd följande procedur för att slutföra arbetsuppgiften.
 
-1. Markera arbetsflödessteget och klicka på knappen **Fullständig** i det övre navigeringsfältet.
-1. Välj **Nästa steg** i dialogrutan som visas. det vill säga nästa steg. En nedrullningsbar lista visar alla lämpliga destinationer. Du kan också ange en **kommentar**.
+1. Välj arbetsflödessteget och klicka på **Slutförd** i det övre navigeringsfältet.
+1. I dialogrutan som visas väljer du **Nästa steg**; det vill säga nästa steg. En nedrullningsbar lista visar alla lämpliga destinationer. A **Kommentar** kan också anges.
 
    ![arbetsflöde slutfört](assets/workflowcomplete.png)
 
    Hur många steg som visas beror på arbetsflödesmodellens design.
 
-1. Klicka på **OK** för att bekräfta åtgärden.
+1. Klicka **OK** för att bekräfta åtgärden.
 
 ### Delegera ett deltagarsteg {#delegating-a-participant-step}
 
 Använd följande procedur för att delegera en arbetsuppgift.
 
-1. Klicka på knappen **Delegera** i det övre navigeringsfältet.
-1. I dialogrutan använder du listrutan för att välja **Användaren** att delegera arbetsposten till. Du kan också lägga till en **kommentar**.
+1. Klicka på **Delegera** i det övre navigeringsfältet.
+1. I dialogrutan använder du listrutan för att välja **Användare** att delegera arbetsuppgiften till. Du kan också lägga till en **Kommentar**.
 
    ![arbetsflödesdelegat](assets/workflowdelegate.png)
 
-1. Klicka på **OK** för att bekräfta åtgärden.
+1. Klicka **OK** för att bekräfta åtgärden.
 
-### Utför steg tillbaka på ett deltagarsteg {#performing-step-back-on-a-participant-step}
+### Stega bakåt i ett deltagarsteg {#performing-step-back-on-a-participant-step}
 
 Använd följande procedur för att stega bakåt.
 
@@ -92,4 +91,3 @@ Använd följande procedur för att stega bakåt.
    ![screen_shot_2018-08-10at155325](assets/screen_shot_2018-08-10at155325.jpg)
 
 1. Bekräfta åtgärden genom att klicka på OK.
-

@@ -1,46 +1,45 @@
 ---
 title: Sidexporteraren
 description: Lär dig hur du använder AEM sidexporteraren.
-translation-type: tm+mt
-source-git-commit: 6aee1506b54a932bae8f2521fce4488de7d2a52a
+exl-id: 15d08758-cf75-43c0-9818-98a579d64183
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1065'
 ht-degree: 0%
 
 ---
 
-
 # Sidexporteraren{#the-page-exporter}
 
-Med AEM kan du exportera en sida som en fullständig webbsida, inklusive bilder, `.js`- och `.css`-filer.
+AEM kan du exportera en sida som en komplett webbsida med bilder, `.js` och `.css` filer.
 
-När konfigurationen är klar begär du en sidexport från webbläsaren genom att ersätta `html` med `export.zip` i URL:en. Detta genererar en arkivfil (ZIP) som innehåller den återgivna sidan i html-format, tillsammans med de refererade resurserna. Alla sökvägar på sidan (till exempel sökvägar till bilder) skrivs om så att de pekar på antingen filerna som finns i arkivet eller på resurserna på servern. Arkivfilen (ZIP) kan sedan laddas ned från webbläsaren.
+När konfigurationen är klar begär du en sidexport från webbläsaren genom att ersätta `html` med `export.zip` i webbadressen. Detta genererar en arkivfil (ZIP) som innehåller den återgivna sidan i html-format, tillsammans med de refererade resurserna. Alla sökvägar på sidan (till exempel sökvägar till bilder) skrivs om så att de pekar på antingen filerna som finns i arkivet eller på resurserna på servern. Arkivfilen (ZIP) kan sedan laddas ned från webbläsaren.
 
 >[!NOTE]
 >
 >Beroende på vilken webbläsare du använder och vilka inställningar du har blir hämtningen antingen:
 >* en arkivfil (`<page-name>.export.zip`)
->* en mapp (`<page-name>`); arkivfilen har redan utökats
+>* en mapp (`<page-name>`). arkivfilen har redan utökats
 
 
 ## Exportera en sida {#exporting-a-page}
 
-I följande steg beskrivs hur du exporterar en sida och förutsätter att det finns en exportmall för platsen. En exportmall definierar hur en sida exporteras och är specifik för din plats. Om du vill skapa en exportmall läser du avsnittet [Skapa en sidexportkonfiguration för din plats](#creating-a-page-exporter-configuration-for-your-site).
+I följande steg beskrivs hur du exporterar en sida och förutsätter att det finns en exportmall för platsen. En exportmall definierar hur en sida exporteras och är specifik för din plats. Om du vill skapa en exportmall använder du [Skapa en sidexportkonfiguration för platsen](#creating-a-page-exporter-configuration-for-your-site) -avsnitt.
 
 Så här exporterar du en sida:
 
-1. Navigera till önskad sida i konsolen **Platser**.
+1. Navigera till önskad sida i **Webbplatser** konsol.
 
-1. Markera sidan och öppna sedan dialogrutan **Egenskaper**.
+1. Markera sidan och öppna sedan **Egenskaper** -dialogrutan.
 
-1. Välj fliken **Avancerat**.
+1. Välj **Avancerat** -fliken.
 
-1. Expandera fältet **Exportera** för att välja en exportmall.
+1. Expandera **Exportera** om du vill välja en exportmall.
 Välj önskad mall för platsen och bekräfta sedan med **OK**.
 
 1. Välj **Spara och stäng** för att stänga dialogrutan för sidegenskaper.
 
-1. Begär att sidan ska exporteras och ersätt suffixet `html` med `export.zip` i URL:en.
+1. Begär att sidan ska exporteras och ersätta suffixet `html` med `export.zip` i webbadressen.
 
    Till exempel:
    * localhost:4502/content/we-retail/language-masters/en.html
@@ -53,17 +52,17 @@ Välj önskad mall för platsen och bekräfta sedan med **OK**.
 
 1. Zippa upp filen i filsystemet om det behövs. När den är utökad finns det en mapp med samma namn som den markerade sidan. Mappen innehåller:
 
-   * undermappen `content`, som är roten till en serie undermappar som återspeglar sökvägen till sidan i databasen
+   * undermappen `content`, som är roten i en serie undermappar som återspeglar sökvägen till sidan i databasen
 
       * i den här strukturen finns HTML-filen för den valda sidan (`<page-name>.html`)
-   * andra resurser (`.js` filer, `.css` filer, bilder osv.) är placerade enligt inställningarna i exportmallen
+   * övriga resurser (`.js` filer, `.css` filer, bilder osv.) är placerade enligt inställningarna i exportmallen
 
 
-1. Öppna HTML-sidfilen (`<unzip-dir>/<path>/<to>/<page>/<page-path>.html`) i webbläsaren för att kontrollera återgivningen.
+1. Öppna HTML-filen för sidan (`<unzip-dir>/<path>/<to>/<page>/<page-path>.html`) i webbläsaren för att kontrollera återgivningen.
 
-## Skapa en sidexportkonfiguration för din plats {#creating-a-page-exporter-configuration-for-your-site}
+## Skapa en sidexportkonfiguration för platsen {#creating-a-page-exporter-configuration-for-your-site}
 
-Sidexporteraren baseras på [ramverket för innehållssynkronisering](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/contentsync/package-summary.html). De konfigurationer som är tillgängliga i dialogrutan **Sidegenskaper** är exportmallar som definierar nödvändiga beroenden för en sida.
+Sidexporteraren baseras på [Innehållssynkroniseringsramverk](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/contentsync/package-summary.html). De konfigurationer som är tillgängliga i **Sidegenskaper** -dialogrutor är exportmallar som definierar nödvändiga beroenden för en sida.
 
 När en sidexport aktiveras refereras exportmallen och både sidsökvägen och designsökvägen tillämpas dynamiskt. ZIP-filen skapas sedan med standardfunktionen för innehållssynkronisering.
 
@@ -71,14 +70,14 @@ En körklar AEM innehåller en standardmall under `/etc/contentsync/templates/de
 
 * Den här mallen är en reservmall när ingen exportmall hittas i databasen.
 
-* I mallen `default` visas hur en sidexport kan konfigureras, så att den kan fungera som bas för en ny exportmall.
+* The `default` -mallen visar hur en sidexport kan konfigureras så att den kan fungera som en bas för en ny exportmall.
 
 * Om du vill visa nodstrukturen för mallen i webbläsaren som JSON-format begär du följande URL:
    `http://localhost:4502/etc/contentsync/templates/default.json`
 
 Det enklaste sättet att skapa en ny sidexportmall är att:
 
-* kopiera mallen `default`,
+* kopiera `default` mall,
 
 * tilldela ett nytt namn som passar din webbplats,
 
@@ -86,28 +85,28 @@ Det enklaste sättet att skapa en ny sidexportmall är att:
 
 Så här skapar du en helt ny mall:
 
-1. I **CRXDE Lite** skapar du en nod under `/etc/contentsync/templates`:
+1. I **CRXDE Lite**, skapa en nod nedan `/etc/contentsync/templates`:
 
-   * `Name`: ett namn som passar er plats, till exempel  `<mysite>`. Namnet visas i dialogrutan för sidegenskaper när du väljer sidexportmall.
+   * `Name`: ett namn som passar er plats, till exempel `<mysite>`. Namnet visas i dialogrutan för sidegenskaper när du väljer sidexportmall.
 
    * `Type`: `nt:unstructured`
 
-2. Under mallnoden, som anropas här `mysite`, skapar du en nodstruktur med hjälp av konfigurationsnoderna som beskrivs nedan.
+2. Under mallnoden som anropas här `mysite`skapar du en nodstruktur med hjälp av konfigurationsnoderna som beskrivs nedan.
 
 ## Aktivera en sidexportmall för dina sidor {#activating-a-page-exporter-configuration-for-your-pages}
 
 När mallen har konfigurerats måste du göra den tillgänglig:
 
-1. I CRXDE navigerar du till önskad sida i `/content`-grenen. Det kan vara en enskild sida eller en rotsida i ett underträd.
+1. I CRXDE navigerar du till önskad sida i dialogrutan `/content` förgrening. Det kan vara en enskild sida eller en rotsida i ett underträd.
 
-1. Skapa egenskapen på noden `jcr:content` på sidan:
-   * `Name`:  `cq:exportTemplate`
-   * `Type`:  `String`
-   * `Value`: Sökväg till mallen. till exempel:  `/etc/contentsync/templates/mysite`
+1. På `jcr:content` nod på sidan som skapar egenskapen:
+   * `Name`: `cq:exportTemplate`
+   * `Type`: `String`
+   * `Value`: Sökväg till mallen. till exempel: `/etc/contentsync/templates/mysite`
 
 ### Konfigurationsnoder för sidexport {#page-exporter-configuration-nodes}
 
-Mallen består av en nodstruktur, eftersom den använder [ramverket för innehållssynkronisering](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/contentsync/package-summary.html).  Varje nod har en `type`-egenskap som definierar en specifik åtgärd när zip-filen skapas.
+Mallen består av en nodstruktur, eftersom den använder [Innehållssynkroniseringsramverk](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/contentsync/package-summary.html).  Varje nod har en `type` -egenskap som definierar en viss åtgärd när zip-filen skapas.
 
 <!-- For more details about the type property, refer to the Overview of configuration types section in the Content Sync framework page.
 -->
@@ -118,15 +117,15 @@ Följande noder kan användas för att skapa en exportmall:
 Sidnoden används för att kopiera sidans HTML-kod till zip-filen. Den har följande egenskaper:
 
    * Är en obligatorisk nod.
-   * Finns under `/etc/contentsync/templates/<mysite>`.
-   * Definieras med egenskapen `Name`inställd på `page`.
+   * Finns nedan `/etc/contentsync/templates/<mysite>`.
+   * Definieras med egenskapen `Name`ange till `page`.
    * Nodtypen är `nt:unstructured`
 
-   Noden `page` har följande egenskaper:
+   The `page` noden har följande egenskaper:
 
-   * En `type`-egenskap med värdet `pages`.
+   * A `type` egenskap som anges med värdet `pages`.
 
-   * Den har ingen `path`-egenskap eftersom den aktuella sidsökvägen kopieras dynamiskt till konfigurationen.
+   * Den har ingen `path` egenskapen när den aktuella sidsökvägen kopieras dynamiskt till konfigurationen.
 
    <!--
   * The other properties are described in the Overview of configuration types section of the Content Sync framework.
@@ -140,28 +139,28 @@ Noden rewrite definierar hur länkarna skrivs om på den exporterade sidan. De o
 Designnoden används för att kopiera designen som används för den exporterade sidan. Den har följande egenskaper:
 
    * Är valfritt.
-   * Finns under `/etc/contentsync/templates/<mysite>`.
-   * Definieras med egenskapen `Name` inställd på `design`.
+   * Finns nedan `/etc/contentsync/templates/<mysite>`.
+   * Definieras med egenskapen `Name` ange till `design`.
    * Nodtypen är `nt:unstructured`.
 
-   Noden `design` har följande egenskaper:
+   The `design` noden har följande egenskaper:
 
-   * En `type`-egenskap inställd på värdet `copy`.
+   * A `type` egenskapen inställd på värdet `copy`.
 
-   * Den har ingen `path`-egenskap eftersom den aktuella sidsökvägen kopieras dynamiskt till konfigurationen.
+   * Den har ingen `path` -egenskapen när den aktuella sidsökvägen kopieras dynamiskt till konfigurationen.
 
 
 * `generic`
 En allmän nod används för att kopiera resurser som clientlibs 
-`.js` eller  `.css` filer till zip-filen. Den har följande egenskaper:
+`.js` eller `.css` till zip-filen. Den har följande egenskaper:
 
    * Är valfritt.
-   * Finns under `/etc/contentsync/templates/<mysite>`.
+   * Finns nedan `/etc/contentsync/templates/<mysite>`.
    * Har inget specifikt namn.
    * Nodtypen är `nt:unstructured`.
-   * Har en `type`-egenskap och `type`-relaterade egenskaper. <!--Has a `type` property and any `type` related properties as defined in the Overview of configuration types section of the Content Sync framework.-->
+   * Har en `type` egenskap och `type` relaterade egenskaper. <!--Has a `type` property and any `type` related properties as defined in the Overview of configuration types section of the Content Sync framework.-->
 
-   Följande konfigurationsnod kopierar till exempel `mysite.clientlibs.js`-filerna till zip-filen:
+   Följande konfigurationsnod kopierar till exempel `mysite.clientlibs.js` filer till zip-filen:
 
    ```xml
    "mysite.clientlibs.js": {
@@ -185,15 +184,15 @@ För att uppfylla vissa specifika krav kan du behöva implementera en [anpassad 
 <!-- To meet some specific requirements, you may need to implement a custom `type` property: to do so, refer to the Implementing a custom update handler section in the Content Sync page.
 -->
 
-## Exportera en sida {#programmatically-exporting-a-page} programmatiskt
+## Programmatisk export av en sida {#programmatically-exporting-a-page}
 
-Om du vill exportera en sida programmatiskt kan du använda OSGI-tjänsten [PageExporter](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html?com/day/cq/wcm/contentsync/PageExporter.html). Med den här tjänsten kan du:
+Om du vill exportera en sida programmatiskt kan du använda [PageExporter](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html?com/day/cq/wcm/contentsync/PageExporter.html) OSGI-tjänster. Med den här tjänsten kan du:
 
 * Exportera en sida och skriv till HTTP-serverns svar.
 * Exportera en sida och spara zip-filen på en viss plats.
 
-Servern som är bunden till väljaren `export` och tillägget `zip` använder tjänsten PageExporter.
+Servern som är bunden till `export` väljaren och `zip` i används tjänsten PageExporter.
 
 ## Felsökning {#troubleshooting}
 
-Om du får problem med nedladdningen av zip-filen kan du ta bort noden `/var/contentsync` i databasen och skicka exportbegäran igen.
+Om du får problem med nedladdningen av ZIP-filen kan du ta bort `/var/contentsync` i databasen och skicka exportbegäran igen.

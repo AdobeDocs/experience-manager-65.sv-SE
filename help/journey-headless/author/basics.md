@@ -1,7 +1,8 @@
 ---
 title: Lär dig grunderna i redigering
 description: Lär dig mer om hur du skapar innehåll för Headless CMS med hjälp av Content Fragments.
-source-git-commit: 38525b6cc14e9f6025564c060b8cfb4f9e0ea473
+exl-id: 125c4d0b-1572-4dba-823d-cdef2778f275
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
 source-wordcount: '1693'
 ht-degree: 1%

@@ -1,6 +1,6 @@
 ---
 title: JavaAPI-snabbstart (SOAP) för Application Manager-tjänsten
-seo-title: JavaAPI-snabbstart (SOAP) för Application Manager-tjänsten
+seo-title: Application Manager Service JavaAPI Quick Start(SOAP)
 description: JavaAPI-snabbstart (SOAP) för Application Manager-tjänsten
 uuid: 01a9bce3-868b-495b-bdee-bc60f029129e
 contentOwner: admin
@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 12da2a9b-4009-496e-953f-c2ae0352f59f
 role: Developer
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 1d2d6d64-f16e-4381-8691-f3c2744481ea
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '202'
 ht-degree: 0%
 
 ---
-
 
 # JavaAPI-snabbstart (SOAP) för Application Manager-tjänsten {#application-manager-service-javaapi-quick-start-soap}
 
@@ -140,7 +139,7 @@ I följande Java-kodexempel importeras ett program baserat på en befintlig LCA-
 
 ## Snabbstart (SOAP-läge): Ta bort ett program med Java API {#quick-start-soap-mode-removing-an-application-using-the-java-api}
 
-I följande Java-kodexempel tas programmet *EncryptDocument* bort.
+I följande Java-kodexempel tas ett program med namnet bort *EncryptDocument*.
 
 ```java
  /*
@@ -249,4 +248,3 @@ I följande Java-kodexempel tas programmet *EncryptDocument* bort.
  }
  
 ```
-

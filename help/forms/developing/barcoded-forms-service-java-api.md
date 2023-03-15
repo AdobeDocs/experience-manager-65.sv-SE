@@ -1,6 +1,6 @@
 ---
 title: Streckkodad Forms Service Java APIQuick Start(SOAP)
-seo-title: Streckkodad Forms Service Java APIQuick Start(SOAP)
+seo-title: Barcoded Forms Service Java APIQuick Start(SOAP)
 description: Streckkodad Forms Service Java APIQuick Start(SOAP)
 uuid: a6739695-ee0b-4480-8cef-0f91a72deaad
 contentOwner: admin
@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 245b9cc4-5837-4a22-b5f4-a1d4c5d66918
 role: Developer
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 907c12be-dab4-48b5-9da1-a76b711f49f2
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '224'
+source-wordcount: '216'
 ht-degree: 0%
 
 ---
-
 
 # Streckkodad Forms Service Java API Quick Start (SOAP) {#barcoded-forms-service-java-apiquick-start-soap}
 
@@ -28,11 +27,11 @@ AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutning
 
 >[!NOTE]
 >
->Snabbstarter som finns i Programmering med AEM Forms baseras på den Forms-server som distribueras på JBoss Application Server och operativsystemet Microsoft Windows. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>Snabbstarter i Programmering med AEM Forms baseras på den Forms-server som distribueras på JBoss Application Server och Microsoft Windows. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-## Snabbstart (SOAP-läge): Avkoda streckkodade formulärdata med Java API {#quick-start-soap-mode-decoding-barcoded-form-data-using-the-java-api}
+## Snabbstart (SOAP-läge): Avkoda streckkodsdata med Java API {#quick-start-soap-mode-decoding-barcoded-form-data-using-the-java-api}
 
-Följande Java-kod avkodar formulärdata som finns i ett PDF-formulär som sparas som Loan.pdf. De avkodade data sparas som en XML-fil med namnet extractData.xml. I det här kodexemplet konverteras ett `org.w3c.dom.Document`-objekt till ett `com.adobe.idp.Document`-objekt. (Se [Avkoda streckkodade formulärdata](/help/forms/developing/barcoded-forms.md#decoding-barcoded-form-data).)
+Följande Java-kod avkodar formulärdata som finns i ett PDF-formulär som sparas som Loan.pdf. De avkodade data sparas som en XML-fil med namnet extractData.xml. I det här kodexemplet konverteras en `org.w3c.dom.Document` objekt till `com.adobe.idp.Document` -objekt. (Se [Avkoda streckkodade formulärdata](/help/forms/developing/barcoded-forms.md#decoding-barcoded-form-data).)
 
 ```java
  /*
@@ -221,5 +220,4 @@ Följande Java-kod avkodar formulärdata som finns i ett PDF-formulär som spara
 
 >[!NOTE]
 >
->När du använder både ett `org.w3c.dom.Document`-objekt och ett `com.adobe.idp.Document`-objekt i samma programlogik, är det en god vana att kvalificera båda objekten fullständigt.
-
+>När du använder både `org.w3c.dom.Document` objekt och `com.adobe.idp.Document` -objekt i samma programlogik är det bra rutin att kvalificera båda objekten fullt ut.

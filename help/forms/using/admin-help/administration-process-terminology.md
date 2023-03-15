@@ -1,32 +1,31 @@
 ---
 title: Om administration och processterminologi
-seo-title: Om administration och processterminologi
+seo-title: About administration and process terminology
 description: Lär dig mer om administration och processtermer som processinstans, processdiagram och operationer.
-seo-description: Lär dig mer om administration och processtermer som processinstans, processdiagram och operationer.
+seo-description: Learn about administration and process terms like process instance, process diagram and operation.
 uuid: cf3f5bfc-4650-4f3d-81e1-9c814cfd497c
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_forms_workflow
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: f9b40e1f-956d-498b-92e4-4fe21e23fc4a
-translation-type: tm+mt
-source-git-commit: d3719a9ce2fbb066f99445475af8e1f1e7476f4e
+exl-id: 8944cbae-865d-4b1c-b3bf-00c3a247d776
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '198'
+source-wordcount: '180'
 ht-degree: 0%
 
 ---
-
 
 # Om administration och processterminologi {#about-administration-and-process-terminology}
 
 För att kunna administrera formulärarbetsflödet effektivt bör du förstå följande termer och elementens hierarki:
 
-* *Bearbeta* kategorier:ordna processer i logiska grupper.
-* *Processerna* representerar de automatiserade affärsprocesserna. Det bör finnas minst en process för varje affärsprocess som implementeras.
-* Ett *processdiagram* är den visuella representationen av den affärsprocess som automatiseras.
-* En *processinstans* är en process som har initierats av en användare (som att fylla i och skicka ett formulär) eller ett automatiskt steg. Det kan finnas flera instanser av en process.
-* En *åtgärd* är ett steg i ett processdiagram, som representeras av en ikon i processdiagrammet i Workbench.
-* En *aktivitet* är en åtgärd som har tilldelats en användare. När aktiviteten körs och åtgärden körs tilldelar användartjänsten en uppgift till en användare.
+* *Processkategorier* organisera processerna i logiska grupper.
+* *Processer* representerar automatiserade affärsprocesser. Det bör finnas minst en process för varje affärsprocess som implementeras.
+* A *processdiagram* är den visuella representationen av den affärsprocess som automatiseras.
+* A *processinstans* är en process som har initierats av en användare (som att fylla i och skicka ett formulär) eller ett automatiskt steg. Det kan finnas flera instanser av en process.
+* An *operation* är ett steg i ett processdiagram, som i Workbench representeras av en ikon i processdiagrammet.
+* A *uppgift* är en åtgärd som har tilldelats en användare. När aktiviteten körs och åtgärden körs tilldelar användartjänsten en uppgift till en användare.
 
-Mer information om dessa termer finns i [Workbench-hjälpen](https://www.adobe.com/go/learn_aemforms_workbench_63).
+Mer information om dessa villkor finns i [Workbench - hjälp](https://www.adobe.com/go/learn_aemforms_workbench_63).

@@ -4,13 +4,13 @@ description: Konfigurera Experience Manager Assets för användning med tillägg
 contentOwner: Vishabh Gupta
 role: Admin
 feature: Asset Management
-source-git-commit: e91fa04d87c7ecacf3ad8a148227948eafe15b1e
+exl-id: 3a9b44d4-1756-4ad5-91df-df8d53e82193
+source-git-commit: 84b16dd1a60f731b568dd87ef89699875cb86596
 workflow-type: tm+mt
 source-wordcount: '2943'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera Experience Manager Assets för Adobe Asset Link {#adobe-asset-link}
 
@@ -192,7 +192,7 @@ För varje Experience Manager-grupp som synkroniseras med en Adobe IMS-grupp (so
 
 1. Se till att gruppen har en medlem som kan användas för en första anslutning från Adobe Asset Link.
 1. Använd den användaren för att logga in på Adobe Asset Link och ansluta till Experience Manager. Den här anslutningen förväntas misslyckas.
-1. I Experience Manager letar du reda på gruppen som motsvarar gruppen i Adobe IMS och ger den den åtkomstkontroll som du behöver. Den nya gruppen blir till exempel medlem i gruppen dam-users.
+1. I Experience Manager letar du reda på den grupp som motsvarar gruppen i Adobe IMS och ger den den åtkomstkontroll som du behöver. Den nya gruppen blir till exempel medlem i gruppen dam-users.
 1. Stäng Adobe Asset Link och starta om Creative Cloud.
 1. Om du vill verifiera att användaren har rätt åtkomst öppnar du Adobe Asset Link igen.
 
@@ -289,11 +289,6 @@ Om du får problem när du konfigurerar eller använder Adobe Asset Link kan du 
 >[!MORELIKETHIS]
 >
 >* [Om Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html)
->* [Använd Asset Link i Creative Cloud-datorprogrammet och hantera resurser](https://helpx.adobe.com/enterprise/using/manage-assets-using-adobe-asset-link.html)
+>* [Använd Asset Link i Creative Cloud-datorprogrammet och hantera resurser](https://helpx.adobe.com/se/enterprise/using/manage-assets-using-adobe-asset-link.html)
 >* [Konfigurera Adobe Experience Manager Assets as a Cloud Service](https://helpx.adobe.com/enterprise/using/configure-aem-assets-for-asset-link.html).
-
-
-
-
-
 

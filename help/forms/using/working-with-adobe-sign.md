@@ -261,7 +261,7 @@ Efter [redigera adaptiva formuläregenskaper för Adobe-signering](../../forms/u
 
 ## Skapa signeringsupplevelser i form av formulär {#create-in-form-signing-experience}
 
-Användaren kan också signera ett anpassat formulär medan han/hon fyller i formuläret. Den här upplevelsen kallas även signering i form av formulär. Signeringsfunktionen i form är bara tillgänglig för den första signeraren i en miljö med flera signerare. Utför följande steg för att skapa en signeringsupplevelse i ett anpassat formulär:
+Användaren kan också signera ett anpassat formulär medan han/hon fyller i formuläret. Den här upplevelsen kallas även signering i formulär. Signeringsfunktionen i form är bara tillgänglig för den första signeraren i en miljö med flera signerare. Utför följande steg för att skapa en signeringsupplevelse i ett anpassat formulär:
 
 1. [Lägg till och konfigurera komponenten Signatursteg](../../forms/using/working-with-adobe-sign.md#add-and-configure-the-signature-step-component).
 1. [Lägg till komponenten Sammanfattningssteg](../../forms/using/working-with-adobe-sign.md#configure-the-thank-you-page-or-summary-step-component).

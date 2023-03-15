@@ -20,7 +20,7 @@ Den övergripande arkitekturen är följande:
 
 ![Översikt över arkitektur för AEM utanför Magento/tredje part](../assets//AEM_nonMagento_Architecture.png)
 
-Syftet med detta integreringslager är att mappa tredjeparts-API:er och scheman mot de Adobe Commerce GraphQL-API:er och scheman som stöds utanför Experience Manager. Tack vare den här inkapslingen kan integreringslogiken och -systemen uppdateras utan att koden i Experience Manager ändras.
+Syftet med detta integreringslager är att mappa tredjeparts-API:er och scheman mot de Adobe Commerce GraphQL-API:er och -scheman som stöds utanför Experience Manager. Tack vare den här inkapslingen kan integreringslogiken och -systemen uppdateras utan att koden i Experience Manager ändras.
 
 ## Lösningskrav för integrering
 
@@ -61,4 +61,4 @@ Kopplingar är en bra början för projekt. De levereras med en handelslösnings
 
 >[!TIP]
 >
->Kopplingar hjälper till att snabba upp handelsintegreringen, men de är inte plug-in-play. E-handelslösningar för företag är oftast mycket anpassade och kräver en anpassad integrering. Goda kunskaper om handelsplattformen, Adobe Commerce GraphQL-scheman och Adobe I/O Runtime krävs.
+>Kopplingar hjälper till att snabba upp handelsintegreringen, men de är inte plug-in-play. E-handelslösningar för företag är oftast mycket anpassade och kräver en anpassad integrering. Goda kunskaper om handelsplattformen, Adobe Commerce GraphQL scheman och Adobe I/O Runtime krävs.

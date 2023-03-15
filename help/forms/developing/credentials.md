@@ -1,8 +1,8 @@
 ---
 title: Arbeta med autentiseringsuppgifter
-seo-title: Arbeta med autentiseringsuppgifter
+seo-title: Working with Credentials
 description: Importera inloggningsuppgifter till AEM Forms med Trust Manager API och Java API. Lär dig även hur du tar bort autentiseringsuppgifter med Trust Manager API och Java API.
-seo-description: Importera inloggningsuppgifter till AEM Forms med Trust Manager API och Java API. Lär dig även hur du tar bort autentiseringsuppgifter med Trust Manager API och Java API.
+seo-description: Import credentials into AEM Forms using the Trust Manager API and Java API. In addition, learn how to delete credentials using the Trust Manager API and Java API.
 uuid: b794428f-49bf-4a91-bc5f-d855881f4f38
 contentOwner: admin
 content-type: reference
@@ -10,14 +10,13 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: bc06d9bd-af6c-47b1-b46f-aab990ef5816
 role: Developer
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 1101c85a-6a90-471d-a7be-8d25765e84bf
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1117'
+source-wordcount: '1085'
 ht-degree: 0%
 
 ---
-
 
 # Arbeta med autentiseringsuppgifter {#working-with-credentials}
 
@@ -27,8 +26,8 @@ ht-degree: 0%
 
 En autentiseringsuppgift innehåller den privata nyckelinformation som behövs för att signera eller identifiera dokument. Ett certifikat är information om offentlig nyckel som du konfigurerar för förtroende. AEM Forms använder certifikat och autentiseringsuppgifter för flera syften:
 
-* Acrobat Reader DC-tillägg använder en autentiseringsuppgift för att aktivera Adobe Reader användarrättigheter i PDF-dokument. (Se [Tillämpa användningsrättigheter på PDF-dokument](/help/forms/developing/assigning-usage-rights.md#applying-usage-rights-to-pdf-documents).)
-* Signaturtjänsten får åtkomst till certifikat och autentiseringsuppgifter när den utför åtgärder som att signera PDF-dokument digitalt. (Se [Signera PDF-dokument digitalt](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-pdf-documents).)
+* Acrobat Reader DC-tillägg använder en autentiseringsuppgift för att aktivera Adobe Reader användarrättigheter i PDF-dokument. (Se [Använda användningsbehörighet för PDF-dokument](/help/forms/developing/assigning-usage-rights.md#applying-usage-rights-to-pdf-documents).)
+* Signaturtjänsten får åtkomst till certifikat och autentiseringsuppgifter när den utför åtgärder som att digitalt signera PDF-dokument. (Se [Signera PDF-dokument digitalt](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-pdf-documents).)
 
 Du kan programmatiskt interagera med autentiseringsuppgiften med Trust Manager Java API. Du kan utföra följande uppgifter:
 
@@ -43,7 +42,7 @@ Du kan programmatiskt interagera med autentiseringsuppgiften med Trust Manager J
 
 Du kan programmässigt importera en autentiseringsuppgift till AEM Forms med hjälp av Trust Manager API. Du kan till exempel importera en autentiseringsuppgift som används för att signera ett PDF-dokument. (Se [Signera PDF-dokument digitalt](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)).
 
-När du importerar en autentiseringsuppgift anger du ett alias för den. Aliaset används för att utföra en Forms-åtgärd som kräver en autentiseringsuppgift. När du har importerat en inloggningsinformation kan du visa den i administrationskonsolen, vilket visas på följande bild. Observera att aliaset för autentiseringsuppgiften är *Secure*.
+När du importerar en autentiseringsuppgift anger du ett alias för den. Aliaset används för att utföra en Forms-åtgärd som kräver en autentiseringsuppgift. När du har importerat en inloggningsinformation kan du visa den i administrationskonsolen, vilket visas på följande bild. Observera att aliaset för autentiseringsuppgiften är *Säker*.
 
 ![ww_ww_truststore](assets/ww_ww_truststore.png)
 
@@ -72,7 +71,7 @@ Följande JAR-filer måste läggas till i projektets klassökväg:
 * adobe-utilities.jar (krävs om AEM Forms används i JBoss)
 * jbossall-client.jar (krävs om AEM Forms distribueras på JBoss)
 
-Information om platsen för dessa JAR-filer finns i [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
+Mer information om var dessa JAR-filer finns i [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
 **Skapa en autentiseringstjänstklient**
 
@@ -108,21 +107,21 @@ Importera en autentiseringsuppgift till AEM Forms med Trust Manager API (Java):
 
 1. Skapa en autentiseringstjänstklient
 
-   * Skapa ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
-   * Skapa ett `CredentialServiceClient`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
+   * Skapa en `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
+   * Skapa en `CredentialServiceClient` genom att använda konstruktorn och skicka `ServiceClientFactory` -objekt.
 
 1. Referera till autentiseringsuppgifterna
 
-   * Skapa ett `java.io.FileInputStream`-objekt med hjälp av dess konstruktor. Skicka ett strängvärde som anger platsen för autentiseringsuppgifterna.
-   * Skapa ett `com.adobe.idp.Document`-objekt som lagrar autentiseringsuppgifterna med konstruktorn `com.adobe.idp.Document`. Skicka `java.io.FileInputStream`-objektet som innehåller autentiseringsuppgifterna till konstruktorn.
+   * Skapa en `java.io.FileInputStream` genom att använda dess konstruktor. Skicka ett strängvärde som anger platsen för autentiseringsuppgifterna.
+   * Skapa en `com.adobe.idp.Document` objekt som lagrar autentiseringsuppgifterna med `com.adobe.idp.Document` konstruktor. Skicka `java.io.FileInputStream` objekt som innehåller autentiseringsuppgifter för konstruktorn.
 
 1. Utför importåtgärden
 
-   * Skapa en strängarray som innehåller ett element. Tilldela elementet värdet `truststore.usage.type.sign`.
-   * Anropa `CredentialServiceClient`-objektets `importCredential`-metod och skicka följande värden:
+   * Skapa en strängarray som innehåller ett element. Tilldela värdet `truststore.usage.type.sign` till elementet.
+   * Anropa `CredentialServiceClient` objektets `importCredential` och skicka följande värden:
 
       * Ett strängvärde som anger aliasvärdet för autentiseringsuppgiften.
-      * Den `com.adobe.idp.Document`-instans som lagrar autentiseringsuppgifterna.
+      * The `com.adobe.idp.Document` instans som lagrar autentiseringsuppgifterna.
       * Ett strängvärde som anger lösenordet som är associerat med autentiseringsuppgifterna.
       * Den strängmatris som innehåller användningsvärdet. Du kan till exempel ange det här värdet `truststore.usage.type.sign`. Om du vill importera autentiseringsuppgifter för tillägget Reader anger du `truststore.usage.type.lcre`.
 
@@ -162,7 +161,7 @@ Inkludera nödvändiga filer i utvecklingsprojektet. Om du skapar ett klientprog
 * adobe-utilities.jar (krävs om AEM Forms används i JBoss)
 * jbossall-client.jar (krävs om AEM Forms distribueras på JBoss)
 
-Information om platsen för dessa JAR-filer finns i [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
+Mer information om var dessa JAR-filer finns i [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
 **Skapa en autentiseringstjänstklient**
 
@@ -192,12 +191,12 @@ Ta bort en autentiseringsuppgift från AEM Forms med Trust Manager API (Java):
 
 1. Skapa en autentiseringstjänstklient
 
-   * Skapa ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
-   * Skapa ett `CredentialServiceClient`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
+   * Skapa en `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
+   * Skapa en `CredentialServiceClient` genom att använda konstruktorn och skicka `ServiceClientFactory` -objekt.
 
 1. Utför borttagningsåtgärden
 
-   Anropa `CredentialServiceClient`-objektets `deleteCredential`-metod och skicka ett strängvärde som anger aliasvärdet.
+   Anropa `CredentialServiceClient` objektets `deleteCredential` och skicka ett strängvärde som anger aliasvärdet.
 
 **Se även**
 

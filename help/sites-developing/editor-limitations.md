@@ -1,24 +1,23 @@
 ---
 title: Begränsningar för redigerare
-seo-title: Begränsningar för redigerare
+seo-title: Editor Limitations
 description: Redigeraren i det beröringsaktiverade användargränssnittet använder övertäckningar för att interagera med innehåll som begränsas i en iframe. Den här interaktionen skapar vissa begränsningar i både användningen av redigeraren och för utvecklare.
-seo-description: Redigeraren i det beröringsaktiverade användargränssnittet använder övertäckningar för att interagera med innehåll som begränsas i en iframe. Den här interaktionen skapar vissa begränsningar i både användningen av redigeraren och för utvecklare.
+seo-description: The editor in the touch-enabled UI makes use of overlays to interact with content confined in an iframe. This interaction creates some limitations in both usage of the editor and also for developers.
 uuid: ff524530-3f3a-4c5b-9f94-4aa9aeb9d461
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: introduction
 discoiquuid: d748decb-a614-4c9e-a502-d6176b720f1a
-translation-type: tm+mt
-source-git-commit: 844d42ed50da153077423190684aa85265bce12f
+exl-id: fd64f5dc-dfff-466b-8cdd-3c24ea1a15c8
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '351'
+source-wordcount: '316'
 ht-degree: 0%
 
 ---
 
-
-# Redigerarbegränsningar{#editor-limitations}
+# Begränsningar för redigerare{#editor-limitations}
 
 Redigeraren i det beröringsaktiverade användargränssnittet använder övertäckningar för att interagera med innehåll som begränsas i en iframe. Den här interaktionen skapar vissa begränsningar i både användningen av redigeraren och för utvecklare. På den här sidan sammanfattas dessa begränsningar och lösningar eller tillfälliga lösningar ges där det är möjligt.
 
@@ -28,13 +27,13 @@ En författare kan stöta på följande funktionella begränsningar när han ell
 
 ### Länkar som inte är aktiva {#links-not-active}
 
-När [redigerar en sida](/help/sites-authoring/editing-content.md) är länkar inte aktiva.
+När [redigera en sida](/help/sites-authoring/editing-content.md), är länkar inte aktiva.
 
-* [Växla till  **** ](/help/sites-authoring/editing-content.md#preview-mode) Förhandsgranskningsläge om du vill navigera med hjälp av länkarna i ditt innehåll.
+* [Växla till **Förhandsgranska** läge](/help/sites-authoring/editing-content.md#preview-mode) för att navigera med hjälp av länkarna i ditt innehåll.
 
-### Struktursidor {#structure-pages}
+### Strukturera sidor {#structure-pages}
 
-Sidorna kan inte ha namnet `structure`. Sidor med namnet `structure` kan inte redigeras i sidredigeraren.
+Sidor kan inte namnges `structure`. Sidor med namn `structure` går inte att redigera i sidredigeraren.
 
 ## CSS-begränsningar {#css-limitations}
 
@@ -46,7 +45,7 @@ Absolut positionerade element kan orsaka problem i positionen för deras övert�
 
 * Om det inträffar måste du kontrollera att dimensionerna för det absolut placerade elementet är korrekta eftersom redigeraren kommer att skapa en övertäckning med exakt samma dimensioner.
 
-### vh enheter {#vh-units}
+### vh Enheter {#vh-units}
 
 `vh` enheter stöds inte eftersom iframe-höjden måste justeras automatiskt av AEM.
 
@@ -54,7 +53,7 @@ Absolut positionerade element kan orsaka problem i positionen för deras övert�
 
 Fasta bakgrundsbilder kanske inte visas som fasta vid bläddring eftersom de är inbäddade i en iframe.
 
-* Om du väljer **Visa sidan som Publicerad** i sidhuvudsfältets åtgärder visas sidan korrekt.
+* Markera **Visa sidan som publicerad** i sidhuvudsfältets åtgärder visas sidan korrekt.
 
 ### 100 % höjd {#height}
 
@@ -72,7 +71,7 @@ body {
 }
 ```
 
-### Marginalen komprimeras {#margin-collapsing}
+### Komprimera marginal {#margin-collapsing}
 
 Problem med att komprimera marginaler visas om det första underordnade elementet i body-elementet har en marginal.
 
@@ -84,4 +83,3 @@ body:before, body:after{
     display: table;
 }
 ```
-

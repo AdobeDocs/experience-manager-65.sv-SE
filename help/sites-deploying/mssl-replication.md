@@ -1,8 +1,8 @@
 ---
 title: Replikering med ömsesidig SSL
-seo-title: Replikering med ömsesidig SSL
+seo-title: Replicating Using Mutual SSL
 description: Lär dig konfigurera AEM så att en replikeringsagent på författarinstansen använder gemensam SSL (MSSL) för att ansluta till publiceringsinstansen. Med MSSL använder replikeringsagenten och HTTP-tjänsten på publiceringsinstansen certifikat för att autentisera varandra.
-seo-description: Lär dig konfigurera AEM så att en replikeringsagent på författarinstansen använder gemensam SSL (MSSL) för att ansluta till publiceringsinstansen. Med MSSL använder replikeringsagenten och HTTP-tjänsten på publiceringsinstansen certifikat för att autentisera varandra.
+seo-description: Learn how to configure AEM so that a replication agent on the author instance uses mutual SSL (MSSL) to connect with the publish instance. Using MSSL, the replication agent and the HTTP service on the publish instance use certificates to authenticate each other.
 uuid: f4bc5e61-a58c-4fd2-9a24-b31e0c032c15
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,16 +10,15 @@ content-type: reference
 topic-tags: configuring
 discoiquuid: 8bc307d9-fa5c-44c0-bff9-2d68d32a253b
 feature: Configuring
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 0a8d7831-d076-45cf-835c-8063ee13d6ba
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1457'
+source-wordcount: '1409'
 ht-degree: 2%
 
 ---
 
-
-# Replikerar med ömsesidig SSL{#replicating-using-mutual-ssl}
+# Replikering med ömsesidig SSL{#replicating-using-mutual-ssl}
 
 Konfigurera AEM så att en replikeringsagent på författarinstansen använder gemensam SSL (MSSL) för att ansluta till publiceringsinstansen. Med MSSL använder replikeringsagenten och HTTP-tjänsten på publiceringsinstansen certifikat för att autentisera varandra.
 
@@ -50,7 +49,7 @@ Du behöver en privat nyckel och ett offentligt certifikat för författaren och
 
 Generera en privat nyckel och ett certifikat i JKS-format. Den privata nyckeln lagras i en KeyStore-fil och certifikatet lagras i en TrustStore-fil. Använd [Java `keytool`](https://docs.oracle.com/javase/7/docs/technotes/tools/solaris/keytool.html) för att skapa båda.
 
-Utför följande steg med Java `keytool` för att skapa den privata nyckeln och autentiseringsuppgifterna:
+Utför följande steg med Java `keytool` så här skapar du den privata nyckeln och autentiseringsuppgifterna:
 
 1. Skapa ett nyckelpar för privat-offentlig nyckel i en KeyStore.
 1. Skapa eller hämta certifikatet:
@@ -81,13 +80,13 @@ Använd följande procedur för att skapa en privat nyckel och ett självsignera
 
    | Alternativ | Författare | Publicera |
    |---|---|---|
-   | -alias | författare | publicera |
+   | -alias | author | publicera |
    | -file | author.cer | publish.cer |
    | -keystore | author.keystore | publish.keystore |
 
-### pkcs#12 Format {#pkcs-format}
+### pkcs#12-format {#pkcs-format}
 
-Generera en privat nyckel och ett certifikat i formatet pkcs#12. Använd [openSSL](https://www.openssl.org/) för att generera dem. Använd följande procedur för att skapa en privat nyckel och en certifikatbegäran. Om du vill få certifikatet signerar du begäran med din privata nyckel (självsignerade certifikat) eller skickar begäran till en certifikatutfärdare. Generera sedan arkivet pkcs#12 som innehåller den privata nyckeln och certifikatet.
+Generera en privat nyckel och ett certifikat i formatet pkcs#12. Använd [openSSL](https://www.openssl.org/) för att skapa dem. Använd följande procedur för att skapa en privat nyckel och en certifikatbegäran. Om du vill få certifikatet signerar du begäran med din privata nyckel (självsignerade certifikat) eller skickar begäran till en certifikatutfärdare. Generera sedan arkivet pkcs#12 som innehåller den privata nyckeln och certifikatet.
 
 1. Öppna ett kommandoradsfönster eller en terminal. Om du vill skapa den privata nyckeln anger du följande kommando med alternativvärden från tabellen nedan:
 
@@ -135,7 +134,7 @@ Generera en privat nyckel och ett certifikat i formatet pkcs#12. Använd [openSS
    | -inkey | author.key | publish.key |
    | -out | author.pfx | publish.pfx |
    | -in | author.cer | publish.cer |
-   | -name | författare | publicera |
+   | -name | author | publicera |
 
 ## Installera den privata nyckeln och TrustStore på författaren {#install-the-private-key-and-truststore-on-author}
 
@@ -225,7 +224,7 @@ I följande tabell visas de OSGi-egenskaper som du behöver för att konfigurera
 
 ## Konfigurera replikeringsagenten på författaren {#configure-the-replication-agent-on-author}
 
-Konfigurera replikeringsagenten på författarinstansen så att HTTPS-protokollet används vid anslutning till publiceringsinstansen. Fullständig information om hur du konfigurerar replikeringsagenter finns i [Konfigurera dina replikeringsagenter](/help/sites-deploying/replication.md#configuring-your-replication-agents).
+Konfigurera replikeringsagenten på författarinstansen så att HTTPS-protokollet används vid anslutning till publiceringsinstansen. Fullständig information om hur du konfigurerar replikeringsagenter finns i [Konfigurerar replikeringsagenter](/help/sites-deploying/replication.md#configuring-your-replication-agents).
 
 Om du vill aktivera MSSL konfigurerar du egenskaperna på fliken Transport enligt följande tabell:
 
@@ -295,4 +294,3 @@ När du har konfigurerat replikeringsagenten testar du anslutningen för att avg
 29.08.2014 14:02:46 - Replication (TEST) of /content successful.
 Replication test succeeded
 ```
-

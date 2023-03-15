@@ -1,8 +1,8 @@
 ---
 title: Grundläggande om aktivitetsström
-seo-title: Grundläggande om aktivitetsström
+seo-title: Activity Stream Essentials
 description: Lista över senaste aktiviteter som utförts av en medlem eller en lista över senaste aktiviteter för en enskild tråd med innehåll
-seo-description: Lista över senaste aktiviteter som utförts av en medlem eller en lista över senaste aktiviteter för en enskild tråd med innehåll
+seo-description: List of recent activites performed by a member or a list of recent activities on a single thread of content
 uuid: 30c5ac08-0af0-4670-9d81-0beb5c93e00a
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -10,14 +10,13 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 8714b456-527a-457b-82c4-21bd445dfd9c
 docset: aem65
-translation-type: tm+mt
-source-git-commit: c897f034edbdbeee74869165ed384c3408a857e0
+exl-id: d98bcbe4-3f80-49ec-b40c-417be0d97350
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '319'
+source-wordcount: '296'
 ht-degree: 0%
 
 ---
-
 
 # Grundläggande om aktivitetsström {#activity-stream-essentials}
 
@@ -25,17 +24,17 @@ En inloggad community-medlems aktiviteter, till exempel publicering på ett foru
 
 Möjligheten att följa efter lägger till ytterligare en uppsättning aktiviteter när communitymedlemmar följer inlägg av intresse eller andra communitymedlemmar.
 
-Alla [communitywebbplatser](/help/communities/overview.md#communitiessites) innehåller en användarprofilsida för den inloggade medlemmen som visar medlemsaktiviteter på samma sätt.
+Alla [communitysajter](/help/communities/overview.md#communitiessites) innehåller en användarprofilsida för den inloggade medlemmen som visar medlemsaktiviteter på samma sätt.
 
-## Koncept {#concepts}
+## Concepts {#concepts}
 
-En *aktivitetsström* är en lista över de senaste aktiviteterna som utförts av en medlem eller en lista över de senaste aktiviteterna för en enskild tråd med innehåll, t.ex. ett forumämne eller en blogg.
+An *aktivitetsström* är en lista över de senaste aktiviteterna som utförts av en medlem eller en lista över de senaste aktiviteterna för en enskild innehållstråd, t.ex. ett forumämne eller en blogg.
 
 En medlem kan följa en aktivitetsström antingen efter en annan person eller ett annat innehåll.
 
-Ett *nyhetsflöde* är en sammanslagning av aktivitetsströmmar som följs av en medlem till en enda ström.
+A *nyhetsfeed* är en sammanslagning av de aktivitetsströmmar som följs av en medlem till en enda ström.
 
-Ett *[socialt diagram](/help/communities/essentials-socialgraph.md)* fångar följande relationer mellan en medlem och en annan.
+A *[socialt diagram](/help/communities/essentials-socialgraph.md)* hämtar följande relationer mellan en medlem och en annan medlem.
 
 ## Grundläggande för klientsidan {#essentials-for-client-side}
 
@@ -80,4 +79,4 @@ Ett *[socialt diagram](/help/communities/essentials-socialgraph.md)* fångar fö
 
 ### Funktion för aktivitetsström {#activity-stream-function}
 
-En community-platsstruktur som innehåller funktionen [Aktivitetsström](/help/communities/functions.md#activity-stream-function) innehåller en konfigurerad `activity streams`-komponent.
+En community-webbplatsstruktur som innehåller [Funktionen Aktivitetsström](/help/communities/functions.md#activity-stream-function), innehåller en konfigurerad `activity streams` -komponenten.

@@ -1,21 +1,20 @@
 ---
 title: Använda API:t sendToPrinter
-seo-title: Använda API:t sendToPrinter
+seo-title: Using the sendToPrinter API
 description: Skicka ett dokument till skrivaren med hjälp av tjänsten sendToPrinter.
-seo-description: Skicka ett dokument till skrivaren med hjälp av tjänsten sendToPrinter.
+seo-description: Using the sendToPrinter service to send a document to printer.
 uuid: c6a3fe8d-ec19-4350-b4a6-4c3d1971b501
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
 discoiquuid: c2d564ba-fa5a-4130-b7fe-7e2c64d92170
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 5fb38afd-7517-494e-b084-1fdd4aef3ca4
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '372'
+source-wordcount: '358'
 ht-degree: 2%
 
 ---
-
 
 # Använda API:t sendToPrinter {#using-the-sendtoprinter-api}
 
@@ -35,7 +34,7 @@ I AEM Forms kan du använda tjänsten SendToPrinter för att skicka ett dokument
    * **SharedPrinter** `: A printing protocol that enables a computer to use a printer that is configured for that computer.`
    * **CIFS**: Utdatatjänsten stöder CIFS-utskriftsprotokollet (Common Internet File System).
 
-## Använda SendToPrinter Service {#using-sendtoprinter-service}
+## Använda tjänsten SendToPrinter {#using-sendtoprinter-service}
 
 Tabellen nedan listar:
 
@@ -70,5 +69,4 @@ Autentisering stöds bara för CIFS-utskrift. Ange användarnamn/lösenord/domä
 
 1. Gå till **[!UICONTROL Main]** > **[!UICONTROL Crypto Support]**.
 
-1. Ange oformaterad text och klicka på **[!UICONTROL Protect]**.
-
+1. Ange oformaterad text och klicka **[!UICONTROL Protect]**.

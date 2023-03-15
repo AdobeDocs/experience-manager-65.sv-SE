@@ -1,8 +1,8 @@
 ---
 title: Publicera mappar på varumärkesportalen
-seo-title: Publicera mappar på varumärkesportalen
+seo-title: Publish folders to Brand Portal
 description: Lär dig hur du publicerar och avpublicerar mappar till Brand Portal.
-seo-description: Lär dig hur du publicerar och avpublicerar mappar till Brand Portal.
+seo-description: Learn how to publish and unpublish folders to Brand Portal.
 uuid: 350beb85-c0fb-4a1c-8597-c03592c02d3d
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -15,7 +15,7 @@ role: User
 exl-id: 92a156f0-ce2a-4c83-bd57-0c29efbf784f
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '583'
+source-wordcount: '566'
 ht-degree: 23%
 
 ---
@@ -30,7 +30,7 @@ Om du gör senare ändringar i den ursprungliga resursen eller mappen i AEM Asse
 
 ## Publicera mappar på varumärkesportalen {#publish-folders-to-brand-portal-1}
 
-1. I AEM Assets-gränssnittet för du pekaren över den önskade mappen och väljer **Publicera**-alternativ bland snabbåtgärderna.
+1. I AEM Assets-gränssnittet för du pekaren över den önskade mappen och väljer **Publicera** från snabbåtgärderna.
 
    Du kan också markera önskad mapp och följa stegen nedan.
 
@@ -40,11 +40,11 @@ Om du gör senare ändringar i den ursprungliga resursen eller mappen i AEM Asse
 
    Gör något av följande för att publicera de markerade mapparna på varumärkesportalen:
 
-   * Välj **Snabbpublicering** i verktygsfältet. Välj sedan **Publicera på Brand Portal** på menyn.
+   * Välj **Snabbpublicering**. Välj sedan **Publicera till Brand Portal**.
 
-   * Välj **Hantera publikation** i verktygsfältet.
-   1. I **Åtgärd** väljer du **Publicera till Brand Portal** från **Schemaläggning**, välj **Nu** och klicka på **Nästa.**
-   1. Bekräfta ditt val i **Scope** och klicka på **Publicera till Brand Portal**.
+   * Välj **Hantera publikation**.
+   1. Från **Åtgärd** välj **Publicera till Brand Portal**, från **Schemaläggning** välj **Nu** och klicka **Nästa.**
+   1. Bekräfta ditt val i **Omfång** och klicka **Publicera till Brand Portal**.
 
    Ett meddelande visas som anger att mappen har placerats i kö för publicering på varumärkesportalen. Logga in i Brand Portal-gränssnittet för att se den publicerade mappen.
 
@@ -53,13 +53,13 @@ Om du gör senare ändringar i den ursprungliga resursen eller mappen i AEM Asse
    Så här schemalägger du publiceringen i Brand Portal-arbetsflödet för resursmappar till ett senare datum eller en senare tidpunkt:
 
    1. När du har valt resurser/mappar att publicera väljer du **Hantera publikation** i verktygsfältet högst upp.
-   1. I **Åtgärd** väljer du **Publicera till Brand Portal** från **Schemaläggning** och **Senare**.
+   1. Från **Åtgärd** välj **Publicera till Brand Portal**, från **Schemaläggning** välj **Senare**.
 
       ![publishlaterbp](assets/publishlaterbp.png)
 
    1. Välj ett **aktiveringsdatum** och ange en tid. Klicka på **Nästa**.
-   1. Bekräfta ditt val i **Scope**. Klicka på **Nästa**.
-   1. Ange en arbetsflödesrubrik under **Arbetsflöden**. Klicka på **Publicera senare**.
+   1. Bekräfta ditt val i **Omfång**. Klicka på **Nästa**.
+   1. Ange en arbetsflödestitel under **Arbetsflöden**. Klicka **Publicera senare**.
 
       ![manageschedulepub](assets/manageschedulepub.png)
 
@@ -75,15 +75,15 @@ Du kan avpublicera mappar från Brand Portal snabbt eller schemalägga dem för 
 
    ![publish2bp-1](assets/publish2bp.png)
 
-1. Klicka på **Hantera publikation** i verktygsfältet.
+1. Klicka på i verktygsfältet **Hantera publikation**.
 
 1. **Avpublicera från Brand Portal nu**
 
    Så här avpublicerar du snabbt den önskade mappen från Brand Portal:
 
-   1. Välj **Hantera publikation** i verktygsfältet.
-   1. I **Åtgärd** väljer du **Avpublicera från Brand Portal** från **Schemaläggning** och väljer **Nu**. Klicka sedan på **Nästa.**
-   1. Bekräfta ditt val i **Scope** och klicka på **Avpublicera från Brand Portal**.
+   1. Välj **Hantera publikation**.
+   1. Från **Åtgärd** välj **Avpublicera från Brand Portal**, från **Schemaläggning** välj **Nu** och klicka **Nästa.**
+   1. Bekräfta ditt val i **Omfång** och klicka **Avpublicera från Brand Portal**.
 
    ![confirm-unpublish](assets/confirm-unpublish.png)
 
@@ -91,11 +91,11 @@ Du kan avpublicera mappar från Brand Portal snabbt eller schemalägga dem för 
 
    Så här schemalägger du publiceringen av en mapp från Brand Portal till ett senare datum och tid:
 
-   1. Välj **Hantera publikation** i verktygsfältet.
-   1. I **Åtgärd** väljer du **Avpublicera från Brand Portal** och från **Schemaläggning** väljer du **Senare**.
-   1. Välj ett **aktiveringsdatum** och ange tidpunkten. Klicka på **Nästa**.
-   1. Bekräfta ditt val i **Scope** och klicka på **Nästa**.
-   1. Ange en **arbetsflödets titel** i **arbetsflöden**. Klicka på **Avpublicera senare.**
+   1. Välj **Hantera publikation**.
+   1. Från **Åtgärd** välj **Avpublicera från Brand Portal** och från **Schemaläggning** välj **Senare**.
+   1. Välj en **Aktiveringsdatum** och ange tiden. Klicka på **Nästa**.
+   1. Bekräfta ditt val i **Omfång** och klicka **Nästa**.
+   1. Ange en **Arbetsflödets titel** in **Arbetsflöden**. Klicka **Avpublicera senare.**
 
       ![unpublishworkflows](assets/unpublishworkflows.png)
 

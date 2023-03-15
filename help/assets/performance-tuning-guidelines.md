@@ -29,7 +29,7 @@ Här är några viktiga fokusområden där du kan identifiera och åtgärda pres
 
 ## Plattform {#platform}
 
-Experience Manager stöds på ett antal plattformar, men Adobe har funnit det bästa stödet för inbyggda verktyg i Linux och Windows, vilket ger optimala prestanda och förenklad implementering. Bäst är att du driftsätter ett 64-bitars operativsystem för att uppfylla de höga minneskraven i en [!DNL Experience Manager Assets] distribution. Precis som med andra Experience Manager-distributioner bör du implementera tarMK där det är möjligt. Även om TonaMK inte kan skalas bortom en enda författarinstans, fungerar det bättre än MongoMK. Du kan lägga till instanser för TjärtMK-avlastning för att öka arbetsflödets bearbetningskraft [!DNL Experience Manager Assets] distribution.
+Experience Manager stöds på ett antal plattformar, men Adobe har funnit det bästa stödet för inbyggda verktyg i Linux och Windows, vilket ger optimala prestanda och förenklad implementering. Bäst är att du driftsätter ett 64-bitars operativsystem för att uppfylla de höga minneskraven i en [!DNL Experience Manager Assets] distribution. Precis som med andra Experience Manager-distributioner bör du implementera tarMK där det är möjligt. Även om StjärmMK inte kan skalas bortom en enda författarinstans, fungerar det bättre än MongoMK. Du kan lägga till instanser för TjärtMK-avlastning för att öka arbetsflödets bearbetningskraft [!DNL Experience Manager Assets] distribution.
 
 ### Tillfällig mapp {#temp-folder}
 

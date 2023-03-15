@@ -1,16 +1,15 @@
 ---
 title: Betydande ändringar av tillägget Commerce Integration Framework (CIF)
 description: Betydande ändringar av tillägget i Commerce Integration Framework (CIF) jämfört med tidigare CIF-versioner.
-exl-id: 5a526960-96a1-421e-9fb0-0825e7df8f32,c136763f-56aa-450e-8796-bc84bf6c205d
-translation-type: tm+mt
-source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
+exl-id: 41dee21a-9ae2-4067-a32a-2d4633323fc4
+source-git-commit: a2ababa9dd9115e963b91a7271d204d287557c40
 workflow-type: tm+mt
 source-wordcount: '321'
 ht-degree: 0%
 
 ---
 
-# Noterbara ändringar av tillägget Commerce Integration Framework (CIF){#notable-changes}
+# Betydande ändringar av tillägget Commerce Integration Framework (CIF){#notable-changes}
 
 I det här dokumentet belyses de viktiga skillnaderna mellan tillägget i Commerce Integration Framework (CIF) och äldre CIF-versioner, främst kända som CIF Classic (Quickstart) och CIF Open source.
 
@@ -34,7 +33,7 @@ Slutpunkten konfigureras via OSGi-konsolen.
 
 ## Distribution av CIF Venia-projektet
 
-Projektet finns på [GitHub AEM Guides - CIF Venia Project](https://github.com/adobe/aem-cif-guides-venia) och distributionen görs via AEM Package Manager.
+Projektet är tillgängligt på [GitHub AEM Guides - CIF Venia Project](https://github.com/adobe/aem-cif-guides-venia) och driftsättning via AEM Package Manager.
 
 **Tidigare CIF-versioner**
 
@@ -42,7 +41,7 @@ Projektet finns på [GitHub AEM Guides - CIF Venia Project](https://github.com/a
 
 ## Produktkatalogdata
 
-Produktkatalogdata hämtas vid behov via realtidsanrop till en extern slutpunkt som stöder de GraphQL API:er som krävs. Dessa API:er har stöd för åtkomst till livedata eller mellanlagrade data vid ett visst datum. Ingen replikering behövs.
+Produktkatalogdata efterfrågas vid behov via realtidsanrop till en extern slutpunkt som stöder de GraphQL API:er som krävs. Dessa API:er har stöd för åtkomst till livedata eller mellanlagrade data vid ett visst datum. Ingen replikering behövs.
 
 **Tidigare CIF-versioner**
 

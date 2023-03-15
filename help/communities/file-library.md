@@ -1,8 +1,8 @@
 ---
 title: Filbiblioteksfunktion
-seo-title: Filbiblioteksfunktion
+seo-title: File Library Feature
 description: Med funktionen Filbibliotek kan besökare på den inloggade webbplatsen överföra, hantera och hämta filer
-seo-description: Med funktionen Filbibliotek kan besökare på den inloggade webbplatsen överföra, hantera och hämta filer
+seo-description: The File Library feature lets signed-in site visitors upload, manage, and download files
 uuid: e78a90bd-f1d3-44f8-98eb-1498a55e8217
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -10,43 +10,42 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: ea2b23af-49c3-409b-a041-43c42d846f21
 docset: aem65
-translation-type: tm+mt
-source-git-commit: cdbe098ada0b6c50952284f92cc2063435034a38
+exl-id: 05cfaab5-a12d-475f-9095-a9fb13571d0a
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '753'
+source-wordcount: '735'
 ht-degree: 0%
 
 ---
-
 
 # Filbiblioteksfunktion{#file-library-feature}
 
 ## Introduktion {#introduction}
 
-Filbiblioteksfunktionen är en plats där besökare på den inloggade webbplatsen (community-medlemmar) kan överföra, hantera och hämta filer inom communitywebbplatsen.
+Funktionen för filbibliotek är en plats där besökare på den inloggade webbplatsen (community-medlemmar) kan överföra, hantera och hämta filer inom communitywebbplatsen.
 
 I det här avsnittet av dokumentationen beskrivs:
 
 * Lägga till filbiblioteksfunktionen på en AEM.
-* Konfigurationsinställningar för komponenten `File Library`.
+* Konfigurationsinställningar för `File Library` -komponenten.
 
 ### Lägga till ett filbibliotek på en sida {#adding-a-file-library-to-a-page}
 
-Om du vill lägga till en `File Library`-komponent på en sida i redigeringsläge letar du reda på komponenten:
+Lägga till en `File Library` till en sida i redigeringsläge, leta reda på komponenten:
 
 * `Communities / File Library`
 
 och dra den till rätt plats på en sida.
 
-Mer information finns på [Grunderna för communitykomponenter](/help/communities/basics.md).
+Nödvändig information finns på [Grunderna för communitykomponenter](/help/communities/basics.md).
 
-När de [nödvändiga klientbiblioteken](/help/communities/essentials-file-library.md#essentials-for-client-side) inkluderas visas `File Library`-komponenten så här:
+När [nödvändiga bibliotek på klientsidan](/help/communities/essentials-file-library.md#essentials-for-client-side) ingår så här `File Library` visas:
 
 ![file-library1](assets/file-library1.png)
 
 ### Konfigurerar filbibliotek {#configuring-file-library}
 
-Markera den monterade `File Library`-komponenten som ska öppnas och välj ikonen `Configure` som öppnar redigeringsdialogrutan.
+Markera den monterade `File Library` -komponenten som ska få åtkomst till och markera `Configure` som öppnar redigeringsdialogrutan.
 
 ![configure-new](assets/configure-new.png)
 
@@ -54,7 +53,7 @@ Markera den monterade `File Library`-komponenten som ska öppnas och välj ikone
 
 #### Fliken Kommentarer {#comments-tab}
 
-Under fliken **Kommentarer** anger du om och hur kommentarer för överförda filer ska visas:
+Under **Kommentarer** anger du om och hur kommentarer för överförda filer ska visas:
 
 * **Tillåt kommentarer om filer**
 
@@ -62,7 +61,7 @@ Under fliken **Kommentarer** anger du om och hur kommentarer för överförda fi
 
 * **Kommentarer per sida**
 
-   Begränsar antalet kommentarer som visas per sida samt antalet svar som visas. Standardvärdet är **10**.
+   Begränsar antalet kommentarer som visas per sida samt antalet svar som visas. Standard är **10**.
 
 * **Maximal filstorlek**
 
@@ -102,7 +101,7 @@ Under fliken **Kommentarer** anger du om och hur kommentarer för överförda fi
 
 * **Tillåt följande**
 
-   Om du markerar det här alternativet inkluderar du följande funktion för bloggartiklar, som gör att medlemmar kan [meddelas](/help/communities/notifications.md) om nya inlägg. Standard är avmarkerat.
+   Om du markerar det här alternativet inkluderar du följande funktion för bloggartiklar, som gör att medlemmar kan [meddelad](/help/communities/notifications.md) av nya tjänster. Standard är avmarkerat.
 
 * **Aktivera omnämnande**
 
@@ -122,7 +121,7 @@ Under fliken **Kommentarer** anger du om och hur kommentarer för överförda fi
 
 #### Fliken Användarmoderering {#user-moderation-tab}
 
-Konfigurera moderering av kommentarer under fliken **Användarmoderering**, om kommentarer tillåts:
+Under **Användarmoderering** -fliken, konfigurera moderering av kommentarer, om kommentarer tillåts:
 
 * **Före moderering**
 
@@ -154,11 +153,11 @@ Konfigurera moderering av kommentarer under fliken **Användarmoderering**, om k
 
 * **Modereringströskel**
 
-   Ange hur många gånger en kommentar måste flaggas av besökare innan moderatorerna meddelas. Standardvärdet är en gång (**1**).
+   Ange hur många gånger en kommentar måste flaggas av besökare innan moderatorerna meddelas. Standard är en gång (**1**).
 
 * **Flaggningsgräns**
 
-   Ange hur många gånger en kommentar måste flaggas innan den döljs för den offentliga vyn. Talet måste vara större än eller lika med **modereringströskeln**. Standardvärdet är 5.
+   Ange hur många gånger en kommentar måste flaggas innan den döljs för den offentliga vyn. Talet måste vara större än eller lika med **Modereringströskel**. Standardvärdet är 5.
 
 ### Fliken Sorteringsinställningar {#sort-settings-tab}
 
@@ -168,8 +167,8 @@ Ange som standard
 
 ### Ytterligare information {#additional-information}
 
-Mer information finns på sidan [File Library Essentials](/help/communities/essentials-file-library.md) för utvecklare.
+Mer information finns på [Grundläggande om filbibliotek](/help/communities/essentials-file-library.md) för utvecklare.
 
-moderering av publicerade ämnen och kommentarer finns i [Moderating User Generated Content](/help/communities/moderate-ugc.md).
+moderering av inlägg och kommentarer finns i [Modererar användargenererat innehåll](/help/communities/moderate-ugc.md).
 
 Information om hur du taggar publicerade ämnen och kommentarer finns i [Tagga användargenererat innehåll](/help/communities/tag-ugc.md).

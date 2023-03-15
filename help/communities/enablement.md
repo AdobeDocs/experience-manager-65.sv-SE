@@ -1,8 +1,8 @@
 ---
 title: Konfigurera aktiveringsfunktioner
-seo-title: Konfigurera aktiveringsfunktioner
+seo-title: Configuring Enablement Features
 description: Konfigurera aktiveringsfunktioner i Communities
-seo-description: Konfigurera aktiveringsfunktioner i Communities
+seo-description: Configure enablement features in Communities
 uuid: 27be3128-1a7d-412e-99a9-6e3b3b0aec1c
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -13,7 +13,7 @@ role: Admin
 exl-id: b635e2ed-4637-4b2f-a746-ec8dc7541bab
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '447'
+source-wordcount: '439'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## Översikt {#overview}
 
-Med aktiveringsfunktionerna kan du skapa [aktiveringsgrupper](overview.md#enablement-community).
+Med aktiveringsfunktionerna kan du skapa [aktiveringscommunityn](overview.md#enablement-community).
 
 * Den här funktionen kräver ytterligare licensiering för användning i en produktionsmiljö.
 
@@ -40,13 +40,13 @@ Installation av:
 
 * **FFmpeg**
 
-   FFmpeg är en lösning för konvertering och direktuppspelning av ljud och video och används, när den är installerad, för korrekt omkodning av [videoresurser](../../help/sites-authoring/default-components-foundation.md#video). För aktiveringscommunityn används den i redigeringsmiljön för att hämta metadata för överförda resurser och generera en miniatyrbild som visas när resursen listas.
+   FFmpeg är en lösning för konvertering och direktuppspelning av ljud och video och används, när den är installerad, för korrekt transkodning av [Videoresurser](../../help/sites-authoring/default-components-foundation.md#video). För aktiveringscommunityn används den i redigeringsmiljön för att hämta metadata för överförda resurser och generera en miniatyrbild som visas när resursen listas.
 
 Inställningar för:
 
 * **Community Managers**
 
-   Endast medlemmar i användargruppen `Community Enablement Managers` kan tilldelas rollen `Community Site Enablement Manager`, vars behörigheter kan omfatta innehållsskapande, uppdrag och medlemshantering i publiceringsmiljön.
+   Endast medlemmar i `Community Enablement Managers` användargruppen kan tilldelas rollen som `Community Site Enablement Manager`, vars behörigheter kan omfatta innehållsskapande, uppdrag och medlemshantering i publiceringsmiljön.
 
 Valfri konfiguration av:
 
@@ -68,7 +68,7 @@ Varje steg länkar till dokumentation med nödvändig information.
 
    Använd webbkonsol (paket): *http://localhost:4502/system/console/bundles*
 
-   Installera *innan* SCORM-paketet installeras
+   Installera *före* installera SCORM-paket
 
 1. **[Installera SCORM-paket](deploy-communities.md#scorm-package)**
 
@@ -130,4 +130,4 @@ Varje steg länkar till dokumentation med nödvändig information.
 
 ## Dispatcher {#dispatcher}
 
-När distributionen innehåller [AEM Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html) måste avsnitten `clientheader` och `filter` ändras för att aktiveringsfunktionerna ska fungera korrekt. Se [Konfigurera Dispatcher för Communities](dispatcher.md#enablement).
+När distributionen inkluderar [AEM Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)för att aktiveringsfunktionerna ska fungera på rätt sätt `clientheader` och `filter` -avsnitt behöver ändras. Se [Konfigurera Dispatcher för Communities](dispatcher.md#enablement).

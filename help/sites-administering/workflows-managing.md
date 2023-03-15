@@ -1,22 +1,21 @@
 ---
 title: Hantera åtkomst till arbetsflöden
-seo-title: Hantera åtkomst till arbetsflöden
+seo-title: Managing Access to Workflows
 description: Lär dig hur du hanterar åtkomst till arbetsflöden.
-seo-description: Lär dig hur du hanterar åtkomst till arbetsflöden.
+seo-description: Learn how to manage access to Workflows.
 uuid: 58f79b89-fe56-4565-a869-8179c1ac68de
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 discoiquuid: 5150867a-02a9-45c9-b2fd-e536b60ffa8c
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: cc54d637-d66c-49d2-99ee-00d96f1a74e0
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '573'
+source-wordcount: '562'
 ht-degree: 0%
 
 ---
-
 
 # Hantera åtkomst till arbetsflöden{#managing-access-to-workflows}
 
@@ -26,7 +25,7 @@ Konfigurera åtkomstkontrollistor enligt användarkonton för att tillåta (elle
 
 Åtgärder för arbetsflöden kan vidtas om
 
-* du arbetar med `admin`-kontot
+* du arbetar med `admin` konto
 * kontot har tilldelats standardgruppen `workflow-users`:
 
    * den här gruppen innehåller alla behörigheter som krävs för att dina användare ska kunna utföra arbetsflödesåtgärder.
@@ -50,39 +49,39 @@ Arbetsflödesmodeller ärver en standardåtkomstkontrollista (ACL) som styr hur 
 
 >[!NOTE]
 >
->Mer information om hur du använder CRXDE Lite för att konfigurera åtkomstkontrollistor finns i [Hantering av åtkomstbehörighet](/help/sites-administering/user-group-ac-admin.md#access-right-management).
+>Mer information om hur du konfigurerar åtkomstkontrollistor i CRXDE Lite finns i [Behörighetshantering](/help/sites-administering/user-group-ac-admin.md#access-right-management).
 
 ### Använd en ACL för den specifika arbetsflödesmodellen på /var/workflow/models {#apply-an-acl-for-the-specific-workflow-model-to-var-workflow-models}
 
-Om arbetsflödesmodellen lagras i `/var/workflow/models` kan du tilldela en specifik åtkomstkontrollista som bara är relevant för det arbetsflödet till mappen:
+Om arbetsflödesmodellen lagras i `/var/workflow/models` kan du tilldela en specifik åtkomstkontrollista som är relevant endast för det arbetsflödet till mappen:
 
 1. Öppna CRXDE Lite i webbläsaren (till exempel [http://localhost:4502/crx/de](http://localhost:4502/crx/de)).
 1. I nodträdet väljer du noden för mappen för arbetsflödesmodeller:
 
    `/var/workflow/models`
 
-1. Klicka på fliken **Åtkomstkontroll**.
-1. I tabellen **Local Access Control Policies** (**Access Control List**) klickar du på plusikonen för att **lägga till post**.
-1. I dialogrutan **Lägg till ny post** lägger du till en ny ACE med följande egenskaper:
+1. Klicka på **Åtkomstkontroll** -fliken.
+1. I **Principer för lokal åtkomstkontroll** (**Åtkomstkontrollista**) klickar du på plusikonen för att **Lägg till post**.
+1. I **Lägg till nytt inlägg** lägger du till en ny ACE med följande egenskaper:
 
-   * **Huvudkonto**:  `content-authors`
-   * **Typ**:  `Deny`
-   * **Behörigheter**:  `jcr:read`
+   * **kapitalbelopp**: `content-authors`
+   * **Typ**: `Deny`
+   * **Behörighet**: `jcr:read`
    * **rep:glob**: referens till det specifika arbetsflödet
 
    ![wf-108](assets/wf-108.png)
 
-   Registret **Åtkomstkontrollista** innehåller nu begränsningen för `content-authors` i arbetsflödesmodellen `prototype-wfm-01`.
+   The **Åtkomstkontrollista** tabellen innehåller nu en begränsning för `content-authors` på `prototype-wfm-01` arbetsflödesmodell.
 
    ![wf-109](assets/wf-109.png)
 
-1. Klicka på **Spara alla**.
+1. Klicka **Spara alla**.
 
-   Arbetsflödet `prototype-wfm-01` är inte längre tillgängligt för medlemmar i gruppen `content-authors`.
+   The `prototype-wfm-01` arbetsflödet är inte längre tillgängligt för medlemmar i `content-authors` grupp.
 
 ### Skapa en undermapp i /var/workflow/models och tillämpa ACL på den {#create-a-subfolder-in-var-workflow-models-and-apply-the-acl-to-that}
 
-Ditt [utvecklingsteam kan skapa arbetsflödena i en undermapp](/help/sites-developing/workflows-models.md#creating-a-new-workflow) av
+Dina [utvecklarteamet kan skapa arbetsflödena i en undermapp](/help/sites-developing/workflows-models.md#creating-a-new-workflow) av
 
 `/var/workflow/models`
 
@@ -97,26 +96,25 @@ Du kan sedan lägga till en ACL i själva mappen.
 
    `/var/workflow/models/prototypes`
 
-1. Klicka på fliken **Åtkomstkontroll**.
-1. I tabellen **Tillämplig åtkomstkontrollprincip** klickar du på plusikonen för att **lägga till** en post.
-1. I tabellen **Local Access Control Policies** (**Access Control List**) klickar du på plusikonen för att **lägga till post**.
-1. I dialogrutan **Lägg till ny post** lägger du till en ny ACE med följande egenskaper:
+1. Klicka på **Åtkomstkontroll** -fliken.
+1. I **Tillämplig åtkomstkontrollprincip** tabell klickar du på plusikonen för att **Lägg till** ett tävlingsbidrag.
+1. I **Principer för lokal åtkomstkontroll** (**Åtkomstkontrollista**) klickar du på plusikonen för att **Lägg till post**.
+1. I **Lägg till nytt inlägg** lägger du till en ny ACE med följande egenskaper:
 
-   * **Huvudkonto**:  `content-authors`
-   * **Typ**:  `Deny`
-   * **Behörigheter**:  `jcr:read`
+   * **kapitalbelopp**: `content-authors`
+   * **Typ**: `Deny`
+   * **Behörighet**: `jcr:read`
 
    >[!NOTE]
    >
-   >Precis som med [Använd en ACL för den specifika arbetsflödesmodellen på /var/workflow/models](/help/sites-administering/workflows-managing.md#apply-an-acl-for-the-specific-workflow-model-to-var-workflow-models) kan du inkludera en rep:glob för att begränsa åtkomsten till ett specifikt arbetsflöde.
+   >Som med [Använd en ACL för den specifika arbetsflödesmodellen på /var/workflow/models](/help/sites-administering/workflows-managing.md#apply-an-acl-for-the-specific-workflow-model-to-var-workflow-models) du kan ta med en rep:glob för att begränsa åtkomsten till ett visst arbetsflöde.
 
    ![wf-110](assets/wf-110.png)
 
-   Registret **Åtkomstkontrollista** innehåller nu begränsningen för `content-authors` i mappen `prototypes`.
+   The **Åtkomstkontrollista** tabellen innehåller nu en begränsning för `content-authors` på `prototypes` mapp.
 
    ![wf-111](assets/wf-111.png)
 
-1. Klicka på **Spara alla**.
+1. Klicka **Spara alla**.
 
-   Modellerna i mappen `prototypes` är inte längre tillgängliga för medlemmar i gruppen `content-authors`.
-
+   Modellerna i `prototypes` mappen inte längre är tillgänglig för medlemmar i `content-authors` grupp.

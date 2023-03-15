@@ -6,14 +6,13 @@ contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: ccc0e434-8847-4e12-8a18-84b55fb2964b
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 7bf6657a8fd7677ab15e0f91324a065b684e2f92
+exl-id: 5623dcf4-bda9-4dee-ace3-5a1f6057e96c
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1789'
 ht-degree: 0%
 
 ---
-
 
 # RTF-redigerare {#rich-text-editor}
 
@@ -33,7 +32,7 @@ Dialogrutan för WYSIWYG-redigering innehåller många olika funktioner:
 >
 >De tillgängliga funktionerna kan konfigureras för enskilda projekt, så de kan variera för din installation.
 
-## Redigering på plats {#in-place-editing}
+## Direktredigering {#in-place-editing}
 
 Förutom det dialogbaserade läget för textredigering i Rich Text, innehåller AEM även redigeringsläget på plats, som tillåter direkt redigering av texten så som den visas i sidlayouten.
 
@@ -49,15 +48,15 @@ Du kan redigera texten direkt på sidan i stället för i ett dialogrutefönster
 >
 >Om innehållssökaren inte är öppen visas inte verktygsfältet.
 
-För närvarande är läget Redigering på plats aktiverat för sidelement som genereras av komponenterna **Text** och **Rubrik**.
+För närvarande är läget Redigering på plats aktiverat för sidelement som genereras av **Text** och **Titel** -komponenter.
 
 >[!NOTE]
 >
->Komponenten [!UICONTROL Title] är utformad för att innehålla en kort text utan radbrytningar. När du redigerar en titel i läget för infogad redigering öppnas en ny **Text**-komponent under titeln om du anger en radbrytning.
+>The [!UICONTROL Title] -komponenten är utformad för att innehålla en kort text utan radbrytningar. När du redigerar en titel i läget för infogad redigering öppnas en ny radbrytning **Text** -komponenten under rubriken.
 
 ## Funktioner i RTF-redigeraren {#features-of-the-rich-text-editor}
 
-I RTF-redigeraren finns ett antal funktioner som är beroende av konfigurationen[för den enskilda komponenten. ](/help/sites-administering/rich-text-editor.md) Funktionerna är tillgängliga för både pekoptimerade och klassiska användargränssnitt.
+RTF-redigeraren har en rad funktioner, som [beroende på konfigurationen](/help/sites-administering/rich-text-editor.md) för den enskilda komponenten. Funktionerna är tillgängliga för både pekoptimerade och klassiska användargränssnitt.
 
 ### Grundläggande teckenformat {#basic-character-formats}
 
@@ -79,7 +78,7 @@ Alla fungerar som en växlingsknapp, så om du väljer det tas formatet bort.
 
 ![cq55_rte_stylesparagraph](assets/cq55_rte_stylesparagraph.png)
 
-Installationen kan innehålla fördefinierade format och format. Dessa är tillgängliga med listrutorna **[!UICONTROL Style]** och **[!UICONTROL Format]** och kan tillämpas på text som du har valt.
+Installationen kan innehålla fördefinierade format och format. Dessa finns i **[!UICONTROL Style]** och **[!UICONTROL Format]** listrutor och kan användas på text som du har valt.
 
 Ett format kan användas på en viss sträng (ett format korrelerar till CSS):
 
@@ -101,12 +100,11 @@ Ett format kan tas bort; placera markören i texten som formatet har tillämpats
 
 ![](do-not-localize/cq55_rte_cutcopypaste.png)
 
-Standardfunktionerna i **[!UICONTROL Cut]** och **[!UICONTROL Copy]** är tillgängliga. Flera varianter av **[!UICONTROL Paste]** tillhandahålls för att hantera olika format.
+Standardfunktionerna i **[!UICONTROL Cut]** och **[!UICONTROL Copy]** är tillgängliga. Flera smaker av **[!UICONTROL Paste]** finns för olika format.
 
 * Klipp ut (Ctrl-X)
 * Kopiera (Ctrl-C)
-* Klistra in
-Detta är standardmekanismen för inklistring (Ctrl-V) av komponenten. vid installation utanför ramarna är detta konfigurerat till [!UICONTROL Paste from Word].
+* Klistra in Det här är standardmekanismen för inklistring (Ctrl-V) av komponenten. vid installation i skal är detta konfigurerat att [!UICONTROL Paste from Word].
 
 * Klistra in som text: Tar bort alla format och formatering så att endast oformaterad text klistras in.
 
@@ -171,24 +169,24 @@ Du kan:
 * Skriv in en URI direkt
 * Använd webbplatskartan för att välja en sida på webbplatsen
 * Ange URI:n och lägg sedan till målankarpunkten; t.ex. `www.TargetUri.org#AnchorName`
-* Ange endast en ankarpunkt (för att referera till&quot;den aktuella sidan&quot;); Till exempel `#anchor`
+* Ange endast en ankarpunkt (för att referera till&quot;den aktuella sidan&quot;); Till exempel: `#anchor`
 * Söka efter en sida i innehållssökaren och dra och släpp sidikonen i hyperlänksdialogrutan
 
 >[!NOTE]
 >
->URI:n kan prepended med något av de protokoll som är konfigurerade för din installation. I en standardinstallation är dessa `https://`, `ftp://` och `mailto:`. Protokoll som inte har konfigurerats för din installation kommer att avvisas och markeras som ogiltiga.
+>URI:n kan prepended med något av de protokoll som är konfigurerade för din installation. I en standardinstallation finns följande `https://`, `ftp://`och `mailto:`. Protokoll som inte har konfigurerats för din installation kommer att avvisas och markeras som ogiltiga.
 
-Om du vill bryta länken placerar du markören var som helst i länktexten och klickar på ikonen [!UICONTROL Unlink]:
+Om du vill bryta länken placerar du markören var som helst i länktexten och klickar på knappen [!UICONTROL Unlink] ikon:
 
 ![](do-not-localize/chlimage_1-10.png)
 
-### Ankarpunkter {#anchors}
+### Fästpunkter {#anchors}
 
 ![](do-not-localize/cq55_rte_anchor.png)
 
-Du kan skapa en ankarpunkt var som helst i texten genom att antingen placera markören eller markera text. Klicka sedan på ikonen **Ankarpunkt** för att öppna dialogrutan.
+Du kan skapa en ankarpunkt var som helst i texten genom att antingen placera markören eller markera text. Klicka sedan på **Ankarpunkt** för att öppna dialogrutan.
 
-Ange namnet på ankaret och klicka sedan på **OK** för att spara.
+Ange namnet på ankarpunkten och klicka sedan **OK** att spara.
 
 ![cq55_rte_anchor_use](assets/cq55_rte_anchor_use.png)
 
@@ -200,15 +198,15 @@ Fästpunkten visas när komponenten redigeras och kan nu användas inom ett län
 
 ![](do-not-localize/cq55_rte_findreplace.png)
 
-AEM innehåller både funktionen **Sök** och funktionen **Ersätt** (sök och ersätt).
+AEM tillhandahåller båda **Sök** och **Ersätt** funktionen (sök och ersätt).
 
-Båda har en **Sök nästa**-knapp för att söka efter den angivna texten i den öppna komponenten. Du kan också ange om du vill att skiftläget (övre/nedre) ska matchas.
+Båda har en **Sök nästa** om du vill söka efter den angivna textens öppna komponent. Du kan också ange om du vill att skiftläget (övre/nedre) ska matchas.
 
 Sökningen startar alltid från den aktuella markörpositionen i texten. När komponentens slut nås visas ett meddelande om att nästa sökåtgärd kommer att starta uppifrån.
 
 ![cq55_rte_find_use](assets/cq55_rte_find_use.png)
 
-Med alternativet **Ersätt** kan du **Sök** och sedan **Ersätt** en enskild instans med den angivna texten, eller **Ersätt alla**-instanser i den aktuella komponenten.
+The **Ersätt** kan du **Sök** sedan **Ersätt** en enskild instans med den angivna texten, eller till **Ersätt alla** -instanser i den aktuella komponenten.
 
 ![cq55_rte_findreplace_use](assets/cq55_rte_findreplace_use.png)
 
@@ -220,7 +218,7 @@ Du kan dra bilder från innehållssökaren för att lägga till dem i texten.
 
 >[!NOTE]
 >
->AEM erbjuder också specialkomponenter för mer detaljerad bildkonfiguration. Till exempel är komponenterna **Bild** och **Textbild** tillgängliga.
+>AEM erbjuder också specialkomponenter för mer detaljerad bildkonfiguration. Till exempel **Bild** och **Textbild** -komponenter är tillgängliga.
 
 ### Stavningskontroll {#spelling-checker}
 
@@ -234,31 +232,31 @@ Felaktiga stavningar kommer att markeras:
 
 >[!NOTE]
 >
->Stavningskontrollen fungerar på webbplatsens språk antingen genom att använda underträdets language-egenskap eller genom att extrahera språket från URL:en. Till exempel kommer grenen `en` att kontrolleras för engelska och grenen `de` för tyska.
+>Stavningskontrollen fungerar på webbplatsens språk antingen genom att använda underträdets language-egenskap eller genom att extrahera språket från URL:en. Till exempel `en` kommer att kontrolleras för engelska och `de` för tyska.
 
 ### Tabeller {#tables}
 
 Tabeller är tillgängliga båda:
 
-* Som komponenten **Tabell**
+* Som **Tabell** komponent
 
    ![chlimage_1-105](assets/chlimage_1-105.png)
 
-* I komponenten **Text**
+* Från **Text** komponent
 
    ![](do-not-localize/chlimage_1-11.png)
 
    >[!NOTE]
    >
-   >Även om tabeller är tillgängliga i textredigeraren bör du använda komponenten **Tabell** när du skapar tabeller.
+   >Även om tabeller är tillgängliga i RTE rekommenderar vi att du använder **Tabell** -komponenten när du skapar tabeller.
 
-I både tabellen **Text** och **Tabellfunktioner** för komponenterna är tillgängliga via snabbmenyn (oftast högermusknappen) som klickas i tabellen. till exempel:
+I båda **Text** och **Tabell** Komponenttabellens funktionalitet är tillgänglig via snabbmenyn (oftast högermusknappen) som klickas i tabellen. till exempel:
 
 ![cq55_rte_tablemenu](assets/cq55_rte_tablemenu.png)
 
 >[!NOTE]
 >
->I **Table**-komponenten finns det också ett specialverktygsfält, som innehåller olika RTF-redigeringsfunktioner, tillsammans med en delmängd av de tabellspecifika funktionerna.
+>I **Tabell** finns det också ett specialverktygsfält, som innehåller olika RTF-redigeringsfunktioner och en delmängd av tabellspecifika funktioner.
 
 Tabellspecifika funktioner är:
 
@@ -276,7 +274,7 @@ Tabellspecifika funktioner är:
 
 ![cq55_te_tableproperties_icon](assets/cq55_rte_tableproperties_icon.png)
 
-Tabellens grundläggande egenskaper kan konfigureras innan du klickar på **OK** för att spara:
+Tabellens grundläggande egenskaper kan konfigureras innan du klickar på **OK** att spara:
 
 ![cq55_rte_tableproperties_dialog](assets/cq55_rte_tableproperties_dialog.png)
 
@@ -308,16 +306,16 @@ Egenskaperna för en viss cell, eller serie med celler, kan konfigureras:
 
 * **Bredd**
 * **Höjd**
-* **Vågrät justering**  - vänster, mitten eller höger
-* **Lodrät justering**  - Överkant, Mitten, Underkant eller Baslinje
-* **Celltyp** - Data eller rubrik
-* **Använd för:** Enkelcell, Hela raden, Hela kolumnen
+* **Vågrät justering** - Vänster, Centrera eller Höger
+* **Lodrät justering** - Överkant, Mitten, Nederkant eller Baslinje
+* **Celltyp**- Data eller rubrik
+* **Använd för:** En cell, Hela raden, Hela kolumnen
 
 #### Lägg till eller ta bort rader {#add-or-delete-rows}
 
 ![cq55_rte_rows](assets/cq55_rte_rows.png)
 
-Rader kan läggas till ovanför eller under den aktuella raden.
+Rader kan läggas till antingen ovanför eller under den aktuella raden.
 
 Den aktuella raden kan också tas bort.
 
@@ -337,7 +335,7 @@ Markerar hela den aktuella raden eller kolumnen. Särskilda åtgärder (t.ex. sa
 
 #### Sammanfoga celler {#merge-cells}
 
-![cq55_te_](assets/cq55_rte_cellmerge.png) ![cellmergecq55_rte_cellmerge-1](assets/cq55_rte_cellmerge-1.png)
+![cq55_rte_cellmerge](assets/cq55_rte_cellmerge.png) ![cq55_rte_cellmerge-1](assets/cq55_rte_cellmerge-1.png)
 
 * Om du har markerat en grupp celler kan du sammanfoga dessa till en.
 * Om du bara har markerat en cell kan du sammanfoga den med cellen till höger eller nedanför.
@@ -351,7 +349,7 @@ Markera en enskild cell för att dela den:
 * Om du delar en cell vågrätt skapas en ny cell till höger om den aktuella cellen, i den aktuella kolumnen.
 * När du delar en cell lodrätt genereras en ny cell under den aktuella cellen, men inom den aktuella raden.
 
-#### Skapar kapslade tabeller {#creating-nested-tables}
+#### Skapa kapslade tabeller {#creating-nested-tables}
 
 ![chlimage_1-107](assets/chlimage_1-107.png)
 
@@ -369,7 +367,7 @@ Om du skapar en kapslad tabell skapas en ny, fristående tabell i den aktuella c
 
 ![cq55_rte_removetable](assets/cq55_rte_removetable.png)
 
-Använd alternativet för att ta bort tabellen från **[!UICONTROL Text]**-komponenten.
+Använd alternativet för att ta bort tabellen från **[!UICONTROL Text]** -komponenten.
 
 ### Specialtecken {#special-characters}
 
@@ -385,7 +383,7 @@ Använd muspekaren för att se en förstorad version av tecknet och klicka sedan
 
 ![](do-not-localize/cq55_rte_sourceedit.png)
 
-I källredigeringsläget kan du visa och redigera komponentens underliggande HTML-kod.
+I källredigeringsläget kan du visa och redigera komponentens underliggande HTML.
 
 Så texten:
 

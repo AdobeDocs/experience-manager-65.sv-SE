@@ -1,22 +1,21 @@
 ---
 title: Lägga till information från användardata i metadata för att skicka formulär
-seo-title: Lägga till information från användardata i metadata för att skicka formulär
-description: 'Lär dig hur du lägger till information i metadata för ett skickat formulär med användardata. '
-seo-description: 'Lär dig hur du lägger till information i metadata för ett skickat formulär med användardata. '
+seo-title: Adding information from user data to form submission metadata
+description: Lär dig hur du lägger till information i metadata för ett skickat formulär med användardata.
+seo-description: Learn how to add information to metadata of a submitted form with user provided data.
 uuid: c3eea3c0-31f8-4bf8-b5cf-34f907bdbdba
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 2c971da0-5bd5-40d1-820d-4efc2a44b49d
 docset: aem65
 feature: Adaptive Forms
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 5ca850e3-30f0-4384-b615-356dc3c2ad0d
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '711'
+source-wordcount: '685'
 ht-degree: 0%
 
 ---
-
 
 # Lägga till information från användardata i metadata för att skicka formulär{#adding-information-from-user-data-to-form-submission-metadata}
 
@@ -34,12 +33,12 @@ Gör så här för att lägga till ett element i metadata:
 
 1. Öppna det anpassningsbara formuläret i redigeringsläge.\
    Om du vill öppna formuläret i redigeringsläge markerar du formuläret i formulärhanteraren och trycker på **Öppna**.
-1. Markera en komponent i redigeringsläget, tryck på ![fältnivå](assets/field-level.png) > **Adaptiv formulärbehållare** och tryck sedan på ![cmpr](assets/cmppr.png).
-1. Klicka på **Metadata** i sidofältet.
-1. Klicka på **Lägg till** i avsnittet Metadata.
+1. Markera en komponent i redigeringsläget och tryck på ![fältnivå](assets/field-level.png) > **Adaptiv formulärbehållare** och sedan trycka ![cmppr](assets/cmppr.png).
+1. Klicka på **Metadata**.
+1. Klicka på i avsnittet Metadata **Lägg till**.
 1. Använd fältet Värde på fliken Metadata för att lägga till skript. De skript du lägger till samlar in data från element i formuläret och beräknar värden som matas in i metadata.
 
-   Till exempel är **true** loggad i metadata om den angivna åldern är större än 21, och **false** loggas om den är mindre än 21. Du anger följande skript på fliken Metadata:
+   Till exempel: **true** loggas i metadata om den angivna åldern är större än 21, och **false** loggas om den är mindre än 21. Du anger följande skript på fliken Metadata:
 
    `(agebox.value >= 21) ? true : false`
 
@@ -47,7 +46,7 @@ Gör så här för att lägga till ett element i metadata:
 
    Skript som anges på fliken Metadata
 
-1. Klicka på **OK**.
+1. Klicka **OK**.
 
 När en användare har angett data i elementet som har markerats som ett metadatafält loggas den beräknade informationen i metadata. Du kan se metadata i databasen som du konfigurerade för att lagra metadata.
 
@@ -61,11 +60,10 @@ Om du lägger till ett kryssruteelement i metadata lagras markerade värden som 
 
 ![Lagra flera värden från en kryssruta](assets/checkbox-metadata.png)
 
-Du väljer en adaptiv formulärbehållare och i formuläregenskaperna lägger du till en metadatanyckel `cb1` som lagrar `checkbox1.value` och publicerar formuläret. När kunden fyller i formuläret väljer kunden passnummer och personnummer i kryssrutefältet. Värdena 1 och 2 lagras som 1 och 2 i fältet cb1 i metadata för överföringen.
+Du väljer en adaptiv formulärbehållare och i formuläregenskaperna lägger du till en metadatanyckel `cb1` som lagrar `checkbox1.value`och publicera formuläret. När kunden fyller i formuläret väljer kunden passnummer och personnummer i kryssrutefältet. Värdena 1 och 2 lagras som 1 och 2 i fältet cb1 i metadata för överföringen.
 
 ![Metadatapost för flera värden som är markerade i ett kryssrutefält](assets/metadata-entry.png)
 
 >[!NOTE]
 >
 >Exemplet ovan är endast avsett för inlärning. Kontrollera att du letar efter metadata på rätt plats som konfigurerats i din AEM Forms-implementering.
-

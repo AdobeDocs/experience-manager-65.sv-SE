@@ -1,20 +1,19 @@
 ---
 title: AEM
-seo-title: AEM
+seo-title: Troubleshooting AEM
 description: AEM
-seo-description: AEM
-translation-type: tm+mt
-source-git-commit: 315d1ac1a00da474f535087eff49c2be8fee8c37
+seo-description: Troubleshooting AEM
+exl-id: f7a220bf-0b0c-4d16-824d-dad7d86c01c9
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '63'
+source-wordcount: '59'
 ht-degree: 0%
 
 ---
 
+# AEM {#troubleshooting-aem}
 
-# Felsökning AEM {#troubleshooting-aem}
-
-## Felsökning av författarinstansens prestanda {#performance}
+## Felsökning av Author Instance-prestanda {#performance}
 
 [I den här handboken finns tips om hur du felsöker AEM författarinstans.](/help/sites-authoring/troubleshooting.md)
 

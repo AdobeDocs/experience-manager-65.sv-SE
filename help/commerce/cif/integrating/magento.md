@@ -16,7 +16,7 @@ Experience Manager och Adobe Commerce integreras smidigt med Commerce Integratio
 
 >[!NOTE]
 >
->Lägsta GraphQL API-version som stöds är 2.3.5. Vissa funktioner stöds endast i nyare versioner eller bara i Adobe Commerce.
+>Den lägsta GraphQL API-version som stöds är 2.3.5. Vissa funktioner stöds endast i nyare versioner eller bara i Adobe Commerce.
 
 ## Arkitektur - översikt {#overview}
 
@@ -25,7 +25,7 @@ Den övergripande arkitekturen är följande:
 ![CIF-arkitekturöversikt](../assets/AEM_Magento_Architecture.png)
 
 Inom CIF finns stöd för kommunikationsmönster på serversidan och klientsidan.
-API-anrop på serversidan implementeras med det inbyggda, generiska [GraphQL-klient](https://github.com/adobe/commerce-cif-graphql-client) i kombination med en [uppsättning genererade datamodeller](https://github.com/adobe/commerce-cif-magento-graphql) för Commerce GraphQL-schemat. Dessutom kan alla GraphQL-frågor eller mutationer i GQL-format användas.
+API-anrop på serversidan implementeras med det inbyggda, generiska [GraphQL Client](https://github.com/adobe/commerce-cif-graphql-client) i kombination med en [uppsättning genererade datamodeller](https://github.com/adobe/commerce-cif-magento-graphql) för e-handelsschemat i GraphQL. Dessutom kan valfri GraphQL-fråga eller mutation i GQL-format användas.
 
 För komponenterna på klientsidan, som byggs med [Reagera](https://reactjs.org/), [Apollo Client](https://www.apollographql.com/docs/react/) används.
 

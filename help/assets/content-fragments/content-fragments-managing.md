@@ -303,10 +303,11 @@ Kommentarerna är:
 * Standardfunktionalitet för alla resurser
 * Skapat i tidslinjen
 * Relaterat till fragmentresursen
-
+>
 Anteckningar (för innehållsfragment) är:
 * Anges i fragmentredigeraren
 * Specifik för ett markerat textsegment i fragmentet
+>
 
 
 Till exempel:

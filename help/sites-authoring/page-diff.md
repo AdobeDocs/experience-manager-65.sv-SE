@@ -1,8 +1,8 @@
 ---
 title: Sidskillnader
-seo-title: Sidskillnader
+seo-title: Page Diff
 description: Med funktionen för sidskillnader kan du enkelt jämföra två sidor sida vid sida med skillnaderna markerade.
-seo-description: Med funktionen för sidskillnader kan du enkelt jämföra två sidor sida vid sida med skillnaderna markerade.
+seo-description: The page diff feature allows for the convenient side-by-side comparison of two pages with their differences highlighted.
 uuid: 5af8b466-5922-4fe6-9eae-7bad99be23e0
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,14 +10,13 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: 8386a16a-9d47-46d5-bc60-5f290c59e60e
 docset: aem65
-translation-type: tm+mt
-source-git-commit: c51ba167d9b3d37de649c59526e74d9728c677c6
+exl-id: 3beea5cd-5ae0-485b-8dfc-8b3a23c11586
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '579'
+source-wordcount: '560'
 ht-degree: 1%
 
 ---
-
 
 # Sidskillnader{#page-diff}
 
@@ -29,16 +28,16 @@ Med funktionen för sidskillnader kan du enkelt jämföra två sidor sida vid si
 
 >[!TIP]
 >
->Mer teknisk information om den här funktionen finns i [Developing and Page Diff](/help/sites-developing/pagediff.md#operation-details).
+>Se [Developing and Page Diff](/help/sites-developing/pagediff.md#operation-details) om du vill ha mer teknisk information om den här funktionen.
 
-## Använd {#use}
+## Användning {#use}
 
 Diff:en sida vid sida kan jämföra:
 
-* [Versioner](/help/sites-authoring/working-with-page-versions.md#comparing-a-version-with-current-page)  - Tidigare version av en sida med det aktuella läget
-* [Live-kopior](/help/sites-administering/msm-livecopy.md#comparing-a-live-copy-page-with-a-blueprint-page)  - Live Copy med utkast
-* [Startar](/help/sites-authoring/launches-editing.md#comparing-a-launch-page-to-its-source-page)  - Starta med dess källa
-* [Språkkopior](/help/sites-administering/tc-manage.md#comparing-language-copies)  - En sida före och efter (re-)översättning
+* [Versioner](/help/sites-authoring/working-with-page-versions.md#comparing-a-version-with-current-page) - Tidigare version av en sida med det aktuella läget
+* [Live-kopior](/help/sites-administering/msm-livecopy.md#comparing-a-live-copy-page-with-a-blueprint-page) - Live Copy med utkast
+* [Startar](/help/sites-authoring/launches-editing.md#comparing-a-launch-page-to-its-source-page) - Starta med källan
+* [Språkkopior](/help/sites-administering/tc-manage.md#comparing-language-copies) - En sida före och efter (re-)översättning
 
 Läs respektive avsnitt om hur du påbörjar skillnaderna i dessa sammanhang.
 
@@ -55,23 +54,23 @@ Källan för båda sidorna visas tydligt i sidhuvudsfältet högst upp i webblä
 
 ![chlimage_1-109](assets/chlimage_1-109.png)
 
-Skillnaden identifierar ändringar på komponentnivå och HTML-nivå. Objekt som har ändrats markeras med olika färger.
+Skillnaden identifierar ändringar på komponentnivå och HTML. Objekt som har ändrats markeras med olika färger.
 
 **Komponentändringar**
 
 * Ljusgrön - komponent tillagd
 * Rosa - komponent borttagen
 
-**HTML-ändringar**
+**Ändringar i HTML**
 
-* Mörkgrön - HTML tillagd
-* Röd - HTML borttagen
+* Mörkgrön - tillagd HTML
+* Röd - HTML har tagits bort
 
 >[!NOTE]
 >
 >När du jämför språkkopior inaktiveras markering, eftersom i en översättning ändras allt och markering inte har någon fördel.
 
-### Helskärm och Avslutar {#fullscreen-and-exiting}
+### Helskärm och avslutande {#fullscreen-and-exiting}
 
 Om du vill fokusera på ett visst innehåll kan du klicka på helskärmsikonen för endera&quot;sidan&quot; av diff:n för att förstora den till hela webbläsarfönstret.
 
@@ -95,7 +94,7 @@ I vissa situationer kan det hända att sidskillnader inte identifierar någon sk
 * För versioner återskapar inte diff åtkomstkontrollprincipen och Live copy-relationen.
 * Om en sida flyttas kan du inte längre göra några skillnader med versioner som gjorts före flyttningen.
 
-   * Om du får problem med en skillnad kontrollerar du [tidslinjen](/help/sites-authoring/basic-handling.md#timeline) för sidan för att se om sidan har flyttats.
+   * Om du får problem med en skillnad ska du kontrollera [Tidslinje](/help/sites-authoring/basic-handling.md#timeline) för att se om sidan har flyttats.
 
 >[!NOTE]
 >
@@ -103,4 +102,4 @@ I vissa situationer kan det hända att sidskillnader inte identifierar någon sk
 
 >[!NOTE]
 >
->Mer information om hur sidskillnader fungerar och om begränsningar som kan påverka sidskillnader finns i [utvecklardokumentationen](/help/sites-developing/pagediff.md) för den här funktionen.
+>Mer information om hur sidskillnader fungerar samt om begränsningar som kan påverka sidskillnader finns i [dokumentation för utvecklare](/help/sites-developing/pagediff.md) av den här funktionen.

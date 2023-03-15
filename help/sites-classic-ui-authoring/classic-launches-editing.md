@@ -1,8 +1,8 @@
 ---
 title: Redigera Launches
-seo-title: Redigera Launches
+seo-title: Editing Launches
 description: När en startsida har skapats för en sida (eller en uppsättning sidor) kan du redigera innehållet i startkopian av sidorna.
-seo-description: När en startsida har skapats för en sida (eller en uppsättning sidor) kan du redigera innehållet i startkopian av sidorna.
+seo-description: When a launch has been created for a page (or set of pages) you can edit the content in the launch copy of the page(s).
 uuid: 3a310eeb-553d-4d2b-98b5-c5bc523b2aca
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,14 +10,13 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: 666b967a-e94b-4f94-a676-00adf150580f
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 21776f42-cd81-459d-b4b9-1d92e0aec164
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '319'
+source-wordcount: '291'
 ht-degree: 2%
 
 ---
-
 
 # Redigera Launches{#editing-launches}
 
@@ -26,16 +25,16 @@ ht-degree: 2%
 När en startsida har skapats för en sida (eller en uppsättning sidor) kan du redigera innehållet i startkopian av sidorna.
 
 1. Öppna sidan för redigering.
-1. Välj fliken **Versioning** i Sidekick och expandera sedan gruppen **Launches**. Titeln på den programstart som redigeras använder ett fet teckensnitt.
+1. I Sidekick väljer du **Versionshantering** och sedan expandera **Startar** grupp. Titeln på den programstart som redigeras använder ett fet teckensnitt.
 
    ![chlimage_1-13](assets/chlimage_1-13.jpeg)
 
-1. Välj den start du vill arbeta med och klicka sedan på **Växla**.
+1. Välj den start du vill arbeta med och klicka sedan på **Byt**.
 1. Börja redigera.
 
    >[!NOTE]
    >
-   >Du kan använda fliken **Sida** för sidostart för att utföra åtgärder som t.ex. **Skapa underordnad sida**.
+   >Du kan använda **Sida** flik för att utföra åtgärder som **Skapa underordnad sida**, bland annat.
 
 ## Redigera en startkonfiguration {#editing-a-launch-configuration}
 
@@ -45,27 +44,26 @@ När du har skapat en programstart kan du ändra startnamnet och startdatumet. D
 
 1. Välj önskad start och klicka på **Redigera** för att öppna dialogrutan:
 
-   * På fliken **Allmänt** kan du redigera:
+   * I **Allmänt** kan du redigera:
 
       * **Titel**
       * **Live-datum**: detta motsvarar startdatumet
       * **Produktionsklar**
 
-      Se [Startar - Evenemangsordningen](/help/sites-authoring/launches.md#launches-the-order-of-events) för information om syftet med och interaktionen med dessa fält.
+      Se [Startar - ordningen för händelser](/help/sites-authoring/launches.md#launches-the-order-of-events) för information om syftet med och interaktionen med dessa fält.
 
-   * På fliken **Bild** kan du överföra en bildfil.
+   * I **Bild** kan du överföra en bildfil.
 
 
-1. Klicka på **Spara**.
+1. Klicka **Spara**.
 
 ## Identifiera startstatus för en sida {#discovering-the-launch-status-of-a-page}
 
-När du redigerar en start av en sida visas information om starten längst ned på fliken **Versioning** i Sidspark:
+När du redigerar en startsida visas information om startsidan längst ned i **Versionshantering** fliken Sidekick:
 
 * Startnamnet.
 * Tiden sedan den senaste ändringen.
 * Den användare som utförde den senaste ändringen.
-* Status för flaggan **Production Ready** (orange=ej inställd; green=set).
+* Status för **Produktionsklar** flagga (orange=inte inställd; green=set).
 
 ![chlimage_1-186](assets/chlimage_1-186.png)
-

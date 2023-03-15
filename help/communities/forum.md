@@ -1,8 +1,8 @@
 ---
 title: Forumfunktion
-seo-title: Forumfunktion
+seo-title: Forum Feature
 description: Lägga till och konfigurera forumfunktionen
-seo-description: Lägga till och konfigurera forumfunktionen
+seo-description: How to add and configure the forum feature
 uuid: e69be4e1-c9d5-4d51-8e7e-609e5460e378
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -10,16 +10,15 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: d936cef5-ad76-482d-97bf-c40137185812
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 871c42ee000eb250c1c6159d9a0c752e8ed4d7b8
+exl-id: 2b1a4917-9db6-436a-a5fd-c102fe41fb9d
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1226'
+source-wordcount: '1216'
 ht-degree: 0%
 
 ---
 
-
-# Forum, funktion{#forum-feature}
+# Forumfunktion{#forum-feature}
 
 ## Introduktion {#introduction}
 
@@ -35,25 +34,25 @@ Forumfunktionen tillhandahåller ett område där besökare (community-medlemmar
 I det här avsnittet av dokumentationen beskrivs:
 
 * Lägga till forumfunktionen på en AEM webbplats.
-* Konfigurationsinställningar för komponenten `Forum`.
+* Konfigurationsinställningar för `Forum` -komponenten.
 
 ### Lägga till ett forum på en sida {#adding-a-forum-to-a-page}
 
-Om du vill lägga till en `Forum`-komponent på en sida i redigeringsläge använder du komponentwebbläsaren för att leta reda på
+Lägga till en `Forum` -komponent till en sida i redigeringsläge använder du komponentwebbläsaren för att leta upp
 
 * `Communities / Forum`
 
 och dra den till rätt plats på en sida där forumet ska visas.
 
-Mer information finns på [Grunderna för communitykomponenter](/help/communities/basics.md).
+Nödvändig information finns på [Grunderna för communitykomponenter](/help/communities/basics.md).
 
-När de [nödvändiga klientbiblioteken](/help/communities/essentials-forum.md#essentials-for-client-side) inkluderas visas `Forum`-komponenten så här:
+När [nödvändiga bibliotek på klientsidan](/help/communities/essentials-forum.md#essentials-for-client-side) ingår så här `Forum` visas:
 
 ![forumkomponent](assets/forum-component.png)
 
 ### Konfigurera ett forum {#configuring-a-forum}
 
-Markera den monterade `Forum`-komponenten som ska öppnas och välj ikonen `Configure` som öppnar redigeringsdialogrutan.
+Markera den monterade `Forum` -komponenten som ska få åtkomst till och markera `Configure` som öppnar redigeringsdialogrutan.
 
 ![configure-new](assets/configure-new.png)
 
@@ -61,7 +60,7 @@ Markera den monterade `Forum`-komponenten som ska öppnas och välj ikonen `Conf
 
 #### Fliken Inställningar {#settings-tab}
 
-Under fliken **Inställningar** anger du inställningar för ämnen och svar:
+Under **Inställningar** -fliken, ange inställningar för ämnen och svar:
 
 * **Tillåt miniatyrbild för bifogad fil**
 
@@ -94,7 +93,7 @@ Under fliken **Inställningar** anger du inställningar för ämnen och svar:
 
 * **Tillåt taggning**
 
-   Om det här alternativet är markerat kan medlemmar lägga till taggetiketter i sina inlägg (se **Tagg field** tab). Standard är avmarkerat.
+   Om det här alternativet är markerat kan medlemmar lägga till taggetiketter i sina inlägg (se **Taggfält** -fliken). Standard är avmarkerat.
 
 * **Tillåt filöverföringar**
 
@@ -102,7 +101,7 @@ Under fliken **Inställningar** anger du inställningar för ämnen och svar:
 
 * **Tillåt följande**
 
-   Om du markerar det här alternativet inkluderas följande funktion för foruminlägg, som gör att medlemmar kan [meddelas](/help/communities/notifications.md) om nya inlägg. Standard är avmarkerat.
+   Om du markerar det här alternativet inkluderas följande funktion för foruminlägg, som gör att medlemmar kan [meddelad](/help/communities/notifications.md) av nya tjänster. Standard är avmarkerat.
 
 * **Tillåt fästa**
 
@@ -110,22 +109,22 @@ Under fliken **Inställningar** anger du inställningar för ämnen och svar:
 
 * **Tillåt innehåll**
 
-   Om det här alternativet är markerat kan idén identifieras som [aktuellt innehåll](/help/communities/featured.md). Standard är avmarkerat.
+   Om det här alternativet är markerat kan idén identifieras som [innehåll](/help/communities/featured.md). Standard är avmarkerat.
 
 * **Tillåt e-postprenumerationer**
 
-   Om det här alternativet är markerat kan medlemmar meddelas om nya inlägg via e-post ([prenumeration](/help/communities/subscriptions.md)). Kräver att `Allow Following` kontrolleras och [e-post konfigureras](/help/communities/email.md). Standard är avmarkerat.
+   Om det här alternativet är markerat, tillåt medlemmar att meddelas om nya inlägg via e-post ([prenumeration](/help/communities/subscriptions.md)). Kräver `Allow Following` ska kontrolleras och [e-post konfigurerad](/help/communities/email.md). Standard är avmarkerat.
 
 * **Maximal filstorlek**
 
-   Endast relevant om `Allow File Uploads` är markerat. Det här fältet begränsar storleken (i byte) på en överförd fil. Standardvärdet är 104857600 (10 MB).
+   Endast relevant om `Allow File Uploads` är markerad. Det här fältet begränsar storleken (i byte) på en överförd fil. Standardvärdet är 104857600 (10 MB).
 
 * **Tillåtna filtyper**
 
-   Endast relevant om `Allow File Uploads` är markerat. En kommaavgränsad lista med filtillägg med&quot;punktavgränsaren&quot;. Till exempel: .jpg, .jpeg, .png, .doc, .docx, .pdf. Om någon filtyp har angetts kan de som inte har angetts inte överföras. Ingen standard har angetts så att alla filtyper tillåts.
+   Endast relevant om `Allow File Uploads` är markerad. En kommaavgränsad lista med filtillägg med&quot;punktavgränsaren&quot;. Till exempel: .jpg, .jpeg, .png, .doc, .docx, .pdf. Om någon filtyp har angetts kan de som inte har angetts inte överföras. Ingen standard har angetts så att alla filtyper tillåts.
 
-* **Max Attach Image File**
-SizeRelevant only if Allow File Uploads is checked. Maximalt antal byte som en överförd bildfil kan ha. Standardvärdet är 2097152 (2 MB).
+* **Maximal filstorlek för bifogad bild**
+Endast relevant om Tillåt filöverföringar är markerat. Maximalt antal byte som en överförd bildfil kan ha. Standardvärdet är 2097152 (2 MB).
 
 * **Tillåt kopplade svar**
 
@@ -145,7 +144,7 @@ SizeRelevant only if Allow File Uploads is checked. Maximalt antal byte som en �
 
 * **Visa emblem**
 
-   Om det här alternativet är markerat visas intjänade och tilldelade [märken](/help/communities/implementing-scoring.md) med en medlems blogginlägg. Standard är avmarkerat.
+   Om det här alternativet är markerat visas intjänad och tilldelad [emblem](/help/communities/implementing-scoring.md) med en medlems blogginlägg. Standard är avmarkerat.
 
 * **Tillåt behöriga medlemmar**
 
@@ -173,11 +172,11 @@ SizeRelevant only if Allow File Uploads is checked. Maximalt antal byte som en �
 
 >[!NOTE]
 >
->Du kan behöva kontrollera både `AllowThreaded Replies` och `Allow users to Delete Comments and Topics` för att kunna aktivera kommentarer om ett ämne.
+>Det kan vara nödvändigt att kontrollera båda `AllowThreaded Replies` och `Allow users to Delete Comments and Topics` för att aktivera kommentarer om ett ämne.
 
 #### Fliken Användarmoderering {#user-moderation-tab}
 
-Under fliken **Användarmoderering** anger du hur publicerade ämnen och svar (användargenererat innehåll) ska hanteras. Mer information finns i [Moderating User Generated Content](/help/communities/moderate-ugc.md).
+Under **Användarmoderering** anger du hur publicerade ämnen och svar (användargenererat innehåll) ska hanteras. Mer information finns i [Modererar användargenererat innehåll](/help/communities/moderate-ugc.md).
 
 * **Neka inlägg**
 
@@ -211,21 +210,21 @@ Under fliken **Användarmoderering** anger du hur publicerade ämnen och svar (a
 
    Ange hur många gånger ett ämne eller en kommentar måste flaggas innan det döljs för den offentliga vyn. Om värdet är -1 döljs aldrig det flaggade ämnet eller kommentaren från den offentliga vyn. Annars måste talet vara större än eller lika med modereringströskeln. Standardvärdet är 5.
 
-#### Tagg field tab {#tag-field-tab}
+#### Fliken Taggfält {#tag-field-tab}
 
-Under fliken **Tagg field** är de taggar som kan användas, om de tillåts under fliken **Settings** begränsade enligt de valda namnutrymmena.
+Under **Taggfält** -fliken, de taggar som kan användas, om de tillåts under **Inställningar** är begränsade enligt de namnutrymmen som har valts.
 
 * **Tillåtna namnutrymmen**
 
-   Relevant om `Allow Tagging` är markerat under fliken **Inställningar**. De taggar som kan användas är begränsade till de inom de namnutrymmeskategorier som kontrolleras. Listan med namnutrymmen innehåller &quot;Standardtaggar&quot; (standardnamnutrymmet) och &quot;Inkludera alla taggar&quot;. Standardvärdet är inget markerat, vilket betyder att alla namnutrymmen är tillåtna.
+   Relevant om `Allow Tagging` kontrolleras under **Inställningar** -fliken. De taggar som kan användas är begränsade till de inom de namnutrymmeskategorier som kontrolleras. Listan med namnutrymmen innehåller &quot;Standardtaggar&quot; (standardnamnutrymmet) och &quot;Inkludera alla taggar&quot;. Standardvärdet är inget markerat, vilket betyder att alla namnutrymmen är tillåtna.
 
 * **Förslagsgräns**
 
    Ange antalet taggar som ska visas som ett förslag till medlemmens inlägg i forumet. Standardvärdet är **-**1 (inga gränser).
 
-#### Översättningsflik {#translation-tab}
+#### Fliken Översättning {#translation-tab}
 
-Under fliken **Översättning**, om översättning är aktiverat för communitywebbplatsen, kan översättning ställas in för att översätta hela ämnet eller valda inlägg.
+Under **Översättning** om översättning är aktiverat för communitywebbplatsen kan översättning ställas in för att översätta hela ämnet eller valda inlägg.
 
 * **Översätt alla**
 
@@ -233,28 +232,28 @@ Under fliken **Översättning**, om översättning är aktiverat för communityw
 
 #### Fliken Sorteringsinställningar {#sort-settings-tab}
 
-Under fliken **Sorteringsinställningar** anger du hur de bokförda kommentarerna ska sorteras när de visas.
+Under **Sorteringsinställningar** anger du hur de bokförda kommentarerna ska sorteras när de visas.
 
 * **Sortera efter**
 
-   Kontrollera alla tillåtna sorteringsval: `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`. Standardvärdet är `Newest, Oldest, Last Updated`.
+   Kontrollera alla tillåtna sorteringsval: `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`. Standard är `Newest, Oldest, Last Updated`.
 
 * **Ange som standard**
 
-   Dra nedåt om du vill välja något av de markerade sorteringsalternativen som ska visas som standard. Standardvärdet är `Newest`.
+   Dra nedåt om du vill välja något av de markerade sorteringsalternativen som ska visas som standard. Standard är `Newest`.
 
 * **Välj tidsalternativ för Analytics-sortering**
 
    Dra nedåt för att välja något av följande alternativ: `All, Last 24 Hours, Last 7 Days, Last 30 Days`.
 
-   Standardvärdet är `All`.
+   Standard är `All`.
 
 ### Ytterligare information {#additional-information}
 
-Mer information finns på sidan [Forum Essentials](/help/communities/essentials-forum.md) för utvecklare.
+Mer information finns på [Grundläggande om forum](/help/communities/essentials-forum.md) för utvecklare.
 
-moderering av publicerade ämnen och kommentarer finns i [Moderating User Generated Content](/help/communities/moderate-ugc.md).
+moderering av inlägg och kommentarer finns i [Modererar användargenererat innehåll](/help/communities/moderate-ugc.md).
 
 Information om hur du taggar publicerade ämnen och kommentarer finns i [Tagga användargenererat innehåll](/help/communities/tag-ugc.md).
 
-Översättning av publicerade ämnen och kommentarer finns i [Översätta användargenererat innehåll](/help/communities/translate-ugc.md).
+För översättning av publicerade ämnen och kommentarer, se [Översätter användargenererat innehåll](/help/communities/translate-ugc.md).

@@ -1,13 +1,13 @@
 ---
 title: Hur skapar man adaptiva Forms med XML-schema?
 description: Lär dig hur du använder XML-schema som formulärmodell i ett adaptivt formulär. Du kan använda befintliga XSD-mallar för att skapa anpassningsbara formulär och dra och släppa schemaelement från XSD till ditt anpassningsbara formulär. Gräv djupare med ett exempel på ett XML-schema, lägg till specialegenskaper i fält med XML-schema och begränsa godtagbara värden för en adaptiv formulärkomponent.
-feature: Adaptiv Forms
+feature: Adaptive Forms
 role: User, Developer
 level: Beginner, Intermediate
 exl-id: 35d5859f-54c4-4d14-9c64-0d9291ef9029
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '1075'
+source-wordcount: '1073'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ Att skapa ett anpassat formulär med ett XML-schema som formulärmodell kräver 
 
 ## Använda ett XML-schema som formulärmodell {#using-an-xml-schema-as-form-model}
 
-[!DNL Experience Manager Forms] har stöd för att skapa ett anpassat formulär genom att använda ett befintligt XML-schema som formulärmodell. Det här XML-schemat representerar strukturen i vilken data produceras eller förbrukas av det bakomliggande systemet i organisationen.
+[!DNL Experience Manager Forms] har stöd för att skapa ett anpassat formulär genom att använda ett befintligt XML-schema som formulärmodell. Det här XML-schemat representerar strukturen i vilken data produceras eller används av det bakomliggande systemet i organisationen.
 
 De viktigaste funktionerna i ett XML-schema är:
 
@@ -137,7 +137,7 @@ Du kan lägga till följande attribut i XML-schemaelement om du vill lägga till
   </tr>
   <tr>
    <td><code>use=required </code></td>
-   <td>Markerar ett fält som obligatoriskt<br /> </td>
+   <td>Markerar ett fält obligatoriskt<br /> </td>
    <td>Attribut</td>
   </tr>
   <tr>
@@ -165,10 +165,8 @@ Du kan lägga till följande attribut i XML-schemaelement om du vill lägga till
 >
 >* Inled det första tecknet i elementnamnet med versal
 >* Infoga tomt utrymme vid gränserna för Camera Case.
-
 >
->
-Om du till exempel lägger till schemaelementet `userFirstName` är bildtexten som skapas i det adaptiva formuläret `User First Name`.
+>Om du till exempel lägger till `userFirstName` schemaelement, den bildtext som genereras i det adaptiva formuläret är `User First Name`.
 
 ## Begränsa tillåtna värden för en adaptiv formulärkomponent {#limit-acceptable-values-for-an-adaptive-form-component}
 
@@ -199,7 +197,7 @@ Du kan lägga till följande begränsningar i XML-schemaelement för att begrän
    <td>
     <ul>
      <li>Numerisk ruta</li>
-     <li>Numerisk nummerlista<br /> </li>
+     <li>Numerisk stege<br /> </li>
      <li>Datumväljaren</li>
     </ul> </td>
   </tr>
@@ -288,15 +286,15 @@ Du kan lägga till följande begränsningar i XML-schemaelement för att begrän
 
 **Hur vet jag vilket element i trädet som är associerat med vilket XML-element?**
 
-När du dubbelklickar på ett element i Innehållssökning visas ett popup-fönster med fältnamnet och egenskapen `bindRef`. Den här egenskapen mappar trädelementet till elementet eller attributet i schemat.
+När du dubbelklickar på ett element i Innehållssökning visas ett snabbfönster med ett fältnamn och en egenskap med namnet `bindRef`. Den här egenskapen mappar trädelementet till elementet eller attributet i schemat.
 
 ![Ett bindref-fält för ett XML-schemaelement](assets/dblclick.png)
 
-Fältet bindRef</code> visar associationen mellan ett trädelement och ett element eller attribut i ett schema.
+BindRef</code> fältet visar associationen mellan ett trädelement och ett element eller attribut i ett schema.
 
 >[!NOTE]
 >
->Attribut har en `@`-symbol i `bindRef`värdet för att skilja dem från element. Till exempel, `/config/projectDetails/@duration`.
+>Attribut har en `@` symbolen i sina `bindRef`värde för att skilja dem från element. Till exempel, `/config/projectDetails/@duration`.
 
 **Varför kan jag inte dra enskilda element i ett delformulär (struktur som genereras från en komplex typ) för repeterbara delformulär (värdena minOcCours och maxOccurs är större än 1)?**
 
@@ -311,4 +309,4 @@ Du har två alternativ:
 
 **Vad är en bindRef?**
 
-En `bindRef` är anslutningen mellan en adaptiv formulärkomponent och ett schemaelement eller attribut. Det anger `XPath` där värdet som hämtas från den här komponenten eller det här fältet är tillgängligt i XML-utdata. Ett `bindRef`värde används också när ett fältvärde fylls i i förväg från förfylld (förifylld) XML.
+A `bindRef` är anslutningen mellan en adaptiv formulärkomponent och ett schemaelement eller attribut. Det avgör `XPath` där värdet som hämtas från den här komponenten eller det här fältet är tillgängligt i XML-utdata. A `bindRef`används också när ett fältvärde fylls i i förväg från förfylld (förifylld) XML.

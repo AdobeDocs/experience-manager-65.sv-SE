@@ -1,43 +1,42 @@
 ---
 title: Hantera lokala autentiseringsuppgifter
-seo-title: Hantera lokala autentiseringsuppgifter
+seo-title: Managing local credentials
 description: Lär dig hur du hanterar lokala autentiseringsuppgifter.
-seo-description: Lär dig hur du hanterar lokala autentiseringsuppgifter.
+seo-description: Learn how to manage local credentials.
 uuid: 3c4358e0-aaff-4e94-a6b2-04b463fca260
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/managing_certificates_and_credentials
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 598a9a03-3773-4620-8867-1f754d8ca031
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: c5905272-7d09-47e4-8b35-4cc25a148477
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '510'
+source-wordcount: '501'
 ht-degree: 0%
 
 ---
 
-
 # Hantera lokala autentiseringsuppgifter {#managing-local-credentials}
 
-Lokala autentiseringsuppgifter är privata nyckelautentiseringsuppgifter som lagras i Trust Store Management. En *lokal autentiseringsuppgift* identifierar var användarens DES-autentiseringsuppgifter lagras. Med Trust Store Management kan du importera och hantera dina lokala inloggningsuppgifter med exempelvis befintliga PFX-filer så att du kan importera, redigera och ta bort lokala inloggningsuppgifter.
+Lokala autentiseringsuppgifter är privata nyckelautentiseringsuppgifter som lagras i Trust Store Management. A *lokal autentiseringsuppgift* används för att identifiera var användarens DES-autentiseringsuppgifter lagras. Med Trust Store Management kan du importera och hantera dina lokala inloggningsuppgifter med exempelvis befintliga PFX-filer så att du kan importera, redigera och ta bort lokala inloggningsuppgifter.
 
 AEM har stöd för RSA- och DSA-referenser på upp till 4 096 bitar i standardformatet PKCS12 (.pfx- och .p12-filer).
 
 Du kan importera och exportera valfritt antal autentiseringsuppgifter. Om du vill ersätta en inloggningsinformation som har gått ut med samma alias tar du bort inloggningsinformationen och importerar sedan den nya inloggningsinformationen med samma alias.
 
-Information och instruktioner om Acrobat Reader DC-tillägg finns i [Konfigurera autentiseringsuppgifter för användning med Acrobat Reader DC-tillägg](/help/forms/using/admin-help/configuring-credentials-acrobat-reader-dc.md#configuring-credentials-for-use-with-acrobat-reader-dc-extensions).
+Mer information och instruktioner om Acrobat Reader DC-tillägg finns i [Konfigurera autentiseringsuppgifter för användning med Acrobat Reader DC-tillägg](/help/forms/using/admin-help/configuring-credentials-acrobat-reader-dc.md#configuring-credentials-for-use-with-acrobat-reader-dc-extensions).
 
 ## Importera en autentiseringsuppgift {#import-a-credential}
 
 1. I administrationskonsolen klickar du på Inställningar > Lita på arkivhantering > Lokala autentiseringsuppgifter.
 1. Klicka på Importera. Välj något av följande alternativ under Pålitlig lagringstyp:
 
-   * **Dokumentsigneringsuppgifter:** En autentiseringsuppgift som används för att utfärda en digital signatur i ett dokument.
-   * **Acrobat Reader DC Extensions Credential:** Ett digitalt certifikat som är specifikt för Acrobat Reader DC-tillägg och som gör att Adobe Reader användarrättigheter kan aktiveras i de PDF-dokument som skapas.
-   * **Standard:** Anger att det här är standardautentiseringsuppgifter som ska användas med Acrobat Reader DC-tillägg.
+   * **Autentiseringsuppgifter för dokumentsignering:** En autentiseringsuppgift som används för att utfärda en digital signatur i ett dokument.
+   * **Autentiseringsuppgifter för Acrobat Reader DC-tillägg:** Ett digitalt certifikat som är specifikt för Acrobat Reader DC-tillägg och som gör det möjligt att aktivera Adobe Reader användarrättigheter i de PDF-dokument som skapas.
+   * **Standard:** Anger att det här är standardautentiseringsuppgiften som används med Acrobat Reader DC-tillägg.
 
-   Mer information om hur du hämtar autentiseringsuppgifter finns i [Förbereda för att installera AEM](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_63).
+   Mer information om hur du hämtar en inloggningsinformation finns i [Förbereder installation av AEM formulär](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_63).
 
 1. Ange en identifierare för autentiseringsuppgifterna i rutan Alias. Den här identifieraren används som visningsnamn för autentiseringsuppgifterna i Acrobat Reader DC-tillägg och Signature-tjänsten. Det här aliaset används även för att få åtkomst till autentiseringsuppgifter via programmering med AEM formulär SDK.
 
@@ -72,4 +71,3 @@ När en autentiseringsuppgift har importerats kan du redigera dess aliasnamn och
 1. I administrationskonsolen klickar du på Inställningar > Lita på arkivhantering > Lokala autentiseringsuppgifter.
 1. Markera kryssrutorna för de autentiseringsuppgifter som ska tas bort.
 1. Klicka på Ta bort och sedan på OK.
-

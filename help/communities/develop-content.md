@@ -1,27 +1,24 @@
 ---
 title: Utveckla innehåll i sandlådan
-seo-title: Utveckla innehåll i sandlådan
+seo-title: Develop Sandbox Content
 description: Utveckla innehåll
-seo-description: Utveckla innehåll
+seo-description: Develop content
 uuid: ca046cf8-f6cd-41a1-97c8-74a86fbe9cd2
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: b97abfc9-62e6-470c-bb86-086e662c8091
-translation-type: tm+mt
-source-git-commit: d6c8bbb9aa763a2eb6660b6b6755aba75241e394
+exl-id: d25c243c-257b-4ba8-b1c5-e306906812ea
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '41'
+source-wordcount: '36'
 ht-degree: 0%
 
 ---
 
-
-# Utveckla innehåll i sandlådan {#develop-sandbox-content}
+# Utveckla innehåll i sandlådan  {#develop-sandbox-content}
 
 **[Lägg till klienter](add-clientlibs.md)**
 
-Nu kan du utforska communityfunktioner i sandlådan tillsammans med [We-Retail Community](../../help/sites-developing/we-retail.md), [Community Components Guide](components-guide.md) och [feature essentials](essentials.md) som referens.
-
-
+Nu är det möjligt att utforska communityfunktioner i sandlådan tillsammans med att använda [Vi-butiker](../../help/sites-developing/we-retail.md), [Community Components Guide](components-guide.md) och [grundläggande funktioner](essentials.md) för referens.

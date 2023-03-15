@@ -11,9 +11,9 @@ discoiquuid: f89921ef-c638-4a07-88d5-3dd8614c5166
 docset: aem65
 role: Admin
 exl-id: 2fc8abec-8ba6-40b7-bbb1-4288eeea7c86
-source-git-commit: a98550c11405e6d0f43ff7ed8905644a3aedd78c
+source-git-commit: 879855af80ffdaa9c5f40e43f8b1543ed9305c13
 workflow-type: tm+mt
-source-wordcount: '330'
+source-wordcount: '329'
 ht-degree: 0%
 
 ---
@@ -58,7 +58,7 @@ Du kan också utföra en uppgradering från
 * AEM 6.1 Forms on JEE
 * AEM 6.2 Forms on JEE
 
-AEM 6.5.12.0 Forms on JEE innehåller två typer av installationsprogram: [Fullständig installationsfil](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) och [Installationsprogram för korrigeringsfiler](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html).
+AEM 6.5.12.0 Forms on JEE innehåller två typer av installationsprogram: [Fullständig installationsfil](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en) och [Installationsprogram för korrigeringsfiler](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en).
 
 **Fullständig installationsfil**: Du kan använda det fullständiga installationsprogrammet för att ställa in nya AEM Forms-instanser eller utföra uppgraderingar från AEM 6.3 Forms på JEE, AEM 6.4 på JEE och uppgradering från AEM 6.5.x.x Forms på JEE till AEM 6.5.12.0 Forms på JEE.
 
@@ -66,7 +66,7 @@ AEM 6.5.12.0 Forms on JEE innehåller två typer av installationsprogram: [Fulls
 
 I följande bild visas avsändare som använder det fullständiga installationsprogrammet och korrigeringsprogrammet.
 
-![Installationsprogram för fullständig installation och korrigering](/help/forms/using/assets/full-and-patch-installer.png)
+![](assets/full-and-patch-installer.png)
 
 <!--
 [Work in Progress]

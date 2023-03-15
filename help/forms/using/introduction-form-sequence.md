@@ -1,8 +1,8 @@
 ---
 title: Introduktion till formulärsekvenser i flera steg
-seo-title: Introduktion till formulärsekvenser i flera steg
+seo-title: Introduction to multi-step form sequence
 description: Med AEM Forms kan du definiera en sekvens av formulärpanel där du vill att användarna ska navigera och fylla i ett anpassat formulär.
-seo-description: Med AEM Forms kan du definiera en sekvens av formulärpanel där du vill att användarna ska navigera och fylla i ett anpassat formulär.
+seo-description: With AEM Forms, you can define a sequence of form panel in which you want users to navigate and fill an adaptive form.
 uuid: db1aac25-fe69-4e43-88d1-4a15389b507f
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,18 +10,17 @@ topic-tags: author
 discoiquuid: 0f335ea0-504f-4cc0-b97b-c3fc715bcc2e
 docset: aem65
 feature: Adaptive Forms
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 1333c6cb-15cc-429b-a13e-5d23afdee69a
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '544'
+source-wordcount: '514'
 ht-degree: 0%
 
 ---
 
+# Introduktion till formulärsekvenser i flera steg{#introduction-to-multi-step-form-sequence}
 
-# Introduktion till formulärsekvens i flera steg{#introduction-to-multi-step-form-sequence}
-
-Med adaptiva blanketter kan man enkelt skapa datainhämtning i flera steg. Den har inbyggt stöd för att skapa flera paneler och koppla ihop varje panel med olika navigeringsmönster. Formulärförfattare kan gruppera formulärfält i logiska avsnitt och representera en grupp som en panel. Den övergripande navigeringen mellan paneler styrs med hjälp av panellayouten. Författare kan välja att ordna paneler i olika layouter, t.ex. placera sekventiellt med guidelayouten eller på ett ad hoc-sätt med hjälp av fliklayouten. Mer information om panellayouter finns i [Layoutfunktioner i adaptiva formulär](../../forms/using/layout-capabilities-adaptive-forms.md).
+Med adaptiva blanketter kan man enkelt skapa datainhämtning i flera steg. Den har inbyggt stöd för att skapa flera paneler och koppla ihop varje panel med olika navigeringsmönster. Formulärförfattare kan gruppera formulärfält i logiska avsnitt och representera en grupp som en panel. Den övergripande navigeringen mellan paneler styrs med hjälp av panellayouten. Författare kan välja att ordna paneler i olika layouter, t.ex. placera sekventiellt med guidelayouten eller på ett ad hoc-sätt med hjälp av fliklayouten. Mer information om panellayouter finns i [Layoutfunktioner i anpassningsbara formulär](../../forms/using/layout-capabilities-adaptive-forms.md).
 
 I en typisk miljö för ifyllnad av formulär finns det fler steg än att bara hämta in data. En fullständig inlämning av formulär kan omfatta andra steg, som att signera formuläret digitalt, verifiera den information som fylls i formuläret, bearbeta betalningar och så vidare. Det skiljer sig från fall till fall.
 
@@ -37,17 +36,16 @@ Låt oss ta ett exempel där du behöver skapa en sekvens för att fylla i, veri
 
    * **Fyllning**: Den innehåller formulärfält för datainhämtning. Här kan du ta med kapslade underpaneler för att skapa avsnitt för olika typer av information, t.ex. personlig, familj, ekonomi osv.
 
-   * **Verifiera**: Den innehåller  **** Verifycomponent som kan användas i en XFA-baserad adaptiv form. Den information som hämtas på panelen Fyllning visas i skrivskyddat läge för verifiering.
+   * **Verifiera**: Den innehåller **Verifiera** -komponent som kan användas i en XFA-baserad adaptiv form. Den information som hämtas på panelen Fyllning visas i skrivskyddat läge för verifiering.
 
-   * **E-signatur**: Den innehåller  **** Signcomponent som kan användas i en XFA-baserad adaptiv form. den tillhandahåller följande signeringstjänster:
+   * **E-signera**: Den innehåller **Signera** -komponent som kan användas i en XFA-baserad adaptiv form. den tillhandahåller följande signeringstjänster:
 
       * Adobe Document Cloud eSign-tjänster
       * Klottra signaturer
-   * **Bekräftelse**: Den innehåller  **** Summarycomponent som visar ett meddelande som bekräftar att formuläret skickas när en användare har signerat formuläret och når steget Bekräfta (Sammanfattning) i sekvensen. Författare kan konfigurera texten i komponenten Sammanfattning, visa ett tackmeddelande, visa en länk till den genererade PDF-filen och så vidare.
+   * **Bekräftelse**: Den innehåller **Sammanfattning** som visar ett meddelande som bekräftar att formuläret skickas när en användare har signerat formuläret och når steget Bekräfta (Sammanfattning) i sekvensen. Författare kan konfigurera texten i komponenten Sammanfattning, visa ett tackmeddelande, visa en länk till det genererade PDF och så vidare.
 
 
 1. Välj layouten för rotpanelen som **[!UICONTROL Wizard]**.
-1. Slutför de återstående stegen för att skapa formulärmallen. Mer information finns i [Skapa en anpassad adaptiv formulärmall](../../forms/using/custom-adaptive-forms-templates.md).
+1. Slutför de återstående stegen för att skapa formulärmallen. Mer information finns i [Skapa en anpassad anpassad formulärmall](../../forms/using/custom-adaptive-forms-templates.md).
 
 När du har definierat formulärsekvensen i formulärmallen kan du använda den för att skapa formulär som har den grundläggande strukturen definierad som sekvensen på plats, även om du alltid kan anpassa formuläret efter dina behov.
-

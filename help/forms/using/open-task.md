@@ -1,23 +1,22 @@
 ---
 title: Öppna en uppgift
-seo-title: Öppna en uppgift
+seo-title: Opening a task
 description: Steg för att öppna en uppgift i din AEM Forms-app.
-seo-description: Steg för att öppna en uppgift i din AEM Forms-app.
+seo-description: Steps to open a task on your AEM Forms app.
 uuid: 3f543391-a62b-40ef-aa28-59b7f99554f1
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 discoiquuid: cdce7a6a-2bbf-492f-bf91-5b8f07d02207
-translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+exl-id: 08e267f3-7f90-4e75-aea0-2128e8eb7b30
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '292'
+source-wordcount: '279'
 ht-degree: 0%
 
 ---
 
-
-# Öppna en aktivitet {#opening-a-task}
+# Öppna en uppgift {#opening-a-task}
 
 Om AEM Forms-programmet synkroniseras med en AEM Forms-server kan du arbeta med uppgifter som du har tilldelats. Uppgifter är steg i arbetsflödet som definieras i workbench eller i AEM arbetsflödesredigerare.
 
@@ -34,11 +33,11 @@ Andra formulär sparas som utkast på fliken Utkast. Se [Spara ett utkast](/help
 
 1. Tryck på uppgiften för att öppna den.
 
-   Du kan trycka på **Visa sammanfattning** om du vill visa ytterligare instruktioner som anges i Workbench-processen.
+   Du kan trycka **Visa sammanfattning** om du vill visa ytterligare instruktioner som anges i Workbench-processen.
 
 **Öppna ett program**
 
-1. Tryck på **application** på fliken **Forms**.
+1. Tryck på **program** i **Forms** -fliken.
 
    När du väljer ett program visas programbeskrivningen under programnamnet. Efter beskrivningen visas den användaråtgärd/de användaråtgärder som är kopplade till programmet.
 
@@ -47,4 +46,4 @@ Andra formulär sparas som utkast på fliken Utkast. Se [Spara ett utkast](/help
 
 1. Tryck på uppgiften för att öppna den.
 
-   Du kan trycka på **Visa sammanfattning** om du vill visa ytterligare instruktioner för programmet.
+   Du kan trycka **Visa sammanfattning** om du vill visa ytterligare instruktioner för programmet.

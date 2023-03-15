@@ -1,8 +1,8 @@
 ---
 title: Steg 1 för författare
-seo-title: Steg 1 för författare
+seo-title: First Steps for Authors
 description: En översikt över de huvudåtgärder som du kommer att använda när du börjar redigera innehåll med AEM
-seo-description: En översikt över de huvudåtgärder som du kommer att använda när du börjar redigera innehåll med AEM
+seo-description: An overview of the main tasks that you will be using when starting to author content with AEM
 uuid: 1a09da22-faa4-4a7a-a2c5-97a255a6a2ae
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,18 +10,17 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 85ebc05d-ce45-4bbb-b9cc-b21810d0d877
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 38ef8fc8d80009c8ca79aca9e45cf10bd70e1f1e
+exl-id: b2103774-1876-4bf8-a29a-2ba0d51e7914
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '403'
 ht-degree: 0%
 
 ---
 
-
 # Steg 1 för författare{#first-steps-for-authors}
 
-I det här avsnittet får du en översikt över de huvudåtgärder som du kommer att använda när [börja skapa innehåll](/help/sites-authoring/author.md#concept-of-authoring-and-publishing) med Adobe Experience Manager (AEM).
+I det här avsnittet får du en översikt över de huvuduppgifter som du kommer att använda när [börja skapa innehåll](/help/sites-authoring/author.md#concept-of-authoring-and-publishing) med Adobe Experience Manager (AEM).
 
 Den omfattar följande:
 
@@ -35,11 +34,11 @@ Den omfattar följande:
 
 Här beskrivs den grundläggande händelsesekvensen som du behöver för att skapa och publicera din första sida.
 
-### Navigera till sidplatsen {#navigating-to-the-page-location}
+### Navigera till sidans plats {#navigating-to-the-page-location}
 
 Innehållet på din webbplats hålls i en trädstruktur. Om du vill skapa eller redigera en sida måste du [navigera till platsen](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources).
 
-### Skapar en ny sida {#creating-a-new-page}
+### Skapa en ny sida {#creating-a-new-page}
 
 Innan du redigerar måste du [skapa en ny sida](/help/sites-authoring/managing-pages.md#creating-a-new-page).
 
@@ -49,20 +48,20 @@ För många åtgärder, till exempel redigering, måste du [öppna en sida](/hel
 
 ### Redigera en sida {#editing-a-page}
 
-Oavsett om din instans redan har befintliga sidor eller du just har skapat en ny sida själv kan du [redigera en sida](/help/sites-authoring/editing-content.md) genom att:
+Om instansen redan har befintliga sidor eller om du just har skapat en ny sida själv kan du [redigera en sida](/help/sites-authoring/editing-content.md) av:
 
 * [Infoga en komponent (stycke)](/help/sites-authoring/editing-content.md#inserting-a-component)
-* [Redigera/konfigurera/kopiera/klipp ut/ta bort/](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste) monteraEn komponent
+* [Redigera/konfigurera/kopiera/klipp/ta bort/klistra in](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste) en komponent
 * [Redigera (innehåll)](/help/sites-authoring/editing-content.md#edit-content)
 * [Redigera (innehåll) - helskärmsläge](/help/sites-authoring/editing-content.md#edit-content-full-screen-mode)
 
 * [Ångra och göra om sidredigeringar](/help/sites-authoring/editing-content.md#undoing-and-redoing-page-edits)
-* [Använda förhandsgranskningsläget](/help/sites-authoring/editing-content.md#preview-mode)  (för att se hur det kommer att se ut när det publiceras)
+* [Använda förhandsgranskningsläge](/help/sites-authoring/editing-content.md#preview-mode) (för att se hur det kommer att se ut när det publiceras)
 * [Låsa en sida](/help/sites-authoring/editing-content.md#locking-a-page)
 
 ### Publicera en sida {#publishing-a-page}
 
-När du är klar med redigeringen av sidan vill du [publicera (eller aktivera) sidan](/help/sites-authoring/publishing-pages.md#main-pars-title-10) så att den är tillgänglig för besökare på webbplatsen.
+När du är klar med redigeringen av sidan vill du [publicera (eller aktivera) sidan](/help/sites-authoring/publishing-pages.md#main-pars-title-10) så att den blir tillgänglig för besökare på er webbplats.
 
 ## Ytterligare åtgärder {#further-actions}
 
@@ -70,27 +69,27 @@ Efter de grundläggande stegen finns det många andra åtgärder som du kan anv�
 
 ### Kopiera en sida {#copying-a-page}
 
-Det är ibland enklare att [kopiera en sida](/help/sites-authoring/managing-pages.md#copying-and-pasting-a-page) och återanvända innehållet i stället för att skapa allt från början igen.
+Det är ibland enklare att [kopiera en sida](/help/sites-authoring/managing-pages.md#copying-and-pasting-a-page) och återanvänd innehållet i stället för att skapa allt från början igen.
 
 ### Flytta eller byta namn på en sida {#moving-or-renaming-a-page}
 
-[Att flytta och byta namn på ](/help/sites-authoring/managing-pages.md#moving-or-renaming-a-page) sidor görs i princip med samma åtgärd.
+[Flytta och byta namn på sidor](/help/sites-authoring/managing-pages.md#moving-or-renaming-a-page) i stort sett samma sak.
 
 ### Avpublicera en sida {#unpublishing-a-page}
 
-Om du vill göra tidigare publicerat (eller aktiverat) innehåll otillgängligt på den offentliga webbplatsen [avpublicerar (eller inaktiverar) du sidan](/help/sites-authoring/publishing-pages.md#main-pars-title-5).
+Om du vill göra tidigare publicerat (eller aktiverat) innehåll otillgängligt på din offentliga webbplats [avpublicera (eller inaktivera) sidan](/help/sites-authoring/publishing-pages.md#main-pars-title-5).
 
-### Tar bort en sida {#deleting-a-page}
+### Ta bort en sida {#deleting-a-page}
 
 Om en sida inte längre behövs kanske du vill [ta bort sidan](/help/sites-authoring/managing-pages.md#deleting-a-page).
 
 ### Ange sidegenskaper {#setting-the-page-properties}
 
-Varje [sida har egenskaper](/help/sites-authoring/editing-page-properties.md) som du kan definiera för att avgöra olika aspekter av åtgärden. Dessa kan uppdateras med båda användargränssnitten.
+Varje [sidan har egenskaper](/help/sites-authoring/editing-page-properties.md) som du kan definiera för att avgöra olika aspekter av åtgärden. Dessa kan uppdateras med båda användargränssnitten.
 
 ### Skapa en version av en sida {#creating-a-version-of-a-page}
 
-Du kan [skapa en version](/help/sites-authoring/working-with-page-versions.md#creating-a-new-version) av en sida och sedan [återgå till en version](/help/sites-authoring/working-with-page-versions.md#reverting-to-a-page-version) om det behövs.
+Du kan [skapa en version](/help/sites-authoring/working-with-page-versions.md#creating-a-new-version) på en sida och sedan [återgå till en version](/help/sites-authoring/working-with-page-versions.md#reverting-to-a-page-version) vid behov.
 
 ## Mer information {#more-information}
 

@@ -1,22 +1,21 @@
 ---
 title: Gestanpassning
-seo-title: Gestanpassning
+seo-title: Gesture customization
 description: Anpassa gesterna i din AEM Forms-app
-seo-description: Anpassa gesterna i din AEM Forms-app
+seo-description: Customize the gestures on your AEM Forms app
 uuid: 117e0e21-66bd-42f1-879c-6c1443991974
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 discoiquuid: 747d13d3-e7cc-4aa1-bcc8-4b57157e71ed
-translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+exl-id: 6debb1a7-7889-4fdd-87c7-ecb87cc0b1f5
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '296'
 ht-degree: 0%
 
 ---
-
 
 # Gestanpassning {#gesture-customization}
 
@@ -28,27 +27,27 @@ I AEM Forms-appen öppnas en ny åtgärd med den vänstra svepningen eller start
 
 1. Öppna projektet.
 
-   * Öppna `Capture.xcodeproj` i Xcode för iOS
+   * För iOS, öppna `Capture.xcodeproj` i Xcode
    * För Android öppnar du Android-projektet i Eclipse.
-   * För Windows öppnar du `MWSWindows.sln` i Visual Studio.
+   * För Windows: öppna `MWSWindows.sln` i Visual Studio.
 
-1. Navigera till vymappen och öppna `task.js`-filen för redigering.
+1. Navigera till vymappen och öppna `task.js` fil för redigering.
 
-   * I Xcode navigerar du till mappen **Capture > www > wsmoble > js > runtime > views**.
-   * I Eclipse navigerar du till mappen **assets > www > wsmoble > js > runtime > views**.
-   * I Visual Studio går du till mappen **MWSWindows > www > wsmoble > js > runtime > views**.
+   * I Xcode navigerar du till **Capture > www > wsmoble > js > runtime > views** mapp.
+   * I Eclipse navigerar du till **assets > www > wsmoble > js > runtime > views** mapp.
+   * I Visual Studio går du till **MWSWindows > www > wsmoble > js > runtime > views** mapp.
 
    >[!NOTE]
    >
    >Filen task.js innehåller den stamnätsvy som är associerad med varje uppgift eller startpunkt som listas i uppgifts- eller startpunktslistorna.
 
-1. I filen `task.js` söker du efter egenskapen events för vyn.
+1. I `task.js` söker du efter egenskapen events för vyn.
 
    Egenskapen events är en karta med varje post i formatet:
 
    `"EventName Selector": "Function"`
 
-   När du utlöser en Javascript-händelse med namnet `EventName`för ett HTML-element som anges av `Selector` anropas `Function`händelsen.
+   När du utlöser en Javascript-händelse med namnet `EventName`på ett HTML-element som anges av `Selector`, `Function`anropas.
 
 1. Sök
 
@@ -70,7 +69,7 @@ I AEM Forms-appen öppnas en ny åtgärd med den vänstra svepningen eller start
       &quot;swipe .last_empty_div&quot; : &quot;onTaskClick&quot;,
 
 
-1. Spara och stäng `task.js`-filen.
+1. Spara och stäng `task.js` -fil.
 1. Bygg och kör appen AEM Forms. Nu kan du öppna en med hjälp av vänstersvepning och högersvepning.
 
 På samma sätt kan du göra ändringar i andra vyer för olika kombinationer av gester, HTML-element och funktioner.

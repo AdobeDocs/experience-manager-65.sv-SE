@@ -1,28 +1,27 @@
 ---
 title: Arbetshanteraren och begränsning
-seo-title: Arbetshanteraren och begränsning
+seo-title: Work Manager and throttling
 description: Det här dokumentet innehåller bakgrundsinformation om Work Manager och anvisningar om hur du konfigurerar begränsningsalternativ för Work Manager.
-seo-description: Det här dokumentet innehåller bakgrundsinformation om Work Manager och anvisningar om hur du konfigurerar begränsningsalternativ för Work Manager.
+seo-description: This document provides background information on Work Manager, and provides instructions on configuring Work Manager throttling options.
 uuid: b90998bc-e3d4-493a-9371-55ccb44da20d
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/maintaining_aem_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 9a8b4e3a-f416-4dc6-a90a-9018df5c844e
-translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+exl-id: 1f765de2-1362-4318-9302-c5036e6fa7d6
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1044'
+source-wordcount: '1023'
 ht-degree: 0%
 
 ---
-
 
 # Arbetshanteraren och begränsning{#work-manager-and-throttling}
 
 AEM (och tidigare versioner) använde JMS-köer för att köra åtgärder asynkront. I AEM har JMS-köer ersatts av Work Manager. Det här dokumentet innehåller bakgrundsinformation om Work Manager och anvisningar om hur du konfigurerar begränsningsalternativ för Work Manager.
 
-## Om långlivade (asynkrona) åtgärder {#about-long-lived-asynchronous-operations}
+## Om långvariga (asynkrona) åtgärder {#about-long-lived-asynchronous-operations}
 
 I AEM kan åtgärder som utförs av tjänster vara antingen kortlivade (synkrona) eller långlivade (asynkrona). Kortlivade åtgärder slutförs synkront på samma tråd som de anropades från. Dessa åtgärder väntar på ett svar innan de fortsätter.
 
@@ -40,7 +39,7 @@ Asynkrona åtgärder hanteras på följande sätt:
 
 AEM formuläradministratörer kan använda Health Monitor för att kontrollera Work Manager-statistik, t.ex. antalet arbetsobjekt i kön och deras status. Du kan också använda Hälsoövervakning för att pausa, återuppta, försöka igen eller ta bort arbetsobjekt. (Se [Visa statistik för Work Manager](/help/forms/using/admin-help/view-statistics-related-manager.md#view-statistics-related-to-work-manager).)
 
-## Konfigurerar begränsningsalternativ för Work Manager {#configuring-work-manager-throttling-options}
+## Konfigurera begränsningsalternativ för Work Manager {#configuring-work-manager-throttling-options}
 
 Du kan konfigurera begränsning för Work Manager så att arbetsobjekt schemaläggs endast när det finns tillräckligt med minnesresurser. Du konfigurerar begränsning genom att ange följande JVM-alternativ på programservern.
 
@@ -58,11 +57,11 @@ Du kan konfigurera begränsning för Work Manager så att arbetsobjekt schemalä
   </tr>
   <tr>
    <td><code> adobe.workmanager.debug-mode-enabled</code></td>
-   <td><p>Ange det här alternativet till <code>true</code> om du vill aktivera felsökningsläget, eller till false om du vill inaktivera det. </p><p>I felsökningsläget loggas meddelanden om brott mot policyn i Work Manager och om att pausa/återuppta åtgärder i Work Manager. Ange att det här alternativet endast ska vara true vid felsökning.</p></td>
+   <td><p>Ställ in det här alternativet på <code>true</code> om du vill aktivera felsökningsläget eller till false om du vill inaktivera det. </p><p>I felsökningsläget loggas meddelanden om brott mot policyn i Work Manager och om att pausa/återuppta åtgärder i Work Manager. Ange att det här alternativet endast ska vara true vid felsökning.</p></td>
   </tr>
   <tr>
    <td><code> adobe.workmanager.memory-control.enabled</code></td>
-   <td><p>Ange det här alternativet till <code>true</code> om du vill aktivera begränsning baserat på inställningarna för minneskontroll som beskrivs nedan, eller till <code>false</code> om du vill inaktivera begränsning.</p></td>
+   <td><p>Ställ in det här alternativet på <code>true</code> för att aktivera begränsning baserat på de inställningar för minneskontroll som beskrivs nedan, eller till <code>false</code> för att inaktivera strypning.</p></td>
   </tr>
   <tr>
    <td><code> adobe.workmanager.memory-control.high-limit</code></td>
@@ -82,7 +81,7 @@ Du kan konfigurera begränsning för Work Manager så att arbetsobjekt schemalä
 **Lägg till Java-alternativ i JBoss**
 
 1. Stoppa JBoss-programservern.
-1. Öppna *[appserverroten]*/bin/run.bat (Windows) eller run.sh (Linux eller UNIX) i en redigerare och lägg till eventuella Java-alternativ i formatet `-Dproperty=value`.
+1. Öppna *[appserver root]*/bin/run.bat (Windows) eller run.sh (Linux eller UNIX) i en redigerare och lägg till eventuella Java-alternativ i formatet `-Dproperty=value`.
 1. Starta om servern.
 
 **Lägg till Java-alternativ i WebLogic**
@@ -106,4 +105,3 @@ Du kan konfigurera begränsning för Work Manager så att arbetsobjekt schemalä
 1. Klicka på Java Virtual Machine under Additional Properties (Ytterligare egenskaper).
 1. Skriv de argument du vill ha i rutan Allmänt om JVM-argument.
 1. Klicka på OK eller Använd och sedan på Spara direkt i den överordnad konfigurationen.
-

@@ -1,24 +1,23 @@
 ---
 title: Finjustera prestanda för hälsoövervakning
-seo-title: Finjustera prestanda för hälsoövervakning
+seo-title: Fine-tuning Health Monitor performance
 description: Lär dig finjustera prestanda för hälsoövervakning
-seo-description: Lär dig finjustera prestanda för hälsoövervakning
+seo-description: Learn how to fine-tune Health Monitor performance
 uuid: 770b10cb-065f-41b5-9594-a291e4311151
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/health_monitor
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: b8f8bddc-0d38-4d5e-b33f-978f04bc16c6
-translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+exl-id: 41042e08-5e14-4809-89b7-16d98a72d1b4
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '418'
+source-wordcount: '407'
 ht-degree: 0%
 
 ---
 
-
-# Finjustera hälsoövervakarens prestanda{#fine-tuning-health-monitor-performance}
+# Finjustera prestanda för hälsoövervakning{#fine-tuning-health-monitor-performance}
 
 När du samlar in systemstatistik som fyller i hälsoövervakaren påverkas prestanda i AEM formulärmiljö. Den här effekten kan styras genom att du anger de Java-alternativ som anges nedan på programservern.
 
@@ -67,7 +66,7 @@ När du samlar in systemstatistik som fyller i hälsoövervakaren påverkas pres
 ## Lägg till Java-alternativ i JBoss {#add-java-options-to-jboss}
 
 1. Stoppa JBoss-programservern.
-1. Öppna *[appserverroten]*/bin/run.bat (Windows) eller run.sh (Linux eller UNIX) i en redigerare och lägg till eventuella Java-alternativ.
+1. Öppna *[appserver root]*/bin/run.bat (Windows) eller run.sh (Linux eller UNIX) i en redigerare och lägg till eventuella Java-alternativ.
 1. Starta om servern.
 
 ## Lägg till Java-alternativ i WebLogic {#add-java-options-to-weblogic}
@@ -76,7 +75,7 @@ När du samlar in systemstatistik som fyller i hälsoövervakaren påverkas pres
 1. Skriv användarnamnet och lösenordet som du skapade för WebLogic Server-domänen och klicka på Logga under Change Center och klicka på Lock &amp; Edit.
 1. Klicka på Miljö > Servrar under Domänstruktur och klicka på namnet på den hanterade servern i den högra panelen.
 1. På nästa skärm klickar du på fliken Konfiguration > fliken Serverstart.
-1. I rutan Argument lägger du till de argument du vill ha i slutet av det aktuella innehållet. Om du till exempel lägger till - `Dadobe.healthmonitor.enabled=false` inaktiveras hälsoövervakaren.
+1. I rutan Argument lägger du till de argument du vill ha i slutet av det aktuella innehållet. Till exempel lägger du till - `Dadobe.healthmonitor.enabled=false` inaktiverar hälsoövervakning.
 1. Klicka på Spara och sedan på Aktivera ändringar.
 1. Starta om WebLogic-hanterad server.
 
@@ -93,4 +92,3 @@ När du samlar in systemstatistik som fyller i hälsoövervakaren påverkas pres
 1. Klicka på Java Virtual Machine under Additional Properties (Ytterligare egenskaper).
 1. Skriv de argument du vill ha i rutan Allmänt om JVM-argument.
 1. Klicka på OK eller Använd och sedan på Spara direkt i den överordnad konfigurationen.
-

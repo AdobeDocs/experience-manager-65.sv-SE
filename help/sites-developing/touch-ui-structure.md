@@ -1,24 +1,23 @@
 ---
 title: Struktur för det AEM användargränssnittet med pekskärm
-seo-title: Struktur för det AEM användargränssnittet med pekskärm
+seo-title: Structure of the AEM Touch-Enabled UI
 description: Det pekoptimerade användargränssnittet, som implementeras i AEM, har flera underliggande principer och består av flera nyckelelement
-seo-description: Det pekoptimerade användargränssnittet, som implementeras i AEM, har flera underliggande principer och består av flera nyckelelement
+seo-description: The touch-optimized UI, as implemented in AEM, has several underlying principles and is made up of several key elements
 uuid: 9a255238-1adc-4a40-9c37-30cb53ffb26c
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
 discoiquuid: 55dba890-4847-4986-b272-33480bc1d573
-translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+exl-id: e562b289-5d8b-4fa8-ad1c-fff5f807a45e
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '861'
 ht-degree: 1%
 
 ---
 
-
-# Struktur för det AEM Touch-aktiverade användargränssnittet{#structure-of-the-aem-touch-enabled-ui}
+# Struktur för det AEM användargränssnittet med pekskärm{#structure-of-the-aem-touch-enabled-ui}
 
 Det AEM användargränssnittet med pekskärm har flera underliggande principer och består av flera nyckelelement:
 
@@ -38,7 +37,7 @@ Om upplösningen till exempel ligger under 1 024 px (som på en mobil enhet) jus
 
 ![chlimage_1-143](assets/chlimage_1-143.png)
 
-### Huvudfält {#header-bar}
+### Sidhuvudsfält {#header-bar}
 
 ![chlimage_1-144](assets/chlimage_1-144.png)
 
@@ -71,7 +70,7 @@ Den vänstra listen kan öppnas/döljas efter behov för att visa:
 * **Referenser**
 * **Filter**
 
-Standardvärdet är **Endast innehåll** (dolda skenor).
+Standardvärdet är **Endast innehåll** (dold räl).
 
 ![chlimage_1-147](assets/chlimage_1-147.png)
 
@@ -87,11 +86,11 @@ Innehållsramen finns till höger i fönstret, under verktygsfältet.
 
 ![chlimage_1-148](assets/chlimage_1-148.png)
 
-### Redigeringsbildruta {#editor-frame}
+### Redigeringsram {#editor-frame}
 
 Redigeringsramen har redigeringsfunktionerna.
 
-Redigeringsbildrutan är en behållare (abstrakt) för alla *element för sidredigering*. Den ligger ovanpå innehållsramen och innehåller:
+Redigeringsramen är en behållare (abstrakt) för alla *redigeringselement för sidor*. Den ligger ovanpå innehållsramen och innehåller:
 
 * det övre verktygsfältet
 * sidopanelen
@@ -100,7 +99,7 @@ Redigeringsbildrutan är en behållare (abstrakt) för alla *element för sidred
 
 ![chlimage_1-149](assets/chlimage_1-149.png)
 
-### Panelen Sida {#side-panel}
+### Side Panel {#side-panel}
 
 Detta innehåller två standardflikar där du kan välja resurser och komponenter; de kan dras härifrån och släppas på sidan.
 
@@ -114,7 +113,7 @@ På fliken Resurser kan du välja bland flera resurser. Du kan också filtrera e
 
 ![chlimage_1-151](assets/chlimage_1-151.png)
 
-### Sidopanelen - resursgrupper {#side-panel-asset-groups}
+### Sida - Resursgrupper {#side-panel-asset-groups}
 
 På fliken Resurser finns det en listruta där du kan välja specifika resursgrupper.
 
@@ -128,7 +127,7 @@ På fliken Komponenter kan du välja bland komponenterna. Du kan också filtrera
 
 ### Övertäckningar {#overlays}
 
-Dessa täcker innehållsramen och används av [lagren](#layer) för att realisera mekanismerna för hur du kan interagera (helt genomskinligt) med komponenterna och deras innehåll.
+Dessa överlägg innehållsramen och används av [lager](#layer) för att utnyttja mekanismerna i hur du kan interagera (helt transparent) med komponenterna och deras innehåll.
 
 Övertäckningarna finns i redigerarramen (med alla andra sidredigeringselement), även om de faktiskt täcker över rätt komponenter i innehållsramen.
 
@@ -167,7 +166,6 @@ Beroende på vilket utrymme som är tillgängligt placeras komponentens verktygs
 
 ## Ytterligare information {#further-information}
 
-Mer information om begreppen kring det beröringsaktiverade användargränssnittet finns i artikeln [Concepts of the AEM Touch-Enabled UI](/help/sites-developing/touch-ui-concepts.md).
+Mer information om begreppen kring det beröringsaktiverade användargränssnittet finns i artikeln [Koncepten i det AEM användargränssnittet med pekskärm](/help/sites-developing/touch-ui-concepts.md).
 
-Mer teknisk information finns i [JS-dokumentationsuppsättningen](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html) för den beröringsaktiverade sidredigeraren.
-
+Mer teknisk information finns i [JS-dokumentationsuppsättning](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html) för den pekaktiverade sidredigeraren.

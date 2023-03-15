@@ -1,8 +1,8 @@
 ---
 title: Grundläggande om uppdrag
-seo-title: Grundläggande om uppdrag
+seo-title: Assignments Essentials
 description: Översikt över uppdragsfunktionen för aktiveringscommunities
-seo-description: Översikt över uppdragsfunktionen för aktiveringscommunities
+seo-description: Assignments feature overview for enablement communities
 uuid: e49fce26-1091-4f37-93e8-c4ec85371811
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -13,14 +13,14 @@ docset: aem65
 exl-id: 75cef5da-4f93-4721-99c0-ad44c8ab76d4
 source-git-commit: 1d334c42088342954feb34f6179dc5b134f81bb8
 workflow-type: tm+mt
-source-wordcount: '222'
+source-wordcount: '214'
 ht-degree: 0%
 
 ---
 
 # Grundläggande om uppdrag {#assignments-essentials}
 
-Läs vidare om du vill veta mer om den viktiga informationen för att arbeta med tilldelningsfunktionen i [aktiveringscommunityn](/help/communities/overview.md#enablement-community).
+Läs vidare om du vill veta mer om den viktigaste informationen för att arbeta med uppdragsfunktionen i [användargrupper](/help/communities/overview.md#enablement-community) webbplatser.
 
 Tilldelningsfunktionen är möjligheten att tilldela aktiveringsresurser och utbildningsvägar till medlemmar i aktiveringscommunityn.
 
@@ -38,7 +38,7 @@ Tilldelningsfunktionen är möjligheten att tilldela aktiveringsresurser och utb
   </tr>
   <tr>
    <td> <a href="/help/communities/clientlibs.md"><strong>klientlibs</strong></a></td>
-   <td>cq.social.enablement.hbs.breadcrumbs<br /> cq.social.enablement.hbs.mysigned<br /> cq.social.enablement.hbs.resource<br /> cq.social.enablement.hbs.learningpath</td>
+   <td>cq.social.enablement.hbs.breadcrumbs<br /> cq.social.enablement.hbs.myassign<br /> cq.social.enablement.hbs.resource<br /> cq.social.enablement.hbs.learningpath</td>
   </tr>
   <tr>
    <td> <strong>templates</strong></td>
@@ -85,7 +85,7 @@ De enda möjliga kombinationerna av slutförande och lyckad status är:
 
 ### Tilldelningsfunktion {#assignments-function}
 
-En community-platsstruktur som innehåller [uppdragsfunktionen](/help/communities/functions.md#assignments-function) innehåller en konfigurerad ` [assignments](/help/communities/assignments.md)`-komponent.
+En community-webbplatsstruktur som innehåller [Funktionen Uppdrag](/help/communities/functions.md#assignments-function), innehåller en konfigurerad ` [assignments](/help/communities/assignments.md)` -komponenten.
 
 ### Referens-API:er {#reference-apis}
 

@@ -2,35 +2,34 @@
 title: ConvertPDF Service
 seo-title: ConvertPDF Service
 description: Använd tjänsten AEM Forms ConvertPDF för att konvertera PDF-dokument till PostScript- eller bildfiler.
-seo-description: Använd tjänsten AEM Forms ConvertPDF för att konvertera PDF-dokument till PostScript- eller bildfiler.
+seo-description: Use AEM Forms ConvertPDF service to convert PDF documents to PostScript or image files.
 uuid: 7fa94c8c-485b-4a77-bcd3-ed716e3cf316
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
 discoiquuid: 5ec4f0ec-a9fd-4571-9b9a-278f4622c028
-translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+exl-id: 575bab27-d973-47fa-a0da-fa889cec6f27
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '414'
+source-wordcount: '398'
 ht-degree: 0%
 
 ---
-
 
 # ConvertPDF Service {#convertpdf-service}
 
 ## Översikt {#overview}
 
-Tjänsten Konvertera PDF konverterar PDF-dokument till PostScript- eller bildfiler (JPEG, JPEG 2000, PNG och TIFF). Att konvertera ett PDF-dokument till PostScript är användbart för oövervakad serverbaserad utskrift på en PostScript-skrivare. Att konvertera ett PDF-dokument till en flersidig TIFF-fil är praktiskt när man arkiverar dokument i content management-system som inte stöder PDF-dokument.
+Med tjänsten Konvertera PDF kan du konvertera PDF-dokument till PostScript- eller bildfiler (JPEG, JPEG 2000, PNG och TIFF). Att konvertera ett PDF-dokument till PostScript är användbart för oövervakad serverbaserad utskrift på en PostScript-skrivare. Det är praktiskt att konvertera ett PDF-dokument till en flersidig TIFF-fil när du arkiverar dokument i innehållshanteringssystem som inte stöder PDF.
 
-Du kan göra följande med tjänsten Konvertera PDF:
+Du kan göra följande med tjänsten Convert PDF:
 
-* Konvertera PDF-dokument till PostScript. När du konverterar till PostScript kan du använda konverteringsåtgärden för att ange källdokumentet och om det ska konverteras till PostScript-nivå 2 eller 3. PDF-dokumentet som du konverterar till en PostScript-fil måste vara icke-interaktivt.
+* Konvertera PDF-dokument till PostScript. När du konverterar till PostScript kan du använda konverteringsåtgärden för att ange källdokumentet och om det ska konverteras till PostScript-nivå 2 eller 3. Det PDF-dokument som du konverterar till en PostScript-fil måste vara icke-interaktivt.
 * Konvertera PDF-dokument till bildformaten JPEG, JPEG 2000, PNG och TIFF. När du konverterar till något av dessa bildformat kan du använda konverteringsåtgärden för att ange källdokumentet och en bildalternativsspecifikation. Specifikationen innehåller olika inställningar, till exempel bildkonverteringsformat, bildupplösning och färgkonvertering.
 
 ## Konfigurera egenskaper för tjänsten   {#properties}
 
-Du kan använda tjänsten **AEMFD ConvertPDF** i AEM Console för att konfigurera egenskaper för den här tjänsten. Standardwebbadressen för AEM är `https://[host]:'port'/system/console/configMgr`.
+Du kan använda **AEMFD ConvertPDF Service** i AEM Console för att konfigurera egenskaper för den här tjänsten. Standardwebbadressen AEM konsolen är `https://[host]:'port'/system/console/configMgr`.
 
 ## Använda tjänsten {#using-the-service}
 
@@ -40,7 +39,7 @@ ConvertPDF-tjänsten tillhandahåller följande två API:er:
 
 * **[toImage](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/cpdf/api/ConvertPdfService.html#toImage)**: Konverterar ett PDF-dokument till en bildfil. Bildformat som stöds är JPEG, JPEG2000, PNG och TIFF.
 
-### Använda toPS API med JSP eller Servlets {#using-tops-api-with-a-jsp-or-servlets}
+### Använda toPS API med en JSP eller Servlets {#using-tops-api-with-a-jsp-or-servlets}
 
 ```jsp
 <%@ page import="java.util.List, java.io.File,
@@ -135,9 +134,7 @@ String documentPath = "/content/dam/formsanddocuments/ExpenseClaimFlat.pdf";
 
 Att köra ConvertPDF-tjänsten från ett arbetsflöde påminner om att köra från JSP/Servlet.
 
-Den enda skillnaden är när tjänsten körs från JSP/Servlet som dokumentobjektet automatiskt hämtar en instans av ResourceResolver-objektet från objektet ResourceResolverHelper. Denna automatiska mekanism
-fungerar inte när koden anropas från ett arbetsflöde. För ett arbetsflöde skickar du en instans av ResourceResolver-objektet explicit till Document-klasskonstruktorn. Dokumentobjektet använder sedan
-tillhandahåller ResourceResolver-objekt för att läsa innehåll från databasen.
+Den enda skillnaden är när tjänsten körs från JSP/Servlet som dokumentobjektet automatiskt hämtar en instans av ResourceResolver-objektet från objektet ResourceResolverHelper. Den här automatiska mekanismen fungerar inte när koden anropas från ett arbetsflöde. För ett arbetsflöde skickar du en instans av ResourceResolver-objektet explicit till Document-klasskonstruktorn. Dokumentobjektet använder sedan det angivna ResourceResolver-objektet för att läsa innehåll från databasen.
 
 Följande exempelarbetsflödesprocess konverterar indatadokumentet till ett PostScript-dokument. Koden skrivs i ECMAScript och dokumentet skickas som arbetsflödets nyttolast:
 
@@ -193,4 +190,3 @@ var convertedPS = cpdfService.toPS(inputDocument, toPSOptions);
 // save converted PostScript file to disk
 convertedPS.copyToFile(new File("C:/temp/out.ps"));
 ```
-

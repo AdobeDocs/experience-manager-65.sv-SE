@@ -1,8 +1,8 @@
 ---
 title: Skapa en ny communitywebbplats för aktivering
-seo-title: Skapa en ny communitywebbplats för aktivering
+seo-title: Author a New Community Site for Enablement
 description: Skapa en communitywebbplats för aktivering
-seo-description: Skapa en communitywebbplats för aktivering
+seo-description: Create a community site for enablement
 uuid: a75fa566-a570-45fd-aabc-23651ef819cc
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -10,51 +10,50 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: b9333558-6af9-46b2-9f03-3722645c69a6
 docset: aem65
-translation-type: tm+mt
-source-git-commit: e9d5a7acad04d841cbc7d62050163f3de998fab6
+exl-id: 812bbf7b-c49f-4c34-a47d-636b0468e0ba
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1724'
+source-wordcount: '1711'
 ht-degree: 1%
 
 ---
-
 
 # Skapa en ny communitywebbplats för aktivering {#author-a-new-community-site-for-enablement}
 
 ## Skapa communitywebbplats {#create-community-site}
 
-[Community Site ](/help/communities/sites-console.md) creationanvänder en guide som vägleder dig genom de olika stegen för att skapa en community-webbplats. Du kan gå vidare till `Next`-steget eller `Back` till föregående steg innan du implementerar platsen i det sista steget.
+[Skapa communitysajter](/help/communities/sites-console.md) använder en guide som vägleder dig genom de olika stegen för att skapa en community-webbplats. Det går att gå vidare till `Next` steg eller `Back` till föregående steg innan webbplatsen implementeras i det sista steget.
 
 Så här kommer du igång med att skapa en ny community-webbplats:
 
-Använda [författarinstansen](https://localhost:4502/)
+Använda [författarinstans](https://localhost:4502/)
 
 * Logga in med administratörsbehörighet och navigera till **[!UICONTROL Communities]** > **[!UICONTROL Sites]**.
 
 * Välj **Skapa**.
 
-### Steg 1: Platsmall {#step-site-template}
+### Steg 1: Webbplatsmall {#step-site-template}
 
 ![aktivera webbplatsmall](assets/enablement-site-template.png)
 
-I steget **Webbplatsmall** anger du en titel, beskrivning, namn för webbadressen och väljer en mall för en community-webbplats, till exempel:
+På **Webbplatsmall** anger du en titel, beskrivning, URL-adressen och väljer en mall för en community-webbplats, till exempel:
 
-* **Webbplatstitel** för communityn:  `Enablement Tutorial`.
+* **Rubrik för communitywebbplats**: `Enablement Tutorial`.
 
-* **Beskrivning** av communityplats:  `A site for enabling the community to learn.`
+* **Beskrivning av communityplats**: `A site for enabling the community to learn.`
 
-* **Rotadress** för communityplats: (lämna tomt för standardroten  `/content/sites`)
+* **Community-platsrot**: (lämna tomt för standardroten `/content/sites`)
 
 * **Molnkonfigurationer**: (lämna tomt om ingen molnkonfiguration har angetts) ange sökvägen till de angivna molnkonfigurationerna.
-* **Grundspråk** för communitywebbplats: (lämnas orört för ett enda språk: På engelska) använder du listrutan för att välja ett  *eller* flera språk bland de tillgängliga språken - tyska, italienska, franska, japanska, spanska, portugisiska (Brasilien), kinesiska (traditionell) och kinesiska (förenklad). En communityplats skapas för varje språk som läggs till och finns i samma webbplatsmapp enligt den bästa praxis som beskrivs i [Översätta innehåll för flerspråkiga platser](/help/sites-administering/translation.md). Rotsidan för varje webbplats kommer att innehålla en underordnad sida med språkkoden för ett av de valda språken, till exempel &quot;en&quot; för engelska eller &quot;fr&quot; för franska.
+* **Bas-språk för communitywebbplats**: (lämnas orört för ett enda språk: på engelska) använd listrutan för att välja en *eller mer* basspråk från tillgängliga språk - tyska, italienska, franska, japanska, spanska, portugisiska (Brasilien), kinesiska (traditionell) och kinesiska (förenklad). En community-webbplats skapas för varje språk som läggs till och finns i samma webbplatsmapp enligt de rutiner som beskrivs i [Översätta innehåll för flerspråkiga webbplatser](/help/sites-administering/translation.md). Rotsidan för varje webbplats kommer att innehålla en underordnad sida med språkkoden för ett av de valda språken, till exempel &quot;en&quot; för engelska eller &quot;fr&quot; för franska.
 
-* **Namn på** communitywebbplats:  `enable`
+* **Namn på communitywebbplats**: `enable`
 
    * Den inledande URL:en visas under namnet på communitywebbplatsen
    * Ange en giltig URL genom att lägga till en baskod + &quot;.html&quot;
-      *Till exempel* https://localhost:4502/content/sites/  `enable/en.html`
+      *Till exempel*, https://localhost:4502/content/sites/ `enable/en.html`
 
-* **Referensplatsmall**: dra nedåt för att välja  `Reference Structured Learning Site Template`
+* **Referensplatsmall**: dra nedåt för att välja `Reference Structured Learning Site Template`
 
 Välj **Nästa**.
 
@@ -62,31 +61,31 @@ Välj **Nästa**.
 
 Designsteget presenteras i två avsnitt där du kan välja tema och varumärkesbanderoll:
 
-#### TEMA FÖR GEMENSKAPENS WEBBPLATS {#community-site-theme}
+#### TEMA PÅ GEMENSKAPENS WEBBPLATS {#community-site-theme}
 
 Välj det format som du vill använda på mallen. När du väljer det här alternativet överlagras temat med en bockmarkering.
 
-#### GEMENSKAPENS WEBBPLATSVARNING {#community-site-branding}
+#### GEMENSKAPENS WEBBPLATSHANTERING {#community-site-branding}
 
 (Valfritt) Ladda upp en banderollbild som ska visas på webbplatsens sidor. Banderollen är fäst vid webbläsarens vänstra kant, mellan communitywebbplatsens sidhuvud och meny (navigeringslänkar). Banderollhöjden beskärs till 120 pixlar. Banderollens storlek ändras inte så att den passar webbläsarens bredd och höjden 120 pixlar.
 
-![webbplatsmärkning1](assets/site-branding1.png)
+![site-branding1](assets/site-branding1.png)
 
-![webbplatsmärkning2](assets/site-branding2.png)
+![site-branding2](assets/site-branding2.png)
 
 Välj **Nästa**.
 
 ### Steg 3: Inställningar {#step-settings}
 
-Innan du väljer `Next` i steget Inställningar finns det sju avsnitt som ger åtkomst till konfigurationer som användarhantering, taggning, roller, moderering, analys, översättning och aktivering.
+I steget Inställningar, innan du väljer `Next`, observera att det finns sju avsnitt som ger åtkomst till konfigurationer som användarhantering, taggning, roller, moderering, analys, översättning och aktivering.
 
 #### ANVÄNDARHANTERING {#user-management}
 
-Vi rekommenderar att [aktiveringsgrupper](/help/communities/overview.md#enablement-community) är privata.
+Vi rekommenderar att [aktiveringscommunityn](/help/communities/overview.md#enablement-community) vara privat.
 
 En communitywebbplats är privat när anonyma besökare på webbplatsen nekas åtkomst, inte får registrera sig själv och inte får använda social inloggning.
 
-Kontrollera att de flesta kryssrutor är avmarkerade för [Användarhantering](/help/communities/sites-console.md#user-management):
+Kontrollera att de flesta kryssrutor är avmarkerade för [Användarhantering](/help/communities/sites-console.md#user-management) :
 
 * Tillåt INTE webbplatsbesökare att registrera sig själva.
 * Tillåt INTE anonyma webbplatsbesökare att visa webbplatsen.
@@ -96,11 +95,11 @@ Kontrollera att de flesta kryssrutor är avmarkerade för [Användarhantering](/
 
 ![user-mgmt](assets/user-mgmt.png)
 
-#### TAGGAR {#tagging}
+#### TAGGNING {#tagging}
 
-De taggar som kan användas för communityinnehåll kontrolleras genom att AEM namnutrymmen som tidigare definierats via [taggningskonsolen](/help/sites-administering/tags.md#tagging-console) (till exempel namnutrymmet [Tutorial](/help/communities/enablement-setup.md#create-tutorial-tags)) väljs.
+De taggar som kan användas för communityinnehåll kontrolleras genom att AEM namnutrymmen som tidigare definierats i [Taggningskonsolen](/help/sites-administering/tags.md#tagging-console) (t.ex. [Namnutrymme för självstudiekurs](/help/communities/enablement-setup.md#create-tutorial-tags)).
 
-Om du väljer Taggnamnutrymmen för communitywebbplatsen begränsas dessutom det urval som visas när du definierar kataloger och aktiveringsresurser. Se [Tagga aktiveringsresurser](/help/communities/tag-resources.md) för viktig information.
+Om du väljer Taggnamnutrymmen för communitywebbplatsen begränsas dessutom det urval som visas när du definierar kataloger och aktiveringsresurser. Se [Aktiveringsresurser för taggning](/help/communities/tag-resources.md) för viktig information.
 
 Det är enkelt att hitta namnutrymmen med typsnittssökning. Till exempel,
 
@@ -111,7 +110,7 @@ Det är enkelt att hitta namnutrymmen med typsnittssökning. Till exempel,
 
 ### ROLLER {#roles}
 
-[Gruppmedlemsroller ](/help/communities/users.md) tilldelas via inställningarna i avsnittet Roller.
+[Medlemsroller i communityn](/help/communities/users.md) tilldelas via inställningarna i avsnittet Roller.
 
 Om du vill att en community-medlem (eller grupp av medlemmar) ska kunna uppleva webbplatsen som community-hanterare använder du typsnittssökningen och väljer medlemmens eller gruppens namn bland alternativen i listrutan.
 
@@ -122,46 +121,46 @@ Till exempel,
 
 >[!NOTE]
 >
->[Tunneltjänsten ](/help/communities/deploy-communities.md#tunnel-service-on-author) gör det möjligt att välja medlemmar och grupper som finns endast i publiceringsmiljön.
+>[Tunneltjänst](/help/communities/deploy-communities.md#tunnel-service-on-author) gör att du kan välja medlemmar och grupper som bara finns i publiceringsmiljön.
 
 ![aktiveringsroller](assets/site-admin.png)
 
 #### MODERATION {#moderation}
 
-Acceptera de globala standardinställningarna för [moderering](/help/communities/sites-console.md#moderation) användargenererat innehåll (UGC).
+Acceptera de globala standardinställningarna för [moderera](/help/communities/sites-console.md#moderation) användargenererat innehåll (UGC).
 
 ![moderation1](assets/moderation1.png)
 
-#### ANALYTIK {#analytics}
+#### ANALYS {#analytics}
 
 I listrutan väljer du Analytics-molntjänstramverket som är konfigurerat för den här communitywebbplatsen.
 
-Markeringen som visas på skärmbilden `Communities` är ett ramverksexempel från [konfigurationsdokumentationen.](/help/communities/analytics.md#aem-analytics-framework-configuration)
+Markeringen som visas på skärmbilden, `Communities`, är ramverksexemplet från [konfigurationsdokumentation.](/help/communities/analytics.md#aem-analytics-framework-configuration)
 
 ![analys](assets/analytics.png)
 
-#### TRANSLATION {#translation}
+#### ÖVERSÄTTNING {#translation}
 
-[Översättningsinställningarna](/help/communities/sites-console.md#translation) anger om UGC kan översättas eller inte och till vilket språk, om så är fallet.
+The [Översättningsinställningar](/help/communities/sites-console.md#translation) Ange om användargenererat innehåll får översättas och till vilket språk.
 
 * Kontrollera **Tillåt maskinöversättning**
 * Använd standardinställningarna
 
 ![översättning](assets/translation.png)
 
-#### AKTIVERA {#enablement}
+#### AKTIVERING {#enablement}
 
 För en aktiveringscommunity måste du identifiera en eller flera aktiveringsansvariga i communityn.
 
-* **Aktivera hanterare**
- (krävs) Medlemmar i 
+* **Aktivitetshanterare**
+(obligatoriskt) Medlemmar i 
 `Community Enablement Managers` gruppen är tillgänglig för att väljas för att hantera den här communitywebbplatsen.
 
    * Typ `s`
    * Välj `Sirius Nilson`
 
-* **Marketing Cloud Org ID**
- (valfritt) ID:t för ett Adobe Analytics-konto som krävs när  [Video Heartbeat ](/help/communities/analytics.md#video-heartbeat-analytics) Analytics inkluderas i aktiveringsrapporten.
+* **Marketing Cloud organisation-ID**
+(valfritt) ID:t för ett Adobe Analytics-konto som krävs när du inkluderar [Analys av pulsslag för video](/help/communities/analytics.md#video-heartbeat-analytics) i aktiveringsrapporteringen.
 
 ![aktivering](assets/enablement.png)
 
@@ -185,7 +184,7 @@ När du har valt communityplatsens mapp för du muspekaren över platsikonen så
 
 ![siteactionicons](assets/siteactionicons.png)
 
-När du väljer ellipsikonen (ikonen Fler åtgärder) visas alternativen Exportera plats och Ta bort plats.
+När du markerar ellipsikonen (ikonen Fler åtgärder) visas alternativen Exportera plats och Ta bort plats.
 
 ![siteactionsnya](assets/siteactionsnew.png)
 
@@ -203,9 +202,9 @@ Från vänster till höger är de:
 
    Välj ikonen world om du vill publicera communitywebbplatsen (till localhost:4503 som standard).
 
-* **Exportera plats**
+* **Exportera webbplats**
 
-   Välj exportikonen om du vill skapa ett paket för communitywebbplatsen som både lagras i [pakethanteraren](/help/sites-administering/package-manager.md) och hämtas.
+   Välj exportikonen för att skapa ett paket för communitywebbplatsen som båda lagras i [pakethanterare](/help/sites-administering/package-manager.md) och laddas ned.
 Observera att UGC inte ingår i platspaketet.
 
 * **Ta bort plats**
@@ -226,26 +225,26 @@ Det kommer att finnas en indikation på att webbplatsen har publicerats.
 
 ## Community-användare och användargrupper {#community-users-user-groups}
 
-### Meddelande om nya användargrupper i användargruppen {#notice-new-community-user-groups}
+### Meddelande om nya användargrupper {#notice-new-community-user-groups}
 
-Tillsammans med den nya communitywebbplatsen skapas nya användargrupper som har rätt behörigheter för olika administrativa funktioner. Mer information finns i [Användargrupper för Community Sites](/help/communities/users.md#usergroupsforcommunitysites).
+Tillsammans med den nya communitywebbplatsen skapas nya användargrupper som har rätt behörigheter för olika administrativa funktioner. Mer information finns på [Användargrupper för communityplatser](/help/communities/users.md#usergroupsforcommunitysites).
 
-Med tanke på webbplatsens namn &quot;enable&quot; i steg 1 kan de nya användargrupperna som finns i publiceringsmiljön ses från [webbgruppskonsolen](/help/communities/members.md#groups-console):
+Med tanke på webbplatsens namn&quot;enable&quot; i steg 1 kan de nya användargrupperna som finns i publiceringsmiljön ses från [Konsol för gruppmedlemmar och grupper](/help/communities/members.md#groups-console):
 
 ![community_usergroup](assets/community_usergroup.png)
 
 ### Tilldela medlemmar till gruppen Aktivera medlemmar {#assign-members-to-community-enable-members-group}
 
-Om tunneltjänsten är aktiverad för författaren kan du tilldela [användarna som skapades under den första konfigurationen](/help/communities/enablement-setup.md#publishcreateenablementmembers) till communitymedlemsgruppen för den nyligen skapade communitywebbplatsen.
+När tunneltjänsten är aktiverad kan du tilldela [användare som skapades under den första installationen](/help/communities/enablement-setup.md#publishcreateenablementmembers) till communitymedlemsgruppen för den nyligen skapade communitywebbplatsen.
 
 Med hjälp av gruppkonsolen kan medlemmar läggas till individuellt eller genom medlemskap i en grupp.
 
-I det här exemplet läggs gruppen `Community Ski Class` till som medlem i gruppen `Community Enable Members` och medlem `Quinn Harper`.
+I det här exemplet `Community Ski Class` läggs till som medlem i gruppen `Community Enable Members` samt medlem `Quinn Harper`.
 
-* Navigera till **Communities, Groups**-konsolen
-* Välj gruppen *Aktivera communitymedlemmar*
-* Ange &#39;ski&#39; i sökrutan **Lägg till medlemmar i grupp**
-* Välj *Community Ski Class* (grupp av elever)
+* Navigera till **Communities, Groups** konsol
+* Välj *Community-aktivera medlemmar* grupp
+* Ange &#39;skidor&#39; i **Lägg till medlemmar i grupp** sökruta
+* Välj *Klassen Community Ski* (grupp av studerande)
 * Ange &#39;quinn&#39; i sökrutan
 * Välj *Quinn Harper* (aktivera resurskontakt)
 
@@ -261,17 +260,17 @@ I det här exemplet läggs gruppen `Community Ski Class` till som medlem i grupp
 
 ### Konfigurera för autentiseringsfel {#configure-for-authentication-error}
 
-När en webbplats har konfigurerats och publicerats konfigurerar [du inloggningsmappningen](/help/communities/sites-console.md#configure-for-authentication-error) ( `Adobe Granite Login Selector Authentication Handler`) på publiceringsinstansen. Fördelen är att när inloggningsuppgifterna inte anges korrekt kommer autentiseringsfelet att visa inloggningssidan för communitywebbplatsen igen med ett felmeddelande.
+När en webbplats har konfigurerats och publicerats, [konfigurera inloggningsmappning](/help/communities/sites-console.md#configure-for-authentication-error) ( `Adobe Granite Login Selector Authentication Handler`) på publiceringsinstansen. Fördelen är att när inloggningsuppgifterna inte anges korrekt kommer autentiseringsfelet att visa inloggningssidan för communitywebbplatsen igen med ett felmeddelande.
 
-Lägg till en `Login Page Mapping` som:
+Lägg till en `Login Page Mapping` as:
 
 * `/content/sites/enable/en/signin:/content/sites/enable/en`
 
-### (Valfritt) Ändra standardstartsidan {#optional-change-the-default-home-page}
+### (Valfritt) Ändra standardhemsidan {#optional-change-the-default-home-page}
 
 När du arbetar med publiceringswebbplatsen i demonstrationssyfte kan det vara praktiskt att ändra standardhemsidan till den nya webbplatsen.
 
-Om du vill göra det måste du använda [CRX|DE](https://localhost:4503/crx/de) Lite för att redigera resursmappningstabellen [vid publicering.](/help/sites-deploying/resource-mapping.md)
+För att göra detta måste du använda [CRX|DE](https://localhost:4503/crx/de) Lite för att redigera [resursmappning](/help/sites-deploying/resource-mapping.md) tabell vid publicering.
 
 Så här kommer du igång:
 
@@ -279,31 +278,31 @@ Så här kommer du igång:
 
    * Bläddra till exempel till [https://localhost:4503/crx/de](https://localhost:4503/crx/de) och logga in med `admin/admin`
 
-1. Expandera `/etc/map` i projektwebbläsaren
-1. Välj noden `http`
+1. Utöka i projektwebbläsaren `/etc/map`
+1. Välj `http` nod
 
    * Välj **Skapa nod**
 
-      * **** Namelocalhost.4503
+      * **Namn** localhost.4503
 
-         (do *not* use &#39;:&#39;)
+         (do *not* använd &#39;:&#39;)
 
-      * **** [typbestämning:mappning](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)
+      * **Typ** [sling:mappning](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)
 
-1. Med den nyskapade `localhost.4503`-noden markerad
+1. Med nyskapade `localhost.4503` markerad nod
 
    * Lägg till egenskap
 
-      * **** namngivning:matchning
-      * **** TypeString
-      * **** Valuelocalhost.4503/$
+      * **Namn** sling:match
+      * **Typ** Sträng
+      * **Värde** localhost.4503/$
 
    (måste sluta med tecknet &#39;$&#39;)
 
    * Lägg till egenskap
 
-      * **** namngivning:internalRedirect
-      * **** TypeString
+      * **Namn** sling:internalRedirect
+      * **Typ** Sträng
       * **Värde** /content/sites/enable/en.html
 
 
@@ -315,31 +314,31 @@ Så här kommer du igång:
 
 >[!NOTE]
 >
->Om du vill inaktivera kan du förpend egenskapsvärdet `sling:match` med x - `xlocalhost.4503/$` - och **Spara alla**.
+>Om du vill inaktivera föränger du `sling:match` egenskapsvärde med x - `xlocalhost.4503/$` - och **Spara alla**.
 
 ![change-default-hompage](assets/change-default-homepage.png)
 
-#### Felsökning: Det gick inte att spara kartan {#troubleshooting-error-saving-map}
+#### Felsökning: Fel när kartan sparades {#troubleshooting-error-saving-map}
 
-Om det inte går att spara ändringarna måste du kontrollera att nodnamnet är `localhost.4503`, har en punktavgränsare och inte `localhost:4503` med en kolonavgränsare, eftersom `localhost` inte är ett giltigt namnområdesprefix.
+Om det inte går att spara ändringarna måste du kontrollera att nodnamnet är `localhost.4503`, med en punktavgränsare, och inte `localhost:4503` med en kolonavgränsare, som `localhost` är inte ett giltigt namnområdesprefix.
 
 ![error-map](assets/error-map.png)
 
 #### Felsökning: Det gick inte att omdirigera {#troubleshooting-fail-to-redirect}
 
-&#39;**$**&#39; i slutet av det reguljära uttrycket `sling:match`-strängen är avgörande, så att endast exakt `https://localhost:4503/` mappas, annars läggs omdirigeringsvärdet till alla sökvägar som kan finnas efter server:port i URL:en. När AEM försöker dirigera om till inloggningssidan misslyckas den alltså.
+The **$**&#39; i slutet av det reguljära uttrycket `sling:match` sträng är avgörande, så att bara exakt `https://localhost:4503/` är mappad, annars läggs omdirigeringsvärdet till en sökväg som kan finnas efter server:port i URL:en. När AEM försöker dirigera om till inloggningssidan misslyckas den alltså.
 
 ## Ändra communityplatsen {#modifying-the-community-site}
 
-När webbplatsen har skapats kan författare använda ikonen [Öppna plats](/help/communities/sites-console.md#authoring-site-content) för att utföra AEM.
+När webbplatsen har skapats kan författare använda [Ikonen Öppna webbplats](/help/communities/sites-console.md#authoring-site-content) för att utföra AEM.
 
-Dessutom kan administratörer använda ikonen [Redigera plats](/help/communities/sites-console.md#modifying-site-properties) för att ändra egenskaper för platsen, till exempel titeln.
+Dessutom kan administratörer använda [Ikonen Redigera webbplats](/help/communities/sites-console.md#modifying-site-properties) om du vill ändra egenskaper för platsen, t.ex. titeln.
 
-När du har ändrat något bör du komma ihåg att **spara** och göra om-**Publicera** webbplatsen.
+Kom ihåg att efter varje ändring **Spara** och **Publicera** sajten.
 
 >[!NOTE]
 >
->Om du inte känner till AEM kan du läsa dokumentationen om [grundläggande hantering](/help/sites-authoring/basic-handling.md) och en [snabbguide till redigeringssidor](/help/sites-authoring/qg-page-authoring.md).
+>Om du inte känner till AEM kan du läsa dokumentationen om [grundläggande hantering](/help/sites-authoring/basic-handling.md) och [snabbguide till framtagning av sidor](/help/sites-authoring/qg-page-authoring.md).
 
 ### Lägg till en katalog {#add-a-catalog}
 
@@ -349,13 +348,13 @@ Om inte kan du enkelt lägga till katalogfunktionen. På så sätt kan andra med
 
 Om platsstrukturen redan innehåller katalogfunktionen kan dess namn ändras.
 
-Om du vill ändra platsens struktur går du till **[!UICONTROL Communities]** > **[!UICONTROL Sites]**-konsolen, öppnar mappen `enable` och väljer ikonen **Redigera plats** för att komma åt egenskaperna för `Enablement Tutorial`.
+Om du vill ändra platsens struktur går du till **[!UICONTROL Communities]** > **[!UICONTROL Sites]** konsolen, öppna `enable` och väljer **Redigera webbplats** -ikonen för att komma åt egenskaperna för `Enablement Tutorial`.
 
 Välj STRUKTURpanelen om du vill lägga till en katalog eller ändra en befintlig katalog:
 
-* **Titel**:  `Ski Catalog`
+* **Titel**: `Ski Catalog`
 
-* **URL**:  `catalog`
+* **URL**: `catalog`
 
 * **Markera alla namnutrymmen**: lämna som standard.
 
@@ -369,5 +368,4 @@ Använd placeringsikonen för att flytta katalogfunktionen till den andra positi
 
 Välj **Spara** i det övre högra hörnet för att spara ändringarna på communitywebbplatsen.
 
-Gör sedan om -**Publicera** webbplatsen.
-
+Gör sedan om **Publicera** sajten.

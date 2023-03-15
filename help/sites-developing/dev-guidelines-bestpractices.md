@@ -1,22 +1,21 @@
 ---
 title: AEM - riktlinjer och bästa praxis
-seo-title: AEM - riktlinjer och bästa praxis
+seo-title: AEM Development - Guidelines and Best Practices
 description: Riktlinjer och bästa metoder för att utveckla AEM
-seo-description: Riktlinjer och bästa metoder för att utveckla AEM
+seo-description: Guidelines and best practices for developing on AEM
 uuid: a67de085-4441-4a1d-bec3-2f27892a67ff
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
 discoiquuid: b4cf0ffc-973a-473b-80c8-7f530d111435
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 8eef7e4d-a6f2-4b87-a995-0761447283c6
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1105'
+source-wordcount: '1091'
 ht-degree: 0%
 
 ---
-
 
 # AEM - riktlinjer och bästa praxis{#aem-development-guidelines-and-best-practices}
 
@@ -53,11 +52,11 @@ Följande allmänna regler för utvecklare är bra för de flesta vanliga projek
 
 När du skapar egna komponenter eller anpassar en befintlig komponent är det oftast enklast (och säkraste) att återanvända befintliga definitioner. Samma principer gäller även andra element i AEM, till exempel felhanteraren.
 
-Detta kan du göra genom att kopiera och ersätta den befintliga definitionen. Det innebär att definitionen kopieras från `/libs` till `/apps/<your-project>`. Den nya definitionen i `/apps` kan uppdateras enligt dina krav.
+Detta kan du göra genom att kopiera och ersätta den befintliga definitionen. Med andra ord, kopiera definitionen från `/libs` till `/apps/<your-project>`. Den här nya definitionen, i `/apps`, kan uppdateras efter dina behov.
 
 >[!NOTE]
 >
->Mer information finns i [Använda övertäckningar](/help/sites-developing/overlays.md).
+>Se [Använda övertäckningar](/help/sites-developing/overlays.md) för mer information.
 
 Till exempel:
 
@@ -83,9 +82,9 @@ Till exempel:
 
 >[!CAUTION]
 >
->Du **får inte** ändra något i `/libs`-sökvägen.
+>Du **får inte** ändra något i `/libs` bana.
 >
->Detta beror på att innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan mycket väl skrivas över när du använder en snabbkorrigering eller ett funktionspaket).
+>Detta beror på innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan mycket väl skrivas över när du använder en snabbkorrigering eller ett funktionspaket).
 >
 >För konfiguration och andra ändringar:
 >
@@ -93,7 +92,7 @@ Till exempel:
 >1. gör ändringar i `/apps`
 
 
-## När JCR-frågor ska användas och när de inte ska användas{#when-to-use-jcr-queries-and-when-not-to-use-them}
+## När JCR-frågor ska användas och när de inte ska användas {#when-to-use-jcr-queries-and-when-not-to-use-them}
 
 JCR-frågor är ett kraftfullt verktyg när de används på rätt sätt. De är lämpliga för
 
@@ -112,14 +111,13 @@ Använd navigeringsåtkomst till innehållsträdet i stället för att utföra e
 
 >[!NOTE]
 >
->Om du använder [Query Builder](/help/sites-developing/querybuilder-api.md) använder du JCR-frågor när Query Builder genererar JCR-frågor under huven.
-
+>Om du använder [Query Builder](/help/sites-developing/querybuilder-api.md)använder du JCR-frågor när Query Builder genererar JCR-frågor under huven.
 
 ## Säkerhetsaspekter {#security-considerations}
 
 >[!NOTE]
 >
->Det är även värt att referera till [checklistan för säkerhet](/help/sites-administering/security-checklist.md).
+>Det är även värt att hänvisa till [checklista för säkerhet](/help/sites-administering/security-checklist.md).
 
 ### JCR-sessioner (databas) {#jcr-repository-sessions}
 
@@ -135,7 +133,7 @@ Med XSS (Cross-site scripting) kan angripare lägga in kod på webbsidor som vis
 
 AEM tillämpar principen om att filtrera allt innehåll som användaren tillhandahåller vid utskrift. Förhindrande av XSS har högsta prioritet under både utveckling och testning.
 
-Dessutom kan en brandvägg för ett webbprogram, till exempel [mod_security för Apache](https://modsecurity.org), ge tillförlitlig, central kontroll över distributionsmiljöns säkerhet och skydda mot tidigare oidentifierade serveröverskridande skriptattacker (cross-site scripting).
+Dessutom en brandvägg för webbprogram, som [mod_security för Apache](https://modsecurity.org), kan ge tillförlitlig, central kontroll över distributionsmiljöns säkerhet och skydda mot tidigare oidentifierade serveröverskridande skriptattacker (cross-site scripting).
 
 >[!CAUTION]
 >
@@ -156,16 +154,16 @@ Liksom för alla Internetprogram ska du se till att konfidentiella uppgifter ski
 
 Detta gäller information som är konfidentiell för systemet (t.ex. konfiguration eller administrativ åtkomst) samt information som är konfidentiell för användarna (t.ex. personuppgifter)
 
-## Distinkta utvecklingsaktiviteter {#distinct-development-tasks}
+## Distinkta utvecklingsuppgifter {#distinct-development-tasks}
 
 ### Anpassa felsidor {#customizing-error-pages}
 
 Felsidor kan anpassas för AEM. Detta är tillrådligt så att instansen inte visar slingspår på interna serverfel.
 
-Mer information finns i [Anpassa felsidor som visas av felhanteraren](/help/sites-developing/customizing-errorhandler-pages.md).
+Se [Anpassa felsidor som visas av felhanteraren](/help/sites-developing/customizing-errorhandler-pages.md) för fullständig information.
 
 ### Öppna filer i Java-processen {#open-files-in-the-java-process}
 
-Eftersom AEM har åtkomst till ett stort antal filer rekommenderar vi att antalet [öppna filer för en Java-process](/help/sites-deploying/configuring.md#open-files-in-the-java-process) uttryckligen konfigureras för AEM.
+Eftersom AEM kan få åtkomst till ett stort antal filer rekommenderar vi att man [öppna filer för en Java-process](/help/sites-deploying/configuring.md#open-files-in-the-java-process) vara explicit konfigurerad för AEM.
 
 För att minimera problemet bör du se till att alla öppnade filer stängs korrekt så snart som (meningsfullt) möjligt.

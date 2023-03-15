@@ -1,24 +1,23 @@
 ---
 title: Vi.Gov:s referenswebbplats FOIA genomgång
-seo-title: Vi.Gov:s referenswebbplats FOIA genomgång
+seo-title: We.Gov reference site FOIA walkthrough
 description: Se genomgången av webbsajten We.GOV för att förstå hur AEM Forms hjälper myndigheter att ta emot och skicka ut information som efterfrågats av enskilda personer enligt lagen om informationsfrihet.
-seo-description: Se genomgången av webbsajten We.GOV för att förstå hur AEM Forms hjälper myndigheter att ta emot och skicka ut information som efterfrågats av enskilda personer enligt lagen om informationsfrihet.
+seo-description: See the We.Gov reference site walkthrough to understand how AEM Forms helps governments receive and impart information requested by individuals under the Freedom of Information Act.
 uuid: 65d4233c-8dad-4e5e-8e39-22eb4f145adc
 topic-tags: introduction
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: cef8f597-7935-4d98-aacf-9981470ab620
-translation-type: tm+mt
-source-git-commit: af326f2d2b278fe36df05afc8c172f74c99a064c
+exl-id: 57b5ce89-6b01-4087-a485-6d9696f06378
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '865'
+source-wordcount: '834'
 ht-degree: 0%
 
 ---
 
+# Vi.Gov:s referenswebbplats FOIA genomgång {#we-gov-reference-site-foia-walkthrough}
 
-# Vi.Gov referenswebbplats FOIA genomgång {#we-gov-reference-site-foia-walkthrough}
-
-## Referenswebbplats Freedom of Information Act scenario {#reference-site-freedom-of-information-act-scenario}
+## Scenario för lagen om informationsfrihet för webbplatser {#reference-site-freedom-of-information-act-scenario}
 
 We.Gov är en statlig organisation som låter adoptivföräldrar registrera sig för barnsupport om de använder ett barn. We.Gov tillåter också föräldrar att begära information från följande myndigheter inom ramen för lagen om informationsfrihet:
 
@@ -28,7 +27,7 @@ We.Gov är en statlig organisation som låter adoptivföräldrar registrera sig 
 * Avdelningen för flottan
 * Naturvårdsverket
 
-Mer information om lagen om informationsfrihet finns i [www.foia.gov](https://www.foia.gov).
+Mer information om lagen om informationsfrihet finns på [www.foia.gov](https://www.foia.gov).
 
 Scenariot omfattar följande personligheter:
 
@@ -44,15 +43,15 @@ Enligt lagen om informationsfrihet begär Sarah en kopia av ärendeloggen från 
 
 ### Se det själv {#see-it-yourself}
 
-Öppna `https://<hostname>:<PublishPort>/wegov` i webbläsaren. Tryck på Program > Alla program på webbplatsen Web.Gov. På sidan Alla program trycker du på Apply under Application for FOIA Request.
+Öppna i webbläsaren `https://<hostname>:<PublishPort>/wegov`. Tryck på Program > Alla program på webbplatsen Web.Gov. På sidan Alla program trycker du på Apply under Application for FOIA Request.
 
-## Sarah startar sin ansökan om information under FOIA {#sarah-starts-her-application-for-information-under-foia}
+## Sarah börjar sin ansökan om information under FOIA {#sarah-starts-her-application-for-information-under-foia}
 
-Sarah klickar på **Apply** och på sidan&quot;Freedom of Information Act Request Form&quot; anger Sarah följande information:
+Sarah klickade **Använd** På sidan&quot;Freedom of Information Act Request Form&quot; (Formulär för begäran om informationsfrihet) anger Sarah bland annat följande uppgifter:
 
-* **Myndighet:** Sarah anger vilken myndighet som ansökan riktades till som justitiedepartementet - informationskontoret.
+* **Kontor:** Sarah anger vilken myndighet som begäran riktar sig till som justitiedepartementet - informationskontoret.
 
-* **Betala**: Sarah anger att hon är villig att betala upp till 100 USD för utskrifts- och portokostnader.
+* **Betala upp till**: Sarah anger att hon är villig att betala upp till 100 USD för utskrifts- och portokostnader.
 * **Beskriv begäran i detalj**: Sarah anger&quot;Requesting copy of the Administration for Children and Families case logs for Fiscal year 2013 through 2016&quot;.
 
 ![Begär kopia av ärendeloggen Administration for Children and Families för räkenskapsåren 2013 till 2016](assets/sarahfiosform.png)
@@ -65,7 +64,7 @@ Sarah kan när som helst trycka på Save för att spara utkastet av formuläret 
 >
 >Arbetsflödet från e-post fungerar endast med inloggade användare. I scenariot för referensplatsen ser du till att användaren Sarah Rose läggs till. Sarah inloggningsuppgifter är `srose/password`.
 
-## John Jacobs tar emot och godkänner programmet {#john-jacobs-receives-and-approves-the-application}
+## John Jacobs tar emot och godkänner ansökan {#john-jacobs-receives-and-approves-the-application}
 
 John Jacobs tar emot förfrågningarna och skickar dem till rätt person. Med AEM Inbox kan hon se alla inskickade program på ett och samma ställe.
 
@@ -75,7 +74,7 @@ När Sarah fyller i och skickar in FOIA-programmet skickas en anmälan till John
 
 ### Se det själv {#see-it-yourself-1}
 
-Du kommer åt AEM i https://&lt;***värdnamn***>:&lt;***PublishPort***>/content/we-finance/global/en/login.html?resource=/aem/inbox.html. Logga in på AEM inkorg med jjacobs/password som användarnamn/lösenord för John Jacobs och se FOIA-programmet. Information om hur du använder AEM Inkorg för formulärcentrerade arbetsflödesuppgifter finns i [Hantera Forms-program och -uppgifter i AEM Inkorg](/help/forms/using/manage-applications-inbox.md).
+Du kommer åt AEM på https://&lt;***värdnamn***>:&lt;***PublishPort***>/content/we-finance/global/en/login.html?resource=/aem/inbox.html. Logga in på AEM inkorg med jjacobs/password som användarnamn/lösenord för John Jacobs och se FOIA-programmet. Information om hur du använder AEM Inkorg för formulärbaserade arbetsflödesuppgifter finns i [Hantera Forms-program och -uppgifter i AEM Inkorg](/help/forms/using/manage-applications-inbox.md).
 
 ![johnjacobs](assets/johnjacobs.png)
 
@@ -97,11 +96,11 @@ När John Jacobs fyllt i den information som krävs och godkänt Sarah begäran 
 
 ### Så här fungerar det {#how-it-works-2}
 
-När John Jacobs godkänner FOIA-begäran skapas en PDF-fil eller ett dokument med registreringsuppgifter för programmet och skickas till Gloria Rios inkorg. Gloria kan visa den inskickade förfrågan och godkänna eller avvisa den.
+När John Jacobs godkänner FOIA-begäran skapas ett PDF eller Document of Record-dokument för programmet och skickas till Gloria Rios inkorg. Gloria kan visa den inskickade förfrågan och godkänna eller avvisa den.
 
 ### Se själv {#see-for-yourself}
 
-Du kommer åt AEM i https://&lt;***värdnamn***>:&lt;***PublishPort***>/content/we-finance/global/en/login.html?resource=/aem/inbox.html. Logga in i AEM inkorg med hjälp av grios/password som användarnamn/lösenord för Gloria Rios och se FOIS-begäran.
+Du kommer åt AEM på https://&lt;***värdnamn***>:&lt;***PublishPort***>/content/we-finance/global/en/login.html?resource=/aem/inbox.html. Logga in i AEM inkorg med hjälp av grios/password som användarnamn/lösenord för Gloria Rios och se FOIS-begäran.
 
 Gloria öppnar förfrågan och undersöker informationen i FOIA-begäran. Efter att ha granskat detaljerna i begäran och kontrollerat om det går att skicka in de begärda dokumenten, godkänner Gloria begäran.
 
@@ -112,4 +111,3 @@ Gloria öppnar förfrågan och undersöker informationen i FOIA-begäran. Efter 
 När Gloria har godkänt FOIA-begäran får Sarah ett e-postmeddelande som meddelar henne att hennes ansökan har godkänts. E-postmeddelandet innehåller även information om den preliminära tidslinjen för att skicka dokumentet och kontaktuppgifter för uppföljning av begäran.
 
 ![sarahrosee-postgodkännande](assets/sarahroseemailapproval.png)
-

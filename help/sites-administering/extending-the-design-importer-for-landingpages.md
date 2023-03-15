@@ -160,8 +160,8 @@ Om du tar med ovanstående kod i HTML görs följande:
 
 Så här lägger du till en text med en lista:
 
-* 1:a
-* 2:a
+* 1st
+* 2nd
 
 som kan redigeras i RTE-redigeraren:
 
@@ -589,7 +589,7 @@ med en CSS tillämpad på klassen `box` enligt följande:
 { width: 450px; padding:10px; border: 1px #C5DBE7 solid; margin: 0px auto 0 auto; background-image:url(assets/box.gif); background-repeat:repeat-x,y; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px; color:#6D6D6D; }
 ```
 
-Sedan `box img` används i designimportören, den resulterande landningssidan verkar inte ha bevarat formateringen. För att undvika detta bör du vara medveten om att AEM lägger till div-taggar i CSS och skriver om koden därefter. Annars kommer vissa CSS-regler att vara ogiltiga.
+Sedan `box img` används i designimportören, den resulterande landningssidan verkar inte ha bevarat formateringen. För att undvika detta bör du vara medveten om att AEM lägger till div-taggar i CSS och skriver om koden därefter. Annars är vissa CSS-regler ogiltiga.
 
 ```xml
 .box img

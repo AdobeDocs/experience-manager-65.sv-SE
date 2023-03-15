@@ -152,7 +152,7 @@ Om du vill montera ett PDF som innehåller nya bokmärken måste du referera til
 
 **Lägg till PDF-dokumentet och bokmärkets XML-dokument i en kartsamling**
 
-Du måste lägga till både PDF-dokumentet som bokmärken läggs till i och bokmärkets XML-dokument i kartsamlingen. Därför innehåller Map-samlingsobjektet två element: ett PDF-dokument och ett XML-dokument för bokmärken.
+Du måste lägga till både det PDF-dokument som bokmärken läggs till i och bokmärkets XML-dokument i kartsamlingen. Därför innehåller Map-samlingsobjektet två element: ett PDF-dokument och ett XML-dokument för bokmärken.
 
 **Ange körningsalternativ**
 

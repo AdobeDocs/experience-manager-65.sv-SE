@@ -1,34 +1,33 @@
 ---
 title: Användarhantering
-seo-title: Användarhantering
+seo-title: User Management
 description: Med användarhantering kan du aktivera enkel inloggning mellan AEM formulärmoduler och Netegrity SiteMinder-skyddade program med SAML. Det här dokumentet innehåller mer information om användarhantering.
-seo-description: Med användarhantering kan du aktivera enkel inloggning mellan AEM formulärmoduler och Netegrity SiteMinder-skyddade program med SAML. Det här dokumentet innehåller mer information om användarhantering.
+seo-description: User Management allows you to enable SSO between AEM forms modules and Netegrity SiteMinder-protected applications by using SAML. This document provides more information about User Management.
 uuid: f0c8331a-d995-483d-97b7-259df53b1a1a
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/maintaining_aem_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 10e6177a-8228-4515-aba9-bbe59bede449
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 1da1f6de-ac0d-4e0d-b8bb-956420e42699
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '502'
+source-wordcount: '474'
 ht-degree: 0%
 
 ---
-
 
 # Användarhantering {#user-management}
 
 Med användarhantering kan du aktivera enkel inloggning (SSO) mellan AEM formulärmoduler och Netegrity SiteMinder-skyddade program med SAML (Security Assertion Markup Language). När enkel inloggning är implementerad är AEM inloggningssidor inte obligatoriska och visas inte om användaren redan är autentiserad via företagsportalen.
 
-Mer information om hur du förbättrar prestanda för databas- och katalogsynkronisering för DB2 finns i [IBM DB2-databasen: Kör kommandon för regelbundet underhåll](/help/forms/using/admin-help/ibm-db2-database-running-commands.md#ibm-db2-database-running-commands-for-regular-maintenance).
+Mer information om hur du förbättrar prestanda för databas- och katalogsynkronisering för DB2 finns i [IBM DB2-databas: Kör kommandon för regelbundet underhåll](/help/forms/using/admin-help/ibm-db2-database-running-commands.md#ibm-db2-database-running-commands-for-regular-maintenance).
 
 ## Konfigurera användarhantering för en SSL-aktiverad LDAP-server {#configuring-user-management-for-an-ssl-enabled-ldap-server}
 
 Om du har en SSL-aktiverad LDAP-server konfigurerar du användarhantering så att den fungerar med den. (Se [Konfigurera användarhantering för en SSL-aktiverad LDAP-server](/help/forms/using/admin-help/configure-user-management-ssl-enabled.md#configure-user-management-for-an-ssl-enabled-ldap-server).)
 
-## Ange användarbehörighet för dokumentsäkerhet {#setting-user-privileges-for-use-with-document-security}
+## Ställa in användarbehörighet för dokumentsäkerhet {#setting-user-privileges-for-use-with-document-security}
 
 Skapa en administratörsanvändare som har lämplig behörighet för att skapa användare och grupper. Om din AEM innehåller dokumentskydd ger du behörighet att hantera inbjudna och lokala användare till en användare som är administratör för dessa användare. Tilldela även administratörskonsolens användarroll för att ge användaren åtkomst till administrationskonsolen. (Se [Skapa och konfigurera roller](/help/forms/using/admin-help/creating-configuring-roles.md#creating-and-configuring-roles).)
 
@@ -57,4 +56,3 @@ Användare med vissa typer av administratörsbehörighet kan av säkerhetsskäl 
 >[!NOTE]
 >
 >Flex Workspace är föråldrat för AEM formulärreleaser.
-

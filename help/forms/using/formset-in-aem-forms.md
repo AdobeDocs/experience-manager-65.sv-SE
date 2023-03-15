@@ -169,11 +169,11 @@ XML-filen för förifyllnad anges med parametern dataRef för formulärets URL. 
 
 Du har till exempel tre formulär (formulär1, formulär2 och formulär3) i formuläruppsättningen med följande struktur:
 
-formulär1
+form1
 
 fält formulär1fält
 
-formulär2
+form2
 
 fält formulär2fält
 

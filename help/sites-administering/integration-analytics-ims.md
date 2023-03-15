@@ -1,7 +1,8 @@
 ---
 title: Integrering med Adobe Analytics med IMS
 description: Läs om hur du integrerar AEM med Adobe Analytics med IMS
-source-git-commit: eb05fb92491932e4c2489c5adb533bbbae1d2870
+exl-id: 2833a6df-ef32-48ab-8395-0f26816f8443
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
 source-wordcount: '1040'
 ht-degree: 0%
@@ -10,7 +11,7 @@ ht-degree: 0%
 
 # Integrering med Adobe Analytics med IMS {#integration-with-adobe-analytics-using-ims}
 
-Integreringen av AEM med Adobe Analytics via API:t för Analytics Standard kräver att du konfigurerar Adobe IMS (Identity Management System) med Adobe Developer Console.
+Integreringen av AEM med Adobe Analytics via API:t för Analytics Standard kräver att Adobe IMS (Identity Management System) konfigureras med Adobe Developer Console.
 
 >[!NOTE]
 >
@@ -66,7 +67,7 @@ Med Adobe Developer Console måste du skapa ett projekt (integration) med Adobe 
 
 ### Skapa projektet {#creating-the-project}
 
-Öppna Adobe Developer Console för att skapa ett projekt med Adobe Analytics som AEM ska använda:
+Öppna Adobe Developer Console och skapa ett projekt med Adobe Analytics som AEM ska använda:
 
 1. Öppna Adobe Developer Console for Projects:
 
@@ -123,9 +124,9 @@ Du måste nu tilldela nödvändig behörighet till integreringen:
 1. Välj **API-autentiseringsuppgifter** och sedan den integreringskonfiguration som krävs.
 1. Välj **Redigerare** som **Produktroll**; i stället för **Observer**.
 
-## Information lagrad för integreringsprojektet i Adobe Developer Console {#details-stored-for-the-ims-integration-project}
+## Information lagrad för Adobe Developer Console Integration Project {#details-stored-for-the-ims-integration-project}
 
-På konsolen Adobe Developer Projects ser du en lista över alla dina integreringsprojekt:
+På Adobe Developer Projects-konsolen ser du en lista över alla dina integrationsprojekt:
 
 * [https://developer.adobe.com/console/projects](https://developer.adobe.com/console/projects)
 
@@ -149,7 +150,7 @@ Om du går tillbaka till AEM kan du slutföra IMS-konfigurationen genom att läg
 1. Återgå till [IMS-konfiguration öppnas i AEM](#configuring-an-ims-configuration-generating-a-public-key).
 1. Välj **Nästa**.
 
-1. Här kan du använda [Information lagrad för integreringsprojektet i Adobe Developer Console](#details-stored-for-the-ims-integration-project):
+1. Här kan du använda [Information lagrad för Adobe Developer Console Integration Project](#details-stored-for-the-ims-integration-project):
 
    * **Titel**: Din text.
    * **Auktoriseringsserver**: Kopiera/klistra in detta från `aud` rad i **Nyttolast** avsnitt nedan, t.ex. `https://ims-na1.adobelogin.com` i exemplet nedan

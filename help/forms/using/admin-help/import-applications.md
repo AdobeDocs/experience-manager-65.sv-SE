@@ -1,28 +1,27 @@
 ---
 title: Importera och hantera program
-seo-title: Importera och hantera program
+seo-title: Import and manage applications
 description: Lär dig hur du importerar och hanterar program.
-seo-description: Lär dig hur du importerar och hanterar program.
+seo-description: Learn how to import and manage applications.
 uuid: 7fba6c4e-1a3e-4a4b-9201-acf2ff66a9df
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/importing_and_managing_applications_and_archives
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: dc53a6d0-317a-4abd-990c-455e13f8b824
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: f17726c0-3591-4d25-a8b5-3a7024249a56
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '831'
+source-wordcount: '820'
 ht-degree: 0%
 
 ---
 
-
 # Importera och hantera program{#import-and-manage-applications}
 
-I AEM är ett *program* en behållare för att lagra resurser som krävs för att implementera en lösning för AEM formulär. Exempel på resurser är formulärdesigner, formulärfragment, bilder, processer, DDX-filer, formulärguider, HTML-sidor och SWF-filer. Under utvecklingsfasen av ett projekt kan Workbench-användare distribuera program direkt från programvyn i Workbench. När programmen har distribuerats visas de i administrationskonsolen på fliken Program på sidan Programhantering.
+AEM formulär *program* är en behållare för lagring av resurser som krävs för att implementera en lösning för AEM formulär. Exempel på resurser är formulärdesigner, formulärfragment, bilder, processer, DDX-filer, formulärguider, HTML-sidor och SWF-filer. Under ett projekts utvecklingsfas kan Workbench-användare distribuera program direkt från programvyn i Workbench. När programmen har distribuerats visas de i administrationskonsolen på fliken Program på sidan Programhantering.
 
-När ett program är klart att distribueras till en produktionsserver paketerar Workbench-användaren programmet i en *AEM formulärprogramfil* (.lca). Därefter använder en administratör administrationskonsolen för att importera och distribuera programfilen på fliken Program på sidan Programhantering.
+När ett program är klart för distribution till en produktionsserver paketerar Workbench-användaren programmet i en *AEM* (.lca). Därefter använder en administratör administrationskonsolen för att importera och distribuera programfilen på fliken Program på sidan Programhantering.
 
 Du kan också använda fliken Kurvor på sidan Programhantering för att importera LCA-konton som har skapats med workbench 8.x.
 
@@ -56,7 +55,7 @@ Använd fliken Program för att importera och hantera program som har skapats i 
 
    Egenskaperna för den valda CRX-noden visas på fliken Egenskaper till höger.
 
-   Egenskapen **syncState** anger status för synkronisering av data mellan AEM formulärserver och CRX-databasen. Så snart importprocessen börjar är det här läget inställt på 0 (noll). Det här läget anger att data inte är synkroniserade just nu. När data synkroniseras ställs läget in på 1.
+   The **syncState** anger status för synkronisering av data mellan AEM formulärserver och CRX-databasen. Så snart importprocessen börjar är det här läget inställt på 0 (noll). Det här läget anger att data inte är synkroniserade just nu. När data synkroniseras ställs läget in på 1.
 
 ## Distribuera ett program {#deploy-an-application}
 
@@ -100,7 +99,7 @@ Du kan exportera konfigurationsinformation vid körning för distribuerade progr
 1. Klicka på programmets namn.
 1. Klicka på Exportera runtime-konfiguration och spara konfigurationsfilen (XML) som skapas.
 
-## Skriptbaserad distribution AEM formulärprogram {#scripted-deployment-of-aem-forms-applications}
+## Skriptstyrd driftsättning AEM formulärapplikationer {#scripted-deployment-of-aem-forms-applications}
 
 Du kan också använda ett skriptbaserat distributionsverktyg för att distribuera programfiler, inklusive en settings.xml-fil som anger följande inställningar:
 
@@ -115,4 +114,3 @@ Med skriptbaserad driftsättning slipper du manuellt konfigurera om inställning
 1. Läs filen ReadMe.txt om du vill ha mer detaljerade anvisningar.
 1. Ändra filen scriptedDeploy.bat och sample-files/sample.xml manuellt enligt beskrivningen i filen readme.txt.
 1. Kör filen scriptedDeploy.bat. Den här åtgärden distribuerar AEM formulärarkivfil med åsidosättningsinställningarna.
-

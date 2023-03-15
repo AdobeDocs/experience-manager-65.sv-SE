@@ -1,7 +1,8 @@
 ---
 title: AEM Headless Content Author Journey
 description: Börja här för en guidad resa med de kraftfulla och flexibla headlessfunktionerna i AEM, deras funktioner och hur du skapar innehåll för ditt projekt.
-source-git-commit: 38525b6cc14e9f6025564c060b8cfb4f9e0ea473
+exl-id: b8cdbd0f-c034-4c9f-976f-5e39b1bd33bf
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
 source-wordcount: '849'
 ht-degree: 1%

@@ -4,7 +4,7 @@ description: Konfigurera anpassade HTTP-huvuden
 exl-id: 834aadac-c3be-4e7a-a3cb-349608810b40
 source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '270'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ För att få bättre kontroll över sin serverdel kan författare konfigurera an
 
 >[!NOTE]
 >
->Utvecklare kan alltid konfigurera anpassade HTTP-huvuden med GraphQL-klientkonfigurationen.
+>Utvecklare kan alltid konfigurera anpassade HTTP-huvuden med hjälp av GraphQL klientkonfiguration.
 
 ## Konfiguration {#configuration}
 
@@ -29,7 +29,7 @@ Du kan konfigurera värdena för HTTP-rubrikerna på Cloud Servicens konfigurati
 1. Öppna en befintlig konfiguration eller skapa en ny
 1. Gå till fliken &quot;Avancerat&quot; och leta upp det anpassade fältet för HTTP-rubriker. Du kan markera rubrikerna som du definierade tidigare och tilldela dem värden.
 
-Komponenterna som använder molntjänstkonfigurationen ovan skickar dessa HTTP-huvuden med varje GraphQL-begäran.
+Komponenterna som använder molntjänstkonfigurationen ovan skickar dessa HTTP-huvuden med alla GraphQL-förfrågningar.
 
 ## Begränsningar {#restrictions}
 

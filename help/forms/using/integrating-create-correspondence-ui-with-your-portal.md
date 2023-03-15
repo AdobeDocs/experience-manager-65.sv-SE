@@ -1,8 +1,8 @@
 ---
 title: Integrera Create Correspondence UI med din anpassade portal
-seo-title: Integrera Create Correspondence UI med din anpassade portal
+seo-title: Integrating Create Correspondence UI with your custom portal
 description: Lär dig hur du integrerar ett gränssnitt för korrespondens med din anpassade portal
-seo-description: Lär dig hur du integrerar ett gränssnitt för korrespondens med din anpassade portal
+seo-description: Learn how to integrate create correspondence UI with your custom portal
 uuid: 68ef5bf2-b271-4c44-8840-6c495069164d
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,14 +10,13 @@ topic-tags: correspondence-management
 discoiquuid: 0d3bb98e-7139-4d8e-b110-6ebd11debda1
 docset: aem65
 feature: Correspondence Management
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: c3b6ee31-ccbb-4446-86c8-f618226fefc4
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '434'
+source-wordcount: '413'
 ht-degree: 3%
 
 ---
-
 
 # Integrera Create Correspondence UI med din anpassade portal{#integrating-create-correspondence-ui-with-your-custom-portal}
 
@@ -46,9 +45,9 @@ Den anpassade portalen skulle till exempel förbereda URL:en som\
 
 ## Inline databaserat anrop {#inline-data-based-invocation}
 
-Ett annat (och säkrare) sätt att anropa programmet Create Correspondence kan vara att bara trycka på URL:en på https://&#39;[server]:[port]&#39;/[contextPath]/aem/forms/createcorrespondence.html, medan parametrar och data skickas för att anropa programmet Create Correspondence som en POST (dölja dem för slutanvändaren). Det innebär också att du nu kan skicka XML-data för Create Correspondence-programmet (som en del av samma begäran, med parametern cmData), vilket inte var möjligt/idealiskt i den tidigare metoden.
+Ett annat (och säkrare) sätt att anropa programmet Create Correspondence kan vara att bara trycka på URL:en på https://&#39;[server]:[port]&#39;/[contextPath]/aem/forms/createcorrespondence.html när du skickar parametrar och data för att anropa programmet Create Correspondence som en POST (dölja dem för slutanvändaren). Det innebär också att du nu kan skicka XML-data för Create Correspondence-programmet (som en del av samma begäran, med parametern cmData), vilket inte var möjligt/idealiskt i den tidigare metoden.
 
-### Parametrar för att ange bokstaven {#parameters-for-specifying-letter}
+### Parametrar för att ange bokstav {#parameters-for-specifying-letter}
 
 | **Namn** | **Typ** | **Beskrivning** |
 |---|---|---|

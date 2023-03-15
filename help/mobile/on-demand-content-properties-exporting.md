@@ -1,36 +1,35 @@
 ---
 title: Exportera innehåll med hjälp av innehållsegenskaper
-seo-title: Exportera innehåll med hjälp av innehållsegenskaper
+seo-title: Using Content Properties to Export Content
 description: På följande sida visas Appegenskaper och -noder.
-seo-description: På följande sida visas Appegenskaper och -noder.
+seo-description: The following page shows App Properties and Nodes.
 uuid: 73f1832f-e457-47d0-a0e1-80af90897d31
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-on-demand-services-app
 discoiquuid: a3006835-b1d2-47d6-959a-cdb692e34e1e
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: db1c33c9-8539-436d-b4d0-3d5e6fd688ed
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '344'
+source-wordcount: '330'
 ht-degree: 1%
 
 ---
 
-
-# Exportera innehåll{#using-content-properties-to-export-content} med innehållsegenskaper
+# Exportera innehåll med hjälp av innehållsegenskaper{#using-content-properties-to-export-content}
 
 >[!NOTE]
 >
 >Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (t.ex. Reagera). [Läs mer](/help/sites-developing/spa-overview.md).
 
-Appar representeras som *cq:Pages* i AEM.
+Apparna representeras som *cq:Sidor* AEM.
 
-De delar samma gemensamma egenskaper som finns i alla *cq:Page* utöver de andra som visas nedan och som representerar integrationsegenskaper som stöds.
+De delar samma gemensamma egenskaper som finns i *cq:Page* utöver de andra som visas nedan och som representerar egenskaper som stöder integrering.
 
-## Programegenskaper {#app-properties}
+## Appegenskaper {#app-properties}
 
-I följande tabell visas **Programegenskaper och noder**.
+Följande tabell visar **Programegenskaper och noder**.
 
 <table>
  <tbody>

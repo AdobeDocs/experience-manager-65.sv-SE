@@ -1,5 +1,5 @@
 ---
-title: 'Metadata-scheman definierar layouten för metadataegenskapssida '
+title: Metadata-scheman definierar layouten för metadataegenskapssida
 description: Metadata-schemat definierar layouten för egenskapssidan och de metadataegenskaper som visas för resurser. Lär dig hur du skapar anpassade metadatamatcheman, redigerar metadatamatchema och hur du använder metadatamatchema på resurser.
 contentOwner: AG
 mini-toc-levels: 1

@@ -1,8 +1,8 @@
 ---
 title: Validerar DDX-dokument
-seo-title: Validerar DDX-dokument
+seo-title: Validating DDX Documents
 description: Validera ett DDX-dokument programmatiskt med Java API och Web Service API.
-seo-description: Validera ett DDX-dokument programmatiskt med Java API och Web Service API.
+seo-description: Validate a DDX document programmatically using the Java API and the Web Service API.
 uuid: da668170-d2e9-4fff-aef5-432a856bd0bd
 contentOwner: admin
 content-type: reference
@@ -11,16 +11,15 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 693859b0-a0c3-43f1-95c0-be48a90d7d8d
 role: Developer
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 1f5a2cf3-ef6b-45b4-8fa8-b300e492fee1
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1544'
+source-wordcount: '1526'
 ht-degree: 0%
 
 ---
 
-
-# Kontrollerar DDX-dokument {#validating-ddx-documents}
+# Validerar DDX-dokument {#validating-ddx-documents}
 
 **Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
 
@@ -28,11 +27,11 @@ Du kan programmässigt validera ett DDX-dokument som används av Assembler-tjän
 
 >[!NOTE]
 >
->Mer information om tjänsten Assembler finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om Assembler-tjänsten finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 >[!NOTE]
 >
->Mer information om ett DDX-dokument finns i [Assembler Service och DDX Reference](https://www.adobe.com/go/learn_aemforms_ddx_63).
+>Mer information om ett DX-dokument finns i [Assembler Service och DDX Reference](https://www.adobe.com/go/learn_aemforms_ddx_63).
 
 ## Sammanfattning av steg {#summary-of-steps}
 
@@ -73,9 +72,9 @@ När du validerar ett DX-dokument måste du ange specifika körningsalternativ s
 
 **Utför valideringen**
 
-När du har skapat Assembler-tjänstklienten, refererat till DDX-dokumentet och angett körningsalternativ, kan du anropa `invokeDDX`-åtgärden för att validera DDX-dokumentet. När du validerar DDX-dokumentet kan du skicka `null` som mappningsparameter (den här parametern lagrar vanligtvis PDF-dokument som Assembler behöver för att utföra de åtgärder som anges i DDX-dokumentet).
+När du har skapat Assembler-tjänstklienten, refererat till DDX-dokumentet och angett körningsalternativ kan du anropa `invokeDDX` för att validera DDX-dokumentet. När du validerar DDX-dokumentet kan du skicka det `null` som map-parametern (den här parametern lagrar vanligtvis PDF-dokument som Assembler kräver för att utföra de åtgärder som anges i DDX-dokumentet).
 
-Om valideringen misslyckas genereras ett undantag och loggfilen innehåller information som förklarar varför DDX-dokumentet är ogiltigt kan hämtas från `OperationException`-instansen. Efter den grundläggande XML-tolkningen och schemakontrollen utförs valideringen mot DDX-specifikationen. Alla fel som finns i DDX-dokumentet anges i loggen.
+Om valideringen misslyckas genereras ett undantag och loggfilen innehåller information som förklarar varför DDX-dokumentet är ogiltigt kan hämtas från `OperationException` -instans. Efter den grundläggande XML-tolkningen och schemakontrollen utförs valideringen mot DDX-specifikationen. Alla fel som finns i DDX-dokumentet anges i loggen.
 
 **Spara valideringsresultaten i en loggfil**
 
@@ -103,45 +102,45 @@ Validera ett DX-dokument med Assembler Service API (Java):
 
 1. Skapa en PDF Assembler-klient.
 
-   * Skapa ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
-   * Skapa ett `AssemblerServiceClient`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
+   * Skapa en `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
+   * Skapa en `AssemblerServiceClient` genom att använda konstruktorn och skicka `ServiceClientFactory` -objekt.
 
 1. Referera till ett befintligt DDX-dokument.
 
-   * Skapa ett `java.io.FileInputStream`-objekt som representerar DDX-dokumentet genom att använda dess konstruktor och skicka ett strängvärde som anger platsen för DDX-filen.
-   * Skapa ett `com.adobe.idp.Document`-objekt med hjälp av dess konstruktor och skicka `java.io.FileInputStream`-objektet.
+   * Skapa en `java.io.FileInputStream` som representerar DDX-dokumentet genom att använda dess konstruktor och skicka ett strängvärde som anger platsen för DDX-filen.
+   * Skapa en `com.adobe.idp.Document` genom att använda konstruktorn och skicka `java.io.FileInputStream` -objekt.
 
 1. Ange körningsalternativ för att validera DDX-dokumentet.
 
-   * Skapa ett `AssemblerOptionSpec`-objekt som lagrar körningsalternativ med hjälp av dess konstruktor.
-   * Ange det körningsalternativ som instruerar Assembler-tjänsten att validera DDX-dokumentet genom att anropa `AssemblerOptionSpec`-objektets setValidateOnly-metod och skicka `true`.
-   * Ange den mängd information som Assembler-tjänsten skriver till loggfilen genom att anropa `AssemblerOptionSpec`-objektets `getLogLevel`-metod och skicka ett strängvärde som uppfyller dina krav. När du validerar ett DX-dokument vill du att mer information ska skrivas till loggfilen som ska vara till hjälp vid valideringsprocessen. Du kan därför skicka värdet `FINE` eller `FINER`.
+   * Skapa en `AssemblerOptionSpec` objekt som lagrar körningsalternativ med hjälp av dess konstruktor.
+   * Ange det körningsalternativ som instruerar Assembler-tjänsten att validera DDX-dokumentet genom att anropa `AssemblerOptionSpec` objektets setValidateOnly-metod och skicka `true`.
+   * Ange mängden information som Assembler-tjänsten skriver till loggfilen genom att anropa `AssemblerOptionSpec` objektets `getLogLevel` och att skicka ett strängvärde uppfyller dina krav. När du validerar ett DX-dokument vill du att mer information ska skrivas till loggfilen som ska vara till hjälp vid valideringsprocessen. Därför kan du skicka värdet `FINE` eller `FINER`.
 
 1. Utför valideringen.
 
-   Anropa `AssemblerServiceClient`-objektets `invokeDDX`-metod och skicka följande värden:
+   Anropa `AssemblerServiceClient` objektets `invokeDDX` och skicka följande värden:
 
-   * Ett `com.adobe.idp.Document`-objekt som representerar DDX-dokumentet.
+   * A `com.adobe.idp.Document` -objekt som representerar DDX-dokumentet.
    * Värdet `null` för det java.io.Map-objekt som vanligtvis lagrar PDF-dokument.
-   * Ett `com.adobe.livecycle.assembler.client.AssemblerOptionSpec`-objekt som anger körningsalternativen.
+   * A `com.adobe.livecycle.assembler.client.AssemblerOptionSpec` -objekt som anger körningsalternativen.
 
-   Metoden `invokeDDX` returnerar ett `AssemblerResult`-objekt som innehåller information som anger om DDX-dokumentet är giltigt.
+   The `invokeDDX` returnerar en `AssemblerResult` -objekt som innehåller information som anger om DDX-dokumentet är giltigt.
 
 1. Spara valideringsresultaten i en loggfil.
 
-   * Skapa ett `java.io.File`-objekt och kontrollera att filnamnstillägget är .xml.
-   * Anropa `AssemblerResult`-objektets `getJobLog`-metod. Den här metoden returnerar en `com.adobe.idp.Document`-instans som innehåller verifieringsinformation.
-   * Anropa `com.adobe.idp.Document`-objektets `copyToFile`-metod för att kopiera innehållet i `com.adobe.idp.Document`-objektet till filen.
+   * Skapa en `java.io.File` och se till att filnamnstillägget är .xml.
+   * Anropa `AssemblerResult` objektets `getJobLog` -metod. Den här metoden returnerar en `com.adobe.idp.Document` -instans som innehåller valideringsinformation.
+   * Anropa `com.adobe.idp.Document` objektets `copyToFile` metod för att kopiera innehållet i `com.adobe.idp.Document` till filen.
 
    >[!NOTE]
    >
-   >Om DDX-dokumentet är ogiltigt genereras ett `OperationException`. I catch-satsen kan du anropa `OperationException`-objektets `getJobLog`-metod.
+   >Om DDX-dokumentet är ogiltigt kan du `OperationException` kastas. I catch-satsen kan du anropa `OperationException` objektets `getJobLog` -metod.
 
 **Se även**
 
 [Validerar DDX-dokument](#validating-ddx-documents)
 
-[Snabbstart (SOAP-läge): Validera DDX-dokument med Java API](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-validating-ddx-documents-using-the-java-api)  (SOAP-läge)
+[Snabbstart (SOAP-läge): Validera DDX-dokument med Java API](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-validating-ddx-documents-using-the-java-api) (SOAP-läge)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -161,52 +160,52 @@ Validera ett DX-dokument med Assembler Service API (webbtjänsten):
 
 1. Skapa en PDF Assembler-klient.
 
-   * Skapa ett `AssemblerServiceClient`-objekt med hjälp av dess standardkonstruktor.
-   * Skapa ett `AssemblerServiceClient.Endpoint.Address`-objekt med konstruktorn `System.ServiceModel.EndpointAddress`. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/AssemblerService?blob=mtom`). Du behöver inte använda attributet `lc_version`. Det här attributet används när du skapar en tjänstreferens.
-   * Skapa ett `System.ServiceModel.BasicHttpBinding`-objekt genom att hämta värdet för fältet `AssemblerServiceClient.Endpoint.Binding`. Sänd returvärdet till `BasicHttpBinding`.
-   * Ställ in `System.ServiceModel.BasicHttpBinding`-objektets `MessageEncoding`-fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
+   * Skapa en `AssemblerServiceClient` genom att använda dess standardkonstruktor.
+   * Skapa en `AssemblerServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/AssemblerService?blob=mtom`). Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens.
+   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `AssemblerServiceClient.Endpoint.Binding` fält. Sänd returvärdet till `BasicHttpBinding`.
+   * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM formulär till fältet `AssemblerServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela AEM formuläranvändarnamn till fältet `AssemblerServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `AssemblerServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
       * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
 
 1. Referera till ett befintligt DDX-dokument.
 
-   * Skapa ett `BLOB`-objekt med hjälp av dess konstruktor. Objektet `BLOB` används för att lagra DDX-dokumentet.
-   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar platsen för DDX-dokumentet och läget som filen ska öppnas i.
-   * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream`-objektet. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream`-objektets `Length`-egenskap.
-   * Fyll i bytearrayen med strömdata genom att anropa `System.IO.FileStream`-objektets `Read`-metod och skicka bytearrayen, startpositionen och strömlängden som ska läsas.
-   * Fyll i `BLOB`-objektet genom att tilldela dess `MTOM`-egenskap med innehållet i bytearrayen.
+   * Skapa en `BLOB` genom att använda dess konstruktor. The `BLOB` -objektet används för att lagra DDX-dokumentet.
+   * Skapa en `System.IO.FileStream` genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för DDX-dokumentet och läget som filen ska öppnas i.
+   * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream` -objekt. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream` objektets `Length` -egenskap.
+   * Fylla i bytearrayen med strömdata genom att anropa `System.IO.FileStream` objektets `Read` och skickar bytearrayen, startpositionen och den flödeslängd som ska läsas.
+   * Fyll i `BLOB` genom att tilldela `MTOM` med bytearrayens innehåll.
 
 1. Ange körningsalternativ för att validera DDX-dokumentet.
 
-   * Skapa ett `AssemblerOptionSpec`-objekt som lagrar körningsalternativ med hjälp av dess konstruktor.
-   * Ange det körningsalternativ som instruerar Assembler-tjänsten att validera DDX-dokumentet genom att tilldela värdet true till `AssemblerOptionSpec`-objektets `validateOnly`-datamedlem.
-   * Ange den mängd information som Assembler-tjänsten skriver till loggfilen genom att tilldela ett strängvärde till `AssemblerOptionSpec`-objektets `logLevel`-datamedlem. -metod När du validerar ett DX-dokument vill du att mer information ska skrivas till loggfilen som ska vara till hjälp vid valideringsprocessen. Du kan därför ange värdet `FINE` eller `FINER`. Mer information om de körningsalternativ du kan ange finns i `AssemblerOptionSpec` klassreferens i [AEM Forms API Reference](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
+   * Skapa en `AssemblerOptionSpec` objekt som lagrar körningsalternativ med hjälp av dess konstruktor.
+   * Ange det körningsalternativ som instruerar Assembler-tjänsten att validera DDX-dokumentet genom att tilldela värdet true till `AssemblerOptionSpec` objektets `validateOnly` datamedlem.
+   * Ange mängden information som Assembler-tjänsten skriver till loggfilen genom att tilldela ett strängvärde till `AssemblerOptionSpec` objektets `logLevel` datamedlem. -metod När du validerar ett DX-dokument vill du att mer information ska skrivas till loggfilen som ska vara till hjälp vid valideringsprocessen. Därför kan du ange värdet `FINE` eller `FINER`. Mer information om de körningsalternativ du kan ange finns i `AssemblerOptionSpec` klassreferens i [AEM Forms API-referens](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
 
 1. Utför valideringen.
 
-   Anropa `AssemblerServiceClient`-objektets `invokeDDX`-metod och skicka följande värden:
+   Anropa `AssemblerServiceClient` objektets `invokeDDX` och skicka följande värden:
 
-   * Ett `BLOB`-objekt som representerar DDX-dokumentet.
-   * Värdet `null` för `Map`-objektet som vanligtvis lagrar PDF-dokument.
-   * Ett `AssemblerOptionSpec`-objekt som anger körningsalternativ.
+   * A `BLOB` -objekt som representerar DDX-dokumentet.
+   * Värdet `null` för `Map` objekt som vanligtvis lagrar PDF-dokument.
+   * An `AssemblerOptionSpec` objekt som anger körningsalternativ.
 
-   Metoden `invokeDDX` returnerar ett `AssemblerResult`-objekt som innehåller information som anger om DDX-dokumentet är giltigt.
+   The `invokeDDX` returnerar en `AssemblerResult` -objekt som innehåller information som anger om DDX-dokumentet är giltigt.
 
 1. Spara valideringsresultaten i en loggfil.
 
-   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar platsen för loggfilen och läget som filen ska öppnas i. Kontrollera att filnamnstillägget är .xml.
-   * Skapa ett `BLOB`-objekt som lagrar logginformation genom att hämta värdet för `AssemblerResult`-objektets `jobLog`-datamedlem.
-   * Skapa en bytearray som lagrar innehållet i `BLOB`-objektet. Fyll i bytearrayen genom att hämta värdet för `BLOB`-objektets `MTOM`-fält.
-   * Skapa ett `System.IO.BinaryWriter`-objekt genom att anropa dess konstruktor och skicka `System.IO.FileStream`-objektet.
-   * Skriv bytearrayens innehåll till en PDF-fil genom att anropa `System.IO.BinaryWriter`-objektets `Write`-metod och skicka bytearrayen.
+   * Skapa en `System.IO.FileStream` genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för loggfilen och läget som filen ska öppnas i. Kontrollera att filnamnstillägget är .xml.
+   * Skapa en `BLOB` objekt som lagrar logginformation genom att hämta värdet för `AssemblerResult` objektets `jobLog` datamedlem.
+   * Skapa en bytearray som lagrar innehållet i `BLOB` -objekt. Fylla i bytearrayen genom att hämta värdet för `BLOB` objektets `MTOM` fält.
+   * Skapa en `System.IO.BinaryWriter` genom att anropa dess konstruktor och skicka `System.IO.FileStream` -objekt.
+   * Skriv bytearrayens innehåll till en PDF-fil genom att anropa `System.IO.BinaryWriter` objektets `Write` och skicka bytearrayen.
 
    >[!NOTE]
    >
-   >Om DDX-dokumentet är ogiltigt genereras ett `OperationException`. I catch-satsen kan du hämta värdet för `OperationException`-objektets `jobLog`-medlem.
+   >Om DDX-dokumentet är ogiltigt kan du `OperationException` kastas. I catch-satsen kan du hämta värdet för `OperationException` objektets `jobLog` medlem.
 
 **Se även**
 

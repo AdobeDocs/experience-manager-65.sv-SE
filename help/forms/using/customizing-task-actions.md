@@ -1,29 +1,28 @@
 ---
 title: Anpassa uppgiftsåtgärder
-seo-title: Anpassa uppgiftsåtgärder
+seo-title: Customizing Task Actions
 description: Du kan anpassa utseendet på uppgiftsåtgärderna, endast använda bilder för åtgärder och anpassa bilderna som används i flödesåtgärder.
-seo-description: Du kan anpassa utseendet på uppgiftsåtgärderna, endast använda bilder för åtgärder och anpassa bilderna som används i flödesåtgärder.
+seo-description: You can customize appearance of the task actions, use only images for actions, and customize the images used in route actions.
 uuid: f6aebcd5-beac-41bf-95bf-2c07d36afa8b
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: ca3f6025-7e17-4173-8267-e24a338ea4a1
-translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+exl-id: d17863fb-7950-493d-b378-16861c4af176
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '311'
+source-wordcount: '287'
 ht-degree: 0%
 
 ---
 
-
 # Anpassa uppgiftsåtgärder {#customizing-task-actions}
 
-Med AEM Forms arbetsyta kan användare anpassa uppgiftsåtgärderna. Innan du anpassar uppgiftsåtgärderna måste du följa de steg som anges i [Allmänna steg för anpassning av arbetsytan i AEM Forms](/help/forms/using/generic-steps-html-workspace-customization.md).
+Med AEM Forms arbetsyta kan användare anpassa uppgiftsåtgärderna. Innan du anpassar uppgiftsåtgärderna måste du följa de steg som anges på [Allmänna steg för anpassning av AEM Forms arbetsyta](/help/forms/using/generic-steps-html-workspace-customization.md).
 
 ## Anpassa textstil {#customizing-text-style}
 
-Om du vill anpassa textformatet lägger du till följande kodfragment i `/apps/ws/css/newStyle.css`-filen:
+Om du vill anpassa textformatet lägger du till följande kodfragment i dialogrutan `/apps/ws/css/newStyle.css` fil:
 
 ```css
 /*-------- For Task Actions visible in task list task action popup ----------------------------------------------------*/
@@ -111,7 +110,7 @@ Om du vill anpassa textformatet lägger du till följande kodfragment i `/apps/w
 
 ## Anpassa bilder {#customizing-images}
 
-Om du vill anpassa bilderna lägger du till följande kodfragment i `/apps/ws/css/newStyle.css`-filen. Följande kodfragment anpassar bilden för åtgärden *lock*:
+Om du vill anpassa bilderna lägger du till följande kodfragment i dialogrutan `/apps/ws/css/newStyle.css` -fil. Följande kodfragment anpassar bilden för *lock* åtgärd:
 
 ```css
 #taskarea .taskActionsPopUp .lock, .task .taskActionsPopUp .lock{
@@ -132,13 +131,13 @@ Om du vill anpassa bilderna lägger du till följande kodfragment i `/apps/ws/cs
 }
 ```
 
-## Visar endast bilder för åtgärder {#showing-only-images-for-actions}
+## Visa endast bilder för åtgärder {#showing-only-images-for-actions}
 
 Om du bara vill visa bilder för åtgärder anpassar du bilderna som används i flödesåtgärder. Mer information finns i [Bilder för flödesåtgärder](/help/forms/using/images-route-actions.md).
 
-### Åtgärdssnabbmenyn {#task-list-task-action-nbsp-pop-up-menu} för uppgiftslistans åtgärd
+### Åtgärdssnabbmeny för uppgiftslistans åtgärd {#task-list-task-action-nbsp-pop-up-menu}
 
-1. Du behöver ett utvecklingspaket för att kunna anpassa alternativ på åtgärdsmenyn Åtgärd för arbetsytan i AEM Forms. Mer information om hur du skapar utvecklingspaket finns i [Skapa AEM Forms-arbetsytekod.](/help/forms/using/introduction-customizing-html-workspace.md#building-html-workspace-code).
+1. Du behöver ett utvecklingspaket för att kunna anpassa alternativ på åtgärdsmenyn Åtgärd för arbetsytan i AEM Forms. Mer information om hur du skapar utvecklingspaket finns i [Skapar AEM Forms-arbetsytekod.](/help/forms/using/introduction-customizing-html-workspace.md#building-html-workspace-code)
 
 1. Kopiera /libs/ws/js/runtime/templates/task.html till `/apps/ws/js/runtime/templates/task.html`ersätt följande kodfragment:
 
@@ -213,7 +212,7 @@ Om du bara vill visa bilder för åtgärder anpassar du bilderna som används i 
        </div>
    ```
 
-1. Ta bort den fasta bredden som tilldelats en ankartagg från `/apps/ws/css/newStyle.css`-filen:
+1. Ta bort den fasta bredden som tilldelats en ankartagg från `/apps/ws/css/newStyle.css` fil:
 
    ```css
    .task .taskActionsPopUp ul{
@@ -263,12 +262,12 @@ Om du bara vill visa bilder för åtgärder anpassar du bilderna som används i 
    }
    ```
 
-### Åtgärdsåtgärdssnabbmenyn {#task-details-task-action-pop-up-menu} för uppgiftsinformation
+### Åtgärdssnabbmenyn Åtgärd för uppgiftsinformation {#task-details-task-action-pop-up-menu}
 
 Utför följande steg för att anpassa snabbmenyn Detaljåtgärdsåtgärder:
 
-* Kopiera /libs/ws/js/runtime/templates/taskdetails.html till mappen `/apps/ws/js/runtime/templates/`:
-* Kapsla in ikontaggen inuti ankartaggen i stället för text. Den *nya koden* som visas nedan kapslar in ikontaggen inuti ankartaggen:
+* Kopiera /libs/ws/js/runtime/templates/taskdetails.html till `/apps/ws/js/runtime/templates/` mapp:
+* Kapsla in ikontaggen inuti ankartaggen i stället för text. Till exempel *ny kod* som visas nedan kapslar in ikontaggen i ankartaggen:
 
 ```html
 // Original code

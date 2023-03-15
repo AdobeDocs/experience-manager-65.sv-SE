@@ -1,8 +1,8 @@
 ---
 title: Publicera samlingar på varumärkesportalen
-seo-title: Publicera samlingar på varumärkesportalen
+seo-title: Publish collections to Brand Portal
 description: Lär dig hur du publicerar och avpublicerar samlingar till Brand Portal.
-seo-description: Lär dig hur du publicerar och avpublicerar samlingar till Brand Portal.
+seo-description: Learn how to publish and unpublish collections to Brand Portal.
 uuid: 7de58548-4cfa-4a94-bac7-9e914dee9042
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -15,7 +15,7 @@ role: User
 exl-id: 8f426012-d9ec-418e-8ab6-78e4aeff7538
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '339'
+source-wordcount: '322'
 ht-degree: 26%
 
 ---
@@ -28,20 +28,20 @@ Om du gör senare ändringar i den ursprungliga samlingen i AEM Assets återspeg
 
 >[!NOTE]
 >
->Det går inte att publicera innehållsfragment på varumärkesportalen. Om du väljer innehållsfragment på AEM Author är **åtgärden Publicera på Brand Portal** därför inte tillgänglig.
+>Det går inte att publicera innehållsfragment på varumärkesportalen. Om du väljer innehållsfragment på AEM Author **Publicera till Brand Portal** åtgärden är inte tillgänglig.
 >
 >Om samlingar som innehåller innehållsfragment publiceras från AEM Author till Brand Portal, replikeras allt innehåll i mappen utom innehållsfragment till Brand Portal-gränssnittet.
 
 ## Publicera en samling på Brand Portal {#publish-a-collection-to-brand-portal}
 
 1. Klicka på AEM-logotypen i användargränssnittet för AEM Assets.
-1. Gå till **Resurser > Samlingar** från sidan **Navigering**.
+1. Från **Navigering** sida, gå till **Resurser > Samlingar**.
 1. På Samlingar-konsolen väljer du den samling du vill publicera till Brand Portal.
 
    ![select_collection](assets/select_collection.png)
 
-1. Klicka på **Publicera till Brand Portal** i verktygsfältet.
-1. Klicka på **Publicera** i bekräftelsedialogrutan.
+1. I verktygsfältet klickar du på **Publicera till Brand Portal**.
+1. Klicka på **Publicera**.
 1. Stäng bekräftelsemeddelandet.
 1. Logga in på Brand Portal som administratör. Den publicerade samlingen är tillgänglig i samlingskonsolen.
 
@@ -55,6 +55,6 @@ Du kan avpublicera samlingar som du publicerar från AEM Assets till Brand Porta
 
    ![select_collection-1](assets/select_collection-1.png)
 
-1. Klicka på ikonen **Ta bort från Brand Portal** i verktygsfältet.
-1. Klicka på **Avpublicera** i dialogrutan.
+1. I verktygsfältet klickar du på **Ta bort från Brand Portal** ikon.
+1. Klicka på **Avpublicera**.
 1. Stäng bekräftelsemeddelandet. Samlingen tas bort från varumärkesportalens gränssnitt.

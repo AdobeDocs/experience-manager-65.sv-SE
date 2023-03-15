@@ -1,22 +1,21 @@
 ---
 title: Krypteringsstöd för konfigurationsegenskaper
-seo-title: Krypteringsstöd för konfigurationsegenskaper
+seo-title: Encryption Support for Configuration Properties
 description: Krypteringsstöd för konfigurationsegenskaper
-seo-description: 'null'
+seo-description: null
 uuid: 26dc5e46-9332-4d9b-8874-895b90391e8c
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: security
 discoiquuid: 4e08c297-aa4b-44cf-84c8-1e11582d9ebb
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 3c3db1c8-5b22-45dd-aeaf-5cf830a9486b
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '283'
-ht-degree: 1%
+source-wordcount: '277'
+ht-degree: 0%
 
 ---
-
 
 # Krypteringsstöd för konfigurationsegenskaper{#encryption-support-for-configuration-properties}
 
@@ -34,21 +33,21 @@ Stöd för OSGi Configuration Plugin har lagts till för att dekryptera egenskap
 
 De här stegen visar hur du krypterar SMTP-lösenordet för e-posttjänsten. Du kan slutföra de här stegen för en OSGI-egenskap som du vill kryptera.
 
-1. Gå till AEM webbkonsol på *https://&lt;serveradress>:&lt;serverport>/system/console/configMgr*
+1. Gå till AEM webbkonsol på *https://&lt;serveraddress>:&lt;serverport>/system/console/configMgr*
 1. I det övre vänstra hörnet går du till **Main - Crypto Support**
 
    ![chlimage_1-325](assets/chlimage_1-325.png)
 
-1. Sidan **Adobe Experience Manager Web Console Crypto Support** visas.
+1. The **Stöd för Adobe Experience Manager Web Console-kryptering** visas.
 
    ![screen_shot_2018-08-01at113417am](assets/screen_shot_2018-08-01at113417am.png)
 
-1. I fältet **Oformaterad text** anger du texten för känsliga data som du vill skydda.
+1. I **Oformaterad text** anger du texten i de känsliga data som du vill skydda.
 1. Välj **Protect**. Den skyddade texten visas som krypterad text.
 
    ![screen_shot_2018-08-01at113844am](assets/screen_shot_2018-08-01at113844am.png)
 
-1. Kopiera den skyddade texten från steg 5 och klistra in den i OSGI-formulärvärdet. I det här exemplet läggs det krypterade **SMTP-lösenordet** till i *Day CQ Mail Service*.
+1. Kopiera den skyddade texten från steg 5 och klistra in den i OSGI-formulärvärdet. I det här exemplet krypteras **SMTP-lösenord** läggs till i *Dagens CQ-posttjänst*.
 
    ![screen_shot_2016-12-18at105809pm](assets/screen_shot_2016-12-18at105809pm.png)
 

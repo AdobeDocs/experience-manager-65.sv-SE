@@ -1,8 +1,8 @@
 ---
 title: Översätta innehåll för flerspråkiga webbplatser
-seo-title: Översätta innehåll för flerspråkiga webbplatser
+seo-title: Translating Content for Multilingual Sites
 description: Lär dig hur du översätter innehåll för flerspråkiga webbplatser.
-seo-description: Lär dig hur du översätter innehåll för flerspråkiga webbplatser.
+seo-description: Learn how to translate content for multilingual sites.
 uuid: 69b3e3a9-6773-4759-8178-aaa612e4c170
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,16 +12,15 @@ discoiquuid: 1e0a68c5-1583-4103-9dbb-7a53faa03c06
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/third-party-services/machine-translation
 feature: Language Copy
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 6ccfe612-8cfd-4ca2-ad01-8e4af36d44fa
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '269'
+source-wordcount: '254'
 ht-degree: 0%
 
 ---
 
-
-# Översätter innehåll för flerspråkiga webbplatser {#translating-content-for-multilingual-sites}
+# Översätta innehåll för flerspråkiga webbplatser {#translating-content-for-multilingual-sites}
 
 Automatisera översättning av sidinnehåll, resurser och användargenererat innehåll för att skapa och underhålla flerspråkiga webbplatser. Om du vill automatisera arbetsflöden för översättning integrerar du översättare med AEM och skapar projekt för översättning av innehåll till flera språk. AEM har stöd för arbetsflöden för översättning mellan människor och datorer.
 
@@ -30,12 +29,12 @@ Automatisera översättning av sidinnehåll, resurser och användargenererat inn
 
 Översättning av innehåll omfattar följande steg:
 
-1. [Koppla AEM med översättningstjänsten ](/help/sites-administering/tc-tic.md#connecting-to-a-translation-service-provider) och  [skapa konfigurationer](/help/sites-administering/tc-tic.md) för översättningsintegrering.
-1. [Koppla sidorna i ditt språk till ](/help/sites-administering/tc-tic.md#configuring-pages-for-translation) översättningstjänsten och ramverkskonfigurationerna.
-1. [Identifiera vilken typ av ](/help/sites-administering/tc-rules.md) innehåll som ska översättas.
-1. [Förbered innehållet för ](/help/sites-administering/tc-prep.md) översättning genom att skapa språket överordnad och skapa rotsidorna för språkkopior.
-1. [Skapa översättningsprojekt ](/help/sites-administering/tc-manage.md) för att samla in det innehåll som ska översättas och förbereda översättningsprocessen.
-1. Använd översättningsprojekten för att [hantera innehållsöversättningsprocessen](/help/sites-administering/tc-manage.md).
+1. [Anslut AEM till översättningstjänstleverantören](/help/sites-administering/tc-tic.md#connecting-to-a-translation-service-provider) och [skapa konfigurationer för översättningsintegreringsramverk](/help/sites-administering/tc-tic.md).
+1. [Koppla samman sidorna på din språkinställning](/help/sites-administering/tc-tic.md#configuring-pages-for-translation) med översättningstjänsten och ramverkskonfigurationerna.
+1. [Identifiera innehållstypen](/help/sites-administering/tc-rules.md) att översätta.
+1. [Förbered innehållet för översättning](/help/sites-administering/tc-prep.md) genom att skapa det överordnad språket och skapa rotsidorna för språkkopior.
+1. [Skapa översättningsprojekt](/help/sites-administering/tc-manage.md) för att samla det innehåll som ska översättas och förbereda översättningsprocessen.
+1. Använd översättningsprojekt för att [hantera innehållsöversättningsprocessen](/help/sites-administering/tc-manage.md).
 
 Om översättningstjänsten inte har någon koppling till AEM stöder AEM manuell extrahering och återinfogning av översättningsinnehåll i XML-format.
 
@@ -45,4 +44,4 @@ Om översättningstjänsten inte har någon koppling till AEM stöder AEM manuel
 
 ## Bästa praxis {#best-practices}
 
-Sidan [Bästa praxis för översättning](/help/sites-administering/tc-bp.md) innehåller viktig information om implementeringen.
+The [Bästa praxis för översättning](/help/sites-administering/tc-bp.md) sidan innehåller viktig information om implementeringen.

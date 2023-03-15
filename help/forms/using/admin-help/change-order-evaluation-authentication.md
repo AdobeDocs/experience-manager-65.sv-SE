@@ -1,22 +1,21 @@
 ---
 title: Ändra utvärderingsordningen för autentisering
-seo-title: Ändra utvärderingsordningen för autentisering
+seo-title: Change the order of evaluation for authentication
 description: Du kan ändra ordningen i vilken AEM utvärderas av flera autentiseringsleverantörer.
-seo-description: Du kan ändra ordningen i vilken AEM utvärderas av flera autentiseringsleverantörer.
+seo-description: You can change the order in which AEM forms evaluates multiple authentication providers.
 uuid: c2693e5b-cf09-4bb8-815a-2b20ebf6eea0
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_user_management
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 5434df9c-ecf6-450a-aa7e-d9ab69b66fe6
-translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+exl-id: 7e29c9d4-fb82-4308-aac7-0f5cb1f4aef2
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '167'
+source-wordcount: '147'
 ht-degree: 0%
 
 ---
-
 
 # Ändra utvärderingsordningen för autentisering {#change-the-order-of-evaluation-for-authentication}
 
@@ -44,8 +43,7 @@ Om du har konfigurerat flera autentiseringsleverantörer kan du ändra i vilken 
     </node>
    ```
 
-   I `<entry key="order" value="3" />` redigerar du värdet för varje nod för att ange ordningen för autentiseringsutvärderingen.
+   I `<entry key="order" value="3" />`, redigera värdet för varje nod för att ange ordningen för autentiseringsutvärderingen.
 
 1. Om du vill importera den uppdaterade filen klickar du i Användarhantering på Konfiguration > Importera och exportera konfigurationsfiler.
 1. Klicka på Bläddra för att hitta filen, klicka på Importera och sedan på OK.
-

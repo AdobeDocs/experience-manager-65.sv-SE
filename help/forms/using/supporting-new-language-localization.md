@@ -1,20 +1,20 @@
 ---
 title: Stöd för nya språk för lokalisering av adaptiva formulär
-seo-title: Stöd för nya språk för lokalisering av adaptiva formulär
+seo-title: Supporting new locales for adaptive forms localization
 description: Med AEM Forms kan du lägga till nya språk för lokalisering av anpassningsbara formulär. De språkområden som stöds är som standard engelska, franska, tyska och japanska.
-seo-description: Med AEM Forms kan du lägga till nya språk för lokalisering av anpassningsbara formulär. De språkområden som stöds är som standard engelska, franska, tyska och japanska.
+seo-description: AEM Forms allows you to add new locales for localizing adaptive forms. The supported locales by default are English, French, German, and Japanese.
 uuid: 7f9fab6b-8d93-46bb-8c7c-7b723d5159ea
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
 discoiquuid: d4e2acb0-8d53-4749-9d84-15b8136e610b
 docset: aem65
-feature: Adaptiv Forms
+feature: Adaptive Forms
 role: Admin
 exl-id: 2ed4d99e-0e90-4b21-ac17-aa6707a3ba7d
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '783'
 ht-degree: 0%
 
 ---
@@ -25,15 +25,15 @@ ht-degree: 0%
 
 Lokaliseringen av anpassningsbara formulär bygger på två typer av språkordlistor:
 
-**Formulärspecifik** ordlistaInnehåller strängar som används i anpassningsbara formulär. Till exempel etiketter, fältnamn, felmeddelanden, hjälpbeskrivningar och så vidare. Den hanteras som en uppsättning XLIFF-filer för varje språkområde och du kan komma åt den på `https://<host>:<port>/libs/cq/i18n/translator.html`.
+**Formulärspecifik ordlista** Innehåller strängar som används i adaptiva formulär. Till exempel etiketter, fältnamn, felmeddelanden, hjälpbeskrivningar och så vidare. Den hanteras som en uppsättning XLIFF-filer för varje språkområde och du kan komma åt den på `https://<host>:<port>/libs/cq/i18n/translator.html`.
 
-**Globala** ordlistorDet finns två globala ordlistor, som hanteras som JSON-objekt, AEM klientbiblioteket. De här ordlistorna innehåller standardfelmeddelanden, namn på månader, valutasymboler, datum- och tidsmönster osv. Dessa ordlistor finns i CRXDe Lite på /libs/fd/xfaforms/clientlibs/I18N. Dessa platser innehåller separata mappar för varje språkområde. Eftersom globala ordlistor vanligtvis inte uppdateras så ofta, kan webbläsare cachelagra olika JavaScript-filer för varje språkinställning och minska användningen av nätverksbandbredd när olika adaptiva formulär används på samma server.
+**Globala ordlistor** Det finns två globala ordlistor, som hanteras som JSON-objekt, AEM klientbiblioteket. De här ordlistorna innehåller standardfelmeddelanden, namn på månader, valutasymboler, datum- och tidsmönster osv. Dessa ordlistor finns i CRXDe Lite på /libs/fd/xfaforms/clientlibs/I18N. Dessa platser innehåller separata mappar för varje språkområde. Eftersom globala ordlistor vanligtvis inte uppdateras så ofta, kan webbläsare cachelagra olika JavaScript-filer för varje språkinställning och minska användningen av nätverksbandbredd när olika adaptiva formulär används på samma server.
 
 ### Hur lokalisering av anpassningsbara formulär fungerar {#how-localization-of-adaptive-form-works}
 
 Det finns två metoder för att identifiera det anpassade formulärets språkområde. När ett anpassat formulär återges identifieras det begärda språket av :
 
-* tittar på `[local]`-väljaren i den anpassningsbara formulärets URL. URL-adressen har formatet `http://host:port/content/forms/af/[afName].[locale].html?wcmmode=disabled`. Om du använder `[local]`-väljaren kan du cachelagra ett anpassat formulär.
+* tittar du på `[local]` väljaren i den anpassningsbara formulärets URL. URL-formatet är `http://host:port/content/forms/af/[afName].[locale].html?wcmmode=disabled`. Använda `[local]` -väljaren tillåter att ett anpassat formulär cachelagras.
 
 * Titta på följande parametrar i den angivna ordningen:
 
@@ -42,20 +42,20 @@ Om du vill åsidosätta webbläsarens språkområde för användare kan du skick
 `afAcceptLang` begär parameter för att tvinga språkområdet. Följande URL kommer till exempel att tvinga formuläret att återges på japanska språk:
       `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
 
-   * Webbläsarens språkområdesuppsättning för användaren, som anges i begäran med rubriken `Accept-Language`.
+   * Webbläsarens språkområdesuppsättning för användaren, som anges i begäran med `Accept-Language` header.
 
    * Språkinställningen för den användare som anges i AEM.
 
    * Webbläsarens språkområde är aktiverat som standard. Om du vill ändra språkinställningen för webbläsaren
       * Öppna konfigurationshanteraren. URL:en är `http://[server]:[port]/system/console/configMgr`
-      * Leta reda på och öppna **[!UICONTROL Adaptive Form and Interactive Communication Web Channel]**-konfigurationen.
-      * Ändra status för alternativet **[!UICONTROL Use Browser Locale]** och **[!UICONTROL Save]** konfigurationen.
+      * Leta reda på och öppna **[!UICONTROL Adaptive Form and Interactive Communication Web Channel]** konfiguration.
+      * Ändra status för **[!UICONTROL Use Browser Locale]** och  **[!UICONTROL Save]** konfigurationen.
 
 När språkområdet har identifierats väljs den formulärspecifika ordlistan i de adaptiva formulären. Om det inte går att hitta den formulärspecifika ordlistan för den begärda språkversionen används ordlistan för det språk som det anpassade formuläret skapades på.
 
 Om det inte finns någon språkinformation skickas ett anpassat formulär på formulärets originalspråk. Det ursprungliga språket är det språk som används vid utvecklingen av det anpassade formuläret.
 
-Om det inte finns något klientbibliotek för det begärda språket söker programmet efter språkkoden i klientbiblioteket. Om den begärda språkversionen till exempel är `en_ZA` (sydafrikansk engelska) och klientbiblioteket för `en_ZA` inte finns, kommer den adaptiva formen att använda klientbiblioteket för `en` (engelska), om det finns. Om det inte finns någon av dem använder det adaptiva formuläret lexikonet för `en`-språkinställningen.
+Om det inte finns något klientbibliotek för det begärda språket söker programmet efter språkkoden i klientbiblioteket. Om det begärda språket till exempel är `en_ZA` (sydafrikansk engelska) och klientbiblioteket för `en_ZA` finns inte, det adaptiva formuläret använder klientbiblioteket för `en` (Engelska), om det finns. Om det inte finns någon av dem används lexikonet för `en` språkinställning.
 
 ## Lägg till lokaliseringsstöd för språk som inte stöds {#add-localization-support-for-non-supported-locales}
 
@@ -74,18 +74,18 @@ Så här lägger du till stöd för en ny språkinställning vid körning av ada
 ### Lägga till en språkinställning i tjänsten för guidelokalisering {#add-a-locale-to-the-guide-localization-service-br}
 
 1. Gå till `https://'[server]:[port]'/system/console/configMgr`.
-1. Klicka om du vill redigera **guidelokaliseringstjänsten**-komponenten.
+1. Klicka för att redigera **Guide Localization Service** -komponenten.
 1. Lägg till det språkområde som du vill lägga till i listan över språkområden som stöds.
 
 ![GuideLocalizationService](assets/configservice.png)
 
 ### Lägg till XFA-klientbibliotek för en språkinställning {#add-xfa-client-library-for-a-locale-br}
 
-Skapa en nod av typen `cq:ClientLibraryFolder` under `etc/<folderHierarchy>`, med kategorin `xfaforms.I18N.<locale>`, och lägg till följande filer i klientbiblioteket:
+Skapa en nod av typen `cq:ClientLibraryFolder` under `etc/<folderHierarchy>`, med kategori `xfaforms.I18N.<locale>`och lägg till följande filer i klientbiblioteket:
 
-* **I18N.** jsdefining  `xfalib.locale.Strings` for the  `<locale>` as defined in  `/etc/clientlibs/fd/xfaforms/I18N/ja/I18N`.
+* **I18N.js** definiera `xfalib.locale.Strings` för `<locale>` enligt definition i `/etc/clientlibs/fd/xfaforms/I18N/ja/I18N`.
 
-* **js.** txtinnehåller följande:
+* **js.txt** som innehåller följande:
 
 ```text
 /libs/fd/xfaforms/clientlibs/I18N/Namespace.js
@@ -95,13 +95,13 @@ I18N.js
 
 ### Lägg till anpassat formulärklientbibliotek för en språkinställning {#add-adaptive-form-client-library-for-a-locale-br}
 
-Skapa en nod av typen `cq:ClientLibraryFolder` under `etc/<folderHierarchy>`, med kategorin `guides.I18N.<locale>` och beroenden som `xfaforms.3rdparty`, `xfaforms.I18N.<locale>` och `guide.common`. &quot;
+Skapa en nod av typen `cq:ClientLibraryFolder` under `etc/<folderHierarchy>`, med kategorin som `guides.I18N.<locale>` och beroenden som `xfaforms.3rdparty`, `xfaforms.I18N.<locale>` och `guide.common`. &quot;
 
 Lägg till följande filer i klientbiblioteket:
 
-* **i18n.** jsdefining  `guidelib.i18n`, having patterns of &quot;calendarSymbols&quot;,  `datePatterns`,  `timePatterns`,  `dateTimeSymbols`,  `numberPatterns`,  `numberSymbols` `currencySymbols`, for the  `typefaces`   `<locale>`   [ ](https://helpx.adobe.com/content/dam/Adobe/specs/xfa_spec_3_3.pdf)as Enligt XFA-specifikationerna som beskrivs i¥Locale Set Specification¥. Du kan också se hur den definieras för andra språkområden som stöds i `/etc/clientlibs/fd/af/I18N/fr/javascript/i18n.js`.
-* **LogMessages.** jsdefining  `guidelib.i18n.strings` and  `guidelib.i18n.LogMessages` for the  `<locale>` as defined in  `/etc/clientlibs/fd/af/I18N/fr/javascript/LogMessages.js`.
-* **js.** txtinnehåller följande:
+* **i18n.js** definiera `guidelib.i18n`, som har mönster av &quot;calendarSymbols&quot;, `datePatterns`, `timePatterns`, `dateTimeSymbols`, `numberPatterns`, `numberSymbols`, `currencySymbols`, `typefaces` för `<locale>` enligt XFA-specifikationerna som beskrivs i [Ange nationella inställningar](https://helpx.adobe.com/content/dam/Adobe/specs/xfa_spec_3_3.pdf). Du kan också se hur den är definierad för andra språkområden som stöds i `/etc/clientlibs/fd/af/I18N/fr/javascript/i18n.js`.
+* **LogMessages.js** definiera `guidelib.i18n.strings` och `guidelib.i18n.LogMessages` för `<locale>` enligt definition i `/etc/clientlibs/fd/af/I18N/fr/javascript/LogMessages.js`.
+* **js.txt** som innehåller följande:
 
 ```text
 i18n.js
@@ -110,16 +110,16 @@ LogMessages.js
 
 ### Lägg till språkstöd för ordlistan {#add-locale-support-for-the-dictionary-br}
 
-Utför bara det här steget om `<locale>` du lägger till inte är bland `en`, `de`, `es`, `fr`, `it`, `pt-br`, `zh-cn`, `zh-tw`, `ja`, `ko-kr`.
+Utför endast det här steget om `<locale>` du lägger till är inte bland `en`, `de`, `es`, `fr`, `it`, `pt-br`, `zh-cn`, `zh-tw`, `ja`, `ko-kr`.
 
-1. Skapa en `nt:unstructured`-nod `languages` under `etc`, om den inte redan finns.
+1. Skapa en `nt:unstructured` nod `languages` under `etc`, om det inte redan finns.
 
-1. Lägg till en strängegenskap med flera värden `languages` till noden, om den inte redan finns.
-1. Lägg till `<locale>`-standardvärdena för nationella inställningar `de`, `es`, `fr`, `it`, `pt-br`, `zh-cn`, `zh-tw`, `ja`, `ko-kr`, om de inte redan finns.
+1. Lägga till en flervärdessträngsegenskap `languages` till noden, om den inte redan finns.
+1. Lägg till `<locale>` standardvärden för nationella inställningar `de`, `es`, `fr`, `it`, `pt-br`, `zh-cn`, `zh-tw`, `ja`, `ko-kr`, om det inte redan finns.
 
-1. Lägg till `<locale>` i värdena för egenskapen `languages` för `/etc/languages`.
+1. Lägg till `<locale>` till värdena för `languages` egenskap för `/etc/languages`.
 
-`<locale>` visas på `https://'[server]:[port]'/libs/cq/i18n/translator.html`.
+The `<locale>` visas på `https://'[server]:[port]'/libs/cq/i18n/translator.html`.
 
 ### Starta om servern {#restart-the-server}
 

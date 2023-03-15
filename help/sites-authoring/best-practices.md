@@ -1,22 +1,21 @@
 ---
 title: Bästa praxis
-seo-title: Bästa praxis
+seo-title: Best Practices
 description: Så här använder du AEM på ett så effektivt och effektivt sätt som möjligt
-seo-description: Så här använder du AEM på ett så effektivt och effektivt sätt som möjligt
+seo-description: How to use AEM in the most efficient and most effective way possible
 uuid: b3044cdf-8ca4-4012-b290-11f73c0cb1bf
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
 discoiquuid: d15ded18-7417-47e2-9783-b23fa05a0cda
-translation-type: tm+mt
-source-git-commit: 801d57bbe8a1bede6dcb4bf7884e5f71ddea1e83
+exl-id: 9994c63b-65ca-4974-a48d-992f5f8f3f01
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '302'
+source-wordcount: '287'
 ht-degree: 4%
 
 ---
-
 
 # Bästa praxis{#best-practices}
 
@@ -55,7 +54,7 @@ De effektivaste strategierna kring Assets, inklusive Dynamic Media-funktioner oc
   <tr>
    <td>Dynamic Imaging</td>
    <td><a href="/help/assets/best-practices-for-optimizing-the-quality-of-your-images.md">Dynamic Imaging bästa praxis</a></td>
-   <td><p>Beskriver hur du kan göra en bild skarpare för att få bästa resultat och det bästa sättet att optimera bildkvaliteten om du använder Dynamic Media-funktionen eller integrerar med Dynamic Media Classic. </p> </td>
+   <td><p>Beskriver hur du kan förbättra skärpan i en bild och det bästa sättet att optimera bildkvaliteten om du använder Dynamic Media eller integrerar med Dynamic Media Classic. </p> </td>
   </tr>
   <tr>
    <td>Flerspråkiga resurser</td>
@@ -79,4 +78,4 @@ Hantering och redigering av webbplatsinnehåll har några beprövade metoder:
 |  |  |  |
 |---|---|---|
 | Anpassningsbara formulär | [Bästa tillvägagångssätt för arbete med anpassningsbara formulär](/help/forms/using/adaptive-forms-best-practices.md) | Beskriver de bästa sätten att skapa, redigera och anpassa anpassade formulär. |
-| HTML5-formulär | [Bästa tillvägagångssätt för att utforma HTML5-formulär](/help/forms/using/best-practices-for-html5-forms.md) | Beskriver de bästa sätten att arbeta med layout och design av HTML5-formulär. |
+| HTML5-formulär | [Bästa praxis för utformning av HTML5-formulär](/help/forms/using/best-practices-for-html5-forms.md) | Beskriver de bästa sätten att arbeta med layout och design av HTML5-formulär. |

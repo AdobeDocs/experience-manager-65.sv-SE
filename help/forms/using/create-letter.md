@@ -1,7 +1,7 @@
 ---
 title: Skapa brev
 seo-title: Create Letter
-description: 'I det här avsnittet beskrivs stegen för hur du skapar ett brev, lägger till datamoduler och bilagor till det och förhandsgranskar det i Korrespondenshantering. '
+description: I det här avsnittet beskrivs stegen för hur du skapar ett brev, lägger till datamoduler och bilagor till det och förhandsgranskar det i Korrespondenshantering.
 seo-description: This topic gives you the steps to create a letter, add data modules and attachments to it, and preview it in Correspondence Management.
 uuid: b5cdbf01-db85-4ff8-9fda-1489542bffef
 products: SG_EXPERIENCEMANAGER/6.4/FORMS

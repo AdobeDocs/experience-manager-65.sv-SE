@@ -1,24 +1,23 @@
 ---
 title: Content Essentials
-seo-title: Content Essentials
+seo-title: Featured Content Essentials
 description: Arbeta med funktionsinnehåll
-seo-description: Arbeta med funktionsinnehåll
+seo-description: Working with feature content
 uuid: b376828a-1431-4d16-ad6b-b23a3ea62a75
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: 781625f1-39a0-4e34-948c-d4eab35dd5c1
-translation-type: tm+mt
-source-git-commit: c897f034edbdbeee74869165ed384c3408a857e0
+exl-id: 70b0ad6a-c891-4588-8515-449aed206805
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '113'
+source-wordcount: '106'
 ht-degree: 2%
 
 ---
 
-
-# Content Essentials {#featured-content-essentials}
+# Content Essentials  {#featured-content-essentials}
 
 Den här sidan innehåller viktig information för att arbeta med aktuellt innehåll.
 
@@ -51,7 +50,7 @@ I motsats till att fästa ett inlägg överst i ett forum kan den här funktione
   </tr>
   <tr>
    <td><strong> egenskaper</strong></td>
-   <td>Se <a href="featured.md">Aktuellt innehåll</a></td>
+   <td>Se <a href="featured.md">Innehåll</a></td>
   </tr>
  </tbody>
 </table>
@@ -60,4 +59,4 @@ I motsats till att fästa ett inlägg överst i ett forum kan den här funktione
 
 ### Filbiblioteksfunktion {#file-library-function}
 
-En community-webbplatsstruktur som innehåller [funktionen för aktuellt innehåll](functions.md#featured-content-function) innehåller en konfigurerad `featured content`-komponent.
+En community-webbplatsstruktur som innehåller [Funktionen Innehåll](functions.md#featured-content-function), innehåller en konfigurerad `featured content` -komponenten.

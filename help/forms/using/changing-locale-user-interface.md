@@ -1,8 +1,8 @@
 ---
 title: Ändra språkområdet för användargränssnittet i AEM Forms arbetsyta
-seo-title: Ändra språkområdet för användargränssnittet i AEM Forms arbetsyta
+seo-title: Changing the locale of AEM Forms workspace user interface
 description: Så här ändrar du arbetsytan i AEM Forms för att lokalisera text, komprimerade kategorier, köer och processer samt datumväljaren i gränssnittet.
-seo-description: Så här ändrar du arbetsytan i AEM Forms för att lokalisera text, komprimerade kategorier, köer och processer samt datumväljaren i gränssnittet.
+seo-description: How to modify the AEM Forms workspace to localize text, collapsed categories, queues, and processes, and the date picker on the interface.
 uuid: c89ff150-a36e-45cc-99a6-8768dbe58eab
 contentOwner: robhagat
 content-type: reference
@@ -10,16 +10,15 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 89f9d666-28e2-4201-8467-ae90693ca5d2
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+exl-id: 9a069486-02a8-4058-adfb-4e0e49d8c0cf
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '587'
+source-wordcount: '556'
 ht-degree: 0%
 
 ---
 
-
-# Ändra språkinställningen för användargränssnittet för arbetsytan i AEM Forms{#changing-the-locale-of-aem-forms-workspace-user-interface}
+# Ändra språkområdet för användargränssnittet i AEM Forms arbetsyta{#changing-the-locale-of-aem-forms-workspace-user-interface}
 
 AEM Forms arbetsyta har stöd för engelska, franska, tyska och japanska. Det gör det även möjligt att lokalisera användargränssnittet för AEM Forms-arbetsytan till andra språk.
 
@@ -29,31 +28,31 @@ Så här lokaliserar du användargränssnittet för AEM Forms-arbetsytan till de
 * Lokalisera dolda kategorier, köer och processer.
 * Lokalisera datumväljare
 
-Innan du utför ovanstående steg måste du följa de steg som anges i [Allmänna steg för anpassning av AEM Forms-arbetsytan](../../forms/using/generic-steps-html-workspace-customization.md).
+Innan du utför ovanstående steg måste du följa de steg som anges på [Allmänna steg för anpassning av AEM Forms arbetsyta](../../forms/using/generic-steps-html-workspace-customization.md).
 
 >[!NOTE]
 >
->Information om hur du ändrar språk för inloggningsskärmen i AEM Forms finns i [Skapa en ny inloggningsskärm](../../forms/using/creating-new-login-screen.md).
+>Information om hur du ändrar språk för inloggningsskärmen på arbetsytan i AEM Forms finns i [Skapa en ny inloggningsskärm](../../forms/using/creating-new-login-screen.md).
 
-## Lokaliserar text {#localizing-text}
+## Lokalisera text {#localizing-text}
 
-Utför följande steg för att lägga till stöd för språket *Nytt* och webbläsarens språkkod *nw*.
+Utför följande steg för att lägga till stöd för ett språk *Nytt* och webbläsarens språkkod *nw*.
 
 1. Logga in på CRXDE Lite.
 Standardwebbadressen för CRXDE Lite är `https://'[server]:[port]'/lc/crx/de/index.jsp`.
 1. Navigera till platsen `apps/ws/locales` och skapa en ny mapp `nw.`
-1. Kopiera filen `translation.json`från platsen `/apps/ws/locales/en-US` till platsen `/apps/ws/locales/nw`.
+1. Kopiera filen `translation.json`från platsen `/apps/ws/locales/en-US` till plats `/apps/ws/locales/nw` .
 1. Navigera till `/apps/ws/locales/nw` och öppna `translation.json` för redigering. Gör språkspecifika ändringar i filen translation.json.
 
    Följande exempel innehåller filen translation.json för engelska och franska i AEM Forms arbetsyta.
 
-   ![translation_json_in_](assets/translation_json_in_en.png) ![entranslation_json_in_fr](assets/translation_json_in_fr.png)
+   ![translation_json_in_en](assets/translation_json_in_en.png) ![translation_json_in_fr](assets/translation_json_in_fr.png)
 
 ## Lokalisera komprimerade kategorier, köer och processer {#localizing-collapsed-categories-queues-and-processes}
 
-På arbetsytan i AEM Forms används bilder för att visa rubriker för kategorier, köer och processer. Du behöver ett utvecklingspaket för att lokalisera dessa rubriker. Mer information om hur du skapar utvecklingspaket finns i [Skapa AEM Forms-arbetsytekod.](introduction-customizing-html-workspace.md#building-html-workspace-code).
+På arbetsytan i AEM Forms används bilder för att visa rubriker för kategorier, köer och processer. Du behöver ett utvecklingspaket för att lokalisera dessa rubriker. Mer information om hur du skapar utvecklingspaket finns i [Skapar AEM Forms-arbetsytekod.](introduction-customizing-html-workspace.md#building-html-workspace-code)
 
-I följande steg antas de nya lokaliserade bildfilerna vara *Categories_nw.png*, *Queue_nw.png* och *Processes_nw.png*. Bildernas rekommenderade bredd är 19px.
+I följande steg antas de nya lokaliserade bildfilerna vara *Kategorier_nw.png*, *Queue_nw.png* och *Processes_nw.png*. Bildernas rekommenderade bredd är 19px.
 
 >[!NOTE]
 >
@@ -63,7 +62,7 @@ I följande steg antas de nya lokaliserade bildfilerna vara *Categories_nw.png*,
 
 Utför följande steg för att lokalisera bilderna:
 
-1. Placera bildfilerna i mappen */apps/ws/images* med en WebDAV-klient.
+1. Placera bildfilerna i en WebDAV-klient */apps/ws/images* mapp.
 1. Navigera till */apps/ws/css*. Öppna *newStyle.css* för att redigera och lägga till följande poster:
 
    ```css
@@ -80,9 +79,9 @@ Utför följande steg för att lokalisera bilderna:
    }
    ```
 
-1. Utför alla semantiska ändringar som listas i artikeln [Anpassa arbetsytan](../../forms/using/introduction-customizing-html-workspace.md).
-1. Navigera till mappen *js/runtime/utility* och öppna filen *usersession.js* för redigering.
-1. Leta reda på koden i det ursprungliga kodblocket och lägg till villkoret *lang !== &#39;nw&#39;* till if-satsen:
+1. Utför alla semantiska ändringar som anges i [Anpassa arbetsytan](../../forms/using/introduction-customizing-html-workspace.md) artikel.
+1. Navigera till *js/runtime/utility* och öppna *usersession.js* fil för redigering.
+1. Leta reda på koden som anges i det ursprungliga kodblocket och lägg till villkor *lang!== &#39;nw&#39;* till programsatsen if:
 
    ```javascript
    // Orignal code
@@ -110,18 +109,18 @@ Utför följande steg för att lokalisera bilderna:
 
 ## Lokaliserar datumväljaren {#localizing-date-picker}
 
-Du behöver ett utvecklingspaket för att lokalisera API:t *datepicker*. Mer information om hur du skapar utvecklingspaket finns i [Bygga AEM Forms-arbetsytekod](introduction-customizing-html-workspace.md#building-html-workspace-code).
+Du behöver utvecklingspaketet för att lokalisera *datepicker* API. Mer information om hur du skapar utvecklingspaket finns i [Skapar AEM Forms arbetsytekod](introduction-customizing-html-workspace.md#building-html-workspace-code).
 
-1. Hämta och extrahera [jQuery-gränssnittspaketet](https://jqueryui.com/download/all/), navigera till *&lt;extraherat jQuery-gränssnittspaket>*\jquery-ui-1.10.2.zip\jquery-ui-1.10.2\ui\i18n.
+1. Hämta och extrahera [jQuery UI-paket](https://jqueryui.com/download/all/), navigera till *&lt;extracted jquery=&quot;&quot; ui=&quot;&quot; package=&quot;&quot;>*\jquery-ui-1.10.2.zip\jquery-ui-1.10.2\ui\i18n.
 1. Kopiera filen jquery.ui.datepicker-nw.js för språkkod nu till apps/ws/js/libs/jqueryui och gör språkspecifika ändringar i filen.
-1. Navigera till `apps/ws/js` och öppna `jquery.ui.datepicker-nw.js`-filen för redigering.
-1. I filen main.js skapar du ett alias för `jquery.ui.datepicker-nw.js.` Koden som skapar ett alias för filen `jquery.ui.datepicker-nw.js` är:
+1. Navigera till `apps/ws/js` och öppna `jquery.ui.datepicker-nw.js` fil för redigering.
+1. Skapa ett alias för `jquery.ui.datepicker-nw.js.` Koden som skapar ett alias för `jquery.ui.datepicker-nw.js` filen är:
 
    ```javascript
    jqueryuidatepickernw : pathprefix + 'libs/jqueryui/jquery.ui.datepicker-nw'
    ```
 
-1. Använd aliaset `jqueryuidatepickernw` om du vill ta med filen `jquery.ui.datepicker-nw.js` i alla filer som använder datumväljaren. Datepicker används i följande filer:
+1. Använd alias `jqueryuidatepickernw` som innehåller `jquery.ui.datepicker-nw.js` i alla filer där datumväljaren används. Datepicker används i följande filer:
 
    * `js/runtime/views/outofoffice.js`
    * `js/runtime/views/searchtemplatedetails.js`

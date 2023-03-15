@@ -1,7 +1,8 @@
 ---
 title: Så här sätter du samman allt - din app och ditt innehåll i AEM utan rubriker
-description: I den här delen av AEM Headless Developer Journey kan du lära dig hur du tar ditt AEM-projekt, inklusive innehållsfragment, dina GraphQL-anrop, dina REST API-anrop och programmet, och förbereder det för publicering.
-source-git-commit: e3b3c3202b718da063392c33739c0f109b619ac7
+description: I den här delen av AEM Headless Developer Journey kan du lära dig hur du tar ditt AEM-projekt, inklusive innehållsfragment, dina GraphQL-samtal, dina REST API-anrop och programmet, och förbereder det för publicering.
+exl-id: 7087a742-732d-41d1-88a5-ac29083cf726
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
 source-wordcount: '96'
 ht-degree: 0%

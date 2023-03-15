@@ -1,6 +1,6 @@
 ---
 title: Korrespondenshantering | Hantera användardata
-seo-title: Korrespondenshantering | Hantera användardata
+seo-title: Correspondence Management | Handling user data
 description: Korrespondenshantering | Hantera användardata
 uuid: d5bb190b-d668-4da3-95da-b7705ad302d9
 topic-tags: grdp
@@ -10,7 +10,7 @@ role: Admin
 exl-id: a0c6a02c-47a3-4e70-a14c-953ee016b8e4
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '540'
 ht-degree: 0%
 
 ---
@@ -57,7 +57,7 @@ I ovanstående AEM:
 * `[node-id]` är det ID som tilldelats mappen som innehåller bokstaven
 * `[letter-instance-name]` är namnet som anges när du sparar eller skickar ett brev
 
-Under noden [letter-instance-name] skapas följande nodstruktur och data för varje bokstavsinstans lagras i AEM.
+Under [letter-instance-name] nod skapas följande nodstruktur och data för varje bokstavsinstans lagras i AEM.
 
 | Nod | Beskrivning |
 |---|---|
@@ -72,9 +72,9 @@ Du kan få åtkomst till utkast och skickade korrespondensdata i de konfigurerad
 
 ### Åtkomst till användardata {#access-user-data}
 
-Korrespondenshanteringen innehåller API:er som du kan använda för att hitta och komma åt utkast och skickade brev. Med API:erna kan du söka efter och öppna bokstavsinstanser med hjälp av bokstavsinstans-ID:t eller den användare som sparade eller skickade korrespondensen. Mer information finns i [API:er för att komma åt bokstavsinstanser](/help/forms/using/cm-apis-to-access-letter-instances.md).
+Korrespondenshanteringen innehåller API:er som du kan använda för att hitta och komma åt utkast och skickade brev. Med API:erna kan du söka efter och öppna bokstavsinstanser med hjälp av bokstavsinstans-ID:t eller den användare som sparade eller skickade korrespondensen. Mer information finns i [API:er för åtkomst till bokstavsinstanser](/help/forms/using/cm-apis-to-access-letter-instances.md).
 
-Du kan också navigera till bokstavsinstansen i AEM med CRX DELite. Se [Användardata och datalager](/help/forms/using/correspondence-management-handling-user-data.md#data) för information om lagrade data och databasplats.
+Du kan också navigera till bokstavsinstansen i AEM med CRX DELite. Se [Användardata och datalager](/help/forms/using/correspondence-management-handling-user-data.md#data) för information om lagrade data och lagringsplats.
 
 ### Ta bort användardata {#delete-user-data}
 

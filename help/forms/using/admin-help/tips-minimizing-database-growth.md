@@ -1,22 +1,21 @@
 ---
 title: Tips för att minimera databastillväxt
-seo-title: Tips för att minimera databastillväxt
+seo-title: Tips for minimizing database growth
 description: I långvariga processer lagras processdata i AEM. Tillväxten i AEM kan minimeras med några enkla processkonfigurations- och produktkonfigurationsstrategier.
-seo-description: I långvariga processer lagras processdata i AEM. Tillväxten i AEM kan minimeras med några enkla processkonfigurations- och produktkonfigurationsstrategier.
+seo-description: Long-lived processes store process data in the AEM forms database. The growth of the AEM forms database can be minimized using a few easy process design and product configuration strategies.
 uuid: 13f99d4f-848e-451e-90d9-55e202dc0bdb
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/maintaining_the_aem_forms_database
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 89441336-babc-4d1f-9053-d1566cd42d22
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: f64efb06-815a-4608-ba1c-39e22f344ebb
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '443'
+source-wordcount: '408'
 ht-degree: 0%
 
 ---
-
 
 # Tips för att minimera databastillväxt {#tips-for-minimizing-database-growth}
 
@@ -32,7 +31,7 @@ Använd variabler sparsamt. När du använder långvariga processer tilldelas ut
 
 Använd enkla variabeltyper (till exempel sträng eller int) och undvik att använda komplexa variabeltyper när det är möjligt. Databasutrymme tilldelas för variabler även när de inte innehåller något värde. Komplexa variabler kräver vanligtvis mer utrymme än enkla.
 
-## Produktadministrationstips {#product-administration-tips}
+## Tips för produktadministration {#product-administration-tips}
 
 Använd global dokumentlagring (GDS) effektivt. GDS-katalogen på formulärservern används för att lagra bland annat filer som skickas till tjänster som är en del av AEM formulär i processer. För att förbättra prestandan lagras mindre dokument i stället i minnet och sparas i databasen.
 

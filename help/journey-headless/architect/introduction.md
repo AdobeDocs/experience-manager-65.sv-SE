@@ -1,7 +1,8 @@
 ---
 title: AEM Headless Content Architect Journey
 description: En introduktion till de kraftfulla och flexibla headless-funktionerna i Adobe Experience Manager och hur du modellerar innehåll för ditt projekt.
-source-git-commit: 38525b6cc14e9f6025564c060b8cfb4f9e0ea473
+exl-id: 49ba0d6d-dde4-42e2-92fd-c7655c0eebc0
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
 source-wordcount: '702'
 ht-degree: 0%
@@ -67,7 +68,7 @@ Det här är mer av en detalj - men det kan intressera dig, bara för att slutf�
 
 När du har skapat modellerna för innehållsfragment, och dina författare har använt dem för att generera innehållet, måste de headless-program ha tillgång till det här innehållet.
 
-Adobe Experience Manager (AEM) kan selektivt komma åt dina innehållsfragment med hjälp av AEM GraphQL API, och returnera endast det innehåll som behövs. Med API:t kan en utvecklare formulera frågor som markerar specifikt innehåll. Den här urvalsprocessen baseras på *din* Modeller för innehållsfragment.
+Adobe Experience Manager (AEM) kan selektivt komma åt dina innehållsfragment med hjälp av det AEM GraphQL-API:t och returnera endast det innehåll som behövs. Med API:t kan en utvecklare formulera frågor som markerar specifikt innehåll. Den här urvalsprocessen baseras på *din* Modeller för innehållsfragment.
 
 Detta innebär att projektet kan leverera strukturerat material utan extra kostnad för användning i dina program.
 

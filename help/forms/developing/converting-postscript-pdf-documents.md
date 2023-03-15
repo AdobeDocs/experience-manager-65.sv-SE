@@ -1,8 +1,8 @@
 ---
-title: Konvertera PostScript till PDF-dokument
-seo-title: Konvertera PostScript till PDF-dokument
-description: Använd tjänsten Distiller för att konvertera PostScript®-, Encapsulated PostScript- (EPS) och PRN-filer till kompakta, tillförlitliga och säkrare PDF-filer över ett nätverk. Distiller-tjänsten konverterar stora volymer tryckta dokument till elektroniska dokument, t.ex. fakturor och kontoutdrag med Java API och Web Service API.
-seo-description: Använd tjänsten Distiller för att konvertera PostScript®-, Encapsulated PostScript- (EPS) och PRN-filer till kompakta, tillförlitliga och säkrare PDF-filer över ett nätverk. Distiller-tjänsten konverterar stora volymer tryckta dokument till elektroniska dokument, t.ex. fakturor och kontoutdrag med Java API och Web Service API.
+title: Konverterar PostScript till PDF-dokument
+seo-title: Converting Postscript to PDF Documents
+description: Använd tjänsten Distiller för att konvertera filer från PostScript®, Encapsulated PostScript (EPS) och PRN till kompakta, tillförlitliga och säkrare PDF över ett nätverk. Distiller-tjänsten konverterar stora volymer tryckta dokument till elektroniska dokument, t.ex. fakturor och kontoutdrag med Java API och Web Service API.
+seo-description: Use the Distiller service to convert PostScript®, Encapsulated PostScript (EPS), and PRN files to compact, reliable, and more secure PDF files over a network. The Distiller service converts large volumes of print documents to electronic documents, such as invoices and statements using the Java API and Web Service API.
 uuid: 2143f406-1fdd-4551-a738-1a8388f8d478
 contentOwner: admin
 content-type: reference
@@ -10,14 +10,13 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 06ad343a-f74d-41f5-b3c8-b85bb723ceeb
 role: Developer
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 744df8b2-0c61-410f-89e9-20b8adddbf45
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1380'
+source-wordcount: '1325'
 ht-degree: 0%
 
 ---
-
 
 # Konverterar PostScript till PDF-dokument {#converting-postscript-to-pdf-documents}
 
@@ -25,13 +24,13 @@ ht-degree: 0%
 
 ## Om Distiller-tjänsten {#about-the-distiller-service}
 
-Distiller® konverterar PostScript®-, Encapsulated PostScript- (EPS) och PRN-filer till kompakta, tillförlitliga och säkrare PDF-filer över ett nätverk. Distiller-tjänsten används ofta för att konvertera stora volymer tryckta dokument till elektroniska dokument, som fakturor och kontoutdrag. När man konverterar dokument till PDF kan man också skicka en pappersversion och en elektronisk version av ett dokument till sina kunder.
+Distiller®-tjänsten konverterar filer från PostScript®, Encapsulated PostScript (EPS) och PRN till kompakta, tillförlitliga och säkrare PDF över ett nätverk. Distiller-tjänsten används ofta för att konvertera stora volymer tryckta dokument till elektroniska dokument, som fakturor och kontoutdrag. När man konverterar dokument till PDF kan man också skicka en pappersversion och en elektronisk version av ett dokument till sina kunder.
 
 >[!NOTE]
 >
 >Mer information om tjänsten Distiller finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
-## Konverterar PostScript till PDF-dokument {#converting-postscript-to-pdf-documents-inner}
+## Konvertera PostScript till PDF-dokument {#converting-postscript-to-pdf-documents-inner}
 
 I det här avsnittet beskrivs hur du kan använda Distiller Service API (Java och webbtjänst) för att programmässigt konvertera PostScript- (PS), Encapsulated PostScript- (EPS) och PRN-filer till PDF-dokument.
 
@@ -41,17 +40,17 @@ I det här avsnittet beskrivs hur du kan använda Distiller Service API (Java oc
 
 >[!NOTE]
 >
->Om du vill konvertera PostScript-filer till PDF-dokument måste något av följande vara installerat på den server som är värd för AEM Forms: Acrobat 9 eller Microsoft Visual C++ 2005 återdistribuerbart paket.
+>Om du vill konvertera PostScript-filer till PDF-dokument måste något av följande vara installerat på den server som är värd för AEM Forms: Acrobat 9 eller Microsoft Visual C++ 2005, återdistribuerbart paket.
 
 ### Sammanfattning av steg {#summary-of-steps}
 
-Så här konverterar du någon av de typer som stöds till ett PDF-dokument:
+Gör så här om du vill konvertera någon av de typer som stöds till ett PDF-dokument:
 
 1. Inkludera projektfiler.
 1. Skapa en Distiller-tjänstklient.
 1. Hämta filen som ska konverteras.
-1. Anropa skapandet av PDF-filen.
-1. Spara PDF-dokumentet.
+1. Anropa åtgärden Skapa PDF.
+1. Spara dokumentet PDF.
 
 **Inkludera projektfiler**
 
@@ -59,15 +58,15 @@ Inkludera nödvändiga filer i utvecklingsprojektet. Om du skapar ett klientprog
 
 **Skapa en Distiller-tjänstklient**
 
-Innan du programmässigt kan utföra en Distiller-tjänståtgärd måste du skapa en Distiller-tjänstklient. Om du använder Java API skapar du ett `DistillerServiceClient`-objekt. Om du använder webbtjänstens API skapar du ett `DistillerServiceService`-objekt.
+Innan du programmässigt kan utföra en Distiller-tjänståtgärd måste du skapa en Distiller-tjänstklient. Om du använder Java API skapar du en `DistillerServiceClient` -objekt. Om du använder webbtjänstens API skapar du en `DistillerServiceService` -objekt.
 
 **Hämta filen som ska konverteras**
 
 Du måste hämta filen som du vill konvertera. Om du till exempel vill konvertera en PS-fil till ett PDF-dokument måste du hämta PS-filen.
 
-**Anropa skapandet av PDF-filen**
+**Anropa skapandet av PDF**
 
-När du har skapat tjänstklienten kan du sedan starta PDF-genereringsåtgärden. Den här åtgärden kräver information om dokumentet som ska konverteras, inklusive sökvägen till måldokumentet.
+När du har skapat tjänstklienten kan du sedan starta åtgärden Skapa PDF. Den här åtgärden kräver information om dokumentet som ska konverteras, inklusive sökvägen till måldokumentet.
 
 **Spara PDF-dokumentet**
 
@@ -77,7 +76,7 @@ Du kan spara PDF-dokumentet som en PDF-fil.
 
 [Konvertera en PostScript-fil till PDF med Java API](converting-postscript-pdf-documents.md#convert-a-postscript-file-to-pdf-using-the-java-api)
 
-[Konvertera en PostScript-fil till PDF med webbtjänstens API](converting-postscript-pdf-documents.md#converting-a-postscript-file-to-pdf-using-the-web-service-api)
+[Konvertera en PostScript-fil till PDF med hjälp av webbtjänstens API](converting-postscript-pdf-documents.md#converting-a-postscript-file-to-pdf-using-the-web-service-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -87,7 +86,7 @@ Du kan spara PDF-dokumentet som en PDF-fil.
 
 ### Konvertera en PostScript-fil till PDF med Java API {#convert-a-postscript-file-to-pdf-using-the-java-api}
 
-Konvertera en PostScript-fil till PDF-dokument med hjälp av Distiller Service API (Java):
+Konvertera en PostScript-fil till PDF med Distiller Service API (Java):
 
 1. Inkludera projektfiler.
 
@@ -95,38 +94,38 @@ Konvertera en PostScript-fil till PDF-dokument med hjälp av Distiller Service A
 
 1. Skapa en Distiller-tjänstklient.
 
-   * Skapa ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
-   * Skapa ett `DistillerServiceClient`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
+   * Skapa en `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
+   * Skapa en `DistillerServiceClient` genom att använda konstruktorn och skicka `ServiceClientFactory` -objekt.
 
 1. Hämta filen som ska konverteras.
 
-   * Skapa ett `java.io.FileInputStream`-objekt som representerar filen som ska konverteras med hjälp av dess konstruktor och skicka ett strängvärde som anger filens plats.
-   * Skapa ett `com.adobe.idp.Document`-objekt med hjälp av dess konstruktor och skicka `java.io.FileInputStream`-objektet.
+   * Skapa en `java.io.FileInputStream` objekt som representerar filen som ska konverteras med hjälp av konstruktorn och som skickar ett strängvärde som anger filens plats.
+   * Skapa en `com.adobe.idp.Document` genom att använda konstruktorn och skicka `java.io.FileInputStream` -objekt.
 
-1. Anropa skapandet av PDF-filen.
+1. Anropa åtgärden Skapa PDF.
 
-   Anropa `DistillerServiceClient`-objektets `createPDF`-metod och skicka följande värden:
+   Anropa `DistillerServiceClient` objektets `createPDF` och skicka följande värden:
 
-   * Det `com.adobe.idp.Document`-objekt som representerar PS-, EPS- eller PRN-filen som ska konverteras
-   * Ett `java.lang.String`-objekt som innehåller namnet på filen som ska konverteras
-   * Ett `java.lang.String`-objekt som innehåller namnet på de Adobe PDF-inställningar som ska användas
-   * Ett `java.lang.String`-objekt som innehåller namnet på de säkerhetsinställningar som ska användas
-   * Ett valfritt `com.adobe.idp.Document`-objekt som innehåller inställningar som ska tillämpas när PDF-dokumentet genereras
-   * Ett valfritt `com.adobe.idp.Document`-objekt som innehåller metadatainformation som ska användas i PDF-dokumentet
+   * The `com.adobe.idp.Document` objekt som representerar PS-, EPS- eller PRN-filen som ska konverteras
+   * A `java.lang.String` objekt som innehåller namnet på filen som ska konverteras
+   * A `java.lang.String` objekt som innehåller namnet på de Adobe PDF-inställningar som ska användas
+   * A `java.lang.String` objekt som innehåller namnet på skyddsinställningarna som ska användas
+   * Ett valfritt `com.adobe.idp.Document` objekt som innehåller inställningar som ska användas när PDF-dokumentet genereras
+   * Ett valfritt `com.adobe.idp.Document` objekt som innehåller metadatainformation som ska användas i PDF-dokumentet
 
-   Metoden `createPDF` returnerar ett `CreatePDFResult`-objekt som innehåller det nya PDF-dokumentet och en loggfil som kan genereras. Loggfilen innehåller vanligen fel- eller varningsmeddelanden som genereras av konverteringsbegäran.
+   The `createPDF` returnerar en `CreatePDFResult` som innehåller det nya PDF-dokumentet och en loggfil som kan genereras. Loggfilen innehåller vanligen fel- eller varningsmeddelanden som genereras av konverteringsbegäran.
 
-1. Spara PDF-dokumentet.
+1. Spara dokumentet PDF.
 
    Utför följande åtgärder för att hämta det nya PDF-dokumentet:
 
-   * Anropa `CreatePDFResult`-objektets `getCreatedDocument`-metod. Detta returnerar ett `com.adobe.idp.Document`-objekt.
-   * Anropa `com.adobe.idp.Document`-objektets `copyToFile`-metod för att extrahera PDF-dokumentet.
+   * Anropa `CreatePDFResult` objektets `getCreatedDocument` -metod. Detta returnerar `com.adobe.idp.Document` -objekt.
+   * Anropa `com.adobe.idp.Document` objektets `copyToFile` metod för att extrahera PDF-dokumentet.
 
    Utför på samma sätt följande åtgärder för att hämta loggdokumentet.
 
-   * Anropa `CreatePDFResult`-objektets `getLogDocument`-metod. Detta returnerar ett `com.adobe.idp.Document`-objekt.
-   * Anropa `com.adobe.idp.Document`-objektets `copyToFile`-metod för att extrahera loggdokumentet.
+   * Anropa `CreatePDFResult` objektets `getLogDocument` -metod. Detta returnerar `com.adobe.idp.Document` -objekt.
+   * Anropa `com.adobe.idp.Document` objektets `copyToFile` metod för att extrahera loggdokumentet.
 
 
 **Se även**
@@ -139,9 +138,9 @@ Konvertera en PostScript-fil till PDF-dokument med hjälp av Distiller Service A
 
 [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### Konvertera en PostScript-fil till PDF med webbtjänstens API {#converting-a-postscript-file-to-pdf-using-the-web-service-api}
+### Konvertera en PostScript-fil till PDF med hjälp av webbtjänstens API {#converting-a-postscript-file-to-pdf-using-the-web-service-api}
 
-Konvertera en PostScript-fil till PDF-dokument med Distiller Service API (webbtjänst):
+Konvertera en PostScript-fil till ett PDF-dokument med Distiller Service API (webbtjänst):
 
 1. Inkludera projektfiler.
 
@@ -149,48 +148,48 @@ Konvertera en PostScript-fil till PDF-dokument med Distiller Service API (webbtj
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen för servern som är värd för AEM Forms.
+   >Ersätt `localhost` med IP-adressen till den server som är värd för AEM Forms.
 
 1. Skapa en Distiller-tjänstklient.
 
-   * Skapa ett `DistillerServiceClient`-objekt med hjälp av dess standardkonstruktor.
-   * Skapa ett `DistillerServiceClient.Endpoint.Address`-objekt med konstruktorn `System.ServiceModel.EndpointAddress`. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/DistillerService?blob=mtom`). Du behöver inte använda attributet `lc_version`. Det här attributet används när du skapar en tjänstreferens. Ange `?blob=mtom` om du vill använda MTOM.
-   * Skapa ett `System.ServiceModel.BasicHttpBinding`-objekt genom att hämta värdet för fältet `DistillerServiceClient.Endpoint.Binding`. Sänd returvärdet till `BasicHttpBinding`.
-   * Ställ in `System.ServiceModel.BasicHttpBinding`-objektets `MessageEncoding`-fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
+   * Skapa en `DistillerServiceClient` genom att använda dess standardkonstruktor.
+   * Skapa en `DistillerServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/DistillerService?blob=mtom`.) Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens. Ange dock `?blob=mtom` för att använda MTOM.
+   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `DistillerServiceClient.Endpoint.Binding` fält. Sänd returvärdet till `BasicHttpBinding`.
+   * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM formulär till fältet `DistillerServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela AEM formuläranvändarnamn till fältet `DistillerServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `DistillerServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
       * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
 
 1. Hämta filen som ska konverteras.
 
-   * Skapa ett `BLOB`-objekt med hjälp av dess konstruktor. Det här `BLOB`-objektet används för att lagra filen som ska konverteras till ett PDF-dokument.
-   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar filens plats och läget som filen ska öppnas i.
-   * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream`-objektet. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream`-objektets `Length`-egenskap.
-   * Fyll i bytearrayen med strömdata genom att anropa `System.IO.FileStream`-objektets `Read`-metod och skicka bytearrayen, startpositionen och strömlängden som ska läsas.
-   * Fyll i `BLOB`-objektet genom att tilldela dess `MTOM`-egenskap med innehållet i bytearrayen.
+   * Skapa en `BLOB` genom att använda dess konstruktor. Detta `BLOB` används för att lagra filen som ska konverteras till ett PDF-dokument.
+   * Skapa en `System.IO.FileStream` genom att anropa dess konstruktor och skicka ett strängvärde som representerar filens plats och läget som filen ska öppnas i.
+   * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream` -objekt. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream` objektets `Length` -egenskap.
+   * Fylla i bytearrayen med strömdata genom att anropa `System.IO.FileStream` objektets `Read` och skickar bytearrayen, startpositionen och den flödeslängd som ska läsas.
+   * Fyll i `BLOB` genom att tilldela `MTOM` med bytearrayens innehåll.
 
-1. Anropa skapandet av PDF-filen.
+1. Anropa åtgärden Skapa PDF.
 
-   Anropa `DistillerServiceService`-objektets `CreatePDF2`-metod och skicka följande obligatoriska värden:
+   Anropa `DistillerServiceService` objektets `CreatePDF2` och skicka följande obligatoriska värden:
 
-   * Det `BLOB`-objekt som representerar PS-filen som ska konverteras
+   * The `BLOB` objekt som representerar PS-filen som ska konverteras
    * En sträng som innehåller sökvägen till filen som ska konverteras
    * Ett strängobjekt som innehåller de Adobe PDF-inställningar som ska användas (till exempel `Standard`)
    * Ett strängobjekt som innehåller de skyddsinställningar som ska användas (till exempel `No Securit`y)
-   * Ett valfritt `BLOB`-objekt som innehåller inställningar som ska tillämpas när PDF-dokumentet genereras
-   * Ett valfritt `BLOB`-objekt som innehåller metadatainformation som ska användas i PDF-dokumentet
-   * En `BLOB`-utdataparameter som används för att lagra PDF-dokumentet
-   * En `BLOB`-utdataparameter som används för att lagra loggen
+   * Ett valfritt `BLOB` objekt som innehåller inställningar som ska användas när PDF-dokumentet genereras
+   * Ett valfritt `BLOB` objekt som innehåller metadatainformation som ska användas i PDF-dokumentet
+   * A `BLOB` utdataparameter som används för att lagra PDF-dokumentet
+   * A `BLOB` utdataparameter som används för att lagra loggen
 
-1. Spara PDF-dokumentet.
+1. Spara dokumentet PDF.
 
-   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor. Skicka ett strängvärde som representerar filplatsen för det signerade PDF-dokumentet och läget som filen ska öppnas i.
-   * Skapa en bytearray som lagrar innehållet i `BLOB`-objektet som returnerades av metoden `CreatePDF2` (parametern output). Fyll i bytearrayen genom att hämta värdet för `BLOB`-objektets `MTOM`-datamedlem.
-   * Skapa ett `System.IO.BinaryWriter`-objekt genom att anropa dess konstruktor och skicka `System.IO.FileStream`-objektet.
-   * Skriv bytearrayens innehåll till en PDF-fil genom att anropa `System.IO.BinaryWriter`-objektets `Write`-metod och skicka bytearrayen.
+   * Skapa en `System.IO.FileStream` genom att anropa dess konstruktor. Skicka ett strängvärde som representerar filplatsen för det signerade PDF-dokumentet och läget som filen ska öppnas i.
+   * Skapa en bytearray som lagrar innehållet i `BLOB` objekt som returneras av `CreatePDF2` -metoden (parametern output). Fylla i bytearrayen genom att hämta värdet för `BLOB` objektets `MTOM` datamedlem.
+   * Skapa en `System.IO.BinaryWriter` genom att anropa dess konstruktor och skicka `System.IO.FileStream` -objekt.
+   * Skriv bytearrayens innehåll till en PDF-fil genom att anropa `System.IO.BinaryWriter` objektets `Write` och skicka bytearrayen.
 
 **Se även**
 

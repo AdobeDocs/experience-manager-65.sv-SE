@@ -1,22 +1,21 @@
 ---
 title: Så här använder du proxyserververktyget
-seo-title: Så här använder du proxyserververktyget
+seo-title: How to use the Proxy Server Tool
 description: Proxyservern fungerar som en mellanliggande server som vidarebefordrar begäranden mellan en klient och en server
-seo-description: Proxyservern fungerar som en mellanliggande server som vidarebefordrar begäranden mellan en klient och en server
+seo-description: The proxy server acts as an intermediate server that relays requests between a client and a server
 uuid: 30f4f46d-839e-4d23-a511-12f29b3cc8aa
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: development-tools
 content-type: reference
 discoiquuid: dfbc1d2f-80c1-4564-a01c-a5028b7257d7
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 7222a0c3-cdb9-4c73-9d53-26f00792e439
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '967'
+source-wordcount: '943'
 ht-degree: 0%
 
 ---
-
 
 # Så här använder du proxyserververktyget{#how-to-use-the-proxy-server-tool}
 
@@ -35,7 +34,7 @@ Du kan använda proxyservern för att övervaka all klient-server-interaktion, o
 
 Du kan till exempel placera proxyservern mellan två program som kommunicerar via ett TCP/IP-nätverk; t.ex. en webbläsare och AEM. På så sätt kan du övervaka exakt vad som händer när du begär en CQ-sida.
 
-## Startar proxyserververktyget {#starting-the-proxy-server-tool}
+## Starta proxyserververktyget {#starting-the-proxy-server-tool}
 
 Starta servern på kommandoraden:
 
@@ -45,11 +44,11 @@ Starta servern på kommandoraden:
 
 `<host>`
 
-Det här är värdadressen för den CRX-instans som du vill ansluta till. Om instansen finns på din lokala dator är detta `localhost`.
+Det här är värdadressen för den CRX-instans som du vill ansluta till. Om instansen finns på din lokala dator är det `localhost`.
 
 `<remoteport>`
 
-Det här är värdporten för mål-CRX-instansen. Standardvärdet för en nyligen installerad AEM är **`4502`** och standardvärdet för en nyligen installerad AEM författarinstans är `4502`.
+Det här är värdporten för mål-CRX-instansen. Standardinställningen för en nyinstallerad AEM är **`4502`** och standardinställningen för en ny AEM författarinstans är `4502`.
 
 `<localport>`
 
@@ -89,7 +88,7 @@ En begäran om en webbsida kan till exempel se ut så här:
 
 * C anger att den här posten kommer från klienten (det är en begäran om en webbsida)
 * 0 är anslutningens nummer (anslutningsräknaren startar vid 0)
-* # 00000 förskjutningen i byteflödet. Detta är den första posten, så förskjutningen är 0.
+* #00000 förskjutningen i byteflödet. Detta är den första posten, så förskjutningen är 0.
 * `[GET <?>]` är innehållet i begäran, i exemplet en av HTTP-rubrikerna (url).
 
 När en anslutning stängs loggas följande information:
@@ -99,7 +98,7 @@ C-6-Finished: 758 bytes (1.0 kb/s)
 S-6-Finished: 665 bytes (1.0 kb/s)
 ```
 
-Detta visar antalet byte som passerat mellan klienten ( `C`) och servern ( `S`) på den sjätte anslutningen och med medelhastigheten.
+Detta visar antalet byte som skickas mellan klienten ( `C`) och servern ( `S`) på den sjätte anslutningen och med den genomsnittliga hastigheten.
 
 **Ett exempel på loggutdata**
 
@@ -129,7 +128,7 @@ Innehållet i `test.html` är:
 </html>
 ```
 
-Om AEM körs på `localhost:4502` startar vi proxyn så här:
+Anta att AEM körs `localhost:4502` så här startar vi proxyn:
 
 `java -jar proxy.jar localhost 4502 4444 -logfile test.log`
 
@@ -148,7 +147,7 @@ Sedan öppnar vi en webbläsare och öppnar testsidan:
 
 `http://localhost:4444/content/test.html`
 
-och vi ser att webbläsaren gör en `GET`-förfrågan för sidan:
+och vi ser att webbläsaren gör en `GET` begäran om sidan:
 
 ```shell
 C-0-#000000 -> [GET /content/test.html HTTP/1.1 ]
@@ -165,7 +164,7 @@ C-0-#000684 -> [59-7913-4285-8857-832c087bafd5_c484727d3b3665ad%3acrx.default; y
 C-0-#000824 -> [ ]
 ```
 
-Den AEM instansen svarar med innehållet i filen `test.html`:
+AEM svarar med filens innehåll `test.html`:
 
 ```shell
 S-0-#000000 -> [HTTP/1.1 200 OK ]
@@ -187,7 +186,7 @@ S-0-#000311 -> [</body>]
 S-0-#000319 -> [</html>]
 ```
 
-### Användning av proxyservern {#uses-of-the-proxy-server}
+### Proxyserverns användning {#uses-of-the-proxy-server}
 
 Följande scenarier visar några av de syften som proxyservern kan användas för:
 
@@ -233,4 +232,3 @@ Om du ibland får väntande förfrågningar:
 * Starta proxyn.
 * Vänta eller skriv åtkomstloggen i en fil där varje post har en tidsstämpel.
 * När begäran börjar hänga kan du se hur många anslutningar som var öppna och vilken begäran som orsakar problem.
-

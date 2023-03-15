@@ -1,21 +1,20 @@
 ---
 title: Dokumentinformation för återgivning
-seo-title: Dokumentinformation för återgivning
+seo-title: Document details for renderer
 description: Konceptuell information om hur renderingar fungerar i AEM Forms arbetsyta för att återge de olika formulär och filtyper som stöds.
-seo-description: Konceptuell information om hur renderingar fungerar i AEM Forms arbetsyta för att återge de olika formulär och filtyper som stöds.
+seo-description: Conceptual information on how renders work in AEM Forms workspace to render the various supported form and file types.
 uuid: ae3f0585-9105-4ca7-a490-ffdefd3ac8cd
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: b6e88080-6ffc-4796-98c7-d7462bca454e
-translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+exl-id: 946f0f6d-86af-41c1-98ef-98c8f5566e95
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '676'
+source-wordcount: '653'
 ht-degree: 0%
 
 ---
-
 
 # Dokumentinformation för återgivning {#document-details-for-renderer}
 
@@ -23,7 +22,7 @@ ht-degree: 0%
 
 I AEM Forms-arbetsytan stöds flera formulärtyper sömlöst. Bland dessa finns:
 
-* PDF forms (XDP/Acroform/platta PDF-filer)
+* PDF forms (XDP/Acroform/platt PDF)
 * Nya HTML-formulär
 * Bilder
 * Tredjepartsprogram (till exempel Korrespondenshantering)
@@ -32,11 +31,11 @@ I det här dokumentet förklaras hur dessa renderare fungerar när det gäller s
 
 ## PDF forms {#pdf-forms}
 
-PDF forms återges med `PdfTaskForm View`.
+PDF forms återges av `PdfTaskForm View`.
 
-När ett XDP-formulär återges som PDF läggs ett `FormBridge` JavaScript™ till av tjänsten FormsAugmenter. Denna JavaScript™ (i PDF-formuläret) hjälper dig att utföra åtgärder som att skicka formulär, spara formulär eller ta formulär offline.
+När ett XDP-formulär återges som PDF, `FormBridge` JavaScript™ läggs till av tjänsten FormsAugmenter. Denna JavaScript™ (i PDF) hjälper dig att utföra åtgärder som att skicka formulär, spara formulär eller ta formulär offline.
 
-I AEM Forms-arbetsytan kommunicerar PDFTaskForm-vyn med `FormBridge`javascript, via en mellanliggande HTML som finns på `/lc/libs/ws/libs/ws/pdf.html`. Flödet är:
+I AEM Forms-arbetsytan kommunicerar PDFTaskForm-vyn med `FormBridge`javascript, via en mellanhand HTML närvarande `/lc/libs/ws/libs/ws/pdf.html`. Flödet är:
 
 **PDFTaskForm view - pdf.html**
 
@@ -44,21 +43,21 @@ kommunicerar med `window.postMessage` / `window.attachEvent('message')`
 
 Den här metoden är standardmetoden för kommunikation mellan en överordnad bildruta och en iframe. De befintliga händelseavlyssnarna från tidigare öppnade PDF forms tas bort innan en ny läggs till. Denna rensning tar även hänsyn till växlingen mellan fliken Formulär och fliken Historik i vyn med aktivitetsinformation.
 
-**pdf.html -  `FormBridge`javascript inuti den återgivna PDF-filen**
+**pdf.html - `FormBridge`javascript inuti den renderade PDF**
 
 kommunicerar med `pdfObject.postMessage` / `pdfObject.messageHandler`
 
-Den här metoden är standardmetoden för kommunikation med ett PDFJavaScript från en HTML-kod. Vyn PdfTaskForm hanterar också platta PDF-filer och återger dem enkelt.
+Den här metoden är standardmetoden för kommunikation med ett PDFJavaScript från en HTML. PdfTaskForm-vyn hanterar även PDF som platt och återger den tydligt.
 
 >[!NOTE]
 >
 >Du bör inte ändra pdf.html / innehållet i PDF-vyn TaskForm.
 
-## Ny HTML Forms {#new-html-forms}
+## New HTML Forms {#new-html-forms}
 
 Nya HTML-formulär återges i vyn NewHTMLTaskForm.
 
-När ett XDP-formulär återges som HTML med det mobila formulärpaketet som distribueras på CRX, läggs även ytterligare `FormBridge`JavaScript till i formuläret, som visar olika metoder för att spara och skicka formulärdata.
+När ett XDP-formulär återges som HTML med det mobila formulärpaketet som distribueras på CRX, läggs även ytterligare `FormBridge`JavaScript i formuläret, som visar olika metoder för att spara och skicka formulärdata.
 
 Detta JavaScript skiljer sig från det som anges i PDF forms ovan, men har ett liknande syfte.
 
@@ -70,15 +69,15 @@ Detta JavaScript skiljer sig från det som anges i PDF forms ovan, men har ett l
 
 Flex Forms återges av SWFTaskForm och stödlinjer återges av HTMLTaskForm-vyer.
 
-I AEM Forms-arbetsytan kommunicerar dessa vyer med den faktiska SWF-filen som utgör Flex-formuläret/stödlinjen med en mellanliggande SWF-fil som finns på `/lc/libs/ws/libs/ws/WSNextAdapter.swf`
+I AEM Forms-arbetsytan kommunicerar dessa vyer med det aktuella SWF som utgör Flex-formuläret/-guiden med hjälp av en mellanhand som är SWF i `/lc/libs/ws/libs/ws/WSNextAdapter.swf`
 
 Kommunikationen sker med `swfObject.postMessage` / `window.flexMessageHandler`.
 
-Detta protokoll definieras av `WsNextAdapter.swf`. Befintliga `flexMessageHandlers`fönsterobjekt från tidigare öppna SWF-formulär tas bort innan ett nytt läggs till. Logiken tar också hänsyn till växlingen mellan fliken Formulär och fliken Historik i vyn med uppgiftsdetaljer. `WsNextAdapter.swf` används för att utföra olika formuläråtgärder som att spara eller skicka.
+Detta protokoll definieras av `WsNextAdapter.swf`. Befintliga `flexMessageHandlers`i fönsterobjekt tas tidigare öppnade SWF-formulär bort innan ett nytt läggs till. Logiken tar också hänsyn till växlingen mellan fliken Formulär och fliken Historik i vyn med uppgiftsdetaljer. `WsNextAdapter.swf` används för att utföra olika formuläråtgärder som att spara eller skicka.
 
 >[!NOTE]
 >
->Du bör inte ändra `WSNextAdapter.swf` eller innehållet i vyn SwfTaskForm / HtmlTaskForm.
+>Du bör inte ändra `WSNextAdapter.swf` eller innehållet i vyn SwfTaskForm/HtmlTaskForm.
 
 ## Tredjepartsprogram (till exempel Korrespondenshantering) {#third-party-applications-for-example-correspondence-management}
 
@@ -88,12 +87,12 @@ Tredjepartsprogram återges med vyn ExtAppTaskForm.
 
 AEM Forms arbetsyta lyssnar på `window.global.postMessage([Message],[Payload])`
 
-[Meddelandetypen ] kan vara en sträng som anges som  `SubmitMessage`|  `CancelMessage`|  `ErrorMessage`|  `actionEnabledMessage`i  `runtimeMap`. Tredjepartsprogram måste använda det här gränssnittet för att meddela AEM Forms-arbetsytan efter behov. Det är obligatoriskt att använda det här gränssnittet eftersom AEM Forms-arbetsytan måste känna till att när uppgiften skickas så att den kan rensa upp aktivitetsfönstret.
+[Meddelande] kan vara en sträng som anges som `SubmitMessage`| `CancelMessage`| `ErrorMessage`| `actionEnabledMessage`i `runtimeMap`. Tredjepartsprogram måste använda det här gränssnittet för att meddela AEM Forms-arbetsytan efter behov. Det är obligatoriskt att använda det här gränssnittet eftersom AEM Forms-arbetsytan måste känna till att när uppgiften skickas så att den kan rensa upp aktivitetsfönstret.
 
 **AEM Forms arbetsyta till kommunikation med program från tredje part**
 
-Om direktåtgärdsknapparna för AEM Forms-arbetsytan visas anropas `window.[External-App-Name].getMessage([Action])`, där `[Action]` läses från `routeActionMap`. Tredjepartsprogrammet måste lyssna på det här gränssnittet och sedan meddela AEM Forms via API:t `postMessage ()`.
+Om direktåtgärdsknapparna för AEM Forms-arbetsytan visas anropas `window.[External-App-Name].getMessage([Action])`, där `[Action]` läses från `routeActionMap`. Tredjepartsprogrammet måste lyssna på det här gränssnittet och sedan meddela AEM Forms via `postMessage ()` API.
 
-Ett Flex-program kan till exempel definiera `ExternalInterface.addCallback('getMessage', listener)` som stöd för den här kommunikationen. Om tredjepartsprogrammet vill hantera formuläröverföring med sina egna knappar, bör du ange `hideDirectActions = true() in the runtimeMap` och du kan hoppa över den här avlyssnaren. Denna konstruktion är alltså valfri.
+Ett Flex-program kan till exempel definiera `ExternalInterface.addCallback('getMessage', listener)` för att stödja denna kommunikation. Om tredjepartsprogrammet vill hantera formulärskickning med sina egna knappar, bör du ange `hideDirectActions = true() in the runtimeMap` och du kan hoppa över den här avlyssnaren. Denna konstruktion är alltså valfri.
 
-Du kan läsa mer om integrering av tredjepartsprogram med avseende på korrespondenshantering på [Integrera korrespondenshantering i AEM Forms arbetsyta](/help/forms/using/integrating-correspondence-management-html-workspace.md).
+Du kan läsa mer om integrering av tredjepartsprogram med avseende på Correspondence Management på [Integrera korrespondenshantering i AEM Forms arbetsyta](/help/forms/using/integrating-correspondence-management-html-workspace.md).

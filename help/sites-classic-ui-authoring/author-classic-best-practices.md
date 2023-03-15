@@ -1,19 +1,18 @@
 ---
 title: Bästa praxis
-seo-title: Bästa praxis
+seo-title: Best Practices
 description: De effektivaste sätten att skapa beskriver hur du använder AEM på det mest effektiva och mest effektiva sättet. Den här växande listan med ämnen innehåller en mängd olika områden i AEM.
-seo-description: De effektivaste sätten att skapa beskriver hur du använder AEM på det mest effektiva och mest effektiva sättet. Den här växande listan med ämnen innehåller en mängd olika områden i AEM.
+seo-description: Authoring best practices describe how to use AEM in the most efficient and most effective way possible. This growing list of topics includes a variety of areas in AEM.
 uuid: d1f58335-0aa6-4b35-bdcd-cf6051bd1439
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
 discoiquuid: a715c372-3d05-4119-9d2b-41bca0b16b19
-translation-type: tm+mt
 source-git-commit: 22cdd6a7b343749b8ce85d8c1b230d094732f44a
 workflow-type: tm+mt
-source-wordcount: '313'
-ht-degree: 3%
+source-wordcount: '282'
+ht-degree: 2%
 
 ---
 
@@ -38,7 +37,7 @@ Specifika dokument beskrivs och länkas till i de tabeller som följer.
 
 ## Assets {#assets}
 
-De bästa sätten att använda Assets, inklusive Dynamic Media-funktionen och Dynamic Media Classic-integrering, beskrivs i följande avsnitt:
+De effektivaste strategierna kring Assets, inklusive Dynamic Media och Dynamic Media Classic-integrering, beskrivs i följande avsnitt:
 
 <table>
  <tbody>
@@ -55,7 +54,7 @@ De bästa sätten att använda Assets, inklusive Dynamic Media-funktionen och Dy
   <tr>
    <td>Dynamic Imaging</td>
    <td><a href="/help/assets/best-practices-for-optimizing-the-quality-of-your-images.md">Dynamic Imaging bästa praxis</a></td>
-   <td><p>Beskriver hur du kan göra en bild skarpare för bästa resultat och det bästa sättet att optimera bildkvaliteten om du använder funktionen Dynamic Media eller integrerar med Dynamic Media Classic. </p> </td>
+   <td><p>Beskriver hur du kan förbättra skärpan i en bild och det bästa sättet att optimera bildkvaliteten om du använder Dynamic Media eller integrerar med Dynamic Media Classic. </p> </td>
   </tr>
   <tr>
    <td>Flerspråkiga resurser</td>
@@ -69,10 +68,10 @@ De bästa sätten att använda Assets, inklusive Dynamic Media-funktionen och Dy
 
 Hantering och redigering av webbplatsinnehåll har några beprövade metoder:
 
-Redigering: [Författarmiljö och verktyg](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md) - Ger en översikt över hur du skapar sidor.
+Redigering: [Designmiljö och verktyg](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md) - Innehåller en översikt över hur du skapar sidor.
 
 ## Forms {#forms}
 
-Adaptiva former: [Bästa tillvägagångssätt för att arbeta med adaptiva formulär](/help/forms/using/adaptive-forms-best-practices.md) - Beskriver de bästa sätten att skapa, redigera och anpassa adaptiva formulär.
+Adaptiva former: [Bästa tillvägagångssätt för arbete med anpassningsbara formulär](/help/forms/using/adaptive-forms-best-practices.md) - Beskriver de bästa sätten att skapa, redigera och anpassa anpassade formulär.
 
-HTML5-formulär: [Bästa tillvägagångssätt för att utforma HTML5-formulär](/help/forms/using/best-practices-for-html5-forms.md) - Beskriver de bästa sätten att arbeta med layout och design av HTML5-formulär.
+HTML5-formulär: [Bästa praxis för utformning av HTML5-formulär](/help/forms/using/best-practices-for-html5-forms.md) - Beskriver de bästa sätten att arbeta med layout och design av HTML5-formulär.

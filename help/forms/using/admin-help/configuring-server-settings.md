@@ -1,38 +1,37 @@
 ---
 title: Konfigurerar serverinställningar
-seo-title: Konfigurerar serverinställningar
+seo-title: Configuring Server Settings
 description: På sidan Serverinställningar får du tillgång till inställningar för e-post, aktivitetsmeddelanden och administratörsmeddelanden.
-seo-description: På sidan Serverinställningar får du tillgång till inställningar för e-post, aktivitetsmeddelanden och administratörsmeddelanden.
+seo-description: The Server Settings page provides access to email, task notification and administrator notification settings.
 uuid: 73b51ac0-56e5-4748-bb33-e3986c69eb2d
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_forms_workflow
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: e047a95e-0acb-438a-8d27-f005c0adc508
-translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+exl-id: 362b7b91-c58b-4e47-a6ef-56a4b54a100c
+source-git-commit: 0c7dba43dad8608b4a5de271e1e44942c950fb16
 workflow-type: tm+mt
-source-wordcount: '2657'
+source-wordcount: '2625'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurerar serverinställningar {#configuring-server-settings}
 
 Sidan Serverinställningar ger åtkomst till olika inställningar för formulärarbetsflödet:
 
-* **E-** postinställningar som aktiverar utgående e-postmeddelanden, tillsammans med e-postserverinställningarna som används för dessa meddelanden. (Se [Konfigurera e-postinställningar](configuring-server-settings.md#configuring-email-settings).)
-* **Inställningar** för uppgiftsmeddelanden som aktiverar, inaktiverar eller ändrar meddelanden som skickas i e-postmeddelanden till slutanvändare och grupper om deras uppgifter. (Se [Konfigurera meddelanden för användare och grupper](configuring-server-settings.md#configuring-notifications-for-users-and-groups).)
-* **Meddelandeinställningar** för administratörer som aktiverar, inaktiverar eller ändrar meddelanden som skickas i e-postmeddelanden för administrativa uppgifter. (Se [Konfigurera meddelanden för administratörer](configuring-server-settings.md#configuring-notifications-for-administrators).)
+* **E-postinställningar** som aktiverar utgående e-postmeddelanden, tillsammans med e-postserverinställningarna som används för dessa meddelanden. (Se [Konfigurera e-postinställningar](configuring-server-settings.md#configuring-email-settings).)
+* **Inställningar för aktivitetsmeddelande** som aktiverar, inaktiverar eller ändrar meddelanden som skickas i e-postmeddelanden till slutanvändare och grupper om deras uppgifter. (Se [Konfigurera meddelanden för användare och grupper](configuring-server-settings.md#configuring-notifications-for-users-and-groups).)
+* **Inställningar för administratörsmeddelanden** som aktiverar, inaktiverar eller ändrar meddelanden som skickas i e-postmeddelanden för administrativa uppgifter. (Se [Konfigurera meddelanden för administratörer](configuring-server-settings.md#configuring-notifications-for-administrators).)
 
-## Konfigurerar e-postinställningar {#configuring-email-settings}
+## Konfigurera e-postinställningar {#configuring-email-settings}
 
 Du kan ange ett e-postkonto för formulärservern, som skickar e-postmeddelanden till användare och administratörer AEM formulär. Dessa e-postmeddelanden används för att meddela och påminna användare om uppgifter som de måste slutföra, meddela användaren om uppgifter som har nått en deadline och meddela administratören om eventuella processfel som inträffar.
 
 Om du vill aktivera sändning av e-postmeddelanden mellan AEM formulär och användare konfigurerar du inställningarna för utgående e-post på sidan E-postinställningar. Utgående e-post måste använda en SMTP-server.
 
-Om du vill att AEM formulär ska kunna ta emot och hantera inkommande e-postmeddelanden från användare skapar du en e-postslutpunkt för tjänsten Complete Task. (Se [Skapa en e-postslutpunkt för tjänsten Fullständig uppgift](/help/forms/using/admin-help/configuring-email-endpoints.md#create-an-email-endpoint-for-the-complete-task-service)).
+Om du vill att AEM formulär ska kunna ta emot och hantera inkommande e-postmeddelanden från användare skapar du en e-postslutpunkt för tjänsten Complete Task. (Se [Skapa en e-postslutpunkt för tjänsten Slutför uppgift](/help/forms/using/admin-help/configuring-email-endpoints.md#create-an-email-endpoint-for-the-complete-task-service)).
 
 Om processerna har utformats och implementerats utan att e-post krävs behöver du inte konfigurera något av alternativen på sidan E-postinställningar.
 
@@ -46,7 +45,7 @@ Om processerna har utformats och implementerats utan att e-post krävs behöver 
 
    >[!NOTE]
    >
-   >Om du använder Microsoft Exchange Server och e-postadressen är en ogiltig e-postadress kan Microsoft Exchange-servern inte skicka något e-postmeddelande till distributionslistor. Du löser problemet genom att välja alternativet **Aktivera extern kommunikation** separat för varje distributionslista på Microsoft Exchange-servern.
+   >Om du använder Microsoft Exchange Server och e-postadressen är en ogiltig e-postadress kan Microsoft Exchange-servern inte skicka något e-postmeddelande till distributionslistor. För att lösa problemet väljer du **Aktivera extern kommunikation** separat för varje distributionslista på Microsoft Exchange-servern.
 
 1. Klicka på Spara.
 
@@ -60,7 +59,7 @@ Om processerna har utformats och implementerats utan att e-post krävs behöver 
 >
 >Flex Workspace används inte AEM formulärreleasen.
 
-Som standard innehåller e-postmeddelanden som skickas AEM formulär länkar till (borttagna för AEM formulär i JEE) Flex Workspace. Du kan konfigurera AEM formulär att skicka ut e-postmeddelanden med länkar till AEM Forms Workspace. Mer information om fördelarna med AEM Forms Workspace i stället för (Borttaget för AEM formulär i JEE) Flex Workspace finns i [den här](/help/forms/using/features-html-workspace-available-flex.md)-artikeln.
+Som standard innehåller e-postmeddelanden som skickas AEM formulär länkar till (borttagna för AEM formulär i JEE) Flex Workspace. Du kan konfigurera AEM formulär att skicka ut e-postmeddelanden med länkar till AEM Forms Workspace. Mer information om fördelarna med AEM Forms Workspace i stället för (Borttaget för AEM formulär i JEE) Flex Workspace finns i [this](/help/forms/using/features-html-workspace-available-flex.md) artikel.
 
 1. I administrationskonsolen klickar du på Hem > Tjänster > Formulärarbetsflöde > Serverinställningar > Aktivitetsmeddelanden.
 1. Öppna mall för uppgiftstilldelning.
@@ -72,7 +71,7 @@ Som standard innehåller e-postmeddelanden som skickas AEM formulär länkar til
 
 ## Konfigurera meddelanden för användare och grupper {#configuring-notifications-for-users-and-groups}
 
-På sidan Aktivitetsmeddelande kan du konfigurera mallar som används i arbetsflödet för formulär för att generera e-postmeddelanden som skickas till användare och grupper. Du kan anpassa och formatera meddelandena med hjälp av formulärarbetsflödesvariabler.
+På sidan Aktivitetsmeddelande kan du konfigurera mallar som används i arbetsflödet för formulär för att generera e-postmeddelanden som skickas till användare och grupper. Du kan anpassa och formatera meddelandena med hjälp av arbetsflödesvariabler för formulär.
 
 Du konfigurerar följande typer av meddelanden för användare och grupper:
 
@@ -129,9 +128,13 @@ Du kan skicka aviseringar om deadline till användare och grupper när deadline 
 
 ### Dölj taggen DO NOT DELETE för alla e-postmeddelanden {#hide-the-do-not-delete-tag-for-all-emails}
 
-Du kan konfigurera e-post så att den döljs för spårningstaggen DO NOT DELETE i alla e-postmeddelanden som skickas i en mänsklig centrerad process. Mer information finns i [Så här döljer du taggen DO-NOT-DELETE med CSS](https://blogs.adobe.com/LiveCycleHelp/2013/09/how-to-hide-the-do-not-delete-tag-with-css.html)
+Du kan konfigurera e-post så att den döljs för spårningstaggen DO NOT DELETE i alla e-postmeddelanden som skickas i en mänsklig centrerad process.
 
-## Konfigurerar meddelanden för administratörer {#configuring-notifications-for-administrators}
+<!-- 
+For details, see [How to hide the 'DO-NOT-DELETE' tag with CSS](https://blogs.adobe.com/LiveCycleHelp/2013/09/how-to-hide-the-do-not-delete-tag-with-css.html) 
+-->
+
+## Konfigurera meddelanden för administratörer {#configuring-notifications-for-administrators}
 
 Du kan konfigurera mallar som används i arbetsflödet för formulär för att generera e-postmeddelanden som skickas till administratörer.
 
@@ -140,7 +143,7 @@ Du konfigurerar följande typer av meddelanden för administratörer:
 * fast gren
 * fast åtgärd
 
-### Konfigurera aviseringar om fasta grenar {#configure-stalled-branch-notifications}
+### Konfigurera meddelanden om fasta grenar {#configure-stalled-branch-notifications}
 
 Om en gren avbryts (avbryter processen antingen avsiktligt eller på grund av ett fel) kan du få ett e-postmeddelande skickat till en administratör eller en annan användare som sedan kan undersöka problemet.
 
@@ -176,7 +179,7 @@ På sidorna Aktivitetsmeddelanden och Administratörsmeddelanden finns flera fun
 
 ### RTF-redigerare {#rich-text-editor}
 
-Området Meddelandemallar är en textredigerare som du kan använda för att generera HTML för e-postmeddelanden. Den innehåller alternativ för teckensnitt och styckeformatering, som finns under rutan Meddelandemall. Alternativen omfattar teckensnitt, storlek, format och färg samt styckejustering och punkter.
+Området Meddelandemall är en textredigerare som du kan använda för att skapa HTML för e-postmeddelanden. Den innehåller alternativ för teckensnitt och styckeformatering, som finns under rutan Meddelandemall. Alternativen omfattar teckensnitt, storlek, format och färg samt styckejustering och punkter.
 
 ### URL-generering {#url-generation}
 
@@ -194,17 +197,17 @@ Endast för aktivitetsmeddelanden innehåller Forms-arbetsflödet två fördefin
 >
 >Flex Workspace är föråldrat för AEM formulärreleaser.
 
-Om din lösning distribueras i en klustrad miljö ersätter du `@@notification-host@@` med klusteradressen.
+Om lösningen används i en klustermiljö ska du ersätta `@@notification-host@@` med klusteradressen.
 
-`<`*PORT* `>` är portnumret för HTTP-avlyssnaren för programservern. Standardporten för HTTP-avlyssnare för de programservrar som stöds är följande:
+`<`*PORT* `>` är portnumret för programserverns HTTP-avlyssnare. Standardporten för HTTP-avlyssnare för de programservrar som stöds är följande:
 
 **JBoss:** 8080
 
-**Oracle WebLogic Server:** 7001
+**Oracle WebLogic-server:** 7001
 
 **IBM WebSphere:** 9080
 
-Ersätt `<`*PORT* `>` med det portnummer som passar din miljö om du vill att de här URL-adresserna ska fungera korrekt.
+Om du vill att URL-adresserna ska fungera korrekt ersätter du `<`*PORT* `>` med det portnummer som passar din miljö.
 
 >[!NOTE]
 >
@@ -216,23 +219,23 @@ Variabelväljarlistan innehåller användbara variabler som du kan dra och släp
 
 För påminnelser, uppgiftstilldelningar och deadlines för användare och grupper kan du använda följande variabler i rutorna Ämne och Meddelandemall:
 
-**Beskrivning** Innehållet i egenskapen Beskrivning, enligt definitionen i användarsteget (startpunkt, åtgärden Tilldela uppgift eller åtgärden Tilldela flera uppgifter) för processen i Workbench.
+**description** Innehållet i egenskapen Beskrivning, enligt definitionen i användarsteget (åtgärden Tilldela uppgift eller Tilldela flera uppgifter) för processen i Workbench.
 
-**** instruktionerInnehållet i egenskapen Uppgiftsinstruktioner, enligt definition i användarsteget i processen i Workbench.
+**instruktioner** Innehållet i egenskapen Uppgiftsinstruktioner, enligt definition i användarsteget i processen i Workbench.
 
-**notification-** hostVärdnamnet för AEM formulärprogramserver.
+**meddelandevärd** Värdnamnet för AEM formulärprogramserver.
 
-**process-** name Processens namn.
+**process-name** Processens namn.
 
-**operation-** nameStegen heter.
+**operation-name** Stegets namn.
 
-**** aktivitetsidentifierareDen unika identifieraren för den aktuella aktiviteten.
+**taskid** Den unika identifieraren för den aktuella aktiviteten.
 
-**åtgärder** Skapar en numrerad lista över giltiga flöden (till exempel Godkänn, Avvisa) som mottagaren kan klicka på.
+**funktionsmakron** Ger en numrerad lista över giltiga flöden (till exempel Godkänn, Avvisa) som mottagaren kan klicka på.
 
 Dessutom kan du använda följande för grupppåminnelser, grupptilldelningar och gruppdeadlines:
 
-**group-** name Namnet på den grupp som har tilldelats arbetsuppgiften.
+**group-name** Namnet på gruppen som är tilldelad arbetsuppgiften.
 
 >[!NOTE]
 >
@@ -240,21 +243,21 @@ Dessutom kan du använda följande för grupppåminnelser, grupptilldelningar oc
 
 För fasta grenar kan du använda följande variabler i rutorna Ämne och Meddelandemall:
 
-**filial-** idFilidentifieraren.
+**branch-id** Filidentifieraren.
 
-**process-** idProcessinstansens identifierare.
+**process-id** Processinstansens identifierare.
 
-**notification-** hostVärdnamnet för AEM formulärprogramserver.
+**meddelandevärd** Värdnamnet för AEM formulärprogramserver.
 
 För fasta åtgärder kan du använda följande variabler i rutorna Ämne och Meddelandemall:
 
-**action-** idÅtgärds-ID.
+**action-id** Åtgärds-ID.
 
-**filial-** idFilidentifieraren.
+**branch-id** Filidentifieraren.
 
-**process-** idProcessinstansens identifierare.
+**process-id** Processinstansens identifierare.
 
-**notification-** hostVärdnamnet för AEM formulärprogramserver.
+**meddelandevärd** Värdnamnet för AEM formulärprogramserver.
 
 ### Använda en variabel i rutan Ämne {#using-a-variable-in-the-subject-box}
 
@@ -272,7 +275,7 @@ Om du skriver följande text i rutan Meddelandemall för meddelanden om installe
 
 `Branch @@branch-id@@ has stalled! You have received this notification from @@notification-host@@.`
 
-Administratören får ett e-postmeddelande som innehåller följande innehåll om filialnumret är 4868 och servernamnet är `ServerXYZ`:
+Administratören får ett e-postmeddelande med följande innehåll om filialnumret är 4868 och servernamnet är `ServerXYZ`:
 
 `Branch 4868 has stalled! You have received this notification from ServerXYZ.`
 
@@ -289,4 +292,3 @@ På sidan BAM-konfigurationsinställningar anger du anslutningarna till servern 
 1. Ange det portnummer som används av formulärservern i rutan Serverport.
 1. I rutorna Användarnamn och Lösenord anger du lämpligt användar-ID och lösenord för att komma åt BAM-servern. Standardanvändarnamnet är CognosNowAdmin och standardlösenordet är manager.
 1. Klicka på Spara.
-

@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Referensteman{#reference-themes}
 
-[Med ](../../forms/using/themes.md) teman kan du formatera formulär utan djupa kunskaper om CSS. Förutom standardtemat kan du hämta följande teman genom att installera [AEM Forms-tilläggspaketet](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en):
+[Teman](../../forms/using/themes.md) gör att du kan formatera formulär utan djupare kunskaper om CSS. Förutom standardtemat kan du hämta följande teman genom att installera [AEM Forms tilläggspaket](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en):
 
 * Beryl
 * Kör
@@ -35,7 +35,7 @@ Varje tema innehåller en unik och elegant stil som du kan använda för att ska
 
 Teman som ingår i det här paketet är responsiva, och stilen i dessa teman definieras för mobila och stationära skärmar. De flesta moderna webbläsare på en mängd olika enheter kan återge formulär som används med något av dessa teman utan krångel.
 
-Mer information om hur du installerar paketet finns i [Arbeta med paket](/help/sites-administering/package-manager.md).
+Mer information om hur du installerar paketet finns i [Så här arbetar du med paket](/help/sites-administering/package-manager.md).
 
 ## Beryl {#beryl}
 
@@ -97,7 +97,7 @@ Ultramarintemat använder djupa blå skuggor för att framhäva komponenter som 
 
 ## Urbane {#urbane}
 
-Urbane-temat framhäver ett minimalistiskt och funktionellt utseende på ditt formulär. När du använder Urbane-temat i ditt formulär ser du att komponenterna är platta. Panelerna får tunna konturer för att skapa ett modernt utseende.
+Urbane-temat betonar ett minimalistiskt och funktionellt utseende på ditt formulär. När du använder Urbane-temat i ditt formulär ser du att komponenterna är platta. Panelerna får tunna konturer för att skapa ett modernt utseende.
 
 ![Urbantema](assets/urbane.png)
 

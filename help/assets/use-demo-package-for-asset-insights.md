@@ -3,11 +3,11 @@ title: Använd demopaket för Assets Insights
 description: Använd demopaketet för att möjliggöra för Adobe Assets Insights att hämta in data från och generera insikter för en webbsida.
 contentOwner: AG
 role: User, Admin
-feature: Resursinsikter,Resursrapporter
+feature: Asset Insights,Asset Reports
 exl-id: 13947513-da76-43e1-ae01-abd24a59752a
 source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
-source-wordcount: '164'
+source-wordcount: '160'
 ht-degree: 0%
 
 ---
@@ -31,8 +31,8 @@ Med hjälp av demopaketet kan du göra det möjligt för Adobe Assets Insights a
 
    >[!CAUTION]
    >
-   >Webbsidan är konfigurerad för att läsa in resurser från den lokala värdservern. Om servern körs någon annanstans ändrar du serveradressen från localhost till serveradressen i HTML-innehållet på webbsidan.
+   >Webbsidan är konfigurerad för att läsa in resurser från den lokala värdservern. Om servern körs någon annanstans ändrar du serveradressen från localhost till serveradressen i webbsidans HTML-innehåll.
 
    >[!NOTE]
    >
-   >Den externa webbsidan kan vara i själva [!DNL Experience Manager].
+   >Den externa webbsidan kan finnas i [!DNL Experience Manager] själv.

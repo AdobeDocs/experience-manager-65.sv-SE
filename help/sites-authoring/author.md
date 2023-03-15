@@ -1,8 +1,8 @@
 ---
 title: Redigering
-seo-title: Redigering
+seo-title: Authoring
 description: Begrepp att skapa i AEM
-seo-description: Begrepp att skapa i AEM
+seo-description: Concepts of authoring in AEM
 uuid: eaa5f613-a138-4215-8f84-dfc962fe7fa7
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,18 +10,17 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 81ff6f6f-11b3-4f8e-80e6-b3e104158394
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 18dcbf04bd88f63335ef36e2ec7ea81835e11b51
+exl-id: dcda537a-1bb2-4ce3-9904-40d158b47556
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '544'
-ht-degree: 1%
+source-wordcount: '538'
+ht-degree: 0%
 
 ---
 
-
 # Redigering{#authoring}
 
-## Concept of Authoring (and Publishing) {#concept-of-authoring-and-publishing}
+## Begreppet redigering (och publicering) {#concept-of-authoring-and-publishing}
 
 AEM har två miljöer:
 
@@ -41,7 +40,7 @@ I redigeringsmiljön är funktionaliteten för AEM tillgänglig via två använd
 
 ### Författarmiljö {#author-environment}
 
-Författaren arbetar i **författarmiljön**. Detta ger ett användarvänligt gränssnitt (grafiskt användargränssnitt (GUI eller UI)) för att skapa innehållet. Det ligger vanligtvis bakom ett företags brandvägg som ger fullständigt skydd och som kräver att författaren loggar in med ett konto som tilldelats rätt åtkomstbehörighet.
+Författaren arbetar i det som kallas **författarmiljö**. Detta ger ett användarvänligt gränssnitt (grafiskt användargränssnitt (GUI eller UI)) för att skapa innehållet. Det ligger vanligtvis bakom ett företags brandvägg som ger fullständigt skydd och som kräver att författaren loggar in med ett konto som tilldelats rätt åtkomstbehörighet.
 
 >[!NOTE]
 >
@@ -65,15 +64,15 @@ Det finns dessutom administrativa uppgifter som hjälper dig att hantera ditt in
 
 >[!NOTE]
 >
->AEM [administreras](/help/sites-administering/home.md) (för de flesta uppgifter) från författarmiljön.
+>AEM är också [administrerad](/help/sites-administering/home.md) (för de flesta uppgifter) från författarmiljön.
 
 #### Publiceringsmiljö {#publish-environment}
 
-När den är klar publiceras AEM innehåll till **publiceringsmiljön**. Här blir webbplatsens sidor tillgängliga för den avsedda publiken i enlighet med det gränssnitt som har utformats.
+När AEM är klar publiceras webbplatsens innehåll på **publiceringsmiljö**. Här görs webbplatsens sidor tillgängliga för den avsedda publiken i enlighet med det gränssnitt som har utformats.
 
 Normalt ligger publiceringsmiljön innanför den demilitariserade zonen. med andra ord, tillgängliga för Internet, men inte längre till fullständigt skydd för det interna nätverket.
 
-När den AEM webbplatsen är en [community-webbplats](/help/communities/overview.md), eller innehåller [webbkomponenterna](/help/communities/author-communities.md), kan besökare (medlemmar) som är inloggade interagera med webbgruppsfunktioner. De kan till exempel publicera på ett forum, publicera en kommentar eller följa andra medlemmar. Medlemmar kan ges behörighet att utföra åtgärder som normalt bara är avsedda för författarmiljön, t.ex. skapa nya sidor (communitygrupper), bloggartiklar och moderata inlägg från andra medlemmar.
+När AEM är en [communitywebbplats](/help/communities/overview.md), eller innehåller [Communities-komponenter](/help/communities/author-communities.md), inloggade webbplatsbesökare (medlemmar) kan interagera med communityfunktioner. De kan till exempel publicera på ett forum, publicera en kommentar eller följa andra medlemmar. Medlemmar kan ges behörighet att utföra åtgärder som normalt bara är avsedda för författarmiljön, t.ex. skapa nya sidor (communitygrupper), bloggartiklar och moderata inlägg från andra medlemmar.
 
 >[!NOTE]
 >
@@ -81,18 +80,15 @@ När den AEM webbplatsen är en [community-webbplats](/help/communities/overview
 >
 >* **Publicera/avpublicera**
    >  Detta är de primära villkoren för de åtgärder som gör innehållet tillgängligt för allmänheten i publiceringsmiljön (eller inte).
-   >
-   >
-* **Aktivera/inaktivera**
+>
+>* **Aktivera/inaktivera**
    >  Dessa termer är synonyma med publicera/avpublicera.
-   >
-   >
-* **Replikering/replikering**
+>
+>* **Replikering/replikering**
    >  Detta är de tekniska termer som används för att ange dataförflyttning (t.ex. sidinnehåll, filer, kod, användarkommentarer) från en miljö till en annan. t.ex. vid publicering, eller vid omvänd replikering av användarkommentarer.
 >
 
 
-
 #### Dispatcher {#dispatcher}
 
-**[dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html)** implementerar belastningsutjämning och cachning för att optimera prestanda för besökare på webbplatsen.
+Om du vill optimera prestanda för besökare på webbplatsen kan du **[avsändare](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html)** implementerar belastningsutjämning och cachning.

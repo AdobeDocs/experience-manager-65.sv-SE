@@ -1,8 +1,8 @@
 ---
 title: Konfigurerar e-post
-seo-title: Konfigurerar e-post
+seo-title: Configuring Email
 description: E-postkonfiguration för Communities
-seo-description: E-postkonfiguration för Communities
+seo-description: Email configuration for Communities
 uuid: e8422cc2-1594-43b0-b587-82825636cec1
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -14,7 +14,7 @@ role: Admin
 exl-id: bf97d388-f8ca-4e37-88e2-0c536834311e
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '750'
+source-wordcount: '744'
 ht-degree: 1%
 
 ---
@@ -30,20 +30,20 @@ E-postfunktionen fungerar inte som standard eftersom den kräver en specifikatio
 
 >[!CAUTION]
 >
->E-post för meddelanden och prenumerationer får bara konfigureras på den [primära utgivaren](deploy-communities.md#primary-publisher).
+>E-post för meddelanden och prenumerationer får endast konfigureras på [primär utgivare](deploy-communities.md#primary-publisher).
 
 ## Standardkonfiguration för e-posttjänst {#default-mail-service-configuration}
 
 Standardtjänsten för e-post krävs för både meddelanden och prenumerationer.
 
-* Logga in på den primära utgivaren med administratörsbehörighet och gå till [webbkonsolen](../../help/sites-deploying/configuring-osgi.md):
+* Logga in på den primära utgivaren med administratörsbehörighet och åtkomst till [Webbkonsol](../../help/sites-deploying/configuring-osgi.md):
 
-   * Till exempel [http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
+   * Till exempel: [http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
 
 * Leta reda på `Day CQ Mail Service`.
 * Välj redigeringsikonen.
 
-Detta baseras på dokumentationen för [Konfigurera e-postmeddelande](../../help/sites-administering/notification.md), men med en skillnad i att fältet `"From" address` är *inte* krävs och ska lämnas tomt.
+Detta baseras på dokumentationen till [Konfigurerar e-postmeddelande](../../help/sites-administering/notification.md), men med en skillnad i det fältet `"From" address` är *not* krävs och ska lämnas tom.
 
 Till exempel (ifylld med värden endast för illustrationsändamål):
 
@@ -77,39 +77,39 @@ Till exempel (ifylld med värden endast för illustrationsändamål):
 
 ## AEM Communities e-postkonfiguration {#aem-communities-email-configuration}
 
-När [standardtjänsten för e-post](#default-mail-service-configuration) har konfigurerats kommer de två befintliga instanserna av OSGi-konfigurationen, som ingår i versionen, att fungera.`AEM Communities Email Reply Configuration`
+När [standardtjänst för e-post](#default-mail-service-configuration) är konfigurerad, de två befintliga instanserna av `AEM Communities Email Reply Configuration` OSGi-konfigurationen, som ingår i versionen, blir funktionell.
 
 Endast prenumerationsinstansen behöver konfigureras ytterligare när svar tillåts via e-post.
 
-1. [E-](#configuration-for-notifications) mailinstance:
+1. [E-post](#configuration-for-notifications) instans:
 
    För meddelanden, som inte har stöd för svarsmeddelanden via e-post, och bör inte ändras.
 
-1. [Subscriptions-](#configuration-for-subscriptions) emailInstance:
+1. [Prenumerationer-e-post](#configuration-for-subscriptions) instans:
 
    Kräver konfiguration för att fullständigt aktivera skapande av inlägg från svarsmeddelanden via e-post.
 
 Så här når du instanserna för webbgruppskonfigurationen:
 
-* Logga in på den primära utgivaren med administratörsbehörighet och gå till [webbkonsolen](../../help/sites-deploying/configuring-osgi.md)
+* Logga in på den primära utgivaren med administratörsbehörighet och åtkomst till [Webbkonsol](../../help/sites-deploying/configuring-osgi.md)
 
-   * Till exempel [http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
+   * Till exempel: [http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
 
-* Leta reda på `AEM Communities Email Reply Configuration`.
+* Sök `AEM Communities Email Reply Configuration`.
 
 ![email-reply-config](assets/email-reply-config.png)
 
 ### Konfiguration för meddelanden {#configuration-for-notifications}
 
-Instansen av OSGi-konfigurationen med e-postmeddelandet Namn är en funktion för meddelanden. `AEM Communities Email Reply Configuration` Den här funktionen inkluderar inte e-postsvar.
+Instansen av `AEM Communities Email Reply Configuration` OSGi-konfigurationen med e-postmeddelandet Namn är en funktion för framtida meddelanden. Den här funktionen inkluderar inte e-postsvar.
 
 Den här konfigurationen bör inte ändras.
 
 * Leta reda på `AEM Communities Email Reply Configuration`.
 * Välj redigeringsikonen.
-* Kontrollera att **namnet** är `email`.
+* Verifiera **Namn** är `email`.
 
-* Verifiera att **Create post from reply email** är `unchecked`.
+* Verifiera **Skapa inlägg från svarsmejl** är `unchecked`.
 
 ![configure-email-reply](assets/configure-email-reply.png)
 
@@ -119,7 +119,7 @@ För webbgruppsprenumerationer är det möjligt att aktivera eller inaktivera m�
 
 * Leta reda på `AEM Communities Email Reply Configuration`.
 * Välj redigeringsikonen.
-* Kontrollera att **namnet** är `subscriptions-email`.
+* Verifiera **Namn** är `subscriptions-email`.
 
    ![configure-email-subscription](assets/configure-email-subscriptions.png)
 
@@ -132,7 +132,7 @@ För webbgruppsprenumerationer är det möjligt att aktivera eller inaktivera m�
    Om det här alternativet är markerat kan den som tar emot e-postprenumerationen posta innehåll genom att skicka ett svar. Standard är markerat.
 * **[!UICONTROL Add tracked id to header]**
 
-   Standardvärdet är `Reply-To`.
+   Standard är `Reply-To`.
 
 * **[!UICONTROL Maximum length of Subject]**
 
@@ -140,29 +140,29 @@ För webbgruppsprenumerationer är det möjligt att aktivera eller inaktivera m�
 
 * **[!UICONTROL "Reply-To" email address]**
 
-   Adress som används som e-postadress för Svara till. Standardvärdet är `no-reply@example.com`.
+   Adress som används som e-postadress för Svara till. Standard är `no-reply@example.com`.
 
 * **[!UICONTROL Reply-to-Delimiter]**
 
-   Om spårar-ID läggs till i svarshuvudet används den här avgränsaren. Standardvärdet är `+` (plustecken).
+   Om spårar-ID läggs till i svarshuvudet används den här avgränsaren. Standard är `+` (plustecken).
 
 * **[!UICONTROL Tracker Id prefix in subject]**
 
-   Om spårar-ID läggs till på ämnesraden används det här prefixet. Standardvärdet är `post#`.
+   Om spårar-ID läggs till på ämnesraden används det här prefixet. Standard är `post#`.
 
 * **[!UICONTROL Tracker id prefix in message body]**
 
-   Om spårar-ID läggs till i meddelandetexten används det här prefixet. Standardvärdet är `Please do not remove this:`.
+   Om spårar-ID läggs till i meddelandetexten används det här prefixet. Standard är `Please do not remove this:`.
 
-* **[!UICONTROL Email as HTML]**: Om det här alternativet är markerat anges innehållstypen för e-post som  `"text/html;charset=utf-8"`. Standard är markerat.
+* **[!UICONTROL Email as HTML]**: Om det här alternativet är markerat anges innehållstypen för e-post som `"text/html;charset=utf-8"`. Standard är markerat.
 
 * **[!UICONTROL Default user name]**
 
-   Det här namnet används för användare utan namn. Standardvärdet är `no-reply@example.com`.
+   Det här namnet används för användare utan namn. Standard är `no-reply@example.com`.
 
 * **[!UICONTROL Templates root path]**
 
-   E-postmeddelandet skapas med en mall som lagras på den här rotsökvägen. Standardvärdet är `/etc/community/templates/subscriptions-email`.
+   E-postmeddelandet skapas med en mall som lagras på den här rotsökvägen. Standard är `/etc/community/templates/subscriptions-email`.
 
 ## Konfigurera avsökningsimporteraren {#configure-polling-importer}
 
@@ -172,7 +172,7 @@ För att e-postmeddelandet ska kunna hämtas till databasen måste du konfigurer
 
 * Logga in på den primära utgivaren med administratörsbehörighet och bläddra till avsökningsimportkonsolen:
 
-   Till exempel [http://localhost:4503/etc/importers/polling.html](http://localhost:4503/etc/importers/polling.html)
+   Till exempel: [http://localhost:4503/etc/importers/polling.html](http://localhost:4503/etc/importers/polling.html)
 
 * Välj **[!UICONTROL Add]**
 
@@ -180,7 +180,7 @@ För att e-postmeddelandet ska kunna hämtas till databasen måste du konfigurer
 
 * **[!UICONTROL Type]**
 
-   *(Obligatoriskt)* Välj genom att dra nedåt  `POP3 (over SSL)`.
+   *(Obligatoriskt)* Dra ned för att välja `POP3 (over SSL)`.
 
 * **[!UICONTROL URL]**
 
@@ -188,12 +188,12 @@ För att e-postmeddelandet ska kunna hämtas till databasen måste du konfigurer
 
 * **[!UICONTROL Import to Path]**&amp;ast;
 
-   *(Obligatoriskt)* Ange till  `/content/usergenerated/mailFolder/postEmails`
-genom att bläddra till  `postEmails`mappen och välj  **OK**.
+   *(Obligatoriskt)* Ange till `/content/usergenerated/mailFolder/postEmails`
+genom att gå till `postEmails`mapp och markera **OK**.
 
 * **[!UICONTROL Update Interval in Seconds]**
 
-   *(Valfritt)* E-postservern som konfigurerats för standardtjänsten för e-post kan ha krav på uppdateringsintervallvärdet. Gmail kan till exempel kräva ett intervall på `300`.
+   *(Valfritt)* E-postservern som konfigurerats för standardtjänsten för e-post kan ha krav på uppdateringsintervallvärdet. Gmail kan till exempel kräva ett intervall av `300`.
 
 * **[!UICONTROL Login]**
 
@@ -211,11 +211,11 @@ När den nya avsökningskonfigurationen har sparats är det nödvändigt att än
 
 Använda [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md):
 
-* Logga in på den primära utgivaren med administratörsbehörighet och gå till [https://&lt;server>:&lt;port>/crx/de/index.jsp#/etc/importer/polling](http://localhost:4503/crx/de/index.jsp#/etc/importers/polling).
+* Logga in på den primära utgivaren med administratörsbehörighet och bläddra till [https://&lt;server>:&lt;port>/crx/de/index.jsp#/etc/importer/polling](http://localhost:4503/crx/de/index.jsp#/etc/importers/polling).
 * Markera den nya konfigurationen och ändra följande egenskaper:
 
-   * **feedType**: Ersätt  `pop3s` med  **`emailreply`**
-   * **källa**: Ersätt källans protokoll  `pop3s://` med  **`emailreply://`**
+   * **feedType**: Ersätt `pop3s` med **`emailreply`**
+   * **källa**: Ersätt källans protokoll `pop3s://` med **`emailreply://`**
 
 ![polling-protocol](assets/polling-protocol.png)
 

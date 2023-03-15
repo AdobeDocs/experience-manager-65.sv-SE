@@ -1,8 +1,8 @@
 ---
 title: Söka efter formulär och resurser
-seo-title: Söka efter formulär och resurser
+seo-title: Searching for forms and assets
 description: Du kan söka efter formulär och resurser i AEM med AEM. Med grundläggande och avancerad sökning kan du snabbt hitta dina resurser.
-seo-description: Du kan söka efter formulär och resurser i AEM med AEM. Med grundläggande och avancerad sökning kan du snabbt hitta dina resurser.
+seo-description: You can search forms and assets in your AEM instance using AEM search. Basic and advanced search allows you to quickly locate your assets.
 uuid: 0928a453-3dc4-448b-9320-dcbf20606dd9
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -13,7 +13,7 @@ role: Admin
 exl-id: 1f4f49b7-5f32-47dd-9dc7-a6974faf2bdf
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '721'
+source-wordcount: '692'
 ht-degree: 0%
 
 ---
@@ -24,13 +24,13 @@ Du kan söka efter formulär eller formulärresurser med hjälp av en textsträn
 
 När du markerar ett eller flera villkor och även anger en textsträng, returneras skärningspunkten för texten och villkoren som sökresultat. Sökresultaten är lika bra som de metadata för formulär och resurser som finns.
 
-Klicka på ![aem6forms_search](assets/aem6forms_search.png) för att visa eller dölja sökpanelen.
+Klicka ![aem6forms_search](assets/aem6forms_search.png), om du vill visa eller dölja sökpanelen.
 
 ## Grundläggande sökning {#basic-search}
 
 En grundläggande sökning är standardsökningen, som körs utan att du behöver ange några filter. En textsökning av metadataegenskaper utförs av AEM Forms.
 
-Om du vill utföra en grundläggande sökning anger du sökfrågan i textfältet och trycker på Retur. Du kan också ange jokertecknet (*) så att det matchar ett valfritt antal tecken.
+Om du vill utföra en grundläggande sökning anger du sökfrågan i textfältet och trycker på Retur. Du kan också skriva jokertecknet (&#42;) för att matcha ett valfritt antal tecken.
 
 Adobe Experience Manager söker efter den angivna texten i metadataegenskaperna och returnerar motsvarande resultat. Om du skriver mer än ett ord matchar sökningen hela texten.
 
@@ -38,10 +38,10 @@ Observera följande om grundsökningen:
 
 * Sökningen utförs med hjälp av egenskaperna för metadata för formulär och resurser.
 * Om du skriver mer än ett ord matchar sökningen hela texten.
-* Sökningen är inte skiftlägeskänslig. När du till exempel skriver `geometrixx` visas resurser med rubrikerna `Geometrixx`, `GEOMETRIXX` och `GeoMetRixx` i sökresultatet.
+* Sökningen är inte skiftlägeskänslig. När du t.ex. skriver `geometrixx`, resurser med titlar `Geometrixx`, `GEOMETRIXX`och `GeoMetRixx` visas i sökresultaten.
 
-* Partiella matchningar av ett ord stöds inte. Använd jokertecken * om du vill söka med partiella strängar. Om sökfrågan däremot matchar ett fullständigt ord visas motsvarande formulär eller resurs.
-* Extra blanksteg bevaras och trimmas inte under sökningen. `My form` är till exempel inte samma sökfråga som `My form`.
+* Partiella matchningar av ett ord stöds inte. Om du vill söka genom att använda delar av strängar använder du &#42; jokertecken. Om sökfrågan däremot matchar ett fullständigt ord visas motsvarande formulär eller resurs.
+* Extra blanksteg bevaras och trimmas inte under sökningen. Till exempel: `My form` är inte samma sökfråga som `My form`.
 
 * Om data- och visningsvärdena för fälten i metadataegenskaperna är olika kan du inte använda visningsvärden som sökparametrar. Du kan till exempel inte söka baserat på en status, till exempel Ändrad eller Publicerad, eftersom dessa egenskaper lagras i ett annat format.
 
@@ -59,7 +59,7 @@ Genom att använda filtret för resurssökväg kan du begränsa sökresultaten t
 
 ### Ändrad tillgång {#asset-modification}
 
-Välj ett av följande alternativ om du vill söka bland alla resurser som har ändrats inom en viss tidsperiod.
+Välj något av följande alternativ om du vill söka bland alla resurser som har ändrats inom en viss tidsperiod.
 
 | **Alternativ** | **Beskrivning** |
 |---|---|
@@ -72,7 +72,7 @@ Välj ett av följande alternativ om du vill söka bland alla resurser som har �
 
 Du kan söka efter resurser med hjälp av någon av följande statusar:
 
-* **Publicerat**: Sök efter alla resurser som har publicerats och inte ändrats efter publiceringen.
+* **Publicerad**: Sök efter alla resurser som har publicerats och inte ändrats efter publiceringen.
 
 * **Opublicerad**: Sök efter alla resurser som aldrig publicerats.
 
@@ -93,7 +93,7 @@ Du kan välja valfritt antal resurstyper. Sökningen returnerar en union av alla
    <td>Sök i alla formulärmallar.<br /> </td> 
   </tr>
   <tr>
-   <td>PDF-formulär</td> 
+   <td>PDF Form</td> 
    <td>Sök i alla PDF-dokument.</td> 
   </tr>
   <tr>
@@ -101,12 +101,12 @@ Du kan välja valfritt antal resurstyper. Sökningen returnerar en union av alla
    <td>Sök i alla dokument.</td> 
   </tr>
   <tr>
-   <td>Anpassad form<br /> </td> 
+   <td>Adaptiv form<br /> </td> 
    <td>Sök i alla anpassade formulär.</td> 
   </tr>
   <tr>
    <td>Resurs</td> 
-   <td>Sök i alla resurser.<br /> </td> 
+   <td>Sök bland alla resurser.<br /> </td> 
   </tr>
  </tbody>
 </table>

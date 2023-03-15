@@ -7,7 +7,7 @@ exl-id: d9941242-a01d-48fa-bad0-4c5b9dd16f4c
 source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
 source-wordcount: '143'
-ht-degree: 2%
+ht-degree: 41%
 
 ---
 
@@ -17,13 +17,13 @@ ht-degree: 2%
 
 [Läs mer om installation, driftsättning och arkitekturen i Adobe Experience Manager 6.5](/help/sites-deploying/home.md), inklusive vår molndistribution av Adobe Managed Services.
 
-[Lär dig hantera ett AEM projekt](/help/managing/home.md).
+[Lär dig att hantera ett AEM-projekt](/help/managing/home.md).
 
 ## AEM Sites {#aem-sites}
 
-[Lär dig viktiga begrepp för att skapa innehåll och innehåll i AEM](/help/sites-authoring/home.md).
+[Lär dig grunderna för att skapa innehåll och redigera i AEM](/help/sites-authoring/home.md).
 
-[Läs om hur du administrerar AEM](/help/sites-administering/home.md).
+[Lär dig om hur du administrerar AEM](/help/sites-administering/home.md).
 
 ## AEM Assets {#aem-assets}
 
@@ -51,4 +51,4 @@ ht-degree: 2%
 
 ## AEM Mobile {#aem-mobile}
 
-[Skapa och hantera innehåll för mobilappar.](/help/mobile/home.md)
+[Skapa och hantera innehåll för mobila appar.](/help/mobile/home.md)

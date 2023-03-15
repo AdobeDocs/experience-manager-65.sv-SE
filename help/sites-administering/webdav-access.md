@@ -1,32 +1,31 @@
 ---
 title: WebDAV-åtkomst
-seo-title: WebDAV-åtkomst
+seo-title: WebDAV Access
 description: Läs mer om WebDAV-åtkomst i AEM.
-seo-description: Läs mer om WebDAV-åtkomst i AEM.
+seo-description: Learn about WebDAV access in AEM.
 uuid: b0ecaa5d-5454-42df-8453-404ece734c32
 contentOwner: Chiradeep Majumdar
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: content
 content-type: reference
 discoiquuid: 1eaf7afe-a181-45df-8766-bd564b1ad22a
-translation-type: tm+mt
-source-git-commit: 1c1ade947f2cbd26b35920cfd10b1666b132bcbd
+exl-id: 891ee66c-e49c-4561-8fef-e6e448a8aa1c
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1152'
+source-wordcount: '1144'
 ht-degree: 0%
 
 ---
-
 
 # WebDAV-åtkomst{#webdav-access}
 
 Så här ansluter du till AEM via WebDAV med KDE:
 
-AEM har WebDAV-stöd som gör att du kan visa och redigera databasinnehåll. Om du ansluter via WebDAV får du direktåtkomst till innehållsdatabasen via skrivbordet. Text- och PDF-filer som läggs till i databasen via WebDAV-anslutningen indexeras automatiskt i fulltext och kan sökas igenom med standardgränssnitt för sökning och via standard-Java API:er.
+AEM har WebDAV-stöd som gör att du kan visa och redigera databasinnehåll. Om du ansluter via WebDAV får du direktåtkomst till innehållsdatabasen via skrivbordet. Text- och PDF-filer som läggs till i databasen via WebDAV-anslutningen indexeras automatiskt i fulltext och kan sökas igenom med standardsökgränssnitten och via Java-API:erna.
 
 ## Allmänt {#general}
 
-[Detaljerade instruktioner ](/help/sites-administering/webdav-access.md#connecting-via-webdav) för olika operativsystem finns i det här dokumentet, men för att ansluta till databasen via WebDAV-protokollet pekar du din WebDAV-klient till följande plats:
+[Detaljerade instruktioner per operativsystem](/help/sites-administering/webdav-access.md#connecting-via-webdav) ingår i det här dokumentet, men för att ansluta till databasen med WebDAV-protokollet pekar du din WebDAV-klient på följande plats:
 
 ```xml
 http://localhost:4502
@@ -34,15 +33,15 @@ http://localhost:4502
 
 ![chlimage_1-111](assets/chlimage_1-111a.png)
 
-Den här URL:en ger WebDAV-åtkomst till standardarbetsytan ( `crx.default`) när den är ansluten från operativsystemnivå. Eftersom det är enklare för användaren ger det inte extra flexibilitet att ange namn på arbetsytor, vilket kan göras med ytterligare [WebDAV-URL:er](/help/sites-administering/webdav-access.md#webdav-urls).
+Den här URL:en ger WebDAV-åtkomst till standardarbetsytan när den är ansluten från operativsystemsnivå ( `crx.default`). Eftersom det är enklare för användaren ger det dem inte större flexibilitet att ange namn på arbetsytor, vilket kan göras med ytterligare [WebDAV-URL:er](/help/sites-administering/webdav-access.md#webdav-urls).
 
 AEM visar databasinnehållet på följande sätt:
 
-* En nod av typen `nt:folder` visas som en mapp. Noder under noden `nt:folder` visas som mappinnehåll.
+* En nod av typen `nt:folder` visas som en mapp. Noder under `nt:folder` noden visas som mappinnehåll.
 
-* En nod av typen `nt:file` visas som en fil. Noder under noden `nt:file` visas inte, men de utgör filens innehåll.
+* En nod av typen `nt:file` visas som en fil. Noder under `nt:file` noden visas inte, men utgör filens innehåll.
 
-När du använder WebDAV för att skapa och redigera mappar och filer skapar och redigerar AEM de `nt:folder`- och `nt:file`-noder som behövs. Om du tänker använda WebDAV för att importera och exportera innehåll kan du försöka arbeta med nodtyperna `nt:file` och `nt:folder` så mycket som möjligt.
+När du använder WebDAV för att skapa och redigera mappar och filer skapar och redigerar AEM de nödvändiga `nt:folder` och `nt:file` noder. Om du tänker använda WebDAV för att importera och exportera innehåll kan du försöka arbeta med `nt:file` och `nt:folder` nodtyper så mycket som möjligt.
 
 >[!NOTE]
 >
@@ -91,7 +90,7 @@ URL:en för WebDAV-servern har följande struktur:
  </tbody>
 </table>
 
-Genom att ändra arbetsytelementet i sökvägen kan du mappa andra arbetsytor än standardarbetsytan ( `crx.default`). Om du till exempel vill mappa en arbetsyta med namnet `staging` använder du följande URL:
+Genom att ändra arbetsytelementet i sökvägen kan du mappa andra arbetsytor än standardarbetsytan ( `crx.default`). Om du till exempel vill mappa en arbetsyta med namnet `staging`använder du följande URL:
 
 ```xml
 http://localhost:4502/crx/repository/staging
@@ -99,7 +98,7 @@ http://localhost:4502/crx/repository/staging
 
 ## Ansluta via WebDAV {#connecting-via-webdav}
 
-[För att ansluta till din databas med hjälp av WebDAV-protokollet pekar du, som nämnts ovan](/help/sites-administering/webdav-access.md#general), din WebDAV-klient till din databasplats. Beroende på vilket operativsystem du använder skiljer sig dock stegen som krävs för att ansluta klienten åt och det kan finnas en konfiguration av operativsystemet som krävs.
+[Såsom nämns ovan](/help/sites-administering/webdav-access.md#general)för att ansluta till din databas med hjälp av WebDAV-protokollet pekar du din WebDAV-klient till din databasplats. Beroende på vilket operativsystem du använder skiljer sig dock stegen som krävs för att ansluta klienten åt och det kan finnas en konfiguration av operativsystemet som krävs.
 
 Instruktioner om hur du ansluter följande operativsystem:
 
@@ -109,11 +108,11 @@ Instruktioner om hur du ansluter följande operativsystem:
 
 ### Windows {#windows}
 
-Om du vill ansluta ett Microsoft Windows 7-system (och senare) till en AEM som inte är säker med SSL, måste alternativet att upprätta grundläggande autentisering över ett oskyddat nätverk uttryckligen aktiveras i Windows. Detta kräver en ändring i Windows-registret för WebClient.
+Om du vill ansluta ett Microsoft Windows 7-system (och senare) till en AEM som inte är säker med SSL, måste du uttryckligen aktivera alternativet att upprätta grundläggande autentisering över ett oskyddat nätverk i Windows. Detta kräver en ändring i Windows-registret för WebClient.
 
 När registret har uppdaterats kan AEM mappas som en enhet.
 
-#### Windows 7 och senare konfiguration {#windows-and-greater-configuration}
+#### Konfiguration av Windows 7 och senare {#windows-and-greater-configuration}
 
 Så här uppdaterar du registret så att grundläggande autentisering tillåts över ett oskyddat nätverk:
 
@@ -123,42 +122,42 @@ Så här uppdaterar du registret så att grundläggande autentisering tillåts �
    HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WebClient\Parameters
    ```
 
-1. Ange `BasicAuthLevel`-registerpostens undernyckel till värdet `2` eller högre.
+1. Ange `BasicAuthLevel` undernyckel till registerpost till värdet `2` eller större.
 
    Lägg till undernyckeln om den inte finns.
 
 1. Du måste starta om systemet för att registerändringen ska börja gälla.
 
-Mer information om registerändringen finns i [Microsoft Support KB 841215](https://support.microsoft.com/default.aspx/kb/841215).
+Se [Microsoft Support KB 841215](https://support.microsoft.com/default.aspx/kb/841215) om du vill ha mer information om den här registerändringen.
 
-Se [Microsoft Support KB 2445570](https://support.microsoft.com/kb/2445570) om du vill ha mer information om hur du kan förbättra WebDav-klientens svar i Windows.
+Se [Microsoft Support KB 2445570](https://support.microsoft.com/kb/2445570) om du vill ha information om hur du kan förbättra WebDav-klientens ansvar i Windows.
 
 >[!NOTE]
 >
 >Adobe rekommenderar att du skapar en Windows-användare med samma inloggningsuppgifter som databasanvändaren, annars kan behörighetskonflikter uppstå.
 
-#### Konfiguration för Windows 8 {#windows-configuration}
+#### Konfiguration av Windows 8 {#windows-configuration}
 
-För Windows 8 måste du också ändra registerposten [enligt beskrivningen för Windows 7 och senare](/help/sites-administering/webdav-access.md#windows-and-greater-configuration). Skrivbordsmiljö måste dock vara aktiverad för att du ska kunna se registerposten innan du kan göra detta.
+För Windows 8 måste du också ändra registerposten [enligt beskrivning för Windows 7 och senare](/help/sites-administering/webdav-access.md#windows-and-greater-configuration). Skrivbordsmiljö måste dock vara aktiverad för att du ska kunna se registerposten innan du kan göra detta.
 
-Om du vill aktivera Skrivbordsmiljö öppnar du **Serverhanteraren**, **Funktioner**, **Lägg till funktioner** och **Skrivbordsmiljö**.
+Om du vill aktivera Skrivbordsmiljö öppnar du **Serverhanteraren** sedan **Funktioner** sedan **Lägg till funktioner** sedan **Skrivbordsmiljö**.
 
 När registerposten som beskrivs för Windows 7 har startats om är den tillgänglig. Ändra den enligt beskrivningen för Windows 7 och senare.
 
-#### Ansluter till Windows {#connecting-in-windows}
+#### Ansluta i Windows {#connecting-in-windows}
 
 Så här ansluter du till AEM via WebDAV i en Windows-miljö:
 
-1. Öppna **Utforskaren i Windows** eller **Utforskaren** och klicka på **Dator** eller **Den här datorn**.
+1. Öppna **Utforskaren** eller **Utforskaren** och klicka på **Dator** eller **Den här datorn**.
 
    ![chlimage_1-112](assets/chlimage_1-112a.png)
 
-1. Klicka på **Mappa nätverksenhet** för att starta guiden.
+1. Klicka **Mappa nätverksenhet** för att starta guiden.
 1. Ange mappningsinformationen:
 
-   * **Enhet**: Välj en tillgänglig bokstav
-   * **Mapp**:  `http://localhost:4502`
-   * Kontrollera **Anslut med andra autentiseringsuppgifter**
+   * **Drive**: Välj en tillgänglig bokstav
+   * **Mapp**: `http://localhost:4502`
+   * Kontrollera **Anslut med olika autentiseringsuppgifter**
 
    Klicka på Slutför
 
@@ -180,17 +179,17 @@ Windows har nu mappat AEM som en enhet via WebDAV och du kan använda den som vi
 
 ### macOS {#macos}
 
-Det krävs inga konfigurationssteg för att ansluta via WebDAV i macOS. Du behöver bara ansluta till WebDAV-servern.
+Det krävs inga konfigurationssteg för att ansluta via WebDAV på macOS. Du behöver bara ansluta till WebDAV-servern.
 
-1. Gå till ett **Finder**-fönster och klicka på **Gå** och **Anslut till servern** eller tryck på **Kommando+k**.
-1. Ange AEM plats i fönstret **Anslut till server**:
+1. Navigera till alla **Finder** fönster och klicka **Gå** och **Anslut till server** eller tryck **Kommando+k**.
+1. I **Anslut till server** anger du AEM plats:
 
    * `http://localhost:4502`
    >[!NOTE]
    >
    >Om AEM finns på en annan port använder du portnumret i stället för 4502. Om du inte kör innehållsdatabasen på den lokala datorn ersätter du `localhost` med respektive servernamn eller IP-adress.
 
-1. När du uppmanas att autentisera anger du användarnamn `admin` och lösenord `admin`. Adobe rekommenderar att du använder det förkonfigurerade administratörskontot för testning.
+1. Ange användarnamn när du uppmanas till autentisering `admin` och lösenord `admin`. Adobe rekommenderar att du använder det förkonfigurerade administratörskontot för testning.
 
 macOS har nu anslutit till AEM via WebDAV och du kan använda det som vilken mapp som helst på din Mac.
 
@@ -202,20 +201,20 @@ Anslutning via WebDAV i Linux kräver ingen konfiguration, men inkluderar några
 
 Så här ansluter du till AEM via WebDAV med GNOME:
 
-1. I Nautilus (filutforskaren) väljer du **Platser** och väljer **Anslut till server**.
-1. I fönstret **Anslut till server** väljer du WebDAV (HTTP) i Service Type.
+1. I Nautilus (file explorer) väljer du **Platser** och markera **Anslut till server**.
+1. I **Anslut till server** väljer du WebDAV (HTTP) i Service Type.
 
-1. I **Server** anger du `http://localhost:4502/crx/repository/crx.default`
+1. I **Server**, ange `http://localhost:4502/crx/repository/crx.default`
 
    >[!NOTE]
    >
    >Om AEM finns på en annan port använder du portnumret i stället för 4502. Om du inte kör innehållsdatabasen på den lokala datorn ersätter du `localhost` med respektive servernamn eller IP-adress.
 
-1. I **Mapp** anger du `/dav`
+1. I **Mapp**, ange `/dav`
 1. Ange användarnamnet `admin`. Adobe rekommenderar att du använder det förkonfigurerade administratörskontot för testning.
 1. Lämna porten tom och ange ett namn för anslutningen.
-1. Klicka på **Anslut**. AEM ber dig ange ditt lösenord.
-1. Ange lösenordet `admin` och klicka på **Anslut**.
+1. Klicka **Anslut**. AEM ber dig ange ditt lösenord.
+1. Ange lösenordet `admin` och klicka **Anslut**.
 
 GNOME har nu monterat AEM som en volym och du kan använda den som vilken annan volym som helst.
 
@@ -223,17 +222,17 @@ GNOME har nu monterat AEM som en volym och du kan använda den som vilken annan 
 
 1. Öppna guiden Nätverksmapp.
 1. Välj **WebFolder**(webdav) och klicka på Nästa.
-1. Ange ett anslutningsnamn i **Namn**.
-1. I **Användare** anger du `admin.` Adobe rekommenderar att du använder det förkonfigurerade administratörskontot.
-1. I **Server** anger du `http://localhost:4502/crx/repository/crx.default`
+1. I **Namn** skriver du ett anslutningsnamn.
+1. I **Användare**, ange `admin.` Adobe rekommenderar att du använder det förkonfigurerade administratörskontot.
+1. I **Server**, ange `http://localhost:4502/crx/repository/crx.default`
 
    >[!NOTE]
    >
    >Om AEM finns på en annan port använder du portnumret i stället för 4502. Om du inte kör innehållsdatabasen på den lokala datorn ersätter du `localhost` med respektive servernamn eller IP-adress
 
-1. I **Mapp** anger du `dav`
+1. I **Mapp**, ange `dav`
 
-1. Klicka på **Spara och anslut**.
-1. När du uppmanas att ange ditt lösenord anger du lösenordet `admin` och klickar på **Anslut**.
+1. Klicka **Spara och anslut**.
+1. Ange lösenordet när du uppmanas att ange ditt lösenord `admin` och klicka **Anslut**.
 
 KDE har nu monterat AEM som en volym och du kan använda den som vilken annan volym som helst.

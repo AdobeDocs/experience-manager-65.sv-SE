@@ -1,8 +1,8 @@
 ---
 title: Anpassa textredigeraren
-seo-title: Anpassa textredigeraren
+seo-title: Customize text editor
 description: Lär dig hur du anpassar textredigeraren.
-seo-description: Lär dig hur du anpassar textredigeraren.
+seo-description: Learn how to customize text editor.
 uuid: 598246fe-8f15-49b6-b6d3-9154bebcd27e
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,14 +10,13 @@ topic-tags: correspondence-management
 discoiquuid: 666fee78-a103-44dc-afe7-71b90ce219b7
 docset: aem65
 feature: Correspondence Management
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 1dd3f55c-24f7-4331-a9a3-c9223e613fec
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '605'
 ht-degree: 0%
 
 ---
-
 
 # Anpassa textredigeraren{#customize-text-editor}
 
@@ -54,15 +53,15 @@ Så här anpassar du teckensnitt genom att redigera filen tbxeditor-config.xml:
 
       **Sökväg:** /libs/fd/cm/config
 
-      **Plats:** /appar/
+      **Plats:** /apps/
 
-      **Matcha nodtyper:** markerade
+      **Matcha nodtyper:** Markerad
 
       ![Överläggsnod](assets/2.png)
 
-   1. Klicka på **OK**. Mappstrukturen skapas i programmappen.
+   1. Klicka **OK**. Mappstrukturen skapas i programmappen.
 
-   1. Klicka på **Spara alla**.
+   1. Klicka **Spara alla**.
 
 1. Skapa en kopia av filen tbxeditor-config.xml i den nya konfigurationsmappen genom att följa stegen nedan:
 
@@ -71,7 +70,7 @@ Så här anpassar du teckensnitt genom att redigera filen tbxeditor-config.xml:
 
       `apps/fd/cm/config`
 
-   1. Som standard är namnet på den inklistrade filen `copy of tbxeditor-config.xml.` Byt namn på filen till `tbxeditor-config.xml` och klicka på **Spara alla**.
+   1. Namnet på den inklistrade filen är som standard `copy of tbxeditor-config.xml.` Byt namn på filen till `tbxeditor-config.xml` och klicka **Spara alla**.
 
 1. Öppna filen tbxeditor-config.xml i apps/fd/cm/config och gör sedan nödvändiga ändringar.
 
@@ -173,27 +172,26 @@ Så här anpassar du teckensnitt genom att redigera filen tbxeditor-config.xml:
 
       Du kan också ändra standardinställningarna för olika delar av texten och ta bort teckensnitten från textredigeraren genom att ta bort posterna.
 
-   1. Klicka på **Spara alla**.
+   1. Klicka **Spara alla**.
 
 
-## Lägg till anpassade teckensnitt på klientdatorn {#addcustomfonts}
+## Lägga till anpassade teckensnitt på klientdatorn {#addcustomfonts}
 
 När du öppnar ett teckensnitt i textredigeraren för Correspondence Management måste det finnas på klientdatorn som du använder för att få åtkomst till Correspondence Management. Om du vill kunna använda ett anpassat teckensnitt i textredigeraren måste du först installera det på klientdatorn.
 
 Mer information om hur du installerar teckensnitt finns i:
 
 * [Installera eller avinstallera teckensnitt i Windows](https://windows.microsoft.com/en-us/windows-vista/install-or-uninstall-fonts)
-* [Grundläggande om Mac: Teckensnittsbok](https://support.apple.com/en-us/HT201749)
+* [Mac Basics: Teckensnittsbok](https://support.apple.com/en-us/HT201749)
 
-## Få åtkomst till teckensnittsanpassningar {#access-font-customizations}
+## Få tillgång till teckensnittsanpassningar {#access-font-customizations}
 
 När du har ändrat teckensnitten i filen tbxeditor-config.xml i CRX och installerat teckensnitten på klientdatorn som används för att få åtkomst till AEM Forms, visas ändringarna i textredigeraren.
 
-Teckensnittet Sazanami Mincho Medium som lagts till i [Anpassa teckensnitt genom att redigera filen tbxeditor-config.xml i CRX](#customizefonts)-proceduren visas i textredigerarens användargränssnitt enligt följande:
+Teckensnittet Sazanami Mincho Medium har till exempel lagts till i [Anpassa teckensnitt genom att redigera filen tbxeditor-config.xml i CRX](#customizefonts) proceduren visas i textredigerarens användargränssnitt enligt följande:
 
 ![sazanamiminchointext](assets/sazanamiminchointext.png)
 
 >[!NOTE]
 >
 >Om du vill visa text på japanska måste du först ange texten med japanska tecken. När du använder ett anpassat japanskt teckensnitt formateras texten endast på ett visst sätt. Användning av ett anpassat japanskt teckensnitt ändrar inte engelska eller andra tecken till japanska tecken.
-

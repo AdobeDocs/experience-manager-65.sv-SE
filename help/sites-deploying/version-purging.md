@@ -1,8 +1,8 @@
 ---
 title: Rensning av version
-seo-title: Rensning av version
+seo-title: Version Purging
 description: I den här artikeln beskrivs de tillgängliga alternativen för att rensa versioner.
-seo-description: I den här artikeln beskrivs de tillgängliga alternativen för att rensa versioner.
+seo-description: This article describes the available options for version purging.
 uuid: a9fa25c7-e60e-4665-a726-99af9aac8f70
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,14 +11,13 @@ content-type: reference
 discoiquuid: fb4d7337-7b94-430b-80d2-f1754f823c2b
 docset: aem65
 feature: Configuring
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 6f0b1951-bdda-475f-b6c0-bc18de082b7c
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '740'
+source-wordcount: '728'
 ht-degree: 0%
 
 ---
-
 
 # Rensning av version{#version-purging}
 
@@ -28,17 +27,16 @@ I en standardinstallation AEM en ny version av en sida eller nod när du aktiver
 >
 >Om inga innehållsändringar görs visas ett meddelande om att sidan har aktiverats, men ingen ny version skapas
 
-Du kan skapa ytterligare versioner på begäran med hjälp av fliken **Versioning** i sidosparken. Dessa versioner lagras i databasen och kan återställas om det behövs.
+Du kan skapa ytterligare versioner på begäran med **Versionshantering** sidosparkens flik. Dessa versioner lagras i databasen och kan återställas om det behövs.
 
 Dessa versioner rensas aldrig, så databasstorleken kommer att öka med tiden och måste därför hanteras.
 
 AEM levereras med olika mekanismer som hjälper dig att hantera din databas:
 
-* [Versionshanteraren](#version-manager)
+* den [Versionshanteraren](#version-manager)
 Detta kan konfigureras för att rensa gamla versioner när nya versioner skapas.
 
-* verktyget [Rensa versioner](/help/sites-deploying/monitoring-and-maintaining.md#purgeversionstool)
-Detta används som en del av övervakningen och underhållet av din databas.
+* den [Rensa versioner](/help/sites-deploying/monitoring-and-maintaining.md#purgeversionstool) -verktyg Detta används som en del i övervakningen och underhållet av din databas.
 Du kan ingripa för att ta bort gamla versioner av en nod, eller en hierarki av noder, enligt följande parametrar:
 
    * Det maximala antalet versioner som ska behållas i databasen.
@@ -47,7 +45,7 @@ När den här siffran överskrids tas den äldsta versionen bort.
    * Högsta ålder för alla versioner som lagras i databasen.
 När en versions ålder överskrider det här värdet rensas den från databasen.
 
-* [underhållsaktiviteten Rensa version](/help/sites-administering/operations-dashboard.md#automated-maintenance-tasks). Du kan schemalägga underhållsaktiviteten Rensa version så att tidigare versioner tas bort automatiskt. Därför minimeras behovet av att manuellt använda verktygen för versionsrensning.
+* den [Underhållsaktivitet för versionsrensning](/help/sites-administering/operations-dashboard.md#automated-maintenance-tasks). Du kan schemalägga underhållsaktiviteten Rensa version så att tidigare versioner tas bort automatiskt. Därför minimeras behovet av att manuellt använda verktygen för versionsrensning.
 
 >[!CAUTION]
 >
@@ -57,7 +55,7 @@ När en versions ålder överskrider det här värdet rensas den från databasen
 
 Förutom explicit rensning med rensningsverktyget kan Version Manager konfigureras för att rensa gamla versioner när nya versioner skapas.
 
-[Skapa en konfiguration](/help/sites-deploying/configuring-osgi.md) för att konfigurera versionshanteraren:
+Så här konfigurerar du versionshanteraren: [skapa en konfiguration](/help/sites-deploying/configuring-osgi.md) for:
 
 `PID com.day.cq.wcm.core.impl.VersionManagerImpl`
 
@@ -67,7 +65,7 @@ Följande alternativ är tillgängliga:
 En version skapas såvida inte replikeringsagenten har konfigurerats för att förhindra att versioner skapas, vilket stöds av versionshanteraren.
 En version skapas bara om aktiveringen sker på en sökväg som finns i `versionmanager.ivPaths` (se nedan).
 
-* `versionmanager.ivPaths`(String[], standard:  `{"/"}`) Anger sökvägarna som versioner skapas implicit vid aktivering om  `versionmanager.createVersionOnActivation` är inställda på true.
+* `versionmanager.ivPaths`(String[], standard: `{"/"}`) Anger sökvägarna som versioner skapas implicit vid aktivering om `versionmanager.createVersionOnActivation` är inställt på true.
 
 * `versionmanager.purgingEnabled` (Boolean, standard: false) Anger om rensning ska aktiveras när nya versioner skapas eller inte.
 
@@ -122,4 +120,4 @@ Om du till exempel definierar det högsta OCH lägsta antalet versioner som ska 
 
 ## Rensa versioner {#purge-versions-tool}
 
-Verktyget [Rensa versioner](/help/sites-deploying/monitoring-and-maintaining.md#purgeversionstool) är avsett för att rensa versioner av en nod eller en hierarki av noder i din databas. Dess främsta syfte är att hjälpa dig att minska storleken på databasen genom att ta bort tidigare versioner av dina noder.
+The [Rensa versioner](/help/sites-deploying/monitoring-and-maintaining.md#purgeversionstool) är avsett för att rensa versioner av en nod eller en hierarki av noder i din databas. Dess främsta syfte är att hjälpa dig att minska storleken på databasen genom att ta bort tidigare versioner av dina noder.

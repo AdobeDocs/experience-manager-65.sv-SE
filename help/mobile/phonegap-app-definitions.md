@@ -1,22 +1,21 @@
 ---
 title: Programdefinitioner
-seo-title: Programdefinitioner
+seo-title: App definitions
 description: Följ den här sidan om du vill veta mer om appdefinitioner, som är ett sätt att identifiera vilka utrymmen och andra konfigurationer som är lämpliga för appen. Med appdefinitioner kan användaren lägga till utrymme utan att behöva kompilera om programmet.
-seo-description: Följ den här sidan om du vill veta mer om appdefinitioner, som är ett sätt att identifiera vilka utrymmen och andra konfigurationer som är lämpliga för appen. Med appdefinitioner kan användaren lägga till utrymme utan att behöva kompilera om programmet.
+seo-description: Follow this page to learn about app definitions, that are a way to identify what spaces and other configurations are appropriate for the app. App definitions allows the user to add space, without having to recompile the app.
 uuid: bdb4063b-1597-47e2-96d4-c4cc7c78c3d7
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-adobe-phonegap-enterprise
 discoiquuid: 860dde0b-7cb4-4668-9fac-6f954f1ec0a7
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 4c1c44fd-e685-462c-83a0-3cd2f74ab5c7
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '267'
+source-wordcount: '227'
 ht-degree: 1%
 
 ---
-
 
 # Programdefinitioner{#app-definitions}
 
@@ -36,7 +35,7 @@ Appdefinitioner är ett sätt att identifiera vilka utrymmen och andra konfigura
 
    ![chlimage_1-170](assets/chlimage_1-170.png)
 
-1. Välj **Appar** från **Mobil** och klicka på **Skapa.**
+1. Välj **Appar** från **Mobil** och klicka **Skapa.**
 
    Välj **App** och ange information för att skapa din nya app.
 
@@ -56,4 +55,3 @@ Mer information om administratörens och utvecklarens roller och ansvar finns i 
 
 * [Utveckla för Adobe PhoneGap Enterprise med AEM](/help/mobile/developing-in-phonegap.md)
 * [Administrera innehåll för Adobe PhoneGap Enterprise med AEM](/help/mobile/administer-phonegap.md)
-

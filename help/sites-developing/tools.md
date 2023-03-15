@@ -1,8 +1,8 @@
 ---
 title: Testnings- och spårningsverktyg
-seo-title: Testnings- och spårningsverktyg
+seo-title: Testing and Tracking Tools
 description: AEM tillhandahåller ett ramverk för testning av komponentens användargränssnitt och en mekanism för testning och felsökning av komponenter
-seo-description: AEM tillhandahåller ett ramverk för testning av komponentens användargränssnitt och en mekanism för testning och felsökning av komponenter
+seo-description: AEM provides a framework for testing component UI and a mechanism for testing and debugging components
 uuid: 12abedb5-4ee7-4389-9340-e628adbbc053
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,14 +10,13 @@ topic-tags: testing
 content-type: reference
 discoiquuid: 3cf0fd8d-7fc8-468a-bb1e-1debb68a82a5
 docset: aem65
-translation-type: tm+mt
-source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
+exl-id: bb5d1c7c-56ce-4d1e-a3cb-4e74d6922137
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '312'
+source-wordcount: '292'
 ht-degree: 0%
 
 ---
-
 
 # Testnings- och spårningsverktyg{#testing-and-tracking-tools}
 
@@ -26,13 +25,13 @@ ht-degree: 0%
 AEM tillhandahåller:
 
 * [ett ramverk för testning av komponentens användargränssnitt](/help/sites-developing/hobbes.md).
-* [en mekanism för att testa och felsöka komponenter](/help/sites-developing/developer-mode.md).
+* [en mekanism för testning och felsökning av komponenter](/help/sites-developing/developer-mode.md).
 
 Här följer två testverktyg för öppen källkod:
 
 **Selen**
 
-Selenium används för funktionstestning i en webbläsare med en användare per aktivitet. Den registrerar teststeg (klickningar) som antingen HTML-tabeller eller Java-klasser.
+Selenium används för funktionstestning i en webbläsare med en användare per aktivitet. Det registrerar teststeg (klickningar) som HTML-tabeller eller Java-klasser.
 
 Mer information finns i [https://www.seleniumhq.org/](https://www.seleniumhq.org/).
 
@@ -54,7 +53,7 @@ Ett felsökningssystem som kan konfigureras efter dina egna behov.
 
 **Kalkylblad**
 
-Även om det inte är specifikt ett felspårningsverktyg, används kalkylblad ofta *mis* för detta ändamål eftersom de är lätta att förstå och de flesta användare har erfarenhet av sin funktionalitet.
+Även om kalkylblad inte är specifikt ett felsökningsverktyg är de ofta *mis* används för detta eftersom de är lätta att förstå och de flesta användare har erfarenhet av sin funktionalitet.
 
 Om dessa används för spårning:
 

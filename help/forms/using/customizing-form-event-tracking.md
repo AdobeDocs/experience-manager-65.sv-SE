@@ -1,23 +1,22 @@
 ---
 title: Anpassa spårning av formulärhändelser
-seo-title: Anpassa spårning av formulärhändelser
+seo-title: Customizing form event tracking
 description: Om en användare spenderar mer än 60 sekunder på ett fält utlöses en fältbesökshändelse och informationen om fältet skickas till Adobe SiteCatalyst.
-seo-description: Om en användare spenderar mer än 60 sekunder på ett fält utlöses en fältbesökshändelse och informationen om fältet skickas till Adobe SiteCatalyst.
+seo-description: If a user spends more than 60 seconds on a field, a fieldvisit event is triggered and the details of the field are sent to Adobe SiteCatalyst.
 uuid: 2f790085-2f1a-45be-9a69-6100c76dcae0
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
 discoiquuid: 60d67c6b-5994-42ef-b159-ed6edf5cf9d4
-translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+exl-id: d0280a15-5d0d-49cf-bce9-ad1c40530eae
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '476'
+source-wordcount: '446'
 ht-degree: 1%
 
 ---
 
-
-# Anpassa formulärhändelsespårning {#customizing-form-event-tracking}
+# Anpassa spårning av formulärhändelser {#customizing-form-event-tracking}
 
 Följande händelser spåras automatiskt i en analysaktiverad Adaptiv form:
 
@@ -64,23 +63,23 @@ Följande händelser spåras automatiskt i en analysaktiverad Adaptiv form:
 
 ## Anpassa tidsgränsen för fältbesökshändelser {#customizing-the-field-visit-event-timeout}
 
-Om en användare lägger mer än 60 sekunder på ett fält i standardinställningen AEM en `fieldvisit`-händelse utlöses och informationen om fältet skickas till Adobe Analytics. Du kan anpassa baslinjen för spårning av fälttid under Konfiguration av AEM Forms Analytics på AEM Configuration Console (/system/console/configMgr) för att öka eller minska tidsgränsen.
+Om en användare tillbringar mer än 60 sekunder på ett fält AEM standardinställningen är `fieldvisit` -händelsen utlöses och informationen om fältet skickas till Adobe Analytics. Du kan anpassa baslinjen för spårning av fälttid under Konfiguration av AEM Forms Analytics på AEM Configuration Console (/system/console/configMgr) för att öka eller minska tidsgränsen.
 
-## Anpassa spårningshändelserna {#customizing-the-tracking-events}
+## Anpassa spårningshändelser {#customizing-the-tracking-events}
 
-Du kan ändra funktionen `trackEvent`som är tillgänglig i `/libs/afanalytics/js/custom.js`-filen för att anpassa händelsespårningen. När en händelse som spåras inträffar i en adaptiv form anropas funktionen `trackEvent`. Funktionen `trackEvent` accepterar två parametrar: `eventName`och `variableValueMap`.
+Du kan ändra `trackEvent`funktion finns i `/libs/afanalytics/js/custom.js` fil för att anpassa händelsespårningen. När en händelse som spåras inträffar i en adaptiv form är `trackEvent`funktionen anropas. The `trackEvent` funktionen accepterar två parametrar: `eventName`och `variableValueMap`.
 
-Du kan utvärdera värdet för *eventName* och *variableValueMap*-argument om du vill ändra spårningsbeteendet för händelser. Du kan till exempel välja att skicka informationen till analysservern efter att ett visst antal felhändelser har inträffat. Du kan även välja att utföra någon av följande anpassningar:
+Du kan utvärdera värdet för *eventName* och *variableValueMap* argument för att ändra spårningsbeteendet för händelser. Du kan till exempel välja att skicka informationen till analysservern efter att ett visst antal felhändelser har inträffat. Du kan även välja att utföra någon av följande anpassningar:
 
 * Du kan ange en tröskeltid innan du skickar händelsen.
-* Du kan underhålla ett läge för att bestämma en åtgärd, till exempel *fieldVisit* push a dummy event based on the timestamp of the last event.
-* Du kan använda funktionen `pushEvent` för att skicka händelsen till analysservern *.*
+* Du kan behålla ett läge för att bestämma åtgärd, till exempel *fieldVisit* överför en dummy-händelse baserat på tidsstämpeln för den senaste händelsen.
+* Du kan använda `pushEvent` funktion som skickar händelsen till analysservern *.*
 
 * Du kan välja att inte skicka händelsen till analysservern alls.
 
 ### Exempel {#sample}
 
-I följande exempel behålls tillståndet för händelsen *error* för varje *fieldName*-attribut. Händelsen skickas bara till analysservern om ett fel inträffar igen.
+I följande exempel är läget för *fel* händelse för varje *fieldName* -attributet bevaras. Händelsen skickas bara till analysservern om ett fel inträffar igen.
 
 ```javascript
 case 'error':
@@ -93,10 +92,10 @@ case 'error':
 
 ## Anpassa panelbesökshändelsen {#customizing-the-panelvisit-event}
 
-I standardinställningen för AEM Forms kontrolleras det efter var 60:e sekund om fönstret som innehåller det adaptiva formuläret är aktivt. Om fönstret är aktivt utlöses en `panelVisit`händelse till Adobe Analytics. Det hjälper till att kontrollera att dokumentet eller formuläret är aktivt och beräknar hur lång tid som har ägnats åt motsvarande formulär eller dokument.
+I standardinställningen för AEM Forms kontrolleras det efter var 60:e sekund om fönstret som innehåller det adaptiva formuläret är aktivt. Om fönstret är aktivt visas en `panelVisit`-händelsen utlöses för Adobe Analytics. Det hjälper till att kontrollera att dokumentet eller formuläret är aktivt och beräknar hur lång tid som har ägnats åt motsvarande formulär eller dokument.
 
 >[!NOTE]
 >
 >Händelsenamnet som används för att bevara aktivitet och beräkna hur lång tid som har ägnats åt är &quot;panelVisit&quot;. Den här händelsen skiljer sig från panelbesökshändelsen som listas i tabellen ovan.
 
-Du kan ändra funktionen scheduleHeartBeatCheck som finns i `/libs/afanalytics/js/custom.js`-filen om du vill ändra eller stoppa den här händelsen som skickas till Adobe Analytics med ett regelbundet intervall.
+Du kan ändra funktionen scheduleHeartBeatCheck som finns i `/libs/afanalytics/js/custom.js` om du vill ändra eller stoppa den här händelsen som skickas till Adobe Analytics med ett regelbundet intervall.

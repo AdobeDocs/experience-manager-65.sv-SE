@@ -21,7 +21,7 @@ ht-degree: 0%
 
 Utveckla SPA med denna självstudiekurs i flera delar, som leder dig genom projektinställningar, komponentmappning, utvecklingsverktyg i gränssnittet och programdirigering för att implementera din egen SPA.
 
-## Tutorials {#tutorials}
+## Självstudiekurser {#tutorials}
 
 Ett heltäckande exempel på hur du skapar ett eget ensidigt program som är redigerbart när AEM börjar med projektkonfigurationen via programroutning finns i WKND SPA Tutorials:
 

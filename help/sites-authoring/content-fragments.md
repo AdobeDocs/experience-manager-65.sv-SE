@@ -1,8 +1,8 @@
 ---
 title: Sidredigering med innehållsfragment
-seo-title: Sidredigering med innehållsfragment
+seo-title: Page Authoring with Content Fragments
 description: Med AEM Content Fragments kan du utforma, skapa, strukturera och använda sidoberoende innehåll
-seo-description: Med AEM Content Fragments kan du utforma, skapa, strukturera och använda sidoberoende innehåll
+seo-description: AEM Content Fragments allow you to design, create, curate, and use page-independent content
 uuid: 987de428-8354-4b23-a552-3ea415122184
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,14 +10,13 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 4049a7a5-4b33-4462-a25f-3c0daeb6a8a9
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
+exl-id: d5dad844-80ca-4ace-a082-38d892d9ffe2
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1158'
+source-wordcount: '1140'
 ht-degree: 5%
 
 ---
-
 
 # Sidredigering med innehållsfragment{#page-authoring-with-content-fragments}
 
@@ -29,18 +28,16 @@ Tillsammans med den uppdaterade JSON-exporteraren kan strukturerade innehållsfr
 
 >[!NOTE]
 >
->**Innehållsfragment** och  **[Upplevelsefragment](/help/sites-authoring/experience-fragments.md)** är olika funktioner i AEM:
+>**Innehållsfragment** och **[Upplevelsefragment](/help/sites-authoring/experience-fragments.md)** har olika funktioner i AEM:
 >
->* **Innehållsfragmenterarär** redaktionellt innehåll, främst text och relaterade bilder. De är rent innehåll, utan design och layout.
->* **Upplevelsefragment** är helt utformat. ett fragment av en webbsida.
-
+>* **Innehållsfragment** är redaktionellt innehåll, främst text och relaterade bilder. De är rent innehåll, utan design och layout.
+>* **Upplevelsefragment** är helt utformat, ett fragment av en webbsida.
 >
->
-Upplevelsefragment kan innehålla innehåll i form av innehållsfragment, men inte tvärtom.
+>Upplevelsefragment kan innehålla innehåll i form av innehållsfragment, men inte tvärtom.
 
 >[!CAUTION]
 >
->Den här sidan måste läsas tillsammans med [Arbeta med innehållsfragment](/help/assets/content-fragments/content-fragments.md) (och relaterade sidor) eftersom den innehåller grundläggande terminologi och koncept samt skapar och hanterar fragment.
+>Den här sidan måste läsas tillsammans med [Arbeta med innehållsfragment](/help/assets/content-fragments/content-fragments.md) (och relaterade sidor) när det introducerar grundläggande terminologi och koncept, tillsammans med att skapa och hantera fragment.
 
 Innehållsfragmenten aktiverar:
 
@@ -72,18 +69,18 @@ Innehållsfragmenten aktiverar:
 
 1. Öppna sidan för redigering.
 
-1. Lägg till **innehållsfragment**-komponenten; från antingen webbläsaren **Komponenter** eller **Infoga ny komponent**.
+1. Lägg till **Innehållsfragment** komponent, från **Komponenter** webbläsare eller **Infoga ny komponent**.
 
 1. Du kan antingen:
 
-   * Öppna webbläsaren **Resurser** och filtrera efter **Innehållsfragment** (standardvärdet är Bilder). Dra sedan det önskade fragmentet till komponentinstansen.
+   * Öppna **Resurser** webbläsare och filter för **Innehållsfragment** (standard är Bilder). Dra sedan det önskade fragmentet till komponentinstansen.
 
-   * Markera innehållskomponenten och **Konfigurera** i verktygsfältet. I dialogrutan kan du öppna urvalsdialogrutan för att bläddra och välja önskat **innehållsfragment**.
+   * Markera innehållets fragmentkomponent och sedan **Konfigurera** i verktygsfältet. I dialogrutan kan du öppna urvalsdialogrutan för att bläddra och välja önskat alternativ **Innehållsfragment**.
    >[!NOTE]
    >
    >Ett annat sätt är att dra ett visst innehållsfragment direkt till sidan. Då skapas automatiskt den associerade komponenten (innehållsfragment).
 
-1. Inledningsvis visas innehållet från **Main**-elementet och **Överordnad** (variation). Du kan [välja andra element och/eller variationer](#selecting-the-element-or-variation) efter behov.
+1. Inledningsvis innehållet från **Huvud** Element och **Överordnad** (variation) visas. Du kan [markera andra element och/eller variationer](#selecting-the-element-or-variation) efter behov.
 
    ![cfm-6420-01](assets/cfm-6420-01.png)
 
@@ -99,7 +96,7 @@ Innehållsfragmenten aktiverar:
 
 ### Markera elementet eller variationen {#selecting-the-element-or-variation}
 
-Öppna dialogrutan **Konfiguration** för fragmentet och konfigurera det för användning på den aktuella sidan. Dialogrutan kan vara beroende av vilken komponent som används.
+Öppna fragmentets **Konfiguration** för att konfigurera fragmentet för användning på den aktuella sidan. Dialogrutan kan vara beroende av vilken komponent som används.
 
 I rätt konfigurationsdialogruta kan du välja tillgängliga parametrar, bland annat:
 
@@ -115,7 +112,7 @@ I rätt konfigurationsdialogruta kan du välja tillgängliga parametrar, bland a
 
 * **Element**
 
-   * Standardvärdet **Main** är alltid tillgängligt.
+   * Standardvärdet **Huvud** kommer alltid att vara tillgängligt.
    * En markering blir tillgänglig om fragmentet skapades med en lämplig mall.
 
    >[!NOTE]
@@ -130,7 +127,7 @@ I rätt konfigurationsdialogruta kan du välja tillgängliga parametrar, bland a
 * **Stycken**: ange det eller de stycken som ska ingå:
 
    * **Alla**
-   * **Intervall**: t.ex.  `1`,  `3-5`,  `9-*`
+   * **Intervall**: till exempel `1`, `3-5`, `9-*`
 
       * **Hantera rubriker som egna stycken**
 
@@ -138,23 +135,23 @@ I rätt konfigurationsdialogruta kan du välja tillgängliga parametrar, bland a
 
 ### Snabb anslutning till Fragment Editor {#quick-connection-to-fragment-editor}
 
-Du kan öppna fragmentkällan för redigering (resursen) med ikonen **Redigera** i komponentverktygsfältet. Detta gör att du kan [redigera och hantera innehållsfragmentet](/help/assets/content-fragments/content-fragments.md).
+Du kan öppna fragmentkällan för redigering (resursen) med **Redigera** -ikonen i komponentens verktygsfält. Då kan du [redigera och hantera innehållsfragmentet](/help/assets/content-fragments/content-fragments.md).
 
 >[!CAUTION]
 >
 >Som alltid kommer redigering av fragmentkällan att påverka alla sidor som refererar till det innehållsfragmentet.
 
-### Lägger till mellaninnehåll {#adding-in-between-content}
+### Lägga till mellaninnehåll {#adding-in-between-content}
 
-När ett visst innehållsfragment läggs till på sidan finns det en **Dra komponenter här** platshållare mellan varje HTML-stycke (och längst upp/längst ned) i fragmentet.
+När ett visst innehållsfragment läggs till på sidan finns det ett **Dra komponenter hit** platshållare mellan styckena HTML (och längst upp/längst ned) i fragmentet.
 
-Detta gör att du kan lägga till extra innehåll [mellan (dvs. mellanliggande innehåll)](/help/assets/content-fragments/content-fragments.md#in-between-content-when-page-authoring-with-content-fragments) fragmentinnehållet (vid någon av de tillgängliga punkterna) utan att behöva ändra rotfragmentet.
+Detta gör att du kan lägga till extra innehåll [in-between (dvs. in-between content)](/help/assets/content-fragments/content-fragments.md#in-between-content-when-page-authoring-with-content-fragments) fragmentinnehållet (vid någon av de tillgängliga punkterna), utan att behöva ändra rotfragmentet.
 
 För mellanliggande innehåll kan du:
 
-* Lägg till komponenter från [komponentwebbläsaren](/help/sites-authoring/author-environment-tools.md#components-browser).
+* Lägg till komponenter från [Komponentwebbläsare](/help/sites-authoring/author-environment-tools.md#components-browser).
 * Lägg till resurser från [Resursläsaren](/help/sites-authoring/author-environment-tools.md#assets-browser).
-* Använd [Associerat innehåll](#using-associated-content) som källa för mellanliggande innehåll.
+* Använd [Associerat innehåll](#using-associated-content) som en källa för mellanliggande innehåll.
 
 >[!CAUTION]
 >
@@ -164,24 +161,21 @@ För mellanliggande innehåll kan du:
 
 >[!NOTE]
 >
->Du kan även [infoga visuella resurser (bilder) i själva fragmentet](/help/assets/content-fragments/content-fragments-variations.md#inserting-assets-into-your-fragment).
+>Du kan också [infoga visuella resurser (bilder) i själva fragmentet](/help/assets/content-fragments/content-fragments-variations.md#inserting-assets-into-your-fragment).
 >
 >Visuella resurser som infogats i själva fragmentet kopplas till föregående stycke i fragmentet. Det innebär att du inte kan placera innehåll mellan en visuell resurs och föregående stycke.
 
 >[!CAUTION]
 >
->När du har lagt till mellanliggande innehåll i ett innehållsfragment på sidan kan ändringar av strukturen för det underliggande innehållsfragmentet (dvs. i innehållsfragmentredigeraren) leda till felaktiga/oväntade resultat.
+>När du har lagt till mellanliggande innehåll i ett innehållsfragment på sidan kan ändringar av strukturen för det underliggande innehållsfragmentet (dvs. i innehållsfragmentets redigerare) leda till felaktiga/oväntade resultat.
 >
 >När detta inträffar behålls det mellanliggande innehållet som det är:
 >
 >* Mellanliggande komponenter har en absolut position inom komponentsekvensen i fragmentflödet. Den här positionen ändras inte, även när innehållet i styckena i fragmentet ändras.
 >
->  
-Detta kan få det att se ut som om den relativa placeringen har ändrats, eftersom mellanliggande stycken inte har någon kontextuell relation till (fragmentet) stycken som de är placerade bredvid.
+>  Detta kan få det att se ut som om den relativa placeringen har ändrats, eftersom mellanliggande stycken inte har någon kontextuell relation till (fragmentet) stycken som de är placerade bredvid.
 >* Om inte de två styckestrukturerna står i konflikt med varandra. I så fall visas inte det mellanliggande innehållet (även om det fortfarande finns internt).
-
 >
-
 
 
 ### Använda associerat innehåll {#using-associated-content}
@@ -190,19 +184,19 @@ Om du har [associerat innehåll](/help/assets/content-fragments/content-fragment
 
 >[!NOTE]
 >
->Det finns olika metoder för att lägga till [visuella resurser (t.ex. bilder)](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets) till avsnittet och/eller sidan.
+>Det finns olika metoder att lägga till [visuella resurser (t.ex. bilder)](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets) till fragmentet och/eller sidan.
 
 >[!NOTE]
 >
->Om du har flera innehållsfragment på en sida visar fliken **Associerat innehåll** resurser som passar alla fragment.
+>Om du har flera innehållsfragment på en sida **Associerat innehåll** -fliken visar resurser som passar alla fragment.
 
-När du har lagt till ett fragment med associerat innehåll på sidan öppnas en ny flik (**Associerat innehåll**) på sidopanelen.
+När du har lagt till ett fragment med associerat innehåll på sidan visas en ny flik (**Associerat innehåll**) öppnas på sidopanelen.
 
 Här kan du dra resurserna till önskad plats (antingen till en befintlig komponent eller till önskad plats där rätt komponent skapas):
 
 ![cfm-6420-03](assets/cfm-6420-03.png)
 
-### Resurser infogade i fragmentet {#assets-inserted-into-the-fragment}
+### Resurser som infogats i fragmentet {#assets-inserted-into-the-fragment}
 
 Om resurser (t.ex. bilder) har infogats i själva fragmentet är alternativen för att redigera dessa resurser i sidredigeraren begränsade. <!-- Removed link as it was a 404 on helpx -->
 
@@ -215,10 +209,9 @@ För en bild kan du till exempel
 
 Andra ändringar, till exempel move, copy, delete, måste göras i fragmentredigeraren.
 
-### Publicerar {#publishing}
+### Publicering {#publishing}
 
 Fragment måste publiceras så att de kan användas på dina publicerade webbsidor:
 
-* Ett fragment kan publiceras när [fragmentet har skapats i resurskonsolen](/help/assets/content-fragments/content-fragments.md#publishingandreferencingafragment).
-* Om ett *opublicerat fragment* används på en sida som publiceras, kan fragmentet även publiceras just nu.
-
+* Ett fragment kan publiceras efter [skapa fragmentet i resurskonsolen](/help/assets/content-fragments/content-fragments.md#publishingandreferencingafragment).
+* Om en *opublicerat fragment* används på en sida som publiceras, kan fragmentet också publiceras just nu.

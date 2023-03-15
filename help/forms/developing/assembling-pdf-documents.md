@@ -1,8 +1,8 @@
 ---
 title: Sammanställa PDF-dokument
-seo-title: Sammanställa PDF-dokument
-description: Använd Assembler-tjänsten för att samla ihop flera PDF-dokument till ett PDF-dokument eller för att dela upp ett PDF-dokument till flera PDF-dokument.
-seo-description: Använd Assembler-tjänsten för att samla ihop flera PDF-dokument till ett PDF-dokument eller för att dela upp ett PDF-dokument till flera PDF-dokument.
+seo-title: Assembling PDF Documents
+description: Använd Assembler-tjänsten för att samla ihop flera PDF-dokument till ett PDF-dokument eller dela upp ett PDF-dokument till flera PDF-dokument.
+seo-description: Use the Assembler service to assemble multiple PDF documents into one PDF document or disassemble one PDF document into multiple PDF documents.
 uuid: 0789feea-1bbc-4acd-9ad7-ddf4d05e1c68
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,13 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 3dd2b0d3-6023-490a-9b17-e29cc21c1b9d
 role: Developer
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 991f5a4e-4752-4c0d-9926-de7e4855ecd1
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '174'
+source-wordcount: '148'
 ht-degree: 0%
 
 ---
-
 
 # Sammanställa PDF-dokument {#assembling-pdf-documents}
 
@@ -32,5 +31,4 @@ Från och med LiveCycle ES 8.0 och senare finns stöd för PDF-paket i Assembler
 
 >[!NOTE]
 >
->Mer information om tjänsten Assembler finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
-
+>Mer information om Assembler-tjänsten finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).

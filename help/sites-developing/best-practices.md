@@ -13,7 +13,7 @@ exl-id: 0a478e80-c1b2-46c1-a6be-794d78b85d69
 source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
 workflow-type: tm+mt
 source-wordcount: '463'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -50,7 +50,7 @@ De bästa sätten att administrera, distribuera och underhålla, eller att skapa
 * [Bästa tillvägagångssätt](/help/sites-authoring/best-practices.md)
 * [Effektiva rutiner](/help/sites-deploying/best-practices.md)
 
-## Webbplatser {#sites}
+## Sites {#sites}
 
 Hantering och redigering av webbplatsinnehåll har några beprövade metoder:
 
@@ -102,4 +102,4 @@ HTML Template Language (HTL) är ett nytt mallsystem för HTML, som introducerad
 >[!NOTE]
 >
 >Följande självstudiekurs i flera delar kan vara av intresse för den bästa metoden för att skapa ett nytt AEM, med information om kärnkomponenter, redigerbara mallar, klientbibliotek och komponentutveckling:
->[Komma igång med AEM Sites - WKND självstudiekurs](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)
+>[Kom igång med AEM Sites – självstudiekurs om WKND](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)

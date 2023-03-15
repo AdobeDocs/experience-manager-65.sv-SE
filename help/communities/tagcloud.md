@@ -1,54 +1,53 @@
 ---
 title: Använda molnet för sociala taggar
-seo-title: Använda molnet för sociala taggar
+seo-title: Using Social Tag Cloud
 description: Lägga till en komponent i molnet för sociala taggar på en sida
-seo-description: Lägga till en komponent i molnet för sociala taggar på en sida
+seo-description: Adding a Social Tag Cloud component to a page
 uuid: 8c400030-976c-457a-bb5f-e473909647a9
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: authoring
 content-type: reference
 discoiquuid: 23a5a65e-774d-4789-9659-09e8be0c2bcd
-translation-type: tm+mt
-source-git-commit: 2fcd87cd1def7fc265ba40c83b50db86618f3b70
+exl-id: 56af5362-78de-4308-8958-63a45e8573cc
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '521'
 ht-degree: 0%
 
 ---
-
 
 # Använda molnet för sociala taggar {#using-social-tag-cloud}
 
 ## Introduktion {#introduction}
 
-Komponenten `Social Tag Cloud` markerar taggar som används av communitymedlemmar när innehåll publiceras. Det är ett sätt att identifiera trendämnen och göra det möjligt för webbplatsbesökare att snabbt hitta taggat innehåll.
+The `Social Tag Cloud` markerar taggar som används av communitymedlemmar när innehåll publiceras. Det är ett sätt att identifiera trendämnen och göra det möjligt för webbplatsbesökare att snabbt hitta taggat innehåll.
 
 Ytterligare sätt att identifiera aktuella trender finns på [Aktivitetstrender](trends.md).
 
-Den här sidan dokumenterar inställningarna i `Social Tag Cloud`-komponentdialogrutan och beskriver användarupplevelsen.
+Den här sidan dokumenterar `Social Tag Cloud` i dialogrutan och beskriver användarupplevelsen.
 
-Mer information om utvecklare finns i [Tagga viktiga](tag.md).
+Detaljerad information för utvecklare finns i [Tagg Essentials](tag.md).
 
 Se [Administrera taggar](../../help/sites-administering/tags.md) om du vill ha information om hur du skapar och hanterar taggar, samt om vilka innehållstaggar som har tillämpats.
 
 ## Lägga till ett moln för sociala taggar {#adding-a-social-tag-cloud}
 
-Om du vill lägga till en `Social Tag Cloud`-komponent på en sida i redigeringsläge använder du komponentwebbläsaren för att leta reda på `Communities / Social Tag Cloud` och dra komponenten till en plats på en sida där taggmolnet ska visas.
+Lägga till en `Social Tag Cloud` -komponent till en sida i redigeringsläge använder du komponentwebbläsaren för att leta upp `Communities / Social Tag Cloud` och dra den till en plats på en sida där taggmolnet ska visas.
 
-Mer information finns på [Grunderna för communitykomponenter](basics.md).
+Nödvändig information finns på [Grunderna för communitykomponenter](basics.md).
 
-När de [nödvändiga klientbiblioteken](tag.md#essentials-for-client-side) inkluderas visas `Social Tag Cloud`-komponenten så här:
+När [nödvändiga bibliotek på klientsidan](tag.md#essentials-for-client-side) ingår så här `Social Tag Cloud` visas:
 
 ![social-tag](assets/social-tag.png)
 
-## Konfigurerar molnet för social tagg {#configuring-social-tag-cloud}
+## Konfigurerar molnet för sociala taggar {#configuring-social-tag-cloud}
 
-Markera den monterade `Social Tag Cloud`-komponenten som ska öppnas och välj ikonen `Configure` som öppnar redigeringsdialogrutan.
+Markera den monterade `Social Tag Cloud` -komponenten som ska få åtkomst till och markera `Configure` som öppnar redigeringsdialogrutan.
 
 ![konfigurera](assets/configure-new.png)
 
-Under fliken **[!UICONTROL Social Tag Cloud]** anger du vilka taggar som ska visas och, om taggarna är aktiva länkar, platsen för sidan för sökresultat:
+Under **[!UICONTROL Social Tag Cloud]** anger du vilka taggar som ska visas och, om taggarna är aktiva länkar, platsen för sidan där sökresultaten ska visas:
 
 ![social-tag-cloud](assets/social-tag-cloud.png)
 
@@ -58,25 +57,25 @@ Identifiera vilka UGC-taggar som ska visas. De nedrullningsbara alternativen är
    * `From page and child pages`
    * `All tags`
 
-   Standardvärdet är `From page and child pages`, där &quot;page&quot; refererar till inställningen **Sida** nedan.
+   Standardvärdet är `From page and child pages`, där&quot;sida&quot; avser **Sida** nedan.
 
 * **[!UICONTROL Page]**
 
-   (Obligatoriskt om inte `All tags)` Sökvägen till UGC för en sida. Standard är den aktuella sidan om den lämnas tom.
+   (Obligatoriskt om inte `All tags)` Sökvägen till användargränssnittets användargränssnitt för en sida. Standard är den aktuella sidan om den lämnas tom.
 
 * **[!UICONTROL No links on tags]**
 
-   Om du markerar det här alternativet visas taggarna i taggmolnet som oformaterad text. Om du inte markerar det här alternativet visas taggarna som aktiva länkar som söker efter allt innehåll som taggen tillämpas på. Standardvärdet är avmarkerat och kräver att **[!UICONTROL Search Result Path]** har angetts.
+   Om du markerar det här alternativet visas taggarna i taggmolnet som oformaterad text. Om du inte markerar det här alternativet visas taggarna som aktiva länkar som söker efter allt innehåll som taggen tillämpas på. Standard är avmarkerat och kräver **[!UICONTROL Search Result Path]** som ska anges.
 
 * **[!UICONTROL Search Result Path]**
 
-   Sökvägen till en sida där en `Search Result`-komponent har placerats, konfigurerad att referera till UGC som innehåller den UGC-sökväg som anges av inställningen **Sida**.
+   Sökvägen till en sida där `Search Result` -komponenten har placerats ut, konfigurerats för att referera till UGC som innehåller UGC-sökvägen som anges av **Sida** inställning.
 
 ## Ändra visning av molnet för sociala taggar {#change-display-of-social-tag-cloud}
 
-Om du vill redigera visningen av **molnet för sociala taggar** anger du [designläge](../../help/sites-authoring/default-components-designmode.md) och dubbelklickar på den monterade `Social Tag Cloud`-komponenten för att öppna en dialogruta med en extra flik.
+Redigera visningen av **Social Tag Cloud**, ange [Designläge](../../help/sites-authoring/default-components-designmode.md) och dubbelklicka på `Social Tag Cloud` om du vill öppna en dialogruta med en extra flik.
 
-Ange hur taggar ska visas på fliken **[!UICONTROL Social Tag Cloud (Design)]**. En tagg kan vara en enkel tagg, ett enstaka ord i standardnamnutrymmet eller en hierarkisk taxonomi:
+Använda **[!UICONTROL Social Tag Cloud (Design)]** anger du hur taggar ska visas. En tagg kan vara en enkel tagg, ett enstaka ord i standardnamnutrymmet eller en hierarkisk taxonomi:
 
 ![social-tag-cloud-design](assets/social-tag-cloud-design.png)
 
@@ -103,10 +102,10 @@ Ange hur taggar ska visas på fliken **[!UICONTROL Social Tag Cloud (Design)]**.
 
    Det finns tre taggar som kan användas:
 
-   `Geometrixx Media (the namespace)`,  `Gadgets`och  `Cars`
+   `Geometrixx Media (the namespace)`, `Gadgets`och `Cars`
 
-   * Markerad: Endast `Cars` visas om det används.
-   * Avmarkerad: `Geometrixx Media` och `Gadgets`samt `Cars` visas om de används.
+   * Markerad: Endast `Cars` kommer att visas om det används.
+   * Avmarkerad: `Geometrixx Media` och `Gadgets`och `Cars` kommer att visas om det används.
 
    En enkel tagg är en lövtagg.
 
@@ -122,6 +121,6 @@ Ange hur taggar ska visas på fliken **[!UICONTROL Social Tag Cloud (Design)]**.
 
 ## Ytterligare information {#additional-information}
 
-Mer information finns på sidan [Taggar Essentials](tag.md) för utvecklare.
+Mer information finns på [Tagg Essentials](tag.md) för utvecklare.
 
-Mer information om hur du skapar och hanterar taggar finns i [Tagga användargenererat innehåll](tag-ugc.md) (UGC).
+Se [Tagga användargenererat innehåll](tag-ugc.md) (UGC) om du vill ha information om hur du skapar och hanterar taggar.

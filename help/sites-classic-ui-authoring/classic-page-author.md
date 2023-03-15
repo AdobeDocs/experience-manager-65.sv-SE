@@ -1,28 +1,27 @@
 ---
 title: Redigeringssidor
-seo-title: Redigeringssidor
+seo-title: Authoring Pages
 description: Det finns två översikter att skriva med AEM. (1) Första steget för författare - en introduktion för nya författare och (2) Snabbguide till redigeringssidor - en snabbguide (på hög nivå) till de viktigaste åtgärderna.
-seo-description: Det finns två översikter att skriva med AEM. (1) Första steget för författare - en introduktion för nya författare och (2) Snabbguide till redigeringssidor - en snabbguide (på hög nivå) till de viktigaste åtgärderna.
+seo-description: There are two overviews to authoring with AEM. (1) First Steps for Authors - an introduction for new authors, and (2) Quick Guide to Authoring Pages - a quick guide (high-level) to the main actions.
 uuid: 95d12bd6-c51d-4b7c-9d67-a152a822eb01
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
 discoiquuid: 3fe5b6cc-1494-43e1-add7-2f7828b676ad
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: a3606d72-1bd8-4886-9285-6457dae66486
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '331'
+source-wordcount: '298'
 ht-degree: 0%
 
 ---
-
 
 # Redigeringssidor{#authoring-pages}
 
 Här följer en översikt över redigering med AEM:
 
-* [Steg 1 för författare](/help/sites-classic-ui-authoring/classic-page-author-first-steps.md)  - en introduktion för nya författare
+* [Steg 1 för författare](/help/sites-classic-ui-authoring/classic-page-author-first-steps.md) - en introduktion för nya författare
 
 >[!NOTE]
 >
@@ -32,24 +31,23 @@ Här följer en översikt över redigering med AEM:
 
 För att underlätta utvecklingen av sidor innehåller redigeringsmiljön funktioner som:
 
-* **Du kan dra och**
-släppa komponenter (t.ex. text, bild) och digitala resurser (t.ex. bilder) på sidan genom att dra och släppa dem på önskad plats.
+* **Dra och släpp**
+Komponenter (t.ex. Text, Bild) och digitala resurser (t.ex. bilder) kan placeras på sidan genom att dra och släppa dem på önskad plats.
 
-* **RedigeringNär du har placerat**
-den på sidan kan du öppna en komponentspecifik dialogruta där du kan ange innehåll och/eller konfigurera egenskaper för komponenten (till exempel bildstorlek).
+* **Redigering**
+När du har placerat den på sidan kan du öppna en komponentspecifik dialogruta där du kan ange komponentens innehåll och/eller konfigurera egenskaper (till exempel bildstorlek).
 
-* **Du kan redigera text- och**
-bildkomponenter direkt på webbsidan utan att öppna en dialogruta eller någon explicit sparåtgärd.
+* **In-place Editing**
+Text- och bildkomponenter kan redigeras direkt på webbsidan utan att du behöver öppna en dialogruta eller någon explicit sparåtgärd.
 
-* **[](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#sidekickclassicui)**
-SidekickEtt flytande &quot;inspektörsfönster&quot; som visas på den redigerbara sidan. Härifrån kan nya komponenter dras till sidan och sidspecifika åtgärder kan utföras.
+* **[Sidekick](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#sidekickclassicui)**
+Ett flytande &quot;kontrollfönster&quot; som visas på den redigerbara sidan. Härifrån kan nya komponenter dras till sidan och sidspecifika åtgärder kan utföras.
 
-* **[InnehållssökningPå vänster sida av varje redigerbar sida ger innehållssökaren snabb åtkomst till en rad olika resurser, inklusive digitala resurser (som andra bilder, element och dokument i Flash), andra sidor och stycken.](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#thecontentfinderclassicui)**
-Dessa objekt kan dras till sidan; till exempel för att placera resurser eller skapa länkar till andra sidor.
+* **[Content Finder](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#thecontentfinderclassicui)**
+Till vänster på varje redigerbar sida ger innehållssökaren snabb åtkomst till en rad olika resurser, inklusive digitala resurser (som andra bilder, element och dokument i Flash), andra sidor och stycken. Dessa objekt kan dras till sidan; till exempel för att placera resurser eller skapa länkar till andra sidor.
 
-* **SnabbmenyHögerklick**
-på de flesta element på skärmen (t.ex. stycken på sidan) öppnar en snabbmeny med lämpliga åtgärdsalternativ.
+* **Snabbmeny**
+Högerklick på de flesta element på skärmen (till exempel stycken på sidan) öppnar en snabbmeny med lämpliga åtgärdsalternativ.
 
-* **Sök när du**
-skriverI vissa scenarier (t.ex. sökvägsval i redigeringsdialogrutor) visas dynamiska träffar när du skriver frågan när du söker efter innehåll via AEM.
-
+* **Sök medan du skriver**
+I vissa scenarier (t.ex. sökvägsval i redigeringsdialogrutor) visas dynamiska matchningar när du skriver frågan när du söker efter innehåll via AEM.

@@ -1,28 +1,27 @@
 ---
 title: Använda granskningar och granskningar - sammanfattning (visning)
-seo-title: Använda granskningar och granskningar - sammanfattning (visning)
+seo-title: Using Reviews and Reviews Summary (Display)
 description: Lägga till komponenterna Granska och Granska sammanfattning på en sida
-seo-description: Lägga till komponenterna Granska och Granska sammanfattning på en sida
+seo-description: Adding the Reviews and Reviews Summary components to a page
 uuid: bd1ccee7-b26b-4a27-b1ea-89609f5080af
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: authoring
 content-type: reference
 discoiquuid: bf4e7809-8def-4647-aaa6-3ac36865511f
-translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+exl-id: 170414a6-c40b-4ad2-9294-7c2266850c3d
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1231'
+source-wordcount: '1214'
 ht-degree: 0%
 
 ---
 
+# Använda granskningar och granskningar - sammanfattning (visning) {#using-reviews-and-reviews-summary-display}
 
-# Använda sammanfattning av granskningar och granskningar (visning) {#using-reviews-and-reviews-summary-display}
+The `Reviews` är en sammansatt av [Kommentarer](comments.md) och [Klassificering](rating.md) komponenter som är klara att använda.
 
-Komponenten `Reviews` är en sammansättning av [Kommentarer](comments.md) och [Rating](rating.md)-komponenter som är klara att användas.
-
-Komponenten `Reviews Summary (Display)` innehåller en sammanfattning av en aktiv eller stängd instans av en `Reviews`-komponent som kan visas någon annanstans på webbplatsen.
+The `Reviews Summary (Display)` innehåller en sammanfattning av en aktiv eller stängd instans av en `Reviews` -komponent som ska visas någon annanstans på webbplatsen.
 
 >[!NOTE]
 >
@@ -30,21 +29,21 @@ Komponenten `Reviews Summary (Display)` innehåller en sammanfattning av en akti
 
 ## Lägga till en granskning på en sida {#adding-a-review-to-a-page}
 
-Om du vill lägga till en `Reviews`-komponent på en sida i redigeringsläge använder du komponentwebbläsaren för att leta reda på `Communities / Reviews` och dra komponenten till rätt plats på en sida, till exempel en position i förhållande till funktionen som användare ska granska.
+Lägga till en `Reviews` -komponent till en sida i redigeringsläge använder du komponentwebbläsaren för att leta upp `Communities / Reviews` och dra den till rätt plats på en sida, t.ex. i förhållande till funktionen som användarna kan granska.
 
-Mer information finns på [Grunderna för communitykomponenter](basics.md).
+Nödvändig information finns på [Grunderna för communitykomponenter](basics.md).
 
-När de [nödvändiga klientbiblioteken](reviews-basics.md#essentials-for-client-side) inkluderas visas `Reviews`-komponenten så här.
+När [nödvändiga bibliotek på klientsidan](reviews-basics.md#essentials-for-client-side) ingår så här `Reviews` visas.
 
 ![skapa-granskning](assets/create-review.png)
 
 ## Konfigurera granskningar {#configuring-reviews}
 
-Markera den monterade `Reviews`-komponenten som ska öppnas och välj ikonen `Configure` som öppnar redigeringsdialogrutan.
+Markera den monterade `Reviews` -komponenten som ska få åtkomst till och markera `Configure` som öppnar redigeringsdialogrutan.
 
 ![configure-new](assets/configure-new.png)
 
-Under fliken **[!UICONTROL Allowed Ratings]** anger du den fullständiga listan över klassificeringar som ska visas för medlemmarna. Det första omdömet ska vara ett övergripande/allmänt omdöme, eftersom det är omdömet som ger det genomsnittliga omdömet för `Review Summary (Display)`-komponenten. De två följande klassificeringarna i standardkonfigurationen bör ha en annan rubrik än &quot;Undergrupp 1&quot; eller &quot;Undergrupp 2&quot;.
+Under **[!UICONTROL Allowed Ratings]** Ange den fullständiga listan över klassificeringar som ska visas för medlemmarna. Det första omdömet bör vara ett övergripande/allmänt omdöme, eftersom det är det omdöme som ger det genomsnittliga omdömet för `Review Summary (Display)` -komponenten. De två följande klassificeringarna i standardkonfigurationen bör ha en annan rubrik än &quot;Undergrupp 1&quot; eller &quot;Undergrupp 2&quot;.
 
 ![tillåtet omdöme](assets/configure-review1.png)
 
@@ -54,9 +53,9 @@ Under fliken **[!UICONTROL Allowed Ratings]** anger du den fullständiga listan 
 
    Använd uppilen, nedpilen och borttagningsknapparna för att ändra de synliga markeringarna.
 
-   Klicka på **[!UICONTROL Add Item]** om du vill lägga till ett annat klassificeringsalternativ.
+   Klicka **[!UICONTROL Add Item]** för att lägga till ett annat klassificeringsval.
 
-Under fliken **[!UICONTROL Required Ratings]** anger du de objekt i listan **[!UICONTROL Allowed Ratings]** som ska klassificeras igen. Om ett objekt bara anges på fliken Tillåtna klassificeringar kan det lämnas omarkerat när medlemmen skickar in det.
+Under **[!UICONTROL Required Ratings]** -flik, ange objekt igen från listan med **[!UICONTROL Allowed Ratings]** som måste klassificeras. Om ett objekt bara anges på fliken Tillåtna klassificeringar kan det lämnas omarkerat när medlemmen skickar in det.
 
 På webbplatsen markeras nödvändiga klassificeringar med en asterisk. Om ett objekt är obligatoriskt och inte markerat visas ett meddelande för medlemmen och överföringen nekas tills alla nödvändiga klassificeringar har markerats.
 
@@ -68,13 +67,13 @@ På webbplatsen markeras nödvändiga klassificeringar med en asterisk. Om ett o
 
    Använd uppilen, nedpilen och borttagningsknapparna för att ändra de synliga markeringarna.
 
-   Klicka på **[!UICONTROL Add Item]** om du vill lägga till ett annat svarsalternativ.
+   Klicka **[!UICONTROL Add Item]** för att lägga till ett annat svarsalternativ.
 
 >[!NOTE]
 >
->Om ett objekt anges på fliken **[!UICONTROL Required Ratings]** som inte anges på fliken **[!UICONTROL Allowed Ratings]**, inkluderas det inte i objekten för att värderas.
+>Om en artikel anges på **[!UICONTROL Required Ratings]** som inte har angetts på **[!UICONTROL Allowed Ratings]** , tas det inte med i de artiklar som ska värderas.
 
-Ange hur granskningar ska hanteras på fliken **[!UICONTROL Reviews]**.
+Under **[!UICONTROL Reviews]** anger du hur granskningar ska hanteras.
 
 ![recensioner](assets/configure-review3.png)
 
@@ -92,7 +91,7 @@ Ange hur granskningar ska hanteras på fliken **[!UICONTROL Reviews]**.
 
 * **Maximal filstorlek**
 
-   Endast relevant om **[!UICONTROL Allow File Uploads]** är markerat. Det här fältet begränsar storleken (i byte) på en överförd fil. Standardvärdet är 10 MB.
+   Endast relevant om **[!UICONTROL Allow File Uploads]** är markerad. Det här fältet begränsar storleken (i byte) på en överförd fil. Standardvärdet är 10 MB.
 
 * **[!UICONTROL Max Message Length]**
 
@@ -100,7 +99,7 @@ Ange hur granskningar ska hanteras på fliken **[!UICONTROL Reviews]**.
 
 * **[!UICONTROL Allowed File Types]**
 
-   Endast relevant om **[!UICONTROL Allow File Uploads]** är markerat. En kommaavgränsad lista med filtillägg med&quot;punktavgränsaren&quot;. Till exempel: .jpg, .jpeg, .png, .doc, .docx, .pdf. Om någon filtyp anges tillåts inte den som inte anges. Ingen standard har angetts så att alla filtyper tillåts.
+   Endast relevant om **[!UICONTROL Allow File Uploads]** är markerad. En kommaavgränsad lista med filtillägg med&quot;punktavgränsaren&quot;. Till exempel: .jpg, .jpeg, .png, .doc, .docx, .pdf. Om någon filtyp anges tillåts inte den som inte anges. Ingen standard har angetts så att alla filtyper tillåts.
 
 * **[!UICONTROL Rich Text Editor]**
 
@@ -110,7 +109,7 @@ Ange hur granskningar ska hanteras på fliken **[!UICONTROL Reviews]**.
 
    Inkludera röstfunktionen för ett ämne om det är markerat. Standard är avmarkerat.
 
-Ange hur de publicerade granskningarna ska hanteras på fliken **[!UICONTROL User Moderation]**. Mer information finns i [Moderating User Generated Content](moderate-ugc.md).
+Under **[!UICONTROL User Moderation]** anger du hur de publicerade granskningarna ska hanteras. Mer information finns i [Modererar användargenererat innehåll](moderate-ugc.md).
 
 ![användarmoderering](assets/configure-review4.png)
 
@@ -152,15 +151,15 @@ Ange hur de publicerade granskningarna ska hanteras på fliken **[!UICONTROL Use
 
 ### Lägga till en granskningssammanfattning (visning) på en sida {#adding-a-review-summary-display-to-a-page}
 
-Om du vill lägga till en `Reviews Summary (Display)`-komponent på en sida i redigeringsläge letar du reda på komponenten
+Lägga till en `Reviews Summary (Display)` till en sida i redigeringsläge, leta reda på komponenten
 
 * `Communities / Reviews Summary (Display)`
 
 och dra den till rätt plats på en sida där en sammanfattning av en aktiv eller stängd granskning ska visas.
 
-Mer information finns på [Grunderna för communitykomponenter](basics.md).
+Nödvändig information finns på [Grunderna för communitykomponenter](basics.md).
 
-När de [nödvändiga klientbiblioteken](reviews-basics.md#essentials-for-client-side) inkluderas visas `Reviews Summary (Display)`komponenten så här.
+När [nödvändiga bibliotek på klientsidan](reviews-basics.md#essentials-for-client-side) ingår så här `Reviews Summary (Display)`visas.
 
 ![review-summary](assets/configure-review5.png)
 
@@ -168,19 +167,19 @@ När de [nödvändiga klientbiblioteken](reviews-basics.md#essentials-for-client
 >
 >&quot;Jämka&quot; motsvarar rösterna för den första posten på flikarna Tillåtna klassificeringar i den granskning som sammanfattas.
 
-### Konfigurerar sammanfattning av granskningar (visning) {#configuring-reviews-summary-display}
+### Konfigurera sammanfattning av granskningar (visning) {#configuring-reviews-summary-display}
 
-Markera den monterade `Reviews Summary (Display)`-komponenten som ska öppnas och välj ikonen `Configure` som öppnar redigeringsdialogrutan.
+Markera den monterade `Reviews Summary (Display)` -komponenten som ska få åtkomst till och markera `Configure` som öppnar redigeringsdialogrutan.
 
 ![konfigurera](assets/configure-new.png)
 
-Under fliken **[!UICONTROL Review Summary]**
+Under **[!UICONTROL Review Summary]** tab
 
 ![review-summary](assets/configure-review6.png)
 
 * `Review Path`
 
-   ange eller bläddra till den monterade instansen av `reviews`komponenten som ska sammanfattas, till exempel om den läggs till på webbsidan för [Geometrixx Engage-platsen](getting-started.md), är sökvägen:
+   ange eller bläddra till den monterade instansen av `reviews`som ska sammanfattas, t.ex. om den har lagts till på webbsidan för [Geometrixx Engage site,](getting-started.md) banan skulle vara:
 
    `/content/sites/engage/en/page/jcr:content/content/primary/reviews`
 
@@ -194,31 +193,31 @@ Komponenten Reviews använder kommentarsystemet.
 
 Genom att ändra kommentarsresurstypen kommer kommentarsystemet inte längre att generera en instans av en kommentar med standardinställningen, utan en som har anpassats (utökats) av utvecklarna.
 
-När de anpassade resurstyperna är kända anger du [designläge](../../help/sites-authoring/default-components-designmode.md) och dubbelklickar på den monterade `Comments`-komponenten för att öppna en dialogruta med en extra flik.
+När de anpassade resurstyperna är kända anger du [Designläge](../../help/sites-authoring/default-components-designmode.md) och dubbelklicka på `Comments` om du vill öppna en dialogruta med en extra flik.
 
-Under fliken **[!UICONTROL Resource Types]** anger du anpassad resourceType för nya instanser av `Comments or Voting`-komponenterna:
+Under **[!UICONTROL Resource Types]** anger du anpassad resourceType för nya instanser av `Comments or Voting` komponenter:
 
 ![kommentarer-röstning](assets/configure-review7.png)
 
 * **[!UICONTROL Comment Resource Type]**
 
-   Navigera till resourceType för en utökad `comment`komponent (en kommentar) i /apps. Till exempel, `/apps/social/commons/components/hbs/comments/comment`.
+   Navigera till resourceType för en utökad `comment`-komponent (en kommentar) i /apps. Till exempel, `/apps/social/commons/components/hbs/comments/comment`.
 
    Den här resursen identifierar den resourceType för den UGC som skapas när en besökare publicerar en kommentar.
 
 * **[!UICONTROL Voting Resource Type]**
 
-   Navigera till resourceType för en utökad `voting`komponent i /apps. Till exempel, `/apps/social/components/hbs/voting`.
+   Navigera till resourceType för en utökad `voting`i /apps. Till exempel, `/apps/social/components/hbs/voting`.
 
    Den här resursen identifierar resurstypen för användargenererat innehåll som skapas när en besökare publicerar en röst.
 
 * **[!UICONTROL Comment System Resource Type]**
 
-   Navigera till resourceType för en utökad `comments`komponent (kommentarsystemet) i /apps. Lämna tomt om inte sidmallen [dynamiskt inkluderar](scf.md#add-or-include-a-communities-component) kommentarsystemet i det underliggande skriptet i stället för att läggas till på sidan som en resurs (kommentarsnod). Läs mer om [{{include}}-hjälpen](handlebars-helpers.md#include).
+   Navigera till resourceType för en utökad `comments`-komponent (kommentarsystem) i /apps. Lämna tomt om inte sidmallen [innehåller](scf.md#add-or-include-a-communities-component) kommentarsystemet i det underliggande skriptet i stället för att läggas till på sidan som en resurs (kommentarsnod). Läs mer om [{{include}} hjälpare](handlebars-helpers.md#include).
 
 ## Site Visitor Experience {#site-visitor-experience}
 
-### Moderatorer och administratörer {#moderators-and-administrators}
+### Styrelsemedlemmar och administratörer {#moderators-and-administrators}
 
 När den inloggade användaren har moderator- eller administratörsbehörighet kan de utföra de modereringsåtgärder som tillåts av komponentens konfiguration, oavsett vem som skapade granskningen.
 
@@ -239,8 +238,8 @@ Besökare som inte är inloggade kan endast läsa publicerade granskningar, öve
 
 ## Ytterligare information {#additional-information}
 
-Mer information finns på sidan [Review Essentials](reviews-basics.md) för utvecklare.
+Mer information finns på [Granska viktiga](reviews-basics.md) för utvecklare.
 
-moderering av publicerade kommentarer finns i [Moderating User Generated Content](moderate-ugc.md).
+Mer information om moderering av kommentarer finns i [Modererar användargenererat innehåll](moderate-ugc.md).
 
-Information om översättning av bokförda kommentarer finns i [Översätta användargenererat innehåll](translate-ugc.md).
+För översättning av bokförda kommentarer, se [Översätter användargenererat innehåll](translate-ugc.md).

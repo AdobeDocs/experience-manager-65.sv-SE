@@ -13,11 +13,11 @@ ht-degree: 3%
 
 # Arbeta med innehållsfragment {#working-with-content-fragments}
 
-Med Adobe Experience Manager (AEM) kan du utforma, skapa, strukturera och [publicera sidoberoende innehåll](/help/sites-authoring/content-fragments.md) Med Content Fragments kan du förbereda innehåll som ska användas på flera platser/i flera kanaler, idealiskt för headless-leverans.
+Med Adobe Experience Manager (AEM) kan du utforma, skapa, strukturera och [publicera sidoberoende innehåll](/help/sites-authoring/content-fragments.md) Med dem kan du förbereda innehåll som är klart för användning på flera platser/i flera kanaler, idealiskt för headless-leverans.
 
 Innehållsfragment innehåller strukturerat innehåll:
 
-* De är baserade på en [modell för innehållsfragment](/help/assets/content-fragments/content-fragments-models.md), som fördefinierar en struktur för det resulterande fragmentet.
+* De bygger på en [Content Fragment Model](/help/assets/content-fragments/content-fragments-models.md), som fördefinierar en struktur för det resulterande fragmentet.
 * Strukturen kan variera mellan:
    * Grundläggande
       * Ett textfält med flera rader, till exempel.
@@ -37,13 +37,13 @@ Innehållsfragment kan också levereras i JSON-format med exportfunktionerna i S
 På den här och följande sidor beskrivs hur du skapar, konfigurerar, underhåller och använder dina innehållsfragment:
 
 * [Aktivera funktionen för innehållsfragment för din instans](/help/assets/content-fragments/content-fragments-configuration-browser.md)
-* [Modeller](/help/assets/content-fragments/content-fragments-models.md)  för innehållsfragment - aktivera, skapa och definiera dina modeller
-* [Hantera innehållsfragment](/help/assets/content-fragments/content-fragments-managing.md) - skapa dina innehållsfragment; redigera, publicera och referera
-* [Variationer - innehåll](/help/assets/content-fragments/content-fragments-variations.md)  i redigeringsfragment - skapa fragmentinnehållet och skapa varianter av det Överordnad
-* [Markering](/help/assets/content-fragments/content-fragments-markdown.md)  - med markeringssyntax för ditt fragment
-* [Använda associerat innehåll](/help/assets/content-fragments/content-fragments-assoc-content.md)  - lägga till associerat innehåll
-* [Metadata - Fragmentegenskaper](/help/assets/content-fragments/content-fragments-metadata.md)  - visa och redigera fragmentegenskaperna
-* Använd [Innehållsfragment, tillsammans med GraphQL, för att leverera innehåll](/help/assets/content-fragments/content-fragments-graphql.md) som kan användas i dina program. Om du vill ha hjälp med detta kan du förhandsgranska [JSON-utdata](/help/assets/content-fragments/content-fragments-json-preview.md).
+* [Modeller för innehållsfragment](/help/assets/content-fragments/content-fragments-models.md) - aktivera, skapa och definiera dina modeller
+* [Hantera innehållsfragment](/help/assets/content-fragments/content-fragments-managing.md) - skapa era innehållsfragment; redigera, publicera och referera
+* [Variationer - innehåll för redigeringsfragment](/help/assets/content-fragments/content-fragments-variations.md) - skapa fragmentinnehållet och skapa varianter av det Överordnad
+* [Markering](/help/assets/content-fragments/content-fragments-markdown.md) - med markeringssyntax för ditt fragment
+* [Använda associerat innehåll](/help/assets/content-fragments/content-fragments-assoc-content.md) - lägga till associerat innehåll
+* [Metadata - Fragmentegenskaper](/help/assets/content-fragments/content-fragments-metadata.md) - visa och redigera fragmentegenskaperna
+* Använd [Content Fragments, tillsammans med GraphQL, för att leverera innehåll](/help/assets/content-fragments/content-fragments-graphql.md) för användning i dina program. Om du vill ha hjälp med detta kan du förhandsgranska [JSON-utdata](/help/assets/content-fragments/content-fragments-json-preview.md).
 
 >[!NOTE]
 >
@@ -76,14 +76,13 @@ Dessa innehållsfragment kan sedan samlas ihop för att ge upplevelser över en 
 
 >[!NOTE]
 >
->**Innehållsfragment** och  **[Upplevelsefragment](/help/sites-authoring/experience-fragments.md)** är olika funktioner i AEM:
->* **Innehållsfragmenterarär** redaktionellt innehåll som kan användas för att komma åt strukturerade data, bland annat texter, siffror och datum. De är rent innehåll, med definition och struktur, men utan ytterligare visuell design och/eller layout.
->* **Upplevelsefragment** är helt utformat. ett fragment av en webbsida.
-
+>**Innehållsfragment** och **[Upplevelsefragment](/help/sites-authoring/experience-fragments.md)** har olika funktioner i AEM:
+>* **Innehållsfragment** är redaktionellt innehåll som kan användas för att få tillgång till strukturerade data, bland annat texter, siffror och datum. De är rent innehåll, med definition och struktur, men utan ytterligare visuell design och/eller layout.
+>* **Upplevelsefragment** är helt utformat, ett fragment av en webbsida.
 >
 >Upplevelsefragment kan innehålla innehåll i form av innehållsfragment, men inte tvärtom.
 >
->Mer information finns också i [Förstå innehållsfragment och upplevelsefragment i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html#content-fragments).
+>Mer information finns även i [Förstå innehållsfragment och upplevelsefragment i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html#content-fragments).
 
 >[!NOTE]
 >
@@ -125,23 +124,23 @@ Tillsammans med JSON-exportfunktionerna i AEM kärnkomponenter kan detta struktu
 
 Innehållsfragmenten är:
 
-* Lagrat som **Resurser**:
+* Lagrad som **Resurser**:
 
-   * Innehållsfragment (och deras varianter) kan skapas och underhållas från **Assets**-konsolen.
+   * Innehållsfragment (och deras variationer) kan skapas och underhållas från **Resurser** konsol.
    * Skapat och redigerat i Content Fragment Editor.
 
-* Används i [sidredigeraren med komponenten Content Fragment](/help/sites-authoring/content-fragments.md) (refereringskomponent):
+* Används i [sidredigeraren med komponenten Content Fragment](/help/sites-authoring/content-fragments.md) (refererande komponent):
 
-   * Komponenten **Innehållsfragment** är tillgänglig för sidförfattare. Det gör att de kan referera till och leverera det nödvändiga innehållsfragmentet i antingen HTML- eller JSON-format.
+   * The **Innehållsfragment** -komponenten är tillgänglig för sidförfattare. De kan referera till och leverera det nödvändiga innehållsfragmentet i antingen HTML- eller JSON-format.
 
-* Tillgänglig med [AEM GraphQL API](/help/assets/content-fragments/graphql-api-content-fragments.md).
+* Tillgängligt med [AEM GraphQL API](/help/assets/content-fragments/graphql-api-content-fragments.md).
 
 Innehållsfragment är en innehållsstruktur som:
 
 * Är utan layout eller design (viss textformatering är möjlig i RTF-läge).
 * Innehåller en eller flera [beståndsdelar](#constituent-parts-of-a-content-fragment).
-* Kan [innehålla, eller vara ansluten till, bilder](#fragments-with-visual-assets).
-* Kan använda [mellanliggande innehåll](#in-between-content-when-page-authoring-with-content-fragments) när det refereras till på en sida.
+* Kan [innehålla eller vara ansluten till bilder](#fragments-with-visual-assets).
+* Kan använda [mellanliggande innehåll](#in-between-content-when-page-authoring-with-content-fragments) vid referens på en sida.
 
 * Är oberoende av leveransmekanismen (dvs. sida, kanal).
 
@@ -151,11 +150,11 @@ För att ge författarna bättre kontroll över sitt innehåll kan bilder lägga
 
 Resurser kan användas med ett innehållsfragment på flera sätt. var och en med sina egna fördelar:
 
-* **Infoga** resurser i ett fragment (blandade mediefragment)
+* **Infoga resurs** till ett fragment (blandade mediefragment)
 
    * Är en integrerad del av fragmentet (se [Komponentdelar i ett innehållsfragment](#constituent-parts-of-a-content-fragment)).
    * Definiera tillgångens position.
-   * Mer information finns i [Infoga resurser i fragment](/help/assets/content-fragments/content-fragments-variations.md#inserting-assets-into-your-fragment) i fragmentredigeraren.
+   * Se [Infoga resurser i fragment](/help/assets/content-fragments/content-fragments-variations.md#inserting-assets-into-your-fragment) i fragmentredigeraren om du vill ha mer information.
 
    >[!NOTE]
    >
@@ -166,7 +165,7 @@ Resurser kan användas med ett innehållsfragment på flera sätt. var och en me
    * är anslutna till ett fragment, men inte en fast del av fragmentet (se [Komponentdelar i ett innehållsfragment](#constituent-parts-of-a-content-fragment)).
    * Möjliggör viss flexibilitet för placering.
    * Är enkelt tillgängliga för användning (som mellanliggande innehåll) när du använder fragmentet på en sida.
-   * Mer information finns i [Associerat innehåll](/help/assets/content-fragments/content-fragments-assoc-content.md).
+   * Se [Associerat innehåll](/help/assets/content-fragments/content-fragments-assoc-content.md) för mer information.
 
 * Resurser som är tillgängliga från **resursläsaren** i sidredigeraren
 
@@ -199,7 +198,7 @@ Resurserna för innehållsfragmentet består av följande delar (antingen direkt
 
    * Resurser (bilder) infogade i det faktiska fragmentet och används som det interna innehållet i ett fragment.
    * Är inbäddade i fragmentets styckesystem.
-   * Kan formateras när [fragmentet används/refereras på en sida](/help/sites-authoring/content-fragments.md).
+   * Kan formateras när [fragment används/refereras på en sida](/help/sites-authoring/content-fragments.md).
    * Kan endast läggas till, tas bort från eller flyttas inom ett fragment med fragmentredigeraren. Dessa åtgärder kan inte utföras i sidredigeraren.
    * Kan endast läggas till, tas bort från eller flyttas inom ett fragment med [RTF-format i fragmentredigeraren](/help/assets/content-fragments/content-fragments-variations.md#inserting-assets-into-your-fragment).
    * Kan endast läggas till i flerradiga textelement (alla fragmenttyper).
@@ -211,7 +210,7 @@ Resurserna för innehållsfragmentet består av följande delar (antingen direkt
 
       >[!NOTE]
       >
-      >Resurser kan också läggas till som [ytterligare (mellanliggande) innehåll](/help/sites-authoring/content-fragments.md#using-associated-content) när ett fragment används på en sida. med antingen Associerat innehåll eller resurser från Resurser-webbläsaren.
+      >Resurser kan också läggas till som [extra (mellanliggande) innehåll](/help/sites-authoring/content-fragments.md#using-associated-content) när ett fragment används på en sida, med antingen Associerat innehåll eller resurser från Resurser-webbläsaren.
 
 * **Associerat innehåll**
 
@@ -220,19 +219,19 @@ Resurserna för innehållsfragmentet består av följande delar (antingen direkt
    * Resurserna är [kopplade till fragment via samlingar](/help/assets/content-fragments/content-fragments-assoc-content.md); kopplade samlingar låter författaren bestämma vilka resurser som ska användas när de redigerar sidan.
 
       * Samlingar kan kopplas till fragment som standardinnehåll, eller av författare vid fragmentredigering.
-      * [DAM-](/help/assets/manage-collections.md) samlingar (Assets) är grunden för det associerade fragmentinnehållet.
+      * [DAM-samlingar](/help/assets/manage-collections.md) är grunden för det associerade fragmentinnehållet.
    * Du kan också lägga till själva fragmentet i en samling för att underlätta spårningen.
 
 * **Fragmentmetadata**
 
-   * Använd [Metadata för resurser](/help/assets/metadata-schemas.md).
+   * Använd [Resurser för metadatamodeller](/help/assets/metadata-schemas.md).
    * Taggar kan skapas när du:
 
       * Skapa och redigera fragmentet
       * Eller senare:
 
          * Genom att visa/redigera fragmentet **Egenskaper** från konsolen
-         * Genom att redigera **metadata** i fragmentredigeraren
+         * Genom att redigera **Metadata** i fragmentredigeraren
 
    >[!CAUTION]
    >
@@ -251,20 +250,20 @@ Resurserna för innehållsfragmentet består av följande delar (antingen direkt
 * **Variationer**
 
    * Återgivning av fragmenttext som är specifik för redaktionella ändamål. kan vara relaterat till kanalen men inte obligatoriskt, kan också vara för lokala ad hoc-ändringar.
-   * skapas som kopior av **Överordnad**, men kan sedan redigeras efter behov, det ofta finns innehållsöverlappning mellan själva variationerna.
+   * Skapas som kopior av **Överordnad**, men kan sedan redigeras efter behov; det ofta finns innehållsöverlappning mellan själva variationerna.
    * Kan definieras vid fragmentredigering.
    * Lagras i fragmentet för att undvika spridning av innehållskopior.
-   * Variationer kan vara [synkroniserade](/help/assets/content-fragments/content-fragments-variations.md#synchronizing-with-master) med Överordnad om det Överordnad innehållet har uppdaterats.
-   * Kan vara [Summerad](/help/assets/content-fragments/content-fragments-variations.md#summarizing-text) för att snabbt korta av texten till en fördefinierad längd.
-   * Tillgängligt under fliken [Variationer](/help/assets/content-fragments/content-fragments-variations.md) i fragmentredigeraren.
+   * Variationer kan vara [synkroniserad](/help/assets/content-fragments/content-fragments-variations.md#synchronizing-with-master) med Överordnad om det Överordnad innehållet har uppdaterats.
+   * Kan [Sammanfattad](/help/assets/content-fragments/content-fragments-variations.md#summarizing-text) för att snabbt korta av texten till en fördefinierad längd.
+   * Tillgängligt under [Variationer](/help/assets/content-fragments/content-fragments-variations.md) i fragmentredigeraren.
 
 ### Mellan innehåll vid sidredigering med innehållsfragment {#in-between-content-when-page-authoring-with-content-fragments}
 
 Mellanliggande innehåll:
 
 * Kan användas i sidredigeraren när du arbetar med innehållsfragment.
-* Är [ytterligare innehåll tillagt i flödet för ett fragment](/help/sites-authoring/content-fragments.md#adding-in-between-content) när det har använts/refererats på en sida.
-* Kan användas i [sidredigeraren när du arbetar med innehållsfragment](/help/sites-authoring/content-fragments.md).
+* Är [ytterligare innehåll som lagts till i flödet för ett fragment](/help/sites-authoring/content-fragments.md#adding-in-between-content) när det har använts eller refererats på en sida.
+* Finns att använda i [Sidredigeraren när du arbetar med innehållsfragment](/help/sites-authoring/content-fragments.md).
 * Mellanliggande innehåll kan läggas till i vilket fragment som helst, där bara ett element är synligt.
 * Associerat innehåll kan användas, liksom resurser och/eller komponenter från lämplig webbläsare.
 
@@ -278,9 +277,9 @@ Om du vill skapa innehållsfragment behöver du:
 
 * **Innehållsmodell**
 
-   * Är [aktiverat med hjälp av Konfigurationsläsaren](/help/assets/content-fragments/content-fragments-configuration-browser.md).
-   * [skapas med Verktyg](/help/assets/content-fragments/content-fragments-models.md).
-   * Krävs för att [skapa ett fragment](/help/assets/content-fragments/content-fragments-managing.md#creating-content-fragments).
+   * är [aktiveras med hjälp av Konfigurationsläsaren](/help/assets/content-fragments/content-fragments-configuration-browser.md).
+   * är [skapad med verktyg](/help/assets/content-fragments/content-fragments-models.md).
+   * Krävs för [skapa ett fragment](/help/assets/content-fragments/content-fragments-managing.md#creating-content-fragments).
    * Definierar strukturen för ett fragment (rubrik, innehållselement, taggdefinitioner).
    * Innehållsmodelldefinitioner kräver en titel och ett dataelement. allt annat är valfritt.
    * Modellen kan definiera standardinnehåll, om tillämpligt.
@@ -292,7 +291,7 @@ Om du vill använda dina innehållsfragment för att skapa sidor behöver du ock
 * **Innehållsfragmentkomponent**
 
    * Instrumentellt för att leverera fragmentet i HTML- och/eller JSON-format.
-   * Krävs för att [referera till fragmentet på en sida](/help/sites-authoring/content-fragments.md).
+   * Krävs för [referera till fragmentet på en sida](/help/sites-authoring/content-fragments.md).
    * Ansvarig för layout och leverans av ett fragment. dvs. kanaler.
    * Fragment behöver en eller flera dedikerade komponenter för att definiera layout och leverera vissa eller alla element/varianter och tillhörande innehåll.
    * Om du drar ett fragment till en sida när du redigerar kopplas den nödvändiga komponenten automatiskt till.

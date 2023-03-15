@@ -1,26 +1,25 @@
 ---
 title: Godkännande och godkännande
-seo-title: Godkännande och godkännande
+seo-title: Acceptance and Sign-off
 description: Godkännandetester är en särskild testkategori som används för att verifiera att projektet uppfyller kundens krav och att kunden godkänner projektet
-seo-description: Godkännandetester är en särskild testkategori som används för att verifiera att projektet uppfyller kundens krav och att kunden godkänner projektet
+seo-description: Acceptance Tests are a special category of test used to verify that the project fulfils the customer's requirements and that the customer accepts the project
 uuid: 6bdd2a99-d141-43ef-9102-99e65aba02d3
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: testing
 content-type: reference
 discoiquuid: d8da194f-f161-4ba7-b8cc-c2c282dc9c83
-translation-type: tm+mt
-source-git-commit: 6d216e7521432468a01a29ad2879f8708110d970
+exl-id: 30ac9a63-f9e6-4075-b67e-4524d11a0e29
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '135'
+source-wordcount: '107'
 ht-degree: 0%
 
 ---
 
+# Godkännande och godkännande{#acceptance-and-sign-off}
 
-# Acceptera och signera{#acceptance-and-sign-off}
-
-Som vi nämnt är [Godkännandetester](/help/sites-developing/planning.md) en särskild testkategori som används för att verifiera att:
+Som nämndes [Godkännandetester](/help/sites-developing/planning.md) är en särskild provningskategori som används för att kontrollera att
 
 * Projektet uppfyller kundens krav.
 * Kunden godkänner projektet.
@@ -32,4 +31,3 @@ Därför måste de
 * Definieras så tidigt som möjligt.
 * Uppdaterat vid behov.
 * Alla ändringar måste godkännas formellt och undertecknas av båda parter (partner och kund).
-

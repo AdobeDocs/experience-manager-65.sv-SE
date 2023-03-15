@@ -1,7 +1,8 @@
 ---
 title: Så här Live med ditt headless-program
 description: I den här delen av AEM Headless Developer Journey lär du dig hur du driftsätter en headless-applikation live.
-source-git-commit: 20d46a7c37663dac36e6af9582d569a7f782eab7
+exl-id: ec3356ef-9e60-4151-984d-3ebdab593b96
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
 source-wordcount: '1903'
 ht-degree: 0%
@@ -103,9 +104,9 @@ Nu är det dags att göra ditt AEM headless-program redo för lansering enligt d
 
 ### Skydda ditt Headless-program innan du startar {#secure-and-scale-before-launch}
 
-1. Förbered [Autentisering](/help/assets/content-fragments/graphql-authentication-content-fragments.md) för GraphQL-begäranden
+1. Förbered [Autentisering](/help/assets/content-fragments/graphql-authentication-content-fragments.md) för dina GraphQL-förfrågningar
 
-### Modellstruktur jämfört med GraphQL-utdata {#structure-vs-output}
+### Modellstruktur jämfört med GraphQL Output {#structure-vs-output}
 
 * Undvik att skapa frågor som genererar mer än 15 kB JSON (gzip-komprimerad). Långa JSON-filer är resurskrävande för att klientprogrammet ska kunna analysera.
 * Undvik fler än fem kapslade nivåer av fragmenthierarkier. Ytterligare nivåer gör det svårt för innehållsförfattare att ta hänsyn till effekten av deras ändringar.
@@ -113,7 +114,7 @@ Nu är det dags att göra ditt AEM headless-program redo för lansering enligt d
 
 ### Maximera CDN-cacheträffrekvens {#maximize-cdn}
 
-* Använd inte direkta GraphQL-frågor, såvida du inte begär direktinnehåll från ytan.
+* Använd inte direkta GraphQL-frågor om du inte begär direktinnehåll från ytan.
    * Använd beständiga frågor när det är möjligt.
    * Tillhandahåll CDN TTL över 600 sekunder för att CDN ska cachelagra dem.
    * AEM kan beräkna effekten av en modelländring av befintliga frågor.
@@ -180,7 +181,7 @@ Följ dessa metodtips som ett allmänt tillvägagångssätt vid felsökning:
 * Validera funktionalitet och prestanda med programmets produktionsversion
 * Validera med JSON-förhandsvisningen i Content Fragment Editor
 * Inspect JSON i klientprogrammet för att kontrollera om det finns problem med klientprogram eller leverans
-* Inspect JSON använder GraphQL för att kontrollera om det finns problem med cachelagrat innehåll eller AEM
+* Inspect the JSON using GraphQL to check for the presence of issues related to cached content or AEM
 
 ### Logga ett fel med support {#logging-a-bug-with-support}
 

@@ -1,8 +1,8 @@
 ---
 title: Starthandbok för Headless
-description: Med den här snabbstartsguiden får du lära dig grunderna i AEM 6.5:s kraftfulla headless-funktioner som Content Models, Content Fragments och GraphQL API.
-exl-id: 26c05122-5930-4b4e-91dd-287b7cc865ee
-source-git-commit: 2f400d209148278f0695f7b9523b58bba6845cfb
+description: Med den här snabbstartsguiden lär du dig grunderna i AEM 6.5, som Content Models, Content Fragments och GraphQL API.
+exl-id: 55ebd893-b3cc-47c5-ad84-46df984197fb
+source-git-commit: a2ababa9dd9115e963b91a7271d204d287557c40
 workflow-type: tm+mt
 source-wordcount: '301'
 ht-degree: 0%

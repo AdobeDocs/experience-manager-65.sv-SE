@@ -1,7 +1,8 @@
 ---
 title: Läs om hur du skapar modeller för innehållsfragment i AEM
 description: Lär dig mer om koncept och mekanismer för att modellera innehåll för Headless CMS med Content Fragments Models.
-source-git-commit: 38525b6cc14e9f6025564c060b8cfb4f9e0ea473
+exl-id: b377e01f-e392-4ef5-a259-73ce9ff941d0
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
 source-wordcount: '690'
 ht-degree: 2%
@@ -97,7 +98,7 @@ Modeller för innehållsfragment måste publiceras när/innan beroende innehåll
 >
 >Om en författare försöker publicera ett innehållsfragment för vilket modellen ännu inte har publicerats, visas detta i en urvalslista och modellen publiceras med fragmentet.
 
-Så snart en modell har publicerats *låst* till skrivskyddat läge på författaren. Detta syftar till att förhindra ändringar som skulle leda till fel i befintliga GraphQL-scheman och frågor, särskilt i publiceringsmiljön. Den anges i konsolen av **Låst**.
+Så snart en modell har publicerats *låst* till skrivskyddat läge på författaren. Detta syftar till att förhindra ändringar som kan leda till fel i befintliga GraphQL-scheman och -frågor, särskilt i publiceringsmiljön. Den anges i konsolen av **Låst**.
 
 När modellen är **Låst** (i läget SKRIVSKYDDAD) kan du se modellernas innehåll och struktur, men du kan inte redigera dem direkt; trots att du kan hantera **Låst** modeller från antingen konsolen eller modellredigeraren.
 

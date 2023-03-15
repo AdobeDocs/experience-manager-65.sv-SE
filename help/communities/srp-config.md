@@ -1,8 +1,8 @@
 ---
 title: Lagringskonfiguration
-seo-title: Lagringskonfiguration
+seo-title: Storage Configuration
 description: Åtkomst till lagringskonsolen
-seo-description: Åtkomst till lagringskonsolen
+seo-description: How to access the Storage Configuration Console
 uuid: 6a5a71d5-6aaa-4635-8852-4dae33c497a9
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -13,7 +13,7 @@ role: Admin
 exl-id: 67de7e26-3f93-4034-9e3a-5c127f7447bc
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '203'
+source-wordcount: '194'
 ht-degree: 0%
 
 ---
@@ -35,16 +35,16 @@ En diskussion om lagringsalternativ och driftsättningstopologier finns på:
 
 För att nå lagringskonsolen i redigeringsmiljön.
 
-* Välj **[!UICONTROL Tools]** > **[!UICONTROL Communities]** > **[!UICONTROL Storage Configuration]** från global navigering
+* Från global navigering väljer du **[!UICONTROL Tools]** > **[!UICONTROL Communities]** > **[!UICONTROL Storage Configuration]**
 
 Så här väljer du ett annat lagringsalternativ än standard-JCR:
 
 * Välj ett alternativ
 * Konfigurera korrekt
 
-   * Se information om [val av MSRP](msrp.md#select-msrp)
-   * Se information om [val av DSRP](dsrp.md#select-dsrp)
-   * Se information om [val av ASRP](asrp.md#select-asrp)
+   * Mer information finns i [välja MSRP](msrp.md#select-msrp)
+   * Mer information finns i [välja DSRP](dsrp.md#select-dsrp)
+   * Mer information finns i [markera ASRP](asrp.md#select-asrp)
 
 * Välj **[!UICONTROL Submit]**.
 
@@ -52,10 +52,10 @@ Så här väljer du ett annat lagringsalternativ än standard-JCR:
 
 Observera att om inget val görs är standarddatabasen AEM JCR.
 
-JCR är *inte* en gemensam lagringsplats som delas av författar- och publiceringsmiljöerna. Community-innehåll visas bara i den författar- eller publiceringsmiljö där det skapades.
+JCR är *not* en gemensam lagringsplats som delas av författaren och publiceringsmiljöer. Community-innehåll visas bara i den författar- eller publiceringsmiljö där det skapades.
 
-Mer information finns i [JCR Store](jsrp.md).
+Besök [JCR Store](jsrp.md) för ytterligare information.
 
 >[!NOTE]
 >
->Om noden `srpc` saknas under `/etc/socialconfig` indikerar standardlagret för [JCR](jsrp.md).
+>Nodens frånvaro `srpc` under `/etc/socialconfig` anger standardvärdet [JCR-butik](jsrp.md).

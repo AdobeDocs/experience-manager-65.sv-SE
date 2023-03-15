@@ -1,8 +1,8 @@
 ---
 title: Redigering - miljö och verktyg
-seo-title: Redigering - miljö och verktyg
+seo-title: Authoring - the Environment and Tools
 description: På webbplatskonsolen kan du hantera och navigera på webbplatsen. Med två rutor kan strukturen på webbplatsen utökas och åtgärder vidtas för de element som behövs.
-seo-description: På webbplatskonsolen kan du hantera och navigera på webbplatsen. Med två rutor kan strukturen på webbplatsen utökas och åtgärder vidtas för de element som behövs.
+seo-description: The Websites console allows you to manage and navigate your website. Using two panes, the structure of your website can be expanded and actions taken on the required elements.
 uuid: 0a9ce725-042a-4697-81fe-ac86cbab0398
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,7 +13,7 @@ docset: aem65
 exl-id: 5d7b6b2e-d1d8-4efe-b9ff-c9542b4e67d7
 source-git-commit: 840ea373537799af995c3b8ce0c8bf575752775b
 workflow-type: tm+mt
-source-wordcount: '933'
+source-wordcount: '899'
 ht-degree: 2%
 
 ---
@@ -24,7 +24,7 @@ I redigeringsmiljön i AEM finns olika sätt att ordna och redigera ditt innehå
 
 ## Webbplatsadministration {#site-administration}
 
-Med konsolen **Webbplatser** kan du hantera och navigera på webbplatsen. Med hjälp av de två rutorna kan webbplatsens struktur utökas och åtgärder vidtas för det element som krävs:
+The **Webbplatser** kan du hantera och navigera på webbplatsen med konsolen. Med hjälp av de två rutorna kan webbplatsens struktur utökas och åtgärder vidtas för det element som krävs:
 
 ![chlimage_1-108](assets/chlimage_1-108.png)
 
@@ -38,17 +38,17 @@ Det finns en separat sidredigerare med det klassiska användargränssnittet som 
 
 ## Få hjälp {#accessing-help}
 
-Olika **hjälp**-resurser kan nås direkt från AEM:
+Olika **Hjälp** -resurser kan nås direkt från AEM:
 
-Förutom att du kan få åtkomst till [hjälp från konsolens verktygsfält](/help/sites-classic-ui-authoring/author-env-basic-handling.md#accessing-help), kan du även få åtkomst till hjälpen från sidosparken (med ? ikon) när du redigerar en sida:
+Förutom att få tillgång till [hjälp från konsolens verktygsfält](/help/sites-classic-ui-authoring/author-env-basic-handling.md#accessing-help)kan du även komma åt hjälpen från sidan (med ? ikon) när du redigerar en sida:
 
 ![](do-not-localize/sidekick-collapsed-2.png)
 
-Eller genom att använda knappen **Hjälp** i redigeringsdialogrutan för specifika komponenter. detta visar sammanhangsberoende hjälp.
+Eller genom att använda **Hjälp** knappen i redigeringsdialogrutan för specifika komponenter, detta visar sammanhangsberoende hjälp.
 
 ## Sidekick {#sidekick}
 
-På fliken **Komponenter** i sidosparken kan du bläddra bland de komponenter som är tillgängliga för att läggas till på den aktuella sidan. Den önskade gruppen kan expanderas och sedan dras en komponent till önskad plats på sidan.
+The **Komponenter** kan du bläddra bland de komponenter som är tillgängliga för att läggas till på den aktuella sidan. Den önskade gruppen kan expanderas och sedan dras en komponent till önskad plats på sidan.
 
 ![chlimage_1-110](assets/chlimage_1-110.png)
 
@@ -66,7 +66,7 @@ Du kan använda innehållssökaren för att hitta en rad olika resurser. Om det 
 
 * [Stycken](#referencing-paragraphs-from-other-pages)
 * [Produkter](#products)
-* Eller [gå till webbplatsen via databasstruktur](#the-content-finder)
+* Eller till [bläddra på webbplatsen efter databasstruktur](#the-content-finder)
 
 Med alla alternativ kan du [söka efter specifika objekt](#the-content-finder).
 
@@ -144,14 +144,14 @@ följande sökmönster hittar den (och alla andra bilder som matchar mönstret):
 
 * `name:*nmv*`
 * `name:AD*`
-teckenmatchningen är  ** inte skiftlägeskänslig.
+teckenmatchningen är *not* skiftlägeskänslig.
 
 * `name:ad?nm??is.*`
 Du kan använda valfritt antal jokertecken i en fråga.
 
 >[!NOTE]
 >
->Du kan också använda [SQL2](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/jackrabbit/commons/query/sql2/package-summary.html)-sökning.
+>Du kan också använda [SQL2](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/jackrabbit/commons/query/sql2/package-summary.html) sökning.
 
 ## Visar referenser {#showing-references}
 
@@ -159,11 +159,11 @@ AEM låter dig se vilka sidor som är länkade till den sida du arbetar med just
 
 Så här visar du direkta sidreferenser:
 
-1. I sidosparken väljer du flikikonen **Sida**.
+1. I sidosparken väljer du **Sida** -flikikon.
 
    ![screen_shot_2012-02-16at83127pm](assets/screen_shot_2012-02-16at83127pm.png)
 
-1. Välj **Visa referenser...Med** AEM öppnas fönstret Referenser och visas vilka sidor som refererar till den markerade sidan, inklusive sökvägarna till dem.
+1. Välj **Visa referenser...** AEM öppnar fönstret Referenser och visar vilka sidor som refererar till den markerade sidan, inklusive deras sökvägar.
 
    ![screen_shot_2012-02-16at83311pm](assets/screen_shot_2012-02-16at83311pm.png)
 
@@ -174,17 +174,17 @@ I vissa situationer finns ytterligare åtgärder tillgängliga från Sidekick, b
 
 * [Blueprint](/help/sites-administering/msm-best-practices.md)
 
-Andra [relationer mellan sidor visas i webbplatskonsolen](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console).
+Övriga [Förbindelser mellan sidor kan visas i webbplatskonsolen](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console).
 
 ## Granskningslogg {#audit-log}
 
-Du kommer åt granskningsloggen **från fliken** Information **i sidosparken.** Den innehåller en förteckning över de senaste åtgärder som vidtagits på den aktuella sidan. till exempel:
+The **Granskningslogg** kan nås via **Information** sidosparkens flik. Den innehåller en förteckning över de senaste åtgärder som vidtagits på den aktuella sidan. till exempel:
 
 ![chlimage_1-118](assets/chlimage_1-118.png)
 
 ## Sidinformation {#page-information}
 
-Webbplatskonsolen [innehåller även information om sidans aktuella status](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console), t.ex. publikation, ändring, låst, livecopy osv.
+Webbplatskonsolen [innehåller information om sidans aktuella status](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console) t.ex. publikation, ändring, låst, livecopy
 
 ## Sidlägen {#page-modes}
 
@@ -197,20 +197,20 @@ Ikonerna längst ned i Spark används för att växla mellan olika lägen för a
 * [Redigera](/help/sites-classic-ui-authoring/classic-page-author-edit-mode.md)
 Det här är standardläget och du kan redigera sidan, lägga till eller ta bort komponenter och göra andra ändringar.
 
-* [](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#previewing-pages)
-FörhandsgranskaI det här läget kan du förhandsgranska sidan som om den visades på webbplatsen i dess slutliga form.
+* [Förhandsgranska](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#previewing-pages)
+I det här läget kan du förhandsgranska sidan som om den visades på webbplatsen i dess slutliga form.
 
-* [](/help/sites-classic-ui-authoring/classic-page-author-design-mode.md#main-pars-procedure-0)
-DesignI det här läget kan du redigera sidans design genom att konfigurera de komponenter som är tillgängliga.
+* [Design](/help/sites-classic-ui-authoring/classic-page-author-design-mode.md#main-pars-procedure-0)
+I det här läget kan du redigera sidans design genom att konfigurera de komponenter som är tillgängliga.
 
 >[!NOTE]
 >
 >Andra alternativ är också tillgängliga:
 >
 >* [Ställning](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md)
-* [Klientkontext](/help/sites-administering/client-context.md)
-* Webbplatser - öppnar webbplatskonsolen.
-* Läs in igen - uppdaterar sidan.
+>* [Klientkontext](/help/sites-administering/client-context.md)
+>* Webbplatser - öppnar webbplatskonsolen.
+>* Läs in igen - uppdaterar sidan.
 
 
 ## Kortkommandon {#keyboard-shortcuts}

@@ -1,8 +1,8 @@
 ---
 title: Hämta XDP- och PDF-dokument i AEM Forms
-seo-title: Hämta XDP- och PDF-dokument i AEM Forms
+seo-title: Getting XDP and PDF documents in AEM Forms
 description: Med AEM Forms kan du överföra formulär och resurser som stöds och använda dem med adaptiva formulär. Du kan också ladda upp formulär och relaterade resurser i grupp som en ZIP-adress.
-seo-description: Med AEM Forms kan du överföra formulär och resurser som stöds och använda dem med adaptiva formulär. Du kan också ladda upp formulär och relaterade resurser i grupp som en ZIP-adress.
+seo-description: AEM Forms allows you to upload forms and supported assets to use with adaptive forms. You can also bulk upload forms and related resources as a ZIP.
 uuid: cd49b4a8-c282-4059-95a0-c98f6c92ab14
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -13,7 +13,7 @@ role: Admin
 exl-id: 9ecdc50a-31e3-46ae-948a-d1f6e6085734
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '708'
+source-wordcount: '673'
 ht-degree: 0%
 
 ---
@@ -26,19 +26,19 @@ Du kan importera formulär från ditt lokala filsystem till CRX-databasen genom 
 
 * Formulärmallar (XFA-formulär)
 * PDF forms
-* Dokument (platta PDF-dokument)
+* Dokument (dokument i PDF)
 
-Du kan överföra de resurstyper som stöds individuellt eller som ett ZIP-arkiv. Du kan överföra en resurs av typen `Resource`, endast tillsammans med ett XFA-formulär i ett ZIP-arkiv.
+Du kan överföra de resurstyper som stöds individuellt eller som ett ZIP-arkiv. Du kan överföra en resurs av den typen `Resource`, endast tillsammans med ett XFA-formulär i ett ZIP-arkiv.
 
 >[!NOTE]
 >
->Kontrollera att du är medlem i `form-power-users`-gruppen för att kunna överföra XDP-filer. Kontakta administratören om du vill bli medlem i gruppen.
+>Se till att du är medlem i `form-power-users` grupp för att kunna överföra XDP-filer. Kontakta administratören om du vill bli medlem i gruppen.
 
 ## Överföra formulär {#uploading-forms}
 
-1. Logga in på AEM Forms användargränssnitt med `https://'[server]:[port]'/aem/forms.html`.
+1. Logga in på AEM Forms användargränssnitt med åtkomst `https://'[server]:[port]'/aem/forms.html`.
 1. Navigera till mappen där du vill överföra formuläret eller mappen som innehåller formulär.
-1. Tryck på **Skapa > Filöverföring** i verktygsfältet Åtgärder.
+1. Tryck på i verktygsfältet Åtgärder **Skapa > Filöverföring**.
 
    ![Filer från lokal lagring, alternativ under Skapa](assets/step.png)
 
@@ -85,6 +85,6 @@ Om du tar bort en formulärmall skadas det beroende adaptiva formuläret eller f
 
 ![Varning för ett anpassat formulär som inte är synkroniserat efter att tillhörande XFA har uppdaterats](assets/dirtyaf.png)
 
-En flagga används för att ange om en adaptiv form är smutsig. Den här informationen är tillgänglig på sidan för formuläregenskaper, tillsammans med formulärets metadata. Endast för felaktiga adaptiva formulär visar en metadataegenskap `Model Refresh` `Recommended`-värdet.
+En flagga används för att ange om en adaptiv form är smutsig. Den här informationen är tillgänglig på sidan för formuläregenskaper, tillsammans med formulärets metadata. Endast för snuskiga adaptiva formulär, en metadataegenskap `Model Refresh` visar `Recommended` värde.
 
 ![Indikation på att ett adaptivt formulär inte är synkroniserat med XFA-modellen](assets/model-refresh.png)

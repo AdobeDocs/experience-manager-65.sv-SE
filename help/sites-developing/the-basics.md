@@ -21,7 +21,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Innan du fördjupar dig i AEM grundläggande begrepp rekommenderar Adobe att du slutför WKND-självstudiekursen i [Getting Started Developing AEM Sites](/help/sites-developing/getting-started.md)-dokumentet för en översikt över AEM utvecklingsprocess och introduktion till centrala koncept.
+>Adobe rekommenderar att du slutför WKND-självstudiekursen i [Komma igång med att utveckla AEM Sites](/help/sites-developing/getting-started.md) ett dokument med en översikt över AEM utvecklingsprocess och en introduktion till centrala begrepp.
 
 ## Krav för utveckling av AEM {#prerequisites-for-developing-on-aem}
 
@@ -37,27 +37,27 @@ Du behöver följande kunskaper för att kunna utveckla AEM:
 * Arbetskunskaper i Experience Server (CRX), inklusive Content Explorer
 * För utveckling i det klassiska användargränssnittet krävs även grundläggande kunskaper i JSP (JavaServer Pages), inklusive möjligheten att förstå och ändra enkla JSP-exempel.
 
-Du bör även läsa och följa [riktlinjerna och bästa praxis](/help/sites-developing/dev-guidelines-bestpractices.md).
+Vi rekommenderar att du läser och följer [Riktlinjer och bästa praxis](/help/sites-developing/dev-guidelines-bestpractices.md).
 
 ## Java Content Repository {#java-content-repository}
 
-Java Content Repository (JCR)-standarden, [JSR 283](https://www.adobe.io/experience-manager/reference-materials/spec/jcr/2.0/index.html), anger ett leverantörsoberoende och implementeringsoberoende sätt att komma åt innehåll dubbelriktat på en detaljnivå i en innehållsdatabas.
+Java Content Repository (JCR)-standarden, [JSR 283](https://www.adobe.io/experience-manager/reference-materials/spec/jcr/2.0/index.html), anger ett leverantörsoberoende och implementeringsoberoende sätt att få åtkomst till innehåll dubbelriktat på en detaljnivå i en innehållsdatabas.
 
 Adobe Research (Schweiz) AG har en ledande specialiseringsbefattning.
 
-[JCR API 2.0](https://docs.adobe.com/docs/en/spec/javax.jcr/javadocs/jcr-2.0/index.html)-paketet, javax.jcr.&amp;ast; används för direkt åtkomst och hantering av databasinnehåll.
+The [JCR API 2.0](https://docs.adobe.com/docs/en/spec/javax.jcr/javadocs/jcr-2.0/index.html) package, javax.jcr.&amp;ast; används för direkt åtkomst och hantering av databasinnehåll.
 
 ## Experience Server (CRX) och Jackrabbit {#experience-server-crx-and-jackrabbit}
 
 Experience Server innehåller de Experience Services som AEM bygger på, och som kan utnyttjas för att skapa anpassade program, och den bäddar in innehållsdatabasen baserat på Jackrabbit.
 
-[Apache ](https://jackrabbit.apache.org/) Jackrabbitis är en öppen källkodsimplementering av JCR API 2.0 som följer alla regler.
+[Apache Jackrabbit](https://jackrabbit.apache.org/) är en fullt kompatibel implementering av JCR API 2.0 med öppen källkod.
 
 ## Bearbetning av försäljningsbegäran {#sling-request-processing}
 
 ### Introduktion till Sling {#introduction-to-sling}
 
-AEM byggs med [Sling](https://sling.apache.org/site/index.html), ett ramverk för webbapplikationer som bygger på REST-principer som gör det enkelt att utveckla innehållsorienterade applikationer. Sling använder en JCR-databas, t.ex. Apache Jackrabbit, eller i AEM fall CRX Content Repository, som sitt datalager. Sling har bidragit till Apache Software Foundation - mer information finns på Apache.
+AEM byggs med [Sling](https://sling.apache.org/site/index.html), ett ramverk för webbapplikationer som bygger på REST-principer och som gör det enkelt att utveckla innehållsorienterade applikationer. Sling använder en JCR-databas, t.ex. Apache Jackrabbit, eller i AEM fall CRX Content Repository, som sitt datalager. Sling har bidragit till Apache Software Foundation - mer information finns på Apache.
 
 Med Sling är den typ av innehåll som ska återges inte den första bearbetningen. Det viktigaste är i stället om URL:en tolkas till ett innehållsobjekt för vilket ett skript sedan kan användas för återgivningen. Detta ger ett utmärkt stöd för dem som skapar webbmaterial att bygga sidor som enkelt kan anpassas efter deras behov.
 
@@ -106,19 +106,19 @@ Vi kan dela upp det i dess sammansatta delar:
 |---|---|---|---|---|---|---|---|---|
 | https:// | myhost | verktyg/spion | .printable.a4. | html | / | a/b | ? | x=12 |
 
-**** protocolHTTP
+**protocol** HTTP
 
-**** hostName för webbplatsen.
+**värd** Webbplatsens namn.
 
-**content** pathPath som anger innehållet som ska återges. Används tillsammans med tillägget. i det här exemplet översätts de till tools/spy.html.
+**innehållsbana** Sökväg som anger det innehåll som ska återges. Används tillsammans med tillägget. i det här exemplet översätts de till tools/spy.html.
 
-**väljare** som används för alternativa metoder för återgivning av innehållet, i det här exemplet en utskriftsvänlig version i A4-format.
+**väljare** Används för alternativa metoder för återgivning av innehållet. i det här exemplet en utskriftsvänlig version i A4-format.
 
-**** extensionContent-format; anger också det skript som ska användas för återgivning.
+**extension** Innehållsformat; anger också det skript som ska användas för återgivning.
 
-**** suffixKan användas för att ange ytterligare information.
+**suffix** Kan användas för att ange ytterligare information.
 
-**parametrar** som krävs för dynamiskt innehåll.
+**param(er)** Alla parametrar som krävs för dynamiskt innehåll.
 
 #### Från URL till innehåll och skript {#from-url-to-content-and-scripts}
 
@@ -131,7 +131,7 @@ Bilden nedan visar vilken mekanism som används, vilket beskrivs mer ingående i
 
 ![chlimage_1-86](assets/chlimage_1-86a.png)
 
-Med Sling anger du vilket skript som ska återge en viss enhet (genom att ange egenskapen `sling:resourceType` i JCR-noden). Den här mekanismen ger mer frihet än en där skriptet får åtkomst till datatabellerna (som en SQL-sats i ett PHP-skript skulle göra) eftersom en resurs kan ha flera renderingar.
+Med Sling anger du vilket skript som ska återge en viss enhet (genom att ange `sling:resourceType` i JCR-noden). Den här mekanismen ger mer frihet än en där skriptet får åtkomst till datatabellerna (som en SQL-sats i ett PHP-skript skulle göra) eftersom en resurs kan ha flera renderingar.
 
 #### Mappa begäranden till resurser {#mapping-requests-to-resources}
 
@@ -145,7 +145,7 @@ Med Sling kan även andra saker än JCR-noder vara resurser, men det här är en
 
 ### Hitta skriptet {#locating-the-script}
 
-När rätt resurs (innehållsnod) finns extraheras resurstypen **sling**. Detta är en sökväg som letar upp skriptet som ska användas för återgivning av innehållet.
+När rätt resurs (innehållsnod) finns, **slingresurstyp** extraheras. Detta är en sökväg som letar upp skriptet som ska användas för återgivning av innehållet.
 
 Sökvägen som anges av `sling:resourceType` kan antingen vara:
 
@@ -154,7 +154,7 @@ Sökvägen som anges av `sling:resourceType` kan antingen vara:
 
    Relativa sökvägar rekommenderas av Adobe när de ökar portabiliteten.
 
-Alla Sling-skript lagras i undermappar till antingen `/apps` eller `/libs`, som söks igenom i den här ordningen (se [Anpassa komponenter och andra element](/help/sites-developing/dev-guidelines-bestpractices.md#customizing-components-and-other-elements)).
+Alla Sling-skript lagras i undermappar till båda `/apps` eller `/libs`, som söks igenom i den här ordningen (se [Anpassa komponenter och andra element](/help/sites-developing/dev-guidelines-bestpractices.md#customizing-components-and-other-elements)).
 
 Några andra punkter att notera är:
 
@@ -171,7 +171,7 @@ Listan över skriptmotorer som stöds av den angivna AEM finns på Felix Managem
 
 Dessutom har Apache Sling stöd för integrering med andra populära skriptmotorer (t.ex. Groovy, JRuby, Freemarker) och är ett sätt att integrera nya skriptmotorer.
 
-Om du använder exemplet ovan och om `sling:resourceType` är `hr/jobs` gäller det för:
+Använda ovanstående exempel om `sling:resourceType` är `hr/jobs` sedan för:
 
 * GET/HEAD och URL:er som slutar på .html (standardtyper, standardformat)
 
@@ -181,27 +181,27 @@ Om du använder exemplet ovan och om `sling:resourceType` är `hr/jobs` gäller 
 
    POSTEN används i skriptnamnet.
 
-   Skriptet är `/apps/hr/jobs/jobs.POST.esp`.
+   Skriptet kommer att `/apps/hr/jobs/jobs.POST.esp`.
 
 * URL-adresser i andra format, slutar inte med .html
 
    Till exempel `../content/corporate/jobs/developer.pdf`
 
-   Skriptet kommer att vara `/apps/hr/jobs/jobs.pdf.esp`; suffixet läggs till i skriptnamnet.
+   Skriptet kommer att `/apps/hr/jobs/jobs.pdf.esp`; suffixet läggs till i skriptnamnet.
 
 * URL:er med väljare
 
    Väljare kan användas för att visa samma innehåll i ett alternativt format. Till exempel en utskriftsvänlig version, ett RSS-flöde eller en sammanfattning.
 
-   Om vi tittar på en utskriftsvänlig version där väljaren kan vara *skriv ut*; som i `../content/corporate/jobs/developer.print.html`
+   Om vi tittar på en utskriftsvänlig version där väljaren kan vara *print*; som i `../content/corporate/jobs/developer.print.html`
 
-   Skriptet kommer att vara `/apps/hr/jobs/jobs.print.esp`; väljaren läggs till i skriptnamnet.
+   Skriptet kommer att `/apps/hr/jobs/jobs.print.esp`; väljaren läggs till i skriptnamnet.
 
 * Om ingen sling:resourceType har definierats:
 
    * innehållssökvägen används för att söka efter ett lämpligt skript (om den sökvägsbaserade ResourceTypeProvider är aktiv).
 
-      Skriptet för `../content/corporate/jobs/developer.html` skulle till exempel generera en sökning i `/apps/content/corporate/jobs/`.
+      Skriptet för `../content/corporate/jobs/developer.html` skulle generera en sökning i `/apps/content/corporate/jobs/`.
 
    * den primära nodtypen kommer att användas.
 
@@ -233,12 +233,12 @@ Anta att vi har följande skriptlista på rätt plats:
 
 Sedan är ordningen (8) - (7) - (6) - (5) - (4) - (3) - (2) - (1).
 
-Förutom resurstyperna (som primärt definieras av egenskapen `sling:resourceType`) finns det även resursens supertyp. Detta anges vanligtvis av egenskapen `sling:resourceSuperType`. De här supertyperna beaktas också när du försöker hitta ett skript. Fördelen med resurssupertyper är att de kan utgöra en hierarki av resurser där standardresurstypen `sling/servlet/default` (används av standardservletarna) är roten.
+Förutom resurstyperna (definieras primärt av `sling:resourceType` ) finns också resursens supertyp. Detta anges vanligtvis av `sling:resourceSuperType` -egenskap. De här supertyperna beaktas också när du försöker hitta ett skript. Fördelen med resurssupertyper är att de kan utgöra en hierarki av resurser där standardresurstypen är `sling/servlet/default` (används av standardservletarna) är roten.
 
 Resursens överordnade typ kan definieras på två sätt:
 
-* av resursens `sling:resourceSuperType`-egenskap.
-* av egenskapen `sling:resourceSuperType` för den nod som `sling:resourceType` pekar på.
+* av `sling:resourceSuperType` resursens egenskap.
+* av `sling:resourceSuperType` egenskapen för noden som `sling:resourceType` punkter.
 
 Till exempel:
 
@@ -269,7 +269,7 @@ Typhierarkin för:
 * while för `/y`
    * hierarkin är `[ c, a, <default>]`
 
-Detta beror på att `/y` har egenskapen `sling:resourceSuperType` men `/x` inte har det och dess supertyp tas därför från sin resurstyp.
+Det beror på att `/y` har `sling:resourceSuperType` egenskap. `/x` inte och dess supertyp tas därför från sin resurstyp.
 
 #### Sling Scripts kan inte anropas direkt {#sling-scripts-cannot-be-called-directly}
 
@@ -280,7 +280,7 @@ Om du anropar representationen (skriptet) direkt döljer du resursen i skriptet,
 * automatisk hantering av andra http-metoder än GET, inklusive:
 
    * POST, PUT, DELETE som hanteras med en Sing-standardimplementering
-   * `POST.jsp`-skriptet i din sling:resourceType-plats
+   * den `POST.jsp` skript i din sling:resourceType-plats
 
 * Kodarkitekturen är inte längre så ren eller så tydligt strukturerad som den ska vara. av största vikt för storskalig utveckling
 
@@ -292,9 +292,9 @@ Detta använder Sling API-paketet org.apache.sling.&amp;ast; och taggbibliotek.
 
 En sista sak är behovet av att referera till befintliga element i skripten.
 
-Mer komplicerade skript (aggregerande skript) kan behöva ha åtkomst till flera resurser (t.ex. navigering, sidospalt, sidfot, element i en lista) och göra det genom att ta med *resurs*.
+Mer komplicerade skript (sammanställning av skript) kan behöva ha tillgång till flera resurser (t.ex. navigering, sidospalt, sidfot, element i en lista) genom att inkludera *resurs*.
 
-Du kan göra detta med kommandot sling:include(&quot;/&lt;sökväg>/&lt;resurs>&quot;). Detta inkluderar effektivt definitionen av den refererade resursen, som i följande programsats som refererar till en befintlig definition för återgivning av bilder:
+För att göra detta kan du använda sling:include(&quot;/&lt;path>/&lt;resource>&quot;). Detta inkluderar effektivt definitionen av den refererade resursen, som i följande programsats som refererar till en befintlig definition för återgivning av bilder:
 
 ```xml
 %><sling:include resourceType="geometrixx/components/image/img"/><%
@@ -313,11 +313,11 @@ Ett OSGi-ramverk ger dig dynamisk inläsning/borttagning, konfigurering och kont
 
 >[!NOTE]
 >
->Fullständig information om OSGi-teknik finns på [OSGi-webbplatsen](https://www.osgi.org).
+>Fullständig information om OSGi-teknik finns på [OSGi-webbplats](https://www.osgi.org).
 >
 >På sidan Grundläggande utbildning finns en samling presentationer och självstudiekurser.
 
-Med den här arkitekturen kan du utöka Sling med programspecifika moduler. Sling, och därmed CQ5, använder [Apache Felix](https://felix.apache.org/)-implementeringen av OSGI (Open Services Gateway-initiativet) och baseras på specifikationerna för OSGi Service Platform version 4 version 4.2. De är båda samlingar av OSGi-paket som körs i ett OSGi-ramverk.
+Med den här arkitekturen kan du utöka Sling med programspecifika moduler. Sling, och därmed CQ5, använder [Apache Felix](https://felix.apache.org/) implementering av OSGI (Open Services Gateway-initiativ) och baseras på OSGi Service Platform version 4 version 4.2 Specifications. De är båda samlingar av OSGi-paket som körs i ett OSGi-ramverk.
 
 Detta gör att du kan utföra följande åtgärder på något av paketen i din installation:
 
@@ -329,17 +329,17 @@ Detta gör att du kan utföra följande åtgärder på något av paketen i din i
 * se aktuell status
 * få mer detaljerad information (t.ex. symboliskt namn, version, plats) om de specifika paketen
 
-Mer information finns i [konfigurationsinställningarna för webbkonsolen](/help/sites-deploying/web-console.md), [OSGI](/help/sites-deploying/configuring-osgi.md) och [OSGi](/help/sites-deploying/osgi-configuration-settings.md).
+Se [webbkonsolen](/help/sites-deploying/web-console.md), [OSGI-konfiguration](/help/sites-deploying/configuring-osgi.md) och [Konfigurationsinställningar för OSGi](/help/sites-deploying/osgi-configuration-settings.md) för mer information.
 
 ## Utvecklingsobjekt i AEM {#development-objects-in-the-aem-environment}
 
 Följande är av intresse för utvecklingen:
 
-**** ItemAn item är antingen en nod eller en egenskap.
+**Objekt** Ett objekt är antingen en nod eller en egenskap.
 
-Mer information om hur du manipulerar Item-objekt finns i [Javadocs](https://docs.adobe.com/docs/en/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/Item.html) i Interface javax.jcr.Item
+Mer information om hur du hanterar Item-objekt finns i [Javadocs](https://docs.adobe.com/docs/en/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/Item.html) av Interface javax.jcr.Item
 
-**Node (och deras egenskaper)** Nodes and their properties are defined in the JCR API 2.0 specification (JSR 283). De lagrar innehåll, objektdefinitioner, återgivningsskript och andra data.
+**Nod (och deras egenskaper)** Noder och deras egenskaper definieras i JCR API 2.0-specifikationen (JSR 283). De lagrar innehåll, objektdefinitioner, återgivningsskript och andra data.
 
 Noderna definierar innehållsstrukturen och deras egenskaper lagrar det faktiska innehållet och metadata.
 
@@ -353,21 +353,21 @@ Om du till exempel vill hämta egenskaperna för den aktuella noden kan du anvä
 
 Med currentNode som aktuellt nodobjekt.
 
-Mer information om hur du manipulerar Node-objekt finns i [Javadocs](https://docs.adobe.com/docs/en/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/Node.html).
+Mer information om hur du hanterar nodobjekt finns i [Javadocs](https://docs.adobe.com/docs/en/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/Node.html).
 
-**** WidgetI AEM alla användarindata hanteras av widgetar. De används ofta för att styra redigeringen av ett visst innehåll.
+**Widget** I AEM hanteras alla användarindata av widgetar. De används ofta för att styra redigeringen av ett visst innehåll.
 
 Dialogrutor skapas genom att widgetar kombineras.
 
 AEM har utvecklats med ExtJS-biblioteket med widgetar.
 
-**** DialogEn dialogruta är en speciell typ av widget.
+**Dialog** En dialogruta är en särskild typ av widget.
 
 För att redigera innehåll använder AEM dialogrutor som definieras av programutvecklaren. Dessa kombinerar en serie widgetar för att ge användaren alla fält och åtgärder som behövs för att redigera det relaterade innehållet.
 
 Dialogrutor används också för att redigera metadata och för olika administrationsverktyg.
 
-**** ComponentA software component är ett systemelement som erbjuder en fördefinierad tjänst eller händelse och kan kommunicera med andra komponenter.
+**Komponent** En programvarukomponent är ett systemelement som erbjuder en fördefinierad tjänst eller händelse och kan kommunicera med andra komponenter.
 
 I AEM används en komponent ofta för att återge innehållet i en resurs. När resursen är en sida, kallas komponentåtergivningen för en komponent på översta nivån eller en PageComponent. En komponent behöver dock inte återge innehåll eller vara länkad till en viss resurs. En navigeringskomponent visar till exempel information om flera resurser.
 
@@ -376,7 +376,7 @@ Definitionen av en komponent omfattar
 * koden som används för att återge innehållet
 * en dialogruta för användarindata och konfigurationen av det resulterande innehållet.
 
-**** TemplateA template is the base for a specific type of page. När du skapar en sida på fliken Webbplatser måste användaren välja en mall. Den nya sidan skapas sedan genom att den här mallen kopieras.
+**Mall** En mall är basen för en viss typ av sida. När du skapar en sida på fliken Webbplatser måste användaren välja en mall. Den nya sidan skapas sedan genom att den här mallen kopieras.
 
 En mall är en hierarki med noder som har samma struktur som den sida som ska skapas, men utan något verkligt innehåll.
 
@@ -384,7 +384,7 @@ Den definierar den sidkomponent som används för att återge sidan och standard
 
 **Sidkomponent (komponent på översta nivån)** Komponenten som ska användas för att återge sidan.
 
-**** PageA-sidan är en instans av en mall.
+**Sida** En sida är en förekomst av en mall.
 
 En sida har en hierarkinod av typen cq:Page och en innehållsnod av typen cq:PageContent. Egenskapen sling:resourceType för innehållsnoden pekar på den sidkomponent som används för återgivning av sidan.
 
@@ -392,9 +392,9 @@ Om du till exempel vill hämta namnet på den aktuella sidan kan du använda fö
 
 S`tring pageName = currentPage.getName();`
 
-Med currentPage som aktuellt sidobjekt. Mer information om hur du hanterar sidobjekt finns i [JavaScript](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/Page.html).
+Med currentPage som aktuellt sidobjekt. Mer information om hur du hanterar sidobjekt finns i [Javadocs](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/Page.html).
 
-**Page** ManagerSidhanteraren är ett gränssnitt som innehåller metoder för åtgärder på sidnivå.
+**Page Manager** Sidhanteraren är ett gränssnitt som innehåller metoder för åtgärder på sidnivå.
 
 Om du till exempel vill hämta innehållssidan för en resurs kan du använda följande kod i skriptet:
 
@@ -414,11 +414,11 @@ I följande lista visas en översikt över strukturen som visas i databasen.
 
 >[!CAUTION]
 >
->Du får inte ändra något i `/libs`-sökvägen. För konfiguration och andra ändringar kopierar du objektet från `/libs` till `/apps` och gör eventuella ändringar i `/apps`.
+>Du får inte ändra något i `/libs` bana. För konfiguration och andra ändringar kopierar du objektet från `/libs` till `/apps` och göra ändringar i `/apps`.
 
 * `/apps`
 
-   Ansökningsrelaterade; innehåller komponentdefinitioner som är specifika för din webbplats. Komponenterna som du utvecklar kan baseras på de färdiga komponenter som finns på `/libs/foundation/components`.
+   Ansökningsrelaterade; innehåller komponentdefinitioner som är specifika för din webbplats. Komponenterna som du utvecklar kan baseras på de färdiga komponenterna som finns på `/libs/foundation/components`.
 
 * `/content`
 
@@ -432,7 +432,7 @@ I följande lista visas en översikt över strukturen som visas i databasen.
 
 * `/libs`
 
-   Bibliotek och definitioner som tillhör kärnan i AEM. Undermapparna i `/libs` representerar AEM funktioner som inte finns med, till exempel sökning eller replikering. Innehållet i `/libs` ska inte ändras eftersom det påverkar hur AEM fungerar. Funktioner som är specifika för din webbplats bör utvecklas under `/apps` (se [Anpassa komponenter och andra element](/help/sites-developing/dev-guidelines-bestpractices.md#customizing-components-and-other-elements)).
+   Bibliotek och definitioner som tillhör kärnan i AEM. Undermapparna i `/libs` motsvarar AEM funktioner som t.ex. sökning eller replikering. Innehållet i `/libs` inte ändras eftersom det påverkar hur AEM fungerar. Funktioner som är specifika för din webbplats bör utvecklas under `/apps` (se [Anpassa komponenter och andra element](/help/sites-developing/dev-guidelines-bestpractices.md#customizing-components-and-other-elements)).
 
 * `/tmp`
 
@@ -448,17 +448,17 @@ I AEM består en produktionsmiljö ofta av två olika typer av instanser: en [F�
 
 ## Dispatcher {#the-dispatcher}
 
-Dispatcher är ett Adobe-verktyg för både cachelagring och/eller belastningsutjämning. Mer information finns under [Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html).
+Dispatcher är ett Adobe-verktyg för både cachelagring och/eller belastningsutjämning. Ytterligare information finns under [Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html).
 
 ## FileVault (system för källrevision) {#filevault-source-revision-system}
 
 FileVault förser JCR-databasen med filsystemsmappning och versionskontroll. Det kan användas för att hantera AEM utvecklingsprojekt med fullt stöd för lagring och versionshantering av projektkod, innehåll, konfigurationer och så vidare i standardversionskontrollsystem (till exempel Subversion).
 
-Mer information finns i dokumentationen för [FileVault-verktyget](/help/sites-developing/ht-vlttool.md).
+Se [FileVault-verktyget](/help/sites-developing/ht-vlttool.md) dokumentation för detaljerad information.
 
 ## Arbetsflöden {#workflows}
 
-Ditt innehåll omfattas ofta av organisatoriska processer, inklusive steg som godkännande och godkännande från olika deltagare. Dessa processer kan representeras som arbetsflöden, [definieras och utvecklas i AEM](/help/sites-developing/workflows-models.md), och sedan tillämpas på [lämpliga innehållssidor](/help/sites-administering/workflows.md) eller [digitala resurser](/help/assets/assets-workflow.md) efter behov.
+Ditt innehåll omfattas ofta av organisatoriska processer, inklusive steg som godkännande och godkännande från olika deltagare. Dessa processer kan representeras som arbetsflöden, [definieras och utvecklas inom AEM](/help/sites-developing/workflows-models.md)och sedan tillämpas på [lämpliga innehållssidor](/help/sites-administering/workflows.md) eller [digitala resurser](/help/assets/assets-workflow.md) efter behov.
 
 Arbetsflödesmotorn används för att hantera implementeringen av dina arbetsflöden och deras efterföljande program till ditt innehåll.
 

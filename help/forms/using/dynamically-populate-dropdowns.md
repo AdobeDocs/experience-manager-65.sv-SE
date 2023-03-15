@@ -1,22 +1,21 @@
 ---
 title: Fylla i nedrullningsbara listor dynamiskt
-seo-title: Fylla i nedrullningsbara listor dynamiskt
+seo-title: Dynamically populating drop-down lists
 description: Procedur för att dynamiskt fylla i nedrullningsbara listor baserat på viss logik
-seo-description: Procedur för att dynamiskt fylla i nedrullningsbara listor baserat på viss logik
+seo-description: Procedure to dynamically populate drop-down lists based on some logic
 uuid: b3408aee-ac24-43af-a380-a5892abf0248
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
 discoiquuid: ad6db3fd-0d26-4241-bf73-be74b7f6e509
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+exl-id: 64b88423-aaae-4258-bf48-73df5c9353ea
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '346'
+source-wordcount: '332'
 ht-degree: 0%
 
 ---
-
 
 # Fylla i nedrullningsbara listor dynamiskt {#dynamically-populating-drop-down-lists}
 
@@ -29,7 +28,7 @@ ht-degree: 0%
 
 ## Procedur för att dynamiskt fylla i nedrullningsbara listor {#procedure-to-dynamically-populate-drop-down-lists}
 
-Tänk dig ett scenario där du vill fylla i listrutan **Läge** baserat på ett värde som du väljer i listrutan **Land**. Om du väljer Australien i listrutan **Land** visas lägena i Australien i listrutan **Läge**. I proceduren nedan beskrivs hur du utför den här uppgiften.
+Tänk dig ett scenario där du vill fylla i **Läge** nedrullningsbar lista baserad på ett värde som du väljer i **Land** nedrullningsbar lista. Om du väljer Australien i dialogrutan **Land** nedrullningsbar lista, **Läge** i den nedrullningsbara listan visas lägena i Australien. I proceduren nedan beskrivs hur du utför den här uppgiften.
 
 1. Skapa ett projekt med följande moduler:
 
@@ -147,7 +146,7 @@ Tänk dig ett scenario där du vill fylla i listrutan **Läge** baserat på ett 
    }
    ```
 
-1. Skapa en nedrullningsbar nod under en viss mapphierarki i program (skapa till exempel en nod under /apps/myfolder/demo). Kontrollera att parametern `sling:resourceType` för noden är densamma som den som serverletspunkterna (/apps/populatedLieddown) pekar på.
+1. Skapa en nedrullningsbar nod under en viss mapphierarki i program (skapa till exempel en nod under /apps/myfolder/demo). Se till att `sling:resourceType` -parametern för noden är densamma som den som servleten pekar på (/apps/populatedDrop).
 
    ![Skapa en nedrullningsbar nod](assets/dropdown-node.png)
 
@@ -156,7 +155,7 @@ Tänk dig ett scenario där du vill fylla i listrutan **Läge** baserat på ett 
 
    Lägg till namnen på länderna som ska visas i listan Land. I listan Läge lägger du till ett skript som fyller i det baserat på namnet på landet i listan Land.
 
-   ![Lägga till ](assets/country-dropdown.png) ![landsnamnLägga till skript för att fylla i ](assets/state-dropdown.png) ![tillståndsnamnListrutor med länder och stater för att samla in](assets/2dropdowns.png)
+   ![Lägga till landsnamn](assets/country-dropdown.png) ![Lägga till skript för att fylla i lägesnamn](assets/state-dropdown.png) ![Listrutor för land och delstat för att samla in](assets/2dropdowns.png)
 
    ```javascript
    JSON.parse(

@@ -1,22 +1,21 @@
 ---
 title: Arbeta med Adobe Campaign
-seo-title: Arbeta med Adobe Campaign
+seo-title: Working with Adobe Campaign
 description: Adobe Campaign är en uppsättning lösningar som gör att ni kan personalisera och leverera kampanjer i alla kanaler, både online och offline
-seo-description: Adobe Campaign är en uppsättning lösningar som gör att ni kan personalisera och leverera kampanjer i alla kanaler, både online och offline
+seo-description: Adobe Campaign is a set of solutions that lets you personalize and deliver campaigns across all of your online and offline channels
 uuid: 1f7b48e2-9ec2-4ee8-b017-78c9d2cac48e
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: personalization
 discoiquuid: 28582d42-ef24-4ca1-98e6-e02248fc9dea
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 0954fd5f-cd70-4f2f-85e9-df1c7a3037e1
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '152'
+source-wordcount: '126'
 ht-degree: 0%
 
 ---
-
 
 # Arbeta med Adobe Campaign{#working-with-adobe-campaign}
 
@@ -34,10 +33,9 @@ Se följande:
 * [Skapa Adobe Campaign Forms i AEM](/help/sites-authoring/adobe-campaign-forms.md)
 * [Inrikta er på Adobe Campaign](/help/sites-authoring/target-adobe-campaign.md)
 
-Du måste tidigare ha [integrerat AEM med Adobe Campaign](/help/sites-administering/campaign.md).
+Du måste ha [integrerad AEM med Adobe Campaign](/help/sites-administering/campaign.md).
 
 Om du dessutom vill anpassa dina integreringar ska du läsa följande avsnitt:
 
 * [Skapa anpassade tillägg](/help/sites-developing/extending-campaign-extensions.md)
 * [Skapa anpassade formulärmappningar](/help/sites-developing/extending-campaign-form-mapping.md)
-

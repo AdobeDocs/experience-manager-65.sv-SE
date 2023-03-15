@@ -1,6 +1,6 @@
 ---
 title: Komponenter och tjänster - Java APIQuick Start(SOAP)
-seo-title: Komponenter och tjänster - Java APIQuick Start(SOAP)
+seo-title: Components and Services Java APIQuick Start(SOAP)
 description: Komponenter och tjänster - Java APIQuick Start(SOAP)
 uuid: 7d9ade2d-f927-4558-9e80-df08bd572772
 contentOwner: admin
@@ -9,16 +9,15 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: 14f17126-e744-479b-a8e6-24c131615b46
 role: Developer
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: fe1198b5-4145-4dcd-ab8a-4015daaf89b7
+source-git-commit: 0c7dba43dad8608b4a5de271e1e44942c950fb16
 workflow-type: tm+mt
-source-wordcount: '456'
+source-wordcount: '425'
 ht-degree: 0%
 
 ---
 
-
-# Java API-snabbstart för komponenter och tjänster (SOAP) {#components-and-services-java-apiquick-start-soap}
+# Komponenter och tjänster - Java API snabbstart (SOAP) {#components-and-services-java-apiquick-start-soap}
 
 Java API Quick Start (SOAP) är tillgängligt för komponenter och tjänster.
 
@@ -48,7 +47,7 @@ AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutning
 
 >[!NOTE]
 >
->Om du har en anpassad komponent och använder SOAP- eller EJB-protokoll för att anropa DSC:er på samma lokala server, och dessa anrop slutar att fungera efter en uppgradering, använder du en startstrategi för DSC ([DSC_IN_VM_PASSTHROUGH_STRATEGY](https://help.adobe.com/en_US/AEMForms/6-3/ProgramLC/javadoc/com/adobe/idp/dsc/clientsdk/ServiceClientFactoryProperties.html#DSC_IN_VM_PASSTHROUGH_STRATEGY)). Använd DSC-anropsmetoden in-VM med ServiceClientFactory som standard och konstruera inte ServiceClientFactory med SOAP- eller EJB-protokoll.
+>Om du har en anpassad komponent och använder SOAP- eller EJB-protokoll för att anropa DSC:er på samma lokala server, och dessa anrop slutar att fungera efter en uppgradering, använder du en startstrategi för den virtuella datorn. Använd DSC-anropsmetoden in-VM med ServiceClientFactory som standard och konstruera inte ServiceClientFactory med SOAP- eller EJB-protokoll.
 
 ## Snabbstart (SOAP-läge): Distribuera en komponent med Java API {#quick-start-soap-mode-deploying-a-component-using-the-java-api}
 
@@ -415,7 +414,7 @@ I följande Java-kodexempel startas en tjänst med namnet *SendEmailService*.
  
 ```
 
-## Snabbstart (SOAP-läge): Ändra ett tjänstkonfigurationsvärde med Java API {#quick-start-soap-mode-modifying-a-services-configuration-values-using-the-java-api}
+## Snabbstart (SOAP-läge): Ändra konfigurationsvärden för tjänster med Java API {#quick-start-soap-mode-modifying-a-services-configuration-values-using-the-java-api}
 
 I följande Java-exempel ändras konfigurationsvärden som tillhör SendEmail Service.
 
@@ -623,4 +622,3 @@ I följande Java-kodexempel tas en komponent bort med Java API.
   
  
 ```
-

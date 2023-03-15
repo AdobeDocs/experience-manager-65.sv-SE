@@ -1,30 +1,28 @@
 ---
 title: Upplev den publicerade webbplatsen
-seo-title: Upplev den publicerade webbplatsen
+seo-title: Experience the Published Site
 description: Bläddra till en publicerad webbplats för aktivering
-seo-description: Bläddra till en publicerad webbplats för aktivering
+seo-description: Browse to a published site for enablement
 uuid: 1bfefa8a-fd9c-4ca8-b2ff-add79776c8ae
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: introduction
 content-type: reference
 discoiquuid: 26715b94-e2ea-4da7-a0e2-3e5a367ac1cd
-translation-type: tm+mt
-source-git-commit: 4d21a61ed687caea2b1867d5321f75636f5310a3
+exl-id: 801416ed-d321-45a2-8032-8935094a4d44
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1210'
+source-wordcount: '1199'
 ht-degree: 1%
 
 ---
-
-
 
 # Upplev den publicerade webbplatsen {#experience-the-published-site}
 
 
 **[⇐ Skapa och tilldela aktiveringsresurser](resource.md)**
 
-## Bläddra till ny webbplats vid publicering {#browse-to-new-site-on-publish}
+## Bläddra till Ny webbplats vid publicering {#browse-to-new-site-on-publish}
 
 Nu när den nyligen skapade communitysajten och dess aktiveringsresurser och utbildningsväg har publicerats är det möjligt att se webbplatsen för självstudiekursen om aktivering.
 
@@ -33,7 +31,7 @@ Börja med att bläddra till den URL som visas när du skapar webbplatsen, men p
 * Författar-URL = [http://localhost:4502/content/sites/enable/en.html](http://localhost:4502/content/sites/enable/en.html)
 * Publicera URL = [http://localhost:4503/content/sites/enable/en.html](http://localhost:4503/content/sites/enable/en.html)
 
-Om [standardstartsidan är ](enablement-create-site.md#changethedefaulthomepage) startar du webbplatsen genom att bläddra till [http://localhost:4503/](http://localhost:4503/).
+Om [standardstartsida har angetts](enablement-create-site.md#changethedefaulthomepage)och sedan bara gå till [http://localhost:4503/](http://localhost:4503/) bör starta webbplatsen.
 
 Vid första ankomsten till den publicerade webbplatsen är besökaren vanligtvis inte redan inloggad och anonym.
 
@@ -43,15 +41,15 @@ Vid första ankomsten till den publicerade webbplatsen är besökaren vanligtvis
 
 ## Anonym webbplatsbesökare {#anonymous-site-visitor}
 
-En anonym besökare visas omedelbart på inloggningssidan för den här privata aktiveringscommunityn. Observera att det inte finns något alternativ för självregistrering eller inloggning på Facebook eller Twitter.
+En anonym besökare visas omedelbart på inloggningssidan för den här privata aktiveringscommunityn. Observera att det inte finns något alternativ för självregistrering eller inloggning med Facebook eller Twitter.
 
-Observera att den här startsidan innehåller fyra menyalternativ: `Assignments, Ski Catalog, What's New` och `Discussions`, men ingen kan nås utan inloggning.
+Observera att den här startsidan innehåller fyra menyalternativ: `Assignments, Ski Catalog, What's New` och `Discussions`, men ingen kan nås utan att logga in.
 
 >[!NOTE]
 >
 >Det går att ge anonym åtkomst till en aktiveringswebbplats utan att tillåta besökare att registrera sig själva.
 >
->Om en aktiveringsresurs är inställd på `show in catalog` och `allow anonymous access` kan anonyma webbplatsbesökare visa resurser i katalogen.
+>Om en aktiveringsresurs är inställd på `show in catalog` och `allow anonymous access`kan anonyma besökare visa resurser i katalogen.
 
 ### Förhindra anonym åtkomst på JCR {#prevent-anonymous-access-on-jcr}
 
@@ -59,7 +57,7 @@ En känd begränsning exponerar communityinnehållet för anonyma besökare via 
 
 Följ de här stegen för att skydda communityplatsens innehåll från anonyma användare genom jcr-innehåll och json:
 
-1. På AEM författarinstans går du till https://&lt;host>:&lt;port>/editor.html/content/site/&lt;sitename>.html.
+1. AEM författarinstansen går till https://&lt;host>:&lt;port>/editor.html/content/site/&lt;sitename>.html.
 
    >[!NOTE]
    >
@@ -69,7 +67,7 @@ Följ de här stegen för att skydda communityplatsens innehåll från anonyma a
 
    ![page-properties](assets/page-properties.png)
 
-1. Gå till fliken **[!UICONTROL Advanced]**.
+1. Gå till **[!UICONTROL Advanced]** -fliken.
 1. Aktivera **[!UICONTROL Authentication Requirement]**.
 
    ![webbplatsautentisering](assets/site-authentication.png)
@@ -79,14 +77,14 @@ Följ de här stegen för att skydda communityplatsens innehåll från anonyma a
 
 ## Registrerad medlem {#enrolled-member}
 
-Den här upplevelsen är beroende av att användarna `Riley Taylor` och `Sidney Croft` är [skapade](enablement-setup.md#publishcreateenablementmembers) och [tilldelade](resource.md#settings) till *Ski-lektioner* genom deras medlemskap i gruppen *Community Ski Class*.
+Den här upplevelsen är beroende av användare `Riley Taylor` och `Sidney Croft` att [skapad](enablement-setup.md#publishcreateenablementmembers) och [tilldelad](resource.md#settings) till *Ski-lektioner* utbildningsväg genom sitt medlemskap i *Klassen Community Ski* grupp.
 
 Logga in med
 
 * `Username: riley`
 * `Password: password`
 
-Om användarprofilen inte skapades genom självregistrering visas profilsidan den första gången en medlem loggar in, så att de kan verifiera och ändra den efter behov.
+Om användarprofilen inte skapades genom självregistrering visas profilsidan den första gången en medlem loggar in, så att de kan verifiera och ändra den om det behövs.
 
 Nästa gång medlemmen loggar in visas startsidan, som identifieras av det första menyalternativet.
 
@@ -106,23 +104,23 @@ Varje uppdrag innehåller grundläggande information om:
 
 Tilldelningstypen anges med en ikon i kortets övre vänstra hörn. Bilden av en väg är för en inlärningsväg med antalet medföljande aktiveringsresurser.
 
-![tilldelning1](assets/assignment1.png)
+![assignment1](assets/assignment1.png)
 
-Om du väljer *Skallektioner* visas de två aktiveringsresurserna som utbildningssökvägen refererar till.
+Markera *Ski-lektioner* visar de två aktiveringsresurserna som utbildningsvägen refererar till.
 
-![tilldelning2](assets/assignment2.png)
+![assignment2](assets/assignment2.png)
 
-Om du väljer *Ski Lesson 1* öppnas informationssidan för aktiveringsresursen.
+Markera *Ski Lesson 1* öppnar informationssidan för aktiveringsresursen.
 
-På informationssidan kan medlemmen lära sig [betygsätt](rating.md) lektionen och lägga till [kommentarer](comments.md). Alla medlemsaktiviteter återspeglas i avsnittet Nyheter på webbplatsen.
+På informationssidan kan medlemmarna lära sig [ränta](rating.md) lektionen och lägga till [kommentarer](comments.md). Alla medlemsaktiviteter återspeglas i avsnittet Nyheter på webbplatsen.
 
 Interaktion med aktiveringsresursen beskrivs i rapportavsnittet som är tillgängligt i författarmiljön.
 
-![tilldelning3](assets/assignment3.png)
+![assignment3](assets/assignment3.png)
 
 ### Ski-katalog {#ski-catalog}
 
-Ski Catalog-sidan är katalogen med aktiveringsresurser som taggats med taggar från namnutrymmet `Tutorial`. De två *hudlektionerna*-resurserna är taggade med taggen `Skiing`, vilket innebär att om någon annan tagg än `All` eller `Tutorial: Sports / Skiing` är markerad visas ingenting.
+Ski Catalog-sidan är katalogen med aktiveringsresurser som taggats med taggar från `Tutorial` namnutrymme. De två *Ski Lesson* resurser är taggade med `Skiing` -taggen, så att om någon annan tagg än `All` eller `Tutorial: Sports / Skiing` är markerat visas ingenting.
 
 När en medlem inte har tilldelats aktiveringsresurser, antingen direkt eller via en utbildningsväg, är det möjligt att interagera med aktiveringsresurser som finns i en katalog och ge feedback via kommentarer och omdömen.
 
@@ -130,9 +128,9 @@ När en medlem inte har tilldelats aktiveringsresurser, antingen direkt eller vi
 
 ### Diskussioner {#discussions}
 
-Förutom att du kan betygsätta och kommentera aktiveringsresurser ([när den är aktiverad](enablement-create-site.md#step33asettings)) innehåller community-webbplatsmallen som `Enablement Tutorial` skapades från [forumfunktionen](functions.md#forum-function) (titeln är `Discussions)`.
+Förutom att betygsätta och kommentera aktiveringsresurser ([när aktiverat](enablement-create-site.md#step33asettings)), som communitywebbplatsmallen från vilken `Enablement Tutorial` skapades med [forumfunktion](functions.md#forum-function) (title is `Discussions)`.
 
-Markera `Discussions`länken och lägg upp ett ämne.
+Välj `Discussions`för att länka och publicera ett ämne.
 
 Logga ut och logga in som Sidney Croft (sidney/lösenord) och svara på frågan samt Följ ämnet.
 
@@ -142,22 +140,22 @@ Observera, förutom intern moderering, att det finns alternativ för att dela ä
 
 ### Nyheter {#what-s-new}
 
-Menyalternativet `What's New` är den rubrik som anges för funktionen [aktivitetsström](functions.md#activity-stream-function) i den här communityplatsens struktur.
+The `What's New` menyalternativet är den rubrik som ges [aktivitetsströmfunktion](functions.md#activity-stream-function) i den här communitywebbplatsens struktur.
 
-Du är fortfarande inloggad som Sidney och väljer länken `What's New` för att visa aktiviteten.
+Fortfarande inloggad som Sidney, välj `What's New` för att visa aktiviteten.
 
 ![whats-new-menu](assets/whats-new-menu.png)
 
-## Betrodd community-medlem {#trusted-community-member}
+## Betrodd medlem i användargruppen {#trusted-community-member}
 
-Den här upplevelsen förutsätter att ` [Quinn Harper](enablement-setup.md#publishcreateenablementmembers)` har tilldelats rollerna [moderator](enablement-create-site.md#moderation) och [resurskontakt](resource.md#settings).
+Den här upplevelsen förutsätter ` [Quinn Harper](enablement-setup.md#publishcreateenablementmembers)` tilldelades rollerna för [moderator](enablement-create-site.md#moderation) och [resurskontakt](resource.md#settings).
 
 Logga in med
 
 * `Username: quinn`
 * `Password: password`
 
-När du har loggat in finns det ett nytt menyalternativ, `Administration`, som visas eftersom medlemmen fick rollen som moderator.
+Observera att det finns ett nytt menyalternativ när du har loggat in. `Administration`, vilket visas för att medlemmen fick rollen som moderator.
 
 ![tillförlitlig-medlemshemsida](assets/trusted-member-homepage.png)
 
@@ -165,7 +163,7 @@ Hemsidan identifieras av det första menyalternativet, Uppdrag. Quinn är modera
 
 ### Administration {#administration}
 
-Vad det finns är aktivitet av de två eleverna, `Riley Taylor` och `Sidney Croft`. Genom att klicka på länken `Administration` för att komma åt modereringskonsolen kan Quinn använda [masmodereringskonsolen](moderation.md) för att moderera sina inlägg.
+Vad som finns, är de två elevernas aktivitet, `Riley Taylor` och `Sidney Croft`. Genom att välja `Administration` för att komma åt modereringskonsolen kan Quinn använda [masmodereringskonsol](moderation.md) till att moderera sina inlägg.
 
 Om du väljer ikonen för sidpanelen växlar du de filter som används för att söka efter innehåll i communityn.
 
@@ -177,12 +175,12 @@ När du hovrar över ett kommentarskort visas modereringsåtgärder.
 
 Det finns två sätt att få åtkomst till rapporter om studerande och aktiveringsresurser.
 
-Navigera till **Communities, [Resources console](resources.md)**, där aktiveringsresurserna hanteras, och när du har valt en community-webbplats kan du generera rapporter för
+Navigera till **Communities, [Resurskonsol](resources.md)**, där aktiveringsresurserna hanteras och efter att du har valt en communitywebbplats är det möjligt att generera rapporter för
 
 * Alla aktiveringsresurser och utbildningsvägar
 * En specifik aktiveringsresurs eller utbildningsväg
 
-Navigera till **Communities, [Reports console](reports.md)** och generera rapporter enligt:
+Navigera till **Communities, [Rapportkonsol](reports.md)** och generera rapporter enligt:
 
 * Tilldelningar för aktiveringsresurser och utbildningsvägar
 * Publicerar på en communitywebbplats under en viss period
@@ -205,9 +203,9 @@ Med lite aktivitet och interaktion med resurserna när de publiceras är det vä
 
 * Logga in med administratörsbehörighet på författaren.
 * Navigera från huvudmenyn till **[!UICONTROL Communities]** > **[!UICONTROL Resources]**.
-* Välj `Enablement Tutorial`-platsen.
-* Välj ikonen `Report` om du vill se en sammanfattning av alla resurser.
-* Välj en resurs och sedan ikonen `Report` för en rapport om den resursen.
+* Välj `Enablement Tutorial` webbplats.
+* Välj `Report` om du vill se en sammanfattning av alla resurser.
+* Välj en resurs och sedan `Report` -ikon för en rapport om den resursen.
 
 Observera att det troligen är för tidigt att visa data från Adobe Analytics, som kan ta mellan 1 och 12 timmar att visa. Men grundläggande SCORM-rapportering är redan tillgänglig.
 
@@ -219,8 +217,8 @@ Observera att det troligen är för tidigt att visa data från Adobe Analytics, 
 
 * Välj **[!UICONTROL Communities > Resources]**
 
-* Öppningskort `Enablement Tutorial`
-* Öppningskort `Ski Lessons`
+* Open Card `Enablement Tutorial`
+* Open Card `Ski Lessons`
 * Välj `Report > User Report`
 
 ![skidlektioner-användarrapport](assets/ski-lessons-user-report.png)
@@ -229,15 +227,15 @@ Observera att det troligen är för tidigt att visa data från Adobe Analytics, 
 
 Med rapportkonsolen kan du skapa rapporter på
 
-* **** Uppdrag för alla aktiveringscommunitysajter
-* **** Visa för alla communitysajter
-* **Poster** för alla communitysajter
+* **Uppdrag** för alla aktiveringscommunitysajter
+* **Vyer** för alla communitysajter
+* **Inlägg** för alla communitysajter
 
 För rapporter om tilldelningar:
 
 * Logga in med administratörsbehörighet på författaren.
 * Navigera till **[!UICONTROL Communities]** > **[!UICONTROL Reports]** > **[!UICONTROL Assignments Report]**.
-* Välj **[!UICONTROL Site]** i listrutan (välj `Enablement Tutorial`).
+* Välj en **[!UICONTROL Site]** i listrutan (välj `Enablement Tutorial`).
 
 * Välj **[!UICONTROL Group]** (välj `Community Ski Class`)
 
@@ -251,7 +249,7 @@ För rapporter om vyer:
 
 * Logga in med administratörsbehörighet på författaren.
 * Navigera till **[!UICONTROL Communities]** > **[!UICONTROL Reports]** > **[!UICONTROL Views Report]**.
-* Välj en **plats** i listrutan (välj `Enablement Tutorial`).
+* Välj en **Plats** i listrutan (välj `Enablement Tutorial`).
 
 * Välj **[!UICONTROL Content Type]** (välj `all`).
 

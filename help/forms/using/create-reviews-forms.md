@@ -1,8 +1,8 @@
 ---
 title: Skapa och hantera granskningar av resurser i formulär
-seo-title: Skapa och hantera granskningar av resurser i formulär
-description: 'En granskning är en mekanism som gör att en eller flera granskare kan kommentera en resurs som är tillgänglig i ett formulär. '
-seo-description: 'En granskning är en mekanism som gör att en eller flera granskare kan kommentera en resurs som är tillgänglig i ett formulär. '
+seo-title: Creating and managing reviews for assets in forms
+description: En granskning är en mekanism som gör att en eller flera granskare kan kommentera en resurs som är tillgänglig i ett formulär.
+seo-description: A Review is a mechanism that allows one or more reviewers to comment on an asset that is available in a form.
 uuid: 45c7ff56-3fa8-4a0f-8597-05404e547282
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,14 +10,13 @@ topic-tags: forms-manager
 discoiquuid: d8c1c507-a6c4-44f5-be01-ee902bc28410
 docset: aem65
 feature: Adaptive Forms
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 9ca4fcd6-3eb0-4fc1-a09c-e4ad532bbed0
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '687'
+source-wordcount: '655'
 ht-degree: 0%
 
 ---
-
 
 # Skapa och hantera granskningar av resurser i formulär{#creating-and-managing-reviews-for-assets-in-forms}
 
@@ -28,7 +27,7 @@ En granskning är en mekanism som gör att en eller flera granskare kan kommente
 ## Konfigurera en granskning {#setting-up-a-review}
 
 1. Navigera till fliken Forms och markera ett formulär.
-1. Om resursen inte har någon pågående granskning visas ikonen Starta granskning ![aem6forms_review_chat_comment](assets/aem6forms_review_chat_comment.png) i åtgärdsfältet. Klicka på ikonen Starta granskning ![aem6forms_review_chat_comment](assets/aem6forms_review_chat_comment.png).
+1. Om resursen inte har någon pågående granskning visas en Starta granskning ![aem6forms_review_chat_comment](assets/aem6forms_review_chat_comment.png) visas i åtgärdsfältet. Klicka på Starta granskning ![aem6forms_review_chat_comment](assets/aem6forms_review_chat_comment.png) ikon.
 1. Ange följande information:
 
    * Granskningsnamn: Obligatoriskt, kan innehålla alfanumeriska tecken, bindestreck eller understreck.
@@ -59,9 +58,9 @@ I det här avsnittet beskrivs vad som händer när en granskning skapas eller ko
 
 1. Navigera till fliken Forms och markera ett formulär.
 
-1. Om en granskning pågår för en resurs och du är initierare för granskningen, visas ikonerna Hantera granskning ![aem6forms_review_chat_comment](assets/aem6forms_review_chat_comment.png) i åtgärdsfältet. Det är bara granskningsinitieraren som kan hantera (uppdatera/avsluta) granskningen.
+1. Om en granskning pågår för en resurs och du är den som initierar granskningen, kan du välja Hantera granskning ![aem6forms_review_chat_comment](assets/aem6forms_review_chat_comment.png) ikoner visas i åtgärdsfältet. Det är bara granskningsinitieraren som kan hantera (uppdatera/avsluta) granskningen.
 
-   Klicka på ikonen Hantera granskning ![aem6forms_review_chat_comment](assets/aem6forms_review_chat_comment.png).
+   Klicka på Hantera granskning ![aem6forms_review_chat_comment](assets/aem6forms_review_chat_comment.png)ikon.
 
    För andra användare än initieraren är ikonen Hantera granskning inaktiverad.
 
@@ -71,7 +70,7 @@ I det här avsnittet beskrivs vad som händer när en granskning skapas eller ko
 
    * **Granskningsbeskrivning**: Finns för redigering.
 
-   * **Tidsgräns** för granskning: Finns för redigering. Du kan ändra deadline till vilket datum och vilken tid som helst efter det aktuella datumet och den aktuella tiden.
+   * **Granska deadline**: Finns för redigering. Du kan ändra deadline till vilket datum och vilken tid som helst efter det aktuella datumet och den aktuella tiden.
 
    * **Granskare**: Finns för redigering. Du kan lägga till eller ta bort granskare. Om en uppgift är försenad kan du bara lägga till granskare efter att du har förlängt tidsgränsen efter det aktuella datumet.
 
@@ -113,4 +112,3 @@ I det här avsnittet beskrivs vad som händer när granskningen avslutas/ändras
    1. **Granskare**: För varje granskare avslutas den ofullständiga uppgift som är relaterad till granskningen. Aktiviteten visas inte längre som Väntande i granskarens meddelandeavsnitt.
    1. **Initierare**: Uppgiften som tilldelats granskningsinitieraren är markerad som slutförd. Aktiviteten tas bort från meddelandeavsnittet för granskningsinitieraren.
    1. **Alla**: Granskningen visas i avsnittet Tidigare granskningar. Inga fler kommentarer kan läggas till.
-

@@ -1,7 +1,8 @@
 ---
 title: AEM dokumentationsresor
 description: Dokumentation Journeys innehåller en berättande struktur i AEM dokumentation genom att sammanfoga komplexa och olika funktioner för att lösa ett affärsmål på ett sätt som är beprövat med bästa praxis. Resorna är utformade med AEM nybörjare i åtanke och presenterar koncept och funktioner för att uppnå ett mål från A till Ö.
-source-git-commit: 2523d9dcdbbfd9107e43ca53e2bb586452be1cb8
+exl-id: bb0a26e2-5686-4fb7-bb6e-231dafc8268b
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
 source-wordcount: '1234'
 ht-degree: 0%

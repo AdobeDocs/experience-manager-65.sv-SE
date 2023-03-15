@@ -1,8 +1,8 @@
 ---
 title: Anpassa webbplatskonsolen (Classic UI)
-seo-title: Anpassa webbplatskonsolen (Classic UI)
+seo-title: Customizing the Websites Console (Classic UI)
 description: Konsolen Administrera webbplatser kan utökas till att visa anpassade kolumner
-seo-description: Konsolen Administrera webbplatser kan utökas till att visa anpassade kolumner
+seo-description: The Websites Administration console can be extended to display custom columns
 uuid: 9163fdff-5351-477d-b91c-8a74f8b41d34
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,26 +10,25 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: aeb37103-541d-4235-8a78-980b78c8de66
 docset: aem65
-translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+exl-id: 2b9b4857-821c-4f2f-9ed9-78a1c9f5ac67
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '798'
+source-wordcount: '781'
 ht-degree: 0%
 
 ---
-
 
 # Anpassa webbplatskonsolen (Classic UI){#customizing-the-websites-console-classic-ui}
 
 ## Lägga till en anpassad kolumn i webbplatskonsolen (siteadmin) {#adding-a-custom-column-to-the-websites-siteadmin-console}
 
-Konsolen Administrera webbplatser kan utökas till att visa anpassade kolumner. Konsolen byggs baserat på ett JSON-objekt som kan utökas genom att skapa en OSGI-tjänst som implementerar gränssnittet `ListInfoProvider`. En sådan tjänst ändrar JSON-objektet som skickas till klienten för att bygga konsolen.
+Konsolen Administrera webbplatser kan utökas till att visa anpassade kolumner. Konsolen byggs baserat på ett JSON-objekt som kan utökas genom att skapa en OSGI-tjänst som implementerar `ListInfoProvider` gränssnitt. En sådan tjänst ändrar JSON-objektet som skickas till klienten för att bygga konsolen.
 
-I den här stegvisa självstudiekursen beskrivs hur du visar en ny kolumn i administrationskonsolen för webbplatser genom att implementera gränssnittet `ListInfoProvider`. Det består av följande steg:
+I den här stegvisa självstudiekursen beskrivs hur du visar en ny kolumn i administrationskonsolen för webbplatser genom att implementera `ListInfoProvider` gränssnitt. Det består av följande steg:
 
-1. [Skapa OSGI-](#creating-the-osgi-service) tjänsten och distribuera paketet som innehåller det till AEM.
+1. [Skapa OSGI-tjänsten](#creating-the-osgi-service) och distribuera paketet som innehåller det till AEM.
 1. (valfritt) [Testa den nya tjänsten](#testing-the-new-service) genom att utfärda ett JSON-anrop för att begära JSON-objektet som används för att skapa konsolen.
-1. [Visa den nya ](#displaying-the-new-column) kolumnen genom att utöka nodstrukturen för konsolen i databasen.
+1. [Visa den nya kolumnen](#displaying-the-new-column) genom att utöka nodstrukturen för konsolen i databasen.
 
 >[!NOTE]
 >
@@ -37,14 +36,12 @@ I den här stegvisa självstudiekursen beskrivs hur du visar en ny kolumn i admi
 >
 >* Digital Assets-konsolen
 >* Community-konsolen
-
 >
 
 
+### Skapa OSGI-tjänsten {#creating-the-osgi-service}
 
-### Skapar OSGI-tjänsten {#creating-the-osgi-service}
-
-Gränssnittet `ListInfoProvider` definierar två metoder:
+The `ListInfoProvider` gränssnittet definierar två metoder:
 
 * `updateListGlobalInfo`, för att uppdatera globala egenskaper för listan,
 * `updateListItemInfo`, för att uppdatera ett listobjekt.
@@ -57,13 +54,13 @@ Argumenten för båda metoderna är:
 
 Exempelimplementeringen nedan:
 
-* Lägger till en *startad*-egenskap för varje objekt, vilket är `true` om sidnamnet börjar med *e* och i annat fall `false`.
+* Lägger till en *stjärnad* egenskapen för varje objekt, som `true` om sidnamnet börjar med *e* och `false` i annat fall.
 
-* Lägger till en *starredCount*-egenskap som är global för listan och innehåller antalet stjärnlistobjekt.
+* Lägger till en *starredCount* som är global för listan och innehåller antalet stjärnlistobjekt.
 
 Så här skapar du OSGI-tjänsten:
 
-1. I CRXDE Lite [skapar du ett paket](/help/sites-developing/developing-with-crxde-lite.md#managing-a-bundle).
+1. I CRXDE Lite [skapa ett paket](/help/sites-developing/developing-with-crxde-lite.md#managing-a-bundle).
 1. Lägg till exempelkoden nedan.
 1. Bygg paketet.
 
@@ -112,15 +109,13 @@ public class StarredListInfoProvider implements ListInfoProvider {
 >[!CAUTION]
 >
 >* Implementeringen bör, baserat på den angivna begäran och/eller resursen, avgöra om den ska lägga till informationen till JSON-objektet eller inte.
->* Om din `ListInfoProvider`-implementering definierar en egenskap som redan finns i svarsobjektet, skrivs dess värde över av den du anger.
-
+>* Om `ListInfoProvider` implementeringen definierar en egenskap som redan finns i svarsobjektet. Dess värde skrivs över av den som du anger.
 >
->  
-Du kan använda [rankning](https://www.osgi.org/javadoc/r2/org/osgi/framework/Constants.html#SERVICE_RANKING) för att hantera körningsordningen för flera `ListInfoProvider`-implementeringar.
+>  Du kan använda [rangordning av tjänster](https://www.osgi.org/javadoc/r2/org/osgi/framework/Constants.html#SERVICE_RANKING) för att hantera körningsordningen för flera `ListInfoProvider` implementeringar.
 
-### Testar den nya tjänsten {#testing-the-new-service}
+### Testa den nya tjänsten {#testing-the-new-service}
 
-När du öppnar administrationskonsolen för webbplatser och bläddrar igenom webbplatsen skickar webbläsaren ett ajax-anrop för att hämta JSON-objektet som används för att skapa konsolen. Om du till exempel bläddrar till mappen `/content/geometrixx` skickas följande begäran till den AEM servern för att skapa konsolen:
+När du öppnar administrationskonsolen för webbplatser och bläddrar igenom webbplatsen skickar webbläsaren ett ajax-anrop för att hämta JSON-objektet som används för att skapa konsolen. Om du till exempel bläddrar till `/content/geometrixx` mapp skickas följande begäran till AEM server för att bygga konsolen:
 
 [https://localhost:4502/content/geometrixx.pages.json?start=0&amp;limit=30&amp;predicate=siteadmin](https://localhost:4502/content/geometrixx.pages.json?start=0&amp;limit=30&amp;predicate=siteadmin)
 
@@ -133,15 +128,15 @@ Så här kontrollerar du att den nya tjänsten körs efter att du har distribuer
 
 ![screen_shot_2012-02-13at163046](assets/screen_shot_2012-02-13at163046.png)
 
-### Visar den nya kolumnen {#displaying-the-new-column}
+### Visa den nya kolumnen {#displaying-the-new-column}
 
-Det sista steget är att anpassa nodstrukturen i administrationskonsolen för webbplatser så att den nya egenskapen för alla Geometrixx visas genom att åsidosätta `/libs/wcm/core/content/siteadmin`. Gör så här:
+Det sista steget består i att anpassa nodstrukturen i administrationskonsolen för webbplatser så att den nya egenskapen för alla Geometrixx visas genom att täcka över `/libs/wcm/core/content/siteadmin`. Gör så här:
 
-1. I CRXDE Lite skapar du nodstrukturen `/apps/wcm/core/content` med noder av typen `sling:Folder` så att strukturen `/libs/wcm/core/content` återspeglas.
+1. Skapa nodstrukturen i CRXDE Lite `/apps/wcm/core/content` med noder av typen `sling:Folder` återspegla strukturen `/libs/wcm/core/content`.
 
-1. Kopiera noden `/libs/wcm/core/content/siteadmin` och klistra in den under `/apps/wcm/core/content`.
+1. Kopiera noden `/libs/wcm/core/content/siteadmin` och klistra in den nedan `/apps/wcm/core/content`.
 
-1. Kopiera noden `/apps/wcm/core/content/siteadmin/grid/assets` till `/apps/wcm/core/content/siteadmin/grid/geometrixx` och ändra dess egenskaper:
+1. Kopiera noden `/apps/wcm/core/content/siteadmin/grid/assets` till `/apps/wcm/core/content/siteadmin/grid/geometrixx` och ändrar dess egenskaper:
 
    * Ta bort **pageText**
 
@@ -150,7 +145,7 @@ Detta gör att stödrasterkonfigurationen blir aktiv för alla geometrixx-webbpl
 
    * Ange **storeProxySuffix** till `.pages.json`
 
-   * Redigera flervärdesegenskapen **storeReaderFields** och lägg till värdet `starred`.
+   * Redigera **storeReaderFields** flervärdesegenskap och lägg till `starred` värde.
 
    * Om du vill aktivera MSM-funktioner lägger du till följande MSM-parametrar i egenskapen multi-String **storeReaderFields**:
 
@@ -158,30 +153,30 @@ Detta gör att stödrasterkonfigurationen blir aktiv för alla geometrixx-webbpl
       * **msm:isInBlueprint**
       * **msm:isLiveCopy**
 
-1. Lägg till en `starred`-nod (av typen **nt:unsigned**) nedanför `/apps/wcm/core/content/siteadmin/grid/geometrixx/columns` med följande egenskaper:
+1. Lägg till en `starred` nod (av typ **nt:ostrukturerad**) nedan `/apps/wcm/core/content/siteadmin/grid/geometrixx/columns` med följande egenskaper:
 
-   * **dataIndex**:  `starred` av typen String
+   * **dataIndex**: `starred` av typen String
 
-   * **header**:  `Starred` av typen String
+   * **header**: `Starred` av typen String
 
-   * **xtype**:  `gridcolumn` av typen String
+   * **xtype**: `gridcolumn` av typen String
 
-1. (valfritt) Släpp de kolumner som du inte vill visa på `/apps/wcm/core/content/siteadmin/grid/geometrixx/columns`
+1. (valfritt) Släpp de kolumner som du inte vill visa vid `/apps/wcm/core/content/siteadmin/grid/geometrixx/columns`
 
-1. `/siteadmin` är en vanlighetssökväg som som standard pekar på  `/libs/wcm/core/content/siteadmin`.
-Om du vill omdirigera detta till din version av siteadmin på `/apps/wcm/core/content/siteadmin` måste du definiera egenskapen `sling:vanityOrder` så att den har ett högre värde än det som definierats på `/libs/wcm/core/content/siteadmin`. Standardvärdet är 300, så allt högre är lämpligt.
+1. `/siteadmin` är en mållös bana som som standard pekar på `/libs/wcm/core/content/siteadmin`.
+Om du vill dirigera om den här till din version av siteadmin på `/apps/wcm/core/content/siteadmin` definiera egenskapen `sling:vanityOrder` att ha ett värde som är högre än det som definierats på `/libs/wcm/core/content/siteadmin`. Standardvärdet är 300, så allt högre är lämpligt.
 
 1. Gå till administrationskonsolen för webbplatser och navigera till Geometrixx:
    [https://localhost:4502/siteadmin#/content/geometrixx](https://localhost:4502/siteadmin#/content/geometrixx).
 
-1. Den nya kolumnen **Starred** är tillgänglig och visar anpassad information enligt följande:
+1. Den nya kolumnen anropades **Started** är tillgängligt och visar anpassad information enligt följande:
 
 ![screen_shot_2012-02-14at104602](assets/screen_shot_2012-02-14at104602.png)
 
 >[!CAUTION]
 >
->Om flera rutnätskonfigurationer matchar den begärda sökvägen som definieras av egenskapen **pathRegex**, används den första, och inte den mest specifika, vilket betyder att ordningen på konfigurationerna är viktig.
+>Om flera rutnätskonfigurationer matchar den begärda sökvägen som definieras av **pathRegex** egenskapen kommer den första att användas, och inte den mest specifika, vilket betyder att ordningen för konfigurationerna är viktig.
 
 ### Exempelpaket {#sample-package}
 
-Resultatet av den här självstudiekursen finns i [Customizing the Websites Administration Console](https://localhost:4502/crx/packageshare/index.html/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/helper/customizing-siteadmin) package on Package Share.
+Resultatet av den här självstudiekursen finns i [Anpassa administrationskonsolen för webbplatser](https://localhost:4502/crx/packageshare/index.html/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/helper/customizing-siteadmin) paket på paketresurs.

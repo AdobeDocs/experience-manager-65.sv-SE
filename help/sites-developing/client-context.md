@@ -1,8 +1,8 @@
 ---
 title: Klientkontext i detalj
-seo-title: Klientkontext i detalj
+seo-title: Client Context in Detail
 description: Klientkontexten representerar en dynamiskt sammansatt samling med användardata
-seo-description: Klientkontexten representerar en dynamiskt sammansatt samling med användardata
+seo-description: The Client Context represents a dynamically assembled collection of user data
 uuid: 95b08fbd-4f50-44a1-80fb-46335fe04a40
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,20 +11,19 @@ content-type: reference
 discoiquuid: c881ad66-bcc3-4f99-b77f-0944c23e2d29
 docset: aem65
 feature: Context Hub
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 38b9a795-1c83-406c-ab13-b4456da938dd
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '3025'
+source-wordcount: '3008'
 ht-degree: 0%
 
 ---
-
 
 # Klientkontext i detalj{#client-context-in-detail}
 
 >[!NOTE]
 >
->Klientkontext har ersatts av ContextHub. Mer information finns i [relaterad dokumentation](/help/sites-developing/contexthub.md).
+>Klientkontext har ersatts av ContextHub. Se [relaterad dokumentation](/help/sites-developing/contexthub.md) för mer information.
 
 Klientkontexten representerar en dynamiskt sammansatt samling med användardata. Du kan använda data för att avgöra vilket innehåll som ska visas på en webbsida i en viss situation (målinriktning av innehåll). Data är också tillgängliga för webbplatsanalys och för alla javascript-skript på sidan.
 
@@ -32,11 +31,11 @@ Klientkontext består huvudsakligen av följande aspekter:
 
 * Sessionsarkivet som innehåller användardata.
 * Användargränssnittet som visar användardata och innehåller verktyg för att simulera användarupplevelsen.
-* Ett [javascript-API](/help/sites-developing/ccjsapi.md) för interaktion med sessionslager.
+* A [javascript API](/help/sites-developing/ccjsapi.md) för interaktion med sessionslager.
 
 Om du vill skapa ett fristående sessionsarkiv och lägga till det i klientkontexten, eller skapa ett sessionsarkiv som är kopplat till en Context Store-komponent. AEM installerar flera Context Store-komponenter som du kan använda direkt. Du kan använda de här komponenterna som bas för dina komponenter.
 
-Mer information om hur du öppnar klientkontext, konfigurerar informationen som visas och simulerar användarupplevelsen finns i [Klientkontext](/help/sites-administering/client-context.md).
+Mer information om hur du öppnar klientkontext, konfigurerar den information som visas och simulerar användarupplevelsen finns i [Klientkontext](/help/sites-administering/client-context.md).
 
 ## Sessionslager {#session-stores}
 
@@ -45,7 +44,7 @@ Klientkontexten innehåller olika sessionslager som innehåller användardata. L
 * Klientens webbläsare.
 * Servern (se [JSONP Store](/help/sites-administering/client-context.md#main-pars-variable-8) för att lagra information från tredjepartskällor)
 
-I klientkontextramverket finns ett [javascript-API](/help/sites-developing/ccjsapi.md) som du kan använda för att interagera med sessionslager för att läsa och skriva användardata, samt för att avlyssna och reagera på butikshändelser. Du kan också skapa sessionsarkiv för användardata som du använder för innehåll som är avsett för målinriktning eller andra syften.
+Client Context Framework innehåller en [javascript API](/help/sites-developing/ccjsapi.md) som du kan använda för att interagera med sessionsarkiv för att läsa och skriva användardata, samt för att lyssna och reagera på butikshändelser. Du kan också skapa sessionsarkiv för användardata som du använder för innehåll som är avsett för målinriktning eller andra syften.
 
 Sessionsarkivdata finns kvar på klienten. Klientkontexten skriver inte tillbaka data till servern. Använd ett formulär eller utveckla ett anpassat javascript om du vill skicka data till servern.
 
@@ -67,7 +66,7 @@ Ett sessionsarkiv kan sparas mellan olika webbläsarsessioner eller kan bara var
 
 >[!NOTE]
 >
->Butikens beständighet använder antingen webbläsarlagring eller cookies (cookien `SessionPersistence`). Webbläsarlagring är vanligare.
+>Butikens beständighet använder antingen webbläsarlagring eller cookies ( `SessionPersistence` cookie). Webbläsarlagring är vanligare.
 >
 >När webbläsaren stängs och öppnas igen kan ett sessionsarkiv läsas in med värdena från ett beständigt arkiv. Du behöver sedan rensa webbläsarens cache för att ta bort de gamla värdena.
 
@@ -82,21 +81,21 @@ Context Store-komponenter kan innehålla följande objekt:
 * Redigera dialogrutor för att konfigurera komponentinstanser.
 * Javascript som initierar sessionsarkivet.
 
-En beskrivning av de installerade Context Store-komponenterna som du kan lägga till i Context Store finns i [Tillgängliga klientkontextkomponenter](/help/sites-administering/client-context.md#available-client-context-components).
+En beskrivning av de installerade Context Store-komponenterna som du kan lägga till i Context Store finns på [Tillgängliga klientkontextkomponenter](/help/sites-administering/client-context.md#available-client-context-components).
 
 >[!NOTE]
 >
->Siddata är inte längre en standardkomponent i klientkontexten. Om det behövs kan du lägga till detta genom att redigera klientkontexten, lägga till komponenten **Egenskaper för allmän lagring** och sedan konfigurera detta för att definiera **butiken** som `pagedata`.
+>Siddata är inte längre en standardkomponent i klientkontexten. Om det behövs kan du lägga till detta genom att redigera klientkontexten och lägga till **Egenskaper för allmänt arkiv** och sedan konfigurera detta för att definiera **Butik** as `pagedata`.
 
-### Målleverans {#targeted-content-delivery}
+### Målanpassad innehållsleverans {#targeted-content-delivery}
 
 Profilinformation används också för att leverera [riktat innehåll](/help/sites-authoring/content-targeting-touch.md).
 
-![clientcontext_](assets/clientcontext_targetedcontentdelivery.png) ![targetContentdeliveryclientcontext_targetingContentdeliverydetail](assets/clientcontext_targetedcontentdeliverydetail.png)
+![clientcontext_targetingContentDelivery](assets/clientcontext_targetedcontentdelivery.png) ![clientcontext_targetContentdeliverydetail](assets/clientcontext_targetedcontentdeliverydetail.png)
 
-## Lägger till klientkontext på en sida {#adding-client-context-to-a-page}
+## Lägga till klientkontext på en sida {#adding-client-context-to-a-page}
 
-Inkludera klientkontextkomponenten i huvudavsnittet på dina webbsidor för att aktivera klientkontext. Sökvägen för klientkontextkomponentnoden är `/libs/cq/personalization/components/clientcontext`. Om du vill ta med komponenten lägger du till följande kod i JSP-filen för sidkomponenten, som finns precis nedanför `body`-elementet på sidan:
+Inkludera klientkontextkomponenten i huvudavsnittet på dina webbsidor för att aktivera klientkontext. Sökvägen till klientkontextkomponentnoden är `/libs/cq/personalization/components/clientcontext`. Om du vill ta med komponenten lägger du till följande kod i JSP-filen för sidkomponenten, som finns precis nedanför `body` element på sidan:
 
 ```java
 <cq:include path="clientcontext" resourceType="cq/personalization/components/clientcontext"/>
@@ -121,15 +120,15 @@ Om du vill utöka klientkontexten skapar du ett sessionsarkiv och kan även visa
 
 >[!NOTE]
 >
->Om du har (eller skapar) en `JSONP`-tjänst som kan tillhandahålla data kan du helt enkelt använda kontextlagringskomponenten `JSONP` och mappa den till JSONP-tjänsten. Detta hanterar sessionsarkivet.
+>Om du har (eller skapar) en `JSONP` kan du bara använda `JSONP` Context Store-komponent och mappa den till JSONP-tjänsten. Detta hanterar sessionsarkivet.
 
-### Skapar ett sessionsarkiv {#creating-a-session-store}
+### Skapa ett sessionsarkiv {#creating-a-session-store}
 
 Skapa ett sessionsarkiv för data som du behöver lägga till i och hämta från klientkontext. I allmänhet använder du följande procedur för att skapa ett sessionsarkiv:
 
-1. Skapa en klientbiblioteksmapp som har `categories`-egenskapsvärdet `personalization.stores.kernel`. Klientkontext läser automatiskt in klientbiblioteken i den här kategorin.
+1. Skapa en klientbiblioteksmapp som har en `categories` egenskapsvärde för `personalization.stores.kernel`. Klientkontext läser automatiskt in klientbiblioteken i den här kategorin.
 
-1. Konfigurera klientbiblioteksmappen så att den är beroende av klientbiblioteksmappen `personalization.core.kernel`. Klientbiblioteket `personalization.core.kernel` tillhandahåller klientkontextens javascript-API.
+1. Konfigurera klientbiblioteksmappen så att den är beroende av `personalization.core.kernel` biblioteksmapp för klient. The `personalization.core.kernel` klientbiblioteket tillhandahåller klientkontextens javascript-API.
 
 1. Lägg till det javascript-skript som skapar och initierar sessionsarkivet.
 
@@ -137,9 +136,9 @@ Om javascript inkluderas i klientbiblioteket personalization.stores.kernel skapa
 
 >[!NOTE]
 >
->Om du skapar ett sessionsarkiv som en del av en kontextlagringskomponent, kan du alternativt placera javascript i komponentens init.js.jsp-fil. I det här fallet skapas sessionsarkivet endast om komponenten läggs till i klientkontexten.
+>Om du skapar ett sessionsarkiv som en del av en kontextlagringskomponent, kan du alternativt placera javascript i komponentens init.js.jsp-fil. I det här fallet skapas endast sessionsarkivet om komponenten läggs till i klientkontexten.
 
-#### Typer av sessionslager {#types-of-session-stores}
+#### Olika typer av sessionslager {#types-of-session-stores}
 
 Sessionsarkiv skapas och är tillgängliga under en webbläsarsession, eller lagras i webbläsarlagring eller cookies. Klientkontextens javascript-API definierar flera klasser som representerar båda typerna av datalager:
 
@@ -154,7 +153,7 @@ API:t innehåller även tillägg för dessa klasser som är specialiserade för 
 
 #### Skapar objektet för sessionsarkivet {#creating-the-session-store-object}
 
-JavaScript-skriptet för klientbiblioteksmappen skapar och initierar sessionsarkivet. Sessionsarkivet måste sedan registreras med Context Store Manager. I följande exempel skapas och registreras ett [CQ_Analytics.SessionStore](/help/sites-developing/ccjsapi.md#cq-analytics-sessionstore)-objekt.
+JavaScript-skriptet för klientbiblioteksmappen skapar och initierar sessionsarkivet. Sessionsarkivet måste sedan registreras med Context Store Manager. I följande exempel skapas och registreras en [CQ_Analytics.SessionStore](/help/sites-developing/ccjsapi.md#cq-analytics-sessionstore) -objekt.
 
 ```
 //Create the session store
@@ -170,7 +169,7 @@ if (CQ_Analytics.ClientContextMgr){
 }
 ```
 
-För lagring av JSON-data skapas och registreras ett [CQ_Analytics.JSONStore](/help/sites-developing/ccjsapi.md#cq-analytics-sessionstore)-objekt i följande exempel.
+För lagring av JSON-data skapas och registreras en [CQ_Analytics.JSONStore](/help/sites-developing/ccjsapi.md#cq-analytics-sessionstore) -objekt.
 
 ```
 if (!CQ_Analytics.myJSONStore) {
@@ -187,15 +186,15 @@ Skapa en kontextlagringskomponent som återger sessionsarkivdata i klientkontext
 * Ett JSP-skript för initiering av sessionsarkivet.
 * (Valfritt) En biblioteksmapp för klienten som skapar sessionsarkivet. Klientbiblioteksmappen behöver inte inkluderas om komponenten använder ett befintligt sessionsarkiv.
 
-#### Utöka de angivna komponenterna i kontextarkivet {#extending-the-provided-context-store-components}
+#### Utöka de medföljande komponenterna i Context Store {#extending-the-provided-context-store-components}
 
 AEM innehåller genericstore- och genericstoreproperties-kontextlagringskomponenter som du kan utöka. Strukturen för dina lagringsdata avgör vilken komponent du utökar:
 
-* Egenskapsvärdepar: Utöka `GenericStoreProperties`-komponenten. Den här komponenten återger automatiskt lager med egenskapspar. Flera interaktionspunkter finns:
+* Egenskapsvärdepar: Utöka `GenericStoreProperties` -komponenten. Den här komponenten återger automatiskt lager med egenskapspar. Flera interaktionspunkter finns:
 
-   * `prolog.jsp` och  `epilog.jsp`: -komponenten som gör att du kan lägga till serversidans logik före eller efter komponentåtergivningen.
+   * `prolog.jsp` och `epilog.jsp`: -komponenten som gör att du kan lägga till serversidans logik före eller efter komponentåtergivningen.
 
-* Komplexa data: Utöka `GenericStore`-komponenten. Din sessionsbutik behöver sedan en renderingsmetod som anropas varje gång komponenten behöver renderas. Återgivningsfunktionen anropas med två parametrar:
+* Komplexa data: Utöka `GenericStore` -komponenten. Din sessionsbutik behöver sedan en renderingsmetod som anropas varje gång komponenten behöver renderas. Återgivningsfunktionen anropas med två parametrar:
 
    * `@param {String} store`
 Det arkiv som ska återges
@@ -205,17 +204,17 @@ ID för den div som butiken ska återges i.
 
 >[!NOTE]
 >
->Alla klientkontextkomponenter är tillägg till antingen den allmänna lagringsplatsen eller den allmänna lagringsegenskapen. Flera exempel installeras i mappen `/libs/cq/personalization/components/contextstores`.
+>Alla klientkontextkomponenter är tillägg till antingen den allmänna lagringsplatsen eller den allmänna lagringsegenskapen. Flera exempel har installerats i `/libs/cq/personalization/components/contextstores` mapp.
 
-#### Konfigurera Utseende i Sidekick {#configuring-the-appearance-in-sidekick}
+#### Konfigurera utseende i Sidekick {#configuring-the-appearance-in-sidekick}
 
-När du redigerar klientkontext visas kontextlagringskomponenter i Sidekick. Precis som för alla komponenter avgör egenskaperna `componentGroup` och `jcr:title` för klientkontextkomponenten gruppen gruppen och namnet på komponenten.
+När du redigerar klientkontext visas kontextlagringskomponenter i Sidekick. Precis som för alla komponenter finns `componentGroup` och `jcr:title` klientkontextkomponentens egenskaper bestämmer komponentens grupp och namn.
 
-Alla komponenter som har `componentGroup`-egenskapsvärdet `Client Context` visas som standard i Sidespark. Om du använder ett annat värde för egenskapen `componentGroup` måste du lägga till komponenten manuellt i Sidekick i designläge.
+Alla komponenter som har en `componentGroup` egenskapsvärde för `Client Context` visas som standard i Sidekick. Om du använder ett annat värde för `componentGroup` måste du manuellt lägga till komponenten i Sidekick i designläge.
 
 #### Context Store-komponentinstanser {#context-store-component-instances}
 
-När du lägger till en kontextlagringskomponent i klientkontexten skapas en nod som representerar komponentinstansen nedanför `/etc/clientcontext/default/content/jcr:content/stores`. Den här noden innehåller egenskapsvärden som har konfigurerats med komponentens redigeringsdialogruta.
+När du lägger till en kontextlagringskomponent i klientkontexten skapas en nod som representerar komponentinstansen nedan `/etc/clientcontext/default/content/jcr:content/stores`. Den här noden innehåller egenskapsvärden som har konfigurerats med komponentens redigeringsdialogruta.
 
 När klientkontexten initieras bearbetas dessa noder.
 
@@ -225,7 +224,7 @@ Lägg till en init.js.jsp-fil i komponenten för att generera javascript-kod som
 
 Det javascript som genereras läggs till på sidan när klientkontext initieras vid sidinläsning på både författaren och publiceringsinstanser. Denna JSP körs innan kontextlagringskomponentinstansen läses in och återges.
 
-Koden måste ange mime-typen för filen till `text/javascript`, annars körs den inte.
+Koden måste ange mime-typen för filen till `text/javascript`, eller så körs den inte.
 
 >[!CAUTION]
 >
@@ -234,7 +233,7 @@ Koden måste ange mime-typen för filen till `text/javascript`, annars körs den
 Följande procedur skapar init.js.jsp-skriptfilen och lägger till koden som anger rätt MIME-typ. Koden som utför butiksinitieringen följer.
 
 1. Högerklicka på kontextlagringskomponentnoden och klicka på Skapa > Skapa fil.
-1. Skriv `init.js.jsp` i fältet Namn och klicka sedan på OK.
+1. I fältet Namn skriver du `init.js.jsp` och klicka sedan på OK.
 1. Lägg till följande kod högst upp på sidan och klicka sedan på Spara alla.
 
    ```java
@@ -245,9 +244,9 @@ Följande procedur skapar init.js.jsp-skriptfilen och lägger till koden som ang
 
 Visa sessionsarkivdata i klientkontext i ett konsekvent format.
 
-#### Visar egenskapsdata {#displaying-property-data}
+#### Visa egenskapsdata {#displaying-property-data}
 
-Personaliseringstagglib innehåller taggen `personalization:storePropertyTag` som visar värdet för en egenskap från ett sessionsarkiv. Om du vill använda taggen inkluderar du följande kodrad i JSP-filen:
+Personaliseringstaglib tillhandahåller `personalization:storePropertyTag` -tagg som visar värdet för en egenskap från ett sessionsarkiv. Om du vill använda taggen inkluderar du följande kodrad i JSP-filen:
 
 ```xml
 <%@taglib prefix="personalization" uri="https://www.day.com/taglibs/cq/personalization/1.0" %>
@@ -259,15 +258,15 @@ Taggen har följande format:
 <personalization:storePropertyTag propertyName="property_name" store="session_store_name"/>
 ```
 
-Attributet `propertyName` är namnet på den lagringsegenskap som ska visas. Attributet `store` är namnet på det registrerade arkivet. I följande exempeltagg visas värdet för egenskapen `authorizableId` i `profile`-butiken:
+The `propertyName` attribute is the name of the store property to display. The `store` attribute är namnet på det registrerade arkivet. Följande exempeltagg visar värdet för `authorizableId` egenskapen för `profile` butik:
 
 ```xml
 <personalization:storePropertyTag propertyName="authorizableId" store="profile"/>
 ```
 
-#### HTML-struktur {#html-structure}
+#### HTML struktur {#html-structure}
 
-Klientbiblioteksmappen personalization.ui (/etc/clientlibs/foundation/personalization/ui/themes/default) innehåller de CSS-format som används i Client Context för att formatera HTML-koden. I följande kod visas den föreslagna strukturen som används för att visa butiksdata:
+Klientbiblioteksmappen personalization.ui (/etc/clientlibs/foundation/personalization/ui/themes/default) innehåller CSS-formaten som används i Client Context för att formatera HTML-koden. I följande kod visas den föreslagna strukturen som används för att visa butiksdata:
 
 ```xml
 <div class="cq-cc-store">
@@ -294,7 +293,7 @@ Klientbiblioteksmappen personalization.ui (/etc/clientlibs/foundation/personaliz
 </div>
 ```
 
-Komponenten `/libs/cq/personalization/components/contextstores/profiledata` för kontextarkivet använder den här strukturen för att visa data från profilens sessionsarkiv. Klassen `cq-cc-thumbnail` placerar miniatyrbilden. Klasserna `cq-cc-store-property-level*x*` formaterar alfanumeriska data:
+The `/libs/cq/personalization/components/contextstores/profiledata` kontextlagringskomponenten använder den här strukturen för att visa data från profilens sessionsarkiv. The `cq-cc-thumbnail` -klassen placerar miniatyrbilden. The `cq-cc-store-property-level*x*` klasserna formaterar alfanumeriska data:
 
 * level0, level1 och level2 fördelas lodrätt och ett vitt teckensnitt används.
 * level3 och eventuella ytterligare nivåer fördelas vågrätt och ett vitt teckensnitt används med mörkare bakgrund.
@@ -310,7 +309,7 @@ Om du vill återge butiksdata med en genericstore-komponent måste du:
 
 #### Identifiera genericstore-sessionsarkivet {#identifying-the-genericstore-session-store}
 
-Personaliseringstagglib innehåller taggen `personalization:storePropertyTag` som visar värdet för en egenskap från ett sessionsarkiv. Om du vill använda taggen inkluderar du följande kodrad i JSP-filen:
+Personaliseringstaglib tillhandahåller `personalization:storePropertyTag` -tagg som visar värdet för en egenskap från ett sessionsarkiv. Om du vill använda taggen inkluderar du följande kodrad i JSP-filen:
 
 ```xml
 <%@taglib prefix="personalization" uri="https://www.day.com/taglibs/cq/personalization/1.0" %>
@@ -322,24 +321,22 @@ Taggen har följande format:
 <personalization:storeRendererTag store="store_name"/>
 ```
 
-#### Implementera återgivningsmetoden {#implementing-the-session-store-renderer-method} för sessionslagringen
+#### Implementera återgivningsmetoden för sessionslager {#implementing-the-session-store-renderer-method}
 
 Din sessionsbutik behöver sedan en renderingsmetod som anropas varje gång komponenten behöver renderas. Återgivningsfunktionen anropas med två parametrar:
 
-* @param {String} store
-Det arkiv som ska återges
-* @param {String} divId
-ID för den div som butiken ska återges i.
+* @param {String} store The store to render
+* @param {String} divId för den div som arkivet ska återges i.
 
-## Samverka med sessionslager {#interacting-with-session-stores}
+## Interagera med sessionslager {#interacting-with-session-stores}
 
 Använd javascript för att interagera med sessionslager.
 
 ### Åtkomst till sessionslager {#accessing-session-stores}
 
-Hämta ett sessionsarkivobjekt för att läsa eller skriva data till arkivet. [CQ_Analytics.](/help/sites-developing/ccjsapi.md#cq-analytics-clientcontextmgr) ClientContextMgrger åtkomst till butiker baserat på butiksnamnet. Använd metoderna i [CQ_Analytics.SessionStore](/help/sites-developing/ccjsapi.md#cq-analytics-sessionstore) eller [CQ_Analytics.PersistedSessionStore](/help/sites-developing/ccjsapi.md#cq-analytics-persistedsessionstore) när du har hämtat data för att interagera med lagringsdata.
+Hämta ett sessionsarkivobjekt för att läsa eller skriva data till arkivet. [CQ_Analytics.ClientContextMgr](/help/sites-developing/ccjsapi.md#cq-analytics-clientcontextmgr) ger åtkomst till butiker baserat på butiksnamnet. Använd metoderna i [CQ_Analytics.SessionStore](/help/sites-developing/ccjsapi.md#cq-analytics-sessionstore) eller [CQ_Analytics.PersistedSessionStore](/help/sites-developing/ccjsapi.md#cq-analytics-persistedsessionstore) för att interagera med butiksdata.
 
-Följande exempel hämtar arkivet `profile` och hämtar sedan egenskapen `formattedName` från arkivet.
+Följande exempel hämtar `profile` lagra och sedan hämta `formattedName` från butiken.
 
 ```
 function getName(){
@@ -352,13 +349,13 @@ function getName(){
 }
 ```
 
-### Skapa en avlyssnare som ska reagera på en sessionsarkivuppdatering {#creating-a-listener-to-react-to-a-session-store-update}
+### Skapa en avlyssnare som ska reagera på en uppdatering av ett sessionsarkiv {#creating-a-listener-to-react-to-a-session-store-update}
 
 Sessionen lagrar brandhändelser, så det är möjligt att lägga till avlyssnare och utlösa händelser baserat på dessa händelser.
 
-Sessionsarkiven bygger på mönstret `Observable`. De utökar [ `CQ_Analytics.Observable`](/help/sites-developing/ccjsapi.md#cq-analytics-observable) som innehåller metoden ` [addListener](/help/sites-developing/ccjsapi.md#addlistener-event-fct-scope)`.
+Sessionsbutikerna bygger på `Observable` mönster. De utökar [ `CQ_Analytics.Observable`](/help/sites-developing/ccjsapi.md#cq-analytics-observable) som innehåller ` [addListener](/help/sites-developing/ccjsapi.md#addlistener-event-fct-scope)` -metod.
 
-I följande exempel läggs en avlyssnare till i `update`-händelsen i `profile`-sessionsarkivet.
+I följande exempel läggs en avlyssnare till i `update` händelsen `profile` sessionsarkiv.
 
 ```
 var profileStore = ClientContextMgr.getRegisteredStore("profile");
@@ -384,13 +381,13 @@ Sessionsarkiv är inte tillgängliga förrän de har lästs in och initierats me
 * Svarstider för XHR-begäranden
 * Dynamiska ändringar i sessionsarkivet
 
-Använd [CQ_Analytics.ClientContextUtils](/help/sites-developing/ccjsapi.md#cq-analytics-clientcontextutils)-objektets [onStoreRegistered](/help/sites-developing/ccjsapi.md#onstoreregistered-storename-callback)- och [onStoreInitialized](/help/sites-developing/ccjsapi.md#onstoreinitialized-storename-callback-delay)-metoder för att komma åt sessionsarkiv endast när de är tillgängliga. Med dessa metoder kan du registrera händelseavlyssnare som reagerar på sessionens registrerings- och initieringshändelser.
+Använd [CQ_Analytics.ClientContextUtils](/help/sites-developing/ccjsapi.md#cq-analytics-clientcontextutils) objektets [onStoreRegistered](/help/sites-developing/ccjsapi.md#onstoreregistered-storename-callback) och [onStoreInitialized](/help/sites-developing/ccjsapi.md#onstoreinitialized-storename-callback-delay) metoder för att komma åt sessionsarkiv endast när de är tillgängliga. Med dessa metoder kan du registrera händelseavlyssnare som reagerar på sessionens registrerings- och initieringshändelser.
 
 >[!CAUTION]
 >
 >Om du är beroende av en annan butik måste du ta hänsyn till när butiken aldrig registreras.
 
-I följande exempel används händelsen `onStoreRegistered` i `profile`-sessionsarkivet. När arkivet har registrerats läggs en avlyssnare till i händelsen `update` i sessionsarkivet. När arkivet uppdateras uppdateras innehållet i `<div class="welcome">`-elementet på sidan med namnet från `profile`-arkivet.
+I följande exempel används `onStoreRegistered` händelsen `profile` sessionsarkiv. När arkivet är registrerat läggs en avlyssnare till i `update` -händelse för sessionsarkivet. När butiken uppdateras är innehållet i `<div class="welcome">` -elementet på sidan uppdateras med namnet från `profile` butik.
 
 ```
 //listen for the store registration
@@ -418,9 +415,9 @@ function getName(){
 }
 ```
 
-### Exkludera en egenskap från sessionpersistence-cookien {#excluding-a-property-from-the-sessionpersistence-cookie}
+### Exkludera en egenskap från sessionpersistence Cookie {#excluding-a-property-from-the-sessionpersistence-cookie}
 
-Om du vill förhindra att en egenskap för `PersistedSessionStore` blir beständig (d.v.s. utelämnar den från cookien `sessionpersistence`) lägger du till egenskapen i listan över icke beständiga egenskaper för det beständiga sessionsarkivet.
+Förhindra en egenskap hos en `PersistedSessionStore` från att bli beständig (dvs. utelämna den från `sessionpersistence` cookie) lägger du till egenskapen i listan över icke-beständiga egenskaper i det beständiga sessionsarkivet.
 
 Se ` [CQ_Analytics.PersistedSessionStore.setNonPersisted(propertyName)](/help/sites-developing/ccjsapi.md#setnonpersisted-name)`
 
@@ -433,18 +430,18 @@ CQ_Analytics.ClientContextUtils.onStoreRegistered("surferinfo", function(store) 
 });
 ```
 
-## Konfigurera enhetsreglaget {#configuring-the-device-slider}
+## Konfigurera enhetens skjutreglage {#configuring-the-device-slider}
 
 ### Villkor {#conditions}
 
-Den aktuella sidan måste ha en motsvarande mobilsida. detta bestäms endast om sidan har en LiveCopy konfigurerad med en mobil rollout-konfiguration ( `rolloutconfig.path.toLowerCase` innehåller `mobile`).
+Den aktuella sidan måste ha en motsvarande mobilsida. detta bestäms endast om sidan har en LiveCopy konfigurerad med en mobil utrullningskonfiguration ( `rolloutconfig.path.toLowerCase` innehåller `mobile`).
 
 #### Konfiguration {#configuration}
 
 När du växlar från skrivbordssidan till dess mobila motsvarighet:
 
 * DOM för mobilsidan läses in.
-* Huvudsidan `div` (krävs) som innehåller innehållet extraheras och injiceras på den aktuella skrivbordssidan.
+* Huvuddelen `div` (obligatoriskt) som innehåller innehållet extraheras och injiceras på den aktuella skrivbordssidan.
 
 * CSS- och body-klasserna som måste läsas in måste konfigureras manuellt.
 
@@ -489,14 +486,14 @@ I det här exemplet skapar du en kontextlagringskomponent som hämtar data från
 * Anropar en JSONP-tjänst för att hämta data och lägga till dem i arkivet.
 * Återger data i klientkontexten.
 
-### Lägg till den geoloc-komponenten {#add-the-geoloc-component}
+### Lägg till geoloc-komponenten {#add-the-geoloc-component}
 
 Skapa ett CQ-program och lägg till den geologiska komponenten.
 
 1. Öppna CRXDE Lite i webbläsaren ([https://localhost:4502/crx/de](https://localhost:4502/crx/de)).
-1. Högerklicka på mappen `/apps` och klicka på Skapa > Skapa mapp. Ange namnet `myapp` och klicka sedan på OK.
-1. Skapa på liknande sätt en mapp med namnet `contextstores` under `myapp`. &quot;
-1. Högerklicka på mappen `/apps/myapp/contextstores` och klicka på Skapa > Skapa komponent. Ange följande egenskapsvärden och klicka på Nästa:
+1. Högerklicka på `/apps` och klicka på Skapa > Skapa mapp. Ange ett namn på `myapp` och klicka sedan på OK.
+1. På samma sätt nedan `myapp`, skapa en mapp med namnet `contextstores`. &quot;
+1. Högerklicka på `/apps/myapp/contextstores` och klicka på Skapa > Skapa komponent. Ange följande egenskapsvärden och klicka på Nästa:
 
    * Etikett: geoloc
    * Titel: Platsarkiv
@@ -506,19 +503,19 @@ Skapa ett CQ-program och lägg till den geologiska komponenten.
 1. I dialogrutan Skapa komponent klickar du på Nästa på varje sida tills knappen OK är aktiverad och sedan på OK.
 1. Klicka på Spara alla.
 
-### Skapa den geoloc-redigeringsdialogrutan {#create-the-geoloc-edit-dialog}
+### Skapa den geologiska redigeringsdialogrutan {#create-the-geoloc-edit-dialog}
 
 Kontextlagringskomponenten kräver en redigeringsdialogruta. Dialogrutan för geologisk redigering innehåller ett statiskt meddelande som anger att det inte finns några egenskaper att konfigurera.
 
-1. Högerklicka på noden `/libs/cq/personalization/components/contextstores/genericstoreproperties/dialog` och klicka på Kopiera.
-1. Högerklicka på noden `/apps/myapp/contextstores/geoloc` och klicka på Klistra in.
+1. Högerklicka på `/libs/cq/personalization/components/contextstores/genericstoreproperties/dialog` och klicka på Kopiera.
+1. Högerklicka på `/apps/myapp/contextstores/geoloc` och klicka på Klistra in.
 1. Ta bort alla underordnade noder under noden /apps/myapp/contextstores/geoloc/dialog/items/items/tab1/items:
 
    * store
    * egenskaper
    * miniatyrbild
 
-1. Högerklicka på noden `/apps/myapp/contextstores/geoloc/dialog/items/items/tab1/items` och klicka på Skapa > Skapa nod. Ange följande egenskapsvärden och klicka på OK:
+1. Högerklicka på `/apps/myapp/contextstores/geoloc/dialog/items/items/tab1/items` och klicka på Skapa > Skapa nod. Ange följande egenskapsvärden och klicka på OK:
 
    * Namn: static
    * Typ: cq:Widget
@@ -559,13 +556,13 @@ init.js.jsp-filen körs när klientkontexten läses in av sidan. Nu är klientko
    <% log.info(" ***** done initializing geoloc ************"); %>
    ```
 
-### Återge data för det geoloc sessionsarkivet {#render-the-geoloc-session-store-data}
+### Återge data för den geoloc Session Store {#render-the-geoloc-session-store-data}
 
 Lägg till koden i JSP-filen för den geologiska komponenten för att återge lagringsdata i klientkontexten.
 
 ![chlimage_1-6](assets/chlimage_1-6.png)
 
-1. Öppna filen `/apps/myapp/contextstores/geoloc/geoloc.jsp` i CRXDE Lite.
+1. Öppna CRXDE Lite i `/apps/myapp/contextstores/geoloc/geoloc.jsp` -fil.
 1. Lägg till följande HTML-kod under stub-koden:
 
    ```xml
@@ -598,7 +595,7 @@ Lägg till koden i JSP-filen för den geologiska komponenten för att återge la
 
 Lägg till komponenten Location Store i klientkontexten så att den initieras när sidan läses in.
 
-1. Öppna startsidan för Geometrixx Outdoors på författarinstansen ([https://localhost:4502/content/geometrixx-outdoors/en.html](https://localhost:4502/content/geometrixx-outdoors/en.html)).
+1. Öppna Geometrixx Outdoors hemsida på författarinstansen ([https://localhost:4502/content/geometrixx-outdoors/en.html](https://localhost:4502/content/geometrixx-outdoors/en.html)).
 1. Klicka på Ctrl-Alt-c (Windows) eller Ctrl-Option-c (Mac) för att öppna Klientkontext.
 1. Klicka på redigeringsikonen högst upp i klientkontexten för att öppna Client Context Designer.
 

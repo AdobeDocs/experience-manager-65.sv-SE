@@ -1,22 +1,21 @@
 ---
 title: Innehållsfunktion
-seo-title: Innehållsfunktion
+seo-title: Featured Content Feature
 description: Funktionen Aktuellt innehåll gör att besökare på den inloggade webbplatsen kan markera innehåll
-seo-description: Funktionen Aktuellt innehåll gör att besökare på den inloggade webbplatsen kan markera innehåll
+seo-description: The Featured Content feature lets signed-in site visitors highlight content
 uuid: 7a2ff570-01bb-46fb-8d66-3b47e2efa72e
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: authoring
 content-type: reference
 discoiquuid: ee39435d-80f5-4758-ae01-1ea0d221b00b
-translation-type: tm+mt
-source-git-commit: a8b1ad0fcd2ca9c7fe3117dd8bd161da82d13e8a
+exl-id: 76b76e0e-531b-4f80-be70-68532ef81a7f
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '339'
+source-wordcount: '326'
 ht-degree: 1%
 
 ---
-
 
 # Innehållsfunktion {#featured-content-feature}
 
@@ -37,25 +36,25 @@ Möjligheten att använda innehåll kan vara tillåten eller otillåten per komp
 I det här avsnittet av dokumentationen beskrivs:
 
 * Lägga till aktuellt innehåll på en communitywebbplats.
-* Konfigurationsinställningar för komponenten `Featured Content`.
+* Konfigurationsinställningar för `Featured Content` -komponenten.
 
 ## Lägga till innehåll på en sida {#adding-featured-content-to-a-page}
 
-Om du vill lägga till en `Featured Content`-komponent på en sida i redigeringsläge använder du komponentwebbläsaren för att leta reda på
+Lägga till en `Featured Content` -komponent till en sida i redigeringsläge använder du komponentwebbläsaren för att leta upp
 
 * `Communities / Featured Content`
 
 och dra den till rätt plats på en sida där det aktuella innehållet ska visas.
 
-Mer information finns på [Grunderna för communitykomponenter](basics.md).
+Nödvändig information finns på [Grunderna för communitykomponenter](basics.md).
 
-När de [nödvändiga klientbiblioteken](essentials-featured.md#essentials-for-client-side) inkluderas visas `Featured Content`-komponenten så här:
+När [nödvändiga bibliotek på klientsidan](essentials-featured.md#essentials-for-client-side) ingår så här `Featured Content` visas:
 
 ![funktionsinnehåll](assets/featuredcontent.png)
 
-## Konfigurerar aktuellt innehåll {#configuring-featured-content}
+## Konfigurera aktuellt innehåll {#configuring-featured-content}
 
-Markera den monterade `Featured Content`-komponenten som ska öppnas och välj ikonen `Configure` som öppnar redigeringsdialogrutan.
+Markera den monterade `Featured Content` -komponenten som ska få åtkomst till och markera `Configure` som öppnar redigeringsdialogrutan.
 
 ![configure-new](assets/configure-new.png)
 
@@ -63,15 +62,15 @@ Markera den monterade `Featured Content`-komponenten som ska öppnas och välj i
 
 ### Fliken Inställningar {#settings-tab}
 
-Under fliken **[!UICONTROL Settings]** identifierar du innehållet som ska visas:
+Under **[!UICONTROL Settings]** identifierar du innehållet som ska visas:
 
 * **[!UICONTROL Display Name]**
 
-   Namnet på listan med aktuellt innehåll. Till exempel `Featured Questions` eller `Featured Ideas`. Standardvärdet är `Featured Content` om inget anges.
+   Namnet på listan med aktuellt innehåll. Till exempel `Featured Questions` eller `Featured Ideas`. Standard är `Featured Content` om det lämnas tomt.
 
 * **[!UICONTROL Location of the Featured Content]**
 
-   *(Obligatoriskt)* Bläddra till sidan med det innehåll som kan vara funktionellt (komponenterna på den sidan måste konfigureras för att tillåta aktuellt innehåll). Till exempel, `/content/sites/engage/en/forum`.
+   *(Obligatoriskt)* Bläddra till sidan med innehållet som kan vara en funktion (komponenterna på sidan måste vara konfigurerade för att tillåta aktuellt innehåll). Till exempel, `/content/sites/engage/en/forum`.
 
 * **[!UICONTROL Display Limit]**
 
@@ -81,13 +80,13 @@ Under fliken **[!UICONTROL Settings]** identifierar du innehållet som ska visas
 
 Möjligheten att flagga innehåll som aktuellt innehåll kräver moderatorbehörighet.
 
-När en moderator visar publicerat innehåll har de tillgång till modereringsflaggorna som innehåller den nya flaggan `Feature`.
+När en moderator visar publicerat innehåll har de tillgång till modereringsflaggorna som innehåller det nya `Feature` flagga.
 
 ![webbplats-besökare-upplevelse](assets/site-visitor-experience.png)
 
 När modellflaggan har flaggats som en funktion blir den `Unfeature`.
 
-Sidan som innehåller komponenten `Featured Content` kommer nu att innehålla det här inlägget.
+Sidan som innehåller `Featured Content` kommer nu att inkludera det här inlägget.
 
 ![site-visitor-experience1](assets/site-visitor-experience1.png)
 
@@ -95,6 +94,6 @@ Sidan som innehåller komponenten `Featured Content` kommer nu att innehålla de
 
 ## Ytterligare information {#additional-information}
 
-Mer information finns på sidan [Aktuellt innehåll](essentials-featured.md) för utvecklare.
+Mer information finns på [Innehåll](essentials-featured.md) för utvecklare.
 
-Information om hur du flaggar innehåll finns i [Moderating User Generated Content](moderate-ugc.md).
+Information om hur du flaggar innehåll finns i [Modererar användargenererat innehåll](moderate-ugc.md).

@@ -1,22 +1,21 @@
 ---
 title: Testning - när och med vem?
-seo-title: Testning - när och med vem?
+seo-title: Testing - when and with whom?
 description: Olika roller kan vara involverade i testningen och i olika faser av projektutvecklingen
-seo-description: Olika roller kan vara involverade i testningen och i olika faser av projektutvecklingen
+seo-description: Various roles can be involved in testing and at various stages of project development
 uuid: 431e8f06-80eb-4fb3-a4c7-2580608b0a1c
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: testing
 content-type: reference
 discoiquuid: 6148f8e6-ab62-4eb8-8a2d-c431b8318000
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 5a16be40-eede-4a47-b03b-3993e285232e
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '293'
+source-wordcount: '274'
 ht-degree: 0%
 
 ---
-
 
 # Testning - när och med vem?{#testing-when-and-with-whom}
 
@@ -45,10 +44,9 @@ Olika roller kan vara involverade i testningen och i olika faser av projektutvec
     <ul>
      <li><p>Ger kunden en upplevelse av det projekt som utvecklas.</p> </li>
      <li><p>Ger tidig feedback från kunden.</p> </li>
-     <li><p>Användarna uttrycker ofta sina krav i fråga om tidigare erfarenheter. om kunderna deltar i testningen så tidigt som möjligt ökar deras upplevelse av det nya projektet i form av <i>praktisk</i>-upplevelse.</p> </li>
+     <li><p>Användarna uttrycker ofta sina krav i fråga om tidigare erfarenheter. om kunderna deltar i testningen så tidigt som möjligt ökar deras upplevelse av det nya projektet i termer av <i>prydlig</i> upplevelse.</p> </li>
     </ul> </td>
    <td><p>Återigen är tidiga engagemang bra, men alla releaser som kunderna använder bör vara stabila, med rimlig funktionalitet.</p> <p>Första intrycket är alltid viktigt.</p> </td>
   </tr>
  </tbody>
 </table>
-

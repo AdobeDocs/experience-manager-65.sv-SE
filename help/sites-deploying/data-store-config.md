@@ -232,7 +232,7 @@ Du kan använda konfigurationsfilen med alternativen nedan.
 | --- | --- | --- | --- |
 | accessKey | Åtkomstnyckel-ID för IAM-användaren med åtkomst till bucket. |  | Ja, när IAM-roller inte används. |
 | secretsKey | Hemlig åtkomstnyckel för IAM-användaren med åtkomst till bucket. |  | Ja, när IAM-roller inte används. |
-| cacheSize | Storleken (i byte) på det lokala cacheminnet. | 64 GB | Nej. |
+| cacheSize | Storleken (i byte) på det lokala cacheminnet. | 64GB | Nej. |
 | connectionTimeout | Ange väntetiden (i millisekunder) före timeout när anslutningen upprättas första gången. | 10000 | Nej. |
 | maxCachedBinarySize | Binärfiler som är mindre än eller lika med det här värdet (i byte) lagras i minnescachen. | 17408 (17 kB) | Nej. |
 | maxConnections | Ange maximalt antal tillåtna öppna HTTP-anslutningar. | 50 | Nej. |

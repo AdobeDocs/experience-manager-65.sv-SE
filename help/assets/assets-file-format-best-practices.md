@@ -14,17 +14,17 @@ ht-degree: 0%
 
 # Bästa metoder för att använda filformat {#assets-file-format-best-practices}
 
-[!DNL Adobe Experience Manager Assets] har stöd för många egna och tredjepartsbibliotek för filformat för att tillgodose användarnas olika krav på filstöd. De Adobe-bibliotek som stöds är [!DNL Adobe Camera Raw], Gibson, Adobe PDF Rasterizer och [!DNL Adobe InDesign Server]. Dessutom har [!DNL Experience Manager Assets] stöd för tredjepartsbibliotek som [!DNL ImageMagick], [!DNL TwelveMonkeys] och så vidare.
+[!DNL Adobe Experience Manager Assets] har stöd för många egna och tredjepartsbibliotek för filformat för att tillgodose användarnas olika krav på filstöd. De Adobe-bibliotek som stöds omfattar [!DNL Adobe Camera Raw], Gibson, Adobe PDF Rasterizer och [!DNL Adobe InDesign Server]. Dessutom [!DNL Experience Manager Assets] stöder bibliotek från tredje part, inklusive [!DNL ImageMagick], [!DNL TwelveMonkeys]och så vidare.
 
-Information om vilka filformat som stöds finns i [Format för resurser som stöds](/help/assets/assets-formats.md).
+Information om vilka filformat som stöds finns i [Format som stöds för resurser](/help/assets/assets-formats.md).
 
 >[!TIP]
 >
->Om du använder [!DNL Experience Manager] på Adobe Managed Services (AMS) kan du kontakta Adobe kundsupport om du tänker bearbeta många stora PSD- eller PSB-filer. Samarbeta med Adobe kundsupportrepresentant för att implementera de bästa metoderna för driftsättningen av AMS och för att välja de bästa möjliga verktygen och modellerna för Adobe egna format. [!DNL Experience Manager] kan inte bearbeta PSB-filer med hög upplösning som är större än 30000 x 23000 pixlar.
+>Om du använder [!DNL Experience Manager] om du planerar att bearbeta stora PSD- eller PSB-filer på Adobe Managed Services (AMS) kan du kontakta Adobe kundsupport. Samarbeta med Adobe kundsupportrepresentant för att implementera de bästa metoderna för driftsättningen av AMS och för att välja de bästa möjliga verktygen och modellerna för Adobe egna format. [!DNL Experience Manager] kan inte bearbeta PSB-filer med hög upplösning som är större än 30000 x 23000 pixlar.
 
 ## [!DNL Adobe Camera Raw] bibliotek {#adobe-camera-raw-library}
 
-Adobe rekommenderar att du använder biblioteket [!DNL Adobe Camera Raw] för RAW- och DNG-filer för optimala prestanda.
+Adobe rekommenderar att du använder [!DNL Adobe Camera Raw] bibliotek för RAW- och DNG-filer.
 
 [!DNL Adobe Camera Raw] biblioteket stöder CMYK-färgprofil som indata. Däremot genereras utdata i färgrymden RGB och endast utdata i JPEG-format stöds. Källfilens färgrymd (till exempel CMYK) behålls inte i miniatyrbilderna.
 
@@ -42,13 +42,13 @@ Miniatyrbilder och förhandsgranskningar som genererats med PDF Rasterizer har b
 
 ## [!DNL Adobe InDesign Server] {#adobe-indesign-server}
 
-Adobe rekommenderar att du använder [!DNL Adobe InDesign Server] för att extrahera [!DNL Adobe InDesign]-specifika renderingar, som IDML och HTML. Mer information finns i [Lägga till resurser i Experience Manager som referenser i Adobe InDesign](/help/assets/managing-linked-subassets.md#refai).
+Adobe rekommenderar att du använder [!DNL Adobe InDesign Server] extrahera [!DNL Adobe InDesign]-specifika renderingar, som IDML och HTML. Mer information finns i [Lägga till Experience Manager-resurser som referenser i Adobe InDesign](/help/assets/managing-linked-subassets.md#refai).
 
 ## [!DNL Dynamic Media] {#dynamic-media}
 
-[!DNL Dynamic Media] genererar och levererar flera varianter av avancerat innehåll i realtid via sitt globala, skalbara och prestandaoptimerade nätverk. Det levererar interaktiva tittarupplevelser och effektiviserar den digitala kampanjhanteringsprocessen. Mer information om hur du aktiverar [!DNL Dynamic Media] finns i [Konfigurera Dynamic Media](/help/assets/config-dynamic.md).
+[!DNL Dynamic Media] genererar och levererar flera varianter av avancerat innehåll i realtid via sitt globala, skalbara och prestandaoptimerade nätverk. Det levererar interaktiva tittarupplevelser och effektiviserar den digitala kampanjhanteringsprocessen. Mer information om aktivering [!DNL Dynamic Media], se [Konfigurera Dynamic Media](/help/assets/config-dynamic.md).
 
-För närvarande kan [!DNL Dynamic Media] ha stöd för videoklipp med upp till 15 GB innehåll per fil.
+För närvarande [!DNL Dynamic Media] kan hantera videoklipp med upp till 15 GB innehåll per fil.
 
 ## ImageMagick Library {#imagemagick-library}
 
@@ -59,7 +59,7 @@ Adobe rekommenderar att du använder ImageMagick-biblioteket i följande scenari
 * För att bevara genomskinlighet.
 * Om du vill bearbeta PSD- och PSB-filer.
 
-Mer information om hur du konfigurerar [!DNL ImageMagick]-biblioteket i [!DNL Experience Manager] finns i [Använda ImageMagick](/help/assets/media-handlers.md#an-example-using-imagemagick). Mer information finns i [Bästa metoder för att konfigurera ImageMagick](/help/assets/best-practices-for-imagemagick.md).
+Så här konfigurerar du [!DNL ImageMagick] bibliotek i [!DNL Experience Manager], se [Använda ImageMagick](/help/assets/media-handlers.md#an-example-using-imagemagick). Optimal användning finns i [Bästa metoder för att konfigurera ImageMagick](/help/assets/best-practices-for-imagemagick.md).
 
 ## Bildomkodningsbibliotek {#image-transcoding-library}
 
@@ -75,4 +75,4 @@ Bildbiblioteket Transcoding Library har stöd för följande MIME-typer:
 * ICO
 * ICN
 
-Mer information finns i [Imaging Transcoding Library](/help/assets/imaging-transcoding-library.md).
+Mer information finns i [Konverteringsbibliotek för bildbehandling](/help/assets/imaging-transcoding-library.md).

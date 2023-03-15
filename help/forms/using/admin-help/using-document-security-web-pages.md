@@ -1,8 +1,8 @@
 ---
 title: Använda webbsidor för dokumentsäkerhet
-seo-title: Använda webbsidor för dokumentsäkerhet
+seo-title: Using the document security webpages
 description: Lär dig hur du kan logga in, navigera och använda webbsidorna för dokumentsäkerhet.
-seo-description: Lär dig hur du kan logga in, navigera och använda webbsidorna för dokumentsäkerhet.
+seo-description: Learn how you can login, navigate and use the document security web pages.
 uuid: b4863343-cda5-474a-a101-a20e39b1f8c7
 contentOwner: admin
 content-type: reference
@@ -10,14 +10,13 @@ geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 2878b145-e6c0-48d3-810c-3540de13c826
 feature: Document Security
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: caa31752-a02d-4d20-b7d9-c4aad5d0fae6
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '943'
+source-wordcount: '923'
 ht-degree: 0%
 
 ---
-
 
 # Använda webbsidor för dokumentsäkerhet {#using-the-document-security-webpages}
 
@@ -58,7 +57,7 @@ För administratörer skapas ett superadministratörskonto som standard under in
 
 >[!NOTE]
 >
->När du arbetar med webbsidor bör du undvika att använda webbläsarknapparna, som bakåtknappen, uppdateringsknappen samt bakåt- och framåtpilarna, eftersom den här åtgärden kan orsaka oönskade problem med datainhämtning och datavisning.
+>När du arbetar med webbsidor bör du undvika att använda webbläsarknapparna, t.ex. bakåtknappen, uppdateringsknappen och bakåt- och framåtpilarna eftersom den här åtgärden kan orsaka oönskad datainhämtning och problem med visningen av data.
 
 ## Navigera på webbsidorna {#navigating-the-web-pages}
 
@@ -74,7 +73,7 @@ Använd de här länkarna för att komma åt de olika sidorna, där du skapar oc
 
 **Gå tillbaka till föregående sida**
 
-1. Klicka på navigeringslänken längst upp på sidan för den sida som du vill gå tillbaka till.
+1. Klicka på navigeringslänken högst upp på sidan för den sida som du vill gå tillbaka till.
 
 **Uppdatera datalistan på en sida**
 
@@ -86,7 +85,7 @@ Använd de här länkarna för att komma åt de olika sidorna, där du skapar oc
 
 ## Konfigurera åtkomst till dokumentsäkerhet från klientprogram {#setting-up-access-to-document-security-from-client-applications}
 
-Klientprogram måste vara konfigurerade för att kunna ansluta till dokumentsäkerhet för att skydda dokument, öppna principskyddade dokument och ansluta till dokumentets säkerhetswebbsidor. Mer information om hur du konfigurerar anslutningen i klientprogrammet finns i *Acrobat Hjälp* eller *Rights ManagementExtension Help*.
+Klientprogram måste vara konfigurerade för att kunna ansluta till dokumentsäkerhet för att skydda dokument, öppna principskyddade dokument och ansluta till dokumentets säkerhetswebbsidor. Se *Hjälp om Acrobat* eller *RightsManagementExtension - hjälp* om du vill ha information om hur du konfigurerar anslutningen i klientprogrammet.
 
 Dokumentsäkerhet nås via SSL (Secure Sockets Layer). Du måste installera webbplatsens certifikat i certifikatarkivet så att du kan komma åt dokumentsäkerhet via klientprogrammen.
 
@@ -107,4 +106,3 @@ Logga ut när du är klar med webbsidorna så att du kan använda webbläsaren i
 
 1. Klicka på Logga ut i det övre högra hörnet på sidan.
 1. Om ett meddelande visas på utloggningssidan stänger du webbläsarfönstret för att logga ut helt. I annat fall kan du fortsätta att använda webbläsaren för andra syften.
-

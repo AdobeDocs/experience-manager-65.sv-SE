@@ -3,15 +3,15 @@ cloud: Experience Cloud
 product: adobe experience manager
 solution: Experience Manager, Experience Manager Sites
 audience: end-user
-user-guide-title: AEM 6.5 Deployment Guide
-breadcrumb-title: Distributionsguide
-user-guide-description: Läs mer om installation, distribution och arkitekturen för Adobe Experience Manager 6.5, inklusive vår molndistribution av Adobe Managed Services.
+user-guide-title: Användarhandbok om AEM 6.5-distribution
+breadcrumb-title: Användarhandbok om distribution
+user-guide-description: Lär dig mer om installation, distribution och arkitekturen i Adobe Experience Manager 6.5, inklusive vår molndistribution av Adobe Managed Services.
 feature: Deploying
 role: Architect
 source-git-commit: f29612ee633d2a62144b770f3c225fc82b9174f8
 workflow-type: tm+mt
 source-wordcount: '327'
-ht-degree: 1%
+ht-degree: 9%
 
 ---
 

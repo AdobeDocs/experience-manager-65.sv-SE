@@ -80,7 +80,7 @@ AEM Communities komponenter, funktioner och funktioner utgör byggstenarna för 
 * [SRP och UGC Essentials](srp-and-ugc.md) - Verktygsmetoder och exempel för SRP API
 * [Tagg Essentials](tag.md) - möjlighet för communitymedlemmar att tagga UGC- och/eller katalogaktiveringsresurser
 
-## Tutorials {#tutorials}
+## Självstudiekurser {#tutorials}
 
 * [Självstudiekurser på klientsidan](tutorials.md#client-side-customization)
 * [Självstudiekurser på serversidan](tutorials.md#server-side-customization)

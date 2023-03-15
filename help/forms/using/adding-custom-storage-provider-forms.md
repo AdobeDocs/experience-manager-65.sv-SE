@@ -1,41 +1,40 @@
 ---
 title: Anpassad lagring för utkast och inskickningskomponenter
-seo-title: Anpassad lagring för utkast och inskickningskomponenter
+seo-title: Custom storage for drafts and submissions component
 description: Se hur du kan anpassa lagring av användardata för utkast och inskickade data.
-seo-description: Se hur du kan anpassa lagring av användardata för utkast och inskickade data.
+seo-description: See how to customize the storage of user data for drafts and submissions.
 uuid: ac2e80ee-a9c7-44e6-801e-fe5a840cb7f8
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
 discoiquuid: 154255e7-468a-42e6-a33d-eee691cf854d
 feature: Forms Portal
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: b1300eeb-2653-4bb5-b2fd-88048c9c43b9
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '357'
+source-wordcount: '335'
 ht-degree: 0%
 
 ---
 
-
-# Anpassad lagring för utkast och inskickningskomponent {#custom-storage-for-drafts-and-submissions-component}
+# Anpassad lagring för utkast och inskickningskomponenter {#custom-storage-for-drafts-and-submissions-component}
 
 ## Översikt {#overview}
 
 Med AEM Forms kan du spara ett formulär som ett utkast. Med utkastsfunktionen kan du underhålla ett pågående formulär som du kan fylla i och skicka senare från vilken enhet som helst.
 
-Som standard lagrar AEM Forms användardata som är kopplade till utkastet och överföringen av ett formulär i noden `/content/forms/fp` i Publish-instansen. Dessutom innehåller AEM Forms portalkomponenter datatjänster som du kan använda för att anpassa implementeringen av lagring av användardata för utkast och inskickade data. Du kan till exempel lagra användardata i ett datalager.
+Som standard lagrar AEM Forms användardata som är kopplade till utkastet och inskickandet av ett formulär i `/content/forms/fp` på Publish-instansen. Dessutom innehåller AEM Forms portalkomponenter datatjänster som du kan använda för att anpassa implementeringen av lagring av användardata för utkast och inskickade data. Du kan till exempel lagra användardata i ett datalager.
 
 ## Förutsättningar  {#prerequisites}
 
-* Aktivera [komponenter i formulärportalen](/help/forms/using/enabling-forms-portal-components.md)
+* Aktivera [formulärportalkomponenter](/help/forms/using/enabling-forms-portal-components.md)
 * Skapa en [formulärportalsida](/help/forms/using/creating-form-portal-page.md)
-* Aktivera [adaptiva formulär för formulärportalen](/help/forms/using/draft-submission-component.md)
+* Aktivera [anpassningsbara formulär för formulärportalen](/help/forms/using/draft-submission-component.md)
 * Lär dig [implementeringsinformation för anpassad lagring](/help/forms/using/draft-submission-component.md#customizing-the-storage)
 
 ## Utkastdatatjänst {#draft-data-service}
 
-Om du vill anpassa lagring av användardata för utkast måste du implementera alla metoder i `DraftDataService`-gränssnittet. I följande exempelkod beskrivs metoderna och argumenten.
+Om du vill anpassa lagring av användardata för utkast måste du implementera alla metoder i `DraftDataService` gränssnitt. I följande exempelkod beskrivs metoderna och argumenten.
 
 ```java
 /**
@@ -104,7 +103,7 @@ public interface DraftDataService {
 
 ## Datatjänst för överföring {#submission-data-service}
 
-Om du vill anpassa lagringen av användardata för överföringar måste du implementera alla metoder i `SubmitDataService`-gränssnittet. I följande exempelkod beskrivs metoderna och argumenten.
+Om du vill anpassa lagringen av användardata för insändning måste du implementera alla metoder i `SubmitDataService` gränssnitt. I följande exempelkod beskrivs metoderna och argumenten.
 
 ```java
 /**
@@ -214,4 +213,3 @@ Om du vill använda ovanstående kommentar importerar du följande till ditt pro
 import org.apache.felix.scr.annotations.Properties;
 import org.apache.felix.scr.annotations.Property;
 ```
-

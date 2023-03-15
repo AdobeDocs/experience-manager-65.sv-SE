@@ -1,8 +1,8 @@
 ---
 title: Omstrukturering av lager i AEM 6.5
-seo-title: Omstrukturering av lager i AEM 6.5
+seo-title: Repository Restructuring in AEM 6.5
 description: Läs mer om grunderna och resonemanget bakom omstruktureringen av databasen i AEM 6.5
-seo-description: Läs mer om grunderna och resonemanget bakom omstruktureringen av databasen i AEM 6.5
+seo-description: Learn about the basics and reasoning behind the repository restructuring in AEM 6.5
 uuid: e9cd3e88-e352-44a8-9b97-69488d3267cb
 contentOwner: chaikels
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,14 +10,13 @@ content-type: reference
 topic-tags: repo_restructuring
 discoiquuid: fc879b0b-823b-4bdc-aaa6-36f53a33fb22
 feature: Upgrading
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 2572aa8d-2a3a-4e5b-ae5f-07e1017ea0f4
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '551'
+source-wordcount: '534'
 ht-degree: 0%
 
 ---
-
 
 # Omstrukturering av lager i AEM 6.5{#repository-restructuring-in-aem}
 
@@ -27,12 +26,12 @@ Före AEM 6.4 driftsattes kundkoden i oförutsägbara områden av JCR som kunde 
 
 Genom att tydligt definiera hierarkier för AEM produktkod och kundkod kan dessa konflikter undvikas.
 
-Med början i AEM 6.4 och som kommer att fortsätta i framtida versioner struktureras innehållet därför om från /etc till andra mappar i databasen, tillsammans med riktlinjer om vilket innehåll som ska placeras, enligt följande högnivåregler:
+Med början i AEM 6.4 och som kommer att fortsätta i framtida versioner struktureras innehållet därför om från /etc till andra mappar i databasen, tillsammans med riktlinjer för vilket innehåll som ska placeras, enligt följande högnivåregler:
 
 * AEM produktkod placeras alltid i /libs, som inte får skrivas över av anpassad kod
 * Anpassad kod ska placeras i /apps, /content och /conf
 
-## Påverkan på 6.5 uppgraderingar {#impact-on-upgrades}
+## Inverkan på 6.5-uppgraderingar {#impact-on-upgrades}
 
 När du uppgraderar till AEM 6.5 dupliceras en stor delmängd av innehållet under /etc i andra mappar i databasen. Dessa nya platser är de populäraste platser där innehållet refereras. Alla försök har dock gjorts att AEM 6.5-uppgraderingen ska vara bakåtkompatibel med de tidigare platserna i mappen /etc, och i de flesta fall kommer den gamla platsen att refereras av AEM tills ändringar görs aktivt - och i många fall manuellt - i kundens applikation. Från tidslinjeperspektiv finns det två typer av ändringar:
 
@@ -51,6 +50,6 @@ Vid planering av en uppgradering till AEM 6.5 ska följande sidor per lösning r
 * [Omstrukturering av AEM Communities-arkiv](/help/sites-deploying/communities-repository-restructuring-in-aem-6-5.md)
 * [Omstrukturering av AEM handelslager](/help/sites-deploying/ecommerce-repository-restructuring-in-aem-6-5.md)
 
-Varje sida innehåller två avsnitt som motsvarar hur angelägna ändringarna är. Allt under&quot;Med 6.5-uppgradering&quot; ska hanteras som en del av uppgraderingsprojektet för AEM 6.5. Om du vill kan du skjuta upp allt under&quot;Före framtida uppgradering&quot; till efter uppgraderingen.
+Varje sida innehåller två avsnitt som motsvarar hur brådskande de nödvändiga ändringarna är. Allt under&quot;Med 6.5-uppgradering&quot; ska hanteras som en del av uppgraderingsprojektet för AEM 6.5. Om du vill kan du skjuta upp allt under&quot;Före framtida uppgradering&quot; till efter uppgraderingen.
 
 Varje post på sidan innehåller ett fält för&quot;vägledning om omstrukturering&quot;, som beskriver den rekommenderade tekniska strategin för anpassning till den nya 6.5-databasmodellen så att det refereras till de nya platserna för innehåll som tidigare fanns under mappen /etc. Ett extra&quot;Anteckningsfält&quot; ger ytterligare användbar kontext.

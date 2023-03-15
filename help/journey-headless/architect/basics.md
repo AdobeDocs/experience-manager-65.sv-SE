@@ -1,7 +1,8 @@
 ---
 title: Lär dig grunderna i innehållsmodellering
 description: Lär dig grunderna i att modellera innehåll för headless CMS med hjälp av innehållsfragment.
-source-git-commit: 38525b6cc14e9f6025564c060b8cfb4f9e0ea473
+exl-id: a53fef09-6495-4bb7-8df1-ba3c113d88f6
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
 source-wordcount: '905'
 ht-degree: 2%
@@ -42,9 +43,9 @@ Innehållsmodellens struktur är:
 
 >[!NOTE]
 >
->Modellerna för innehållsfragment används också som bas för AEM GraphQL-scheman, som används för att hämta ditt innehåll - mer om det på Developer Journey.
+>Modellerna för innehållsfragment används också som bas för de AEM GraphQL-scheman som används för att hämta ditt innehåll - mer om det på Developer Journey.
 
-Begäranden om ditt innehåll görs med AEM GraphQL API, en anpassad implementering av standard-API:t GraphQL. Med AEM GraphQL API kan program utföra (komplexa) frågor på dina innehållsfragment, där varje fråga följer en viss modelltyp.
+Begäranden om ditt innehåll görs med AEM GraphQL API, en anpassad implementering av GraphQL standard-API. Med AEM GraphQL API kan program utföra (komplexa) frågor på dina innehållsfragment, där varje fråga anpassas efter en viss modelltyp.
 
 Det returnerade innehållet kan sedan användas av dina program.
 

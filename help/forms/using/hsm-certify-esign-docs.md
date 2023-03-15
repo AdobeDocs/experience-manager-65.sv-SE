@@ -1,22 +1,21 @@
 ---
 title: Använd HSM för att digitalt signera eller certifiera dokument
-seo-title: Använd HSM för att certifiera e-signerade dokument
+seo-title: Use HSM to certify eSigned documents
 description: Använd HSM- eller tokenenheter för att certifiera e-signerade dokument
-seo-description: Använd HSM- eller tokenenheter för att certifiera e-signerade dokument
+seo-description: Use HSM or etoken devices to certify eSigned documents
 uuid: bbe057c1-6150-41f9-9c82-4979d31d305d
 contentOwner: vishgupt
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
 discoiquuid: 536bcba4-b754-4799-b0d2-88960cc4c44a
-translation-type: tm+mt
-source-git-commit: 35b2c9c8c79b3cc3d81e0b92ea17cd7d599fa7ee
+exl-id: 4d423881-18e0-430a-849d-e1762366a849
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1010'
+source-wordcount: '995'
 ht-degree: 0%
 
 ---
-
 
 # Använd HSM för att digitalt signera eller certifiera dokument {#use-hsm-to-digitally-sign-or-certify-documents}
 
@@ -31,10 +30,10 @@ Adobe Experience Manager Forms kan använda inloggningsuppgifter som lagrats på
 
 ## Innan du konfigurerar HSM- eller tokenenheter med AEM Forms {#configurehsmetoken}
 
-* Installera [AEM Forms-tilläggspaketet](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html).
+* Installera [AEM Forms-tillägg](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) paket.
 * Installera och konfigurera HSM- eller tokenklientprogramvara på samma dator som AEM server. Klientprogramvaran krävs för att kommunicera med HSM- och tokenenheterna.
 * (Endast Microsoft Windows) Ställ in miljövariabeln JAVA_HOME_32 så att den pekar på den katalog där 32-bitarsversionen av Java 8 Development Kit (JDK 8) är installerad. Standardsökvägen för katalogen är C:\Program Files(x86)\Java\jdk&lt;version>
-* (Endast AEM Forms på OSGi) Installera rotcertifikatet i förtroendearkivet. Du måste verifiera den signerade PDF-filen
+* (Endast AEM Forms på OSGi) Installera rotcertifikatet i förtroendearkivet. Du måste verifiera den signerade PDF
 
 >[!NOTE]
 >
@@ -46,11 +45,11 @@ Tjänsten DocAssurance är inte aktiverad som standard. Aktivera tjänsten genom
 
 1. Stoppa författarinstansen av din AEM Forms-miljö.
 
-1. Öppna filen [AEM_root]\crx-quickstart\conf\sling.properties för redigering.
+1. Öppna [AEM_root]\crx-quickstart\conf\sling.properties fil för redigering.
 
    >[!NOTE]
    >
-   >Om du har använt filen [AEM_root]\crx-quickstart\bin\start.bat för att starta den AEM instansen öppnar du filen [AEM_root]\crx-quickstart\sling.properties för redigering.
+   >Om du har använt [AEM_root]\crx-quickstart\bin\start.bat fil för att starta AEM instans och öppna sedan [AEM_root]\crx-quickstart\sling.properties file for editing.
 
 1. Lägg till eller ersätt följande egenskaper i sling.properties-filen:
 
@@ -63,33 +62,33 @@ Tjänsten DocAssurance är inte aktiverad som standard. Aktivera tjänsten genom
 1. Spara och stäng filen sling.properties.
 1. Starta om AEM.
 
-## Konfigurera certifikat för Reader-tillägg {#set-up-certificates-for-reader-extensions}
+## Konfigurera certifikat för tillägg i Reader {#set-up-certificates-for-reader-extensions}
 
 Utför följande steg för att konfigurera certifikat:
 
 1. Logga in på AEM Author-instansen som administratör.
 
-1. Klicka på&#x200B;**Adobe Experience Manager** i det globala navigeringsfältet. Gå till **Verktyg** > **Säkerhet** > **Användare**.
-1. Klicka på fältet **namn** för användarkontot. Sidan **Redigera användarinställningar** öppnas.
-1. På AEM Author-instansen finns certifikat i KeyStore. Om du inte har skapat en KeyStore tidigare klickar du på **Skapa KeyStore** och anger ett nytt lösenord för KeyStore. Om servern redan innehåller en KeyStore hoppar du över det här steget.
+1. Klicka **Adobe Experience Manager** på det globala navigeringsfältet. Gå till **verktyg** >  **Säkerhet** >  **Användare**.
+1. Klicka på **name** användarkontots fält. The **Redigera användarinställningar** sidan öppnas.
+1. På AEM Author-instansen finns certifikat i KeyStore. Om du inte har skapat en KeyStore tidigare klickar du på **Skapa KeyStore** och ange ett nytt lösenord för KeyStore. Om servern redan innehåller en KeyStore hoppar du över det här steget.
 
-1. På sidan **Redigera användarinställningar** klickar du på **Hantera KeyStore**.
+1. På **Redigera användarinställningar** sida, klicka **Hantera KeyStore**.
 
-1. Expandera alternativet **Lägg till privat nyckel från nyckelbehållarfilen** i dialogrutan KeyStore-hantering och ange ett alias. Aliaset används för att utföra Reader-tilläggsåtgärden.
-1. Om du vill överföra certifikatfilen klickar du på **Välj Key Store-fil** och överför en `.pfx`-fil.
-1. Lägg till **lösenordet för nyckelarkivet**,**lösenordet för den privata nyckeln** och **alias för den privata nyckeln** som är associerad med certifikatet till respektive fält. Klicka på **Skicka**.
-
-   >[!NOTE]
-   >
-   >Om du vill ta reda på P **privat nyckelalias** för ett certifikat kan du använda kommandot för Java-nyckelverktyget: `keytool -list -v -keystore [keystore-file] -storetype pkcs12`
+1. Utöka **Lägg till privat nyckel från nyckelarkivfilen** och ange ett alias. Aliaset används för att utföra Reader-tilläggsåtgärden.
+1. Om du vill överföra certifikatfilen klickar du på **Välj nyckelarkivfil** och ladda upp en `.pfx` -fil.
+1. Lägg till **Lösenord för nyckelarkiv**,**Lösenord för privat nyckel** och **Alias för privat nyckel** som är kopplad till certifikatet till respektive fält. Klicka **Skicka**.
 
    >[!NOTE]
    >
-   >I fälten **Lösenord för nyckelarkiv** och **Lösenord för privat nyckel** anger du lösenordet som medföljer certifikatfilen.
+   >Så här avgör du P **Alias för privat nyckel** för ett certifikat kan du använda kommandot för Java-nyckelverktyget: `keytool -list -v -keystore [keystore-file] -storetype pkcs12`
+
+   >[!NOTE]
+   >
+   >I **Lösenord för nyckelarkiv** och **Lösenord för privat nyckel** anger du lösenordet som medföljer certifikatfilen.
 
 >[!NOTE]
 >
->För AEM Forms i OSGi verifierar du den signerade PDF-filen, rotcertifikatet som är installerat i Trust Store.
+>För AEM Forms på OSGi, för att verifiera det signerade PDF, rotcertifikatet som är installerat i Trust Store.
 
 >[!NOTE]
 >
@@ -99,12 +98,12 @@ Utför följande steg för att konfigurera certifikat:
 
 Aliaset innehåller alla parametrar som krävs för en HSM eller token. Följ instruktionerna nedan för att skapa ett alias för varje HSM- eller tokenautentiseringsuppgift som eSign eller digitala signaturer använder:
 
-1. Öppna AEM. Standardwebbadressen för AEM är https://&lt;host>:&lt;port>/system/console/configMgr
-1. Öppna konfigurationstjänsten **HSM-autentiseringsuppgifter** och ange värden för följande fält:
+1. Öppna AEM. Standardwebbadressen AEM konsolen är https://&lt;host>:&lt;port>/system/console/configMgr
+1. Öppna **Konfigurationstjänst för HSM-autentiseringsuppgifter** och ange värden för följande fält:
 
-   * **Alias** för autentiseringsuppgifter: Ange en sträng som används för att identifiera aliaset. Det här värdet används som en egenskap för vissa åtgärder för digitala signaturer, till exempel åtgärden Signera signaturfält.
+   * **Alias för autentiseringsuppgifter**: Ange en sträng som används för att identifiera aliaset. Det här värdet används som en egenskap för vissa åtgärder för digitala signaturer, till exempel åtgärden Signera signaturfält.
    * **DLL-sökväg**: Ange den fullständiga sökvägen till HSM- eller tokenklientbiblioteket på servern. Exempel: C:\Program Files\LunaSA\cryptoki.dll. I en klustrad miljö måste sökvägen vara identisk för alla servrar i klustret.
-   * **HSM-stift**: Ange lösenordet som krävs för att komma åt enhetsnyckeln.
+   * **HSM-fäst**: Ange lösenordet som krävs för att komma åt enhetsnyckeln.
    * **HSM-kortplats-ID**: Ange en platsidentifierare av typen heltal. Kortplats-ID anges klient för klient. Om du registrerar en andra dator till en annan partition (till exempel HSMPART2 på samma HSM-enhet), kopplas fack 1 till HSMPART2-partitionen för klienten.
 
    >[!NOTE]
@@ -114,7 +113,7 @@ Aliaset innehåller alla parametrar som krävs för en HSM eller token. Följ in
    * **Certifikat SHA1**: Ange SHA1-värdet (tumavtryck) för filen med den offentliga nyckeln (.cer) för de autentiseringsuppgifter som du använder. Kontrollera att inga blanksteg används i SHA1-värdet. Om du använder ett fysiskt certifikat krävs det inte.
    * **HSM-enhetstyp**: Välj tillverkaren av HSM-enheten (Luna eller annan) eller eToken-enheten.
 
-   Klicka på **Spara**. Maskinvarusäkerhetsmodulen är konfigurerad för AEM Forms. Nu kan du använda maskinvarusäkerhetsmodulen med AEM Forms för att signera eller certifiera dokument.
+   Klicka **Spara**. Maskinvarusäkerhetsmodulen är konfigurerad för AEM Forms. Nu kan du använda maskinvarusäkerhetsmodulen med AEM Forms för att signera eller certifiera dokument.
 
 ## Använd API:erna för DocAssurance-tjänsten för att signera eller certifiera ett dokument med digitala nycklar lagrade på enheten  {#programatically}
 
@@ -415,4 +414,4 @@ Om du har uppgraderat från AEM 6.0 Form eller AEM 6.1 Forms och du använde tj�
  public CredentialContext(String credentialAlias, ResourceResolver resourceResolver, boolean isHSMCredential);
 ```
 
-Mer information om API:er och exempelkod för DocAssurance-tjänsten finns i [Använda AEM Document Services programmatiskt](/help/forms/using/aem-document-services-programmatically.md).
+Mer information om API:er och exempelkod för tjänsten DocAssurance finns i [Använda AEM dokumenttjänster programmatiskt](/help/forms/using/aem-document-services-programmatically.md).

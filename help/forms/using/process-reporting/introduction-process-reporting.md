@@ -1,22 +1,21 @@
 ---
 title: Introduktion till processrapportering
-seo-title: Introduktion till processrapportering
+seo-title: Introduction to Process Reporting
 description: Introduktion och viktiga funktioner i AEM Forms om JEE Process Reporting
-seo-description: Introduktion och viktiga funktioner i AEM Forms om JEE Process Reporting
+seo-description: Introduction and key capabilities of AEM Forms on JEE Process Reporting
 uuid: a7f2455b-1b09-41a7-817b-e2e7a1ff9936
 content-type: reference
 topic-tags: process-reporting
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 4e83ed7b-3f48-4bf6-be4c-89f79949c1df
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+exl-id: 674d28dc-7353-49de-9e12-b1998e1509c7
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '294'
 ht-degree: 0%
 
 ---
-
 
 # Introduktion till processrapportering{#introduction-to-process-reporting}
 
@@ -28,7 +27,7 @@ Processrapportering innehåller en uppsättning användningsklara rapporter som 
 
 Dessutom innehåller Process Reporting ett gränssnitt för att köra ad hoc-frågor och för att integrera anpassade rapportvyer i användargränssnittet för Process Reporting.
 
-En lista över webbläsare som stöds finns i [AEM Forms Supported Platforms](/help/forms/using/aem-forms-jee-supported-platforms.md).
+En lista över webbläsare som stöds finns i [Plattformar som stöds av AEM Forms](/help/forms/using/aem-forms-jee-supported-platforms.md).
 
 Processrapportering bygger på moduler som:
 
@@ -42,11 +41,11 @@ Processrapportering bygger på moduler som:
 
 ![platshantering](assets/site-management.png)
 
-Visa en lista över processer som körs länge, tidsscheman för processer och kör anpassade frågor med filter.
+Visa listan över långvariga processer, processens tidsplaneringsdiagram och kör anpassade frågor med filter.
 
 Med Process Reporting kan du också exportera rapport- och frågedata i CSV-format.
 
-### Adhoc-rapporter {#adhoc-reports}
+### Ad hoc-rapporter {#adhoc-reports}
 
 ![print-&amp;-color](assets/print-&-colour.png)
 

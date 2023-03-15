@@ -1,21 +1,20 @@
 ---
 title: Använda RTF-redigeraren för att skapa innehåll
-seo-title: Använda RTF-redigeraren för att skapa innehåll
+seo-title: Using the Rich Text Editor to Author Content
 description: Använda RTF-redigeraren för att skapa innehåll
-seo-description: Använda RTF-redigeraren för att skapa innehåll
+seo-description: Using the Rich Text Editor to Author Content
 uuid: 70f4d4b2-cbc6-4fef-9262-1696804008d8
 contentOwner: AG
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: 813fda6a-e877-452b-82c3-e758720e7dd0
 docset: aem65
-translation-type: tm+mt
-source-git-commit: df992fc0204519509c4662a7d4315939af2fc92c
+exl-id: 90cb8893-65f3-4d82-9880-ce8dd80891b1
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '276'
+source-wordcount: '260'
 ht-degree: 1%
 
 ---
-
 
 # Använda RTF-redigeraren för att skapa innehåll {#use-rich-text-editor-to-author-content}
 
@@ -25,9 +24,9 @@ RTE (Rich Text Editor) är en grundläggande byggsten för att infoga textinneh�
 * Textbild
 * Tabell
 
-## Redigering på plats {#in-place-editing}
+## Direktredigering {#in-place-editing}
 
-Om du markerar en textbaserad komponent med en enda tryckning eller klickning visas [komponentverktygsfältet](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste) som med vilken komponent som helst.
+Om du markerar en textbaserad komponent med ett enda tryck eller klick visas [komponentverktygsfältet](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste) som med alla komponenter.
 
 ![screen_shot_2018-03-21at163054](assets/screen_shot_2018-03-21at163054.png)
 
@@ -47,9 +46,9 @@ Det här verktygsfältet innehåller följande alternativ:
 
 ## Helskärmsredigering {#full-screen-editing}
 
-Om du trycker på helskärmsläget i verktygsfältet ![](do-not-localize/screen_shot_2018-03-21at163236.png) för textbaserade komponenter öppnas textredigeraren och resten av sidinnehållet döljs.
+Tryck på helskärmsläget i verktygsfältet för textbaserade komponenter ![](do-not-localize/screen_shot_2018-03-21at163236.png) öppnar RTF-redigeraren och döljer resten av sidinnehållet.
 
-I helskärmsläge visas alla konfigurerade alternativ som du kan använda för att skapa. Tillgängligheten är alternativ [beroende på konfigurationen](/help/sites-administering/rich-text-editor.md).
+I helskärmsläge visas alla konfigurerade alternativ som du kan använda för att skapa. Tillgängligheten är alternativ [beror på konfigurationen](/help/sites-administering/rich-text-editor.md).
 
 ![screen_shot_2018-03-21at163248](assets/screen_shot_2018-03-21at163248.png)
 

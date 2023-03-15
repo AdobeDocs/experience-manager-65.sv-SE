@@ -1,7 +1,8 @@
 ---
 title: Headless and Headless in AEM
 description: AEM kan implementeras i en headful och headless-modell, men valet är inte binärt. AEM erbjuder flexibiliteten att utnyttja fördelarna med båda modellerna i ett och samma projekt.
-source-git-commit: cf7e9061bac9004c7efd2f045b4900e4a92d67e9
+exl-id: c9597c78-be05-42ff-84fe-f7451119e83d
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
 source-wordcount: '1011'
 ht-degree: 0%

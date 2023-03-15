@@ -1,24 +1,23 @@
 ---
 title: Konfigurera valideringsmeddelanden
-seo-title: Konfigurera valideringsmeddelanden
+seo-title: Configuring validation messages
 description: Lär dig hur du anger hur valideringsmeddelanden ska visas och deras plats i förhållande till formuläret som returneras i webbläsaren.
-seo-description: Lär dig hur du anger hur valideringsmeddelanden ska visas och deras plats i förhållande till formuläret som returneras i webbläsaren.
+seo-description: Learn how to specify how validation messages are displayed and their location relative to the form returned in the web browser.
 uuid: f6bff4fa-f90f-4135-ae40-7ab3d3613122
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 5f2f8129-e45e-4f3f-ae30-c09330d0e152
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 14314383-5228-4904-98c1-586f48a1142c
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '374'
+source-wordcount: '350'
 ht-degree: 2%
 
 ---
 
-
-# Konfigurerar valideringsmeddelanden {#configuring-validation-messages}
+# Konfigurera valideringsmeddelanden {#configuring-validation-messages}
 
 För formulär som återges som HTML visas formulärvalideringsfel som inträffar för användaren. Du kan anpassa hur valideringsmeddelanden visas. Beroende på var valideringsmeddelandena visas kan du även styra platsen för meddelandet i formuläret och storleken på ramkanten.
 
@@ -29,13 +28,13 @@ För formulär som återges som HTML visas formulärvalideringsfel som inträffa
 
    **Meddelanderuta:** Om du vill visa valideringsmeddelanden i en separat dialogruta.
 
-   **Bildruta:** Om du vill visa valideringsmeddelanden i en bildruta i samma fönster.
+   **Ram:** Om du vill visa valideringsmeddelanden i en bildruta i samma fönster.
 
    **Ingen bildruta:** Om du vill visa valideringsmeddelanden i samma fönster. Det här värdet är standardvärdet.
 
-   **Via API (med data):** Returnera valideringsmeddelanden via API:t (med data). Valideringsmeddelandena visas inte på skärmen.
+   **Via API (med data):** Returnera valideringsmeddelandena via API (med data). Valideringsmeddelandena visas inte på skärmen.
 
-   **Via API (med formulär):** Returnera valideringsmeddelanden via API:t (med formuläret). Valideringsmeddelandena visas inte på skärmen.
+   **Via API (med formulär):** Returnera valideringsmeddelandena via API (med formuläret). Valideringsmeddelandena visas inte på skärmen.
 
    **Ingen:** Visa inte valideringsmeddelanden.
 
@@ -66,4 +65,3 @@ När du har valt Rapportering som Bildruta kan du ange ramens kantstorlek.
    Kantstorleken måste vara lika med eller större än 0. Standardvärdet är 1.
 
 1. Klicka på Spara.
-

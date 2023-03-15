@@ -4,20 +4,19 @@ description: Lär dig hur du kan anpassa och utöka Resursresurs- och Resursredi
 contentOwner: AG
 role: Developer
 feature: Developer Tools
-translation-type: tm+mt
-source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
+exl-id: 0271c528-23b0-4a3a-b5e8-5baf6cdeecc7
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '256'
+source-wordcount: '253'
 ht-degree: 0%
 
 ---
-
 
 # Anpassa och utöka [!DNL Assets] {#customizing-and-extending-assets}
 
 Resursredigeraren är den primära åtkomstpunkten som användare på en Adobe Enterprise Manager-webbplats kommer att använda för att hitta, visa och ändra digitala resurser i din databas.
 
-Som [!DNL Experience Manager]-utvecklare kan du anpassa och utöka resursredigeraren på flera olika sätt, och ge användarna ett särskilt skräddarsytt gränssnitt och en uppsättning funktioner.
+Som en [!DNL Experience Manager] kan du anpassa och utöka Resursredigeraren på flera olika sätt och ge användarna ett särskilt skräddarsytt gränssnitt och en uppsättning funktioner.
 
 Följande funktionalitetsaspekter kan anpassas eller förbättras:
 
@@ -36,8 +35,8 @@ Följande aspekter av utseendet och känslan i resursredigeraren kan anpassas:
 * Färger och teckensnitt: Du kan ändra de färger och teckensnitt som används i gränssnittet.
 * HTML-kod: Om du vill göra en mer detaljerad anpassning kan du ändra den underliggande HTML-koden som definierar gränssnitten.
 
-## Anpassa renderingar {#customizing-renditions}
+## Anpassa återgivningar {#customizing-renditions}
 
-I [!DNL Experience Manager Assets]-terminologi är en återgivning den form i vilken en resurs presenteras. I allmänhet kan en viss resurs ha flera renderingar. Fullfärgsbilder kan till exempel ha en återgivning i sin ursprungliga storlek, en annan i en nedskalad storlek och en annan som både är nedskalad och konverterad till gråskala.
+I [!DNL Experience Manager Assets] terminologi en återgivning är den form i vilken en resurs presenteras. I allmänhet kan en viss resurs ha flera renderingar. Fullfärgsbilder kan till exempel ha en återgivning i sin ursprungliga storlek, en annan i en nedskalad storlek och en annan som både är nedskalad och konverterad till gråskala.
 
 De återgivningar som en viss resurs är tillgänglig i kan anpassas och nya återgivningar skapas.

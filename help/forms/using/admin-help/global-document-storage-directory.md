@@ -1,26 +1,25 @@
 ---
 title: Global dokumentlagringskatalog
-seo-title: Global dokumentlagringskatalog
+seo-title: Global document storage directory
 description: Den globala dokumentlagringskatalogen (GDS) är en katalog som används för att lagra långlivade filer som används i en process.
-seo-description: Den globala dokumentlagringskatalogen (GDS) är en katalog som används för att lagra långlivade filer som används i en process.
+seo-description: The global document storage (GDS) directory is a directory used to store long-lived files that are used within a process.
 uuid: 7681672c-a0dc-4445-8004-1b1e2ed3d301
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/maintaining_the_application_server
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: a33b8834-6e39-47eb-a53b-0982d32e80ad
-translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+exl-id: 7a64a643-808b-4644-8fd3-0dafe83e8dd9
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '700'
+source-wordcount: '676'
 ht-degree: 1%
 
 ---
 
-
 # Global dokumentlagringskatalog{#global-document-storage-directory}
 
-Katalogen *GDS (Global Document Storage)* är en katalog som används för att lagra långlivade filer som används i en process. Dessa filer innehåller PDF-filer, profiler och formulärmallar. Långvariga filer är en viktig del av det övergripande tillståndet för många AEM. Om vissa eller alla långlivade dokument förloras eller skadas kan formulärservern bli instabil. Indatadokument för asynkrona jobbanrop lagras också i GDS-katalogen och måste vara tillgängliga för bearbetning av begäranden. Det är viktigt att du tar hänsyn till tillförlitligheten i det filsystem som är värd för GDS-katalogen. Använd en redundant matris med oberoende diskar (RAID) eller annan teknik som är lämplig för din kvalitet och nivå av servicebehov.
+The *global dokumentlagring (GDS)* katalog är en katalog som används för att lagra långlivade filer som används i en process. Dessa filer innehåller PDF, profiler och formulärmallar. Långvariga filer är en viktig del av det övergripande tillståndet för många AEM. Om vissa eller alla långlivade dokument förloras eller skadas kan formulärservern bli instabil. Indatadokument för asynkrona jobbanrop lagras också i GDS-katalogen och måste vara tillgängliga för bearbetning av begäranden. Det är viktigt att du tar hänsyn till tillförlitligheten i det filsystem som är värd för GDS-katalogen. Använd en redundant matris med oberoende diskar (RAID) eller annan teknik som är lämplig för din kvalitet och nivå av servicebehov.
 
 Långa filer kan innehålla känslig användarinformation. Den här informationen kan kräva särskilda autentiseringsuppgifter när den används med AEM formulär-API:er eller användargränssnitt. Det är viktigt att GDS-katalogen är ordentligt skyddad via operativsystemet. Endast administratörskontot som används för att köra programservern bör ha läs- och skrivåtkomst till GDS-katalogen.
 
@@ -99,11 +98,10 @@ AEM består av två typer av distributionsfiler, servicebehållarna och Java 2 P
 * adobe-core-*[appserver]*.ear
 * adobe-core-*[appserver]*-*[OS]*.ear
 
-Implementera AEM innebär att du distribuerar sammansatta EAR-filer och stödfiler till programservern där du tänker köra din AEM formulärlösning. Om du konfigurerade och satte ihop flera moduler paketeras de driftsättningsbara modulerna i de driftsättningsbara EAR-filerna. Om du vill distribuera de här filerna kopierar du dem till *[appserver home]*\server\all\deploy directory.
+Implementera AEM innebär att du distribuerar sammansatta EAR-filer och stödfiler till programservern där du tänker köra din AEM formulärlösning. Om du konfigurerade och satte ihop flera moduler paketeras de driftsättningsbara modulerna i de driftsättningsbara EAR-filerna. Om du vill distribuera de här filerna kopierar du dem till *[appserver - startsida]*\server\all\deploy directory.
 
 Moduler och AEM i formulärarkiv paketeras i JAR-filer. Eftersom de inte är J2EE-typfiler distribueras de inte till programservern. I stället kopieras de till GDS-katalogen och en referens till deras plats lagras i AEM formulärdatabas. Därför måste GDS-katalogen delas mellan alla noder i klustret. Alla noder måste ha tillgång till den centrala lagringskatalogen för DSC:er.
 
 >[!NOTE]
 >
 >Kontrollera att du har skapat och konfigurerat GDS-katalogen innan du distribuerar tjänstbehållarna. (Se [Konfigurera GDS-katalogen](global-document-storage-directory.md#configuring-the-gds-directory))
-

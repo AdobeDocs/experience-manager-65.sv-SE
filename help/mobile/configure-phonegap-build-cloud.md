@@ -1,22 +1,21 @@
 ---
 title: Konfigurera din Adobe PhoneGap Build-Cloud Service
-seo-title: Konfigurera din Adobe PhoneGap Build-Cloud Service
+seo-title: Configure your Adobe PhoneGap Build Cloud Service
 description: Följ den här sidan för att konfigurera molntjänsterna och bygga ditt program med PhoneGap Build.
-seo-description: Följ den här sidan för att konfigurera molntjänsterna och bygga ditt program med PhoneGap Build.
+seo-description: Follow this page for configuring the cloud services and building your application with PhoneGap build.
 uuid: 59aa99c3-1425-4cc5-9839-a57a6a545d45
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: administering-adobe-phonegap-enterprise
 discoiquuid: 3c84f4ec-d89b-4ad4-802e-ee3e2d49d916
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: d91a00d1-12fa-4c84-a426-49413f61c126
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '698'
+source-wordcount: '676'
 ht-degree: 1%
 
 ---
-
 
 # Konfigurera din Adobe PhoneGap Build-Cloud Service {#configure-your-adobe-phonegap-build-cloud-service}
 
@@ -24,9 +23,9 @@ ht-degree: 1%
 >
 >Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (t.ex. Reagera). [Läs mer](/help/sites-developing/spa-overview.md).
 
-Med **PhoneGap Build Tile** på programkontrollpanelen kan du skapa och distribuera ditt PhoneGap-mobilprogram via Adobe PhoneGap Build-tjänsten.
+The **PhoneGap Build** på programkontrollpanelen kan du skapa och distribuera ditt PhoneGap-mobilprogram via Adobe PhoneGap Build-tjänsten.
 
-Alla plattformar som stöds som definieras i **Manage App**-plattan byggs med PhoneGap Build när du trycker på en fjärrbyggnad med plattan **PhoneGap Build**.
+Alla plattformar som stöds definieras i **Hantera program** plattan byggs med PhoneGap Build när du trycker på en fjärranslutning med **PhoneGap Build** Sida vid sida.
 
 Du kan överföra en fjärrversion till [https://build.phonegap.com](https://build.phonegap.com) eller hämta källan för att bygga lokalt med [PhoneGap CLI](https://docs.phonegap.com/references/phonegap-cli/).
 
@@ -36,23 +35,23 @@ Du kan överföra en fjärrversion till [https://build.phonegap.com](https://bui
 
 För att kunna utnyttja PhoneGap Build måste du konfigurera den AEM PhoneGap Build med din PhoneGap Build-kontoinformation.
 
-Om du inte har något konto går du till [https://build.phonegap.com](https://build.phonegap.com) och registrerar dig! Om du har ett Adobe Creative Cloud-medlemskap kan du ha stöd för upp till 25 privata appar (appar utan öppen källkod).
+Om du inte har något konto går du till [https://build.phonegap.com](https://build.phonegap.com) och registrera dig! Om du har ett Adobe Creative Cloud-medlemskap kan du ha stöd för upp till 25 privata appar (appar utan öppen källkod).
 
-När du har verifierat att ditt PhoneGap Build-konto är aktivt går du till AEM Cloud Management Console, närmare bestämt [PhoneGap Build](http://localhost:4502/etc/cloudservices/phonegap-build.html) (http://localhost:4502/etc/cloudservices/phonegap-build.html).
+När du har verifierat att ditt PhoneGap Build-konto är aktivt navigerar du till din AEM Cloud Management Console, särskilt [PhoneGap Build Cloud Service](http://localhost:4502/etc/cloudservices/phonegap-build.html) (http://localhost:4502/etc/cloudservices/phonegap-build.html).
 
-Använd panelen **Hantera Cloud Services** för att konfigurera en ny molntjänstkonfiguration.
+Använd **Hantera Cloud Services** panel för att konfigurera en ny molntjänstkonfiguration.
 
 ### Använda rutan Hantera Cloud Services {#using-manage-cloud-services-tile}
 
-Innan du börjar bygga din app med **PhoneGap Build**-panelen måste du konfigurera dina molntjänster med **Hantera Cloud Services**-panelen från AEM Mobile-kontrollpanelen.
+Innan du börjar bygga din app med **PhoneGap Build** måste du konfigurera dina molntjänster med **Hantera Cloud Services** från AEM Mobile Dashboard.
 
 Följ stegen nedan för att konfigurera molntjänster för din app:
 
-1. Klicka på det övre högra hörnet i rutan **Hantera Cloud Services**.
+1. Klicka på det övre högra hörnet i **Hantera Cloud Services** platta.
 
    ![chlimage_1-61](assets/chlimage_1-61.png)
 
-1. Välj **PhoneGap Build** på skärmen **Lägg till eller redigera Cloud Service**.
+1. Välj **PhoneGap Build** från **Lägg till eller redigera Cloud Service** skärm.
 
    Klicka på **Nästa**.
 
@@ -60,21 +59,21 @@ Följ stegen nedan för att konfigurera molntjänster för din app:
 
 1. Ange dina autentiseringsuppgifter för att skapa en ny molnkonfiguration.
 
-   När den har verifierats klickar du på **Skicka**. Den här konfigurerade molnkonfigurationen visas nu i **Hantera Cloud Services**-panelen.
+   När den har verifierats klickar du på **Skicka**. Den här konfigurerade molnkonfigurationen visas nu i **Hantera Cloud Services** platta.
 
    ![chlimage_1-63](assets/chlimage_1-63.png)
 
 ### Bygga ditt program med PhoneGap Build {#building-your-application-with-phonegap-build}
 
-När du har konfigurerat molntjänsterna kan du skapa programmet med **PhoneGap Build**-panelen. Klicka på det övre högra hörnet för att välja mellan alternativen **Skapa fjärr** eller **Hämta källa**.
+När du har konfigurerat molntjänsterna kan du bygga ditt program med **PhoneGap Build** platta. Klicka på det övre högra hörnet för att välja från **Skapa fjärrmapp** eller **Hämta källa** alternativ.
 
 ![chlimage_1-64](assets/chlimage_1-64.png)
 
-Klicka på **Bygg fjärr** om du vill starta ett fjärrbygge med Adobe PhoneGap Build.
+Om du vill starta en fjärranslutning med Adobe PhoneGap Build klickar du på **Skapa fjärrmapp**.
 
 >[!NOTE]
 >
->Om bygget misslyckas av någon anledning (röd iOS-ikon nedan anger att plattformen misslyckades) kan du hovra över ikonen för att få felmeddelandet. Du kan också klicka på den trippelprickade punkten, &quot;..&quot; längst ned på panelen för att navigera direkt till https://build.phonegap.com (du måste autentisera) och titta på och hantera bygget direkt.
+>Om bygget misslyckas av någon anledning (den röda iOS-ikonen nedan anger att plattformen misslyckades) kan du hovra över ikonen för att få felmeddelandet. Du kan också klicka på den trippelprickade punkten, &quot;..&quot; längst ned på panelen för att navigera direkt till https://build.phonegap.com (du måste autentisera) och titta på och hantera bygget direkt.
 
 ### Bygga ditt program med PhoneGap CLI {#building-your-application-with-phonegap-cli}
 
@@ -101,7 +100,7 @@ phonegap run ios (or android, ...)
 >
 >add - emulera i slutet av den här raden om du inte vill köra den på den anslutna enheten.
 
-När du har verifierat att ovanstående fungerar använder du **PhoneGap Build** Sida vid **Hämta källa**. Spara och zippa upp filen på din dator. När det är klart:
+När du har verifierat att ovanstående fungerar använder du **PhoneGap Build** Överlappa till **Hämta källa**. Spara och zippa upp filen på din dator. När det är klart:
 
 * navigera till den sparade filen (mapp)
 * run &#39;phonegap run ios&#39; (or android, etc.)

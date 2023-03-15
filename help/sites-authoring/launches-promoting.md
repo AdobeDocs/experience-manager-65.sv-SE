@@ -1,8 +1,8 @@
 ---
 title: Marknadsföra Launches
-seo-title: Marknadsföra Launches
-description: 'Du måste befordra startsidor för att kunna flytta tillbaka innehållet till källan (produktionen) innan du publicerar. '
-seo-description: 'Du måste befordra startsidor för att kunna flytta tillbaka innehållet till källan (produktionen) innan du publicerar. '
+seo-title: Promoting Launches
+description: Du måste befordra startsidor för att kunna flytta tillbaka innehållet till källan (produktionen) innan du publicerar.
+seo-description: You need to promote launch pages to move the content back into the source (production) before publishing.
 uuid: 2dc41817-fcfb-4485-a085-7b57b9fe89ec
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,14 +11,13 @@ topic-tags: site-features
 discoiquuid: 3d4737ef-f758-4540-bc8f-ecd9f05f6bb0
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
-translation-type: tm+mt
-source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
+exl-id: f59f12a2-ecd6-49cf-90ad-621719fe51bf
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '775'
+source-wordcount: '756'
 ht-degree: 2%
 
 ---
-
 
 # Marknadsföra Launches{#promoting-launches}
 
@@ -31,41 +30,39 @@ Du måste befordra startsidor för att kunna flytta tillbaka innehållet till k�
 
 >[!NOTE]
 >
->När du har befordrat startsidorna till målet (**Produktion**) kan du aktivera **Produktion**-sidorna som en enhet (för att göra processen snabbare). Lägg till sidorna i ett arbetsflödespaket och använd det som nyttolast för ett arbetsflöde som aktiverar ett sidpaket. Du måste skapa arbetsflödespaketet innan du befordrar starten. Se [Bearbeta befordrade sidor med AEM arbetsflöde](#processing-promoted-pages-using-aem-workflow).
+>När du har befordrat startsidorna till målet (**Produktion**) kan du aktivera **Produktion** sidor som en enhet (för att göra processen snabbare). Lägg till sidorna i ett arbetsflödespaket och använd det som nyttolast för ett arbetsflöde som aktiverar ett sidpaket. Du måste skapa arbetsflödespaketet innan du befordrar starten. Se [Bearbeta befordrade sidor med AEM](#processing-promoted-pages-using-aem-workflow).
 
 >[!CAUTION]
 >
->En enstaka programstart kan inte befordras samtidigt. Detta innebär att två befordra åtgärder vid samma start samtidigt kan resultera i ett fel - `Launch could not be promoted` (tillsammans med konfliktfel i loggen).
+>En enstaka programstart kan inte befordras samtidigt. Det innebär att två befordra åtgärder samtidigt vid samma programstart kan resultera i ett fel - `Launch could not be promoted` (tillsammans med konfliktfel i loggen).
 
 >[!CAUTION]
 >
->När du befordrar starter för *ändrade* sidor beaktas ändringar i både käll- och startgrenarna.
+>När du befordrar starter för *ändrad* sidor, ändringar i både käll- och startgrenarna beaktas.
 
-## Markerar startsidor {#promoting-launch-pages}
+## Marknadsför startsidor {#promoting-launch-pages}
 
 >[!NOTE]
 >
 >Detta omfattar den manuella åtgärden att marknadsföra startsidor när det bara finns en startnivå. Se:
 >
->* [Befordra en kapslad ](#promoting-a-nested-launch) start när det finns mer än en start i strukturen.
->* [Startar - Ordning för ](/help/sites-authoring/launches.md#launches-the-order-of-events) evenemang för mer information om automatisk befordran och publicering.
-
+>* [Befordra en kapslad start](#promoting-a-nested-launch) när det finns mer än en start i strukturen.
+>* [Startar - ordningen för händelser](/help/sites-authoring/launches.md#launches-the-order-of-events) om du vill ha mer information om automatiska kampanjer och publiceringar.
 >
 
 
-
-Du kan befordra starter från antingen konsolen **Platser** eller konsolen **Startar**:
+Du kan befordra starter från **Webbplatser** konsolen eller **Startar** konsol:
 
 1. Öppna:
 
-   * konsolen **Platser**:
+   * den **Webbplatser** konsol:
 
-      1. Öppna [referenslinjen](/help/sites-authoring/author-environment-tools.md#showingpagereferences) och välj önskad källsida med [markeringsläge](/help/sites-authoring/basic-handling.md) (eller markera och öppna referenslinjen, ordningen är inte viktig). Alla referenser visas.
+      1. Öppna [referenser, räl](/help/sites-authoring/author-environment-tools.md#showingpagereferences) och välj en källsida med [markeringsläge](/help/sites-authoring/basic-handling.md) (eller markera och öppna referenslinjen är ordningen inte viktig). Alla referenser visas.
 
-      1. Välj **Startar** (t.ex. Startar (1)) för att visa en lista över specifika starter.
+      1. Välj **Startar** (t.ex. Launches (1)) för att visa en lista över specifika starter.
       1. Välj den specifika starten för att visa tillgängliga åtgärder.
-      1. Välj **Befordra start** för att öppna guiden.
-   * **Startar**-konsolen:
+      1. Välj **Befordra lansering** för att öppna guiden.
+   * den **Startar** konsol:
 
       1. Välj start (tryck/klicka på miniatyrbilden).
       1. Välj **Befordra**.
@@ -98,9 +95,9 @@ Du kan befordra starter från antingen konsolen **Platser** eller konsolen **Sta
 
 1. Välj **Befordra**.
 
-## Befordra startsidor vid redigering av {#promoting-launch-pages-when-editing}
+## Befordra startsidor vid redigering {#promoting-launch-pages-when-editing}
 
-När du redigerar en startsida är åtgärden **Promote Launch** också tillgänglig från **Sidinformation**. Guiden öppnas för att samla in den information som behövs.
+När du redigerar en startsida visas **Promote Launch** åtgärd är också tillgänglig från **Sidinformation**. Guiden öppnas för att samla in den information som behövs.
 
 ![chlimage_1-103](assets/chlimage_1-103.png)
 
@@ -114,20 +111,20 @@ När du har skapat en kapslad start kan du befordra den tillbaka till någon av 
 
 ![chlimage_1-104](assets/chlimage_1-104.png)
 
-1. Precis som med [Skapa en kapslad start](#creatinganestedlaunchlaunchwithinalaunch) navigerar du till och väljer önskad start i **startkonsolen** eller i **referenserna**.
-1. Välj **Befordra start** för att öppna guiden.
+1. Som med [Skapa en kapslad start](#creatinganestedlaunchlaunchwithinalaunch)navigerar du till och väljer önskad programstart i **Startar** konsolen eller **Referenser** järnväg.
+1. Välj **Befordra lansering** för att öppna guiden.
 
 1. Ange nödvändig information:
 
    * **Mål**
 
       * **Erbjudandemål**
-Du kan befordra till någon av källorna.
+Du kan göra reklam för alla källor.
 
-      * **Ta bort start efter**
-befordranNär den valda starten har befordrats och alla starter som är kapslade i den tas de bort.
-   * ****
-ScopeHär kan du välja om du vill befordra hela startsidan eller bara de sidor som faktiskt har redigerats. Om det är det senare kan du välja att ta med/exkludera underordnade sidor. Standardkonfigurationen är att endast befordra sidändringar för den aktuella sidan:
+      * **Ta bort start efter befordran**
+När du har befordrat den valda starten och alla starter som är kapslade i den tas de bort.
+   * **Omfång**
+Här kan du välja om du vill befordra hela starten eller bara sidor som faktiskt har redigerats. Om det är det senare alternativet kan du välja att ta med/exkludera underordnade sidor. Standardkonfigurationen är att endast befordra sidändringar för den aktuella sidan:
 
       * **Befordra en fullständig lansering**
       * **Befordra ändrade sidor**
@@ -137,15 +134,15 @@ ScopeHär kan du välja om du vill befordra hela startsidan eller bara de sidor 
    ![chlimage_1-105](assets/chlimage_1-105.png)
 
 1. Välj **Nästa**.
-1. Granska kampanjinformationen innan du väljer **Promote**:
+1. Granska kampanjinformationen innan du väljer **Befordra**:
 
    ![chlimage_1-106](assets/chlimage_1-106.png)
 
    >[!NOTE]
    >
-   >Vilka sidor som visas beror på det **omfång** som har definierats och eventuellt på vilka sidor som har redigerats.
+   >Vilka sidor som visas beror på **Omfång** definierade och eventuellt de sidor som har redigerats.
 
-1. Ändringarna kommer att befordras och återspeglas i **startskonsolen**:
+1. Ändringarna kommer att främjas och återspeglas i **Startar** konsol:
 
    ![chlimage_1-107](assets/chlimage_1-107.png)
 
@@ -157,7 +154,7 @@ Använd arbetsflödesmodeller för att utföra massbearbetning av befordrade sta
 1. När författare befordrar startsidor lagrar de dem i arbetsflödespaketet.
 1. Starta en arbetsflödesmodell med paketet som nyttolast.
 
-Om du vill starta ett arbetsflöde automatiskt när sidor befordras, [konfigurerar du en arbetsflödesstartare](/help/sites-administering/workflows-starting.md#workflows-launchers) för paketnoden.
+Så här startar du ett arbetsflöde automatiskt när sidor befordras: [konfigurera en startfunktion för arbetsflöden](/help/sites-administering/workflows-starting.md#workflows-launchers) för paketnoden.
 
 Du kan t.ex. automatiskt generera begäranden om sidaktivering när författare befordrar startsidor. Konfigurera en startfunktion för arbetsflödet för aktivering av begäran när paketnoden ändras.
 

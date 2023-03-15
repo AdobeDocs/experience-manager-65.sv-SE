@@ -4,8 +4,8 @@ description: AEM Content and Commerce Release Notes 2021
 exl-id: 440ecd8e-55dc-4606-8678-c65cda1d2b3a
 source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1328'
+ht-degree: 9%
 
 ---
 

@@ -1,32 +1,31 @@
 ---
 title: Skapa en anpassad anpassad formulärmall
-seo-title: Skapa en anpassad anpassad formulärmall
+seo-title: Creating a custom adaptive form template
 description: I den här artikeln beskrivs hur du skapar anpassade formulärmallar.
-seo-description: I den här artikeln beskrivs hur du skapar anpassade formulärmallar.
+seo-description: This article describes how to create custom adaptive form templates.
 uuid: 11b5f8cd-c56a-4525-97d5-1938ef5f183d
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
 discoiquuid: affba49e-9712-4d29-858b-2f8ec4f2b1f1
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 4ecf5efc568cd21f11801a71d491c3d75ca367fe
+exl-id: 35b50573-0be8-469d-a1ac-f51b9aaa5fef
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1284'
+source-wordcount: '1268'
 ht-degree: 0%
 
 ---
-
 
 # Skapa en anpassad anpassad formulärmall{#creating-a-custom-adaptive-form-template}
 
 >[!NOTE]
 >
->AEM Forms har infört dynamiska mallar. Du kan använda AEM Sites mallredigerare för att [skapa eller redigera dynamiska mallar](../../forms/using/template-editor.md). Mallarna som nämns i artikeln nedan är statiska mallar. Dessa är inte tillgängliga i en standardinstallation. [Installera ](../../forms/using/compatibility-package.md) kompatibilitetspaketet för att hämta mallarna i din miljö.
+>AEM Forms har infört dynamiska mallar. Du kan använda AEM Sites mallredigerare för att [skapa eller redigera dynamiska mallar](../../forms/using/template-editor.md). Mallarna som nämns i artikeln nedan är statiska mallar. Dessa är inte tillgängliga i en standardinstallation. [Installera kompatibilitetspaket](../../forms/using/compatibility-package.md) för att få tillgång till mallarna i din miljö.
 
 ## Förutsättningar {#prerequisites}
 
-* Förstå AEM [Sidmall](/help/sites-authoring/templates.md) och [Redigering av anpassat formulär](https://helpx.adobe.com/aem-forms/6-1/introduction-forms-authoring.html)
+* AEM [Sidmall](/help/sites-authoring/templates.md) och [Adaptiv formulärredigering](https://helpx.adobe.com/aem-forms/6-1/introduction-forms-authoring.html)
 
 * AEM [Klientbibliotek](/help/sites-developing/clientlibs.md)
 
@@ -44,9 +43,9 @@ AEM QuickStart innehåller följande adaptiva formulärmallar:
 * Enkel registreringsmall: Gör att du kan skapa ett anpassat formulär i flera steg med hjälp av en guidelayout. I den här layouten kan du ange ett uttryck för stegfärdigställande för varje steg, som valideras innan guiden fortsätter till nästa steg.
 * Mall för flikregistrering: Gör att du kan skapa ett anpassat formulär med flera flikar i en tabbar-till-vänster-layout, där du kan besöka flikar i valfri slumpmässig ordning.
 * Avancerad registreringsmall: Skapa ett formulär med flera flikar och guider. Den har en tabbar till vänster-layout där du kan gå till flikarna i valfri ordning. Den använder Adobe Document Cloud designtjänster för signering och verifiering.
-* Tom mall: Gör att du kan skapa ett formulär utan sidhuvud, sidfot och ursprungligt innehåll. Du kan lägga till komponenter som textrutor, knappar och bilder. Med den tomma mallen kan du skapa ett formulär som du kan [bädda in AEM platssidor](/help/forms/using/embed-adaptive-form-aem-sites.md).
+* Tom mall: Gör att du kan skapa ett formulär utan sidhuvud, sidfot och ursprungligt innehåll. Du kan lägga till komponenter som textrutor, knappar och bilder. Med den tomma mallen kan du skapa ett formulär som du kan [bädda in AEM webbplatssidor](/help/forms/using/embed-adaptive-form-aem-sites.md).
 
-Dessa mallar har egenskapen `sling:resourceType` inställd på motsvarande sidkomponent. Sidkomponenten återger CQ-sidan med adaptiv formulärbehållare, som i sin tur återger adaptiv form.
+De här mallarna har `sling:resourceType` -egenskapen ställs in på motsvarande sidkomponent. Sidkomponenten återger CQ-sidan med adaptiv formulärbehållare, som i sin tur återger adaptiv form.
 
 I följande tabell räknas associationen mellan mallar och sidkomponenter upp:
 
@@ -99,55 +98,55 @@ Utför följande steg för att skapa en anpassad mall, till exempel simpleEnroll
 1. Skapa mappstrukturen för programmet i katalogen /apps. Om programnamnet till exempel är mitt eget skapar du en mapp med det här namnet. Programmappen innehåller vanligtvis komponenter, konfiguration, mallar, src och installationskataloger. I det här exemplet skapar du mapparna för komponenter, konfiguration och mallar.
 
 1. Navigera till mappen /libs/fd/af/templates.
-1. Kopiera noden `simpleEnrollmentTemplate`.
+1. Kopiera `simpleEnrollmentTemplate` nod.
 1. Navigera till mappen /apps/mycompany/templates. Högerklicka på den och välj **[!UICONTROL Paste]**.
 1. Om det behövs byter du namn på mallnoden som du kopierade. Du kan t.ex. byta namn på den som en registreringsmall.
 
 1. Navigera till platsen /apps/mycompany/templates/enrollment-template.
 
-1. Ändra egenskaperna `jcr:title` och `jcr:description` för noden `jcr:content` för att skilja mallen från mallen som du kopierade.
+1. Ändra `jcr:title` och `jcr:description` egenskaper för `jcr:content` för att skilja mallen från mallen som du kopierade.
 
-1. Noden `jcr:content` i den ändrade mallen innehåller komponenterna `guideContainer` och `guideformtitle`. `guideContainer` är den behållare som innehåller det adaptiva formuläret. Komponenten `guideformtitle` visar programnamnet, beskrivningen och så vidare.
+1. The `jcr:content` noden i den ändrade mallen innehåller `guideContainer` och `guideformtitle` -komponenter. `guideContainer` är den behållare som innehåller det adaptiva formuläret. The `guideformtitle` -komponenten visar programnamnet, beskrivningen och så vidare.
 
-   I stället för `guideformtitle` kan du ta med en anpassad komponent eller `parsys`-komponenten. Ta till exempel bort `guideformtitle` och lägg till en anpassad komponent eller `parsys`-komponentnoden. Kontrollera att egenskapen `sling:resourceType` för komponenten refererar till komponenten och att samma anges i filen `component.jsp` på sidan.
+   I stället för `guideformtitle`kan du ta med en anpassad komponent eller `parsys` -komponenten. Ta till exempel bort `guideformtitle`och lägga till en anpassad komponent eller `parsys` komponentnod. Se till att `sling:resourceType` -egenskapen för komponenten refererar till komponenten och det är definierat på sidan `component.jsp` -fil.
 
 1. Navigera till platsen /apps/mycompany/templates/enrollment-template/jcr:content.
 
-1. Öppna fliken **[!UICONTROL Properties]** och ändra värdet för egenskapen `cq:designPath` till /etc/designs/mycompany.
+1. Öppna **[!UICONTROL Properties]** och ändra värdet på `cq:designPath` till /etc/designs/mincompany.
 
-1. Skapa nu en /etc/designs/mincompany-nod för typen `cq:Page`.
+1. Skapa nu en /etc/designs/mycompany-nod för `cq:Page` typ.
 
-## Skapa en adaptiv formulärsidkomponent {#create-an-adaptive-form-page-component}
+## Skapa en adaptiv komponent för formulärsidor {#create-an-adaptive-form-page-component}
 
-Den anpassade mallen har samma format som standardmallen eftersom mallen refererar till sidkomponenten /libs/fd/af/components/page/base. Du hittar komponentreferensen som egenskapen `sling:resourceType` som definieras på noden /apps/mycompany/templates/enrollment-template/jcr:content. Eftersom basen är en kärnproduktkomponent bör du inte ändra den här komponenten.
+Den anpassade mallen har samma format som standardmallen eftersom mallen refererar till sidkomponenten /libs/fd/af/components/page/base. Du kan hitta komponentreferensen som egenskapen `sling:resourceType` definieras på noden /apps/mycompany/templates/enrollment-template/jcr:content. Eftersom basen är en kärnproduktkomponent bör du inte ändra den här komponenten.
 
-1. Navigera till noden /apps/mycompany/templates/enrollment-template/jcr:content och ändra värdet för egenskapen `sling:resourceType` till /apps/mycompany/components/page/enrollmentpage
+1. Navigera till noden /apps/mycompany/templates/enrollment-template/jcr:content och ändra egenskapens värde `sling:resourceType` till /apps/mycompany/components/page/enrollmentpage
 1. Kopiera noden /libs/fd/af/components/page/base till mappen /apps/mycompany/components/page.
 
 1. Byt namn på den kopierade komponenten till `enrollmentpage`.
 
-1. **(Endast om du redan har en innehållssida)** Utför följande steg (a-d) om du har en befintlig  `contentpage`komponent för webbplatsen. Om du inte har någon befintlig `contentpage`komponent för webbplatsen kan du låta egenskapen `resourceSuperType`peka på OTB-bassidan.
+1. **(Endast om du redan har en innehållssida)** Utför följande steg (a-d) om du har en befintlig `contentpage`-komponent för din webbplats. Om du inte har någon befintlig `contentpage`kan du lämna `resourceSuperType`så att den pekar på OTB-bassidan.
 
-   1. För noden `enrollmentpage` anger du värdet för egenskapen `sling:resourceSuperType` till mincompany/components/page/contentpage. Komponenten `contentpage` är bassidans komponent för din plats. Andra sidkomponenter kan utöka den. Ta bort skriptfiler under `enrollmentpage`, förutom `head.jsp`, `content.jsp` och `library.jsp`. Komponenten `sling:resourceSuperType`, som i det här fallet är `contentpage`, innehåller alla sådana skript. Sidhuvuden, inklusive navigeringsfält och sidfötter, ärvs från `contentpage`-komponenten.
+   1. För `enrollmentpage` nod, ange egenskapens värde `sling:resourceSuperType` till mincompany/components/page/contentpage. The `contentpage` är bassidkomponenten för -platsen. Andra sidkomponenter kan utöka den. Ta bort skriptfiler under `enrollmentpage`, förutom `head.jsp`, `content.jsp`och `library.jsp`. The `sling:resourceSuperType` -komponent, som `contentpage` i det här fallet innehåller alla sådana skript. Sidhuvuden, inklusive navigeringsfält och sidfötter, ärvs från `contentpage` -komponenten.
 
    1. Öppna filen `head.jsp`.
 
       JSP-filen innehåller raden `<cq.include script="library.jsp"/>`.
 
-      Filen `library.jsp` innehåller klientbiblioteket `guide.theme.simpleEnrollment` som innehåller formateringen för det adaptiva formuläret.
+      The `library.jsp` filen innehåller `guide.theme.simpleEnrollment` klientbibliotek, som innehåller formateringen för det adaptiva formuläret.
 
-      Sidkomponenten `enrollmentpage` har en exklusiv `head.jsp`-fil som åsidosätter `head.jsp`-filen för `contentpage`-komponenten.
+      Sidkomponenten `enrollmentpage` har en exklusiv `head.jsp` som åsidosätter `head.jsp` filen `contentpage` -komponenten.
 
-   1. Inkludera alla skript i `head.jsp`-filen för `contentpage`-komponenten till `head.jsp`-filen för `enrollmentpage`-komponenten.
-   1. I `content.jsp`-skriptet kan du lägga till ytterligare sidinnehåll eller referenser till andra komponenter som inkluderas när en sida återges. Om du till exempel lägger till den anpassade komponenten `applicationformheader` måste du lägga till följande referens till komponenten i JSP-filen:
+   1. Inkludera alla skript i `head.jsp` filen för `contentpage` till `head.jsp` filen för `enrollmentpage` -komponenten.
+   1. I `content.jsp` kan du lägga till ytterligare sidinnehåll eller referenser till andra komponenter som inkluderas när en sida återges. Om du till exempel lägger till den anpassade komponenten `applicationformheader`ska du se till att du lägger till följande referens till komponenten i JSP-filen:
 
       `<cq:include path="applicationformheader" resourceType="mycompany/components/applicationformheader"/>`
 
-      Om du lägger till en `parsys`-komponent i mallnodstrukturen inkluderar du även den anpassade komponenten.
+      Om du lägger till en `parsys` -komponenten i mallnodstrukturen, även den anpassade komponenten.
 
-## Skapar ett adaptivt formulärklientbibliotek {#creating-an-adaptive-form-client-library}
+## Skapa ett adaptivt formulärklientbibliotek {#creating-an-adaptive-form-client-library}
 
-Filen `head.jsp` för komponenten `enrollmentpage` för den nya mallen innehåller ett klientbibliotek `guide.theme.simpleEnrollment`. Standardmallen använder även det här klientbiblioteket. Ändra formatet i den nya mallen på något av följande sätt:
+The `head.jsp` filen `enrollmentpage` -komponenten för den nya mallen innehåller ett klientbibliotek `guide.theme.simpleEnrollment`. Standardmallen använder även det här klientbiblioteket. Ändra formatet i den nya mallen på något av följande sätt:
 
 * Definiera ett anpassat tema och ersätt standardtemat `guide.theme.simpleEnrollment` med det anpassade temat.
 * Definiera ett nytt klientbibliotek under /etc/designs/mincompany. Inkludera klientbiblioteket efter standardtemaposten på jsp-sidan. Inkludera alla åsidosatta format och ytterligare JavaScript-filer i det här klientbiblioteket.
@@ -155,4 +154,3 @@ Filen `head.jsp` för komponenten `enrollmentpage` för den nya mallen innehåll
 >[!NOTE]
 >
 >Temat avser ett klientbibliotek som ingår i sidkomponenten som används för att återge ett anpassat formulär. Klientbiblioteket styr huvudsakligen utseendet på ett anpassat formulär.
-

@@ -1,21 +1,20 @@
 ---
 title: Blanksteg och entiteter
-seo-title: Utveckla AEM Mobile Content Services
+seo-title: Developing AEM Mobile Content Services
 description: Den här sidan är en landningssida för utveckling av AEM Mobile Content Services.
-seo-description: Den här sidan är en landningssida för utveckling av AEM Mobile Content Services.
+seo-description: This page serves a landing page for developing AEM Mobile Content Services.
 uuid: eab5a61b-a9e8-4863-90a3-df1f18510cd8
 contentOwner: Jyotika Syal
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 discoiquuid: ef568577-c74e-4fc2-b66e-eedac2948310
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 44591900-b01b-4a33-9910-839564477e7d
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1209'
+source-wordcount: '1192'
 ht-degree: 2%
 
 ---
-
 
 # Blanksteg och entiteter{#spaces-and-entities}
 
@@ -33,25 +32,25 @@ Ett space är en praktisk plats där du kan lagra enheter som exponeras via Cont
 
 Om användaren vill visa en massa innehåll och resurser för en mobilapp skapar användaren utrymmet med AEM Mobile Dashboard.
 
-För första gången som användare som inte har konfigurerat innehållstjänster för att arbeta med mellanslag visas endast appar på AEM Mobile kontrollpanel efter att ha valt **Innehållstjänster**.
+För första gången som användare, som inte har konfigurerat innehållstjänster för att arbeta med blanksteg, visas endast appar på AEM Mobile kontrollpanel efter att användaren har valt **Innehållstjänster**.
 
 >[!CAUTION]
 >
 >**Krav för att lägga till ett blanksteg**
 >
->Markera **Aktivera AEM Content Services** för att arbeta med Spaces och aktivera det på AEM Mobile kontrollpanel.
+>Kontrollera **Aktivera AEM** för att arbeta med Spaces och aktivera det på AEM Mobile kontrollpanel.
 >
->Mer information finns i [Administrera innehållstjänster](/help/mobile/developing-content-services.md).
+>Se [Administrera innehållstjänster](/help/mobile/developing-content-services.md) för mer information.
 
 När du har konfigurerat Spaces på kontrollpanelen gör du så här för att skapa Spaces:
 
-1. Välj **Blanksteg** från Innehållstjänster.
+1. Välj **Blanksteg** från innehållstjänster.
 
    ![chlimage_1-83](assets/chlimage_1-83.png)
 
-1. Välj **Skapa** om du vill skapa ett mellanslag. Ange **Rubrik**, **Namn** och **Beskrivning** för utrymmet.
+1. Välj **Skapa** för att skapa ett utrymme. Retur **Titel**, **Namn** och **Beskrivning** för utrymmet.
 
-   Klicka på **Skapa**.
+   Klicka **Skapa**.
 
    ![chlimage_1-84](assets/chlimage_1-84.png)
 
@@ -66,17 +65,17 @@ Du kan visa egenskaper för utrymmet, ta bort det eller publicera utrymmet och d
 **Visa och redigera egenskaper för ett blanksteg**
 
 1. Markera utrymmet i listan
-1. Välj **Egenskaper** i verktygsfältet
-1. Klicka på **Stäng** när du är klar
+1. Välj **Egenskaper** från verktygsfältet
+1. Klicka **Stäng** när det är klart
 
-**Publicera ett** spaceNär ett space publiceras publiceras även alla mappar och enheter i det utrymmet.
+**Publicera blanksteg** När ett space publiceras publiceras även alla mappar och enheter i det utrymmet.
 
 1. Markera utrymmet genom att klicka på dess ikon i listan Space Console
 1. Välj **Publiceringsträd**
 
 >[!NOTE]
 >
->Du kan **Avpublicera** ett space, vilket tar bort utrymmet från publiceringsinstansen.
+>Du kan **Avpublicera** a Space, som tar bort utrymmet från publiceringsinstansen.
 >
 >Följande bild visar vilka åtgärder som kan utföras när du har publicerat utrymmet.
 
@@ -86,17 +85,17 @@ Du kan visa egenskaper för utrymmet, ta bort det eller publicera utrymmet och d
 
 Blanksteg kan innehålla mappar för att ytterligare ordna utrymmets innehåll och resurser. Användare kan skapa en egen hierarki under ett space.
 
-### Skapar en mapp {#creating-a-folder}
+### Skapa en mapp {#creating-a-folder}
 
 1. Klicka på utrymmet i listan i utrymmeskonsolen och klicka på **Skapa mapp**
 
    ![chlimage_1-87](assets/chlimage_1-87.png)
 
-1. Ange **titeln**, **Namn,** och **Beskrivning** för mappen
+1. Ange **Titel**, **Namn,** och **Beskrivning** för mappen
 
    ![chlimage_1-88](assets/chlimage_1-88.png)
 
-1. Klicka på **Skapa** om du vill skapa en mapp i ett utrymme
+1. Klicka **Skapa** skapa en mapp i ett space
 
 ## Språkkopia {#language-copy}
 
@@ -104,17 +103,17 @@ Blanksteg kan innehålla mappar för att ytterligare ordna utrymmets innehåll o
 >
 >Språkkopian fungerar inte fullt ut i den här versionen. Den ställer bara in strukturen.
 
-Med funktionen **Språkkopia** kan författare kopiera sin överordnad språkkopia och sedan skapa ett projekt och ett arbetsflöde för att automatiskt översätta innehållet. Med Language Copy skapas rätt struktur. När du har lagt till en mapp på ett space kan du lägga till språkkopia på ditt space.
+The **Språkkopia** kan författare kopiera sin överordnad språkkopia och sedan skapa ett projekt och arbetsflöde för att automatiskt översätta innehållet. Med Language Copy skapas rätt struktur. När du har lagt till en mapp på ett space kan du lägga till språkkopia på ditt space.
 
 >[!NOTE]
 >
 >Vi rekommenderar att allt innehåll som kan översättas placeras under noden Språkkopia.
 
-### Lägger till språkkopia {#adding-language-copy}
+### Lägga till språkkopia {#adding-language-copy}
 
 1. När du har skapat utrymme klickar du på det utrymmet för att skapa en språkkopia.
 
-   Klicka på **Skapa** och välj **Språkkopia**.
+   Klicka **Skapa** och välja **Språkkopia**.
 
    ![chlimage_1-89](assets/chlimage_1-89.png)
 
@@ -122,24 +121,24 @@ Med funktionen **Språkkopia** kan författare kopiera sin överordnad språkkop
    >
    >Språkkopieringsnoder kan bara finnas som direkt underordnad till Space.
 
-1. Välj **Språk&amp;ämpel för innehållspaket;ast;** och ange **namn&amp;stämpel;ast;** i **dialogrutan Skapa språkkopia**.
+1. Välj **Språk&amp;a för innehållspaket;** och anger **&amp;Titel;** in **Skapa språkkopia** -dialogrutan.
 
-   Klicka på **Skapa**.
+   Klicka **Skapa**.
 
    ![chlimage_1-90](assets/chlimage_1-90.png)
 
-1. När du har skapat en språkkopia visas den i ditt space på **språkmallssidan**.
+1. När du har skapat en språkkopia visas den på ditt space i **Språkmallar**.
 
    ![chlimage_1-91](assets/chlimage_1-91.png)
 
    >[!NOTE]
    >
-   >Välj **Språkmallar** om du vill visa mapparna för språkkopiering.
+   >Välj **Språkmallar** om du vill visa språkkopieringsmappar.
 
 ### Ta bort en mapp från utrymmet {#removing-a-folder-from-the-space}
 
 1. Markera mappen i listan med utrymmesinnehåll
-1. Klicka på **Ta bort** från verktygsfältet
+1. Klicka **Ta bort** från verktygsfältet
 
    >[!NOTE]
    >
@@ -157,7 +156,7 @@ Om underordnade entiteter, som är andra entiteter, samlas in för datamodelleri
 >
 >Enheter är alltid kopplade till ett utrymme, så de flesta entitetsanvändargränssnittet nås via utrymmeskonsolen.
 
-### Skapar en entitet {#creating-an-entity}
+### Skapa en enhet {#creating-an-entity}
 
 1. Öppna Space-konsolen och klicka på utrymmets rubrik.
 
@@ -171,23 +170,23 @@ Om underordnade entiteter, som är andra entiteter, samlas in för datamodelleri
 
    >[!NOTE]
    >
-   >Du kan välja **Resursmodell**, **Sidmodell** eller en modell av entitetstyp som du skapade tidigare.
+   >Du kan välja **Resursmodell**, **Sidmodell** eller en modell av en enhetstyp som du skapade tidigare.
    >
-   >Se [Skapa en modell](/help/mobile/administer-mobile-apps.md) för att skapa din anpassade entitet.
+   >Se [Skapa en modell](/help/mobile/administer-mobile-apps.md), för att skapa en egen enhet.
 
-1. Ange en **titel**, **Namn**, **Beskrivning** och **taggar** för entiteten. Klicka på **Skapa**.
+1. Ange **Titel**, **Namn**, **Beskrivning** och **Taggar** för företaget. Klicka **Skapa**.
 
    ![chlimage_1-94](assets/chlimage_1-94.png)
 
    När du är klar visas enheten i ditt space med underordnade.
 
-### Redigera en entitet {#editing-an-entity}
+### Redigera en enhet {#editing-an-entity}
 
 1. När du har skapat en enhet går du till din mapp eller ditt space och väljer din enhet från Space-konsolen för att redigera.
 
    ![chlimage_1-95](assets/chlimage_1-95.png)
 
-1. Välj en enhet för redigering och klicka på **Redigera**.
+1. Markera en enhet för redigering och klicka på **Redigera**.
 
    ![chlimage_1-96](assets/chlimage_1-96.png)
 
@@ -195,33 +194,33 @@ Om underordnade entiteter, som är andra entiteter, samlas in för datamodelleri
    >
    >Beroende på vilken mall du väljer för att skapa din enhet, kommer användargränssnittet att vara annorlunda för båda, för att redigera och visa egenskaper för din enhet. Se stegen nedan för mer information.
 
-   ***Om du väljer en mall för att skapa enheten som Resursmodeller*** kan du lägga till resurser enligt bilden nedan genom att klicka på  **** Redigeraren:
+   ***Om du väljer en mall för att skapa enheten som Assets Models***, klicka på **Redigera** gör att du kan lägga till resurser enligt bilden nedan:
 
    ![chlimage_1-97](assets/chlimage_1-97.png)
 
-   Du kan också klicka på **Förhandsgranska** för att visa json-länken.
+   Du kan även klicka på **Förhandsgranska** för att visa json-länken.
 
    ![chlimage_1-98](assets/chlimage_1-98.png)
 
-   ***Om du väljer en mall för att skapa enheten som Sidmodeller*** kan du lägga till resurser enligt bilden nedan genom att klicka på  **** Redigeraren:
+   ***Om du väljer en mall för att skapa enheten som Sidmodeller***, klicka på **Redigera** gör att du kan lägga till resurser enligt bilden nedan:
 
    ![chlimage_1-99](assets/chlimage_1-99.png)
 
-   Klicka på ikonen i **sökvägen** för att lägga till en resurs
+   Klicka på ikonen i dialogrutan **Bana** lägga till en resurs
 
    ![chlimage_1-100](assets/chlimage_1-100.png)
 
    >[!NOTE]
    >
-   >När du har lagt till en entitet måste den sparas för att länken Förhandsgranska ska fungera. Om du vill visa förhandsgranskningen klickar du på **Spara**. Om du klickar på **Förhandsgranska** visas den tillagda resursens json, vilket visas i figuren nedan:
+   >När du har lagt till en entitet måste den sparas för att länken Förhandsgranska ska fungera. Om du vill visa förhandsgranskningen klickar du på **Spara**. Klicka på **Förhandsgranska** visar den tillagda tillgångens json, vilket visas i figuren nedan:
 
    ![chlimage_1-101](assets/chlimage_1-101.png)
 
    >[!NOTE]
    >
-   >När du är klar med att lägga till resurser till din enhet kan du antingen välja **Spara** för att spara ändringarna eller välja **Spara och stäng** för att spara och omdirigera till Space-konsollistan där enheterna definieras.
+   >När du är klar med att lägga till resurser till din enhet kan du antingen välja **Spara** för att spara ändringarna eller välja **Spara och stäng** om du vill spara och omdirigera till Space-konsollistan där enheterna definieras.
 
-   Dessutom väljer du en enhet i utrymmeskonsollistan och klickar på **Egenskaper** för att visa och redigera egenskaperna för en definierad enhet.
+   Välj dessutom en enhet i listan över konsoler och klicka på **Egenskaper** om du vill visa och redigera egenskaperna för en definierad enhet.
 
    ![chlimage_1-102](assets/chlimage_1-102.png)
 
@@ -235,16 +234,16 @@ Om underordnade entiteter, som är andra entiteter, samlas in för datamodelleri
 
    ![chlimage_1-104](assets/chlimage_1-104.png)
 
-1. Klicka på **Ta bort** från verktygsfältet för att ta bort den specifika entiteten från utrymmet
+1. Klicka **Ta bort** från verktygsfältet för att ta bort den specifika enheten från utrymmet
 
-### Publicerar en entitet {#publishing-an-entity}
+### Publicera en enhet {#publishing-an-entity}
 
-Du kan välja **Publiceringsträd** eller **Snabbpublicering** för att publicera din entitet.
+Du kan välja **Publiceringsträd** eller **Snabbpublicering** för att publicera din enhet.
 
 1. Välj en entitet från utrymmeskonsollistan och klicka på **Publiceringsträd **för att publicera entiteten och dess underordnade objekt.
 
    ![chlimage_1-105](assets/chlimage_1-105.png)
 
-   **Eller**,
+   **eller**,
 
-   Klicka på **Snabbpublicera** för att publicera den specifika entiteten.
+   Klicka **Snabbpublicering** för att publicera den specifika enheten.

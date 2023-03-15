@@ -1,28 +1,27 @@
 ---
 title: Introduktion till HTML5-formulär
-seo-title: Introduktion till HTML5-formulär
+seo-title: Introduction to HTML5 forms
 description: HTML5-formulär är en ny funktion i Adobe Experience Manager 6.0 (AEM 6.0) som erbjuder återgivning av XFA-formulärmallar i HTML5-format.
-seo-description: HTML5-formulär är en ny funktion i Adobe Experience Manager 6.0 (AEM 6.0) som erbjuder återgivning av XFA-formulärmallar i HTML5-format.
+seo-description: HTML5 forms is a new capability in Adobe Experience Manager 6.0 (AEM 6.0) software that offers rendering of XFA form templates in HTML5 format.
 uuid: 63a2f000-c4c5-40e8-ab3f-c7c44c79ec09
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 672ee050-63d1-46ed-bef2-f55800208d78
 docset: aem65
 feature: Mobile Forms
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 0facca18-ffa1-420c-859a-6f1f2c449d71
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '414'
 ht-degree: 4%
 
 ---
 
-
 # Introduktion till HTML5-formulär{#introduction-to-html-forms}
 
-HTML5-formulär är en ny funktion i Adobe Experience Manager 6.0 (AEM 6.0) som erbjuder återgivning av XFA-formulärmallar i HTML5-format. Detta gör det möjligt att återge formulär på mobila enheter och skrivbordswebbläsare som inte har stöd för XFA-baserade PDF-filer. HTML5-formulär har inte bara stöd för de befintliga funktionerna i XFA-formulärmallar, utan även nya funktioner, som klottersignaturer, för mobila enheter.
+HTML5-formulär är en ny funktion i Adobe Experience Manager 6.0 (AEM 6.0) som erbjuder återgivning av XFA-formulärmallar i HTML5-format. Detta gör det möjligt att återge formulär på mobila enheter och skrivbordswebbläsare som inte har stöd för XFA-baserade PDF-filer. HTML5-formulär har inte bara stöd för XFA-formulärmallarnas befintliga funktioner, utan även nya funktioner, som klottersignaturer, för mobila enheter.
 
-HTML5-formulär genererar dokument baserade på vanliga HTML5-konstruktioner. Du kan visa HTML5-formulär i alla moderna webbläsare som stöder HTML5. Inga ytterligare webbläsarplugin-program behöver installeras för webbläsarna. Mer information om vilka webbläsare som stöds finns i [Klientplattformar som stöds](https://adobe.com/go/learn_aemforms_supportedplatforms_63).
+HTML5-formulär genererar dokument som baseras på HTML 5-standardkonstruktioner. Du kan visa HTML5-formulär i alla moderna webbläsare som stöder HTML5. Inga ytterligare webbläsarplugin-program behöver installeras för webbläsarna. Mer information om vilka webbläsare som stöds finns i [Klientplattformar som stöds](https://adobe.com/go/learn_aemforms_supportedplatforms_63).
 
 ![](do-not-localize/mobile_form_on_an_ipad_date_14.png)
 
@@ -40,7 +39,7 @@ HTML5-formulär genererar dokument baserade på vanliga HTML5-konstruktioner. Du
 
 ### Flerkanalspublicering {#multichannel-publishing}
 
-Formulärutvecklare kan använda en XFA-mall för att återge formulär i PDF- och HTML5-format. Den här funktionen är användbar i scenarier där du har en stor uppsättning XFA-formulär som kräver minimala ändringar för att anpassa dig till designrutiner för HTML5-formulär. Du kan återge befintliga XFA-formulär till HTML5 för olika enheter där XFA-baserad PDF ännu inte stöds.
+Formulärutvecklare kan använda en XFA-mall för att återge formulär i PDF och HTML 5-format. Den här funktionen är bra i scenarier där du har en stor uppsättning XFA-formulär som kräver minimala ändringar för att kunna anpassa dig till HTML5-formulärdesignen. Du kan återge befintliga XFA-formulär till HTML5 för att ange olika enheter där XFA-baserad PDF ännu inte stöds.
 
 ## Hantera HTML5-formulär {#manage-html-forms}
 
@@ -48,4 +47,4 @@ AEM har också en enhetlig vy för att lista och hantera alla formulärmallar me
 
 ### Forms-anpassning {#forms-customization}
 
-HTML5-formulär återger formulärmallar med HTML5-standardkonstruktioner. Detta gör det enkelt att anpassa och utöka formulär i HTML5-format med hjälp av webbtekniker, främst CSS och JavaScript. Du kan enkelt anpassa utseendet på befintliga widgetar, skapa egna widgetar eller använda anpassade format i formulär. Mer information om hur du skapar anpassade widgetar och anpassar befintliga widgetar finns i [Plug in anpassade widgetar med HTML5-formulär](../../forms/using/custom-widgets.md).
+HTML5-formulär återger formulärmallar med HTML 5-standardkonstruktioner. Detta gör det enkelt att anpassa och utöka formulär i HTML5-format med hjälp av webbtekniker, främst CSS och JavaScript. Du kan enkelt anpassa utseendet på befintliga widgetar, skapa egna widgetar eller använda anpassade format i formulär. Mer information om hur du skapar anpassade widgetar och anpassar befintliga widgetar finns i [Plug in anpassade widgetar med HTML5-formulär](../../forms/using/custom-widgets.md).

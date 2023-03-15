@@ -1,28 +1,27 @@
 ---
 title: Felsökning
-seo-title: Felsökning
+seo-title: Troubleshooting
 description: I den här artikeln beskrivs några av de installationsproblem som du kan råka ut för AEM.
-seo-description: I den här artikeln beskrivs några av de installationsproblem som du kan råka ut för AEM.
+seo-description: This article covers some of the installation issues you might encounter with AEM.
 uuid: 2ca898c3-b074-4ccd-a383-b92f226e6c14
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: deploying
 discoiquuid: 5542de4e-6262-4300-9cf8-0eac79ba4f9a
-translation-type: tm+mt
-source-git-commit: 6ca333c64fcd7d3b91b1ae8ef98c53ed770479d4
+exl-id: 55576729-be9c-412e-92ac-4be90650c6fa
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1181'
+source-wordcount: '1167'
 ht-degree: 0%
 
 ---
-
 
 # Felsökning{#troubleshooting}
 
 I det här avsnittet finns detaljerad information om loggar som kan hjälpa dig att felsöka. Här finns även information om några av de problem som du kan råka ut för AEM.
 
-## Felsök författarprestanda {#troubleshoot-author-performance}
+## Felsöka författarprestanda {#troubleshoot-author-performance}
 
 Det kan bli ganska komplicerat att analysera långsamma prestanda i redigeringsinstansen. Som ett första steg måste du ta reda på vilken nivå av teknikhögen som prestandan minskar.
 
@@ -36,7 +35,7 @@ Följande beslutsträd ger vägledning för att minska flaskhalsen.
 
 ## Konfigurera loggfiler och granskningsloggar {#configuring-log-files-and-audit-logs}
 
-AEM loggar som du kan behöva konfigurera för att felsöka installationsproblem. Mer information finns i avsnittet [Arbeta med granskningsposter och loggfiler](/help/sites-deploying/monitoring-and-maintaining.md#working-with-audit-records-and-log-files).
+AEM loggar som du kan behöva konfigurera för att felsöka installationsproblem. Mer information finns i [Arbeta med granskningsposter och loggfiler](/help/sites-deploying/monitoring-and-maintaining.md#working-with-audit-records-and-log-files) -avsnitt.
 
 ## Använda alternativet Detaljerad {#using-the-verbose-option}
 
@@ -74,7 +73,7 @@ Så här felsöker du:
 
 CRX har i sig mycket lite minnesutrymme. Om programmet som körs i CRX har större minneskrav eller begär minnesintensiva åtgärder (till exempel stora transaktioner), måste JVM-instansen där CRX körs startas med lämpliga minnesinställningar.
 
-Använd Java-kommandoalternativen för att definiera minnesinställningar för JVM (t.ex. java -Xmx512m -jar crx&amp;ast;.jar för att ange heapsize till 512 MB).
+Använd Java-kommandoalternativen för att definiera minnesinställningar för JVM (t.ex. java -Xmx512m -jar crx&amp;ast;.jar för att ange stackstorleken till 512 MB).
 
 Ange minnesinställningsalternativet när du startar AEM WCM från kommandoraden. AEM WCM-skript för start/stopp eller anpassade skript för hantering AEM WCM-start kan också ändras för att definiera de nödvändiga minnesinställningarna.
 
@@ -84,7 +83,7 @@ Använd följande kommando för att automatiskt skapa en stackdump när minnet t
 
 java -Xmx256m -XX:+HeapDumpOnOutOfMemoryError -jar &amp;ast;.jar
 
-Detta genererar en heap dump-fil (**java_...hprof**) när minnet tar slut i processen. Processen kan fortsätta att köras efter att stackdumpen har skapats. Vanligtvis räcker det med en stackdumpfil för att analysera problemet.
+Detta genererar en stackdumpfil (**java_..hprof**) när minnet tar slut. Processen kan fortsätta att köras efter att stackdumpen har skapats. Vanligtvis räcker det med en stackdumpfil för att analysera problemet.
 
 ### AEM välkomstskärm visas inte i webbläsaren när du dubbelklickat AEM QuickStart {#the-aem-welcome-screen-does-not-display-in-the-browser-after-double-clicking-aem-quickstart}
 
@@ -104,7 +103,7 @@ Det finns ett känt fel med att AEM 6.5 körs på Java 11 där webbplatsen kansk
 
 Om detta händer, följ nedanstående lösning:
 
-1. Öppna filen `sling.properties` under mappen `crx-quickstart/conf/`
+1. Öppna `sling.properties` filen under `crx-quickstart/conf/` mapp
 1. Leta reda på följande rad:
 
    `org.osgi.framework.bootdelegation=sun.,com.sun.`
@@ -117,19 +116,19 @@ Om detta händer, följ nedanstående lösning:
 
 ## Felsöka installationer med en programserver {#troubleshooting-installations-with-an-application-server}
 
-### Sidan hittades inte när en geometrixx-outdoor-sida {#page-not-found-returned-when-requesting-a-geometrixx-outdoor-page} begärdes
+### Sidan hittades inte returnerades när en geometrixx-outdoor-sida begärdes {#page-not-found-returned-when-requesting-a-geometrixx-outdoor-page}
 
 **Gäller WebLogic 10.3.5 och JBoss 5.1**
 
 När en begäran om geometrixx-outdoor/en page returnerar 404 (Page Not Foun), kan du kontrollera att du har angett den extra sling-egenskapen i filen sling.properties som behövs för dessa specifika programservrar.
 
-Mer information finns i *Distribuera AEM*-stegen.
+Se i *Distribuera AEM webbprogram* steg för informationen.
 
 ### Svarshuvudets storlek kan vara större än 4 kB {#response-header-size-can-be-greater-than-kb}
 
 502 fel kan indikera att webbservern inte kan hantera storleken på AEM HTTP-svarshuvud. AEM kan generera HTTP-svarshuvuden som innehåller cookies som är större än 4 kB. Kontrollera att serverbehållaren är konfigurerad så att den maximala svarshuvudets storlek kan överskrida 4 kB.
 
-För Tomcat 7.0 styr attributet maxHttpHeaderSize i [HTTP Connector](https://tomcat.apache.org/tomcat-7.0-doc/config/http.html) begränsningar för rubrikstorlek.
+För Tomcat 7.0 är till exempel attributet maxHttpHeaderSize för [HTTP-anslutning](https://tomcat.apache.org/tomcat-7.0-doc/config/http.html) styr begränsningar för rubrikstorlek.
 
 ## Avinstallerar Adobe Experience Manager {#uninstalling-adobe-experience-manager}
 
@@ -139,11 +138,11 @@ Om beständig lagring är inbäddad i installationskatalogen, till exempel i sta
 
 >[!NOTE]
 >
->Adobe rekommenderar att du säkerhetskopierar databasen innan du tar bort AEM. Om du tar bort hela &lt;cq-installation-directory> tar du bort databasen. Om du vill behålla databasdata innan du tar bort, flyttar eller kopierar du mappen &lt;cq-installation-directory>/crx-quickstart/database någon annanstans innan du tar bort de andra mapparna.
+>Adobe rekommenderar att du säkerhetskopierar databasen innan du tar bort AEM. Om du tar bort hela &lt;cq-installation-directory>tar du bort databasen. Om du vill behålla databasdata innan du tar bort, flyttar eller kopierar du &lt;cq-installation-directory>/crx-quickstart/databasmapp någon annanstans innan de andra mapparna tas bort.
 
 Om din installation av AEM använder extern lagring, till exempel en databasserver, tas inte data bort automatiskt när du tar bort mappen, men lagringskonfigurationen tas bort, vilket gör det svårt att återställa JCR-innehållet.
 
 ### JSP-filer kompileras inte på JBoss {#jsp-files-are-not-compiled-on-jboss}
 
 Om du installerar eller uppdaterar JSP-filer till Experience Manager på JBoss och motsvarande servrar inte kompileras kontrollerar du att JBoss JSP-kompilatorn är korrekt konfigurerad. Mer information finns i
-[JSP Compilation Issues in JBoss](https://helpx.adobe.com/experience-manager/kb/jsps-dont-compile-jboss.html) article.
+[JSP-kompileringsproblem i JBoss](https://helpx.adobe.com/experience-manager/kb/jsps-dont-compile-jboss.html) artikel.

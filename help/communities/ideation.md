@@ -1,22 +1,21 @@
 ---
 title: Grundläggande om identifiering
-seo-title: Grundläggande om identifiering
+seo-title: Ideation Essentials
 description: Översikt över funktionen Idéer
-seo-description: Översikt över funktionen Idéer
+seo-description: Ideation feature overview
 uuid: abaf03ee-8bf4-4241-96c3-474c95a30a88
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: a9e4f2f0-d1ff-40c0-abcf-645e40586a84
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 7ad3592b-f8b5-45c0-97bc-15f781d7b811
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '111'
+source-wordcount: '106'
 ht-degree: 1%
 
 ---
-
 
 # Grundläggande om identifiering {#ideation-essentials}
 
@@ -36,7 +35,7 @@ Den här sidan innehåller viktig information för att arbeta med idéfunktionen
   </tr>
   <tr>
    <td> <a href="clientlibs.md"><strong>klientlibs</strong></a></td>
-   <td>cq.social.hbs.voice<br /> cq.social.hbs.liking<br /> cq.social.hbs.ideation</td>
+   <td>cq.social.hbs.röstning<br /> cq.social.hbs.like<br /> cq.social.hbs.ideation</td>
   </tr>
   <tr>
    <td> <strong>templates</strong></td>
@@ -48,7 +47,7 @@ Den här sidan innehåller viktig information för att arbeta med idéfunktionen
   </tr>
   <tr>
    <td><strong> egenskaper</strong></td>
-   <td>Se <a href="ideation-feature.md">Ideationsfunktion</a></td>
+   <td>Se <a href="ideation-feature.md">Idéfunktion</a></td>
   </tr>
  </tbody>
 </table>
@@ -57,4 +56,4 @@ Den här sidan innehåller viktig information för att arbeta med idéfunktionen
 
 ### Ideationsfunktion {#ideation-function}
 
-En community-platsstruktur som innehåller [Ideation-funktionen](functions.md#ideation-function) innehåller en konfigurerad `ideation`-komponent.
+En community-webbplatsstruktur som innehåller [Ideationsfunktion](functions.md#ideation-function), innehåller en konfigurerad `ideation` -komponenten.

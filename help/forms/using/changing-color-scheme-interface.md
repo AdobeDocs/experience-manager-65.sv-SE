@@ -1,26 +1,25 @@
 ---
 title: Ändra gränssnittets färgschema
-seo-title: Ändra gränssnittets färgschema
+seo-title: Changing the color scheme of the interface
 description: Hur man selektivt ändrar färgschemat i användargränssnittet i AEM Forms arbetsyta.
-seo-description: Hur man selektivt ändrar färgschemat i användargränssnittet i AEM Forms arbetsyta.
+seo-description: How to modify the color scheme of AEM Forms workspace user interface portions selectively.
 uuid: 32c32f7a-8271-4d2c-8a1f-ad5ab3c90b83
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 18dab82a-badf-4c32-83a2-cd5cb04cae89
-translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+exl-id: e0a261a2-518b-4984-a5b5-24f0b9222e24
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '229'
 ht-degree: 0%
 
 ---
 
+# Ändra gränssnittets färgschema {#changing-the-color-scheme-of-the-interface}
 
-# Ändra färgschemat för gränssnittet {#changing-the-color-scheme-of-the-interface}
-
-Du kan ändra färgschemat för användargränssnittets delar i AEM Forms arbetsyta så att de passar dina behov. Nedan följer några exempel på representativa färgschemaanpassningar. Förutom de steg som beskrivs i den här artikeln finns mer information i [Allmänna steg för anpassning av AEM Forms-arbetsytan](/help/forms/using/generic-steps-html-workspace-customization.md).
+Du kan ändra färgschemat för användargränssnittets delar i AEM Forms arbetsyta så att de passar dina behov. Nedan följer några exempel på representativa färgschemaanpassningar. Förutom de steg som beskrivs i den här artikeln finns mer information i [Allmänna steg för anpassning av AEM Forms arbetsyta](/help/forms/using/generic-steps-html-workspace-customization.md).
 
 ## Övre navigeringsfältet {#top-navigation-bar}
 
@@ -56,7 +55,7 @@ Uppdatera navigeringsfältet högst upp på arbetsytan i AEM Forms.
 
 ## Kategorikomponent {#category-component}
 
-Kategorikomponenten visar de olika kategorierna för dina uppgifter i den vänstra panelen. Om du vill ändra färgen definierar du bakgrundsfärgen i elementet `.category` i CSS-filen.
+Kategorikomponenten visar de olika kategorierna för dina uppgifter i den vänstra panelen. Om du vill ändra färgen definierar du bakgrundsfärgen i `.category` CSS-filens element.
 
 ## Aktivitetskomponent {#task-component}
 

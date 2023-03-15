@@ -134,7 +134,6 @@ Kontakta din kontorepresentant om du har några frågor om de variabler som är 
 >* **`evar1`** via **`evar11`**
 >
 >* **`event1`** via **`event7`**
-
 >
 >**Innan communitywebbplatsen publiceras** det är viktigt att återställa den befintliga mappningen genom att flytta de AEM variablerna som automatiskt mappades till analysvariabler när Analytics aktiverades för en communitywebbplats.
 >
@@ -578,7 +577,6 @@ Se avsnitt:
 >* **`evar1`** via **`evar11`**
 >
 >* **`event1`** via **`event7`**
-
 >
 >**Innan communitywebbplatsen publiceras** Det är viktigt att återställa den befintliga mappningen och flytta de Web AEM-variabler som automatiskt mappades (när Analytics aktiverades för communitywebbplatsen) till andra Analytics-variabler. Den här ommappningen bör vara konsekvent för alla webbgruppskomponenter.
 >

@@ -11,7 +11,7 @@ ht-degree: 4%
 
 ---
 
-# Markering {#markdown}
+# Markdown {#markdown}
 
 När du [redigering](/help/assets/content-fragments/content-fragments-variations.md#authoring-your-content)använder innehållsfragmentredigeraren *markering* så att du enkelt kan skriva headless-innehåll:
 

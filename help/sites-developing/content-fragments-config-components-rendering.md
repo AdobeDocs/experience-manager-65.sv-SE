@@ -1,32 +1,31 @@
 ---
 title: Content Fragments – konfigurera komponenter för återgivning
-seo-title: Content Fragments – konfigurera komponenter för återgivning
+seo-title: Content Fragments Configuring Components for Rendering
 description: Content Fragments – konfigurera komponenter för återgivning
-seo-description: Content Fragments – konfigurera komponenter för återgivning
+seo-description: Content Fragments Configuring Components for Rendering
 uuid: 3f5aaf36-e6a7-4a3c-b305-e35ebcc98d0d
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 discoiquuid: 2aef9048-9d6e-4f5d-b443-5e73f8066d76
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+exl-id: 9ef9ae75-cd8c-4adb-9bcb-e951d200d492
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '467'
-ht-degree: 8%
+source-wordcount: '455'
+ht-degree: 5%
 
 ---
 
-
 # Content Fragments – konfigurera komponenter för återgivning{#content-fragments-configuring-components-for-rendering}
 
-Det finns flera [avancerade tjänster](/help/sites-developing/content-fragments-config-components-rendering.md#definition-of-advanced-services-that-need-configuration) relaterade till återgivning av innehållsfragment. För att kunna använda dessa tjänster måste resurstyperna för sådana komponenter göra sig kända för innehållsfragmentets ramverk.
+Det finns flera [avancerade tjänster](/help/sites-developing/content-fragments-config-components-rendering.md#definition-of-advanced-services-that-need-configuration) relaterat till återgivning av innehållsfragment. För att kunna använda dessa tjänster måste resurstyperna för sådana komponenter göra sig kända för innehållsfragmentets ramverk.
 
-Detta görs genom att konfigurera [OSGi-tjänsten - komponentkonfigurationen för innehållsfragment](#osgi-service-content-fragment-component-configuration).
+Detta görs genom att konfigurera [OSGi-tjänst - Konfiguration av komponent för innehållsfragment](#osgi-service-content-fragment-component-configuration).
 
 >[!CAUTION]
 >
->Om du inte behöver de [avancerade tjänster](/help/sites-developing/content-fragments-config-components-rendering.md#definition-of-advanced-services-that-need-configuration) som beskrivs nedan kan du ignorera den här konfigurationen.
+>Om du inte behöver [avancerade tjänster](/help/sites-developing/content-fragments-config-components-rendering.md#definition-of-advanced-services-that-need-configuration) som beskrivs nedan kan du ignorera den här konfigurationen.
 
 >[!CAUTION]
 >
@@ -38,14 +37,14 @@ Detta görs genom att konfigurera [OSGi-tjänsten - komponentkonfigurationen fö
 >
 >Därför rekommenderas att kärnkomponenterna används.
 
-## Definition av avancerade tjänster som behöver konfiguration {#definition-of-advanced-services-that-need-configuration}
+## Definition av avancerade tjänster som behöver konfigureras {#definition-of-advanced-services-that-need-configuration}
 
 De tjänster som kräver registrering av en komponent är:
 
 * Kontrollera beroenden korrekt under publiceringen (d.v.s. se till att fragment och modeller kan publiceras automatiskt med en sida om de har ändrats sedan den senaste publiceringen).
 * Stöd för innehållsfragment vid fulltextsökning.
 * Hantering/hantering av *mellanliggande innehåll.*
-* Hantering/hantering av *blandade medieresurser.*
+* Hantering/hantering av *resurser för olika medier.*
 * Skickar rensning för refererade fragment (om en sida som innehåller ett fragment publiceras igen).
 * Använda styckebaserad återgivning.
 
@@ -59,7 +58,7 @@ Konfigurationen måste bindas till OSGi-tjänsten **Konfiguration av komponent f
 
 >[!NOTE]
 >
->Mer information finns i [Konfigurera OSGi](/help/sites-deploying/configuring-osgi.md).
+>Se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) för mer information.
 
 Till exempel:
 
@@ -107,15 +106,15 @@ För vissa funktioner (t.ex. för att endast återge ett styckeintervall) måste
   </tr>
   <tr>
    <td><code>paragraphRange</code></td>
-   <td><p>En strängegenskap som definierar det styckeintervall som ska skrivas ut om det i <em>renderingsläget för ett element är </em>.</p> <p>Format:</p>
+   <td><p>En strängegenskap som definierar det intervall med stycken som ska skrivas ut om i <em>renderingsläge för enskilt element</em>.</p> <p>Format:</p>
     <ul>
      <li><code>1</code> eller <code>1-3</code> eller <code>1-3;6;7-8</code> eller <code>*-3;5-*</code></li>
-     <li>utvärderas bara om <code>paragraphScope</code> är inställt på <code>range</code></li>
+     <li>endast utvärderat om <code>paragraphScope</code> är inställd på <code>range</code></li>
     </ul> </td>
   </tr>
   <tr>
    <td><code>paragraphScope</code></td>
-   <td><p>En strängegenskap som definierar hur stycken ska skrivas ut i <em>renderingsläge för ett element</em>.</p> <p>Värden:</p>
+   <td><p>En strängegenskap som definierar hur stycken ska skrivas ut om de finns i <em>renderingsläge för enskilt element</em>.</p> <p>Värden:</p>
     <ul>
      <li><code>all</code> : återge alla stycken</li>
      <li><code>range</code> : för att återge styckeintervallet som tillhandahålls av <code>paragraphRange</code></li>
@@ -123,7 +122,7 @@ För vissa funktioner (t.ex. för att endast återge ett styckeintervall) måste
   </tr>
   <tr>
    <td><code>paragraphHeadings</code></td>
-   <td>En boolesk egenskap som definierar om rubriker (till exempel <code>h1</code>, <code>h2</code>, <code>h3</code>) räknas som stycken (<code>true</code>) eller inte (<code>false</code>)</td>
+   <td>En boolesk egenskap som definierar om rubriker (till exempel <code>h1</code>, <code>h2</code>, <code>h3</code>) räknas som punkter (<code>true</code>) eller inte (<code>false</code>)</td>
   </tr>
  </tbody>
 </table>
@@ -148,4 +147,3 @@ dam.cfm.component.fileReferenceProp="fragmentPath"
 dam.cfm.component.elementsProp="elementName"
 dam.cfm.component.variationProp="variationName"
 ```
-

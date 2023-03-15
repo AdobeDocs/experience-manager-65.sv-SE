@@ -1,28 +1,27 @@
 ---
 title: Layoutfunktioner i anpassningsbara formulär
-seo-title: Layoutfunktioner i anpassningsbara formulär
+seo-title: Layout capabilities of adaptive forms
 description: Layout och utseende för anpassningsbara formulär på olika enheter styrs av layoutinställningarna. Förstå de olika layouterna och hur de ska användas.
-seo-description: Layout och utseende för anpassningsbara formulär på olika enheter styrs av layoutinställningarna. Förstå de olika layouterna och hur de ska användas.
+seo-description: Layout and appearances of adaptive forms on various devices are governed by the layout settings. Understand the various layouts and how to apply them.
 uuid: 79022ac2-1aa3-47c5-b094-cbe83334ea62
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: 9459c414-eac9-4bd9-a773-cceaeb736c56
 docset: aem65
 feature: Adaptive Forms
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 3db623a4-f1ad-4b7f-97e8-0be138aa8b26
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1157'
+source-wordcount: '1126'
 ht-degree: 0%
 
 ---
 
-
-# Layoutfunktioner i adaptiva formulär{#layout-capabilities-of-adaptive-forms}
+# Layoutfunktioner i anpassningsbara formulär{#layout-capabilities-of-adaptive-forms}
 
 Med Adobe Experience Manager (AEM) kan ni skapa lättanvända, anpassningsbara formulär som ger användarna dynamiska upplevelser. Formulärlayouten styr hur objekt och komponenter visas i ett anpassat formulär.
 
-## Krävande kunskaper {#prerequisite-knowledge}
+## Nödvändig kunskap {#prerequisite-knowledge}
 
 Innan du får veta mer om de olika layoutfunktionerna i adaptiva formulär kan du läsa följande artiklar för att få mer information om adaptiva formulär.
 
@@ -36,9 +35,9 @@ Ett anpassningsbart formulär ger dig följande typer av layouter:
 
 **Panellayout** Styr hur objekt eller komponenter i en panel visas på en enhet.
 
-**Mobile** LayoutStyr navigeringen i ett formulär på en mobil enhet. Om enhetens bredd är minst 768 pixlar betraktas layouten som en mobillayout och optimerad för en mobil enhet.
+**Mobil layout** Styr navigeringen i ett formulär på en mobil enhet. Om enhetens bredd är minst 768 pixlar betraktas layouten som en mobillayout och optimerad för en mobil enhet.
 
-**Verktygsfältslayout** Styr placeringen av åtgärdsknappar i verktygsfältet eller panelens verktygsfält i ett formulär.
+**Verktygsfältslayout** Styr placeringen av åtgärdsknappar i verktygsfältet eller panelverktygsfältet i ett formulär.
 
 Alla dessa panellayouter definieras på följande plats:
 
@@ -54,7 +53,7 @@ Alla dessa panellayouter definieras på följande plats:
 
 En formulärförfattare kan koppla en layout till varje panel i ett anpassat formulär, inklusive rotpanelen.
 
-Panellayouterna finns på `/libs/fd/af/layouts/panel`-platsen.
+Panellayouterna finns på `/libs/fd/af/layouts/panel` plats.
 
 ![Lista över panellayouter för rotpanelen i ett anpassat formulär](assets/layouts.png)
 
@@ -64,7 +63,7 @@ Lista över panellayouter i anpassningsbara formulär
 
 Använd den här panellayouten för att skapa en responsiv layout som anpassar sig efter enhetens skärmstorlek utan att behöva använda någon särskild navigering.
 
-Med den här layouten kan du placera flera **[!UICONTROL Panel adaptive form]**-komponenter efter varandra i panelen.
+Med den här layouten kan du montera flera **[!UICONTROL Panel adaptive form]** -komponenter efter varandra i panelen.
 
 ![Ett formulär med responsiv layout som det visas på en liten skärm](assets/responsive_layout_seen_on_small_screen.png)
 
@@ -74,11 +73,11 @@ Ett formulär med responsiv layout som det visas på en liten skärm
 
 Ett formulär med responsiv layout som det visas på en stor skärm
 
-### Guide - ett flerstegsformulär som visar ett steg i taget {#wizard-a-multi-step-form-showing-one-step-at-a-time}
+### Guide - ett flerstegsformulär med ett steg i taget {#wizard-a-multi-step-form-showing-one-step-at-a-time}
 
 Använd den här panellayouten för guidad navigering i ett formulär. Använd till exempel den här layouten när du vill hämta in obligatorisk information i ett formulär och vägleda användarna steg för steg.
 
-Använd `Panel adaptive form`-komponenten för att skapa stegvis navigering i en panel. När du använder den här layouten flyttas användaren till nästa steg först när det aktuella steget är klart
+Använd `Panel adaptive form` för stegvis navigering i en panel. När du använder den här layouten flyttas användaren till nästa steg först när det aktuella steget är klart
 
 ```javascript
 window.guideBridge.validate([], this.panel.navigationContext.currentItem.somExpression)
@@ -94,7 +93,7 @@ Ett formulär som använder guiden
 
 ### Layout för dragspelsdesign {#layout-for-accordion-design}
 
-Med den här layouten kan du placera `Panel adaptive form`-komponenten på en panel med dragspelsformatsnavigering. Med den här layouten kan du även skapa upprepningsbara paneler. Med upprepningsbara paneler kan du lägga till eller ta bort paneler dynamiskt efter behov. Du kan definiera minsta och högsta antal gånger en panel upprepas. Panelens namn kan också bestämmas dynamiskt utifrån informationen som finns i panelobjekten.
+Med den här layouten kan du montera `Panel adaptive form` i en panel med navigering i dragspelsstil. Med den här layouten kan du även skapa upprepningsbara paneler. Med upprepningsbara paneler kan du lägga till eller ta bort paneler dynamiskt efter behov. Du kan definiera minsta och högsta antal gånger en panel upprepas. Panelens namn kan också bestämmas dynamiskt utifrån informationen som finns i panelobjekten.
 
 Sammanfattningsuttryck kan användas för att visa de värden som slutanvändaren anger i titeln på den minimerade panelen.
 
@@ -104,7 +103,7 @@ Repeterbara paneler som skapats med dragspelslayout
 
 ### Fliklayout - flikar visas till vänster {#tabbed-layout-tabs-appear-on-the-left}
 
-Med den här layouten kan du placera `Panel adaptive form`-komponenten på en panel med tabbnavigering. Flikarna placeras till vänster om panelinnehållet.
+Med den här layouten kan du montera `Panel adaptive form` i en panel med tabbnavigering. Flikarna placeras till vänster om panelinnehållet.
 
 ![I fliklayouten visas flikarna till vänster](assets/tabbed_layout_left.png)
 
@@ -112,7 +111,7 @@ Tabbar som visas till vänster på en panel
 
 ### Fliklayout - flikarna visas högst upp {#tabbed-layout-tabs-appear-on-the-top}
 
-Med den här layouten kan du placera `Panel adaptive form`-komponenten på en panel med tabbnavigering. Flikarna placeras ovanpå panelinnehållet.
+Med den här layouten kan du montera `Panel adaptive form` Komponent i en panel med tabbnavigering. Flikarna placeras ovanpå panelinnehållet.
 
 ![Fliklayout i adaptiva formulär med flikar överst](assets/tabbed_layout_top.png)
 
@@ -122,15 +121,15 @@ Tabbar som visas högst upp på en panel
 
 Mobillayouter möjliggör användarvänlig navigering på mobila enheter med relativt mindre skärmar. I mobila layouter används antingen flikformat eller guideformat för formulärnavigering. När du använder en Mobile-layout får du en layout för hela formuläret.
 
-Den här layouten styr navigeringen med ett navigeringsfält och en navigeringsmeny. Navigeringsfältet visar **&lt;** och **>**-ikonen som anger **nästa och** föregående **navigeringssteg i formuläret.**
+Den här layouten styr navigeringen med ett navigeringsfält och en navigeringsmeny. Navigeringsfältet visas **&lt;** och **>** ikon som anger **nästa** och **föregående** navigeringssteg i formuläret.
 
-Mobillayouterna finns på `/libs/fd/af/layouts/mobile/`-platsen. Följande mobila layouter är som standard tillgängliga i anpassningsbara formulär.
+Mobillayouterna finns på `/libs/fd/af/layouts/mobile/` plats. Följande mobila layouter är som standard tillgängliga i anpassningsbara formulär.
 
 ![Lista över mobila layouter i adaptiva formulär](assets/mobile-navigation.png)
 
 Lista över mobila layouter i adaptiva formulär
 
-När du använder en mobil layout är formulärmenyn tillgänglig genom att trycka på ikonen ![aem6forms_form_menu](assets/aem6forms_form_menu.png) för att komma åt olika formulärpaneler.
+När du använder en mobil layout är formulärmenyn, för att få åtkomst till olika formulärpaneler, tillgänglig genom att trycka på ![aem6forms_form_menu](assets/aem6forms_form_menu.png) ikon.
 
 ### Layout med panelrubriker i formulärrubriken {#layout-with-panel-titles-in-the-form-header}
 
@@ -144,9 +143,9 @@ Mobila layouter med paneltitlar i formulärrubriker
 
 Den här layouten, som namnet föreslår, visar bara navigeringsmenyn och navigeringsfältet utan panelrubriker. Den här layouten innehåller även ikoner för Nästa och Föregående för navigering.
 
-![Mobila layouter utan panelrubriker i formulärrubrikerna](assets/mobile_layout_without.png)
+![Mobila layouter utan panelrubriker i formulärrubriker](assets/mobile_layout_without.png)
 
-Mobila layouter utan panelrubriker i formulärrubrikerna
+Mobila layouter utan panelrubriker i formulärrubriker
 
 ## Verktygsfältslayouter {#toolbar-layouts}
 
@@ -156,7 +155,7 @@ En verktygsfältslayout styr placeringen och visningen av de åtgärdsknappar so
 
 En lista med verktygsfältslayouter i anpassningsbara formulär
 
-Verktygsfältslayouter finns på `/libs/fd/af/layouts/toolbar`-platsen. adaptiva formulär har som standard följande verktygsfältslayouter.
+Verktygsfältslayouter finns på `/libs/fd/af/layouts/toolbar` plats. adaptiva formulär har som standard följande verktygsfältslayouter.
 
 ### Standardlayout för verktygsfältet {#default-layout-for-toolbar}
 
@@ -179,4 +178,3 @@ För den mobila layouten kan du lägga till åtgärdsknappar med ikoner.
 ![Mobil fast layout för verktygsfältet](assets/toolbar_layout_mobile_fixed.png)
 
 Mobil fast layout för verktygsfältet
-

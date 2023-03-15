@@ -1,8 +1,8 @@
 ---
 title: Ansluta AEM Forms till Adobe LiveCycle
-seo-title: Ansluta AEM Forms till Adobe LiveCycle
+seo-title: Connecting AEM Forms with Adobe LiveCycle
 description: Med AEM LiveCycle Connector kan du starta LiveCycle ES4 Document Services inifrån AEM program och arbetsflöden.
-seo-description: Med AEM LiveCycle Connector kan du starta LiveCycle ES4 Document Services inifrån AEM program och arbetsflöden.
+seo-description: AEM LiveCycle connector allows you to start LiveCycle ES4 Document Services from within AEM apps and workflows.
 uuid: 7dc9d5ec-7b19-4d93-936d-81ceb45dfffa
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -12,7 +12,7 @@ role: Admin
 exl-id: 562f8a22-cbab-4915-bc0d-da9bea7d18fa
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '1029'
+source-wordcount: '1006'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Adobe Experience Manager (AEM) LiveCycle Connector gör det möjligt att smidigt
 
 ## Ansluta AEM till Adobe LiveCycle {#connecting-aem-server-to-adobe-livecycle}
 
-AEM LiveCycle Connector ingår i [AEM Forms-tilläggspaketet](/help/forms/using/installing-configuring-aem-forms-osgi.md). När du har installerat AEM Forms-tilläggspaketet utför du följande steg för att lägga till information om LiveCycle-servern AEM webbkonsolen.
+AEM LiveCycle Connector är en del av [AEM Forms tilläggspaket](/help/forms/using/installing-configuring-aem-forms-osgi.md). När du har installerat AEM Forms-tilläggspaketet utför du följande steg för att lägga till information om LiveCycle-servern AEM webbkonsolen.
 
 1. Gå AEM konfigurationshanteraren för webbkonsolen och leta reda på konfigurationskomponenten för Adobe-klient-SDK.
 1. Klicka på komponenten för att redigera konfigurationsserverns URL-adress, användarnamn och lösenord.
@@ -31,7 +31,7 @@ AEM LiveCycle Connector ingår i [AEM Forms-tilläggspaketet](/help/forms/using/
 
 Även om egenskaperna är självförklarande är de viktiga följande:
 
-* **Server-URL**  - Anger URL till LiveCycle-servern. Om du vill att LiveCycle och AEM ska kommunicera via https, kan du starta AEM med följande JVM
+* **Server-URL** - Anger URL till LiveCycle-servern. Om du vill att LiveCycle och AEM ska kommunicera via https, kan du starta AEM med följande JVM
 
    ```java
    argument
@@ -40,9 +40,9 @@ AEM LiveCycle Connector ingår i [AEM Forms-tilläggspaketet](/help/forms/using/
 
    alternativ.
 
-* **Användarnamn** - Anger användarnamnet för kontot som används för att upprätta kommunikation mellan AEM och LiveCycle. Kontot är ett LiveCycle-användarkonto som har behörighet att starta Document Services.
-* **Lösenord** - Anger lösenordet.
-* **Tjänstnamn**  - Anger vilka tjänster som startas med de användarautentiseringsuppgifter som anges i fälten Användarnamn och Lösenord. Som standard skickas inga autentiseringsuppgifter när LiveCycle-tjänster startas.
+* **Användarnamn**- Anger användarnamnet för kontot som används för att upprätta kommunikation mellan AEM och LiveCycle. Kontot är ett LiveCycle-användarkonto som har behörighet att starta Document Services.
+* **Lösenord**- Anger lösenordet.
+* **Tjänstnamn** - Anger vilka tjänster som startas med de inloggningsuppgifter som anges i fälten Användarnamn och Lösenord. Som standard skickas inga autentiseringsuppgifter när LiveCycle-tjänster startas.
 
 ## Startar dokumenttjänster {#starting-document-services}
 
@@ -54,13 +54,13 @@ Klientprogram kan starta LiveCycle-tjänster med hjälp av ett Java API, Web Ser
 
 AEM LiveCycle Connector förenklar flödet genom att visa dessa klientinstanser som OSGi-tjänster som kan nås med vanliga OSGi-metoder. Kopplingen LiveCycle har följande funktioner:
 
-* Klientinstanser som OSGi-tjänst: Klienter som paketerats som OSGI-paket listas i [Document Services list](/help/forms/using/aem-livecycle-connector.md#p-document-services-list-p) -avsnittet. Varje klientjar registrerar klientinstansen som OSGi-tjänst med OSGi-tjänstregistret.
+* Klientinstanser som OSGi-tjänst: Klienterna som paketerats som OSGI-paket listas i [Dokumenttjänstlista](/help/forms/using/aem-livecycle-connector.md#p-document-services-list-p) -avsnitt. Varje klientjar registrerar klientinstansen som OSGi-tjänst med OSGi-tjänstregistret.
 * Spridning av användarautentiseringsuppgifter: Den anslutningsinformation som krävs för att ansluta till LiveCycle-servern hanteras på en central plats.
 * ServiceClientFactory-tjänst: Klientprogrammet kan starta processerna genom att komma åt ServiceClientFactory-instansen.
 
 ### Starta via tjänstreferenser från OSGi-tjänstregistret {#starting-via-service-references-from-osgi-service-registry}
 
-Så här startar du en exponerad tjänst från AEM:
+Så här startar du en exponerad tjänst inifrån AEM:
 
 1. Fastställ maven-beroenden. Lägg till beroende till klientens jar i filen maven pom.xml. Lägg till minst beroende i jars för adobe-livecycle-client och adobe-usermanager-client.
 
@@ -82,7 +82,7 @@ Så här startar du en exponerad tjänst från AEM:
    </dependency>
    ```
 
-   Om du vill starta en tjänst lägger du till motsvarande Maven-beroende för tjänsten. En lista över beroenden finns i [Dokumenttjänstlista](/help/forms/using/aem-livecycle-connector.md#p-document-services-list-p). För tjänsten Generate PDF lägger du till följande beroende:
+   Om du vill starta en tjänst lägger du till motsvarande Maven-beroende för tjänsten. En lista över beroenden finns i [Dokumenttjänstlista](/help/forms/using/aem-livecycle-connector.md#p-document-services-list-p). Lägg till exempel till följande beroende för tjänsten Generate PDF:
 
    ```xml
    <dependency>

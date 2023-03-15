@@ -1,22 +1,21 @@
 ---
 title: Säkerhetskopiering och återställning
-seo-title: Säkerhetskopiering och återställning
+seo-title: Backup and Restore
 description: Lär dig hur du säkerhetskopierar och återställer AEM.
-seo-description: Lär dig hur du säkerhetskopierar och återställer AEM.
+seo-description: Learn how to backup and restore your AEM content.
 uuid: 446a466f-f508-4430-9e50-42cd4463760e
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 discoiquuid: eb8bbb85-ca2f-4877-8ee0-bb1ee8b7d8de
-translation-type: tm+mt
-source-git-commit: 684d2d5f73d571a15c8155e7870134c28dc892b7
+exl-id: dd26dade-b769-483e-bc11-dcfa5ed1f87e
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '2295'
+source-wordcount: '2283'
 ht-degree: 0%
 
 ---
-
 
 # Säkerhetskopiering och återställning{#backup-and-restore}
 
@@ -34,7 +33,7 @@ Om du behöver säkerhetskopiera och/eller återställa en liten mängd innehål
 * Antingen kan du hämta data från ett annat system via ett paket
 * Om du återställer säkerhetskopian på ett tillfälligt system skapar du ett innehållspaket och distribuerar det på systemet där det här innehållet saknas.
 
-Mer information finns i [Paketsäkerhetskopiering](/help/sites-administering/backup-and-restore.md#package-backup) nedan.
+Mer information finns i [Säkerhetskopiera paket](/help/sites-administering/backup-and-restore.md#package-backup) nedan.
 
 ## Timing {#timing}
 
@@ -50,11 +49,11 @@ I de flesta fall använder du en ögonblicksbild av filsystemet för att skapa e
 * skapa en säkerhetskopia av en ögonblicksbild
 * starta programmet
 
-Eftersom säkerhetskopieringen av ögonblicksbilder normalt tar några sekunder är hela driftstoppet mindre än några minuter.
+Eftersom säkerhetskopieringen av ögonblicksbilder vanligtvis tar några sekunder är hela driftstoppet mindre än några minuter.
 
 ## Onlinesäkerhetskopiering {#online-backup}
 
-Med den här säkerhetskopieringsmetoden skapas en säkerhetskopia av hela databasen, inklusive alla program som distribueras under den, till exempel AEM. Säkerhetskopian innehåller innehåll, versionshistorik, konfiguration, programvara, snabbkorrigeringar, anpassade program, loggfiler, sökindex osv. Om du använder klustring och om den delade mappen är en underkatalog till `crx-quickstart` (antingen fysiskt eller via en programlänk), säkerhetskopieras även den delade katalogen.
+Med den här säkerhetskopieringsmetoden skapas en säkerhetskopia av hela databasen, inklusive alla program som distribueras under den, till exempel AEM. Säkerhetskopian innehåller innehåll, versionshistorik, konfiguration, programvara, snabbkorrigeringar, anpassade program, loggfiler, sökindex osv. Om du använder klustring och om den delade mappen är en underkatalog till `crx-quickstart` (antingen fysiskt eller via en programlänk) säkerhetskopieras även den delade katalogen.
 
 Du kan återställa hela databasen (och alla program) vid ett senare tillfälle.
 
@@ -69,11 +68,11 @@ Under alla omständigheter skapar säkerhetskopian en bild (eller ögonblicksbil
 
 >[!NOTE]
 >
->Om funktionen AEM Online Backup används på en AEM som har en anpassad blobstore-konfiguration, bör du konfigurera sökvägen till datastore så att den ligger utanför katalogen `crx-quickstart` och säkerhetskopiera datalagret separat.
+>Om funktionen AEM Online Backup används på en AEM som har en anpassad blobstore-konfiguration bör du konfigurera sökvägen till datalagret så att den ligger utanför&quot; `crx-quickstart`&quot; och säkerhetskopiera datalagret separat.
 
 >[!CAUTION]
 >
->Onlinesäkerhetskopieringen säkerhetskopierar bara filsystemet. Om du lagrar databasinnehållet och/eller databasfilerna i en databas måste den databasen säkerhetskopieras separat. Om du använder AEM med MongoDB läser du dokumentationen om hur du använder de inbyggda [MongoDB-säkerhetskopieringsverktygen](https://docs.mongodb.org/manual/tutorial/backup-with-mongodump/).
+>Onlinesäkerhetskopieringen säkerhetskopierar bara filsystemet. Om du lagrar databasinnehållet och/eller databasfilerna i en databas måste den databasen säkerhetskopieras separat. Om du använder AEM med MongoDB läser du dokumentationen om hur du använder [Inbyggda verktyg för säkerhetskopiering i MongoDB](https://docs.mongodb.org/manual/tutorial/backup-with-mongodump/).
 
 ### AEM Online Backup {#aem-online-backup}
 
@@ -81,13 +80,13 @@ Med en onlinesäkerhetskopiering av databasen kan du skapa, hämta och ta bort s
 
 >[!CAUTION]
 >
->Kör inte AEM Online Backup samtidigt med [DataStore Garbage Collection](/help/sites-administering/data-store-garbage-collection.md) eller [Revision Cleanup](/help/sites-deploying/revision-cleanup.md#how-to-run-offline-revision-cleanup). Det påverkar systemets prestanda negativt.
+>Kör inte AEM Online Backup samtidigt med [Skräpinsamling för datastore](/help/sites-administering/data-store-garbage-collection.md) eller [Revision Cleanup](/help/sites-deploying/revision-cleanup.md#how-to-run-offline-revision-cleanup). Det påverkar systemets prestanda negativt.
 
-När du startar en säkerhetskopiering kan du ange en **målsökväg** och/eller en **fördröjning**.
+När du startar en säkerhetskopiering kan du ange en **Målsökväg** och/eller en **Fördröjning**.
 
-**Målsökväg:** Säkerhetskopian sparas vanligtvis i den överordnade mappen till mappen som innehåller filen quickstart jar (.jar). Om du till exempel har AEM jar-filen under /InstallationKits/AEM, skapas säkerhetskopian under /InstallationKits. Du kan också ange ett mål på en valfri plats.
+**Målsökväg** Säkerhetskopian sparas vanligtvis i den överordnade mappen till den mapp som innehåller filen quickstart jar (.jar). Om du till exempel har AEM jar-filen under /InstallationKits/AEM, skapas säkerhetskopian under /InstallationKits. Du kan också ange ett mål på en valfri plats.
 
-Om **TargetPath** är en katalog skapas databasbilden i den här katalogen. Om samma katalog används flera gånger (eller alltid) för lagring av säkerhetskopior,
+Om **TargetPath** är en katalog, bilden av databasen skapas i den här katalogen. Om samma katalog används flera gånger (eller alltid) för lagring av säkerhetskopior,
 
 * Ändrade filer i databasen ändras i enlighet med detta i TargetPath
 * borttagna filer i databasen tas bort i TargetPath
@@ -95,7 +94,7 @@ Om **TargetPath** är en katalog skapas databasbilden i den här katalogen. Om s
 
 >[!NOTE]
 >
->Om **TargetPath** är inställd på filnamn med filtillägget **.zip**, säkerhetskopieras databasen till en tillfällig katalog och innehållet i den tillfälliga katalogen komprimeras och lagras i ZIP-filen.
+>If **TargetPath** är inställt på filnamn med filtillägget **.zip**, säkerhetskopieras databasen till en tillfällig katalog och sedan komprimeras och lagras innehållet i den tillfälliga katalogen i ZIP-filen.
 >
 >Detta tillvägagångssätt rekommenderas inte, eftersom
 >
@@ -103,30 +102,28 @@ Om **TargetPath** är en katalog skapas databasbilden i den här katalogen. Om s
 >* komprimeringsprocessen utförs av databasen och kan påverka dess prestanda.
 >* Det fördröjer säkerhetskopieringsprocessen.
 >* Upp till Java 1.6 Java kan bara skapa ZIP-filer upp till 4 gigabyte.
-
 >
->
-Om du behöver skapa ett ZIP-format för säkerhetskopiering bör du säkerhetskopiera till en katalog och sedan använda ett komprimeringsprogram för att skapa zip-filen.
+>Om du behöver skapa ett ZIP-format för säkerhetskopiering bör du säkerhetskopiera till en katalog och sedan använda ett komprimeringsprogram för att skapa zip-filen.
 
-**** DelayAnger en tidsfördröjning (i millisekunder) så att databasens prestanda inte påverkas. Som standard körs säkerhetskopieringen av databasen med full hastighet. Du kan göra det långsammare att skapa en onlinesäkerhetskopiering så att andra uppgifter inte går långsammare.
+**Fördröjning** Anger en tidsfördröjning (i millisekunder) så att databasens prestanda inte påverkas. Som standard körs säkerhetskopieringen av databasen med full hastighet. Du kan göra det långsammare att skapa en onlinesäkerhetskopiering så att andra uppgifter inte går långsammare.
 
 När en väldigt stor fördröjning används bör du se till att onlinesäkerhetskopiering inte tar mer än 24 timmar. Om så är fallet, ignorera säkerhetskopian eftersom den kanske inte innehåller alla binärfiler.
 En fördröjning på 1 millisekund resulterar vanligtvis i 10 % processoranvändning, och en fördröjning på 10 millisekunder resulterar vanligtvis i mindre än 3 % processoranvändning. Den totala fördröjningen i sekunder kan uppskattas enligt följande: Databasstorlek i MB, multiplicerat med fördröjning i millisekunder, dividerat med 2 (om alternativet ZIP används) eller dividerat med 4 (vid säkerhetskopiering till en katalog). Det innebär att en säkerhetskopiering till en katalog i en 200 MB databas med 1 ms fördröjning ökar säkerhetskopieringstiden med cirka 50 sekunder.
 
 >[!NOTE]
 >
->Se [Hur AEM Online Backup fungerar](#how-aem-online-backup-works) för intern information om processen.
+>Se [Så här fungerar AEM Online Backup](#how-aem-online-backup-works) för intern information om processen.
 
 Så här skapar du en säkerhetskopia:
 
 1. Logga in på AEM som administratör.
 
 1. Gå till **Verktyg - Åtgärder - Säkerhetskopiering.**
-1. Klicka på **Skapa**. Säkerhetskopieringskonsolen öppnas.
+1. Klicka **Skapa**. Säkerhetskopieringskonsolen öppnas.
 
    ![chlimage_1-1](assets/chlimage_1-1a.png)
 
-1. På säkerhetskopieringskonsolen anger du **[målsökväg](#aem-online-backup)** och **[fördröjning](#aem-online-backup)**.
+1. På säkerhetskopieringskonsolen anger du **[Målsökväg](#aem-online-backup)** och **[Fördröjning](#aem-online-backup)**.
 
    ![chlimage_1-2](assets/chlimage_1-2a.png)
 
@@ -137,11 +134,11 @@ Så här skapar du en säkerhetskopia:
    >
    >` https://<*hostname*>:<*port-number*>/libs/granite/backup/content/admin.html`
 
-1. Klicka på **Spara**, en förloppsindikator visar förloppet för säkerhetskopieringen.
+1. Klicka **Spara** anger en förloppsindikator förloppet för säkerhetskopieringen.
 
    >[!NOTE]
    >
-   >Du kan **när som helst avbryta en säkerhetskopiering som körs.**
+   >Du kan **Avbryt** en säkerhetskopia som körs när som helst.
 
 1. När säkerhetskopieringen är klar visas ZIP-filerna i säkerhetskopieringsfönstret.
 
@@ -155,36 +152,36 @@ Så här skapar du en säkerhetskopia:
    >
    >Om du har säkerhetskopierat till en katalog: när säkerhetskopieringen är klar skriver AEM inte till målkatalogen.
 
-### Automatisera AEM onlinesäkerhetskopiering {#automating-aem-online-backup}
+### Automatisera AEM säkerhetskopiering online {#automating-aem-online-backup}
 
 Om det är möjligt bör säkerhetskopieringen online köras när det är lite belastning på systemet, till exempel på morgonen.
 
-Säkerhetskopieringar kan automatiseras med HTTP-klienterna `wget` eller `curl`. I följande exempel visas exempel på hur du automatiserar säkerhetskopiering med hjälp av vändning.
+Säkerhetskopieringar kan automatiseras med `wget` eller `curl` HTTP-klienter. I följande exempel visas exempel på hur du automatiserar säkerhetskopiering med hjälp av vändning.
 
 #### Säkerhetskopierar till standardmålkatalogen {#backing-up-to-the-default-target-directory}
 
 >[!CAUTION]
 >
->I följande exempel kan olika parametrar i kommandot `curl` behöva konfigureras för din instans: värdnamnet ( `localhost`), port ( `4502`), administratörslösenord ( `xyz`) och filnamn ( `backup.zip`).
+>I följande exempel finns olika parametrar i `curl` Kommandot kan behöva konfigureras för din instans; till exempel värdnamnet ( `localhost`), port ( `4502`), administratörslösenord ( `xyz`) och filnamn ( `backup.zip`).
 
 ```shell
 curl -u admin:admin -X POST http://localhost:4502/system/console/jmx/com.adobe.granite:type=Repository/op/startBackup/java.lang.String?target=backup.zip
 ```
 
-Säkerhetskopian av filen/katalogen skapas på servern i den överordnade mappen till mappen `crx-quickstart` (samma som om du skapade säkerhetskopian i webbläsaren). Om du till exempel har installerat AEM i katalogen `/InstallationKits/crx-quickstart/` skapas säkerhetskopian i katalogen `/InstallationKits`.
+Säkerhetskopian/katalogen skapas på servern i den överordnade mappen till mappen som innehåller mappen `crx-quickstart` (samma som om du skapade säkerhetskopian i webbläsaren). Om du till exempel har installerat AEM i katalogen `/InstallationKits/crx-quickstart/`skapas säkerhetskopian i `/InstallationKits` katalog.
 
 Kommandot curl returneras omedelbart, så du måste övervaka katalogen för att se när zip-filen är klar. När säkerhetskopieringen skapas kan en tillfällig katalog (med namnet som baseras på den slutliga ZIP-filen) visas, och i slutet kommer den att zippa. Till exempel:
 
 * den resulterande zip-filens namn: `backup.zip`
 * namn på tillfällig katalog: `backup.f4d5.temp`
 
-#### Säkerhetskopiera till en målkatalog {#backing-up-to-a-non-default-target-directory} som inte är standard
+#### Säkerhetskopiera till en målkatalog som inte är standard {#backing-up-to-a-non-default-target-directory}
 
-Vanligtvis skapas säkerhetskopian/katalogen på servern i den överordnade mappen till mappen `crx-quickstart`.
+Vanligtvis skapas säkerhetskopian/katalogen på servern i den överordnade mappen till den mapp som innehåller `crx-quickstart` mapp.
 
-Om du vill spara säkerhetskopian (av någon av sorteringarna) på en annan plats kan du ange en absolut sökväg till parametern `target` i kommandot `curl`.
+Om du vill spara säkerhetskopian (av någon sortering) på en annan plats kan du ange en absolut sökväg till `target` -parametern i `curl` -kommando.
 
-Om du till exempel vill generera `backupJune.zip` i katalogen `/Backups/2012`:
+Till exempel för att generera `backupJune.zip` i katalogen `/Backups/2012`:
 
 ```shell
 curl -u admin:admin -X POST http://localhost:4502/system/console/jmx/com.adobe.granite:type=Repository/op/startBackup/java.lang.String?target=/Backups/2012/backupJune.zip"
@@ -196,7 +193,7 @@ curl -u admin:admin -X POST http://localhost:4502/system/console/jmx/com.adobe.g
 
 >[!NOTE]
 >
->En säkerhetskopia kan också aktiveras [med de MBeans som finns i AEM](/help/sites-administering/jmx-console.md).
+>En säkerhetskopia kan också utlösas [med hjälp av de MBeans som AEM tillhandahåller](/help/sites-administering/jmx-console.md).
 
 ### Säkerhetskopiering av ögonblicksbild av filsystem {#filesystem-snapshot-backup}
 
@@ -224,7 +221,7 @@ I onlinesäkerhetskopieringen används följande algoritm:
 
       En tom fil med namnet `backupInProgress.txt` skapas i målkatalogen när säkerhetskopieringen startar. Den här filen tas bort när säkerhetskopieringen är klar.
 
-1. Filerna kopieras från källkatalogen till målkatalogen (eller den tillfälliga katalogen när en zip-fil skapas). Segmentlagret kopieras före datalagret för att undvika att databasen skadas. Index- och cachedata utelämnas när säkerhetskopian skapas. Därför ingår inte data från `crx-quickstart/repository/cache` och `crx-quickstart/repository/index` i säkerhetskopian. Förloppsindikatorn för processen ligger mellan 0 % och 70 % när en zip-fil skapas, eller 0 % - 100 % om ingen zip-fil skapas.
+1. Filerna kopieras från källkatalogen till målkatalogen (eller den tillfälliga katalogen när en zip-fil skapas). Segmentlagret kopieras före datalagret för att undvika att databasen skadas. Index- och cachedata utelämnas när säkerhetskopian skapas. Detta resulterar i data från `crx-quickstart/repository/cache` och `crx-quickstart/repository/index` ingår inte i säkerhetskopian. Förloppsindikatorn för processen ligger mellan 0 % och 70 % när en zip-fil skapas, eller 0 % - 100 % om ingen zip-fil skapas.
 
 1. Om säkerhetskopian görs till en befintlig katalog tas&quot;gamla&quot; filer i målkatalogen bort. Gamla filer är filer som inte finns i källkatalogen.
 
@@ -241,9 +238,9 @@ Filerna kopieras till målkatalogen i fyra steg:
 1. Beroende på målet:
 
    * Om en ZIP-fil har angetts skapas den nu från den tillfälliga katalogen. Förloppsindikator 70 % - 100 %. Den tillfälliga katalogen tas sedan bort.
-   * Om målet var en katalog tas den tomma filen med namnet `backupInProgress.txt` bort, vilket anger att säkerhetskopieringen är klar.
+   * Om målet var en katalog är den tomma filen med namnet `backupInProgress.txt` tas bort för att ange att säkerhetskopieringen är klar.
 
-## Återställer säkerhetskopian {#restoring-the-backup}
+## Återställa säkerhetskopian {#restoring-the-backup}
 
 Du kan återställa en säkerhetskopia enligt följande:
 
@@ -254,9 +251,9 @@ Du kan återställa en säkerhetskopia enligt följande:
 
 Om du vill säkerhetskopiera och återställa innehåll kan du använda en av pakethanterarna, som använder innehållspaketformatet för att säkerhetskopiera och återställa innehållet. Pakethanteraren ger större flexibilitet när det gäller att definiera och hantera paket.
 
-Mer information om funktioner och kompromisser för de olika innehållspaketformaten finns i [Arbeta med paket](/help/sites-administering/package-manager.md).
+Mer information om funktioner och kompromisser för de olika innehållspaketformaten finns i [Så här arbetar du med paket](/help/sites-administering/package-manager.md).
 
-### Omfång för säkerhetskopiering {#scope-of-backup}
+### Säkerhetskopians omfattning {#scope-of-backup}
 
 När du säkerhetskopierar noder med antingen Package Manager eller Content Zipper, sparar CRX följande information:
 
@@ -267,4 +264,3 @@ När du säkerhetskopierar noder med antingen Package Manager eller Content Zipp
 Vid säkerhetskopiering förlorar AEM följande information:
 
 * Versionshistoriken.
-

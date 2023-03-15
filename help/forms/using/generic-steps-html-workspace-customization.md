@@ -1,8 +1,8 @@
 ---
 title: Allmänna steg för anpassning av AEM Forms arbetsyta
-seo-title: Allmänna steg för anpassning av AEM Forms arbetsyta
+seo-title: Generic steps for AEM Forms workspace customization
 description: Hur man kommer igång med att anpassa användargränssnittet i AEM Forms arbetsyta.
-seo-description: Hur man kommer igång med att anpassa användargränssnittet i AEM Forms arbetsyta.
+seo-description: How to get started customizing AEM Forms workspace user interface.
 uuid: da6310b4-1c58-468d-85c6-975fd2c141f9
 contentOwner: robhagat
 content-type: reference
@@ -10,32 +10,31 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: dd3218c4-2bb2-40fc-9141-5823b0ea4224
 docset: aem65
-translation-type: tm+mt
-source-git-commit: e863089a4328b7222b60429c82ca3df2b8e1dd05
+exl-id: 45e50b47-1b36-4937-9e1a-cc7bfb953861
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '288'
+source-wordcount: '271'
 ht-degree: 2%
 
 ---
 
-
-# Allmänna steg för anpassning av arbetsytan i AEM Forms {#generic-steps-for-aem-forms-workspace-customization}
+# Allmänna steg för anpassning av AEM Forms arbetsyta {#generic-steps-for-aem-forms-workspace-customization}
 
 De allmänna stegen för att utföra anpassningar är:
 
-1. Logga in på CRXDE Lite med `https://'[server]:[port]'/lc/crx/de/index.jsp`.
-1. Skapa en `sling:Folder`-mapp med namnet `ws` på `/apps`, om den inte finns. Om du vill skapa en `sling:Folder`-mapp högerklickar du på mappen `apps` och väljer **[!UICONTROL Create]** > **[!UICONTROL Create Node]**. Ange namnet som `ws`, välj typen `sling:Folder` och klicka på **[!UICONTROL OK]**. Klicka på **[!UICONTROL Save All]**.
-1. Bläddra till `/apps/ws` och navigera till fliken **[!UICONTROL Access Control]**.
-1. Välj alternativet **[!UICONTROL Repository]**. Klicka på **[!UICONTROL +]** i listan **[!UICONTROL Access Control]** för att lägga till en ny post. Klicka på **[!UICONTROL +]** igen.
-1. Sök efter och välj **PERM_WORKSPACE_USER** Principal.
+1. Logga in på CRXDE Lite med åtkomst `https://'[server]:[port]'/lc/crx/de/index.jsp`.
+1. Skapa en `sling:Folder` mapp namngiven `ws` på `/apps`, om den inte finns. Skapa en `sling:Folder` mapp, högerklicka på `apps` mapp och markera **[!UICONTROL Create]** > **[!UICONTROL Create Node]**. Ange namnet som `ws`, välj text som `sling:Folder` och klicka **[!UICONTROL OK]**. Klicka på **[!UICONTROL Save All]**.
+1. Bläddra till `/apps/ws`och navigera till **[!UICONTROL Access Control]** -fliken.
+1. Välj **[!UICONTROL Repository]** alternativ. I **[!UICONTROL Access Control]** lista, klicka på **[!UICONTROL +]** för att lägga till en ny post. Klicka **[!UICONTROL +]** igen.
+1. Sök och välj **PERM_WORKSPACE_USER** Huvudman.
 
-   ![Välj PERM_WORKSPACE_USER som en del av de allmänna stegen för att anpassa HTML-arbetsytan](assets/perm_workspace_user.png)
+   ![Välj PERM_WORKSPACE_USER som en del av de allmänna stegen för att anpassa arbetsytan i HTML](assets/perm_workspace_user.png)
 
-1. Ge `jcr:read` privilegium till huvudmannen.
+1. Ge `jcr:read` Privilegium till rektorn.
 1. Klicka på **[!UICONTROL Save All]**.
-1. Kopiera filerna `GET.jsp`, `index` och `html.jsp` från mappen `/libs/ws` till mappen `/apps/ws`.
-1. Kopiera mappen `/libs/ws/locales` i mappen `/apps/ws`. Klicka på **[!UICONTROL Save All]**.
-1. Uppdatera referenserna och de relativa sökvägarna i `GET.jsp`-filen enligt nedan och klicka på **[!UICONTROL Save all]**.
+1. Kopiera `GET.jsp`, `index`och `html.jsp` filer från `/libs/ws` mapp till `/apps/ws` mapp.
+1. Kopiera `/libs/ws/locales` i `/apps/ws` mapp. Klicka på **[!UICONTROL Save All]**.
+1. Uppdatera referenserna och de relativa sökvägarna i `GET.jsp` som visas nedan och klicka på **[!UICONTROL Save all]**.
 
    ```javascript
    <meta http-equiv="refresh" content="0;URL='/lc/apps/ws/index.html'" />
@@ -43,9 +42,9 @@ De allmänna stegen för att utföra anpassningar är:
 
 1. Gör följande för CSS-anpassningar:
 
-   1. Navigera till mappen `/apps/ws` och skapa en ny mapp med namnet `css`.
+   1. Navigera till `/apps/ws` och skapa en ny mapp med namnet `css`.
 
-   1. Skapa en ny fil med namnet `newStyle.css` i mappen `css`.
+   1. I `css` mapp, skapa en ny fil med namnet `newStyle.css`.
 
    1. Öppna `/apps/ws/html`.jsp och ändra från
 
@@ -84,18 +83,18 @@ De allmänna stegen för att utföra anpassningar är:
 
    1. Skapa en mapp med namnet `libs` på `/apps/ws/js`. Klicka på **[!UICONTROL Save All]**.
 
-   1. Kopiera mappen `/libs/ws/js/libs/jqueryui` till `/apps/ws/js/libs`. Klicka på **[!UICONTROL Save All]**.
+   1. Kopiera `/libs/ws/js/libs/jqueryui` mapp till `/apps/ws/js/libs`. Klicka på **[!UICONTROL Save All]**.
 
-1. Gör följande för HTML-anpassningar:
+1. Gör följande för anpassning av HTML:
 
-   1. Skapa en mapp med namnet `runtime` under `/apps/ws/js`. Klicka på **[!UICONTROL Save All]**.
+   1. Under `/apps/ws/js`, skapa en mapp med namnet `runtime`. Klicka på **[!UICONTROL Save All]**.
 
-   1. Skapa en mapp med namnet `templates` under `/apps/ws/js/runtime`. Klicka på **[!UICONTROL Save All]**.
+   1. Under `/apps/ws/js/runtime`, skapa en mapp med namnet `templates`. Klicka på **[!UICONTROL Save All]**.
 
    1. Kopiera `/libs/ws/js/main.js` till `/apps/ws/js/main.js`.
 
    1. Kopiera /libs/ws/js/registry.js till `/apps/ws/js/registry.js`.
 
-1. Klicka på **[!UICONTROL Save All]**, rensa cache och uppdatera AEM Forms-arbetsytan.
+1. Klicka **[!UICONTROL Save All]**, rensa cacheminne och uppdatera AEM Forms arbetsyta.
 
-   Gå till URL:en `https://'[server]:[port]'/lc/ws` och logga in med autentiseringsuppgifter för administratör/lösenord. Webbläsaren omdirigeras till `https://'[server]:[port]'/lc/apps/ws/index.html`.
+   Öppna URL:en `https://'[server]:[port]'/lc/ws` och logga in med inloggningsuppgifter för administratör/lösenord. Webbläsaren omdirigeras till `https://'[server]:[port]'/lc/apps/ws/index.html`.

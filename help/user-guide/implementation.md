@@ -7,7 +7,7 @@ exl-id: 33404f0d-c04c-4720-8a24-ded6738ec7d4
 source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
 workflow-type: tm+mt
 source-wordcount: '100'
-ht-degree: 0%
+ht-degree: 11%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ## Kärnkomponenter för AEM {#core-components-for-aem}
 
-[Använd de utbyggbara kärnkomponenterna för att låta skribenterna enkelt skapa innehåll.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
+[Redigerare kan enkelt skapa innehåll genom att använda de utökningsbara grundläggande komponenterna.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 
 ## HTML (HTML Template Language) för AEM {#htl-for-aem}
 

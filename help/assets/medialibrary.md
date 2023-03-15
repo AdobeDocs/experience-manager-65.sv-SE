@@ -1,6 +1,6 @@
 ---
 title: Använd Media Library för grundläggande hantering av digitala resurser
-description: '"[!DNL Experience Manager Assets] och Media Library för filhantering."'
+description: "[!DNL Experience Manager Assets] och Media Library för filhantering."
 contentOwner: AG
 role: Architect, Leader
 feature: Asset Management
@@ -69,7 +69,7 @@ Om du vill använda Media Library-funktionen kan du använda standardfunktionen 
 * Anteckna resurser.
 * Lägg till resurser i [!DNL Sites] sidor via Content Finder.
 * Använd [!DNL Content Fragments].
-* Använd HTTP REST- och GraphQL-API:er för [!DNL Content Fragments] och refererade medieresurser, under Sites-licens.
+* Använd HTTP REST och GraphQL API:er för [!DNL Content Fragments] och refererade medieresurser, under Sites-licens.
 * Integrering med Marketing Cloud.
 * Anpassa och utöka gränssnittet för resurshantering.
 * Gå till Query Builder (API) för att utöka sökfunktionen.

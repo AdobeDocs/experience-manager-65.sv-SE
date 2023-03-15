@@ -1,36 +1,35 @@
 ---
 title: Barcoded Forms Service
-seo-title: Använda AEM Forms Barcoded Forms Service
-description: 'Använd tjänsten AEM Forms Barcoded Forms för att extrahera data från elektroniska bilder av streckkoder. '
-seo-description: 'Använd tjänsten AEM Forms Barcoded Forms för att extrahera data från elektroniska bilder av streckkoder. '
+seo-title: Using AEM Forms Barcoded Forms Service
+description: Använd tjänsten AEM Forms Barcoded Forms för att extrahera data från elektroniska bilder av streckkoder.
+seo-description: Use AEM Forms Barcoded Forms service to extract data from electronic images of barcodes.
 uuid: b044a788-0e4a-4718-b71a-bd846933d51b
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
 discoiquuid: d431c4cb-e4be-41a5-8085-42393d4d468c
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 998a127ce00c6cbb3db3a81d8a89d97ab9ef7469
+exl-id: edaf12be-473f-4175-b4e0-549b41159a55
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1042'
+source-wordcount: '1022'
 ht-degree: 1%
 
 ---
-
 
 # Barcoded Forms Service{#barcoded-forms-service}
 
 ## Översikt {#overview}
 
-Tjänsten Barcoded Forms extraherar data från elektroniska bilder av streckkoder. Tjänsten accepterar TIFF- och PDF-filer som innehåller en eller flera streckkoder som indata och extraherar streckkodsdata. Streckkodsdata kan formateras på olika sätt, t.ex. XML, avgränsade strängar eller andra anpassade format som skapats med JavaScript.
+Tjänsten Barcoded Forms extraherar data från elektroniska bilder av streckkoder. Tjänsten accepterar TIFF och PDF som innehåller en eller flera streckkoder som indata och extraherar streckkodsdata. Streckkodsdata kan formateras på olika sätt, t.ex. XML, avgränsade strängar eller andra anpassade format som skapats med JavaScript.
 
-Tjänsten Barcoded Forms stöder följande **tvådimensionella (2D)**-symboler som tillhandahålls som skannade TIFF- eller PDF-dokument:
+Tjänsten Barcoded Forms stöder följande **tvådimensionell (2D)** symboler som tillhandahålls som skannade dokument i TIFF eller PDF:
 
 * PDF417
 * Datamatris
 * QR-kod
 
-Tjänsten stöder även följande **endimensionella**-symboler som tillhandahålls som skannade TIFF- eller PDF-dokument:
+Tjänsten stöder även följande **endimensionell** symboler som tillhandahålls som skannade dokument i TIFF eller PDF:
 
 * Codabar
 * Code 128
@@ -94,13 +93,13 @@ Tjänsten Barcoded Forms returnerar följande XML-dokument när streckkoderna ha
 
 ## Överväganden för tjänsten {#considerations}
 
-### Arbetsflöden som använder streckkodsformulär {#workflows-that-use-barcoded-forms}
+### Arbetsflöden som använder streckkodade formulär {#workflows-that-use-barcoded-forms}
 
-Formulärförfattare skapar interaktiva streckkodsformulär med Designer. (Se [Designer-hjälp](https://www.adobe.com/go/learn_aemforms_designer_63).) När en användare fyller i ett streckkodsformulär med Adobe Reader eller Acrobat uppdateras streckkoden automatiskt för att koda formulärdata.
+Formulärförfattare skapar interaktiva streckkodsformulär med Designer. (Se [Designer - hjälp](https://www.adobe.com/go/learn_aemforms_designer_63).) När en användare fyller i ett streckkodsformulär med Adobe Reader eller Acrobat uppdateras streckkoden automatiskt för att koda formulärdata.
 
 Tjänsten Barcoded Forms är användbar vid konvertering av data som finns på papper till elektroniskt format. När ett streckkodsformulär fylls i och skrivs ut kan den utskrivna kopian skannas och användas som indata till tjänsten Barcoded Forms.
 
-Bevakade mappslutpunkter används vanligtvis för att starta program som använder tjänsten Barcoded Forms. Dokumentskannrar kan till exempel spara TIFF- eller PDF-bilder av streckkodade formulär i en bevakad mapp. Den bevakade mappens slutpunkt skickar bilderna till tjänsten för avkodning.
+Bevakade mappslutpunkter används vanligtvis för att starta program som använder tjänsten Barcoded Forms. Dokumentskannrar kan t.ex. spara TIFF- eller PDF-bilder av streckkodade formulär i en bevakad mapp. Den bevakade mappens slutpunkt skickar bilderna till tjänsten för avkodning.
 
 ### Rekommenderade kodnings- och avkodningsformat {#recommended-encoding-and-decoding-formats}
 
@@ -126,24 +125,24 @@ När du använder BCF API:er bör du tänka på följande begränsningar:
 
 Tänk också på följande begränsningar när du använder tjänsten Barcoded Forms:
 
-* Tjänsten stöder AcroForms fullt ut och statiska formulär som innehåller 2D-streckkoder som sparas med Adobe Reader eller Acrobat. Men för 1D-streckkoder kan du antingen förenkla formuläret eller skicka det som skannad PDF eller TIFF-dokument.
-* Dynamiska XFA-formulär stöds inte helt. Om du vill avkoda 1D- och 2D-streckkoder på rätt sätt i ett dynamiskt formulär kan du antingen förenkla formuläret eller skicka det som skannad PDF eller TIFF-dokument.
+* Tjänsten stöder AcroForms fullt ut och statiska formulär som innehåller 2D-streckkoder som sparas med Adobe Reader eller Acrobat. För 1D-streckkoder kan du dock antingen förenkla formuläret eller skicka det som skannat PDF eller TIFF.
+* Dynamiska XFA-formulär stöds inte helt. Om du vill avkoda 1D- och 2D-streckkoder på rätt sätt i ett dynamiskt formulär, kan du antingen förenkla formuläret eller skicka det som skannat PDF eller TIFF.
 
-Tjänsten kan dessutom avkoda alla streckkoder som har en symbolik som stöds om ovanstående begränsningar iakttas. Mer information om hur du skapar interaktiva streckkodade formulär finns i [Designer-hjälpen](https://www.adobe.com/go/learn_aemforms_designer_63).
+Tjänsten kan dessutom avkoda alla streckkoder som har en symbolik som stöds om ovanstående begränsningar iakttas. Mer information om hur du skapar interaktiva streckkodade formulär finns i [Designer - hjälp](https://www.adobe.com/go/learn_aemforms_designer_63).
 
 ## Konfigurera egenskaper för tjänsten   {#configureproperties}
 
-Du kan använda **AEMFD Barcoded Forms Service** i AEM Console för att konfigurera egenskaper för den här tjänsten. Standardwebbadressen för AEM är `https://[host]:'port'/system/console/configMgr`.
+Du kan använda **AEMFD Barcoded Forms Service** i AEM Console för att konfigurera egenskaper för den här tjänsten. Standardwebbadressen AEM konsolen är `https://[host]:'port'/system/console/configMgr`.
 
 ## Använda tjänsten {#using}
 
 Barcoded Forms Service innehåller följande två API:er:
 
-* **[avkodning](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/bcf/api/BarcodedFormsService.html#decode)**: Avkodar alla streckkoder som är tillgängliga i ett PDF-inmatningsdokument eller en TIFF-bild. Det returnerar ett annat XML-dokument som innehåller data som hämtats från alla streckkoder som finns i indatadokumentet eller bilden.
+* **[decode](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/bcf/api/BarcodedFormsService.html#decode)**: Avkodar alla streckkoder som är tillgängliga i ett PDF-inmatningsdokument eller en TIFF-bild. Det returnerar ett annat XML-dokument som innehåller data som hämtats från alla streckkoder som finns i indatadokumentet eller bilden.
 
 * **[extractToXML](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/bcf/api/BarcodedFormsService.html#decode)**: Konvertera data som avkodats med avkodnings-API till XML-data. Dessa XML-data kan sammanfogas med ett XFA-formulär. Den returnerar en lista med XML-dokument, en för varje streckkod.
 
-### Använda BCF Service med en JSP eller Servlets {#using-bcf-service-with-a-jsp-or-servlets}
+### Använda BCF Service med JSP eller Servlets {#using-bcf-service-with-a-jsp-or-servlets}
 
 Följande exempelkod avkodar en streckkod i ett dokument och sparar XML-utdata på disken.
 
@@ -305,4 +304,3 @@ function saveW3CDocument(inputDoc, filePath) {
    os.close();
 }
 ```
-

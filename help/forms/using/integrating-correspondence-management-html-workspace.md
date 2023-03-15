@@ -1,25 +1,24 @@
 ---
 title: Integrera tredjepartsprogram i AEM Forms arbetsyta
-seo-title: Integrera tredjepartsprogram i AEM Forms arbetsyta
+seo-title: Integrating third-party applications in AEM Forms workspace
 description: Integrera tredjepartsprogram som Correspondence Management i AEM Forms arbetsyta.
-seo-description: Hur man integrerar tredjepartsappar som Correspondence Management i AEM Forms arbetsyta.
+seo-description: How-to integrate third-party apps like Correspondence Management in AEM Forms workspace.
 uuid: 7654cf86-b896-4db2-8f5d-6c1b2e6c229f
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: f70f21e3-3bec-490d-889e-faf496fb738b
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+exl-id: 39a3f7db-549f-47f3-8d4f-42d583a4532d
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '650'
+source-wordcount: '632'
 ht-degree: 0%
 
 ---
 
-
 # Integrera tredjepartsprogram i AEM Forms arbetsyta{#integrating-third-party-applications-in-aem-forms-workspace}
 
-AEM Forms arbetsyta hanterar uppgifter och slutprocesser för blanketter och dokument. Dessa formulär och dokument kan vara XDP Forms, Flex® eller stödlinjer (borttagna) som har återgetts i XDP-, PDF-, HTML- eller Flex-format.
+AEM Forms arbetsyta hanterar uppgifter och slutprocesser för blanketter och dokument. Dessa formulär och dokument kan vara XDP Forms, Flex®-formulär eller stödlinjer (borttagna) som har återgetts i formaten XDP, PDF, HTML eller Flex.
 
 Dessa funktioner har förbättrats ytterligare. AEM Forms har nu stöd för samarbete med tredjepartsprogram som stöder funktioner som liknar AEM Forms arbetsyta. En vanlig del av den här funktionen är arbetsflödet för tilldelning och efterföljande godkännande av en uppgift. AEM Forms ger en enhetlig upplevelse för AEM Forms Enterprise-användare så att alla sådana tilldelningar eller godkännanden av de program som stöds kan hanteras via AEM Forms arbetsyta.
 
@@ -31,9 +30,9 @@ Börja med att skapa en Correspondence Management-exempelmall som renderas i AEM
 
 Gå till Correspondence Management-mallen på dess URL för att kontrollera om Correspondence Management-mallen kan återges korrekt. URL:en har ett mönster som liknar `https://'[server]:[port]'/lc/content/cm/createcorrespondence.html?cmLetterId=encodedLetterId&cmUseTestData=1&cmPreview=0;`
 
-där `encodedLetterId` är det URL-kodade brev-ID:t. Ange samma bokstav-ID när du definierar återgivningsprocessen för arbetsyteaktiviteten i Workbench.
+där `encodedLetterId` är URL-kodat brev-ID. Ange samma bokstav-ID när du definierar återgivningsprocessen för arbetsyteaktiviteten i Workbench.
 
-## Skapa en aktivitet som återger och skickar ett brev AEM arbetsytan {#create-a-task-to-render-and-submit-a-letter-in-aem-workspace}
+## Skapa en uppgift för att återge och skicka ett brev AEM arbetsytan {#create-a-task-to-render-and-submit-a-letter-in-aem-workspace}
 
 Innan du utför dessa steg måste du kontrollera att du är medlem i följande grupper:
 
@@ -45,8 +44,8 @@ Mer information finns i [Lägga till och konfigurera användare](/help/forms/usi
 Följ de här stegen för att skapa en uppgift som återger och skickar ett brev AEM arbetsytan:
 
 1. Starta Workbench. Logga in på localhost som administratör.
-1. Klicka på Arkiv > Nytt > Program. Ange `CMDemoSample` i fältet Programnamn och klicka sedan på Slutför.
-1. Välj `CMDemoSample/1.0` och högerklicka på `NewProcess`. Ange `CMRenderer` i namnfältet och klicka sedan på Slutför.
+1. Klicka på Arkiv > Nytt > Program. I fältet Programnamn anger du `CMDemoSample` och klicka sedan på Slutför.
+1. Välj `CMDemoSample/1.0` och högerklicka `NewProcess`. I namnfältet anger du `CMRenderer` och klicka sedan på Slutför.
 1. Dra aktivitetsväljaren för startpunkten och konfigurera den:
 
    1. I Presentationsdata väljer du Använd en CRX-resurs.
@@ -102,13 +101,13 @@ Följ de här stegen för att skapa en uppgift som återger och skickar ett brev
    }
    ```
 
-   [Hämta ](assets/dscsample.zip)
-filHämta DSC: Ett exempel på DSC finns i filen DSCSample.zip som bifogas ovan. Ladda ned och zippa upp filen DSCSample.zip. Innan du använder DSC-tjänsten måste du konfigurera den. Mer information finns i [Konfigurera DSC-tjänsten](../../forms/using/add-action-button-in-create-correspondence-ui.md#p-configure-the-dsc-service-p).
+   [Hämta fil](assets/dscsample.zip)
+Hämta DSC: Ett exempel på DSC finns i filen DSCSample.zip som bifogas ovan. Ladda ned och zippa upp filen DSCSample.zip. Innan du använder DSC-tjänsten måste du konfigurera den. Mer information finns i [Konfigurera DSC-tjänsten](../../forms/using/add-action-button-in-create-correspondence-ui.md#p-configure-the-dsc-service-p).
 
    I dialogrutan Definiera aktivitet väljer du lämplig aktivitet, till exempel getLetterInstanceInfo, och klickar på **OK**.
 
 1. Distribuera programmet. Om du uppmanas att checka in och spara resurserna.
-1. Logga in på arbetsytan för AEM formulär på https://&#39;[server]:[port]&#39;/lc/content/ws.
+1. Logga in på arbetsytan för AEM formulär på https://&#39;[server]:[port]/lc/content/ws.
 1. Öppna den uppgift du lagt till, CMRenderer. Correspondence Management-brevet visas.
 
    ![cminarbetsyta](assets/cminworkspace.png)

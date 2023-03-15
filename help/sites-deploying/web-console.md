@@ -1,8 +1,8 @@
 ---
 title: Webbkonsol
-seo-title: Webbkonsol
+seo-title: Web Console
 description: Lär dig hur du använder AEM webbkonsol.
-seo-description: Lär dig hur du använder AEM webbkonsol.
+seo-description: Learn how to use the AEM web console.
 uuid: 7856b2b3-4216-421d-a315-cd9a55936362
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,14 +10,13 @@ content-type: reference
 topic-tags: configuring
 discoiquuid: 4a33fddd-0399-40e4-8687-564fb6765b76
 feature: Configuring
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 9acbf61f-73a8-4998-9421-dd933f30ac8a
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '729'
+source-wordcount: '718'
 ht-degree: 1%
 
 ---
-
 
 # Webbkonsol{#web-console}
 
@@ -43,13 +42,13 @@ Konsolen kan nås från `../system/console`; till exempel:
 
 ## Konfiguration {#configuration}
 
-Fliken **Konfiguration** används för att konfigurera OSGi-paket och är därför den underliggande mekanismen för att konfigurera AEM systemparametrar.
+The **Konfiguration** -fliken används för att konfigurera OSGi-paket och är därför den underliggande mekanismen för att konfigurera AEM systemparametrar.
 
 >[!NOTE]
 >
->Mer information finns i [OSGi Configuration with the Web Console](/help/sites-deploying/configuring-osgi.md).
+>Se [OSGi-konfiguration med webbkonsolen](/help/sites-deploying/configuring-osgi.md) för mer information.
 
-Fliken **Konfiguration** kan nås av antingen:
+The **Konfiguration** -fliken kan nås av antingen:
 
 * Listrutan:
 
@@ -66,13 +65,13 @@ En lista över konfigurationer visas:
 Det finns två typer av konfigurationer tillgängliga i listrutorna på den här skärmen:
 
 * **Konfigurationer**
-  Här kan du uppdatera befintliga konfigurationer. Dessa har en Persistent Identity (PID) och kan antingen vara:
+Gör att du kan uppdatera befintliga konfigurationer. Dessa har en Persistent Identity (PID) och kan antingen vara:
 
    * standard och integrerad i AEM, dessa är obligatoriska, om de tas bort återgår värdena till standardinställningarna.
    * instanser som skapats från fabrikskonfigurationer, om instanserna skapas av användaren tas instansen bort.
 
 * **Fabrikskonfigurationer**
-   Gör att du kan skapa en instans av det funktionsobjekt som krävs.
+Gör att du kan skapa en instans av det nödvändiga funktionsobjektet.
 
    Detta tilldelas en beständig identitet och visas sedan i listrutan Konfigurationer.
 
@@ -106,7 +105,7 @@ Du kan sedan uppdatera parametrarna efter behov och:
 
 ## Paket {#bundles}
 
-Fliken **Paket** är den mekanism som används för att installera OSGi-paket som krävs för AEM. Du kommer åt fliken på något av följande sätt:
+The **Paket** är den mekanism som används för att installera OSGi-paket som krävs för AEM. Du kommer åt fliken på något av följande sätt:
 
 * Listrutan:
 
@@ -124,7 +123,7 @@ På den här fliken kan du:
 
 * **Installera eller uppdatera**
 
-   Du kan **Bläddra** för att hitta filen som innehåller ditt paket och ange om den ska **starta** omedelbart och vid vilken **startnivå**.
+   Du kan **Bläddra** för att hitta filen som innehåller ditt paket och ange om det ska **Starta** omedelbart och **Startnivå**.
 
 * **Läs in igen**
 
@@ -154,11 +153,11 @@ På den här fliken kan du:
 
 >[!NOTE]
 >
->Efter **Uppdatera** bör du utföra en **uppdatering av paket**.
+>Efter **Uppdatera** vi rekommenderar att du utför en **Uppdatera paket**.
 
 ## Komponenter {#components}
 
-På fliken **Komponenter** kan du aktivera och/eller inaktivera de olika komponenterna. Den kan nås av antingen:
+The **Komponenter** På -fliken kan du aktivera och/eller inaktivera de olika komponenterna. Den kan nås av antingen:
 
 * Listrutan:
 
@@ -181,4 +180,3 @@ Om du klickar på namnet på en viss komponent visas mer information om dess sta
 >Om du aktiverar, eller inaktiverar, en komponent gäller det bara tills AEM/CRX startas om.
 >
 >Startläget definieras i komponentbeskrivningen, som genereras under utveckling och lagras i paketet när paketet skapas.
-

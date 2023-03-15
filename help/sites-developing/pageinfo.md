@@ -1,28 +1,27 @@
 ---
 title: Hämta sidinformation i JSON-format
-seo-title: Hämta sidinformation i JSON-format
+seo-title: Obtaining Page Information in JSON Format
 description: Om du vill hämta sidinformationen skickar du en begäran till PageInfo-servern för att få fram sidans metadata i JSON-format
-seo-description: Om du vill hämta sidinformationen skickar du en begäran till PageInfo-servern för att få fram sidans metadata i JSON-format
+seo-description: To obtain the page information, send a request to the PageInfo servlet to obtain the page metadata in JSON format
 uuid: fb4f56b9-55e2-4622-a0d1-a86d6f2cce86
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: components
 content-type: reference
 discoiquuid: 505bf3e3-ce3c-40aa-9619-e1b9f6634deb
-translation-type: tm+mt
-source-git-commit: b3e1493811176271ead54bae55b1cd0cf759fe71
+exl-id: 7c856e87-9f90-435d-aceb-994f10ea6f50
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '969'
+source-wordcount: '943'
 ht-degree: 0%
 
 ---
-
 
 # Hämta sidinformation i JSON-format{#obtaining-page-information-in-json-format}
 
 Om du vill hämta sidinformationen skickar du en begäran till PageInfo-servern för att hämta sidans metadata i JSON-format.
 
-PageInfo-servern returnerar information om resurser i databasen. Servern är bunden till URL:en `https://<server>:<port>/libs/wcm/core/content/pageinfo.json` och använder parametern `path` för att identifiera resursen. Följande exempel-URL returnerar information om noden `/content/we-retail/us/en`:
+PageInfo-servern returnerar information om resurser i databasen. Servern är bunden till URL:en `https://<server>:<port>/libs/wcm/core/content/pageinfo.json` och använder `path` parameter som identifierar resursen. Följande exempel-URL returnerar information om `/content/we-retail/us/en` nod:
 
 ```shell
 http://localhost:4502/libs/wcm/core/content/pageinfo.json?path=/content/we-retail/us/en
@@ -35,14 +34,12 @@ http://localhost:4502/libs/wcm/core/content/pageinfo.json?path=/content/we-retai
 >* Enkelsidiga program
 >* Inbyggda mobilprogram
 >* Andra kanaler och kontaktpunkter som inte är AEM
-
 >
->
-Se dokumentet [JSON Exporter for Content Services](/help/sites-developing/json-exporter.md).
+>Se dokumentet [JSON-exporterare för innehållstjänster](/help/sites-developing/json-exporter.md).
 
 ## Sidinformationsleverantörer {#page-information-providers}
 
-Sidkomponenter kan kopplas till en eller flera `com.day.cq.wcm.api.PageInfoProvider`-tjänster som genererar sidmetadata. PageInfo-servern anropar varje PageInfoProvider-tjänst och samlar in metadata:
+Sidkomponenter kan kopplas till en eller flera `com.day.cq.wcm.api.PageInfoProvider` tjänster som genererar sidmetadata. PageInfo-servern anropar varje PageInfoProvider-tjänst och samlar in metadata:
 
 1. HTTP-klienten skickar en begäran till PageInfo-servern, som innehåller sidans URL.
 1. PageInfo-servleten upptäcker vilken komponent som återger sidan.
@@ -57,17 +54,17 @@ Sidkomponenter kan kopplas till en eller flera `com.day.cq.wcm.api.PageInfoProvi
 
 ## Standardleverantörer av sidinformation {#default-page-information-providers}
 
-Komponenten `/libs/foundation/components/page` är associerad med följande PageInfoProvider-tjänster:
+The `/libs/foundation/components/page` är associerad med följande PageInfoProvider-tjänster:
 
-* **Standardsidans statusprovider:** Information om sidstatus, t.ex. om sidan är låst, om sidan är nyttolast för ett aktivt arbetsflöde och vilka arbetsflöden som är tillgängliga för sidan.
-* **Info-provider för live-relationer:** Information om Multi Site Management (MSM), t.ex. om sidan är en del av en blå utskrift och om den är en Live-kopia.
-* **Språkserver för innehåll:** Den aktuella sidans språk och information om varje språk som sidan är tillgänglig på.
+* **Standardsidstatusprovider:** Information om sidstatus, t.ex. om sidan är låst, om sidan är nyttolasten för ett aktivt arbetsflöde och vilka arbetsflöden som är tillgängliga för sidan.
+* **Provider för Live Relationship Info:** Information om Multi Site Management (MSM), t.ex. om sidan är en del av en blå utskrift och om den är en Live-kopia.
+* **Språkserver för innehåll:** Den aktuella sidans språk och information om varje språk som sidan finns på.
 * **Statusprovider för arbetsflöde:** Statusinformation om det arbetsflöde som körs och som har sidan som nyttolast.
 * **Info-provider för arbetsflödespaket:** Information om varje arbetsflödespaket som lagras i databasen och om varje paket innehåller den aktuella resursen.
-* **Informationsprovider för emulator:** Information om de emulatorer för mobila enheter som är tillgängliga för den här resursen. Om sidkomponenten inte återger mobilsidor finns inga emulatorer tillgängliga.
-* **Anteckningsinformationsprovider:** Information om anteckningar på sidan.
+* **Emulatorinformationsprovider:** Information om de emulatorer för mobila enheter som är tillgängliga för den här resursen. Om sidkomponenten inte återger mobilsidor finns inga emulatorer tillgängliga.
+* **Anteckningsinformationsprovider:** Information om anteckningar som finns på sidan.
 
-PageInfo-servern returnerar till exempel följande JSON-svar för noden `/content/we-retail/us/en`:
+PageInfo-servern returnerar till exempel följande JSON-svar för `/content/we-retail/us/en` nod:
 
 ```
 {
@@ -480,8 +477,7 @@ Konfigurera tjänsten Dag CQ WCM Workflow Package Info Provider så att den retu
 >
 >Fliken Arbetsflöde i Sidekick använder PageInfo-servern för att hämta en lista med arbetsflödespaket. I listan kan du välja det paket som den aktuella sidan ska läggas till i. De filter du skapar påverkar den här listan.
 
-
-Tjänstens ID är `com.day.cq.wcm.workflow.impl.WorkflowPackageInfoProvider`. Om du vill skapa ett filter anger du ett värde för en `workflowpackageinfoprovider.filter`-egenskap.
+Tjänstens ID är `com.day.cq.wcm.workflow.impl.WorkflowPackageInfoProvider`. Om du vill skapa ett filter anger du ett värde för `workflowpackageinfoprovider.filter` -egenskap.
 
 Egenskapsvärden prefixeras med tecknet + eller - följt av paketsökvägen:
 
@@ -498,7 +494,7 @@ Tjänsten tillämpar det kumulativa resultatet för alla filter. Följande filte
 
 >[!NOTE]
 >
->När du arbetar med AEM finns det flera sätt att hantera konfigurationsinställningarna för sådana tjänster. Mer information finns i [Konfigurera OSGi](/help/sites-deploying/configuring-osgi.md).
+>När du arbetar med AEM finns det flera sätt att hantera konfigurationsinställningarna för sådana tjänster. Se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) för fullständig information.
 
 Så här konfigurerar du till exempel tjänsten med CRXDE Lite:
 
@@ -520,7 +516,7 @@ Så här konfigurerar du tjänsten i din projektkälla:
 
 1. Leta reda på eller skapa konfigurationsmappen för AEM i projektkällan.
 
-   Om du t.ex. använde en flermodulsarketyp för plugin-programmet för innehållspaket Maven för att skapa ditt projekt är mappsökvägen `<projectroot>/content/src/ for example content/src/main/content/jcr_root/apps/<appname>/config`.
+   Om du t.ex. använde en flermodulsarketyp för plugin-programmet för innehållspaket Maven för att skapa ditt projekt, blir mappsökvägen `<projectroot>/content/src/ for example content/src/main/content/jcr_root/apps/<appname>/config`.
 1. Skapa en textfil med namnet com.day.cq.wcm.workflow.impl.WorkflowPackageInfoProvider.xml i konfigurationsmappen
 1. Kopiera följande text till filen:
 
@@ -532,29 +528,29 @@ Så här konfigurerar du tjänsten i din projektkälla:
     workflowpackageinfoprovider.filter="[]"/>
    ```
 
-1. I hakparenteserna (`[]`) som omger egenskapen `workflowpackageinfoprovider.filter` skriver du en kommaavgränsad lista med filtervärden som liknar följande exempel:
+1. Innanför hakparenteserna (`[]`) som omger `workflowpackageinfoprovider.filter` anger du en kommaavgränsad lista med filtervärden som liknar följande exempel:
 
    `workflowpackageinfoprovider.filter="[-/etc/workflow/packages(/.*)?,+/etc/workflow/packages/Editions(/.*)?]"/>`
 
 1. Spara filen.
 
-## Skapar en sidinformationsprovider {#creating-a-page-information-provider}
+## Skapa en sidinformationsleverantör {#creating-a-page-information-provider}
 
 Skapa en anpassad tjänst för sidinformationsleverantör för att lägga till metadata som programmet enkelt kan hämta.
 
-1. Implementera gränssnittet `com.day.cq.wcm.api.PageInfoProvider`.
+1. Implementera `com.day.cq.wcm.api.PageInfoProvider` gränssnitt.
 1. Paketera och distribuera klassen som en OSGi-tjänst.
-1. Skapa en sidkomponent i programmet. Använd `foundation/components/page` som värde för egenskapen `sling:resourceSuperType`.
+1. Skapa en sidkomponent i programmet. Använd `foundation/components/page` som värdet för `sling:resourceSuperType` -egenskap.
 
-1. Lägg till en nod under komponentnoden `cq:infoProviders`.
-1. Under noden `cq:infoProviders` lägger du till en nod för PageInfoProvider-tjänsten. Du kan ange valfritt namn för noden.
+1. Lägg till en nod under komponentnoden med namnet `cq:infoProviders`.
+1. Under `cq:infoProviders` lägger du till en nod för PageInfoProvider-tjänsten. Du kan ange valfritt namn för noden.
 1. Lägg till följande egenskap i PageInfoProvider-noden:
 
    * Namn: className
    * Typ: Sträng
    * Värde: PID för PageInfoProvider-tjänsten.
 
-För resurser där programsidans komponent används som `sling:resourceType`, returnerar PageInfo-servleten de anpassade PageInfoProvider-metadatan förutom standardmetadatan för PageInfoProvider.
+För resurser som använder programsidkomponenten som `sling:resourceType`returnerar PageInfo-servern dessutom de anpassade PageInfoProvider-metadata utöver standardmetadata för PageInfoProvider.
 
 ### Exempel på implementering av PageInfoProvider {#example-pageinfoprovider-implementation}
 
@@ -609,11 +605,10 @@ I följande exempel i CRXDE Lite visas sidkomponenten som är konfigurerad att a
 
 ![chlimage_1-3](assets/chlimage_1-3a.png)
 
-Tjänsten PageUrlInfoProvider returnerar följande data för noden `/content/we-retail/us/en`:
+Tjänsten PageUrlInfoProvider returnerar följande data för `/content/we-retail/us/en` nod:
 
 ```xml
 "URLs": {
     "publishURL": "http://localhost:4503/content/we-retail/us/en"
 }
 ```
-

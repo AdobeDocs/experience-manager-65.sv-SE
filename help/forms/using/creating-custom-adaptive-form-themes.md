@@ -1,39 +1,38 @@
 ---
 title: Skapa anpassade adaptiva formulärteman
-seo-title: Skapa anpassade adaptiva formulärteman
+seo-title: Creating custom adaptive form themes
 description: Ett adaptivt formulärtema är ett AEM klientbibliotek som du använder för att definiera format (utseende och känsla) för ett adaptivt formulär. Lär dig hur du kan skapa anpassade, anpassningsbara formulärteman.
-seo-description: Ett adaptivt formulärtema är ett AEM klientbibliotek som du använder för att definiera format (utseende och känsla) för ett adaptivt formulär. Lär dig hur du kan skapa anpassade, anpassningsbara formulärteman.
+seo-description: An adaptive form theme is an AEM client library that you use to define the styles (look and feel) for an adaptive form. Learn how you can create custom adaptive form themes.
 uuid: b25df10e-b07c-4e9d-a799-30f1c6fb3c44
 content-type: reference
 topic-tags: customization
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 437e6581-4eb1-4fbd-a6da-86b9c90cec89
-translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+exl-id: 73b0057f-082d-4502-90e2-5e41b52c1185
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '825'
+source-wordcount: '788'
 ht-degree: 0%
 
 ---
-
 
 # Skapa anpassade adaptiva formulärteman {#creating-custom-adaptive-form-themes}
 
 >[!CAUTION]
 >
->AEM Forms tillhandahåller funktionen [Theme Editor](/help/forms/using/themes.md) för att skapa och ändra adaptiva formulär [teman](/help/forms/using/themes.md). Utför stegen som anges i den här artikeln endast om du har uppgraderat från en version som inte har [Theme Editor](/help/forms/using/themes.md) och du har en befintlig investering i teman som skapats med Less-/CSS-filer (redigeringsmetod för förtema).
+>AEM Forms tillhandahåller [Theme Editor](/help/forms/using/themes.md) möjlighet att skapa och ändra anpassade blanketter [teman](/help/forms/using/themes.md). Utför stegen i den här artikeln endast om du har uppgraderat från en version som inte har [Theme Editor](/help/forms/using/themes.md) och du har redan investerat i teman som skapats med Less-/CSS-filer (redigeringsmetod före tema).
 
 ## Förutsättningar {#prerequisites}
 
 * Kunskap om LESS-ramverket (Leaner CSS)
 * Så här skapar du ett klientbibliotek i Adobe Experience Manager
-* [Skapa en adaptiv formulärmall ](/help/forms/using/custom-adaptive-forms-templates.md) för det tema du skapar
+* [Skapa en anpassad formulärmall](/help/forms/using/custom-adaptive-forms-templates.md) för att använda det tema du skapar
 
-## Adaptivt formulärtema {#adaptive-form-theme}
+## Adaptivt formtema {#adaptive-form-theme}
 
-Ett **adaptivt formulärtema** är ett AEM klientbibliotek som du använder för att definiera format (utseende och känsla) för ett adaptivt formulär.
+An **adaptivt formulärtema** är ett AEM klientbibliotek som du använder för att definiera format (utseende och känsla) för ett anpassat formulär.
 
-Du skapar en **adaptiv mall** och använder temat för mallen. Du använder sedan den här anpassade mallen för att skapa ett **anpassat formulär**.
+Du skapar en **adaptiv mall** och tillämpa temat på mallen. Sedan använder du den här anpassade mallen för att skapa en **adaptiv form**.
 
 ![Adaptivt formulär och klientbibliotek](assets/hierarchy.png)
 
@@ -45,30 +44,30 @@ Du skapar en **adaptiv mall** och använder temat för mallen. Du använder seda
 >
 >Om du följer de här stegen med hjälp av namnen bör den resulterande mallen se ut ungefär som följande ögonblicksbild:
 
-![Skogsteman, ](assets/thumbnail.png)
-**ögonblicksbild av adaptiv formBild:Exempel på** *skogtema*
+![Skogsteman - ögonblicksbild av adaptiv form](assets/thumbnail.png)
+**Bild:** *Exempel på skogtema*
 
-1. Skapa en nod av typen `cq:ClientLibraryFolder` under `/apps`noden.
+1. Skapa en nod av typen `cq:ClientLibraryFolder` under `/apps`nod.
 
    Skapa till exempel följande nod:
 
    `/apps/myAfThemes/forestTheme`
 
-1. Lägg till en strängegenskap med flera värden `categories` i noden och ange dess värde korrekt.
+1. Lägga till en flervärdessträngsegenskap `categories` till noden och ange dess värde korrekt.
 
    Ställ till exempel in egenskapen på: `af.theme.forest`.
 
    ![CRX-databasögonblicksbild](assets/3-2.png)
 
-1. Lägg till två mappar, `less` och `css`, och en fil `css.txt` till noden som skapades i steg 1:
+1. Lägg till två mappar, `less` och `css`och en fil `css.txt` till noden som skapades i steg 1:
 
-   * `less` mapp: Innehåller de  `less` variabelfiler i vilka du definierar  `less` variablerna och  `less mixins` som används för att hantera css-formaten.
+   * `less` mapp: Innehåller `less` variabelfiler där du definierar `less` variabler och `less mixins` som används för att hantera css-format.
 
-      Mappen består av `less` variabelfiler, `less` mixin-filer, `less`-filer som definierar format med hjälp av mixiner och variabler. Alla dessa mindre filer importeras sedan i styles.less.
+      Mappen består av `less` variabelfiler, `less` mixin filer, `less` filer som definierar format med hjälp av blandningar och variabler. Alla dessa mindre filer importeras sedan i styles.less.
 
    * `css`mapp: Innehåller de css-filer i vilka du definierar statiska format som ska användas i temat.
 
-   **Färre variabelfiler**: Detta är filerna, där du definierar eller åsidosätter variablerna som används för att definiera CSS-format.
+   **Mindre variabelfiler**: Detta är filerna, där du definierar eller åsidosätter variablerna som används för att definiera CSS-format.
 
    Adaptiva formulär innehåller OTB-variabler som definieras i följande .less-filer:
 
@@ -95,7 +94,7 @@ Du skapar en **adaptiv mall** och använder temat för mallen. Du använder seda
    @button-font-color: #ffffff;
    ```
 
-   Så här åsidosätter du `less`variablerna:
+   Åsidosätta `less`variabler:
 
    1. Importera standardvariabler för anpassningsbara formulär:
 
@@ -110,7 +109,7 @@ Du skapar en **adaptiv mall** och använder temat för mallen. Du använder seda
    @button-hover-bg-color: rgb(30, 156, 67);
    ```
 
-   **Mindre blandade filer:** Du kan definiera funktioner som accepterar variabler som argument. Utdata för dessa funktioner är de resulterande formaten. Använd dessa blandningar i olika format för att undvika att CSS-formaten upprepas.
+   **Mindre filer:** Du kan definiera de funktioner som accepterar variabler som argument. Utdata för dessa funktioner är de resulterande formaten. Använd dessa blandningar i olika format för att undvika att CSS-formaten upprepas.
 
    Adaptiva former innehåller OTB-blandningar som definieras i:
 
@@ -136,9 +135,9 @@ Du skapar en **adaptiv mall** och använder temat för mallen. Du använder seda
    }
    ```
 
-   **Styles.less File:** Använd den här filen för att inkludera alla mindre filer (variabler, mixins, styles) som du behöver använda i klientbiblioteket.
+   **Styles.less File:** Använd den här filen för att inkludera alla färre filer (variabler, mixins, styles) som du behöver använda i klientbiblioteket.
 
-   I följande exempel på `styles.less`-fil kan import-satsen placeras i vilken ordning som helst.
+   I följande exempel `styles.less` -filen kan importprogramsatsen placeras i vilken ordning som helst.
 
    Programsatserna för att importera följande .less-filer är obligatoriska:
 
@@ -175,7 +174,7 @@ Du skapar en **adaptiv mall** och använder temat för mallen. Du använder seda
    }
    ```
 
-   `css.txt` innehåller sökvägarna till css-filer som ska hämtas för biblioteket.
+   The `css.txt` innehåller sökvägarna till css-filer som ska hämtas för biblioteket.
 
    Till exempel:
 
@@ -205,15 +204,15 @@ Du skapar en **adaptiv mall** och använder temat för mallen. Du använder seda
    >
    >**`styles.less`**
 
-## Så här använder du ett tema i en adaptiv form {#to-use-a-theme-in-an-adaptive-form}
+## Använda ett tema i ett anpassat formulär {#to-use-a-theme-in-an-adaptive-form}
 
 När du har skapat ett adaptivt formulärtema utför du följande steg för att använda det här temat i en adaptiv form:
 
-1. Om du vill ta med temat som skapats i [för att skapa ett adaptivt formulärtema](/help/forms/using/creating-custom-adaptive-form-themes.md#p-to-create-an-adaptive-form-theme-p) skapar du en anpassad sida av typen `cq:Component`.
+1. Inkludera temat som skapats i [skapa ett anpassat formulärtema](/help/forms/using/creating-custom-adaptive-form-themes.md#p-to-create-an-adaptive-form-theme-p) avsnitt, skapa en anpassad sida av typen `cq:Component`.
 
    Till exempel, `/apps/myAfCustomizations/myAfPages/forestPage`
 
-   1. Lägg till en `sling:resourceSuperType`-egenskap och ange dess värde som `fd/af/components/page/base`.
+   1. Lägg till en `sling:resourceSuperType` egenskap och ange dess värde som `fd/af/components/page/base`.
 
       ![CRX-databasögonblicksbild](assets/1-2.png)
 
@@ -221,7 +220,7 @@ När du har skapat ett adaptivt formulärtema utför du följande steg för att 
 
       Du importerar sedan temat som skapats i Skapa ett anpassat formulärtemaavsnitt i den här artikeln.
 
-      Följande exempelkodfragment importerar temat `af.theme.forest`.
+      Följande exempelkodfragment importerar `af.theme.forest` tema.
 
       ```jsp
       <%@include file="/libs/fd/af/components/guidesglobal.jsp"%>
@@ -235,4 +234,3 @@ När du har skapat ett adaptivt formulärtema utför du följande steg för att 
    ![CRX-databasögonblicksbild](assets/2-1.png)
 
 1. Skapa ett adaptivt formulär med hjälp av mallen som skapades i föregående steg. Utseendet och känslan hos det adaptiva formuläret definieras av det tema som skapas i Skapa ett adaptivt formulärtemaavsnitt i den här artikeln.
-

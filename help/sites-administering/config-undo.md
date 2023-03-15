@@ -1,40 +1,39 @@
 ---
 title: Konfigurera Ångra för sidredigering
-seo-title: Konfigurera Ångra för sidredigering
+seo-title: Configuring Undo for Page Editing
 description: Lär dig hur du konfigurerar Ångra-stöd för sidredigering i AEM.
-seo-description: Lär dig hur du konfigurerar Ångra-stöd för sidredigering i AEM.
+seo-description: Learn how to configure Undo support for page editing in AEM.
 uuid: e5a49587-a2a6-41d5-b449-f7a8f7e4cee6
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 discoiquuid: 3cc7efc5-bcb2-41c9-b78b-308f6b7a298e
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 2cf3ac3f-ee17-480d-a32a-c57631502693
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '702'
 ht-degree: 0%
 
 ---
 
-
 # Konfigurera Ångra för sidredigering{#configuring-undo-for-page-editing}
 
-[OSGi-tjänsten](/help/sites-deploying/configuring-osgi.md) **Day CQ WCM Undo Configuration** ( `com.day.cq.wcm.undo.UndoConfigService`) visar flera egenskaper som styr beteendet för kommandona ångra och gör om för redigering av sidor.
+The [OSGi-tjänst](/help/sites-deploying/configuring-osgi.md)  **Konfiguration av Ångra för CQ WCM dag** ( `com.day.cq.wcm.undo.UndoConfigService`) visar flera egenskaper som styr beteendet för kommandona ångra och gör om för att redigera sidor.
 
 ## Standardkonfiguration {#default-configuration}
 
-I en standardinstallation definieras standardinställningarna som egenskaper på `sling:OsgiConfig`noden:
+I en standardinstallation definieras standardinställningarna som egenskaper i `sling:OsgiConfig`nod:
 
 `/libs/wcm/core/config.author/com.day.cq.wcm.undo.UndoConfig`
 
-Den här noden innehåller egenskaperna `cq.wcm.undo.whitelist` och `cq.wcm.undo.blacklist`. För de andra egenskaperna används standardvärdena.
+Den här noden innehåller `cq.wcm.undo.whitelist` och `cq.wcm.undo.blacklist` -egenskaper, för de andra egenskaperna används standardvärdena.
 
 >[!CAUTION]
 >
->Du ***får*** inte ändra något i `/libs`-sökvägen.
+>Du ***måste*** ändrar ingenting i `/libs` bana.
 >
->Detta beror på att innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan mycket väl skrivas över när du använder en snabbkorrigering eller ett funktionspaket).
+>Detta beror på innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan mycket väl skrivas över när du använder en snabbkorrigering eller ett funktionspaket).
 
 ## Konfigurera Ångra och Gör om {#configuring-undo-and-redo}
 
@@ -42,45 +41,45 @@ Du kan konfigurera dessa OSGi-tjänstegenskaper för din egen instans.
 
 >[!NOTE]
 >
->När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Mer information och rekommenderade metoder finns i [Konfigurera OSGi](/help/sites-deploying/configuring-osgi.md).
+>När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) om du vill ha mer information och rekommenderade rutiner.
 
 I följande lista visas egenskaperna så som de visas i webbkonsolen, följt av namnet på motsvarande OSGi-parameter, tillsammans med en beskrivning och standardvärdet (där det är lämpligt):
 
-* **Enable**
+* **Aktivera**
 ( 
 `cq.wcm.undo.enabled`)
 
    * **Beskrivning**: Avgör om sidförfattare kan ångra och göra om ändringar.
-   * **Standard**:  `Selected`
-   * **Typ**:  `Boolean`
+   * **Standard**: `Selected`
+   * **Typ**: `Boolean`
 
-* **Path**
+* **Bana**
 ( 
 `cq.wcm.undo.path`)
 
    * **Beskrivning**: Databassökvägen för beständiga binära ångra-data. När författare ändrar binära data, t.ex. bilder, behålls den ursprungliga versionen av dessa data här. När ändringar av binära data ångras återställs dessa binära ångra-data till sidan.
-   * **Standard**:  `/var/undo`
-   * **Typ**:  `String`
+   * **Standard**: `/var/undo`
+   * **Typ**: `String`
 
    >[!NOTE]
    >
-   >Som standard kan bara administratörer komma åt noden `/var/undo`. Författare kan bara ångra och göra om åtgärder för binärt innehåll efter att de har fått behörighet att komma åt binära ångra-data.
+   >Som standard har bara administratörer åtkomst till `/var/undo` nod. Författare kan bara ångra och göra om åtgärder för binärt innehåll efter att de har fått behörighet att komma åt binära ångra-data.
 
 * **Min. giltighet**
 ( 
 `cq.wcm.undo.validity`)
 
    * **Beskrivning**: Den kortaste tiden som binära ångra-data lagras, i timmar. Efter den här tidsperioden är binära data tillgängliga för borttagning för att spara diskutrymme.
-   * **Standard**:  `10`
-   * **Typ**:  `Integer`
+   * **Standard**: `10`
+   * **Typ**: `Integer`
 
 * **Steg**
 ( 
 `cq.wcm.undo.steps`)
 
    * **Beskrivning**: Det maximala antalet sidåtgärder som lagras i ångra-historiken.
-   * **Standard**:  `20`
-   * **Typ**:  `Integer`
+   * **Standard**: `20`
+   * **Typ**: `Integer`
 
 * **Persistence**
 ( 
@@ -90,11 +89,11 @@ I följande lista visas egenskaperna så som de visas i webbkonsolen, följt av 
 
       * `CQ.undo.persistence.WindowNamePersistence`: Bevarar historik med egenskapen window.name.
       * `CQ.undo.persistence.CookiePersistance`: Bevarar historik med hjälp av cookies.
-   * **Standard**:  `CQ.undo.persistence.WindowNamePersistence`
-   * **Typ**:  `String`
+   * **Standard**: `CQ.undo.persistence.WindowNamePersistence`
+   * **Typ**: `String`
 
 
-* **Beständigt läge**
+* **Beständighetsläge**
 ( 
 `cq.wcm.undo.persistence.mode`)
 
@@ -102,8 +101,8 @@ I följande lista visas egenskaperna så som de visas i webbkonsolen, följt av 
 
       Om du vill ångra-historiken används webbläsarresurserna. Om användarens webbläsare svarar långsamt på sidredigeringar kan du försöka med att behålla ångra-historiken när sidan läses in igen.
 
-   * **Standard**:  `Selected`
-   * **Typ**:  `Boolean`
+   * **Standard**: `Selected`
+   * **Typ**: `Boolean`
 
 * **Markörläge**
 ( 
@@ -113,8 +112,8 @@ I följande lista visas egenskaperna så som de visas i webbkonsolen, följt av 
 
       * flash: Markeringsindikatorn för styckena blinkar tillfälligt.
       * välj: Stycket är markerat.
-   * **Standard**:  `flash`
-   * **Typ**:  `String`
+   * **Standard**: `flash`
+   * **Typ**: `String`
 
 
 * **Bra komponenter**
@@ -133,7 +132,7 @@ I följande lista visas egenskaperna så som de visas i webbkonsolen, följt av 
    * När Ångra eller Gör om utfärdas till en komponent som inte finns i den här listan visas ett meddelande om att kommandot kan vara otillförlitligt.
 
    * **Standard**: Egenskapen är ifylld med många komponenter som AEM tillhandahåller.
-   * **Typ**:  `String[]`
+   * **Typ**: `String[]`
 
 
 * **Felaktiga komponenter**
@@ -142,12 +141,12 @@ I följande lista visas egenskaperna så som de visas i webbkonsolen, följt av 
 
    * **Beskrivning**: En lista med komponenter och/eller komponentåtgärder som du inte vill ska påverkas av kommandot Ångra. Lägg till komponenter och komponentåtgärder som inte fungerar som de ska med kommandot Ångra:
 
-      * Lägg till en komponentsökväg när du inte vill att någon av komponentens åtgärder ska finnas i ångra-historiken, till exempel `collab/forum/components/post`
+      * Lägg till en komponentsökväg när du inte vill ha någon av komponentens åtgärder i ångra-historiken, till exempel `collab/forum/components/post`
       * Lägg till ett kolon (:) och en åtgärd i sökvägen när du vill att den specifika åtgärden ska utelämnas från ångra-historiken (andra åtgärder fungerar korrekt), till exempel `collab/forum/components/post:insertParagraph.`
 
    >[!NOTE]
    >
-   >När en åtgärd finns i listan läggs den fortfarande till i ångra-historiken. Användare kan inte ångra åtgärder som finns tidigare än en **Ogiltig komponent**-åtgärd i ångra-historiken.
+   >När en åtgärd finns i listan läggs den fortfarande till i ångra-historiken. Användare kan inte ångra åtgärder som finns tidigare än en **Felaktig komponent** i ångra-historiken.
 
    * Vanliga åtgärdsnamn är:
 
@@ -156,8 +155,4 @@ I följande lista visas egenskaperna så som de visas i webbkonsolen, följt av 
       * `moveParagraph`: Stycket flyttas till en annan plats.
       * `updateParagraph`: Styckeegenskaperna ändras.
    * **Standard**: Egenskapen fylls i med flera komponentåtgärder.
-   * **Typ**:  `String[]`
-
-
-
-
+   * **Typ**: `String[]`

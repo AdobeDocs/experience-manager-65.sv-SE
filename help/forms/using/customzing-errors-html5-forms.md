@@ -1,27 +1,26 @@
 ---
 title: Anpassa felmeddelanden för HTML5-formulär
-seo-title: Anpassa felmeddelanden för HTML5-formulär
+seo-title: Customizing error messages for HTML5 forms
 description: Lär dig hur du anpassar visningen av felmeddelanden för HTML5-formulär, inklusive hur du ändrar deras position och utseende.
-seo-description: Lär dig hur du anpassar visningen av felmeddelanden för HTML5-formulär, inklusive hur du ändrar deras position och utseende.
+seo-description: Learn how to customize the display of error messages for HTML5 forms including how to change their position and appearance.
 uuid: 6f48b64e-858f-4323-ad50-88e25f3c2e3d
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
 discoiquuid: 44e49789-9075-41b3-bce8-03e8efce2d5a
 feature: Mobile Forms
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: c4ae53a3-8de1-4985-a73e-829749de9814
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '515'
 ht-degree: 0%
 
 ---
 
-
 # Anpassa felmeddelanden för HTML5-formulär {#customizing-error-messages-for-html-forms}
 
-I HTML5-formulär har felmeddelandena och varningarna fast position och utseende (teckensnitt och färg), felen visas bara för ett markerat fält och endast ett fel visas.
+I HTML5-formulär har felmeddelanden och varningar fast position och utseende (teckensnitt och färg), felen visas bara för ett markerat fält och endast ett fel visas.
 
-Artikeln innehåller stegen för att anpassa felmeddelanden för HTML5-formulär till
+I artikeln finns anvisningar för hur du anpassar felmeddelanden för HTML5-formulär till
 
 * ändra utseendet och placeringen av felmeddelanden. Du kan göra så att ett fel visas högst upp, längst ned och till höger i vilket fält som helst.
 * visa felmeddelanden för flera fält vid en given tidpunkt.
@@ -37,10 +36,10 @@ När du har extraherat paketet öppnar du mappen CustomErrorManager-1.0-SNAPSHOT
 
 ### Anpassa felmeddelandenas placering  {#customizing-the-position-of-error-messages-nbsp}
 
-Om du vill anpassa placeringen av felmeddelandet lägger du till taggen &lt;div> för varje fel- och varningsfält, placerar taggen &lt;div> till vänster eller höger och tillämpar CSS-format på taggen &lt;div>. Detaljerade anvisningar finns i proceduren nedan:
+Lägg till &lt;div> -taggen för varje fel- och varningsfält, placera &lt;div> till vänster eller höger och tillämpa CSS-format på &lt;div> -tagg. Detaljerade anvisningar finns i proceduren nedan:
 
-1. Navigera till mappen `CustomErrorManager-1.0-SNAPSHOT`och öppna mappen `etc\clientlibs\mf-custom-error-manager\CustomErrorManager\javascript`.
-1. Öppna `customErrorManager.js`-filen för redigering. Funktionen `markError` i filen accepterar följande parametrar:
+1. Navigera till `CustomErrorManager-1.0-SNAPSHOT`och öppna `etc\clientlibs\mf-custom-error-manager\CustomErrorManager\javascript` mapp.
+1. Öppna `customErrorManager.js` fil för redigering. The `markError` -funktionen i filen accepterar följande parametrar:
 
    |  |  |
    |---|---|
@@ -78,7 +77,7 @@ Om du vill anpassa placeringen av felmeddelandet lägger du till taggen &lt;div>
    ```
 
 1. Spara och stäng filen.
-1. Navigera till mappen `CustomErrorManager-1.0-SNAPSHOT` och skapa ett arkiv med mapparna jcr_root och META-INF. Byt namn på arkivet till CustomErrorManager-1.0-SNAPSHOT.zip.
+1. Navigera till `CustomErrorManager-1.0-SNAPSHOT` och skapa ett arkiv med mapparna jcr_root och META-INF. Byt namn på arkivet till CustomErrorManager-1.0-SNAPSHOT.zip.
 1. Använd pakethanteraren för att överföra och installera paketet.
 
 ## Visa felmeddelanden för flera fält  {#display-error-messages-for-multiple-fields-nbsp}
@@ -121,11 +120,10 @@ Använd det bifogade paketet för att samtidigt visa felmeddelanden för alla f�
 
 ## Rendera formuläret med den nya profilen.  {#render-the-form-with-the-new-profile-nbsp}
 
-HTML5-formulär har en standardprofil som standard: https://&lt;server>/content/xfaforms/profiles/default.html?contentRoot=&lt;xdp location>&amp;template=&lt;name of the xdp>
+HTML5-formulär har en standardprofil som standard: https://&lt;server>/content/xfaforms/profiles/default.html?contentRoot=&lt;xdp location=&quot;&quot;>&amp;template=&lt;name of=&quot;&quot; the=&quot;&quot; xdp=&quot;&quot;>
 
-Om du vill visa ett formulär med anpassade felmeddelanden återger du formuläret med felprofilen: https://&lt;server>/content/xfaforms/profiles/error.html?contentRoot=&lt;xdp location>&amp;template=&lt;name of the xdp>
+Om du vill visa ett formulär med anpassade felmeddelanden återger du formuläret med felprofilen: https://&lt;server>/content/xfaforms/profiles/error.html?contentRoot=&lt;xdp location=&quot;&quot;>&amp;template=&lt;name of=&quot;&quot; the=&quot;&quot; xdp=&quot;&quot;>
 
 >[!NOTE]
 >
 >Det bifogade paketet installerar felprofilen.
-

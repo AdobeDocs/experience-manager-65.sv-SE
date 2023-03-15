@@ -138,7 +138,7 @@ Utöver formulärdatamodelltjänsten kan du ange en direkt WSDL-URL för att anr
 
 Mer information om hur du konfigurerar tjänster i formulärdatamodellen finns i [AEM Forms dataintegrering](/help/forms/using/data-integration.md).
 
-**Ange värdet för** Beräknar och ställer in värdet för det angivna objektet. Du kan ställa in objektvärdet på en sträng, värdet för ett annat objekt, det beräknade värdet med hjälp av matematiska uttryck eller funktioner, värdet för ett objekts egenskap eller utdatavärdet från en konfigurerad datamodelltjänst för formulär. När du väljer webbtjänstalternativet visas alla tjänster som är konfigurerade i alla formulärdatamodeller på din AEM. När du väljer en datamodelltjänst för ett formulär visas ytterligare fält där du kan mappa formulärobjekt med in- och utdataparametrar för den angivna tjänsten.
+**Ange värdet för** Beräknar och ställer in värdet för det angivna objektet. Du kan ställa in objektvärdet på en sträng, värdet för ett annat objekt, det beräknade värdet med hjälp av matematiska uttryck eller funktioner, värdet för ett objekts egenskap eller utdatavärdet från en konfigurerad datamodelltjänst för formulär. När du väljer webbtjänstalternativet visas alla tjänster som är konfigurerade i alla formulärdatamodeller på AEM. När du väljer en datamodelltjänst för ett formulär visas ytterligare fält där du kan mappa formulärobjekt med in- och utdataparametrar för den angivna tjänsten.
 
 Mer information om hur du konfigurerar tjänster i formulärdatamodellen finns i [AEM Forms dataintegrering](/help/forms/using/data-integration.md).
 
@@ -586,7 +586,7 @@ Lägger till information om funktionen, till exempel dess mål.
 
    1. string
    1. tal
-   1. boolesk
+   1. boolean
 
    Alla andra returtyper kategoriseras under en av ovanstående. Ingen stöds inte. Välj en av typerna ovan. Returtyperna är inte skiftlägeskänsliga.
 

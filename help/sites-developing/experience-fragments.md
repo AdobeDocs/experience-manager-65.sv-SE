@@ -18,7 +18,7 @@ ht-degree: 0%
 
 ---
 
-# Upplevelsefragment{#experience-fragments}
+# Experience Fragments{#experience-fragments}
 
 ## Grunderna {#the-basics}
 

@@ -79,7 +79,7 @@ Definierar nodtypen för en kommentarnod.
 
 **Beskrivning**
 
-Definierar nodtypen för en `commentattachment`-nod
+Definierar nodtypen för en `commentattachment` nod
 
 **Definition**
 
@@ -165,7 +165,7 @@ Definierar standardnoden för sidinnehåll, med de minimala egenskaper som anvä
 * `@prop jcr:description` - Beskrivning av den här sidan.
 * `@prop cq:template` - Sökväg till mallen som användes för att skapa sidan.
 * `@prop cq:allowedTemplates` - Lista med reguljära uttryck som används för att bestämma sökvägen/sökvägarna till den tillåtna mallen.
-* `@prop pageTitle` - Rubrik visas vanligtvis i  `<title>` taggen.
+* `@prop pageTitle` - Rubriken visas vanligtvis i `<title>` -tagg.
 * `@prop navTitle` - Rubrik som vanligtvis används vid navigering.
 * `@prop hideInNav` - Anger om sidan ska döljas i navigeringen.
 * `@prop onTime` - Tid när den här sidan blir giltig.
@@ -207,7 +207,7 @@ Definierar en CQ-mall.
          * `- cq:path`
             * `- cq:workflowName`
 * `@prop allowedParents` - Mönster för reguljära uttryck för att fastställa sökvägen/sökvägarna till mallar som tillåts som överordnade mallar.
-* `@prop allowedChildren` - Mönster för reguljära uttryck för att fastställa sökvägen/sökvägarna till mallar som tillåts som underordnade mallar.
+* `@prop allowedChildren` - Mönster för reguljära uttryck för att bestämma sökvägen/sökvägarna till mallar som tillåts som underordnade mallar.
 * `@prop ranking` - Placera i listan med mallar i dialogrutan Skapa sida.
 
 **Definition**
@@ -236,18 +236,18 @@ Definierar en CQ-komponent.
 * `@prop dialogPath` - Sökväg till primär dialogruta (alternativ till dialogruta).
 * `@node design_dialog` - Design.
 * `@prop cq:cellName` - Namn på designcellen.
-* `@prop cq:isContainer` - Anger om detta är en behållarkomponent. Detta tvingar cellnamnen för de underordnade komponenterna att användas i stället för sökvägsnamn. `parsys` är till exempel en behållarkomponent. Om det här värdet inte är definierat görs kontrollen utifrån om det finns en `cq:childEditConfig`.
-* `@prop cq:noDecoration` - Om true ritas inga  `div` dekorationstaggar när den här komponenten inkluderas.
+* `@prop cq:isContainer` - Anger om detta är en behållarkomponent. Detta tvingar cellnamnen för de underordnade komponenterna att användas i stället för sökvägsnamn. Till exempel `parsys` är en behållarkomponent. Om det här värdet inte definieras görs kontrollen utifrån förekomsten av ett `cq:childEditConfig`.
+* `@prop cq:noDecoration` - Om true, ingen dekoration `div` -taggar ritas när komponenten tas med.
 * `@node cq:editConfig` - Den konfiguration som definierar parametrarna för redigeringsfältet.
 * `@node cq:childEditConfig` - Den redigeringskonfiguration som ärvs av underordnade komponenter.
-* `@node cq:htmlTag` - Definierar ytterligare taggattribut som läggs till i den omgivande  `div` taggen när komponenten inkluderas.
+* `@node cq:htmlTag` - Definierar ytterligare taggattribut som läggs till i &quot;omgivande&quot; `div` -taggen när komponenten inkluderas.
 * `@node icon.png`- En fil som innehåller en karakteristisk ikon.
 * `@node thumbnail.png` - En fil som innehåller en karakteristisk miniatyrbild.
 * `@prop allowedParents` - Mönster för reguljära uttryck för att bestämma sökvägen/sökvägarna för komponenter som tillåts som överordnade komponenter.
 * `@prop allowedChildren` - Mönster för reguljära uttryck för att bestämma sökvägen/sökvägarna för komponenter som tillåts som underordnade komponenter.
 * `@node virtual` - Innehåller undernoder som återspeglar virtuella komponenter som används för att dra och släppa komponenter.
 * `@prop componentGroup` - Namnet på komponentgruppen som används för att dra och släppa komponenten.
-* `@node cq:infoProviders` - Innehåller undernoder, som alla har en egenskap  `className` som refererar till en  `PageInfoProvider`.
+* `@node cq:infoProviders` - Innehåller undernoder, som alla har en egenskap `className` som refererar till `PageInfoProvider`.
 
 **Definition**
 
@@ -301,7 +301,7 @@ Definierar konfigurationen för&quot;redigeringsfältet&quot;.
 * `@prop cq:actions`- Lista över åtgärder (redigeringsfältsknappar eller menyalternativ).
 * `@node cq:actionConfigs` - Widgetkonfigurationer för redigeringsfält eller menyalternativ.
 * `@prop cq:emptyText` - Text som ska visas om det inte finns något visuellt innehåll.
-* `@node cq:dropTargets` - Samling med  `{@link cq:DropTargetConfig}` noder.
+* `@node cq:dropTargets` - Samling med `{@link cq:DropTargetConfig}` noder.
 
 **Definition**
 
@@ -320,7 +320,7 @@ Definierar konfigurationen för&quot;redigeringsfältet&quot;.
 
 Konfigurerar ett släppmål för en komponent. Namnet på den här noden används som ett ID för dra och släpp.
 
-* `@prop accept` - Förteckning över MIME-typer som accepteras av detta släppmål. t.ex.  `["image/*"]`
+* `@prop accept` - Förteckning över MIME-typer som accepteras av detta släppmål. t.ex. `["image/*"]`
 * `@prop groups` - Lista med dra och släpp-grupper som accepterar en källa.
 * `@prop propertyName` - Namnet på egenskapen som används för att lagra referensen.
 
@@ -467,7 +467,7 @@ Behållarlista.
 
 **Beskrivning**
 
-Nodtypen `cq:contentPage` innehåller egenskaps- och undernoddefinitioner för innehållssidor i ContentBus. Endast när den här blandningstypen läggs till i en nod av typen `cq:page` blir en nod en innehållssida för ContentBus.
+Nodtypen `cq:contentPage` innehåller egenskaps- och undernoddefinitioner för innehållssidor i ContentBus. Endast när den här blandningstypen läggs till i en nod av typen `cq:page`blir en nod en innehållssida för ContentBus.
 
 Objekten i en `cq:Cq4ContentPage` är:
 
@@ -565,7 +565,7 @@ Definierar en LiveRelationship-blandning. En primär källnod (kontrollnod) och 
 
 **Beskrivning**
 
-Definierar en LiveSync-blandning. Om en nod ingår i en LiveRelationship med en primär källnod (kontrollnod) och en live-kopia (kontrollerad)-nod markeras den som LiveSync.
+Definierar en LiveSync-blandning. Om en nod ingår i en LiveRelationship med en primär källnod (kontrollnod) och en live-kopia (kontrollerad)-nod, markeras den som LiveSync.
 
 * `@prop cq:master` - Sökväg till den primära källan (kontroll) för LiveRelationship.
 * `@prop cq:isDeep` - Definierar om relationen är tillgänglig för underordnade.
@@ -818,7 +818,7 @@ Alla användare/offentliga webbplatser kan tagga innehållet (Web2.0-format), so
 
 **Beskrivning**
 
-Lägger till en `cq:userContent`-undernod som kan ändras av användare. Varje användare har sin egen `cq:userContent/<userid>`-undernod, som vanligtvis har mixinen `cq:UserTaggable`.
+Lägger till en `cq:userContent` undernod som kan ändras av användare. Varje användare har en egen `cq:userContent/<userid>` subnode, som vanligtvis har mixin `cq:UserTaggable`.
 
 **Definition**
 
@@ -826,7 +826,7 @@ Lägger till en `cq:userContent`-undernod som kan ändras av användare. Varje a
    * `mixin`
    * `+ cq:userContent (nt:unstructured)`
 
-Utökad variant, mer explicit definierat `cq:userContent`-trädet
+Utökad variant, som definierar `cq:userContent` träd
 
 * `[cq:AllowsUserContent]`
    * `mixin`

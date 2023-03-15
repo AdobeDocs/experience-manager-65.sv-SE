@@ -1,8 +1,8 @@
 ---
 title: Funktionen Aktivitetsströmmar
-seo-title: Funktionen Aktivitetsströmmar
+seo-title: Activity Streams Feature
 description: En inloggad community-medlems verksamhet
-seo-description: En inloggad community-medlems verksamhet
+seo-description: Activities of a signed-in community member
 uuid: decd2d6c-4d4b-4698-a92c-2b5b441458cf
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -10,20 +10,19 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 89f3630f-c01a-4dc0-9ff5-169785f22c01
 docset: aem65
-translation-type: tm+mt
-source-git-commit: fcdae5363e7a0070b5d6b76227e5c65efb71bc03
+exl-id: 2b2a5de0-e7c7-4417-a217-4b929bc7dcfb
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '455'
 ht-degree: 0%
 
 ---
 
-
-# Aktivitetsströmmar, funktion {#activity-streams-feature}
+# Funktionen Aktivitetsströmmar {#activity-streams-feature}
 
 ## Introduktion {#introduction}
 
-Aktiviteter som tillhör en signerad medlem i communityn, till exempel publicering på ett forum eller en blogg, samlas i en ström som kan filtreras och visas på olika sätt genom konfiguration av `Activity Streams`-komponenten.
+En inloggad community-medlems aktiviteter, till exempel publicering på ett forum eller en blogg, samlas i en ström som kan filtreras och visas på olika sätt genom att konfigurationen av `Activity Streams` -komponenten.
 
 Möjligheten att följa ger en annan bild av aktiviteter när communitymedlemmar följer inlägg av intresse eller följer aktiviteter som andra communitymedlemmar utför.
 
@@ -32,27 +31,27 @@ Dokumentet beskriver:
 * Lägga till komponenten Activity Streams på en AEM
 * Konfigurationsinställningar för komponenten för aktivitetsströmmar
 
-### Lägga till aktivitetsströmmar på en sida {#adding-activity-streams-to-a-page}
+### Lägga till aktivitetsströmmar till en sida {#adding-activity-streams-to-a-page}
 
-Om du vill lägga till en `Activity Streams`-komponent på en sida i redigeringsläge använder du komponentwebbläsaren för att leta reda på
+Om du vill lägga till en `Activity Streams` -komponent till en sida i redigeringsläge använder du komponentwebbläsaren för att leta upp
 
 * `Communities / Activity Streams`
 
 och dra den till rätt plats på en sida där aktivitetsströmmar ska visas.
 
-Mer information finns på [Grunderna för communitykomponenter](/help/communities/basics.md).
+Nödvändig information finns på [Grunderna för communitykomponenter](/help/communities/basics.md).
 
-När de [nödvändiga klientbiblioteken](/help/communities/essentials-activities.md#essentials-for-client-side) inkluderas visas följande `Activity Streams`-komponent:
+När [nödvändiga bibliotek på klientsidan](/help/communities/essentials-activities.md#essentials-for-client-side) ingår så här `Activity Streams` visas:
 
 ![activity-streams](assets/activity-component.png)
 
-### Konfigurerar aktivitetsströmmar {#configuring-activity-streams}
+### Konfigurera aktivitetsströmmar {#configuring-activity-streams}
 
-Markera den monterade `Activity Streams`-komponenten som ska öppnas och välj ikonen `Configure` som öppnar redigeringsdialogrutan.
+Markera den monterade `Activity Streams` -komponenten som ska få åtkomst till och markera `Configure` som öppnar redigeringsdialogrutan.
 
 ![konfigurera](assets/configure-new.png)
 
-Under fliken **Användaraktiviteter** anger du vilka aktiviteter som ska visas:
+Under **Användaraktiviteter** -flik, ange vilka aktiviteter som ska visas:
 
 ![användaraktiviteter](assets/user-activities.png)
 
@@ -78,15 +77,15 @@ Under fliken **Användaraktiviteter** anger du vilka aktiviteter som ska visas:
 
 ### Följande vy {#following-view}
 
-Komponenter måste konfigureras för att aktivera följande. Följande funktioner tillåter [blogg](/help/communities/blog-feature.md), [forum](/help/communities/forum.md), [QnA](/help/communities/working-with-qna.md), [kalender](/help/communities/calendar.md), [filelibrary](/help/communities/file-library.md) och [kommentarer](/help/communities/comments.md).
+Komponenter måste konfigureras för att aktivera följande. Funktioner som tillåter följande är [blogg](/help/communities/blog-feature.md), [forum](/help/communities/forum.md), [QnA](/help/communities/working-with-qna.md), [kalender](/help/communities/calendar.md), [filbibliotek](/help/communities/file-library.md)och [kommentarer](/help/communities/comments.md).
 
 ![följande vy](assets/following-activities.png)
 
-Med knappen **Följ** kan du följa poster som aktiviteter, [meddelanden](/help/communities/notifications.md) eller [prenumerationer](/help/communities/subscriptions.md). Varje gång knappen **Följ** är markerad går det att aktivera eller inaktivera en markering. Markeringen `Email Subscriptions` finns bara när den är konfigurerad.
+The **Följ** knappen är ett sätt att följa inmatningar som aktiviteter, [meddelanden](/help/communities/notifications.md), eller [prenumerationer](/help/communities/subscriptions.md). Varje gång **Följ** är markerad går det att aktivera eller inaktivera en markering. The `Email Subscriptions` markeringen finns bara när den är konfigurerad.
 
-Om någon av följande metoder är markerad ändras knappens text till **Följande**. Du kan av praktiska skäl välja `Unfollow All` för att inaktivera alla metoder.
+Om någon av följande metoder är markerad ändras texten för knappen till **Följande**. Det går att välja `Unfollow All` för att växla mellan olika metoder.
 
-Knappen **Följ** visas:
+The **Följ** visas:
 
 * När en annan medlems profil visas.
 * På en huvudfunktionssida, till exempel forum, QnA och bloggar.
@@ -99,4 +98,4 @@ Knappen **Följ** visas:
 
 ### Ytterligare information {#additional-information}
 
-Mer information finns på sidan [Activity Streams Essentials](/help/communities/essentials-activities.md) för utvecklare.
+Mer information finns på [Grundläggande om aktivitetsströmmar](/help/communities/essentials-activities.md) för utvecklare.

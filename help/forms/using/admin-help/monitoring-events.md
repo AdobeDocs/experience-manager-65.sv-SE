@@ -1,8 +1,8 @@
 ---
 title: Övervakningshändelser
-seo-title: Övervakningshändelser
+seo-title: Monitoring events
 description: När granskningsfunktionen är aktiverad kan du med dokumentsäkerhet övervaka vissa typer av händelser. Du kan enkelt söka efter och sortera händelselistan med dokumentsäkerhet.
-seo-description: När granskningsfunktionen är aktiverad kan du med dokumentsäkerhet övervaka vissa typer av händelser. Du kan enkelt söka efter och sortera händelselistan med dokumentsäkerhet.
+seo-description: When the auditing capability is enabled, document security enables you to monitor certain types of events. You can easily search and sort the events list using the document security.
 uuid: 22add6ff-536d-4cb9-8eac-b72cad5c3ecf
 contentOwner: admin
 content-type: reference
@@ -10,14 +10,13 @@ geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 379957bf-0634-4182-b269-1b010da4c90f
 feature: Document Security
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 078b9ad1-16e2-40f4-92dc-e4093c0bb6ac
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '991'
+source-wordcount: '958'
 ht-degree: 0%
 
 ---
-
 
 # Övervakningshändelser {#monitoring-events}
 
@@ -25,7 +24,7 @@ När granskningsfunktionen är aktiverad kan du med dokumentsäkerhet övervaka 
 
 **Användare:** Kan visa granskade händelser för sina policyskyddade dokument och för alla skyddade dokument som de tar emot och använder.
 
-**Koordinatorer för principuppsättning:** Kan visa granskade händelser, inklusive dokument- och principhändelser, för dokument som skyddas av profiler från sina principuppsättningar.
+**Koordinatorer för principuppsättning:** Kan visa granskade händelser, inklusive dokument- och principhändelser, för dokument som skyddas av policyer från sina uppsättningar av policyer.
 
 **Administratörer:** Kan visa granskade händelser som är relaterade till alla policyskyddade dokument och användare. Administratörer kan även spåra andra typer av händelser, bland annat användare, dokument, principer och systemhändelser.
 
@@ -63,13 +62,13 @@ Du kan söka efter händelser på sidan Händelser genom att använda en kombina
 
 **Händelser som rör mig:** Användare kan hitta händelser för alla principskyddade dokument som de har skapat eller tagit emot. Om en användare till exempel öppnar, visar eller skriver ut ett dokument som en annan person har skyddat, ser användaren bara dessa händelser för det dokumentet.
 
-**Händelser som rör mina dokument:** Användare kan hitta alla händelser som är relaterade till deras egna policyskyddade dokument. Användarna ser händelser som genereras av alla som hanterar deras dokument.
+**Händelser som rör mina dokument:** Användarna kan hitta alla händelser som är relaterade till deras egna policyskyddade dokument. Användarna ser händelser som genereras av alla som hanterar deras dokument.
 
-**Koordinatorer för principuppsättning:** Kan visa granskade händelser, inklusive dokument- och principhändelser, för dokument som skyddas av profiler från sina principuppsättningar. Tillgängliga alternativ:
+**Koordinatorer för principuppsättning:** Kan visa granskade händelser, inklusive dokument- och principhändelser, för dokument som skyddas av policyer från sina uppsättningar av policyer. Tillgängliga alternativ:
 
-**Dokumenthändelser där jag är principuppsättningskoordinator:** Principuppsättningskoordinatorer som har behörighet att visa händelser kan hitta händelser som är relaterade till dokument som skyddas av principer i deras principuppsättningar.
+**Dokumenthändelser där jag är koordinator för principuppsättning:** Koordinatorer för principuppsättningar som har behörighet att visa händelser kan hitta händelser som är relaterade till dokument som skyddas av profiler från deras principuppsättningar.
 
-**Principhändelser där jag är principuppsättningskoordinator:** Principuppsättningskoordinatorer som har behörighet att visa händelser kan hitta händelser som är relaterade till principer från sina principuppsättningar.
+**Policyhändelser där jag är koordinator för principuppsättning:** Koordinatorer för principuppsättningar som har behörighet att visa händelser kan hitta händelser som är relaterade till principer från sina principuppsättningar.
 
 **Administratörer:** Kan visa granskade händelser som är relaterade till alla policyskyddade dokument och användare. Administratörer kan även spåra andra typer. Administratörer kan dessutom dela upp händelsesökningar ytterligare efter typ av användare:
 
@@ -109,4 +108,3 @@ Du kan sortera händelselistan efter kolumnrubriker för att enklare hitta händ
 
 1. Klicka på lämplig kolumnrubrik.
 1. Om du vill ändra sorteringsordningen klickar du på kolumnrubriken igen.
-

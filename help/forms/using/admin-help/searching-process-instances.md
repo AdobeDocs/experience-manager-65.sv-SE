@@ -1,22 +1,21 @@
 ---
 title: Söker efter processinstanser
-seo-title: Söker efter processinstanser
+seo-title: Searching for process instances
 description: Använd sidan Processsökning för att ange sökvillkor för att hitta en processinstans.
-seo-description: Använd sidan Processsökning för att ange sökvillkor för att hitta en processinstans.
+seo-description: Use the Process Search page to enter search criteria for finding a process instance.
 uuid: 4a9c5b05-add5-4278-9c6f-d1928b6860d2
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_forms_workflow
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 88b634bb-8f6c-4830-ad01-821668609615
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 35f9acbf-7a82-43b1-9e17-9be4de666212
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: '449'
 ht-degree: 0%
 
 ---
-
 
 # Söker efter processinstanser{#searching-for-process-instances}
 
@@ -36,7 +35,7 @@ Ange grundläggande villkor för att utföra en allmän sökning. Om du anger fl
    * **Process-ID:** Det positiva heltal som identifierar varje unik processinstans.
    * **Processstatus:** Välj en status i listan.
    * **Program:** Välj ett program i listan. Endast distribuerade program visas.
-   * **Processnamn - Version:** Välj ett processnamn på menyn. Endast distribuerade processer visas.
+   * **Processnamn - version:** Välj ett processnamn på menyn. Endast distribuerade processer visas.
 
 1. Klicka på Sök. Sidan Processinstans visas med en lista över de hittade instanserna.
 

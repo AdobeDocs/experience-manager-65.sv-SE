@@ -1,22 +1,21 @@
 ---
 title: Startar AEM PhoneGap
-seo-title: Startar AEM PhoneGap
+seo-title: Starting AEM PhoneGap
 description: Följ den här sidan om du vill veta mer om startsatsen för utvecklare.
-seo-description: Följ den här sidan om du vill veta mer om startsatsen för utvecklare.
+seo-description: Follow this page to learn about the starterkit for developers.
 uuid: 952bf9f9-5c79-4212-91b7-1d3850ec2402
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: 2ecf05ed-4e56-4e0b-89cf-5161741f9001
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 7d56b9f0-5aa5-4b68-a85e-7e80415cbc76
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
-source-wordcount: '420'
+source-wordcount: '407'
 ht-degree: 0%
 
 ---
-
 
 # Startar AEM PhoneGap {#starting-aem-phonegap}
 
@@ -33,17 +32,17 @@ Starterkit hjälper dig att komma igång snabbt genom grunderna i AEM Mobile utv
 Utvecklarna kan använda det här exemplet som utgångspunkt för att testa ett AEM Mobile-program med PhoneGap. Om du kör igenom startpaketet och referensprogrammet får du en god förståelse för grunderna för att skapa avancerade mobilprogram.
 
 * Använd [AEM PhoneGap Starter Kit](https://github.com/Adobe-Marketing-Cloud-Apps/aem-phonegap-starter-kit) för att skapa appar som passar för AEM Mobile-katalogen.
-* En [referensapp](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference) med fullständig källa har skapats som demonstrerar många av de nya funktionerna i AEM Mobile, oavsett om du migrerar en befintlig app till AEM Mobile eller börjar om från början.
-* Alla våra exempel finns här på github: [https://github.com/Adobe-Marketing-Cloud-Apps](https://github.com/Adobe-Marketing-Cloud-Apps) och ta med när du startar projektet med Maven.
-* De flesta konferenssamtal utnyttjar självstudiekursen [Kitchen Sink](https://github.com/blefebvre/aem-phonegap-kitchen-sink), som du också hittar i Github och fokuserar på användningen av den inbyggda utbyggbarheten för Apache Cordova.
+* A [referensapp](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference) med en komplett källa har skapats som demonstrerar många av de nya funktionerna i AEM Mobile, oavsett om du migrerar en befintlig app till AEM Mobile eller börjar om från början.
+* Alla våra exempel finns här på github: [https://github.com/Adobe-Marketing-Cloud-Apps](https://github.com/Adobe-Marketing-Cloud-Apps) och backa projektet med Maven.
+* De flesta konferenssamtalen utnyttjar [Kitchen Sink, genomgång](https://github.com/blefebvre/aem-phonegap-kitchen-sink), som du också hittar i Github och fokuserar på användningen av den inbyggda utbyggbarheten för Apache Cordova.
 
 >[!NOTE]
 >
->När du har haft en chans att bekanta dig med startpaketet är det viktigt att du lär dig mer om Adobe Experience Manager *komponenter och mallar.*
+>När du har haft en chans att bekanta dig med startpaketet är det viktigt att du lär dig mer om Adobe Experience Manager *-komponenter och -mallar.*
 
 ## Mallar och komponenter {#templates-and-components}
 
-AEM *Mallar* och *Komponenter* gör det möjligt för olika affärsägare att skapa anpassade upplevelser. Både *Mallar *och *Komponenter* är tillgängliga direkt eller kan anpassas av dig, antingen genom att utöka befintliga komponenter eller genom att skapa grönfält (avancerat). *Mallar* och  ** komponenter gör det möjligt för AEM-författaren att dra och släppa för att skapa engagerande och relevanta upplevelser.
+AEM *Mallar* och *Komponenter* gör det möjligt för affärsområdeschefer att skapa anpassade upplevelser. Båda *mallarna *och *Komponenter* finns att få direkt eller kan utvecklas av dig, antingen genom att utöka befintliga komponenter eller genom att skapa grönfält (avancerat). *Mallar* och *Komponenter* gör att AEM Author kan dra och släppa för att skapa engagerande och relevanta upplevelser.
 
 1. [Skapa komponenter](/help/sites-developing/components.md)
 1. [Skapa mallar](/help/sites-developing/templates.md)

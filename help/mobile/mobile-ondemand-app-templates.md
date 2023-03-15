@@ -1,21 +1,20 @@
 ---
 title: Skapa och lägga till mallar och komponenter
-seo-title: Skapa och lägga till mallar och komponenter
+seo-title: Creating and Adding Templates and Components
 description: Följ den här sidan om du vill veta mer om hur du skapar och lägger till mallar och komponenter i programmet. På sidan används Geometrixx Unlimited App som ett program som innehåller en exempelprogrammall och sidmallar.
-seo-description: Följ den här sidan om du vill veta mer om hur du skapar och lägger till mallar och komponenter i programmet. På sidan används Geometrixx Unlimited App som ett program som innehåller en exempelprogrammall och sidmallar.
+seo-description: Follow this page to learn about creating and adding templates and components to your app. The page uses Geometrixx Unlimited App as the app that contains a sample app template and page templates.
 uuid: 3a93017c-8094-413f-a01c-9b72025a2b20
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 discoiquuid: ec4ada04-e429-4ad4-a060-2dccac847cf0
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 5f050baa-fe10-4acc-ad32-de20793edc13
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1198'
+source-wordcount: '1159'
 ht-degree: 0%
 
 ---
-
 
 # Skapa och lägga till mallar och komponenter {#creating-and-adding-templates-and-components}
 
@@ -35,7 +34,7 @@ Om du väljer den här exempelmallen när du skapar en ny app får du en funktio
 >
 >Information om hur du hanterar program- och mobilappsinnehåll från AEM Mobile Apps Control Center finns i [AEM Mobile Application Dashboard](/help/mobile/mobile-apps-ondemand-application-dashboard.md).
 
-## Skapar appmallar {#creating-app-templates}
+## Skapa appmallar {#creating-app-templates}
 
 En appmall används för att skapa ett nytt program och fungerar som en samling sidmallar och komponenter som representerar en baslinje eller grund för ett program. Mallen stämplar ut vissa grundläggande egenskaper så att de leder programmet på rätt sätt. I allmänhet skulle en kund inte skapa för många appar.
 
@@ -46,44 +45,43 @@ När du skapar ett nytt program baserat på en mall för ett annat program får 
 Steg för att skapa ett nytt program baserat på en appmall:
 
 1. Gå till AEM Mobile programkatalog: *&lt;server-url>/aem/apps.html/content/mobileapps*
-1. Välj **Skapa** —> **App** enligt nedan
+1. Välj **Skapa** —> **App** som visas nedan
 
-När du har skapat ett program med den här mallen kan du lägga till artiklar, banners och samlingar i programmet. Om du vill besöka, skapa artiklar, banners och samlingar igen, se [Content Management Actions](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md).
+När du har skapat ett program med den här mallen kan du lägga till artiklar, banners och samlingar i programmet. Mer information om hur du återbesöker, skapar artiklar, banners och samlingar finns i [Innehållshanteringsåtgärder](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md).
 
 >[!NOTE]
 >
->Du kan också välja en exempelprogrammall, t.ex. **We.Unlimited** app, som är tillgänglig för dig av en AEM. Om du använder den här exempelmallen för din app får du några exempelartiklar och samlingar att arbeta med. Du kan använda exempelmallarna och -komponenterna, anpassa befintliga mallar eller skapa nya för programmet.
+>Du kan också välja en exempelprogrammall, till exempel **We.Unlimited** app, som är tillgänglig för dig av en AEM utvecklare. Om du använder den här exempelmallen för din app får du några exempelartiklar och samlingar att arbeta med. Du kan använda exempelmallarna och -komponenterna, anpassa befintliga mallar eller skapa nya för programmet.
 
 >[!CAUTION]
 >
->Anger egenskapen ***redirectTarget***
+>Inställning ***redirectTarget*** property
 >
->När du använder en av appmallarna definierar utvecklaren innehållet i programmet. Utvecklaren måste dock vara medveten om var programmet skapas i jcr och värdet på egenskapen ***redirectTarget***.
+>När du använder en av appmallarna definierar utvecklaren innehållet i programmet. Utvecklaren måste dock vara medveten om var programmet skapas i jcr och värdet för ***redirectTarget*** -egenskap.
 >
->***redirectTarget*** beräknas som en del av åtgärden skapa app och försöker matcha en sökväg, om det finns en redirectTarget-egenskap som är tillgänglig som en del av programmallen, och värdet för redirectTarget definieras som relative. När skapandeappprocessen hittar ett relativt värde för redirectTarget i appmallen läggs värdet till på den lösta platsen där appen skapades.
+>The ***redirectTarget*** beräknas som en del av åtgärden skapa app och försöker matcha en sökväg, om det finns en redirectTarget-egenskap som är tillgänglig som en del av programmallen, och värdet för redirectTarget definieras som relative. När skapandeappprocessen hittar ett relativt värde för redirectTarget i appmallen läggs värdet till på den lösta platsen där appen skapades.
 >
->Om en appmall till exempel definierar ***redirectTarget*** med värdet *language-masters/en*, och appen skapades i */content/mobileapps/fooApp*, blir det slutliga värdet för redirectTarget efter att appen har skapats */content/mobileapps/fooApp/language-masters/en*&quot;.
+>Om en programmall till exempel definierar en ***redirectTarget*** med värdet &quot;*language-masters/en*&quot; och appen skapades i &quot;*/content/mobileapps/fooApp*&quot; kommer det slutliga värdet för redirectTarget efter att appen har skapats att vara &quot;*/content/mobileapps/fooApp/language-masters/en*&quot;.
 
-
-## Skapar innehållsmallar {#creating-content-templates}
+## Skapa innehållsmallar {#creating-content-templates}
 
 Varje entitetstyp har två färdiga mallar. Dessa är:
 
-* **standardmallar:** används för att skapa innehåll med tillämpliga standardegenskaper/struktur
-* **importerade mallar:** används för att importera innehåll från AEM Mobile med tillämpliga standardegenskaper/standardstruktur
+* **Standardmallar:** används för att skapa innehåll med tillämpliga standardegenskaper/standardstruktur
+* **Importerade mallar:** används för att importera innehåll från AEM Mobile med tillämpliga standardegenskaper/standardstruktur
 
 ### Artikelmallar {#article-templates}
 
 Obegränsad artikel är en exempelmall som representerar en typisk AEM Mobile On-Demand-artikellayout.
 
-1. Klicka på **+** i **Hantera artiklar** för att skapa en ny artikel. Du kan välja antingen en **obegränsad artikel** eller en **RTF-artikel**. Bilden nedan visar det alternativ som gör att du kan välja mellan någon av dessa två artikelmallar.
+1. Klicka på **+** in **Hantera artiklar** för att skapa en ny artikel. Du kan välja ett **Obegränsad artikel** eller en **RTF-artikel**. Bilden nedan visar det alternativ som gör att du kan välja mellan någon av dessa två artikelmallar.
 
-1. Klicka på **Nästa** för att definiera artikelmetadata som artikelnamn/titel, beskrivning, författare, abstrakt, avdelning, miniatyrbild, artikelåtkomst och så vidare.
-1. Klicka på **Nästa** för att fylla i Advertisement Properties.
-1. Klicka på **Nästa** för att ange artikelbild eller bild för sociala medier
-1. Klicka på **Nästa** för att välja en samlingslänk till den här nya artikeln.
-1. Klicka på **Nästa** för att ange information om delning via sociala medier.
-1. Klicka på **Skapa** för att slutföra processen att skapa en artikel med exemplet. Du kan antingen klicka på **Klar** eller **Redigera artikel** för att redigera egenskaperna för den här artikeln.
+1. Klicka **Nästa** om du vill definiera artikelmetadata som artikelnamn/titel, beskrivning, författare, abstrakt, avdelning, miniatyrbild, artikelåtkomst och så vidare.
+1. Klicka **Nästa** för att fylla i Advertisement Properties.
+1. Klicka **Nästa** för att ange artikelbild eller bild för sociala medier
+1. Klicka **Nästa** om du vill välja en samlingslänk den här nya artikeln till.
+1. Klicka **Nästa** om du vill ange information för delning via sociala medier.
+1. Klicka **Skapa** för att slutföra processen med att skapa en artikel med exemplet. Du kan antingen klicka **Klar** eller **Redigera artikel** om du vill redigera egenskaperna för den här artikeln.
 
 ![chlimage_1-71](assets/chlimage_1-71.png)
 
@@ -95,13 +93,13 @@ Markera en artikel som du vill redigera och klicka på **Redigera** för att lä
 
 ![chlimage_1-72](assets/chlimage_1-72.png) ![chlimage_1-73](assets/chlimage_1-73.png)
 
-Välj **+** på den vänstra panelen för att lägga till komponenter i artikeln.
+Välj &#39;**+**&#39; på den vänstra panelen för att lägga till komponenter i artikeln.
 
 ![chlimage_1-74](assets/chlimage_1-74.png)
 
 ### Skapa färdiga mallar {#creating-out-of-the-box-templates}
 
-Det finns inga färdiga artikelmallar, men det finns en standardmall som anpassade mallar ska utöka, se Geometrixx Unlimited apps [Article template sample](http://localhost:4502/crx/de/index.jsp#/apps/geometrixx-unlimited-app/templates/article).
+Det finns inga färdiga artikelmallar, men det finns en standardmall som anpassade mallar ska utöka, se Geometrixx Unlimited-appens [Exempel på artikelmall](http://localhost:4502/crx/de/index.jsp#/apps/geometrixx-unlimited-app/templates/article).
 
 De viktigaste egenskaperna utöver de normala AEM mallegenskaper som krävs är bland annat
 
@@ -109,9 +107,9 @@ De viktigaste egenskaperna utöver de normala AEM mallegenskaper som krävs är 
 
 Den här egenskapen ser till att AEM kan identifieras som en artikelmålsida från AEM Mobile.
 
-Som AEM mallar kan du lägga till alla standardegenskaper eller underordnade noder till mallens ***jcr:content***.
+Som AEM mallar kan du lägga till alla standardegenskaper eller underordnade noder i mallens ***jcr:innehåll***.
 
-### Banderoll och samlingsmallar {#banner-and-collection-templates}
+### Mallar för banner och samling {#banner-and-collection-templates}
 
 >[!CAUTION]
 >
@@ -127,7 +125,6 @@ En enkel komponent ingår i koddatabasen, vars källa finns i AEM. Därefter kan
 >
 >Det finns för närvarande inga färdiga komponenter för AEM Mobile.
 
-
 Du kan lägga till komponenter på sidan. Alla komponenter kan användas i en AEM Mobile-app, men de kanske inte återges korrekt när de används.
 
 Anpassade komponenter kanske inte exporteras och överförs korrekt till AEM Mobile On-demand Services utan en anpassad Content Sync-hanterare för export som återges i AEM.
@@ -138,23 +135,23 @@ När komponenten redan har inkluderats på en AEM sida, tillsammans med några a
 
 1. Välj den sidan och kontrollera att du är i redigeringsläge, via listrutan längst upp till höger i redigerarens sidhuvud
 1. Växla sidopanelen med ikonen längst till vänster i redigerarens sidhuvud
-1. Välj fliken **Komponenter**
+1. Välj **Komponenter** tab
 1. Dra och släpp en av de tillgängliga komponenterna på sidan
 
 ![chlimage_1-75](assets/chlimage_1-75.png)
 
 **Så här redigerar du en befintlig komponent:**
 
-1. Välj den sidan och kontrollera att du är i läget **Redigera** och markera komponenten
+1. Välj den sidan och kontrollera att du är **Redigera** och markera komponenten
 1. Tryck på skiftnyckelsikonen för att konfigurera komponenten
 
 >[!NOTE]
 >
->Du kan skapa en komponent i AEM och anpassa den med [Utveckla med CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md). När du har anpassat den befintliga komponenten som du vill kan du lägga till den på sidan med hjälp av alternativet **Redigera** under **Hantera artiklar** enligt bilden ovan.
+>Du kan skapa en komponent i AEM och anpassa den med [Utveckla med CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md). När du har anpassat den befintliga komponenten som du vill kan du lägga till den på sidan med **Redigera** option under **Hantera artiklar** som visas i figuren ovan.
 
 >[!NOTE]
 >
->Mer information finns i [Bästa praxis för utveckling av mallar och komponenter](/help/mobile/best-practices-aem-mobile.md) i AEM Mobile.
+>Se [Bästa praxis för utveckling av mallar och komponenter](/help/mobile/best-practices-aem-mobile.md) i AEM Mobile.
 
 ### Nästa steg {#the-next-steps}
 

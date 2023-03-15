@@ -1,8 +1,8 @@
 ---
 title: Kompatibilitetspaket
-seo-title: Kompatibilitetspaket
+seo-title: Compatibility Package
 description: Om du installerar kompatibilitetspaketet på AEM Forms 6.5 kan du använda Correspondence Management-resurser från AEM Forms 6.4 och tidigare versioner samt inaktuella mallar och sidor för adaptiva formulär
-seo-description: Genom att installera kompatibilitetspaketet på AEM Forms 6.4 kan du använda Correspondence Management-resurser från AEM Forms 6.4 och inaktuella adaptiva formulärmallar och sidor.
+seo-description: Installing the Compatibility package on AEM Forms 6.4 allows you to use the Correspondence Management assets from AEM Forms 6.4 and deprecated adaptive forms templates and pages
 uuid: b49633d6-2cb3-422c-a314-25f3b8a37b7f
 contentOwner: gtalwar
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -14,7 +14,7 @@ role: Admin
 exl-id: bb16017c-a1bf-40d8-a78d-827c05b7ee2e
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '343'
+source-wordcount: '316'
 ht-degree: 0%
 
 ---
@@ -23,31 +23,31 @@ ht-degree: 0%
 
 ## Översikt {#overview}
 
-Interaktiv kommunikation är standardmetoden och rekommenderas för att skapa kundkommunikation i AEM Forms 6.5. Om du vill fortsätta använda bokstäver i AEM Forms 6.5 måste du installera det senaste [AEMFD-kompatibilitetspaketet](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html).
+Interaktiv kommunikation är standardmetoden och rekommenderas för att skapa kundkommunikation i AEM Forms 6.5. Om du vill fortsätta använda brev i AEM Forms 6.5 måste du installera den senaste [AEMFD-kompatibilitetspaket](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html).
 
-Med AEMFD-kompatibilitetspaketet kan du även [använda följande resurser från AEM Forms 6.4, 6.3 och 6.2 i AEM Forms 6.5:](../../forms/using/compatibility-package.md#add-support-for-aem-forms-and-assets-in-aem-forms)
+Med paketet AEMFD-kompatibilitet kan du även [använda följande resurser från AEM Forms 6.4, 6.3 och 6.2 i AEM Forms 6.5:](../../forms/using/compatibility-package.md#add-support-for-aem-forms-and-assets-in-aem-forms)
 
 * Dokumentfragment
 * Bokstäver
 * Dataordlistor
 * Mallar och sidor för anpassade formulär har tagits bort
 
-Mer information finns i [Resurser som gjorts kompatibla med AEM Forms 6.5 genom att installera Kompatibilitetspaketet](../../forms/using/compatibility-package.md#assetsmadecompatible).
+Mer information finns i [Resurser som gjorts kompatibla med AEM Forms 6.5 genom att installera kompatibilitetspaketet](../../forms/using/compatibility-package.md#assetsmadecompatible).
 
 ## Lägg till stöd för AEM Forms 6.4-, 6.3- och 6.2-material i AEM Forms 6.5 {#add-support-for-aem-forms-and-assets-in-aem-forms}
 
 När du har utfört en uppgradering gör du följande för att installera AEMFD-kompatibilitetspaketet och göra dina resurser kompatibla med 6.5:
 
-Kontrollera att du har [AEM Kompatibilitetspaket](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) förinstallerat.
+Se till att du har [AEM](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) förinstallerat.
 
-1. Installera den senaste 6.5 [Kompatibilitetspaketet](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html).
+1. Installera senaste 6.5 [Kompatibilitetspaket](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html).
 
    Mer information om hur du överför och installerar paketet finns i [Arbeta med paket](/help/sites-administering/package-manager.md).
 
 1. Starta om servern när loggarna har stabiliserats.
 1. Använd flyttningsverktyget för att göra dina resurser kompatibla med 6.5.
 
-   Mer information finns i [migreringsverktyget](../../forms/using/migration-utility.md).
+   Mer information finns i [migreringsverktyg](../../forms/using/migration-utility.md).
 
 ## Resurser som gjorts kompatibla med AEM Forms 6.5 genom att installera kompatibilitetspaketet {#assetsmadecompatible}
 

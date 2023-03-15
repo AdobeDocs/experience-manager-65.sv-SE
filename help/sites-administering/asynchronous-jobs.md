@@ -1,14 +1,13 @@
 ---
 title: Asynkrona jobb
 description: Adobe Experience Manager optimerar prestandan genom att asynkront slutföra vissa resurskrävande uppgifter.
-translation-type: tm+mt
-source-git-commit: c3f85314740c4e9ca8ed0c9a724b49ff4276616a
+exl-id: 4af1bcfe-9f2e-44a4-8666-881f2dccc3bc
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '800'
 ht-degree: 98%
 
 ---
-
 
 # Asynkrona åtgärder {#asynchronous-operations}
 
@@ -146,7 +145,7 @@ Om antalet referenser till de sidor som ska flyttas överstiger gränsvärdet ut
 >* [Skapa och ordna sidor](/help/sites-authoring/managing-pages.md)
 >* [Skapa och synkronisera Live-kopior](/help/sites-administering/msm-livecopy.md)
 >* [Konfigurera e-post i Experience Manager](/help/sites-administering/notification.md).
->* [Importera metadata](/help/assets/metadata.md#import-metadata) för resurser.
->* [Exportera metadata](/help/assets/metadata.md#export-metadata) för resurser.
+>* [Importera metadata för resurser](/help/assets/metadata.md#import-metadata).
+>* [Exportera metadata för resurser](/help/assets/metadata.md#export-metadata).
 >* [Använd länkade resurser för att dela DAM-resurser från fjärrdistributioner](/help/assets/use-assets-across-connected-assets-instances.md).
 

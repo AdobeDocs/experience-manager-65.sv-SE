@@ -1,8 +1,8 @@
 ---
 title: Utvärdera uppgraderingskomplexiteten med mönsteravkännaren
-seo-title: Utvärdera uppgraderingskomplexiteten med mönsteravkännaren
+seo-title: Assessing the Upgrade Complexity with the Pattern Detector
 description: Lär dig hur du använder mönsteravkännaren för att bedöma hur komplicerad din uppgradering är.
-seo-description: Lär dig hur du använder mönsteravkännaren för att bedöma hur komplicerad din uppgradering är.
+seo-description: Learn how to use the Pattern Detector to assess the complexity of your upgrade.
 uuid: 84d0add9-3123-4188-9877-758911b1899f
 contentOwner: sarchiz
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,14 +11,13 @@ content-type: reference
 discoiquuid: b5607343-a13b-4520-a771-f1a555bfcc7b
 docset: aem65
 feature: Upgrading
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: c42373e9-712e-4c11-adbb-4e3626e0b217
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '522'
 ht-degree: 1%
 
 ---
-
 
 # Utvärdera uppgraderingskomplexiteten med mönsteravkännaren
 
@@ -33,7 +32,7 @@ Detta kan fungera som en bedömning av den utvecklingsinsats som är nödvändig
 
 ## Konfigurera {#how-to-set-up}
 
-Mönsteravkännaren släpps separat som ett [paket](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/compatpack/pd-all-aem65) som fungerar med AEM källversioner från 6.1 till 6.5 AEM 6.5. Den kan installeras med [Package Manager](/help/sites-administering/package-manager.md).
+Mönsteravkännaren släpps separat som en [ett paket](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/compatpack/pd-all-aem65) för alla AEM från 6.1 till 6.5 AEM 6.5. Den kan installeras med [Pakethanteraren](/help/sites-administering/package-manager.md).
 
 ## Användning {#how-to-use}
 
@@ -43,17 +42,15 @@ Mönsteravkännaren släpps separat som ett [paket](https://experience.adobe.com
 >
 >* öka detekteringsgraden
 >* undvika flaskhalsar i affärskritiska instanser
-
 >
->
-båda samtidigt rekommenderas att köra den **på mellanlagringsmiljöer** som är så nära produktionsmiljöer som möjligt inom användarprogram, innehåll och konfigurationer.
+>båda samtidigt rekommenderas att programmet körs **i stagningsmiljöer** som är så nära produktionerna som möjligt inom användarapplikationer, innehåll och konfigurationer.
 
 Du kan använda flera metoder för att kontrollera mönsteravkännarens utdata:
 
 * **Via Felix Inventory Console:**
 
 1. Gå till AEM webbkonsol genom att gå till *https://serveraddress:serverport/system/console/configMgr*
-1. Välj **Status - Mönsteravkännare** så som visas i bilden nedan:
+1. Välj **Status - mönsteravkännare** enligt bilden nedan:
 
    ![screenshot-2018-2-5pattern-Dettor](assets/screenshot-2018-2-5pattern-detector.png)
 
@@ -71,7 +68,7 @@ Utdata är för närvarande tillgängliga under två URL:er:
 1. Gränssnitt för oformaterad text
 1. JSON-gränssnitt
 
-## Hantera gränssnittet för oformaterad text {#handling-the-plain-text-interface}
+## Hantera gränssnittet Oformaterad text {#handling-the-plain-text-interface}
 
 Informationen i utdata formateras som en serie händelseposter. Det finns två kanaler - en för publiceringsöverträdelser och den andra för publicering av aktuella framsteg.
 
@@ -87,7 +84,7 @@ Utdata ser ut så här:
 2018-02-13T14:18:32.071+01:00 [SUSPICION] The pattern=ECU/extraneous.content.usage was found by detector=ContentAccessDetector with id=a07fd94318f12312c165e06d890cbd3c2c8b8dad0c030663db8b4c800dd7c33f message="Cross-boundary overlay of internal marked path /libs/granite/operations/components/commons/commons.jsp/jcr:content referenced at /apps/granite/operations/components/commons/commons.jsp/jcr:content with properties redefined: jcr:lastModifiedBy, jcr:mimeType, jcr:data, jcr:lastModified, jcr:uuid". More info at=https://www.adobe.com/go/aem6_EC
 ```
 
-Förloppet kan filtreras med kommandot `grep`:
+Förloppet kan filtreras med `grep` kommando:
 
 ```shell
 curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-detector.txt | tee patterns-report.log | grep PROGRESS
@@ -103,7 +100,7 @@ Detta ger följande utdata:
 
 ## Hantera JSON-gränssnittet {#handling-the-json-interface}
 
-På samma sätt kan JSON bearbetas med [jq-verktyget](https://stedolan.github.io/jq/) så fort det publiceras.
+På samma sätt kan JSON bearbetas med [jq, verktyg](https://stedolan.github.io/jq/) så snart den har publicerats.
 
 ```shell
 curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-detector.json | tee patterns-report.json | jq --unbuffered -C 'select(.suspicion == true)'
@@ -213,7 +210,7 @@ Med utdata:
 
 >[!NOTE]
 >
->Det rekommenderade sättet är att spara hela utdata från url i filen och sedan bearbeta det via `jq` eller `grep` för att filtrera informationstypen.
+>Det rekommenderade sättet är att spara hela utdata från urklipp i filen och sedan bearbeta det via `jq` eller `grep` för att filtrera informationstypen.
 
 ## Identifieringsomfång {#scope}
 

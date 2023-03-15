@@ -1,8 +1,8 @@
 ---
 title: Arbeta med loggar
-seo-title: Arbeta med loggar
+seo-title: Working with Logs
 description: Lär dig hur du felsöker AEM genom att arbeta med loggar.
-seo-description: Lär dig hur du felsöker AEM genom att arbeta med loggar.
+seo-description: Learn how to troubleshoot AEM by working with logs.
 uuid: af8b7f50-c8d4-4760-9f00-3feb0b79ee4c
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,14 +10,13 @@ topic-tags: operations
 content-type: reference
 discoiquuid: da92d751-6f14-4512-9d77-7ecf098bd58e
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 8b53e79e3a88f58423e99477db930a4912a1ba09
+exl-id: ab4fc41f-e0e9-4577-aab2-f0b4298f9a59
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '246'
+source-wordcount: '234'
 ht-degree: 2%
 
 ---
-
 
 # Arbeta med loggar{#working-with-logs}
 
@@ -29,7 +28,7 @@ CRX registrerar detaljerade loggar. När du har packat upp och startat Quickstar
 * crx-quickstart/server/logs
 * crx-quickstart/logs
 
-## Aktivera loggnivån för felsökning {#activating-the-debug-log-level}
+## Aktivera felsökningsloggnivån {#activating-the-debug-log-level}
 
 Standardloggnivån är INFO, d.v.s. DEBUG-meddelanden loggas inte.
 

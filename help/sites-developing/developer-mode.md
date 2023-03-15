@@ -1,8 +1,8 @@
 ---
 title: Utvecklarläge
-seo-title: Utvecklarläge
+seo-title: Developer Mode
 description: I utvecklarläget öppnas en sidopanel med flera flikar som ger utvecklaren information om den aktuella sidan
-seo-description: I utvecklarläget öppnas en sidopanel med flera flikar som ger utvecklaren information om den aktuella sidan
+seo-description: Developer mode opens a side panel with several tabs that provide a developer with infomation about the current page
 uuid: 8301ab51-93d6-44f9-a813-ba7f03f54485
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,22 +10,21 @@ topic-tags: components
 content-type: reference
 discoiquuid: 589e3a83-7d1a-43fd-98b7-3b947122829d
 docset: aem65
-translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+exl-id: aef0350f-4d3d-47f4-9c7e-5675efef65d9
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '708'
+source-wordcount: '687'
 ht-degree: 1%
 
 ---
 
-
 # Utvecklarläge{#developer-mode}
 
-När du redigerar sidor i AEM finns flera [lägen](/help/sites-authoring/author-environment-tools.md#modestouchoptimizedui) tillgängliga, bland annat i utvecklarläget. Då öppnas en sidopanel med flera flikar som ger utvecklaren information om den aktuella sidan. De tre flikarna är:
+När du redigerar sidor i AEM [lägen](/help/sites-authoring/author-environment-tools.md#modestouchoptimizedui) är tillgängliga, inklusive läget Utvecklare. Då öppnas en sidopanel med flera flikar som ger utvecklaren information om den aktuella sidan. De tre flikarna är:
 
-* **[](#components)** Komponenter för att visa struktur- och prestandainformation.
-* **[Testar](#tests)** för att köra tester och analysera resultaten.
-* **[Det](#errors)** gick inte att se några problem.
+* **[Komponenter](#components)** för att visa information om struktur och prestanda.
+* **[Test](#tests)** för att köra tester och analysera resultaten.
+* **[Fel](#errors)** för att se om det finns några problem.
 
 Detta hjälper en utvecklare att:
 
@@ -37,13 +36,11 @@ Detta hjälper en utvecklare att:
 >
 >Utvecklarläge:
 >
->* Är bara tillgängligt i det beröringskänsliga användargränssnittet (när du redigerar sidor).
+>* Är bara tillgängligt i det beröringsaktiverade användargränssnittet (vid redigering av sidor).
 >* Är inte tillgängligt på mobila enheter eller små fönster på skrivbordet (på grund av utrymmesbegränsningar).
-
    >
-   >   
-   * Detta inträffar när bredden är mindre än 1024px.
->* Är bara tillgänglig för användare som är medlemmar i `administrators`-gruppen.
+   >   * Detta inträffar när bredden är mindre än 1024px.
+>* Är endast tillgänglig för användare som är medlemmar i `administrators` grupp.
 
 
 >[!CAUTION]
@@ -54,33 +51,29 @@ Detta hjälper en utvecklare att:
 >
 >* på en författarinstans med nosamplsinnehållets körningsläge
 >* en publiceringsinstans
-
 >
->
-Det bör inaktiveras igen efter användning.
+>Det bör inaktiveras igen efter användning.
 
 >[!NOTE]
 >
 >Se
 >
->* Kunskapsbasartikeln [Felsökning AEM TouchUI-problem](https://helpx.adobe.com/experience-manager/kb/troubleshooting-aem-touchui-issues.html) innehåller ytterligare tips och verktyg.
+>* Kunskapsbasartikel, [Felsökning AEM TouchUI-problem](https://helpx.adobe.com/experience-manager/kb/troubleshooting-aem-touchui-issues.html)för fler tips och verktyg.
 >* AEM Gems-session om [AEM 6.0 Developer Mode](https://docs.adobe.com/content/ddc/en/gems/aem-6-0-developer-mode.html).
-
 >
-
 
 
 ## Öppnar utvecklarläge {#opening-developer-mode}
 
-Utvecklarläget implementeras som en sidopanel i sidredigeraren. Om du vill öppna panelen väljer du **Utvecklare** i lägesväljaren i verktygsfältet i sidredigeraren:
+Utvecklarläget implementeras som en sidopanel i sidredigeraren. Om du vill öppna panelen väljer du **Utvecklare** från lägesväljaren i verktygsfältet i sidredigeraren:
 
 ![chlimage_1-11](assets/chlimage_1-11.png)
 
 Panelen är uppdelad i två flikar:
 
-* **[Komponenter](/help/sites-developing/developer-mode.md#components)**  - Detta visar ett komponentträd, som liknar  [innehållsträdet ](/help/sites-authoring/author-environment-tools.md#content-tree) för författare
+* **[Komponenter](/help/sites-developing/developer-mode.md#components)** - Detta visar ett komponentträd, som liknar [innehållsträd](/help/sites-authoring/author-environment-tools.md#content-tree) för författare
 
-* **[Fel](/help/sites-developing/developer-mode.md#errors)**  - När problem uppstår visas information för varje komponent.
+* **[Fel](/help/sites-developing/developer-mode.md#errors)** - När problem uppstår visas information för varje komponent.
 
 ### Komponenter {#components}
 
@@ -127,28 +120,27 @@ Varje komponentpost kan visa (till exempel:
 
 >[!CAUTION]
 >
->Vissa länkar pekar på skript under `/libs`. Dessa är endast för referens, du **får inte** redigera något under `/libs` eftersom ändringar du gör kan gå förlorade. Detta beror på att den här grenen kan ändras när du uppgraderar eller installerar en programfix/funktionspaket. Alla ändringar du behöver ska göras under `/apps`, se [Övertäckningar och åsidosättningar](/help/sites-developing/overlays.md).
+>Vissa länkar pekar på skript under `/libs`. Dessa är dock bara till för referens **får inte** redigera vad som helst under `/libs`, eftersom alla ändringar du gör kan gå förlorade. Detta beror på att den här grenen kan ändras när du uppgraderar eller installerar en programfix/funktionspaket. Alla ändringar du behöver ska göras under `/apps`, se [Övertäckningar och åsidosättningar](/help/sites-developing/overlays.md).
 
 ### Fel {#errors}
 
 ![chlimage_1-16](assets/chlimage_1-16.png)
 
-Förhoppningsvis kommer fliken **Fel** alltid att vara tom (som ovan), men när problem uppstår visas följande information för varje komponent:
+Förhoppningsvis **Fel** tabben kommer alltid att vara tom (som ovan), men när problem uppstår visas följande information för varje komponent:
 
 * En varning om komponenten skriver en post i felloggen, tillsammans med information om felet och direktlänkar till rätt kod i CRXDE Lite.
 * En varning om komponenten öppnar en administratörssession.
 
-Om till exempel en odefinierad metod anropas visas det resulterande felet på fliken **Fel**:
+I en situation där en odefinierad metod anropas visas det resulterande felet i **Fel** tab:
 
 ![chlimage_1-17](assets/chlimage_1-17.png)
 
 Komponentposten i trädet på fliken Komponenter markeras också med en indikator när ett fel inträffar.
 
-### Testa {#tests}
+### Test {#tests}
 
 >[!CAUTION]
 >
 >I AEM 6.2 återimplementerades testfunktionerna i utvecklarläget som ett fristående verktygsprogram.
 >
 >Mer information finns i [Testa användargränssnittet](/help/sites-developing/hobbes.md).
-

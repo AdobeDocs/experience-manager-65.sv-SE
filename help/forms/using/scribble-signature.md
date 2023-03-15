@@ -1,8 +1,8 @@
 ---
-title: Använda klottersignaturer i HTML5-formulär
-seo-title: Använda klottersignaturer i HTML5-formulär
+title: Använda klottrar i HTML5-formulär
+seo-title: Using Scribble Signature in HTML5 forms
 description: HTML5-formulär används i allt större utsträckning på enheter med pekskärm, och ett vanligt krav är att stödja signaturer. Att signera dokument på mobila enheter har blivit ett accepterat sätt att signera formulär på mobila enheter.
-seo-description: HTML5-formulär används i allt större utsträckning på enheter med pekskärm, och ett vanligt krav är att stödja signaturer. Att signera dokument på mobila enheter har blivit ett accepterat sätt att signera formulär på mobila enheter.
+seo-description: HTML5 forms are increasingly used on touch devices, and one common requirement is to support signatures. Signing documents on mobile devices is becoming an accepted way of signing forms on mobile devices.
 uuid: 163dd55a-971a-4dd4-93a7-a14e80184d9b
 contentOwner: robhagat
 content-type: reference
@@ -11,20 +11,19 @@ topic-tags: designer
 discoiquuid: ecd7f538-9c24-48e7-8450-596851e99cff
 docset: aem65
 feature: Designer
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 2025182f-195b-40d0-aee7-67669f55b964
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '697'
+source-wordcount: '658'
 ht-degree: 0%
 
 ---
 
-
-# Använda taggsignatur i HTML5-formulär{#using-scribble-signature-in-html-forms}
+# Använda klottrar i HTML5-formulär{#using-scribble-signature-in-html-forms}
 
 HTML5-formulär används i allt större utsträckning på enheter med pekskärm, och ett vanligt krav är att stödja signaturer. Skript (skrivande med en penna eller ett finger) blir ett accepterat sätt att signera formulär på mobila enheter. HTML5-formulär och Forms Designer aktiverar nu alternativet att ha ett signaturfält med klotter i formuläret. När formuläret återges i webbläsaren kan du signera dessa fält med en penna, mus eller touchpenna.
 
-## Designa ett formulär med fältet Scribble Signature {#how-to-design-a-form-using-scribble-signature-field}
+## Designa ett formulär med fältet Klottsignatur {#how-to-design-a-form-using-scribble-signature-field}
 
 1. Öppna ett formulär i Forms Designer.
 1. Dra och släpp signaturfältet på sidan.
@@ -37,16 +36,16 @@ HTML5-formulär används i allt större utsträckning på enheter med pekskärm,
 
 1. Konfigurera signaturskriptfältet.
 
-   Som standard markeras geopositioneringsinformation som obligatorisk under signeringsprocessen på iPad i signaturfältet (och är valfritt för andra enheter). Det här standardbeteendet kan åsidosättas genom att värdet för egenskapen `geoLocMandatoryOnIpad` ändras. Den här egenskapen visas som extras i signaturskriptfältet. Stegen för att ändra den är:
+   Som standard markeras geopositioneringsinformation som obligatorisk under signeringsprocessen i iPad i fältet Signature Scribble (och är valfritt för andra enheter). Det här standardbeteendet kan åsidosättas genom att ändra värdet för `geoLocMandatoryOnIpad` -egenskap. Den här egenskapen visas som extras i signaturskriptfältet. Stegen för att ändra den är:
 
    1. Markera fältet Skript för signatur i formuläret.
-   1. Välj fliken **XML-källa**.
+   1. Välj **XML-källa** -fliken.
 
       >[!NOTE]
       >
-      >Du öppnar fliken XML-källa genom att klicka på **Visa** > **XML-källa**.
+      >Öppna fliken XML-källa genom att klicka på **Visa** > **XML-källa**.
 
-   1. Leta reda på taggen `<ui>` i taggen `<field>` och ändra källkoden så att den ser ut så här:
+   1. Leta reda på `<ui>` -taggen i `<field>` tagga och ändra källkoden så att den ser ut så här:
 
       ```xml
       <extras name="x-scribble-add-on">
@@ -54,42 +53,42 @@ HTML5-formulär används i allt större utsträckning på enheter med pekskärm,
       </extras>
       ```
 
-   1. Välj fliken **Designvy**. Klicka på **Ja** i bekräftelserutan.
+   1. Välj **Designvy** -fliken. Klicka på **Ja**.
    1. Spara formuläret.
 
 1. Återge formuläret i en enhet/webbläsare som stöds.
 
 ## Gränssnitt med klottersignaturer {#interfacing-with-the-scribble-signatures}
 
-### Signerar {#signing}
+### Signering {#signing}
 
 När ett signaturskriptfält har lagts till i formuläret och återgetts öppnas en dialogruta när du klickar eller trycker på fältet. Användaren kan klottra en signatur i ritområdet som definieras av en prickad rektangel med en mus, ett finger eller en penna.
 
 ![geolokalisering](assets/geolocation.png)
 
-**A.** Pensel  **B.** Suddgummi  **C.** Geolocation  **D.** Geolocation information
+**S.** Pensel **B.** Suddgummi **C.** Geolokalisering **D.** Geoplatsinformation
 
 ### Geotaggning {#geo-tagging}
 
 När du klickar på ikonen för geopositionering när du skapar klottret bäddas geografisk plats och tidsinformation in i fältet.
 
 >[!NOTE]
-Som standard är det obligatoriskt att bädda in geolokaliseringsinformation på iPad.
+I iPad är det som standard obligatoriskt att bädda in geolokaliseringsinformation.
 
-På iPad visas inte geopositioneringsikonen som standard och geopositioneringsinformationen bäddas in automatiskt när du klickar på **OK**.
+I iPad visas inte geopositioneringsikonen som standard och geopositioneringsinformationen bäddas in automatiskt när du klickar på **OK**.
 
-För iPad kan den här inställningen ändras genom att värdet för parametern `geoLocManadatoryOnIpad` ändras till `0` i fältets initieringsparametrar.
+För iPad kan den här inställningen ändras genom att värdet för `geoLocManadatoryOnIpad` parameter till `0`, i fältets init-parametrar.
 
-* När geopositioneringsinformation är obligatorisk visas ett reducerat ritområde för användaren. Geopositionstext läggs till när användaren klickar på ikonen **OK** i det återstående området.
+* När geopositioneringsinformation är obligatorisk visas ett reducerat ritområde för användaren. Geopositionstext läggs till när användaren klickar på **OK** på det återstående området.
 * I andra fall visas användaren med en fullständig rityta. Om användaren väljer att bädda in geopositioneringsinformation, ändras storleken på det här området så att det får plats med geopositioneringstext.
 
-### Rensar en signatur {#clearing-a-signature}
+### Rensa en signatur {#clearing-a-signature}
 
-När du använder den här funktionen kan användaren klicka på ikonen **Suddgummi** för att rensa fältet och börja om från början. Om geopositioneringsinformation lades till rensas den också.
+När du använder den här funktionen kan användaren klicka på **Suddgummi** för att rensa fältet och börja om från början. Om geopositioneringsinformation lades till rensas den också.
 
 ### Spara en signatur {#saving-a-signature}
 
-Om du klickar på ikonen **OK** sparas klottret som en bild i fältet. Bilden och värdena kan skickas till servern för vidare bearbetning. När en användare har klickat på **OK** är klotterfältet låst. Det går inte att redigera signaturen igen med hjälp av klotterwidgeten.
+Klicka på **OK** -ikonen sparar klottret som en bild i fältet. Bilden och värdena kan skickas till servern för vidare bearbetning. När en användare har klickat **OK**, är klottret låst. Det går inte att redigera signaturen igen med hjälp av klotterwidgeten.
 
 Om du trycker eller klickar på fältet Klottra öppnas dialogrutan i skrivskyddat läge.
 
@@ -97,11 +96,11 @@ Om du trycker eller klickar på fältet Klottra öppnas dialogrutan i skrivskydd
 
 ### Välja ritstiftsstorlek {#selecting-pen-size}
 
-Klicka på ikonen **Penslar** för att visa en lista över tillgängliga pennstorlekar. Klicka eller tryck på en ritstiftsstorlek om du vill använda motsvarande penna.
+Klicka på **Penslar** om du vill visa en lista med tillgängliga ritstiftsstorlekar. Klicka eller tryck på en ritstiftsstorlek om du vill använda motsvarande penna.
 
 ### Ta bort signaturer från formuläret {#delete-signatures-from-the-form}
 
 Så här tar du bort signaturer från formuläret:
 
-* (Mobila enheter) Tryck länge på signaturfältet och tryck på **Yes** i bekräftelsedialogrutan.
-* (Skrivbord) Håll markören över signaturfältet, klicka på ikonen **Avbryt** och klicka på **Ja** i bekräftelsedialogrutan.
+* (Mobila enheter) Tryck länge på signaturfältet och tryck på **Ja**.
+* (Skrivbord) Håll markören över signaturfältet och klicka på knappen **Avbryt** och klickar på **Ja**.

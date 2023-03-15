@@ -1,22 +1,21 @@
 ---
 title: Integrera med BrightEdge Content Optimizer
-seo-title: Integrera med BrightEdge Content Optimizer
+seo-title: Integrating with BrightEdge Content Optimizer
 description: Läs om hur du integrerar AEM med BrightEdge Content Optimizer.
-seo-description: Läs om hur du integrerar AEM med BrightEdge Content Optimizer.
+seo-description: Learn about integrating AEM with BrightEdge Content Optimizer.
 uuid: 7075dd3c-2fd6-4050-af1c-9b16ad4366ec
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 discoiquuid: cf25c9a8-0555-4c67-8aa5-55984fd8d301
-translation-type: tm+mt
-source-git-commit: 684d2d5f73d571a15c8155e7870134c28dc892b7
+exl-id: f14cc5fd-aeab-4619-b926-b6f1df7e50e5
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '508'
-ht-degree: 0%
+source-wordcount: '495'
+ht-degree: 1%
 
 ---
-
 
 # Integrera med BrightEdge Content Optimizer{#integrating-with-brightedge-content-optimizer}
 
@@ -60,7 +59,7 @@ Associera sidor med en BrightEdge-konfiguration för att skicka siddata till Bri
 
    ![chlimage_1-6](assets/chlimage_1-6a.png)
 
-## Aktivera en BrightStor-konfiguration {#activating-a-brightedge-configuration}
+## Aktivera en BrightEdge-konfiguration {#activating-a-brightedge-configuration}
 
 Aktivera en BrightEdge-konfiguration för att replikera den på publiceringsinstansen och aktivera publicerade sidor för interaktion med BrightEdge-tjänsten.
 
@@ -72,4 +71,3 @@ Aktivera en BrightEdge-konfiguration för att replikera den på publiceringsinst
 1. Kontrollera att din BrightEdge-konfiguration är markerad i listan över konfigurationer som visas och klicka sedan på Publicera.
 
    ![chlimage_1-8](assets/chlimage_1-8a.png)
-

@@ -1,22 +1,21 @@
 ---
 title: Använda SOM-uttryck i adaptiva former
-seo-title: Använda SOM-uttryck i adaptiva former
+seo-title: Using SOM expressions in adaptive forms
 description: Lär dig hur du extraherar SOM-uttryck för en panel i ett adaptivt formulär.
-seo-description: Lär dig hur du extraherar SOM-uttryck för en panel i ett adaptivt formulär.
+seo-description: Learn how to extract SOM expressions of a panel of an adaptive form.
 uuid: c5d55aff-fb69-4a1c-96ea-fb3f9322cbb0
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 13f00bb2-561f-4d64-8829-292c663abeab
 docset: aem65
 feature: Adaptive Forms
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 6a158e18-b7d0-45fb-b4fc-4770e66982b4
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '369'
+source-wordcount: '348'
 ht-degree: 0%
 
 ---
-
 
 # Använda SOM-uttryck i adaptiva former{#using-som-expressions-in-adaptive-forms}
 
@@ -48,4 +47,4 @@ I paneler kan du komma åt funktionen från panelens verktygsfält. Funktionen u
 
 Extrahera SOM-uttryck med panelens verktygsfält
 
-Vissa API:er i [GuideBridge](https://helpx.adobe.com/aem-forms/6/javascript-api/GuideBridge.html) använder SOM-uttrycket för ett element. Om du till exempel vill fokusera på ett visst fält i en adaptiv form skickar du motsvarande SOM-uttryck till `getFocus`API i `guideBridge`.
+Vissa API:er listas i [GuideBridge](https://helpx.adobe.com/aem-forms/6/javascript-api/GuideBridge.html) använder SOM-uttrycket för ett element. Om du till exempel vill ge fokus till ett visst fält i en adaptiv form skickar du motsvarande SOM-uttryck till `getFocus`API in `guideBridge`.

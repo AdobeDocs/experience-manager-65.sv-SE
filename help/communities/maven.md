@@ -1,6 +1,6 @@
 ---
 title: Använda Maven for Communities
-seo-title: Använda Maven for Communities
+seo-title: Using Maven for Communities
 description: AEM Uber API jar
 seo-description: AEM Uber API jar
 uuid: ea37a89a-db6c-4018-8ab9-f5717e6c0421
@@ -9,16 +9,15 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: a726c904-aadd-4678-be84-9e05808ab8be
-translation-type: tm+mt
-source-git-commit: 5e7cc6ab82ba450b9be7c97266ec4c81b18fe3d2
+exl-id: 3df90511-e43e-442b-bf73-44c22c1886b7
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '117'
+source-wordcount: '109'
 ht-degree: 0%
 
 ---
 
-
-# Använda Maven för Communities {#using-maven-for-communities}
+# Använda Maven for Communities {#using-maven-for-communities}
 
 ## Översikt {#overview}
 
@@ -28,7 +27,7 @@ Detta avsnitt i AEM Communities-dokumentationen innehåller även:
 
 Det finns bara en&quot;uber&quot;-artefakt som ersätter enskilda artefakter:
 
-* AEM [Uber API jar](../../help/sites-developing/ht-projects-maven.md#what-is-the-uberjar)
+* AEM [Uber API-behållare](../../help/sites-developing/ht-projects-maven.md#what-is-the-uberjar)
 
 >[!NOTE]
 >
@@ -36,9 +35,9 @@ Det finns bara en&quot;uber&quot;-artefakt som ersätter enskilda artefakter:
 >
 >Vi rekommenderar att du håller dig uppdaterad med den senaste versionen av Communities.
 >
->I avsnittet [Senaste releaser](deploy-communities.md#latest-releases) kan du identifiera den senaste versionen.
+>Se [Senaste releaser](deploy-communities.md#latest-releases) för att identifiera den senaste versionen.
 
-## Maven Dependency Example {#maven-dependency-example}
+## Exempel på Maven Dependency {#maven-dependency-example}
 
 ```xml
 <dependency>
@@ -51,7 +50,7 @@ Det finns bara en&quot;uber&quot;-artefakt som ersätter enskilda artefakter:
 
 >[!NOTE]
 >
->Se [AEM Uber jar-databasen](https://mvnrepository.com/artifact/com.adobe.aem/uber-jar) för att identifiera den senaste Uber jar-artefakten.
+>Se [AEM Uber jar-databas](https://mvnrepository.com/artifact/com.adobe.aem/uber-jar) för att identifiera den senaste Uber jar-artefakten.
 
 <!--
 There are now two "uber" artifacts that replace individual artifacts:

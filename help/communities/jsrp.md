@@ -1,8 +1,8 @@
 ---
 title: JSRP - JCR-lagringsresursprovider
-seo-title: JSRP - JCR-lagringsresursprovider
+seo-title: JSRP - JCR Storage Resource Provider
 description: JSRP passar oftast bäst för demonstrations- och utvecklingsmiljöer med en publiceringsinstans och en författarinstans
-seo-description: JSRP passar oftast bäst för demonstrations- och utvecklingsmiljöer med en publiceringsinstans och en författarinstans
+seo-description: JSRP is generally best suited for demonstration or development environments of one publish instance and one author instance
 uuid: 358a43c1-4137-4300-8443-c0d7166968ad
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -13,7 +13,7 @@ role: Admin
 exl-id: 873e013c-a2da-4b37-b0e3-56bdf240004a
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '444'
+source-wordcount: '421'
 ht-degree: 1%
 
 ---
@@ -34,7 +34,7 @@ Se även [Egenskaper för SRP-alternativ](working-with-srp.md#characteristics-of
 
 Som standard är JSRP lagringsalternativet för UGC.
 
-Med konsolen [Lagringskonfiguration](srp-config.md) kan du välja standardlagringskonfiguration, som identifierar vilken implementering av SRP som ska användas.
+The [Konsol för lagringskonfiguration](srp-config.md) gör det möjligt att välja standardlagringskonfiguration, som identifierar vilken implementering av SRP som ska användas.
 
 För att nå konsolen Lagringskonfiguration i redigeringsmiljön
 
@@ -59,7 +59,7 @@ JSRP är standardkonfigurationen, och för att säkerställa att den identiska k
 
 ## Hantera användardata {#managing-user-data}
 
-Mer information om *användare*, *användarprofiler* och *användargrupper*, som ofta anges i publiceringsmiljön, finns på:
+För information om *användare*, *användarprofiler* och *användargrupper*, som ofta används i publiceringsmiljön, går till:
 
 * [Användarsynkronisering](sync.md)
 * [Hantera användare och användargrupper](users.md)
@@ -74,8 +74,8 @@ Gå till konsolen för lagringskonfiguration eller kontrollera den AEM databasen
 
 * I JCR, om [/conf/global/settings/community](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community)
 
-   * Innehåller ingen [srpc](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community/srpc)-nod, vilket betyder att lagringsprovidern är JSRP.
-   * Om srpc-noden finns och innehåller noden [defaultconfiguration](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community/srpc/defaultconfiguration), ska standardkonfigurationens egenskaper definiera JSRP som standardprovider.
+   * Innehåller inte [srpc](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community/srpc) -nod betyder det att lagringsprovidern är JSRP.
+   * Om srpc-noden finns och innehåller nod [defaultconfiguration](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community/srpc/defaultconfiguration)ska standardkonfigurationens egenskaper definiera JSRP som standardprovider.
 
 ### UGC är inte synlig på författarinstans {#ugc-not-visible-on-author-instance}
 
@@ -83,7 +83,7 @@ Det här är inte något fel. En egenskap hos JSRP är att communityinnehåll so
 
 ### UGC är inte synlig vid publiceringsinstans {#ugc-not-visible-on-publish-instance}
 
-Om en enskild publiceringsinstans eller ett publiceringskluster distribueras följer du instruktionerna för [UGC är inte synlig i JCR](#ugc-not-visible-in-jcr).
+Om en publiceringsinstans eller ett publiceringskluster distribueras följer du instruktionerna för [UGC är inte synlig i JCR](#ugc-not-visible-in-jcr).
 
 Om en publiceringsgrupp distribueras är egenskapen för JSRP att communityinnehåll bara visas på den publiceringsinstans som det publicerades i.
 

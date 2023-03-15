@@ -104,7 +104,7 @@ Klicka på den nedrullningsbara menyn i det övre högra hörnet av en ruta för
 
 Klicka på ellipsknappen längst ned till höger i en ruta för att öppna rutans data i dess associerade konsol.
 
-### Resurser {#assets}
+### Assets {#assets}
 
 I **Resurser** kan du samla alla resurser som du använder för ett visst projekt.
 
@@ -187,7 +187,7 @@ Beroende på vilket projekt du skapar finns det olika arbetsflöden tillgänglig
 
 Dessa beskrivs i [Arbeta med projektarbetsflöden.](/help/sites-authoring/projects-with-workflows.md)
 
-### Startar {#launches}
+### Launches {#launches}
 
 The **Startar** visas alla starter som har begärts med en [Begär startarbetsflöde.](/help/sites-authoring/projects-with-workflows.md)
 

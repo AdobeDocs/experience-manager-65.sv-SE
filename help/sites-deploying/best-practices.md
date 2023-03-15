@@ -1,24 +1,23 @@
 ---
 title: Distribuera bästa praxis
-seo-title: Distribuera bästa praxis
+seo-title: Deploying Best Practices
 description: Driftsätta och underhålla bästa praxis.
-seo-description: Driftsätta och underhålla bästa praxis.
+seo-description: Deploying and maintaining best practices.
 uuid: 4546ed2c-43d5-40f3-874f-567b324e78c2
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 discoiquuid: 4b5c0677-c630-4fae-867e-4f4583ac8507
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 4cbc0a30-d5f6-40ff-b7f6-8d64762e1970
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '438'
+source-wordcount: '430'
 ht-degree: 0%
 
 ---
 
-
-# Distribuera metodtips{#deploying-best-practices}
+# Distribuera bästa praxis{#deploying-best-practices}
 
 Bästa tillvägagångssätt beskriver hur ni driftsätter eller upprätthåller AEM på det mest effektiva och effektiva sättet. Den här växande listan med ämnen innehåller en mängd olika områden i AEM.
 
@@ -39,7 +38,7 @@ Specifika dokument beskrivs och länkas till i de tabeller som följer.
 
 ## OAK {#oak}
 
-[](/help/sites-deploying/platform.md) Oakis är en skalbar och kraftfull hierarkisk databas för innehåll som utgör grunden för AEM.
+[Oak](/help/sites-deploying/platform.md) är ett skalbart och prestandabaserat hierarkiskt innehållslager som utgör grunden för AEM.
 
 <table>
  <tbody>
@@ -75,11 +74,11 @@ Specifika dokument beskrivs och länkas till i de tabeller som följer.
 
 AEM Communities förenklar framtagning och hantering av lokala communityn. Bästa tillvägagångssätt för AEM Communities beskrivs här:
 
-[Community Content Store](/help/communities/working-with-srp.md)  - Diskuterar den nya funktionen för delad lagring av användargenererat innehåll (UGC) och överväganden för val av underliggande  [topologi](/help/communities/topologies.md).
+[Community Content Store](/help/communities/working-with-srp.md) - Diskutera den nya funktionen för delad lagring för användargenererat innehåll (UGC) och överväganden för att välja underliggande [topologi](/help/communities/topologies.md).
 
-[Rekommenderade distributioner för communities](/help/sites-deploying/recommended-deploys.md#considerations-for-aem-communities)  - Beskriver de rekommenderade distributionerna för Communities. |
+[Rekommenderade distributioner för communities](/help/sites-deploying/recommended-deploys.md#considerations-for-aem-communities) - Beskriver de rekommenderade distributionerna för Communities. |
 
-## Gränssnitt {#ui}
+## UI {#ui}
 
 De bästa sätten att använda användargränssnittet beskrivs här:
 
@@ -96,7 +95,7 @@ De bästa metoderna för prestandaanvändning listas här:
   <tr>
    <td>Bästa metoder för kvalitetssäkring</td>
    <td><a href="/help/sites-deploying/configuring-performance.md#best-practices-for-quality-assurance">Bästa metoder för kvalitetssäkring</a></td>
-   <td>En standardiserad översikt över problem med att definiera ett testkoncept specifikt för prestandatester i din <em>publicerings</em>-miljö. Detta är främst av intresse för kvalitetstekniker, projektledare och systemadministratörer.</td>
+   <td>En standardiserad översikt över problemen med att definiera ett testkoncept specifikt för prestandatester på dina <em>publicera</em> miljö. Detta är främst av intresse för kvalitetstekniker, projektledare och systemadministratörer.</td>
   </tr>
   <tr>
    <td>Använda Dispatcher med ett CDN</td>
@@ -115,4 +114,3 @@ De bästa metoderna för prestandaanvändning listas här:
   </tr>
  </tbody>
 </table>
-

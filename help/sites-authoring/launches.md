@@ -1,8 +1,8 @@
 ---
 title: Launches
-seo-title: Startar
+seo-title: Launches
 description: Med lanseringar kan du effektivt utveckla innehåll för en framtida release. De gör att du kan göra ändringar redo för framtida publicering, samtidigt som du behåller dina aktuella sidor
-seo-description: Med lanseringar kan du effektivt utveckla innehåll för en framtida release. De gör att du kan göra ändringar redo för framtida publicering, samtidigt som du behåller dina aktuella sidor
+seo-description: Launches enable you to efficiently develop content for a future release. They allow you to make changes ready for future publication, while maintaining your current pages
 uuid: 4bbd9865-735d-4232-b69c-b64193ac5d83
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,10 +11,9 @@ topic-tags: site-features
 discoiquuid: e145afd8-7391-47aa-b389-16fb303749d0
 docset: aem65
 exl-id: b25d3f8e-5687-49ab-95e1-19ec75c87f6e
-translation-type: tm+mt
 source-git-commit: 47870c05d231bacc424cfbf308f78bc1eaeb907b
 workflow-type: tm+mt
-source-wordcount: '854'
+source-wordcount: '827'
 ht-degree: 6%
 
 ---
@@ -37,7 +36,7 @@ Startar kan också vara:
 * Skapat för flera rotgrenar. Du kan skapa en start för hela webbplatsen (och göra ändringarna där), men det kan vara opraktiskt eftersom hela webbplatsen behöver kopieras. När det gäller hundratals eller till och med tusentals sidor påverkas systemkraven och prestandan av både kopieringsåtgärden och senare jämförelserna som krävs för kampanjuppgifterna.
 * Kapslad (en programstart inom en programstart) för att ge dig möjlighet att skapa en programstart från en befintlig programstart så att författare kan utnyttja redan gjorda ändringar i stället för att behöva göra samma ändringar flera gånger för varje programstart.
 
-I det här avsnittet beskrivs hur du skapar, redigerar och befordrar (och om det behövs [ta bort](/help/sites-authoring/launches-creating.md#deleting-a-launch)) startsidor från webbplatskonsolen eller [startkonsolen](#the-launches-console):
+I det här avsnittet beskrivs hur du skapar, redigerar och befordrar (och om det behövs) [delete](/help/sites-authoring/launches-creating.md#deleting-a-launch)) starta sidor från Sites-konsolen eller [startkonsolen](#the-launches-console):
 
 * [Skapa Launches](/help/sites-authoring/launches-creating.md)
 * [Redigera Launches](/help/sites-authoring/launches-editing.md)
@@ -67,15 +66,15 @@ Med Launes kan du:
 
    * Manuellt:
 
-      * Befordra startinnehållet tillbaka till **Target** (källsidor) när det är klart för publicering.
+      * Befordra ert startmaterial tillbaka till **Mål** (källsidor) när den är klar att publiceras.
       * Publicera innehållet från källsidorna (efter att ha befordrat dem).
       * Befordra antingen alla sidor eller endast ändrade sidor.
    * Automatiskt - det innebär följande:
 
-      * Fältet **Starta**(**Live**) **datum**: detta kan anges när du skapar eller redigerar en programstart.
+      * The **Starta**(**Live**) **datum** fält: detta kan anges när du skapar eller redigerar en programstart.
 
-      * Flaggan **Production Ready**: detta kan bara anges när du redigerar en programstart.
-      * Om flaggan **Production Ready** är inställd befordras starten automatiskt till produktionssidorna på den angivna **Launch**(**Live**) **date**. Efter kampanjen publiceras produktionssidorna automatiskt.\
+      * The **Produktionsklar** flagga: detta kan bara anges när du redigerar en programstart.
+      * Om **Produktionsklar** -flaggan är inställd kommer lanseringen automatiskt att befordras till produktionssidorna på den angivna **Starta**(**Live**) **datum**. Efter kampanjen publiceras produktionssidorna automatiskt.\
          Om inget datum har angetts har flaggan ingen effekt.
 
 
@@ -86,10 +85,10 @@ Med Launes kan du:
 
    ![chlimage_1-112](assets/chlimage_1-112.png)
 
-* [Skapa en kapslad programstart](/help/sites-authoring/launches-creating.md#creating-a-nested-launch)  - en programstart i en programstart:
+* [Skapa en kapslad start](/help/sites-authoring/launches-creating.md#creating-a-nested-launch) - en programstart inom en programstart:
 
    * Källan är en befintlig start.
-   * Du kan [befordra en kapslad start](/help/sites-authoring/launches-promoting.md#promoting-a-nested-launch) till vilket mål som helst; detta kan vara en överordnad start eller källsidorna på den översta nivån (Produktion).
+   * Du kan [befordra en kapslad lansering](/help/sites-authoring/launches-promoting.md#promoting-a-nested-launch) till vilket mål som helst, detta kan vara en överordnad start eller källsidorna på den översta nivån (Produktion).
 
    ![chlimage_1-113](assets/chlimage_1-113.png)
 
@@ -99,7 +98,7 @@ Med Launes kan du:
 
 >[!NOTE]
 >
->Du måste ha åtkomsträttigheter till `/content/launches` för att kunna skapa och redigera starter, precis som med standardgruppen `content-authors`.
+>Att skapa och redigera starter kräver åtkomsträttigheter till `/content/launches` - som med standardgruppen `content-authors`.
 >
 >Kontakta systemadministratören om du får problem.
 
@@ -110,19 +109,19 @@ Med Launes kan du:
 >När sidan befordras återspeglas alla innehållsändringar, men komponentens placering ändras inte.
 
 
-### Startar konsolen {#the-launches-console}
+### Startkonsolen {#the-launches-console}
 
 På startkonsolen får du en översikt över dina starter och kan vidta åtgärder för dem som visas. Konsolen kan nås av:
 
-* **Verktyg**-konsolen: **Verktyg**, **Platser**, **Startar**.
+* The **verktyg** Konsol: **verktyg**, **Webbplatser**, **Startar**.
 
 * Eller direkt med [https://localhost:4502/libs/launches/content/launches.html](https://localhost:4502/libs/launches/content/launches.html)
 
 ## Startar i referenser (platskonsolen) {#launches-in-references-sites-console}
 
-1. Gå till startkällan i konsolen **Platser**.
-1. Öppna **Referenser**-listen och välj källsidan.
-1. Välj **Startar**. Befintliga starter visas:
+1. I **Webbplatser** navigera till startkällan (startfilerna).
+1. Öppna **Referenser** och välj källsidan.
+1. Välj **Startar**, kommer de befintliga starterna att listas:
 
    ![screen-shot_2019-03-05at121901-1](assets/screen-shot_2019-03-05at121901-1.png)
 

@@ -1,22 +1,21 @@
 ---
 title: Testar mobilappar
-seo-title: Testar mobilappar
+seo-title: Testing Mobile Apps
 description: Testar mobilappar
-seo-description: 'null'
+seo-description: null
 uuid: 3b402d34-5cab-4280-b8b9-88ad9f8fc5e4
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing
 content-type: reference
 discoiquuid: 5a98e1bd-f5c1-4f2f-ac02-dbd005dc1de7
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: e10e1904-7016-4eb0-9408-36297285f378
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1029'
+source-wordcount: '1025'
 ht-degree: 0%
 
 ---
-
 
 # Testar mobilappar{#testing-mobile-apps}
 
@@ -24,7 +23,7 @@ ht-degree: 0%
 >
 >Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (t.ex. Reagera). [Läs mer](/help/sites-developing/spa-overview.md).
 
-Med tanke på det stora utbudet av enheter på marknaden och de enheter som släpps har testningen av apparna blivit oerhört viktig. Det här är ett område där funktionalitet och användbarhet kan ge låga granskningar i en appbutik, men ett enda fel kan leda till att appen avinstalleras. Ni måste vara noga med testplanerna och kvalitetssäkring. Följande länk täcker många av de ämnen som behöver tas upp i allmänhet, t.ex. hur du identifierar din miljö, definierar testfall, testtyper, antaganden, kundengagemang osv. De verktyg som är till hjälp vid testningen beskrivs också. Interna verktyg, som [Hobbes](/help/sites-developing/hobbes.md), kan vara till hjälp vid webbaserad UI-testning. [Tough ](/help/sites-developing/tough-day.md) Daycan stress your instances with a simulated load. Om din testmiljö redan har erfarenhet av tredjepartsverktyg, som Selenium, kan även dessa användas.
+Med tanke på det stora utbudet av enheter på marknaden och de enheter som släpps har testningen av apparna blivit oerhört viktig. Det här är ett område där funktionalitet och användbarhet kan ge låga granskningar i en appbutik, men ett enda fel kan leda till att appen avinstalleras. Ni måste vara noga med testplanerna och kvalitetssäkring. Följande länk täcker många av de ämnen som behöver tas upp i allmänhet, t.ex. hur du identifierar din miljö, definierar testfall, testtyper, antaganden, kundengagemang osv. De verktyg som är till hjälp vid testningen beskrivs också. Interna verktyg, som [Hobbes](/help/sites-developing/hobbes.md)kan hjälpa till med webbaserad UI-testning. [Tålig dag](/help/sites-developing/tough-day.md) kan stressa instanserna med en simulerad belastning. Om din testmiljö redan har erfarenhet av tredjepartsverktyg, som Selenium, kan även dessa användas.
 
 När du utvecklar en mobilapp finns det många nya problem som är specifika för enheter som måste hanteras tillsammans med traditionella testningar.
 
@@ -45,9 +44,9 @@ Viss grad av automatiserad testning bör utföras för att täcka olika skärmst
 
 ![chlimage_1](assets/chlimage_1.jpeg)
 
-## Manuell testning {#manual-testing}
+## Manuell provning {#manual-testing}
 
-Utöver automatiserad testning bör din app genomgå en serie manuella tester. Kunder som kör appen på en riktig enhet kan inte dupliceras av ett skript. Här har du också många alternativ. Du kan använda en plattform, till exempel HockeyApp, för att definiera vem som har åtkomst till och samla in feedback. Eller så kan du lägga ut hela processen på en tjänst som UTest, ElusiveStars eller Testin. Om du har en grupp interna testare, men saknar enhetsvarianter, finns det molntjänster där du kan utföra manuell testning på deras enhetspool. En sådan tjänst är SauceLabs. Du kan även fjärrbygga appar till PhoneGap Enterprise och installera dem på lokala enheter som en nivå av accepttestning eller degradering. På [PhoneGap](https://phonegap.com/)-webbplatsen finns de senaste funktionerna och dokumentationen. Oavsett vilken metod man väljer bör manuell provning utföras.
+Utöver automatiserad testning bör din app genomgå en serie manuella tester. Kunder som kör appen på en riktig enhet kan inte dupliceras av ett skript. Här har du också många alternativ. Du kan använda en plattform, till exempel HockeyApp, för att definiera vem som har åtkomst till och samla in feedback. Eller så kan du lägga ut hela processen på en tjänst som UTest, ElusiveStars eller Testin. Om du har en grupp interna testare, men saknar enhetsvarianter, finns det molntjänster där du kan utföra manuell testning på deras enhetspool. En sådan tjänst är SauceLabs. Du kan även fjärrbygga appar till PhoneGap Enterprise och installera dem på lokala enheter som en nivå av accepttestning eller degradering. Se [PhoneGap](https://phonegap.com/) på webbplatsen för att få tillgång till deras senaste funktioner och dokumentation. Oavsett vilken metod man väljer bör manuell provning utföras.
 
 * träffade ett stort antal testare,
 * testa mot en stor pool av enheter (helst verkliga enheter, men simulatorer/emulatorer om verkliga enheter inte är tillgängliga),

@@ -1,21 +1,20 @@
 ---
 title: Innehållstjänster
-seo-title: Innehållstjänster
+seo-title: Content Services
 description: Innehållstjänster
-seo-description: 'null'
+seo-description: null
 uuid: 7bd09c91-3931-400b-bdfc-b064b9ca9668
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 discoiquuid: 6a7e5472-cb57-4c78-b183-7c6dcac11a4e
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 955ffb1c-4fa9-43bb-8e5b-2df7f2d17951
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
-source-wordcount: '302'
+source-wordcount: '299'
 ht-degree: 0%
 
 ---
-
 
 # Innehållstjänster{#content-services}
 
@@ -35,7 +34,7 @@ Content Services introducerar flera nya AEM som gör att en utvecklare kan komma
 
 Dessa konstruktioner är nödvändiga för att bibehålla flexibiliteten och möjliggöra framtida expansion genom att tillhandahålla ett abstraktionslager mellan det AEM hanterade innehållet och de mobilappar som konsumerar innehållet. Detta gör att AEM Content Services kan fungera som ett abstraktionslager mellan det inbyggda programmets innehållskrav och AEM innehållsdatabas.
 
-Content Services kan leverera innehållet som resurser, paketerad HTML (HTML/CSS/JS) eller som kanaloberoende innehåll.
+Content Services kan leverera innehållet som resurser, paketerat HTML (HTML/CSS/JS) eller som kanaloberoende innehåll.
 
 >[!CAUTION]
 >
@@ -43,7 +42,7 @@ Content Services kan leverera innehållet som resurser, paketerad HTML (HTML/CSS
 >
 >Innan du börjar använda Content Services måste du aktivera flaggan Content Services. Om du vill kunna skapa och hantera modeller i din app måste du aktivera datamodeller i Configuration Browser.
 >
->Mer information finns i **[Administrera innehållstjänster](/help/mobile/developing-content-services.md)** och dokumentationen för [Configuration Browser](/help/sites-administering/configurations.md).
+>Se **[Administrera innehållstjänster](/help/mobile/developing-content-services.md)** och [Konfigurationsläsaren](/help/sites-administering/configurations.md) mer information.
 
 ![chlimage_1-143](assets/chlimage_1-143.png)
 

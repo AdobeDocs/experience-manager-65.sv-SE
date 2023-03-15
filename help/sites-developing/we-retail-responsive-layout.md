@@ -1,26 +1,25 @@
 ---
 title: Provar Responsiv layout i We.Retail
-seo-title: Provar Responsiv layout i We.Retail
+seo-title: Trying out Responsive Layout in We.Retail
 description: Provar Responsiv layout i We.Retail
-seo-description: 'null'
+seo-description: null
 uuid: d9613655-f54e-458f-9175-d07bb868f58b
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 discoiquuid: 2d374e88-ea09-43d5-986c-5d77b0705b93
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 6df5fb10-a7f1-4d5d-ac00-b4be3d5d3d18
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '254'
+source-wordcount: '247'
 ht-degree: 1%
 
 ---
 
-
 # Provar Responsiv layout i We.Retail{#trying-out-responsive-layout-in-we-retail}
 
-Alla webbsidor använder komponenten Layoutbehållare för att implementera responsiv design. Layoutbehållaren har ett styckesystem som gör att du kan placera komponenter i ett responsivt rutnät. Rutnätet kan ändra layouten beroende på enhetens/fönstrets storlek och format. Komponenten används tillsammans med läget **Layout** i sidredigeraren, som gör att du kan skapa och redigera den responsiva layouten beroende på enhet.
+Alla webbsidor använder komponenten Layoutbehållare för att implementera responsiv design. Layoutbehållaren har ett styckesystem som gör att du kan placera komponenter i ett responsivt rutnät. Rutnätet kan ändra layouten beroende på enhetens/fönstrets storlek och format. Komponenten används tillsammans med **Layout** i sidredigeraren, där du kan skapa och redigera din responsiva layout beroende på enhet.
 
 ## Prova {#trying-it-out}
 
@@ -28,7 +27,7 @@ Alla webbsidor använder komponenten Layoutbehållare för att implementera resp
 
    http://localhost:4502/editor.html/content/we-retail/language-masters/en/experience/arctic-surfing-in-lofoten.html
 
-1. Växla till **Förhandsgranska** för att se sidan som den skulle återges för en besökare på webbplatsen. Bläddra ned till innehållet i artikeln *Aloha-sprit i Norge*.
+1. Växla till **Förhandsgranska** för att se sidan som den skulle återges för en besökare på webbplatsen. Bläddra nedåt till artikelns innehåll *Aloha-sprit i Norge*.
 
    ![chlimage_1-178](assets/chlimage_1-178.png)
 
@@ -48,4 +47,4 @@ Alla webbsidor använder komponenten Layoutbehållare för att implementera resp
 
 ## Ytterligare information {#further-information}
 
-Mer information finns i redigeringsdokumentet [Responsiv layout](/help/sites-authoring/responsive-layout.md) eller administratörsdokumentet [Configuring Layout Container and Layout Mode](/help/sites-administering/configuring-responsive-layout.md) för fullständig teknisk information.
+Mer information finns i redigeringsdokumentet [Responsiv layout](/help/sites-authoring/responsive-layout.md) eller administratörsdokumentet [Konfigurera layoutbehållare och layoutläge](/help/sites-administering/configuring-responsive-layout.md) för fullständig teknisk information.

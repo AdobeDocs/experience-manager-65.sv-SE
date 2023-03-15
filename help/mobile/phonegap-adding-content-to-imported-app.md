@@ -1,8 +1,8 @@
 ---
 title: Är din hybridapp redo för AEM Mobile?
-seo-title: Är din hybridapp redo för AEM Mobile?
+seo-title: Is your hybrid app ready for AEM Mobile?
 description: Följ den här sidan om du vill veta mer om hrybridappar. En app i AEM delas vanligtvis in i två delar. "shell" och "content" och den här sidan ger mer information om dessa ämnen.
-seo-description: Följ den här sidan om du vill veta mer om hrybridappar. En app i AEM delas vanligtvis in i två delar. "shell" och "content" och den här sidan ger mer information om dessa ämnen.
+seo-description: Follow this page to learn about hrybrid apps. An app in AEM is commonly divided into two parts. The 'shell' and 'content' and this page provides more insight on these topics.
 uuid: cbcce3fa-9100-46ea-9f24-931b42666709
 contentOwner: User
 content-type: reference
@@ -10,16 +10,15 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: b7fd7954-f2a5-402d-b259-e18b5a618be9
 pagetitle: Is your hybrid app ready for AEM Mobile?
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 4625890c-2b76-4c78-88e8-23741bc09f5b
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '780'
+source-wordcount: '741'
 ht-degree: 0%
 
 ---
 
-
-# Är hybridappen klar för AEM Mobile?{#is-your-hybrid-app-ready-for-aem-mobile}
+# Är din hybridapp redo för AEM Mobile?{#is-your-hybrid-app-ready-for-aem-mobile}
 
 >[!NOTE]
 >

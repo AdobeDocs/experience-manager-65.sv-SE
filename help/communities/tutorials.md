@@ -1,26 +1,25 @@
 ---
-title: Tutorials
+title: Självstudiekurser
 seo-title: Tutorials
 description: Exempel på hur du kan lära dig mer och arbeta med AEM Communities ramverk för sociala komponenter (SCF)
-seo-description: Exempel på hur du kan lära dig mer och arbeta med AEM Communities ramverk för sociala komponenter (SCF)
+seo-description: Examples to help in learning and working with AEM Communities social component framework (SCF)
 uuid: c99a9d56-9630-4a79-bcd7-a15f01d6c13d
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: a420b0b1-65f4-4103-a7c9-263657c7870f
-translation-type: tm+mt
-source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
+exl-id: 061d3b1b-7ceb-4e57-8183-2062a76173f1
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '264'
+source-wordcount: '249'
 ht-degree: 0%
 
 ---
 
+# Självstudiekurser {#tutorials}
 
-# Tutorials {#tutorials}
-
-Det här är exempel som hjälper dig att lära dig och arbeta med AEM 6.1 Communities [ramverk för sociala komponenter (SCF)](scf.md).
+Det här är exempel på hur du kan lära dig mer och arbeta med AEM 6.1 Communities [ramverk för sociala komponenter (SCF)](scf.md).
 
 ## Anpassning på klientsidan {#client-side-customization}
 
@@ -38,7 +37,7 @@ Se även:
 
 Se även [SCF-anpassning på serversidan](server-customize.md).
 
-Exempelkod finns i [Adobe Marketing Cloud GitHub](https://github.com/Adobe-Marketing-Cloud)-databasen:
+Exempelkod finns i [Adobe Marketing Cloud GitHub](https://github.com/Adobe-Marketing-Cloud) databas:
 
 * [Anpassa SCF-komponentexempel](https://github.com/Adobe-Marketing-Cloud/aem-scf-sample-components-customize)
 
@@ -60,13 +59,13 @@ Exempelkod finns i [Adobe Marketing Cloud GitHub](https://github.com/Adobe-Marke
 
 * [Skapa en exempelsida](create-sample-page.md)
 
-## Demonstrationsanvändare {#demo-users}
+## Demo-användare {#demo-users}
 
-Paketet med exempel på Geometrixx innehåller demoanvändare. Det är ofta en skillnad i upplevelse mellan att vara besökare (inte inloggad) eller medlem (inloggad) och, så länge som exempelpaketen är installerade, kan du använda dessa användare för att simulera ett inloggat läge när du undersöker med [Community Components guide](components-guide.md).
+Paketet med exempel på Geometrixx innehåller demoanvändare. Det är ofta en skillnad i upplevelse mellan att vara besökare (inte inloggad) eller medlem (inloggad) och, så länge som exempelpaketen är installerade, kan du använda dessa användare för att simulera ett inloggat läge när du utforskar med [Community Components Guide](components-guide.md).
 
-Om du vill visa en fullständig lista över demoanvändare går du till **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Security > Users]**. Eller använd det klassiska användargränssnittet [säkerhetskonsolen](http://localhost:4502/useradmin) för att hantera användare och grupper.
+Om du vill visa en fullständig lista över demoanvändare går du till **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Security > Users]**. Eller använd det klassiska användargränssnittet [säkerhetskonsol](http://localhost:4502/useradmin) för att hantera användare och grupper.
 
-Om en [community-plats har skapats](getting-started.md) är det möjligt att tilldela demoanvändare till dess [community-användargrupper](users.md).
+Om en [communityplatsen har skapats](getting-started.md)kan du tilldela demoanvändare till [användargrupper](users.md).
 
 ***användar-ID* / *lösenord***:
 

@@ -4,11 +4,11 @@ product: adobe experience manager
 audience: end-user
 user-guide-title: AEM 6.5 Användarhandbok
 user-guide-description: Översikt över alla nödvändiga resurser för att förstå, installera, hantera och använda AEM 6.5
-feature: Versionsinformation
+feature: Release Information
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '62'
+source-wordcount: '60'
 ht-degree: 1%
 
 ---

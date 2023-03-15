@@ -1,22 +1,21 @@
 ---
 title: Acrobat Reader DC-tillägg ServiceJava API - snabbstart (SOAP)
-seo-title: Acrobat Reader DC-tillägg ServiceJava API - snabbstart (SOAP)
-description: Använd tjänsten Acrobat Reader DC Extensions för att lägga in användarrättigheter i ett PDF-dokument, ta bort användningsrättigheter från PDF-dokument och hämta information om de referenser som används för att lägga in användarrättigheter i ett rättighetsaktiverat PDF-dokument med namnet LoanUsageRights.pdf.
-seo-description: Använd tjänsten Acrobat Reader DC Extensions för att lägga in användarrättigheter i ett PDF-dokument, ta bort användningsrättigheter från PDF-dokument och hämta information om de referenser som används för att lägga in användarrättigheter i ett rättighetsaktiverat PDF-dokument med namnet LoanUsageRights.pdf.
+seo-title: Acrobat Reader DC extensions ServiceJava API Quick Start(SOAP)
+description: Använd tjänsten Acrobat Reader DC Extensions för att lägga in användarrättigheter i ett PDF-dokument, ta bort användningsrättigheter från PDF-dokument och hämta information om de autentiseringsuppgifter som används för att lägga in användarrättigheter i ett rättighetsaktiverat PDF-dokument med namnet LoanUsageRights.pdf.
+seo-description: Use the  Acrobat Reader DC Extensions service to apply usage rights to a PDF document, remove usage rights from PDF documents, and retrieve  information about the credential that is used to apply usage-rights to a rights-enabled PDF document named LoanUsageRights.pdf.
 uuid: 8e72ca94-a8c1-43aa-9845-a0da597051c5
 contentOwner: admin
 content-type: reference
 topic-tags: develop
 discoiquuid: 31a9bfc6-462d-4535-888f-31026b8fa674
 role: Developer
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 82f0b6c1-ca0c-48c7-b7f6-b54704ac0830
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '361'
+source-wordcount: '311'
 ht-degree: 0%
 
 ---
-
 
 # Acrobat Reader DC-tillägg ServiceJava API - snabbstart (SOAP) {#acrobat-reader-dc-extensions-servicejava-api-quick-start-soap}
 
@@ -36,7 +35,7 @@ AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutning
 
 ## Snabbstart (SOAP-läge):Tillämpa användningsrättigheter med Java API {#quick-start-soap-mode-applying-usage-rights-using-the-java-api}
 
-I följande Java-kodexempel tillämpas användarrättigheter på ett PDF-dokument med namnet *Loan.pdf*. Det rättighetsaktiverade PDF-dokumentet sparas som en PDF-fil med namnet *LoanUsageRights.pdf*. Följande användarrättigheter gäller för det här PDF-dokumentet: `enabledComments`, `enabledFormFillIn` och `enabledDigitalSignatures`. (Se [Tillämpa användningsrättigheter på PDF-dokument](/help/forms/developing/assigning-usage-rights.md).)
+I följande Java-kodexempel tillämpas användarrättigheter på ett PDF-dokument med namnet *Loan.pdf*. Det rättighetsaktiverade PDF-dokumentet sparas som en PDF-fil med namnet *LoanUsageRights.pdf*. Följande användarrättigheter gäller för det här PDF-dokumentet: `enabledComments`, `enabledFormFillIn`och `enabledDigitalSignatures`. (Se [Använda användningsbehörighet för PDF-dokument](/help/forms/developing/assigning-usage-rights.md).)
 
 
 ```java
@@ -246,9 +245,9 @@ I följande Java-kodexempel tas användarrättigheter bort från ett rättighets
  
 ```
 
-## Snabbstart (SOAP-läge): Hämta inloggningsinformation med Java API {#quick-start-soap-mode-retrieving-credential-information-using-the-java-api}
+## Snabbstart (SOAP-läge): Hämta autentiseringsinformation med Java API {#quick-start-soap-mode-retrieving-credential-information-using-the-java-api}
 
-I följande Java-kodexempel hämtas information om de autentiseringsuppgifter som används för att tillämpa användarrättigheter på ett rättighetsaktiverat PDF-dokument med namnet *LoanUsageRights.pdf*. (Se [Hämta information om autentiseringsuppgifter](/help/forms/developing/assigning-usage-rights.md).)
+I följande Java-kodexempel hämtas information om de autentiseringsuppgifter som används för att tillämpa användarrättigheter på ett PDF-dokument med rättighetsaktiverade rättigheter som heter *LoanUsageRights.pdf*. (Se [Hämtar information om autentiseringsuppgifter](/help/forms/developing/assigning-usage-rights.md).)
 
 ```java
  /* 
@@ -356,4 +355,3 @@ I följande Java-kodexempel hämtas information om de autentiseringsuppgifter so
  } 
  
 ```
-

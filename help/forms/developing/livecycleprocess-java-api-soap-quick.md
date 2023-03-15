@@ -1,8 +1,8 @@
 ---
 title: LiveCycleProcess Java API(SOAP)Snabbstart
-seo-title: LiveCycleProcess Java API(SOAP)Snabbstart
-description: 'Använd snabbstart för LiveCycleProcess Java API (SOAP) för att söka efter processinstanser, pausa processinstanser, starta uppehållna processinstanser, avsluta processinstanser, rensa processdata och hämta statusen för ett jobb. '
-seo-description: Använd snabbstart för LiveCycleProcess Java API (SOAP) för att söka efter processinstanser, pausa processinstanser, starta uppehållna processinstanser, avsluta processinstanser, rensa processdata och hämta statusen för ett jobb.
+seo-title: LiveCycleProcess Java API(SOAP)Quick Start
+description: Använd snabbstart för LiveCycleProcess Java API (SOAP) för att söka efter processinstanser, pausa processinstanser, starta uppehållna processinstanser, avsluta processinstanser, rensa processdata och hämta statusen för ett jobb.
+seo-description: Use the LiveCycleProcess Java API (SOAP) Quick Start to search for process instances, suspend process instances, start suspended process instances, terminate process instances, purge process data, and retrieve the status of a job.
 uuid: ad14fb50-8dd5-44e0-9e48-f0f0334e04d6
 contentOwner: admin
 content-type: reference
@@ -10,18 +10,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 9c17fa2d-0337-4204-822e-dcdafebf0e4d
 role: Developer
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 7b309743-10ea-4d10-adb6-be5ce9f03ce2
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '468'
+source-wordcount: '428'
 ht-degree: 0%
 
 ---
 
+# LiveCycleProcess Java API (SOAP) - snabbstart {#livecycleprocess-java-api-soap-quick-start}
 
-# Snabbstart för LiveCycleProcess Java API (SOAP) {#livecycleprocess-java-api-soap-quick-start}
-
-Java API(SOAP) Quick Start är tillgängligt för processer. En *processinstans* är en förekomst av en specifik process som startades av en anropsmetod som anrops-API:t eller från arbetsytan.
+Java API(SOAP) Quick Start är tillgängligt för processer. A *processinstans* är en förekomst av en specifik process som startades av en anropsmetod som anrops-API:t eller från arbetsytan.
 
 [Snabbstart (SOAP-läge): Söka efter processinstanser med Java API](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-searching-for-process-instances-using-the-java-api)
 
@@ -43,7 +42,7 @@ AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutning
 
 ## Snabbstart (SOAP-läge): Söka efter processinstanser med Java API {#quick-start-soap-mode-searching-for-process-instances-using-the-java-api}
 
-Följande Java-kodexempel söker efter processinstanser som är baserade på processen *MortgageLoan - Fördefinierad*.
+I följande Java-kodexempel söks det efter processinstanser som är baserade på *Lån - fördefinierat* -processen.
 
 ```java
  /*
@@ -251,7 +250,7 @@ I följande Java-kodexempel pausas en processinstans. Om du vill göra uppehåll
  
 ```
 
-## Snabbstart (SOAP-läge): Startar inaktiverade processinstanser med Java API {#quick-start-soap-mode-starting-suspended-process-instances-using-the-java-api}
+## Snabbstart (SOAP-läge): Starta inaktiverade processinstanser med Java API {#quick-start-soap-mode-starting-suspended-process-instances-using-the-java-api}
 
 I följande Java-kodexempel startas en instans av en pausad process.
 
@@ -432,7 +431,7 @@ I följande Java-kodexempel avslutas en processinstans med identifierarvärdet 7
 
 ## Snabbstart (SOAP-läge): Rensa processdata med Java API {#quick-start-soap-mode-purging-process-data-using-the-java-api}
 
-Följande Java-kod rensar data från en process med namnet *SecureDocument*. Ett filter används som anger att data ska rensas för de processinstanser där processvariabeln *inValue* är större än 200.
+Följande Java-kod rensar data från en process med namnet *SecureDocument*. Ett filter används som anger att data ska rensas för de processinstanser där processvariabeln med namnet *inValue* är större än 200.
 
 ```java
  /*
@@ -644,4 +643,3 @@ I följande kodexempel hämtas statusen för 10 AEM Forms-jobb.
  
  
 ```
-

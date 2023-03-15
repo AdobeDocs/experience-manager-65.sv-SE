@@ -455,7 +455,7 @@ JavaScript, FormCalc-egenskaper och metoder som stöds i HTML5-formulär är som
    <td>Inget</td>
   </tr>
   <tr>
-   <td>validera</td>
+   <td>validate</td>
    <td>Objektet validate kontrollerar validering för användartillförd data på ett formulär. Objektet validate kan aktiveras flera gånger under ett formulärs livslängd.</td>
    <td>Inget</td>
   </tr>
@@ -593,7 +593,7 @@ JavaScript, FormCalc-egenskaper och metoder som stöds i HTML5-formulär är som
    <td><strong>Undantag</strong></td>
   </tr>
   <tr>
-   <td>färg</td>
+   <td>color</td>
    <td>Färgegenskaperna definierar en unik fyllningsfärg.</td>
    <td>
     <ul>
@@ -614,7 +614,7 @@ JavaScript, FormCalc-egenskaper och metoder som stöds i HTML5-formulär är som
    <td><strong>Undantag</strong></td>
   </tr>
   <tr>
-   <td>färg</td>
+   <td>color</td>
    <td>Egenskapen color beskriver en unik färg för en linjär övertoningsfyllning i ett formulär.</td>
    <td>
     <ul>
@@ -635,7 +635,7 @@ JavaScript, FormCalc-egenskaper och metoder som stöds i HTML5-formulär är som
    <td><strong>Undantag</strong></td>
   </tr>
   <tr>
-   <td>kant</td>
+   <td>edge</td>
    <td>Objektet edge beskriver en båge, linje eller en sida av en kantlinje eller rektangel.<br /> </td>
    <td>Attribut som färg, ände med mera stöds inte.<br /> </td>
   </tr>
@@ -652,7 +652,7 @@ JavaScript, FormCalc-egenskaper och metoder som stöds i HTML5-formulär är som
    <td><strong>Undantag</strong></td>
   </tr>
   <tr>
-   <td>färg</td>
+   <td>color</td>
    <td>Egenskapen color beskriver en unik färg för mönsterobjektet. </td>
    <td>
     <ul>
@@ -673,7 +673,7 @@ JavaScript, FormCalc-egenskaper och metoder som stöds i HTML5-formulär är som
    <td><strong>Undantag</strong></td>
   </tr>
   <tr>
-   <td>färg</td>
+   <td>color</td>
    <td>Egenskapen color beskriver en unik färg för det radiella objektet</td>
    <td>
     <ul>
@@ -694,7 +694,7 @@ JavaScript, FormCalc-egenskaper och metoder som stöds i HTML5-formulär är som
    <td><strong>Undantag</strong></td>
   </tr>
   <tr>
-   <td>färg</td>
+   <td>color</td>
    <td>Egenskapen color beskriver en unik färg för stöpplingsobjektet.</td>
    <td>
     <ul>
@@ -720,12 +720,12 @@ JavaScript, FormCalc-egenskaper och metoder som stöds i HTML5-formulär är som
    <td> </td>
   </tr>
   <tr>
-   <td>bildtext</td>
+   <td>caption</td>
    <td>Objektet caption beskiver en deskriptiv etikett med ett formulärdesignobjekt.</td>
    <td> </td>
   </tr>
   <tr>
-   <td>närvaro</td>
+   <td>presence</td>
    <td>Anger synligheten hos ett objekt.</td>
    <td> </td>
   </tr>
@@ -752,7 +752,7 @@ JavaScript, FormCalc-egenskaper och metoder som stöds i HTML5-formulär är som
    <td><strong>Undantag</strong></td>
   </tr>
   <tr>
-   <td>färg</td>
+   <td>color</td>
    <td>Egenskapen color beskriver en unik färg för hörnobjektet.</td>
    <td>
     <ul>
@@ -864,7 +864,7 @@ JavaScript, FormCalc-egenskaper och metoder som stöds i HTML5-formulär är som
    <td><strong>Undantag</strong></td>
   </tr>
   <tr>
-   <td>kant</td>
+   <td>edge</td>
    <td>Objektet edge beskriver en båge, linje eller en sida av en kantlinje eller rektangel.<br /> </td>
    <td>Attribut som färg, ände med mera stöds inte.</td>
   </tr>
@@ -948,12 +948,12 @@ JavaScript, FormCalc-egenskaper och metoder som stöds i HTML5-formulär är som
    <td>Inget</td>
   </tr>
   <tr>
-   <td>bildtext</td>
+   <td>caption</td>
    <td>Objektet caption beskiver en deskriptiv etikett med ett formulärdesignobjekt.<br /> </td>
    <td>Inget</td>
   </tr>
   <tr>
-   <td>validera</td>
+   <td>validate</td>
    <td>Objektet validate kontrollerar validering för användartillförd data på ett formulär. Objektet validate kan aktiveras flera gånger under ett formulärs livslängd.</td>
    <td>Inget</td>
   </tr>
@@ -963,12 +963,12 @@ JavaScript, FormCalc-egenskaper och metoder som stöds i HTML5-formulär är som
    <td>Inget</td>
   </tr>
   <tr>
-   <td>närvaro</td>
+   <td>presence</td>
    <td>Anger synligheten hos ett objekt.</td>
    <td> </td>
   </tr>
   <tr>
-   <td>åtkomst</td>
+   <td>access</td>
    <td>Kontrollerar användaråtkomsten till innehållet i en behållare objekt, t.ex. ett delformulär.</td>
    <td>För enskilda objekt i undantaget returneras alltid open. </td>
   </tr>
@@ -1010,7 +1010,7 @@ JavaScript, FormCalc-egenskaper och metoder som stöds i HTML5-formulär är som
    <td><strong>Undantag<strong></strong></strong></td>
   </tr>
   <tr>
-   <td>kant</td>
+   <td>edge</td>
    <td>Objektet edge beskriver en båge, linje eller en sida av en kantlinje eller rektangel.<br /> </td>
    <td>Attribut som färg, ände med mera stöds inte. </td>
   </tr>
@@ -1027,7 +1027,7 @@ JavaScript, FormCalc-egenskaper och metoder som stöds i HTML5-formulär är som
    <td><strong>Undantag<strong></strong></strong></td>
   </tr>
   <tr>
-   <td>kant</td>
+   <td>edge</td>
    <td>Objektet edge beskriver en båge, linje eller en sida av en kantlinje eller rektangel.<br /> </td>
    <td>Attribut som färg, ände med mera stöds inte. </td>
   </tr>
@@ -1109,7 +1109,7 @@ JavaScript, FormCalc-egenskaper och metoder som stöds i HTML5-formulär är som
 
 | **Egenskap** | **Beskrivning** | **Undantag** |
 |---|---|---|
-| närvaro | Anger synligheten hos ett objekt. | Inget |
+| presence | Anger synligheten hos ett objekt. | Inget |
 
 ## FormCalc {#formcalc}
 

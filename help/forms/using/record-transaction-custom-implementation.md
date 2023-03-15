@@ -1,31 +1,30 @@
 ---
 title: Registrera en transaktion för anpassade implementeringar
-seo-title: Registrera en transaktion för anpassade implementeringar
+seo-title: Record a transaction for custom implementations
 description: Använd TransactionRecorder-API:t för att registrera åtgärder som inte räknas som transaktioner automatiskt
-seo-description: Använd TransactionRecorder-API:t för att registrera åtgärder som inte räknas som transaktioner automatiskt
+seo-description: Use the TransactionRecorder API to record actions which are not accounted as transactions automatically
 uuid: a22b1a0b-7553-4a17-8fb4-a3bee97b4a98
 contentOwner: khsingh
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-manager
 discoiquuid: 0d961630-573b-4c8e-902f-996f1d1265b6
-translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+exl-id: a1d97b15-14a6-4c3d-bdd3-6366f7acdfc8
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '236'
+source-wordcount: '216'
 ht-degree: 0%
 
 ---
-
 
 # Registrera en transaktion för anpassade implementeringar {#record-a-transaction-for-custom-implementations}
 
 Använd TransactionRecorder-API:t för att registrera åtgärder som inte räknas som transaktioner automatiskt
 
-Du kan använda en anpassad kod för att skicka ett PDF-formulär, för att skicka förhandsgransknings-URL:er för agentanvändargränssnittet till slutanvändare för att förhandsgranska en interaktiv kommunikation eller för att skicka ett formulär med anpassade metoder i stället för att använda de sändningsmetoder som finns i AEM Forms. Alla tidigare nämnda åtgärder och anpassade implementeringar av AEM Forms API:er räknas inte som transaktioner. AEM Forms tillhandahåller ett API, [TransactionRecorder](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/aem/transaction/core/ITransactionRecorder.html), för att registrera åtgärder som transaktioner.
+Du kan använda en anpassad kod för att skicka ett PDF-formulär, för att skicka förhandsgransknings-URL för agentanvändargränssnittet till slutanvändare för att förhandsgranska en interaktiv kommunikation, eller för att skicka ett formulär med anpassade metoder i stället för att använda de sändningsmetoder som finns i AEM Forms. Alla tidigare nämnda åtgärder och anpassade implementeringar av AEM Forms API:er räknas inte som transaktioner. AEM Forms tillhandahåller ett API, [TransactionRecorder](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/aem/transaction/core/ITransactionRecorder.html), för att registrera sådana åtgärder som transaktioner.
 
-Om du vill spela in en transaktion skriver du [standardservern för sling](https://helpx.adobe.com/experience-manager/using/custom-sling-servlets.html) och anropar serverleten från en klient för att spela in en transaktion. Du kan anropa servleten med AJAX eller någon annan standardmetod.
+Om du vill registrera en transaktion skriver du [standardsäljare](https://helpx.adobe.com/experience-manager/using/custom-sling-servlets.html) och anropa en klientserver för att registrera en transaktion. Du kan anropa servleten med AJAX eller någon annan standardmetod.
 
-## Exempel på kod för serversidan {#sample-server-sided-code}
+## Exempel på kod på serversidan {#sample-server-sided-code}
 
 Du kan använda exempelkoden nedan för att köra TransactionRecorder API från en JAVA-klass med ett anpassat OSGi-paket.
 
@@ -75,7 +74,7 @@ private TransactionRecord extractTxRecordFromRequest(SlingHttpServletRequest req
 
 ## Exempel på kod på klientsidan {#sample-client-side-code}
 
-Du kan använda exempelkoden nedan för att anropa servern som har `TransactionRecorder`API:t.
+Du kan använda exempelkoden nedan för att anropa den server som har `TransactionRecorder`API.
 
 ```javascript
 $.ajax({
@@ -96,4 +95,3 @@ $.ajax({
 * [Översikt över transaktionsrapporter](/help/forms/using/transaction-reports-overview.md)
 * [Visa och förstå transaktionsrapporter](/help/forms/using/viewing-and-understanding-transaction-reports.md)
 * [Fakturerbara API:er för transaktionsrapporter](/help/forms/using/transaction-reports-billable-apis.md)
-

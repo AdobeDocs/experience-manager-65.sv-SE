@@ -1,32 +1,31 @@
 ---
 title: Omfaktorisering för SocialUtils
-seo-title: Omfaktorisering för SocialUtils
+seo-title: SocialUtils Refactoring
 description: Paketet com.adobe.cq.social.ugcbase.SocialUtils har tagits bort i AEM 6.1
-seo-description: Paketet com.adobe.cq.social.ugcbase.SocialUtils har tagits bort i AEM 6.1
+seo-description: The package com.adobe.cq.social.ugcbase.SocialUtils was deprecated in AEM 6.1
 uuid: 54a0d98e-5ead-4c12-850f-8252ea9b3263
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: 4ade0d6b-041e-4a2f-98f8-3b8fcae0fb29
-translation-type: tm+mt
-source-git-commit: 1429a099288f038510cb0a194fb55632297ef371
+exl-id: 0f731ec6-a12e-4098-a1ec-ee4cd4dc1432
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '303'
+source-wordcount: '294'
 ht-degree: 0%
 
 ---
 
-
 # Omfaktorisering för SocialUtils {#socialutils-refactoring}
 
-## Paketet SocialUtils är inaktuellt {#socialutils-package-deprecated}
+## Paketet SocialUtils har tagits bort {#socialutils-package-deprecated}
 
 Paketet `com.adobe.cq.social.ugcbase.SocialUtils` har tagits bort i AEM 6.1.
 
-I följande tabeller visas de metoder som ska användas i stället för `SocialUtils`-metoder.
+I följande tabell visas de metoder som ska användas i stället för `SocialUtils` metoder.
 
-## Paket för SocialResourceUtilities {#socialresourceutilities-package}
+## Paket för SocialResourceUtilities  {#socialresourceutilities-package}
 
 | Metoder i com.adobe.cq.social.srp.utilities.api.SocialResourceUtilities |
 |---|
@@ -48,7 +47,7 @@ I följande tabeller visas de metoder som ska användas i stället för `SocialU
 |---|
 | SocialResourceProvider getSocialResourceProvider(Resurs) | ersätter SocialResourceProvider getConfiguringProvider(Resource) |
 
-## SCFUtilities-paket {#scfutilities-package}
+## SCFUtilities Package {#scfutilities-package}
 
 | Metoder i `com.adobe.cq.social.`utilities.scf.api.SCFUtilites |
 |---|
@@ -89,4 +88,3 @@ I följande tabeller visas de metoder som ska användas i stället för `SocialU
 | TranslationManager getTranslationManager() |
 | TranslationSaveQueue getTranslationSaveQueue() |
 | boolesk mayAccessUGC(ResourceResolver-lösare) |
-

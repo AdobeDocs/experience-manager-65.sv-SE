@@ -1,24 +1,23 @@
 ---
 title: Datamodellering - David Nueschelers modell
-seo-title: Datamodellering - David Nueschelers modell
+seo-title: Data Modeling - David Nuescheler's Model
 description: David Nueschelers rekommendationer för innehållsmodellering
-seo-description: David Nueschelers rekommendationer för innehållsmodellering
+seo-description: David Nuescheler's content modelling recommendations
 uuid: acb27e81-9143-4e0d-a37a-ba26491a841f
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
 discoiquuid: 39546c0a-b72f-42df-859b-98428ee0d5fb
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 6ce6a204-db59-4ed2-8383-00c6afba82b4
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1828'
+source-wordcount: '1818'
 ht-degree: 0%
 
 ---
 
-
-# Datamodellering - David Nuescheler&#39;s Model{#data-modeling-david-nuescheler-s-model}
+# Datamodellering - David Nueschelers modell{#data-modeling-david-nuescheler-s-model}
 
 ## Källa {#source}
 
@@ -26,7 +25,7 @@ Följande detaljer är idéer och kommentarer från David Nuescheler.
 
 David var en av grundarna och CTO på Day Software AG, en ledande leverantör av programvara för global innehållshantering och innehållsinfrastruktur, som Adobe förvärvade 2010. Han är nu medlem i och VP för Enterprise Technology på Adobe och leder också utvecklingen av JSR-170, Java Content Repository (JCR), applikationsprogrammeringsgränssnittet (API), teknikstandarden för innehållshantering.
 
-Ytterligare uppdateringar kan också ses på [https://wiki.apache.org/jackrabbit/DavidsModel](https://wiki.apache.org/jackrabbit/DavidsModel).
+Ytterligare uppdateringar kan också visas på [https://wiki.apache.org/jackrabbit/DavidsModel](https://wiki.apache.org/jackrabbit/DavidsModel).
 
 ## Introduktion från David {#introduction-from-david}
 
@@ -60,7 +59,7 @@ Ytterligare databegränsningar som obligatoriska eller typ- och värdebegränsni
 
 #### Exempel {#example-1}
 
-Ovanstående exempel på hur du använder en `lastModified` Date-egenskap på till exempel en blogginläggsnod betyder inte att det behövs en särskild nodtyp. Jag använder definitivt `nt:unstructured` för mina blogginläggsnoder åtminstone från början. Eftersom jag i mitt bloggprogram bara kommer att visa datumet lastModified i alla fall (eventuellt &quot;order by&quot;) bryr jag mig knappt om det är ett datum alls. Eftersom jag i alla fall har förtroende för att mitt bloggskrivande-program ska placera ett datum där behöver jag inte deklarera ett `lastModified`-datum i formatet en nodtype.
+Ovanstående exempel på hur du använder en `lastModified` Date-egenskap på till exempel bloggpost-nod betyder inte att det finns ett behov av en särskild nodtyp. Jag skulle definitivt använda `nt:unstructured` för mina blogginläggsnoder åtminstone från början. Eftersom jag i mitt bloggprogram bara kommer att visa datumet lastModified i alla fall (eventuellt &quot;order by&quot;) bryr jag mig knappt om det är ett datum alls. Eftersom jag ändå litar på att mitt blogginläggsprogram ska placera ett &quot;datum&quot; så finns det ingen anledning att deklarera en `lastModified` datum i formatet a av nodtype.
 
 ### Regel 2: Låt inte innehållshierarkin hända. {#rule-drive-the-content-hierarchy-don-t-let-it-happen}
 
@@ -104,7 +103,7 @@ Med innehållsmodellen ovan kan jag enkelt låta den anonyma användaren&quot;sk
 
 #### Förklaring {#explanation-3}
 
-Om du inte använder metoderna `clone()`, `merge()` eller `update()` i ditt program är en enda arbetsyta antagligen vägen dit.
+Om du inte använder `clone()`, `merge()` eller `update()` metoder i programmet som bara har en arbetsyta är antagligen den rätta.
 
 &quot;Motsvarande noder&quot; är ett koncept som definieras i JCR-specifikationen. Det handlar i princip om noder som representerar samma innehåll, i olika så kallade arbetsytor.
 
@@ -177,13 +176,13 @@ Jag tror att det finns situationer där ett system verkligen inte fungerar om en
 
 #### Förklaring {#explanation-6}
 
-Om en innehållsmodell visar något som till och med fjärrkänner *luktar* som en fil eller en mapp som jag försöker använda (eller sträcker sig från) `nt:file`, `nt:folder` och `nt:resource`.
+Om en innehållsmodell visar något som till och med finns på fjärrbasis *illaluktande* som en fil eller en mapp som jag försöker använda (eller utöka från) `nt:file`, `nt:folder` och `nt:resource`.
 
 Enligt min erfarenhet tillåter många generiska program interaktion med nt:folder och nt:files implicit och vet hur de ska hantera och visa dessa händelser om de har berikats med ytterligare metainformation. En direkt interaktion med filserverimplementeringar som CIFS eller WebDAV som sitter ovanpå JCR blir till exempel implicit.
 
-Jag tror att en bra tumregel kan behöva följande: Om du behöver lagra filnamnet och mime-typen är `nt:file`/ `nt:resource` en mycket bra matchning. Om du kan ha flera &quot;filer&quot; kan det vara bra att lagra mappen int:folder.
+Jag tror att en bra tumregel kan behöva följande: Om du behöver lagra filnamnet och mime-typen kan du `nt:file`/ `nt:resource` är en väldigt bra match. Om du kan ha flera &quot;filer&quot; kan det vara bra att spara dem i mappen nt:folder.
 
-Om du behöver lägga till metainformation för resursen, kan vi säga &quot;författare&quot; eller &quot;beskrivning&quot;, utöka `nt:resource` inte `nt:file`. Jag utökar sällan nt:file och utökar ofta `nt:resource`.
+Om du behöver lägga till metainformation för resursen kan du utöka `nt:resource` inte `nt:file`. sällan utöka `nt:resource`.
 
 #### Exempel {#example-6}
 
@@ -215,7 +214,7 @@ Det är sant att vissa noder behöver en stabil identifiering under hela sin liv
 
 Tänk också på att objekt kan identifieras med sökväg, och så mycket som &quot;symlinks&quot; är mer användbart för de flesta användare än maskinlänkar i ett enhetligt filsystem, är en sökväg ett bra sätt för de flesta program att referera till en målnod.
 
-Viktigare är att den är **mix**:referenable, vilket betyder att den kan tillämpas på en nod vid den tidpunkt då du faktiskt behöver referera till den.
+Ännu viktigare är det **mix**:referenable, vilket betyder att det kan användas på en nod vid den tidpunkt då du faktiskt behöver referera till den.
 
 Låt oss säga bara för att du vill kunna referera till en nod av typen&quot;Dokument&quot; innebär det inte att din&quot;Dokument&quot;-nodtyp måste byggas ut från mix:referenable på ett statiskt sätt eftersom den kan läggas till dynamiskt i alla instanser av&quot;Dokument&quot;.
 
@@ -245,4 +244,3 @@ i stället för:
 -- filename
 + resource (nt:resource)
 ```
-

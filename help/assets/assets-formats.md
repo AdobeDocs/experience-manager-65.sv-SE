@@ -23,7 +23,7 @@ Använd teckenförklaringen för att förstå supportnivån.
 | :-----------: | ------------------------------ |
 | ✓ | Stöds |
 | &#42; | Stöds med tilläggsfunktioner |
-| - | Ej relevant |
+| − | Ej relevant |
 
 ## Rasterbildformat som stöds i [!DNL Experience Manager] {#supported-raster-image-formats}
 
@@ -32,18 +32,18 @@ De rasterbildformat som stöds i [!DNL Assets] är:
 | Format | Lagring | Metadatahantering | Extrahering av metadata | Generering av miniatyrbilder | Redigering | Återskrivning av metadata | Insikter |
 | ------------ | :------: | :-----------------: | :-----------------: | :------------------: | :------: | :----------------: | :------: |
 | PNG | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| GIF | ✓ | ✓ | ✓ | ✓ | ✓ | - | ✓ |
-| TIFF | ✓ | ✓ | ✓ | ✓ | - | ✓ | ✓ |
+| GIF | ✓ | ✓ | ✓ | ✓ | ✓ | − | ✓ |
+| TIFF | ✓ | ✓ | ✓ | ✓ | − | ✓ | ✓ |
 | JPEG | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| BMP | ✓ | ✓ | ✓ | ✓ | ✓ | - | ✓ |
-| PNM | ✓ | ✓ | - | - | - | - | ✓ |
-| PGM | ✓ | ✓ | - | - | - | - | ✓ |
-| PBM | ✓ | ✓ | - | - | - | - | ✓ |
-| PPM | ✓ | ✓ | - | - | - | - | ✓ |
-| PSD ‡ | ✓ | ✓ | ✓ | ✓ | - | - | ✓ |
-| [EPS](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | - | ✓ | - |
-| PICT | - | - | - | - | - | - | ✓ |
-| PSB | ✓ | ✓ | ✓ | ✓ | - | - | - |
+| BMP | ✓ | ✓ | ✓ | ✓ | ✓ | − | ✓ |
+| PNM | ✓ | ✓ | − | − | − | − | ✓ |
+| PGM | ✓ | ✓ | − | − | − | − | ✓ |
+| PBM | ✓ | ✓ | − | − | − | − | ✓ |
+| PPM | ✓ | ✓ | − | − | − | − | ✓ |
+| PSD ‡ | ✓ | ✓ | ✓ | ✓ | − | − | ✓ |
+| [EPS](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | − | ✓ | − |
+| PICT | − | − | − | − | − | − | ✓ |
+| PSB | ✓ | ✓ | ✓ | ✓ | − | − | − |
 
 ‡ Den sammanfogade bilden extraheras från filen PSD. Det är en bild som genereras av Adobe Photoshop och inkluderas i filen PSD. Beroende på inställningarna kan den sammanfogade bilden vara den faktiska bilden eller inte.
 
@@ -63,12 +63,12 @@ Se även [Arbeta med 3D-resurser i Dynamic Media.](/help/assets/assets-3d.md)
 
 | Format | Lagring | Versionshantering | Arbetsflöde | Publicering | Åtkomstkontroll | Förhandsvisning av miniatyrbilder | Förhandsgranska 3D | Leverans till Dynamic Media |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| DN | ✓ | ✓ | ✓ |  | ✓ | ✓ | - | - |
-| gLB | ✓ | ✓ | ✓ | ✓ | ✓ | - | ✓ | ✓ |
-| gLTF | ✓ | ✓ | ✓ |  | ✓ | - | ✓ | - |
-| OBJ | ✓ | ✓ | ✓ | ✓ | ✓ | - | ✓ | ✓ |
-| STL | ✓ | ✓ | ✓ | ✓ | ✓ | - | ✓ | ✓ |
-| USDz | ✓ | ✓ | ✓ | ✓ | ✓ | - | - | ✓ |
+| DN | ✓ | ✓ | ✓ |  | ✓ | ✓ | − | − |
+| gLB | ✓ | ✓ | ✓ | ✓ | ✓ | − | ✓ | ✓ |
+| gLTF | ✓ | ✓ | ✓ |  | ✓ | − | ✓ | − |
+| OBJ | ✓ | ✓ | ✓ | ✓ | ✓ | − | ✓ | ✓ |
+| STL | ✓ | ✓ | ✓ | ✓ | ✓ | − | ✓ | ✓ |
+| USDz | ✓ | ✓ | ✓ | ✓ | ✓ | − | − | ✓ |
 
 ## Biblioteket PDF Rasterizer stöds {#supported-pdf-rasterizer-library}
 
@@ -98,47 +98,47 @@ Dokumentformat som stöds för filhanteringsfunktioner är följande:
 
 | Format | Lagring | [Metadatahantering](metadata.md) | Fulltext<br> extrahering | [Extrahering av metadata](metadata.md) | Miniatyrbild<br> generering | [Extrahering av deltillgångar](managing-linked-subassets.md) | [Återskrivning av metadata](xmp-writeback.md) | [Anslutna resurser](use-assets-across-connected-assets-instances.md) |
 |---|---|---|---|---|---|---|---|---|
-| [AI](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | - | ✓ | ✓ | ✓ | ✓ | - |
-| DOC | ✓ | ✓ | ✓ | ✓ | - | - | - | ✓ |
-| DOCX | ✓ | ✓ | ✓ | ✓ | - | - | - | ✓ |
-| ODT | ✓ | ✓ | ✓ | - | - | - | - | ✓ |
+| [AI](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | − | ✓ | ✓ | ✓ | ✓ | − |
+| DOC | ✓ | ✓ | ✓ | ✓ | − | − | − | ✓ |
+| DOCX | ✓ | ✓ | ✓ | ✓ | − | − | − | ✓ |
+| ODT | ✓ | ✓ | ✓ | − | − | − | − | ✓ |
 | [PDF](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| HTML | ✓ | ✓ | ✓ | - | - | - | - | ✓ |
-| RTF | ✓ | ✓ | ✓ | - | - | - | - | ✓ |
-| TXT | ✓ | ✓ | ✓ | - | - | - | - | ✓ |
-| XLS | ✓ | ✓ | ✓ | - | - | - | - | ✓ |
-| XLSX | ✓ | ✓ | ✓ | ✓ | - | - | - | ✓ |
-| ODS | ✓ | ✓ | ✓ | - | - | - | - | - |
-| PPT | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | - | ✓ |
-| PPTX | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | - | ✓ |
-| ODP | ✓ | ✓ | ✓ | - | - | - | - | - |
-| [INDD](managing-image-presets.md#indesign-indd-file-format) | ✓ | ✓ | - | ✓ | ✓ | ✓ | ✓ | - |
-| PS | ✓ | ✓ | - | - | - | - | - | - |
-| QXP | ✓ | ✓ | - | - | - | - | - | - |
-| ePub | ✓ | ✓ | - | ✓ | ✓ | - | - | - |
+| HTML | ✓ | ✓ | ✓ | − | − | − | − | ✓ |
+| RTF | ✓ | ✓ | ✓ | − | − | − | − | ✓ |
+| TXT | ✓ | ✓ | ✓ | − | − | − | − | ✓ |
+| XLS | ✓ | ✓ | ✓ | − | − | − | − | ✓ |
+| XLSX | ✓ | ✓ | ✓ | ✓ | − | − | − | ✓ |
+| ODS | ✓ | ✓ | ✓ | − | − | − | − | − |
+| PPT | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | − | ✓ |
+| PPTX | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | − | ✓ |
+| ODP | ✓ | ✓ | ✓ | − | − | − | − | − |
+| [INDD](managing-image-presets.md#indesign-indd-file-format) | ✓ | ✓ | − | ✓ | ✓ | ✓ | ✓ | − |
+| PS | ✓ | ✓ | − | − | − | − | − | − |
+| QXP | ✓ | ✓ | − | − | − | − | − | − |
+| ePub | ✓ | ✓ | − | ✓ | ✓ | − | − | − |
 
 ## Multimediaformat som stöds {#supported-multimedia-formats}
 
 |  | Lagring | Metadatahantering | Extrahering av metadata | Generering av miniatyrbilder | FFmpeg-omkodning |
 |:---|:---:|:---:|:---:|:---:|:---:|
-| AAC | ✓ | ✓ | - | - | &#42; |
-| MIDI | ✓ | ✓ | - | - | &#42; |
-| 3GP | ✓ | ✓ | - | - | &#42; |
-| MP3 | ✓ | ✓ | ✓ | - | &#42; |
-| MPG | ✓ | ✓ | - | - | &#42; |
-| OGA | ✓ | ✓ | - | - | &#42; |
-| OGG | ✓ | ✓ | - | - | &#42; |
-| RA | ✓ | ✓ | - | - | &#42; |
-| WAV | ✓ | ✓ | - | - | &#42; |
-| WMA | ✓ | ✓ | - | - | &#42; |
-| DVI | ✓ | ✓ | - | &#42; | &#42; |
-| FLV | ✓ | ✓ | - | &#42; | &#42; |
-| M4V | ✓ | ✓ | - | &#42; | &#42; |
-| MPEG | ✓ | ✓ | - | &#42; | &#42; |
-| OGV | ✓ | ✓ | - | &#42; | &#42; |
-| MOV | ✓ | ✓ | - | &#42; | &#42; |
-| WMV | ✓ | ✓ | - | &#42; | &#42; |
-| SWF | ✓ | ✓ | - | - | - |
+| AAC | ✓ | ✓ | − | − | &#42; |
+| MIDI | ✓ | ✓ | − | − | &#42; |
+| 3GP | ✓ | ✓ | − | − | &#42; |
+| MP3 | ✓ | ✓ | ✓ | − | &#42; |
+| MPG | ✓ | ✓ | − | − | &#42; |
+| OGA | ✓ | ✓ | − | − | &#42; |
+| OGG | ✓ | ✓ | − | − | &#42; |
+| RA | ✓ | ✓ | − | − | &#42; |
+| WAV | ✓ | ✓ | − | − | &#42; |
+| WMA | ✓ | ✓ | − | − | &#42; |
+| DVI | ✓ | ✓ | − | &#42; | &#42; |
+| FLV | ✓ | ✓ | − | &#42; | &#42; |
+| M4V | ✓ | ✓ | − | &#42; | &#42; |
+| MPEG | ✓ | ✓ | − | &#42; | &#42; |
+| OGV | ✓ | ✓ | − | &#42; | &#42; |
+| MOV | ✓ | ✓ | − | &#42; | &#42; |
+| WMV | ✓ | ✓ | − | &#42; | &#42; |
+| SWF | ✓ | ✓ | − | − | − |
 
 ## Arkivformat som stöds {#supported-archive-formats}
 
@@ -146,10 +146,10 @@ De arkivformat som stöds och tillämpligheten för de vanliga DAM-arbetsflöden
 
 | Format | Lagring | Versionshantering | Arbetsflöde | Publicering | Åtkomstkontroll | Dynamic Media Delivery |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
-| TGZ | ✓ | ✓ | ✓ | ✓ | ✓ | - |
-| JAR | ✓ | ✓ | ✓ | ✓ | ✓ | - |
-| RAR | ✓ | ✓ | ✓ | ✓ | ✓ | - |
-| TAR | ✓ | ✓ | ✓ | ✓ | ✓ | - |
+| TGZ | ✓ | ✓ | ✓ | ✓ | ✓ | − |
+| JAR | ✓ | ✓ | ✓ | ✓ | ✓ | − |
+| RAR | ✓ | ✓ | ✓ | ✓ | ✓ | − |
+| TAR | ✓ | ✓ | ✓ | ✓ | ✓ | − |
 | ZIP | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 
 ## Andra format som stöds {#other-supported-formats}
@@ -158,11 +158,11 @@ Hur de vanliga DAM-funktionerna kan användas för ett fåtal specifika filforma
 
 | Format | Lagring | Versionshantering | Arbetsflöde | Publicering | Åtkomstkontroll | Dynamic Media Delivery |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
-| SVG | ✓ | ✓ | ✓ | ✓ | ✓ | - |
+| SVG | ✓ | ✓ | ✓ | ✓ | ✓ | − |
 | CSS | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | VTT | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | XML | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| JavaScript (när konfigureras med egen leveransdomän) | - | - | - | - | - | ✓ |
+| JavaScript (när konfigureras med egen leveransdomän) | − | − | − | − | − | ✓ |
 
 >[!NOTE]
 >
@@ -238,14 +238,14 @@ En lista över MIME-typer som stöds finns i CRXDE Lite på `/conf/global/settin
 |---|---|---|---|
 | AVI | A/V-sammanflätning | XVID, DIVX, HDV, MiniDV (DV25), Techsmith Camtasia, Huffyuv, Fraps, Panasonic DVCPro | Indeo3 (IV30), MJPEG, Microsoft® Video 1 (MS-CRAM) |
 | FLV, F4V | Adobe Flash | H264/AVC, Flix VP6, H263, Sorenson | SWF (vektoranimeringsfiler) |
-| M4V | Apple iTunes | H264/AVC | - |
-| MKV | Matroska | H264/AVC | - |
+| M4V | Apple iTunes | H264/AVC | − |
+| MKV | Matroska | H264/AVC | − |
 | MOV, QT | Apple QuickTime | H264/AVC, Apple ProRes422 &amp; HQ, Sony XDCAM, Sony DVCAM, HDV, Panasonic DVCPro, Apple DV (DV25), Apple PhotoJPEG, Sorenson, Avid DNxHD, Avid AVR | Apple Intermediate, Apple Animation |
-| MP4 | MPEG-4 | H264/AVC (alla profiler) | - |
-| MPG, VOB, M2V, MP2 | MPEG-2 | MPEG-2 | - |
-| MXF ‡ | MXF | Sony XDCAM, MPEG-2, MPEG-4, Panasonic DVCPro | - |
-| OGV, OGG | Ogg | Theora, VP3, Dirac | - |
-| WebM | WebM | Google VP8 | - |
+| MP4 | MPEG-4 | H264/AVC (alla profiler) | − |
+| MPG, VOB, M2V, MP2 | MPEG-2 | MPEG-2 | − |
+| MXF ‡ | MXF | Sony XDCAM, MPEG-2, MPEG-4, Panasonic DVCPro | − |
+| OGV, OGG | Ogg | Theora, VP3, Dirac | − |
+| WebM | WebM | Google VP8 | − |
 | WMV | Windows Media 9 | WMV3 (v9), WMV2 (v8), WMV1 (v7), GoToMeeting (G2M2, G2M3, G2M4) | Microsoft® Screen (MSS2), Microsoft® Photo Story (WVP2) |
 
 ‡ Det här videoformatet stöds ännu inte för interaktiva videoklipp i Dynamic Media eller för användning med anteckningar i Experience Manager Assets.
@@ -254,8 +254,8 @@ En lista över MIME-typer som stöds finns i CRXDE Lite på `/conf/global/settin
 
 | Format | Överför<br> (Indataformat) | Skapa<br> image<br> förinställning<br> (Utdataformat) | Förhandsgranska<br> dynamisk<br> rendering | Leverera<br> dynamisk<br> rendering | Hämta<br> dynamisk<br> rendering |
 |---|:---:|:---:|:---:|:---:|:---:|
-| [AI](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | - | - | - | - |
-| [INDD](managing-image-presets.md#indesign-indd-file-format) | ✓ | - | - | - | - |
+| [AI](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | − | − | − | − |
+| [INDD](managing-image-presets.md#indesign-indd-file-format) | ✓ | − | − | − | − |
 | [PDF](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) (Se anmärkningen nedan) | ✓ | ✓ | ✓ | ✓ | ✓ |
 
 >[!NOTE]
@@ -275,13 +275,13 @@ Utöver ovanstående funktioner bör du tänka på följande:
 | Format | Överför<br> (Indataformat) | Skapa<br> image<br> förinställning<br> (Utdataformat) | Förhandsgranska<br> dynamisk<br> rendering | Leverera<br> dynamisk<br> rendering | Hämta<br> dynamisk<br> rendering | Ange typer som stöder det här formatet |
 |---|:---:|:---:|:---:|:---:|:---:| --- |
 | PNG | ✓ | ✓ | ✓ | ✓ | ✓ | [Bild](/help/assets/image-sets.md), [Blandade media](/help/assets/mixed-media-sets.md)och [Snurra](/help/assets/spin-sets.md) |
-| GIF | ✓ | ✓ | ✓ | ✓ | ✓ | - |
+| GIF | ✓ | ✓ | ✓ | ✓ | ✓ | − |
 | TIFF | ✓ | ✓ | ✓ | ✓ | ✓ | [Bild](/help/assets/image-sets.md), [Blandade media](/help/assets/mixed-media-sets.md)och [Snurra](/help/assets/spin-sets.md) |
 | JPEG | ✓ | ✓ | ✓ | ✓ | ✓ | [Bild](/help/assets/image-sets.md), [Blandade media](/help/assets/mixed-media-sets.md)och [Snurra](/help/assets/spin-sets.md) |
-| BMP | ✓ | - | - | - | - | [Bild](/help/assets/image-sets.md), [Blandade media](/help/assets/mixed-media-sets.md)och [Snurra](/help/assets/spin-sets.md) |
-| PSD ‡ | ✓ | - | - | - | - | - |
-| [EPS](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | ✓ | - |
-| PICT | ✓ | - | - | - | - | - |
+| BMP | ✓ | − | − | − | − | [Bild](/help/assets/image-sets.md), [Blandade media](/help/assets/mixed-media-sets.md)och [Snurra](/help/assets/spin-sets.md) |
+| PSD ‡ | ✓ | − | − | − | − | − |
+| [EPS](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | ✓ | − |
+| PICT | ✓ | − | − | − | − | − |
 
 ‡ Den sammanfogade bilden extraheras från filen PSD. Det är en bild som genereras av Adobe Photoshop och inkluderas i filen PSD. Beroende på inställningarna kan den sammanfogade bilden vara den faktiska bilden eller inte.
 

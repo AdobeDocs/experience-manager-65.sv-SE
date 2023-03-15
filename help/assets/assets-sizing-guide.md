@@ -1,5 +1,5 @@
 ---
-title: '"[!DNL Assets] storleksguide"'
+title: "[!DNL Assets] storleksguide"
 description: Bästa metoder för att fastställa effektiva mätvärden för att uppskatta den infrastruktur och de resurser som krävs för att driftsätta [!DNL Adobe Experience Manager Assets].
 contentOwner: AG
 role: Architect, Admin

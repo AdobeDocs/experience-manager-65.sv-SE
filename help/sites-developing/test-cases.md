@@ -1,8 +1,8 @@
 ---
 title: Definiera testfall
-seo-title: Definiera testfall
+seo-title: Defining your Test Cases
 description: Dina testfall ska baseras på användningsfall och detaljerade kravspecifikationer
-seo-description: Dina testfall ska baseras på användningsfall och detaljerade kravspecifikationer
+seo-description: Your test cases should be based upon the use cases and the detailed requirements specification
 uuid: daaa5370-bcd3-45a6-9974-f9b5af6a1529
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,14 +10,13 @@ topic-tags: testing
 content-type: reference
 discoiquuid: f01eb2aa-6891-4f5d-8a4a-43fc1534c222
 docset: aem65
-translation-type: tm+mt
-source-git-commit: da08613be784f43ad3e3c3652b7e015640a48a9d
+exl-id: c09cde0d-401c-437f-9ec8-a0530c1312d5
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '529'
 ht-degree: 0%
 
 ---
-
 
 # Definiera testfall{#defining-your-test-cases}
 
@@ -56,16 +55,14 @@ När AEM testas är det av särskilt intresse med vissa detaljer:
 
 **Skapa och publicera miljöer**
 
-Även om det ingår i [miljöer](/help/sites-developing/the-basics.md#environments) är det värt att betona en avgörande faktor för AEM med avseende på testning.
+Även om det omfattas av [Miljö](/help/sites-developing/the-basics.md#environments) det är värt att betona en avgörande faktor för AEM när det gäller testning.
 
 Du måste överväga AEM som två program:
 
-* miljön *Författare*
-Den här instansen tillåter författare att ange och publicera innehåll.
+* den *Upphovsman* miljö Den här instansen tillåter författare att ange och publicera innehåll.
 Detta har en liten(er), förutsägbar uppsättning användare, för vilka specifika funktioner och prestanda är avgörande.
 
-* miljön *Publish*
-I den här instansen visas webbplatsen i dess publicerade form så att besökarna kan komma åt den.
+* den *Publicera* miljö Den här instansen visar webbplatsen i dess publicerade form så att besökarna kan komma åt den.
 Detta har vanligtvis en större uppsättning användare, där trafikvolymen inte alltid är helt förutsägbar. Prestanda är fortfarande avgörande - vid svar på förfrågningar. Cachelagring och lastbalansering måste också beaktas.
 
 Även om de är samma programvara:
@@ -90,23 +87,23 @@ I de flesta projekt installeras Dispatcher för cachelagring och belastningsutj�
 
 Testningen är svår (cachelagring sker på olika nivåer och på olika platser) och måste göras i svarta lådor. Viktiga aspekter att testa för är:
 
-* **Noggrannheten** 
-säkerställer att webbplatsens besökare kan se innehållsuppdateringarna.
+* **Noggrannhet**
+se till att webbplatsbesökaren kan se innehållsuppdateringar.
 
-* **Kontinuitet** 
-säkerställer att webbplatsen fortfarande är tillgänglig när en server stängs av.
+* **Kontinuitet**
+se till att webbplatsen fortfarande är tillgänglig när en server stängs av.
 
 * **Kluster**
-används för att tillhandahålla:
+Klustren används för att tillhandahålla:
 
-   * **Redundans** 
-    Om en server misslyckas tar andra servrar i klustret över bearbetningen.
+   * **Redundans**
+Om en server inte fungerar tar andra servrar i klustret över bearbetningen.
 
-   * **Prestanda belastnings**
-    balansering med fullständig failover ökar prestanda för ett kluster.
-    När det används för ett kundprojekt måste klustret testas för att bekräfta att konfigurationen fungerar korrekt.
+   * **Prestanda**
+Belastningsutjämning med fullständig failover ökar prestanda för ett kluster.
+När det används för ett kundprojekt måste klustret testas för att bekräfta att konfigurationen fungerar korrekt.
 
-## Testar tredjepartsprogram {#testing-third-party-software}
+## Testar program från tredje part {#testing-third-party-software}
 
 Alla tredjepartsprogram som AEM interagerar med kommer att anges i Detaljerade kravspecifikationer.
 

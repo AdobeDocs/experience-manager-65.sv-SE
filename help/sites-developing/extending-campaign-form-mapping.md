@@ -1,22 +1,21 @@
 ---
 title: Skapa anpassade formulärmappningar
-seo-title: Skapa anpassade formulärmappningar
+seo-title: Creating Custom Form Mappings
 description: När du skapar en anpassad tabell i Adobe Campaign kanske du vill skapa ett formulär i AEM som mappar till den anpassade tabellen
-seo-description: När du skapar en anpassad tabell i Adobe Campaign kanske du vill skapa ett formulär i AEM som mappar till den anpassade tabellen
+seo-description: When you create a custom table in Adobe Campaign, you may want to build a form in AEM that maps to that custom table
 uuid: f3bde513-6edb-4eb6-9048-40045ee08c4a
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 discoiquuid: d5dac1db-2dde-4b75-a31b-e057b447f6e2
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: bce6c586-9962-4217-82cb-c837e479abc0
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '558'
+source-wordcount: '530'
 ht-degree: 1%
 
 ---
-
 
 # Skapa anpassade formulärmappningar{#creating-custom-form-mappings}
 
@@ -31,20 +30,20 @@ Du måste ha följande installerat:
 * Adobe Experience Manager
 * Adobe Campaign Classic
 
-Mer information finns i [Integrera AEM med Adobe Campaign Classic](/help/sites-administering/campaignonpremise.md).
+Se [Integrera AEM med Adobe Campaign Classic](/help/sites-administering/campaignonpremise.md) för mer information.
 
-## Skapar anpassade formulärmappningar {#creating-custom-form-mappings-2}
+## Skapa anpassade formulärmappningar {#creating-custom-form-mappings-2}
 
 Om du vill skapa anpassade formulärmappningar måste du följa dessa steg på hög nivå, som beskrivs i detalj i följande avsnitt:
 
 1. Skapa en anpassad tabell.
-1. Utöka tabellen **seed**.
+1. Utöka **frö** tabell.
 1. Skapa en anpassad mappning.
 1. Skapa en leverans baserat på den anpassade mappningen.
 1. Bygg formuläret i AEM, som ska använda den skapade leveransen.
 1. Skicka formuläret för att testa det.
 
-### Skapa den anpassade tabellen i Adobe Campaign {#creating-the-custom-table-in-adobe-campaign}
+### Skapa en anpassad tabell i Adobe Campaign {#creating-the-custom-table-in-adobe-campaign}
 
 Börja med att skapa en anpassad tabell i Adobe Campaign. I det här exemplet använder vi följande definition för att skapa en händelsetabell:
 
@@ -57,15 +56,15 @@ Börja med att skapa en anpassad tabell i Adobe Campaign. I det här exemplet an
 </element>
 ```
 
-När du har skapat händelsetabellen kör du **guiden Uppdatera databasstruktur** för att skapa tabellen.
+När du har skapat händelsetabellen kör du **Guiden Uppdatera databasstruktur** för att skapa tabellen.
 
 ### Utöka dirigeringstabellen {#extending-the-seed-table}
 
-I Adobe Campaign trycker/klickar du på **Lägg till** för att skapa ett nytt tillägg för tabellen **dirigeringsadresser (nms)**.
+I Adobe Campaign: tryck/klicka **Lägg till** för att skapa ett nytt tillägg till **Fröadresser (nms)** tabell.
 
 ![chlimage_1-194](assets/chlimage_1-194.png)
 
-Använd nu fälten från tabellen **event** för att utöka tabellen **seed**:
+Använd fälten från **event** tabell som utökar **frö** tabell:
 
 ```xml
 <element label="Event" name="custom_cus_event">
@@ -76,11 +75,11 @@ Använd nu fälten från tabellen **event** för att utöka tabellen **seed**:
  </element>
 ```
 
-Kör sedan **Guiden Uppdatera databas** för att tillämpa ändringarna.
+Efter detta körs **Guiden Uppdatera databas** för att tillämpa ändringarna.
 
-### Skapar anpassad målmappning {#creating-custom-target-mapping}
+### Skapa anpassad målmappning {#creating-custom-target-mapping}
 
-I **Administration/Kampanjhantering** t går du till **Målmappningar** och lägger till en ny T **målmappning.**
+I **Administration/kampanjhantering** t, gå till **Målmappningar** och lägga till ett nytt T **Målmappning.**
 
 >[!NOTE]
 >
@@ -90,9 +89,9 @@ I **Administration/Kampanjhantering** t går du till **Målmappningar** och läg
 
 ### Skapa en anpassad leveransmall {#creating-a-custom-delivery-template}
 
-I det här steget lägger du till en leveransmall som använder den skapade **målmappningen**.
+I det här steget lägger du till en leveransmall som använder den skapade **Målmappning**.
 
-I **Resurser/mallar** navigerar du till leveransmallen och duplicerar den befintliga AEM. När du klickar på **To** väljer du create event **Target mapping**.
+I **Resurser/mallar** navigera till leveransmallen och duplicera den befintliga AEM. När du klickar **Till**, välj händelsen create **Målmappning**.
 
 ![chlimage_1-196](assets/chlimage_1-196.png)
 
@@ -100,7 +99,7 @@ I **Resurser/mallar** navigerar du till leveransmallen och duplicerar den befint
 
 I AEM kontrollerar du att du har konfigurerat en Cloud Service i **Sidegenskaper**.
 
-På fliken **Adobe Campaign** väljer du sedan leveransen som skapades i [Skapa en anpassad leveransmall](#creating-a-custom-delivery-template).
+Sedan i **Adobe Campaign** väljer du leveransen som skapades i [Skapa en anpassad leveransmall](#creating-a-custom-delivery-template).
 
 ![chlimage_1-197](assets/chlimage_1-197.png)
 
@@ -108,7 +107,7 @@ När du konfigurerar fälten måste du ange unika elementnamn för formulärfäl
 
 När fälten har konfigurerats måste du ändra mappningen manuellt.
 
-I CRXDE-lite går du till noden **jcr:content** (på sidan) och ändrar värdet **acMapping** till det interna namnet för **målmappningen**.
+I CRXDE-lite, gå till **jcr:innehåll** (på sidan) och ändra **acMapping** värdet till det interna namnet på **Målmappning**.
 
 ![chlimage_1-198](assets/chlimage_1-198.png)
 
@@ -124,9 +123,8 @@ Nu kan du skicka formuläret och validera om värdena sparas på Adobe Campaign-
 
 ## Felsökning {#troubleshooting}
 
-**&quot;Ogiltig typ för värdet &#39;02/02/2015&#39; från elementet &#39;@eventdate&#39; (dokument av typen &#39;Event ([adb:event])&#39;)&quot;**
+**&quot;Ogiltig typ för värdet &#39;02/02/2015&#39; från elementet &#39;@eventdate&#39; (dokument av typen &#39;Event ([adb:event])&quot;**
 
-När formuläret skickas loggas detta fel i **error.log** i AEM.
+När formuläret skickas loggas detta fel i **error.log** AEM.
 
-Detta beror på ett ogiltigt format för datumfältet. Du kan lösa problemet genom att ange **ååå-mm-dd** som värde.
-
+Detta beror på ett ogiltigt format för datumfältet. Lösningen är att tillhandahålla **yyyy-mm-dd** som värdet.

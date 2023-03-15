@@ -1,22 +1,21 @@
 ---
 title: Ange XCI-konfigurationsalternativ
-seo-title: Ange XCI-konfigurationsalternativ
+seo-title: Specifying XCI configuration options
 description: Lär dig hur du anger XCI-konfigurationsalternativ.
-seo-description: Lär dig hur du anger XCI-konfigurationsalternativ.
+seo-description: Learn how to specify XCI configuration options.
 uuid: 5d3c10c1-4a93-4336-b311-20faaf835b9f
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 162c9fda-f4d4-4ad5-a9ab-7554828e821c
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 7cd10389-63e6-41f2-a132-92fd9e40a9b7
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '130'
 ht-degree: 1%
 
 ---
-
 
 # Ange XCI-konfigurationsalternativ {#specifying-xci-configuration-options}
 
@@ -32,4 +31,3 @@ Du kan välja alternativ som avbryter åsidosättningen för alternativen ovan. 
 1. Klicka på Tjänster > Forms i administrationskonsolen.
 1. Markera eller avmarkera kryssrutan Använd XCI-standardalternativ för system. När det här alternativet är markerat använder Forms standardvärden för inställningarna för paket, skapare, producent och compressObjectStream. När det här alternativet är avmarkerat används de värden som anges i den anpassade XCI-filen i Forms.
 1. Klicka på Spara.
-

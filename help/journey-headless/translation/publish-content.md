@@ -1,7 +1,8 @@
 ---
 title: Publicera översatt innehåll
 description: Lär dig hur du publicerar översatt innehåll och uppdaterar översättningarna när innehållet uppdateras.
-source-git-commit: 38525b6cc14e9f6025564c060b8cfb4f9e0ea473
+exl-id: 32c387fe-fa1b-499b-861f-b4822f5e139e
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
 source-wordcount: '1378'
 ht-degree: 0%

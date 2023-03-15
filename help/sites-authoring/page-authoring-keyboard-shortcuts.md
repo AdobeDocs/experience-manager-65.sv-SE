@@ -1,22 +1,21 @@
 ---
 title: Kortkommandon vid sidredigering
-seo-title: Kortkommandon vid sidredigering
+seo-title: Keyboard Shortcuts when Editing Pages
 description: Det finns olika kortkommandon i hela AEM, bland annat för sidredigering
-seo-description: Det finns olika kortkommandon i hela AEM, bland annat för sidredigering
+seo-description: Various keyboard shortcuts are available throughout AEM, including some for page editing
 uuid: bf9428fc-73b5-499f-b9ed-62fa72272126
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
 discoiquuid: 6a3c69b5-6df6-4b8f-afa4-7d3e9dd458b5
-translation-type: tm+mt
-source-git-commit: 34aadbc35d7aad127fe98211a5f37d623d101c0c
+exl-id: f4ca5c11-e3ff-4da5-bc4a-fd7e0aefffb5
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '238'
+source-wordcount: '221'
 ht-degree: 2%
 
 ---
-
 
 # Kortkommandon vid sidredigering{#keyboard-shortcuts-when-editing-pages}
 
@@ -24,33 +23,33 @@ Olika kortkommandon finns i hela AEM. Vissa gäller när du redigerar sidor, and
 
 >[!NOTE]
 >
->[modifieringstangenterna](/help/sites-authoring/page-authoring-keyboard-shortcuts.md#os-specific-modifier-keys) som krävs för AEM kortkommandon varierar beroende på operativsystem.
+>The [modifieringstangenter](/help/sites-authoring/page-authoring-keyboard-shortcuts.md#os-specific-modifier-keys) som krävs för AEM kortkommandon varierar beroende på operativsystem.
 
 ## Redigera kortkommandon {#editing-keyboard-shortcuts}
 
 | Plats | Genväg | Beskrivning |
 |---|---|---|
-| Alla redigeringsfönsterlägen | `Ctrl-Shift-m` | Växla mellan **Förhandsgranska** och det markerade [läget](/help/sites-authoring/author-environment-tools.md#page-modes)</a> (t.ex. **Redigera**, **Layout**, osv.)* |
-| **** Redigeringsläge | `Ctrl-z` | [Ångra senaste ändring](/help/sites-authoring/editing-content.md#undoing-and-redoing-page-edits) |
+| Alla redigeringsfönsterlägen | `Ctrl-Shift-m` | Växla mellan **Förhandsgranska** och de markerade [läge](/help/sites-authoring/author-environment-tools.md#page-modes)</a> (t.ex. **Redigera**, **Layout**, etc)* |
+| **Redigera** läge | `Ctrl-z` | [Ångra senaste ändring](/help/sites-authoring/editing-content.md#undoing-and-redoing-page-edits) |
 |  | `Ctrl-y` | [Gör om senaste ändring](/help/sites-authoring/editing-content.md#undoing-and-redoing-page-edits) |
 |  | `Ctrl-Click` | Markera flera stycken |
 |  | `Ctrl-c` | Kopiera markerade stycken |
 |  | `Ctrl-x` | Klipp ut markerade stycken, (urklippta stycken försvinner inte i användargränssnittet förrän de klistras in) |
 |  | `Ctrl-v` | Klistra in stycken som tidigare klippts ut eller kopierats |
 |  | `Ctrl-Backspace` | Ta bort markerade stycken |
-| **** Redigeringsläge - RTF-redigerare | `Ctrl-b` | Fet |
+| **Redigera** läge - RTF-redigerare | `Ctrl-b` | Fet |
 |  | `Ctrl-I` | Kursiv |
 |  | `Ctrl-u` | Understrykning |
 
 >[!NOTE]
 >
->&amp;ast; När användaren börjar interagera med sidan i förhandsgranskningsläget är genvägen `Ctrl-Shift-m` inte längre tillgänglig. Användaren måste klicka på det övre redigeringsfältet eller gå tillbaka till redigeringsläget för genvägen för att bli tillgänglig igen.
+>&amp;ast; När användaren börjar interagera med sidan i förhandsgranskningsläget `Ctrl-Shift-m` kortkommandot är inte längre tillgängligt. Användaren måste klicka på det övre redigeringsfältet eller gå tillbaka till redigeringsläget för genvägen för att bli tillgänglig igen.
 
-Olika kortkommandon är också tillgängliga för skrivbordsanvändare när de använder [konsoler](/help/sites-authoring/keyboard-shortcuts.md).
+Du kan även använda olika kortkommandon för skrivbordsanvändare när du använder [konsoler](/help/sites-authoring/keyboard-shortcuts.md).
 
 >[!NOTE]
 >
->Kortkommandon för redigeraren är alltid aktiva oavsett om kortkommandona för [konsolen har inaktiverats](/help/sites-authoring/keyboard-shortcuts.md#deactivating-keyboard-shortcuts).
+>Kortkommandon för redigeraren är alltid aktiva oavsett om [konsolgenvägar har inaktiverats](/help/sites-authoring/keyboard-shortcuts.md#deactivating-keyboard-shortcuts).
 
 ## Operativspecifika modifieringstangenter {#os-specific-modifier-keys}
 

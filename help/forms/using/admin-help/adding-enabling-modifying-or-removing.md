@@ -1,26 +1,25 @@
 ---
 title: Lägga till, aktivera, ändra eller ta bort slutpunkter
-seo-title: Lägga till, aktivera, ändra eller ta bort slutpunkter
+seo-title: Adding, enabling, modifying, or removing endpoints
 description: Lär dig hur du lägger till, aktiverar, ändrar och tar bort slutpunkter.
-seo-description: Lär dig hur du lägger till, aktiverar, ändrar och tar bort slutpunkter.
+seo-description: Learn how to add, enable, modify and remove endpoints.
 uuid: c53f225b-3d55-42f6-8982-0cd7dde0c4f5
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/managing_endpoints
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 7d0d4f96-fc72-4e2b-a2cc-5741b0a30f74
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: b7461d5c-95d1-4da2-9d2a-f54c410a87f9
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '371'
 ht-degree: 0%
 
 ---
 
-
 # Lägga till, aktivera, ändra eller ta bort slutpunkter {#adding-enabling-modifying-or-removing-endpoints}
 
-## Lägg till en slutpunkt i en tjänst {#add-an-endpoint-to-a-service}
+## Lägga till en slutpunkt i en tjänst {#add-an-endpoint-to-a-service}
 
 Slutpunkter kan bara läggas till i tjänster. En slutpunkt får inte finnas ensam. den måste vara associerad med en tjänst.
 
@@ -33,13 +32,13 @@ Slutpunkter kan bara läggas till i tjänster. En slutpunkt får inte finnas ens
 1. Välj den typ av slutpunkt som ska läggas till i listan på fliken Slutpunkter och klicka sedan på Lägg till.
 1. Beroende på slutpunktstypen konfigurerar du ytterligare slutpunktsinställningar.
 
-   [Slutpunktsinställningar för bevakad mapp](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md#watched-folder-endpoint-settings)
+[Slutpunktsinställningar för bevakad mapp](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md#watched-folder-endpoint-settings)
 
-   [Inställningar för e-postslutpunkt](/help/forms/using/admin-help/configuring-email-endpoints.md#email-endpoint-settings)
+[Inställningar för e-postslutpunkt](/help/forms/using/admin-help/configuring-email-endpoints.md#email-endpoint-settings)
 
-   [Konfigurera slutpunkter för Aktivitetshanteraren](/help/forms/using/admin-help/configuring-task-manager-endpoints.md#configuring-task-manager-endpoints)
+[Konfigurera slutpunkter för Aktivitetshanteraren](/help/forms/using/admin-help/configuring-task-manager-endpoints.md#configuring-task-manager-endpoints)
 
-   [Tar bort slutpunktsinställningar](/help/forms/using/admin-help/configuring-remoting-endpoints.md#remoting-endpoint-settings)
+[Tar bort slutpunktsinställningar](/help/forms/using/admin-help/configuring-remoting-endpoints.md#remoting-endpoint-settings)
 
 1. Klicka på Lägg till
 
@@ -74,4 +73,3 @@ Du kan även utföra den här uppgiften från sidan Tjänsthantering genom att m
 
 1. I administrationskonsolen klickar du på Tjänster > Program och tjänster > Endpoint Management.
 1. Markera kryssrutan för slutpunkten som ska tas bort på sidan Slutpunktshantering och klicka på Ta bort. Slutpunkten visas inte längre.
-

@@ -1,8 +1,8 @@
 ---
 title: AEM Forms dataintegrering
-seo-title: AEM Forms dataintegrering
+seo-title: AEM Forms Data Integration
 description: Med dataintegrering kan ni integrera AEM Forms med olika datakällor och skapa formulärdatamodell för att skapa och arbeta med adaptiva formulär och interaktiv kommunikation.
-seo-description: Med dataintegrering kan ni integrera AEM Forms med olika datakällor och skapa formulärdatamodell för att skapa och arbeta med adaptiva formulär och interaktiv kommunikation.
+seo-description: Data Integration lets you integrate AEM Forms with disparate data sources and create form data model to create and work with adaptive forms and interactive communications.
 uuid: 01df045e-1b26-437c-9674-fd223ecd5097
 contentOwner: vishgupt
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,16 +10,15 @@ topic-tags: integration
 discoiquuid: e397c6ce-d73f-4183-8445-1897a8906960
 docset: aem65
 feature: Form Data Model
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: dd1146e4-952d-4dfa-8084-46c6096c4177
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '521'
 ht-degree: 0%
 
 ---
 
-
-# [!DNL AEM Forms] Dataintegrering  {#aem-forms-data-integration}
+# [!DNL AEM Forms] Dataintegrering {#aem-forms-data-integration}
 
 ![](do-not-localize/data-integeration.png)
 
@@ -33,7 +32,7 @@ Ett distribuerat modulärt system har sina fördelar, men utmaningen består i a
 
 ![aem-forms-data-integeration](assets/aem-forms-data-integeration.png)
 
-[!DNL AEM Forms] Med dataintegrering kan du konfigurera och ansluta olika datakällor med  [!DNL AEM Forms]. Det ger ett intuitivt användargränssnitt för att skapa ett enhetligt datarepresentationsschema för affärsenheter och tjänster över anslutna datakällor. Den enhetliga representationen kallas för en formulärdatamodell, ett tillägg till JSON-schema. Enheterna i en formulärdatamodell kallas datamodellsobjekt. Med en formulärdatamodell kan du:
+[!DNL AEM Forms] Med dataintegrering kan du konfigurera och ansluta olika datakällor med [!DNL AEM Forms]. Det ger ett intuitivt användargränssnitt för att skapa ett enhetligt datarepresentationsschema för affärsenheter och tjänster över anslutna datakällor. Den enhetliga representationen kallas för en formulärdatamodell, ett tillägg till JSON-schema. Enheterna i en formulärdatamodell kallas datamodellsobjekt. Med en formulärdatamodell kan du:
 
 * Få åtkomst till datamodellsobjekt, egenskaper och tjänster från anslutna datakällor.
 * Skapa anpassade datamodellsobjekt och egenskaper
@@ -45,7 +44,7 @@ När du har skapat en formulärdatamodell kan du använda den i olika anpassning
 * Skapa anpassningsbara formulär och interaktiv kommunikation baserat på formulärdatamodell
 * Förifyll adaptiva formulär och interaktiv kommunikation från konfigurerade datakällor
 * Anropa datakälltjänster/åtgärder med hjälp av anpassningsbara formulärregler
-* Skriv anpassade formulärdata till datakällor
+* Skriv data från anpassningsbara formulär till datakällor
 
 ## Kom igång med dataintegrering {#get-started-with-data-integration}
 
@@ -59,4 +58,3 @@ Läs följande för att komma igång, förstå och implementera dataintegrering.
 * [Skapa formulärdatamodell](../../forms/using/create-form-data-models.md)
 * [Arbeta med formulärdatamodell](../../forms/using/work-with-form-data-model.md)
 * [Använd formulärdatamodell](../../forms/using/using-form-data-model.md)
-

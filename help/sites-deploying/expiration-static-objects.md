@@ -1,8 +1,8 @@
 ---
 title: Förfallotid för statiska objekt
-seo-title: Förfallotid för statiska objekt
+seo-title: Expiration of Static Objects
 description: Lär dig hur du konfigurerar AEM så att statiska objekt inte förfaller (under en rimlig tidsperiod).
-seo-description: Lär dig hur du konfigurerar AEM så att statiska objekt inte förfaller (under en rimlig tidsperiod).
+seo-description: Learn how to configure AEM so that static objects do not expire (for a reasonable period of time).
 uuid: ee019a3d-4133-4d40-98ec-e0914b751fb3
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,14 +10,13 @@ topic-tags: configuring
 content-type: reference
 discoiquuid: 73f37b3c-5dbe-4132-bb60-daa8de871884
 feature: Configuring
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: bfd5441c-19cc-4fa8-b597-b1221465f75d
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '437'
+source-wordcount: '414'
 ht-degree: 0%
 
 ---
-
 
 # Förfallotid för statiska objekt{#expiration-of-static-objects}
 
@@ -28,7 +27,7 @@ Detta har följande effekt:
 * Avlastar begäranden från serverinfrastrukturen.
 * Förbättrar sidinläsningens prestanda när webbläsaren cachelagrar objekt i webbläsarens cache.
 
-Förfallotider anges av HTTP-standarden för filers förfallodatum (se t.ex. kapitel 14.21 i [RFC 2616](https://www.ietf.org/rfc/rfc2616.txt) &quot; Hypertext Transfer Protocol — HTTP 1.1&quot;). I den här standarden används rubriken för att tillåta klienter att cachelagra objekt tills de betraktas som inaktuella. sådana objekt cachelagras under den angivna tiden utan att någon statuskontroll görs på den ursprungliga servern.
+Förfallodatum anges av HTTP-standarden med avseende på &quot;förfallodatum&quot; för filer (se t.ex. kapitel 14.21 i [RFC 2616](https://www.ietf.org/rfc/rfc2616.txt) &quot; Hypertext Transfer Protocol - HTTP 1.1&quot;). I den här standarden används rubriken för att tillåta klienter att cachelagra objekt tills de betraktas som inaktuella. sådana objekt cachelagras under den angivna tiden utan att någon statuskontroll görs på den ursprungliga servern.
 
 >[!NOTE]
 >
@@ -40,7 +39,7 @@ Alla filer som inte är dynamiska och som inte ändras över tid kan och bör ca
 
 >[!CAUTION]
 >
->Du måste vara försiktig när du definierar den tidsperiod under vilken ett objekt anses vara uppdaterat. Eftersom det inte finns någon *kontroll förrän den angivna tidsperioden har gått ut* kan klienten visa gammalt innehåll från cachen.
+>Du måste vara försiktig när du definierar den tidsperiod under vilken ett objekt anses vara uppdaterat. Som det finns *ingen kontroll förrän den angivna tidsperioden har gått ut* kan klienten presentera gammalt innehåll från cachen.
 
 1. **För en Author-instans:**
 
@@ -76,9 +75,9 @@ Alla filer som inte är dynamiska och som inte ändras över tid kan och bör ca
    </Location>
    ```
 
-   Detta gör att det mellanliggande cacheminnet (t.ex. webbläsarens cacheminne) kan lagra CSS-, Javascript-, PNG- och GIF-filer i upp till en dag i klientcachen. Det här exemplet visar globala inställningar för allt under `/content` och `/etc/designs`, men du bör göra det mer detaljerat.
+   Detta gör att det mellanliggande cacheminnet (t.ex. webbläsarens cacheminne) kan lagra CSS-, Javascript-, PNG- och GIF-filer i upp till en dag i klientcachen. I det här exemplet visas globala inställningar för allt nedan `/content` och `/etc/designs`bör du göra det mer granulärt.
 
-   Beroende på hur ofta webbplatsen uppdateras kan du även överväga att cachelagra HTML-sidor. En rimlig tidsperiod är 1 timme:
+   Beroende på hur ofta webbplatsen uppdateras kan du även cachelagra HTML-sidor. En rimlig tidsperiod är 1 timme:
 
    ```xml
    <Location /content>
@@ -86,4 +85,4 @@ Alla filer som inte är dynamiska och som inte ändras över tid kan och bör ca
    </Location>
    ```
 
-När du har konfigurerat de statiska objekten kan du kontrollera att inga (onödiga) begäranden görs för statiska objekt genom att skanna `request.log` när du väljer sidor som innehåller sådana objekt.
+När du har konfigurerat statiska objekt kan du skanna `request.log`, när du markerar sidor som innehåller sådana objekt, för att bekräfta att inga (onödiga) begäranden görs för statiska objekt.

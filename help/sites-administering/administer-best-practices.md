@@ -1,22 +1,21 @@
 ---
 title: Bästa praxis
-seo-title: Bästa praxis
+seo-title: Best Practices
 description: Här hittar du de bästa arbetssätten som skapats av Adobe tekniker och konsultteam för att hjälpa administratörerna att komma igång.
-seo-description: Här hittar du de bästa arbetssätten som skapats av Adobe tekniker och konsultteam för att hjälpa administratörerna att komma igång.
+seo-description: Find best practices compiled by Adobe engineering and consulting teams to help administrators get up and running.
 uuid: 862d4fcf-ca61-4228-9344-b95a49b59b32
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 discoiquuid: 8f6468a0-7721-454f-9334-c449968b8fe7
-translation-type: tm+mt
-source-git-commit: e594c53b2a26c1c9e484ac07220dc89c283cf7da
+exl-id: 576d87c8-cc96-45a0-b3cf-defb440babbb
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '524'
 ht-degree: 2%
 
 ---
-
 
 # Bästa praxis{#best-practices}
 
@@ -37,7 +36,7 @@ Specifika dokument beskrivs och länkas till i de tabeller som följer.
 
 ## Assets {#assets}
 
-De bästa sätten att använda Assets, inklusive Dynamic Media-funktionen och Dynamic Media Classic-integrering, beskrivs i följande avsnitt:
+De effektivaste strategierna kring Assets, inklusive Dynamic Media och Dynamic Media Classic-integrering, beskrivs i följande avsnitt:
 
 <table>
  <tbody>
@@ -58,12 +57,12 @@ De bästa sätten att använda Assets, inklusive Dynamic Media-funktionen och Dy
   </tr>
   <tr>
    <td>Alternativ för bildförinställningar</td>
-   <td>Om <a href="/help/assets/managing-image-presets.md#understanding-image-presets">bildförinställningar</a> och <a href="/help/assets/managing-image-presets.md#image-preset-options">god praxis för bildförinställningar</a></td>
-   <td>I dokumentationen om <a href="/help/assets/managing-image-presets.md">Hantera bildförinställningar</a> beskrivs vilka bildförinställningar som är och de bästa sätten att välja bildförinställningar.</td>
+   <td>Förstå <a href="/help/assets/managing-image-presets.md#understanding-image-presets">bildförinställningar</a> och <a href="/help/assets/managing-image-presets.md#image-preset-options">god praxis för bildförinställningar</a></td>
+   <td>Som en del av dokumentationen om <a href="/help/assets/managing-image-presets.md">Hantera bildförinställningar</a>beskriver de här avsnitten vilka bildförinställningar som är och de bästa sätten att välja alternativ för bildförinställningar.</td>
   </tr>
   <tr>
    <td>Dynamic Media jämfört med direktintegrering med Scene7</td>
-   <td><a href="/help/sites-administering/scene7.md#aem-scene-integration-versus-dynamic-media">Scene7/AEM-integrering jämfört med Dynamic Media</a></td>
+   <td><a href="/help/sites-administering/scene7.md#aem-scene-integration-versus-dynamic-media">Integrering med Scene7/AEM jämfört med Dynamic Media</a></td>
    <td>Beskriver när det är bäst att använda Dynamic Media-lösningen, när S7 ska integreras med AEM eller när båda ska användas.</td>
   </tr>
  </tbody>
@@ -107,4 +106,3 @@ Hantering och redigering av webbplatsinnehåll har några beprövade metoder:
   </tr>
  </tbody>
 </table>
-

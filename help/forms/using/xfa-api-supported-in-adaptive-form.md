@@ -1,22 +1,21 @@
 ---
 title: XFA-stöd i XDP-baserade adaptiva formulär
-seo-title: XFA-stöd i XDP-baserade adaptiva formulär
+seo-title: XFA support in XDP-based adaptive forms
 description: Visar XFA-händelser, egenskaper, skript och validering som stöds i adaptiva formulär.
-seo-description: Visar XFA-händelser, egenskaper, skript och validering som stöds i adaptiva formulär.
+seo-description: Lists supported XFA events, properties, scripts, and validation in adaptive forms.
 uuid: 75d3c292-cfed-438f-afdb-4071d95a08b7
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 05303b29-9058-4723-b134-4ba605fe40c7
 docset: aem65
 feature: Adaptive Forms
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 255be73f-3169-457c-aaa7-a2fb59f1f2cd
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '702'
+source-wordcount: '683'
 ht-degree: 5%
 
 ---
-
 
 # XFA-stöd i XDP-baserade adaptiva formulär{#xfa-support-in-xdp-based-adaptive-forms}
 
@@ -32,7 +31,7 @@ När ett anpassat formulär skapas baserat på en XDP-fil fylls egenskaperna, h�
 
 I den här artikeln listas XFA-händelser, egenskaper och valideringar som stöds i anpassningsbara formulär och hur du åsidosätter dem i anpassningsbara formulär.
 
-## XFA-element som stöds och deras mappning i adaptiva former {#supported-xfa-elements-and-their-mapping-in-adaptive-forms-br}
+## XFA-element som stöds och deras mappning i adaptiva formulär {#supported-xfa-elements-and-their-mapping-in-adaptive-forms-br}
 
 ### fält {#fields}
 
@@ -142,7 +141,7 @@ Följande tabell visar hur olika XFA-skript som definieras i XDP-filerna fungera
    <td><p>Mappad till egenskapen short description i adaptiv form.</p> </td>
   </tr>
   <tr>
-   <td><p>caption<em> (alla fälttyper)</em></p> </td>
+   <td><p>bildtext<em> (alla fälttyper)</em></p> </td>
    <td><p>Mappad till egenskapen Title i adaptiv form.</p> </td>
   </tr>
   <tr>
@@ -154,27 +153,27 @@ Följande tabell visar hur olika XFA-skript som definieras i XDP-filerna fungera
    <td><p>Mappad till värdeegenskap i adaptiv form.</p> </td>
   </tr>
   <tr>
-   <td><p>objekt<em> (listruta, kryssruta)</em></p> </td>
+   <td><p>objekt<em> (Listruta, kryssruta)</em></p> </td>
    <td><p>Mappad till alternativegenskap i adaptiv form. Du kan åsidosätta den med hjälp av uttrycket Alternativ.</p> </td>
   </tr>
   <tr>
-   <td><p>maxChar<em> (textfält)</em></p> </td>
+   <td><p>maxChar<em> (Textfält)</em></p> </td>
    <td><p>Mappas till egenskapen Maximum för tillåtna tecken i adaptiv form.</p> </td>
   </tr>
   <tr>
-   <td><p>multiline<em> (textfält)</em></p> </td>
+   <td><p>flerradig<em> (Textfält)</em></p> </td>
    <td><p>Mappad till egenskapen Tillåt flera rader i adaptiv form.</p> </td>
   </tr>
   <tr>
-   <td><p>fracDigit<em> (numeriskt fält, decimalfält)</em></p> </td>
+   <td><p>fracDigit<em> (Numeriskt fält, decimalfält)</em></p> </td>
    <td><p>Mappas till egenskapen Frac digits i adaptiv form.</p> </td>
   </tr>
   <tr>
-   <td><p>leadDigit<em> (numeriskt fält, decimalfält)</em></p> </td>
+   <td><p>leadDigit<em> (Numeriskt fält, decimalfält)</em></p> </td>
    <td><p>Mappas till egenskapen Leadsiffror i adaptiv form.</p> </td>
   </tr>
   <tr>
-   <td><p>multiSelect<em> (listruta)</em></p> </td>
+   <td><p>multiSelect<em> (Listruta)</em></p> </td>
    <td><p>Mappad till Tillåter flera markeringsegenskaper i adaptiv form.</p> </td>
   </tr>
  </tbody>
@@ -204,7 +203,7 @@ Följande tabell visar hur olika XFA-skript som definieras i XDP-filen fungerar 
   </tr>
   <tr>
    <td><p>validationState </p> </td>
-   <td><p>Skriptet körs under körning och kan inte åsidosättas i anpassningsbar form.<br /> </p> </td>
+   <td><p>Det här skriptet körs under körning och kan inte åsidosättas i adaptiv form.<br /> </p> </td>
   </tr>
   <tr>
    <td><p>exit </p> </td>
@@ -269,4 +268,3 @@ Följande tabell visar hur XFA-valideringar mappas till valideringar i adaptiva 
 >[!NOTE]
 >
 >Du kan inte åsidosätta den obligatoriska egenskapen för alternativknappar för adaptiva formulär och kryssrutegrupper som är bundna till XFA-kontrollknappar.
-

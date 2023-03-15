@@ -4,8 +4,8 @@ description: AEM Content and Commerce Release Notes 2021
 exl-id: 7e61a75d-6b35-46ee-b88a-444c10b2708f
 source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '978'
+ht-degree: 7%
 
 ---
 
@@ -35,7 +35,7 @@ ht-degree: 0%
 
 * Reaktionsbaserade komponenter som finns som nPM-paket. Detta gör att utvecklare kan använda React Components-paketet som ett beroende för ett nytt React-projekt för att anpassa befintliga komponenter eller utveckla nya React-baserade komponenter.
 
-* Anpassningen av GraphQL-frågan har förenklats. Detta gör att utvecklare kan anpassa CIF-kärnkomponenter med mindre kod.
+* Anpassningen av GraphQL-frågor förenklades. Detta gör att utvecklare kan anpassa CIF-kärnkomponenter med mindre kod.
 
 ## Releasedatum: Oktober 2019
 
@@ -73,7 +73,7 @@ ht-degree: 0%
 
 * Koppling till flera kataloger så att författare kan binda flera kataloger i AEM produktkonsol. Författare kan också redigera och visa katalogens bindningsegenskaper efter att bindningen har skapats.
 
-* Reaktionsbaserad kundsidoutcheckning och Mini Cart med GraphQL som stöd för en komplett grundläggande shoppingresa.
+* Reaktionsbaserad kundsidoutcheckning och Mini Cart med GraphQL som stöd för en komplett shoppingresa.
 
 * Utcheckningskomponenten innehåller adressformulär, betalningsval och val av leveransmetod.
 
@@ -95,9 +95,9 @@ ht-degree: 0%
 
 * CIF-komponenter som inte är kopplade till den lokala CSS-formateringen så att utvecklare kan använda valfri CSS-formatering.
 
-* Funktion för flera butiker/sajter som tillåter användning av CIF Core-komponenter på flera AEM webbplatsstrukturer och gör det möjligt för den underliggande GraphQL-klientimplementeringen att ansluta till olika Adobe Commerce-butiksvyer.
+* Funktion för flera butiker/sajter som tillåter användning av CIF Core-komponenter på flera AEM webbplatsstrukturer och gör det möjligt för den underliggande GraphQL-klientimplementeringen att ansluta till olika Adobe Commerce butiks-/butiksvyer.
 
-* GraphQL-cachelagring aktiverad för vissa GraphQL-frågor via HTTP-GET för att minska svarstiden.
+* GraphQL-cachning är aktiverat för vissa GraphQL-frågor via HTTP GET för att minska svarstiden.
 
 * Produktbeskrivningsvyn är aktiverad i AEM.
 

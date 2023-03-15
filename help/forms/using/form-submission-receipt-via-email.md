@@ -1,36 +1,35 @@
 ---
 title: Skicka en bekräftelse på att formulär har skickats via e-post
-seo-title: Skicka en bekräftelse på att formulär har skickats via e-post
+seo-title: Sending a form submission acknowledgement via email
 description: I AEM Forms kan du konfigurera e-poståtgärden som skickar en bekräftelse till en användare när formuläret skickas.
-seo-description: I AEM Forms kan du konfigurera e-poståtgärden som skickar en bekräftelse till en användare när formuläret skickas.
+seo-description: AEM Forms allows you to configure the email submit action that sends an acknowledgement to a user on submitting the form.
 uuid: c80b1ef4-8fe3-48e0-8fc6-3032dc022a38
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 discoiquuid: 574de3d5-69ba-4e2f-a8ab-c59f357e4386
 docset: aem65
-translation-type: tm+mt
-source-git-commit: acc2a3977353386d7e1dfd1344a61d78812fe3fc
+exl-id: bca4044a-18a9-4b97-92de-eff1e9a840f9
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '528'
+source-wordcount: '500'
 ht-degree: 0%
 
 ---
-
 
 # Skicka en bekräftelse på att formulär har skickats via e-post {#sending-a-form-submission-acknowledgement-via-email}
 
 ## Anpassad inlämning av formulärdata {#adaptive-form-data-submission}
 
-Med adaptiva formulär kan du skicka formulärdata till olika slutpunkter med hjälp av flera färdiga [skicka-åtgärder](../../forms/using/configuring-submit-actions.md)-arbetsflöden.
+Adaptiva formulär har flera färdiga funktioner [skicka funktionsmakron](../../forms/using/configuring-submit-actions.md) arbetsflöden för att skicka formulärdata till olika slutpunkter.
 
-Till exempel skickar åtgärden **[!UICONTROL Send email]** ett e-postmeddelande när ett anpassat formulär har skickats. Den kan även konfigureras för att skicka formulärdata och PDF-filen i e-postmeddelandet.
+Till exempel **[!UICONTROL Send email]** skicka ett e-postmeddelande när ett anpassat formulär har skickats. Den kan även konfigureras för att skicka formulärdata och PDF i e-postmeddelandet.
 
 I den här artikeln beskrivs stegen för att aktivera e-poståtgärden för ett anpassat formulär och olika konfigurationer som tillhandahålls.
 
 >[!NOTE]
 >
->Du kan också använda alternativet **[!UICONTROL Send PDF via email]** för att skicka det ifyllda formuläret via e-post som en bifogad PDF-fil. Konfigurationsalternativen som är tillgängliga för den här åtgärden är samma som alternativen som är tillgängliga för åtgärden **[!UICONTROL Send email]**. Åtgärden E-post-PDF är bara tillgänglig för XFA-baserade adaptiva formulär
+>Du kan också använda **[!UICONTROL Send PDF via email]** möjlighet att skicka det ifyllda formuläret via e-post som en bifogad fil i PDF. Konfigurationsalternativen som är tillgängliga för den här åtgärden är samma som de alternativ som är tillgängliga för **[!UICONTROL Send email]** åtgärd. Åtgärden E-post PDF är bara tillgänglig för XFA-baserade adaptiva formulär
 
 ## Skicka e-poståtgärd {#email-action}
 
@@ -38,51 +37,51 @@ Med åtgärden Skicka e-post kan en författare automatiskt skicka e-post till e
 
 >[!NOTE]
 >
->Om du vill använda åtgärden Skicka e-post måste du konfigurera AEM e-posttjänst enligt beskrivningen i [Konfigurera e-posttjänsten](/help/sites-administering/notification.md#configuring-the-mail-service).
+>Om du vill använda åtgärden Skicka e-post måste du konfigurera tjänsten AEM e-post enligt beskrivningen i [Konfigurera e-posttjänsten](/help/sites-administering/notification.md#configuring-the-mail-service).
 
-### Aktivera åtgärden Skicka e-post på ett anpassat formulär {#enabling-email-action-on-an-adaptive-form}
+### Aktivera åtgärden Skicka e-post i ett anpassat formulär {#enabling-email-action-on-an-adaptive-form}
 
-1. Öppna ett anpassat formulär i **[!UICONTROL edit]**-läge.
+1. Öppna ett anpassat formulär i **[!UICONTROL edit]** läge.
 
-1. På fliken **[!UICONTROL Content]** trycker du på **[!UICONTROL Form Container]** och på ![configure](assets/configure-icon.svg) för att visa de adaptiva formuläregenskaperna.
+1. I **[!UICONTROL Content]** flik, tryck **[!UICONTROL Form Container]** och trycka ![konfigurera](assets/configure-icon.svg) för att visa anpassade formuläregenskaper.
 
-1. I avsnittet **[!UICONTROL Submission]** väljer du **[!UICONTROL Send email]** i listrutan **[!UICONTROL Submit Action]**.
+1. I **[!UICONTROL Submission]** avsnitt, markera **[!UICONTROL Send email]** från **[!UICONTROL Submit Action]** nedrullningsbar lista.
 
    ![Skicka funktionsmakron](assets/submission-actions.png)
 
-1. Ange giltiga e-post-ID:n i fälten **[!UICONTROL To]**, **[!UICONTROL CC]** och **[!UICONTROL BCC]**.
+1. Ange giltiga e-post-ID:n i **[!UICONTROL To]**, **[!UICONTROL CC]** och **[!UICONTROL BCC]** fält.
 
-   Ange ämne och e-postmeddelandets brödtext i fälten **[!UICONTROL Subject]** och **[!UICONTROL Email Template]**.
+   Ange ämne och brödtext för e-postmeddelandet i dialogrutan **[!UICONTROL Subject]** och **[!UICONTROL Email Template]** fält.
 
-   Du kan också ange variabelplatshållare i fälten. I så fall bearbetas fältvärdena när formuläret har skickats av en slutanvändare. Mer information finns i [Använda namn på adaptiva formulärfält för att dynamiskt skapa e-postinnehåll](../../forms/using/form-submission-receipt-via-email.md#p-using-adaptive-form-field-names-to-dynamically-create-email-content-p).
+   Du kan också ange variabelplatshållare i fälten. I så fall bearbetas fältvärdena när formuläret har skickats av en slutanvändare. Mer information finns i [Använda adaptiva formulärfältsnamn för att dynamiskt skapa e-postinnehåll](../../forms/using/form-submission-receipt-via-email.md#p-using-adaptive-form-field-names-to-dynamically-create-email-content-p).
 
    Välj **[!UICONTROL Include attachments]** om formuläret innehåller bifogade filer och du vill bifoga dessa filer i e-postmeddelandet.
 
    >[!NOTE]
    >
-   >Om du väljer alternativet **[!UICONTROL Send PDF via Email]** måste du markera alternativet Inkludera bifogade filer.
+   >Om du väljer **[!UICONTROL Send PDF via Email]** måste du markera alternativet Inkludera bifogade filer.
 
-1. Klicka på ![spara](assets/save_icon.svg) för att spara ändringarna.
+1. Klicka ![spara](assets/save_icon.svg) för att spara ändringarna.
 
 ### Använda adaptiva formulärfältsnamn för att dynamiskt skapa e-postinnehåll {#using-adaptive-form-field-names-to-dynamically-create-email-content}
 
 Fältnamnen i ett adaptivt formulär kallas platshållare som ersätts med värdet i det fältet när användaren skickar formuläret.
 
-I **[!UICONTROL Send email]**-åtgärden kan du använda platshållare som bearbetas när åtgärden utförs. Det innebär att rubrikerna i e-postmeddelandet (till exempel **[!UICONTROL To]**, **[!UICONTROL CC]**, **[!UICONTROL BCC]** och **[!UICONTROL Subject]**) genereras när användaren skickar formuläret.
+I **[!UICONTROL Send email]** kan du använda platshållare som bearbetas när åtgärden utförs. Det betyder att e-postmeddelandets rubriker (till exempel **[!UICONTROL To]**, **[!UICONTROL CC]**, **[!UICONTROL BCC]**, **[!UICONTROL Subject]**) genereras när användaren skickar formuläret.
 
-Om du vill definiera en platshållare anger du `${<field name>}` i ett fält efter att du har valt **[!UICONTROL Send email]** som Skicka-åtgärd.
+Om du vill definiera en platshållare anger du `${<field name>}` i ett fält efter markering **[!UICONTROL Send email]** som åtgärden Skicka.
 
-Om formuläret till exempel innehåller fältet **[!UICONTROL Email address]**, med namnet `email_addr`, för att hämta användarens e-post-ID kan du ange följande i fälten **[!UICONTROL To]**, **[!UICONTROL CC]** eller **[!UICONTROL BCC]**.
+Om formuläret till exempel innehåller **[!UICONTROL Email address]** fält, namngivna `email_addr`för att hämta användarens e-post-ID kan du ange följande i **[!UICONTROL To]**, **[!UICONTROL CC]**, eller **[!UICONTROL BCC]** fält.
 
 `${email_addr}`
 
-När en användare skickar formuläret skickas ett e-postmeddelande till det e-post-ID som anges i fältet `email_addr` i formuläret.
+När en användare skickar formuläret skickas ett e-postmeddelande till det e-post-ID som anges i `email_addr` formulärfält.
 
 >[!NOTE]
 >
->Du hittar namnet på ett fält i dialogrutan **[!UICONTROL Edit]** för fältet.
+>Du hittar namnet på ett fält i **[!UICONTROL Edit]** för fältet.
 
-Variabelplatshållare kan också användas i fälten **[!UICONTROL Subject]** och **[!UICONTROL Email Template]**.
+Variabelplatshållare kan också användas i **[!UICONTROL Subject]** och **[!UICONTROL Email Template]** fält.
 
 Till exempel:
 
@@ -97,4 +96,3 @@ Till exempel:
 >[!NOTE]
 >
 >Fält i upprepningsbara paneler kan inte användas som variabla platshållare.
-

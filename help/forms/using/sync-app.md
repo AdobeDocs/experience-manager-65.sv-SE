@@ -1,8 +1,8 @@
 ---
 title: Synkroniserar appen
-seo-title: Synkroniserar appen
+seo-title: Synchronizing the app
 description: Synkronisera AEM Forms-appen på din mobila enhet med AEM Forms-servern.
-seo-description: Synkronisera AEM Forms-appen på din mobila enhet med AEM Forms-servern.
+seo-description: Synchronize the AEM Forms app on your mobile device with the AEM Forms server.
 uuid: 3a6fb2d5-2ec4-4f78-a42a-fc921b66238e
 contentOwner: robhagat
 content-type: reference
@@ -10,14 +10,13 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 discoiquuid: 393e4332-a2cc-42c8-a18f-3035addbcfaa
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+exl-id: 6bb1d6df-b322-4112-bc25-6300877ee146
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '369'
 ht-degree: 0%
 
 ---
-
 
 # Synkroniserar appen{#synchronizing-the-app}
 

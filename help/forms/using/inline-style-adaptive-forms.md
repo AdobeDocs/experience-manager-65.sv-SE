@@ -1,32 +1,31 @@
 ---
 title: Textbunden formatering av adaptiva formulärkomponenter
-seo-title: Inline CSS-egenskaper för adaptiva formulärkomponenter
+seo-title: Inline CSS properties for adaptive form components
 description: Du kan använda anpassade format på ett anpassat formulär, men du kan också använda infogade CSS-egenskaper på enskilda komponenter i ett anpassat formulär.
-seo-description: Du kan använda anpassade format på ett anpassat formulär, men du kan också använda infogade CSS-egenskaper på enskilda komponenter i ett anpassat formulär.
+seo-description: While you can apply custom styles on an adaptive form, you can also apply inline CSS properties on individual components of an adaptive form.
 uuid: e863780e-2250-4bea-9569-22be5638d54e
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: 21dec713-c76d-408b-baea-fc585377b429
 docset: aem65
 feature: Adaptive Forms
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 67cfecb8-c31d-4192-904d-7bfaa1a31ea5
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '558'
+source-wordcount: '525'
 ht-degree: 1%
 
 ---
 
-
 # Textbunden formatering av adaptiva formulärkomponenter {#inline-styling-of-adaptive-form-components}
 
-Du kan definiera det övergripande utseendet och formatet för ett anpassat formulär genom att ange format med [temaredigeraren](../../forms/using/themes.md). Du kan också använda infogade CSS-format på enskilda adaptiva formulärkomponenter och förhandsgranska ändringarna direkt. Inline-format åsidosätter format som finns i temat.
+Du kan definiera det övergripande utseendet och formatet för ett anpassat formulär genom att ange format med [temaredigerare](../../forms/using/themes.md). Du kan också använda infogade CSS-format på enskilda adaptiva formulärkomponenter och förhandsgranska ändringarna direkt. Inline-format åsidosätter format som finns i temat.
 
-## Använd infogade CSS-egenskaper {#apply-inline-css-properties}
+## Använda infogade CSS-egenskaper {#apply-inline-css-properties}
 
 Så här lägger du till infogade format i en komponent:
 
-1. Öppna formuläret i formulärredigeraren och ändra läget till formateringsläge. Om du vill ändra läge till formateringsläge trycker du på ![arbetsytelistrutan](assets/canvas-drop-down.png) > **Format** i sidverktygsfältet.
+1. Öppna formuläret i formulärredigeraren och ändra läget till formateringsläge. Om du vill ändra läge till formateringsläge trycker du på ![canvas-drop-down](assets/canvas-drop-down.png) > **Stil**.
 1. Markera en komponent på sidan och tryck på redigeringsknappen ![edit-button](assets/edit-button.png). Stilegenskaper öppnas i sidofältet.
 
    Du kan också välja komponenter från formulärhierarkiträdet i sidlisten. Formulärhierarkiträdet är tillgängligt som formulärobjekt i sidlisten.
@@ -45,7 +44,7 @@ Så här lägger du till infogade format i en komponent:
    * Avancerat (Gör att du kan skriva anpassad CSS för komponenten)
 
 1. På samma sätt kan du använda format för andra delar av en komponent, till exempel widget, bildtext och Hjälp.
-1. Tryck på **Klar** för att bekräfta ändringarna eller **Avbryt** för att ignorera ändringarna.
+1. Tryck **Klar** för att bekräfta ändringarna eller **Avbryt** för att ignorera ändringarna.
 
 ## Exempel: infogade format för en fältkomponent {#example-inline-styles-for-a-field-component}
 
@@ -107,4 +106,3 @@ Följ stegen ovan för att markera och formatera andra komponenter, till exempel
 >[!NOTE]
 >
 >Stilegenskaperna varierar beroende på vilken komponent du väljer.
-

@@ -1,37 +1,36 @@
 ---
 title: OSGi Events for Communities-komponenter
-seo-title: OSGi Events for Communities-komponenter
+seo-title: OSGi Events for Communities Components
 description: OSGi-händelser skickas som kan utlösa asynkrona avlyssnare
-seo-description: OSGi-händelser skickas som kan utlösa asynkrona avlyssnare
+seo-description: OSGi events are sent that can trigger asynchronous listeners
 uuid: 317e2add-689d-4c99-ae38-0703b6649cb7
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: 25b7ac08-6cdc-4dd5-a756-d6169b86f9ab
-translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+exl-id: 8049d797-e758-44c2-a89b-51d2b2fca8dc
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '679'
+source-wordcount: '665'
 ht-degree: 1%
 
 ---
 
-
-# OSGi Events för webbgruppskomponenter {#osgi-events-for-communities-components}
+# OSGi Events for Communities-komponenter  {#osgi-events-for-communities-components}
 
 ## Översikt {#overview}
 
 När medlemmar interagerar med communityfunktioner skickas OSGi-händelser som kan utlösa asynkrona avlyssnare, som meddelanden eller spel (poängsättning och märkning).
 
-En komponents [SocialEvent](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html)-instans registrerar händelserna som `actions` som inträffar för en `topic`. SocialEvent innehåller en metod för att returnera en `verb` som är associerad med åtgärden. Det finns en *n-1*-relation mellan `actions` och `verbs`.
+En komponents [SocialEvent](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html) -instansen registrerar händelserna som `actions` som inträffar för en `topic`. SocialEvent innehåller en metod för att returnera en `verb` som är associerad med åtgärden. Det finns en *n-1* relation mellan `actions` och `verbs`.
 
-Följande tabeller beskriver vilka `verbs` som är definierade för varje `topic` som är tillgängliga för användning för webbkomponenterna i den publicerade versionen.
+Följande tabeller beskriver webbkomponenterna i den publicerade versionen `verbs` definierad för varje `topic` som kan användas.
 
 ## Ämnen och verb {#topics-and-verbs}
 
-[Calendar ](calendar-basics-for-developers.md)
-ComponentSocialEvent  `topic`= com/adobe/cq/social/calendar
+[Kalenderkomponent](calendar-basics-for-developers.md)
+SocialEvent `topic`= com/adobe/cq/social/calendar
 
 | **Verb** | **Beskrivning** |
 |---|---|
@@ -40,8 +39,8 @@ ComponentSocialEvent  `topic`= com/adobe/cq/social/calendar
 | UPPDATERA | Medlemmens kalenderhändelse eller kommentar har redigerats |
 | DELETE | Medlemmens kalenderhändelse eller kommentar tas bort |
 
-[Comments ](essentials-comments.md)
-ComponentSocialEvent  `topic`= com/adobe/cq/social/comment
+[Komponenten Kommentarer](essentials-comments.md)
+SocialEvent `topic`= com/adobe/cq/social/comment
 
 | **Verb** | **Beskrivning** |
 |---|---|
@@ -50,8 +49,8 @@ ComponentSocialEvent  `topic`= com/adobe/cq/social/comment
 | UPPDATERA | Medlemmens kommentar har redigerats |
 | DELETE | Medlemmens kommentar har tagits bort |
 
-[File Library ](essentials-file-library.md)
-ComponentSocialEvent  `topic`= com/adobe/cq/social/fileLibrary
+[Filbibliotekskomponent](essentials-file-library.md)
+SocialEvent `topic`= com/adobe/cq/social/fileLibrary
 
 | **Verb** | **Beskrivning** |
 |---|---|
@@ -60,8 +59,8 @@ ComponentSocialEvent  `topic`= com/adobe/cq/social/fileLibrary
 | UPPDATERA | Medlemmen uppdaterar en mapp eller fil |
 | DELETE | Medlemmen tar bort en mapp eller fil |
 
-[Forum ](essentials-forum.md)
-ComponentSocialEvent  `topic`= com/adobe/cq/social/forum
+[Forum-komponent](essentials-forum.md)
+SocialEvent `topic`= com/adobe/cq/social/forum
 
 | **Verb** | **Beskrivning** |
 |---|---|
@@ -70,8 +69,8 @@ ComponentSocialEvent  `topic`= com/adobe/cq/social/forum
 | UPPDATERA | Ämnet eller svaret för en medlem redigeras |
 | DELETE | Ämnet eller svaret för en medlem tas bort |
 
-[Journal ](blog-developer-basics.md)
-ComponentSocialEvent  `topic`= com/adobe/cq/social/journal
+[Journalkomponent](blog-developer-basics.md)
+SocialEvent `topic`= com/adobe/cq/social/journal
 
 | **Verb** | **Beskrivning** |
 |---|---|
@@ -80,8 +79,8 @@ ComponentSocialEvent  `topic`= com/adobe/cq/social/journal
 | UPPDATERA | Medlemmens bloggartikel eller kommentar redigeras |
 | DELETE | Medlemmens bloggartikel eller kommentar tas bort |
 
-[QnA ](qna-essentials.md)
-ComponentSocialEvent  `topic` = com/adobe/cq/social/qna
+[QnA-komponent](qna-essentials.md)
+SocialEvent `topic` = com/adobe/cq/social/qna
 
 | **Verb** | **Beskrivning** |
 |---|---|
@@ -92,8 +91,8 @@ ComponentSocialEvent  `topic` = com/adobe/cq/social/qna
 | AVMARKERA | Medlemmens svar har avmarkerats |
 | DELETE | Medlemsens fråga eller svar tas bort |
 
-[Reviews ](reviews-basics.md)
-ComponentSocialEvent  `topic`= com/adobe/cq/social/review
+[Granskningskomponent](reviews-basics.md)
+SocialEvent `topic`= com/adobe/cq/social/review
 
 | **Verb** | **Beskrivning** |
 |---|---|
@@ -101,24 +100,24 @@ ComponentSocialEvent  `topic`= com/adobe/cq/social/review
 | UPPDATERA | Medlemmens granskning har redigerats |
 | DELETE | Medlemmens granskning har tagits bort |
 
-[Rating ](rating-basics.md)
-ComponentSocialEvent  `topic`= com/adobe/cq/social/tally
+[Klassificeringskomponent](rating-basics.md)
+SocialEvent `topic`= com/adobe/cq/social/tally
 
 | **Verb** | **Beskrivning** |
 |---|---|
 | LÄGG TILL KLASSIFICERING | Medlemmens innehåll har fått ett högre omdöme |
 | TA BORT KLASSIFICERING | Medlemmens innehåll har nedgraderats |
 
-[Röstande ](essentials-voting.md)
-ComponentSocialEvent  `topic`= com/adobe/cq/social/tally
+[Röstkomponent](essentials-voting.md)
+SocialEvent `topic`= com/adobe/cq/social/tally
 
 | **Verb** | **Beskrivning** |
 |---|---|
 | LÄGG TILL RÖST | Medlemmens innehåll har röstats upp |
 | TA BORT RÖSTNING | Medlemmens innehåll har inte röstats ned |
 
-**Moderation-enabled**
-ComponentsSocialEvent  `topic`= com/adobe/cq/social/moderation
+**Modereringsaktiverade komponenter**
+SocialEvent `topic`= com/adobe/cq/social/moderation
 
 | **Verb** | **Beskrivning** |
 |---|---|
@@ -131,9 +130,9 @@ ComponentsSocialEvent  `topic`= com/adobe/cq/social/moderation
 
 ## Händelser för anpassade komponenter {#events-for-custom-components}
 
-För en anpassad komponent måste den abstrakta klassen [SocialEvent](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html) utökas till d för att spela in komponentens händelser som `actions`som inträffar för en `topic`.
+För en anpassad komponent [Den abstrakta klassen SocialEvent](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html) måste utökas d för att spela in komponentens händelser som `actions`som inträffar för en `topic`.
 
-Den anpassade händelsen åsidosätter metoden `getVerb()` så att en lämplig `verb`returneras för varje `action`. `verb` som returneras för en åtgärd kan vara en vanlig åtgärd (till exempel `POST`) eller en som är anpassad för komponenten (till exempel `ADD RATING`). Det finns en *n-1*-relation mellan `actions`och `verbs`.
+Den anpassade händelsen skulle åsidosätta metoden `getVerb()` så att `verb`returneras för varje `action`. The `verb` som returneras för en åtgärd kan vara en vanlig åtgärd (t.ex. `POST`) eller en som är specialiserad på komponenten (till exempel `ADD RATING`). Det finns en *n-1* relation mellan `actions`och `verbs`.
 
 >[!NOTE]
 >
@@ -141,9 +140,9 @@ Den anpassade händelsen åsidosätter metoden `getVerb()` så att en lämplig `
 
 ### Pseudokod för anpassad komponenthändelse {#pseudo-code-for-custom-component-event}
 
-[org.osgi.service.event.Event](https://osgi.org/javadoc/r4v41/org/osgi/service/event/Event.html); 
-[com.adobe.cq.social.scf.core.SocialEvent](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html); 
-[com.adobe.granite.activitystreams.ObjectTypes](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/activitystreams/ObjectTypes.html); 
+[org.osgi.service.event.Event](https://osgi.org/javadoc/r4v41/org/osgi/service/event/Event.html);
+[com.adobe.cq.social.scf.core.SocialEvent](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html);
+[com.adobe.granite.activitystreams.ObjectTypes](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/activitystreams/ObjectTypes.html);
 [com.adobe.granite.activitystreams.Verbs](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/activitystreams/Verbs.html);
 
 ```java
@@ -248,7 +247,7 @@ Följande pseudokodsexempel tar bort DELETE-händelser för komponenten Comments
 
 ### Pseudokod för EventListener {#pseudo-code-for-eventlistener}
 
-Kräver [det senaste funktionspaketet](deploy-communities.md#latestfeaturepack).
+Kräver [senaste funktionspaketet](deploy-communities.md#latestfeaturepack).
 
 ```java
 package my.company.comments;
@@ -337,4 +336,3 @@ public class CommentDeleteEventActivityFilter implements ActivityStreamProviderE
 
 }
 ```
-

@@ -1,8 +1,8 @@
 ---
 title: Efterbearbetning av brev och interaktiv kommunikation
-seo-title: Bokföringsbearbetning av brev
+seo-title: Post Processing of Letters
 description: Med funktionen för efterbearbetning av brev i Correspondence Management kan ni skapa AEM- och Forms-postprocesser, som utskrift och e-post, och integrera dem med era brev.
-seo-description: Med funktionen för efterbearbetning av brev i Correspondence Management kan ni skapa AEM- och Forms-postprocesser, som utskrift och e-post, och integrera dem med era brev.
+seo-description: Post Processing of Letters in Correspondence Management lets you create AEM and Forms post processes, such as print and email, and integrate them with your letters.
 uuid: 40cb349d-6ba2-4794-9ec6-dcab15c35b8d
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,14 +10,13 @@ topic-tags: correspondence-management
 discoiquuid: 9b06c394-8e26-429c-b78f-22afa271aeb3
 docset: aem65
 feature: Correspondence Management
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 91ee4422-99c1-4907-a507-5968c6984f28
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '857'
+source-wordcount: '825'
 ht-degree: 0%
 
 ---
-
 
 # Efterbearbetning av brev och interaktiv kommunikation{#post-processing-of-letters-and-interactive-communications}
 
@@ -29,9 +28,9 @@ Agenter kan associera och köra arbetsflöden för efterbearbetning av brev och 
 
 Om du vill associera postprocesser med brev eller interaktiv kommunikation måste du först konfigurera postprocesserna. Två typer av arbetsflöden kan utföras på skickade brev:
 
-1. **Forms Workflow:** Detta är AEM Forms om arbetsflöden för processhantering i JEE. Instruktioner för att konfigurera [Forms Workflow](#formsworkflow).
+1. **Forms Workflow:** Detta är arbetsflödena för processhantering i AEM Forms om JEE. Instruktioner för konfiguration [Forms Workflow](#formsworkflow).
 
-1. **AEM:** AEM arbetsflöden kan också användas som efterbearbetning för skickade brev. Instruktioner för att konfigurera [AEM arbetsflöde](../../forms/using/aem-forms-workflow.md).
+1. **AEM:** AEM arbetsflöden kan också användas som efterbearbetning för skickade brev. Instruktioner för konfiguration [AEM](../../forms/using/aem-forms-workflow.md).
 
 ## Forms Workflow {#formsworkflow}
 
@@ -40,7 +39,7 @@ Om du vill associera postprocesser med brev eller interaktiv kommunikation måst
    ![Config Manager](assets/2configmanager-1.png)
 
 1. På den här sidan letar du upp AEM Forms Client SDK Configuration och expanderar den genom att klicka på den.
-1. Ange namnet på din AEM Forms på JEE-servern i URL-adressen för servern, inloggningsuppgifter och klicka sedan på **Spara**.
+1. Ange namnet på din AEM Forms på JEE-server i URL-adressen för servern, inloggningsinformation och klicka sedan på **Spara**.
 
    ![Ange namnet på LiveCycle-servern](assets/1cofigmanager.png)
 
@@ -59,20 +58,20 @@ Om du vill associera postprocesser med brev eller interaktiv kommunikation måst
 
 1. Om du vill använda AEM Forms i JEE-arbetsflöden för efterbearbetning ställer du in de parametrar och utdata som behövs. Standardvärden för parametrarna anges nedan.
 
-   Gå till sidan Konfigurera Adobe Experience Manager Web Console > **[!UICONTROL Correspondence Management Configurations]** och ange följande parametrar:
+   Gå till Adobe Experience Manager Web Console Console Configurations > **[!UICONTROL Correspondence Management Configurations]** och ange följande parametrar:
 
-   1. **inPDFDoc (PDF-dokumentparameter):** Ett PDF-dokument som indata. Indata innehåller den återgivna bokstaven som indata. De angivna parameternamnen kan konfigureras. De kan konfigureras från Correspondence Management-konfigurationer från konfigurationen.
-   1. **inXMLDoc (parametern XML-data):** Ett XML-dokument som indata. Indata innehåller data som användaren anger i form av XML.
+   1. **inPDFDoc (dokumentparameter i PDF):** Ett PDF-dokument som indata. Indata innehåller den återgivna bokstaven som indata. De angivna parameternamnen kan konfigureras. De kan konfigureras från Correspondence Management-konfigurationer från konfigurationen.
+   1. **inXMLDoc (XML-dataparameter):** Ett XML-dokument som indata. Indata innehåller data som användaren anger i form av XML.
    1. **inXDPDoc (XDP-dokumentparameter):** Ett XML-dokument som indata. Indata innehåller underliggande layout (XDP).
-   1. **inAttachmentDocs (parametern Attachment Documents):** En listindataparameter. Indata innehåller alla bilagor som indata.
+   1. **inAttachmentDocs (parametern Bifogade dokument):** En listindataparameter. Indata innehåller alla bilagor som indata.
    1. **redirectURL (Redirect URL Output):** En utdatatyp som anger den URL som ska omdirigeras till.
 
-   Formulärarbetsflödet måste ha antingen PDF-dokumentparameter eller XML-dataparameter som indata med samma namn som anges i **[!UICONTROL Correspondence Management Configurations]**. Detta krävs för att processen ska visas i listrutan Efterprocess.
+   Formulärarbetsflödet måste ha antingen dokumentparametern PDF eller XML-dataparametern som indata med samma namn som anges i **[!UICONTROL Correspondence Management Configurations]**. Detta krävs för att processen ska visas i listrutan Efterprocess.
 
-## Inställningar för publiceringsinstansen {#settings-on-the-publish-instance}
+## Inställningar för Publish-instansen {#settings-on-the-publish-instance}
 
 1. logga in på `https://localhost:publishport/aem/forms`.
-1. Navigera till **[!UICONTROL Letters]** för att visa det publicerade brevet som är tillgängligt på publiceringsinstansen.
+1. Navigera till **[!UICONTROL Letters]** för att visa det publicerade brev som är tillgängligt på publiceringsinstansen.
 1. Konfigurera AEM DS-inställningar. Se [Konfigurera AEM DS-inställningar](../../forms/using/configuring-the-processing-server-url-.md).
 
 >[!NOTE]
@@ -113,14 +112,14 @@ Sparade bokstavsinstanser kan hanteras ytterligare, t.ex. hämtning av bokstavsi
  </tbody>
 </table>
 
-## Associera en postprocess med en bokstav {#associating-a-post-process-with-a-letter}
+## Associera en postprocess med ett brev {#associating-a-post-process-with-a-letter}
 
 I användargränssnittet för CCR utför du följande steg för att associera en postprocess med en bokstav:
 
-1. Håll pekaren över en bokstav och tryck på **Visa egenskaper**.
+1. Håll pekaren över ett brev och tryck **Visa egenskaper**.
 1. Välj **Redigera**.
 1. Välj den inläggsprocess som ska associeras med bokstaven i Grundläggande egenskaper med hjälp av listrutan Bokför process. Både AEM och Forms-relaterade efterbehandlingsprocesser listas i listrutan.
-1. Tryck på **Spara**.
+1. Tryck **Spara**.
 1. När du har konfigurerat brevet med Post Process, publicerar du brevet och kan även göra det på publiceringsinstansen. Ange behandlings-URL:en AEM tjänsten DS Settings. Detta garanterar att efterbearbetningen körs på bearbetningsinstansen.
 
 ## Läsa in ett utkast  {#reloaddraft}

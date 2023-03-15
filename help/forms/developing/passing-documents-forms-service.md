@@ -1,8 +1,8 @@
 ---
 title: Skicka dokument till FormsService
-seo-title: Skicka dokument till FormsService
-description: 'Skicka ett com.adobe.idp.Document-objekt som innehåller formulärdesignen till tjänsten Forms. Forms-tjänsten återger formulärdesignen som finns i objektet com.adobe.idp.Document. '
-seo-description: Skicka ett com.adobe.idp.Document-objekt som innehåller formulärdesignen till tjänsten Forms. Forms-tjänsten återger formulärdesignen som finns i objektet com.adobe.idp.Document.
+seo-title: Passing Documents to the FormsService
+description: Skicka ett com.adobe.idp.Document-objekt som innehåller formulärdesignen till tjänsten Forms. Forms-tjänsten återger formulärdesignen som finns i objektet com.adobe.idp.Document.
+seo-description: Pass a com.adobe.idp.Document object that contains the form design to the Forms service. The Forms service renders the form design located in the com.adobe.idp.Document object.
 uuid: 841e97f3-ebb8-4340-81a9-b6db11f0ec82
 contentOwner: admin
 content-type: reference
@@ -11,24 +11,23 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: e23de3c3-f8a0-459f-801e-a0942fb1c6aa
 role: Developer
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 29c7ebda-407a-464b-a9db-054163f5b737
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1715'
+source-wordcount: '1684'
 ht-degree: 0%
 
 ---
-
 
 # Skicka dokument till Forms-tjänsten {#passing-documents-to-the-formsservice}
 
 **Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
 
-AEM Forms-tjänsten återger interaktiv PDF forms till klientenheter, vanligtvis webbläsare, för att samla in information från användare. Ett interaktivt PDF-formulär baseras på en formulärdesign som vanligtvis sparas som en XDP-fil och skapas i Designer. Från och med AEM Forms kan du skicka ett `com.adobe.idp.Document`-objekt som innehåller formulärdesignen till tjänsten Forms. Forms-tjänsten återger sedan formulärdesignen som finns i `com.adobe.idp.Document`-objektet.
+AEM Forms-tjänsten återger interaktiv PDF forms till klientenheter, vanligtvis webbläsare, för att samla in information från användare. Ett interaktivt PDF-formulär baseras på en formulärdesign som vanligtvis sparas som en XDP-fil och skapas i Designer. Från och med AEM Forms kan du skicka `com.adobe.idp.Document` objekt som innehåller formulärdesignen för Forms-tjänsten. Forms-tjänsten återger sedan formulärdesignen som finns i `com.adobe.idp.Document` -objekt.
 
-En fördel med att skicka ett `com.adobe.idp.Document`-objekt till Forms-tjänsten är att andra tjänståtgärder returnerar en `com.adobe.idp.Document`-instans. Det innebär att du kan hämta en `com.adobe.idp.Document`-instans från en annan tjänståtgärd och återge den. Anta till exempel att en XDP-fil lagras i en Content Services-nod (utgått) med namnet `/Company Home/Form Designs`, vilket visas i följande bild.
+En fördel med att skicka en `com.adobe.idp.Document` objekt för tjänsten Forms är att andra serviceåtgärder returnerar `com.adobe.idp.Document` -instans. Det innebär att du kan få en `com.adobe.idp.Document` -instans från en annan tjänståtgärd och återge den. Anta till exempel att en XDP-fil lagras i en Content Services-nod (utgått) med namnet `/Company Home/Form Designs`, vilket visas på följande bild.
 
-Du kan hämta Loan.xdp via programkod från Content Services (utgått) (utgått) och skicka XDP-filen till Forms-tjänsten inom ett `com.adobe.idp.Document`-objekt.
+Du kan hämta Loan.xdp programmatiskt från Content Services (utgått) (utgått) och skicka XDP-filen till Forms-tjänsten i en `com.adobe.idp.Document` -objekt.
 
 >[!NOTE]
 >
@@ -54,19 +53,19 @@ Skapa ett Forms Client API-objekt innan du programmässigt utför en API-åtgär
 
 **Hämta formulärdesignen från innehållstjänster (borttagen)**
 
-Hämta XDP-filen från Content Services (utgått) med Java- eller webbtjänstens API. XDP-filen returneras i en `com.adobe.idp.Document`-instans (eller en `BLOB`-instans om du använder webbtjänster). Du kan sedan skicka `com.adobe.idp.Document`-instansen till Forms-tjänsten.
+Hämta XDP-filen från Content Services (utgått) med Java- eller webbtjänstens API. XDP-filen returneras inom en `com.adobe.idp.Document` instans (eller en `BLOB` om du använder webbtjänster). Du kan sedan skicka `com.adobe.idp.Document` till tjänsten Forms.
 
 **Återge ett interaktivt PDF-formulär**
 
-Om du vill återge ett interaktivt formulär skickar du `com.adobe.idp.Document`-instansen som returnerades från Content Services (utgått) till Forms-tjänsten.
+Om du vill återge ett interaktivt formulär skickar du `com.adobe.idp.Document` instans som returnerades från Content Services (utgått) till Forms-tjänsten.
 
 >[!NOTE]
 >
->Du kan skicka en `com.adobe.idp.Document` som innehåller formulärdesignen till Forms-tjänsten. Två nya metoder med namnen `renderPDFForm2` och `renderHTMLForm2` accepterar ett `com.adobe.idp.Document`-objekt som innehåller en formulärdesign.
+>Du kan skicka en `com.adobe.idp.Document` som innehåller formulärdesignen för Forms-tjänsten. Två nya metoder namngivna `renderPDFForm2` och `renderHTMLForm2` acceptera `com.adobe.idp.Document` objekt som innehåller en formulärdesign.
 
 **Utför en åtgärd med formulärdataströmmen**
 
-Beroende på vilken typ av klientprogram du använder kan du skriva formuläret till en webbläsare eller spara formuläret som en PDF-fil. Ett webbaserat program skriver vanligtvis formuläret i webbläsaren. Ett skrivbordsprogram sparar dock vanligtvis formuläret som en PDF-fil.
+Beroende på vilken typ av klientprogram du använder kan du skriva formuläret till en webbläsare eller spara formuläret som en PDF-fil. Ett webbaserat program skriver vanligtvis formuläret i webbläsaren. I ett skrivbordsprogram sparas dock formuläret som en PDF-fil.
 
 **Se även**
 
@@ -86,41 +85,41 @@ Skicka ett dokument som hämtats från Content Services (utgått) med hjälp av 
 
 1. Skapa ett Forms- och ett API-objekt för dokumenthanteringsklienten
 
-   * Skapa ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper. (Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).)
-   * Skapa ett `FormsServiceClient`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
-   * Skapa ett `DocumentManagementServiceClientImpl`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
+   * Skapa en `ServiceClientFactory` objekt som innehåller anslutningsegenskaper. (Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).)
+   * Skapa en `FormsServiceClient` genom att använda konstruktorn och skicka `ServiceClientFactory` -objekt.
+   * Skapa en `DocumentManagementServiceClientImpl` genom att använda konstruktorn och skicka `ServiceClientFactory` -objekt.
 
 1. Hämta formulärdesignen från innehållstjänster (borttagen)
 
-   Anropa `DocumentManagementServiceClientImpl`-objektets `retrieveContent`-metod och skicka följande värden:
+   Anropa `DocumentManagementServiceClientImpl` objektets `retrieveContent` och skicka följande värden:
 
    * Ett strängvärde som anger den lagringsplats där innehållet läggs till. Standardarkivet är `SpacesStore`. Detta värde är en obligatorisk parameter.
    * Ett strängvärde som anger den fullständigt kvalificerade sökvägen för innehållet som ska hämtas (till exempel `/Company Home/Form Designs/Loan.xdp`). Detta värde är en obligatorisk parameter.
    * Ett strängvärde som anger versionen. Det här värdet är en valfri parameter och du kan skicka en tom sträng. I det här fallet hämtas den senaste versionen.
 
-   Metoden `retrieveContent` returnerar ett `CRCResult`-objekt som innehåller XDP-filen. Hämta en `com.adobe.idp.Document`-instans genom att anropa `CRCResult`-objektets `getDocument`-metod.
+   The `retrieveContent` returnerar en `CRCResult` -objekt som innehåller XDP-filen. Hämta en `com.adobe.idp.Document` instans genom att anropa `CRCResult` objektets `getDocument` -metod.
 
 1. Återge ett interaktivt PDF-formulär
 
-   Anropa `FormsServiceClient`-objektets `renderPDFForm2`-metod och skicka följande värden:
+   Anropa `FormsServiceClient` objektets `renderPDFForm2` och skicka följande värden:
 
-   * Ett `com.adobe.idp.Document`-objekt som innehåller formulärdesignen som hämtats från innehållstjänster (borttagen).
-   * Ett `com.adobe.idp.Document`-objekt som innehåller data som ska sammanfogas med formuläret. Om du inte vill sammanfoga data skickar du ett tomt `com.adobe.idp.Document`-objekt.
-   * Ett `PDFFormRenderSpec`-objekt som lagrar körningsalternativ. Det här värdet är en valfri parameter, och du kan ange `null` om du inte vill ange körningsalternativ.
-   * Ett `URLSpec`-objekt som innehåller URI-värden. Det här värdet är en valfri parameter, och du kan ange `null`.
-   * Ett `java.util.HashMap`-objekt som lagrar bifogade filer. Det här värdet är en valfri parameter, och du kan ange `null` om du inte vill bifoga filer till formuläret.
+   * A `com.adobe.idp.Document` objekt som innehåller formulärdesignen som hämtats från Content Services (borttagen).
+   * A `com.adobe.idp.Document` objekt som innehåller data som ska sammanfogas med formuläret. Om du inte vill sammanfoga data skickar du en tom `com.adobe.idp.Document` -objekt.
+   * A `PDFFormRenderSpec` objekt som lagrar körningsalternativ. Det här värdet är en valfri parameter som du kan ange `null` om du inte vill ange körningsalternativ.
+   * A `URLSpec` objekt som innehåller URI-värden. Det här värdet är en valfri parameter som du kan ange `null`.
+   * A `java.util.HashMap` objekt som lagrar bifogade filer. Det här värdet är en valfri parameter som du kan ange `null` om du inte vill bifoga filer till formuläret.
 
-   Metoden `renderPDFForm` returnerar ett `FormsResult`-objekt som innehåller en formulärdataström som måste skrivas till klientens webbläsare.
+   The `renderPDFForm` returnerar en `FormsResult` objekt som innehåller en formulärdataström som måste skrivas till klientens webbläsare.
 
 1. Utför en åtgärd med formulärdataströmmen
 
-   * Skapa ett `com.adobe.idp.Document`-objekt genom att anropa `FormsResult`-objektets `getOutputContent`-metod.
-   * Hämta innehållstypen för `com.adobe.idp.Document`-objektet genom att anropa dess `getContentType`-metod.
-   * Ange `javax.servlet.http.HttpServletResponse`-objektets innehållstyp genom att anropa dess `setContentType`-metod och skicka innehållstypen för `com.adobe.idp.Document`-objektet.
-   * Skapa ett `javax.servlet.ServletOutputStream`-objekt som används för att skriva formulärdataströmmen till klientens webbläsare genom att anropa `javax.servlet.http.HttpServletResponse`-objektets `getOutputStream`-metod.
-   * Skapa ett `java.io.InputStream`-objekt genom att anropa `com.adobe.idp.Document`-objektets `getInputStream`-metod.
-   * Skapa en bytearray och fyll i den med formulärdataströmmen genom att anropa `InputStream`-objektets `read`-metod. Skicka bytearrayen som ett argument.
-   * Anropa `javax.servlet.ServletOutputStream`-objektets `write`-metod för att skicka formulärdataströmmen till klientens webbläsare. Skicka bytearrayen till metoden `write`.
+   * Skapa en `com.adobe.idp.Document` genom att anropa `FormsResult` objekt&quot;s `getOutputContent` -metod.
+   * Hämta innehållstypen för `com.adobe.idp.Document` genom att anropa dess `getContentType` -metod.
+   * Ange `javax.servlet.http.HttpServletResponse` objektets innehållstyp genom att anropa dess `setContentType` metoden och skicka innehållstypen för `com.adobe.idp.Document` -objekt.
+   * Skapa en `javax.servlet.ServletOutputStream` som används för att skriva formulärdataströmmen till klientens webbläsare genom att anropa `javax.servlet.http.HttpServletResponse` objektets `getOutputStream` -metod.
+   * Skapa en `java.io.InputStream` genom att anropa `com.adobe.idp.Document` objektets `getInputStream` -metod.
+   * Skapa en bytearray och fylla den med formulärdataströmmen genom att anropa `InputStream` objektets `read` -metod. Skicka bytearrayen som ett argument.
+   * Anropa `javax.servlet.ServletOutputStream` objektets `write` metod för att skicka formulärdataströmmen till klientens webbläsare. Skicka bytearrayen till `write` -metod.
 
 **Se även**
 
@@ -130,7 +129,7 @@ Skicka ett dokument som hämtats från Content Services (utgått) med hjälp av 
 
 [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-## Skicka dokument till Forms-tjänsten med webbtjänstens API {#pass-documents-to-the-forms-service-using-the-web-service-api}
+## Skicka dokument till Forms-tjänsten med hjälp av webbtjänstens API {#pass-documents-to-the-forms-service-using-the-web-service-api}
 
 Skicka ett dokument som hämtats från Content Services (utgått) med hjälp av API:t för Forms-tjänsten och innehållstjänster (utgått) (webbtjänsten):
 
@@ -140,63 +139,63 @@ Skicka ett dokument som hämtats från Content Services (utgått) med hjälp av 
 
    Använd följande WSDL-definition för den tjänstreferens som är kopplad till dokumenthanteringstjänsten: `http://localhost:8080/soap/services/DocumentManagementService?WSDL&lc_version=9.0.1`.
 
-   Eftersom datatypen `BLOB` är gemensam för båda tjänstreferenserna kan du kvalificera datatypen `BLOB` fullständigt när du använder den. I motsvarande snabbstart för webbtjänsten är alla `BLOB`-instanser kvalificerade.
+   På grund av `BLOB` datatypen är gemensam för båda tjänstreferenserna, och kvalificera fullt ut `BLOB` datatyp när du använder den. I motsvarande webbtjänsts snabbstart är alla `BLOB` -instanser är kvalificerade.
 
    >[!NOTE]
    >
-   >Ersätt `localhost`med IP-adressen för den server som är värd för AEM Forms.
+   >Ersätt `localhost`med IP-adressen till den server som är värd för AEM Forms.
 
 1. Skapa ett Forms- och ett API-objekt för dokumenthanteringsklienten
 
-   * Skapa ett `FormsServiceClient`-objekt med hjälp av dess standardkonstruktor.
-   * Skapa ett `FormsServiceClient.Endpoint.Address`-objekt med konstruktorn `System.ServiceModel.EndpointAddress`. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/FormsService?WSDL`). Du behöver inte använda attributet `lc_version`. Det här attributet används när du skapar en tjänstreferens.)
-   * Skapa ett `System.ServiceModel.BasicHttpBinding`-objekt genom att hämta värdet för fältet `FormsServiceClient.Endpoint.Binding`. Sänd returvärdet till `BasicHttpBinding`.
-   * Ställ in `System.ServiceModel.BasicHttpBinding`-objektets `MessageEncoding`-fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
+   * Skapa en `FormsServiceClient` genom att använda dess standardkonstruktor.
+   * Skapa en `FormsServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/FormsService?WSDL`). Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens.)
+   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `FormsServiceClient.Endpoint.Binding` fält. Sänd returvärdet till `BasicHttpBinding`.
+   * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM formulär till fältet `FormsServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela AEM formuläranvändarnamn till fältet `FormsServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `FormsServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
    * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
 
    >[!NOTE]
    >
-   >Upprepa dessa steg för `DocumentManagementServiceClient`tjänstklienten.
+   >Upprepa dessa steg för `DocumentManagementServiceClient`tjänstklient.
 
 1. Hämta formulärdesignen från innehållstjänster (borttagen)
 
-   Hämta innehåll genom att anropa `DocumentManagementServiceClient`-objektets `retrieveContent`-metod och skicka följande värden:
+   Hämta innehåll genom att anropa `DocumentManagementServiceClient` objektets `retrieveContent` och skicka följande värden:
 
    * Ett strängvärde som anger den lagringsplats där innehållet läggs till. Standardarkivet är `SpacesStore`. Detta värde är en obligatorisk parameter.
    * Ett strängvärde som anger den fullständigt kvalificerade sökvägen för innehållet som ska hämtas (till exempel `/Company Home/Form Designs/Loan.xdp`). Detta värde är en obligatorisk parameter.
    * Ett strängvärde som anger versionen. Det här värdet är en valfri parameter och du kan skicka en tom sträng. I det här fallet hämtas den senaste versionen.
    * En strängutdataparameter som lagrar värdet för bläddringslänken.
-   * En `BLOB`-utdataparameter som lagrar innehållet. Du kan använda den här utdataparametern för att hämta innehållet.
-   * En `ServiceReference1.MyMapOf_xsd_string_To_xsd_anyType`-utdataparameter som lagrar innehållsattribut.
-   * En `CRCResult`-utdataparameter. I stället för att använda det här objektet kan du använda parametern `BLOB` för att hämta innehållet.
+   * A `BLOB` utdataparameter som lagrar innehållet. Du kan använda den här utdataparametern för att hämta innehållet.
+   * A `ServiceReference1.MyMapOf_xsd_string_To_xsd_anyType` output-parameter som lagrar innehållsattribut.
+   * A `CRCResult` output-parameter. I stället för att använda det här objektet kan du använda `BLOB` output-parameter för att hämta innehållet.
 
 1. Återge ett interaktivt PDF-formulär
 
-   Anropa `FormsServiceClient`-objektets `renderPDFForm2`-metod och skicka följande värden:
+   Anropa `FormsServiceClient` objektets `renderPDFForm2` och skicka följande värden:
 
-   * Ett `BLOB`-objekt som innehåller formulärdesignen som hämtats från innehållstjänster (borttagen).
-   * Ett `BLOB`-objekt som innehåller data som ska sammanfogas med formuläret. Om du inte vill sammanfoga data skickar du ett tomt `BLOB`-objekt.
-   * Ett `PDFFormRenderSpec`-objekt som lagrar körningsalternativ. Det här värdet är en valfri parameter, och du kan ange `null` om du inte vill ange körningsalternativ.
-   * Ett `URLSpec`-objekt som innehåller URI-värden. Det här värdet är en valfri parameter, och du kan ange `null`.
-   * Ett `Map`-objekt som lagrar bifogade filer. Det här värdet är en valfri parameter, och du kan ange `null` om du inte vill bifoga filer till formuläret.
+   * A `BLOB` objekt som innehåller formulärdesignen som hämtats från Content Services (borttagen).
+   * A `BLOB` objekt som innehåller data som ska sammanfogas med formuläret. Om du inte vill sammanfoga data skickar du en tom `BLOB` -objekt.
+   * A `PDFFormRenderSpec` objekt som lagrar körningsalternativ. Det här värdet är en valfri parameter som du kan ange `null` om du inte vill ange körningsalternativ.
+   * A `URLSpec` objekt som innehåller URI-värden. Det här värdet är en valfri parameter som du kan ange `null`.
+   * A `Map` objekt som lagrar bifogade filer. Det här värdet är en valfri parameter som du kan ange `null` om du inte vill bifoga filer till formuläret.
    * En lång utdataparameter som används för att lagra sidantalet.
    * En strängutdataparameter som används för att lagra språkvärdet.
-   * En `FormsResult`-utdataparameter som används för att lagra det interaktiva PDF-formuläret `.`
+   * A `FormsResult` utdataparameter som används för att lagra PDF-formuläret interaktivt `.`
 
-   Metoden `renderPDFForm2` returnerar ett `FormsResult`-objekt som innehåller det interaktiva PDF-formuläret.
+   The `renderPDFForm2` returnerar en `FormsResult` objekt som innehåller det interaktiva PDF-formuläret.
 
 1. Utför en åtgärd med formulärdataströmmen
 
-   * Skapa ett `BLOB`-objekt som innehåller formulärdata genom att hämta värdet för `FormsResult`-objektets `outputContent`-fält.
-   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor. Skicka ett strängvärde som representerar filplatsen för det interaktiva PDF-dokumentet och läget som filen ska öppnas i.
-   * Skapa en bytearray som lagrar innehållet i `BLOB`-objektet som hämtats från `FormsResult`-objektet. Fyll i bytearrayen genom att hämta värdet för `BLOB`-objektets `MTOM`-datamedlem.
-   * Skapa ett `System.IO.BinaryWriter`-objekt genom att anropa dess konstruktor och skicka `System.IO.FileStream`-objektet.
-   * Skriv bytearrayens innehåll till en PDF-fil genom att anropa `System.IO.BinaryWriter`-objektets `Write`-metod och skicka bytearrayen.
+   * Skapa en `BLOB` objekt som innehåller formulärdata genom att hämta värdet för `FormsResult` objektets `outputContent` fält.
+   * Skapa en `System.IO.FileStream` genom att anropa dess konstruktor. Skicka ett strängvärde som representerar filplatsen för det interaktiva PDF-dokumentet och läget som filen ska öppnas i.
+   * Skapa en bytearray som lagrar innehållet i `BLOB` objektet har hämtats från `FormsResult` -objekt. Fylla i bytearrayen genom att hämta värdet för `BLOB` objektets `MTOM` datamedlem.
+   * Skapa en `System.IO.BinaryWriter` genom att anropa dess konstruktor och skicka `System.IO.FileStream` -objekt.
+   * Skriv bytearrayens innehåll till en PDF-fil genom att anropa `System.IO.BinaryWriter` objektets `Write` och skicka bytearrayen.
 
 **Se även**
 

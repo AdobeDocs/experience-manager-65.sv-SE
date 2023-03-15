@@ -1,30 +1,29 @@
 ---
 title: Använda xtypes (Classic UI)
-seo-title: Använda xtypes (Classic UI)
+seo-title: Using xtypes (Classic UI)
 description: Läs mer om alla typer som är tillgängliga med AEM
-seo-description: Läs mer om alla typer som är tillgängliga med AEM
+seo-description: Learn about all the xtypes that are available with AEM
 uuid: 6497caa4-2f9b-4f21-9023-88d485fd1d78
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: components
 content-type: reference
 discoiquuid: adb70b43-1b0b-4302-905a-c7612675dabb
-translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+exl-id: 06ca4e6d-9ab7-4c5b-905c-07c448632f2b
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '6414'
+source-wordcount: '6400'
 ht-degree: 0%
 
 ---
-
 
 # Använda xtypes (Classic UI){#using-xtypes-classic-ui}
 
 På den här sidan beskrivs alla typer som är tillgängliga med Adobe Experience Manager (AEM).
 
-I ExtJS-språket är en xtype ett symboliskt namn som ges till en klass. Du kan läsa stycket&quot;Component XTypes&quot; i [Översikt över ExtJS 2](https://www.sencha.com/learn/overview-of-extjs-2) om du vill ha en detaljerad förklaring om vad en xtype är och hur den kan användas.
+I ExtJS-språket är en xtype ett symboliskt namn som ges till en klass. Du kan läsa stycket&quot;Komponent XTypes&quot; i [Översikt över ExtJS 2](https://www.sencha.com/learn/overview-of-extjs-2) om du vill ha en detaljerad förklaring om vad en xtype är och hur den kan användas.
 
-En fullständig information om alla tillgängliga widgetar i AEM finns i [API-dokumentationen för widgeten](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html).
+En fullständig information om alla tillgängliga widgetar i AEM finns i [API-dokumentation för widget](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html).
 
 Om du vill ta reda på i vilka komponenter en viss xtype används i AEM kan du använda följande Xpath-fråga i CRXDE genom att ersätta &quot;checkbox&quot; med den xtype som du är intresserad av:
 
@@ -34,7 +33,7 @@ Om du vill ta reda på i vilka komponenter en viss xtype används i AEM kan du a
 >
 >Den här sidan beskriver användningen av ExtJS-xtyper i det klassiska användargränssnittet.
 >
->Adobe rekommenderar att du använder det moderna användargränssnittet [med pekfunktion](/help/sites-developing/touch-ui-concepts.md) som är baserat på [Coral UI](/help/sites-developing/touch-ui-concepts.md#coral-ui) och [GRE-gränssnitt](/help/sites-developing/touch-ui-concepts.md#granite-ui-foundation-components).
+>Adobe rekommenderar att du använder standardverktyget, modern, [pekaktiverat användargränssnitt](/help/sites-developing/touch-ui-concepts.md) baserat på [Coral UI](/help/sites-developing/touch-ui-concepts.md#coral-ui) och [Granite-gränssnitt](/help/sites-developing/touch-ui-concepts.md#granite-ui-foundation-components).
 
 ## xtypes {#xtypes}
 
@@ -52,7 +51,7 @@ Nedan finns en lista över tillgängliga xtyper i Adobe Experience Manager:
 
    Kallas tidigare&quot;SimpleStore&quot;.
 
-   Liten hjälpklass som gör det enklare att skapa [CQ.Ext.data.Store](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.Store)s från Array-data. En ArrayStore konfigureras automatiskt med [CQ.Ext.data.ArrayReader](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.ArrayReader).
+   Liten hjälpklass för att skapa [CQ.Ext.data.Store](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.Store)s från Array-data enklare. En ArrayStore konfigureras automatiskt med en [CQ.Ext.data.ArrayReader](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.ArrayReader).
 
 * Asseteditor
 
@@ -76,13 +75,13 @@ Nedan finns en lista över tillgängliga xtyper i Adobe Experience Manager:
 
    [CQ.wcm.msm.BlueprintStatus](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.msm.BlueprintStatus)
 
-   Med BlueprintStatus kan du visa och redigera en utkast och dess Live-kopior-relationer. Bläddringen görs via en [CQ.wcm.msm.BlueprintStatus.Tree](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.msm.BlueprintStatus.Tree), en utgåva via en [CQ.wcm.msm.BlueprintConfig](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.msm.BlueprintConfig) och en [CQ.wcm.msm.LiveCopyProperties](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.msm.LiveCopyProperties).
+   Med BlueprintStatus kan du visa och redigera en utkast och dess Live-kopior-relationer. Bläddringen görs via en [CQ.wcm.msm.BlueprintStatus.Tree](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.msm.BlueprintStatus.Tree), via [CQ.wcm.msm.BlueprintConfig](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.msm.BlueprintConfig) och en [CQ.wcm.msm.LiveCopyProperties](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.msm.LiveCopyProperties).
 
 * box
 
    [CQ.Ext.BoxComponent](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.BoxComponent)
 
-   Basklass för alla [komponenter](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Component) som ska storleksändras som en ruta, med bredd och höjd.
+   Basklass för alla [Komponent](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Component) som ska storleksändras som en ruta, med bredd och höjd.
 
    BoxComponent har automatiska rutmodelljusteringar för storlek och placering och fungerar korrekt i komponentåtergivningsmodellen.
 
@@ -90,13 +89,13 @@ Nedan finns en lista över tillgängliga xtyper i Adobe Experience Manager:
 
    [CQ.BrowseDialog](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.BrowseDialog)
 
-   Med BrowseDialog kan användaren bläddra i databasen för att välja en sökväg. Det används vanligtvis via ett [BrowseField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.BrowseField).
+   Med BrowseDialog kan användaren bläddra i databasen för att välja en sökväg. Det används vanligtvis via en [BrowseField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.BrowseField).
 
 * webbläsarfält
 
    [CQ.form.BrowseField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.BrowseField)
 
-   **Föråldrat: Använd  [CQ.form.](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.PathField) PathFieldIstället**
+   **Föråldrat: Använd [CQ.form.PathField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.PathField) i stället**
 
 * bulkeditor
 
@@ -110,7 +109,7 @@ Nedan finns en lista över tillgängliga xtyper i Adobe Experience Manager:
 
    [CQ.wcm.BulkEditorForm](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.BulkEditorForm)
 
-   BulkEditorForm innehåller [CQ.wcm.BulkEditor](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.BulkEditor) omgivet av ett HTML-formulär. Det här är den fristående versionen av [CQ.wcm.BulkEditor](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.BulkEditor), HTML-formuläret krävs för importknappen.
+   BulkEditorForm innehåller [CQ.wcm.BulkEditor](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.BulkEditor) omgivet av ett HTML-formulär. Det här är den fristående versionen av [CQ.wcm.BulkEditor](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.BulkEditor)måste du använda HTML-formulär för att importera knappen.
 
 * button
 
@@ -128,7 +127,7 @@ Nedan finns en lista över tillgängliga xtyper i Adobe Experience Manager:
 
    [CQ.Ext.chart.Chart](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.chart.Chart)
 
-   Paketet CQ.Ext.chart ger möjlighet att visualisera data med flash-baserade diagram. Varje diagram binds direkt till en CQ.Ext.data.Store som möjliggör automatiska uppdateringar av diagrammet. Information om hur du ändrar utseendet på ett diagram finns i konfigurationsalternativen [chartStyle](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.chart.Chart) och [extraStyle](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.chart.Chart).
+   Paketet CQ.Ext.chart ger möjlighet att visualisera data med flash-baserade diagram. Varje diagram binds direkt till en CQ.Ext.data.Store som möjliggör automatiska uppdateringar av diagrammet. Om du vill ändra utseendet på ett diagram kan du läsa [chartStyle](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.chart.Chart) och [extraStyle](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.chart.Chart) config options.
 
 * kryssruta
 
@@ -140,7 +139,7 @@ Nedan finns en lista över tillgängliga xtyper i Adobe Experience Manager:
 
    [CQ.Ext.form.CheckboxGroup](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.CheckboxGroup)
 
-   En grupperingsbehållare för kontrollerna [CQ.Ext.form.Checkbox](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.Checkbox).
+   En grupperingsbehållare för [CQ.Ext.form.Checkbox](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.Checkbox) kontroller.
 
 * klarkombino
 
@@ -152,7 +151,7 @@ Nedan finns en lista över tillgängliga xtyper i Adobe Experience Manager:
 
    [CQ.form.ColorField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.ColorField)
 
-   Med ColorField kan användaren ange ett hex-färgvärde antingen direkt eller med [CQ.Ext.ColorMenu](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.ColorMenu).
+   Med ColorField kan användaren ange ett hex-färgvärde antingen direkt eller med en [CQ.Ext.ColorMenu](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.ColorMenu).
 
 * färglista
 
@@ -164,7 +163,7 @@ Nedan finns en lista över tillgängliga xtyper i Adobe Experience Manager:
 
    [CQ.Ext.menu.ColorMenu](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.menu.ColorMenu)
 
-   En meny som innehåller en [CQ.Ext.ColorPalette](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.ColorPalette)-komponent.
+   En meny som innehåller en [CQ.Ext.ColorPalette](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.ColorPalette) Komponent.
 
 * färgpalett
 
@@ -178,13 +177,13 @@ Nedan finns en lista över tillgängliga xtyper i Adobe Experience Manager:
 
    En kombinationsruta med stöd för automatisk komplettering, fjärrinläsning, sidinläsning och många andra funktioner.
 
-   En ComboBox fungerar på ungefär samma sätt som ett vanligt HTML-fält med namnet &lt;select>. Skillnaden är att om du vill skicka [valueField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.ComboBox) måste du ange [hiddenName](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.ComboBox) för att skapa en dold inmatning.
+   En ComboBox fungerar ungefär som HTML &lt;select> fält. Skillnaden är att skicka in [valueField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.ComboBox)måste du ange [hiddenName](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.ComboBox) för att skapa dolda indata.
 
 * komponent
 
    [CQ.Ext.Component](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Component)
 
-   Basklass för alla Ext-komponenter. Alla underklasser till Component kan delta i den automatiserade EXT-komponentens livscykel för skapande, återgivning och destruktion som tillhandahålls av klassen [Container](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Container). Komponenter kan läggas till i en behållare via konfigurationsalternativet [items](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Container) när behållaren skapas.
+   Basklass för alla Ext-komponenter. Alla underklasser till Komponent kan delta i den automatiska livscykeln för Ext-komponenten för skapande, återgivning och destruktion som tillhandahålls av [Behållare](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Container) klassen. Komponenter kan läggas till i en behållare via [objekt](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Container) config-alternativ när behållaren skapas.
 
 * componentExtractor
 
@@ -220,7 +219,7 @@ Nedan finns en lista över tillgängliga xtyper i Adobe Experience Manager:
 
    [CQ.wcm.ContentFinder](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.ContentFinder)
 
-   ContentFinder är en speciell två kolumner [Viewport](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Viewport) som innehåller den faktiska innehållssökaren till vänster och innehållsramen till höger.
+   ContentFinder är en specialiserad två kolumner [Visningsruta](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Viewport) som innehåller den faktiska innehållssökaren till vänster och innehållsramen till höger.
 
 * innehållfinderflik
 
@@ -262,31 +261,31 @@ Nedan finns en lista över tillgängliga xtyper i Adobe Experience Manager:
 
    [CQ.Ext.CycleButton](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.CycleButton)
 
-   En specialiserad SplitButton som innehåller en meny med [CQ.Ext.menu.CheckItem](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.menu.CheckItem)-element. Knappen bläddrar automatiskt genom varje menyalternativ när du klickar på knappen, vilket höjer knappens [change](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.CycleButton)-händelse (eller anropar knappens [changeHandler](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.CycleButton)-funktion, om en sådan finns) för det aktiva menyobjektet.
+   En specialiserad SplitButton som innehåller en meny med [CQ.Ext.menu.CheckItem](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.menu.CheckItem) -element. Knappen bläddrar automatiskt igenom varje menyalternativ vid klickning och ökar knappens [change](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.CycleButton) (eller anropa knappens [changeHandler](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.CycleButton) -funktion, om sådan finns) för det aktiva menyalternativet.
 
 * datavy
 
    [CQ.Ext.DataView](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.DataView)
 
-   En mekanism för att visa data med anpassade layoutmallar och formatering. DataView använder en [CQ.Ext.XTemplate](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.XTemplate) som intern mallmetod och är bunden till en [CQ.Ext.data.Store](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.Store) så att vyn uppdateras automatiskt med ändringarna när data i arkivet ändras.
+   En mekanism för att visa data med anpassade layoutmallar och formatering. DataView använder en [CQ.Ext.XTemplate](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.XTemplate) som sin interna mallfunktion och är bunden till en [CQ.Ext.data.Store](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.Store) så att vyn uppdateras automatiskt när data ändras i arkivet så att ändringarna återspeglas.
 
 * datafält
 
    [CQ.Ext.form.DateField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.DateField)
 
-   Ger ett datuminmatningsfält med listrutan [CQ.Ext.DatePicker](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.DatePicker) och automatisk datumvalidering.
+   Tillhandahåller ett datuminmatningsfält med en [CQ.Ext.DatePicker](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.DatePicker) listrutor och automatisk datumvalidering.
 
 * datemenu
 
    [CQ.Ext.menu.DateMenu](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.menu.DateMenu)
 
-   En meny som innehåller en [CQ.Ext.DatePicker](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.DatePicker)-komponent.
+   En meny som innehåller en [CQ.Ext.DatePicker](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.DatePicker) Komponent.
 
 * datepicker
 
    [CQ.Ext.DatePicker](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.DatePicker)
 
-   En popup-datumväljare. Den här klassen används av klassen [DateField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.DateField) för att tillåta bläddring och val av giltiga datum.
+   En popup-datumväljare. Den här klassen används av [DateField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.DateField) för att tillåta bläddring och val av giltiga datum.
 
 * datetime
 
@@ -304,13 +303,13 @@ Nedan finns en lista över tillgängliga xtyper i Adobe Experience Manager:
 
    [CQ.form.DialogFieldSet](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.DialogFieldSet)
 
-   DialogFieldSet är en [FieldSet](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.FieldSet) som kan användas i [dialogrutor](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Dialog).
+   DialogFieldSet är en [FieldSet](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.FieldSet) för användning i [Dialogrutor](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Dialog).
 
 * directstore
 
    [CQ.Ext.data.DirectStore](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.DirectStore)
 
-   Liten hjälpklass för att skapa en [CQ.Ext.data.Store](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.Store) som konfigurerats med en [CQ.Ext.data.DirectProxy](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.DirectProxy) och [CQ.Ext.data.JsonReader](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.JsonReader) för att interagera med en [CQ.Ext.Direct](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Direct)-server sida [Provider](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.direct.Provider) enklare.
+   Liten hjälpklass för att skapa en [CQ.Ext.data.Store](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.Store) konfigurerad med [CQ.Ext.data.DirectProxy](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.DirectProxy) och [CQ.Ext.data.JsonReader](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.JsonReader) interagera med [CQ.Ext.Direct](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Direct) Serversidan [Provider](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.direct.Provider) enklare.
 
 * visningsfält
 
@@ -324,7 +323,7 @@ Nedan finns en lista över tillgängliga xtyper i Adobe Experience Manager:
 
    Med EditBar kan användaren redigera innehåll med knappar på ett fält.
 
-   Även om det inte finns med här, innehåller EditBar alla medlemmar i [CQ.wcm.EditBase](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.EditBase).
+   Även om det inte finns någon lista här har EditBar alla medlemmar i [CQ.wcm.EditBase](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.EditBase).
 
 * redigerare
 
@@ -336,7 +335,7 @@ Nedan finns en lista över tillgängliga xtyper i Adobe Experience Manager:
 
    [CQ.Ext.grid.EditorGridPanel](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.EditorGridPanel)
 
-   Den här klassen utökar [GridPanel-klassen](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.GridPanel) för att tillhandahålla cellredigering för markerade [kolumner](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.Column). De redigerbara kolumnerna anges med en [redigerare](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.ColumnModel) i [kolumnkonfigurationen](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.Column).
+   Den här klassen utökar [Klassen GridPanel](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.GridPanel) för att tillhandahålla cellredigering för markerade [kolumner](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.Column). De redigerbara kolumnerna anges med en [redigerare](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.ColumnModel) i [kolumnkonfiguration](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.Column).
 
 * editrollover
 
@@ -360,7 +359,7 @@ Nedan finns en lista över tillgängliga xtyper i Adobe Experience Manager:
 
    [CQ.Ext.form.FieldSet](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.FieldSet)
 
-   Standardbehållare som används för att gruppera objekt i ett [formulär](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.FormPanel). ...
+   Standardbehållare som används för att gruppera artiklar i en [formulär](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.FormPanel). ...
 
 * fileuploaddialogknapp
 
@@ -406,7 +405,7 @@ Nedan finns en lista över tillgängliga xtyper i Adobe Experience Manager:
 
    [CQ.Ext.form.Hidden](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.Hidden)
 
-   Ett enkelt dolt fält för lagring av dolda värden i formulär som måste skickas när formuläret skickas.
+   Ett enkelt dolt fält för lagring av dolda värden i formulär som måste skickas i formuläret som skickas.
 
 * historybutton
 
@@ -418,9 +417,9 @@ Nedan finns en lista över tillgängliga xtyper i Adobe Experience Manager:
 
    [CQ.Ext.form.htmlEditor](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.HtmlEditor)
 
-   Innehåller en lättviktig HTML-redigeringskomponent. Vissa verktygsfältsfunktioner stöds inte av Safari och döljs automatiskt vid behov. Dessa beskrivs i konfigurationsalternativen där det är lämpligt.
+   Innehåller en lättviktig HTML Editor-komponent. Vissa verktygsfältsfunktioner stöds inte av Safari och döljs automatiskt vid behov. Dessa beskrivs i konfigurationsalternativen där det är lämpligt.
 
-   Redigerarens verktygsfältsknappar har verktygstips definierade i egenskapen [buttonTips](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.HtmlEditor).
+   Redigerarens knappar i verktygsfältet har verktygstips definierade i [buttonTips](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.HtmlEditor) -egenskap.
 
 * iframeDialog
 
@@ -444,7 +443,7 @@ Nedan finns en lista över tillgängliga xtyper i Adobe Experience Manager:
 
    [CQ.Ext.data.JsonStore](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.JsonStore)
 
-   Liten hjälpklass som gör det enklare att skapa [CQ.Ext.data.Store](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.Store)s från JSON-data. En JsonStore konfigureras automatiskt med [CQ.Ext.data.JsonReader](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.JsonReader).
+   Liten hjälpklass för att skapa [CQ.Ext.data.Store](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.Store)är enklare än JSON-data. En JsonStore konfigureras automatiskt med en [CQ.Ext.data.JsonReader](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.JsonReader).
 
 * label
 
@@ -468,7 +467,7 @@ Nedan finns en lista över tillgängliga xtyper i Adobe Experience Manager:
 
    [CQ.Ext.list.ListView](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.ListView)
 
-   CQ.Ext.list.ListView är en snabb och lätt implementering av en [Grid](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.GridPanel)-liknande vy.
+   CQ.Ext.list.ListView är en snabb och lätt implementering av en [Stödraster](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.GridPanel) som en vy.
 
 * livecopyproperties
 
@@ -480,31 +479,31 @@ Nedan finns en lista över tillgängliga xtyper i Adobe Experience Manager:
 
    [CQ.Ext.list.BooleanColumn](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.BooleanColumn)
 
-   En kolumndefinitionsklass som återger booleska datafält. Mer information finns i [xtype](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.Column) config option of [CQ.Ext.list.Column](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.Column).
+   En kolumndefinitionsklass som återger booleska datafält. Se [xtype](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.Column) config option of [CQ.Ext.list.Column](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.Column) för mer information.
 
 * lvcolumn
 
    [CQ.Ext.list.Column](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.Column)
 
-   Den här klassen kapslar in kolumnkonfigurationsdata som ska användas vid initieringen av en [ListView](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.ListView).
+   Den här klassen kapslar in kolumnkonfigurationsdata som ska användas vid initiering av en [ListView](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.ListView).
 
 * lvdatecolumn
 
    [CQ.Ext.list.DateColumn](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.DateColumn)
 
-   En kolumndefinitionsklass som återger ett skickat datum enligt standardspråket, eller ett konfigurerat [format](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.DateColumn). Mer information finns i [xtype](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.Column) config option of [CQ.Ext.list.Column](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.Column).
+   En kolumndefinitionsklass som återger ett skickat datum enligt standardspråket eller en konfigurerad [format](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.DateColumn). Se [xtype](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.Column) config option of [CQ.Ext.list.Column](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.Column) för mer information.
 
 * lvnumbercolumn
 
    [CQ.Ext.list.NumberColumn](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.NumberColumn)
 
-   En kolumndefinitionsklass som återger ett numeriskt datafält enligt en [formatsträng](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.NumberColumn). Mer information finns i [xtype](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.Column) config option of [CQ.Ext.list.Column](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.Column).
+   En definitionsklass för kolumn som återger ett numeriskt datafält enligt en [format](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.NumberColumn) sträng. Se [xtype](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.Column) config option of [CQ.Ext.list.Column](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.list.Column) för mer information.
 
 * mediabrowsedialog
 
    [CQ.MediaBrowseDialog](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.MediaBrowseDialog)
 
-   **Föråldrat: Använd  [Content ](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.ContentFinder) Finder för att bläddra bland media i stället.**
+   **Föråldrat: Använd [Content Finder](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.ContentFinder) för att bläddra bland media istället.**
 
    MediaBrowseDialog är en dialogruta för att bläddra i mediebiblioteket.
 
@@ -512,9 +511,9 @@ Nedan finns en lista över tillgängliga xtyper i Adobe Experience Manager:
 
    [CQ.Ext.menu.Menu](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.menu.Menu)
 
-   Ett menyobjekt. Det här är den behållare som du kan lägga till menyalternativ i. Menyn kan också fungera som en basklass när du vill ha en speciell meny baserad på en annan komponent (till exempel [CQ.Ext.menu.DateMenu](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.menu.DateMenu)).
+   Ett menyobjekt. Det här är den behållare som du kan lägga till menyalternativ i. Menyn kan också fungera som en basklass när du vill ha en speciell meny baserad på en annan komponent (som [CQ.Ext.menu.DateMenu](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.menu.DateMenu) till exempel).
 
-   Menyer kan innehålla antingen [menyalternativ](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.menu.Item) eller allmänna [komponenter](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Component)s.
+   Menyer kan innehålla antingen [menyalternativ](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.menu.Item), eller allmänt [Komponent](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Component)s.
 
 * menyobjekt
 
@@ -576,7 +575,7 @@ Nedan finns en lista över tillgängliga xtyper i Adobe Experience Manager:
 
    [CQ.Ext.form.NumberField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.NumberField)
 
-   Numeriskt textfält med automatisk filtrering av tangenttryckningar och numerisk validering.
+   Numeriskt textfält med automatisk tangentbordsfiltrering och numerisk validering.
 
 * offlineimportör
 
@@ -602,7 +601,7 @@ Nedan finns en lista över tillgängliga xtyper i Adobe Experience Manager:
 
    Panelen är en behållare som har specifika funktioner och strukturella komponenter som gör den till den perfekta byggstenen för programorienterade användargränssnitt.
 
-   Panelerna ärvs från [CQ.Ext.Container](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Container).
+   Panelerna är det tack vare deras arv från [CQ.Ext.Container](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Container).
 
 * paragraphreference
 
@@ -614,19 +613,19 @@ Nedan finns en lista över tillgängliga xtyper i Adobe Experience Manager:
 
    [CQ.form.Password](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.Password)
 
-   Lösenordet är som ett [CQ.Ext.form.TextField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.TextField) men behåller sitt värde privat, vilket gör att användarna kan ange känsliga data.
+   Lösenordet är som [CQ.Ext.form.TextField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.TextField) men håller värdet privat, så att användarna kan ange känsliga data.
 
 * patinering
 
    [CQ.form.PathCompletion](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.PathCompletion)
 
-   **Föråldrat: Använd  [CQ.form.](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.PathField) PathFieldIstället**
+   **Föråldrat: Använd [CQ.form.PathField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.PathField) i stället**
 
 * pathfield
 
    [CQ.form.PathField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.PathField)
 
-   PathField är ett inmatningsfält som är utformat för sökvägar med sökvägsinmatning och en knapp för att öppna en [CQ.BrowseDialog](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.BrowseDialog) för att bläddra i serverdatabasen. Den kan även bläddra bland sidstycken för avancerad länkgenerering.
+   PathField är ett indatafält som är utformat för sökvägar med sökvägsinmatning och en knapp för att öppna en [CQ.BrowseDialog](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.BrowseDialog) för att bläddra i serverdatabasen. Den kan även bläddra bland sidstycken för avancerad länkgenerering.
 
 * progress
 
@@ -652,7 +651,7 @@ Nedan finns en lista över tillgängliga xtyper i Adobe Experience Manager:
 
    [CQ.Ext.QuickTip](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.QuickTip)
 
-   @xtype quicktip En anpassad verktygstipsklass för verktygstips som kan anges i kod och hanteras automatiskt av den globala [CQ.Ext.QuickTips](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.QuickTips)-instansen. Mer användningsinformation och exempel finns i rubriken för klassen QuickTips.
+   @xtype quicktip En speciell verktygstipsklass för verktygstips som kan anges i kod och hanteras automatiskt av den globala [CQ.Ext.QuickTips](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.QuickTips) -instans. Mer användningsinformation och exempel finns i rubriken för klassen QuickTips.
 
 * radio
 
@@ -664,7 +663,7 @@ Nedan finns en lista över tillgängliga xtyper i Adobe Experience Manager:
 
    [CQ.Ext.form.RadioGroup](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.RadioGroup)
 
-   En grupperingsbehållare för kontrollerna [CQ.Ext.form.Radio](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.Radio).
+   En grupperingsbehållare för [CQ.Ext.form.Radio](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.Radio) kontroller.
 
 * referenserDialogruta
 
@@ -752,7 +751,7 @@ Nedan finns en lista över tillgängliga xtyper i Adobe Experience Manager:
 
    Bildspelet innehåller en komponent som kan användas för att definiera och redigera en uppsättning bilder och bildtitlar som kan visas som ett bildspel.
 
-   Bildspelskomponenten är baserad på komponenten [CQ.form.SmartImage](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.SmartImage).
+   Bildspelskomponenten är baserad på [CQ.form.SmartImage](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.SmartImage) -komponenten.
 
 * smartfile
 
@@ -804,7 +803,7 @@ Nedan finns en lista över tillgängliga xtyper i Adobe Experience Manager:
 
    [CQ.Ext.data.Store](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.Store)
 
-   Klassen Store kapslar in en klientsidescache med [Record](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.Record)-objekt som tillhandahåller indata för komponenter som [GridPanel](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.GridPanel), [ComboBox](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.ComboBox) eller [DataView](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.DataView).
+   Klassen Store kapslar in en klientcache för [Post](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.Record) objekt som tillhandahåller indata för komponenter, t.ex. [GridPanel](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.GridPanel), [ComboBox](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.ComboBox)eller [DataView](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.DataView).
 
 * förslagsfält
 
@@ -822,9 +821,9 @@ Nedan finns en lista över tillgängliga xtyper i Adobe Experience Manager:
 
    [CQ.form.TableEdit](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.TableEdit)
 
-   **Föråldrat: Använd  [CQ.form.TableEdit2](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.TableEdit2) i stället.**
+   **Föråldrat: Använd [CQ.form.TableEdit2](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.TableEdit2) i stället.**
 
-* tableEdit2
+* tableedit2
 
    [CQ.form.TableEdit2](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.TableEdit2)
 
@@ -834,7 +833,7 @@ Nedan finns en lista över tillgängliga xtyper i Adobe Experience Manager:
 
    [CQ.Ext.TabPanel](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.TabPanel)
 
-   En enkel flikbehållare. TabPanels kan användas exakt som en standard [CQ.Ext.Panel](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Panel) i layoutsyfte, men har även särskilt stöd för underordnade komponenter ([`items`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Container)).
+   En enkel flikbehållare. TabPanels kan användas exakt som en standard [CQ.Ext.Panel](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Panel) för layoutändamål, men har även särskilt stöd för att innehålla underordnade komponenter ([`items`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Container)).
 
 * taggar
 
@@ -856,7 +855,7 @@ Nedan finns en lista över tillgängliga xtyper i Adobe Experience Manager:
 
    [CQ.TextButton](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.TextButton)
 
-   TextButton innehåller en textlänk med funktionerna i en [CQ.Ext.Button](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Button).
+   TextButton tillhandahåller en textlänk med funktionerna i en [CQ.Ext.Button](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Button).
 
 * textfält
 
@@ -890,7 +889,7 @@ Nedan finns en lista över tillgängliga xtyper i Adobe Experience Manager:
 
    [CQ.Ext.Toolbar](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Toolbar)
 
-   Klassen Basic Toolbar. Trots att [`defaultType`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Container) för verktygsfältet är [`button`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Button), kan verktygsfältselement (underordnade objekt för verktygsfältets behållare) vara praktiskt taget vilken typ av komponent som helst. Verktygsfältselement kan skapas explicit via deras konstruktorer.
+   Klassen Basic Toolbar. Även om [`defaultType`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Container) för Toolbar är [`button`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Button)kan verktygsfältselement (underordnade objekt för Toolbar-behållaren) vara praktiskt taget vilken typ av komponent som helst. Verktygsfältselement kan skapas explicit via deras konstruktorer.
 
 * funktionsbeskrivning
 
@@ -910,7 +909,7 @@ Nedan finns en lista över tillgängliga xtyper i Adobe Experience Manager:
 
    TreePanel innehåller trädstrukturerade gränssnittsrepresentationer av trädstrukturerade data.
 
-   [TreeNodes ](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.tree.TreeNode)som läggs till i TreePanel-panelen kan innehålla metadata som används av programmet i deras  [](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.tree.TreeNode) attributegenskap.
+   [TreeNode](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.tree.TreeNode)som läggs till i TreePanel-panelen kan innehålla metadata som används av programmet i deras [attributes](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.tree.TreeNode) -egenskap.
 
 * trigger
 
@@ -942,12 +941,12 @@ Nedan finns en lista över tillgängliga xtyper i Adobe Experience Manager:
 
    [CQ.Ext.Window](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Window)
 
-   En specialpanel som är avsedd att användas som programfönster. Windows är flytande, [storleksändras](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Window) och [dragbara](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Window) som standard. Windows kan vara [maximerat](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Window) för att fylla visningsrutan, återställas till den tidigare storleken och kan vara [minimize](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Window)d.
+   En specialpanel som är avsedd att användas som programfönster. Windows är flytande, [resizable](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Window)och [dragbar](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Window) som standard. Windows kan [maximerad](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Window) för att fylla visningsrutan, återställa till den tidigare storleken och kan [minimera](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Window)d.
 
 * xmlstore
 
    [CQ.Ext.data.XmlStore](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.XmlStore)
 
-   Liten hjälpklass som gör det enklare att skapa [CQ.Ext.data.Store](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.Store)s från XML-data. En XmlStore konfigureras automatiskt med [CQ.Ext.data.XmlReader](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.XmlReader).
+   Liten hjälpklass för att skapa [CQ.Ext.data.Store](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.Store)s från XML-data enklare. En XmlStore konfigureras automatiskt med en [CQ.Ext.data.XmlReader](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.XmlReader).
 
-   **cqincludePseudo** xtype som innehåller widgetdefinitioner från en annan sökväg i databasen. Det används oftast i siddialogrutor. Det finns ingen faktisk JavaScript-widgetklass för den här xtype-filen. Den bearbetas av funktionen formatData() i klassen CQ.Util. Mer information finns i den här artikeln i kunskapsbasen.
+   **cqinclude** Pseudoxtype som innehåller widgetdefinitioner från en annan sökväg i databasen. Det används oftast i siddialogrutor. Det finns ingen faktisk JavaScript-widgetklass för den här xtype-filen. Den bearbetas av funktionen formatData() i klassen CQ.Util. Mer information finns i den här artikeln i kunskapsbasen.

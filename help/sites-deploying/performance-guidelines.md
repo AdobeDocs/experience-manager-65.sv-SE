@@ -127,7 +127,7 @@ Illustrator below are the deployment options available for AEM (scroll to view a
    <td><p> </p> </td>
    <td><p> </p> </td>
    <td><p> </p> </td>
-   <td><p>Resurser</p> </td>
+   <td><p>Assets</p> </td>
   </tr>
   <tr>
    <td><p>Handel</p> </td>
@@ -497,10 +497,10 @@ Testerna utfördes på följande specifikationer:
 | Server | Maskinvara av oädel metall (HP) |
 | Operativsystem | RedHat Linux |
 | Processor/kärnor | Processorn Intel(R) Xeon(R) E5-2407 @2,40 GHz, 8 kärnor |
-| RAM | 32 GB |
+| RAM | 32GB |
 | Skiva | Magnetiskt |
 | Java | Oracle JRE version 8 |
-| JVM-heap | 16 GB |
+| JVM-heap | 16GB |
 | Produkt | AEM 6.2 |
 | Nodestore | tarMK |
 | Datastore | Fil-DS |
@@ -607,10 +607,10 @@ Testerna utfördes på följande specifikationer:
 | Server | Maskinvara av oädel metall (HP) | Maskinvara av oädel metall (HP) |
 | Operativsystem | RedHat Linux | RedHat Linux |
 | Processor/kärnor | Processorn Intel(R) Xeon(R) E5-2407 @2,40 GHz, 8 kärnor | Processorn Intel(R) Xeon(R) E5-2407 @2,40 GHz, 8 kärnor |
-| RAM | 32 GB | 32 GB |
+| RAM | 32GB | 32GB |
 | Skiva | Magnetiskt - >1 k IOPS | Magnetiskt - >1 k IOPS |
 | Java | Oracle JRE version 8 | Ej tillämpligt |
-| JVM-heap | 16 GB | Ej tillämpligt |
+| JVM-heap | 16GB | Ej tillämpligt |
 | Produkt | AEM 6.2 | MongoDB 3.2 WiredTiger |
 | Nodestore | MongoMK | Ej tillämpligt |
 | Datastore | Fil-DS | Ej tillämpligt |
@@ -686,8 +686,8 @@ Mer information om TjäraMK jämfört med MongoMK finns i [Rekommenderade distri
   </tr>
   <tr>
    <td>RAM</td>
-   <td>32 GB</td>
-   <td>32 GB</td>
+   <td>32GB</td>
+   <td>32GB</td>
    <td> </td>
   </tr>
   <tr>
@@ -704,7 +704,7 @@ Mer information om TjäraMK jämfört med MongoMK finns i [Rekommenderade distri
   </tr>
   <tr>
    <td>JVM Heap16 GB</td>
-   <td>16 GB</td>
+   <td>16GB</td>
    <td>Ej tillämpligt</td>
    <td> </td>
   </tr>
@@ -773,9 +773,9 @@ Mer information om TjäraMK jämfört med MongoMK finns i [Rekommenderade distri
   </tr>
   <tr>
    <td>RAM</td>
-   <td>60 GB</td>
-   <td>60 GB</td>
-   <td>60 GB</td>
+   <td>60GB</td>
+   <td>60GB</td>
+   <td>60GB</td>
   </tr>
   <tr>
    <td>Skiva</td>
@@ -791,8 +791,8 @@ Mer information om TjäraMK jämfört med MongoMK finns i [Rekommenderade distri
   </tr>
   <tr>
    <td>JVM Heap16 GB</td>
-   <td>30 GB</td>
-   <td>30 GB</td>
+   <td>30GB</td>
+   <td>30GB</td>
    <td>Ej tillämpligt</td>
   </tr>
   <tr>

@@ -1,8 +1,8 @@
 ---
 title: API:er för systeminformationstjänst
-seo-title: API:er för systeminformationstjänst
+seo-title: System information Service APIs
 description: Det här dokumentet innehåller detaljerad information om de API:er som tillhandahålls av systeminformationstjänsten.
-seo-description: Det här dokumentet innehåller detaljerad information om de API:er som tillhandahålls av systeminformationstjänsten.
+seo-description: This document provides detailed information about the APIs provided bythesystem information service.
 uuid: 7f624216-56e6-4d49-b9a1-3c9af045dabe
 contentOwner: admin
 content-type: reference
@@ -12,7 +12,7 @@ discoiquuid: 79fccce2-d090-4b50-9c58-3f2a00e651b2
 exl-id: 4da96c8f-8bd0-4cad-9087-18e324f084e7
 source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
 workflow-type: tm+mt
-source-wordcount: '352'
+source-wordcount: '336'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Systeminformationstjänsten tillhandahåller en uppsättning REST API:er för at
   <tr>
    <td><p>SystemInfo.properties</p></td>
    <td><p>https://'[server]:[port]'/rest/services/SystemInfo.properties'</p></td>
-   <td><p>Detta API är en wrapper för Java API:t <a href="https://docs.oracle.com/javase/6/docs/api/java/lang/System.html#getProperties()">system.getProperties</a>. Den hämtar konfigurationen för den aktuella arbetsmiljön. </p></td>
+   <td><p>Detta API är en wrapper för <a href="https://docs.oracle.com/javase/6/docs/api/java/lang/System.html#getProperties()">system.getProperties</a> Java API. Den hämtar konfigurationen för den aktuella arbetsmiljön. </p></td>
   </tr>
   <tr>
    <td><p>SystemInfo.envVar</p></td>
@@ -106,7 +106,7 @@ Systeminformationstjänsten tillhandahåller en uppsättning REST API:er för at
   <tr>
    <td><p>SystemInfo.info</p></td>
    <td><p>https://'[server]:[port]'/rest/services/ SystemInfo.info</p></td>
-   <td><p>Denna API är en wrapper för alla API:er för systeminformationstjänsten. Internt körs alla API:er för systeminformation och information hämtas i zip-format. </p><p><i><strong>Obs</strong>! SystemInfo.info tillhandahåller inte räknings- och stackspårning för aktiva trådar. </i></p></td>
+   <td><p>Denna API är en wrapper för alla API:er för systeminformationstjänsten. Internt körs alla API:er för systeminformation och information hämtas i zip-format. </p><p><i><strong>anteckning</strong>: SystemInfo.info tillhandahåller inte räknings- och stackspårning för aktiva trådar. </i></p></td>
   </tr>
  </tbody>
 </table>

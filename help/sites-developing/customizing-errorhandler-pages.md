@@ -1,22 +1,21 @@
 ---
 title: Anpassa sidor som visas av felhanteraren
-seo-title: Anpassa sidor som visas av felhanteraren
+seo-title: Customizing Pages shown by the Error Handler
 description: AEM levereras med en standardfelhanterare för hantering av HTTP-fel
-seo-description: AEM levereras med en standardfelhanterare för hantering av HTTP-fel
+seo-description: AEM comes with a standard error handler for handling HTTP errors
 uuid: aaf940fd-e428-4c7c-af7f-88b1d02c17c6
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
 discoiquuid: 63c94c82-ed96-4d10-b645-227fa3c09f4b
-translation-type: tm+mt
-source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
+exl-id: d6745baa-44da-45dd-b5d5-a9b218e7e8cf
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '536'
+source-wordcount: '518'
 ht-degree: 0%
 
 ---
-
 
 # Anpassa sidor som visas av felhanteraren{#customizing-pages-shown-by-the-error-handler}
 
@@ -24,28 +23,28 @@ AEM har en standardfelhanterare för hantering av HTTP-fel. genom att till exemp
 
 ![chlimage_1-67](assets/chlimage_1-67a.png)
 
-Det finns systemtilldelade skript (under `/libs/sling/servlet/errorhandler`) som kan svara på felkoder. Som standard är följande tillgängliga med en CQ-standardinstans:
+Systemskript finns (under `/libs/sling/servlet/errorhandler`) för att svara på felkoder är som standard följande tillgängligt med en CQ-standardinstans:
 
 * 403.jsp
 * 404.jsp
 
 >[!NOTE]
 >
->AEM baseras på Apache Sling, så se [https://sling.apache.org/site/errorhandling.html](https://sling.apache.org/site/errorhandling.html) för detaljerad information om Hantering av Sling-fel.
+>AEM baseras på Apache Sling, så se [https://sling.apache.org/site/errorhandling.html](https://sling.apache.org/site/errorhandling.html) om du vill ha mer information om felhantering vid körning.
 
 >[!NOTE]
 >
->På en författarinstans är [CQ WCM Debug Filter](/help/sites-deploying/osgi-configuration-settings.md) aktiverat som standard. Detta resulterar alltid i svarskoden 200. Standardfelhanteraren svarar genom att skriva den fullständiga stackspårningen till svaret.
+>På en författarinstans [CQ WCM-felsökningsfilter](/help/sites-deploying/osgi-configuration-settings.md) är aktiverat som standard. Detta resulterar alltid i svarskoden 200. Standardfelhanteraren svarar genom att skriva den fullständiga stackspårningen till svaret.
 >
 >I en publiceringsinstans är CQ WCM-felsökningsfiltret *alltid* inaktiverat (även om det har konfigurerats som aktiverat).
 
 ## Anpassa sidor som visas av felhanteraren {#how-to-customize-pages-shown-by-the-error-handler}
 
-Du kan utveckla egna skript för att anpassa sidorna som visas i felhanteraren när ett fel inträffar. Dina anpassade sidor skapas under `/apps` och täcker över standardsidorna (som är under `/libs`).
+Du kan utveckla egna skript för att anpassa sidorna som visas i felhanteraren när ett fel inträffar. Dina anpassade sidor skapas under `/apps` och täcka över standardsidorna (som finns under `/libs`).
 
 >[!NOTE]
 >
->Mer information finns i [Använda övertäckningar](/help/sites-developing/overlays.md).
+>Se [Använda övertäckningar](/help/sites-developing/overlays.md) för mer information.
 
 1. Kopiera standardskripten i databasen:
 
@@ -71,8 +70,8 @@ Du kan utveckla egna skript för att anpassa sidorna som visas i felhanteraren n
 
 HTTP 500-fel orsakas av serversidans undantag.
 
-* **[500 internt serverfel ](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)**
-Servern påträffade ett oväntat tillstånd som gjorde att den inte kunde utföra begäran.
+* **[500 internt serverfel](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)**
+Servern påträffade ett oväntat tillstånd som gjorde att den inte kunde slutföra begäran.
 
 När bearbetningen av en begäran resulterar i ett undantag, är Apache Sling-ramverket (som AEM bygger på):
 
@@ -84,17 +83,16 @@ När bearbetningen av en begäran resulterar i ett undantag, är Apache Sling-ra
 
    i svarets brödtext.
 
-Genom att [anpassa de sidor som visas av felhanteraren](#how-to-customize-pages-shown-by-the-error-handler) kan ett `500.jsp`-skript skapas. Den används dock bara om `HttpServletResponse.sendError(500)` körs explicit; d.v.s. från en undantagskatalog.
+Av [anpassa de sidor som visas i felhanteraren](#how-to-customize-pages-shown-by-the-error-handler) a `500.jsp` kan skapas. Det används dock bara om `HttpServletResponse.sendError(500)` exekveras uttryckligen, d.v.s. från en undantagskatalog.
 
-Annars är svarskoden inställd på 500, men `500.jsp`-skriptet körs inte.
+Annars är svarskoden inställd på 500, men `500.jsp` skriptet körs inte.
 
 Om du vill hantera 500 fel måste filnamnet för felhanterarskriptet vara detsamma som undantagsklassen (eller superklassen). Om du vill hantera alla sådana undantag kan du skapa ett skript `/apps/sling/servlet/errorhandler/Throwable.js`p eller `/apps/sling/servlet/errorhandler/Exception.jsp`.
 
 >[!CAUTION]
 >
->På en författarinstans är [CQ WCM Debug Filter](/help/sites-deploying/osgi-configuration-settings.md) aktiverat som standard. Detta resulterar alltid i svarskoden 200. Standardfelhanteraren svarar genom att skriva den fullständiga stackspårningen till svaret.
+>På en författarinstans [CQ WCM-felsökningsfilter](/help/sites-deploying/osgi-configuration-settings.md) är aktiverat som standard. Detta resulterar alltid i svarskoden 200. Standardfelhanteraren svarar genom att skriva den fullständiga stackspårningen till svaret.
 >
->För en anpassad felhanterare krävs svar med kod 500, så [CQ WCM Debug Filter måste inaktiveras](/help/sites-deploying/osgi-configuration-settings.md). Detta garanterar att svarskoden 500 returneras, vilket i sin tur utlöser rätt Sling-felhanterare.
+>För en anpassad felhanterare behövs svar med koden 500, så [CQ WCM Debug Filter måste inaktiveras](/help/sites-deploying/osgi-configuration-settings.md). Detta garanterar att svarskoden 500 returneras, vilket i sin tur utlöser rätt Sling-felhanterare.
 >
 >I en publiceringsinstans är CQ WCM-felsökningsfiltret *alltid* inaktiverat (även om det har konfigurerats som aktiverat).
-

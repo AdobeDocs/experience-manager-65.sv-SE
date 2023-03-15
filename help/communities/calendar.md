@@ -1,8 +1,8 @@
 ---
 title: Kalenderfunktion
-seo-title: Kalenderfunktion
+seo-title: Calendar Feature
 description: Tillhandahåller information om communityevent i ett kalenderformat
-seo-description: Tillhandahåller information om communityevent i ett kalenderformat
+seo-description: Provides community event information in a calendar format
 uuid: 262f6afa-d8aa-4815-8440-a8ed5668c76d
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -10,14 +10,13 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 70fa0b9c-cb98-45c4-9c94-bef4a9f3741e
 docset: aem65
-translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+exl-id: c9b34b00-525d-4ca3-bd18-11bb7ce66787
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1170'
+source-wordcount: '1160'
 ht-degree: 0%
 
 ---
-
 
 # Kalenderfunktion {#calendar-feature}
 
@@ -28,25 +27,25 @@ Kalenderfunktionen har stöd för att tillhandahålla information om communityev
 Detta avsnitt i dokumentationen beskriver
 
 * Lägga till kalenderfunktionen på en AEM webbplats
-* Konfigurationsinställningar för `Calendar`-komponenter
+* Konfigurationsinställningar för `Calendar` komponenter
 
 ## Lägga till en kalender på en sida {#adding-a-calendar-to-a-page}
 
-Om du vill lägga till en `Calendar`-komponent på en sida i redigeringsläge använder du komponentwebbläsaren för att leta reda på
+Lägga till en `Calendar` -komponent till en sida i redigeringsläge använder du komponentwebbläsaren för att leta upp
 
 * `Communities / Calendar`
 
 och dra den till rätt plats på en sida, t.ex. i förhållande till funktionen som användarna kan granska.
 
-Mer information finns på [Grunderna för communitykomponenter](/help/communities/basics.md).
+Nödvändig information finns på [Grunderna för communitykomponenter](/help/communities/basics.md).
 
-När de [nödvändiga klientbiblioteken](/help/communities/calendar-basics-for-developers.md#essentials-for-client-side) inkluderas visas `Calendar`-komponenten så här.
+När [nödvändiga bibliotek på klientsidan](/help/communities/calendar-basics-for-developers.md#essentials-for-client-side) ingår så här `Calendar` visas.
 
 ![kalenderkomponent](assets/calendar-component.png)
 
-### Konfigurerar kalendern {#configuring-calendar}
+### Konfigurerar kalender {#configuring-calendar}
 
-Markera den monterade `Calendar`-komponenten som ska öppnas och välj ikonen `Configure` som öppnar redigeringsdialogrutan.
+Markera den monterade `Calendar` -komponenten som ska få åtkomst till och markera `Configure` som öppnar redigeringsdialogrutan.
 
 ![konfigurera](assets/configure-new.png)
 
@@ -54,7 +53,7 @@ Markera den monterade `Calendar`-komponenten som ska öppnas och välj ikonen `C
 
 #### Fliken Inställningar {#settings-tab}
 
-Under fliken **Inställningar** anger du om du vill tillåta att taggar tillämpas på kalenderposter eller inte.
+Under **Inställningar** anger du om du vill tillåta att taggar används på kalenderposter.
 
 * **Händelser per sida**
 
@@ -74,7 +73,7 @@ Under fliken **Inställningar** anger du om du vill tillåta att taggar tillämp
 
 * **Tillåt taggning**
 
-   Om det här alternativet är markerat kan medlemmar lägga till taggetiketter i de händelser som de postar (se **Tagg field** tab). Standard är markerat.
+   Om det här alternativet är markerat, tillåt medlemmar att lägga till taggetiketter till de händelser de publicerar (se **Taggfält** -fliken). Standard är markerat.
 
 * **Tillåt filöverföringar**
 
@@ -86,11 +85,11 @@ Under fliken **Inställningar** anger du om du vill tillåta att taggar tillämp
 
 * **Maximal filstorlek**
 
-   Endast relevant om `Allow File Uploads` är markerat. Det här fältet begränsar storleken (i byte) på en överförd fil. Standardvärdet är 104857600 (10 MB).
+   Endast relevant om `Allow File Uploads` är markerad. Det här fältet begränsar storleken (i byte) på en överförd fil. Standardvärdet är 104857600 (10 MB).
 
 * **Tillåtna filtyper**
 
-   Endast relevant om `Allow File Uploads` är markerat. En kommaavgränsad lista med filtillägg med&quot;punktavgränsaren&quot;. Till exempel: .jpg, .jpeg, .png, .doc, .docx, .pdf. Om någon filtyp har angetts kan de som inte har angetts inte överföras. Ingen standard har angetts så att alla filtyper tillåts.
+   Endast relevant om `Allow File Uploads` är markerad. En kommaavgränsad lista med filtillägg med&quot;punktavgränsaren&quot;. Till exempel: .jpg, .jpeg, .png, .doc, .docx, .pdf. Om någon filtyp har angetts kan de som inte har angetts inte överföras. Ingen standard har angetts så att alla filtyper tillåts.
 
 * **Maximal filstorlek för bifogad bild**
 
@@ -98,7 +97,7 @@ Under fliken **Inställningar** anger du om du vill tillåta att taggar tillämp
 
 * **Tillåtna omslagsbildtyper**
 
-   En kommaavgränsad lista med bildfilstillägg med&quot;punktavgränsaren&quot;. Standardvärdet är `.jpg,.jpeg,.png,.gif,.bmp`.
+   En kommaavgränsad lista med bildfilstillägg med&quot;punktavgränsaren&quot;. Standard är `.jpg,.jpeg,.png,.gif,.bmp`.
 
 * **Tillåt kopplade svar**
 
@@ -122,9 +121,9 @@ Under fliken **Inställningar** anger du om du vill tillåta att taggar tillämp
 
 * **Tillåt innehåll**
 
-   Om det här alternativet är markerat kan idén identifieras som [aktuellt innehåll](/help/communities/featured.md). Standard är avmarkerat.
+   Om det här alternativet är markerat kan idén identifieras som [innehåll](/help/communities/featured.md). Standard är avmarkerat.
 
-Under fliken **Användarmoderering** anger du hur publicerade ämnen och svar (användargenererat innehåll) ska hanteras. Mer information finns i [Moderating User Generated Content](/help/communities/moderate-ugc.md).
+Under **Användarmoderering** anger du hur publicerade ämnen och svar (användargenererat innehåll) ska hanteras. Mer information finns i [Modererar användargenererat innehåll](/help/communities/moderate-ugc.md).
 
 #### Fliken Användarmoderering {#user-moderation-tab}
 
@@ -156,13 +155,13 @@ Under fliken **Användarmoderering** anger du hur publicerade ämnen och svar (a
 
    Ange hur många gånger en händelse eller kommentar måste flaggas innan den döljs för den offentliga vyn. Om värdet är -1 döljs aldrig det flaggade ämnet eller kommentaren från den offentliga vyn. Annars måste talet vara större än eller lika med modereringströskeln. Standardvärdet är 5.
 
-#### Tagg field tab {#tag-field-tab}
+#### Fliken Taggfält {#tag-field-tab}
 
-Under fliken **Tagg field** är de taggar som kan användas, om de tillåts under fliken **Settings** begränsade enligt de valda namnutrymmena.
+Under **Taggfält** -fliken, de taggar som kan användas, om de tillåts under **Inställningar** är begränsade enligt de namnutrymmen som har valts.
 
 * **Tillåtna namnutrymmen**
 
-   Relevant om `Allow Tagging` är markerat under fliken **Inställningar**. De taggar som kan användas är begränsade till de inom de namnutrymmeskategorier som kontrolleras. Listan med namnutrymmen innehåller &quot;Standardtaggar&quot; (standardnamnutrymmet) och &quot;Inkludera alla taggar&quot;. Standardvärdet är inget markerat, vilket betyder att alla namnutrymmen är tillåtna.
+   Relevant om `Allow Tagging` kontrolleras under **Inställningar** -fliken. De taggar som kan användas är begränsade till de inom de namnutrymmeskategorier som kontrolleras. Listan med namnutrymmen innehåller &quot;Standardtaggar&quot; (standardnamnutrymmet) och &quot;Inkludera alla taggar&quot;. Standardvärdet är inget markerat, vilket betyder att alla namnutrymmen är tillåtna.
 
 * **Förslagsgräns**
 
@@ -170,11 +169,11 @@ Under fliken **Tagg field** är de taggar som kan användas, om de tillåts unde
 
 >[!NOTE]
 >
->Gå till [Administrera taggar](/help/sites-administering/tags.md) om du vill veta hur du lägger till ett nytt taggnamnutrymme (taxonomi).
+>Besök [Administrera taggar](/help/sites-administering/tags.md) om du vill lära dig hur du lägger till ett nytt taggnamnutrymme (taxonomi).
 
-#### Översättningsflik {#translation-tab}
+#### Fliken Översättning {#translation-tab}
 
-Under fliken **Översättning**, om översättning är aktiverat för communitywebbplatsen, kan översättning ställas in så att hela tråden (händelse och kommentarer) översätts i stället för specifika inlägg.
+Under **Översättning** om översättning är aktiverat för communitywebbplatsen kan översättning ställas in så att hela tråden (händelse och kommentarer) översätts i stället för specifika inlägg.
 
 * **Översätt alla**
 
@@ -188,15 +187,15 @@ När en kalenderhändelse är markerad visas kalenderhändelseinformation, beskr
 
 Andra funktioner beror på om besökaren är en moderator, administratör, community-medlem, privilegierad medlem eller anonym.
 
-### Moderatorer och administratörer {#moderators-and-administrators}
+### Styrelsemedlemmar och administratörer {#moderators-and-administrators}
 
-När den inloggade användaren har moderator- eller administratörsbehörighet kan han/hon utföra [modereringsåtgärder](/help/communities/moderate-ugc.md) (enligt komponentens konfiguration) för alla kalenderhändelser och kommentarer som publiceras till en händelse.
+När den inloggade användaren har behörighet som moderator eller administratör kan de utföra [modereringsuppgifter](/help/communities/moderate-ugc.md) (som tillåts av komponentens konfiguration) för alla kalenderhändelser och kommentarer som publiceras till en händelse.
 
 ![moderators-view](assets/moderators-view.png)
 
 #### Medlemmar {#members}
 
-När den inloggade användaren är en community-medlem eller [privilegierad medlem](/help/communities/users.md#privileged-members-group) (beroende på konfiguration) kan användaren välja `New Event` för att skapa och publicera en ny kalenderhändelse.
+När den inloggade användaren är en community-medlem eller [behörig medlem](/help/communities/users.md#privileged-members-group) (beroende på konfiguration) kan de välja `New Event` för att skapa och publicera en ny kalenderhändelse.
 
 De får särskilt
 
@@ -218,10 +217,10 @@ Webbplatsbesökare som inte är inloggade kan bara läsa publicerade kalenderhä
 
 ## Ytterligare information {#additional-information}
 
-Mer information finns på sidan [Calendar Essentials](/help/communities/calendar-basics-for-developers.md) för utvecklare.
+Mer information finns på [Grundläggande kalender](/help/communities/calendar-basics-for-developers.md) för utvecklare.
 
-moderering av kalenderhändelser och kommentarer finns i [Moderating User Generated Content](/help/communities/moderate-ugc.md).
+moderering av kalenderhändelser och kommentarer finns i [Modererar användargenererat innehåll](/help/communities/moderate-ugc.md).
 
 Information om hur du taggar kalenderhändelser och kommentarer finns i [Tagga användargenererat innehåll](/help/communities/tag-ugc.md).
 
-Översättning av kalenderhändelser och kommentarer finns i [Översätta användargenererat innehåll](/help/communities/translate-ugc.md).
+För översättning av kalenderhändelser och kommentarer, se [Översätter användargenererat innehåll](/help/communities/translate-ugc.md).

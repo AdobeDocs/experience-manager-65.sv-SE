@@ -1,8 +1,8 @@
 ---
-title: Metodtips för HTML5-formulär
-seo-title: Metodtips för HTML5-formulär
+title: Bästa tillvägagångssätt för HTML5-formulär
+seo-title: Best practices for HTML5 forms
 description: Finjustera din XFA-baserade HTML5 Forms för bästa prestanda.
-seo-description: Lär dig trimma din XFA-baserade HTML5 Forms för bästa prestanda.
+seo-description: Learn how to tune your XFA-based HTML5 Forms for best performance.
 uuid: 3804effd-f1f2-4d7a-8e52-717b5c1c62cf
 contentOwner: khsingh
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -11,16 +11,15 @@ content-type: reference
 discoiquuid: db22f775-fab1-4a78-b334-a9c4fa613e43
 docset: aem65
 feature: Mobile Forms
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 62ff6306-9989-43b0-abaf-b0a811f0a6a4
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1436'
+source-wordcount: '1418'
 ht-degree: 0%
 
 ---
 
-
-# Metodtips för HTML5-formulär{#best-practices-for-html-forms}
+# Bästa tillvägagångssätt för HTML5-formulär{#best-practices-for-html-forms}
 
 ## Översikt {#overview}
 
@@ -28,11 +27,11 @@ AEM Forms har en komponent som kallas HTML5-formulär. Det hjälper till att åt
 
 De flesta mobila enheter har begränsad processorkraft och minneskapacitet. Det hjälper till att förbättra väntetiden för mobila enheter. Webbläsare som körs på en mobil enhet har tillgång till begränsade resurser (begränsat minne och begränsad processorkapacitet). När gränsen har nåtts blir webbläsarbeteendet trögt. Det här dokumentet innehåller rekommendationer för att kontrollera storleken på ett HTML5-formulär. En mindre form bryter inte minnes- och processorenergigränserna för en enhet och ger en smidig upplevelse.
 
-Även om rekommendationerna i den här artikeln är inriktade på HTML5-formulär, är de lika tillämpliga på XFA-baserade PDF forms. Dessa bästa metoder bidrar tillsammans till den övergripande prestandan för HTML5-formulär. Det krävs noggrann planering för att utveckla effektiva och produktiva formulär. Kom igång:
+Även om rekommendationerna i den här artikeln är inriktade på formulär baserade på HTML5, är de ändå lika tillämpliga på XFA-baserade PDF forms. Dessa bästa metoder bidrar tillsammans till HTML5-formulärens övergripande prestanda. Det krävs noggrann planering för att utveckla effektiva och produktiva formulär. Kom igång:
 
-## Noderna är valuta för HTML5-formulär, använd dem klokt {#nodes-are-currency-of-html-forms-spend-them-wisely}
+## Noderna är valuta för HTML 5-formulär och använd dem klokt {#nodes-are-currency-of-html-forms-spend-them-wisely}
 
-I allmänhet har ett XFA-formulär flera element. Till exempel tabell, textfält och bilder. Alla element har ett antal egenskaper som styr elementets beteende och utseende. När ett XFA-formulär återges i HTML5-format konverteras alla XFA-element och motsvarande egenskaper till modell- eller HTML DOM-noder. Dessa noder ökar storleken och komplexiteten på en DOM. Det tar lång tid att återge HTML5-formuläret.
+I allmänhet har ett XFA-formulär flera element. Till exempel tabell, textfält och bilder. Alla element har ett antal egenskaper som styr elementets beteende och utseende. När ett XFA-formulär återges i HTML5-format konverteras alla XFA-element och motsvarande egenskaper till modell- eller HTML DOM-noder. Dessa noder ökar storleken och komplexiteten på en DOM. Gör det långsamt att återge HTML5-formuläret.
 
 Det är enklare för webbläsarna att återge en mindre DOM. Så du kan utföra följande optimeringar på ett XFA-formulär för att minska antalet noder. Generera därför en tunn DOM-struktur:
 
@@ -46,33 +45,33 @@ Ett HTML5-formulär kan innehålla flera externa resurser, till exempel bild-, J
 Att minska storleken på de externa resurserna och endast använda absolut nödvändiga resurser är därför den bästa metoden att förbättra formulärens prestanda. Du kan utföra följande optimeringar på ett XFA-formulär för att minska storleken på externa resurser i ett formulär:
 
 * Använd [komprimerade bilder](/help/assets/best-practices-for-optimizing-the-quality-of-your-images.md). Det minskar nätverksaktiviteten och den mängd minne som krävs för att återge ett formulär. Inläsningstiden för formuläret minskar därför avsevärt.
-* Använd alternativet minify i AEM Configuration Manager (Day CQ HTML Library Manager) för att komprimera JavaScript- och CSS-filer. Mer information finns i [OSGi-konfigurationsinställningar](/help/sites-deploying/osgi-configuration-settings.md).
-* Aktivera webbkomprimering. Det minskar storleken på begäranden och svar som kommer från ett formulär. Mer information finns i [Prestandajustering av AEM formulärserver](https://helpx.adobe.com/aem-forms/6-3/performance-tuning-aem-forms.html).
+* Använd alternativet minify i AEM Configuration Manager (Day CQ HTML Library Manager) för att komprimera JavaScript- och CSS-filer. Mer information finns i [Konfigurationsinställningar för OSGi](/help/sites-deploying/osgi-configuration-settings.md).
+* Aktivera webbkomprimering. Det minskar storleken på begäranden och svar som kommer från ett formulär. Mer information finns i [Prestandajustering AEM formulärserver](https://helpx.adobe.com/aem-forms/6-3/performance-tuning-aem-forms.html).
 
-## Håll intresset levande, visa endast obligatoriska fält {#keep-the-interest-alive-show-only-required-fields}
+## Håll intresset levande, visa endast obligatoriska fält  {#keep-the-interest-alive-show-only-required-fields}
 
 Ett HTML5-formulär kan innehålla hundratals sidor. Ett formulär med ett stort antal fält går långsamt att läsa in i webbläsaren. Du kan göra följande optimeringar i ett XFA-formulär för att optimera formulären med ett stort antal fält och sidor:
 
-* Utvärdera att dela upp stora formulär i flera formulär. Du kan också använda en formuläruppsättning för att gruppera alla mindre formulär och presentera dem som en enda enhet. En formuläruppsättning läser bara in de formulär som krävs. I en formuläruppsättning kan du dessutom konfigurera gemensamma fält i olika formulär för att dela databindningar. Databindningar hjälper användarna att fylla i vanlig information endast en gång. informationen fylls i automatiskt i efterföljande formulär, vilket leder till avsevärda prestandaförbättringar. Mer information om formuläruppsättningar finns i [Formuläruppsättning i AEM](https://helpx.adobe.com/aem-forms/6-3/formset-in-aem-forms.html).
+* Utvärdera att dela upp stora formulär i flera formulär. Du kan också använda en formuläruppsättning för att gruppera alla mindre formulär och presentera dem som en enda enhet. En formuläruppsättning läser bara in de formulär som krävs. I en formuläruppsättning kan du dessutom konfigurera gemensamma fält i olika formulär för att dela databindningar. Databindningar hjälper användarna att fylla i vanlig information endast en gång. informationen fylls i automatiskt i efterföljande formulär, vilket leder till avsevärda prestandaförbättringar. Mer information om formuläruppsättningar finns i [Formulär som angetts i AEM formulär](https://helpx.adobe.com/aem-forms/6-3/formset-in-aem-forms.html).
 * Överväg att dela avsnitt och flytta varje avsnitt till en annan sida. HTML5-formulär läser dynamiskt in varje sida vid sidrullningsbegäran. Endast rullad sida (sidan som visas och de sidor som föregår den) lagras i minnet. resten av sidorna läses in vid behov. Att dela och flytta ett avsnitt på en egen sida minskar därmed den tid som krävs för att läsa in ett formulär. Du kan också använda formulärets första sida som en landningssida. Den liknar innehållsförteckningen i en bok. En landningssida i formuläret innehåller bara länkar till andra avsnitt i formuläret. Det förbättrar inläsningstiden avsevärt för den första sidan i formuläret och ger en förbättrad användarupplevelse.
 * Behåll villkorliga avsnitt dolda som standard. Visa bara de här avsnitten när ett visst villkor är uppfyllt. Det hjälper till att minimera storleken på DOM. Du kan också använda fliknavigering om du bara vill visa ett avsnitt i taget.
 
-## Minska är mer, minska antalet sidor {#less-is-more-reduce-the-number-of-pages}
+## Mindre är mer, minska antalet sidor {#less-is-more-reduce-the-number-of-pages}
 
 HTML5-formulär kan innehålla datadrivna fält (tabeller och delformulär). Dessa fält utökar formulärets storlek vid körning. En datadriven tabell i ett HTML5-formulär kan till exempel omfatta tusentals rader. Sådana tabeller kan medföra försämrade prestanda och layout. De optimeringar som föreslås nedan kan hjälpa dig att minska inläsningstiden för HTML5-formulär med datadrivna fält:
 
 * Använd XFA-skriptning för att skapa sidbaserad navigering för att visa datadrivna fält (tabeller och delformulär). Vid sidindelad navigering visas bara specifika data på en sida. Webbläsarmålningen begränsas till fälten som visas samtidigt och gör det enklare att navigera i ett formulär. Dessutom är användare på mobila enheter endast intresserade av en delmängd av data. Det hjälper er att leverera enastående användarupplevelser och minskar tiden som krävs för att läsa in de data som behövs. Du får två lösningar till priset av en.  Tänk också på att sidindelad navigering inte är tillgängligt direkt. Du kan använda XFA-skript för att utveckla sidindelad navigering.
 
 * Utvärdera sammanslagning av flera skrivskyddade kolumner till en enda kolumn. Det minskar det minne som krävs för att visa formuläret. Undvik också att visa kolumner som inte kräver några indata från användarna.
-* Utvärdera att dela det datadrivna formuläret i en [formuläruppsättning](https://helpx.adobe.com/aem-forms/6-3/formset-in-aem-forms.html) om förslagen ovan inte ger många förbättringar. Om en tabell till exempel har fler än 1 000 rader flyttar du var 100:e rad till ett annat formulär. Det skulle förbättra inläsningstiden och prestanda för formulären.  Observera också att en formuläruppsättning skapar en konsoliderad XML för alla formulär. Använd olika datarötter för att skilja på data i alla typer av formulär. Mer information finns i [Formuläruppsättning i AEM Forms](https://helpx.adobe.com/aem-forms/6-3/formset-in-aem-forms.html).
+* Utvärdera att dela upp det datadrivna formuläret i en [formuläruppsättning](https://helpx.adobe.com/aem-forms/6-3/formset-in-aem-forms.html), om förslagen ovan inte ger många förbättringar. Om en tabell till exempel har fler än 1 000 rader flyttar du var 100:e rad till ett annat formulär. Det skulle förbättra inläsningstiden och prestanda för formulären.  Observera också att en formuläruppsättning skapar en konsoliderad XML för alla formulär. Använd olika datarötter för att skilja på data i alla typer av formulär. Mer information finns i [Formuläruppsättning i AEM Forms](https://helpx.adobe.com/aem-forms/6-3/formset-in-aem-forms.html).
 
-## Två för dokumentarkivhandlingar (DOR) {#power-of-two-for-document-of-record-dor}
+## Två för dokumentdokument (DOR) {#power-of-two-for-document-of-record-dor}
 
 Ett XFA-formulär kan ha ett stort antal avsnitt som bara är dedikerade för DOR (Document of Record). Om du vill minska antalet noder och förbättra prestanda för ett sådant formulär kan du behålla olika kopior av formuläret - en kopia för att fylla i formuläret och en annan för att generera ett dokument på servern. I kopian för att fylla i XFA-formuläret visas endast fält som krävs för att hämta data. I genereringen av dokument för post-XFA från behåller du fält som bara krävs i utskriften av formuläret. Innan du väljer det föreslagna tillvägagångssättet ska du utvärdera prestandavinster och underhållskostnader.
 
-## Rekommenderade läsningar {#recommended-reads}
+## Rekommenderade läsningar  {#recommended-reads}
 
-Adobe Experience Manager (AEM)-formulär kan hjälpa er att omvandla komplexa transaktioner till enkla, roliga digitala upplevelser. Det krävs dock samordnade insatser för att utveckla effektiva och produktiva formulär. Förutom HTML5 Forms finns här några rekommenderade läsningar för allmänna AEM bästa praxis:
+Adobe Experience Manager (AEM)-formulär kan hjälpa er att omvandla komplexa transaktioner till enkla, roliga digitala upplevelser. Det krävs dock samordnade insatser för att utveckla effektiva och produktiva formulär. Förutom HTML5 Forms, finns här några rekommenderade läsningar för allmän AEM bästa praxis:
 
 * [Bästa tillvägagångssätt för att distribuera och underhålla AEM](/help/sites-deploying/best-practices.md)
 * [Bästa tillvägagångssätt för att skapa innehåll](/help/sites-authoring/best-practices.md)
@@ -84,4 +83,4 @@ Adobe Experience Manager (AEM)-formulär kan hjälpa er att omvandla komplexa tr
 ## Lathund {#quick-reference-card}
 
 Du kan skriva ut följande kort (klicka på kortet för att ladda ned en högupplöst version) och ha det på skrivbordet för en snabb referens:
-[ ![HTML5 Forms best practices quick reference card](do-not-localize/best-practices_reference_card.png)](assets/html5_forms_best_practices_reference_card.pdf)
+[ ![HTML5 Forms Best practices snabbreferenskort](do-not-localize/best-practices_reference_card.png)](assets/html5_forms_best_practices_reference_card.pdf)

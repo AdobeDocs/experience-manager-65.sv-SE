@@ -1,8 +1,8 @@
 ---
 title: Grundläggande konfigurationskoncept
-seo-title: Grundläggande konfigurationskoncept
+seo-title: Basic Configuration Concepts
 description: Lär dig konfigurera AEM.
-seo-description: Lär dig konfigurera AEM.
+seo-description: Learn how to configure AEM.
 uuid: edcdd4bd-5917-417e-8913-40d488383ea9
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,14 +10,13 @@ topic-tags: configuring
 content-type: reference
 discoiquuid: 2673ea92-1651-4b1b-9aac-f4ba8b36782e
 feature: Configuring
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 3777a1ba-cc4e-41b9-9098-236f8141925f
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '2133'
+source-wordcount: '2124'
 ht-degree: 0%
 
 ---
-
 
 # Grundläggande konfigurationskoncept{#basic-configuration-concepts}
 
@@ -25,8 +24,8 @@ Adobe Experience Manager (AEM) installeras med standardinställningar för alla 
 
 Det finns många aspekter av AEM som kan konfigureras:
 
-* Vissa är [vanligen konfigurerade för varje projektinstallation](#primary-configuration-considerations) och måste granskas för att bekräfta om de är tillämpliga på ditt projekt eller inte.
-* [Ytterligare ](#further-configuration-considerations) konfigurationer kan vara vanliga men inte tvingande, relaterade till funktioner, eller systemprestanda och stabilitet.
+* Vissa är [konfigureras vanligtvis för varje projektinstallation](#primary-configuration-considerations) och måste granskas för att bekräfta om de är tillämpliga på ditt projekt eller inte.
+* [Ytterligare konfigurationer](#further-configuration-considerations) kan vara vanlig men inte tvingande, relaterade till funktioner, eller systemprestanda och stabilitet.
 * Andra är bara obligatoriska för vissa valfria funktioner i AEM (dessa dokumenteras tillsammans med lämplig funktion).
 
 Beroende på den specifika konfigurationen kan dessa ändringar göras antingen med:
@@ -35,13 +34,13 @@ Beroende på den specifika konfigurationen kan dessa ändringar göras antingen 
 
    Det här är en standardplats för att konfigurera OSGi-paket och -tjänster.
 
-   Mer information och rekommenderade metoder finns i [Konfigurera OSGi](/help/sites-deploying/configuring-osgi.md).
+   Se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) för mer information och rekommenderade metoder.
 
 * **Databas**
 
    En deluppsättning OSGi-konfigurationer är tillgängliga i databasen. Detta garanterar att identiska konfigurationer återskapas när databasinnehåll kopieras eller replikeras. Du kan också lägga till egna konfigurationer, beroende på körningsläge, i databasen.
 
-   Mer information finns i [OSGi-konfiguration i databasen](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository) och i synnerhet [Lägga till en ny konfiguration i databasen](/help/sites-deploying/configuring-osgi.md#adding-a-new-configuration-to-the-repository).
+   Se [OSGi-konfiguration i databasen](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository) särskilt [Lägga till en ny konfiguration i databasen](/help/sites-deploying/configuring-osgi.md#adding-a-new-configuration-to-the-repository) för mer information.
 
 * **Filsystem**
 
@@ -49,19 +48,19 @@ Beroende på den specifika konfigurationen kan dessa ändringar göras antingen 
 
 * **AEM WCM**
 
-   Olika aspekter kan konfigureras i AEM WCM, många med hjälp av [Verktyg](/help/sites-administering/tools-consoles.md)-konsolen; till exempel replikeringsagenter.
+   Olika aspekter kan konfigureras i AEM WCM, många med [verktyg](/help/sites-administering/tools-consoles.md) konsol, till exempel replikeringsagenter.
 
 >[!NOTE]
 >
 >När du arbetar med Adobe Experience Manager finns det flera metoder för att hantera konfigurationsinställningarna för OSGi-tjänster (konsol- eller databasnoder).
 >
->Mer information finns i [Konfigurera OSGi](/help/sites-deploying/configuring-osgi.md).
+>Se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) för fullständig information.
 
 >[!NOTE]
 >
 >Det är enkelt att konfigurera AEM, men du måste vara medveten om att:
 >
->Vissa ändringar kan ha stor effekt på programmet/programmen. Se därför till att du har den erfarenhet och kunskap som krävs innan du börjar konfigurera AEM, och gör bara de ändringar som du vet är nödvändiga. Alla ändringar som görs via OSGi-konsolen är **omedelbart** tillämpade på det system som körs (ingen omstart krävs).
+>Vissa ändringar kan ha stor effekt på programmet/programmen. Se därför till att du har den erfarenhet och kunskap som krävs innan du börjar konfigurera AEM, och gör bara de ändringar som du vet är nödvändiga. Alla ändringar som görs via OSGi-konsolen är **omedelbart** används på det system som körs (ingen omstart krävs).
 
 ## Överväganden om primär konfiguration {#primary-configuration-considerations}
 
@@ -71,20 +70,20 @@ Listan innehåller en kort översikt över varje konfigurationsaspekt, tillsamma
 
 ### Säkerhetschecklista {#security-checklist}
 
-Flera viktiga konfigurationsproblem visas i [säkerhetschecklistan](/help/sites-administering/security-checklist.md). Kontrollera att du läser detta och gör de åtgärder som krävs för installationen.
+Flera viktiga konfigurationsproblem visas i [Säkerhetschecklista](/help/sites-administering/security-checklist.md). Kontrollera att du läser detta och gör de åtgärder som krävs för installationen.
 
-### Konfigurera standardgränssnittet - Touchoptimerad eller klassisk {#configuring-the-default-ui-touch-optimized-or-classic}
+### Konfigurera standardgränssnittet - Touchoptimerat eller Classic {#configuring-the-default-ui-touch-optimized-or-classic}
 
 Det finns två gränssnitt som kan användas i AEM:
 
 * Det pekoptimerade användargränssnittet
 * Det klassiska användargränssnittet
 
-Du kan konfigurera det användargränssnitt du behöver med [rotmappning](/help/sites-deploying/osgi-configuration-settings.md).
+Du kan konfigurera användargränssnittet som du behöver med [Rotmappning](/help/sites-deploying/osgi-configuration-settings.md).
 
 >[!NOTE]
 >
->Mer information om hur du väljer användargränssnittet finns under [Välja användargränssnittet](/help/sites-authoring/select-ui.md).
+>Mer information om hur du väljer användargränssnittet finns i [Välja användargränssnitt](/help/sites-authoring/select-ui.md).
 
 ### IPv4 och IPv6 {#ipv-and-ipv}
 
@@ -112,13 +111,13 @@ Det innebär att när en IP-adress måste anges kan du välja (efter behov) blan
 
 ### Rensning av version {#version-purging}
 
-I en standardinstallation skapar AEM en ny version av en sida eller nod när du aktiverar en sida (efter att innehållet har uppdaterats). Du kan också skapa ytterligare versioner på begäran med hjälp av fliken **Versioning** i sidsparken. Alla dessa versioner lagras i databasen och kan återställas om det behövs.
+I en standardinstallation AEM en ny version av en sida eller nod när du aktiverar en sida (efter att innehållet har uppdaterats). Du kan också skapa ytterligare versioner på begäran med **Versionshantering** sidosparkens flik. Alla dessa versioner lagras i databasen och kan återställas om det behövs.
 
 Dessa versioner rensas aldrig, så databasstorleken kommer att öka med tiden och måste därför hanteras.
 
-Mer information finns i [Rensning av version](/help/sites-deploying/version-purging.md), särskilt [Versionshanteraren](/help/sites-deploying/version-purging.md#version-manager), om hur du konfigurerar AEM rensa äldre versioner när en ny version skapas.
+Se [Rensning av version](/help/sites-deploying/version-purging.md) för fullständig information, särskilt [Versionshanteraren](/help/sites-deploying/version-purging.md#version-manager) om du vill ha information om hur du konfigurerar AEM att rensa äldre versioner när en ny version skapas.
 
-### Loggar {#logging}
+### Loggning {#logging}
 
 AEM ger dig möjlighet att konfigurera:
 
@@ -126,7 +125,7 @@ AEM ger dig möjlighet att konfigurera:
 * begära dataloggning, en särskild loggningskonfiguration för begärandeinformation
 * särskilda inställningar för de enskilda tjänsterna, t.ex. en enskild loggfil och ett format för loggmeddelandena
 
-Mer information finns i [Loggning](/help/sites-deploying/configure-logging.md).
+Se [Loggning](/help/sites-deploying/configure-logging.md) för fullständig information.
 
 ### Körningslägen {#run-modes}
 
@@ -134,15 +133,15 @@ Med körningslägena kan du justera AEM för ett specifikt ändamål; till exemp
 
 Detta görs genom att definiera samlingar av konfigurationsparametrar för varje körningsläge. En grundläggande uppsättning konfigurationsparametrar används för alla körningslägen, och du kan sedan justera ytterligare uppsättningar efter syftet med den specifika miljön. Dessa används sedan efter behov.
 
-Alla konfigurationsinställningar lagras i en databas och aktiveras genom att du anger körningsläget **a1/>.**
+Alla konfigurationsinställningar lagras i en databas och aktiveras genom att du anger **Körningsläge**.
 
-Mer information finns i [Körningslägen](/help/sites-deploying/configure-runmodes.md).
+Se [Körningslägen](/help/sites-deploying/configure-runmodes.md) för fullständig information.
 
 ### Enkel inloggning {#single-sign-on}
 
 Med enkel inloggning (SSO) kan en användare få åtkomst till flera system efter att ha angett inloggningsuppgifter (till exempel användarnamn och lösenord) en gång. Ett separat system (som kallas betrodd autentiserare) utför autentiseringen och ger Experience Manager inloggningsuppgifterna. Experience Manager kontrollerar och verkställer användarens åtkomstbehörigheter (d.v.s. avgör vilka resurser användaren har åtkomst till).
 
-Mer information finns i [Enkel inloggning](/help/sites-deploying/single-sign-on.md).
+Se [Enkel inloggning](/help/sites-deploying/single-sign-on.md) för mer information.
 
 ### Resursmappning {#resource-mapping}
 
@@ -150,10 +149,10 @@ Resursmappning används för att definiera omdirigeringar, tillfälliga URL:er o
 
 Du kan till exempel använda dessa mappningar för:
 
-* Använd `/content` som prefix för alla förfrågningar så att den interna strukturen döljs för besökarna på webbplatsen.
-* Definiera en omdirigering så att alla begäranden till `/content/en/gateway`-sidan på webbplatsen omdirigeras till `https://gbiv.com/`.
+* Prefix för alla begäranden med `/content` så att den interna strukturen döljs för besökarna på webbplatsen.
+* Definiera en omdirigering så att alla förfrågningar till `/content/en/gateway` webbplatsen omdirigeras till `https://gbiv.com/`.
 
-Mer information finns i [Resursmappning](/help/sites-deploying/resource-mapping.md).
+Se [Resursmappning](/help/sites-deploying/resource-mapping.md) för mer information.
 
 ### Replikerings-, omvänd replikering- och replikeringsagenter {#replication-reverse-replication-and-replication-agents}
 
@@ -167,11 +166,11 @@ Mer information finns i [Replikering](/help/sites-deploying/replication.md).
 
 ### Konfigurationsinställningar för OSGi {#osgi-configuration-settings}
 
-[OSG ](https://www.osgi.org/) är en viktig del i AEM. Det används för att styra de sammansatta AEM och deras konfiguration.
+[OSGi](https://www.osgi.org/) är en grundläggande del i AEM. Det används för att styra de sammansatta AEM och deras konfiguration.
 
-Se [OSGi-konfigurationsinställningar](/help/sites-deploying/osgi-configuration-settings.md) för en lista över de olika paket som är relevanta för projektimplementering (listas enligt paketet). Alla inställningar som visas behöver inte justeras, vissa anges för att du ska förstå hur AEM fungerar.
+Se [Konfigurationsinställningar för OSGi](/help/sites-deploying/osgi-configuration-settings.md) för en lista över de olika programpaket som är relevanta för projektimplementeringen (listade efter paket). Alla inställningar som visas behöver inte justeras, vissa anges för att du ska förstå hur AEM fungerar.
 
-När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Mer information och rekommenderade metoder finns i [Konfigurera OSGi](/help/sites-deploying/configuring-osgi.md).
+När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) om du vill ha mer information och rekommenderade rutiner.
 
 ### Konfigurerar LDAP {#configuring-ldap}
 
@@ -179,37 +178,37 @@ LDAP-autentisering krävs för att autentisera användare som lagras i en (centr
 
 LDAP-autentisering sker på databasnivå, så den hanteras direkt av databasen. Mer information finns i [Konfigurera LDAP med AEM](/help/sites-administering/ldap-config.md).
 
-Användarhantering inom AEM (inklusive tilldelning av åtkomsträttigheter) finns i [Användaradministration och -säkerhet](/help/sites-administering/security.md).
+Användarhantering inom AEM (inklusive tilldelning av åtkomsträttigheter) finns på [Användaradministration och -säkerhet](/help/sites-administering/security.md).
 
 ### Konfigurera Dispatcher {#configuring-the-dispatcher}
 
 Dispatcher är ett Adobe Experience Manager verktyg för cachelagring och/eller belastningsutjämning som kan användas tillsammans med en webbserver i företagsklass.
 
-Mer information finns i [Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html), särskilt [Konfigurera Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html) för mer konfigurationsinformation.
+Se [Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html) för fullständig information, särskilt [Konfigurera Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html) för mer konfigurationsinformation.
 
 ### Konfigurerar AEM LiveCycle Connector {#configuring-aem-livecycle-connector}
 
-I och med releasen av AEM dokumenttjänster och AEM dokumentsäkerhet har vi nu möjlighet att anropa LiveCycle dokumenttjänster för att återge ett XFA-formulär, konvertera ett dokument till PDF och policyskydda ett dokument. Läs [AEM LiveCycle Connector](https://helpx.adobe.com/livecycle/help/aem/aem-livecycle-connector.html) om du vill ha mer information.
+I och med releasen av AEM dokumenttjänster och AEM dokumentsäkerhet har vi nu möjlighet att anropa LiveCycle doc-tjänsterna för att återge ett XFA-formulär, konvertera ett dokument till PDF och skydda ett dokument med hjälp av policyfunktioner. Läs [AEM LiveCycle Connector](https://helpx.adobe.com/livecycle/help/aem/aem-livecycle-connector.html) för mer information.
 
 ### Jobbavlastning och topologiadministration {#job-offloading-and-topology-administration}
 
-[Avlastning ](/help/sites-deploying/offloading.md) distribuerar bearbetningsuppgifter som är Experience Manager-instanser i en topologi. Med avlastning kan du använda särskilda Experience Manager-instanser för att utföra vissa typer av bearbetning. Specialiserad bearbetning gör att du kan maximera användningen av tillgängliga serverresurser.
+[Avlastning](/help/sites-deploying/offloading.md) distribuerar bearbetningsuppgifter som är Experience Manager instanser i en topologi. Med avlastning kan du använda särskilda Experience Manager-instanser för att utföra vissa typer av bearbetning. Specialiserad bearbetning gör att du kan maximera användningen av tillgängliga serverresurser.
 
 Topologier är löst kopplade Experience Manager-kluster som deltar i avlastning. Ett kluster består av en eller flera Experience Manager-serverinstanser (en enda instans betraktas som ett kluster).
 
-Mer information om hur du visar eller ändrar topologimedlemskap finns i avsnittet [Administrera topologier](/help/sites-deploying/offloading.md#administering-topologies).
+Mer information om hur du visar eller ändrar topologimedlemskap finns i [Administrera topologier](/help/sites-deploying/offloading.md#administering-topologies) -avsnitt.
 
 ### Konfigurera välkomstkonsolen {#configuring-the-welcome-console}
 
 Välkomstkonsolen för det klassiska användargränssnittet innehåller en lista med länkar till de olika konsolerna och funktionerna i AEM.
 
-Du kan konfigurera synliga länkar i [Konfigurera välkomstkonsolen](/help/sites-developing/customizing-the-welcome-console.md) för mer information.
+Det går att konfigurera synliga länkar, se [Konfigurera välkomstkonsolen](/help/sites-developing/customizing-the-welcome-console.md) för mer information.
 
-### Konfigurerar för prestanda {#configuring-for-performance}
+### Konfigurera för prestanda {#configuring-for-performance}
 
-[Prestanda ](/help/sites-deploying/configuring-performance.md) är nyckeln till ditt projekt. Vissa aspekter av AEM (och/eller den underliggande databasen) kan konfigureras för att optimera prestanda.
+[Prestanda](/help/sites-deploying/configuring-performance.md) är nyckeln till ditt projekt. Vissa aspekter av AEM (och/eller den underliggande databasen) kan konfigureras för att optimera prestanda.
 
-Mer information finns i [Konfigurera för prestanda](/help/sites-deploying/configuring-performance.md#configuring-for-performance).
+Se [Konfigurera för prestanda](/help/sites-deploying/configuring-performance.md#configuring-for-performance) för mer information.
 
 <!--delete ### Scaling {#scaling}
 
@@ -223,7 +222,7 @@ Den här funktionen&quot;store-once, reference-many-times&quot; kan utökas så 
 
 Ett sådant datalager kan delas mellan olika noder i samma kluster, olika publicerings- och/eller författarinstanser i samma installation eller till och med helt separata instanser i olika installationer.
 
-Mer information finns i [Konfigurera datalager och nodarkiv](/help/sites-deploying/data-store-config.md).
+Mer information finns i [Konfigurera datalager och nodlager](/help/sites-deploying/data-store-config.md).
 
 ## Ytterligare konfigurationsöverväganden {#further-configuration-considerations}
 
@@ -231,25 +230,25 @@ Mer information finns i [Konfigurera datalager och nodarkiv](/help/sites-deployi
 
 Du kan aktivera HTTP över SSL för att använda säkrare anslutningar till dina servrar.
 
-Mer information finns i [Aktivera HTTP över SSL](/help/sites-administering/ssl-by-default.md).
+Se [Aktivera HTTP över SSL](/help/sites-administering/ssl-by-default.md) för mer information.
 
 ### AEM portaler och portlets {#aem-portals-and-portlets}
 
 En portal är ett webbprogram som innehåller personalisering, samlad inloggning, innehållsintegrering från olika källor och som är värd för informationssystemens presentationsskikt. Med portletkomponenten kan du även bädda in en portlet på sidan. För att få tillgång till innehåll som tillhandahålls av CQ5 WCM kan portalservern utrustas med CQ5 Portal Director Portlet. Du kan göra detta genom att installera, konfigurera och lägga till portleten på portalsidan.
 
-Mer information finns i [Portal och Portlets](/help/sites-administering/aem-as-portal.md).
+Se [Portal och Portlets](/help/sites-administering/aem-as-portal.md) för mer information.
 
 ### Förfallotid för statiska objekt {#expiration-of-static-objects}
 
 Statiska objekt (till exempel ikoner) ändras inte. Därför bör systemet konfigureras så att det inte upphör att gälla (under en rimlig tidsperiod) och på så sätt minskar onödig trafik.
 
-Mer information finns i [Förfallotid för statiska objekt](/help/sites-deploying/expiration-static-objects.md).
+Se [Förfallotid för statiska objekt](/help/sites-deploying/expiration-static-objects.md) för mer information.
 
 ### Öppna filer i Java-processen {#open-files-in-the-java-process}
 
 Varje java-process kan komma åt filer - detta kräver systemresurser. Av den anledningen definieras en övre gräns för hur många filer varje process har åtkomst till samtidigt. Om detta överskrids kan ett undantagsfel uppstå.
 
-Om AEM överskrider det högsta tillåtna antalet visas meddelandet `too many open files` i `error.log`.
+Om AEM överstiger det högsta tillåtna antalet får meddelandet `too many open files`&quot; kommer att visas i `error.log`.
 
 För att undvika sådana undantag måste du:
 
@@ -266,29 +265,29 @@ För att undvika sådana undantag måste du:
 
    Det nya värdet bör ta hänsyn till både aktuella behov och framtida toppar, så det är tillrådligt att fördubbla nuvarande behov.
 
-   Som standard konfigurerar `serverctl` `CQ_MAX_OPEN_FILES` till `8192`; detta bör räcka för de flesta scenarier.
+   Som standard `serverctl` configures `CQ_MAX_OPEN_FILES` till `8192`; detta bör räcka för de flesta scenarier.
 
 ### Konfigurera RTF-redigeraren {#configuring-the-rich-text-editor}
 
-**RTF-redigeraren** (**RTE**) ger författare ett brett urval av [funktioner](/help/sites-authoring/rich-text-editor.md) för att redigera textinnehåll; som ger dem ikoner, valrutor och menyer för en WYSIWYG-upplevelse.
+The **RTF-redigerare** (**RTE**) har ett stort antal [funktionalitet](/help/sites-authoring/rich-text-editor.md) för redigering av textinnehåll, som ger dem ikoner, valrutor och menyer för en WYSIWYG-upplevelse.
 
-Mer information finns i [Konfigurera RTF-redigeraren](/help/sites-administering/rich-text-editor.md).
+Se [Konfigurera RTF-redigeraren](/help/sites-administering/rich-text-editor.md) för mer information.
 
-### Konfigurerar Ångra för sidredigering {#configuring-undo-for-page-editing}
+### Konfigurera Ångra för sidredigering {#configuring-undo-for-page-editing}
 
 Det finns flera egenskaper som styr hur kommandona Ångra och Gör om fungerar när du redigerar sidor. Dessa kan konfigureras, se [Konfigurera Ångra för sidredigering](/help/sites-administering/config-undo.md) för mer information.
 
 ### Konfigurera videokomponenten {#configuring-the-video-component}
 
-Med [videokomponenten](/help/sites-authoring/default-components-foundation.md#video) kan du placera ett fördefinierat videoelement direkt på sidan.
+The [Videokomponent](/help/sites-authoring/default-components-foundation.md#video) Med kan du placera ett fördefinierat videoelement direkt på sidan.
 
-För att korrekt omkodning ska ske måste administratören [installera MPEG](/help/sites-administering/config-video.md#install-ffmpeg) separat. De kan även [konfigurera dina videoprofiler](/help/sites-administering/config-video.md#configure-video-profiles) för användning med html5-element.
+Administratören måste [Installera FFmpeg](/help/sites-administering/config-video.md#install-ffmpeg) separat. De kan också [Konfigurera videoprofiler](/help/sites-administering/config-video.md#configure-video-profiles) för användning med html5-element.
 
 ### Konfigurera och anpassa rapporter {#configuring-and-customizing-reports}
 
 CQ ger dig möjlighet att övervaka och analysera instansens status och innehåller ett urval standardrapporter som kan konfigureras för dina individuella behov:
 
-Mer information finns i [Grunderna för anpassning av rapporter](/help/sites-administering/reporting.md#the-basics-of-report-customization).
+Se [Grunderna i anpassning av rapporter](/help/sites-administering/reporting.md#the-basics-of-report-customization) för mer information.
 
 ### Konfigurerar e-postmeddelande {#configuring-email-notification}
 
@@ -298,11 +297,11 @@ CQ skickar e-postmeddelanden till användare som:
 * Prenumerera på forumevent.
 * Måste utföra ett steg i ett arbetsflöde.
 
-Mer information finns i [Konfigurera e-postmeddelande](/help/sites-administering/notification.md).
+Se [Konfigurerar e-postmeddelande](/help/sites-administering/notification.md) för mer information.
 
 ### Aktivera sidavbildningar {#enabling-page-impressions}
 
-Sidavbildningar visas i kolumnen **Impressions** i den klassiska användargränssnittskonsolen. Om du vill kunna hämta sidvisningar måste du konfigurera:
+Sidavbildningar visas i **Impressions** -kolumnen i den klassiska användargränssnittets platadminkonsol. Om du vill kunna hämta sidvisningar måste du konfigurera:
 
 * I publiceringsinstansen:
 
@@ -315,4 +314,3 @@ Sidavbildningar visas i kolumnen **Impressions** i den klassiska användargräns
 >[!CAUTION]
 >
 >Konfigurationen av spårningsfunktionen för Adobe-siduppläsningar i författarmiljön tillåter anonyma begäranden till spårningstjänsten.
-

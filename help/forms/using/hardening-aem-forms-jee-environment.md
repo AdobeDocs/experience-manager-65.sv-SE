@@ -433,7 +433,7 @@ Du kan ange antalet misslyckade försök och efterföljande låsningstid som AEM
 
 En korrekt och säker användning av programgranskning och loggning kan bidra till att säkerställa att säkerheten och andra avvikande händelser spåras och upptäcks så snabbt som möjligt. Effektiv användning av granskning och loggning i ett program omfattar bland annat att spåra genomförda och misslyckade inloggningar samt viktiga programhändelser som skapande eller borttagning av nyckelposter.
 
-Du kan använda granskning för att identifiera många typer av attacker, bland annat:
+Du kan använda granskning för att identifiera många typer av attacker, bland annat följande:
 
 * Tydliga lösenordsattacker
 * Denial of service-attacker
@@ -950,7 +950,7 @@ I det här avsnittet beskrivs standardportarna (och alternativa konfigurationsin
 
 **WebSphere-portar**
 
-Mer information om WebSphere-portar som krävs för AEM Forms på JEE finns i Portnummerinställning i WebSphere Application Server UI.
+Information om WebSphere-portar som krävs för AEM Forms på JEE finns i inställningen Portnummer i WebSphere Application Server-gränssnittet.
 
 ### Konfigurerar SSL {#configuring-ssl}
 

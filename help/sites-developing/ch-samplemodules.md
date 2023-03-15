@@ -1,22 +1,21 @@
 ---
 title: Exempeltyper för ContextHub-gränssnittsmodul
-seo-title: Exempeltyper för ContextHub-gränssnittsmodul
+seo-title: Sample ContextHub UI Module Types
 description: ContextHub innehåller flera exempelmoduler för användargränssnitt som du kan använda i dina lösningar
-seo-description: ContextHub innehåller flera exempelmoduler för användargränssnitt som du kan använda i dina lösningar
+seo-description: ContextHub provides several sample UI modules that you can use in your solutions
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
-translation-type: tm+mt
-source-git-commit: a8ba56849f6bb9f0cf6571fc51f4b5cae71620e0
+exl-id: df28180f-7af4-437d-8e91-bfd305f73113
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1194'
+source-wordcount: '1176'
 ht-degree: 1%
 
 ---
 
-
-# Exempel på ContextHub-gränssnittsmodultyper {#sample-contexthub-ui-module-types}
+# Exempeltyper för ContextHub-gränssnittsmodul {#sample-contexthub-ui-module-types}
 
 ContextHub innehåller flera exempelmoduler för användargränssnitt som du kan använda i dina lösningar. Följande information tillhandahålls:
 
@@ -24,7 +23,7 @@ ContextHub innehåller flera exempelmoduler för användargränssnitt som du kan
 * Var du hittar källkoden så att du kan öppna den i utbildningssyfte.
 * Konfigurera gränssnittsmodulen.
 
-Mer information om hur du lägger till gränssnittsmoduler i ContextHub finns i [Lägga till en gränssnittsmodul](ch-configuring.md#adding-a-ui-module). Mer information om hur du utvecklar gränssnittsmoduler finns i [Skapa gränssnittsmodultyper för ContextHub](/help/sites-developing/ch-extend.md#creating-contexthub-ui-module-types).
+Mer information om hur du lägger till gränssnittsmoduler i ContextHub finns i [Lägga till en gränssnittsmodul](ch-configuring.md#adding-a-ui-module). Mer information om hur du utvecklar gränssnittsmoduler finns i [Skapar gränssnittsmodultyper för ContextHub](/help/sites-developing/ch-extend.md#creating-contexthub-ui-module-types).
 
 ## contexthub.base UI-modultyp {#contexthub-base-ui-module-type}
 
@@ -32,10 +31,10 @@ Modultypen context.base är bastypen för alla andra gränssnittsmodultyper. Det
 
 Följande funktioner är tillgängliga:
 
-* **Titel och ikon:** Ange en titel för användargränssnittsmodulen och en ikon. Ikonen kan refereras via en URL eller från ikonbiblioteket för Coral UI.
+* **Titel och ikon:** Ange en rubrik för användargränssnittsmodulen och en ikon. Ikonen kan refereras via en URL eller från ikonbiblioteket för Coral UI.
 * **Lagra data:** Identifiera ett eller flera arkiv som data ska hämtas från.
 * **Innehåll:** Ange innehållet som visas i gränssnittsmodulen så som det visas i ContextHub-verktygsfältet.
-* **Leverera innehåll:** Ange innehållet som visas i en pekare när användaren klickar eller trycker på gränssnittsmodulen.
+* **Leveransinnehåll:** Ange innehållet som visas i en pekare när användaren klickar eller trycker på gränssnittsmodulen.
 * **Helskärmsläge:** Kontrollera om helskärmsläge tillåts.
 
 Källkoden finns på /libs/granite/contexthub/code/ui/container/js/ContextHub.UI.BaseModuleRenderer.js.
@@ -45,12 +44,12 @@ Källkoden finns på /libs/granite/contexthub/code/ui/container/js/ContextHub.UI
 Konfigurera gränssnittsmodulen contexthub.base med hjälp av ett JavaScript-objekt i JSON-format. Inkludera någon av följande egenskaper för att konfigurera gränssnittsmodulens funktioner:
 
 * **bild:** En URL till en bild som ska visas som ikon.
-* **icon:** Namnet på en  [Coral UI-](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html) klass. Om du anger ett värde för både ikonen och bildegenskaperna används bilden.
+* **ikon:** Namnet på en [Coral UI: ikon](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html) klassen. Om du anger ett värde för både ikonen och bildegenskaperna används bilden.
 
-* **title:** En rubrik för gränssnittsmodulen. Titeln visas när pekaren pausas över ikonen för modulen Gränssnitt.
+* **titel:** En rubrik för gränssnittsmodulen. Titeln visas när pekaren pausas över ikonen för modulen Gränssnitt.
 * **helskärm:** Ett booleskt värde som anger om gränssnittsmodulen stöder helskärmsläge. Använd `true` för helskärmsläge och `false` för att förhindra helskärmsläge.
 
-* **template:** En  [](https://handlebarsjs.com/) HandleBar-mall som anger vilket innehåll som ska återges i ContextHub-verktygsfältet. Använd högst två `<p>`-taggar.
+* **mall:** A [Handtag](https://handlebarsjs.com/) mall som anger det innehåll som ska återges i ContextHub-verktygsfältet. Använd högst två `<p>` -taggar.
 
 * **storeMapping:** En nyckel/arkivmappning. Använd nyckeln i Handlebar-mallar för att komma åt associerade ContextHub-lagringsdata.
 * **lista:** En array med objekt som ska visas som en lista i en portfölj när användaren klickar på gränssnittsmodulen. Om du tar med det här objektet ska du inte ta med poverTemplate. Värdet är en array med objekt med följande tangenter:
@@ -58,7 +57,7 @@ Konfigurera gränssnittsmodulen contexthub.base med hjälp av ett JavaScript-obj
    * titel: Den text som ska visas för det här objektet
    * bild: (Valfritt) En URL till en bild som ska visas till vänster
    * ikon: (Valfritt) En CUI-ikonklass som ska visas till vänster. ignoreras om en bild anges
-   * markerat: (Valfritt) Ett booleskt värde som anger om det här objektet ska visas som markerat (true=selected). Som standard visas markerade objekt med ett fetstil. Använd en `listType`-egenskap för att konfigurera andra utseenden (se nedan).
+   * markerat: (Valfritt) Ett booleskt värde som anger om det här objektet ska visas som markerat (true=selected). Som standard visas markerade objekt med ett fetstil. Använd en `listType` -egenskap för att konfigurera andra utseenden (se nedan).
 
 * **listType:** Det format som ska användas för att överföra listobjekt. Använd något av följande värden:
 
@@ -66,11 +65,11 @@ Konfigurera gränssnittsmodulen contexthub.base med hjälp av ett JavaScript-obj
    * kryssruta
    * radio
 
-* **poverTemplate:** En HandleBar-mall som anger vilket innehåll som ska återges i pekaren när användaren klickar på gränssnittsmodulen. Om du tar med det här objektet ska du inte ta med `list`-objektet.
+* **popoverTemplate:** En mall för hanteringsfält som anger innehållet som ska återges i pekaren när användaren klickar på gränssnittsmodulen. Om du tar med det här objektet ska du inte ta med `list` objekt.
 
 ### Exempel {#example}
 
-I följande exempel konfigureras användargränssnittsmodulen contexthub.base så att den visar information från ett [contexthub.emulators](/help/sites-developing/ch-samplestores.md#granite-emulators-sample-store-candidate)-arkiv. `template`-objektet visar hur du hämtar data från arkivet med hjälp av nyckeln som `storeMapping`-objektet upprättar.
+I följande exempel konfigureras användargränssnittsmodulen contexthub.base så att information från en [contexthub.emulators](/help/sites-developing/ch-samplestores.md#granite-emulators-sample-store-candidate) butik. The `template` -objektet visar hur du hämtar data från arkivet med hjälp av nyckeln som `storeMapping` artikel upprättas.
 
 ```xml
 {
@@ -87,7 +86,7 @@ I följande exempel konfigureras användargränssnittsmodulen contexthub.base s�
 
 ## contexthub.browserinfo UI Module Type {#contexthub-browserinfo-ui-module-type}
 
-Gränssnittsmodulen contexthub.browserinfo visar information om klientens webbläsare och operativsystem. Information hämtas från surferinfo-arkivet, baserat på arkivkandidaten [contexthub.surferinfo](/help/sites-developing/ch-samplestores.md#contexthub-surferinfo-sample-store-candidate).
+Gränssnittsmodulen contexthub.browserinfo visar information om klientens webbläsare och operativsystem. Information hämtas från surferinfo-butiken baserat på [contexthub.surferinfo](/help/sites-developing/ch-samplestores.md#contexthub-surferinfo-sample-store-candidate) lagringskandidat.
 
 ![chlimage_1-77](assets/chlimage_1-77a.png)
 
@@ -106,9 +105,9 @@ Instanser av gränssnittsmodulen contexthub.browserinfo kräver inget värde fö
 }
 ```
 
-## gränssnittsmodul för contexthub.datetime typ {#contexthub-datetime-ui-module-type}
+## kontexthub.datetime, gränssnittsmodultyp {#contexthub-datetime-ui-module-type}
 
-Användargränssnittsmodulen contexthub.datetime visar det datum och den tid som lagras i en butik med namnet datetime som baseras på lagringskanalen [contexthub.datetime](/help/sites-developing/ch-samplestores.md#contexthub-datetime-sample-store-candidate).
+Användargränssnittsmodulen contexthub.datetime visar det datum och den tid som lagras i en butik med namnet datetime som baseras på [contexthub.datetime](/help/sites-developing/ch-samplestores.md#contexthub-datetime-sample-store-candidate) lagringskandidat.
 
 ![chlimage_1-78](assets/chlimage_1-78a.png)
 
@@ -131,9 +130,9 @@ Instanser av gränssnittsmodulen contexthub.datetime kräver inget värde för D
 }
 ```
 
-## kontexthub.location, gränssnittsmodul Type {#contexthub-location-ui-module-type}
+## kontexthub.location, gränssnittsmodultyp {#contexthub-location-ui-module-type}
 
-Gränssnittsmodulen contexthub.location visar klientens longitud och latitud. Modulen innehåller en portfölj som visar en Google-karta som du kan klicka på för att ändra den aktuella platsen. Modulen hämtar information från ett ContextHub-arkiv med namnet geolocation som baseras på lagringskanalen [contexthub.geolocation](/help/sites-developing/ch-samplestores.md#contexthub-geolocation-sample-store-candidate).
+Gränssnittsmodulen contexthub.location visar klientens longitud och latitud. Modulen innehåller en portfölj som visar en Google-karta som du kan klicka på för att ändra den aktuella platsen. Modulen hämtar information från ett ContextHub-arkiv med namnet geolocation som baseras på [contexthub.geolocation](/help/sites-developing/ch-samplestores.md#contexthub-geolocation-sample-store-candidate) lagringskandidat.
 
 ![chlimage_1-80](assets/chlimage_1-80a.png)
 
@@ -176,7 +175,7 @@ Instanser av gränssnittsmodulen contexthub.location kräver inget värde för d
 
 ## contexthub.screen-orientation UI Module Type {#contexthub-screen-orientation-ui-module-type}
 
-Gränssnittsmodulen context.screen-orientation visar klientens aktuella skärmorientering. Modulen är inaktiverad som standard, men den innehåller en funktion som gör att du kan välja en orientering. Modulen hämtar information från ett ContextHub-lager med namnet emulators som är baserat på lagringskanalen [granite.emulators](/help/sites-developing/ch-samplestores.md#granite-emulators-sample-store-candidate).
+Gränssnittsmodulen context.screen-orientation visar klientens aktuella skärmorientering. Modulen är inaktiverad som standard, men den innehåller en funktion som gör att du kan välja en orientering. Modulen hämtar information från ett ContextHub-lager med namnet emulators som är baserat på [granite.emulators](/help/sites-developing/ch-samplestores.md#granite-emulators-sample-store-candidate) lagringskandidat.
 
 ![chlimage_1-81](assets/chlimage_1-81a.png)
 
@@ -184,7 +183,7 @@ Källan till användargränssnittsmodulen finns i /libs/granite/contexthub/compo
 
 ### Konfiguration {#configuration-5}
 
-Instanser av gränssnittsmodulen contexthub.screen-orientation kräver inget värde för Detaljkonfiguration. Följande JSON-text representerar modulens standardkonfiguration. Observera att egenskapen `clickable` är `false` som standard. Om du åsidosätter standardkonfigurationen och anger `clickable` till `true` visas ett popup-fönster där du kan välja orientering när du klickar på modulen.
+Instanser av gränssnittsmodulen contexthub.screen-orientation kräver inget värde för Detaljkonfiguration. Följande JSON-text representerar modulens standardkonfiguration. Observera att `clickable` egenskapen är `false` som standard. Om du åsidosätter standardkonfigurationen som ska anges `clickable` till `true`Om du klickar på modulen visas ett popup-fönster där du kan välja orientering.
 
 ```xml
 {
@@ -198,9 +197,9 @@ Instanser av gränssnittsmodulen contexthub.screen-orientation kräver inget vä
 }
 ```
 
-## contexthub.tagcloud-gränssnittsmodul typ {#contexthub-tagcloud-ui-module-type}
+## contexthub.tagcloud-modultyp {#contexthub-tagcloud-ui-module-type}
 
-Användargränssnittsmodulen contexthub.tagcloud visar information om taggar. I verktygsfältet visar gränssnittsmodulen antalet taggar. Popup-fönstret visar ett tagcloud och en textruta för att lägga till nya taggar. Användargränssnittsmodulen hämtar information från ett ContextHub-arkiv med namnet tagcloud som är baserat på lagringskanalen [contexthub.tagcloud](/help/sites-developing/ch-samplestores.md#contexthub-tagcloud-sample-data-store).
+Användargränssnittsmodulen contexthub.tagcloud visar information om taggar. I verktygsfältet visar gränssnittsmodulen antalet taggar. Popup-fönstret visar ett tagcloud och en textruta för att lägga till nya taggar. Användargränssnittsmodulen hämtar information från ett ContextHub-arkiv med namnet tagcloud som är baserat på [contexthub.tagcloud](/help/sites-developing/ch-samplestores.md#contexthub-tagcloud-sample-data-store) lagringskandidat.
 
 ![chlimage_1-82](assets/chlimage_1-82a.png)
 
@@ -222,9 +221,9 @@ Instanser av gränssnittsmodulen contexthub.tagcloud kräver inget värde för D
 }
 ```
 
-## granite.profile-gränssnittsmodul typ {#granite-profile-ui-module-type}
+## granite.profile UI Module Type {#granite-profile-ui-module-type}
 
-Användargränssnittsmodulen granite.profile ContextHub visar visningsnamnet för den aktuella användaren. Popup-fönstret visar användarens inloggningsnamn och gör att du kan ändra värdet för visningsnamnet. Användargränssnittsmodulen hämtar information från ett ContextHub-arkiv med namnet profile som är baserat på arkivkandidaten [granite.profile](/help/sites-developing/ch-samplestores.md#granite-profile-sample-store-candidate).
+Användargränssnittsmodulen granite.profile ContextHub visar visningsnamnet för den aktuella användaren. Popup-fönstret visar användarens inloggningsnamn och gör att du kan ändra värdet för visningsnamnet. Användargränssnittsmodulen hämtar information från ett ContextHub-arkiv med namnet profile som är baserad på [granite.profile](/help/sites-developing/ch-samplestores.md#granite-profile-sample-store-candidate) lagringskandidat.
 
 ![chlimage_1-83](assets/chlimage_1-83a.png)
 

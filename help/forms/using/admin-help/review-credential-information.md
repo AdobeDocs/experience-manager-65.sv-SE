@@ -1,22 +1,21 @@
 ---
 title: Granska användarinformation för autentiseringsuppgifter
-seo-title: Granska användarinformation för autentiseringsuppgifter
+seo-title: Review credential use information
 description: Lär dig hur du granskar användarinformation för autentiseringsuppgifter.
-seo-description: Lär dig hur du granskar användarinformation för autentiseringsuppgifter.
+seo-description: Learn how to review credential use information.
 uuid: 02af75f9-c235-470d-a98b-a2102aa31381
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_acrobat_reader_dc_extensions
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: cdf61cff-768b-49f7-9926-400bc96b0708
-translation-type: tm+mt
-source-git-commit: d3719a9ce2fbb066f99445475af8e1f1e7476f4e
+exl-id: a8e16cf8-f3c8-48ce-87da-2f0de0b10a6e
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '191'
+source-wordcount: '180'
 ht-degree: 0%
 
 ---
-
 
 # Granska användarinformation för autentiseringsuppgifter {#review-credential-use-information}
 
@@ -41,4 +40,3 @@ Autentiseringsuppgiften innehåller information som beskriver dess avsedda anvä
 >[!NOTE]
 >
 >Giltighetstiden för autentiseringsuppgifterna finns också på sidan Inställningar > Hantering av förtroendearkiv > Lokala autentiseringsuppgifter i administrationskonsolen, under Förfallodatum.
-

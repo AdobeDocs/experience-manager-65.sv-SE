@@ -1,7 +1,8 @@
 ---
 title: Så här uppdaterar du innehåll via AEM Assets API:er
 description: I den här delen av den AEM Headless Developer Journey kan du lära dig hur du använder REST API för att komma åt och uppdatera innehållet i dina innehållsfragment.
-source-git-commit: 7f43d9d6b631b26f7b9293aa109498d0c8040436
+exl-id: af29cb77-0210-4fc4-8d86-2a833d19b49f
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
 source-wordcount: '1040'
 ht-degree: 1%
@@ -14,7 +15,7 @@ I den här delen av [AEM Headless Developer Journey,](overview.md) Lär dig hur 
 
 ## Story hittills {#story-so-far}
 
-I det föregående dokumentet om den AEM resan utan headless [Få åtkomst till ditt innehåll via AEM-API:er](access-your-content.md) har du lärt dig hur du får tillgång till ditt headless-innehåll i AEM via AEM GraphQL API och du bör nu:
+I det föregående dokumentet om den AEM resan utan headless [Få åtkomst till ditt innehåll via AEM-API:er](access-your-content.md) har du lärt dig hur du får tillgång till ditt headless-innehåll i AEM via det AEM GraphQL API:t, och du bör nu:
 
 * Lär dig mer om GraphQL.
 * Förstå hur AEM GraphQL API fungerar.
@@ -36,7 +37,7 @@ Den här artikeln bygger på dessa grundläggande funktioner så att du förstå
 
 ## Varför behöver du Assets HTTP API för innehållsfragment {#why-http-api}
 
-I det föregående steget i Headless Journey lärde du dig att använda API:t AEM GraphQL för att hämta ditt innehåll med hjälp av frågor.
+I det föregående steget i Headless Journey lärde du dig att använda AEM GraphQL API för att hämta ditt innehåll med hjälp av frågor.
 
 Varför behövs en annan API?
 
@@ -326,6 +327,6 @@ Du bör fortsätta den AEM resan utan trassel genom att nästa gång du granskar
    * [API-referens](/help/assets/assets-api-content-fragments.md#api-reference)
 * [Adobe Experience Manager Assets API - innehållsfragment](https://www.adobe.io/experience-manager/reference-materials/6-5/assets-api-content-fragments/index.html)
 * [Arbeta med innehållsfragment](/help/assets/content-fragments/content-fragments.md)
-* [AEM kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
+* [Grundläggande komponenter i AEM](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 * [CORS/AEM](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/cors-security-article-understand.html)
 * [Video - Utveckla för CORS med AEM](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/cors-security-technical-video-develop.html)

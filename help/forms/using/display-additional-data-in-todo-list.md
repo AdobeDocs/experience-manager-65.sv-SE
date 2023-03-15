@@ -1,43 +1,42 @@
 ---
 title: Visa ytterligare data i ToDo-listan
-seo-title: Visa ytterligare data i ToDo-listan
+seo-title: Displaying additional data in ToDo list
 description: Anpassa visningen av Att göra-listan på arbetsytan i LiveCycle AEM Forms så att du kan visa mer information än standardinställningen.
-seo-description: Anpassa visningen av Att göra-listan på arbetsytan i LiveCycle AEM Forms så att du kan visa mer information än standardinställningen.
+seo-description: How-to customize the display of the To-do list of LiveCycle AEM Forms workspace to show more information besides the default.
 uuid: 9467c655-dce2-43ce-8e8f-54542fe81279
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: fed3b562-bcc2-4fb7-8fd2-35b1ac621e16
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+exl-id: f8b84f13-02d3-4787-95e1-25fd684e6d3b
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '308'
+source-wordcount: '282'
 ht-degree: 0%
 
 ---
-
 
 # Visa ytterligare data i ToDo-listan{#displaying-additional-data-in-todo-list}
 
 Som standard visas uppgiftens visningsnamn och beskrivning i listan Uppgift på arbetsytan i AEM Forms. Du kan dock lägga till annan information, t.ex. skapandedatum och deadlinedatum. Du kan också lägga till ikoner och ändra visningsformatet.
 
-![En titt på fliken Att göra-uppgifter i HTML-arbetsytan som visar standardkonfigurationen](assets/html-todo-list.png)
+![En titt på fliken Uppgift på arbetsyta i HTML som visar standardkonfigurationen](assets/html-todo-list.png)
 
 I den här artikeln beskrivs stegen för hur du lägger till information för varje uppgift i Att göra-listan.
 
 ## Vad kan läggas till {#what-can-be-added}
 
-Du kan lägga till den information som finns i `task.json` som skickas av servern. Informationen kan läggas till som oformaterad text eller formateras med hjälp av format.
+Du kan lägga till den tillgängliga informationen i `task.json` skickas av servern. Informationen kan läggas till som oformaterad text eller formateras med hjälp av format.
 
-Mer information om JSON-objektbeskrivningen finns i [den här](/help/forms/using/html-workspace-json-object-description.md)-artikeln.
+Mer information om JSON-objektbeskrivningen finns i [this](/help/forms/using/html-workspace-json-object-description.md) artikel.
 
-## Visa information om en aktivitet {#displaying-information-on-a-task}
+## Visa information om en uppgift {#displaying-information-on-a-task}
 
-1. Följ de allmänna [stegen för anpassning av arbetsytan i AEM Forms](../../forms/using/generic-steps-html-workspace-customization.md).
-1. Om du vill visa ytterligare information för en aktivitet måste motsvarande nyckelvärdepar läggas till i åtgärdsblocket `translation.json`.
+1. Följ [Allmänna steg för anpassning av AEM Forms arbetsyta](../../forms/using/generic-steps-html-workspace-customization.md).
+1. Om du vill visa ytterligare information för en uppgift måste motsvarande nyckelvärdepar läggas till i aktivitetsblocket för `translation.json`.
 
-   Ändra till exempel `/apps/ws/locales/en-US/translation.json` för engelska:
+   Till exempel ändra `/apps/ws/locales/en-US/translation.json` för engelska:
 
    ```json
    "task" : {
@@ -124,7 +123,7 @@ Mer information om JSON-objektbeskrivningen finns i [den här](/help/forms/using
 
 ## Definiera CSS för den nya egenskapen {#defining-css-for-the-new-property}
 
-1. Du kan använda format på informationen (egenskapen) som läggs till i en uppgift. För att göra detta måste du lägga till formatinformation för den nya egenskapen som har lagts till i `/apps/ws/css/newStyle.css`.
+1. Du kan använda format på informationen (egenskapen) som läggs till i en uppgift. För att göra detta måste du lägga till formatinformation för den nya egenskapen som lagts till i `/apps/ws/css/newStyle.css`.
 
    Lägg till exempel till:
 
@@ -136,7 +135,7 @@ Mer information om JSON-objektbeskrivningen finns i [den här](/help/forms/using
    }
    ```
 
-## Lägga till post i HTML-mallen {#adding-entry-in-the-html-template}
+## Lägga till post i mallen HTML {#adding-entry-in-the-html-template}
 
 Slutligen måste du ta med en post i dev-paketet för varje egenskap som du vill lägga till i uppgiften. Om du vill skapa en hänvisar du till Skapa AEM Forms-arbetsytekod.
 
@@ -145,7 +144,7 @@ Slutligen måste du ta med en post i dev-paketet för varje egenskap som du vill
    * från: `/libs/ws/js/runtime/templates/`
    * till: `/apps/ws/js/runtime/templates/`
 
-1. Lägg till den nya informationen i `/apps/ws/js/runtime/templates/task.html`.
+1. Lägg till ny information i `/apps/ws/js/runtime/templates/task.html`.
 
    Lägg till under `div class="taskProperties"`:
 

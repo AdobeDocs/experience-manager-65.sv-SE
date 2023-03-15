@@ -1,23 +1,22 @@
 ---
 title: Nyckelord för adaptiva formulär
-seo-title: Nyckelord för adaptiva formulär
+seo-title: Adaptive forms keywords
 description: Du kan inte använda dessa reserverade ord som identifierare i dina adaptiva formulär.
-seo-description: Du kan inte använda dessa reserverade ord som identifierare i dina adaptiva formulär.
+seo-description: You cannnot use these reserved words as identifiers in your adaptive forms.
 uuid: 79e77692-2f0c-493b-8c2c-c408ff3dcece
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: 678e9dfc-2c46-430a-8da9-0329dda80090
 feature: Adaptive Forms
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 6ef5bd8c-7e7b-4501-a1be-d34fc0dbde84
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '225'
-ht-degree: 13%
+source-wordcount: '208'
+ht-degree: 14%
 
 ---
 
-
-# Anpassade formulärnyckelord {#adaptive-forms-keywords}
+# Nyckelord för adaptiva formulär {#adaptive-forms-keywords}
 
 Nyckelord för adaptiva formulär är fördefinierade, reserverade identifierare som har en speciell betydelse för adaptiva formulär. Du kan inte använda dessa nyckelord som identifierare i dina adaptiva formulär. I följande tabell visas alla nyckelord som är reserverade identifierare för adaptiva formulär.
 
@@ -241,4 +240,4 @@ Nyckelord för adaptiva formulär är fördefinierade, reserverade identifierare
  </tbody>
 </table>
 
-Förutom nyckelorden ovan bör du undvika att använda namn som liknar [JavaScript API:er för adaptiva formulär](https://adobe.com/go/learn_aemforms_javascript_api_63).
+Undvik, förutom nyckelorden ovan, att använda namn som liknar [adaptiva formulär JavaScript API:er](https://adobe.com/go/learn_aemforms_javascript_api_63).

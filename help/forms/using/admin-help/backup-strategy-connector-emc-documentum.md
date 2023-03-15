@@ -1,22 +1,21 @@
 ---
 title: Säkerhetskopieringsstrategi för Connector for EMC Documentum-användare
-seo-title: Säkerhetskopieringsstrategi för Connector for EMC Documentum-användare
+seo-title: Backup strategy for Connector for EMC Documentum users
 description: Kontrollera hur du skapar en säkerhetskopieringsstrategi för Connector for EMC Documentum-användare.
-seo-description: Kontrollera hur du skapar en säkerhetskopieringsstrategi för Connector for EMC Documentum-användare.
+seo-description: Check how to create a backup strategy for Connector for EMC Documentum users.
 uuid: 5d8a0476-5231-4e1d-96c4-ae3df68e09f0
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: e83b1a59-a730-4d22-9d58-1c9c38e5d534
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: b759b936-5907-4311-a5cc-60f321476368
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '177'
+source-wordcount: '156'
 ht-degree: 0%
 
 ---
-
 
 # Säkerhetskopieringsstrategi för Connector for EMC Documentum-användare {#backup-strategy-for-connector-for-emc-documentum-users}
 
@@ -31,4 +30,3 @@ Säkerhetskopiera AEM genom att använda ECM-databasen och utföra följande upp
 
 * Återställ respektive ECM-system genom att följa instruktionerna i [Återställ EMC Documentum Content Server](/help/forms/using/admin-help/backing-recovering-emc-documentum-repository.md#restore-the-emc-documentum-content-server).
 * Återställ AEM genom att följa instruktionerna i det här dokumentet.
-

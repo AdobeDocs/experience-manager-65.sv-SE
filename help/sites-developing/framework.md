@@ -123,7 +123,7 @@ I följande tabell visas några exempel på tagg-ID:n, deras element och hur tag
   </tr>
   <tr>
    <td>himmel</td>
-   <td>standard</td>
+   <td>default</td>
    <td>himmel</td>
    <td>(inga)</td>
    <td>himmel</td>

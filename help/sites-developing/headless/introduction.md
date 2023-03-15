@@ -1,17 +1,17 @@
 ---
-title: 'Headless Development for AEM 6.5 Sites '
-description: Läs om hur AEM 6.5 kraftfulla headless-funktioner som Content Models, Content Fragments och GraphQL API samverkar så att ni kan hantera era upplevelser centralt och leverera dem i alla kanaler.
-source-git-commit: 2f400d209148278f0695f7b9523b58bba6845cfb
+title: Headless Development for AEM 6.5 Sites
+description: Läs om hur AEM 6.5 kraftfulla headless-funktioner som Content Models, Content Fragments och GraphQL API fungerar tillsammans så att ni kan hantera era upplevelser centralt och leverera dem i alla kanaler.
+exl-id: b6598bcf-b2ce-403a-87cf-6895fec8a91b
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
 source-wordcount: '493'
 ht-degree: 1%
 
 ---
 
-
 # Headless Development for AEM 6.5 Sites {#headless-development}
 
-Läs om hur AEM 6.5 kraftfulla headless-funktioner som Content Models, Content Fragments och GraphQL API samverkar så att ni kan hantera era upplevelser centralt och leverera dem i alla kanaler.
+Läs om hur AEM 6.5 kraftfulla headless-funktioner som Content Models, Content Fragments och GraphQL API fungerar tillsammans så att ni kan hantera era upplevelser centralt och leverera dem i alla kanaler.
 
 ## Översikt {#overview}
 
@@ -42,7 +42,7 @@ AEM 6.5 är ett flexibelt verktyg för den headless-implementeringsmodellen med 
    * Dessa skapas av innehållsförfattare med AEM Content Fragment Editor.
    * De lagras i AEM Assets och hanteras i gränssnittet Resurser Admin.
 1. Innehålls-API för leverans
-   * AEM GraphQL API har stöd för leverans av innehållsfragment.
+   * AEM GraphQL API stöder leverans av innehållsfragment.
    * AEM Assets REST API stöder CRUD-åtgärder för innehållsfragment.
    * Direktleverans av innehåll är också möjligt med [Content Fragment Core Component&#39;s JSON export.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)
 
@@ -52,6 +52,6 @@ Det finns ett antal resurser som du kan använda för att komma igång med AEM h
 
 | Resurs | Beskrivning | Typ | Målgrupp | Beräkna. Time |
 |---|---|---|---|---|
-| [Headless Developer Journey](/help/journey-headless/developer/overview.md) | **För användare som inte är AEM och utan headless** börjar du här för att få en omfattande introduktion till AEM och dess headless-funktioner från teorin om headless genom att publicera ditt första headless-projekt. | Guide | Utvecklare **nya i AEM och utan huvud** | 1 timme |
+| [Headless Developer Journey](/help/journey-headless/developer/overview.md) | **För användare som inte är AEM och utan headless** börjar du här för att få en omfattande introduktion till AEM och dess headless-funktioner från teorin om headless genom att publicera ditt första headless-projekt. | Användarhandbok | Utvecklare **nya i AEM och utan huvud** | 1 timme |
 | [Starthandbok för Headless](/help/sites-developing/headless/getting-started/introduction.md) | **För erfarna AEM** som behöver en kort sammanfattning av de viktigaste AEM rubrikfria funktionerna, se den här snabbstartsöversikten. | Snabbstart | Utvecklare, administratörer **med AEM** | 20 minuter |
 | [Komma igång med AEM självstudiekurs utan hörn](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html) | **Om du föredrar en praktisk lösning och är bekant med AEM** går den här självstudiekursen direkt in i att skapa ett enkelt headless-projekt. | Självstudiekurs | Utvecklare | 2 timmar |

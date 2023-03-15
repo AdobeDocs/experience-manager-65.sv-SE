@@ -1,22 +1,21 @@
 ---
 title: Använda Assembler Service
-seo-title: Använda Assembler Service
+seo-title: Using Assembler Service
 description: Med Assembler-tjänsten kan du kombinera, ordna om och förstärka PDF- och XDP-dokument och få information om PDF-dokument.
-seo-description: Med Assembler-tjänsten kan du kombinera, ordna om och förstärka PDF- och XDP-dokument och få information om PDF-dokument.
+seo-description: The Assembler service lets you combine, rearrange, and augment PDF and XDP documents and obtain information about PDF documents.
 uuid: 1efce50b-2d98-408e-aa43-ac4999de41a8
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
 discoiquuid: 6a99042f-79c7-494b-bca0-73f2b5725b58
 docset: aem65
-translation-type: tm+mt
-source-git-commit: d9975c0dcc02ae71ac64aadb6b4f82f7c993f32c
+exl-id: 2acd6b19-0fe8-4994-b0f4-c9d5b9f3fdf1
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '2143'
+source-wordcount: '2121'
 ht-degree: 0%
 
 ---
-
 
 # Använda Assembler Service{#using-assembler-service}
 
@@ -24,7 +23,7 @@ Med Assembler-tjänsten kan du kombinera, ordna om och förstärka PDF- och XDP-
 
 Du kan använda sammansättningstjänsten för följande åtgärder:
 
-## Sammanställa PDF-dokument {#assemble-pdf-documents}
+## Sammanställa dokument från PDF {#assemble-pdf-documents}
 
 Du kan använda Assembler-tjänsten för att samla ihop två eller flera PDF-dokument till ett enda PDF-dokument eller PDF Portfolio. Du kan även använda funktioner i PDF-dokumentet som underlättar navigering eller förbättrar säkerheten. Här är några sätt att sammanställa PDF-dokument:
 
@@ -54,11 +53,11 @@ egenskaper:
 * Andra egenskaper som används från basdokumentet (Doc1), inklusive metadata, sidetiketter och sidstorlek
 * Det resulterande dokumentet innehåller en innehållsförteckning som är konstruerad av bokmärkena i källdokumenten
 
-### Skapa en PDF-Portfolio {#create-a-pdf-portfolio}
+### Skapa en PDF Portfolio {#create-a-pdf-portfolio}
 
-Med Assembler-tjänsten kan du skapa PDF-Portfolio som innehåller en dokumentsamling och ett valfritt användargränssnitt. Gränssnittet kallas för en PDF-Portfolio-layout eller en PDF Portfolio-navigator (navigator). PDF Portfolio utökar funktionerna för PDF-paket genom att lägga till en navigator, mappar och välkomstsidor. Gränssnittet kan förbättra användarupplevelsen genom att utnyttja lokaliserade textsträngar, anpassade färgscheman och grafiska resurser. PDF-Portfolio kan även innehålla mappar för att ordna filerna i portföljen.
+Med Assembler-tjänsten kan du skapa PDF Portfolio som innehåller en dokumentsamling och ett valfritt användargränssnitt. Gränssnittet kallas PDF Portfolio-layout eller PDF Portfolio (navigator). PDF Portfolio utökar funktionerna för PDF-paket genom att lägga till en navigator, mappar och välkomstsidor. Gränssnittet kan förbättra användarupplevelsen genom att utnyttja lokaliserade textsträngar, anpassade färgscheman och grafiska resurser. PDF Portfolio kan också inkludera mappar för att ordna filerna i portföljen.
 
-När Assembler-tjänsten tolkar följande DDX-dokument sammanställs ett PDF-Portfolio som innehåller en PDF-Portfolio-navigator och ett paket med två filer. Tjänsten hämtar navigatorn från den plats som anges av myNavigator-källan. Det ändrar navigatorns standardfärgschema till färgschemat pinkScheme.
+När Assembler-tjänsten tolkar följande DDX-dokument, sätts ett PDF-Portfolio med en PDF Portfolio-navigator och ett paket med två filer ihop. Tjänsten hämtar navigatorn från den plats som anges av myNavigator-källan. Det ändrar navigatorns standardfärgschema till färgschemat pinkScheme.
 
 ```xml
 <DDX xmlns="https://ns.adobe.com/DDX/1.0/">
@@ -75,7 +74,7 @@ När Assembler-tjänsten tolkar följande DDX-dokument sammanställs ett PDF-Por
 </DDX>
 ```
 
-### Sammanställ krypterade dokument {#assemble-encrypted-documents}
+### Sammanställa krypterade dokument {#assemble-encrypted-documents}
 
 När du sammanställer ett dokument kan du även kryptera PDF-dokumentet med ett lösenord. När ett PDF-dokument har krypterats med ett lösenord måste användaren ange lösenordet för att kunna visa PDF-dokumentet i Adobe Reader eller Acrobat. Om du vill kryptera ett PDF-dokument med ett lösenord måste DDX-dokumentet innehålla krypteringselementvärden som krävs för att kryptera ett PDF-dokument.
 
@@ -93,11 +92,11 @@ Följande bild visar ett PDF-dokument som innehåller en unik identifierare som 
 
 Ett PDF-dokument som innehåller en unik identifierare som finns i dokumentets rubrik
 
-### Förenkla och samla ihop dokument {#flatten-and-assemble-documents}
+### Förenkla och sammanställ dokument {#flatten-and-assemble-documents}
 
-Du kan använda tjänsten Assembler för att omvandla ett interaktivt PDF-dokument (till exempel ett formulär) till ett icke-interaktivt PDF-dokument. Med ett interaktivt PDF-dokument kan användare ange eller ändra data som finns i PDF-dokumentfälten. Processen att omvandla ett interaktivt PDF-dokument till ett icke-interaktivt PDF-dokument kallas för förenkling. När ett PDF-dokument förenklas bevaras det grafiska utseendet i formulärfälten, men de är inte längre interaktiva. Ett skäl till att förenkla ett PDF-dokument är att se till att data inte kan ändras. Dessutom fungerar inte längre skript som är kopplade till fälten.
+Du kan använda tjänsten Assembler för att omvandla ett interaktivt PDF-dokument (till exempel ett formulär) till ett icke-interaktivt PDF-dokument. Med ett interaktivt PDF-dokument kan användare ange eller ändra data som finns i dokumentfälten i PDF. Processen att omforma ett interaktivt PDF-dokument till ett icke-interaktivt PDF-dokument kallas för förenkling. När ett PDF-dokument förenklas bevaras det grafiska utseendet i formulärfälten, men de är inte längre interaktiva. Ett skäl till att förenkla ett PDF-dokument är att se till att data inte kan ändras. Dessutom fungerar inte längre skript som är kopplade till fälten.
 
-När du skapar ett PDF-dokument som har sammanställts från interaktiva PDF-dokument, förenklar Assembler-tjänsten dessa formulär innan de sammanställs i det resulterande dokumentet.
+När du skapar ett PDF-dokument som har sammanställts från interaktiva PDF-dokument, förenklas dessa formulär av tjänsten Assembler innan de sammanställs i det resulterande dokumentet.
 
 >[!NOTE]
 >
@@ -129,7 +128,7 @@ Här är ett DDX-dokument som ger det resultat som visas ovan.
 </DDX>
 ```
 
-### Matchar referenser under sammansättning {#resolving-references-during-assembly}
+### Korrigera referenser under sammansättning {#resolving-references-during-assembly}
 
 Vanligtvis kan XDP-dokument innehålla bilder som refereras antingen via absoluta eller relativa referenser. Sammansättningstjänsten behåller som standard referenserna till bilderna i det resulterande XDP-dokumentet.
 
@@ -151,18 +150,18 @@ Du kan ange hur Assembler-tjänsten ska hantera de bilder som refereras i XDP-k�
   </tr> 
   <tr> 
    <td>relativ</td> 
-   <td>Bäddar in alla bilder som refereras via relativa referenser i XDP-källdokumentet<br />.</td> 
+   <td>Bäddar in alla bilder som refereras via relativa referenser i käll-XDP<br /> -dokument.</td> 
   </tr> 
   <tr> 
    <td>absolut</td> 
-   <td>Bäddar in alla bilder som refereras via absoluta referenser i XDP-källdokumentet<br />.</td> 
+   <td>Bäddar in alla bilder som refereras via absoluta referenser i käll-XDP<br /> -dokument.</td> 
   </tr> 
  </tbody> 
 </table>
 
 Du kan ange värdet för attributet resolveAssets antingen i XDP-källtaggen eller i den överordnade XDP-resultattaggen. Om attributet anges för XDP-resultattaggen ärvs det av alla XDP-källelement som är underordnade XDP-resultatet. Om du däremot uttryckligen anger attributet för ett källelement åsidosätts inställningen för resultatelementet enbart för det källdokumentet.
 
-#### Lös alla källreferenser i ett XDP-dokument {#resolve-all-source-references-in-an-xdp-document}
+#### Lösa alla källreferenser i ett XDP-dokument {#resolve-all-source-references-in-an-xdp-document}
 
 Om du vill lösa alla referenser i XDP-källdokumenten anger du attributet resolveAssets för\
 resulterande dokument till alla, som i exemplet nedan:
@@ -190,7 +189,7 @@ resultat.
 </DDX>
 ```
 
-#### Lös valda källreferenser i ett XDP-dokument {#resolve-selected-source-references-in-an-xdp-document}
+#### Lösa markerade källreferenser i ett XDP-dokument {#resolve-selected-source-references-in-an-xdp-document}
 
 Du kan selektivt ange de källreferenser som du vill matcha genom att ange attributet resolveAssets för dem. Attributen för enskilda källdokument åsidosätter det resulterande XDP-dokumentets inställning. I det här exemplet löses även de inkluderade fragmenten.
 
@@ -248,7 +247,7 @@ source="myFragmentSource"/>
 
 ### Paketera ett XDP-dokument som PDF {#package-an-xdp-document-as-pdf}
 
-Du kan använda tjänsten Assembler för att paketera ett XDP-dokument som ett PDF-dokument, vilket visas i det här DDX-dokumentet.
+Du kan använda Assembler-tjänsten för att paketera ett XDP-dokument som ett PDF-dokument, vilket visas i det här DDX-dokumentet.
 
 ```xml
 <DDX xmlns="https://ns.adobe.com/DDX/1.0/">
@@ -297,13 +296,13 @@ Följande exempel är ett DX-dokument som använder bokmärken för att demonter
 </PDFsFromBookmarks>
 ```
 
-## Avgör om dokument är PDF/A-kompatibla {#determine-whether-documents-are-pdf-a-compliant}
+## Kontrollera om dokumenten överensstämmer med PDF/A {#determine-whether-documents-are-pdf-a-compliant}
 
-Du kan använda Assembler-tjänsten för att avgöra om ett PDF-dokument är PDF/A-kompatibelt. PDF/A är ett arkiveringsformat som är avsett för långvarig lagring av dokumentets innehåll. Teckensnitten bäddas in i dokumentet och filen är okomprimerad. Därför är ett PDF/A-dokument vanligtvis större än ett vanligt PDF-dokument. Ett PDF/A-dokument innehåller inte heller ljud- och videoinnehåll.
+Du kan använda Assembler-tjänsten för att avgöra om ett PDF-dokument är PDF/A-kompatibelt. PDF/A är ett arkiveringsformat som är avsett för långtidsarkivering av dokumentets innehåll. Teckensnitten bäddas in i dokumentet och filen är okomprimerad. Därför är ett PDF/A-dokument vanligtvis större än ett PDF-standarddokument. Ett PDF/A-dokument innehåller inte heller ljud- och videoinnehåll.
 
 ## Hämta information om ett PDF-dokument {#obtain-information-about-a-pdf-document}
 
-Du kan använda Assembler-tjänsten för att få följande information om ett PDF-dokument:
+Du kan använda Assembler-tjänsten för att hämta följande information om ett PDF-dokument:
 
 * Textinformation.
 
@@ -312,7 +311,7 @@ Du kan använda Assembler-tjänsten för att få följande information om ett PD
    * Meningar i varje stycke på varje sida i dokumentet
 
 * Bokmärken, inklusive sidnummer, rubrik, mål och utseende. Du kan exportera den här\
-   data från ett PDF-dokument och importera dem till ett PDF-dokument.
+   data från ett PDF-dokument och importera det till ett PDF-dokument.
 
 * Bifogade filer, inklusive filinformation. För bilagor på sidnivå innehåller den även\
    platsen för anteckningen om den bifogade filen. Du kan exportera dessa data från ett PDF-dokument och\
@@ -328,7 +327,7 @@ Du kan använda Assembler-tjänsten för att avgöra om ett DDX-dokument är gil
 
 Du kan använda DDX-dokument som gör att Assembler-tjänsten anropar följande LiveC-cykeltjänster. Assembler-tjänsten kan bara anropa de tjänster som installeras med LiveCycle.
 
-**Tjänsten** Reader Extensions: Gör det möjligt för Adobe Reader-användare att digitalt signera det resulterande PDF-dokumentet.
+**Tjänsten Reader Extensions**: Gör det möjligt för Adobe Reader-användare att digitalt signera det resulterande PDF-dokumentet.
 
 **Forms-tjänst**: Sammanfogar en XDP-fil och en XML-datafil för att skapa ett PDF-dokument som innehåller det ifyllda interaktiva formuläret.
 

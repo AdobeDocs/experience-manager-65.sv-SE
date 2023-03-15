@@ -1,8 +1,8 @@
 ---
 title: MySQL-konfiguration för DSRP
-seo-title: MySQL-konfiguration för DSRP
+seo-title: MySQL Configuration for DSRP
 description: Ansluta till MySQL-servern och upprätta UGC-databasen
-seo-description: Ansluta till MySQL-servern och upprätta UGC-databasen
+seo-description: How to connect to the MySQL server and establish the UGC database
 uuid: c058cc88-7ca2-4aed-9a36-b080e603f886
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -13,7 +13,7 @@ role: Admin
 exl-id: eafb60be-2963-4ac9-8618-50fd9bc6fe6c
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '732'
+source-wordcount: '716'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ Dessa instruktioner beskriver hur du ansluter till MySQL-servern och skapar UGC-
 * [JDBC-drivrutin för MySQL](deploy-communities.md#jdbc-driver-for-mysql)
 * En relationsdatabas:
 
-   * [MySQL-](https://dev.mysql.com/downloads/mysql/) serverCommunity Server version 5.6 eller senare
+   * [MySQL-server](https://dev.mysql.com/downloads/mysql/) Community Server version 5.6 eller senare
 
       * Kan köras på samma värd som AEM eller fjärrköras
    * [MySQL Workbench](https://dev.mysql.com/downloads/tools/workbench/)
@@ -38,7 +38,7 @@ Dessa instruktioner beskriver hur du ansluter till MySQL-servern och skapar UGC-
 
 ## Installerar MySQL {#installing-mysql}
 
-[MySQL ](https://dev.mysql.com/downloads/mysql/) ska laddas ned och installeras enligt instruktionerna för måloperativsystemet.
+[MySQL](https://dev.mysql.com/downloads/mysql/) ska hämtas och installeras enligt instruktionerna för måloperativsystemet.
 
 ### Tabellnamn med gemener {#lower-case-table-names}
 
@@ -46,8 +46,8 @@ Eftersom SQL inte är skiftlägeskänsligt måste du, för skiftlägeskänsliga 
 
 Om du till exempel vill ange alla tabellnamn med gemener i ett Linux-operativsystem:
 
-* Redigera filen `/etc/my.cnf`
-* Lägg till följande rad i avsnittet `[mysqld]`:
+* Redigera fil `/etc/my.cnf`
+* I `[mysqld]` lägger du till följande rad:
 
    `lower_case_table_names = 1`
 
@@ -61,12 +61,12 @@ För att få bättre stöd för flera språk måste du använda teckenuppsättni
 
 Ändra MySQL-databasen till standard till UTF8:
 
-* Redigera filen `/etc/my.cnf`
-* Lägg till följande rad i avsnittet `[client]`:
+* Redigera fil `/etc/my.cnf`
+* I `[client]` lägger du till följande rad:
 
    `default-character-set=utf8`
 
-* Lägg till följande rad i avsnittet `[mysqld]`:
+* I `[mysqld]` lägger du till följande rad:
 
    `character-set-server=utf8`
 
@@ -84,8 +84,8 @@ När MySQL Workbench startas första gången visas inga anslutningar, såvida de
 
 ### Nya anslutningsinställningar {#new-connection-settings}
 
-1. Välj ikonen `+` till höger om `MySQL Connections`.
-1. Ange värden som passar din plattform i dialogrutan `Setup New Connection`
+1. Välj `+` ikonen till höger om `MySQL Connections`.
+1. I dialogrutan `Setup New Connection`, ange värden som passar din plattform
 
    I demonstrationssyfte med författarinstansen AEM och MySQL på samma server:
 
@@ -101,7 +101,7 @@ När MySQL Workbench startas första gången visas inga anslutningar, såvida de
 **Anteckningar**:
 
 * Standardporten är `3306`
-* Det valda anslutningsnamnet anges som datakällans namn i [JDBC OSGi-konfigurationen](#configurejdbcconnections)
+* Det valda anslutningsnamnet anges som datakällans namn i [JDBC OSGi-konfiguration](#configurejdbcconnections)
 
 #### Ny webbgruppsanslutning {#new-communities-connection}
 
@@ -119,7 +119,7 @@ SQL-skriptet hämtas från AEM:
 
 1. Bläddra till CRXDE Lite
 
-   * Till exempel [http://localhost:4502/crx/de](http://localhost:4502/crx/de)
+   * Till exempel: [http://localhost:4502/crx/de](http://localhost:4502/crx/de)
 
 1. Välj mappen /libs/social/config/datastore/dsrp/schema
 1. Hämta `init-schema.sql`
@@ -128,8 +128,8 @@ SQL-skriptet hämtas från AEM:
 
 En metod för att hämta schemat är:
 
-* Välj noden `jcr:content` för SQL-filen
-* Observera att värdet för egenskapen `jcr:data` är en visningslänk
+* Välj `jcr:content` nod för sql-filen
+* Lägg märke till värdet för `jcr:data` egenskapen är en visningslänk
 
 * Markera vylänken om du vill spara data i en lokal fil
 
@@ -137,14 +137,14 @@ En metod för att hämta schemat är:
 
 Installera databasen genom att följa stegen nedan. Databasens standardnamn är `communities`.
 
-Om databasnamnet ändras i skriptet måste du även ändra det i [JDBC-konfigurationen](#configurejdbcconnections).
+Om databasnamnet ändras i skriptet måste du även ändra det i [JDBC-konfiguration](#configurejdbcconnections).
 
 #### Steg 1: öppna SQL-fil {#step-open-sql-file}
 
 I MySQL Workbench
 
-* Välj alternativet **[!UICONTROL Open SQL Script]** på menyn Arkiv
-* Välj det hämtade `init_schema.sql`-skriptet
+* På menyn Arkiv väljer du **[!UICONTROL Open SQL Script]** option
+* Välj den hämtade `init_schema.sql` script
 
 ![select-sql-script](assets/select-sql-script.png)
 
@@ -152,19 +152,19 @@ I MySQL Workbench
 
 I Workbench-fönstret för filen som öppnas i steg 1 väljer du `lightening (flash) icon` för att köra skriptet.
 
-I följande bild är `init_schema.sql`-filen klar att köras:
+I följande bild visas `init_schema.sql` filen är klar att köras:
 
 ![execute-sql-script](assets/execute-sql-script.png)
 
 #### Uppdatera {#refresh}
 
-När skriptet har körts måste du uppdatera `SCHEMAS`-avsnittet i `Navigator` för att kunna se den nya databasen. Använd uppdateringsikonen till höger om SCHEMAS:
+När skriptet har körts måste du uppdatera `SCHEMAS` i `Navigator` för att se den nya databasen. Använd uppdateringsikonen till höger om SCHEMAS:
 
 ![uppdateringsschema](assets/refresh-schema.png)
 
 ## Konfigurera JDBC-anslutning {#configure-jdbc-connection}
 
-OSGi-konfigurationen för **Day Commons JDBC Connections Pool** konfigurerar MySQL JDBC Driver.
+OSGi-konfigurationen för **JDBC-anslutningspool för dagkommentarer** konfigurerar JDBC-drivrutinen för MySQL.
 
 Alla publicerings- och författarinstanser AEM peka på samma MySQL-server.
 
@@ -172,23 +172,23 @@ När MySQL körs på en annan server än AEM måste servervärdnamnet anges i st
 
 * På varje författare och publicera AEM.
 * Inloggad med administratörsbehörighet.
-* Gå till [webbkonsolen](../../help/sites-deploying/configuring-osgi.md).
+* Öppna [webbkonsol](../../help/sites-deploying/configuring-osgi.md).
 
-   * Till exempel [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr)
+   * Till exempel: [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr)
 
 * Leta reda på `Day Commons JDBC Connections Pool`
-* Välj ikonen `+` för att skapa en ny anslutningskonfiguration.
+* Välj `+` om du vill skapa en ny anslutningskonfiguration.
 
    ![configure-jdbc-connection](assets/configure-jdbc-connection.png)
 
 * Ange följande värden:
 
    * **[!UICONTROL JDBC driver class]**: `com.mysql.jdbc.Driver`
-   * **[!UICONTROL JDBC connection URI]**:  `jdbc:mysql://localhost:3306/communities?characterEncoding=UTF-8`
+   * **[!UICONTROL JDBC connection URI]**: `jdbc:mysql://localhost:3306/communities?characterEncoding=UTF-8`
 
-      Ange en server i stället för localhost om MySQL-servern inte är densamma som &#39;this&#39; AEM servern *communities* är standarddatabasens (schemats) namn.
+      Ange en server i stället för localhost om MySQL-servern inte är samma som &#39;this&#39; AEM server *communities* är standarddatabasens (schemats) namn.
 
-   * **[!UICONTROL Username]**:  `root`
+   * **[!UICONTROL Username]**: `root`
 
       Eller ange det konfigurerade användarnamnet för MySQL-servern, om inte &#39;root&#39;.
 
@@ -198,6 +198,6 @@ När MySQL körs på en annan server än AEM måste servervärdnamnet anges i st
 
       I annat fall anger du det konfigurerade lösenordet för MySQL-användarnamnet.
 
-   * **[!UICONTROL Datasource name]**: namn som angetts för  [MySQL-anslutningen](#new-connection-settings), till exempel &#39;communities&#39;.
+   * **[!UICONTROL Datasource name]**: det namn som anges för [MySQL-anslutning](#new-connection-settings), till exempel &#39;communities&#39;.
 
 * Välj **[!UICONTROL Save]**

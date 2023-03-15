@@ -1,24 +1,23 @@
 ---
 title: Anpassa layout och placering av felmeddelanden i ett anpassat formulär
-seo-title: Anpassa layout och placering av felmeddelanden i ett anpassat formulär
-description: 'Du kan anpassa layout och placering av felmeddelanden för en adaptiv for. '
-seo-description: 'Du kan anpassa layout och placering av felmeddelanden för en adaptiv for. '
+seo-title: Customize layout and positioning of error messages of an adaptive form
+description: Du kan anpassa layout och placering av felmeddelanden för en adaptiv for.
+seo-description: You can customize layout and positioning of the error messages of an adaptive for.
 uuid: 6d3490f6-c867-44c9-a527-55f6d7221f99
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
 discoiquuid: 136ac7e3-9d1f-4d58-bd4f-9dbe09eeafee
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+exl-id: 5cb3ee55-f411-4692-84f7-89bf6ade729d
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '529'
 ht-degree: 0%
 
 ---
 
-
-# Anpassa layout och placering av felmeddelanden i ett adaptivt formulär{#customize-layout-and-positioning-of-error-messages-of-an-adaptive-form}
+# Anpassa layout och placering av felmeddelanden i ett anpassat formulär{#customize-layout-and-positioning-of-error-messages-of-an-adaptive-form}
 
 Du kan anpassa layout och placering av felmeddelanden i ett anpassat formulär. Du kan utföra följande anpassningar:
 
@@ -27,7 +26,7 @@ Du kan anpassa layout och placering av felmeddelanden i ett anpassat formulär. 
 * Anpassa innehållet i indikatorn för dynamisk hjälp
 * Anpassa placeringen av fältkomponenterna (bildtext, widget, kort beskrivning, lång beskrivning och hjälpindikatorkomponenter) utan att göra några ändringar i motsvarande CSS-egenskaper
 
-## Anpassa layout för fält {#customize-layout-of-fields}
+## Anpassa fältlayout {#customize-layout-of-fields}
 
 Du kan anpassa layouten för ett enskilt fält eller för alla fält för att ändra positionen för bildtexter och felmeddelanden. Utför följande steg för att tillämpa en anpassad layout på ett fält:
 
@@ -35,20 +34,20 @@ Du kan anpassa layouten för ett enskilt fält eller för alla fält för att ä
 
 Utför följande steg för att tillämpa en anpassad layout på ett enskilt fält:
 
-1. Öppna formuläret i **Style**-läge. Om du vill öppna formuläret i formatläge trycker du på ![canvas-drop-down](assets/canvas-drop-down.png) > **Style** i verktygsfältet för sidan.
-1. Markera fältet under **Formulärobjekt** i sidofältet och tryck på redigeringsknappen ![edit-button](assets/edit-button.png).
+1. Öppna formuläret i **Stil** läge. Om du vill öppna formuläret i formatläge trycker du på i sidverktygsfältet ![canvas-drop-down](assets/canvas-drop-down.png) > **Stil**.
+1. I sidlisten, under **Formulärobjekt** markerar du fältet och trycker på redigeringsknappen ![edit-button](assets/edit-button.png).
 1. Markera läget för det fält som du vill anpassa och ange format för det läget.
 
    ![Ange infogad formatering för ett fält](assets/edit-error-state.png)
 
-### Anpassa layout för alla fält i ett formulär {#customize-layout-of-all-the-fields-of-a-form}
+### Anpassa layouten för alla fält i ett formulär {#customize-layout-of-all-the-fields-of-a-form}
 
 Med AEM Forms kan du nu skapa ett tema och använda det i ditt formulär. Med temaredigeraren kan du ange format för formulärkomponenter på ett och samma ställe. När du skapar ett tema anger du en stil på komponentnivå. Mer information om teman finns i [Teman i AEM Forms](../../forms/using/themes.md).
 
 Skapa ett tema med hjälp av temaredigeraren för att anpassa layouten för alla fält i formuläret. När du har skapat ett tema utför du följande steg för att tillämpa det på ett formulär:
 
 1. Öppna formuläret i redigeringsläge.
-1. Markera en komponent i redigeringsläget, tryck sedan på ![fältnivå](assets/field-level.png) > **Adaptiv formulärbehållare** och tryck sedan på ![cmpr](assets/cmppr.png).
+1. Markera en komponent i redigeringsläget och tryck sedan på ![fältnivå](assets/field-level.png) > **Adaptiv formulärbehållare** och sedan trycka ![cmppr](assets/cmppr.png).
 1. I sidlisten, under Adaptivt formulärtema, väljer du det tema du har skapat med hjälp av Theme Editor.
 
 ## Skapa en anpassad fältlayout {#create-a-custom-field-layout}
@@ -83,7 +82,7 @@ Skapa ett tema med hjälp av temaredigeraren för att anpassa layouten för alla
    ```
 
 1. Om du vill förbättra utseendet och beteendet inkluderar du klientbiblioteket som skapades i layoutfilen (errorOnRight.jsp).
-1. Öppna redigeringsdialogrutan för fältet och välj fliken **Format**. I listrutan **Konfigurera fältlayout** markerar du den nya layouten och klickar på **OK**.
+1. Öppna redigeringsdialogrutan för fältet och välj **Stilar** -fliken. I **Konfigurera fältlayout** väljer du den nya layouten och klickar på **OK**.
 
 Paketet ErrorOnRight.zip innehåller kod som visar felmeddelanden till höger om fält.
 

@@ -1,19 +1,18 @@
 ---
 title: Hantera GDPR-begäranden för AEM Foundation
-seo-title: Hantera GDPR-begäranden för AEM Foundation
+seo-title: Handling GDPR Requests for the AEM Foundation
 description: Hantera GDPR-begäranden för AEM Foundation
-seo-description: 'null'
+seo-description: null
 uuid: d470061c-bbcf-4d86-9ce3-6f24a764ca39
 contentOwner: sarchiz
 discoiquuid: 8ee843b6-8cea-45fc-be6c-99c043f075d4
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 411d40ab-6be8-4658-87f6-74d2ac1a4913
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '438'
+source-wordcount: '430'
 ht-degree: 6%
 
 ---
-
 
 # Hantera GDPR-begäranden för AEM Foundation{#handling-gdpr-requests-for-the-aem-foundation}
 
@@ -29,7 +28,7 @@ På AEM Foundation-nivå är de personuppgifter som lagras användarprofilen. D�
 
 ### Manuella steg {#manual-steps}
 
-1. Öppna konsolen för användaradministration genom att bläddra till **[!UICONTROL Settings - Security - Users]** eller genom att bläddra direkt till `https://<serveraddress>:<serverport>/libs/granite/security/content/useradmin.html`
+1. Öppna konsolen Användaradministration genom att bläddra till **[!UICONTROL Settings - Security - Users]** eller genom att bläddra direkt till `https://<serveraddress>:<serverport>/libs/granite/security/content/useradmin.html`
 
    ![useradmin2](assets/useradmin2.png)
 
@@ -37,11 +36,11 @@ På AEM Foundation-nivå är de personuppgifter som lagras användarprofilen. D�
 
    ![användarsökning](assets/usersearch.png)
 
-1. Öppna sedan användarprofilen genom att klicka på den och kontrollera den under fliken **[!UICONTROL Details]**.
+1. Öppna sedan användarprofilen genom att klicka på den och sedan kontrollera under **[!UICONTROL Details]** -fliken.
 
    ![userprofile_small](assets/userprofile_small.png)
 
-### HTTP API {#http-api}
+### HTTP-API {#http-api}
 
 Som vi nämnt tillhandahåller Adobe API:er för åtkomst av användardata, för att underlätta automatisering. Det finns flera typer av API:er som du kan använda:
 
@@ -72,7 +71,7 @@ curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYL
 curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYLBXvdTuN/profiles.-1.json'
 ```
 
-## Inaktivera en användare och ta bort de associerade profilerna {#disabling-a-user-and-deleting-the-associated-profiles}
+## Inaktivera en användare och ta bort associerade profiler {#disabling-a-user-and-deleting-the-associated-profiles}
 
 ### Inaktivera användare {#disable-user}
 
@@ -103,12 +102,12 @@ curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYL
 
 1. Ta bort profilnoder och alla underordnade noder. Profilnoderna har två format beroende på AEM:
 
-   1. Den privata standardprofilen under `[!UICONTROL /profile]`
+   1. Standardprofilen under `[!UICONTROL /profile]`
    1. `[!UICONTROL /profiles]`, för nya profiler som skapats med AEM 6.5.
 
    ![image2018-2-6_2-0-4](assets/image2018-2-6_2-0-4.png)
 
-### HTTP API {#http-api-1}
+### HTTP-API {#http-api-1}
 
 Följande procedurer använder kommandoradsverktyget `curl` för att visa hur du inaktiverar användaren med `userId` **[!UICONTROL cavery]** och tar bort dennes profiler på standardplatsen.
 
@@ -138,4 +137,3 @@ curl -X POST -u user:password -H "Accept: application/json,**/**;q=0.9" -d ':ope
 ```shell
 curl -X POST -u user:password -H "Accept: application/json,**/**;q=0.9" -d ':operation=delete' 'http://localhost:4502/home/users/we-retail/DSCP-athB1NYLBXvdTuN/profile'
 ```
-

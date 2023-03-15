@@ -1,22 +1,21 @@
 ---
 title: Konfigurera dina användare och användargrupper
-seo-title: Konfigurera dina användare och användargrupper
+seo-title: Configure Your Users and User Groups
 description: Följ den här sidan om du vill veta mer om användarroller och hur du konfigurerar användare och grupper så att de kan hantera redigering och hantering av dina mobilappar.
-seo-description: Följ den här sidan om du vill veta mer om användarroller och hur du konfigurerar användare och grupper så att de kan hantera redigering och hantering av dina mobilappar.
+seo-description: Follow this page to understand the user roles and how to configure your users and groups to support the authoring and mangement of your mobile apps.
 uuid: 55cea2b3-d7e6-4174-92b3-ee97e46b59c4
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: administering-adobe-phonegap-enterprise
 discoiquuid: 167f3bd9-7dbc-4e6b-9868-3ee53935641b
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 9f814204-8cd4-4ba9-9e25-3ff1b25c1955
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '666'
+source-wordcount: '634'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera dina användare och användargrupper {#configure-your-users-and-user-groups}
 
@@ -53,13 +52,13 @@ Medlemmar i gruppen app-author ansvarar för att skapa AEM innehåll för mobila
 
    Lägg till appförfattare i gruppen Författare
 
-1. Nu när du har skapat användargruppen app-authors kan du lägga till enskilda teammedlemmar i den nya gruppen via [användaradministratörskonsolen](http://localhost:4502/libs/granite/security/content/useradmin.md).
+1. Nu när du har skapat användargruppen app-authors kan du lägga till enskilda teammedlemmar i den nya gruppen via [Konsol för användaradministration](http://localhost:4502/libs/granite/security/content/useradmin.md).
 
    ![chlimage_1-19](assets/chlimage_1-19.png)
 
    Redigera användargrupper
 
-1. Navigera till [Behörighetskonsolen](http://localhost:4502/useradmin) och lägg till behörigheter för att administrera molntjänster
+1. Navigera till [Behörighetskonsol](http://localhost:4502/useradmin) och lägga till behörigheter för att administrera molntjänster
 
    * (Läs) på /etc/cloudServices
    >[!NOTE]
@@ -68,7 +67,7 @@ Medlemmar i gruppen app-author ansvarar för att skapa AEM innehåll för mobila
 
 ### AEM Mobile Application Administrators Group (app-admins group) {#aem-mobile-application-administrators-group-app-admins-group}
 
-Medlemmar i gruppen app-admins kan skapa programinnehåll med samma behörigheter som finns i appförfattarna **AND** och ansvarar även för:
+Medlemmar i gruppen app-admins kan skapa programinnehåll med samma behörigheter som finns i appförfattare **OCH** Dessutom ansvarar de också för
 
 * Konfigurera molntjänster för PhoneGap Build och Adobe Mobile Services i AEM
 * Mellanlagring, publicering och rensning av uppdateringar av innehållssynkronisering, OTA
@@ -79,7 +78,7 @@ Medlemmar i gruppen app-admins kan skapa programinnehåll med samma behörighete
 >
 >Du kommer att märka att vissa alternativ inte är tillgängliga för appförfattare som är tillgängliga för appadministratörer.
 
-#### Gruppkonfiguration - app-admins {#group-configuration-app-admins}
+#### Gruppkonfiguration - programadministratörer {#group-configuration-app-admins}
 
 1. Skapa en ny grupp som kallas appadministratörer.
 1. Lägg till följande grupper i den nya gruppen för programadministratörer:
@@ -89,7 +88,7 @@ Medlemmar i gruppen app-admins kan skapa programinnehåll med samma behörighete
 
    ![chlimage_1-20](assets/chlimage_1-20.png)
 
-1. Navigera till [Behörighetskonsolen](http://localhost:4502/useradmin) och lägg till behörigheter för att administrera molntjänster
+1. Navigera till [Behörighetskonsol](http://localhost:4502/useradmin) och lägga till behörigheter för att administrera molntjänster
 
    * (Läs, Ändra, Skapa, Ta bort, Replikera) på /etc/cloudServices/mobiltjänster
    * (Läs, Ändra, Skapa, Ta bort, Replikera) på /etc/cloudservices/phonegap-build
@@ -111,20 +110,19 @@ Medlemmar i gruppen app-admins kan skapa programinnehåll med samma behörighete
 
 1. Lägg till medlemmar i den här gruppen efter behov
 
-## Behörigheter för panelpanel {#dashboard-tile-permissions}
+## Behörigheter för paneler {#dashboard-tile-permissions}
 
 Instrumentpaneler kan visa olika åtgärder baserat på de behörigheter som användaren har. Nedan beskrivs vilka åtgärder som är tillgängliga för varje platta.
 
-Förutom dessa behörigheter kan en åtgärd också visas/döljas baserat på hur det aktuella programmet är konfigurerat. Det finns t.ex. ingen punkt som visar åtgärden &#39;Remote Build&#39; om en PhoneGap-molnkonfiguration inte har tilldelats programmet. De listas nedan under **Konfigurationsvillkor**.
+Förutom dessa behörigheter kan en åtgärd också visas/döljas baserat på hur det aktuella programmet är konfigurerat. Det finns t.ex. ingen punkt som visar åtgärden &#39;Remote Build&#39; om en PhoneGap-molnkonfiguration inte har tilldelats programmet. De listas nedan under &#39;**Konfigurationsvillkor**-avsnitt.
 
 ### Hantera apppanel {#manage-app-tile}
 
 Panelen har för närvarande inga åtgärder som kräver behörigheter, men informationssidan för programmet har följande åtgärder:
 
-* *Redigerare* för app-author och app-admin (UI Trigger - jcr:write - on /content/phonegap/{suffix})
-* *Hämta* för app-author och app-admin (UI Trigger - på /content/phonegap/{suffix})
+* *Redigera* för app-author och app-admin (UI Trigger - jcr:write - on /content/phonegap/{suffix})
+* *Hämta* för app-author och app-admin (UI-utlösare - på /content/phonegap/{suffix})
 
 Bilden nedan visar hämtnings- och redigeringsalternativen för ett program:
 
 ![chlimage_1-21](assets/chlimage_1-21.png)
-

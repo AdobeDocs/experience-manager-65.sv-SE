@@ -1,8 +1,8 @@
 ---
 title: Temaanpassning
-seo-title: Temaanpassning
+seo-title: Theme Customization
 description: Så här anpassar du temat i din AEM Forms-app.
-seo-description: Så här anpassar du temat i din AEM Forms-app.
+seo-description: How to customize the theme of your AEM Forms app.
 uuid: 36632e67-1cc6-416d-ae80-d84bbabab4bd
 contentOwner: robhagat
 content-type: reference
@@ -12,7 +12,7 @@ discoiquuid: c72f608e-052a-4bf9-b7bc-ddf57483af35
 exl-id: 9b8c5933-b783-48f9-b463-15a01e06ee98
 source-git-commit: 6bc228866aca785ec768daefb73970fc24568ef0
 workflow-type: tm+mt
-source-wordcount: '235'
+source-wordcount: '223'
 ht-degree: 0%
 
 ---
@@ -29,17 +29,17 @@ Du kan anpassa HTML-koden och CSS-filen för att ge AEM Forms-appen ett distinkt
 
 1. Öppna projektet.
 
-   * Öppna `Capture.xcodeproj` i Xcode för iOS
+   * För iOS, öppna `Capture.xcodeproj` i Xcode
    * För Android öppnar du Android-projektet i Eclipse.
-   * För Windows öppnar du `MWSWindows.sln` i Visual Studio.
+   * För Windows: öppna `MWSWindows.sln` i Visual Studio.
 
 1. Navigera till mappen Mallar.
 
-   * I Xcode navigerar du till mappen **Capture > www > wsmoble > js > runtime > templates**.
-   * I Eclipse navigerar du till mappen **assets > www > wsmoble > js > runtime > templates**.
-   * I Visual Studio går du till mappen **MWSWindows > www > wsmoble > js > runtime > templates**.
+   * I Xcode navigerar du till **Capture > www > wsmoble > js > runtime > templates** mapp.
+   * I Eclipse navigerar du till **assets > www > wsmoble > js > runtime > templates** mapp.
+   * I Visual Studio går du till **MWSWindows > www > wsmoble > js > runtime > templates** mapp.
 
-1. Öppna `template.html`-filen för redigering.
+1. Öppna `template.html` fil för redigering.
 1. Leta reda på följande sträng:
 
    ```jsp
@@ -52,7 +52,7 @@ Du kan anpassa HTML-koden och CSS-filen för att ge AEM Forms-appen ett distinkt
 
    Ersätt den med `<%`.
 
-1. Leta reda på följande kod i `template.html`-filen:
+1. Leta reda på följande kod i `template.html` fil:
 
    ```jsp
    <ul id="task_menu_list">
@@ -74,13 +74,13 @@ Du kan anpassa HTML-koden och CSS-filen för att ge AEM Forms-appen ett distinkt
 
 1. Navigera till css-mappen.
 
-   * I Xcode går du till **Capture > www > wsmoble > css**.
-   * I Eclipse går du till **assets > www > wsmoble > css**.
+   * I Xcode navigerar du till **Capture > www > wsmoble > css**.
+   * I Eclipse navigerar du till **assets > www > wsmoble > css**.
    * I Visual Studio går du till **MWSWindows > www > wsmoble > css**.
 
-1. Öppna `_style.css`-filen för redigering.
+1. Öppna `_style.css` fil för redigering.
 1. För bakgrundsbild ändrar du `#323232` till `#fff`.
-1. Spara ändringarna och stäng `_style.css`-filen.
+1. Spara ändringarna och stäng `_style.css` -fil.
 1. Öppna appen AEM Forms.
 
    Nu visas instruktioner i stället för beskrivningar i AEM Forms-appen.

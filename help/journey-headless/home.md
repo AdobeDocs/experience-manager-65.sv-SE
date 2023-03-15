@@ -1,10 +1,11 @@
 ---
 title: AEM Headless Journeys
 description: En samling dokumentationsresor som beskriver hur du använder Adobe Experience Manager som headless CMS.
-source-git-commit: 2523d9dcdbbfd9107e43ca53e2bb586452be1cb8
+exl-id: 369f79ab-c8ae-4d49-9b0b-e3a2e423b40f
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
 source-wordcount: '459'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 

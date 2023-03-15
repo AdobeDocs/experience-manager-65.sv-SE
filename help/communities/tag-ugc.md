@@ -1,8 +1,8 @@
 ---
 title: Tagga användargenererat innehåll
-seo-title: Tagga användargenererat innehåll
+seo-title: Tagging User Generated Content
 description: Taggning av användargenererat innehåll (UGC) är hur communitymedlemmar kan hjälpa andra medlemmar att söka efter innehåll
-seo-description: Taggning av användargenererat innehåll (UGC) är hur communitymedlemmar kan hjälpa andra medlemmar att söka efter innehåll
+seo-description: Tagging of user generated content (UGC) is how community members can help other members search for content
 uuid: ce125d7c-6fc1-44c7-9f67-eca6f599d8e3
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -13,7 +13,7 @@ role: Admin
 exl-id: 1ecb41e5-c959-4380-a5c7-df9fc3a7703a
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '227'
 ht-degree: 0%
 
 ---
@@ -42,9 +42,9 @@ AEM Communities-funktionerna som kan konfigureras för att tillåta taggning är
 
 Se [Administrera taggar](../../help/sites-administering/tags.md#tagging-console) för att skapa och hantera taggnamnutrymmen och taxonomier.
 
-Mer utvecklarinformation finns i [Tagga viktiga](tag.md).
+Se [Tagg Essentials](tag.md) för utvecklarinformation.
 
-Se [Använda molnet för sociala taggar](tagcloud.md) för att lägga till en komponent i molnet för sociala taggar på en sida för att underlätta sökning efter publicerad UGC med de taggar som används.
+Se [Använda molnet för sociala taggar](tagcloud.md) för att lägga till en komponent i Social Tag Cloud på en sida för att underlätta sökning efter publicerad UGC med de använda taggarna.
 
 ### Taggbehörigheter {#tag-permissions}
 

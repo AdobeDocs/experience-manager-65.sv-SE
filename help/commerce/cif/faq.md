@@ -1,19 +1,19 @@
 ---
 title: AEM - Commerce Integration med Commerce Integration Framework - frågor och svar
 description: AEM - Commerce Integration med Commerce Integration Framework - frågor och svar
-exl-id: 0a946d98-22c7-445d-984a-9e09c306ce45
-source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
+exl-id: d541607f-c4c9-4dd5-aadf-64d4cb5f9f2a
+source-git-commit: a2ababa9dd9115e963b91a7271d204d287557c40
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '963'
 ht-degree: 0%
 
 ---
 
 # AEM - Commerce Integration med Commerce Integration Framework - frågor och svar
 
-## 1. Används CIF GraphQL endast för handel eller kommer det att vara tillgängligt för frågor som har skapats i AEM JCR?
+## 1. Används CIF GraphQL endast för e-handel eller kommer det att finnas tillgängligt för frågor som författas AEM JCR?
 
-Adobe har antagit Adobe Commerce GraphQL API:er som sitt officiella e-handels-API för alla e-handelsrelaterade data. Därför använder AEM GraphQL för att utbyta affärsdata med Adobe Commerce och med valfri e-handelsmotor via I/O Runtime. Detta GraphQL-API är oberoende av AEM GraphQL-API för åtkomst till innehållsfragment.
+Adobe har antagit Adobe Commerce GraphQL API:er som sitt officiella e-handels-API för alla e-handelsrelaterade data. AEM använder därför GraphQL för att utbyta affärsdata med Adobe Commerce och med valfri e-handelsmotor via I/O Runtime. Det här GraphQL-API:t är oberoende av AEM GraphQL-API:t för att komma åt innehållsfragment.
 
 ## 2. Kan produktresurser (bilder) lagras och refereras från AEM via Adobe Commerce Admin? Hur kan resurser från Dynamic Media förbrukas?
 
@@ -39,7 +39,7 @@ Detta beror på några ytterligare aspekter du måste tänka på. Hur stor är c
 
 ## 7. Hur spelar PIM in i detta ramverk?
 
-PIM-data exponeras för AEM och klienter via GraphQL-begäranden. Vi rekommenderar att PIM integreras med e-handelsmotorn (Adobe Commerce eller andra) så att PIM-data kan hämtas från e-handelsmotorn.
+PIM-data exponeras för AEM och kunder via GraphQL-förfrågningar. Vi rekommenderar att PIM integreras med e-handelsmotorn (Adobe Commerce eller andra) så att PIM-data kan hämtas från e-handelsmotorn.
 
 ## 8. Cachelagra även priser och andra data via Dispatcher. Blir det ofta en cachedomål?
 

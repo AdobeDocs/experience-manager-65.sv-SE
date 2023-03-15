@@ -321,7 +321,7 @@ Den här metoden liknar metoden milstolpar med skillnaden att de milstolpar som 
 
    **Exempelsamtal** till Adobe Analytics som använder exemplet ska se ut så här när du tittar på DigitalPulse Debugger:
 
-   ![milstolpar1](assets/lmilestones1.png)
+   ![lmilestones1](assets/lmilestones1.png)
 
    *The **pev3**variabeln som skickades i anropet innehåller följande information:*
 

@@ -1,16 +1,15 @@
 ---
 title: AEM 6.5 Ytterligare resurser
-seo-title: AEM 6.5 Ytterligare resurser
+seo-title: AEM 6.5 Additional Resources
 description: Versionsinformation, certifieringar och ytterligare resurser för AEM 6.5
-seo-description: Versionsinformation, certifieringar och ytterligare resurser för AEM 6.5
-translation-type: tm+mt
-source-git-commit: 315d1ac1a00da474f535087eff49c2be8fee8c37
+seo-description: AEM 6.5 release notes, certifications, and additional resources
+exl-id: d254d976-f547-4074-b8ad-fe4814184f30
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '101'
-ht-degree: 3%
+source-wordcount: '91'
+ht-degree: 6%
 
 ---
-
 
 # AEM 6.5 Ytterligare resurser {#aem-64-additional-resources}
 
@@ -21,7 +20,7 @@ ht-degree: 3%
 ## AEM 6.5 självstudievideor {#aem-64-tutorial-videos}
 
 * [AEM 6.5 utbildningsvideor](https://helpx.adobe.com/experience-manager/kt/index/aem-6-4-videos.html)
-* [AEM Tutorials](https://helpx.adobe.com/experience-manager/tutorials.html)
+* [Självstudiekurser om AEM](https://helpx.adobe.com/experience-manager/tutorials.html)
 
 ## Klasser och certifiering {#classes-and-certification}
 

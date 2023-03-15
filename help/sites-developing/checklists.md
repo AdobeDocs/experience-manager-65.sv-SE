@@ -1,22 +1,21 @@
 ---
 title: Checklistor
-seo-title: Checklistor
+seo-title: Checklists
 description: I följande checklista visas några viktiga testproblem
-seo-description: I följande checklista visas några viktiga testproblem
+seo-description: The following checklist highlights some of the main testing issues
 uuid: 0456c98c-779f-415d-9641-b17ac141698b
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: testing
 content-type: reference
 discoiquuid: 8f94c22d-5f08-4a8b-8bb5-5ec757c44bc8
-translation-type: tm+mt
-source-git-commit: 34aadbc35d7aad127fe98211a5f37d623d101c0c
+exl-id: 16c5f9aa-024d-4d8a-ba08-22b073289cfd
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '168'
+source-wordcount: '157'
 ht-degree: 1%
 
 ---
-
 
 # Checklistor{#checklists}
 
@@ -37,4 +36,4 @@ I följande checklista markeras några av de viktigaste problemen - läs de andr
 
 >[!NOTE]
 >
->Du kan även se [Hantera projekt - checklistan för bästa praxis](/help/managing/best-practices.md) för ytterligare checklistor som gäller hela projektet.
+>Du kan även se [Hantera projekt - checklista för bästa praxis](/help/managing/best-practices.md) för ytterligare checklistor för hela projektet.

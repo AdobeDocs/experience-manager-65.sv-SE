@@ -1,22 +1,21 @@
 ---
 title: Utveckla appar med PhoneGap CLI
-seo-title: Utveckla appar med PhoneGap CLI
+seo-title: Developing Apps with PhoneGap CLI
 description: Följ den här sidan om du vill veta mer om hur du utvecklar appar med PhoneGap CLI.
-seo-description: Följ den här sidan om du vill veta mer om hur du utvecklar appar med PhoneGap CLI.
+seo-description: Follow this page to learn about developing apps with PhoneGap CLI.
 uuid: 9a66171d-19af-40db-9c07-f5dd9561e1b5
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: 4a034e15-3394-4be3-9e8e-bc894668946a
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: fbeceb70-b199-478b-907b-253ed212ff99
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '712'
+source-wordcount: '696'
 ht-degree: 0%
 
 ---
-
 
 # Utveckla appar med PhoneGap CLI{#developing-apps-with-phonegap-cli}
 
@@ -32,14 +31,14 @@ För att kunna köra följande exempel behöver du ett system som kör OSx (Mac)
 
 [Konfigurera PhoneGap CLI](https://docs.phonegap.com/en/4.0.0/guide_cli_index.md.html#The%20Command-Line%20Interface)
 
-För iOS: Om du vill utveckla för iPhone och iPad behöver du Apples Xcode IDE.
+För iOS: Om du vill utveckla för iPhone och iPad behöver du Apple Xcode IDE.
 
-* Hämta den kostnadsfritt [här](https://developer.apple.com/xcode/downloads/).
-* [Plattformshandbok för PhoneGap iOS](https://docs.phonegap.com/en/4.0.0/guide_platforms_ios_index.md.html#iOS%20Platform%20Guide)
+* Ladda ned kostnadsfritt [här](https://developer.apple.com/xcode/downloads/).
+* [PhoneGap iOS - plattformshandbok](https://docs.phonegap.com/en/4.0.0/guide_platforms_ios_index.md.html#iOS%20Platform%20Guide)
 
-För Android: Om du vill utveckla för iPhone och iPad behöver du Googles Android Studio IDE.
+För Android: Om du vill utveckla för iPhone och iPad behöver du Google Android Studio IDE.
 
-* Hämta den kostnadsfritt [här](https://developer.android.com/sdk/index.html).
+* Ladda ned kostnadsfritt [här](https://developer.android.com/sdk/index.html).
 * [Plattformshandbok för PhoneGap Android](https://docs.phonegap.com/en/4.0.0/guide_platforms_android_index.md.html#Android%20Platform%20Guide)
 
 ## Hämta källan {#download-the-source}
@@ -70,7 +69,7 @@ PhoneGap CLI kan skapa ett plattformsprojekt, kompilera källan och distribuera 
 
 >[!NOTE]
 >
->Du kan utföra alla dessa steg separat, se [PhoneGap CLI docs](https://phonegap.com/blog/2014/11/13/phonegap-cli-3-6-3/).
+>Du kan göra alla dessa steg separat, se [PhoneGap CLI docs](https://phonegap.com/blog/2014/11/13/phonegap-cli-3-6-3/).
 
 1. Kontrollera att du har installerat PhoneGap CLI, se ovan.
 1. I ett konsolfönster (eller terminalfönster) går du till rotkatalogen för den extraherade källan.
@@ -96,10 +95,9 @@ phonegap run ios
 >1. Emulatorn kommer att öppna och köra din nya PhoneGap-app och säga &#39;Device Ready&#39; om JavaScript-bryggan till native fungerar.
 
 >
->
-Detta verifierar att PhoneGap CLI-utvecklingsmiljön fungerar som den ska.
+>Detta verifierar att PhoneGap CLI-utvecklingsmiljön fungerar som den ska.
 
-## Felsöka Javascript med Safari och IOS-felsökning {#debug-javascripts-with-safari-and-ios-debug}
+## Felsöka Javascript med felsökningen Safari och IOS {#debug-javascripts-with-safari-and-ios-debug}
 
 Du kan felsöka appens JavaScript-skript med hjälp av utvecklarverktygen i Safari, på samma sätt som med ett webbprogram.
 
@@ -119,7 +117,7 @@ Så här aktiverar du utvecklarverktygen:
 * Markera &quot;Visa menyn Framkalla i menyraden&quot;
 * Stäng inställningsfönstret
 
-## Anslut Safari till iOS {#connect-safari-to-ios}
+## Ansluta Safari till iOS {#connect-safari-to-ios}
 
 Du kan ansluta Safari till en iOS-enhet eller emulator.
 
@@ -136,7 +134,7 @@ phonegap run <platform> --emulator
 
 * Öppna Safari
 * Klicka på Utveckla på menyraden
-* Välj undermenyn iOS-simulator
+* Välj undermenyn iOS Simulator
 * Klicka på home.html
 
 ![chlimage_1-48](assets/chlimage_1-48.png)
@@ -162,4 +160,4 @@ Du kan ange brytpunkter var som helst i källan. När du interagerar med emulato
 
 ## Nästa steg {#the-next-steps}
 
-När du har lärt dig mer om hur du utvecklar appar med PhoneGap CLI läser du [Åtkomst till enhetsfunktioner](/help/mobile/phonegap-access-device-features.md).
+När du har lärt dig mer om hur du utvecklar appar med PhoneGap CLI går du till [Åtkomst till enhetsfunktioner](/help/mobile/phonegap-access-device-features.md).

@@ -1,21 +1,20 @@
 ---
 title: Återgivning och leverans
-seo-title: Återgivning och leverans
+seo-title: Rendering and Delivery
 description: Återgivning och leverans
-seo-description: 'null'
+seo-description: null
 uuid: 1253b6a5-6bf3-42b1-be3a-efa23b6ddb51
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 discoiquuid: 672d5b1e-6b2f-4afe-ab04-c398e5ef45d5
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: f0c543ae-33ed-40bb-9eb7-0dc3bdea69e0
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '577'
+source-wordcount: '573'
 ht-degree: 4%
 
 ---
-
 
 # Återgivning och leverans{#rendering-and-delivery}
 
@@ -23,7 +22,7 @@ ht-degree: 4%
 >
 >Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (t.ex. Reagera). [Läs mer](/help/sites-developing/spa-overview.md).
 
-AEM kan enkelt återges med [Sling Default Servlets](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html) för att återge [JSON](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html#default-json-rendering) och andra format.
+AEM kan enkelt återges via [Standardservrar för Sling](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html) för rendering [JSON](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html#default-json-rendering) och andra format.
 
 Dessa färdiga återgivningar tar vanligtvis plats i databasen och returnerar innehållet som det är.
 
@@ -37,7 +36,7 @@ I följande diagram visas återgivningen av innehållstjänster.
 
 ## Begär JSON {#requesting-json}
 
-Använd **&lt;RESOURCE.caas[.&lt;export-config>.][&lt;export-config>.** jsonto request JSON.]
+Använd **&lt;resource.caas span=&quot;&quot; id=&quot;1&quot; translate=&quot;no&quot; />.[&lt;export-config span=&quot;&quot; id=&quot;0&quot; translate=&quot;no&quot; />.][&lt;export-config span=&quot;&quot; id=&quot;0&quot; translate=&quot;no&quot; />.json** för att begära JSON.]
 
 <table>
  <tbody>
@@ -47,20 +46,20 @@ Använd **&lt;RESOURCE.caas[.&lt;export-config>.][&lt;export-config>.** jsonto r
   </tr>
   <tr>
    <td>EXPORT-CONFIG</td>
-   <td><p><strong>VALFRITT</strong><br /> </p> <p>en exportkonfiguration hittades under /apps/mobileapps/caas/exportConfigs/EXPORT-CONFIG<br /> <br /> Om detta utelämnas används standardexportkonfigurationen </p> </td>
+   <td><p><strong>VALFRITT</strong><br /> </p> <p>en exportkonfiguration hittades under /apps/mobileapps/caas/exportConfigs/EXPORT-CONFIG<br /> <br /> Om det utelämnas används standardexportkonfigurationen </p> </td>
   </tr>
   <tr>
    <td>DJUP-INT</td>
-   <td><strong></strong><br /> <br /> OPTIONALdepth-rekursion för återgivning av underordnade objekt som används vid Sling-återgivning</td>
+   <td><strong>VALFRITT</strong><br /> <br /> djuprekursion för återgivning av underordnade objekt som används vid Sling-återgivning</td>
   </tr>
  </tbody>
 </table>
 
-## Skapar exportkonfigurationer {#creating-export-configs}
+## Skapa exportkonfigurationer {#creating-export-configs}
 
 Du kan skapa exportkonfigurationer för att anpassa JSON-återgivningen.
 
-Du kan skapa en konfigurationsnod under */apps/mobileapps/caas/exportConfigs.*.
+Du kan skapa en konfigurationsnod under */apps/mobileapps/caas/exportConfigs.*
 
 | Nodnamn | Konfigurationens namn (för återgivningsväljare) |
 |---|---|
@@ -110,7 +109,7 @@ I följande tabell visas egenskaperna för Export Configs:
    <td>Sträng[]</td>
    <td>innehåller allt</td>
    <td>Egenskapsnamn</td>
-   <td><p>Om excludePropertyPrefixes anges<br /> innehåller detta angivna egenskaper trots att prefixet matchas,</p> <p>else (exclude properties ignore) inkluderar endast dessa egenskaper</p> </td>
+   <td><p>if excludePropertyPrefixes set<br /> Detta omfattar angivna egenskaper trots att prefixet matchas,</p> <p>else (exclude properties ignore) inkluderar endast dessa egenskaper</p> </td>
   </tr>
   <tr>
    <td>includeChildren</td>
@@ -156,11 +155,11 @@ I följande tabell visas egenskaperna:
    <td><strong>Beskrivning</strong></td>
   </tr>
   <tr>
-   <td>&lt;selector_to_inc&gt;</td>
+   <td>&lt;SELECTOR_TO_INC&gt;</td>
    <td>Sträng[] </td>
    <td>-</td>
    <td>sling:resourceType</td>
-   <td>Returnera inte standardexporten för CaaS json för följande sling-resurstyper.<br /> Returnera en kundjson-export genom att återge resursen som,<br /> &lt;resource&gt;&lt;selector_to_inc&gt;.json </td>
+   <td>Returnera inte standardexporten för CaaS json för följande sling-resurstyper.<br /> Returnera en kundjson-export genom att återge resursen som<br /> &lt;resource&gt;.&lt;selector_to_inc&gt;.json </td>
   </tr>
  </tbody>
 </table>
@@ -169,7 +168,7 @@ I följande tabell visas egenskaperna:
 
 Content Services innehåller två exportkonfigurationer:
 
-* default (ingen konfiguration har angetts)
+* standard (ingen konfiguration har angetts)
 * sida (för att återge webbplatssidor)
 
 #### Standardexportkonfiguration {#default-export-configuration}
@@ -194,7 +193,7 @@ Standardexportkonfigurationen för Content Services används om en konfiguration
   </tr>
   <tr>
    <td>includeProperties</td>
-   <td>jcr:text,text<br /> jcr:title,title<br /> jcr:description,description<br /> jcr:lastModified,lastModified<br /> cq:tags,taggar<br /> cq:lastModified,lastModified</td>
+   <td>jcr:text,text<br /> jcr:titel,titel<br /> jcr:beskrivning,beskrivning<br /> jcr:lastModified,lastModified<br /> cq:tags,taggar<br /> cq:lastModified,lastModified</td>
   </tr>
   <tr>
    <td>includeComponents</td>
@@ -214,7 +213,7 @@ Standardexportkonfigurationen för Content Services används om en konfiguration
   </tr>
   <tr>
    <td>Sling JSON Overrides</td>
-   <td>foundation/components/image<br /> wcm/foundation/components/image<br /> mobileapps/caas/components/data/contentReference<br /> mobileapps/caas/components/data/assetlist</td>
+   <td>grund/komponenter/bild<br /> wcm/foundation/components/image<br /> mobileapps/caas/components/data/contentReference<br /> mobileapps/caas/components/data/assetlist</td>
   </tr>
  </tbody>
 </table>
@@ -232,4 +231,3 @@ Läs resurserna nedan om du vill veta mer om andra ämnen i Content Services:
 * [Utveckla modeller](/help/mobile/administer-mobile-apps.md)
 * [Skapa innehållstjänster](/help/mobile/develop-content-as-a-service.md)
 * [Administrera innehållstjänster](/help/mobile/developing-content-services.md)
-

@@ -1,22 +1,21 @@
 ---
 title: Felsöka integreringsproblem
-seo-title: Felsöka integreringsproblem
+seo-title: Troubleshooting Integration Issues
 description: Lär dig hur du felsöker integreringsproblem.
-seo-description: Lär dig hur du felsöker integreringsproblem.
+seo-description: Learn how to troubleshoot integration issues.
 uuid: fe080e58-a855-4308-a611-f72eb47ba82d
 contentOwner: raiman
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 discoiquuid: 422ee332-23ae-46bd-8394-a4e0915beaa2
-translation-type: tm+mt
-source-git-commit: 2fc35bfd93585a586cb1d4e3299261611db49ba6
+exl-id: 11b0023e-34bd-4dfe-8173-5466db9fbe34
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1109'
+source-wordcount: '1096'
 ht-degree: 0%
 
 ---
-
 
 # Felsöka integreringsproblem{#troubleshooting-integration-issues}
 
@@ -26,7 +25,7 @@ ht-degree: 0%
 
 Kontrollera om webbläsarens JavaScript-konsol visar några fel. Ohanterade fel kan förhindra att efterföljande kod körs korrekt. Om fel uppstår ska du kontrollera vilket skript som orsakar felet och i vilket område. Sökvägen till skriptet kan ge en indikation på vilken funktion skriptet tillhör.
 
-### Loggar in på komponentnivå {#logging-on-component-level}
+### Inloggning på komponentnivå {#logging-on-component-level}
 
 I vissa fall kan det vara praktiskt att lägga till ytterligare programsatser på komponentnivå. Eftersom komponenten återges kan du lägga till en temporär markering för att visa variabelvärden som kan hjälpa dig att identifiera potentiella problem. Till exempel:
 
@@ -44,7 +43,7 @@ ${ myHtlVariable }
 -->
 ```
 
-Mer information om loggning finns på sidorna [Loggning](/help/sites-deploying/configure-logging.md) och [Arbeta med granskningsposter och loggfiler](/help/sites-deploying/monitoring-and-maintaining.md#working-with-audit-records-and-log-files).
+Mer information om loggning finns i [Loggning](/help/sites-deploying/configure-logging.md) och [Arbeta med granskningsposter och loggfiler](/help/sites-deploying/monitoring-and-maintaining.md#working-with-audit-records-and-log-files) sidor.
 
 ## Integreringsproblem med analyser {#analytics-integration-issues}
 
@@ -57,20 +56,20 @@ Rapportimporteraren orsakar hög CPU-/minnesanvändning eller orsakar `OutOfMemo
 Du kan åtgärda det här problemet genom att försöka med följande:
 
 * Se till att det inte finns någon stor mängd registrerade PollingImporters (se avsnittet&quot;Shutdown take a long time due to PollingImporter&quot; nedan).
-* Kör rapportimporterare vid en viss tidpunkt på dagen med CRON-uttryck för `ManagedPollingImporter`-konfigurationerna i [OSGi-konsolen](/help/sites-deploying/configuring-osgi.md).
+* Kör rapportimporterare vid en viss tidpunkt på dagen med CRON-uttryck för `ManagedPollingImporter` konfigurationer i [OSGi-konsol](/help/sites-deploying/configuring-osgi.md).
 
 Mer information om hur du skapar anpassade dataimporteringstjänster i AEM finns i följande artikel [https://helpx.adobe.com/experience-manager/using/polling.html](https://helpx.adobe.com/experience-manager/using/polling.html).
 
 ### Avstängningen tar lång tid på grund av PollingImporter {#shutdown-takes-a-long-time-due-to-the-pollingimporter}
 
-Analyserna har utformats med en arvsmekanism i åtanke. Vanligtvis aktiverar du Analytics för en webbplats genom att lägga till en referens till en Analytics-konfiguration i sidegenskaperna [Cloud Services](/help/sites-developing/extending-cloud-config.md). Konfigurationen ärvs sedan automatiskt till alla undersidor utan att du behöver referera till den igen, såvida inte en sida kräver en annan konfiguration. När du lägger till en referens till en plats skapas också automatiskt flera noder (12 för AEM 6.3 och tidigare eller 6 för AEM 6.4)   och senare) av typen `cq;PollConfig` som instansierar PollingImporters som används för att importera Analytics-data till AEM. Resultatet blir:
+Analyserna har utformats med en arvsmekanism i åtanke. Vanligtvis aktiverar du Analytics för en webbplats genom att lägga till en referens till en Analytics-konfiguration i sidegenskaperna [Cloud Services](/help/sites-developing/extending-cloud-config.md) -fliken. Konfigurationen ärvs sedan automatiskt till alla undersidor utan att du behöver referera till den igen, såvida inte en sida kräver en annan konfiguration. När du lägger till en referens till en plats skapas automatiskt flera noder (12 för AEM 6.3 och tidigare eller 6 för AEM 6.4 och senare) av typen. `cq;PollConfig` som instansierar PollingImporters som används för att importera Analytics-data till AEM. Resultatet blir:
 
 * Många sidor som refererar till Analytics leder till en stor mängd PollingImporters.
 * Om du dessutom kopierar och klistrar in sidor med en referens till en Analytics-konfiguration dupliceras dess PollingImporters.
 
 #### Lösning {#solution-1}
 
-För det första kan en analys av [error.log](/help/sites-deploying/configure-logging.md) ge dig lite information om mängden aktiva eller registrerade PollingImporters. Till exempel:
+För det första analyserar vi [error.log](/help/sites-deploying/configure-logging.md) kan ge dig lite information om mängden aktiva eller registrerade PollingImporters. Till exempel:
 
 ```
 # Count PollingImporter entries
@@ -88,18 +87,18 @@ För det andra måste du se till att endast de översta sidorna (högst upp i hi
 
 Mer information om hur du skapar anpassade dataimporteringstjänster i AEM finns i följande artikel [https://helpx.adobe.com/experience-manager/using/polling.html](https://helpx.adobe.com/experience-manager/using/polling.html).
 
-## DTM(Legacy) Issues {#dtm-legacy-issues}
+## DTM-problem (äldre) {#dtm-legacy-issues}
 
 ### DTM-skripttaggen återges inte i sidkällan {#the-dtm-script-tag-is-not-rendered-in-the-page-source}
 
-Skripttaggen [DTM](/help/sites-administering/dtm.md) inkluderas inte korrekt på sidan även om konfigurationen har refererats till på fliken [Cloud Services](/help/sites-developing/extending-cloud-config.md).
+The [DTM](/help/sites-administering/dtm.md) script-taggen inkluderas inte korrekt på sidan även om konfigurationen har refererats i sidegenskaperna [Cloud Services](/help/sites-developing/extending-cloud-config.md) -fliken.
 
 #### Lösning {#solution-2}
 
 Du kan åtgärda problemet genom att göra följande:
 
-* Se till att krypterade egenskaper kan dekrypteras (observera att krypteringen kan använda olika automatiskt genererade nycklar för varje AEM). Mer information finns också i [Krypteringsstöd för konfigurationsegenskaper](/help/sites-administering/encryption-support-for-configuration-properties.md).
-* Publicera konfigurationerna i `/etc/cloudservices/dynamictagmanagement` igen
+* Se till att krypterade egenskaper kan dekrypteras (observera att krypteringen kan använda olika automatiskt genererade nycklar för varje AEM). Mer information finns även i [Krypteringsstöd för konfigurationsegenskaper](/help/sites-administering/encryption-support-for-configuration-properties.md).
+* Publicera konfigurationerna som finns i `/etc/cloudservices/dynamictagmanagement`
 * Kontrollera åtkomstkontrollistor på `/etc/cloudservices`. Åtkomstkontrollistorna ska vara:
 
    * tillåta, jcr:read; webservice-support-service-libfinder
@@ -108,11 +107,11 @@ Du kan åtgärda problemet genom att göra följande:
    * tillåta, jcr:read; alla, rep:glob:&amp;ast;/public/&amp;ast;
    * tillåta, jcr:read; alla, rep:glob:&amp;ast;/public
 
-Mer information om hur du hanterar åtkomstkontrollistor finns på sidan [Användaradministration och -säkerhet](/help/sites-administering/security.md#permissions-in-aem).
+Mer information om hur du hanterar åtkomstkontrollistor finns i [Användaradministration och -säkerhet](/help/sites-administering/security.md#permissions-in-aem) sida.
 
 ## Målintegreringsproblem {#target-integration-issues}
 
-### Målinnehåll visas inte i förhandsgranskningsläget när anpassade sidkomponenter används {#targeted-content-not-visible-in-preview-mode-when-using-custom-page-components}
+### Målinriktat innehåll som inte visas i förhandsgranskningsläget när anpassade sidkomponenter används {#targeted-content-not-visible-in-preview-mode-when-using-custom-page-components}
 
 Problemet inträffar eftersom anpassade sidkomponenter inte innehåller rätt JSP- eller klientbibliotek som hanterar DTM-målintegreringarna.
 
@@ -120,35 +119,35 @@ Problemet inträffar eftersom anpassade sidkomponenter inte innehåller rätt JS
 
 Du kan testa följande lösningar:
 
-* Kontrollera att det anpassade `headlibs.jsp` (om det finns `/apps/<CUSTOM-COMPONENTS-PATH>/headlibs.jsp`) innehåller följande:
+* Se till att den anpassade `headlibs.jsp` (om `/apps/<CUSTOM-COMPONENTS-PATH>/headlibs.jsp`) innehåller följande:
 
 ```
 <%@include file="/libs/cq/cloudserviceconfigs/components/servicelibs/servicelibs.jsp" %>
 <sly data-sly-resource="${'contexthub' @ resourceType='granite/contexthub/components/contexthub'}"/>
 ```
 
-* Kontrollera att det anpassade `head.html` (om det finns `/apps/<CUSTOM-COMPONENTS-PATH>/head.html`) **inte** selektivt inkluderar specifika integrationsrubriker som i exemplet nedan:
+* Se till att den anpassade `head.html` (om `/apps/<CUSTOM-COMPONENTS-PATH>/head.html`) **inte** Ta med specifika integrationsrubriker som i exemplet nedan:
 
 ```
 <!-- DO NOT MANUALLY INCLUDE SPECIFIC CLOUD SERVICE HEADLIBS LIKE THIS -->
 <meta data-sly-include="/libs/cq/dtm/components/dynamictagmanagement/headlibs.jsp" data-sly-unwrap/>
 ```
 
-`servicelibs.jsp` lägger till de JavaScript-objekt för analys som krävs och läser in molntjänstbiblioteken som är kopplade till webbplatsen. För måltjänsten läses biblioteken in via `/libs/cq/analytics/components/testandtarget/headlibs.jsp`
+The `servicelibs.jsp` lägger till de JavaScript-objekt för analys som krävs och läser in de molntjänstbibliotek som är kopplade till webbplatsen. För måltjänsten läses biblioteken in via `/libs/cq/analytics/components/testandtarget/headlibs.jsp`
 
-Vilken biblioteksuppsättning som läses in beror på vilken typ av målklientbibliotek ( `mbox.js` eller `at.js`) som används i målkonfigurationen.
+Den uppsättning bibliotek som läses in beror på typen av målklientbibliotek ( `mbox.js` eller `at.js`) som används i målkonfigurationen.
 
-När du använder DTM för att leverera `mbox.js` eller `at.js` måste du se till att biblioteken är inlästa innan innehållet återges. Om du använder tagghanteringssystem som läser in dessa bibliotek asynkront kan det uppstå problem när målspecifik JavaScript-kod körs.
+När DTM används för att leverera `mbox.js` eller `at.js` Kontrollera att biblioteken är inlästa innan innehållet återges. Om du använder Tag Management Systems som läser in dessa bibliotek asynkront kan det uppstå problem när målspecifik JavaScript-kod körs.
 
-Mer information finns på sidan [Utveckla för riktat innehåll](/help/sites-developing/target.md#understanding-the-target-component).
+Mer information finns i [Utveckla för riktat innehåll](/help/sites-developing/target.md#understanding-the-target-component) sida.
 
 ### Felmeddelandet&quot;Report Suite ID saknas i AppMeasurement-initieringen&quot; visas i webbläsarkonsolen {#the-error-missing-report-suite-id-in-appmeasurement-initialization-is-displayed-in-the-browser-console}
 
-Problemet kan uppstå när Adobe Analytics implementeras på webbplatsen med DTM och använder anpassad kod. Orsaken är att `s = new AppMeasurement()` används för att instansiera `s`-objektet.
+Problemet kan uppstå när Adobe Analytics implementeras på webbplatsen med DTM och använder anpassad kod. Orsaken är att `s = new AppMeasurement()` för att instansiera `s` -objekt.
 
 #### Lösning {#solution-4}
 
-Använd `s_gi` i stället för instansieringsmetoden `new AppMeasurement`. Till exempel:
+Använd `s_gi` i stället för `new AppMeasurement` instansieringsmetod. Till exempel:
 
 ```
 var s_account="INSERT-RSID-HERE"
@@ -159,24 +158,24 @@ var s=s_gi(s_account)
 
 Det här problemet kan ha flera orsaker:
 
-* Inläsning av målklientbibliotek ( `mbox.js` eller `at.js`) asynkront med hjälp av tagghanteringssystem från tredje part kan göra att målanpassning bryts slumpmässigt. Målbiblioteken ska läsas in synkront i sidhuvudet. Detta gäller alltid när biblioteken levereras från AEM.
+* Läser in målklientbibliotek ( `mbox.js` eller `at.js`) asynkront när du använder Tag Management Systems från tredje part kan det leda till att målgruppsanpassningen avbryts. Målbiblioteken ska läsas in synkront i sidhuvudet. Detta gäller alltid när biblioteken levereras från AEM.
 
-* Läsa in två målklientbibliotek ( `at.js`) samtidigt, till exempel ett med DTM och ett med Target-konfigurationen i AEM. Detta kan orsaka konflikter för `adobe.target`-definitionen om versionerna `at.js` skiljer sig åt.
+* Läser in två målklientbibliotek ( `at.js`) samtidigt, till exempel en som använder DTM och en som använder Target-konfigurationen i AEM. Detta kan orsaka konflikter för `adobe.target` definition om `at.js` olika versioner.
 
 #### Lösning {#solution-5}
 
 Du kan testa följande lösningar:
 
-* Kontrollera att kundkoden som läser in DTM-liknande bibliotek (som i sin tur läser in Target-biblioteken) körs synkront i [sidhuvudet](/help/sites-developing/target.md#enabling-targeting-with-adobe-target-on-your-pages).
-* om webbplatsen är konfigurerad att använda DTM för att leverera målbibliotek kontrollerar du att alternativet **Clientlib som levereras av DTM** är markerat i [målkonfigurationen](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/target-configuring.html) för platsen.
+* Kontrollera att kundkoden som läser in DTM-liknande bibliotek (som i sin tur läser in Target-biblioteken) körs synkront i [sidhuvud](/help/sites-developing/target.md#enabling-targeting-with-adobe-target-on-your-pages).
+* om webbplatsen är konfigurerad att använda DTM för att leverera Target-bibliotek ser du till att **Clientlib levererad av DTM** alternativet är markerat i [Målkonfiguration](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/target-configuring.html) för webbplatsen.
 
-### Ett standarderbjudande visas alltid i stället för rätt erbjudande när AT.js 1.3+ {#a-default-offer-is-always-displayed-instead-of-correct-offer-when-using-at-js} används
+### Ett standarderbjudande visas alltid i stället för rätt erbjudande när AT.js 1.3+ används {#a-default-offer-is-always-displayed-instead-of-correct-offer-when-using-at-js}
 
-Ut ur kartongen AEM 6.2 och 6.3 är inte kompatibla med AT.js version 1.3.0+. Med AT.js version 1.3.0 som inför parametervalidering för sina API:er kräver `adobe.target.applyOffer()` en mbox-parameter som inte anges av `atjs-itegration.js`-koden.
+Ut ur kartongen AEM 6.2 och 6.3 är inte kompatibla med AT.js version 1.3.0+. Med AT.js version 1.3.0 och parametervalidering för dess API:er, `adobe.target.applyOffer()` kräver en mbox-parameter som inte tillhandahålls av `atjs-itegration.js` kod.
 
 #### Lösning {#solution-6}
 
-Så här löser du problemet: redigera `atjs-itegration.js` och lägg till fältet `"mbox": mboxName` i parameterobjektet för `adobe.target.applyOffer()`:
+Så här löser du den här problemredigeringen `atjs-itegration.js` och lägg till `"mbox": mboxName` fält i parameterobjektet för `adobe.target.applyOffer()` enligt följande:
 
 ```
 adobe.target.getOffer({
@@ -193,7 +192,7 @@ adobe.target.getOffer({
 
 ### Sidan Mål och inställningar visar inte avsnittet Rapporteringskällor {#the-goals-settings-page-does-not-show-the-reporting-sources-section}
 
-Det här problemet är troligen ett [A4T Analytics Cloud Configuration](/help/sites-administering/target-configuring.md) provisioneringsproblem.
+Det här problemet är troligen [A4T Analytics Cloud-konfiguration](/help/sites-administering/target-configuring.md) provisioneringsproblem.
 
 #### Lösning {#solution-7}
 
@@ -213,7 +212,7 @@ http://localhost:4502/etc/cloudservices/testandtarget/<YOUR-CONFIG>/jcr:content.
 }
 ```
 
-Om svaret innehåller raden `a4tEnabled:false` ska du kontakta [Adobe kundtjänst](https://helpx.adobe.com/contact.html) för att få ditt konto etablerat korrekt.
+Om svaret innehåller raden `a4tEnabled:false`, contanct [Adobe kundtjänst](https://helpx.adobe.com/contact.html) för att få ditt konto etablerat korrekt.
 
 ### Användbara mål-API:er {#helpful-target-apis}
 
@@ -268,4 +267,3 @@ Response for N=4, CLIENT-dayintegrationintern
     ]
 }
 ```
-

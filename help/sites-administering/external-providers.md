@@ -1,8 +1,8 @@
 ---
 title: Analyser med externa leverantörer
-seo-title: Analyser med externa leverantörer
+seo-title: Analytics with External Providers
 description: Lär dig mer om Analytics med externa leverantörer.
-seo-description: Lär dig mer om Analytics med externa leverantörer.
+seo-description: Learn about Analytics with External Providers.
 uuid: 31a773ca-901e-45f2-be8f-951c26f9dbc5
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,14 +10,13 @@ topic-tags: integration
 content-type: reference
 discoiquuid: bab465bc-1ff4-4f21-9885-e4a875c73a8d
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 90c99e527a40bb663d4f32d8746b46cf34a2319f
+exl-id: 9bf818f9-6e33-4557-b2e4-b0d4900f2a05
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '432'
 ht-degree: 0%
 
 ---
-
 
 # Analyser med externa leverantörer {#analytics-with-external-providers}
 
@@ -28,13 +27,13 @@ Det finns olika färdiga konfigurationer för integrering med rätt tjänst, til
 * [Adobe Analytics](/help/sites-administering/adobeanalytics.md)
 * [Adobe Target](/help/sites-administering/target.md)
 
-Du kan också konfigurera din egen instans av **generiska analysfragment** för att definiera en ny tjänstkonfiguration.
+Du kan också konfigurera en egen instans av **Generiska analysfragment** för att definiera en ny tjänstkonfiguration.
 
 Informationen samlas sedan in med små kodfragment som läggs till på webbsidorna. Till exempel:
 
 >[!CAUTION]
 >
->Skript får inte omslutas av `script`-taggar.
+>Skript får inte omslutas av `script` -taggar.
 
 ```
 var _gaq = _gaq || [];
@@ -57,9 +56,9 @@ Sådana fragment gör det möjligt att samla in data och generera rapporter. De 
 
 >[!CAUTION]
 >
->Demonsplatsen Geometrixx-Outdoor är konfigurerad så att attributen i Sidegenskaper läggs till i HTML-källkoden (precis ovanför `</html>`-sluttaggen) i motsvarande `js`-skript.
+>Demonsplatsen Geometrixx-Outdoor är konfigurerad så att attributen i Sidegenskaperna läggs till i HTML-källkoden (alldeles ovanför `</html>` sluttagg) i motsvarande `js` skript.
 >
->Om din egen `/apps` inte ärver från standardsidkomponenten ( `/libs/foundation/components/page`) måste du (eller dina utvecklare) se till att motsvarande `js`-skript inkluderas, till exempel genom att ta med `cq/cloudserviceconfigs/components/servicescomponents` eller använda en liknande mekanism.
+>Om din egen `/apps` ärver inte från standardsidkomponenten ( `/libs/foundation/components/page`) måste du (eller dina utvecklare) se till att motsvarande `js` skript inkluderas, t.ex. genom att `cq/cloudserviceconfigs/components/servicescomponents`eller med en liknande mekanism.
 >
 >Utan detta kommer ingen av tjänsterna (Generic, Analytics, Target, etc.) att fungera.
 
@@ -67,9 +66,9 @@ Sådana fragment gör det möjligt att samla in data och generera rapporter. De 
 
 För den grundläggande konfigurationen:
 
-1. Öppna konsolen **Verktyg**.
-1. Expandera **Konfigurationer av Cloud Services** från den vänstra rutan.
-1. Dubbelklicka på **Generic Analytics-kodfragment** för att öppna sidan:
+1. Öppna **verktyg** konsol.
+1. Expandera från den vänstra rutan **Konfigurationer av Cloud Services**.
+1. Dubbelklicka på **Kodavsnitt för allmän analys** för att öppna sidan:
 
    ![](assets/analytics_genericoverview.png)
 
@@ -77,28 +76,28 @@ För den grundläggande konfigurationen:
 
    ![](assets/analytics_addconfig.png)
 
-1. Klicka på **Skapa** så öppnas dialogrutan för kodfragment omedelbart - klistra in lämpligt javascript-fragment i fältet:
+1. Klicka **Skapa**&#x200B;öppnas fragmentdialogrutan omedelbart - klistra in rätt javascript-fragment i fältet:
 
    ![](assets/analytics_snippet.png)
 
-1. Klicka på **OK** för att spara.
+1. Klicka **OK** att spara.
 
 ## Använda din nya tjänst på sidor {#using-your-new-service-on-pages}
 
 När du har skapat tjänstkonfigurationen behöver du nu konfigurera de sidor som krävs för att använda den:
 
 1. Navigera till sidan.
-1. Öppna **Sidegenskaperna** från sidesparken och sedan fliken **Cloud Services**.
-1. Klicka på **Lägg till tjänst** och välj sedan önskad tjänst; till exempel **Generic Analytics-kodfragment**:
+1. Öppna **Sidegenskaper** från sidesparken, sedan **Cloud Services** -fliken.
+1. Klicka **Lägg till tjänst** väljer du sedan önskad tjänst, till exempel **Kodavsnitt för allmän analys**:
 
    ![](assets/analytics_selectservice.png)
 
-1. Klicka på **OK** för att spara.
-1. Du återgår till fliken **Cloud Services**. **Kodavsnittet för allmän analys** visas nu med meddelandet `Configuration reference missing`. Använd listrutan för att välja en specifik tjänstinstans; till exempel google-analys:
+1. Klicka **OK** att spara.
+1. Du kommer tillbaka till **Cloud Services** -fliken. The **Kodavsnitt för allmän analys** visas nu med meddelandet `Configuration reference missing`. Använd listrutan för att välja en specifik tjänstinstans; till exempel google-analys:
 
    ![](assets/analytics_selectspecificservice.png)
 
-1. Klicka på **OK** för att spara.
+1. Klicka **OK** att spara.
 
    Utdraget visas nu om du visar sidans sidkälla.
 

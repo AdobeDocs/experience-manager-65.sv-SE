@@ -1,28 +1,27 @@
 ---
 title: Logga in i AEM Forms arbetsflöden
-seo-title: Logga in i AEM Forms arbetsflöden
+seo-title: Logging in AEM Forms workflows
 description: Använd loggar för att felsöka problem i AEM Forms arbetsflöde.
-seo-description: Använd loggar för att felsöka problem i AEM Forms arbetsflöde.
+seo-description: Use logs to debug AEM Forms workflow issues.
 uuid: 869d0271-c7e3-4b6d-8e63-893dc6af8b8a
 contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 discoiquuid: 14bb521a-42ea-4fe2-90fb-202e7ddf917a
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+exl-id: 601c8d95-0d1a-4945-a522-e85d3e9fc4ae
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '282'
+source-wordcount: '269'
 ht-degree: 6%
 
 ---
 
-
-# Logga in i AEM Forms-arbetsflöden{#logging-in-aem-forms-workflows}
+# Logga in i AEM Forms arbetsflöden{#logging-in-aem-forms-workflows}
 
 I Forms arbetsflödessteg finns detaljerade loggar som du kan använda för att felsöka arbetsflödesrelaterade problem. Aktivera felsökningsloggning för AEM Forms-arbetsflöden för att visa loggarna.
 
-Som standard är all loggningsinformation tillgänglig i filen **error.log** i katalogen */crx-database/logs/*.
+Som standard är all loggningsinformation tillgänglig i **error.log** filen på */crx-database/logs/* katalog.
 
 Felsökningsloggarna för formulärarbetsflöden innehåller:
 
@@ -89,10 +88,9 @@ Gör så här för att aktivera felsökningsloggning för AEM Forms-arbetsflöde
 1. Tryck på **[!UICONTROL Add new Logger.]**
 1. Välj **[!UICONTROL Debug]** som **[!UICONTROL Log Level]**.
 1. Ange platsen för loggfilen. Standardplatsen för loggfilen är: *loggar\error.log*
-1. Ange paketets namn som **com.adobe.granite.workflow.core** i kolumnen **[!UICONTROL Logger]**.
+1. Ange paketets namn som **com.adobe.granite.workflow.core** i **[!UICONTROL Logger]** kolumn.
 
-   Om du utför dessa steg kan du lagra felsökningsloggarna för **com.adobe.granite.workflow.core**-paketet. Tryck på **[!UICONTROL +]** och lägg till följande paketnamn i listan:
+   Om du utför dessa steg kan du lagra felsökningsloggarna för **com.adobe.granite.workflow.core** paket. Tryck **[!UICONTROL +]** och lägg till följande paketnamn i listan:
 
    * com.adobe.fd.workflow
    * com.adobe.fd.workspace
-

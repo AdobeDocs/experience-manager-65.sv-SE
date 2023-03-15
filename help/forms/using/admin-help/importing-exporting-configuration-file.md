@@ -1,22 +1,21 @@
 ---
 title: Importera och exportera konfigurationsfilen
-seo-title: Importera och exportera konfigurationsfilen
+seo-title: Importing and exporting the configuration file
 description: Lär dig hur du importerar och exporterar konfigurationsfilen för att redigera serverinställningar eller konfigurera en annan AEM för formulär.
-seo-description: Lär dig hur du importerar och exporterar konfigurationsfilen för att redigera serverinställningar eller konfigurera en annan AEM för formulär.
+seo-description: Learn how to import and export the configuration file in order to edit server preferences or configure another AEM forms product instance.
 uuid: 32e8a709-2d7c-4740-9533-d53aa751bc58
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_user_management
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: c1636537-f7dc-48d8-a3f0-9052bcd28b62
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 225dbeb5-a21c-4338-98c7-e10c32973721
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '282'
+source-wordcount: '254'
 ht-degree: 0%
 
 ---
-
 
 # Importera och exportera konfigurationsfilen {#importing-and-exporting-the-configuration-file}
 
@@ -37,4 +36,3 @@ För att undvika säkerhetsrisker inkluderas inte det binda lösenordsvärdet f�
 
 1. I administrationskonsolen klickar du på Inställningar > Användarhantering > Konfiguration > Importera och exportera konfigurationsfiler.
 1. Klicka på Bläddra för att hitta konfigurationsfilen, klicka på Importera och sedan på OK.
-

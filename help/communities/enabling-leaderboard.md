@@ -1,8 +1,8 @@
 ---
 title: Funktion för resultatavla
-seo-title: Funktion för resultatavla
+seo-title: Leaderboard Feature
 description: Lägga till en Leaderboard-komponent på en sida
-seo-description: Lägga till en Leaderboard-komponent på en sida
+seo-description: Adding a Leaderboard component to a page
 uuid: c4633919-75d3-4bc7-830c-ef9c28cc1cba
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -10,45 +10,44 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 9045ce2e-a06d-4da5-9b83-56dd823007bb
 docset: aem65
-translation-type: tm+mt
-source-git-commit: a8b1ad0fcd2ca9c7fe3117dd8bd161da82d13e8a
+exl-id: 8b4d56d9-ba73-4eda-9773-3daaa9237abe
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '408'
+source-wordcount: '399'
 ht-degree: 0%
 
 ---
 
-
-# Ledarbordsfunktion {#leaderboard-feature}
+# Funktion för resultatavla {#leaderboard-feature}
 
 ## Introduktion {#introduction}
 
-Komponenten `Leaderboard` ger möjlighet att förstå hur medlemmar interagerar inom communityn genom att rangordna medlemmar enligt poäng (grundläggande poängsättning) eller deras sakkunskap (avancerad poängsättning).
+The `Leaderboard` -komponenten ger möjlighet att få en uppfattning om hur medlemmarna interagerar inom communityn genom att rangordna medlemmar enligt poäng (grundläggande poängsättning) eller deras sakkunskap (avancerad poängsättning).
 
-Innan du inkluderar huvudpanelskomponenten på en sida måste du konfigurera [Webbgruppsbedömning och emblem](/help/communities/implementing-scoring.md).
+Innan du tar med huvudpanelskomponenten på en sida måste du konfigurera [Communities Scoring and Badges](/help/communities/implementing-scoring.md).
 
 I det här avsnittet av dokumentationen beskrivs:
 
-* Lägger till komponenten `Leaderboard` i en [community-webbplats](/help/communities/overview.md#community-sites).
-* Konfigurationsinställningar för komponenten `Leaderboard`.
+* Lägga till `Leaderboard` till en [communitywebbplats](/help/communities/overview.md#community-sites).
+* Konfigurationsinställningar för `Leaderboard` -komponenten.
 
 ### Lägga till en huvudpanel på en sida {#adding-a-leaderboard-to-a-page}
 
-Om du vill lägga till en `Leaderboard`-komponent på en sida i redigeringsläge letar du reda på komponenten
+Lägga till en `Leaderboard` till en sida i redigeringsläge, leta reda på komponenten
 
 * `Communities / Leaderboard`
 
 och dra den till rätt plats på en sida.
 
-Mer information finns på [Grunderna för communitykomponenter](/help/communities/basics.md).
+Nödvändig information finns på [Grunderna för communitykomponenter](/help/communities/basics.md).
 
 När komponenten placeras på en sida i en community-webbplats är det så här den visas:
 
 ![rankningslista](assets/leaderboard.png)
 
-### Konfigurerar huvudpanelen {#configuring-leaderboard}
+### Konfigurerar huvudpanel {#configuring-leaderboard}
 
-Markera den monterade `Leaderboard`-komponenten som ska öppnas och välj ikonen `Configure` som öppnar redigeringsdialogrutan.
+Markera den monterade `Leaderboard` -komponenten som ska få åtkomst till och markera `Configure` som öppnar redigeringsdialogrutan.
 
 ![configure-new](assets/configure-new.png)
 
@@ -56,12 +55,12 @@ Markera den monterade `Leaderboard`-komponenten som ska öppnas och välj ikonen
 
 #### Fliken Inställningar {#settings-tab}
 
-Under fliken **[!UICONTROL Settings]** anger du vilken information om medlemmen som visas:
+Under **[!UICONTROL Settings]** anger du vilken information om medlemmen som visas:
 
 * **Visningsnamn**
 
    Ett beskrivande namn som ska visas för styrelsen, som återspeglar reglerna som valts för att visa märken och poäng.
-Standardvärdet är `Leaderboard`, om inget anges.
+Standard är `Leaderboard`, om inget anges.
 
 * **Badge**
 
@@ -80,7 +79,7 @@ Standard är avmarkerat.
 
 #### Fliken Regler {#rules-tab}
 
-Under fliken **Regler**, communitywebbplatsen och dess regler för bedömning och märkning
+Under **Regler** -fliken, communitywebbplatsen och dess regler för poäng och badning
 
 * **Regelplats**
 
@@ -98,7 +97,7 @@ Under fliken **Regler**, communitywebbplatsen och dess regler för bedömning oc
 
    Antal medlemmar som ska visas per sida. Standard är 10.
 
-### Exempel: Deltagarnas huvudpanel {#example-participants-leaderboard}
+### Exempel: Deltagare i ledningsgruppen {#example-participants-leaderboard}
 
 Den här resultatöversikten är en följd av att grundläggande poängregler har tillämpats.
 
@@ -122,7 +121,7 @@ Konfiguration av huvudpanelskomponent:
 
 ![deltagare-rankningslista](assets/participants-leaderboard.png)
 
-### Exempel: Expertledare {#example-experts-leaderboard}
+### Exempel: Experter Leaderboard {#example-experts-leaderboard}
 
 Den här resultatöversikten är en följd av att avancerade poängregler har tillämpats.
 
@@ -147,6 +146,6 @@ Konfiguration av huvudpanelskomponent:
 
 ### Ytterligare information {#additional-information}
 
-Mer information finns på sidan [Leaderboard Essentials](/help/communities/leaderboard.md) för utvecklare.
+Mer information finns på [Grundläggande om Ledningsbord](/help/communities/leaderboard.md) för utvecklare.
 
-Instruktioner för hur du skapar regler finns på sidan [Webbgruppsbedömning och emblem](/help/communities/implementing-scoring.md) för administratörer.
+Instruktioner för hur du skapar regler finns i [Communities Scoring and Badges](/help/communities/implementing-scoring.md) för administratörer.

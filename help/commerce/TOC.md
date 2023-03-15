@@ -1,19 +1,19 @@
 ---
 sub-product: AEM Content and Commerce
-user-guide-title: AEM innehåll och handel
-breadcrumb-title: Commerce Guide
-user-guide-description: Förstå hur ni använder och administrerar AEM innehåll och handel.
+user-guide-title: AEM Content and Commerce
+breadcrumb-title: Användarhandbok om Commerce
+user-guide-description: Förstå hur du använder och administrerar AEM Content and Commerce.
 source-git-commit: 0ae78938641c383a65462096235e3b62d6b67e23
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '123'
+ht-degree: 25%
 
 ---
 
 
 # Handel {#commerce}
 
-+ [AEM innehåll och handel](/help/commerce/home.md)
++ [AEM Content and Commerce](/help/commerce/home.md)
 + [Betydande förändringar AEM innehåll och handel](cif/changes.md)
 + [Introduktion och översikt](cif/introduction.md)
 + Integreringar {#integrations}

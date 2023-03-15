@@ -1,30 +1,29 @@
 ---
 title: Skapa kommentarsida
-seo-title: Skapa kommentarsida
+seo-title: Create Comments Page
 description: Visa kommentarsida
-seo-description: Visa kommentarsida
+seo-description: View Comments page
 uuid: 1f043133-51c6-41e8-bbdb-d9fd7780136b
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: b3cb8f12-197e-4f5e-bd7d-70b55e76b0ca
-translation-type: tm+mt
-source-git-commit: 9d6ec05fdc98e33a11303d189414c2c45c5e8b3c
+exl-id: 35b8efac-5716-4ab3-9b8a-ea957023b51f
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '63'
+source-wordcount: '57'
 ht-degree: 0%
 
 ---
 
-
 # Skapa kommentarsida {#create-comments-page}
 
-**[⇐ Overlay Comments ](overlay-comments.md) [ComponentCreate Nodes](overlay-create-nodes.md)**
+**[Komponenten ⇐ överläggskommentarer](overlay-comments.md) [Skapa noder](overlay-create-nodes.md)**
 
 ## Kommentarsida {#comments-page}
 
-I [Community Components Guide](components-guide.md) kan du enkelt skriva över kommentarskomponenten.
+The [Community Components Guide](components-guide.md) ger möjlighet att enkelt få en överlagring av kommentarkomponenten.
 
 Visa sidan på författarinstansen:
 
@@ -32,4 +31,4 @@ Visa sidan på författarinstansen:
 
 ![kommentarer](assets/comments.png)
 
-**[⇐ Overlay Comments ](overlay-comments.md) [ComponentCreate Nodes](overlay-create-nodes.md)**
+**[Komponenten ⇐ överläggskommentarer](overlay-comments.md) [Skapa noder](overlay-create-nodes.md)**

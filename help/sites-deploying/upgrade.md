@@ -25,7 +25,7 @@ I detta avsnitt beskriver vi uppgradering av en AEM till AEM 6.5:
 * [Utvärdera Upgrade Complexity med Pattern Detector](/help/sites-deploying/pattern-detector.md)
 * [Bakåtkompatibilitet i AEM 6.5](/help/sites-deploying/backward-compatibility.md)
 
-<!--* [Using Offline Reindexing To Reduce Downtime During an Upgrade](/help/sites-deploying/upgrade-offline-reindexing.md)-->
+   <!--* [Using Offline Reindexing To Reduce Downtime During an Upgrade](/help/sites-deploying/upgrade-offline-reindexing.md)-->
 * [Uppgraderingsprocedur](/help/sites-deploying/upgrade-procedure.md)
 * [Uppgradera kod och anpassningar](/help/sites-deploying/upgrading-code-and-customizations.md)
 * [Underhållsaktiviteter före uppgraderingen](/help/sites-deploying/pre-upgrade-maintenance-tasks.md)

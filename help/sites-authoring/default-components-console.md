@@ -1,8 +1,8 @@
 ---
 title: Komponentkonsol
-seo-title: Komponentkonsol
+seo-title: Components Console
 description: Komponentkonsol
-seo-description: 'null'
+seo-description: null
 uuid: a4e34d81-7875-4e26-8b48-4473e2905c37
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,14 +10,13 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: b657f95d-7be3-4409-a31b-d47fb2bfa550
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: d79107b9-dfa4-4e80-870e-0b7ea72f0bc7
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '265'
-ht-degree: 24%
+source-wordcount: '262'
+ht-degree: 23%
 
 ---
-
 
 # Komponentkonsol{#components-console}
 
@@ -29,7 +28,7 @@ Den finns under **Verktyg ->** **Allmänt ->** **Komponenter**. I konsolen finns
 
 >[!NOTE]
 >
->Komponentkonsolen visar alla komponenter i systemet. [Komponentbläddraren](/help/sites-authoring/author-environment-tools.md#components-browser) visar komponenter som är tillgängliga för författare och döljer komponentgrupper som börjar med en punkt ( `.`).
+>Komponentkonsolen visar alla komponenter i systemet. The [Komponentbläddraren](/help/sites-authoring/author-environment-tools.md#components-browser) visar komponenter som är tillgängliga för författare och döljer komponentgrupper som börjar med en punkt ( `.`).
 
 ## Sökning {#searching}
 
@@ -48,15 +47,15 @@ Om du vill visa information om en viss komponent trycker/klickar du på den nöd
    På fliken Egenskaper kan du:
 
    * Visa komponentens allmänna egenskaper.
-   * Visa hur ikonen eller förkortningen [har definierats](/help/sites-developing/components-basics.md#component-icon-in-touch-ui) för komponenten.
+   * Visa hur [ikon eller förkortning har definierats](/help/sites-developing/components-basics.md#component-icon-in-touch-ui) för komponenten.
 
       * Om du klickar på ikonens källa kommer du till den komponenten.
-   * Visa **Resurstyp** och **Resurssupertyp** (om den är definierad) för komponenten.
+   * Visa **Resurstyp** och **Resurssupertyp** (om det är definierat) för komponenten.
 
       * Om du klickar på Resurssupertypen kommer du till den komponenten.
    >[!NOTE]
    >
-   >Eftersom `/apps` inte kan redigeras under körning är komponentkonsolen skrivskyddad.
+   >För `/apps` går inte att redigera vid körning, komponentkonsolen är skrivskyddad.
 
 * **Profiler**
 
@@ -72,7 +71,6 @@ Om du vill visa information om en viss komponent trycker/klickar du på den nöd
 
 * **Dokumentation**
 
-   Om utvecklaren har tillhandahållit [dokumentation för komponenten](/help/sites-developing/developing-components.md#documenting-your-component) visas den på fliken **Dokumentation**. Om det inte finns någon tillgänglig dokumentation visas inte fliken **Dokumentation**.
+   Om utvecklaren har tillhandahållit [dokumentation för komponenten](/help/sites-developing/developing-components.md#documenting-your-component)visas den på **Dokumentation** -fliken. Om det inte finns någon tillgänglig dokumentation kan du **Dokumentation** kommer inte att visas.
 
    ![chlimage_1-171](assets/chlimage_1-171.png)
-

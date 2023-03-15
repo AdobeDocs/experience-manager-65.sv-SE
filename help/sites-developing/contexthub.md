@@ -2,21 +2,20 @@
 title: ContextHub
 seo-title: ContextHub
 description: ContextHub är ett ramverk för att lagra, ändra och presentera kontextdata
-seo-description: ContextHub är ett ramverk för att lagra, ändra och presentera kontextdata
+seo-description: ContextHub is a framework for storing, manipulating, and presenting context data
 uuid: 14e6ff4f-ffbe-454a-b2ec-a35333526e27
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 discoiquuid: acf5c17a-95b7-43ba-9734-241e20f4f374
-translation-type: tm+mt
-source-git-commit: a8ba56849f6bb9f0cf6571fc51f4b5cae71620e0
+exl-id: 3fd50655-7461-4900-a3b8-c01b04c7ba7a
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '298'
-ht-degree: 1%
+source-wordcount: '286'
+ht-degree: 0%
 
 ---
-
 
 # ContextHub{#contexthub}
 
@@ -24,11 +23,11 @@ ContextHub är ett ramverk för att lagra, ändra och presentera kontextdata. Ja
 
 >[!NOTE]
 >
->Referensimplementeringen [We.Retail](/help/sites-developing/we-retail.md) implementerar ContextHub och kan fungera som referens när du integrerar ContextHub i ditt eget projekt.
+>The [Referensimplementering för Vi.butik](/help/sites-developing/we-retail.md) implementerar ContextHub och kan fungera som referens när du integrerar ContextHub i ditt eget projekt.
 
 >[!CAUTION]
 >
->Sökvägen som innehåller den exempel på ContextHub-konfiguration som används av [We.Retail-referensimplementeringen](/help/sites-developing/we-retail.md) ( `/libs/settings/cloudsettings/legacy`) ska bara användas som referens när du skapar en egen konfiguration.
+>Sökvägen som innehåller exempelkonfigurationen för ContextHub som används av [Referensimplementering för Vi.butik](/help/sites-developing/we-retail.md) ( `/libs/settings/cloudsettings/legacy`) ska bara användas som referens när du skapar en egen konfiguration.
 >
 >Den ska inte användas i ett projekt som din egen ContextHub-konfiguration.
 
@@ -38,24 +37,24 @@ ContextHub lagrar kontextdata på klienten. Med ContextHub Javascript API kan du
 
 Varje ContextHub-butik är en instans av en fördefinierad lagringstyp:
 
-* ContextHub innehåller flera [typer av exempelarkiv](/help/sites-developing/ch-samplestores.md).
+* ContextHub innehåller flera [exempelarkivtyper](/help/sites-developing/ch-samplestores.md).
 * Använd AEM konsoler för att [skapa butiker](ch-configuring.md#creating-a-contexthub-store).
 * Utvecklare kan [skapa anpassade butikstyper](/help/sites-developing/ch-extend.md#creating-custom-store-candidates).
-* Utvecklare kan [komma åt butiksdata](/help/sites-developing/ch-adding.md#interacting-with-contexthub-stores) via Javascript.
+* Utvecklare kan [åtkomstarkivdata](/help/sites-developing/ch-adding.md#interacting-with-contexthub-stores) via Javascript.
 
 ## Segmentering {#segmentation}
 
-ContextHub innehåller en segmenteringsmotor som hanterar segment och fastställer vilka segment som matchas för den aktuella kontexten. Flera segment är definierade. Du kan använda Javascript-API:t för att [identifiera lösta segment](/help/sites-developing/ch-adding.md#determining-resolved-contexthub-segments).
+ContextHub innehåller en segmenteringsmotor som hanterar segment och fastställer vilka segment som matchas för den aktuella kontexten. Flera segment är definierade. Du kan använda Javascript-API:t för att [identifiera matchade segment](/help/sites-developing/ch-adding.md#determining-resolved-contexthub-segments).
 
 ## Presentation {#presentation}
 
-Med verktygsfältet [ContextHub](/help/sites-authoring/ch-previewing.md) kan marknadsförare och författare visa och ändra lagringsdata för att simulera användarupplevelsen när de skapar sidor. Verktygsfältet består av grupper med gränssnittsmoduler som ger åtkomst till ContextHub-butiker.
+The [ContextHub-verktygsfältet](/help/sites-authoring/ch-previewing.md) gör det möjligt för marknadsförare och författare att se och ändra butiksdata för att simulera användarupplevelsen när de skapar sidor. Verktygsfältet består av grupper med gränssnittsmoduler som ger åtkomst till ContextHub-butiker.
 
 Varje ContextHub-gränssnittsmodul är en instans av en fördefinierad modultyp:
 
 * ContextHub innehåller flera [exempelmodultyper](/help/sites-developing/ch-samplemodules.md).
-* Använd AEM konsoler för att [lägga till gränssnittsmoduler](ch-configuring.md#adding-a-ui-module) och för att [gruppera dem i gränssnittslägen](ch-configuring.md#adding-a-ui-mode).
+* Använd AEM konsoler för att [lägg till gränssnittsmoduler](ch-configuring.md#adding-a-ui-module)och till [gruppera dem i gränssnittslägen](ch-configuring.md#adding-a-ui-mode).
 
 * Utvecklare kan [skapa anpassade modultyper](/help/sites-developing/ch-extend.md#creating-contexthub-ui-module-types).
 
-Utvecklare måste [lägga till ContextHub-komponenten på sidan](/help/sites-developing/ch-adding.md).
+Utvecklare måste [lägg till ContextHub-komponenten på sidan](/help/sites-developing/ch-adding.md).

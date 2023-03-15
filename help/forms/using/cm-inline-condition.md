@@ -1,8 +1,8 @@
 ---
 title: Infogade villkor och upprepningar i interaktiv kommunikation och brev
-seo-title: Infogade villkor och upprepningar i interaktiv kommunikation och brev
+seo-title: Inline condition and repeat in Interactive Communications and letters
 description: Med hjälp av textbundna villkor och upprepningar i Interactive Communications och letter kan du skapa dokument som är mycket kontextuella och välstrukturerade.
-seo-description: Med hjälp av textbundna villkor och upprepningar i Interactive Communications och letter kan du skapa dokument som är mycket kontextuella och välstrukturerade.
+seo-description: Using inline condition and repeat in Interactive Communications and letters, you can create communications that are highly contextual and well structured.
 uuid: 32b48a8b-431d-4f9c-9f51-8e7e9ac624a0
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4
@@ -10,16 +10,15 @@ topic-tags: interactive-communications, correspondence-management
 discoiquuid: bbaba39b-e15a-4143-b6fc-7789fa2917b4
 docset: aem65
 feature: Correspondence Management
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: bc5d6c5b-c833-4849-aace-e07f8a522b32
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1696'
+source-wordcount: '1664'
 ht-degree: 0%
 
 ---
 
-
-# Infogat villkor och upprepa i Interactive Communications och bokstäver{#inline-condition-and-repeat-in-interactive-communications-and-letters}
+# Infogade villkor och upprepningar i interaktiv kommunikation och brev{#inline-condition-and-repeat-in-interactive-communications-and-letters}
 
 ## Textbundna villkor {#inline-conditions}
 
@@ -41,7 +40,7 @@ Mer information finns i Skapa regel i text i [Texter i interaktiv kommunikation]
 
 När du har inkluderat textavsnittet i ett interaktivt kommunikations- och agentgränssnitt för att förbereda en interaktiv kommunikation, utvärderas (formulärdatamodell)-data för mottagarna och texten visas endast för mottagarna i USA.
 
-### Exempel: Använda ett internt villkor i en bokstav för att återge rätt adress {#example-using-inline-condition-in-a-letter-to-render-the-appropriate-address}
+### Exempel: Använda textbundna villkor i en bokstav för att återge rätt adress  {#example-using-inline-condition-in-a-letter-to-render-the-appropriate-address}
 
 Du kan infoga ett textbundet villkor i en bokstav genom att infoga det textbundna villkoret i rätt textmodul. I följande exempel används två villkor för att utvärdera och visa lämplig adress, Sir eller Ma&#39;am, i ett brev baserat på DD-elementets kön. Om du använder liknande steg kan du skapa andra villkor.
 
@@ -49,7 +48,7 @@ Du kan infoga ett textbundet villkor i en bokstav genom att infoga det textbundn
 >
 >Om dina befintliga resurser innehåller gamla villkor/repeteringsuttryck (före 6.2 SP1 CFP 4) visar resurserna gammal syntax för villkor och repetering. Det gamla villkoret/upprepningen fungerar dock. De nya och gamla villkors-/upprepningsuttrycken är kompatibla med varandra för att skapa en kapslad blandning av gamla och nya villkor-/upprepningsuttryck.
 
-1. Markera i den relevanta textmodulen den del av texten som du vill göra villkorlig och tryck på **Villkor**.
+1. Markera i den relevanta textmodulen den del av texten som du vill göra villkorsstyrd och tryck **Villkor**.
 
    ![1_selectext](assets/1_selecttext.png)
 
@@ -59,7 +58,7 @@ Du kan infoga ett textbundet villkor i en bokstav genom att infoga det textbundn
 
    >[!NOTE]
    >
-   >Ett tomt eller ogiltigt villkorsuttryck kan inte sparas. Det måste finnas ett giltigt villkorsuttryck i `${}` för att uttrycket ska kunna sparas.
+   >Ett tomt eller ogiltigt villkorsuttryck kan inte sparas. Det måste finnas ett giltigt villkorsuttryck inuti `${}` för att spara uttrycket.
 
 1. Gör följande för att skapa ett villkor för att utvärdera om den markerade/villkorade texten visas i bokstaven och tryck sedan på bockmarkeringen för att spara uttrycket:
 
@@ -69,13 +68,13 @@ Du kan infoga ett textbundet villkor i en bokstav genom att infoga det textbundn
    ${DD_creditcard_Gender=="Male"}
    ```
 
-   Mer information om hur du skapar uttrycket finns i **Skapa uttryck och fjärrfunktioner med uttrycksverktyget** i [Expression Builder](../../forms/using/expression-builder.md). Värdet som anges i uttrycket måste ha stöd för elementet i dataordlistan. Mer information finns i [Dataordlista](../../forms/using/data-dictionary.md).
+   Mer information om hur du skapar uttrycket finns i **Skapa uttryck och fjärrfunktioner med uttrycksverktyget** in [Expression Builder](../../forms/using/expression-builder.md). Värdet som anges i uttrycket måste ha stöd för elementet i dataordlistan. Mer information finns i [Dataordlista](../../forms/using/data-dictionary.md).
 
    När villkoret har infogats kan du hålla muspekaren över handtaget till vänster om villkoret för att visa det. Du kan trycka på handtaget för att visa snabbmenyn för villkoret, som du kan använda för att redigera eller ta bort villkoret.
 
    ![3_hoverhandle](assets/3_hoverhandle.png) ![4_editConditionremoveconderpopup](assets/4_editconditionremoveconditionpopup.png)
 
-1. Infoga ett liknande villkor genom att markera texten `Ma'am`.
+1. Infoga liknande villkor genom att markera texten `Ma'am`.
 
    ```javascript
    ${DD_creditcard_Gender == "Female"}
@@ -100,7 +99,7 @@ Du kan dessutom ange regel/villkor i den upprepade konstruktionen för att villk
 
 I följande exempel visas hur du använder upprepning för att strukturera och återge kreditkortstransaktionerna i en interaktiv kommunikation.
 
-1. I ett formulärdatamodellbaserat textdokumentfragment infogar du relevanta formulärdatamodellsobjekt (och inbäddad text som krävs för etiketterna, som i det här exemplet):
+1. I ett formulärdatamodellbaserat textdokumentfragment infogar du relevanta datamodellsobjekt (och inbäddad text som krävs för etiketterna, som i det här exemplet):
 
    ![1_elementstext](assets/1_elementstext.png)
 
@@ -173,7 +172,7 @@ I följande exempel visas hur du använder upprepning för att strukturera och �
 
    ![2_repeat_selectText](assets/2_repeat_selecttext.png)
 
-1. Tryck på **Upprepa**. Dialogrutan Upprepa visas med ett tomt infogat villkor.
+1. Tryck **Upprepa**. Dialogrutan Upprepa visas med ett tomt infogat villkor.
 
    ![3_repeat_dialog](assets/3_repeat_dialog.png)
 
@@ -213,9 +212,9 @@ I följande exempel visas hur du använder upprepning för att strukturera och �
    >
    >Du kan bara infoga villkor och upprepa medan du skapar eller redigerar den relevanta textmodulen. Även om du kan redigera i textmodulen när du förhandsgranskar brevet kan du inte infoga villkor eller upprepa.
 
-## Använda internt villkor och upprepa - vissa användningsfall {#using-inline-condition-and-repeat-some-use-cases}
+## Använda internt villkor och upprepning - vissa användningsfall  {#using-inline-condition-and-repeat-some-use-cases}
 
-### Upprepa i villkoret {#repeat-within-condition}
+### Upprepa i villkor {#repeat-within-condition}
 
 Du kan behöva upprepa detta inom ett villkor. Med Korrespondence Management kan du använda upprepning i en intern villkorskonstruktion.
 
@@ -237,4 +236,4 @@ Du kan behöva infoga tomma textbundna villkor och bädda in text och DD-element
 
 ![emptycondition](assets/emptycondition.png)
 
-Vi rekommenderar dock att du, om det är möjligt, infogar text- och DD-elementen först i textmodulen med avsedd formatering, t.ex. punkter, och sedan tillämpar ett textbundet villkor.
+Vi rekommenderar dock att du, om det är möjligt, infogar text- och DD-elementen först i textmodulen med avsedd formatering, t.ex. punkter, och därefter infogar ett textbundet villkor.

@@ -1,22 +1,21 @@
 ---
 title: Lägga till anpassad åtgärd för formulärlisteobjekt
-seo-title: Lägga till anpassad åtgärd för formulärlisteobjekt
+seo-title: Adding custom action on form lister items
 description: Formulärutvecklare kan lägga till fler åtgärder i formulärportalsidan. Som standard kan du använda formulärlistan för att öppna formuläret, fylla i det och skicka det.
-seo-description: Formulärutvecklare kan lägga till fler åtgärder i formulärportalsidan. Som standard kan du använda formulärlistan för att öppna formuläret, fylla i det och skicka det.
+seo-description: Form developers can add more actions to the listing of forms on the forms portal page. By default, the form listing allows you to access the form, fill it, and submit it.
 uuid: 5703ba27-7fb8-482e-b933-a060574165dc
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
 discoiquuid: c34dd4c2-5fff-4355-b86d-cc8a956dd8af
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+exl-id: 7c2a91c8-9b68-4491-88e2-f7ea68f5a79f
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '304'
+source-wordcount: '265'
 ht-degree: 0%
 
 ---
-
 
 # Lägga till anpassad åtgärd för formulärlisteobjekt{#adding-custom-action-on-form-lister-items}
 
@@ -26,7 +25,7 @@ Du kan lägga till andra alternativ på portalsidan. Dessa alternativ eller åtg
 
 I den här artikeln beskrivs hur du skapar en knapp för att skicka länken till ett formulär direkt från en formulärportalsida. För den här anpassningen krävs att mallen för komponenten Sök efter och visa uppdateras.
 
-Nedan finns den kod som krävs för att lägga till åtgärden i mallen. Attributet `onclick` i kodfragmentet har ett skript som skickar en länk till ett formulär via e-post.
+Nedan finns den kod som krävs för att lägga till åtgärden i mallen. The `onclick` i kodfragmentet har ett skript som skickar en länk till ett formulär via e-post.
 
 ```html
 <div class="__FP_boxes-container __FP_single-color">
@@ -47,9 +46,8 @@ Nedan finns den kod som krävs för att lägga till åtgärden i mallen. Attribu
 </div>
 ```
 
-Du kan lägga till liknande åtgärder i den anpassade mallen. Om du vill definiera en JavaScript-funktion lägger du till funktionen på ett skript på sidnivå och länkar den med det HTML-element som krävs. I ovanstående exempel är uttrycket `onclick` den länkade funktionen.
+Du kan lägga till liknande åtgärder i den anpassade mallen. Om du vill definiera en JavaScript-funktion lägger du till funktionen på ett skript på sidnivå och länkar den med det nödvändiga elementet HTML. I exemplet ovan är `onclick` -uttrycket är den länkade funktionen.
 
 När du har redigerat mallen innehåller exempelportalsidan en knapp för att skicka länken till formuläret via e-post, vilket visas nedan.
 
 ![e-post](assets/email.png)
-

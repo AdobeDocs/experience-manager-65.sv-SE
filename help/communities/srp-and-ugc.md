@@ -1,28 +1,27 @@
 ---
 title: SRP och UGC Essentials
-seo-title: SRP och UGC Essentials
+seo-title: SRP and UGC Essentials
 description: Lagringsresursleverantör och användargenererat innehåll - översikt
-seo-description: Lagringsresursleverantör och användargenererat innehåll - översikt
+seo-description: Storage resource provider and user-generated content overview
 uuid: a4ee8725-f554-4fcf-ac1e-34878d6c02f8
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: 0763f236-5648-49e9-8a24-dbc8f4c77ee3
-translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+exl-id: 8279684f-23dd-4234-bf01-fd2ce74bcb4e
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '697'
+source-wordcount: '686'
 ht-degree: 0%
 
 ---
-
 
 # SRP och UGC Essentials {#srp-and-ugc-essentials}
 
 ## Introduktion {#introduction}
 
-Om du inte känner till lagringsresursens leverantör (SRP) och dess relation till användargenererat innehåll (UGC) går du till [Community Content Storage](working-with-srp.md) och [lagringsresursprovideröversikt](srp.md).
+Om du inte känner till lagringsresursens leverantör (SRP) och dess relation till användargenererat innehåll (UGC) går du till [Community-innehåll](working-with-srp.md) och [Översikt över lagringsresursprovider](srp.md).
 
 I det här avsnittet av dokumentationen finns viktig information om SRP och UGC.
 
@@ -34,7 +33,7 @@ Frågor är nödvändiga för SCF-komponenter eftersom det behövs sortering eft
 
 SRP-lagringsplatsen innehåller komponentsökvägen. SRP-API:t ska alltid användas för att komma åt UGC eftersom rotsökvägen beror på vilket SRP-alternativ som har valts, till exempel ASRP, MSRP eller JSRP.
 
-SRP API är inte en abstrakt klass, utan ett gränssnitt. En anpassad implementering bör inte utföras lätt, eftersom fördelarna med framtida förbättringar av interna implementeringar skulle missas vid uppgradering till en ny version.
+SRP API är inte en abstrakt klass, utan ett gränssnitt. En anpassad implementering bör inte utföras lätt, eftersom fördelarna med framtida förbättringar av interna implementeringar skulle gå förlorade när du uppgraderar till en ny version.
 
 Sättet att använda SRP API är via tillhandahållna verktyg, t.ex. de som finns i paketet SocialResourceUtilities.
 
@@ -44,7 +43,7 @@ När du uppgraderar från AEM 6.0 eller tidigare måste du migrera UGC för alla
 >
 >Tidigare hittades verktyg för att komma åt UGC i paketet SocialUtils, som inte längre finns.
 >
->Information om ersättningsverktyg finns i [Omfaktorisering av SocialUtils](socialutils.md).
+>Information om ersättningsverktyg finns i [Omfaktorisering för SocialUtils](socialutils.md).
 
 ## Verktygsmetod för åtkomst till UGC {#utility-method-to-access-ugc}
 
@@ -65,13 +64,13 @@ protected void doGet(final SlingHttpServletRequest request, final SlingHttpServl
 }
 ```
 
-Andra SocialUtils-ersättningar finns i [SocialUtils-omfaktorisering](socialutils.md).
+Andra SocialUtils-ersättningar finns i [Omfaktorisering för SocialUtils](socialutils.md).
 
-Riktlinjer för kodning finns på [Gå till UGC med SRP](accessing-ugc-with-srp.md).
+Riktlinjer för kodning finns på [Åtkomst till UGC med SRP](accessing-ugc-with-srp.md).
 
 >[!CAUTION]
 >
->Sökvägen resourceToUGCStoragePath() returnerar *som inte är* lämplig för [ACL-kontroll](srp.md#for-access-control-acls).
+>Sökvägen resourceToUGCStoragePath() returnerar *not* lämplig för [ACL-kontroll](srp.md#for-access-control-acls).
 
 ## Verktygsmetod för åtkomst till åtkomstkontrollistor {#utility-method-to-access-acls}
 
@@ -98,38 +97,38 @@ protected void doGet(final SlingHttpServletRequest request, final SlingHttpServl
 
 >[!CAUTION]
 >
->Sökvägen som returneras av resourceToACLPath() är *inte* lämplig för [åtkomst till själva UGC](#utility-method-to-access-acls).
+>Sökvägen som returneras av resourceToACLPath() är *not* lämplig för [använda användargenererat innehåll](#utility-method-to-access-acls) själv.
 
 ## UGC-relaterade lagringsplatser {#ugc-related-storage-locations}
 
-Följande beskrivningar av lagringsplats kan vara till hjälp när du utvecklar med JSRP eller kanske MSRP. Det finns för närvarande inget användargränssnitt som kan komma åt UGC som lagras i ASRP, vilket finns för JSRP ([CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md)) och MSRP (MongoDB-verktyg).
+Följande beskrivningar av lagringsplats kan vara till hjälp när du utvecklar med JSRP eller kanske MSRP. Det finns för närvarande inget användargränssnitt som kan komma åt UGC som lagras i ASRP, vilket är fallet för JSRP ([CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md)) och MSRP (MongoDB-verktyg).
 
 **Komponentplats**
 
 När en medlem går in i UGC i publiceringsmiljön interagerar de med en komponent som en del av en AEM.
 
-Ett exempel på en sådan komponent är [kommentarkomponenten](http://localhost:4502/content/community-components/en/comments.html) som finns i [Community Components Guide](components-guide.md)-webbplatsen. Sökvägen till kommentarnoden i den lokala databasen är:
+Ett exempel på en sådan komponent är [kommentarkomponent](http://localhost:4502/content/community-components/en/comments.html) som finns i [Community Components Guide](components-guide.md) webbplats. Sökvägen till kommentarnoden i den lokala databasen är:
 
 * Komponentsökväg = `/content/community-components/en/comments/jcr:content/content/includable/comments`
 
 **Skuggnodplats**
 
-När du skapar UGC skapas även en [skuggnod](srp.md#about-shadow-nodes-in-jcr) som de nödvändiga åtkomstkontrollistorna tillämpas på. Sökvägen till motsvarande skuggnod i den lokala databasen är resultatet av att skuggnodens rotsökväg har försatts i komponentsökvägen:
+När UGC skapas skapas också en [skuggnod](srp.md#about-shadow-nodes-in-jcr) som de nödvändiga åtkomstkontrollistorna tillämpas på. Sökvägen till motsvarande skuggnod i den lokala databasen är resultatet av att skuggnodens rotsökväg har försatts i komponentsökvägen:
 
 * Rotsökväg = `/content/usergenerated`
-* Kommentarens skuggnod = `/content/usergenerated/content/community-components/en/comments/jcr:content/content/includable/comments`
+* Kommentarskuggnod = `/content/usergenerated/content/community-components/en/comments/jcr:content/content/includable/comments`
 
 **UGC-plats**
 
-UGC skapas på båda dessa platser och ska bara nås med en [verktygsmetod](#utility-method-to-access-ugc) som anropar SRP API.
+Den användargenererade koden skapas inte på någon av dessa platser och ska bara nås med en [utility, metod](#utility-method-to-access-ugc) som anropar SRP API.
 
 * Rotsökväg = `/content/usergenerated/asi/srp-choice`
 * UGC-nod för JSRP = `/content/usergenerated/asi/jcr/content/community-components/en/comments/jcr:content/content/includable/comments/srzd-let_it_be_`
 
-*Observera* att för JSRP finns UGC-noden  ** bara på den AEM instansen (antingen författaren eller publiceringen) som den angavs för. Om det anges i en publiceringsinstans går det inte att moderera från modereringskonsolen på författaren.
+*Var medveten*, för JSRP, kommer UGC-noden att *endast* finnas på den AEM instansen (antingen författaren eller publiceringen) som den angavs för. Om det anges i en publiceringsinstans går det inte att moderera från modereringskonsolen på författaren.
 
 ## Relaterad information {#related-information}
 
-* [Översikt över](srp.md)  lagringsresursprovidern - Introduktion och översikt över databasanvändningen.
-* [Använder UGC med riktlinjerna för SRP](accessing-ugc-with-srp.md) -kodning.
-* [Omfaktorisering för SocialUtils](socialutils.md) - Mappar utgått verktygsmetod till aktuella SRP-verktygsmetoder.
+* [Översikt över lagringsresursprovider](srp.md) - Översikt över introduktion och databasanvändning.
+* [Åtkomst till UGC med SRP](accessing-ugc-with-srp.md) - Riktlinjer för kodning.
+* [Omfaktorisering för SocialUtils](socialutils.md) - Mappar borttagna verktygsmetoder till aktuella SRP-verktygsmetoder.

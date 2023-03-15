@@ -1,8 +1,8 @@
 ---
 title: Välja en beständig typ för en AEM Forms-installation
-seo-title: Välja en beständig typ för en AEM Forms-installation
+seo-title: Choosing a persistence type for an AEM Forms installation
 description: Välj en beständig typ klokt. Det hjälper er att bygga en effektiv och skalbar AEM Forms-miljö.
-seo-description: Välj en beständig typ klokt. Det hjälper er att bygga en effektiv och skalbar AEM Forms-miljö.
+seo-description: Choose a persistence type wisely. It helps you build an efficient and scale able AEM Forms environment.
 uuid: 1c692502-5039-4757-9358-1772772b3904
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -13,7 +13,7 @@ role: Admin
 exl-id: 621fe107-f4ac-42b1-8c7b-8abbcaac7380
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '398'
+source-wordcount: '372'
 ht-degree: 1%
 
 ---
@@ -59,12 +59,12 @@ I följande tabell visas alla beständighetstyper som stöds tillsammans med oli
  </tbody>
 </table>
 
-tarMK är utformat för prestanda, medan MongoMK och RDBMK är utformade för skalbarhet. Adobe rekommenderar starkt att TjäraMK används som standardbeständighetsteknik för alla AEM Forms-distributionsscenarier, både för författare- och publiceringsinstanser, utom i de fall som beskrivs i avsnittet [Välja Mongo eller en relationsdatabasmikrokärna över TarMK](#p-choosing-mongo-or-a-relational-database-microkernel-over-tarmk-p).
+tarMK är utformat för prestanda, medan MongoMK och RDBMK är utformade för skalbarhet. Adobe rekommenderar varmt att TARMK används som standardbeständighetsteknik för alla AEM Forms-distributionsscenarier, både för författare- och publiceringsinstanser, utom i de fall som beskrivs i avsnittet [Välja Mongo eller en relationsdatabasmikrokärna över tarMK](#p-choosing-mongo-or-a-relational-database-microkernel-over-tarmk-p).
 
-En lista över mikrokärnor som stöds finns i [AEM Forms on OSGi Technical Requirements](/help/sites-deploying/technical-requirements.md) eller [AEM Forms on JEE supported platform combinations](/help/forms/using/aem-forms-jee-supported-platforms.md)-artiklar.
+En lista över mikrokärnor som stöds finns på [AEM Forms on OSGi Technical Requirements](/help/sites-deploying/technical-requirements.md) eller [Plattformskombinationer som stöds av AEM Forms på JEE](/help/forms/using/aem-forms-jee-supported-platforms.md) artiklar.
 
 ## Välja Mongo eller en relationsdatabasmikrokärna över tarMK {#choosing-mongo-or-a-relational-database-microkernel-over-tarmk}
 
 En skalbar (klustrad) AEM Forms-miljö är en uppsättning med två eller flera horisontellt konfigurerade aktiva författarinstanser. Du kan välja att köra mer än en författarinstans om en enda server med stöd för alla samtidiga redigeringsaktiviteter inte längre är hållbar.
 
-Endast beständighetstypen MongoMK och RDBMK stöds för en skalbar (klustrad) AEM Forms i JEE-miljö. Antalet servrar eller storleken på den skalbara miljön varierar för varje installation. En lista med överväganden och exempel finns i [Recommended Deployments](/help/sites-deploying/recommended-deploys.md) och [Architecture and deployment topologies for AEM Forms](/help/forms/using/aem-forms-architecture-deployment.md). Du kan även kontakta AEM Forms support för mer information om kapacitetsplanering för AEM Forms med RDBMK och tarMK.
+Endast beständighetstypen MongoMK och RDBMK stöds för en skalbar (klustrad) AEM Forms i JEE-miljö. Antalet servrar eller storleken på den skalbara miljön varierar för varje installation. En lista med överväganden och exempel finns i [Rekommenderade distributioner](/help/sites-deploying/recommended-deploys.md) och [Arkitektur och driftsättningstopologier för AEM Forms](/help/forms/using/aem-forms-architecture-deployment.md) artikel. Du kan även kontakta AEM Forms support för mer information om kapacitetsplanering för AEM Forms med RDBMK och tarMK.

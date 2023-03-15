@@ -1,24 +1,23 @@
 ---
 title: Funktioner i Flex arbetsyta som inte finns på AEM Forms arbetsyta
-seo-title: Funktioner i Flex arbetsyta som inte finns på AEM Forms arbetsyta
+seo-title: Features of Flex workspace not available in AEM Forms workspace
 description: AEM Forms arbetsyta är något nytt än Flex-baserade Workspace. Läs om skillnaderna i funktioner.
-seo-description: AEM Forms arbetsyta är något nytt än Flex-baserade Workspace. Läs om skillnaderna i funktioner.
+seo-description: AEM Forms workspace innovates beyond Flex-based Workspace. Read about the differences in features and capabilities.
 uuid: 128729b3-2367-42e8-8159-a080595e8455
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: ef5c957a-9d5a-42be-ad85-bdca876f56bc
-translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+exl-id: a9d2fd77-e8cf-45bf-8492-f1bb8d580548
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '218'
 ht-degree: 0%
 
 ---
 
-
-# Funktioner i Flex-arbetsytan är inte tillgängliga i AEM Forms {#features-of-flex-workspace-not-available-in-aem-forms-workspace}
+# Funktioner i Flex arbetsyta som inte finns på AEM Forms arbetsyta {#features-of-flex-workspace-not-available-in-aem-forms-workspace}
 
 AEM Forms arbetsyta är den helt nya arbetsytan. Nedan följer några av de funktioner på den Flex-baserade arbetsytan som inte är tillgängliga på arbetsytan i AEM Forms.
 

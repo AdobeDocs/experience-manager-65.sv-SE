@@ -1,38 +1,37 @@
 ---
 title: Skapa anpassade layoutkomponenter för anpassade formulär
-seo-title: Skapa anpassade layoutkomponenter för anpassade formulär
+seo-title: Creating custom layout components for adaptive forms
 description: Procedur för att skapa anpassade layoutkomponenter för anpassade formulär.
-seo-description: Procedur för att skapa anpassade layoutkomponenter för anpassade formulär.
+seo-description: Procedure to create custom layout components for adaptive forms.
 uuid: f0bb5fcd-3938-4804-ad0c-d96d3083fd01
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
 discoiquuid: d4ae432d-557d-4e89-92b8-dca5f37cb6f8
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+exl-id: 544b06f9-2456-4c05-88c2-b5349947742d
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '286'
+source-wordcount: '270'
 ht-degree: 0%
 
 ---
 
-
-# Skapa anpassade layoutkomponenter för adaptiva formulär{#creating-custom-layout-components-for-adaptive-forms}
+# Skapa anpassade layoutkomponenter för anpassade formulär{#creating-custom-layout-components-for-adaptive-forms}
 
 ## Förutsättning {#prerequisite}
 
 Kunskap om layouter, som gör att du kan skapa/använda en anpassad layout. Se [Ändra panellayout](../../forms/using/layout-capabilities-adaptive-forms.md).
 
-## Layoutkomponent för anpassad formulärpanel {#adaptive-form-panel-layout-component}
+## Komponenten Layout för anpassad formulärpanel {#adaptive-form-panel-layout-component}
 
 Komponenten Layout på den adaptiva formulärpanelen styr hur adaptiva formulärkomponenter placeras på en panel i förhållande till användargränssnittet.
 
 ## Skapa en anpassad panellayout {#creating-a-custom-panel-layout}
 
 1. Navigera till platsen `/crx/de`.
-1. Kopiera en panellayout från platsen `/libs/fd/af/layouts/panel` (till exempel `tabbedPanelLayout`) till `/apps` (till exempel `/apps/af-custom-layout`).
-1. Byt namn på layouten som du kopierade till `customPanelLayout`. Ändra egenskaperna för noderna `qtip` och `jcr:description`. Du kan till exempel ändra dem till `Custom layout - Toggle tabs`.
+1. Kopiera en panellayout från platsen `/libs/fd/af/layouts/panel` (t.ex. `tabbedPanelLayout`) till `/apps` (t.ex. `/apps/af-custom-layout`).
+1. Byt namn på layouten som du kopierade till `customPanelLayout`. Ändra egenskaperna för noderna `qtip` och `jcr:description`. Ändra dem till exempel till `Custom layout - Toggle tabs`.
 
 qtip
 
@@ -40,10 +39,10 @@ qtip
 
 >[!NOTE]
 >
->Om du ställer in egenskapen `guideComponentType`på värdet `fd/af/layouts/panel` blir layouten en panellayout.
+>Ange egenskapen `guideComponentType`till värdet `fd/af/layouts/panel` anger att layouten är en panellayout.
 
 1. Byt namn på filen `tabbedPanelLayout.jsp` under den nya layouten till customPanelLayout.jsp.
-1. Om du vill införa nya format och beteenden skapar du ett klientbibliotek under noden `etc`. Skapa till exempel nodens klientbibliotek på platsen /etc/af-custom-layout-clientlib. Låt noden ha kategoriegenskapen af.panel.custom. Den har följande .css- och .js-filer:
+1. Skapa ett klientbibliotek under `etc` nod. Skapa till exempel nodens klientbibliotek på platsen /etc/af-custom-layout-clientlib. Låt noden ha kategoriegenskapen af.panel.custom. Den har följande .css- och .js-filer:
 
    ```css
    /** CSS defining new styles used by custom layout **/
@@ -117,7 +116,7 @@ qtip
 
 1. Om du vill förbättra utseendet och beteendet kan du ta med en `client library`.
 
-   Uppdatera dessutom sökvägarna för inkluderade skript i .jsp-filer. Uppdatera till exempel filen `customPanelLayout.jsp` enligt följande:
+   Uppdatera dessutom sökvägarna för inkluderade skript i .jsp-filer. Du kan till exempel uppdatera `customPanelLayout.jsp` på följande sätt:
 
    ```html
    <%-- jsp encapsulating navigator container and panel container divs --%>
@@ -146,7 +145,7 @@ qtip
    </div>
    ```
 
-   Filen `/apps/af-custom-layout/customPanelLayout/defaultNavigatorLayout.jsp`:
+   The `/apps/af-custom-layout/customPanelLayout/defaultNavigatorLayout.jsp` fil:
 
    ```html
    <%-- jsp governing the navigation part --%>
@@ -175,7 +174,7 @@ qtip
    </ul>
    ```
 
-   Uppdaterad `/apps/af-custom-layout/customPanelLayout/panelContainer.jsp`:
+   Den uppdaterade `/apps/af-custom-layout/customPanelLayout/panelContainer.jsp`:
 
    ```html
    <%-- jsp governing the panel content --%>
@@ -204,7 +203,7 @@ qtip
 
 1. Öppna ett anpassat formulär i redigeringsläget. Panellayouten som du definierade läggs till i listan för att konfigurera panellayouter.
 
-   ![Anpassad panellayout visas i ](assets/auth-layt.png) ![panellayoutlistanSkärmbild av anpassat format med anpassad ](assets/s1.png) ![panellayoutSkärmbild som visar hur den anpassade layouten fungerar](assets/s2.png)
+   ![Anpassad panellayout visas i panellayoutlistan](assets/auth-layt.png) ![Skärmdump från adaptiv form, med anpassad panellayout](assets/s1.png) ![Skärmbild som visar den anpassade layoutens växlingsfunktioner](assets/s2.png)
 
 Exempel-ZIP för en anpassad panellayout och ett anpassningsbart formulär som använder den.
 

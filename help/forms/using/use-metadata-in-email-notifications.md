@@ -1,5 +1,5 @@
 ---
-title: 'Använd metadata i ett e-postmeddelande '
+title: Använd metadata i ett e-postmeddelande
 seo-title: Use metadata in an email notification
 description: Använd metadata för att fylla i information i e-postmeddelanden i formulärarbetsflödet
 seo-description: Use metadata to populate information in a forms workflow email notification

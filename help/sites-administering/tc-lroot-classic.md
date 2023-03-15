@@ -1,8 +1,8 @@
 ---
 title: Skapa en språkrot med det klassiska användargränssnittet
-seo-title: Skapa en språkrot med det klassiska användargränssnittet
+seo-title: Creating a Language Root Using the Classic UI
 description: Lär dig hur du skapar en språkrot med det klassiska användargränssnittet.
-seo-description: Lär dig hur du skapar en språkrot med det klassiska användargränssnittet.
+seo-description: Learn how to create a language root using the Classic UI.
 uuid: 62e40d39-2868-4d3d-9af7-c60a1a658be0
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,14 +11,13 @@ content-type: reference
 discoiquuid: b88edad4-2a2e-429b-86a2-cc68ba69697e
 docset: aem65
 feature: Language Copy
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 1ae21d80-0683-4ab9-afaa-4d733ff47720
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '337'
+source-wordcount: '316'
 ht-degree: 0%
 
 ---
-
 
 # Skapa en språkrot med det klassiska användargränssnittet{#creating-a-language-root-using-the-classic-ui}
 
@@ -60,4 +59,3 @@ I följande procedur används det klassiska användargränssnittet för att skap
 
 1. Stäng dialogrutan genom att klicka på OK.
 1. Klicka på Ja i nästa dialogruta för att bekräfta kopian.
-

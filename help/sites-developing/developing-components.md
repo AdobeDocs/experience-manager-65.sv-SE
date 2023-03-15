@@ -473,7 +473,7 @@ När du migrerar en komponent som har utformats för användning med det klassis
 
 ### Migrera cq:avlyssnarkod {#migrating-cq-listener-code}
 
-Om du migrerar ett projekt som har utformats för det klassiska användargränssnittet ska du `cq:listener` kod (och komponentrelaterade klienter) kan använda funktioner som är specifika för det klassiska användargränssnittet (till exempel `CQ.wcm.*`). För migreringen måste du uppdatera sådan kod med motsvarande objekt/funktioner i det beröringsaktiverade användargränssnittet.
+Om du migrerar ett projekt som är utformat för det klassiska användargränssnittet ska du `cq:listener` kod (och komponentrelaterade klienter) kan använda funktioner som är specifika för det klassiska användargränssnittet (till exempel `CQ.wcm.*`). För migreringen måste du uppdatera sådan kod med motsvarande objekt/funktioner i det beröringsaktiverade användargränssnittet.
 
 Om ditt projekt ska migreras helt till det beröringskänsliga användargränssnittet måste du ersätta den koden för att använda de objekt och funktioner som är relevanta för det beröringskänsliga användargränssnittet.
 

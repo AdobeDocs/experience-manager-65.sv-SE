@@ -45,11 +45,11 @@ Autentiseringshuvudet kan också anges för att använda ytterligare CIF-funktio
 
 Projekt som skapats av [AEM Project Archetype](https://github.com/adobe/aem-project-archetype)och [AEM Venia Reference Store](https://github.com/adobe/aem-cif-guides-venia) som redan ingår i [standardkonfiguration](https://github.com/adobe/aem-cif-guides-venia/blob/main/ui.config/src/main/content/jcr_root/apps/venia/osgiconfig/config/com.adobe.cq.commerce.graphql.client.impl.GraphqlClientImpl~default.cfg.json) måste justeras.
 
-Ersätt värdet för `url` in `com.adobe.cq.commerce.graphql.client.impl.GraphqlClientImpl~default.cfg.json` med GraphQL-slutpunkten i e-handelssystemet. Denna konfiguration kan göras via OSGI-konsolen eller genom att distribuera OSGI-konfigurationen via projektet. Olika konfigurationer för staging- och produktionssystem stöds med olika AEM körningslägen.
+Ersätt värdet för `url` in `com.adobe.cq.commerce.graphql.client.impl.GraphqlClientImpl~default.cfg.json` med GraphQL slutpunkt i e-handelssystemet. Denna konfiguration kan göras via OSGI-konsolen eller genom att distribuera OSGI-konfigurationen via projektet. Olika konfigurationer för staging- och produktionssystem stöds med olika AEM körningslägen.
 
 AEM Content and Commerce Add-On och CIF Core Components använder både anslutningar på serversidan och på klientsidan. CIF-kärnkomponenter på klientsidan och CIF-tilläggsverktyg ansluter som standard till `/api/graphql`. Detta kan vid behov justeras via CIF-Cloud Servicens konfiguration (se nedan).
 
-CIF Add-On tillhandahåller en GraphQL-proxyserver på `/api/graphql` som kan användas för [lokal utveckling](develop.md). För produktionsdistributioner rekommenderar vi starkt att du skapar en omvänd proxy till Commerce GraphQL-slutpunkten via AEM Dispatcher eller andra nätverkslager (som CDN).
+CIF Add-On tillhandahåller en GraphQL-proxyserver på `/api/graphql` som kan användas för [lokal utveckling](develop.md). För produktionsdistributioner rekommenderar vi starkt att du skapar en omvänd proxy till e-handelsplatsen för GraphQL via AEM Dispatcher eller andra nätverkslager (som CDN).
 
 ## Konfigurera butiker och kataloger {#catalog}
 
@@ -67,15 +67,15 @@ Den här konfigurationen kan justeras för projektet via CIF-Cloud Servicens kon
 
 Följande egenskaper kan konfigureras:
 
-- GraphQL-klient - Välj den konfigurerade GraphQL-klienten för e-handel med serverdelskommunikation. Detta bör normalt vara kvar som standard.
+- GraphQL Client - Välj den konfigurerade GraphQL-klienten för e-handelskommunikation. Detta bör normalt vara kvar som standard.
 - Butiksvy - butiksvyns identifierare. Om den är tom används standardbutiksvyn.
-- Proxysökväg för GraphQL - URL-sökvägen för GraphQL-proxy som används AEM proxybegäranden till GraphQL-slutpunkten för handel.
+- GraphQL Proxy Path - den URL-sökväg som GraphQL Proxy AEM använder för proxybegäranden till GraphQL-slutpunkt för e-handel.
 
    >[!NOTE]
    >
    >I de flesta inställningar är standardvärdet `/api/graphql` får inte ändras. Endast avancerade inställningar som inte använder den angivna GraphQL-proxyn bör ändra den här inställningen.
 
-- Aktivera stöd för katalog-UID - aktivera stöd för UID i stället för ID i e-handelsbackend-GraphQL-anropen.
+- Aktivera stöd för katalog-UID - aktivera stöd för UID i stället för ID i e-handelsserverdelens GraphQL-anrop.
 
    >[!NOTE]
    >

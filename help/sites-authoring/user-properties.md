@@ -1,8 +1,8 @@
 ---
 title: Konfigurerar din kontomiljö
-seo-title: Konfigurerar din kontomiljö
+seo-title: Configuring Your Account Environment
 description: AEM ger dig möjlighet att konfigurera ditt konto och vissa aspekter av författarmiljön
-seo-description: AEM ger dig möjlighet att konfigurera ditt konto och vissa aspekter av författarmiljön
+seo-description: AEM provides you with the capability to configure your account and certain aspects of the author environment
 uuid: ef31be29-5c18-4dc9-ad51-fb001588b31e
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,14 +10,13 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: b610e19c-f8d9-4ae2-b056-9fd5cf541261
 docset: aem65
-translation-type: tm+mt
-source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
+exl-id: 6079431d-7d08-4973-8bb4-a8d10626a795
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '538'
+source-wordcount: '517'
 ht-degree: 4%
 
 ---
-
 
 # Konfigurerar din kontomiljö{#configuring-your-account-environment}
 
@@ -25,19 +24,19 @@ AEM ger dig möjlighet att konfigurera ditt konto och vissa aspekter av författ
 
 Med alternativet [Användare](/help/sites-authoring/user-properties.md#user-settings) i [sidhuvudet](/help/sites-authoring/basic-handling.md#the-header) och den tillhörande dialogrutan [Mina inställningar](#userpreferences) kan du ändra dina användaralternativ.
 
-Börja med att gå till alternativet [Användare](/help/sites-authoring/user-properties.md#user-settings) i rubriken.
+Börja med att öppna [Användare](/help/sites-authoring/user-properties.md#user-settings) i sidhuvudet.
 
 ## Användarinställningar {#user-settings}
 
-Dialogrutan **Användare**-inställningar ger dig tillgång till:
+The **Användare** dialogrutan ger dig tillgång till:
 
 * Personifiera som
 
-   * Med funktionen [Personifiera som](/help/sites-administering/security.md#impersonating-another-user) kan en användare arbeta för en annan användares räkning.
+   * Med [Personifiera som](/help/sites-administering/security.md#impersonating-another-user) funktioner som en användare kan arbeta för en annan användares räkning.
 
 * Profil
 
-   * Ger en praktisk länk till dina [användarinställningar](/help/sites-administering/security.md))
+   * En praktisk länk till [användarinställningar](/help/sites-administering/security.md))
 
 * [Mina inställningar](/help/sites-authoring/user-properties.md#my-preferences)
 
@@ -47,7 +46,7 @@ Dialogrutan **Användare**-inställningar ger dig tillgång till:
 
 ### Mina inställningar {#my-preferences}
 
-Dialogrutan **Mina inställningar** är tillgänglig via alternativet [Användare](/help/sites-authoring/user-properties.md#user-settings) i sidhuvudet.
+The **Mina inställningar** öppnas via [Användare](/help/sites-authoring/user-properties.md#user-settings) i sidhuvudet.
 
 Varje användare kan ange vissa egenskaper för sig själv.
 
@@ -63,7 +62,7 @@ Varje användare kan ange vissa egenskaper för sig själv.
 
    Detta definierar beteendet för att öppna fönster. Välj något av följande:
 
-   * **Flera fönster**  (standard)
+   * **Flera fönster** (Standard)
 
       * Sidorna öppnas i ett nytt fönster.
    * **Ett fönster**
@@ -110,7 +109,7 @@ Varje användare kan ange vissa egenskaper för sig själv.
 
 * **Använd klassisk redigeringsmiljö**
 
-   Det här alternativet aktiverar [klassisk sidredigering i användargränssnittet](/help/sites-classic-ui-authoring/home.md). Standardgränssnittet används som standard.
+   Det här alternativet aktiverar [klassiskt användargränssnitt](/help/sites-classic-ui-authoring/home.md)-baserad framtagning av sidor. Standardgränssnittet används som standard.
 
 * **Aktivera startsidan för resurser**
 
@@ -118,4 +117,4 @@ Varje användare kan ange vissa egenskaper för sig själv.
 
 * **Stock-konfiguration**
 
-   Med det här alternativet kan du ange den önskade Adobe Stock-konfigurationen och det är bara tillgängligt om systemadministratören har aktiverat [Adobe Stock-integrering](/help/assets/aem-assets-adobe-stock.md).
+   Med det här alternativet kan du ange önskad Adobe Stock-konfiguration och det är bara tillgängligt om systemadministratören har aktiverat [Integrering med Adobe Stock](/help/assets/aem-assets-adobe-stock.md).

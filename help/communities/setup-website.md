@@ -1,22 +1,21 @@
 ---
 title: Konfigurera webbplatsstruktur
-seo-title: Konfigurera webbplatsstruktur
+seo-title: Setup Website Structure
 description: Konfigurera kataloger
-seo-description: Konfigurera kataloger
+seo-description: Set up directories
 uuid: a31edcd5-dab8-4a42-953b-1d076c2182b2
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: d18c0ece-4c4f-499c-ac94-a9aaa7f883c4
-translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+exl-id: 1f60a0d4-a272-45e8-9742-4b706be8502e
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '510'
+source-wordcount: '504'
 ht-degree: 2%
 
 ---
-
 
 # Konfigurera webbplatsstruktur {#setup-website-structure}
 
@@ -34,7 +33,7 @@ Instruktionerna nedan beskriver mapparna som ska skapas på följande platser n�
 
    Det är här som de hämtningsbara webbsidorna finns.
 
-Koden i den här självstudien är beroende av att huvudmappnamnet är samma för programmet, designen och innehållet. Om du väljer något annat namn för webbplatsen ersätter du alltid `an-scf-sandbox` med det namn du har valt.
+Koden i den här självstudien är beroende av att huvudmappnamnet är samma för programmet, designen och innehållet. Om du väljer något annat namn för webbplatsen ska du alltid ersätta `an-scf-sandbox` med det namn du har valt.
 
 >[!NOTE]
 >
@@ -43,10 +42,8 @@ Koden i den här självstudien är beroende av att huvudmappnamnet är samma fö
 >* Namnen i CRXDE är nodnamn som utgör sökvägen till adresserbart innehåll.
 >* Nodnamn kan innehålla mellanslag, men när de används i en URI måste utrymmet kodas antingen som %20 eller +.
 >* Nodnamn kan innehålla bindestreck och understreck, men de måste kodas när de refereras som ett paketnamn i en Java-fil. Både bindestreck och understreck escape-konverteras med understreck följt av deras unicode-värde:
-
    >
-   >   
-   * bindestreck blir &#39;_002d&#39;
+   >   * bindestreck blir &#39;_002d&#39;
    >   * understreck blir &#39;_005f&#39;
 
 
@@ -56,30 +53,30 @@ Katalogen /apps i databasen innehåller koden som implementerar beteendet och å
 
 Katalogen /apps är skyddad och inte allmänt tillgänglig, vilket är katalogerna /content och /etc/designs.
 
-1. Skapa mappen `/apps/an-scf-sandbox`.
+1. Skapa `/apps/an-scf-sandbox` mapp.
 
-   Använda **[!UICONTROL CRXDE Lite]** i utforskarrutan
+   Använda **[!UICONTROL CRXDE Lite]**, i utforskarfönstret
 
-   1. Välj mappen `/apps`.
-   1. Högerklicka på **[!UICONTROL Create]**.. eller dra ned menyn **[!UICONTROL Create...]**.
+   1. Välj `/apps` mapp.
+   1. Högerklicka **[!UICONTROL Create]**... eller dra nedåt **[!UICONTROL Create...]** -menyn.
    1. Välj **[!UICONTROL Create Folder...]**.
-   1. I dialogrutan **[!UICONTROL Create Folder]** anger du `an-scf-sandbox`.
+   1. I **[!UICONTROL Create Folder]** dialogruta, ange `an-scf-sandbox`.
    1. Klicka på **[!UICONTROL OK]**.
 
-1. Skapa undermappen **[!UICONTROL components]**.
+1. Skapa **[!UICONTROL components]** undermapp.
 
-   1. Välj mappen `/apps/an-scf-sandbox`.
+   1. Välj `/apps/an-scf-sandbox` mapp.
    1. Klicka på **[!UICONTROL Create > Create Folder]**.
-   1. I dialogrutan **[!UICONTROL Create Folder]** anger du **[!UICONTROL components]**.
+   1. I **[!UICONTROL Create Folder]** dialogruta, ange **[!UICONTROL components]**.
    1. Klicka på **[!UICONTROL OK]**.
 
-1. Skapa undermappen **[!UICONTROL templates]**.
+1. Skapa **[!UICONTROL templates]** undermapp.
 
-   1. Välj mappen `/apps/an-scf-sandbox`.
+   1. Välj `/apps/an-scf-sandbox` mapp.
    1. Klicka på **[!UICONTROL Create > Create Folder]**.
-   1. I dialogrutan **[!UICONTROL Create Folder]** anger du **[!UICONTROL templates]**.
+   1. I **[!UICONTROL Create Folder]** dialogruta, ange **[!UICONTROL templates]**.
    1. Klicka på **[!UICONTROL OK]**.
-   1. Välj `/apps/an-scf-sandbox` igen.
+   1. Markera igen `/apps/an-scf-sandbox`.
    1. Välj **[!UICONTROL Save All]**.
 
    Spara ofta, precis som med andra redigeringsprocesser. Om du får problem med att ange data kan det bero på att tidsgränsen för inloggningen har överskridits eller på att du måste spara tidigare redigeringar.
@@ -94,9 +91,9 @@ Katalogen /etc/designs innehåller de bilder, skript och formatmallar som ska h�
 
 1. Om du vill använda verktyget Designer i det klassiska användargränssnittet går du till [https://&lt;server>:&lt;port>/miscadmin](http://localhost:4502/miscadmin).
 
-   Obs! Om du använder CRXDE Lite för att skapa en nod av typen `cq:Page` kommer åtkomstkontroll och replikering inte att anges som standardinställningar för en sida.
+   Obs! Om du använder CRXDE Lite för att skapa en nod av typen `cq:Page`, ställs inte åtkomstkontroll och replikering in på standardinställningar för en sida.
 
-1. Markera mappen **[!UICONTROL Designs]** i Utforskarfönstret och klicka sedan på **[!UICONTROL New]** > **[!UICONTROL New Page]**.
+1. I rutan Utforskaren väljer du **[!UICONTROL Designs]** mapp och klicka sedan på **[!UICONTROL New]** > **[!UICONTROL New Page]**.
 
    Ange:
 
@@ -120,4 +117,4 @@ Katalogen /etc/designs innehåller de bilder, skript och formatmallar som ska h�
 
 Katalogen /content i databasen är den plats där webbplatsinnehållet finns. Sökvägarna under /content utgör sökvägarna till webbadressen för webbläsarbegäranden.
 
-** När  [sidmallarna ](initial-app.md#createthepagetemplate) har skapats som en del av det inledande programmet kan det inledande sidinnehållet skapas baserat på mallen...  [**Mama**](initial-app.md)
+*Efter* den [sidmall](initial-app.md#createthepagetemplate) skapas som en del av det inledande programmet, kan det inledande sidinnehållet skapas baserat på mallen.... [**Mama**](initial-app.md)

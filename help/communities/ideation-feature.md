@@ -1,8 +1,8 @@
 ---
 title: Idéfunktion
-seo-title: Idéfunktion
+seo-title: Ideation Feature
 description: Lägga till och konfigurera Ideation-funktionen
-seo-description: Lägga till och konfigurera Ideation-funktionen
+seo-description: Adding and configuring the Ideation feature
 uuid: 38468290-6d00-4ee4-91d8-7c2e8ae32712
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -10,16 +10,15 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: a3f5a21d-2df6-4663-a1ea-3a067c46f860
 docset: aem65
-translation-type: tm+mt
-source-git-commit: f62fb1eb760ddd7baee9ba5a631ff4b921e2d08b
+exl-id: e130bab4-524d-4413-ba8b-53d0ed9e8623
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1113'
+source-wordcount: '1105'
 ht-degree: 0%
 
 ---
 
-
-# Ideationsfunktion {#ideation-feature}
+# Idéfunktion {#ideation-feature}
 
 ## Introduktion {#introduction}
 
@@ -35,23 +34,23 @@ I det här avsnittet av dokumentationen beskrivs:
 * Lägga till idéfunktionen på en AEM webbplats.
 * Konfigurationsinställningar för Ideation-komponenten.
 
-### Lägga till en indelning på en sida {#adding-a-ideation-to-a-page}
+### Lägga till en idé på en sida {#adding-a-ideation-to-a-page}
 
-Om du vill lägga till en `Ideation`-komponent på en sida i redigeringsläge använder du komponentwebbläsaren för att leta reda på
+Lägga till en `Ideation` -komponent till en sida i redigeringsläge använder du komponentwebbläsaren för att leta upp
 
 * `Communities / Ideation`
 
 och dra den till rätt plats på en sida där idén ska visas.
 
-Mer information finns på [Grunderna för communitykomponenter](/help/communities/basics.md).
+Nödvändig information finns på [Grunderna för communitykomponenter](/help/communities/basics.md).
 
-När de [nödvändiga klientbiblioteken](/help/communities/ideation.md#essentials-for-client-side) inkluderas visas `Ideation`-komponenten så här:
+När [nödvändiga bibliotek på klientsidan](/help/communities/ideation.md#essentials-for-client-side) ingår så här `Ideation` visas:
 
 ![ideation](assets/ideation.png)
 
-### Konfigurera en ikon {#configuring-an-ideation}
+### Konfigurera en idé {#configuring-an-ideation}
 
-Markera den monterade `Ideation`-komponenten som ska öppnas och välj ikonen `Configure` som öppnar redigeringsdialogrutan.
+Markera den monterade `Ideation` -komponenten som ska få åtkomst till och markera `Configure` som öppnar redigeringsdialogrutan.
 
 ![configure-new](assets/configure-new.png)
 
@@ -59,7 +58,7 @@ Markera den monterade `Ideation`-komponenten som ska öppnas och välj ikonen `C
 
 #### Fliken Inställningar {#settings-tab}
 
-Under fliken **[!UICONTROL Settings]** anger du inställningar för idéer och kommentarer:
+Under **[!UICONTROL Settings]** -fliken, ange inställningar för idéer och kommentarer:
 
 * **Tillåt miniatyrbild för bifogad fil**
 * **Maximal storlek på miniatyrbild**
@@ -70,7 +69,7 @@ Under fliken **[!UICONTROL Settings]** anger du inställningar för idéer och k
 * **Blockera användargenererat innehåll i redigeringsläge för författare**
 * **Idétitel**
 
-* Idéns visningsrubrik. Standardvärdet är `Ideation`.
+* Idéns visningsrubrik. Standard är `Ideation`.
 * **Ideationsbeskrivning**
 
    En beskrivning som ska visas som underrubrik till idén. Standardvärdet är ingen beskrivning.
@@ -93,7 +92,7 @@ Under fliken **[!UICONTROL Settings]** anger du inställningar för idéer och k
 
 * **Tillåt taggning**
 
-   Om det här alternativet är markerat kan medlemmar lägga till taggetiketter i sina inlägg (se fliken **[!UICONTROL Tag field]**). Standard är avmarkerat.
+   Om det här alternativet är markerat kan medlemmar lägga till taggetiketter i sina inlägg (se **[!UICONTROL Tag field]** -fliken). Standard är avmarkerat.
 
 * **Tillåt filöverföringar**
 
@@ -101,11 +100,11 @@ Under fliken **[!UICONTROL Settings]** anger du inställningar för idéer och k
 
 * **Maximal filstorlek**
 
-   Endast relevant om `Allow File Uploads` är markerat. Det här fältet begränsar storleken (i byte) på en överförd fil. Standardvärdet är 104857600 (10 MB).
+   Endast relevant om `Allow File Uploads` är markerad. Det här fältet begränsar storleken (i byte) på en överförd fil. Standardvärdet är 104857600 (10 MB).
 
 * **Tillåtna filtyper**
 
-   Endast relevant om `Allow File Uploads` är markerat. En kommaavgränsad lista med filtillägg med&quot;punktavgränsaren&quot;. Till exempel: .jpg, .jpeg, .png, .doc, .docx, .pdf. Om någon filtyp har angetts kan de som inte har angetts inte överföras. Ingen standard har angetts så att alla filtyper tillåts.
+   Endast relevant om `Allow File Uploads` är markerad. En kommaavgränsad lista med filtillägg med&quot;punktavgränsaren&quot;. Till exempel: .jpg, .jpeg, .png, .doc, .docx, .pdf. Om någon filtyp har angetts kan de som inte har angetts inte överföras. Ingen standard har angetts så att alla filtyper tillåts.
 
 * **Maximal filstorlek för bifogad bild**
 
@@ -125,11 +124,11 @@ Under fliken **[!UICONTROL Settings]** anger du inställningar för idéer och k
 
 * **Tillåt följande**
 
-   Om du markerar det här alternativet inkluderar du följande funktion för idéinlägg, som gör att medlemmar kan [meddelas](/help/communities/notifications.md) om nya inlägg. Standard är avmarkerat.
+   Om du markerar det här alternativet inkluderas följande funktion för idéinlägg, som gör att medlemmar kan [meddelad](/help/communities/notifications.md) av nya tjänster. Standard är avmarkerat.
 
 * **Tillåt e-postprenumerationer**
 
-   Om det här alternativet är markerat kan medlemmar meddelas om nya inlägg via e-post ([prenumeration](/help/communities/subscriptions.md)). Kräver att `Allow Following` kontrolleras och [e-post konfigureras](/help/communities/email.md). Standard är avmarkerat.
+   Om det här alternativet är markerat, tillåt medlemmar att meddelas om nya inlägg via e-post ([prenumeration](/help/communities/subscriptions.md)). Kräver `Allow Following` ska kontrolleras och [e-post konfigurerad](/help/communities/email.md). Standard är avmarkerat.
 
 * **Tillåt röstning**
 
@@ -137,13 +136,13 @@ Under fliken **[!UICONTROL Settings]** anger du inställningar för idéer och k
 
 * **Visa emblem**
 
-   Om det här alternativet är markerat visar du färdiga och tilldelade [emblem](/help/communities/implementing-scoring.md) med en medlems idé. Standard är avmarkerat.
+   Om det här alternativet är markerat visas intjänad och tilldelad [emblem](/help/communities/implementing-scoring.md) med en medlems idé. Standard är avmarkerat.
 
 * **Hämta inte svar på listsidan**
 
 * **Tillåt innehåll**
 
-   Om det här alternativet är markerat kan idén identifieras som [aktuellt innehåll](/help/communities/featured.md). Standard är avmarkerat.
+   Om det här alternativet är markerat kan idén identifieras som [innehåll](/help/communities/featured.md). Standard är avmarkerat.
 
 * **Aktivera omnämnande**
 * **Max. omnämnanden**
@@ -151,7 +150,7 @@ Under fliken **[!UICONTROL Settings]** anger du inställningar för idéer och k
 
 #### Fliken Användarmoderering {#user-moderation-tab}
 
-Under fliken **[!UICONTROL User Moderation]** anger du hur publicerade idéer och kommentarer (användargenererat innehåll) ska hanteras. Mer information finns i [Moderating User Generated Content](/help/communities/moderate-ugc.md).
+Under **[!UICONTROL User Moderation]** anger du hur publicerade idéer och kommentarer (användargenererat innehåll) ska hanteras. Mer information finns i [Modererar användargenererat innehåll](/help/communities/moderate-ugc.md).
 
 * **Neka inlägg**
 
@@ -181,33 +180,33 @@ Under fliken **[!UICONTROL User Moderation]** anger du hur publicerade idéer oc
 
    Ange hur många gånger ett ämne eller en kommentar måste flaggas innan det döljs för den offentliga vyn. Om värdet är -1 döljs aldrig det flaggade ämnet eller kommentaren från den offentliga vyn. Annars måste talet vara större än eller lika med modereringströskeln. Standardvärdet är 5.
 
-#### Tagg field tab {#tag-field-tab}
+#### Fliken Taggfält {#tag-field-tab}
 
-Under fliken **[!UICONTROL Tag field]** är de taggar som kan användas, om de tillåts under fliken **[!UICONTROL Settings]**, begränsade enligt de namnutrymmen som valts.
+Under **[!UICONTROL Tag field]** -fliken, de taggar som kan användas, om de tillåts under **[!UICONTROL Settings]** är begränsade enligt de namnutrymmen som har valts.
 
 * **Tillåtna namnutrymmen**
 
-   Relevant om `Allow Tagging` är markerat under fliken **[!UICONTROL Settings]**. De taggar som kan användas är begränsade till de inom de namnutrymmeskategorier som kontrolleras. Listan med namnutrymmen innehåller &quot;Standardtaggar&quot; (standardnamnutrymmet) och &quot;Inkludera alla taggar&quot;. Standardvärdet är inget markerat, vilket betyder att alla namnutrymmen är tillåtna.
+   Relevant om `Allow Tagging` kontrolleras under **[!UICONTROL Settings]** -fliken. De taggar som kan användas är begränsade till de inom de namnutrymmeskategorier som kontrolleras. Listan med namnutrymmen innehåller &quot;Standardtaggar&quot; (standardnamnutrymmet) och &quot;Inkludera alla taggar&quot;. Standardvärdet är inget markerat, vilket betyder att alla namnutrymmen är tillåtna.
 
 * **Förslagsgräns**
 
-   Ange antalet taggar som ska visas som ett förslag till medlemmens inlägg i forumet. Värdet **-1** betyder ingen gräns. Standardvärdet är 0.
+   Ange antalet taggar som ska visas som ett förslag till medlemmens inlägg i forumet. Värdet för **-1** betyder ingen gräns. Standardvärdet är 0.
 
 #### Fliken Sorteringsinställningar {#sort-settings-tab}
 
-Under fliken **[!UICONTROL Sort Settings]** anger du hur de bokförda kommentarerna ska sorteras när de visas.
+Under **[!UICONTROL Sort Settings]** anger du hur de bokförda kommentarerna ska sorteras när de visas.
 
 * **Sortera efter**
 
-   Markera alla tillåtna sorteringsval: `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`. Standardvärdet är `Newest, Oldest, Last Updated`.
+   Markera alla tillåtna sorteringsval: `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`. Standard är `Newest, Oldest, Last Updated`.
 
 * **Ange som standard**
 
-   Dra nedåt om du vill välja något av de markerade sorteringsalternativen som ska visas som standard. Standardvärdet är `Newest`.
+   Dra nedåt om du vill välja något av de markerade sorteringsalternativen som ska visas som standard. Standard är `Newest`.
 
 * **Välj tidsalternativ för Analytics-sortering**
 
-   Dra ned för att välja en av `All, Last 24 Hours, Last 7 Days, Last 30 Days`. Standardvärdet är `All`.
+   Dra ned för att välja något av `All, Last 24 Hours, Last 7 Days, Last 30 Days`. Standard är `All`.
 
 ## Site Visitor Experience {#site-visitor-experience}
 
@@ -221,24 +220,24 @@ När medlemmen har loggat in kan han eller hon skapa en ny idé.
 
 Innan du skickar in en idé kan medlemmen spara ett utkast.
 
-Genom att markera knappen `Save as Draft` sparas ett utkast.
+Genom att välja `Save as Draft` sparas ett utkast.
 
 ![save-ideas](assets/save-idea.png)
 
-När du visar sparade utkast på fliken `My Drafts` väljer du `Read More` för att återgå till redigeringsläget:
+När du visar sparade utkast i `My Drafts` flik, välja `Read More` för att gå tillbaka till redigeringsläget:
 
 ![edit-ideas](assets/edit-idea.png)
 
 #### Ge feedback {#providing-feedback}
 
-När idén har publicerats kan andra medlemmar logga in, öppna idén ( `Read More`) och gilla idén, och på så sätt lägga till fler röster och göra kommentarer.
+När idén har publicerats kan andra medlemmar logga in, öppna idén ( `Read More`) och gillar idén, vilket ökar antalet röster och gör kommentarer.
 
 ![feedback](assets/feedback-idea.png)
 
 ### Ytterligare information {#additional-information}
 
-Mer information finns på sidan [Ideation Essentials](/help/communities/ideation.md) för utvecklare.
+Mer information finns på [Grundläggande om identifiering](/help/communities/ideation.md) för utvecklare.
 
-moderering av publicerade ämnen och kommentarer finns i [Moderating User Generated Content](/help/communities/moderate-ugc.md).
+moderering av inlägg och kommentarer finns i [Modererar användargenererat innehåll](/help/communities/moderate-ugc.md).
 
 Information om hur du taggar publicerade ämnen och kommentarer finns i [Tagga användargenererat innehåll](/help/communities/tag-ugc.md).

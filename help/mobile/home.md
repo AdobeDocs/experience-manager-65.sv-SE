@@ -1,5 +1,5 @@
 ---
-title: AEM 6.5 Mobile User Guide
+title: Användarhandbok om mobila AEM 6.5-appar
 seo-title: AEM 6.5 Mobile User Guide
 description: Dra nytta av AEM stöd för att skapa och hantera innehåll för mobilappar. Få en introduktion till och lär dig hur du skapar, utvecklar och administrerar i On-Demand Services-appen och Adobe PhoneGap Enterprise.
 seo-description: Describes how to create and manage content for mobile applications.
@@ -7,11 +7,11 @@ exl-id: 3531d8ea-614d-465a-8b4a-e3e3f3461e94
 source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
 source-wordcount: '380'
-ht-degree: 9%
+ht-degree: 16%
 
 ---
 
-# AEM 6.5 Mobile User Guide
+# Användarhandbok om mobila AEM 6.5-appar
 
 Dra nytta av AEM stöd för att skapa och hantera innehåll för mobilappar. Få en introduktion till och lär dig hur du skapar, utvecklar och administrerar i On-Demand Services-appen och Adobe PhoneGap Enterprise.
 
@@ -30,8 +30,8 @@ Dra nytta av AEM stöd för att skapa och hantera innehåll för mobilappar. Få
 | [Användarhandbok för Assets](/help/assets/home.md) | Lär dig hur du skapar, hanterar, levererar och optimerar digitala resurser. |
 | [Forms Användarhandbok](/help/forms/home.md) | Den här guiden beskriver hur du skapar, hanterar, publicerar och uppdaterar digitala formulär. |
 | [Användarhandbok för Communities](/help/communities/home.md) | Skapa onlineupplevelser som forum, användargrupper, utbildningsresurser och andra sociala funktioner. |
-| [Administratörshandbok](/help/sites-administering/home.md) | Förstå hur du administrerar AEM |
-| [Redigeringshandbok](/help/sites-authoring/home.md) | I den här handboken förklaras begreppen för redigering i AEM. |
+| [Användarhandbok om administration](/help/sites-administering/home.md) | Förstå hur du administrerar AEM |
+| [Användarhandbok om redigering](/help/sites-authoring/home.md) | I den här handboken förklaras begreppen för redigering i AEM. |
 | [Användargränssnittets skrivguide](/help/sites-classic-ui-authoring/home.md) | I den här handboken förklaras begreppen för redigering i AEM i det klassiska användargränssnittet. |
 | [Användarhandbok för skärmar](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html) | Lär dig mer om den digitala signeringslösningen för att publicera dynamiska och interaktiva digitala upplevelser. |
 | [Distribuera användarhandbok](/help/sites-deploying/home.md) | Den här guiden visar grunderna i AEM. |

@@ -63,9 +63,9 @@ Den här artikeln fokuserar främst på de två första aspekterna av samarbetsb
 | Upptäck - sök efter resurser från DAM | Ja | [!DNL Experience Manager] Webbgränssnitt och skrivbordsfunktioner |  |
 | Använd - öppen resurs | Ja | Ja | [Öppna från webbgränssnitt](manage-assets.md#previewing-assets) eller från Finder |
 | Använd - placera resurs från DAM i ett dokument | Ja - inbäddning | Ja - länkning eller inbäddning | [!DNL Experience Manager] datorprogrammet ger åtkomst till resurser som filer i det lokala filsystemet. De här länkarna i de ursprungliga programmen representeras av lokala sökvägar. |
-| Redigera - öppna för redigering | Ja - utcheckningsåtgärd | Ja - Öppna åtgärd (i nätverksresursen) | [Checka ut i AAL](https://helpx.adobe.com/enterprise/using/manage-assets-using-adobe-asset-link.html) sparar resursen till användarens Creative Cloud-lagringskonto (synkroniserat med appen Creative Cloud) som standard. |
+| Redigera - öppna för redigering | Ja - utcheckningsåtgärd | Ja - Öppna åtgärd (i nätverksresursen) | [Checka ut i AAL](https://helpx.adobe.com/se/enterprise/using/manage-assets-using-adobe-asset-link.html) sparar resursen till användarens Creative Cloud-lagringskonto (synkroniserat med appen Creative Cloud) som standard. |
 | Redigera - pågående arbete utanför DAM | Ja - Tillgångar som är tillgängliga i användarens Creative Cloud-lagringskonto synkroniserade med skrivbordet. | Ja |  |
-| Redigera - ladda upp ändringar | Ja - [Incheckningsåtgärd](https://helpx.adobe.com/enterprise/using/manage-assets-using-adobe-asset-link.html) med valfri kommentar | Ja |  |
+| Redigera - ladda upp ändringar | Ja - [Incheckningsåtgärd](https://helpx.adobe.com/se/enterprise/using/manage-assets-using-adobe-asset-link.html) med valfri kommentar | Ja |  |
 | Överför - en fil | Ja - överför aktuellt aktivt dokument | Ja | [Överför via webbgränssnitt](manage-assets.md#uploading-assets) |
 | Överför - flera filer/hierarkiska mappstrukturer | Nej | Ja | [Överför via webbgränssnitt](manage-assets.md#uploading-assets) eller via egna skript eller verktyg. |
 | Diverse - användare och inloggning | Creative Cloud-användare som är inloggad på Creative Cloud datorprogram känns igen (SSO) | [!DNL Experience Manager] användare och autentiseringsuppgifter | Användare av båda lösningarna räknar med [!DNL Experience Manager] användarkvot. |

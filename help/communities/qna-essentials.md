@@ -2,21 +2,20 @@
 title: QnA Essentials
 seo-title: QnA Essentials
 description: Forumfunktionen Frågor och svar
-seo-description: Forumfunktionen Frågor och svar
+seo-description: Questions and answers forum feature
 uuid: c718a8e3-b3bd-4db9-8c0f-6dd973d40583
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: ceace3aa-78a5-485e-b519-630479e087d8
-translation-type: tm+mt
-source-git-commit: ca15258a5dc7ca99b6c9d6ae85e42c77a3802c87
+exl-id: a7b295c1-cc9d-4881-8016-804b21fc1098
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '256'
+source-wordcount: '249'
 ht-degree: 0%
 
 ---
-
 
 # QnA Essentials {#qna-essentials}
 
@@ -36,7 +35,7 @@ Den här sidan innehåller viktig information om hur du arbetar med forumfunktio
   </tr>
   <tr>
    <td> <a href="clientlibs.md">klientlibs</a></td>
-   <td>cq.ckeditor<br /> cq.social.hbs.voice<br /> cq.social.hbs.qna</td>
+   <td>cq.ckeditor<br /> cq.social.hbs.röstning<br /> cq.social.hbs.qna</td>
   </tr>
   <tr>
    <td> templates</td>
@@ -48,7 +47,7 @@ Den här sidan innehåller viktig information om hur du arbetar med forumfunktio
   </tr>
   <tr>
    <td> egenskaper</td>
-   <td>Se <a href="working-with-qna.md">Formulärfunktion för frågor och svar</a></td>
+   <td>Se <a href="working-with-qna.md">Forumfunktion för frågor och svar</a></td>
   </tr>
  </tbody>
 </table>
@@ -65,21 +64,20 @@ Den här sidan innehåller viktig information om hur du arbetar med forumfunktio
 
 ### QnA-funktion {#qna-function}
 
-En community-platsstruktur som innehåller [QnA-funktionen](functions.md#qna-function) har en konfigurerad `QnA`-komponent, samt inställningar som påverkar moderering och taggning. QnA-funktionen stöder identifiering av en [privilegierad medlemsgrupp](users.md#privileged-members-group).
+En community-webbplatsstruktur som innehåller [QnA-funktion](functions.md#qna-function) har en konfigurerad `QnA` -komponenten, samt inställningar som påverkar moderering och taggning. QnA-funktionen stöder identifiering av en [privilegierad medlemsanvändargrupp](users.md#privileged-members-group).
 
 ### Åtkomst till QnA-foruminlägg (UGC) {#accessing-qna-forum-posts-ugc}
 
 UGC bör modereras med någon av standardmetoderna för moderering.
-Se [Moderating User Generated Content](moderate-ugc.md).
+Se [Modererar användargenererat innehåll](moderate-ugc.md).
 
-Från och med AEM 6.1 Communities omfattar användningen av en [gemensam butik](working-with-srp.md) för UGC programmatisk åtkomst till UGC oavsett valt lagringsalternativ (som ASRP, MSRP eller JSRP).
+Från och med AEM 6.1 Communities används [gemensam lagringsplats](working-with-srp.md) för UGC omfattar programmatisk åtkomst till UGC oavsett vilket lagringsalternativ som valts (till exempel ASRP, MSRP eller JSRP).
 
 **Platsen och formatet för användargenererat innehåll i databasen kan ändras utan förvarning**.
 
 Se:
 
-* [Översikt över](srp.md)  lagringsresursprovidern - introduktion och översikt över databasanvändningen.
+* [Översikt över lagringsresursprovider](srp.md) - introduktion och översikt över databasanvändningen.
 * [SRP och UGC Essentials](srp-and-ugc.md) - SRP-verktygsmetoder och -exempel.
-* [Åtkomst till UGC med riktlinjerna för SRP](accessing-ugc-with-srp.md) -kodning.
-* [Omfaktorisering](socialutils.md)  för SocialUtils - mappning av utgått från verktygsmetoder till aktuella SRP-verktygsmetoder.
-
+* [Åtkomst till UGC med SRP](accessing-ugc-with-srp.md) - riktlinjer för kodning.
+* [Omfaktorisering för SocialUtils](socialutils.md) - mappning av borttagna verktygsmetoder till aktuella SRP-verktygsmetoder.

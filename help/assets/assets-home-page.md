@@ -1,5 +1,5 @@
 ---
-title: '"[!DNL Assets] Home Page experience"'
+title: "[!DNL Assets] Home Page experience"
 description: Anpassa [!DNL Experience Manager Assets] Startsida för en rik välkomstskärm, inklusive en ögonblicksbild av nyligen gjorda aktiviteter kring resurser.
 contentOwner: AG
 feature: Developer Tools, Asset Management

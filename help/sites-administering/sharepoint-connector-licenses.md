@@ -1,8 +1,8 @@
 ---
 title: SharePoint Connector-licenser, copyrightmeddelanden och friskrivningsklausuler
-seo-title: SharePoint Connector-licenser, copyrightmeddelanden och friskrivningsklausuler
-description: Läs mer om SharePoint Connector-licenser, copyrightmeddelanden och ansvarsfriskrivningar.
-seo-description: Läs mer om SharePoint Connector-licenser, copyrightmeddelanden och ansvarsfriskrivningar.
+seo-title: SharePoint Connector Licenses, Copyright Notices, and Disclaimers
+description: Läs mer om SharePoint Connector Licenses, Copyright Notices and Disclaimers.
+seo-description: Learn about SharePoint Connector Licenses, Copyright Notices and Disclaimers.
 uuid: 182c8f0f-dcca-461a-9d8f-f05b376ad0cb
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,22 +10,21 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 56849775-3ac7-44a2-ab17-a707b001470e
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 4e5e6ef022dc9f083859e13ab9c86b622fc3d46e
+exl-id: b9342330-31f6-49cb-965e-4bab61f98d4c
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '378'
+source-wordcount: '362'
 ht-degree: 4%
 
 ---
 
-
 # SharePoint Connector-licenser, copyrightmeddelanden och friskrivningsklausuler{#sharepoint-connector-licenses-copyright-notices-and-disclaimers}
 
-I det här avsnittet listas alla licenser, meddelanden om upphovsrätt och friskrivningar som måste anges uttryckligen i samband med Day JCR Connector för MS SharePoint.
+I detta avsnitt listas alla licenser, meddelanden om upphovsrätt och friskrivningar som måste anges uttryckligen i samband med Day JCR Connector för MS SharePoint.
 
-## Översikt över anslutning till bibliotek från tredje part {#overview-of-connector-rd-party-libraries}
+## Översikt över anslutning av bibliotek från tredje part {#overview-of-connector-rd-party-libraries}
 
-I följande tabell visas tredjepartsbibliotek som används i SharePoint Connector-kärnbiblioteken tillsammans med de licenser, copyrightmeddelanden och ansvarsfriskrivningar som de omfattas av:
+I följande tabell visas tredjepartsbibliotek som används i SharePoint Connector-huvudbiblioteken tillsammans med de licenser, copyrightmeddelanden och ansvarsfriskrivningar som de omfattas av:
 
 | Bibliotek | Licenstyp |
 |---|---|
@@ -42,7 +41,7 @@ I följande tabell visas tredjepartsbibliotek som används i SharePoint Connecto
 | comons-httpclient | [Apache](#apache) |
 | comons-io | [Apache](#apache) |
 | Commons-lang | [Apache](#apache) |
-| samtidig | [Samtidig](#concurrent)  (offentlig domän) |
+| samtidig | [Samtidig](#concurrent) (Offentlig domän) |
 | geronimo-activation_1.1_spec | [Apache](#apache) |
 | geronimo-stax-api_1.0_spec | [Apache](#apache) |
 | httpcore | [Apache](#apache) |
@@ -61,7 +60,7 @@ I följande tabell visas tredjepartsbibliotek som används i SharePoint Connecto
 | wstx-asl | [Apache](#apache) |
 | xalan | [Apache](#apache) |
 | xbean | [Apache](#apache) |
-| xml-apis | [Apache](#apache)  (innehåller delar som täcks av Public Domain och W3C Software licenses) |
+| xml-apis | [Apache](#apache) (innehåller delar som täcks av Public Domain och W3C Software licenses) |
 | XmlSchema | [Apache](#apache) |
 
 ## Översikt över CRX-bibliotek från tredje part {#overview-of-crx-rd-party-libraries}
@@ -439,7 +438,7 @@ I följande tabell visas bibliotek från tredje part som används i Communiqué 
      <a href="https://gee.cs.oswego.edu/dl/classes/EDU/oswego/cs/dl/util/sun-u.c.license.pdf" TARGET="_blank" >https://gee.cs.oswego.edu/dl/classes/EDU/oswego/cs/dl/util/sun-u.c.license.pdf</a>
 ```
 
-## Dag-JCR {#day-jcr}
+## Day JCR {#day-jcr}
 
 ```xml
      Day Management AG ("Licensor") is willing to license this
@@ -1291,4 +1290,3 @@ database. Title to copyright in this software, database and any associated
 documentation shall at all times remain with Princeton University and
 LICENSEE agrees to preserve same.
 ```
-

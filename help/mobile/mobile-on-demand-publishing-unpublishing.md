@@ -1,24 +1,23 @@
 ---
 title: Publicera inte publicera innehåll
-seo-title: Publicera inte publicera innehåll
+seo-title: Publish UnPublish Content
 description: När du känner till innehållshanteringsåtgärder för artiklar, banners och samlingar kan du följa den här sidan för att lära dig mer om hur du kan publicera ditt innehåll. Du kan också avpublicera innehållet.
-seo-description: När du känner till innehållshanteringsåtgärder för artiklar, banners och samlingar kan du följa den här sidan för att lära dig mer om hur du kan publicera ditt innehåll. Du kan också avpublicera innehållet.
+seo-description: Once you are familiar with content management actions on articles, banners, and collections, follow this page to learn about how you can publish your content. Also you can unpublish your content.
 uuid: 75179aa8-022c-4876-9664-6dd2b826174c
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-on-demand-services-app
 discoiquuid: 8c88a2ff-766f-481b-b6dc-0b3e2eed8596
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 3924bb8f-27cb-4648-8be2-9444e9a58c66
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '302'
+source-wordcount: '268'
 ht-degree: 0%
 
 ---
 
-
-# Publicera ej publicerat innehåll{#publish-unpublish-content}
+# Publicera inte publicera innehåll{#publish-unpublish-content}
 
 >[!NOTE]
 >

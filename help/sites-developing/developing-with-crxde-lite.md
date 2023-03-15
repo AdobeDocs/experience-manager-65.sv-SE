@@ -1,8 +1,8 @@
 ---
 title: Utveckla med CRXDE Lite
-seo-title: Utveckla med CRXDE Lite
+seo-title: Developing with CRXDE Lite
 description: CRXDE Lite är inbäddat i AEM och gör att du kan utföra standardutvecklingsuppgifter i webbläsaren
-seo-description: CRXDE Lite är inbäddat i AEM och gör att du kan utföra standardutvecklingsuppgifter i webbläsaren
+seo-description: CRXDE Lite is embedded into AEM and enables you to perform standard development tasks in the browser
 uuid: f4890354-d8b8-4fb9-af2f-3359f931f883
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,14 +10,13 @@ topic-tags: development-tools
 content-type: reference
 discoiquuid: 4537c1fb-f99c-42e2-a222-b037794bdb52
 docset: aem65
-translation-type: tm+mt
-source-git-commit: cb141914428f42a9755b5479ab1652c8ca51f640
+exl-id: 9e88ca55-ac3d-4857-b6b2-aeb732562664
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '2155'
+source-wordcount: '2134'
 ht-degree: 0%
 
 ---
-
 
 # Utveckla med CRXDE Lite{#developing-with-crxde-lite}
 
@@ -36,17 +35,17 @@ CRXDE Lite rekommenderas när du inte har direktåtkomst till AEM, när du utvec
 
 >[!NOTE]
 >
->Vi rekommenderar att du använder [AEM Developer Tools för Eclipse](/help/sites-developing/aem-eclipse.md) och [AEM HTL Brackets Extension](/help/sites-developing/aem-brackets.md) under projektutvecklingen.
+>Det rekommenderas att du använder [AEM Developer Tools for Eclipse](/help/sites-developing/aem-eclipse.md) och [Tillägget AEM HTML-parenteser](/help/sites-developing/aem-brackets.md) under projektutvecklingen.
 
 ## Komma igång med CRXDE Lite {#getting-started-with-crxde-lite}
 
 Så här kommer du igång med CRXDE Lite:
 
 1. Installera AEM.
-1. Ange `https://<host>:<port>/crx/de` i webbläsaren. Som standard är det `https://localhost:4502/crx/de`.
-1. Ange ditt **användarnamn** och **lösenord**. Som standard är det `admin` och `admin`.
+1. I webbläsaren anger du `https://<host>:<port>/crx/de`. Som standard är det `https://localhost:4502/crx/de`.
+1. Ange **användarnamn** och **lösenord**. Som standard är det `admin` och `admin`.
 
-1. Klicka på **OK**.
+1. Klicka **OK**.
 
 Användargränssnittet CRXDE Lite ser ut så här i webbläsaren:
 
@@ -66,15 +65,15 @@ CRXDE Lite har följande funktioner:
   </tr>
   <tr>
    <td>Widgeten Nodbana</td>
-   <td><p>Visar sökvägen till den markerade noden.</p> <p>Du kan också använda den för att hoppa till en nod, ange sökvägen manuellt eller klistra in den någon annanstans och trycka på Retur.</p> <p>Det finns även stöd för att söka efter noder med ett specifikt nodnamn. Ange namnet på noden som du vill söka efter och vänta (eller tryck på söksymbolen till höger). Du kan försöka att ange strängen <em>eke</em> i widgeten för att se hur den fungerar. Om en viss nod eller noder läses in i utforskarrutan visas listan och du kan välja sökvägen och klicka på Retur för att navigera till den. Observera att det bara fungerar för de noder som för närvarande är inlästa i CRXDE-klientprogrammet i webbläsaren. Om du vill söka i hela databasen använder du Verktyg och sedan Fråga.</p> </td>
+   <td><p>Visar sökvägen till den markerade noden.</p> <p>Du kan också använda den för att hoppa till en nod, ange sökvägen manuellt eller klistra in den någon annanstans och trycka på Retur.</p> <p>Det finns även stöd för att söka efter noder med ett specifikt nodnamn. Ange namnet på noden som du vill söka efter och vänta (eller tryck på söksymbolen till höger). Du kan försöka att ange t.ex. strängen <em>oak</em> i widgeten för att se hur den fungerar. Om en viss nod eller noder läses in i utforskarrutan visas listan och du kan välja sökvägen och klicka på Retur för att navigera till den. Observera att det bara fungerar för de noder som för närvarande är inlästa i CRXDE-klientprogrammet i webbläsaren. Om du vill söka i hela databasen använder du Verktyg och sedan Fråga.</p> </td>
   </tr>
   <tr>
    <td>Utforskarfönster</td>
-   <td><p>Visar ett träd med alla noder i databasen.</p> <p>Klicka på en nod för att visa dess egenskaper på fliken <strong>Egenskaper</strong>. När du har klickat på en nod kan du välja en åtgärd i verktygsfältet. Klicka på noden igen för att byta namn på den.</p> <p>Trädnavigeringsfilter (binokulär ikon): Med kan du filtrera noderna i databasen som namnet innehåller indatatexten för. Det gäller endast noder som har lästs in lokalt.<br /> </p> </td>
+   <td><p>Visar ett träd med alla noder i databasen.</p> <p>Klicka på en nod för att visa dess egenskaper i <strong>Egenskaper</strong> -fliken. När du har klickat på en nod kan du välja en åtgärd i verktygsfältet. Klicka på noden igen för att byta namn på den.</p> <p>Trädnavigeringsfilter (binokulär ikon): Med kan du filtrera noderna i databasen som namnet innehåller indatatexten för. Det gäller endast noder som har lästs in lokalt.<br /> </p> </td>
   </tr>
   <tr>
    <td>Redigeringsruta</td>
-   <td><p><strong></strong> Hometab: Med kan du söka efter innehåll och/eller dokumentation och få tillgång till utvecklarresurser (dokumentation, utvecklarblogg, kunskapsbas) och support (Adobe hemsida och supportcenter).<br /> </p> <p>Dubbelklicka på en fil i rutan <strong>Utforskaren</strong> för att visa dess innehåll; som till exempel en .jsp- eller .java-fil. Du kan sedan ändra den och spara ändringarna.</p> <p>När en fil har redigerats i rutan <strong>Redigera</strong> är följande verktyg tillgängliga i verktygsfältet:<br /> </p> - <strong>Visa i träd: </strong>visar filen i databasträdet.<br /> -  <strong>Sök/ersätt ...</strong>: sök och ersätt.<br /> <br /> Om du dubbelklickar på statusraden i  <strong></strong> rutan Redigeraren öppnas dialogrutan  <strong>Gå till </strong> rad där du kan ange ett visst radnummer att gå till.<br /> </td>
+   <td><p><strong>Startsida</strong> tab: Med kan du söka efter innehåll och/eller dokumentation och få tillgång till utvecklarresurser (dokumentation, utvecklarblogg, kunskapsbas) och support (Adobe hemsida och supportcenter).<br /> </p> <p>Dubbelklicka på en fil i <strong>Utforskaren</strong> ruta för att visa dess innehåll, som till exempel en .jsp- eller .java-fil. Du kan sedan ändra den och spara ändringarna.</p> <p>När en fil har redigerats i <strong>Redigera</strong> finns följande verktyg i verktygsfältet:<br /> </p> - <strong>Visa i träd: </strong>visar filen i databasträdet.<br /> - <strong>Sök/ersätt ...</strong>: sök och ersätt.<br /> <br /> Dubbelklicka på statusraden i <strong>Redigera</strong> öppnas <strong>Gå till rad</strong> så att du kan ange ett visst radnummer att gå till.<br /> </td>
   </tr>
   <tr>
    <td>Fliken Egenskaper<br /> </td>
@@ -90,15 +89,15 @@ CRXDE Lite har följande funktioner:
   </tr>
   <tr>
    <td>Fliken Konsol<br /> </td>
-   <td><p><strong>Serverloggar</strong>:</p> <p>Visar loggmeddelanden. Du kan konfigurera loggnivån, rensa konsolen, fästa vid den valda rullningspositionen och aktivera/inaktivera visningen av meddelanden.<br /> </p> <p><strong>Versionskontroll</strong>:</p> <p>Visar versionskontrollmeddelanden.<br /> </p> </td>
+   <td><p><strong>Serverloggar</strong>:</p> <p>Visar loggmeddelanden. Du kan konfigurera loggnivån, rensa konsolen, fästa vid den valda rullningspositionen och aktivera/inaktivera visning av meddelanden.<br /> </p> <p><strong>Versionskontroll</strong>:</p> <p>Visar versionskontrollmeddelanden.<br /> </p> </td>
   </tr>
   <tr>
-   <td>Fliken Build Info<br /> </td>
+   <td>Fliken Bygginformation<br /> </td>
    <td>Visar information när ett paket byggs.<br /> </td>
   </tr>
   <tr>
    <td>Uppdatera<br /> </td>
-   <td>Uppdaterar den aktuella markeringen. Ändringar från andra användare uppdateras i din vy av databasen. Ändringar som du har gjort påverkas inte.<br /> </td>
+   <td>Uppdaterar den aktuella markeringen. Ändringar från andra användare uppdateras i din vy av databasen. De ändringar du har gjort påverkas inte.<br /> </td>
   </tr>
   <tr>
    <td>Spara alla</td>
@@ -106,7 +105,7 @@ CRXDE Lite har följande funktioner:
   </tr>
   <tr>
    <td>Skapa ...<br /> </td>
-   <td><p>Listruta för att skapa följande under den markerade noden:<br /> </p> <p>- <strong>Nod</strong>: en nod med en godtycklig nodtyp<br /> </p> <p>- <strong>Fil</strong>: nt:filnod och dess nt:resursundernod</p> <p>- <strong>Mapp</strong>: nt:mappnod</p> <p>- <strong>Mall</strong>: AEM</p> <p>- <strong>Komponent</strong>: AEM</p> <p>- <strong>Dialog</strong>: AEM</p> </td>
+   <td><p>Listruta för att skapa följande under den valda noden:<br /> </p> <p>- <strong>Nod</strong>: en nod med en godtycklig nodtyp<br /> </p> <p>- <strong>Fil</strong>: nt:filnod och dess nt:resursundernod</p> <p>- <strong>Mapp</strong>: nt:mappnod</p> <p>- <strong>Mall</strong>: AEM</p> <p>- <strong>Komponent</strong>: AEM</p> <p>- <strong>Dialog</strong>: AEM</p> </td>
   </tr>
   <tr>
    <td>Ta bort<br /> </td>
@@ -134,42 +133,42 @@ CRXDE Lite har följande funktioner:
   </tr>
   <tr>
    <td>Verktyg<br /> </td>
-   <td><p>Listruta med följande verktyg:</p> <p>- <strong>Serverkonfiguration ...</strong>: för åtkomst till Felix Console.</p> <p>- <strong>Fråga ...</strong>: för att fråga databasen.</p> <p>- <strong>Behörigheter ...</strong>: för att öppna behörighetshantering, där du kan visa och lägga till behörigheter.</p> <p>- <strong>Testa åtkomstkontrollen ...</strong>: en plats där du kan testa behörigheten för en viss sökväg och/eller huvudman.</p> <p>- <strong>Exportera nodtyp</strong>: om du vill exportera nodtyper i systemet som slutnotation.</p> <p>- <strong>Importera nodtyp ...</strong>: om du vill importera nodtyper med hjälp av slutnotation.</p> <p>- <strong>Installera SiteCatalyst Debugger ...</strong>: anvisningar om hur du installerar Analytics Debugger.</p> </td>
+   <td><p>Listruta med följande verktyg:</p> <p>- <strong>Serverkonfiguration...</strong>: för åtkomst till Felix Console.</p> <p>- <strong>Fråga ...</strong>: för att fråga databasen.</p> <p>- <strong>Behörigheter ...</strong>: för att öppna behörighetshantering, där du kan visa och lägga till behörigheter.</p> <p>- <strong>Testa åtkomstkontroll ...</strong>: en plats där du kan testa behörigheten för en viss sökväg och/eller huvudman.</p> <p>- <strong>Exportera nodtyp</strong>: om du vill exportera nodtyper i systemet som slutnotation.</p> <p>- <strong>Importera nodtyp..</strong>: om du vill importera nodtyper med hjälp av slutnotation.</p> <p>- <strong>Installera SiteCatalyst Debugger ...</strong>: anvisningar om hur du installerar Analytics Debugger.</p> </td>
   </tr>
   <tr>
    <td>Inloggningswidget<br /> </td>
-   <td><p>Visar de inloggade användarna och arbetsytan de är inloggade på, t.ex. admin@crx.default.</p> <p>Klicka på den för att logga in eller logga in igen som en specifik användare. Om du inte anger en arbetsyta att logga in på loggas du in på standardarbetsytan, crx.default.</p> <p>Om du vill bläddra i databasen som anonym användare använder du <strong>anonym</strong> som inloggningsnamn och eventuellt lösenord (t.ex. blanksteg eller punkt).<br /> </p> <p>Om din auktorisering inte längre är giltig (t.ex. har upphört att gälla) visas "<strong>Obehörig - Logga in..." i inloggningswidgeten.</strong>". Klicka på den för att logga in igen.</p> </td>
+   <td><p>Visar de inloggade användarna och arbetsytan de är inloggade på, t.ex. admin@crx.default.</p> <p>Klicka på den för att logga in eller logga in igen som en specifik användare. Om du inte anger en arbetsyta att logga in på loggas du in på standardarbetsytan, crx.default.</p> <p>Om du vill bläddra i databasen som anonym användare använder du <strong>anonym</strong> som inloggningsnamn och lösenord (t.ex. blanksteg eller punkt).<br /> </p> <p>Om din auktorisering inte längre är giltig (t.ex. har den gått ut) visas "<strong>Obehörig - Logga in..</strong>". Klicka på den för att logga in igen.</p> </td>
   </tr>
  </tbody>
 </table>
 
-## Skapar en mapp {#creating-a-folder}
+## Skapa en mapp {#creating-a-folder}
 
 Så här skapar du en mapp med CRXDE Lite:
 
 1. Öppna CRXDE Lite i webbläsaren.
-1. I navigeringsrutan högerklickar du på den mapp under vilken du vill skapa den nya mappen och väljer **Skapa ...** och sedan **Skapa mapp ...**.
+1. I navigeringsrutan högerklickar du på den mapp under vilken du vill skapa den nya mappen, och väljer **Skapa ...** sedan **Skapa mapp...**.
 
-1. Ange mappen **Namn** och klicka på **OK**.
+1. Ange mappen **Namn** och klicka **OK**.
 
-1. Klicka på **Spara alla** för att spara ändringarna på servern.
+1. Klicka **Spara alla** för att spara ändringarna på servern.
 
 ## Skapa en mall {#creating-a-template}
 
 Så här skapar du en mall med CRXDE Lite:
 
 1. Öppna CRXDE Lite i webbläsaren.
-1. I navigeringsrutan högerklickar du på den mapp där du vill skapa mallen och väljer **Skapa ...** och sedan **Skapa mall ...**.
+1. Högerklicka på den mapp där du vill skapa mallen i navigeringsrutan och välj **Skapa ...** sedan **Skapa mall...**.
 
-1. Ange **etiketten**, **Titel**, **Beskrivning**, **Resurstyp** och **Rankning** för mallen. Klicka på **Nästa**.
+1. Ange **Etikett**, **Titel**, **Beskrivning**, **Resurstyp** och **Rankning** av mallen. Klicka på **Nästa**.
 
-1. Det här steget är valfritt: Ange **Tillåtna sökvägar**. Klicka på **Nästa**
+1. Det här steget är valfritt: ange **Tillåtna sökvägar**. Klicka på **Nästa**
 
-1. Det här steget är valfritt: Ange **Tillåtna överordnade**. Klicka på **Nästa**.
+1. Det här steget är valfritt: ange **Tillåtna överordnade**. Klicka på **Nästa**.
 
-1. Det här steget är valfritt: Ange **Tillåtna underordnade**. Klicka på **OK**.
+1. Det här steget är valfritt: ange **Tillåtna underordnade**. Klicka **OK**.
 
-1. Klicka på **Spara alla** för att spara ändringarna på servern.
+1. Klicka **Spara alla** för att spara ändringarna på servern.
 
 Det skapar:
 
@@ -177,26 +176,26 @@ Det skapar:
 
 * En underordnad nod av typen `cq:PageContent` med egenskaper för sidinnehåll
 
-Du kan lägga till egenskaper i mallen: finns i avsnittet [Skapa en egenskap](#creating-a-property).
+Du kan lägga till egenskaper i mallen: referera till [Skapa en egenskap](#creating-a-property) -avsnitt.
 
-## Skapar en komponent {#creating-a-component}
+## Skapa en komponent {#creating-a-component}
 
-Funktionen som beskrivs här är bara tillgänglig om CQ5 är installerat, det vill säga om nodtypen `cq:Component` är tillgänglig i databasen.
+Funktionen som beskrivs här är bara tillgänglig om CQ5 är installerat, det vill säga om nodtypen `cq:Component` är tillgängligt i databasen.
 
 Så här skapar du en komponent med CRXDE Lite:
 
 1. Öppna CRXDE Lite i webbläsaren.
-1. I navigeringsrutan högerklickar du på den mapp där du vill skapa komponenten och väljer **Skapa ...** och sedan **Skapa komponent ...**.
+1. Högerklicka på den mapp där du vill skapa komponenten i navigeringsrutan och välj **Skapa ...** sedan **Skapa komponent...**.
 
-1. Ange **etiketten**, **Titel**, **Beskrivning**, **Superresurstyp** och **Grupp** för komponenten. Klicka på **Nästa**.
+1. Ange **Etikett**, **Titel**, **Beskrivning**, **Superresurstyp** och **Grupp** för komponenten. Klicka på **Nästa**.
 
-1. Det här steget är valfritt: Ange komponentegenskaperna **Är behållare,** **Ingen dekoration**, **Cellnamn** och **Dialogsökväg**. Klicka på **Nästa**.
+1. Det här steget är valfritt: ange komponentegenskaperna **Är behållare,** **Ingen dekoration**, **Cellnamn** och **Dialogrutesökväg**. Klicka på **Nästa**.
 
-1. Det här steget är valfritt: Ange komponentegenskapen **Tillåtna överordnade**. Klicka på **Nästa**.
+1. Det här steget är valfritt: ange egenskapen component **Tillåtna överordnade**. Klicka på **Nästa**.
 
-1. Det här steget är valfritt: Ange komponentegenskapen **Tillåtna underordnade**. Klicka på **OK**.
+1. Det här steget är valfritt: ange egenskapen component **Tillåtna underordnade**. Klicka **OK**.
 
-1. Klicka på **Spara alla** för att spara ändringarna på servern.
+1. Klicka **Spara alla** för att spara ändringarna på servern.
 
 Det skapar:
 
@@ -209,11 +208,11 @@ Det skapar:
 Så här skapar du en dialog med CRXDE Lite:
 
 1. Öppna CRXDE Lite i webbläsaren.
-1. Högerklicka på komponenten där du vill skapa dialogrutan i navigeringsrutan och välj **Skapa ...** och sedan **Skapa dialogruta ...**.
+1. Högerklicka på komponenten där du vill skapa dialogrutan i navigeringsrutan och välj **Skapa ...** sedan **Skapa dialogruta...**.
 
-1. Ange **etiketten** och **titeln**. Klicka på **OK**.
+1. Ange **Etikett** och **Titel**. Klicka **OK**.
 
-1. Klicka på **Spara alla** l för att spara ändringarna på servern.
+1. Klicka **Spara alla** Spara ändringarna på servern.
 
 En dialogruta med följande struktur skapas:
 
@@ -228,9 +227,9 @@ Du kan också använda Dialogruteredigeraren för att redigera en dialogruta. Om
 Så här skapar du en nod med CRXDE Lite:
 
 1. Öppna CRXDE Lite i webbläsaren.
-1. I navigeringsrutan högerklickar du på den nod där du vill skapa den nya noden och väljer **Skapa ...** och sedan **Skapa nod ...**.
-1. Ange **namn** och **typ**. Klicka på **OK**.
-1. Klicka på **Spara alla** för att spara ändringarna på servern.
+1. Högerklicka på noden där du vill skapa den nya noden i navigeringsrutan och välj **Skapa ...** sedan **Skapa nod...**.
+1. Ange **Namn** och **Typ**. Klicka **OK**.
+1. Klicka **Spara alla** för att spara ändringarna på servern.
 
 Nu kan du anpassa noden efter dina behov genom att ändra egenskaper eller skapa nya noder.
 
@@ -238,70 +237,70 @@ Nu kan du anpassa noden efter dina behov genom att ändra egenskaper eller skapa
 >
 >De flesta redigeringsåtgärderna, inklusive Skapa nod, sparar alla ändringar i minnet och lagrar dem bara i databasen när de sparas (med knappen &quot;Spara alla&quot;). Vissa åtgärder, till exempel move, sparas dock automatiskt.
 >
->Valideringen av om den nyskapade noden tillåts av den överordnade nodens nodtyp utförs också av JCR-databasen först när ändringarna sparas. Om du får ett felmeddelande när du sparar en nod kontrollerar du om innehållsstrukturen är giltig (du kan t.ex. inte skapa en `nt:unstructured`-nod som underordnad `nt:folder`-nod).
+>Valideringen av om den nyskapade noden tillåts av den överordnade nodens nodtyp utförs också av JCR-databasen först när ändringarna sparas. Om du får ett felmeddelande när du sparar en nod kontrollerar du om innehållsstrukturen är giltig (du kan t.ex. inte skapa en `nt:unstructured` nod som underordnad till `nt:folder` nod).
 
-## Skapar en egenskap {#creating-a-property}
+## Skapa en egenskap {#creating-a-property}
 
 Så här skapar du en egenskap med CRXDE Lite:
 
 1. Öppna CRXDE Lite i webbläsaren.
 1. I navigeringsrutan markerar du den nod där du vill lägga till den nya egenskapen.
-1. På fliken **Egenskaper** i den nedre rutan anger du **Namn**, **Typ** och **Värde**. Klicka på **Lägg till**.
+1. I **Egenskaper** i den nedre rutan anger du **Namn**, **Typ** och **Värde**. Klicka **Lägg till**.
 
-1. Klicka på **Spara alla** för att spara ändringarna på servern.
+1. Klicka **Spara alla** för att spara ändringarna på servern.
 
 ## Skapa ett skript {#creating-a-script}
 
 Så här skapar du ett nytt skript:
 
 1. Öppna CRXDE Lite i webbläsaren.
-1. I navigeringsrutan högerklickar du på den komponent där du vill skapa skriptet och väljer **Skapa ...** och sedan **Skapa fil ...**.
+1. Högerklicka på den komponent där du vill skapa skriptet i navigeringsrutan och välj **Skapa ...** sedan **Skapa fil...**.
 
-1. Ange filen **Namn** inklusive filnamnstillägget. Klicka på **OK**.
+1. Ange filen **Namn** inklusive dess förlängning. Klicka **OK**.
 
 1. Den nya filen öppnas som en flik i rutan Redigera.
 1. Redigera filen.
-1. Klicka på **Spara alla** för att spara ändringarna.
+1. Klicka **Spara alla** för att spara ändringarna.
 
 ## Exportera och importera nodtyper {#exporting-and-importing-node-types}
 
-Med CRXDE Lite kan du importera och/eller exportera nodtypsdefinitioner i [CND-notationen (Compact Namespace and Node Type Definition)](https://jackrabbit.apache.org/jcr/node-type-notation.html).
+Med CRXDE Lite kan du importera och/eller exportera nodtypsdefinitioner i [CND-notation (Compact Namespace and Node Type Definition)](https://jackrabbit.apache.org/jcr/node-type-notation.html).
 
 Så här exporterar du en nodtypsdefinition:
 
 1. Öppna CRXDE Lite i webbläsaren.
 1. Välj önskad nod.
-1. Välj **Verktyg** och sedan **Exportera nodtyp**.
+1. Välj **verktyg** sedan **Exportera nodtyp**.
 
 1. Definitionen visas i syntaxen i webbläsaren. Spara informationen om det behövs.
 
 Så här importerar du en nodtypsdefinition:
 
 1. Öppna CRXDE Lite i webbläsaren.
-1. Välj **Verktyg** och sedan **Importera nodtyp...**.
+1. Välj **verktyg** sedan **Importera nodtyp...**.
 
 1. Ange CND-notation för definitionen i textrutan.
-1. Markera **Tillåt uppdatering** om du uppdaterar en befintlig definition.
-1. Klicka på **Importera**.
+1. Kontrollera **Tillåt uppdatering** om du uppdaterar en befintlig definition.
+1. Klicka **Importera**.
 
-## Loggar {#logging}
+## Loggning {#logging}
 
 Med CRXDE Lite kan du visa filen `error.log` som finns i filsystemet på `<crx-install-dir>/crx-quickstart/server/logs` och filtrera den med rätt loggnivå. Gör så här:
 
 1. Öppna CRXDE Lite i webbläsaren.
-1. På fliken **Konsol** längst ned i fönstret väljer du **Serverloggar** i listrutan till höger.
+1. I **Konsol** längst ned i fönstret väljer du **Serverloggar**.
 
-1. Klicka på ikonen **Stopp** för att visa meddelandena.
+1. Klicka på **Stoppa** -ikonen för att visa meddelandena.
 
 Du kan:
 
-* Justera loggparametrarna i Felix Console genom att klicka på ikonen **Loggningskonfigurationer**.
-* Rensa meddelandena genom att klicka på ikonen **Pensel**.
-* Fäst meddelandet vid den aktuella markeringen genom att klicka på ikonen **Fäst**.
-* Aktivera eller inaktivera visningen av meddelanden genom att klicka på ikonen **Stoppa**.
+* Justera loggparametrarna i Felix Console genom att klicka på **Loggningskonfigurationer** ikon.
+* Rensa meddelandena genom att klicka på knappen **Pensel** ikon.
+* Fäst meddelandet vid den aktuella markeringen genom att klicka på knappen **Fäst** ikon.
+* Aktivera eller inaktivera visning av meddelanden genom att klicka på **Stoppa** ikon.
 
 ## Åtkomstkontroll {#access-control}
 
 >[!NOTE]
 >
->Mer information finns i [Administrera användare, grupper och åtkomsträttigheter](/help/sites-administering/user-group-ac-admin.md).
+>Se [Administrera användare, grupper och åtkomsträttigheter](/help/sites-administering/user-group-ac-admin.md) för mer information.

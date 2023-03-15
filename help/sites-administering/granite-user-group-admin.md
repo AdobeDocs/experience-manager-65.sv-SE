@@ -1,8 +1,8 @@
 ---
 title: Granitåtgärder - användar- och gruppadministration
-seo-title: Granitåtgärder - användar- och gruppadministration
+seo-title: Granite Operations - User and Group Administration
 description: Läs mer om administration av Granite-användare och grupper.
-seo-description: Läs mer om administration av Granite-användare och grupper.
+seo-description: Learn about Granite user and group administration.
 uuid: 7b6b7767-712c-4cc8-8d90-36f26280d6e3
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,10 +11,9 @@ content-type: reference
 discoiquuid: 95ab2e54-0f8d-49e0-ad20-774875f6f80a
 exl-id: f3477d21-7e9a-4588-94e8-496bc42434a8
 feature: Security
-translation-type: tm+mt
 source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
 workflow-type: tm+mt
-source-wordcount: '937'
+source-wordcount: '923'
 ht-degree: 1%
 
 ---
@@ -23,19 +22,19 @@ ht-degree: 1%
 
 Eftersom Granite innehåller CRX-databasimplementeringen av JCR API-specifikationen har det en egen användar- och gruppadministration.
 
-De här kontona är den underliggande grunden för [AEM konton](/help/sites-administering/security.md) och eventuella kontoändringar som görs i Granite-administrationen återspeglas om/när kontona nås från [AEM användarkonsolen](/help/sites-administering/security.md#accessing-user-administration-with-the-security-console) (t.ex. `http://localhost:4502/useradmin`). På AEM användarkonsol kan du även hantera behörigheter och andra AEM.
+Dessa konton utgör den underliggande grunden för [AEM](/help/sites-administering/security.md) och eventuella kontoändringar som görs i Granitadministrationen kommer att återspeglas om/när kontona hämtas från [AEM](/help/sites-administering/security.md#accessing-user-administration-with-the-security-console) (t.ex. `http://localhost:4502/useradmin`). På AEM användarkonsol kan du även hantera behörigheter och andra AEM.
 
-Administrationskonsolerna för vissa användare och grupper finns båda tillgängliga i **[Verktyg](/help/sites-administering/tools-consoles.md)**-konsolen för det pekoptimerade användargränssnittet:
+Administrationskonsoler för Granite-användare och grupper är båda tillgängliga från **[verktyg](/help/sites-administering/tools-consoles.md)** konsol för det pekoptimerade användargränssnittet:
 
 ![chlimage_1-72](assets/chlimage_1-72a.png)
 
-Om du väljer **Användare** eller **Grupper** från verktygskonsolen öppnas rätt konsol. I båda kan du vidta åtgärder antingen genom att använda kryssrutan och sedan åtgärder från verktygsfältet, eller genom att öppna kontoinformationen via länken under **Namn**.
+Välj antingen **Användare** eller **Grupper** från verktygskonsolen öppnar rätt konsol. I båda kan du vidta åtgärder antingen genom att använda kryssrutan och sedan åtgärder från verktygsfältet, eller genom att öppna kontoinformationen via länken under **Namn**.
 
 * [Användaradministration](#user-administration)
 
    ![chlimage_1-73](assets/chlimage_1-73a.png)
 
-   **Användare**-konsolen visar en lista:
+   The **Användare** konsollistor:
 
    * användarnamnet
    * användarens inloggningsnamn (kontonamn)
@@ -45,7 +44,7 @@ Om du väljer **Användare** eller **Grupper** från verktygskonsolen öppnas r�
 
    ![chlimage_1-74](assets/chlimage_1-74a.png)
 
-   I konsollistan **Grupper**:
+   The **Grupper** konsollistor:
 
    * gruppnamnet
    * gruppbeskrivningen
@@ -55,11 +54,11 @@ Om du väljer **Användare** eller **Grupper** från verktygskonsolen öppnas r�
 
 ### Lägga till en ny användare {#adding-a-new-user}
 
-1. Använd ikonen **Lägg till användare**:
+1. Använd **Lägg till användare** ikon:
 
    ![](do-not-localize/chlimage_1-1.png)
 
-1. Formuläret **Skapa användare** öppnas:
+1. The **Skapa användare** formuläret öppnas:
 
    ![chlimage_1-75](assets/chlimage_1-75a.png)
 
@@ -93,9 +92,9 @@ Om du väljer **Användare** eller **Grupper** från verktygskonsolen öppnas r�
    * **Om**
    * **Kontoinställningar**
 
-      * ****
-StatusDu kan flagga kontot som antingen 
-**aktiv** eller  **inaktiv**.
+      * **Status**
+Du kan flagga kontot som antingen 
+**aktiv** eller **inaktiv**.
    * **Foto**
 
       Här kan du ladda upp ett foto som ska användas som avatar.
@@ -106,17 +105,17 @@ StatusDu kan flagga kontot som antingen
 
    * **Lägg till användare i grupper**
 
-      Använd listrutan för val för att välja grupper som användaren ska vara medlem i. När du har valt det här alternativet använder du **X** efter namnet för att avmarkera det innan du sparar.
+      Använd listrutan för val för att välja grupper som användaren ska vara medlem i. Använd **X** efter namnet som ska avmarkeras innan du sparar.
 
    * **Grupper**
 
-      En lista över grupper som användaren är medlem i. Använd namnet **X** för att avmarkera innan du sparar.
+      En lista över grupper som användaren är medlem i. Använd **X** efter namnet som ska avmarkeras innan du sparar.
 
 
 1. När du har definierat användarkontot:
 
-   * **Avbryt** om du vill avbryta registreringen.
-   * **Slutför registreringen** genom att spara. Ett meddelande visas om du skapar användarkontot.
+   * **Avbryt** för att avbryta registreringen.
+   * **Spara** för att slutföra registreringen. Ett meddelande visas om du skapar användarkontot.
 
 ### Redigera en befintlig användare {#editing-an-existing-user}
 
@@ -132,11 +131,11 @@ StatusDu kan flagga kontot som antingen
 
 1. Gå till användarinformationen från länken under användarnamnet i användarkonsolen.
 
-1. Nu kan du redigera informationen som i [Lägga till en ny användare](#adding-a-new-user). Under **Kontoinställningar** finns en länk för **Ändra lösenord**.
+1. Nu kan du redigera informationen som i [Lägga till en ny användare](#adding-a-new-user). Under **Kontoinställningar** det finns en länk för **Ändra lösenord**.
 
    ![chlimage_1-76](assets/chlimage_1-76a.png)
 
-1. Dialogrutan **Ändra lösenord** öppnas. Ange och skriv det nya lösenordet igen tillsammans med ditt lösenord. Använd **OK** för att bekräfta ändringarna.
+1. The **Ändra lösenord** öppnas. Ange och skriv det nya lösenordet igen tillsammans med ditt lösenord. Använd **OK** för att bekräfta ändringarna.
 
    ![chlimage_1-77](assets/chlimage_1-77a.png)
 
@@ -145,7 +144,7 @@ StatusDu kan flagga kontot som antingen
 ### Snabbgruppstilldelning {#quick-group-assignment}
 
 1. Använd kryssrutan för att flagga en eller flera användare.
-1. Använd ikonen **Grupper**:
+1. Använd **Grupper** ikon:
 
    ![](do-not-localize/chlimage_1-2.png)
 
@@ -157,13 +156,13 @@ StatusDu kan flagga kontot som antingen
 
 1. När du har tilldelat, eller inte tilldelat, grupperna efter behov:
 
-   * **Avbryt** om du vill avbryta ändringarna
-   * **Bekräfta ändringarna genom att** spara
+   * **Avbryt** för att avbryta ändringarna
+   * **Spara** för att bekräfta ändringarna
 
 ### Tar bort befintlig användarinformation {#deleting-existing-user-details}
 
 1. Använd kryssrutan för att flagga en eller flera användare.
-1. Använd ikonen **Ta bort** för att ta bort användarinformationen:
+1. Använd **Ta bort** -ikon för att ta bort användarinformationen:
 
    ![](do-not-localize/chlimage_1-3.png)
 
@@ -177,7 +176,7 @@ StatusDu kan flagga kontot som antingen
 
    ![](do-not-localize/chlimage_1-4.png)
 
-1. Formuläret **Skapa grupp** öppnas:
+1. The **Skapa grupp** formuläret öppnas:
 
    ![chlimage_1-79](assets/chlimage_1-79a.png)
 
@@ -197,40 +196,40 @@ StatusDu kan flagga kontot som antingen
 
    * **Lägg till medlemmar i grupp**
 
-      Använd listrutan för val för att välja användare som ska läggas till i gruppen. När du har valt det här alternativet använder du **X** efter namnet för att avmarkera det innan du sparar.
+      Använd listrutan för val för att välja användare som ska läggas till i gruppen. Använd **X** efter namnet som ska avmarkeras innan du sparar.
 
    * **Gruppmedlemmar**
 
-      En lista över användare i gruppen. Använd namnet **X** för att avmarkera innan du sparar.
+      En lista över användare i gruppen. Använd **X** efter namnet som ska avmarkeras innan du sparar.
 
 1. När du har definierat gruppen använder du:
 
-   * **Avbryt** om du vill avbryta registreringen.
-   * **Slutför registreringen** genom att spara. Skapandet av gruppen bekräftas med ett meddelande.
+   * **Avbryt** för att avbryta registreringen.
+   * **Spara** för att slutföra registreringen. Skapandet av gruppen bekräftas med ett meddelande.
 
 ### Redigera en befintlig grupp {#editing-an-existing-group}
 
 1. Gå till gruppinformationen från länken under gruppnamnet i gruppkonsolen.
 
-1. Nu kan du redigera och spara informationen som i [Lägg till en ny grupp](#adding-a-new-group).
+1. Nu kan du redigera och spara informationen som i [Lägga till en ny grupp](#adding-a-new-group).
 
 ### Kopiera en befintlig grupp {#copying-an-existing-group}
 
 1. Använd kryssrutan för att flagga en grupp.
-1. Använd ikonen **Kopiera** för att kopiera gruppinformationen:
+1. Använd **Kopiera** om du vill kopiera gruppinformationen:
 
    ![](do-not-localize/chlimage_1-5.png)
 
-1. Formuläret **Redigera gruppinställningar** öppnas.
+1. The **Redigera gruppinställningar** kommer att öppnas.
 
-   Grupp-ID:t är detsamma som det ursprungliga, men är prefixat med `Copy of`. Du måste redigera detta eftersom ID:t inte får innehålla blanksteg. All annan information är densamma som originalet.
+   Grupp-ID:t är detsamma som det ursprungliga, men föregås av `Copy of`. Du måste redigera detta eftersom ID:t inte får innehålla blanksteg. All annan information är densamma som originalet.
 
-   Nu kan du redigera och spara informationen som i [Lägg till en ny grupp](#adding-a-new-group).
+   Nu kan du redigera och spara informationen som i [Lägga till en ny grupp](#adding-a-new-group).
 
-### Tar bort en befintlig grupp {#deleting-an-existing-group}
+### Ta bort en befintlig grupp {#deleting-an-existing-group}
 
 1. Använd kryssrutan för att flagga en eller flera grupper.
-1. Använd ikonen **Ta bort** för att ta bort gruppinformationen:
+1. Använd **Ta bort** -ikon för att ta bort gruppinformationen:
 
    ![](do-not-localize/chlimage_1-6.png)
 

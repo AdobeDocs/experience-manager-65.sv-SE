@@ -83,11 +83,11 @@ Utför följande steg för att skapa och distribuera AEM Forms-program.
 
 1. I guiden Skapa appaket väljer du väder eller inte det väder som du vill överföra din app till Windows Store och klickar sedan på **Nästa**.
 
-   ![createapppackagesguide1](assets/createapppackageswizard1.png)
+   ![createapppackageswizard1](assets/createapppackageswizard1.png)
 
 1. Gör önskade ändringar i parametrarna, till exempel version och utdataplats för appbygget.
 
-   ![createapppackagesguide2](assets/createapppackageswizard2.png)
+   ![createapppackageswizard2](assets/createapppackageswizard2.png)
 
 1. När projektet har byggts kan du installera programmet med:
 

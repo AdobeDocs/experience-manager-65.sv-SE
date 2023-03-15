@@ -1,8 +1,8 @@
 ---
 title: Mobil med innehållssynkronisering
-seo-title: Mobil med innehållssynkronisering
+seo-title: Mobile with Content Sync
 description: Följ den här sidan för att lära dig mer om Content Sync for Adobe PhoneGap Enterprise med AEM.
-seo-description: Följ den här sidan för att lära dig mer om Content Sync for Adobe PhoneGap Enterprise med AEM.
+seo-description: Follow this page to learn about Content Sync for Adobe PhoneGap Enterprise with AEM.
 uuid: c3a82171-e070-4e32-b1ef-26e65ae23d99
 contentOwner: User
 content-type: reference
@@ -10,14 +10,13 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: 923fc031-1a06-4a9d-94da-a2a4e82c54ee
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+exl-id: 2cadd9c5-4335-48d0-8d1c-941fca717409
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '2989'
+source-wordcount: '2971'
 ht-degree: 0%
 
 ---
-
 
 # Mobil med innehållssynkronisering{#mobile-with-content-sync}
 
@@ -27,7 +26,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Det här dokumentet ingår i [Komma igång med AEM Mobile](/help/mobile/getting-started-aem-mobile.md) Guide, en rekommenderad startpunkt för AEM Mobile referens.
+>Det här dokumentet är en del av [Komma igång med AEM Mobile](/help/mobile/getting-started-aem-mobile.md) Guide, en rekommenderad startpunkt för AEM Mobile.
 
 Använd Innehållssynkronisering för att paketera innehåll så att det kan användas i inbyggda mobilprogram. Sidor som har skapats i AEM kan användas som appinnehåll, även när enheten är offline. Eftersom AEM bygger på webbstandarder fungerar de på olika plattformar så att du kan bädda in dem i alla inbyggda wrapper. Den här strategin minskar utvecklingsinsatserna och gör att du enkelt kan uppdatera appinnehåll.
 
@@ -35,7 +34,7 @@ Använd Innehållssynkronisering för att paketera innehåll så att det kan anv
 >
 >PhoneGap-appar som du skapar med AEM verktyg är redan konfigurerade att använda AEM sidor som innehåll via Innehållssynkronisering.
 
-I ramverket för innehållssynkronisering skapas en arkivfil som innehåller webbinnehållet. Innehållet kan vara allt från enkla sidor, bilder, PDF-filer eller hela webbprogram. API:t för innehållssynkronisering ger åtkomst till arkivfilen från mobilappar eller byggprocesser så att innehållet kan hämtas och inkluderas i appen.
+I ramverket för innehållssynkronisering skapas en arkivfil som innehåller webbinnehållet. Innehållet kan vara allt från enkla sidor, bilder och PDF eller hela webbprogram. API:t för innehållssynkronisering ger åtkomst till arkivfilen från mobilappar eller byggprocesser så att innehållet kan hämtas och inkluderas i appen.
 
 Följande stegsekvens visar ett typiskt användningsfall för Innehållssynkronisering:
 
@@ -48,13 +47,13 @@ Följande stegsekvens visar ett typiskt användningsfall för Innehållssynkroni
 
 >[!NOTE]
 >
->Mer information om riktlinjer för utveckling av hanterare för innehållssynkronisering finns i [Utveckla hanterare för innehållssynkronisering](/help/mobile/contentsync-app-handlers.md).
+>Mer information om riktlinjer för utveckling av Content Sync-hanterare finns i Apphanterare. [Developing Content Sync Handlers](/help/mobile/contentsync-app-handlers.md).
 
 ## Konfigurera innehåll för innehållssynkronisering {#configuring-the-content-sync-content}
 
 Skapa en konfiguration för innehållssynkronisering för att ange innehållet i ZIP-filen som skickas till klienten. Du kan skapa valfritt antal konfigurationer för innehållssynkronisering. Varje konfiguration har ett namn för identifieringsändamål.
 
-Om du vill skapa en konfiguration för innehållssynkronisering lägger du till en `cq:ContentSyncConfig`-nod i databasen med egenskapen `sling:resourceType` inställd på `contentsync/config`. Noden `cq:ContentSyncConfig` kan finnas var som helst i databasen, men noden måste vara tillgänglig för användare i den AEM publiceringsinstansen. Därför bör du lägga till noden under `/content`.
+Om du vill skapa en konfiguration för innehållssynkronisering lägger du till en `cq:ContentSyncConfig` till databasen med `sling:resourceType` egenskap inställd på `contentsync/config`. The `cq:ContentSyncConfig` noden kan finnas var som helst i databasen, men noden måste vara tillgänglig för användare på AEM publiceringsinstans. Därför bör du lägga till noden nedan `/content`.
 
 Om du vill ange innehållet i ZIP-filen för innehållssynkronisering lägger du till underordnade noder i cq:ContentSyncConfig-noden. Följande egenskaper för varje underordnad nod identifierar ett innehållsobjekt som ska inkluderas och hur det bearbetas när det läggs till:
 
@@ -79,24 +78,24 @@ När AEM är installerat kan medlemmar i administratörsgruppen hämta från inn
 
 Tjänsten Day CQ Content Sync Manager styr åtkomsten till Content Sync. Konfigurera den här tjänsten för att ange den användare eller grupp som kan hämtas från innehållssynkronisering som standard.
 
-Om du [konfigurerar tjänsten med webbkonsolen](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) anger du namnet på användaren eller gruppen som värdet för egenskapen Authorizable för återställningscache.
+Om du [konfigurera tjänsten med webbkonsolen](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)skriver du namnet på användaren eller gruppen som värdet på egenskapen Authorizable för återställningscache.
 
-Om du [konfigurerar i databasen](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository) använder du följande information om tjänsten:
+Om du [konfigurera i databasen](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)använder du följande information om tjänsten:
 
 * PID: com.day.cq.contentsync.impl.ContentSyncManagerImpl
 * Egenskapsnamn: contentsync.fallback.authzable
 
-#### Åsidosätta hämtningsåtkomst för en Content Sync-cache {#overriding-download-access-for-a-content-sync-cache}
+#### Åsidosätta hämtningsåtkomst för en cache för innehållssynkronisering {#overriding-download-access-for-a-content-sync-cache}
 
-Om du vill konfigurera hämtningsåtkomst för en specifik konfiguration för innehållssynkronisering lägger du till följande egenskap i noden `cq:ContentSyncConfig`:
+Om du vill konfigurera hämtningsåtkomst för en viss konfiguration för innehållssynkronisering lägger du till följande egenskap i `cq:ContentSyncConfig` nod:
 
 * Namn: auktoriseringsbar
 * Typ: Sträng
 * Värde: Namnet på den användare eller grupp som kan hämtas.
 
-Med din app kan användare till exempel installera uppdateringar direkt från innehållssynkronisering. Om du vill att alla användare ska kunna hämta uppdateringen anger du värdet `everyone` för den auktoriserbara egenskapen.
+Med din app kan användare till exempel installera uppdateringar direkt från innehållssynkronisering. Om du vill att alla användare ska kunna hämta uppdateringen anger du värdet för egenskapen authable till `everyone`.
 
-Om noden `cq:ContentSyncConfig` inte har någon auktoriseringsbar egenskap avgör standardanvändaren eller gruppen som är konfigurerad för auktoriseringsbar reservcache-egenskap för tjänsten för innehålls-synkroniseringshanteraren för Dag vilka som kan hämtas.
+Om `cq:ContentSyncConfig` noden har ingen auktoriseringsbar egenskap, standardanvändaren eller standardgruppen som är konfigurerad för egenskapen Autentiserbar för reservcache i tjänsten för dagen CQ Content Sync Manager avgör vem som kan hämta.
 
 ### Konfigurera användaren för uppdatering av en cache för innehållssynkronisering {#configuring-the-user-for-updating-a-content-sync-cache}
 
@@ -116,30 +115,30 @@ Om cq:ContentSyncConfig-noden inte har någon updateuser-egenskap, uppdaterar st
 
 Bearbetningen kan omfatta allt från rendering av enkel JSON till fullständig rendering av sidor, inklusive deras refererade resurser. I det här avsnittet visas tillgängliga konfigurationstyper och deras specifika parametrar:
 
-**** copyKopiera filer och mappar.
+**copy** Kopiera bara filer och mappar.
 
-* **sökväg**  - Om sökvägen pekar på en enda fil kopieras endast filen. Om den pekar på en mapp (inklusive sidnoder) kopieras alla filer och mappar nedan.
+* **bana** - Om sökvägen pekar på en enda fil kopieras bara filen. Om den pekar på en mapp (inklusive sidnoder) kopieras alla filer och mappar nedan.
 
-**Innehåll** contentRendera innehåll med standardbearbetning av Sling-begäranden.
+**innehåll** Återge innehåll med standardbehandling av Sling-begäran.
 
-* **path**  - Sökväg till resurs som ska skrivas ut.
-* **extension** - Extension that should be used in the request. Vanliga exempel är *html* och *json*, men alla andra tillägg är möjliga.
+* **bana** - Sökväg till en resurs som ska vara utdata.
+* **extension** - Tillägg som ska användas i begäran. Vanliga exempel är *html* och *json*, men alla andra tillägg är möjliga.
 
-* **väljare**  - Valfria väljare avgränsade med punkt. Vanliga exempel är *touch* för återgivning av mobilversioner av en sida eller *infinity* för JSON-utdata.
+* **väljare** - Valfria väljare avgränsade med punkt. Vanliga exempel är *touch* för återgivning av mobilversioner av en sida eller *oändlighet* för JSON-utdata.
 
 **clientlib** Paketera ett JavaScript- eller CSS-klientbibliotek.
 
-* **path**  - Sökväg till klientbibliotekets rot.
-* **extension**  - Type of client library. Detta bör vara inställt på *js* eller *css* för tillfället.
+* **bana** - Sökväg till klientbibliotekets rot.
+* **extension** - Typ av klientbibliotek. Detta bör anges till antingen *js* eller *css* för tillfället.
 
-* **includeFolders**  - Type är en matris med strängar, och låter användaren ange ytterligare mappar att skanna i klientbiblioteket för att hämta filer (till exempel anpassade teckensnitt).
+* **includeFolders** - Typ är en matris med strängar och låter användaren ange ytterligare mappar som ska genomsökas i klientbiblioteket för att hämta filer (till exempel anpassade teckensnitt).
 
 **resurser**
 
 Samla in ursprungliga återgivningar av resurser.
 
-* **path**  - Sökväg till en resursmapp under /content/dam.
-* **renderingar**  - Typ är en array med strängar, där användaren kan ange vilka renderingar som ska användas i stället för standardbilden. I följande lista sammanfattas några färdiga återgivningar, men du kan även använda alla återgivningar som skapas i arbetsflödet:
+* **bana** - Sökväg till en resursmapp nedanför /content/dam.
+* **återgivningar** - Typ är en array med strängar, som låter användaren ange vilka återgivningar som ska användas i stället för standardbilden. I följande lista sammanfattas några färdiga återgivningar, men du kan även använda alla återgivningar som skapas i arbetsflödet:
 
    * *original*
    * *cq5dam.thumbnail.48.48.png*
@@ -147,29 +146,29 @@ Samla in ursprungliga återgivningar av resurser.
    * *cq5dam.thumbnail.140.100.png*
    * *cq5dam.web.1280.1280.png*
 
-**** bildSamla in en bild.
+**image** Samla in en bild.
 
-* **path**  - Sökväg till en bildresurs.
+* **bana** - Sökväg till en bildresurs.
 
 Bildtypen används för att inkludera logotypen We.Retail i zip-filen.
 
-**** sidorÅterge AEM sidor och samla in refererade resurser.
+**sidor** Återge AEM sidor och samla in refererade resurser.
 
-* **path**  - Bana till en sida.
-* **extension** - Extension that should be used in the request. För sidor är detta nästan alltid *html*, men andra är fortfarande möjliga.
+* **bana** - Sökväg till en sida.
+* **extension** - Tillägg som ska användas i begäran. För sidor är det här nästan alltid *html* men andra är fortfarande möjliga.
 
-* **väljare**  - Valfria väljare avgränsade med punkt. Vanliga exempel är *touch* för återgivning av mobilversioner av en sida.
+* **väljare** - Valfria väljare avgränsade med punkt. Vanliga exempel är *touch* för återgivning av mobilversioner av en sida.
 
-* **deep**  - Valfri boolesk egenskap som avgör om underordnade sidor också ska inkluderas. Standardvärdet är *true.*
+* **djup** - Valfri boolesk egenskap som avgör om underordnade sidor också ska inkluderas. Standardvärdet är *true.*
 
-* **includeImages**  - Valfri boolesk egenskap som avgör om bilder ska inkluderas. Standardvärdet är *true*.
-Som standard beaktas endast bildkomponenter med en resurstyp för grund/komponenter/bild. Du kan lägga till fler resurstyper genom att konfigurera **Day CQ WCM Pages Update Handler** i webbkonsolen.
+* **includeImages** - Valfri boolesk egenskap som avgör om bilder ska inkluderas. Standardvärdet är *true*.
+Som standard beaktas endast bildkomponenter med en resurstyp för grund/komponenter/bild. Du kan lägga till fler resurstyper genom att konfigurera **CQ WCM-siduppdateringshanterare för dag** i webbkonsolen.
 
-**rewrite** The rewrite node define how the links are rewritten in the exported page. De omskrivna länkarna kan antingen peka på filerna som finns i ZIP-filen eller på resurserna på servern.
+**rewrite** Noden rewrite definierar hur länkarna skrivs om på den exporterade sidan. De omskrivna länkarna kan antingen peka på filerna som finns i ZIP-filen eller på resurserna på servern.
 
-Noden `rewrite` måste finnas under noden `page`.
+The `rewrite` noden måste finnas under `page` nod.
 
-Noden `rewrite` kan ha en eller flera av följande egenskaper:
+The `rewrite` noden kan ha en eller flera av följande egenskaper:
 
 * `clientlibs`: skriver om klientlibs-banor.
 
@@ -180,9 +179,9 @@ Varje egenskap kan ha något av följande värden:
 
 * `REWRITE_RELATIVE`: skriver om sökvägen med en relativ position till HTML-filen på sidan i filsystemet.
 
-* `REWRITE_EXTERNAL`: skriver om sökvägen genom att peka på resursen på servern med hjälp av tjänsten [ AEM ](/help/sites-developing/externalizer.md)Externalizer.
+* `REWRITE_EXTERNAL`: skriver om sökvägen genom att peka på resursen på servern med hjälp av AEM [Tjänsten Externalizer](/help/sites-developing/externalizer.md).
 
-Med den AEM tjänsten **PathRewriterTransformerFactory** kan du konfigurera de specifika HTML-attribut som ska skrivas om. Tjänsten kan konfigureras i webbkonsolen och har en konfiguration för varje egenskap i noden `rewrite`: `clientlibs`, `images` och `links`.
+AEM anropade **PathRewriterTransformerFactory** I kan du konfigurera de specifika HTML-attribut som ska skrivas om. Tjänsten kan konfigureras i webbkonsolen och har en konfiguration för varje egenskap i `rewrite` nod: `clientlibs`, `images` och `links`.
 
 Den här funktionen lades till i AEM 5.5.
 
@@ -224,21 +223,21 @@ I listan nedan visas ett exempel på en konfiguration för innehållssynkroniser
   + ...
 ```
 
-**etc.designs.default och osv.designs.** mobileDe två första posterna i konfigurationen bör vara ganska tydliga. Eftersom vi ska ta med ett antal mobilsidor behöver vi de relaterade designfilerna nedan /etc/designs. Och eftersom ingen extra bearbetning behövs räcker det med en kopia.
+**etc.designs.default och etc.designs.mobile** De första två posterna i konfigurationen bör vara helt uppenbara. Eftersom vi ska ta med ett antal mobilsidor behöver vi de relaterade designfilerna nedan /etc/designs. Och eftersom ingen extra bearbetning behövs räcker det med en kopia.
 
-**events.** plistDen här posten är lite speciell. Som nämndes i inledningen bör programmet tillhandahålla en kartvy med markörer för händelsernas platser. Vi kommer att tillhandahålla nödvändig platsinformation som en separat fil i PLIST-format. För att detta ska fungera har händelselistkomponenten som används på indexsidan ett skript som heter plist.jsp. Skriptet körs när komponentens resurs begärs med tillägget .plist. Som vanligt anges komponentsökvägen i egenskapen path och typen ställs in på content eftersom vi vill utnyttja bearbetningen av Sling-begäran.
+**events.plist** Den här posten är lite speciell. Som nämndes i inledningen bör programmet tillhandahålla en kartvy med markörer för händelsernas platser. Vi kommer att tillhandahålla nödvändig platsinformation som en separat fil i PLIST-format. För att detta ska fungera har händelselistkomponenten som används på indexsidan ett skript som heter plist.jsp. Skriptet körs när komponentens resurs begärs med tillägget .plist. Som vanligt anges komponentsökvägen i egenskapen path och typen ställs in på content eftersom vi vill utnyttja bearbetningen av Sling-begäran.
 
-**events.touch.** htmlNästa visar de faktiska sidorna som visas i appen. Egenskapen path ställs in på händelsens rotsida. Alla händelsesidor under den sidan inkluderas också eftersom egenskapen deep har standardvärdet true. Vi använder sidor som konfigurationstyp, så att alla bilder eller andra filer som kan refereras från en bild eller en nedladdningskomponent på en sida inkluderas. Om du dessutom ställer in pekväljaren får vi en mobilversion av sidorna. Konfigurationen i funktionspaketet innehåller fler poster av den här typen, men utelämnas för enkelhetens skull här.
+**events.touch.html** Därefter kommer de faktiska sidorna som visas i appen. Egenskapen path ställs in på händelsens rotsida. Alla händelsesidor under den sidan inkluderas också eftersom egenskapen deep har standardvärdet true. Vi använder sidor som konfigurationstyp, så att alla bilder eller andra filer som kan refereras från en bild eller en nedladdningskomponent på en sida inkluderas. Om du dessutom ställer in pekväljaren får vi en mobilversion av sidorna. Konfigurationen i funktionspaketet innehåller fler poster av den här typen, men utelämnas för enkelhetens skull här.
 
-**Logotyp:** Logotypens konfigurationstyp har inte nämnts hittills och är ingen av de inbyggda typerna. Ramverket för innehållssynkronisering är dock delvis utökningsbart och det är ett exempel på det, som kommer att behandlas i nästa avsnitt.
+**logo** Konfigurationstypen för logotypen har inte nämnts hittills och är ingen av de inbyggda typerna. Ramverket för innehållssynkronisering är dock delvis utökningsbart och det är ett exempel på det, som kommer att behandlas i nästa avsnitt.
 
-**manifestDet** är ofta önskvärt att ha någon typ av metadata i zip-filen, som till exempel startsidan för innehållet. Om du däremot hårdkodar sådan information kan du inte ändra den senare. Innehållssynkroniseringsramverket stöder det här användningsexemplet genom att söka efter en manifestnod i konfigurationen, som bara identifieras med namn och som inte kräver någon konfigurationstyp. Alla egenskaper som definieras på den aktuella noden läggs till i en fil, som också kallas manifest och finns i zip-filens rot.
+**manifest** Det är ofta önskvärt att ZIP-filen innehåller någon typ av metadata, till exempel startsidan för innehållet. Om du däremot hårdkodar sådan information kan du inte ändra den senare. Innehållssynkroniseringsramverket stöder det här användningsexemplet genom att söka efter en manifestnod i konfigurationen, som bara identifieras med namn och som inte kräver någon konfigurationstyp. Alla egenskaper som definieras på den aktuella noden läggs till i en fil, som också kallas manifest och finns i zip-filens rot.
 
-I exemplet ska händelselistsidan vara den inledande sidan. Den här informationen finns i egenskapen **indexPage** och kan därför enkelt ändras när som helst. En andra egenskap definierar sökvägen till *events.plist*-filen. Som vi kommer att se senare kan klientprogrammet nu läsa manifestet och agera utifrån det.
+I exemplet ska händelselistsidan vara den inledande sidan. Denna information finns i **indexPage** och kan därför ändras när som helst. En andra egenskap definierar sökvägen till *events.plist* -fil. Som vi kommer att se senare kan klientprogrammet nu läsa manifestet och agera utifrån det.
 
-När konfigurationen är klar kan innehållet laddas ned med en webbläsare eller en annan HTTP-klient, eller om du utvecklar för iOS kan du använda det dedikerade WAppKitSync-klientbiblioteket. Hämtningsplatsen består av konfigurationens sökväg och tillägget *.zip*, t.ex. när du arbetar med en lokal AEM: *https://localhost:4502/content/weretail_go.zip*
+När konfigurationen är klar kan innehållet laddas ned med en webbläsare eller en annan HTTP-klient, eller om du utvecklar för iOS kan du använda det dedikerade WAppKitSync-klientbiblioteket. Hämtningsplatsen består av konfigurationens sökväg och *.zip* tillägg, t.ex. när du arbetar med en lokal AEM: *https://localhost:4502/content/weretail_go.zip*
 
-### Konsolen för innehållssynkronisering {#the-content-sync-console}
+### Konsolen Innehållssynkronisering {#the-content-sync-console}
 
 I konsolen Innehållssynkronisering visas alla konfigurationer för innehållssynkronisering i databasen (alla noder av typen `cq:ContentSyncConfig`) och för varje konfiguration kan du göra följande:
 
@@ -261,12 +260,12 @@ Den ser ut så här:
 
 Även om antalet konfigurationsalternativ redan är ganska många kanske det inte täcker alla krav som gäller ditt specifika användningsfall. I det här avsnittet beskrivs tilläggen för ramverket för innehållssynkronisering och hur du skapar anpassade konfigurationstyper.
 
-För varje konfigurationstyp finns det en *Content Update Handler*, som är en OSGi-komponentfabrik som är registrerad för den specifika typen. Hanterarna samlar in, bearbetar och lägger till innehåll i ett cacheminne som underhålls av ramverket för innehållssynkronisering. Implementera följande gränssnitt eller abstrakt basklass:
+För varje konfigurationstyp finns det en *Hanterare för innehållsuppdatering*, som är en OSGi-komponentfabrik som är registrerad för den typen. Hanterarna samlar in, bearbetar och lägger till innehåll i ett cacheminne som underhålls av ramverket för innehållssynkronisering. Implementera följande gränssnitt eller abstrakt basklass:
 
 * `com.day.cq.contentsync.handler.ContentUpdateHandler` - Gränssnitt som alla uppdateringshanterare måste implementera
 * `com.day.cq.contentsync.handler.AbstractSlingResourceUpdateHandler` - en abstrakt klass som förenklar återgivningen av resurser med Sling
 
-Registrera klassen som OSGi-komponentfabrik och distribuera den i OSGi-behållaren i ett paket. Detta kan du göra med [plugin-programmet Maven SCR](https://felix.apache.org/site/apache-felix-maven-scr-plugin.html) med JavaDoc-taggar eller anteckningar. I följande exempel visas JavaDoc-versionen:
+Registrera klassen som OSGi-komponentfabrik och distribuera den i OSGi-behållaren i ett paket. Detta kan du göra med [Maven SCR plugin](https://felix.apache.org/site/apache-felix-maven-scr-plugin.html) antingen med JavaDoc-taggar eller anteckningar. I följande exempel visas JavaDoc-versionen:
 
 ```java
 /*
@@ -286,15 +285,15 @@ public class OtherTypeUpdateHandler extends AbstractSlingResourceUpdateHandler {
 }
 ```
 
-Observera att definitionen *factory* innehåller det gemensamma gränssnittet och den anpassade typen separerad med snedstreck. Den här strategin gör att innehållssynkroniseringsramverket kan hitta och skapa en instans av din anpassade klass som känner igen den anpassade typen i en konfigurationspost. I nästa avsnitt finns ett konkret exempel på en anpassad uppdateringshanterare.
+Observera att *fabrik* definitionen innehåller det gemensamma gränssnittet och den anpassade typen separerad med snedstreck. Den här strategin gör att innehållssynkroniseringsramverket kan hitta och skapa en instans av din anpassade klass som känner igen den anpassade typen i en konfigurationspost. I nästa avsnitt finns ett konkret exempel på en anpassad uppdateringshanterare.
 
 >[!CAUTION]
 >
->När du bygger vidare på basklassen AbstractSlingResourceUpdateHandler måste du lägga till definitionen *inherit*. Annars kommer OSGi-behållaren inte att ange de nödvändiga referenserna som deklareras i basklassen.
+>När du bygger vidare på basklassen AbstractSlingResourceUpdateHandler måste du lägga till *ärva* definition. Annars kommer OSGi-behållaren inte att ange de nödvändiga referenserna som deklareras i basklassen.
 
 ### Implementera en anpassad uppdateringshanterare {#implementing-a-custom-update-handler}
 
-På varje sida för e-butiksmobilen finns en logotyp i det övre vänstra hörnet som vi förstås vill inkludera i zip-filen. För cacheoptimering refererar AEM inte till bildfilens verkliga plats i databasen, vilket förhindrar oss från att bara använda konfigurationstypen **copy**. Vi måste istället tillhandahålla en egen **logotyp**-konfigurationstyp som gör bilden tillgänglig på den plats som AEM begär. I följande kodexempel visas den fullständiga implementeringen av hanteraren för uppdatering av logotyp:
+På varje sida för e-butiksmobilen finns en logotyp i det övre vänstra hörnet som vi förstås vill inkludera i zip-filen. För cacheoptimering refererar AEM inte till bildfilens verkliga plats i databasen, vilket förhindrar oss från att använda **copy** konfigurationstyp. Vad vi måste göra istället är att erbjuda våra **logo** konfigurationstyp som gör bilden tillgänglig på den plats som AEM begär. I följande kodexempel visas den fullständiga implementeringen av hanteraren för uppdatering av logotyp:
 
 #### LogoUpdateHandler.java {#logoupdatehandler-java}
 
@@ -360,29 +359,29 @@ public class LogoUpdateHandler implements ContentUpdateHandler {
 }
 ```
 
-Klassen `LogoUpdateHandler` implementerar `ContentUpdateHandler`-gränssnittets `updateCacheEntry(ConfigEntry, Long, String, Session, Session)`-metod, som tar ett antal argument:
+The `LogoUpdateHandler` klassen implementerar `ContentUpdateHandler` gränssnitt `updateCacheEntry(ConfigEntry, Long, String, Session, Session)` -metod, som tar ett antal argument:
 
-* En `ConfigEntry`-instans som ger åtkomst till konfigurationsposten, som hanteraren anropas för, och dess egenskaper.
-* En `lastUpdated`-tidsstämpel som anger den senaste gången som Content Sync uppdaterade sin cache. Innehåll som inte har ändrats efter den tidsstämpeln ska inte uppdateras av hanteraren.
-* Ett `configCacheRoot`-argument som anger rotsökvägen för cachen. Alla uppdaterade filer måste lagras under den här sökvägen för att kunna läggas till i zip-filen.
+* A `ConfigEntry` -instans som ger åtkomst till konfigurationsposten, som hanteraren anropas för, och dess egenskaper.
+* A `lastUpdated` tidsstämpel som anger när Content Sync senast uppdaterade sin cache. Innehåll som inte har ändrats efter den tidsstämpeln ska inte uppdateras av hanteraren.
+* A `configCacheRoot` -argument som anger cachens rotsökväg. Alla uppdaterade filer måste lagras under den här sökvägen för att kunna läggas till i zip-filen.
 * En administrativ session som ska användas för alla cacherelaterade databasåtgärder.
 * En användarsession som kan användas för att uppdatera innehåll för en viss användare och därmed tillhandahålla en sorts personaliserat innehåll.
 
 Om du vill implementera den anpassade hanteraren skapar du först en instans av klassen Image baserat på resursen som anges i konfigurationsposten. Detta är i princip samma procedur som den faktiska logotypkomponenten på våra sidor gör. Det ser till att målsökvägen för bilden är densamma som den som en sida refererar till.
 
-Kontrollera sedan om resursen har ändrats sedan den senaste uppdateringen. Anpassade implementeringar bör undvika onödiga uppdateringar av cachen och returnera false om inget ändras. Om resursen har ändrats kopierar du bilden till den förväntade målplatsen i förhållande till cacheroten. Slutligen returneras `true` för att indikera för ramverket att cachen uppdaterades.
+Kontrollera sedan om resursen har ändrats sedan den senaste uppdateringen. Anpassade implementeringar bör undvika onödiga uppdateringar av cachen och returnera false om inget ändras. Om resursen har ändrats kopierar du bilden till den förväntade målplatsen i förhållande till cacheroten. Äntligen `true` returneras för att ange för ramverket att cachen har uppdaterats.
 
 ## Använda innehållet på klienten {#using-the-content-on-the-client}
 
 För att kunna använda innehåll i en mobilapp som tillhandahålls av Content Sync måste du begära innehåll via en HTTP- eller HTTPS-anslutning. Det innebär att hämtat innehåll (packat i en ZIP-fil) kan extraheras och lagras lokalt på den mobila enheten. Observera att innehåll inte bara avser data utan även logik, dvs. fullständiga webbapplikationer. vilket gör det möjligt för mobilanvändaren att köra hämtade webbprogram och motsvarande data även utan nätverksanslutning.
 
-Innehållssynkronisering levererar innehåll på ett intelligent sätt: Endast dataändringar sedan den senaste lyckade datasynkroniseringen levereras, vilket minskar tiden för dataöverföring. Vid den första körningen av en programdataändring begärs ändringar sedan den 1 januari 1970, medan endast data som ändrats sedan den senaste lyckade synkroniseringen efterfrågas. AEM använder ett ramverk för klientkommunikation för iOS för att förenkla datakommunikation och dataöverföring så att en minimal mängd systemspecifik kod krävs för att aktivera ett iOS-baserat webbprogram.
+Innehållssynkronisering levererar innehåll på ett intelligent sätt: Endast dataändringar sedan den senaste lyckade datasynkroniseringen levereras, vilket minskar tiden för dataöverföring. Vid den första körningen av en programdataändring begärs ändringar sedan den 1 januari 1970, medan endast data som ändrats sedan den senaste lyckade synkroniseringen efterfrågas. AEM använder ett klientkommunikationsramverk för iOS för att förenkla datakommunikation och dataöverföring så att en minimal mängd systemspecifik kod krävs för att aktivera ett iOS-baserat webbprogram.
 
-Alla överförda data kan extraheras till samma katalogstruktur, det finns inga ytterligare steg (t.ex. beroendekontroller) som krävs när data extraheras. I iOS lagras alla data i en undermapp i mappen Documents i iOS-appen.
+Alla överförda data kan extraheras till samma katalogstruktur, det finns inga ytterligare steg (t.ex. beroendekontroller) som krävs när data extraheras. Om det gäller iOS lagras alla data i en undermapp i mappen Documents i iOS App.
 
 Vanlig körningssökväg för en iOS-baserad AEM Mobile-app:
 
-* Användaren startar programmet på en iOS-enhet.
+* Användaren startar appen på iOS-enheten.
 * Appen försöker ansluta till AEM och begär dataändringar sedan den senaste körningen.
 * Servern hämtar data i fråga och packar in dem i en fil.
 * Data returneras till klientenheten där de extraheras till dokumentmappen.
@@ -396,4 +395,3 @@ Mer information om roller och ansvar för en administratör och utvecklare finns
 
 * [Skapa för Adobe PhoneGap Enterprise med AEM](/help/mobile/phonegap.md)
 * [Administrera innehåll för Adobe PhoneGap Enterprise med AEM](/help/mobile/administer-phonegap.md)
-

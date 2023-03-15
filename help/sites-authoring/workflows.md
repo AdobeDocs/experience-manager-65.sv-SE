@@ -1,22 +1,21 @@
 ---
 title: Arbeta med arbetsflöden
-seo-title: Arbeta med arbetsflöden
+seo-title: Working with Workflows
 description: Med arbetsflöden i AEM kan du automatisera en serie steg som utförs på en sida eller en resurs.
-seo-description: Med arbetsflöden i AEM kan du automatisera en serie steg som utförs på en sida eller en resurs.
+seo-description: Workflows in AEM allow you to automate a series of steps that are performed on a page or asset.
 uuid: c4442d2a-c6b0-49d4-a1ce-384017c45bf0
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: site-features
 discoiquuid: 7cb99618-d903-4cfb-b0d9-b23d189f6e78
-translation-type: tm+mt
-source-git-commit: 48d18de8c982ab3b92cad4df030cb1e4a1a8dfc4
+exl-id: 7383d590-c6b7-440a-a33d-196dce9736ef
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '202'
+source-wordcount: '180'
 ht-degree: 7%
 
 ---
-
 
 # Arbeta med arbetsflöden{#working-with-workflows}
 
@@ -37,4 +36,3 @@ Följande sidor omfattar:
 
 * [Använda arbetsflöden på sidor](/help/sites-authoring/workflows-applying.md)
 * [Delta i arbetsflöden](/help/sites-authoring/workflows-participating.md)
-

@@ -1,17 +1,16 @@
 ---
 title: Hur processrapportering fungerar
-seo-title: Hur processrapportering fungerar
+seo-title: How Process Reporting Works
 description: Beskrivning av de tjänster som utgör AEM Forms on JEE Process Reporting och en introduktion till användargränssnittet för processrapportering
-seo-description: Beskrivning av de tjänster som utgör AEM Forms on JEE Process Reporting och en introduktion till användargränssnittet för processrapportering
+seo-description: Description of the services that make up the AEM Forms on JEE Process Reporting and an introduction to the Process Reporting UI
 uuid: 4631b734-a679-495c-a708-2348bf22c1f7
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: process-reporting
 discoiquuid: a1af9920-5d2a-462f-bdee-ccec4c047c5b
-translation-type: tm+mt
 source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
 workflow-type: tm+mt
-source-wordcount: '371'
+source-wordcount: '345'
 ht-degree: 0%
 
 ---
@@ -39,13 +38,13 @@ Processrapportering består av följande moduler:
 
 ## Processrapporteringsmoduler {#process-reporting-modules}
 
-### ProcessDataPublisher-tjänsten {#processdatapublisher-service-br}
+### ProcessDataPublisher-tjänst {#processdatapublisher-service-br}
 
 ProcessDataPublisher-servern körs regelbundet på AEM Forms-databasen och extraherar de data som har ändrats sedan den senaste körningen av tjänsten. Sedan publiceras data till datalagringstjänsten för processdata.
 
 Mer information om hur du konfigurerar tjänsten finns i [Konfigurera tjänsten ProcessDataPublisher](/help/forms/using/process-reporting/install-start-process-reporting.md#p-reportconfiguration-service-p).
 
-### ProcessDataStorageProvider-tjänsten {#processdatastorageprovider-service-br}
+### Tjänsten ProcessDataStorageProvider {#processdatastorageprovider-service-br}
 
 ProcessDataStorageProvider-tjänsten tar emot processdata från ProcessDataPublisher-tjänsten och sparar data i Process Reporting-databasen.
 
@@ -55,7 +54,7 @@ Mer information om hur du konfigurerar tjänsten finns i [Konfigurera tjänsten 
 
 QueryDataServlet använder den här tjänsten för att hämta rapportdata från Process Reporting-databasen.
 
-### QueryDataServlet-tjänsten {#querydataservlet-service-br}
+### Tjänsten QueryDataServlet {#querydataservlet-service-br}
 
 Tjänsten QueryDataServlet accepterar frågor från användargränssnittet för processrapportering.
 
@@ -65,7 +64,7 @@ Tjänsten använder sedan OSGi-tjänster för att hämta relevanta rapporterings
 
 Användargränssnittet Process Reporting är ett webbläsarbaserat gränssnitt. Du använder det här gränssnittet för att visa process- och uppgiftsinformation som publiceras från AEM Forms-databasen.
 
-### QueryDataServlet-tjänsten {#querydataservlet-service-br-1}
+### Tjänsten QueryDataServlet {#querydataservlet-service-br-1}
 
 Tjänsten QueryDataServlet accepterar frågor från användargränssnittet för processrapportering.
 

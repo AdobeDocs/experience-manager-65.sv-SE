@@ -1,24 +1,23 @@
 ---
 title: Konfigurera SSL i Windows Vista
-seo-title: Konfigurera SSL i Windows Vista
+seo-title: Configuring SSL on Windows Vista
 description: Lär dig hur du konfigurerar SSL i Windows Vista.
-seo-description: Lär dig hur du konfigurerar SSL i Windows Vista.
+seo-description: Learn how to configure SSL on Windows Vista.
 uuid: 20bfcefb-ec84-4c55-bceb-6af106d883d7
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_ssl
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 667645a0-53d0-4f9b-a0ba-cc7e366a23a1
-translation-type: tm+mt
-source-git-commit: d3719a9ce2fbb066f99445475af8e1f1e7476f4e
+exl-id: 36c4300d-7a44-41f4-b294-06f32bb01686
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '168'
+source-wordcount: '155'
 ht-degree: 0%
 
 ---
 
-
-# Konfigurerar SSL på Windows Vista {#configuring-ssl-on-windows-vista}
+# Konfigurera SSL i Windows Vista {#configuring-ssl-on-windows-vista}
 
 Om du vill konfigurera SSL på Windows Vista™ behöver du ett SSL-certifikat med RSA-nycklar för autentisering. Du kan använda Java-nyckelverktyget för att skapa certifikatet.
 
@@ -30,13 +29,12 @@ Du kan köra nyckelverktyget med ett enda kommando som innehåller all informati
 
 **Skapa ett SSL-certifikat**
 
-1. I en kommandotolk går du till *`[JAVA HOME]`*/bin och skriver följande kommando för att skapa certifikatet och nyckelbehållaren:
+1. I en kommandotolk går du till *`[JAVA HOME]`*/bin och skriv följande kommando för att skapa certifikatet och nyckelbehållaren:
 
-   `keytool -genkey -keyalg RSA -dname "CN=`*Värdnamn* `, OU=`*Grupp* `, O=`*NamnFöretag* `,L=`*NamnOrt* `, S=`** `, C=`*NamnDelstatLandskod* `" -alias`*&quot;LC Cert&quot;* `-keypass` `key`*_* ** `-keystore`*passwordkeystorename* `.keystore`
+   `keytool -genkey -keyalg RSA -dname "CN=`*Värdnamn* `, OU=`*Gruppnamn* `, O=`*Företag* `,L=`*Ortsnamn* `, S=`*Läge* `, C=`*Landskod* `" -alias`*&quot;LC Cert&quot;* `-keypass` `key`*_* *lösenord* `-keystore`*keystorename* `.keystore`
 
    >[!NOTE]
    >
-   >Ersätt *`[JAVA_HOME]`med katalogen där JDK är installerad och ersätt texten i kursiv stil med värden som motsvarar din miljö.*
+   >Ersätt *`[JAVA_HOME]`med den katalog där JDK är installerat och ersätt texten i kursiv stil med värden som motsvarar din miljö.*
 
-1. Ange `changeit` som lösenord. Det här lösenordet är standard för en Java-installation och systemadministratören kan ha ändrat det.
-
+1. Typ `changeit` som lösenord. Det här lösenordet är standard för en Java-installation och systemadministratören kan ha ändrat det.

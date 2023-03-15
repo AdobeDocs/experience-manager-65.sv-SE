@@ -2,7 +2,7 @@
 title: Identity Management
 seo-title: Identity Management
 description: Läs om identitetshantering i AEM.
-seo-description: Läs om identitetshantering i AEM.
+seo-description: Learn about identity management in AEM.
 uuid: d9b83cd7-c47a-41a5-baa4-bbf385d13bfd
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,31 +10,30 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 994a5751-7267-4a61-9bc7-01440a256c65
 docset: aem65
-translation-type: tm+mt
-source-git-commit: a268b7046430cc17c8b59b9306cf3533d73bb4a2
+exl-id: acb5b235-523e-4c01-9bd2-0cc2049f88e2
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1230'
+source-wordcount: '1222'
 ht-degree: 0%
 
 ---
-
 
 # Identity Management{#identity-management}
 
 Enskilda besökare på din webbplats kan bara identifieras när du ger dem möjlighet att logga in. Det finns olika skäl till att du kan behöva ange en inloggningsfunktion:
 
-* [AEM ](/help/communities/overview.md)webbgrupperWebbplatsbesökare måste logga in för att kunna publicera innehåll i communityn.
+* [AEM Communities](/help/communities/overview.md)Besökare på webbplatsen måste logga in för att kunna publicera innehåll i communityn.
 * [Stängda användargrupper](/help/sites-administering/cug.md)
 
    Du kan behöva begränsa åtkomsten till din webbplats (eller delar av den) till vissa besökare.
 
-* [](/help/sites-administering/personalization.md) PersonaliseringMöjliggör för besökare att konfigurera vissa aspekter av hur de kommer åt din webbplats.
+* [Personalisering](/help/sites-administering/personalization.md) Gör det möjligt för besökare att konfigurera vissa aspekter av hur de kommer åt din webbplats.
 
-Funktionen Logga in (och ut) tillhandahålls av ett [konto med en **profil**](#profiles-and-user-accounts) som innehåller ytterligare information om den registrerade besökaren (användaren). De faktiska processerna för registrering och godkännande kan skilja sig åt:
+Funktionen Logga in (och ut) tillhandahålls av en [konto med **Profil**](#profiles-and-user-accounts), som innehåller ytterligare information om den registrerade besökaren (användaren). De faktiska processerna för registrering och godkännande kan skilja sig åt:
 
 * Självregistrering från webbplatsen
 
-   En [Community-webbplats](/help/communities/sites-console.md) kan konfigureras så att besökare kan registrera sig själva eller logga in med sina Facebook- eller Twitter-konton.
+   A [Community-webbplats](/help/communities/sites-console.md) kan konfigureras så att besökare kan registrera sig själva eller logga in med sina Facebook- eller Twitter-konton.
 
 * Registreringsförfrågan från webbplatsen
 
@@ -53,11 +52,11 @@ Ytterligare funktioner kan konfigureras eller utvecklas:
 
 >[!NOTE]
 >
->Informationen som anges i profilen kan även användas för att förse användaren med riktat innehåll via [segment](/help/sites-administering/campaign-segmentation.md) och [kampanjer](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md).
+>Den information som anges i profilen kan även användas för att förse användaren med riktat innehåll via [Segment](/help/sites-administering/campaign-segmentation.md) och [Kampanjer](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md).
 
 ## Registrera Forms {#registration-forms}
 
-Ett [formulär](/help/sites-authoring/default-components.md#form-component) kan användas för att samla in registreringsinformationen och sedan generera det nya kontot och den nya profilen.
+A [formulär](/help/sites-authoring/default-components.md#form-component) kan användas för att samla in registreringsinformation och sedan generera det nya kontot och den nya profilen.
 
 Användare kan till exempel begära en ny profil via sidan Geometrixx
 `http://localhost:4502/content/geometrixx-outdoors/en/user/register.html`
@@ -68,15 +67,15 @@ När du skickar begäran öppnas profilsidan där användaren kan ange personlig
 
 ![profilsida](assets/profilepage.png)
 
-Det nya kontot visas även i [användarkonsolen](/help/sites-administering/security.md).
+Det nya kontot visas även i [Användarkonsol](/help/sites-administering/security.md).
 
 ## Inloggning {#login}
 
 Inloggningskomponenten kan användas för att samla in inloggningsinformationen och sedan aktivera inloggningsprocessen.
 
-Detta förser besökaren med standardfälten **Användarnamn** och **Lösenord**, med knappen **Logga in** för att aktivera inloggningsprocessen när inloggningsuppgifterna anges.
+Detta förser besökaren med standardfälten i **Användarnamn** och **Lösenord**, med **Inloggning** för att aktivera inloggningsprocessen när inloggningsuppgifterna anges.
 
-Användare kan till exempel antingen logga in eller skapa ett nytt konto med alternativet **Logga in** i verktygsfältet på Geometrixx där sidan används:
+Användare kan till exempel antingen logga in eller skapa ett nytt konto med **Logga in** i verktygsfältet i Geometrixx där sidan används:
 
 `http://localhost:4502/content/geometrixx-outdoors/en/user/sign-in.html`
 
@@ -84,7 +83,7 @@ Användare kan till exempel antingen logga in eller skapa ett nytt konto med alt
 
 ## Loggar ut {#logging-out}
 
-Eftersom det finns en inloggningsmekanism krävs också en utloggningsmekanism. Det här är tillgängligt som alternativet **Logga ut** i Geometrixx.
+Eftersom det finns en inloggningsmekanism krävs också en utloggningsmekanism. Det här är tillgängligt som **Logga ut** i Geometrixx.
 
 ## Visa och uppdatera en profil {#viewing-and-updating-a-profile}
 
@@ -94,24 +93,24 @@ Beroende på ditt registreringsformulär kan besökaren ha registrerat informati
 http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 ```
 
-Om du vill visa information om din profil klickar du på **Min profil** i det övre högra hörnet på en sida; till exempel med kontot `admin`:
+Klicka på **Min profil** i det övre högra hörnet på en sida, till exempel med `admin` konto:
 `http://localhost:4502/home/users/a/admin/profile.form.html/content/geometrixx-outdoors/en/user/profile.html.`
 
-Du kan visa en annan profil med hjälp av [klientkontexten](/help/sites-administering/client-context.md) (i författarmiljön och med tillräcklig behörighet):
+Du kan visa en annan profil med [klientkontext](/help/sites-administering/client-context.md) (i redigeringsmiljön och med tillräcklig behörighet):
 
 1. Öppna en sida; till exempel Geometrixx:
 
    `http://localhost:4502/cf#/content/geometrixx/en.html`
 
-1. Klicka på **Min profil** i det övre högra hörnet. Du ser profilen för ditt aktuella konto; till exempel administratören.
-1. Tryck på **control-alt-C** för att öppna klientkontexten.
-1. Klicka på knappen **Läs in en profil** längst upp till vänster i klientkontexten.
+1. Klicka **Min profil** i det övre högra hörnet. Du ser profilen för ditt aktuella konto; till exempel administratören.
+1. Tryck **control-alt-C** för att öppna klientkontexten.
+1. Klicka på knappen längst upp till vänster i klientkontexten **Läs in en profil** -knappen.
 
    ![](do-not-localize/loadprofile.png)
 
 1. Välj en annan profil i listrutan i dialogrutan. till exempel **Alison Parker**.
-1. Klicka på **OK**.
-1. Klicka igen på **Min profil**. Formuläret uppdateras med Alisons information.
+1. Klicka **OK**.
+1. Klicka igen **Min profil**. Formuläret uppdateras med Alisons information.
 
    ![profilealison](assets/profilealison.png)
 
@@ -122,30 +121,30 @@ Du kan visa en annan profil med hjälp av [klientkontexten](/help/sites-administ
 Du kan lägga till fält i profildefinitionen. Om du till exempel vill lägga till ett&quot;Favoritfärg&quot;-fält i Geometrixx profil:
 
 1. Gå till Geometrixx Outdoors Site > English > User > My Profile i webbplatskonsolen.
-1. Dubbelklicka på sidan **Min profil** för att öppna den för redigering.
-1. På fliken **Komponenter** i sidosparken expanderar du avsnittet **Formulär**.
-1. Dra en **listruta** från sidosparken till formuläret, precis nedanför fältet **Om mig**.
-1. Dubbelklicka på **listrutekomponenten** för att öppna dialogrutan för konfiguration och ange:
+1. Dubbelklicka på **Min profil** för att öppna den för redigering.
+1. I **Komponenter** flik för sidospark expandera **Formulär** -avsnitt.
+1. Dra en **Listruta** från sidosparken till formuläret, precis nedanför **Om mig** fält.
+1. Dubbelklicka på **Listruta** för att öppna dialogrutan för konfiguration och ange:
 
-   * **Elementnamn** -  `favoriteColor`
-   * **Titel** -  `Favorite Color`
-   * **Objekt**  - Lägg till flera färger som objekt
+   * **Elementnamn** - `favoriteColor`
+   * **Titel** - `Favorite Color`
+   * **Objekt** - Lägga till flera färger som objekt
 
-   Klicka på **OK** för att spara.
+   Klicka **OK** att spara.
 
-1. Stäng sidan och gå tillbaka till konsolen **Webbplatser** och aktivera sidan Min profil.
+1. Stäng sidan och gå tillbaka till **Webbplatser** och aktivera sidan Min profil.
 
    Nästa gång du visar en profil kan du välja en favoritfärg:
 
    ![aparkerfavcolor](assets/aparkerfavcolour.png)
 
-   Fältet sparas under **profile**-avsnittet för det aktuella användarkontot:
+   Fältet sparas under **profil** i det aktuella användarkontot:
 
    ![aparkercrxdelite](assets/aparkercrxdelite.png)
 
-## Profillägen {#profile-states}
+## Profiltillstånd {#profile-states}
 
-Det finns ett antal användningsfall som kräver att du vet om en användare (eller snarare deras profil) är i ett *specifikt tillstånd* eller inte.
+Det finns ett antal användningsområden som kräver att du vet om en användare (eller snarare deras profil) finns i en *specifikt läge* eller inte.
 
 Detta innebär att definiera en lämplig egenskap i användarprofilen på följande sätt:
 
@@ -168,7 +167,7 @@ Flera lägen kan definieras; I Geometrixx är dessa till exempel:
 * prenumerera (eller avbryta prenumerationen) på meddelanden i nyhetsbrev eller kommentarstrådar
 * lägga till och ta bort en anslutning till en vän
 
-### Tillståndsleverantörer {#state-providers}
+### Statliga leverantörer {#state-providers}
 
 En lägesprovider hanterar den aktuella statusen för den aktuella egenskapen tillsammans med övergångarna mellan de två möjliga lägena.
 
@@ -185,17 +184,17 @@ Det behövs ett arbetsflöde för att implementera åtgärder som är relaterade
 
 ## Profiler och användarkonton {#profiles-and-user-accounts}
 
-Profiler lagras i innehållsdatabasen som en del av [användarkontot](/help/sites-administering/user-group-ac-admin.md).
+Profilerna lagras i innehållsdatabasen som en del av[användarkonto](/help/sites-administering/user-group-ac-admin.md).
 
 Profilen finns under `/home/users/geometrixx`:
 
 ![chlimage_1-138](assets/chlimage_1-138.png)
 
-I en standardinstallation (författare eller publicering) har alla läsåtkomst till all profilinformation för alla användare. alla är en&quot;*inbyggd grupp som automatiskt innehåller alla befintliga användare och grupper. Det går inte att redigera medlemslistan*.
+I en standardinstallation (författare eller publicering) har alla läsåtkomst till all profilinformation för alla användare. alla är *Inbyggd grupp som automatiskt innehåller alla befintliga användare och grupper. Det går inte att redigera medlemslistan*&quot;.
 
 Dessa åtkomsträttigheter definieras av följande jokertecken-ACL:
 
-/home all allow jcr:read rep:glob = */profile*
+/home alla tillåter jcr:read rep:glob = &#42;/profile&#42;
 
 Det gör att:
 
@@ -204,7 +203,7 @@ Det gör att:
 
 Om sådan åtkomst inte är lämplig för din installation kan du ändra dessa standardinställningar.
 
-Detta kan du göra på fliken **[Åtkomstkontroll](/help/sites-administering/user-group-ac-admin.md#access-right-management)**:
+Detta kan du göra med **[Åtkomstkontroll](/help/sites-administering/user-group-ac-admin.md#access-right-management)** tab:
 
 ![aclmanager](assets/aclmanager.png)
 
@@ -212,7 +211,7 @@ Detta kan du göra på fliken **[Åtkomstkontroll](/help/sites-administering/use
 
 Det finns även ett antal profilkomponenter som du kan använda för att definiera profilkraven för din plats.
 
-### Fältet för markerat lösenord {#checked-password-field}
+### Kontrollerat lösenordsfält {#checked-password-field}
 
 Den här komponenten ger dig två fält för:
 
@@ -223,13 +222,13 @@ Med standardinställningarna visas komponenten så här:
 
 ![dc_profiles_checkedpassword](assets/dc_profiles_checkedpassword.png)
 
-### Profil för avatarfoto {#profile-avatar-photo}
+### Profil Avatar Photo {#profile-avatar-photo}
 
 Den här komponenten ger användaren en funktion för att välja och överföra en Avatar Photo-fil.
 
 ![dc_profiles_avatarphoto](assets/dc_profiles_avatarphoto.png)
 
-### Profilens detaljerade namn {#profile-detailed-name}
+### Detaljerat profilnamn {#profile-detailed-name}
 
 Med den här komponenten kan användaren ange ett detaljerat namn.
 
@@ -240,4 +239,3 @@ Med den här komponenten kan användaren ange ett detaljerat namn.
 Med den här komponenten kan användaren ange sitt kön.
 
 ![dc_profiles_kön](assets/dc_profiles_gender.png)
-

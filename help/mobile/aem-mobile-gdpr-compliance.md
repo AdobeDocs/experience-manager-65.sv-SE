@@ -1,7 +1,7 @@
 ---
 title: AEM Mobile - GDPR-beredskap
 seo-title: AEM Mobile - GDPR Readiness
-description: '"AEM Mobile - GDPR-beredskap"'
+description: "AEM Mobile - GDPR-beredskap"
 seo-description: null
 uuid: 817c434f-4b78-40f7-99d6-6efafdedb77e
 contentOwner: trushton

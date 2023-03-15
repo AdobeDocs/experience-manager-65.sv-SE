@@ -1,30 +1,29 @@
 ---
 title: Inledande inställning för aktivering
-seo-title: Inledande konfiguration
+seo-title: Initial Setup
 description: Inledande inställning för aktivering
-seo-description: Inledande inställning för aktivering
+seo-description: Initial Setup for Enablement
 uuid: 873ec41d-c088-41d9-a535-de5300661de6
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: introduction
 content-type: reference
 discoiquuid: f2ac3d66-cc79-498f-83fb-dd96feb88de2
-translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+exl-id: ed494922-3e15-4778-84c1-35c8846ce980
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '857'
+source-wordcount: '851'
 ht-degree: 0%
 
 ---
 
+# Inledande inställning för aktivering  {#initial-setup-for-enablement}
 
-# Inledande inställning för aktivering {#initial-setup-for-enablement}
-
-## Starta författare och publiceringsinstanser {#start-author-and-publish-instances}
+## Starta författare- och publiceringsinstanser {#start-author-and-publish-instances}
 
 I utvecklings- och demonstrationssyfte måste du köra en författare och en publiceringsinstans.
 
-Följ de grundläggande AEM [Komma igång](../../help/sites-deploying/deploy.md#getting-started)-instruktionerna som kommer att resultera i
+Följ de grundläggande AEM [Komma igång](../../help/sites-deploying/deploy.md#getting-started) instruktioner som resulterar i
 
 * Redigeringsmiljö på [localhost:4502](http://localhost:4502/)
 * Publiceringsmiljö på [localhost:4503](http://localhost:4503/)
@@ -46,31 +45,31 @@ För AEM Communities
 
 >[!NOTE]
 >
->Om du inte känner till AEM kan du läsa dokumentationen om [grundläggande hantering](../../help/sites-authoring/basic-handling.md) och en [snabbguide till redigeringssidor](../../help/sites-authoring/qg-page-authoring.md).
+>Om du inte känner till AEM kan du läsa dokumentationen om [grundläggande hantering](../../help/sites-authoring/basic-handling.md) och [snabbguide till framtagning av sidor](../../help/sites-authoring/qg-page-authoring.md).
 
-## Installera den senaste versionen av Communities {#install-latest-communities-release}
+## Installera senaste versionen av Communities {#install-latest-communities-release}
 
-I den här självstudien skapas en [community-webbplats för aktivering](overview.md#enablement-community). Se till att det senaste funktionspaketet är installerat på:
+Den här självstudiekursen skapar en [communitywebbplats för aktivering](overview.md#enablement-community). Se till att det senaste funktionspaketet är installerat på:
 
 * [Senaste releaser](deploy-communities.md#latest-releases)
 
-En självstudiekurs som skapar en [community-webbplats för engagemang](overview.md#engagement-community) finns på [Komma igång med AEM Communities](getting-started.md).
+För en självstudiekurs som skapar en [community för engagemang](overview.md#engagement-community), besök [Komma igång med AEM Communities](getting-started.md).
 
 ## Konfigurera aktiveringsfunktioner {#configure-enablement-features}
 
-Om du vill följa den här självstudiekursen måste du installera och [konfigurera aktivering](enablement.md), vilket kräver produkter från tredje part, som MySQL och FFmpeg.
+Om du vill följa den här självstudiekursen måste du installera och [konfigurera aktivering](enablement.md), som kräver produkter från tredje part, som MySQL och FFmpeg.
 
 ## Konfigurera analys {#configure-analytics}
 
-När [Adobe Analytics har konfigurerats för communitywebbplatsen](analytics.md) finns mer information i [rapporterna](reports.md) som genererats för aktiveringsresurser och utbildningsvägar som tilldelats communitymedlemmar (studerande).
+När [Adobe Analytics är konfigurerat för communitywebbplatsen](analytics.md)finns mer information i [rapporter](reports.md) genereras på aktiveringsresurser och utbildningsvägar som tilldelats communitymedlemmar (studerande).
 
 ## Konfigurera e-post för meddelanden {#configure-email-for-notifications}
 
-Meddelandefunktionen, som är tillgänglig som standard för alla webbplatser som skapats med `Communities Sites`-konsolen, erbjuder en e-postkanal för meddelanden.
+Meddelandefunktionen, som är tillgänglig som standard för alla webbplatser som skapas med `Communities Sites` konsol, innehåller en e-postkanal för meddelanden.
 
 Det som är nödvändigt är att e-post konfigureras korrekt för webbplatsen.
 
-Se [Konfigurera e-post](email.md).
+Se [Konfigurerar e-post](email.md).
 
 ## Aktivera tunneltjänsten {#enable-the-tunnel-service}
 
@@ -78,13 +77,13 @@ När du skapar en community i författarmiljön gör tunneltjänsten det möjlig
 
 Mer information finns i [Hantera användare och användargrupper](users.md).
 
-Mer information om hur du aktiverar tunneltjänsten finns i [Tunneltjänsten](deploy-communities.md#tunnel-service-on-author).
+Mer information om hur du aktiverar tunneltjänsten finns i [Tunneltjänst](deploy-communities.md#tunnel-service-on-author).
 
 ## Skapa självstudietaggar {#create-tutorial-tags}
 
-Skapa taggar som ska användas för interaktions- och aktiveringssjälvstudiekurserna med hjälp av taggnamnutrymmet `Tutorial`.
+Skapa taggar som du kan använda för interaktions- och aktiveringssjälvstudiekurserna med hjälp av taggnamnutrymmet för `Tutorial`.
 
-Använd [taggningskonsolen](../../help/sites-administering/tags.md#tagging-console) för att skapa följande taggar:
+Använd [Taggningskonsol](../../help/sites-administering/tags.md#tagging-console) för att skapa följande taggar:
 
 * `Tutorial: Sports / Baseball`
 * `Tutorial: Sports / Gymnastics`
@@ -106,9 +105,9 @@ Exempelpaket med taggar som skapats för Tutorials AEM Communities Getting Start
 
 ## Skapa aktiveringsmedlemmar och grupper {#create-enablement-members-and-groups}
 
-För en aktiveringscommunitywebbplats bör webbplatsbesökare inte kunna [självregistrera eller använda social inloggning](sites-console.md#user-management).
+För en aktiveringscommunitywebbplats bör webbplatsbesökare inte kunna [självregistrering eller använd social inloggning](sites-console.md#user-management).
 
-När [tunneltjänsten](#enable-the-tunnel-service) är aktiverad används i stället [medlemskonsolen](members.md) för att registrera nya medlemmar i publiceringsmiljön.
+I stället med [tunneltjänst](#enable-the-tunnel-service) aktiverad, [Medlemskonsol](members.md) används för att registrera nya medlemmar i publiceringsmiljön.
 
 I den här självstudiekursen skapas tre medlemmar i publiceringsmiljön. Två medlemmar blir medlemmar i en användargrupp som är tilldelad en utbildningsväg, medan den tredje medlemmen blir en aktiveringsresurskontakt.
 
@@ -116,15 +115,15 @@ En fjärde användare skapas i författarmiljön och tilldelas rollerna Webbgrup
 
 >[!NOTE]
 >
->Dessa medlemmar skapas innan *självstudiekursen* för aktivering skapas.
+>Dessa medlemmar skapas innan *Självstudiekurs om aktivering* communitysajt.
 >
->Om de skapades efteråt kan de läggas till som medlemmar i gruppen *Deltagare i självstudiekursen* när medlemmar skapas.
+>Om de skapades efteråt kan de läggas till som medlemmar i *Grupp med medlemmar i självstudiekursen om aktivering* när medlemmar skapas.
 >
->I stället tilldelas de [till medlemsgruppen](enablement-create-site.md#assignuserstocommunityenablemembersgroup).
+>I stället blir de [som tilldelats medlemsgruppen](enablement-create-site.md#assignuserstocommunityenablemembersgroup).
 
-### Riley Taylor - registrerare {#riley-taylor-enrollee}
+### Riley Taylor - anmälare {#riley-taylor-enrollee}
 
-[Skapa ett ](members.md#create-new-member) medlemskap som ska läggas till i en grupp med elev - Community Ski Class-gruppen.
+[Skapa en medlem](members.md#create-new-member) som ska läggas till i en grupp med elev - gruppen Community Ski Class.
 
 * **ID**: riley
 * **E-post**: riley.taylor@mailinator.com
@@ -133,9 +132,9 @@ En fjärde användare skapas i författarmiljön och tilldelas rollerna Webbgrup
 * **Förnamn**: Riley
 * **Efternamn**: Taylor
 
-### Sidney Croft - registrerare {#sidney-croft-enrollee}
+### Sidney Croft - Uppgiftslämnare {#sidney-croft-enrollee}
 
-[Skapa ett andra ](members.md#create-new-member) medlemskap som ska läggas till i gruppen Community Ski Class.
+[Skapa en andra medlem](members.md#create-new-member) som läggs till i gruppen Community Ski Class.
 
 * **ID**: sidney
 * **E-post**: sidney.croft@mailinator.com
@@ -146,7 +145,7 @@ En fjärde användare skapas i författarmiljön och tilldelas rollerna Webbgrup
 
 ### Quinn Harper - Aktivera resurskontakt och moderator {#quinn-harper-enablement-resource-contact-and-moderator}
 
-[Skapa ett ](members.md#create-new-member) medlemskap som läggs till i medlemsgruppen för communityn när webbplatsen har skapats. Medlemskapet tillåter att medlemmen tilldelas som aktivering [Resurskontakt](resources.md#settings) när en aktiveringsresurs skapas för platsen.
+[Skapa en medlem](members.md#create-new-member) som läggs till i communityplatsens medlemsgrupp när webbplatsen har skapats. Det här medlemskapet tillåter att medlemmen tilldelas som aktivering [Resurskontakt](resources.md#settings) när en aktiveringsresurs skapas för platsen.
 
 * **ID**: quinn
 * **E-post**: quinn.harper@mailinator.com
@@ -157,12 +156,12 @@ En fjärde användare skapas i författarmiljön och tilldelas rollerna Webbgrup
 
 ### Lägg till en användargrupp - Community Ski-klass {#add-a-user-group-community-ski-class}
 
-[Lägg till en ny ](members.md#create-new-group) grupp med namnet Community Ski Class.
+[Lägg till en ny grupp](members.md#create-new-group) med namnet Community Ski Class.
 
 * **ID**: community-ski-class
 * **Namn**: Klassen Community Ski
 * **Beskrivning**: en exempelgrupp för tilldelning av aktiveringsresurser
-* **Lägg till medlemmar i gruppen** &quot;add&quot;:
+* **Lägg till medlemmar i grupp** &#39;add&#39;:
 
    * riley
    * sidney
@@ -183,31 +182,31 @@ Medlemmar i gruppen Community Administrators kan skapa communitysajter, hantera 
 
 ### Skapa användare {#create-user}
 
-Skapa en användare på *författare*, som tilldelas rollen Community Administrator:
+Skapa en användare på *författare*, som har tilldelats rollen som gemenskapsadministratör:
 
 * På författarinstansen
 
-   * Till exempel [http://localhost:4502/](http://localhost:4503/)
+   * Till exempel: [http://localhost:4502/](http://localhost:4503/)
 
 * Logga in med administratörsbehörighet
 
    * Till exempel användarnamn &#39;admin&#39; / lösenord &#39;admin&#39;
 
-* Gå till **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Security]** > **[!UICONTROL Users]** från huvudkonsolen.
-* Välj **[!UICONTROL Add User]** på menyn **[!UICONTROL Edit]**.
+* Navigera från huvudkonsolen till **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Security]** > **[!UICONTROL Users]**.
+* Från **[!UICONTROL Edit]** meny, välja **[!UICONTROL Add User]**.
 
-* I dialogrutan `Create New User` anger du:
+* I `Create New User` dialogruta:
 
-   * **&amp;ID:t;**: sirius
+   * **ID&amp;ast;**: sirius
    * **E-postadress**: sirius.nilson@mailinator.com
-   * **&amp;Lösenord;**: lösenord
+   * **Lösenord&amp;ast;**: lösenord
    * **Bekräfta lösenord&amp;ast;**: lösenord
    * **Förnamn**: Sirius
    * **&amp;Efternamn;**: Nilson
 
-### Tilldela Sirius till communityadministratörsgruppen {#assign-sirius-to-community-administrators-group}
+### Tilldela Sirius till gruppen Community-administratörer {#assign-sirius-to-community-administrators-group}
 
-Bläddra ned till `Add User to Groups`:
+Bläddra nedåt till `Add User to Groups`:
 
 * Ange &quot;C&quot; för att söka
 
@@ -217,4 +216,3 @@ Bläddra ned till `Add User to Groups`:
 * Välj **[!UICONTROL Save]**
 
 ![admin-role](assets/admin-role.png)
-

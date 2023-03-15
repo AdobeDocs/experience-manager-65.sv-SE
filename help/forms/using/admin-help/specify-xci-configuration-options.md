@@ -1,22 +1,21 @@
 ---
 title: Ange XCI-konfigurationsalternativ
-seo-title: Ange XCI-konfigurationsalternativ
+seo-title: Specify XCI configuration options
 description: Lär dig hur du anger XCI-konfigurationsalternativ.
-seo-description: Lär dig hur du anger XCI-konfigurationsalternativ.
+seo-description: Learn how to specify XCI configuration options.
 uuid: cf9e544d-63cd-4fad-8f89-bdb46eeef409
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_output
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: f38ebd69-8d1c-49b6-824f-4bf0ec8a8953
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 8fbff12a-4923-4151-a758-c1e44dee9160
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '140'
+source-wordcount: '129'
 ht-degree: 1%
 
 ---
-
 
 # Ange XCI-konfigurationsalternativ {#specify-xci-configuration-options}
 
@@ -32,4 +31,3 @@ Du kan välja alternativ som avbryter åsidosättningen för de alternativ som a
 1. Klicka på Tjänster > Utdata i administrationskonsolen.
 1. Markera eller avmarkera kryssrutan Använd XCI-standardalternativ för system. När det här alternativet är markerat använder Output standardvärdena för inställningarna för paket, skapare, producent och compressObjectStream. När det här alternativet är avmarkerat används de värden som anges i den anpassade XCI-filen.
 1. Klicka på Spara.
-

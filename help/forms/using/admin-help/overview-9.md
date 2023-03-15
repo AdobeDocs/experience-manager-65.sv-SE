@@ -1,22 +1,21 @@
 ---
 title: Översikt över Forms arbetsflöde
-seo-title: Översikt över Forms arbetsflöde
+seo-title: Overview of Forms workflow
 description: Med Forms arbetsflöde kan man utforma, hantera och optimera humancentrerade processer. Med hjälp av arbetsflöden för blanketter kan man också hantera automatiserade affärsprocesslösningar som knyter samman system och människor.
-seo-description: Med Forms arbetsflöde kan man utforma, hantera och optimera humancentrerade processer. Med hjälp av arbetsflöden för blanketter kan man också hantera automatiserade affärsprocesslösningar som knyter samman system och människor.
+seo-description: Forms workflow lets users design, manage, and optimize human-centric processes. Using forms workflow, users can also manage automated business-process applications that connect systems and people.
 uuid: b28ada7c-de75-416a-b2c8-f6494be5330c
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_forms_workflow
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 7d2a9de8-13d1-4981-9ba2-9654127556b8
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 68a9d95a-d51c-4a97-ae36-d4cb16c6fac0
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '283'
+source-wordcount: '254'
 ht-degree: 0%
 
 ---
-
 
 # Översikt över Forms arbetsflöde {#overview-of-forms-workflow}
 
@@ -114,4 +113,3 @@ På varje Forms-arbetsflödessida i administrationskonsolen kan du utföra olika
   </tr>
  </tbody>
 </table>
-

@@ -1,24 +1,23 @@
 ---
 title: Mät och förbättra effektiviteten och konverteringen av blanketter
-seo-title: Mät och förbättra effektiviteten och konverteringen av blanketter
+seo-title: Measure and improve effectiveness and conversion of forms
 description: AEM Forms kan integreras med lösningar från Adobe Target och Adobe Analytics som gör att ni kan mäta och förbättra formulärens prestanda och konverteringsgrad.
-seo-description: AEM Forms kan integreras med lösningar från Adobe Target och Adobe Analytics som gör att ni kan mäta och förbättra formulärens prestanda och konverteringsgrad.
+seo-description: AEM Forms integrates with Adobe Target and Adobe Analytics solutions that allows you to measure and improve the performance and conversion rate of your forms.
 uuid: fd2f087c-39f5-457d-8b44-c3ec4400b3fc
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: integrations
 discoiquuid: a128877d-239c-4272-99c2-72d6486d5703
 docset: aem65
-translation-type: tm+mt
-source-git-commit: befbdfd574949a7f7449b70a15480e7c105418fe
+exl-id: 4f45ad22-611b-4b4f-8e89-cb64a122b70a
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1311'
+source-wordcount: '1278'
 ht-degree: 0%
 
 ---
 
-
-# Mät och förbättra effektiviteten och konverteringen av formulär{#measure-and-improve-effectiveness-and-conversion-of-forms}
+# Mät och förbättra effektiviteten och konverteringen av blanketter{#measure-and-improve-effectiveness-and-conversion-of-forms}
 
 ## Utmaningen {#the-challenge-br}
 
@@ -34,18 +33,18 @@ För att maximera avkastningen måste organisationer övervaka hur kunderna inte
 
 ## Lösningen {#the-solution}
 
-AEM Forms kan integreras med [Adobe Marketing Cloud](https://www.adobe.com/marketing-cloud.html)-lösningar - [Adobe Analytics](https://www.adobe.com/marketing-cloud/web-analytics.html) och [Adobe Target](https://www.adobe.com/marketing-cloud/testing-targeting.html) - som hjälper dig att övervaka och analysera hur formulären fungerar och som gör det möjligt att experimentera och identifiera upplevelsen som leder till bättre konverteringsgrad.
+AEM Forms kan integreras med [Adobe Marketing Cloud](https://www.adobe.com/marketing-cloud.html) lösningar - [Adobe Analytics](https://www.adobe.com/marketing-cloud/web-analytics.html) och [Adobe Target](https://www.adobe.com/marketing-cloud/testing-targeting.html) - som kan hjälpa er att övervaka och analysera hur era formulär fungerar och göra det möjligt att experimentera och identifiera upplevelsen som leder till bättre konverteringsgrad.
 
 ## Arbetsflödet {#the-workflow}
 
 Låt oss titta närmare på hur du kan mäta prestanda och förbättra konverteringsgraden för formulär.
 
-### Målgrupp {#target-audience}
+### Målgrupper {#target-audience}
 
 * Affärsanvändare och analytiker som ansvarar för marknadsföringsstrategier och framgång
 * IT-personal som vill ha infrastruktur och lösningar för installation och underhåll
 
-### AEM Forms komponenter och funktioner som ingår i {#aem-forms-components-and-features-involved}
+### AEM Forms komponenter och funktioner {#aem-forms-components-and-features-involved}
 
 * Anpassningsbara formulär
 * Integrering med Adobe Analytics för att samla in, ordna och rapportera kundinteraktioner med era adaptiva formulär
@@ -58,7 +57,7 @@ Låt oss titta närmare på hur du kan mäta prestanda och förbättra konverter
 
 ### Arbetsflödessteg {#workflow-steps}
 
-#### Steg 1: Konfigurera Analytics och Target i AEM Forms {#step-configure-analytics-and-target-in-aem-forms-br}
+#### Steg 1: Konfigurera Analytics och Target i AEM Forms  {#step-configure-analytics-and-target-in-aem-forms-br}
 
 **Konfigurera analys**
 
@@ -70,7 +69,7 @@ För att få djupgående insikter om hur kunderna interagerar med era formulär 
 1. Konfigurera konfigurationstjänsten för AEM Forms Analytics i AEM
 1. Aktivera analys i formuläret i AEM
 
-Detaljerade steg finns i [Konfigurera analyser och rapporter för adaptiva formulär](../../forms/using/configure-analytics-forms-documents.md).
+Detaljerade anvisningar finns i [Konfigurera analyser och rapporter för adaptiva formulär](../../forms/using/configure-analytics-forms-documents.md).
 
 **Konfigurera mål**
 
@@ -98,7 +97,7 @@ Analysrapporten för adaptiva formulär innehåller följande KPI:er (Key Perfor
 * **Återgivningar**: Antal gånger som formuläret har återgetts eller öppnats
 * **Utkast**: Antal gånger som formuläret har sparats som utkast
 
-* **Sändningar**: Antal gånger som formuläret har skickats in
+* **Inlämningar**: Antal gånger som formuläret har skickats in
 * **Avbryt**: Antal gånger som användaren inte fyllt i formuläret
 * **Besök/överföringar**: Andel besök per inlämning
 
@@ -112,7 +111,7 @@ Dessutom får du följande information om varje panel i formuläret:
 
 ![En exempelanalysrapport för ett adaptivt formulär](assets/summary-report.png)
 
-Mer information om rapporter för formuläranalys finns i [Visa och förstå AEM Forms analysrapporter](../../forms/using/view-understand-aem-forms-analytics-reports.md).
+Mer information om rapporter från formuläranalyser finns i [Visa och förstå AEM Forms analysrapporter](../../forms/using/view-understand-aem-forms-analytics-reports.md).
 
 >[!NOTE]
 >
@@ -128,7 +127,7 @@ I det här steget ska du analysera datapunkter i analysrapporten och sluta dig t
 
 När du har analyserat dessa datapunkter och kommit fram till en hypotes kan du göra de ändringar som krävs i formuläret.
 
-#### Steg 4: Validera din analys och dina korrigeringar {#step-validate-your-analysis-and-fixes}
+#### Steg 4: Validera analyser och korrigeringar {#step-validate-your-analysis-and-fixes}
 
 I det här steget validerar du de ändringar du har gjort i formuläret och kontrollerar om det påverkar konverteringsgraden.
 
@@ -160,4 +159,3 @@ Nedan följer några rekommendationer om hur du utformar formulär och kör A/B-
 * Skapa en hypotes och identifiera framgångsmått innan A/B-testet körs.
 * Gör minimala variationer (helst en i taget) i den alternativa upplevelsen för att ta reda på vilken påverkan konverteringsgraden har.
 * Testa ofta för att eliminera ineffektivitet.
-

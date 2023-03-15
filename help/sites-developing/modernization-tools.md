@@ -1,7 +1,7 @@
 ---
 title: AEM Modernization Tools
 seo-title: AEM Modernization Tools
-description: AEM hjälper dig att konvertera dina gamla AEM till den senaste tekniken
+description: AEM Modernization Tools hjälper dig att konvertera dina gamla AEM till den senaste tekniken
 seo-description: AEM Modernization Tools help you easily convert your legacy AEM features to the latest technology
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,7 +13,7 @@ ht-degree: 66%
 
 ---
 
-# AEM {#modernization-tools}
+# AEM Modernization Tools {#modernization-tools}
 
 [Med AEM Modernization Tools blir det enkelt att konvertera:](https://opensource.adobe.com/aem-modernize-tools/)
 

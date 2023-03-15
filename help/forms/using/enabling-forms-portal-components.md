@@ -1,24 +1,23 @@
 ---
 title: Aktivera komponenterna i formulärportalen
-seo-title: Aktivera komponenterna i formulärportalen
+seo-title: Enabling forms portal components
 description: Forms Portal-komponenter är inaktiverade. Aktivera grupper med Document Services och Document Services Predicates för att aktivera Forms Portal-komponenter.
-seo-description: Forms Portal-komponenter är inaktiverade. Aktivera grupper med Document Services och Document Services Predicates för att aktivera Forms Portal-komponenter.
+seo-description: Out of the box, Forms Portal components are disabled. Enable Document Services and Document Services Predicates groups to enable Forms Portal components.
 uuid: 92d25da6-f1df-4ac0-bf84-2edf9e2722b3
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 discoiquuid: 4d318908-c724-4582-a82b-6e9b1c55705b
 feature: Forms Portal
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 572194b7-063b-4c38-af43-aba78e9c51c6
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
-source-wordcount: '340'
+source-wordcount: '312'
 ht-degree: 0%
 
 ---
 
-
-# Aktivera komponenter för formulärportalen {#enabling-forms-portal-components}
+# Aktivera komponenterna i formulärportalen {#enabling-forms-portal-components}
 
 Komponenterna i formulärportalen är inte tillgängliga för användning. Gör så här för att visa komponenterna i listan över tillgängliga komponenter i AEM.
 
@@ -26,15 +25,15 @@ Komponenterna i formulärportalen är inte tillgängliga för användning. Gör 
 
 1. Utför följande steg för de sidor som använder en statisk mall:
 
-   1. Tryck på ![canvas-drop-down](assets/canvas-drop-down.png) > **Design** i sidhuvudet för att öppna sidan i designläge.
-   1. Tryck på en komponent (med en blå kant) och tryck sedan på ![fältnivå](assets/field-level.png) för att välja det styckesystem som innehåller den aktuella komponenten.
-   1. Tryck på ![settings_icon](assets/settings_icon.png) i styckesystemet för att öppna dialogrutan Redigera för styckesystemet.
-   1. Aktivera kryssrutor för komponenterna **[!UICONTROL Document Services]** och **[!UICONTROL Document Services Predicates]** i listan **[!UICONTROL Allowed Components]**. Tryck på **[!UICONTROL OK]**.
+   1. Tryck på i sidhuvudet ![canvas-drop-down](assets/canvas-drop-down.png) > **Design** för att öppna sidan i designläge.
+   1. Tryck på en komponent (med en blå kant) och tryck sedan på ![fältnivå](assets/field-level.png) för att markera det styckesystem som innehåller den aktuella komponenten.
+   1. Tryck på i styckesystemet ![settings_icon](assets/settings_icon.png) för att öppna dialogrutan Redigera för styckesystemet.
+   1. I listan över **[!UICONTROL Allowed Components]**, aktivera kryssrutor för **[!UICONTROL Document Services]** och **[!UICONTROL Document Services Predicates]** -komponenter. Tryck på **[!UICONTROL OK]**.
 
 1. Utför följande steg för de sidor som använder en dynamisk mall:
 
-   1. I sidhuvudet trycker du på ![egenskaper](assets/properties.png) > **Redigera mall** för att öppna sidans mall.
-   1. Tryck på **Layoutbehållare** och tryck på ![FeedManagement](/help/forms/using/assets/feedmanagement.png). På fliken **Tillåtna komponenter** aktiverar du alternativen **Document Services and Document Services Predicates** och trycker på ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+   1. Tryck på i sidhuvudet ![egenskaper](assets/properties.png) > **Redigera mall** för att öppna sidans mall.
+   1. Tryck **Layoutbehållare** och trycka ![FeedManagement](/help/forms/using/assets/feedmanagement.png). I **Tillåtna komponenter** -fliken, aktivera **Document Services och Document Services - predikat** och trycka ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
 
 >[!NOTE]
 >

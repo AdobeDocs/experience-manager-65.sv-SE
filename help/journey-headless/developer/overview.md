@@ -27,7 +27,7 @@ Den här guiden leder dig igenom de mest rubrikfria implementeringsämnena i AEM
 
 [En dokumentationsresa](/help/journey-documentation/home.md) binder samman många olika och kanske komplicerade ämnen och funktioner genom att tillhandahålla en berättarröst som hjälper läsaren, som kan vara ny att AEM, förstå och lösa ett affärsproblem från början till slut, samtidigt som man antar minimala tidigare ämnesområden eller AEM kunskap.
 
-Dokumentation Journeys bygger på principer för god praxis, grundade på Adobe senaste forskning, beprövade implementeringserfarenheter från Adobe-konsulter och återkoppling från kundprojekt.
+Dokumentation Journeys bygger på principer för god praxis, grundade på Adobe senaste forskning, beprövade implementeringserfarenheter från Adobe konsulter och återkoppling från kundprojekt.
 
 Om du vill veta hur Adobe rekommenderar att man löser problem med headless business case med AEM, [AEM Headless Journeys](/help/journey-headless/home.md) var du ska börja.
 
@@ -60,10 +60,10 @@ Du kommer att utforska många ämnen under den här resan. I följande artiklar 
 |---|---|---|
 | 0 | AEM Headless Developer Journey | Det här dokumentet |
 | 1 | [Läs om CMS Headless Development](learn-about.md) | Läs mer om Headless Technology och när du ska använda den. |
-| 2 | [Komma igång med AEM Headless](getting-started.md) | Läs om AEM Headless-krav |
+| 2 | [Kom igång med AEM Headless](getting-started.md) | Läs om AEM Headless-krav |
 | 3 | [Vägen till din första upplevelse med AEM Headless](path-to-first-experience.md) | Konfigurera utvecklingsmiljön och lär dig hur du integrerar en enkel app med AEM Headless |
 | 4 | [Så här modellerar du innehåll](model-your-content.md) | Lär dig modellera innehållsstrukturen. Förverkliga sedan strukturen för Adobe Experience Manager (AEM) med Content Fragments Models och Content Fragments, för återanvändning i alla kanaler. |
-| 5 | [Få åtkomst till ditt innehåll via AEM-API:er](access-your-content.md) | Lär dig hur du använder GraphQL-frågor för att komma åt innehållet i innehållsfragment. |
+| 5 | [Få åtkomst till ditt innehåll via AEM-API:er](access-your-content.md) | Lär dig hur du använder GraphQL-frågor för att komma åt innehåll i innehållsfragment. |
 | 6 | [Så här uppdaterar du innehåll via AEM Assets API:er](update-your-content.md) | Lär dig hur du använder REST API för att komma åt och uppdatera innehåll i innehållsfragment. |
 | 7 | [Sammanställ allt - appen och ditt innehåll i AEM Headless](put-it-all-together.md) | Lär dig hur du tar ditt AEM och förbereder det för publicering med AEM Headless SDK. |
 | 8 | [Så här lever du med ditt headless-program](go-live.md) | Lär dig hur du distribuerar program live och tar din lokala kod i Git och flyttar den till Cloud Manager Git för CI/CD-pipeline. |

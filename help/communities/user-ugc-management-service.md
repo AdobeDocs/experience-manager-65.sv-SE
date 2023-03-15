@@ -81,7 +81,7 @@ För Adobe Analytics-variabelmappningar som används av AEM Communities, se föl
 
 Om du till exempel vill ta bort profilen för en användare med ett autentiserbart ID `weston.mccall@dodgit.com` Använd följande parametrar via http-POST-begäran:
 
-* användare = `weston.mccall@dodgit.com`
+* user = `weston.mccall@dodgit.com`
 * operation = `deleteUser`
 
 >[!NOTE]

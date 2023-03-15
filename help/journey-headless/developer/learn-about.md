@@ -1,7 +1,8 @@
 ---
 title: Läs om CMS Headless Development
 description: I den här delen av AEM Headless Developer Journey kan du lära dig mer om headless-teknik och varför du skulle använda den.
-source-git-commit: 919cef01470dd930884e97b15f2d40a38872c0d0
+exl-id: f0989cea-3102-43cd-976e-9a6b265d9c15
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
 source-wordcount: '1595'
 ht-degree: 0%
@@ -81,7 +82,7 @@ Tidigare var API:er för CMS:er vanligtvis REST-baserade. REST (Representational
 
 Det finns fortfarande ett behov av stabila REST API:er. REST-begäranden kan dock vara stora och detaljerade. Om ni har flera konsumenter som gör REST-anrop för alla era kanaler kan detta påverka deras mångsidighet och prestanda.
 
-Headless-leverans använder ofta API:er för GraphQL. GraphQL tillåter en liknande tillståndslös överföring, men tillåter mer riktade frågor, minskar det totala antalet frågor som krävs och förbättrar prestanda. Det är vanligt att man ser lösningar som innehåller en blandning av REST och GraphQL, där man i huvudsak väljer det bästa verktyget för det aktuella jobbet.
+Huvudlös innehållsleverans använder ofta GraphQL API:er. GraphQL tillåter en liknande tillståndslös överföring, men ger fler riktade frågor, minskar det totala antalet frågor som krävs och förbättrar prestanda. Det är vanligt att lösningar blandas med REST och GraphQL, vilket i huvudsak är det bästa verktyget för det aktuella arbetet.
 
 Oavsett vilket API du väljer kan du, genom att definiera ett headless-system baserat på gemensamma API:er, utnyttja den senaste webbläsaren och andra webbtekniker som progressiva webbappar (PWA). API:er skapar ett standardgränssnitt som är enkelt att utöka och anpassa.
 

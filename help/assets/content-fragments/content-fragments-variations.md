@@ -144,7 +144,7 @@ Med oformaterad text kan du snabbt lägga in innehåll utan formaterings- eller 
 >
 >Om du väljer **Oformaterad text** kan du förlora formatering, markdown-kod och/eller resurser som du har infogat i **RTF** eller **Markdown-kod**.
 
-### Markering {#markdown}
+### Markdown {#markdown}
 
 >[!NOTE]
 >

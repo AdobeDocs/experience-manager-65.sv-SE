@@ -1,8 +1,8 @@
 ---
 title: Förbättra och skydda AEM formulär i OSGi-miljö
-seo-title: Förbättra och skydda AEM formulär i OSGi-miljö
+seo-title: Hardening and Securing AEM forms on OSGi environment
 description: Lär dig rekommendationer och bästa praxis för att skydda AEM Forms på OSGi-server.
-seo-description: Lär dig rekommendationer och bästa praxis för att skydda AEM Forms på OSGi-server.
+seo-description: Learn recommendations and best practices for securing AEM Forms on OSGi server.
 uuid: abca7e7c-38c3-44f5-8d8a-4615cfce26c6
 topic-tags: Security
 discoiquuid: b1bd04bf-0d6d-4e6b-8c7c-eafd1a24b5fe
@@ -10,7 +10,7 @@ role: Admin
 exl-id: 5da3cc59-4243-4098-b1e0-438304fcd0c5
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '1463'
+source-wordcount: '1443'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ En organisation kan ha en extern brandvägg som begränsar åtkomsten mellan en 
 
 #### Konfigurera extern brandvägg  {#configure-external-firewall}
 
-Du kan konfigurera en extern brandvägg så att vissa AEM Forms-URL:er kan ansluta till Internet. Åtkomst till dessa URL:er krävs för att fylla i eller skicka ett anpassningsbart formulär, HTML5, korrespondenshanteringsbrev eller för att logga in på en AEM Forms-server:
+Du kan konfigurera en extern brandvägg så att vissa AEM Forms-URL:er kan ansluta till Internet. Du måste ha tillgång till dessa URL:er för att fylla i eller skicka ett anpassningsbart formulär, HTML 5, brev om korrespondenshantering eller för att logga in på en AEM Forms-server:
 
 <table> 
  <tbody>
@@ -152,7 +152,7 @@ Använd autentiseringsuppgifterna för bearbetningsservern för tjänsten AEM DS
 Använd användarkonton med nödvändig minimibehörighet för att konfigurera datakällor för formulärdatamodell (FDM). Med administratörskontot kan obehöriga få tillgång till metadata och schemaentiteter.\
 Dataintegrering innehåller även metoder för att godkänna FDM-tjänstförfrågningar. Du kan infoga auktoriseringsmekanismer för före och efter körning för att validera en begäran. Tjänstförfrågningar genereras när ett formulär fylls i i förväg, när ett formulär skickas och tjänster anropas via en regel.
 
-**Auktorisering före bearbetning:** Du kan använda auktoriseringen före bearbetning för att validera en begärans autenticitet innan du kör den. Du kan använda indata, tjänster och information om förfrågningar för att tillåta eller stoppa körningen av begäran. Du kan returnera ett dataintegreringsundantag för OPERATION_ACCESS_DENIED om körningen stoppas. Du kan också ändra klientbegäran innan du skickar den för körning. Du kan till exempel ändra indata och lägga till ytterligare information.
+**Auktorisering före bearbetning:** Du kan använda auktoriseringen för förbehandling för att validera en begärans äkthet innan du kör den. Du kan använda indata, tjänster och information om förfrågningar för att tillåta eller stoppa körningen av begäran. Du kan returnera ett dataintegreringsundantag för OPERATION_ACCESS_DENIED om körningen stoppas. Du kan också ändra klientbegäran innan du skickar den för körning. Du kan till exempel ändra indata och lägga till ytterligare information.
 
 **Auktorisering efter bearbetning:** Du kan använda auktoriseringen efter bearbetningen för att validera och kontrollera resultaten innan du returnerar resultaten till den som gjorde begäran. Du kan också filtrera, rensa och infoga ytterligare data i resultaten.
 
@@ -180,7 +180,7 @@ En annan uppsättning användarprofiler krävs för att skapa, publicera och bea
    * En användare av mallar-författare och mallanvändare kan förhandsgranska och skapa en mall.
    * En användare av fdm-författare kan skapa och ändra en formulärdatamodell.
    * En användare av cm-user-agent-gruppen kan skapa, förhandsgranska och publicera brev för korrespondenshantering.
-   * En användare i en grupp för arbetsflöderedaktörer kan skapa ett inkorgsprogram och en arbetsflödesmodell.
+   * En användare i en grupp för arbetsflödesredigerare kan skapa ett inkorgsprogram och en arbetsflödesmodell.
 
 
 **Vid behandlande författare:**
@@ -198,4 +198,4 @@ Ett bearbetningskluster körs i redigeringsläge, men använder det inte för ut
 
 ### Använd AEM bästa praxis för att skydda en AEM Forms-miljö {#use-aem-best-practices-to-secure-an-aem-forms-environment}
 
-Det här dokumentet innehåller instruktioner som är specifika för AEM Forms-miljön. Du bör se till att den underliggande AEM är säker vid driftsättning. Detaljerade instruktioner finns i [AEM Security Checklist](/help/sites-administering/security-checklist.md)-dokumentationen.
+Det här dokumentet innehåller instruktioner som är specifika för AEM Forms-miljön. Du bör se till att den underliggande AEM är säker vid driftsättning. Detaljerade anvisningar finns i [AEM](/help/sites-administering/security-checklist.md) dokumentation.

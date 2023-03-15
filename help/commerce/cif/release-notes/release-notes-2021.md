@@ -4,8 +4,8 @@ description: AEM Content and Commerce Release Notes 2021
 exl-id: ec47c5f8-d4dd-469f-94df-5ee28f25d696
 source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1314'
+ht-degree: 7%
 
 ---
 
@@ -49,7 +49,7 @@ Granska de lägsta systemkraven i tabellen nedan för den CIF-version som du anv
 
 ### Nyheter {#what-is-new-october}
 
-* CIF-tillägget stöder den senaste Commerce v2.4.3 med nya GraphQL API:er och scheman
+* CIF-tillägget stöder den senaste versionen av Commerce v2.4.3 med nya GraphQL API:er och scheman
 
 * Författare kan lägga till länkar till produkt- och katalogsidor i textfält med textredigeraren. En CIF-ikon har lagts till i verktygsfältet för textredigering som öppnar väljarna för att snabbt söka efter och välja produkten eller kategorin utan att lämna sammanhanget.
 

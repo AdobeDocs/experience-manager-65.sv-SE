@@ -1,19 +1,17 @@
 ---
 title: Konfigurera inställningar för frånvaro
-seo-title: Konfigurera inställningar för frånvaro
+seo-title: Configure Out of Office settings
 description: Konfigurera inställningar för frånvaro
-seo-description: Konfigurera inställningar för frånvaro
-translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+seo-description: Configure Out of Office settings
+exl-id: e4c9d74c-e08d-4675-91f2-4f9fc2f1bcea
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '776'
+source-wordcount: '766'
 ht-degree: 0%
 
 ---
 
-
-
-# Konfigurera inställningen Frånvarande {#configure-out-of-office-settings}
+# Konfigurera frånvaroinställningar {#configure-out-of-office-settings}
 
 Om du tänker vara utanför kontoret kan du ange vad som ska hända med artiklar som har tilldelats dig för den perioden.
 
@@ -36,17 +34,17 @@ Du kan dela upp objektdelegering baserat på arbetsflödesmodellerna. Du kan til
 
 Utför följande steg för att aktivera inställningen Frånvarande för ditt konto och delegera dina inkorgsobjekt till en annan användare:
 
-1. Logga in på din AEM. Tryck på ikonen ![Inkorg](assets/bell.svg) och tryck på **[!UICONTROL View All]**. En lista över dina inkorgsobjekt visas.
-1. Tryck på ikonen ![Visa väljare](assets/viewlist.svg) eller ![Visa väljare](assets/calendar.svg) bredvid knappen **[!UICONTROL Create]** och tryck på **[!UICONTROL Settings]**. Dialogrutan Inställningar visas.
-1. Öppna fliken **[!UICONTROL Out of Office]** i dialogrutan Inställningar.
-1. Tryck på knappen **[!UICONTROL Enable/Disable]** för att aktivera inställningen Frånvarande.
-1. Ange **[!UICONTROL Start Time]** och **[!UICONTROL End Time]** för inställningen. Objekten delegeras endast under den angivna perioden. Lämna fältet **[!UICONTROL End Time]** tomt om du vill delegera objekt för en obegränsad tidsperiod.
-1. Markera kryssrutan **[!UICONTROL Forward my items during this period]**. Om du inte markerar alternativet och inte anger en tilldelad användare, vidarebefordras inte objekten till någon användare. Även om du är borta och inställningen är aktiverad finns objekten kvar i Inkorgen.
-1. Tryck på **[!UICONTROL Add Assignee]**. Ange en användare i fältet **[!UICONTROL Assignee]** som objekten ska delegeras till. Ange **[!UICONTROL Workflow Model]** som ska delegeras till den angivna användaren. Du kan välja mer än en arbetsflödesmodell.
+1. Logga in på din AEM. Tryck på ![Inkorg](assets/bell.svg) ikon och tryck **[!UICONTROL View All]**. En lista över dina inkorgsobjekt visas.
+1. Tryck på ![Visa väljare](assets/viewlist.svg) eller ![Visa väljare](assets/calendar.svg) -ikonen bredvid **[!UICONTROL Create]** knapp och knacka **[!UICONTROL Settings]**. Dialogrutan Inställningar visas.
+1. Öppna **[!UICONTROL Out of Office]** i inställningsdialogrutan.
+1. Tryck på **[!UICONTROL Enable/Disable]** om du vill aktivera inställningen Frånvarande.
+1. Ange **[!UICONTROL Start Time]**  och **[!UICONTROL End Time]** för inställningen. Objekten delegeras endast under den angivna perioden. Lämna **[!UICONTROL End Time]** fältet är tomt för att delegera objekt för en obestämd tidsperiod.
+1. Välj **[!UICONTROL Forward my items during this period]** kryssrutan. Om du inte markerar alternativet och inte anger en tilldelad användare, vidarebefordras inte objekten till någon användare. Även om du är borta och inställningen är aktiverad finns objekten kvar i Inkorgen.
+1. Tryck på **[!UICONTROL Add Assignee]**. Ange en användare i **[!UICONTROL Assignee]** fält som objekten ska delegeras till. Ange **[!UICONTROL Workflow Model]** för att delegera till den angivna användaren. Du kan välja mer än en arbetsflödesmodell.
 
    Om du dessutom vill tilldela alla objekt, oavsett arbetsflödesmodell, till en viss användare väljer du **[!UICONTROL All Workflows]** i listrutan Arbetsflödesmodell. <br>
 
-   Om du vill tilldela objekt till en viss användare för alla arbetsflödesmodeller utom ett fåtal väljer du **[!UICONTROL All Workflows]** i listrutan Arbetsflödesmodell, trycker på **[!UICONTROL + Add Exceptions]** och anger vilka arbetsflödesmodeller som ska utelämnas.
+   Om du vill tilldela objekt till en viss användare för alla arbetsflödesmodeller utom ett fåtal, väljer du **[!UICONTROL All Workflows]** i listrutan Arbetsflödesmodell: tryck **[!UICONTROL + Add Exceptions]**och ange vilka arbetsflödesmodeller som ska utelämnas.
    <br>
 
    Upprepa steget för att lägga till fler tilldelningar. <br>
@@ -62,7 +60,7 @@ Nu tilldelas objekt som du har tilldelats under frånvaroperioden automatiskt ti
 
 >[!NOTE]
 >
->(Endast för Forms-centrerade arbetsflödesobjekt) Aktivera alternativet **Tillåt att tilldelad delegerar med inställningen Frånvarande** i steget **Tilldela uppgift** i arbetsflödet. Endast objekt som har det ovannämnda alternativet aktiverat delegeras till andra användare.
+>(Endast för Forms-centrerade arbetsflödesobjekt) Aktivera **Tillåt att tilldelad delegerar med hjälp av inställningen Frånvarande** alternativ för **Tilldela uppgift** i arbetsflödet. Endast objekt som har det ovannämnda alternativet aktiverat delegeras till andra användare.
 
 ## Begränsningar {#limitations}
 

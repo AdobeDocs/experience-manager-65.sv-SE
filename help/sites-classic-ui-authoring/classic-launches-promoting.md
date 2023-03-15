@@ -1,8 +1,8 @@
 ---
 title: Marknadsföra Launches
-seo-title: Marknadsföra Launches
+seo-title: Promoting Launches
 description: Du måste befordra startsidor för att kunna flytta tillbaka innehållet till källan (produktionen) innan du publicerar. När en startsida befordras ersätts motsvarande sida på källsidorna med innehållet på den befordrade sidan.
-seo-description: Du måste befordra startsidor för att kunna flytta tillbaka innehållet till källan (produktionen) innan du publicerar. När en startsida befordras ersätts motsvarande sida på källsidorna med innehållet på den befordrade sidan.
+seo-description: You need to promote launch pages to move the content back into the source (production) before publishing. When a launch page is promoted, the corresponding page of the source pages is replaced with the content of the promoted page.
 uuid: 91f1c6ac-8c4e-4459-aaab-feaa32befc45
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,14 +10,13 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: 8d38c6f7-8fea-4d27-992d-03b604b9541f
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
-translation-type: tm+mt
-source-git-commit: 016c705230dffec052c200b058a36cdbe0520fc4
+exl-id: 3013adc3-bec6-4ecc-aefd-f8df2b86dfef
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '355'
+source-wordcount: '314'
 ht-degree: 3%
 
 ---
-
 
 # Marknadsföra Launches{#promoting-launches}
 
@@ -27,19 +26,19 @@ Du måste befordra startsidor för att kunna flytta tillbaka innehållet till k�
 * Anger om underordnade sidor för den aktuella sidan ska befordras.
 * Anger om en fullständig start ska erbjudas eller endast sidor som har ändrats.
 
-## Markerar startsidor {#promoting-launch-pages}
+## Marknadsför startsidor {#promoting-launch-pages}
 
 Om du vill befordra sidor utför du följande steg när du redigerar startsidan som du vill befordra:
 
-1. På fliken **Sida** i Sidspark klickar du på **Promote Launch**.
+1. På **Sida** -flik i Sidekick, klicka **Promote Launch**.
 1. Ange vilka sidor som ska befordras:
 
    * (Standard) Om du bara vill befordra den aktuella sidan väljer du **Befordra sidändringar till produktionsversion**.
    * Om du även vill befordra den aktuella sidans underordnade sidor väljer du **Inkludera undersidor**.
    * Om du vill befordra alla sidor i starten väljer du **Befordra fullständig start till produktionsversion**.
 
-1. Om du vill lägga till produktionssidorna i ett arbetsflödespaket väljer du **Lägg till i arbetsflödespaket** och väljer sedan arbetsflödespaketet.
-1. Klicka på **Befordra**.
+1. Om du vill lägga till produktionssidorna i ett arbetsflödespaket väljer du **Lägg till i arbetsflödespaket** och välj sedan arbetsflödespaketet.
+1. Klicka **Befordra**.
 
 ## Bearbeta befordrade sidor med AEM Workflow {#processing-promoted-pages-using-aem-workflow}
 
@@ -49,9 +48,8 @@ Använd arbetsflödesmodeller för att utföra massbearbetning av befordrade sta
 1. När författare befordrar startsidor lagrar de dem i arbetsflödespaketet.
 1. Starta en arbetsflödesmodell med paketet som nyttolast.
 
-Om du vill starta ett arbetsflöde automatiskt när sidor befordras, [konfigurerar du en arbetsflödesstartare](/help/sites-administering/workflows-starting.md#workflows-launchers) för paketnoden.
+Så här startar du ett arbetsflöde automatiskt när sidor befordras: [konfigurera en startfunktion för arbetsflöden](/help/sites-administering/workflows-starting.md#workflows-launchers) för paketnoden.
 
 Du kan t.ex. automatiskt generera begäranden om sidaktivering när författare befordrar startsidor. Konfigurera en startfunktion för arbetsflödet för aktivering av begäran när paketnoden ändras.
 
 ![chlimage_1-136](assets/chlimage_1-136.png)
-

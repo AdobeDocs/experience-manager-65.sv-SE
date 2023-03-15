@@ -1,22 +1,21 @@
 ---
 title: Mobilappar
-seo-title: Mobilappar
+seo-title: Mobile Apps
 description: Följ den här sidan för att komma igång med att administrera innehåll för mobilappar.
-seo-description: Följ den här sidan för att komma igång med att administrera innehåll för mobilappar.
+seo-description: Follow this page to get started with administering content for mobile apps.
 uuid: 0ef31513-b720-46cb-b162-35883ae48912
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: introduction
 content-type: reference
 discoiquuid: 302d1bd9-fdb3-4db6-a446-6ed85ad9fba5
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: dc7ba6ad-9df9-4312-a82f-5f3405dea684
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '145'
+source-wordcount: '131'
 ht-degree: 0%
 
 ---
-
 
 # Mobilappar{#mobile-apps}
 
@@ -33,4 +32,4 @@ AEM Mobile erbjuder flera metoder för att skapa appar. De olika sätt du kan an
 
 >[!NOTE]
 >
->Om du inte har använt Adobe Experience Manager tidigare kan du gå igenom [Komma igång med AEM](/help/sites-deploying/deploy.md).
+>Om du inte har använt Adobe Experience Manager tidigare vill du kanske gå igenom [Komma igång med AEM](/help/sites-deploying/deploy.md).

@@ -1,8 +1,8 @@
 ---
-title: Skapa PDF-dokument med skickade XML-data
-seo-title: Skapa PDF-dokument med skickade XML-data
-description: Använd tjänsten Forms för att hämta formulärdata som användaren har angett i ett interaktivt formulär. Skicka formulärdata till en annan AEM Forms-tjänst och skapa ett PDF-dokument med hjälp av data.
-seo-description: Använd tjänsten Forms för att hämta formulärdata som användaren har angett i ett interaktivt formulär. Skicka formulärdata till en annan AEM Forms-tjänst och skapa ett PDF-dokument med hjälp av data.
+title: Skapa PDF-dokument med SubmitXML-data
+seo-title: Creating PDF Documents with SubmittedXML Data
+description: Använd tjänsten Forms för att hämta formulärdata som användaren har angett i ett interaktivt formulär. Skicka formulärdata till en annan AEM Forms-tjänståtgärd och skapa ett PDF-dokument med hjälp av data.
+seo-description: Use the Forms service to retrieve the form data that the user entered into an interactive form. Pass the form data to another AEM Forms service operation and create a PDF document using the data.
 uuid: 2676c614-8988-451b-ac7c-bd07731a3f5f
 contentOwner: admin
 content-type: reference
@@ -11,22 +11,21 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 62490230-a24e-419d-95bb-c0bb04a03f96
 role: Developer
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: d9d5b94a-9d10-4d90-9e10-5142f30ba4a3
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1362'
+source-wordcount: '1320'
 ht-degree: 0%
 
 ---
 
-
-# Skapa PDF-dokument med skickade XML-data {#creating-pdf-documents-with-submittedxml-data}
+# Skapa PDF-dokument med inskickade XML-data {#creating-pdf-documents-with-submittedxml-data}
 
 **Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
 
-## Skapa PDF-dokument med skickade XML-data {#creating-pdf-documents-with-submitted-xml-data}
+## Skapa PDF-dokument med inskickade XML-data {#creating-pdf-documents-with-submitted-xml-data}
 
-Webbaserade tillämpningar där användarna kan fylla i interaktiva formulär kräver att data skickas tillbaka till servern. Med tjänsten Forms kan du hämta formulärdata som användaren har angett i ett interaktivt formulär. Sedan kan du skicka formulärdata till en annan AEM Forms-åtgärd och skapa ett PDF-dokument med hjälp av data.
+Webbaserade tillämpningar där användarna kan fylla i interaktiva formulär kräver att data skickas tillbaka till servern. Med tjänsten Forms kan du hämta formulärdata som användaren har angett i ett interaktivt formulär. Sedan kan du skicka formulärdata till en annan AEM Forms-tjänståtgärd och skapa ett PDF-dokument med hjälp av data.
 
 >[!NOTE]
 >
@@ -43,19 +42,19 @@ I följande diagram visas arbetsflödet.
 
 ![cd_cd_finsrv_architecture_xml_pdf1](assets/cd_cd_finsrv_architecture_xml_pdf1.png)
 
-När användaren har skickat formuläret från klientens webbläsare lagras det icke-interaktiva PDF-dokumentet i Content Services (föråldrat). Följande bild visar ett PDF-dokument som lagras i Content Services (utgått).
+När användaren har skickat formuläret från klientens webbläsare lagras det icke-interaktiva PDF-dokumentet i Content Services (utgått). Följande bild visar ett PDF-dokument som lagras i Content Services (utgått).
 
 ![cd_cd_cs_gui](assets/cd_cd_cs_gui.png)
 
 ### Sammanfattning av steg {#summary-of-steps}
 
-Så här skapar du ett icke-interaktivt PDF-dokument med inskickade XML-data och sparar det i PDF-dokumentet i Content Services (borttaget):
+Gör så här om du vill skapa ett icke-interaktivt PDF-dokument med inskickade XML-data och lagra i PDF-dokumentet i Content Services (utgått):
 
 1. Inkludera projektfiler.
 1. Skapa Forms-, Output- och Document Management-objekt.
 1. Hämta formulärdata med hjälp av tjänsten Forms.
 1. Skapa ett icke-interaktivt PDF-dokument med hjälp av utdatatjänsten.
-1. Lagra PDF-formuläret i Content Services (föråldrat) med hjälp av tjänsten Document Management.
+1. Lagra PDF-formuläret i innehållstjänster (borttaget) med hjälp av dokumenthanteringstjänsten.
 
 **Inkludera projektfiler**
 
@@ -73,7 +72,7 @@ Hämta formulärdata som skickats till Forms-tjänsten. Du kan bearbeta inskicka
 
 Använd utdatatjänsten för att skapa ett icke-interaktivt PDF-dokument som är baserat på en formulärdesign och XML-formulärdata. I arbetsflödet hämtas formulärdata från Forms-tjänsten.
 
-**Lagra PDF-formuläret i Content Services (utgått) med tjänsten Document Management**
+**Lagra PDF-formuläret i innehållstjänster (borttaget) med hjälp av tjänsten Dokumenthantering**
 
 Använd API:t för dokumenthanteringstjänsten för att lagra ett PDF-dokument i innehållstjänster (borttaget).
 
@@ -87,7 +86,7 @@ Använd API:t för dokumenthanteringstjänsten för att lagra ett PDF-dokument i
 
 ### Skapa ett PDF-dokument med skickade XML-data med Java API {#create-a-pdf-document-with-submitted-xml-data-using-the-java-api}
 
-Skapa ett PDF-dokument med inskickade XML-data med Forms, Output och Document Management API (Java):
+Skapa ett PDF-dokument med inskickade XML-data med hjälp av Forms, Output och Document Management API (Java):
 
 1. Inkludera projektfiler
 
@@ -95,59 +94,59 @@ Skapa ett PDF-dokument med inskickade XML-data med Forms, Output och Document Ma
 
 1. Skapa Forms-, Output- och Document Management-objekt
 
-   * Skapa ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
-   * Skapa ett `FormsServiceClient`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
-   * Skapa ett `OutputClient`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
-   * Skapa ett `DocumentManagementServiceClientImpl`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
+   * Skapa en `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
+   * Skapa en `FormsServiceClient` genom att använda konstruktorn och skicka `ServiceClientFactory` -objekt.
+   * Skapa en `OutputClient` genom att använda konstruktorn och skicka `ServiceClientFactory` -objekt.
+   * Skapa en `DocumentManagementServiceClientImpl` genom att använda konstruktorn och skicka `ServiceClientFactory` -objekt.
 
 1. Hämta formulärdata med tjänsten Forms
 
-   * Anropa `FormsServiceClient`-objektets `processFormSubmission`-metod och skicka följande värden:
+   * Anropa `FormsServiceClient` objektets `processFormSubmission` och skicka följande värden:
 
-      * Det `com.adobe.idp.Document`-objekt som innehåller formulärdata.
-      * Ett strängvärde som anger miljövariabler, inklusive alla relevanta HTTP-rubriker. Ange den innehållstyp som ska hanteras genom att ange ett eller flera värden för miljövariabeln `CONTENT_TYPE`. Om du till exempel vill hantera XML-data anger du följande strängvärde för den här parametern: `CONTENT_TYPE=text/xml`.
-      * Ett strängvärde som anger rubrikvärdet `HTTP_USER_AGENT`, till exempel `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`.
-      * Ett `RenderOptionsSpec`-objekt som lagrar körningsalternativ.
+      * The `com.adobe.idp.Document` som innehåller formulärdata.
+      * Ett strängvärde som anger miljövariabler, inklusive alla relevanta HTTP-rubriker. Ange vilken innehållstyp som ska hanteras genom att ange ett eller flera värden för `CONTENT_TYPE` systemvariabel. Om du till exempel vill hantera XML-data anger du följande strängvärde för den här parametern: `CONTENT_TYPE=text/xml`.
+      * Ett strängvärde som anger `HTTP_USER_AGENT` rubrikvärde, som `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`.
+      * A `RenderOptionsSpec` objekt som lagrar körningsalternativ.
 
-      Metoden `processFormSubmission` returnerar ett `FormsResult`-objekt som innehåller resultaten av formuläröverföringen.
+      The `processFormSubmission` returnerar en `FormsResult` objekt som innehåller resultaten av formuläröverföringen.
 
-   * Avgör om Forms-tjänsten har slutfört bearbetningen av formulärdata genom att anropa `FormsResult`-objektets `getAction`-metod. Om den här metoden returnerar värdet `0` är data klara att bearbetas.
-   * Hämta formulärdata genom att skapa ett `com.adobe.idp.Document`-objekt genom att anropa `FormsResult`-objektets `getOutputContent`-metod. (Det här objektet innehåller formulärdata som kan skickas till utdatatjänsten.)
-   * Skapa ett `java.io.InputStream`-objekt genom att anropa konstruktorn `java.io.DataInputStream` och skicka `com.adobe.idp.Document`-objektet.
-   * Skapa ett `org.w3c.dom.DocumentBuilderFactory`-objekt genom att anropa det statiska `org.w3c.dom.DocumentBuilderFactory`-objektets `newInstance`-metod.
-   * Skapa ett `org.w3c.dom.DocumentBuilder`-objekt genom att anropa `org.w3c.dom.DocumentBuilderFactory`-objektets `newDocumentBuilder`-metod.
-   * Skapa ett `org.w3c.dom.Document`-objekt genom att anropa `org.w3c.dom.DocumentBuilder`-objektets `parse`-metod och skicka `java.io.InputStream`-objektet.
-   * Hämta värdet för varje nod i XML-dokumentet. Ett sätt att utföra den här uppgiften är att skapa en anpassad metod som accepterar två parametrar: `org.w3c.dom.Document`-objektet och namnet på noden vars värde du vill hämta. Den här metoden returnerar ett strängvärde som representerar nodens värde. I kodexemplet som följer den här processen kallas den här anpassade metoden `getNodeText`. Innehållet i den här metoden visas.
+   * Avgör om Forms-tjänsten har slutfört bearbetningen av formulärdata genom att anropa `FormsResult` objektets `getAction` -metod. Om den här metoden returnerar värdet `0`är data färdiga att bearbetas.
+   * Hämta formulärdata genom att skapa en `com.adobe.idp.Document` genom att anropa `FormsResult` objektets `getOutputContent` -metod. (Det här objektet innehåller formulärdata som kan skickas till utdatatjänsten.)
+   * Skapa en `java.io.InputStream` genom att anropa `java.io.DataInputStream` konstruktorn och skickar `com.adobe.idp.Document` -objekt.
+   * Skapa en `org.w3c.dom.DocumentBuilderFactory` genom att anropa det statiska `org.w3c.dom.DocumentBuilderFactory` objektets `newInstance` -metod.
+   * Skapa en `org.w3c.dom.DocumentBuilder` genom att anropa `org.w3c.dom.DocumentBuilderFactory` objektets `newDocumentBuilder` -metod.
+   * Skapa en `org.w3c.dom.Document` genom att anropa `org.w3c.dom.DocumentBuilder` objektets `parse` metoden och skicka `java.io.InputStream` -objekt.
+   * Hämta värdet för varje nod i XML-dokumentet. Ett sätt att utföra den här uppgiften är att skapa en anpassad metod som accepterar två parametrar: den `org.w3c.dom.Document` och namnet på noden vars värde du vill hämta. Den här metoden returnerar ett strängvärde som representerar nodens värde. I kodexemplet som följer den här processen anropas den här anpassade metoden `getNodeText`. Innehållet i den här metoden visas.
 
 
 1. Skapa ett icke-interaktivt PDF-dokument med hjälp av utdatatjänsten.
 
-   Skapa ett PDF-dokument genom att anropa `OutputClient`-objektets `generatePDFOutput`-metod och skicka följande värden:
+   Skapa ett PDF-dokument genom att anropa `OutputClient` objektets `generatePDFOutput` och skicka följande värden:
 
-   * Ett `TransformationFormat` enum-värde. Om du vill generera ett PDF-dokument anger du `TransformationFormat.PDF`.
+   * A `TransformationFormat` enum-värde. Om du vill generera ett dokument i PDF anger du `TransformationFormat.PDF`.
    * Ett strängvärde som anger formulärdesignens namn. Kontrollera att formulärdesignen är kompatibel med formulärdata som hämtas från Forms-tjänsten.
    * Ett strängvärde som anger innehållsroten där formulärdesignen finns.
-   * Ett `PDFOutputOptionsSpec`-objekt som innehåller alternativ för PDF-körning.
-   * Ett `RenderOptionsSpec`-objekt som innehåller alternativ för återgivning vid körning.
-   * Det `com.adobe.idp.Document`-objekt som innehåller XML-datakällan som innehåller data som ska sammanfogas med formulärdesignen. Kontrollera att det här objektet returnerades av `FormsResult`-objektets `getOutputContent`-metod.
-   * Metoden `generatePDFOutput` returnerar ett `OutputResult`-objekt som innehåller resultatet av åtgärden.
-   * Hämta det icke-interaktiva PDF-dokumentet genom att anropa `OutputResult`-objektets `getGeneratedDoc`-metod. Den här metoden returnerar en `com.adobe.idp.Document`-instans som representerar det icke-interaktiva PDF-dokumentet.
+   * A `PDFOutputOptionsSpec` objekt som innehåller körningsalternativ för PDF.
+   * A `RenderOptionsSpec` objekt som innehåller alternativ för återgivning vid körning.
+   * The `com.adobe.idp.Document` objekt som innehåller XML-datakällan som innehåller data som ska sammanfogas med formulärdesignen. Kontrollera att objektet returnerades av `FormsResult` objektets `getOutputContent` -metod.
+   * The `generatePDFOutput` returnerar en `OutputResult` objekt som innehåller resultatet av åtgärden.
+   * Hämta det icke-interaktiva PDF-dokumentet genom att anropa `OutputResult` objektets `getGeneratedDoc` -metod. Den här metoden returnerar en `com.adobe.idp.Document` -instans som representerar det icke-interaktiva PDF-dokumentet.
 
-1. Lagra PDF-formuläret i Content Services (utgått) med tjänsten Document Management
+1. Lagra PDF-formuläret i Content Services (utgått) med hjälp av tjänsten Document Management
 
-   Lägg till innehållet genom att anropa `DocumentManagementServiceClientImpl`-objektets `storeContent`-metod och skicka följande värden:
+   Lägg till innehållet genom att anropa `DocumentManagementServiceClientImpl` objektets `storeContent` och skicka följande värden:
 
    * Ett strängvärde som anger den lagringsplats där innehållet läggs till. Standardarkivet är `SpacesStore`. Detta värde är en obligatorisk parameter.
    * Ett strängvärde som anger den fullständiga sökvägen för det utrymme där innehållet läggs till (till exempel `/Company Home/Test Directory`). Detta värde är en obligatorisk parameter.
    * Nodnamnet som representerar det nya innehållet (till exempel `MortgageForm.pdf`). Detta värde är en obligatorisk parameter.
    * Ett strängvärde som anger nodtypen. Om du vill lägga till nytt innehåll, till exempel en PDF-fil, anger du `{https://www.alfresco.org/model/content/1.0}content`. Detta värde är en obligatorisk parameter.
-   * Ett `com.adobe.idp.Document`-objekt som representerar innehållet. Detta värde är en obligatorisk parameter.
+   * A `com.adobe.idp.Document` objekt som representerar innehållet. Detta värde är en obligatorisk parameter.
    * Ett strängvärde som anger kodningsvärdet (till exempel `UTF-8`). Detta värde är en obligatorisk parameter.
-   * Ett `UpdateVersionType`-uppräkningsvärde som anger hur versionsinformation ska hanteras (till exempel `UpdateVersionType.INCREMENT_MAJOR_VERSION` för att öka innehållsversionen. ) Det här värdet är en obligatorisk parameter.
-   * En `java.util.List`-instans som anger aspekter relaterade till innehållet. Det här värdet är en valfri parameter och du kan ange `null`.
-   * Ett `java.util.Map`-objekt som lagrar innehållsattribut.
+   * An `UpdateVersionType` uppräkningsvärde som anger hur versionsinformation ska hanteras (till exempel `UpdateVersionType.INCREMENT_MAJOR_VERSION` för att öka innehållsversionen. ) Det här värdet är en obligatorisk parameter.
+   * A `java.util.List` -instans som anger aspekter som är relaterade till innehållet. Det här värdet är en valfri parameter och du kan ange `null`.
+   * A `java.util.Map` objekt som lagrar innehållsattribut.
 
-   Metoden `storeContent` returnerar ett `CRCResult`-objekt som beskriver innehållet. Om du använder ett `CRCResult`-objekt kan du till exempel få innehållets unika identifierarvärde. Om du vill utföra den här åtgärden anropar du `CRCResult`-objektets `getNodeUuid`-metod.
+   The `storeContent` returnerar en `CRCResult` -objekt som beskriver innehållet. Använda en `CRCResult` kan du till exempel hämta innehållets unika identifierarvärde. Om du vill utföra den här åtgärden anropar du `CRCResult` objektets `getNodeUuid` -metod.
 
 **Se även**
 

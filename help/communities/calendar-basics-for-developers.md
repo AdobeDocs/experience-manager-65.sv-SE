@@ -1,24 +1,23 @@
 ---
 title: Grundläggande kalender
-seo-title: Grundläggande kalender
+seo-title: Calendar Essentials
 description: Översikt över kalenderfunktionen
-seo-description: Översikt över kalenderfunktionen
+seo-description: Calendar feature overview
 uuid: 14ff7a83-b2a7-4f7e-8ee7-88f336329a1a
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: 88932a3c-ba7f-47ba-9e0b-206755c2d42e
-translation-type: tm+mt
-source-git-commit: 82affd528f2526384b319fe89082e0f574ab5855
+exl-id: 069e379d-c6fd-49ca-b337-df6fd466e023
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '220'
+source-wordcount: '215'
 ht-degree: 0%
 
 ---
 
-
-# Grundläggande om kalender {#calendar-essentials}
+# Grundläggande kalender {#calendar-essentials}
 
 Den här sidan innehåller viktig information om hur du arbetar med kalenderfunktionen.
 
@@ -66,18 +65,17 @@ Den här sidan innehåller viktig information om hur du arbetar med kalenderfunk
 
 ### Kalenderfunktion {#calendar-function}
 
-En community-platsstruktur som innehåller [kalenderfunktionen](functions.md#calendar-function) har en konfigurerad `calendar`-komponent. Kalenderfunktionen stöder identifiering av en [privilegierad medlemsgrupp](users.md#privileged-members-group).
+En community-webbplatsstruktur som innehåller [Kalenderfunktion](functions.md#calendar-function) har en konfigurerad `calendar` -komponenten. Kalenderfunktionen har stöd för att identifiera en [privilegierad medlemsanvändargrupp](users.md#privileged-members-group).
 
-### Åtkomst till kalenderposter (UGC) {#accessing-calendar-posts-ugc}
+### Åtkomst till kalenderinlägg (UGC) {#accessing-calendar-posts-ugc}
 
-Från och med AEM 6.1 Communities omfattar användningen av en [gemensam butik](working-with-srp.md) för UGC programmatisk åtkomst till UGC oavsett valt lagringsalternativ (som ASRP, MSRP eller JSRP).
+Från och med AEM 6.1 Communities används [gemensam lagringsplats](working-with-srp.md) för UGC omfattar programmatisk åtkomst till UGC oavsett vilket lagringsalternativ som valts (till exempel ASRP, MSRP eller JSRP).
 
 **Platsen och formatet för användargenererat innehåll i databasen kan ändras utan förvarning**.
 
 Se:
 
-* [Översikt över](srp.md)  lagringsresursprovidern - introduktion och databasanvändning - översikt
-* [SRP och UGC Essentials](srp-and-ugc.md) - SRP-verktygsmetoder och -exempel
-* [Åtkomst till UGC med riktlinjer för SRP](accessing-ugc-with-srp.md) -kodning
-* [Omfaktorisering för SocialUtils](socialutils.md) - mappning av utgått verktygsmetoder till aktuella SRP-verktygsmetoder
-
+* [Översikt över lagringsresursprovider](srp.md) - introduktion och databasanvändning - översikt
+* [SRP och UGC Essentials](srp-and-ugc.md) - SRP-verktygsmetoder och exempel
+* [Åtkomst till UGC med SRP](accessing-ugc-with-srp.md) - riktlinjer för kodning
+* [Omfaktorisering för SocialUtils](socialutils.md) - mappning av borttagna verktygsmetoder till aktuella SRP-verktygsmetoder

@@ -1,22 +1,21 @@
 ---
 title: Felsökning
-seo-title: Felsökning
+seo-title: Troubleshooting
 description: Felsökning av användargrupper, inklusive kända fel
-seo-description: Felsökning av användargrupper, inklusive kända fel
+seo-description: Troubleshooting Community including Known Issues
 uuid: 99225430-fa2a-4393-ae5a-18b19541c358
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: cdb2d80a-2fbf-4ee6-b89b-b5d74e6d3bfc
-translation-type: tm+mt
-source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
+exl-id: ef4f4108-c485-4e2e-a58f-ff64eee9937e
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '360'
+source-wordcount: '354'
 ht-degree: 1%
 
 ---
-
 
 # Felsökning {#troubleshooting}
 
@@ -24,7 +23,7 @@ Detta avsnitt innehåller vanliga problem och kända problem.
 
 ## Kända fel {#known-issues}
 
-### Dispatcher Refetch Fails {#dispatcher-refetch-fails}
+### Dispatcher - uppdatering misslyckades {#dispatcher-refetch-fails}
 
 När du använder Dispatcher 4.1.5 med en nyare version av Jetty kan en uppdatering resultera i&quot;Det går inte att ta emot svar från fjärrservern&quot; efter att begäran har fått timeout.
 
@@ -34,8 +33,7 @@ Du kan lösa problemet genom att använda Dispatcher 4.1.6 eller senare.
 
 Om ett forum skapades på CQ 5.4 och ämnen publicerades, och webbplatsen sedan uppgraderades till AEM 5.6.1 eller senare, kan ett försök att visa befintliga inlägg resultera i ett fel på sidan:
 
-Ogiltigt mönstertecken &#39;a&#39;
-Det går inte att skicka begäran till `/content/demoforums/forum-test.html` på den här servern och loggarna innehåller följande:
+Ogiltigt mönstertecken &#39;a&#39; Kan inte hantera begäran till `/content/demoforums/forum-test.html` på den här servern och loggarna innehåller följande:
 
 ```xml
 20.03.2014 22:49:35.805 ERROR [10.177.45.32 [1395380975744] GET /content/demoforums/forum-test.html HTTP/1.1] com.day.cq.wcm.tags.IncludeTag Error while executing script content.jsp
@@ -53,17 +51,17 @@ All kod som använder API:t RelativeTimeFormat() måste därför ändras:
 
 Felet skiljer sig åt när det gäller författare och publicering. Skribenten skriver att det inte går att skriva och att forumen helt enkelt inte visas. Vid publicering genereras ett fel på sidan.
 
-Mer information finns i [com.day.cq.commons.date.RelativeTimeFormat](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/date/RelativeTimeFormat.html)-API:t.
+Se [com.day.cq.commons.date.RelativeTimeFormat](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/date/RelativeTimeFormat.html) API för mer information.
 
 ## Vanliga problem {#common-concerns}
 
-### Varning i loggar: Hanteringsfält har tagits bort {#warning-in-logs-handlebars-deprecated}
+### Varning i loggar: Borttagna handtag {#warning-in-logs-handlebars-deprecated}
 
 Under start (inte under den första - men efter den) kan följande varning visas i loggarna:
 
-* `11.04.2014 08:38:07.223 WARN [FelixStartLevel]com.github.jknack.handlebars.Handlebars Helper 'i18n'` har ersatts med  `com.adobe.cq.social.handlebars.I18nHelper@15bac645`
+* `11.04.2014 08:38:07.223 WARN [FelixStartLevel]com.github.jknack.handlebars.Handlebars Helper 'i18n'` har ersatts med `com.adobe.cq.social.handlebars.I18nHelper@15bac645`
 
-Den här varningen kan ignoreras eftersom `jknack.handlebars.Handlebars`, som används av [SCF](scf.md#handlebarsjavascripttemplatinglanguage), har ett eget i18n-hjälpverktyg. Vid start ersätts den med en AEM specifik [i18n-hjälp](handlebars-helpers.md#i-n). Den här varningen genereras av tredjepartsbiblioteket för att bekräfta åsidosättningen av en befintlig hjälpreda.
+Den här varningen kan ignoreras som `jknack.handlebars.Handlebars`, används av [SCF](scf.md#handlebarsjavascripttemplatinglanguage), har ett eget i18n-hjälpverktyg. Från början ersätts den med en AEM specifik [i18n - hjälp](handlebars-helpers.md#i-n). Den här varningen genereras av tredjepartsbiblioteket för att bekräfta åsidosättningen av en befintlig hjälpreda.
 
 ### Varning i loggar: OakResourceListener processOsgiEventQueue {#warning-in-logs-oakresourcelistener-processosgieventqueue}
 

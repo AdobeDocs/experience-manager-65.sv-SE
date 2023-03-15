@@ -1,24 +1,23 @@
 ---
 title: Logga in på AEM Forms-appen
-seo-title: Logga in på AEM Forms-appen
+seo-title: Logging in to AEM Forms app
 description: Steg för att logga in i AEM Forms-appen.
-seo-description: Steg för att logga in i AEM Forms-appen.
+seo-description: Steps to log into the AEM Forms app.
 uuid: da8cb0b2-6333-4ead-95f2-fb753149dc5e
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 discoiquuid: fb2b7ff6-6b29-425b-a86e-d1f80faab9e0
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+exl-id: d19cba33-0646-40d4-b4a3-b28d6db4a1f3
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '164'
+source-wordcount: '150'
 ht-degree: 0%
 
 ---
 
-
-# Logga in på AEM Forms app{#logging-in-to-aem-forms-app}
+# Logga in på AEM Forms-appen{#logging-in-to-aem-forms-app}
 
 När du startar ditt AEM Forms-program måste du först ange dina inloggningsuppgifter och en URL till en AEM Forms-server.
 
@@ -35,7 +34,7 @@ När du startar ditt AEM Forms-program måste du först ange dina inloggningsupp
    >    * Du kan välja en AEM Forms-server-URL att logga in på via appen.
 
 
-När du loggar in på appen dirigeras du till skärmen [**Hem**](../../forms/using/home-screen.md).
+När du loggar in på appen dirigeras du till [**Startsida** screen](../../forms/using/home-screen.md).
 
 >[!NOTE]
 >

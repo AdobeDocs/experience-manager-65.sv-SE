@@ -1,24 +1,23 @@
 ---
 title: Förhandsgranska med Preflight
-seo-title: Förhandsgranska med Preflight
+seo-title: Previewing with Preflight
 description: Den här sidan förklarar Förhandsvisa med Preflight-appen.
-seo-description: Med preflight-appen Mobile On Demand kan du visa alla projekt som du har tillgång till. Följ den här sidan om du vill veta mer om detta.
+seo-description: With the Mobile On Demand Preflight app, you can view all projects to which you have access. Follow this page to learn more about this.
 uuid: bea83055-8172-4634-88ec-5d3f163ad8e0
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: administering-on-demand-services-app
 discoiquuid: c08729f6-1512-4aee-82bb-7cc05749a72f
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 5d2b9743-9601-46e6-9d73-3bf734e04a30
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '327'
-ht-degree: 0%
+source-wordcount: '299'
+ht-degree: 1%
 
 ---
 
-
-# Förhandsgranska med preflight {#previewing-with-preflight}
+# Förhandsgranska med Preflight {#previewing-with-preflight}
 
 Den här sidan förklarar Förhandsvisa med Preflight-appen.
 
@@ -34,21 +33,21 @@ Med preflight-appen Mobile On Demand kan du visa alla projekt som du har tillgå
 >
 >Preflight-appen liknar till sin natur PhoneGap Enterprise-visningsprogrammet.
 
-## Förhandsgranska med preflight {#previewing-with-preflight-1}
+## Förhandsgranska med Preflight {#previewing-with-preflight-1}
 
 1. Välj mobilappen i katalogen i Mobile On-Demand.
-1. Klicka på ellipsen (..) i **Hantera artiklar** (eller Banners/Collections).
+1. Klicka på ellipsen (..) på menyn **Hantera artiklar** (eller Banners/Collections).
 1. Välj **Preflight** i åtgärdsfältet.
-1. Klicka på **Aktivera Preflight** i dialogrutan.
+1. Klicka **Aktivera preflight** i dialogrutan.
 1. Du kan nu förhandsgranska ditt program i preflight-appen Mobile On-Demand.
 
 ![chlimage_1-8](assets/chlimage_1-8.gif)
 
 >[!NOTE]
 >
->AEM Preflight-appen används för att förhandsgranska innehåll och bläddra bland sidor. Klicka [här](https://helpx.adobe.com/digital-publishing-solution/help/preflight-app.html) om du vill veta mer om Preflight-appen.
+>AEM Preflight-appen används för att förhandsgranska innehåll och bläddra bland sidor. Om du vill veta mer om Preflight-appen klickar du [här](https://helpx.adobe.com/digital-publishing-solution/help/preflight-app.html).
 >
->Den AEM Preflight-appen finns i [iTunes App Store](https://itunes.apple.com/us/app/adobe-experience-manager-mobile/id1042687518?mt=8), [Google Play Store](https://play.google.com/store/apps/details?id=com.adobe.dps.preflight&amp;hl=en) och [Windows Store](https://www.microsoft.com/en-us/store/p/adobe-experience-manager-mobile-preflight/9nblggh5wmxq).
+>AEM Preflight-appen finns i [iTunes App Store](https://itunes.apple.com/us/app/adobe-experience-manager-mobile/id1042687518?mt=8), [Google Play Store](https://play.google.com/store/apps/details?id=com.adobe.dps.preflight&amp;hl=en)och [Windows Store](https://www.microsoft.com/en-us/store/p/adobe-experience-manager-mobile-preflight/9nblggh5wmxq).
 
 ### Komma framåt {#getting-ahead}
 
