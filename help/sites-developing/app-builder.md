@@ -2,16 +2,16 @@
 title: Utöka [!DNL Adobe Experience Manager] 6.5 med Adobe Developer App Builder.
 description: Utöka [!DNL Adobe Experience Manager] 6.5 med Adobe Developer App Builder.
 exl-id: 8221c2db-82d4-43df-ad38-e8e7831541ac
-source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
+source-git-commit: cc1b86a15eb7ef45616bc9ea4f8aab4a28e74add
 workflow-type: tm+mt
-source-wordcount: '577'
+source-wordcount: '550'
 ht-degree: 0%
 
 ---
 
 # Utöka [!DNL Adobe Experience Manager] med Adobe Developer App Builder {#extend-using-app-builder}
 
-## Vad är App Builder för AEM {#project-firefly}
+## Vad är App Builder för AEM {#project-appbuilder}
 
 Nya Adobe Developer App Builder är ett utbyggbart ramverk där utvecklare enkelt kan utöka AEM funktioner.
 
@@ -23,7 +23,7 @@ Med App Builder kan kunderna enkelt utöka Adobe Experience Manager i olika fall
 * Utbyggbarhet för bastjänster - Utöka de centrala programfunktionerna genom att utöka standardbeteendet med anpassade funktioner och affärslogik.
 * Utbyggbarhet för användarupplevelse - Utöka kärnupplevelsen för att uppfylla verksamhetskrav eller bygga kundspecifika digitala resurser, butiker och back-office-appar.
 
-App Builder (tidigare kallat Project Fire) har varit tillgängligt för företagskunder och partners via vår förhandsgranskning av utvecklare sedan sommaren 2020. Den allmänna tillgängligheten (GA) för App Builder är planerad till december 2021. Vi välkomnar att utvecklare provar App Builder via våra [testprogram](https://adobe.ly/appbuilder-trial).
+App Builder har varit tillgängligt för företagskunder och partners via vår Developer Preview sedan sommaren 2020. Den allmänna tillgängligheten (GA) för App Builder är planerad till december 2021. Vi välkomnar att utvecklare provar App Builder via våra [testprogram](https://adobe.ly/appbuilder-trial).
 
 >[!NOTE]
 >
@@ -40,7 +40,7 @@ I stället för en färdig lösning erbjuder Adobe Developer App Builder en geme
 
 Följande diagram visar hur ett standardprogram som är byggt på App Builder utnyttjar dessa funktioner:
 
-![Arkitektur](assets/firefly-architecture.jpg)
+![Arkitektur](assets/appbuilder-architecture.jpg)
 
 Mer information om App Builder-arkitekturen finns i [Arkitektur - översikt](https://www.adobe.io/app-builder/docs/guides/).
 
@@ -63,6 +63,3 @@ Vill du börja utveckla? Vi har massor av exempelprogram som hjälper dig att ko
 
 * [App Builder Code Labs på Adobe Developer webbplats](https://www.adobe.io/app-builder/docs/resources/)
 
-## Stöd {#support}
-
-Vi uppmuntrar utvecklare att använda våra [Experience League forum](https://experienceleaguecommunities.adobe.com/t5/project-firefly/ct-p/project-firefly).
