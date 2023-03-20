@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: 6b380e92-f90d-4875-b7a2-f3958daf2364
 role: Admin
 exl-id: 6fb260f9-d0f8-431e-8d4e-535b451e4124
-source-git-commit: d2661ee6614261179b5e8d2d9ffb7c240ce676dc
+source-git-commit: 30327950779337ce869b6ca376120bc09826be21
 workflow-type: tm+mt
 source-wordcount: '7665'
 ht-degree: 0%
@@ -193,7 +193,7 @@ Följ dessa anvisningar för att köra den programserver där AEM Forms on JEE d
    * **CRX-Repository-katalog**: Standardplatsen är `[AEM-Forms-installation-location]\crx-repository`
    * **AEM Forms tillfälliga kataloger**:
       * (Windows) TMP- eller TEMP-sökväg som angetts i miljövariablerna
-      * (AIX, Linux eller Solaris) Inloggad användares arbetskatalog På UNIX-baserade system kan en icke-rotanvändare använda följande katalog som tillfällig katalog:
+      * (AIX, Linux eller Solaris) Inloggad användares hemkatalog På UNIX-baserade system kan en icke-rotanvändare använda följande katalog som tillfällig katalog:
       * (Linux) /var/tmp eller /usr/tmp
       * (AIX) /tmp eller /usr/tmp
       * (Solaris) /var/tmp eller /usr/tmp
@@ -433,7 +433,7 @@ Du kan ange antalet misslyckade försök och efterföljande låsningstid som AEM
 
 En korrekt och säker användning av programgranskning och loggning kan bidra till att säkerställa att säkerheten och andra avvikande händelser spåras och upptäcks så snabbt som möjligt. Effektiv användning av granskning och loggning i ett program omfattar bland annat att spåra genomförda och misslyckade inloggningar samt viktiga programhändelser som skapande eller borttagning av nyckelposter.
 
-Du kan använda granskning för att identifiera många typer av attacker, bland annat följande:
+Du kan använda granskning för att identifiera många typer av attacker, bland annat:
 
 * Tydliga lösenordsattacker
 * Denial of service-attacker
@@ -818,7 +818,7 @@ När du konfigurerar en säker nätverksarkitektur enligt beskrivningen i föreg
  <thead> 
   <tr> 
    <th><p>Protokoll</p> </th> 
-   <th><p>Användning</p> </th> 
+   <th><p>Använd</p> </th> 
   </tr> 
  </thead> 
  <tbody>
@@ -950,7 +950,7 @@ I det här avsnittet beskrivs standardportarna (och alternativa konfigurationsin
 
 **WebSphere-portar**
 
-Information om WebSphere-portar som krävs för AEM Forms på JEE finns i inställningen Portnummer i WebSphere Application Server-gränssnittet.
+Mer information om WebSphere-portar som krävs för AEM Forms på JEE finns i Portnummerinställning i WebSphere Application Server UI.
 
 ### Konfigurerar SSL {#configuring-ssl}
 
@@ -958,7 +958,7 @@ Referera till den fysiska arkitekturen som beskrivs i avsnittet [AEM Forms på J
 
 Instruktioner om hur du konfigurerar SSL på JBoss, WebLogic och WebSphere finns i&quot;Configuring SSL&quot; i [administrationshjälp](https://www.adobe.com/go/learn_aemforms_admin_64).
 
-Instruktioner om hur du importerar certifikat till JVM (Java Virtual Machine) som konfigurerats för en AEM Forms-server finns i avsnittet om ömsesidig autentisering i [Hjälp om AEM Forms Workbench](http://www.adobe.com/go/learn_aemforms_workbench_65).
+Instruktioner om hur du importerar certifikat till JVM (Java Virtual Machine) som konfigurerats för en AEM Forms-server finns i avsnittet om ömsesidig autentisering i [Hjälp om AEM Forms Workbench](https://www.adobe.com/go/learn_aemforms_workbench_65).
 
 ### Konfigurerar SSL-omdirigering {#configuring-ssl-redirect}
 
@@ -1015,7 +1015,7 @@ AEM Forms på JEE-körkortsinstallationen konfigurerar som standard ett tjänstk
    * **CRX-Repository-katalog**: Standardplatsen är `[AEM-Forms-installation-location]\crx-repository`
    * **AEM Forms tillfälliga kataloger**:
       * (Windows) TMP- eller TEMP-sökväg som angetts i miljövariablerna
-      * (AIX, Linux eller Solaris) Inloggad användares arbetskatalog På UNIX-baserade system kan en icke-rotanvändare använda följande katalog som tillfällig katalog:
+      * (AIX, Linux eller Solaris) Inloggad användares hemkatalog På UNIX-baserade system kan en icke-rotanvändare använda följande katalog som tillfällig katalog:
       * (Linux) /var/tmp eller /usr/tmp
       * (AIX) /tmp eller /usr/tmp
       * (Solaris) /var/tmp eller /usr/tmp

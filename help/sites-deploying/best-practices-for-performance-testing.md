@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 669018a0-f6ef-42b2-9c6f-83d7dd5a7095
 exl-id: fcac75e1-15c1-4a37-8d43-93c95267b903
-source-git-commit: e8320b1dac681fd2c9e749344e8c126487d840ba
+source-git-commit: 30327950779337ce869b6ca376120bc09826be21
 workflow-type: tm+mt
-source-wordcount: '1897'
+source-wordcount: '1898'
 ht-degree: 0%
 
 ---
@@ -49,13 +49,13 @@ Många prestandaproblem uppstår inte förrän systemet är hårt belastat. Goda
 
 Innan prestandatestning börjar måste icke-funktionella krav ställas för att specificera belastnings- och svarstider. Om du migrerar från ett befintligt system bör du se till att svarstiden liknar dina aktuella produktionsvärden. För belastning är det bäst att ta den aktuella toppbelastningen och dubbla den. Detta säkerställer att webbplatsen kan fortsätta fungera som den ska.
 
-### Verktyg {#tools}
+### verktyg {#tools}
 
 Det finns många kommersiellt tillgängliga verktyg för prestandatestning på marknaden. När du kör ett lastgenereringsverktyg är det viktigt att se till att de datorer som utför testerna har tillräcklig nätverksbandbredd. I annat fall genereras ingen ytterligare belastning i den miljö som testas när provningsmaskinen når anslutningens gränser.
 
 #### Testverktyg {#testing-tools}
 
-* Adobe **Tålig dag** kan användas för att generera inläsning AEM instanser och samla in prestandadata. Adobe AEM tekniker använder faktiskt verktyget för att själv testa AEM. Skript som körs under Tough Day konfigureras via egenskapsfiler och JMX XML-filer. Mer information finns i [Dokumentation om tuffa dagar](/help/sites-developing/tough-day.md).
+* Adobe **Tålig dag** kan användas för att generera inläsning AEM instanser och samla in prestandadata. Adobe AEM tekniker använder faktiskt verktyget för att ladda ned testning av själva AEM. Skript som körs under Tough Day konfigureras via egenskapsfiler och JMX XML-filer. Mer information finns i [Dokumentation om tuffa dagar](/help/sites-developing/tough-day.md).
 
 * AEM innehåller färdiga verktyg för att snabbt se problematiska frågor, förfrågningar och felmeddelanden. Mer information finns i [Diagnosverktyg](/help/sites-administering/operations-dashboard.md#diagnosis-tools) i dokumentationen för kontrollpanelen för åtgärder.
 * Apache tillhandahåller en produkt som kallas **JMeter** som kan användas för prestanda- och belastningstestning samt funktionellt beteende. Det är programvara med öppen källkod och kan användas, men har en mindre funktionsuppsättning än företagsprodukter och en brantare inlärningskurva. JMeter finns på Apache webbplats på [https://jmeter.apache.org/](https://jmeter.apache.org/)
@@ -76,7 +76,7 @@ The [Övervakningsprestanda](/help/sites-deploying/monitoring-and-maintaining.md
 
 **Utvecklarläge i Touch UI**
 
-En av de nya funktionerna i pekgränssnittet AEM 6 är utvecklarläget. Precis som författare kan växla mellan redigerings- och förhandsgranskningslägena kan utvecklare växla till utvecklarläget i redigeringsgränssnittet för att se renderingstiden för varje komponent på sidan och för att se stackspårningar av eventuella fel. Mer information om utvecklarläget finns i [CQ Gems-presentation](https://docs.adobe.com/content/ddc/en/gems/aem-6-0-developer-mode.html).
+En av de nya funktionerna i pekgränssnittet AEM 6 är utvecklarläget. Precis som författare kan växla mellan redigerings- och förhandsgranskningslägena kan utvecklare växla till utvecklarläget i redigeringsgränssnittet för att se renderingstiden för varje komponent på sidan och för att se stackspårningar av eventuella fel. Mer information om utvecklarläget finns i [CQ Gems-presentation](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2014/aem-developer-mode.html?lang=en).
 
 **Läs begärandeloggarna med rlog.jar**
 

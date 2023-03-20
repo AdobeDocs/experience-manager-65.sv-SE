@@ -10,16 +10,16 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: dd11fd83-3df1-4727-8340-8c5426812823
 docset: aem65
 exl-id: 8d17194b-8baf-4878-b3ae-d351a056aebf
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: 30327950779337ce869b6ca376120bc09826be21
 workflow-type: tm+mt
-source-wordcount: '1089'
-ht-degree: 1%
+source-wordcount: '1080'
+ht-degree: 0%
 
 ---
 
 # Hantera Forms-program och -uppgifter i AEM Inkorg{#manage-forms-applications-and-tasks-in-aem-inbox}
 
-Ett av många sätt att starta eller utlösa ett Forms-centrerat arbetsflöde är genom program i AEM Inbox. Du måste skapa ett arbetsflödesprogram för att göra ett Forms-arbetsflöde tillgängligt som program i Inbox. Mer information om arbetsflödesprogram och andra sätt att starta Forms-arbetsflöden finns i [Starta ett Forms-orienterat arbetsflöde i OSGi](../../forms/using/aem-forms-workflow.md#launch).
+Ett av många sätt att starta eller utlösa ett Forms-centrerat arbetsflöde är genom program i AEM Inbox. Skapa ett arbetsflödesprogram om du vill göra ett Forms-arbetsflöde tillgängligt som program i Inbox. Mer information om arbetsflödesprogram och andra sätt att starta Forms-arbetsflöden finns i [Starta ett Forms-orienterat arbetsflöde i OSGi](../../forms/using/aem-forms-workflow.md#launch).
 
 Dessutom konsoliderar AEM Inkorg meddelanden och uppgifter från olika AEM komponenter, inklusive Forms-arbetsflöden. När ett formulärarbetsflöde som innehåller ett tilldelningssteg aktiveras, visas det associerade programmet som en uppgift i den tilldelades inkorg. Om den som tilldelats är en grupp visas uppgiften i Inkorgen för alla gruppmedlemmar tills en enskild person gör anspråk på eller delegerar uppgiften.
 
@@ -64,7 +64,7 @@ Uppgifter som tilldelas en grupp visas i Inkorgen för alla gruppmedlemmar. Alla
 När du öppnar en uppgift kan du visa uppgiftsinformation och utföra tillgängliga åtgärder. Vilka åtgärder som är tillgängliga för en uppgift definieras i steget Tilldela uppgift i det associerade Forms-arbetsflödet.
 
 1. Tryck för att markera aktivitetens miniatyrbild. Alternativ för att öppna eller delegera den valda uppgiften visas högst upp.
-1. Tryck **Öppna** för att visa information om uppgifter och vidta åtgärder. Den detaljerade uppgiftsvyn öppnas. I den här vyn kan du visa aktivitetsinformation och vidta åtgärder för uppgiften.
+1. Tryck **Öppna** om du vill visa aktivitetsinformation. Den detaljerade uppgiftsvyn öppnas. I den här vyn kan du visa aktivitetsinformation och arbeta med uppgiften.
 
    >[!NOTE]
    >
@@ -91,7 +91,7 @@ Fliken Formulär i området för huvudinnehållet visar eventuella bifogade form
 
 Fliken Arbetsflödesinformation överst visar förloppet för uppgiften genom olika steg i arbetsflödet. Här visas slutförda, aktuella och väntande faser för uppgiften. Stegen för ett arbetsflöde definieras i [Tilldela aktivitetssteg](/help/sites-developing/workflows-step-ref.md) för det associerade arbetsflödet.
 
-Fliken visar också aktivitetshistorik för varje slutförd fas i arbetsflödet. Du kan trycka **[!UICONTROL View Details]** för att få information om det stadiet. Här visas kommentarer, formulär och uppgiftsbilagor, status, start- och slutdatum och så vidare om uppgiften.
+Fliken visar också aktivitetshistorik för varje slutförd fas i arbetsflödet. Du kan trycka **[!UICONTROL View Details]** för att få information om det stadiet. Här visas kommentarer, formulär och uppgiftsbilagor, status, start- och slutdatum och så vidare, om uppgiften.
 
 ![arbetsflödesinformation](assets/workflow-details.png)
 
@@ -99,11 +99,11 @@ Fliken visar också aktivitetshistorik för varje slutförd fas i arbetsflödet.
 
 Verktygsfältet Åtgärder visar alla tillgängliga alternativ för uppgiften. Medan Spara, Återställ och Delegera är standardåtgärder konfigureras andra tillgängliga åtgärder i [Tilldela aktivitetssteg](/help/sites-developing/workflows-step-ref.md). I exemplet ovan har Godkänn och Avvisa konfigurerats i arbetsflödet.
 
-När du utför en åtgärd fortsätter den i arbetsflödet.
+När du arbetar med uppgiften fortsätter den i arbetsflödet.
 
 ### Visa slutförda uppgifter {#view-completed-tasks}
 
-AEM Inkorg visar bara aktiva uppgifter. Slutförda uppgifter visas inte i listan. Du kan emellertid använda inkorgsfilter för att filtrera uppgifter baserat på flera parametrar, t.ex. uppgiftstyp, status, start- och slutdatum. Så här visar du slutförda uppgifter:
+AEM Inkorg visar bara aktiva uppgifter. Slutförda uppgifter visas inte i listan. Du kan emellertid använda inkorgsfilter för att filtrera uppgifter baserat på flera parametrar, som uppgiftstyp, status samt start- och slutdatum. Så här visar du slutförda uppgifter:
 
 1. I AEM Inkorg trycker du ![toggle-side-panel1](assets/toggle-side-panel1.png) för att öppna filterväljaren.
 1. Tryck **[!UICONTROL Task Status]** dragspelspanel och markera **[!UICONTROL Complete]**. Alla slutförda uppgifter visas.
@@ -126,7 +126,7 @@ The **[!UICONTROL Workflow Details]** -fliken visar varje steg i arbetsflödet. 
 
 ### Det går inte att visa objekt som är relaterade till AEM arbetsflöde i AEM inkorg {#unable-to-see-aem-worklow-items}
 
-En arbetsflödesmodellägare kan inte visa objekt som är relaterade till AEM arbetsflöde i AEM inkorg. Lös problemet genom att lägga till indexen nedan i din AEM och återskapa indexet.
+En arbetsflödesmodellägare kan inte visa objekt som är relaterade till AEM arbetsflöde i AEM inkorg. Lös problemet genom att lägga till indexen nedan i din AEM databas och återskapa indexet.
 
 1. Använd någon av följande metoder för att lägga till index:
 
@@ -141,7 +141,7 @@ En arbetsflödesmodellägare kan inte visa objekt som är relaterade till AEM ar
       | allowExplicitSharing | allowExplicitSharing | BOOLEAN |
 
 
-   * Distribuera indexen via ett AEM. Du kan använda en [AEM](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype) för att skapa ett AEM som kan distribueras. Använd följande exempelkod för att lägga till index i ett AEM Archetype-projekt:
+   * Distribuera indexen via ett AEM. Du kan använda en [AEM](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/using.html?lang=en) för att skapa ett AEM som kan distribueras. Använd följande exempelkod för att lägga till index i ett AEM Archetype-projekt:
 
    ```Java
       .property("sharedWith", "sharedWith").type(TYPENAME_STRING).propertyIndex()

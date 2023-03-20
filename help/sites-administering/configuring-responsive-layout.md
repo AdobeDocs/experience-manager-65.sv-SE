@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 10940000-808a-48ae-8e46-61eccef71eab
 legacypath: /content/docs/en/aem/6-2/administer/operations/page-authoring/configuring-responsive-layouting
 exl-id: 61152b2d-4c0b-4cfd-9669-cf03d32cb7c7
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 30327950779337ce869b6ca376120bc09826be21
 workflow-type: tm+mt
-source-wordcount: '1309'
-ht-degree: 1%
+source-wordcount: '1288'
+ht-degree: 0%
 
 ---
 
@@ -80,7 +80,7 @@ Information om hur du anger enhetsgrupperna som visas i emulatorns enhetslista f
 
 ### Länka platsen till de angivna enhetsgrupperna {#link-your-site-to-the-specified-device-groups}
 
-Om du vill inkludera emulatorn måste du länka din plats till enhetsgrupperna. Se [Lägga till enhetslistan](/help/sites-developing/responsive.md#adding-the-devices-list) (för både det klassiska och pekoptimerade användargränssnittet).
+Om du vill inkludera emulatorn länkar du platsen till enhetsgrupperna. Se [Lägga till enhetslistan](/help/sites-developing/responsive.md#adding-the-devices-list) (för både det klassiska och pekoptimerade användargränssnittet).
 
 ## Aktivera layoutläge för webbplatsen {#activate-layout-mode-for-your-site}
 
@@ -93,12 +93,12 @@ Dessa procedurer används för att aktivera **Layout** läge på din webbplats.
 * Används i responsiv design.
 * Kan definieras:
 
-   * På sidmallen, varifrån inställningarna kopieras till alla sidor som skapas med den mallen.
+   * På sidmallen, från vilken inställningarna kopieras till alla sidor som skapas med den mallen.
    * På sidnoden, varifrån inställningarna ärvs av underordnade sidor.
 
 * Definiera en titel och en bredd:
 
-   * Titeln beskriver den generiska enhetsgrupperingen, med orientering om så krävs. till exempel telefon, surfplatta, bordslandskap.
+   * Titeln beskriver den generiska enhetsgrupperingen, vid behov med orientering. till exempel telefon, surfplatta, bordslandskap.
    * Bredden definierar den maximala bredden i pixlar för den allmänna enhetsgrupperingen. Om till exempel brytpunktstelefonen har en bredd på 768 är det den maximala bredden för den layout som används för en telefonenhet.
 
 * Är synliga som markörer högst upp i sidredigeraren när du använder emulatorn.
@@ -111,7 +111,7 @@ De kan definieras med CRXDE Lite eller XML.
 >
 >Om du skapar ett nytt projekt:
 >
->* du behöver lägga till brytpunkter i mallarna.
+>* lägg till brytpunkter i mallarna.
 >
 >Om du migrerar ett befintligt projekt (med befintligt innehåll) måste du:
 >
@@ -175,7 +175,7 @@ Dessa procedurer krävs så att du kan ändra storlek på komponenter i **Layout
 
 ### Ange layoutbehållare som huvudparsys {#set-layout-container-as-main-parsys}
 
-Om du vill ange att huvudparsytan på sidan ska vara en layoutbehållare måste du definiera parametrarna som:
+Om du vill ange att huvudparsytan på sidan ska vara en layoutbehållare definierar du parsytorna som:
 
 `wcm/foundation/components/responsivegrid`
 
@@ -204,7 +204,7 @@ I följande två exempel visas definitionen:
 
 AEM använder LESS för att generera delar av den CSS som behövs, och dessa måste inkluderas i dina projekt.
 
-Du måste också skapa en [klientbibliotek](https://docs.adobe.com/content/docs/en/aem/6-0/develop/the-basics/clientlibs.html) för att tillhandahålla ytterligare konfigurations- och funktionsanrop. Följande LESS-extrakt är ett exempel på det minsta du behöver lägga till i ditt projekt:
+Du måste också skapa en [klientbibliotek](https://experienceleague.adobe.com/docs/) för att tillhandahålla ytterligare konfigurations- och funktionsanrop. Följande LESS-extrakt är ett exempel på det minsta som du måste lägga till i projektet:
 
 ```java
 @import (once) "/libs/wcm/foundation/clientlibs/grid/grid_base.less";
@@ -238,7 +238,7 @@ Basrutnätsdefinitionen finns under:
 
 #### Fundera på formatering {#styling-considerations}
 
-Storleken på komponenter som finns i en responsiv behållare ändras (tillsammans med deras respektive HTML DOM-element) enligt den responsiva stödrasterstorleken. Därför bör du under dessa omständigheter undvika (eller uppdatera) definitioner av DOM-element med fast bredd (som finns).
+Storleken på komponenter som finns i en responsiv behållare ändras (tillsammans med deras respektive HTML DOM-element) beroende på stödrastrets responsiva storlek. Därför bör du under dessa omständigheter undvika (eller uppdatera) definitioner av DOM-element med fast bredd (som finns).
 
 Till exempel:
 
