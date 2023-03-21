@@ -12,9 +12,9 @@ discoiquuid: 8cdb6db4-adaa-4eda-af7d-310a0b44b80b
 docset: aem65
 legacypath: /content/docs/en/aem/6-2/develop/components/components-touch-optimized
 exl-id: 573cdc36-e9c3-4803-9c4e-cebd0cf0a56f
-source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
+source-git-commit: 4fa868f3ae4778d3a637e90b91f7c5909fe5f8aa
 workflow-type: tm+mt
-source-wordcount: '3477'
+source-wordcount: '3456'
 ht-degree: 0%
 
 ---
@@ -61,7 +61,7 @@ Du kan utöka en befintlig komponent med [Hierarki för resurstyp](/help/sites-d
 
 >[!NOTE]
 >
->Komponenter kan också definieras om med en övertäckning som baseras på sökvägslogiken. I sådana fall gäller dock att [Samla resurser](/help/sites-developing/sling-resource-merger.md) kommer inte att aktiveras och `/apps` måste definiera hela övertäckningen.
+>Komponenter kan också definieras om med en övertäckning som baseras på sökvägslogiken. I sådana fall gäller dock att [Samla resurser](/help/sites-developing/sling-resource-merger.md) aktiveras inte och `/apps` måste definiera hela övertäckningen.
 
 >[!NOTE]
 >
@@ -95,11 +95,11 @@ Mekanismen för att skilja logik från utseende gör det lättare att klargöra 
 
 ### Använda Java {#using-java}
 
-[Använd-API:t för HTL Java gör att en HTML-fil kan få åtkomst till hjälpmetoder i en anpassad Java-klass](https://helpx.adobe.com/experience-manager/htl/using/use-api-java.html). På så sätt kan du använda Java-kod för att implementera logiken för att välja och konfigurera komponentinnehållet.
+[Använd-API:t för HTL Java gör att en HTML-fil kan få åtkomst till hjälpmetoder i en anpassad Java-klass](https://experienceleague.adobe.com/docs/experience-manager-htl/content/java-use-api.html?lang=en). Detta gör att du kan använda Java-kod för att implementera logiken för att välja och konfigurera komponentinnehållet.
 
 ### Använda JavaScript {#using-javascript}
 
-[Använd-API:t för HTML JavaScript gör att en HTML-fil kan komma åt hjälpkod som skrivits i JavaScript](https://helpx.adobe.com/experience-manager/htl/using/use-api-javascript.html). På så sätt kan du använda JavaScript-kod för att implementera logiken för att välja och konfigurera komponentinnehållet.
+[Använd-API:t för HTML JavaScript gör att en HTML-fil kan komma åt hjälpkod som skrivits i JavaScript](https://experienceleague.adobe.com/docs/experience-manager-htl/content/java-use-api.html?lang=en). På så sätt kan du använda JavaScript-kod för att implementera logiken för att välja och konfigurera komponentinnehållet.
 
 ### Använda HTML-bibliotek på klientsidan {#using-client-side-html-libraries}
 
@@ -117,13 +117,13 @@ The [redigeringsbeteendet för en komponent är konfigurerat](/help/sites-develo
 
 ## Konfigurera förhandsvisningsbeteendet {#configuring-the-preview-behavior}
 
-The [WCM-läge](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/WCMMode.html) cookie är inställd vid växling till **Förhandsgranska** även när sidan inte uppdateras.
+The [WCM-läge](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/WCMMode.html) cookie är inställd vid växling till **Förhandsgranska** även när sidan inte uppdateras.
 
 Komponenter med en återgivning som är känslig för WCM-läget måste definieras så att de uppdateras specifikt och sedan baseras på värdet för cookien.
 
 >[!NOTE]
 >
->I det beröringskänsliga användargränssnittet är endast värdena `EDIT` och `PREVIEW` används för [WCM-läge](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/WCMMode.html) cookie.
+>I det beröringskänsliga användargränssnittet är endast värdena `EDIT` och `PREVIEW` används för [WCM-läge](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/WCMMode.html) cookie.
 
 ## Skapa och konfigurera en dialogruta {#creating-and-configuring-a-dialog}
 
@@ -131,9 +131,9 @@ I dialogrutor kan författaren interagera med komponenten. Med en dialogruta kan
 
 ### Gränssnittet för korall och GRENITE {#coral-ui-and-granite-ui}
 
-[Coral UI](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/index.html) och [Granite-gränssnitt](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html) definiera det moderna utseendet och känslan hos AEM.
+[Coral UI](https://developer.adobe.com/experience-manager/reference-materials/6-5/coral-ui/coralui3/index.html) och [Granite-gränssnitt](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html) definiera det moderna utseendet och känslan hos AEM.
 
-[Gränssnittet i Granite innehåller ett stort urval av de grundläggande komponenterna (widgetar)](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html) behövs för att skapa en dialogruta i redigeringsmiljön. Vid behov kan du utöka markeringen och [skapa en egen widget](#creatinganewwidget).
+[Gränssnittet i Granite innehåller ett stort urval av de grundläggande komponenterna (widgetar)](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html) behövs för att skapa en dialogruta i redigeringsmiljön. Vid behov kan du utöka markeringen och [skapa en egen widget](#creatinganewwidget).
 
 Mer information finns i:
 
@@ -141,13 +141,13 @@ Mer information finns i:
 
    * Ett enhetligt gränssnitt för alla molnlösningar
    * [Koncepten i det AEM användargränssnittet med pekskärmsfunktioner - Coral UI](/help/sites-developing/touch-ui-concepts.md#coral-ui)
-   * [Användargränssnittshandbok för Coral](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/index.html)
+   * [Användargränssnittshandbok för Coral](https://developer.adobe.com/experience-manager/reference-materials/6-5/coral-ui/coralui3/index.html)
 
 * Granite-gränssnitt
 
    * Innehåller Coral UI-kod inkapslad i Sling-komponenter för att bygga UI-konsoler och dialogrutor
    * [AEM för användargränssnitt med pekskärmsfunktion - GRE](/help/sites-developing/touch-ui-concepts.md#coral-ui)
-   * [Bevilja gränssnittsdokumentation](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html)
+   * [Bevilja gränssnittsdokumentation](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)
 
 >[!NOTE]
 >
@@ -198,7 +198,7 @@ Se till exempel:
 >
 >Se:
 >
->* AEM Gems-sessionen den [Anpassa dialogrutefält](https://docs.adobe.com/content/ddc/en/gems/customizing-dialog-fields-in-touch-ui.html).
+>* AEM Gems-sessionen den [Anpassa dialogrutefält](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-customizing-dialog-fields-in-touch-ui.html?lang=en).
 >* den exempelkod som omfattas av [Kodexempel - Anpassa dialogrutefält](/help/sites-developing/developing-components-samples.md#code-sample-how-to-customize-dialog-fields).
 >
 
@@ -211,13 +211,13 @@ Om du vill skapa en ny widget som ska användas i en komponentdialogruta för de
 
 >[!NOTE]
 >
->Mer information om GRENITE finns i [Granite UI-dokumentation](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html).
+>Mer information om GRENITE finns i [Granite UI-dokumentation](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html).
 
 Om du ser dialogrutan som en enkel behållare för ett formulärelement kan du även se det primära innehållet i dialogrutan som formulärfält. Om du skapar ett nytt formulärfält måste du skapa en resurstyp; motsvarar att skapa en ny komponent. För att du ska få hjälp med den uppgiften erbjuder Granite UI en generisk fältkomponent att ärva från (med `sling:resourceSuperType`):
 
 `/libs/granite/ui/components/coral/foundation/form/field`
 
-Mer specifikt ger GRE UI ett antal fältkomponenter som är lämpliga att använda i dialogrutor (eller mer allmänt i [formulär](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/foundation/form/index.html)).
+Mer specifikt ger GRE UI ett antal fältkomponenter som är lämpliga att använda i dialogrutor (eller mer allmänt i [formulär](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/foundation/form/index.html)).
 
 >[!NOTE]
 >
@@ -269,7 +269,7 @@ För att lägga in logik i fältet bör du:
 1. Har fältet markerat med en viss CSS-klass ( *krok*).
 1. I klientbiblioteket definierar du en JS-avlyssnare som är kopplad till det CSS-klassnamnet (detta garanterar att din anpassade logik endast omfattar fältet och inte påverkar andra fält av samma typ).
 
-För att uppnå detta måste du känna till det underliggande widgetbiblioteket som du vill interagera med. Se [Dokumentation för Coral UI](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/index.html) identifiera vilken händelse du vill reagera på. Detta liknar den process du tidigare använde för att utföra ExtJS: hitta dokumentationssidan för en viss widget och kontrollera sedan informationen om dess händelse-API.
+För att uppnå detta måste du känna till det underliggande widgetbiblioteket som du vill interagera med. Se [Dokumentation för Coral UI](https://developer.adobe.com/experience-manager/reference-materials/6-5/coral-ui/coralui3/index.html) identifiera vilken händelse du vill reagera på. Detta liknar den process du tidigare använde för att utföra ExtJS: hitta dokumentationssidan för en viss widget och kontrollera sedan informationen om dess händelse-API.
 
 Se följande exempel:
 
@@ -308,7 +308,7 @@ Se följande exempel:
 
 #### Fältvalidering (GRÄNSSNITT) {#field-validation-granite-ui}
 
-Fältvalidering i GRA-gränssnitt och GRA-komponenter (motsvarande widgetar) görs med `foundation-validation` API. [Se `foundation-valdiation` Behåll dokumentation för mer information.](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/clientlibs/foundation/js/validation/index.html)
+Fältvalidering i GRA-gränssnitt och GRA-komponenter (motsvarande widgetar) görs med `foundation-validation` API. [Se `foundation-valdiation` Behåll dokumentation för mer information.](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/clientlibs/foundation/js/validation/index.html)
 
 Se till exempel:
 
@@ -428,8 +428,8 @@ KOD PÅ GITHUB
 
 Koden för den här sidan finns på GitHub
 
-* [Öppna aem-project-archietype-projekt på GitHub](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype)
-* Hämta projektet som [en ZIP-fil](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype/archive/master.zip)
+* [Öppna aem-project-archietype-projekt på GitHub](https://github.com/adobe/aem-project-archetype)
+* Hämta projektet som [en ZIP-fil](https://github.com/adobe/aem-project-archetype/archive/master.zip)
 
 >[!NOTE]
 >
@@ -464,12 +464,12 @@ När du migrerar en komponent som har utformats för användning med det klassis
 
 * Dialogrutor
 
-   * Du måste skapa en ny dialogruta för användning i det beröringsaktiverade användargränssnittet. Av kompatibilitetsskäl kan emellertid det beröringsaktiverade användargränssnittet använda definitionen för en klassisk användargränssnittsdialogruta när ingen dialogruta har definierats för det beröringsaktiverade användargränssnittet.
+   * Skapa en dialogruta för användning i det beröringsaktiverade användargränssnittet. Av kompatibilitetsskäl kan emellertid det beröringsaktiverade användargränssnittet använda definitionen för en klassisk användargränssnittsdialogruta när ingen dialogruta har definierats för det beröringsaktiverade användargränssnittet.
    * The [AEM](/help/sites-developing/modernization-tools.md) som hjälper dig att utöka befintliga komponenter.
    * [Mappa ExtJS till GRE UI-komponenter](/help/sites-developing/touch-ui-concepts.md#extjs-and-corresponding-granite-ui-components) ger dig en praktisk översikt över ExtJS-xtyper och nodtyper med motsvarande Granite-resurstyper.
-   * Anpassa fält, mer information finns i AEM Gems-sessionen på [Anpassa dialogrutefält](https://docs.adobe.com/content/ddc/en/gems/customizing-dialog-fields-in-touch-ui.html).
-   * Migrera från vyper till [Verifiering av GRI](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/foundation/clientlibs/foundation/js/validation/index.html)
-   * Mer information finns i Använda JS-avlyssnare [Hantera fälthändelser](#handling-field-events) och AEM Gems-sessionen [Anpassa dialogrutefält](https://docs.adobe.com/content/ddc/en/gems/customizing-dialog-fields-in-touch-ui.html).
+   * Anpassa fält, mer information finns i AEM Gems-sessionen på [Anpassa dialogrutefält](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-customizing-dialog-fields-in-touch-ui.html?lang=en).
+   * Migrera från vyper till [Verifiering av GRI](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/foundation/clientlibs/foundation/js/validation/index.html)
+   * Mer information finns i Använda JS-avlyssnare [Hantera fälthändelser](#handling-field-events) och AEM Gems-sessionen [Anpassa dialogrutefält](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-customizing-dialog-fields-in-touch-ui.html?lang=en).
 
 ### Migrera cq:avlyssnarkod {#migrating-cq-listener-code}
 
@@ -497,11 +497,11 @@ Som utvecklare vill du ha enkel åtkomst till komponentdokumentation så att du 
 * Avsedd användning
 * Innehållsstruktur och egenskaper
 * Exponerade API:er och tilläggspunkter
-* osv.
+* Och så vidare
 
-Därför är det ganska enkelt att göra befintliga dokumentationsmarkeringar tillgängliga i själva komponenten.
+Därför är det enkelt att göra befintliga dokumentationsmarkeringar tillgängliga i själva komponenten.
 
-Allt du behöver göra är att placera en `README.md` i komponentstrukturen. Den här markeringen visas i dialogrutan [komponentkonsol](/help/sites-authoring/default-components-console.md).
+Placera en `README.md` i komponentstrukturen. Den här markeringen visas i dialogrutan [komponentkonsol](/help/sites-authoring/default-components-console.md).
 
 ![chlimage_1-7](assets/chlimage_1-7.png)
 

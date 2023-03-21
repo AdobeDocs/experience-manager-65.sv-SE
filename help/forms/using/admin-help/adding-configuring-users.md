@@ -8,9 +8,9 @@ contentOwner: admin
 geptopics: SG_AEMFORMS/categories/setting_up_and_organizing_users
 discoiquuid: 20ca99e3-4843-4254-b3e9-0255cc752363
 exl-id: 50eea35d-d844-4f4b-9cbe-7d84bd6b1e3b
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 4fa868f3ae4778d3a637e90b91f7c5909fe5f8aa
 workflow-type: tm+mt
-source-wordcount: '1651'
+source-wordcount: '1647'
 ht-degree: 0%
 
 ---
@@ -82,7 +82,7 @@ Begränsa namnet till färre än 53 tecken. Ett kortare namn förhindrar problem
 
 **Användar-ID:** (Obligatoriskt) Användar-ID som användaren använder för att logga in. Användar-ID är inte skiftlägeskänsligt och måste vara unikt i domänen.
 
-I företagsdomäner använder du ett icke-DN-attribut som användar-ID eftersom användarens unika namn kan ändras om användaren flyttar till en annan del av organisationen. Den här inställningen beror på katalogservern. Värdet är `objectGUID` för Active Directory 2003, `nsuniqueID` för Sun™ One, och `guid` för eDirectory.
+I företagsdomäner ska du använda ett icke-DN-attribut som användar-ID eftersom användarens unika namn kan ändras om användaren flyttar till en annan del av organisationen. Den här inställningen beror på katalogservern. Värdet är `objectGUID` för Active Directory 2003, `nsuniqueID` för Sun™ One, och `guid` för eDirectory.
 
 Kontrollera att användar-ID:t är unikt. Använd inte en som tilldelats en borttagen användare.
 
@@ -90,7 +90,7 @@ AEM kan inte skilja mellan användarkonton som har identiska användar-ID:n och 
 
 När du använder SQL Server som databas kan du inte skapa ett användar-ID som är längre än 255 tecken.
 
-När du använder MySQL kan användar-ID:t innehålla utökade tecken. När en jämförelse görs mellan två strängar, till exempel abcde och âbcdé, anses de vara samma. Om till exempel en ny användare har lagts till i databasen vid synkronisering, görs en jämförelse för att kontrollera om det finns en användare med samma användar-ID i databasen. Om användare *abcde* finns redan i databasen när den nya användaren *âbcdé* läggs till kan jämförelsen inte skilja mellan de två namnen. Det antas att användaren redan finns i databasen och att den nya användaren ignoreras och inte läggs till.
+När du använder MySQL kan användar-ID:t innehålla utökade tecken. När en jämförelse görs mellan två strängar, till exempel abcde och âbcdé, anses de vara samma. Om till exempel en ny användare har lagts till i databasen vid synkronisering, görs en jämförelse för att kontrollera om det finns en användare med samma användar-ID i databasen. Om användare *abcde* finns i databasen när den nya användaren *âbcdé* läggs till kan jämförelsen inte skilja mellan de två namnen. Det antas att användaren finns i databasen och att den nya användaren ignoreras och inte läggs till.
 
 Undvik att skapa användarnamn som börjar med ett nummertecken (#). Vid uppgiftssökningar returneras inga resultat för de användarnamnen. (Se [Arbeta med uppgifter](/help/forms/using/admin-help/tasks.md#working-with-tasks).)
 
@@ -173,4 +173,4 @@ Om en användare utan de obligatoriska AEM och CQ-behörigheterna försöker log
 
 CQ har en mekanism som åsidosätter standardhanteraren 404 jsp.
 
-Mer information om hur du anpassar felhanteringssidan finns i [Anpassa sidor som visas av felhanteraren](https://docs.adobe.com/docs/en/cq/current/developing/customizing_error_handler_pages.html) i Adobe Experience Manager Documentation.
+Mer information om hur du anpassar felhanteringssidan finns i [Anpassa sidor som visas av felhanteraren](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/customizing-errorhandler-pages.html?lang=en) i Adobe Experience Manager-dokumentationen.

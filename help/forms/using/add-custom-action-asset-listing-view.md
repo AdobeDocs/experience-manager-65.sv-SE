@@ -11,10 +11,10 @@ discoiquuid: 6378ae30-a351-49f7-8e9a-f0bd4287b9d3
 docset: aem65
 feature: Correspondence Management
 exl-id: bf6d3edb-6bf7-4d3e-b042-d75cb8e39e3f
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 4fa868f3ae4778d3a637e90b91f7c5909fe5f8aa
 workflow-type: tm+mt
-source-wordcount: '1360'
-ht-degree: 1%
+source-wordcount: '1355'
+ht-degree: 0%
 
 ---
 
@@ -37,7 +37,7 @@ Om du vill slutföra följande scenario eller liknande behöver du känna till:
 
 * CRX
 * JavaScript
-* Java
+* Java™
 
 ## Scenario: Lägg till ett kommando i användargränssnittet för bokstavslistan om du vill hämta en PDF-version av ett brev {#addcommandtoletters}
 
@@ -55,7 +55,7 @@ Följ de här stegen för att anpassa Correspondence Management så att använda
 
       >[!NOTE]
       >
-      >Den här banan är specifik för att skapa ett funktionsmakro som fungerar med markering av en eller flera resurser/bokstäver. Om du vill skapa en åtgärd som fungerar utan markering måste du i stället skapa en överläggsnod för följande sökväg och slutföra de återstående stegen därefter:
+      >Den här banan är specifik för att skapa ett funktionsmakro som fungerar med markering av en eller flera resurser/bokstäver. Om du vill skapa en åtgärd som fungerar utan markering skapar du i stället en överläggsnod för följande sökväg och slutför de återstående stegen därefter:
       >
       >
       >`/libs/fd/cm/ma/gui/content/cmassets/jcr:content/body/content/header/items/default/items`
@@ -110,7 +110,7 @@ Följ de här stegen för att anpassa Correspondence Management så att använda
         <tr>
         <td>icon</td>
         <td>Sträng</td>
-        <td>icon-download<br /> <br /> Den ikon som Correspondence Management visar till vänster om kommandot/menyn. Information om olika ikoner och inställningar finns i <a href="https://docs.adobe.com/docs/en/aem/6-3/develop/ref/coral-ui/coralui3/Coral.Icon.html" target="_blank">Dokumentation för CoralUI-ikoner</a>.<br /> </td>
+        <td>icon-download<br /> <br /> Den ikon som Correspondence Management visar till vänster om kommandot/menyn. Information om olika ikoner och inställningar finns i <a href="https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html" target="_blank">Dokumentation för CoralUI-ikoner</a>.<br /> </td>
         </tr>
         <tr>
         <td>jcr:primärType</td>
@@ -279,7 +279,7 @@ Följ de här stegen för att anpassa Correspondence Management så att använda
    1. Dubbelklicka på **POST.jsp** för att öppna den i CRX.
    1. Lägg till följande kod i filen POST.jsp och klicka på **Spara alla**:
 
-      Den här koden är specifik för bokstavsåtergivningstjänsten. För andra resurser lägger du till resursens java-bibliotek i den här koden. Mer information om AEM Forms API:er finns i [AEM Forms API](https://adobe.com/go/learn_aemforms_javadocs_63_en).
+      Den här koden är specifik för bokstavsåtergivningstjänsten. För alla andra resurser lägger du till resursens Java™-bibliotek i den här koden. Mer information om AEM Forms API:er finns i [AEM Forms API](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html).
 
       Mer information om AEM finns i AEM [Komponenter](/help/sites-developing/components.md).
 

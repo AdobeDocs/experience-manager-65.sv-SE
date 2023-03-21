@@ -11,16 +11,16 @@ content-type: reference
 discoiquuid: 628b6dcd-8b1c-4166-8fc2-843baa86ac1c
 docset: aem65
 exl-id: 470a382a-2aa7-449e-bf48-b5a804c5b114
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 4fa868f3ae4778d3a637e90b91f7c5909fe5f8aa
 workflow-type: tm+mt
-source-wordcount: '956'
+source-wordcount: '934'
 ht-degree: 0%
 
 ---
 
 # Grundläggande om poäng och emblem {#scoring-and-badges-essentials}
 
-AEM Communities poäng och badges ger möjlighet att identifiera och belöna communitymedlemmar.
+AEM Communities poäng och emblem identifierar och belönar communitymedlemmar.
 
 Information om hur du konfigurerar funktionen finns i
 
@@ -70,7 +70,7 @@ Sök till exempel efter `this.isAssigned` in `/libs/social/forum/components/hbs/
 
 Om värdet är true anger isAssigned att märket har tilldelats en roll och att märket ska visas som text.
 
-Om värdet är false anges märket Tilldelad att märket tilldelats för ett upparbetat resultat och att märket ska visas som en bild.
+Om värdet är false anger isAssigned att märket har tilldelats för ett poängvärde och att märket ska visas som en bild.
 
 Alla ändringar av detta beteende bör göras i ett anpassat skript (antingen åsidosätt eller övertäckning). Se [Anpassning på klientsidan](/help/communities/client-customize.md).
 
@@ -127,7 +127,7 @@ Beskrivningarna för att komma åt betygs- och badging-data använder JSRP, efte
 
 **JSRP on author**: när du experimenterar i redigeringsmiljön resulterar det i användargenererat innehåll som bara är synligt från författarmiljön.
 
-**JSRP vid publicering**: På samma sätt måste du, om du testar i publiceringsmiljön, ha administratörsbehörighet för en publiceringsinstans i CRXDE Lite. Om publiceringsinstansen körs i [produktionsläge](/help/sites-administering/production-ready.md) (nosampling content runmode), måste du [enable CRXDE Lite](/help/sites-administering/enabling-crxde-lite.md).
+**JSRP vid publicering**: På samma sätt måste du, om du testar i publiceringsmiljön, få åtkomst till CRXDE Lite med administratörsbehörighet för en publiceringsinstans. Om publiceringsinstansen körs i [produktionsläge](/help/sites-administering/production-ready.md) (nosampling content runmode), måste du [enable CRXDE Lite](/help/sites-administering/enabling-crxde-lite.md).
 
 Basplatsen för UGC på JSRP är `/content/usergenerated/asi/jcr/`.
 
@@ -135,8 +135,8 @@ Basplatsen för UGC på JSRP är `/content/usergenerated/asi/jcr/`.
 
 Följande API:er kan användas:
 
-* [com.adobe.cq.social.scoring.api](https://docs.adobe.com/content/docs/en/aem/6-3/develop/ref/javadoc/com/adobe/cq/social/scoring/api/package-summary.html)
-* [com.adobe.cq.social.badging.api](https://docs.adobe.com/content/docs/en/aem/6-3/develop/ref/javadoc/com/adobe/cq/social/badging/api/package-summary.html)
+* [com.adobe.cq.social.scoring.api in 6.3](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html)
+* [com.adobe.cq.social.badging.api in 6.3](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html)
 
 De senaste Javadocs-filerna för det installerade funktionspaketet är tillgängliga för utvecklare från Adobe-databasen. Se [Med Maven for Communities: Javadocs](/help/communities/maven.md#javadocs).
 
@@ -214,7 +214,7 @@ Skärmbilderna av databasdata kommer från hur du ställer in poängsättning oc
    curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=social:assignBadge" -F "badgeContentPath=/libs/settings/community/badging/images/moderator/jcr:content/moderator.png" https://localhost:4503/home/users/community/w271OOup2Z4DjnOQrviv/profile.social.json
    ```
 
-   När en användare har fått två bronze-märken och tilldelats ett moderatormärke, är det så här användaren visas med sitt foruminlägg.
+   När en användare har fått två bronze-märken och tilldelats ett moderatormärke visas användaren med sitt foruminlägg på följande sätt:
 
    ![moderator](assets/moderator.png)
 
@@ -242,11 +242,11 @@ I undersökningssyfte, till exempel med JSRP, är baskamappen som innehåller po
 
 Den underordnade noden för `scoring` är resultatregelns namn. Det bästa sättet är alltså att betygsregelnamn på en server är globalt unika.
 
-För webbplatsen Geometrixx Engage finns användaren och poängen i en sökväg som är konstruerad med namnet på bedömningsregeln, webbplatsens webbplats-ID ( `engage-ba81p`), ett unikt id och användarens id:
+För Geometrixx Engage-webbplatsen är användaren och poängen för den en sökväg som konstruerats med resultatregelnamnet, communityplatsens webbplats-ID ( `engage-ba81p`), ett unikt id och användarens id:
 
 * `.../scoring/forums-scoring/engage-ba81p/6d179715c0e93cb2b20886aa0434ca9b5a540401/riley`
 
-För stödwebbplatsen för Community Components finns användaren och poängen i en sökväg som konstruerats med namnet på bedömningsregeln, ett standard-ID ( `default-site`), ett unikt id och användarens id:
+För stödwebbplatsen för Community Components finns användaren, och poängen för den, i en sökväg som konstruerats med namnet på bedömningsregeln, ett standard-ID ( `default-site`), ett unikt id och användarens id:
 
 * `.../scoring/forums-scoring/default-site/b27a17cb4910a9b69fe81fb1b492ba672d2c086e/riley`
 

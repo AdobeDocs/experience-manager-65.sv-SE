@@ -10,9 +10,9 @@ topic-tags: customization
 discoiquuid: 2a2e1156-4a54-4b0a-981c-d527fe22a27e
 docset: aem65
 exl-id: 7c3d0dac-4e19-4eb3-a43d-909d526acd55
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 4fa868f3ae4778d3a637e90b91f7c5909fe5f8aa
 workflow-type: tm+mt
-source-wordcount: '1628'
+source-wordcount: '1615'
 ht-degree: 0%
 
 ---
@@ -53,11 +53,11 @@ XML-data skickas till servern med **`jcr:data`** request-parameter. Skicka-åtg�
 
 ### Åtgärdsfält {#action-fields}
 
-En Skicka-åtgärd kan lägga till dolda inmatningsfält (med HTML) [input](https://developer.mozilla.org/en/docs/Web/HTML/Element/Input) -tagg) till det återgivna formuläret HTML. Dessa dolda fält kan innehålla värden som behövs när formulärinlämningen behandlas. När formuläret skickas bokförs dessa fältvärden som begärandeparametrar som åtgärden Skicka kan använda vid överföringshantering. Indatafälten kallas åtgärdsfält.
+En Skicka-åtgärd kan lägga till dolda inmatningsfält (med HTML) [input](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input) -tagg) till det återgivna formuläret HTML. Dessa dolda fält kan innehålla värden som behövs när formulärinlämningen behandlas. När formuläret skickas bokförs dessa fältvärden som begärandeparametrar som åtgärden Skicka kan använda vid överföringshantering. Indatafälten kallas åtgärdsfält.
 
 En Skicka-åtgärd som även fångar upp den tid det tar att fylla i ett formulär kan t.ex. lägga till dolda indatafält `startTime` och `endTime`.
 
-Ett skript kan ange värdena för `startTime` och `endTime` fält när formuläret återges och innan formuläret skickas. Skriptet för åtgärden Skicka `post.jsp` kan sedan komma åt dessa fält med hjälp av frågeparametrar och beräkna den totala tid som krävs för att fylla i formuläret.
+Ett skript kan ange värdena för `startTime` och `endTime` fält när formuläret återges och innan formuläret skickas. Skicka ActionScript `post.jsp` kan sedan komma åt dessa fält med hjälp av frågeparametrar och beräkna den totala tid som krävs för att fylla i formuläret.
 
 ### Bifogade filer {#file-attachments}
 
@@ -102,7 +102,7 @@ En Skicka-åtgärd är en sling:Mapp som innehåller följande:
 
 ## Skapa en anpassad skickaåtgärd {#creating-a-custom-submit-action}
 
-Utför följande steg för att skapa en anpassad Skicka-åtgärd som sparar data i CRX-databasen och sedan skickar ett e-postmeddelande till dig. Det adaptiva formuläret innehåller innehållet i OTB-sändningsåtgärden i Store (föråldrat) som sparar data i CRX-databasen. CQ erbjuder dessutom en [E-post](https://docs.adobe.com/docs/en/cq/current/javadoc/com/day/cq/mailer/package-summary.html) API som kan användas för att skicka e-post. Innan du använder e-post-API:t [konfigurera](https://docs.adobe.com/docs/en/cq/current/administering/notification.html?wcmmode=disabled#Configuring e-posttjänsten) Dag CQ Mail-tjänsten via systemkonsolen. Du kan återanvända åtgärden Lagra innehåll (föråldrat) för att lagra data i databasen. Åtgärden Lagra innehåll (borttaget) finns på platsen /libs/fd/af/components/guideSubittype/store i CRX-databasen.
+Utför följande steg för att skapa en anpassad Skicka-åtgärd som sparar data i CRX-databasen och sedan skickar ett e-postmeddelande till dig. Det adaptiva formuläret innehåller innehållet i OTB-sändningsåtgärden i Store (föråldrat) som sparar data i CRX-databasen. CQ erbjuder dessutom en [E-post](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=en) API som kan användas för att skicka e-post. Innan du använder e-post-API:t [konfigurera](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=en&amp;wcmmode=disabled) Dag CQ Mail-tjänsten via systemkonsolen. Du kan återanvända åtgärden Lagra innehåll (föråldrat) för att lagra data i databasen. Åtgärden Lagra innehåll (borttaget) finns på platsen /libs/fd/af/components/guideSubittype/store i CRX-databasen.
 
 1. Logga in på CRXDE Lite på https://&lt;server>:&lt;port>/crx/de/index.jsp. Skapa en nod med egenskapen sling:Folder och name store_and_mail i mappen /apps/custom_submit_action. Skapa mappen custom_submit_action om den inte redan finns.
 
@@ -138,7 +138,7 @@ Utför följande steg för att skapa en anpassad Skicka-åtgärd som sparar data
 
    Lägg till skriptet post.POST.jsp i åtgärden. (/apps/custom_submit_action/store_and_mail/).
 
-   Kör åtgärden OTB Store (skriptet post.POST.jsp). Använd [FormsHelper.runAction](https://docs.adobe.com/docs/en/cq/current/javadoc/com/day/cq/wcm/foundation/forms/FormsHelper.html#runAction(java.lang.String, java.lang.String, org.apache.sling.api.resource.resource, org.apache.sling.api.SlingHttpServletRequest, org.apache.sling.api.SlingHttpServletResponse)) API som CQ tillhandahåller i koden för att köra Store-åtgärden. Lägg till följande kod i JSP-filen:
+   Kör åtgärden OTB Store (skriptet post.POST.jsp). Använd [FormsHelper.runAction](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=en)(java.lang.String, java.lang.String, org.apache.sling.api.resource, org.apache.sling.api.SlingHttpServletRequest, org.apache.sling.api.SlingHttpServletResponse) API som CQ tillhandahåller i koden för att köra Store-åtgärden. Lägg till följande kod i JSP-filen:
 
    `FormsHelper.runAction("/libs/fd/af/components/guidesubmittype/store", "post", resource, slingRequest, slingResponse);`
 

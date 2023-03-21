@@ -12,7 +12,7 @@ discoiquuid: a644978e-5736-4771-918a-dfefe350a4a1
 docset: aem65
 feature: Mobile Forms
 exl-id: ed8349a1-f761-483f-9186-bf435899df7d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 4fa868f3ae4778d3a637e90b91f7c5909fe5f8aa
 workflow-type: tm+mt
 source-wordcount: '2011'
 ht-degree: 0%
@@ -33,9 +33,9 @@ HTML 5-formulärsfunktionen distribueras som ett paket i den inbäddade AEM och 
 
 Mer information om REST-slutpunkten och parametrar för begäran som stöds finns i [Återger formulärmall](/help/forms/using/rendering-form-template.md).
 
-När en användare gör en begäran från en klientenhet, till exempel en iOS- eller Android-webbläsare, löser Sling först profilnoden baserat på den begärda URL:en. Från den här profilnoden läses den **sling:resourceSuperType** och **sling:resourceType** för att fastställa alla tillgängliga skript som kan hantera den här formuläråtergivningsbegäran. Sedan används väljare för Sling-begäran tillsammans med begärandemetoden för att identifiera det skript som lämpar sig bäst för att hantera denna begäran. När begäran når en profilåtergivnings-JSP anropar JSP:n Forms OSGi-tjänsten.
+När en användare gör en begäran från en klientenhet som webbläsaren iOS eller Android™, löser Sling först profilnoden baserat på den begärda URL:en. Från den här profilnoden läses den **sling:resourceSuperType** och **sling:resourceType** för att fastställa alla tillgängliga skript som kan hantera den här formuläråtergivningsbegäran. Sedan används väljare för Sling-begäran tillsammans med begärandemetoden för att identifiera det skript som lämpar sig bäst för att hantera denna begäran. När begäran når en profilåtergivnings-JSP anropar JSP:n Forms OSGi-tjänsten.
 
-Mer information om SLING-skriptupplösningen finns i [AEM Sling Cheat Sheet](https://docs.adobe.com/content/docs/en/cq/current/developing/sling_cheatsheet.html) eller [Apache Sling Url-nedbrytning](https://sling.apache.org/site/url-decomposition.html).
+Mer information om SLING-skriptupplösningen finns i [AEM Sling Cheat Sheet](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=en) eller [Apache Sling Url-nedbrytning](https://sling.apache.org/documentation/the-sling-engine/url-decomposition.html).
 
 #### Vanligt anropsflöde för formulärbearbetning {#typical-form-processing-call-flow}
 
@@ -87,7 +87,7 @@ HTML5-formulär använder cachelagring för att optimera dataflödet och svarsti
    <th>Beskrivning</th>
   </tr>
   <tr>
-   <td>Inget</td>
+   <td>Ingen</td>
    <td>Cachelagra inte artefakter<br /> </td>
   </tr>
   <tr>
@@ -179,8 +179,8 @@ Profilnoden har en egenskap **sling:resourceSuperType** med värde **xfaforms/pr
 * **xfaforms.I18N.&lt;locale>**: Det här biblioteket innehåller lokaliserade data.
 * **xfaforms.profile**: Det här biblioteket innehåller implementering för XFA Scripting and Layout Engine.
 
-Dessa bibliotek är modellerade som CQ Client Libraries, vilket har fördelarna med automatisk sammanfogning, miniatyrbildnings- och komprimeringsfunktioner i JavaScript-bibliotek för CQ-ramverket.
-Mer information om CQ Client Libs finns på [CQ Clientlib-dokumentation](https://docs.adobe.com/docs/en/cq/current/developing/components/clientlibs.html).
+Dessa bibliotek är modellerade som CQ Client Libraries, som utnyttjar automatisk sammanfogning, miniatyrbildnings- och komprimeringsfunktioner i JavaScript-bibliotek för CQ-ramverket.
+Mer information om CQ Client Libs finns på [CQ Clientlib-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=en).
 
 Så som beskrivs ovan anropar profilåtergivaren JSP Forms Service via en sling include. Denna JSP anger också olika felsökningsalternativ baserat på administratörskonfigurationen eller frågeparametrarna.
 

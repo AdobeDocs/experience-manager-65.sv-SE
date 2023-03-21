@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: c332985b-4556-4056-961a-fce2356da88d
 exl-id: 98c96349-f253-475f-b646-352269814a38
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 4fa868f3ae4778d3a637e90b91f7c5909fe5f8aa
 workflow-type: tm+mt
-source-wordcount: '1476'
+source-wordcount: '1416'
 ht-degree: 0%
 
 ---
@@ -46,13 +46,13 @@ I det här avsnittet beskrivs följande strategier för att säkerhetskopiera AE
 
 1. Stäng av hela klustret och tillhörande tjänster. (se [Starta och stoppa tjänster](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services))
 1. Säkerhetskopiera databasen, GDS och Connectors på alla noder. (se [Filer som ska säkerhetskopieras och återställas](/help/forms/using/admin-help/files-back-recover.md#files-to-back-up-and-recover))
-1. Gör så här för att säkerhetskopiera AEM databas offline:
+1. Så här säkerhetskopierar du AEM databasen offline:
 
    1. För varje klusternod säkerhetskopierar du filen som innehåller klusternods-ID:t.
    1. Säkerhetskopiera alla filer i en sekundär klusternod, inklusive underkataloger.
    1. Säkerhetskopiera databas-/system-ID för varje klusternod separat.
 
-   Detaljerade anvisningar finns i [Säkerhetskopiering och återställning](https://docs.adobe.com/docs/en/crx/current/administering/backup_and_restore.html).
+   Detaljerade anvisningar finns i [Säkerhetskopiering och återställning](https://helpx.adobe.com/experience-manager/kb/CRXBackupAndRestoreProcedure.html).
 
 1. Säkerhetskopiera alla andra data, till exempel kundens typsnitt.
 1. Starta klustret igen.
@@ -61,17 +61,17 @@ I det här avsnittet beskrivs följande strategier för att säkerhetskopiera AE
 
 1. Ange läget för rullande säkerhetskopiering. (se [Ange lägen för säkerhetskopiering](/help/forms/using/admin-help/backing-aem-forms-data.md#entering-the-backup-modes))
 
-   Observera att vi måste lämna det rullande säkerhetskopieringsläget efter en återställning.
+   Lämna läget för rullande säkerhetskopiering efter en återställning.
 
-1. Stäng någon av klustrets sekundära noder med avseende på AEM. (se [Starta och stoppa tjänster](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services))
+1. Stäng någon av de sekundära noderna i klustret med avseende på AEM. (se [Starta och stoppa tjänster](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services))
 1. Säkerhetskopiera databasen, GDS och Connectors på alla noder. (se [Filer som ska säkerhetskopieras och återställas](/help/forms/using/admin-help/files-back-recover.md#files-to-back-up-and-recover))
-1. Gör så här för att säkerhetskopiera AEM databas offline:
+1. Så här säkerhetskopierar du AEM databasen offline:
 
    1. För varje klusternod säkerhetskopierar du filen som innehåller klusternods-ID:t.
    1. Säkerhetskopiera alla filer i en sekundär klusternod, inklusive underkataloger.
    1. Säkerhetskopiera repository/system.id av varje klusternod separat.
 
-   Detaljerade anvisningar finns i [Säkerhetskopiering och återställning](https://docs.adobe.com/docs/en/crx/current/administering/backup_and_restore.html).
+   Detaljerade anvisningar finns i [Säkerhetskopiering och återställning](https://helpx.adobe.com/experience-manager/kb/CRXBackupAndRestoreProcedure.html).
 
 1. Säkerhetskopiera alla andra data, till exempel kundens typsnitt.
 1. Starta klustret igen.
@@ -80,11 +80,11 @@ I det här avsnittet beskrivs följande strategier för att säkerhetskopiera AE
 
 1. Ange läget för rullande säkerhetskopiering. (se [Ange lägen för säkerhetskopiering](/help/forms/using/admin-help/backing-aem-forms-data.md#entering-the-backup-modes))
 
-   Observera att du måste lämna det rullande säkerhetskopieringsläget efter en återställning.
+   Lämna läget för rullande säkerhetskopiering efter en återställning.
 
-1. Stäng någon av klustrets sekundära noder med avseende på AEM. (se [Starta och stoppa tjänster](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services))
+1. Stäng någon av de sekundära noderna i klustret med avseende på AEM. (se [Starta och stoppa tjänster](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services))
 1. Säkerhetskopiera databasen, GDS och Connectors på alla noder. (se [Filer som ska säkerhetskopieras och återställas](/help/forms/using/admin-help/files-back-recover.md#files-to-back-up-and-recover))
-1. Gör så här för att säkerhetskopiera AEM databas online:
+1. Så här säkerhetskopierar du AEM databas online:
 
    1. För varje klusternod säkerhetskopierar du filen som innehåller Cluster_node.id.
    1. Säkerhetskopiera repository/system.id av varje klusternod separat.
@@ -97,19 +97,19 @@ I det här avsnittet beskrivs följande strategier för att säkerhetskopiera AE
 
 När vi skapar ett AEM skapas en egenskapsfil i programservern för alla sekundära noder. Vi rekommenderar att du säkerhetskopierar egenskapsfilen för Bootstrap. Du kan hitta filen på följande plats på programservern:
 
-* JBoss: i BIN-katalogen
+* JBoss®: i BIN-katalogen
 * WebLogic: i domänkatalogen
-* WebSphere: i profilkatalogen
+* WebSphere®: i profilkatalogen
 
-Du måste säkerhetskopiera filen för ett scenario för återställning efter haveri AEM den sekundära noden och ersätta den på den angivna platsen på programservern, om den har återställts.
+Säkerhetskopiera filen för ett återställningsscenario AEM sekundär nod och ersätt den på den angivna platsen på programservern, om den har återställts.
 
 ## Återställning i en klustrad miljö {#recovery-in-a-clustered-environment}
 
-Om fel uppstår i hela klustret eller en enda nod måste du återställa den med hjälp av säkerhetskopian.
+Om fel uppstår i hela klustret eller en enda nod återställer du det med hjälp av säkerhetskopian.
 
-För en återställning av en nod behöver du bara stänga av den enskilda noden och köra återställningsproceduren för en nod.
+Om du vill återställa en enskild nod stänger du den enskilda noden och kör återställningsproceduren för en nod.
 
-Om hela klustret inte fungerar på grund av fel som t.ex. databaskrascher måste du utföra följande steg. Återställning beror på vilken säkerhetskopieringsmetod som används.
+Om hela klustret inte fungerar på grund av fel som t.ex. databaskrascher utför du följande steg. Återställning beror på vilken säkerhetskopieringsmetod som används.
 
 ### Återställa en enskild nod {#restoring-a-single-node}
 
@@ -121,7 +121,7 @@ Om hela klustret inte fungerar på grund av fel som t.ex. databaskrascher måste
 
 1. Återskapa det fysiska systemet från en systemavbildning.
 1. Använd patchar eller uppdateringar på AEM formulär som använts sedan bilden skapades. Denna information registrerades under säkerhetskopieringen. AEM formulär måste återställas till samma nivå som när systemet säkerhetskopierades.
-1. (*Valfritt*) Om alla andra noder fungerar som de ska kan även AEM vara skadad. I så fall visas ett osynkroniserat databasmeddelande i filen error.log i AEM.
+1. (*Valfritt*) Om alla andra noder fungerar som de ska, är det möjligt att även den AEM databasen är skadad. I så fall visas ett osynkroniserat databasmeddelande i filen error.log i AEM.
 
    Så här återställer du databasen:
 
@@ -143,7 +143,7 @@ Om hela klustret inte fungerar på grund av fel som t.ex. databaskrascher måste
 
 * Om den misslyckade noden var en AEM primär nod kopierar du allt innehåll från den sekundära databasmappen (crx-database\crx.0000 där 000 kan vara valfri siffra) till databasmappen crx-database och tar bort den sekundära databasmappen.
 * Innan du startar om en klusternod måste du ta bort databasen /clustered.txt från den primära noden.
-* Se till att den primära noden startas först och starta andra noder när den är helt klar.
+* Se till att den primära noden startas först och starta sedan andra noder när den har startats.
 
 ### Återställer hela klustret {#restoring-the-entire-cluster}
 
@@ -173,19 +173,19 @@ Om hela klustret inte fungerar på grund av fel som t.ex. databaskrascher måste
 
 * Om den misslyckade noden var en AEM primär nod kopierar du allt innehåll från den sekundära databasmappen (den ser ut som crx-database\crx.0000 där 000 kan vara vilken siffra som helst) till databasmappen crx-database\.
 * Innan du startar om en klusternod måste du ta bort databasen /clustered.txt från den primära noden.
-* Se till att den primära noden startas först och starta andra noder när den är helt klar.
+* Se till att den primära noden startas först och starta sedan andra noder när den har startats.
 
 ## Säkerhetskopiera och återställa publiceringsnoden för Correspondence Management Solution {#back-up-and-restore-correspondence-management-solution-publish-node}
 
-Utgivarnoden har ingen primär-sekundär relation i en klustrad miljö. Du kan säkerhetskopiera alla Publisher-noder genom att följa följande [Säkerhetskopiering och återställning](https://docs.adobe.com/docs/en/crx/current/administering/backup_and_restore.html).
+Utgivarnoden har ingen primär-sekundär relation i en klustrad miljö. Du kan säkerhetskopiera alla Publisher-noder genom att följa följande [Säkerhetskopiering och återställning](https://helpx.adobe.com/experience-manager/kb/CRXBackupAndRestoreProcedure.html).
 
 ### Återställa en enskild utgivarnod {#recover-a-single-publisher-node}
 
-1. Stäng den nod som ska återställas och gör ingen publiceringsaktivitet förrän noden är uppe igen.
-1. Återställ publiceringsnoden med [Återställa säkerhetskopian](https://docs.adobe.com/docs/en/crx/current/administering/backup_and_restore.html#Restoring säkerhetskopian).
+1. Stäng noden som måste återställas och gör ingen publiceringsaktivitet förrän noden är uppe igen.
+1. Återställ publiceringsnoden med [Återställa säkerhetskopian](https://helpx.adobe.com/experience-manager/kb/CRXBackupAndRestoreProcedure.html).
 
 ### Återställa ett kluster {#recover-a-cluster}
 
 1. Stäng av klustret.
-1. Återställ publiceringsnoden med [Återställa säkerhetskopian](https://docs.adobe.com/docs/en/crx/current/administering/backup_and_restore.html#Restoring säkerhetskopian).
+1. Återställ publiceringsnoden med [Återställa säkerhetskopian](https://helpx.adobe.com/experience-manager/kb/CRXBackupAndRestoreProcedure.html).
 1. Starta den primära noden följt av den sekundära noden i utvecklarklustret.

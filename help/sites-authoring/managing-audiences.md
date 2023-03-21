@@ -11,10 +11,10 @@ topic-tags: personalization
 discoiquuid: 9a7a31f9-aeb8-455f-a07e-7b1d1f0a88b6
 docset: aem65
 exl-id: 97e02986-049f-4747-a67a-6aa0677b281e
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: 4fa868f3ae4778d3a637e90b91f7c5909fe5f8aa
 workflow-type: tm+mt
-source-wordcount: '980'
-ht-degree: 8%
+source-wordcount: '979'
+ht-degree: 7%
 
 ---
 
@@ -25,11 +25,11 @@ Med Audiences-konsolen kan du skapa, ordna och hantera målgrupper för ditt Ado
 * Lägg till målgrupper - antingen Adobe Target målgrupper eller ContextHub-segment.
 * Hantera målgrupper.
 
-En publik, som kallas *segment* i ContextHub och Client Context är en grupp besökare som definieras av specifika kriterier, som sedan avgör vem som ser en riktad aktivitet. När du riktar in dig på en aktivitet kan du antingen välja målgrupper direkt i målprocessen eller skapa nya i publikkonsolen.
+En publik, som kallas *segment* i ContextHub och Client Context är en grupp besökare som definieras av specifika kriterier, som sedan avgör vem som ser en riktad aktivitet. När du riktar in dig på en aktivitet kan du antingen välja målgrupper direkt i målprocessen eller skapa mer i publikkonsolen.
 
 I Audiences Console är målgrupperna ordnade efter varumärke.
 
-Målgrupper är tillgängliga i målinriktningsläge för [skapa riktat innehåll](/help/sites-authoring/content-targeting-touch.md), där du också kan skapa målgrupper (men du måste skapa Adobe Target-målgrupper i Publikkonsolen). Publiker som du skapar i målläge visas i publikkonsolen.
+Målgrupper är tillgängliga i målinriktningsläge för [skapa riktat innehåll](/help/sites-authoring/content-targeting-touch.md), där du också kan skapa målgrupper (men du måste skapa Adobe Target-målgrupper i publikkonsolen). Publiker som du skapar i målläge visas i publikkonsolen.
 
 Publiken visas med en etikett som beskriver vilken typ av publik som definieras:
 
@@ -92,10 +92,10 @@ Du kan skapa målregler för följande attribut:
 | **Attribut** | **Beskrivning** | **Mer information** |
 |---|---|---|
 | **Mobil** | Rikta mobila enheter baserat på parametrar som mobil enhet, typ av enhet, enhetsleverantör, skärmdimensioner (i pixlar) med mera. | Se [Mobildokumentation](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html) på Adobe Target. |
-| **Anpassat** | Egna parametrar är mbox-parametrar. Om du skickar några mbox-parametrar till mboxes, eller använder funktionen targetPageParams, visas de parametrarna här för användning i målgrupper. | Se [Dokumentation för anpassade parametrar](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html) på Adobe Target. |
-| **OS** | Du kan rikta in dig på besökare som använder ett visst operativsystem. | Användare som använder Linux, Macintosh eller Windows. |
+| **Egen** | Egna parametrar är mbox-parametrar. Om du skickar några mbox-parametrar till mboxes, eller använder funktionen targetPageParams, visas de parametrarna här för användning i målgrupper. | Se [Dokumentation för anpassade parametrar](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html) på Adobe Target. |
+| **OS** | Du kan rikta in dig på besökare som använder ett visst operativsystem. | Användare som använder Linux®, Macintosh eller Windows. |
 | **Webbplatssidor** | Rikta in dig på besökare som befinner sig på en viss sida eller har en viss mbox-parameter. | Se [Dokumentation för webbplatssidor](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html) på Adobe Target. |
-| **Webbläsare** | Du kan rikta in dig på användare som använder en viss webbläsare eller särskilda webbläsaralternativ när de besöker sidan. | Se [Dokumentation för webbläsaralternativ](https://docs.adobe.com/help/en/target/using/audiences/create-audiences/categories-audiences/browser.html)på Adobe Target. |
+| **Webbläsare** | Du kan rikta in dig på användare som använder en viss webbläsare eller särskilda webbläsaralternativ när de besöker sidan. | Se [Dokumentation för webbläsaralternativ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html?lang=en) på Adobe Target. |
 | **Besökarprofil** | Rikta besökarna mot specifika profilparametrar. | Se [Dokumentation för besökarprofil](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/visitor-profile.html) på Adobe Target. |
 | **Trafikkällor** | Rikta besökarna baserat på den sökmotor eller landningssida som hänvisar dem till er webbplats. | Se [Trafikkälldokumentation](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html) på Adobe Target. |
 
@@ -105,7 +105,7 @@ Du kan skapa målregler för följande attribut:
 >
 >Du kan bara redigera Adobe Target-målgrupper som har skapats i samma AEM som du redigerar. Målgrupper som skapats i olika AEM kan inte redigeras.
 
-Du kan redigera alla ContextHub- och Client Context-målgrupper från publikkonsolen. Du kan även redigera Adobe Target-målgrupper, men bara de som har skapats i AEM:
+Du kan redigera alla ContextHub- och Client Context-målgrupper från publikkonsolen. Du kan också redigera Adobe Target-målgrupper, men bara de målgrupper som har skapats i AEM:
 
 1. Klicka eller tryck på navigeringskonsolen **Personalisering**. Klicka eller tryck **Målgrupper**.
 1. Tryck eller klicka på ikonen bredvid det ContextHub- eller Client Context-segment som du vill redigera och tryck eller klicka på **Redigera**.

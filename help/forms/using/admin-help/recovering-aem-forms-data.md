@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 4e093114-219b-4018-9530-9002eb665448
 exl-id: 9e648bab-9284-4fda-abb4-8bd7cd085981
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 4fa868f3ae4778d3a637e90b91f7c5909fe5f8aa
 workflow-type: tm+mt
-source-wordcount: '1157'
+source-wordcount: '1180'
 ht-degree: 0%
 
 ---
@@ -54,13 +54,13 @@ Om en enskild nod i ett Multinode-kluster inte fungerar och de återstående nod
 1. Stoppa AEM formulärtjänster och programservern om programmet körs.
 1. Om det behövs kan du återskapa det fysiska systemet från en systemavbildning. Det här steget är kanske inte nödvändigt om orsaken till återställningen är en felaktig databasserver.
 1. Använd patchar eller uppdateringar på AEM formulär som använts sedan bilden skapades. Denna information registrerades under säkerhetskopieringen. AEM formulär måste korrigeras på samma nivå som när systemet säkerhetskopierades.
-1. (WebSphere Application Server) Om du återställer till en ny instans av WebSphere Application Server kör du kommandot restoreConfig.bat/sh.
+1. (WebSphere® Application Server) Om du återställer till en ny instans av WebSphere® Application Server kör du kommandot restoreConfig.bat/sh.
 1. Återställ AEM formulärdatabas genom att först köra en databasåterställningsåtgärd med hjälp av databasens säkerhetskopieringsfiler och sedan använda transaktionsupprepningsloggarna på den återställda databasen. (Se [AEM](/help/forms/using/admin-help/files-back-recover.md#aem-forms-database).) Mer information finns i en av följande artiklar i kunskapsbasen:
 
-   * [Säkerhetskopiering och återställning av oracle för AEM](https://www.adobe.com/go/kb403624)
-   * [MySQL Backup and Recovery for AEM forms](https://www.adobe.com/go/kb403625)
-   * [Microsoft SQL Server Backup and Recovery for AEM forms](https://www.adobe.com/go/kb403623)
-   * [DB2 Säkerhetskopiering och återställning av AEM formulär](https://www.adobe.com/go/kb403626)
+   * [DB2® Säkerhetskopiering och återställning av AEM formulär](https://experienceleague.adobe.com/docs/experience-manager-64/forms/administrator-help/aem-forms-backup-recovery/files-back-recover.html?lang=en#db2)
+   * [Säkerhetskopiering och återställning av oracle för AEM](https://experienceleague.adobe.com/docs/experience-manager-64/forms/administrator-help/aem-forms-backup-recovery/files-back-recover.html?lang=en#oracle)
+   * [Microsoft® SQL Server Backup and Recovery for AEM forms](https://experienceleague.adobe.com/docs/experience-manager-64/forms/administrator-help/aem-forms-backup-recovery/files-back-recover.html?lang=en#sql-server)
+   * [MySQL Backup and Recovery for AEM forms](https://experienceleague.adobe.com/docs/experience-manager-64/forms/administrator-help/aem-forms-backup-recovery/files-back-recover.html?lang=en#mysql)
 
 1. Återställ GDS-katalogen genom att först ta bort innehållet i GDS-katalogen i den befintliga installationen av AEM formulär och sedan kopiera innehållet i GDS-katalogen från den säkerhetskopierade GDS-katalogen. Om du har ändrat GDS-katalogplatsen finns mer information i [Ändra GDS-platsen under återställning](recovering-aem-forms-data.md#changing-the-gds-location-during-recovery).
 1. Byt namn på GDS-säkerhetskopieringskatalogen som ska återställas enligt följande exempel:
@@ -69,7 +69,7 @@ Om en enskild nod i ett Multinode-kluster inte fungerar och de återstående nod
    >
    >Om katalogen /restore redan finns säkerhetskopierar du den och tar sedan bort den innan du byter namn på katalogen /backup som innehåller de senaste data.
 
-   * (JBoss) Byt namn `[appserver root]/server/'server'/svcnative/DocumentStorage/backup` till:
+   * (JBoss®) Byt namn `[appserver root]/server/'server'/svcnative/DocumentStorage/backup` till:
 
       `[appserver root]/server/'server'/svcnative/DocumentStorage/restore`.
 
@@ -77,7 +77,7 @@ Om en enskild nod i ett Multinode-kluster inte fungerar och de återstående nod
 
       `[appserverdomain]/'server'/adobe/AEMformsserver/DocumentStorage/restore`.
 
-   * (WebSphere) Byt namn `[appserver root]/installedApps/adobe/'server'/DocumentStorage/backup` till:
+   * (WebSphere®) Byt namn `[appserver root]/installedApps/adobe/'server'/DocumentStorage/backup` till:
 
       `[appserver root]/installedApps/adobe/'server'/DocumentStorage/restore`.
 
@@ -99,7 +99,7 @@ Om en enskild nod i ett Multinode-kluster inte fungerar och de återstående nod
 
    * **Fristående**
 
-      *Återställa författare och publicera instanser*: Om ett haveri inträffar kan du återställa databasen till det senast säkerhetskopierade tillståndet genom att utföra de steg som beskrivs i [Säkerhetskopiera och återställ.](https://docs.adobe.com/docs/en/crx/current/administering/backup_and_restore.html)
+      *Återställa författare och publicera instanser*: Om ett haveri inträffar kan du återställa databasen till det senast säkerhetskopierade tillståndet genom att utföra de steg som beskrivs i [Säkerhetskopiera och återställ.](https://helpx.adobe.com/experience-manager/kb/CRXBackupAndRestoreProcedure.html)
 
       När författarnoden återställs kontrolleras även återställningen av Forms Manager- och AEM Forms Workspace-data.
 
