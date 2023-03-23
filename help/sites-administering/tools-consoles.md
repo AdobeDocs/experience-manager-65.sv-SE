@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 6732ef1f-0bfd-44e6-b24d-e22fe427d8b4
 docset: aem65
 exl-id: c9f55ec9-83ea-4115-97c2-59b5c179e90f
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
 workflow-type: tm+mt
-source-wordcount: '609'
+source-wordcount: '607'
 ht-degree: 25%
 
 ---
@@ -236,10 +236,6 @@ Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som h
   <tr>
    <td> </td>
    <td>Avlastning</td>
-  </tr>
-  <tr>
-   <td> </td>
-   <td>Livefyre-konfiguration</td>
   </tr>
   <tr>
    <td>Dokumentskydd</td>

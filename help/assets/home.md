@@ -5,9 +5,9 @@ user-guide-title: Användarhandbok om resurser
 feature: Asset Management
 role: User, Architect, Admin
 exl-id: f4016056-47a2-4d86-b12b-90d062d6a21a
-source-git-commit: 8a51bbf3cea999f77e6eea41e184926121d6a866
+source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
 workflow-type: tm+mt
-source-wordcount: '344'
+source-wordcount: '325'
 ht-degree: 11%
 
 ---
@@ -38,7 +38,7 @@ Skapa, hantera, bearbeta och distribuera digitalt material i Experience Manager.
 | [Hantera användarhandbok](/help/managing/home.md) | I den här guiden beskrivs hur du hanterar ett Experience Manager-projekt utan problem. |
 | [Handbok för Commerce](/help/commerce/home.md) | Läs mer om Commerce Integration Framework på Experience Manager. |
 | [Användarhandbok för mobiler](/help/mobile/home.md) | I den här guiden beskrivs hur du skapar och hanterar innehåll för mobilprogram. |
-| [Experience Manager Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/home.html) | Den här guiden visar hur du delar användargenererat innehåll med [!DNL Livefyre]. |
+
 
 ## Nyckel [!DNL Experience Manager] resurser
 

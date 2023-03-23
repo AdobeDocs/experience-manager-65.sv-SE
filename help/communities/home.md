@@ -4,10 +4,10 @@ seo-title: Adobe Experience Manager 6.5 Communities Guide
 description: Skapa onlineupplevelser som forum, användargrupper, utbildningsresurser och andra sociala funktioner. Bläddra i vår guide som förklarar hur du distribuerar, administrerar, utvecklar och utvecklar användargrupper.
 seo-description: Covers all AEM Communities tasks, such as creating online experiences such as forums, user groups, learning resources, and other social features.
 exl-id: 63040353-d34c-4306-9e7a-584ba48d8ad5
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
 workflow-type: tm+mt
-source-wordcount: '374'
-ht-degree: 21%
+source-wordcount: '355'
+ht-degree: 22%
 
 ---
 
@@ -39,7 +39,6 @@ Skapa onlineupplevelser som forum, användargrupper, utbildningsresurser och and
 | [Hantera användarhandbok](/help/managing/home.md) | I den här guiden beskrivs hur du hanterar ett AEM projekt. |
 | [Handbok för Commerce](/help/commerce/home.md) | Läs mer om Commerce Integration Framework på AEM. |
 | [Användarhandbok för mobiler](/help/mobile/home.md) | I den här guiden beskrivs hur du skapar och hanterar innehåll för mobilprogram. |
-| [AEM Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/home.html) | Den här guiden visar hur du delar användargenererat innehåll med Livefyre. |
 
 ## Viktiga AEM
 

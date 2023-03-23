@@ -2,9 +2,9 @@
 title: Allmän versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: "[!DNL Adobe Experience Manager] 6.5 som beskriver versionsinformation, nyheter, hur man installerar och detaljerade ändringslistor."
 exl-id: b3d4a527-44ca-4eb6-b393-f3e8117cf1a6
-source-git-commit: e3caa3e3067cf5e29cfcdf4286047eb346aefa23
+source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
 workflow-type: tm+mt
-source-wordcount: '4697'
+source-wordcount: '4675'
 ht-degree: 1%
 
 ---
@@ -148,7 +148,7 @@ Mer information om ändringar i AEM Screens finns i versionsinformationen i [AEM
    * in-operatorn för strängar, arrayer och objekt:
 
       ```html
-      ${'a' in 'abc’}
+      ${'a' in 'abc'}
       ${100 in myArray}
       ${'a' in myObject}
       ```
@@ -372,7 +372,7 @@ I stora företag kan den infrastruktur som krävs för att skapa webbplatser dis
 
 #### Dynamic Media {#dynamic-media}
 
-[!DNL Dynamic Media] har förbättrat funktionerna för framtagning och distribution av multimedia i [!DNL Experience Manager Assets] för att skapa avancerade upplevelser som är engagerande och personaliserade. Genom att ladda upp en primär resurs av hög kvalitet och använda avancerad molnrendering och visningsprogram i Adobe kan ni leverera vilken kombination av renderingar som helst direkt som stöd för er organisations mediestrategi.
+[!DNL Dynamic Media] har förbättrat funktionerna för framtagning och distribution av multimedia i [!DNL Experience Manager Assets] för att skapa avancerade upplevelser som är engagerande och personaliserade. Genom att ladda upp en primär resurs av hög kvalitet och använda avancerad molnrendering och visningsprogram i Adobe kan ni leverera vilken kombination av renderingar som helst direkt för att stödja er organisations mediestrategi.
 
 Mer information om nya [!DNL Dynamic Media] funktioner, se [Versionsinformation för Dynamic Media](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/release-notes/s7rn2017.html).
 
@@ -428,10 +428,6 @@ AEM 6.5 Forms har flera nya funktioner och förbättringar. Högdagrarna är fö
 * Automatisk validering av indata i formulärdatamodeller
 
 Se [Sammanfattning av nya funktioner och förbättringar i AEM 6.5 Forms](/help/forms/using/whats-new.md) för information om nya och förbättrade funktioner och dokumentationsresurser.
-
-### [!DNL Experience Manager Livefyre] {#experience-manager-livefyre}
-
-Du kan integrera Livefyre med AEM 6.5-instansen. Se [hur man integrerar Livefyre med AEM](https://experienceleague.adobe.com/docs/experience-manager-65/administering/integration/livefyre.html).
 
 ### Använd kundfokuserad utveckling {#leverage-customer-focused-development}
 

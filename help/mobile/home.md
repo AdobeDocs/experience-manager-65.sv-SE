@@ -4,9 +4,9 @@ seo-title: AEM 6.5 Mobile User Guide
 description: Dra nytta av AEM stöd för att skapa och hantera innehåll för mobilappar. Få en introduktion till och lär dig hur du skapar, utvecklar och administrerar i On-Demand Services-appen och Adobe PhoneGap Enterprise.
 seo-description: Describes how to create and manage content for mobile applications.
 exl-id: 3531d8ea-614d-465a-8b4a-e3e3f3461e94
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
 workflow-type: tm+mt
-source-wordcount: '380'
+source-wordcount: '361'
 ht-degree: 16%
 
 ---
@@ -39,7 +39,6 @@ Dra nytta av AEM stöd för att skapa och hantera innehåll för mobilappar. Få
 | [Hantera användarhandbok](/help/managing/home.md) | I den här guiden beskrivs hur du hanterar ett AEM projekt. |
 | [Handbok för Commerce](/help/commerce/home.md) | Läs mer om Commerce Integration Framework på AEM. |
 | [Användarhandbok för mobiler](/help/mobile/home.md) | I den här guiden beskrivs hur du skapar och hanterar innehåll för mobilprogram. |
-| [AEM Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/home.html) | Den här guiden visar hur du delar användargenererat innehåll med Livefyre. |
 
 ## Viktiga AEM
 

@@ -2,10 +2,10 @@
 title: AEM Content and Commerce
 description: Lär dig hur du använder och administrerar AEM innehåll och handel, med våra praktiska artiklar om integreringar och hur du kommer igång med AEM Storefront.
 exl-id: b5b074e7-6da7-49ed-9cdb-f7c37d08e08c
-source-git-commit: 3ac32e5a2a1b2b266e2fc9f4ba8c7393a0566ff4
+source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
 workflow-type: tm+mt
-source-wordcount: '355'
-ht-degree: 16%
+source-wordcount: '336'
+ht-degree: 17%
 
 ---
 
@@ -38,7 +38,6 @@ Lär dig hur du använder och administrerar AEM innehåll och handel, med våra 
 | [Utveckla användarhandbok](/help/sites-developing/home.md) | Lär dig hur du bygger ut AEM. |
 | [Hantera användarhandbok](/help/managing/home.md) | I den här guiden beskrivs hur du hanterar ett AEM projekt. |
 | [Användarhandbok för mobiler](/help/mobile/home.md) | I den här guiden beskrivs hur du skapar och hanterar innehåll för mobilprogram. |
-| [AEM Livefyre](https://experienceleague.adobe.com/docs/discontinued/using/livefyre.html) | Den här guiden visar hur du delar användargenererat innehåll med Livefyre. |
 
 ## Viktiga AEM
 

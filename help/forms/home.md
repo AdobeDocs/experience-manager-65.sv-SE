@@ -1,17 +1,17 @@
 ---
-title: Användarhandbok om Adobe Experience Manager 6.5-formulär
+title: Användarhandbok om Adobe Experience Manager 6.5 Forms
 seo-title: AEM 6.5 Forms Guide
 description: Använd den här guiden AEM 6.5 för att skapa, hantera, publicera och uppdatera digitala formulär. Hitta hjälp med att installera, uppgradera och konfigurera dem och lär dig mer om att skapa adaptiva formulär.
 seo-description: Covers all AEM Forms tasks, including how to create, manage, publish, and update digital forms.
 exl-id: e66383b0-ae58-4cfe-8f1b-28b4e124fd06
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
 workflow-type: tm+mt
-source-wordcount: '367'
-ht-degree: 17%
+source-wordcount: '348'
+ht-degree: 18%
 
 ---
 
-# Användarhandbok om Adobe Experience Manager 6.5-formulär
+# Användarhandbok om Adobe Experience Manager 6.5 Forms
 
 Använd den här guiden AEM 6.5 för att skapa, hantera, publicera och uppdatera digitala formulär. Hitta hjälp med att installera, uppgradera och konfigurera dem och lär dig mer om att skapa adaptiva formulär.
 
@@ -39,7 +39,6 @@ Använd den här guiden AEM 6.5 för att skapa, hantera, publicera och uppdatera
 | [Hantera användarhandbok](/help/managing/home.md) | I den här guiden beskrivs hur du hanterar ett AEM projekt. |
 | [Handbok för Commerce](/help/commerce/home.md) | Läs mer om Commerce Integration Framework på AEM. |
 | [Användarhandbok för mobiler](/help/mobile/home.md) | I den här guiden beskrivs hur du skapar och hanterar innehåll för mobilprogram. |
-| [AEM Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/home.html) | Den här guiden visar hur du delar användargenererat innehåll med Livefyre. |
 
 ## Viktiga AEM
 

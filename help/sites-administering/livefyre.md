@@ -10,224 +10,225 @@ topic-tags: integration
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: bb3fcb53-b8c3-4b1d-9125-4715f34ceb0b
 exl-id: 6327b571-4c7f-4a5e-ba93-45d0a064aa1f
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
 workflow-type: tm+mt
-source-wordcount: '1648'
-ht-degree: 3%
+source-wordcount: '50'
+ht-degree: 0%
 
 ---
 
 # Integrera med Livefyre{#integrating-with-livefyre}
 
-Lär dig hur du integrerar Livefyres branschledande kurationsfunktioner med AEM 6.5-instansen så att du kan publicera användargenererat innehåll (UGC) från sociala nätverk till din webbplats på några minuter.
+>[!IMPORTANT]
+>
+>[Adobe Livefyre upphör officiellt den 30 november 2021](https://experienceleague.adobe.com/docs/discontinued/using/livefyre.html?lang=en).
 
-## Komma igång {#getting-started}
+<!-- Learn how to integrate Livefyre's industry-leading curation capabilities with your AEM 6.5 instance, allowing you to publish valuable user-generated content (UGC) from social networks to your site in minutes.
 
-### Installera Livefyre-paket för AEM {#install-livefyre-package-for-aem}
+## Getting Started {#getting-started}
 
-AEM 6.5 innehåller funktionspaketet Livefyre 1.2.6 förinstallerat. Det här paketet innehåller bara begränsad Livefyre-integrering med AEM Sites och måste avinstalleras innan du installerar ett uppdaterat paket. Med det senaste paketet kan ni uppleva den fullständiga integrationen av Livefyre med AEM, inklusive Sites, Assets och Commerce.
+### Install Livefyre Package for AEM {#install-livefyre-package-for-aem}
+
+AEM 6.5 comes with Livefyre feature package 1.2.6 pre-installed. This package only includes limited Livefyre integration with AEM Sites and must be uninstalled before installing an updated package. With the latest package, you can experience the full integration of Livefyre with AEM, including Sites, Assets, and Commerce.
 
 >[!NOTE]
 >
->Vissa funktioner i AEM-LF-paketet är beroende av Social Component Framework (SCF). Om du använder funktionspaketet Livefyre som en del av en icke-communitywebbplats måste du deklarera *cq.social.scf* som ett beroende i webbplatsens författarklienter. Om du använder LF-funktionspaketet som en del av en communitywebbplats bör detta beroende redan deklareras.
+>Some features of the AEM-LF package depend on Social Component Framework (SCF). If you are using the Livefyre feature pack as part of a non-communities site, you must declare *cq.social.scf* as a dependency in the author clientlibs of the website. If you are using the LF feature pack as part of a communities website, this dependency should already be declared.
 
-1. På AEM hemsida klickar du på **verktyg** ikonen till vänster.
-1. Navigera till **Distribution > Paket**.
-1. Rulla i Pakethanteraren tills du ser det förinstallerade funktionspaketet Livefyre och klicka sedan på paketets titel **cq-social-livefyre-pkg-1.2.6.zip** för att utöka alternativen.
-1. Klicka **Mer > Avinstallera**.
+1. From the AEM homepage, click the **Tools** icon on the left rail.
+1. Navigate to **Deployment &gt; Packages**.
+1. In the Package Manager, scroll until you see the pre-installed Livefyre feature package, then click the package title **cq-social-livefyre-pkg-1.2.6.zip** to expand the options.
+1. Click **More &gt; Uninstall**.
 
    ![livefyre-aem-uninstall-64](assets/livefyre-aem-uninstall-64.png)
 
-1. Hämta Livefyre-paket från [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html).
+1. Download Livefyre package from [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html).
 
-1. Installera det hämtade paketet från pakethanteraren. Se [Arbeta med paket](/help/sites-administering/package-manager.md) för mer information om hur du använder programvarudistribution och paket i AEM
+1. From the Package Manager, install the downloaded package. See [How to Work with Packages](/help/sites-administering/package-manager.md) for more information on using Software Distribution and packages in AEM
 
    ![livefyre-aem4-6-4](assets/livefyre-aem4-6-4.png)
 
-   Ditt Livefyre-AEM-paket är nu installerat. Innan du kan börja använda integreringsfunktionerna måste du konfigurera AEM för att använda Livefyre.
+   Your Livefyre-AEM package is now installed. Before you can begin using the integration features, you must Configure AEM to use Livefyre.
 
-   Mer information och versionsinformation om funktionspaket finns i [Funktionspaket](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/home.html).
+   For more information and release notes on feature packs, see [Feature Packs](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/home.html).
 
-### Konfigurera AEM att använda Livefyre: Skapa en konfigurationsmapp {#configure-aem-to-use-livefyre-create-a-configuration-folder}
+### Configure AEM to use Livefyre: Create a Configuration Folder {#configure-aem-to-use-livefyre-create-a-configuration-folder}
 
-1. På AEM hemsida klickar du på **verktyg** ikonen i den vänstra listen och navigera sedan till **Allmänt > Konfigurationsläsaren**.
-   * Se [Konfigurationsläsaren](/help/sites-administering/configurations.md) mer information.
-1. Klicka **Skapa** för att öppna dialogrutan Skapa konfiguration.
-1. Namnge konfigurationen och kontrollera **Molnkonfigurationer** kryssrutan.
+1. From the AEM homepage, click the **Tools** icon in the left rail, then navigate to **General &gt; Configuration Browser**.
+   * See the [Configuration Browser](/help/sites-administering/configurations.md) documentation for more information.
+1. Click **Create** to open the Create Configuration dialog.
+1. Name your configuration and check the **Cloud Configurations** checkbox.
 
-   Detta skapar en mapp under **Verktyg > Distribution > Livefyre Configuration** med angivet namn.
+   This will create a folder under **Tools &gt; Deployment &gt; Livefyre Configuration** with the name provided.
 
    ![livefyre-aem-create-config-folder](assets/livefyre-aem-create-config-folder.png)
 
-### Konfigurera AEM att använda Livefyre: Skapa en Livefyre-konfiguration {#configure-aem-to-use-livefyre-create-a-livefyre-configuration}
+### Configure AEM to use Livefyre: Create a Livefyre Configuration {#configure-aem-to-use-livefyre-create-a-livefyre-configuration}
 
-Konfigurera AEM så att du kan använda din organisations Livefyre-licensreferenser, vilket möjliggör kommunikation mellan Livefyre och AEM.
+Configure AEM to use your organization's Livefyre license credentials, allowing communication between Livefyre and AEM.
 
-1. På AEM hemsida klickar du på **verktyg** ikonen i den vänstra listen och navigera sedan till **Distribution > Livefyre Configuration**.
-1. Välj den konfigurationsmapp där du vill skapa en ny Livefyre-konfiguration och klicka sedan på **Skapa**.
+1. From the AEM homepage, click the **Tools** icon in the left rail, then navigate to **Deployment &gt; Livefyre Configuration**.
+1. Select the configuration folder in which you want to create a new Livefyre configuration, then click **Create**.
 
    ![create-livefyre-configuration1](assets/create-livefyre-configuration1.png)
 
    >[!NOTE]
    >
-   >Mapparna måste ha molnkonfigurationer aktiverade i sina egenskaper innan Livefyre-konfigurationer kan läggas till i dem. Konfigurationsmappar skapas och hanteras i [Konfigurationsläsaren.](/help/sites-administering/configurations.md)
+   >Folders must have Cloud Configurations enabled in their properties before Livefyre configurations can be added to them. Configuration folders are created and managed in the [Configuration Browser.](/help/sites-administering/configurations.md)
    >
-   >Du kan inte skapa ett namn för en konfiguration. Sökvägen till mappen som konfigurationen finns i refererar till det. Du kan bara ha en konfiguration per mapp.
+   >You cannot create a name for a configuration—it is referenced by the path of the folder it is in. You can only have one configuration per folder.
 
-1. Välj det nya Livefyre-konfigurationskortet och klicka sedan på **Egenskaper**.
+1. Select the newly created Livefyre configuration card, then click **Properties**.
 
    ![create-livefyre-configuration2](assets/create-livefyre-configuration2.png)
 
-1. Ange din organisations Livefyre-uppgifter och klicka sedan på **OK**.
+1. Enter your organization's Livefyre credentials, then click **OK**.
 
    ![configure-aem2](assets/configure-aem2.png)
 
-   Öppna Livefyre studio och gå till **Inställningar > Integreringsinställningar > Autentiseringsuppgifter**.
+   To access this information, open Livefyre studio and navigate to **Settings &gt; Integration Settings &gt; Credentials**.
 
-   Din AEM är nu konfigurerad att använda Livefyre och du kan använda integreringsfunktionerna.
+   Your AEM instance is now configured to use Livefyre and you can use the integration features.
 
-### Anpassa enkel inloggningsintegrering {#customize-single-sign-on-integration}
+### Customize Single Sign-on Integration {#customize-single-sign-on-integration}
 
-Paketet Livefyre för AEM innehåller en körklar integrering mellan AEM Communities-profiler och Livefyres SSO-tjänst.
+The Livefyre for AEM package includes an out-of-the-box integration between AEM Communities profiles and Livefyre's SSO service.
 
-När användare loggar in på din AEM webbplats loggas de också in i sociala Livefyre-komponenter. När en utloggad användare försöker använda en Livefyre-komponentfunktion som kräver autentisering (som att överföra ett foto), initierar Livefyre-komponenten användarautentisering.
+When users log into your AEM site, they are also logged into Livefyre social components. When a logged-out user attempts to use a Livefyre component feature that requires authentication (like uploading a photo), the Livefyre component initiates user authentication.
 
-Standardautentiseringsintegreringen kanske inte är perfekt för alla webbplatser. Om du vill matcha autentiseringsflödet på webbplatsmallarna på bästa sätt kan du åsidosätta standarddelegaten för Livefyre-autentisering efter dina behov. Gör så här:
+The default authentication integration may not be perfect for every site. To best match the authentication flow in your site templates, you can override the default Livefyre Authentication Delegate to meet your needs. Use these steps:
 
-1. Använda CRXDE Lite, kopiera */libs/social/integrations/livefyre/components/authorizedComponent/authclientlib* till */apps/social/integrations/livefyre/components/authorizedComponent/authclientlib*.
-1. Redigera och spara */apps/social/integrations/livefyre/components/authorizablecomponent/authclientlib/auth.js* för att implementera en Livefyre Auth Delegate som uppfyller dina behov.
+1. Using CRXDE Lite, copy */libs/social/integrations/livefyre/components/authorizablecomponent/authclientlib* to */apps/social/integrations/livefyre/components/authorizablecomponent/authclientlib*.
+1. Edit and save */apps/social/integrations/livefyre/components/authorizablecomponent/authclientlib/auth.js* to implement a Livefyre Auth Delegate that meets your needs.
 
-   Mer information om hur du anpassar ett autentiseringsombud finns i [Identitetsintegrering](https://answers.livefyre.com/developers/identity-integration/).
+   For more information on AEM Clientlibs, see [Using Client-Side Libraries](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html).
 
-   Mer information om AEM Clientlibs finns i [Använda bibliotek på klientsidan](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html).
+## Use Livefyre with AEM Sites {#use-livefyre-with-aem-sites}
 
-## Använd Livefyre med AEM Sites {#use-livefyre-with-aem-sites}
+### Add Livefyre Components to a Page {#add-livefyre-components-to-a-page}
 
-### Lägg till Livefyre-komponenter på en sida {#add-livefyre-components-to-a-page}
+Before adding Livefyre components to a page within Sites, you must enable Livefyre for the page by either inheriting a Livefyre cloud configuration from a parent page or by adding the configuration directly to the page. Refer to your implementation for how to include cloud services on your site.
 
-Innan du lägger till Livefyre-komponenter på en sida i Sites måste du aktivera Livefyre för sidan genom att antingen ärva en Livefyre-molnkonfiguration från en överordnad sida eller genom att lägga till konfigurationen direkt på sidan. Se implementeringen för hur du inkluderar molntjänster på din webbplats.
-
-När Livefyre har aktiverats för sidan måste behållare konfigureras så att Livefyre-komponenter tillåts. Se [Konfigurera komponenter i designläge](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/default-components-designmode.html) för instruktioner om hur du aktiverar olika komponenter.
+Once Livefyre is enabled for the page, containers must be configured to allow Livefyre components. See [Configuring Components in Design Mode](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/default-components-designmode.html) for instructions on how to enable different components.
 
 >[!NOTE]
 >
->Appar som kräver autentisering för att publicera fungerar inte förrän autentiseringen har konfigurerats i Anpassa enkel inloggningsintegrering.
+>Apps requiring authentication to post do not function until authentication is configured in Customize Single Sign-on Integration.
 
-1. Från **Komponenter** sidpanelen i designläge, välj **Livefyre** på menyn för att begränsa listan till tillgängliga Livefyre-komponenter.
+1. From the **Components** side panel in design mode, select **Livefyre** from the menu to limit the list to available Livefyre components.
 
    ![livefyre-add](assets/livefyre-add.png)
 
-1. Markera en Livefyre-komponent och dra den till rätt plats på sidan.
-1. Välj om du vill skapa en ny Livefyre-app eller bädda in en befintlig.
+1. Select a Livefyre component, and drag it into position on your page.
+1. Select whether to create a new Livefyre app or to embed an existing one.
 
-   Om du bäddar in ett befintligt program uppmanas du AEM att välja programmet. Om du skapar en ny app måste appen fyllas i innan något innehåll visas. Appen kommer att skapas på Livefyre-webbplatsen och det nätverk som väljs när molnkonfigurationen Livefyre aktiverades för sidan.
+   If embedding an existing app, AEM asks you to select the App. If creating a new App, the App will need to be populated before any content appears. The App will be created in the Livefyre site and network selected when Livefyre cloud configuration was enabled for the page.
 
-   Mer information om hur du infogar komponenter finns i [Redigera sidinnehåll](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-content.html).
+   For more information on inserting components, see [Editing Page Content](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-content.html).
 
-### Redigera en Livefyre-komponent för en AEM sida. {#edit-a-livefyre-component-for-an-aem-page}
+### Edit a Livefyre Component for an AEM Page. {#edit-a-livefyre-component-for-an-aem-page}
 
-Du kan bara konfigurera och redigera en Livefyre-komponent i Livefyre Studio. Från AEM:
+You can only configure and edit a Livefyre component in Livefyre Studio. From AEM:
 
-1. Klicka på Livefyre-komponenten som ska konfigureras.
-1. Klicka på **Konfigurera** -ikonen (skiftnyckel) för att öppna konfigurationsdialogrutan.
-1. Klicka **Om du vill redigera den här komponenten går du till Livefyre Studio**.
-1. Redigera appen i Livefyre Studio.
+1. Click the Livefyre component to configure.
+1. Click the **Configure** icon (wrench) to open the configuration dialog.
+1. Click **To edit this component, go to Livefyre Studio**.
+1. Edit the App in Livefyre Studio.
 
-## Använd Livefyre med AEM Assets {#use-livefyre-with-aem-assets}
+## Use Livefyre with AEM Assets {#use-livefyre-with-aem-assets}
 
-### Begär rättigheter och importera UGC till AEM Assets {#request-rights-and-import-ugc-into-aem-assets}
+### Request Rights and Import UGC into AEM Assets {#request-rights-and-import-ugc-into-aem-assets}
 
-Du kan importera användargenererat Twitter- och Instagram-innehåll (UGC) från Livefyre Studio till AEM Assets med UGC-importeraren. När du har valt det innehåll som ska importeras måste du begära rättigheter till innehållet innan importen kan slutföras.
+You can import Twitter and Instagram user-generated content (UGC) from Livefyre Studio to AEM Assets using the UGC Importer. After selecting the content to import, you must then request rights to the content before the import can be completed.
 
 >[!NOTE]
 >
->Innan du kan använda Assets för att importera UGC måste du konfigurera konton för konton för sociala konton och rättighetsbegäranden i Livefyre Studio. Se [Inställning: Rättighetsförfrågningar](https://experienceleague.adobe.com/docs/livefyre/using/rights-requests/c-how-requesting-rights-works.html) för mer information.
+>Before using Assets to import UGC, you must set up Social Accounts and Rights Requests accounts in Livefyre Studio. See [Setting: Rights Requests](https://experienceleague.adobe.com/docs/livefyre/using/rights-requests/c-how-requesting-rights-works.html) for more information.
 
-Så här importerar du UGC till AEM Assets:
+To import UGC into AEM Assets:
 
-1. På AEM hemsida går du till **Resurser > Filer**.
-1. Klicka **Skapa** och sedan klicka **Importera UGC.**
+1. From the AEM homepage, navigate to **Assets &gt; Files**.
+1. Click **Create**, then click **Import UGC.**
 
    ![livefyre-aem-import-ugc](assets/livefyre-aem-import-ugc.png)
 
-1. Sök innehåll:
+1. Find content:
 
-   * Från Livefyre genom att klicka på fliken UGC-bibliotek. Använd filtren och sök för att hitta innehåll från UGC-biblioteket.
-   * Från Twitter och Instagram genom att klicka på fliken Twitter eller Instagram. Använd sökningen eller filtren för att hitta innehåll.
+    * From Livefyre by clicking the UGC Library tab. Use the filters and search to find content from the UGC Library.
+    * From Twitter and Instagram by clicking the Twitter or Instagram tab. Use the search or filters to find content.
 
-1. Markera de resurser som du vill importera. De resurser du väljer räknas automatiskt och sparas under **Markerad** -fliken.
-1. **Valfritt**: Klicka på **Markerad** och granska det UGC-innehåll du valt att importera.
-1. Klicka på **Nästa**.
+1. Select the assets you want to import. The assets you select are automatically counted and saved under the **Selected** tab.
+1. **Optional**: Click the **Selected** tab and review your selected UGC content to import.
+1. Click **Next**.
 
    ![livefyre-aem-import-ugc2](assets/livefyre-aem-import-ugc2.png)
 
-1. Välj ett av följande alternativ för varje resurs för rättighetsförfrågningar:
+1. For rights requests, choose one of the following options for each asset:
 
-   För Instagram:
+   For Instagram:
 
-   * **Begär rättigheter manuellt** för att få ett meddelande som kan kopieras och klistras in och skickas manuellt till innehållsägarna via Instagram.
-   * **Attributera innehållsrättigheter manuellt** för att åsidosätta rättigheterna för enskilda resurser.
+    * **Manually Request Rights** to get a message that can be copied and pasted and manually sent to the content owners via Instagram.
+    * **Manually Attribute Content Rights** to override the rights for individual assets.
 
    >[!NOTE]
    >
-   >På grund av uppdateringar som påverkar sammanställningen av innehåll från icke-kommersiella användarkonton kan vi inte längre lägga in kommentarer åt dig eller automatiskt söka efter svar från författaren. [Klicka här för mer information](https://developers.facebook.com/blog/post/2018/04/04/facebook-api-platform-product-changes/).
+   >Due to updates affecting the aggregation of content from non-business user accounts, we can no longer post comments on your behalf or automatically check for replies from the author. [Click here to find out more](https://developers.facebook.com/blog/post/2018/04/04/facebook-api-platform-product-changes/).
 
    ![livefyre-aem-import-ugc3-6-4](assets/livefyre-aem-import-ugc3-6-4.png)
 
-   För Twitter:
+   For Twitter:
 
-   * **Meddelandeförfattare** om du vill skicka ett meddelande till innehållsägaren som begär rättigheter till resursen.
-   * **Attributera innehållsrättigheter manuellt** för att åsidosätta rättigheterna för enskilda resurser.
+    * **Message Author** to send a message to the content owner requesting rights to the asset.
+    * **Manually Attribute Content Rights** to override the rights for individual assets.
 
+1. Click **Import**.
 
-1. Klicka **Importera**.
-
-   Om du har skickat en begäran om Twitter-rättigheter kommer innehållsägaren att se meddelandet om rättighetsbegäran på sitt konto:
+   If you sent a Twitter rights request, the content owner will see the rights request message on their account:
 
    ![livefyre-aem-rights-request-twitter](assets/livefyre-aem-rights-request-twitter.png)
 
    >[!NOTE]
    >
-   >Twitter har begränsningar för identiska begäranden som kommer från samma konto. Om du importerar fler än ett par resurser bör du ändra meddelandena individuellt för att undvika att flaggas.
+   >Twitter has limits on identical requests coming from the same account. When importing more than a couple assets, modify the messages individually to avoid being flagged.
 
-1. Klicka **Klar** i det övre högra hörnet för att slutföra arbetsflödet för rättighetsbegäran.
+1. Click **Done** in the top-right corner to finish the Rights Request workflow.
 
-   Du kan se statusen för en väntande rättighetsbegäran för en resurs i Livefyre Studio. Om innehåll väntar på en rättighetsbegäran kommer resursen inte att visas i AEM Assets förrän rättigheter har beviljats. Resursen visas automatiskt i AEM Assets när en rättighetsbegäran beviljas.
+   You can see the status of a pending Rights Request for an asset in Livefyre Studio. If content is pending a rights request, the asset will not display in AEM Assets until rights are granted. The asset automatically appears in AEM Assets when a Rights Request is granted.
 
-   För Instagram måste du spåra innehållsägarens svar och manuellt tilldela rättigheter om de ges behörighet till innehållet.
+   For Instagram, you must track the content owner's response and manually grant rights if given rights to the content.
 
-## Använd Livefyre med AEM Commerce {#use-livefyre-with-aem-commerce}
+## Use Livefyre with AEM Commerce {#use-livefyre-with-aem-commerce}
 
-### Importera produktkataloger till Livefyre med AEM Commerce {#import-product-catalogs-into-livefyre-with-aem-commerce}
+### Import Product Catalogs into Livefyre with AEM Commerce {#import-product-catalogs-into-livefyre-with-aem-commerce}
 
-AEM Commerce-användare kan smidigt integrera sin befintliga produktkatalog i Livefyre för att öka användarengagemanget i Livefyres visualiseringsappar.
+AEM Commerce users can seamlessly integrate their existing product catalog into Livefyre to drive user engagement in Livefyre's visualization Apps.
 
-När du har importerat produktkatalogen visas produkterna i realtid i Livefyre-instansen. Om du redigerar eller tar bort artiklar i din AEM Commerce-produktkatalog uppdateras ändringarna automatiskt i Livefrye.
+After you import the product catalog, the products show up in real time in your Livefyre instance. If you edit or delete items in your AEM Commerce Product Catalog, the changes automatically update in Livefrye.
 
-1. Kontrollera att du har det senaste Livefyre for AEM-paketet installerat på din AEM.
-1. På AEM hemsida går du till **AEM**.
-1. Skapa en ny samling eller använd en befintlig samling.
-1. Håll muspekaren över samlingen och klicka **Samlingsegenskaper** (pennikon).
-1. Kontrollera **Synkronisera med Livefyre**.
-1. Fyll i **Livefyre Page Prefix** om du vill länka den här samlingen till en viss sida i AEM.
+1. Ensure you have the latest Livefyre for AEM package installed on your AEM instance.
+1. From the AEM homepage, navigate to **AEM Commerce**.
+1. Create a new collection or use an existing collection.
+1. Hover over the collection and click **Collection Properties** (pencil icon).
+1. Check **Sync to Livefyre**.
+1. Fill in **Livefyre Page Prefix** to link this collection to a specific page in AEM.
 
-   Sidprefixet definierar rotsökvägen där sökningen efter produktsidor börjar. Livefyre väljer den första sidan som har en tillhörande produkt. Om du vill hämta olika sidor för olika produkter behövs flera samlingar.
+   The page prefix defines the root path in your environment where searching for product pages begins. Livefyre chooses the first page that has a corresponding product associated to it. To get different pages for different products, multiple collections are needed.
 
-## AEM supportmatris för Livefyre-appar {#aem-support-matrix-for-livefyre-apps}
+## AEM Support Matrix for Livefyre Apps {#aem-support-matrix-for-livefyre-apps}
 
-| Livefyre-appar | AEM 6.1 | AEM 6.2 | AEM 6.3 | AEM 6.4 |
+| Livefyre Apps |AEM 6.1 |AEM 6.2 |AEM 6.3 |AEM 6.4 |
 |---|---|---|---|---|
-| Carousel | X | X | X | X |
-| Chatt | X | X | X | X |
-| Kommentarer | X | X | X | X |
-| Bildband |  | X | X | X |
-| LiveBlog | X | X | X | X |
-| Karta | X | X | X | X |
-| Media Wall | X | X | X | X |
-| Mosaik | X | X | X | X |
-| Omröstning |  | X | X | X |
-| Recensioner |  | X | X | X |
-| Ett kort | X | X | X | X |
-| Storify 2 |  | X | X | X |
-| Trender |  | X | X | X |
-| Knappen Överför |  | X | X | X |
+| Carousel |X |X |X |X |
+| Chat |X |X |X |X |
+| Comments |X |X |X |X |
+| Filmstrip |  |X |X |X |
+| LiveBlog |X |X |X |X |
+| Map |X |X |X |X |
+| Media Wall |X |X |X |X |
+| Mosaic |X |X |X |X |
+| Poll |  |X |X |X |
+| Reviews |  |X |X |X |
+| Single Card |X |X |X |X |
+| Storify 2 |  |X |X |X |
+| Trending |  |X |X |X |
+| Upload Button |  |X |X |X | -->

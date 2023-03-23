@@ -2,10 +2,10 @@
 title: Användarhandbok om AEM 6.5-administration
 description: Läs om hur du administrerar AEM 6.5. Dessa handledningar täcker webbplatsfunktioner, driftsättningsåtgärder, säkerhetsfunktioner, personalisering, integrering med mera.
 exl-id: 299c783a-1495-4c0d-8431-cd7de142a163
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
 workflow-type: tm+mt
-source-wordcount: '347'
-ht-degree: 17%
+source-wordcount: '328'
+ht-degree: 18%
 
 ---
 
@@ -37,7 +37,6 @@ Läs om hur du administrerar AEM 6.5. Dessa handledningar täcker webbplatsfunkt
 | [Hantera användarhandbok](/help/managing/home.md) | I den här guiden beskrivs hur du hanterar ett AEM projekt. |
 | [Handbok för Commerce](/help/commerce/home.md) | Läs mer om Commerce Integration Framework på AEM. |
 | [Användarhandbok för mobiler](/help/mobile/home.md) | I den här guiden beskrivs hur du skapar och hanterar innehåll för mobilprogram. |
-| [AEM Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/home.html) | Den här guiden visar hur du delar användargenererat innehåll med Livefyre. |
 
 ## Viktiga AEM
 

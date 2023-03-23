@@ -4,10 +4,10 @@ seo-title: AEM 6.5 Managing User Guide
 description: Upptäck hur du kan hantera ett AEM projekt med stöd från nyckelresurser och en omfattande samling AEM 6.5 användarhandböcker.
 seo-description: Covers how to manage an AEM project successfully
 exl-id: 40597a93-b307-47ce-9a9a-c2e12b7dd0e2
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
 workflow-type: tm+mt
-source-wordcount: '356'
-ht-degree: 17%
+source-wordcount: '337'
+ht-degree: 18%
 
 ---
 
@@ -39,7 +39,6 @@ Upptäck hur du kan hantera ett AEM projekt med stöd från nyckelresurser och e
 | [Hantera användarhandbok](/help/managing/home.md) | I den här guiden beskrivs hur du hanterar ett AEM projekt. |
 | [Handbok för Commerce](/help/commerce/home.md) | Läs mer om Commerce Integration Framework på AEM. |
 | [Användarhandbok för mobiler](/help/mobile/home.md) | I den här guiden beskrivs hur du skapar och hanterar innehåll för mobilprogram. |
-| [AEM Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/home.html) | Den här guiden visar hur du delar användargenererat innehåll med Livefyre. |
 
 ## Viktiga AEM
 

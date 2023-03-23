@@ -2,10 +2,10 @@
 title: Versionsinformation om Adobe Experience Manager 6.5
 description: AEM-versionsinformationen innehåller viktig information om den senaste versionen av AEM, inklusive vad som är nytt, vilka plattformar som stöds, funktioner som fasas ut eller tas bort, samt kända fel.
 exl-id: 2fc93249-9bd0-4e34-83b2-80f51c102ed1
-source-git-commit: e3caa3e3067cf5e29cfcdf4286047eb346aefa23
+source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
 workflow-type: tm+mt
-source-wordcount: '374'
-ht-degree: 24%
+source-wordcount: '355'
+ht-degree: 26%
 
 ---
 
@@ -37,7 +37,6 @@ AEM-versionsinformationen innehåller viktig information om den senaste versione
 | [Hantera användarhandbok](/help/managing/home.md) | I den här guiden beskrivs hur du hanterar ett AEM projekt. |
 | [Handbok för Commerce](/help/commerce/home.md) | Läs mer om Commerce Integration Framework på AEM. |
 | [Användarhandbok för mobiler](/help/mobile/home.md) | I den här guiden beskrivs hur du skapar och hanterar innehåll för mobilprogram. |
-| [AEM Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/home.html) | Den här guiden visar hur du delar användargenererat innehåll med Livefyre. |
 
 ## Viktiga AEM
 

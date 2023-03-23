@@ -4,10 +4,10 @@ seo-title: AEM 6.5 Classic UI Authoring User Guide
 description: Den här handboken beskriver koncepten för redigering i AEM i det klassiska användargränssnittet.
 seo-description: Covers the concepts of authoring in AEM in the classic UI.
 exl-id: 4ce591f1-a361-473a-b07d-a618f5c57f58
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
 workflow-type: tm+mt
-source-wordcount: '346'
-ht-degree: 15%
+source-wordcount: '327'
+ht-degree: 16%
 
 ---
 
@@ -39,7 +39,6 @@ Den här handboken beskriver koncepten för redigering i AEM i det klassiska anv
 | [Hantera användarhandbok](/help/managing/home.md) | I den här guiden beskrivs hur du hanterar ett AEM projekt. |
 | [Handbok för Commerce](/help/commerce/home.md) | Läs mer om Commerce Integration Framework på AEM. |
 | [Användarhandbok för mobiler](/help/mobile/home.md) | I den här guiden beskrivs hur du skapar och hanterar innehåll för mobilprogram. |
-| [AEM Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/home.html) | Den här guiden visar hur du delar användargenererat innehåll med Livefyre. |
 
 ## Viktiga AEM
 

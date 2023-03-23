@@ -3,10 +3,10 @@ title: Användarhandbok för distribution av AEM 6.5
 seo-title: AEM 6.5 Deploying User Guide
 description: Lär dig hur du installerar och distribuerar Adobe Experience Manager 6.5 och dess arkitektur, inklusive vår molndistribution av Adobe Managed Services.
 exl-id: 4a82008c-af69-414e-bd98-c7f683a74905
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
 workflow-type: tm+mt
-source-wordcount: '380'
-ht-degree: 13%
+source-wordcount: '361'
+ht-degree: 14%
 
 ---
 
@@ -38,7 +38,6 @@ Den här guiden täcker alla AEM driftsättningsåtgärder, som att installera o
 | [Hantera användarhandbok](/help/managing/home.md) | I den här guiden beskrivs hur du hanterar ett AEM projekt. |
 | [Handbok för Commerce](/help/commerce/home.md) | Läs mer om Commerce Integration Framework på AEM. |
 | [Användarhandbok för mobiler](/help/mobile/home.md) | I den här guiden beskrivs hur du skapar och hanterar innehåll för mobilprogram. |
-| [AEM Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/home.html) | Den här guiden visar hur du delar användargenererat innehåll med Livefyre. |
 
 ## Viktiga AEM
 

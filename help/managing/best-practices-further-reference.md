@@ -10,9 +10,9 @@ topic-tags: managing-checklist
 content-type: reference
 discoiquuid: 6fc2751e-f42a-4519-bc8c-695057f21b69
 exl-id: 36620e3e-ecdf-4062-bbef-65513362d691
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
 workflow-type: tm+mt
-source-wordcount: '3755'
+source-wordcount: '3699'
 ht-degree: 0%
 
 ---
@@ -29,9 +29,9 @@ På denna sida finns mer information för att gå närmare igenom och/eller för
 
 ### Funktioner i AEM {#features-within-aem}
 
-När du implementerar AEM (särskilt för första gången) måste du granska [AEM och arbetsflöden](https://www.adobe.com/marketing/experience-manager.html) för att vara säker på vilka områden du vill/behöver.
+När du implementerar AEM (särskilt för första gången) ska du granska [AEM](https://business.adobe.com/products/experience-manager/adobe-experience-manager.html) för att vara säker på vilka områden du vill ha eller behöver.
 
-Fundera på AEM funktioner du kommer att använda och hur designen påverkas. till exempel:
+Fundera på AEM funktioner du använder och hur designen påverkas. till exempel:
 
 * [Handel](/help/commerce/cif-classic/administering/ecommerce.md)
 * [Skärmar](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html)
@@ -40,13 +40,12 @@ Fundera på AEM funktioner du kommer att använda och hur designen påverkas. ti
 * [Hantering och översättning av flera webbplatser](/help/sites-administering/msm-and-translation.md)
 * [Forms](/help/forms/home.md)
 * [Communities](/help/communities/deploy-communities.md)
-* [Livefyre](https://answers.livefyre.com/product/livefyre-for-adobe-experience-manager-aem/livefyre-for-adobe-experience-manager/)
 
 Kontrollera dessutom [Versionsinformation](/help/release-notes/release-notes.md), för de olika versionerna av AEM, för att se när nya funktioner lades till.
 
 ### Integreringar {#integrations}
 
-AEM kan integreras med andra Adobe-produkter och/eller tredjepartstjänster. De kan öka den kraft och funktionalitet du har till ditt förfogande.
+AEM kan integreras med andra Adobe-produkter, med tredjepartstjänster eller med båda. Dessa arbetsflöden kan öka kraften och funktionaliteten du har till hands.
 
 Se [Lösningsintegrering](/help/sites-administering/integration.md) för fullständig information.
 
@@ -60,11 +59,11 @@ Det är viktigt att tänka på om du vill:
 När du går från en tidigare version till den aktuella versionen finns det två alternativ:
 
 * Använd [Pakethanteraren](/help/sites-administering/package-manager.md) för att exportera allt innehåll och all programkod från det gamla systemet till det nya.
-* [Uppgradera](/help/sites-deploying/upgrade.md) det gamla systemet på plats. Detta är det rekommenderade alternativet i de flesta fall.
+* [Uppgradera](/help/sites-deploying/upgrade.md) det gamla systemet på plats. Den här metoden rekommenderas vanligtvis.
 
 ## Grundregler {#basic-ground-rules}
 
-Precis som med andra projekt är det viktigt att fastställa grundregler så snart som möjligt. Bland dessa finns:
+Precis som med andra projekt är det viktigt att fastställa grundregler så snart som möjligt. Dessa regler omfattar:
 
 >[!NOTE]
 >
@@ -72,38 +71,38 @@ Precis som med andra projekt är det viktigt att fastställa grundregler så sna
 
 * **Roller**
 
-   Dessa bör vara klart definierade och göras kända för alla som är inblandade i projektet. Det är dessutom tillrådligt att understryka:
+   Roller bör vara tydligt definierade och göras kända för alla som är inblandade i projektet. Det är dessutom tillrådligt att understryka:
 
    * Beslutsfattare
    * Kontaktpunkter
 
 * **Ansvarsområden**
 
-   * En tydlig definition av ansvarsområdena för ditt projekt för varje roll bidrar till att undvika förvirring.
+   * För varje roll är det lättare att undvika förvirring om du tydligt definierar ansvarsområdena för ditt projekt.
 
 * **Deltagande**
 
-   Genom att involvera berörda parter så snart som möjligt kan ni uppmuntra dem att bli *intressenter* i projektet och därmed öka deras engagemang för att projektet ska lyckas.
+   Genom att involvera berörda parter så snart som möjligt kan du uppmuntra dem att bli *intressenter* i projektet. Om de gör det ökar de sin vilja till framgång.
 
-   * På kundsidan omfattar detta författarna - som måste arbeta med systemet dagligen.
-   * I ditt eget projektteam kommer detta även att omfatta de personer som ansvarar för kvalitetssäkring. Ju mer de förstår kundens krav, desto bättre kan de planera testerna.
+   * På kundsidan omfattar den här rollen författare som arbetar med systemet dagligen
+   * Inom ditt eget projektteam omfattar detta även de personer som ansvarar för kvalitetssäkring. Ju mer de förstår kundens krav, desto bättre kan de planera testerna.
 
 * **Kommunikationsvägar**
 
-   * Även om dessa inte bör formaliseras alltför mycket bör särskilda definitioner säkerställa att de viktigaste personerna alltid är informerade och därför hålls uppdaterade. Särskild uppmärksamhet bör ägnas kommunikationen med externa parter.
+   * Även om kommunikationsvägar inte bör formaliseras alltför mycket bör särskilda definitioner säkerställa att de viktigaste personerna alltid är informerade och därför hålls uppdaterade. Särskild uppmärksamhet bör ägnas kommunikationen med externa parter.
 
 * **Processer**
 
-   Vilka processer som ska definieras beror på vilket projekt du arbetar med. Försök att behålla dessa enkla funktioner, med tanke på:
+   De definierade processerna är beroende av ditt enskilda projekt. Försök att göra dessa processer enkla, med tanke på:
 
-   * Definiera processer (och kommunikationsvägar) för samverkan med tredje part. t.ex. designbyråer och tredjepartsleverantörer av programvara.
-   * Ofta har kunden egna rutiner och verktyg för projekthantering och rapportering.
+   * Definiera processer (och kommunikationsvägar) för samverkan med tredje part. till exempel designbyråer och tredjepartsleverantörer av programvara.
+   * Kunden har ofta egna rutiner och verktyg för projekthantering och rapportering.
 
 * **Spårningsverktyg**
 
    Det finns många verktyg för att spåra information om fel, uppgifter och andra aspekter av projektet - se [Översikt över potentiella verktyg](#overview-of-potential-tools) för mer information.
 
-   * Det viktigaste att notera här är att bara behålla en kopia av informationen och dela informationen (och därmed tillgång till det verktyg som används). Detta underlättar underhållet och hjälper till att förebygga avvikelser.
+   * Det viktigaste att notera här är att bara behålla en kopia av informationen och dela informationen (och därmed tillgång till det verktyg som används). Det här arbetsflödet underlättar underhållet och hjälper till att förebygga avvikelser.
 
 * **Omfång**
 
@@ -112,11 +111,11 @@ Precis som med andra projekt är det viktigt att fastställa grundregler så sna
    * de enskilda releaserna (om en iterativ versionsprocess används och oavsett om de levereras till kunder eller till ditt interna testteam).
    * AEM.
    * Hela projektet. inklusive eventuella tredjepartsprogram, deras inverkan på testning, organisatoriska frågor och många andra.
-   * För vissa aspekter kan det också vara användbart att ange vad som *not* inom projektets räckvidd. Detta kan bidra till att förhindra förvirring och felaktiga antaganden, även om det bör begränsas till väsentliga frågor.
+   * För vissa aspekter kan det också vara användbart att ange vad som är *not* inom projektets räckvidd. Denna idé kan bidra till att förhindra förvirring och felaktiga antaganden, även om den bör begränsas till väsentliga frågor.
 
 * **Rapportering**
 
-   Definiera tydligt vilken information ni ska rapportera, i vilken form, hur ofta och till vem.
+   Definiera tydligt vilken information du vill rapportera, i vilken form, hur ofta och till vem.
 
 * **Terminologi**
 
@@ -126,11 +125,11 @@ Precis som med andra projekt är det viktigt att fastställa grundregler så sna
 
    * Definiera eventuella antaganden.
 
-Denna information kan definieras i en projekthandbok. en Wiki kan också bidra till att säkerställa att pågående ändringar hanteras effektivt. De viktigaste faktorerna är följande, oavsett var de definieras:
+Denna information kan definieras i en projekthandbok. en Wiki kan också bidra till att säkerställa att pågående ändringar hanteras effektivt. De viktigaste faktorerna är att
 
 * Informationen definieras och underhålls
-* Alla berörda personer informeras tydligt om informationen. Även om det är en vanlig projekthanteringspraxis kan den inte upprepas tillräckligt ofta, så att en tydlig rolldefinition och bra kommunikation kan skapa, eller bryta, ett projekt.
-* Endast en version av all information som spåras behålls. till exempel felspårning, problemspårning osv.
+* All information förmedlas tydligt till alla berörda. Även om det är en vanlig projekthanteringspraxis kan den inte upprepas tillräckligt ofta, så att en tydlig rolldefinition och bra kommunikation kan skapa, eller bryta, ett projekt.
+* Endast en version av all information som spåras behålls. till exempel felspårning och problemspårning.
 
 ## Viktiga resultatindikatorer och målvärden {#key-performance-indicators-and-target-metrics}
 
@@ -141,7 +140,7 @@ Dessa indikatorer kan vara
 * Företag:
 
    * Används för att mäta viktiga affärsmål.
-   * Det är viktigt att välja nyckeltal som är lämpliga för ert företag/scenario med tydliga definitioner av vad de är, hur de mäts, hur de kommer att användas och av vem.
+   * Det är viktigt att välja nyckeltal som är lämpliga för ert företag/scenario med tydliga definitioner av vad de är, hur de mäts, hur de används och av vem.
 
 * Prestanda:
 
@@ -152,68 +151,68 @@ Vissa indikatorer, men inte alla, kan baseras på målmåtten som du identifiera
 
 ### Måttmål {#target-metrics}
 
-Mätvärden används för att definiera kvantitativa mått för kvaliteten på din webbplats - de är i princip en definition av de prestationsmål som du vill uppnå och kan användas för att definiera dina [KPI (Key Performance Indicators)](#key-performance-indicators-and-target-metrics).
+Mätvärden används för att definiera kvantitativa mått för kvaliteten på din webbplats. De är i princip en definition av de prestationsmål som du vill uppnå och kan användas för att definiera dina [KPI (Key Performance Indicators)](#key-performance-indicators-and-target-metrics).
 
 Många mätvärden kan definieras, men ofta täcker de mål som du har satt upp för prestanda och samtidighet. Detta gäller särskilt faktorer som kan vara svåra att kvantifiera och som ofta är benägna att *känslomässig* bedömning:
 
-* &quot;vår webbplats är *för långsam* idag&quot; - när gör det *långsam* kvalificera dig?
+* &quot;webbplatsen är *för långsam* idag&quot; - när gör det *långsam* kvalificera dig?
 
 * &quot;allt *stilla galler* när min kollega loggar in&quot; - hur många samtidiga användare kan systemsupporten?
-* &quot;när jag söker, systemet *stilla galler* &quot; - Vilken typ av sökförfrågningar påverkar systemet?
+* &quot;när jag söker, systemet *stilla galler* &quot; - vilka sökförfrågningar påverkar systemet?
 * &quot;det krävs *sidor* för att ladda ned filen&quot; - vilka är tillåtna nedladdningstider (under normala nätverksförhållanden)?
 
 Målmått definieras i början av ett projekt till:
 
-* ange de förväntade dimensionerna för den webbplats du kommer att erbjuda
+* ange de förväntade dimensionerna för webbplatsen som du kan erbjuda
 * ange den minimikvalitet som du vill uppnå
-* definiera hur dessa faktorer faktiskt ska mätas
+* definiera hur dessa faktorer ska mätas
 * användas som grund för [Viktiga prestandaindikatorer](#key-performance-indicators-and-target-metrics)
 
 Som alltid måste man vara försiktig när man definierar målmåtten:
 
-* om de är för höga kan de vara helt omöjliga att uppnå
+* om de är för höga kan de vara omöjliga att nå
 * om inställt för låga fluktuationer inte kan markeras
 * för att säkerställa att de kan mätas upprepade gånger och konsekvent
 * för att skapa en balans mellan de olika faktorer som mäts
-* vissa mätvärden avser en testmiljö, men vissa bör återspegla verkliga scenarier eftersom de måste vara mätbara och reproducerbara på produktionsplatsen
+* vissa mätvärden relaterar till en testmiljö, men vissa bör återspegla verkliga scenarier eftersom de måste vara mätbara och reproducerbara på produktionens webbplats
 * prioritera mätvärdena utifrån deras betydelse för webbplatsen
-* begränsa mätvärdena till en uppsättning som kan övervakas på ett realistiskt sätt
+* begränsa mätvärdena till en uppsättning som kan övervakas
 
 Under projektets utveckling kan de uppdateras och justeras på lämpligt sätt. När projektet har implementerats kan de användas för att hjälpa dig att styra installationen och övervaka/underhålla de servicenivåer som krävs för den pågående åtgärden.
 
-När dessa mätvärden används på rätt sätt kan de ge ett användbart verktyg. när de används på ett oansvarigt sätt kan de vara en tidsödande störning. Som alltid måste ni förstå vad ni mäter, hur ni mäter det och varför.
+När dessa mätvärden används på rätt sätt kan de ge ett användbart verktyg. när de används på ett oansvarigt sätt kan de vara en tidsödande störning. Som alltid, förstå vad du mäter, hur du mäter det och varför.
 
 >[!NOTE]
 >
->Detta avsnitt kommer att behandla de grundläggande principer och frågor som ska övervägas. Alla installationer är olika, så de faktiska värden som ska mätas är olika.
+>I det här avsnittet diskuteras grundläggande principer och frågor som ska övervägas. Alla installationer är olika, så de faktiska värdena som ska mätas tenderar att vara olika.
 
 ### Allt hänger på din projektdesign {#everything-rests-on-your-project-design}
 
-Alla mätvärden kommer på något sätt att påverkas av projektets utformning. Omvänt löses många problem bäst genom designändringar.
+Alla mätvärden påverkas av projektets utformning. Omvänt löses många problem bäst genom designändringar.
 
-Därför bör du definiera målvärden *före* bestämmer dig för din design. På så sätt kan du optimera din design baserat på dessa faktorer. När projektet väl har utvecklats är det svårt att ändra de grundläggande designprinciperna.
+Definiera därför målvärden *före* bestämmer dig för din design. På så sätt kan du optimera din design baserat på dessa faktorer. När projektet har utvecklats är det en utmaning att följa de grundläggande designprinciperna.
 
 När du skapar webbplatsens struktur följer du den rekommenderade strukturen för AEM webbplatser. Se till att du förstår följande:
 
 * Strukturera webbplatsinnehåll.
 * Hur mallar och komponenter fungerar.
-* Hur cachning fungerar.
+* Hur fungerar cachelagring?
 * Effekterna av personaliserat innehåll.
 * Hur sökfunktionen fungerar.
 * Hur du kan använda CSS och relaterade tekniker för att skapa kompakt, icke-redundant HTML-kod.
 
-Om du anser att din design inte följer riktlinjerna, eller om du är osäker på några av konsekvenserna, bör du klargöra dessa problem innan du börjar med antingen programmeringsfasen eller fyller i innehållet.
+Om du känner att din design inte följer riktlinjerna, eller om du är osäker på några av konsekvenserna, kan du klargöra dessa problem. Gör det innan du startar antingen programmeringsfasen eller fyller i innehållet.
 
 ### Infrastruktur {#infrastructure}
 
-För att definiera eller bedöma infrastrukturen hjälper det att definiera målvärden som:
+För att definiera eller bedöma infrastrukturen kan det hjälpa till att definiera målvärden som:
 
 * besökare/dag, både medel och topp
 * träffar/dag, både medel och topp
 * antal webbsidor som görs tillgängliga
 * mängd webbinnehåll
 
-Beroende på din situation och webbplatsens strategiska betydelse hjälper detta dig att bedöma och välja din infrastruktur:
+Beroende på din situation och webbplatsens strategiska betydelse kan en definition av infrastruktur hjälpa dig att bedöma och välja din infrastruktur:
 
 * antal servrar
 * antal AEM (författare och publicering)
@@ -222,14 +221,14 @@ Beroende på din situation och webbplatsens strategiska betydelse hjälper detta
 
 Det finns flera faktorer som kan utvärderas:
 
-* svarstider för enskilda sidor, med beaktande av
+* svarstider för enskilda sidor, som representerar
 
    * svarstider i en författarmiljö
    * svarstider i publiceringsmiljön
 
 * svarstider för sökbegäranden
 
-Det här avsnittet kan läsas tillsammans med [Prestandaoptimering](/help/sites-deploying/configuring-performance.md) som utökar de tekniska detaljerna för att mäta prestanda.
+Det här avsnittet kan läsas med [Prestandaoptimering](/help/sites-deploying/configuring-performance.md) som utökar de tekniska detaljerna för att mäta prestanda.
 
 #### Svarstider för enskilda sidor {#response-times-for-individual-pages}
 
@@ -239,13 +238,13 @@ Ett viktigt problem är den tid det tar för er webbplats att svara på besökar
 
 Olika mål för skribent- och publiceringsmiljöer
 
-De svarstider du vill använda skiljer sig åt mellan skribent- och publiceringsmiljöerna, vilket återspeglar målgruppen:
+De svarstider du vill ha skiljer sig åt mellan olika utvecklings- och publiceringsmiljöer, vilket återspeglar målgruppen:
 
 * **Författarmiljö**
 
    Den här miljön används av författare som anger och uppdaterar innehåll, så den måste:
 
-   * tillgodose ett litet antal användare som skapar ett stort antal förfrågningar när de uppdaterar innehållssidor och de enskilda elementen på dessa sidor
+   * tillgodose ett fåtal användare som skapar ett stort antal förfrågningar när de uppdaterar innehållssidor och de enskilda elementen på dessa sidor
    * vara så snabb som möjligt för att maximera produktiviteten och få ut materialet på webbplatsen
 
 * **Publiceringsmiljö**
@@ -260,11 +259,11 @@ De svarstider du vill använda skiljer sig åt mellan skribent- och publicerings
 
 #### Ange målsvarstider {#setting-target-response-times}
 
-Så hur kan du bestämma dig för uppnåbara (genomsnittliga) svarstider? Detta är ofta en fråga om erfarenhet:
+Hur kan du bestämma dig för uppnåbara (genomsnittliga) svarstider? Frågan och svaret är ofta en fråga om erfarenhet:
 
-* tidigare erfarenheter på din webbplats
+* på er webbplats
 * AEM
-* känna igen komplexa sidor som har mer än de genomsnittliga svarstiderna (dessa bör optimeras individuellt om det är möjligt)
+* känna igen komplexa sidor som har svarstider över genomsnittet (dessa sidor bör optimeras individuellt om det är möjligt)
 
 Under kontrollerade förhållanden kan dock följande riktlinjer tillämpas:
 
@@ -282,11 +281,11 @@ Siffrorna ovan förutsätter följande villkor:
 * endast för komplexa objekt med många beroenden (HTML, JS, PDF, ...)
 * ingen annan belastning på systemet
 
-Det finns flera sätt att övervaka svarstiderna:
+Det finns flera mekanismer som du kan använda för att övervaka svarstiderna:
 
 * **Övervaka svarstider med AEM request.log**
 
-   En bra utgångspunkt för prestandaanalys är begärandeloggen. Du kan bland annat använda den här informationen för att se svarstiderna för enskilda begäranden. Se [Prestandaoptimering](/help/sites-deploying/configuring-performance.md) för mer information.
+   En bra utgångspunkt för prestandaanalys är begärandeloggen. Du kan bland annat se svarstiderna för enskilda begäranden. Se [Prestandaoptimering](/help/sites-deploying/configuring-performance.md) för mer information.
 
 * **Övervaka svarstider med HTML kommentarer**
 
@@ -304,17 +303,17 @@ Sökförfrågningar kan ha stor effekt på din webbplats, både när det gäller
 
 * Effekter på allmänna prestanda
 
-   * Eftersom en sökfunktion måste skanna (potentiellt stora) avsnitt av innehållet, eller ett särskilt extraherat index, kan detta påverka hela systemets prestanda om det inte optimeras
+   * Eftersom en sökfunktion måste skanna (potentiellt stora) avsnitt av innehållet, eller ett särskilt extraherat index, kan den här funktionen påverka hela systemets prestanda, om den inte är optimerad
 
 Att ange mål för sökbegäranden är återigen en fråga om erfarenhet beroende på:
 
 * AEM
-* en bedömning av hur ofta sökningen kommer att användas jämfört med andra mål
+* en bedömning av hur ofta sökning används i jämförelse med andra mål
 * din persistence Manager
 * ditt sökindex
-* komplexiteten i sökfunktionen, en grundläggande sökfunktion som bara tillåter att 1 sökterm matas in snabbare än en avancerad sökning som tillåter användaren att skapa komplexa söksatser med AND/OR/NOT.
+* komplexiteten i sökfunktionen, en grundläggande sökfunktion som tillåter att en sökterm anges, är snabbare än en avancerad sökning som gör att användaren kan skapa komplexa söksatser med AND/OR/NOT.
 
-Dessa bör planeras och integreras redan från början av projektet. De övervakningsmekanismer som finns är bland annat följande:
+Dessa sökförfrågningar bör planeras och integreras redan från början av projektet. De övervakningsmekanismer som finns är bland annat följande:
 
 * **Övervaka söksvarstider med AEM request.log**
 
@@ -322,22 +321,22 @@ Dessa bör planeras och integreras redan från början av projektet. De övervak
 
 * **Programmerade mekanismer för mätning av svarstider för sökningar**
 
-   Om du vill anpassa den information du samlar in om sökförfrågningar och hur de fungerar rekommenderar vi att du inkluderar informationsinsamling i projektets källkod. se [Prestandaoptimering](/help/sites-deploying/configuring-performance.md) för mer information.
+   Om du vill anpassa den information som du samlar in om sökförfrågningar och hur de fungerar rekommenderar vi att du inkluderar informationsinsamling i projektets källkod. se [Prestandaoptimering](/help/sites-deploying/configuring-performance.md) för mer information.
 
 ### Samtidighet {#concurrency}
 
-Din webbplats kommer att vara tillgänglig för ett antal användare/besökare, både i skribent- och publiceringsmiljöer. Siffrorna är ofta mer än du använde när du testade, men de varierar också och är svåra att förutse. Webbplatsen måste utformas för ett genomsnittligt antal samtidiga användare/besökare utan att märka någon negativ inverkan på prestandan. Igen `request.log` kan användas för samtidighetstester, se [Prestandaoptimering](/help/sites-deploying/configuring-performance.md) för mer information.
+Gör webbplatsen tillgänglig för vissa användare och besökare, både i författarmiljön och i publiceringsmiljön. Siffrorna är ofta mer än du använde när du testade, men de varierar också och är svåra att förutse. Utforma webbplatsen för ett genomsnittligt antal samtidiga användare och besökare utan att märka någon negativ inverkan på prestandan. Använd `request.log` att göra samtidighetstester. Se [Prestandaoptimering](/help/sites-deploying/configuring-performance.md) för mer information.
 
-Målen för antalet samtidiga användare beror på miljötypen:
+Målen för antalet samtidiga användare, beroende på miljötypen:
 
 * **Författarmiljö**
 
-   * Vanligtvis kan antalet samtidiga användare uppskattas korrekt. Du kommer att veta hur många författare du har totalt, men (förmodligen) alla kommer inte att vara aktiva samtidigt.
+   * Vanligtvis kan antalet samtidiga användare uppskattas korrekt. Du kan veta hur många författare du har totalt, men (troligen) alla är inte aktiva samtidigt.
 
 * **Publiceringsmiljö**
 
-   * Detta är svårare att förutsäga, så du måste välja ett målvärde. Återigen bör detta baseras på erfarenheterna av den aktuella webbplatsen och realistiska förväntningar på den nya webbplatsen.
-   * Specialhändelser (t.ex. när du publicerar nytt, mycket populärt innehåll) kan överstiga förväntningarna - eller till och med möjligheterna (som ibland rapporteras i pressen när biljetter till vissa evenemang görs tillgängliga för försäljning).
+   * Publiceringsmiljön är en större utmaning att förutse, så du måste välja ett målvärde. Återigen bör den baseras på erfarenheterna av den aktuella webbplatsen och realistiska förväntningar på den nya webbplatsen.
+   * Specialhändelser (t.ex. när du publicerar nytt populärt innehåll) kan överstiga förväntningarna - eller till och med möjligheterna (som ibland rapporteras i pressen när biljetter till vissa evenemang görs tillgängliga för försäljning).
 
 ### Kapacitet och volym {#capacity-and-volume}
 
@@ -368,9 +367,9 @@ Innan du diskuterar relaterade mätvärden ska du göra en snabb definition av t
 
 I de föregående avsnitten beskrivs huvudmåtten som ska definieras.
 
-Beroende på dina specifika krav kan det vara användbart för dig att definiera ytterligare mått, antingen separat eller med hänsyn till ovanstående klassificeringar.
+Beroende på dina specifika krav kan det vara användbart att definiera ytterligare mått, antingen separat eller genom att redovisa klassificeringarna ovan.
 
-Men det är bättre att ha en liten uppsättning exakta, viktiga mätvärden som fungerar enkelt och tillförlitligt, i stället för att försöka mäta och definiera alla delar av webbplatsen. Webbplatsen kommer helt enkelt att förändras och utvecklas så fort den skickas vidare till användarna.
+Men det är bättre att ha en liten uppsättning exakta, viktiga mätvärden som fungerar enkelt och tillförlitligt, i stället för att försöka mäta och definiera alla delar av webbplatsen. Webbplatsen förändras och utvecklas när den skickas vidare till användarna.
 
 ## Dokumentskydd {#security}
 
@@ -384,13 +383,13 @@ The [Säkerhetschecklista](/help/sites-administering/security-checklist.md) deta
 >
 >Följande:
 >
->* Erbjuder en översikt relaterad till *först* implementering av ett AEM projekt.
+>* Erbjuder en översikt relaterad till *först* genomförandet av ett AEM projekt.
 >* är avsedd som en abstrakt översikt, se [Projektchecklista](/help/managing/best-practices.md) för specifika faser/milstolpar/uppgifter.
 >* Alla tidsskalor är teoretiska.
 >
 
 
-För en ny implementering av ett AEM-projekt måste du överväga uppgifter som:
+För en ny implementering av ett AEM-projekt bör du överväga följande:
 
 * Överleverans från försäljningsprocessen.
 * Implementering av kundapplikationen (**Utveckling**).
@@ -407,7 +406,7 @@ För alla aspekter rekommenderas en iterativ metod:
 
 >[!NOTE]
 >
->Dela projektstarten i **Mjuk start(ar)** (minskad tillgänglighet, flera iterationer) och **Hård start** (full tillgänglighet - Live) för anpassning, optimering och användarutbildning under realistiska förhållanden i produktionsmiljön.
+>Dela upp projektlanseringen i **Soft Launch** (minskad tillgänglighet, flera iterationer) och **Hård start** (full tillgänglighet - Live).
 
 >[!NOTE]
 >
@@ -462,7 +461,7 @@ Några punkter att notera för varje kategori är:
       * Hjälper till att definiera innehållskonceptet.
       * Definierar MSM-användning och -layout.
       * Definierar roller, grupper, arbetsflöden och behörigheter.
-   * Fundera på om det är praktiskt att skapa offlinesidor.
+   * Ta reda på om det är praktiskt att skapa offlinesidor.
    * Planera för att snabbt skapa första sidor och innehåll (för användning i tester och feedback).
    * Planera för migrering av befintligt innehåll.
    * Planera för&quot;in-sprint-migration&quot; efter omfaktorisering.
@@ -470,7 +469,7 @@ Några punkter att notera för varje kategori är:
 
 ## Beräknar tid och insats {#estimating-time-and-effort}
 
-Beroende på vilken uppgiftslista du skapar kan du sedan göra en första uppskattning av tid och arbete för (hög nivå) uppgiftsdefinitioner. Dessa bör innehålla en indikation på vem (kund eller partner) som kommer att göra vad och när.
+Beroende på vilken uppgiftslista du skapar kan du sedan göra en första uppskattning av tid och arbete för (hög nivå) uppgiftsdefinitioner. Dessa uppskattningar ska innehålla en indikation på vem (kund eller partner) som gör vad och när.
 
 I följande lista visas ungefärliga uppskattningar och inbördes samband mellan insatser, och därmed kostnader:
 
@@ -480,7 +479,7 @@ I följande lista visas ungefärliga uppskattningar och inbördes samband mellan
 
 | Fas | Insats |
 |---|---|
-| Utveckling | En ungefärlig uppskattning på 2-4 timmar för varje komponentnod omfattar alla utvecklingskrav. |
+| Utveckling | En ungefärlig uppskattning på 2-4 timmar för varje komponentnod som täcker alla utvecklingskrav. |
 | Testning av utvecklare | 15 % av utvecklingsarbetet |
 | Uppföljning | 10 % av utvecklingsarbetet |
 | Dokumentation | 15 % av utvecklingsarbetet |
@@ -514,7 +513,7 @@ Följande webbplatsmått ska definieras:
 
 ## Översikt över potentiella verktyg {#overview-of-potential-tools}
 
-Följande lista innehåller information om verktyg som kan användas. Den är avsedd som en introduktion, inte som en omfattande rekommendationslista, och ska definitivt inte hindra dig från att använda andra verktyg som du föredrar.
+Följande lista innehåller information om verktyg som kan användas. Den är avsedd som en introduktion, inte som en omfattande rekommendationslista, och ska inte hindra dig från att använda andra verktyg.
 
 <table>
  <tbody>
@@ -539,10 +538,10 @@ Följande lista innehåller information om verktyg som kan användas. Den är av
   </tr>
   <tr>
    <td>Selen</td>
-   <td><a href="https://docs.seleniumhq.org/">Selen</a> är ett testverktyg för öppen källkod. Testerna körs direkt i webbläsaren och emulerar hur användarna arbetar.</td>
+   <td><a href="https://www.selenium.dev/">Selen</a> är ett testverktyg för öppen källkod. Testerna körs direkt i webbläsaren och emulerar hur användarna arbetar.</td>
   </tr>
   <tr>
-   <td>Microsoft Project</td>
+   <td>Microsoft® Project</td>
    <td>Ett vanligt projekthanteringsverktyg.</td>
   </tr>
   <tr>
@@ -555,7 +554,7 @@ Följande lista innehåller information om verktyg som kan användas. Den är av
   </tr>
   <tr>
    <td>Eclipse</td>
-   <td><p>Eclipse är en IDE med öppen källkod, som består av olika projekt. Dessa fokuserar på att bygga en öppen utvecklingsplattform som består av utbyggbara ramverk, verktyg och miljöer för att bygga, driftsätta och hantera programvara under hela livscykeln.</p> <p>Se <a href="/help/sites-developing/howto-projects-eclipse.md">Utveckla AEM projekt med Eclipse</a> för mer information.</p> </td>
+   <td><p>Eclipse är en IDE med öppen källkod, som består av olika projekt. Det handlar om att bygga en öppen utvecklingsplattform som består av flexibla ramverk, verktyg och runtimes för att bygga, driftsätta och hantera programvara under hela livscykeln.</p> <p>Se <a href="/help/sites-developing/howto-projects-eclipse.md">Utveckla AEM projekt med Eclipse</a> för mer information.</p> </td>
   </tr>
   <tr>
    <td>IntelliJ</td>
