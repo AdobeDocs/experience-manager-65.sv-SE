@@ -4,18 +4,18 @@ product: adobe experience manager
 sub-product: forms
 solution: Experience Manager, Experience Manager Forms
 audience: end-user
-user-guide-title: Användarhandbok om Adobe Experience Manager 6.5-formulär
-breadcrumb-title: Användarhandbok om formulär
+user-guide-title: Användarhandbok om Adobe Experience Manager 6.5 Forms
+breadcrumb-title: Användarhandbok om Forms
 user-guide-description: Skapa, hantera, publicera och uppdatera digitala formulär.
 role: User
 source-git-commit: 071d7bf2e7c9ceb3328e77262cc45ed3f2e303cc
 workflow-type: tm+mt
 source-wordcount: '3846'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
-# Användarhandbok om Adobe Experience Manager 6.5-formulär {#forms}
+# Användarhandbok om Adobe Experience Manager 6.5 Forms {#forms}
 
 + [AEM 6.5 Forms Guide](home.md)
 + Versionsinformation {#release-notes-new-features}
@@ -374,11 +374,11 @@ ht-degree: 1%
 + Forms Designer {#use-forms-designer}
    + [Hjälp för Forms Designer](using/forms-designer-help.md)
    + [Använda Designer](https://www.adobe.com/go/learn_aemforms_designer_65)
-   + [Självstudier för att komma igång med Designer ](https://www.adobe.com/go/learn_aemforms_designer_quick_start_65)
-   + [Exempel för Designer ](https://www.adobe.com/go/learn_aemforms_designer_samples_65)
-   + [Skriptgrunder för Designer ](https://www.adobe.com/go/learn_aemforms_scriptingBasics_65)
-   + [Skriptreferens för Designer ](https://www.adobe.com/go/learn_aemforms_scriptingReference_65)
-   + [FormCalc-referens för Designer ](https://www.adobe.com/go/learn_aemforms_formCalc_65)
+   + [Snabbstart för Designer Tutorials](https://www.adobe.com/go/learn_aemforms_designer_quick_start_65)
+   + [Exempel för Designer](https://www.adobe.com/go/learn_aemforms_designer_samples_65)
+   + [Skriptgrunder för Designer](https://www.adobe.com/go/learn_aemforms_scriptingBasics_65)
+   + [Skriptreferens för Designer](https://www.adobe.com/go/learn_aemforms_scriptingReference_65)
+   + [FormCalc-referens för Designer](https://www.adobe.com/go/learn_aemforms_formCalc_65)
    + [Använda klottrar i HTML5-formulär](using/scribble-signature.md)
    + [Ändra sidans nollinnehåll i Designer](using/changing-page-zero-content-designer.md)
 + Anpassa AEM Forms {#customize-aem-forms}
@@ -587,7 +587,7 @@ ht-degree: 1%
    + [API:er för Form Bridge för HTML5-formulär](using/form-bridge-apis.md)
    + [API-referens för JavaScript-bibliotek för Adaptiv Forms](https://helpx.adobe.com/experience-manager/6-5/forms/javascript-api/index.html)
    + [Assembler Service och DDX Reference](https://www.adobe.com/go/learn_aemforms_ddxRef_65)
-   + [Workbench Hjälp](https://www.adobe.com/go/learn_aemforms_workbench_65)
+   + [Workbench - hjälp](https://www.adobe.com/go/learn_aemforms_workbench_65)
    + Programmera med AEM Forms i JEE {#programming-aem-forms-jee}
       + Introduktion till programmering med AEM Forms på JEE {#introduction-programming-aem-forms-jee}
          + [Introduktion till Java API QuickStart](developing/introducing-java-api-soap-quick.md)

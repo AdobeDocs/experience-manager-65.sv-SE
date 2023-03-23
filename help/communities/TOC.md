@@ -2,8 +2,8 @@
 cloud: Experience Cloud
 product: adobe experience manager
 audience: end-user
-user-guide-title: Användarhandbok om AEM 6.5-communites
-breadcrumb-title: Användarhandbok om communities
+user-guide-title: Användarhandbok om AEM 6.5 Communities
+breadcrumb-title: Användarhandbok om Communities
 user-guide-description: Skapa onlineupplevelser som forum, användargrupper, utbildningsresurser och andra sociala funktioner.
 feature: Communities
 role: User
@@ -17,7 +17,7 @@ ht-degree: 5%
 
 # Adobe Experience Manager 6.5 Communities Guide {#communities}
 
-+ [Användarhandbok om communities](home.md)
++ [Användarhandbok om Communities](home.md)
 + Introduktion till AEM Communities {#introduction}
    + [Communities Sites](administer-landing.md)
    + [AEM Communities - översikt](overview.md)
