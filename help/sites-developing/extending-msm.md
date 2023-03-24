@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 6128c91a-4173-42b4-926f-bbbb2b54ba5b
 docset: aem65
 exl-id: bba64ce6-8b74-4be1-bf14-cfdf3b9b60e1
-source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
+source-git-commit: 0caaa4b5de519567df4a527f62a2583abd7ed937
 workflow-type: tm+mt
-source-wordcount: '2582'
+source-wordcount: '2593'
 ht-degree: 0%
 
 ---
@@ -194,13 +194,14 @@ Så här skapar du en ny utrullningskonfiguration:
    >[!NOTE]
    >Det här är projektets anpassade version av:
    >`/libs/msm/wcm/rolloutconfigs`
-   >Måste skapas om detta är din första konfiguration.
+   >Om det här är din första konfiguration `/libs` gren måste användas som mall för att skapa den nya grenen under `/apps`.
 
    >[!NOTE]
    >
    >Du får inte ändra något i sökvägen /libs.
    >Detta beror på att innehållet i /libs skrivs över nästa gång du uppgraderar din instans (och kan mycket väl skrivas över när du använder en snabbkorrigering eller ett funktionspaket).
    >Den rekommenderade metoden för konfiguration och andra ändringar är:
+   >
    >* Återskapa önskat objekt (t.ex. som det finns i /libs) under /apps
    >* Gör ändringar i /apps
 
@@ -675,11 +676,11 @@ Då måste du se till att:
 
 * E-postadress:
 
-   * är utesluten från de utrullade egenskaperna, se [Exkludera egenskaper och nodtyper från synkronisering](/help/sites-administering/msm-sync.md#excluding-properties-and-node-types-from-synchronization).
+* är utesluten från de utrullade egenskaperna, se [Exkludera egenskaper och nodtyper från synkronisering](/help/sites-administering/msm-sync.md#excluding-properties-and-node-types-from-synchronization).
 
 * Visuell huvudstil:
 
-   * Se till att du inte får redigera den här egenskapen i det beröringsaktiverade användargränssnittet om inte arvet avbryts, och att du sedan kan återinstallera arvet; Detta styrs genom att klicka på kedjelänkarna/brutna kedjor som växlar för att ange anslutningsstatus.
+* Se till att du inte får redigera den här egenskapen i det beröringsaktiverade användargränssnittet om inte arvet avbryts, och att du sedan kan återinstallera arvet; Detta styrs genom att klicka på kedjelänkarna/brutna kedjor som växlar för att ange anslutningsstatus.
 
 Anger om en sidegenskap ska rullas ut och därför styrs arvet av egenskapen dialog, under förutsättning att arvet avbryts/återställs vid redigering:
 
@@ -689,10 +690,10 @@ Anger om en sidegenskap ska rullas ut och därför styrs arvet av egenskapen dia
    * skapar kedjelänkssymbolen i dialogrutan
    * tillåter bara redigering om arv avbryts (kedjelänken bryts)
    * gäller endast den första underordnade nivån för resursen
-   * **Typ**: `String`
+      * **Typ**: `String`
 
-   * **Värde**: innehåller namnet på den aktuella egendomen (och är jämförbart med värdet på egendomen) `name`; se
-      `/libs/foundation/components/page/cq:dialog/content/items/tabs/items/basic/items/column/items/title/items/title`
+      * **Värde**: innehåller namnet på den aktuella egendomen (och är jämförbart med värdet på egendomen) `name`; se
+         `/libs/foundation/components/page/cq:dialog/content/items/tabs/items/basic/items/column/items/title/items/title`
 
 När `cq-msm-lockable` har definierats, om kedjan bryts/stängs kommer den att interagera med MSM på följande sätt:
 
