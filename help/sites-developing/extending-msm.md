@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 6128c91a-4173-42b4-926f-bbbb2b54ba5b
 docset: aem65
 exl-id: bba64ce6-8b74-4be1-bf14-cfdf3b9b60e1
-source-git-commit: 0caaa4b5de519567df4a527f62a2583abd7ed937
+source-git-commit: 7bed185be14938f1165d56f9b758961ae0f5c479
 workflow-type: tm+mt
-source-wordcount: '2593'
+source-wordcount: '2579'
 ht-degree: 0%
 
 ---
@@ -45,8 +45,8 @@ På den här sidan kan du utöka funktionerna i Multi Site Manager:
 
 Hantering av flera platser består av följande paket:
 
-* [com.day.cq.wcm.msm.api](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/msm/api/package-frame.html)
-* [com.day.cq.wcm.msm.Commons](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/msm/commons/package-frame.html)
+* [com.day.cq.wcm.msm.api](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/msm/api/package-frame.html)
+* [com.day.cq.wcm.msm.Commons](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/msm/commons/package-frame.html)
 
 De huvudsakliga MSM API-objekten interagerar på följande sätt (se även [Villkor](/help/sites-administering/msm.md#terms-used)):
 
@@ -105,8 +105,8 @@ De huvudsakliga MSM API-objekten interagerar på följande sätt (se även [Vill
 
 Skapa anpassade synkroniseringsåtgärder som du kan använda med dina utrullningskonfigurationer. Skapa en synkroniseringsåtgärd när [installerade åtgärder](/help/sites-administering/msm-sync.md#installed-synchronization-actions) uppfyller inte dina specifika programkrav. Skapa då två klasser:
 
-* Ett genomförande av [ `com.day.cq.wcm.msm.api.LiveAction`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/msm/api/LiveAction.html) gränssnitt som utför åtgärden.
-* En OSGI-komponent som implementerar [ `com.day.cq.wcm.msm.api.LiveActionFactory`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/msm/api/LiveActionFactory.html) -gränssnittet och skapar instanser av `LiveAction` klassen.
+* Ett genomförande av [ `com.day.cq.wcm.msm.api.LiveAction`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/msm/api/LiveAction.html) gränssnitt som utför åtgärden.
+* En OSGI-komponent som implementerar [ `com.day.cq.wcm.msm.api.LiveActionFactory`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/msm/api/LiveActionFactory.html) -gränssnittet och skapar instanser av `LiveAction` klassen.
 
 The `LiveActionFactory` skapar instanser av `LiveAction` klass för en viss konfiguration:
 
@@ -129,7 +129,7 @@ Använd `LiveAction` konfigurationsnoden i databasen för att lagra information 
 
 Till exempel en `LiveAction` måste lagra namnet på den som skapat ritningen. En egenskap för konfigurationsnoden innehåller egenskapsnamnet för den planeringssida som lagrar informationen. Vid körning visas `LiveAction` hämtar egenskapsnamnet från konfigurationen och hämtar sedan egenskapsvärdet.
 
-Parametern för ` [LiveActionFactory](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/msm/api/LiveActionFactory.html).createAction` metoden är en `Resource` -objekt. Detta `Resource` objektet representerar `cq:LiveSyncAction` nod för denna live-åtgärd i utrullningskonfigurationen, se [Skapa en utrullningskonfiguration](/help/sites-administering/msm-sync.md#creating-a-rollout-configuration). Som vanligt när du använder en konfigurationsnod bör du anpassa den till en `ValueMap` objekt:
+Parametern för [`LiveActionFactory.createAction`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/msm/api/LiveActionFactory.html) metoden är en `Resource` -objekt. Detta `Resource` objektet representerar `cq:LiveSyncAction` nod för denna live-åtgärd i utrullningskonfigurationen, se [Skapa en utrullningskonfiguration](/help/sites-administering/msm-sync.md#creating-a-rollout-configuration). Som vanligt när du använder en konfigurationsnod bör du anpassa den till en `ValueMap` objekt:
 
 ```java
 public LiveAction createAction(Resource resource) throws WCMException {
@@ -147,9 +147,9 @@ public LiveAction createAction(Resource resource) throws WCMException {
 
 Följande objekt anges som parametrar för `execute` metoden `LiveAction` objekt:
 
-* A [ `Resource`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/Resource.html) som representerar källan till Live Copy.
+* A [ `Resource`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/org/apache/sling/api/resource/Resource.html) som representerar källan till Live Copy.
 * A `Resource` som representerar målet för Live Copy.
-* The [ `LiveRelationship`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/msm/api/LiveRelationship.html) objekt för live-kopian.
+* The [ `LiveRelationship`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/msm/api/LiveRelationship.html) objekt för live-kopian.
 * The `autoSave` värdet anger om `LiveAction` bör spara ändringar som görs i databasen.
 
 * Återställningsvärdet anger återställningsläget för utrullning.
@@ -166,7 +166,7 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
 
 >[!NOTE]
 >
->The `Resource` argument kan `null` eller `Resources` objekt som inte anpassar sig till `Node` objekt, som [ `NonExistingResource`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/NonExistingResource.html) objekt.
+>The `Resource` argument kan `null` eller `Resources` objekt som inte anpassar sig till `Node` objekt, som [ `NonExistingResource`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/org/apache/sling/api/resource/NonExistingResource.html) objekt.
 
 ## Skapa en ny utrullningskonfiguration {#creating-a-new-rollout-configuration}
 
@@ -198,12 +198,12 @@ Så här skapar du en ny utrullningskonfiguration:
 
    >[!NOTE]
    >
-   >Du får inte ändra något i sökvägen /libs.
-   >Detta beror på att innehållet i /libs skrivs över nästa gång du uppgraderar din instans (och kan mycket väl skrivas över när du använder en snabbkorrigering eller ett funktionspaket).
+   >Du får inte ändra något i `/libs` bana.
+   >Detta beror på innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan mycket väl skrivas över när du använder en snabbkorrigering eller ett funktionspaket).
    >Den rekommenderade metoden för konfiguration och andra ändringar är:
    >
-   >* Återskapa önskat objekt (t.ex. som det finns i /libs) under /apps
-   >* Gör ändringar i /apps
+   >* Återskapa önskat objekt (d.v.s. som det finns i `/libs`) under `/apps`
+   >* Gör ändringar i `/apps`
 
 
 1. Under **Skapa** en nod med följande egenskaper:
