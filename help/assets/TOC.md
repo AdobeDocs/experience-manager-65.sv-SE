@@ -6,9 +6,9 @@ audience: end-user
 user-guide-title: Användarhandbok om resurser
 breadcrumb-title: Användarhandbok om resurser
 user-guide-description: Skapa, hantera, bearbeta och distribuera digitala resurser.
-source-git-commit: 62d921df1b03520b53ceefa072530bf0214df30a
+source-git-commit: 0c6c269e9f0cbdcc0c5e3b925ef09b9923cbb2b3
 workflow-type: tm+mt
-source-wordcount: '681'
+source-wordcount: '683'
 ht-degree: 16%
 
 ---
@@ -158,6 +158,7 @@ ht-degree: 16%
 + Hantera resurser {#managing}
    + [Hantera digitala resurser](manage-assets.md)
    + [Hantera samlingar](manage-collections.md)
+   + [Resursväljare](asset-selector.md)
    + [Aktivera dubblettidentifiering](duplicate-detection.md)
    + [Ordna digitala resurser](organize-assets.md)
    + [Hantera videoresurser](managing-video-assets.md)
