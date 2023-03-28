@@ -2,7 +2,7 @@
 title: Kom igång med AEM Headless
 description: I den här delen av AEM Headless Developer Journey kan du läsa om AEM Headless-krav.
 exl-id: a94794a4-bf8b-4f3b-a761-3f02feedd5c0
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: 40e81b63e28a75c769507654d7f1d75da82f0bd6
 workflow-type: tm+mt
 source-wordcount: '3031'
 ht-degree: 0%
@@ -127,7 +127,7 @@ Det finns ett antal krav innan du börjar AEM headless-projektet.
 * Utvecklingserfarenhet som skapar SPA med React- eller Angular-ramverk
 * Grundläggande AEM att skapa innehållsfragment och använda redigeraren
 
-### Verktyg {#tools}
+### verktyg {#tools}
 
 * Sandlådeåtkomst för testning av driftsättning av ditt projekt
 * Lokal utvecklingsinstans för datamodellering och -testning
@@ -289,5 +289,5 @@ Vi rekommenderar att du går vidare till nästa del av den headless-utvecklingsr
 * [GraphQL tekniska dokumentation](https://graphql.org) - GraphQL-definitionen (extern länk)
 * [GraphQL API](/help/assets/content-fragments/graphql-api-content-fragments.md) - Teknisk dokumentation som förklarar hur man skapar förfrågningar om åtkomst och leverans av innehållsfragment
 * [Resurser REST API](/help/assets/assets-api-content-fragments.md) - Teknisk dokumentation som förklarar hur du skapar och ändrar innehållsfragment (och andra resurser)
-* [Beständiga frågor](/help/assets/content-fragments/graphql-api-content-fragments.md#persisted-queries-caching) - Teknisk dokumentation om beständiga frågor i AEM
+* [Beständiga frågor](/help/assets/content-fragments/persisted-queries.md) - Teknisk dokumentation om beständiga frågor i AEM
 * [Headless and Headless in AEM](/help/sites-developing/headful-headless.md) - En fullständig beskrivning av den headless integration som finns i AEM

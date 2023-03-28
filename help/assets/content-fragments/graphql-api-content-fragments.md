@@ -3,9 +3,9 @@ title: AEM GraphQL API för användning med innehållsfragment
 description: Lär dig hur du använder innehållsfragment i Adobe Experience Manager (AEM) med AEM GraphQL API för leverans av headless-innehåll.
 feature: Content Fragments,GraphQL API
 exl-id: beae1f1f-0a76-4186-9e58-9cab8de4236d
-source-git-commit: 42ef4694a3301ae1cd34766ce4c19f4b0e2f2c38
+source-git-commit: f6bf99e58fabcb1fb51d8724e1442784811c47d7
 workflow-type: tm+mt
-source-wordcount: '3695'
+source-wordcount: '3696'
 ht-degree: 0%
 
 ---
@@ -109,9 +109,10 @@ The [Beständiga frågor](/help/assets/content-fragments/persisted-queries.md) �
 * de cachelagras
 * de hanteras centralt av AEM
 
+<!-- is this fully accurate? -->
 >[!NOTE]
 >
->Vanligtvis finns det ingen dispatcher/CDN på författaren, så det är ingen fördel att använda beständiga frågor där. förutom att testa dem.
+>Vanligtvis finns det ingen dispatcher/CDN på författaren, så det blir ingen prestandavinst att använda beständiga frågor där. förutom att testa dem.
 
 GraphQL-frågor som använder förfrågningar om POST rekommenderas inte eftersom de inte cachelagras, så i en standardinstans är Dispatcher konfigurerad att blockera sådana frågor.
 
@@ -298,7 +299,7 @@ Om du till exempel:
 
 >[!NOTE]
 >
->Detta är viktigt att notera om du vill göra satsvisa uppdateringar på modeller för innehållsfragment via REST-API:t, eller på annat sätt.
+>Detta är viktigt att observera om du vill göra satsvisa uppdateringar på modeller för innehållsfragment via REST-API:t, eller på annat sätt.
 
 Schemat hanteras via samma slutpunkt som GraphQL-frågorna, där klienthanteraren hanterar det faktum att schemat anropas med tillägget `GQLschema`. Du kan till exempel utföra en enkel `GET` begäran på `/content/cq:graphql/global/endpoint.GQLschema` resulterar i utdata från schemat med innehållstypen: `text/x-graphql-schema;charset=iso-8859-1`.
 
@@ -312,7 +313,7 @@ När innehållsfragment är kapslade kan det hända att en överordnad Content F
 
 När detta inträffar genererar AEM en *ofullständig* Schema för den överordnade innehållsfragmentmodellen. Det innebär att fragmentreferensen, som är beroende av den opublicerade modellen, tas bort från schemat.
 
-## fält {#fields}
+## Fält {#fields}
 
 Inom schemat finns det enskilda fält av två baskategorier:
 
@@ -335,7 +336,7 @@ GraphQL för AEM har stöd för en lista med typer. Alla Content Fragment Model-
 | Enkelradig text | String, [Sträng] |  Används för enkla strängar som författarnamn, platsnamn osv. |
 | Flerradstext | Sträng |  Används för att skriva ut text, t.ex. brödtexten i en artikel |
 | Siffra |  Float, [Float] | Används för att visa flyttal och reguljära tal |
-| Boolesk |  Boolesk |  Används för att visa kryssrutor → enkla sant/falskt-satser |
+| Boolean |  Boolean |  Används för att visa kryssrutor → enkla sant/falskt-satser |
 | Datum och tid | Kalender |  Används för att visa datum och tid i ett ISO 8086-format. Beroende på vilken typ som valts finns det tre aromer som kan användas i AEM GraphQL: `onlyDate`, `onlyTime`, `dateTime` |
 | Uppräkning |  Sträng |  Används för att visa ett alternativ från en lista med alternativ som definieras när modellen skapas |
 |  Taggar |  [Sträng] |  Används för att visa en lista över strängar som representerar taggar som används i AEM |
@@ -635,231 +636,6 @@ Den grundläggande funktionen för frågor med GraphQL för AEM följer GraphQL 
 
    * Om den begärda varianten inte finns i ett kapslat fragment, kommer **Överordnad** kommer att returneras.
 
-<!--
-## Persisted Queries (Caching) {#persisted-queries-caching}
-
-After preparing a query with a POST request, it can be executed with a GET request that can be cached by HTTP caches or a CDN.
-
-This is required as POST queries are usually not cached, and if using GET with the query as a parameter there is a significant risk of the parameter becoming too large for HTTP services and intermediates.
-
-Persisted queries must always use the endpoint related to the [appropriate Sites configuration](#graphql-aem-endpoint); so they can use either, or both:
-
-* The Global configuration and endpoint
-  The query has access to all Content Fragment Models.
-* Specific Sites configuration(s) and endpoint(s)
-  Creating a persisted query for a specific Sites configuration requires a corresponding Sites-configuration-specific endpoint (to provide access to the related Content Fragment Models). 
-  For example, to create a persisted query specifically for the WKND Sites configuration, a corresponding WKND-specific Sites configuration, and a WKND-specific endpoint must be created in advance.
-
->[!NOTE]
->
->See [Enable Content Fragment Functionality in Configuration Browser](/help/assets/content-fragments/content-fragments-configuration-browser.md#enable-content-fragment-functionality-in-configuration-browser) for more details.
->
->The **GraphQL Persistence Queries** need to be enabled, for the appropriate Sites configuration. 
-
-For example, if there is a particular query called `my-query`, which uses a model `my-model` from the Sites configuration `my-conf`:
-
-* You can create a query using the `my-conf` specific endpoint, and then the query will be saved as following: 
-`/conf/my-conf/settings/graphql/persistentQueries/my-query`
-* You can create the same query using `global` endpoint, but then the query will be saved as following:
-`/conf/global/settings/graphql/persistentQueries/my-query`
-
->[!NOTE]
->
->These are two different queries - saved under different paths. 
->
->They just happen to use the same model - but via different endpoints.
-
-
-Here are the steps required to persist a given query:
-
-1. Prepare the query by PUTing it to the new endpoint URL `/graphql/persist.json/<config>/<persisted-label>`.
-
-   For example, create a persisted query:
-
-   ```xml
-   $ curl -X PUT \
-       -H 'authorization: Basic YWRtaW46YWRtaW4=' \
-       -H "Content-Type: application/json" \
-       "http://localhost:4502/graphql/persist.json/wknd/plain-article-query" \
-       -d \
-   '{
-     articleList {
-       items{
-           _path
-           author
-           main {
-               json
-           }
-       }
-     }
-   }'
-   ```
-
-1. At this point, check the response.
-
-   For example, check for success:
-
-     ```xml
-     {
-       "action": "create",
-       "configurationName": "wknd",
-       "name": "plain-article-query",
-       "shortPath": "/wknd/plain-article-query",
-       "path": "/conf/wknd/settings/graphql/persistentQueries/plain-article-query"
-     }
-     ```
-
-1. You can then replay the persisted query by GETing the URL `/graphql/execute.json/<shortPath>`.
-
-   For example, use the persisted query:
-
-   ```xml
-   $ curl -X GET \
-       http://localhost:4502/graphql/execute.json/wknd/plain-article-query
-   ```
-
-1. Update a persisted query by POSTing to an already existing query path.
-
-   For example, use the persisted query:
-
-   ```xml
-   $ curl -X POST \
-       -H 'authorization: Basic YWRtaW46YWRtaW4=' \
-       -H "Content-Type: application/json" \
-       "http://localhost:4502/graphql/persist.json/wknd/plain-article-query" \
-       -d \
-   '{
-     articleList {
-       items{
-           _path
-           author
-           main {
-               json
-           }
-         referencearticle {
-           _path
-         }
-       }
-     }
-   }'
-   ```
-
-1. Create a wrapped plain query.
-
-   For example:
-
-   ```xml
-   $ curl -X PUT \
-       -H 'authorization: Basic YWRtaW46YWRtaW4=' \
-       -H "Content-Type: application/json" \
-       "http://localhost:4502/graphql/persist.json/wknd/plain-article-query-wrapped" \
-       -d \
-   '{ "query": "{articleList { items { _path author main { json } referencearticle { _path } } } }"}'
-   ```
-
-1. Create a wrapped plain query with cache control.
-
-   For example:
-
-   ```xml
-   $ curl -X PUT \
-       -H 'authorization: Basic YWRtaW46YWRtaW4=' \
-       -H "Content-Type: application/json" \
-       "http://localhost:4502/graphql/persist.json/wknd/plain-article-query-max-age" \
-       -d \
-   '{ "query": "{articleList { items { _path author main { json } referencearticle { _path } } } }", "cache-control": { "max-age": 300 }}'
-   ```
-
-1. Create a persisted query with parameters:
-
-   For example:
-
-   ```xml
-   $ curl -X PUT \
-       -H 'authorization: Basic YWRtaW46YWRtaW4=' \
-       -H "Content-Type: application/json" \
-       "http://localhost:4502/graphql/persist.json/wknd/plain-article-query-parameters" \
-       -d \
-   'query GetAsGraphqlModelTestByPath($apath: String!, $withReference: Boolean = true) {
-     articleByPath(_path: $apath) {
-       item {
-         _path
-           author
-           main {
-           plaintext
-           }
-           referencearticle @include(if: $withReference) {
-           _path
-           }
-         }
-       }
-     }'
-   ```
-
-1. Executing a query with parameters.
-
-   For example:
-
-   ```xml
-   $ curl -X POST \
-       -H 'authorization: Basic YWRtaW46YWRtaW4=' \
-       -H "Content-Type: application/json" \
-       "http://localhost:4502/graphql/execute.json/wknd/plain-article-query-parameters;apath=%2fcontent2fdam2fwknd2fen2fmagazine2falaska-adventure2falaskan-adventures;withReference=false"
-
-   $ curl -X GET \
-       "http://localhost:4502/graphql/execute.json/wknd/plain-article-query-parameters;apath=%2fcontent2fdam2fwknd2fen2fmagazine2falaska-adventure2falaskan-adventures;withReference=false"
-   ```
-
-1. To execute the query on publish, the related persist tree need to replicated
-
-   * Using a POST for replication:
-
-     ```xml
-     $curl -X POST   http://localhost:4502/bin/replicate.json \
-       -H 'authorization: Basic YWRtaW46YWRtaW4=' \
-       -F path=/conf/wknd/settings/graphql/persistentQueries/plain-article-query \
-       -F cmd=activate
-     ```
-
-   * Using a package:
-     1. Create a new package definition.
-     1. Include the configuration (for example, `/conf/wknd/settings/graphql/persistentQueries`).
-     1. Build the package.
-     1. Replicate the package.
-
-   * Using replication/distribution tool.
-     1. Go to the Distribution tool.
-     1. Select tree activation for the configuration (for example, `/conf/wknd/settings/graphql/persistentQueries`).
-
-   * Using a workflow (via workflow launcher configuration):
-     1. Define a workflow launcher rule for executing a workflow model that would replicate the configuration on different events (for example, create, modify, amongst others).
-
-1. Once the query configuration is on publish, the same principles apply, just using the publish endpoint.
-
-   >[!NOTE]
-   >
-   >For anonymous access the system assumes that the ACL allows "everyone" to have access to the query configuration.
-   >
-   >If that is not the case it will not be able to execute.
-
-   >[!NOTE]
-   >
-   >Any semicolons (";") in the URLs need to be encoded.
-   >
-   >For example, as in the request to Execute a persisted query:
-   >
-   >```xml
-   >curl -X GET \ "http://localhost:4502/graphql/execute.json/wknd/plain-article-query-parameters%3bapath=%2fcontent2fdam2fwknd2fen2fmagazine2falaska-adventure2falaskan-adventures;withReference=false"
-   >```
-
-## Querying the GraphQL endpoint from an External Website {#query-graphql-endpoint-from-external-website}
-
-To access the GraphQL endpoint from an external website you need to configure the:
-
-* [CORS Filter](#cors-filter)
-* [Referrer Filter](#referrer-filter)
--->
-
 ### CORS-filter {#cors-filter}
 
 >[!NOTE]
@@ -958,18 +734,6 @@ Om du till exempel vill ge åtkomst för begäranden med referenten `my.domain` 
 ## Autentisering {#authentication}
 
 Se [Autentisering för fjärrfrågor AEM GraphQL-frågor om innehållsfragment](/help/assets/content-fragments/graphql-authentication-content-fragments.md).
-
-<!-- to be addressed later -->
-
-<!--
-## Sorting {#sorting}
--->
-
-<!-- to be addressed later -->
-
-<!--
-## Paging {#paging}
--->
 
 ## Vanliga frågor {#faqs}
 

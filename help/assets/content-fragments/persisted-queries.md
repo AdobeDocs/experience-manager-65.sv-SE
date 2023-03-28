@@ -1,16 +1,16 @@
 ---
 title: Beständiga GraphQL-frågor
-description: Lär dig hur du bibehåller GraphQL-frågor i Adobe Experience Manager för att optimera prestandan. Beständiga frågor kan begäras av klientprogram med HTTP GET-metoden och svaret kan cachas i dispatcher- och CDN-lagren, vilket i slutänden förbättrar klientprogrammens prestanda.
-source-git-commit: 9369f7cb9c507bbd7d7761440ceef907552aeb7d
+description: Lär dig hur du bibehåller GraphQL-frågor i Adobe Experience Manager för att optimera prestandan. Beständiga frågor kan begäras av klientprogram med HTTP GET-metoden och svaret kan cachas i Dispatcher- och CDN-lagren, vilket i slutänden förbättrar klientprogrammens prestanda.
+source-git-commit: a717382fa4aaf637c5b1bf3ce4aca3f90a059458
 workflow-type: tm+mt
-source-wordcount: '1088'
+source-wordcount: '1428'
 ht-degree: 1%
 
 ---
 
 # Beständiga GraphQL-frågor {#persisted-queries-caching}
 
-Beständiga frågor är GraphQL-frågor som skapas och lagras på den as a Cloud Service Adobe Experience Manager-servern (AEM). De kan begäras med en GET-begäran från klientprogram. Svaret på en GET-begäran kan cachas i skikten dispatcher och CDN, vilket i slutänden förbättrar prestanda för det begärande klientprogrammet. Detta skiljer sig från vanliga GraphQL-frågor, som körs med förfrågningar från POSTER där svaret inte enkelt kan cachas.
+Beständiga frågor är GraphQL-frågor som skapas och lagras på den as a Cloud Service Adobe Experience Manager-servern (AEM). De kan begäras med en GET-begäran från klientprogram. Svaret på en begäran om GET kan cachas i skikten Dispatcher och Content Delivery Network (CDN), vilket i slutänden förbättrar prestanda för det begärande klientprogrammet. Detta skiljer sig från vanliga GraphQL-frågor, som körs med förfrågningar från POSTER där svaret inte enkelt kan cachas.
 
 <!--
 >[!NOTE]
@@ -18,7 +18,7 @@ Beständiga frågor är GraphQL-frågor som skapas och lagras på den as a Cloud
 >Persisted Queries are recommended. See [GraphQL Query Best Practices (Dispatcher)](/help/headless/graphql-api/content-fragments.md#graphql-query-best-practices) for details, and the related Dispatcher configuration.
 -->
 
-The [GraphiQL IDE](/help/assets/content-fragments/graphiql-ide.md) finns i AEM för att du ska kunna utveckla, testa och behålla dina GraphQL-frågor innan [överföra till produktionsmiljön](#transfer-persisted-query-production). För ärenden som behöver anpassas (till exempel när [anpassa cachen](/help/assets/content-fragments/graphiql-ide.md#caching-persisted-queries)) kan du använda API:t, se det exempel som finns i [Så här behåller du en GraphQL-fråga](#how-to-persist-query).
+The [GraphiQL IDE](/help/assets/content-fragments/graphiql-ide.md) finns i AEM för att du ska kunna utveckla, testa och behålla dina GraphQL-frågor innan [överföra till produktionsmiljön](#transfer-persisted-query-production). För ärenden som behöver anpassas (till exempel när [anpassa cachen](/help/assets/content-fragments/graphiql-ide.md#caching-persisted-queries)) kan du använda API:t, se exemplet med cURL i [Så här behåller du en GraphQL-fråga](#how-to-persist-query).
 
 ## Beständiga frågor och slutpunkter {#persisted-queries-and-endpoints}
 
@@ -54,10 +54,10 @@ Vi rekommenderar att du behåller frågor i en AEM redigeringsmiljö först och 
 Det finns olika metoder för beständiga frågor, bland annat:
 
 * GraphiQL IDE - se [Sparar beständiga frågor](/help/assets/content-fragments/graphiql-ide.md#saving-persisted-queries) (föredragen metod)
-* curl - se följande exempel
+* cURL - se följande exempel
 * Andra verktyg, inklusive [Postman](https://www.postman.com/)
 
-GraphiQL IDE är **standard** metod för beständiga frågor. Bevara en given fråga med **kurva** kommandoradsverktyg:
+GraphiQL IDE är **standard** metod för beständiga frågor. Bevara en given fråga med **cURL** kommandoradsverktyg:
 
 1. Förbered frågan genom att PUTing den till den nya slutpunkts-URL:en `/graphql/persist.json/<config>/<persisted-label>`.
 
@@ -209,7 +209,7 @@ Plats `PERSISTENT_PATH` är en förkortad sökväg där den beständiga frågan 
 
    Till exempel:
 
-   ```xml
+   ```bash
    $ curl -X GET \
        "https://localhost:4502/graphql/execute.json/wknd/plain-article-query-parameters%3Bapath%3D%2Fcontent%2Fdam%2Fwknd%2Fen%2Fmagazine%2Falaska-adventure%2Falaskan-adventures%3BwithReference%3Dfalse
    ```
@@ -257,46 +257,99 @@ Den här frågan kan sparas under en sökväg `wknd/adventures-by-activity`. Så
 
 Observera att `%3B` är UTF-8-kodning för `;` och `%3D` är kodningen för `=`. Frågevariablerna och eventuella specialtecken måste [korrekt kodad](#encoding-query-url) för den beständiga frågan som ska köras.
 
+## Cachelagra beständiga frågor {#caching-persisted-queries}
+
+Beständiga frågor rekommenderas eftersom de kan cachelagras på [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=en) och CDN-lager (Content Delivery Network), vilket i slutänden förbättrar prestandan för det begärande klientprogrammet.
+
+Som standard blir cachen ogiltig AEM baserat på en TTL-definition (Time To Live). Dessa TTL:er kan definieras med följande parametrar. Dessa parametrar kan nås på olika sätt, med variationer i namnen beroende på vilken mekanism som används:
+
+| Cachetyp | [HTTP-huvud](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control)  | cURL  | OSGi-konfiguration  |
+|--- |--- |--- |--- |--- |
+| Webbläsare | `max-age` | `cache-control : max-age` | `cacheControlMaxAge` |
+| CDN | `s-maxage` | `surrogate-control : max-age` | `surrogateControlMaxAge` |
+| CDN | `stale-while-revalidate` | `surrogate-control : stale-while-revalidate ` | `surrogateControlStaleWhileRevalidate` |
+| CDN | `stale-if-error` | `surrogate-control : stale-if-error` | `surrogateControlStaleIfError` |
+
+### Författarinstanser {#author-instances}
+
+För författarinstanser är standardvärdena:
+
+* `max-age`  : 60
+* `s-maxage` : 60
+* `stale-while-revalidate` : 86400
+* `stale-if-error` : 86400
+
+De var:
+
+* kan inte skrivas över med en OSGi-konfiguration
+* kan skrivas över av en begäran som definierar inställningar för HTTP-huvudet med cURL; bör innehålla lämpliga inställningar för `cache-control` och/eller `surrogate-control`; finns i [Hantera cache på nivån för beständig fråga](#cache-persisted-query-level)
+
+<!-- CQDOC-20186 -->
+<!-- following entry is only when the GraphiQL IDE is ready; add cross-reference too -->
 <!--
-## Caching your persisted queries {#caching-persisted-queries}
+* can be overwritten if you specify values in the **Headers** dialog of the [GraphiQL IDE](#http-cache-headers-graphiql-ide)
+-->
 
-Persisted queries are recommended as they can be cached at the dispatcher and CDN layers, ultimately improving the performance of the requesting client application.
+### Publicera instanser {#publish-instances}
 
-By default AEM will invalidate the Content Delivery Network (CDN) cache based on a default Time To Live (TTL). 
+Standardvärdena för publiceringsinstanser är:
 
-This value is set to:
+* `max-age`  : 60
+* `s-maxage` : 7200
+* `stale-while-revalidate` : 86400
+* `stale-if-error` : 86400
 
-* 7200 seconds is the default TTL for the Dispatcher and CDN; also known as *shared caches*
-  * default: s-maxage=7200
-* 60 is the default TTL for the client (for example, a browser)
-  * default: maxage=60
+Dessa kan skrivas över:
 
-If you want to change the TTL for your GraphLQ query, then the query must be either:
+<!-- CQDOC-20186 -->
+<!-- following entry is only when the GraphiQL IDE is ready -->
+<!--
+* [from the GraphQL IDE](#http-cache-headers-graphiql-ide)
+-->
 
-* persisted after managing the [HTTP Cache headers - from the GraphQL IDE](#http-cache-headers)
-* persisted using the [API method](#cache-api). 
+* [på den beständiga frågenivån](#cache-persisted-query-level); detta innebär att skicka frågan till AEM med cURL i kommandoradsgränssnittet och att publicera den beständiga frågan.
 
-### Managing HTTP Cache Headers in GraphQL  {#http-cache-headers-graphql}
+* [med en OSGi-konfiguration](#cache-osgi-configration)
+
+<!-- CQDOC-20186 -->
+<!-- keep for future use; check link -->
+<!--
+### Managing HTTP Cache Headers in the GraphiQL IDE {#http-cache-headers-graphiql-ide}
 
 The GraphiQL IDE - see [Saving Persisted Queries](/help/assets/content-fragments/graphiql-ide.md#managing-cache)
+-->
 
-### Managing Cache from the API {#cache-api}
+### Hantera cache på nivån för beständig fråga {#cache-persisted-query-level}
 
-This involves posting the query to AEM using CURL in your command line interface. 
+Detta innebär att skicka frågan till AEM med cURL i kommandoradsgränssnittet.
 
-For an example:
+Ett exempel på metoden PUT (skapa):
 
-```xml
-curl -X PUT \
-    -H 'authorization: Basic YWRtaW46YWRtaW4=' \
-    -H "Content-Type: application/json" \
-    "https://localhost:4502/graphql/persist.json/wknd/plain-article-query-max-age" \
-    -d \
-'{ "query": "{articleList { items { _path author main { json } referencearticle { _path } } } }", "cache-control": { "max-age": 300 }}'
+```bash
+curl -u admin:admin -X PUT \
+--url "http://localhost:4502/graphql/persist.json/wknd/plain-article-query-max-age" \
+--header "Content-Type: application/json" \
+--data '{ "query": "{articleList { items { _path author } } }", "cache-control": { "max-age": 300 }, "surrogate-control": {"max-age":600, "stale-while-revalidate":1000, "stale-if-error":1000} }'
 ```
 
-The `cache-control` can be set at the creation time (PUT) or later on (for example, via a POST request for instance). The cache-control is optional when creating the persisted query, as AEM can provide the default value. See [How to persist a GraphQL query](#how-to-persist-query), for an example of persisting a query using curl.
--->
+Ett exempel på metoden POST (update):
+
+```bash
+curl -u admin:admin -X POST \
+--url "http://localhost:4502/graphql/persist.json/wknd/plain-article-query-max-age" \
+--header "Content-Type: application/json" \
+--data '{ "query": "{articleList { items { _path author } } }", "cache-control": { "max-age": 300 }, "surrogate-control": {"max-age":600, "stale-while-revalidate":1000, "stale-if-error":1000} }'
+```
+
+The `cache-control` kan anges vid skapande (PUT) eller senare (till exempel via en POST-förfrågan). Cachekontrollen är valfri när du skapar den beständiga frågan, eftersom AEM kan ange standardvärdet. Se [Så här behåller du en GraphQL-fråga](#how-to-persist-query), för ett exempel på beständig fråga med cURL.
+
+### Hantera cache med en OSGi-konfiguration {#cache-osgi-configration}
+
+Om du vill hantera cachen globalt kan du [konfigurera OSGi-inställningarna](/help/sites-deploying/configuring-osgi.md) för **Konfiguration av beständig frågetjänst**. Annars använder den här OSGi-konfigurationen [standardvärden för publiceringsinstanser](#publish-instances).
+
+>[!NOTE]
+>
+>OSGi-konfigurationen passar bara för publiceringsinstanser. Konfigurationen finns på författarinstanser, men ignoreras.
 
 ## Kodning av fråge-URL för användning av ett program {#encoding-query-url}
 
@@ -304,7 +357,7 @@ Om det används av ett program används alla specialtecken som används för att
 
 Till exempel:
 
-```xml
+```bash
 curl -X GET \ "https://localhost:4502/graphql/execute.json/wknd/adventure-by-path%3BadventurePath%3D%2Fcontent%2Fdam%2Fwknd%2Fen%2Fadventures%2Fbali-surf-camp%2Fbali-surf-camp"
 ```
 
