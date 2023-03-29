@@ -4,7 +4,7 @@ description: Lär dig hur du med Content Fragments i Adobe Experience Manager (A
 feature: Content Fragments
 role: User
 exl-id: 0ee883c5-0cea-46b7-a759-600b8ea3bc3e
-source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
+source-git-commit: ad0f0bd8b0c230e002c734adca87da22bfa3a7cd
 workflow-type: tm+mt
 source-wordcount: '1989'
 ht-degree: 3%
@@ -53,7 +53,7 @@ På den här och följande sidor beskrivs hur du skapar, konfigurerar, underhål
 >* [Anpassa och utöka Content Fragments](/help/sites-developing/customizing-content-fragments.md)
 >* [Content Fragments – konfigurera komponenter för återgivning](/help/sites-developing/content-fragments-config-components-rendering.md)
 >* [Stöd för Content Fragments i AEM Assets HTTP API](/help/assets/assets-api-content-fragments.md)
->* [AEM GraphQL API för användning med innehållsfragment](/help/assets/content-fragments/graphql-api-content-fragments.md)
+>* [AEM GraphQL API för användning med innehållsfragment](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md)
 
 
 Antalet kommunikationskanaler ökar årligen. Kanalerna avser vanligen leveransmekanismen, antingen som
@@ -133,7 +133,7 @@ Innehållsfragmenten är:
 
    * The **Innehållsfragment** -komponenten är tillgänglig för sidförfattare. De kan referera till och leverera det nödvändiga innehållsfragmentet i antingen HTML- eller JSON-format.
 
-* Tillgängligt med [AEM GraphQL API](/help/assets/content-fragments/graphql-api-content-fragments.md).
+* Tillgängligt med [AEM GraphQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md).
 
 Innehållsfragment är en innehållsstruktur som:
 

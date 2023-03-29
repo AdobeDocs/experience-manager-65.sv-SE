@@ -2,7 +2,7 @@
 title: Skapa en startguide för en resursmapp utan rubrik
 description: Använd AEM Content Fragment Models för att definiera strukturen för Content Fragments, som är grunden för ditt headless-innehåll.
 exl-id: 8d913056-fcfa-4cdd-b40a-771f13dfd0f4
-source-git-commit: a2ababa9dd9115e963b91a7271d204d287557c40
+source-git-commit: 7355c149500f9e5044c9ff78af208d36ee681f56
 workflow-type: tm+mt
 source-wordcount: '379'
 ht-degree: 0%
@@ -33,16 +33,16 @@ En administratör behöver bara skapa mappar då och då för att ordna innehål
       * Det genereras automatiskt baserat på titeln och justeras enligt [AEM namnkonventioner.](/help/sites-developing/naming-conventions.md)
       * Den kan vid behov justeras.
 
-   ![Skapa mapp](../assets/assets-folder-create.png)
+   ![Skapa mapp](assets/assets-folder-create.png)
 1. Markera mappen som du just skapade och välj sedan **Egenskaper** i verktygsfältet (eller använd `p` [kortkommando.](/help/sites-authoring/keyboard-shortcuts.md))
 1. I **Egenskaper** väljer du **Cloud Services** -fliken.
 1. För **Molnkonfiguration** Välj [som du skapade tidigare.](create-configuration.md)
 
-   ![Konfigurera resursmapp](../assets/assets-folder-configure.png)
+   ![Konfigurera resursmapp](assets/assets-folder-configure.png)
 1. Tryck eller klicka **Spara och stäng**.
 1. Tryck eller klicka **OK** i bekräftelsefönstret.
 
-   ![Bekräftelsefönstret](../assets/assets-folder-confirmation.png)
+   ![Bekräftelsefönstret](assets/assets-folder-confirmation.png)
 
 Du kan skapa ytterligare undermappar i den mapp du just skapade. Undermapparna ärver **Molnkonfiguration** för den överordnade mappen. Detta kan dock åsidosättas om du vill använda modeller från en annan konfiguration.
 

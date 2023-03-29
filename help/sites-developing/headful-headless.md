@@ -2,7 +2,7 @@
 title: Headless and Headless in AEM
 description: AEM kan implementeras i en headful och headless-modell, men valet är inte binärt. AEM erbjuder flexibiliteten att utnyttja fördelarna med båda modellerna i ett och samma projekt.
 exl-id: c9597c78-be05-42ff-84fe-f7451119e83d
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: ac70fb534a95c9eee6f8340d9b8720a607b9f79f
 workflow-type: tm+mt
 source-wordcount: '1011'
 ht-degree: 0%
@@ -21,7 +21,7 @@ AEM kan också användas för att enkelt hantera innehåll, vilket gör att pres
 
 Men det här behöver inte vara ett binärt val. AEM erbjuder oöverträffad flexibilitet och du kan utnyttja fördelarna med båda modellerna i ditt projekt.
 
-![AEM implementeringsmodeller](headless/assets/aem-implementation-models.png)
+![AEM implementeringsmodeller](/help/sites-developing/headless/getting-started/assets/aem-implementation-models.png)
 
 I en modell med headful eller full stack hanteras innehållet i den AEM databasen och AEM komponenter baserade på Java, HTML osv. används för att återge innehållet för användarupplevelsen. I den här modellen skapas innehållet, formateras, presenteras och distribueras allt i AEM.
 
@@ -54,18 +54,18 @@ SPA integrering faller på ett spektrum av fyra nivåer i AEM.
    * Innehållet skapas, hanteras och levereras oberoende av varandra i två olika system.
 * **Nivå 1: Integrering av innehållsfragment**
    * [Innehållsfragment](/help/assets/content-fragments/content-fragments.md) används i AEM för att skapa och hantera begränsat innehåll för SPA.
-   * SPA hämtar det här innehållet via AEM [GraphQL API.](/help/assets/content-fragments/graphql-api-content-fragments.md)
+   * SPA hämtar det här innehållet via AEM [GraphQL API.](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md)
    * Visst innehåll hanteras i AEM och andra i ett externt system.
    * Innehåll kan bara visas i SPA.
 * **Nivå 2: Bädda in SPA i AEM**
    * [Innehållsfragment](/help/assets/content-fragments/content-fragments.md) används i AEM för att skapa och hantera innehåll för SPA.
-   * SPA hämtar det här innehållet via AEM [GraphQL API.](/help/assets/content-fragments/graphql-api-content-fragments.md)
+   * SPA hämtar det här innehållet via AEM [GraphQL API.](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md)
    * Visst innehåll hanteras i AEM och andra i ett externt system.
    * Innehåll kan visas i sitt sammanhang i AEM.
    * Begränsat innehåll kan redigeras i AEM.
 * **Nivå 3: Bädda in och aktivera SPA fullständigt i AEM**
    * [Innehållsfragment](/help/assets/content-fragments/content-fragments.md) används i AEM för att skapa och hantera innehåll för SPA.
-   * SPA hämtar det här innehållet via AEM [GraphQL API.](/help/assets/content-fragments/graphql-api-content-fragments.md)
+   * SPA hämtar det här innehållet via AEM [GraphQL API.](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md)
    * Innehåll kan visas i sitt sammanhang i AEM.
    * Det mesta innehållet kan redigeras i AEM.
 

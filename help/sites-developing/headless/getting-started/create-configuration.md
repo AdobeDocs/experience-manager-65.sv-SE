@@ -2,7 +2,7 @@
 title: Skapa en guide till Headless-konfiguration
 description: Skapa en konfiguration som ett första steg till att komma igång med headless i AEM 6.5.
 exl-id: f1df97a1-164f-4ed4-bb63-34caf35ae27c
-source-git-commit: a2ababa9dd9115e963b91a7271d204d287557c40
+source-git-commit: 7355c149500f9e5044c9ff78af208d36ee681f56
 workflow-type: tm+mt
 source-wordcount: '295'
 ht-degree: 1%
@@ -34,7 +34,7 @@ En administratör behöver bara skapa en konfiguration en gång, eller mycket s�
    * **Modeller för innehållsfragment**
    * **GraphQL Beständiga frågor**
 
-   ![Skapa konfiguration](../assets/create-configuration.png)
+   ![Skapa konfiguration](assets/create-configuration.png)
 
 1. Tryck eller klicka **Skapa**
 

@@ -2,7 +2,7 @@
 title: Skapa innehållsfragmentmodeller Headless Quick Start Guide
 description: Definiera strukturen för det innehåll du skapar och använd AEM headless-funktioner med hjälp av Content Fragment-modeller.
 exl-id: 653e35c9-7b6a-49ae-b55d-af2ec40e257d
-source-git-commit: a2ababa9dd9115e963b91a7271d204d287557c40
+source-git-commit: 7355c149500f9e5044c9ff78af208d36ee681f56
 workflow-type: tm+mt
 source-wordcount: '492'
 ht-degree: 0%
@@ -26,21 +26,21 @@ En informationsarkitekt skulle utföra dessa uppgifter endast sporadiskt när ny
 1. Logga in AEM och välj **Verktyg -> Resurser -> Modeller för innehållsfragment**.
 1. Tryck eller klicka på mappen som skapades när du skapade konfigurationen.
 
-   ![Mappen Modeller](../assets/models-folder.png)
+   ![Mappen Modeller](assets/models-folder.png)
 1. Tryck eller klicka **Skapa**.
 1. Ange en **Modelltitel**, **Taggar** och **Beskrivning**. Du kan också markera/avmarkera **Aktivera modell** för att kontrollera om modellen aktiveras omedelbart när den skapas.
 
-   ![Skapa en modell](../assets/models-create.png)
+   ![Skapa en modell](assets/models-create.png)
 1. I bekräftelsefönstret: tryck eller klicka **Öppna** för att konfigurera modellen.
 
-   ![Bekräftelsefönstret](../assets/models-confirmation.png)
+   ![Bekräftelsefönstret](assets/models-confirmation.png)
 1. Använda **Modellredigerare för innehållsfragment**, bygg din Content Fragment Model genom att dra och släppa fält från **Datatyper** kolumn.
 
-   ![Dra och släppa fält](../assets/models-drag-and-drop.png)
+   ![Dra och släppa fält](assets/models-drag-and-drop.png)
 
 1. När du har placerat ett fält måste du konfigurera dess egenskaper. Redigeraren växlar automatiskt till **Egenskaper** -fliken för det tillagda fältet där du kan ange de obligatoriska fälten.
 
-   ![Konfigurera egenskaper](../assets/models-configure-properties.png)
+   ![Konfigurera egenskaper](assets/models-configure-properties.png)
 1. När du är klar med att skapa modellen trycker du eller klickar **Spara**.
 
 1. Läget för den nyskapade modellen beror på om du har valt **Aktivera modell** när du skapar modellen:
@@ -50,13 +50,13 @@ En informationsarkitekt skulle utföra dessa uppgifter endast sporadiskt när ny
 1. Om modellen inte redan är aktiverad måste den **Aktiverad** för att använda den.
    1. Välj den modell du just skapade och tryck eller klicka sedan på **Aktivera**.
 
-      ![Aktivera modellen](../assets/models-enable.png)
+      ![Aktivera modellen](assets/models-enable.png)
    1. Bekräfta aktivering av modellen genom att trycka eller klicka **Aktivera** i bekräftelsedialogrutan.
 
-      ![Aktivera bekräftelsedialogrutan](../assets/models-enabling.png)
+      ![Aktivera bekräftelsedialogrutan](assets/models-enabling.png)
 1. Modellen är nu aktiverad och klar att användas.
 
-   ![Modellen är aktiverad](../assets/models-enabled.png)
+   ![Modellen är aktiverad](assets/models-enabled.png)
 
 The **Modellredigerare för innehållsfragment** har stöd för många olika datatyper, till exempel enkla textfält, resursreferenser, referenser till andra modeller och JSON-data.
 

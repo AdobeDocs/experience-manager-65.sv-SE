@@ -8,9 +8,9 @@ breadcrumb-title: Användarhandbok om utveckling
 user-guide-description: Den här användarhandboken beskriver hur du skapar en AEM-instans.
 feature: Developing
 role: Developer
-source-git-commit: c5bc743f845281bdbad522053c0e57791921ffd2
+source-git-commit: ad0f0bd8b0c230e002c734adca87da22bfa3a7cd
 workflow-type: tm+mt
-source-wordcount: '1317'
+source-wordcount: '1285'
 ht-degree: 6%
 
 ---
@@ -138,11 +138,12 @@ ht-degree: 6%
    + Leverans-API{#delivery-api}
       + [HTTP API för Assets](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/mac-api-assets.html)
       + [Innehållsfragment REST API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html)
-      + [GraphQL API för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/graphql-api-content-fragments.html)
-      + [Använda GraphiQL IDE](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/graphiql-ide.html)
-      + [Beständiga frågor](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/persisted-queries.html)
-      + [Autentisering för fjärrfrågor AEM GraphQL-frågor om innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/graphql-authentication-content-fragments.html)
-      + [AEM GraphQL API med innehållsfragment - exempel på innehåll och frågor](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/content-fragments-graphql-samples.html)
+      + [GraphQL API för innehållsfragment](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md)
+      + [Hantera GraphQL Endpoints](/help/sites-developing/headless/graphql-api/graphql-endpoint.md)
+      + [Använda GraphiQL IDE](/help/sites-developing/headless/graphql-api/graphiql-ide.md)
+      + [Beständiga frågor](/help/sites-developing/headless/graphql-api/persisted-queries.md)
+      + [Autentisering för fjärrfrågor AEM GraphQL-frågor om innehållsfragment](/help/sites-developing/headless/graphql-api/graphql-authentication-content-fragments.md)
+      + [AEM GraphQL API med innehållsfragment - exempel på innehåll och frågor](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md)
 + Hybrid- och SPA AEM{#spas}
    + [Hybrid och SPA med AEM](https://business.adobe.com/content/dam/dx/us/en/products/experience-manager/sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
    + [SPA introduktion och genomgång](spa-walkthrough.md)

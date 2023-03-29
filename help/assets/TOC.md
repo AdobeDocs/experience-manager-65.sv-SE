@@ -6,10 +6,10 @@ audience: end-user
 user-guide-title: Användarhandbok om resurser
 breadcrumb-title: Användarhandbok om resurser
 user-guide-description: Skapa, hantera, bearbeta och distribuera digitala resurser.
-source-git-commit: 0c6c269e9f0cbdcc0c5e3b925ef09b9923cbb2b3
+source-git-commit: ad0f0bd8b0c230e002c734adca87da22bfa3a7cd
 workflow-type: tm+mt
-source-wordcount: '683'
-ht-degree: 16%
+source-wordcount: '723'
+ht-degree: 15%
 
 ---
 
@@ -96,11 +96,11 @@ ht-degree: 16%
    + [Utöka resursredigeraren](asseteditorx.md)
    + [[!DNL Assets] HTTP-API](mac-api-assets.md)
    + [Content Fragments support in [!DNL Assets] HTTP-API](assets-api-content-fragments.md)
-   + [GraphQL API för innehållsfragment](content-fragments/graphql-api-content-fragments.md)
-   + [Använda GraphiQL IDE](content-fragments/graphiql-ide.md)
-   + [Beständiga frågor](content-fragments/persisted-queries.md)
-   + [Autentisering av GraphQL-fjärrfrågor för innehållsfragment](content-fragments/graphql-authentication-content-fragments.md)
-   + [GraphQL API med innehållsfragment - exempel på innehåll och frågor](/help/assets/content-fragments/content-fragments-graphql-samples.md)
+   + [GraphQL API för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/delivery-api/graphql-api-content-fragments.html)
+   + [Använda GraphiQL IDE](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/delivery-api/graphiql-ide.html)
+   + [Beständiga frågor](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/delivery-api/persisted-queries.html)
+   + [Autentisering av GraphQL-fjärrfrågor för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/delivery-api/graphql-authentication-content-fragments.html)
+   + [GraphQL API med innehållsfragment - exempel på innehåll och frågor](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/delivery-api/content-fragments-graphql-samples.html)
    + [[!DNL Assets] proxyutveckling](proxy.md)
 + Administrera resurser {#administer}
    + [Filformat som stöds](assets-formats.md)

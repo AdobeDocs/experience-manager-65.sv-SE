@@ -2,10 +2,10 @@
 title: Få åtkomst till ditt innehåll via AEM-API:er
 description: I den här delen av AEM Headless Developer Journey kan du lära dig hur du använder GraphQL-frågor för att komma åt ditt innehåll i Content Fragments.
 exl-id: 44f85d00-a958-470a-8a6e-e2ae1580525a
-source-git-commit: 62d921df1b03520b53ceefa072530bf0214df30a
+source-git-commit: ad0f0bd8b0c230e002c734adca87da22bfa3a7cd
 workflow-type: tm+mt
 source-wordcount: '1335'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -243,10 +243,10 @@ Innan du börjar med frågor om ditt innehåll måste du:
 
 * Aktivera slutpunkten
    * Använd verktyg -> Resurser -> GraphQL
-   * [Aktivera din GraphQL-slutpunkt](/help/assets/content-fragments/graphql-api-content-fragments.md#enabling-graphql-endpoint)
+   * [Aktivera din GraphQL-slutpunkt](/help/sites-developing/headless/graphql-api/graphql-endpoint.md#enabling-graphql-endpoint)
 
 * Åtkomst till GraphiQL (vid behov)
-   * [AEM GraphiQL-gränssnitt](/help/assets/content-fragments/graphql-api-content-fragments.md#graphiql-interface)
+   * [AEM GraphiQL-gränssnitt](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#graphiql-interface)
 
 ### Exempelstruktur {#sample-structure}
 
@@ -269,7 +269,7 @@ Fragmentmodellerna används:
 
 ### Var ska du testa dina frågor? {#where-to-test-your-queries}
 
-Frågorna kan anges i [GraphiQL-gränssnitt](/help/assets/content-fragments/graphiql-ide.md), till exempel vid:
+Frågorna kan anges i [GraphiQL-gränssnitt](/help/sites-developing/headless/graphql-api/graphiql-ide.md), till exempel vid:
 
 * `http://localhost:4502/aem/graphiql.html`
 
@@ -362,14 +362,14 @@ Nu när du har lärt dig hur du får åtkomst till och frågar efter headless-in
    * [Variabler](https://graphql.org/learn/queries/#variables)
    * [GraphQL Java-bibliotek](https://graphql.org/code/#java)
 * [GraphiQL](https://graphql.org/learn/serving-over-http/#graphiql)
-* [Lär dig använda GraphQL med AEM](/help/assets/content-fragments/graphql-api-content-fragments.md)
-   * [Aktivera din GraphQL-slutpunkt](/help/assets/content-fragments/graphql-api-content-fragments.md#enabling-graphql-endpoint)
-   * [Installera AEM GraphiQL-gränssnitt](/help/assets/content-fragments/graphql-api-content-fragments.md#installing-graphiql-interface)
-* [Strukturen för exempelinnehållsfragment](/help/assets/content-fragments/content-fragments-graphql-samples.md#content-fragment-structure-graphql)
-* [Lära sig använda GraphQL med AEM - exempelinnehåll och frågor](/help/assets/content-fragments/content-fragments-graphql-samples.md)
-   * [Exempelfråga - Ett enskilt specifikt stadsfragment](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-single-specific-city-fragment)
-   * [Exempelfråga för metadata - Ange metadata för utmärkelserna med namnet GB](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-metadata-awards-gb)
-   * [Exempelfråga - Alla städer med en namngiven variant](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-cities-named-variation)
+* [Lär dig använda GraphQL med AEM](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md)
+   * [Aktivera din GraphQL-slutpunkt](/help/sites-developing/headless/graphql-api/graphql-endpoint.md#enabling-graphql-endpoint)
+   * [Installera AEM GraphiQL-gränssnitt](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#installing-graphiql-interface)
+* [Strukturen för exempelinnehållsfragment](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#content-fragment-structure-graphql)
+* [Lära sig använda GraphQL med AEM - exempelinnehåll och frågor](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md)
+   * [Exempelfråga - Ett enskilt specifikt stadsfragment](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-single-specific-city-fragment)
+   * [Exempelfråga för metadata - Ange metadata för utmärkelserna med namnet GB](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-metadata-awards-gb)
+   * [Exempelfråga - Alla städer med en namngiven variant](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-cities-named-variation)
 * [Aktivera funktionen för innehållsfragment i konfigurationsläsaren](/help/assets/content-fragments/content-fragments-configuration-browser.md#enable-content-fragment-functionality-in-configuration-browser)
 * [Arbeta med innehållsfragment](/help/assets/content-fragments/content-fragments.md)
    * [Modeller för innehållsfragment](/help/assets/content-fragments/content-fragments-models.md)

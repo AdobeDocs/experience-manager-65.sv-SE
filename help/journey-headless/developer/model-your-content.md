@@ -2,7 +2,7 @@
 title: Så här modellerar du innehåll
 description: I den här delen av AEM Headless Developer Journey lär du dig att modellera ditt innehåll för AEM Headless-leverans med hjälp av Content Modeling med Content Fragment Models och Content Fragments.
 exl-id: f75b433f-5a81-4259-a9f5-b58954b87970
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: ad0f0bd8b0c230e002c734adca87da22bfa3a7cd
 workflow-type: tm+mt
 source-wordcount: '1826'
 ht-degree: 0%
@@ -181,7 +181,7 @@ AEM innehåller följande datatyper som du kan använda för att modellera ditt 
 * Enkelradig text
 * Flerradstext
 * Siffra
-* Boolesk
+* Boolean
 * Datum och tid
 * Uppräkning
 * Taggar
@@ -275,6 +275,6 @@ Nu när du har lärt dig att utforma strukturen och skapa innehåll som är bero
    * [Modeller för innehållsfragment](/help/assets/content-fragments/content-fragments-models.md) - skapa och redigera modeller för innehållsfragment
    * [Hantera innehållsfragment](/help/assets/content-fragments/content-fragments-managing.md) - skapa och skriva innehållsfragment, den här sidan leder dig till andra detaljerade avsnitt
 * [AEM GraphQL Schemas](access-your-content.md) - hur GraphQL realiserar modeller
-* [Strukturen för exempelinnehållsfragment](/help/assets/content-fragments/content-fragments-graphql-samples.md#content-fragment-structure-graphql)
+* [Strukturen för exempelinnehållsfragment](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#content-fragment-structure-graphql)
 * [Komma igång med AEM Headless](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html) - En kort videosjälvstudiekurs med en översikt över hur du använder AEM headless-funktioner, inklusive innehållsmodellering och GraphQL
    * [Grundläggande om GraphQL-modellering](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/video-series/modeling-basics.html) - Lär dig hur du definierar och använder innehållsfragment i Adobe Experience Manager (AEM) för användning med GraphQL.

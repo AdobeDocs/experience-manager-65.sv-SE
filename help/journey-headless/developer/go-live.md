@@ -2,7 +2,7 @@
 title: Så här Live med ditt headless-program
 description: I den här delen av AEM Headless Developer Journey lär du dig hur du driftsätter en headless-applikation live.
 exl-id: ec3356ef-9e60-4151-984d-3ebdab593b96
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: ad0f0bd8b0c230e002c734adca87da22bfa3a7cd
 workflow-type: tm+mt
 source-wordcount: '1903'
 ht-degree: 0%
@@ -104,7 +104,7 @@ Nu är det dags att göra ditt AEM headless-program redo för lansering enligt d
 
 ### Skydda ditt Headless-program innan du startar {#secure-and-scale-before-launch}
 
-1. Förbered [Autentisering](/help/assets/content-fragments/graphql-authentication-content-fragments.md) för dina GraphQL-förfrågningar
+1. Förbered [Autentisering](/help/sites-developing/headless/graphql-api/graphql-authentication-content-fragments.md) för dina GraphQL-förfrågningar
 
 ### Modellstruktur jämfört med GraphQL Output {#structure-vs-output}
 

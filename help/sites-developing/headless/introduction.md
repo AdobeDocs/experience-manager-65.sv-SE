@@ -2,7 +2,7 @@
 title: Headless Development for AEM 6.5 Sites
 description: Läs om hur AEM 6.5 kraftfulla headless-funktioner som Content Models, Content Fragments och GraphQL API fungerar tillsammans så att ni kan hantera era upplevelser centralt och leverera dem i alla kanaler.
 exl-id: b6598bcf-b2ce-403a-87cf-6895fec8a91b
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: ac70fb534a95c9eee6f8340d9b8720a607b9f79f
 workflow-type: tm+mt
 source-wordcount: '493'
 ht-degree: 1%
@@ -19,7 +19,7 @@ Headless-implementering blir allt viktigare för att ni ska kunna leverera upple
 
 Den Headless-implementeringen förskjuter hantering av sidor och komponenter på samma sätt som traditionella lösningar med kompletta stackar och hybridlösningar och fokuserar på att skapa kanalneutrala, återanvändbara fragment av innehåll och deras flerkanalsleverans. Det är ett modernt och dynamiskt utvecklingsmönster för implementering av webbupplevelser.
 
-![AEM implementeringsmodeller](assets/aem-implementation-models.png)
+![AEM implementeringsmodeller](/help/sites-developing/headless/getting-started/assets/aem-implementation-models.png)
 
 ## Jämför Headful och Headless {#headful-headless}
 
@@ -50,7 +50,7 @@ AEM 6.5 är ett flexibelt verktyg för den headless-implementeringsmodellen med 
 
 Det finns ett antal resurser som du kan använda för att komma igång med AEM headless-funktioner. De är avsedda för olika användningsområden, men ger alla en bra översikt över AEM rubrikfria funktioner.
 
-| Resurs | Beskrivning | Typ | Målgrupp | Beräkna. Time |
+| Resurs | Beskrivning | Typ | Målgrupp | Beräkna. Tid |
 |---|---|---|---|---|
 | [Headless Developer Journey](/help/journey-headless/developer/overview.md) | **För användare som inte är AEM och utan headless** börjar du här för att få en omfattande introduktion till AEM och dess headless-funktioner från teorin om headless genom att publicera ditt första headless-projekt. | Användarhandbok | Utvecklare **nya i AEM och utan huvud** | 1 timme |
 | [Starthandbok för Headless](/help/sites-developing/headless/getting-started/introduction.md) | **För erfarna AEM** som behöver en kort sammanfattning av de viktigaste AEM rubrikfria funktionerna, se den här snabbstartsöversikten. | Snabbstart | Utvecklare, administratörer **med AEM** | 20 minuter |

@@ -2,7 +2,7 @@
 title: Vägen till din första upplevelse med AEM utan headless
 description: I den här delen av den AEM Headless Developer Journey kommer du att förstå hur du implementerar din första headless-upplevelse i AEM, inklusive planeringsöverväganden, och också lära dig bästa praxis för att göra din väg så smidig som möjligt.
 exl-id: 64a87b6b-67ff-4d88-9dfb-c3e5de65bbe6
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: ad0f0bd8b0c230e002c734adca87da22bfa3a7cd
 workflow-type: tm+mt
 source-wordcount: '1982'
 ht-degree: 0%
@@ -150,4 +150,4 @@ Vi rekommenderar att du går vidare till nästa del av den headless-utvecklingsr
 * [Starthandbok för Headless](/help/sites-developing/headless/introduction.md#getting-started) - En snabb introduktion till AEM headless-funktioner för användare som redan är AEM.
 * [Skapa modeller för innehållsfragment](/help/assets/content-fragments/content-fragments-models.md) - Teknisk dokumentation om modeller för innehållsfragment
 * [Skapa innehållsfragment](/help/assets/content-fragments/content-fragments.md) - Teknisk dokumentation om innehållsfragment
-* [Fråga innehåll med GraphQL](/help/assets/content-fragments/graphql-api-content-fragments.md) - Teknisk dokumentation om GraphQL API
+* [Fråga innehåll med GraphQL](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md) - Teknisk dokumentation om GraphQL API
