@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: e228f1db-91ea-4ec3-86da-06d89d74bc72
 role: Admin
 exl-id: a9fc9c06-b9e6-4a5e-ab5e-0930ecd4b51b
-source-git-commit: 1d334c42088342954feb34f6179dc5b134f81bb8
+source-git-commit: ce6d24e53a27b64a5d0a9db2e4b6672bd77cf9ec
 workflow-type: tm+mt
-source-wordcount: '1457'
-ht-degree: 2%
+source-wordcount: '1424'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 2%
 
 ## Solr for AEM Platform {#solr-for-aem-platform}
 
-An [Apache Solr](https://lucene.apache.org/solr/) kan delas mellan [nodarkiv](../../help/sites-deploying/data-store-config.md) (Oak) och [gemensam lagringsplats](working-with-srp.md) (SRP) genom att använda olika samlingar.
+An [Apache Solr](https://solr.apache.org/) kan delas mellan [nodarkiv](../../help/sites-deploying/data-store-config.md) (Oak) och [gemensam lagringsplats](working-with-srp.md) (SRP) genom att använda olika samlingar.
 
 Om både Oak- och SRP-samlingarna används intensivt kan en andra Solr installeras av prestandaskäl.
 
@@ -34,7 +34,7 @@ Hämta och installera Apache Solr:
 
 * [Version 7.0](https://archive.apache.org/dist/lucene/solr/7.0.0/)
 
-* Solr kräver Java 1.7 eller senare
+* Solr kräver Java™ 1.7 eller senare
 * Ingen tjänst behövs
 * Val av körningslägen:
 
@@ -63,14 +63,14 @@ Vi rekommenderar även att du konfigurerar JVM för att justera minnesanvändnin
 JVM_OPTS="-server -Xmx2048m -XX:MaxPermSize=768M -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -Xloggc:../logs/gc.log -XX:+PrintGCDetails -XX:+PrintGCDateStamps -Djava.awt.headless=true"
 ```
 
-### Kommandon för SolrCloud-konfiguration {#solrcloud-setup-commands}
+### Kommandon för att konfigurera SolrCloud {#solrcloud-setup-commands}
 
-När du kör i SolrCloud-läge måste du använda och känna till följande SolrCloud-konfigurationskommandon innan du installerar MLS.
+När du kör i SolrCloud-läge måste du, innan du installerar MLS, använda och känna till följande SolrCloud-konfigurationskommandon.
 
 #### 1. Överför en konfiguration till ZooKeeper {#upload-a-configuration-to-zookeeper}
 
 Referens:
-[https://cwiki.apache.org/confluence/display/solr/Command+Line+Utilities](https://cwiki.apache.org/confluence/display/solr/Command+Line+Utilities)
+[https://solr.apache.org/guide/6_6/command-line-utilities.html](https://solr.apache.org/guide/6_6/command-line-utilities.html)
 
 Användning: sh ./scripts/cloud-scripts/zkcli.sh \
 -cmd upconfig \
@@ -82,7 +82,7 @@ Användning: sh ./scripts/cloud-scripts/zkcli.sh \
 #### 2. Skapa en samling {#create-a-collection}
 
 Referens:
-[https://cwiki.apache.org/confluence/display/solr/Solr+Start+Script+Reference#SolrStartScriptReference-Create](https://cwiki.apache.org/confluence/display/solr/Solr+Start+Script+Reference#SolrStartScriptReference-Create)
+[https://solr.apache.org/guide/6_6/solr-control-script-reference.html#SolrControlScriptReference-Create](https://solr.apache.org/guide/6_6/solr-control-script-reference.html#SolrControlScriptReference-Create)
 
 Användning:
 ./bin/solr create \
@@ -98,7 +98,7 @@ Användning:
 Länka en samling till en konfiguration som redan har överförts till ZooKeeper.
 
 Referens:
-[https://cwiki.apache.org/confluence/display/solr/Command+Line+Utilities](https://cwiki.apache.org/confluence/display/solr/Command+Line+Utilities)
+[https://solr.apache.org/guide/6_6/command-line-utilities.html](https://solr.apache.org/guide/6_6/command-line-utilities.html)
 
 Användning: sh ./scripts/cloud-scripts/zkcli.sh \
 -cmd linkconfig \
@@ -110,7 +110,7 @@ Användning: sh ./scripts/cloud-scripts/zkcli.sh \
 
 Flerspråkig sökning (MLS) för AEM Communities är byggd för Solr-plattformen för att ge bättre sökning på alla språk som stöds, inklusive engelska.
 
-MLS för AEM communities är tillgängligt som standard-MLS eller avancerad MLS. Standard-MLS innehåller endast Solr-konfigurationsinställningar och utesluter alla plugin-program eller resursfiler. Advanced MLS är den mer omfattande lösningen och innehåller Solr-konfigurationsinställningar samt plugin-program och relaterade resurser
+MLS för AEM Communities finns antingen som Standard MLS eller Advanced MLS. Standard-MLS innehåller endast Solr-konfigurationsinställningar och utesluter alla plugin-program eller resursfiler. Advanced MLS är den mer omfattande lösningen och innehåller Solr-konfigurationsinställningar samt plugin-program och relaterade resurser
 
 Standard-MLS innehåller förbättringar för innehållssökning för följande språk:
 
@@ -171,8 +171,8 @@ Standard-MLS-filerna lagras i AEM.
 1. Hämta till den lokala servern där Solr är distribuerad.
 
    * Leta reda på `jcr:content` nod `jcr:data` -egenskap.
-   * Välj `view` för att starta nedladdningen.
-   * Kontrollera att filerna har sparats med rätt namn och kodning (UTF8).
+   * Starta hämtningen genom att välja `view`.
+   * Se till att filerna sparas med rätt namn och kodning (UTF8).
 
 1. Följ installationsanvisningarna för antingen fristående läge eller SolrCloud-läge.
 
@@ -194,7 +194,7 @@ Standard-MLS-filerna lagras i AEM.
 1. [Skapa en samling](#create-a-collection) ange nödvändiga parametrar, t.ex. antal skevningar, antal repliker och konfigurationsnamn.
 1. Om konfigurationsnamnet *inte anges när samlingen skapas, [länka den här nyligen skapade samlingen](#link-a-collection-to-a-configuration-set) med konfigurationen överförd till ZooKeeper.
 
-1. Kör för MSRP [MSRP Reindex Tool](msrp.md#msrp-reindex-tool), såvida det inte är en ny installation.
+1. Kör för MSRP [MSRP Reindex Tool](msrp.md#msrp-reindex-tool), såvida inte den här installationen är ny.
 
 #### Fristående läge - standard-MLS {#standalone-mode-standard-mls}
 
@@ -212,7 +212,7 @@ Standard-MLS-filerna lagras i AEM.
 1. Kopiera den hämtade filen **schema.xml** och **solrconfig.xml** till samma katalog.
 
 1. Starta om Solr.
-1. Kör för MSRP [MSRP Reindex Tool](#msrpreindextool), såvida det inte är en ny installation.
+1. Kör för MSRP [MSRP Reindex Tool](#msrpreindextool), såvida inte den här installationen är ny.
 
 ### Avancerad MLS installeras {#installing-advanced-mls}
 
@@ -277,13 +277,13 @@ Installationsanvisningar - notera de få skillnaderna för Solr4 och Solr5:
 1. [Skapa en samling](#create-a-collection) ange nödvändiga parametrar, t.ex. antal skevningar, antal repliker och konfigurationsnamn.
 1. Om konfigurationsnamnet var *not* som tillhandahålls när samlingen skapas, [länka den här nyligen skapade samlingen](#link-a-collection-to-a-configuration-set) med konfigurationen överförd till ZooKeeper.
 
-1. Kör för MSRP [MSRP Reindex Tool](#msrpreindextool), såvida det inte är en ny installation.
+1. Kör för MSRP [MSRP Reindex Tool](#msrpreindextool), såvida inte den här installationen är ny.
 
 #### Fristående läge - avancerad MLS {#standalone-mode-advanced-mls}
 
 Ett installationsskript ingår i det avancerade MLS-paketet.
 
-När innehållet i paketet har extraherats till servern som är värd för den fristående Solr-servern kör du bara installationsskriptet för att installera nödvändiga resurser och konfigurationsfiler.
+När innehållet i paketet har extraherats till servern som är värd för den fristående Solr-servern kör du installationsskriptet för att installera nödvändiga resurser och konfigurationsfiler.
 
 * Installera Solr i fristående läge.
 * Om du kör Solr5 skapar du en samling1 (liknande Solr4):
@@ -324,10 +324,10 @@ där:
 
 ### Om solrconfig.xml {#about-solrconfig-xml}
 
-The **solrconfig.xml** -filen styr intervallet för automatisk implementering och söksynlighet och kommer att kräva testning och justering.
+The **solrconfig.xml** -filen styr intervallet för automatisk implementering och söksynlighet och kräver testning och justering.
 
 `<autoCommit>`: Som standard är intervallet AutoCommit, som är en hård implementering av stabil lagring, inställt på 15 sekunder. Söksynligheten använder som standard indexvärdet före implementering.
 
 Om du vill ändra sökningen till att använda ett index som har uppdaterats för att återspegla ändringar på grund av implementeringen, ändrar du det i `openSearcher` till true.
 
-`autoSoftCommit`: En &quot;soft&quot;-implementering ser till att ändringarna är synliga (indexet uppdateras), men säkerställer inte att ändringarna synkroniseras till stabil lagring (fast implementering). Resultatet blir en prestandaförbättring. Som standard `autoSoftCommit` är inaktiverat med innehållet `maxTime` anges till -1.
+`autoSoftCommit`: En &quot;soft&quot;-implementering ser till att ändringar är synliga (indexet uppdateras), men säkerställer inte att ändringar synkroniseras till stabil lagring (fast implementering). Resultatet blir en prestandaförbättring. Som standard `autoSoftCommit` är inaktiverat med innehållet `maxTime` anges till -1.
