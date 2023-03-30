@@ -1,10 +1,10 @@
 ---
 title: Beständiga GraphQL-frågor
 description: Lär dig hur du bibehåller GraphQL-frågor i Adobe Experience Manager för att optimera prestandan. Beständiga frågor kan begäras av klientprogram med HTTP GET-metoden och svaret kan cachas i Dispatcher- och CDN-lagren, vilket i slutänden förbättrar klientprogrammens prestanda.
-source-git-commit: ad0f0bd8b0c230e002c734adca87da22bfa3a7cd
+source-git-commit: d87b226d846c6d144e8dfe0b06ec4c296edcad05
 workflow-type: tm+mt
-source-wordcount: '1428'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -264,7 +264,7 @@ Beständiga frågor rekommenderas eftersom de kan cachelagras på [Dispatcher](h
 Som standard blir cachen ogiltig AEM baserat på en TTL-definition (Time To Live). Dessa TTL:er kan definieras med följande parametrar. Dessa parametrar kan nås på olika sätt, med variationer i namnen beroende på vilken mekanism som används:
 
 | Cachetyp | [HTTP-huvud](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control)  | cURL  | OSGi-konfiguration  |
-|--- |--- |--- |--- |--- |
+|--- |--- |--- |--- |
 | Webbläsare | `max-age` | `cache-control : max-age` | `cacheControlMaxAge` |
 | CDN | `s-maxage` | `surrogate-control : max-age` | `surrogateControlMaxAge` |
 | CDN | `stale-while-revalidate` | `surrogate-control : stale-while-revalidate ` | `surrogateControlStaleWhileRevalidate` |
