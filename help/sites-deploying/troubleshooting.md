@@ -1,7 +1,7 @@
 ---
 title: Felsökning
 seo-title: Troubleshooting
-description: I den här artikeln beskrivs några av de installationsproblem som du kan råka ut för AEM.
+description: I den här artikeln beskrivs några av installationsproblemen som du kan råka ut för AEM.
 seo-description: This article covers some of the installation issues you might encounter with AEM.
 uuid: 2ca898c3-b074-4ccd-a383-b92f226e6c14
 contentOwner: Guillaume Carlino
@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 5542de4e-6262-4300-9cf8-0eac79ba4f9a
 exl-id: 55576729-be9c-412e-92ac-4be90650c6fa
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e147605ff4d5c3d2403632285956559db235c084
 workflow-type: tm+mt
-source-wordcount: '1167'
+source-wordcount: '1163'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ I det här avsnittet finns detaljerad information om loggar som kan hjälpa dig 
 
 ## Felsöka författarprestanda {#troubleshoot-author-performance}
 
-Det kan bli ganska komplicerat att analysera långsamma prestanda i redigeringsinstansen. Som ett första steg måste du ta reda på vilken nivå av teknikhögen som prestandan minskar.
+Det kan bli komplicerat att analysera långsamma prestanda i redigeringsinstansen. Som ett första steg måste du ta reda på vilken nivå av teknikhögen som prestandan minskar.
 
 Följande beslutsträd ger vägledning för att minska flaskhalsen.
 
@@ -35,7 +35,7 @@ Följande beslutsträd ger vägledning för att minska flaskhalsen.
 
 ## Konfigurera loggfiler och granskningsloggar {#configuring-log-files-and-audit-logs}
 
-AEM loggar som du kan behöva konfigurera för att felsöka installationsproblem. Mer information finns i [Arbeta med granskningsposter och loggfiler](/help/sites-deploying/monitoring-and-maintaining.md#working-with-audit-records-and-log-files) -avsnitt.
+AEM loggar som du kan konfigurera för att felsöka installationsproblem. Mer information finns i [Arbeta med granskningsposter och loggfiler](/help/sites-deploying/monitoring-and-maintaining.md#working-with-audit-records-and-log-files) -avsnitt.
 
 ## Använda alternativet Detaljerad {#using-the-verbose-option}
 
@@ -47,33 +47,33 @@ I det utförliga alternativet visas några av QuickStart-loggutdata på konsolen
 
 I följande avsnitt beskrivs några installationsproblem och deras lösningar.
 
-### Att dubbelklicka på Quickstart-behållaren har ingen effekt eller öppnar burken-filen med ett annat program (t.ex. arkivhanteraren) {#double-clicking-the-quickstart-jar-does-not-have-any-effect-or-opens-the-jar-file-with-another-program-for-example-archive-manager}
+### Om du dubbelklickar på Quickstart-behållaren får den ingen effekt och filen öppnas med ett annat program (t.ex. arkivhanteraren) {#double-clicking-the-quickstart-jar-does-not-have-any-effect-or-opens-the-jar-file-with-another-program-for-example-archive-manager}
 
-Detta tyder vanligtvis på ett problem med hur operativsystemets skrivbordsmiljö är konfigurerad att öppna filer med filnamnstillägget .jar. Det kan också tyda på att du inte har Java installerat eller att du använder en version av Java som inte stöds.
+Detta tyder vanligtvis på ett problem med hur operativsystemets skrivbordsmiljö är konfigurerad att öppna filer med filnamnstillägget .jar. Det kan också tyda på att du inte har Java™ installerat eller att du använder en version av Java™ som inte stöds.
 
 När man använder burkfiler i ZIP-format kan vissa av arkiveringsprogrammen automatiskt konfigurera skrivbordet så att burkfiler öppnas som arkivfiler.
 
 Så här felsöker du:
 
-* Kontrollera att du har minst Java version 1.6 installerad.
+* Kontrollera att du har minst Java™ version 1.6 installerad.
 * Testa en snabbmeny (oftast högerklickning) i AEM WCM QuickStart och välj&quot;Öppna med...&quot;..&quot;
-* Kontrollera om Java eller Sun Java visas och försök köra AEM WCM med det. Om du har flera Java-versioner installerade väljer du en som stöds.
+* Kontrollera om Java™ eller Sun Java™ finns med och försök köra AEM WCM med det. Om du har flera Java™-versioner installerade väljer du en som stöds.
 
-   Om du lyckas med det här steget, och operativsystemet har ett alternativ för att alltid använda det valda programmet för att köra .jar-filerna, markerar du det. Dubbelklickning bör fungera från och med nu.
+   Om du lyckas med det här steget och operativsystemet har ett alternativ för att alltid använda det valda programmet för att köra .jar-filerna markerar du det. Dubbelklickning bör fungera från och med nu.
 
-* Ibland kan det vara bra att återställa den korrekta associationen genom att installera om den Java-version som stöds.
+* Ibland kan det vara bra att återställa rätt association om du installerar om den Java™-version som stöds.
 * Du kan alltid köra CRX med kommandoraden eller starta/stoppa skript enligt beskrivningen tidigare i det här dokumentet.
 
 ### Mitt program som körs på CRX orsakar fel av typen slut på minne {#my-application-running-on-crx-throws-out-of-memory-errors}
 
 >[!NOTE]
 >
->Se även [Analysera minnesproblem](https://helpx.adobe.com/experience-manager/kb/AnalyzeMemoryProblems.html).
+>Se även [Analysera minnesproblem](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html?lang=en).
 
 
-CRX har i sig mycket lite minnesutrymme. Om programmet som körs i CRX har större minneskrav eller begär minnesintensiva åtgärder (till exempel stora transaktioner), måste JVM-instansen där CRX körs startas med lämpliga minnesinställningar.
+CRX har i sig ett lågt minnesutrymme. Om programmet som körs i CRX har större minneskrav eller begär minnesintensiva åtgärder (till exempel stora transaktioner), måste JVM-instansen där CRX körs startas med lämpliga minnesinställningar.
 
-Använd Java-kommandoalternativen för att definiera minnesinställningar för JVM (t.ex. java -Xmx512m -jar crx&amp;ast;.jar för att ange stackstorleken till 512 MB).
+Använd Java™-kommandoalternativen för att definiera minnesinställningar för JVM (t.ex. java -Xmx512m -jar crx&amp;ast;.jar för att ange heapsize till 512 MB).
 
 Ange minnesinställningsalternativet när du startar AEM WCM från kommandoraden. AEM WCM-skript för start/stopp eller anpassade skript för hantering AEM WCM-start kan också ändras för att definiera de nödvändiga minnesinställningarna.
 
@@ -83,11 +83,11 @@ Använd följande kommando för att automatiskt skapa en stackdump när minnet t
 
 java -Xmx256m -XX:+HeapDumpOnOutOfMemoryError -jar &amp;ast;.jar
 
-Detta genererar en stackdumpfil (**java_..hprof**) när minnet tar slut. Processen kan fortsätta att köras efter att stackdumpen har skapats. Vanligtvis räcker det med en stackdumpfil för att analysera problemet.
+Den här metoden genererar en stackdumpfil (**java_..hprof**) när minnet tar slut. Processen kan fortsätta att köras efter att stackdumpen har skapats. Vanligtvis räcker det med en stackdumpfil för att analysera problemet.
 
 ### AEM välkomstskärm visas inte i webbläsaren när du dubbelklickat AEM QuickStart {#the-aem-welcome-screen-does-not-display-in-the-browser-after-double-clicking-aem-quickstart}
 
-I vissa situationer visas inte AEM WCM-välkomstskärmar automatiskt även om själva databasen körs. Detta kan bero på operativsystemets konfiguration, webbläsarkonfigurationen eller liknande faktorer.
+I vissa situationer visas inte AEM WCM-välkomstskärmar automatiskt även om själva databasen körs. Problemet kan bero på operativsystemets konfiguration, webbläsarkonfigurationen eller liknande faktorer.
 
 Det vanligaste symtomet är att AEM WCM QuickStart-fönstret visar&quot;AEM WCM startar och väntar på att servern ska startas....&quot; Om det meddelandet visas under en relativt lång tid anger du AEM WCM-URL:en i webbläsarfönstret manuellt med standardporten 4502 eller den port som instansen körs på: http://localhost:4502/.
 
@@ -97,11 +97,11 @@ Ibland visas meddelandet &quot;AEM WCM som körs på http://localhost:port/&quot
 
 Om allt annat misslyckas, kontrollera loggarna för att ta reda på vad som har hänt.
 
-### Webbplatsen läses inte in och misslyckas ibland med Java 11 {#the-website-does-not-load-or-fails-intermittently-with-java11}
+### Webbplatsen läses inte in och misslyckas ibland med Java™ 11 {#the-website-does-not-load-or-fails-intermittently-with-java11}
 
-Det finns ett känt fel med att AEM 6.5 körs på Java 11 där webbplatsen kanske inte läses in eller misslyckas regelbundet.
+Det finns ett känt fel med att AEM 6.5 körs på Java™ 11, där webbplatsen kanske inte läses in eller misslyckas regelbundet.
 
-Om detta händer, följ nedanstående lösning:
+Gör så här om problemet uppstår:
 
 1. Öppna `sling.properties` filen under `crx-quickstart/conf/` mapp
 1. Leta reda på följande rad:
@@ -118,9 +118,9 @@ Om detta händer, följ nedanstående lösning:
 
 ### Sidan hittades inte returnerades när en geometrixx-outdoor-sida begärdes {#page-not-found-returned-when-requesting-a-geometrixx-outdoor-page}
 
-**Gäller WebLogic 10.3.5 och JBoss 5.1**
+**Gäller WebLogic 10.3.5 och JBoss® 5.1**
 
-När en begäran om geometrixx-outdoor/en page returnerar 404 (Page Not Foun), kan du kontrollera att du har angett den extra sling-egenskapen i filen sling.properties som behövs för dessa specifika programservrar.
+När en begäran om att geometrixx-outdoor/en-sida ska returnera 404 (Sidan hittades inte), kan du kontrollera att du har angett den extra sling-egenskapen i filen sling.properties som behövs för dessa specifika programservrar.
 
 Se i *Distribuera AEM webbprogram* steg för informationen.
 
@@ -138,11 +138,11 @@ Om beständig lagring är inbäddad i installationskatalogen, till exempel i sta
 
 >[!NOTE]
 >
->Adobe rekommenderar att du säkerhetskopierar databasen innan du tar bort AEM. Om du tar bort hela &lt;cq-installation-directory>tar du bort databasen. Om du vill behålla databasdata innan du tar bort, flyttar eller kopierar du &lt;cq-installation-directory>/crx-quickstart/databasmapp någon annanstans innan de andra mapparna tas bort.
+>Adobe rekommenderar att du säkerhetskopierar databasen innan du tar bort AEM. Om du tar bort hela &lt;cq-installation-directory>tar du även bort databasen. Om du vill behålla databasdata innan du tar bort, flyttar eller kopierar du &lt;cq-installation-directory>/crx-quickstart/databasmapp någon annanstans innan de andra mapparna tas bort.
 
 Om din installation av AEM använder extern lagring, till exempel en databasserver, tas inte data bort automatiskt när du tar bort mappen, men lagringskonfigurationen tas bort, vilket gör det svårt att återställa JCR-innehållet.
 
-### JSP-filer kompileras inte på JBoss {#jsp-files-are-not-compiled-on-jboss}
+### JSP-filer kompileras inte på JBoss® {#jsp-files-are-not-compiled-on-jboss}
 
-Om du installerar eller uppdaterar JSP-filer till Experience Manager på JBoss och motsvarande servrar inte kompileras kontrollerar du att JBoss JSP-kompilatorn är korrekt konfigurerad. Mer information finns i
-[JSP-kompileringsproblem i JBoss](https://helpx.adobe.com/experience-manager/kb/jsps-dont-compile-jboss.html) artikel.
+Om du installerar eller uppdaterar JSP-filer till Experience Manager på JBoss® och motsvarande servrar inte kompileras kontrollerar du att JBoss® JSP-kompilatorn är korrekt konfigurerad. Mer information finns i
+[JSP-kompileringsproblem i JBoss®](https://helpx.adobe.com/experience-manager/kb/jsps-dont-compile-jboss.html) artikel.

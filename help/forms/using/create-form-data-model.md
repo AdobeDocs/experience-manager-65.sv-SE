@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.3/FORMS
 discoiquuid: 12e6c325-ace0-4a57-8ed4-6f7ceee23099
 docset: aem65
 exl-id: 40bc5af6-9023-437e-95b0-f85d3df7d8aa
-source-git-commit: c3178eefb5aca3afea2f3df8381b52461247d6f3
+source-git-commit: e147605ff4d5c3d2403632285956559db235c084
 workflow-type: tm+mt
-source-wordcount: '1448'
+source-wordcount: '1442'
 ht-degree: 1%
 
 ---
@@ -57,7 +57,7 @@ Gör följande för att konfigurera [!DNL MySQL] databas:
 
 1. Installera JDBC-drivrutin för [!DNL MySQL] databas som ett OSGi-paket:
 
-   1. Hämta [[!DNL MySQL] JDBC Driver OSGi Bundle](http://www.java2s.com/ref/jar/download-orgosgiservicejdbc100jar-file.html).
+   1. Hämta [!DNL MySQL] JDBC Driver OSGi Bundle från `http://www.java2s.com/ref/jar/download-orgosgiservicejdbc100jar-file.html`. <!-- This URL is an insecure link but using https is not possible -->
    1. Logga in på AEM [!DNL Forms] Skapa instans som administratör och gå till AEM webbkonsolpaket. Standardwebbadressen är [https://localhost:4502/system/console/bundles](https://localhost:4502/system/console/bundles).
 
    1. Tryck på **[!UICONTROL Install/Update]**. An [!UICONTROL Upload / Install Bundles] visas.
@@ -143,7 +143,7 @@ Gör följande för att konfigurera formulärdatamodellen:
    * **Tjänster:**
 
       * get
-      * update
+      * uppdatera
 
    Tryck **Lägg till markerade** om du vill lägga till valda datamodellsobjekt och datatjänster i formulärdatamodellen.
 

@@ -10,9 +10,9 @@ topic-tags: platform
 content-type: reference
 discoiquuid: 11a11803-bce4-4099-9b50-92327608f37b
 exl-id: 1082b2d7-2d1b-4c8c-a31d-effa403b21b2
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e147605ff4d5c3d2403632285956559db235c084
 workflow-type: tm+mt
-source-wordcount: '948'
+source-wordcount: '920'
 ht-degree: 0%
 
 ---
@@ -27,9 +27,9 @@ Få tillgång till en extern SQL-databas så att CQ-programmen kan interagera me
 
 ## Paketera JDBC-databasdrivrutinen {#bundling-the-jdbc-database-driver}
 
-Vissa databasleverantörer tillhandahåller JDBC-drivrutiner i ett OSGi-paket, till exempel [MySQL](https://www.mysql.com/downloads/connector/j/). Om JDBC-drivrutinen för din databas inte är tillgänglig som ett OSGi-paket hämtar du JAR-drivrutinen och lägger den i ett OSGi-paket. Paketet måste exportera de paket som krävs för interaktion med databasservern. Paketet måste också importera de paket som det refererar till.
+Vissa databasleverantörer tillhandahåller JDBC-drivrutiner i ett OSGi-paket, till exempel [MySQL](https://dev.mysql.com/downloads/connector/j/). Om JDBC-drivrutinen för din databas inte är tillgänglig som ett OSGi-paket hämtar du JAR-drivrutinen och lägger den i ett OSGi-paket. Paketet måste exportera de paket som krävs för interaktion med databasservern. Paketet måste också importera de paket som det refererar till.
 
-I följande exempel används [Bundle plugin for Maven](https://felix.apache.org/site/apache-felix-maven-bundle-plugin-bnd.html) för att lägga in HSQLDB-drivrutinen i ett OSGi-paket. POM instruerar plugin-programmet att bädda in filen hsqldb.jar som identifieras som ett beroende. Alla org.hsqldb-paket exporteras.
+I följande exempel används [Bundle plug-in for Maven](https://felix.apache.org/documentation/subprojects/apache-felix-maven-bundle-plugin-bnd.html) för att lägga in HSQLDB-drivrutinen i ett OSGi-paket. POM instruerar plugin-programmet att bädda in filen hsqldb.jar som identifieras som ett beroende. Alla org.hsqldb-paket exporteras.
 
 Plugin-programmet bestämmer automatiskt vilka paket som ska importeras och visar dem i filen MANIFEST.MF i paketet. Om något av paketen inte är tillgängligt på CQ-servern startar inte paketet vid installationen. Två möjliga lösningar är följande:
 
@@ -86,9 +86,9 @@ Om du känner till källkoden kan du bestämma vilken lösning som ska användas
 
 Följande länkar öppnar hämtningssidorna för några populära databasprodukter:
 
-* [Microsoft SQL Server](https://www.microsoft.com/en-us/download/details.aspx?displaylang=en&amp;id=11774)
-* [Oracle](https://www.oracle.com/technetwork/database/features/jdbc/index-091264.html)
-* [IBM DB2](https://www-01.ibm.com/support/docview.wss?uid=swg27007053)
+* [Microsoft® SQL Server](https://www.microsoft.com/en-us/download/details.aspx?displaylang=en&amp;id=11774)
+* [Oracle](https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html)
+* [IBM® DB2®](https://www.ibm.com/support/pages/download-db2-fix-packs-version-db2-linux-unix-and-windows)
 
 ### Konfigurera tjänsten JDBC-anslutningspool {#configuring-the-jdbc-connection-pool-service}
 
@@ -100,7 +100,7 @@ När du arbetar med CQ finns det flera metoder för att hantera konfigurationsin
 
 Följande egenskaper är tillgängliga för att konfigurera en poolad anslutningstjänst. Egenskapsnamnen visas så som de visas i webbkonsolen. Motsvarande namn för en `sling:OsgiConfig` visas inom parentes. Exempelvärden visas för en HSQLDB-server och en databas som har aliaset `mydb`:
 
-* JDBC-drivrutinsklass ( `jdbc.driver.class`): Den Java-klass som ska användas som implementerar gränssnittet java.sql.Driver, till exempel `org.hsqldb.jdbc.JDBCDriver`. Datatypen är `String`.
+* JDBC-drivrutinsklass ( `jdbc.driver.class`): Den Java™-klass som ska användas som implementerar gränssnittet java.sql.Driver, till exempel `org.hsqldb.jdbc.JDBCDriver`. Datatypen är `String`.
 
 * JDBC Connection URI ( `jdbc.connection.uri`): URL:en för den databas som ska användas för att skapa anslutningen, till exempel `jdbc:hsqldb:hsql//10.36.79.223:9001/mydb`. URL-formatet måste vara giltigt för användning med metoden getConnection i klassen java.sql.DriverManager. Datatypen är `String`.
 
@@ -169,8 +169,9 @@ I följande exempel hämtas en instans av hsqldbds-datakällan, en enkel SQL-fr�
 
 >[!NOTE]
 >
->Om metoden getDataSource genererar ett undantag eftersom datakällan inte kan hittas kontrollerar du att tjänstkonfigurationen för anslutningspoolen är korrekt. Kontrollera egenskapsnamnen, värdena och datatyperna.
+>Om metoden getDataSource genererar ett undantag eftersom datakällan inte hittas, kontrollerar du att tjänstkonfigurationen för anslutningspoolen är korrekt. Kontrollera egenskapsnamnen, värdena och datatyperna.
 
+<!-- Link below redirects to the "Get started with AEM Sites - WKND tutorial"
 >[!NOTE]
 >
->Mer information om hur du injicerar en DataSourcePool i ett OSGi-paket finns i [Mata in en DataSourcePool-tjänst i ett Adobe Experience Manager OSGi-paket](https://helpx.adobe.com/experience-manager/using/datasourcepool.html).
+>To learn how to inject a DataSourcePool into an OSGi bundle, see [Injecting a DataSourcePool Service into an Adobe Experience Manager OSGi bundle](https://helpx.adobe.com/experience-manager/using/datasourcepool.html). -->

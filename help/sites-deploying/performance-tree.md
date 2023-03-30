@@ -1,8 +1,7 @@
 ---
 title: Prestandaträd
 seo-title: Performance Tree
-description: Lär dig mer om de steg som behöver vidtas för att felsöka prestandaproblem i AEM.
-seo-description: Learn about the steps that need to be taken in order to troubleshoot performance issues in AEM.
+description: Lär dig mer om hur du felsöker prestandaproblem i AEM.
 uuid: ab0624f7-6b39-4255-89e0-54c74b54cd98
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,9 +9,9 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 5febbb1e-795c-49cd-a8f4-c6b4b540673d
 exl-id: f2f968b8-b21c-487d-bc0d-ed60903bc4bf
-source-git-commit: 30327950779337ce869b6ca376120bc09826be21
+source-git-commit: e147605ff4d5c3d2403632285956559db235c084
 workflow-type: tm+mt
-source-wordcount: '1200'
+source-wordcount: '1198'
 ht-degree: 0%
 
 ---
@@ -21,7 +20,7 @@ ht-degree: 0%
 
 ## Omfång {#scope}
 
-Bilden nedan är avsedd att ge vägledning om vilka åtgärder som behöver vidtas för att felsöka prestandaproblem. Den delas upp i fem avsnitt för enklare läsning.
+Följande diagram ger vägledning om hur du felsöker prestandaproblem. Den är uppdelad i fem avsnitt för enklare läsning.
 
 Varje steg i diagrammet är länkat till en dokumentationsresurs eller en rekommendation.
 
@@ -29,7 +28,7 @@ Varje steg i diagrammet är länkat till en dokumentationsresurs eller en rekomm
 
 Antagandet är att ett prestandaproblem observeras på en viss sida (antingen en AEM konsol eller en webbsida) och kan återges på ett enhetligt sätt. Att kunna testa eller övervaka prestanda är en förutsättning innan undersökningen inleds.
 
-Analysen börjar med steg 0. Målet är att avgöra vilken enhet (avsändare, extern värd eller AEM) som ansvarar för prestandaproblemet och sedan avgöra vilket område (server eller nätverk) som ska undersökas.
+Analysen börjar med steg 0. Målet är att avgöra vilken enhet (Dispatcher, extern värd eller AEM) som ansvarar för prestandaproblemet och sedan avgöra vilket område (server eller nätverk) som ska undersökas.
 
 ### Avsnitt 1 {#section}
 
@@ -63,12 +62,12 @@ Analysen börjar med steg 0. Målet är att avgöra vilken enhet (avsändare, ex
   <tr>
    <td><strong>Steg 0</strong></td>
    <td>Analysera flödet för förfrågningar</td>
-   <td><p>Du kan använda standardanalys av HTTP-begäran i webbläsaren för att analysera förfrågningsflödet. Mer information om hur du gör detta i Chrome finns i:<br /> </p> <p><a href="https://developers.google.com/web/tools/chrome-devtools/profile/network-performance/resource-loading">https://developers.google.com/web/tools/chrome-devtools/profile/network-performance/resource-loading</a><a href="https://developers.google.com/web/tools/chrome-devtools/profile/network-performance/understanding-resource-timing"><br /> https://developers.google.com/web/tools/chrome-devtools/profile/network-performance/understanding-resource-timing</a><br /> </p> </td>
+   <td><p>Du kan använda standardanalys av HTTP-begäran i webbläsaren för att analysera förfrågningsflödet. Mer information om hur du gör den här analysen i Chrome finns i:<br /> </p> <p><a href="https://developers.google.com/web/tools/chrome-devtools/profile/network-performance/resource-loading">https://developer.chrome.com/docs/devtools/</a><a href="https://developers.google.com/web/tools/chrome-devtools/profile/network-performance/understanding-resource-timing"><br /> https://developer.chrome.com/docs/devtools/</a><br /> </p> </td>
   </tr>
   <tr>
    <td><strong>Steg 2</strong></td>
    <td>Kommer förfrågningar från externa värdar?</td>
-   <td>Du kan använda standardanalys av HTTP-begäran i webbläsaren för att analysera förfrågningsflödet. Se länkarna ovan om hur du gör detta i Chrome.<br /> </td>
+   <td>Du kan använda standardanalys av HTTP-begäran i webbläsaren för att analysera förfrågningsflödet. Se länkarna ovan om hur du gör den här analysen i Chrome.<br /> </td>
   </tr>
   <tr>
    <td><strong>Steg 3</strong></td>
@@ -78,12 +77,12 @@ Analysen börjar med steg 0. Målet är att avgöra vilken enhet (avsändare, ex
   <tr>
    <td><strong>Steg 4</strong></td>
    <td>Kommer förfrågningar från Dispatcher?</td>
-   <td><p>Kontrollera <a href="https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#debugging">Felsökningsdokumentation för Dispatcher</a> för att se om förfrågningarna har cache-lagrats på rätt sätt.<br /> </p> </td>
+   <td><p>Om du vill se om begäranden cachelagras på rätt sätt kontrollerar du <a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#debugging">Felsökningsdokumentation för Dispatcher</a>.<br /> </p> </td>
   </tr>
   <tr>
    <td><strong>Steg 5</strong></td>
    <td>Försöker Dispatcher autentisera varje begäran via AEM?</td>
-   <td>Kontrollera om dispatchern skickar <code>HEAD</code> begäranden om AEM för autentisering innan den cachelagrade resursen levereras. Du kan göra detta genom att leta efter <code>HEAD</code> begäranden i AEM <code>access.log</code>. Mer information finns i <a href="/help/sites-deploying/configure-logging.md">Loggning</a>.<br /> </td>
+   <td>Kontrollera om Dispatcher skickar <code>HEAD</code> begäranden om AEM för autentisering innan den cachelagrade resursen levereras. Sök efter <code>HEAD</code> begäranden i AEM <code>access.log</code>. Mer information finns i <a href="/help/sites-deploying/configure-logging.md">Loggning</a>.<br /> </td>
   </tr>
   <tr>
    <td><strong>Steg 6</strong></td>
@@ -98,7 +97,7 @@ Analysen börjar med steg 0. Målet är att avgöra vilken enhet (avsändare, ex
   <tr>
    <td><strong>Steg 8</strong></td>
    <td>Kan långsamheten reproduceras med en lokal instans?</td>
-   <td><br /> <p>Använd <a href="/help/sites-developing/tough-day.md">Tålig dag</a> för att återskapa verkliga förhållanden från produktionsinstanserna. Om detta inte är realistiskt för utvecklingens hastighet måste du testa produktionsinstansen (eller en identisk mellanlagringsmodell) i en annan nätverkskontext.<br /> </p> </td>
+   <td><br /> <p>Använd <a href="/help/sites-developing/tough-day.md">Tålig dag</a> för att återskapa verkliga förhållanden från produktionsinstanserna. Om det här scenariot inte är realistiskt för ditt utvecklingsområde måste du testa produktionsinstansen (eller en identisk mellanlagringsmodell) i ett annat nätverkskontext.<br /> </p> </td>
   </tr>
   <tr>
    <td><strong>Steg 9</strong></td>
@@ -108,7 +107,7 @@ Analysen börjar med steg 0. Målet är att avgöra vilken enhet (avsändare, ex
   <tr>
    <td><strong>Steg 10 och 29</strong></td>
    <td>Undersök nätverkslager</td>
-   <td><p>Undersök nätverkslagret för problem med mättnad och fördröjning.</p> <p>För författarnivån rekommenderas att fördröjningen inte överstiger 100 millisekunder.</p> <p>Mer information om tips för prestandaoptimering finns i <a href="https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html">den här sidan</a>.</p> </td>
+   <td><p>Undersök nätverkslagret för problem med mättnad och fördröjning.</p> <p>För författarnivån rekommenderas att fördröjningen inte överstiger 100 millisekunder.</p> <p>Mer information om tips för prestandaoptimering finns i <a href="https://helpx.adobe.com/customer-care-office-hours/aem/6x-performance-tuning-best-practices.html">den här sidan</a>.</p> </td>
   </tr>
   <tr>
    <td><strong>Steg 11</strong></td>
@@ -133,7 +132,7 @@ Analysen börjar med steg 0. Målet är att avgöra vilken enhet (avsändare, ex
   <tr>
    <td><strong>Steg 15</strong></td>
    <td>Hitta långsamma förfrågningar</td>
-   <td><p>Du kan söka efter långsamma begäranden genom att analysera <code>request.log</code> eller genom att använda <code>rlog.jar</code>.</p> <p>Mer information om hur du använder rlog.jar finns på den här sidan.</p> <p>Se <a href="/help/sites-deploying/monitoring-and-maintaining.md#using-rlog-jar-to-find-requests-with-long-duration-times">Använda rlog.jar för att hitta begäranden med lång varaktighet</a>.<br /> </p> <p> </p> </td>
+   <td><p>Du kan söka efter långsamma begäranden genom att analysera <code>request.log</code> eller genom att använda <code>rlog.jar</code>.</p> <p>Mer information om hur du använder rlog.jar finns på den här sidan.</p> <p>Se <a href="/help/sites-deploying/monitoring-and-maintaining.md#using-rlog-jar-to-find-requests-with-long-duration-times">Söka efter förfrågningar med lång varaktighet med rlog.jar</a>.<br /> </p> <p> </p> </td>
   </tr>
   <tr>
    <td><strong>Steg 16</strong></td>
@@ -153,7 +152,7 @@ Analysen börjar med steg 0. Målet är att avgöra vilken enhet (avsändare, ex
   <tr>
    <td><strong>Steg 19</strong></td>
    <td>100 % CPU</td>
-   <td><a href="/help/sites-deploying/monitoring-and-maintaining.md#monitoring-performance">https://helpx.adobe.com/experience-manager/6-3/sites-deploying/monitoring-and-maintaining.html#MonitoringPerformance</a></td>
+   <td><a href="/help/sites-deploying/monitoring-and-maintaining.md#monitoring-performance">https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html</a></td>
   </tr>
   <tr>
    <td><strong>Steg 20</strong></td>
@@ -162,7 +161,7 @@ Analysen börjar med steg 0. Målet är att avgöra vilken enhet (avsändare, ex
     <ol>
      <li><a href="/help/sites-deploying/monitoring-and-maintaining.md#out-of-memory">Slut på minne</a></li>
      <li><a href="/help/sites-deploying/troubleshooting.md">Mitt program orsakar fel av typen slut på minne</a></li>
-     <li><a href="https://helpx.adobe.com/experience-manager/kb/AnalyzeMemoryProblems.html">Analysera minnesproblem i hjälpen.</a><br /> </li>
+     <li><a href="https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html?lang=en">Analysera minnesproblem.</a><br /> </li>
     </ol> </td>
   </tr>
   <tr>
@@ -185,7 +184,7 @@ Analysen börjar med steg 0. Målet är att avgöra vilken enhet (avsändare, ex
    <td>Databasjustering</td>
    <td>
     <ul>
-     <li><a href="https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html">Tips för prestandajustering</a></li>
+     <li><a href="https://helpx.adobe.com/customer-care-office-hours/aem/6x-performance-tuning-best-practices.html">Tips för prestandajustering</a></li>
      <li><a href="/help/sites-deploying/configuring-performance.md#configuring-for-performance">Konfigurera för prestanda</a></li>
      <li><a href="https://www.slideshare.net/jukka/repository-performance-tuning">Justering av databasprestanda</a></li>
     </ul> </td>
@@ -204,7 +203,7 @@ Analysen börjar med steg 0. Målet är att avgöra vilken enhet (avsändare, ex
   <tr>
    <td><strong>Steg 26</strong></td>
    <td>MSM-infrastruktur</td>
-   <td><p><a href="/help/sites-administering/msm-best-practices.md">Bästa praxis för hantering av flera webbplatser</a><br /> </p> </td>
+   <td><p><a href="/help/sites-administering/msm-best-practices.md">Metodtips för hantering av flera webbplatser</a><br /> </p> </td>
   </tr>
   <tr>
    <td><strong>Steg 27</strong></td>
@@ -213,7 +212,7 @@ Analysen börjar med steg 0. Målet är att avgöra vilken enhet (avsändare, ex
     <ol>
      <li><a href="/help/sites-deploying/configuring-performance.md#cq-dam-asset-synchronization-service">Resurssynkroniseringstjänst</a></li>
      <li><a href="/help/sites-deploying/configuring-performance.md#multiple-dam-instances">Flera DAM-instanser</a></li>
-     <li>Artiklar med tips för prestandajustering <a href="https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html">här</a> och <a href="https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html">här</a>.<br /> </li>
+     <li>Artiklar med tips för prestandajustering <a href="https://helpx.adobe.com/customer-care-office-hours/aem/6x-performance-tuning-best-practices.html">här</a> och <a href="https://helpx.adobe.com/customer-care-office-hours/aem/6x-performance-tuning-best-practices.html">här</a>.<br /> </li>
     </ol> </td>
   </tr>
   <tr>
@@ -223,27 +222,27 @@ Analysen börjar med steg 0. Målet är att avgöra vilken enhet (avsändare, ex
   </tr>
   <tr>
    <td><strong>Steg 30</strong></td>
-   <td>Flytta dispatchern närmare (lägg till en per region?)</td>
+   <td>Flytta Dispatcher närmare (lägg till en per region?)</td>
    <td> </td>
   </tr>
   <tr>
    <td><strong>Steg 31</strong></td>
-   <td>Använd CDN framför dispatcher</td>
-   <td><a href="https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html#using-dispatcher-with-a-cdn">Använda Dispatcher med ett CDN</a><br /> </td>
+   <td>Använd CDN framför Dispatcher</td>
+   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=en#using-dispatcher-with-a-cdn">Använda Dispatcher med ett CDN</a><br /> </td>
   </tr>
   <tr>
    <td><strong>Steg 32</strong></td>
-   <td>Använd sessionshantering på dispatchernivå för att avlasta AEM server</td>
-   <td><p><a href="https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#enabling-secure-sessions-sessionmanagement">Aktivera säkra sessioner</a></p> </td>
+   <td>Om du vill avlasta AEM server använder du sessionshantering på Dispatcher-nivå</td>
+   <td><p><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#enabling-secure-sessions-sessionmanagement">Aktivera säkra sessioner</a></p> </td>
   </tr>
   <tr>
    <td><strong>Steg 33</strong></td>
    <td>Gör förfrågningar tillgängliga</td>
    <td>
     <ol>
-     <li><a href="https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html">Allmän Dispatcher-konfiguration</a></li>
-     <li><a href="https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#configuring-the-dispatcher-cache-cache">Konfigurera Dispatcher Cache</a></li>
-    </ol> <p>Hur man förbättrar cachekvoten, gör förfrågningar cachelagrade (god praxis vid utsändning)</p> <p>Ta även hänsyn till inställningarna nedan för att optimera dina cachelagringskonfigurationer<br /> </p>
+     <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=en">Allmän Dispatcher-konfiguration</a></li>
+     <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache">Konfigurera Dispatcher Cache</a></li>
+    </ol> <p>Hur man förbättrar cachekvoten, gör förfrågningar cachelagrade (god praxis vid utsändning)</p> <p>Titta också på inställningarna nedan för att optimera dina cachelagringskonfigurationer<br /> </p>
     <ol>
      <li>Ange en regel utan cache för HTTP-begäran som inte är GET</li>
      <li>Konfigurera frågesträngar som inte ska kunna cachelagras</li>
@@ -253,21 +252,21 @@ Analysen börjar med steg 0. Målet är att avgöra vilken enhet (avsändare, ex
   </tr>
   <tr>
    <td><strong>Steg 34</strong></td>
-   <td>Uppgradera dispatcherversion</td>
-   <td><p>Du kan hämta den senaste Dispatcher-versionen på den här platsen:</p> <p><a href="https://helpx.adobe.com/experience-manager/dispatcher/release-notes.html">Följ länk</a></p> </td>
+   <td>Uppgradera Dispatcher-version</td>
+   <td><p>Du kan hämta den senaste Dispatcher-versionen på den här platsen:</p> <p><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/release-notes.html?lang=en">Följ länk</a></p> </td>
   </tr>
   <tr>
    <td><strong>Steg 35</strong></td>
-   <td>Konfigurera dispatcher</td>
-   <td><a href="https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html">Konfigurera Dispatcher</a><br /> </td>
+   <td>Konfigurera Dispatcher</td>
+   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en">Konfigurera Dispatcher</a><br /> </td>
   </tr>
   <tr>
    <td><strong>Steg 36</strong></td>
    <td>Kontrollera cacheminnets ogiltigförklaring</td>
    <td><br />
     <ul>
-     <li><a href="https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html#invalidating-dispatcher-cache-from-the-authoring-environment">Cacheinvalidering för författarnivån.</a></li>
-     <li><a href="https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html#invalidating-dispatcher-cache-from-a-publishing-instance">Cacheinvalidering för publiceringsnivån.</a></li>
+     <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html?lang=en#invalidating-dispatcher-cache-from-the-authoring-environment">Cacheinvalidering för författarnivån.</a></li>
+     <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html?lang=en#invalidating-dispatcher-cache-from-a-publishing-instance">Cacheinvalidering för publiceringsnivån.</a></li>
     </ul> </td>
   </tr>
   <tr>
@@ -278,7 +277,7 @@ Analysen börjar med steg 0. Målet är att avgöra vilken enhet (avsändare, ex
   <tr>
    <td><strong>Steg 39</strong></td>
    <td>Använd pre-connect för att minska anslutningens belastning</td>
-   <td>Se Gem Session som anges ovan. Dessutom kan du föransluta ytterligare dokumentation på W3c:<a href="https://www.w3.org/TR/resource-hints/#dfn-preconnect"> https://www.w3.org/TR/resource-hints/#dfn-preconnect</a></td>
+   <td>Se Gem-sessionen ovan. Dessutom kan du föransluta ytterligare dokumentation på W3c:<a href="https://html.spec.whatwg.org/#linkTypes"> https://html.spec.whatwg.org/#linkTypes</a></td>
   </tr>
   <tr>
    <td><strong>Steg 40 och 41</strong><br /> </td>
@@ -298,7 +297,7 @@ Analysen börjar med steg 0. Målet är att avgöra vilken enhet (avsändare, ex
   <tr>
    <td><strong>Steg 42 och 43</strong></td>
    <td>Behåll</td>
-   <td><p>Är <code>Keep-Alive</code> finns det en rubrik i de olika begärandena att återanvända anslutningar? I annat fall skulle det innebära att varje begäran leder till en annan anslutningsanläggning, vilket medför onödiga kostnader. (Standardanalys av HTTP-begäran i webbläsaren)</p> <p>Du kan kontrollera <a href="/help/sites-administering/proxy-jar.md">Proxyserververktyget</a> om du vill kontrollera om det finns anslutningar som inte fungerar.<br /> </p> </td>
+   <td><p>Är <code>Keep-Alive</code> finns det en rubrik i de olika begärandena att återanvända anslutningar? I annat fall innebär det att varje begäran leder till en annan anslutningsanläggning, vilket medför onödiga kostnader. (Standardanalys av HTTP-begäran i webbläsaren)</p> <p>Du kan kontrollera <a href="/help/sites-administering/proxy-jar.md">Proxyserververktyget</a> om du vill kontrollera om det finns anslutningar som inte fungerar.<br /> </p> </td>
   </tr>
   <tr>
    <td><strong>Steg 44</strong></td>
@@ -310,7 +309,7 @@ Analysen börjar med steg 0. Målet är att avgöra vilken enhet (avsändare, ex
    <td>Minska antalet förfrågningar</td>
    <td>
     <ol>
-     <li>Sammanfoga resurser (bilder, CSS-sprites, JSON osv.)<br /> </li>
+     <li>Sammanfoga resurser (bilder, CSS-sprites, JSON)<br /> </li>
      <li>Inbäddning av klienter:
       <ol>
        <li><a href="/help/sites-developing/clientlibs.md#creating-client-library-folders">Skapar klientbiblioteksmappar</a> - se rubriken Använda inbäddning för att minimera förfrågningar</li>
