@@ -12,9 +12,9 @@ discoiquuid: b210f5d7-1d68-49ee-ade7-667c6ab11d2b
 docset: aem65
 exl-id: f9a88156-91a2-4c85-9bc9-8f23700c2cbd
 feature: Operations
-source-git-commit: ce6d24e53a27b64a5d0a9db2e4b6672bd77cf9ec
+source-git-commit: 71842228dd3cb1ce3b79728912e8333d25fccefc
 workflow-type: tm+mt
-source-wordcount: '6065'
+source-wordcount: '6053'
 ht-degree: 0%
 
 ---
@@ -138,9 +138,9 @@ Du skapar en enskild hälsokontroll i två steg: implementera en kontroll av ski
 
 ### Skapa en sammansatt hälsokontroll {#creating-a-composite-health-check}
 
-En sammansatt hälsokontroll har till uppgift att sammanställa flera enskilda hälsokontroller som delar en uppsättning gemensamma funktioner. Den sammansatta hälsokontrollen för Säkerhet grupperar till exempel alla enskilda hälsokontroller som utför säkerhetsrelaterade kontroller. Det första steget för att skapa en sammansatt kontroll är att lägga till en OSGI-konfiguration. För att den ska kunna visas på kontrollpanelen för åtgärder måste en ny konfigurationsnod läggas till, på samma sätt som vi gjorde för en enkel kontroll.
+En sammansatt hälsokontroll har till uppgift att sammanställa flera enskilda hälsokontroller som delar en uppsättning gemensamma funktioner. Den sammansatta hälsokontrollen för Säkerhet grupperar till exempel alla enskilda hälsokontroller som utför säkerhetsrelaterade kontroller. Det första steget för att skapa en sammansatt kontroll är att lägga till en OSGI-konfiguration. För att den ska kunna visas på kontrollpanelen för åtgärder måste en ny konfigurationsnod läggas till på samma sätt som en enkel kontroll.
 
-1. Gå till Web Configuration Manager i OSGI-konsolen. Du kan göra detta genom att gå till `https://serveraddress:port/system/console/configMgr`
+1. Gå till Web Configuration Manager i OSGI-konsolen. Öppna `https://serveraddress:port/system/console/configMgr`
 1. Sök efter den anropade posten **Apache Sling Composite Health Check**. Observera att det redan finns två konfigurationer när du har hittat den: en för systemkontrollerna och en annan för säkerhetskontrollerna.
 1. Skapa en konfiguration genom att trycka på plusknappen (+) till höger om konfigurationen. Ett nytt fönster visas enligt nedan:
 
@@ -153,7 +153,7 @@ En sammansatt hälsokontroll har till uppgift att sammanställa flera enskilda h
    * **Namn (hc.name):** Namnet på den sammansatta hälsokontrollen. Ett beskrivande namn rekommenderas.
    * **Taggar (hc.tags):** Taggarna för den här hälsokontrollen. Om den här sammansatta hälsokontrollen är avsedd att ingå i en annan sammansatt hälsokontroll (till exempel i en hierarki av hälsokontroller) lägger du till de taggar som den sammansatta kontrollen är relaterad till.
    * **MBean-namn (hc.mbean.name):** Namnet på den Mbean som ges till JMX MBean för den här sammansatta hälsokontrollen.
-   * **Filtertaggar (filter.tags):** Egenskapen som är specifik för sammansatta hälsokontroller. Det här är de taggar som det sammansatta objektet ska aggregera. Den sammansatta hälsokontrollen aggregerar under sin grupp alla hälsokontroller som har en tagg som matchar någon av filtertaggarna i den här sammansatta sammansättningen. En sammansatt hälsokontroll med till exempel filtertaggarna **test** och **check**, sammanställer alla individuella och sammansatta hälsokontroller som har någon av **test** och **check** taggar i deras taggegenskap ( `hc.tags`).
+   * **Filtertaggar (filter.tags):** Egenskapen som är specifik för sammansatta hälsokontroller. Dessa taggar sammanställs av det sammansatta. Den sammansatta hälsokontrollen aggregerar under sin grupp alla hälsokontroller som har en tagg som matchar någon av filtertaggarna i den här sammansatta sammansättningen. En sammansatt hälsokontroll med till exempel filtertaggarna **test** och **check**, sammanställer alla individuella och sammansatta hälsokontroller som har någon av **test** och **check** taggar i deras taggegenskap ( `hc.tags`).
 
    >[!NOTE]
    >
@@ -180,7 +180,7 @@ En sammansatt hälsokontroll har till uppgift att sammanställa flera enskilda h
 
    >[!NOTE]
    >
-   >Om du skapar enskilda hälsokontroller som logiskt sett hör till en sammansatt kontroll som redan finns på kontrollpanelen som standard, hämtas de automatiskt och grupperas under respektive sammansatta kontroll. På grund av detta behöver du inte skapa någon konfigurationsnod för dessa kontroller.
+   >Om du skapar enskilda hälsokontroller som logiskt sett hör till en sammansatt kontroll som redan finns på kontrollpanelen som standard, hämtas de automatiskt och grupperas under respektive sammansatta kontroll. Därför behöver du inte skapa en konfigurationsnod för dessa kontroller.
    >
    >Om du till exempel skapar en enskild säkerhetshälsokontroll tilldelar du den värdet **säkerhet**-taggen och den är installerad. Den visas automatiskt under den sammansatta kontrollen Säkerhetskontroller på kontrollpanelen för åtgärder.
 
@@ -309,11 +309,11 @@ En sammansatt hälsokontroll har till uppgift att sammanställa flera enskilda h
   </tr>
   <tr>
    <td>Kontroll av kodcache</td>
-   <td><p>Det här är en hälsokontroll som verifierar flera JVM-villkor som kan utlösa ett CodeCache-fel i Java 7:</p>
+   <td><p>En hälsokontroll som verifierar flera JVM-förhållanden som kan utlösa ett CodeCache-fel i Java™ 7:</p>
     <ul>
-     <li>returnerar Varna om instansen körs på Java 7, med tömning av kodcache aktiverat</li>
-     <li>returnerar Varna om instansen körs på Java 7 och storleken på den reserverade kodcachen är mindre än ett minimitröskelvärde (standardvärdet är 90 MB)</li>
-    </ul> <p>The <code>minimum.code.cache.size</code> Tröskelvärdet kan konfigureras. Mer information om felet finns i <a href="https://bugs.java.com/bugdatabase/view_bug.do?bug_id=8012547">kontrollera den här sidan</a>.</p> <p>MBean för den här hälsokontrollen är <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DcodeCacheHealthCheck%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthCheck:name=codeCacheHealthCheck,type=HealthCheck</a>.</p> </td>
+     <li>returnerar Varna om instansen körs på Java™ 7, med tömning av kodcache aktiverat</li>
+     <li>returnerar Varna om instansen körs på Java™ 7 och storleken på den reserverade kodcachen är mindre än ett minimivärde (standardvärdet är 90 MB)</li>
+    </ul> <p>The <code>minimum.code.cache.size</code> Tröskelvärdet kan konfigureras. Mer information om felet finns i <a href="https://bugs.java.com/bugdatabase/"> och sök sedan på fel ID 8012547</a>.</p> <p>MBean för den här hälsokontrollen är <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DcodeCacheHealthCheck%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthCheck:name=codeCacheHealthCheck,type=HealthCheck</a>.</p> </td>
   </tr>
   <tr>
    <td>Sökvägsfel för resurssökning</td>
@@ -630,7 +630,7 @@ Du kan schemalägga underhållsaktiviteten Rensa version så att tidigare versio
 
 ## Anpassade underhållsaktiviteter {#custom-maintenance-tasks}
 
-Anpassade underhållsåtgärder kan implementeras som OSGi-tjänster. Eftersom infrastrukturen för underhållsaktiviteter baseras på Apache Slings jobbhantering måste en underhållsaktivitet implementera java-gränssnittet ` [org.apache.sling.event.jobs.consumer.JobExecutor](https://sling.apache.org/apidocs/sling7/org/apache/sling/event/jobs/consumer/JobExecutor.html)`. Dessutom måste den deklarera flera egenskaper för serviceregistrering som ska identifieras som en underhållsuppgift enligt nedan:
+Anpassade underhållsåtgärder kan implementeras som OSGi-tjänster. Eftersom infrastrukturen för underhållsaktiviteter baseras på Apache Slings jobbhantering måste en underhållsåtgärd implementera Java™-gränssnittet ` [org.apache.sling.event.jobs.consumer.JobExecutor](https://sling.apache.org/apidocs/sling7/org/apache/sling/event/jobs/consumer/JobExecutor.html)`. Dessutom måste den deklarera flera egenskaper för serviceregistrering som ska identifieras som en underhållsuppgift enligt nedan:
 
 <table>
  <tbody>
@@ -767,7 +767,7 @@ Du kan även hämta en `JSON` fil som sammanfattar instrumentpanelsinformationen
    <td>System</td>
    <td>
     <ul>
-     <li>operativsystem och OS-version (till exempel Mac OS X)</li>
+     <li>operativsystem och OS-version (t.ex. macOS X)</li>
      <li>systemets genomsnittliga belastning, som hämtats från <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/management/OperatingSystemMXBean.html#getSystemLoadAverage--">OperatingSystemMXBeusable</a></li>
      <li>diskutrymme (på partitionen där arbetskatalogen finns)</li>
      <li>maximal heap, som returneras av <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/management/MemoryMXBean.html#getHeapMemoryUsage--">MemoryMXBean</a></li>
