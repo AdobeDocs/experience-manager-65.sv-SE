@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # Skapa och hantera A/B-tester för adaptiva formulär{#create-and-manage-a-b-test-for-adaptive-forms}
 
-|Negativ|[!BADGE Avbruten]{type=negative tooltip="Den här funktionen är nu inte längre aktiv"}
+|Negativ|[!BADGE Avbruten]{type=negative tooltip="Den här funktionen är nu inte längre aktiv"}|
 <div class="preview"> A/B-testningen för adaptiva formulär har nått slutet av livscykeln och stöds inte längre. </div>
 
 ## Översikt {#overview-br}
