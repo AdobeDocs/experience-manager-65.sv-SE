@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 774c2553-b629-456b-afa7-5713490f4a0a
 role: Admin
 exl-id: 4237085a-d70d-41de-975d-153f58336daa
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: cc0574ae22758d095a3ca6b91f0ceae4a8691f0e
 workflow-type: tm+mt
-source-wordcount: '2153'
+source-wordcount: '1911'
 ht-degree: 0%
 
 ---
@@ -27,8 +27,6 @@ I AEM Communities kan användarna själva registrera och redigera sina profiler 
 * Skapa undergrupper på communitywebbplatsen (se [communitygrupper](creating-groups.md)).
 
 * [Måttlig](moderation.md) användargenererat innehåll (UGC).
-
-* be [aktiveringsresurs](resources.md) kontakter.
 
 * be [privilegierad](#privileged-members-group) för att skapa inlägg för bloggar, kalendrar, QnA och forum.
 
@@ -79,9 +77,7 @@ Om du vill hantera användare och användargrupper som är registrerade i förfa
 | administratörer | Administratörsgruppen består av systemadministratörer som har alla funktioner som en community-administratör har samt möjlighet att hantera gruppen Community Administrators. |
 | Community-administratörer | Gruppen Community Administrators blir automatiskt medlem i alla communitysajter och i alla communitygrupper som skapas på webbplatsen. En inledande medlem i gruppen Community Administrators är gruppen Administratörer. I redigeringsmiljön kan communityadministratörer skapa communitysajter, hantera webbplatser, hantera medlemmar (de kan förbjuda medlemmar från communityn) och moderera innehåll. |
 | Community &lt;*webbplatsnamn*> Sitecontentmanager | Content Manager för communitysajt kan utföra AEM, skapa innehåll och ändra sidor för en community-sajt. |
-| Community Enablement Managers | Gruppen Hanterare för communityaktivering består av användare som är tillgängliga för tilldelning för att hantera en communitywebbplats grupp för aktiveringshanterare. |
-| Community &lt;*webbplatsnamn* > SiteEnablementManagers | Gruppen Hanterare för aktivering av communitywebbplatser består av användare som har tilldelats behörigheten att hantera aktiveringen av en community-webbplats [resurser](resources.md). |
-| Inget | En anonym besökare får inte åtkomst till författarmiljön. |
+| Ingen | En anonym besökare får inte åtkomst till författarmiljön. |
 
 ### Systemadministratörer {#system-administrators}
 
@@ -120,7 +116,7 @@ I publiceringsmiljön, beroende på [inställningar](sites-console.md#user-manag
 | Community &lt;*webbplatsnamn*> &lt;*gruppnamn*> Medlemmar | En community-gruppmedlem är en community-medlem som antingen har gått med i en öppen community-grupp eller har bjudits in till en stängd community-grupp. De har funktionerna som en medlem i den communitygruppen på webbplatsen. |
 | Community &lt;*webbplatsnamn*> Gruppadministratörer | En administratör för en community-webbplatsgrupp är en betrodd community-medlem som har tilldelats behörigheten att skapa och hantera undergrupper (grupper) på en community-webbplats. Möjligheten att moderera i sitt sammanhang ingår. |
 | *Säkerhetsgrupp för behöriga medlemmar* | En användargrupp som skapats och underhålls manuellt för att begränsa möjligheten att skapa innehåll. Se [Grupp med behöriga medlemmar](#privileged-members-group). |
-| Inget | En anonym besökare som upptäcker webbplatsen kan visa och söka på communitysajter som tillåter anonym åtkomst. För att kunna delta och publicera innehåll måste användaren själv registrera sig (om det är tillåtet) och bli medlem i communityn. |
+| Ingen | En anonym besökare som upptäcker webbplatsen kan visa och söka på communitysajter som tillåter anonym åtkomst. För att kunna delta och publicera innehåll måste användaren själv registrera sig (om det är tillåtet) och bli medlem i communityn. |
 
 ### Tilldela medlemmar till publiceringsgruppsroller {#assigning-members-to-publish-group-roles}
 
@@ -196,43 +192,11 @@ Det finns fyra separata konsoler som endast är tillgängliga i författarmiljö
 | hanterar | användare i författare | användargrupper för författare | medlemmar vid publicering | medlemsgrupper vid publicering |
 | kräver | administratörsbehörighet | administratörsbehörighet | administratörsbehörighet, tunneltjänst, användarsynkronisering för publiceringsgrupp | administratörsbehörighet, tunneltjänst, användarsynkronisering för publiceringsgrupp |
 
-### Roll för Community Enablement Manager {#community-enablement-manager-role}
-
-Möjligheten för en besökare att registrera sig själv är vanligtvis inte tillåten för en [användargrupper](overview.md#enablement-community) eftersom det finns kostnader för varje medlem. Aktiveringsdeltagare och -resurser hanteras av en användare som tilldelats [roll](#author-group-roles) av `enablement manager` [när webbplatsen skapades](sites-console.md#enablement) on author (added as member of group) `Community <site-name> Siteenablementmanagers`). The `enablement manager` ansvarar också för [tilldela utbildningsresurser](resources.md) till communitymedlemmar på författaren.
-
-Endast användare som är medlemmar i den globala `Community Enablement Managers` kan markeras som en `enablement manager` för en specifik community-webbplats.
-
-Så här skapar du en användare som kan tilldelas rollen `Community Site Enablement Manager`använder du den klassiska UI-säkerhetskonsolen för att ange sökvägen:
-
-På en författarinstans:
-
-1. Inloggad med administratörsbehörighet. Bläddra till den klassiska säkerhetskonsolen för användargränssnittet.
-
-   Till exempel: [http://localhost:4502/useradmin](http://localhost:4502/useradmin)
-
-2. Välj **[!UICONTROL Create User]**.
-3. Fyll i `Create User` -dialogrutan.
-   * Sökvägen måste vara `/home/users/community`.
-4. Välj **[!UICONTROL Create]**.
-
-   ![create-community-user](assets/create-community-user.png)
-
-* I den vänstra rutan söker du efter den nyskapade användaren och väljer att visa i den högra rutan.
-
-   ![community-user](assets/view-community-user.png)
-
-I den vänstra rutan:
-
-1. Rensa sökrutan och markera **[!UICONTROL Hide Users]**.
-2. Hitta och dra `community-enablementmanagers` till **[!UICONTROL Groups]** -fliken för den nya användaren som visas i den högra rutan.
-
-   ![assign-group](assets/assign-group.png)
-
 ### Rollen Community-administratörer {#community-administrators-role}
 
 Som anges i [Författargruppsroller](#author-group-roles) så kan medlemmar i gruppen Community Administrators skapa communitysajter, hantera webbplatser, hantera medlemmar (de kan förbjuda medlemmar från communityn) och moderera innehåll.
 
-Följ samma steg som när du skapar och tilldelar en användare rollen som [aktiveringshanteraren](#communitysiteenablementmanagerrole), men lägg till c `ommunity-administrators` -gruppen på användarens gruppflik.
+Följ samma steg som att skapa och tilldela en användare rollen som aktiveringshanterare, men lägg till c `ommunity-administrators` -gruppen på användarens gruppflik.
 
 ### LDAP-integrering {#ldap-integration}
 

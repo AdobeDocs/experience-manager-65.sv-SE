@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 44374006-f711-4af8-a1fe-f89164f79581
 docset: aem65
 exl-id: d6243dff-a067-455c-a326-5f451f225efd
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 9f9f80eb4cb74b687c7fadd41d0f8ea4ee967865
 workflow-type: tm+mt
-source-wordcount: '1435'
+source-wordcount: '1273'
 ht-degree: 0%
 
 ---
@@ -21,10 +21,6 @@ ht-degree: 0%
 # AEM Communities - översikt {#aem-communities-overview}
 
 Adobe Experience Manager (AEM) Communities ger möjlighet att snabbt skapa en lokal communitysajt som har förbättrade prestanda, förbättrad webbplatshantering och uppmuntrar till konvertering av besökare till värdefulla communitymedlemmar.
-
-<!--
-Contact your account representative for information regarding licensing of AEM Communities as well as additional licensing for enablement features and Adobe Analytics.
--->
 
 ## Funktioner i Communities {#communities-features}
 
@@ -40,7 +36,6 @@ Med AEM Communities kan man utveckla en relation med besökare på en webbplats 
 * **Fildelning**,
 * **Meddelanden** och **aktivitetsströmmar**,
 * Tillåter **taggning** (@mention) andra registrerade medlemmar i användargenererat innehåll för att få uppmärksamhet.
-* Stöder **tangentbordsnavigering** om aktiveringskomponenter (t.ex. Katalog- och kursuppspelning, Uppdrag, Filbibliotek).
 
 Funktioner i Communities kan visas med [AEM Demo Machine](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki) som är tillgängliga offentligt på GitHub.com eller med den nya implementeringen av referensen We.Retail.
 
@@ -120,11 +115,6 @@ I författarmiljön ger den globala navigeringskonsolen åtkomst till [Communiti
 
    * Ger möjlighet att generera rapporter om uppdrag, inlägg och vyer.
 
-* [Resurser](/help/communities/resources.md) konsol
-
-   * Ger möjlighet att skapa aktiveringsresurser och utbildningsvägar.
-   * Ger tillgång till rapporter om aktiveringsresurser och utbildningsvägar.
-
 Den globala verktygskonsolen ger tillgång till följande verktyg för communities:
 
 * [Webbplatsmallar](/help/communities/tools.md#sitetemplatesconsole) konsol
@@ -183,9 +173,7 @@ The [communitykomponenter](/help/communities/author-communities.md) från vilken
 
 The [communitykomponentguide](/help/communities/components-guide.md) finns för interaktiv utforskning av komponenterna.
 
-## Typ av Communities {#types-of-communities}
-
-### Engagement Community {#engagement-community}
+## Engagement Community {#engagement-community}
 
 En engagemangscommunity är en communitywebbplats som fokuserar på att engagera kunder för att informera, begära feedback och låta kunderna interagera som communitymedlemmar.
 
@@ -208,23 +196,6 @@ En engagemangscommunity kan innehålla:
 * Analysrapporter
 
 Om du snabbt vill skapa en ny engagemangscommunity kan du besöka [Komma igång med AEM Communities](/help/communities/getting-started.md).
-
-### Aktivera community {#enablement-community}
-
-En community för hjälpsystem är en communitywebbplats som innehåller funktioner för onlineutbildning.
-
-En community för aktivering kan innehålla:
-
-* Alla funktioner i [engagemangscommunity](#engagement-community).
-* möjlighet att tilldela innehåll och inlärning. till medlemmar och medlemsgrupper.
-* Stöder SCORM-innehåll, t.ex. frågor och tester.
-* Spårning av slutförda tilldelningar.
-* Tillgång till rapporter och analyser.
-* Möjlighet att diskutera en utbildningsresurs via forum, meddelanden, kommentarer och omdömen.
-
-En aktiveringscommunity kan skapas när [Tillägget Aktivera är konfigurerat](/help/communities/enablement.md)som kräver ytterligare licenser för användning i produktionsmiljö. En webbplats för aktiveringscommunityn kommer att innehålla [tilldelningsfunktion](#community-functions).
-
-Om du enkelt vill skapa en ny aktiveringscommunity går du till [Komma igång med AEM Communities för aktivering](/help/communities/getting-started-enablement.md).
 
 ## AEM Demo Machine {#aem-demo-machine}
 

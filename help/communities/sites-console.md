@@ -12,9 +12,9 @@ discoiquuid: 4130f952-5bb5-4e32-91d6-47b2885b30a4
 docset: aem65
 role: Admin
 exl-id: 426e3adf-3723-4d17-a988-6eb050939e68
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: cc0574ae22758d095a3ca6b91f0ceae4a8691f0e
 workflow-type: tm+mt
-source-wordcount: '3276'
+source-wordcount: '3104'
 ht-degree: 0%
 
 ---
@@ -62,10 +62,6 @@ Konsolen Communities Sites visar alla befintliga communityplatser. Från den hä
 Om du vill skapa en ny community-webbplats väljer du **Skapa** ikon.
 
 Om du vill komma åt en befintlig communitywebbplats och redigera, publicera, exportera eller lägga till en kapslad grupp, markerar du platsens mappikon.
-
-Följande bild visar till exempel huvudkonsolen Webbplatser i Communities som visar mapparna för två communityplatser: [enable](/help/communities/getting-started-enablement.md) och [engagera](/help/communities/getting-started.md):
-
-![site-console](assets/site-console.png)
 
 ## Skapa webbplats {#site-creation}
 
@@ -165,7 +161,6 @@ Panelen Inställningar innehåller flera underpaneler med funktioner som ska kon
 * [MODERATION](#moderation)
 * [ANALYS](#analytics)
 * [ÖVERSÄTTNING](#translation)
-* [AKTIVERING](#enablement)
 
 >[!NOTE]
 >
@@ -182,12 +177,6 @@ Panelen Inställningar innehåller flera underpaneler med funktioner som ska kon
 #### ANVÄNDARHANTERING {#user-management}
 
 ![createplatserinställningar](assets/createsitesettings.png)
-
->[!NOTE]
->
->Vi rekommenderar att [communitysajter för aktivering](/help/communities/overview.md#enablement-community) vara privat (kontakta din kontorepresentant för mer information).
->
->En communitywebbplats är privat när anonyma besökare på webbplatsen nekas åtkomst, inte får registrera sig själv och inte får använda social inloggning.
 
 * **Tillåt användarregistrering**
 
@@ -231,7 +220,7 @@ Låt vara omarkerad för en *private* communitysajt. Standard är avmarkerat.
 
 De taggar som kan användas på communityinnehåll kontrolleras genom att du väljer Taggnamnutrymmen som tidigare definierats i [Taggningskonsolen](/help/sites-administering/tags.md#tagging-console).
 
-Om du väljer taggnamnutrymmen för communitywebbplatsen begränsas dessutom det urval som visas när du definierar kataloger och resurser. Se [Aktiveringsresurser för taggning](/help/communities/tag-resources.md) för viktig information.
+Om du väljer taggnamnutrymmen för communitywebbplatsen begränsas dessutom det urval som visas när du definierar kataloger och resurser.
 
 * sökruta: Börja skriva för att identifiera taggar som kan användas på webbplatsen.
 
@@ -350,21 +339,6 @@ Om du väljer det här alternativet översätts inte innehållet förrän en beg
    * `Always show contributions in the original language` (standard)
    * `Always show contributions in user preferred language`
    * `Show contributions in user preferred language for only logged-in users`
-
-#### AKTIVERING {#enablement}
-
-![webbplatsaktivering](assets/site-enablement.png)
-
-The `ENABLEMENT`inställningarna gäller när den valda communitywebbplatsmallen innehåller [tilldelningsfunktion](/help/communities/functions.md#assignments-function)som är tillgänglig när aktiveringsfunktionerna är licensierade och [konfigurerad](/help/communities/enablement.md). Referenswebbplatsmallen som innehåller tilldelningsfunktionen är `Reference Structured Learning Site Template.`
-
-* **Aktivitetshanterare**
-(Obligatoriskt) Endast medlemmar i `Community Enablementmanagers` gruppen är tillgänglig att väljas för att hantera den här aktiveringscommunityn. Aktivitetshanterare ansvarar för att tilldela medlemmar till resurser. Se även [Hantera användare och användargrupper](/help/communities/users.md).
-
-* **Marketing Cloud organisation-ID**
-
-   (valfritt) ID:t för en [Analys av pulsslag för video](/help/communities/analytics.md#video-heartbeat-analytics) licens.
-
-* Välj **Nästa**.
 
 ### Steg 4: Skapa webbgruppsplats {#step-create-communities-site}
 
@@ -486,12 +460,6 @@ Med hjälp av inställningspanelen får du tillgång till de flesta inställning
 ### Ändra miniatyrbild {#modify-thumbnail}
 
 På panelen MINIATYRBILD kan en bild överföras för att representera webbplatsen i webbgruppskonsolen.
-
-### Ändra aktivering {#modify-enablement}
-
-ENABLEMENT-panelen ger åtkomst till inställningarna som anges när en community-webbplats skapas.
-
-Se [AKTIVERING](#enablement) description.
 
 ## Publicera webbplatsen {#publishing-the-site}
 

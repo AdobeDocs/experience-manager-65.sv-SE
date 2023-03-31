@@ -7,9 +7,9 @@ breadcrumb-title: Användarhandbok om Communities
 user-guide-description: Skapa onlineupplevelser som forum, användargrupper, utbildningsresurser och andra sociala funktioner.
 feature: Communities
 role: User
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 9f9f80eb4cb74b687c7fadd41d0f8ea4ee967865
 workflow-type: tm+mt
-source-wordcount: '501'
+source-wordcount: '451'
 ht-degree: 5%
 
 ---
@@ -23,15 +23,10 @@ ht-degree: 5%
    + [AEM Communities - översikt](overview.md)
    + [Versionsinformation för AEM Communities](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/communities-release-notes.html)
    + [Komma igång med AEM Communities](getting-started.md)
-   + [Komma igång med AEM Communities för aktivering](getting-started-enablement.md)
    + [Inledande konfiguration](setup.md)
    + [Skapa en ny communitywebbplats](create-site.md)
    + [Upplev den publicerade webbplatsen](published-site.md)
    + [Skapar kapslade grupper](nested-groups.md)
-   + [Inledande inställning för aktivering](enablement-setup.md)
-   + [Skapa en ny communitywebbplats för aktivering](enablement-create-site.md)
-   + [Skapa och tilldela aktiveringsresurser](resource.md)
-   + [Upplev webbplatsen för publicerad aktivering](enablement-published-site.md)
 + Distribuerar {#deploy}
    + [Distribuera webbgrupper](deploy-communities.md)
    + [Uppgradera till AEM 6.5 Communities](upgrade.md)
@@ -42,7 +37,6 @@ ht-degree: 5%
    + [Communities Sites](https://experienceleague.adobe.com/docs/experience-manager-65/communities/introduction/administer-landing.html)
    + [Communities-konsoler](consoles.md)
    + [Analyskonfiguration för communityfunktioner](analytics.md)
-   + [Konfigurera aktiveringsfunktioner](enablement.md)
    + [Konfigurerar meddelanden](messaging.md)
    + [Moderating Community Content](moderate-ugc.md)
    + [Konfigurerar e-post](email.md)
@@ -62,9 +56,7 @@ ht-degree: 5%
    + [Community-funktioner](functions.md)
    + [Lagringskonfiguration](srp-config.md)
    + [Badges Console](badges.md)
-   + [Resurskonsol för aktivering](resources.md)
    + [Rapportkonsol](reports.md)
-   + [MySQL-konfiguration för aktiveringsfunktioner](mysql.md)
    + [FFmpeg for Communities](ffmpeg.md)
    + [Sammanhangsbaserad moderering](in-context.md)
    + [Advanced Scoring and Badges](advanced.md)
@@ -75,7 +67,6 @@ ht-degree: 5%
    + [MySQL-konfiguration för DSRP](dsrp-mysql.md)
    + [JSRP - JCR-lagringsresursprovider](jsrp.md)
    + [Solr-konfiguration för SRP](solr.md)
-   + [Aktiveringsresurser för taggning](tag-resources.md)
    + [Tagga användargenererat innehåll](tag-ugc.md)
    + [Översätter användargenererat innehåll](translate-ugc.md)
    + [Användarsynkronisering för Communities](sync.md)
@@ -94,10 +85,8 @@ ht-degree: 5%
    + [Översikt över lagringsresursprovider](srp.md)
    + [Grundläggande om communitysajter](sites-for-developers.md)
    + [Grundläggande om aktivitetsström](essentials-activities.md)
-   + [Grundläggande om uppdrag](essentials-assignments.md)
    + [Blog Essentials](blog-developer-basics.md)
    + [Grundläggande kalender](calendar-basics-for-developers.md)
-   + [Catalog Essentials](catalog-developer-essentials.md)
    + [Clientlibs for Communities Components](clientlibs.md)
    + [Grundläggande kommentarer](essentials-comments.md)
    + [OSGi Events for Communities-komponenter](events.md)
@@ -145,10 +134,8 @@ ht-degree: 5%
    + [Communities-komponenter](author-communities.md)
    + [Grunderna för communitykomponenter](basics.md)
    + [Funktionen Aktivitetsströmmar](activities.md)
-   + [Uppdragsfunktion](assignments.md)
    + [Bloggfunktion](blog-feature.md)
    + [Kalenderfunktion](calendar.md)
-   + [Katalogfunktion](catalog.md)
    + [Använda kommentarer](comments.md)
    + [Innehållsfunktion](featured.md)
    + [Filbiblioteksfunktion](file-library.md)

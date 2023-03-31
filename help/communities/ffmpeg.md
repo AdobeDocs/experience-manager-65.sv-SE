@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 739ec991-552b-42cd-85cd-984d1c9fe8fd
 role: Admin
 exl-id: dbe28334-3b38-4362-b4f8-e0630e634503
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 942db8fe3dad16be53dc6abe0e519d97a659e480
 workflow-type: tm+mt
-source-wordcount: '286'
+source-wordcount: '251'
 ht-degree: 1%
 
 ---
@@ -22,9 +22,7 @@ ht-degree: 1%
 
 ## Översikt {#overview}
 
-FFmpeg är en lösning för konvertering och direktuppspelning av ljud och video och används, när den är installerad, för korrekt transkodning av [videomaterial](../../help/sites-authoring/default-components-foundation.md#video) samt för AEM Communities aktiveringsfunktion.
-
-FFmpeg används i redigeringsmiljön för att hämta metadata för överförda aktiveringsresurser och generera en miniatyrbild som visas när aktiveringsresursen listas.
+FFmpeg är en lösning för konvertering och direktuppspelning av ljud och video och används, när den är installerad, för korrekt transkodning av [videomaterial](../../help/sites-authoring/default-components-foundation.md#video).
 
 ## Installerar FFmpeg {#installing-ffmpeg}
 

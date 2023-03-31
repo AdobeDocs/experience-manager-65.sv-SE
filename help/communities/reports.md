@@ -12,9 +12,9 @@ discoiquuid: fde053ff-b671-456b-869c-81f16ea1f1be
 docset: aem65
 role: Admin
 exl-id: 2aff2ffe-ba6f-4cc9-a126-40fc2a1161e2
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 942db8fe3dad16be53dc6abe0e519d97a659e480
 workflow-type: tm+mt
-source-wordcount: '594'
+source-wordcount: '360'
 ht-degree: 0%
 
 ---
@@ -27,10 +27,6 @@ För AEM Communities finns det olika rapporter som du kan få åtkomst till på 
 
 De olika rapporterna är i allmänhet följande:
 
-* [Uppdragsrapport](#assignments-report)
-
-   För [användargrupper](/help/communities/overview.md#enablement-community), ger en översikt över hur eleverna arbetar med sina uppdrag, inklusive ett poängvärde om SCORM-standarden implementeras.
-
 * [Vyrapport](#views-report)
 
    Ger en översikt över vad communitymedlemmar och besökare tycker om communitysajter.
@@ -38,8 +34,6 @@ De olika rapporterna är i allmänhet följande:
 * [Inläggsrapport](#posts-report)
 
    Ger en översikt över olika typer av inlägg från communitymedlemmar på alla communitysajter.
-
-När [Adobe Analytics är aktiverat](/help/communities/sites-console.md#analytics), kommer rapporter att innehålla antalet visningar, uppspelningar, kommentarer och omdömen för varje aktiveringsresurs över tiden.
 
 Tabellrapporter kan exporteras i CSV-format för efterföljande bearbetning.
 
@@ -64,59 +58,6 @@ Tabellrapporter kan exporteras i CSV-format för efterföljande bearbetning.
 
 
 ![rapporter](assets/reports1.png)
-
-### Rapporter om aktiveringsresurser och utbildningsvägar {#reports-for-enablement-resources-and-learning-paths}
-
-* Från global navigering: **[!UICONTROL Navigation]** > **[!UICONTROL Communities]** >  **[!UICONTROL Resources]**
-
-* Välj en befintlig webbplats för aktiveringscommunityn:
-
-   * Välj **Rapport** om du vill generera rapporter som täcker alla aktiveringsresurser.
-   * Välj en utbildningsväg för aktivering.
-   * Välj **Rapport** ikon för att generera rapporter för:
-
-      * De medföljande aktiveringsresurserna.
-      * De studerande som är tilldelade inlärningsbanan.
-
-* Rapporterna innehåller följande:
-
-   * Tabelldata, kan hämtas som CSV:
-
-      * Identifiera studerande
-      * Deras status
-      * Om du har tilldelats eller fått åtkomst via katalog
-      * Antal kommentarer
-      * Stjärngradering
-
-Mer information finns i [Avsnittet Rapporter](/help/communities/resources.md#report) i Resurskonsolen.
-
-## Uppdragsrapport {#assignments-report}
-
-På uppdragskonsolen kan rapporter filtreras efter aktiveringscommunityplats, användare eller grupper samt tilldelning.
-
-Rapporten innehåller information om hur de fortskrider samt eventuella kommentarer eller betyg som lämnats.
-
-![tilldelningsrapport](assets/assignment-report.png)
-
-Välj villkor för rapporten:
-
-* **Plats**
-
-   Välj en community-webbplats för aktivering.
-
-* **Användare eller grupp**
-   * Välj Användare om du vill generera en rapport för en elev.
-   * Välj Grupp om du vill generera en rapport för en grupp av studerande.
-
-   Tunneltjänsten kommer att få åtkomst till medlemmar och medlemsgrupper från publiceringsmiljön.
-
-* **Tilldelning**
-
-   Välj bland de aktiveringsresurser som tilldelats de valda eleverna.
-
-Välj **Generera** för att skapa rapporten:
-
-![generate-report](assets/generate-assignment-report.png)
 
 ## Vyrapport {#views-report}
 

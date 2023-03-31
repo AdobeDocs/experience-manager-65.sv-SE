@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 23745dd3-1424-4d22-8456-d2dbd42467f4
 exl-id: fb4e3973-2193-4bb5-8120-bf2f3ec80112
-source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
+source-git-commit: 9f9f80eb4cb74b687c7fadd41d0f8ea4ee967865
 workflow-type: tm+mt
-source-wordcount: '668'
+source-wordcount: '636'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 ## AEM Communities {#aem-communities}
 
-För AEM Communities måste Dispatcher konfigureras för att säkerställa att programmet fungerar korrekt [communitysajter](overview.md#community-sites). Ytterligare konfigurationer krävs när funktioner som Communities-aktivering och social inloggning inkluderas.
+För AEM Communities måste Dispatcher konfigureras för att säkerställa att programmet fungerar korrekt [communitysajter](overview.md#community-sites). Ytterligare konfigurationer krävs när funktioner som social inloggning inkluderas.
 
 För att ta reda på vad som är nödvändigt för just din driftsättning och webbplatsdesign
 
@@ -69,10 +69,6 @@ OSGi-konfigurationen **ACS AEM Commands - Dispatcher Cache Control Header - Max 
 * **Maximal ålder för cachekontroll**
 
    *(obligatoriskt)* Högsta ålder (i sekunder) som ska läggas till i huvudet för cachekontroll. Värdet måste vara större än noll (0).
-
-## Dispatcher-klienthuvuden {#dispatcher-client-headers}
-
-I avsnittet /clientheaders i `dispatcher.any`, om du anger en viss uppsättning rubriker måste du ta med `"CSRF-Token"` för [Aktiveringsfunktion](enablement.md) att fungera som det ska.
 
 ## Dispatcher-filter {#dispatcher-filters}
 
@@ -129,16 +125,6 @@ Följande poster ska läggas till i slutet av /filter-avsnittet, särskilt efter
 
 # enable personalization
 /0062 { /type "allow" /url "/libs/cq/personalization/*" }
-
-# for Enablement features
-/0170 { /type "allow" /url "/libs/granite/csrf/token.json*" }
-/0171 { /type "allow" /url "/content/sites/*/resources/en/*" }
-/0172 { /type "allow" /url "/content/communities/enablement/reports/*" }
-/0173 { /type "allow" /url "/content/sites/*" }
-/0174 { /type "allow" /url "/content/communities/scorm/*" }
-/0175 { /type "allow" /url "/content/sites/*" }
-/0176 { /type "allow" /url "/libs/granite/security/userinfo.json"}
-/0177 { /type "allow" /url "/libs/granite/security/currentuser.json" }
 
 # Enable CSRF token otherwise nothings works.
 /5001 { /type "allow" /url "/libs/granite/csrf/token.json *"}
@@ -202,16 +188,6 @@ Följande poster ska läggas till i slutet av /filter-avsnittet, särskilt efter
 
 # enable personalization
 /0062 { /type "allow" /url "/libs/cq/personalization/*" }
-
-# for Enablement features
-/0170 { /type "allow" /url "/libs/granite/csrf/token.json*" }
-/0171 { /type "allow" /glob "POST /content/sites/*/resources/en/*" }
-/0172 { /type "allow" /glob "GET /content/communities/enablement/reports/*" }
-/0173 { /type "allow" /glob "GET /content/sites/*" }
-/0174 { /type "allow" /glob "GET /content/communities/scorm/*" }
-/0175 { /type "allow" /url "GET /content/sites/*" }
-/0176 { /type "allow" /url "GET /libs/granite/security/userinfo.json"}
-/0177 { /type "allow" /url "GET /libs/granite/security/currentuser.json" }
 
 # Enable CSRF token otherwise nothings works.
 /5001 { /type "allow" /glob "GET /libs/granite/csrf/token.json *"}
@@ -428,17 +404,7 @@ Här följer ett exempel `dispatcher.any` -fil som innehåller Communities /filt
    /0064 { /type "allow" /url "/etc/cloudservices/*" }
    /0062 { /type "allow" /url "/libs/cq/personalization/*"  }  # enable personalization
 
-   # For Enablement features
-   /0170 { /type "allow" /url "/libs/granite/csrf/token.json*" }
-   /0171 { /type "allow" /url "/content/sites/*/resources/en/*" }
-   /0172 { /type "allow" /url "/content/communities/enablement/reports/*" }
-   /0173 { /type "allow" /url "/content/sites/*" }
-   /0174 { /type "allow" /url "/content/communities/scorm/*" }
-   /0175 { /type "allow" /url "/content/sites/*" }
-   /0176 { /type "allow" /url "/libs/granite/security/userinfo.json"}
-   /0177 { /type "allow" /url "/libs/granite/security/currentuser.json" }
-
-      # Enable CSRF token otherwise nothings works.
+         # Enable CSRF token otherwise nothings works.
    /5001 { /type "allow" /url "/libs/granite/csrf/token.json *"}
 
    # Allow SCF User Model to bootstrap as it depends on the granite user
@@ -750,17 +716,7 @@ Här följer ett exempel `dispatcher.any` -fil som innehåller Communities /filt
    /0063 { /type "allow" /glob "* /system/sling/logout*" }
    /0064 { /type "allow" /glob "GET /etc/cloudservices/*" }
    /0062 { /type "allow" /url "/libs/cq/personalization/*"  }  # enable personalization
-
-   # For Enablement features
-   /0170 { /type "allow" /url "/libs/granite/csrf/token.json*" }
-   /0171 { /type "allow" /glob "POST /content/sites/*/resources/en/*" }
-   /0172 { /type "allow" /glob "GET /content/communities/enablement/reports/*" }
-   /0173 { /type "allow" /glob "GET /content/sites/*" }
-   /0174 { /type "allow" /glob "GET /content/communities/scorm/*" }
-   /0175 { /type "allow" /url "GET /content/sites/*" }
-   /0176 { /type "allow" /url "GET /libs/granite/security/userinfo.json"}
-   /0177 { /type "allow" /url "GET /libs/granite/security/currentuser.json" }
-
+   
       # Enable CSRF token otherwise nothings works.
    /5001 { /type "allow" /glob "GET /libs/granite/csrf/token.json *"}
 

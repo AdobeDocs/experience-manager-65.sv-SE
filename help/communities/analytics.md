@@ -12,10 +12,10 @@ discoiquuid: e6fdaf56-402f-418d-96d8-e46bd3ad1e8c
 docset: aem65
 role: Admin
 exl-id: 7d54928b-6512-4da9-a209-eb4488bf2b64
-source-git-commit: 0f7d4aba0b8c79039918e1338007a4277a5030f2
+source-git-commit: 9f9f80eb4cb74b687c7fadd41d0f8ea4ee967865
 workflow-type: tm+mt
-source-wordcount: '2717'
-ht-degree: 2%
+source-wordcount: '2680'
+ht-degree: 0%
 
 ---
 
@@ -27,7 +27,7 @@ Adobe Analytics och Adobe Experience Manager (AEM) är båda lösningar för Ado
 
 Adobe Analytics kan konfigureras för AEM Communities så att händelser skickas till Adobe Analytics från vilka rapporter genereras när en medlem interagerar med funktioner som stöds i Communities.
 
-När en medlem på en community-webbplats för aktivering till exempel visar en videoresurs som tilldelats dem, skickar resursspelaren händelser till Analytics, inklusive data om hjärtslag för video. Från communitywebbplatsen kan administratörer se olika rapporter om videouppspelningen.
+Administratörer kan t.ex. se olika rapporter om videouppspelningen på communitywebbplatsen.
 
 Dessutom krävs analyser för att
 
@@ -44,7 +44,6 @@ Dessutom krävs analyser för att
 
 Funktioner som stöds för Communities är:
 
-* [Aktivera resurser](/help/communities/resources.md)
 * [Forum](/help/communities/forum.md)
 * [QnA](/help/communities/working-with-qna.md)
 * [Blogg](/help/communities/blog-feature.md)
@@ -151,7 +150,7 @@ Aktivera rapportering av pulsslag för video efter [konfigurera Analytics-rappor
 * Aktivera [Analyser för en community-webbplats](#enable-analytics-for-a-community-site)
 * Associera `Marketing Cloud Org Id` med communitywebbplatsen
 
-The `Marketing Cloud Org Id` kan anges vid [communitysajt](/help/communities/sites-console.md#enablement) eller senare av [ändra](/help/communities/sites-console.md#modifying-site-properties) egenskaperna för communitywebbplatsen.
+The `Marketing Cloud Org Id` kan anges vid [communitysajt](/help/communities/sites-console.md) eller senare av [ändra](/help/communities/sites-console.md#modifying-site-properties) egenskaperna för communitywebbplatsen.
 
 ![marketing-org-id](assets/marketing-org-id.png)
 
@@ -180,7 +179,7 @@ I dialogrutan Skapa konfiguration anger de värden som ska anges konfigurationen
 * **Titel**
 
    (Obligatoriskt) En visningsrubrik för konfigurationen.
-Skriv till exempel *Aktivera communityanalys*
+Skriv till exempel *Community Analytics*
 
 * **Namn**
 
@@ -244,7 +243,7 @@ Så här sparar du inställningarna:
 
 * Välj **OK**.
 
-   ![analytics-enablement-settings](assets/analytics-settings1.png)
+   ![analytics-settings](assets/analytics-settings1.png)
 
 ### Skapa ramverk {#create-framework}
 
@@ -256,7 +255,7 @@ När du har konfigurerat den grundläggande anslutningen till Adobe Analytics m�
 
 * **Titel**
 
-   (Obligatoriskt) En visningsrubrik för ramverket Skriv t.ex. *Aktivera EU-ramverk*.
+   (Obligatoriskt) En visningsrubrik för ramverket Skriv t.ex. *Gemenskapens ramverk*.
 
 * **Namn**
 
@@ -275,7 +274,7 @@ Om du skapar Analytics Framework öppnas ramverket för konfiguration.
 
 Syftet med ramverket är att mappa AEM till analysvariabler (eVars och events). Analysvariablerna som är tillgängliga för mappning är [som definieras i rapportsviten](#adobe-analytics-report-suite-for-video-reporting).
 
-![analytics-enablement-framework](assets/analytics-framework1.png)
+![analytics-framework](assets/analytics-framework1.png)
 
 ### Välj Report Suite {#select-report-suite}
 
@@ -389,7 +388,7 @@ När communitywebbplatsen har sparats med Analytics aktiverat och molnkonfigurat
 
 Om du använder en befintlig rapportserie som har mappat någon av variablerna inom var1 till var11 och event1 till och med event7, måste du [mappa om AEM](#modifying-analytics-variable-mapping) och återställa den ursprungliga mappningen.
 
-Följande är ett exempel på standardmappningar efter följande [komma igång, självstudiekurs](/help/communities/getting-started-enablement.md):
+Här följer ett exempel på standardmappningar:
 
 ![map-analytics](assets/map-analytics1.png)
 
@@ -425,7 +424,7 @@ Följande är ett exempel på standardmappningar efter följande [komma igång, 
   </tr>
   <tr>
    <td><strong>event1<br /> Resurs - uppspelning</strong></td>
-   <td><em>(en)</em></td>
+   <td><em>(a)</em></td>
    <td><em>-</em></td>
    <td><em>-</em></td>
    <td><em>-</em></td>
@@ -438,7 +437,7 @@ Följande är ett exempel på standardmappningar efter följande [komma igång, 
   </tr>
   <tr>
    <td><strong>event2<br /> SCFView</strong></td>
-   <td><em>(en)</em></td>
+   <td><em>(a)</em></td>
    <td><em>b)</em></td>
    <td><em>(c)</em></td>
    <td><em>(d)</em></td>

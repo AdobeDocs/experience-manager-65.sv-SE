@@ -10,9 +10,9 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 0d462ad1-5619-4bb6-9609-bc8987c40a0c
 exl-id: 6bda0f09-7ae5-4540-b035-9dd249ac3186
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 942db8fe3dad16be53dc6abe0e519d97a659e480
 workflow-type: tm+mt
-source-wordcount: '673'
+source-wordcount: '654'
 ht-degree: 0%
 
 ---
@@ -51,8 +51,6 @@ Den här självstudiekursen skapar en [community för engagemang](overview.md#en
 Se till att det senaste funktionspaketet är installerat på:
 
 * [Senaste releaser](deploy-communities.md#latest-releases)
-
-För en självstudiekurs som skapar en [communitywebbplats för aktivering](overview.md#enablement-community), besök [Komma igång med AEM Communities för aktivering](getting-started-enablement.md).
 
 ## Konfigurera analys {#configure-analytics}
 
@@ -99,8 +97,8 @@ Skapa en användare på *författare*, som har tilldelats rollen som gemenskapsa
 
    * **[!UICONTROL ID]**: sirius
    * **[!UICONTROL Emai Address]**: sirius.nilson@mailinator.com
-   * **[!UICONTROL Password]**: password
-   * **[!UICONTROL Confirm Password&ast;]**: password
+   * **[!UICONTROL Password]**: lösenord
+   * **[!UICONTROL Confirm Password&ast;]**: lösenord
    * **[!UICONTROL First Name]**: Sirius
    * **[!UICONTROL Last Name]**: Nilson
 
@@ -130,7 +128,7 @@ Se [Social inloggning med Facebook och Twitter](social-login.md).
 
 ## Skapa självstudietaggar {#create-tutorial-tags}
 
-Skapa taggar som du kan använda för interaktions- och aktiveringssjälvstudiekurserna med hjälp av taggnamnutrymmet för `Tutorial`.
+Skapa taggar som ska användas för interaktionskurserna med hjälp av taggnamnutrymmet för `Tutorial`.
 
 Använd [Taggningskonsol](../../help/sites-administering/tags.md#tagging-console) för att skapa följande taggar:
 

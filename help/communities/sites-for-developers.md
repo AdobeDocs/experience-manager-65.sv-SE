@@ -10,10 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: dc7a085e-d6de-4bc8-bd7e-6b43f8d172d2
 exl-id: 1dc568cd-315c-4944-9a3e-e5d7794e5dc0
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: cc0574ae22758d095a3ca6b91f0ceae4a8691f0e
 workflow-type: tm+mt
-source-wordcount: '555'
-ht-degree: 1%
+source-wordcount: '498'
+ht-degree: 0%
 
 ---
 
@@ -93,7 +93,6 @@ Från och med AEM Communities 6.3 Service Pack 1 visas ikonen Ta bort plats när
 
 * [UGC](#user-generated-content)
 * [Användargrupper](#community-user-groups)
-* [Assets](#enablement-assets)
 * [Databasposter](#database-records)
 
 ### Unikt plats-ID för community {#community-unique-site-id}
@@ -134,18 +133,3 @@ På alla författar- och publiceringsinstanser från [säkerhetskonsol](../../he
 * Följd av [unikt webbplats-ID](#community-unique-site-id)
 
 Till exempel, `community-engage-x0e11-members`.
-
-### Aktivera resurser {#enablement-assets}
-
-Från huvudkonsolen:
-
-* Välj **[!UICONTROL Assets]**.
-* Retur **[!UICONTROL Select]** läge.
-* Välj en mapp med namnet [unikt plats-ID](#community-unique-site-id).
-* Välj **[!UICONTROL Delete]** (kan behöva välja bland **[!UICONTROL More...]**).
-
-### Databasposter {#database-records}
-
-Det finns inget verktyg för att selektivt ta bort databasposter för en specifik aktiveringscommunitywebbplats.
-
-När alla communitysajter tas bort, släpper du aktiveringsdb och scormenginedb med MySQL Workbench.

@@ -10,9 +10,9 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 2d308756-79d1-4d69-b51c-d4b6e692a137
 exl-id: a43c1c4d-a6c2-4ef9-9047-a945978e618b
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 942db8fe3dad16be53dc6abe0e519d97a659e480
 workflow-type: tm+mt
-source-wordcount: '209'
+source-wordcount: '207'
 ht-degree: 2%
 
 ---
@@ -39,11 +39,9 @@ Nedan följer länkar till viktig information för Communities-komponenter, -fun
 ## Komponenter med funktioner {#components-with-functions}
 
 * [Aktivitetsströmmar](essentials-activities.md)
-* [Uppdrag](essentials-assignments.md)
 * [Blogg](blog-developer-basics.md) ( `Journal`)
 
 * [Kalender](calendar-basics-for-developers.md)
-* [Katalog](catalog-developer-essentials.md)
 * [Innehåll](essentials-featured.md)
 * [Filbibliotek](essentials-file-library.md)
 * [Forum](essentials-forum.md)

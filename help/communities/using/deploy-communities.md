@@ -5,9 +5,9 @@ description: Så här distribuerar du AEM Communities
 seo-description: How to deploy AEM Communities
 content-type: reference
 topic-tags: deploying
-source-git-commit: 14a33b14043869614efcdbf8cb413333d0fa644b
+source-git-commit: cc0574ae22758d095a3ca6b91f0ceae4a8691f0e
 workflow-type: tm+mt
-source-wordcount: '1881'
+source-wordcount: '1682'
 ht-degree: 1%
 
 ---
@@ -71,13 +71,6 @@ ht-degree: 1%
          * UGC är bara synligt på AEM eller kluster där det angavs.
       * Standard är JSRP
 
-   För **[aktiveringsfunktion](/help/communities/overview.md#enablement-community)**
-
-   * [Installera och konfigurera FFmpeg](/help/communities/ffmpeg.md)
-   * [Installera JDBC-drivrutinen för MySQL](#jdbc-driver-for-mysql)
-   * [Installera AEM Communities SCORM-Engine](#scorm-package)
-   * [Installera och konfigurera MySQL för aktivering](/help/communities/mysql.md)
-
 
 
 
@@ -99,9 +92,8 @@ Liksom AEM 6.4 och senare är AEM Communities funktioner och snabbkorrigeringar 
 
 ### JDBC-drivrutin för MySQL {#jdbc-driver-for-mysql}
 
-Två Communities-funktioner använder en MySQL-databas:
+En webbgruppsfunktion använder en MySQL-databas:
 
-* För [aktivering](/help/communities/enablement.md): spela in SCORM-aktiviteter
 * För [DSRP](/help/communities/dsrp.md): lagra användargenererat innehåll (UGC)
 
 MySQL-kopplingen måste hämtas och installeras separat.
@@ -133,28 +125,6 @@ Mer information om hur du installerar paket finns på [Webbkonsol](/help/sites-d
 #### Exempel: Installerat MySQL Connector-paket {#example-installed-mysql-connector-bundle}
 
 ![](../assets/mysql-connector.png)
-
-### SCORM-paket {#scorm-package}
-
-SCORM (Shareable Content Object Reference Model) är en samling standarder och specifikationer för e-utbildning. SCORM definierar också hur innehåll kan paketeras i en överförbar ZIP-fil.
-
-AEM Communities SCORM-motorn krävs för [aktivering](/help/communities/overview.md#enablement-community) -funktion. SCORM-paket som stöds i AEM 6.5 Communities:
-
-* [cq-social-scorm-package, version 2.3.7](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/social/scorm/cq-social-scorm-pkg) som innehåller [SCORM 2017.1](https://rusticisoftware.com/blog/scorm-engine-2017-released/) motor.
-
-**Installera ett SCORM-paket**
-
-1. Installera [cq-social-scorm-package, version 2.3.7](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/social/scorm/cq-social-scorm-pkg) från paketresursen
-1. Hämta `/libs/social/config/scorm/database_scormengine_data.sql` från cq-instans och kör den på mysql-server för att skapa ett uppgraderat scormEngineDB-schema.
-1. Lägg till `/content/communities/scorm/RecordResults` i egenskapen Exkluderade sökvägar i CSRF-filter från `https://<hostname>:<port>/system/console/configMgr` på förlag.
-
-#### SCORM-loggning {#scorm-logging}
-
-Alla aktiveringsaktiviteter loggas utförligt på systemkonsolen, som de är installerade.
-
-Loggnivån kan vid behov ställas in på WARN för `RusticiSoftware.*` paket.
-
-Information om hur du arbetar med loggar finns i [Arbeta med granskningsposter och loggfiler](/help/sites-deploying/monitoring-and-maintaining.md#working-with-audit-records-and-log-files).
 
 ### AEM avancerad MLS {#aem-advanced-mls}
 
