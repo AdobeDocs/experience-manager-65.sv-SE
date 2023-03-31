@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: ccabf301-b417-48aa-8501-8360fd9f3e36
 role: Admin
 exl-id: b64e24d2-8407-484c-8216-8d328ef5fa4f
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 4dbbcc41757843d3b2d5a3bbb2656ef587e83d2c
 workflow-type: tm+mt
-source-wordcount: '905'
-ht-degree: 0%
+source-wordcount: '900'
+ht-degree: 1%
 
 ---
 
@@ -162,9 +162,7 @@ Se även [Betygsättning och emblem](implementing-scoring.md).
 
 ## Konsolen Grupper {#groups-console}
 
-Gruppkonsolen, som är tillgänglig från författarmiljön, gör det möjligt att skapa och hantera medlemsgrupper som är registrerade i publiceringsmiljön. Det är särskilt användbart för
-* [Behöriga medlemsgrupper](users.md#privilegedmembersgroups)
-* Gruppbaserad tilldelning av [aktiveringsresurser](resources.md)
+Gruppkonsolen, som är tillgänglig från författarmiljön, gör det möjligt att skapa och hantera medlemsgrupper som är registrerade i publiceringsmiljön. Det är särskilt användbart för [Behöriga medlemsgrupper](users.md#privilegedmembersgroups).
 
 Så här kommer du åt gruppkonsolen:
 * Från global navigering väljer du **[!UICONTROL Navigation]** > **[!UICONTROL Communities]** > **[!UICONTROL Groups]**.

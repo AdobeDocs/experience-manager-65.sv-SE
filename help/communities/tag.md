@@ -10,9 +10,9 @@ topic-tags: developing
 content-type: reference
 discoiquuid: d355a3ee-c8a8-4a07-8d28-d1a99bda315c
 exl-id: 6e8af8cf-1239-46f9-b2fe-4aa80abc86ea
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 4dbbcc41757843d3b2d5a3bbb2656ef587e83d2c
 workflow-type: tm+mt
-source-wordcount: '263'
+source-wordcount: '252'
 ht-degree: 0%
 
 ---
@@ -28,8 +28,6 @@ Den underliggande infrastrukturen för taggar som används i publiceringsmiljön
 * Se [Tagga för utvecklare](../../help/sites-developing/tags.md) om du vill ha information om [taggningsramverk](../../help/sites-developing/framework.md) samt inkludera och utöka taggar i [anpassade program](../../help/sites-developing/building.md).
 
 * Se [Använda molnet för sociala taggar](tagcloud.md) för information till författare om hur du lägger till en `social tag cloud` -komponent på en sida för att markera de taggar som används i UGC i publiceringsmiljön.
-
-* Se [Aktiveringsresurser för taggning](tag-resources.md) om du vill ha information om hur du taggar resurser för kataloger.
 
 Taggning av UGC kan vara aktiverat när en [communitywebbplats](sites-console.md#tagging) eller någon av följande funktioner:
 
@@ -58,7 +56,7 @@ Taggning av UGC kan vara aktiverat när en [communitywebbplats](sites-console.md
    <td>cq.social.hbs.tagcloud</td>
   </tr>
   <tr>
-   <td> <strong>templates</strong></td>
+   <td> <strong>mallar</strong></td>
    <td> /libs/social/commons/components/hbs/tagcloud/tagcloud.hbs<br /> </td>
   </tr>
   <tr>

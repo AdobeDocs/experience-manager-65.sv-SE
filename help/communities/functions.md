@@ -12,9 +12,9 @@ discoiquuid: 91833914-b811-4355-a97d-e1a9cb7441f1
 docset: aem65
 role: Admin
 exl-id: 2395c895-c611-43ac-abb6-c2bc4b4a41f4
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: 4dbbcc41757843d3b2d5a3bbb2656ef587e83d2c
 workflow-type: tm+mt
-source-wordcount: '2444'
+source-wordcount: '2220'
 ht-degree: 0%
 
 ---
@@ -57,7 +57,7 @@ När en communityfunktion läggs till i en mall för en community-webbplats elle
 
    (*Obligatoriskt*) Texten som visas på menyn med funktioner för webbplatsen
 
-* **Webbadress**
+* **URL**
 
    (*Obligatoriskt*) Namnet som används för att generera URI:n. Namnet måste överensstämma med [namnkonventioner](/help/sites-developing/naming-conventions.md) som ålagts av AEM och JCR.
 
@@ -95,14 +95,6 @@ När du lägger till en mall öppnas följande dialogruta:
 * **Visa vyn Nyhetsfeed**
 
    Om du väljer det här alternativet innehåller aktivitetssidorna en flik som filtrerar aktiviteter baserat på de som den aktuella medlemmen följer. Standard är valt.
-
-### Tilldelningsfunktion {#assignments-function}
-
-Tilldelningsfunktionen är den grundläggande funktionen som definierar en [communitywebbplats för aktivering](/help/communities/overview.md#enablement-community). Det gör det möjligt att tilldela aktiveringsresurser till communitymedlemmar. Se även [Grundläggande om uppdrag](/help/communities/essentials-assignments.md) för utvecklare.
-
-Den här funktionen är tillgänglig som en funktion i [Aktivera tillägg](/help/communities/enablement.md). Tillägget kräver ytterligare licenser för användning i en produktionsmiljö.
-
-När det läggs till i en mall är den enda konfigurationen för [Titel- och URL-inställningar](#title-and-url-settings).
 
 ### Bloggfunktion {#blog-function}
 
@@ -159,25 +151,6 @@ När du lägger till en mall öppnas följande dialogruta:
 * **Tillåt innehåll**
 
    Om det här alternativet är markerat identifieras dess innehåll som [innehåll](/help/communities/featured.md). Standard är valt.
-
-### Katalogfunktion {#catalog-function}
-
-Katalogfunktionen ger möjlighet att [användargrupper](/help/communities/overview.md#enablement-community) medlemmar för att bläddra bland aktiveringsresurser som inte är tilldelade dem. Se [Aktiveringsresurser för taggning](/help/communities/tag-resources.md) och [Catalog Essentials](/help/communities/catalog-developer-essentials.md) för utvecklare.
-
-Alla aktiveringsresurser och utbildningsvägar för communitysajten visas i alla kataloger, om de tillhör en sådan, ` [Show in Catalog](/help/communities/resources.md)`, är inställt på true. Om du vill inkludera resurser och utbildningsvägar explicit måste du använda en [förfiltrera](/help/communities/catalog-developer-essentials.md#pre-filters) till katalogen.
-
-När den läggs till i en mall tillåter konfigurationen att du anger taggnamnutrymmen som används för att konfigurera taggfiltret som visas för webbplatsens besökare:
-
-![Katalogfunktion](assets/catalog-function.png)
-
-* [Titel- och URL-inställningar](#title-and-url-settings)
-
-* **Markera alla namnutrymmen**
-
-   De markerade taggnamnutrymmena definierar vilka taggar som besökare kan markera för att filtrera listan med aktiveringsresurser som finns i katalogen.
-Om det här alternativet är markerat är alla taggnamnutrymmen som är tillåtna för communitywebbplatsen tillgängliga.
-Om du avmarkerar det här alternativet kan du välja ett eller flera namnutrymmen som är tillåtna för communitywebbplatsen.
-Standard är valt.
 
 ### Funktion för aktuellt innehåll {#featured-content-function}
 

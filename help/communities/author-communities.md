@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: df1ac689-33db-4e30-9f75-3bda2a485652
 docset: aem65
 exl-id: 4a49d14c-e6f0-4791-904e-8f30e47f7cde
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 4dbbcc41757843d3b2d5a3bbb2656ef587e83d2c
 workflow-type: tm+mt
-source-wordcount: '286'
-ht-degree: 2%
+source-wordcount: '273'
+ht-degree: 1%
 
 ---
 
@@ -28,7 +28,6 @@ Mer information om hur du skapar en community-webbplats finns på:
 
 * [AEM Communities - översikt](/help/communities/overview.md)
 * [Komma igång med AEM Communities](/help/communities/getting-started.md)
-* [Komma igång med AEM Communities för aktivering](/help/communities/getting-started-enablement.md)
 
 >[!NOTE]
 >
@@ -54,8 +53,6 @@ Se även de interaktiva [Community Components Guide](/help/communities/component
 | Community Activity List | [Aktivitetstrender](/help/communities/trends.md) |
 | Medlemslista för communitygrupp | [Community-grupper](/help/communities/creating-groups.md) |
 | Skriv meddelande | [Meddelanden](/help/communities/configure-messaging.md) |
-| Aktivera tilldelningar | [Uppdrag](/help/communities/assignments.md) |
-| Aktivera katalog | [Katalog](/help/communities/catalog.md) |
 | Innehåll | [Innehåll](/help/communities/featured.md) |
 | Filbibliotek | [Filbibliotek](/help/communities/file-library.md) |
 | Följ | [Social Graph](/help/communities/socialgraph.md) |

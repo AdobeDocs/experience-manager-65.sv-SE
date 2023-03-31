@@ -10,9 +10,9 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 21714581-7645-4b47-a9b0-9f1424013240
 exl-id: eb5ce76a-bf28-4540-bc2d-3b5ecb8286f2
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 4dbbcc41757843d3b2d5a3bbb2656ef587e83d2c
 workflow-type: tm+mt
-source-wordcount: '365'
+source-wordcount: '361'
 ht-degree: 1%
 
 ---
@@ -73,7 +73,7 @@ Om taggning tillåts kan communityplatsens konfiguration ställas in så att den
 
 Funktioner som tillåter taggning: [blogg](blog-feature.md), [kalender](calendar.md), [filbibliotek](file-library.md), [forum](forum.md)
 
-Funktioner som använder taggar: [katalog](catalog.md), [sök](search.md), [social tag cloud](tagcloud.md)
+Funktioner som använder taggar: [sök](search.md), [social tag cloud](tagcloud.md)
 
 För redigeringsinformation:
 
@@ -84,7 +84,6 @@ För administrativ information:
 * Skapa taggnamnutrymmen (taxonomi): [Administrera taggar](../../help/sites-administering/tags.md)
 * Konfiguration av communityplats: se [TAGGNING](sites-console.md#tagging)
 * [Tagga användargenererat innehåll](../../help/sites-authoring/tags.md)
-* [Aktiveringsresurser för taggning](tag-resources.md)
 
 För utvecklarinformation:
 

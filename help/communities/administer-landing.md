@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 8799386a-c3b8-43cf-9f71-580ff2a81abc
 role: Admin
 exl-id: e3ffc73e-2bc5-492d-b64b-750cc7d8ab9b
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 4dbbcc41757843d3b2d5a3bbb2656ef587e83d2c
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '430'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,6 @@ En översikt och självstudiekurser för att komma igång finns på:
 
 * [AEM Communities - översikt](overview.md)
 * [Komma igång med AEM Communities](getting-started.md)
-* [Komma igång med AEM Communities för aktivering](getting-started-enablement.md)
 
 ## Administrations- och konfigurationsområden {#administration-and-configuration-topics}
 
@@ -41,7 +40,6 @@ En översikt och självstudiekurser för att komma igång finns på:
       * [Grupper (undergrupper)](groups.md)
    * [Moderering](moderation.md)
    * [Hantering av medlemmar och grupper](members.md)
-   * [Aktivera resurser](resources.md)
    * [Rapporter](reports.md)
 
 
@@ -77,12 +75,6 @@ En viktig egenskap hos AEM Communities är att skapa användargenererat innehål
 * [Meddelanden](notifications.md): möjlighet för medlemmar att underrättas om den aktivitet de följer.
 * [Prenumerationer](subscriptions.md): möjlighet för medlemmarna att interagera med communityn via extern e-post.
 * [Meddelanden](messaging.md): möjlighet för medlemmarna att interagera med communityn med hjälp av interna meddelanden.
-
-### Aktiveringsfunktioner {#enablement-features}
-
-* [Konfigurerar aktivering](enablement.md): nödvändig information för att korrekt konfigurera aktiveringsfunktionerna.
-* [Analyskonfiguration](analytics.md): nödvändig information för att aktivera funktioner i Adobe Analytics for Communities.
-* [Aktiveringsresurser för taggning](tag-resources.md): behövs för att skapa aktiveringskataloger.
 
 ### Distribution {#deployment}
 

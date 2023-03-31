@@ -11,9 +11,9 @@ topic-tags: deploying
 discoiquuid: abe5a998-bbe3-4a2b-bcf7-b490a8275219
 docset: aem65
 exl-id: ea41d35c-967c-4606-b4ec-377e817902e4
-source-git-commit: 07f8a9f629122102d30676926b225d57e542147d
+source-git-commit: 066a61a332aa620078740d36bd7f8689282fbf14
 workflow-type: tm+mt
-source-wordcount: '663'
+source-wordcount: '624'
 ht-degree: 0%
 
 ---
@@ -33,12 +33,6 @@ När du installerar ett nytt funktionspaket för Communities på en distribution
 1. Installera [senaste funktionspaketet](/help/communities/deploy-communities.md#latestfeaturepack).
 1. Installera [senaste Solr-konfigurationsfiler](/help/communities/msrp.md#upgrading).
 1. Indexera om avsnittet MSRP [MSRP Reindex Tool](/help/communities/msrp.md#msrp-reindex-tool).
-
-### Aktivera 2.0 {#enablement}
-
-Från och med AEM 6.3 lagras inte längre rapportinformation i MySQL i aktiveringsfunktionerna. MySQL-beroendet finns bara där för att spåra SCORM-innehåll.
-
-Kontakta [kundtjänst](https://helpx.adobe.com/marketing-cloud/contact-support.html) om du behöver hjälp med att migrera innehåll från Enablement 1.0.
 
 ## Uppgradera från AEM 6.0 {#upgrading-from-aem}
 

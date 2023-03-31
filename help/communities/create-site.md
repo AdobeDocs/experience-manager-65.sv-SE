@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 8ae324ea-8b84-47a3-aabf-1fee2a3bd46d
 docset: aem65
 exl-id: d4c1895f-421c-4146-b94a-8d11065ef9e3
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 4dbbcc41757843d3b2d5a3bbb2656ef587e83d2c
 workflow-type: tm+mt
-source-wordcount: '1627'
-ht-degree: 1%
+source-wordcount: '1580'
+ht-degree: 0%
 
 ---
 
@@ -78,9 +78,7 @@ Välj **Nästa**.
 
 ### Steg 3: Inställningar {#step-settings}
 
-I steget Inställningar, innan du väljer `Next`, observera att det finns sju avsnitt som ger åtkomst till konfigurationer som användarhantering, taggning, moderering, grupphantering, analys, översättning och aktivering.
-
-Besök [Komma igång med AEM Communities för aktivering](/help/communities/getting-started-enablement.md) självstudiekurs om hur du arbetar med aktiveringsfunktionerna.
+I steget Inställningar, innan du väljer `Next`, observera att det finns sju avsnitt som ger åtkomst till konfigurationer som användarhantering, taggning, moderering, grupphantering, analys och översättning.
 
 #### Användarhantering {#user-management}
 
@@ -118,7 +116,7 @@ Om du vill att en community-medlem (eller grupp av medlemmar) ska kunna uppleva 
 Till exempel,
 
 * Typ `q`
-* Välj [Quinn Harper](/help/communities/enablement-setup.md#publishcreateenablementmembers)
+* Välj Quinn Harper
 
 >[!NOTE]
 >
@@ -152,16 +150,6 @@ The [Översättningsinställningar](/help/communities/sites-console.md#translati
 * Lämna standardalternativet för beständighet
 
 ![translation-settings](assets/translation-settings.png)
-
-#### AKTIVERING {#enablement}
-
-Lämna tomt när du skapar en engagemangscommunity.
-
-Om du vill ha en liknande självstudiekurs för att snabbt skapa en [användargrupper](/help/communities/overview.md#enablement-community), se [Komma igång med AEM Communities för aktivering](/help/communities/getting-started-enablement.md).
-
-Välj **Nästa**.
-
-![aktivering](assets/enablement.png)
 
 ### Steg 4: Skapa webbgruppsplats {#step-create-communities-site}
 

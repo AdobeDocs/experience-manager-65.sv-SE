@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 5fa9ee8b-5893-4ae9-a986-bfdbb00f355f
 role: Admin
 exl-id: 36f2e3d2-46c7-48a8-a1e9-213f581bd9f3
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 4dbbcc41757843d3b2d5a3bbb2656ef587e83d2c
 workflow-type: tm+mt
-source-wordcount: '338'
+source-wordcount: '309'
 ht-degree: 0%
 
 ---
@@ -66,10 +66,6 @@ Om du vill komma åt de olika webbgruppskonsolerna väljer du **navigering, Comm
 * [Rapporter](reports.md)
 
    I rapportkonsolen kan rapporter om tilldelningar, sidvisningar och publicerat innehåll (UGC) genereras när en communitywebbplats har [aktiverad Adobe Analytics](sites-console.md#analytics). Konsolen är bara tillgänglig i författarmiljön.
-
-* [Resurser](resources.md)
-
-   Resurskonsolen är där [aktiveringsansvariga](enablement.md#communitymanagers) skapa, hantera och tilldela resurser till medlemmar i en [communitywebbplats för aktivering](overview.md#enablement-community). Konsolen är bara tillgänglig i författarmiljön.
 
 ## Verktygskonsol {#tools-console}
 
