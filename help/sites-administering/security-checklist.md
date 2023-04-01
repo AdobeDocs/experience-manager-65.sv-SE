@@ -12,9 +12,9 @@ discoiquuid: de7d7209-c194-4d19-853b-468ebf3fa4b2
 docset: aem65
 exl-id: 314a6409-398c-470b-8799-0c4e6f745141
 feature: Security
-source-git-commit: 7efe4a011d831c34f6aafd877654e8b41fec96e0
+source-git-commit: 70c2d7c910f61169869aab9fdcbff4c4564ea9bd
 workflow-type: tm+mt
-source-wordcount: '2889'
+source-wordcount: '2818'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ Det är obligatoriskt att aktivera HTTPS-transportlagret på både författare- 
 
 ### Installera snabbkorrigeringar för säkerhet {#install-security-hotfixes}
 
-Kontrollera att du har installerat den senaste [Säkerhetsuppdateringar från Adobe](https://helpx.adobe.com/experience-manager/kb/aem63-available-hotfixes.html).
+Kontrollera att du har installerat den senaste [Säkerhetsuppdateringar från Adobe](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=en).
 
 ### Ändra standardlösenord för AEM- och OSGi-konsolens administratörskonton {#change-default-passwords-for-the-aem-and-osgi-console-admin-accounts}
 
@@ -57,11 +57,11 @@ Dessa konton omfattar:
 
 * AEM `admin` konto
 
-   När du har ändrat lösenordet för AEM administratörskonto måste du använda det nya lösenordet när du använder CRX.
+   När du har ändrat lösenordet för AEM administratörskonto använder du det nya lösenordet när du använder CRX.
 
 * The `admin` lösenord för OSGi-webbkonsolen
 
-   Den här ändringen kommer även att gälla för det administratörskonto som används för åtkomst till webbkonsolen, så du måste använda samma lösenord när du kommer åt det.
+   Den här ändringen tillämpas även på det administratörskonto som används för att komma åt webbkonsolen, så använd samma lösenord när du kommer åt det.
 
 De här två kontona använder separata autentiseringsuppgifter och det är viktigt att ha tydliga, starka lösenord för var och en av dem för att driftsättningen ska vara säker.
 
@@ -86,16 +86,16 @@ Mer information om hur du ändrar lösenord för webbkonsolen finns i [Ändra ad
 
 #### Ändra administratörslösenordet för OSGi-webbkonsolen {#changing-the-osgi-web-console-admin-password}
 
-Du måste också ändra lösenordet som används för att komma åt webbkonsolen. Detta görs med en [OSGI-konfiguration](/help/sites-deploying/configuring-osgi.md) för att uppdatera följande egenskaper för **Apache Felix OSGi Management Console**:
+Ändra lösenordet som används för att komma åt webbkonsolen. Använd en [OSGI-konfiguration](/help/sites-deploying/configuring-osgi.md) för att uppdatera följande egenskaper för **Apache Felix OSGi Management Console**:
 
 * **Användarnamn** och **Lösenord**, inloggningsuppgifterna för åtkomst till själva Apache Felix Web Management Console.
 Lösenordet måste ändras *efter* den första installationen för att säkerställa instansens säkerhet.
 
-Så här gör du:
-
 >[!NOTE]
 >
 >Se [OSGI-konfiguration](/help/sites-deploying/configuring-osgi.md) om du vill ha fullständig information om hur du konfigurerar OSGi-inställningar.
+
+**Ändra administratörslösenordet för OSGi-webbkonsolen**:
 
 1. Använda **verktyg**, **Operationer** -menyn, öppna **Webbkonsol** och navigera till **Konfiguration** -avsnitt.
 Till exempel `<server>:<port>/system/console/configMgr`.
@@ -112,11 +112,11 @@ Adobe rekommenderar att du definierar anpassade felhanterarsidor, särskilt för
 
 >[!NOTE]
 >
->Se [Hur skapar jag egna skript eller felhanterare?](https://helpx.adobe.com/experience-manager/kb/CustomErrorHandling.html) kunskapsbasartikel för mer information.
+>Se [Hur skapar jag egna skript eller felhanterare?](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/custom-error-page.html?lang=en) för mer information.
 
 ### Slutför checklista för utskickssäkerhet {#complete-dispatcher-security-checklist}
 
-AEM Dispatcher är en viktig del av din infrastruktur. Adobe rekommenderar starkt att du slutför [säkerhetschacklista för avsändare](https://helpx.adobe.com/experience-manager/dispatcher/using/security-checklist.html).
+AEM Dispatcher är en viktig del av din infrastruktur. Adobe rekommenderar att du slutför [Checklista för utskickssäkerhet](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html?lang=en).
 
 >[!CAUTION]
 >
@@ -130,11 +130,11 @@ En standardinstallation av AEM anger `admin` som användare för transportrefere
 
 Av säkerhetsskäl bör båda ändras för att återspegla det aktuella användningsfallet, med följande två aspekter i åtanke:
 
-* The **transportanvändare** ska inte vara administratörsanvändare. I stället anger du en användare i publiceringssystemet som bara har behörighet till de relevanta delarna av publiceringssystemet och använder användarens inloggningsuppgifter för transporten.
+* The **transportanvändare** får inte vara administratörsanvändare. I stället anger du en användare i publiceringssystemet som bara har behörighet till de relevanta delarna av publiceringssystemet och använder användarens inloggningsuppgifter för transporten.
 
    Du kan starta från den paketerade replikeringsmottagaren och konfigurera den här användarens åtkomsträttigheter så att de matchar din situation
 
-* The **replikanvändare** eller **Användar-ID för agent** ska inte heller vara admin-användare, utan en användare som bara kan se innehåll som ska replikeras. Replikeringsanvändaren används för att samla in det innehåll som ska replikeras på författarsystemet innan det skickas till utgivaren.
+* The **replikanvändare** eller **Användar-ID för agent** får inte heller vara admin-användare, utan en användare som bara kan se innehåll som är replikerat. Replikeringsanvändaren används för att samla in det innehåll som ska replikeras på författarsystemet innan det skickas till utgivaren.
 
 ### Kontrollera säkerhetshälsokontrollerna för instrumentpanelen för åtgärder {#check-the-operations-dashboard-security-health-checks}
 
@@ -144,11 +144,13 @@ Kontrollpanelen innehåller också en samling säkerhetskontroller. Vi rekommend
 
 ### Kontrollera om exempelinnehåll finns {#check-if-example-content-is-present}
 
-Allt exempelinnehåll och alla användare (t.ex. Geometrixx och dess komponenter) ska avinstalleras och tas bort helt i ett produktionssystem innan det görs tillgängligt för allmänheten.
+Allt exempelinnehåll och alla användare (till exempel Geometrixx och dess komponenter) ska avinstalleras och tas bort helt i ett produktionssystem innan det görs tillgängligt för allmänheten.
 
 >[!NOTE]
 >
->Exemplet med webbprogram.Detaljhandelsprogram tas bort om den här instansen körs i [Produktionsklar läge](/help/sites-administering/production-ready.md). Om så inte är fallet kan du avinstallera exempelinnehållet genom att gå till Package Manager och sedan söka efter och avinstallera alla We.Retail-paket. Mer information finns på [Arbeta med paket](package-manager.md).
+>Provet `We.Retail` program tas bort om den här instansen körs i [Produktionsklar läge](/help/sites-administering/production-ready.md). Om så inte är fallet kan du avinstallera exempelinnehållet genom att gå till Pakethanteraren, söka efter och avinstallera alla `We.Retail` paket.
+
+Se [Arbeta med paket](package-manager.md).
 
 ### Kontrollera om det finns några CRX-utvecklingspaket {#check-if-the-crx-development-bundles-are-present}
 
@@ -160,7 +162,7 @@ Dessa OSGi-utvecklingspaket bör avinstalleras både på författaren och public
 
 ### Kontrollera om Sling-utvecklingspaketet finns {#check-if-the-sling-development-bundle-is-present}
 
-The [AEM Developer Tools for Eclipse](/help/sites-developing/aem-eclipse.md) distribuerar installationsprogrammet för Apache Sling Tooling Support (org.apache.sling.tooling.support.install).
+The [AEM Developer Tools](/help/sites-developing/aem-eclipse.md) installera Apache Sling Tooling Support (org.apache.sling.tooling.support.install).
 
 Detta OSGi-paket bör avinstalleras både på författaren och publicera produktionssystem innan de blir tillgängliga.
 
@@ -172,9 +174,9 @@ AEM 6.1 levereras med en mekanism som hjälper till att skydda mot attacker med 
 
 #### Sling Referer-filtret {#the-sling-referrer-filter}
 
-För att åtgärda kända säkerhetsproblem med CSRF (Cross-Site Request Forgery) i CRX WebDAV och Apache Sling måste du lägga till konfigurationer för referensfiltret för att kunna använda det.
+Om du vill åtgärda kända säkerhetsproblem med CSRF (Cross-Site Request Forgery) i CRX WebDAV och Apache Sling lägger du till konfigurationer så att referensfiltret kan använda det.
 
-Refererarfiltertjänsten är en OSGi-tjänst som gör att du kan konfigurera:
+Refererarfiltertjänsten är en OSGi-tjänst som gör att du kan konfigurera följande:
 
 * vilka http-metoder som ska filtreras
 * om en tom referensrubrik tillåts
@@ -207,21 +209,21 @@ Så här konfigurerar du referenspunktsfiltertjänsten:
 
    >[!CAUTION]
    >
-   >Vi rekommenderar att du skickar en referens när du använder kommandoradsverktyg som `cURL` i stället för att tillåta ett tomt värde eftersom det kan exponera systemet för CSRF-attacker.
+   >Adobe rekommenderar att du anger en referens när du använder kommandoradsverktyg som `cURL` i stället för att tillåta ett tomt värde eftersom det kan exponera systemet för CSRF-attacker.
 
-1. Redigera de metoder som filtret ska använda för kontroller med `Filter Methods` fält.
+1. Redigera de metoder som det här filtret använder för kontroller med `Filter Methods` fält.
 
 1. Klicka **Spara** för att spara ändringarna.
 
 ### OSGI-inställningar {#osgi-settings}
 
-Vissa OSGI-inställningar ställs in som standard för att underlätta felsökning av programmet. Dessa måste ändras i era publicerings- och upphovsarbetsinstanser för att undvika att intern information läcker till allmänheten.
+Vissa OSGI-inställningar ställs in som standard för att underlätta felsökning av programmet. Ändra sådana inställningar för publiceringsinställningarna och författarens produktivitetsinstanser för att undvika att intern information läcker till allmänheten.
 
 >[!NOTE]
 >
->Alla inställningar nedan utom **Dagen CQ WCM-felsökningsfilter** täcks automatiskt av [Produktionsklar läge](/help/sites-administering/production-ready.md). Därför rekommenderar vi att du granskar alla inställningar innan du distribuerar instansen i en produktiv miljö.
+>Alla inställningar nedan förutom **Dagen CQ WCM-felsökningsfilter**, täcks automatiskt av [Produktionsklar läge](/help/sites-administering/production-ready.md). Därför rekommenderar Adobe att du granskar alla inställningar innan du distribuerar instansen i en produktiv miljö.
 
-För var och en av följande tjänster måste de angivna inställningarna ändras:
+För följande tjänster måste de angivna inställningarna ändras:
 
 * [Bibliotekshanteraren Adobe Granite HTML](/help/sites-deploying/osgi-configuration-settings.md#day-cq-html-library-manager):
 
@@ -238,7 +240,7 @@ För var och en av följande tjänster måste de angivna inställningarna ändra
 
    * endast vid publicering, ange **WCM-läge** till &quot;disabled&quot;
 
-* [Apache Sling Java Script Handler](/help/sites-deploying/osgi-configuration-settings.md#apache-sling-javascript-handler):
+* [Apache Sling JavaScript-hanterare](/help/sites-deploying/osgi-configuration-settings.md#apache-sling-javascript-handler):
 
    * disable **Generera felsökningsinformation**
 
@@ -247,7 +249,7 @@ För var och en av följande tjänster måste de angivna inställningarna ändra
    * disable **Generera felsökningsinformation**
    * disable **Mappat innehåll**
 
-Mer information finns i [Konfigurationsinställningar för OSGi](/help/sites-deploying/osgi-configuration-settings.md).
+Se [Konfigurationsinställningar för OSGi](/help/sites-deploying/osgi-configuration-settings.md).
 
 När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) om du vill ha mer information och rekommenderade rutiner.
 
@@ -255,10 +257,10 @@ När du arbetar med AEM finns det flera metoder för att hantera konfigurationsi
 
 ### Minska DoS-attacker (Denial of Service) {#mitigate-denial-of-service-dos-attacks}
 
-En denial of service-attack (DoS) är ett försök att göra en datorresurs otillgänglig för de avsedda användarna. Detta görs ofta genom att överbelasta resursen. till exempel:
+En denial of service-attack (DoS) är ett försök att göra en datorresurs otillgänglig för de avsedda användarna. Den här attacken görs ofta genom att överbelasta resursen. till exempel:
 
-* Med en mängd förfrågningar från en extern källa.
-* Med en begäran om mer information än vad systemet kan leverera.
+* En flod av förfrågningar från en extern källa.
+* En begäran om mer information än systemet kan leverera.
 
    Till exempel en JSON-representation av hela databasen.
 
@@ -270,26 +272,24 @@ En denial of service-attack (DoS) är ett försök att göra en datorresurs otil
    * `.../en.SelectorDosAttack.html`
    * `.../en.html/SuffixDosAttack`
 
-   Alla giltiga variationer (t.ex. returnera en `200` och är konfigurerade att cachelagras) kommer att cachas av dispatchern, vilket till slut leder till ett fullständigt filsystem och ingen tjänst för ytterligare förfrågningar.
+   Alla giltiga variationer (t.ex. returnera en `200` -svar och är konfigurerade att cachelagras) cachas av Dispatcher, vilket till slut leder till ett fullständigt filsystem och ingen tjänst för fler begäranden.
 
-Det finns många konfigurationspunkter för att förhindra sådana attacker, här diskuterar vi bara de som är direkt relaterade till AEM.
+Det finns många konfigurationspunkter för att förhindra sådana attacker, men endast de punkter som rör AEM diskuteras här.
 
 **Konfigurera Sling för att förhindra DoS**
 
-Sling är *innehållscentrerad*. Detta innebär att bearbetningen är inriktad på innehållet eftersom varje HTTP-begäran mappas till innehåll i form av en JCR-resurs (en databasnod):
+Sling är *innehållscentrerad*. Bearbetningen är inriktad på innehållet eftersom varje (HTTP) begäran mappas till innehåll i form av en JCR-resurs (en databasnod):
 
 * Det första målet är den resurs (JCR-nod) som innehåller innehållet.
-* För det andra finns återgivaren, eller skriptet, från resursegenskaperna i kombination med vissa delar av begäran (t.ex. väljare och/eller tillägg).
+* För det andra finns återgivaren, eller skriptet, från resursegenskaperna med vissa delar av begäran (till exempel väljare och/eller tillägget).
 
->[!NOTE]
->
->Detta beskrivs mer ingående i [Bearbetning av försäljningsbegäran](/help/sites-developing/the-basics.md#sling-request-processing).
+Se [Bearbetning av försäljningsbegäran](/help/sites-developing/the-basics.md#sling-request-processing) för mer information.
 
-Den här metoden gör Sling mycket kraftfull och mycket flexibel, men som alltid är det den flexibilitet som måste hanteras noggrant.
+Sling är en kraftfull och flexibel metod, men som alltid är det den flexibilitet som måste hanteras noggrant.
 
-För att förhindra missbruk kan du:
+För att förhindra missbruk kan du göra följande:
 
-1. Införliva kontroller på applikationsnivå. På grund av antalet möjliga variationer är en standardkonfiguration inte möjlig.
+1. Lägg in kontroller på programnivå. På grund av antalet möjliga variationer går det inte att konfigurera som standard.
 
    I ditt program bör du:
 
@@ -298,26 +298,26 @@ För att förhindra missbruk kan du:
 
 1. Kontrollera konfigurationen av standardåtergivningsprogrammen, som kan vara ett problemområde.
 
-   * I synnerhet JSON-renderaren som kan omvända trädstrukturen över flera nivåer.
+   * JSON-renderaren konverterar trädstrukturen över flera nivåer.
 
       Exempelvis begäran:
 
       `http://localhost:4502/.json`
 
-      kan dumpa hela databasen i en JSON-representation. Detta skulle orsaka allvarliga serverproblem. Därför anger Sling en gräns för antalet maximala resultat. Om du vill begränsa djupet i JSON-återgivningen kan du ange värdet för:
+      kan dumpa hela databasen i en JSON-representation vilket kan orsaka betydande serverproblem. Därför anger Sling en gräns för hur många resultat som får maximalt användas. Om du vill begränsa djupet i JSON-återgivningen anger du värdet för följande:
 
       **JSON Max-resultat** ( `json.maximumresults`)
 
       i konfigurationen för [Apache Sling GET Servlet](/help/sites-deploying/osgi-configuration-settings.md#apache-sling-get-servlet). När den här gränsen överskrids komprimeras återgivningen. Standardvärdet för Sling inom AEM är `1000`.
 
-   * Som en förebyggande åtgärd kan du inaktivera de andra standardåtergivningarna (HTML, oformaterad text, XML). Återigen genom att konfigurera [Apache Sling GET Servlet](/help/sites-deploying/osgi-configuration-settings.md#apache-sling-get-servlet).
+   * Som en förebyggande åtgärd bör du inaktivera andra standardåtergivare (HTML, oformaterad text, XML). Återigen genom att konfigurera [Apache Sling GET Servlet](/help/sites-deploying/osgi-configuration-settings.md#apache-sling-get-servlet).
    >[!CAUTION]
    >
-   >Inaktivera inte JSON-renderaren, vilket krävs för att AEM ska fungera normalt.
+   >Inaktivera inte JSON-återgivning eftersom det krävs för att AEM ska fungera normalt.
 
 1. Använd en brandvägg för att filtrera åtkomsten till instansen.
 
-   * Du måste använda en brandvägg på operativsystemnivå för att filtrera åtkomst till punkter i din instans som kan leda till denial of service-attacker om den lämnas oskyddad.
+   * Du måste använda en brandvägg på operativsystemnivå för att filtrera åtkomst till punkter i din instans, vilket kan leda till denial of service-attacker om den inte skyddas.
 
 **Minska mot DoS som orsakas av att formulärväljare används**
 
@@ -325,44 +325,44 @@ För att förhindra missbruk kan du:
 >
 >Denna begränsning bör endast utföras i AEM som inte använder Forms.
 
-Eftersom AEM inte tillhandahåller index för `FormChooserServlet`, som använder formulärväljare i frågor, utlöser en kostsam databasgenomgång, vilket vanligen leder till att AEM avbryts. Formulärväljare kan identifieras med hjälp av **&amp;ast;.form.&amp;ast;** sträng i frågor.
+Eftersom AEM inte tillhandahåller färdiga index för `FormChooserServlet`, kan formulärväljare i frågor utlösa en kostsam databasgenomgång, vilket vanligen leder till att AEM avbryts. Formulärväljare kan identifieras med hjälp av **&amp;ast;.form.&amp;ast;** sträng i frågor.
 
-Följ stegen nedan för att minska detta:
+Du kan åtgärda det här problemet genom att göra följande:
 
 1. Gå till webbkonsolen genom att peka webbläsaren till *https://&lt;serveraddress>:&lt;serverport>/system/console/configMgr*
 
 1. Sök efter **Day CQ WCM Form Chooser Server**
-1. När du har klickat på inlägget inaktiverar du **Avancerad sökning krävs** i följande fönster.
+1. När du har klickat på posten inaktiverar du **Avancerad sökning krävs** i följande fönster.
 
 1. Klicka **Spara**.
 
 **Minska mot DoS som orsakas av tjänsten för hämtning av resurser**
 
-Med standardservern för hämtning av resurser kan autentiserade användare skicka godtyckligt stora begäranden om samtidig hämtning för att skapa ZIP-filer med resurser. Om du skapar stora ZIP-arkiv kan servern och nätverket överbelastas. För att minska risken för denial of service-attacker som orsakas av detta beteende `AssetDownloadServlet` OSGi-komponenten är inaktiverad som standard på [!DNL Experience Manager] publiceringsinstans. Den är aktiverad på [!DNL Experience Manager] författarinstans som standard.
+Med standardservern för hämtning av resurser kan autentiserade användare skicka godtyckligt stora, samtidiga hämtningsbegäranden för att skapa ZIP-filer med resurser. Om du skapar stora ZIP-arkiv kan servern och nätverket överbelastas. För att minska risken för denial of service-attacker som orsakas av detta beteende `AssetDownloadServlet` OSGi-komponenten är inaktiverad som standard på [!DNL Experience Manager] publiceringsinstans. Den är aktiverad på [!DNL Experience Manager] författarinstans som standard.
 
-Om du inte behöver nedladdningsfunktionen kan du inaktivera servleten för att skapa och publicera distributioner. Om din installation kräver att hämtningsfunktionen är aktiverad, se [den här artikeln](/help/assets/download-assets-from-aem.md) för mer information. Du kan också ange en maximal hämtningsgräns som din distribution kan stödja.
+Om du inte behöver nedladdningsfunktionen kan du inaktivera servern för författare och publicera distributioner. Om din installation kräver att hämtningsfunktionen är aktiverad, se [den här artikeln](/help/assets/download-assets-from-aem.md) för mer information. Du kan också ange en maximal hämtningsgräns som din distribution kan stödja.
 
 ### Inaktivera WebDAV {#disable-webdav}
 
-WebDAV ska vara inaktiverat i både författar- och publiceringsmiljön. Detta kan göras genom att stoppa de aktuella OSGi-paketen.
+Inaktivera WebDAV både i skribent- och publiceringsmiljöer genom att stoppa rätt OSGi-paket.
 
 1. Anslut till **Felix Management Console** som körs:
 
    `https://<*host*>:<*port*>/system/console`
 
-   Till exempel `http://localhost:4503/system/console/bundles`.
+   Till exempel, `http://localhost:4503/system/console/bundles`.
 
 1. I listan med paket hittar du paketet:
 
    `Apache Sling Simple WebDAV Access to repositories (org.apache.sling.jcr.webdav)`
 
-1. Klicka på stoppknappen (i åtgärdskolumnen) för att stoppa paketet.
+1. Om du vill stoppa det här paketet klickar du på stoppknappen i åtgärdskolumnen.
 
-1. I listan med paket hittar du det paket som heter:
+1. I paketlistan hittar du även här paketet:
 
    `Apache Sling DavEx Access to repositories (org.apache.sling.jcr.davex)`
 
-1. Klicka på stoppknappen för att stoppa det här paketet.
+1. Klicka på stoppknappen om du vill stoppa det här paketet.
 
    >[!NOTE]
    >
@@ -370,13 +370,13 @@ WebDAV ska vara inaktiverat i både författar- och publiceringsmiljön. Detta k
 
 ### Verifiera att du inte avslöjar personligt identifierbar information i användarens hemsökväg {#verify-that-you-are-not-disclosing-personally-identifiable-information-in-the-users-home-path}
 
-Det är viktigt att du skyddar dina användare genom att se till att du inte visar någon personligt identifierbar information i databasanvändarens hemsökväg.
+Det är viktigt att skydda dina användare genom att se till att du inte visar någon personligt identifierbar information i databasanvändarens hemsökväg.
 
 Sedan AEM 6.1 har sättet som användar-ID-nodnamn (kallas även auktoriseringsbara) lagras på ändrats med en ny implementering av `AuthorizableNodeName` gränssnitt. Det nya gränssnittet visar inte längre användar-ID:t i nodnamnet, utan genererar i stället ett slumpmässigt namn.
 
-Ingen konfiguration behöver göras för att aktivera den, eftersom detta nu är standardsättet att generera auktoriserbara ID:n i AEM.
+Ingen konfiguration måste utföras för att den ska kunna aktiveras eftersom det nu är standardsättet att generera auktoriserbara ID:n i AEM.
 
-Även om det inte rekommenderas kan du inaktivera det om du behöver den gamla implementeringen för bakåtkompatibilitet med dina befintliga program. För att göra detta måste du:
+Även om det inte rekommenderas kan du inaktivera det om du behöver den gamla implementeringen för bakåtkompatibilitet med dina befintliga program. För att göra det måste du göra följande:
 
 1. Gå till webbkonsolen och ta bort posten** org.apache.jackrabbit.oak.security.user.RandomAuthorizableNodeName** från egenskapen **requiredServicePids** in **Apache Jackrabbit Oak SecurityProvider**.
 
@@ -384,7 +384,7 @@ Ingen konfiguration behöver göras för att aktivera den, eftersom detta nu är
 
 1. Ta bort **Apache Jackrabbit Oak Random Authorizable Node Name** OSGi-konfiguration från webbkonsolen.
 
-   Observera att PID för den här konfigurationen är **org.apache.jackrabbit.oak.security.user.RandomAuthorizableNodeName**.
+   För enklare sökning är PID för den här konfigurationen **org.apache.jackrabbit.oak.security.user.RandomAuthorizableNodeName**.
 
 >[!NOTE]
 >
@@ -392,15 +392,15 @@ Ingen konfiguration behöver göras för att aktivera den, eftersom detta nu är
 
 ### Förhindra clickjacking {#prevent-clickjacking}
 
-För att förhindra clickjacking rekommenderar vi att du konfigurerar webbservern så att den `X-FRAME-OPTIONS` HTTP-huvudet är inställt på `SAMEORIGIN`.
+Adobe rekommenderar att du konfigurerar webbservern så att den `X-FRAME-OPTIONS` HTTP-huvudet är inställt på `SAMEORIGIN`.
 
-Mer [information om clickjacking finns på OWASP-webbplatsen](https://www.owasp.org/index.php/Clickjacking).
+Mer information om clickjacking finns i [OWASP-plats](https://www.owasp.org/index.php/Clickjacking).
 
 ### Se till att du replikerar krypteringsnycklar korrekt vid behov {#make-sure-you-properly-replicate-encryption-keys-when-needed}
 
 Vissa AEM funktioner och autentiseringsscheman kräver att du replikerar dina krypteringsnycklar i alla AEM instanser.
 
-Innan du gör detta bör du tänka på att nyckelreplikering sker på olika sätt mellan versionerna eftersom det sätt som nycklarna lagras på skiljer sig åt mellan 6.3 och äldre versioner.
+Innan du gör det utförs nyckelreplikering på olika sätt i olika versioner, eftersom det sätt som nycklarna lagras på skiljer sig åt mellan 6.3 och äldre versioner.
 
 Mer information finns nedan.
 
@@ -408,11 +408,11 @@ Mer information finns nedan.
 
 I äldre versioner lagrades replikeringsnycklarna i databasen, med början AEM 6.3 lagras de i filsystemet.
 
-För att replikera dina nycklar mellan instanser måste du därför kopiera dem från källinstansen till målinstansens plats i filsystemet.
+Om du vill replikera dina nycklar mellan instanser kopierar du dem från källinstansen till målinstansens plats i filsystemet.
 
-Mer specifikt:
+Mer specifikt måste du göra följande:
 
-1. få åtkomst till AEM, vanligtvis en författarinstans, som innehåller det nyckelmaterial som ska kopieras,
+1. få åtkomst till den AEM instansen - vanligtvis en författarinstans - som innehåller det nyckelmaterial som ska kopieras,
 1. Leta reda på paketet com.adobe.granite.crypto.file i det lokala filsystemet. Under den här sökvägen:
 
    * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21`
@@ -434,7 +434,7 @@ Mer specifikt:
 
 >[!NOTE]
 >
->Du kan återgå till metoden för att lagra nycklar före 6.3 genom att lägga till parametern nedan när du först installerar AEM:
+>Du kan återgå till att lagra nycklar före 6.3 genom att lägga till parametern nedan när du först installerar AEM:
 >
 >`-Dcom.adobe.granite.crypto.file.disable=true`
 
@@ -444,14 +444,14 @@ I AEM 6.2 och tidigare lagras nycklarna i databasen under `/etc/key` nod.
 
 Det rekommenderade sättet att på ett säkert sätt replikera nycklarna mellan dina instanser är att bara replikera den här noden. Du kan selektivt replikera noder via CRXDE Lite:
 
-1. Öppna CRXDE Lite genom att gå till *https://&lt;serveraddress>:4502/crx/de/index.jsp*
+1. Öppna CRXDE Lite genom att gå till *`https://&lt;serveraddress&gt;:4502/crx/de/index.jsp`*
 1. Välj `/etc/key` nod.
 1. Gå till **Replikering** -fliken.
 1. Tryck på **Replikering** -knappen.
 
 ### Utför ett penetrationstest {#perform-a-penetration-test}
 
-Adobe rekommenderar starkt att du utför ett penetrationstest av din AEM infrastruktur innan du börjar producera.
+Adobe rekommenderar att du utför ett penetrationstest av din AEM infrastruktur innan du börjar producera.
 
 ### Bästa praxis för utveckling {#development-best-practices}
 
