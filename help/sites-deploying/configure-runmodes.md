@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 12329e26-40bc-4c94-bc60-6d9cbd01345f
 feature: Configuring
 exl-id: 6d03cb1d-500e-4a23-80e5-347a43dff30e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 7d91fbdaae7ade27e9d6bf42bbcd5b16d3f6e358
 workflow-type: tm+mt
 source-wordcount: '747'
 ht-degree: 0%
@@ -122,10 +122,9 @@ De här mapparna är av typen `nt:folder` och ska innehålla rätt paket.
 
 Om du har definierat konfigurationer för flera körningslägen måste du definiera vilka som ska användas vid start. Det finns flera metoder för att specificera vilket körningsläge som ska användas. Upplösningsordningen är
 
+1. [systemegenskaper (](#using-a-system-property-in-the-start-script)
 1. [ ](#using-the-sling-properties-file)
 1. [ ](#using-the-r-option)
-1. [systemegenskaper (](#using-a-system-property-in-the-start-script)
-
 1. [Filnamnsidentifiering](#filename-detection-renaming-the-jar-file)
 
 När du använder en programserver kan du även [definiera körningsläget i web.xml](#defining-the-run-mode-in-web-xml-with-application-server).
@@ -163,7 +162,7 @@ En systemegenskap i startskriptet kan användas för att ange körningsläget.
 Följande två installationskörningslägen kan aktiveras genom att man byter namn på installationsfilen före installationen:
 
 * publicera
-* author
+* författare
 
 jar-filen måste ha samma namn:
 
