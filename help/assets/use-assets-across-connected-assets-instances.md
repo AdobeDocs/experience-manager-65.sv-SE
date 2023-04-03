@@ -6,9 +6,9 @@ mini-toc-levels: 2
 role: User, Admin, Leader
 feature: Connected Assets,User and Groups
 exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
-source-git-commit: cd7800546ec4ebc950c5ebca4d7c80779cb2632c
+source-git-commit: b10b7d957ef3a28b5eeb05383a7504c6516f7aa7
 workflow-type: tm+mt
-source-wordcount: '3761'
+source-wordcount: '3740'
 ht-degree: 17%
 
 ---
@@ -63,7 +63,7 @@ De olika roller som krävs för att konfigurera och använda funktionen och mots
 |---|---|---|---|---|
 | [!DNL Sites] administratör | Lokalt | [!DNL Experience Manager] `administrators` | `admin` | Konfigurera [!DNL Experience Manager] och konfigurera integrering med fjärrkontrollen [!DNL Assets] distribution. |
 | DAM-användare | Lokalt | `Authors` | `ksaner` | Används för att visa och duplicera de hämtade resurserna i `/content/DAM/connectedassets/`. |
-| [!DNL Sites] author | Lokalt | <ul><li>`Authors` (med läsåtkomst på fjärr-DAM och författaråtkomst på lokal [!DNL Sites]) </li> <li>`dam-users` på lokal [!DNL Sites]</li></ul> | `ksaner` | Slutanvändarna är [!DNL Sites] författare som använder den här integreringen för att förbättra innehållets hastighet. Författarna söker efter och bläddrar bland resurser i fjärr-DAM med [!UICONTROL Content Finder] och använda de bilder som behövs på lokala webbsidor. Autentiseringsuppgifterna för `ksaner` DAM-användaren används. |
+| [!DNL Sites] författare | Lokalt | <ul><li>`Authors` (med läsåtkomst på fjärr-DAM och författaråtkomst på lokal [!DNL Sites]) </li> <li>`dam-users` på lokal [!DNL Sites]</li></ul> | `ksaner` | Slutanvändarna är [!DNL Sites] författare som använder den här integreringen för att förbättra innehållets hastighet. Författarna söker efter och bläddrar bland resurser i fjärr-DAM med [!UICONTROL Content Finder] och använda de bilder som behövs på lokala webbsidor. Autentiseringsuppgifterna för `ksaner` DAM-användaren används. |
 | [!DNL Assets] administratör | Fjärr | [!DNL Experience Manager] `administrators` | `admin` på fjärrkontrollen [!DNL Experience Manager] | Konfigurerar CORS (Cross-Origin Resource Sharing). |
 | DAM-användare | Fjärr | `Authors` | `ksaner` på fjärrkontrollen [!DNL Experience Manager] | Författarroll på fjärrkontrollen [!DNL Experience Manager] distribution. Söker efter och bläddrar bland resurser i Connected Assets med hjälp av [!UICONTROL Content Finder]. |
 | DAM-distributör (teknisk användare) | Fjärr | [!DNL Sites] `Authors` | `ksaner` på fjärrkontrollen [!DNL Experience Manager] | Den här användaren som finns på fjärrdistributionen används av [!DNL Experience Manager] lokal server (inte [!DNL Sites] författarroll) för att hämta fjärrresurserna, för [!DNL Sites] författare. Den här rollen är inte densamma som de två `ksaner`-rollerna ovan och den tillhör en annan användargrupp. |
@@ -247,10 +247,6 @@ Du kan även uppdatera metadataegenskaperna för en resurs på en fjärr-DAM och
 [!DNL Sites] författare kan förhandsgranska de tillgängliga uppdateringarna på [!DNL Sites] distribuera och publicera sedan ändringarna igen för att göra dem tillgängliga på [!DNL Experience Manager] publiceringsinstans.
 
 [!DNL Experience Manager] visar en visuell indikator för förfallen status för resurser i `Remote Assets Content Finder` för att hindra webbplatsförfattare från att använda resursen på en [!DNL Sites] sida. Om du använder en resurs med en utgången status på en [!DNL Sites] sidan, resursen visas inte på [!DNL Experience Manager] publiceringsinstans.
-
->[!NOTE]
->
->Uppdateringarna av resurser i fjärr-DAM är tillgängliga för [!DNL Sites] distribution endast om fjärr-DAM och [!DNL Sites] distributioner är aktiverade [!DNL Experience Manager].
 
 ## Vanliga frågor {#frequently-asked-questions}
 
