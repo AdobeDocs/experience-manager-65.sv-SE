@@ -9,9 +9,9 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 5febbb1e-795c-49cd-a8f4-c6b4b540673d
 exl-id: f2f968b8-b21c-487d-bc0d-ed60903bc4bf
-source-git-commit: e147605ff4d5c3d2403632285956559db235c084
+source-git-commit: 9defa6d1843007e9375d839f72f6993c691a37c0
 workflow-type: tm+mt
-source-wordcount: '1198'
+source-wordcount: '1178'
 ht-degree: 0%
 
 ---
@@ -62,7 +62,7 @@ Analysen börjar med steg 0. Målet är att avgöra vilken enhet (Dispatcher, ex
   <tr>
    <td><strong>Steg 0</strong></td>
    <td>Analysera flödet för förfrågningar</td>
-   <td><p>Du kan använda standardanalys av HTTP-begäran i webbläsaren för att analysera förfrågningsflödet. Mer information om hur du gör den här analysen i Chrome finns i:<br /> </p> <p><a href="https://developers.google.com/web/tools/chrome-devtools/profile/network-performance/resource-loading">https://developer.chrome.com/docs/devtools/</a><a href="https://developers.google.com/web/tools/chrome-devtools/profile/network-performance/understanding-resource-timing"><br /> https://developer.chrome.com/docs/devtools/</a><br /> </p> </td>
+   <td><p>Du kan använda standardanalys av HTTP-begäran i webbläsaren för att analysera förfrågningsflödet. Mer information om hur du gör den här analysen i Chrome finns i:<br /> </p> <p><a href="https://developers.google.com/web/tools/chrome-devtools/profile/network-performance/resource-loading">https://developer.chrome.com/docs/devtools/</a><br /> </p> </td>
   </tr>
   <tr>
    <td><strong>Steg 2</strong></td>
@@ -97,7 +97,7 @@ Analysen börjar med steg 0. Målet är att avgöra vilken enhet (Dispatcher, ex
   <tr>
    <td><strong>Steg 8</strong></td>
    <td>Kan långsamheten reproduceras med en lokal instans?</td>
-   <td><br /> <p>Använd <a href="/help/sites-developing/tough-day.md">Tålig dag</a> för att återskapa verkliga förhållanden från produktionsinstanserna. Om det här scenariot inte är realistiskt för ditt utvecklingsområde måste du testa produktionsinstansen (eller en identisk mellanlagringsmodell) i ett annat nätverkskontext.<br /> </p> </td>
+   <td><br /> <p>Använd <a href="/help/sites-developing/tough-day.md">Tålig dag</a> för att återskapa"verkliga" förhållanden från produktionsinstanserna. Om det här scenariot inte är realistiskt för ditt utvecklingsområde måste du testa produktionsinstansen (eller en identisk mellanlagringsmodell) i ett annat nätverkskontext.<br /> </p> </td>
   </tr>
   <tr>
    <td><strong>Steg 9</strong></td>
@@ -212,7 +212,7 @@ Analysen börjar med steg 0. Målet är att avgöra vilken enhet (Dispatcher, ex
     <ol>
      <li><a href="/help/sites-deploying/configuring-performance.md#cq-dam-asset-synchronization-service">Resurssynkroniseringstjänst</a></li>
      <li><a href="/help/sites-deploying/configuring-performance.md#multiple-dam-instances">Flera DAM-instanser</a></li>
-     <li>Artiklar med tips för prestandajustering <a href="https://helpx.adobe.com/customer-care-office-hours/aem/6x-performance-tuning-best-practices.html">här</a> och <a href="https://helpx.adobe.com/customer-care-office-hours/aem/6x-performance-tuning-best-practices.html">här</a>.<br /> </li>
+     <li>Tipsartikel för prestandajustering <a href="https://helpx.adobe.com/customer-care-office-hours/aem/6x-performance-tuning-best-practices.html">här</a>.<br /> </li>
     </ol> </td>
   </tr>
   <tr>
@@ -277,7 +277,7 @@ Analysen börjar med steg 0. Målet är att avgöra vilken enhet (Dispatcher, ex
   <tr>
    <td><strong>Steg 39</strong></td>
    <td>Använd pre-connect för att minska anslutningens belastning</td>
-   <td>Se Gem-sessionen ovan. Dessutom kan du föransluta ytterligare dokumentation på W3c:<a href="https://html.spec.whatwg.org/#linkTypes"> https://html.spec.whatwg.org/#linkTypes</a></td>
+   <td>Se Gem-sessionen ovan. Ytterligare föranslutningsdokumentation på W3c:<a href="https://html.spec.whatwg.org/#linkTypes"> https://html.spec.whatwg.org/#linkTypes</a></td>
   </tr>
   <tr>
    <td><strong>Steg 40 och 41</strong><br /> </td>

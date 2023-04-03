@@ -11,16 +11,16 @@ content-type: reference
 discoiquuid: 0aa2c22f-32bb-4e50-8328-63ed73c0f19e
 legacypath: /content/docs/en/aem/6-0/deploy/upgrade/microkernels-in-aem-6-0
 exl-id: 52437eb5-f9fb-4945-9950-5a1562fe878d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 9defa6d1843007e9375d839f72f6993c691a37c0
 workflow-type: tm+mt
-source-wordcount: '714'
+source-wordcount: '708'
 ht-degree: 0%
 
 ---
 
 # Lagringselement i AEM 6.5{#storage-elements-in-aem}
 
-I den här artikeln ska vi ta upp:
+Denna artikel omfattar följande:
 
 * [Översikt över lagring i AEM 6](/help/sites-deploying/storage-elements-in-aem-6.md#overview-of-storage-in-aem)
 * [Underhålla databasen](/help/sites-deploying/storage-elements-in-aem-6.md#maintaining-the-repository)
@@ -37,9 +37,9 @@ Det finns för närvarande två nodlagringsimplementationer i AEM6: Tjärlagring
 
 >[!CAUTION]
 >
->PID:t för segmentnodarkivet har ändrats från org.apache.jackrabbit.oak.**plugin-program**.segment.SegmentNodeStoreService i tidigare versioner av AEM 6 till org.apache.jackrabbit.oak.segment.SegmentNodeStoreService i AEM 6.3. Se till att du gör de nödvändiga konfigurationsjusteringarna för att återspegla den här ändringen.
+>PID:t för segmentnodarkivet har ändrats från org.apache.jackrabbit.oak.**plugin-program**.segment.SegmentNodeStoreService i tidigare versioner av AEM 6 till org.apache.jackrabbit.oak.segment.SegmentNodeStoreService i AEM 6.3. Kontrollera att nödvändiga konfigurationsjusteringar görs så att ändringarna återspeglas.
 
-Som standard använder AEM 6 Tjära-lagringen för att lagra noder och binärfiler med standardkonfigurationsalternativen. Så här konfigurerar du lagringsinställningarna manuellt:
+Som standard använder AEM 6 Tjära-lagringen för att lagra noder och binärfiler med standardkonfigurationsalternativen. Du kan konfigurera lagringsinställningarna manuellt genom att göra följande:
 
 1. Ladda ned AEM 6 quickstart jar och placera den i en ny mapp.
 1. Packa upp AEM genom att köra:
@@ -78,9 +78,9 @@ AEM 6 kan konfigureras för att köras med MongoDB-lagring enligt följande proc
 
    * `mongouri`: The [MongoURI](https://docs.mongodb.org/manual/reference/connection-string/) krävs för att ansluta till Mongo-databasen. Standardvärdet är `mongodb://localhost:27017`
    * `db`: Namn på Mongo-databasen. Som standard används nya AEM 6-installationer **aem-author** som databasnamn.
-   * `cache`: Cachestorleken i MB. Detta fördelas mellan olika cacheminnen som används i DocumentNodeStore. Standardvärdet är 256.
+   * `cache`: Cachestorleken i MB. Cachestorleken fördelas mellan olika cacheminnen som används i DocumentNodeStore. Standardvärdet är 256.
    * `changesSize`: Storlek i MB på den mappade samling som används i Mongo för cache-lagring av diff-utdata. Standardvärdet är 256.
-   * `customBlobStore`: Booleskt värde som anger att ett anpassat datalager kommer att användas. Standardvärdet är false.
+   * `customBlobStore`: Booleskt värde som anger att ett anpassat datalager används. Standardvärdet är false.
 
 1. Skapa en konfigurationsfil med PID för det datalager som du vill använda och redigera filen för att ange konfigurationsalternativen. Mer information finns på [Konfigurera nodarkiv och datalager](/help/sites-deploying/data-store-config.md).
 
@@ -90,11 +90,11 @@ AEM 6 kan konfigureras för att köras med MongoDB-lagring enligt följande proc
    java -jar cq-quickstart-6.jar -r crx3,crx3mongo
    ```
 
-   Plats **`-r`** är serverdelens körningsläge. I det här exemplet börjar det med stöd för MongoDB.
+   Där serverdelens körningsläge är **`-r`** börjar exemplet med stöd för MongoDB.
 
 #### Inaktivera genomskinliga stora sidor {#disabling-transparent-huge-pages}
 
-Red Hat Linux använder en minneshanteringsalgoritm som kallas för Transparent Huge Pages (THP). Medan AEM utför finkorniga läsningar och skrivningar är THP optimerat för stora operationer. Därför rekommenderar vi att du inaktiverar THP för både Tjärs- och Mongo-lagring. Så här inaktiverar du algoritmen:
+Red Hat® Linux® använder en minneshanteringsalgoritm som kallas för Transparent Huge Pages (THP). Medan AEM utför finkorniga läsningar och skrivningar är THP optimerat för stora operationer. Därför rekommenderar vi att du inaktiverar THP för både Tjärs- och Mongo-lagring. Så här inaktiverar du algoritmen:
 
 1. Öppna `/etc/grub.conf` i valfri textredigerare.
 1. Lägg till följande rad i **grob.conf** fil:
@@ -117,13 +117,13 @@ Red Hat Linux använder en minneshanteringsalgoritm som kallas för Transparent 
 
 >[!NOTE]
 >
->Du kan även använda följande resurser:
+>Se följande resurser:
 >
->* Mer information om genomskinliga stora sidor i Red Hat Linux finns i [artikel](https://access.redhat.com/solutions/46111).
->* Linux-justeringstips finns här [artikel](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html).
+>* Mer information om genomskinliga stora sidor i Red Hat® Linux® finns i [artikel](https://access.redhat.com/solutions/46111).
+* Linux®-justeringstips finns här [artikel](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=en).
 >
 
 
 ## Underhålla databasen {#maintaining-the-repository}
 
-Varje uppdatering av databasen skapar en ny innehållsrevision. Det innebär att databasstorleken ökar för varje uppdatering. För att undvika okontrollerad databastillväxt måste gamla ändringar rensas bort för att frigöra diskutrymme. Den här underhållsfunktionen kallas Revision Cleanup. Revision Cleanup-funktionen frigör diskutrymme genom att ta bort föråldrade data från databasen. Mer information om Revision Cleanup finns i [Sidan Revision Cleanup](/help/sites-deploying/revision-cleanup.md).
+Varje uppdatering av databasen skapar en innehållsändring. Det innebär att databasstorleken ökar för varje uppdatering. För att undvika okontrollerad databastillväxt måste äldre versioner rensas för att frigöra diskutrymme. Den här underhållsfunktionen kallas Revision Cleanup. Revision Cleanup-funktionen frigör diskutrymme genom att ta bort föråldrade data från databasen. Mer information om Revision Cleanup finns i [Sidan Revision Cleanup](/help/sites-deploying/revision-cleanup.md).
