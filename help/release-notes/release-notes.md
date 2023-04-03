@@ -2,9 +2,9 @@
 title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
-source-git-commit: 676472125cf472d42b792fae87dffe263e499014
+source-git-commit: 72b3eaea279911569dbd6b9acf41527111e9e53c
 workflow-type: tm+mt
-source-wordcount: '2581'
+source-wordcount: '2641'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 | -------- | ---------------------------- |
 | Version | 6.5.16.0 <!-- UPDATE FOR EACH NEW RELEASE --> |
 | Typ | Service Pack-version |
-| Date | Torsdagen den 23 februari 2023 <!-- UPDATE FOR EACH NEW RELEASE --> |
+| Datum | Torsdagen den 23 februari 2023 <!-- UPDATE FOR EACH NEW RELEASE --> |
 | Hämta URL | [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?pack[..]be/packages/cq650/servicepack/aem-service-pkg-6.5.16.0.zip) <!-- UPDATE FOR EACH NEW RELEASE --> |
 
 ## Vad ingår i [!DNL Experience Manager] 6.5.16.0 {#what-is-included-in-aem-6516}
@@ -271,6 +271,17 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 Detta paket behövs för kunder som använder GraphQL; på så sätt kan de lägga till den indexdefinition som behövs baserat på de funktioner de faktiskt använder.
 
 * Uppdatera dina GraphQL-frågor som kan ha använt ett anpassat API-namn för innehållsmodellen till att använda standardnamnet för innehållsmodellen i stället.
+
+* En GraphQL-fråga kan använda `damAssetLucene` index i stället för `fragments` index. Detta kan leda till att GraphQL-frågor misslyckas eller tar mycket lång tid att köra.
+
+   För att åtgärda problemet `damAssetLucene` måste konfigureras så att följande två egenskaper ingår:
+
+   * `contentFragment`
+   * `model`
+
+   När indexdefinitionen har ändrats krävs en omindexering (`reindex` = `true`).
+
+   Efter dessa steg bör GraphQL-frågorna gå snabbare.
 
 * Som [!DNL Microsoft®® Windows Server 2019] stöder inte [!DNL MySQL 5.7] och [!DNL JBoss®® EAP 7.1], [!DNL Microsoft®® Windows Server 2019] stöder inte körklara installationer för [!DNL AEM Forms 6.5.10.0].
 
