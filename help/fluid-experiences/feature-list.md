@@ -4,9 +4,9 @@ description: Lista med flytande upplevelser
 index: n
 feature: Authoring
 exl-id: 3ac61645-4873-4602-b740-2236aba5bc5e
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: 768576e300b655962adc3e1db20fc5ec06a5ba6c
 workflow-type: tm+mt
-source-wordcount: '342'
+source-wordcount: '346'
 ht-degree: 2%
 
 ---
@@ -49,7 +49,7 @@ I följande tabeller definieras funktionerna i AEM flytande upplevelser och län
 |---|
 | [HTTP-API](/help/assets/mac-api-assets.md) |
 | [Strukturerade innehållsmodeller](/help/assets/content-fragments/content-fragments.md) |
-| [Innehållstjänster](https://helpx.adobe.com/experience-manager/kt/sites/using/content-services-tutorial-use.html) |
+| [Innehållstjänster](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=en) |
 | [Upplevelsefragment](/help/sites-authoring/experience-fragments.md) |
 | HTTP API för strukturerat innehåll (läs) |
 | HTTP API för strukturerat innehåll (CRUD) |
@@ -82,10 +82,9 @@ I följande tabeller definieras funktionerna i AEM flytande upplevelser och län
 
 ## Läs mer {#learn-more}
 
-* [Flytande upplevelser för användning i headless](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-headless-usecases.html)
-* [AEM: Vad, varför och hur?](https://helpx.adobe.com/experience-manager/kt/eseminars/ask-the-expert/aem-content-services.html)
-* [Använda innehållstjänster](https://helpx.adobe.com/experience-manager/kt/sites/using/structured-fragments-content-services-feature-video-use.html)
-* [Utveckla mobilappar](https://experienceleague.adobe.com/docs/experience-manager-64/mobile/developing/developing-content-services.html)
-* [Vanliga frågor om åtkomst till tredje part](https://helpx.adobe.com/experience-manager/kt/sites/using/content-services-tutorial-use/part7.html)
-* [Flytande upplevelser överallt](https://helpx.adobe.com/experience-manager/using/using-sling-apis.html)
-* [Använda Sling API:er](https://helpx.adobe.com/experience-manager/using/using-sling-apis.html)
+* [Flytande upplevelser för användning i headless](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2017/aem-headless-usecases.html?lang=en)
+* [AEM: Vad, varför och hur?](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html?lang=en)
+* [Använda innehållstjänster](https://experienceleague.adobe.com/docs/experience-manager-65/mobile/developing/developing-content-services.html?lang=en)
+* [Utveckla mobilappar](https://experienceleague.adobe.com/docs/experience-manager-65/mobile/developing/developing-content-services.html?lang=en)
+* [Vanliga frågor om tredjepartsåtkomst](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/chapter-7.html?lang=en)
+* [Använda Sling API:er](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html#sling-models)

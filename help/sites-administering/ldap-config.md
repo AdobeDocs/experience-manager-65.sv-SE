@@ -1,8 +1,6 @@
 ---
 title: Konfigurera LDAP med AEM 6
-seo-title: Configuring LDAP with AEM 6
 description: Lär dig hur du konfigurerar LDAP med AEM.
-seo-description: Learn how to configure LDAP with AEM.
 uuid: 0007def4-86f0-401d-aa37-c8d49d5acea1
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,31 +8,31 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 5faf6ee5-9242-48f4-87a8-ada887a3be1e
 exl-id: 2ebca4fb-20f7-499c-96a0-4018eaeddc1a
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 768576e300b655962adc3e1db20fc5ec06a5ba6c
 workflow-type: tm+mt
-source-wordcount: '1648'
+source-wordcount: '1625'
 ht-degree: 0%
 
 ---
 
 # Konfigurera LDAP med AEM 6 {#configuring-ldap-with-aem}
 
-LDAP **L** ightweight **D** katalog **A**&#x200B;åtkomst **P** Protokoll) används för åtkomst till centraliserade katalogtjänster. Detta minskar den arbetsinsats som krävs för att hantera användarkonton eftersom de kan nås av flera program. En sådan LDAP-server är Active Directory. LDAP används ofta för att uppnå enkel inloggning, vilket gör att en användare kan få åtkomst till flera program efter inloggning en gång.
+LDAP **L** ightweight **D** katalog **A**&#x200B;åtkomst **P** Protokoll) används för åtkomst till centraliserade katalogtjänster. Det minskar behovet av att hantera användarkonton eftersom de kan nås av flera program. En sådan LDAP-server är Active Directory. LDAP används ofta för att uppnå enkel inloggning, vilket gör att en användare kan få åtkomst till flera program efter inloggning en gång.
 
-Användarkonton kan synkroniseras mellan LDAP-servern och databasen med LDAP-kontoinformation som sparas i databasen. Detta gör att konton kan tilldelas till databasgrupper för att tilldela de behörigheter och behörigheter som krävs.
+Användarkonton kan synkroniseras mellan LDAP-servern och databasen med LDAP-kontoinformation som sparas i databasen. Den här funktionen gör att konton kan tilldelas till databasgrupper för att tilldela de behörigheter och behörigheter som krävs.
 
 Databasen använder LDAP-autentisering för att autentisera sådana användare, där inloggningsuppgifterna skickas till LDAP-servern för validering, vilket krävs innan åtkomst till databasen tillåts. För att förbättra prestandan kan validerade inloggningsuppgifter cachas av databasen med en tidsgräns för förfallodatum så att omvalidering sker efter en lämplig period.
 
-När ett konto tas bort från LDAP-serververifieringen inte längre beviljas åtkomst till databasen. Information om LDAP-konton som sparas i databasen kan också rensas.
+När ett konto tas bort från LDAP-servern beviljas inte längre någon validering och åtkomst till databasen nekas. Information om LDAP-konton som sparas i databasen kan också rensas.
 
-Användningen av sådana konton är transparent för användarna, de ser ingen skillnad mellan användar- och gruppkonton som skapats från LDAP och konton som skapats enbart i databasen.
+Användningen av sådana konton är transparent för användarna. Det innebär att de inte ser någon skillnad mellan användar- och gruppkonton som skapats från LDAP och konton som skapats enbart i databasen.
 
 I AEM 6 har LDAP-stödet en ny implementering som kräver en annan typ av konfiguration än i tidigare versioner.
 
 Alla LDAP-konfigurationer är nu tillgängliga som OSGi-konfigurationer. De kan konfigureras via webbhanteringskonsolen på:
 `https://serveraddress:4502/system/console/configMgr`
 
-För att LDAP ska fungera med AEM måste du skapa tre OSGi-konfigurationer:
+Om du vill att LDAP ska fungera med AEM måste du skapa tre OSGi-konfigurationer:
 
 1. En LDAP-identitetsleverantör (IDP).
 1. En synkroniseringshanterare.
@@ -42,9 +40,9 @@ För att LDAP ska fungera med AEM måste du skapa tre OSGi-konfigurationer:
 
 >[!NOTE]
 >
->Titta [Oak&#39;s External Login Module - Authenticating with LDAP and Beyond](https://docs.adobe.com/content/ddc/en/gems/oak-s-external-login-module---authenticating-with-ldap-and-beyon.html#) för att göra externa inloggningsmoduler djupdykare.
+>Titta [Oak&#39;s External Login Module - Authenticating with LDAP and Beyond](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-oak-external-login-module-authenticating-with-ldap-and-beyond.html?lang=en) för att göra externa inloggningsmoduler djupdykare.
 >
->Ett exempel på hur du konfigurerar Experience Manager med Apache DS finns i [Konfigurerar Adobe Experience Manager 6.5 för att använda Apache Directory Service.](https://helpx.adobe.com/experience-manager/using/configuring-aem64-apache-directory-service.html)
+>Ett exempel på hur du konfigurerar Experience Manager med Apache DS finns i [Konfigurerar Adobe Experience Manager 6.5 för att använda Apache Directory Service.](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/configuring-adobe-experience-manager-6-to-use-apache-directory/m-p/183805)
 
 ## Konfigurera LDAP-identitetsleverantören {#configuring-the-ldap-identity-provider}
 
@@ -82,7 +80,7 @@ Följande konfigurationsalternativ är tillgängliga för LDAP-identitetsleveran
   </tr>
   <tr>
    <td><strong>Bind DN</strong></td>
-   <td>Unikt namn för användaren för autentisering. Om detta lämnas tomt utförs en anonym bindning.</td>
+   <td>Unikt namn för användaren för autentisering. Om fältet lämnas tomt utförs en anonym bindning.</td>
   </tr>
   <tr>
    <td><strong>Bind lösenord</strong></td>
@@ -106,7 +104,7 @@ Följande konfigurationsalternativ är tillgängliga för LDAP-identitetsleveran
   </tr>
   <tr>
    <td><strong>Användarobjektklasser</strong></td>
-   <td>Listan över objektklasser som en användarpost måste innehålla.</td>
+   <td>Listan med objektklasser som en användarpost måste innehålla.</td>
   </tr>
   <tr>
    <td><strong>Användar-id-attribut</strong></td>
@@ -142,14 +140,14 @@ Följande konfigurationsalternativ är tillgängliga för LDAP-identitetsleveran
   </tr>
   <tr>
    <td><strong>Gruppmedlemsattribut</strong></td>
-   <td>Gruppattribut som innehåller medlemmarna i en grupp.</td>
+   <td>Gruppattribut som innehåller en eller flera medlemmar i en grupp.</td>
   </tr>
  </tbody>
 </table>
 
 ## Konfigurera synkroniseringshanteraren {#configuring-the-synchronization-handler}
 
-Synkroniseringshanteraren definierar hur Indentity Provider-användare och -grupper ska synkroniseras med databasen.
+Synkroniseringshanteraren definierar hur identitetsleverantörens användare och grupper synkroniseras med databasen.
 
 Den finns under **Standardsynkhanterare för Apache Jackrabbit** i hanteringskonsolen.
 
@@ -167,15 +165,15 @@ Följande konfigurationsalternativ är tillgängliga för Synkroniseringshantera
   </tr>
   <tr>
    <td><strong>Automatiskt medlemskap för användare</strong></td>
-   <td>Lista över grupper som en synkroniserad användare läggs till i automatiskt.</td>
+   <td>Lista över grupper som en synkroniserad användare automatiskt läggs till i.</td>
   </tr>
   <tr>
    <td><strong>Mappning av användaregenskaper</strong></td>
-   <td>Lista mappningsdefinition för lokala egenskaper från externa egenskaper.</td>
+   <td>Definition av listmappning av lokala egenskaper från externa.</td>
   </tr>
   <tr>
    <td><strong>Användarsökvägsprefix</strong></td>
-   <td>Det sökvägsprefix som används när nya användare skapas.</td>
+   <td>Det sökvägsprefix som används när användare skapas.</td>
   </tr>
   <tr>
    <td><strong>Förfallotid för användarmedlemskap</strong></td>
@@ -191,15 +189,15 @@ Följande konfigurationsalternativ är tillgängliga för Synkroniseringshantera
   </tr>
   <tr>
    <td><strong>Automatiskt gruppmedlemskap</strong></td>
-   <td>Lista över grupper som en synkroniserad grupp läggs till i automatiskt.</td>
+   <td>Lista över grupper som en synkroniserad grupp automatiskt läggs till i.</td>
   </tr>
   <tr>
    <td><strong>Mappning av gruppegenskaper</strong></td>
-   <td>Lista mappningsdefinition för lokala egenskaper från externa egenskaper.</td>
+   <td>Definition av listmappning av lokala egenskaper från externa.</td>
   </tr>
   <tr>
    <td><strong>Prefix för gruppsökväg</strong></td>
-   <td>Det sökvägsprefix som används när nya grupper skapas.</td>
+   <td>Det sökvägsprefix som används när grupper skapas.</td>
   </tr>
  </tbody>
 </table>
@@ -210,22 +208,21 @@ Den externa inloggningsmodulen finns under **Apache Jackrabbit Oak External Logi
 
 >[!NOTE]
 >
->Apache Jackrabbit Oak External Login Module implementerar Java Authentication and Authorization Servi (JAAS)-specifikationerna. Se [Java Security Reference Guide för Oracle](https://docs.oracle.com/javase/8/docs/technotes/guides/security/jaas/JAASRefGuide.html) för mer information.
+>Apache Jackrabbit Oak External Login Module implementerar Java™ Authentication and Authorization Servi (JAAS)-specifikationerna. Se [officiell Oracle Java™ Security Reference Guide](https://docs.oracle.com/javase/8/docs/technotes/guides/security/jaas/JAASRefGuide.html) för mer information.
 
 Dess uppdrag är att definiera vilken identitetsleverantör och synkroniseringshanterare som ska användas, vilket effektivt binder de två modulerna.
 
 Följande konfigurationsalternativ är tillgängliga:
 
-| **JAAS-rankning** | Ange rangordningen (dvs. sorteringsordningen) för den här inloggningsmodulposten. Posterna sorteras i fallande ordning (dvs. högre rangordnade konfigurationer kommer först). |
+| **JAAS-rankning** | Ange rankningen (d.v.s. sorteringsordningen) för den här inloggningsmodulposten. Posterna sorteras i fallande ordning (dvs. högre rangordnade konfigurationer kommer först). |
 |---|---|
-| **JAAS-kontrollflagga** | Egenskap som anger om en LoginModule är OBLIGATORISK, REQUISITE, SUFFICIENT eller OPTIONAL.Mer information om vad dessa flaggor betyder finns i JAAS-konfigurationsdokumentationen. |
-| **JAAS Realm** | Sfärnamnet (eller programnamnet) som LoginModule registreras mot. Om inget sfärnamn anges registreras LoginModule med en standardsfärk som konfigurerats i Felix JAAS-konfigurationen. |
+| **JAAS-kontrollflagga** | Egenskap som anger om en LoginModule är OBLIGATORISK, REQUISITE, TILLRÄCKLIG eller VALFRI. Mer information om innebörden av dessa flaggor finns i dokumentationen om JAAS-konfigurationen. |
+| **JAAS Realm** | Sfärnamnet (eller programnamnet) som LoginModule är registrerad mot. Om inget sfärnamn anges registreras LoginModule med en standardsfärk som konfigurerats i Felix JAAS-konfigurationen. |
 | **Namn på identitetsleverantör** | Identitetsleverantörens namn. |
 | **Namn på synkroniseringshanterare** | Synkroniseringshanterarens namn. |
 
 >[!NOTE]
->
->Om du planerar att ha mer än en LDAP-konfiguration med din AEM-instans måste separata identitetsleverantörer och synkroniseringshanterare skapas för varje konfiguration.
+Om du planerar att ha fler än en LDAP-konfiguration med din AEM-instans måste separata identitetsleverantörer och synkroniseringshanterare skapas för varje konfiguration.
 
 ## Konfigurera LDAP över SSL {#configure-ldap-over-ssl}
 
@@ -233,7 +230,7 @@ AEM 6 kan konfigureras för autentisering med LDAP över SSL genom att följa ne
 
 1. Kontrollera **Använd SSL** eller **Använd TLS** kryssrutor när du konfigurerar [LDAP-identitetsleverantör](#configuring-the-ldap-identity-provider).
 1. Konfigurera Synkroniseringshanteraren och modulen för extern inloggning enligt inställningarna.
-1. Installera SSL-certifikaten i Java VM om det behövs. Detta kan du göra med nyckelverktyget:
+1. Installera SSL-certifikaten i din virtuella Java™-dator om det behövs. Installationen kan göras med hjälp av nyckelverktyget:
 
    `keytool -import -alias localCA -file <certificate location> -keystore <keystore location>`
 
@@ -245,7 +242,7 @@ Självsignerade certifikat kan användas när AEM konfigureras för autentiserin
 
 1. Kontrollera att du har ett SSL-bibliotek installerat och att det fungerar. I den här proceduren används OpenSSL som exempel.
 
-1. Skapa en anpassad OpenSSL-konfigurationsfil (cnf). Detta kan du göra genom att kopiera standardkonfigurationsfilen **openssl.cnf **och anpassa den. På UNIX-system finns den vanligtvis på `/usr/lib/ssl/openssl.cnf`
+1. Skapa en anpassad OpenSSL-konfigurationsfil (cnf). Du kan göra den här konfigurationen genom att kopiera standardkonfigurationsfilen **openssl.cnf **och anpassa den. På UNIX®-system är den `/usr/lib/ssl/openssl.cnf`
 
 1. Fortsätt till att skapa certifikatutfärdarens rotnyckel genom att köra följande kommando i en terminal:
 
@@ -253,11 +250,11 @@ Självsignerade certifikat kan användas när AEM konfigureras för autentiserin
    openssl genpkey -algorithm [public key algorithm] -out certificatefile.key -pkeyopt [public key algorithm option]
    ```
 
-1. Skapa sedan ett nytt självsignerat certifikat:
+1. Skapa sedan ett självsignerat certifikat:
 
    `openssl req -new -x509 -days [number of days for certification] -key certificatefile.key -out root-ca.crt -config CA/openssl.cnf`
 
-1. Inspect det nya certifikatet för att säkerställa att allt är i rätt ordning:
+1. Kontrollera att allt är i rätt ordning genom att kontrollera det nya certifikatet:
 
    `openssl x509 -noout -text -in root-ca.crt`
 
@@ -268,16 +265,16 @@ Självsignerade certifikat kan användas när AEM konfigureras för autentiserin
 
 1. Flytta de skapade .pem-filerna till de platser som är konfigurerade i .cnf-filen.
 
-1. Lägg slutligen till certifikatet i Java-nyckelbehållaren.
+1. Lägg slutligen till certifikatet i Java™-nyckelbehållaren.
 
 ## Aktivera felsökningsloggning {#enabling-debug-logging}
 
-Felsökningsloggning kan aktiveras för både LDAP-identitetsleverantören och modulen för extern inloggning för att felsöka anslutningsproblem.
+Felsökningsloggning kan aktiveras för både LDAP-identitetsprovidern och den externa inloggningsmodulen för att felsöka anslutningsproblem.
 
-Om du vill aktivera felsökningsloggning måste du:
+Om du vill aktivera felsökningsloggning måste du göra följande:
 
 1. Gå till webbhanteringskonsolen.
-1. Sök efter&quot;Konfiguration av loggningsloggare för Apache Sling&quot; och skapa två loggare med följande alternativ:
+1. Sök efter&quot;Konfiguration av loggningslogg för Apache Sling&quot; och skapa två loggare med följande alternativ:
 
 * Loggnivå: Felsök
 * Loggfil logs/ldap.log
@@ -291,15 +288,15 @@ Om du vill aktivera felsökningsloggning måste du:
 
 ## Ett ord om gruppanknytning {#a-word-on-group-affiliation}
 
-Användare som synkroniseras via LDAP kan ingå i olika grupper i AEM. Dessa grupper kan vara externa LDAP-grupper som läggs till AEM som en del av synkroniseringsprocessen, men de kan också vara grupper som läggs till separat och inte ingår i det ursprungliga LDAP-grupptillhörighetsschemat.
+Användare som synkroniseras via LDAP kan ingå i olika grupper i AEM. Dessa grupper kan vara externa LDAP-grupper som läggs till i AEM som en del av synkroniseringsprocessen. De kan dock också vara grupper som läggs till separat och inte ingår i det ursprungliga LDAP-koncerntillhörighetsschemat.
 
-I de flesta fall kan dessa grupper läggas till av en lokal AEM eller av någon annan identitetsleverantör.
+Vanligtvis läggs dessa grupper till av en lokal AEM eller av någon annan identitetsleverantör.
 
-Om en användare tas bort från en grupp på LDAP-servern återspeglas ändringen även på AEM sida vid synkroniseringen. Alla andra grupptillhörigheter för användaren som inte lades till av LDAP finns dock kvar.
+Om en användare tas bort från en grupp på LDAP-servern återspeglas ändringen på AEM sida vid synkroniseringen. Alla andra grupptillhörigheter för användaren som inte lades till av LDAP finns dock kvar.
 
-AEM upptäcker och hanterar rensning av användare från externa grupper genom att använda `rep:externalId` -egenskap. Den här egenskapen läggs till automatiskt för alla användare eller grupper som synkroniseras med Synchronization Handler och den innehåller information om den ursprungliga identitetsleverantören.
+AEM identifierar och hanterar rensning av användare från externa grupper med hjälp av `rep:externalId` -egenskap. Den här egenskapen läggs till automatiskt för alla användare eller grupper som synkroniseras med Synchronization Handler och den innehåller information om den ursprungliga identitetsleverantören.
 
-Mer information finns i dokumentationen för Apache Oak på [Användar- och gruppsynkronisering](https://jackrabbit.apache.org/oak/docs/security/authentication/usersync.html).
+Se Apache Oak-dokumentation på [Användar- och gruppsynkronisering](https://jackrabbit.apache.org/oak/docs/security/authentication/usersync.html).
 
 ## Kända fel {#known-issues}
 
