@@ -1,8 +1,6 @@
 ---
 title: Mallar
-seo-title: Templates
-description: Mallar används när du skapar en sida som ska användas som bas för den nya sidan
-seo-description: Templates are used when creating a page which will be used as the base for the new page
+description: Mallar används när du skapar en sida som används som bas för den nya sidan.
 uuid: 6fa3dafc-dfa1-42d8-b296-d4be57449411
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,9 +9,9 @@ content-type: reference
 discoiquuid: 7c723773-7c23-43d7-85dc-53e54556b648
 legacypath: /content/docs/en/aem/6-1/develop/the-basics/templates
 exl-id: 59f01bb1-4ff1-42b6-afc9-56d448b1f803
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 95638b6dd9527c567b38d8cd9da14633bd4142b5
 workflow-type: tm+mt
-source-wordcount: '963'
+source-wordcount: '931'
 ht-degree: 0%
 
 ---
@@ -22,9 +20,9 @@ ht-degree: 0%
 
 Mallar används vid olika tillfällen i AEM:
 
-* När [skapa en sida som du måste välja en mall för](#templates-pages); det här används som bas för den nya sidan. Mallen definierar strukturen för den resulterande sidan, allt inledande innehåll och [komponenter](/help/sites-authoring/default-components.md) som kan användas (designegenskaper).
+* [När du skapar en sida väljer du en mall](#templates-pages). Den här mallen används som bas för den nya sidan. Mallen definierar sidans struktur, allt ursprungligt innehåll och [komponenter](/help/sites-authoring/default-components.md) som kan användas (designegenskaper).
 
-* När [skapa ett innehållsfragment som du också måste välja en mall](#templates-content-fragments). Den här mallen definierar strukturen, initiala element och variationer.
+* [När du skapar ett innehållsfragment väljer du även en mall](#templates-content-fragments). Den här mallen definierar strukturen, initiala element och variationer.
 
 Följande mallar beskrivs i detalj:
 
@@ -39,7 +37,7 @@ AEM har nu två grundläggande typer av mallar för att skapa sidor:
 
 >[!NOTE]
 >
->När en mall används för [skapa en ny sida](/help/sites-authoring/managing-pages.md#creating-a-new-page) det inte finns någon synlig skillnad (för sidförfattaren) och ingen indikation på vilken typ av mall som används.
+>När en mall används för [skapa en sida](/help/sites-authoring/managing-pages.md#creating-a-new-page), det finns ingen synlig skillnad (för sidförfattaren) och ingen indikation på vilken typ av mall som används.
 
 ### Redigerbara mallar {#editable-templates}
 
@@ -55,23 +53,23 @@ Fördelarna med redigerbara mallar:
    * det ursprungliga innehållet
    * innehållsprinciper
 
-* När den nya sidan har skapats upprätthålls en dynamisk anslutning mellan sidan och mallen. Detta innebär att ändringar i mallstrukturen kommer att återspeglas på alla sidor som skapas med den mallen (ändringar av det ursprungliga innehållet kommer inte att återspeglas).
+* När den nya sidan har skapats upprätthålls en dynamisk anslutning mellan sidan och mallen. Denna koppling innebär att ändringar i mallstrukturen återspeglas på alla sidor som skapas med den mallen. ändringar i det ursprungliga innehållet återspeglas inte.
 * Innehållsprinciper (redigerade från mallredigeraren) används för att bevara designegenskaperna (designläget används inte i sidredigeraren).
 * lagras under `/conf`
 * Se [Redigerbara mallar](/help/sites-developing/page-templates-editable.md) för ytterligare information.
 
 >[!NOTE]
 >
->Det finns en AEM community-artikel som förklarar hur du utvecklar en Experience Manager-webbplats med redigerbara mallar, se [Skapa en Adobe Experience Manager 6.5-webbplats med redigerbara mallar](https://helpx.adobe.com/experience-manager/using/first_aem64_website.html).
+>Se [Använda redigerbara sidmallar för att utveckla en Experience Manager-webbplats](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html?lang=en).
 
 ### Statiska mallar {#static-templates}
 
 Statiska mallar:
 
 * Måste definieras och konfigureras av utvecklarna.
-* Detta var det ursprungliga mallsystemet för AEM och har funnits i många versioner.
+* Det ursprungliga mallsystemet för AEM som har varit tillgängligt för många versioner.
 * En statisk mall är en hierarki med noder som har samma struktur som den sida som ska skapas, men utan något faktiskt innehåll.
-* Kopieras för att skapa den nya sidan. Därefter finns ingen dynamisk anslutning.
+* Kopieras för att skapa sidan och det finns ingen dynamisk anslutning därefter.
 * Användningsområden [Designläge](/help/sites-authoring/default-components-designmode.md) för att behålla designegenskaper.
 * lagras under `/apps`
 * Se [Statiska mallar](/help/sites-developing/page-templates-static.md) för ytterligare information.
@@ -86,7 +84,7 @@ Statiska mallar:
 
 >[!CAUTION]
 >
->AEM har flera egenskaper som styr mallarna under **Webbplatser**. En kombination av dem kan dock leda till mycket komplexa regler som är svåra att spåra och hantera.
+>AEM har flera egenskaper som styr mallarna under **Webbplatser**. Om du kombinerar dem kan det dock leda till komplexa regler som är svåra att spåra och hantera.
 >
 >Därför rekommenderar Adobe att du börjar enkelt genom att definiera:
 >
@@ -96,13 +94,13 @@ Statiska mallar:
 >
 >Se till exempel We.Retail: `/content/we-retail/jcr:content`
 >
->Egenskaperna `allowedPaths`, `allowedParents`och `allowedChildren` kan också placeras i mallar för att definiera mer avancerade regler. Men när det är möjligt är det *mycket* enklare att definiera `cq:allowedTemplates` egenskaper för underavsnitt av webbplatsen om det finns behov av att ytterligare begränsa de tillåtna mallarna.
+>Egenskaperna `allowedPaths`, `allowedParents`och `allowedChildren` kan också placeras i mallar för att definiera mer avancerade regler. Men när det är möjligt är det *mycket* enklare att definiera `cq:allowedTemplates` egenskaper på underavsnitt av platsen om det finns behov av att ytterligare begränsa de tillåtna mallarna.
 >
->Ytterligare en fördel är att `cq:allowedTemplates` kan uppdateras av en författare i **Avancerat** -fliken i **Sidegenskaper**. De andra mallegenskaperna kan inte uppdateras med (standard) användargränssnittet, så behöver en utvecklare för att behålla reglerna och en koddistribution för varje ändring.
+>En extra fördel är att `cq:allowedTemplates` kan uppdateras av en författare i **Avancerat** -fliken i **Sidegenskaper**. De andra mallegenskaperna kan inte uppdateras med (standard) användargränssnittet, så behöver en utvecklare för att behålla reglerna och en koddistribution för varje ändring.
 
-När du skapar en ny sida i webbplatsens administratörsgränssnitt beror listan med tillgängliga mallar på platsen för den nya sidan och de placeringsbegränsningar som anges i varje mall.
+När du skapar en sida i webbplatsens administratörsgränssnitt beror listan med tillgängliga mallar på platsen för den nya sidan och de placeringsbegränsningar som anges i varje mall.
 
-Följande egenskaper avgör om en mall `T` får användas för en ny sida som ska placeras som underordnad till sidan `P`. Var och en av dessa egenskaper är en sträng med flera värden som innehåller noll eller flera reguljära uttryck som används för matchning med sökvägar:
+Följande egenskaper avgör om en mall `T` används för en ny sida som ska placeras som underordnad till sidan `P`. Var och en av dessa egenskaper är en sträng med flera värden som innehåller noll eller flera reguljära uttryck som används för matchning med sökvägar:
 
 * The `cq:allowedTemplates` egenskapen för `jcr:content` undernod till `P` eller en överordnad till `P`.
 
@@ -140,4 +138,4 @@ Om du vill lägga till fler begränsningar, till exempel för mallhierarkin, kan
 
 ## Mallar - Innehållsfragment {#templates-content-fragments}
 
-Se [Mallar för innehållsfragment](/help/sites-developing/content-fragment-templates.md) för fullständig information.
+Se [Mallar för innehållsfragment](/help/sites-developing/content-fragment-templates.md).
