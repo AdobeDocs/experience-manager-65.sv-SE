@@ -2,9 +2,9 @@
 title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
-source-git-commit: ea90bd913b437a564fb50e01af7719510fa22e74
+source-git-commit: 99a2167fa1eaee8111ad4e3bd7cdd36ad47a9a4c
 workflow-type: tm+mt
-source-wordcount: '2668'
+source-wordcount: '2681'
 ht-degree: 0%
 
 ---
@@ -226,7 +226,11 @@ Anvisningar om hur du installerar Service Pack på AEM Forms finns i [Installati
 
 ### Installera GraphQL Index Package för Experience Manager Content Fragments {#install-aem-graphql-index-add-on-package}
 
-Kunder som använder GraphQL bör installera [AEM innehållsfragment med GraphQL indexpaket 1.0.5](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.5.zip). På så sätt kan de lägga till den indexdefinition som krävs baserat på de funktioner som de faktiskt använder.
+Kunder som använder GraphQL bör installera [AEM innehållsfragment med GraphQL indexpaket 1.0.5](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.5.zip).
+
+På så sätt kan du lägga till den indexdefinition som krävs baserat på de funktioner som de faktiskt använder.
+
+Om du inte installerar det här paketet kan GraphQL-frågor bli långsamma eller misslyckas.
 
 >[!NOTE]
 >
