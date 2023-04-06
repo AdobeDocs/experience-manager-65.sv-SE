@@ -1,5 +1,5 @@
 ---
-title: Webbkonsol
+title: Webbkonsol i Adobe Experience Manager
 seo-title: Web Console
 description: Lär dig hur du använder AEM webbkonsol.
 seo-description: Learn how to use the AEM web console.
@@ -11,10 +11,10 @@ topic-tags: configuring
 discoiquuid: 4a33fddd-0399-40e4-8687-564fb6765b76
 feature: Configuring
 exl-id: 9acbf61f-73a8-4998-9421-dd933f30ac8a
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: a17b25e55a0bf16a0df42a7ba4768503618a19e2
 workflow-type: tm+mt
-source-wordcount: '718'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -135,7 +135,7 @@ På den här fliken kan du:
 
    Efter en uppdatering kan till exempel både den gamla och den nya versionen fortfarande köras på grund av tidigare referenser. Med det här alternativet kontrolleras och flyttas alla referenser till den nya versionen så att den gamla versionen kan stoppas.
 
-* **Start**
+* **Starta**
 
    Startar ett paket enligt den angivna startnivån.
 

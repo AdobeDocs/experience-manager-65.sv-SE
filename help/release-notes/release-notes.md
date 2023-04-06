@@ -2,9 +2,9 @@
 title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
-source-git-commit: 99a2167fa1eaee8111ad4e3bd7cdd36ad47a9a4c
+source-git-commit: a17b25e55a0bf16a0df42a7ba4768503618a19e2
 workflow-type: tm+mt
-source-wordcount: '2681'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -80,7 +80,7 @@ Se [Aktivera DASH på ditt konto](/help/assets/video.md#enable-dash).
 
 ### [!DNL Forms] Viktiga funktioner {#forms-features-6516}
 
-* [Headless Adaptive Forms](https://experienceleague.corp.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html) gör det möjligt för utvecklarna att skapa, publicera och hantera interaktiva formulär som kan öppnas och interagera med via API:er, i stället för via ett traditionellt grafiskt användargränssnitt.
+* [Headless Adaptive Forms](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html) gör det möjligt för utvecklarna att skapa, publicera och hantera interaktiva formulär som kan öppnas och interagera med via API:er, i stället för via ett traditionellt grafiskt användargränssnitt.
 
 * [Adaptiva Forms Core-komponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html#features) är en uppsättning med 24 BEM-kompatibla komponenter med öppen källkod som bygger på grundvalen för Adobe Experience Manager WCM Core Components. Dessa komponenter har öppen källkod och ger utvecklare möjlighet att enkelt anpassa och utöka komponenterna så att de passar organisationens specifika behov. Alla som har kunskaper att anpassa [WCM Core-komponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/authoring.html?lang=en) kan enkelt anpassa och formatera dessa komponenter.
 
@@ -100,7 +100,7 @@ Se [Aktivera DASH på ditt konto](/help/assets/video.md#enable-dash).
    * Microsoft® Excel kraschar ofta.
    * När du öppnar ett skyddat dokument visas **Dokumentsäkerhet** tillägget identifieras inte som installerat på en dator. Instruerar användaren att hämta och installera säkerhetstillägget. (NPR-39768)
 * När en användare har uppgraderat till AEM 6.5.15.0 Service Pack fungerar inte konverteringen från PostScript till PDF. (NPR-39765), (NPR-39764)
-* När användaren försöker öppna rundvandringsskärmen efter att ha öppnat ett adaptivt formulär misslyckas det med ett NullPointer-undantag:`[172.17.0.1[1662032923933]GET/libs/fd/af/content/editors/form/tour/content.htmlHTTP/1.1]com.day.cq.wcm.core.impl.WCMDebugFilterException:org.apache.sling.api.scripting.ScriptEvaluationException:”` (NPR-39654)
+* När användaren försöker öppna rundvandringsskärmen efter att ha öppnat ett adaptivt formulär misslyckas det med ett NullPointer-undantag:`[172.17.0.1[1662032923933]GET/libs/fd/af/content/editors/form/tour/content.htmlHTTP/1.1]com.day.cq.wcm.core.impl.WCMDebugFilterException:org.apache.sling.api.scripting.ScriptEvaluationException:"` (NPR-39654)
 * I Windows, när användaren aktiverar svartinställningar med hög kontrast, blir Forms-innehållet i HTML5 oklart när det återges som en förhandsvisning i HTML i webbläsaren. (NPR-39018)
 
 ## Integreringar {#integrations-6516}
