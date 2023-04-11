@@ -2,9 +2,9 @@
 title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
-source-git-commit: a2fa4eacf1b39f185fdf46581ca7c5dcc8083969
+source-git-commit: f53dbe7d51ff976f8d79702a86527f984aa00997
 workflow-type: tm+mt
-source-wordcount: '2943'
+source-wordcount: '2959'
 ht-degree: 0%
 
 ---
@@ -111,7 +111,7 @@ Se [Aktivera DASH på ditt konto](/help/assets/video.md#enable-dash).
 * När en användare förhandsgranskar ett adaptivt formulär som ett HTML i Microsoft Edge-webbläsaren med kompatibilitetsläget IE visas det inte korrekt.(CQ-4352216)
 * Ordlistan måste innehålla nya språk med specialtecken, som understreck och bindestreck, för att kunna översätta. (NPR-40088)
 
-Efter installation av tilläggspaketet för Forms AEM 6.5.16.0 ställdes kunderna inför följande problem. En uppdaterad version av AEM 6.5.16.0 Forms tilläggspaket släpps:
+Efter installation av tilläggspaketet för Forms AEM 6.5.16.0 ställdes kunderna inför nedanstående problem. En uppdaterad version av [AEM 6.5.16.0 Forms tilläggspaket - 6.0.914](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) släpps. Adobe rekommenderar att du använder det uppdaterade Service Pack-versionen:
 * När en användare försöker skapa ett adaptivt formulär med en användare i gruppen för formuläranvändare, finns inte alternativet att välja någon mall och felet liknar följande inträffar: internt serverfel: java.lang.NullPointerException på com.adobe.aem.formsndocuments.servlet.ThemeClientLibraryDataSourceServlet.lambda$getThemeClientLibCategoryList$3(ThemeClientLibraryDataSourceServlet.java:76) på java.base/java.util.stream.Reference Pipeline$2$1.accept(ReferencePipeline.java:176) at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133) (FORMS-7629)
 * Ändringarna i kodredigerarreglerna sparas inte.(FORMS-7532)
 
