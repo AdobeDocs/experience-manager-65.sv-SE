@@ -1,8 +1,6 @@
 ---
 title: Användaradministration och -säkerhet
-seo-title: User Administration and Security
 description: Läs mer om användaradministration och säkerhet i AEM.
-seo-description: Learn about User Administration and Security in AEM.
 uuid: 4512c0bf-71bf-4f64-99f6-f4fa5a61d572
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,9 +10,9 @@ discoiquuid: e72da81b-4085-49b0-86c3-11ad48978a8a
 docset: aem65
 exl-id: 53d8c654-8017-4528-a44e-e362d8b59f82
 feature: Security
-source-git-commit: 97b0cec1c8091bbc5736bd68bdee257ca423f93e
+source-git-commit: 3430897fc98aecbcf6cc7bf6bdc9b3df24e92366
 workflow-type: tm+mt
-source-wordcount: '5454'
+source-wordcount: '5398'
 ht-degree: 0%
 
 ---
@@ -35,7 +33,7 @@ Användare är ofta medlemmar i grupper, vilket förenklar tilldelningen av dess
 
 ### Grupper {#groups}
 
-Grupper är samlingar av användare och/eller andra grupper. alla kallas medlemmar i en grupp.
+Grupper är samlingar med användare, andra grupper eller båda. Alla dessa samlingar kallas medlemmar i en grupp.
 
 Deras främsta syfte är att förenkla underhållsprocessen genom att minska antalet enheter som ska uppdateras, eftersom en ändring görs i en grupp tillämpas på alla medlemmar i gruppen. Grupper återspeglar ofta:
 
@@ -48,7 +46,7 @@ Med planering och en ren struktur kan användningen av grupper återspegla din s
 
 ### Inbyggda användare och grupper {#built-in-users-and-groups}
 
-AEM WCM installerar ett antal användare och grupper. Dessa kan du se när du först öppnar säkerhetskonsolen efter installationen.
+AEM WCM installerar flera användare och grupper. Dessa samlingar visas när du först öppnar säkerhetskonsolen efter installationen.
 
 I följande tabeller visas varje objekt tillsammans med:
 
@@ -69,19 +67,19 @@ I följande tabeller visas varje objekt tillsammans med:
    <td><p>admin</p> <p>Standardlösenord: admin</p> </td>
    <td>Användare</td>
    <td><p>Systemadministratörskonto med fullständig behörighet.</p> <p>Det här kontot används för anslutningen mellan AEM WCM och CRX.</p> <p>Om du råkar ta bort det här kontot återskapas det när databasen startas om (i standardinställningen).</p> <p>Administratörskontot är ett krav för den AEM plattformen. Detta konto kan därför inte tas bort.</p> </td>
-   <td><p>Adobe rekommenderar starkt att lösenordet för det här användarkontot ändras från standardvärdet.</p> <p>Bäst vid installationen, men det kan göras i efterhand.</p> <p>Obs! Det här kontot ska inte blandas ihop med administratörskontot för CQ Servlet Engine.</p> </td>
+   <td><p>Adobe rekommenderar att du ändrar standardlösenordet för det här användarkontot.</p> <p>Bäst vid installation, men det kan göras efteråt.</p> <p>Obs! Blanda inte ihop det här kontot med administratörskontot för CQ-servermotorn.</p> </td>
   </tr>
   <tr>
    <td><p>anonym</p> <p> </p> </td>
    <td>Användare</td>
-   <td><p>Innehåller standardrättigheterna för oautentiserad åtkomst till en instans. Som standard innehåller detta de lägsta åtkomsträttigheterna.</p> <p>Om du råkar ta bort det här kontot återskapas det när du startar det. Den kan inte tas bort permanent, men den kan inaktiveras.</p> </td>
-   <td>Undvik att ta bort eller inaktivera det här kontot eftersom det kommer att påverka författarinstansernas funktion negativt. Om det finns säkerhetskrav som ger dig rätt att ta bort den måste du först testa de effekter den har på dina system.</td>
+   <td><p>Innehåller standardrättigheterna för oautentiserad åtkomst till en instans. Som standard innehåller det här kontot de lägsta åtkomsträttigheterna.</p> <p>Om du råkar ta bort det här kontot återskapas det vid start. Den kan inte tas bort permanent, men den kan inaktiveras.</p> </td>
+   <td>Undvik att ta bort eller inaktivera det här kontot eftersom det påverkar funktionen för författarinstanser negativt. Om det finns säkerhetskrav som ger dig rätt att ta bort den måste du först testa de effekter den har på dina system.</td>
   </tr>
   <tr>
-   <td><p>author</p> <p>Standardlösenord: författare</p> </td>
+   <td><p>författare</p> <p>Standardlösenord: författare</p> </td>
    <td>Användare</td>
-   <td><p>Ett författarkonto kan skriva till /content. Innefattar behörighet som deltagare och övertagare.</p> <p>Kan användas som webbmaster eftersom den har åtkomst till hela /content-trädet.</p> <p>Detta är inte en inbyggd användare, utan en annan demoanvändare för geometrixx</p> </td>
-   <td><p>Adobe rekommenderar att kontot antingen tas bort helt eller att lösenordet ändras från standardvärdet.</p> <p>Bäst vid installationen, men det kan göras i efterhand.</p> </td>
+   <td><p>Ett författarkonto kan skriva till /content. Innefattar behörighet som deltagare och övertagare.</p> <p>Kan användas som webbmaster eftersom den har åtkomst till hela /content-trädet.</p> <p>Det här kontot är inte en inbyggd användare, utan en annan Geometrixx-demoanvändare</p> </td>
+   <td><p>Adobe rekommenderar att kontot antingen tas bort helt eller att standardlösenordet ändras.</p> <p>Bäst vid installation, men det kan göras efteråt.</p> </td>
   </tr>
   <tr>
    <td>administratörer</td>
@@ -93,12 +91,12 @@ I följande tabeller visas varje objekt tillsammans med:
    <td>innehållsförfattare</td>
    <td>Grupp</td>
    <td><p>Grupp ansvarig för innehållsredigering. Kräver behörighet att läsa, ändra, skapa och ta bort.</p> </td>
-   <td>Du kan skapa egna grupper med innehållsförfattare med projektspecifik behörighet, förutsatt att du lägger till behörighet för att läsa, ändra, skapa och ta bort.</td>
+   <td>Du kan skapa egna grupper med innehållsförfattare med projektspecifika åtkomsträttigheter, förutsatt att du lägger till, ändrar, skapar och tar bort behörigheter.</td>
   </tr>
   <tr>
    <td>medverkande</td>
    <td>Grupp</td>
-   <td><p>Grundläggande behörighet som gör att användaren kan skriva innehåll (endast som i funktionalitet).</p> <p>Tilldelar inga privilegier till /content-trädet - dessa måste tilldelas specifikt för de enskilda grupperna eller användarna.</p> </td>
+   <td><p>Grundläggande behörigheter som tillåter användaren att skriva innehåll (som i, endast funktioner).</p> <p>Tilldelar inga privilegier till /content-trädet. Måste tilldelas för de enskilda grupperna eller användarna.</p> </td>
    <td> </td>
   </tr>
   <tr>
@@ -134,7 +132,7 @@ I följande tabeller visas varje objekt tillsammans med:
   <tr>
    <td>arbetsflöde-användare</td>
    <td>Grupp</td>
-   <td><p>En användare som deltar i ett arbetsflöde måste vara medlem i ett grupparbetsflöde-användare. Detta ger honom eller henne full tillgång till /etc/workflow/instances så att han eller hon kan uppdatera arbetsflödesinstansen.</p> <p>Gruppen ingår i standardinstallationen, men du måste lägga till dina användare manuellt i gruppen.</p> </td>
+   <td><p>En användare som deltar i ett arbetsflöde måste vara medlem i ett grupparbetsflöde-användare. Ger användaren fullständig åtkomst till: /etc/workflow/instances så att de kan uppdatera arbetsflödesinstansen.</p> <p>Gruppen ingår i standardinstallationen, men du måste lägga till dina användare manuellt i gruppen.</p> </td>
   </tr>
  </tbody>
 </table>
@@ -145,11 +143,11 @@ AEM använder åtkomstkontrollistor för att avgöra vilka åtgärder en använd
 
 ### Behörigheter och åtkomstkontrollistor {#permissions-and-acls}
 
-Behörigheter definierar vem som får utföra vilka åtgärder på en resurs. Behörigheterna är resultatet av [åtkomstkontroll](#access-control-lists-and-how-they-are-evaluated) utvärderingar.
+Behörigheter definierar vem som kan utföra vilka åtgärder på en resurs. Behörigheterna är resultatet av [åtkomstkontroll](#access-control-lists-and-how-they-are-evaluated) utvärderingar.
 
 Du kan ändra behörigheterna som beviljas/nekas till en viss användare genom att markera eller avmarkera kryssrutorna för den enskilda AEM [funktionsmakron](security.md#actions). En bock anger att en åtgärd är tillåten. Ingen bock indikerar att en åtgärd nekas.
 
-Där bockmarkeringen finns i rutnätet visas även vilka behörigheter användarna har på vilka platser i AEM (d.v.s. vilka sökvägar).
+Där bockmarkeringen är i rutnätet visas även vilka behörigheter användarna har på vilka platser i AEM (d.v.s. vilka sökvägar).
 
 ### Åtgärder {#actions}
 
@@ -170,15 +168,15 @@ Där bockmarkeringen finns i rutnätet visas även vilka behörigheter användar
    <td><p>Användaren kan:</p>
     <ul>
      <li>ändra befintligt innehåll på sidan och på eventuella underordnade sidor.</li>
-     <li>skapa nya stycken på sidan eller på en underordnad sida.</li>
-    </ul> <p>På JCR-nivå kan användare ändra en resurs genom att ändra dess egenskaper, låsa, versionshantering, inga ändringar och de har fullständig skrivbehörighet för noder som definierar en jcr:content child-nod, till exempel cq:Page, nt:file, cq:Asset.</p> </td>
+     <li>skapa stycken på sidan eller på en underordnad sida.</li>
+    </ul> <p>På JCR-nivå kan användare redigera en resurs genom att redigera dess egenskaper, låsa, versionshantering, inga ändringar och de har fullständig skrivbehörighet på noder som definierar en jcr:content child-nod. Till exempel cq:Page, nt:file, cq:Asset.</p> </td>
   </tr>
   <tr>
    <td>Skapa</td>
    <td><p>Användaren kan:</p>
     <ul>
-     <li>skapa en ny sida eller underordnad sida.</li>
-    </ul> <p>If <strong>ändra</strong> nekas underträd under jcr:innehåll exkluderas specifikt eftersom skapandet av jcr:content och dess underordnade noder betraktas som en sidändring. Detta gäller endast noder som definierar en jcr:content child-nod.</p> </td>
+     <li>skapa en sida eller underordnad sida.</li>
+    </ul> <p>If <strong>ändra</strong> nekas, underträd under jcr:content exkluderas eftersom skapandet av jcr:content och dess underordnade noder betraktas som en sidändring. Den här regeln gäller endast noder som definierar en jcr:content child-nod.</p> </td>
   </tr>
   <tr>
    <td>Ta bort</td>
@@ -186,7 +184,7 @@ Där bockmarkeringen finns i rutnätet visas även vilka behörigheter användar
     <ul>
      <li>ta bort befintliga stycken från sidan eller en underordnad sida.</li>
      <li>ta bort en sida eller underordnad sida.</li>
-    </ul> <p>If <strong>ändra</strong> nekas alla underträd under jcr:innehåll exkluderas specifikt eftersom jcr:content tas bort och dess underordnade noder betraktas som en sidändring. Detta gäller endast noder som definierar en jcr:content child-nod.</p> </td>
+    </ul> <p>If <strong>ändra</strong> nekas alla underträd under jcr:content exkluderas eftersom jcr:content tas bort och dess underordnade noder betraktas som en sidändring. Den här regeln gäller endast noder som definierar en jcr:content child-nod.</p> </td>
   </tr>
   <tr>
    <td>Läs ACL</td>
@@ -211,7 +209,7 @@ Där bockmarkeringen finns i rutnätet visas även vilka behörigheter användar
 
 AEM WCM använder ACL-listor (Access Control Lists) för att organisera de behörigheter som tillämpas på de olika sidorna.
 
-Åtkomstkontrollistor består av de enskilda behörigheterna och används för att avgöra i vilken ordning dessa behörigheter faktiskt tillämpas. Listan är uppbyggd enligt hierarkin för de aktuella sidorna. Listan skannas sedan nedifrån och upp tills den första behörigheten som krävs för att tillämpa på en sida hittas.
+Åtkomstkontrollistor består av de enskilda behörigheterna och används för att avgöra i vilken ordning dessa behörigheter tillämpas. Listan är uppbyggd enligt hierarkin för de aktuella sidorna. Listan skannas sedan nedifrån och upp tills den första behörigheten som krävs för att tillämpa på en sida hittas.
 
 >[!NOTE]
 >
@@ -225,7 +223,7 @@ AEM WCM använder ACL-listor (Access Control Lists) för att organisera de behö
 >* `*/social/relationships/friend/*`
 >* eller `*/social/relationships/pending-following/*`.
 >
->När du skapar åtkomstkontrollistor som är specifika för communities, kan medlemmar som ansluter till de communityn beviljas ytterligare behörigheter. Detta kan till exempel vara fallet när användare går med i communities på: `/content/we-retail/us/en/community`
+>När du skapar åtkomstkontrollistor som är specifika för communities, kan medlemmar som ansluter till de communityn beviljas ytterligare behörigheter. När användare ansluter till communities på: `/content/we-retail/us/en/community`
 
 ### Behörighetsstater {#permission-states}
 
@@ -233,7 +231,7 @@ AEM WCM använder ACL-listor (Access Control Lists) för att organisera de behö
 >
 >För CQ 5.3-användare:
 >
->Till skillnad från tidigare CQ-versioner **skapa** och **delete** ska inte längre beviljas om en användare bara behöver ändra sidor. I stället ger du **ändra** bara om du vill att användarna ska kunna skapa, ändra eller ta bort komponenter på befintliga sidor.
+>Till skillnad från tidigare CQ-versioner **skapa** och **delete** ska inte längre beviljas om en användare endast får ändra sidor. I stället ger du **ändra** bara om du vill att användarna ska kunna skapa, ändra eller ta bort komponenter på befintliga sidor.
 >
 >Av bakåtkompatibilitetsskäl utförs inte den speciella behandlingen av noder som definierar i funktionsmakrotesten. **jcr:innehåll** med hänsyn till.
 
@@ -271,7 +269,7 @@ När du hovrar över asterisken eller utropstecknet visas ett verktygstips med m
   </tr>
   <tr>
    <td>Lägre del</td>
-   <td>Visar de icke-effektiva poster som kan ha en effekt någon annanstans i trädet (vilket anges av ett specialattribut som finns med motsvarande ACE som begränsar postens omfång). Det här är också en post vars effekt har återkallats av en annan post som definieras vid den angivna sökvägen eller vid en överordnad nod.</td>
+   <td>Listar de icke-effektiva poster som kan påverka någon annanstans i trädet (vilket anges av ett specialattribut som finns med motsvarande ACE som begränsar postens omfång). Det kan också vara en post vars effekt återkallas av en annan post som definieras vid den angivna sökvägen eller vid en överordnad nod.</td>
   </tr>
  </tbody>
 </table>
@@ -280,22 +278,22 @@ När du hovrar över asterisken eller utropstecknet visas ett verktygstips med m
 
 >[!NOTE]
 >
->Om inga behörigheter har definierats för en sida nekas alla åtgärder.
+>Om inga behörigheter har definierats för en sida, nekas alla åtgärder.
 
 Nedan följer några rekommendationer om hur du hanterar åtkomstkontrollistor:
 
 * Tilldela inte behörigheter direkt till användare. Tilldela dem endast till grupper.
 
-   Detta förenklar underhållet eftersom antalet grupper är mycket mindre än antalet användare och också mindre flyktigt.
+   Det förenklar underhållet eftersom antalet grupper är mycket mindre än antalet användare och också mindre flyktigt.
 
 * Om du vill att en grupp/användare bara ska kunna ändra sidor, ska du inte ge dem behörighet att skapa eller neka. Ge dem endast behörighet att ändra och läsa.
 * Använd Neka sparsamt. Använd bara Tillåt i största möjliga utsträckning.
 
-   Om du använder Neka kan det orsaka oväntade effekter om behörigheterna tillämpas i en annan ordning än den förväntade. Om en användare är medlem i mer än en grupp kan programsatserna Neka från en grupp avbryta programsatsen Tillåt från en annan grupp eller vice versa. Det är svårt att behålla en översikt när detta händer och kan enkelt leda till oförutsedda resultat, medan Tillåt tilldelningar inte orsakar sådana konflikter.
+   Om du använder Neka kan det orsaka oväntade effekter om behörigheterna tillämpas i en annan ordning än den förväntade. Om en användare är medlem i mer än en grupp kan programsatserna Neka från en grupp avbryta programsatsen Tillåt från en annan grupp eller tvärtom. Det är svårt att behålla en översikt när något sådant händer och det kan enkelt leda till oförutsedda resultat, medan Tillåt tilldelningar inte orsakar sådana konflikter.
 
    Adobe rekommenderar att du arbetar med Tillåt i stället för Neka [Bästa praxis](#best-practices).
 
-Innan du ändrar någon av behörigheterna måste du se till att du förstår hur de fungerar och fungerar tillsammans. Se CRX-dokumentationen för att illustrera hur AEM WCM [utvärderar åtkomsträttigheter](/help/sites-administering/user-group-ac-admin.md#how-access-rights-are-evaluated) och exempel på hur du ställer in åtkomstkontrollistor.
+Innan du ändrar någon av behörigheterna måste du se till att du förstår hur de fungerar och fungerar tillsammans. Se CRX-dokumentationen som visar hur AEM WCM [utvärderar åtkomsträttigheter](/help/sites-administering/user-group-ac-admin.md#how-access-rights-are-evaluated)och exempel på hur du ställer in åtkomstkontrollistor.
 
 ### Behörigheter {#permissions}
 
@@ -343,21 +341,21 @@ Detaljerna delas upp i två delar:
 
 ### Personifiera en annan användare {#impersonating-another-user}
 
-Med [Personifiera funktionalitet](/help/sites-authoring/user-properties.md#user-settings) en användare kan arbeta för en annan användares räkning.
+Med [Personifiera funktionalitet](/help/sites-authoring/user-properties.md#user-settings)kan en användare arbeta för en annan användares räkning.
 
-Det innebär att ett användarkonto kan ange andra konton som kan fungera med deras konto. Med andra ord, om användare-B tillåts personifiera användare-A, kan användare-B vidta åtgärder med hjälp av den fullständiga kontoinformationen för användare-A.
+Det innebär att ett användarkonto kan ange andra konton som kan fungera med deras konto. Om till exempel användare-B tillåts personifiera användare-A kan användare-B agera med hjälp av den fullständiga kontoinformationen för användare-A.
 
-Detta gör att persondatorkonton kan slutföra uppgifter som om de använde det konto de personifierar. t.ex. under frånvaro eller för att på kort sikt dela en för hög belastning.
+Med den här funktionen kan persondatorkonton slutföra uppgifter som om de använde det konto de personifierar. Exempel: under frånvaro eller för att dela en för stor belastning på kort sikt.
 
 >[!NOTE]
 >
->För att personifiering ska fungera för icke-adminanvändare måste personifieraren (i det här fallet user-B) ha läsbehörighet i `/home/users` bana.
+>För att personifiering ska fungera för icke-admin-användare måste personifieraren (i ovanstående fall user-B) ha läsbehörighet i `/home/users` bana.
 >
->Mer information om hur du uppnår detta finns i [Behörigheter i AEM](/help/sites-administering/security.md#permissions-in-aem).
+>Se [Behörigheter i AEM](/help/sites-administering/security.md#permissions-in-aem).
 
 >[!CAUTION]
 >
->Om ett konto personifierar ett annat är det väldigt svårt att se. En post görs i granskningsloggen när personifieringen startar och avslutas, men de andra loggfilerna (som åtkomstloggen) innehåller ingen information om att personifieringen har skett för händelserna. Så om användare-B personifierar användare-A ser alla händelser ut som om de utförts av användare-A personligen.
+>Om ett konto personifierar ett annat är det svårt att se. En post görs i granskningsloggen när personifieringen startar och avslutas, men de andra loggfilerna (till exempel åtkomstloggen) innehåller ingen information om att någon personifiering har skett för händelserna. Om användare-B personifierar användare-A ser alla händelser ut som om användare-A utförde dem.
 
 >[!CAUTION]
 >
@@ -371,9 +369,9 @@ Nedan beskrivs de bästa sätten att arbeta med behörigheter och behörigheter:
 
 | Regel | Orsak |
 |--- |--- |
-| *Använd grupper* | Undvik att tilldela åtkomsträttigheter per användare. Det finns flera orsaker till detta:<ul><li>Du har många fler användare än grupper, så grupper förenklar strukturen.</li><li>Grupper ger en översikt över alla konton.</li> <li>Arv är enklare med grupper.</li><li>Användarna kommer och går. Grupper är långsiktiga.</li></ul> |
+| *Använd grupper* | Undvik att tilldela åtkomsträttigheter per användare. Det finns flera skäl till detta råd:<ul><li>Du har många fler användare än grupper, så grupper förenklar strukturen.</li><li>Grupper ger en översikt över alla konton.</li> <li>Arv är enklare med grupper.</li><li>Användarna kommer och går. Grupper är långsiktiga.</li></ul> |
 | *Var positiv* | Använd alltid Allow-satser för att ange gruppens rättigheter (när det är möjligt). Undvik att använda programsatsen Neka. Grupper utvärderas i ordning och ordningen kan definieras olika för olika användare. Med andra ord: Du kan ha liten kontroll över i vilken ordning programsatserna implementeras och utvärderas. Om du bara använder Tillåt-satser spelar ordningen ingen roll. |
-| *Behåll det enkelt* | Att investera lite tid och fundera när man konfigurerar en ny installation kommer att återbetalas väl. Att använda en tydlig struktur förenklar det pågående underhållet och administrationen, vilket säkerställer att både dina nuvarande kollegor och/eller framtida efterföljare enkelt kan förstå vad som håller på att implementeras. |
+| *Behåll det enkelt* | Det är värt att investera lite tid och fundera när du konfigurerar en ny installation. Genom att använda en tydlig struktur förenklas det pågående underhållet och administrationen, vilket säkerställer att både dina nuvarande kollegor och framtida efterföljare enkelt kan förstå vad som implementeras. |
 | *Testa* | Använd en testinstallation för att öva och se till att du förstår relationen mellan olika användare och grupper. |
 | *Standardanvändare/grupper* | Uppdatera alltid standardanvändare och standardgrupper omedelbart efter installationen för att förebygga säkerhetsproblem. |
 
@@ -411,8 +409,8 @@ Flikarna ger åtkomst till olika konfigurationer:
 
 | Tabb | Beskrivning |
 |--- |--- |
-| Filterruta | En mekanism för filtrering av de användare och/eller grupper som visas. Se [Filtrera användare och grupper](#filtering-users-and-groups). |
-| Dölj användare | En växlingsknapp som döljer alla användare i listan och bara lämnar grupper. Se [Dölja användare och grupper](#hiding-users-and-groups). |
+| Filterruta | En mekanism för filtrering av användare, grupper eller båda. Se [Filtrera användare och grupper](#filtering-users-and-groups). |
+| Dölj användare | En växlingsväxling som döljer alla listade användare och bara lämnar grupper. Se [Dölja användare och grupper](#hiding-users-and-groups). |
 | Göm grupper | En växlingsknapp som döljer alla grupper i listan och endast låter användare göra det. Se [Dölja användare och grupper](#hiding-users-and-groups). |
 | Redigera | En meny där du kan skapa och ta bort samt aktivera och inaktivera användare och grupper. Se [Skapa användare och grupper](#creating-users-and-groups) och [Ta bort användare och grupper](#deleting-users-and-groups). |
 | Egenskaper | Visar information om användaren eller gruppen som kan innehålla e-postinformation, en beskrivning och namninformation. Du kan även ändra en användares lösenord. Se [Skapa användare och grupper](#creating-users-and-groups), [Ändra användar- och gruppegenskaper](#modifying-user-and-group-properties) och [Ändra ett användarlösenord](#changing-a-user-password). |
@@ -449,7 +447,7 @@ Så här döljer du användare och grupper:
 
 ### Skapa användare och grupper {#creating-users-and-groups}
 
-Så här skapar du en ny användare eller grupp:
+Så här skapar du en användare eller grupp:
 
 1. I **Säkerhet** lista över konsolträd, klicka på **Redigera** och sedan antingen **Skapa användare** eller **Skapa grupp**.
 
@@ -473,7 +471,7 @@ Så här tar du bort en användare eller grupp:
 
 1. I **Säkerhet** markerar du den användare eller grupp som du vill ta bort. Om du vill ta bort flera objekt Skift-klickar eller Ctrl-klickar du för att markera dem.
 1. Klicka **Redigera,** och välj sedan Ta bort. AEM frågar om du vill ta bort användaren eller gruppen.
-1. Klicka **OK** för att bekräfta eller avbryta för att avbryta åtgärden.
+1. Klicka **OK** för att bekräfta eller avbryta.
 
 ### Ändra användar- och gruppegenskaper {#modifying-user-and-group-properties}
 
@@ -497,7 +495,7 @@ Använd följande procedur för att ändra en användares lösenord.
 >
 >Du kan inte använda säkerhetskonsolen för att ändra administratörslösenordet. Om du vill ändra lösenordet för administratörskontot använder du [Användarkonsol](/help/sites-administering/granite-user-group-admin.md#changing-the-password-for-an-existing-user) som Granite Operations tillhandahåller.
 >
->Om du använder AEM Forms på JEE ska du inte använda nedanstående instruktioner för att ändra lösenord, utan i stället använda AEM Forms på JEE Admin Console (/adminui) för att ändra lösenordet.
+>Om du använder AEM Forms på JEE ska du inte använda nedanstående instruktioner för att ändra lösenord, utan AEM Forms på JEE Admin Console (/adminui) för att ändra lösenordet.
 
 1. I **Säkerhet** dubbelklicka på det användarnamn du vill ändra lösenordet för.
 1. Klicka på **Egenskaper** -flik (om den inte redan är aktiv).
@@ -505,7 +503,7 @@ Använd följande procedur för att ändra en användares lösenord.
 
    ![cqsecurityuslösenord](assets/cqsecurityuserpassword.png)
 
-1. Ange det nya lösenordet två gånger; eftersom de inte visas i klartext är detta för bekräftelse - om de inte matchar visas ett fel.
+1. Ange det nya lösenordet två gånger; eftersom de inte visas i klartext är den här åtgärden till för bekräftelse - om de inte matchar visas ett fel.
 1. Klicka **Ange** för att aktivera det nya lösenordet för kontot.
 
 ### Lägga till användare eller grupper i en grupp {#adding-users-or-groups-to-a-group}
@@ -552,7 +550,7 @@ Så här lägger du till medlemmar i en grupp på en viss sökväg:
 
    ![chlimage_1-113](assets/chlimage_1-113.png)
 
-1. Markera kryssrutan i dialogrutan **medlem** -kolumn för de medlemmar som du vill ska ha behörighet till den sökvägen. Avmarkera kryssrutan för den medlem som du vill ta bort behörigheter för. En röd triangel visas i cellen som du har ändrat i.
+1. Markera kryssrutan i dialogrutan **medlem** -kolumn för de medlemmar som du vill ska ha behörighet till den sökvägen. Avmarkera kryssrutan för den medlem som du vill ta bort behörigheter för. En röd triangel visas i cellen som du har ändrat.
 1. Klicka **OK** för att spara ändringarna.
 
 ### Ta bort användare eller grupper från grupper {#removing-users-or-groups-from-groups}
@@ -599,12 +597,12 @@ Så här tar du bort medlemmar från en grupp på en viss sökväg:
 
    ![chlimage_1-114](assets/chlimage_1-114.png)
 
-1. Markera kryssrutan i dialogrutan **medlem** -kolumn för de medlemmar som du vill ska ha behörighet till den sökvägen. Avmarkera kryssrutan för den medlem som du vill ta bort behörigheter för. En röd triangel visas i cellen som du har ändrat i.
+1. Markera kryssrutan i dialogrutan **medlem** -kolumn för de medlemmar som du vill ska ha behörighet till den sökvägen. Avmarkera kryssrutan för den medlem som du vill ta bort behörigheter för. En röd triangel visas i cellen som du har ändrat.
 1. Klicka **OK** för att spara ändringarna.
 
 ### Användarsynkronisering {#user-synchronization}
 
-När distributionen är en [publicera servergrupp](/help/sites-deploying/recommended-deploys.md#tarmk-farm)måste användare och grupper synkroniseras mellan alla publiceringsnoder.
+När distributionen är en [publicera servergrupp](/help/sites-deploying/recommended-deploys.md#tarmk-farm), användare och grupper måste synkroniseras mellan alla publiceringsnoder.
 
 Mer information om användarsynkronisering och hur du aktiverar den finns i [Användarsynkronisering](/help/sites-administering/sync.md).
 
@@ -661,7 +659,7 @@ När du lägger till eller tar bort behörigheter kan du antingen bläddra eller
 
 Det finns två olika typer av sökvägar:
 
-* Sökväg - Om söksträngen börjar med ett &quot;/&quot; söker sökningen efter de direkta undernoderna till den angivna sökvägen:
+* Sökväg - Om söksträngen börjar med ett &quot;/&quot; söker den efter de direkta delnoderna i den angivna sökvägen:
 
 ![cqsecuritypathsearch](assets/cqsecuritypathsearch.png)
 
@@ -669,9 +667,9 @@ I sökrutan kan du göra följande:
 
 | Åtgärd | Vad det gör |
 |--- |--- |
-| Högerpil | Väljer en undernod i sökresultatet |
+| Högerpil | Markerar en undernod i sökresultatet |
 | Nedåtpil | Startar sökningen igen. |
-| Retur-tangenten | Markerar en undernod och läser in den i stödrastret |
+| Retur-tangenten | Markerar en undernod och läser in den i trädstödrastret |
 
 * Fulltextsökning - Om söksträngen inte börjar med &quot;/&quot; utförs en fulltextsökning på alla noder under sökvägen &quot;/content&quot;.
 
@@ -685,7 +683,7 @@ Så här söker du efter banor eller fulltext:
 
 ### Personifiera användare {#impersonating-users}
 
-Du kan ange en eller flera användare som får personifiera den aktuella användaren. Det innebär att de kan ändra sina kontoinställningar till den aktuella användarens och agera för den här användarens räkning.
+Du kan ange en eller flera användare som får personifiera den aktuella användaren. Detta innebär att de kan ändra sina kontoinställningar till den aktuella användarens och agera för den här användarens räkning.
 
 Använd den här funktionen med försiktighet eftersom den kan tillåta användare att utföra åtgärder som deras egen användare inte kan. När en användare personifieras meddelas användaren om att han/hon inte är inloggad som sig själv.
 
@@ -698,7 +696,7 @@ Så här personifierar du en befintlig användare:
 
 1. I trädlistan markerar du namnet på den person som du vill tilldela andra användare personifiering. Dubbelklicka för att öppna.
 1. Klicka på **Personifierare** -fliken.
-1. Klicka på den användare som du vill ska kunna personifiera den valda användaren. Dra användaren (som ska personifiera) från listan till rutan Personifiera. Namnet visas i listan.
+1. Klicka på den användare som du vill ska kunna personifiera den valda användaren. Dra användaren (personifieraren) från listan till personifieringsrutan. Namnet visas i listan.
 
    ![chlimage_1-115](assets/chlimage_1-115.png)
 
@@ -731,15 +729,15 @@ Så här anger du att användare eller administratörer ska ha behörighet att t
 
 ### Utöka behörigheter på projektnivå {#extending-privileges-on-a-project-level}
 
-Om du planerar att implementera programspecifika behörigheter beskriver följande information vad du behöver veta för att implementera ett anpassat privilegium och hur du tillämpar det i CQ:
+Om du tänker implementera programspecifika behörigheter beskriver följande information vad du måste känna till för att implementera ett anpassat privilegium och hur du tillämpar det i CQ:
 
 Privilegiet för att ändra hierarkin täcks av en kombination av jcr-privilegier. Replikeringsprivilegiet är namngivet **crx:replikera** som lagras/utvärderas tillsammans med andra behörigheter i jcr-databasen. Den tillämpas dock inte på jcr-nivån.
 
-Definitionen och registreringen av anpassade behörigheter är officiellt en del av [Jackrabbit API](https://jackrabbit.apache.org/api/2.8/org/apache/jackrabbit/api/security/authorization/PrivilegeManager.html) från och med version 2.4 (se även [JCR-2887](https://issues.apache.org/jira/browse/JCR-2887)). Ytterligare användning täcks av JCR Access Control Management som definieras av [JSR 283](https://jcp.org/en/jsr/detail?id=283) (avsnitt 16). API:t Jackrabbit definierar dessutom ett par tillägg.
+Definitionen och registreringen av anpassade behörigheter är officiellt en del av [Jackrabbit API](https://jackrabbit.apache.org/oak/docs/security/privilege.html) från och med version 2.4 (se även [JCR-2887](https://issues.apache.org/jira/browse/JCR-2887)). Ytterligare användning täcks av JCR Access Control Management som definieras av [JSR 283](https://jcp.org/en/jsr/detail?id=283) (avsnitt 16). API:t Jackrabbit definierar dessutom ett par tillägg.
 
 Behörighetsregistreringsmekanismen återspeglas i användargränssnittet under **Databaskonfiguration**.
 
-Registreringen av nya (anpassade) behörigheter skyddas av ett inbyggt privilegium som måste beviljas på databasnivån (i JCR: skicka &#39;null&#39; som &#39;absPath&#39;-parameter i ac mgt api, se jsr 333 för mer information). Som standard **admin** och alla administratörer har denna behörighet.
+Registreringen av nya (anpassade) behörigheter skyddas av ett inbyggt privilegium som måste beviljas på databasnivån. I JCR: Om du skickar &#39;null&#39; som &#39;absPath&#39;-parameter i Mac mgt api finns mer information i jsr 333. Som standard **admin** och alla administratörer har denna behörighet.
 
 >[!NOTE]
 >

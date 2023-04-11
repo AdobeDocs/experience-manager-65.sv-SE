@@ -12,10 +12,10 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/viewer
 feature: Viewer Presets
 role: User, Admin
 exl-id: 0899e497-88e9-4fc3-a6be-b3a149fb5b32
-source-git-commit: 78aa7aac838dabc1c4f0329520092e4755541322
+source-git-commit: 3430897fc98aecbcf6cc7bf6bdc9b3df24e92366
 workflow-type: tm+mt
-source-wordcount: '4405'
-ht-degree: 8%
+source-wordcount: '4406'
+ht-degree: 7%
 
 ---
 
@@ -145,7 +145,7 @@ Administratörer kan lägga till och anpassa följande typer av multimedia när 
     </ul> </td>
   </tr>
   <tr>
-   <td><strong>Zoomning</strong></td>
+   <td><strong>Zooma</strong></td>
    <td>Låter användarna zooma in i området genom att markera det. Användare kan välja kontroller för att zooma in, zooma ut och återställa bilden till standardstorleken.</td>
   </tr>
  </tbody>
@@ -308,12 +308,12 @@ Se&quot;Viewer release notes&quot; i innehållsförteckningen i [Referenshandbok
   </tr>
   <tr>
    <td>Zoom_dark<br /> </td>
-   <td>Zoomning<br /> </td>
+   <td>Zooma<br /> </td>
    <td><code>html5_basiczoomviewer_dark.css</code></td>
   </tr>
   <tr>
    <td>Zoom_light<br /> </td>
-   <td>Zoomning</td>
+   <td>Zooma</td>
    <td><code>html5_basiczoomviewer_light.css</code></td>
   </tr>
   <tr>
@@ -338,7 +338,7 @@ Följande tabell visar vilka mobilvisningsgester som stöds på enheter med iOS,
   <tr>
    <td><strong>Gesture</strong></td>
    <td><strong>Utfällbar zoom</strong></td>
-   <td><strong>Zoomning</strong></td>
+   <td><strong>Zooma</strong></td>
    <td><strong>Snurra</strong></td>
   </tr>
   <tr>
@@ -463,7 +463,7 @@ För *VideoPlayer* text, under **[!UICONTROL Modifiers]** > **[!UICONTROL Playba
 
    * **[!UICONTROL dash]** - Videorna spelas endast upp med bindestreck. På Safari-/iOS-enheter måste du dock välja **[!UICONTROL hls]** som typ, i stället.
    * **[!UICONTROL hls]** - Videoströmmar endast som hls.
-   * **[!UICONTROL auto]** - Bästa praxis. Skapandet av DASH- och HLS-strömmar är lagringsoptimerat. Därför rekommenderar Adobe att du alltid väljer **[!UICONTROL auto]** som uppspelningstyp. Videoklipp direktuppspelas som streck, hls eller progressiv, som i följande:
+   * **[!UICONTROL auto]** - Bästa praxis. Skapandet av DASH- och HLS-strömmar är lagringsoptimerat. Därför rekommenderar Adobe att du alltid väljer **[!UICONTROL auto]** som uppspelningstyp. Videofilmer direktuppspelas som streck, hls eller progressiv, som i följande uppspelningsordning:
       * Om webbläsaren stöder DASH används DASH-direktuppspelning först.
       * Om webbläsaren inte stöder DASH används HLS-direktuppspelning, andra gången.
       * Om webbläsaren inte stöder DASH eller HLS används den progressiva uppspelningen sist.
