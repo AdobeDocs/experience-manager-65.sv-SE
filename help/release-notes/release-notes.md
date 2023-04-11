@@ -2,9 +2,9 @@
 title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
-source-git-commit: a17b25e55a0bf16a0df42a7ba4768503618a19e2
+source-git-commit: a2fa4eacf1b39f185fdf46581ca7c5dcc8083969
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '2943'
 ht-degree: 0%
 
 ---
@@ -88,7 +88,7 @@ Se [Aktivera DASH på ditt konto](/help/assets/video.md#enable-dash).
 
 ### [!DNL Forms] Korrigeringar {#forms-fixes-6516}
 
-* När du använder ett tilldelningssteg** för att skicka ett meddelande för en tilldelad uppgift, skickas två e-postmeddelanden i stället för ett till den tilldelade personen. (NPR-40078)
+* När en **Tilldela uppgift** om du vill skicka ett meddelande för en tilldelad uppgift, skickas två e-postmeddelanden i stället för ett till den tilldelade personen. (NPR-40078)
 * När en användare döljer tabellrubrikerna tas den tidigare angivna kolumnbredden bort och alla kolumner behåller samma bredd. (NPR-40063)
 * Om du ändrar administratörsanvändarens standardlösenord från `admin`, samtidigt som du utför `Prepare Adobe Experience Manager Server For DSC deployment` kontrollera om AEM Forms JEE-service pack inte fungerar. (NPR-40062), (NPR-39387)
 * API:erna för OutputService och AssemblerService kan inte konvertera PDF-formulär till PDF/A. (NPR-39990)
@@ -102,6 +102,18 @@ Se [Aktivera DASH på ditt konto](/help/assets/video.md#enable-dash).
 * När en användare har uppgraderat till AEM 6.5.15.0 Service Pack fungerar inte konverteringen från PostScript till PDF. (NPR-39765), (NPR-39764)
 * När användaren försöker öppna rundvandringsskärmen efter att ha öppnat ett adaptivt formulär misslyckas det med ett NullPointer-undantag:`[172.17.0.1[1662032923933]GET/libs/fd/af/content/editors/form/tour/content.htmlHTTP/1.1]com.day.cq.wcm.core.impl.WCMDebugFilterException:org.apache.sling.api.scripting.ScriptEvaluationException:"` (NPR-39654)
 * I Windows, när användaren aktiverar svartinställningar med hög kontrast, blir Forms-innehållet i HTML5 oklart när det återges som en förhandsvisning i HTML i webbläsaren. (NPR-39018)
+* När användaren försöker lägga till metadata blir knappen Spara inte funktionell för både utkast- och inskickskomponenterna.(CQ-4349601)
+* När du har uppgraderat till AEM 6.5.15.0 Service Pack fungerar inte längre omdirigeringen av relativa URL-adresser i Visual Editor. (NPR-39947)
+* När en användare uppgraderar till AEM 6.5.15.0 Service Pack slutar omdirigeringen att fungera med Internet Explorer. (CQ-4351745)
+* När en användare har uppgraderat till AEM 6.5.15.0 Service Pack, känns HTML heading-taggen inte igen. HTML-kod för rubriktaggen visas som text i HTML-formuläret. (NPR-39915)
+* När användaren försöker skicka ett adaptivt formulär inträffar ett typfel: `ERROR [10.207.64.167 [1668589530607] POST /app/LS4/content/forms/af/revalidate/jcr:content/guideContainer.af.submit.jsp HTTP/1.1]`( NPR-39809)
+* När en användare förhandsgranskar ett postdokument med **Skicka e-post** skicka-åtgärd, den visas inte korrekt. E-postmallen bäddas in i förhandsgranskningen av postdokumentet. (CQ-4352155)
+* När en användare förhandsgranskar ett adaptivt formulär som ett HTML i Microsoft Edge-webbläsaren med kompatibilitetsläget IE visas det inte korrekt.(CQ-4352216)
+* Ordlistan måste innehålla nya språk med specialtecken, som understreck och bindestreck, för att kunna översätta. (NPR-40088)
+
+Efter installation av tilläggspaketet för Forms AEM 6.5.16.0 ställdes kunderna inför följande problem. En uppdaterad version av AEM 6.5.16.0 Forms tilläggspaket släpps:
+* När en användare försöker skapa ett adaptivt formulär med en användare i gruppen för formuläranvändare, finns inte alternativet att välja någon mall och felet liknar följande inträffar: internt serverfel: java.lang.NullPointerException på com.adobe.aem.formsndocuments.servlet.ThemeClientLibraryDataSourceServlet.lambda$getThemeClientLibCategoryList$3(ThemeClientLibraryDataSourceServlet.java:76) på java.base/java.util.stream.Reference Pipeline$2$1.accept(ReferencePipeline.java:176) at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133) (FORMS-7629)
+* Ändringarna i kodredigerarreglerna sparas inte.(FORMS-7532)
 
 ## Integreringar {#integrations-6516}
 
