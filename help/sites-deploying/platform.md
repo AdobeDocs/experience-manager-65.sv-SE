@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: fccf9a0f-ebab-45ab-8460-84c86b3c4192
 legacypath: /content/docs/en/aem/6-0/deploy/upgrade/introduction-to-oak
 exl-id: 8ee5f4ff-648d-45ea-a51e-894cd4385e62
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 2981f11565db957fac323f81014af83cab2c0a12
 workflow-type: tm+mt
-source-wordcount: '769'
+source-wordcount: '754'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Det är efterföljaren till Jackrabbit 2 och används av AEM 6 som standardbacke
 
 ## Utforma principer och mål {#design-principles-and-goals}
 
-Oak implementerar [JSR-283](https://www.day.com/day/en/products/jcr/jsr-283.html) (JCR 2.0) spec. Dess främsta designmål är att
+Oak implementerar [JSR-283](https://jcp.org/en/jsr/detail?id=283) (JCR 2.0) spec. Dess främsta designmål är att
 
 * Bättre stöd för stora databaser
 * Flera distribuerade klusternoder för hög tillgänglighet
@@ -78,13 +78,13 @@ Det finns flera viktiga designprinciper som den bygger på:
 
 * **Oändringsbara segment**
 
-Innehållet lagras i segment som kan vara upp till 256 kB stort. De är oföränderliga, vilket gör det enkelt att cachelagra segment som du använder ofta och minska antalet systemfel som kan skada databasen.
+Innehållet lagras i segment som kan vara upp till 256 kB. De är oföränderliga, vilket gör det enkelt att cachelagra segment som du använder ofta och minska antalet systemfel som kan skada databasen.
 
 Varje segment identifieras av en unik identifierare (UUID) och innehåller en kontinuerlig delmängd av innehållsträdet. Dessutom kan segment referera till annat innehåll. Varje segment innehåller en lista med UUID:n för andra refererade segment.
 
 * **Lokalitet**
 
-Relaterade poster som en nod och dess direkt underordnade noder lagras vanligtvis i samma segment. Detta gör det mycket snabbt att söka i databasen och undviker de flesta cachemissar för vanliga klienter som har åtkomst till mer än en relaterad nod per session.
+Relaterade poster som en nod och dess direkt underordnade poster lagras i samma segment. På så sätt blir sökningen i databasen snabb och de flesta cachemissar undviks för vanliga klienter som använder mer än en relaterad nod per session.
 
 * **Kompacitet**
 
@@ -92,7 +92,7 @@ Formateringen av posterna är optimerad för att minska IO-kostnaderna och för 
 
 ### Mongo-lagring {#mongo-storage}
 
-MongoDB-lagringsutrymmet utnyttjar MongoDB för att dela och klustra. Databasträdet sparas i en MongoDB-databas där varje nod är ett separat dokument.
+MongoDB-lagringsutrymmet använder MongoDB för att dela och klustra. Databasträdet sparas i en MongoDB-databas där varje nod är ett separat dokument.
 
 Den har flera särdrag:
 
@@ -122,10 +122,10 @@ En typisk konfiguration AEM kluster med MongoDB-lagring:
 
 ## Vad är annorlunda än Jackrabbit 2? {#what-is-different-from-jackrabbit}
 
-Eftersom Oak är utformad för att vara bakåtkompatibel med JCR 1.0-standarden kommer det att ske nästan inga förändringar på användarnivå. Det finns dock vissa märkbara skillnader som du måste ta hänsyn till när du konfigurerar en Oak-baserad AEM:
+Eftersom Oak är bakåtkompatibelt med JCR 1.0-standarden sker nästan inga förändringar på användarnivå. Det finns dock vissa märkbara skillnader som du måste ta hänsyn till när du konfigurerar en Oak-baserad AEM:
 
-* Oak skapar inte index automatiskt. Därför måste anpassade index skapas när det behövs.
-* Till skillnad från Jackrabbit 2, där sessionerna alltid återspeglar databasens senaste status, visar Oak en session en stabil vy av databasen från den tidpunkt då sessionen skapades. Detta beror på MVCC-modellen som Oak baseras på.
+* Oak skapar inte index automatiskt. Därför måste anpassade index skapas vid behov.
+* Till skillnad från Jackrabbit 2, där sessionerna alltid återspeglar databasens senaste status, visar Oak en session en stabil vy av databasen från den tidpunkt då sessionen skapades. Orsaken beror på MVCC-modellen som Oak baseras på.
 * Samma namn på jämställda (SNS) stöds inte i Oak.
 
 ## Annan plattformsrelaterad dokumentation {#other-platform-related-documentation}

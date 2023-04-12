@@ -10,9 +10,9 @@ topic-tags: integration
 content-type: reference
 discoiquuid: e0d6478a-4420-46a6-96fe-082a30ee82f0
 exl-id: 50b70e47-a801-4f0a-be92-4427c4b2cad1
-source-git-commit: d19b203ffe75a5628f350113d4d74a2916beffc8
+source-git-commit: 2981f11565db957fac323f81014af83cab2c0a12
 workflow-type: tm+mt
-source-wordcount: '322'
+source-wordcount: '252'
 ht-degree: 0%
 
 ---
@@ -26,12 +26,12 @@ Med AEM kan du integrera med följande icke-Adobe-produkter direkt:
 * ExactTarget - e-postmarknadsföring
 * Facebook Connect - sociala nätverk
 * Generic Analytics-kodfragment - analys
-* Microsoft Translator eller andra maskinöversättningsleverantörer
+* Microsoft® Translator eller andra maskinöversättningsleverantörer
 * Pushwoosh Connection - Appar - push-meddelanden
 * Salesforce - sälj- och CRM-program
-* Silverpop Engage - automatiserad marknadsföring, e-post, mobilt och socialt
 * Twitter - sociala nätverk
 * YouTube - videodelning
+<!-- * Silverpop Engage - marketing automation, email, mobile, and social NO LONGER EXISTS; ITS REPLACEMENT IS UNKNOWN -->
 
 Dessutom kan du integrera AEM med [Adobe Creative Cloud](/help/assets/aem-cc-integration-best-practices.md).
 
@@ -41,15 +41,16 @@ Salesforce.com är det molnföretag som leder övergången till det sociala för
 
 Mer information om hur du integrerar din AEM och Salesforce finns i [Integrera med Salesforce](/help/sites-administering/salesforce.md).
 
-## Integrera med Silverpop Engage {#integrating-with-silverpop-engage}
+<!-- THE INFORMATION BELOW APPEARS OBSOLETE; first URL is a 404. I could not find a suitable replacement for it.
+## Integrating with Silverpop Engage {#integrating-with-silverpop-engage}
 
 >[!NOTE]
 >
->Integrering med Silverpop Engage är inte tillgängligt direkt. För att integrera AEM med Silverpop Engage [hämta paketet](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem620/product/cq-mcm-integrations-silverpop-content) från paketresurs.
+>Silverpop Engage integration is not available out of the box. To integrate AEM with Silverpop Engage, [download the package](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem620/product/cq-mcm-integrations-silverpop-content) from Package Share.
 
-Silverpop Engage erbjuder automatiserad marknadsföring, e-post, mobilt och socialt.
+Silverpop Engage provides marketing automation, email, mobile, and social.
 
-Mer information om hur du integrerar AEM och ExactTarget finns i [Integrera med Silverpop Engage](/help/sites-administering/silverpop.md).
+For information about integrating your AEM site and ExactTarget, see [Integrating with Silverpop Engage](/help/sites-administering/silverpop.md). -->
 
 ## Integrera med ExactTarget {#integrating-with-exacttarget}
 

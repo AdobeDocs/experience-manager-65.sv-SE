@@ -12,16 +12,16 @@ discoiquuid: 13085dd3-d283-4354-874b-cd837a9db9f9
 docset: aem65
 exl-id: 661602eb-a117-454d-93d3-a079584f7a5d
 feature: Security
-source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
+source-git-commit: 2981f11565db957fac323f81014af83cab2c0a12
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '478'
 ht-degree: 0%
 
 ---
 
 # Mappning av anpassade användargrupper i AEM 6.5 {#custom-user-group-mapping-in-aem}
 
-## Jämförelse av JCR-innehåll relaterat till CUG {#comparison-of-jcr-content-related-to-cug}
+## Jämförelse av JCR-innehåll relaterat till CUG (anpassad användargrupp) {#comparison-of-jcr-content-related-to-cug}
 
 <table>
  <tbody>
@@ -38,7 +38,7 @@ ht-degree: 0%
   <tr>
    <td><p>Egenskap: cq:cugPrincipals</p> <p>Deklarerar nodtyp: NA, övrig egendom</p> </td>
    <td><p>Egenskap: rep:mainNames</p> <p>Deklarerar nodtyp: rep:CugPolicy</p> </td>
-   <td><p>Egenskapen som innehåller namnen på de principer som får läsa innehållet under den begränsade CUG:n är skyddad och kan inte skrivas med vanliga JCR API-anrop. använd JCR-åtkomstkontroll i stället.</p> <p>Se <a href="https://svn.apache.org/repos/asf/jackrabbit/trunk/jackrabbitapi/src/main/java/org/apache/jackrabbit/api/security/authorization/PrincipalSetPolicy.java">den här sidan</a> för mer information om implementeringen.</p> </td>
+   <td><p>Egenskapen som innehåller namnen på de principer som får läsa innehållet under den begränsade CUG:n är skyddad och kan inte skrivas med vanliga JCR API-anrop. använd JCR-åtkomstkontroll i stället.</p> <p>Se <a href="https://jackrabbit.apache.org/api/2.12/org/apache/jackrabbit/api/security/authorization/PrincipalSetPolicy.html">den här sidan</a> för mer information om implementeringen.</p> </td>
   </tr>
   <tr>
    <td><p>Egenskap: cq:cugLoginPage</p> <p>Deklarerar nodtyp: NA, övrig egendom</p> </td>
@@ -96,9 +96,9 @@ Tjänst för att konfigurera exkluderingslista för huvudobjekt som inte ska på
 * OSGi-komponenten som implementerar LoginPathProvider som visar en matchande inloggningssökväg för LoginSelectorHandler. Den har en obligatorisk referens till en RequirementHandler som används för att registrera observatören som lyssnar på ändrade autentiseringskrav som lagras i innehållet med hjälp av blandningstypen granite:AuthenticationRequired.
 * OSGi-komponenten som implementerar RequirementHandler som meddelar SlingAuthenticator om ändringar i auktoriseringskrav.
 
-   Eftersom konfigurationsprincipen för den här komponenten är NÖDVÄNDIG aktiveras den bara om en uppsättning sökvägar som stöds anges.
+   Eftersom konfigurationsprincipen för den här komponenten är NÖDVÄNDIG aktiveras den bara om en uppsättning sökvägar som stöds har angetts.
 
-   Om du aktiverar tjänsten startas RequirementService.
+   Om tjänsten aktiveras startas RequirementService.
 
 <!-- nested tables not supported - text above is the table>
 <table>
