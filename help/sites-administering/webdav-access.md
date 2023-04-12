@@ -10,9 +10,9 @@ topic-tags: content
 content-type: reference
 discoiquuid: 1eaf7afe-a181-45df-8766-bd564b1ad22a
 exl-id: 891ee66c-e49c-4561-8fef-e6e448a8aa1c
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e05f6cd7cf17f4420176cf76f28cb469bcee4a0a
 workflow-type: tm+mt
-source-wordcount: '1144'
+source-wordcount: '1097'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 Så här ansluter du till AEM via WebDAV med KDE:
 
-AEM har WebDAV-stöd som gör att du kan visa och redigera databasinnehåll. Om du ansluter via WebDAV får du direktåtkomst till innehållsdatabasen via skrivbordet. Text- och PDF-filer som läggs till i databasen via WebDAV-anslutningen indexeras automatiskt i fulltext och kan sökas igenom med standardsökgränssnitten och via Java-API:erna.
+AEM har WebDAV-stöd som gör att du kan visa och redigera databasinnehåll. Om du ansluter via WebDAV får du direktåtkomst till innehållsdatabasen via skrivbordet. Text- och PDF-filer som läggs till i databasen via WebDAV-anslutningen indexeras automatiskt i fulltext och kan sökas igenom med standardsökgränssnitten och via Java™-API:erna.
 
 ## Allmänt {#general}
 
@@ -98,9 +98,9 @@ http://localhost:4502/crx/repository/staging
 
 ## Ansluta via WebDAV {#connecting-via-webdav}
 
-[Såsom nämns ovan](/help/sites-administering/webdav-access.md#general)för att ansluta till din databas med hjälp av WebDAV-protokollet pekar du din WebDAV-klient till din databasplats. Beroende på vilket operativsystem du använder skiljer sig dock stegen som krävs för att ansluta klienten åt och det kan finnas en konfiguration av operativsystemet som krävs.
+[Såsom nämns ovan](/help/sites-administering/webdav-access.md#general)för att ansluta till din databas med hjälp av WebDAV-protokollet pekar du din WebDAV-klient till din databasplats. Beroende på vilket operativsystem du använder skiljer sig dock stegen som används för att ansluta klienten åt och det kan finnas en nödvändig konfiguration av operativsystemet.
 
-Instruktioner om hur du ansluter följande operativsystem:
+Anvisningar om hur du ansluter följande operativsystem finns:
 
 * [Windows](/help/sites-administering/webdav-access.md#windows)
 * [macOS](/help/sites-administering/webdav-access.md#macos)
@@ -108,7 +108,7 @@ Instruktioner om hur du ansluter följande operativsystem:
 
 ### Windows {#windows}
 
-Om du vill ansluta ett Microsoft Windows 7-system (och senare) till en AEM som inte är säker med SSL, måste du uttryckligen aktivera alternativet att upprätta grundläggande autentisering över ett oskyddat nätverk i Windows. Detta kräver en ändring i Windows-registret för WebClient.
+Om du vill ansluta ett Microsoft® Windows 7-system (och senare) till en AEM som inte är säker med SSL, måste du uttryckligen aktivera alternativet att upprätta grundläggande autentisering över ett oskyddat nätverk i Windows. Den här funktionen kräver en ändring i Windows-registret för WebClient.
 
 När registret har uppdaterats kan AEM mappas som en enhet.
 
@@ -126,11 +126,7 @@ Så här uppdaterar du registret så att grundläggande autentisering tillåts �
 
    Lägg till undernyckeln om den inte finns.
 
-1. Du måste starta om systemet för att registerändringen ska börja gälla.
-
-Se [Microsoft Support KB 841215](https://support.microsoft.com/default.aspx/kb/841215) om du vill ha mer information om den här registerändringen.
-
-Se [Microsoft Support KB 2445570](https://support.microsoft.com/kb/2445570) om du vill ha information om hur du kan förbättra WebDav-klientens ansvar i Windows.
+1. Starta om systemet för att registerändringen ska börja gälla.
 
 >[!NOTE]
 >
@@ -138,21 +134,21 @@ Se [Microsoft Support KB 2445570](https://support.microsoft.com/kb/2445570) om d
 
 #### Konfiguration av Windows 8 {#windows-configuration}
 
-För Windows 8 måste du också ändra registerposten [enligt beskrivning för Windows 7 och senare](/help/sites-administering/webdav-access.md#windows-and-greater-configuration). Skrivbordsmiljö måste dock vara aktiverad för att du ska kunna se registerposten innan du kan göra detta.
+För Windows 8 ändrar du registerposten [enligt beskrivning för Windows 7 och senare](/help/sites-administering/webdav-access.md#windows-and-greater-configuration). Skrivbordsmiljö måste dock aktiveras för att registerposten ska kunna visas innan du utför den här åtgärden.
 
 Om du vill aktivera Skrivbordsmiljö öppnar du **Serverhanteraren** sedan **Funktioner** sedan **Lägg till funktioner** sedan **Skrivbordsmiljö**.
 
-När registerposten som beskrivs för Windows 7 har startats om är den tillgänglig. Ändra den enligt beskrivningen för Windows 7 och senare.
+Efter omstart är registerposten som beskrivs för Windows 7 och senare tillgänglig. Ändra den enligt beskrivningen för Windows 7 och senare.
 
 #### Ansluta i Windows {#connecting-in-windows}
 
 Så här ansluter du till AEM via WebDAV i en Windows-miljö:
 
-1. Öppna **Utforskaren** eller **Utforskaren** och klicka på **Dator** eller **Den här datorn**.
+1. Öppna **Utforskaren** eller **Utforskaren** och klicka **Dator** eller **Den här datorn**.
 
    ![chlimage_1-112](assets/chlimage_1-112a.png)
 
-1. Klicka **Mappa nätverksenhet** för att starta guiden.
+1. Starta guiden genom att klicka på **Mappa nätverksenhet**.
 1. Ange mappningsinformationen:
 
    * **Drive**: Välj en tillgänglig bokstav
@@ -179,7 +175,7 @@ Windows har nu mappat AEM som en enhet via WebDAV och du kan använda den som vi
 
 ### macOS {#macos}
 
-Det krävs inga konfigurationssteg för att ansluta via WebDAV på macOS. Du behöver bara ansluta till WebDAV-servern.
+Det krävs inga konfigurationssteg för att ansluta via WebDAV på macOS. Du kan ansluta till WebDAV-servern.
 
 1. Navigera till alla **Finder** fönster och klicka **Gå** och **Anslut till server** eller tryck **Kommando+k**.
 1. I **Anslut till server** anger du AEM plats:
@@ -193,9 +189,9 @@ Det krävs inga konfigurationssteg för att ansluta via WebDAV på macOS. Du beh
 
 macOS har nu anslutit till AEM via WebDAV och du kan använda det som vilken mapp som helst på din Mac.
 
-### Linux {#linux}
+### Linux® {#linux}
 
-Anslutning via WebDAV i Linux kräver ingen konfiguration, men inkluderar några steg för att skapa anslutningen som varierar beroende på datormiljön.
+Anslutning via WebDAV i Linux® kräver ingen konfiguration, men det krävs några steg för att skapa anslutningen som varierar beroende på datormiljön.
 
 #### GNOME {#gnome}
 

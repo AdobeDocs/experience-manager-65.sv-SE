@@ -10,9 +10,9 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: fde9027b-9057-48c3-ae34-3f3258c5b371
 exl-id: 6cda0a68-0df9-44e7-ae4f-9951411af6dd
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e05f6cd7cf17f4420176cf76f28cb469bcee4a0a
 workflow-type: tm+mt
-source-wordcount: '711'
+source-wordcount: '703'
 ht-degree: 0%
 
 ---
@@ -23,31 +23,31 @@ ht-degree: 0%
 >
 >Adobe planerar inte att ytterligare förbättra spårningen av öppnade/studsade e-postmeddelanden som skickas av AEM SMTP-tjänst.
 >
->Rekommendationen är att [utnyttja Adobe Campaign och dess AEM](/help/sites-administering/campaign.md).
+>Rekommendationen är att [använda Adobe Campaign och dess AEM](/help/sites-administering/campaign.md).
 
 När du skickar ett nyhetsbrev till många användare finns det vanligtvis några ogiltiga e-postadresser i listan. Skickar nyhetsbrev till adresserna som studsar tillbaka. AEM kan hantera dessa studsar och kan sluta skicka nyhetsbrev till dessa adresser när den konfigurerade studsräknaren har överskridits. Som standard är studsfrekvensen 3, men den kan konfigureras.
 
-Om du vill ställa in AEM för att spåra utskickade e-postmeddelanden måste du ställa in AEM för att ringa en befintlig postlåda där uträknade e-postmeddelanden tas emot (vanligtvis är detta den&quot;från&quot;-e-postadress som du anger var du skickar nyhetsbrevet). AEM avsöker den här inkorgen och importerar alla e-postmeddelanden under sökvägen som anges i avsökningskonfigurationen. Ett arbetsflöde utlöses sedan för att söka efter de studsade e-postadresserna inom användarna och uppdaterar användarens egenskapsvärde bounceCounter i enlighet med detta. När de konfigurerade maxgränserna har överskridits tas användaren bort från nyhetsbrevslistan.
+Om du vill konfigurera AEM för att spåra studsade e-postmeddelanden ställer du in AEM för att ringa en befintlig postlåda där studsade e-postmeddelanden tas emot. Vanligtvis är den här platsen den&quot;från&quot;-e-postadress som du anger var du skickar nyhetsbrevet. AEM avsöker den här inkorgen och importerar alla e-postmeddelanden under sökvägen som anges i avsökningskonfigurationen. Ett arbetsflöde utlöses sedan för att söka efter de studsade e-postadresserna inom användarna och uppdaterar användarens egenskapsvärde bounceCounter i enlighet med detta. När de konfigurerade maxgränserna har överskridits tas användaren bort från nyhetsbrevslistan.
 
 ## Konfigurera flödesimporteraren {#configuring-the-feed-importer}
 
 Med flödesimporteraren kan du importera innehåll från externa källor till din databas flera gånger. Med den här konfigurationen för flödesimporteraren kontrollerar AEM avsändarens postlåda om det finns utskickade e-postmeddelanden.
 
-Så här konfigurerar du feed-importeraren för att spåra utskickad e-post:
+Så här konfigurerar du feed-importeraren för spårning av studsade e-postmeddelanden:
 
 1. I **verktyg** väljer du Feed Importer.
 
-1. Klicka **Lägg till** för att skapa en ny konfiguration.
+1. Klicka **Lägg till** för att skapa en konfiguration.
 
    ![chlimage_1](assets/chlimage_1a.png)
 
-1. Lägg till en ny konfiguration genom att välja typ och lägga till information i avsöknings-URL:en för att konfigurera värden och port. Dessutom måste du lägga till vissa post- och protokollspecifika parametrar i URL-frågan. Ange att konfigurationen ska avfrågas minst en gång om dagen.
+1. Lägg till en konfiguration genom att välja typ och lägga till information i avsöknings-URL:en så att du kan konfigurera värden och port. Lägg dessutom till vissa post- och protokollspecifika parametrar i URL-frågan. Ange att konfigurationen ska avfrågas minst en gång om dagen.
 
    Alla konfigurationer behöver information om följande i avsöknings-URL:
 
-   `username`: Användarnamnet som ska användas för anslutning
+   `username`: Användarnamnet som används för anslutning
 
-   `password`: Lösenordet som ska användas för anslutning
+   `password`: Lösenordet som används för att ansluta
 
    Beroende på vilket protokoll du använder kan du dessutom konfigurera vissa inställningar.
 
@@ -67,7 +67,7 @@ Så här konfigurerar du feed-importeraren för att spåra utskickad e-post:
 
    `imap.flag.SEEN`:Ange false för nytt/osynligt meddelande, true för redan lästa meddelanden
 
-   Se [https://java.sun.com/products/javamail/javadocs/javax/mail/Flags.Flag.html](https://java.sun.com/products/javamail/javadocs/javax/mail/Flags.Flag.html) för den fullständiga listan över flaggor.
+   Se [https://javaee.github.io/javamail/docs/api/index.html?javax/mail/Flags.Flag.html](https://javaee.github.io/javamail/docs/api/index.html?javax/mail/Flags.Flag.html) för den fullständiga listan över flaggor.
 
    **IMAP-exempel:**
 
@@ -80,11 +80,11 @@ Så här konfigurerar du feed-importeraren för att spåra utskickad e-post:
 
 ## Konfigurera tjänstkomponenten för nyhetsbrev {#configuring-the-newsletter-service-component}
 
-När du har konfigurerat feed-importeraren måste du konfigurera From-adressen och studsräknaren.
+När du har konfigurerat feed-importeraren konfigurerar du Från-adressen och studsräknaren.
 
 Så här konfigurerar du nyhetsbrevstjänsten:
 
-1. I OSGi-konsolen på `<host>:<port>/system/console/configMgr` och navigera till **MCM Newsletter**.
+1. I OSGi-konsolen, på `<host>:<port>/system/console/configMgr`, navigera till **MCM Newsletter**.
 
 1. Konfigurera tjänsten och spara ändringarna när du är klar.
 

@@ -5,9 +5,9 @@ topics: Commerce
 feature: Commerce Integration Framework
 thumbnail: 37843.jpg
 exl-id: de7b8f05-b6b7-4105-84a5-940c16ebf2b4
-source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
+source-git-commit: e05f6cd7cf17f4420176cf76f28cb469bcee4a0a
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '769'
 ht-degree: 0%
 
 ---
@@ -16,9 +16,9 @@ ht-degree: 0%
 
 PWA Studio kan integreras smidigt med Adobe Commerce via GraphQL, vilket ger obegränsade möjligheter att skapa innovativa och engagerande butiker och andra digitala upplevelser.
 
-Innehållsfragment är innehållsdelar med en fördefinierad struktur som gör att de kan konsumeras på ett headless sätt med GraphQL som API i olika format (t.ex. JSON, Markdown) och återges oberoende av varandra. Innehållsfragmenten innehåller alla datatyper och fält som krävs för att GraphQL ska vara säker på att ditt program bara begär det som är tillgängligt och får det som förväntas. Den flexibilitet de ger i form av hur de är upplagda gör dem perfekta att använda på flera platser och i flera kanaler.
+Innehållsfragment är innehållsdelar med en fördefinierad struktur som gör att de kan konsumeras utan rubriker med GraphQL som API i olika format (till exempel JSON, Markdown) och oberoende rendering. Innehållsfragmenten innehåller alla datatyper och fält som krävs för att GraphQL ska vara säker på att ditt program bara begär det som är tillgängligt och får det som förväntas. Den flexibilitet de ger i form av hur de är upplagda gör dem perfekta att använda på flera platser och i flera kanaler.
 
-Det är enkelt att utforma den struktur du behöver med Modellredigeraren för innehållsfragment i Adobe Experience Manager. Den största utmaningen att integrera Adobe Experience Manager Content Fragments (eller andra data) med ditt PWA Studio-program är att hämta data från flera GraphQL-slutpunkter. Det beror på att PWA Studio fungerar med en enda Adobe Commerce GraphQL-slutpunkt.
+Det är enkelt att utforma den struktur du behöver med Modellredigeraren för innehållsfragment i Adobe Experience Manager. Den största utmaningen att integrera Adobe Experience Manager Content Fragments (eller andra data) med ditt PWA Studio-program är att hämta data från flera GraphQL-slutpunkter. Orsaken är att PWA Studio fungerar med en enda Adobe Commerce GraphQL-slutpunkt.
 
 ## Arkitektur {#architecture}
 
@@ -26,7 +26,7 @@ Det är enkelt att utforma den struktur du behöver med Modellredigeraren för i
 
 ## Konfigurera PWA Studio {#setup-pwa}
 
-Följ Adobe Commerce [PWA Studio dokumentation](https://developer.adobe.com/commerce/pwa-studio/tutorials/) för att konfigurera din PWA Studio-app.
+Följ Adobe Commerce för att konfigurera appen PWA Studio [PWA Studio dokumentation](https://developer.adobe.com/commerce/pwa-studio/tutorials/).
 
 Om du vill ansluta PWA Studio till GraphQL AEM kan du använda [AEM för PWA Studio](https://github.com/adobe/aem-pwa-studio-extensions).
 
@@ -62,7 +62,7 @@ Om du vill ansluta PWA Studio till GraphQL AEM kan du använda [AEM för PWA Stu
 
    Mer information om anpassning av navigeringskomponenten finns i [addBlogToNavigation.js](https://github.com/adobe/aem-pwa-studio-extensions/blob/master/aem-cfm-blog-extension/extension/src/addBlogToNavigation.js) och i [Extensibility Framework](https://developer.adobe.com/commerce/pwa-studio/guides/general-concepts/extensibility/) Dokumentation för PWA Studio.
 
-1. Apollo-klienten förväntar sig den AEM GraphQL-slutpunkten vid <https://pwa-studio/endpoint.js>. Om du vill mappa slutpunkten till den här platsen måste du anpassa UPWARD-konfigurationen för ditt PWA Studio-program: a. Lägg till variabeln AEM_CFM_GRAPHQL till pwa-root/.env och anpassa den så att den pekar på GraphQL-slutpunkten för AEM innehållsfragment.
+1. Apollo-klienten förväntar sig den AEM GraphQL-slutpunkten vid `<https://pwa-studio/endpoint.js>`. Anpassa UPWARD-konfigurationen för PWA Studio-programmet om du vill mappa slutpunkten till den här platsen: a. Till `pwa-root/.env`lägger du till variabeln AEM_CFM_GRAPHQL och anpassar den så att den pekar på AEM Content Fragments GraphQL slutpunkt.
 
    Exempel: AEM_CFM_GRAPHQL=<http://localhost:4503/content/graphql/global>
 
@@ -89,13 +89,13 @@ Om du vill ansluta PWA Studio till GraphQL AEM kan du använda [AEM för PWA Stu
 
 ## AEM {#setup-aem}
 
-Följ AEM Content Fragments dokumentation för att konfigurera en GraphQL-slutpunkt för ditt AEM. I ditt AEM lägger du till följande konfigurationer så att PWA Studio-programmet kan komma åt GraphQL-slutpunkten:
+Följ dokumentationen för AEM innehållsfragment för att konfigurera en GraphQL-slutpunkt för ditt AEM. I ditt AEM lägger du till följande konfigurationer så att PWA Studio-programmet kan komma åt GraphQL-slutpunkten:
 
 * Resursdelningspolicy för korsursprung för Adobe (com.adobe.granite.cors.impl.CORSPolicyImpl)
 
-   Ställ in den tillåtna origin-egenskapen på det fullständiga värdnamnet för ditt PWA-program.
+   Ange `allowedorigin` till det fullständiga värdnamnet för ditt PWA-program.
 
-   Exempel:  <https://pwa-studio-test-vflyn.local.pwadev:9366>
+   Exempel:  `<https://pwa-studio-test-vflyn.local.pwadev:9366>`
 
 * Apache Sling Referrer-filter (org.apache.sling.security.impl.ReferrerFilter.cfg.json)
 
@@ -105,7 +105,7 @@ Följ AEM Content Fragments dokumentation för att konfigurera en GraphQL-slutpu
 
 Du hittar fullständiga exempel på båda konfigurationerna här: <https://github.com/adobe/aem-pwa-studio-extensions/tree/master/aem-cfm-blog-extension/aem/config/src/main/content/jcr_root/apps/blog-demo/config>.
 
-För att visa GraphQL-slutpunkten har vi förberett några innehållsfragmentmodeller och data via ett innehållspaket. Dessa fungerar bra tillsammans med React Components som medföljer PWA Studio.
+För att visa GraphQL-slutpunkten förberedde Adobe några innehållsfragmentmodeller och data som exempel med hjälp av ett innehållspaket. Dessa delar fungerar tillsammans med React Components som medföljer PWA Studio.
 
 ## Användning {#how-to-use}
 
@@ -116,8 +116,8 @@ Beroende på ditt sätt att arbeta vill du skapa egna modeller för innehållsfr
 Produktionsinställningarna kan variera i olika aspekter.
 
 * Du kan ha en enda federerad GraphQL-slutpunkt som kombinerar AEM- och Adobe Commerce GraphQL-data i stället för att anpassa Apollo-klienten.
-* Ditt PWA Studio-program kan använda AEM GraphQL-slutpunkts-URL direkt, utan någon proxy med UPWARD. Proxyservern kan också flyttas till ett annat lager (t.ex. CDN).
-* Vilken metod som passar bäst för dig beror också i hög grad på hur du levererar PWA Studio till slutanvändaren.
+* Ditt PWA Studio-program kan använda AEM GraphQL-slutpunkts-URL direkt, utan någon proxy med UPWARD. Proxyservern kan också flyttas till ett annat lager (till exempel CDN).
+* Metoden passar bäst för dig och beror till stor del på hur du levererar PWA Studio till slutanvändaren.
 
 Det här tillägget innehåller två exempel.
 
@@ -127,4 +127,4 @@ Visa blogginlägg baserat på vissa Content Fragment-modeller. Dessutom innehål
 
 ### PDP-berikning {#pdp-enrichment}
 
-Gör det möjligt för marknadsförare att enkelt utöka PDP:er med ytterligare innehåll som hanteras som innehållsfragment.  Se [GitHub](https://github.com/adobe/aem-pwa-studio-extensions/tree/master/aem-cif-product-page-extension) för mer information.
+Gör det möjligt för marknadsförare att enkelt utöka PDP:er med ytterligare innehåll som hanteras som innehållsfragment. Se [GitHub](https://github.com/adobe/aem-pwa-studio-extensions/tree/master/aem-cif-product-page-extension) för mer information.
