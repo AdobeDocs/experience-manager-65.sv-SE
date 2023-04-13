@@ -12,9 +12,9 @@ discoiquuid: de7d7209-c194-4d19-853b-468ebf3fa4b2
 docset: aem65
 exl-id: 314a6409-398c-470b-8799-0c4e6f745141
 feature: Security
-source-git-commit: e44480535ea7058dc41fc747351446b670d03b7f
+source-git-commit: f23adcf200b625e2ab2a766460c41fd7e38fae83
 workflow-type: tm+mt
-source-wordcount: '2986'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -390,7 +390,7 @@ Ingen konfiguration måste utföras för att den ska kunna aktiveras eftersom de
 >
 >Mer information finns i Oak-dokumentationen på [Generering av auktoriseringsbart nodnamn](https://jackrabbit.apache.org/oak/docs/security/user/authorizablenodename.html).
 
-**Anonymt behörighetskontrollpaket**
+### Anonymt behörighetskontrollpaket {#anonymous-permission-hardening-package}
 
 Som standard lagras systemmetadata i AEM, som `jcr:createdBy` eller `jcr:lastModifiedBy` som nodegenskaper, bredvid regelbundet innehåll, i databasen. Beroende på konfigurationen och åtkomstkontrollkonfigurationen kan detta i vissa fall leda till exponering av personligt identifierbar information (PII), till exempel när sådana noder återges som rå JSON eller XML.
 
