@@ -12,9 +12,9 @@ discoiquuid: de7d7209-c194-4d19-853b-468ebf3fa4b2
 docset: aem65
 exl-id: 314a6409-398c-470b-8799-0c4e6f745141
 feature: Security
-source-git-commit: f23adcf200b625e2ab2a766460c41fd7e38fae83
+source-git-commit: 41752e40f2bceae98d4a9ff8bf130476339fe324
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '3025'
 ht-degree: 0%
 
 ---
@@ -396,7 +396,17 @@ Som standard lagras systemmetadata i AEM, som `jcr:createdBy` eller `jcr:lastMod
 
 Precis som alla databasdata förmedlas dessa egenskaper av Oak-auktoriseringsstacken. Åtkomsten till dem bör begränsas i enlighet med principen om minst privilegium.
 
-Som stöd för detta tillhandahåller Adobe ett behörighetskontrollerande paket som kan användas av kunder. Det fungerar genom att installera en &quot;deny&quot;-åtkomstkontrollpost i databasroten, vilket begränsar anonym åtkomst till vanliga systemegenskaper. Paketet är tillgängligt för hämtning [här](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/helper/anonymous-permissions-pkg-0.1.2.zip) och kan installeras på alla AEM som stöds. Mer information finns i versionsinformationen.
+Som stöd för detta tillhandahåller Adobe ett behörighetskontrollerande paket som kan användas av kunder. Det fungerar genom att installera en &quot;deny&quot;-åtkomstkontrollpost i databasroten, vilket begränsar anonym åtkomst till vanliga systemegenskaper. Paketet är tillgängligt för hämtning [här](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/helper/anonymous-permissions-pkg-0.1.2.zip) och kan installeras på alla AEM som stöds.
+
+För att illustrera ändringarna kan vi jämföra nodegenskaperna som kan visas anonymt innan paketet installeras:
+
+![Före paketinstallation](/help/sites-administering/assets/before_resized.png)
+
+med de som kan visas när paketet har installerats, där `jcr:createdBy` och `jcr:lastModifiedBy` är inte synliga:
+
+![Efter installation av paket](/help/sites-administering/assets/after_resized.png)
+
+Mer information finns i versionsinformationen för paketet.
 
 ### Förhindra clickjacking {#prevent-clickjacking}
 
