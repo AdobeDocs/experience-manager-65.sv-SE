@@ -12,9 +12,9 @@ discoiquuid: de7d7209-c194-4d19-853b-468ebf3fa4b2
 docset: aem65
 exl-id: 314a6409-398c-470b-8799-0c4e6f745141
 feature: Security
-source-git-commit: 70c2d7c910f61169869aab9fdcbff4c4564ea9bd
+source-git-commit: e44480535ea7058dc41fc747351446b670d03b7f
 workflow-type: tm+mt
-source-wordcount: '2818'
+source-wordcount: '2986'
 ht-degree: 0%
 
 ---
@@ -389,6 +389,14 @@ Ingen konfiguration måste utföras för att den ska kunna aktiveras eftersom de
 >[!NOTE]
 >
 >Mer information finns i Oak-dokumentationen på [Generering av auktoriseringsbart nodnamn](https://jackrabbit.apache.org/oak/docs/security/user/authorizablenodename.html).
+
+**Anonymt behörighetskontrollpaket**
+
+Som standard lagras systemmetadata i AEM, som `jcr:createdBy` eller `jcr:lastModifiedBy` som nodegenskaper, bredvid regelbundet innehåll, i databasen. Beroende på konfigurationen och åtkomstkontrollkonfigurationen kan detta i vissa fall leda till exponering av personligt identifierbar information (PII), till exempel när sådana noder återges som rå JSON eller XML.
+
+Precis som alla databasdata förmedlas dessa egenskaper av Oak-auktoriseringsstacken. Åtkomsten till dem bör begränsas i enlighet med principen om minst privilegium.
+
+Som stöd för detta tillhandahåller Adobe ett behörighetskontrollerande paket som kan användas av kunder. Det fungerar genom att installera en &quot;deny&quot;-åtkomstkontrollpost i databasroten, vilket begränsar anonym åtkomst till vanliga systemegenskaper. Paketet är tillgängligt för hämtning [här](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/helper/anonymous-permissions-pkg-0.1.2.zip) och kan installeras på alla AEM som stöds. Mer information finns i versionsinformationen.
 
 ### Förhindra clickjacking {#prevent-clickjacking}
 
