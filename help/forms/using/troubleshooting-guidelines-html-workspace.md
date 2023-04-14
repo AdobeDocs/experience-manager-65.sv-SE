@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 5dae9ed9-77a3-44f5-a94d-ca5c355c8730
 exl-id: a054b60a-5e89-4c98-87bc-35669988d160
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: d3923e5e693e7426ee57e81e203f31964a23af3a
 workflow-type: tm+mt
-source-wordcount: '729'
+source-wordcount: '734'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ I den här artikeln beskrivs hur du felsöker AEM Forms-arbetsytan genom att akt
 
 Om ett fel uppstår när paketet installeras `javax.jcr.nodetype.ConstraintViolationException: OakConstraint0025: Authorizable property rep:authorizableId may not be removed`utför du följande steg:
 
-1. Logga in på CRX DE lite. Standardwebbadressen är `https://[localhost]:'port'/lc/crx/de/index.jsp`
+1. Logga in på CRXDE Lite. Standardwebbadressen är `https://[localhost]:'port'/lc/crx/de/index.jsp`
 1. Ta bort följande nod:
 
    `/home/groups/P/PERM_WORKSPACE_USER`
@@ -155,9 +155,9 @@ I AEM Forms:
 
 Skript och format kan felsökas i olika webbläsare.
 
-* **Felsökning i IE**: Information om hur du felsöker AEM Forms arbetsyta i IE finns i: [https://msdn.microsoft.com/en-us/library/hh772704(v=vs.85).aspx](https://msdn.microsoft.com/en-us/library/hh772704(v=vs.85).aspx).
+* **Felsökning i IE**: Information om hur du felsöker AEM Forms arbetsyta i IE finns i: [https://learn.microsoft.com/en-us/office/dev/add-ins/testing/debug-add-ins-using-f12-tools-ie](https://learn.microsoft.com/en-us/office/dev/add-ins/testing/debug-add-ins-using-f12-tools-ie).
 
-* **Felsökning i Chrome**: Använd kortkommandot för att öppna felsökaren i Chrome: Ctrl+Skift+I. Mer information finns i: [https://developer.chrome.com/extensions/tut_debugging.html](https://developer.chrome.com/extensions/tut_debugging.html).
+* **Felsökning i Chrome**: Använd kortkommandot för att öppna felsökaren i Chrome: Ctrl+Skift+I. Mer information finns i: [https://developer.chrome.com/docs/extensions/mv3/tut_debugging/](https://developer.chrome.com/docs/extensions/mv3/tut_debugging/).
 
 * **Felsöka i Firefox**: Det finns flera tillägg för att felsöka skript och format i Firefox. Firebug är till exempel ett sådant felsökningsverktyg ([https://getfirebug.com](https://getfirebug.com)).
 

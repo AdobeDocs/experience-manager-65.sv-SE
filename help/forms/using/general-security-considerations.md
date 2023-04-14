@@ -11,9 +11,9 @@ discoiquuid: 64bc6018-2828-4634-9275-48f1d411452b
 docset: aem65
 role: Admin
 exl-id: 3f150dd5-f486-4f16-9de9-035cde53b034
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: d3923e5e693e7426ee57e81e203f31964a23af3a
 workflow-type: tm+mt
-source-wordcount: '1062'
+source-wordcount: '1060'
 ht-degree: 0%
 
 ---
@@ -49,18 +49,18 @@ Säkerhetsinformation om operativsystem som stöds av AEM Forms på JEE finns i 
  <tbody>
   <tr>
    <td><p>IBM® AIX® 7.2</p> </td>
-   <td><p><a href="https://www.ibm.com/support/knowledgecenter/ssw_aix_72/com.ibm.aix.security/security-kickoff.htm" target="_blank">IBM AIX - säkerhetsfördelar</a></p> </td>
+   <td><p><a href="https://www.ibm.com/support/knowledgecenter/ssw_aix_72/com.ibm.aix.security/security-kickoff.htm" target="_blank">IBM® AIX® - säkerhetsfördelar</a></p> </td>
   </tr>
   <tr>
-   <td><p>Microsoft Windows Server® 2016 </p> </td>
+   <td><p>Microsoft® Windows Server® 2016 </p> </td>
    <td><p><a href="https://cloudblogs.microsoft.com/windowsserver/2017/08/22/now-available-windows-server-2016-security-guide/">Säkerhetshandbok för Windows Server 2016</a></p> </td>
   </tr>
   <tr>
    <td><p>Red Hat® Linux® AP eller ES</p> </td>
-   <td><p><a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/pdf/security_guide/Red_Hat_Enterprise_Linux-7-Security_Guide-en-US.pdf" target="_blank">Red Hat Enterprise Linux Security Guide</a></p> </td>
+   <td><p><a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/pdf/security_guide/Red_Hat_Enterprise_Linux-7-Security_Guide-en-US.pdf" target="_blank">Red Hat® Enterprise Linux® Security Guide</a></p> </td>
   </tr>
   <tr>
-   <td><p>Sun Solaris 11</p> </td>
+   <td><p>Sun Solaris™ 11</p> </td>
    <td><p><a href="https://docs.oracle.com/cd/E53394_01/html/E54807/index.html" target="_blank">Riktlinjer för säkerhet och skärpning</a></p> </td>
   </tr>
   <tr>
@@ -98,15 +98,15 @@ Säkerhetsinformation om programservrar som stöds av AEM Forms på JEE finns i 
  <tbody>
   <tr>
    <td><p>Oracle WebLogic®</p> </td>
-   <td><p>Sök efter Understanding WebLogic Security på <a href="https://download.oracle.com/docs/">https://download.oracle.com/docs/</a>.</p> </td>
+   <td><p>Sök efter Understanding WebLogic Security på <a href="https://docs.oracle.com/">https://docs.oracle.com/</a>.</p> </td>
   </tr>
   <tr>
-   <td><p>IBM WebSphere®</p> </td>
+   <td><p>IBM® WebSphere®</p> </td>
    <td><p><a href="https://www.ibm.com/developerworks/websphere/zones/was/security/" target="_blank">Skydda applikationer och deras miljö</a></p> </td>
   </tr>
   <tr>
    <td><p>Red Hat® JBoss®</p> </td>
-   <td><p><a href="https://docs.jboss.org/author/display/AS7/Security+subsystem+configuration">Konfiguration av säkerhetsundersystem</a></p> </td>
+   <td><p><a href="https://docs.jboss.org/author/display/AS7/Security%20subsystem%20configuration.html">Konfiguration av säkerhetsundersystem</a></p> </td>
   </tr>
  </tbody>
 </table>
@@ -131,11 +131,11 @@ Säkerhetsinformation om databaser som stöds av AEM Forms på JEE finns i resur
  </thead>
  <tbody>
   <tr>
-   <td><p>IBM DB2® 11.1</p> </td>
-   <td><p><a href="https://www-01.ibm.com/software/data/db2/library/">DB2 Produktfamiljbibliotek</a></p> </td>
+   <td><p>IBM® DB2® 11.1</p> </td>
+   <td><p><a href="https://www-01.ibm.com/software/data/db2/library/">DB2® produktfamiljsbibliotek</a></p> </td>
   </tr>
   <tr>
-   <td><p>Microsoft SQL Server 2016</p> </td>
+   <td><p>Microsoft® SQL Server 2016</p> </td>
    <td>Sök på webben efter "SQL Server 2016: Säkerhet"</td>
   </tr>
   <tr>
@@ -160,7 +160,7 @@ I den här tabellen beskrivs de standardportar som krävs för att vara öppna u
  </thead>
  <tbody>
   <tr>
-   <td><p>JBoss</p> </td>
+   <td><p>JBoss®</p> </td>
    <td><p>8080</p> </td>
   </tr>
   <tr>
@@ -172,7 +172,7 @@ I den här tabellen beskrivs de standardportar som krävs för att vara öppna u
    <td><p>Ange av administratör under konfiguration</p> </td>
   </tr>
   <tr>
-   <td>&gt;<p>WebSphere</p> </td>
+   <td>&gt;<p>WebSphere®</p> </td>
    <td><p>9060, om Global Security är aktiverat är SSL-portvärdet 9043 som standard.</p> <p>9080</p> </td>
   </tr>
   <tr>
@@ -192,7 +192,7 @@ I den här tabellen beskrivs de standardportar som krävs för att vara öppna u
    <td><p>1521</p> </td>
   </tr>
   <tr>
-   <td>&gt;<p>DB2</p> </td>
+   <td>&gt;<p>DB2®</p> </td>
    <td><p>50000</p> </td>
   </tr>
   <tr>
@@ -206,22 +206,22 @@ I den här tabellen beskrivs de standardportar som krävs för att vara öppna u
  </tbody>
 </table>
 
-### Konfigurera JBoss att använda en HTTP-port som inte är standard {#configuring-jboss-to-use-a-non-default-http-port}
+### Konfigurera JBoss® så att en HTTP-port som inte är standard används {#configuring-jboss-to-use-a-non-default-http-port}
 
-JBoss Application Server använder 8080 som standard-HTTP-port. JBoss har även förkonfigurerade portarna 8180, 8280 och 8380, som kommenteras ut i filen jboss-service.xml. Om du har ett program på datorn som redan använder den här porten ändrar du den port som AEM Forms på JEE använder genom att följa de här stegen:
+JBoss® Application Server använder 8080 som standard-HTTP-port. JBoss® har även förkonfigurerade portarna 8180, 8280 och 8380, som kommenteras ut i filen jboss-service.xml. Om du har ett program på datorn som redan använder den här porten ändrar du den port som AEM Forms på JEE använder genom att följa de här stegen:
 
 1. Öppna följande fil för redigering:
 
-   Single Server-installation: [JBoss-rot]/standalone/configuration/standalone.xml
+   Single Server-installation: [JBoss®-rot]/standalone/configuration/standalone.xml
 
-   Klusterinstallationer: [JBoss-rot]/domain/configuration/domain.xml
+   Klusterinstallationer: [JBoss®-rot]/domain/configuration/domain.xml
 
 1. Ändra värdet för **port** i **&lt;socket-binding>** -taggen till ett anpassat portnummer. I följande exempel används port 8090:
 
    &lt;socket-binding name=&quot;http&quot; port=&quot;8090&quot;/>
 
 1. Spara och stäng filen.
-1. Starta om JBoss-programservern.
+1. Starta om JBoss®-programservern.
 
 ## AEM Forms om JEE - säkerhetsfrågor {#aem-forms-on-jee-security-considerations}
 
@@ -243,9 +243,9 @@ The lc_[databas]XML-filen får inte innehålla lösenord i klartextformat. Konta
 
 >[!NOTE]
 >
->AEM Forms på JEE JBoss-installationsprogrammet med környckel krypterar databaslösenordet.
+>Installationsprogrammet för AEM Forms på JEE JBoss® med nyckelord krypterar databaslösenordet.
 
-IBM WebSphere Application Server och Oracle WebLogic Server kan kryptera datakälllösenord som standard. Kontrollera dock med programserverns dokumentation att detta händer.
+IBM® WebSphere® Application Server och Oracle WebLogic Server kan kryptera lösenord som datakälla som standard. Kontrollera dock med programserverns dokumentation att detta händer.
 
 ### Skydda den privata nyckeln som lagras i Trust Store {#protecting-the-private-key-stored-in-trust-store}
 
