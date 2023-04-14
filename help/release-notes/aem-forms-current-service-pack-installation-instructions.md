@@ -2,7 +2,7 @@
 title: Installationsanvisningar för AEM Forms Patch för AEM Forms
 description: Installationsanvisningar för AEM Forms Service Pack för OSGi- och JEE-miljö
 exl-id: ae4c7e9d-9af8-4288-a6f9-e3bcbe7d153d
-source-git-commit: b15581701aaff72db2fc0030b0062d2f12150d8f
+source-git-commit: 01bf12ec46966ab2c78e2e825840230ea1bd3395
 workflow-type: tm+mt
 source-wordcount: '1702'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 |---|---|
 | Version | 6.5.16.0 |
 | Typ | Service Pack-version |
-| Date | 2 mars 2023 |
+| Datum | 2 mars 2023 |
 | Hämta URL | [Senaste AEM Forms Releases](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) |
 
 >[!NOTE]
@@ -153,16 +153,15 @@ Paketet installeras automatiskt.
 * Använd [HTTP-API från Package Manager](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html). Använd  `cmd=install&recursive=true` så att de kapslade paketen installeras.
 
    >[!NOTE]
-   >
-   >Service Pack för Experience Manager stöder inte installation av Bootstrap. <!-- UPDATE FOR EACH NEW RELEASE -->
+   Service Pack för Experience Manager stöder inte installation av Bootstrap. <!-- UPDATE FOR EACH NEW RELEASE -->
 
-**Validera installationen**
+   **Validera installationen**
 
-Om du vill veta vilka plattformar som är certifierade för att fungera med den här versionen kan du läsa [tekniska krav](/help/sites-deploying/technical-requirements.md).
+   Om du vill veta vilka plattformar som är certifierade för att fungera med den här versionen kan du läsa [tekniska krav](/help/sites-deploying/technical-requirements.md).
 
-1. Produktinformationssidan (`/system/console/productinfo`) visar den uppdaterade versionssträngen `Adobe Experience Manager (spversion)` under [!UICONTROL Installed Products].<!-- UPDATE FOR EACH NEW RELEASE -->
-1. Alla OSGi-paket är antingen **[!UICONTROL ACTIVE]** eller **[!UICONTROL FRAGMENT]** i OSGi Console (Använd webbkonsol: `/system/console/bundles`).
-1. OSGi-paketet `org.apache.jackrabbit.oak-core` är version 1.2.2.14 eller senare (Använd WebConsole: `/system/console/     bundles`).
+   1. Produktinformationssidan (`/system/console/productinfo`) visar den uppdaterade versionssträngen `Adobe Experience Manager (spversion)` under [!UICONTROL Installed Products].<!-- UPDATE FOR EACH NEW RELEASE -->
+   1. Alla OSGi-paket är antingen **[!UICONTROL ACTIVE]** eller **[!UICONTROL FRAGMENT]** i OSGi Console (Använd webbkonsol: `/system/console/bundles`).
+   1. OSGi-paketet `org.apache.jackrabbit.oak-core` är version 1.2.2.14 eller senare (Använd WebConsole: `/system/console/     bundles`).
 
 +++
 
@@ -185,8 +184,7 @@ Om du vill veta vilka plattformar som är certifierade för att fungera med den 
 1. Säkerhetskopiera [CRX-databas och databasschema](https://experienceleague.adobe.com/docs/experience-manager-65/forms/administrator-help/aem-forms-backup-recovery/backing-aem-forms-data.html).
 
 >[!NOTE]
->
-> Om du installerar AEM Forms Service Pack för relationsdatabas måste du säkerhetskopiera DB_schema.
+Om du installerar AEM Forms Service Pack för relationsdatabas måste du säkerhetskopiera DB_schema.
 
 +++
 
@@ -213,18 +211,17 @@ Det finns två olika metoder som du kan använda för att installera automatiskt
 * Använd [HTTP-API från Package Manager](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html). Använd `cmd=install&recursive=true` så att de kapslade paketen installeras.
 
    >[!NOTE]
-   >
-   >Service Pack för Experience Manager stöder inte installation av Bootstrap. <!-- UPDATE FOR EACH NEW RELEASE -->
+   Service Pack för Experience Manager stöder inte installation av Bootstrap. <!-- UPDATE FOR EACH NEW RELEASE -->
 
-**Validera installationen**
+   **Validera installationen**
 
-Om du vill veta vilka plattformar som är certifierade för att fungera med den här versionen kan du läsa [tekniska krav](/help/sites-deploying/technical-requirements.md).
+   Om du vill veta vilka plattformar som är certifierade för att fungera med den här versionen kan du läsa [tekniska krav](/help/sites-deploying/technical-requirements.md).
 
-1. Produktinformationssidan (`/system/console/productinfo`) visar den uppdaterade versionssträngen `Adobe Experience Manager (spversion)` under [!UICONTROL Installed Products]. <!-- UPDATE FOR EACH NEW RELEASE -->
+   1. Produktinformationssidan (`/system/console/productinfo`) visar den uppdaterade versionssträngen `Adobe Experience Manager (spversion)` under [!UICONTROL Installed Products]. <!-- UPDATE FOR EACH NEW RELEASE -->
 
-1. Alla OSGi-paket är antingen **[!UICONTROL ACTIVE]** eller **[!UICONTROL FRAGMENT]** i OSGi Console (Use Web Console: `/system/console/bundles`).
+   1. Alla OSGi-paket är antingen **[!UICONTROL ACTIVE]** eller **[!UICONTROL FRAGMENT]** i OSGi Console (Use Web Console: `/system/console/bundles`).
 
-   1. OSGi-paketet `org.apache.jackrabbit.oak-core` är version 1.2.2.14 eller senare (Använd webbkonsol: `/system/console/bundles`).
+      1. OSGi-paketet `org.apache.jackrabbit.oak-core` är version 1.2.2.14 eller senare (Använd webbkonsol: `/system/console/bundles`).
 
 +++
 

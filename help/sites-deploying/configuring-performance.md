@@ -1,8 +1,6 @@
 ---
 title: Prestandaoptimering
-seo-title: Performance Optimization
 description: Lär dig hur du konfigurerar vissa aspekter av AEM för att optimera prestanda.
-seo-description: Learn how to configure certain aspects of AEM to optimize performance.
 uuid: a4d9fde4-a4c7-4ee5-99b6-29b0ee7dc35b
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,7 +9,7 @@ topic-tags: configuring
 discoiquuid: 80118cd1-73e1-4675-bbdf-85d66d150abc
 feature: Configuring
 exl-id: 5b0c9a8c-0f5f-46ee-a455-adb9b9d27270
-source-git-commit: 9defa6d1843007e9375d839f72f6993c691a37c0
+source-git-commit: af60428255fb883265ade7b2d9f363aacb84b9ad
 workflow-type: tm+mt
 source-wordcount: '6503'
 ht-degree: 1%
@@ -102,12 +100,12 @@ Detta innebär att utvecklaren som implementerar optimeringen snabbt bör kunna 
 
 ## Riktlinjer för grundläggande prestanda {#basic-performance-guidelines}
 
-Generellt sett bör du behålla dina ocachelagrade HTML-begäranden på mindre än 100 ms. Mer specifikt kan följande fungera som riktlinjer:
+I allmänhet bör du spara dina ocachelagrade HTML-begäranden på mindre än 100 millisekunder. Mer specifikt kan följande fungera som riktlinjer:
 
-* 70 % av förfrågningarna om sidor ska besvaras på mindre än 100 ms.
-* 25 % av förfrågningarna om sidor bör få ett svar inom 100-300 ms.
-* 4 % av förfrågningarna om sidor bör få ett svar inom 300-500 ms.
-* 1 % av förfrågningarna om sidor bör få ett svar inom 500 ms - 1 000 ms.
+* 70 % av förfrågningarna om sidor ska besvaras på mindre än 100 millisekunder.
+* 25 % av förfrågningarna om sidor bör få ett svar inom 100 millisekunder - 300 millisekunder.
+* 4 % av förfrågningarna om sidor bör få ett svar inom 300 millisekunder - 500 millisekunder.
+* 1 % av förfrågningarna om sidor ska få ett svar inom 500 millisekunder - 1 000 millisekunder.
 * Inga sidor ska svara långsammare än 1 sekund.
 
 Siffrorna ovan förutsätter följande villkor:
@@ -459,14 +457,12 @@ Alla optimeringar som görs måste testas för att säkerställa att de har:
 * Påverkar inte funktionen
 * har verifierats med lastproven innan de släpps
 
-Det finns ett urval verktyg som kan hjälpa dig med lastgenerering, prestandaövervakning och/eller resultatanalys:
+Det finns ett urval verktyg som kan hjälpa dig med lastgenerering, prestandaövervakning och resultatanalys. Några av dessa verktyg är:
 
 * [JMeter](https://jmeter.apache.org/)
 * [Load Runner](https://www.microfocus.com/en-us/portfolio/performance-engineering/overview)
-* [Determiner](https://www.determyne.com/) InsideApps
 * [InfraRED](https://www.infraredsoftware.com/)
 * [Java™ Interactive Profile](https://jiprof.sourceforge.net/)
-* många fler...
 
 Efter optimeringen testar du igen för att bekräfta påverkan.
 
@@ -691,7 +687,7 @@ Inläsningen består av sidor som skapats, sidor som tagits bort, bläddringar o
 
 Inläsningens inverkan på säkerhetskopieringsprestanda kan uppskattas av skillnaden mellan prestanda med och utan den här programinläsningen. Effekten av säkerhetskopieringen på programmets dataflöde hittas genom att man jämför scenariogenomströmningen i transaktioner per timme med och utan en pågående samtidig säkerhetskopiering och med säkerhetskopieringar som körs med olika inställningar för fördröjning av säkerhetskopiering.
 
-* **Fördröjningsinställning** - I flera av scenarierna varierades inställningarna för fördröjning av säkerhetskopiering, med värden på 10 ms (standard), 1 ms och 0 ms, för att undersöka hur den här inställningen påverkade säkerhetskopieringens prestanda.
+* **Fördröjningsinställning** - I flera av dessa scenarier varierades inställningarna för fördröjning av säkerhetskopiering, med värden på 10 millisekunder (standard), 1 millisekunder och 0 millisekunder, för att undersöka hur den här inställningen påverkade säkerhetskopieringens prestanda.
 * **Typ av säkerhetskopiering** - Alla säkerhetskopior var externa säkerhetskopior av databasen som gjorts till en säkerhetskopieringskatalog utan att skapa en zip, utom i ett fall för jämförelse där tjärkommandot användes direkt. Eftersom det inte går att skapa stegvisa säkerhetskopieringar till en zip-fil, eller när den tidigare fullständiga säkerhetskopieringen är en zip-fil, är säkerhetskopieringskatalogmetoden den metod som oftast används i produktionssituationer.
 
 ### Sammanfattning av resultat {#summary-of-results}
@@ -720,7 +716,7 @@ Parametern för fördröjning av säkerhetskopiering anges för att begränsa i 
 
 ![chlimage_1-83](assets/chlimage_1-83.png)
 
-Som en jämförelse kan nämnas den genomströmning som erhålls med en säkerhetskopia av filsystemet (&#39;tar&#39;) för att säkerhetskopiera samma databasfiler. Tjärans prestanda är jämförbar, men något högre än säkerhetskopian med fördröjningen inställd på noll. Även om du anger en liten fördröjning minskar säkerhetskopieringens genomströmning avsevärt och standardfördröjningen på 10 ms resulterar det i avsevärt mindre genomströmning. I situationer där säkerhetskopieringar kan schemaläggas när den totala programanvändningen är låg eller programmet kan vara inaktivt, kan du minska fördröjningen under standardvärdet så att säkerhetskopieringen kan fortsätta snabbare.
+Som en jämförelse kan nämnas den genomströmning som erhålls med en säkerhetskopia av filsystemet (&#39;tar&#39;) för att säkerhetskopiera samma databasfiler. Tjärans prestanda är jämförbar, men något högre än säkerhetskopian med fördröjningen inställd på noll. Även om du anger en liten fördröjning minskar säkerhetskopieringens genomströmning avsevärt och standardfördröjningen på 10 millisekunder resulterar det i avsevärt mindre genomströmning. I situationer där säkerhetskopieringar kan schemaläggas när den totala programanvändningen är låg eller programmet kan vara inaktivt, kan du minska fördröjningen under standardvärdet så att säkerhetskopieringen kan fortsätta snabbare.
 
 Den faktiska effekten av applikationens genomströmning vid en pågående säkerhetskopiering beror på applikations- och infrastrukturinformationen. Fördröjningsvärdet bör väljas genom empirisk analys av programmet, men bör väljas så litet som möjligt så att säkerhetskopieringen kan slutföras så snabbt som möjligt. Eftersom det bara finns en svag korrelation mellan valet av fördröjningsvärde och effekten på applikationens genomströmning, bör fördröjning främja kortare övergripande säkerhetskopieringstider för att minimera den övergripande effekten av säkerhetskopieringar. En säkerhetskopiering som tar åtta timmar att slutföra men påverkar dataflödet med -20 % har troligen större total effekt än en som tar två timmar att slutföra men påverkar dataflödet med -30 %.
 

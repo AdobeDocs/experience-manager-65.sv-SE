@@ -12,9 +12,9 @@ discoiquuid: ed3a858c-7a43-4515-a2ff-43ca465c7d7d
 docset: aem65
 feature: Configuring
 exl-id: 19eedcf2-140a-452d-aa8f-6fd7f219e5f8
-source-git-commit: 9defa6d1843007e9375d839f72f6993c691a37c0
+source-git-commit: af60428255fb883265ade7b2d9f363aacb84b9ad
 workflow-type: tm+mt
-source-wordcount: '3429'
+source-wordcount: '3431'
 ht-degree: 0%
 
 ---
@@ -269,7 +269,7 @@ Om ett konfigurerat sökvägsvärde avslutas med ett snedstreck genomsöks hela 
 * För JS-utveckling (särskilt vid felsökning/felsökning):
 
    * disable **Minify**
-   * enable **Felsök** om du vill separera filerna för felsökning och använda dem med brandbug.
+   * enable **Felsök** för att separera filerna för felsökning och använda med brandfel.
    * enable **Timing** om du är intresserad av timing.
    * enable **Felsök** för att se JS-konsolens loggmeddelanden.
 
@@ -381,7 +381,7 @@ De andra lägena kan nås från sidosparken eller suffixet `?wcmmode=disabled` k
 
 **Dag CQ WCM Link Checker Configurator** Konfigurera:
 
-* **Lista över omskrivningskonfigurationer** för att ange en lista över platser för innehållsbaserade länkkontrollerarkonfigurationer. Konfigurationerna kan baseras på körningsläge. Detta är viktigt för att skilja mellan skribent- och publiceringsmiljöer, eftersom inställningarna för länkkontroll kan skilja sig åt.
+* **Lista över omskrivningskonfigurationer** för att ange en lista över platser för innehållsbaserade konfigurationer för länkkontroll. Konfigurationerna kan baseras på körningsläge. Detta är viktigt för att skilja mellan skribent- och publiceringsmiljöer, eftersom inställningarna för länkkontroll kan variera.
 
 **Day CQ WCM Page Manager Factory** Konfigurera:
 
@@ -443,7 +443,7 @@ En fabrikskonfiguration, så att flera instanser kan konfigureras.
 **CDN Rewriter** Kommunikation mellan AEM och CDN måste säkerställas så att resurser och binära filer levereras till slutanvändaren på ett säkert sätt. Den här processen omfattar följande två uppgifter:
 
 * Åtkomst till resursen från AEM via CDN första gången (eller efter att den har gått ut i cache).
-* Åtkomst till resursen som cachas i CDN på ett säkert sätt eftersom resursen har cachelagrats i CDN, begäran inte går till AEM och alla användare som har åtkomst till resursen på ska hanteras från CDN.
+* Åtkomst till resursen som cachelagrats i CDN sker på ett säkert sätt. När resursen har cachelagrats i CDN går begäran inte till AEM och alla användare som har åtkomst till resursen på ska hanteras från CDN.
 
 AEM innehåller en omskrivare för att skriva om interna URL:er för resurser till externa CDN-URL:er. Den skriver om länkar som ska skickas vidare till CDN, inklusive en JWS-signatur, och anger att resursen ska kunna nås på ett säkert sätt. Den här funktionen ska användas på författarinstanser.
 

@@ -1,8 +1,6 @@
 ---
 title: Utveckla AEM projekt med IntelliJ IDEA
-seo-title: How to Develop AEM Projects using IntelliJ IDEA
 description: Använda IntelliJ IDEA för att utveckla AEM projekt
-seo-description: Using IntelliJ IDEA to develop AEM projects
 uuid: 382b5008-2aed-4e08-95be-03c48f2b549e
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,9 +8,9 @@ topic-tags: development-tools
 content-type: reference
 discoiquuid: df6410a2-794e-4fa2-ae8d-37271274d537
 exl-id: 5a79c79b-df65-4cb2-b9d4-eda994c992ec
-source-git-commit: bb8dbb9069c4575af62a4d0b21195cee75944fea
+source-git-commit: af60428255fb883265ade7b2d9f363aacb84b9ad
 workflow-type: tm+mt
-source-wordcount: '642'
+source-wordcount: '633'
 ht-degree: 1%
 
 ---
@@ -23,7 +21,7 @@ ht-degree: 1%
 
 För att komma igång med utvecklingen AEM IntelliJ krävs följande steg.
 
-Var och en av dem förklaras mer ingående i resten av handboken.
+Varje steg förklaras mer ingående i resten av detta avsnitt.
 
 * Installera IntelliJ
 * Konfigurera ditt AEM baserat på Maven
@@ -36,7 +34,7 @@ Var och en av dem förklaras mer ingående i resten av handboken.
 
 ### Installera IntelliJ IDEA {#install-intellij-idea}
 
-Hämta IntelliJ IDEA från [nedladdningssidan på JetBrains](https://www.jetbrains.com/idea/download/index.html).
+Hämta IntelliJ IDEA från [nedladdningssidan på JetBrains](https://www.jetbrains.com/idea/download/).
 
 Följ sedan installationsanvisningarna på den sidan.
 
@@ -48,7 +46,7 @@ För att börja arbeta med AEM projekt i IntelliJ IDEA är grundinställningarna
 
 ### Förbered JSP-stöd för IntelliJ IDEA {#prepare-jsp-support-for-intellij-idea}
 
-IntelliJ IDEA kan också ge stöd vid arbete med JSP, t.ex.
+IntelliJ IDEA kan även ge stöd vid arbete med JSP, till exempel:
 
 * automatisk komplettering av taggbibliotek
 * medvetenhet om objekt som definieras av `<cq:defineObjects />` och `<sling:defineObjects />`
@@ -86,7 +84,7 @@ Följande steg är nödvändiga för att felsöka JSP:er med IntelliJ IDEA
 
 #### Konfigurera en webbaspekt i projektet {#set-up-a-web-facet-in-the-project}
 
-IntelliJ IDEA behöver förstå var JSP:er för felsökning ska hittas. Eftersom IDEA inte kan tolka `content-package-maven-plugin` -inställningar, måste konfigureras manuellt.
+IntelliJ IDEA måste förstå var JSP:er för felsökning ska hittas. Eftersom IDEA inte kan tolka `content-package-maven-plugin` -inställningar måste den konfigureras manuellt.
 
 1. Gå till **Arkiv -> Projektstruktur**
 1. Välj **Innehåll** modul
@@ -112,7 +110,7 @@ IntelliJ IDEA behöver förstå var JSP:er för felsökning ska hittas. Eftersom
 1. Ange en lämplig URL för startsidan om du vill öppna en webbläsare när du startar felsökningen
 1. Ta bort alla **Före start** uppgifter om du använder vlt autosync eller konfigurerar lämpliga Maven-uppgifter om du inte gör det
 1. På **Start/anslutning** ruta, justera porten om det behövs
-1. Kopiera kommandoradsargumenten som IntelliJ IDEA föreslår
+1. Kopiera de kommandoradsargument som IntelliJ IDEA föreslår
 
 ![chlimage_1-50](assets/chlimage_1-50a.png) ![chlimage_1-51](assets/chlimage_1-51a.png)
 
@@ -120,7 +118,7 @@ IntelliJ IDEA behöver förstå var JSP:er för felsökning ska hittas. Eftersom
 
 Det sista steget är att börja AEM med de JVM-alternativ som IntelliJ IDEA föreslår.
 
-Du kan göra detta genom att starta AEM jar-filen direkt och lägga till dessa alternativ, till exempel med följande kommandorad:
+Starta AEM jar-filen direkt och lägg till dessa alternativ, till exempel med följande kommandorad:
 
 `java -Xdebug -Xrunjdwp:transport=dt_socket,address=58242,suspend=n,server=y -Xmx1024m -jar cq-quickstart-6.5.0.jar`
 
@@ -151,4 +149,4 @@ Du är nu redo att felsöka JSP:er i AEM.
 
 ### Felsökningspaket med IntelliJ IDEA {#debugging-bundles-with-intellij-idea}
 
-Kod i paket kan felsökas med en allmän fjärrfelsökningsanslutning som standard. Du kan följa [Jetbrain-dokumentation om fjärrfelsökning](https://www.jetbrains.com/idea/webhelp/run-debug-configuration-remote.html).
+Kod i paket kan felsökas med en allmän fjärrfelsökningsanslutning som standard. Du kan följa [Jetbrain-dokumentation om fjärrfelsökning](https://www.jetbrains.com/help/idea/remote-debugging-with-product.html#remote-interpreter).
