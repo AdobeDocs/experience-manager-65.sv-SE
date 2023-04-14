@@ -1,7 +1,7 @@
 ---
 title: Variabler i AEM Forms arbetsflöden
 seo-title: Variables in AEM Forms Workflows
-description: Skapa en variabel, ange ett värde för variabeln och använd den i AEM Forms arbetsflödessteg.
+description: Skapa en variabel, ange ett värde för variabeln och använd den i AEM Forms Workflow steps.
 seo-description: Create a variable, set a value for the variable, and use it in AEM Forms workflow steps.
 uuid: 634a75c4-4899-478f-9e5d-a870f5efa583
 contentOwner: khsingh
@@ -10,9 +10,9 @@ topic-tags: publish
 discoiquuid: cbf4e35a-7905-44ab-ab68-fb443443f02d
 docset: aem65
 exl-id: beb2b83e-e8db-40bb-915f-cb6ba3140947
-source-git-commit: 3d0eb55eb35fcf5da1212b8be7c0aeee11307bb6
+source-git-commit: 936b636819eaef595fcdf9f1f3446d4ac0c28b2f
 workflow-type: tm+mt
-source-wordcount: '2196'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -25,9 +25,11 @@ I AEM arbetsflödesmodeller kan du:
 
 * [Skapa en variabel](../../forms/using/variable-in-aem-workflows.md#create-a-variable) av en datatyp som baseras på den informationstyp som du vill lagra i den.
 * [Ange ett värde för variabeln](../../forms/using/variable-in-aem-workflows.md#set-a-variable) med hjälp av arbetsflödessteget Ange variabel.
-* [Använd variabeln](../../forms/using/variable-in-aem-workflows.md#use-a-variable) i alla AEM Forms arbetsflödessteg för att hämta det lagrade värdet och i stegen ELLER Dela och Gå till för att definiera ett routningsuttryck.
+* [Använd variabeln](../../forms/using/variable-in-aem-workflows.md#use-a-variable) i alla steg i AEM Forms Workflow för att hämta det lagrade värdet och i stegen ELLER Dela och Gå till för att definiera ett routningsuttryck.
 
 I följande video visas hur du kan skapa, ange och använda variabler i AEM arbetsflödesmodeller:
+
+<!-- FUTURE ERROR: YouTube and mp4 videos are not supported -->
 
 >[!VIDEO](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/variables_introduction_1_1.mp4)
 
@@ -115,6 +117,8 @@ Använd ett uttryck för att beräkna summan av variablerna och lagra resultatet
 
 I det här exemplet använder du uttrycksredigeraren för att definiera ett uttryck för att beräkna summan av **tillgångskostnad** och **saldobelopp** variabler och lagra resultatet i **totalvärde** variabel.
 
+<!-- FUTURE ERROR: YouTube and mp4 videos are not supported -->
+
 >[!VIDEO](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/variables_expression.mp4)
 
 ## Använda uttrycksredigeraren {#use-expression-editor}
@@ -150,7 +154,7 @@ Du kan använda variabler för att hämta indata och utdata eller spara resultat
 
 ### Arbetsflödessteg med stöd för variabler {#workflow-steps-with-support-for-variables}
 
-Steget Gå till, eller Dela, och alla AEM Forms arbetsflödessteg har stöd för variabler.
+Steget Gå till, eller Dela, och alla AEM Forms Workflow-steg har stöd för variabler.
 
 #### ELLER Dela upp steg {#or-split-step}
 
@@ -161,6 +165,8 @@ Du kan definiera routningsuttryck för en gren med hjälp av en regeldefinition,
 Du kan använda variabler för att definiera routningsuttrycket med hjälp av uttrycksredigeraren. Mer information om hur du använder routningsuttryck för steget ELLER Dela finns i [ELLER Dela upp steg](/help/sites-developing/workflows-step-ref.md#or-split).
 
 I det här exemplet ska du använda [exempel 2](../../forms/using/variable-in-aem-workflows.md#example2) för att ange värdet för **totalvärde** variabel. Gren 1 är aktiv om värdet för **totalvärde** variabeln är större än 50000. På samma sätt kan du definiera en regel som gör grenen 2 aktiv om värdet för **totalvärde** variabeln är mindre än 50000.
+
+<!-- FUTURE ERROR: YouTube and mp4 videos are not supported -->
 
 >[!VIDEO](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/variables_orsplit_example.mp4)
 
@@ -184,7 +190,7 @@ Fler exempel på hur du använder regeldefinition i steget Gå till finns i [Sim
 
 #### Centrala arbetsflödessteg för Forms {#forms-workflow-centric-workflow-steps}
 
-Alla AEM Forms arbetsflödessteg har stöd för variabler. Mer information finns i [Forms-centrerat arbetsflöde i OSGi](../../forms/using/aem-forms-workflow-step-reference.md).
+Alla AEM Forms Workflow-steg har stöd för variabler. Mer information finns i [Forms-centrerat arbetsflöde i OSGi](../../forms/using/aem-forms-workflow-step-reference.md).
 
 ### Arbetsflödessteg utan stöd för variabler {#workflow-steps-without-support-for-variables}
 
@@ -271,7 +277,7 @@ workflowSession.startWorkflow(model, wfData, metaData);
 
 ### Lagra känsliga användardata utanför JCR med arbetsflödesvariabler {#jcr-independent-persistance}
 
-Data som bearbetas med hjälp av formulärarbetsflöden kan innehålla känsliga användardata, t.ex. personligt identifierbar information och känslig personlig information. Företag kan välja att lagra data, som bearbetas i olika arbetsflödessteg (och skickas med arbetsflödesvariabler), utanför JCR-lagring i ett externt datalager som ägs och hanteras av dem. Mer information om beständiga arbetsflödesdata i ett externt lagringsutrymme finns i [Använda arbetsflödesvariabler för kundägda datalager](/help/sites-administering/workflows-administering.md#using-workflow-variables-customer-datastore).
+Data som behandlas med Forms Workflow kan innehålla känsliga användardata, t.ex. personligt identifierbar information och känslig personlig information. Företag kan välja att lagra data, som bearbetas i olika arbetsflödessteg (och skickas med arbetsflödesvariabler), utanför JCR-lagring i ett externt datalager som ägs och hanteras av dem. Mer information om beständiga arbetsflödesdata i ett externt lagringsutrymme finns i [Använda arbetsflödesvariabler för kundägda datalager](/help/sites-administering/workflows-administering.md#using-workflow-variables-customer-datastore).
 [!DNL Adobe Experience Manager] innehåller Workflow API [UserMetaDataPersistenceProvider](https://github.com/adobe/workflow-variable-externalizer) om du vill lagra arbetsflödesvariabler i externa Azure-bloblagringsplatser. Mer information om hur du använder API:t finns i [Använd arbetsflödesvariabler för att parametrisera känsliga data och lagra i externa datalager](/help/forms/using/aem-forms-workflow.md#externalize-wf-variables).
 
 ## Redigera en variabel {#edit-a-variable}
@@ -292,4 +298,4 @@ Så här tar du bort en variabel:
 
 ## Referenser {#references}
 
-Fler exempel på hur du använder variabler i AEM Forms arbetsflödessteg finns i [Variabler i AEM arbetsflöden](https://helpx.adobe.com/experience-manager/kt/forms/using/authoring_variables_in_aem_forms-workflow1.html).
+Fler exempel på hur du använder variabler i AEM Forms Workflow steps finns i [Variabler i AEM arbetsflöden](https://helpx.adobe.com/experience-manager/kt/forms/using/authoring_variables_in_aem_forms-workflow1.html).
