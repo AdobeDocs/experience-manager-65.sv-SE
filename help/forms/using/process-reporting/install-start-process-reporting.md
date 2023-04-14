@@ -1,8 +1,6 @@
 ---
 title: Komma igång med processrapportering
-seo-title: Getting Started with Process Reporting
-description: De steg du måste följa för att komma igång med AEM Forms om JEE Process Reporting
-seo-description: The steps you need to follow to get started with AEM Forms on JEE Process Reporting
+description: Stegen för att komma igång med AEM Forms om JEE Process Reporting
 uuid: 685cad39-da2c-411d-a0b0-201917438bcf
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,9 +8,9 @@ topic-tags: process-reporting
 discoiquuid: 7c1fcde0-b983-4b24-bc19-fcee1d4f096b
 docset: aem65
 exl-id: 1272e854-fa64-4bfd-b073-8fbcf210e9b5
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: c47b4dcfd2fbdcb0b98ad815f5b04d8f593e4f64
 workflow-type: tm+mt
-source-wordcount: '1706'
+source-wordcount: '1689'
 ht-degree: 0%
 
 ---
@@ -29,13 +27,13 @@ I den här artikeln beskrivs stegen för hur du aktiverar publicering av AEM For
 
 Om du använder Forms Workflow kan AEM Forms-databasen innehålla en stor mängd data
 
-Publiceringstjänsterna för processrapportering publicerar alla AEM Forms-data som för närvarande finns i databasen. Detta innebär att om databasen innehåller äldre data som du inte vill köra rapporter och frågor på, kommer alla dessa data också att publiceras i databasen, även om de inte behövs för rapportering. Du rekommenderas att rensa dessa data innan du kör tjänsterna för att publicera data i Process Reporting-databasen. Detta förbättrar prestandan för både utgivartjänsten och tjänsten som frågar efter data för rapportering.
+Publiceringstjänsterna för processrapportering publicerar alla AEM Forms-data som för närvarande finns i databasen. Det innebär att om databasen innehåller äldre data som du inte vill köra rapporter och frågor på, kommer alla dessa data också att publiceras i databasen, även om de inte behövs för rapportering. Du rekommenderas att rensa dessa data innan du kör tjänsterna för att publicera data i Process Reporting-databasen. Om du gör det förbättras prestandan för både utgivartjänsten och tjänsten som frågar efter data för rapportering.
 
-Mer information om att rensa AEM Forms processdata finns i [Rensningsprocessdata](https://help.adobe.com/en_US/livecycle/11.0/AdminHelp/WS92d06802c76abadb-5145d5d12905ce07e7-7cb2.2.html).
+Mer information om att rensa AEM Forms processdata finns i [Rensningsprocessdata](https://experienceleague.adobe.com/docs/experience-manager-64/forms/administrator-help/maintain-aem-forms-database/purging-process-data.html?lang=en).
 
 >[!NOTE]
 >
->Tips och tricks för verktyget Rensa finns i Adobe Developer Connection artikel om [Rensningsprocesser och -jobb](https://www.adobe.com/content/dam/Adobe/en/devnet/livecycle/pdfs/purging_processes_jobs.pdf).
+>Tips och tricks för verktyget Rensa finns i Adobe Developer Connection artikel om [Rensningsprocesser och -jobb](https://experienceleague.adobe.com/docs/experience-manager-64/forms/administrator-help/maintain-aem-forms-database/purging-process-data.html?lang=en).
 
 ## Konfigurerar Process Reporting Services {#configuring-process-reporting-services}
 
@@ -43,21 +41,21 @@ Mer information om att rensa AEM Forms processdata finns i [Rensningsprocessdata
 
 Process Reporting Services publicerar schemalagda data från AEM Forms-databasen till Process Reporting-databasen.
 
-Den här åtgärden kan vara resurskrävande och kan påverka prestandan för AEM Forms-servrarna. Du rekommenderas att schemalägga detta utanför AEM Forms serverns upptagna tidsrymder.
+Den här åtgärden kan vara resurskrävande och kan påverka prestandan för AEM Forms-servrarna. Vi rekommenderar att du schemalägger detta utanför AEM Forms Server med upptagna tidsrymder.
 
 Som standard kommer publiceringen av data att köras varje dag kl. 02:00.
 
-Gör så här för att ändra publiceringsschemat:
+Så här ändrar du publiceringsschemat:
 
 >[!NOTE]
 >
 >Om du kör din AEM Forms-implementering på ett kluster utför du följande steg på varje nod i klustret.
 
-1. Stoppa AEM Forms-serverinstansen.
+1. Stoppa AEM Forms Server-instansen.
 1. &#x200B;
 
    * (Windows) Öppna `[JBoss root]/bin/run.conf.bat` i en redigerare.
-   * (För Linux, AIX och Solaris) `[JBoss root]/bin/run.conf.sh` i en redigerare.
+   * (För Linux®, AIX® och Solaris™) `[JBoss root]/bin/run.conf.sh` i en redigerare.
 
 1. Lägg till JVM-argumentet `-Dreporting.publisher.cron = <expression>.`
 
@@ -67,14 +65,14 @@ Gör så här för att ändra publiceringsschemat:
 
 1. Spara och stäng `run.conf.bat` -fil.
 
-1. Starta om serverinstansen av AEM Forms.
+1. Starta om AEM Forms Server-instansen.
 
-1. Stoppa AEM Forms-serverinstansen.
-1. Logga in på administrationskonsolen för WebSphere. Klicka i navigeringsträdet på **Servrar** > **Programservrar** och klicka sedan på servernamnet i den högra rutan.
+1. Stoppa AEM Forms Server-instansen.
+1. Logga in på administrationskonsolen för WebSphere®. Klicka i navigeringsträdet på **Servrar** > **Programservrar** och klicka sedan på servernamnet i den högra rutan.
 
-1. Under Serverinfrastruktur klickar du på **Java och Process Management** > **Processdefinition**.
+1. Under Serverinfrastruktur klickar du på **Java™ och Process Management** > **Processdefinition**.
 
-1. Klicka på under Ytterligare egenskaper **Java Virtual Machine**.
+1. Klicka på under Ytterligare egenskaper **Java™ Virtual Machine**.
 
    Lägg till argumentet i rutan Allmänt om JVM-argument `-Dreporting.publisher.cron = <expression>.`
 
@@ -83,8 +81,8 @@ Gör så här för att ändra publiceringsschemat:
    * `-Dreporting.publisher.cron = 0_0_0/5_*_*_?`
 
 1. Klicka **Använd**, klicka på OK och sedan på **Spara direkt i den överordnad konfigurationen**.
-1. Starta om serverinstansen av AEM Forms.
-1. Stoppa AEM Forms-serverinstansen.
+1. Starta om AEM Forms Server-instansen.
+1. Stoppa AEM Forms Server-instansen.
 1. Logga in på WebLogic Administration Console. Standardadressen för WebLogic Administration Console är `https://[hostname]:[port]/console`.
 1. Klicka på under Ändringscenter **Lås och redigera**.
 1. Klicka på under Domänstruktur **Miljö** > **Servrar** och klicka på namnet på den hanterade servern i den högra rutan.
@@ -96,7 +94,7 @@ Gör så här för att ändra publiceringsschemat:
    `-Dreporting.publisher.cron = 0_0_0/5_*_*_?`
 
 1. Klicka **Spara** och sedan klicka **Aktivera ändringar**.
-1. Starta om serverinstansen av AEM Forms.
+1. Starta om AEM Forms Server-instansen.
 
 ![procesdatapublisherservice](assets/processdatapublisherservice.png)
 
@@ -139,9 +137,9 @@ Tjänsten ReportConfiguration används av Process Reporting för att konfigurera
 1. Öppna **ReportingConfiguration** service.
 1. **Antal poster**
 
-   När en fråga körs i databasen kan resultatet innehålla ett stort antal poster. Om resultatmängden är stor kan frågekörningen ta serverresurser i anspråk.
+   När en fråga körs i databasen kan resultatet innehålla många poster. Om resultatmängden är stor kan frågekörningen ta serverresurser i anspråk.
 
-   För att hantera stora resultatuppsättningar delar tjänsten ReportConfiguration frågebearbetningen i grupper av poster. Detta minskar systembelastningen.
+   För att hantera stora resultatuppsättningar delar tjänsten ReportConfiguration frågebearbetningen i grupper av poster. På så sätt minskas systembelastningen.
 
    `Default`: `1000`
 
@@ -153,7 +151,7 @@ Tjänsten ReportConfiguration används av Process Reporting för att konfigurera
 
    >[!NOTE]
    >
-   >Detta är samma plats som anges i konfigurationsalternativet ProcessDataStorage **Rotmapp**.
+   >Platsen är densamma som anges i konfigurationsalternativet ProcessDataStorage **Rotmapp**.
    >
    >
    >Om du uppdaterar alternativet Rotmapp i ProcessDataStorage-konfigurationen måste du uppdatera sökvägen till CRX-lagringssökvägen i tjänsten ReportConfiguration.
@@ -186,9 +184,7 @@ Du kan också använda det här alternativet för att inaktivera publicering av 
 
 **Gruppintervall (sek)**
 
-Varje gång tjänsten ProcessDataPublisher körs delar tjänsten först tiden sedan den senaste körningen av tjänsten via batchintervallet. Tjänsten behandlar sedan varje intervall med AEM Forms-data separat.
-
-Detta hjälper till att kontrollera storleken på data som utgivaren bearbetar från början till slut under varje körning (batch) i en cykel.
+Varje gång tjänsten ProcessDataPublisher körs delar tjänsten först tiden sedan den senaste körningen av tjänsten via batchintervallet. Tjänsten bearbetar sedan varje intervall med AEM Forms-data separat för att styra storleken på data som utgivaren bearbetar från början till slut under varje körning (batch) inom en cykel.
 
 Om utgivaren till exempel körs varje dag, delas bearbetningen som standard i 24 batchar om en timme vardera i stället för att bearbeta hela data för en dag i en enda omgång.
 
@@ -212,7 +208,7 @@ AEM Forms-miljön innehåller data från den tidpunkt då miljön konfigurerades
 
 Som standard importerar ProcessDataPublisher-tjänsten alla data från AEM Forms-databasen.
 
-Om du planerar att köra rapporter och frågor på data efter ett visst datum och en viss tid, bör du ange datum och tid beroende på dina rapporteringsbehov. Publiceringstjänsten kommer sedan att publicera datumet från den tidpunkten och framåt.
+Om du planerar att köra rapporter och frågor på data efter ett visst datum och en viss tid, bör du ange datum och tid, beroende på dina rapporteringsbehov. Publiceringstjänsten publicerar sedan datumet från den tidpunkten och framåt.
 
 `Default`: `01-01-1970 00:00:00`
 
@@ -230,7 +226,7 @@ När du har konfigurerat Process Reporting kan du börja arbeta med Process Repo
 
 När du navigerar till URL:en för processrapportering (https://)&lt;server>:&lt;port>/lc/pr) visas inloggningsskärmen.
 
-Ange dina autentiseringsuppgifter för att logga in i modulen Processrapportering.
+Om du vill logga in i processrapporteringsmodulen anger du dina autentiseringsuppgifter.
 
 >[!NOTE]
 >

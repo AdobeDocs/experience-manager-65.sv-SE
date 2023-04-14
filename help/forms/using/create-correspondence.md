@@ -10,9 +10,9 @@ discoiquuid: 87742cb2-357b-421f-b79d-e355887ddec0
 docset: aem65
 feature: Correspondence Management
 exl-id: da966787-a3b9-420f-8b7c-f00d05c61d43
-source-git-commit: 1a6881b29024799c44b2068ea82750c983a012e5
+source-git-commit: c47b4dcfd2fbdcb0b98ad815f5b04d8f593e4f64
 workflow-type: tm+mt
-source-wordcount: '3825'
+source-wordcount: '3813'
 ht-degree: 0%
 
 ---
@@ -59,7 +59,7 @@ Markera den bokstav du vill förhandsgranska genom att följa följande steg:
 
    >[!NOTE]
    >
-   >Mer information om hur du växlar mellan återgivningsläget HTML eller PDF i förhandsgranskningen av brevet finns i [Ändra återgivningsläge för bokstav](#changerenditionmode). Mer information om stöd för PDF i Correspondence Management och AEM finns i [Avbrutna insticksprogram för NPAPI-webbläsare och deras inverkan](https://helpx.adobe.com/aem-forms/kb/discontinuation-of-npapi-plugins-impact-on-aem-forms.html) och [PDF forms till HTML5 Forms](https://helpx.adobe.com/aem-forms/kb/pdf-forms-to-html5-forms.html).
+   >Mer information om hur du växlar mellan återgivningsläget HTML eller PDF i förhandsgranskningen av brevet finns i [Ändra återgivningsläge för bokstav](#changerenditionmode). Mer information om stöd för PDF i Correspondence Management och AEM finns i [Avbrutna insticksprogram för NPAPI-webbläsare och deras inverkan](https://helpx.adobe.com/acrobat/kb/change-in-support-for-acrobat-and-reader-plug-ins-in-modern-web-.html). <!-- and [PDF Forms to HTML5 Forms](https://helpx.adobe.com/aem-forms/kb/pdf-forms-to-html5-forms.html). THIS URL IS A 404 AND NO SUITABLE REPLACEMENT TOPIC WAS FOUND. CONSIDER DELETING OR ADDING NEW LINK. COMMENTING OUT SO USERS DON'T CLICK IT. -->
 
 ### Ange data {#enterdata}
 
@@ -379,7 +379,7 @@ Mer information om skriptstöd i HTML5-formulär finns i [Skriptstöd för HTML5
 
 Som standard använder gränssnittet Skapa korrespondens HTML eller mobilformulär för att återge förhandsgranskningen av brevet. Förhandsgranskningen av mobilformulär har inga problem med återgivningen i någon webbläsare, eftersom webbläsarens inbyggda plugin-program används och inga ytterligare plugin-program krävs. Du kan ändra förhandsgranskningsläget för brev till PDF. Webbläsarbegränsningar kan dock skapa problem för olika funktioner i den interaktiva PDF-förhandsgranskningen av brevet.
 
-Mer information om webbläsarkompatibilitet med förhandsgranskning av brev finns i [Avbrutna insticksprogram för NPAPI-webbläsare och deras inverkan](https://helpx.adobe.com/aem-forms/kb/discontinuation-of-npapi-plugins-impact-on-aem-forms.html).
+Mer information om webbläsarkompatibilitet med förhandsgranskning av brev finns i [Avbrutna insticksprogram för NPAPI-webbläsare och deras inverkan](https://helpx.adobe.com/acrobat/kb/change-in-support-for-acrobat-and-reader-plug-ins-in-modern-web-.html).
 
 Om du vill ändra förhandsgranskningsläget för brevet utför du följande steg:
 

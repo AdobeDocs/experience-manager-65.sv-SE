@@ -10,25 +10,25 @@ geptopics: SG_AEMFORMS/categories/maintaining_aem_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: b3e7bca0-5aaf-4f28-bddb-fd7e8ed72ee8
 exl-id: 931e8095-5c7c-4c1f-b95b-75ac2827d4f3
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: c47b4dcfd2fbdcb0b98ad815f5b04d8f593e4f64
 workflow-type: tm+mt
-source-wordcount: '605'
+source-wordcount: '581'
 ht-degree: 0%
 
 ---
 
 # Övervaka AEM {#monitoring-aem-forms-deployments}
 
-Du kan övervaka AEM formulärdistributioner både på systemnivå och intern nivå. Du kan använda specialhanteringsverktyg som HP OpenView, IBM Tivoli och CA UniCenter samt en JMX-bildskärm från tredje part som kallas *JConsole* för att specifikt övervaka Java-aktivitet. Implementeringen av en övervakningsstrategi förbättrar tillgängligheten, tillförlitligheten och prestandan för era AEM formulär.
+Du kan övervaka AEM formulärdistributioner både på systemnivå och intern nivå. Du kan använda specialhanteringsverktyg som HP OpenView, IBM® Tivoli och CA UniCenter samt en JMX-bildskärm från tredje part som kallas *JConsole* för att specifikt övervaka Java™-aktivitet. Implementeringen av en övervakningsstrategi förbättrar tillgängligheten, tillförlitligheten och prestandan för era AEM formulär.
 
-Mer information om övervakning AEM formulärdistributioner finns i [En teknisk guide för övervakning AEM formulärdistributioner](https://www.adobe.com/devnet/livecycle/pdfs/lc_monitoring_wp_ue.pdf).
+<!-- For more information about monitoring AEM forms deployments, see [A technical guide for monitoring AEM forms deployments](https://www.adobe.com/devnet/livecycle/pdfs/lc_monitoring_wp_ue.pdf). This URL is 404. No suitable replacement URL was found after a search. Do not make this link live if it is dead! -->
 
 ## Övervaka med MBeans {#monitoring-using-mbeans}
 
-AEM tillhandahåller två registrerade MBeans som tillhandahåller navigerings- och statistikinformation. Det här är de enda MBeans som stöds för integrering och inspektion:
+AEM Forms tillhandahåller två registrerade MBeans med navigerings- och statistikinformation. De här delarna är de enda MBeans som stöds för integrering och inspektion:
 
 * **ServiceStatistic:** Denna MBean ger information om tjänstens namn och version.
-* **OperationStatistic:** Denna MBean ger statistik för alla formulärservertjänster. Här kan administratörer få information om en viss tjänst, t.ex. starttid, antal fel osv.
+* **OperationStatistic:** Denna MBean ger statistik över alla AEM Forms-servertjänster. I det här MBean-värdet kan administratörer få information om en viss tjänst, som starttid och antal fel.
 
 ### ServiceStatisticMbean public interfaces {#servicestatisticmbean-public-interfaces}
 
@@ -84,7 +84,7 @@ Med en JMX-konsol (JConsole) finns statistik från OperationStatistic MBean till
 
 **Åtgärdsstatistik**
 
-**Anropstid:** Tidsåtgång för körning av metoden. Detta inkluderar inte den tidpunkt då begäran serialiseras, överförs från klient till server och avserialiseras.
+**Anropstid:** Tidsåtgång för körning av metoden. Den här anropet inkluderar inte den tid då begäran serialiseras, överförs från klient till server och avserialiseras.
 
 **Antal anrop:** Antalet gånger som tjänsten anropas.
 
@@ -106,7 +106,7 @@ För att JMX-övervakning ska kunna aktiveras behöver programservrarna vanligtv
 
 ### Exempel på hur du konfigurerar öppen JMX-åtkomst {#examples-of-how-to-set-up-open-jmx-access}
 
-**JBoss 4.0.3/4.2.0 - konfigurera JVM-start**
+**JBoss® 4.0.3/4.2.0 - konfigurera JVM-start**
 
 Om du vill visa MBeans från JConsole konfigurerar du JBoss-programserverns JVM-startparametrar. Kontrollera att JBoss har startats från filen run.bat/sh.
 
@@ -137,9 +137,9 @@ Om du vill visa MBeans från JConsole konfigurerar du JBoss-programserverns JVM-
 1. Starta JConsole för en ny anslutning och klicka på fjärrfliken.
 1. Ange värdnamnet och porten (9088, det värde du anger under JVM-startalternativen).
 
-**Websphere 6.1 - konfigurera JVM-start**
+**WebSphere® 6.1 - konfigurera JVM-start**
 
-1. Lägg till följande rad i fältet för allmänt JVM-argument i Admin Console (Programserver > server1 > Processdefinition > JVM):
+1. På Admin Console (Programserver > server1 > Processdefinition > JVM) lägger du till följande rad i fältet för allmänt JVM-argument:
 
    ```shell
     -Djavax.management.builder.initial= -Dcom.sun.management.jmxremote

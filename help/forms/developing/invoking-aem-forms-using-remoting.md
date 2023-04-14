@@ -11,9 +11,9 @@ topic-tags: coding
 discoiquuid: 3d8bb2d3-b1f8-49e1-a529-b3e7a28da4bb
 role: Developer
 exl-id: 94a48776-f537-4b4e-8d71-51b08e463cba
-source-git-commit: 135f50cc80f8bb449b2f1621db5e2564f5075968
+source-git-commit: c47b4dcfd2fbdcb0b98ad815f5b04d8f593e4f64
 workflow-type: tm+mt
-source-wordcount: '4628'
+source-wordcount: '4599'
 ht-degree: 0%
 
 ---
@@ -72,11 +72,11 @@ När den här processen anropas utför den följande åtgärder:
 
 [Skapa Flash Builder-program som utför SSO-autentisering med HTTP-tokens](/help/forms/developing/creating-flash-builder-applications-perform.md#creating-flash-builder-applications-that-perform-sso-authentication-using-http-tokens)
 
-Mer information om hur du visar processdata i en Flex-grafkontroll finns i [Visa AEM Forms processdata i Flex-diagram](https://www.adobe.com/devnet/livecycle/articles/populating_flexcontrols.html).
+<!-- For information on how to display process data in a Flex graph control, see [Displaying AEM Forms process data in Flex graphs](https://www.adobe.com/devnet/livecycle/articles/populating_flexcontrols.html). This URL is 404. No suitable replacement URL was found after a search. Do not make this link live if it is dead! -->
 
 >[!NOTE]
 >
->*Gå till rätt plats för filen crossdomain.xml. Om du till exempel har distribuerat AEM Forms på JBoss placerar du den här filen på följande plats: &lt;install_directory>\Adobe_Experience_Manager_forms\jboss\server\lc_turnkey\deploy\jboss-web.deployer\ROOT.war.*
+>*Var noga med att placera filen crossdomain.xml på rätt plats. Om du till exempel har distribuerat AEM Forms på JBoss placerar du den här filen på följande plats: &lt;install_directory>\Adobe_Experience_Manager_forms\jboss\server\lc_turnkey\deploy\jboss-web.deployer\ROOT.war.*
 
 ## Inkludera AEM Forms Flex biblioteksfil {#including-the-aem-forms-flex-library-file}
 
@@ -98,9 +98,9 @@ Om du vill starta AEM Forms-processer programmatiskt med Remoting lägger du til
 
 ## Hantera dokument med fjärrstyrning {#handling-documents-with-remoting}
 
-En av de viktigaste icke-primitiva Java-typerna som används i AEM Forms är `com.adobe.idp.Document` klassen. Ett dokument krävs vanligtvis för att anropa en AEM Forms-åtgärd. Det är i första hand ett PDF-dokument, men kan innehålla andra dokumenttyper som SWF, HTML, XML eller en DOC-fil. (Se [Skicka data till AEM Forms-tjänster med Java API](/help/forms/developing/invoking-aem-forms-using-java.md#passing-data-to-aem-forms-services-using-the-java-api).)
+En av de viktigaste icke-primitiva Java™-typerna som används i AEM Forms är `com.adobe.idp.Document` klassen. Ett dokument krävs vanligtvis för att anropa en AEM Forms-åtgärd. Det är i första hand ett PDF-dokument, men kan innehålla andra dokumenttyper som SWF, HTML, XML eller en DOC-fil. (Se [Skicka data till AEM Forms-tjänster med Java API](/help/forms/developing/invoking-aem-forms-using-java.md#passing-data-to-aem-forms-services-using-the-java-api).)
 
-Ett klientprogram som skapats med Flex kan inte begära ett dokument direkt. Du kan till exempel inte starta Adobe Reader för att begära en URL som skapar en PDF-fil. Begäranden för dokumenttyper som PDF och Microsoft Word-dokument returnerar ett resultat som är en URL. Det är kundens ansvar att visa innehållet i URL:en. Tjänsten Document Management hjälper till att generera information om URL och innehållstyp. Begäran om XML-dokument returnerar det fullständiga XML-dokumentet i resultatet.
+Ett klientprogram som skapats med Flex kan inte begära ett dokument direkt. Du kan till exempel inte starta Adobe Reader för att begära en URL som skapar en PDF-fil. Begäranden för dokumenttyper som PDF och Microsoft® Word-dokument returnerar ett resultat som är en URL. Det är kundens ansvar att visa innehållet i URL:en. Tjänsten Document Management hjälper till att generera information om URL och innehållstyp. Begäran om XML-dokument returnerar det fullständiga XML-dokumentet i resultatet.
 
 ### Skicka ett dokument som en indataparameter {#passing-a-document-as-an-input-parameter}
 
@@ -122,12 +122,12 @@ docRef.referenceType = DocumentReference.REF_TYPE_URL; 
 docRef.url = "https://companyserver:8080/DocumentManager/116/7855"; ...
 ```
 
-* Om du vill skapa ett DocumentReference-objekt från en textsträng i klientprogrammet anger du egenskapen referenceType för DocumentReference-objektet till REF_TYPE_INLINE. Ange egenskapen text till den text som ska inkluderas i objektet, vilket visas i följande exempel:
+* Om du vill skapa ett DocumentReference-objekt från en textsträng i klientprogrammet anger du REF_TYPE_INLINE för egenskapen referenceType för DocumentReference-objektet. Ange egenskapen text till den text som ska inkluderas i objektet, vilket visas i följande exempel:
 
 ```java
 ... var docRef: DocumentReference = new DocumentReference(); 
 docRef.referenceType = DocumentReference.REF_TYPE_INLINE; 
-docRef.text = "Text for my document";  // Optionally, you can override the server’s default character set  // if necessary:  // docRef.charsetName=CharacterSetName  ...
+docRef.text = "Text for my document";  // Optionally, you can override the server's default character set  // if necessary:  // docRef.charsetName=CharacterSetName  ...
 ```
 
 * När dokumentet inte finns på servern kan du använda servern Remoting Upload för att överföra ett dokument till AEM Forms. Nytt i AEM Forms är möjligheten att ladda upp säkra dokument. När du överför ett säkert dokument måste du använda en användare som har *Användare av program för dokumentöverföring* roll. Utan den här rollen kan användaren inte överföra ett säkert dokument. Vi rekommenderar att du använder enkel inloggning för att överföra ett säkert dokument. (Se [Skicka säkra dokument för att starta processer med Remoting](invoking-aem-forms-using-remoting.md#passing-secure-documents-to-invoke-processes-using-remoting).)
@@ -233,7 +233,7 @@ Ett klientprogram kan anropa AEM Forms genom att ange en kanal i MXML eller Acti
      ...
 ```
 
-Tilldela `ChannelSet` till `mx:RemoteObject` instansens `channelSet` (som i föregående kodexempel). Vanligtvis importerar du kanalklassen i en import-sats i stället för att ange det fullständiga, kvalificerade namnet när du anropar `ChannelSet.addChannel` -metod.
+Tilldela `ChannelSet` till `mx:RemoteObject` instans `channelSet` (som i föregående kodexempel). Vanligtvis importerar du kanalklassen i en import-sats i stället för att ange det fullständiga, kvalificerade namnet när du anropar `ChannelSet.addChannel` -metod.
 
 **Skicka indatavärden**
 
@@ -288,7 +288,7 @@ Du kan anropa `MyApplication/EncryptDocument` utför följande steg:
 1. Konfigurera en `ChannelSet` -instans för att kommunicera med AEM Forms och koppla den till `mx:RemoteObject` -instans. Se Skapa en kanal för AEM Forms.
 1. Anropa ChannelSet `login` eller tjänstens `setCredentials` metod för att ange användaridentifierarvärde och lösenord. (Se [Använda enkel inloggning](invoking-aem-forms-using-remoting.md#using-single-sign-on).)
 1. Fyll i en `mx.rpc.livecycle.DocumentReference` -instans med ett oskyddat PDF-dokument att skicka till `MyApplication/EncryptDocument` -processen. (Se [Skicka ett dokument som en indataparameter](invoking-aem-forms-using-remoting.md#passing-a-document-as-an-input-parameter).)
-1. Kryptera PDF-dokumentet genom att anropa `mx:RemoteObject` instansens `invoke` -metod. Skicka `Object` som innehåller indataparametern (som är det oskyddade PDF-dokumentet). Se Skicka indatavärden.
+1. Kryptera PDF-dokumentet genom att anropa `mx:RemoteObject` instans `invoke` -metod. Skicka `Object` som innehåller indataparametern (som är det oskyddade PDF-dokumentet). Se Skicka indatavärden.
 1. Hämta det lösenordskrypterade PDF-dokumentet som returneras från processen. Se Hantera returvärden.
 
 [Snabbstart: Anropa en kort process genom att skicka ett osäkert dokument med AEM Forms Remoting (borttaget för AEM)](/help/forms/developing/invocation-api-quick-starts.md#quick-start-invoking-a-short-lived-process-by-passing-an-unsecure-document-using-deprecated-for-aem-forms-aem-forms-remoting)
@@ -732,7 +732,7 @@ om AEM Forms är konfigurerat att endast tillåta att säkra dokument överförs
       // Called once the file is completely uploaded.
       private function completeHandler(event:DataEvent):void {
  
-        // Set the docRef’s url and referenceType parameters
+        // Set the docRef's url and referenceType parameters
         docRef.url = event.data as String;
         docRef.referenceType=DocumentReference.REF_TYPE_URL;
         executeInvokeProcess();
@@ -932,7 +932,7 @@ I följande tabell visas de kontroller som är en del av det här klientprogramm
   </tr>
   <tr>
    <td><p>txtCustId</p></td>
-   <td><p>Anger det kundidentifieringsvärde som det nya kontot tillhör. Den här textrutan fylls i med returvärdet från kundtjänstens <code>createCustomer</code> operation. </p></td>
+   <td><p>Anger det kundidentifieringsvärde som det nya kontot tillhör. Den här textrutan fylls i med returvärdet för kundtjänstens <code>createCustomer</code> operation. </p></td>
   </tr>
  </tbody>
 </table>
@@ -977,7 +977,7 @@ Klassen Customer ActionScript tillhör ett paket som heter customer. Vi rekommen
 
 ### Snabbstart: Anropa kundens anpassade tjänst med Fjärrkommunikation {#quick-start-invoking-the-customer-custom-service-using-remoting}
 
-I följande kodexempel anropas kundtjänsten och en ny kund skapas. När du kör det här kodexemplet måste du fylla i alla textrutor. Se även till att du skapar filen Customer.as som mappar till `com.adobe.livecycle.sample.customer.Customer`.
+I följande kodexempel anropas kundtjänsten och en kund skapas. När du kör det här kodexemplet måste du fylla i alla textrutor. Se även till att du skapar filen Customer.as som mappar till `com.adobe.livecycle.sample.customer.Customer`.
 
 >[!NOTE]
 Innan du kan utföra den här snabbstarten måste du skapa och distribuera den anpassade komponenten Bank.

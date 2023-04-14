@@ -11,9 +11,9 @@ discoiquuid: 64bc6018-2828-4634-9275-48f1d411452b
 docset: aem65
 role: Admin
 exl-id: 3f150dd5-f486-4f16-9de9-035cde53b034
-source-git-commit: d3923e5e693e7426ee57e81e203f31964a23af3a
+source-git-commit: c47b4dcfd2fbdcb0b98ad815f5b04d8f593e4f64
 workflow-type: tm+mt
-source-wordcount: '1060'
+source-wordcount: '1059'
 ht-degree: 0%
 
 ---
@@ -65,7 +65,7 @@ Säkerhetsinformation om operativsystem som stöds av AEM Forms på JEE finns i 
   </tr>
   <tr>
    <td>Oracle Linux® 7 Update 3</td>
-   <td><a href="https://docs.oracle.com/cd/E52668_01/E54670/E54670.pdf" target="_blank">Säkerhetshandbok för version 7</a><br /> </td>
+   <td><a href="https://docs.oracle.com/en/operating-systems/oracle-linux/7/security/" target="_blank">Säkerhetshandbok för version 7</a><br /> </td>
   </tr>
   <tr>
    <td>CentOS 7<sup> </sup></td>
@@ -212,7 +212,7 @@ JBoss® Application Server använder 8080 som standard-HTTP-port. JBoss® har ä
 
 1. Öppna följande fil för redigering:
 
-   Single Server-installation: [JBoss®-rot]/standalone/configuration/standalone.xml
+   Single-Server-installation: [JBoss®-rot]/standalone/configuration/standalone.xml
 
    Klusterinstallationer: [JBoss®-rot]/domain/configuration/domain.xml
 
@@ -245,8 +245,8 @@ The lc_[databas]XML-filen får inte innehålla lösenord i klartextformat. Konta
 >
 >Installationsprogrammet för AEM Forms på JEE JBoss® med nyckelord krypterar databaslösenordet.
 
-IBM® WebSphere® Application Server och Oracle WebLogic Server kan kryptera lösenord som datakälla som standard. Kontrollera dock med programserverns dokumentation att detta händer.
+IBM® WebSphere® Application Server och Oracle WebLogic Server kan kryptera lösenord som datakälla som standard. Du bör dock kontrollera med programserverns dokumentation att det händer.
 
 ### Skydda den privata nyckeln som lagras i Trust Store {#protecting-the-private-key-stored-in-trust-store}
 
-De privata nycklar eller autentiseringsuppgifter som importeras i Trust Store lagras i AEM Forms i JEE-databasen. Vidta lämpliga försiktighetsåtgärder för att skydda databasen och begränsa åtkomsten till endast de angivna administratörerna.
+De privata nycklar eller autentiseringsuppgifter som importeras i Trust Store lagras i AEM Forms i JEE-databasen. Vidta lämpliga försiktighetsåtgärder för att skydda databasen och begränsa åtkomsten till endast de administratörer som har utsetts.
