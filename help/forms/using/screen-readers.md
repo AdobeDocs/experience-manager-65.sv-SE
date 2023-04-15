@@ -10,27 +10,27 @@ topic-tags: hTML5_forms
 discoiquuid: 53c57180-7004-4534-9146-603f7770a6fe
 feature: Mobile Forms
 exl-id: 07d20c2f-7d13-48ac-8d58-b367eb194558
-source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
+source-git-commit: 18cfefb794382b5314b18a62645f1fba28d314a2
 workflow-type: tm+mt
-source-wordcount: '335'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
 # Skärmläsare för HTML5-formulär {#screen-readers-for-html-forms}
 
-Formulärkomponenter i HTML5 återger XFA-formulärmallen till HTML5-format. Alla standardwebbläsare som stöder HTML5 kan återge dessa formulär. För att ge stöd för liknande datainhämtning i PDF och HTML 5 behålls layouten för PDF forms i HTML5-formulär.
+Formulärkomponenter i HTML5 återger XFA-formulärmallen till HTML 5-format. Alla standardwebbläsare som stöder HTML5 kan återge dessa formulär. För att ge stöd för liknande datainhämtning i PDF och HTML 5 behålls layouten för PDF forms i HTML5-formulär.
 
 HTML5-formulär använder HTML som standard och gör det möjligt att använda vanliga hjälpmedelsverktyg för HTML för dessa formulär. Om ett formulär är utformat enligt bästa praxis för hjälpmedelsförberedda formulär fungerar det med alla skärmläsare som stöds. Dessutom är sådana formulär aktiverade för tangentbordsnavigering.
 
 ## Tillgänglighetsstandarder {#accessibility-standards}
 
-HTML5-formulär uppfyller kraven i avsnitt 508 för tillgänglighet med kända undantag. Se [VPAT för HTML5-formulär](https://wwwimages.adobe.com/content/dam/acom/en/accessibility/compliance/pdfs/livecycle-mobile-forms-es4-section-508-vpat.pdf) för mer information.
+HTML5-formulär uppfyller kraven i avsnitt 508 för tillgänglighet med kända undantag. Se [VPAT för HTML5-formulär](https://www.adobe.com/content/dam/cc1/en/accessibility/compliance/pdfs/adobe-livecycle-es4-section-508-vpat-portfolio.pdf) för mer information.
 
 ## Certifierade skärmläsare för HTML5-formulär {#certified-screen-readers-for-html-forms}
 
-* JAWS 14.0 i Microsoft Windows
-* VoiceOver på Mac OS X och iPad
+* JAWS 14.0 i Microsoft® Windows
+* VoiceOver på macOS X och iPad
 
 ### JAWS {#jaws}
 
@@ -38,11 +38,11 @@ Alla standardtangenttryckningar och kortkommandon fungerar för HTML5-formulär.
 
 ### VoiceOver {#voiceover}
 
-HTML5-formulär har stöd för alla standardtangenttryckningar och -gester i Voice over. Mer information om hur du konfigurerar och använder VoiceOver finns i [https://www.apple.com/accessibility/voiceover/](https://www.apple.com/accessibility/voiceover/).
+HTML5-formulär har stöd för alla standardtangenttryckningar och -gester i Voice over. Mer information om hur du konfigurerar och använder VoiceOver finns i [https://www.apple.com/accessibility/vision/](https://www.apple.com/accessibility/vision/).
 
 ## Kända fel {#known-issues}
 
-* **(Endast Internet Explorer 9)** I HTML5-formulär läses sidorna in vid behov (dynamiskt). Sidinläsning on demand orsakar problem med skärmläsarnas funktion. När skärmläsarens fokus är på det sista fältet på sidan och användaren trycker på fliken, återgår skärmläsaren fokus till det första fältet på formulärets första sida i stället för att fokusera på det första fältet på nästa sida.
+* **(Endast Internet Explorer 9)** I HTML5-formulär läses sidorna in vid behov (dynamiskt). Sidinläsning on demand orsakar problem med skärmläsarnas funktion. När skärmläsarens fokus är på det sista fältet på sidan och användaren trycker på fliken, återgår skärmläsaren fokus till det första fältet på formulärets första sida.
 * **(Endast Internet Explorer 9)** Datumväljarkontrollen i HTML5-formulär är inte helt tillgänglig med tangentbordet. Om du trycker på upp-/nedtangenterna flera gånger i datumväljaren stängs datumväljaren och fokus flyttas till nästa/sista fält.
 
 * VoiceOver kan inte identifiera piltangenter på datumwidgeten i iPad Safari.
