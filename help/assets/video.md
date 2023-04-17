@@ -12,9 +12,9 @@ docset: aem65
 feature: Asset Management
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: 3430897fc98aecbcf6cc7bf6bdc9b3df24e92366
+source-git-commit: c704397f08e163a58ee6ac1dbaefc3171298864e
 workflow-type: tm+mt
-source-wordcount: '8005'
+source-wordcount: '7993'
 ht-degree: 2%
 
 ---
@@ -115,7 +115,6 @@ Läs mer om [Bästa tillvägagångssätt för att ordna digitala resurser för a
 
       * Integrera video med inbäddad kod på webbsidan:
          [Bädda in videovisningsprogrammet på en webbsida](embed-code.md).
-   * [Publicera videor på YouTube](#publishing-videos-to-youtube).
    * [Generera videorapporter](#viewing-video-reports).
 
    * [Lägga till bildtexter i video](#adding-captions-to-video).
@@ -292,7 +291,7 @@ Följande bild visar det övergripande arbetsflödet för redigering av videokli
 
 ## Bästa tillvägagångssätt för att koda videofilmer {#best-practices-for-encoding-videos}
 
-The **Dynamic Media Encode Video** arbetsflödet kodar video om du har aktiverat Dynamic Media och konfigurerat videolmolntjänster. Det här arbetsflödet innehåller information om arbetsflödets processhistorik och fel. Se [Övervaka videokodning och YouTube publiceringsförlopp](#monitoring-video-encoding-and-youtube-publishing-progress). Om du har aktiverat Dynamic Media och konfigurerat videolmolntjänster kan du **[!UICONTROL Dynamic Media Encode Video]** arbetsflödet aktiveras automatiskt när du överför en video. (Om du inte använder Dynamic Media **[!UICONTROL DAM Update Asset]** arbetsflödet börjar gälla.)
+The **Dynamic Media Encode Video** arbetsflödet kodar video om du har aktiverat Dynamic Media och konfigurerat videolmolntjänster. Det här arbetsflödet innehåller information om arbetsflödets processhistorik och fel. Om du har aktiverat Dynamic Media och konfigurerat videolmolntjänster kan du **[!UICONTROL Dynamic Media Encode Video]** arbetsflödet aktiveras automatiskt när du överför en video. (Om du inte använder Dynamic Media **[!UICONTROL DAM Update Asset]** arbetsflödet börjar gälla.)
 
 <!-- DEAD The following are best-practice tips for encoding source video files.
 
