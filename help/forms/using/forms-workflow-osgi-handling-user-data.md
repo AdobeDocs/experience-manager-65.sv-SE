@@ -8,7 +8,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 9f400560-8152-4d07-a946-e514e9b9cedf
 role: Admin
 exl-id: fd0e17d7-c3e9-4dec-ad26-ed96a1881f42
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: fb9363a39ffc9d3929a31a3a19a124b806607ef4
 workflow-type: tm+mt
 source-wordcount: '997'
 ht-degree: 0%
@@ -158,5 +158,5 @@ Du måste vara AEM administratör för att kunna ta bort användardata från arb
 Du kan också använda API:er för att komma åt och ta bort noder och egenskaper. Mer information finns i följande dokument.
 
 * [Så här programmässigt kommer du åt AEM JCR](/help/sites-developing/access-jcr.md)
-* [Tar bort noder och egenskaper](https://docs.adobe.com/docs/en/spec/jcr/2.0/10_Writing.html#10.9%20Removing%20Nodes%20and%20Properties)
+* [Tar bort noder och egenskaper](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/2.0/10_Writing.html#10.9%20Removing%20Nodes%20and%20Properties)
 * [API-referens](https://helpx.adobe.com/experience-manager/6-3/sites-developing/reference-materials/javadoc/overview-summary.html)

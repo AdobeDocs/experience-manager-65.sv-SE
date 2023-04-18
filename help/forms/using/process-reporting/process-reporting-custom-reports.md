@@ -10,9 +10,9 @@ topic-tags: process-reporting
 discoiquuid: 222daab8-4514-44a5-b5c9-c5510809c74e
 docset: aem65
 exl-id: 30720061-d0e5-453b-a334-6a3aa9ca4c87
-source-git-commit: 4fa868f3ae4778d3a637e90b91f7c5909fe5f8aa
+source-git-commit: fb9363a39ffc9d3929a31a3a19a124b806607ef4
 workflow-type: tm+mt
-source-wordcount: '984'
+source-wordcount: '973'
 ht-degree: 0%
 
 ---
@@ -632,7 +632,7 @@ response.setCharacterEncoding("utf-8");
 
 ## Integrera rapportgränssnitt i befintligt processrapporteringsgränssnitt  {#integrating-report-ui-in-existing-process-reporting-ui-nbsp}
 
-Förutsättningarna för att skapa ett separat användargränssnitt för att visa resultat är [Grundläggande om försäljning](https://wem.help.adobe.com/enterprise/en_US/10-0/wem/developing/the_basics.html), [Skapa en CRX-nod](https://docs.adobe.com/docs/en/crx/current/developing/development_tools/developing_with_crxde_lite.html#Creating%20a%20Node) och tillhandahålla lämpliga [behörighet](https://docs.adobe.com/docs/en/crx/current/developing/development_tools/developing_with_crxde_lite.html#Access%20Control).
+Förutsättningarna för att skapa ett separat användargränssnitt för att visa resultat är [Grundläggande om försäljning](https://wem.help.adobe.com/enterprise/en_US/10-0/wem/developing/the_basics.html), [Skapa en CRX-nod](https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/developing-with-crxde-lite.html?lang=en#creating-a-node) och tillhandahålla lämpliga [behörighet](https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/developing-with-crxde-lite.html?lang=en#access-control).
 
 1. Skapa ett separat användargränssnitt.
 1. Skapa ett underordnat objekt `nt:unstructured` noden vid `/content/process-reporting-runtime/custom-reports` nod för varje anslutningsbar rapport.
