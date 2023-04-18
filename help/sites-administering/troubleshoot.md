@@ -1,8 +1,6 @@
 ---
-title: AEM
-seo-title: Troubleshooting AEM
+title: Felsökning av Adobe Experience Manager
 description: Läs mer om felsökning av problem med AEM.
-seo-description: Learn about troubleshooting issues with AEM.
 uuid: 72379531-915c-45d0-ba70-42b212665272
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,16 +9,16 @@ content-type: reference
 discoiquuid: 6346cd93-1ca3-4510-9c31-a74c41017ddb
 docset: aem65
 exl-id: d2d351e7-87a5-4895-b4ec-391fb0b66798
-source-git-commit: e147605ff4d5c3d2403632285956559db235c084
+source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
 workflow-type: tm+mt
-source-wordcount: '538'
+source-wordcount: '545'
 ht-degree: 0%
 
 ---
 
-# AEM {#troubleshooting-aem}
+# Felsökning av Adobe Experience Manager {#troubleshooting-aem}
 
-I följande avsnitt beskrivs några problem som du kan stöta på när du använder AEM, tillsammans med förslag på hur du felsöker dem.
+I följande avsnitt beskrivs några problem som du kan stöta på när du använder AEM (Adobe Experience Manager), tillsammans med förslag på hur du felsöker dem.
 
 >[!NOTE]
 >

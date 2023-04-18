@@ -1,10 +1,10 @@
 ---
-title: Hur skickar jag inloggningsuppgifter med WS-security headers?
-description: Lär dig hur du skickar inloggningsuppgifter med WS-security headers
+title: Komprimera och expandera filer med en AEM Forms på en anpassad JEE DSC
+description: Lär dig komprimera och expandera filer med en anpassad DSC för JEE i AEM Forms
 exl-id: 1b950d8f-6b54-452a-831b-f5644370691d
-source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
+source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '485'
 ht-degree: 0%
 
 ---

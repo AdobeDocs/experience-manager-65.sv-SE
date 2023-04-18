@@ -1,8 +1,6 @@
 ---
-title: Dokumentfragment
-seo-title: Document Fragments
+title: Dokumentfragment i AEM
 description: Med dokumentfragment som text, listor, villkor och layoutfragment i Correspondence Management kan du skapa statiska, dynamiska och repeterbara komponenter i kundens korrespondens.
-seo-description: Document Fragments, such as Text, lists, conditions, and layout fragments, in Correspondence Management let you form the static, dynamic, and repeatable components of customer correspondence.
 uuid: 4273323d-14f5-4b3b-8fed-80beef641efe
 topic-tags: correspondence-management
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,9 +8,9 @@ discoiquuid: 0d5436c6-1976-496c-b9a7-7dc6e830bb5d
 docset: aem65
 feature: Correspondence Management
 exl-id: 71754e41-45d7-4cc5-ba49-0748bd51c0cf
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
 workflow-type: tm+mt
-source-wordcount: '6903'
+source-wordcount: '6905'
 ht-degree: 0%
 
 ---
@@ -298,9 +296,12 @@ Baserat på de alternativ du väljer utvärderas antingen bara det första uttry
 
 Villkorsredigeraren har en [Expression Builder](/help/forms/using/expression-builder.md) användargränssnitt som stöder att uttryck skapas med hjälp av både flera platshållare och element i datamordlistan. Du kan använda vanliga operander och lokala/globala funktioner i sådana uttryck. Varje uttryck kan associeras med visst innehåll och det kan också finnas ett standardavsnitt om inget av uttrycken utvärderas som true. Alla uttryck utvärderas i den sekvens i vilken de definieras och de första uttrycken som returnerar true markeras och det tillhörande innehållet returneras av den villkorliga modulen.
 
-Om villkoren i en bokstav till exempel skiljer sig åt beroende på vilket läge kunden befinner sig i och dataordlistan innehåller ett element med namnet&quot;state&quot;, kan du lägga till villkoret enligt följande: ・ state = NY, välj textstycket T&amp;C_NY ・ state = NC, markera textstycket T&amp;C_NC
+Om villkoren i en bokstav till exempel skiljer sig åt beroende på vilket läge kunden befinner sig i och dataordlistan innehåller ett element med namnet&quot;state&quot;, kan du lägga till villkoret enligt följande:
+* läge = NY, markera textstycket T&amp;C_NY
+* läge = NC, markera textstycket T&amp;C_NC
 
-Med Villkorsredigeraren kan du ange ett standardvillkor. Om värdet för kontrollvariablerna inte matchar något av villkoren används innehållet som är associerat med standardvillkoret. I föregående exempel kan du lägga till den här villkorsraden: ・ Standard, välj T&amp;C_Rest
+Med Villkorsredigeraren kan du ange ett standardvillkor. Om värdet för kontrollvariablerna inte matchar något av villkoren används innehållet som är associerat med standardvillkoret. I föregående exempel kan du lägga till den här villkorsraden:
+* Standard, välj T&amp;C_Rest
 
 ### Skapa ett villkor {#create-a-condition}
 
@@ -502,8 +503,8 @@ I det här exemplet visas hur du kan skapa en dynamisk och statisk tabell, binda
 
 1. Skapa två XDP-filer (layoutfragment) i Designer: en dynamisk tabell och en statisk tabell. För båda layouterna:
 
-   * Lägg till delformulär i tabellkolumnen. Se till att du ändrar layouten för tabellens överordnade delformulär till Flödat och tar bort bindningarna för delformuläret i tabellen.
-   * Lägg till ett delformulär i tabellcellen. Se till att du ändrar layouten för tabellens överordnade delformulär till Flödat och tar bort bindningarna för delformuläret i tabellen.
+   * Lägg till delformulär i tabellkolumnen. Se till att du ändrar layouten för tabellens överordnade delformulär till flödande och tar bort bindningarna för delformuläret i tabellen.
+   * Lägg till ett delformulär i tabellcellen. Se till att du ändrar layouten för tabellens överordnade delformulär till flödande och tar bort bindningarna för delformuläret i tabellen.
 
    Eller använd de statiska och dynamiska XDP:er som är bifogade med det här steget.
 

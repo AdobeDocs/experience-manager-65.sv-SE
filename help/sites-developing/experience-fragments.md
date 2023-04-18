@@ -1,8 +1,6 @@
 ---
-title: Experience Fragments
-seo-title: Experience Fragments
+title: Upplevelsefragment inom AEM Sites-utveckling
 description: Läs om hur du anpassar Experience Fragments.
-seo-description: Learn about customizing Experience Fragments.
 uuid: fc9f7e59-bd7c-437a-8c63-de8559b5768d
 contentOwner: AEM Docs
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,9 +9,9 @@ content-type: reference
 discoiquuid: c02e713e-15f3-408b-879a-d5eb014aef02
 docset: aem65
 exl-id: c4fb1b5e-e15e-450e-b882-fe27b165ff9f
-source-git-commit: 6e54073a0c1d67218283b096db3f2e5597f10376
+source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
 workflow-type: tm+mt
-source-wordcount: '1784'
+source-wordcount: '1787'
 ht-degree: 0%
 
 ---
@@ -92,7 +90,7 @@ För detta måste följande egenskaper användas:
 
    * `text`
 
-Komponenter som inte använder den här konventionen kommer inte att beaktas.
+Komponenter som inte använder den här konventionen beaktas inte.
 
 ## Mallar för Experience Fragments {#templates-for-experience-fragments}
 
