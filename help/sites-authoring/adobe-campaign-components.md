@@ -1,8 +1,6 @@
 ---
-title: Adobe Campaign Components
-seo-title: Adobe Campaign Components
-description: När du integrerar med Adobe Campaign finns det komponenter som du kan använda när du arbetar med nyhetsbrev och formulär
-seo-description: When you integrate with Adobe Campaign, you have components available for when working with newsletters and with forms
+title: Integrera med Adobe Campaign-komponenter
+description: När du integrerar med Adobe Campaign finns det komponenter som du kan använda när du arbetar med nyhetsbrev och formulär.
 uuid: a858d5ca-aa6e-4bde-92db-a6dcd8b48ae6
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,10 +9,10 @@ topic-tags: personalization
 discoiquuid: 9da34dab-7e89-4127-ab26-532687746b2a
 docset: aem65
 exl-id: d1132fcd-e6a0-44a2-8753-d250f68fbd78
-source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
+source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
 workflow-type: tm+mt
-source-wordcount: '2824'
-ht-degree: 1%
+source-wordcount: '2826'
+ht-degree: 0%
 
 ---
 
@@ -301,12 +299,12 @@ I följande tabell beskrivs de komponenter som är tillgängliga för att visa o
   </tr>
   <tr>
    <td><p>Kryssruta (kampanj)</p> </td>
-   <td><p>boolean</p> </td>
+   <td><p>boolesk</p> </td>
    <td><p>Inte längre kontakt (via någon kanal)</p> </td>
   </tr>
   <tr>
    <td><p>Datumfält (kampanj)</p> <p>Datumfält/HTML 5 (kampanj)</p> </td>
-   <td><p>date</p> </td>
+   <td><p>datum</p> </td>
    <td><p>Födelsedatum</p> </td>
   </tr>
   <tr>

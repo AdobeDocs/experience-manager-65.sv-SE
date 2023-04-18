@@ -1,8 +1,6 @@
 ---
-title: Sidredigering med innehållsfragment
-seo-title: Page Authoring with Content Fragments
-description: Med AEM Content Fragments kan du utforma, skapa, strukturera och använda sidoberoende innehåll
-seo-description: AEM Content Fragments allow you to design, create, curate, and use page-independent content
+title: Skapa innehållssidor med Content Fragments
+description: Med AEM Content Fragments kan du utforma, skapa, strukturera och använda sidoberoende innehåll.
 uuid: 987de428-8354-4b23-a552-3ea415122184
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,7 +9,7 @@ content-type: reference
 discoiquuid: 4049a7a5-4b33-4462-a25f-3c0daeb6a8a9
 docset: aem65
 exl-id: d5dad844-80ca-4ace-a082-38d892d9ffe2
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
 workflow-type: tm+mt
 source-wordcount: '1140'
 ht-degree: 5%

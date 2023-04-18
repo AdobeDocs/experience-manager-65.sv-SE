@@ -1,8 +1,6 @@
 ---
 title: Grundläggande hantering
-seo-title: Basic Handling
 description: En översikt över grundläggande hantering när du använder AEM redigeringsmiljö. Den använder platskonsolen som grund.
-seo-description: An overview of basic handling when using the AEM author environment. It uses the Sites console as a basis.
 uuid: ab488d7c-7b7f-4a23-a80c-99d37ac84246
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,10 +8,10 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 9737ead9-e324-43c9-9780-7abd292f4e5b
 exl-id: 2981dc20-b2ba-4ea2-a53b-8b5fe526aa9c
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
 workflow-type: tm+mt
 source-wordcount: '1194'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
@@ -67,7 +65,7 @@ Huvudkonsolerna är:
    <td>Med taggningskonsolerna kan du administrera taggar. Taggar är korta namn eller fraser som du kan använda för att klassificera och kommentera innehållsdelar, vilket gör det enklare att hitta och ordna dem. Mer information finns på <a href="/help/sites-classic-ui-authoring/classic-feature-tags.md">Använda och hantera taggar</a>.</td>
   </tr>
   <tr>
-   <td><strong>Verktyg</strong></td>
+   <td><strong>verktyg</strong></td>
    <td>The <a href="/help/sites-administering/tools-consoles.md">Verktygskonsoler</a> ger tillgång till ett antal specialverktyg och konsoler som hjälper dig att administrera dina webbplatser, digitala resurser och andra aspekter av innehållsdatabasen.</td>
   </tr>
   <tr>
@@ -134,7 +132,7 @@ The **Webbplatser** konsolen visar sidorna i en trädstruktur (vänster ruta). F
 >
 >Ange egenskapens värde:
 >`treeAutoExpandMax`
->på:
+>den:
 >`/apps/wcm/core/content/siteadmin`
 >
 >Eller globalt i temat:

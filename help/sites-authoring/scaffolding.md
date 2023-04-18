@@ -1,8 +1,6 @@
 ---
-title: Ställning
-seo-title: Scaffolding
-description: Med hjälp av ställningar kan du skapa en struktur med fält som återspeglar den struktur du vill ha för sidorna och sedan använda det här formuläret för att enkelt skapa sidor baserade på den här strukturen
-seo-description: With scaffolding you can create a scaffold with fields that reflect the structure you want for your pages and then use this form to easily create pages based on this structure
+title: Scofolding in Adobe Experience Manager authoring
+description: Med hjälp av ställningar kan du skapa en struktur med fält som återspeglar den struktur du vill ha för sidorna och sedan använda det här formuläret för att skapa sidor som baseras på den strukturen.
 uuid: f2542fe2-598f-4631-ae64-a6ee14cd7748
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,9 +8,9 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: f5025f64-d3ce-43e8-9666-5c7c162536c7
 exl-id: e3488c9d-035f-4165-ad32-21103ec7e581
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
 workflow-type: tm+mt
-source-wordcount: '149'
+source-wordcount: '153'
 ht-degree: 0%
 
 ---

@@ -1,8 +1,6 @@
 ---
-title: Responsiv layout
-seo-title: Responsive Layout
-description: AEM gör att du kan förverkliga en responsiv layout för dina sidor
-seo-description: AEM allows you to realize a responsive layout for your pages
+title: Responsiv layout för dina innehållssidor
+description: Med Adobe Experience Manager kan du förverkliga en responsiv layout för dina sidor.
 uuid: 4db45d78-9fca-4251-b504-ae3481fd9a8b
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,10 +8,10 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 668d1a8a-c757-4c9f-833f-e5dada4d0384
 exl-id: 760b8419-5cf8-49c5-8d4f-6691f5256c53
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
 workflow-type: tm+mt
-source-wordcount: '1782'
-ht-degree: 7%
+source-wordcount: '1787'
+ht-degree: 6%
 
 ---
 

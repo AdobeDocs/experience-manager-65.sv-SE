@@ -1,8 +1,6 @@
 ---
-title: Din inkorg
-seo-title: Your Inbox
-description: Hantera dina uppgifter med inkorgen
-seo-description: Managing your tasks with the inbox
+title: Inkorgen för att hantera uppgifter
+description: Hantera dina uppgifter med inkorgen.
 uuid: ddd48019-ce69-4a47-be2b-5b66ae2fe3c8
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,10 +8,10 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 8b607b55-2412-469f-856b-0a3dea4b0efb
 exl-id: 80b7f179-b011-4f90-b5ab-9ef8a669d271
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
 workflow-type: tm+mt
-source-wordcount: '1140'
-ht-degree: 8%
+source-wordcount: '1143'
+ht-degree: 7%
 
 ---
 

@@ -1,8 +1,6 @@
 ---
 title: Publicera sidor
-seo-title: Publishing Pages
-description: När du har skapat och granskat ditt innehåll i författarmiljön är målet att göra det tillgängligt på din offentliga webbplats.
-seo-description: Once you have created and reviewed your content on the author environment, the goal is to make it available on your public website.
+description: När du har skapat och granskat ditt innehåll i författarmiljön kan du göra det tillgängligt på din offentliga webbplats.
 uuid: ab5ffc59-1c41-46fe-904e-9fc67d7ead04
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,16 +9,16 @@ content-type: reference
 discoiquuid: 46d6bde0-8645-4cff-b79c-8e1615ba4ed4
 docset: aem65
 exl-id: 3f6aa06e-b5fd-4ab0-9ecc-14250cb3f55e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
 workflow-type: tm+mt
-source-wordcount: '1044'
+source-wordcount: '1036'
 ht-degree: 0%
 
 ---
 
 # Publicera sidor{#publishing-pages}
 
-När du har skapat och granskat ditt innehåll i författarmiljön är målet att göra det tillgängligt på din offentliga webbplats (din publiceringsmiljö).
+När du har skapat och granskat ditt innehåll i författarmiljön ska du göra det tillgängligt på din offentliga webbplats (din publiceringsmiljö).
 
 Detta kallas att publicera en sida. När du vill ta bort en sida från publiceringsmiljön kallas det för att avpublicera. När sidan publiceras och avpubliceras är den fortfarande tillgänglig i redigeringsmiljön för ytterligare ändringar tills du tar bort den.
 

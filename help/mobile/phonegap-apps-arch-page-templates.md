@@ -1,8 +1,6 @@
 ---
-title: Sidmallar för mobilappar
-seo-title: Page Templates for Mobile Apps
+title: Mallar för innehållssidor för mobilappar
 description: Följ den här sidan om du vill veta mer om sidmallar för mobilappar.
-seo-description: Follow this page to learn about page templates for mobile apps.
 uuid: ef469796-10f5-44f4-a5c7-25025ca192b0
 contentOwner: User
 content-type: reference
@@ -10,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: f45d8a9b-14d6-468f-a44c-3933e962922c
 exl-id: 7f00d426-4d28-41ee-8c54-636349e48669
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
 workflow-type: tm+mt
-source-wordcount: '2649'
+source-wordcount: '2650'
 ht-degree: 0%
 
 ---
@@ -361,7 +359,7 @@ Den här katalogen är tom tills du kör `phonegap run *<platform>*` -kommando i
 
 När du har skapat programmet för en viss plattform skapas motsvarande katalog och den innehåller den plattformsspecifika programkoden.
 
-### plugins/ {#plugins}
+### plugin-program/ {#plugins}
 
 Katalogen för plugin-program fylls i av varje plugin-program som visas i `.cordova/hooks/before_platform_add/install_plugins.js` efter att du har kört `phonegap run *<platform>*` -kommando. Katalogen är från början tom.
 

@@ -1,8 +1,6 @@
 ---
-title: Arbeta med sidversioner
-seo-title: Working with Page Versions
+title: Arbeta med innehållssidversioner
 description: Skapa, jämföra och återställa versioner av en sida
-seo-description: Create, compare, and restore versions of a page
 uuid: 29e049f0-532c-4e3b-b64f-5be88ee6b08c
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,9 +9,9 @@ content-type: reference
 discoiquuid: 1368347a-9b65-4cfc-87e1-62993dc627fd
 docset: aem65
 exl-id: cb7a9da2-7112-4ef0-b1cf-211a7df93625
-source-git-commit: b11a97b9b00e6f80fb0243e234ed1dc2c004ed3a
+source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
 workflow-type: tm+mt
-source-wordcount: '1491'
+source-wordcount: '1492'
 ht-degree: 4%
 
 ---

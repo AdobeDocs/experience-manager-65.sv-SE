@@ -1,10 +1,10 @@
 ---
-title: Skapa och ordna sidor
+title: Skapa och ordna sidor med AEM
 description: Skapa och hantera sidor med AEM
 exl-id: 74576e51-4b4e-464e-a0b8-0fae748a505d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
 workflow-type: tm+mt
-source-wordcount: '2523'
+source-wordcount: '2525'
 ht-degree: 4%
 
 ---

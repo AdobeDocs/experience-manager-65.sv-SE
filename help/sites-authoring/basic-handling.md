@@ -1,8 +1,6 @@
 ---
-title: Grundläggande hantering
-seo-title: Basic Handling
+title: Grundläggande hantering när du använder AEM redigeringsmiljö
 description: Bekanta dig med navigering i AEM och dess grundläggande användning
-seo-description: Get comfortable with navigating AEM and its basic usage
 uuid: c78ef9da-e0bd-47be-a410-9cf2ae71749a
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,9 +9,9 @@ content-type: reference
 discoiquuid: 21181a6f-b434-40ed-8eb1-ebdfc98964dd
 docset: aem65
 exl-id: ef1a3997-feb4-4cb0-9396-c8335b69bb10
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
 workflow-type: tm+mt
-source-wordcount: '2967'
+source-wordcount: '2973'
 ht-degree: 3%
 
 ---

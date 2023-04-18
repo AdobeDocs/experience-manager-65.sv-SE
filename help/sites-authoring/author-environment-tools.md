@@ -1,8 +1,6 @@
 ---
-title: Redigering - miljö och verktyg
-seo-title: Authoring - the Environment and Tools
-description: I redigeringsmiljön i AEM finns olika sätt att ordna och redigera ditt innehåll
-seo-description: The authoring environment of AEM provides various mechanisms for organizing and editing your content
+title: Authoring - the Environment and Tools in AEM
+description: I redigeringsmiljön i AEM finns olika sätt att ordna och redigera ditt innehåll.
 uuid: 23a8aa93-b3d2-423b-b402-9e5f3f273d9a
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,9 +9,9 @@ content-type: reference
 discoiquuid: f488ba79-5bda-46e9-9c15-9a8c3dbfa2ce
 docset: aem65
 exl-id: 3b3c118b-ca35-484b-a62e-7bec98953123
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
 workflow-type: tm+mt
-source-wordcount: '2220'
+source-wordcount: '2222'
 ht-degree: 9%
 
 ---
@@ -67,7 +65,7 @@ Det faktiska utseendet och hanteringen beror på vilken enhetstyp du använder:
 
 >[!NOTE]
 >
->En mobil enhet identifieras när bredden är mindre än 1 024 pixlar. Detta kan även vara fallet för ett litet skrivbordsfönster.
+>En mobil enhet identifieras när bredden är mindre än 1 024 pixlar. Detta kan också vara fallet för ett litet skrivbordsfönster.
 
 * **Mobil enhet (t.ex. iPad)**
 

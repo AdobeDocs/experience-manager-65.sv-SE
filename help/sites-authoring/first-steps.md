@@ -1,8 +1,6 @@
 ---
-title: Steg 1 för författare
-seo-title: First Steps for Authors
-description: En översikt över de huvudåtgärder som du kommer att använda när du börjar redigera innehåll med AEM
-seo-description: An overview of the main tasks that you will be using when starting to author content with AEM
+title: Första steget för författare när de skapar innehåll i AEM
+description: En översikt över de viktigaste uppgifterna som du använder när du redigerar innehåll med Adobe Experience Manager (AEM).
 uuid: 1a09da22-faa4-4a7a-a2c5-97a255a6a2ae
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,9 +9,9 @@ content-type: reference
 discoiquuid: 85ebc05d-ce45-4bbb-b9cc-b21810d0d877
 docset: aem65
 exl-id: b2103774-1876-4bf8-a29a-2ba0d51e7914
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
 workflow-type: tm+mt
-source-wordcount: '403'
+source-wordcount: '407'
 ht-degree: 0%
 
 ---
