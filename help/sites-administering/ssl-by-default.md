@@ -1,6 +1,6 @@
 ---
-title: SSL som standard
-seo-title: SSL By Default
+title: SSL/TLS som standard
+seo-title: SSL/TLS By Default
 description: Lär dig hur du använder SSL som standard i AEM.
 seo-description: Learn how to use SSL by Default in AEM.
 uuid: 2fbfd020-1d33-4b22-b963-c698e62f5bf6
@@ -11,20 +11,20 @@ topic-tags: Security
 discoiquuid: 68077369-0549-4c0f-901b-952e323013ea
 docset: aem65
 exl-id: 574e2fc2-6ebf-49b6-9b65-928237a8a34d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 252924afb70dd311a27d04278fbe363db15e9519
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '850'
 ht-degree: 0%
 
 ---
 
-# SSL som standard{#ssl-by-default}
+# SSL/TLS som standard{#ssl-tls-by-default}
 
 I ett försök att kontinuerligt förbättra AEM säkerhet har Adobe introducerat en funktion som kallas SSL som standard. Syftet är att uppmuntra användningen av HTTPS för att ansluta till AEM instanser.
 
-## Aktivera SSL som standard {#enabling-ssl-by-default}
+## Aktivera SSL/TLS som standard {#enabling-ssl-tls-by-default}
 
-Du kan börja konfigurera SSL som standard genom att klicka på det relevanta inkorgsmeddelandet från AEM startskärm. Tryck på klockikonen i skärmens övre högra hörn för att nå Inkorgen. Klicka sedan på **Visa alla**. Då visas en lista med alla aviseringar som har beställts i en listvy.
+Du kan börja konfigurera SSL/TLS som standard genom att klicka på det relevanta inkorgsmeddelandet från AEM startskärm. Tryck på klockikonen i skärmens övre högra hörn för att nå Inkorgen. Klicka sedan på **Visa alla**. Då visas en lista med alla aviseringar som har beställts i en listvy.
 
 Markera och öppna **Konfigurera HTTPS** varning:
 
@@ -52,9 +52,9 @@ En tjänstanvändare ringde **ssl-service** har skapats för den här funktionen
 
    ![screen_shot_2018-07-25at31658pm](assets/screen_shot_2018-07-25at31658pm.png)
 
-## Automatiserar SSL som standard {#automating-ssl-by-default}
+## Automatisera SSL/TLS som standard {#automating-ssl-tls-by-default}
 
-Det finns tre sätt att automatisera SSL som standard.
+Det finns tre sätt att automatisera SSL/TLS som standard.
 
 ### Via HTTP-POST {#via-http-post}
 
@@ -159,7 +159,7 @@ Du kan också automatisera SSL-konfigurationen genom att överföra ett paket so
 
 ### Skapa en privat nyckel/ett certifikatpar som ska användas med guiden {#generating-a-private-key-certificate-pair-to-use-with-the-wizard}
 
-Här nedan hittar du ett exempel på hur du skapar ett självsignerat certifikat i DER-format som kan användas i SSL-guiden. Installera OpenSSL baserat på operativsystemet, öppna kommandotolken för OpenSSL och ändra katalogen till den mapp där du vill generera den privata nyckeln/certifikatet.
+Här nedan hittar du ett exempel på hur du skapar ett självsignerat certifikat i DER-format som kan användas i SSL-/TLS-guiden. Installera OpenSSL baserat på operativsystemet, öppna kommandotolken för OpenSSL och ändra katalogen till den mapp där du vill generera den privata nyckeln/certifikatet.
 
 >[!NOTE]
 >
@@ -190,15 +190,15 @@ Konvertera den privata nyckeln till DER-format. Detta beror på att SSL-guiden k
 openssl pkcs8 -topk8 -inform PEM -outform DER -in localhostprivate.key -out localhostprivate.der -nocrypt
 ```
 
-Till sist skickar du **localhostprivate.der** som den privata nyckeln och **localhost.crt** som SSL-certifikat i steg 2 i den grafiska SSL-guiden som beskrivs i början av den här sidan.
+Till sist skickar du **localhostprivate.der** som den privata nyckeln och **localhost.crt** som SSL/TLS-certifikat i steg 2 i den grafiska SSL/TLS-guiden som beskrivs i början av den här sidan.
 
-### Uppdatera SSL-konfigurationen via cURL {#updating-the-ssl-configuration-via-curl}
+### Uppdatera SSL-/TLS-konfigurationen via cURL {#updating-the-ssl-tls-configuration-via-curl}
 
 >[!NOTE]
 >
 >Se [Använda cURL med AEM](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/curl.html) om du vill ha en centraliserad lista med användbara cURL-kommandon i AEM.
 
-Du kan också automatisera SSL-konfigurationen med verktyget cURL. Du kan göra detta genom att skicka konfigurationsparametrarna till den här URL:en:
+Du kan också automatisera SSL-/TLS-konfigurationen med verktyget cURL. Du kan göra detta genom att skicka konfigurationsparametrarna till den här URL:en:
 
 *https://&lt;serveraddress>:&lt;serverport>/libs/granite/security/post/sslSetup.html*
 
@@ -221,7 +221,7 @@ Nedan visas de parametrar du kan använda för att ändra de olika inställninga
 
 >[!NOTE]
 >
->Det snabbaste sättet att köra cURL för att automatisera SSL-konfigurationen är från den mapp där DER- och CRT-filerna finns. Du kan också ange den fullständiga sökvägen i `privatekeyFile` och certificateFile-argument.
+>Det snabbaste sättet att köra cURL för att automatisera SSL-/TLS-konfigurationen är från den mapp där DER- och CRT-filerna finns. Du kan också ange den fullständiga sökvägen i `privatekeyFile` och certificateFile-argument.
 >
 >Du måste också vara autentiserad för att kunna utföra uppdateringen, så se till att du lägger till cURL-kommandot med `-u user:passeword` parameter.
 >
@@ -239,3 +239,15 @@ Du kan skicka en certifikatkedja till servern genom att upprepa parametern certi
 
 När du har kört kommandot kontrollerar du att alla certifikat har gjort det till nyckelbehållaren. Kontrollera nyckelbehållaren från:
 [http://localhost:4502/libs/granite/security/content/userEditor.html/home/users/system/security/ssl-service](http://localhost:4502/libs/granite/security/content/userEditor.html/home/users/system/security/ssl-service)
+
+### Aktivera en TLS 1.3-anslutning {#enabling-tls-connection}
+
+1. Gå till webbkonsolen
+1. Navigera sedan till **OSGi** - **Konfiguration** - **Adobe Granite SSL Connector Factory**
+1. Gå till **Inkluderade chiffersviter** och lägg till följande poster. Du kan bekräfta varje tillägg genom att trycka på &quot;**+**&quot; till vänster om fältet, efter att ha lagt till var och en i:
+
+   * `TLS_AES_256_GCM_SHA384`
+   * `TLS_AES_128_GCM_SHA256`
+   * `TLS_CHACHA20_POLY1305_SHA256`
+   * `TLS_AES_128_CCM_SHA256`
+   * `TLS_AES_128_CCM_8_SHA256`
