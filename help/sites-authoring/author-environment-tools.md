@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: f488ba79-5bda-46e9-9c15-9a8c3dbfa2ce
 docset: aem65
 exl-id: 3b3c118b-ca35-484b-a62e-7bec98953123
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: bc1f0bd20804bbae78c7ea9a5209e183d6bbaaf3
 workflow-type: tm+mt
-source-wordcount: '2222'
-ht-degree: 9%
+source-wordcount: '2230'
+ht-degree: 8%
 
 ---
 
@@ -264,7 +264,7 @@ För lämpliga resurser (t.ex. sidor från **Webbplatser** konsol, eller resurse
 
 ## Sidinformation {#page-information}
 
-Sidinformation (equalizer-ikonen) öppnar en meny som även innehåller information om den senaste redigeringen och det senaste dokumentet. Beroende på sidans egenskaper, dess plats och din instans kan det finnas fler eller färre alternativ:
+Knappen Sidinformation (utjämningsikon) öppnar en meny som även innehåller information om den senaste redigeringen och det senaste dokumentet. Beroende på sidans egenskaper, dess plats och din instans kan det finnas fler eller färre alternativ:
 
 ![ateat-17](assets/ateat-17.png)
 
@@ -277,7 +277,7 @@ Sidinformation (equalizer-ikonen) öppnar en meny som även innehåller informat
 * [Redigera mall](/help/sites-authoring/templates.md); när sidan är baserad på en [redigerbar mall](/help/sites-authoring/templates.md#editable-and-static-templates)
 
 * [Visa som publicerad](/help/sites-authoring/editing-content.md#view-as-published)
-* [Visa i Admin](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)
+* Visa i Admin; öppnar sidan i [platskonsol](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)
 * [Hjälp](/help/sites-authoring/basic-handling.md#accessing-help)
 
 Exempel: **Sidinformation** innehåller även alternativ:
