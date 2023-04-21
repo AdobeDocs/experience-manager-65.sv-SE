@@ -10,7 +10,7 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 6466d7b8-e308-43c5-acdc-dec15f796f64
 exl-id: 918fcbbc-a78a-4fab-a933-f183ce6a907f
-source-git-commit: ea5abbbe8f928a63b7d3d6f96f3007a3c82706e0
+source-git-commit: e803fde42cfb7b7c9d3fb6483ca661ce386d6464
 workflow-type: tm+mt
 source-wordcount: '2116'
 ht-degree: 0%
@@ -464,6 +464,6 @@ Aktivera nu OAuth-komponenterna. Du kan göra detta genom att:
 Bekräfta slutligen konfigurationen genom att:
 
 1. Gå till adressen för Publish-instansen och logga in som administratör.
-1. Öppna en ny flik i webbläsaren och gå till `http://serveraddress:serverport/services/mailer/oauth2/authorize`. Detta dirigerar om dig till sidan för din SMTP-leverantör, i det här fallet Gmail.
+1. Öppna en ny flik i webbläsaren och gå till `http://serveraddress:serverport/services/mailer/oauth2/authorize`. Detta dirigerar om dig till sidan för din SMTP-leverantör, i det här fallet Outlook.
 1. Logga in och godkänn att ge nödvändiga behörigheter
 1. När du har gett ditt medgivande lagras denna token i databasen. Du kan komma åt den under `accessToken` genom direktåtkomst till denna URL på din publiceringsinstans: `http://serveraddress:serverport/crx/de/index.jsp#/conf/global/settings/mailer/oauth`
