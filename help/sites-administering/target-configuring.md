@@ -10,9 +10,9 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 20c8eb1d-5847-4902-b7d3-4c3286423b46
 exl-id: 0f710685-dc4f-4333-9847-d002b2637d08
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: c96f83b84ed1473aee0ddcca08a0e585ec088aa1
 workflow-type: tm+mt
-source-wordcount: '2204'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -42,20 +42,22 @@ Följande egenskapsvärden används i den konfiguration av molnet för konfigura
 * **Klientbibliotek:** mbox.js.
 * **Använd DTM för att leverera klientbibliotek:** Inte markerat. Välj det här alternativet om du [använd DTM](/help/sites-administering/dtm.md) eller ett annat tagghanteringssystem som ska vara värd för filen mbox.js eller AT.js. Adobe rekommenderar att du använder DTM i stället för AEM för att leverera biblioteket.
 
-* **Custom mbox.js:** Ingen har angetts så att standardfilen mbox.js används. Ange en anpassad mbox.js-fil som ska användas efter behov. Visas bara om du har valt mbox.js.
-* **Custom AT.js:** Ingen har angetts så att AT.js-standardfilen används. Ange en anpassad AT.js-fil som ska användas efter behov. Visas bara om du har valt AT.js.
+* **Custom mbox.js:** Ingen har angetts så att standardfilen mbox.js används. Ange vid behov en anpassad mbox.js-fil som du vill använda. Visas bara om du har valt mbox.js.
+* **Custom AT.js:** Ingen har angetts så att AT.js-standardfilen används. Ange en anpassad AT.js-fil som du vill använda efter behov. Visas bara om du har valt AT.js.
 
 >[!NOTE]
 >
->I AEM 6.3 kan du välja målbiblioteksfilen, [AT.JS](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/mbox-download.html), som är ett nytt implementeringsbibliotek för Adobe Target som är utformat för både vanliga webbimplementeringar och ensidiga program.
+>I AEM 6.3 kan du välja målbiblioteksfilen, [AT.JS](https://developer.adobe.com/target/implement/client-side/atjs/atjs-functions/mboxcreate-atjs/), som är ett nytt implementeringsbibliotek för Adobe Target som är utformat för både vanliga webbimplementeringar och ensidiga program.
 >
 >AT.js har flera förbättringar jämfört med mbox.js-biblioteket:
 >
 >* Förbättrade sidladdningstider för webbimplementeringar
 >* Förbättrad säkerhet
 >* Bättre implementeringsalternativ för single-page-applikationer
->* AT.js innehåller komponenterna som ingick i target.js, så det finns inte längre något anrop till target.js
+>* AT.js innehåller komponenterna som ingick i target.js, så det finns inte längre något anrop till target.
 
+
+<!-- OLD URL WHICH IS 404 https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/mbox-download.html -->
 
 ### Etablerade egenskaper för målramverk {#provisioned-target-framework-properties}
 
@@ -73,7 +75,7 @@ Du kan konfigurera Adobe Target att använda Adobe Analytics som rapportkälla n
 >
 >Autentisering med användarautentiseringsuppgifter (äldre) fungerar inte med A4T (för både Target och Analytics). Kunder bör därför använda IMS-autentisering i stället för autentisering med användarautentiseringsuppgifter.
 
-För att göra detta måste du ange vilken A4T-molnkonfiguration som ska ansluta din Adobe Target-molnkonfiguration med:
+För att göra det anger du vilken A4T-molnkonfiguration som ska ansluta din Adobe Target-molnkonfiguration till:
 
 1. Navigera till **Cloud Services** via **AEM logotyp** > **verktyg** > **Distribution** > **Cloud Services**.
 1. I **Adobe Target** avsnitt, klicka **Konfigurera nu**.
@@ -107,7 +109,7 @@ Klicka **OK**. När du skapar innehåll med Adobe Target kan du [välj rapportk�
 Integrera manuellt med Adobe Target i stället för att använda anmälningsguiden.
 
 >[!NOTE]
-Målbiblioteksfilen, [AT.JS](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/mbox-download.html), är ett nytt implementeringsbibliotek för Adobe Target som är utformat för både vanliga webbimplementeringar och ensidiga program. Adobe rekommenderar att du använder AT.js i stället för mbox.js som klientbibliotek.
+Målbiblioteksfilen, [AT.JS](https://developer.adobe.com/target/implement/client-side/atjs/atjs-functions/mboxcreate-atjs/), är ett nytt implementeringsbibliotek för Adobe Target som är utformat för både vanliga webbimplementeringar och ensidiga program. Adobe rekommenderar att du använder AT.js i stället för mbox.js som klientbibliotek.
 AT.js har flera förbättringar jämfört med mbox.js-biblioteket:
 * Förbättrade sidladdningstider för webbimplementeringar
 * Förbättrad säkerhet
@@ -116,13 +118,15 @@ AT.js har flera förbättringar jämfört med mbox.js-biblioteket:
 >
 Du kan välja AT.js eller mbox.js i **Klientbibliotek** nedrullningsbar meny.
 
+<!-- OLD URL from above was 404 https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/mbox-download.html -->
+
 ### Skapa en målmolnkonfiguration {#creating-a-target-cloud-configuration}
 
 Om du vill att AEM ska kunna interagera med Adobe Target skapar du en Target-molnkonfiguration. Om du vill skapa konfigurationen anger du Adobe Target klientkod och inloggningsuppgifter.
 
 Du skapar bara målmolnkonfigurationen en gång eftersom du kan associera konfigurationen med flera AEM kampanjer. Om du har flera Adobe Target-klientkoder skapar du en konfiguration för varje klientkod.
 
-Du kan konfigurera molnkonfigurationen så att segment från Adobe Target synkroniseras. Om du aktiverar synkronisering importeras segment från Target i bakgrunden så snart molnkonfigurationen har sparats.
+Du kan konfigurera molnkonfigurationen så att segment från Adobe Target synkroniseras. Om du aktiverar synkronisering importeras segment från Target i bakgrunden när molnkonfigurationen sparas.
 
 Använd följande procedur för att skapa en Target-molnkonfiguration i AEM:
 
@@ -155,12 +159,12 @@ Använd följande procedur för att skapa en Target-molnkonfiguration i AEM:
    * **E-post**: Målkontots e-postadress.
    * **Lösenord**: lösenordet för målkontot.
    * **API-typ**: antingen REST eller XML
-   * **A4T Analytics Cloud-konfiguration**: Välj den Analytics-molnkonfiguration som används för målaktivitetsmål och -mått. Du behöver detta om du använder Adobe Analytics som rapportkälla när du skapar innehåll för målgruppsanpassning. Om du inte ser din molnkonfiguration kan du läsa mer i [Konfigurera A4T Analytics Cloud-konfiguration](#configuring-a-t-analytics-cloud-configuration).
+   * **A4T Analytics Cloud-konfiguration**: Välj den Analytics Cloud-konfiguration som används för mål och mått för aktivitet. Du behöver den här konfigurationen om du använder Adobe Analytics som rapportkälla när du riktar in innehåll. Om du inte ser din molnkonfiguration kan du läsa mer i [Konfigurera A4T Analytics Cloud-konfiguration](#configuring-a-t-analytics-cloud-configuration).
 
    * **Använd exakt målgruppsanpassning:** Som standard är den här kryssrutan markerad. Om du väljer det här alternativet väntar molntjänstkonfigurationen på att kontexten ska läsas in innan innehållet läses in. Se följande.
-   * **Synkronisera segment från Adobe Target:** Välj det här alternativet om du vill hämta segment som har definierats i Target för att använda dem i AEM. Du måste välja det här alternativet när API-typegenskapen är REST, eftersom infogade segment inte stöds och du alltid måste använda segment från Target. (Observera att den AEM termen segment motsvarar målgruppen.)
+   * **Synkronisera segment från Adobe Target:** Välj det här alternativet så att du kan hämta segment som är definierade i Target för att använda dem i AEM. Välj det här alternativet när API-typegenskapen är REST, eftersom textbundna segment inte stöds och du måste använda segment från Target. (Den AEM termen segment motsvarar målgruppen.)
    * **Klientbibliotek:** Välj om du vill ha mbox.js- eller AT.js-klientbiblioteket.
-   * **Använd DTM för att leverera klientbibliotek** - Välj det här alternativet om du vill använda AT.js eller mbox.js från DTM eller något annat tagghanteringssystem. Du måste [konfigurera DTM-integrering](/help/sites-administering/dtm.md) om du vill använda det här alternativet. Adobe rekommenderar att du använder DTM i stället för AEM för att leverera biblioteket.
+   * **Använd DTM för att leverera klientbibliotek** - Välj det här alternativet om du vill använda AT.js eller mbox.js från DTM eller något annat tagghanteringssystem. Konfigurera [DTM-integrering](/help/sites-administering/dtm.md) om du vill använda det här alternativet. Adobe rekommenderar att du använder DTM i stället för AEM för att leverera biblioteket.
    * **Anpassad mbox.js**: Lämna tomt om du har markerat DTM-rutan eller om du vill använda mbox.js som standard. Du kan även överföra din anpassade mbox.js. Visas bara om du har valt mbox.js.
    * **Anpassad AT.js**: Lämna tomt om du har markerat DTM-rutan eller om du vill använda AT.js som standard. Du kan även överföra dina anpassade AT.js. Visas bara om du har valt AT.js.
 
@@ -168,7 +172,7 @@ Använd följande procedur för att skapa en Target-molnkonfiguration i AEM:
    Som standard aktiveras korrekt målgruppsanpassning när du väljer att använda konfigurationsguiden för Adobe Target.
    Korrekt målinriktning innebär att molntjänstkonfigurationen väntar på att kontexten ska läsas in innan innehållet läses in. Därför kan en korrekt målinriktning i fråga om prestanda skapa en fördröjning på några millisekunder innan innehållet läses in.
    Korrekt målinriktning är alltid aktiverat på författarinstansen. På publiceringsinstansen kan du dock välja att inaktivera korrekt målanpassning globalt genom att avmarkera kryssrutan bredvid Korrekt målanpassning i molntjänstkonfigurationen (**http://localhost:4502/etc/cloudservices.html**). Du kan även aktivera och inaktivera exakt målinriktning för enskilda komponenter, oavsett vilken inställning du har i molntjänstkonfigurationen.
-   Om du har ***redan*** har skapat riktade komponenter och du ändrar den här inställningen påverkar inte ändringarna dessa komponenter. Du måste göra ändringar i den komponenten direkt.
+   Om du har ***redan*** har skapat riktade komponenter och du ändrar den här inställningen påverkar inte ändringarna dessa komponenter. Ändra dessa komponenter direkt.
 
 1. Klicka **Anslut till mål** för att initiera anslutningen med Target. Om anslutningen lyckas visas meddelandet **Anslutningen lyckades** visas. Klicka **OK** i meddelandet och sedan **OK** i dialogrutan.
 
@@ -178,7 +182,7 @@ Använd följande procedur för att skapa en Target-molnkonfiguration i AEM:
 
 När du har konfigurerat molnkonfigurationen för Target lägger du till ett Target-ramverk. Ramverket identifierar de standardparametrar som skickas till Adobe Target från de tillgängliga [Klientkontext](/help/sites-administering/client-context.md) eller [ContextHub](/help/sites-developing/ch-configuring.md) -komponenter. Target använder parametrarna för att fastställa vilka segment som gäller för den aktuella kontexten.
 
-Du kan skapa flera ramverk för en enda Target-konfiguration. Flera ramverk är användbara när du behöver skicka en annan uppsättning parametrar till Target för olika delar av webbplatsen. Skapa ett ramverk för varje uppsättning parametrar som du måste skicka. Associera varje avsnitt på webbplatsen med rätt ramverk. Observera att en webbsida bara kan använda ett ramverk åt gången.
+Du kan skapa flera ramverk för en enda Target-konfiguration. Flera ramverk är användbara när du måste skicka en annan uppsättning parametrar till Target för olika delar av webbplatsen. Skapa ett ramverk för varje uppsättning parametrar som du skickar. Associera varje avsnitt på webbplatsen med rätt ramverk. En webbsida kan bara använda ett ramverk åt gången.
 
 1. Klicka på knappen **+** (plustecken) bredvid Tillgängliga ramverk.
 1. I dialogrutan Skapa ramverk anger du en **Titel** väljer du **Adobe Target Framework** och klicka **Skapa**.
@@ -194,7 +198,7 @@ Du kan skapa flera ramverk för en enda Target-konfiguration. Flera ramverk är 
    >[!NOTE]
    Vid mappning skickas parametrar till en mbox via enkla strängar. Du kan inte mappa arrayer från ContextHub.
 
-   Använd till exempel **Profildata** om webbplatsbesökarna för att styra er Target-kampanj drar du **Profildata** till sidan. De profildatavariabler som är tillgängliga för mappning till Target-parametrar visas.
+   Använd till exempel **Profildata** om besökarna på er webbplats för att styra er Target-kampanj, dra **Profildata** till sidan. De profildatavariabler som är tillgängliga för mappning till Target-parametrar visas.
 
    ![chlimage_1-163](assets/chlimage_1-163.png)
 
@@ -214,7 +218,7 @@ Associera dina [AEM](/help/sites-authoring/activitylib.md) med din Target-molnko
 >[!NOTE]
 Vilka typer av aktiviteter som är tillgängliga bestäms av följande:
 * Om **xt_only** alternativet är aktiverat på Adobe Target-klienten (klientkod) som används på AEM för att ansluta till Adobe Target, så kan du skapa **endast** XT-aktiviteter inom AEM.
-* Om **xt_only** är **not** som är aktiverat på Adobe Target-klienten (klientkod) kan du skapa **båda** XT- och A/B-aktiviteter inom AEM.
+* Om **xt_only** option is **not** som är aktiverat på Adobe Target-klienten (klientkod) kan du skapa **båda** XT- och A/B-aktiviteter inom AEM.
 >
 **Ytterligare information:** **xt_only** är en inställning som används för en viss målklient (klientkod) och kan bara ändras direkt i Adobe Target. Du kan inte aktivera eller inaktivera det här alternativet i AEM.
 
@@ -238,16 +242,16 @@ När du associerar en sida med ramverket ärver de underordnade sidorna associat
    Se till att du väljer den specifika **ramverk** som du skapade och inte målmolnkonfigurationen som den skapades med.
 
 1. Tryck/klicka **Klar**.
-1. Aktivera webbplatsens rotsida för att replikera den till publiceringsservern. (Se [Publicera sidor](/help/sites-authoring/publishing-pages.md).)
+1. Aktivera webbplatsens rotsida så att du replikerar den till publiceringsservern. (Se [Publicera sidor](/help/sites-authoring/publishing-pages.md).)
 
    >[!NOTE]
    Om ramverket som du kopplade till sidan inte har aktiverats ännu öppnas en guide där du även kan publicera det.
 
 ## Felsöka problem med målanslutning {#troubleshooting-target-connection-problems}
 
-Utför följande åtgärder för att felsöka problem som uppstår vid anslutning till Target:
+Om du vill felsöka problem som uppstår vid anslutning till Target kan du utföra följande åtgärder:
 
 * Kontrollera att de användaruppgifter du anger är korrekta.
 * Kontrollera att AEM kan ansluta till målservern. Kontrollera till exempel att brandväggsreglerna inte blockerar utgående AEM eller att AEM har konfigurerats att använda nödvändiga proxy.
 * Sök efter användbara meddelanden i AEM fellogg. Filen error.log finns i **crx-quickstart/logs** katalog där AEM är installerad.
-* När du redigerar aktiviteten i Adobe Target pekar URL:en mot localhost. Du kan undvika detta genom att ställa in AEM externalizer på rätt URL.
+* När du redigerar aktiviteten i Adobe Target pekar URL:en mot localhost. Undvik den här förståelsen genom att ange rätt URL för AEM Externalizer.
