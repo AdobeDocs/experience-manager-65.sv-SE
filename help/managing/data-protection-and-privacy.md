@@ -1,8 +1,6 @@
 ---
 title: Dataskydd och dataintegritet - Adobe Experience Manager beredskap
-seo-title: Adobe Experience Manager Readiness for Data Protection and Data Privacy Regulations; such as GDPR, CCPA, etc
-description: Läs mer om Adobe Experience Manager stöd för de olika dataskydds- och dataintegritetsreglerna. bland annat EU:s allmänna dataskyddsförordning (GDPR), Kaliforniens konsumentintegritetslag och hur man ska följa detta när man genomför ett nytt AEM.
-seo-description: Learn about Adobe Experience Manager support for the various Data Protection and Data Privacy Regulations; including the EU General Data Protection Regulation (GDPR), the California Consumer Privacy Act and how to comply when implementing a new AEM project.
+description: Läs mer om Adobe Experience Manager stöd för de olika dataskydds- och datasekretessreglerna. Den innehåller EU:s allmänna dataskyddsförordning (GDPR), Kaliforniens konsumentintegritetslag (Privacy Act) och hur man följer den när man genomför ett nytt AEM.
 uuid: 9b0b8101-929c-4232-8c6e-1f9b8b2e0aa2
 contentOwner: AEM Docs
 topic-tags: introduction, grdp
@@ -11,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MANAGING
 discoiquuid: 0bcd7ac4-3071-466d-bd11-701f35ccf5bd
 docset: aem65
 exl-id: 46c1ca14-78f6-4b33-9fdf-1b90a9875f66
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: d8ae63edd71c7d27fe93d24b30fb00a29332658d
 workflow-type: tm+mt
-source-wordcount: '923'
+source-wordcount: '907'
 ht-degree: 0%
 
 ---
@@ -24,29 +22,29 @@ ht-degree: 0%
 >
 >Innehållet i detta dokument utgör inte juridisk rådgivning och är inte avsett som ersättning för juridisk rådgivning.
 >
->Kontakta företagets juridiska avdelning för råd angående dataskydd och dataintegritet.
+>Kontakta företagets juridiska avdelning för råd om dataskydd och dataintegritet.
 
 >[!NOTE]
 >
->Mer information om Adobe svar på sekretessfrågor och vad detta innebär för dig som Adobe-kund finns i [Adobe Sekretesscenter](https://www.adobe.com/privacy.html).
+>Mer information om Adobe svar på sekretessfrågor och vad det innebär för dig som Adobe-kund finns i [Adobe Sekretesscenter](https://www.adobe.com/privacy.html).
 
-Adobe tillhandahåller dokumentation och procedurer (med API:er när sådana finns) för kundsekretessadministratören eller AEM administratör för att hantera förfrågningar om dataskydd och dataintegritet och hjälpa våra kunder att följa dessa regler. De dokumenterade procedurerna gör det möjligt för kunderna att utföra förfrågningar manuellt eller genom att anropa API:er, om sådana finns, från en extern portal eller tjänst.
+Adobe tillhandahåller dokumentation och procedurer (med API:er när sådana finns) för att kundsekretessadministratören eller AEM ska kunna hantera förfrågningar om dataskydd och datasekretess. Det kan hjälpa er att följa dessa regler. De dokumenterade procedurerna gör att kunderna kan köra förfrågningar manuellt eller genom att anropa API:er, om sådana finns, från en extern portal eller tjänst.
 
 >[!CAUTION]
 >
 >Informationen som beskrivs här är begränsad till Adobe Experience Manager.
 >
->Data från en annan Adobe On-demand-tjänst, tillsammans med eventuella relaterade sekretessförfrågningar, kommer att kräva åtgärder för den tjänsten.
+>Data från en annan Adobe On-demand-tjänst, tillsammans med eventuella relaterade sekretessförfrågningar, kräver att åtgärder vidtas för den tjänsten.
 >
->Mer information finns på [Adobe Sekretesscenter](https://www.adobe.com/privacy.html).
+>Mer information finns i [Adobe Sekretesscenter](https://www.adobe.com/privacy.html).
 
 ## Introduktion {#introduction}
 
-Instanser av Adobe Experience Manager, och de program som körs på dem, ägs och hanteras av våra kunder.
+Förekomster av Adobe Experience Manager, och de applikationer som körs på dem, ägs och drivs av Adobe.
 
 Följaktligen är dataskyddsbestämmelser, som GDPR, CCPA med flera, i huvudsak kundernas ansvar.
 
-Som en mycket kort introduktion innehåller reglerna för datasekretess och skydd nya regler som ska följas av rollerna för:
+Som en kort introduktion innehåller reglerna för datasekretess och skydd nya regler som ska följas av rollerna för:
 
 * Affärsenheter (CCPA) och/eller datakontroller (GDPR)
 
@@ -66,9 +64,9 @@ För Adobe Experience Manager:
 
 * Förekomsterna och tillämpningarna som körs på dem ägs och hanteras av kunden.
 
-   * Detta innebär att kunden i praktiken hanterar de reglerande rollerna, bland annat affärsenheter och tjänsteleverantör, datakontroller och dataprocessor.
+   * Kunden hanterar regelrollerna, bland annat affärsenheter och tjänsteleverantör, Data Controller och Data Processor.
 
-   * Adobe Experience Platform Privacy Service kommer inte att ingå i arbetsflödet för AEM, vilket visas i diagrammet nedan.
+   * Adobe Experience Platform Privacy Service ingår inte i arbetsflödet för AEM, vilket visas i diagrammet nedan.
 
 * AEM innehåller dokumentation och förfaranden för att kundens integritetsadministratör och/eller AEM ska kunna genomföra förfrågningar om integritetsreglering. antingen manuellt eller via API:er, om sådana finns.
 
@@ -76,11 +74,11 @@ För Adobe Experience Manager:
 
    * Istället dokumenteras procedurer och API:er för användning av kundgränssnitt/portaler som hanterar förfrågningar om sekretessbestämmelser.
 
-* AEM kommer inte att innehålla några färdiga verktyg som stöder arbetsflödet för sekretessförfrågningar.
+* AEM innehåller inga färdiga verktyg som stöder arbetsflödet för sekretessförfrågningar.
 
-   * Adobe ska tillhandahålla dokumentation och procedurer för kundens integritetsadministratör och/eller AEM, så att de manuellt kan utföra förfrågningar som rör sekretessbestämmelser.
+   * Adobe tillhandahåller dokumentation och procedurer för kundens integritetsadministratör och AEM administratör, så att de manuellt kan köra förfrågningar som rör sekretesslagstiftningen.
 
-Adobe tillhandahåller rutiner för hantering av sekretessförfrågningar som rör åtkomst, borttagning och avanmälan för Adobe Experience Manager. I vissa fall finns det API:er som kan anropas från en kundutvecklad portal eller skript som kan hjälpa till med automatisering.
+Adobe tillhandahåller rutiner för hantering av sekretessförfrågningar som rör åtkomst, borttagning och avanmälan för Adobe Experience Manager. Ibland finns det API:er som kan anropas från en kundutvecklad portal eller skript som kan hjälpa till med automatisering.
 
 Följande diagram visar hur ett arbetsflöde för sekretesspolicy kan se ut (illustreras med Adobe Experience Manager 6.5):
 
@@ -113,17 +111,18 @@ Se [AEM Mobile - Dataskydd och integritet](/help/mobile/aem-mobile-gdpr-complian
 ## AEM integrering med Adobe Target och Adobe Analytics {#aem-integration-with-adobe-target-adobe-analytics}
 
 Dessa Adobe Experience Manager-integreringar är anpassade för dataskydd och sekretess (till exempel GDPR eller CCPA). Inga personuppgifter från Adobe Target eller Adobe Analytics lagras i AEM för integreringarna.
-Mer information finns i:
 
-* [Adobe Target - sekretessöversikt](https://experienceleague.adobe.com/docs/target/using/implement-target/before-implement/privacy/privacy.html)
+Mer information finns i följande:
 
-* [Adobe Analytics arbetsflöde för datasekretess](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/an-gdpr-workflow.html)
+* [Adobe Target - sekretessöversikt](https://developer.adobe.com/target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation/?lang=en)
+
+* [Adobe Analytics arbetsflöde för datasekretess](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/data-governance/an-gdpr-workflow.html)
 
 ## AEM Communities {#aem-communities}
 
-AEM Communities gillar de registrerade rätt till sin dataportabilitet, rätt till åtkomst och rätt att bli bortglömd med hjälp av [färdiga API:er](/help/communities/user-ugc-management-service.md). Dessa API:er möjliggör massborttagning och bulkexport av användargenererat innehåll och inaktiverar användarkonton som identifieras med deras auktoriserbara ID:n. Det går dock att permanent ta bort användarkontot genom att ta bort användarnoden i CRXDE Lite, vilket tar bort behovet av enkel avanmälan från systemet.
+AEM Communities utnyttjar de registrerade rätt till dataportabilitet, rätt till åtkomst och rätt att bli bortglömd av [färdiga API:er](/help/communities/user-ugc-management-service.md). Dessa API:er möjliggör massborttagning och bulkexport av användargenererat innehåll och inaktiverar användarkonton som identifieras med deras auktoriserbara ID:n. Det går dock att permanent ta bort användarkontot genom att ta bort användarnoden i CRXDE Lite, vilket tar bort behovet av enkel avanmälan från systemet.
 
-Dessutom erbjuder AEM Communities sekretess genom design tack vare sin konsol för massmoderering, som tillåter behöriga medlemmar att hitta och ta bort bidrag och information om användarna. Hanteringskonsolen för medlemmar gör det möjligt att begränsa till att förbjuda en medverkande. Dessutom ger det de registrerade rätt att ta bort de bidrag som de har skapat.
+AEM Communities erbjuder också sekretess genom design tack vare sin konsol för massmoderering, som tillåter behöriga medlemmar att hitta och ta bort användarbidrag och information. Hanteringskonsolen för medlemmar gör det möjligt att begränsa till att förbjuda en medverkande. Dessutom ger det de registrerade rätt att ta bort de bidrag som de har skapat.
 
 ## AEM Forms {#aem-forms}
 

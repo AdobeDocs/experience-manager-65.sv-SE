@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 772f6188-5e0b-4e66-b94a-65a0cc267ed3
 exl-id: 8c1ea483-7319-4e5c-be4c-d43a2b67d316
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: d8ae63edd71c7d27fe93d24b30fb00a29332658d
 workflow-type: tm+mt
-source-wordcount: '832'
+source-wordcount: '831'
 ht-degree: 0%
 
 ---
@@ -57,7 +57,7 @@ Mer information om hur man hanterar förfrågningar från registrerade GDPR gäl
 
 AEM Sites innehåller en valfri integrering med Förbättrad personalisering via Target som använder funktioner i Adobe Target On-Demand Service.
 
-Mer information om hur man hanterar förfrågningar från registrerade GDPR gällande Adobe Target finns på [Adobe Target - Sekretess och allmänna dataskyddsförordningen](https://experienceleague.adobe.com/docs/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html).
+Mer information om hur man hanterar förfrågningar från registrerade GDPR gällande Adobe Target finns på [Adobe Target - Sekretess och allmänna dataskyddsförordningen](https://developer.adobe.com/target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation/?lang=en).
 
 ## ContextHub {#contexthub}
 

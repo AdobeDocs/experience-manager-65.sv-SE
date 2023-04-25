@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 3f06f7a1-bdf0-4700-8a7f-1d73151893ba
 exl-id: 6dfaa14d-5dcf-4e89-993a-8d476a36d668
-source-git-commit: b60278940f48731ee9085635c0d4a3d7da24ebc8
+source-git-commit: d8ae63edd71c7d27fe93d24b30fb00a29332658d
 workflow-type: tm+mt
-source-wordcount: '4664'
+source-wordcount: '4663'
 ht-degree: 0%
 
 ---
@@ -113,7 +113,7 @@ När du är inloggad på JMX-konsolen söker du efter **Lucene Index Statistik**
 
 För frågestatistik kan du titta på MBean **Oak Query Statistik**.
 
-Om du vill gå in i indexen med ett verktyg som [Luke](https://code.google.com/p/luke/)måste du använda Oak-konsolen för att dumpa indexet från `NodeStore` till en filsystemkatalog. Anvisningar om hur du gör detta finns i [Lucene-dokumentation](https://jackrabbit.apache.org/oak/docs/query/lucene.html).
+Om du vill gå in i indexen med ett verktyg som [Luke](https://code.google.com/archive/p/luke/)måste du använda Oak-konsolen för att dumpa indexvärdet från `NodeStore` till en filsystemkatalog. Anvisningar om hur du gör detta finns i [Lucene-dokumentation](https://jackrabbit.apache.org/oak/docs/query/lucene.html).
 
 Du kan också extrahera indexvärdena i systemet i JSON-format. För att kunna göra detta måste du ha tillgång till `https://server:port/oak:index.tidy.-1.json`
 
