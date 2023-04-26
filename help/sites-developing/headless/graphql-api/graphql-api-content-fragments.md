@@ -3,9 +3,9 @@ title: AEM GraphQL API för användning med innehållsfragment
 description: Lär dig hur du använder innehållsfragment i Adobe Experience Manager (AEM) med AEM GraphQL API för leverans av headless-innehåll.
 feature: Content Fragments,GraphQL API
 exl-id: beae1f1f-0a76-4186-9e58-9cab8de4236d
-source-git-commit: cee709161100db6597bdb18ca03b3130d9e242f1
+source-git-commit: cf78742614fd2d35f59905895dfacb83190140cd
 workflow-type: tm+mt
-source-wordcount: '3225'
+source-wordcount: '3250'
 ht-degree: 0%
 
 ---
@@ -239,7 +239,7 @@ Inom schemat finns det enskilda fält av två baskategorier:
 
 * Fält som du genererar.
 
-   Ett urval av [Fälttyper](#field-types) används för att skapa fält baserat på hur du konfigurerar innehållsfragmentmodellen. Fältnamnen hämtas från **Egenskapsnamn** fält för **Datatyp**.
+   Ett urval av [Datatyper](#data-types) används för att skapa fält baserat på hur du konfigurerar innehållsfragmentmodellen. Fältnamnen hämtas från **Egenskapsnamn** fält för **Datatyp**.
 
    * Det finns också **Återge som** Egenskaper som ska beaktas, eftersom användare kan konfigurera vissa datatyper. t.ex. som en enda rad eller som ett multifält.
 
@@ -247,21 +247,23 @@ Inom schemat finns det enskilda fält av två baskategorier:
 
    Dessa används för att identifiera ett innehållsfragment eller för att få mer information om ett innehållsfragment.
 
-### Fälttyper {#field-types}
+### Datatyper {#data-types}
 
 GraphQL för AEM har stöd för en lista med typer. Alla Content Fragment Model-datatyper som stöds och motsvarande GraphQL-typer visas:
 
 | Content Fragment Model - datatyp | GraphQL Type | Beskrivning |
 |--- |--- |--- |
-| Enkelradig text | String, [Sträng] |  Används för enkla strängar som författarnamn, platsnamn osv. |
-| Flerradstext | Sträng |  Används för att skriva ut text, t.ex. brödtexten i en artikel |
-| Siffra |  Float, [Float] | Används för att visa flyttal och reguljära tal |
-| Boolean |  Boolean |  Används för att visa kryssrutor → enkla sant/falskt-satser |
-| Datum och tid | Kalender |  Används för att visa datum och tid i ett ISO 8086-format. Beroende på vilken typ som valts finns det tre aromer som kan användas i AEM GraphQL: `onlyDate`, `onlyTime`, `dateTime` |
-| Uppräkning |  Sträng |  Används för att visa ett alternativ från en lista med alternativ som definieras när modellen skapas |
-|  Taggar |  [Sträng] |  Används för att visa en lista över strängar som representerar taggar som används i AEM |
-| Innehållsreferens |  Sträng |  Används för att visa sökvägen till en annan resurs i AEM |
-| Fragmentreferens |  *En modelltyp* |  Används för att referera till ett annat innehållsfragment av en viss modelltyp, som definieras när modellen skapades |
+| Enkelradig text | `String`, `[String]` |  Används för enkla strängar som författarnamn, platsnamn osv. |
+| Flerradstext | `String` |  Används för att skriva ut text, t.ex. brödtexten i en artikel |
+| Siffra |  `Float`, `[Float]` | Används för att visa flyttal och reguljära tal |
+| Boolean |  `Boolean` |  Används för att visa kryssrutor → enkla sant/falskt-satser |
+| Datum och tid | `Calendar` |  Används för att visa datum och tid i ett ISO 8086-format. Beroende på vilken typ som valts finns det tre aromer som kan användas i AEM GraphQL: `onlyDate`, `onlyTime`, `dateTime` |
+| Uppräkning |  `String` |  Används för att visa ett alternativ från en lista med alternativ som definieras när modellen skapas |
+|  Taggar |  `[String]` |  Används för att visa en lista över strängar som representerar taggar som används i AEM |
+| Innehållsreferens |  `String` |  Används för att visa sökvägen till en annan resurs i AEM |
+| Fragmentreferens |  *En modelltyp* <br><br>Ett fält: `Model` - Modelltyp, refereras direkt <br><br>Multifält, med en referenstyp: `[Model]` - Array av typen `Model`, som refereras direkt från en array <br><br>Multifält, med flera refererade typer: `[AllFragmentModels]` - Array med alla modelltyper, refererad från array med unionstyp |  Används för att referera till en eller flera innehållsfragment av vissa modelltyper, som definieras när modellen skapades |
+
+{style="table-layout:auto"}
 
 ### Hjälpfält {#helper-fields}
 
