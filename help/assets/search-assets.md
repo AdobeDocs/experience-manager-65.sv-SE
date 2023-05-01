@@ -6,14 +6,14 @@ mini-toc-levels: 1
 feature: Search, Metadata
 role: User
 exl-id: 588433b2-564a-430f-9d04-480465ece2ad
-source-git-commit: aa45839c53cb2c0715c9163847351aa2391309e0
+source-git-commit: 9406dc74887d29e93461e1015a8f52fa7ee196f6
 workflow-type: tm+mt
-source-wordcount: '5556'
+source-wordcount: '5564'
 ht-degree: 4%
 
 ---
 
-# Sök resurser i [!DNL Adobe Experience Manager] {#search-assets-in-aem}
+# Sök efter digitala resurser i [!DNL Adobe Experience Manager] {#search-assets-in-aem}
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
@@ -38,7 +38,7 @@ ht-degree: 4%
 | [Begränsningar](#limitations) och [Tips](#tips) |  |  |
 | [Illustrerade exempel](#samples) |  |  |
 
-Söka efter resurser med hjälp av omsökningsfältet högst upp i [!DNL Experience Manager] webbgränssnitt. Gå till **[!UICONTROL Assets]** > **[!UICONTROL Files]** in [!DNL Experience Manager], klicka ![search_icon](assets/do-not-localize/search_icon.png) i det övre fältet anger du söknyckelord och väljer `Return`. Du kan även använda kortkommandot för nyckelord `/` (snedstreck) för att öppna Omnissearch-fältet. `Location:Assets` är förvalt för att begränsa sökningarna till DAM-resurser. [!DNL Experience Manager] innehåller förslag när du börjar skriva ett söknyckelord.
+Söka efter digitala resurser med hjälp av omsökningsfältet högst upp i [!DNL Experience Manager] webbgränssnitt. Gå till **[!UICONTROL Assets]** > **[!UICONTROL Files]** in [!DNL Experience Manager], klicka ![search_icon](assets/do-not-localize/search_icon.png) i det övre fältet anger du söknyckelord och väljer `Return`. Du kan även använda kortkommandot för nyckelord `/` (snedstreck) för att öppna Omnissearch-fältet. `Location:Assets` är förvalt för att begränsa sökningarna till DAM-resurser. [!DNL Experience Manager] innehåller förslag när du börjar skriva ett söknyckelord.
 
 Använd **[!UICONTROL Filters]** för att söka efter resurser, mappar, taggar och metadata. Du kan filtrera sökresultaten baserat på de olika alternativen (predikaten), t.ex. filtyp, filstorlek, datum då filen senast ändrades, status för resursen, information om insikter och Adobe Stock-licensiering. Du kan anpassa panelen Filter och lägga till eller ta bort sökpredikatorn med [sökfack](/help/assets/search-facets.md). The [!UICONTROL File Type] filter i [!UICONTROL Filters] panelen har kryssrutor för blandat läge. Om du inte markerar alla kapslade predikat (eller format) markeras därför kryssrutorna på första nivån delvis.
 
@@ -159,12 +159,12 @@ Du kan filtrera efter dynamiska mediebilder genom att välja **[!UICONTROL Dynam
 
 ### GQL-sökning med specifika värden i metadatafält {#gql-search}
 
-Du kan söka efter resurser baserat på exakta värden för metadatafält, som titel, beskrivning och skapare. Funktionen för fulltextsökning i GQL hämtar endast resurser vars metadatavärde exakt matchar din sökfråga. Namnen på egenskaperna (Skapare, Titel och så vidare) och värdena är skiftlägeskänsliga.
+Du kan söka efter digitala resurser baserat på exakta värden för metadatafält, som titel, beskrivning och skapare. Funktionen för fulltextsökning i GQL hämtar endast resurser vars metadatavärde exakt matchar din sökfråga. Namnen på egenskaperna (Skapare, Titel och så vidare) och värdena är skiftlägeskänsliga.
 
 | Metadatafält | Fasettvärde och -användning |
 |---|---|
 | Titel | title:John |
-| Originalformat | skapare:John |
+| Skapare | skapare:John |
 | Plats | plats:NA |
 | Beskrivning | description:&quot;Sample Image&quot; |
 | Skapare | creatortool:&quot;Adobe Photoshop&quot; |
@@ -202,19 +202,19 @@ Här är några exempel på sökformat för komplexa frågor:
 * Så här visar du resurser med ett egenskapsvärde som innehåller en viss sträng (till exempel: title = Basel Meeting Room): `title:*Meeting*`
 * Så här visar du resurser som innehåller en viss sträng och har ett specifikt egenskapsvärde (till exempel: sök efter strängen Adobe i resurser med rubriken=John Doe): `*Adobe* title:"John Doe"`
 
-## Sök efter resurser från andra [!DNL Experience Manager] erbjudanden eller gränssnitt {#search-assets-other-surfaces}
+## Sök efter digitala resurser från andra [!DNL Experience Manager] erbjudanden eller gränssnitt {#search-assets-other-surfaces}
 
 [!DNL Adobe Experience Manager] kopplar DAM-databasen till andra [!DNL Experience Manager] lösningar som ger snabbare tillgång till digitalt material och effektiviserar de kreativa arbetsflödena. Alla resursidentifieringar börjar med bläddring eller sökning. Sökfunktionen är i stort sett densamma på de olika ytorna och lösningarna. Vissa sökmetoder ändras när målgruppen, användningsexemplen och användargränssnittet varierar mellan olika målgrupper [!DNL Experience Manager] lösningar. De specifika metoderna beskrivs för de enskilda lösningarna på länkarna nedan. De universellt tillämpliga tipsen och beteendena beskrivs i den här artikeln.
 
-### Söka efter resurser från panelen Resurslänk i Adobe {#aal}
+### Söka efter digitala resurser från panelen Resurslänk i Adobe {#aal}
 
 Med Adobe Asset Link kan formgivarna nu komma åt material som lagrats i [!DNL Experience Manager Assets]utan att lämna de Adobe Creative Cloud-program som stöds. Med hjälp av panelen i appen på panelen kan du enkelt bläddra bland, söka efter, checka ut och checka in resurser [!DNL Adobe Creative Cloud] appar: [!DNL Adobe Photoshop], [!DNL Adobe Illustrator]och [!DNL Adobe InDesign]. Med Asset Link kan du också söka visuellt liknande resultat. Visuella sökresultat bygger på Adobe Sensei maskininlärningsalgoritmer och hjälper användarna att hitta estetiskt liknande bilder. Se [söka efter och bläddra bland resurser](https://helpx.adobe.com/enterprise/using/manage-assets-using-adobe-asset-link.html#UseAdobeAssetLink) med Adobe Asset Link.
 
-### Sök resurser i [!DNL Experience Manager] datorprogram {#desktop-app}
+### Sök efter digitala resurser i [!DNL Experience Manager] datorprogram {#desktop-app}
 
 Kreatörer använder datorprogrammet för att skapa [!DNL Experience Manager Assets] enkelt sökbara och tillgängliga lokalt (Win eller Mac). Creative Cloud kan enkelt visa de önskade resurserna i Mac Finder eller Utforskaren i Windows, som öppnats i skrivbordsprogram och ändrats lokalt - ändringarna sparas sedan i [!DNL Experience Manager] med en ny version som skapats i databasen. Programmet stöder enkla sökningar med ett eller flera nyckelord, `*` och `?` jokertecken, och `AND` -operator. Se [bläddra bland, söka efter och förhandsgranska resurser](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#browse-search-preview-assets) i datorprogrammet.
 
-### Sök resurser i [!DNL Brand Portal] {#brand-portal}
+### Sök efter digitala resurser i [!DNL Brand Portal] {#brand-portal}
 
 Affärsanvändare och marknadsförare använder Brand Portal för att effektivt och säkert dela godkända digitala resurser med interna team, partners och återförsäljare. Se [sökresurser på Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/search-capabilities/brand-portal-searching.html).
 
@@ -226,7 +226,7 @@ Från [!DNL Experience Manager] -användargränssnittet kan användare söka eft
 
 Du kan filtrera efter dynamiska mediebilder genom att välja **[!UICONTROL Dynamic Media]** > **[!UICONTROL Sets]** på panelen **[!UICONTROL Filters]**. Den filtrerar och visar resurser som bilduppsättningar, karuseller, blandade medieuppsättningar och rotationsuppsättningar. När författarna redigerar webbsidor kan de söka efter uppsättningar inifrån Content Finder. Det finns ett filter för uppsättningar på en snabbmeny.
 
-### Söka efter resurser i Content Finder vid redigering av webbsidor {#content-finder}
+### Söka efter digitala resurser i Content Finder vid redigering av webbsidor {#content-finder}
 
 Författare kan använda Content Finder för att söka i DAM-databasen efter relevanta resurser och använda resurserna på de webbsidor de skapar. Författare kan också använda funktionen Anslutna resurser för att söka efter resurser som är tillgängliga på en fjärrdator [!DNL Experience Manager] distribution. Författare kan sedan använda dessa resurser på webbsidor på en lokal [!DNL Experience Manager] distribution. Se [använda fjärrresurser](/help/assets/use-assets-across-connected-assets-instances.md#use-remote-assets).
 
@@ -402,7 +402,7 @@ Du kan söka efter digitala resurser baserat på en eller flera av följande ege
 | Publiceringsstatus | Publicerad eller opublicerad. |
 | Godkänd status | Godkänd eller Avvisad. |
 | Orientering | Vågrät, Lodrät eller Fyrkant. |
-| Format | Färg eller Svartvitt. |
+| Stil | Färg eller Svartvitt. |
 | Videohöjd | Anges som lägsta och högsta värde. Värdet lagras endast i metadata för videoåtergivningar. |
 | Videobredd | Anges som lägsta och högsta värde. Värdet lagras endast i metadata för videoåtergivningar. |
 | Videoformat | DVI, Flash, MPEG4, MPEG, OGG Theora, QuickTime, Windows Media. Värdet lagras i källvideons metadata och eventuella återgivningar. |
