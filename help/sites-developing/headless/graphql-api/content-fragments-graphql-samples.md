@@ -3,9 +3,9 @@ title: Lära sig använda GraphQL med AEM - exempelinnehåll och frågor
 description: Lär dig använda GraphQL med AEM för att leverera innehåll utan problem genom att utforska exempelinnehåll och frågor.
 feature: Content Fragments,GraphQL API
 exl-id: 91c5f61c-9c15-4d72-9b9b-0c23f31e7cdc
-source-git-commit: ad0f0bd8b0c230e002c734adca87da22bfa3a7cd
+source-git-commit: e773990c6bd32df65c7f62060f7eca5547b7b614
 workflow-type: tm+mt
-source-wordcount: '1530'
+source-wordcount: '1586'
 ht-degree: 1%
 
 ---
@@ -1306,15 +1306,15 @@ Den här frågan förhör:
 
 **Exempelfråga**
 
-```xml
+```graphql
 {
-  articleByPath (_path: "/content/dam/wknd/en/magazine/skitouring/skitouring") {
+  adventureByPath(_path: "/content/dam/wknd-shared/en/magazine/western-australia/western-australia-by-camper-van") {
     item {
+      _path
+      title
+      _model {
         _path
-        author
-        referencearticle {
-          _path
-          author
+        title
       }
     }
   }
@@ -1323,16 +1323,42 @@ Den här frågan förhör:
 
 ### Exempelfråga för ett kapslat innehållsfragment - flera modelltyper{#sample-wknd-nested-fragment-multiple-model}
 
+#### En refererad modelltyp
+
 Den här frågan förhör:
 
 * för flera innehållsfragment av typen `bookmark`
-   * med fragmentreferenser till andra fragment av de specifika modelltyperna `article` och `adventure`
+   * med fragmentreferenser till andra fragment av den specifika modelltypen `article`
 
 >[!NOTE]
 >
->Fältet `fragments` har datatypen `fragment-reference`, med modellerna `Article`, `Adventure` markerat.
+>Fältet `fragments` har datatypen `fragment-reference`, med modellen `Article` markerat. Frågeleveranser `fragments` som en array med `[Article]`.
 
-```xml
+```graphql
+{
+  bookmarkList {
+    items {
+        fragments {
+          _path
+          author
+        }
+     }
+  }
+}
+```
+
+#### Flera refererade modelltyper
+
+Den här frågan förhör:
+
+* för flera innehållsfragment av typen `bookmark`
+   * med fragmentreferenser till andra fragment av de specifika modelltyperna `Article` och `Adventure`
+
+>[!NOTE]
+>
+>Fältet `fragments` har datatypen `fragment-reference`, med modellerna `Article`, `Adventure` markerat. Frågeleveranser `fragments` som en array med `[AllFragmentModels]`, som är avrefererad med unionstyp.
+
+```graphql
 {
   bookmarkList {
     items {
