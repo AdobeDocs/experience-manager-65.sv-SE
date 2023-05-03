@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: c02e713e-15f3-408b-879a-d5eb014aef02
 docset: aem65
 exl-id: c4fb1b5e-e15e-450e-b882-fe27b165ff9f
-source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
+source-git-commit: a8616b3b30ac04ea24c4a869cabd47518af1a35f
 workflow-type: tm+mt
-source-wordcount: '1787'
+source-wordcount: '1781'
 ht-degree: 0%
 
 ---
@@ -67,7 +67,7 @@ Väljaren för ren återgivning använder en transformator i stället för ytter
    * En lista över HTML-taggar som ska tillåtas i den slutliga återgivningen.
    * Som standard är följande taggar tillåtna (ingen konfiguration behövs): html, head, title, body, img, p, span, ul, li, a, b, i, em, strong, h1, h2, h3, h4, h5, h6, br, noscript, div, link och script
 
-Vi rekommenderar att du konfigurerar omskrivaren med en övertäckning. Se [Övertäckningar i AEM as a Cloud Service](/help/sites-developing/overlays.md)
+Vi rekommenderar att du konfigurerar omskrivaren med en övertäckning. Se [Övertäckningar](/help/sites-developing/overlays.md)
 
 ## Sociala variationer {#social-variations}
 
