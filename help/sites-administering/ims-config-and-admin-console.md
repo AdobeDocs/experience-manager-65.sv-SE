@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: f6112dea-a1eb-4fd6-84fb-f098476deab7
 exl-id: 95eae97c-01c2-4f5c-8068-f504eab7c49e
 feature: Security
-source-git-commit: 778987e69a23f81584f7a86db2fe24df64035919
+source-git-commit: 11db7c44853f95380fa5200efaf5691ad08b3729
 workflow-type: tm+mt
-source-wordcount: '1683'
+source-wordcount: '1677'
 ht-degree: 11%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 11%
 
 AEM 6.4.3.0 introducerar [!DNL Admin Console] stöd för AEM och Adobe IMS-baserad autentisering (Identity Management System) för **AEM Managed Services** kunder.
 
-AEM på [!DNL Admin Console] gör det möjligt för AEM Managed Services-kunder att hantera alla Experience Cloud-användare i en konsol. Användare och grupper kan tilldelas till produktprofiler som är kopplade till AEM instanser, så att de kan logga in på en viss instans.
+AEM på [!DNL Admin Console] gör det möjligt för AEM Managed Services-kunder att hantera alla Experience Cloud-användare i en konsol. Användare kan tilldelas till produktprofiler som är kopplade till AEM instanser, så att de kan logga in på en viss instans.
 
 ## Viktiga funktioner {#key-highlights}
 
@@ -158,11 +158,11 @@ Instansinformationen kan kontrolleras för att identifiera instansen:
 
 ![screen_shot_2018-09-17at105601pm](assets/screen_shot_2018-09-17at105601pm.png)
 
-Under varje produktkontextinstans kommer det att finnas en associerad produktprofil. Den här produktprofilen används för att tilldela användare och grupper åtkomst.
+Under varje produktkontextinstans kommer det att finnas en associerad produktprofil. Den här produktprofilen används för att tilldela användare åtkomst.
 
 ![image2018-9-18_7-48-50](assets/image2018-9-18_7-48-50.png)
 
-Alla användare och grupper som läggs till under den här produktprofilen kan logga in på den instansen enligt exemplet nedan:
+Alla användare som läggs till under den här produktprofilen kan logga in på den instansen enligt exemplet nedan:
 
 ![screen_shot_2018-09-17at105623pm](assets/screen_shot_2018-09-17at105623pm.png)
 
