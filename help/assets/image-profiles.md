@@ -10,9 +10,9 @@ discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
 feature: Image Profiles
 role: User, Admin
 exl-id: 67240ad0-1a7c-4e58-a518-1e36d771f1a1
-source-git-commit: bbb64f44c80e96bafcd53277f6d753d84acf5189
+source-git-commit: bb0658ef33736587fbc191738d57cf586e5cba9d
 workflow-type: tm+mt
-source-wordcount: '2958'
+source-wordcount: '2956'
 ht-degree: 4%
 
 ---
@@ -63,7 +63,7 @@ För att behålla kontrollen över användningen av Smart Crop och för att opti
 <!-- * Avoid creating duplicate smart crop profiles that have the same width and height values. 
 * Name smart crops based on crop dimensions, not on end usage. Doing so helps to optimize for duplicates where a single dimension is used on multiple pages. -->
 
-Du kan välja mellan två bildbeskärningsalternativ. Du kan också välja att automatisera skapandet av färg- och bildfärgrutor eller bevara beskärningsinnehållet i olika upplösningar.
+Du kan välja mellan två bildbeskärningsalternativ: Pixelbeskärning eller Smart beskärning. Du kan också välja att automatisera skapandet av färg- och bildfärgrutor.
 
 >[!IMPORTANT]
 ・ Adobe rekommenderar att ni granskar alla genererade grödor och färgrutor för att säkerställa att de är lämpliga och relevanta för ert varumärke och era värden.
