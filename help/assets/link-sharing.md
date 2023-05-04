@@ -5,10 +5,10 @@ contentOwner: AG
 role: User
 feature: Link Sharing,Asset Management
 exl-id: 20370b00-862e-4d04-af2f-7d1c74a842dd
-source-git-commit: aa45839c53cb2c0715c9163847351aa2391309e0
+source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
 workflow-type: tm+mt
-source-wordcount: '948'
-ht-degree: 4%
+source-wordcount: '936'
+ht-degree: 3%
 
 ---
 
@@ -18,7 +18,6 @@ ht-degree: 4%
 | -------- | ---------------------------- |
 | AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/share-assets.html?lang=en) |
 | AEM 6.5 | Den här artikeln |
-| AEM 6.4 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-64/assets/administer/link-sharing.html?lang=en) |
 
 [!DNL Adobe Experience Manager Assets] Med kan du dela resurser, mappar och samlingar som en URL-adress med medlemmar i organisationen och externa enheter, inklusive partners och leverantörer. Att dela resurser via en länk är ett bekvämt sätt att göra resurser tillgängliga för externa parter utan att de först behöver logga in på [!DNL Assets].
 
@@ -73,7 +72,7 @@ Om du vill generera URL:en för resurser som du vill dela med användare använd
 
    ![Verktygsfältsalternativ för att hämta den delade resursen](assets/chlimage_1-547.png)
 
-1. Om du vill visa resurser som du har delat som länkar går du till [!DNL Assets] användargränssnittet och klicka på [!DNL Experience Manager] logotyp. Choose **[!UICONTROL Navigation]**. Välj **[!UICONTROL Shared Links]** för att visa en lista med delade resurser.
+1. Om du vill visa resurser som du har delat som länkar går du till [!DNL Assets] användargränssnittet och klicka på [!DNL Experience Manager] logotyp. Välj **[!UICONTROL Navigation]**. Välj **[!UICONTROL Shared Links]** för att visa en lista med delade resurser.
 
 1. Om du vill ta bort delningen av en resurs markerar du den och klickar på **[!UICONTROL Unshare]** i verktygsfältet. Ett bekräftelsemeddelande följer. Posten för resursen tas bort från listan.
 

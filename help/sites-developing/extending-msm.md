@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 6128c91a-4173-42b4-926f-bbbb2b54ba5b
 docset: aem65
 exl-id: bba64ce6-8b74-4be1-bf14-cfdf3b9b60e1
-source-git-commit: 7bed185be14938f1165d56f9b758961ae0f5c479
+source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
 workflow-type: tm+mt
-source-wordcount: '2579'
+source-wordcount: '2575'
 ht-degree: 0%
 
 ---
@@ -32,9 +32,9 @@ På den här sidan kan du utöka funktionerna i Multi Site Manager:
 >
 >Den här sidan bör läsas tillsammans med [Återanvända innehåll: Multi Site Manager](/help/sites-administering/msm.md).
 >
->Följande avsnitt av Omstrukturering av Sites Repository i AEM 6.4 kan också vara av intresse:
->* [Designkonfigurationer för hantering av flera webbplatser](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/sites-repository-restructuring-in-aem-6-4.html?lang=en#multi-site-manager-blueprint-configurations)
->* [Samlingskonfigurationer för flera platshanterare](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/sites-repository-restructuring-in-aem-6-4.html#multi-site-manager-rollout-configurations)
+>Följande avsnitt av Omstrukturering av anläggningstillgångar kan också vara av intresse:
+>* [Designkonfigurationer för hantering av flera webbplatser](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/restructuring/sites-repository-restructuring-in-aem-6-5.html#multi-site-manager-blueprint-configurations)
+>* [Samlingskonfigurationer för flera platshanterare](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/restructuring/sites-repository-restructuring-in-aem-6-5.html#multi-site-manager-rollout-configurations)
 
 
 >[!CAUTION]

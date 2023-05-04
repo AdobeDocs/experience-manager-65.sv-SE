@@ -13,10 +13,10 @@ docset: aem65
 feature: Brand Portal
 role: User
 exl-id: 76652a16-cad6-4e95-9e66-41efec452b03
-source-git-commit: 9d5440747428830a3aae732bec47d42375777efd
+source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
 workflow-type: tm+mt
-source-wordcount: '348'
-ht-degree: 42%
+source-wordcount: '336'
+ht-degree: 43%
 
 ---
 
@@ -26,7 +26,6 @@ ht-degree: 42%
 | -------- | ---------------------------- |
 | AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/brand-portal/publish-to-brand-portal.html?lang=en) |
 | AEM 6.5 | Den här artikeln |
-| AEM 6.4 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-64/assets/brandportal/brand-portal-publish-assets.html?lang=en) |
 
 Som Adobe Experience Manager (AEM) Assets-administratör kan du publicera resurser och mappar i AEM Assets Brand Portal-instansen (eller schemalägga publiceringsarbetsflödet till ett senare datum/tid) för din organisation. Du måste dock först konfigurera AEM Assets med varumärkesportalen. Mer information finns i [Konfigurera AEM Assets med varumärkesportalen](/help/assets/configure-aem-assets-with-brand-portal.md).
 
@@ -42,7 +41,7 @@ När replikeringen är klar kan du publicera resurser, mappar och samlingar till
 
    ![publish2bp-2](assets/publish2bp.png)
 
-1. Följande två alternativ är tillgängliga för att publicera resurserna på Brand Portal:
+1. Följande två alternativ är tillgängliga när du vill publicera mediefiler till Brand Portal:
    * [Publicera resurser direkt](#publish-to-bp-now)
    * [Publicera resurser senare](#publish-to-bp-now)
 

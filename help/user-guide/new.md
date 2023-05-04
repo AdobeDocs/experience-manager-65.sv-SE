@@ -4,9 +4,9 @@ seo-title: Resources for New AEM Users
 description: Frågor, svar och resurser för användare som inte är AEM
 seo-description: Questions, answers, and resources for users new to AEM
 exl-id: a238954f-011c-416b-81af-6cdf78ddaf85
-source-git-commit: 30327950779337ce869b6ca376120bc09826be21
+source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
 workflow-type: tm+mt
-source-wordcount: '402'
+source-wordcount: '298'
 ht-degree: 0%
 
 ---
@@ -34,23 +34,9 @@ Som licensierad kund kan du få support för AEM från [Kundtjänstteam](https:/
 
 ## Var finns dokumentation för andra versioner av AEM? {#versions}
 
-Du är på rätt plats för den senaste dokumentationen för AEM 6.5.
+Du är på rätt ställe för AEM 6.5-dokumentationen.
 
-Adobe har även dokumentation för äldre versioner av Adobe Experience Manager. Du kan använda versionskomponenten på vilken sida som helst för att flytta mellan olika versioner eller välja från den här listan.
-
-* [AEM 6.4](https://experienceleague.adobe.com/docs/experience-manager-64.html)
-* [AEM 6.3](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html)
-* [AEM 6.2](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html)**
-* [AEM 6.1](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=en)**
-* [AEM 6.0](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=en)**
-* [AEM 5.6.1](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=en)**
-* [AEM 5.6](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=en)**
-* [CQ 5.5](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=en)**
-* [CQ 5.4](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=en)**
-* [CQ 5.3](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=en)**
-* [CRX 2.3](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=en)**
-
-** Anger att versioner inte längre stöds officiellt av Adobe.
+Adobe har även dokumentation för äldre versioner av Adobe Experience Manager. Du kan ta en titt på [Äldre versioner av Adobe Experience Manager-, CQ- och CRX-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html) för mer information.
 
 ## Var finns AEM 6.5-versionsinformation? {#release-notes}
 

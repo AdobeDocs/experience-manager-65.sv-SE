@@ -3,7 +3,7 @@ title: Lära sig använda GraphQL med AEM - exempelinnehåll och frågor
 description: Lär dig använda GraphQL med AEM för att leverera innehåll utan problem genom att utforska exempelinnehåll och frågor.
 feature: Content Fragments,GraphQL API
 exl-id: 91c5f61c-9c15-4d72-9b9b-0c23f31e7cdc
-source-git-commit: e773990c6bd32df65c7f62060f7eca5547b7b614
+source-git-commit: 85f8da2a30e1bb5b78cbb36cd9b79939dd913251
 workflow-type: tm+mt
 source-wordcount: '1586'
 ht-degree: 1%
@@ -1328,7 +1328,7 @@ Den här frågan förhör:
 Den här frågan förhör:
 
 * för flera innehållsfragment av typen `bookmark`
-   * med fragmentreferenser till andra fragment av den specifika modelltypen `article`
+   * med fragmentreferenser till andra fragment av den specifika modelltypen `Article`
 
 >[!NOTE]
 >

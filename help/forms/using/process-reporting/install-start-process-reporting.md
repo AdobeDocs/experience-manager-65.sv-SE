@@ -8,9 +8,9 @@ topic-tags: process-reporting
 discoiquuid: 7c1fcde0-b983-4b24-bc19-fcee1d4f096b
 docset: aem65
 exl-id: 1272e854-fa64-4bfd-b073-8fbcf210e9b5
-source-git-commit: c47b4dcfd2fbdcb0b98ad815f5b04d8f593e4f64
+source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
 workflow-type: tm+mt
-source-wordcount: '1689'
+source-wordcount: '1669'
 ht-degree: 0%
 
 ---
@@ -29,11 +29,11 @@ Om du använder Forms Workflow kan AEM Forms-databasen innehålla en stor mängd
 
 Publiceringstjänsterna för processrapportering publicerar alla AEM Forms-data som för närvarande finns i databasen. Det innebär att om databasen innehåller äldre data som du inte vill köra rapporter och frågor på, kommer alla dessa data också att publiceras i databasen, även om de inte behövs för rapportering. Du rekommenderas att rensa dessa data innan du kör tjänsterna för att publicera data i Process Reporting-databasen. Om du gör det förbättras prestandan för både utgivartjänsten och tjänsten som frågar efter data för rapportering.
 
-Mer information om att rensa AEM Forms processdata finns i [Rensningsprocessdata](https://experienceleague.adobe.com/docs/experience-manager-64/forms/administrator-help/maintain-aem-forms-database/purging-process-data.html?lang=en).
+Mer information om att rensa AEM Forms processdata finns i [Rensningsprocessdata](/help/forms/using/admin-help/purging-process-data.md).
 
 >[!NOTE]
 >
->Tips och tricks för verktyget Rensa finns i Adobe Developer Connection artikel om [Rensningsprocesser och -jobb](https://experienceleague.adobe.com/docs/experience-manager-64/forms/administrator-help/maintain-aem-forms-database/purging-process-data.html?lang=en).
+>Tips och tricks för verktyget Rensa finns i Adobe Developer Connection artikel om [Rensningsprocesser och -jobb](/help/forms/using/admin-help/purging-process-data.md).
 
 ## Konfigurerar Process Reporting Services {#configuring-process-reporting-services}
 

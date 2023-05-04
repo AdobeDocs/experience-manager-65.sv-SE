@@ -9,9 +9,9 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: ea70758f-6726-4634-bfb4-a957187baef0
 exl-id: 85981463-189c-4f50-9d21-1d2f734b960a
-source-git-commit: 9defa6d1843007e9375d839f72f6993c691a37c0
+source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
 workflow-type: tm+mt
-source-wordcount: '1474'
+source-wordcount: '1465'
 ht-degree: 0%
 
 ---
@@ -90,7 +90,7 @@ Om för många ändringar och implementeringar görs i databasen på kort tid ka
 1. För att undvika att överskrida tillåtna gränser för observationsköer bör du:
 
    * Minska den konstanta frekvensen för implementeringar. Korta toppar i implementeringar är godtagbara, men den konstanta hastigheten bör minskas.
-   * Öka storleken på `DiffCache` enligt beskrivning i [Prestandajusteringstips > Justering av monolagring > Dokumentcache-storlek](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/configuring/configuring-performance.html?lang=en).
+   * Öka storleken på `DiffCache` enligt beskrivning i [Prestandajusteringstips > Justering av monolagring > Dokumentcache-storlek](/help/sites-deploying/configuring-performance.md).
 
 ## Identifiera och åtgärda en fast omindexeringsprocess {#identifying-and-remediating-a-stuck-re-indexing-process}
 

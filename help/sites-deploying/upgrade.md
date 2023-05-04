@@ -10,9 +10,9 @@ docset: aem65
 targetaudience: target-audience upgrader
 feature: Upgrading
 exl-id: 722d544c-c342-4c1c-80e5-d0a1244f4d36
-source-git-commit: 02fc145d5ec1458d1f71a2f353b56b944a267f3e
+source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
 workflow-type: tm+mt
-source-wordcount: '694'
+source-wordcount: '681'
 ht-degree: 0%
 
 ---
@@ -70,7 +70,6 @@ AEM presenterar nyligen [Mönsteravkännare](/help/sites-deploying/pattern-detec
 
 Mer information om vad mer som har ändrats i de senaste AEM versionerna finns i den fullständiga versionsinformationen:
 
-* [Allmän versionsinformation för Adobe Experience Manager 6.4](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/release-notes.html)
 * [Versionsinformation om Adobe Experience Manager 6.5 Senaste Service Pack](/help/release-notes/release-notes.md)
 
 ## Uppgradera - översikt {#upgrade-overview}

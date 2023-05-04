@@ -7,10 +7,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: interactive-communication
 feature: Interactive Communication
 exl-id: f65d8eb9-4d2c-4a6e-825f-45bcfaa7ca75
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
 workflow-type: tm+mt
-source-wordcount: '2188'
-ht-degree: 1%
+source-wordcount: '2167'
+ht-degree: 0%
 
 ---
 
@@ -79,7 +79,7 @@ Du kombinerar en post med en interaktiv kommunikationsmall för att skapa en int
 
 Så här skapar du interaktiv kommunikation från poster som sparats i en JSON-fil:
 
-1. Skapa en [Bevakad mapp](https://experienceleague.adobe.com/docs/experience-manager-64/forms/publish-process-aem-forms/creating-configure-watched-folder.html) och konfigurera den så att den använder batch-API:t:
+1. Skapa en [Bevakad mapp](/help/forms/using/creating-configure-watched-folder.md) och konfigurera den så att den använder batch-API:t:
    1. Logga in på AEM Forms författarinstans.
    1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Forms]** > **[!UICONTROL Configure Watched Folder]**. Tryck på **[!UICONTROL New]**.
    1. Ange **[!UICONTROL Name]** och fysisk **[!UICONTROL Path]** i mappen. Till exempel, `c:\batchprocessing`.
@@ -93,7 +93,7 @@ Så här skapar du interaktiv kommunikation från poster som sparats i en JSON-f
       |--- |--- |--- |
       | templatePath | Sträng | Ange sökvägen till den interaktiva kommunikationsmall som ska användas. Exempel: /content/dam/formsanddocuments/testsample/mediumic. Det är en obligatorisk egenskap. |
       | recordPath | Sträng | Värdet i fältet recordPath hjälper till att ange namnet på en interaktiv kommunikation. Du kan ange sökvägen till ett fält i en post som värde för fältet recordPath. Om du till exempel anger /employee/Id blir värdet på id-fältet namn för motsvarande interaktiva kommunikation. Standardvärdet är en slumpmässig [slumpmässigt UUID](https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html#randomUUID()). |
-      | usePrefillService | Boolesk | Ange värdet Falskt. Du kan använda parametern usePrefillService för att förifylla interaktiv kommunikation med data som hämtats från förifyllningstjänsten som konfigurerats för motsvarande interaktiv kommunikation. När usePrefillService är inställt på true behandlas indata-JSON-data (för varje post) som FDM-argument. Standardvärdet är false. |
+      | usePrefillService | Boolean | Ange värdet Falskt. Du kan använda parametern usePrefillService för att förifylla interaktiv kommunikation med data som hämtats från förifyllningstjänsten som konfigurerats för motsvarande interaktiv kommunikation. När usePrefillService är inställt på true behandlas indata-JSON-data (för varje post) som FDM-argument. Standardvärdet är false. |
       | batchType | Sträng | Ange värdet PRINT, WEB eller WEB_AND_PRINT. Standardvärdet är WEB_AND_PRINT. |
       | locale | Sträng | Ange språkinställningen för interaktiv kommunikation vid utdata. Körklara tjänster använder inte språkområdesalternativet, men du kan skapa en anpassad tjänst för att generera lokaliserad interaktiv kommunikation. Standardvärdet är en_US |
 
@@ -109,7 +109,7 @@ Så här skapar du interaktiv kommunikation från poster som sparats i en JSON-f
 
 #### Använd indata som sparats i en extern datakälla och som nås via formulärdatamodell för att skapa en interaktiv kommunikation {#use-fdm-as-data-source}
 
-Du kombinerar data (poster) som sparats i en extern datakälla med en interaktiv kommunikationsmall för att skapa en interaktiv kommunikation. När du skapar en interaktiv kommunikation ansluter du den till en extern datakälla via en FDM (Form Data Model) för att komma åt data. Du kan konfigurera batchbearbetningstjänsten för bevakade mappar så att data hämtas med samma formulärdatamodell från en extern datakälla. Till [skapa en interaktiv kommunikation från poster som sparats i en extern datakälla](https://experienceleague.adobe.com/docs/experience-manager-64/forms/form-data-model/work-with-form-data-model.html):
+Du kombinerar data (poster) som sparats i en extern datakälla med en interaktiv kommunikationsmall för att skapa en interaktiv kommunikation. När du skapar en interaktiv kommunikation ansluter du den till en extern datakälla via en FDM (Form Data Model) för att komma åt data. Du kan konfigurera batchbearbetningstjänsten för bevakade mappar så att data hämtas med samma formulärdatamodell från en extern datakälla. Till [skapa en interaktiv kommunikation från poster som sparats i en extern datakälla](/help/forms/using/work-with-form-data-model.md):
 
 1. Konfigurera mallens formulärdatamodell:
    1. Öppna formulärdatamodellen som är kopplad till en interaktiv kommunikationsmall.
@@ -141,7 +141,7 @@ Du kombinerar data (poster) som sparats i en extern datakälla med en interaktiv
 
    1. Spara och stäng filen.
 
-1. Skapa en [Bevakad mapp](https://experienceleague.adobe.com/docs/experience-manager-64/forms/publish-process-aem-forms/creating-configure-watched-folder.html) och konfigurera den så att den använder tjänsten Batch API:
+1. Skapa en [Bevakad mapp](/help/forms/using/creating-configure-watched-folder.md) och konfigurera den så att den använder tjänsten Batch API:
    1. Logga in på AEM Forms författarinstans.
    1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Forms]** > **[!UICONTROL Configure Watched Folder]**. Tryck på **[!UICONTROL New]**.
    1. Ange **[!UICONTROL Name]** och fysisk **[!UICONTROL Path]** i mappen. Till exempel, `c:\batchprocessing`.
@@ -155,7 +155,7 @@ Du kombinerar data (poster) som sparats i en extern datakälla med en interaktiv
       |--- |--- |--- |
       | templatePath | Sträng | Ange sökvägen till den interaktiva kommunikationsmall som ska användas. Exempel: /content/dam/formsanddocuments/testsample/mediumic. Det är en obligatorisk egenskap. |
       | recordPath | Sträng | Värdet i fältet recordPath hjälper till att ange namnet på en interaktiv kommunikation. Du kan ange sökvägen till ett fält i en post som värde för fältet recordPath. Om du till exempel anger /employee/Id blir värdet på id-fältet namn för motsvarande interaktiva kommunikation. Standardvärdet är en slumpmässig [slumpmässigt UUID](https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html#randomUUID()). |  |
-      | usePrefillService | Boolesk | Ange värdet som Sant. Standardvärdet är false.  När värdet är true läser batch-API:t data från den konfigurerade formulärdatamodellen och fyller i dem till den interaktiva kommunikationen. När usePrefillService är inställt på true behandlas indata-JSON-data (för varje post) som FDM-argument. |
+      | usePrefillService | Boolean | Ange värdet som Sant. Standardvärdet är false.  När värdet är true läser batch-API:t data från den konfigurerade formulärdatamodellen och fyller i dem till den interaktiva kommunikationen. När usePrefillService är inställt på true behandlas indata-JSON-data (för varje post) som FDM-argument. |
       | batchType | Sträng | Ange värdet PRINT, WEB eller WEB_AND_PRINT. Standardvärdet är WEB_AND_PRINT. |
       | locale | Sträng | Ange språkinställningen för interaktiv kommunikation vid utdata. Körklara tjänster använder inte språkområdesalternativet, men du kan skapa en anpassad tjänst för att generera lokaliserad interaktiv kommunikation. Standardvärdet är en_US. |
 

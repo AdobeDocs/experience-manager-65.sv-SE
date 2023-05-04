@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: e938bdc7-f8f5-4da5-81f6-7f60c6b4b8e6
 feature: Upgrading
 exl-id: ef3895b9-8d35-4881-8188-c864ae3f0b4c
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
 workflow-type: tm+mt
-source-wordcount: '1246'
+source-wordcount: '1220'
 ht-degree: 0%
 
 ---
@@ -28,8 +28,6 @@ Den kan användas för att migrera data från äldre CQ-versioner baserade på A
 
 Du kan hämta den senaste versionen av crx2oak från den offentliga Adobe-databasen på den här platsen:
 [https://repo1.maven.org/maven2/com/adobe/granite/crx2oak/](https://repo1.maven.org/maven2/com/adobe/granite/crx2oak/)
-
-Listan över ändringar och korrigeringar för den senaste versionen finns i [Versionsinformation för CRX2Oak](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/crx2oak.html).
 
 >[!NOTE]
 >

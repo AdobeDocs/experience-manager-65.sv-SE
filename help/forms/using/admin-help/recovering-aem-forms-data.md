@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 4e093114-219b-4018-9530-9002eb665448
 exl-id: 9e648bab-9284-4fda-abb4-8bd7cd085981
-source-git-commit: 4fa868f3ae4778d3a637e90b91f7c5909fe5f8aa
+source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
 workflow-type: tm+mt
-source-wordcount: '1180'
+source-wordcount: '1122'
 ht-degree: 0%
 
 ---
@@ -57,10 +57,10 @@ Om en enskild nod i ett Multinode-kluster inte fungerar och de återstående nod
 1. (WebSphere® Application Server) Om du återställer till en ny instans av WebSphere® Application Server kör du kommandot restoreConfig.bat/sh.
 1. Återställ AEM formulärdatabas genom att först köra en databasåterställningsåtgärd med hjälp av databasens säkerhetskopieringsfiler och sedan använda transaktionsupprepningsloggarna på den återställda databasen. (Se [AEM](/help/forms/using/admin-help/files-back-recover.md#aem-forms-database).) Mer information finns i en av följande artiklar i kunskapsbasen:
 
-   * [DB2® Säkerhetskopiering och återställning av AEM formulär](https://experienceleague.adobe.com/docs/experience-manager-64/forms/administrator-help/aem-forms-backup-recovery/files-back-recover.html?lang=en#db2)
-   * [Säkerhetskopiering och återställning av oracle för AEM](https://experienceleague.adobe.com/docs/experience-manager-64/forms/administrator-help/aem-forms-backup-recovery/files-back-recover.html?lang=en#oracle)
-   * [Microsoft® SQL Server Backup and Recovery for AEM forms](https://experienceleague.adobe.com/docs/experience-manager-64/forms/administrator-help/aem-forms-backup-recovery/files-back-recover.html?lang=en#sql-server)
-   * [MySQL Backup and Recovery for AEM forms](https://experienceleague.adobe.com/docs/experience-manager-64/forms/administrator-help/aem-forms-backup-recovery/files-back-recover.html?lang=en#mysql)
+   * [DB2](/help/forms/using/admin-help/files-back-recover.md#db2)
+   * [Säkerhetskopiering och återställning av oracle för AEM](/help/forms/using/admin-help/files-back-recover.md#oracle)
+   * [Microsoft](/help/forms/using/admin-help/files-back-recover.md#sql-server)
+   * [MySQL Backup and Recovery for AEM forms](/help/forms/using/admin-help/files-back-recover.md#mysql)
 
 1. Återställ GDS-katalogen genom att först ta bort innehållet i GDS-katalogen i den befintliga installationen av AEM formulär och sedan kopiera innehållet i GDS-katalogen från den säkerhetskopierade GDS-katalogen. Om du har ändrat GDS-katalogplatsen finns mer information i [Ändra GDS-platsen under återställning](recovering-aem-forms-data.md#changing-the-gds-location-during-recovery).
 1. Byt namn på GDS-säkerhetskopieringskatalogen som ska återställas enligt följande exempel:

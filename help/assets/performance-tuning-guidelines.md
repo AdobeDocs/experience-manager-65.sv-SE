@@ -6,9 +6,9 @@ mini-toc-levels: 1
 role: Architect, Admin
 feature: Asset Management
 exl-id: 1d9388de-f601-42bf-885b-6a7c3236b97e
-source-git-commit: e3caa3e3067cf5e29cfcdf4286047eb346aefa23
+source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
 workflow-type: tm+mt
-source-wordcount: '2687'
+source-wordcount: '2680'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Här är några viktiga fokusområden där du kan identifiera och åtgärda pres
 
 ## Plattform {#platform}
 
-Experience Manager stöds på ett antal plattformar, men Adobe har funnit det bästa stödet för inbyggda verktyg i Linux och Windows, vilket ger optimala prestanda och förenklad implementering. Bäst är att du driftsätter ett 64-bitars operativsystem för att uppfylla de höga minneskraven i en [!DNL Experience Manager Assets] distribution. Precis som med andra Experience Manager-distributioner bör du implementera tarMK där det är möjligt. Även om StjärmMK inte kan skalas bortom en enda författarinstans, fungerar det bättre än MongoMK. Du kan lägga till instanser för TjärtMK-avlastning för att öka arbetsflödets bearbetningskraft [!DNL Experience Manager Assets] distribution.
+Experience Manager stöds på ett antal plattformar, men Adobe har funnit det bästa stödet för inbyggda verktyg i Linux och Windows, vilket ger optimala prestanda och förenklad implementering. Bäst är att du driftsätter ett 64-bitars operativsystem för att uppfylla de höga minneskraven i en [!DNL Experience Manager Assets] distribution. Precis som med andra Experience Manager-distributioner bör du implementera tarMK där det är möjligt. Även om TonaMK inte kan skalas bortom en enda författarinstans, fungerar det bättre än MongoMK. Du kan lägga till instanser för TjärtMK-avlastning för att öka arbetsflödets bearbetningskraft [!DNL Experience Manager Assets] distribution.
 
 ### Tillfällig mapp {#temp-folder}
 
@@ -222,7 +222,7 @@ XMP återföring uppdaterar originalresursen när metadata ändras i [!DNL Exper
 * En version av resursen skapas
 * [!UICONTROL DAM Update Asset] körs mot resursen
 
-De listade resultaten kräver stora resurser. Adobe rekommenderar därför att XMP avaktiveras om det inte behövs. Mer information finns i [XMP](https://experienceleague.adobe.com/docs/experience-manager-64/assets/administer/xmp-writeback.html).
+De listade resultaten kräver stora resurser. Adobe rekommenderar därför att XMP avaktiveras om det inte behövs. Mer information finns i [XMP](/help/assets/xmp-writeback.md).
 
 Om du importerar en stor mängd metadata kan det leda till resurskrävande XMP återskrivningsaktivitet om körningsarbetsflödesflaggan är markerad. Planera en sådan import under begränsad serveranvändning så att prestanda för andra användare inte påverkas.
 

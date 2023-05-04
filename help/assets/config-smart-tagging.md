@@ -5,9 +5,9 @@ contentOwner: AG
 role: Admin
 feature: Tagging,Smart Tags
 exl-id: 9f68804f-ba15-4f83-ab1b-c249424b1396
-source-git-commit: 83e9ab570fac686fd53c9c2594cbfb2c05a89a0c
+source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
 workflow-type: tm+mt
-source-wordcount: '1999'
+source-wordcount: '1982'
 ht-degree: 26%
 
 ---
@@ -293,7 +293,7 @@ Om du vill kontrollera om Smart Content Service är utbildad i dina taggar i öv
 
    * Oförmåga att identifiera små skillnader i bilder. Till exempel tunna eller jämna skjortor.
    * Oförmåga att identifiera taggar baserat på små mönster/delar av en bild. Till exempel logotyper på T-shirts.
-   * Taggning stöds i de språkområden som [!DNL Experience Manager] stöds i. En lista med språk finns på [Versionsinformation för Smart Content Services](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/smart-content-service-release-notes.html).
+   * Taggning stöds i de språkområden som [!DNL Experience Manager] stöds i.
 
 * Om du vill söka efter resurser med smarta taggar (vanliga eller förbättrade) använder du [!DNL Assets] Omnissearch (fulltextsökning). Det finns inget separat sökpredikat för smarta taggar.
 

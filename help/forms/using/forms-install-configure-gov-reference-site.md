@@ -8,9 +8,9 @@ contentOwner: anujkapo
 discoiquuid: fe5da0aa-d3a8-4b77-a447-9e429fdc2816
 docset: aem65
 exl-id: 1fee474e-7da5-4ab2-881a-34b8e055aa29
-source-git-commit: d0233ba5358f961339317bc1d63d51f1826d8c13
+source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
 workflow-type: tm+mt
-source-wordcount: '4655'
+source-wordcount: '4648'
 ht-degree: 1%
 
 ---
@@ -225,8 +225,8 @@ Det här avsnittet innehåller information och instruktioner om konfigurationen 
 
 **Referenser:**
 
-1. [Microsoft Dynamics OData-konfiguration](https://experienceleague.adobe.com/docs/experience-manager-64/forms/form-data-model/ms-dynamics-odata-configuration.html)
-1. [Konfigurera Microsoft Dynamics för AEM Forms](https://helpx.adobe.com/experience-manager/kt/forms/using/config-dynamics-for-aem-forms.html)
+1. [Microsoft Dynamics OData-konfiguration](/help/forms/using/ms-dynamics-odata-configuration.md)
+1. [Konfigurera Microsoft Dynamics för AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/using-ms-dynamics-with-aem-forms.html)
 
 #### Molntjänsten MS Dynamics OData {#ms-dynamics-odata-cloud-service}
 

@@ -5,10 +5,10 @@ contentOwner: AG
 role: Developer
 feature: Search
 exl-id: 9e33d1c0-232b-458a-ad6a-f595aa541a5a
-source-git-commit: 0db95c4e7fc1ca20ce4f2d352c1276aa546dc7c3
+source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
 workflow-type: tm+mt
-source-wordcount: '838'
-ht-degree: 15%
+source-wordcount: '825'
+ht-degree: 12%
 
 ---
 
@@ -22,7 +22,7 @@ Du kan också lägga till fler flikar i [!DNL Assets] admin panel.
 
 >[!CAUTION]
 >
->Från och med [!DNL Experience Manager] 6.4, Classic UI är föråldrat. Information finns på [borttagna och borttagna funktioner](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/deprecated-removed-features.html). Adobe rekommenderar att du använder ett användargränssnitt som har stöd för pekfunktioner. Information om anpassning finns i [sökfack](/help/assets/search-facets.md).
+>Från och med [!DNL Experience Manager] 6.4, Classic UI är föråldrat. Adobe rekommenderar att du använder ett användargränssnitt som har stöd för pekfunktioner. Information om anpassning finns i [sökfack](/help/assets/search-facets.md).
 
 ## Övertäckning {#overlaying}
 
@@ -273,7 +273,7 @@ Följande predikat är tillgängliga som förkonfigurerade ExtJS-widgetar.
 | predikateName | Sträng | Predikatets namn. Standardvärdet är `path` |
 | rootPath | Sträng | Predikatets rotsökväg. Standardvärdet är `/content/dam` |
 | pathFieldPredicateName | Sträng | Standardvärdet är `folder` |
-| showFlatOption | Boolesk | Flagga som visar kryssrutan `search in subfolders`. Standardvärdet är true. |
+| showFlatOption | Boolean | Flagga som visar kryssrutan `search in subfolders`. Standardvärdet är true. |
 
 ### DatePredicate {#datepredicate}
 
@@ -291,7 +291,7 @@ Följande predikat är tillgängliga som förkonfigurerade ExtJS-widgetar.
 | predikateName | Sträng | Predikatets namn. Standardvärdet är `daterange` |
 | egenskapsnamn | Sträng | Namn på JCR-egenskapen. Standardvärdet är `jcr:content/metadata/cq:tags` |
 | komprimera | Sträng | Komprimera nivå. Standardvärdet är `level1` |
-| triggerSearch | Boolesk | Flagga för att utlösa sökning vid kontroll. Standardvärdet är false |
+| triggerSearch | Boolean | Flagga för att utlösa sökning vid kontroll. Standardvärdet är false |
 | searchCallback |  -funktion | Återanrop för att utlösa sökning. Standardvärdet är `CQ.wcm.SiteAdmin.doSearch` |
 | searchTimeoutTime | Siffra | Timeout innan searchCallback aktiveras. Standardvärdet är 800 ms |
 
