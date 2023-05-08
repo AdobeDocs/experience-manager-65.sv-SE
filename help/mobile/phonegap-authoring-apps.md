@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-adobe-phonegap-enterprise
 discoiquuid: abfeea65-102d-4800-abeb-304d61afcc13
 exl-id: 073daff7-0c1d-4715-bfd4-3e2336e4cb88
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 85d39e59b82fdfdcd310be61787a315668aebe38
 workflow-type: tm+mt
-source-wordcount: '1024'
+source-wordcount: '1015'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (t.ex. Reagera). [Läs mer](/help/sites-developing/spa-overview.md).
+>Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (till exempel React). [Läs mer](/help/sites-developing/spa-overview.md).
 
 Med AEM Mobile Dashboard kan du skapa, bygga och driftsätta mobilprogram, skapa, ta bort och redigera programmetadata. När applikationen är live kan ni analysera applikationsanalyser, inklusive livscykelvärden och användningsstatistik, för att förbättra kundkonverteringen och varumärkeslojaliteten.
 
@@ -45,7 +45,7 @@ Följ de här stegen för att komma till startsidan för programkatalogen:
 
 ## AEM Mobile App Dashboard {#the-aem-mobile-app-dashboard}
 
-Om du väljer ett AEM Mobile-program i katalogen visas dess kontrollpanel. Här kan du hantera ditt program, visa statistik, bygga, distribuera och hantera ditt innehåll för mobilappar.
+Om du väljer ett AEM Mobile-program i katalogen visas dess kontrollpanel. Här kan du hantera ditt program, visa statistik, bygga, distribuera och hantera ditt mobilappsinnehåll.
 
 Du kan expandera till varje platta i AEM Mobile Dashboard om du vill visa eller redigera information genom att klicka på.. i det nedre högra hörnet.
 
@@ -53,7 +53,7 @@ Du kan expandera till varje platta i AEM Mobile Dashboard om du vill visa eller 
 
 ### Hantera programpanel {#the-manage-app-tile}
 
-I Manage App Tile visas programikonen, namn, beskrivning, plattformar som stöds, hur du ringer hem för att få information om uppdaterings-URL:en och versionen. Du kan fördjupa dig i den här rutan om du vill redigera och underhålla PhoneGap Application Configuration (config.xml) och förbereda ditt program för att skickas till olika programbutiker för distribution.
+I Manage App Tile visas programikonen, namn, beskrivning, plattformar som stöds, hur du ringer hem för att få information om uppdaterings-URL:en och versionen. Du kan fördjupa dig i den här rutan om du vill redigera och underhålla PhoneGap Application Configuration (config.xml) och förbereda ditt program för att skickas till de olika programbutikerna för distribution.
 
 Klicka [här](/help/mobile/phonegap-app-details-tile.md) för mer information.
 
@@ -69,17 +69,17 @@ Innehåll kan skapas, uppdateras och tas bort i AEM Mobile på ungefär samma s�
 
 När du har lagt till eller ändrat innehåll via panelen Hantera sidinnehåll kan du skicka ut dessa ändringar till dina kunder med en uppdatering av innehållsreleasen.
 
-Med innehållspaketet kan AEM App Author hantera sidinnehåll i AEM och låta utvecklingsteamet göra ändringar i ditt PhoneGap Shell-program (t.ex. appramverk eller infrastruktur) och sedan skicka ut ändringarna till dina kunder snabbt och utan att behöva registrera en utvecklare som kan skicka in ändringarna till olika butiker för distribution.
+Med innehållspaketet kan AEM App Author hantera sidinnehåll i AEM och låta utvecklingsteamet göra ändringar i ditt PhoneGap Shell-program (d.v.s. appramverk eller infrastruktur) och sedan skicka ut ändringarna till dina kunder snabbt och utan att behöva registrera en utvecklare som kan skicka in ändringarna till olika butiker för distribution.
 
 Innehållspaket skapar en ZIP-fil, som betraktas som ett innehållspaket, för varje uppdatering. Dessa paket innehåller HTML-resurser och HTML-sidor som genereras när programmet återges och är tillräckligt intelligenta för att bara paketera de filer som har ändrats sedan den senaste uppdateringen.
 
-Panelerna Hantera innehållspaket **Typ** -kolumnen visar antingen &quot;App&quot; för att beteckna Application Shell-innehåll, till exempel ramverk eller infrastruktur för appen som hanteras av en utvecklare eller &quot;Content&quot; som representerar sidinnehåll som hanteras av innehållsförfattaren.
+Panelerna Hantera innehållspaket **Typ** kolumnen visar antingen App (App) för att beteckna Application Shell-innehåll, till exempel ramverk eller infrastruktur för appen som hanteras av en utvecklare eller Content (Content) som representerar sidinnehåll som hanteras av innehållsförfattaren.
 
-Innehåll kan representeras som ett språk eller som en viss del av programmet där flera innehållsversionspaket används av programmet. Alternativet att paketera innehållet är utformat för att vara flexibelt och helt i linje med hur du vill hantera innehållet för programmet.
+Innehåll kan representeras som ett språk eller som en viss del av programmet där flera innehållsversionspaket används av programmet. Valet av hur ni paketerar ert innehåll är flexibelt och helt i linje med hur ni vill hantera innehåll för er applikation.
 
 The **Ändrad** -kolumnen anger när sidor senast ändrades.
 
-The **Mellanlagrad** visas när den senaste innehållsuppdateringen skapades. Om du vill skapa en ny innehållsuppdatering och mellanlagra ändringarna öppnar du alla poster i rutan och skapar en ny uppdatering.
+The **Mellanlagrad** visas när den senaste innehållsuppdateringen skapades. Om du vill skapa en innehållsuppdatering och mellanlagra dina ändringar öppnar du en valfri post i rutan och skapar en uppdatering.
 
 The **Publicerad** visas när den senaste innehållsuppdateringen publicerades och gjordes tillgänglig för dina kunder. Om du vill publicera innehåll måste du först mellanlagra innehållet och sedan publicera uppdateringen genom att gå in i den här rutan och publicera från konsolen för information om innehållsrelease.
 
@@ -89,11 +89,11 @@ Den här ikonen representerar ett innehålls-releasepaket för programskalet
 
 ![](do-not-localize/chlimage_1-6.png)
 
-De här ikonerna representerar ett paket för innehållsrelease för appinnehåll
+De här ikonerna representerar ett innehålls-releasepaket för appinnehåll
 
 ### The PhoneGap Build Tile {#the-phonegap-build-tile}
 
-The **PhoneGap Build** ansluter med [https://build.phonegap.com](https://build.phonegap.com) för att bygga och vara värd för fjärrbuider. När bygget har byggts blir det tillgängligt antingen som nedladdning eller direkt till enheten via en QR-kod.
+The **PhoneGap Build** ansluter med [https://build.phonegap.com](https://build.phonegap.com) för att bygga och vara värd för fjärrbyggen. När bygget har byggts blir det tillgängligt antingen som nedladdning eller direkt till enheten via en QR-kod.
 
 Du kan även hämta enhetskällan för att bygga lokalt via [PhoneGap CLI](https://docs.phonegap.com/en/3.5.0/guide_cli_index.md.html).
 
@@ -107,7 +107,7 @@ Du kan även hämta enhetskällan för att bygga lokalt via [PhoneGap CLI](https
 >
 >Se [Konfigurera Cloud Servicen för Adobe Mobile Services](/help/mobile/configure-adobe-mobile-cloud-service.md) för mer information.
 
-AEM Mobile integrerar med Adobe Analytics via [Adobe Mobile Services SDK](https://www.adobe.com/ca/solutions/digital-marketing/mobile-services/app-sdk.html) (AMS).
+AEM Mobile kan integreras med Adobe Analytics via [Adobe Mobile Services SDK](https://experienceleague.adobe.com/docs/mobile.html?lang=en) (AMS).
 
 Kontrollcentret **Mätplatta** visar sammanfattningsanalyser som hämtats från AMS för ditt program. Du kan gå in på kontrollpanelen för analyser genom att klicka på ... längst ned till höger.
 

@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: administering-on-demand-services-app
 discoiquuid: 393cf504-917e-4bf6-9a8b-b7a5bd862c65
 exl-id: 0ead982d-2315-4947-b762-596aa2aa42a1
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 85d39e59b82fdfdcd310be61787a315668aebe38
 workflow-type: tm+mt
-source-wordcount: '946'
+source-wordcount: '928'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
->Befintliga AEM Mobile-appskunder som migrerar från AEM 6.2 eller 6.3 till AEM 6.5 kan fortsätta använda AEM Mobile-appar genom att ladda ned en [paket från PackageShare](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/compatpack/aem-mobile-package). Nya installationer av AEM 6.5 stöder dock inte AEM Mobile Apps-funktioner.
+>Befintliga AEM Mobile-appskunder som migrerar från AEM 6.2 eller 6.3 till AEM 6.5 kan fortsätta använda AEM Mobile-appar genom att hämta ett paket från PackageShare. Nya installationer av AEM 6.5 stöder dock inte AEM Mobile Apps-funktioner.
 
 För att kunna använda AEM för att producera innehåll för AEM Mobile-program måste du integrera den AEM instansen med det molnbaserade AEM Mobile On-demand Services-kontot och -projekten.
 
@@ -35,9 +35,9 @@ Följ de här stegen för att konfigurera AEM Mobile och på så sätt låta anv
 
 För att komma igång med AEM Mobile måste du:
 
-* **Begär en API-nyckel**: Om du vill få åtkomst till API:t för On-Demand Services måste du begära en API-nyckel. Om du vill begära API-nyckeln fyller du i [PDF form](https://helpx.adobe.com/digital-publishing-solution/help/integrating-dps.html). Skicka det ifyllda formuläret till Adobe Developer Support: [wwds@adobe.com](mailto:wwds@adobe.com)
+* **Begär en API-nyckel**: Om du vill få åtkomst till API:t för On-Demand Services måste du begära en API-nyckel. Om du vill begära API-nyckeln fyller du i [PDF form](https://helpx.adobe.com/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html). Skicka det ifyllda formuläret till Adobe Developer Support: [wwds@adobe.com](mailto:wwds@adobe.com)
 
-* **Generera enhets-ID och enhetstoken**: När du har fått din API-nyckel kan du generera enhets-ID och enhetstoken. Gå till [https://aex.aemmobile.adobe.com](https://aex.aemmobile.adobe.com/) och gör följande:
+* **Generera enhets-ID och enhetstoken**: När du har fått din API-nyckel kan du generera enhets-ID och enhetstoken. Gå till `https://aex.aemmobile.adobe.com` och gör följande:
 
    * Ange API-nyckeln
    * Logga in med en Adobe ID som du har lagt till i ett AEM Mobile-projekt med följande behörigheter (se stegen nedan för att skapa ett projekt)
@@ -49,7 +49,7 @@ Om alla villkor uppfylls genereras ett enhets-ID och en enhetstoken.
 
 >[!NOTE]
 >
->Den Adobe ID som behövs ska ges åtkomst till ett AEM Mobile-projekt. Se [Kontoadministration för AEM Mobile](https://helpx.adobe.com/digital-publishing-solution/help/account-admin-dps.html) i onlinehjälpen.
+>Den Adobe ID som behövs ska ges åtkomst till ett AEM Mobile-projekt. Se [Kontoadministration för AEM Mobile](https://helpx.adobe.com/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html) i onlinehjälpen.
 
 ## Skapa projekt för AEM Mobile {#creating-projects-for-aem-mobile}
 
@@ -65,7 +65,7 @@ Om du vill skapa ett projekt måste du logga in på On-Demand Services-portalen 
 
 AEM konfigurering omfattar följande steg för kopplingskonfiguration. När AEM Mobile Connector-konfigurationen är klar kan användaren konfigurera användargrupper och behörigheter.
 
-AEM Mobile On-Demand-kontakten används för att binda AEM Mobile-hanterat innehåll till Adobe Experience Manager Mobile On-Demand-tjänster. Detta gör att innehållsförfattare kan skapa och hantera material för mobilapplikationer med hjälp av AEM verktyg och AEM Mobile On-Demand-tjänster för enkel distribution av mobilmaterial.
+AEM Mobile On-Demand-kontakten används för att binda AEM Mobile-hanterat innehåll med Adobe Experience Manager Mobile On-Demand-tjänster. Detta gör att innehållsförfattare kan skapa och hantera material för mobilapplikationer med hjälp av AEM verktyg och AEM Mobile On-Demand-tjänster för enkel distribution av mobilmaterial.
 
 >[!NOTE]
 >

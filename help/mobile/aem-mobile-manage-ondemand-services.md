@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: administering-on-demand-services-app
 discoiquuid: c08729f6-1512-4aee-82bb-7cc05749a72f
 exl-id: 5d2b9743-9601-46e6-9d73-3bf734e04a30
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 85d39e59b82fdfdcd310be61787a315668aebe38
 workflow-type: tm+mt
-source-wordcount: '299'
+source-wordcount: '259'
 ht-degree: 1%
 
 ---
@@ -45,9 +45,7 @@ Med preflight-appen Mobile On Demand kan du visa alla projekt som du har tillgå
 
 >[!NOTE]
 >
->AEM Preflight-appen används för att förhandsgranska innehåll och bläddra bland sidor. Om du vill veta mer om Preflight-appen klickar du [här](https://helpx.adobe.com/digital-publishing-solution/help/preflight-app.html).
->
->AEM Preflight-appen finns i [iTunes App Store](https://itunes.apple.com/us/app/adobe-experience-manager-mobile/id1042687518?mt=8), [Google Play Store](https://play.google.com/store/apps/details?id=com.adobe.dps.preflight&amp;hl=en)och [Windows Store](https://www.microsoft.com/en-us/store/p/adobe-experience-manager-mobile-preflight/9nblggh5wmxq).
+>AEM Preflight-appen används för att förhandsgranska innehåll och bläddra bland sidor. Om du vill veta mer om Preflight-appen klickar du [här](https://helpx.adobe.com/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html).
 
 ### Komma framåt {#getting-ahead}
 

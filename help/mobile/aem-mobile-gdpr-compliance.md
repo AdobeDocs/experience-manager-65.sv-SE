@@ -1,15 +1,13 @@
 ---
-title: AEM Mobile - GDPR-beredskap
-seo-title: AEM Mobile - GDPR Readiness
-description: "AEM Mobile - GDPR-beredskap"
-seo-description: null
+title: Adobe Experience Manager Mobile - GDPR-beredskap
+description: Adobe Experience Manager Mobile - GDPR-beredskap
 uuid: 817c434f-4b78-40f7-99d6-6efafdedb77e
 contentOwner: trushton
 discoiquuid: 9399dd3d-a485-4f53-a6f2-7b190da4235b
 exl-id: d06e675f-fb61-47da-85de-e0b50dd44153
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 85d39e59b82fdfdcd310be61787a315668aebe38
 workflow-type: tm+mt
-source-wordcount: '692'
+source-wordcount: '691'
 ht-degree: 0%
 
 ---
@@ -24,15 +22,15 @@ ht-degree: 0%
 
 AEM Mobile är redo att hjälpa kunderna med deras GDPR-efterlevnadsskyldigheter. Inga personuppgifter lagras i AEM Mobile. Om du är etablerad kan du logga in på Adobe Experience Mobile med din Adobe ID.
 
-[https://aemmobile.adobe.com/signin/index.html](https://aemmobile.adobe.com/signin/index.html)
+<!-- [https://aemmobile.adobe.com/signin/index.html](https://aemmobile.adobe.com/signin/index.html) -->
 
 ## Adobe Digital Publishing Suite {#adobe-digital-publishing-suite}
 
-Adobe digitala publiceringsprodukt (som föregår AEM Mobile) stöder Adobe:s beredskapsinitiativ för GDPR. Se [https://www.adobe.com/privacy/general-data-protection-regulation.html](https://www.adobe.com/privacy/general-data-protection-regulation.html). Nedan ges information om stöd för GDPR-relevanta funktioner i Digital Publishing Suite-produkten, inklusive hur man arbetar med Adobe för att initiera GDPR-förfrågningar.
+Adobe digital publishing product (som föregår AEM Mobile) stöder beredskapsinitiativ i Adobe GDPR. Se [https://www.adobe.com/privacy/general-data-protection-regulation.html](https://www.adobe.com/privacy/general-data-protection-regulation.html). Nedan ges information om stöd för GDPR-relevanta funktioner i Digital Publishing Suite-produkten, inklusive hur man arbetar med Adobe för att initiera GDPR-förfrågningar.
 
 För att vara säker på att du inte blandar ihop AEM Mobile med den äldre Digital Publishing Suite-produkten kan du logga in på Digital Publishing Suite här:
 
-[https://digitalpublishing.acrobat.com/welcome.html](https://digitalpublishing.acrobat.com/welcome.html)
+[https://acrobat.adobe.com/us/en/](https://acrobat.adobe.com/us/en/)
 
 ### Initiera en GDPR-begäran {#initiating-a-gdpr-request}
 
@@ -40,7 +38,7 @@ Kontakta Adobe kundtjänst för att starta en GDPR-förfrågan om Digital Publis
 
 Följande ID krävs för att hitta kunddata. Alla delmängder som tas emot innebär att andra ID:n inte är tillämpliga för den här användaren.
 
-Obligatorisk:
+Obligatoriskt:
 
 * Kundens kontrakt-ID: *dpsc-contractId*
 
@@ -70,7 +68,7 @@ Adobe har mycket lite information som associeras direkt med en viss användare. 
 
 **Vilka personuppgifter spåras med Analytics?**
 
-Inget. Data spåras, men på appnivå (inte personlig). Detta inkluderar händelser som starter, krascher, stängningar, aktiviteter, köp eller folioövertäckningar. Geografiska platser, namn, enhets-ID:n eller IP-adresser spåras inte.
+Ingen. Data spåras, men på appnivå (inte personlig). Detta inkluderar händelser som starter, krascher, stängningar, aktiviteter, köp eller folioövertäckningar. Geografiska platser, namn, enhets-ID:n eller IP-adresser spåras inte.
 
 **Slutanvändaren tillhandahöll sin information men inget hittades. Varför inte?**
 
@@ -80,7 +78,7 @@ I takt med att Digital Publishing Suite-produkten utvecklades ändrades implemen
 
 Kontakta Adobe kundtjänst för att starta en GDPR-förfrågan.
 
-Här följer ett exempel på indata och resultat från en Digital Publishing Suite GDPR-förfrågan:
+Här är ett exempel på indata och resultat från en Digital Publishing Suite GDPR-förfrågan:
 
 #### Indata: {#inputs}
 

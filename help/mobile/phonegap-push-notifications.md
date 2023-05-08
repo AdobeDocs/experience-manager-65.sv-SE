@@ -1,8 +1,6 @@
 ---
 title: Push-meddelanden
-seo-title: Push Notifications
-description: Följ den här sidan om du vill veta mer om hur du använder push-meddelanden i en AEM Mobile-app.
-seo-description: Follow this page to learn about how to use push notifications in an AEM Mobile app.
+description: Följ den här sidan om du vill veta mer om hur du använder push-meddelanden i en Adobe Experience Manager Mobile-app.
 uuid: 0ed8b183-ef81-487f-8f35-934d74ec82af
 contentOwner: User
 content-type: reference
@@ -10,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: ed8c51d2-5aac-4fe8-89e8-c175d4ea1374
 exl-id: 375f2f40-1b98-4e21-adee-cbea274e6a2a
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 85d39e59b82fdfdcd310be61787a315668aebe38
 workflow-type: tm+mt
-source-wordcount: '3273'
+source-wordcount: '3293'
 ht-degree: 0%
 
 ---
@@ -44,14 +42,14 @@ Den här versionen av AEM har stöd för iOS och Android-mobilenheter.
 
 Om du vill använda push-meddelanden i en AEM Mobile-app måste du utföra följande åtgärder på hög nivå.
 
-En AEM utvecklare brukar:
+En Experience Manager-utvecklare gör vanligtvis följande:
 
 1. Registrera dig hos Apple och Google meddelandetjänster
 1. Registrera dig hos en push-meddelandetjänst och konfigurera den
 1. Lägg till push-stöd i appen
 1. Förbered en telefon för testning
 
-Medan en AEM gör det:
+När en Experience Manager-administratör gör följande:
 
 1. Konfigurera push-AEM
 1. Bygg och distribuera appen
@@ -62,9 +60,9 @@ Medan en AEM gör det:
 
 #### Använda Apple Push Notification Service (APNS) {#using-the-apple-push-notification-service-apns}
 
-Gå till Apple [här](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html) för att bekanta sig med Apple Push Notification Service.
+Gå till Apple [här](https://developer.apple.com/documentation/usernotifications#//apple_ref/doc/uid/TP40008194-CH8-SW1) för att bekanta sig med Apple Push Notification Service.
 
-För att använda APNS behöver du en **Certifikat** -fil (en .cer-fil), en push-fil **Privat nyckel** (en P12-fil) och en **Lösenord för privat nyckel** från Apple. Instruktioner om hur du gör detta finns [här](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ProvisioningDevelopment.html).
+För att kunna använda APN:er behöver du en **Certifikat** -fil (en .cer-fil), en push-fil **Privat nyckel** (en P12-fil) och en **Lösenord för privat nyckel** från Apple. Instruktioner om hur du gör detta finns [här](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/).
 
 #### Använda tjänsten Google Cloud Messaging (GCM) {#using-the-google-cloud-messaging-gcm-service}
 
@@ -174,7 +172,7 @@ Så här konfigurerar du Amazon SNS för push-meddelanden:
    <table>
     <tbody>
      <tr>
-     <td><p> </p> <p>{</p> <p> "Version": "2012-10-17",</p> <p> "Programsats": [</p> <p> {</p> <p> "Åtgärd": [</p> <p> "mobileanalytics:PutEvents",</p> <p> "cognito-sync:*",</p> <p> "SNS:CreatePlatformEndpoint",</p> <p> "SNS:Subscribe"</p> <p> ],</p> <p> "Effekt": "Tillåt",</p> <p> "Resurs": [</p> <p> "*"</p> <p> ]</p> <p> }</p> <p> ]</p> <p>}</p> <p> </p> </td>
+     <td><p> </p> <p>{</p> <p> "Version": "2012-10-17",</p> <p> "Programsats": [</p> <p> {</p> <p> Åtgärd: [</p> <p> "mobileanalytics:PutEvents",</p> <p> "cognito-sync:*",</p> <p> "SNS:CreatePlatformEndpoint",</p> <p> "SNS:Subscribe"</p> <p> ],</p> <p> "Effekt": "Tillåt",</p> <p> "Resurs": [</p> <p> "*"</p> <p> ]</p> <p> }</p> <p> ]</p> <p>}</p> <p> </p> </td>
      </tr>
     </tbody>
     </table>
@@ -217,7 +215,7 @@ Skapa två innehållsnoder (en i app-config och en i app-config-dev) som kallas 
 * /content/`<your app>`/shell/jcr:content/page-app/app-config/notificationsConfig
 
 Med dessa egenskaper (.content.xml-filer):
-&lt;jcr:root xmlns:jcr=&quot; &lt;span id=&quot; translate=&quot;no&quot; />https://www.jcp.org/jcr/1.0](https://www.jcp.org/jcr/1.0)&quot; xmlns:nt=&quot; [https://www.jcp.org/jcr/nt/1.0](https://www.jcp.org/jcr/nt/1.0)&quot; jcr:primaryType=&quot;nt:unStructed&quot; excludeProperties=&quot;[appAPIAccessToken]&quot; path=&quot;../../../...&quot;
+&lt;jcr:root xmlns:jcr=&quot; &lt;span id=&quot; translate=&quot;no&quot; />https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/1.0/index.html](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/1.0/index.html)&quot; xmlns:nt=&quot; [https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/1.0/index.html](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/1.0/index.html)&quot; jcr:primaryType=&quot;nt:unStructed&quot; excludeProperties=&quot;[appAPIAccessToken]&quot; path=&quot;../../../...&quot;
 [
 targetRootDirectory=&quot;www&quot; type=&quot;notificationsconfig&quot;/>
 

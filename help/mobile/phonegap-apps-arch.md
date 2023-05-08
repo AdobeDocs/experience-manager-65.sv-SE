@@ -9,9 +9,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 discoiquuid: 55667e62-a61b-4794-b292-8d54929c41ac
 exl-id: ab4f1c61-be83-420e-a339-02cf1f33efed
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 85d39e59b82fdfdcd310be61787a315668aebe38
 workflow-type: tm+mt
-source-wordcount: '2686'
+source-wordcount: '2691'
 ht-degree: 0%
 
 ---
@@ -309,7 +309,7 @@ Det här är en dold katalog som du kanske inte ser beroende på dina aktuella o
 
 #### .cordova/hooks/ {#cordova-hooks}
 
-Den här katalogen innehåller [CLI-krokar](https://devgirl.org/2013/11/12/three-hooks-your-cordovaphonegap-project-needs/). Mapparna i hooks-katalogen innehåller node.js-skript som körs vid exakta punkter under bygget.
+Den här katalogen innehåller [CLI-krokar](https://cordova.apache.org/docs/en/10.x/guide/appdev/hooks/). Mapparna i hooks-katalogen innehåller node.js-skript som körs vid exakta punkter under bygget.
 
 #### .cordova/hooks/after-platform_add/ {#cordova-hooks-after-platform-add}
 
@@ -360,7 +360,7 @@ Den här katalogen är tom tills du kör `phonegap run <platform>` -kommando i p
 
 När du har skapat programmet för en viss plattform skapas motsvarande katalog och den innehåller den plattformsspecifika programkoden.
 
-#### plugins/ {#plugins}
+#### plugin-program/ {#plugins}
 
 Katalogen för plugin-program fylls i av varje plugin-program som visas i `.cordova/hooks/before_platform_add/install_plugins.js` efter att du har kört `phonegap run <platform>` -kommando. Katalogen är från början tom.
 

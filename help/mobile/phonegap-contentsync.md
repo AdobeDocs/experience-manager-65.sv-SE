@@ -9,9 +9,9 @@ topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: 923fc031-1a06-4a9d-94da-a2a4e82c54ee
 docset: aem65
 exl-id: 2cadd9c5-4335-48d0-8d1c-941fca717409
-source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
+source-git-commit: 85d39e59b82fdfdcd310be61787a315668aebe38
 workflow-type: tm+mt
-source-wordcount: '2975'
+source-wordcount: '2977'
 ht-degree: 0%
 
 ---
@@ -263,7 +263,7 @@ För varje konfigurationstyp finns det en *Hanterare för innehållsuppdatering*
 * `com.day.cq.contentsync.handler.ContentUpdateHandler` - Gränssnitt som alla uppdateringshanterare måste implementera
 * `com.day.cq.contentsync.handler.AbstractSlingResourceUpdateHandler` - en abstrakt klass som förenklar återgivningen av resurser med Sling
 
-Registrera klassen som OSGi-komponentfabrik och distribuera den i OSGi-behållaren i ett paket. Detta kan du göra med [Maven SCR plugin](https://felix.apache.org/site/apache-felix-maven-scr-plugin.html) antingen med JavaDoc-taggar eller anteckningar. I följande exempel visas JavaDoc-versionen:
+Registrera klassen som OSGi-komponentfabrik och distribuera den i OSGi-behållaren i ett paket. Detta kan du göra med [Maven SCR plugin](https://felix.apache.org/documentation/subprojects/apache-felix-maven-scr-plugin/apache-felix-maven-scr-plugin-use.html) antingen med JavaDoc-taggar eller anteckningar. I följande exempel visas JavaDoc-versionen:
 
 ```java
 /*

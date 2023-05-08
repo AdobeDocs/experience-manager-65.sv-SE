@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: b2778086-8280-4306-bf3a-f6ec2a0e04df
 exl-id: 7c2e5ed8-9f8e-4a81-b736-589ef4089f29
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 85d39e59b82fdfdcd310be61787a315668aebe38
 workflow-type: tm+mt
-source-wordcount: '1034'
+source-wordcount: '1036'
 ht-degree: 0%
 
 ---
@@ -164,7 +164,7 @@ Skicka programresurserna till PhoneGap Build för kompilering för olika mobilpl
 
 1. I dialogrutan Slutfört klickar du på PhoneGap Build för att öppna Adobe PhoneGap Build-sidan på [https://build.phonegap.com/apps](https://build.phonegap.com/apps). Om du väntar på att appen ska visas kan du kontrollera [PhoneGap Build](https://status.build.phonegap.com/) sida.
 
-   Mer information om hur du installerar bygget finns i [Dokumentation om PhoneGap Build](https://docs.build.phonegap.com/en_US/3.1.0/#googtrans%28en%29).
+   Mer information om hur du installerar bygget finns i [Dokumentation om PhoneGap Build](https://github.com/phonegap/phonegap-docs/tree/master/docs/4-phonegap-build).
 
    >[!NOTE]
    >

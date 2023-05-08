@@ -1,12 +1,10 @@
 ---
-title: Resurser för nya AEM
-seo-title: Resources for New AEM Users
-description: Frågor, svar och resurser för användare som inte är AEM
-seo-description: Questions, answers, and resources for users new to AEM
+title: Resurser för nya Adobe Experience Manager-användare
+description: Frågor, svar och resurser för användare som är nybörjare på Adobe Experience Manager
 exl-id: a238954f-011c-416b-81af-6cdf78ddaf85
-source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
+source-git-commit: 85d39e59b82fdfdcd310be61787a315668aebe38
 workflow-type: tm+mt
-source-wordcount: '298'
+source-wordcount: '300'
 ht-degree: 0%
 
 ---
@@ -30,7 +28,7 @@ Besök [AEM](https://experienceleague.adobe.com/docs/experience-manager-release-
 
 ## Hur får jag officiell support för AEM? {#official-support}
 
-Som licensierad kund kan du få support för AEM från [Kundtjänstteam](https://experienceleague.adobe.com/?support-solution=General#support). Du kan även ställa frågor i [AEM](https://experienceleaguecommunities.adobe.com:443/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community) eller på [@AdobeExpCare](https://twitter.com/adobeexpcare) Twitter handtag.
+Som licensierad kund kan du få support för AEM från [Kundtjänstteam](https://experienceleague.adobe.com/?support-solution=General#support). Du kan även ställa frågor i [AEM](https://experienceleaguecommunities.adobe.com:443/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community) eller på handtaget för AdobeExpCare Twitter på `https://twitter.com/adobeexpcare`.
 
 ## Var finns dokumentation för andra versioner av AEM? {#versions}
 
@@ -45,4 +43,4 @@ Här finns alla versionsinformation AEM:
 * [Versionsinformation för AEM 6.5](/help/release-notes/home.md)
 * [Lista över borttagna och borttagna funktioner i AEM 6.5](/help/release-notes/deprecated-removed-features.md)
 
-Om du har frågor kan du kontakta [AEM](https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.html) eller fråga på Twitter [@AdobeExpCare](https://twitter.com/adobeexpcare).
+Om du har frågor kan du kontakta [AEM](https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.html) eller fråga om Twitter-handtaget för AdobeExpCare på `https://twitter.com/adobeexpcare`.

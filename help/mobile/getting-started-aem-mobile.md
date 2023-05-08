@@ -10,9 +10,9 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 724e09c2-3df3-4080-a0d4-ee2ede483791
 exl-id: a2bc9a50-6455-4703-8829-964fab313e96
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 85d39e59b82fdfdcd310be61787a315668aebe38
 workflow-type: tm+mt
-source-wordcount: '206'
+source-wordcount: '193'
 ht-degree: 0%
 
 ---
@@ -25,14 +25,14 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
->Befintliga AEM Mobile-appskunder som migrerar från AEM 6.2 eller 6.3 till AEM 6.5 kan fortsätta använda AEM Mobile-appar genom att ladda ned en [paket från PackageShare](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/compatpack/aem-mobile-package). Nya installationer av AEM 6.5 stöder dock inte AEM Mobile Apps-funktioner.
+>Befintliga AEM Mobile-appskunder som migrerar från AEM 6.2 eller 6.3 till AEM 6.5 kan fortsätta använda AEM Mobile-appar genom att hämta ett paket från PackageShare. Nya installationer av AEM 6.5 stöder dock inte AEM Mobile Apps-funktioner.
 
 Adobe Experience Manager (AEM) Mobile är en del av Adobe Experience Manager flerkanaliga digitala plattform som också utnyttjar AEM Assets, Sites, Screens, Workflow, User Manager, Commerce och Forms. AEM Mobile erbjuder enastående flexibilitet vid driftsättningen, vilket gör det möjligt för företag att använda olika innehållskällor.
 
 AEM Mobile erbjuder flera metoder för att skapa appar. Du kan skapa appar på tre olika sätt:
 
 * **[Använda On Demand Services med AEM](/help/mobile/getting-started-aem-mobile-on-demand.md)**
-* **[Använda On Demand-tjänster utan AEM](https://helpx.adobe.com/digital-publishing-solution/topics.html)**
+* **[Använda On Demand-tjänster utan AEM](https://helpx.adobe.com/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html)**
 * **[Använda Adobe PhoneGap Enterprise med AEM](/help/mobile/getting-started-aem-mobile-phonegap.md)**
 
 >[!NOTE]

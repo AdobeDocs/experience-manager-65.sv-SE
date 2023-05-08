@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: cd9d2bea-48d8-4a17-8544-ea25dcad69f3
 exl-id: 8d965e94-c368-481d-b000-6e22456c34db
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: 85d39e59b82fdfdcd310be61787a315668aebe38
 workflow-type: tm+mt
-source-wordcount: '939'
+source-wordcount: '946'
 ht-degree: 0%
 
 ---
@@ -67,7 +67,7 @@ För varje plattform krävs att ADBMomobileConfig kopieras till en viss plats.
 
 Om du bygger med PhoneGap CLI kan du göra detta med ett cordova-byggkrokskript. Detta kan du se i Geometrixx Outdoor App på:*content/phonegap/geometrixx-outdoors/shell/_jcr_content/pge-app/app-content/phonegap/scripts/restore_plugins.js.*
 
-För iOS måste filen kopieras till XCode-projektets **Resurser** katalog (t.ex. &quot;platforms/ios/Geometrixx/Resources/ADBMobileConfig.json&quot;). Om appen har Android som mål är sökvägen till den platforms/android/assets/ADBMobileConfig.json. Mer information om hur du använder krokar under PhoneGap CLI-bygget finns i [Tre hookar upp ditt Cordova-/PhoneGap-projekt](https://devgirl.org/2013/11/12/three-hooks-your-cordovaphonegap-project-needs/).
+För iOS måste filen kopieras till XCode-projektets **Resurser** katalog (t.ex. &quot;platforms/ios/Geometrixx/Resources/ADBMobileConfig.json&quot;). Om appen har Android som mål är sökvägen till den platforms/android/assets/ADBMobileConfig.json. Mer information om hur du använder krokar under PhoneGap CLI-bygget finns i [Tre hookar upp ditt Cordova-/PhoneGap-projekt](https://gist.github.com/jlcarvalho/22402d013bc72f795d45a01836ce735c).
 
 ```xml
 ///////////////////////////
