@@ -2,9 +2,9 @@
 title: Integrering med Adobe Target med IMS
 description: Läs om hur du integrerar AEM med Adobe Target med IMS
 exl-id: 8ddd86d5-a5a9-4907-b07b-b6552d7afdc8
-source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
+source-git-commit: 5c3de9c272030b3e258aea95899a58553c3b33db
 workflow-type: tm+mt
-source-wordcount: '1500'
+source-wordcount: '1503'
 ht-degree: 0%
 
 ---
@@ -167,7 +167,7 @@ Om du går tillbaka till AEM kan du slutföra IMS-konfigurationen genom att läg
    * **Klienthemlighet**: Generera detta i [Översikt](#details-stored-for-the-ims-integration-project) och kopiera
    * **Nyttolast**: Kopiera detta från [Generera JWT](#details-stored-for-the-ims-integration-project) section
 
-   ![](assets/integrate-target-io-10.png)
+   ![Konfiguration av tekniskt konto](assets/integrate-target-io-10.png)
 
 1. Bekräfta med **Skapa**.
 
