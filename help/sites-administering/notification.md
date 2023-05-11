@@ -10,9 +10,9 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 6466d7b8-e308-43c5-acdc-dec15f796f64
 exl-id: 918fcbbc-a78a-4fab-a933-f183ce6a907f
-source-git-commit: e803fde42cfb7b7c9d3fb6483ca661ce386d6464
+source-git-commit: 144fbe2d0efe20d848e9556f8d652a403d1835b2
 workflow-type: tm+mt
-source-wordcount: '2116'
+source-wordcount: '2019'
 ht-degree: 0%
 
 ---
@@ -150,57 +150,6 @@ Plats &lt;text_x> kan vara en blandning av statisk text och dynamiska strängvar
 
    PageModified => /content/geometrixx/en/products
 
-### E-postmallar för forummeddelanden {#email-templates-for-forum-notification}
-
-E-postmallar för forummeddelanden finns under:
-
-`/etc/notification/email/default/com.day.cq.collab.forum`
-
-Standardmallen för engelska ( `en.txt`) definieras enligt följande:
-
-```xml
-subject=[CQ Forum Notification]
-
-header=-------------------------------------------------------------------------------------\n \
-Time: Time: ${time}\n \
-Forum Page Path: ${forum.path}\n \
--------------------------------------------------------------------------------------\n\n
-
-message=Page: ${host.prefix}${forum.path}.html\n
-
-footer=\n \
--------------------------------------------------------------------------------------\n \
-This is an automatically generated message. Please do not reply.
-```
-
-#### Anpassa e-postmallar för forummeddelanden {#customizing-email-templates-for-forum-notification}
-
-Så här anpassar du den engelska e-postmallen för forummeddelanden:
-
-1. Öppna filen i CRXDE:
-
-   `/etc/notification/email/default/com.day.cq.collab.forum/en.txt`
-
-1. Ändra filen efter dina behov.
-1. Spara ändringarna.
-
-Mallen måste ha följande format:
-
-```
- subject=<text_1>
- header=<text_2>
- message=<text_3>
- footer=<text_4>
-```
-
-Plats `<text_x>` kan vara en blandning av statisk text och dynamiska strängvariabler.
-
-Följande variabler kan användas i e-postmallen för forummeddelanden:
-
-* `${time}`, händelsens datum och tid.
-
-* `${forum.path}`, vägen till forumsidan.
-
 ### E-postmallar för arbetsflödesmeddelanden {#email-templates-for-workflow-notification}
 
 E-postmallen för arbetsflödesmeddelanden (engelska) finns på:
@@ -293,7 +242,6 @@ Så här lägger du till en mall för ett nytt språk:
 1. Lägg till en fil i CRXDE `<language-code>.txt` nedan:
 
    * `/libs/settings/notification-templates/com.day.cq.wcm.core.page` : för sidmeddelanden
-   * `/etc/notification/email/default/com.day.cq.collab.forum` : för forummeddelanden
    * `/libs/settings/workflow/notification/email/default` : för arbetsflödesmeddelanden
 
 1. Anpassa filen till språket.
