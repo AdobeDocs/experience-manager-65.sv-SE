@@ -10,9 +10,9 @@ topic-tags: operations
 content-type: reference
 discoiquuid: d9c96e7f-9416-48e1-a6af-47384f7bee92
 exl-id: 90923d39-3ac5-4028-976c-d011f0404476
-source-git-commit: 1b57fca352457e973bd7395e060e3d0495a9d920
+source-git-commit: 25f7218355b7715949273c84eb72ddde3d6a0a65
 workflow-type: tm+mt
-source-wordcount: '1134'
+source-wordcount: '994'
 ht-degree: 0%
 
 ---
@@ -41,26 +41,27 @@ Det finns en rad konsoler som du kan använda för att administrera dina arbetsf
 
    ![wf-96](assets/wf-96.png)
 
+<!--
+## Search Workflow Instances {#search-workflow-instances}
 
-## Sök efter arbetsflödesinstanser {#search-workflow-instances}
-
-1. Använd navigeringsval **verktyg** sedan **Arbetsflöde**.
-1. Välj **Instanser** om du vill visa en lista över pågående arbetsflödesinstanser. I den övre rälen, i det vänstra hörnet, väljer du **Filter**. Du kan också använda tangenterna Alt+1. Följande dialogruta visas:
+1. Using Navigation select **Tools**, then **Workflow**.
+1. Select **Instances** to display the list of workflow instances currently in progress. On the top rail, in the left corner, select **Filters**. Alternatively, you can use the keystrokes alt+1. The following dialog is displayed:
 
    ![wf-99-1](assets/wf-99-1.png)
 
-1. Välj sökvillkor för arbetsflödet i dialogrutan Filter. Du kan söka baserat på följande indata:
+1. In the Filter dialog, select the workflow search criteria. You can search based on these inputs:
 
-   * Nyttolastsökväg: Markera en specifik bana
-   * Arbetsflödesmodell: Välj en arbetsflödesmodell
-   * Uppdragare: Välj en arbetsflödestilldelare
-   * Typ: Aktivitet, arbetsflödesobjekt eller arbetsflödesfel
-   * Aktivitetsstatus: Aktiv, Fullständig eller Avbruten
-   * Var jag är: Ägare OCH tilldelad, endast ägare, endast tilldelad
-   * Startdatum: Startdatum före eller efter ett angivet datum
-   * Slutdatum: Slutdatum före eller efter ett angivet datum
-   * Förfallodatum: Förfallodatum före eller efter ett angivet datum
-   * Uppdateringsdatum: Uppdaterat datum före eller efter ett angivet datum
+   * Payload path: Select a specific path
+   * Workflow model: Select a workflow model
+   * Assignee: Select a workflow Assignee
+   * Type: Task, Workflow item, or Workflow Failure
+   * Task Status: Active, Complete, or Terminated
+   * Where I Am: Owner AND Assignee, Owner only, Assignee only
+   * Start Date: Start date before or after a specified date
+   * End Date: End date before or after a specified date
+   * Due Date: Due date before or after a specified date
+   * Updated Date: Updated date before or after a specified date
+-->
 
 ## Göra uppehåll, återuppta och avsluta en arbetsflödesinstans {#suspending-resuming-and-terminating-a-workflow-instance}
 
