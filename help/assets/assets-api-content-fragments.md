@@ -3,10 +3,11 @@ title: Stöd för Adobe Experience Manager Content Fragments i Assets HTTP API
 description: Lär dig mer om stöd för innehållsfragment i Assets HTTP API, en viktig del AEM headless delivery feature.
 feature: Content Fragments,Assets HTTP API
 exl-id: 0f9efb47-a8d1-46d9-b3ff-a6c0741ca138
-source-git-commit: 9d5440747428830a3aae732bec47d42375777efd
+hide: true
+source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
 workflow-type: tm+mt
 source-wordcount: '1957'
-ht-degree: 2%
+ht-degree: 1%
 
 ---
 
