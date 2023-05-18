@@ -12,9 +12,9 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/viewer
 feature: Viewer Presets
 role: User, Admin
 exl-id: 0899e497-88e9-4fc3-a6be-b3a149fb5b32
-source-git-commit: 3430897fc98aecbcf6cc7bf6bdc9b3df24e92366
+source-git-commit: a95255594ec03c152cd96df48597ced5fce4b315
 workflow-type: tm+mt
-source-wordcount: '4406'
+source-wordcount: '4402'
 ht-degree: 7%
 
 ---
@@ -60,7 +60,7 @@ Se [Bibliotek för responsiv bild](https://experienceleague.adobe.com/docs/dynam
 
 >[!NOTE]
 >
->Observera att du måste publicera alla användningsklara visningsprogram innan du använder dem första gången.
+>Publicera alla färdiga visningsprogram innan du börjar använda dem.
 >Se [Förinställningar för publiceringsvisningsprogram].(#publishing-viewer-presets)
 
 ### Systemkompatibilitet för visningsförinställningar {#viewer-preset-system-compatibility}
@@ -72,7 +72,7 @@ Alla färdiga visningsförinställningar som medföljer Dynamic Media är helt k
 * Apple iPad
 * Android™ Smartphone
 * Android™ Tablet PC
-* För video finns ytterligare stöd för MP4-uppspelning för [BlackBerry®](https://developer.blackberry.com/devzone/develop/supported_media/bb_media_support_at_a_glance.html#kba1328730952678) och [Windows Phone](https://docs.microsoft.com/en-us/windows/uwp/audio-video-camera/supported-codecs).
+* För video finns ytterligare stöd för MP4-uppspelning för [BlackBerry®](https://developer.blackberry.com/devzone/develop/supported_media/bb_media_support_at_a_glance.html#kba1328730952678) och [Windows Phone](https://learn.microsoft.com/en-us/windows/uwp/audio-video-camera/supported-codecs).
 
 ### Multimedietyper för visningsförinställningar {#rich-media-types-for-viewer-presets}
 

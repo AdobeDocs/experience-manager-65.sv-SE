@@ -2,9 +2,10 @@
 title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
-source-git-commit: 3430897fc98aecbcf6cc7bf6bdc9b3df24e92366
+exl-id: fc7d3727-7cd4-47a4-8e75-840f9f9c0e62
+source-git-commit: a95255594ec03c152cd96df48597ced5fce4b315
 workflow-type: tm+mt
-source-wordcount: '2962'
+source-wordcount: '2948'
 ht-degree: 0%
 
 ---
@@ -36,7 +37,7 @@ Nytt protokoll DASH-stöd (Dynamic Adaptive Streaming over HTTP) har startats f�
 
 * Adaptiv direktuppspelning (DASH/HLS) ger en bättre tittarupplevelse för videor.
 * DASH är det internationella standardprotokollet för strömning av adaptiv video och är en vida spridd bransch.
-* Finns nu i Asien, Stillahavsområdet och Nordamerika (kommer att aktiveras genom en supportanmälan). kommer snart i Europa-Mellanöstern-Afrika.
+* Nu tillgänglig genom att skicka in en supportanmälan.
 
 Se [Aktivera DASH på ditt konto](/help/assets/video.md#enable-dash).
 

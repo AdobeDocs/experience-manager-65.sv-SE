@@ -12,9 +12,9 @@ docset: aem65
 feature: Asset Management
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: c704397f08e163a58ee6ac1dbaefc3171298864e
+source-git-commit: a95255594ec03c152cd96df48597ced5fce4b315
 workflow-type: tm+mt
-source-wordcount: '7993'
+source-wordcount: '7973'
 ht-degree: 2%
 
 ---
@@ -155,8 +155,6 @@ Adaptiv videoströmning stöds på olika iOS-plattformar. Se [Referenshandbok f�
 Dynamic Media har stöd för videouppspelning i mobiler för MP4 H.264-video. Du kan hitta BlackBerry®-enheter som stöder det här videoformatet på följande: [Videoformat som stöds på BlackBerry®](https://support.blackberry.com/kb/articleDetail?ArticleNumber=000005482).
 
 Windows-enheter som stöder det här videoformatet finns på följande plats: [Media-codec som stöds för Windows Phone 8](https://learn.microsoft.com/en-us/windows/uwp/audio-video-camera/supported-codecs)
-
-
 
 * Spela upp videon med Dynamic Media Video Viewer Presets, inklusive följande:
 
@@ -442,10 +440,6 @@ Några viktiga fördelar med att aktivera DASH på ditt konto är följande:
 * Gör videomaterialet mer tillgängligt för kunderna.
 * Hämta URL:en för direktuppspelning via API:er också.
 
-   >[!IMPORTANT]
-   >
-   >Du kan för närvarande bara aktivera DASH på ditt konto i Asien-Stillahavsområdet och Nordamerika. kommer snart i Europa-Mellanöstern-Afrika.
-
 Om du vill aktivera DASH på ditt konto krävs två steg:
 
 * Konfigurera Dynamic Media att använda DASH som du enkelt kan göra själv.
@@ -455,10 +449,10 @@ Om du vill aktivera DASH på ditt konto krävs två steg:
 
 1. **Konfigurera Dynamic Media** - I Dynamic Media på Experience Manager 6.5 navigerar du till [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr).
 1. Sök efter **AEM Assets Dynamic Media Video Advanced Streaming** funktionsflagga.
-1. Markera kryssrutan för att aktivera (aktivera) DASH.
+1. Markera kryssrutan om du vill aktivera (aktivera) DASH.
 1. Välj **[!UICONTROL Save]**.
 1. **Konfigurera Experience Manager 6.5** - [Använd Admin Console för att börja skapa ett nytt supportärende](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html).
-1. Följ instruktionerna för att skapa ett supportärende och försäkra dig om att du anger följande information:
+1. Om du vill skapa ett supportärende följer du instruktionerna och ser till att du anger följande information:
 
    * Primärt kontaktnamn, e-postadress, telefon.
    * Namn på ditt Dynamic Media-konto.
@@ -720,7 +714,7 @@ Se [WebVTT: Textspår för webbvideo](https://w3c.github.io/webvtt/)
 
 ## Om videominiatyrer i Dynamic Media - Scene7-läge {#about-video-thumbnails-in-dynamic-media-scene-mode}
 
-En videominiatyr är en version med reducerad storlek av en videobildruta eller en bildresurs som representerar videon för kunden. Miniatyrbilden får kunden att klicka på videon.
+En videominiatyr är en version med reducerad storlek av en videobildruta eller en bildresurs som representerar videon för kunden. Miniatyrbilden uppmuntrar kunden att välja videon.
 
 Alla videofilmer i Experience Manager måste ha en tillhörande miniatyrbild. Du kan inte ta bort en miniatyrbild utan att ersätta den. Som standard används den första bildrutan som miniatyrbild när du överför en video till Experience Manager. Du kan dock anpassa miniatyrbilden för exempelvis varumärke eller visuell sökning. När du anpassar en videominiatyr kan du spela upp videon och pausa den bildruta som du vill använda. Du kan också välja en bildresurs som du redan har överfört och *publicerad* i er Digital Asset Manager.
 
@@ -770,7 +764,7 @@ De här stegen gäller endast för Dynamic Media som körs i läget&quot;Dynamic
 
 Du kan välja mellan en av tio miniatyrbilder som har genererats automatiskt av Dynamic Media och lägga till dem i videon. Videospelaren visar den valda miniatyrbilden när en videoresurs används med Dynamic Media-komponenten i redigeringsmiljön i Experience Manager Sites, Experience Manager Mobile eller Experience Manager Screens. Miniatyrbilden fungerar som en statisk bild som bäst motsvarar innehållet i hela videon och uppmuntrar dessutom användarna att klicka på knappen Spela upp.
 
-Baserat på den totala tiden för videon tar Dynamic Media tio (standard) miniatyrbilder. Bilderna spelas in i videon med 1 %, 11 %, 21 %, 31 %, 41 %, 51 %, 61 %, 71 %, 81 % och 91 %. De tio miniatyrbilderna finns kvar, vilket innebär att om du väljer en annan miniatyrbild senare behöver du inte återskapa serien. Du förhandsgranskar de tio miniatyrbilderna och väljer sedan den som du vill använda med videon. Om du vill ändra till standardvärdet kan du använda CRXDE Lite för att konfigurera det tidsintervall som miniatyrbilderna genereras i. Om du till exempel bara vill generera en serie med fyra miniatyrbilder med jämna mellanrum från videon kan du konfigurera intervalltiden till 24 %, 49 %, 74 % och 99 %.
+Baserat på den totala tiden för videon tar Dynamic Media tio (standard) miniatyrbilder. Bilderna spelas in i videon med 1 %, 11 %, 21 %, 31 %, 41 %, 51 %, 61 %, 71 %, 81 % och 91 %. De tio miniatyrbilderna finns kvar, vilket innebär att om du väljer en annan miniatyrbild senare behöver du inte återskapa serien. Du förhandsgranskar de tio miniatyrbilderna och väljer sedan den som du vill använda med videon. Om du vill ändra till standardinställningen kan du använda CRXDE Lite för att konfigurera det tidsintervall som miniatyrbilder genereras. Om du till exempel bara vill generera en serie med fyra miniatyrbilder med jämna mellanrum från videon kan du konfigurera intervalltiden till 24 %, 49 %, 74 % och 99 %.
 
 Helst kan du lägga till en videominiatyr när som helst efter att du har överfört videon, men innan du publicerar videon på webbplatsen.
 
