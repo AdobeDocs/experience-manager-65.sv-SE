@@ -6,10 +6,11 @@ mini-toc-levels: 1
 role: User, Admin
 feature: Asset Management,Renditions
 exl-id: a4bcf67b-54f4-4681-9e42-fd4753acde1a
-source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
+hide: true
+source-git-commit: c1878d6aadba9c795168459dbd5f09abfe0fc327
 workflow-type: tm+mt
 source-wordcount: '1741'
-ht-degree: 2%
+ht-degree: 1%
 
 ---
 
@@ -23,7 +24,7 @@ Använd teckenförklaringen för att förstå supportnivån.
 | :-----------: | ------------------------------ |
 | ✓ | Stöds |
 | &#42; | Stöds med tilläggsfunktioner |
-| − | Ej relevant |
+| − | Ej tillämpligt |
 
 ## Rasterbildformat som stöds i [!DNL Experience Manager] {#supported-raster-image-formats}
 
