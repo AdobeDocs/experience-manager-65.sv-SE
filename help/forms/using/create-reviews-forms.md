@@ -11,9 +11,9 @@ discoiquuid: d8c1c507-a6c4-44f5-be01-ee902bc28410
 docset: aem65
 feature: Adaptive Forms
 exl-id: 9ca4fcd6-3eb0-4fc1-a09c-e4ad532bbed0
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 4edfc51227607b4fb3ee4b97443d2040015b6a65
 workflow-type: tm+mt
-source-wordcount: '655'
+source-wordcount: '635'
 ht-degree: 0%
 
 ---
@@ -73,12 +73,6 @@ I det här avsnittet beskrivs vad som händer när en granskning skapas eller ko
    * **Granska deadline**: Finns för redigering. Du kan ändra deadline till vilket datum och vilken tid som helst efter det aktuella datumet och den aktuella tiden.
 
    * **Granskare**: Finns för redigering. Du kan lägga till eller ta bort granskare. Om en uppgift är försenad kan du bara lägga till granskare efter att du har förlängt tidsgränsen efter det aktuella datumet.
-
-1. Redigera de nödvändiga fälten och klicka sedan på Uppdatera.
-
-   ![Granska uppdaterat läge i Aktivitetshanteraren](assets/tskmgr.png)
-
-   Granska uppdaterat läge i Aktivitetshanteraren
 
 1. Klicka på Slutför för att avsluta granskningen.
 
