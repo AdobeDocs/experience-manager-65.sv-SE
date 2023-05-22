@@ -15,7 +15,7 @@ exl-id: 22276580-e6bc-41c5-9ac3-e8f291f676b7
 source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
 source-wordcount: '1510'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
@@ -76,7 +76,7 @@ Vilka åtgärder som kan utföras på det publicerade innehållet (UGC) varierar
    <td> </td>
    <td><strong>Administratör</strong></td>
    <td><strong>Moderator</strong></td>
-   <td><strong>Originalformat</strong></td>
+   <td><strong>Skapare</strong></td>
    <td><strong>medlem</strong></td>
    <td><strong>Besökare</strong></td>
    <td><strong>Händelse<br /> Utlöst</strong></td>
