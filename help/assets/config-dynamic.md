@@ -16,7 +16,7 @@ feature: Configuration,Hybrid Mode
 source-git-commit: 05af34f8be6a4e32c3488ec05bc0133154caff7f
 workflow-type: tm+mt
 source-wordcount: '7558'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -970,13 +970,13 @@ När du har installerat funktionspaketet konfigurerar du lämpliga standardfärg
   </tr>
   <tr>
    <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccblackpointcompensation.html">iccBlackPointCompensation</a></td>
-   <td>Boolesk</td>
+   <td>Boolean</td>
    <td>True</td>
    <td>Anger om svartpunktskompensation utförs under färgkorrigering. Adobe rekommenderar att den här inställningen är aktiverad.</td>
   </tr>
   <tr>
    <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccdither.html">iccdither</a></td>
-   <td>Boolesk</td>
+   <td>Boolean</td>
    <td>Falskt</td>
    <td>Anger om gitter ska användas vid färgkorrigering.</td>
   </tr>

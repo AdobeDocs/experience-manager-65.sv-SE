@@ -52,7 +52,7 @@ I följande procedur används det klassiska användargränssnittet för att skap
 
    | Typ av språkkopia | Beskrivning |
    |---|---|
-   | autom. | Använder beteendet från överordnade sidor |
+   | auto | Använder beteendet från överordnade sidor |
    | ignorera | Skapar inte en kopia av den här sidan och dess underordnade sidor |
    | `<language>+` (t.ex. franska+) | Kopierar sidan och alla underordnade sidor från det språket |
    | `<language>` (t.ex. franska) | Kopierar endast sidan från det språket |

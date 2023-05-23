@@ -328,7 +328,7 @@ Följande aspekter av en mall kan redigeras:
 
    Under Sidprofiler kan du koppla fördefinierade sidprofiler till sidan. Dessa sidprofiler definierar de olika designkonfigurationerna.
 
-* [Format](/help/sites-authoring/style-system.md)
+* [Stilar](/help/sites-authoring/style-system.md)
 
    Med Style System kan mallskapare definiera formatklasser i en komponents innehållsprincip så att en innehållsförfattare kan markera dem när komponenten på en sida redigeras. Dessa format kan vara alternativa visuella varianter av en komponent, vilket gör den mer flexibel.
 

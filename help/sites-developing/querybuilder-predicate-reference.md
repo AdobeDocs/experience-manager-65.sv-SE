@@ -13,7 +13,7 @@ exl-id: 54b942f9-5dd9-4826-9a0a-028f2d7b8e41
 source-git-commit: f97eb2e028263016131b0c86be5a0508ae4def9b
 workflow-type: tm+mt
 source-wordcount: '2371'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
@@ -46,12 +46,12 @@ ht-degree: 2%
 * [exkluderingsdjup](/help/sites-developing/querybuilder-predicate-reference.md#excludepaths)
 * [fulltext](/help/sites-developing/querybuilder-predicate-reference.md#fulltext)
 * [hasPermission](/help/sites-developing/querybuilder-predicate-reference.md#haspermission)
-* [language](/help/sites-developing/querybuilder-predicate-reference.md#language)
+* [språk](/help/sites-developing/querybuilder-predicate-reference.md#language)
 * [huvudtillgång](/help/sites-developing/querybuilder-predicate-reference.md#mainasset)
 * [medlemOf](/help/sites-developing/querybuilder-predicate-reference.md#memberof)
 * [nodename](/help/sites-developing/querybuilder-predicate-reference.md#nodename)
 * [inte utgånget](/help/sites-developing/querybuilder-predicate-reference.md#notexpired)
-* [path](/help/sites-developing/querybuilder-predicate-reference.md#path)
+* [bana](/help/sites-developing/querybuilder-predicate-reference.md#path)
 * [property](/help/sites-developing/querybuilder-predicate-reference.md#property)
 * [rangegenskap](/help/sites-developing/querybuilder-predicate-reference.md#rangeproperty)
 * [relativ](/help/sites-developing/querybuilder-predicate-reference.md#relativedaterange)
@@ -242,7 +242,7 @@ Detta är ett predikat som bara kan filtreras och kan inte utnyttja ett sökinde
 
    kommaavgränsade JCR-behörigheter som den aktuella användarsessionen måste ha för noden i fråga. till exempel `jcr:write`, `jcr:modifyAccessControl`
 
-### language {#language}
+### språk {#language}
 
 Söker efter CQ-sidor på ett visst språk. Det här tittar både på sidspråksegenskapen och sidsökvägen, som ofta innehåller språket eller språket i en webbplatsstruktur på den översta nivån.
 
@@ -252,7 +252,7 @@ Stöder facetextrahering. Ger buketter för varje unik språkkod.
 
 #### Egenskaper {#properties-8}
 
-* **language**
+* **språk**
 
    ISO-språkkod, till exempel &quot; `de`&quot;
 
@@ -330,7 +330,7 @@ Sortera resultatet. Om det krävs en ordning med flera egenskaper måste det hä
 
    om inställt på &quot; `ignore`&quot; kommer att göra sorteringsskiftläget okänsligt, vilket innebär att &quot;a&quot; kommer före &quot;B&quot;, om den är tom eller utelämnad är sorteringen skiftlägeskänslig, vilket betyder &quot;B&quot; kommer före &quot;a&quot;
 
-### path {#path}
+### bana {#path}
 
 Söker i en viss bana.
 
@@ -338,7 +338,7 @@ Stöder inte facetextrahering.
 
 #### Egenskaper {#properties-14}
 
-* **path**
+* **bana**
 
    banmönster, beroende på exakt, kommer antingen hela underträdet att matcha (som att lägga till `//*` in xpath, but note that this does not include the base path) (exact=false, default) or only an exact path matching, which can include wilcards ( `*`). om self anges söks hela underträdet inklusive basnoden igenom
 
@@ -374,7 +374,7 @@ Stöder facetextrahering. Ger bucket för varje unikt egenskapsvärde i resultat
 
    use `1_value`, `2_value`, ... för att kontrollera om det finns flera värden (i kombination med `OR` som standard, med `AND` if och=true) (sedan 5.3)
 
-* **and**
+* **och**
 
    anges till true för att kombinera flera värden ( `N_value`) med OCH (sedan 5.3)
 
@@ -452,7 +452,7 @@ Stöder facet-extrahering på samma sätt som daterange-predikatet.
 
 Rotpredikatgrupp. Stöder alla funktioner i en grupp och tillåter att globala frågeparametrar ställs in.
 
-Namnet &quot;root&quot; används aldrig i en fråga, det är implicit.
+Namnet &quot;root&quot; används aldrig i en fråga, det är underförstått.
 
 #### Egenskaper {#properties-18}
 
@@ -579,7 +579,7 @@ Stöder inte facetextrahering.
 
    om du bara vill söka i en viss lokaliserad taggtitel (t.ex. &quot; `de`&quot;)
 
-* **all**
+* **alla**
 
    (bool) söka efter hela taggens fulltext, dvs. alla titlar, beskrivning osv. (har företräde framför&quot;l&quot; `ang`&quot;)
 

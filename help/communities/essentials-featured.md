@@ -13,7 +13,7 @@ exl-id: 70b0ad6a-c891-4588-8515-449aed206805
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '106'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
@@ -41,7 +41,7 @@ I motsats till att fästa ett inlägg överst i ett forum kan den här funktione
    <td> <i>standard</i></td>
   </tr>
   <tr>
-   <td> <strong>templates</strong></td>
+   <td> <strong>mallar</strong></td>
    <td> /libs/social/commons/components/hbs/featuredcontent/featuredcontent.hbs<br /> /libs/social/commons/components/hbs/featuredtopic/featuredtopic.hbs</td>
   </tr>
   <tr>

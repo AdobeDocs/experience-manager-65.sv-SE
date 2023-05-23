@@ -12,7 +12,7 @@ exl-id: bd1216e4-2248-484b-a3c1-c209da4ff94f
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '685'
-ht-degree: 5%
+ht-degree: 0%
 
 ---
 
@@ -54,6 +54,6 @@ Med fragment blir det enklare och snabbare att skapa och underhålla stora mäng
 
 Nedan följer några fördelar med att använda fragment:
 
-* **Återanvändning av innehåll**: Du kan återanvända innehåll i flera formulärdesigner. Om du snabbt vill återanvända delar av samma innehåll i flera formulär skapar du ett fragment. Det tar längre tid att kopiera eller återskapa innehållet. Att använda fragment innebär att ofta använda delar av en formulärdesign har konsekvent innehåll och utseende i alla refererande formulär.
+* **Återanvändning av innehåll**: Du kan återanvända innehåll i flera formulärdesigner. Om du snabbt vill återanvända delar av samma innehåll i flera formulär skapar du ett fragment. Det tar längre tid att kopiera eller återskapa innehållet. Genom att använda fragment säkerställs också att de delar av en formulärdesign som används ofta har ett konsekvent innehåll och utseende i alla referensformulär.
 * **Globala uppdateringar**: Du kan bara göra globala ändringar i flera formulär en gång i en fil. Du kan ändra innehåll, skriptobjekt, databindningar, layout eller format i ett fragment. Alla XDP-formulär som refererar till fragmentet återspeglar ändringarna.
 * **Skapa delade formulär**: Du kan dela skapandet av formulär med flera resurser. Blankettutvecklare med expertkunskaper inom skript eller andra avancerade funktioner i AEM Forms Designer kan utveckla och dela fragment som använder skript och dynamiska egenskaper. Formulärdesigners kan använda fragmenten för att utforma formulär. Dessutom kan de använda fragmenten för att säkerställa att alla delar av ett formulär har ett konsekvent utseende och funktion i flera formulär.

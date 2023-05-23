@@ -12,7 +12,7 @@ exl-id: 2f996a50-7c7d-41b6-84b2-523b6609254b
 source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
 workflow-type: tm+mt
 source-wordcount: '3979'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -376,7 +376,7 @@ Följande värden i tabellen
    <td><strong>Variabel</strong></td> 
   </tr> 
   <tr> 
-   <td><strong>date</strong></td> 
+   <td><strong>datum</strong></td> 
    <td>Ja</td> 
    <td>Nej</td> 
    <td>Ja</td> 
@@ -386,7 +386,7 @@ Följande värden i tabellen
    <td>Ej tillämpligt</td> 
   </tr> 
   <tr> 
-   <td><strong>time</strong></td> 
+   <td><strong>tid</strong></td> 
    <td>Ja</td> 
    <td>Nej</td> 
    <td>Ja</td> 
@@ -406,7 +406,7 @@ Följande värden i tabellen
    <td>Ej tillämpligt</td> 
   </tr> 
   <tr> 
-   <td><strong>integer</strong></td> 
+   <td><strong>heltal</strong></td> 
    <td>Ja</td> 
    <td>Nej</td> 
    <td>Ja</td> 
@@ -456,7 +456,7 @@ Följande värden i tabellen
    <td>Ej tillämpligt</td> 
   </tr> 
   <tr> 
-   <td><strong>signature</strong></td> 
+   <td><strong>signatur</strong></td> 
    <td>Nej</td> 
    <td>Nej</td> 
    <td>Nej<br /> </td> 

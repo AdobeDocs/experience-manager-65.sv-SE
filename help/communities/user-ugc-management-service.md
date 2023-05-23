@@ -58,7 +58,7 @@ Om du till exempel vill exportera användargenererat innehåll för en användar
 
 Om du till exempel vill ta bort användargränssnittskontrollen för en användare med ett auktoriserbart ID weston.mccall@dodgit.com genom en http-POST-begäran använder du följande parametrar:
 
-* user = `weston.mccall@dodgit.com`
+* användare = `weston.mccall@dodgit.com`
 * operation = `deleteUgc`
 
 ### Ta bort användargenererat innehåll från Adobe Analytics {#delete-ugc-from-adobe-analytics}
@@ -81,7 +81,7 @@ För Adobe Analytics-variabelmappningar som används av AEM Communities, se föl
 
 Om du till exempel vill ta bort profilen för en användare med ett autentiserbart ID `weston.mccall@dodgit.com` Använd följande parametrar via http-POST-begäran:
 
-* user = `weston.mccall@dodgit.com`
+* användare = `weston.mccall@dodgit.com`
 * operation = `deleteUser`
 
 >[!NOTE]

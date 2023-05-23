@@ -7,7 +7,7 @@ exl-id: 25c91a85-06ff-4666-a809-46778a689e25
 source-git-commit: 20d46a7c37663dac36e6af9582d569a7f782eab7
 workflow-type: tm+mt
 source-wordcount: '1727'
-ht-degree: 7%
+ht-degree: 6%
 
 ---
 
@@ -69,7 +69,7 @@ Metoden för att skapa ett innehållsfragment är:
 
          Fragmenttiteln.
 
-         Obligatorisk.
+         Obligatoriskt.
 
       * **Beskrivning**
 

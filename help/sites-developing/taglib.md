@@ -13,7 +13,7 @@ exl-id: 50e608d5-951f-4a3f-bed4-9e92ff5d7bd4
 source-git-commit: de5eb53f6160991ca0718d61afaeed2078a4fa88
 workflow-type: tm+mt
 source-wordcount: '2483'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -45,19 +45,19 @@ Den har följande attribut:
 
 **kategorier** - En lista med kommaavgränsade klientlibkategorier. Detta inkluderar alla JavaScript- och CSS-bibliotek för de angivna kategorierna. Temanamnet extraheras från begäran.
 
-Likvärdigt med: `com.adobe.granite.ui.clientlibs.HtmlLibraryManager#writeIncludes`
+Motsvarar: `com.adobe.granite.ui.clientlibs.HtmlLibraryManager#writeIncludes`
 
 **tema** - En lista med kommaavgränsade klientlibkategorier. Detta inkluderar alla temarelaterade bibliotek (både CSS och JS) för de angivna kategorierna. Temanamnet extraheras från begäran.
 
-Likvärdigt med: `com.adobe.granite.ui.clientlibs.HtmlLibraryManager#writeThemeInclude`
+Motsvarar: `com.adobe.granite.ui.clientlibs.HtmlLibraryManager#writeThemeInclude`
 
 **js** - En lista med kommaavgränsade klientlibkategorier. Detta inkluderar alla JavaScript-bibliotek för de angivna kategorierna.
 
-Likvärdigt med: `com.adobe.granite.ui.clientlibs.HtmlLibraryManager#writeJsInclude`
+Motsvarar: `com.adobe.granite.ui.clientlibs.HtmlLibraryManager#writeJsInclude`
 
 **css** - En lista med kommaavgränsade klientlibkategorier. Detta inkluderar alla CSS-bibliotek för de angivna kategorierna.
 
-Likvärdigt med: `com.adobe.granite.ui.clientlibs.HtmlLibraryManager#writeCssInclude`
+Motsvarar: `com.adobe.granite.ui.clientlibs.HtmlLibraryManager#writeCssInclude`
 
 **tema** - En flagga som endast anger teman eller icke-teman för bibliotek ska inkluderas. Om det utelämnas inkluderas båda uppsättningarna. Gäller endast rena JS- eller CSS-inkluderingar (inte för kategorier eller teman).
 
@@ -214,7 +214,7 @@ Den har följande attribut:
 
 * Ett booleskt värde som anger om utdata ska rensas innan målet tas med.
 
-**path**
+**bana**
 
 * Sökvägen till det resursobjekt som ska inkluderas i den aktuella bearbetningen av begäran. Om den här sökvägen är relativ läggs den till i sökvägen till den aktuella resurs vars skript innehåller den angivna resursen. Sökväg och resourceType, eller skript måste anges.
 
@@ -266,7 +266,7 @@ Den har följande attribut:
 
 **kategorier** - En lista med kommaavgränsade klientlibkategorier. Detta inkluderar alla JavaScript- och CSS-bibliotek för de angivna kategorierna. Temanamnet extraheras från begäran.
 
-Likvärdigt med: `com.day.cq.widget.HtmlLibraryManager#writeIncludes`
+Motsvarar: `com.day.cq.widget.HtmlLibraryManager#writeIncludes`
 
 **tema** - En lista med kommaavgränsade klientlibkategorier. Detta inkluderar alla temarelaterade bibliotek (både CSS och JS) för de angivna kategorierna. Temanamnet extraheras från begäran.
 
@@ -274,11 +274,11 @@ Motsvarar: `com.day.cq.widget.HtmlLibraryManager#`writeThemeInclude
 
 **js** - En lista med kommaavgränsade klientlibkategorier. Detta inkluderar alla JavaScript-bibliotek för de angivna kategorierna.
 
-Likvärdigt med: `com.day.cq.widget.HtmlLibraryManager#writeJsInclude`
+Motsvarar: `com.day.cq.widget.HtmlLibraryManager#writeJsInclude`
 
 **css** - En lista med kommaavgränsade klientlibkategorier. Detta inkluderar alla CSS-bibliotek för de angivna kategorierna.
 
-Likvärdigt med: `com.day.cq.widget.HtmlLibraryManager#writeCssInclude`
+Motsvarar: `com.day.cq.widget.HtmlLibraryManager#writeCssInclude`
 
 **tema** - En flagga som endast anger teman eller icke-teman för bibliotek ska inkluderas. Om det utelämnas inkluderas båda uppsättningarna. Gäller endast rena JS- eller CSS-inkluderingar (inte för kategorier eller teman).
 
@@ -526,7 +526,7 @@ Den har följande attribut:
 
 * Resursobjektet som ska inkluderas i den aktuella begärandebearbetningen. Resurs eller sökväg måste anges. Om båda anges prioriteras resursen.
 
-**path**
+**bana**
 
 * Sökvägen till det resursobjekt som ska inkluderas i den aktuella bearbetningen av begäran. Om den här sökvägen är relativ läggs den till i sökvägen till den aktuella resurs vars skript innehåller den angivna resursen. Resurs eller sökväg måste anges. Om båda anges prioriteras resursen.
 
@@ -588,7 +588,7 @@ The `<sling:defineObjects>` -taggen visar följande, ofta använda, skriptobjekt
 **slingResponse**
 
 * SlingHttpServletResponse-objekt som ger åtkomst till HTTP-svaret som skapas av servern. Detta är för närvarande samma som det HttpServletResponse som det utökas från.**förfrågan**
-* Standardobjektet för JSP-begäran, som är en ren HttpServletRequest.**response**
+* Standardobjektet för JSP-begäran, som är en ren HttpServletRequest.**svar**
 * Standardsvarsobjektet för JSP som är ett rent HttpServletResponse.
 
 **resourceResolver**

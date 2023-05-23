@@ -17,7 +17,7 @@ Lär dig använda AEM Assets REST API för att hantera innehållsfragment och Gr
 
 [Nu när du har skapat några innehållsfragment,](create-content-fragment.md) kan du använda AEM-API:er för att leverera dem utan problem.
 
-* [GraphQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md) I kan du skapa begäranden om åtkomst till och leverans av innehållsfragment.
+* [GraphQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md) gör att du kan skapa begäranden om åtkomst till och leverans av innehållsfragment.
    * Om du vill använda det här [slutpunkter måste definieras och aktiveras i AEM](/help/sites-developing/headless/graphql-api/graphql-endpoint.md#enabling-graphql-endpoint)och, om det behövs, [GraphiQL-gränssnittet är installerat](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#installing-graphiql-interface).
 * [Resursens REST API](/help/assets/assets-api-content-fragments.md) I kan du skapa och ändra innehållsfragment (och andra resurser).
 

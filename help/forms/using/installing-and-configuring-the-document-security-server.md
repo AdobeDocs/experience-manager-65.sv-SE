@@ -45,7 +45,7 @@ Så här installerar och konfigurerar du AEM Forms på JEE:
 
 1. Ladda ned installationsprogrammet för AEM 6.5 Forms on JEE från [Adobe licenswebbplats (LWS)](https://licensing.adobe.com/). Du behöver ett giltigt Maintenance &amp; Support-avtal för att ladda ned installationsprogrammet.
 1. Läs [AEM Forms on JEE Supported Platforms document](/help/forms/using/aem-forms-jee-supported-platforms.md) och se till att ha programvaran, maskinvaran, operativsystemen, programservern, databaserna, JDK:erna och annan infrastruktur redo att installera AEM Forms på JEE.
-1. (Endast icke-nyckelinstallationer) Läs [Installationen av AEM Forms single server förbereds](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_64) eller [Installation av AEM Forms-serverkluster förbereds](https://www.adobe.com/go/learn_aemforms_prepareInstallcluster_64) och gör din miljö redo att installera och konfigurera AEM Forms på JEE.
+1. (Endast icke-nyckelinstallation) Läs [Installationen av AEM Forms single server förbereds](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_64) eller [Installation av AEM Forms-serverkluster förbereds](https://www.adobe.com/go/learn_aemforms_prepareInstallcluster_64) och gör din miljö redo att installera och konfigurera AEM Forms på JEE.
 1. Beroende på din miljö och programserver väljer du något av följande dokument och följer instruktionerna för att slutföra installationen
 
    * [Installera och distribuera AEM Forms på JEE med nyckelkörning i JBoss](https://www.adobe.com/go/learn_aemforms_installTurnkey_64)

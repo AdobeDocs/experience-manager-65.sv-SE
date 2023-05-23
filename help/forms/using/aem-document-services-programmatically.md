@@ -12,7 +12,7 @@ exl-id: 9bf090db-2c14-439e-ad78-6832678a309d
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '6430'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -3877,7 +3877,7 @@ Sammanfogar en formulärdesign med data för att skapa ett PDF-dokument. Om du v
    <th>Beskrivning</th>
   </tr>
   <tr>
-   <td>templates<br /> </td>
+   <td>mallar<br /> </td>
    <td>Anger karta över nyckel- och mallfilnamn.<br /> </td>
   </tr>
   <tr>
@@ -4170,7 +4170,7 @@ Skapar ett dokument i formaten PS, PCL och ZPL genom att sammanfoga en formulär
    <th>Beskrivning</th>
   </tr>
   <tr>
-   <td>templates<br /> </td>
+   <td>mallar<br /> </td>
    <td>Anger mappningen för nyckel- och mallfilnamn.<br /> </td>
   </tr>
   <tr>

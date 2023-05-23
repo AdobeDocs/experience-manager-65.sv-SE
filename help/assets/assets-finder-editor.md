@@ -253,7 +253,7 @@ Så här lägger du till komponenterna för redigering av resurser:
 
 | Komponent | Beskrivning |
 |---|---|
-| **[!UICONTROL Metadata Form]and[!UICONTROL Metadata Text Field]** | Gör att du kan lägga till ytterligare metadata för en resurs och utföra en åtgärd, som att skicka, för den resursen. |
+| **[!UICONTROL Metadata Form]och[!UICONTROL Metadata Text Field]** | Gör att du kan lägga till ytterligare metadata för en resurs och utföra en åtgärd, som att skicka, för den resursen. |
 | **[!UICONTROL Sub Assets]** | Gör att du kan anpassa underresurser. |
 | **Taggar** | Tillåter användare att markera och lägga till taggar i en resurs. |
 | **[!UICONTROL Thumbnail]** | Visar en miniatyrbild av resursen, dess filnamn och låter dig lägga till en alternativ text. Du kan även lägga till resursredigeringsåtgärder här. |

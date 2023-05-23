@@ -315,7 +315,7 @@ Vissa belastningsutjämnare kan konfigureras för att utföra en periodisk häls
 
 ## Tillfällig filsökväg och liknande klusterinställningar {#temporary-file-path-cluster-settings}
 
-Vissa filsökvägsinställningar i AEM Forms på JEE är klusteromfattande och har samma effektiva inställning på alla noder, men tolkas separat på varje nod för att hänvisa till lokala filer. De viktigaste är teckensnittssökvägsinställningarna och tillfälliga kataloginställningar. Gå till skärmen med grundläggande AdminUI-konfigurationer (Hem > Inställningar > Kärnsystem > Huvudkonfigurationer)
+Vissa filsökvägsinställningar i AEM Forms på JEE är klusteromfattande och har samma effektiva inställning på alla noder, men tolkas oberoende på varje nod för att referera till lokala filer. De viktigaste är teckensnittssökvägsinställningarna och tillfälliga kataloginställningar. Gå till skärmen med grundläggande AdminUI-konfigurationer (Hem > Inställningar > Kärnsystem > Huvudkonfigurationer)
 
 Följande inställningar bör vara markerade:
 

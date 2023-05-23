@@ -25,7 +25,7 @@ Systeminformationstjänsten tillhandahåller en uppsättning REST API:er för at
  <thead>
   <tr>
    <th><p>Namn</p></th>
-   <th><p>Webbadress</p></th>
+   <th><p>URL</p></th>
    <th><p>Beskrivning</p></th>
   </tr>
  </thead>

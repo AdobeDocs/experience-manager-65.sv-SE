@@ -85,7 +85,7 @@ De uppgifter du kan utföra med dessa förkonfigurerade arbetsflöden:
 
 Du kan förstås även använda arbetsflöden manuellt. Se [Mediehanterare för resurser](media-handlers.md)för en lista med standardarbetsflöden.
 
-## [!DNL Experience Manager Assets] and [!DNL Media Library] {#cq-dam-vs-cq-medialibrary}
+## [!DNL Experience Manager Assets] och [!DNL Media Library] {#cq-dam-vs-cq-medialibrary}
 
 Se [Resurser och Media Library](medialibrary.md) för information om skillnaderna.
 

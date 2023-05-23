@@ -43,7 +43,7 @@ Anonym publicering av en gilla-markering stöds inte. Besökare på webbplatsen 
    <td> cq.social.hbs.liking</td>
   </tr>
   <tr>
-   <td> <strong>templates</strong></td>
+   <td> <strong>mallar</strong></td>
    <td><p> /libs/social/tally/components/hbs/liking/liking.hbs<br /> /libs/social/tally/components/hbs/liking/activity-icon.hbs<br /> /libs/social/tally/components/hbs/liking/activity-title.hbs</p> </td>
   </tr>
   <tr>

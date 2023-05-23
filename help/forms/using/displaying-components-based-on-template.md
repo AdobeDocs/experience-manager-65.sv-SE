@@ -29,7 +29,7 @@ När du skapar en mall skapas den under `/conf` i innehållsdatabasen. Baserat p
 Följ de här stegen för att visa komponenterna i sidofältet baserat på en malls innehållsprincip:
 
 1. Öppna CRXDE lite.\
-   Webbadress: `https://<server>:<port>/crx/de/index.jsp`
+   URL: `https://<server>:<port>/crx/de/index.jsp`
 1. I CRXDE navigerar du till mappen där mallen skapas.
 
    Till exempel: `/conf/<your-folder>/`

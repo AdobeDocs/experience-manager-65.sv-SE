@@ -40,7 +40,7 @@ Slutpunkter kan bara läggas till i tjänster. En slutpunkt får inte finnas ens
 
 [Tar bort slutpunktsinställningar](/help/forms/using/admin-help/configuring-remoting-endpoints.md#remoting-endpoint-settings)
 
-1. Klicka på Lägg till
+1. Klicka på Lägg till.
 
 ## Aktivera eller inaktivera en slutpunkt {#enable-or-disable-an-endpoint}
 

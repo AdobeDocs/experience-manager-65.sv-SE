@@ -155,7 +155,7 @@ Om du vill definiera ett Lucene-egenskapsindex för frågan ovan kan du lägga t
 
 När noden har skapats lägger du till följande egenskaper:
 
-* **type:**
+* **typ:**
 
    ```xml
    lucene (of type String)

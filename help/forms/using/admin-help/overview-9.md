@@ -26,7 +26,7 @@ På varje Forms-arbetsflödessida i administrationskonsolen kan du utföra olika
 <table>
  <thead>
   <tr>
-   <th><p>Sidan</p></th>
+   <th><p>Sida</p></th>
    <th><p>Uppgifter</p></th>
    <th><p>Se</p></th>
   </tr>

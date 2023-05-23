@@ -127,12 +127,12 @@ Argument för att rastrera arbetsflödet för PDF eller AI
    <td>Lista över dokumentMIME-typer som anses vara PDF- eller Illustrator-dokument.<br /> </td>
   </tr>
   <tr>
-   <td>Maxbredd</td>
+   <td>Maximal bredd</td>
    <td>2048</td>
    <td>Maximal bredd i pixlar för den genererade förhandsvisningsåtergivningen.<br /> </td>
   </tr>
   <tr>
-   <td>Maxhöjd</td>
+   <td>Maximal höjd</td>
    <td>2048</td>
    <td>Maximal höjd för den genererade förhandsvisningsåtergivningen, i pixlar.<br /> </td>
   </tr>

@@ -49,7 +49,7 @@ Helst borde namn visa sin avsikt. Ett vanligt kodtest för när namn inte är s�
  <tbody>
   <tr>
    <td><p><strong>Otydlig</strong></p> </td>
-   <td><p><strong>Radera</strong></p> </td>
+   <td><p><strong>Rensa</strong></p> </td>
   </tr>
   <tr>
    <td><p>int d, //förfluten tid i dagar</p> </td>

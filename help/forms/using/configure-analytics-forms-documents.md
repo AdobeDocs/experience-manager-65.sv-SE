@@ -95,10 +95,10 @@ Utför följande steg för att skapa en rapportserie.
    | återge | Räknare |
    | panelBesök | Räknare |
    | fieldVisit | Räknare |
-   | save | Räknare |
+   | spara | Räknare |
    | fel | Räknare |
    | help | Räknare |
-   | submit | Räknare |
+   | skicka | Räknare |
    | timeSpent | Numeriskt |
 
    >[!NOTE]

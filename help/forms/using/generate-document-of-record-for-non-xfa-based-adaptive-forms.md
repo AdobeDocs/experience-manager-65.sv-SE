@@ -14,7 +14,7 @@ exl-id: 7240897f-6b3a-427a-abc6-66310c2998f3
 source-git-commit: 85189a4c35d1409690cbb93946369244e8848340
 workflow-type: tm+mt
 source-wordcount: '3337'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -83,7 +83,7 @@ Se [Konfiguration av dokumentmall](#document-of-record-template-configuration).
 
 I följande avsnitt beskrivs hur anpassningsbara formulärelement visas i postdokumentet.
 
-### fält {#fields}
+### Fält {#fields}
 
 <table>
  <tbody>
@@ -107,7 +107,7 @@ I följande avsnitt beskrivs hur anpassningsbara formulärelement visas i postdo
   </tr>
   <tr>
    <td>Datumväljaren</td>
-   <td>Datum-/tidfält</td>
+   <td>Datum-/tidsfält</td>
    <td>true</td>
    <td> </td>
   </tr>
@@ -149,13 +149,13 @@ I följande avsnitt beskrivs hur anpassningsbara formulärelement visas i postdo
   </tr>
   <tr>
    <td>Knappen Återställ</td>
-   <td>Återställningsknapp</td>
+   <td>Återställ knapp</td>
    <td>false</td>
    <td> </td>
   </tr>
   <tr>
    <td>Skicka-knapp</td>
-   <td><p>Skicka-knapp för e-post</p> <p>Skicka-knapp (HTTP)</p> </td>
+   <td><p>E-postknapp</p> <p>HTTP-sändningsknapp</p> </td>
    <td>false</td>
    <td> </td>
   </tr>

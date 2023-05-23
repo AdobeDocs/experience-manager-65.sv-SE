@@ -159,7 +159,7 @@ I följande avsnitt beskriver vi **fristående installation**. Mer information o
 
    Installationsplats för Windows: **`C:\Program Files\aem`**
 
-   Det är också vanligt att du installerar exempelinstanser i en mapp direkt på skrivbordet. I vilket fall som helst ska vi i allmänhet hänvisa till den här platsen som:
+   Det är också vanligt att du installerar exempelinstanser i en mapp direkt på skrivbordet. I vilket fall som helst kommer vi att i allmänhet hänvisa till den här platsen som:
 
    `<aem-install>`
 
@@ -215,7 +215,7 @@ resulterar i att en publiceringsinstans körs på **`localhost:4503`**.
 
 Du installerar de här två instanserna i
 
-`<aem-install>/author`and
+`<aem-install>/author`och
 
 **`<aem-install>/publish`**
 

@@ -270,4 +270,4 @@ För att formulärarbetsflöden ska kunna ta emot och hantera inkommande e-postm
 1. I listan mailBody väljer du variabel och typ `%BODY%` i intilliggande ruta.
 1. Välj Variabel och skriv i listan mailFrom `%SENDER%` i intilliggande ruta. Detta mappar avsändaradressen till processdata för en fullständig uppgift.
 1. Skriv i resultatrutan `results`. Detta gör att en resultatsträng returneras av den fullständiga uppgiften eller Starta process.
-1. Klicka på Lägg till
+1. Klicka på Lägg till.

@@ -24,7 +24,7 @@ ht-degree: 1%
 
 Du kan visa Experience Manager-resurser som publicerats i Dynamic Media Classic i olika visningsprogram:
 
-* Zoomning
+* Zooma
 * Utfällbar
 * Video
 * Bildmall
@@ -58,7 +58,7 @@ Du kan publicera digitala resurser till Dynamic Media Classic på följande sät
 
 Följande Dynamic Media Classic-komponenter finns i Experience Manager:
 
-* Zoomning
+* Zooma
 * Utfällbar (zoom)
 * Bildmall
 * Bild
@@ -137,7 +137,7 @@ Du anger dessa konfigurationsalternativ genom att öppna (dubbelklicka) en Dynam
 
 ![chlimage_1-226](assets/chlimage_1-226.png)
 
-### Zoomning {#zoom}
+### Zooma {#zoom}
 
 Zoomkomponenten för HTML5 visar en större bild när du trycker på **[!UICONTROL +]** -knappen.
 

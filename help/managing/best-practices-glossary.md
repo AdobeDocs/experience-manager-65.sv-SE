@@ -1025,7 +1025,7 @@ Detaljerad specifikation av de begrepp som rör roller och åtkomsträttigheter 
 * roller
 * grupper
 * användare
-* permissions
+* behörigheter
 * samt hantering och etablering av användare
 
 ### Roller och rättighetskoncept uppfyller säkerhetsriktlinjerna {#roles-and-rights-concept-meets-security-guidelines}
@@ -1063,7 +1063,7 @@ Definiera och dokumentera information om den säkerhetskonfiguration som krävs 
 
 En övergripande översikt som täcker säkerhetsinställningarna för
 
-* tillämpning
+* program
 * arkitektur
 * infrastruktur
 

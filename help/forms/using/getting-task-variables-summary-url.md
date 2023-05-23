@@ -28,8 +28,8 @@ I den här exempelstrukturen skickar en medarbetare ett ledighetsansökningsform
 
    * namn
    * empid
-   * reason
-   * duration
+   * orsak
+   * varaktighet
 
    >[!NOTE]
    >

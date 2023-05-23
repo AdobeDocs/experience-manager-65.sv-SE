@@ -13,7 +13,7 @@ exl-id: 16c5f9aa-024d-4d8a-ba08-22b073289cfd
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '157'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 I följande checklista markeras några av de viktigaste problemen - läs de andra avsnitten om testning för att få fullständig information.
 
-| Kontroll | Svar | Åtgärd | Ägare | Förfaller |
+| Kontrollera | Svar | Åtgärd | Ägare | Förfaller |
 |---|---|---|---|---|
 | Har en tydlig och regelbunden rapporteringsmekanism inrättats? |  |  |  |  |
 | Deltar nyckelaktörer (från testgruppen) i statusmötena? |  |  |  |  |

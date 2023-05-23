@@ -115,25 +115,25 @@ I följande tabell visas några exempel på tagg-ID:n, deras element och hur tag
   </tr>
   <tr>
    <td>färg/röd</td>
-   <td>default</td>
+   <td>standard</td>
    <td>färg/röd</td>
-   <td>color</td>
+   <td>färg</td>
    <td>röd</td>
    <td>/content/cq:tags/default/color/red</td>
   </tr>
   <tr>
    <td>himmel</td>
-   <td>default</td>
+   <td>standard</td>
    <td>himmel</td>
-   <td>(inga)</td>
+   <td>(ingen)</td>
    <td>himmel</td>
    <td>/content/cq:tags/default/sky</td>
   </tr>
   <tr>
    <td>dam:</td>
    <td>dam</td>
-   <td>(inga)</td>
-   <td>(inga)</td>
+   <td>(ingen)</td>
+   <td>(ingen)</td>
    <td>(ingen, namnutrymmet)</td>
    <td>/content/cq:tags/dam</td>
   </tr>

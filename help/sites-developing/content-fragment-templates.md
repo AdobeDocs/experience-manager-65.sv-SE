@@ -14,7 +14,7 @@ exl-id: 1b75721c-b223-41f0-88d9-bd855b529f31
 source-git-commit: a2b1bd5462ae1837470e31cfeb87a95af1c69be5
 workflow-type: tm+mt
 source-wordcount: '674'
-ht-degree: 4%
+ht-degree: 0%
 
 ---
 
@@ -123,27 +123,27 @@ Mer information om noderna och deras egenskaper är:
     </tr>
     <tr>
      <td><code>jcr:title</code></td>
-     <td><p><code>String</code></p> <p>required<br /> </p> </td>
+     <td><p><code>String</code></p> <p>obligatoriskt<br /> </p> </td>
      <td>Mallens titel (visas i <strong>Skapa fragment</strong> guide).</td>
     </tr>
     <tr>
      <td><code>jcr:description</code></td>
-     <td><p><code>String</code></p> <p>valfritt</p> </td>
+     <td><p><code>String</code></p> <p>valfri</p> </td>
      <td>En text som beskriver syftet med mallen (visas i <strong>Skapa fragment</strong> guide).</td>
     </tr>
     <tr>
      <td><code>initialAssociatedContent</code></td>
-     <td><p><code>String[]</code></p> <p>valfritt</p> </td>
+     <td><p><code>String[]</code></p> <p>valfri</p> </td>
      <td>En array med sökvägar till samlingar som ska kopplas till ett nyligen skapat innehållsfragment som standard.</td>
     </tr>
     <tr>
      <td><code>precreateElements</code></td>
-     <td><p><code>Boolean</code></p> <p>required</p> </td>
+     <td><p><code>Boolean</code></p> <p>obligatoriskt</p> </td>
      <td><p><code>true</code>, om de delresurser som representerar elementen (utom det överordnad elementet) i innehållsfragmentet ska skapas när innehållsfragmentet skapas, <em>false</em> om de ska skapas "i farten".</p> <p><strong>Anteckning</strong>: för närvarande måste den här parametern anges till <code>true</code>.</p> </td>
     </tr>
     <tr>
      <td><code>version</code></td>
-     <td><p><code>Long</code></p> <p>required</p> </td>
+     <td><p><code>Long</code></p> <p>obligatoriskt</p> </td>
      <td><p>Innehållsstrukturens version. stöds för närvarande:</p> <p><strong>Anteckning</strong>: för närvarande måste den här parametern anges till <code>2</code>.<br /> </p> </td>
     </tr>
    </tbody>
@@ -160,7 +160,7 @@ Mer information om noderna och deras egenskaper är:
     </tr>
     <tr>
      <td><code>elements</code> </td>
-     <td><p><code>nt:unstructured</code></p> <p>required</p> </td>
+     <td><p><code>nt:unstructured</code></p> <p>obligatoriskt</p> </td>
      <td><p>En nod som innehåller definitionen av elementen i innehållsfragmentet. Det är obligatoriskt och måste innehålla minst en underordnad nod för <strong>Huvud</strong> -element, men kan innehålla [1..n] underordnade noder.</p> <p>När mallen används kopieras elementundergrenen till fragmentets modellundergren.</p> <p>Det första elementet (som det visas i CRXDE Lite) anses automatiskt vara <i>main</i> element, nodnamnet är irrelevant och noden i sig inte har någon särskild betydelse, förutom det faktum att den representeras av huvudtillgången, övriga element hanteras som undertillgångar.</p> </td>
     </tr>
    </tbody>
@@ -182,17 +182,17 @@ Mer information om noderna och deras egenskaper är:
     </tr>
     <tr>
      <td><code>jcr:title</code></td>
-     <td><p><code>String</code></p> <p>required</p> </td>
+     <td><p><code>String</code></p> <p>obligatoriskt</p> </td>
      <td>Elementets rubrik (visas i fragmentredigerarens elementväljare).</td>
     </tr>
     <tr>
      <td><code>defaultContent</code></td>
-     <td><p><code>String</code></p> <p>valfritt</p> <p>default: ""</p> </td>
+     <td><p><code>String</code></p> <p>valfri</p> <p>standard: ""</p> </td>
      <td>Elementets ursprungliga innehåll. används endast om <code>precreateElements</code><i> = </i><code>true</code></td>
     </tr>
     <tr>
      <td><code>initialContentType</code></td>
-     <td><p><code>String</code></p> <p>valfritt</p> <p>default: <code>text/html</code></p> </td>
+     <td><p><code>String</code></p> <p>valfri</p> <p>standard: <code>text/html</code></p> </td>
      <td><p>Elementets ursprungliga innehållstyp. används endast om <code>precreateElements</code><i> = </i><code>true</code>; stöds för närvarande:</p>
       <ul>
        <li><code>text/html</code></li>
@@ -202,7 +202,7 @@ Mer information om noderna och deras egenskaper är:
     </tr>
     <tr>
      <td><code>name</code></td>
-     <td><p><code>String</code></p> <p>required</p> </td>
+     <td><p><code>String</code></p> <p>obligatoriskt</p> </td>
      <td>Elementets interna namn. måste vara unik för fragmenttypen.</td>
     </tr>
    </tbody>
@@ -219,7 +219,7 @@ Mer information om noderna och deras egenskaper är:
     </tr>
     <tr>
      <td><code>variations</code> </td>
-     <td><p><code>nt:unstructured</code></p> <p>valfritt</p> </td>
+     <td><p><code>nt:unstructured</code></p> <p>valfri</p> </td>
      <td>Den här valfria noden innehåller definitionen av de ursprungliga variationerna för innehållsfragmentet.</td>
     </tr>
    </tbody>
@@ -242,12 +242,12 @@ Mer information om noderna och deras egenskaper är:
     </tr>
     <tr>
      <td><code>jcr:title</code></td>
-     <td><p><code>String</code></p> <p>required</p> </td>
+     <td><p><code>String</code></p> <p>obligatoriskt</p> </td>
      <td>Variantens titel (visas i fragmentredigerarens <strong>Variation</strong> tabbtangenten.</td>
     </tr>
     <tr>
      <td><code>jcr:desciption</code></td>
-     <td><p><code>String</code></p> <p>valfritt</p> <p>default: ""</p> </td>
+     <td><p><code>String</code></p> <p>valfri</p> <p>standard: ""</p> </td>
      <td>En text som innehåller en beskrivning av variationen <span>(visas i fragmentredigerarens <strong>Variation</strong> tabbtangenten.</code></td>
     </tr>
    </tbody>

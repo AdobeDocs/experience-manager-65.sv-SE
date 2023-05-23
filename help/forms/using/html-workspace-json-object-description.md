@@ -12,7 +12,7 @@ exl-id: f837a2b3-4650-4261-84c6-291bb2a46dc7
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '2109'
-ht-degree: 8%
+ht-degree: 0%
 
 ---
 
@@ -192,7 +192,7 @@ JSON-objekt som används i AEM Forms-arbetsytan beskrivs nedan.
    <td>Tidsstämpel för nästa påminnelse.<br /> </td>
   </tr>
   <tr>
-   <td>priority<br /> </td>
+   <td>prioritet<br /> </td>
    <td>F</td>
    <td>Den innehåller uppgiftens prioritet.<br /> 1 = Högsta prioritet<br /> 2 = Hög prioritet<br /> 3 = Normal prioritet<br /> 4 = Låg prioritet<br /> 5 = Lägsta prioritet<br /> </td>
   </tr>
@@ -354,7 +354,7 @@ JSON-objekt som används i AEM Forms-arbetsytan beskrivs nedan.
   <tr>
    <td>userActions<br /> </td>
    <td>T</td>
-   <td>Det är en array med objekt. Varje objekt innehåller information om flödet och tillhörande bekräftelsemeddelande om sådana finns.<br /> </td>
+   <td>Det är en array med objekt. Varje objekt innehåller information om flödet och motsvarande bekräftelsemeddelande om det finns någon.<br /> </td>
   </tr>
   <tr>
    <td>dataUrl<br /> </td>
@@ -416,7 +416,7 @@ JSON-objekt som används i AEM Forms-arbetsytan beskrivs nedan.
    <td>Den innehåller typen av kö.<br /> 0 - Användarkö.<br /> 1. Delad kö.<br /> 2. Gruppkö.<br type="_moz" /> </td>
   </tr>
   <tr>
-   <td>query</td>
+   <td>fråga</td>
    <td>T</td>
    <td>Detta innehåller en fråga som är associerad med ett filter. Den här frågan används för att söka efter aktiviteter från en fullständig aktivitetslista.<br type="_moz" /> </td>
   </tr>
@@ -728,7 +728,7 @@ JSON-objekt som används i AEM Forms-arbetsytan beskrivs nedan.
    <td>Om true är anteckningen en utökad (lång) anteckning.<br type="_moz" /> </td>
   </tr>
   <tr>
-   <td>permissions<br type="_moz" /> </td>
+   <td>behörigheter<br type="_moz" /> </td>
    <td>F</td>
    <td>Behörigheter som är kopplade till en bifogad fil. Fältet allowRead är för läsbehörighet, allowWrite är för skrivbehörighet, allowDelete är för borttagningsbehörighet.<br type="_moz" /> </td>
   </tr>

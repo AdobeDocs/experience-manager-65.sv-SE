@@ -77,7 +77,7 @@ Från `/apps/weretail/components/hbs/rating/rating.hbs`:
 </div>
 ```
 
-## Egna egenskaper {#custom-properties}
+## Anpassade egenskaper {#custom-properties}
 
 När du utökar eller döljer en komponent kan du lägga till egenskaper i en ändrad dialogruta.
 

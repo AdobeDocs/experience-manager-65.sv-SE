@@ -42,7 +42,7 @@ Anonym publicering av en röst stöds inte. Besökare på platsen måste registr
    <td> cq.social.hbs.voting</td>
   </tr>
   <tr>
-   <td> <strong>templates</strong></td>
+   <td> <strong>mallar</strong></td>
    <td><p> /libs/social/tally/components/hbs/voting/voting.hbs<br /> /libs/social/tally/components/hbs/voting/activity-title.hbs</p> </td>
   </tr>
   <tr>

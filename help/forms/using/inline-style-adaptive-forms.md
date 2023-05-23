@@ -13,7 +13,7 @@ exl-id: 67cfecb8-c31d-4192-904d-7bfaa1a31ea5
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '525'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -91,7 +91,7 @@ Lägg märke till ändringen i textrutans format, så som visas i följande bild
   <tr>
    <td><p>Lång beskrivning</p> </td>
    <td><p>textjustering</p> </td>
-   <td><p>mitten</p> </td>
+   <td><p>centrera</p> </td>
    <td><p>Justerar den långa beskrivningen för att få hjälp att centrera</p> </td>
   </tr>
  </tbody>

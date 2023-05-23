@@ -13,7 +13,7 @@ exl-id: edaf12be-473f-4175-b4e0-549b41159a55
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1022'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -32,8 +32,8 @@ Tjänsten Barcoded Forms stöder följande **tvådimensionell (2D)** symboler so
 Tjänsten stöder även följande **endimensionell** symboler som tillhandahålls som skannade dokument i TIFF eller PDF:
 
 * Codabar
-* Code 128
-* Code 3 of 9
+* Code128
+* Kod 3 av 9
 * EAN13
 * EAN8
 

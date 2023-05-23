@@ -33,7 +33,7 @@ Banderoller representerar vanligtvis grafiska marknadsföringslänkar.
 >
 >Läs följande resurser i onlinehjälpen om du vill veta mer om följande ämnen i AEM Mobile-program:
 >
->* [Att tänka på vid design](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html)
+>* [Designöverväganden](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html)
 >
 >* [Skapa banners](https://helpx.adobe.com/digital-publishing-solution/help/creating-banners.html)
 >

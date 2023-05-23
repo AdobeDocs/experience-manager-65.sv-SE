@@ -34,9 +34,9 @@ Om du använder MySQL som AEM formulärdatabas kan administrationskonsolen inte 
 ## Lägg till en kategori {#add-a-category}
 
 1. I administrationskonsolen klickar du på Tjänster > Program och tjänster > Kategorihantering.
-1. Klicka på Lägg till Om du vill lägga till en underkategori väljer du en kategori och klickar sedan på Lägg till.
+1. Klicka på Lägg till. Om du vill lägga till en underkategori väljer du en kategori och klickar sedan på Lägg till.
 1. Skriv ett namn för kategorin i rutan Namn och skriv en beskrivning av kategorin i rutan Beskrivning.
-1. Klicka på Lägg till Kategorin visas på sidan Kategorihantering.
+1. Klicka på Lägg till. Kategorin visas på sidan Kategorihantering.
 
    ***anteckning **: Du kan bara lägga till upp till fem nivåer i hierarkin när du skapar kategorier.*
 

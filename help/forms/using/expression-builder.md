@@ -14,7 +14,7 @@ exl-id: b41af9fe-c698-44b3-9ac6-97d42cdc02d4
 source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
 source-wordcount: '786'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -49,7 +49,7 @@ Mer information finns i [JSP EL-specifikation](https://download.oracle.com/otn-p
    * java.lang.Character
    * Char
    * java.lang.Boolean
-   * Boolesk
+   * Boolean
    * java.lang.Integer
    * Int
    * java.util.list
@@ -62,7 +62,7 @@ Mer information finns i [JSP EL-specifikation](https://download.oracle.com/otn-p
    * java.lang.Long
    * Lång
    * java.lang.Float
-   * Flyttal
+   * Float
    * java.util.Calendar
    * java.util.Date
    * java.util.List
@@ -102,7 +102,7 @@ Du kan skapa ett anpassat paket för att exportera dina egna fjärrfunktioner f�
    * java.lang.Character
    * Char
    * java.lang.Boolean
-   * Boolesk
+   * Boolean
    * java.lang.Integer
    * Int
    * java.lang.Short
@@ -114,7 +114,7 @@ Du kan skapa ett anpassat paket för att exportera dina egna fjärrfunktioner f�
    * java.lang.Long
    * Lång
    * java.lang.Float
-   * Flyttal
+   * Float
    * java.util.Calendar
    * java.util.Date
    * java.util.List

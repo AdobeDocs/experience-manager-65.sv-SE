@@ -14,7 +14,7 @@ exl-id: b941b5e0-f768-4393-9a9d-ded2cd7d10c4
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '389'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -37,7 +37,7 @@ På den här sidan visas information om hur du arbetar med att använda meddelan
    <td><p>cq.social.hbs.messaging</p> </td>
   </tr>
   <tr>
-   <td> <strong>templates</strong></td>
+   <td> <strong>mallar</strong></td>
    <td>/libs/social/messaging/components/hbs/composemessage/composemessage.hbs</td>
   </tr>
   <tr>
@@ -70,7 +70,7 @@ På den här sidan visas information om hur du arbetar med att använda meddelan
    <td><p>cq.social.hbs.messaging</p> </td>
   </tr>
   <tr>
-   <td> <strong>templates</strong></td>
+   <td> <strong>mallar</strong></td>
    <td>/libs/social/messaging/components/hbs/messagebox/messagebox.hbs</td>
   </tr>
   <tr>

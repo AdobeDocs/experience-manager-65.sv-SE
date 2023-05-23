@@ -448,7 +448,7 @@ I följande tabell visas funktionerna i AEM Inbox och AEM Forms app:
    <td><p>Stöds ej</p> </td>
   </tr>
   <tr>
-   <td><p>Infogning av kommentarer.</p> </td>
+   <td><p>Lägga till kommentarer</p> </td>
    <td><p>Stöds</p> </td>
    <td><p>Stöds</p> </td>
   </tr>

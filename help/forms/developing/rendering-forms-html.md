@@ -15,7 +15,7 @@ exl-id: e6887e45-a472-41d4-9620-c56fd5b72b4c
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '4150'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -27,7 +27,7 @@ Forms-tjänsten återger formulär som HTML som svar på en HTTP-begäran från 
 
 Om du vill återge ett formulär som HTML måste formulärdesignen sparas som en XDP-fil. En formulärdesign som sparas som en PDF-fil kan inte återges som HTML. När du utvecklar en formulärdesign i Designer som ska återges som HTML bör du tänka på följande kriterier:
 
-* Använd inte ett objekts kantegenskaper till att rita linjer, rutor eller rutnät i formuläret. Alla webbläsare kan inte återge kanter på samma sätt som de visas i förhandsgranskningen i Det kan se ut som om objekt ligger ovanpå varandra, och vissa objekt kan även förskjuta andra objekt från deras lägen.
+* Använd inte ett objekts kantegenskaper för att rita linjer, rutor eller rutnät i formuläret. Vissa webbläsare kanske inte justerar kantlinjer exakt som de visas i en förhandsvisning. Objekt kan se ut som skiktade eller skjuta andra objekt bort från sin förväntade position.
 * Du kan använda linjer, rektanglar och cirklar för att definiera bakgrunden.
 * Rita text något större än vad som krävs för att texten ska få plats. I vissa webbläsare visas inte texten läsbart.
 

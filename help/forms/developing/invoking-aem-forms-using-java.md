@@ -72,7 +72,7 @@ I följande tabell visas de JAR-filer som krävs för att anropa AEM Forms-tjän
 <table>
  <thead>
   <tr>
-   <th><p>Arkiv</p></th>
+   <th><p>Fil</p></th>
    <th><p>Beskrivning</p></th>
    <th><p>Plats</p></th>
   </tr>
@@ -223,7 +223,7 @@ I följande tabell visas de JAR-filer som är beroende av anslutningsläget och 
 <table>
  <thead>
   <tr>
-   <th><p>Arkiv</p> </th>
+   <th><p>Fil</p> </th>
    <th><p>Beskrivning</p> </th>
    <th><p>Plats</p> </th>
   </tr>

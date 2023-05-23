@@ -38,7 +38,7 @@ Den här sidan innehåller viktig information om hur du arbetar med filbibliotek
    <td>cq.ckeditor<br /> cq.social.hbs.röstning<br /> cq.social.hbs.filelibrary</td>
   </tr>
   <tr>
-   <td> <strong>templates</strong></td>
+   <td> <strong>mallar</strong></td>
    <td> /libs/social/filelibrary/components/hbs/filelibrary/filelibrary.hbs<br /> /libs/social/filelibrary/components/hbs/folder/folder.hbs<br /> /libs/social/filelibrary/components/hbs/folder/item.hbs<br /> /libs/social/filelibrary/components/hbs/document/document.hbs<br /> /libs/social/filelibrary/components/hbs/document/item.hbs<br /> </td>
   </tr>
   <tr>

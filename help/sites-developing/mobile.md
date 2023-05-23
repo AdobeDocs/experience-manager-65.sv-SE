@@ -90,7 +90,7 @@ The **Webbplats för mobil demo inom detaljhandeln** använder följande mobila 
   </tr>
   <tr>
    <td>mobilefooter</td>
-   <td>hidden</td>
+   <td>dold</td>
    <td>- sidfot</td>
   </tr>
   <tr>
@@ -105,7 +105,7 @@ The **Webbplats för mobil demo inom detaljhandeln** använder följande mobila 
   </tr>
   <tr>
    <td>mobilelogo</td>
-   <td>hidden</td>
+   <td>dold</td>
    <td>- baserat på logotypens grundkomponent<br /> - återger en bild om enheten är kapabel<br /> </td>
   </tr>
   <tr>
@@ -120,7 +120,7 @@ The **Webbplats för mobil demo inom detaljhandeln** använder följande mobila 
   </tr>
   <tr>
    <td>mobiletopnav</td>
-   <td>hidden</td>
+   <td>dold</td>
    <td><p>- baserat på den topnav Foundation-komponenten</p> <p>- återger bara text</p> </td>
   </tr>
  </tbody>

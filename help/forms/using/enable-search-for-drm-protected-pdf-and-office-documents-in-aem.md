@@ -24,7 +24,7 @@ Adobe Experience Manager har ett användargränssnitt för att söka efter och h
 
 Följ de här stegen för att aktivera AEM att söka efter dokumentsäkerhetsskyddade PDF- och Microsoft Office-dokument:
 
-## Innan du startar {#before-you-start}
+## Innan du börjar {#before-you-start}
 
 * Installera och konfigurera AEM Forms dokumentsäkerhet.
 * Lägg till paketet sun.util.calendar till tillåtelselista i **Konfiguration av brandvägg för deserialisering.** Konfigurationen visas på `https://'[server]:[port]'/system/console/configMgr`.

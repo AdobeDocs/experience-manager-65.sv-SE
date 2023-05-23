@@ -74,7 +74,7 @@ När du kör Configuration Manager läggs standardvärden och IP-adressen eller 
 
    * Skriv ett värdnamn eller en IP-adress i rutan Tillåtna referenser. Om du vill lägga till mer än en tillåten referens åt gången skriver du varje värdnamn eller IP-adress på en ny rad.
    * I rutorna HTTP-port och HTTPS-portar anger du vilka portar som ska tillåtas för HTTP, HTTPS eller båda. Om du lämnar rutorna tomma används standardportarna (port 80 för HTTP och port 443 för HTTPS). Om du anger `0` (noll) i rutorna aktiveras alla portar på den servern. Du kan också ange ett specifikt portnummer för att bara aktivera den porten.
-   * Klicka på Lägg till
+   * Klicka på Lägg till.
 
 1. Om du vill ta bort en post från listan Tillåtna referenser markerar du objektet i listan och klickar på Ta bort.
 

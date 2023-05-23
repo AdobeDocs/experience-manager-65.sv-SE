@@ -101,7 +101,7 @@ RTE kan använda `strong` och `em` taggar istället för `b` och `i`. Lägg till
 ### Stegvisa instruktioner {#step-by-step-instructions}
 
 1. Starta CRXDE Lite. Till exempel: [http://localhost:4502/crx/de/](http://localhost:4502/crx/de/)
-1. Kopiera:
+1. Copy:
 
    `/libs/cq/ui/widgets/source/widgets/form/rte/commands/Table.js`
 
@@ -113,7 +113,7 @@ RTE kan använda `strong` och `em` taggar istället för `b` och `i`. Lägg till
    >
    >Du kan behöva skapa mellanliggande mappar om de inte redan finns.
 
-1. Kopiera:
+1. Copy:
 
    `/libs/cq/ui/widgets/source/widgets/form/rte/plugins/TablePropertiesDialog.js`
 

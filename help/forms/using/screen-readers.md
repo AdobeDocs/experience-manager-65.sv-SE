@@ -12,7 +12,7 @@ feature: Mobile Forms
 exl-id: 07d20c2f-7d13-48ac-8d58-b367eb194558
 source-git-commit: 18cfefb794382b5314b18a62645f1fba28d314a2
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '322'
 ht-degree: 0%
 
 ---

@@ -133,7 +133,7 @@ Loggkonfigurationen består av loggnivån och loggkategorin.
    <th>Beskrivning</th>
   </tr>
   <tr>
-   <td>en</td>
+   <td>a</td>
    <td>xfa (skriptmotorrelaterade loggar)</td>
   </tr>
   <tr>

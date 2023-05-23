@@ -341,7 +341,7 @@ Om du valde Ingen för inställningsfilen anger området Färghanteringsprofiler
 
 Oavsett vilket kompatibilitetsalternativ du väljer ändras inte gråskalebilder. Detta minskar vanligtvis storleken och ökar visningshastigheten för PDF-filer eftersom mindre information behövs för att beskriva RGB-bilder än för att beskriva CMYK-bilder. Eftersom RGB är den inbyggda färgrymden som används på skärmar behövs ingen färgkonvertering under visningen, vilket gör att du kan visa bilden snabbt online. Det här alternativet rekommenderas om PDF-filen ska användas online eller med skrivare med låg upplösning.
 
-**Dokumentåtergivningsmetod:** Metoden för att mappa färger mellan färgrymder. Resultatet av en viss metod beror på färgrymdernas profiler. Vissa profiler ger till exempel identiska resultat med olika metoder. Tillgängliga alternativ:
+**Dokumentåtergivningsmetod:** Metoden för att mappa färger mellan färgrymder. Resultatet av en viss metod beror på färgrymdernas profiler. Vissa profiler ger till exempel identiska resultat med olika metoder. Dessa alternativ är tillgängliga:
 
 >[!NOTE]
 >
@@ -359,7 +359,7 @@ Oavsett vilket kompatibilitetsalternativ du väljer ändras inte gråskalebilder
 
 ### Arbetsytor {#working-spaces}
 
-För alla värden i listan under Färghanteringsprofiler, utom Ändra inte färg, väljer du bland listorna i arbetsyteområdet vilka ICC-profiler som ska användas för att definiera och kalibrera färgrymderna för gråskala, RGB och CMYK i bearbetade PDF-filer. Tillgängliga alternativ:
+För alla värden i listan under Färghanteringsprofiler, utom Ändra inte färg, väljer du bland listorna i arbetsyteområdet vilka ICC-profiler som ska användas för att definiera och kalibrera färgrymderna för gråskala, RGB och CMYK i bearbetade PDF-filer. Dessa alternativ är tillgängliga:
 
 **Grå:** Definierar färgrymden för alla gråskalebilder i filer. Det här alternativet är endast tillgängligt om du väljer Tagga allt för färghantering eller Tagga endast bilder för färghantering. ICC-standardprofilen för grå bilder är Grå gamma 2.2. Du kan också välja Ingen om du inte vill att gråskalebilder ska konverteras.
 

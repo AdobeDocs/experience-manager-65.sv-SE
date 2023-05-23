@@ -14,7 +14,7 @@ exl-id: 51f616e8-4aba-47f6-b948-d5147d84bbb6
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '442'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -51,7 +51,7 @@ Bloggfunktionen består av två huvudkomponenter som är tillgängliga genom att
    <td>cq.ckeditor<br /> cq.social.hbs.röstning<br /> cq.social.hbs.journal</td>
   </tr>
   <tr>
-   <td> <strong>templates</strong></td>
+   <td> <strong>mallar</strong></td>
    <td> /libs/social/journal/components/hbs/journal/journal.hbs<br /> /libs/social/journal/components/hbs/entry_topic/list-item.hbs</td>
   </tr>
   <tr>
@@ -71,7 +71,7 @@ Bloggfunktionen består av två huvudkomponenter som är tillgängliga genom att
 |---|---|
 | [**oklanderlig**](/help/communities/scf.md#add-or-include-a-communities-component) | Nej |
 | [**klientlibs**](/help/communities/clientlibs.md) | cq.social.hbs.journal_sidebar |
-| **templates** | /libs/social/journal/components/hbs/sidebar/sidebar.hbs |
+| **mallar** | /libs/social/journal/components/hbs/sidebar/sidebar.hbs |
 | **css** | /libs/social/journal/components/hbs/sidebar/clientlibs/sidebar.css |
 | **egenskaper** | se [Bloggfunktion](/help/communities/blog-feature.md) |
 

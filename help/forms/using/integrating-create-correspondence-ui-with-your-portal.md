@@ -14,7 +14,7 @@ exl-id: c3b6ee31-ccbb-4446-86c8-f618226fefc4
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '413'
-ht-degree: 3%
+ht-degree: 0%
 
 ---
 
@@ -67,7 +67,7 @@ Parametrarnas ordning i tabellen anger inställningarna för parametrar som anv�
   </tr>
   <tr>
    <td>cmDataUrl<br /> </td> 
-   <td>Webbadress</td> 
+   <td>URL</td> 
    <td>XML-data från en källfil med hjälp av grundläggande protokoll som cq, ftp, http eller file.<br /> </td> 
   </tr>
   <tr>
@@ -77,7 +77,7 @@ Parametrarnas ordning i tabellen anger inställningarna för parametrar som anv�
   </tr>
   <tr>
    <td>cmUseTestData</td> 
-   <td>Boolesk</td> 
+   <td>Boolean</td> 
    <td>Om du vill återanvända testdata som bifogats i dataordlistan.</td> 
   </tr>
  </tbody>
@@ -96,7 +96,7 @@ Parametrarnas ordning i tabellen anger inställningarna för de parametrar som a
   </tr>
   <tr>
    <td>cmPreview<br /> </td> 
-   <td>Boolesk</td> 
+   <td>Boolean</td> 
    <td>True to open the letter in preview mode<br /> </td> 
   </tr>
   <tr>

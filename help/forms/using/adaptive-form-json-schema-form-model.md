@@ -8,7 +8,7 @@ exl-id: 1b402aef-a319-4d32-8ada-cadc86f5c872
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '1448'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
@@ -658,7 +658,7 @@ Du kan lägga till följande begränsningar i JSON-schemaelement för att begrä
   </tr>
   <tr>
    <td><p><code>exclusiveMaximum</code></p> </td>
-   <td><p>Boolesk</p> </td>
+   <td><p>Boolean</p> </td>
    <td><p>Om true måste det numeriska värdet eller datumet som anges i formulärets komponent vara mindre än det numeriska värdet eller datumet som anges för egenskapen maximum.</p> <p>Om värdet är false måste det numeriska värdet eller datumet som anges i formulärets komponent vara mindre än eller lika med det numeriska värdet eller datumet som anges för egenskapen maximum.</p> </td>
    <td>
     <ul>
@@ -669,7 +669,7 @@ Du kan lägga till följande begränsningar i JSON-schemaelement för att begrä
   </tr>
   <tr>
    <td><p><code>exclusiveMinimum</code></p> </td>
-   <td><p>Boolesk</p> </td>
+   <td><p>Boolean</p> </td>
    <td><p>Om true måste det numeriska värdet eller datumet som anges i formulärets komponent vara större än det numeriska värdet eller datumet som anges för egenskapen minimum.</p> <p>Om värdet är false måste det numeriska värdet eller datumet som anges i formulärets komponent vara större än eller lika med det numeriska värdet eller datumet som anges för egenskapen minimum.</p> </td>
    <td>
     <ul>

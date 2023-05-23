@@ -15,7 +15,7 @@ exl-id: 829da16a-4083-43c1-857d-f2666b363bfc
 source-git-commit: 1d334c42088342954feb34f6179dc5b134f81bb8
 workflow-type: tm+mt
 source-wordcount: '2040'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -344,7 +344,7 @@ I envalsläge eller gruppläge kan du markera objekt och ta bort dem. Borttagnin
 
 #### Stäng {#close}
 
-![close](assets/close.png)
+![stäng](assets/close.png)
 
 När du arbetar med ett enstaka inlägg visas en stängningsikon om UGC-typen stöder möjligheten att förhindra fler inlägg för den resursen.
 

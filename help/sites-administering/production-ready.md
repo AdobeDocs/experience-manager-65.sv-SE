@@ -13,7 +13,7 @@ exl-id: 3c342014-f8ec-4404-afe5-514bdb651aae
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '383'
-ht-degree: 3%
+ht-degree: 1%
 
 ---
 
@@ -69,9 +69,9 @@ Mer specifikt kommer följande konfigurationsändringar att utföras när AEM k�
 
 | **Konfiguration** | **Författare** | **Publicera** |
 |---|---|---|
-| TXT-rendering | inaktiverat | inaktiverat |
-| HTML rendering | inaktiverat | inaktiverat |
+| TXT-rendering | inaktiverad | inaktiverad |
+| HTML rendering | inaktiverad | inaktiverad |
 | JSON-rendering | aktiverad | aktiverad |
-| XML-rendering | inaktiverat | inaktiverat |
+| XML-rendering | inaktiverad | inaktiverad |
 | json.maximumresults | 1000 | 100 |
-| Automatiskt index | inaktiverat | inaktiverat |
+| Automatiskt index | inaktiverad | inaktiverad |

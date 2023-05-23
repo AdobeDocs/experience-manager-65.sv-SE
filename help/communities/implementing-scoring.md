@@ -16,7 +16,7 @@ exl-id: 4aa857f7-d111-4548-8f03-f6d6c27acf51
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '2868'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -247,7 +247,7 @@ Underregler är noder av typen `cq:Page` med egenskaper på `jcr:content`nod som
   </tr>
   <tr>
    <td><code>forOwner</code></td>
-   <td>Boolesk</td>
+   <td>Boolean</td>
    <td>
     <ul>
      <li>frivilligt, inte är relevant när en medlem agerar på innehåll som han/hon äger</li>

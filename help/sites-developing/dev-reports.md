@@ -650,11 +650,11 @@ N:definitions
          Den här egenskapen kan användas för att ange ett suffix som ska läggas till i sökvägen innan värdet löses.
    * `pathextension`
 
-      * `path` (mandatory)
+      * `path` (obligatoriskt)
 
          Definierar den sökväg som ska användas som prepended.
 
-      * `propertyName` (mandatory)
+      * `propertyName` (obligatoriskt)
 
          Definierar egenskapen på den lösta sökvägen där det faktiska värdet finns.
 

@@ -92,7 +92,7 @@ Användarhanteringsdata för användare som minst en gång har använt Forms-pro
 
 ## Få åtkomst till och ta bort användardata {#access-and-delete-user-data}
 
-Du kan komma åt och exportera användarhanteringsdata för användare i användarhanteringsdatabaserna och AEM, och vid behov ta bort dem permanent.
+Du kan komma åt och exportera användarhanteringsdata för användare i användarhanteringsdatabaserna och AEM, och om det behövs, ta bort dem permanent.
 
 ### Databas {#database-1}
 

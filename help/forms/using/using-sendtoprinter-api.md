@@ -12,7 +12,7 @@ exl-id: 5fb38afd-7517-494e-b084-1fdd4aef3ca4
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '358'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
@@ -43,23 +43,23 @@ Tabellen nedan listar:
 
 | Protokoll (åtkomstmekanism) | Print Server-URI (PrinterSpec.printServer) | Skrivarens namn (PrinterSpec.printerName) | Resultat |
 |--- |--- |--- |--- |
-| SharedPrinter | Alla | Tomt | Undantag: Det obligatoriska argumentet sPrinterName får inte vara tomt. |
+| SharedPrinter | Alla | Tom | Undantag: Det obligatoriska argumentet sPrinterName får inte vara tomt. |
 | SharedPrinter | Alla | Ogiltig | Ett undantag är att skrivaren inte kan hittas. |
 | SharedPrinter | Alla | Giltig | Utskriften är klar. |
-| LPD | Tomt | Alla | ett undantag som anger att det obligatoriska argumentet sPrintServerUri inte får vara tomt. |
-| LPD | Ogiltig | Tomt | ett undantag som anger att det obligatoriska argumentet sPrinterName inte får vara tomt. |
+| LPD | Tom | Alla | ett undantag som anger att det obligatoriska argumentet sPrintServerUri inte får vara tomt. |
+| LPD | Ogiltig | Tom | ett undantag som anger att det obligatoriska argumentet sPrinterName inte får vara tomt. |
 | LPD | Ogiltig | Inte tom | ett undantag som anger att sPrintServerUri inte hittas. |
 | LPD | Giltig | Ogiltig | ett undantag som anger att skrivaren inte kan hittas. |
 | LPD | Giltig | Giltig | Utskriften är klar. |
-| CUPS | Tomt | Alla | ett undantag som anger att det obligatoriska argumentet sPrintServerUri inte får vara tomt. |
+| CUPS | Tom | Alla | ett undantag som anger att det obligatoriska argumentet sPrintServerUri inte får vara tomt. |
 | CUPS | Ogiltig | Alla | ett undantag som anger att skrivaren inte kan hittas. |
 | CUPS | Giltig | Alla | Utskriften är klar. |
-| DirectIP | Tomt | Alla | ett undantag som anger att det obligatoriska argumentet sPrintServerUri inte får vara tomt. |
+| DirectIP | Tom | Alla | ett undantag som anger att det obligatoriska argumentet sPrintServerUri inte får vara tomt. |
 | DirectIP | Ogiltig | Alla | ett undantag som anger att skrivaren inte kan hittas. |
 | DirectIP | Giltig | Alla | Utskriften är klar. |
-| CIFS | Giltig | Tomt | Utskriften är klar. |
+| CIFS | Giltig | Tom | Utskriften är klar. |
 | CIFS | Ogiltig | Alla | ett okänt fel vid utskrift med CIFS. |
-| CIFS | Tomt | Alla | ett undantag som anger att det obligatoriska argumentet sPrintServerUri inte får vara tomt. |
+| CIFS | Tom | Alla | ett undantag som anger att det obligatoriska argumentet sPrintServerUri inte får vara tomt. |
 
 ## Autentiseringsstöd {#authentication-support}
 

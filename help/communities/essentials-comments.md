@@ -40,7 +40,7 @@ Kommentarskomponenten skapar ett kommentarsystem så att varje inlägg represent
    <td>cq.ckeditor<br /> cq.social.hbs.comments<br /> cq.social.hbs.röstning</td>
   </tr>
   <tr>
-   <td> <strong>templates</strong></td>
+   <td> <strong>mallar</strong></td>
    <td> /libs/social/commons/components/hbs/comments/comments.hbs<br /> </td>
   </tr>
   <tr>

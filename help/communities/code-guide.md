@@ -13,7 +13,7 @@ exl-id: a23aab83-1dfa-4d91-9b6b-6246a2103896
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '180'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -27,7 +27,7 @@ Ytterligare flexibilitet när det gäller att arbeta med användargenererat inne
 
 Nedan följer olika riktlinjer för kodning och metodtips för AEM Communities-utvecklare:
 
-### Kod {#code}
+### Code {#code}
 
 * [Åtkomst till UGC med SRP](accessing-ugc-with-srp.md) - hur du undviker att skriva ett program som bara fungerar när UGC lagras i JCR (JSRP).
 * [Omfaktorisering för SocialUtils](socialutils.md) - verktygsmetoder för SRP som ersätter SocialUtils.

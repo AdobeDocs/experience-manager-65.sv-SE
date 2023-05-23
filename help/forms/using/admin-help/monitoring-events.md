@@ -64,7 +64,7 @@ Du kan söka efter händelser på sidan Händelser genom att använda en kombina
 
 **Händelser som rör mina dokument:** Användarna kan hitta alla händelser som är relaterade till deras egna policyskyddade dokument. Användarna ser händelser som genereras av alla som hanterar deras dokument.
 
-**Koordinatorer för principuppsättning:** Kan visa granskade händelser, inklusive dokument- och principhändelser, för dokument som skyddas av policyer från sina uppsättningar av policyer. Tillgängliga alternativ:
+**Koordinatorer för principuppsättning:** Kan visa granskade händelser, inklusive dokument- och principhändelser, för dokument som skyddas av policyer från sina uppsättningar av policyer. Dessa alternativ är tillgängliga:
 
 **Dokumenthändelser där jag är koordinator för principuppsättning:** Koordinatorer för principuppsättningar som har behörighet att visa händelser kan hitta händelser som är relaterade till dokument som skyddas av profiler från deras principuppsättningar.
 

@@ -105,7 +105,7 @@ Före en distribution ska du läsa [Allmän beskrivning](#general-description) o
 
    * Ett sätt för AEM att autentisera en användare är att inaktivera WebSphere-serverns globala administrativa säkerhet: Gå till Säkerhet -> Global säkerhet och avmarkera kryssrutan Aktivera administrativ säkerhet, spara och starta om servern.
 
-* uppsättning `"JAVA_OPTS= -Xmx2048m"`
+* set `"JAVA_OPTS= -Xmx2048m"`
 * Om du vill installera AEM med kontextroten = / måste du först ändra kontextroten för det befintliga standardwebbprogrammet
 
 **Distribuera AEM webbprogram**

@@ -13,7 +13,7 @@ exl-id: 0d9eb7fe-28a6-444e-957d-023687158c61
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '804'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -91,4 +91,4 @@ Standardvärdet är en tom sträng.
 
 >[!NOTE]
 >
->Om du använder ett tillfälligt rensningsverktyg bör du tänka på att även om du tar bort de här katalogerna inte påverkar funktionaliteten så kan det påverka prestanda avsevärt under en kort tid tills det nya cacheminnet skapas. Du kan undvika det här problemet genom att inte ta bort de här katalogerna samtidigt som du rensar den tillfälliga katalogen för AEM formulär.
+>Om du använder ett tillfälligt rensningsverktyg bör du tänka på att även om du tar bort de här katalogerna inte påverkar funktionaliteten så kan det påverka prestanda avsevärt under en kort tid tills det nya cacheminnet skapas. För att undvika det här problemet ska du inte ta bort de här katalogerna samtidigt som du rensar den tillfälliga katalogen för AEM formulär.

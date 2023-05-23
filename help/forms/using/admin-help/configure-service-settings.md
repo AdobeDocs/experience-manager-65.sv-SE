@@ -836,7 +836,7 @@ Standardsäkerhetsprofiler installeras, som sedan kan konfigureras för att uppf
    * **SERVICE_MANAGER_PERM:** För användning i en framtida version av AEM formulär. Använd inte den här behörigheten.
    * **SERVICE_AGENT_PERM:** För användning i en framtida version av AEM formulär. Använd inte den här behörigheten.
 
-1. Klicka på Lägg till
+1. Klicka på Lägg till.
 
 ### Ta bort säkerhetsobjektet från en säkerhetsprofil {#remove-the-principal-from-a-security-profile}
 

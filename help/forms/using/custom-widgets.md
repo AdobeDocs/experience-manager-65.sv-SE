@@ -103,7 +103,7 @@ Widgetkonfigurationen tillhandahålls som ett JSON-objekt (en samling nyckelvär
 
 där &quot;identifier&quot; är en jQuery CSS-väljare som representerar ett visst fält, en uppsättning fält av en viss typ eller alla fält. I följande lista visas identifierarens värde i olika fall:
 
-| Typ av identifierare | ID | Beskrivning |
+| Typ av identifierare | Identifierare | Beskrivning |
 |---|---|---|
 | Särskilt fält med namn fältnamn | Identifierare:&quot;div.fieldName&quot; | Alla fält med namnet&quot;fältnamn&quot; återges med widgeten. |
 | Alla fält av typen&quot;type&quot; (där typen är NumericField, DateField och så vidare).: | Identifierare: &quot;div.type&quot; | För Timefield och DateTimeField är typen textfält eftersom dessa fält inte stöds. |

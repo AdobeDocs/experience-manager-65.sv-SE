@@ -59,7 +59,7 @@ Utöver automatiserad testning bör din app genomgå en serie manuella tester. K
    * prestanda,
    * data-/effektförbrukning osv.
 
-## Verktyg {#tools}
+## verktyg {#tools}
 
 Det finns ett stort antal verktyg för testning av mobilappar. Valet av alternativ baseras på din specifika situation: funktioner, pris, support, täckning osv. Här följer en liten beskrivning av några av de verktyg och tjänster som är tillgängliga.
 

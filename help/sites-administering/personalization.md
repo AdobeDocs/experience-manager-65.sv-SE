@@ -46,7 +46,7 @@ Innehållet måste med andra ord på något sätt vara beroende av användaren. 
 
 Personalisering kan antingen vara:
 
-#### Specifik {#explicit}
+#### Explicit {#explicit}
 
 * Anpassning: där användaren gör val från ett urval av innehållskällor.
 

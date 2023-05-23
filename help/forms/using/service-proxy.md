@@ -14,7 +14,7 @@ exl-id: 8f9b10ae-1600-49c2-a061-153a2a89c67e
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '697'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -55,7 +55,7 @@ De skript som är markerade för att köras på servern kallas för serverbasera
    <td><p><strong>Beskrivning</strong></p> </td>
   </tr>
   <tr>
-   <td><p>activity</p> </td>
+   <td><p>aktivitet</p> </td>
    <td><p>Aktiviteten innehåller de händelser som utlöser begäran. Till exempel klicka, avsluta eller ändra</p> </td>
   </tr>
   <tr>
@@ -79,7 +79,7 @@ De skript som är markerade för att köras på servern kallas för serverbasera
    <td><p>formDom innehåller DOM för HTML5-formuläret i JSON-format.</p> </td>
   </tr>
   <tr>
-   <td><p>packet</p> </td>
+   <td><p>paket</p> </td>
    <td><p>Paketet anges som formulär.</p> </td>
   </tr>
   <tr>

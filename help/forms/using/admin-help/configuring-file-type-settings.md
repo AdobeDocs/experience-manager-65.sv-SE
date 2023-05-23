@@ -13,7 +13,7 @@ exl-id: 1a6640cc-22ef-41d5-a0c6-7a2c2dabcef1
 source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
 source-wordcount: '5861'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -448,9 +448,9 @@ Dessa alternativ avgör hur Microsoft PowerPoint-filer konverteras. Instruktione
 
 **[!UICONTROL Add Bookmarks To Adobe PDF]**: Konverterar PowerPoint-titlar till bokmärken. Det här alternativet är markerat som standard.
 
-**[!UICONTROL Attach Source File To Adobe PDF]**: Lägger till källfilen i PDF-filen som en bifogad fil. Det här alternativet är avmarkerat som standard.
+**[!UICONTROL Attach Source File To Adobe PDF]**: Lägger till källfilen i PDF-filen som en bifogad fil. Det här alternativet är som standard avmarkerat.
 
-**[!UICONTROL Enable Accessibility And Reflow With Tagged Adobe PDF]**: Bäddar in taggar i filen PDF. Det här alternativet är avmarkerat som standard.
+**[!UICONTROL Enable Accessibility And Reflow With Tagged Adobe PDF]**: Bäddar in taggar i filen PDF. Det här alternativet är som standard avmarkerat.
 
 **[!UICONTROL Convert Multimedia To PDF Multimedia]**: Konverterar multimedia till PDF-multimedia, där det är möjligt. Det här alternativet är markerat som standard.
 
@@ -460,7 +460,7 @@ Dessa alternativ avgör hur Microsoft PowerPoint-filer konverteras. Instruktione
 
 **[!UICONTROL PDF Layout Based On PowerPoint Printer Settings]**: Använder PowerPoint-skrivarinställningar för att utforma PDF-dokumentet.
 
-**[!UICONTROL Add Links To Adobe PDF]**: Bevarar befintliga länkar när filen konverteras. Länkarnas utseende ändras i allmänhet inte. Länkar kan bara skapas om alternativet Aktivera hjälpmedel också är markerat. Det här alternativet är avmarkerat som standard.
+**[!UICONTROL Add Links To Adobe PDF]**: Bevarar befintliga länkar när filen konverteras. Länkarnas utseende ändras i allmänhet inte. Länkar kan bara skapas om alternativet Aktivera hjälpmedel också är markerat. Det här alternativet är som standard avmarkerat.
 
 **[!UICONTROL Save Slide Transitions In Adobe PDF]**: Konverterar bildövergångar. Det här alternativet är markerat som standard.
 

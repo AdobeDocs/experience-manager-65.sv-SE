@@ -526,7 +526,7 @@ Kontextlagringskomponenten kräver en redigeringsdialogruta. Dialogrutan för ge
    |---|---|---|
    | cls | Sträng | x-form-fields-set-description |
    | text | Sträng | Geoloc-komponenten kräver ingen konfiguration. |
-   | xtype | Sträng | Statisk |
+   | xtype | Sträng | static |
 
 1. Klicka på Spara alla.
 

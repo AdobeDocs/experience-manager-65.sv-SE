@@ -91,7 +91,7 @@ Här följer några baslinjeparametrar som du kan övervaka för JVM:
 Minne
 
 * `MBean: lava.lang:type=Memory`
-* Webbadress: `/system/console/jmx/java.lang:type=Memory`
+* URL: `/system/console/jmx/java.lang:type=Memory`
 * Instanser: Alla servrar
 * Larm threshold: När minnesanvändningen för heap eller icke-heap överstiger 75 % av motsvarande maximala minne.
 * Larm-definition: Antingen är systemminnet otillräckligt eller så finns det en minnesläcka i koden. Analysera en tråddump för att komma fram till en definition.
@@ -103,7 +103,7 @@ Minne
 Trådar
 
 * MBean: `java.lang:type=Threading`
-* Webbadress: `/system/console/jmx/java.lang:type=Threading`
+* URL: `/system/console/jmx/java.lang:type=Threading`
 * Instanser: Alla servrar
 * Larm threshold: När antalet trådar är större än 150 % av baslinjen.
 * Larm-definition: Antingen finns det en aktiv runaway-process, eller så använder en ineffektiv åtgärd en stor mängd resurser. Analysera en tråddump för att komma fram till en definition.
@@ -117,7 +117,7 @@ Här är några baslinjeparametrar som du kan övervaka [!DNL Experience Manager
 Replikeringsagenter
 
 * MBean: `com.adobe.granite.replication:type=agent,id="<AGENT_NAME>"`
-* Webbadress: `/system/console/jmx/com.adobe.granite.replication:type=agent,id="<AGENT_NAME>"`
+* URL: `/system/console/jmx/com.adobe.granite.replication:type=agent,id="<AGENT_NAME>"`
 * Instanser: En författare och alla publiceringsinstanser (för rensningsagenter)
 * Larm threshold: När värdet för `QueueBlocked` är `true` eller värdet av `QueueNumEntries` är större än 150% av baslinjen.
 
@@ -143,7 +143,7 @@ Här följer några färdiga hälsokontroller som är bra att övervaka:
 
 * Systemkontroller
    * MBean: `org.apache.sling.healthcheck:name=systemchecks,type=HealthCheck`
-   * Webbadress: `/system/console/jmx/org.apache.sling.healthcheck:name=systemchecks,type=HealthCheck`
+   * URL: `/system/console/jmx/org.apache.sling.healthcheck:name=systemchecks,type=HealthCheck`
    * Instanser: En författare, alla publiceringsservrar
    * Larm threshold: När statusen inte är OK
    * Larm-definition: Statusen för ett av mätvärdena är antingen WARN eller CRITICAL. Mer information om orsaken till problemet finns i loggattributet.
@@ -151,7 +151,7 @@ Här följer några färdiga hälsokontroller som är bra att övervaka:
 * Replikeringskö
 
    * MBean: `org.apache.sling.healthcheck:name=replicationQueue,type=HealthCheck`
-   * Webbadress: `/system/console/jmx/org.apache.sling.healthcheck:name=replicationQueue,type=HealthCheck`
+   * URL: `/system/console/jmx/org.apache.sling.healthcheck:name=replicationQueue,type=HealthCheck`
    * Instanser: En författare, alla publiceringsservrar
    * Larm threshold: När statusen inte är OK
    * Larm-definition: Statusen för ett av mätvärdena är antingen WARN eller CRITICAL. Mer information om kön som orsakade problemet finns i loggattributet.
@@ -159,7 +159,7 @@ Här följer några färdiga hälsokontroller som är bra att övervaka:
 * Svarsprestanda
 
    * MBean: `org.apache.sling.healthcheck:name=requestsStatus,type=HealthCheck`
-   * Webbadress: `/system/console/jmx/org.apache.sling.healthcheck:name=requestsStatus,type=HealthCheck`
+   * URL: `/system/console/jmx/org.apache.sling.healthcheck:name=requestsStatus,type=HealthCheck`
    * Instanser: Alla servrar
    * Varaktighet för larm: När statusen inte är OK
    * Larm-definition: Status för ett av måtten är antingen WARN eller CRITICAL. Mer information om kön som orsakade problemet finns i loggattributet.
@@ -167,7 +167,7 @@ Här följer några färdiga hälsokontroller som är bra att övervaka:
 * Frågeprestanda
 
    * MBean: `org.apache.sling.healthcheck:name=queriesStatus,type=HealthCheck`
-   * Webbadress: `/system/console/jmx/org.apache.sling.healthcheck:name= queriesStatus,type=HealthCheck`
+   * URL: `/system/console/jmx/org.apache.sling.healthcheck:name= queriesStatus,type=HealthCheck`
    * Instanser: En författare, alla publiceringsservrar
    * Larm threshold: När statusen inte är OK
    * Larm-definition: En eller flera frågor körs långsamt i systemet. Mer information om de frågor som orsakade problemet finns i loggattributet.
@@ -175,7 +175,7 @@ Här följer några färdiga hälsokontroller som är bra att övervaka:
 * Aktiva paket
 
    * MBean: `org.apache.sling.healthcheck:name=inactiveBundles,type=HealthCheck`
-   * Webbadress: `/system/console/jmx/org.apache.sling.healthcheck:name=inactiveBundles,type=HealthCheck`
+   * URL: `/system/console/jmx/org.apache.sling.healthcheck:name=inactiveBundles,type=HealthCheck`
    * Instanser: Alla servrar
    * Larm threshold: När statusen inte är OK
    * Larm-definition: Förekomst av inaktiva eller olösta OSGi-paket i systemet. Mer information om de paket som orsakade problemet finns i loggattributet.
@@ -183,7 +183,7 @@ Här följer några färdiga hälsokontroller som är bra att övervaka:
 * Loggfel
 
    * MBean: `org.apache.sling.healthcheck:name=logErrorHealthCheck,type=HealthCheck`
-   * Webbadress: `/system/console/jmx/org.apache.sling.healthcheck:name=logErrorHealthCheck,type=HealthCheck`
+   * URL: `/system/console/jmx/org.apache.sling.healthcheck:name=logErrorHealthCheck,type=HealthCheck`
    * Instanser: Alla servrar
    * Larm threshold: När statusen inte är OK
    * Larm-definition: Det finns fel i loggfilerna. Mer information om orsaken till problemet finns i loggattributet.

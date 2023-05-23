@@ -12,7 +12,7 @@ exl-id: d0280a15-5d0d-49cf-bce9-ad1c40530eae
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '446'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -35,11 +35,11 @@ Följande händelser spåras automatiskt i en analysaktiverad Adaptiv form:
    <td>formName, formTitle, formInstance, panelName, panelTitle</td>
   </tr>
   <tr>
-   <td>save</td>
+   <td>spara</td>
    <td>formName, formTitle, formInstance, panelName, source</td>
   </tr>
   <tr>
-   <td>submit</td>
+   <td>skicka</td>
    <td>formName, formTitle, formInstance, källa</td>
   </tr>
   <tr>

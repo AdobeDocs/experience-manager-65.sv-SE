@@ -13,7 +13,7 @@ exl-id: 8753aaab-959f-459b-bdb6-057cbe05d480
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1837'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -61,7 +61,7 @@ Här följer en lista med frågeparametrar för massredigering:
   </tr>
   <tr>
    <td> contentMode / cm<br /> </td>
-   <td> Boolesk</td>
+   <td> Boolean</td>
    <td> när true är innehållsläget aktiverat<br /> </td>
   </tr>
   <tr>
@@ -76,7 +76,7 @@ Här följer en lista med frågeparametrar för massredigering:
   </tr>
   <tr>
    <td> initialSearch / is<br /> </td>
-   <td> Boolesk</td>
+   <td> Boolean</td>
    <td> om true utförs frågan vid sidinläsning<br /> </td>
   </tr>
   <tr>
@@ -86,77 +86,77 @@ Här följer en lista med frågeparametrar för massredigering:
   </tr>
   <tr>
    <td> showGridOnly / go<br /> </td>
-   <td> Boolesk</td>
+   <td> Boolean</td>
    <td> om true visas endast stödrastret och inte sökpanelen <br /> </td>
   </tr>
   <tr>
    <td> searchPanelCollapsed/spc</td>
-   <td> Boolesk</td>
+   <td> Boolean</td>
    <td> när true är sökpanelen komprimerad vid inläsning</td>
   </tr>
   <tr>
    <td> hideRootPath / hrp</td>
-   <td> Boolesk</td>
+   <td> Boolean</td>
    <td> om true döljs rotsökvägsfältet</td>
   </tr>
   <tr>
    <td> hideQueryParams / hqp</td>
-   <td> Boolesk</td>
+   <td> Boolean</td>
    <td> om true döljs frågefältet</td>
   </tr>
   <tr>
    <td> hideContentMode / hcm</td>
-   <td> Boolesk</td>
+   <td> Boolean</td>
    <td> när true döljs fältet för innehållsläge</td>
   </tr>
   <tr>
    <td> hideColsSelection / hcs</td>
-   <td> Boolesk</td>
+   <td> Boolean</td>
    <td> om true döljs kolumnmarkeringsfältet</td>
   </tr>
   <tr>
    <td> hideExtraCols / hec</td>
-   <td> Boolesk</td>
+   <td> Boolean</td>
    <td> om true döljs fältet för extra kolumner</td>
   </tr>
   <tr>
    <td> hideSearchButton</td>
-   <td> Boolesk</td>
+   <td> Boolean</td>
    <td> om true döljs sökknappen</td>
   </tr>
   <tr>
    <td> hideSaveButton / hsavep</td>
-   <td> Boolesk</td>
+   <td> Boolean</td>
    <td> om true döljs knappen Spara</td>
   </tr>
   <tr>
    <td> hideExportButton / hexpb</td>
-   <td> Boolesk</td>
+   <td> Boolean</td>
    <td> när true döljs exportknappen</td>
   </tr>
   <tr>
    <td> hideImportButton / hib</td>
-   <td> Boolesk</td>
+   <td> Boolean</td>
    <td> om true döljs importknappen</td>
   </tr>
   <tr>
    <td> hideResultNumber / hrn</td>
-   <td> Boolesk</td>
+   <td> Boolean</td>
    <td> om true döljs texten för stödrastrets sökresultatnummer</td>
   </tr>
   <tr>
    <td> hideInsertButton / hinsertb</td>
-   <td> Boolesk</td>
+   <td> Boolean</td>
    <td> om true döljs infogningsknappen för stödrastret</td>
   </tr>
   <tr>
    <td> hideDeleteButton / hdelb</td>
-   <td> Boolesk</td>
+   <td> Boolean</td>
    <td> om true döljs knappen för att ta bort stödraster</td>
   </tr>
   <tr>
    <td> hidePathCol / hpc</td>
-   <td> Boolesk</td>
+   <td> Boolean</td>
    <td> om true döljs stödrastrets "sökvägskolumn"</td>
   </tr>
  </tbody>

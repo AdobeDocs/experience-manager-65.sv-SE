@@ -88,7 +88,7 @@ Correspondence Management har följande konfigurationsegenskaper:
   <tr>
    <td><p>Markeringstyp för fält</p> </td>
    <td><p>Markeringstyp för fält i programmet Skapa korrespondens</p> </td>
-   <td><p>fill</p> </td>
+   <td><p>fyllning</p> </td>
    <td><p>border/fill / none</p> </td>
   </tr>
   <tr>

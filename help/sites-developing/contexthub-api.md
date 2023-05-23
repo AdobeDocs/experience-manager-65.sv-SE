@@ -14,7 +14,7 @@ exl-id: b472d96f-b1a5-40b7-be2a-52f3396f6884
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '5006'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
@@ -498,7 +498,7 @@ Startar ready-händelsen när frågan är klar. Om JSONP-tjänstens URL inte är
 
 * **ladda om:** (Boolean) Värdet true tar bort det cachelagrade svaret och tvingar JSONP-tjänsten att anropas.
 
-#### reset {#reset}
+#### återställ {#reset}
 
 Återställer de ursprungliga värdena för butikens beständiga data och anropar sedan JSONP-tjänsten. Du kan också ta bort alla andra data från arkivet. Händelser pausas för det här arkivet medan de ursprungliga värdena återställs. Den här funktionen returnerar inget värde.
 

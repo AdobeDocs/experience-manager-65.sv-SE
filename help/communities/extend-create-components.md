@@ -13,7 +13,7 @@ exl-id: 2e02db9f-294d-4d4a-92da-3ab1d38416ab
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '583'
-ht-degree: 4%
+ht-degree: 3%
 
 ---
 
@@ -122,7 +122,7 @@ Använda [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md)
       * Till `/apps/custom/components/comments`
    * Ändra om du vill ta med den anpassade kommentarkomponenten (~line 75):
 
-      * Replace `{{include this resourceType='social/commons/components/hbs/comments/comment'}}`
+      * Ersätt `{{include this resourceType='social/commons/components/hbs/comments/comment'}}`
       * Med `{{include this resourceType='/apps/custom/components/comments/comment'}}`
 
 

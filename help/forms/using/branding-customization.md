@@ -13,7 +13,7 @@ exl-id: 9333705b-9944-4a74-a30f-7d9ec85fd824
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '872'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -128,7 +128,7 @@ Följ de här stegen för att anpassa standardprogramikonen och startbilden för
 
 Inloggningssidan för AEM Forms-programmet innehåller logotyper och bakgrundsbilder. Logotypen finns ovanför inloggningsdialogrutan och bakgrundsbilden finns under inloggningsdialogrutan. Följ de här stegen för att anpassa standardbilden på inloggningssidan:
 
-**Innan du startar**
+**Innan du börjar**
 
 Kontrollera att du har följande bilder:
 
@@ -183,7 +183,7 @@ Kontrollera att du har följande bilder:
 
 När du har loggat in på AEM Forms-appen och tryckt på menyknappen visas logotypen ovanför menyn. Följ de här stegen för att anpassa standardlogotypen:
 
-**Innan du startar**
+**Innan du börjar**
 
 Kontrollera att du har följande bild:
 

@@ -12,7 +12,7 @@ exl-id: 9034f73a-83f3-498e-b6a6-ad6577aa1a3a
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '997'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -49,7 +49,7 @@ Följande API:er används i AEM Forms arbetsyta.
   <tr>
    <td>submitTask</td>
    <td>ProcessManagementDocumentHandlingService</td>
-   <td>submit</td>
+   <td>skicka</td>
    <td>Det skickar dokumentobjektet som är associerat med en uppgift (och skicka i sin tur).</td>
   </tr>
   <tr>
@@ -107,9 +107,9 @@ Följande API:er används i AEM Forms arbetsyta.
    <td>Den skickar formulärdata (skickas som sträng) som är kopplade till uppgiften med TaskManagers API. Det används för flexformulär som inte anropar TaskManagers API.</td>
   </tr>
   <tr>
-   <td>save</td>
+   <td>spara</td>
    <td>ProcessManagementTaskService</td>
-   <td>save</td>
+   <td>spara</td>
    <td>Den sparar en aktivitet på servern.</td>
   </tr>
   <tr>

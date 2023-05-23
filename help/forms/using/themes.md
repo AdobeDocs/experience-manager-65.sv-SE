@@ -394,7 +394,7 @@ Alternativen för att anpassa lägesformat varierar för olika komponenter.
  <tbody>
   <tr>
    <td><strong>Egenskap</strong></td>
-   <td><strong>Användning</strong></td>
+   <td><strong>Använd</strong></td>
   </tr>
   <tr>
    <td><p>Dimensioner och position</p> </td>
@@ -409,7 +409,7 @@ Alternativen för att anpassa lägesformat varierar för olika komponenter.
    <td><p>Gör att du kan fylla komponentens bakgrund med en bild eller en färg. </p> </td>
   </tr>
   <tr>
-   <td><p>Kantlinje</p> </td>
+   <td><p>Kant</p> </td>
    <td><p>Här kan du välja hur kanten för komponenten ska se ut. Du vill till exempel att textrutan ska ha en djup röd, tjock kant med en prickad linje. </p> <p>Du kan välja mellan bredd, stil, radie och färg för ramen.</p> </td>
   </tr>
   <tr>

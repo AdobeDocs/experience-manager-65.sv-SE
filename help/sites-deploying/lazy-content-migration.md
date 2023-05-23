@@ -37,7 +37,7 @@ Eftersom detta vanligtvis även kräver att du justerar programmet bör aktivite
 
 Nedan finns en fullständig lista över `CodeUpgradeTasks` som introducerades i 6.5:
 
-| **Namn** | **Relevant** **för AEM versioner före** | **Migrering** **Typ** | **Information** |
+| **Namn** | **Relevant** **för AEM versioner före** | **Migrering** **Typ** | **Detaljer** |
 |---|---|---|---|
 | `Cq561ProjectContentUpgrade` | &lt; 5.6.1 | Omedelbar |  |
 | `Cq60MSMContentUpgrade` | &lt; 6.0 | Omedelbar | Identifierar alla `LiveRelationShips` från `VersionStorage` som har tagits bort och lägga till undantagsegenskap i överordnad |

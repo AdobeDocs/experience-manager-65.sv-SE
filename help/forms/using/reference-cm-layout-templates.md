@@ -36,7 +36,7 @@ När du har installerat paketet visas layoutmallarna (XDP) i mappen templates p�
 
 Följande är de gemensamma fälten i alla mallar i det här paketet:
 
-* Date
+* Datum
 * Hälsning
 * Stänger text
 * Signaturtext

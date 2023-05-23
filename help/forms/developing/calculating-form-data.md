@@ -202,7 +202,7 @@ Beräkna formulärdata med Forms API (webbtjänst):
       * The `BLOB` som innehåller formulärdata.
       * Ett strängvärde som anger miljövariabler inkluderade alla relevanta HTTP-huvuden. Du kan till exempel ange följande strängvärde: `HTTP_REFERER=referrer&HTTP_CONNECTION=keep-alive&CONTENT_TYPE=application/xml`
       * Ett strängvärde som anger `HTTP_USER_AGENT` rubrikvärde; till exempel `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`.
-      * A `RenderOptionsSpec` objekt som lagrar körningsalternativ. Mer information, .
+      * A `RenderOptionsSpec` objekt som lagrar körningsalternativ. Mer information finns i .
       * En tom `BLOBHolder` objekt som fylls i av metoden.
       * En tom `javax.xml.rpc.holders.StringHolder` objekt som fylls i av metoden.
       * En tom `BLOBHolder` objekt som fylls i av metoden.

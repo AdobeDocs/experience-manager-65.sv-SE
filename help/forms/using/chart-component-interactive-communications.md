@@ -232,7 +232,7 @@ När du har skrivit en anpassad funktion gör du följande för att göra den ti
 
 1. Om du vill visa den anpassade funktionen i listrutan Funktion skapar du en `nt:unstructured` i appmappen med följande egenskaper:
 
-   * Lägg till egenskap `guideComponentType` med värdet som `fd/af/reducer`. (mandatory)
+   * Lägg till egenskap `guideComponentType` med värdet som `fd/af/reducer`. (obligatoriskt)
 
    * Lägg till egenskap `value` till ett fullständigt namn på den anpassade JavaScript™-funktionen. (obligatoriskt) och ange dess värde till namnet på den anpassade funktionen, till exempel Multiplicera.
    * Lägg till egenskap `jcr:description` med det värde som du vill visa som namnet på den anpassade funktionen som visas i listrutan Funktion. Till exempel: **Multiplicera**.

@@ -104,7 +104,7 @@ Skapa ett PDF-dokument med inskickade XML-data med hjälp av Forms, Output och D
    * Anropa `FormsServiceClient` objektets `processFormSubmission` och skicka följande värden:
 
       * The `com.adobe.idp.Document` som innehåller formulärdata.
-      * Ett strängvärde som anger miljövariabler, inklusive alla relevanta HTTP-rubriker. Ange vilken innehållstyp som ska hanteras genom att ange ett eller flera värden för `CONTENT_TYPE` systemvariabel. Om du till exempel vill hantera XML-data anger du följande strängvärde för den här parametern: `CONTENT_TYPE=text/xml`.
+      * Ett strängvärde som anger miljövariabler, inklusive alla relevanta HTTP-rubriker. Ange vilken innehållstyp som ska hanteras genom att ange ett eller flera värden för `CONTENT_TYPE` miljövariabel. Om du till exempel vill hantera XML-data anger du följande strängvärde för den här parametern: `CONTENT_TYPE=text/xml`.
       * Ett strängvärde som anger `HTTP_USER_AGENT` rubrikvärde, som `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`.
       * A `RenderOptionsSpec` objekt som lagrar körningsalternativ.
 

@@ -13,7 +13,7 @@ exl-id: 9d43d9d4-5487-416c-b641-e807227ac056
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '578'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -53,7 +53,7 @@ Följande API hittar bokstavsinstanserna baserat på frågeobjektet (både Skick
    <td><strong>Beskrivning</strong></td>
   </tr>
   <tr>
-   <td>query</td>
+   <td>fråga</td>
    <td>Frågeparametern används för att hitta/filtrera instansen av Letter. Här har frågan bara stöd för objektets attribut/egenskaper på den översta nivån. Frågan består av programsatser och"attributeName" som används i Statement-objektet ska vara namnet på egenskapen i Letter-instansobjektet.<br /> </td>
   </tr>
  </tbody>

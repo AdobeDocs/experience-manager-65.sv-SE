@@ -13,7 +13,7 @@ exl-id: 022b9953-2d64-473f-87b7-aac1602f6a7e
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '535'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -50,7 +50,7 @@ Begärandeparametrar som stöds vid återgivning av formulär som HTML är:
    <th><strong>Beskrivning</strong></th>
   </tr>
   <tr>
-   <td>template<br /> </td>
+   <td>mall<br /> </td>
    <td>Den här parametern anger namnet på mallfilen.<br /> </td>
   </tr>
   <tr>

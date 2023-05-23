@@ -449,7 +449,7 @@ Du vill att ditt Go Live ska vara så smidigt som möjligt. Återigen behöver d
 
    Se till att alla system, procedurer och mekanismer som krävs för reservdriftsättning finns på plats innan du går live.
 
-* **Stöd**
+* **Support**
 
    Se till att supporttjänsterna finns på plats och är klara.
 

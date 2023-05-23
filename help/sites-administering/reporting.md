@@ -306,7 +306,7 @@ Komponentrapporten innehåller information om hur din webbplats använder kompon
 * Komponentsökväg
 * Komponenttyp
 * Senast ändrad
-* Sidan
+* Sida
 
 Betydelse som du kan se, till exempel:
 
@@ -380,8 +380,8 @@ Sidaktivitetsrapporten innehåller en lista över sidor och åtgärder som har u
 
 [Informationskolumner](#selecting-and-positioning-the-data-columns) om:
 
-* Sidan
-* Time
+* Sida
+* Tid
 * Typ
 * Användare
 
@@ -403,9 +403,9 @@ Denna rapport innehåller information om användargenererat innehåll; vara komm
 
 [Informationskolumner](#selecting-and-positioning-the-data-columns) den:
 
-* Date
+* Datum
 * IP-adress
-* Sidan
+* Sida
 * Referent
 * Typ
 * Användar-ID
@@ -432,9 +432,9 @@ Denna rapport innehåller information om alla användare som har registrerat ett
 * Kön
 * [Allmän](#generic-column)
 * Förnamn
-* Information
+* Info
 * Ränta
-* Språk:
+* Språk
 * NTLM Hashcode
 * Användar-ID
 

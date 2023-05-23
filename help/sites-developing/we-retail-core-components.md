@@ -32,7 +32,7 @@ De centrala komponenterna är moderna, flexibla komponenter som är enkla att ut
    * `.core-wcm`: Standardkärnkomponenterna
    * `.core-wcm-form`: Baskomponenter för att skicka in formulär
 
-   Choose `.core-wcm`.
+   Välj `.core-wcm`.
 
    ![chlimage_1-162](assets/chlimage_1-162.png)
 

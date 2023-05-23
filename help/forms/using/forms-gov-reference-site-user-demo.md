@@ -200,7 +200,7 @@ Svar på några frågor som bekräftar hennes behörighet genom att fylla i ett 
    >
    >Om användaren tjänar mer än 200 000 USD/år är de inte berättigade.
 
-1. Klicka på &quot;**Är jag berättigad?**&quot; button.
+1. Klicka på &quot;**Är jag berättigad?**&quot;.
 1. Klicka på &quot;**Använd nu**&quot; för att fortsätta.
 
    ![Länken Använd nu](/help/forms/using/assets/apply_now_link.png)

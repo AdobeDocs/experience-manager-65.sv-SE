@@ -13,7 +13,7 @@ exl-id: fd1b1749-13f9-4079-ae39-348676105852
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '94'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
@@ -42,7 +42,7 @@ Se [Grundläggande om poäng och emblem](configure-scoring.md).
    <td>cq.social.gamification.hbs.leaderboard</td>
   </tr>
   <tr>
-   <td> <strong>templates</strong></td>
+   <td> <strong>mallar</strong></td>
    <td> /libs/social/gamification/components/hbs/leaderboard/leaderboard.hbs<br /> </td>
   </tr>
   <tr>

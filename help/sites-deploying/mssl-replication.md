@@ -14,7 +14,7 @@ exl-id: 0a8d7831-d076-45cf-835c-8063ee13d6ba
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1409'
-ht-degree: 2%
+ht-degree: 1%
 
 ---
 
@@ -69,7 +69,7 @@ Använd följande procedur för att skapa en privat nyckel och ett självsignera
 
    | Alternativ | Författare | Publicera |
    |---|---|---|
-   | -alias | author | publicera |
+   | -alias | författare | publicera |
    | -keystore | author.keystore | publish.keystore |
 
 1. Om du vill exportera certifikatet anger du följande kommando med alternativvärden från tabellen nedan:
@@ -80,7 +80,7 @@ Använd följande procedur för att skapa en privat nyckel och ett självsignera
 
    | Alternativ | Författare | Publicera |
    |---|---|---|
-   | -alias | author | publicera |
+   | -alias | författare | publicera |
    | -file | author.cer | publish.cer |
    | -keystore | author.keystore | publish.keystore |
 
@@ -134,7 +134,7 @@ Generera en privat nyckel och ett certifikat i formatet pkcs#12. Använd [openSS
    | -inkey | author.key | publish.key |
    | -out | author.pfx | publish.pfx |
    | -in | author.cer | publish.cer |
-   | -name | author | publicera |
+   | -name | författare | publicera |
 
 ## Installera den privata nyckeln och TrustStore på författaren {#install-the-private-key-and-truststore-on-author}
 

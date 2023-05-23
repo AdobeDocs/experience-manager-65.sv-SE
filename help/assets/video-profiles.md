@@ -15,7 +15,7 @@ exl-id: b290fac2-7259-45d7-b733-70419d632b07
 source-git-commit: 78aa7aac838dabc1c4f0329520092e4755541322
 workflow-type: tm+mt
 source-wordcount: '3554'
-ht-degree: 8%
+ht-degree: 7%
 
 ---
 
@@ -67,7 +67,7 @@ I följande tabell visas kodningsprofiler med bästa praxis för adaptiv videost
   </tr>
   <tr>
    <td><p>MP4 H.264 (mp4)</p> </td>
-   <td>autom.</td>
+   <td>auto</td>
    <td>360</td>
    <td>Ja</td>
    <td>730</td>
@@ -77,7 +77,7 @@ I följande tabell visas kodningsprofiler med bästa praxis för adaptiv videost
   </tr>
   <tr>
    <td><p>MP4 H.264 (mp4)</p> </td>
-   <td>autom.</td>
+   <td>auto</td>
    <td>540</td>
    <td>Ja</td>
    <td>2000<br /> </td>
@@ -87,7 +87,7 @@ I följande tabell visas kodningsprofiler med bästa praxis för adaptiv videost
   </tr>
   <tr>
    <td><p>MP4 H.264 (mp4)</p> </td>
-   <td>autom.</td>
+   <td>auto</td>
    <td>720<br /> </td>
    <td>Ja</td>
    <td>3000<br /> </td>

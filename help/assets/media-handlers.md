@@ -34,7 +34,7 @@ Följande mediehanterare är tillgängliga i [!DNL Assets] och hantera de vanlig
 
 | Hanterarnamn | Tjänstnamn (i systemkonsolen) | MIME-typer som stöds |
 |--------------|--------------------------------------|----------------------|
-| [!UICONTROL TextHandler] | com.day.cq.dam.core.impl.handler.TextHandler | text/plain |
+| [!UICONTROL TextHandler] | com.day.cq.dam.core.impl.handler.TextHandler | text/normal |
 | [!UICONTROL PdfHandler] | com.day.cq.dam.handler.standard.pdf.PdfHandler | <ul><li>application/pdf</li><li>program/illustrator</li></ul> |
 | [!UICONTROL JpegHandler] | com.day.cq.dam.core.impl.handler.JpegHandler | image/jpeg |
 | [!UICONTROL Mp3Handler] | com.day.cq.dam.handler.standard.mp3.Mp3Handler | audio/mpeg<br><b>Viktigt</b> - När du överför en MP3-fil är det [bearbetas med ett tredjepartsbibliotek](https://www.zxdr.it/programmi/SistEvolBDD/LibJava/doc/de/vdheide/mp3/MP3File.html). Biblioteket beräknar en icke korrekt ungefärlig längd om MP3 har variabel bithastighet (VBR). |

@@ -15,7 +15,7 @@ feature: Security
 source-git-commit: 002b9035f37a1379556378686b64d26bbbc30288
 workflow-type: tm+mt
 source-wordcount: '2445'
-ht-degree: 2%
+ht-degree: 1%
 
 ---
 
@@ -95,7 +95,7 @@ När användarsynkroniseringen är aktiverad synkroniseras endast nyskapade anv�
       * markera den befintliga konfiguration som ska öppnas för redigering (pennikonen) Bekräfta `name`: **`socialpubsync`**
 
       * välj `Enabled` kryssruta
-      * select `Save`
+      * välj `Save`
 
 
 ![](assets/chlimage_1-20.png)
@@ -192,7 +192,7 @@ En auktoriserad användare, en medlem i **`administrators`** användargruppen, h
       * markera den befintliga konfiguration som ska öppnas för redigering (pennikonen) Bekräfta `Name`: `socialpubsync-reverse`
 
       * välj `Enabled` kryssruta
-      * select `Save`
+      * välj `Save`
    * **upprepa** för varje publiceringsinstans
 
 
@@ -216,7 +216,7 @@ En auktoriserad användare, en medlem i **`administrators`** användargruppen, h
          Verifiera `agent name`: `socialpubsync-reverse`
 
       * välj `Enabled` kryssruta
-      * select `Save`
+      * välj `Save`
 
 
 ![](assets/screen-shot_2019-05-24at090809.png)
@@ -239,7 +239,7 @@ Som standard kommer författaren att söka efter ändringar var 30:e sekund. Så
 
          * Verifiera `Name`: `socialpubsync-scheduled-trigger`
       * ange `Interval in Seconds` till önskat intervall
-      * select `Save`
+      * välj `Save`
 
 
 
@@ -278,7 +278,7 @@ Det ska finnas en importslutpunkt för varje publiceringsinstans. Om det till ex
    * `https://localhost:4503/libs/sling/distribution/services/importers/socialpubsync`
    * `https://localhost:4504/libs/sling/distribution/services/importers/socialpubsync`
 
-* select `Save`
+* välj `Save`
 
 ### 8. AEM Communities Sync Listener {#aem-communities-user-sync-listener}
 
@@ -507,7 +507,7 @@ Den behöriga användaren bör göras medlem i **`administrators`** användargru
 
 Den behöriga användaren bör uttryckligen ha följande behörigheter och begränsningar för alla publiceringsinstanser:
 
-| **path** | **jcr:all** | **rep:glob** |
+| **bana** | **jcr:all** | **rep:glob** |
 |---|---|---|
 | /home | X | &#42;/aktiviteter/&#42; |
 | /home/users | X | &#42;/aktiviteter/&#42; |
@@ -515,7 +515,7 @@ Den behöriga användaren bör uttryckligen ha följande behörigheter och begr�
 
 Som medlem i `administrators` gruppen bör den auktoriserade användaren ha följande behörigheter för alla publiceringsinstanser:
 
-| **path** | **jcr:all** | **jcr:read** | **rep:write** |
+| **bana** | **jcr:all** | **jcr:read** | **rep:write** |
 |---|---|---|---|
 | /etc/packages/sling/distribution |  |  | X |
 | /libs/sling/distribution |  | X |  |

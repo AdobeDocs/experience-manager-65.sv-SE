@@ -8,7 +8,7 @@ exl-id: 2a08a7c1-8be9-42d1-9983-f9c8b12ea4e8
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '253'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -50,7 +50,7 @@ The [Webbkonsol](/help/sites-deploying/configuring-osgi.md) ger åtkomst till ju
 
 1. Dubbelklicka **[!UICONTROL Day CQ DAM Event Recorder]**.
 
-1. Kontroll **[!UICONTROL Enables this service]**.
+1. Kontrollera **[!UICONTROL Enables this service]**.
 
 1. Kontrollera vilken **[!UICONTROL Event Types]** du vill spelas in i användaraktivitetsströmmen.
 

@@ -143,7 +143,7 @@ Programspecifika metadata innehåller tekniska och beskrivande metadata. Om du a
 
 * Exif - Teknisk information från kameran, inklusive GPS-position.
 * CRS - [!DNL Camera Raw] schema.
-* `iptc4xmpCore` and `iptc4xmpExt`.
+* `iptc4xmpCore` och `iptc4xmpExt`.
 * TIFF - bildmetadata (inte bara för TIFF).
 
 ### Utskriftsspecifika metadata {#print-specific-metadata}
@@ -175,15 +175,15 @@ Förutom DCMES finns det andra metadataelement som skapats av Dublin Core Initia
 | medverkande | Den person eller det företag som är ansvarigt för att bidra till innehållet. |
 | täckning | Den geografiska plats eller tidsperiod som tillgången täcker. |
 | skapare | Den person eller det företag som ansvarar för att skapa innehållet. |
-| date | Datum eller tidsperiod som är associerad med tillgången. |
+| datum | Datum eller tidsperiod som är associerad med tillgången. |
 | description | Mer information om resursen. |
 | format | Filformat, fysiskt medium eller dimensioner för resursen. [!DNL Experience Manager] använder `dc:format` för att ange tillgångens MIME-typ. |
 | identifierare | En unik referens till tillgången. |
-| language | Språket för resursen (till exempel `en` för engelska). |
+| språk | Språket för resursen (till exempel `en` för engelska). |
 | utgivare | Den person eller det företag som ansvarar för att göra tillgången tillgänglig. |
 | relation | En relaterad tillgång. |
 | rättigheter | Information om vem som har behörighet till den här resursen. |
-| source | En relaterad tillgång som tillgången härrör från. |
+| källa | En relaterad tillgång som tillgången härrör från. |
 | ämne | Tillgångens ämne. |
 | title | Ett namn för resursen. |
 | type | Tillgångens art eller genre. |
@@ -301,4 +301,4 @@ Den här egenskapen är dock för närvarande inte indexerad för att undvika ko
 
 The **[!UICONTROL IPTC]** -fliken i [!UICONTROL Properties] på sidan visas även nyckelord som har lagts till i resurser via Adobe Bridge och andra Adobe Creative Cloud-program. Du kan även redigera dessa nyckelord och lägga till fler nyckelord från **[!UICONTROL IPTC]** -fliken.
 
-![keywords](assets/keywords-in-iptc-tab.png)
+![nyckelord](assets/keywords-in-iptc-tab.png)

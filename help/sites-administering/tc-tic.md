@@ -97,7 +97,7 @@ Webbplatsegenskaperna styr hur översättning av sidinnehåll utförs.
     <ul>
      <li>Maskinöversättning: Översättningsprovidern utför översättningen med maskinöversättning i realtid.</li>
      <li>Translation of Human: Innehållet skickas till översättningsleverantören för översättning av översättare. </li>
-     <li>Översätt inte: Innehåll skickas inte för översättning. Detta är för att hoppa över vissa innehållsgrenar som inte skulle översättas, men som skulle kunna uppdateras med det senaste innehållet.</li>
+     <li>Översätt inte: Innehållet skickas inte för översättning. Detta är för att hoppa över vissa innehållsgrenar som inte skulle översättas, men som skulle kunna uppdateras med det senaste innehållet.</li>
     </ul> </td>
   </tr>
   <tr>

@@ -13,7 +13,7 @@ exl-id: c037a788-c943-4f95-a028-1fcb0ef48f86
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '249'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
@@ -44,7 +44,7 @@ The `following` -komponenten visar de medlemmar som antingen följer den aktuell
    <td>cq.social.hbs.socialgraph</td>
   </tr>
   <tr>
-   <td> <strong>templates</strong></td>
+   <td> <strong>mallar</strong></td>
    <td> /libs/social/socialgraph/components/hbs/relationships/relationships.hbs</td>
   </tr>
   <tr>
@@ -76,7 +76,7 @@ The `following` -komponenten visar de medlemmar som antingen följer den aktuell
 | **resourceType** | `social/socialgraph/components/hbs/following` |
 |---|---|
 | [**oklanderlig**](scf.md#add-or-include-a-communities-component) | Nej |
-| **templates** | `/libs/social/socialgraph/components/hbs/following/following.hbs` |
+| **mallar** | `/libs/social/socialgraph/components/hbs/following/following.hbs` |
 | **css** | `/libs/social/socialgraph/components/hbs/following/clientlibs/following.css` |
 
 * [Anpassningar på klientsidan](client-customize.md)

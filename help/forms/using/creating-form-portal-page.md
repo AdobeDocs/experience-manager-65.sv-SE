@@ -144,7 +144,7 @@ The **Redigera** innehåller flera flikar med konfigurationsalternativ som beskr
    <td>Konfigurerar texten för verktygstipset, som visas när du håller pekaren över den <img height="16" src="assets/aem6forms_panel-pdf.png" width="14" /> (PDF-ikonen).</td>
   </tr>
   <tr>
-   <td><span class="uicontrol"><strong>Format</strong></code></td>
+   <td><span class="uicontrol"><strong>Stil</strong></code></td>
    <td>Formattyp</td>
    <td>Gör att du kan ange <strong>Inget format, standardformat</strong>, eller <strong>Eget format </strong>för att lista formulären.</td>
   </tr>

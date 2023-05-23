@@ -52,7 +52,7 @@ Varje användare kan ange vissa egenskaper för sig själv.
 
 ![screen-shot_2019-03-05at100322](assets/screen-shot_2019-03-05at100322.png)
 
-* **Språk:**
+* **Språk**
 
    Detta definierar vilket språk som ska användas för redigeringsmiljöns användargränssnitt. Välj önskat språk i listan.
 

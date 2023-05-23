@@ -38,7 +38,7 @@ Den här sidan innehåller viktig information om hur du arbetar med kalenderfunk
    <td>cq.social.hbs.calendar</td>
   </tr>
   <tr>
-   <td> <strong>templates</strong></td>
+   <td> <strong>mallar</strong></td>
    <td>/libs/social/calendar/components/hbs/calendar/calendar.hbs</td>
    <td> </td>
   </tr>

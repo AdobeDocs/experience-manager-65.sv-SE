@@ -15,7 +15,7 @@ exl-id: febf5350-3fc5-48c0-8bc5-198daff15936
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '2209'
-ht-degree: 7%
+ht-degree: 0%
 
 ---
 
@@ -27,19 +27,19 @@ ht-degree: 7%
 
 Forms-tjänsten kan återge formulär som är baserade på fragment som du skapar med Designer. A *fragment* är en återanvändbar del av ett formulär och sparas som en separat XDP-fil som kan infogas i flera formulärdesigner. Ett fragment kan t.ex. innehålla ett adressblock eller juridisk text.
 
-Att använda fragment underlättar och påskyndar processen att skapa och underhålla stora mängder formulär. När du skapar ett nytt formulär infogar du en referens till det önskade fragmentet och fragmentet visas i formuläret. Fragmentreferensen innehåller ett delformulär som pekar på den fysiska XDP-filen. Mer information om hur du skapar formulärdesigner baserade på fragment finns i [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63)
+Med fragment blir det enklare och snabbare att skapa och underhålla stora mängder formulär. När du skapar ett nytt formulär infogar du en referens till det önskade fragmentet och fragmentet visas i formuläret. Fragmentreferensen innehåller ett delformulär som pekar på den fysiska XDP-filen. Mer information om hur du skapar formulärdesigner baserade på fragment finns i [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63)
 
-Ett fragment kan innehålla flera delformulär som är kapslade i en urvalsuppsättning med delformulär. Alternativa delformulärsuppsättningar styr visningen av delformulär baserat på dataflödet från en dataanslutning. Du använder villkorsuttryck för att bestämma vilka delformulär i uppsättningen som ska visas i det levererade formuläret. Varje delformulär i en uppsättning kan t.ex. innehålla information för en viss geografisk plats och delformuläret som visas kan bestämmas utifrån användarens plats.
+Ett fragment kan innehålla flera delformulär som är kapslade i en urvalsuppsättning med delformulär. Alternativa delformulärsuppsättningar styr visningen av delformulär baserat på dataflödet från en dataanslutning. Du använder villkorssatser för att avgöra vilket delformulär i uppsättningen som visas i det levererade formuläret. Varje delformulär i en uppsättning kan t.ex. innehålla information för en viss geografisk plats och delformuläret som visas kan bestämmas utifrån användarens plats.
 
-A *skriptfragment* innehåller återanvändbara JavaScript-funktioner eller -värden som lagras separat från ett visst objekt, till exempel en datumparser eller ett webbtjänstanrop. Dessa fragment innehåller enbart enskilda skriptobjekt som visas som underordnade variabler i paletten Hierarki. Fragment kan inte skapas av skript som är egenskaper för andra objekt, t.ex. händelseskript som validate, calculate och initialize.
+A *skriptfragment* innehåller återanvändbara JavaScript-funktioner eller -värden som lagras separat från ett visst objekt, till exempel en datumparser eller ett webbtjänstanrop. Dessa fragment innehåller ett enda skriptobjekt som visas som underordnat variabler på paletten Hierarki. Fragment kan inte skapas från skript som är egenskaper för andra objekt, till exempel händelseskript som validate, calculate eller initialize.
 
 Här är några fördelar med att använda fragment:
 
-* **Återanvändning av innehåll**: Du kan använda fragment för att återanvända innehåll i flera formulärdesigner. När du behöver använda en del av samma innehåll i flera formulär är det snabbare och enklare att använda ett fragment än att kopiera eller återskapa innehållet. Att använda fragment innebär att ofta använda delar av en formulärdesign har konsekvent innehåll och utseende i alla refererande formulär.
+* **Återanvändning av innehåll**: Du kan använda fragment för att återanvända innehåll i flera formulärdesigner. När du behöver använda en del av samma innehåll i flera formulär är det snabbare och enklare att använda ett fragment än att kopiera eller återskapa innehållet. Genom att använda fragment säkerställs också att de delar av en formulärdesign som används ofta har ett konsekvent innehåll och utseende i alla referensformulär.
 * **Globala uppdateringar**: Du kan använda fragment för att göra globala ändringar i flera formulär endast en gång i en fil. Du kan ändra innehåll, skriptobjekt, databindningar, layout eller format i ett fragment, och alla XDP-formulär som refererar till fragmentet återger ändringarna.
 * Ett vanligt element i många formulär kan till exempel vara ett adressblock som innehåller ett nedrullningsbart listobjekt för landet. Om du behöver uppdatera värdena för listruteobjektet måste du öppna många formulär för att kunna göra ändringarna. Om du inkluderar adressblocket i ett fragment behöver du bara öppna en fragmentfil för att kunna göra ändringarna.
 * Om du vill uppdatera ett fragment i ett PDF-formulär måste du spara om formuläret i Designer.
-* **Skapa delade formulär**: Du kan använda fragment för att dela skapandet av formulär mellan flera resurser. Formulärutvecklare med expertkunskaper om skript och andra avancerade funktioner i Designer kan utveckla och dela fragment som utnyttjar skript och dynamiska egenskaper. Formulärdesigners kan använda dessa fragment för att skapa formulärdesigner och se till att alla delar i ett formulär har konsekvent utseende och funktionalitet i flera formulär som har designats av flera personer.
+* **Skapa delade formulär**: Du kan använda fragment för att dela skapandet av formulär mellan flera resurser. Blankettutvecklare med expertis inom skript eller andra avancerade funktioner i Designer kan utveckla och dela fragment som utnyttjar skriptning och dynamiska egenskaper. Formulärdesigners kan använda dessa fragment för att utforma formulärdesigner och säkerställa att alla delar av ett formulär har ett konsekvent utseende och funktion i flera formulär som utformats av flera personer.
 
 ### Sammanställa en formulärdesign med fragment {#assembling-a-form-design-assembled-using-fragments}
 

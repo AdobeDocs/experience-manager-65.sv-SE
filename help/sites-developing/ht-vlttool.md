@@ -13,7 +13,7 @@ exl-id: efbba312-9fc8-4670-b8f1-d2a86162d075
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '2718'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
@@ -491,7 +491,7 @@ update -v|-q|--force|-N <file1> [<file2> ...]
 | `-N (--non-recursive)` | arbetar i en enda katalog |
 | `<file> [<file> ...]` | fil eller katalog som ska uppdateras |
 
-### Information {#info}
+### Info {#info}
 
 Visar information om en lokal fil.
 

@@ -252,7 +252,7 @@ När innehållsförfattaren är klar med att skapa innehåll för mobilprogramme
    <td>Om värdet är true återges alla videor som ingår i erbjudandet. Om false-videor hoppas över.</td>
   </tr>
   <tr>
-   <td>path</td>
+   <td>bana</td>
    <td>/content/campaign/&lt;brand&gt;</td>
    <td>pekar på kampanjens varumärke som erbjudandena deltar i. För närvarande måste alla erbjudanden komma från samma kampanj.</td>
   </tr>

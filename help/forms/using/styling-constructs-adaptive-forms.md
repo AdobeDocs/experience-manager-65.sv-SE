@@ -13,7 +13,7 @@ exl-id: 691608a6-be82-4d81-b876-427de997e5be
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '2308'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
@@ -355,7 +355,7 @@ Villkor (TnC) `` ``) kan du ange villkor. Du kan anpassa widgeten med hjälp av 
 Knappar är också widgetar. Men deras format skiljer sig något från widgetarna. I anpassningsbara former utgör något av följande en knapp:
 
 * input[type = text]
-* button
+* knapp
 * element med klass .button
 
 HTML-kod för knapp:

@@ -121,7 +121,7 @@ Nedan följer en omfattande lista över metadataegenskaper som stöds i AEM Form
   </tr> 
   <tr> 
    <td>Skicka URL</td> 
-   <td><p>Formulärmall</p> <p>PDF-formulär</p> </td> 
+   <td><p>Formulärmall</p> <p>PDF form</p> </td> 
    <td><p>Så här konfigurerar du en användardefinierad URL för att skicka formulärdata till en server.</p> <p>Skicka-URL kan konfigureras med någon av följande metoder, listade i prioritetsordning:</p> 
     <ul> 
      <li>Ange en skicka-URL direkt i en formulärmall genom att använda HTTP-knappen när du skapar ett XFA-formulär i AEM Forms Designer.</li> 
@@ -165,7 +165,7 @@ Nedan följer en omfattande lista över metadataegenskaper som stöds i AEM Form
     <ul> 
      <li>Formulärmall: En formulärmall väljs bland de som finns i databasen. Det här värdet kan uppdateras.</li> 
      <li>XML-schema: En XSD-fil överförs. Det här värdet kan uppdateras.</li> 
-     <li>Inget</li> 
+     <li>Ingen</li> 
     </ul> 
     <div>
       En formulärmodell som har valts kan uppdateras men inte tas bort. 

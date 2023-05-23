@@ -186,9 +186,9 @@ Om redigering är nödvändig, för varje AEM publiceringsinstans:
       * name
       * first_name
       * last_name
-      * länk
+      * link
       * locale
-      * picture
+      * bild
       * tidszon
       * uppdaterad_tid
       * verifierad

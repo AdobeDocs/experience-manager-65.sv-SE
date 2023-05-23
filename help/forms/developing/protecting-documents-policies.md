@@ -1293,7 +1293,7 @@ Innan du programmässigt kan utföra en dokumentsäkerhetstjänståtgärd måste
 
 Om du vill skapa en ny vattenstämpel måste du ange vattenstämpelattribut. Namnattributet måste alltid definieras. Förutom name-attributet måste du ange minst ett av följande attribut:
 
-* Anpassad text
+* Egen text
 * DatumInkluderat
 * Användar-IDInkluderat
 * AnvändarnamnInkluderat
@@ -1312,22 +1312,22 @@ I följande tabell visas de nyckel- och värdepar som krävs när du skapar en v
   <tr>
    <td><p><code>WaterBackCmd:IS_USERNAME_ENABLED</code></p></td>
    <td><p>Anger om användarnamnet för användaren som öppnar dokumentet är en del av vattenstämpeln.</p></td>
-   <td><p>True eller False</p></td>
+   <td><p>Sant eller falskt</p></td>
   </tr>
   <tr>
    <td><p><code>WaterBackCmd:IS_USERID_ENABLED</code></p></td>
    <td><p>Anger om identifieringen av användaren som öppnar dokumentet är en del av vattenstämpeln.</p></td>
-   <td><p>True eller False</p></td>
+   <td><p>Sant eller falskt</p></td>
   </tr>
   <tr>
    <td><p><code>WaterBackCmd:IS_CURRENTDATE_ENABLED</code></p></td>
    <td><p>Anger om det aktuella datumet är en del av vattenstämpeln.</p></td>
-   <td><p>True eller False</p></td>
+   <td><p>Sant eller falskt</p></td>
   </tr>
   <tr>
    <td><p><code>WaterBackCmd:IS_CUSTOMTEXT_ENABLED</code></p></td>
    <td><p>Om det här värdet är true måste värdet för den anpassade texten anges med <code>WaterBackCmd:SRCTEXT</code>.</p></td>
-   <td><p>True eller False</p></td>
+   <td><p>Sant eller falskt</p></td>
   </tr>
   <tr>
    <td><p><code>WaterBackCmd:OPACITY</code></p></td>
@@ -1342,7 +1342,7 @@ I följande tabell visas de nyckel- och värdepar som krävs när du skapar en v
   <tr>
    <td><p><code>WaterBackCmd:SCALE</code></p></td>
    <td><p>Om det här värdet anges <code>WaterBackCmd:IS_SIZE_ENABLED</code> måste finnas och värdet måste vara true. Om det här attributet inte anges anpassas standardbeteendet till sidan.</p></td>
-   <td><p>Ett värde större än 0.0 och mindre än 1.0.</p></td>
+   <td><p>Ett värde större än 0,0 och mindre än eller lika med 1,0.</p></td>
   </tr>
   <tr>
    <td><p><code>WaterBackCmd:HORIZ_ALIGN</code></p></td>
@@ -1357,17 +1357,17 @@ I följande tabell visas de nyckel- och värdepar som krävs när du skapar en v
   <tr>
    <td><p><code>WaterBackCmd:IS_USE_BACKGROUND</code></p></td>
    <td><p>Anger om vattenstämpeln är en bakgrund. Standardvärdet är false.</p></td>
-   <td><p>True eller False</p></td>
+   <td><p>Sant eller falskt</p></td>
   </tr>
   <tr>
    <td><p><code>WaterBackCmd:IS_SIZE_ENABLED</code></p></td>
    <td><p>True om en anpassad skala har angetts. Om det här värdet är true måste även SCALE anges. Om det här värdet är false anpassas standardvärdet till sidan.</p></td>
-   <td><p>True eller False</p></td>
+   <td><p>Sant eller falskt</p></td>
   </tr>
   <tr>
    <td><p><code>WaterBackCmd:SRCTEXT</code></p></td>
    <td><p>Anger den anpassade texten för en vattenstämpel. Om det här värdet finns <code>WaterBackCmd:IS_CUSTOMTEXT_ENABLED</code> måste också finnas och vara inställd på true.</p></td>
-   <td><p>True eller False</p></td>
+   <td><p>Sant eller falskt</p></td>
   </tr>
  </tbody>
 </table>

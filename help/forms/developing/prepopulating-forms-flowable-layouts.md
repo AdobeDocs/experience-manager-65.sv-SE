@@ -26,9 +26,9 @@ När du fyller i formulär i förväg visas data för användarna i ett återgiv
 
 Att fylla i ett formulär i förväg har följande fördelar:
 
-* Användaren kan granska anpassad information i ett formulär.
+* Låter användaren visa anpassade data i ett formulär.
 * Minskar mängden inmatning som användaren gör för att fylla i ett formulär.
-* Dataintegriteten säkerställs genom att du får kontroll över var data placeras.
+* Säkerställer dataintegriteten genom att ha kontroll över var data placeras.
 
 Följande två XML-datakällor kan fylla i ett formulär i förväg:
 

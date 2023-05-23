@@ -303,7 +303,7 @@ Följande inställningar behövs bara om en proxy behövs:
 
    Aktivera för att stänga anslutningen efter varje begäran.
 
-* **Tidsgräns för anslutning**
+* **Timeout för anslutning**
 
    Timeout (i millisekunder) som ska användas vid försök att upprätta en anslutning.
 

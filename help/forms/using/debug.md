@@ -14,7 +14,7 @@ exl-id: 7330c03f-7102-43c0-aac6-825cce8a113d
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '818'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -37,7 +37,7 @@ Kontrollera följande parametrar:
    <td><strong>Beskrivning</strong></td>
   </tr>
   <tr>
-   <td>template</td>
+   <td>mall</td>
    <td>Mallens filnamn</td>
   </tr>
   <tr>
@@ -88,7 +88,7 @@ Kontrollera följande parametrar:
    * profil
    * runtime
    * scrollnav
-   * toolbar
+   * verktygsfält
    * xfalib
 
 1. Kontrollera att filerna som omnämns i css.txt finns i CRX DE lite på /libs/fd/xfaforms/clientlibs/xfalib/css.
@@ -163,7 +163,7 @@ Kontrollera följande parametrar:
    <td><strong>Beskrivning</strong></td>
   </tr>
   <tr>
-   <td>template</td>
+   <td>mall</td>
    <td>Mallens filnamn</td>
   </tr>
   <tr>

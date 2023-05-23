@@ -14,7 +14,7 @@ exl-id: 24bdf9fc-71e6-4b99-9dad-0f41a5e36b98
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '3153'
-ht-degree: 4%
+ht-degree: 0%
 
 ---
 
@@ -133,7 +133,7 @@ Hämtar URL:en för den JSONP-tjänst som det här objektet använder för att h
 
 **Parametrar**
 
-Inget.
+Ingen.
 
 **Returnerar**
 
@@ -210,7 +210,7 @@ Tar bort sessionsarkivdata och tar bort alla initieringsegenskaper.
 
 **Parametrar**
 
-Inget.
+Ingen.
 
 **Returnerar**
 
@@ -235,7 +235,7 @@ Hämtar data för sessionsarkivet i JSON-format.
 
 **Parametrar**
 
-Inget.
+Ingen.
 
 **Returnerar**
 
@@ -247,7 +247,7 @@ Rensar sessionsarkivet och initierar det med initieringsegenskapen. Anger initie
 
 **Parametrar**
 
-Inget.
+Ingen.
 
 **Returnerar**
 
@@ -362,7 +362,7 @@ Hämtar URL:en för den JSONP-tjänst som det här objektet använder för att h
 
 **Parametrar**
 
-Inget.
+Ingen.
 
 **Returnerar**
 
@@ -448,7 +448,7 @@ Hämtar data för sessionsarkivet i JSON-format.
 
 **Parametrar**
 
-Inget.
+Ingen.
 
 **Returnerar**
 
@@ -524,7 +524,7 @@ Hämtar `STOREKEY` -egenskap.
 
 **Parametrar**
 
-Inget
+Ingen
 
 **Returnerar**
 
@@ -552,7 +552,7 @@ Aktiverar `persist` -händelse när allt är klart.
 
 **Parametrar**
 
-Inget
+Ingen
 
 **Returnerar**
 
@@ -619,7 +619,7 @@ Tar bort alla dataegenskaper från arkivet.
 
 **Parametrar**
 
-Inget.
+Ingen.
 
 **Returnerar**
 
@@ -655,7 +655,7 @@ Returnerar namnet på sessionsarkivet.
 
 **Parametrar**
 
-Inget.
+Ingen.
 
 **Returnerar**
 
@@ -692,7 +692,7 @@ Returnerar det sessionsarkiv som är kopplat till det aktuella objektet.
 
 **Parametrar**
 
-Inget.
+Ingen.
 
 **Returnerar**
 
@@ -704,7 +704,7 @@ Markerar butiken som initierad och aktiverar `initialize` -händelse.
 
 **Parametrar**
 
-Inget.
+Ingen.
 
 **Returnerar**
 
@@ -716,7 +716,7 @@ Anger om sessionslagringen har initierats.
 
 **Parametrar**
 
-Inget.
+Ingen.
 
 **Returnerar**
 
@@ -753,7 +753,7 @@ Inget returvärde.
 
 **Parametrar**
 
-Inget.
+Ingen.
 
 **Returnerar**
 

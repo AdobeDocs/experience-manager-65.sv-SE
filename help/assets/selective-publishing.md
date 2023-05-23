@@ -12,7 +12,7 @@ feature: Publishing
 source-git-commit: 664e22cc4c6acd74f285a4ec1a0dbd7d301240b7
 workflow-type: tm+mt
 source-wordcount: '2598'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -241,11 +241,11 @@ Du kan också använda de här kryssrutorna med **[!UICONTROL Publish]** sökpre
    | Inställningen Publicera resurser i Dynamic Media Configuration | Markerad åtgärd | Publiceringsmål |
    | --- | --- | --- |
    | Omedelbart eller <br>Vid aktivering | Publicera | Experience Manager och Dynamic Media |
-   | Omedelbart eller <br>Vid aktivering | Publicera till Dynamic Media | Inget |
+   | Omedelbart eller <br>Vid aktivering | Publicera till Dynamic Media | Ingen |
    | Selektiv publicering | Publicera | Experience Manager |
    | Selektiv publicering | Publicera till Dynamic Media | Dynamic Media |
    | Omedelbart eller <br>Vid aktivering | Avpublicera | Experience Manager och Dynamic Media |
-   | Omedelbart eller <br>Vid aktivering | Avpublicera från Dynamic Media | Inget |
+   | Omedelbart eller <br>Vid aktivering | Avpublicera från Dynamic Media | Ingen |
    | Selektiv publicering | Avpublicera | Experience Manager |
    | Selektiv publicering | Avpublicera från Dynamic Media | Dynamic Media |
 

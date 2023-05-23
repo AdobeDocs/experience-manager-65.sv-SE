@@ -13,7 +13,7 @@ exl-id: 01f4fdd3-fd2a-4e90-9c91-c1b05bbc2c6a
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1147'
-ht-degree: 10%
+ht-degree: 0%
 
 ---
 
@@ -101,7 +101,7 @@ I det här avsnittet visas olika tangentbord och kortkommandon för hjälpmedel 
   </tr>
   <tr>
    <td><p>Markera aktuellt ord</p> </td> 
-   <td><p>Ctrl+Skift+Högerpil</p> </td> 
+   <td><p>Ctrl+Skift+högerpil</p> </td> 
    <td>Kommando+Skift+högerpil</td> 
   </tr>
   <tr>
@@ -111,7 +111,7 @@ I det här avsnittet visas olika tangentbord och kortkommandon för hjälpmedel 
   </tr>
   <tr>
    <td><p>Utöka en markering till början av ett stycke</p> </td> 
-   <td><p>Ctrl+Skift+Uppil</p> </td> 
+   <td><p>Ctrl+Skift+Uppåtpil</p> </td> 
    <td>Kommando+Skift+Uppåtpil</td> 
   </tr>
   <tr>
@@ -126,7 +126,7 @@ I det här avsnittet visas olika tangentbord och kortkommandon för hjälpmedel 
   </tr>
   <tr>
    <td><p>Flytta markören till början av nästa ord</p> </td> 
-   <td><p>Ctrl+Högerpil</p> </td> 
+   <td><p>Ctrl+högerpil</p> </td> 
    <td>Alt+högerpil <em><sup>[1]</sup></em></td> 
   </tr>
   <tr>
@@ -141,7 +141,7 @@ I det här avsnittet visas olika tangentbord och kortkommandon för hjälpmedel 
   </tr>
   <tr>
    <td><p>Flytta markören till föregående stycke.</p> </td> 
-   <td><p>Ctrl+Uppil</p> </td> 
+   <td><p>Ctrl+Uppåtpil</p> </td> 
    <td>Alt+Uppåtpil</td> 
   </tr>
   <tr>
@@ -151,8 +151,8 @@ I det här avsnittet visas olika tangentbord och kortkommandon för hjälpmedel 
   </tr>
   <tr>
    <td><p>Markera text ett i taget ett tecken framåt</p> </td> 
-   <td><p>Skift+Högerpil</p> </td> 
-   <td>Skift+Högerpil</td> 
+   <td><p>Skift+högerpil</p> </td> 
+   <td>Skift+högerpil</td> 
   </tr>
   <tr>
    <td><p>Markera text ett i taget ett stycke bakåt</p> </td> 
@@ -300,8 +300,8 @@ I det här avsnittet visas olika tangentbord och kortkommandon för hjälpmedel 
   </tr>
   <tr>
    <td><p>Ta bort ord till höger om markören</p> </td> 
-   <td><p>Ctrl+Del</p> </td> 
-   <td>Ctrl+Del</td> 
+   <td><p>Ctrl+Delete</p> </td> 
+   <td>Ctrl+Delete</td> 
   </tr>
  </tbody>
 </table>

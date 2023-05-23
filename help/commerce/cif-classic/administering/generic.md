@@ -43,7 +43,7 @@ Innan du skapar produkter måste du definiera en [ställningar](/help/sites-auth
 
 Det behövs ett ställningar för varje enskild produkttyp. Den lämpliga strukturen är kopplad till produkterna antingen genom att
 
-* path
+* bana
 * produkten kan referera till skalet
 
 >[!NOTE]

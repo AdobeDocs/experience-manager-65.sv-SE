@@ -13,7 +13,7 @@ exl-id: 42e8d804-6b6a-432e-a651-940b9f45db4e
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '554'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
@@ -74,7 +74,7 @@ Returnerar namnen på de cookies som, i förekommande fall, anger att användare
 
 **Parametrar**
 
-Inget.
+Ingen.
 
 **Returnerar**
 
@@ -86,7 +86,7 @@ Returnerar namnen på cookies som kan användas oavsett användarens samtycke.
 
 **Parametrar**
 
-Inget.
+Ingen.
 
 **Returnerar**
 
@@ -98,7 +98,7 @@ Avgör om användarens webbläsare innehåller cookies som anger att samtycke in
 
 **Parametrar**
 
-Inget.
+Ingen.
 
 **Returnerar**
 

@@ -5,7 +5,7 @@ exl-id: d0a66e70-c4f1-4051-8161-11f07dad0612
 source-git-commit: 0fdff88695646603cec120d25f156f8c918686df
 workflow-type: tm+mt
 source-wordcount: '812'
-ht-degree: 6%
+ht-degree: 4%
 
 ---
 
@@ -23,7 +23,7 @@ Granska de lägsta systemkraven i tabellen nedan för den CIF-version som du anv
 
 ## Releasedatum: September 2022
 
-| Komponent | Version | Information |
+| Komponent | Version | Detaljer |
 |:-------|:-----:|---------------------:|
 | CIF-tillägg | 2022.09.20.00 | [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2022.09.20.00.zip) |
 | CIF-kärnkomponenter | 2.11.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.11.0) |
@@ -38,7 +38,7 @@ Granska de lägsta systemkraven i tabellen nedan för den CIF-version som du anv
 
 ## Releasedatum: Juli 2022
 
-| Komponent | Version | Information |
+| Komponent | Version | Detaljer |
 |:-------|:-----:|---------------------:|
 | CIF-tillägg | 2022.08.02.00 | [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2022.08.02.00.zip) |
 
@@ -49,7 +49,7 @@ Granska de lägsta systemkraven i tabellen nedan för den CIF-version som du anv
 
 ## Releasedatum: Juni 2022
 
-| Komponent | Version | Information |
+| Komponent | Version | Detaljer |
 |:-------|:-----:|---------------------:|
 | CIF-tillägg | 2022.07.05.00 | [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2022.07.05.00.zip) |
 | CIF-kärnkomponenter | 2.10.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.10.0) |
@@ -69,7 +69,7 @@ Granska de lägsta systemkraven i tabellen nedan för den CIF-version som du anv
 
 ## Releasedatum: Maj 2022
 
-| Komponent | Version | Information |
+| Komponent | Version | Detaljer |
 |:-------|:-----:|---------------------:|
 | CIF-tillägg | 2022.05.31.00 | [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2022.05.31.00.zip) |
 | CIF-kärnkomponenter | 2.9.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.9.0) |
@@ -93,7 +93,7 @@ Granska de lägsta systemkraven i tabellen nedan för den CIF-version som du anv
 
 ## Releasedatum: April, 2022
 
-| Komponent | Version | Information |
+| Komponent | Version | Detaljer |
 |:-------|:-----:|---------------------:|
 | CIF-tillägg | 2022.04.28.00 | [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2022.04.28.00.zip) |
 | CIF-kärnkomponenter | 2.8.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.8.0) |
@@ -111,7 +111,7 @@ Granska de lägsta systemkraven i tabellen nedan för den CIF-version som du anv
 
 ## Releasedatum: Februari 2022
 
-| Komponent | Version | Information |
+| Komponent | Version | Detaljer |
 |:-------|:-----:|---------------------:|
 | CIF-tillägg | 2022.02.24.00 | [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2022.02.24.00.zip) |
 | CIF-kärnkomponenter | 2.6.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.6.0) |
@@ -127,7 +127,7 @@ Granska de lägsta systemkraven i tabellen nedan för den CIF-version som du anv
 
 ## Releasedatum: Januari 2022
 
-| Komponent | Version | Information |
+| Komponent | Version | Detaljer |
 |:-------|:-----:|---------------------:|
 | CIF-tillägg | 2022.01.20.00 | [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2022.01.20.00.zip) |
 | CIF-kärnkomponenter | 2.5.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.5.0) |

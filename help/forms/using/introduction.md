@@ -13,13 +13,13 @@ exl-id: 0facca18-ffa1-420c-859a-6f1f2c449d71
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '414'
-ht-degree: 4%
+ht-degree: 0%
 
 ---
 
 # Introduktion till HTML5-formulär{#introduction-to-html-forms}
 
-HTML5-formulär är en ny funktion i Adobe Experience Manager 6.0 (AEM 6.0) som erbjuder återgivning av XFA-formulärmallar i HTML5-format. Detta gör det möjligt att återge formulär på mobila enheter och skrivbordswebbläsare som inte har stöd för XFA-baserade PDF-filer. HTML5-formulär har inte bara stöd för XFA-formulärmallarnas befintliga funktioner, utan även nya funktioner, som klottersignaturer, för mobila enheter.
+HTML5-formulär är en ny funktion i Adobe Experience Manager 6.0 (AEM 6.0) som erbjuder återgivning av XFA-formulärmallar i HTML5-format. Denna funktion gör det möjligt att återge formulär på mobila enheter och webbläsare på datorer där XFA-baserad PDF inte stöds. HTML5-formulär har inte bara stöd för XFA-formulärmallarnas befintliga funktioner, utan även nya funktioner, som klottersignaturer, för mobila enheter.
 
 HTML5-formulär genererar dokument som baseras på HTML 5-standardkonstruktioner. Du kan visa HTML5-formulär i alla moderna webbläsare som stöder HTML5. Inga ytterligare webbläsarplugin-program behöver installeras för webbläsarna. Mer information om vilka webbläsare som stöds finns i [Klientplattformar som stöds](https://adobe.com/go/learn_aemforms_supportedplatforms_63).
 

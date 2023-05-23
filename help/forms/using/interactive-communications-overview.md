@@ -12,7 +12,7 @@ exl-id: 6cfbeec0-0be3-48b2-a4bb-fd19c69c92c7
 source-git-commit: 415744ca5c46a1495fe90369c162158c7fc2f1d4
 workflow-type: tm+mt
 source-wordcount: '486'
-ht-degree: 4%
+ht-degree: 3%
 
 ---
 
@@ -59,7 +59,7 @@ Skapa en interaktiv kommunikation med [byggstenar](#buildingblocks) för Interac
 1. Förhandsgranska tryck- och webbkanaler och redigera vid behov interaktiv kommunikation.
 1. Agentens användargränssnitt används för att [förbereda interaktiv kommunikation](/help/forms/using/prepare-send-interactive-communication.md) för att skicka det till mottagar-/postprocessen.
 
-### Byggklossarna {#buildingblocks}
+### Byggblock {#buildingblocks}
 
 Följande byggstenar krävs för att skapa en interaktiv kommunikation:
 

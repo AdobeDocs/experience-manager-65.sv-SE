@@ -129,7 +129,7 @@ Mer information om hur du använder kommandot keytool finns i filen keytool.html
 
    `-file "ads-ca.cer" -keystore "ads-credentials.jks"`
 
-   `-storepass` `*store*`*_**password**
+   `-storepass` `*store*`*_**lösenord**
 
    >[!NOTE]
    >

@@ -274,12 +274,12 @@ I följande tabell beskrivs de gemensamma attribut som är kopplade till en DDE:
   <tr>
    <td>Namn</td>
    <td>Sträng</td>
-   <td>Krävs.<br /> DDE:ns namn. Den måste vara unik.</td>
+   <td>Obligatoriskt.<br /> DDE:ns namn. Den måste vara unik.</td>
   </tr>
   <tr>
    <td>Referens<br /> Namn</td>
    <td>Sträng</td>
-   <td>Krävs. Unikt referensnamn för DDE som tillåter referenser till DDE som är oberoende av ändringar i hierarkin eller strukturen för dataordlistan. Textmoduler mappas med det här namnet</td>
+   <td>Obligatoriskt. Unikt referensnamn för DDE som tillåter referenser till DDE som är oberoende av ändringar i hierarkin eller strukturen för dataordlistan. Textmoduler mappas med det här namnet</td>
   </tr>
   <tr>
    <td>visningsnamn</td>
@@ -294,7 +294,7 @@ I följande tabell beskrivs de gemensamma attribut som är kopplade till en DDE:
   <tr>
    <td>elementType</td>
    <td>Sträng</td>
-   <td>Krävs. Typ av DDE: STRING, NUMBER, DATE, Boolean, COMPOSITE, COLLECTION.</td>
+   <td>Obligatoriskt. Typ av DDE: STRING, NUMBER, DATE, Boolean, COMPOSITE, COLLECTION.</td>
   </tr>
   <tr>
    <td>elementSubType</td>
@@ -303,12 +303,12 @@ I följande tabell beskrivs de gemensamma attribut som är kopplade till en DDE:
   </tr>
   <tr>
    <td>Nyckel</td>
-   <td>Boolesk</td>
+   <td>Boolean</td>
    <td>Ett booleskt fält som anger om en DDE är nyckelelement.</td>
   </tr>
   <tr>
    <td>Beräknad</td>
-   <td>Boolesk</td>
+   <td>Boolean</td>
    <td>Ett booleskt fält som anger om en DDE har beräknats. Ett beräknat DDE-värde är en funktion av andra DDE-värden. Som standard stöds jsp-uttryck.</td>
   </tr>
   <tr>
@@ -327,8 +327,8 @@ I följande tabell beskrivs de gemensamma attribut som är kopplade till en DDE:
    <td>En karta över anpassade egenskaper som lagts till i DDE (användargränssnittsspecifik eller annan information).</td>
   </tr>
   <tr>
-   <td>Krävs</td>
-   <td>Boolesk</td>
+   <td>Obligatoriskt</td>
+   <td>Boolean</td>
    <td>Flaggan anger att källan för instansdata som motsvarar dataordlistan måste innehålla värdet för den aktuella DDE-filen.</td>
   </tr>
   <tr>

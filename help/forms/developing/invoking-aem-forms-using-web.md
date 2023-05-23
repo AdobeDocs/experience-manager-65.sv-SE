@@ -75,7 +75,7 @@ I följande tabell visas WSDL-definitioner för tjänsten (förutsatt att AEM Fo
    <td><p><code>http://localhost:8080/soap/services/BackupService?wsdl</code></p></td>
   </tr>
   <tr>
-   <td><p>streckkodade formulär</p></td>
+   <td><p>streckkodsformulär</p></td>
    <td><p><code>http://localhost:8080/soap/services/ BarcodedFormsService?wsdl</code></p></td>
   </tr>
   <tr>

@@ -12,7 +12,7 @@ exl-id: ea0c8971-56f4-4094-87e4-1b222b73951f
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '654'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -132,8 +132,8 @@ Följande tabell visar datakällan för varje fält i anatomin Interactive Commu
    <td>Specificerade samtal - utgående</td>
    <td><p>Kolumnnamn:</p>
     <ul>
-     <li>Date</li>
-     <li>Time</li>
+     <li>Datum</li>
+     <li>Tid</li>
      <li>Siffra</li>
      <li>Varaktighet</li>
      <li>Avgifter</li>

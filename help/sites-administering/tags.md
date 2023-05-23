@@ -70,9 +70,9 @@ Så här kommer du åt taggningskonsolen:
 * logga in med administratörsbehörighet
 * från global navigering
 
-   * select **`Tools`**
-   * select **`General`**
-   * select **`Tagging`**
+   * välj **`Tools`**
+   * välj **`General`**
+   * välj **`Tagging`**
 
 ![managing_tags_using_thetagasminister_console](assets/managing_tags_usingthetagasministrationconsolea.png)
 

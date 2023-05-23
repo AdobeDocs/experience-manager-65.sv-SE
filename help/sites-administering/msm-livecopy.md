@@ -134,7 +134,7 @@ Om du utelämnar vissa språkgrenar eller kapitel från live-kopian kan du lägg
 
 >[!CAUTION]
 >
->När ritningskällan innehåller länkar och referenser som avser ett stycke i en annan gren, uppdateras inte målen i live-kopieringssidorna, utan de är fortfarande kopplade till det ursprungliga målet.
+>När ritningskällan innehåller länkar och referenser som avser ett stycke i en annan gren, uppdateras inte målen på sidorna för den aktiva kopian, utan de är fortfarande kopplade till det ursprungliga målet.
 
 När du skapar platsen anger du värden för följande egenskaper:
 
@@ -181,7 +181,7 @@ Egenskaperna för en live-kopia visar följande information om live-kopian:
 
    * Anger om sidan fortfarande omfattas av live-kopiarv.
    * Anger om konfigurationen ärvs från den överordnade sidan.
-   * Alla utrullningskonfigurationer som används av live-kopian.
+   * Alla utrullningskonfigurationer som används för live-kopian.
 
 Så här visar du egenskaperna:
 

@@ -14,7 +14,7 @@ exl-id: 569f2052-b4fe-4f7f-aec9-657217cba091
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '682'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -30,8 +30,8 @@ The `categories` det egenskapsvärde som anges för det här klientbiblioteket �
 
 1. Högerklicka `an-scf-sandbox` och markera `Create Node`
 
-   * Namn : `clientlibs`
-   * Typ : `cq:ClientLibraryFolder`
+   * Namn: `clientlibs`
+   * Typ: `cq:ClientLibraryFolder`
 
 1. Klicka **OK**
 
@@ -85,8 +85,8 @@ Om du bara använder en funktion på en sida kan du inkludera den funktionens fu
 
 I det här fallet är det bäst att inkludera alla och så att de mer grundläggande SCF-klientlibs som är författarens klientlibs:
 
-* Namn : **`embed`**
-* Typ : **`String`**
+* Namn: **`embed`**
+* Typ: **`String`**
 * Klicka på **`Multi`**
 * Värde: **`cq.social.scf`**
 

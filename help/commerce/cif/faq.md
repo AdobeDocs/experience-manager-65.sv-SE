@@ -4,7 +4,7 @@ description: AEM - Commerce Integration med Commerce Integration Framework - fr√
 exl-id: d541607f-c4c9-4dd5-aadf-64d4cb5f9f2a
 source-git-commit: c96f83b84ed1473aee0ddcca08a0e585ec088aa1
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '960'
 ht-degree: 0%
 
 ---

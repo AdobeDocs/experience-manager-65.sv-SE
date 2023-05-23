@@ -107,7 +107,7 @@ Använd följande verktyg för att flytta dina komponenter till publiceringsinst
 
 ### Komponenter som ska vara medvetna om från Start {#components-to-be-aware-of-from-the-start}
 
-* Sidan:
+* Sida:
 
    * AEM har *page* komponent ( `cq:Page`).
    * Detta är en specifik typ av resurs som är viktig för innehållshantering.
@@ -435,7 +435,7 @@ Dialogrutedefinitioner är specifika för användargränssnittet:
 
 
 * Pekaktiverat användargränssnitt
-   * `cq:dialog` ( `nt:unstructured`) nodes:
+   * `cq:dialog` ( `nt:unstructured`) noder:
       * definiera dialogrutan för redigering av innehåll i den här komponenten
       * specifikt för det pekaktiverade användargränssnittet
       * definieras med gränssnittskomponenter i Granite
@@ -451,7 +451,7 @@ Dialogrutedefinitioner är specifika för användargränssnittet:
    ![screen_shot_2012-02-13at60937pm](assets/screen_shot_2012-02-13at60937pm.png)
 
 * Klassiskt användargränssnitt
-   * `dialog` ( `cq:Dialog`) nodes
+   * `dialog` ( `cq:Dialog`) noder
       * definiera dialogrutan för redigering av innehåll i den här komponenten
       * specifikt för det klassiska användargränssnittet
       * definieras med ExtJS-widgetar

@@ -124,7 +124,7 @@ CRXDE Lite har följande funktioner:
    <td>Flyttar den markerade noden till den nod som anges i dialogrutan.</td>
   </tr>
   <tr>
-   <td>Byt namn på ...<br /> </td>
+   <td>Byt namn ...<br /> </td>
    <td>Byter namn på den markerade noden.<br /> </td>
   </tr>
   <tr>
@@ -132,7 +132,7 @@ CRXDE Lite har följande funktioner:
    <td>Gör att du kan lägga till blandningstyper i nodtypen. Blandningstyperna används oftast för att lägga till avancerade funktioner som versionshantering, åtkomstkontroll, referenser och låsning till noden.</td>
   </tr>
   <tr>
-   <td>Verktyg<br /> </td>
+   <td>verktyg<br /> </td>
    <td><p>Listruta med följande verktyg:</p> <p>- <strong>Serverkonfiguration...</strong>: för åtkomst till Felix Console.</p> <p>- <strong>Fråga ...</strong>: för att fråga databasen.</p> <p>- <strong>Behörigheter ...</strong>: för att öppna behörighetshantering, där du kan visa och lägga till behörigheter.</p> <p>- <strong>Testa åtkomstkontroll ...</strong>: en plats där du kan testa behörigheten för en viss sökväg och/eller huvudman.</p> <p>- <strong>Exportera nodtyp</strong>: om du vill exportera nodtyper i systemet som slutnotation.</p> <p>- <strong>Importera nodtyp..</strong>: om du vill importera nodtyper med hjälp av slutnotation.</p> <p>- <strong>Installera SiteCatalyst Debugger ...</strong>: anvisningar om hur du installerar Analytics Debugger.</p> </td>
   </tr>
   <tr>

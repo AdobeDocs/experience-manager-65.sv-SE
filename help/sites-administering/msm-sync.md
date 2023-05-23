@@ -118,7 +118,7 @@ I följande tabell visas de utrullningskonfigurationer som har installerats med 
   </tr>
   <tr>
    <td>Konfiguration för äldre katalog (5.6.0)</td>
-   <td>Ersatta. Använd Kataloggenerator i stället för MSM för kataloglanseringar.</td>
+   <td>Föråldrat. Använd Kataloggenerator i stället för MSM för kataloglanseringar.</td>
    <td>Vid utrullning</td>
    <td>editProperties</td>
   </tr>
@@ -196,7 +196,7 @@ I följande tabell visas de synkroniseringsåtgärder som har installerats med A
    <td>mål: (String) Sökvägen till arbetsflödesmodellen.<br /> </td>
   </tr>
   <tr>
-   <td>mandatory</td>
+   <td>obligatoriskt</td>
    <td><p>Anger behörighet för flera åtkomstkontrollistor på live-kopieringssidan som skrivskyddad för en viss användargrupp. Följande åtkomstkontrollistor är konfigurerade:</p>
     <ul>
      <li>ActionSet.ACTION_NAME_REMOVE</li>

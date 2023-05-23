@@ -154,7 +154,7 @@ Med funktionen för omvalidering på serversidan kan du även köra de validerin
 
 Alla valideringar av ett anpassningsbart formulär som körs på servern är:
 
-* Krävs
+* Obligatoriskt
 * Valideringsbildsats
 * Valideringsuttryck
 

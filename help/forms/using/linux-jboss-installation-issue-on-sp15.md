@@ -1,13 +1,13 @@
 ---
 title: AEM Forms JEE 6.5.15.0 Service Pack - installationsproblem i JBoss® Linux®-miljö
 description: AEM Forms JEE 6.5.15.0 Service Pack är inte korrekt installerat i JBoss® Linux®-miljön. Eventuella korrigeringsändringar tillämpas inte på programservern. Lägg till filen RUP_BOM.xml i XML-katalogen.
-source-git-commit: 76a3a87408ceb13023737379c20fb44ce5fb180a
+exl-id: 96ecbe58-a859-4432-a2d8-3d5dc0eaf989
+source-git-commit: b8c9e5cd3192b51954091b677d700c51617c9460
 workflow-type: tm+mt
 source-wordcount: '205'
 ht-degree: 0%
 
 ---
-
 
 # AEM Forms 6.5.15.0 JEE Service Pack - installationsproblem i JBoss®-miljö {#aem-forms-installation-issue-environment}
 

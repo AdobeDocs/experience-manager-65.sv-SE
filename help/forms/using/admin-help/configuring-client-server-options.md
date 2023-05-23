@@ -761,7 +761,7 @@ I dokumentets säkerhetskonfigurationsfil kan du ange standardfrekvensen för de
 1. Öppna konfigurationsfilen i en redigerare och leta upp `PolicyServer` nod. Under den noden letar du reda på `ServerSettings` nod.
 1. I `ServerSettings` lägg till följande post och spara sedan filen:
 
-   `<entry key="BackgroundSyncFrequency" value="`*time* `"/>`
+   `<entry key="BackgroundSyncFrequency" value="`*tid* `"/>`
 
    där *tid* är antalet sekunder mellan automatiska bakgrundssynkroniseringar. Om du skickade det här värdet till `0`synkronisering sker alltid. Standardvärdet är `14400` sekunder (var fjärde timme).
 

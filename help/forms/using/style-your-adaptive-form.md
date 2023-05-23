@@ -12,7 +12,7 @@ exl-id: 7742c3ca-1755-44c5-b70f-61309f09d1b8
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1927'
-ht-degree: 5%
+ht-degree: 1%
 
 ---
 
@@ -39,7 +39,7 @@ Formuläret ser ut ungefär så här när du är klar med självstudiekursen:
 
 ![Formulär med anpassat tema](assets/styled-adaptive-form.png)
 
-## Innan du startar {#before-you-start}
+## Innan du börjar {#before-you-start}
 
 Ladda ned rubrikbilderna och logotypbilderna nedan på din dator. Rubriken på `shipping-address-add-update-form` adaptiva formulär använder rubrikbilder och logotypbilder. Bilden i sidhuvudsstil visas till höger om sidhuvudet.
 
@@ -186,12 +186,12 @@ Du kan använda flera komponenter i ett adaptivt formulär för att hämta data.
       <td><b>Värde</b></td> 
      </tr> 
      <tr> 
-      <td>Kantlinje</td> 
-      <td>Kantlinjefärg</td> 
+      <td>Kant</td> 
+      <td>Kantfärg</td> 
       <td>A7A9AC</td> 
      </tr> 
      <tr> 
-      <td>Kantlinje</td> 
+      <td>Kant</td> 
       <td>Kantradie </td> 
       <td> 
        <ul> 
@@ -256,11 +256,11 @@ Du kan använda ett anpassat tema för att tillämpa en identisk stil på alla k
      </tr> 
      <tr> 
       <td>Kant<br /> </td> 
-      <td>Kantlinjefärg</td> 
+      <td>Kantfärg</td> 
       <td>F6921E</td> 
      </tr> 
      <tr> 
-      <td>Kantlinje</td> 
+      <td>Kant</td> 
       <td>Kantradie </td> 
       <td> 
        <ul> 
@@ -305,7 +305,7 @@ Vissa format gäller bara för en viss komponent. Sådana komponenter är format
 
    | Egenskap | Värde |
    |---|---|
-   | Flyttal | Vänster |
+   | Float | Vänster |
    | Bredd | 10% |
 
 1. Tryck på **[!UICONTROL Government approved address proof]** och tryck på ![aem_6_3_edit](assets/aem_6_3_edit.png)ikon. Ange följande egenskaper:
@@ -319,7 +319,7 @@ Vissa format gäller bara för en viss komponent. Sådana komponenter är format
      </tr> 
      <tr> 
       <td>Dimensioner och position</td> 
-      <td>Flyttal</td> 
+      <td>Float</td> 
       <td>Vänster</td> 
      </tr> 
      <tr> 
@@ -355,22 +355,22 @@ Vissa format gäller bara för en viss komponent. Sådana komponenter är format
       <td>FFFFFF</td> 
      </tr> 
      <tr> 
-      <td>Kantlinje</td> 
+      <td>Kant</td> 
       <td>Kantbredd</td> 
       <td>1px</td> 
      </tr> 
      <tr> 
-      <td>Kantlinje</td> 
+      <td>Kant</td> 
       <td>Kantstil</td> 
       <td>Heldragen</td> 
      </tr> 
      <tr> 
-      <td>Kantlinje</td> 
-      <td>Kantlinjefärg</td> 
+      <td>Kant</td> 
+      <td>Kantfärg</td> 
       <td>A7A9AC</td> 
      </tr> 
      <tr> 
-      <td>Kantlinje</td> 
+      <td>Kant</td> 
       <td>Kantradie</td> 
       <td>7px</td> 
      </tr> 
@@ -409,7 +409,7 @@ Vissa format gäller bara för en viss komponent. Sådana komponenter är format
      </tr> 
      <tr> 
       <td>Dimensioner och position</td> 
-      <td>Flyttal</td> 
+      <td>Float</td> 
       <td>Höger</td> 
      </tr> 
      <tr> 
@@ -429,8 +429,8 @@ Vissa format gäller bara för en viss komponent. Sådana komponenter är format
       <td>F6921E</td> 
      </tr> 
      <tr> 
-      <td>Kantlinje</td> 
-      <td>Kantlinjefärg</td> 
+      <td>Kant</td> 
+      <td>Kantfärg</td> 
       <td>F6921E</td> 
      </tr> 
     </tbody> 

@@ -13,7 +13,7 @@ exl-id: 8af5ee58-19d7-47b6-b45d-e88006703a5d
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1184'
-ht-degree: 3%
+ht-degree: 0%
 
 ---
 
@@ -107,27 +107,27 @@ Nedan följer några av de sökbara egenskaper som används för olika webbgrupp
 
 | **Egenskap** | **Datatyp** |
 |---|---|
-| isFlagged | *Boolesk* |
-| isSpam | *Boolesk* |
-| read | *Boolesk* |
-| påverka | *Boolesk* |
-| bilagor | *Boolesk* |
+| isFlagged | *Boolean* |
+| isSpam | *Boolean* |
+| read | *Boolean* |
+| påverka | *Boolean* |
+| bilagor | *Boolean* |
 | känslouttryck | *Lång* |
-| flaggad | *Boolesk* |
-| tillagd | *Date* |
-| modifiedDate | *Date* |
+| flaggad | *Boolean* |
+| tillagd | *Datum* |
+| modifiedDate | *Datum* |
 | läge | *Sträng* |
 | userIdentifier | *Sträng* |
 | svar | *Lång* |
 | jcr:title | *Sträng* |
 | jcr:description | *Sträng* |
 | sling:resourceType | *Sträng* |
-| allowThreadedReply | *Boolesk* |
-| isDraft | *Boolesk* |
-| publishDate | *Date* |
+| allowThreadedReply | *Boolean* |
+| isDraft | *Boolean* |
+| publishDate | *Datum* |
 | publishJobId | *Sträng* |
-| besvarade | *Boolesk* |
-| välj | *Boolesk* |
+| besvarade | *Boolean* |
+| välj | *Boolean* |
 | tag | *Sträng* |
 | cq:Tagg | *Sträng* |
 | author_display_name | *Sträng* |
@@ -148,7 +148,7 @@ Solr är ett exempel på ett frågespråk som använder ett schema.
 
 | **Suffix** | **Datatyp** |
 |---|---|
-| _b | *Boolesk* |
+| _b | *Boolean* |
 | dt | *Kalender* |
 | _d | *Dubbel* |
 | _tl | *Lång* |

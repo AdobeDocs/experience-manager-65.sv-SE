@@ -87,7 +87,7 @@ Du kan använda DDX för att förstora PDF-dokument som en del av dokumentsamman
 
 Du kan använda en enkel indatamappning för att ange plats för källdokument och resulterande dokument. Du kan även använda följande externa data-URL-typer:
 
-* Arkiv
+* Fil
 * FTP
 * HTTP/HTTPS
 

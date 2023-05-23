@@ -109,7 +109,7 @@ Om du lägger till en knapp med en åtgärd (här skickar du ett brev för grans
    |---|---|
    | name | Det alfanumeriska namnet på åtgärden som ska utföras. Värdet för den här taggen är obligatoriskt, måste vara unikt (inom taggen modelExtension) och måste börja med ett alfabet. |
    | label | Etiketten som ska visas på åtgärdsknappen |
-   | funktionsbeskrivning | Knappens knappbeskrivning, som visas när användaren håller muspekaren över knappen. |
+   | knappbeskrivning | Knappens knappbeskrivning, som visas när användaren håller muspekaren över knappen. |
    | styleName | Namnet på det anpassade format som används på åtgärdsknappen. |
    | permissionName | Motsvarande åtgärd visas bara om användaren har den behörighet som anges av permissionName. När du anger permissionName som `forms-users`, får alla användare åtkomst till det här alternativet. |
    | actionHandler | Fullständigt kvalificerat namn på ActionHandler-klassen som anropas när användaren klickar på knappen. |

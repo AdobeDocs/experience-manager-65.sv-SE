@@ -40,7 +40,7 @@ Så här konfigurerar du offlinekomponenten på serversidan i AEM Forms-programm
 
 1. I författarinstansen går du till **Adobe Experience Manager** >**verktyg** > **Forms** > **Konfigurera Forms App Offline Service**.
 
-   Webbadress: `https://<server>:<port>/<context-path>/libs/fd/workspace-offline/gui/content/config.html`
+   URL: `https://<server>:<port>/<context-path>/libs/fd/workspace-offline/gui/content/config.html`
 
 1. Under Allmänna inställningar kan du göra följande:
 

@@ -14,7 +14,7 @@ exl-id: 8cc90ff7-284e-41cd-bfda-7fa09371e270
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '812'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
@@ -81,7 +81,7 @@ Förutom klassen type och name innehåller fältkomponenten även en ytterligare
    <td><strong>Namn</strong></td>
   </tr>
   <tr>
-   <td>Sidan</td>
+   <td>Sida</td>
    <td>page</td>
    <td>Användardefinierat namn<br /> eller<br /> Sida&lt;pagenumber&gt; (standard)</td>
   </tr>
@@ -92,7 +92,7 @@ Förutom klassen type och name innehåller fältkomponenten även en ytterligare
   </tr>
   <tr>
    <td>Delformulär</td>
-   <td>subform</td>
+   <td>delformulär</td>
    <td>Användardefinierat namn</td>
   </tr>
   <tr>
@@ -102,7 +102,7 @@ Förutom klassen type och name innehåller fältkomponenten även en ytterligare
   </tr>
   <tr>
    <td>Rita</td>
-   <td>draw</td>
+   <td>rita</td>
    <td>Användardefinierat namn</td>
   </tr>
   <tr>
@@ -112,7 +112,7 @@ Förutom klassen type och name innehåller fältkomponenten även en ytterligare
   </tr>
   <tr>
    <td>Bildtext</td>
-   <td>caption</td>
+   <td>bildtext</td>
    <td>NA</td>
   </tr>
   <tr>
@@ -178,7 +178,7 @@ Varje fält har en tillhörande widget som representerar gränssnittselementet. 
    <td>urvalslista<br type="_moz" /> </td>
    <td>dropDownListWidget<br type="_moz" /> </td>
    <td>vallistorwidget<br type="_moz" /> </td>
-   <td>select</td>
+   <td>välj</td>
   </tr>
   <tr>
    <td>ListBox<br type="_moz" /> </td>
@@ -233,7 +233,7 @@ Du kan infoga statiska ritelement som text och bilder med AEM Forms Designer. F�
 |---|---|
 | Text | text |
 | Bild | bild |
-| Rektangel | rectangle |
+| Rektangel | rektangel |
 | Linje | line |
 
 ## Formatera andra delar av formuläret {#styling-other-parts-of-the-form}

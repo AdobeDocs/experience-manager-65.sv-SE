@@ -21,7 +21,7 @@ A [predikatintervall](#predicates-and-their-settings)finns färdiga. Du kan läg
 
 Du kan [konfigurera sökformulären](#configuring-your-search-forms) används i olika konsoler och i resursläsaren (när du redigerar sidor). The [dialogrutor för att konfigurera dessa formulär](#configuring-your-search-forms) kan nås via:
 
-* **Verktyg**
+* **verktyg**
 
    * **Allmänt**
 
@@ -135,7 +135,7 @@ Följande predikat är tillgängliga, beroende på konfigurationen:
     </ul> </td>
   </tr>
   <tr>
-   <td>Date </td>
+   <td>Datum </td>
    <td>Slider-baserad sökning av resurser baserat på en date-egenskap.</td>
    <td>
     <ul>
@@ -237,7 +237,7 @@ Följande predikat är tillgängliga, beroende på konfigurationen:
   <tr>
    <td>Egenskap </td>
    <td>Sök på en angiven egenskap.</td>
-   <td>inga</td>
+   <td>ingen</td>
   </tr>
   <tr>
    <td>Publiceringsstatus </td>

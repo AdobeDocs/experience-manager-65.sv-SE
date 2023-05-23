@@ -142,7 +142,7 @@ För import av XML eller interaktion med befintlig XML SNS kan det vara nödvän
 
 #### Exempel {#example-4}
 
-Användning
+Använd
 
 ```xml
 /content/myblog/posts/what_i_learned_today
@@ -220,7 +220,7 @@ Låt oss säga bara för att du vill kunna referera till en nod av typen&quot;Do
 
 #### Exempel {#example-7}
 
-Användning:
+Använd:
 
 ```xml
 /content/myblog/posts/iphone_shipping/attachments/front.jpg

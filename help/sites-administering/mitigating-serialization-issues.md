@@ -50,7 +50,7 @@ Adobe har officiellt stöd för Java™ 6, 7 och 8. Adobe förstår dock att Not
 
 NotSoSerial-agenten ingår inte i standarddistributionen av AEM för programservrar. Du kan dock extrahera den från AEM jar-distributionen och använda den med programserverkonfigurationen:
 
-1. Ladda först ned AEM snabbstartsfil och extrahera den:
+1. Ladda först ned AEM snabbstartfil och extrahera den:
 
    ```shell
    java -jar aem-quickstart-6.2.0.jar -unpack

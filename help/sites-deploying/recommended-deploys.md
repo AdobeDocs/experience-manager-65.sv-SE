@@ -40,7 +40,7 @@ I det här scenariot körs en enda tarMK-instans på en enda server.
 
 Fördelarna:
 
-* Enkla
+* Enkel
 * Smidigt underhåll
 * Bra prestanda
 
@@ -167,7 +167,7 @@ Om ovanstående kriterier inte förväntas vara uppfyllda under de första 18 m�
 
 ### Undantag för att välja AEM MongoMK över tarMK för publiceringsinstanser {#exceptions-for-choosing-aem-mongomk-over-tarmk-on-publish-instances}
 
-Vi rekommenderar inte att du distribuerar MongoMK för publiceringsinstanser. Distributionsskiktet distribueras nästan alltid som en grupp fullständigt oberoende publiceringsinstanser som kör tarMK, som synkroniseras genom att replikera innehåll från författarinstanserna. Denna&quot;delade ingenting&quot;-arkitektur, som är rätt för publiceringsinstanserna, gör att publiceringsnivån kan skalas vågrätt på ett linjärt sätt. Servergruppstopologin ger också fördelen att använda uppdateringar eller uppgraderingar för att publicera instanser rullande, så att inga ändringar i publiceringsnivån kräver några driftavbrott.
+Vi rekommenderar inte att du distribuerar MongoMK för publiceringsinstanser. Distributionsskiktet distribueras nästan alltid som en grupp fullständigt oberoende publiceringsinstanser som kör tarMK, som synkroniseras genom att innehåll från författarinstanserna replikeras. Denna&quot;delade ingenting&quot;-arkitektur, som är rätt för publiceringsinstanserna, gör att publiceringsnivån kan skalas vågrätt på ett linjärt sätt. Servergruppstopologin ger också fördelen att använda uppdateringar eller uppgraderingar för att publicera instanser rullande, så att inga ändringar i publiceringsnivån kräver några driftavbrott.
 
 Detta gäller inte AEM Communities som använder MongoMK-kluster på publiceringsnivån när det finns fler än en utgivare. Om du väljer JSRP (se [Community-innehåll](/help/communities/working-with-srp.md)) skulle ett MongoMK-kluster vara lämpligt, precis som alla publiceringssidkluster, oavsett vilken MK som valts, till exempel MongoDB eller RDB.
 

@@ -14,7 +14,7 @@ exl-id: b934ac41-78b9-497f-ba95-b05ef1e5660e
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1626'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -64,7 +64,7 @@ En mall är en nod av typen cq:Template och har följande egenskaper och underor
   </tr>
   <tr>
    <td> jcr:skapad</td>
-   <td> Date</td>
+   <td> Datum</td>
    <td>Datum när mallen skapades.<br /> </td>
   </tr>
   <tr>

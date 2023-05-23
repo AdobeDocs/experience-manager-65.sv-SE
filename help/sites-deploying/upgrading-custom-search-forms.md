@@ -99,7 +99,7 @@ I AEM 6.1 ingick standardpredikatet för fulltext i sökformuläret. I 6.2 har f
  <tbody>
   <tr>
    <td>Nod/noder i standardsökformuläret i 6.1<br /> <br /> </td>
-   <td>path</td>
+   <td>bana</td>
   </tr>
   <tr>
    <td><p>Resurstyp i 6.1</p> </td>
@@ -156,7 +156,7 @@ I AEM 6.1 ingick standardpredikatet för fulltext i sökformuläret. I 6.2 har f
 
 Sidstatus har ersatts med två alternativ för egenskapspredikat, en för publicering och en för LiveCopy-status.
 
-**Åtgärder:**
+**Funktionsmakron:**
 
 * Ta bort `pagestatuspredicate` nod
 * Kopiera nod
@@ -399,7 +399,7 @@ I 6.1 ingick standardpredikatet för fulltext i sökformuläret. I 6.2 har fullt
 
 ### Filstorleksprognoser {#file-size-predicates}
 
-| Nod/noder i standardsökformuläret i 6.1 | filesize |
+| Nod/noder i standardsökformuläret i 6.1 | filstorlek |
 |---|---|
 | Resurstyp i 6.1 | dam/gui/components/admin/customsearch/searchpreates/filesizepredicate |
 | Resurstyp i 6.2 | dam/gui/coral/components/admin/customsearch/searchpreates/sliderangepredicate |
@@ -422,7 +422,7 @@ I 6.1 ingick standardpredikatet för fulltext i sökformuläret. I 6.2 har fullt
 | Resurstyp i 6.1 | dam/gui/components/admin/customsearch/searchpreates/publishpredikate |
 | Resurstyp i 6.2 | dam/gui/coral/components/admin/customsearch/searchpreates/publishate |
 
-**Åtgärder:**
+**Funktionsmakron:**
 
 * Justera `resourceType` egenskap (lägg till &quot;**/coral**&quot; som på den plats som anges ovan i 6.2)
 
@@ -468,12 +468,12 @@ I 6.1 ingick standardpredikatet för fulltext i sökformuläret. I 6.2 har fullt
 
 ### Orienteringspredikat {#orientation-predicate}
 
-| Nod/noder i standardsökformuläret i 6.1 | orientation |
+| Nod/noder i standardsökformuläret i 6.1 | orientering |
 |---|---|
 | Resurstyp i 6.1 | dam/gui/components/admin/customsearch/searchpreates/tagsfilterpredikate |
 | Resurstyp i 6.2 | cq/gui/components/coral/common/admin/customsearch/searchpreates/tagspredicate |
 
-**Åtgärder:**
+**Funktionsmakron:**
 
 * Justera `resourceType` egenskap (lägg till &quot;**/coral**&quot; som på den plats som anges ovan i 6.2)
 
@@ -490,7 +490,7 @@ I 6.1 ingick standardpredikatet för fulltext i sökformuläret. I 6.2 har fullt
 | Resurstyp i 6.1 | dam/gui/components/admin/customsearch/searchpreates/tagsfilterpredikate |
 | Resurstyp i 6.2 | cq/gui/components/coral/common/admin/customsearch/searchpreates/tagspredicate |
 
-**Åtgärder:**
+**Funktionsmakron:**
 
 * Justera `resourceType` egenskap (lägg till &quot;**/coral**&quot; som på den plats som anges ovan i 6.2)
 

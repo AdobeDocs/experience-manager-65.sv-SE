@@ -42,7 +42,7 @@ Anonym publicering av en klassificering stöds inte. Besökare på webbplatsen m
    <td> cq.social.hbs.rating</td>
   </tr>
   <tr>
-   <td> <strong>templates</strong></td>
+   <td> <strong>mallar</strong></td>
    <td><p> /libs/social/tally/components/hbs/rating/rating.hbs<br /> /libs/social/tally/components/hbs/rating/display.hbs<br /> /libs/social/tally/components/hbs/rating/histogram.hbs</p> </td>
   </tr>
   <tr>

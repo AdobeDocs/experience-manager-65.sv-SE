@@ -328,7 +328,7 @@ Så här använder du **Godtycklig** dialog:
 1. Ersätta dialogrutan **Dynamisk dialogruta** med **Godtycklig** dialog: följer de steg som beskrivs för [Exempel 2: Dialogrutan En panel](#example-single-panel-dialog)
 1. Edit the component: the dialog displays as follows:
 
-![screen_shot_2012-02-01at115300am](assets/screen_shot_2012-02-01at115300am.png)
+![](assets/screen_shot_2012-02-01at115300am.png)
 
 #### Example 3: Toggle Fields Dialog {#example-toggle-fields-dialog}
 
@@ -412,10 +412,10 @@ Den anpassade `multifield` widget (xtype = `ejstcustom`):
    * `otherField` är en [CQ.Ext.form.TextField](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.Ext.form.TextField) object
 * `setValue``getValue``getRawValue`[](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.form.CompositeField)
    `<allowField value>/<otherField value>, for example: 'Bla1/hello'`.
-* Registrerar sig som &#39; `ejstcustom`&#39;-xtype:
+* `ejstcustom`
    `CQ.Ext.reg('ejstcustom', Ejst.CustomWidget);`
 
-**Anpassad multifält** widgetbaserad dialogruta visas enligt följande:
+****
 
 ![screen_shot_2012-02-01at115840am](assets/screen_shot_2012-02-01at115840am.png)
 
@@ -501,7 +501,7 @@ The **RTE-plugin (Rich Text Editor)** visas enligt följande:
 
 >[!NOTE]
 >
->I det här exemplet visas bara hur du implementerar klientdelen av logiken: platshållarna (*[text]*) måste sedan tolkas explicit på serversidan (till exempel i komponent-JSP).
+>*[]*
 
 ### Tree Overview {#tree-overview}
 

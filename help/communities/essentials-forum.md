@@ -38,7 +38,7 @@ Den här sidan innehåller viktig information om hur du arbetar med forumfunktio
    <td>cq.ckeditor<br /> cq.social.hbs.röstning<br /> cq.social.hbs.forum</td>
   </tr>
   <tr>
-   <td> <strong>templates</strong></td>
+   <td> <strong>mallar</strong></td>
    <td> /libs/social/forum/components/hbs/forum/forum.hbs<br /> /libs/social/forum/components/hbs/post/post.hbs<br /> /libs/social/forum/components/hbs/topic/topic.hbs<br /> /libs/social/forum/components/hbs/topic/list-item.hbs<br /> </td>
   </tr>
   <tr>

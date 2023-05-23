@@ -262,7 +262,7 @@ Alla dessa åtgärder kan utlösas av:
 
    Sedan, beroende på vad du gör:
 
-   * Kopiera:
+   * Copy:
 
       * Du måste sedan navigera till den nya platsen och klistra in.
    * Flytta:

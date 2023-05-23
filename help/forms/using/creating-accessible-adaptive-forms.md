@@ -13,7 +13,7 @@ exl-id: e755159f-374f-42b8-b28b-e8864df44f9d
 source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
 source-wordcount: '2034'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -158,8 +158,8 @@ Följande kortkommandon finns i AEM Forms.
 |---|---|
 | Flytta markören framåt genom ett formulär | Tabb |
 | Flytta markören bakåt genom ett formulär | Skift+Tabb |
-| Flytta till nästa panel | Alt + högerpil |
-| Flytta till föregående panel | Alt + vänsterpil |
+| Flytta till nästa panel | Alt+högerpil |
+| Flytta till föregående panel | Alt+vänsterpil |
 | Återställ ifyllda data i ett formulär | Alt+R |
 | Skicka ett formulär | Alt+S |
 
@@ -177,9 +177,9 @@ Följande kortkommandon är tillgängliga för datumväljarkomponenten i Adaptiv
 | Flytta markören uppåt i kalendern som är tillgänglig i datumväljarkomponenten | Uppåtpil |
 | Flytta markören bakåt i kalendern som är tillgänglig i datumväljarkomponenten | Vänsterpil |
 | Flytta markören framåt i kalendern som är tillgänglig i datumväljarkomponenten | Högerpil |
-| Utför åtgärden för den bildtext som är tillgänglig mellan höger och vänster navigeringspilar i kalendern | Skift+Uppil |
-| Utför åtgärden för höger navigeringspil ![högerpil](assets/right-navigation-icon.svg) som är tillgängliga i kalendern | Skift+Vänsterpil |
-| Utför åtgärden för den vänstra navigeringspilen ![vänsterpil](assets/left-navigation-icon.svg) som är tillgängliga i kalendern | Skift+Högerpil |
+| Utför åtgärden för den bildtext som är tillgänglig mellan höger och vänster navigeringspilar i kalendern | Skift + uppåtpil |
+| Utför åtgärden för höger navigeringspil ![högerpil](assets/right-navigation-icon.svg) som är tillgängliga i kalendern | Skift + Vänsterpil |
+| Utför åtgärden för den vänstra navigeringspilen ![vänsterpil](assets/left-navigation-icon.svg) som är tillgängliga i kalendern | Skift + högerpil |
 
 ## Använd hjälpmedelsverktyget för att hitta återstående tillgänglighetsproblem
 

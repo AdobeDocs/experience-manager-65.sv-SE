@@ -13,7 +13,7 @@ exl-id: 7ac0056c-a742-49f4-8312-2cf90ab9f23a
 source-git-commit: 1d334c42088342954feb34f6179dc5b134f81bb8
 workflow-type: tm+mt
 source-wordcount: '552'
-ht-degree: 2%
+ht-degree: 1%
 
 ---
 
@@ -68,7 +68,7 @@ Använda CRXDE Lite:
 
 1. Ersätt &quot; // TODO ...&quot; eftersom du är medveten om att det finns öppna/stängda skripttaggar. med skript för huvud- och kroppsdelar i &lt;html>.
 
-   Med en överordnad typ av `foundation/components/page`kommer alla skript som inte är definierade i samma mapp att tolkas som skript i `/apps/foundation/components/page` mapp (om den finns), else to a script in `/libs/foundation/components/page` mapp.
+   Med en överordnad typ av `foundation/components/page`, kommer alla skript som inte är definierade i samma mapp att tolkas som ett skript i `/apps/foundation/components/page` mapp (om den finns), else to a script in `/libs/foundation/components/page` mapp.
 
    `/apps/an-scf-sandbox/components/playpage/playpage.jsp`
 

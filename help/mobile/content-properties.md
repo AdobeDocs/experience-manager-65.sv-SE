@@ -13,7 +13,7 @@ exl-id: 05c8c846-69cc-4075-9149-33890b3d1e08
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '355'
-ht-degree: 12%
+ht-degree: 1%
 
 ---
 
@@ -36,8 +36,8 @@ I följande tabeller beskrivs innehållsegenskaperna och noderna.
 | dps-id | Sträng |  | som tilldelats av AEM Mobile och lagras av AEM när de överförts till AEM Mobile eller importerats från AEM Mobile |
 | dps-resourceType | Sträng | dps:artikel | dps:Banner | dps:Samling | entitetstyp, egenskap |
 | dps-version | Sträng |  | version av AEM Mobile-enhet (ingår också i det fullständiga aemm-id:t) |
-| dps-lastSynced | Date |  | datum för senaste synkronisering/import från AEM Mobile till AEM |
-| dps-lastUploaded | Date |  | datum för senaste överföring från AEM till AEM Mobile |
+| dps-lastSynced | Datum |  | datum för senaste synkronisering/import från AEM Mobile till AEM |
+| dps-lastUploaded | Datum |  | datum för senaste överföring från AEM till AEM Mobile |
 | dps-lastUploadedBy | String:userid |  | ID-användare som utförde den senaste överföringsbegäran från AEM till AEM Mobile |
 
 ## Egenskaper för kärnmetadata {#core-metadata-properties}
@@ -60,7 +60,7 @@ I följande tabeller beskrivs innehållsegenskaperna och noderna.
 |---|---|---|
 | dps-author | Sträng |  |
 | dps-authorURL | Sträng |  |
-| dps-hideFromBrowsePage | Boolesk |  |
+| dps-hideFromBrowsePage | Boolean |  |
 | dps-access | Sträng | ProtectedAccess från {&quot;protected&quot;, &quot;metered&quot;, &quot;free&quot;} |
 | **Social** |  |  |
 | dps-socialShareURL | Sträng |  |
@@ -80,8 +80,8 @@ I följande tabeller beskrivs innehållsegenskaperna och noderna.
 |--- |--- |--- |
 | dps-productId | Sträng |  |
 | dps-readingPosition | Sträng | från {&quot;reset&quot;,&quot;keep&quot;} |
-| dps-horizontalSwipe | Boolesk |  |
-| dps-allowDownload | Boolesk |  |
+| dps-horizontalSwipe | Boolean |  |
+| dps-allowDownload | Boolean |  |
 | dps-openDefault | Sträng | från {&quot;browsePage&quot;,&quot;contentView&quot;} |
 | dps-layout | Sträng |  |
 

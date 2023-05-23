@@ -7,7 +7,7 @@ exl-id: ceb9671c-57f9-4d81-94c0-0dbccd4d90a2
 source-git-commit: 1b92b973209fdbd2509b1c644c1064a1e9224a9e
 workflow-type: tm+mt
 source-wordcount: '1849'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -355,7 +355,7 @@ Tuff dag 2 rapporterar för närvarande 9 testvärden som du kan utvärdera. Mä
 | Min&#42; | Testkörningens kortaste varaktighet. |
 | Max&#42; | Testkörningens längsta varaktighet. |
 | Median&#42; | Beräknad medianduration för alla testkörningar. |
-| Medel&#42; | Beräknad genomsnittlig varaktighet för alla testkörningar. |
+| Genomsnittlig&#42; | Beräknad genomsnittlig varaktighet för alla testkörningar. |
 | StdDev&#42; | Standardavvikelsen. |
 | 90p&#42; | 90-percentil. |
 | 99p&#42; | 99-percentil. |

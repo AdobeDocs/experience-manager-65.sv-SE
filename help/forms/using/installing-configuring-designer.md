@@ -15,7 +15,7 @@ exl-id: 90503d29-e079-43f4-a5dc-ce90ed7844c6
 source-git-commit: 1b2d743f8f2172c4e4663917d598734cb1ea1ea4
 workflow-type: tm+mt
 source-wordcount: '477'
-ht-degree: 14%
+ht-degree: 0%
 
 ---
 
@@ -39,11 +39,11 @@ Designer är tillgängligt som ett fristående installationsprogram och ingår �
 
 
 1. Starta installationsprogrammet för AEM Forms Designer genom att dubbelklicka på setup.exe.
-1. Gå vidare genom att ange dina uppgifter samt serienummer på den anpassade skärmen.
-1. Klicka på Nästa om du godkänner licensavtalet.
-1. Om du vill välja vilken plats Designer ska installeras på ändrar du standardsökväg för installation (valfritt). Klicka på Nästa.
-1. Klicka på Tillbaka för att ändra inställningar. Installera Designer genom att klicka på Installera.
-1. Klicka på Slutför när installationen är genomförd.
+1. Fortsätt och ange dina uppgifter och serienumret på skärmen Personalisering.
+1. Om du godkänner licensavtalet fortsätter du genom att klicka på Nästa.
+1. (Valfritt) ändra standardinstallationssökvägen om du vill installera Designer på en valfri plats. Klicka på Nästa.
+1. Klicka på Bakåt om du vill ändra några inställningar. Klicka på Installera om du vill installera Designer.
+1. Klicka på Slutför när installationen är klar.
 
 Du kan också installera AEM Forms Designer via kommandoraden i passivt eller tyst läge.
 

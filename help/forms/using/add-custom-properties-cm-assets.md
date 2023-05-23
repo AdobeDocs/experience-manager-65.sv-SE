@@ -14,7 +14,7 @@ exl-id: ba2e145d-51ee-4844-a9e1-9927971d25a1
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '4443'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
@@ -90,7 +90,7 @@ Följ de här stegen för att lägga till en anpassad egenskap för alla resurst
       |---|---|---|
       | fieldLabel | Sträng | Namnet som du vill ge fältet/egenskapen. (Här: Mottagarnas plats) |
       | name | Sträng | `./extendedproperties/GeoLocation` (Behåll värdet som det fältnamn du skapade under noden Objekt) |
-      | renderReadOnly | Boolesk | true |
+      | renderReadOnly | Boolean | true |
       | sling:resourceType | Sträng | `granite/ui/components/coral/foundation/form/textfield` |
 
    1. Klicka **Spara alla**.
@@ -137,7 +137,7 @@ I det här scenariot visas hur du kan lägga till en anpassad egenskap för alla
    </tr>
    <tr>
       <td>renderReadOnly</td>
-      <td>Boolesk</td>
+      <td>Boolean</td>
       <td>true</td>
    </tr>
    <tr>
@@ -311,7 +311,7 @@ Med följande procedur kan du lägga till en flik med ett fält i alla resurser:
       |---|---|---|
       | fieldLabel | Sträng | Mottagarnas plats (eller namnet som du vill ge fältet). |
       | name | Sträng | ./extendedproperties/GeographicalLocation |
-      | renderReadOnly | Boolesk | true |
+      | renderReadOnly | Boolean | true |
       | sling:resourceType | Sträng | `/libs/granite/ui/components/coral/foundation/form/textfield` |
 
 1. Om du vill lägga till den här fliken för Bokstäver skapar du en övertäckningsmapp med en sökväg/struktur som liknar följande objektmapp i följande sökväg:
@@ -356,7 +356,7 @@ Med följande procedur kan du lägga till en flik med ett fält i alla resurser:
            <td><strong>Värde</strong></td>
          </tr>
          <tr>
-           <td>path<br /> </td>
+           <td>bana<br /> </td>
            <td>Sträng</td>
            <td>fd/cm/ma/gui/content/cmmetadataproperties/commontab<br /> </td>
          </tr>
@@ -506,7 +506,7 @@ Så här lägger du till en egenskap till en resurstyp:
       |---|---|---|
       | fieldLabel | Sträng | Mottagarnas plats (eller namnet som du vill ge fältet). |
       | name | Sträng | `./extendedproperties/GeoLocation` |
-      | renderReadOnly | Boolesk | true |
+      | renderReadOnly | Boolean | true |
       | sling:resourceType | Sträng | granite/ui/components/coral/foundation/form/textfield |
 
 1. Om du vill visa din anpassning för du muspekaren över den aktuella resursen (här finns en text), klickar på Visa egenskaper och klickar på **Redigera**. Den nya fliken och det nya fältet (mottagarplats) visas i användargränssnittet.
@@ -561,7 +561,7 @@ Som standard visas anpassade egenskaper som lagts till på nya flikar bara på e
    <td><strong>Värde</strong></td>
   </tr>
   <tr>
-   <td>path</td>
+   <td>bana</td>
    <td>Sträng</td>
    <td><p>Den här sökvägen är pekaren till kolumnen som skapas i:</p>
     <ul>
@@ -640,7 +640,7 @@ Följ de här stegen för att visa den anpassade egenskapen i resurslistan för 
          </tr>
          <tr>
            <td>sorterbar</td>
-           <td>Boolesk</td>
+           <td>Boolean</td>
            <td><p>true</p> <p>Värdet true innebär att användaren kan sortera värdena i den här kolumnen. </p> </td>
          </tr>
          </tbody>
@@ -803,7 +803,7 @@ Så här tillåter du indexering av anpassade egenskaper:
            <td><strong>Värde</strong></td>
          </tr>
          <tr>
-           <td>path</td>
+           <td>bana</td>
            <td>Sträng</td>
            <td>extendedProperties<br /> </td>
          </tr>
@@ -830,8 +830,8 @@ Så här tillåter du indexering av anpassade egenskaper:
       |---|---|---|
       | analyserad | Sträng | true |
       | name | Sträng | extendedProperties/location (eller namnet på egenskapen som du vill lägga till i sökningen) |
-      | propertyIndex | Boolesk | true |
-      | useInSuggest | Boolesk | true |
+      | propertyIndex | Boolean | true |
+      | useInSuggest | Boolean | true |
 
    1. Klicka **Spara alla**.
 
@@ -962,7 +962,7 @@ Om du vill visa eller dölja de anpassade egenskaperna utför du följande steg:
    </tr>
    <tr>
       <td>hideOnCreate<br /> </td>
-      <td>Boolesk</td>
+      <td>Boolean</td>
       <td>true<br /> </td>
    </tr>
    </tbody>
@@ -979,7 +979,7 @@ Om du vill visa eller dölja de anpassade egenskaperna utför du följande steg:
    </tr>
    <tr>
       <td>hideOnEdit<br /> </td>
-      <td>Boolesk</td>
+      <td>Boolean</td>
       <td>true<br /> </td>
    </tr>
    </tbody>

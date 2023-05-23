@@ -12,7 +12,7 @@ exl-id: 3458471a-9815-463e-8044-68631073863c
 source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
 source-wordcount: '1170'
-ht-degree: 2%
+ht-degree: 1%
 
 ---
 
@@ -59,7 +59,7 @@ Här följer de angivna globala alternativen. Dessa alternativ är tillgängliga
    <td>Fältets position i formulärets tabbsekvens. Åsidosätt bara tabIndex om du vill ändra standardtabbordningen för formuläret.</td>
   </tr>
   <tr>
-   <td>role</td>
+   <td>roll</td>
    <td>Elementets roll, till exempel Rubrik eller Tabell.</td>
   </tr>
   <tr>
@@ -71,7 +71,7 @@ Här följer de angivna globala alternativen. Dessa alternativ är tillgängliga
    <td>Widgetens bredd. Den anges i pixlar.</td>
   </tr>
   <tr>
-   <td>access</td>
+   <td>åtkomst</td>
    <td>Kontroller som används för att komma åt innehållet i ett behållarobjekt, t.ex. ett delformulär.</td>
   </tr>
   <tr>
@@ -160,7 +160,7 @@ Alla anpassade widgetar ska följa ovanstående specifikationer. Om du vill anv�
    <th>Beskrivning</th>
   </tr>
   <tr>
-   <td>multiline</td>
+   <td>flerradig</td>
    <td>True if the field supports in a newline character, else false.</td>
   </tr>
   <tr>
@@ -187,7 +187,7 @@ Alla anpassade widgetar ska följa ovanstående specifikationer. Om du vill anv�
    <td>Array med valda värden.<br /> </td>
   </tr>
   <tr>
-   <td>items<br /> </td>
+   <td>objekt<br /> </td>
    <td>Array med objekt som ska visas som alternativ. Varje objekt innehåller två egenskaper -<br /> spara: värde att spara, visa: värde som ska visas.<br /> <br /> </td>
   </tr>
   <tr>

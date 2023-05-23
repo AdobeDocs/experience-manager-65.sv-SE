@@ -141,11 +141,11 @@ Du kan ange hur Assembler-tjänsten ska hantera de bilder som refereras i XDP-k�
    <th>Beskrivning</th> 
   </tr> 
   <tr> 
-   <td>inga</td> 
+   <td>ingen</td> 
    <td>Lös inte några referenser.</td> 
   </tr> 
   <tr> 
-   <td>all</td> 
+   <td>alla</td> 
    <td>Bäddar in alla refererade bilder i XDP-källdokumentet.</td> 
   </tr> 
   <tr> 

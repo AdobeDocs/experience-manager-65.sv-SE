@@ -30,7 +30,7 @@ Med funktionen för sidskillnader kan du enkelt jämföra två sidor sida vid si
 >
 >Se [Developing and Page Diff](/help/sites-developing/pagediff.md#operation-details) om du vill ha mer teknisk information om den här funktionen.
 
-## Användning {#use}
+## Använd {#use}
 
 Diff:en sida vid sida kan jämföra:
 

@@ -12,7 +12,7 @@ exl-id: 9ab657cc-fa8e-4168-8a68-e38ac5c51b29
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '330'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -89,7 +89,7 @@ De återstående attributen i aktivitetsmodellen som är tillgängliga för visn
   </tr>
   <tr>
    <td><p>isApprovalUI</p> </td>
-   <td><p>priority</p> </td>
+   <td><p>prioritet</p> </td>
    <td><p>taskACL</p> </td>
   </tr>
   <tr>

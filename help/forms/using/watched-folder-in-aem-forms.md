@@ -74,7 +74,7 @@ Du kan konfigurera följande egenskaper för en bevakad mapp.
 
 * **runModes (String)**: En kommaavgränsad lista med tillåtna körningslägen för körning av arbetsflöde. Några exempel är:
 
-   * author
+   * författare
 
    * publicera
 

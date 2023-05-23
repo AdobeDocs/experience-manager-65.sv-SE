@@ -47,7 +47,7 @@ För HTML5-formulär som aktiveras i AEM Forms-appen med **Spara som utkast** Å
 
 1. Öppna CRXDE och logga in med administratörsautentiseringsuppgifter.
 
-   Webbadress: `https://<server>:<port>/lc/crx/de/index.jsp`
+   URL: `https://<server>:<port>/lc/crx/de/index.jsp`
 
 1. Klicka på i CRXDE-rotsökvägen i åtkomstkontrollistan under Åtkomstkontroll **+**.
 1. I **Lägg till nytt inlägg** klickar du på gruppsökknappen i fältet Huvudnamn.

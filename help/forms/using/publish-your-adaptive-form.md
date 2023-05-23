@@ -13,7 +13,7 @@ exl-id: c039faec-f832-43d5-8a86-22afa3bef2a4
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '909'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -31,7 +31,7 @@ Du kan publicera ett anpassat formulär på följande sätt:
 * [Bädda in det anpassningsbara formuläret på en AEM Sites-sida](#embed-the-adaptive-form-in-an-aem-sites-page)
 * [Bädda in det adaptiva formuläret på en extern webbsida (en icke-AEM webbsida som finns på andra AEM)](../../forms/using/publish-your-adaptive-form.md)
 
-## Innan du startar {#before-you-start}
+## Innan du börjar {#before-you-start}
 
 * **[Konfigurera en publiceringsinstans i AEM Forms](https://helpx.adobe.com/experience-manager/6-3/forms/using/installing-configuring-aem-forms-osgi.html)**: Publiceringsinstansen är en offentlig instans av AEM [!DNL Forms] som körs i publiceringsläge. I en produktionsmiljö ligger publiceringsinstansen utanför organisationens brandvägg.
 * **[Konfigurera replikering och omvänd replikering](https://helpx.adobe.com/experience-manager/6-3/help/sites-deploying/replication.html)**: Vid replikering kopieras innehåll från författarinstansen till en publiceringsinstans och användarindata returneras (till exempel formulärindata) från publiceringsinstansen till författarinstansen.
@@ -63,7 +63,7 @@ AEM [!DNL Forms] tillhandahålla en komponent, AEM [!DNL Forms] Behållare, bäd
 
 1. Öppna webbläsarfliken som innehåller AEM [!DNL Sites] sida öppnad i steg 1. Tryck på **[!UICONTROL Drag components here]** box and tap **+.** I **[!UICONTROL Insert New Component]** ruta, knacka **[!UICONTROL AEM Form]**. The **[!UICONTROL AEM Forms Container]** läggs till på sidan.
 1. Tryck på **[!UICONTROL AEM Forms container]** och knacka ![configure-icon](assets/configure-icon.svg). En dialogruta med egenskaper för AEM [!DNL Forms] Behållaren visas. I **[!UICONTROL Asset Path]** bläddra och välj formuläret för leveransadress-add-update-form adaptive. Tryck ![save_icon](assets/save_icon.svg). Det anpassningsbara formuläret är inbäddat på sidan.
-1. Publicera både det adaptiva formuläret och [!DNL Sites] sida. Här är några saker du bör hålla i minnet:
+1. Publicera både det adaptiva formuläret och [!DNL Sites] sida. Här är några saker att tänka på:
 
    * Om du publicerar AEM [!DNL Sites] -sidan för första gången och innehåller ett inbäddat formulär, publicera [!DNL Sites] sida och det inbäddade formuläret.
    * Om du bara ändrar det inbäddade formuläret på en publicerad webbplatssida publicerar du det ursprungliga formuläret och ändringarna återspeglas på den publicerade webbplatssidan. Den publicerade webbplatssidan innehåller en referens till formuläret och behöver inte publicera om sidan.

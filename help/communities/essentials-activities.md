@@ -53,7 +53,7 @@ A *[socialt diagram](/help/communities/essentials-socialgraph.md)* hämtar följ
    <td>cq.social.hbs.activitystreams</td>
   </tr>
   <tr>
-   <td> <strong>templates</strong></td>
+   <td> <strong>mallar</strong></td>
    <td> /libs/social/activitystreams/components/hbs/activitystreams/activitystreams.hbs<br /> /libs/social/activitystreams/components/hbs/activitystreams/activity/activity-title.hbs<br /> /libs/social/activitystreams/components/hbs/activitystreams/activity/activity.hbs</td>
   </tr>
   <tr>

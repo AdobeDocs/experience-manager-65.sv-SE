@@ -58,7 +58,7 @@ Med exempeldata ovan ser en produktvariant-URL som är formaterad med standardfo
 
 ### URL-format för kategorisida {#product-list}
 
-Detta konfigurerar URL:erna för kategori- eller produktlistsidorna och stöder följande alternativ:
+Detta konfigurerar URL:erna för kategorierna eller produktlistsidorna och stöder följande alternativ:
 
 * `{{page}}.html/{{url_path}}.html` (standard)
 * `{{page}}.html/{{url_key}}.html`

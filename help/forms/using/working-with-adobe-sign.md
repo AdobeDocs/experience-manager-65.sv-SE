@@ -242,7 +242,7 @@ Efter [redigera adaptiva formuläregenskaper för Adobe-signering](../../forms/u
 
    Expandera **[!UICONTROL Type]** nedrullningsbart fält att välja **[!UICONTROL Digital Signature]** och tryck på **Klar** ikon för att lägga till det markerade fältet i [!DNL Adobe Sign] -block.
 
-   ![Elektroniska underskrifter](assets/digital_signatures_new.png)
+   ![Digitala signaturer](assets/digital_signatures_new.png)
 
    Du måste ange ett unikt namn för ett fält.
 

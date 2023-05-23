@@ -1,7 +1,8 @@
 ---
 title: Använda GraphiQL IDE i AEM
 description: Lär dig hur du använder GraphiQL IDE i Adobe Experience Manager.
-source-git-commit: ad0f0bd8b0c230e002c734adca87da22bfa3a7cd
+exl-id: d4b01485-658b-4245-b2e6-04be8abc8ecf
+source-git-commit: b8c9e5cd3192b51954091b677d700c51617c9460
 workflow-type: tm+mt
 source-wordcount: '792'
 ht-degree: 0%

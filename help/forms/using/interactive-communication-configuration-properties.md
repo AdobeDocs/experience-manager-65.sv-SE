@@ -15,7 +15,7 @@ exl-id: 09eeade6-e16d-4159-b26a-803c7201097a
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '614'
-ht-degree: 5%
+ht-degree: 1%
 
 ---
 
@@ -96,19 +96,19 @@ Tryck **Skapa korrespondenskonfiguration** på **Konfiguration av Adobe Experien
    <td>Visa löst innehåll för redigering</td> 
    <td>Markera kryssrutan om du vill visa löst innehåll (faktiska värden i stället för platshållare) när du redigerar textmodulen i agentgränssnittet.</td> 
    <td>Inte markerad</td> 
-   <td>Ej relevant</td> 
+   <td>Ej tillämpligt</td> 
   </tr> 
   <tr> 
    <td>Använd vattenstämpel vid förhandsvisning</td> 
    <td>Markera kryssrutan om du vill använda vattenstämpel på kanalen Skriv ut i interaktiv kommunikation i förhandsgranskningsläget.</td> 
    <td>Inte markerad</td> 
-   <td>Ej relevant</td> 
+   <td>Ej tillämpligt</td> 
   </tr> 
   <tr> 
    <td>Aktivera teckensnittsinbäddning i PDF</td> 
    <td><p>Markera kryssrutan om du vill aktivera inbäddning av teckensnitt i PDF-dokument. När du har valt det här alternativet kan du bädda in nya teckensnitt när du har genererat eller förhandsgranskat PDF-dokument med hjälp av agentgränssnittet. Använd tryckkanalen i Interactive Communication för att generera och förhandsgranska PDF-dokument.</p> <p>Det är praktiskt att bädda in teckensnitt i ett PDF-dokument om det finns ett teckensnitt på en dator som används för att generera PDF och inte är tillgängligt på klientdatorn som använder PDF.</p> <p>Mer information om hur du bäddar in teckensnitt finns i <a href="../../forms/using/customize-text-editor.md" target="_blank">Anpassa textredigeraren</a>.</p> </td> 
    <td>Inte markerad</td> 
-   <td>Ej relevant</td> 
+   <td>Ej tillämpligt</td> 
   </tr> 
  </tbody> 
 </table>
@@ -119,9 +119,9 @@ Tryck **Konfiguration av webbkanal för adaptiv form och interaktiv kommunikatio
 
 | Egenskap | Beskrivning | Standard | Godtagbara värden |
 |---|---|---|---|
-| Visa platshållare | Markera kryssrutan för att aktivera visning av platshållare för fält som ingår i adaptiva formulär och interaktiv kommunikation. | Markerad | Ej relevant |
+| Visa platshållare | Markera kryssrutan för att aktivera visning av platshållare för fält som ingår i adaptiva formulär och interaktiv kommunikation. | Markerad | Ej tillämpligt |
 | Maximalt antal cacheposter | Ange det maximala antalet adaptiva formulär och interaktiv kommunikation som kan hämtas med cacheminnet. | 100 | Siffra |
-| Gör filnamnet unikt | Markera kryssrutan om du vill ha unika namn för filer inkluderade som bilagor i Adaptive Forms och Interactive Communications. | Inte markerad | Ej relevant |
+| Gör filnamnet unikt | Markera kryssrutan om du vill ha unika namn för filer inkluderade som bilagor i Adaptive Forms och Interactive Communications. | Inte markerad | Ej tillämpligt |
 
 ## Konfiguration av tema för adaptiv form och interaktiv kommunikation - webbkanal {#adaptive-form-and-interactive-communication-web-channel-theme-configuration}
 

@@ -685,7 +685,7 @@ Skapa två sidor under sidan Produkter. För varje sida, som beskriver två spec
       * Namn: datum
       * Typ: Sträng
       * Värde: 02/14/2008
-      * Klicka på Lägg till
+      * Klicka på Lägg till.
    1. Klicka på Spara alla.
 
 
@@ -704,7 +704,7 @@ Skapa två sidor under sidan Produkter. För varje sida, som beskriver två spec
       * Namn: datum
       * Typ: Sträng
       * Värde: 05/11/2012
-      * Klicka på Lägg till
+      * Klicka på Lägg till.
    1. Klicka på Spara alla.
 
 

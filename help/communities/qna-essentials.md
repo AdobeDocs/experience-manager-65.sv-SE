@@ -38,7 +38,7 @@ Den här sidan innehåller viktig information om hur du arbetar med forumfunktio
    <td>cq.ckeditor<br /> cq.social.hbs.röstning<br /> cq.social.hbs.qna</td>
   </tr>
   <tr>
-   <td> templates</td>
+   <td> mallar</td>
    <td> /libs/social/qna/components/hbs/qnaforum/qnaforum.hbs<br /> /libs/social/qna/components/hbs/qnaforum/activity-title.hbs</td>
   </tr>
   <tr>

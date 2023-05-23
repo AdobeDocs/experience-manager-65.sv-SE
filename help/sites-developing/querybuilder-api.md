@@ -309,7 +309,7 @@ property.value=Triangle
 p.hits=full
 ```
 
-Användning
+Använd
 
 ```
 p.hits=selective

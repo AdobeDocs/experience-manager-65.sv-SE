@@ -33,7 +33,7 @@ Samlingar representerar en väldefinierad *bucket* fyllda med innehåll som arti
 >
 >Läs följande resurser i onlinehjälpen om du vill veta mer om följande ämnen i AEM Mobile-program:
 >
->* [Att tänka på vid design](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html)
+>* [Designöverväganden](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html)
 >
 >* [Hantera samlingar](https://helpx.adobe.com/digital-publishing-solution/help/creating-collections.html)
 >

@@ -111,7 +111,7 @@ Nedan finns en lista över tillgängliga xtyper i Adobe Experience Manager:
 
    BulkEditorForm innehåller [CQ.wcm.BulkEditor](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.BulkEditor) omgivet av ett HTML-formulär. Det här är den fristående versionen av [CQ.wcm.BulkEditor](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.BulkEditor)måste du använda HTML-formulär för att importera knappen.
 
-* button
+* knapp
 
    [CQ.Ext.Button](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Button)
 
@@ -401,7 +401,7 @@ Nedan finns en lista över tillgängliga xtyper i Adobe Experience Manager:
 
    Dialogrutan HeavyMoveDialog är en dialogruta där du kan flytta en sida och dess underordnade sidor. Dessutom kan du aktivera om tidigare aktiverade sidor (tung flyttning).
 
-* hidden
+* dold
 
    [CQ.Ext.form.Hidden](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.Hidden)
 
@@ -609,7 +609,7 @@ Nedan finns en lista över tillgängliga xtyper i Adobe Experience Manager:
 
    I styckereferensfältet kan du bläddra bland sidor och välja ett av deras stycken. Det består av ett utlösarfält och en tillhörande dialogruta för styckebläddring.
 
-* password
+* lösenord
 
    [CQ.form.Password](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.Password)
 
@@ -787,7 +787,7 @@ Nedan finns en lista över tillgängliga xtyper i Adobe Experience Manager:
 
    En delad knapp som innehåller en inbyggd listrutepil som kan utlösa en händelse separat från knappens standardklickningshändelse. Vanligtvis används detta för att visa en listruta som innehåller ytterligare alternativ till den primära knappåtgärden, men alla anpassade hanterare kan tillhandahålla implementeringen av pilklick.
 
-* Statisk
+* static
 
    [CQ.Static](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Static)
 
@@ -885,13 +885,13 @@ Nedan finns en lista över tillgängliga xtyper i Adobe Experience Manager:
 
    Lägger till ett avgränsningsfält på en meny som används för att dela upp logiska grupper med menyalternativ. Avgränsaren kan även innehålla en titel.
 
-* toolbar
+* verktygsfält
 
    [CQ.Ext.Toolbar](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Toolbar)
 
    Klassen Basic Toolbar. Även om [`defaultType`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Container) för Toolbar är [`button`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Button)kan verktygsfältselement (underordnade objekt för Toolbar-behållaren) vara praktiskt taget vilken typ av komponent som helst. Verktygsfältselement kan skapas explicit via deras konstruktorer.
 
-* funktionsbeskrivning
+* knappbeskrivning
 
    [CQ.Ext.ToolTip](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.ToolTip)
 

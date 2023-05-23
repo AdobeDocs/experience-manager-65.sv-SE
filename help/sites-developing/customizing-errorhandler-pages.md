@@ -73,7 +73,7 @@ HTTP 500-fel orsakas av serversidans undantag.
 * **[500 internt serverfel](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)**
 Servern påträffade ett oväntat tillstånd som gjorde att den inte kunde slutföra begäran.
 
-När bearbetningen av en begäran resulterar i ett undantag, är Apache Sling-ramverket (som AEM bygger på):
+När bearbetningen av en begäran resulterar i ett undantag, är Apache Sling-ramverket (som AEM är inbyggt i):
 
 * loggar undantaget
 * returnerar:

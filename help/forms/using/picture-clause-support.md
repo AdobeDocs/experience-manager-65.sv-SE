@@ -14,7 +14,7 @@ exl-id: 7f9c77c6-447a-407f-ae58-6735176dc99c
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '612'
-ht-degree: 5%
+ht-degree: 0%
 
 ---
 
@@ -125,7 +125,7 @@ Uttryck som stöds för Numeric Picture-satsen i **HTML Forms** är:
   <tr>
    <td>9</td>
    <td><strong>Utdataformatering</strong>: en enda siffra. Eller för siffran noll om indata är tomma eller ett blanksteg i motsvarande position.<br /> </td>
-   <td>Enstaka siffra</td>
+   <td>En siffra</td>
   </tr>
   <tr>
    <td>Z</td>
@@ -208,8 +208,8 @@ HTML5-formulär stöder följande Text Picture-satsuttryck:
 
 | **Symbol** | **Tolkning** |
 |---|---|
-| A | Enstaka alfabetiskt tecken. |
-| X | Enstaka tecken. |
-| O | Enstaka alfanumeriskt tecken. |
-| 0 (noll) | Enstaka alfanumeriskt tecken. |
-| 9 | Enstaka siffra. |
+| A | Ett alfabetiskt tecken. |
+| X | Ett tecken. |
+| O | Ett alfanumeriskt tecken. |
+| 0 (noll) | Ett alfanumeriskt tecken. |
+| 9 | En siffra. |

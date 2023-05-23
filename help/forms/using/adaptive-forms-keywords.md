@@ -12,7 +12,7 @@ exl-id: 6ef5bd8c-7e7b-4501-a1be-d34fc0dbde84
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '208'
-ht-degree: 14%
+ht-degree: 0%
 
 ---
 
@@ -28,7 +28,7 @@ Nyckelord för adaptiva formulär är fördefinierade, reserverade identifierare
    <td><p>minOccur</p> </td>
   </tr>
   <tr>
-   <td><p>validate</p> </td>
+   <td><p>validera</p> </td>
    <td><p>setGuideState</p> </td>
    <td><p>maxOccur</p> </td>
   </tr>
@@ -103,7 +103,7 @@ Nyckelord för adaptiva formulär är fördefinierade, reserverade identifierare
    <td><p>name</p> </td>
   </tr>
   <tr>
-   <td><p>mandatory</p> </td>
+   <td><p>obligatoriskt</p> </td>
    <td><p>panel</p> </td>
    <td><p>templateId</p> </td>
   </tr>
@@ -119,7 +119,7 @@ Nyckelord för adaptiva formulär är fördefinierade, reserverade identifierare
   </tr>
   <tr>
    <td><p>validatePictureClauseMessage</p> </td>
-   <td><p>items</p> </td>
+   <td><p>objekt</p> </td>
    <td><p>nonLocalizedTitle</p> </td>
   </tr>
   <tr>
@@ -198,7 +198,7 @@ Nyckelord för adaptiva formulär är fördefinierade, reserverade identifierare
    <td><p>activePart</p> </td>
   </tr>
   <tr>
-   <td><p>toolbar</p> </td>
+   <td><p>verktygsfält</p> </td>
    <td><p>completeBeforeMessage</p> </td>
    <td><p>isLastPart</p> </td>
   </tr>

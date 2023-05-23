@@ -68,7 +68,7 @@ Mönsterdelen av en regel används för att matcha namnen på de filer som ska i
 |---|---|
 | / | Anger en JCR-sökväg. Det innebär att det här prefixet matchar filer under katalogen jcr_root. |
 | &amp;ast; | Anger en vanlig fil i filsystemet. |
-| inga | Inget prefix, eller ett mönster som börjar med en mapp eller ett filnamn, anger att filen är en vanlig fil i filsystemet. |
+| ingen | Inget prefix, eller ett mönster som börjar med en mapp eller ett filnamn, anger att filen är en vanlig fil i filsystemet. |
 
 Vid användning i ett mönster anger tecknet / en underkatalog och det &amp;sista; tecken matchar alla. I följande tabell visas flera exempelregler.
 

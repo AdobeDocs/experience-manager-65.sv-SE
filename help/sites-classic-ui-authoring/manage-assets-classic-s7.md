@@ -22,7 +22,7 @@ ht-degree: 1%
 
 Du kan visa Experience Manager-resurser som publicerats i Dynamic Media Classic (Scene7) i olika visningsprogram:
 
-* Zoomning
+* Zooma
 * Utfällbar
 * Video
 * Bildmall
@@ -130,7 +130,7 @@ Adobe rekommenderar att du bara publicerar resurser till Dynamic Media Classic (
 
 Följande Dynamic Media Classic-komponenter (Scene7) finns i Experience Manager:
 
-* Zoomning
+* Zooma
 * Utfällbar (zoom)
 * Bildmall
 * Bild
@@ -199,7 +199,7 @@ Du anger dessa konfigurationsalternativ genom att öppna (dubbelklicka) en Dynam
 
 ![chlimage_1-52](assets/chlimage_1-52.png)
 
-### Zoomning {#zoom}
+### Zooma {#zoom}
 
 Zoomkomponenten för HTML5 visar en större bild när du trycker på plusknappen (+).
 
