@@ -2,9 +2,9 @@
 title: Hantera översättningsprojekt
 description: Lär dig hantera översättningsprojekt i AEM.
 exl-id: 968bba02-98fe-4eaf-9937-ce5cfdf5b413
-source-git-commit: 7efb1b8d345b07835e5f45a1afe9da13163411b2
+source-git-commit: 106fc0e1ef6d65f13bd3875783102da44694581e
 workflow-type: tm+mt
-source-wordcount: '3536'
+source-wordcount: '3587'
 ht-degree: 1%
 
 ---
@@ -412,13 +412,20 @@ Fyll i din språkkopia så att den innehåller innehåll från det överordnad s
 
 ## Flytta eller byta namn på en källsida {#move-source}
 
-Om en redan översatt källsida måste [ändrat namn eller flyttat](/help/sites-authoring/managing-pages.md#moving-or-renaming-a-page)om du översätter sidan igen efter flytten skapas en ny språkkopia baserad på det nya sidnamnet/den nya platsen. Den gamla språkkopian som baseras på föregående namn/plats kommer fortfarande att finnas där.
+Om en redan översatt källsida måste [ändrat namn eller flyttat](/help/sites-authoring/managing-pages.md#moving-or-renaming-a-page)om du översätter sidan igen efter flytten skapas en ny språkkopia baserad på det nya sidnamnet/den nya platsen. Den gamla språkkopian som baseras på föregående namn/plats kommer fortfarande att finnas där. Du kan förhindra detta genom att använda funktionen för att kopiera uppdateringsspråk efter flytten:
 
-Det bästa sättet i detta scenario är att följa denna procedur:
-1. Avpublicera de språkkopior som är associerade med den källsida som du vill flytta.
-1. Ta bort dem.
-1. Skapa nya språkkopior från den nyligen flyttade källsidan.
-1. Publicera de nya språkkopiorna.
+1. Flytta en sida som har en språkkopia.
+1. Välj språkkopieringsroten.
+1. Öppna **Referenser** -panelen.
+1. Välj **Språkkopior**.
+1. Välj de målspråk som du vill uppdatera.
+1. Välj **Uppdatera språkkopior**.
+1. Klicka **Uppdatera**. A [Starta](/help/sites-authoring/launches-promoting.md) skapas.
+1. Navigera till den önskade språkroten och markera den.
+1. Använda **Referenser** panel, markera **Startar**.
+1. Klicka på Launch som just skapades och klicka på **Befordra lansering**.
+
+Nu har källsidan flyttats samt tillhörande språkkopia.
 
 ## Skapa ett översättningsprojekt med projektkonsolen {#creating-a-translation-project-using-the-projects-console}
 
