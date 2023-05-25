@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 032aea1f-0105-4299-8d32-ba6bee78437f
 feature: Tagging
 exl-id: d885520d-d0ed-45fa-8511-faa2495d667a
-source-git-commit: be028f116ccb83853cd46dc742438babd2207314
+source-git-commit: 325af649564d93beedfc762a8f5beacec47b1641
 workflow-type: tm+mt
-source-wordcount: '903'
+source-wordcount: '887'
 ht-degree: 0%
 
 ---
@@ -22,20 +22,20 @@ ht-degree: 0%
 
 För programmatiskt arbete med taggar eller tillägg av taggar i ett anpassat AEM-program beskriver den här sidan användningen av
 
-* [API för taggning](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/tagging/package-summary.html)
+* [API för taggning](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/tagging/package-summary.html)
 
-som interagerar med
+Det interagerar med
 
 * [Ramverk för taggning](/help/sites-developing/framework.md)
 
 Mer information om taggning finns i:
 
-* [Administrera taggar](/help/sites-administering/tags.md) om du vill ha information om hur du skapar och hanterar taggar, samt om vilka innehållstaggar som har tillämpats.
+* [Administrera taggar](/help/sites-administering/tags.md) om du vill ha information om hur du skapar och hanterar taggar och till vilka innehållstaggar har tillämpats.
 * [Använda taggar](/help/sites-authoring/tags.md) om du vill ha information om hur du taggar innehåll.
 
 ## Översikt över taggnings-API:t {#overview-of-the-tagging-api}
 
-Genomförandet av [taggningsramverk](/help/sites-developing/framework.md) i AEM kan hantera taggar och tagginnehåll med JCR-API:t . TagManager ser till att taggar som anges som värden i `cq:tags` strängmatrisegenskapen dupliceras inte, den tar bort tagg-ID:n som pekar på taggar som inte finns och uppdaterar tagg-ID:n för flyttade eller sammanfogade taggar. TagManager använder en JCR-observationslyssnare som återställer felaktiga ändringar. Huvudklasserna finns i [com.day.cq.tagging](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html?com/day/cq/tagging/package-summary.html) paket:
+Genomförandet av [taggningsramverk](/help/sites-developing/framework.md) i AEM kan hantera taggar och tagginnehåll med JCR-API:t . TagManager ser till att taggar som anges som värden i `cq:tags` strängmatrisegenskapen dupliceras inte, den tar bort tagg-ID:n som pekar på taggar som inte finns och uppdaterar tagg-ID:n för flyttade eller sammanfogade taggar. TagManager använder en JCR-observationslyssnare som återställer felaktiga ändringar. Huvudklasserna finns i [com.day.cq.tagging](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/index.html?com/day/cq/tagging/package-summary.html) paket:
 
 * JcrTagManagerFactory - returnerar en JCR-baserad implementering av en `TagManager`. Det är referensimplementeringen av taggnings-API:t.
 * `TagManager` - gör att du kan lösa och skapa taggar efter sökvägar och namn.
@@ -52,7 +52,7 @@ JcrTagManagerFactory jcrTagManagerFactory;
 TagManager tagManager = jcrTagManagerFactory.getTagManager(session);
 ```
 
-I ett typiskt Sling-sammanhang kan du även anpassa dig till en `TagManager` från `ResourceResolver`:
+I det typiska Sling-sammanhanget kan du även anpassa dig till `TagManager` från `ResourceResolver`:
 
 ```java
 TagManager tagManager = resourceResolver.adaptTo(TagManager.class);
@@ -60,7 +60,7 @@ TagManager tagManager = resourceResolver.adaptTo(TagManager.class);
 
 ### Hämta ett taggobjekt {#retrieving-a-tag-object}
 
-A `Tag` kan hämtas via `TagManager`genom att antingen matcha en befintlig tagg eller skapa en ny:
+A `Tag` kan hämtas via `TagManager`genom att antingen matcha en befintlig tagg eller skapa en:
 
 ```java
 Tag tag = tagManager.resolve("my/tag"); // for existing tags
@@ -68,7 +68,7 @@ Tag tag = tagManager.resolve("my/tag"); // for existing tags
 Tag tag = tagManager.createTag("my/tag"); // for new tags
 ```
 
-För den JCR-baserade implementeringen, som mappar `Tags` på JCR `Nodes`kan du direkt använda Sling `adaptTo` om du har resursen (t.ex. `/content/cq:tags/default/my/tag`):
+För den JCR-baserade implementeringen, som mappar `Tags` på JCR `Nodes`kan du direkt använda Sling `adaptTo` om du har resursen (till exempel `/content/cq:tags/default/my/tag`):
 
 ```java
 Tag tag = resource.adaptTo(Tag.class);
@@ -130,13 +130,13 @@ replicator.replicate(session, replicationActionType, tagPath);
 
 ## Tagga på klientsidan {#tagging-on-the-client-side}
 
-`CQ.tagging.TagInputField` är en formulärwidget för att ange taggar. Den har en snabbmeny där du kan välja bland befintliga taggar, som innehåller automatisk komplettering och många andra funktioner. Dess xtype är `tags`.
+Formulärwidgeten `CQ.tagging.TagInputField` används för att ange taggar. Den har en snabbmeny där du kan välja bland befintliga taggar, som innehåller automatisk komplettering och många andra funktioner. Dess xtype är `tags`.
 
 ## Taggskräpinsamlaren {#the-tag-garbage-collector}
 
-Taggskräpinsamlaren är en bakgrundstjänst som rensar de dolda och oanvända taggarna. Dolda och oanvända taggar anges nedan `/content/cq:tags` som har `cq:movedTo` och används inte på en innehållsnod. De har ett antal som är noll. Genom att använda den här lazy delete-processen kan innehållsnoden (dvs. `cq:tags` ) behöver inte uppdateras som en del av flytt- eller sammanfogningsåtgärden. Referenserna i `cq:tags` -egenskapen uppdateras automatiskt när `cq:tags` egenskapen uppdateras, t.ex. via dialogrutan för sidegenskaper.
+Taggskräpinsamlaren är en bakgrundstjänst som rensar de dolda och oanvända taggarna. Dolda och oanvända taggar anges nedan `/content/cq:tags` som har `cq:movedTo` och används inte på en innehållsnod. De har ett antal som är noll. Genom att använda den här lazy delete-processen kan innehållsnoden (dvs. `cq:tags` ) behöver inte uppdateras som en del av flytt- eller sammanfogningsåtgärden. Referenserna i `cq:tags` -egenskapen uppdateras automatiskt när `cq:tags` egenskapen uppdateras till exempel via dialogrutan för sidegenskaper.
 
-Taggskräpinsamlaren körs som standard en gång om dagen. Detta kan konfigureras på:
+Taggskräpinsamlaren körs som standard en gång om dagen. Du kan konfigurera den på:
 
 ```xml
 http://localhost:4502/system/console/configMgr/com.day.cq.tagging.impl.TagGarbageCollector
@@ -152,13 +152,13 @@ Sökningen efter taggar och tagglistan fungerar enligt följande:
 
 ## Taggar på olika språk {#tags-in-different-languages}
 
-Se beskrivningen i dokumentationen för att administrera taggar i avsnittet [Hantera taggar på olika språk](/help/sites-administering/tags.md#managing-tags-in-different-languages), en tagg `title`kan definieras på olika språk. Sedan läggs en språkkänslig egenskap till i taggnoden. Den här egenskapen har formatet `jcr:title.<locale>`, t.ex. `jcr:title.fr` för den franska översättningen. `<locale>` måste vara en ISO-språksträng med gemener och använda &quot;_&quot; i stället för &quot;-&quot;, till exempel: `de_ch`.
+Se beskrivningen i dokumentationen för att administrera taggar i avsnittet [Hantera taggar på olika språk](/help/sites-administering/tags.md#managing-tags-in-different-languages), en tagg `title`kan definieras på olika språk. Sedan läggs en språkkänslig egenskap till i taggnoden. Den här egenskapen har formatet `jcr:title.<locale>`, till exempel `jcr:title.fr` för den franska översättningen. The `<locale>` måste vara en ISO-språksträng med gemener och använda &quot;_&quot; i stället för &quot;-&quot;, till exempel: `de_ch`.
 
 När **Djur** -taggen läggs till i **Produkter** sida, värdet `stockphotography:animals` läggs till i egenskapen `cq:tags` för noden /content/geometrixx/en/products/jcr:content. Översättningen refereras från taggnoden.
 
 API:t på serversidan har lokaliserats `title`-relaterade metoder:
 
-* [com.day.cq.tagging.Tag](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html?com/day/cq/tagging/Tag.html)
+* [com.day.cq.tagging.Tag](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/index.html?com/day/cq/tagging/Tag.html)
 
    * getLocalizedTitle(språkområde)
    * getLocalizedTitlePaths()
@@ -166,7 +166,7 @@ API:t på serversidan har lokaliserats `title`-relaterade metoder:
    * getTitle(Locale locale)
    * getTitlePath(språkområde)
 
-* [com.day.cq.tagging.TagManager](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html?com/day/cq/tagging/TagManager.html)
+* [com.day.cq.tagging.TagManager](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/index.html?com/day/cq/tagging/TagManager.html)
 
    * canCreateTagByTitle(String tagTitlePath, Locale locale)
    * createTagByTitle(String tagTitlePath, Locale locale)
@@ -182,13 +182,13 @@ I AEM kan språket hämtas antingen från sidspråket eller från användarsprå
 
    * `slingRequest.getLocale()`
 
-`currentPage` och `slingRequest` är tillgängliga i en JSP via [&lt;cq:definedobjects>](/help/sites-developing/taglib.md) -tagg.
+The `currentPage` och `slingRequest` är tillgängliga i en JSP via [&lt;cq:definedobjects>](/help/sites-developing/taglib.md) -tagg.
 
 För taggning beror lokaliseringen på sammanhanget som tagg `titles`kan visas på sidspråket, på användarspråket eller på något annat språk.
 
 ### Lägga till ett nytt språk i dialogrutan Redigera tagg {#adding-a-new-language-to-the-edit-tag-dialog}
 
-I proceduren nedan beskrivs hur du lägger till ett nytt språk (finska) i **Redigera tagg** dialog:
+I proceduren nedan beskrivs hur du lägger till ett språk (finska) i **Redigera tagg** dialog:
 
 1. I **CRXDE**, redigera egenskapen för flera värden `languages` av noden `/content/cq:tags`.
 
@@ -198,7 +198,7 @@ Det nya språket (finska) är nu tillgängligt i taggdialogrutan för sidegenska
 
 >[!NOTE]
 >
->Det nya språket måste vara ett av de AEM identifierade språken, dvs. det måste vara tillgängligt som en nod nedan `/libs/wcm/core/resources/languages`.
+>Det nya språket måste vara ett av de AEM identifierade språken. Det måste alltså vara tillgängligt som en nod nedan `/libs/wcm/core/resources/languages`.
 
 >[!CAUTION]
 >
