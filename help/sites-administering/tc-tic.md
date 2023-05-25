@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 200f51ab-f9bf-4989-91af-c3904fc673e5
 feature: Language Copy
 exl-id: 7562754b-d9fd-441b-8ae5-c7eebe458cef
-source-git-commit: 6dea3a23c70fdb5f07bdf724547e799776002c61
+source-git-commit: 3d1959a1a81293b51257d99d32c9576866c8a308
 workflow-type: tm+mt
-source-wordcount: '1553'
+source-wordcount: '1569'
 ht-degree: 0%
 
 ---
@@ -97,7 +97,7 @@ Webbplatsegenskaperna styr hur översättning av sidinnehåll utförs.
     <ul>
      <li>Maskinöversättning: Översättningsprovidern utför översättningen med maskinöversättning i realtid.</li>
      <li>Translation of Human: Innehållet skickas till översättningsleverantören för översättning av översättare. </li>
-     <li>Översätt inte: Innehållet skickas inte för översättning. Detta är för att hoppa över vissa innehållsgrenar som inte skulle översättas, men som skulle kunna uppdateras med det senaste innehållet.</li>
+     <li>Översätt inte: Innehåll skickas inte för översättning. Detta är för att hoppa över vissa innehållsgrenar som inte skulle översättas, men som skulle kunna uppdateras med det senaste innehållet.</li>
     </ul> </td>
   </tr>
   <tr>
@@ -107,6 +107,10 @@ Webbplatsegenskaperna styr hur översättning av sidinnehåll utförs.
   <tr>
    <td>Innehållskategori</td>
    <td>(Endast maskinöversättning) En kategori som beskriver innehållet som du översätter. Kategorin kan påverka valet av terminologi och fraser när innehåll översätts.</td>
+  </tr>
+  <tr>
+   <td>Översätt komponentsträngar</td>
+   <td>Välj det här alternativet om du vill översätta komponentsträngar för komponenter som är kopplade till sidan.</td>
   </tr>
   <tr>
    <td>Översätt taggar</td>
