@@ -8,9 +8,9 @@ breadcrumb-title: Användarhandbok om utveckling
 user-guide-description: Den här användarhandboken beskriver hur du skapar en AEM-instans.
 feature: Developing
 role: Developer
-source-git-commit: ad0f0bd8b0c230e002c734adca87da22bfa3a7cd
+source-git-commit: 1481d613783089046b44d4652d38f7b4b16acc4d
 workflow-type: tm+mt
-source-wordcount: '1285'
+source-wordcount: '1296'
 ht-degree: 6%
 
 ---
@@ -142,6 +142,8 @@ ht-degree: 6%
       + [Hantera GraphQL Endpoints](/help/sites-developing/headless/graphql-api/graphql-endpoint.md)
       + [Använda GraphiQL IDE](/help/sites-developing/headless/graphql-api/graphiql-ide.md)
       + [Beständiga frågor](/help/sites-developing/headless/graphql-api/persisted-queries.md)
+      + [Optimera GraphQL-frågor](/help/sites-developing/headless/graphql-api/graphql-optimization.md)
+      + [Uppdatera dina innehållsfragment för optimerad GraphQL-filtrering](/help/sites-developing/headless/graphql-api/graphql-optimized-filtering-content-update.md)
       + [Autentisering för fjärrfrågor AEM GraphQL-frågor om innehållsfragment](/help/sites-developing/headless/graphql-api/graphql-authentication-content-fragments.md)
       + [AEM GraphQL API med innehållsfragment - exempel på innehåll och frågor](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md)
 + Hybrid- och SPA AEM{#spas}
@@ -189,10 +191,10 @@ ht-degree: 6%
    + [Exempeltyper för ContextHub-gränssnittsmodul](ch-samplemodules.md)
    + [ContextHub Diagnostics](ch-diagnostics.md)
    + [Utveckla för riktat innehåll](target.md)
-   + [ContextHub Javascript API-referens](contexthub-api.md)
+   + [ContextHub JavaScript API-referens](contexthub-api.md)
    + Klientkontext{#client-context}
       + [Klientkontext i detalj](client-context.md)
-      + [JavaScript-API för klientkontext](ccjsapi.md)
+      + [JavaScript API för klientkontext](ccjsapi.md)
 + Utöka AEM{#extending-aem}
    + [Utöka AEM med Adobe Developer App Builder](app-builder.md)
    + [Anpassa sidredigering](customizing-page-authoring-touch.md)

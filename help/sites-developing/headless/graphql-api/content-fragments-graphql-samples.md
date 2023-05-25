@@ -1,9 +1,9 @@
 ---
-title: Lära sig använda GraphQL med AEM - exempelinnehåll och frågor
-description: Lär dig använda GraphQL med AEM för att leverera innehåll utan problem genom att utforska exempelinnehåll och frågor.
+title: Lär dig använda GraphQL med AEM - exempelinnehåll och frågor
+description: Lär dig hur du använder GraphQL med AEM för att leverera innehåll utan problem genom att utforska exempelinnehåll och frågor.
 feature: Content Fragments,GraphQL API
 exl-id: 91c5f61c-9c15-4d72-9b9b-0c23f31e7cdc
-source-git-commit: 85f8da2a30e1bb5b78cbb36cd9b79939dd913251
+source-git-commit: 1481d613783089046b44d4652d38f7b4b16acc4d
 workflow-type: tm+mt
 source-wordcount: '1586'
 ht-degree: 1%
@@ -12,7 +12,7 @@ ht-degree: 1%
 
 # Lära sig använda GraphQL med AEM - exempelinnehåll och frågor {#learn-graphql-with-aem-sample-content-queries}
 
-Lär dig använda GraphQL med AEM för att leverera innehåll utan problem genom att utforska exempelinnehåll och frågor.
+Lär dig hur du använder GraphQL med AEM för att leverera innehåll utan problem genom att utforska exempelinnehåll och frågor.
 
 >[!NOTE]
 >
@@ -23,7 +23,7 @@ Lär dig använda GraphQL med AEM för att leverera innehåll utan problem genom
 >* [AEM GraphQL API för användning med innehållsfragment](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md)
 
 
-Om du vill komma igång med GraphQL-frågor och hur de fungerar med AEM innehållsfragment kan du se några praktiska exempel.
+Om du vill komma igång med GraphQL-frågor och hur de fungerar med AEM innehållsfragment kan det vara bra att se några praktiska exempel.
 
 Mer information finns i:
 
@@ -48,11 +48,11 @@ I de här exempelfrågorna finns illustrationer av hur du skapar frågor, tillsa
 
 ### Exempelfråga - Alla tillgängliga scheman och datatyper {#sample-all-schemes-datatypes}
 
-Detta returnerar alla `types` för alla tillgängliga scheman.
+Den här exempelfrågan returnerar alla `types` för alla tillgängliga scheman.
 
 **Exempelfråga**
 
-```xml
+```graphql
 {
   __schema {
     types {
@@ -65,7 +65,7 @@ Detta returnerar alla `types` för alla tillgängliga scheman.
 
 **Provresultat**
 
-```xml
+```json
 {
   "data": {
     "__schema": {
@@ -144,7 +144,7 @@ Detta returnerar alla `types` för alla tillgängliga scheman.
 Om du vill hämta all information om alla städer kan du använda den grundläggande frågan:
 **Exempelfråga**
 
-```xml
+```graphql
 {
   cityList {
     items
@@ -152,9 +152,9 @@ Om du vill hämta all information om alla städer kan du använda den grundlägg
 }
 ```
 
-När den körs utökas frågan automatiskt så att den omfattar alla fält:
+Vid körning utökas frågan automatiskt så att den omfattar alla fält:
 
-```xml
+```graphql
 {
   cityList {
     items {
@@ -169,7 +169,7 @@ När den körs utökas frågan automatiskt så att den omfattar alla fält:
 
 **Exempelresultat**
 
-```xml
+```json
 {
   "data": {
     "cityList": {
@@ -224,11 +224,11 @@ När den körs utökas frågan automatiskt så att den omfattar alla fält:
 
 ### Exempelfråga - namn på alla städer {#sample-names-all-cities}
 
-Det här är en enkel fråga som returnerar `name`av alla poster i `city`schema.
+Den här exempelfrågan är en enkel fråga som returnerar `name`av alla poster i `city`schema.
 
 **Exempelfråga**
 
-```xml
+```xmgraphqll
 query {
   cityList {
     items {
@@ -240,7 +240,7 @@ query {
 
 **Exempelresultat**
 
-```xml
+```json
 {
   "data": {
     "cityList": {
@@ -274,11 +274,11 @@ query {
 
 ### Exempelfråga - Ett enskilt specifikt stadsfragment {#sample-single-specific-city-fragment}
 
-Det här är en fråga som returnerar information om en enskild fragmentpost på en viss plats i databasen.
+Den här exempelfrågan är en fråga som returnerar information om en enskild fragmentpost på en viss plats i databasen.
 
 **Exempelfråga**
 
-```xml
+```graphql
 {
   cityByPath (_path: "/content/dam/sample-content-fragments/cities/berlin") {
     item {
@@ -294,7 +294,7 @@ Det här är en fråga som returnerar information om en enskild fragmentpost på
 
 **Exempelresultat**
 
-```xml
+```json
 {
   "data": {
     "cityByPath": {
@@ -315,11 +315,11 @@ Det här är en fråga som returnerar information om en enskild fragmentpost på
 
 ### Exempelfråga - Alla städer med en namngiven variant {#sample-cities-named-variation}
 
-Om du skapar en ny variant som heter &quot;Berlin Center&quot; (`berlin_centre`), för `city` I Berlin kan du använda en fråga för att returnera information om variationen.
+Om du skapar en variant som heter &quot;Berlin Center&quot; (`berlin_centre`), för `city` I Berlin kan du använda en fråga för att returnera information om variationen.
 
 **Exempelfråga**
 
-```xml
+```graphql
 {
   cityList (variation: "berlin_center") {
     items {
@@ -335,7 +335,7 @@ Om du skapar en ny variant som heter &quot;Berlin Center&quot; (`berlin_centre`)
 
 **Exempelresultat**
 
-```xml
+```json
 {
   "data": {
     "cityList": {
@@ -360,14 +360,14 @@ Om du skapar en ny variant som heter &quot;Berlin Center&quot; (`berlin_centre`)
 
 Om du:
 
-* skapa en mängd olika taggar, namngivna `Tourism` : `Business`, `City Break`, `Holiday`
-* och tilldela dessa till den Överordnad variationen av `City` instanser
+* skapa olika taggar, namngivna `Tourism` : `Business`, `City Break`, `Holiday`
+* och tilldela dessa taggar till den Överordnad variationen av olika `City` instanser
 
 Sedan kan du använda en fråga för att returnera information om `name` och `tags`av alla poster som är taggade som Citybrytningar i `city`schema.
 
 **Exempelfråga**
 
-```xml
+```graphql
 query {
   cityList(
     includeVariations: true,
@@ -383,7 +383,7 @@ query {
 
 **Exempelresultat**
 
-```xml
+```json
 {
   "data": {
     "cityList": {
@@ -414,7 +414,7 @@ Med hjälp av strukturen för kapslade fragment returnerar den här frågan alla
 
 **Exempelfråga**
 
-```xml
+```graphql
 query {
   companyList {
     items {
@@ -443,7 +443,7 @@ query {
 
 **Exempelresultat**
 
-```xml
+```json
 {
   "data": {
     "companyList": {
@@ -538,11 +538,11 @@ query {
 
 ### Exempelfråga - Alla personer som har namnet &quot;Jobs&quot; eller &quot;Smith&quot; {#sample-all-persons-jobs-smith}
 
-Detta kommer att filtrera alla `persons` för alla som har ett namn `Jobs`eller `Smith`.
+Det här exempelfrågan filtrerar alla `persons` för alla som har ett namn `Jobs`eller `Smith`.
 
 **Exempelfråga**
 
-```xml
+```graphql
 query {
   personList(filter: {
     name: {
@@ -567,7 +567,7 @@ query {
 
 **Exempelresultat**
 
-```xml
+```json
 {
   "data": {
     "personList": {
@@ -592,11 +592,11 @@ query {
 
 ### Exempelfråga - Alla personer som inte har namnet &quot;Jobs&quot; {#sample-all-persons-not-jobs}
 
-Detta kommer att filtrera alla `persons` för alla som har ett namn `Jobs`eller `Smith`.
+Det här exempelfrågan filtrerar alla `persons` för alla som har ett namn `Jobs`eller `Smith`.
 
 **Exempelfråga**
 
-```xml
+```graphql
 query {
   personList(filter: {
     name: {
@@ -618,7 +618,7 @@ query {
 
 **Exempelresultat**
 
-```xml
+```json
 {
   "data": {
     "personList": {
@@ -663,7 +663,7 @@ Alla `adventures` där `_path` börjar med ett visst prefix (`/content/dam/wknd/
 
 **Exempelfråga**
 
-```xml
+```graphql
 query {
   adventureList(
     filter: {
@@ -685,7 +685,7 @@ query {
 
 **Exempelresultat**
 
-```xml
+```json
 {
   "data": {
     "adventureList": {
@@ -702,13 +702,13 @@ query {
 }
 ```
 
-### Exempelfråga - Alla städer i Tyskland eller Schweiz med en befolkning på mellan 400000 och 99999 {#sample-all-cities-d-ch-population}
+### Exempelfråga - Alla städer i Tyskland eller Schweiz med en befolkning på mellan 40000 och 99999 {#sample-all-cities-d-ch-population}
 
 Här filtreras en kombination av fält. An `AND` (implicit) används för att välja `population`omfång, medan `OR` (explicit) används för att välja önskade städer.
 
 **Exempelfråga**
 
-```xml
+```graphql
 query {
   cityList(filter: {
     population: {
@@ -744,7 +744,7 @@ query {
 
 **Exempelresultat**
 
-```xml
+```json
 {
   "data": {
     "cityList": {
@@ -771,7 +771,7 @@ Den här frågan frågar efter alla städer som har `SAN` i namnet, oavsett skif
 
 **Exempelfråga**
 
-```xml
+```graphql
 query {
   cityList(filter: {
     name: {
@@ -795,7 +795,7 @@ query {
 
 **Exempelresultat**
 
-```xml
+```json
 {
   "data": {
     "cityList": {
@@ -822,7 +822,7 @@ Den här frågan filtrerar en array med ett objekt (`city:na`) som måste inträ
 
 **Exempelfråga**
 
-```xml
+```graphql
 query {
   cityList(filter: {
     categories: {
@@ -846,7 +846,7 @@ query {
 
 **Exempelresultat**
 
-```xml
+```json
 {
   "data": {
     "cityList": {
@@ -880,7 +880,7 @@ Den här frågan filtrerar på ett exakt arrayvärde.
 
 **Exempelfråga**
 
-```xml
+```graphql
 query {
   cityList(filter: {
     categories: {
@@ -906,7 +906,7 @@ query {
 
 **Exempelresultat**
 
-```xml
+```json
 {
   "data": {
     "cityList": {
@@ -932,7 +932,7 @@ Den här frågan visar filtrering för alla `person` av `name` &quot;Smith&quot;
 
 **Exempelfråga**
 
-```xml
+```graphql
 query {
   companyList(filter: {
     employees: {
@@ -964,7 +964,7 @@ query {
 
 **Exempelresultat**
 
-```xml
+```json
 {
   "data": {
     "companyList": {
@@ -998,7 +998,7 @@ Den här frågan visar filtrering över tre kapslade fragment - `company`, `empl
 
 **Exempelfråga**
 
-```xml
+```graphql
 query {
   companyList(filter: {
     employees: {
@@ -1040,7 +1040,7 @@ query {
 
 **Exempelresultat**
 
-```xml
+```json
 {
   "data": {
     "companyList": {
@@ -1090,7 +1090,7 @@ Den här frågan visar filtrering över tre kapslade fragment - `company`, `empl
 
 **Exempelfråga**
 
-```xml
+```graphql
 query {
   awardList(filter: {
       id: {
@@ -1117,7 +1117,7 @@ query {
 
 **Exempelresultat**
 
-```xml
+```json
 {
   "data": {
     "awardList": {
@@ -1146,7 +1146,7 @@ query {
 
 ## Exempelfrågor med WKND-projektet {#sample-queries-using-wknd-project}
 
-Dessa exempelfrågor är baserade på WKND-projektet. Detta har:
+Dessa exempelfrågor är baserade på WKND-projektet. Den har följande:
 
 * Content Fragment Models available under:
    `http://<hostname>:<port>/libs/dam/cfm/models/console/content/models.html/conf/wknd`
@@ -1167,7 +1167,7 @@ Detta exempel på frågor intervjuar:
 
 **Exempelfråga**
 
-```xml
+```graphql
 {
   articleList {
     items {
@@ -1187,7 +1187,7 @@ Den här frågan förhör:
 
 **Exempelfråga**
 
-```xml
+```graphql
 {
   adventureList {
     items {
@@ -1244,7 +1244,7 @@ Den här frågan förhör:
 Detta exempel på frågor intervjuar:
 
 * för ett enda innehållsfragment av typen `article` vid en viss sökväg
-   * där alla format:
+   * inom den sökvägen, alla innehållsformat:
       * HTML
       * Markdown
       * Oformaterad text
@@ -1252,7 +1252,7 @@ Detta exempel på frågor intervjuar:
 
 **Exempelfråga**
 
-```xml
+```graphql
 {
   articleByPath (_path: "/content/dam/wknd/en/magazine/alaska-adventure/alaskan-adventures") {
     item {
@@ -1278,7 +1278,7 @@ Detta exempel på frågor intervjuar:
 
 **Exempelfråga**
 
-```xml
+```graphql
 {
   adventureByPath(_path: "/content/dam/wknd/en/adventures/riverside-camping-australia/riverside-camping-australia") {
     item {
@@ -1298,7 +1298,7 @@ Detta exempel på frågor intervjuar:
 Den här frågan förhör:
 
 * för ett enda innehållsfragment av typen `article` vid en viss sökväg
-   * i det, sökvägen och författaren till det refererade (kapslade) fragmentet
+   * inom den sökvägen, sökvägen och författaren till det refererade (kapslade) fragmentet
 
 >[!NOTE]
 >
@@ -1393,7 +1393,7 @@ De här frågorna förhör:
 
 Följande fråga returnerar alla innehållsreferenser genom att använda `_references`:
 
-```xml
+```graphql
 {
   bookmarkList {
      _references {
@@ -1433,7 +1433,7 @@ Följande fråga returnerar alla `attachments` - ett specifikt fält (undergrupp
 >
 >Fältet `attachments` har datatypen `content-reference`, med olika formulär markerade.
 
-```xml
+```graphql
 {
   bookmarkList {
     items {
@@ -1477,7 +1477,7 @@ Den här frågan förhör:
 
 **Exempelfråga**
 
-```xml
+```graphql
 {
   bookmarkByPath(_path: "/content/dam/wknd/en/bookmarks/skitouring") {
     item {
@@ -1515,11 +1515,11 @@ Den här frågan förhör:
 Den här frågan förhör:
 
 * för ett enda innehållsfragment av typen `article` vid en viss sökväg
-   * inom detta, de uppgifter som avser variationen: `variation1`
+   * inom den banan, de data som avser variationen: `variation1`
 
 **Exempelfråga**
 
-```xml
+```graphql
 {
   articleByPath (_path: "/content/dam/wknd/en/magazine/alaska-adventure/alaskan-adventures", variation: "variation1") {
     item {
@@ -1544,7 +1544,7 @@ Den här frågan förhör:
 
 **Exempelfråga**
 
-```xml
+```graphql
 {
   articleList (variation: "variation1") {
     items {
@@ -1569,7 +1569,7 @@ Den här frågan förhör:
 
 **Exempelfråga**
 
-```xml
+```graphql
 query {
   articleList(
     includeVariations: true  ){
@@ -1596,7 +1596,7 @@ Den här frågan förhör:
 
 **Exempelfråga**
 
-```xml
+```graphql
 {
   articleList(
     includeVariations: true,
@@ -1625,7 +1625,7 @@ Den här frågan förhör:
 
 **Exempelfråga**
 
-```xml
+```graphql
 { 
   articleList (_locale: "fr") {
     items {
@@ -1652,7 +1652,7 @@ Exempelfrågorna baseras på följande struktur som använder:
 
 ### Exempel på modeller för innehållsfragment (scheman) {#sample-content-fragment-models-schemas}
 
-För exempelfrågorna använder vi följande innehållsmodeller och deras inbördes relationer (referenser ->):
+Använd följande innehållsmodeller och deras inbördes relationer (referenser ->) för exempelfrågorna:
 
 * [Företag](#model-company)
 -> [Person](#model-person)
