@@ -2,9 +2,9 @@
 title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
-source-git-commit: f8af806bbb78623d5ba12379fc547a2cffc03841
+source-git-commit: 0bce05571590bc09e2b65f6bd6c1f387c71fba3a
 workflow-type: tm+mt
-source-wordcount: '2595'
+source-wordcount: '2609'
 ht-degree: 0%
 
 ---
@@ -70,6 +70,7 @@ Några av de viktigaste funktionerna och förbättringarna i den här versionen 
 * Det går inte att utlösa ett arbetsflöde för flera valda resurser som hittas med sökfilter. (ASSETS-7689)
 * När du väljer en resurs (eller flera resurser) bland sökresultaten visas inte alternativet Relatera eller Ej relaterat. Men alternativet är tillgängligt, annars. (ASSETS-7679)
 * Sökfilterpanelen öppnas bara en gång efter inloggningen och öppnas inte om du avslutar söksidan och kör sökningen igen. (ASSETS-7671)
+* Kombinationsrutan för e-post visar inte rätt kontrastförhållande när en länk delas. (ASSETS-17349)
 
 <!-- REMOVED BY ENGINEERING FROM TOTAL RELEASE CANDIDATE LIST 
 * When you select any file in a Collection and click `Download`, and then navigate to the email checkbox and expand it, regular text and email link is not recognizable due to background color. (ASSETS-17349) 
