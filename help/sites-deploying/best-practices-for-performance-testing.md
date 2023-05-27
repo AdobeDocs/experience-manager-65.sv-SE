@@ -8,7 +8,7 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 669018a0-f6ef-42b2-9c6f-83d7dd5a7095
 exl-id: fcac75e1-15c1-4a37-8d43-93c95267b903
-source-git-commit: 9defa6d1843007e9375d839f72f6993c691a37c0
+source-git-commit: 18f843ed3ffb719d168b67826baaffd926ffd2dd
 workflow-type: tm+mt
 source-wordcount: '1831'
 ht-degree: 0%
@@ -60,7 +60,7 @@ Det finns många kommersiellt tillgängliga verktyg för prestandatestning på m
 
 * **Load Runner** är en lasttestningsprodukt i enterpriseklass. Det finns en kostnadsfri utvärderingsversion. Mer information finns på [https://www.microfocus.com/en-us/portfolio/performance-engineering/overview](https://www.microfocus.com/en-us/portfolio/performance-engineering/overview)
 
-* Inläsningstestverktyg för webbplatser som [Neustar](https://neustarsecurityservices.com/web-performance-management) kan också användas.
+* Inläsningstestverktyg för webbplatser som [Vercara](https://vercara.com/website-performance-management) kan också användas.
 * När du testar mobila eller responsiva webbplatser måste du använda en separat uppsättning verktyg. De fungerar genom att begränsa nätverksbandbredden och simulera långsammare mobilanslutningar som 3G eller EDGE. Bland de verktyg som används mest finns följande:
 
    * **[Nätverkslänkvillkor](https://nshipster.com/network-link-conditioner/)** - det ger ett användarvänligt gränssnitt och fungerar på en ganska låg nivå i nätverksstacken. Den innehåller versioner för OS X och iOS.
