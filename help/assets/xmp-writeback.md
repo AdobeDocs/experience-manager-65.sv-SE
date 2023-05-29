@@ -6,9 +6,9 @@ role: User, Admin
 feature: Metadata
 exl-id: 82148ae5-37e9-4fc5-ada9-db3d91b29c33
 hide: true
-source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
+source-git-commit: 8bd103e392bf5630cb2db654dedcfe4f926b2c9d
 workflow-type: tm+mt
-source-wordcount: '735'
+source-wordcount: '736'
 ht-degree: 4%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 4%
 
 Den här XMP återskrivningsfunktionen i [!DNL Adobe Experience Manager Assets] återger metadataändringarna i återgivningarna av den ursprungliga resursen. När du ändrar metadata för en resurs i Resurser eller när du överför resursen, lagras ändringarna först i metadatanoden i resurshierarkin.
 
-Med funktionen XMP kan du sprida metadataändringarna till alla eller vissa återgivningar av resursen. Funktionen skriver bara tillbaka de metadataegenskaper som använder `jcr` namespace, d.v.s. en egenskap med namnet `dc:title` skrivs tillbaka men egenskapen heter `mytitle` inte.
+Med funktionen XMP kan du sprida metadataändringarna till alla eller vissa återgivningar av resursen. Funktionen skriver bara tillbaka de metadataegenskaper som använder registrerade namnutrymmen, det vill säga en egenskap med namnet `dc:title` skrivs tillbaka men egenskapen heter `mytitle` inte.
 
 Tänk dig ett scenario där du ändrar [!UICONTROL Title] egenskap för tillgången i namnet `Classic Leather` till `Nylon`.
 
