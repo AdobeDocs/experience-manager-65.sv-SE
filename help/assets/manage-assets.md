@@ -7,9 +7,9 @@ feature: Asset Management,Search
 mini-toc-levels: 4
 exl-id: 158607e6-b4e9-4a3f-b023-4023d60c97d2
 hide: true
-source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
+source-git-commit: 7bfa9a9e143f199c42161b92dcba66ae441ad1fb
 workflow-type: tm+mt
-source-wordcount: '9733'
+source-wordcount: '9752'
 ht-degree: 3%
 
 ---
@@ -402,6 +402,9 @@ Så här förhandsgranskar du en resurs med tangentbordet:
    ![Datumtidsväljaren eller använd tangentbordstangenter i fältet I tid för att lägga till datum och tid för resursaktivering](assets/datepicker.png)
 
    *Bild: Använd datumväljaren för att schemalägga resursaktivering.*
+
+1. Du måste kontrollera **[!UICONTROL On/Off Time Reached]** om du vill uppdatera replikeringsagentens utlösare i metadataegenskaper.
+   ![Agentinställningar](assets-dm/Agent-settings.png)
 
 1. Om du vill inaktivera tillgången efter en viss tid väljer du datum/tid för inaktiveringen i datumväljaren bredvid **[!UICONTROL Off Time]** fält. Inaktiveringsdatumet ska vara senare än aktiveringsdatumet för en tillgång. Efter [!UICONTROL Off Time], en resurs och dess återgivningar är inte tillgängliga via [!DNL Assets] webbgränssnitt eller via HTTP API.
 
