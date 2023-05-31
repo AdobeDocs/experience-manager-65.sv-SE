@@ -2,9 +2,10 @@
 title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
-source-git-commit: 0bce05571590bc09e2b65f6bd6c1f387c71fba3a
+exl-id: fed4e110-9415-4740-aba1-75da522039a9
+source-git-commit: efd2a41b6b53a72b941ac23386b6aa4c41c9da15
 workflow-type: tm+mt
-source-wordcount: '2609'
+source-wordcount: '2672'
 ht-degree: 0%
 
 ---
@@ -103,6 +104,36 @@ Några av de viktigaste funktionerna och förbättringarna i den här versionen 
 * När du konverterar en Adobe Target IMS-konfiguration till en användarautentiseringsuppgift i äldre molnkonfigurationer visas `connectedWhen` egenskapen ändras inte. Detta gör att alla anrop går som om konfigurationen fortfarande var IMS-baserad. (CQ-4352810)
 * Lägger till `modifyProperties` behörighet att `fd-cloudservice` systemanvändare för Adobe Sign-konfiguration. (FORMS-6164)
 * När du skapar en AB-testaktivitet, som är integrerad med Adobe Target, synkroniseras inte de målgrupper som är kopplade till den med Target. (NPR-40085)
+
+## Oak{#oak-6517}
+
+Från Service Pack 13 och senare har följande fellogg börjat visas som påverkar persistencecachen:
+
+```shell
+org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.0.202/5]
+at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+    at org.h2.mvstore.MVStore.getUnsupportedWriteFormatException(MVStore.java:1059)
+    at org.h2.mvstore.MVStore.readStoreHeader(MVStore.java:878)
+    at org.h2.mvstore.MVStore.<init>(MVStore.java:455)
+    at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4052)
+    at org.h2.mvstore.db.Store.<init>(Store.java:129)
+```
+
+eller
+
+```shell
+org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.1.214/5].
+```
+
+Så här löser du det här undantaget:
+
+1. Ta bort följande två mappar från `crx-quickstart/repository/`
+
+   * `cache`
+   * `diff-cache`
+
+1. Installera Service Pack eller starta om Experience Manager as a Cloud Service.
+Nya mappar med `cache` och `diff-cache` skapas automatiskt och du får inte längre något undantag relaterat till `mvstore` i `error.log`.
 
 ## Plattform{#platform-6517}
 
