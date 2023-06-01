@@ -8,9 +8,9 @@ user-guide-title: Användarhandbok om Adobe Experience Manager 6.5 Forms
 breadcrumb-title: Användarhandbok om Forms
 user-guide-description: Skapa, hantera, publicera och uppdatera digitala formulär.
 role: User
-source-git-commit: 071d7bf2e7c9ceb3328e77262cc45ed3f2e303cc
+source-git-commit: f0ffa552bd4a5b8b20a58aed7847c4de07acc4f4
 workflow-type: tm+mt
-source-wordcount: '3846'
+source-wordcount: '3860'
 ht-degree: 0%
 
 ---
@@ -127,6 +127,7 @@ ht-degree: 0%
    + [Introduktion till AEM Forms dataintegrering](using/data-integration.md)
    + [Konfigurera datakällor](using/configure-data-sources.md)
    + [Konfiguration av Microsoft Dynamics Odata](using/ms-dynamics-odata-configuration.md)
+   + [Salesforce-integrering med OAuth 2.0-klientautentiseringsflöde](/help/forms/using/oauth2-client-credentials-flow-for-server-to-server-integration.md)
    + [Skapa formulärdatamodell](using/create-form-data-models.md)
    + [Arbeta med formulärdatamodell](using/work-with-form-data-model.md)
    + [Använd formulärdatamodell](using/using-form-data-model.md)
@@ -690,6 +691,7 @@ ht-degree: 0%
    + [Det gick inte att återställa CRX-databasen](/help/forms/using/restore-crx-repository.md)
    + [Fel som inte är tillgängliga för tjänsten efter installation av AEM 6.5.15.0 Service Pack](/help/forms/using/aem-service-pack-installation-solution.md)
    + [AEM Forms JEE 6.5.15.0 Service Pack - installationsproblem i JBoss Linux-miljö](/help/forms/using/linux-jboss-installation-issue-on-sp15.md)
+   + [EAR-distribution misslyckades på JEE WebLogic-server](/help/forms/using/ear-deployment-failing-on-jee-weblogic-server.md)
 + Äldre dokumentation {#legacy-documentation}
    + [Använda den körda skripttjänsten i AEM Forms på JEE Workbench för att skapa XML-data](developing/building-xml.md)
    + [Komprimera och dekomprimera filer med en AEM Forms på en anpassad JEE DSC](developing/compressing-decompressing-custom-dsc.md)

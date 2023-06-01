@@ -10,9 +10,9 @@ discoiquuid: 9d78a6dc-fc9c-415b-b817-164fe6648b30
 docset: aem65
 feature: Form Data Model
 exl-id: 7a1d9d57-66f4-4f20-91c2-ace5a71a52f2
-source-git-commit: e4aaef48ce7d6e49e9a76f78a74b7dea127f6cce
+source-git-commit: db4b432a95856302eb2e80b6386eee557d6afd17
 workflow-type: tm+mt
-source-wordcount: '1865'
+source-wordcount: '1913'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Med AEM Forms dataintegrering kan du konfigurera och ansluta till olika datakäl
 * SOAP-baserade webbtjänster
 * OData-tjänster
 
-Dataintegrering har stöd för autentiseringstyperna OAuth2.0, Grundläggande autentisering och API Key som är färdiga och tillåter implementering av anpassad autentisering för åtkomst till webbtjänster. Medan RESTful-, SOAP-baserade och OData-tjänster är konfigurerade i AEM Cloud Services, konfigureras JDBC för relationsdatabaser och koppling för AEM användarprofil i AEM webbkonsol.
+Dataintegrering stöder OAuth2.0([Auktoriseringskod](https://oauth.net/2/grant-types/authorization-code/), [Klientautentiseringsuppgifter](https://oauth.net/2/grant-types/client-credentials/)), grundläggande autentisering och API-nyckelautentiseringstyper är körklara och tillåter implementering av anpassad autentisering för åtkomst till webbtjänster. Medan RESTful-, SOAP-baserade och OData-tjänster är konfigurerade i AEM Cloud Services, konfigureras JDBC för relationsdatabaser och koppling för AEM användarprofil i AEM webbkonsol.
 
 ## Konfigurera relationsdatabas {#configure-relational-database}
 
@@ -132,7 +132,7 @@ Gör följande för att konfigurera RESTful-tjänster:
       * Värd: Domännamnet eller IP-adressen för värden som använder REST API. Det är ett obligatoriskt fält.
       * Grundsökväg: URL-prefixet för alla API-sökvägar. Det är ett valfritt fält.\
          Om det behövs kan du redigera de förifyllda värdena för dessa fält.
-   * Välj autentiseringstyp - Ingen, OAuth2.0, Grundläggande autentisering, API-nyckel, Anpassad autentisering eller Ömsesidig autentisering - för att få åtkomst till RESTful-tjänsten och ange information för autentisering.
+   * Välj autentiseringstyp - Ingen, OAuth2.0([Auktoriseringskod](https://oauth.net/2/grant-types/authorization-code/), [Klientautentiseringsuppgifter](https://oauth.net/2/grant-types/client-credentials/)), Basic Authentication, API Key, Custom Authentication eller Mutual Authentication - för att få åtkomst till RESTful-tjänsten och ange därmed information för autentisering.
 
    Om du väljer **[!UICONTROL API Key]** Ange värdet för API-nyckeln som autentiseringstyp. API-nyckeln kan skickas som en begäranderubrik eller som en frågeparameter. Välj ett av dessa alternativ på menyn **[!UICONTROL Location]** nedrullningsbar lista och ange namnet på huvudet eller frågeparametern i **[!UICONTROL Parameter Name]** i enlighet med detta.
 
@@ -174,7 +174,7 @@ SOAP-baserade webbtjänster beskrivs med [WSDL-specifikationer (Web Services Des
 
    * WSDL-URL för webbtjänsten.
    * Tjänstslutpunkt. Ange ett värde i det här fältet om du vill åsidosätta tjänstslutpunkten som anges i WSDL.
-   * Välj autentiseringstypen - Ingen, OAuth2.0, Grundläggande autentisering, Anpassad autentisering, X509-token eller Ömsesidig autentisering - för att få åtkomst till SOAP-tjänsten och ange därför informationen för autentisering.
+   * Välj autentiseringstyp - Ingen, OAuth2.0([Auktoriseringskod](https://oauth.net/2/grant-types/authorization-code/), [Klientautentiseringsuppgifter](https://oauth.net/2/grant-types/client-credentials/)), Basic Authentication, Custom Authentication, X509 Token eller Mutual Authentication - för att få åtkomst till SOAP-tjänsten och ange därefter information för autentisering.
 
       Om du väljer **[!UICONTROL X509 Token]** som autentiseringstyp, konfigurera X509-certifikatet. Mer information finns i [Konfigurera certifikat](install-configure-document-services.md#set-up-certificates-for-reader-extension-and-encryption-service).
 Ange KeyStore-alias för X509-certifikatet i **[!UICONTROL Key Alias]** fält. Ange tiden i sekunder tills autentiseringsbegäran är giltig i **[!UICONTROL Time To Live]** fält. Du kan också välja att signera meddelandetexten eller tidsstämpelhuvudet eller båda.
@@ -200,7 +200,7 @@ En OData-tjänst identifieras av tjänstens rot-URL. Om du vill konfigurera en O
 1. Ange följande information för OData-tjänsten:
 
    * Tjänstens rot-URL för OData-tjänsten som ska konfigureras.
-   * Välj autentiseringstyp - Ingen, OAuth2.0, Grundläggande autentisering eller Anpassad autentisering - för att få åtkomst till OData-tjänsten och ange därefter information för autentisering.
+   * Välj autentiseringstyp - Ingen, OAuth2.0([Auktoriseringskod](https://oauth.net/2/grant-types/authorization-code/), [Klientautentiseringsuppgifter](https://oauth.net/2/grant-types/client-credentials/)), Basic Authentication eller Custom Authentication - för att få åtkomst till OData-tjänsten, och därmed ange autentiseringsinformationen.
 
    >[!NOTE]
    >
