@@ -2,9 +2,9 @@
 title: Installationsanvisningar för AEM Forms Patch för AEM Forms
 description: Installationsanvisningar för AEM Forms Service Pack för OSGi- och JEE-miljö
 exl-id: ae4c7e9d-9af8-4288-a6f9-e3bcbe7d153d
-source-git-commit: 57ead48ba3211075ae4b85801ba8cf6394582a9d
+source-git-commit: a54d75ba653f469495203fa4643dbd78dbd7c38f
 workflow-type: tm+mt
-source-wordcount: '1704'
+source-wordcount: '1703'
 ht-degree: 0%
 
 ---
@@ -112,11 +112,11 @@ Navigera till rätt katalog och från ett skal och en typ
 
 +++
 
-+++4. Installera serverletsfragmentet
++++4. Installera serverdelen (AEM Service Pack 6.5.14.0 eller tidigare)
 
 >[!NOTE]
 >
-> * Om du uppgraderar från **AEM Service Pack 6.5.15.0** behöver du inte installera **serletfragment**. Om du uppgraderar från en tidigare version än **AEM Service Pack 6.5.15.0**, måste du installera **serletfragment**.
+> * Om du uppgraderar från **AEM Service Pack 6.5.15.0**, installation av **serletfragment** är inte obligatoriskt. För versioner **AEM Service Pack 6.5.14.0** eller tidigare är det obligatoriskt att installera servletsfragmentet.
 > * Det är obligatoriskt att installera **serletfragment** för alla programservrar utom de som körs på **JBoss® EAP 7.4.0**.
 
 

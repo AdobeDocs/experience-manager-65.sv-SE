@@ -3,9 +3,9 @@ title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
 exl-id: fed4e110-9415-4740-aba1-75da522039a9
-source-git-commit: 2391eb74979b7ee9ed148763ffebf125ef09fc88
+source-git-commit: a54d75ba653f469495203fa4643dbd78dbd7c38f
 workflow-type: tm+mt
-source-wordcount: '3464'
+source-wordcount: '3488'
 ht-degree: 0%
 
 ---
@@ -52,9 +52,9 @@ Några av de viktigaste funktionerna och förbättringarna i den här versionen 
 * **Integrering av adaptiv Forms på AEM**: Skapa smidigt digitala registreringsupplevelser genom att utnyttja adaptiva Forms-komponenter i AEM Sites Editor med: - Adaptiv Forms-behållare och adaptiv Forms - Bädda in (v2) komponenter.
 * **Stöd för reCAPTCHA Enterprise i AEM Forms**: Stöd för reCAPTCHA Enterprise i AEM Forms har lagts till, vilket ger bättre skydd mot bedräglig aktivitet och skräppost utöver det befintliga stödet för Google reCAPTCHA v2.
 * **Stöd för Adobe Acrobat Sign for Government med AEM Forms**: Gör det möjligt att integrera AEM Forms säkert och kompatibelt med Adobe Sign för myndigheter (FedRAMP-kompatibelt).
-* **Aktivera Salesforce-integrering med AEM Forms för datautbyte**: OAuth 2.0-klientens autentiseringsuppgifter flödar för säker och direkt programautentisering och behörighet i Salesforce-programmet för smidig kommunikation mellan program utan användarinblandning.
-* **Optimering och utökad funktionalitet för arbetsflödesmotorn**: Om du minimerar antalet arbetsflödesinstanser ökas arbetsflödesmotorernas prestanda. Förutom `COMPLETED` och `RUNNING` statusvärden, arbetsflödet stöder även tre nya statusvärden: `ABORTED`, `SUSPENDED`och `FAILED`.
-* ZPL-utdataformatet stöder olika pappersstorlekar, t.ex. A4 och A5.
+* **Aktivera Salesforce-integrering med AEM Forms för datautbyte**: Konfigurera integreringen mellan AEM och Salesforce med hjälp av inloggningsflödet för OAuth 2.0-klienten. Detta möjliggör säker och direkt autentisering och auktorisering av programmet och möjliggör smidig kommunikation utan användarinblandning.
+* **Optimering och förbättrad funktionalitet i arbetsflödesmotorn**: Öka arbetsflödesmotorernas prestanda genom att minimera antalet arbetsflödesinstanser. Förutom `COMPLETED` och `RUNNING` statusvärden, arbetsflödet stöder även tre nya statusvärden: `ABORTED`, `SUSPENDED`och `FAILED`.
+* **Stöd för pappersstorlek i ZPL-utdata**: I AEM Forms Designer genererar XMLFM ZPL-utdata med olika pappersstorlekar, som A4 och A5, för XDP-baserade mallar.
 
 <!-- UPDATE BELOW FOR EACH NEW RELEASE -->
 
