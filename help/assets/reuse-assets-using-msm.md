@@ -7,9 +7,9 @@ role: User, Admin, Architect
 feature: Asset Management,Multi Site Manager
 exl-id: 4d0367c4-88aa-4aef-b23d-828609b0df09
 hide: true
-source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
+source-git-commit: 56632bd6ce9fc90f0bc61f903f84f7ea8bbcd12d
 workflow-type: tm+mt
-source-wordcount: '3280'
+source-wordcount: '3179'
 ht-degree: 10%
 
 ---
@@ -287,22 +287,6 @@ Om du har flera resurser i en live-kopieringsmapp kan initieringsåtgärder för
    ![Uppdatera enkelt många resurser i kopiemappar från Live Copy Overview-konsolen](assets/livecopyconsole_update_many_assets.png)
 
    *Bild: Uppdatera enkelt mycket material i kopiemappar från [!UICONTROL Live Copy Overview] konsol.*
-
-## Utöka MSM för [!DNL Assets] {#extend-api}
-
-[!DNL Experience Manager] Med kan du utöka funktionaliteten med MSM Java API:er. För [!DNL Assets]fungerar utökningen på samma sätt som i MSM för [!DNL Sites]. Mer information finns i [Utöka MSM](/help/sites-developing/extending-msm.md) och följande för information om specifika uppgifter:
-
-* [Översikt över API:er](/help/sites-developing/extending-msm.md#overview-of-the-java-api)
-* [Skapa en synkroniseringsåtgärd](/help/sites-developing/extending-msm.md#creating-a-new-synchronization-action)
-* [Skapa en utrullningskonfiguration](/help/sites-developing/extending-msm.md#creating-a-new-rollout-configuration)
-* [Skapa och använda en enkel LiveActionFactory-klass](/help/sites-developing/extending-msm.md#creating-and-using-a-simple-liveactionfactory-class)
-
->[!NOTE]
->
->* Blueprint in MSM for [!DNL Sites] kallas Live Copy-källa i MSM för [!DNL Assets].
->* Det går inte att ta bort kapitelsteget i guiden Skapa plats i MSM för [!DNL Assets].
->* Konfigurering av MSM-lås på sidegenskaperna (användargränssnitt med pekskärm) stöds inte i MSM för [!DNL Assets].
-
 
 ## Effekter av tillgångshanteringsåtgärder på live-kopior {#manage-assets}
 
