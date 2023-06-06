@@ -3,9 +3,9 @@ title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
 exl-id: fed4e110-9415-4740-aba1-75da522039a9
-source-git-commit: 46e76c36db3396a013c8610b62f5cff9f1ea14d9
+source-git-commit: 9bf19cd21db185229d565d684dbac9e44f236532
 workflow-type: tm+mt
-source-wordcount: '3537'
+source-wordcount: '3574'
 ht-degree: 0%
 
 ---
@@ -48,11 +48,11 @@ Några av de viktigaste funktionerna och förbättringarna i den här versionen 
    Du behöver inte navigera till resursplatsen och visa dess egenskaper för att utföra dessa åtgärder.
 * **Dynamic Media _Ögonblicksbild_**- Experimentera med testbilder eller Dynamic Media-URL:er för att se utdata från olika bildmodifierare och optimering av Smart Imaging för filstorlek (med WebP- och AVIF-leverans), nätverksbandbredd och Device Pixel Ratio. Se [Dynamic Media Snapshot](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-snapshot.html).
 * **DASH-strömning med Dynamic Media** - Stöd för nya protokoll (DASH - Dynamic Adaptive Streaming over HTTP) har startats för Adaptive streaming i Dynamic Media (med CMAF aktiverat). Finns nu för alla regioner, [aktiveras via en supportanmälan](/help/assets/video.md#enable-dash-on-your-account-enable-dash).
-* **Integrering av AEM Sites- och Content Fragments med AEM Assets Next-Generation Dynamic Media**: Användare av AEM Assets as a Cloud Service Next-Generation Dynamic Media kan nu använda dessa molnbaserade resurser för att skapa och leverera med instanser av AEM Sites 6.5 på plats eller för hanterade tjänster.
-* **Integrering av adaptiv Forms på AEM**: Skapa smidigt digitala registreringsupplevelser genom att utnyttja adaptiva Forms-komponenter i AEM Sites Editor med: - Adaptiv Forms-behållare och adaptiv Forms - Bädda in (v2) komponenter.
-* **Stöd för reCAPTCHA Enterprise i AEM Forms**: Stöd för reCAPTCHA Enterprise i AEM Forms har lagts till, vilket ger bättre skydd mot bedräglig aktivitet och skräppost utöver det befintliga stödet för Google reCAPTCHA v2.
-* **Stöd för Adobe Acrobat Sign for Government med AEM Forms**: Gör det möjligt att integrera AEM Forms säkert och kompatibelt med Adobe Sign för myndigheter (FedRAMP-kompatibelt).
-* **Aktivera Salesforce-integrering med AEM Forms för datautbyte**: Konfigurera integreringen mellan AEM och Salesforce med hjälp av inloggningsflödet för OAuth 2.0-klienten. Detta möjliggör säker och direkt autentisering och auktorisering av programmet och möjliggör smidig kommunikation utan användarinblandning.
+* **Integrering av Experience Manager Sites- och Content Fragments med Assets Next-Generation Dynamic Media** - Användare av Experience Manager Assets as a Cloud Service Next-Generation Dynamic Media kan nu använda dessa molnbaserade resurser för att skapa och leverera med lokala eller Managed Services-instanser av Experience Manager Sites 6.5.
+* **Integration av Adaptive Forms på Experience Manager Sites-sidor**: Skapa smidigt digitala registreringsupplevelser genom att använda adaptiva Forms-komponenter i Experience Manager Sites Editor med: - Adaptiv Forms-behållare och adaptiv Forms - Bädda in (v2) komponenter.
+* **Stöd för reCAPTCHA Enterprise i Experience Manager Forms**: Stöd för reCAPTCHA Enterprise i Experience Manager Forms har lagts till, vilket ger bättre skydd mot bedräglig aktivitet och skräppost utöver det befintliga stödet för Google reCAPTCHA v2.
+* **Stöd för Adobe Acrobat Sign for Government med Experience Manager Forms**: Gör det möjligt att integrera Experience Manager Forms säkert och kompatibelt med Adobe Sign för myndigheter (FedRAMP-kompatibelt).
+* **Aktivera Salesforce-integrering med Experience Manager Forms för datautbyte**: Konfigurera integreringen mellan Experience Manager Forms och Salesforce med hjälp av inloggningsflödet för OAuth 2.0-klienten. Denna funktion möjliggör säker och direkt autentisering och behörighet av programmet och möjliggör smidig kommunikation utan användarinblandning.
 * **Optimering och förbättrad funktionalitet i arbetsflödesmotorn**: Öka arbetsflödesmotorernas prestanda genom att minimera antalet arbetsflödesinstanser. Förutom `COMPLETED` och `RUNNING` statusvärden, arbetsflödet stöder även tre nya statusvärden: `ABORTED`, `SUSPENDED`och `FAILED`.
 
 
@@ -104,42 +104,42 @@ Några av de viktigaste funktionerna och förbättringarna i den här versionen 
 
 ## [!DNL Forms]{#forms-6517}
 
-* När en användare uppgraderar till AEM 6.5.16.0 Service Pack, hämtas inte den bifogade filen korrekt. (FORMS-8906)
-* När du har uppdaterat till AEM 6.5.15.0 Service Pack, fungerar inte HTML5-formulären eller läses in korrekt i Edge-webbläsaren med kompatibilitetsläget IE. (FORMS-8526, FORMS-8523)
-* När en användare använder AEM Service Pack 6.5.16.0 kan regelredigeraren inte öppnas. (FORMS-8290)
+* När en användare uppgraderar till Experience Manager 6.5.16.0 Service Pack, hämtas inte den bifogade filen korrekt. (FORMS-8906)
+* När du har uppdaterat till Service Pack för Experience Manager 6.5.15.0 fungerar inte HTML5-formulären eller läses in korrekt i Edge-webbläsaren med kompatibilitetsläget IE. (FORMS-8526, FORMS-8523)
+* När en användare använder Service Pack för Experience Manager 6.5.16.0 kan regelredigeraren inte öppnas. (FORMS-8290)
 * När det maximala antalet siffror för valideringen tillämpas på en Numeric Box-komponent misslyckas den. (FORMS-7938)
 * När du skapar interaktiva kommunikationssatser genereras inte diagramkomponenten i PDF korrekt. (FORMS-7827, FORMS-8297)
-* Java-skräpinsamlingen kan inte rensa gammal generheap på en AEM Forms OSGi-server. (FORMS-8207)
-* När en användare uppgraderar till AEM 6.5.16.0 Service Pack saknas CRX-metadataegenskaperna efter överföringen. (FORMS-8205)
+* Java™-skräpinsamlingen kan inte rensa gammal generheap på en Experience Manager Forms OSGi-server. (FORMS-8207)
+* När en användare uppgraderar till Service Pack för Experience Manager 6.5.16.0 saknas CRX-metadataegenskaperna efter överföringen. (FORMS-8205)
 * När en användare inaktiverar datumväljarkomponenten i ett adaptivt formulär går det fortfarande att redigera den. (FORMS-7804)
-* I AEM 6.5.16.0 Forms Service Pack är Manager Document Publisher alltid avmarkerat när en användare försöker redigera koordinatorerna för principuppsättningen. (FORMS-7775, FORMS-8599)
-* När en användare uppgraderar till AEM 6.5.16.0 Service Pack slutar metoden &quot;GuideNode.externalize&quot; som hanterar strängar som måste översättas att fungera. (FORMS-7709)
+* I Forms Service Pack för Experience Manager 6.5.16.0 är Document Publisher alltid avmarkerat när en användare försöker redigera koordinatorerna för principuppsättningen. (FORMS-7775, FORMS-8599)
+* När en användare uppgraderar till Experience Manager 6.5.16.0 Service Pack slutar metoden &quot;GuideNode.externalize&quot; som hanterar strängar som måste översättas att fungera. (FORMS-7709)
 * I `Assign task` när en användare väljer&quot;Skicka e-post för meddelande&quot; och anropar arbetsflödet visas texten inte korrekt i det mottagna e-postmeddelandet. Frågetecknen tas emot i stället för texten i det mottagna e-postmeddelandet. (FORMS-7675)
 * Dokumentet översätts delvis. (FORMS-7674, FORMS-7573)
 * En användare kan inte redigera principuppsättningar, även om de tilldelats specifika behörigheter. (FORMS-7665)
-* När en användare i `forms-users` gruppen försöker skapa ett nytt formulär, AEM Forms-instansen kraschar. (FORMS-7629)
+* När en användare i `forms-users` gruppen försöker skapa ett formulär, Experience Manager Forms-instansen kraschar. (FORMS-7629)
 * När användaren klickar på knapparna Återställ, Spara eller Skicka i ett anpassat formulär visas inget meddelande på skärmen. (FORMS-7524)
-* För att förbättra prestanda vid PDFG-konvertering i ett AEM 6.5.16.0 Service Pack, är vilolägesintervallet konfigurerbart. (FORMS-6752)
+* För att förbättra prestanda vid PDFG-konvertering på ett Service Pack för Experience Manager 6.5.16.0 görs vilolägesintervallet konfigurerbart. (FORMS-6752)
 * Växlingsalternativet är detsamma, men fältets synlighet ändras även när användaren drar markören något. (FORMS-6728)
-* När användaren uppgraderar till AEM 6.5.15.0 Service Pack slutar omdirigeringen att fungera när ett adaptivt formulär renderas i Internet Explorer. (FORMS-6725)
-* PAC 2021-verktyget för alla bakgrundsobjekt i ett PDF-formulär som skapats av en AEM Designer returnerar ett fel som `Path object not tagged`. (FORMS-6707)
+* När användaren uppgraderar till Experience Manager 6.5.15.0 Service Pack slutar omdirigeringen att fungera när en anpassad form renderas i Internet Explorer. (FORMS-6725)
+* PAC 2021-verktyget för alla bakgrundsobjekt i ett PDF-formulär som skapats av en Experience Manager Designer returnerar ett fel som `Path object not tagged`. (FORMS-6707)
 * När en användare använder ett filter i inkorgen skapas en `NullPointerException` fel. (FORMS-6706)
-* När en användare importerar en mallfil (.tds) med refererade fragment kraschar AEM Designer.  (FORMS-6702)
-* Om användaren skapar ett statiskt PDF med hjälp av utdatatjänsten i AEM Forms Designer 6.5 inträffar ett fel `OCCD (optional content configuration dictionary) contains AS key`. (FORMS-6691)
+* När en användare importerar en mallfil (.tds) med refererade fragment kraschar Experience Manager Designer. (FORMS-6702)
+* Om användaren skapar ett statiskt PDF med hjälp av utdatatjänsten i Experience Manager Forms Designer 6.5 inträffar ett fel `OCCD (optional content configuration dictionary) contains AS key`. (FORMS-6691)
 * När användaren skapar ett enkelt arbetsflöde och lägger till en enkel variabel, `set variable mapping` fel inträffar. (FORMS-5819)
 * När en användare försöker generera ett PDF med hjälp av utdatatjänsten, trots att den är markerad som `PDF/A-1a`, en kompatibilitetskontroll med`Preflight` tjänsten misslyckas. (LC-3920837)
-* När du har installerat ett AEM 6.5.16.0 Service Pack kan en AEM inte öppnas. (LC-3921000)
+* När du har installerat Service Pack för Experience Manager 6.5.16.0 går det inte att öppna Experience Manager Designer. (LC-3921000)
 * När en användare lägger till en kryssruta och alternativknapp genereras inte strukturen för ett taggträd enligt PDF-standard. (LC-3920838)
 * Om en användare genererar ett statiskt PDF genom att använda inbäddning och deluppsättning av teckensnitt via utdatatjänsten, innehåller det resulterande PDF bara de inbäddade teckensnitten. (LC-3920963)
 * Den hebreiska texten visas felaktigt i RTL-format. (LC-3919632)
-* När en användare uppgraderar till AEM 6.5.16.0 Service Pack på en JBoss Turnkey-server, kan signaturtjänsten inte anropas. Det påträffade felet är: `java.lang.ClassCastException: com.adobe.xfa.TextNode cannot be cast to com.adobe.xfa.Element`. (FORMS-7833)
-* Efter uppgradering till AEM 6.5.14.0 Service Pack fungerar inte arbetsbyteprocesserna för att flytta en CRX-nod från en plats till en annan. Felet inträffar som `ALC-CRX-30000-000: com.adobe.ep.crx.client.exceptions.CRCException: ALC-CRX-030-000-[Internal Server Error]`.(FORMS-7713)
-* När en användare uppdaterar till AEM 6.5.16.0 Service Pack `Usage Rights` inte kan tillämpas. (FORMS-7892)
+* När en användare uppgraderar till Experience Manager 6.5.16.0 Service Pack på en JBoss®-turnkey-server kan signaturtjänsten inte anropas. Det påträffade felet är: `java.lang.ClassCastException: com.adobe.xfa.TextNode cannot be cast to com.adobe.xfa.Element`. (FORMS-7833)
+* Efter uppgradering till Service Pack för Experience Manager 6.5.14.0 fungerar inte arbetsbyteprocesserna för att flytta en CRX-nod från en plats till en annan. Felet inträffar som `ALC-CRX-30000-000: com.adobe.ep.crx.client.exceptions.CRCException: ALC-CRX-030-000-[Internal Server Error]`. (FORMS-7713)
+* När en användare uppdaterar till Service Pack för Experience Manager 6.5.16.0 `Usage Rights` inte kan tillämpas. (FORMS-7892)
 * När en användare försöker generera ett PDF-dokument misslyckas valideringen av PDF/A-1b. (FORMS-7615)
-* När en användare klickar på `Configure` för `Form Container` blir webbläsaren inte responsiv (FORMS-7605).
-* När en användare uppdaterar till AEM Forms 6.5.16.0 Service Pack och försöker ändra `LicenseType` till `Production`, återspeglas inte ändringarna. (FORMS-7594)
+* När en användare klickar på `Configure` för `Form Container` blir webbläsaren inte responsiv. (FORMS-7605)
+* När en användare uppdaterar till Experience Manager Forms 6.5.16.0 Service Pack och försöker ändra `LicenseType` till `Production`, återspeglas inte ändringarna. (FORMS-7594)
 * När en användare försöker anropa en LCA-process med ett PDF som innehåller `Chinese Full Width Characters`uppstår ett problem med `ValidateForm` -processen. (FORMS-7464)
-* I AEM Forms Designer genererar XMLFM ZPL-utdata med olika pappersstorlekar, som A4 och A5, för XDP-baserade mallar.(FORMS-7898)
+* I Experience Manager Forms Designer genererar XMLFM ZPL-utdata med olika pappersstorlekar, som A4 och A5, för XDP-baserade mallar. (FORMS-7898)
 
 ## Integreringar{#integrations-6517}
 
@@ -189,7 +189,7 @@ Nya mappar med `cache` och `diff-cache` skapas automatiskt och du får inte län
 * Öppnar samtal för icke-kampanjsidor `targeteditor.html` i onödan. Ta bort `targeteditor` ring när det inte behövs. (SITES-12469)
 * Live-kopior kan inte skapas för sidor med anteckningar. (SITES-12154)
 * Sidutrullning fungerar på Experience Manager 6.5.16. (SITES-12008)
-* Slut på minne. hög skräpinsamling på grund av `NotificationManagerImpl`. `NotificationManager` uppgradera till AEM 6.5. (SITES-11440)
+* Slut på minne. hög skräpinsamling på grund av `NotificationManagerImpl`. `NotificationManager` uppgradera till Experience Manager 6.5. (SITES-11440)
 * Korrigerade IT-tester för WCM som blockerade Service Pack 17. (SITES-13089)
 * Det går inte att hämta platsreferenser på en server. (SITES-10901)
 
@@ -204,7 +204,7 @@ Nya mappar med `cache` och `diff-cache` skapas automatiskt och du får inte län
 * Integrera Polaris resursväljare i Content Fragment editor. (SITES-12125)
 * Ett obligatoriskt http-huvud krävs för att komma åt metadatatjänstens slutpunkt. (SITES-13068)
 * GraphQL implementering av 6.5 var inte i linje med Cloud Service (primär). identifierade problem har åtgärdats. (SITES-13096)
-* GraphQL paging/sorting och hybridfiltrering bör vara tillgängligt på AEM 6.5/AMS. (SITES-9154)
+* GraphQL paging/sorting och hybridfiltrering bör finnas på Experience Manager 6.5/AMS. (SITES-9154)
 
 ### [!DNL Sites] - Kärnkomponenter{#sites-core-components-6517}
 
@@ -258,7 +258,7 @@ Nya mappar med `cache` och `diff-cache` skapas automatiskt och du får inte län
 >[!IMPORTANT]
 >
 > Adobe rekommenderar inte att du tar bort eller avinstallerar [!DNL Experience Manager] 6.5.17.0-paket. Innan du installerar paketet bör du skapa en säkerhetskopia av `crx-repository` om du måste rulla tillbaka den. <!-- UPDATE FOR EACH NEW RELEASE -->
-<!-- For instructions to install Service Pack for AEM Forms, see [AEM Forms Service Pack installation instructions](/help/release-notes/aem-forms-current-service-pack-installation-instructions.md). -->
+<!-- For instructions to install Service Pack for Experience Manager Forms, see [Experience Manager Forms Service Pack installation instructions](/help/release-notes/aem-forms-current-service-pack-installation-instructions.md). -->
 
 
 ### Installera Service Pack på [!DNL Experience Manager] 6.5{#install-service-pack}
@@ -302,11 +302,11 @@ Om du vill veta vilka plattformar som är certifierade för att fungera med den 
 
 ### Installera Service Pack för [!DNL Experience Manager] Forms{#install-aem-forms-add-on-package}
 
-Anvisningar om hur du installerar Service Pack på AEM Forms finns i [Installationsanvisningar för AEM Forms Service Pack](/help/release-notes/aem-forms-current-service-pack-installation-instructions.md).
+Anvisningar om hur du installerar Service Pack på Experience Manager Forms finns i [Installationsanvisningar för Experience Manager Forms Service Pack](/help/release-notes/aem-forms-current-service-pack-installation-instructions.md).
 
 ### Installera GraphQL Index Package för Experience Manager Content Fragments{#install-aem-graphql-index-add-on-package}
 
-Kunder som använder GraphQL måste installera [AEM innehållsfragment med GraphQL indexpaket 1.1.1](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/cfm-graphql-index-def-1.1.1.zip).
+Kunder som använder GraphQL måste installera [Experience Manager Content Fragment with GraphQL Index Package 1.1.1](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/cfm-graphql-index-def-1.1.1.zip).
 
 På så sätt kan du lägga till den indexdefinition som krävs baserat på de funktioner som de faktiskt använder.
 
@@ -343,7 +343,7 @@ Granska om du använder en funktion eller en funktion i en distribution. Planera
 
 | Yta | Funktion | Ersättning |
 |---|---|---|
-| Integreringar | Skärmen **[!UICONTROL AEM Cloud Services Opt-In]** har tagits bort sedan [!DNL Experience Manager] och [!DNL Adobe Target] integreringen uppdateras i [!DNL Experience Manager] 6.5. Integreringen stöder Adobe Target Standard API. API:t använder autentisering via Adobe IMS och [!DNL Adobe I/O Runtime]. Det stöder den växande rollen för Adobe Launch till instrument [!DNL Experience Manager] för analys och personalisering är anmälningsguiden funktionellt irrelevant. | Konfigurera systemanslutningar, Adobe IMS-autentisering och [!DNL Adobe I/O Runtime] integreringar via respektive [!DNL Experience Manager] molntjänster. |
+| Integreringar | Skärmen **[!UICONTROL Experience Manager Cloud Services Opt-In]** har tagits bort sedan [!DNL Experience Manager] och [!DNL Adobe Target] integreringen uppdateras i [!DNL Experience Manager] 6.5. Integreringen stöder Adobe Target Standard API. API:t använder autentisering via Adobe IMS och [!DNL Adobe I/O Runtime]. Det stöder den växande rollen för Adobe Launch till instrument [!DNL Experience Manager] för analys och personalisering är anmälningsguiden funktionellt irrelevant. | Konfigurera systemanslutningar, Adobe IMS-autentisering och [!DNL Adobe I/O Runtime] integreringar via respektive [!DNL Experience Manager] molntjänster. |
 | Anslutningar | Adobe JCR Connector för Microsoft® SharePoint 2010 och Microsoft® SharePoint 2013 är föråldrad för [!DNL Experience Manager] 6.5. | Ej tillämpligt |
 
 ## Kända fel{#known-issues}
@@ -367,7 +367,7 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 
    Efter dessa steg bör GraphQL-frågorna gå snabbare.
 
-* Som [!DNL Microsoft® Windows Server 2019] stöder inte [!DNL MySQL 5.7] och [!DNL JBoss® EAP 7.1], [!DNL Microsoft® Windows Server 2019] stöder inte körklara installationer för [!DNL AEM Forms 6.5.10.0].
+* Som [!DNL Microsoft® Windows Server 2019] stöder inte [!DNL MySQL 5.7] och [!DNL JBoss® EAP 7.1], [!DNL Microsoft® Windows Server 2019] stöder inte körklara installationer för [!DNL Experience Manager Forms 6.5.10.0].
 
 * Om du uppgraderar [!DNL Experience Manager] från 6.5.0 till 6.5.4 till senaste Service Pack på Java™ 11, se `RRD4JReporter` undantag i `error.log` -fil. Starta om instansen av [!DNL Experience Manager]. <!-- THIS BULLET POINT WAS UPDATED AS PER CQDOC-20021, JANUARY 23, 2023 -->
 
@@ -393,7 +393,7 @@ Du måste lägga till följande egenskaper i indexdefinitionsnoden för att få 
    "refresh": true
    ```
 
-* På JBoss® 7.1.4-plattformen när användaren installerar AEM 6.5.16.0 eller senare Service Pack, `adobe-livecycle-jboss.ear` distributionen misslyckas.
+* På JBoss® 7.1.4-plattformen när användaren installerar Experience Manager 6.5.16.0 eller senare Service Pack, `adobe-livecycle-jboss.ear` distributionen misslyckas.
 * JDK-version senare än 1.8.0_281 stöds inte för WebLogic JEE-server.
 
 ## OSGi-paket och innehållspaket som ingår{#osgi-bundles-and-content-packages-included}
