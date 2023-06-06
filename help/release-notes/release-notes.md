@@ -3,9 +3,9 @@ title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
 exl-id: fed4e110-9415-4740-aba1-75da522039a9
-source-git-commit: 7f152c3b7b80c78bb73b45e83cc566e9bbb0c393
+source-git-commit: 206242583fcbf651dbc6234dc01be5140d0cfca7
 workflow-type: tm+mt
-source-wordcount: '3483'
+source-wordcount: '3526'
 ht-degree: 0%
 
 ---
@@ -48,7 +48,7 @@ Några av de viktigaste funktionerna och förbättringarna i den här versionen 
    Du behöver inte navigera till resursplatsen och visa dess egenskaper för att utföra dessa åtgärder.
 * **Dynamic Media _Ögonblicksbild_**- Experimentera med testbilder eller Dynamic Media-URL:er för att se utdata från olika bildmodifierare och optimering av Smart Imaging för filstorlek (med WebP- och AVIF-leverans), nätverksbandbredd och Device Pixel Ratio. Se [Dynamic Media Snapshot](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-snapshot.html).
 * **DASH-strömning med Dynamic Media** - Stöd för nya protokoll (DASH - Dynamic Adaptive Streaming over HTTP) har startats för Adaptive streaming i Dynamic Media (med CMAF aktiverat). Finns nu för alla regioner, [aktiveras via en supportanmälan](/help/assets/video.md#enable-dash-on-your-account-enable-dash).
-
+* **Integrering av AEM Sites- och Content Fragments med AEM Assets Next-Generation Dynamic Media**: Användare av AEM Assets as a Cloud Service Next-Generation Dynamic Media kan nu använda dessa molnbaserade resurser för att skapa och leverera med instanser av AEM Sites 6.5 på plats eller för hanterade tjänster.
 * **Integrering av adaptiv Forms på AEM**: Skapa smidigt digitala registreringsupplevelser genom att utnyttja adaptiva Forms-komponenter i AEM Sites Editor med: - Adaptiv Forms-behållare och adaptiv Forms - Bädda in (v2) komponenter.
 * **Stöd för reCAPTCHA Enterprise i AEM Forms**: Stöd för reCAPTCHA Enterprise i AEM Forms har lagts till, vilket ger bättre skydd mot bedräglig aktivitet och skräppost utöver det befintliga stödet för Google reCAPTCHA v2.
 * **Stöd för Adobe Acrobat Sign for Government med AEM Forms**: Gör det möjligt att integrera AEM Forms säkert och kompatibelt med Adobe Sign för myndigheter (FedRAMP-kompatibelt).
