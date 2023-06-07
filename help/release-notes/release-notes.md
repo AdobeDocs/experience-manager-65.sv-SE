@@ -3,9 +3,9 @@ title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
 exl-id: fed4e110-9415-4740-aba1-75da522039a9
-source-git-commit: 9bf19cd21db185229d565d684dbac9e44f236532
+source-git-commit: 2c9337af99811d7b58712e1d0def7b5af5661c11
 workflow-type: tm+mt
-source-wordcount: '3574'
+source-wordcount: '3555'
 ht-degree: 0%
 
 ---
@@ -104,9 +104,8 @@ Några av de viktigaste funktionerna och förbättringarna i den här versionen 
 
 ## [!DNL Forms]{#forms-6517}
 
-* När en användare uppgraderar till Experience Manager 6.5.16.0 Service Pack, hämtas inte den bifogade filen korrekt. (FORMS-8906)
-* När du har uppdaterat till Service Pack för Experience Manager 6.5.15.0 fungerar inte HTML5-formulären eller läses in korrekt i Edge-webbläsaren med kompatibilitetsläget IE. (FORMS-8526, FORMS-8523)
-* När en användare använder Service Pack för Experience Manager 6.5.16.0 kan regelredigeraren inte öppnas. (FORMS-8290)
+* När du har uppdaterat till AEM 6.5.15.0 Service Pack, fungerar inte HTML5-formulären eller läses in korrekt i Edge-webbläsaren med kompatibilitetsläget IE. (FORMS-8526, FORMS-8523)
+* När en användare använder AEM Service Pack 6.5.16.0 kan regelredigeraren inte öppnas. (FORMS-8290)
 * När det maximala antalet siffror för valideringen tillämpas på en Numeric Box-komponent misslyckas den. (FORMS-7938)
 * När du skapar interaktiva kommunikationssatser genereras inte diagramkomponenten i PDF korrekt. (FORMS-7827, FORMS-8297)
 * Java™-skräpinsamlingen kan inte rensa gammal generheap på en Experience Manager Forms OSGi-server. (FORMS-8207)
