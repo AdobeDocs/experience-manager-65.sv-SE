@@ -3,9 +3,9 @@ title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
 exl-id: fed4e110-9415-4740-aba1-75da522039a9
-source-git-commit: 2c9337af99811d7b58712e1d0def7b5af5661c11
+source-git-commit: 36edc2507d9acd7d5f94e433a654ccc1647bb58a
 workflow-type: tm+mt
-source-wordcount: '3555'
+source-wordcount: '3556'
 ht-degree: 0%
 
 ---
@@ -187,7 +187,7 @@ Nya mappar med `cache` och `diff-cache` skapas automatiskt och du får inte län
 * Språkkopior av en sida uppdaterades inte som förväntat. (SITES-11191)
 * Öppnar samtal för icke-kampanjsidor `targeteditor.html` i onödan. Ta bort `targeteditor` ring när det inte behövs. (SITES-12469)
 * Live-kopior kan inte skapas för sidor med anteckningar. (SITES-12154)
-* Sidutrullning fungerar på Experience Manager 6.5.16. (SITES-12008)
+* Sidutrullning fungerar inte på Experience Manager 6.5.16. (SITES-12008)
 * Slut på minne. hög skräpinsamling på grund av `NotificationManagerImpl`. `NotificationManager` uppgradera till Experience Manager 6.5. (SITES-11440)
 * Korrigerade IT-tester för WCM som blockerade Service Pack 17. (SITES-13089)
 * Det går inte att hämta platsreferenser på en server. (SITES-10901)
