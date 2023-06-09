@@ -7,10 +7,10 @@ feature: Asset Management,Search
 mini-toc-levels: 4
 exl-id: 158607e6-b4e9-4a3f-b023-4023d60c97d2
 hide: true
-source-git-commit: 7bfa9a9e143f199c42161b92dcba66ae441ad1fb
+source-git-commit: 0afd721ff02f2c9abeed40c4b8f4fdf169523c35
 workflow-type: tm+mt
-source-wordcount: '9752'
-ht-degree: 3%
+source-wordcount: '9827'
+ht-degree: 2%
 
 ---
 
@@ -33,7 +33,6 @@ När du organiserar en samling resurser, till exempel, alla `Nature` kan du skap
 >
 >* Dela en [!DNL Assets] typmapp `sling:OrderedFolder` stöds inte vid delning till Experience Cloud. Om du vill dela en mapp ska du inte markera [!UICONTROL Ordered] när du skapar en mapp.
 >* [!DNL Experience Manager] tillåter inte användning `subassets` ord som namnet på en mapp. Det är ett nyckelord som är reserverat för en nod som innehåller delresurser för sammansatta resurser.
-
 
 1. Navigera till den plats i mappen med digitala resurser där du vill skapa en mapp. Klicka på **[!UICONTROL Create]**. Välj **[!UICONTROL New Folder]**.
 1. I **[!UICONTROL Title]** anger du ett mappnamn. Som standard använder DAM den titel som du angav som mappnamn. När mappen har skapats kan du åsidosätta standardmappen och ange ett annat mappnamn.
@@ -58,6 +57,12 @@ Du kan överföra olika typer av resurser (inklusive bilder, PDF-filer, RAW-file
 >[!NOTE]
 >
 >I Dynamic Media - Scene7-läge är standardfilstorleken för överföring av resurser 2 GB eller mindre. Information om hur du konfigurerar överföring av resurser som är större än 2 GB upp till 15 GB finns i [(Valfritt) Konfigurera Dynamic Media - Scene7-läge för överföring av resurser som är större än 2 GB](/help/assets/config-dms7.md#optional-config-dms7-assets-larger-than-2gb).
+
+>[!IMPORTANT]
+>
+>Resurser som du överför till Experience Manager och som har ett filnamn som är längre än 100 tecken får ett kortare namn när de används i Dynamic Media.
+>
+>De första 100 tecknen i filnamnet används som de är; återstående tecken ersätts med en alfanumerisk sträng. Den här namnbytesmetoden ger ett unikt namn när resursen används i Dynamic Media. Den är också avsedd att rymma den maximala längden för filnamn i Dynamic Media.
 
 Du kan välja att överföra resurser till mappar med eller utan en bearbetningsprofil tilldelad dem.
 
@@ -104,7 +109,6 @@ Om du vill konfigurera rensningsaktiviteten för de oavslutade segmentöverföri
 >* För att säkerställa att segmentöverföring är aktiverad för filer med storlekar som kan orsaka att autentiseringsuppgifterna förfaller när överföringen pågår.
 >
 >* För att säkerställa att varje segment avslutas innan autentiseringsuppgifterna upphör att gälla.
-
 
 Om du överför en resurs med samma namn som en resurs som redan är tillgänglig på den plats där du överför resursen visas en varningsdialogruta.
 
@@ -198,22 +202,22 @@ Om du vill avbryta ett pågående överföringsjobb klickar du på **[!UICONTROL
 
 | Överföringsalternativ | Delalternativ | Beskrivning |
 |---|---|---|
-| Jobbnamn |  | Standardnamnet som är förifyllt i textfältet innehåller den användardefinierade delen av namnet och datum- och tidsstämpeln. Du kan använda standardnamnet eller ange ett namn på ditt eget skapande för det här överföringsjobbet. <br>Jobbet och andra överförings- och publiceringsjobb registreras på sidan Jobs, där du kan kontrollera jobbens status. |
-| Publicera efter överföring |  | Publicerar automatiskt de resurser som du överför. |
-| Skriv över i valfri mapp, samma basresursnamn oavsett tillägg |  | Välj det här alternativet om du vill att de filer du överför ska ersätta befintliga filer med samma namn. Namnet på det här alternativet kan vara annorlunda, beroende på inställningarna i **[!UICONTROL Application Setup]** > **[!UICONTROL General Settings]** > **[!UICONTROL Upload to Application]** > **[!UICONTROL Overwrite Images]**. |
-| Ta bort komprimering av ZIP- eller Tjära-filer vid överföring |  |  |
-| Jobbalternativ |  | Klicka **[!UICONTROL Job Options]** så att du kan öppna [!UICONTROL Upload Job Options] och välj alternativ som påverkar hela överföringsjobbet. De här alternativen är desamma för alla filtyper.<br>Du kan välja standardalternativ för att överföra filer från sidan Allmänna inställningar i programmet. Om du vill öppna den här sidan väljer du **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]**. Välj **[!UICONTROL Default Upload Options]** för att öppna [!UICONTROL Upload Job Options] -dialogrutan. |
-|  | När | Välj En gång eller Återkommande. Om du vill ställa in ett återkommande jobb väljer du alternativet Upprepa - varje dag, Varje vecka, Varje månad eller Anpassa - för att ange när du vill att FTP-överföringsjobbet ska återkomma. Ange sedan schemaläggningsalternativen efter behov. |
-|  | Inkludera undermappar | Överför alla undermappar i mappen som du vill överföra. Namnen på mappen och dess undermappar som du överför anges automatiskt i [!DNL Experience Manager Assets]. |
-|  | Beskärningsalternativ | Om du vill beskära manuellt från sidorna av en bild väljer du Beskär-menyn och sedan Manuell. Ange sedan antalet pixlar att beskära från en sida eller från varje sida av bilden. Hur mycket av bilden som beskärs beror på bildfilens ppi-inställning (pixlar per tum). Om bilden till exempel visar 150 ppi och du anger 75 i textrutorna Överkant, Höger, Underkant och Vänster beskärs en halv tum från varje sida.<br> Om du vill beskära pixlar med tomt utrymme automatiskt från en bild öppnar du menyn Beskär, väljer Manuell och anger pixelmått i fälten Överkant, Höger, Underkant och Vänster för att beskära från sidorna. Du kan också välja Trimma på menyn Beskär och välja följande alternativ:<br> **Trimma bort baserat på** <ul><li>**Färg** - Välj alternativet Färg. Välj sedan menyn Hörn och välj hörnet på bilden med den färg som bäst motsvarar den tomrumsfärg som du vill beskära.</li><li>**Öppenhet** - Välj alternativet Genomskinlighet.<br> **Tolerans** - Dra i skjutreglaget för att ange en tolerans mellan 0 och 1. Om du vill trimma baserat på färg anger du 0 för att beskära pixlar endast om de exakt matchar den färg du valde i bildens hörn. Nummer som ligger närmare 1 ger större färgskillnader.<br>Om du vill trimma baserat på genomskinlighet anger du 0 så att pixlarna bara beskärs om de är genomskinliga. Siffror närmare 1 ger större genomskinlighet.</li></ul><br>Dessa beskärningsalternativ är icke-förstörande. |
-|  | Alternativ för färgprofil | Välj en färgkonvertering när du skapar optimerade filer som används för leverans:<ul><li>Standardfärgbevaring: Behåller källbildens färger när bilderna innehåller färgrymdsinformation. det inte finns någon färgkonvertering. Nästan alla bilder idag har rätt färgprofil inbäddad. Om en CMYK-källbild inte innehåller någon inbäddad färgprofil konverteras färgerna till sRGB-färgrymden (standard röd grön). sRGB är den rekommenderade färgrymden för visning av bilder på webbsidor.</li><li>Behåll ursprunglig färgrymd: Bevarar de ursprungliga färgerna utan någon färgkonvertering vid punkten. För bilder utan inbäddad färgprofil görs färgkonverteringen med de standardfärgprofiler som konfigurerats i publiceringsinställningarna. Färgprofilerna kanske inte justeras mot färgen i de filer som skapas med det här alternativet. Därför bör du använda alternativet Standardfärgbevaring.</li><li>Anpassa från > Till<br> Öppnar menyer så att du kan välja färgmodellen Konvertera från och Konvertera till. Det här avancerade alternativet åsidosätter eventuell färginformation som är inbäddad i källfilen. Välj det här alternativet när alla bilder som du skickar in innehåller felaktiga eller saknade färgprofildata.</li></ul> |
-|  | Bildredigeringsalternativ | Du kan bevara urklippsmaskerna i bilder och välja en färgprofil.<br> Se [Ange alternativ för bildredigering vid överföring](#setting-image-editing-options-at-upload). |
-|  | PostScript-alternativ | Du kan rastrera PostScript®, beskära filer, behålla genomskinliga bakgrunder, välja en upplösning och välja en färgrymd.<br> Se [Ange överföringsalternativ för PostScript och Illustrator](#setting-postscript-and-illustrator-upload-options). |
-|  | Photoshop-alternativ | Du kan skapa mallar från Adobe® Photoshop®-filer, behålla lager, ange hur lager ska namnges, extrahera text och ange hur bilder ska förankras i mallar.<br> Mallar stöds inte i [!DNL Experience Manager].<br> Se [Ange överföringsalternativ för Photoshop](#setting-photoshop-upload-options). |
-|  | Alternativ för PDF | Du kan rastrera filerna, extrahera sökord och länkar, automatiskt generera en e-katalog, ange upplösningen och välja en färgrymd.<br>eCatalogs stöds inte i [!DNL Experience Manager]. <br> Se [Ange överföringsalternativ för PDF](#setting-pdf-upload-options).<br>**Anteckning**: Det högsta antalet sidor för en PDF som ska övervägas för extrahering är 5000 för nya överföringar. Denna gräns kommer att ändras till 100 sidor (för alla PDF) den 31 december 2022. Se även [Dynamic Media begränsningar](/help/assets/limitations.md). |
-|  | Illustrator-alternativ | Du kan rastrera Adobe Illustrator®-filer, behålla genomskinliga bakgrunder, välja en upplösning och välja en färgrymd.<br> Se [Ange överföringsalternativ för PostScript och Illustrator](#setting-postscript-and-illustrator-upload-options). |
-|  | EVideoalternativ | Du kan omkoda en videofil genom att välja en videoförinställning.<br> Se [Ange överföringsalternativ för eVideo](#setting-evideo-upload-options). |
-|  | Förinställningar för gruppuppsättning | Om du vill skapa en bilduppsättning, eller en snurra uppsättning, från de överförda filerna klickar du på kolumnen Aktiv för den förinställning som du vill använda. Du kan markera flera förinställningar. Du skapar förinställningarna på sidan Programinställningar/Gruppinställningar i Dynamic Media Classic.<br> Se [Konfigurera förinställningar för gruppuppsättningar för att automatiskt generera bilduppsättningar och snurruppsättningar](config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets) om du vill veta mer om hur du skapar gruppuppsättningsförinställningar.<br> Se [Ställa in förinställningar för gruppuppsättning vid överföring](#setting-batch-set-presets-at-upload). |
+| Jobbnamn | | Standardnamnet som är förifyllt i textfältet innehåller den användardefinierade delen av namnet och datum- och tidsstämpeln. Du kan använda standardnamnet eller ange ett namn på ditt eget skapande för det här överföringsjobbet. <br>Jobbet och andra överförings- och publiceringsjobb registreras på sidan Jobs, där du kan kontrollera jobbens status. |
+| Publicera efter överföring | | Publicerar automatiskt de resurser som du överför. |
+| Skriv över i valfri mapp, samma basresursnamn oavsett tillägg | | Välj det här alternativet om du vill att de filer du överför ska ersätta befintliga filer med samma namn. Namnet på det här alternativet kan vara annorlunda, beroende på inställningarna i **[!UICONTROL Application Setup]** > **[!UICONTROL General Settings]** > **[!UICONTROL Upload to Application]** > **[!UICONTROL Overwrite Images]**. |
+| Ta bort komprimering av ZIP- eller Tjära-filer vid överföring | | |
+| Jobbalternativ | | Klicka **[!UICONTROL Job Options]** så att du kan öppna [!UICONTROL Upload Job Options] och välj alternativ som påverkar hela överföringsjobbet. De här alternativen är desamma för alla filtyper.<br>Du kan välja standardalternativ för att överföra filer från sidan Allmänna inställningar i programmet. Om du vill öppna den här sidan väljer du **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]**. Välj **[!UICONTROL Default Upload Options]** för att öppna [!UICONTROL Upload Job Options] -dialogrutan. |
+| | När | Välj En gång eller Återkommande. Om du vill ställa in ett återkommande jobb väljer du alternativet Upprepa - varje dag, Varje vecka, Varje månad eller Anpassa - för att ange när du vill att FTP-överföringsjobbet ska återkomma. Ange sedan schemaläggningsalternativen efter behov. |
+| | Inkludera undermappar | Överför alla undermappar i mappen som du vill överföra. Namnen på mappen och dess undermappar som du överför anges automatiskt i [!DNL Experience Manager Assets]. |
+| | Beskärningsalternativ | Om du vill beskära manuellt från sidorna av en bild väljer du Beskär-menyn och sedan Manuell. Ange sedan antalet pixlar att beskära från en sida eller från varje sida av bilden. Hur mycket av bilden som beskärs beror på bildfilens ppi-inställning (pixlar per tum). Om bilden till exempel visar 150 ppi och du anger 75 i textrutorna Överkant, Höger, Underkant och Vänster beskärs en halv tum från varje sida.<br> Om du vill beskära pixlar med tomt utrymme automatiskt från en bild öppnar du menyn Beskär, väljer Manuell och anger pixelmått i fälten Överkant, Höger, Underkant och Vänster för att beskära från sidorna. Du kan också välja Trimma på menyn Beskär och välja följande alternativ:<br> **Trimma bort baserat på** <ul><li>**Färg** - Välj alternativet Färg. Välj sedan menyn Hörn och välj hörnet på bilden med den färg som bäst motsvarar den tomrumsfärg som du vill beskära.</li><li>**Öppenhet** - Välj alternativet Genomskinlighet.<br> **Tolerans** - Dra i skjutreglaget för att ange en tolerans mellan 0 och 1. Om du vill trimma baserat på färg anger du 0 för att beskära pixlar endast om de exakt matchar den färg du valde i bildens hörn. Nummer som ligger närmare 1 ger större färgskillnader.<br>Om du vill trimma baserat på genomskinlighet anger du 0 så att pixlarna bara beskärs om de är genomskinliga. Siffror närmare 1 ger större genomskinlighet.</li></ul><br>Dessa beskärningsalternativ är icke-förstörande. |
+| | Alternativ för färgprofil | Välj en färgkonvertering när du skapar optimerade filer som används för leverans:<ul><li>Standardfärgbevaring: Behåller källbildens färger när bilderna innehåller färgrymdsinformation. det inte finns någon färgkonvertering. Nästan alla bilder idag har rätt färgprofil inbäddad. Om en CMYK-källbild inte innehåller någon inbäddad färgprofil konverteras färgerna till sRGB-färgrymden (standard röd grön). sRGB är den rekommenderade färgrymden för visning av bilder på webbsidor.</li><li>Behåll ursprunglig färgrymd: Bevarar de ursprungliga färgerna utan någon färgkonvertering vid punkten. För bilder utan inbäddad färgprofil görs färgkonverteringen med de standardfärgprofiler som konfigurerats i publiceringsinställningarna. Färgprofilerna kanske inte justeras mot färgen i de filer som skapas med det här alternativet. Därför bör du använda alternativet Standardfärgbevaring.</li><li>Anpassa från > Till<br> Öppnar menyer så att du kan välja färgmodellen Konvertera från och Konvertera till. Det här avancerade alternativet åsidosätter eventuell färginformation som är inbäddad i källfilen. Välj det här alternativet när alla bilder som du skickar in innehåller felaktiga eller saknade färgprofildata.</li></ul> |
+| | Bildredigeringsalternativ | Du kan bevara urklippsmaskerna i bilder och välja en färgprofil.<br> Se [Ange alternativ för bildredigering vid överföring](#setting-image-editing-options-at-upload). |
+| | PostScript-alternativ | Du kan rastrera PostScript®, beskära filer, behålla genomskinliga bakgrunder, välja en upplösning och välja en färgrymd.<br> Se [Ange överföringsalternativ för PostScript och Illustrator](#setting-postscript-and-illustrator-upload-options). |
+| | Photoshop-alternativ | Du kan skapa mallar från Adobe® Photoshop®-filer, behålla lager, ange hur lager ska namnges, extrahera text och ange hur bilder ska förankras i mallar.<br> Mallar stöds inte i [!DNL Experience Manager].<br> Se [Ange överföringsalternativ för Photoshop](#setting-photoshop-upload-options). |
+| | Alternativ för PDF | Du kan rastrera filerna, extrahera sökord och länkar, automatiskt generera en e-katalog, ange upplösningen och välja en färgrymd.<br>eCatalogs stöds inte i [!DNL Experience Manager]. <br> Se [Ange överföringsalternativ för PDF](#setting-pdf-upload-options).<br>**Anteckning**: Det högsta antalet sidor för en PDF som ska övervägas för extrahering är 5000 för nya överföringar. Denna gräns kommer att ändras till 100 sidor (för alla PDF) den 31 december 2022. Se även [Dynamic Media begränsningar](/help/assets/limitations.md). |
+| | Illustrator-alternativ | Du kan rastrera Adobe Illustrator®-filer, behålla genomskinliga bakgrunder, välja en upplösning och välja en färgrymd.<br> Se [Ange överföringsalternativ för PostScript och Illustrator](#setting-postscript-and-illustrator-upload-options). |
+| | EVideoalternativ | Du kan omkoda en videofil genom att välja en videoförinställning.<br> Se [Ange överföringsalternativ för eVideo](#setting-evideo-upload-options). |
+| | Förinställningar för gruppuppsättning | Om du vill skapa en bilduppsättning, eller en snurra uppsättning, från de överförda filerna klickar du på kolumnen Aktiv för den förinställning som du vill använda. Du kan markera flera förinställningar. Du skapar förinställningarna på sidan Programinställningar/Gruppinställningar i Dynamic Media Classic.<br> Se [Konfigurera förinställningar för gruppuppsättningar för att automatiskt generera bilduppsättningar och snurruppsättningar](config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets) om du vill veta mer om hur du skapar gruppuppsättningsförinställningar.<br> Se [Ställa in förinställningar för gruppuppsättning vid överföring](#setting-batch-set-presets-at-upload). |
 
 #### Ange alternativ för bildredigering vid överföring {#setting-image-editing-options-at-upload}
 
@@ -247,14 +251,14 @@ När du överför PostScript-bildfiler (EPS) eller Illustrator-bildfiler (AI) ka
 
 | Alternativ | Delalternativ | Beskrivning |
 |---|---|---|
-| Bearbetar |  | Välj **[!UICONTROL Rasterize]** om du vill konvertera vektorgrafik i filen till bitmappsformat. |
-| Bevara genomskinlig bakgrund i återgiven bild |  | Bevara filens genomskinlighet i bakgrunden. |
-| Upplösning |  | Anger upplösningsinställningen. Den här inställningen avgör hur många pixlar som visas per tum i filen. |
-| Färgrymd |  | Välj menyn Färgrymd och välj bland följande alternativ för färgrymd: |
-|  | Identifiera automatiskt | Behåller filens färgrymd. |
-|  | Tvinga som RGB | Konverterar till färgmodellen RGB. |
-|  | Tvinga som CMYK | Konverterar till CMYK-färgmodellen. |
-|  | Tvinga som gråskala | Konverterar till gråskalefärgrymden. |
+| Bearbetar | | Välj **[!UICONTROL Rasterize]** om du vill konvertera vektorgrafik i filen till bitmappsformat. |
+| Bevara genomskinlig bakgrund i återgiven bild | | Bevara filens genomskinlighet i bakgrunden. |
+| Upplösning | | Anger upplösningsinställningen. Den här inställningen avgör hur många pixlar som visas per tum i filen. |
+| Färgrymd | | Välj menyn Färgrymd och välj bland följande alternativ för färgrymd: |
+| | Identifiera automatiskt | Behåller filens färgrymd. |
+| | Tvinga som RGB | Konverterar till färgmodellen RGB. |
+| | Tvinga som CMYK | Konverterar till CMYK-färgmodellen. |
+| | Tvinga som gråskala | Konverterar till gråskalefärgrymden. |
 
 #### Ange överföringsalternativ för Photoshop {#setting-photoshop-upload-options}
 
@@ -270,15 +274,15 @@ Använd [!UICONTROL Crop Options] och [!UICONTROL Color Profile Options], som be
 
 | Alternativ | Delalternativ | Beskrivning |
 |---|---|---|
-| Behåll lager |  | Rippar lagren i PSD, om det finns några, till enskilda resurser. Resurslagren förblir kopplade till PSD. Du kan visa dem genom att öppna filen PSD i detaljvyn och välja lagerpanelen. |
-| Skapa mall |  | Skapar en mall från lagren i filen PSD. |
-| Extrahera text |  | Extraherar texten så att användare kan söka efter text i ett visningsprogram. |
-| Utöka lager till bakgrundsstorlek |  | Utökar storleken på överlappade bildlager till storleken på bakgrundslagret. |
-| Namnge lager |  | Lager i filen PSD överförs som separata bilder. |
-|  | Lagernamn | Namnger bilderna efter deras lagernamn i filen PSD. Ett lager med namnet Price Tag i den ursprungliga PSD-filen blir till exempel en bild med namnet Price Tag. Om lagernamnen i filen PSD är Photoshop standardlagernamn (Bakgrund, Lager 1, Lager 2 och så vidare) får bilderna namn efter sina lagernummer i filen PSD. De namnges inte efter sina standardlagernamn. |
-|  | Photoshop och lagernummer | Namnger bilderna efter deras lagernummer i filen PSD och ignorerar de ursprungliga lagernamnen. Bilderna får samma namn som Photoshop-filnamnet och ett nummer i det tillagda lagret. Det andra lagret i en fil som heter Spring Ad.psd får till exempel namnet Spring Ad_2 även om det har ett icke-standardnamn i Photoshop. |
-|  | Photoshop- och lagernamn | Namnger bilderna efter PSD-filen följt av lagernamnet eller lagernumret. Lagernumret används om lagernamnen i filen PSD är Photoshop standardlagernamn. Ett lager med namnet Price Tag i en PSD-fil med namnet SpringAd får till exempel namnet Spring Ad_Price Tag. Ett lager med standardnamnet Lager2 kallas Spring Ad_2. |
-| Ankarpunkt |  | Ange hur bilder ska förankras i mallar som genereras från lagerkompositionen som skapas från filen PSD. Som standard är ankarpunkten i mitten. Med en central ankarpunkt kan ersättningsbilder bäst fylla samma område, oavsett ersättningsbildens proportioner. Bilder med en annan aspekt som ersätter den här bilden upptar i själva verket samma utrymme när de refererar till mallen och använder parameterersättning. Ändra till en annan inställning om ditt program kräver att ersättningsbilderna fyller ut det tilldelade utrymmet i mallen. |
+| Behåll lager | | Rippar lagren i PSD, om det finns några, till enskilda resurser. Resurslagren förblir kopplade till PSD. Du kan visa dem genom att öppna filen PSD i detaljvyn och välja lagerpanelen. |
+| Skapa mall | | Skapar en mall från lagren i filen PSD. |
+| Extrahera text | | Extraherar texten så att användare kan söka efter text i ett visningsprogram. |
+| Utöka lager till bakgrundsstorlek | | Utökar storleken på överlappade bildlager till storleken på bakgrundslagret. |
+| Namnge lager | | Lager i filen PSD överförs som separata bilder. |
+| | Lagernamn | Namnger bilderna efter deras lagernamn i filen PSD. Ett lager med namnet Price Tag i den ursprungliga PSD-filen blir till exempel en bild med namnet Price Tag. Om lagernamnen i filen PSD är Photoshop standardlagernamn (Bakgrund, Lager 1, Lager 2 och så vidare) får bilderna namn efter sina lagernummer i filen PSD. De namnges inte efter sina standardlagernamn. |
+| | Photoshop och lagernummer | Namnger bilderna efter deras lagernummer i filen PSD och ignorerar de ursprungliga lagernamnen. Bilderna får samma namn som Photoshop-filnamnet och ett nummer i det tillagda lagret. Det andra lagret i en fil som heter Spring Ad.psd får till exempel namnet Spring Ad_2 även om det har ett icke-standardnamn i Photoshop. |
+| | Photoshop- och lagernamn | Namnger bilderna efter PSD-filen följt av lagernamnet eller lagernumret. Lagernumret används om lagernamnen i filen PSD är Photoshop standardlagernamn. Ett lager med namnet Price Tag i en PSD-fil med namnet SpringAd får till exempel namnet Spring Ad_Price Tag. Ett lager med standardnamnet Lager2 kallas Spring Ad_2. |
+| Ankarpunkt | | Ange hur bilder ska förankras i mallar som genereras från lagerkompositionen som skapas från filen PSD. Som standard är ankarpunkten i mitten. Med en central ankarpunkt kan ersättningsbilder bäst fylla samma område, oavsett ersättningsbildens proportioner. Bilder med en annan aspekt som ersätter den här bilden upptar i själva verket samma utrymme när de refererar till mallen och använder parameterersättning. Ändra till en annan inställning om ditt program kräver att ersättningsbilderna fyller ut det tilldelade utrymmet i mallen. |
 
 #### Ange överföringsalternativ för PDF {#setting-pdf-upload-options}
 
@@ -296,14 +300,14 @@ Välj bland följande alternativ:
 |---|---|---|
 | Bearbetar | Rastrera | (Standard) Rippar sidorna i filen PDF och konverterar vektorgrafik till bitmappsbilder. Välj det här alternativet om du vill skapa en e-katalog. |
 | Extract | Sök efter ord | Extraherar ord från PDF-filen så att filen kan genomsökas efter nyckelord i en eCatalog Viewer. |
-|  | Länkar | Extraherar länkar från PDF-filerna och konverterar dem till Image Maps som används i en eCatalog Viewer. |
-| Skapa eCatalog automatiskt från PDF med flera sidor |  | Skapar automatiskt en e-katalog från PDF-filen. eCatalog namnges efter den överförda PDF-filen. (Det här alternativet är bara tillgängligt om du rastrerar PDF-filen när du överför den.) |
-| Upplösning |  | Anger upplösningsinställningen. Den här inställningen avgör hur många pixlar som visas per tum i filen PDF. Standardvärdet är 150. |
-| Färgrymd |  | Välj menyn Färgrymd och välj en färgrymd för filen PDF. De flesta PDF-filer har både RGB och CMYK-färgbilder. Färgrymden RGB är att föredra när du vill visa bilden online. |
-|  | Identifiera automatiskt | Bevarar färgrymden för PDF-filen. |
-|  | Tvinga som RGB | Konverterar till färgmodellen RGB. |
-|  | Tvinga som CMYK | Konverterar till CMYK-färgmodellen. |
-|  | Tvinga som gråskala | Konverterar till gråskalefärgrymden. |
+| | Länkar | Extraherar länkar från PDF-filerna och konverterar dem till Image Maps som används i en eCatalog Viewer. |
+| Skapa eCatalog automatiskt från PDF med flera sidor | | Skapar automatiskt en e-katalog från PDF-filen. eCatalog namnges efter den överförda PDF-filen. (Det här alternativet är bara tillgängligt om du rastrerar PDF-filen när du överför den.) |
+| Upplösning | | Anger upplösningsinställningen. Den här inställningen avgör hur många pixlar som visas per tum i filen PDF. Standardvärdet är 150. |
+| Färgrymd | | Välj menyn Färgrymd och välj en färgrymd för filen PDF. De flesta PDF-filer har både RGB och CMYK-färgbilder. Färgrymden RGB är att föredra när du vill visa bilden online. |
+| | Identifiera automatiskt | Bevarar färgrymden för PDF-filen. |
+| | Tvinga som RGB | Konverterar till färgmodellen RGB. |
+| | Tvinga som CMYK | Konverterar till CMYK-färgmodellen. |
+| | Tvinga som gråskala | Konverterar till gråskalefärgrymden. |
 
 #### Ange överföringsalternativ för eVideo {#setting-evideo-upload-options}
 
@@ -311,11 +315,11 @@ Om du vill omkoda en videofil väljer du bland olika förinställningar för vid
 
 | Alternativ | Delalternativ | Beskrivning |
 |---|---|---|
-| Adaptiv video |  | En enda förinställning för kodning som fungerar med alla proportioner för att skapa videor som ska skickas till mobilen, surfplattan och datorn. Överförda källvideor som är kodade med den här förinställningen har en fast höjd. Bredden skalas dock automatiskt så att videons proportioner bevaras. <br>Det bästa sättet är att använda adaptiv videokodning. |
+| Adaptiv video | | En enda förinställning för kodning som fungerar med alla proportioner för att skapa videor som ska skickas till mobilen, surfplattan och datorn. Överförda källvideor som är kodade med den här förinställningen har en fast höjd. Bredden skalas dock automatiskt så att videons proportioner bevaras. <br>Det bästa sättet är att använda adaptiv videokodning. |
 | Förinställningar för enskild kodning | Sortera kodningsförinställningar | Välj **[!UICONTROL Name]** eller **[!UICONTROL Size]** om du vill sortera kodningsförinställningarna under Skrivbord, Mobil och Surfplatta efter namn eller efter upplösningsstorlek. |
-|  | Skrivbord | Skapa en MP4-fil för att leverera strömmande eller progressiv videoupplevelse till stationära datorer. Välj en eller flera proportioner med den upplösning och datahastighet du vill ha. |
-|  | Mobil | Skapa en MP4-fil för användning på mobila enheter från iPhone eller Android™. Välj en eller flera proportioner med den upplösning och datahastighet du vill ha. |
-|  | Tablet | Skapa en MP4-fil för distribution på iPad- eller Android™-surfplattor. Välj en eller flera proportioner med den upplösning och datahastighet du vill ha. |
+| | Skrivbord | Skapa en MP4-fil för att leverera strömmande eller progressiv videoupplevelse till stationära datorer. Välj en eller flera proportioner med den upplösningsstorlek och måldatahastighet som du vill ha. |
+| | Mobil | Skapa en MP4-fil för användning på mobila enheter från iPhone eller Android™. Välj en eller flera proportioner med den upplösningsstorlek och måldatahastighet som du vill ha. |
+| | Tablet | Skapa en MP4-fil för distribution på iPad- eller Android™-surfplattor. Välj en eller flera proportioner med den upplösningsstorlek och måldatahastighet som du vill ha. |
 
 #### Ange förinställningar för gruppuppsättning vid överföring {#setting-batch-set-presets-at-upload}
 
@@ -382,7 +386,6 @@ Så här förhandsgranskar du en resurs med tangentbordet:
 >* [Förhandsgranska Dynamic Media Assets](/help/assets/previewing-assets.md).
 >* [Visa delresurser](managing-linked-subassets.md#viewing-subassets).
 
-
 ## Redigera egenskaper och metadata {#editing-properties}
 
 1. Navigera till platsen för resursen vars metadata du vill redigera.
@@ -403,7 +406,7 @@ Så här förhandsgranskar du en resurs med tangentbordet:
 
    *Bild: Använd datumväljaren för att schemalägga resursaktivering.*
 
-1. Du måste kontrollera **[!UICONTROL On/Off Time Reached]** om du vill uppdatera replikeringsagentens utlösare i metadataegenskaper.
+1. Kontrollera **[!UICONTROL On/Off Time Reached]** om du vill uppdatera replikeringsagentens utlösare i metadataegenskaper.
    ![Agentinställningar](assets-dm/Agent-settings.png)
 
 1. Om du vill inaktivera tillgången efter en viss tid väljer du datum/tid för inaktiveringen i datumväljaren bredvid **[!UICONTROL Off Time]** fält. Inaktiveringsdatumet ska vara senare än aktiveringsdatumet för en tillgång. Efter [!UICONTROL Off Time], en resurs och dess återgivningar är inte tillgängliga via [!DNL Assets] webbgränssnitt eller via HTTP API.
@@ -482,11 +485,11 @@ Så här flyttar du resurser eller mappar:
    * Ange namnet på resursen när den har flyttats. Klicka sedan på **[!UICONTROL Next]** för att fortsätta.
 
    * Klicka **[!UICONTROL Cancel]** för att stoppa processen.
+
    >[!NOTE]
    >
    >* Du kan ange samma namn för resursen om det inte finns någon resurs med det namnet på den nya platsen. Du bör emellertid använda ett annat namn om du flyttar resursen till en plats där det finns en resurs med samma namn. Om du använder samma namn genereras automatiskt en variant av namnet. Om resursen till exempel har namnet Fyrkant, genereras namnet Fyrkant1 för kopian.
    >* När namnet ändras tillåts inte tomt utrymme i filnamnet.
-
 
 1. På **[!UICONTROL Select Destination]** gör du något av följande:
 
@@ -557,7 +560,7 @@ Att flytta resurser genom att dra dem öppnas inte [!UICONTROL Move Asset] kan d
    >
    >Videoanteckningar stöds bara i webbläsare med HTML5-kompatibla videoformat. Beroende på webbläsaren stöds dessutom olika videoformat. Men MXF-videoformatet stöds ännu inte med videoanteckningar.
 
-Mer information om att generera och visa delresurser finns i [hantera delresurser](managing-linked-subassets.md#generate-subassets).
+Mer information om att generera och visa delresurser finns i [Hantera underresurser](managing-linked-subassets.md#generate-subassets).
 
 ## Ta bort resurser {#deleting-assets}
 
@@ -576,11 +579,11 @@ Så här tar du bort en resurs eller en mapp som innehåller en resurs:
    * Om resursen inte har några referenser tas resursen bort.
 
    * Om resursen har referenser visas ett felmeddelande om att **En eller flera resurser refereras**. Du kan välja **[!UICONTROL Force Delete]** eller **[!UICONTROL Cancel]**.
+
    >[!NOTE]
    >
    >* Om du vill lösa eller ta bort inkommande referenser från andra sidor uppdaterar du de relevanta referenserna innan du tar bort en resurs. Du kan även inaktivera alternativet för framtvingad borttagning med en övertäckning, så att användare inte kan ta bort refererade resurser och lämna brutna länkar.
    >* Du kan ta bort en *mapp* som innehåller utcheckade resursfiler. Innan du tar bort en mapp kontrollerar du att inga digitala resurser är utcheckade av användarna.
-
 
 >[!NOTE]
 >
@@ -863,12 +866,12 @@ Här är ett exempel på hur du kan konfigurera [!DNL Experience Manager] för a
 
 1. Hämta Google Noto CJK-teckensnitt från följande länkar och lagra dem i den teckensnittskatalog som konfigurerats i teckensnittshanterartjänsten.
 
-   * Allt i ett Super CJK-teckensnitt: [https://www.google.com/get/noto/help/cjk/](https://www.google.com/get/noto/help/cjk/)
-   * Noto Sans (för europeiska språk): [https://www.google.com/get/noto/](https://www.google.com/get/noto/)
-   * Teckensnitt för valfritt språk: [https://www.google.com/get/noto/](https://www.google.com/get/noto/)
+   * Allt i ett Super CJK-teckensnitt: [https://fonts.google.com/noto/use](https://fonts.google.com/noto/use)
+   * Noto Sans (för europeiska språk): [https://fonts.google.com/noto](https://fonts.google.com/noto)
+   * Teckensnitt för valfritt språk: [https://fonts.google.com/noto](https://fonts.google.com/noto)
 
 1. Konfigurera filen annotation PDF genom att ställa in parametern font-family på `Arial Unicode MS, Noto Sans, Noto Sans CJK JP, sans-serif`. Den här konfigurationen är tillgänglig som standard och fungerar för alla europeiska språk och CJK-språk.
-1. Om det språk du väljer skiljer sig från de språk som nämns i steg 2 lägger du till en lämplig (kommaavgränsad) post i standardteckensnittsfamiljen.
+1. Om det språk du väljer skiljer sig från de språk som nämns i steg 2 lägger du till en lämplig (kommaseparerad) post i standardteckensnittsfamiljen.
 
 ## Skapa, hantera, förhandsgranska och återställa resursversioner {#asset-versioning}
 
@@ -895,9 +898,9 @@ Du kan även aktivera automatisk versionshantering via ett arbetsflöde. När du
    * Klicka **[!UICONTROL Save as Version]** så att du kan skapa en version för resursen. Du kan även lägga till en etikett och en kommentar.
    * Klicka **[!UICONTROL Create]** för att skapa en version.
 
-      ![Skapa resursversion från sidofältet](assets/create-new-version-from-timeline.png)
+     ![Skapa resursversion från sidofältet](assets/create-new-version-from-timeline.png)
 
-      *Bild: Skapa en version av en resurs från [!UICONTROL Timeline] vänster sidospalt.*
+     *Bild: Skapa en version av en resurs från [!UICONTROL Timeline] vänster sidospalt.*
 
 1. Så här visar du en version av en resurs:
 
@@ -911,9 +914,9 @@ Du kan även aktivera automatisk versionshantering via ett arbetsflöde. När du
    * Klicka på en version av resursen. Du kan också lägga till en etikett och en kommentar.
    * Klicka på **[!UICONTROL Revert to this Version]**.
 
-      ![Välj en version att återställa till](assets/select_version.png)
+     ![Välj en version att återställa till](assets/select_version.png)
 
-      *Bild: Välj en version och återgå till den. Den blir den aktuella versionen som sedan är tillgänglig för DAM-användarna.*
+     *Bild: Välj en version och återgå till den. Den blir den aktuella versionen som sedan är tillgänglig för DAM-användarna.*
 
 1. Så här jämför du två versioner av en bild:
    * Klicka på den version som ska jämföras med den aktuella versionen.
@@ -934,7 +937,7 @@ En samling är en ordnad uppsättning med resurser. Använd samlingar för att d
 * En samling kan innehålla resurser från olika platser eftersom de bara innehåller referenser till dessa resurser. Varje samling bevarar materialens referensintegritet.
 * Du kan dela samlingar med flera användare med olika behörighetsnivåer, inklusive redigering, visning och så vidare.
 
-Mer information om hantering av samlingar finns i [hantera samlingar](/help/assets/manage-collections.md).
+Mer information om hantering av samlingar finns i [Hantera samlingar av digitala resurser](/help/assets/manage-collections.md).
 
 ## Dölj utgångna resurser när du visar resurser i skrivbordsappen eller Adobe Asset Link {#hide-expired-assets-via-acp-api}
 
@@ -954,4 +957,4 @@ curl -v -u admin:admin --location --request POST 'http://localhost:4502/conf/glo
 --data-urlencode '../../jcr:primaryType=sling:Folder'
 ```
 
-Om du vill veta mer kan du se hur [bläddra bland DAM-resurser med datorprogrammet](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#browse-search-preview-assets) och [Så här använder du Adobe Asset Link](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-assets-using-adobe-asset-link.ug.html).
+Om du vill veta mer kan du se hur [bläddra bland DAM-resurser med datorprogrammet](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#browse-search-preview-assets) och [Så här använder du Adobe Asset Link](https://helpx.adobe.com/se/enterprise/using/manage-assets-using-adobe-asset-link.html).
