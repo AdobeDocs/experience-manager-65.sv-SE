@@ -11,10 +11,10 @@ topic-tags: configuring
 discoiquuid: 8bc307d9-fa5c-44c0-bff9-2d68d32a253b
 feature: Configuring
 exl-id: 0a8d7831-d076-45cf-835c-8063ee13d6ba
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b8027a8564f2dce408e7cd5b01f3b86c703c9e3a
 workflow-type: tm+mt
-source-wordcount: '1409'
-ht-degree: 1%
+source-wordcount: '1392'
+ht-degree: 2%
 
 ---
 
@@ -202,8 +202,7 @@ Om du vill utföra följande procedur måste du vara inloggad som administratör
 ### Installera författarcertifikatet {#install-the-author-certificate}
 
 1. Öppna sidan Användarhantering för publiceringsinstansen. ([http://localhost:4503/libs/granite/security/content/useradmin.html](http://localhost:4503/libs/granite/security/content/useradmin.html))
-1. Leta reda på användarkontot som du använder för att köra replikeringsbegäranden och klicka eller tryck på användarnamnet.
-1. Om länken Skapa TrustStore visas i området Kontoinställningar klickar du på länken, skapar ett lösenord för TrustStore och klickar på OK.
+1. Om länken Skapa TrustStore visas i området Global Trust Store klickar du på länken, skapar ett lösenord för TrustStore och klickar på OK.
 1. Klicka på Hantera TrustStore i området Kontoinställningar.
 1. Klicka på Lägg till certifikat från CER-fil.
 1. Kontrollera att alternativet Koppla certifikat till användare är markerat. Klicka på Välj certifikatfil, välj author.cer och klicka på Open.
