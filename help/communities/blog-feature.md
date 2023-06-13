@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: cf8b3d72-30ba-40ca-ae48-b61abbb28802
 docset: aem65
 exl-id: 4650ac36-5506-4efc-be35-fac9e5a58f3d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: fe731e1a8866fbdd1f982d67d6ff29cbf7f0cd7c
 workflow-type: tm+mt
 source-wordcount: '1666'
 ht-degree: 0%
@@ -77,35 +77,35 @@ Under **Inställningar** anger du bloggens grundläggande funktioner:
 
 * **Tillåt miniatyrbild för bifogad fil**
 
-   Om du markerar det här alternativet skapas en miniatyrbild av den bifogade bilden.
+  Om du markerar det här alternativet skapas en miniatyrbild av den bifogade bilden.
 
 * **Maximal storlek på miniatyrbild**
 
-   Maximal storlek (i pixlar) för miniatyrbilden för den bifogade filen. Standardvärdet är 800 x 800.
+  Maximal storlek (i pixlar) för miniatyrbilden för den bifogade filen. Standardvärdet är 800 x 800.
 
 * **Minsta bildstorlek för miniatyrbild**
 
-   Minsta bildstorlek (i byte) för generering av miniatyrbilder för textbundna bilder. Standardvärdet är 100000 byte (100 kB).
+  Minsta bildstorlek (i byte) för generering av miniatyrbilder för textbundna bilder. Standardvärdet är 100000 byte (100 kB).
 
 * **Maximal miniatyrstorlek**
 
-   Maximal storlek (i pixlar) för miniatyrbilden för textbunden bild. Standardvärdet är 800 x 800.
+  Maximal storlek (i pixlar) för miniatyrbilden för textbunden bild. Standardvärdet är 800 x 800.
 
 * **Tillåt behöriga medlemmar**
 
-   Om det här alternativet är markerat kan endast behöriga medlemmar skapa innehåll.
+  Om det här alternativet är markerat kan endast behöriga medlemmar skapa innehåll.
 
 * **Tillåtna behöriga medlemmar**
 
-   Lägg till de behöriga medlemmar som har behörighet att skapa innehåll.
+  Lägg till de behöriga medlemmar som har behörighet att skapa innehåll.
 
 * **Blockera användargenererat innehåll i redigeringsläge för författare**
 
-   Om det här alternativet är aktiverat blockeras användargenererat innehåll när redigering i redigeringsläge.
+  Om det här alternativet är aktiverat blockeras användargenererat innehåll när redigering i redigeringsläge.
 
 * **Journaltitel**
 
-   Den bloggtitel som ska visas på sidan.
+  Den bloggtitel som ska visas på sidan.
 
 >[!NOTE]
 >
@@ -115,85 +115,85 @@ Under **Inställningar** anger du bloggens grundläggande funktioner:
 
 * **Journalbeskrivning**
 
-   Bloggbeskrivningen.
+  Bloggbeskrivningen.
 
 * **Ämnen per sida**
 
-   Definierar antalet blogginlägg/kommentarer som visas per sida. Standardvärdet är 10.
+  Definierar antalet blogginlägg/kommentarer som visas per sida. Standardvärdet är 10.
 
 * **Kontrollerad**
 
-   Om du markerar det här alternativet måste du godkänna att blogginlägg och kommentarer skickas innan de visas på en publicerad webbplats. Standardvärdet är avmarkerat.
+  Om du markerar det här alternativet måste du godkänna att blogginlägg och kommentarer skickas innan de visas på en publicerad webbplats. Standardvärdet är avmarkerat.
 
 * **Stängd**
 
-   Om du markerar det här alternativet stängs bloggen för nya blogginlägg och kommentarer. Standard är avmarkerat.
+  Om du markerar det här alternativet stängs bloggen för nya blogginlägg och kommentarer. Standard är avmarkerat.
 
 * **RTF-redigerare**
 
-   Om du markerar det här alternativet kan blogginlägg och kommentarer skrivas in med kod. Standard är markerat.
+  Om du markerar det här alternativet kan blogginlägg och kommentarer skrivas in med kod. Standard är markerat.
 
 * **Tillåt taggning**
 
-   Om det här alternativet är markerat kan medlemmar lägga till taggetiketter i sina inlägg (se **Taggfält** -fliken). Standard är avmarkerat.
+  Om det här alternativet är markerat kan medlemmar lägga till taggetiketter i sina inlägg (se **Taggfält** -fliken). Standard är avmarkerat.
 
 * **Tillåt filöverföringar**
 
-   Om du markerar det här alternativet kan du tillåta att bifogade filer läggs till i ett blogginlägg eller en kommentar. Standard är avmarkerat.
+  Om du markerar det här alternativet kan du tillåta att bifogade filer läggs till i ett blogginlägg eller en kommentar. Standard är avmarkerat.
 
 * **Maximal filstorlek**
 
-   Endast relevant om `Allow File Uploads` är markerad. Det här fältet begränsar storleken (i byte) på en överförd fil. Standardvärdet är 104857600 (10 MB).
+  Endast relevant om `Allow File Uploads` är markerad. Det här fältet begränsar storleken (i byte) på en överförd fil. Standardvärdet är 104857600 (10 MB).
 
 * **Tillåtna filtyper**
 
-   Endast relevant om `Allow File Uploads` är markerad. En kommaavgränsad lista med filtillägg med&quot;punktavgränsaren&quot;. Till exempel: .jpg, .jpeg, .png, .doc, .docx, .pdf. Om någon filtyp har angetts kan de som inte har angetts inte överföras. Ingen standard har angetts så att alla filtyper tillåts.
+  Endast relevant om `Allow File Uploads` är markerad. En kommaavgränsad lista med filtillägg med&quot;punktavgränsaren&quot;. Till exempel: .jpg, .jpeg, .png, .doc, .docx, .pdf. Om någon filtyp har angetts kan de som inte har angetts inte överföras. Ingen standard har angetts så att alla filtyper tillåts.
 
 * **Maximal filstorlek för bifogad bild**
 
-   Endast relevant om Tillåt filöverföringar är markerat. Maximalt antal byte som en överförd bildfil kan ha. Standardvärdet är 2097152 (2 MB).
+  Endast relevant om Tillåt filöverföringar är markerat. Maximalt antal byte som en överförd bildfil kan ha. Standardvärdet är 2097152 (2 MB).
 
 * **Tillåt svar**
 
-   Om det här alternativet är markerat tillåts svar på kommentarer som har skickats till blogginlägget. Standard är avmarkerat.
+  Om det här alternativet är markerat tillåts svar på kommentarer som har skickats till blogginlägget. Standard är avmarkerat.
 
 * **Tillåt röstning**
 
-   Om du markerar det här alternativet inkluderas röstningsfunktionen med ett blogginlägg. Standard är avmarkerat.
+  Om du markerar det här alternativet inkluderas röstningsfunktionen med ett blogginlägg. Standard är avmarkerat.
 
 * **Tillåt användare att ta bort kommentarer och ämnen**
 
-   Om det här alternativet är markerat kan medlemmar ta bort kommentarer och blogginlägg som de har skickat in. Standard är avmarkerat.
+  Om det här alternativet är markerat kan medlemmar ta bort kommentarer och blogginlägg som de har skickat in. Standard är avmarkerat.
 
 * **Tillåt följande**
 
-   Om du markerar det här alternativet inkluderar du följande funktion för bloggartiklar, som gör att medlemmar kan [meddelad](/help/communities/notifications.md) av nya tjänster. Standard är avmarkerat.
+  Om du markerar det här alternativet inkluderar du följande funktion för bloggartiklar, som gör att medlemmar kan [meddelad](/help/communities/notifications.md) av nya tjänster. Standard är avmarkerat.
 
 * **Tillåt e-postprenumerationer**
 
-   Om det här alternativet är markerat, tillåt medlemmar att meddelas om nya inlägg via e-post ([prenumeration](/help/communities/subscriptions.md)). Kräver `Allow Following` ska kontrolleras och [e-post konfigurerad](/help/communities/email.md). Standard är avmarkerat.
+  Om det här alternativet är markerat, tillåt medlemmar att meddelas om nya inlägg via e-post ([prenumeration](/help/communities/subscriptions.md)). Kräver `Allow Following` ska kontrolleras och [e-post konfigurerad](/help/communities/email.md). Standard är avmarkerat.
 
 * **Visa emblem**
 
-   Om det här alternativet är markerat visas intjänad och tilldelad [emblem](/help/communities/implementing-scoring.md) med en medlems blogginlägg. Standard är avmarkerat.
+  Om det här alternativet är markerat visas intjänad och tilldelad [emblem](/help/communities/implementing-scoring.md) med en medlems blogginlägg. Standard är avmarkerat.
 
 * **Hämta inte svar på listsidan**
 
 * **Tillåt innehåll**
 
-   Om det här alternativet är markerat kan idén identifieras som [innehåll](/help/communities/featured.md). Standard är avmarkerat.
+  Om det här alternativet är markerat kan idén identifieras som [innehåll](/help/communities/featured.md). Standard är avmarkerat.
 
 * **Aktivera omnämnande**
 
-   Om det här alternativet är aktiverat kan registrerade communityanvändare identifiera andra registrerade medlemmar (med förnamn, efternamn, användarnamn) och tagga dem med den vanliga @användarnamnssyntaxen. De taggade användarna får meddelanden om sina omnämnanden.
+  Om det här alternativet är aktiverat kan registrerade communityanvändare identifiera andra registrerade medlemmar (med förnamn, efternamn, användarnamn) och tagga dem med den vanliga @användarnamnssyntaxen. De taggade användarna får meddelanden om sina omnämnanden.
 
 * **Max. omnämnanden**
 
-   Begränsa det maximala antalet omnämnanden som tillåts i ett inlägg. Standardvärdet är 10.
+  Begränsa det maximala antalet omnämnanden som tillåts i ett inlägg. Standardvärdet är 10.
 
 * **Mönster för användargränssnittets omnämnande**
 
-   Ange den tillåtna mönstersträngen för att tagga (@mention) den registrerade användaren i ett inlägg. Till exempel ~{{familyName}}{{givenName}}.
+  Ange den tillåtna mönstersträngen för att tagga (@mention) den registrerade användaren i ett inlägg. Till exempel `~{{familyName}}{{givenName}}`.
 
 #### Fliken Användarmoderering {#user-moderation-tab}
 
@@ -201,31 +201,31 @@ Under **Användarmoderering** anger du modereringsinställningar:
 
 * **Neka inlägg**
 
-   Om det här alternativet är markerat kan pålitliga medlemsmoderatorer neka inlägg och förhindra att posten visas på det offentliga forumet. Standard är avmarkerat.
+  Om det här alternativet är markerat kan pålitliga medlemsmoderatorer neka inlägg och förhindra att posten visas på det offentliga forumet. Standard är avmarkerat.
 
 * **Stäng/öppna avsnitt igen**
 
-   Om det här alternativet är markerat kan pålitliga medlemsmoderatorer stänga ett ämne för ytterligare redigeringar och kommentarer, och kan även öppna ett avsnitt på nytt. Standard är avmarkerat.
+  Om det här alternativet är markerat kan pålitliga medlemsmoderatorer stänga ett ämne för ytterligare redigeringar och kommentarer, och kan även öppna ett avsnitt på nytt. Standard är avmarkerat.
 
 * **Flagga inlägg**
 
-   Om det här alternativet är markerat kan medlemmar flagga andras ämnen eller kommentarer som olämpliga. Standard är avmarkerat.
+  Om det här alternativet är markerat kan medlemmar flagga andras ämnen eller kommentarer som olämpliga. Standard är avmarkerat.
 
 * **Flaggorsakslista**
 
-   Om det här alternativet är markerat kan medlemmarna välja, från en nedrullningsbar lista, orsaken till att ett ämne eller en kommentar har flaggats som olämplig. Standard är avmarkerat.
+  Om det här alternativet är markerat kan medlemmarna välja, från en nedrullningsbar lista, orsaken till att ett ämne eller en kommentar har flaggats som olämplig. Standard är avmarkerat.
 
 * **Anledning till anpassad flagga**
 
-   Om det här alternativet är markerat kan medlemmarna ange en egen orsak till att ett ämne eller en kommentar flaggas som olämplig. Standard är avmarkerat.
+  Om det här alternativet är markerat kan medlemmarna ange en egen orsak till att ett ämne eller en kommentar flaggas som olämplig. Standard är avmarkerat.
 
 * **Modereringströskel**
 
-   Ange hur många gånger ett ämne eller en kommentar måste flaggas av medlemmar innan moderatorerna meddelas. Standardvärdet är 1 (en gång).
+  Ange hur många gånger ett ämne eller en kommentar måste flaggas av medlemmar innan moderatorerna meddelas. Standardvärdet är 1 (en gång).
 
 * **Flaggningsgräns**
 
-   Ange hur många gånger ett ämne eller en kommentar måste flaggas innan det döljs för den offentliga vyn. Om värdet är -1 döljs aldrig det flaggade ämnet eller kommentaren från den offentliga vyn. Annars måste talet vara större än eller lika med modereringströskeln. Standardvärdet är 5.
+  Ange hur många gånger ett ämne eller en kommentar måste flaggas innan det döljs för den offentliga vyn. Om värdet är -1 döljs aldrig det flaggade ämnet eller kommentaren från den offentliga vyn. Annars måste talet vara större än eller lika med modereringströskeln. Standardvärdet är 5.
 
 #### Fliken Taggfält {#tag-field-tab}
 
@@ -233,11 +233,11 @@ Under **Taggfält** anger du vilka taggar som ska användas om **Tillåt taggnin
 
 * **Tillåtna namnutrymmen**
 
-   Relevant om `Allow Tagging` kontrolleras under **Inställningar** -fliken. De taggar som kan användas är begränsade till de inom de namnutrymmeskategorier som kontrolleras. Listan med namnutrymmen innehåller &quot;Standardtaggar&quot; (standardnamnutrymmet) och &quot;Inkludera alla taggar&quot;. Standardvärdet är inget markerat, vilket betyder att alla namnutrymmen är tillåtna.
+  Relevant om `Allow Tagging` kontrolleras under **Inställningar** -fliken. De taggar som kan användas är begränsade till de inom de namnutrymmeskategorier som kontrolleras. Listan med namnutrymmen innehåller &quot;Standardtaggar&quot; (standardnamnutrymmet) och &quot;Inkludera alla taggar&quot;. Standardvärdet är inget markerat, vilket betyder att alla namnutrymmen är tillåtna.
 
 * **Förslagsgräns**
 
-   Ange antalet taggar som ska visas som ett förslag till medlemmens inlägg i forumet. Värdet -1 betyder inga gränser. Standardvärdet är 0.
+  Ange antalet taggar som ska visas som ett förslag till medlemmens inlägg i forumet. Värdet -1 betyder inga gränser. Standardvärdet är 0.
 
 ### Konfigurerar bloggmarginallist {#configuring-blog-sidebar}
 
@@ -249,7 +249,7 @@ Under **Inställningar för journalmarginallist** anger du datumformatet för ar
 
 * **Datumformat**
 
-   Det format som används för att visa arkiv för blogginlägg. Formatet använder platshållare enligt Java-konventionen.
+  Det format som används för att visa arkiv för blogginlägg. Formatet använder platshållare enligt Java-konventionen.
 
    * yyyy: hela året, till exempel 2015
    * yy: kort år, som &quot;15&quot;
@@ -257,11 +257,11 @@ Under **Inställningar för journalmarginallist** anger du datumformatet för ar
    * MMM: kort månad, som Jun
    * MM: månadsnummer, som 06
 
-   Standardvärdet är&quot;yyyy MMMM&quot;, som skulle visas t.ex.&quot;2015 Juni&quot;
+  Standardvärdet är&quot;yyyy MMMM&quot;, som skulle visas t.ex.&quot;2015 Juni&quot;
 
 * **Vytyp**
 
-   Titel och typ av blogginlägg som ska visas i sidlisten. Valet är mellan
+  Titel och typ av blogginlägg som ska visas i sidlisten. Valet är mellan
 
    * Författare
    * Kategorier
@@ -269,13 +269,13 @@ Under **Inställningar för journalmarginallist** anger du datumformatet för ar
 
 * **Bloggkomponentsökväg**
 
-   *(Valfritt)* Platsen för bloggresursen som bloggartiklar ska listas från. Om det lämnas tomt används komponenten för resourceType `social/journal/components/hbs/journal` som visas på samma sida.
+  *(Valfritt)* Platsen för bloggresursen som bloggartiklar ska listas från. Om det lämnas tomt används komponenten för resourceType `social/journal/components/hbs/journal` som visas på samma sida.
 
    * Till exempel, `/content/sites/engage/en/blog/jcr:content/content/primary/blog`
 
 * **Förslagsgräns**
 
-   Antalet bloggartiklar som ska visas. Värdet -1 betyder ingen gräns. Standardvärdet är -1.
+  Antalet bloggartiklar som ska visas. Värdet -1 betyder ingen gräns. Standardvärdet är -1.
 
 ## Site Visitor Experience {#site-visitor-experience}
 

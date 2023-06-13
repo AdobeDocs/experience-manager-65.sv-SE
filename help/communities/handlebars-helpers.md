@@ -10,9 +10,9 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 8b6c1697-d693-41f4-8337-f41658465107
 exl-id: bfb95cae-4b0f-4521-a113-042dc4005a63
-source-git-commit: 1d334c42088342954feb34f6179dc5b134f81bb8
+source-git-commit: fe731e1a8866fbdd1f982d67d6ff29cbf7f0cd7c
 workflow-type: tm+mt
-source-wordcount: '1508'
+source-wordcount: '1509'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 | **[⇐ - funktioner](essentials.md)** | **[Anpassning på serversidan](server-customize.md)** |
 |---|---|
-|  | **[Anpassning på klientsidan](client-customize.md)** |
+|   | **[Anpassning på klientsidan](client-customize.md)** |
 
 Handlister Hjälpprogram är metoder som kan anropas från Handlebars-skript för att underlätta arbetet med SCF-komponenter.
 
@@ -49,19 +49,19 @@ Om safeString är true är den returnerade strängen SafeString.
 
 * **kontext**: Sträng
 
-   (Valfritt) Standard är den tomma strängen
+  (Valfritt) Standard är den tomma strängen
 
 * **maxLength**: Nummer
 
-   (Valfritt) Standard är längden på kontexten.
+  (Valfritt) Standard är längden på kontexten.
 
 * **maxWords**: Nummer
 
-   (Valfritt) Standard är antalet ord i den trimmade strängen.
+  (Valfritt) Standard är antalet ord i den trimmade strängen.
 
 * **safeString**: Boolean
 
-   (Valfritt) Returnerar en Handlebars.SafeString() om true. Standardvärdet är false.
+  (Valfritt) Returnerar en Handlebars.SafeString() om true. Standardvärdet är false.
 
 ### Exempel {#examples}
 
@@ -97,23 +97,23 @@ Ett hjälpmedel för att lägga till två intervall under en div, ett för den f
 
 * **kontext**: Sträng
 
-   (Valfritt) Standard är den tomma strängen.
+  (Valfritt) Standard är den tomma strängen.
 
 * **numChars**: Nummer
 
-   (Valfritt) Det antal tecken som ska visas när inte den fullständiga texten visas. Standardvärdet är 100.
+  (Valfritt) Det antal tecken som ska visas när inte den fullständiga texten visas. Standardvärdet är 100.
 
 * **moreText**: Sträng
 
-   (Valfritt) Den text som ska visas anger att det finns mer text att visa. Standardvärdet är &quot;more&quot;.
+  (Valfritt) Den text som ska visas anger att det finns mer text att visa. Standardvärdet är &quot;more&quot;.
 
 * **ellipsesText**: Sträng
 
-   (Valfritt) Den text som ska visas anger att det finns dold text. Standardvärdet är &quot;..&quot;.
+  (Valfritt) Den text som ska visas anger att det finns dold text. Standardvärdet är &quot;..&quot;.
 
 * **safeString**: Boolean
 
-   (Valfritt) Ett booleskt värde som anger om Handlebars.SafeString() ska användas eller inte innan resultatet returneras. Standardvärdet är false.
+  (Valfritt) Ett booleskt värde som anger om Handlebars.SafeString() ska användas eller inte innan resultatet returneras. Standardvärdet är false.
 
 ### Exempel {#example}
 
@@ -137,11 +137,11 @@ En hjälp som returnerar en formaterad datumsträng.
 
 * **kontext**: Nummer
 
-   (Valfritt) en millisekundförskjutning från 1 januari 1970 (epok). Standard är aktuellt datum.
+  (Valfritt) en millisekundförskjutning från 1 januari 1970 (epok). Standard är aktuellt datum.
 
 * **format**: Sträng
 
-   (Valfritt) Datumformatet som ska användas. Standardvärdet är &quot;YYY-MM-DDTHH:mm:ss.sssZ&quot; och resultatet visas som&quot;2015-03-18T18&quot;:17:13-07:00&quot;
+  (Valfritt) Datumformatet som ska användas. Standardvärdet är &quot;YYY-MM-DDTHH:mm:ss.sssZ&quot; och resultatet visas som&quot;2015-03-18T18&quot;:17:13-07:00&quot;
 
 ### Exempel {#examples-1}
 
@@ -165,11 +165,11 @@ En hjälpfunktion som returnerar innehåll beroende på ett likhetsvillkor.
 
 * **lvalue**: Sträng
 
-   Värdet till vänster som ska jämföras.
+  Värdet till vänster som ska jämföras.
 
 * **rvalue**: Sträng
 
-   Högervärdet som ska jämföras.
+  Högervärdet som ska jämföras.
 
 ### Exempel {#example-1}
 
@@ -189,11 +189,11 @@ En blockhjälp som testar det aktuella värdet för [WCM-läge](https://helpx.ad
 
 * **kontext**: Sträng
 
-   (Valfritt) Den sträng som ska översättas. Obligatoriskt om inget standardvärde har angetts.
+  (Valfritt) Den sträng som ska översättas. Obligatoriskt om inget standardvärde har angetts.
 
 * **läge**: Sträng
 
-   (Valfritt) En kommaavgränsad lista med [WCM-lägen](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/WCMMode.html) för att testa om det är inställt.
+  (Valfritt) En kommaavgränsad lista med [WCM-lägen](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/WCMMode.html) för att testa om det är inställt.
 
 ### Exempel {#example-2}
 
@@ -215,15 +215,15 @@ Se även [Internationalisering av strängar i JavaScript-kod](../../help/sites-d
 
 * **kontext**: Sträng
 
-   (Valfritt) Den sträng som ska översättas. Obligatoriskt om inget standardvärde har angetts.
+  (Valfritt) Den sträng som ska översättas. Obligatoriskt om inget standardvärde har angetts.
 
 * **standard**: Sträng
 
-   (Valfritt) Standardsträngen som ska översättas. Obligatoriskt om ingen kontext har angetts.
+  (Valfritt) Standardsträngen som ska översättas. Obligatoriskt om ingen kontext har angetts.
 
 * **kommentar**: Sträng
 
-   (Valfritt) Ett översättningstips
+  (Valfritt) Ett översättningstips
 
 ### Exempel {#example-3}
 
@@ -246,27 +246,27 @@ Den här hjälpen, som bara är lämplig på serversidan, har funktioner som lik
 
 * **kontext**: Sträng eller objekt
 
-   (Valfritt, såvida du inte anger en relativ sökväg)
+  (Valfritt, såvida du inte anger en relativ sökväg)
 
-   Använd `this` för att skicka det aktuella sammanhanget.
+  Använd `this` för att skicka det aktuella sammanhanget.
 
-   Använd `this.id` för att hämta resursen på `id` för återgivning av begärd resourceType.
+  Använd `this.id` för att hämta resursen på `id` för återgivning av begärd resourceType.
 
 * **resourceType**: Sträng
 
-   (Valfritt) Resurstypen får som standard resurstypen från kontexten.
+  (Valfritt) Resurstypen får som standard resurstypen från kontexten.
 
 * **mall**: Sträng
 
-   Sökväg till komponentskript.
+  Sökväg till komponentskript.
 
 * **bana**: Sträng
 
-   (Obligatoriskt) Sökvägen till resursen. Om sökvägen är relativ måste en kontext anges, annars returneras den tomma strängen.
+  (Obligatoriskt) Sökvägen till resursen. Om sökvägen är relativ måste en kontext anges, annars returneras den tomma strängen.
 
 * **authoringDisabled**: Boolean
 
-   (Valfritt) Standardvärdet är false. Endast för internt bruk.
+  (Valfritt) Standardvärdet är false. Endast för internt bruk.
 
 ### Exempel {#example-4}
 
@@ -286,19 +286,19 @@ Den här hjälpen, som bara är lämplig på serversidan, har funktioner som lik
 
 * **kategorier**: Sträng
 
-   (Valfritt) En lista med kommaavgränsade klientbibliotekskategorier. Detta inkluderar alla JavaScript- och CSS-bibliotek för de angivna kategorierna. Temanamnet extraheras från begäran.
+  (Valfritt) En lista med kommaavgränsade klientbibliotekskategorier. Detta inkluderar alla JavaScript- och CSS-bibliotek för de angivna kategorierna. Temanamnet extraheras från begäran.
 
 * **tema**: Sträng
 
-   (Valfritt) En lista med kommaavgränsade klientbibliotekskategorier. Detta inkluderar alla temarelaterade bibliotek (både CSS och JS) för de angivna kategorierna. Temanamnet extraheras från begäran.
+  (Valfritt) En lista med kommaavgränsade klientbibliotekskategorier. Detta inkluderar alla temarelaterade bibliotek (både CSS och JS) för de angivna kategorierna. Temanamnet extraheras från begäran.
 
 * **js**: Sträng
 
-   (Valfritt) En lista med kommaavgränsade klientbibliotekskategorier. Detta inkluderar alla JavaScript-bibliotek för de angivna kategorierna.
+  (Valfritt) En lista med kommaavgränsade klientbibliotekskategorier. Detta inkluderar alla JavaScript-bibliotek för de angivna kategorierna.
 
 * **css**: Sträng
 
-   (Valfritt) En lista med kommaavgränsade klientbibliotekskategorier. Detta inkluderar alla CSS-bibliotek för de angivna kategorierna.
+  (Valfritt) En lista med kommaavgränsade klientbibliotekskategorier. Detta inkluderar alla CSS-bibliotek för de angivna kategorierna.
 
 ### Exempel {#examples-2}
 
@@ -353,11 +353,11 @@ Till exempel:
 
 * **kontext**: Nummer
 
-   Tidigare kunde man jämföra med&quot;now&quot;. Tiden uttrycks som en millisekundförskjutning från 1 januari 1970 (epok).
+  Tidigare kunde man jämföra med&quot;now&quot;. Tiden uttrycks som en millisekundförskjutning från 1 januari 1970 (epok).
 
 * **daysCutoff**: Nummer
 
-   Antalet dagar sedan innan du växlar till ett faktiskt datum. Standardvärdet är 60.
+  Antalet dagar sedan innan du växlar till ett faktiskt datum. Standardvärdet är 60.
 
 ### Exempel {#example-5}
 
@@ -385,7 +385,7 @@ OBS! det här är inte en validerare och ska inte användas för att skriva attr
 
 * **kontext**: object
 
-   HTML som ska kodas.
+  HTML som ska kodas.
 
 ### Exempel {#example-6}
 
@@ -403,7 +403,7 @@ OBS! det här är inte en validerare och ska inte användas för att skriva åtg
 
 * **kontext**: Objekt
 
-   HTML som ska kodas.
+  HTML som ska kodas.
 
 ### Exempel {#example-7}
 
@@ -421,7 +421,7 @@ OBS! detta är inte en validerare och ska inte användas för att skriva till go
 
 * **kontext**: Objekt
 
-   HTML som ska kodas.
+  HTML som ska kodas.
 
 ### Exempel {#example-8}
 
@@ -439,7 +439,7 @@ OBS! detta kan returnera en tom sträng
 
 * **kontext**: Objekt
 
-   Den URL som ska saneras.
+  Den URL som ska saneras.
 
 ### Exempel {#example-9}
 
@@ -457,7 +457,7 @@ OBS! detta kan returnera en tom sträng
 * Kontexten kan vara ett String-, number-, boolean- eller JSON-dataobjekt.
 * Det går att skicka ett objekt som är inkapslat i den aktuella kontexten som kontext, t.ex. `this.url` eller `this.id` (se följande exempel på enkla och blockerade hjälpmedel).
 
-* Blockhjälpredor är funktioner som kan anropas var som helst i mallen. De kan anropa ett mallblock noll eller flera gånger med olika kontext varje gång. De innehåller ett sammanhang mellan {{#*name*}} and {{/*name*}}.
+* Blockhjälpredor är funktioner som kan anropas var som helst i mallen. De kan anropa ett mallblock noll eller flera gånger med olika kontext varje gång. De innehåller ett sammanhang mellan `{{#*name*}}` och `{{/*name*}}`.
 
 * Handtag ger en slutgiltig parameter för hjälpredor med namnet&quot;options&quot;. Alternativobjektet innehåller
 
@@ -603,4 +603,4 @@ Obs! Hjälpprogrammen för SCF definieras i `/etc/clientlibs/social/commons/scf/
 
 | **[⇐ - funktioner](essentials.md)** | **[Anpassning på serversidan](server-customize.md)** |
 |---|---|
-|  | **[Anpassning på klientsidan](client-customize.md)** |
+|   | **[Anpassning på klientsidan](client-customize.md)** |
