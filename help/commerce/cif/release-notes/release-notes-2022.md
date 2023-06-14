@@ -2,9 +2,9 @@
 title: AEM Content and Commerce Release Notes 2022
 description: AEM Content and Commerce Release Notes 2022
 exl-id: d0a66e70-c4f1-4051-8161-11f07dad0612
-source-git-commit: 0fdff88695646603cec120d25f156f8c918686df
+source-git-commit: 78c584db8c35ea809048580fe5b440a0b73c8eea
 workflow-type: tm+mt
-source-wordcount: '812'
+source-wordcount: '816'
 ht-degree: 4%
 
 ---
@@ -17,7 +17,7 @@ Granska de lägsta systemkraven i tabellen nedan för den CIF-version som du anv
 
 | Komponent | Systemkrav |
 |:-------|:-----:|
-| CIF-tillägg | Minimum: AEM 6.5.7, Magento 2.3.5 GraphQL scheman |
+| CIF-tillägg | Minimum: AEM 6.5.7, Adobe Commerce 2.3.5 GraphQL schemas |
 | CIF-kärnkomponenter | [Systemkrav](https://github.com/adobe/aem-core-cif-components/blob/master/VERSIONS.md) |
 | AEM Project Archetype | [Systemkrav](https://github.com/adobe/aem-project-archetype/blob/master/VERSIONS.md) |
 
@@ -45,7 +45,7 @@ Granska de lägsta systemkraven i tabellen nedan för den CIF-version som du anv
 ### Nyheter {#what-is-new-july}
 
 * Sammanslutning av AEM sidor till produkter och kategorier via AEM sidegenskaper plus en översikt i produktcockpit
-   ![association för produktcockpitsida](/help/assets/CIF/product_cockpit_page_association.png)
+  ![association för produktcockpitsida](/help/assets/CIF/product_cockpit_page_association.png)
 
 ## Releasedatum: Juni 2022
 
@@ -57,7 +57,7 @@ Granska de lägsta systemkraven i tabellen nedan för den CIF-version som du anv
 
 ### Nyheter {#what-is-new-june}
 
-* Produktkatalogsberikning har nu stöd för AEM sidor. Detta gör att författare kan hantera sida - produktassociation.
+* Produktkatalogsberikning har nu stöd för AEM sidor, vilket gör att författare kan hantera sida - produktassociation.
 
 * Olika förbättringar av CIF-kärnkomponenten
 
@@ -65,7 +65,7 @@ Granska de lägsta systemkraven i tabellen nedan för den CIF-version som du anv
 
 * Lägg till inloggningstoken till prishämtning på klientsidan
 
-* Fel sidkomponent i datalagret
+* Fel sidkomponent i datalagret.
 
 ## Releasedatum: Maj 2022
 
@@ -81,17 +81,17 @@ Granska de lägsta systemkraven i tabellen nedan för den CIF-version som du anv
 
 ![översikt över egenskaper för produktcockpit](/help/assets/CIF/product_cockpit_properties_overview.png)
 
-* Förbättrad kompatibilitet och tillförlitlighet för anslutningar från tredje part vid I/O-körning
+* Förbättrad kompatibilitet och tillförlitlighet för tredjepartsanslutningar i I/O-miljön
 
-* Förbättra stödet för överskrivningar av GQL-klientkonfiguration (t.ex. ange anpassad cachelagring)
+* Förbättra stödet för överskrivningar av GQL-klientkonfigurationen (ange t.ex. anpassad cachelagring)
 
 ### Felkorrigeringar {#bug-fixes-may}
 
-* Produktväljarfältet för flera värden visar att andra och ytterligare produkter är ogiltiga
+* Produktväljarfältet för flera värden visar andra och ytterligare produkter som ogiltiga
 
 * Produktväljaren döljs ibland bakom komponenter
 
-## Releasedatum: April, 2022
+## Releasedatum: April 2022
 
 | Komponent | Version | Detaljer |
 |:-------|:-----:|---------------------:|
@@ -103,11 +103,11 @@ Granska de lägsta systemkraven i tabellen nedan för den CIF-version som du anv
 
 * Snabb åtkomst till produktcockpit: Få enkelt tillgång till detaljerad produktinformation med ett enda klick i Sites Editor
 
-   ![Aktivera önskelista](/help/assets/CIF/enable-wishlist.png)
+  ![Aktivera önskelista](/help/assets/CIF/enable-wishlist.png)
 
 * Stöd för ytterligare marknadsföringskomponenter: Komponenter kan konfigureras för att visa ett anrop till åtgärd för tillägg i varukorgen och tilläggslistan
 
-   ![Kortkommando för webbplatsredigeraren till produktcockpit](/help/assets/CIF/sites-editor-shortcut-to-cockpit.png)
+  ![Kortkommando för webbplatsredigeraren till produktcockpit](/help/assets/CIF/sites-editor-shortcut-to-cockpit.png)
 
 ## Releasedatum: Februari 2022
 
@@ -121,9 +121,9 @@ Granska de lägsta systemkraven i tabellen nedan för den CIF-version som du anv
 
 * Beta: AEM CIF Search Core Component support Commerce LiveSearch
 * Förbättrad SEO för scenarier med flera butiker: URL-format för PDP/PLP kan nu konfigureras på en butiksnivå via CIF Cloud Config-egenskaper
-* Produktväljaren har stöd för mellanlagrade produkter via ett nytt filteralternativ i användargränssnittet.  Detta gör att innehållsutvecklare kan förbereda innehållshantering för kommande produktlanseringar
+* Produktväljaren har stöd för mellanlagrade produkter via det nya filteralternativet i användargränssnittet. Gör det möjligt för innehållsutvecklare att förbereda innehållshantering för kommande produktlanseringar
 * Förenklad CIF-konfigurationshantering och felhantering genom att använda CIF Cloud Config-namn i stället för konfigurationsproxy-URL
-* Manuellt kategorival för produktlista och Carousel-komponenter. På så sätt kan innehållsutvecklare använda dessa komponenter på innehållssidor, utanför katalogupplevelsen
+* Manuellt kategorival för produktlista och Carousel-komponenter. Innehållsutvecklare kan använda dessa komponenter på innehållssidor, utanför katalogupplevelsen
 
 ## Releasedatum: Januari 2022
 

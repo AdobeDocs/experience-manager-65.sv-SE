@@ -1,8 +1,6 @@
 ---
 title: Ändra utseendet
-seo-title: Alter the Appearance
 description: Ändra skriptet
-seo-description: Modify the script
 uuid: 30555b9f-da29-4115-9ed5-25f80a247bd6
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -11,9 +9,9 @@ content-type: reference
 discoiquuid: c9d31ed8-c105-453b-bd3c-4660dfd81272
 docset: aem65
 exl-id: cb8f6967-216c-46d3-a7ba-068b0f5e3b94
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 78c584db8c35ea809048580fe5b440a0b73c8eea
 workflow-type: tm+mt
-source-wordcount: '205'
+source-wordcount: '210'
 ht-degree: 1%
 
 ---
@@ -35,7 +33,7 @@ Så här visar du inte avataren bredvid varje publicerad kommentar:
 
 1. Öppna överlägg `comment.hbs`
 
-   * Dubbelklicka på noden `comment.hbs` in `/apps/social/commons/components/hbs/comments/comment folder`
+   * Dubbelklicka på nod `comment.hbs` in `/apps/social/commons/components/hbs/comments/comment folder`
 
 1. Hitta följande rader och ta bort eller kommentera dem:
 
@@ -44,7 +42,7 @@ Så här visar du inte avataren bredvid varje publicerad kommentar:
         <img class="scf-comment-avatar {{#if topLevel}}withTopLevel{{/if}}" src="{{author.avatarUrl}}"></img>
 ```
 
-Radera linjerna eller omge dem med `<!--` och `-->` för att kommentera ut dem. Dessutom läggs tecknen &#39;xxx&#39; till som en visuell indikator på var avataren skulle ha varit.
+Radera linjerna eller omge dem med `<!--` och `-->` så att du kan kommentera ut dem. Dessutom läggs tecknen &#39;xxx&#39; till som en visuell indikator på var avataren skulle ha varit.
 
 ```xml
    xxx
@@ -63,14 +61,14 @@ Radera linjerna eller omge dem med `<!--` och `-->` för att kommentera ut dem. 
 
 Välj **[!UICONTROL Tools]** > **[!UICONTROL Deployment]** > **[!UICONTROL Replication]** och klicka **[!UICONTROL Activate Tree]**.
 
-Ange startsökvägen `/apps/social/commons` och markera **[!UICONTROL Activate]**.
+Ange som startsökväg `/apps/social/commons` och markera **[!UICONTROL Activate]**.
 
 ![verify-content-template](assets/verify-content-template.png)
 
 ### Visa resultat {#view-results}
 
-Om du loggar in på publiceringsinstansen som administratör, t.ex. https://localhost:4503/crx/de som administratör/administratör, kan du verifiera att de överliggande komponenterna finns där.
+Om du loggar in på publiceringsinstansen som administratör, till exempel https://localhost:4503/crx/de som administratör/administratör, kan du kontrollera att de överliggande komponenterna finns där.
 
-Om du loggar ut och loggar in igen som `aaron.mcdonald@mailinator.com/password` och uppdatera sidan, observera att den publicerade kommentaren inte längre visas med en avatar, i stället visas en enkel &#39;xxx&#39;.
+Om du loggar ut och sedan loggar in som `aaron.mcdonald@mailinator.com/password` och uppdatera sidan, observera att en avatar inte visas med den publicerade kommentaren. Istället visas en enkel &#39;xxx&#39;.
 
 ![create-template-component](assets/create-template-component.png)

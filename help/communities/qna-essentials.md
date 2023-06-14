@@ -1,8 +1,6 @@
 ---
 title: QnA Essentials
-seo-title: QnA Essentials
 description: Forumfunktionen Frågor och svar
-seo-description: Questions and answers forum feature
 uuid: c718a8e3-b3bd-4db9-8c0f-6dd973d40583
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -10,9 +8,9 @@ topic-tags: developing
 content-type: reference
 discoiquuid: ceace3aa-78a5-485e-b519-630479e087d8
 exl-id: a7b295c1-cc9d-4881-8016-804b21fc1098
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 78c584db8c35ea809048580fe5b440a0b73c8eea
 workflow-type: tm+mt
-source-wordcount: '249'
+source-wordcount: '239'
 ht-degree: 0%
 
 ---
@@ -30,7 +28,7 @@ Den här sidan innehåller viktig information om hur du arbetar med forumfunktio
    <td>social/qna/components/hbs/qnaforum</td>
   </tr>
   <tr>
-   <td> <a href="scf.md#add-or-include-a-communities-component">oklanderlig</a></td>
+   <td> <a href="scf.md#add-or-include-a-communities-component">include</a></td>
    <td>Nej</td>
   </tr>
   <tr>
@@ -56,15 +54,15 @@ Den här sidan innehåller viktig information om hur du arbetar med forumfunktio
 
 ## Grundläggande för serversidan {#essentials-for-server-side}
 
-* [QnA API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/qna/client/api/package-summary.html)
+* [QnA API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/qna/client/api/package-summary.html)
 
-* [QnA-slutpunkter](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/qna/client/endpoints/package-summary.html)
+* [QnA-slutpunkter](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/qna/client/endpoints/package-summary.html)
 
 * [Anpassningar på serversidan](server-customize.md)
 
 ### QnA-funktion {#qna-function}
 
-En community-webbplatsstruktur som innehåller [QnA-funktion](functions.md#qna-function) har en konfigurerad `QnA` -komponenten, samt inställningar som påverkar moderering och taggning. QnA-funktionen stöder identifiering av en [privilegierad medlemsanvändargrupp](users.md#privileged-members-group).
+En community-webbplatsstruktur som innehåller [QnA-funktion](functions.md#qna-function) har en konfigurerad `QnA` och inställningar som påverkar moderering och taggning. QnA-funktionen stöder identifiering av en [privilegierad medlemsanvändargrupp](users.md#privileged-members-group).
 
 ### Åtkomst till QnA-foruminlägg (UGC) {#accessing-qna-forum-posts-ugc}
 

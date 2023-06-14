@@ -1,6 +1,5 @@
 ---
 title: APIQuick Starts för säkerhetskopiering och återställning
-seo-title: Backup and Restore Service APIQuick Starts
 description: APIQuick Starts för säkerhetskopiering och återställning
 uuid: c3992be2-ceb4-480d-9c8f-71eb0ea66dde
 contentOwner: admin
@@ -10,9 +9,9 @@ topic-tags: develop
 discoiquuid: 813162be-dbf5-4dc1-80ff-e37dbc25ef60
 role: Developer
 exl-id: ae17fd3a-0ba4-4a00-907b-811e500b0e14
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 78c584db8c35ea809048580fe5b440a0b73c8eea
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '246'
 ht-degree: 0%
 
 ---
@@ -21,21 +20,21 @@ ht-degree: 0%
 
 **Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
 
-Java API Quick Start (SOAP) är tillgängligt för API:t för säkerhetskopiering och återställning.
+Java™ API Quick Start (SOAP) finns för API:t för tjänsten Backup and Restore.
 
-[Snabbstart: Gå in i säkerhetskopieringsläge med Java API(SOAP)](backup-restore-service-api-quick.md#quick-start-soap-mode-entering-backup-mode-using-the-java-api)
+[Snabbstart: Gå in i säkerhetskopieringsläge med Java](backup-restore-service-api-quick.md#quick-start-soap-mode-entering-backup-mode-using-the-java-api)
 
-[Snabbstart: Lämna säkerhetskopieringsläge med Java API(SOAP)](backup-restore-service-api-quick.md#quick-start-soap-mode-leaving-backup-mode-using-the-java-api)
+[Snabbstart: Lämna säkerhetskopieringsläge med Java](backup-restore-service-api-quick.md#quick-start-soap-mode-leaving-backup-mode-using-the-java-api)
 
-AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutningsläget bör anges till SOAP.
+AEM Forms-åtgärder kan utföras med AEM Forms starkt typbestämda API och anslutningsläget bör anges till SOAP.
 
 >[!NOTE]
 >
->Snabbstarter i Programmering med AEM Forms är baserade på Forms operativsystem. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>Snabbstarter i Programmering med AEM Forms baseras på Forms operativsystem. Om du använder ett annat operativsystem, till exempel UNIX®, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-## Snabbstart (SOAP-läge): Ange säkerhetskopieringsläge med Java API {#quick-start-soap-mode-entering-backup-mode-using-the-java-api}
+## Snabbstart (SOAP-läge): Gå in i säkerhetskopieringsläge med Java™ API {#quick-start-soap-mode-entering-backup-mode-using-the-java-api}
 
-Följande Java-kodexempel försätts i säkerhetskopieringsläge med en unik etikett i två timmar. När säkerhetskopieringstiden har gått ut eller om säkerhetskopieringsläget uttryckligen har avslutats, återgår formulärservern till att rensa filer från den globala dokumentlagringen. (Se [Läget Säkerhetskopiera på formulärservern aktiveras](/help/forms/developing/preparing-aem-forms-backup.md#entering-backup-mode-on-the-forms-server).)
+Följande Java™-kodexempel försätts i säkerhetskopieringsläge med en unik etikett i två timmar. När säkerhetskopieringstiden har gått ut eller om säkerhetskopieringsläget uttryckligen har avslutats, återgår Forms Server till att rensa filer från den globala dokumentlagringen. (Se [Läget för säkerhetskopiering på Forms Server aktiveras](/help/forms/developing/preparing-aem-forms-backup.md#entering-backup-mode-on-the-forms-server).)
 
 ```java
  /*
@@ -123,7 +122,7 @@ Följande Java-kodexempel försätts i säkerhetskopieringsläge med en unik eti
              // Enter backup mode on the forms server server
              BackupModeEntryResult backupResult = backup.enterBackupMode(backUpLabel,minsInBackupMode, continousCoverage);
  
-             // Get information from entering backup mode ontheforms server server.
+             // Get information from entering backup mode on the forms server server.
              if (backupResult != null)
              {
                  System.out.println("Start time is: " + backupResult.getStartTime());
@@ -148,9 +147,9 @@ Följande Java-kodexempel försätts i säkerhetskopieringsläge med en unik eti
  
 ```
 
-## Snabbstart (SOAP-läge): Lämna säkerhetskopieringsläge med Java API {#quick-start-soap-mode-leaving-backup-mode-using-the-java-api}
+## Snabbstart (SOAP-läge): Lämna säkerhetskopieringsläge med Java™ API {#quick-start-soap-mode-leaving-backup-mode-using-the-java-api}
 
-Följande Java-kodexempel gör att en Forms-server lämnar säkerhetskopieringsläget och återgår till att rensa filer från den globala dokumentlagringen. (Se [Avslutar säkerhetskopieringsläge på formulärservern](/help/forms/developing/preparing-aem-forms-backup.md#leaving-backup-mode-on-the-forms-server).)
+Följande Java™-kodexempel gör att en Forms-server lämnar säkerhetskopieringsläget och återgår till att rensa filer från den globala dokumentlagringen. (Se [Avslutar säkerhetskopieringsläge på Forms Server](/help/forms/developing/preparing-aem-forms-backup.md#leaving-backup-mode-on-the-forms-server).)
 
 ```java
  /*

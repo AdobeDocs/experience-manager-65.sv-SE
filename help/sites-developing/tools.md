@@ -1,8 +1,6 @@
 ---
 title: Testnings- och spårningsverktyg
-seo-title: Testing and Tracking Tools
 description: AEM tillhandahåller ett ramverk för testning av komponentens användargränssnitt och en mekanism för testning och felsökning av komponenter
-seo-description: AEM provides a framework for testing component UI and a mechanism for testing and debugging components
 uuid: 12abedb5-4ee7-4389-9340-e628adbbc053
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,7 +9,7 @@ content-type: reference
 discoiquuid: 3cf0fd8d-7fc8-468a-bb1e-1debb68a82a5
 docset: aem65
 exl-id: bb5d1c7c-56ce-4d1e-a3cb-4e74d6922137
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 78c584db8c35ea809048580fe5b440a0b73c8eea
 workflow-type: tm+mt
 source-wordcount: '292'
 ht-degree: 0%
@@ -31,15 +29,15 @@ Här följer två testverktyg för öppen källkod:
 
 **Selen**
 
-Selenium används för funktionstestning i en webbläsare med en användare per aktivitet. Det registrerar teststeg (klickningar) som HTML-tabeller eller Java-klasser.
+Selenium används för funktionstestning i en webbläsare med en användare per aktivitet. Här registreras teststeg (klick) som antingen HTML-tabeller eller Java™-klasser.
 
-Mer information finns i [https://www.seleniumhq.org/](https://www.seleniumhq.org/).
+Mer information finns i [https://www.selenium.dev/](https://www.selenium.dev/).
 
 **JMeter**
 
 JMeter används för att spåra förfrågningar och kan användas för funktions-, prestanda- och stresstester.
 
-Mer information finns i [https://jakarta.apache.org/jmeter/](https://jakarta.apache.org/jmeter).
+Mer information finns i [https://jmeter.apache.org/](https://jmeter.apache.org/).
 
 Det finns också många egna verktyg för att automatisera tester och hantera testplaner.
 
@@ -55,13 +53,13 @@ Ett felsökningssystem som kan konfigureras efter dina egna behov.
 
 Även om kalkylblad inte är specifikt ett felsökningsverktyg är de ofta *mis* används för detta eftersom de är lätta att förstå och de flesta användare har erfarenhet av sin funktionalitet.
 
-Om dessa används för spårning:
+Om de här kalkylbladen används för spårning:
 
 * de ska vara enkla.
 * Antalet enskilda kalkylblad bör begränsas till ett minimum.
 * måste uppdateras regelbundet.
-* endast en överordnad kopia ska bevaras och alla ska veta var den överordnad kopian finns.
+* endast en primär kopia ska bevaras och alla ska veta var den primära kopian finns.
 * De ska vara tillgängliga för alla projektmedlemmar.
-* Om säkerhet är ett problem (ofta i stora företag) och gemensam åtkomst inte är möjlig, kan kopior distribueras så länge alla förstår att det är kopior som inte kan uppdateras.
+* Om säkerhet är ett problem (ofta i stora företag) och gemensam åtkomst inte är möjlig, kan kopior distribueras så länge alla förstår att dessa kalkylblad är kopior och inte kan uppdateras.
 
 Det finns också många egna verktyg för att spåra buggar och funktionsbehov.

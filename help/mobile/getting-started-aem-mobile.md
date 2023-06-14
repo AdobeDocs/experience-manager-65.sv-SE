@@ -1,8 +1,6 @@
 ---
-title: Komma igång med AEM Mobile
-seo-title: Getting Started with AEM Mobile
-description: Den här sidan fungerar som en landningssida för AEM Mobile. Följ den här sidan som utgångspunkt för att lära dig mer om de tre olika sätten att skapa appar.
-seo-description: This page serves as a landing page for AEM Mobile. Follow this page as a starting point to learn about the three different ways for creating apps.
+title: Komma igång med Adobe Experience Manager Mobile
+description: Den här sidan fungerar som en landningssida för Adobe Experience Manager Mobile. Följ den här sidan som utgångspunkt så att du kan lära dig mer om de tre olika sätten att skapa appar.
 uuid: a5398216-f9bb-4009-a9f8-a4f0135db67c
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
@@ -10,24 +8,24 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 724e09c2-3df3-4080-a0d4-ee2ede483791
 exl-id: a2bc9a50-6455-4703-8829-964fab313e96
-source-git-commit: 85d39e59b82fdfdcd310be61787a315668aebe38
+source-git-commit: 78c584db8c35ea809048580fe5b440a0b73c8eea
 workflow-type: tm+mt
-source-wordcount: '193'
+source-wordcount: '201'
 ht-degree: 0%
 
 ---
 
-# Komma igång med AEM Mobile{#getting-started-with-aem-mobile}
+# Komma igång med Adobe Experience Manager Mobile{#getting-started-with-aem-mobile}
 
 >[!NOTE]
 >
->Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (t.ex. Reagera). [Läs mer](/help/sites-developing/spa-overview.md).
+>Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (till exempel React). [Läs mer](/help/sites-developing/spa-overview.md).
 
 >[!CAUTION]
 >
->Befintliga AEM Mobile-appskunder som migrerar från AEM 6.2 eller 6.3 till AEM 6.5 kan fortsätta använda AEM Mobile-appar genom att hämta ett paket från PackageShare. Nya installationer av AEM 6.5 stöder dock inte AEM Mobile Apps-funktioner.
+>Befintliga användare av Adobe Experience Manager (AEM) mobilappar som migrerar från AEM 6.2 eller 6.3 till AEM 6.5 kan fortsätta använda AEM Mobile-appar genom att hämta ett paket från paketresursen. Nya installationer av AEM 6.5 stöder dock inte AEM Mobile Apps-funktioner.
 
-Adobe Experience Manager (AEM) Mobile är en del av Adobe Experience Manager flerkanaliga digitala plattform som också utnyttjar AEM Assets, Sites, Screens, Workflow, User Manager, Commerce och Forms. AEM Mobile erbjuder enastående flexibilitet vid driftsättningen, vilket gör det möjligt för företag att använda olika innehållskällor.
+AEM Mobile är en del av Adobe Experience Manager digitala flerkanalsplattform som också använder AEM Assets, Sites, Screens, Workflow, User Manager, Commerce och Forms. AEM Mobile erbjuder enastående flexibilitet vid driftsättningen, vilket gör att företag kan använda olika innehållskällor.
 
 AEM Mobile erbjuder flera metoder för att skapa appar. Du kan skapa appar på tre olika sätt:
 

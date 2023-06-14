@@ -1,8 +1,6 @@
 ---
 title: Utveckla appar med PhoneGap CLI
-seo-title: Developing Apps with PhoneGap CLI
-description: Följ den här sidan om du vill veta mer om hur du utvecklar appar med PhoneGap CLI.
-seo-description: Follow this page to learn about developing apps with PhoneGap CLI.
+description: Läs om hur du utvecklar appar med PhoneGap CLI.
 uuid: 9a66171d-19af-40db-9c07-f5dd9561e1b5
 contentOwner: User
 content-type: reference
@@ -10,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: 4a034e15-3394-4be3-9e8e-bc894668946a
 exl-id: fbeceb70-b199-478b-907b-253ed212ff99
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 78c584db8c35ea809048580fe5b440a0b73c8eea
 workflow-type: tm+mt
-source-wordcount: '696'
+source-wordcount: '689'
 ht-degree: 0%
 
 ---
@@ -21,11 +19,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (t.ex. Reagera). [Läs mer](/help/sites-developing/spa-overview.md).
+>Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (till exempel React). [Läs mer](/help/sites-developing/spa-overview.md).
 
 Som utvecklare kan du när som helst köra programmet på en enhet eller i en emulator, förutsatt att du har konfigurerat utvecklingsmiljön.
 
-För att kunna köra följande exempel behöver du ett system som kör OSx (Mac) med Xcode, eller ett Mac/Win/Linux-system med Android SDK installerat.
+För att köra följande exempel behöver du ett system som kör OS X (Mac) med Xcode, eller ett Mac/Win/Linux-system med Android™ SDK installerat.
 
 ## Bootstrap din utvecklingsmiljö {#bootstrap-your-development-environment}
 
@@ -33,17 +31,17 @@ För att kunna köra följande exempel behöver du ett system som kör OSx (Mac)
 
 För iOS: Om du vill utveckla för iPhone och iPad behöver du Apple Xcode IDE.
 
-* Ladda ned kostnadsfritt [här](https://developer.apple.com/xcode/downloads/).
+* Ladda ned kostnadsfritt [här](https://idmsa.apple.com/IDMSWebAuth/signin?appIdKey=891bd3417a7776362562d2197f89480a8547b108fd934911bcbea0110d07f757&amp;path=%2Fdownload%2F&amp;rv=1).
 * [PhoneGap iOS - plattformshandbok](https://docs.phonegap.com/en/4.0.0/guide_platforms_ios_index.md.html#iOS%20Platform%20Guide)
 
-För Android: Om du vill utveckla för iPhone och iPad behöver du Google Android Studio IDE.
+För Android™: För att kunna utveckla för iPhone och iPad behöver du Google Android™ Studio IDE.
 
-* Ladda ned kostnadsfritt [här](https://developer.android.com/sdk/index.html).
-* [Plattformshandbok för PhoneGap Android](https://docs.phonegap.com/en/4.0.0/guide_platforms_android_index.md.html#Android%20Platform%20Guide)
+* Ladda ned kostnadsfritt [här](https://developer.android.com/studio).
+* [Plattformshandbok för PhoneGap Android™](https://docs.phonegap.com/en/4.0.0/guide_platforms_android_index.md.html#Android%20Platform%20Guide)
 
 ## Hämta källan {#download-the-source}
 
-När du har startat om utvecklingsmiljön hämtar du källan från AEM App Build Tile:
+När du har startat utvecklingsmiljön hämtar du källan från AEM App Build Tile:
 
 * Klicka på den nedrullningsbara menyn PhoneGap Build.
 
@@ -58,7 +56,7 @@ När du har startat om utvecklingsmiljön hämtar du källan från AEM App Build
 >
 >Utvecklingskällan innehåller det senaste läget för din app, med ändringar som inte har mellanlagrats. Använd mellanlagringskällan för att skapa releaseförslag för att skicka till appbutiksleverantörer.
 >
->Om du aldrig mellanlagring av programmet aktiveras mellanlagringsarbetsflödet när du väljer Förproduktion (tips: detta visas som en mellanlagrad app i PhoneGap Enterprise Viewer App som finns i AppStore och Google PlayStore).
+>Om du aldrig mellanlagring av programmet aktiveras mellanlagringsarbetsflödet när du väljer Förproduktion (tips: visas som en mellanlagrad app i PhoneGap Enterprise Viewer App som finns i AppStore och Google PlayStore).
 
 * Klicka på Hämta och spara ZIP-filen på datorn.
 * Extrahera den hämtade ZIP-filen till arbetsytan.
@@ -87,19 +85,18 @@ phonegap run ios
 >
 >Om du har problem kan du gå tillbaka till grunderna för felsökning -
 >
->1. Skapa en ny mapp (mkdir test)
+>1. Skapa en mapp (mkdir test)
 >1. Navigera till den nya mappen (cd test)
->1. Kör &#39;phonegap create helloWorld&#39;
+>1. Kör `phonegap create helloWorld`
 >1. Navigera till helloWorld (cd helloWorld)
->1. Kör &#39;phonegap run android (eller ersätt android med ios som ovan).
->1. Emulatorn kommer att öppna och köra din nya PhoneGap-app och säga &#39;Device Ready&#39; om JavaScript-bryggan till native fungerar.
-
+>1. Kör `phonegap run android` (eller ersätt Android med iOS enligt ovan).
+>1. Emulatorn öppnar och kör din nya PhoneGap-app med namnet&quot;Device Ready&quot; om JavaScript Bridge till native fungerar.
 >
->Detta verifierar att PhoneGap CLI-utvecklingsmiljön fungerar som den ska.
+>Denna felsökning verifierar att PhoneGap CLI-utvecklingsmiljön körs korrekt.
 
-## Felsöka Javascript med felsökningen Safari och IOS {#debug-javascripts-with-safari-and-ios-debug}
+## Felsöka JavaScript med felsökning i Safari och IOS {#debug-javascripts-with-safari-and-ios-debug}
 
-Du kan felsöka appens JavaScript-skript med hjälp av utvecklarverktygen i Safari, på samma sätt som med ett webbprogram.
+Du kan felsöka appens JavaScript med hjälp av utvecklarverktygen i Safari, på samma sätt som med ett webbprogram.
 
 ## Aktivera Safari Developer Tools {#enable-safari-developer-tools}
 
@@ -122,7 +119,7 @@ Så här aktiverar du utvecklarverktygen:
 Du kan ansluta Safari till en iOS-enhet eller emulator.
 
 * Navigera till rotkatalogen för den extraherade källan i ett konsolfönster.
-* Ange följande kommando för att starta programmet på enheten eller emulatorn.
+* Ange följande kommando så att du kan starta programmet på enheten eller emulatorn.
 
 ```xml
 phonegap run <platform> --device
@@ -141,7 +138,7 @@ phonegap run <platform> --emulator
 
 ## Felsöka JavaScript med Safaris webbinspektör {#debug-javascript-with-safari-s-web-inspector}
 
-Du kan ange brytpunkter var som helst i källan. När du interagerar med emulatorn eller enheten stoppas körningen av appen vid dessa brytpunkter. Du kan stega dig igenom körningen och kontrollera värdena i variabler.
+Du kan ange brytpunkter var som helst i källan. När du interagerar med emulatorn eller enheten slutar appen att köras vid dessa brytpunkter. Du kan stega dig igenom körningen och kontrollera värdena i variabler.
 
 * Klicka på Resurser i webbinspektören
 * Navigera i källträdet och klicka på den önskade källfilen

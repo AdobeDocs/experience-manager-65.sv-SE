@@ -1,8 +1,6 @@
 ---
 title: Skapa anpassade tillägg
-seo-title: Creating Custom Extensions
-description: Du kan anropa din anpassade kod i Adobe Campaign från AEM eller från AEM till Adobe Campaign
-seo-description: You can call your custom code in Adobe Campaign from AEM or from AEM to Adobe Campaign
+description: Du kan anropa din anpassade kod i Adobe Campaign från AEM eller från AEM till Adobe Campaign.
 uuid: 8392aa0d-06cd-4b37-bb20-f67e6a0550b1
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,9 +8,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: f536bcc1-7744-4f05-ac6a-4cec94a1ffb6
 exl-id: 0702858e-5e46-451f-9ac3-40a4fec68ca0
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 78c584db8c35ea809048580fe5b440a0b73c8eea
 workflow-type: tm+mt
-source-wordcount: '518'
+source-wordcount: '510'
 ht-degree: 0%
 
 ---
@@ -32,21 +30,21 @@ Se [Integrera AEM med Adobe Campaign 6.1](/help/sites-administering/campaignonpr
 
 ## Exempel 1: AEM till Adobe Campaign {#example-aem-to-adobe-campaign}
 
-Standardintegrationen mellan AEM och Campaign baseras på JSON och JSSP (JavaScript Server Page). Dessa JSSP-filer finns i Campaign-konsolen och börjar med **amc** (Adobe Marketing Cloud).
+Standardintegrationen mellan AEM och Campaign baseras på JSON och JSSP (JavaScript Server Page). Dessa JSSP-filer finns i Campaign-konsolen och börjar med **aec** (Adobe Experience Cloud).
 
 ![chlimage_1-15](assets/chlimage_1-15a.png)
 
 >[!NOTE]
 >
->[I det här exemplet finns Geometrixx](/help/sites-developing/we-retail.md), som är tillgängligt från Paketresurs.
+>[I det här exemplet finns mer information i Geometrixx](/help/sites-developing/we-retail.md), som är tillgängligt från Paketresurs.
 
-I det här exemplet skapar vi en ny anpassad JSSP-fil och anropar den från AEM sida för att hämta resultatet. Detta kan till exempel användas för att hämta data från Adobe Campaign eller för att spara data i Adobe Campaign.
+I det här exemplet skapades en ny anpassad JSSP-fil som anropar den från AEM sida för att hämta resultatet. Den kan till exempel användas för att hämta data från Adobe Campaign eller för att spara data i Adobe Campaign.
 
-1. Om du vill skapa en ny JSSP-fil i Adobe Campaign klickar du på **Nytt** ikon.
+1. Om du vill skapa en JSSP-fil i Adobe Campaign klickar du på **Nytt** ikon.
 
    ![](do-not-localize/chlimage_1-4a.png)
 
-1. Ange namnet på den här JSSP-filen. I det här exemplet använder vi **cus:custom.jssp** (d.v.s. i **kus** namnutrymme).
+1. Ange namnet på den här JSSP-filen. I det här exemplet **cus:custom.jssp** används (vilket betyder att det finns i **kus** namnutrymme).
 
    ![chlimage_1-16](assets/chlimage_1-16a.png)
 
@@ -60,10 +58,10 @@ I det här exemplet skapar vi en ny anpassad JSSP-fil och anropar den från AEM 
    ```
 
 1. Spara ditt arbete. Det återstående arbetet är i AEM.
-1. Skapa en enkel servett på AEM sida för att anropa denna JSSP. I det här exemplet antar vi följande:
+1. Skapa en enkel servlet på AEM sida så att du kan anropa den här JSSP:en. I det här exemplet kan du anta följande:
 
    * Kopplingen fungerar mellan AEM och Campaign
-   * Kampanjmolntjänsten är konfigurerad på **/content/geometrixx-outdoor**
+   * Kampanjmolntjänsten är konfigurerad för **/content/geometrixx-outdoor**
 
    Det viktigaste objektet i det här exemplet är **GenericCampaignConnector**, som gör att du kan anropa (hämta och posta) jssp-filer på Adobe Campaign-sidan.
 
@@ -79,7 +77,7 @@ I det här exemplet skapar vi en ny anpassad JSSP-fil och anropar den från AEM 
    return results.bodyAsString();
    ```
 
-1. Som du ser i det här exemplet måste du skicka inloggningsuppgifterna till samtalet. Du kan få detta via metoden getCredentials() där du skickar en sida som har molntjänsten Campaign konfigurerad.
+1. I det här exemplet måste du skicka inloggningsuppgifterna till anropet. Du kan hämta dem med metoden getCredentials() där du skickar en sida som har molntjänsten Campaign konfigurerad.
 
    ```xml
    // page containing the cloudservice for Adobe Campaign
@@ -170,9 +168,9 @@ AEM erbjuder API:er som kan hämta objekt var som helst i platadminutforskarvyn.
 
 >[!NOTE]
 >
->[I det här exemplet finns Geometrixx](/help/sites-developing/we-retail.md), som är tillgängligt från Paketresurs.
+>[I det här exemplet finns mer information i Geometrixx](/help/sites-developing/we-retail.md), som är tillgängligt från Paketresurs.
 
-För varje nod i Utforskaren finns det ett API som är länkat till det. Exempel:
+För varje nod i Utforskaren finns det ett API som är länkat till det. För noden:
 
 * [http://localhost:4502/siteadmin#/content/campaigns/geometrixx/scott-recommends](http://localhost:4502/siteadmin#/content/campaigns/geometrixx/scott-recommends)
 
@@ -180,11 +178,11 @@ API:t är:
 
 * [http://localhost:4502/content/campaigns/geometrixx/scott-recommends.1.json](http://localhost:4502/content/campaigns/geometrixx/scott-recommends.2.json)
 
-Slutet av URL:en **.1.json** kan ersättas med **.2.json**, **.3.json**, enligt det antal undernivåer du är intresserad av att hämta För att få alla nyckelordet **oändlighet** kan användas:
+Slutet av URL:en **.1.json** kan ersättas med **.2.json**, **.3.json**, beroende på hur många delnivåer du är intresserad av att få. Om du vill få alla nyckelordet, **oändlighet** kan användas:
 
 * [http://localhost:4502/content/campaigns/geometrixx/scott-recommends.infinity.json](http://localhost:4502/content/campaigns/geometrixx/scott-recommends.2.json)
 
-För att nu kunna använda API:t måste vi veta att AEM som standard använder grundläggande autentisering.
+För att förbruka API:t använder AEM som standard grundläggande autentisering.
 
 Ett JS-bibliotek med namnet **amcIntegration.js** finns i 6.1.1 (build 8624 och senare) som implementerar den logiken bland flera andra.
 

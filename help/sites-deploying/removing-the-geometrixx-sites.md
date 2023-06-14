@@ -1,16 +1,14 @@
 ---
 title: Ta bort Geometrixx
-seo-title: Removing the Geometrixx Sites
 description: Lär dig hur du tar bort exempelinnehållet i Geometrixx.
-seo-description: Learn how to remove the sample Geometrixx content.
 uuid: 07d20837-3375-4e64-bb07-3e4d10452335
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 discoiquuid: 56761a36-ce21-46e1-856f-75a7e94acae9
-source-git-commit: 1f7a45adc73b407c402a51b061632e72d97ca306
+source-git-commit: 78c584db8c35ea809048580fe5b440a0b73c8eea
 workflow-type: tm+mt
-source-wordcount: '132'
+source-wordcount: '126'
 ht-degree: 0%
 
 ---
@@ -38,11 +36,11 @@ Det finns också ett superpaket:
 
 * `cq-geometrixx-all-pkg-5.6.12.zip`
 
-Detta paket innehåller alla ovanstående individuella paket. Om du vill ta bort allt geometrixrelaterat innehåll samtidigt klickar du på **Avinstallera** på det här paketet. Superpaketet försätts i det avinstallerade läget och alla enskilda paket försvinner från pakethanterarvyn.
+Detta paket innehåller alla ovanstående individuella paket. Om du vill ta bort allt geometrixrelaterat innehåll samtidigt klickar du på **Avinstallera** på det här paketet. Superpaketet försätts i avinstallerat läge och alla enskilda paket försvinner från pakethanterarvyn.
 
 Du har nu en tom AEM utan några demonstrationssajter.
 
 >[!NOTE]
 >
->När du uppgraderar installeras geometrixx-webbplatser om automatiskt. Du kan behöva ta bort geometrixx-webbplatser efter uppgraderingen om du inte vill ha dessa exempel.
+>Vid uppgradering installeras Geometrixx om automatiskt. Ta bort Geometrixx webbplatser efter uppgraderingen om du inte vill ha dessa exempel.
 
