@@ -1,8 +1,6 @@
 ---
 title: Bloggfunktion
-seo-title: Blog Feature
 description: Community-information i ett journalformat
-seo-description: Community information in a journaling format
 uuid: 7323063f-81e8-45c3-9035-bf7df6124830
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -11,9 +9,9 @@ content-type: reference
 discoiquuid: cf8b3d72-30ba-40ca-ae48-b61abbb28802
 docset: aem65
 exl-id: 4650ac36-5506-4efc-be35-fac9e5a58f3d
-source-git-commit: fe731e1a8866fbdd1f982d67d6ff29cbf7f0cd7c
+source-git-commit: d673a447e9ce2377c8645c87f12be81cbad06238
 workflow-type: tm+mt
-source-wordcount: '1666'
+source-wordcount: '1652'
 ht-degree: 0%
 
 ---
@@ -34,7 +32,7 @@ Bloggfunktionen innehåller:
 * Inbäddat innehåll i sociala nätverk ([Stöd för inbäddning](/help/communities/blog-developer-basics.md#allowing-rich-media))
 * Snabbläge
 * Schemalagd publicering
-* Skapa för räkning (en [behörig medlem](/help/communities/users.md#privileged-members-group) kan skapa innehåll för en annan community-medlems räkning)
+* Skapa för räkning (en [behörig medlem](/help/communities/users.md#privileged-members-group) kan skapa innehåll för en annan community-medlem)
 * [Kontext- och gruppmoderering](/help/communities/moderate-ugc.md) bloggartiklar och kommentarer
 
 I det här avsnittet av dokumentationen beskrivs:
@@ -55,17 +53,17 @@ Om du vill lägga till en blogg på en sida i redigeringsläge använder du komp
 * `Communities / Blog`
 * `Communities / Blog Sidebar`
 
-och dra dem till en plats på en sida där bloggen ska visas.
+Dra dem till en plats på en sida där bloggen ska visas.
 
 Nödvändig information finns på [Grunderna för communitykomponenter](/help/communities/basics.md).
 
-När [nödvändiga bibliotek på klientsidan](/help/communities/blog-developer-basics.md#essentials-for-client-side) ingår så här `Blog` visas:
+När [nödvändiga bibliotek på klientsidan](/help/communities/blog-developer-basics.md#essentials-for-client-side) ingår `Blog` visas här:
 
 ![add-blog-component](assets/add-blog-component.png)
 
 ### Konfigurerar blogg {#configuring-blog}
 
-Markera den monterade `Blog` -komponenten som ska få åtkomst till och markera `Configure` som öppnar redigeringsdialogrutan.
+Markera den monterade `Blog` så att du kan komma åt och välja `Configure` -ikonen som öppnar dialogrutan för redigering.
 
 ![konfigurera](assets/configure-new.png)
 
@@ -101,7 +99,7 @@ Under **Inställningar** anger du bloggens grundläggande funktioner:
 
 * **Blockera användargenererat innehåll i redigeringsläge för författare**
 
-  Om det här alternativet är aktiverat blockeras användargenererat innehåll när redigering i redigeringsläge.
+  Om det här alternativet är aktiverat blockeras användargenererat innehåll när du redigerar i redigeringsläge.
 
 * **Journaltitel**
 
@@ -147,7 +145,7 @@ Under **Inställningar** anger du bloggens grundläggande funktioner:
 
 * **Tillåtna filtyper**
 
-  Endast relevant om `Allow File Uploads` är markerad. En kommaavgränsad lista med filtillägg med&quot;punktavgränsaren&quot;. Till exempel: .jpg, .jpeg, .png, .doc, .docx, .pdf. Om någon filtyp har angetts kan de som inte har angetts inte överföras. Ingen standard har angetts så att alla filtyper tillåts.
+  Endast relevant om `Allow File Uploads` är markerad. En kommaavgränsad lista med filtillägg med punktavgränsaren. Till exempel: .jpg, .jpeg, .png, .doc, .docx, .pdf. Om någon filtyp anges går det inte att överföra de filtyper som inte har angetts. Ingen standard har angetts så att alla filtyper tillåts.
 
 * **Maximal filstorlek för bifogad bild**
 
@@ -181,11 +179,11 @@ Under **Inställningar** anger du bloggens grundläggande funktioner:
 
 * **Tillåt innehåll**
 
-  Om det här alternativet är markerat kan idén identifieras som [innehåll](/help/communities/featured.md). Standard är avmarkerat.
+  Om det här alternativet är markerat identifieras idén som [innehåll](/help/communities/featured.md). Standard är avmarkerat.
 
 * **Aktivera omnämnande**
 
-  Om det här alternativet är aktiverat kan registrerade communityanvändare identifiera andra registrerade medlemmar (med förnamn, efternamn, användarnamn) och tagga dem med den vanliga @användarnamnssyntaxen. De taggade användarna får meddelanden om sina omnämnanden.
+  Om det här alternativet är aktiverat kan registrerade communityanvändare identifiera andra registrerade medlemmar (med förnamn, efternamn, användarnamn) och tagga dem med den vanliga @användarnamnssyntaxen. De taggade användarna får meddelanden om sina egna omnämnanden.
 
 * **Max. omnämnanden**
 
@@ -193,7 +191,7 @@ Under **Inställningar** anger du bloggens grundläggande funktioner:
 
 * **Mönster för användargränssnittets omnämnande**
 
-  Ange den tillåtna mönstersträngen för att tagga (@mention) den registrerade användaren i ett inlägg. Till exempel `~{{familyName}}{{givenName}}`.
+  Ange den tillåtna mönstersträngen för att tagga (@mention) den registrerade användaren i ett inlägg. Till exempel, `~{{familyName}}{{givenName}}`.
 
 #### Fliken Användarmoderering {#user-moderation-tab}
 
@@ -229,11 +227,11 @@ Under **Användarmoderering** anger du modereringsinställningar:
 
 #### Fliken Taggfält {#tag-field-tab}
 
-Under **Taggfält** anger du vilka taggar som ska användas om **Tillåt taggning** kontrolleras på **Inställningar** tab :
+Under **Taggfält** anger du vilka taggar som kan användas om **Tillåt taggning** kontrolleras på **Inställningar** tab :
 
 * **Tillåtna namnutrymmen**
 
-  Relevant om `Allow Tagging` kontrolleras under **Inställningar** -fliken. De taggar som kan användas är begränsade till de inom de namnutrymmeskategorier som kontrolleras. Listan med namnutrymmen innehåller &quot;Standardtaggar&quot; (standardnamnutrymmet) och &quot;Inkludera alla taggar&quot;. Standardvärdet är inget markerat, vilket betyder att alla namnutrymmen är tillåtna.
+  Relevant om `Allow Tagging` kontrolleras under **Inställningar** -fliken. De taggar som kan användas är begränsade till de taggar som finns i de namnutrymmeskategorier som är markerade. Listan med namnutrymmen innehåller&quot;Standardtaggar&quot; (standardnamnutrymmet) och&quot;Inkludera alla taggar&quot;. Standardvärdet är inget markerat, vilket betyder att alla namnutrymmen är tillåtna.
 
 * **Förslagsgräns**
 
@@ -249,7 +247,7 @@ Under **Inställningar för journalmarginallist** anger du datumformatet för ar
 
 * **Datumformat**
 
-  Det format som används för att visa arkiv för blogginlägg. Formatet använder platshållare enligt Java-konventionen.
+  Det format som används för att visa arkiv för blogginlägg. Formatet använder platshållare enligt Java™-konventionen.
 
    * yyyy: hela året, till exempel 2015
    * yy: kort år, som &quot;15&quot;
@@ -279,7 +277,7 @@ Under **Inställningar för journalmarginallist** anger du datumformatet för ar
 
 ## Site Visitor Experience {#site-visitor-experience}
 
-I publiceringsmiljön kommer bloggfunktionen att visa den senaste bloggartikeln följt av äldre bloggartiklar i fallande ordning. Bloggsidofälten gör att besökare kan använda filter för att begränsa urvalet av bloggartiklar.
+I publiceringsmiljön visar bloggfunktionen den senaste bloggartikeln följt av äldre bloggartiklar i fallande ordning. Bloggsidofälten gör att besökare kan använda filter för att begränsa urvalet av bloggartiklar.
 
 Bloggartikeln följs av en länk för att skicka eller visa kommentarer.
 
@@ -289,7 +287,7 @@ Andra funktioner beror på om besökaren är en moderator, administratör, commu
 
 ### Arbeta med artiklar {#working-with-articles}
 
-När du skapar en ny bloggartikel kan du välja att:
+När du skapar en bloggartikel kan du göra följande:
 
 1. Publicera omedelbart
 1. Publicera ett utkast
@@ -309,7 +307,7 @@ När den inloggade användaren är en community-medlem eller [behörig medlem](/
 
 De får särskilt
 
-* Skapa en ny bloggartikel
+* Skapa en bloggartikel
 * Skicka en ny bloggartikel för en annan medlem
 * Skicka en kommentar till en bloggartikel
 * Redigera en egen bloggartikel eller kommentar

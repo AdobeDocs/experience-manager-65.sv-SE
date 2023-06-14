@@ -1,8 +1,6 @@
 ---
 title: Hjälpmedel för SCF-handtag
-seo-title: SCF Handlebars Helpers
 description: Hanteringsfält Hjälpmetoder som underlättar arbete med SCF
-seo-description: Handlebars Helper methods to facilitate work with SCF
 uuid: 9c514199-871e-4b68-8147-2052d2eeda15
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -10,9 +8,9 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 8b6c1697-d693-41f4-8337-f41658465107
 exl-id: bfb95cae-4b0f-4521-a113-042dc4005a63
-source-git-commit: fe731e1a8866fbdd1f982d67d6ff29cbf7f0cd7c
+source-git-commit: d673a447e9ce2377c8645c87f12be81cbad06238
 workflow-type: tm+mt
-source-wordcount: '1509'
+source-wordcount: '1473'
 ht-degree: 1%
 
 ---
@@ -113,7 +111,7 @@ Ett hjälpmedel för att lägga till två intervall under en div, ett för den f
 
 * **safeString**: Boolean
 
-  (Valfritt) Ett booleskt värde som anger om Handlebars.SafeString() ska användas eller inte innan resultatet returneras. Standardvärdet är false.
+  (Valfritt) Ett booleskt värde som anger om Handlebars.SafeString() ska användas innan resultatet returneras. Standardvärdet är false.
 
 ### Exempel {#example}
 
@@ -183,7 +181,7 @@ En hjälpfunktion som returnerar innehåll beroende på ett likhetsvillkor.
 
 ## If-wcm-mode {#if-wcm-mode}
 
-En blockhjälp som testar det aktuella värdet för [WCM-läge](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/WCMMode.html) mot en strängavgränsad lista med lägen.
+En blockhjälp som testar det aktuella värdet för [WCM-läge](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/WCMMode.html) mot en strängavgränsad lista med lägen.
 
 ### Parametrar {#parameters-4}
 
@@ -193,7 +191,7 @@ En blockhjälp som testar det aktuella värdet för [WCM-läge](https://helpx.ad
 
 * **läge**: Sträng
 
-  (Valfritt) En kommaavgränsad lista med [WCM-lägen](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/WCMMode.html) för att testa om det är inställt.
+  (Valfritt) En kommaavgränsad lista med [WCM-lägen](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/WCMMode.html) för att testa om det är inställt.
 
 ### Exempel {#example-2}
 
@@ -236,9 +234,9 @@ Se även [Internationalisering av strängar i JavaScript-kod](../../help/sites-d
 
 En hjälp som du kan använda för att inkludera en komponent som en icke-befintlig resurs i en mall.
 
-Detta gör att resursen kan anpassas programmatiskt enklare än vad som är möjligt för en resurs som lagts till som en JCR-nod. Se [Lägg till eller inkludera en webbgruppskomponent](scf.md#add-or-include-a-communities-component).
+Med den här metoden kan resursen anpassas programmatiskt enklare än vad som är möjligt för en resurs som lagts till som en JCR-nod. Se [Lägg till eller inkludera en webbgruppskomponent](scf.md#add-or-include-a-communities-component).
 
-Endast ett urval av webbgruppskomponenter kan inkluderas. För AEM 6.1 är de som ingår [kommentarer](essentials-comments.md), [värdering](rating-basics.md), [recensioner](reviews-basics.md)och [röstning](essentials-voting.md).
+Det finns bara ett urval av webbgruppskomponenter att ta med. <!-- OBSOLETE/OLD  NEED TO UPDATE FOR 6.5  For AEM 6.1, those that are includable are [comments](essentials-comments.md), [rating](rating-basics.md), [reviews](reviews-basics.md), and [voting](essentials-voting.md). -->
 
 Den här hjälpen, som bara är lämplig på serversidan, har funktioner som liknar [cq:include](../../help/sites-developing/taglib.md) för JSP-skript.
 
@@ -254,7 +252,7 @@ Den här hjälpen, som bara är lämplig på serversidan, har funktioner som lik
 
 * **resourceType**: Sträng
 
-  (Valfritt) Resurstypen får som standard resurstypen från kontexten.
+  (Valfritt) Resurstypen är som standard resurstyp från kontext.
 
 * **mall**: Sträng
 
@@ -274,11 +272,11 @@ Den här hjälpen, som bara är lämplig på serversidan, har funktioner som lik
 {{include this.id path="comments" resourceType="social/commons/components/hbs/comments"}}
 ```
 
-Detta kommer att innehålla en ny kommentarkomponent på `this.id` + /comments.
+Innehåller en ny kommentarkomponent på `this.id` + /comments.
 
 ## IncludeClientLib {#includeclientlib}
 
-En handledare som innehåller ett AEM HTML-klientbibliotek, som kan vara ett js, en css eller ett temabibliotek. För flera inkluderingar av olika typer, till exempel js och css, måste den här taggen användas flera gånger i Handlebars-skriptet.
+En handledare som innehåller ett AEM HTML-klientbibliotek, som kan vara ett js, en css eller ett temabibliotek. Om flera inkluderingar av olika typer, till exempel js och css, används den här taggen flera gånger i Handlebars-skriptet.
 
 Den här hjälpen, som bara är lämplig på serversidan, har funktioner som liknar [ui:includeClientLib](../../help/sites-developing/taglib.md) för JSP-skript.
 
@@ -286,19 +284,19 @@ Den här hjälpen, som bara är lämplig på serversidan, har funktioner som lik
 
 * **kategorier**: Sträng
 
-  (Valfritt) En lista med kommaavgränsade klientbibliotekskategorier. Detta inkluderar alla JavaScript- och CSS-bibliotek för de angivna kategorierna. Temanamnet extraheras från begäran.
+  (Valfritt) En lista med kommaavgränsade klientbibliotekskategorier. Inkludera alla JavaScript- och CSS-bibliotek för de angivna kategorierna. Temanamnet extraheras från begäran.
 
 * **tema**: Sträng
 
-  (Valfritt) En lista med kommaavgränsade klientbibliotekskategorier. Detta inkluderar alla temarelaterade bibliotek (både CSS och JS) för de angivna kategorierna. Temanamnet extraheras från begäran.
+  (Valfritt) En lista med kommaavgränsade klientbibliotekskategorier. Inkludera alla temarelaterade bibliotek (både CSS och JS) för de angivna kategorierna. Temanamnet extraheras från begäran.
 
 * **js**: Sträng
 
-  (Valfritt) En lista med kommaavgränsade klientbibliotekskategorier. Detta inkluderar alla JavaScript-bibliotek för de angivna kategorierna.
+  (Valfritt) En lista med kommaavgränsade klientbibliotekskategorier. Inkluderar alla JavaScript-bibliotek för de angivna kategorierna.
 
 * **css**: Sträng
 
-  (Valfritt) En lista med kommaavgränsade klientbibliotekskategorier. Detta inkluderar alla CSS-bibliotek för de angivna kategorierna.
+  (Valfritt) En lista med kommaavgränsade klientbibliotekskategorier. Inkluderar alla CSS-bibliotek för de angivna kategorierna.
 
 ### Exempel {#examples-2}
 
@@ -379,7 +377,7 @@ Depending on how long in the past, may return
 
 En hjälp som kodar en källsträng för HTML-elementinnehåll för att skydda mot XSS.
 
-OBS! det här är inte en validerare och ska inte användas för att skriva attributvärden.
+OBS! Den här hjälpen är inte en validerare och ska inte användas för att skriva attributvärden.
 
 ### Parametrar {#parameters-9}
 
@@ -397,7 +395,7 @@ OBS! det här är inte en validerare och ska inte användas för att skriva attr
 
 En hjälpskrivare som kodar en källsträng för skrivning till ett HTML-attributvärde för att skydda mot XSS.
 
-OBS! det här är inte en validerare och ska inte användas för att skriva åtgärdbara attribut (href, src, händelsehanterare).
+OBS! Den här hjälpen är inte en validerare och ska inte användas för att skriva åtgärdbara attribut (href, src, händelsehanterare).
 
 ### Parametrar {#parameters-10}
 
@@ -415,7 +413,7 @@ OBS! det här är inte en validerare och ska inte användas för att skriva åtg
 
 En hjälp som kodar en källsträng för skrivning till JavaScript-stränginnehåll för att skydda mot XSS.
 
-OBS! detta är inte en validerare och ska inte användas för att skriva till godtycklig JavaScript.
+OBS! Den här hjälpen är inte en validerare och ska inte användas för att skriva till godtycklig JavaScript.
 
 ### Parametrar {#parameters-11}
 
@@ -433,7 +431,7 @@ var input = {{xss-jsString topic-title}}
 
 En hjälp som sanerar en URL som kan skrivas som ett HTML href- eller srce-attributvärde för att skydda mot XSS.
 
-OBS! detta kan returnera en tom sträng
+OBS! Den här hjälpen kan returnera en tom sträng.
 
 ### Parametrar {#parameters-12}
 
@@ -450,7 +448,7 @@ OBS! detta kan returnera en tom sträng
 ## Handlebars.js Basic Overview {#handlebars-js-basic-overview}
 
 * Ett Handlebars-anrop är en enkel identifierare ( *name* av hjälpfunktionen), följt av noll eller flera blankstegsavgränsade parametrar.
-* Parametrar kan vara ett enkelt String-, number-, boolean- eller JSON-objekt, samt en valfri sekvens av nyckelvärdepar (hash-argument) som den sista parametern/de sista.
+* Parametrar kan vara ett enkelt String-, number-, boolean- eller JSON-objekt och en valfri sekvens av nyckelvärdepar (hash-argument) som de sista parametrarna.
 * Nycklarna i hash-argumenten måste vara enkla identifierare.
 * Värdena i hash-argument är Handlebars-uttryck: enkla identifierare, sökvägar eller strängar.
 * Det aktuella sammanhanget `this`, är alltid tillgängligt för Handlebars hjälpprogram.
@@ -459,7 +457,7 @@ OBS! detta kan returnera en tom sträng
 
 * Blockhjälpredor är funktioner som kan anropas var som helst i mallen. De kan anropa ett mallblock noll eller flera gånger med olika kontext varje gång. De innehåller ett sammanhang mellan `{{#*name*}}` och `{{/*name*}}`.
 
-* Handtag ger en slutgiltig parameter för hjälpredor med namnet&quot;options&quot;. Alternativobjektet innehåller
+* Handtag ger en slutgiltig parameter till hjälpredor som heter &quot;options&quot;. Alternativobjektet innehåller
 
    * Valfria privata data (options.data)
    * Valfria nyckelvärdegenskaper från anropet (options.hash)
@@ -522,11 +520,11 @@ template(data);
 
 ## Anpassade SCF-hjälpredor {#custom-scf-helpers}
 
-Anpassade hjälpprogram måste implementeras både på serversidan och på klientsidan, särskilt när data skickas. För SCF kompileras och återges de flesta mallar på serversidan när servern genererar HTML för en viss komponent när sidan begärs.
+Anpassade hjälpprogram måste implementeras på serversidan och klientsidan, särskilt när data skickas. För SCF kompileras och återges de flesta mallar på serversidan när servern genererar HTML för en viss komponent när sidan begärs.
 
 ### Anpassade hjälpmedel på serversidan {#server-side-custom-helpers}
 
-Implementera och registrera en anpassad SCF-hjälp på serversidan genom att implementera Java-gränssnittet [TemplateHelper](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/handlebars/api/TemplateHelper.html), gör det till en [OSGi Service](../../help/sites-developing/the-basics.md#osgi) och installera det som en del av ett OSGi-paket.
+Implementera och registrera en anpassad SCF-hjälp på serversidan genom att implementera Java™-gränssnittet [TemplateHelper](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/handlebars/api/TemplateHelper.html), gör det till en [OSGi Service](../../help/sites-developing/the-basics.md#osgi) och installera det som en del av ett OSGi-paket.
 
 Till exempel:
 

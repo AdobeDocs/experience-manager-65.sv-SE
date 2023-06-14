@@ -8,9 +8,9 @@ topic-tags: integration
 content-type: reference
 discoiquuid: b1d45f01-78de-423c-8f6b-5cb7067c3a2f
 exl-id: 317bab41-3504-4e46-9ddc-72e291a34e06
-source-git-commit: 0d91e54fde32f2fafb9a616ed4e957e9590fff26
+source-git-commit: d673a447e9ce2377c8645c87f12be81cbad06238
 workflow-type: tm+mt
-source-wordcount: '803'
+source-wordcount: '806'
 ht-degree: 0%
 
 ---
@@ -24,20 +24,20 @@ Följande felsökningstips hjälper dig att lösa de vanligaste problemen du kan
 
 ## Allmänna felsökningstips {#general-troubleshooting-tips}
 
-Kontrollera om HTTP-anrop skickas och tas emot av båda lösningarna (AEM > Adobe Campaign Classic, Adobe Campaign Classic > AEM). Detta för att undvika brandväggs-/SSL-problem.
+Kontrollera om HTTP-anrop skickas och tas emot av båda lösningarna (AEM > Adobe Campaign Classic, Adobe Campaign Classic > AEM). Detta tips hjälper dig att undvika brandväggs-/SSL-problem.
 
-* För AEM funktionalitet ser du att JSON-anrop begärs från AEM författargränssnitt
-   * Dessa bör inte resultera i ett HTTP-500-fel.
-   * Om HTTP-500-fel visas kontrollerar du `error.log` om du vill ha mer information om detta.
+* För AEM funktioner ser du att JSON-anrop begärs från AEM författargränssnitt
+   * Dessa anrop bör inte resultera i ett HTTP-500-fel.
+   * Om HTTP-500-fel visas kontrollerar du `error.log` för mer information.
 * Om du ökar felsökningsnivån för kampanjklasser i AEM kan det även hjälpa till att felsöka problem.
 
 ## Om anslutningen misslyckas {#when-the-connection-fails}
 
-Kontrollera att du har konfigurerat **aemserver** i Adobe Campaign Classic.
+Kontrollera att du har konfigurerat **`aemserver`** i Adobe Campaign Classic.
 
 ## Om bilder inte visas i Adobe Campaign Classic Console {#if-images-do-not-appear-in-the-adobe-campaign-console}
 
-Kontrollera HTML-källan och bekräfta att du kan öppna URL:en från klientdatorn. Om URL:en har `localhost:4503` i den ändrar du konfigurationen av Day CQ Link Externalizer på AEM författarinstans så att den pekar på en publiceringsinstans som kan nås från Adobe Campaign Classic konsoldator.
+Kontrollera HTML-källan och bekräfta att du kan öppna URL:en från klientdatorn. Om URL:en har `localhost:4503` i den ändrar du konfigurationen av Day CQ Link Externalizer på AEM författarinstans. Låt den peka på en publiceringsinstans som kan nås från Adobe Campaign Classic konsoldator.
 
 Se [Konfigurerar Externalizer.](/help/sites-administering/campaignstandard.md#configuring-the-externalizer)
 
@@ -66,11 +66,11 @@ När du startar Apache HTTPD-tjänsten för Adobe Campaign Classic kan felet upp
 Se till att du har `en_CA.ISO-8859-15 locale` installeras på din Adobe Campaign Classic-server.
 
 * Du kan kontrollera om den är installerad med `local -a`.
-* Om den inte är installerad kan du laga `/usr/local/neolane/nl6/env.sh` och ändra språkinställningen till en installerad.
+* Om den inte är installerad kan du korrigera `/usr/local/neolane/nl6/env.sh` och ändra språkinställningen till en installerad.
 
 ## Om du får ett fel när skriptet &#39;get_nms_amcGetSeedMetaData_jssp&#39; kompileras {#if-you-get-an-error-while-compiling-script-get-nms-amcgetseedmetadata-jssp}
 
-Om följande felmeddelande visas i AEM loggfil.
+Om följande felmeddelande visas i AEM loggfil:
 
 `com.day.cq.mcm.campaign.impl.CampaignConnectorImpl Internal Adobe Campaign error: response body is Error while compiling script 'get_nms_amcGetSeedMetaData_jssp' line 45: String.prototype.toJSON called on incompatible XML.`
 
@@ -86,7 +86,7 @@ Använd följande lösning på Adobe Campaign Classic-servern.
 
 När du klickar på **Synkronisera** i Adobe Campaign Classic kan följande fel visas.
 
-* `Error while executing the method ‘aemListContent' of service [nms:delivery](https://nmsdelivery/)`
+* `Error while executing the method 'aemListContent' of service [nms:delivery](https://nmsdelivery/)`
 
 Kontrollera att den AEM URL:en som är konfigurerad i **Externa konton** i Adobe Campaign Classic kan nås från datorn.
 
@@ -98,15 +98,15 @@ Efter klickning **Synkronisera** i AEM kan du få ett felmeddelande om att ett s
 
 * `Cannot parse XTK Date+Time 'undefined': not a valid XTK value.`
 
-Detta händer om det finns inaktuell Adobe Campaign Classic-information på AEM. Du kan lösa det här problemet genom att:
+Det här felet inträffar om det finns inaktuell Adobe Campaign Classic-information i AEM. Du kan lösa det här problemet genom att göra följande:
 
-1. Tar bort alla integrationskonfigurationer för Adobe Campaign Classic som finns AEM.
-1. Återskapar integreringen.
-1. Skapa en ny mall.
+1. Ta bort alla integrationskonfigurationer för Adobe Campaign Classic som finns AEM.
+1. Återskapa integreringen.
+1. Skapa en mall.
 
 ## Om en anslutning till SSL visar ett fel när Cloud Servicen konfigureras {#if-a-connection-to-ssl-displays-an-error-when-setting-up-the-cloud-service}
 
-Ring upp en biljett till Adobe Campaign supportteam om du ser följande i `error.log` AEM.
+Skicka in en anmälan till Adobe Campaign supportteam om du ser följande i `error.log` AEM.
 
 ```text
 javax.net.ssl.SSLProtocolException: handshake alert:  unrecognized_name
@@ -120,27 +120,27 @@ at sun.security.ssl.AppOutputStream.write(Unknown Source)
 
 ## Om du ser HTTP i stället för förväntade HTTPS-länkar i synkroniseringsdialogrutan {#if-you-see-http-instead-of-an-expected-https-links-in-the-synchronization-dialog}
 
-När du försöker synkronisera innehåll i Adobe Campaign Classic returnerar AEM en lista med nyhetsbrev. URL:erna till nyhetsbreven i listan kan dock vara HTTP-adresser i stället för HTTPS. När du väljer ett av objekten i listan inträffar ett fel. Detta kan inträffa med följande inställningar.
+När du försöker synkronisera innehåll i Adobe Campaign Classic returnerar AEM en lista med nyhetsbrev. URL:erna till nyhetsbreven i listan kan dock vara HTTP-adresser i stället för HTTPS. När du väljer ett av objekten i listan inträffar ett fel. Det här felet kan inträffa med följande inställningar.
 
 * Värdbaserad Adobe Campaign med https för kommunikation med AEM Author
 * Återför proxy som avslutar SSL
-* Lokal AEM Author-instans
+* AEM Author-instans på plats
 
 Så här löser du problemet:
 
-* AEM eller omvänd proxy måste konfigureras för att skicka det ursprungliga protokollet som en rubrik.
+* AEM Dispatcher eller omvänd proxy måste konfigureras för att skicka det ursprungliga protokollet som en rubrik.
 * The **SSL-filter för Apache Felix HTTP-tjänst** i OSGi-konfigurationen för AEM måste konfigureras med de nödvändiga rubrikinställningarna.
    * `https://<host>:<port>/system/console/configMgr`
-   * Se [https://felix.apache.org/documentation/subprojects/apache-felix-http-service.html#using-the-ssl-filter](https://felix.apache.org/documentation/subprojects/apache-felix-http-service.html#using-the-ssl-filter)
+   * Se [https://github.com/apache/felix-dev/tree/master/http#using-the-ssl-filter](https://github.com/apache/felix-dev/tree/master/http#using-the-ssl-filter)
 
 ## Det går inte att välja en anpassad mall i Sidegenskaper {#if-the-custom-template-i-created-cannot-be-selected-in-page-properties}
 
-När du skapar en e-postmall i AEM för Adobe Campaign Classic måste du ta med egenskapen `acMapping` med värdet `mapRecipient` i `jcr:content` noden i mallen, eller så kan du inte välja Adobe Campaign Classic-mallen i **Sidegenskaper** AEM. Fältet kommer att vara inaktiverat.
+När du skapar en e-postmall i AEM för Adobe Campaign Classic måste du ta med egenskapen `acMapping` med värdet `mapRecipient` i `jcr:content` mallens nod. Om du inte gör det kan inte välja Adobe Campaign Classic-mallen i **Sidegenskaper** AEM. Fältet verkar vara inaktiverat.
 
 ## Om felet com.day.cq.mcm.campaign.servlets.util.ParameterMapper visas i AEM loggar {#if-you-get-the-error-com-day-cq-mcm-campaign-servlets-util-parametermapper-in-your-logs}
 
 Felet kan visas `com.day.cq.mcm.campaign.servlets.util.ParameterMapper` i AEM loggar när du använder en anpassad mall.
 
-Detta är ett problem om `acMapping` egenskapen är inställd på ett annat värde än `recipient.firstName`skapas ett tomt värde i Adobe Campaign Manager.
+Det här felet inträffar om `acMapping` egenskapen är inställd på ett annat värde än `recipient.firstName`skapas ett tomt värde i Adobe Campaign Manager.
 
-Installera funktionspaketet 6576 för AEM från [Paketresurs](/help/sites-administering/package-manager.md#package-share).
+Om det här felet inträffar installerar du funktionspaket 6576 för AEM från [Paketresurs](/help/sites-administering/package-manager.md#package-share).

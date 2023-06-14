@@ -1,8 +1,6 @@
 ---
 title: Filbiblioteksfunktion
-seo-title: File Library Feature
 description: Med funktionen Filbibliotek kan besökare på den inloggade webbplatsen överföra, hantera och hämta filer
-seo-description: The File Library feature lets signed-in site visitors upload, manage, and download files
 uuid: e78a90bd-f1d3-44f8-98eb-1498a55e8217
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -11,9 +9,9 @@ content-type: reference
 discoiquuid: ea2b23af-49c3-409b-a041-43c42d846f21
 docset: aem65
 exl-id: 05cfaab5-a12d-475f-9095-a9fb13571d0a
-source-git-commit: fe731e1a8866fbdd1f982d67d6ff29cbf7f0cd7c
+source-git-commit: d673a447e9ce2377c8645c87f12be81cbad06238
 workflow-type: tm+mt
-source-wordcount: '735'
+source-wordcount: '733'
 ht-degree: 0%
 
 ---
@@ -22,7 +20,7 @@ ht-degree: 0%
 
 ## Introduktion {#introduction}
 
-Funktionen för filbibliotek är en plats där besökare på den inloggade webbplatsen (community-medlemmar) kan överföra, hantera och hämta filer inom communitywebbplatsen.
+Filbiblioteksfunktionen är en plats där besökare på den inloggade webbplatsen (community-medlemmar) kan överföra, hantera och hämta filer inom communitywebbplatsen.
 
 I det här avsnittet av dokumentationen beskrivs:
 
@@ -35,17 +33,17 @@ Lägga till en `File Library` till en sida i redigeringsläge, leta reda på kom
 
 * `Communities / File Library`
 
-och dra den till rätt plats på en sida.
+Och dra den till rätt plats på en sida.
 
 Nödvändig information finns på [Grunderna för communitykomponenter](/help/communities/basics.md).
 
-När [nödvändiga bibliotek på klientsidan](/help/communities/essentials-file-library.md#essentials-for-client-side) ingår så här `File Library` visas:
+När [nödvändiga bibliotek på klientsidan](/help/communities/essentials-file-library.md#essentials-for-client-side) ingår, det är så `File Library` visas:
 
 ![file-library1](assets/file-library1.png)
 
 ### Konfigurerar filbibliotek {#configuring-file-library}
 
-Markera den monterade `File Library` -komponenten som ska få åtkomst till och markera `Configure` som öppnar redigeringsdialogrutan.
+Markera den monterade `File Library` så att du kan komma åt och välja `Configure` -ikonen som öppnar dialogrutan för redigering.
 
 ![configure-new](assets/configure-new.png)
 
@@ -61,7 +59,7 @@ Under **Kommentarer** anger du om och hur kommentarer för överförda filer ska
 
 * **Kommentarer per sida**
 
-  Begränsar antalet kommentarer som visas per sida samt antalet svar som visas. Standard är **10**.
+  Begränsar antalet kommentarer som visas per sida och antalet svar som visas. Standard är **10**.
 
 * **Maximal filstorlek**
 
@@ -73,7 +71,7 @@ Under **Kommentarer** anger du om och hur kommentarer för överförda filer ska
 
 * **Tillåtna filtyper**
 
-  En kommaavgränsad lista med filtillägg med&quot;punktavgränsaren&quot;. Till exempel: .jpg, .jpeg, .png, .doc, .docx, .pdf. Om någon filtyp anges tillåts inte den som inte anges. Standardvärdet har inte angetts så att alla filtyper tillåts.
+  En kommaavgränsad lista med filtillägg med punktavgränsaren. Exempel: .jpg, .jpeg, .png, .doc, .docx, .pdf. Om någon filtyp anges tillåts inte filtyper som inte har angetts. Standardvärdet har inte angetts så att alla filtyper tillåts.
 
 * **RTF-redigerare**
 
@@ -89,7 +87,7 @@ Under **Kommentarer** anger du om och hur kommentarer för överförda filer ska
 
 * **Tillåtna namnutrymmen**
 
-  Om Tillåt taggning är markerat begränsas de tillgängliga taggarna till de namnutrymmen som är markerade. Om inga är markerade tillåts alla. Standard är alla namnutrymmen.
+  Om Tillåt taggning är markerat begränsas de tillgängliga taggarna till de namnutrymmen som är markerade. Om inga namnutrymmen är markerade tillåts alla. Standard är alla namnutrymmen.
 
 * **Förslagsgräns**
 
@@ -97,7 +95,7 @@ Under **Kommentarer** anger du om och hur kommentarer för överförda filer ska
 
 * **Tillåt röstning**
 
-  Om det här alternativet är markerat aktiveras möjligheten att rösta efter en fil. Standard är avmarkerat.
+  Om du markerar det här alternativet aktiveras möjligheten att rösta på en fil. Standard är avmarkerat.
 
 * **Tillåt följande**
 
@@ -113,7 +111,7 @@ Under **Kommentarer** anger du om och hur kommentarer för överförda filer ska
 
 * **Mönster för användargränssnittets omnämnande**
 
-  Ange den tillåtna mönstersträngen för att tagga (@mention) den registrerade användaren i ett inlägg. Till exempel `~{{familyName}}{{givenName}}`.
+  Ange den tillåtna mönstersträngen så att du taggar (@mention) den registrerade användaren i ett inlägg. Till exempel, `~{{familyName}}{{givenName}}`.
 
 * **Tillåt kopplade svar**
 
@@ -129,7 +127,7 @@ Under **Användarmoderering** -fliken, konfigurera moderering av kommentarer, om
 
 * **Ta bort kommentarer**
 
-  Om det här alternativet är markerat kan den besökare som publicerade kommentaren ta bort den. Standard är markerat.
+  Om det här alternativet är markerat kan den besökare som publicerade kommentaren ta bort den, om så önskas. Standard är markerat.
 
 * **Neka kommentarer**
 
