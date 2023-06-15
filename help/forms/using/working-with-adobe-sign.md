@@ -11,9 +11,9 @@ discoiquuid: f79828d8-2230-4477-8ffa-eeb6a0413acd
 docset: aem65
 feature: Adaptive Forms, Acrobat Sign
 exl-id: a8decba9-229d-40a2-992a-3cc8ebefdd6d
-source-git-commit: 4714554609a10e58b1c7141696d694fac46887a6
+source-git-commit: 66674f0e2621d8786ab4d662cddad373122d8b51
 workflow-type: tm+mt
-source-wordcount: '3624'
+source-wordcount: '3653'
 ht-degree: 0%
 
 ---
@@ -122,7 +122,8 @@ Utför följande steg för att lägga till fält i ett adaptivt formulär och an
    >
    >    * Använda [!DNL Adobe Sign] block är inte obligatoriskt att använda [!DNL Adobe Sign] i adaptiv form. Om du inte använder [!DNL Adobe Sign] blockera och lägga till fält för signerare, så visas standardsignaturfältet längst ned i signeringsdokumenten.
    >    * Använd [!DNL Adobe Sign] blockera endast för de adaptiva formulär som automatiskt genererar arkivdokument. Om du använder en anpassad XDP för att generera ett anpassat formulär för arkivhandlingar eller ett formulärmallsbaserat anpassat formulär, [!DNL Adobe Sign] block stöds inte.
-
+   >
+   >
 
 1. Välj **[!UICONTROL Adobe Sign Block]** och tryck på **Redigera** ![aem_6_3_edit](assets/aem_6_3_edit.png) ikon. Här visas alternativ för att lägga till fält och formatera utseende för ett fält.
 
@@ -194,11 +195,13 @@ Du kan bara ha en eller flera signerare för ett anpassat formulär. När du lä
 
    * **[!UICONTROL Signer Email address]:** Ange signerarens e-postadress. Signeraren får signerade dokument/formulär på den angivna e-postadressen. Du kan välja att använda en e-postadress som finns i ett formulärfält, i AEM användarprofil för den inloggade användaren eller manuellt ange en e-postadress. Det är ett obligatoriskt steg. Kontrollera att e-postadressen för den första signeraren eller den enda signeraren (för en signerare) inte är identisk med [!DNL Adobe Sign] konto som används för att konfigurera AEM-molntjänster.
 
-   * **[!UICONTROL Signer Authentication Method]:** Ange metoden för att autentisera en användare innan ett formulär öppnas för signering. Du kan välja mellan telefon, kunskapsbas och social ID-baserad autentisering.
+   * **[!UICONTROL Signer Authentication Method]:** Ange metoden för att autentisera en användare innan ett formulär öppnas för signering. Du kan välja mellan telefon, kunskapsbas och social ID-baserad autentisering. För Adobe Acrobat Sign Solutions for Government finns endast telefon- och kunskapsbaserad autentisering.
+
    >[!NOTE]
    >
    >    * Som standard har den sociala identitetsbaserade autentiseringen ett alternativ för att autentisera med Facebook, Google och LinkedIn. Du kan kontakta [!DNL Adobe Sign] stöd för att aktivera andra leverantörer av social autentisering.
-
+   >
+   >
 
    * **[!DNL Adobe Sign]fält som ska fyllas i eller signeras:** Välj [!DNL Adobe Sign] fält för signeraren. Ett anpassningsbart formulär kan ha flera [!DNL Adobe Sign] fält. Du kan välja att aktivera specifika fält för en signerare. Fältet visar alla tillgängliga [!DNL Adobe Sign] Blockar. När du markerar ett block markeras alla fält i blocket. Du kan använda X-ikonen för att avmarkera ett fält.
 
@@ -248,7 +251,8 @@ Efter [redigera adaptiva formuläregenskaper för Adobe-signering](../../forms/u
 
    Använd digitala signaturer på det anpassade formuläret med:
 
-   * Molnsignaturer: Signera med en [digitalt ID](https://helpx.adobe.com/sign/kb/digital-certificate-providers.html) som hanteras av en betrodd tjänsteleverantör.
+   * Molnsignaturer: Signera med en [digitalt ID](https://helpx.adobe.com/sign/kb/digital-certificate-providers.html) som hanteras av en betrodd tjänsteleverantör. Molnsignaturalternativet är inte tillgängligt för Adobe Acrobat Sign Solutions för myndigheter.
+
    * Adobe Acrobat eller Reader: Hämta och öppna dokumentet med Adobe Acrobat eller Reader för att signera med ett smartkort, en USB-token eller ett filbaserat digitalt ID.
 
    När du har lagt till fältet för molnsignatur i det adaptiva formuläret utför du följande steg för att slutföra konfigurationsprocessen:
@@ -258,10 +262,9 @@ Efter [redigera adaptiva formuläregenskaper för Adobe-signering](../../forms/u
    * [Lägga till Adobe Sign-signerare i ett anpassat formulär](../../forms/using/working-with-adobe-sign.md#addsignerstoanadaptiveform)
    * [Välj Skicka åtgärd för ett anpassat formulär](../../forms/using/working-with-adobe-sign.md#selectsubmitactionforanadaptiveform)
 
-
 ## Skapa signeringsupplevelser i form av formulär {#create-in-form-signing-experience}
 
-Användaren kan också signera ett anpassat formulär medan han/hon fyller i formuläret. Den här upplevelsen kallas även signering i formulär. Signeringsfunktionen i form är bara tillgänglig för den första signeraren i en miljö med flera signerare. Utför följande steg för att skapa en signeringsupplevelse i ett anpassat formulär:
+Användaren kan också signera ett anpassat formulär medan han/hon fyller i formuläret. Den här upplevelsen kallas även signering i form av formulär. Signeringsfunktionen i form är bara tillgänglig för den första signeraren i en miljö med flera signerare. Utför följande steg för att skapa en signeringsupplevelse i ett anpassat formulär:
 
 1. [Lägg till och konfigurera komponenten Signatursteg](../../forms/using/working-with-adobe-sign.md#add-and-configure-the-signature-step-component).
 1. [Lägg till komponenten Sammanfattningssteg](../../forms/using/working-with-adobe-sign.md#configure-the-thank-you-page-or-summary-step-component).
@@ -297,7 +300,6 @@ Utför följande steg för att konfigurera signaturstegskomponenten:
    >
    >* När du drar och släpper **[!UICONTROL Signature Step]** -komponenten till formuläret, **[!UICONTROL Is the signer and the person filling the form same?]** option is automatically set to **Ja**. Det krävs för att formuläret ska fungera.
    >* Använd komponenten Sammanfattningssteg efter signatursteget för att få en så bra upplevelse som möjligt. Sammanfattningssteget skickar automatiskt och omedelbart formuläret när du har signerat ett formulär i signeringssteget. Om du inte använder sammanfattningssteget aktiveras en automatisk överföring endast efter det intervall som angetts med [Konfigurationstjänst för Adobe Sign](../../forms/using/adobe-sign-integration-adaptive-forms.md#configure-adobe-sign-scheduler-to-sync-the-signing-status).
-
    >
    >Några bra strategier är:
    >
@@ -306,7 +308,6 @@ Utför följande steg för att konfigurera signaturstegskomponenten:
    >* Anpassningsbara formulär som innehåller signatursteget kan inte ha en skicka-knapp.
    >* Inlämningen av anpassade formulär som innehåller signeringssteget hanteras via en bakgrundstjänst eller sammanfattningssteget. Om det finns en konfigurerad signerare som också fyller i formuläret, är fördelen med att hantera den adaptiva formuläröverföringen med steget Sammanfattning att den omedelbart utvärderar att signeraren har signerat formuläret och anropar åtgärden skicka. En bakgrundstjänst tar längre tid att utvärdera om alla konfigurerade signerare har signerat formuläret och fördröjer överföringen av det adaptiva formuläret.
    >* Utforma formuläret så att användaren inte kan navigera tillbaka från en panel som innehåller signatur- eller sammanfattningssteget.
-
 
 
 ### Konfigurera tacksidan eller sammanfattningssteget {#configure-the-thank-you-page-or-summary-step-component}
