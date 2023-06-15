@@ -8,9 +8,9 @@ user-guide-title: Användarhandbok om Adobe Experience Manager 6.5 Forms
 breadcrumb-title: Användarhandbok om Forms
 user-guide-description: Skapa, hantera, publicera och uppdatera digitala formulär.
 role: User
-source-git-commit: f0ffa552bd4a5b8b20a58aed7847c4de07acc4f4
+source-git-commit: 73271612633ec349ee1c002044724f408324e5a2
 workflow-type: tm+mt
-source-wordcount: '3860'
+source-wordcount: '3870'
 ht-degree: 0%
 
 ---
@@ -134,6 +134,7 @@ ht-degree: 0%
 + Adaptiv Forms - grundläggande redigering {#adaptive-forms-basic-authoring}
    + [Bästa tillvägagångssätt för arbete med anpassningsbara formulär](using/adaptive-forms-best-practices.md)
    + [Skapa ett anpassat formulär](using/creating-adaptive-form.md)
+   + [Skapa eller lägga till ett anpassat formulär på AEM Sites-sidan](using/create-or-add-an-adaptive-form-to-aem-sites-page.md)
    + [Anpassningsbara formulärfragment](using/adaptive-form-fragments.md)
    + [Konfigurera åtgärden Skicka](using/configuring-submit-actions.md)
    + [Använda CAPTCHA i anpassningsbara formulär](using/captcha-adaptive-forms.md)

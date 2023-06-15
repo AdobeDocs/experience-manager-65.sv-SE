@@ -11,9 +11,9 @@ discoiquuid: 4c53dfc0-25ca-419d-abfe-cf31fc6ebf61
 docset: aem65
 feature: Adaptive Forms
 exl-id: 9b4219b8-d5eb-4099-b205-d98d84e0c249
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 73271612633ec349ee1c002044724f408324e5a2
 workflow-type: tm+mt
-source-wordcount: '1221'
+source-wordcount: '1842'
 ht-degree: 0%
 
 ---
@@ -26,20 +26,25 @@ AEM Forms stöder CAPTCHA i adaptiva former. Du kan använda tjänsten reCAPTCHA
 
 >[!NOTE]
 >
->* AEM Forms har endast stöd för reCaptcha v2. Andra versioner stöds inte.
+>* AEM Forms support: reCaptcha v2 och enterprise. Andra versioner stöds inte.
+>* Standardtjänsten AEM CAPTCHA är föråldrad.
 >* CAPTCHA i adaptiva formulär stöds inte i offlineläge i AEM Forms-appen.
 >
 
+## Konfigurera tjänsten reCAPTCHA från Google {#google-recaptcha}
 
-## Konfigurera ReCAPTCHA-tjänsten av Google {#google-recaptcha}
+Formulärförfattare kan använda tjänsten reCAPTCHA från Google för att implementera CAPTCHA i anpassningsbara formulär. Den har avancerade CAPTCHA-funktioner för att skydda er webbplats. Mer information om hur reCAPTCHA fungerar finns i [Google reCAPTCHA](https://developers.google.com/recaptcha/). reCAPTCHA-tjänsten, inklusive reCAPTCHA v2 och reCAPTCHA Enterprise, är integrerad i AEM. Beroende på dina behov kan du konfigurera tjänsten reCAPTCHA för att aktivera:
 
-Formulärförfattare kan använda tjänsten reCAPTCHA från Google för att implementera CAPTCHA i anpassningsbara formulär. Den har avancerade CAPTCHA-funktioner för att skydda er webbplats. Mer information om hur reCAPTCHA fungerar finns i [Google reCAPTCHA](https://developers.google.com/recaptcha/).
+* [reCAPTCHA Enterprise i AEM](#steps-to-implement-recaptcha-enterprise-in-forms)
+* [reCAPTCHA v2 i AEM](#steps-to-implement-recaptcha-v2-in-forms)
 
 ![Recaptcha](assets/recaptcha_new.png)
 
-Så här implementerar du tjänsten reCAPTCHA i AEM Forms:
+## Steg för att implementera reCAPTCHA Enterprise i Forms  {#steps-to-implement-recaptcha-enterprise-in-forms}
 
-1. Hämta [API-nyckelpar för reCAPTCHA](https://www.google.com/recaptcha/admin) från Google. Den innehåller en webbplatsnyckel och hemlighet.
+1. Skapa ett nytt [reCAPTCHA - företagsprojekt](https://cloud.google.com/recaptcha-enterprise/docs/set-up-non-google-cloud-environments-api-keys#before-you-begin) aktiverad med [reCaptcha Enterprise API](https://cloud.google.com/recaptcha-enterprise/docs/set-up-non-google-cloud-environments-api-keys#enable-the-recaptcha-enterprise-api).
+1. [Hämta](https://support.google.com/googleapi/answer/7014113?hl=en#:~:text=To%20locate%20your%20project%20ID,a%20member%20of%20are%20displayed) projekt-ID.
+1. Skapa en [API-nyckel](https://cloud.google.com/recaptcha-enterprise/docs/set-up-non-google-cloud-environments-api-keys#create_an_api_key) och [webbplatsnyckel för webbplatser](https://cloud.google.com/recaptcha-enterprise/docs/create-key#create-key).
 1. Skapa konfigurationsbehållare för molntjänster.
 
    1. Gå till **[!UICONTROL Tools > General > Configuration Browser]**.
@@ -50,23 +55,64 @@ Så här implementerar du tjänsten reCAPTCHA i AEM Forms:
 
       1. Aktivera i dialogrutan Konfigurationsegenskaper **[!UICONTROL Cloud Configurations]**.
       1. Tryck **[!UICONTROL Save & Close]** för att spara konfigurationen och stänga dialogrutan.
+
+   1. Tryck på **[!UICONTROL Create]**.
+   1. I dialogrutan Skapa konfiguration anger du en rubrik för mappen och aktiverar **[!UICONTROL Cloud Configurations]**.
+   1. Tryck **[!UICONTROL Create]** för att skapa en mapp som är aktiverad för molntjänstkonfigurationer.
+1. Konfigurera molntjänsten för reCAPTCHA Enterprise.
+
+   1. Gå till Experience Manager ![verktyg-1](assets/tools-1.png) > **[!UICONTROL Cloud Services]**.
+   1. Tryck på **[!UICONTROL reCAPTCHA]**. Sidan Konfigurationer öppnas. Välj den konfigurationsbehållare som skapades i föregående steg och tryck på **[!UICONTROL Create]**.
+   1. Välj version som reCAPTCHA Enterprise och ange Namn; Projekt-ID, webbplatsnyckel och API-nyckel (hämtas i steg 2 och 3) för reCAPTCHA Enterprise-tjänsten.
+   1. Välj nyckeltyp. Nyckeltypen ska vara densamma som den platsnyckel som konfigurerats i Google Cloud-projektet, till exempel **Platsnyckel för kryssruta** eller **Poängbaserad webbplatsnyckel**.
+   1. Ange ett tröskelvärde i intervallet 0 till 1 ([Klicka för mer information om bakgrundsmusik](https://cloud.google.com/recaptcha-enterprise/docs/interpret-assessment#interpret_scores)). Poängvärden som är större än eller lika med tröskelvärdena identifierar mänsklig interaktion, vilket i annat fall omfattar båda interaktioner.
+
+      > Obs!
+      >
+      > * Formulärförfattare kan ange bakgrundsmusik i det intervall som passar för att skicka formulär utan avbrott.
+
+   1. Tryck **[!UICONTROL Create]** för att skapa molntjänstkonfigurationen.
+
+   1. I dialogrutan Redigera komponent anger du namn, projekt-ID, platsnyckel, API-nyckel (som du får i steg 2 och 3), väljer nyckeltyp och anger tröskelvärdet. Tryck **[!UICONTROL Save Settings]** och sedan trycka **[!UICONTROL OK]** för att slutföra konfigurationen.
+
+När du har aktiverat tjänsten reCAPTCHA Enterprise kan den användas i anpassningsbara formulär. Se [använda CAPTCHA i anpassningsbara formulär](#using-recaptcha).
+
+![Recaptcha enterprise](assets/recaptcha1-enterprise.png)
+
+
+## Steg för att implementera reCAPTCHA v2 i formulär {#steps-to-implement-recaptcha-v2-in-forms}
+
+1. Hämta [API-nyckelpar för reCAPTCHA](https://www.google.com/recaptcha/admin) från Google. Den innehåller **webbplatsnyckel** och **hemlig nyckel**.
+1. Skapa konfigurationsbehållare för molntjänster.
+
+   1. Gå till **[!UICONTROL Tools > General > Configuration Browser]**.
+      * Se [Konfigurationsläsaren](/help/sites-administering/configurations.md) mer information.
+   1. Gör följande för att aktivera den globala mappen för molnkonfigurationer eller hoppa över det här steget för att skapa och konfigurera en annan mapp för molntjänstkonfigurationer.
+
+      1. I konfigurationsläsaren väljer du **[!UICONTROL global]** mapp och tryck **[!UICONTROL Properties]**.
+
+      1. Aktivera i dialogrutan Konfigurationsegenskaper **[!UICONTROL Cloud Configurations]**.
+      1. Tryck **[!UICONTROL Save & Close]** för att spara konfigurationen och stänga dialogrutan.
+
    1. Tryck på **[!UICONTROL Create]**.
    1. I dialogrutan Skapa konfiguration anger du en rubrik för mappen och aktiverar **[!UICONTROL Cloud Configurations]**.
    1. Tryck **[!UICONTROL Create]** för att skapa en mapp som är aktiverad för molntjänstkonfigurationer.
 
-
-1. Konfigurera molntjänsten för reCAPTCHA.
+1. Konfigurera molntjänsten för reCAPTCHA v2.
 
    1. Gå till AEM ![verktyg-1](assets/tools-1.png) > **Cloud Services**.
    1. Tryck på **[!UICONTROL reCAPTCHA]**. Sidan Konfigurationer öppnas. Välj den konfigurationsbehållare som skapades i föregående steg och tryck på **[!UICONTROL Create]**.
-   1. Ange namn, platsnyckel och hemlig nyckel för reCAPTCHA-tjänsten och tryck på **[!UICONTROL Create]** för att skapa molntjänstkonfigurationen.
-   1. I dialogrutan Redigera komponent anger du platsen och de hemliga nycklarna som fås i steg 1. Tryck **Spara inställningar** och sedan trycka **OK** för att slutföra konfigurationen.
+   1. Välj version som reCAPTCHA v2, ange Namn; Webbplatsnyckel och Hemlig nyckel för tjänsten reCAPTCHA (hämtas i steg 1) och tryck på **[!UICONTROL Create]** för att skapa molntjänstkonfigurationen.
+   1. I dialogrutan Redigera komponent anger du platsen och de hemliga nycklarna som fås i steg 1. Tryck **[!UICONTROL Save Settings]** och sedan trycka **OK** för att slutföra konfigurationen.
 
-   När reCAPTCHA-tjänsten har konfigurerats är den tillgänglig för användning i adaptiva formulär. Mer information finns i [Använda CAPTCHA i anpassningsbara formulär](#using-captcha).
+   När reCAPTCHA-tjänsten har konfigurerats är den tillgänglig för användning i adaptiva formulär. Mer information finns i [använda CAPTCHA i anpassningsbara formulär](#using-captcha).
 
-## Använd CAPTCHA i anpassningsbara formulär {#using-captcha}
+![Recaptcha v2](assets/recaptcha-v2.png)
 
-Så här använder du CAPTCHA i adaptiva former:
+
+## Använd reCAPTCHA i anpassningsbara formulär {#using-recaptcha}
+
+Så här använder du reCAPTCHA i adaptiva former:
 
 1. Öppna ett anpassat formulär i redigeringsläge.
 
@@ -86,15 +132,100 @@ Så här använder du CAPTCHA i adaptiva former:
 
 1. Välj den Captcha-komponent som du har lagt till och tryck på ![cmppr](assets/cmppr.png) om du vill redigera dess egenskaper.
 1. Ange en titel för CAPTCHA-widgeten. Standardvärdet är **Captcha**. Välj **Dölj titel** om du inte vill att rubriken ska visas.
-1. Från **Captcha-tjänst** nedrullningsbar meny, välja **reCaptcha** för att aktivera tjänsten reCAPTCHA om du har konfigurerat den enligt beskrivningen i [Tjänsten ReCAPTCHA från Google](#google-recaptcha). Välj en konfiguration i listrutan Inställningar. Välj också storleken som **Normal** eller **Kompakt** för widgeten reCAPTCHA.
+1. Från **Captcha-tjänst** nedrullningsbar meny, välja **reCaptcha** för att aktivera tjänsten reCAPTCHA om du har konfigurerat den enligt beskrivningen i [Tjänsten ReCAPTCHA från Google](#google-recaptcha).
+1. Välj en konfiguration i listrutan Inställningar.
+1. **Om den valda konfigurationen har version reCAPTCHA Enterprise**:
+   1. Du kan välja molnkonfigurationen reCAPTCHA med **tangenttyp** as **kryssruta**. I kryssrutenyckeltyp visas det anpassade felmeddelandet som ett textbundet meddelande om captcha-valideringen misslyckas. Du kan välja storlek som **[!UICONTROL Normal]** och **[!UICONTROL Compact]**.
+   1. Du kan välja molnkonfigurationen reCAPTCHA med **tangenttyp** as **poängbaserad**. I poängbaserad nyckeltyp visas det anpassade felmeddelandet som ett popup-meddelande om captcha-valideringen misslyckas.
+   1. När du väljer en **[!UICONTROL Bind Reference]** de data som skickas är bundna, annars är de obundna data. Nedan finns XML-exempel på obundna data och bundna data (med bind referens som SSN) när ett formulär skickas.
 
-   >[!NOTE]
-   >
-   >Markera inte **[!UICONTROL Default]** från listrutan Captcha-tjänst eftersom AEM CAPTCHA-tjänsten är föråldrad.
+      ```xml
+          <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+          <afData>
+          <afUnboundData>
+              <data>
+                  <captcha16820607953761>
+                      <captchaType>reCaptchaEnterprise</captchaType>
+                      <captchaScore>0.9</captchaScore>
+                  </captcha16820607953761>
+              </data>
+          </afUnboundData>
+          <afBoundData>
+              <Root
+                  xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                  <PersonalDetails>
+                      <SSN>371237912</SSN>
+                      <FirstName>Sarah </FirstName>
+                      <LastName>Smith</LastName>
+                  </PersonalDetails>
+                  <OtherInfo>
+                      <City>California</City>
+                      <Address>54 Residency</Address>
+                      <State>USA</State>
+                      <Zip>123112</Zip>
+                  </OtherInfo>
+              </Root>
+          </afBoundData>
+          <afSubmissionInfo>
+              <stateOverrides/>
+              <signers/>
+              <afPath>/content/dam/formsanddocuments/captcha-form</afPath>
+              <afSubmissionTime>20230608034928</afSubmissionTime>
+          </afSubmissionInfo>
+          </afData>
+      ```
+
+
+      ```xml
+          <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+          <afData>
+          <afUnboundData>
+              <data/>
+          </afUnboundData>
+          <afBoundData>
+              <Root
+                  xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                  <PersonalDetails>
+                      <SSN>
+                          <captchaType>reCaptchaEnterprise</captchaType>
+                          <captchaScore>0.9</captchaScore>
+                      </SSN>
+                      <FirstName>Sarah</FirstName>
+                      <LastName>Smith</LastName>
+                  </PersonalDetails>
+                  <OtherInfo>
+                      <City>California</City>
+                      <Address>54 Residency</Address>
+                      <State>USA</State>
+                      <Zip>123112</Zip>
+                  </OtherInfo>
+              </Root>
+          </afBoundData>
+          <afSubmissionInfo>
+              <stateOverrides/>
+              <signers/>
+              <afPath>/content/dam/formsanddocuments/captcha-form</afPath>
+              <afSubmissionTime>20230608035111</afSubmissionTime>
+          </afSubmissionInfo>
+          </afData>
+      ```
+
+
+   **Om den valda konfigurationen har version reCAPTCHA v2**:
+   1. Välj storlek som **[!UICONTROL Normal]** eller **[!UICONTROL Compact]** för widgeten reCAPTCHA. Du kan också välja **[!UICONTROL Invisible]** möjlighet att visa CAPTCHA-utmaningen endast i händelse av en misstänkt aktivitet. The **skyddat av reCAPTCHA** emblemet, som visas nedan, visas på de skyddade formulären.
+
+      ![Google skyddat av reCAPTCHA-märke](assets/google-recaptcha-v2.png)
+
+
+   Tjänsten reCAPTCHA är aktiverad i det adaptiva formuläret. Du kan förhandsgranska formuläret och se hur CAPTCHA fungerar.
 
 1. Spara egenskaperna.
 
-Tjänsten reCAPTCHA är aktiverad i det adaptiva formuläret. Du kan förhandsgranska formuläret och se hur CAPTCHA fungerar.
+>[!NOTE]
+> 
+> Markera inte **[!UICONTROL Default]** från listrutan Captcha-tjänst eftersom AEM CAPTCHA-tjänsten är föråldrad.
 
 ### Visa eller dölj CAPTCHA-komponent baserat på regler {#show-hide-captcha}
 
@@ -105,6 +236,10 @@ CAPTCHA-komponenten måste till exempel bara visas i ett adaptivt formulär om f
 Tryck på **[!UICONTROL Currency Value]** i formuläret och skapa följande regler:
 
 ![Visa eller dölja regler](assets/rules-show-hide-captcha.png)
+
+>[!NOTE]
+>
+> * Om du väljer reCAPTCHA v2-konfiguration med storleken **[!UICONTROL Invisible]** eller reCAPTCHA Enterprise score based keys, så alternativet show/hide är inte tillämpligt.
 
 ### Validera CAPTCHA {#validate-captcha}
 
@@ -125,6 +260,10 @@ Så här validerar du en CAPTCHA baserat på villkor och användaråtgärder:
 1. Tryck på CAPTCHA-komponenten och välj ![cmppr](assets/configure-icon.svg) för att visa komponentegenskaperna.
 1. I **[!UICONTROL Validate CAPTCHA]** avsnitt, markera **[!UICONTROL Validate CAPTCHA on a user action]**.
 1. Tryck ![Klar](assets/save_icon.svg) för att spara komponentegenskaperna.
+
+   > Obs!
+   >
+   > * Om du väljer reCAPTCHA v2-konfiguration med storleken **[!UICONTROL Invisible]** eller reCAPTCHA Enterprise score based keys, så gäller inte giltig Captcha för en användaråtgärd.
 
 [!DNL Experience Manager Forms] innehåller `ValidateCAPTCHA` API för att validera CAPTCHA med fördefinierade villkor. Du kan anropa API:t med en anpassad skickaåtgärd eller genom att definiera regler för komponenter i ett anpassat formulär.
 
