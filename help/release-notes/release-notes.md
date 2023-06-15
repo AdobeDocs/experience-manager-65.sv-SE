@@ -3,9 +3,9 @@ title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
 exl-id: fed4e110-9415-4740-aba1-75da522039a9
-source-git-commit: 36edc2507d9acd7d5f94e433a654ccc1647bb58a
+source-git-commit: 8f2c8964c2a6c2f0fcb446b7bca1f8cb822906f7
 workflow-type: tm+mt
-source-wordcount: '3556'
+source-wordcount: '3726'
 ht-degree: 0%
 
 ---
@@ -45,14 +45,20 @@ Några av de viktigaste funktionerna och förbättringarna i den här versionen 
    * Skapa en version
    * Relatera eller inte relatera tillgångar
 
-   Du behöver inte navigera till resursplatsen och visa dess egenskaper för att utföra dessa åtgärder.
+  Du behöver inte navigera till resursplatsen och visa dess egenskaper för att utföra dessa åtgärder.
 * **Dynamic Media _Ögonblicksbild_**- Experimentera med testbilder eller Dynamic Media-URL:er för att se utdata från olika bildmodifierare och optimering av Smart Imaging för filstorlek (med WebP- och AVIF-leverans), nätverksbandbredd och Device Pixel Ratio. Se [Dynamic Media Snapshot](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-snapshot.html).
 * **DASH-strömning med Dynamic Media** - Stöd för nya protokoll (DASH - Dynamic Adaptive Streaming over HTTP) har startats för Adaptive streaming i Dynamic Media (med CMAF aktiverat). Finns nu för alla regioner, [aktiveras via en supportanmälan](/help/assets/video.md#enable-dash-on-your-account-enable-dash).
 * **Integrering av Experience Manager Sites- och Content Fragments med Assets Next-Generation Dynamic Media** - Användare av Experience Manager Assets as a Cloud Service Next-Generation Dynamic Media kan nu använda dessa molnbaserade resurser för att skapa och leverera med lokala eller Managed Services-instanser av Experience Manager Sites 6.5.
-* **Integration av Adaptive Forms på Experience Manager Sites-sidor**: Skapa smidigt digitala registreringsupplevelser genom att använda adaptiva Forms-komponenter i Experience Manager Sites Editor med: - Adaptiv Forms-behållare och adaptiv Forms - Bädda in (v2) komponenter.
-* **Stöd för reCAPTCHA Enterprise i Experience Manager Forms**: Stöd för reCAPTCHA Enterprise i Experience Manager Forms har lagts till, vilket ger bättre skydd mot bedräglig aktivitet och skräppost utöver det befintliga stödet för Google reCAPTCHA v2.
-* **Stöd för Adobe Acrobat Sign for Government med Experience Manager Forms**: Gör det möjligt att integrera Experience Manager Forms säkert och kompatibelt med Adobe Sign för myndigheter (FedRAMP-kompatibelt).
-* **Aktivera Salesforce-integrering med Experience Manager Forms för datautbyte**: Konfigurera integreringen mellan Experience Manager Forms och Salesforce med hjälp av inloggningsflödet för OAuth 2.0-klienten. Denna funktion möjliggör säker och direkt autentisering och behörighet av programmet och möjliggör smidig kommunikation utan användarinblandning.
+
+**AEM Forms**
+
+* **[Adaptiv Forms i AEM Page Editor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)**: Nu kan du använda AEM Page Editor för att snabbt skapa och lägga till flera formulär på webbplatsens sidor. Med den här funktionen kan skribenter skapa sömlösa datainhämtningsmöjligheter på webbplatssidor med hjälp av kraften i adaptiva formulärkomponenter, inklusive dynamiskt beteende, validering, dataintegrering, generering av dokument för post- och affärsprocessautomatisering. Du kan:
+   * Skapa ett anpassat formulär genom att dra och släppa formulärkomponenter i den adaptiva Forms Container-komponenten i AEM Sites Editor eller Experience Fragments.
+   * Använd Adaptive Forms Wizard i AEM Sites Editor för att skapa formulär oberoende av sajtsidor, vilket ger dig frihet att återanvända sådana formulär på flera sidor.
+   * Lägg till flera formulär på en webbplatssida, effektivisera användarupplevelsen och ge större flexibilitet.
+* **[Stöd för reCAPTCHA Enterprise i Experience Manager Forms](/help/forms/using/captcha-adaptive-forms.md)**: Stöd för reCAPTCHA Enterprise i Experience Manager Forms har lagts till, vilket ger bättre skydd mot bedräglig aktivitet och skräppost utöver det befintliga stödet för Google reCAPTCHA v2.
+* **[Stöd för Adobe Acrobat Sign for Government med Experience Manager Forms](/help/forms/using/adobe-sign-integration-adaptive-forms.md)**: AEM Forms är nu integrerat med Adobe Acrobat Sign for Government (FedRAMP-kompatibelt). Integreringen ger en avancerad nivå av regelefterlevnad och säkerhet för e-signaturer med inskickade adaptiva formulär för myndighetskonton (myndigheter och myndigheter). Integrationen med Adobe Acrobat Sign for Government gör det möjligt för Adobe och myndighetskunder att använda elektroniska signaturer i Adaptive Forms för några av de mest verksamhetskritiska och känsliga verksamhetsområdena. Detta extra säkerhetsskikt säkerställer att alla e-signaturer är helt kompatibla med FedRAMP Moderate-kompatibiliteten, vilket ger Adobe myndighetskunder sinnesro.
+* **[Aktivera Salesforce-integrering med Experience Manager Forms för datautbyte](/help/forms/using/oauth2-client-credentials-flow-for-server-to-server-integration.md)**: Konfigurera integreringen mellan Experience Manager Forms och Salesforce med hjälp av inloggningsflödet för OAuth 2.0-klienten. Denna funktion möjliggör säker och direkt autentisering och behörighet av programmet och möjliggör smidig kommunikation utan användarinblandning.
 * **Optimering och förbättrad funktionalitet i arbetsflödesmotorn**: Öka arbetsflödesmotorernas prestanda genom att minimera antalet arbetsflödesinstanser. Förutom `COMPLETED` och `RUNNING` statusvärden, arbetsflödet stöder även tre nya statusvärden: `ABORTED`, `SUSPENDED`och `FAILED`.
 
 
@@ -357,14 +363,14 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 
 * En GraphQL-fråga kan använda `damAssetLucene` index i stället för `fragments` index. Den här åtgärden kan leda till att GraphQL-frågor misslyckas eller tar lång tid att köra.
 
-   För att åtgärda problemet `damAssetLucene` måste konfigureras så att följande två egenskaper ingår:
+  För att åtgärda problemet `damAssetLucene` måste konfigureras så att följande två egenskaper ingår:
 
    * `contentFragment`
    * `model`
 
-   När indexdefinitionen har ändrats krävs en omindexering (`reindex` = `true`).
+  När indexdefinitionen har ändrats krävs en omindexering (`reindex` = `true`).
 
-   Efter dessa steg bör GraphQL-frågorna gå snabbare.
+  Efter dessa steg bör GraphQL-frågorna gå snabbare.
 
 * Som [!DNL Microsoft® Windows Server 2019] stöder inte [!DNL MySQL 5.7] och [!DNL JBoss® EAP 7.1], [!DNL Microsoft® Windows Server 2019] stöder inte körklara installationer för [!DNL Experience Manager Forms 6.5.10.0].
 
@@ -385,12 +391,12 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 * När du försöker flytta, ta bort eller publicera antingen innehållsfragment, platser eller sidor uppstår ett problem när referenser till innehållsfragment hämtas, eftersom bakgrundsfrågan misslyckas. Funktionen fungerar alltså inte.
 Du måste lägga till följande egenskaper i indexdefinitionsnoden för att få en korrekt åtgärd `/oak:index/damAssetLucene` (ingen omindexering krävs):
 
-   ```xml
-   "tags": [
-       "visualSimilaritySearch"
-     ]
-   "refresh": true
-   ```
+  ```xml
+  "tags": [
+      "visualSimilaritySearch"
+    ]
+  "refresh": true
+  ```
 
 * På JBoss® 7.1.4-plattformen när användaren installerar Experience Manager 6.5.16.0 eller senare Service Pack, `adobe-livecycle-jboss.ear` distributionen misslyckas.
 * JDK-version senare än 1.8.0_281 stöds inte för WebLogic JEE-server.
@@ -414,4 +420,3 @@ Dessa webbplatser är bara tillgängliga för kunder. Om du är kund och behöve
 >* [[!DNL Experience Manager] produktsida](https://business.adobe.com/products/experience-manager/adobe-experience-manager.html)
 >* [[!DNL Experience Manager] 6.5-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-65.html)
 >* [Prenumerera på produktuppdateringar med Adobe prioritet](https://www.adobe.com/subscription/priority-product-update.html)
-

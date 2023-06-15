@@ -2,19 +2,15 @@
 title: Skapa eller lägga till ett anpassat formulär på AEM Sites-sidan
 description: Upptäck hur du enkelt kan skapa och lägga till anpassade formulär på din AEM Sites-sida. Lär dig stegvisa tekniker och metodtips för att integrera dynamiska och anpassningsbara formulär på er webbplats och optimera era era digitala upplevelser för maximal effekt.
 feature: Adaptive Forms
-source-git-commit: 73271612633ec349ee1c002044724f408324e5a2
+source-git-commit: 8f2c8964c2a6c2f0fcb446b7bca1f8cb822906f7
 workflow-type: tm+mt
-source-wordcount: '2822'
+source-wordcount: '2810'
 ht-degree: 0%
 
 ---
 
 
 # Skapa eller lägga till ett anpassat formulär på AEM Sites-sidan {#create-or-add-an-adaptive-form-to-aem-sites-page}
-
-[!BADGE dokumentation för förhandsversion]{type=Caution tooltip="Gul status"}
-
-<span class="preview"> Dokumentationen kan komma att ändras i förväg.</span>
 
 Med AEM Forms kan du smidigt lägga in anpassningsbara formulär på webbsidorna. På så sätt kan besökarna enkelt fylla i och skicka in formulär utan att lämna den sida de är på. På så sätt kan de enkelt hålla kontakten med andra element på webbplatsen samtidigt som de interagerar aktivt med formuläret.
 
@@ -45,7 +41,7 @@ Du kan utnyttja den här funktionen till fullo genom att använda följande alte
 
 * **Lägg till ett anpassat anpassat formulär i ett Experience Fragments:** Nå ut bättre med formulären genom att lägga till dem i AEM Experience Fragments, vilket möjliggör smidig återanvändning på flera sidor eller webbplatser.
 
-* **Lägga till flera formulär på en AEM Sites-sida eller Experience Fragment:**  Lägg till flera formulär på en sida för att ge användarna flera alternativ baserat på deras önskemål och önskemål. Dessa kan vara en kombination av helt nya formulär från grunden och befintliga formulär.
+* **Lägga till flera formulär på en AEM Sites-sida eller Experience Fragment:**  Lägg till flera formulär på en sida för att ge användarna olika alternativ beroende på vilka önskemål och önskemål de har. Dessa kan vara en kombination av helt nya formulär från grunden och befintliga formulär.
 
 * **Konvertera ett anpassat formulär till Experience Fragment:** Konvertera ett anpassat formulär som lagts till på en AEM Sites-sida till ett Experience Fragment för återanvändning av formuläret på flera AEM Sites-sidor.
 
@@ -236,8 +232,6 @@ Du kan använda förifyllningstjänsten för formulärdatamodell för att fylla 
 1. Klicka på egenskaperna för den adaptiva formulärbehållaren ![Egenskaper för adaptiv formulärbehållare](/help/forms/using/assets/configure-icon.svg) ikon. Dialogrutan Adaptiv formulärbehållare öppnas för att konfigurera datamodeller.
    ![](/help/forms/using/assets/prefill-service-fdm-aem-sites-page-editor.png)
 1. Välj en formulärdatamodell. Öppna **[!UICONTROL Basic]** -fliken. I förifyllningstjänsten väljer du **[!UICONTROL Forms Portal Draft Prefill Service]**.
-
-
 1. Klicka på **[!UICONTROL Done]**.
 
 ## Dirigera om användaren till en ny användare när formuläret skickas eller visa ett tackmeddelande

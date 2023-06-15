@@ -11,9 +11,9 @@ discoiquuid: 1f28b257-5419-4a21-a54a-b20bf35530ac
 docset: aem65
 feature: Adaptive Forms, Acrobat Sign
 exl-id: 52146038-1582-41b8-aee0-215d04bb91d7
-source-git-commit: 66674f0e2621d8786ab4d662cddad373122d8b51
+source-git-commit: 8f2c8964c2a6c2f0fcb446b7bca1f8cb822906f7
 workflow-type: tm+mt
-source-wordcount: '1799'
+source-wordcount: '1816'
 ht-degree: 0%
 
 ---
@@ -91,9 +91,9 @@ Utför följande steg för att konfigurera [!DNL Adobe Sign] med AEM [!DNL Forms
    1. I **[!UICONTROL Redirect URL]** lägger du till HTTPS-URL:en som kopierades i föregående steg.
    1. Aktivera följande OAuth-inställningar för [!DNL Adobe Sign] program och klicka **[!UICONTROL Save]**.
 
-   * aggrement_read
-   * aggrement_write
-   * aggrement_send
+   * agreement_read
+   * agreement_write
+   * agreement_send
    * widget_write
    * workflow_read
 
@@ -136,9 +136,6 @@ Nu [!DNL Adobe Sign] är integrerat med AEM [!DNL Forms] och klart för användn
 
 ## Koppla AEM Forms till Adobe Acrobat Sign Solutions för myndigheter {#adobe-acrobat-sign-for-government}
 
-[!BADGE betatestning]{type=Caution tooltip="Gul status"}
-<span class="preview"> Det här avsnittet innehåller betatestningsdokumentation och kan komma att ändras.</span>
-
 Att knyta AEM Forms till Adobe Acrobat Sign Solutions för myndigheter är en flerstegsprocess. Den innehåller följande uppgifter:
 
 * Skapar omdirigerings-URL för dina AEM
@@ -168,25 +165,24 @@ Innan du börjar ansluta AEM Forms med Adobe Acrobat Sign Solution,
 1. Tryck på **[!UICONTROL Create]** att skapa [!DNL Adobe Acrobat Sign] i AEM Forms.
 1. Kopiera URL-adressen för det aktuella webbläsarfönstret till en anteckningsruta från URL-adressen. Den här URL:en kallas `re-direct URL`. I nästa avsnitt delar du `re-direct URL` och `Scopes` med Adobe Sign team och begära inloggningsuppgifter (klient-ID och klienthemlighet).
 
+>[!NOTE]
 >
 >
->
-* Använd en [Översta nivån](https://en.wikipedia.org/wiki/Top-level_domain) domän som `re-direct URL`. Till exempel, `https://adobe.com/libs/adobesign/cloudservices/adobesign/createcloudconfigwizard/cloudservices.html/conf/global`
-* Använd inte en lokal URL som `re-direct URL`. Till exempel, `https://localhost:4502/libs/adobesign/cloudservices/adobesign/createcloudconfigwizard/cloudservices.html/conf/SignConfig`.
-> 
+* A `re-direct URL` måste innehålla [Översta nivån](https://en.wikipedia.org/wiki/Top-level_domain) domän. Till exempel, `https://adobe.com/libs/adobesign/cloudservices/adobesign/createcloudconfigwizard/cloudservices.html/conf/global`
+* Använd inte en lokal URL som `re-direct URL`. Till exempel, `https://localhost:4502/libs/adobesign/cloudservices/adobesign/createcloudconfigwizard/cloudservices.html/conf/global`.
 
 
 #### Dela omdirigerings-URL:en och omfattningarna med Adobe Sign team och få inloggningsuppgifter
 
 Adobe Acrobat Sign for Government Solutions-teamet kräver `re-direct URL` och vilka scope som ska aktiveras för ditt Adobe Acrobat Sign-program (se nedan) för att generera autentiseringsuppgifter (klient-ID och klienthemlighet) som gör att du kan ansluta AEM Forms till Adobe Acrobat Sign Solutions för myndigheter.
 
-Dela `scopes` (visas nedan) och `re-direct URL` skapat och noterat i sista steget i föregående avsnitt med en representant för Adobe Acrobat Sign for Government Solution ([Adobe Professional Services teammedlem](https://opensource.adobe.com/acrobat-sign/signgov/gstarted.html#password)).
+Dela `scopes` (visas nedan) och `re-direct URL` skapat och noterat i det sista steget i föregående avsnitt med en representant för Adobe Acrobat Sign for Government Solution [Adobe Professional Services teammedlem](https://opensource.adobe.com/acrobat-sign/signgov/gstarted.html#password).
 
 **_Omfång_**
 
-* [!DNL aggrement_read]
-* [!DNL aggrement_write]
-* [!DNL aggrement_send]
+* [!DNL agreement_read]
+* [!DNL agreement_write]
+* [!DNL agreement_send]
 * [!DNL widget_read]
 * [!DNL widget_write]
 * [!DNL workflow_read]
@@ -212,11 +208,11 @@ Representanten genererar och delar uppgifter med dig. I nästa avsnitt använder
 
 1. Välj **[!UICONTROL Enable Adobe Acrobat Sign for attachments]** möjlighet att lägga till filer som är kopplade till ett adaptivt formulär i motsvarande [!DNL Adobe Acrobat Sign] dokumentet har skickats för signering.
 
-1. Tryck på **[!UICONTROL Connect to Adobe Sign]**. Ange användarnamn och lösenord för kontot som används när du skapar inloggningsuppgifter [!DNL Adobe Acrobat Sign] program. När du ombeds att bekräfta åtkomsten för `your developer account`, klicka **[!UICONTROL Allow Access]**. Om autentiseringsuppgifterna är korrekta och du tillåter [!DNL AEM Forms] för att få tillgång till [!DNL Adobe Acrobat Sign] utvecklarkontot visas ett meddelande om att åtgärden lyckades.
+1. Tryck på **[!UICONTROL Connect to Adobe Sign]**. Ange användarnamn och lösenord för kontot som används när du skapar inloggningsuppgifter [!DNL Adobe Acrobat Sign] program. När du ombeds att bekräfta åtkomsten för `Adobe Acrobat Sign for Government Solutions` och klickar **[!UICONTROL Allow Access]**. Om autentiseringsuppgifterna är korrekta och du tillåter [!DNL AEM Forms] för att få tillgång till [!DNL Adobe Acrobat Sign] utvecklarkontot visas ett meddelande om att åtgärden lyckades.
 
    ![Konfigurationen av Adobe Acrobat Sign Cloud lyckades](/help/forms/using/assets/adobe-sign-cloud-configuration-success.png)
 
-   <!-- > When prompted for credentials, provide username and password of the account used while creating [!DNL Adobe Acrobat Sign] application. When asked to confirm access for `your developer account`, Click **[!UICONTROL Allow Access]**. -->
+   Ange användarnamn och lösenord för kontot som används när du skapar inloggningsuppgifter [!DNL Adobe Acrobat Sign] program. När du ombeds att bekräfta åtkomsten för `your account`och klicka **[!UICONTROL Allow Access]**.
 
 1. Tryck **[!UICONTROL Create]** för att skapa konfigurationen.
 1. Öppna AEM webbkonsol. URL:en är `https://'[server]:[port]'/system/console/configMgr`
@@ -245,4 +241,5 @@ Standardintervall för synkroniseringsstatus för [!DNL Adobe Sign] har ändrats
 ## Relaterade artiklar {#related-articles}
 
 * [Använda Adobe Sign i en adaptiv form](../../forms/using/working-with-adobe-sign.md)
+* [Adobe Sign med blankettbaserade arbetsflöden](/help/forms/using/aem-forms-workflow-step-reference.md#sign-document-step-sign-document-step)
 * [Använda Adobe Sign med AEM Forms (video)](https://helpx.adobe.com/experience-manager/kt/forms/using/adobe-sign-integration-feature-video.html)
