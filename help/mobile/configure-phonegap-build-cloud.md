@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: administering-adobe-phonegap-enterprise
 discoiquuid: 3c84f4ec-d89b-4ad4-802e-ee3e2d49d916
 exl-id: d91a00d1-12fa-4c84-a426-49413f61c126
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 17d13e9b201629d9d1519fde4740cf651fe89d2c
 workflow-type: tm+mt
-source-wordcount: '676'
+source-wordcount: '660'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,7 @@ The **PhoneGap Build** på programkontrollpanelen kan du skapa och distribuera d
 
 Alla plattformar som stöds definieras i **Hantera program** plattan byggs med PhoneGap Build när du trycker på en fjärranslutning med **PhoneGap Build** Sida vid sida.
 
-Du kan överföra en fjärrversion till [https://build.phonegap.com](https://build.phonegap.com) eller hämta källan för att bygga lokalt med [PhoneGap CLI](https://docs.phonegap.com/references/phonegap-cli/).
+Du kan överföra en fjärrversion till `https://build.phonegap.com` eller hämta källan för att bygga lokalt med PhoneGap CLI på `https://docs.phonegap.com/references/phonegap-cli/`.
 
 ![PhoneGap Build](assets/chlimage_1-60.png)
 
@@ -35,7 +35,7 @@ Du kan överföra en fjärrversion till [https://build.phonegap.com](https://bui
 
 För att kunna utnyttja PhoneGap Build måste du konfigurera den AEM PhoneGap Build med din PhoneGap Build-kontoinformation.
 
-Om du inte har något konto går du till [https://build.phonegap.com](https://build.phonegap.com) och registrera dig! Om du har ett Adobe Creative Cloud-medlemskap kan du ha stöd för upp till 25 privata appar (appar utan öppen källkod).
+Om du inte har något konto går du till `https://build.phonegap.com` och registrera dig! Om du har ett Adobe Creative Cloud-medlemskap kan du ha stöd för upp till 25 privata appar (appar utan öppen källkod).
 
 När du har verifierat att ditt PhoneGap Build-konto är aktivt navigerar du till din AEM Cloud Management Console, särskilt [PhoneGap Build Cloud Service](http://localhost:4502/etc/cloudservices/phonegap-build.html) (http://localhost:4502/etc/cloudservices/phonegap-build.html).
 
@@ -73,7 +73,7 @@ Om du vill starta en fjärranslutning med Adobe PhoneGap Build klickar du på **
 
 >[!NOTE]
 >
->Om bygget misslyckas av någon anledning (den röda iOS-ikonen nedan anger att plattformen misslyckades) kan du hovra över ikonen för att få felmeddelandet. Du kan också klicka på den trippelprickade punkten, &quot;..&quot; längst ned på panelen för att navigera direkt till https://build.phonegap.com (du måste autentisera) och titta på och hantera bygget direkt.
+>Om bygget misslyckas av någon anledning (den röda iOS-ikonen nedan anger att plattformen misslyckades) kan du hovra över ikonen för att få felmeddelandet. Du kan också klicka på den trippelprickade punkten, &quot;..&quot; längst ned i rutan för att navigera direkt till `https://build.phonegap.com` (du måste autentisera) och se och hantera ditt bygge direkt.
 
 ### Bygga ditt program med PhoneGap CLI {#building-your-application-with-phonegap-cli}
 
@@ -86,7 +86,7 @@ För att du ska kunna utnyttja kommandoradsgränssnittet i PhoneGap måste du ko
 1. Platform SDK (iOS, Android, WindowsPhone, ...) och
 1. PhoneGap CLI
 
-Du kan läsa mer [här](https://docs.phonegap.com/references/phonegap-cli/).
+Du kan läsa mer här: `https://docs.phonegap.com/references/phonegap-cli/`.
 
 När du har installerat de nödvändiga komponenterna kan du testa dem på ett enkelt sätt genom att skapa en enkel app och få den att köras antingen i simulatorn eller ännu bättre på enheten, från ett terminalförsök:
 

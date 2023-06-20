@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: fd7bcf17-af7e-4bd6-8137-48401d9743c5
 exl-id: cf8ba05c-6dcd-4880-b8bf-72382118cd80
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 17d13e9b201629d9d1519fde4740cf651fe89d2c
 workflow-type: tm+mt
-source-wordcount: '583'
+source-wordcount: '581'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ AEM använder Adobe PhoneGap och Adobe Publishing Solutions för att skapa och h
 * Presentera HTML5-webbvisningar för nya eller befintliga **native** via Cordova WebViews.
 * Skapa, strukturera och dela multimediematerial i alla kanaler, inklusive webben, mobilsajter, mobilappar och tryck.
 
-AEM integreras med Adobe **[PhoneGap Build](https://build.phonegap.com/)** för att förenkla processen för att bygga och driftsätta applikationer.
+AEM kan integreras med tjänsten Adobe PhoneGap Build (`https://build.phonegap.com/`) för att förenkla processen för att bygga och driftsätta applikationer.
 
 **Adobe ContentSync** Med kan användare enkelt hämta sidor och innehållsuppdateringar Over-the-Air (OTA) till sina enheter utan att behöva installera om programmet eller hämta det från appStore, Google Play eller andra appkällor.
 
@@ -73,7 +73,7 @@ iOS-utvecklare bör vara medvetna om ett öppet problem med Cordova-appar som k�
 
 >[!NOTE]
 >
->Mer information om&quot;App Transport Security&quot; finns i följande avsnitt i [Apple prerelease docs för iOS9](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html#//apple_ref/doc/uid/TP40016198-SW14) och [Diskussion om stackspill](https://stackoverflow.com/questions/30751053/ios9-ats-what-about-html5-based-apps/).
+>Mer information om&quot;App Transport Security&quot; finns i följande avsnitt i [Apple iOS 9 prerelease docs](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html#//apple_ref/doc/uid/TP40016198-SW14) och [Diskussion om stackspill](https://stackoverflow.com/questions/30751053/ios9-ats-what-about-html5-based-apps/).
 
 ## Utveckla mobilprogram i AEM {#developing-mobile-applications-in-aem-1}
 

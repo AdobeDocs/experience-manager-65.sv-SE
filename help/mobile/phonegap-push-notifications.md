@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: ed8c51d2-5aac-4fe8-89e8-c175d4ea1374
 exl-id: 375f2f40-1b98-4e21-adee-cbea274e6a2a
-source-git-commit: 85d39e59b82fdfdcd310be61787a315668aebe38
+source-git-commit: 17d13e9b201629d9d1519fde4740cf651fe89d2c
 workflow-type: tm+mt
-source-wordcount: '3293'
+source-wordcount: '3280'
 ht-degree: 0%
 
 ---
@@ -133,7 +133,6 @@ Så här konfigurerar du Amazon SNS för push-meddelanden:
    1. Klicka på fliken Säkerhetsuppgifter.
    1. Här ser du dina nycklar och skapar nya nycklar. Spara knapparna för senare bruk.
 
-
 1. **Skapa ett ämne**
 
    1. Klicka **Skapa ämne** och välj ett ämnesnamn. Spela in alla fält, t.ex. Ämnesnamn, Ämnesägare, Region och Visningsnamn.
@@ -150,8 +149,8 @@ Så här konfigurerar du Amazon SNS för push-meddelanden:
 
       1. För APNS måste en P12-fil, ett lösenord, ett certifikat och en privat nyckel anges. Dessa skulle ha erhållits i steget *Använda Apple Push Notification Service (APNS)* ovan.
       1. För GCM måste en API-nyckel anges. Detta borde ha erhållits i steget *Använda tjänsten Google Cloud Messaging (GCM)* ovan.
-   1. Upprepa ovanstående steg en gång för varje plattform som du kommer att stödja. Om du vill kunna skicka till både iOS och Android måste du skapa två plattformsprogram.
 
+   1. Upprepa ovanstående steg en gång för varje plattform som du kommer att stödja. Om du vill kunna skicka till både iOS och Android måste du skapa två plattformsprogram.
 
 1. **Skapa en identitetspool**
 
@@ -178,7 +177,6 @@ Så här konfigurerar du Amazon SNS för push-meddelanden:
     </table>
 
    1. Klicka på **Använd princip**
-
 
 #### Använda meddelandetjänsten Pushwoosh {#using-the-pushwoosh-messaging-service}
 
@@ -276,9 +274,9 @@ Det finns två sätt att skapa och distribuera din app med PhoneGap.
 
 **Obs!** För testning av push-meddelanden räcker det inte med emulatorer eftersom push-meddelanden använder ett distinkt protokoll mellan push-providern (Apple eller Google) och enheten. Den aktuella maskinvaran och emulatorerna för Mac/PC stöder inte detta.
 
-1. *PhoneGap Build* är en tjänst som erbjuds av PhoneGap som skapar din app åt dig på deras servrar och gör att du kan hämta den direkt till din enhet. Se [PhoneGap Build](https://build.phonegap.com/) för att lära dig hur du konfigurerar och använder PhoneGap Build.
+1. *PhoneGap Build* är en tjänst som erbjuds av PhoneGap som skapar din app åt dig på deras servrar och gör att du kan hämta den direkt till din enhet. Läs PhoneGap Build dokumentation på `https://build.phonegap.com/` för att lära dig hur du konfigurerar och använder PhoneGap Build.
 
-1. *Kommandoradsgränssnitt för PhoneGap* (CLI) kan du använda en mängd PhoneGap-kommandon på kommandoraden för att skapa, felsöka och distribuera din app. Se [Dokumentation för PhoneGap-utvecklare](https://docs.phonegap.com/en/edge/guide_cli_index.md.html#The%20Command-Line%20Interface) för att lära dig hur du konfigurerar och använder PhoneGap CLI.
+1. *Kommandoradsgränssnitt för PhoneGap* (CLI) kan du använda en mängd PhoneGap-kommandon på kommandoraden för att skapa, felsöka och distribuera din app. Mer information finns i PhoneGap-utvecklardokumentationen (`https://docs.phonegap.com/en/edge/guide_cli_index.md.html#The%20Command-Line%20Interface`) för att lära dig hur du konfigurerar och använder PhoneGap CLI.
 
 ### Steg 7: Skicka ett push-meddelande {#step-send-a-push-notification}
 

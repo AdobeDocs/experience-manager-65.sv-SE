@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-on-demand-services-app
 discoiquuid: cfc7ad16-965e-4075-bc4d-5630abeaba55
 exl-id: 397def36-45b2-47a7-b103-99ca22b6dae1
-source-git-commit: 85d39e59b82fdfdcd310be61787a315668aebe38
+source-git-commit: 17d13e9b201629d9d1519fde4740cf651fe89d2c
 workflow-type: tm+mt
-source-wordcount: '2671'
+source-wordcount: '2667'
 ht-degree: 0%
 
 ---
@@ -369,7 +369,7 @@ Katalogen www innehåller allt webbinnehåll (HTML, JS och CSS-filer) som implem
 
 #### www/config.xml {#www-config-xml}
 
-The [PhoneGap-dokumentation](https://docs.phonegap.com) refererar till den här filen som en&quot;global konfigurationsfil&quot;. config.xml innehåller många appegenskaper, till exempel namnet på programmet, programmets inställningar (till exempel om en iOS-webbvy tillåter överrullning) och plugin-beroenden som är *endast* används av PhoneGap-bygge.
+PhoneGap-dokumentationen (`https://docs.phonegap.com`) refererar till den här filen som en&quot;global konfigurationsfil&quot;. config.xml innehåller många appegenskaper, till exempel namnet på programmet, programmets inställningar (till exempel om en iOS-webbvy tillåter överrullning) och plugin-beroenden som är *endast* används av PhoneGap-bygge.
 
 Filen config.xml är en statisk fil i AEM och exporteras i befintligt skick via Innehållssynkronisering.
 
@@ -381,7 +381,7 @@ Filen config.xml innehåller `content` element:
 
 `<content src="content/phonegap/geometrixx/apps/ng-geometrixx-outdoors/en.html" />`
 
-I [PhoneGap-dokumentationen](https://docs.phonegap.com), det här elementet beskrivs som&quot;Det valfria &lt;content> -elementet definierar programmets startsida i webbresurskatalogen på den översta nivån. Standardvärdet är index.html, som vanligtvis visas i projektets toppnivåkatalog www.&quot;
+I PhoneGap-dokumentationen (`https://docs.phonegap.com`), det här elementet beskrivs som&quot;Det valfria &lt;content> -elementet definierar programmets startsida i webbresurskatalogen på den översta nivån. Standardvärdet är index.html, som vanligtvis visas i projektets toppnivåkatalog www.&quot;
 
 PhoneGap-bygget misslyckas om det inte finns någon index.html-fil. Därför inkluderas den här filen.
 

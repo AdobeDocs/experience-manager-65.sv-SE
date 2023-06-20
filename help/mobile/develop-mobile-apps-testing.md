@@ -10,9 +10,9 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 5a98e1bd-f5c1-4f2f-ac02-dbd005dc1de7
 exl-id: e10e1904-7016-4eb0-9408-36297285f378
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 17d13e9b201629d9d1519fde4740cf651fe89d2c
 workflow-type: tm+mt
-source-wordcount: '1025'
+source-wordcount: '1023'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ Viss grad av automatiserad testning bör utföras för att täcka olika skärmst
 
 ## Manuell provning {#manual-testing}
 
-Utöver automatiserad testning bör din app genomgå en serie manuella tester. Kunder som kör appen på en riktig enhet kan inte dupliceras av ett skript. Här har du också många alternativ. Du kan använda en plattform, till exempel HockeyApp, för att definiera vem som har åtkomst till och samla in feedback. Eller så kan du lägga ut hela processen på en tjänst som UTest, ElusiveStars eller Testin. Om du har en grupp interna testare, men saknar enhetsvarianter, finns det molntjänster där du kan utföra manuell testning på deras enhetspool. En sådan tjänst är SauceLabs. Du kan även fjärrbygga appar till PhoneGap Enterprise och installera dem på lokala enheter som en nivå av accepttestning eller degradering. Se [PhoneGap](https://phonegap.com/) på webbplatsen för att få tillgång till deras senaste funktioner och dokumentation. Oavsett vilken metod man väljer bör manuell provning utföras.
+Utöver automatiserad testning bör din app genomgå en serie manuella tester. Kunder som kör appen på en riktig enhet kan inte dupliceras av ett skript. Här har du också många alternativ. Du kan använda en plattform, till exempel HockeyApp, för att definiera vem som har åtkomst till och samla in feedback. Eller så kan du lägga ut hela processen på en tjänst som UTest, ElusiveStars eller Testin. Om du har en grupp interna testare, men saknar enhetsvarianter, finns det molntjänster där du kan utföra manuell testning på deras enhetspool. En sådan tjänst är SauceLabs. Du kan även fjärrbygga appar till PhoneGap Enterprise och installera dem på lokala enheter som en nivå av accepttestning eller degradering. Se PhoneGap (`https://phonegap.com/`) för deras senaste funktioner och dokumentation. Oavsett vilken metod man väljer bör manuell provning utföras.
 
 * träffade ett stort antal testare,
 * testa mot en stor pool av enheter (helst verkliga enheter, men simulatorer/emulatorer om verkliga enheter inte är tillgängliga),

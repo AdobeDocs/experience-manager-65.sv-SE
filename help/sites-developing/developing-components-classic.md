@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: c68f724f-f9b3-4018-8d3a-1680c53d73f8
 legacypath: /content/docs/en/aem/6-2/develop/components/components-classic
 exl-id: 3f078139-73fd-4913-9d67-264fb2515f8a
-source-git-commit: 43a30b5ba76ea470cc50a962d4f04b4a1508964d
+source-git-commit: 17d13e9b201629d9d1519fde4740cf651fe89d2c
 workflow-type: tm+mt
 source-wordcount: '2392'
 ht-degree: 0%
@@ -85,23 +85,23 @@ Det finns tre sätt att komma åt innehåll i AEM WCM:
 
 * Via egenskapsobjektet som introducerades i `global.jsp`:
 
-   Egenskapsobjektet är en instans av en ValueMap (se [Sling API](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/resource/ValueMap.html)) och innehåller alla egenskaper för den aktuella resursen.
+  Egenskapsobjektet är en instans av en ValueMap (se [Sling API](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/resource/ValueMap.html)) och innehåller alla egenskaper för den aktuella resursen.
 
-   Exempel: `String pageTitle = properties.get("jcr:title", "no title");` används i återgivningsskriptet för en sidkomponent.
+  Exempel: `String pageTitle = properties.get("jcr:title", "no title");` används i återgivningsskriptet för en sidkomponent.
 
-   Exempel: `String paragraphTitle = properties.get("jcr:title", "no title");` används i återgivningsskriptet för en standardstyckekomponent.
+  Exempel: `String paragraphTitle = properties.get("jcr:title", "no title");` används i återgivningsskriptet för en standardstyckekomponent.
 
 * Via `currentPage` objekt som introducerats i `global.jsp`:
 
-   The `currentPage` objektet är en instans av en sida (se [AEM API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/Page.mhtml)). Klassen page innehåller vissa metoder för att komma åt innehåll.
+  The `currentPage` objektet är en instans av en sida (se [AEM API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/Page.html)). Klassen page innehåller vissa metoder för att komma åt innehåll.
 
-   Exempel: `String pageTitle = currentPage.getTitle();`
+  Exempel: `String pageTitle = currentPage.getTitle();`
 
 * Via `currentNode` objekt som introducerats i `global.jsp`:
 
-   The `currentNode` objektet är en instans av en nod (se [JCR API](https://jackrabbit.apache.org/api/2.16/org/apache/jackrabbit/standalone/cli/core/CurrentNode.html)). Egenskaperna för en nod kan nås av `getProperty()` -metod.
+  The `currentNode` objektet är en instans av en nod (se [JCR API](https://jackrabbit.apache.org/api/2.16/org/apache/jackrabbit/standalone/cli/core/CurrentNode.html)). Egenskaperna för en nod kan nås av `getProperty()` -metod.
 
-   Exempel: `String pageTitle = currentNode.getProperty("jcr:title");`
+  Exempel: `String pageTitle = currentNode.getProperty("jcr:title");`
 
 ## JSP-taggbibliotek {#jsp-tag-libraries}
 
@@ -167,6 +167,7 @@ Om du vill utveckla nya komponenter för AEM baserat på en befintlig komponent 
 
       * `cq:dialog` - dialogruta för det beröringsaktiverade användargränssnittet
       * `dialog` - dialogruta för det klassiska användargränssnittet
+
    * ersätta `.jsp` fil (namnge den efter den nya komponenten)
    * eller helt och hållet omarbeta hela komponenten om du vill
 
@@ -178,7 +179,6 @@ Om du vill utveckla nya komponenter för AEM baserat på en befintlig komponent 
    >
    >* Pekaktiverat användargränssnitt använder [Granit](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/index.html) komponenter
    >* Klassiskt användargränssnitt använder [ExtJS-widgetar](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html)
-
 
    >[!NOTE]
    >
@@ -215,7 +215,7 @@ När komponenten har utvecklats lägger du till den i styckesystemet, vilket gö
 
    * lägga till `?wcmmode=design` till slutet av URL:en och till exempel få åtkomst igen:
 
-      `<contextPath>/ Test.html?wcmmode=design`
+     `<contextPath>/ Test.html?wcmmode=design`
 
    * klicka på Design i Sidekick
 
@@ -275,16 +275,17 @@ För att skapa den nya komponenten använder vi standardkomponenten för textima
    >* Pekaktiverat användargränssnitt: `textimage/cq:dialog`
    >* Klassiskt användargränssnitt: `textimage/dialog`
 
-
 1. Redigera komponentmetadata:
 
    * Komponentnamn
 
       * Ange `jcr:description` till `Text Image Component (Extended)`
       * Ange `jcr:title` till `Text Image (Extended)`
+
    * Grupp, där komponenten är listad i sidosparken (lämna som den är)
 
       * Lämna `componentGroup` ange till `General`
+
    * Överordnad komponent för den nya komponenten (standardkomponenten för textimage)
 
       * Ange `sling:resourceSuperType` till `foundation/components/textimage`
@@ -308,6 +309,7 @@ För att skapa den nya komponenten använder vi standardkomponenten för textima
       * Ändra xtype till cqinclude (för att ärva från standardkomponenten).
       * Lägga till en sökvägsegenskap med värden `/libs/foundation/components/textimage/dialog/items/tab1.infinity.json`och `/libs/foundation/components/textimage/dialog/items/tab2.infinity.json`, respektive.
       * Ta bort alla andra egenskaper eller undernoder.
+
    * För flik3:
 
       * Lämna egenskaperna och delnoderna utan ändringar
@@ -318,9 +320,11 @@ För att skapa den nya komponenten använder vi standardkomponenten för textima
          * `xtype`: `selection`
          * `fieldLabel`: `Image Position`
          * `type`: `select`
+
       * Lägg till undernod `position/options` av typen `cq:WidgetCollection` som representerar de två alternativen för bildplacering och skapar under den två noder, o1 och o2 av typen `nt:unstructured`.
       * För nod `position/options/o1` ange egenskaperna: `text` till `Left` och `value` till `left.`
       * För nod `position/options/o2` ange egenskaperna: `text` till `Right` och `value` till `right`.
+
    * Ta bort tabb4.
 
    Bildpositionen bevaras i innehållet som `imagePosition`egenskap för noden som representerar `textimage` stycke. Efter dessa steg ser komponentdialogrutan ut så här:

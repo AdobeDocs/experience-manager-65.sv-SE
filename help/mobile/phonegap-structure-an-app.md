@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: c614a7ff-0d13-4407-bda0-c0a402a13dcd
 exl-id: f37f239f-065b-44f8-acb1-93485b713b49
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 17d13e9b201629d9d1519fde4740cf651fe89d2c
 workflow-type: tm+mt
-source-wordcount: '940'
+source-wordcount: '939'
 ht-degree: 0%
 
 ---
@@ -53,7 +53,7 @@ Om klientsidans kod är nära kopplad till en viss komponent, placerar du den ko
 
 ## PhoneGap-konfiguration {#phonegap-configuration}
 
-Varje AEM Mobile-program innehåller en katalog som är värd för de konfigurationsfiler som används av PhoneGap [kommandoradsgränssnitt](https://github.com/phonegap/phonegap-cli) och [PhoneGap build](https://build.phonegap.com/) för att omvandla webbinnehåll till ett körbart program. I exemplet på Geometrixx finns den här katalogen (/content/phonegap/geometrixx-outdoor/shell/jcr:content/page-app/app-content) som en del av Shell, ett designbeslut som fattas på grund av att det bara innehåller innehåll som inte kan uppdateras direkt, till exempel plugin-program som hanterar enhets-API:er och konfigurationen av själva appen.
+Varje AEM Mobile-program innehåller en katalog som är värd för de konfigurationsfiler som används av PhoneGap [kommandoradsgränssnitt](https://github.com/phonegap/phonegap-cli) och PhoneGap Build på `https://build.phonegap.com/` för att omvandla webbinnehåll till ett körbart program. I exemplet på Geometrixx finns den här katalogen (/content/phonegap/geometrixx-outdoor/shell/jcr:content/page-app/app-content) som en del av Shell, ett designbeslut som fattas på grund av att det bara innehåller innehåll som inte kan uppdateras direkt, till exempel plugin-program som hanterar enhets-API:er och konfigurationen av själva appen.
 
 I den här katalogen finns även ett antal [Cordova hooks](https://cordova.apache.org/docs/en/edge/guide_appdev_hooks_index.md.html#Hooks%20Guide) som kan användas för att installera plugin-program, placera resursfiler på deras plattformsspecifika platser och andra åtgärder som ska utföras som en del av bygget. Obs! som ett alternativ till att ladda ned varje plugin-program som en del av bygget kan du följa mönstret i appen Kitchen Sink och [inkludera plugin-källkod](https://github.com/blefebvre/aem-phonegap-kitchen-sink/tree/master/content/src/main/content/jcr_root/content/phonegap/kitchen-sink/shell/_jcr_content/pge-app/app-content/phonegap/plugins) med resten av programprojektet.
 
