@@ -11,7 +11,7 @@ discoiquuid: 4c53dfc0-25ca-419d-abfe-cf31fc6ebf61
 docset: aem65
 feature: Adaptive Forms
 exl-id: 9b4219b8-d5eb-4099-b205-d98d84e0c249
-source-git-commit: 4e6521f0d40fc10e016bf197d5b31033192e3214
+source-git-commit: 031c683029c61f8f49c07d276c27e05b3fcfd5fc
 workflow-type: tm+mt
 source-wordcount: '1832'
 ht-degree: 0%
@@ -40,9 +40,9 @@ AEM Forms-användare kan använda tjänsten reCAPTCHA från Google för att impl
 
 ### Konfigurera reCAPTCHA Enterprise  {#steps-to-implement-reCAPTCHA-enterprise-in-forms}
 
-1. Skapa en [reCAPTCHA Enterprise project](https://cloud.google.com/reCAPTCHA-enterprise/docs/set-up-non-google-cloud-environments-api-keys#before-you-begin) aktiverad med [reCAPTCHA Enterprise API](https://cloud.google.com/reCAPTCHA-enterprise/docs/set-up-non-google-cloud-environments-api-keys#enable-the-reCAPTCHA-enterprise-api).
+1. Skapa en [reCAPTCHA Enterprise project](https://cloud.google.com/recaptcha-enterprise/docs/set-up-non-google-cloud-environments-api-keys#before-you-begin) aktiverad med [reCAPTCHA Enterprise API](https://cloud.google.com/recaptcha-enterprise/docs/set-up-non-google-cloud-environments-api-keys#enable-the-recaptcha-enterprise-api).
 1. [Hämta](https://support.google.com/googleapi/answer/7014113?hl=en#:~:text=To%20locate%20your%20project%20ID,a%20member%20of%20are%20displayed) projekt-ID.
-1. Skapa en [API-nyckel](https://cloud.google.com/reCAPTCHA-enterprise/docs/set-up-non-google-cloud-environments-api-keys#create_an_api_key) och [webbplatsnyckel för webbplatser](https://cloud.google.com/reCAPTCHA-enterprise/docs/create-key#create-key).
+1. Skapa en [API-nyckel](https://cloud.google.com/recaptcha-enterprise/docs/set-up-non-google-cloud-environments-api-keys#create_an_api_key) och [webbplatsnyckel för webbplatser](https://cloud.google.com/recaptcha-enterprise/docs/create-key#create-key).
 1. Skapa konfigurationsbehållare för molntjänster.
 
    1. Gå till **[!UICONTROL Tools > General > Configuration Browser]**. Se [Konfigurationsläsaren](/help/sites-administering/configurations.md) mer information.
@@ -60,7 +60,7 @@ AEM Forms-användare kan använda tjänsten reCAPTCHA från Google för att impl
    1. Tryck på **[!UICONTROL reCAPTCHA]**. Sidan Konfigurationer öppnas. Välj den konfigurationsbehållare som skapades i föregående steg och tryck på **[!UICONTROL Create]**.
    1. Välj version som reCAPTCHA Enterprise och ange Namn; Projekt-ID, webbplatsnyckel och API-nyckel (hämtas i steg 2 och 3) för reCAPTCHA Enterprise-tjänsten.
    1. Välj nyckeltyp. Nyckeltypen ska vara densamma som den platsnyckel som konfigurerats i Google Cloud-projektet, till exempel **Platsnyckel för kryssruta** eller **Poängbaserad webbplatsnyckel**.
-   1. Ange ett tröskelvärde i intervallet 0 till 1 ([Klicka för mer information om bakgrundsmusik](https://cloud.google.com/reCAPTCHA-enterprise/docs/interpret-assessment#interpret_scores)). Poängvärden som är större än eller lika med tröskelvärdena identifierar mänsklig interaktion, vilket i annat fall omfattar båda interaktioner.
+   1. Ange ett tröskelvärde i intervallet 0 till 1 ([Klicka för mer information om bakgrundsmusik](https://cloud.google.com/recaptcha-enterprise/docs/interpret-assessment#interpret_scores)). Poängvärden som är större än eller lika med tröskelvärdena identifierar mänsklig interaktion, vilket i annat fall omfattar båda interaktioner.
 
       > Obs!
       >
@@ -77,7 +77,7 @@ När du har aktiverat tjänsten reCAPTCHA Enterprise kan den användas i anpassn
 
 ## Konfigurera Google reCAPTCHA v2 {#steps-to-implement-reCAPTCHA-v2-in-forms}
 
-1. Hämta [API-nyckelpar för reCAPTCHA](https://www.google.com/reCAPTCHA/admin) från Google. Den innehåller **webbplatsnyckel** och **hemlig nyckel**.
+1. Hämta [API-nyckelpar för reCAPTCHA](https://www.google.com/recaptcha/admin) från Google. Den innehåller **webbplatsnyckel** och **hemlig nyckel**.
 1. Skapa konfigurationsbehållare för molntjänster.
    1. Gå till **[!UICONTROL Tools > General > Configuration Browser]**. Se [Konfigurationsläsaren](/help/sites-administering/configurations.md) mer information.
    1. Gör följande för att aktivera den globala mappen för molnkonfigurationer eller hoppa över det här steget för att skapa och konfigurera en annan mapp för molntjänstkonfigurationer.
