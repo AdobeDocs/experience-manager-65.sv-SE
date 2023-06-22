@@ -3,9 +3,9 @@ title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
 exl-id: fed4e110-9415-4740-aba1-75da522039a9
-source-git-commit: 8f2c8964c2a6c2f0fcb446b7bca1f8cb822906f7
+source-git-commit: 1077aeabacb1dbb489dbc7222c45da0a35b8cf16
 workflow-type: tm+mt
-source-wordcount: '3726'
+source-wordcount: '3765'
 ht-degree: 0%
 
 ---
@@ -400,6 +400,7 @@ Du måste lägga till följande egenskaper i indexdefinitionsnoden för att få 
 
 * På JBoss® 7.1.4-plattformen när användaren installerar Experience Manager 6.5.16.0 eller senare Service Pack, `adobe-livecycle-jboss.ear` distributionen misslyckas.
 * JDK-version senare än 1.8.0_281 stöds inte för WebLogic JEE-server.
+* Från och med AEM 6.5.15, JavaScript-motorn Rhino från ```org.apache.servicemix.bundles.rhino``` paket har ett nytt värdbeteende. Skript som använder strikt läge (```use strict;```) måste deklarera variablerna korrekt, annars körs de inte, utan utlöser i stället ett körningsfel.
 
 ## OSGi-paket och innehållspaket som ingår{#osgi-bundles-and-content-packages-included}
 
