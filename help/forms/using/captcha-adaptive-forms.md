@@ -11,7 +11,7 @@ discoiquuid: 4c53dfc0-25ca-419d-abfe-cf31fc6ebf61
 docset: aem65
 feature: Adaptive Forms
 exl-id: 9b4219b8-d5eb-4099-b205-d98d84e0c249
-source-git-commit: 031c683029c61f8f49c07d276c27e05b3fcfd5fc
+source-git-commit: 294a7de1c777c49acf8590ec0900b0342f01e7eb
 workflow-type: tm+mt
 source-wordcount: '1832'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 CAPTCHA (Completely Automated Public Turing test to tell Computers and Humans Apart) är ett program som ofta används vid onlinetransaktioner för att skilja mellan människor och automatiserade program eller organ. Det utgör en utmaning och utvärderar användarens svar för att avgöra om det är en människa eller en robot som interagerar med webbplatsen. Det förhindrar användaren att fortsätta om testet misslyckas och gör onlinetransaktionerna säkra genom att förhindra att skräppost eller skadliga syften publiceras.
 
-AEM Forms stöder CAPTCHA i adaptiva former. Du kan använda tjänsten reCAPTCHA från Google för att implementera CAPTCHA.
+AEM Forms har stöd för CAPTCHA i anpassningsbara formulär. Du kan använda tjänsten reCAPTCHA från Google för att implementera CAPTCHA.
 
 >[!NOTE]
 >
@@ -75,7 +75,7 @@ När du har aktiverat tjänsten reCAPTCHA Enterprise kan den användas i anpassn
 ![reCAPTCHA Enterprise](/help/forms/using/assets/recaptcha1-enterprise.png)
 
 
-## Konfigurera Google reCAPTCHA v2 {#steps-to-implement-reCAPTCHA-v2-in-forms}
+### Konfigurera Google reCAPTCHA v2 {#steps-to-implement-reCAPTCHA-v2-in-forms}
 
 1. Hämta [API-nyckelpar för reCAPTCHA](https://www.google.com/recaptcha/admin) från Google. Den innehåller **webbplatsnyckel** och **hemlig nyckel**.
 1. Skapa konfigurationsbehållare för molntjänster.
@@ -333,6 +333,6 @@ public interface GuideCaptchaValidator {
 }
 ```
 
-`captchaPropertyNodePath` refererar till resurssökvägen för CAPTCHA-komponenten i Sling-databasen. Använd den här egenskapen om du vill ta med information som är specifik för CAPTCHA-komponenten. Till exempel: `captchaPropertyNodePath` innehåller information om reCAPTCHA-molnkonfigurationen som konfigurerats för CAPTCHA-komponenten. Molnkonfigurationsinformationen innehåller **[!UICONTROL Site Key]** och **[!UICONTROL Secret Key]** inställningar för implementering av tjänsten reCAPTCHA.
+`captchaPropertyNodePath` Hänvisar till resurssökvägen för CAPTCHA-komponenten i Sling-databasen. Använd den här egenskapen om du vill ta med information som är specifik för CAPTCHA-komponenten. Till exempel: `captchaPropertyNodePath` innehåller information om reCAPTCHA-molnkonfigurationen som konfigurerats för CAPTCHA-komponenten. Molnkonfigurationsinformationen innehåller **[!UICONTROL Site Key]** och **[!UICONTROL Secret Key]** inställningar för implementering av tjänsten reCAPTCHA.
 
-`userResponseToken` refererar till `g_reCAPTCHA_response` som genereras när en CAPTCHA har lösts i ett formulär.
+`userResponseToken` Hänvisar till `g_reCAPTCHA_response` som genereras när en CAPTCHA har lösts i ett formulär.
