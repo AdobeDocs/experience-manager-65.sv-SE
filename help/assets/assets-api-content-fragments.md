@@ -2,9 +2,10 @@
 title: Stöd för Adobe Experience Manager Content Fragments i Assets HTTP API
 description: Lär dig mer om stöd för innehållsfragment i Assets HTTP API, en viktig del AEM headless delivery feature.
 feature: Content Fragments,Assets HTTP API
+role: Developer
 exl-id: 0f9efb47-a8d1-46d9-b3ff-a6c0741ca138
 hide: true
-source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
+source-git-commit: 48131c5accfe73b83197bd581ed5a22bc4890a56
 workflow-type: tm+mt
 source-wordcount: '1957'
 ht-degree: 1%
@@ -76,7 +77,6 @@ Till exempel för att komma åt `/content/dam/wknd/en/adventures/cycling-tuscany
 >
 >* `/api/assets` **inte** behöver du använda `.model` väljare.
 >* `/content/path/to/page` **gör** kräver att `.model` väljare.
-
 
 HTTP-metoden avgör vilken åtgärd som ska utföras:
 
@@ -155,7 +155,6 @@ Om REST API:t för Resurser används i en miljö utan särskilda autentiseringsk
 >* [CORS/AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html)
 >* [Video - Utveckla för CORS med AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/develop-for-cross-origin-resource-sharing.html)
 >
-
 
 I miljöer med specifika autentiseringskrav rekommenderas OAuth.
 
@@ -331,49 +330,52 @@ Följande statuskoder kan visas under de relevanta omständigheterna:
 
 * **500** (Internt serverfel)
 
-   >[!NOTE]
-   >
-   >Detta fel returneras:
-   >
-   >* när ett fel som inte kan identifieras med en viss kod har inträffat
-   >* när den angivna nyttolasten inte var giltig
+  >[!NOTE]
+  >
+  >Detta fel returneras:
+  >
+  >* när ett fel som inte kan identifieras med en viss kod har inträffat
+  >* när den angivna nyttolasten inte var giltig
 
-
-   I följande exempel visas vanliga scenarier när den här felstatusen returneras, tillsammans med felmeddelandet (monospace) som genereras:
+  I följande exempel visas vanliga scenarier när den här felstatusen returneras, tillsammans med felmeddelandet (monospace) som genereras:
 
    * Överordnad mapp finns inte (när ett innehållsfragment skapas via `POST`)
    * Ingen innehållsfragmentmodell har angetts (cq:model saknas), kan inte läsas (på grund av en ogiltig sökväg eller ett behörighetsproblem) eller så finns det ingen giltig fragmentmodell:
 
       * `No content fragment model specified`
       * `Cannot create a resource of given model '/foo/bar/qux'`
+
    * Det gick inte att skapa innehållsfragmentet (eventuellt ett behörighetsproblem):
 
       * `Could not create content fragment`
+
    * Titeln och/eller beskrivningen kunde inte uppdateras:
 
       * `Could not set value on content fragment`
+
    * Det gick inte att ange metadata:
 
       * `Could not set metadata on content fragment`
+
    * Innehållselementet kunde inte hittas eller kunde inte uppdateras
 
       * `Could not update content element`
       * `Could not update fragment data of element`
 
-   De detaljerade felmeddelandena returneras vanligtvis på följande sätt:
+  De detaljerade felmeddelandena returneras vanligtvis på följande sätt:
 
-   ```xml
-   {
-     "class": "core/response",
-     "properties": {
-       "path": "/api/assets/foo/bar/qux",
-       "location": "/api/assets/foo/bar/qux.json",
-       "parentLocation": "/api/assets/foo/bar.json",
-       "status.code": 500,
-       "status.message": "...{error message}.."
-     }
-   }
-   ```
+  ```xml
+  {
+    "class": "core/response",
+    "properties": {
+      "path": "/api/assets/foo/bar/qux",
+      "location": "/api/assets/foo/bar/qux.json",
+      "parentLocation": "/api/assets/foo/bar.json",
+      "status.code": 500,
+      "status.message": "...{error message}.."
+    }
+  }
+  ```
 
 ## API-referens {#api-reference}
 
