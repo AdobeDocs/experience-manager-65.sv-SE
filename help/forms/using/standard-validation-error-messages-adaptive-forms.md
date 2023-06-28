@@ -10,14 +10,19 @@ geptopics: SG_AEMFORMS/categories/setting_up_and_managing_domains
 discoiquuid: ec062567-1c6b-497b-a1e7-1dbac2d60852
 feature: Adaptive Forms
 exl-id: 54a76d5c-d19b-4026-b71c-7b9e862874bc
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: cd6d9b4d019e24002e4fe1cc8679d270b24c2934
 workflow-type: tm+mt
-source-wordcount: '1057'
+source-wordcount: '1080'
 ht-degree: 0%
 
 ---
 
 # Standardvalideringsfelmeddelanden för anpassade formulär {#standard-validation-error-messages}
+
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM 6.5 | Den här artikeln |
+| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/add-rules-and-use-expressions-in-an-adaptive-form/add-custom-error-handler-adaptive-forms.html) |
 
 Anpassade formulär validerar indata som du anger i fält baserat på ett förinställt valideringskriterier. Valideringskriterierna hänvisar till godkända indatavärden för fält i ett adaptivt formulär. Du kan ange valideringskriterier baserat på den datakälla som du använder med det anpassade formuläret. Om du till exempel använder RESTful-webbtjänster som datakälla kan du definiera valideringskriterierna i en Swagger-definitionsfil.
 
