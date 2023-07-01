@@ -8,9 +8,9 @@ content-type: reference
 discoiquuid: bbb9936e-ecd2-44b3-b4ae-dd62a3160641
 docset: aem65
 exl-id: c8aeceec-860c-49ee-b681-d7107e52020d
-source-git-commit: 936b636819eaef595fcdf9f1f3446d4ac0c28b2f
+source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
 workflow-type: tm+mt
-source-wordcount: '2036'
+source-wordcount: '2084'
 ht-degree: 0%
 
 ---
@@ -62,7 +62,7 @@ Om du vill skapa en variabel
    * Formulärdatamodell - Ange en formulärdatamodell.
    * ArrayList - Ange en undertyp för samlingen.
 
-1. Ange en valfri beskrivning för variabeln och tryck på ![](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png) för att spara ändringarna. Variabeln visas i listan som är tillgänglig i den vänstra rutan.
+1. Ange en valfri beskrivning för variabeln och tryck på ![Ikonen Spara markeras med en bock inuti en ruta.](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png) för att spara ändringarna. Variabeln visas i listan som är tillgänglig i den vänstra rutan.
 
 Tänk på följande när du skapar variabler:
 
@@ -92,10 +92,10 @@ Du kan också uppdatera specifika element i en JSON- eller XML-typvariabel med J
 Så här lägger du till mappning mellan variabler:
 
 1. Tryck på ikonen Steg i arbetsflödesmodellens sidokicka på arbetsflödets redigeringssida.
-1. Dra och släpp **Ange variabel** steg till arbetsflödesredigeraren, tryck på steget och välj ![](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/configure_icon.png) (Konfigurera).
+1. Dra och släpp **Ange variabel** steg till arbetsflödesredigeraren, tryck på steget och välj ![Konfigurationsikonen indikeras av en skiftnyckel.](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/configure_icon.png) (Konfigurera).
 1. I dialogrutan Ange variabel väljer du **[!UICONTROL Mapping]** > **[!UICONTROL Add Mapping]**.
 1. I **Kartvariabel** markerar du variabeln där data ska lagras, väljer mappningsläge och anger ett värde som ska lagras i variabeln. Mappningslägena varierar beroende på variabeltypen.
-1. Mappa fler variabler så att du kan skapa ett meningsfullt uttryck. Tryck ![](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png) för att spara ändringarna.
+1. Mappa fler variabler så att du kan skapa ett meningsfullt uttryck. Tryck ![Ikonen Spara markeras med en bock inuti en ruta.](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png) för att spara ändringarna.
 
 ### Exempel 1: Fråga en XML-variabel för att ange ett värde för en strängvariabel {#example-query-an-xml-variable-to-set-value-for-a-string-variable}
 
@@ -250,8 +250,8 @@ workflowSession.startWorkflow(model, wfData, metaData);
 ## Redigera en variabel {#edit-a-variable}
 
 1. Tryck på ikonen Variabler i sidledaren i arbetsflödesmodellen på sidan Redigera arbetsflöde. I avsnittet Variabler i den vänstra rutan visas alla befintliga variabler.
-1. Tryck på ![](https://helpx.adobe.com/content/dam/help/images/en/edit.png) (Redigera) bredvid variabelnamnet som du vill redigera.
-1. Redigera variabelinformationen och tryck på ![](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png) för att spara ändringarna. Du kan inte redigera **[!UICONTROL Name]** och **[!UICONTROL Type]** fält för en variabel.
+1. Tryck på ![Redigeringsikonen visas med en pennsymbol.](https://helpx.adobe.com/content/dam/help/images/en/edit.png) (Redigera) bredvid variabelnamnet som du vill redigera.
+1. Redigera variabelinformationen och tryck på ![Ikonen Spara markeras med en bock.](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png) för att spara ändringarna. Du kan inte redigera **[!UICONTROL Name]** och **[!UICONTROL Type]** fält för en variabel.
 
 ## Ta bort en variabel {#delete-a-variable}
 
@@ -261,4 +261,4 @@ Om du vill ta bort en variabel
 
 1. Tryck på ikonen Variabler i sidledaren i arbetsflödesmodellen på sidan Redigera arbetsflöde. I avsnittet Variabler i den vänstra rutan visas alla befintliga variabler.
 1. Tryck på ikonen Ta bort bredvid variabelnamnet som du vill ta bort.
-1. Tryck ![](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png) för att bekräfta och ta bort variabeln.
+1. Tryck ![Klar-ikon indikeras av en bockmarkeringssymbol.](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png) för att bekräfta och ta bort variabeln.

@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: dc0191d0-f181-4e1e-b3f4-73427aa22073
 docset: aem65
 exl-id: bc9c864b-8bc3-42b4-ba25-6c5108be4f65
-source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
+source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
 workflow-type: tm+mt
-source-wordcount: '3371'
+source-wordcount: '3392'
 ht-degree: 1%
 
 ---
@@ -49,6 +49,7 @@ Du kan publicera digitala resurser till Dynamic Media Classic (Scene7) antingen 
 >[!NOTE]
 >
 >Experience Manager publicerar till Dynamic Media Classic (Scene7) asynkront. När du har valt **[!UICONTROL Publish]** kan det ta några sekunder för resursen att publicera till Dynamic Media Classic (Scene7).
+>
 
 ### Publicera från Resurskonsolen {#publishing-from-the-assets-console}
 
@@ -203,9 +204,9 @@ Du anger dessa konfigurationsalternativ genom att öppna (dubbelklicka) en Dynam
 
 Zoomkomponenten för HTML5 visar en större bild när du trycker på plusknappen (+).
 
-Resursen har zoomverktyg längst ned. Välj **[!UICONTROL +]** för att förstora. Välj **[!UICONTROL -]** för att minska. Markera **[!UICONTROL x]** eller zoompilen återställer bilden till den ursprungliga storlek den importerades som. Markera de diagonala pilarna så att du kan göra den i helskärmsläge. Välj **[!UICONTROL Edit]** så att du kan konfigurera komponenten. Med den här komponenten kan du konfigurera [gemensamma inställningar för alla Dynamic Media Classic-komponenter (Scene7)](#settings-common-to-all-scene-components).
+Resursen har zoomverktyg längst ned. Välj **[!UICONTROL +]** för att förstora. Välj **[!UICONTROL -]** för att minska. Markera **[!UICONTROL x]** eller zoompilen återställer bilden till den ursprungliga storlek som den importerades som. Markera de diagonala pilarna så att du kan göra den i helskärmsläge. Välj **[!UICONTROL Edit]** så att du kan konfigurera komponenten. Med den här komponenten kan du konfigurera [gemensamma inställningar för alla Dynamic Media Classic-komponenter (Scene7)](#settings-common-to-all-scene-components).
 
-![](do-not-localize/chlimage_1-3.png)
+![Bild på tulpanblommor inuti zoomkomponenten HTML5.](do-not-localize/chlimage_1-3.png)
 
 ### Utfällbar {#flyout}
 
@@ -223,7 +224,7 @@ I den utfällbara komponenten HTML5 visas resursen som en delad skärm. lämnade
 
 Med Dynamic Media Classic (Scene7) Image-komponenten kan du lägga till Dynamic Media Classic (Scene7)-funktioner i dina bilder, till exempel Dynamic Media Classic (Scene7)-modifierare, bild- eller visningsförinställningar samt skärpa. Dynamic Media Classic-bildkomponenten (Scene7) liknar andra bildkomponenter i Experience Manager med speciella Dynamic Media Classic-funktioner (Scene7). I det här exemplet har bilden URL-modifieraren för Dynamic Media Classic (Scene7), `&op_invert=1` används.
 
-![](do-not-localize/chlimage_1-4.png)
+![Bild av en sfär inuti Dynamic Media Classic-bildkomponenten (Scen 7)](do-not-localize/chlimage_1-4.png)
 
 **Titel, Alt-text** - På fliken Avancerat lägger du till en titel i bilden och alternativ text för användare som har grafik inaktiverad.
 
@@ -331,16 +332,15 @@ Om du har flera konfigurationer visas Experience Manager som standard [standardk
 >* När [Säker förhandsvisning är aktiverat](/help/sites-administering/scene7.md#configuring-the-state-published-unpublished-of-assets-pushed-to-scene), både publicerade och opublicerade mediefiler på Dynamic Media Classic (Scene7) visas i Dynamic Media Classic (Scene7) innehållsläsare.
 >* Om du inte ser **[!UICONTROL Dynamic Media Classic (Scene7)]** eller **[!UICONTROL S7]** som ett alternativ i webbläsaren måste du [konfigurera Dynamic Media Classic (Scene7) så att det fungerar med Experience Manager](/help/sites-administering/scene7.md).
 >* För video har Dynamic Media Classic (Scene7) en innehållsläsare stöd för:
-   >   * Adaptiva videouppsättningar: behållare för alla videoåtergivningar som behövs för sömlös uppspelning på flera skärmar
-   >   * Enkel MP4-video
-   >   * En F4V-video
-
+>   * Adaptiva videouppsättningar: behållare för alla videoåtergivningar som behövs för sömlös uppspelning på flera skärmar
+>   * Enkel MP4-video
+>   * En F4V-video
 
 ### Bläddra i innehåll {#browsing-content-in-the-classic-ui}
 
 Bläddra i Dynamic Media Classic (Scene7) genom att välja **[!UICONTROL S7]** -fliken.
 
-Du kan ändra konfigurationen som du använder genom att välja konfigurationen. Mapparna ändras beroende på vilken konfiguration du väljer.
+Du kan ändra konfigurationen som du använder genom att välja konfigurationen. Mapparna ändras beroende på den valda konfigurationen.
 
 ![chlimage_1-64](assets/chlimage_1-64.png)
 
@@ -357,7 +357,6 @@ Som standard visas resurser efter filnamn. Du kan även filtrera resultat efter 
 >* En F4V-video
 >
 
-
 ### Söka efter Dynamic Media Classic (Scene7)-resurser med innehållsläsaren {#searching-for-scene-assets-with-the-content-browser}
 
 Att söka efter Dynamic Media Classic-resurser (Scene7) påminner om att söka efter Experience Manager-resurser. Undantaget är att när du söker ser du en fjärrvy över resurserna i Dynamic Media Classic-systemet (Scene7) i stället för att importera dem direkt till Experience Manager.
@@ -366,11 +365,11 @@ Du kan använda det klassiska användargränssnittet eller det pekoptimerade anv
 
 När du söker i något av användargränssnitten kan du filtrera efter följande villkor (visas här i det pekoptimerade användargränssnittet):
 
-**Ange nyckelord** - Du kan söka efter resurser efter namn. När du söker efter nyckelorden anger du vilket filnamn som börjar med. Om du t.ex. skriver ordet &quot;simning&quot; söker du efter alla resursfilnamn som börjar med de bokstäverna i den ordningen. Var noga med att välja Ange när du har skrivit in termen för att hitta resursen.
+**Ange nyckelord** - Du kan söka efter resurser efter namn. När du söker efter nyckelorden anger du vilket filnamn som börjar med. Om du t.ex. skriver ordet &quot;simning&quot; söker du efter alla resursfilnamn som börjar med de bokstäverna i den ordningen. Se till att du väljer `Enter` när du har skrivit in termen för att hitta resursen.
 
 ![chlimage_1-65](assets/chlimage_1-65.png)
 
-**Mapp/sökväg** - Namnet på mappen baseras på den konfiguration du har valt. Du kan gå ned till lägre nivåer genom att markera mappikonen och markera en undermapp. Markera sedan markeringen för att markera den.
+**Mapp/sökväg** - Namnet på mappen baseras på den konfiguration som du har valt. Du kan gå ned till lägre nivåer genom att markera mappikonen och markera en undermapp. Markera sedan markeringen för att markera den.
 
 Om du anger ett nyckelord och väljer en mapp söker Experience Manager igenom den mappen och eventuella undermappar. Om du inte anger några nyckelord när du söker efter, visas bara resurserna i den mappen om du markerar mappen, och inga undermappar inkluderas.
 
@@ -397,7 +396,6 @@ Som standard söker Experience Manager i den markerade mappen och i alla underma
 >* När du söker efter video söker du efter en enskild återgivning. Resultatet returnerar den ursprungliga återgivningen (endast &#42;.mp4) och den kodade återgivningen.
 >* När du söker i en adaptiv videouppsättning söker du i mappen och i alla undermappar, men bara om du har lagt till ett nyckelord i sökningen. Om du inte har lagt till något nyckelord söker Experience Manager inte i undermapparna.
 >
-
 
 **Publiceringsstatus** - Du kan filtrera efter resurser baserat på publiceringsstatus: Opublicerad eller publicerad. Om du inte väljer någon publiceringsstatus söker Experience Manager som standard igenom alla publiceringsstatusar.
 

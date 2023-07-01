@@ -1,8 +1,6 @@
 ---
 title: Responsiv design för webbsidor
-seo-title: Responsive design for web pages
-description: Med responsiv design kan samma sidor visas effektivt på flera enheter i olika orienteringar
-seo-description: With responsive design, the same pages can be effectively displayed on multiple devices in multiple orientations
+description: Med responsiv design kan samma sidor visas effektivt på flera enheter i flera olika orienteringar.
 uuid: 3d324557-e7ff-4c82-920f-9b5a906925e8
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,9 +9,9 @@ content-type: reference
 discoiquuid: 532544b0-1932-419a-b6bd-ecf57a926fef
 legacypath: /content/docs/en/aem/6-0/develop/mobile/responsive
 exl-id: c705710b-a94a-4f4f-affa-ddd4fc6cb0ec
-source-git-commit: e05f6cd7cf17f4420176cf76f28cb469bcee4a0a
+source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
 workflow-type: tm+mt
-source-wordcount: '5324'
+source-wordcount: '5363'
 ht-degree: 0%
 
 ---
@@ -23,6 +21,7 @@ ht-degree: 0%
 >[!NOTE]
 >
 >Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (till exempel _Reagera_). [Läs mer](/help/sites-developing/spa-overview.md).
+>
 
 >[!NOTE]
 >
@@ -201,7 +200,7 @@ Om du till exempel vill skapa en ` [sling:OsgiConfig](/help/sites-deploying/conf
 * Överordnad mapp: `/apps/application_name/config`
 * Namn: `com.day.cq.wcm.mobile.core.impl.MobileEmulatorProvider-*alias*`
 
-   The - `*alias*` suffix krävs eftersom MobileEmulatorProvider-tjänsten är en fabrikstjänst. Använd ett alias som är unikt för den här fabriken.
+  The - `*alias*` suffix krävs eftersom MobileEmulatorProvider-tjänsten är en fabrikstjänst. Använd ett alias som är unikt för den här fabriken.
 
 * jcr:primaryType: `sling:OsgiConfig`
 
@@ -211,12 +210,12 @@ Lägg till följande nodegenskap:
 * Typ: `String[]`
 * Värde: Sökvägarna till de sidkomponenter som återger dina webbsidor. Geometrixx-media-appen använder till exempel följande värden:
 
-   ```
-   geometrixx-media/components/page
-    geometrixx-unlimited/components/pages/page
-    geometrixx-unlimited/components/pages/coverpage
-    geometrixx-unlimited/components/pages/issue
-   ```
+  ```
+  geometrixx-media/components/page
+   geometrixx-unlimited/components/pages/page
+   geometrixx-unlimited/components/pages/coverpage
+   geometrixx-unlimited/components/pages/issue
+  ```
 
 ### Ange enhetsgrupper {#specifying-the-device-groups}
 
@@ -235,6 +234,7 @@ Använd verktygskonsolen för att [skapa och redigera enhetsgrupper](/help/sites
 >[!NOTE]
 >
 >För enhetsgrupper som du använder för responsiv design redigerar du enhetsgruppen och väljer Inaktivera emulator på fliken Allmänt. Det här alternativet förhindrar att emulatorkarusellen visas, vilket inte är relevant för responsiv design.
+>
 
 ## Använda adaptiva bilder {#using-adaptive-images}
 
@@ -326,6 +326,7 @@ I följande exempel väljs HTML från två DAM-renderingar av samma bild.
 >* Skript som genererar HTML: `/libs/foundation/components/adaptiveimage/adaptiveimage.jsp`
 >
 >Följande avsnitt innehåller information om den här komponenten.
+>
 
 ### Bildåtergivning i AEM {#understanding-image-rendering-in-aem}
 
@@ -366,6 +367,7 @@ Komponenten måste utföra följande uppgifter:
 >[!NOTE]
 >
 >Webbklienten använder JavaScript-biblioteken matchMedia och Picturefill (eller liknande bibliotek) för att utvärdera medieväljarna.
+>
 
 Servern som bearbetar bildbegäran måste utföra följande uppgifter:
 
@@ -657,6 +659,7 @@ The `ImageReferenceModificationServlet` klassen åsidosätter `createLayer` och 
 
 >[!NOTE]
 >The [com.day.cq.commons.DownloadResource](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/DownloadResource.html) -klassen innehåller metoden getFileReference.
+>
 
 ## Utveckla ett flytande stödraster {#developing-a-fluid-grid}
 
@@ -698,6 +701,7 @@ Exempelprogrammet för geometrixx-media innehåller exempelvis mediahemkomponent
 >[!NOTE]
 >
 >När en komponent innehåller flera `cq:include` element som refererar till den parsys-komponenten, varje `path` -attribut måste ha ett annat värde.
+>
 
 #### Skalförändra sidkomponentens stödraster {#scaling-the-page-component-grid}
 
@@ -862,13 +866,13 @@ Använd en statisk sidbredd och innehållsblock med konstant bredd för varje in
 
 Använd rutnät för att skala innehållsblock så att de anpassas till olika visningsrutestorlekar. Innehållsblock sträcker sig över ett visst antal kolumner. När kolumnbredderna ökar eller minskar för att passa olika visningsrutestorlekar, ökar eller minskar bredderna för innehållsblocken därefter. Skalning kan stödja både stora och medelstora visningsrutor som är tillräckligt breda för att rymma innehållsblockens placering sida vid sida.
 
-![](do-not-localize/chlimage_1-1a.png)
+![Bild av två stödraster, den ena som är mindre än den andra.](do-not-localize/chlimage_1-1a.png)
 
 #### Flytta innehåll i stödrastret {#repositioning-content-in-the-grid}
 
 Storleken på innehållsblock kan begränsas av en minsta bredd, bortom vilken skalningen inte längre är effektiv. För mindre visningsrutor kan stödrastret användas för att lodrätt distribuera innehållsblock i stället för vågrätt.
 
-![](do-not-localize/chlimage_1-2a.png)
+![Bild av två stödraster, den ena som är mindre än den andra.](do-not-localize/chlimage_1-2a.png)
 
 ### Utforma stödrastret {#designing-the-grid}
 
@@ -953,7 +957,7 @@ Använd det flytande formatet i `.row-fluid` så att du kan styra om innehållsb
 
 Lägg till formatet i `.row-fluid` väljare inuti varje mediefråga. Ange värdet enligt den sidlayout som du använder för den mediefrågan. I följande diagram visas en rad som fördelar innehållet vågrätt för breda visningsrutor och lodrätt för smala visningsrutor.
 
-![](do-not-localize/chlimage_1-3a.png)
+![Två bilder med innehållsblock i en rad, den andra bilden med radens placering.](do-not-localize/chlimage_1-3a.png)
 
 Följande CSS kan implementera detta beteende:
 

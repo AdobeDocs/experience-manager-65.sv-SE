@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: de321869-ebf9-41a1-8203-e12bdb088678
 docset: aem65
 exl-id: e1b5aea0-983c-4e7b-9d35-d7beeee45dc7
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
 workflow-type: tm+mt
-source-wordcount: '1755'
+source-wordcount: '1836'
 ht-degree: 0%
 
 ---
@@ -207,19 +207,19 @@ Du kan avbryta (och sedan återaktivera) arvet. Beroende på vilken komponent de
 
 Det finns två ikoner i den nedre kanten av sidesparten som är viktiga för att förhandsgranska sidor:
 
-![](do-not-localize/chlimage_1-5.png)
+![Sidosparens nedre kant med en vågrät rad på sju ikoner. Två av ikonerna i början av raden, redigeringsikonen och förhandsvisningsikonen, indikeras av en pennsymbol respektive en förstoringsglassymbol.](do-not-localize/chlimage_1-5.png)
 
 * Pennikonen visar att du befinner dig i redigeringsläge där du kan lägga till, ändra, flytta eller ta bort innehåll.
 
-   ![](do-not-localize/chlimage_1-6.png)
+  ![Redigeringsikonen visas med en pennsymbol.](do-not-localize/chlimage_1-6.png)
 
 * Med förstoringsglaset kan du välja förhandsvisningsläge där sidan visas som den kommer att visas i publiceringsmiljön (en uppdatering av sidan behövs ibland):
 
-   ![](do-not-localize/chlimage_1-7.png)
+  ![Ikonen för förhandsvisningsläge indikeras av en förstoringsglassymbol.](do-not-localize/chlimage_1-7.png)
 
-   I förhandsgranskningsläget minskas sidosparken genom att klicka på nedpilsikonen för att återgå till redigeringsläget:
+  I förhandsgranskningsläget minskas sidosparken genom att klicka på nedpilsikonen för att återgå till redigeringsläget:
 
-   ![](do-not-localize/chlimage_1-8.png)
+  ![En stapel med AEM som titel och en ikon för redigeringsläge till höger om titeln, som indikeras av en nedpilssymbol.](do-not-localize/chlimage_1-8.png)
 
 ## Sök och ersätt {#find-replace}
 
@@ -286,7 +286,6 @@ Funktionen för kommandona ångra och gör om liknar den i andra program. Använ
 >* Ångra högst 20 redigeringsåtgärder (standardinställning).
 >* använder [Kortkommandon](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md) för att ångra och göra om.
 >
-
 
 Du kan använda Ångra och Gör om för följande typer av sidändringar:
 

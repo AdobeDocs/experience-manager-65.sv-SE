@@ -1,8 +1,6 @@
 ---
 title: Skapa och redigera appar med Apps-konsolen
-seo-title: Creating and Editing Apps Using the Apps Console
 description: Följ den här sidan om du vill veta mer om hur du skapar och redigerar program med hjälp av appkonsolen.
-seo-description: Follow this page to learn about creating and editing apps using apps console.
 uuid: 4f7db978-ae2b-4ca6-89f1-26e091d9140a
 contentOwner: User
 content-type: reference
@@ -10,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: 9890d045-cead-4d70-b797-95319284e0d8
 exl-id: 49e0b3f6-7ac7-4417-9c31-cc3d3c2305f3
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
 workflow-type: tm+mt
-source-wordcount: '2615'
+source-wordcount: '2695'
 ht-degree: 0%
 
 ---
@@ -21,7 +19,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (t.ex. Reagera). [Läs mer](/help/sites-developing/spa-overview.md).
+>Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (till exempel React). [Läs mer](/help/sites-developing/spa-overview.md).
 
 I utvecklingsprocessen för AEM mobilapplikationer erkänns att användare med olika sakkunskap bidrar till utvecklingen av mobilapplikationer. Följande processkarta visar den allmänna ordningen i vilken innehållsförfattare och programutvecklare utför uppgifter.
 
@@ -62,7 +60,7 @@ Språksidan har två syften:
 
 ### Hemsidan {#the-home-page}
 
-Startsidan, eller index.html-sidan för en språkvariant av ett program, visas när programmet öppnas. Hemsidan innehåller en meny med länkar till olika sidor i programmet. Med styckesystemet kan du lägga till komponenter på sidan för att skapa innehåll.
+Startsidan eller index.html-sidan för en språkvariant av ett program visas när programmet öppnas. På hemsidan finns en meny med länkar till olika sidor i programmet. Med styckesystemet kan du lägga till komponenter på sidan för att skapa innehåll.
 
 ## Skapa ett mobilprogram {#creating-a-mobile-application}
 
@@ -89,9 +87,9 @@ Det finns ytterligare (och valfria) flikar för att bygga molntjänster och inte
 I följande procedur används Touch-gränssnittet för att skapa ett mobilprogram.
 
 1. Klicka på Appar på listen.
-1. Klicka på eller tryck på ikonen Skapa.
+1. Klicka på ikonen Skapa.
 
-   ![](do-not-localize/chlimage_1-7.png)
+   ![Ikonen Skapa indikeras av ett plustecken inuti en fyrkant.](do-not-localize/chlimage_1-7.png)
 
 1. (Valfritt) Ange en beskrivning för programmet på fliken Avancerat och ändra serverns URL om det behövs.
 1. (Valfritt) Om du använder PhoneGap Build för att kompilera programmet väljer du den konfiguration som ska användas på fliken Skapa.
@@ -114,30 +112,30 @@ När du har skapat ett mobilprogram kan du ändra egenskaperna.
 1. Klicka på eller tryck på Appar på listen.
 1. Välj det program som ska konfigureras och klicka på ikonen Visa sidegenskaper.
 
-   ![](do-not-localize/chlimage_1-8.png)
+   ![Ikonen Visa sidegenskaper, som indikeras av bokstaven I inuti en cirkel.](do-not-localize/chlimage_1-8.png)
 
 1. Om du vill ändra egenskapsvärden klickar eller trycker du på ikonen Redigera.
 
-   ![](do-not-localize/chlimage_1-9.png)
+   ![Ikonen Redigera visas med en penna.](do-not-localize/chlimage_1-9.png)
 
 1. Konfigurera de grundläggande och avancerade egenskaperna och klicka eller tryck sedan på ikonen Klar.
 
-   ![](do-not-localize/chlimage_1-10.png)
+   ![Klar-ikonen visas med en bockmarkeringssymbol.](do-not-localize/chlimage_1-10.png)
 
 #### Konfigurera en språkvariant för programmet {#configure-a-language-variation-of-the-application}
 
-1. Klicka på eller tryck på Appar på listen.
-1. Klicka för att gå närmare in i det mobilprogram du vill redigera i Admin Console för appar. Välj den språkversion av programmet som ska konfigureras och klicka på ikonen Visa programegenskaper.
+1. Klicka på Appar på listen.
+1. Klicka för att gå in i det mobilprogram du vill redigera i apparna Admin Console. Välj den språkversion av programmet som ska konfigureras och klicka på ikonen Visa programegenskaper.
 
-   ![](do-not-localize/chlimage_1-11.png)
+   ![Ikonen Visa programegenskaper som indikeras av bokstaven I inuti en cirkel.](do-not-localize/chlimage_1-11.png)
 
 1. Om du vill ändra egenskapsvärden klickar eller trycker du på ikonen Redigera.
 
-   ![](do-not-localize/chlimage_1-12.png)
+   ![Ikonen Redigera visas med en penna.](do-not-localize/chlimage_1-12.png)
 
 1. Konfigurera egenskaperna på flikarna Grundläggande, Avancerat, Version och Analytics och klicka eller tryck sedan på ikonen Done (Klar).
 
-   ![](do-not-localize/chlimage_1-13.png)
+   ![Klar-ikonen visas med en bockmarkeringssymbol.](do-not-localize/chlimage_1-13.png)
 
 ### Skapa innehåll för ett mobilprogram {#authoring-the-content-of-a-mobile-application}
 
@@ -167,7 +165,7 @@ Utför följande procedur på instansen där du vill uppdatera cachen. Om ditt p
 1. Klicka eller tryck på Appar på listen och sedan på eller på ditt program.
 1. Markera välkomstsidan och klicka eller tryck sedan på ikonen Uppdatera cache.
 
-   ![](do-not-localize/chlimage_1-14.png)
+   ![Ikonen Uppdatera cache indikeras av en randig rad med en återvinningssymbol över den.](do-not-localize/chlimage_1-14.png)
 
 ### Använda appmallar {#using-app-templates}
 
@@ -183,7 +181,7 @@ Det senaste exempelpaketet AEM Apps 6.1 innehåller en uppdaterad version av Geo
 Steg för att skapa ett nytt program baserat på en appmall:
 
 1. Se till att du har det senaste AEM Apps 6.1-funktionspaketet och referensexempelpaketen installerade
-1. Klicka på Appar i den vänstra listen.
+1. Klicka på Appar från den vänstra listen.
 
 ![chlimage_1-1](assets/chlimage_1-1.jpeg)
 
@@ -195,7 +193,7 @@ Steg för att skapa ett nytt program baserat på en appmall:
 1. Klicka på Nästa.
 1. Ange ett program-ID och en titel, men du kan också inkludera ett namn och en beskrivning.
 
-   1. Dessutom kan du ange en PNG-fil (PhoneGap-ikonformat som stöds) som en ikon genom att bläddra bland AEM resurser.
+   1. Du kan också ange en PNG-fil (PhoneGap-ikonformat som stöds) som en ikon genom att bläddra bland AEM resurser.
    1. Kom ihåg att du kan redigera alla dessa fält efter att appen har skapats i panelen Hantera app. Med undantag för app-ID:t kan du inte ändra det när program-ID:t har angetts.
 
 ![chlimage_1-150](assets/chlimage_1-150.png)
@@ -222,7 +220,7 @@ Om du vill öppna programmet går du till fliken Mobilprogram och väljer sedan 
 Varje sida i mobilappen innehåller följande funktioner:
 
 * En bakåtknapp för att gå tillbaka till den överordnade sidan. Observera att bakåtknappen inte visas på hemsidan.
-* En expanderbar räl som erbjuder en meny med kommandon och länkar:
+* En stödlinje som innehåller en meny med kommandon och länkar:
 
    * Öppna sidan Platser.
    * Öppna kundvagnen.
@@ -251,7 +249,7 @@ Varje kategorisida har samma innehållsstruktur som sidan Kugghjul. Carousel ger
 
 ### The Products page - Geometrixx Mobile App {#the-products-page-geometrixx-mobile-app}
 
-Sidan Produkter och dess hierarki av underordnade sidor implementerar ett klassificeringssystem för produktsidor. De lägsta sidorna i varje gren av hierarkin är en produktsida som innehåller en ng-produktkomponent.
+Sidan Produkter och hierarkin med underordnade sidor implementerar ett klassificeringssystem för produktsidor. De lägsta sidorna i varje gren av hierarkin är en produktsida som innehåller en ng-produktkomponent.
 
 Sidan Produkter är inte tillgänglig för programanvändare. På sidan Kugghjul finns alla produktsidor.
 
@@ -269,7 +267,7 @@ När du använder programmet är News page tillgängligt från karusellen på de
 
 ### Sidan Om oss - mobilappen Geometrixx {#the-about-us-page-geometrixx-mobile-app}
 
-Sidan Om oss innehåller serverkomponenter med två spalter. Varje kolumn innehåller antingen en bild- eller en textkomponent. Komponenterna kan redigeras och styckesystemet gör att du kan lägga till komponenter.
+Sidan Om oss innehåller flera komponenter med två kolumnrader. Varje kolumn innehåller antingen en bild- eller en textkomponent. Komponenterna kan redigeras och styckesystemet gör att du kan lägga till komponenter.
 
 När du använder programmet är sidan Om oss tillgänglig från karusellen på den engelska sidan.
 
@@ -281,7 +279,7 @@ När du använder programmet är sidan Platser tillgänglig från menylistan på
 
 ## Exempel på mobila komponenter {#sample-mobile-components}
 
-Flera komponenter är omedelbart tillgängliga i Sidekick när du redigerar sidorna i ett mobilprogram. Komponenterna tillhör PhoneGap-komponentgruppen.
+Flera komponenter är omedelbart tillgängliga i Sidekick när du redigerar sidor i ett mobilprogram. Komponenterna tillhör PhoneGap-komponentgruppen.
 
 ### Svep Carousel {#swipe-carousel}
 

@@ -1,8 +1,6 @@
 ---
 title: Lägga till Adobe Analytics Tracking i komponenter
-seo-title: Adding Adobe Analytics Tracking to Components
 description: Lägga till Adobe Analytics Tracking i komponenter
-seo-description: null
 uuid: 447b140c-678c-428d-a1c9-ecbdec75cd42
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,9 +8,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: a11c39b4-c23b-4207-8898-33aea25f2ad0
 exl-id: e6c1258c-81d5-48e4-bdf1-90d7cc13a22d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
 workflow-type: tm+mt
-source-wordcount: '1261'
+source-wordcount: '1267'
 ht-degree: 0%
 
 ---
@@ -21,7 +19,7 @@ ht-degree: 0%
 
 ## Inkludera Adobe Analytics-modulen i en sidkomponent {#including-the-adobe-analytics-module-in-a-page-component}
 
-Sidmallskomponenter (t.ex. `head.jsp, body.jsp`) behöver JSP-inkluderingar för att läsa in ContextHub och Adobe Analytics-integreringen (som är en del av Cloud Servicens). Alla innehåller inläsning av JavaScript-filer.
+Sidmallskomponenter (till exempel `head.jsp, body.jsp`) behöver JSP-inkluderingar för att läsa in ContextHub och Adobe Analytics-integreringen (som är en del av Cloud Servicens). Alla innehåller inläsning av JavaScript-filer.
 
 ContextHub-posten ska inkluderas direkt under `<head>` -taggen, medan Cloud Services ska inkluderas i `<head>` och före `</body>` sektion; till exempel:
 
@@ -42,7 +40,7 @@ The `contexthub` skript som du infogar efter `<head>` läggs ContextHub-funktion
 
 The `cloudservices` skript som du lägger till i `<head>` och `<body>` -avsnitten gäller för de molntjänstkonfigurationer som läggs till på sidan. (Om sidan använder mer än en konfiguration med Cloud Services, behöver du bara inkludera ContextHub-jsp och Cloud Servicens jsp en gång.)
 
-När ett Adobe Analytics-ramverk läggs till på sidan `cloudservices` skript genererar Adobe Analytics-relaterat javascript och referenser till klientbibliotek, som i följande exempel:
+När ett Adobe Analytics-ramverk läggs till på sidan `cloudservices` skript genererar Adobe Analytics-relaterat JavaScript och referenser till klientbibliotek, som i följande exempel:
 
 ```xml
 <div class="sitecatalyst cloudservice">
@@ -130,16 +128,16 @@ Den här händelsen aktiveras för att ange att sidspårning har slutförts. Om 
 
 Gör det möjligt för dina AEM att interagera med Adobe Analytics ramverk. Konfigurera sedan ramverket så att Adobe Analytics spårar komponentdata.
 
-Komponenter som interagerar med Adobe Analytics-ramverket visas i SideKick när du redigerar ett ramverk. När du har dragit komponenten till ramverket visas komponentegenskaperna och du kan sedan mappa dem med Adobe Analytics-egenskaper. (Se [Konfigurera ett ramverk för grundläggande spårning](/help/sites-administering/adobeanalytics-connect.md#creating-a-adobe-analytics-framework).)
+Komponenter som interagerar med Adobe Analytics-ramverket visas i Sidekick när du redigerar ett ramverk. När du har dragit komponenten till ramverket visas komponentegenskaperna och du kan sedan mappa dem med Adobe Analytics-egenskaper. (Se [Konfigurera ett ramverk för grundläggande spårning](/help/sites-administering/adobeanalytics-connect.md#creating-a-adobe-analytics-framework).)
 
 Komponenter kan interagera med Adobe Analytics-ramverket när komponenten har en underordnad nod med namnet `analytics`. The `analytics` noden har följande egenskaper:
 
 * `cq:trackevents`: Identifierar de CQ-händelser som komponenten visar. (Se Anpassade händelser.)
 * `cq:trackvars`: Namnger CQ-variablerna som mappas med Adobe Analytics-egenskaper.
-* `cq:componentName`: Namnet på komponenten som visas i Sidespark.
-* `cq:componentGroup`: Gruppen i Sidekick som innehåller komponenten.
+* `cq:componentName`: Namnet på komponenten som visas i Sidekick.
+* `cq:componentGroup`: Den grupp i Sidekick som innehåller komponenten.
 
-Koden i komponent-JSP lägger till javascript på sidan som utlöser spårningen och definierar data som spåras. Händelsenamnet och datanamnen som används i javascript måste matcha motsvarande värden i `analytics` nodegenskaper.
+Koden i komponent-JSP lägger till JavaScript på sidan som utlöser spårningen och definierar data som spåras. Händelsenamnet och datanamnen som används i JavaScript måste matcha motsvarande värden i `analytics` nodegenskaper.
 
 * Använd dataspårningsattributet för att spåra händelsedata när en sida läses in. (Se [Spåra anpassade händelser vid sidinläsning](/help/sites-developing/extending-analytics.md#tracking-custom-events-on-page-load).)
 * Använd funktionen CQ_Analytics.record för att spåra händelsedata när användarna interagerar med sidfunktioner. (Se [Spåra anpassade händelser efter sidinläsning](/help/sites-developing/extending-analytics.md#tracking-custom-events-after-page-load).)
@@ -184,7 +182,7 @@ Konfigurera den övre komponenten och redigera JSP-filen för att definiera spå
    * Typ: Sträng
    * Värde: topnavTarget,topnavLocation
 
-1. Lägg till följande egenskap i analysnoden för att namnge komponenten för Sidespark:
+1. Lägg till följande egenskap i analysnoden för att namnge komponenten för Sidekick:
 
    * Namn: cq:componentName
    * Typ: Sträng
@@ -204,7 +202,7 @@ Konfigurera den övre komponenten och redigera JSP-filen för att definiera spå
    onclick = "tracknav('<%= child.getPath() %>.html')"
    ```
 
-1. Längst ned på sidan lägger du till följande javascript-kod:
+1. Lägg till följande JavaScript-kod längst ned på sidan:
 
    ```xml
    <script type="text/javascript">
@@ -289,23 +287,23 @@ Innehållet i `topnav.jsp` filen ska se ut så här:
 
 >[!NOTE]
 >
->Det är ofta önskvärt att spåra data från ContextHub. Mer information om hur du använder javascript för att hämta den här informationen finns i [Åtkomst till värden i ContextHub](/help/sites-developing/extending-analytics.md#accessing-values-in-the-contexthub).
+>Det är ofta önskvärt att spåra data från ContextHub. Mer information om hur du använder JavaScript för att få fram den här informationen finns i [Åtkomst till värden i ContextHub](/help/sites-developing/extending-analytics.md#accessing-values-in-the-contexthub).
 
 #### Lägga till spårningskomponenten i Sidekick {#adding-the-tracking-component-to-sidekick}
 
-Lägg till komponenter som är aktiverade för spårning med Adobe Analytics i Sidekick så att du kan lägga till dem i ditt ramverk.
+Lägg till komponenter som är aktiverade för spårning med Adobe Analytics i Sidekick så att du kan lägga till dem i ramverket.
 
 1. Öppna Adobe Analytics-ramverket från din Adobe Analytics-konfiguration. ([http://localhost:4502/etc/cloudservices/sitecatalyst.html](http://localhost:4502/etc/cloudservices/sitecatalyst.html))
-1. På Sidekick klickar du på knappen Design.
+1. Klicka på Design i Sidekick.
 
-   ![](assets/chlimage_1a.png)
+   ![Knappen Design med en kvadrat med höger vinkel.](assets/chlimage_1a.png)
 
 1. Klicka på Konfigurera arv i området Konfiguration av länkspårning.
 
    ![chlimage_1](assets/chlimage_1aa.png)
 
 1. I listan Tillåtna komponenter väljer du topnav (spårning) i avsnittet Allmänt och klickar sedan på OK.
-1. Expandera Sidekick för att gå över till redigeringsläge. Komponenten är nu tillgänglig i gruppen Allmänt.
+1. Expandera Sidekick till redigeringsläget. Komponenten är nu tillgänglig i gruppen Allmänt.
 
 #### Lägga till komponenten topnav i ramverket {#adding-the-topnav-component-to-your-framework}
 
@@ -328,7 +326,7 @@ Variabeln Adobe Analytics s.products har följande syntax:
 s.products="category;product;quantity;price;eventY={value}|eventZ={value};evarA={value}|evarB={value}"
 ```
 
-Integrationsmodulen Adobe Analytics konstruerar `s.products` variabeln med `product` värden som AEM komponenter genererar. The `product` värdet i javascript som AEM komponenterna genererar är en array med värden som har följande struktur:
+Integrationsmodulen Adobe Analytics konstruerar `s.products` variabeln med `product` värden som AEM komponenter genererar. The `product` värdet i JavaScript som AEM komponenter genererar är en array med värden som har följande struktur:
 
 ```
 "product": [{
@@ -364,7 +362,7 @@ The `analytics` -noden i komponenten måste visa variabelnamnen med `cq:trackvar
 * product.evars.eVarName1
 * product.evars.eVarName_n
 
-eCommerce-modulen innehåller flera komponenter som genererar variabeldata för s.products. Skicka-komponenten ([http://localhost:4502/crx/de/index.jsp#/libs/commerce/components/submitorder/submitorder.jsp](http://localhost:4502/crx/de/index.jsp#/libs/commerce/components/submitorder/submitorder.jsp)) genererar javascript som liknar följande exempel:
+eCommerce-modulen innehåller flera komponenter som genererar variabeldata för s.products. Skicka-komponenten ([http://localhost:4502/crx/de/index.jsp#/libs/commerce/components/submitorder/submitorder.jsp](http://localhost:4502/crx/de/index.jsp#/libs/commerce/components/submitorder/submitorder.jsp)) genererar JavaScript som liknar följande exempel:
 
 ```
 <script type="text/javascript">

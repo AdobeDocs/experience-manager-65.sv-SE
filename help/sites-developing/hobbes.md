@@ -1,8 +1,6 @@
 ---
 title: Testa användargränssnittet
-seo-title: Testing Your UI
 description: AEM tillhandahåller ett ramverk för automatisering av tester för ditt AEM användargränssnitt
-seo-description: AEM provides a framework for automating tests for your AEM UI
 uuid: 408a60b5-cba9-4c9f-abd3-5c1fb5be1c50
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,9 +9,9 @@ topic-tags: components, testing
 discoiquuid: 938100ad-94f9-408a-819d-72657dc115f7
 docset: aem65
 exl-id: 2d28cee6-31b0-4288-bad3-4d2ecad7b626
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
 workflow-type: tm+mt
-source-wordcount: '737'
+source-wordcount: '771'
 ht-degree: 1%
 
 ---
@@ -26,13 +24,13 @@ ht-degree: 1%
 >
 >Se [Föråldrade och borttagna funktioner](/help/release-notes/deprecated-removed-features.md).
 
-AEM tillhandahåller ett ramverk för automatisering av tester för ditt AEM användargränssnitt. Med hjälp av ramverket kan du skriva och köra gränssnittstester direkt i en webbläsare. Ramverket innehåller ett javascript-API för att skapa tester.
+AEM tillhandahåller ett ramverk för automatisering av tester för ditt AEM användargränssnitt. Med hjälp av ramverket kan du skriva och köra gränssnittstester direkt i en webbläsare. Ramverket innehåller ett JavaScript-API för att skapa tester.
 
-I AEM testramverk används Hobbes.js, ett testbibliotek skrivet i Javascript. Hobbes.js-ramverket utvecklades för testning av AEM som en del av utvecklingsprocessen. Ramverket är nu tillgängligt för allmän användning för testning av dina AEM program.
+I AEM testramverk används Hobbes.js, ett testbibliotek som är skrivet i JavaScript. Hobbes.js-ramverket utvecklades för testning av AEM som en del av utvecklingsprocessen. Ramverket är nu tillgängligt för allmän användning för testning av dina AEM program.
 
 >[!NOTE]
 >
->Se Hobbes.js [dokumentation](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/test-api/index.html) om du vill ha fullständig information om API:t.
+>Se Hobbes.js [dokumentation](https://developer.adobe.com/experience-manager/reference-materials/6-5/test-api/index.html) om du vill ha fullständig information om API:t.
 
 ## Testernas struktur {#structure-of-tests}
 
@@ -53,7 +51,7 @@ Navigera till verktygskonsolen via **Global navigering -> Verktyg > Åtgärder -
 
 ![chlimage_1-63](assets/chlimage_1-63.png)
 
-När du öppnar konsolen visas testsviterna till vänster tillsammans med ett alternativ för att köra alla sekventiellt. Det utrymme till höger som visas med en schackmönstrad bakgrund är en platshållare för hur sidinnehållet visas när testerna körs.
+När du öppnar konsolen visas testsviterna till vänster tillsammans med ett alternativ för att köra alla sekventiellt. Utrymmet till höger som visas med en schackmönstrad bakgrund är en platshållare för hur sidinnehållet visas när testerna körs.
 
 ![chlimage_1-64](assets/chlimage_1-64.png)
 
@@ -63,21 +61,21 @@ Testsviter kan köras individuellt. När du kör en testsvit ändras sidan allt 
 
 En bockmarkeringsikon anger att testet har slutförts:
 
-![](do-not-localize/chlimage_1-2.png)
+![Kryssmarkeringsikon.](do-not-localize/chlimage_1-2.png)
 
 En X-ikon anger att testet misslyckades:
 
-![](do-not-localize/chlimage_1-3.png)
+![Ikonen för testet misslyckades, vilket indikeras av ett X inuti en cirkel.](do-not-localize/chlimage_1-3.png)
 
 Så här kör du en testsvit:
 
-1. Klicka på eller tryck på namnet på det testfall som du vill köra för att utöka detaljerna för åtgärderna.
+1. Klicka på eller tryck på namnet på det testfall som du vill köra på testpanelen för att visa information om åtgärderna.
 
    ![chlimage_1-65](assets/chlimage_1-65.png)
 
-1. Klicka eller tryck på **Kör test** -knappen.
+1. Klicka **Kör test**.
 
-   ![](do-not-localize/chlimage_1-4.png)
+   ![En bild av knappen Kör test, som indikeras av en högerriktad pekare inuti en cirkel.](do-not-localize/chlimage_1-4.png)
 
 1. Platshållaren ersätts med sidinnehåll när testet utförs.
 
@@ -95,9 +93,9 @@ Testsviter körs sekventiellt i den ordning som de visas i konsolen. Du kan för
 
 1. På testpanelen trycker eller klickar du på **Kör alla tester** eller **Kör tester** under namnet på testsviten som du vill köra.
 
-   ![](do-not-localize/chlimage_1-5.png)
+   ![En bild av knappen Kör alla tester och knappen Kör test, som indikeras av en högerriktad pekare inuti en cirkel.](do-not-localize/chlimage_1-5.png)
 
-1. Om du vill visa resultatet av varje testfall trycker eller klickar du på titeln för testfallet. Tryck eller klicka på namnet på testet i dialogrutan **Resultat** på panelen visas all information.
+1. Om du vill visa resultatet av varje testfall klickar du på titeln på testfallet. Klicka på namnet på testet i **Resultat** på panelen visas all information.
 
    ![chlimage_1-69](assets/chlimage_1-69.png)
 
@@ -105,7 +103,7 @@ Testsviter körs sekventiellt i den ordning som de visas i konsolen. Du kan för
 
 I proceduren nedan beskrivs hur du skapar och kör en Test Suite med [Innehåll för webb.butik](/help/sites-developing/we-retail.md)men du kan enkelt ändra testet så att det använder en annan webbsida.
 
-Mer information om hur du skapar egna testsviter finns i [Hobbes.js API-dokumentation](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/test-api/index.html).
+Mer information om hur du skapar egna testsviter finns i [Hobbes.js API-dokumentation](https://developer.adobe.com/experience-manager/reference-materials/6-5/test-api/index.html).
 
 1. Öppna CRXDE Lite. ([https://localhost:4502/crx/de](https://localhost:4502/crx/de))
 1. Högerklicka på `/etc/clientlibs` mapp och klicka på **Skapa > Skapa mapp**. Typ `myTests` för namnet och klicka på **OK**.

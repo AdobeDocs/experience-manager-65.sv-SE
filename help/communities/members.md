@@ -1,8 +1,6 @@
 ---
 title: Hanteringskonsoler för medlemmar och grupper
-seo-title: Members & Groups Management Consoles
 description: Åtkomst till konsoler för hantering av medlemmar och grupper
-seo-description: How to access Members and Groups Management consoles
 uuid: 2e93e861-a066-4189-91db-f8b784bc5aea
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -11,9 +9,9 @@ content-type: reference
 discoiquuid: ccabf301-b417-48aa-8501-8360fd9f3e36
 role: Admin
 exl-id: b64e24d2-8407-484c-8216-8d328ef5fa4f
-source-git-commit: 4dbbcc41757843d3b2d5a3bbb2656ef587e83d2c
+source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
 workflow-type: tm+mt
-source-wordcount: '900'
+source-wordcount: '896'
 ht-degree: 1%
 
 ---
@@ -55,7 +53,7 @@ I författarmiljön kan du nå Medlemskonsolen för att hantera medlemmar som ä
 
 Markera sidpanelsikonen till vänster på sidan `Members` för att växla mellan att öppna panelen på söksidan.
 
-![](assets/leftpanel-icon.png)
+![Ikon för sidopanelen Sök.](assets/leftpanel-icon.png)
 
 
 ![member-console2](assets/member-console2.png)
@@ -97,19 +95,19 @@ Medlemmen kan ändra sin e-postadress när profilen uppdateras.I Om ID:t som sta
 
 * **[!UICONTROL Password]**
 
-   (*Obligatoriskt*) Inloggningslösenordet.
+  (*Obligatoriskt*) Inloggningslösenordet.
 
 * **[!UICONTROL Retype Password]**
 
-   (*Obligatoriskt*) Ange lösenordet igen för verifiering.
+  (*Obligatoriskt*) Ange lösenordet igen för verifiering.
 
 * **[!UICONTROL Add Member to Sites]**
 
-   (*Valfritt*) Välj bland befintliga communitysajter för att lägga till medlemmen i communityplatsens medlemsgrupp.
+  (*Valfritt*) Välj bland befintliga communitysajter för att lägga till medlemmen i communityplatsens medlemsgrupp.
 
 * **[!UICONTROL Add Member to Groups]**
 
-   (*Valfritt*) Välj bland befintliga medlemsgrupper för att lägga till medlemmen i gruppen.
+  (*Valfritt*) Välj bland befintliga medlemsgrupper för att lägga till medlemmen i den gruppen.
 
 * Välj **[!UICONTROL Save]**
 
@@ -122,17 +120,17 @@ Under Kontoinställningar kan en community-administratör:
 
    * Ej förbjuden En medlem har fullständig åtkomst till communitywebbplatsen.
 
-   Standard är `Not Banned`.
+  Standard är `Not Banned`.
 
 * **[!UICONTROL Contribution Limits]**
 
-   Om det här alternativet är markerat är medlemmens möjlighet att publicera innehåll begränsad.
+  Om det här alternativet är markerat är medlemmens möjlighet att publicera innehåll begränsad.
 Standardvärdet beror på konfigurationen av bidragsgränser.
 Se [Gränser för medlemsbidrag](limits.md).
 
 * **[!UICONTROL Change Password]**
 
-   En länk som finns när en befintlig medlem ändras. Ger en community-administratör möjlighet att återställa ett lösenord för en medlem.
+  En länk som finns när en befintlig medlem ändras. Ger en community-administratör möjlighet att återställa ett lösenord för en medlem.
 
 ### ALLMÄNT - Foto {#general-photo}
 
@@ -181,23 +179,23 @@ Följande fält krävs för att skapa en ny medlemsgrupp på publiceringssidan:
 
 * **[!UICONTROL ID]**
 
-   (*Obligatoriskt*) Gruppens unika ID.
+  (*Obligatoriskt*) Gruppens unika ID.
 
-   *När ID:t har skapats kan det inte ändras.*
+  *När ID:t har skapats kan det inte ändras.*
 
 * **[!UICONTROL Name]**
 
-   (*Valfritt*) Gruppens visningsnamn.
+  (*Valfritt*) Gruppens visningsnamn.
 
-   Standardvärdet är ID.
+  Standardvärdet är ID.
 
 * **[!UICONTROL Description]**
 
-   (*Valfritt*) En beskrivning av gruppens syfte och behörigheter.
+  (*Valfritt*) En beskrivning av gruppens syfte och behörigheter.
 
 * **[!UICONTROL Add Members To Group]**
 
-   (*Valfritt*) Välj medlemmar på publiceringssidan som ska inkluderas som initiala medlemmar i gruppen.
+  (*Valfritt*) Välj medlemmar på publiceringssidan som ska inkluderas som initiala medlemmar i gruppen.
 
 * Välj **[!UICONTROL Save]**
 

@@ -1,8 +1,6 @@
 ---
 title: Skapa en fullfjädrad webbplats (JSP)
-seo-title: Create a Fully-Featured Website (JSP)
 description: Med den här självstudiekursen kan du skapa en komplett webbplats med AEM
-seo-description: This tutorial enables you to create a fully featured website with AEM
 uuid: ec76ad5e-af6c-43ad-ae57-a4ae4ac7029f
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,7 +9,7 @@ content-type: reference
 discoiquuid: 90bc05c9-e971-4e75-bc07-5e137c6c913e
 docset: aem65
 exl-id: d7cf843c-c837-4b97-b6c5-0fbd6793bdd4
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
 workflow-type: tm+mt
 source-wordcount: '4935'
 ht-degree: 2%
@@ -293,8 +291,8 @@ I en komponent-JSP-kod kan du till exempel referera till de skript som supertyps
       * **Namn:** sling:resourceSuperType
       * **Typ:** Sträng
       * **Värde:** grund/komponenter/sida
-   1. Klicka på Spara alla.
 
+   1. Klicka på Spara alla.
 
 1. Öppna `contentpage.jsp` fil under `/apps/mywebsite/components/contentpage` och ersätt den befintliga koden med följande kod:
 
@@ -524,9 +522,9 @@ I den här övningen matchar Sling dessa URL:er med det /apps/mywebsite/componen
 
 1. Kopiera följande kod till `navimage.png.java.`Koden utökar klassen AbstractImageServlet:
 
-   * [AbstraktImageServlet](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/commons/AbstractImageServlet.html) skapar ett ImageContext-objekt som lagrar den aktuella resursens egenskaper.
+   * [AbstraktImageServlet](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/commons/AbstractImageServlet.html) skapar ett ImageContext-objekt som lagrar den aktuella resursens egenskaper.
    * Resursens överordnade sida extraheras från ImageContext-objektet. Därefter hämtas sidans titel och underrubrik.
-   * [ImageHelper](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/ImageHelper.html) används för att generera bilden från filen navimage_bg.jpg för webbplatsdesignen, sidrubriken och sidans underrubrik.
+   * [ImageHelper](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/ImageHelper.html) används för att generera bilden från filen navimage_bg.jpg för webbplatsdesignen, sidrubriken och sidans underrubrik.
 
    ```java
    package apps.mywebsite.components.contentpage;
@@ -656,7 +654,7 @@ Skapa komponenten listchild som genererar en lista med sidlänkar som innehålle
 
 #### Skapa produktsidor {#creating-product-pages}
 
-Skapa två sidor under sidan Produkter. För varje sida, som beskriver två specifika produkter, anger du en titel, en beskrivning och ett datum.
+Skapa två sidor under sidan Produkter. För varje sida som beskriver två specifika produkter anger du en titel, en beskrivning och ett datum.
 
 1. I mappträdet på sidan Webbplatser väljer du alternativet Webbplatser/Min webbplats/engelska/Produkter och klickar på Ny > Ny sida.
 1. Ange följande egenskapsvärden i dialogrutan och klicka sedan på Skapa:
@@ -679,6 +677,7 @@ Skapa två sidor under sidan Produkter. För varje sida, som beskriver två spec
       * Namn: `jcr:description`
       * Typ: `String`
       * Värde: `This is a description of the Product 1!.`
+
    1. Klicka **Lägg till**.
    1. I **Egenskaper** skapar du en annan egenskap med följande värden:
 
@@ -686,9 +685,8 @@ Skapa två sidor under sidan Produkter. För varje sida, som beskriver två spec
       * Typ: Sträng
       * Värde: 02/14/2008
       * Klicka på Lägg till.
+
    1. Klicka på Spara alla.
-
-
 
 1. I CRXDE Lite anger du en beskrivning och ett datum för sidan Product 2:
 
@@ -698,6 +696,7 @@ Skapa två sidor under sidan Produkter. För varje sida, som beskriver två spec
       * Namn: jcr:description
       * Typ: Sträng
       * Värde: Detta är en beskrivning av produkt 2!.
+
    1. Klicka **Lägg till**.
    1. Ersätt de tidigare värdena i samma textrutor med följande värden:
 
@@ -705,9 +704,8 @@ Skapa två sidor under sidan Produkter. För varje sida, som beskriver två spec
       * Typ: Sträng
       * Värde: 05/11/2012
       * Klicka på Lägg till.
+
    1. Klicka på Spara alla.
-
-
 
 #### Skapa komponenten List Children {#creating-the-list-children-component-1}
 
@@ -1031,9 +1029,9 @@ public class img_GET extends AbstractImageServlet {
 
 I det här avsnittet beskrivs hur du anger en bild som logotyp i dialogrutan för designläge.
 
-1. Med sidan Produkter öppen i webbläsaren klickar du på knappen Design längst ned i Sidekick för att gå över till designläge.
+1. Med sidan Produkter öppen i webbläsaren klickar du på knappen Design längst ned i Sidekick för att gå in i designläget.
 
-   ![](do-not-localize/chlimage_1-1.png)
+   ![Knappen Design indikeras av en höger kvadrat.](do-not-localize/chlimage_1-1.png)
 
 1. Klicka på Redigera i fältet Design av logotyp för att använda dialogrutan för att redigera inställningarna för logotypkomponenten.
 1. I dialogrutan klickar du på panelen på fliken Bild, bläddrar efter bilden logo.png som du extraherade från filen mywebsite.zip och klickar på OK.
@@ -1206,7 +1204,7 @@ I det här avsnittet använder du en cq:editConfig-nod för att dra resurser fr�
 
 #### Lägga till ikonen {#adding-the-icon}
 
-I det här avsnittet lägger du till ikonen som ska visas bredvid bildkomponenten när den visas i Spark:
+I det här avsnittet lägger du till ikonen som ska visas bredvid bildkomponenten när den visas i Sidekick:
 
 1. Högerklicka på filen i CRXDE Lite `/libs/foundation/components/image/icon.png` och markera **Kopiera.**
 1. Högerklicka på noden `/apps/mywebsite/components/image` och klicka **Klistra in** och sedan klicka **Spara alla**.
@@ -1216,7 +1214,7 @@ I det här avsnittet lägger du till ikonen som ska visas bredvid bildkomponente
 I det här avsnittet visas **Produkter** och lägg till bildkomponenten i styckesystemet.
 
 1. Läs in **Produkter** sida.
-1. Klicka på **designläge** ikon.
+1. Klicka på Sidekick **designläge** ikon.
 1. Klicka på knappen Redigera om du vill redigera dekordialogrutan.
 1. I dialogrutan visas en lista med **Tillåtna komponenter** visas, navigera till **MinWebbplats** väljer du **Min bildkomponent** och klicka **OK.**
 1. Återgå till **redigeringsläge.**
@@ -1281,10 +1279,10 @@ Din sökruta ser ut så här på **Engelska** sida:
       * Titel: Min sökkomponent
       * Beskrivning: Det här är min sökkomponent
       * Grupp: MinWebbplats
+
    1. Klicka på Nästa. och sedan på Nästa igen.
    1. Klicka på plusknappen (+) på panelen Tillåtna överordnade och skriv `*/parsys`.
    1. Klicka på Nästa och sedan på OK.
-
 
 1. Klicka på Spara alla.
 1. Kopiera följande noder och klistra in dem i noden apps/mywebsite/components/search:
@@ -1503,8 +1501,8 @@ I det här avsnittet lägger du till sökkomponenten i styckesystemet.
 1. Klicka på ikonen för designläge i sidsparken.
 1. Klicka på Redigera i designen av paragrafblocket (under sökrubriken).
 1. Bläddra nedåt till dialogrutan  **Mina webbplatser** grupp, markera **Min sökkomponent** och klicka **OK**.
-1. Klicka på triangeln när du vill återgå till redigeringsläget.
-1. Dra My Search Component från Sidekick till den parsys-bildrutan. Den ser ut så här:
+1. Klicka på triangeln på Sidekick för att återgå till redigeringsläget.
+1. Dra Min sökkomponent från Sidekick till den parsys-bildrutan. Den ser ut så här:
 
    ![chlimage_1-58](assets/chlimage_1-58.png)
 

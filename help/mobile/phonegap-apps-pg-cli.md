@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: 4a034e15-3394-4be3-9e8e-bc894668946a
 exl-id: fbeceb70-b199-478b-907b-253ed212ff99
-source-git-commit: 17d13e9b201629d9d1519fde4740cf651fe89d2c
+source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
 workflow-type: tm+mt
-source-wordcount: '656'
+source-wordcount: '666'
 ht-degree: 0%
 
 ---
@@ -89,10 +89,10 @@ phonegap run ios
 >1. Navigera till den nya mappen (cd test)
 >1. Kör `phonegap create helloWorld`
 >1. Navigera till helloWorld (cd helloWorld)
->1. Kör `phonegap run android` (eller ersätt Android med iOS enligt ovan).
->1. Emulatorn öppnar och kör din nya PhoneGap-app med namnet&quot;Device Ready&quot; om JavaScript Bridge till native fungerar.
+>1. Kör `phonegap run android` (eller ersätt Android™ med iOS enligt ovan).
+1. Emulatorn öppnar och kör din nya PhoneGap-app med namnet&quot;Device Ready&quot; om JavaScript Bridge till native fungerar.
 >
->Denna felsökning verifierar att PhoneGap CLI-utvecklingsmiljön körs korrekt.
+Denna felsökning verifierar att PhoneGap CLI-utvecklingsmiljön körs korrekt.
 
 ## Felsöka JavaScript med felsökning i Safari och IOS {#debug-javascripts-with-safari-and-ios-debug}
 
@@ -149,11 +149,11 @@ Du kan ange brytpunkter var som helst i källan. När du interagerar med emulato
 
 * Använd kontrollknapparna för att fortsätta köra, stega över, stega in i och ta bort metoder:
 
-![](do-not-localize/chlimage_1-4.png)
+![Fem olika funktionskontrollknappar justerade i en vågrät rad.](do-not-localize/chlimage_1-4.png)
 
 >[!NOTE]
 >
->Håll musen om du vill se variabelvärdena i den aktuella metoden.
+Håll musen om du vill se variabelvärdena i den aktuella metoden.
 
 ## Nästa steg {#the-next-steps}
 

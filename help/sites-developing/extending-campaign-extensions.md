@@ -8,9 +8,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: f536bcc1-7744-4f05-ac6a-4cec94a1ffb6
 exl-id: 0702858e-5e46-451f-9ac3-40a4fec68ca0
-source-git-commit: 78c584db8c35ea809048580fe5b440a0b73c8eea
+source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
 workflow-type: tm+mt
-source-wordcount: '510'
+source-wordcount: '525'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ I det här exemplet skapades en ny anpassad JSSP-fil som anropar den från AEM s
 
 1. Om du vill skapa en JSSP-fil i Adobe Campaign klickar du på **Nytt** ikon.
 
-   ![](do-not-localize/chlimage_1-4a.png)
+   ![Ikonen Nytt visas med en stjärna i det övre vänstra hörnet.](do-not-localize/chlimage_1-4a.png)
 
 1. Ange namnet på den här JSSP-filen. I det här exemplet **cus:custom.jssp** används (vilket betyder att det finns i **kus** namnutrymme).
 
