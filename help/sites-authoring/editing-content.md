@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: f92ed674-5865-4a53-8c3a-369536861f14
 docset: aem65
 exl-id: d5cf4478-51e4-4ca8-b3f8-6d7caed7d515
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: d9155cdac183acbdd190da552512a1e9bcc43d64
 workflow-type: tm+mt
-source-wordcount: '3047'
+source-wordcount: '3082'
 ht-degree: 5%
 
 ---
@@ -46,51 +46,51 @@ Verktygsfältet har många alternativ. Beroende på ditt aktuella sammanhang och
 
 * **Växla sidopanel**
 
-   Då öppnas/stängs sidopanelen som innehåller [Resursläsaren](/help/sites-authoring/author-environment-tools.md#assets-browser), [Komponentbläddraren](/help/sites-authoring/author-environment-tools.md#components-browser)och [Innehållsträd](/help/sites-authoring/author-environment-tools.md#content-tree).
+  Då öppnas/stängs sidopanelen som innehåller [Resursläsaren](/help/sites-authoring/author-environment-tools.md#assets-browser), [Komponentbläddraren](/help/sites-authoring/author-environment-tools.md#components-browser)och [Innehållsträd](/help/sites-authoring/author-environment-tools.md#content-tree).
 
-   ![](do-not-localize/screen_shot_2018-03-22at111425.png)
+  ![Växla sidopanel](do-not-localize/screen_shot_2018-03-22at111425.png)
 
 * **Sidinformation**
 
-   Ger åtkomst till [Sidinformation](/help/sites-authoring/author-environment-tools.md#page-information) meny med sidinformation och åtgärder som kan vidtas på sidan, inklusive visning och redigering av sidinformation, visning av sidegenskaper samt publicering/avpublicering av sidan.
+  Ger åtkomst till [Sidinformation](/help/sites-authoring/author-environment-tools.md#page-information) meny med sidinformation och åtgärder som kan vidtas på sidan, inklusive visning och redigering av sidinformation, visning av sidegenskaper samt publicering/avpublicering av sidan.
 
-   ![](do-not-localize/screen_shot_2018-03-22at111437.png)
+  ![Sidinformation](do-not-localize/screen_shot_2018-03-22at111437.png)
 
 * **Emulator**
 
-   Växlar [emulatorverktygsfält](/help/sites-authoring/responsive-layout.md#selecting-a-device-to-emulate), som används för att emulera sidans utseende och känsla på en annan enhet. Detta aktiveras automatiskt i layoutläge.
+  Växlar [emulatorverktygsfält](/help/sites-authoring/responsive-layout.md#selecting-a-device-to-emulate), som används för att emulera sidans utseende och känsla på en annan enhet. Detta aktiveras automatiskt i layoutläge.
 
-   ![](do-not-localize/screen_shot_2018-03-22at111442.png)
+  ![Emulator](do-not-localize/screen_shot_2018-03-22at111442.png)
 
 * **ContextHub**
 
-   Öppnar [kontextnav](/help/sites-authoring/ch-previewing.md). Endast tillgängligt i förhandsgranskningsläget.
+  Öppnar [kontextnav](/help/sites-authoring/ch-previewing.md). Endast tillgängligt i förhandsgranskningsläget.
 
-   ![screen_shot_2018-03-22at11543](assets/screen_shot_2018-03-22at111543.png)
+  ![screen_shot_2018-03-22at11543](assets/screen_shot_2018-03-22at111543.png)
 
 * **Sidrubrik**
 
-   Detta är enbart informativt.
+  Detta är enbart informativt.
 
-   ![screen_shot_2018-03-22at11554](assets/screen_shot_2018-03-22at111554.png)
+  ![screen_shot_2018-03-22at11554](assets/screen_shot_2018-03-22at111554.png)
 
 * **Lägesväljare**
 
-   Visar aktuell [läge](/help/sites-authoring/author-environment-tools.md#page-modes) och gör att du kan välja ett annat läge, som redigering, layout, tidsförvrängning eller målinriktning.
+  Visar aktuell [läge](/help/sites-authoring/author-environment-tools.md#page-modes) och gör att du kan välja ett annat läge, som redigering, layout, tidsförvrängning eller målinriktning.
 
-   ![chlimage_1-120](assets/chlimage_1-120.png)
+  ![chlimage_1-120](assets/chlimage_1-120.png)
 
 * **Förhandsgranska**
 
-   Aktiverar [förhandsgranskningsläge](/help/sites-authoring/editing-content.md#preview-mode). Då visas sidan som den kommer att se ut när den publiceras.
+  Aktiverar [förhandsgranskningsläge](/help/sites-authoring/editing-content.md#preview-mode). Då visas sidan som den kommer att se ut när den publiceras.
 
-   ![chlimage_1-121](assets/chlimage_1-121.png)
+  ![chlimage_1-121](assets/chlimage_1-121.png)
 
 * **Anteckna**
 
-   Gör att du kan lägga till [anteckningar](/help/sites-authoring/annotations.md) till sidan när du granskar en sida. Efter den första anteckningen växlar ikonen till ett nummer som anger antalet anteckningar på sidan.
+  Gör att du kan lägga till [anteckningar](/help/sites-authoring/annotations.md) till sidan när du granskar en sida. Efter den första anteckningen växlar ikonen till ett nummer som anger antalet anteckningar på sidan.
 
-   ![](do-not-localize/screen_shot_2018-03-22at111638.png)
+  ![Anteckna](do-not-localize/screen_shot_2018-03-22at111638.png)
 
 ### Statusmeddelande {#status-notification}
 
@@ -122,11 +122,11 @@ Komponentplatshållaren är en indikator som visar var en komponent placeras nä
 
 * När du lägger till en ny komponent på sidan (drar från komponentwebbläsaren):
 
-   ![screen_shot_2018-03-22at11928](assets/screen_shot_2018-03-22at111928.png)
+  ![screen_shot_2018-03-22at11928](assets/screen_shot_2018-03-22at111928.png)
 
 * När en befintlig komponent flyttas:
 
-   ![screen_shot_2018-03-22at112445](assets/screen_shot_2018-03-22at112445.png)
+  ![screen_shot_2018-03-22at112445](assets/screen_shot_2018-03-22at112445.png)
 
 ## Infoga en komponent {#inserting-a-component}
 
@@ -230,77 +230,77 @@ De faktiska åtgärder som är tillgängliga för användaren visas som lämplig
 
 * **Redigera**
 
-   [Beroende på komponenttypen](/help/sites-authoring/default-components.md) kan du [redigera innehållet i komponenten](#edit-content). Ofta finns det ett verktygsfält.
+  [Beroende på komponenttypen](/help/sites-authoring/default-components.md) kan du [redigera innehållet i komponenten](#edit-content). Ofta finns det ett verktygsfält.
 
-   ![](do-not-localize/screen_shot_2018-03-22at112936.png)
+  ![Redigera](do-not-localize/screen_shot_2018-03-22at112936.png)
 
 * **Konfigurera**
 
-   [Beroende på komponenttypen](/help/sites-authoring/default-components.md) Då kan du redigera och konfigurera komponentens egenskaper. Ofta öppnas en dialogruta.
+  [Beroende på komponenttypen](/help/sites-authoring/default-components.md) Då kan du redigera och konfigurera komponentens egenskaper. Ofta öppnas en dialogruta.
 
-   ![](do-not-localize/screen_shot_2018-03-22at112955.png)
+  ![Konfigurera](do-not-localize/screen_shot_2018-03-22at112955.png)
 
 * **Kopiera**
 
-   Komponenten kopieras då till Urklipp. När inklistringsåtgärden är klar finns den ursprungliga komponenten kvar.
+  Komponenten kopieras då till Urklipp. När inklistringsåtgärden är klar finns den ursprungliga komponenten kvar.
 
-   ![](do-not-localize/screen_shot_2018-03-22at113000.png)
+  ![Kopiera](do-not-localize/screen_shot_2018-03-22at113000.png)
 
 * **Klipp ut**
 
-   Komponenten kopieras då till Urklipp. När inklistringsåtgärden har utförts tas den ursprungliga komponenten bort.
+  Komponenten kopieras då till Urklipp. När inklistringsåtgärden har utförts tas den ursprungliga komponenten bort.
 
-   ![screen_shot_2018-03-22at113007](assets/screen_shot_2018-03-22at113007.png)
+  ![screen_shot_2018-03-22at113007](assets/screen_shot_2018-03-22at113007.png)
 
 * **Ta bort**
 
-   Då tas komponenten bort från sidan med din bekräftelse.
+  Då tas komponenten bort från sidan med din bekräftelse.
 
-   ![](do-not-localize/screen_shot_2018-03-22at113012.png)
+  ![Ta bort](do-not-localize/screen_shot_2018-03-22at113012.png)
 
 * **Infoga komponent**
 
-   Dialogrutan öppnas för [lägga till en ny komponent](/help/sites-authoring/editing-content.md#inserting-a-component-from-the-paragraph-system).
+  Dialogrutan öppnas för [lägga till en ny komponent](/help/sites-authoring/editing-content.md#inserting-a-component-from-the-paragraph-system).
 
-   ![](do-not-localize/screen_shot_2018-03-22at113017.png)
+  ![Infoga komponent](do-not-localize/screen_shot_2018-03-22at113017.png)
 
 * **Klistra in**
 
-   Komponenten klistras in från Urklipp till sidan. Om originalet finns kvar beror på om du har använt kopian eller klippet.
+  Komponenten klistras in från Urklipp till sidan. Om originalet finns kvar beror på om du har använt kopian eller klippet.
 
    * Du kan klistra in på samma sida eller på en annan sida.
    * Det inklistrade objektet klistras in ovanför objektet där du väljer åtgärden Klistra in.
    * Åtgärden Klistra in visas bara om det finns innehåll i Urklipp.
 
-   ![screen_shot_2018-03-22at113553](assets/screen_shot_2018-03-22at113553.png)
+  ![screen_shot_2018-03-22at113553](assets/screen_shot_2018-03-22at113553.png)
 
-   >[!NOTE]
-   >
-   >Om du klistrar in på en annan sida som redan var öppen före klipp ut/kopiera-åtgärden, måste du uppdatera sidan för att se det inklistrade innehållet.
+  >[!NOTE]
+  >
+  >Om du klistrar in på en annan sida som redan var öppen före klipp ut/kopiera-åtgärden, måste du uppdatera sidan för att se det inklistrade innehållet.
 
 * **Grupp**
 
-   På så sätt kan du markera flera komponenter samtidigt. Samma sak kan man göra på en stationär enhet med **Ctrl+klicka** eller **Kommando+klicka**.
+  På så sätt kan du markera flera komponenter samtidigt. Samma sak kan man göra på en stationär enhet med **Ctrl+klicka** eller **Kommando+klicka**.
 
-   ![](do-not-localize/screen_shot_2018-03-22at113240.png)
+  ![Grupp](do-not-localize/screen_shot_2018-03-22at113240.png)
 
 * **Överordnad**
 
-   Gör att du kan välja den överordnade komponenten för den markerade komponenten.
+  Gör att du kan välja den överordnade komponenten för den markerade komponenten.
 
-   ![screen_shot_2018-03-22at113028](assets/screen_shot_2018-03-22at113028.png)
+  ![screen_shot_2018-03-22at113028](assets/screen_shot_2018-03-22at113028.png)
 
 * **Layout**
 
-   På så sätt kan du ändra [layout](/help/sites-authoring/editing-content.md#edit-component-layout) för den markerade komponenten. Detta gäller bara den markerade komponenten och aktiverar inte [Layoutläge](/help/sites-authoring/author-environment-tools.md#page-modes) för hela sidan.
+  På så sätt kan du ändra [layout](/help/sites-authoring/editing-content.md#edit-component-layout) för den markerade komponenten. Detta gäller bara den markerade komponenten och aktiverar inte [Layoutläge](/help/sites-authoring/author-environment-tools.md#page-modes) för hela sidan.
 
-   ![](do-not-localize/screen_shot_2018-03-22at113044.png)
+  ![Layout](do-not-localize/screen_shot_2018-03-22at113044.png)
 
 * **Konvertera till en upplevelsefragmentvariation**
 
-   Detta gör att du kan skapa en ny [upplevelsefragment](/help/sites-authoring/experience-fragments.md) från den markerade komponenten eller lägg till den i ett befintligt upplevelsefragment.
+  Detta gör att du kan skapa en ny [upplevelsefragment](/help/sites-authoring/experience-fragments.md) från den markerade komponenten eller lägg till den i ett befintligt upplevelsefragment.
 
-   ![](do-not-localize/screen_shot_2018-03-22at113033.png)
+  ![Konvertera till Experience Fragment Variation](do-not-localize/screen_shot_2018-03-22at113033.png)
 
 ## Redigera (innehåll) {#edit-content}
 
@@ -317,28 +317,28 @@ De exakta redigeringsalternativen beror på komponenten. För vissa komponenter 
 
 * [Textkomponent](/help/sites-authoring/rich-text-editor.md#main-pars-title-24)
 
-   ![screen_shot_2018-03-22at120215](assets/screen_shot_2018-03-22at120215.png)
+  ![screen_shot_2018-03-22at120215](assets/screen_shot_2018-03-22at120215.png)
 
 * Bildkomponent
 
-   ![screen_shot_2018-03-22at120252](assets/screen_shot_2018-03-22at120252.png)
+  ![screen_shot_2018-03-22at120252](assets/screen_shot_2018-03-22at120252.png)
 
-   >[!NOTE]
-   >
-   >Redigering fungerar inte på en tom bildkomponent.
-   >
-   >
-   >Du måste [dra eller överföra en bild (med Konfigurera)](/help/sites-authoring/default-components-foundation.md#image) innan du kan börja redigera den.
+  >[!NOTE]
+  >
+  >Redigering fungerar inte på en tom bildkomponent.
+  >
+  >
+  >Du måste [dra eller överföra en bild (med Konfigurera)](/help/sites-authoring/default-components-foundation.md#image) innan du kan börja redigera den.
 
 * Bildkomponent - helskärm
 
-   [Om du aktiverar helskärmsläget](/help/sites-authoring/editing-content.md#edit-content-full-screen-mode) för bildkomponenten får du mer plats att redigera bilden och dessutom visas extra redigeringsalternativ som **Startkarta** och **Återställ zoomning**. I helskärmsläget kan du dessutom välja förinställningar för beskärning.
+  [Om du aktiverar helskärmsläget](/help/sites-authoring/editing-content.md#edit-content-full-screen-mode) för bildkomponenten får du mer plats att redigera bilden och dessutom visas extra redigeringsalternativ som **Startkarta** och **Återställ zoomning**. I helskärmsläget kan du dessutom välja förinställningar för beskärning.
 
-   ![screen_shot_2018-03-22at120529](assets/screen_shot_2018-03-22at120529.png)
+  ![screen_shot_2018-03-22at120529](assets/screen_shot_2018-03-22at120529.png)
 
 * Komponenter som konstruerats av mer än en grundläggande komponent, t.ex. [Grundkomponenten Text och bild](/help/sites-authoring/default-components-foundation.md#text-image)ber du först att bekräfta vilken uppsättning redigeringsalternativ du vill använda:
 
-   ![chlimage_1-123](assets/chlimage_1-123.png)
+  ![chlimage_1-123](assets/chlimage_1-123.png)
 
 ### Dra och släpp resurser till komponent {#drag-and-drop-assets-into-component}
 
@@ -356,7 +356,7 @@ För specifika komponenttyper kan du dra och släppa resurser från resursläsar
 
 För alla komponenter går det att komma åt helskärmsläget med (och avsluta från):
 
-![](do-not-localize/chlimage_1-20.png)
+![Redigera helskärmsläge](do-not-localize/chlimage_1-20.png)
 
 Till exempel **Text** komponent:
 
@@ -391,7 +391,7 @@ I stället för att växla från redigeringsläge till [layoutläge](/help/sites
 
    Klicka eller tryck på **Layout** för att justera komponentens layout.
 
-   ![](do-not-localize/chlimage_1-21.png)
+   ![Komponentverktygsfältet](do-not-localize/chlimage_1-21.png)
 
 1. När Layout-åtgärden är markerad:
 
@@ -405,7 +405,7 @@ I stället för att växla från redigeringsläge till [layoutläge](/help/sites
 
 1. När du har gjort nödvändiga layoutändringar klickar du på **Stäng** på komponentens åtgärdsmeny om du vill sluta ändra komponentens layout. Komponentens verktygsfält återgår till det normala redigeringsläget.
 
-   ![](do-not-localize/screen_shot_2018-03-22at133920.png)
+   ![Stäng](do-not-localize/screen_shot_2018-03-22at133920.png)
 
 >[!NOTE]
 >
@@ -425,27 +425,27 @@ Du kan avbryta (och sedan återaktivera) arvet. Beroende på vilken komponent de
 
 * **Live Copy**
 
-   Komponentens verktygsfält, om komponenten finns på en sida som är en del av en live-kopia eller en start (baserat på en live-kopia). Till exempel:
+  Komponentens verktygsfält, om komponenten finns på en sida som är en del av en live-kopia eller en start (baserat på en live-kopia). Till exempel:
 
-   ![screen_shot_2018-03-22at134339](assets/screen_shot_2018-03-22at134339.png)
+  ![screen_shot_2018-03-22at134339](assets/screen_shot_2018-03-22at134339.png)
 
-   Alternativet Avbryt arv är tillgängligt:
+  Alternativet Avbryt arv är tillgängligt:
 
-   ![](do-not-localize/screen_shot_2018-03-22at134406.png)
+  ![Avbryt arv](do-not-localize/screen_shot_2018-03-22at134406.png)
 
-   Eller återaktivera arv om det redan har avbrutits:
+  Eller återaktivera arv om det redan har avbrutits:
 
-   ![](do-not-localize/screen_shot_2018-03-22at134417.png)
+  ![Återaktivera arv](do-not-localize/screen_shot_2018-03-22at134417.png)
 
-   Åtgärden Överrullning är även tillgänglig i källan för utkast eller Live-kopia:
+  Åtgärden Överrullning är även tillgänglig i källan för utkast eller Live-kopia:
 
-   ![](do-not-localize/screen_shot_2018-03-22at134516.png)
+  ![Utrullning](do-not-localize/screen_shot_2018-03-22at134516.png)
 
 * **Ett ärvt styckesystem**
 
-   Konfigurationsdialogrutan. Som med det ärvda styckesystemet:
+  Konfigurationsdialogrutan. Som med det ärvda styckesystemet:
 
-   ![chlimage_1-124](assets/chlimage_1-124.png)
+  ![chlimage_1-124](assets/chlimage_1-124.png)
 
 ## Redigera sidmallen {#editing-the-page-template}
 
@@ -485,7 +485,6 @@ Det finns två alternativ för att förhandsgranska en sida:
 >* Använd [kortkommando](/help/sites-authoring/keyboard-shortcuts.md) `Ctrl-Shift-M` om du vill växla mellan förhandsvisning och det senast markerade läget.
 >
 
-
 >[!NOTE]
 >
 >WCM-lägets cookie är inställd för båda alternativen.
@@ -517,7 +516,7 @@ En sida kan låsas från:
    1. Markera sidan med [markeringsläge](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources).
    1. Välj låsikonen.
 
-   ![screen_shot_2018-03-22at134928](assets/screen_shot_2018-03-22at134928.png)
+  ![screen_shot_2018-03-22at134928](assets/screen_shot_2018-03-22at134928.png)
 
 * **Page Editor**
 
@@ -552,7 +551,7 @@ På menyn Sidinformation visas **Lås upp** som ett alternativ och låsikonen p�
 
 Med följande ikoner kan du ångra eller göra om en åtgärd. Dessa visas i verktygsfältet när det är lämpligt:
 
-![](do-not-localize/screen_shot_2018-03-23at093614.png)
+![Ångra och Gör om](do-not-localize/screen_shot_2018-03-23at093614.png)
 
 >[!NOTE]
 >
@@ -584,7 +583,6 @@ Funktionen för kommandona ångra och gör om liknar den i andra program. Använ
 >* Ångra högst 20 redigeringsåtgärder (standardinställning).
 >* Använd även [Kortkommandon](/help/sites-authoring/page-authoring-keyboard-shortcuts.md) för att ångra och göra om.
 >
-
 
 Du kan använda Ångra och Gör om för följande typer av sidändringar:
 

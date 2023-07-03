@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: f488ba79-5bda-46e9-9c15-9a8c3dbfa2ce
 docset: aem65
 exl-id: 3b3c118b-ca35-484b-a62e-7bec98953123
-source-git-commit: bc1f0bd20804bbae78c7ea9a5209e183d6bbaaf3
+source-git-commit: d9155cdac183acbdd190da552512a1e9bcc43d64
 workflow-type: tm+mt
-source-wordcount: '2230'
+source-wordcount: '2242'
 ht-degree: 8%
 
 ---
@@ -69,21 +69,21 @@ Det faktiska utseendet och hanteringen beror på vilken enhetstyp du använder:
 
 * **Mobil enhet (t.ex. iPad)**
 
-   Komponentwebbläsaren täcker hela sidan som redigeras.
+  Komponentwebbläsaren täcker hela sidan som redigeras.
 
-   Om du vill lägga till en komponent på sidan trycker du på och håller ned den nödvändiga komponenten och flyttar den åt höger. Komponentwebbläsaren stängs och sidan visas igen, där du kan placera komponenten.
+  Om du vill lägga till en komponent på sidan trycker du på och håller ned den nödvändiga komponenten och flyttar den åt höger. Komponentwebbläsaren stängs och sidan visas igen, där du kan placera komponenten.
 
-   ![ateat-04](assets/ateat-04.png)
+  ![ateat-04](assets/ateat-04.png)
 
 * **Skrivbordsenhet**
 
-   Komponentwebbläsaren öppnas till vänster i fönstret.
+  Komponentwebbläsaren öppnas till vänster i fönstret.
 
-   Om du vill lägga till en komponent på sidan klickar du på den önskade komponenten och drar den till önskad plats.
+  Om du vill lägga till en komponent på sidan klickar du på den önskade komponenten och drar den till önskad plats.
 
-   ![ateat-05](assets/ateat-05.png)
+  ![ateat-05](assets/ateat-05.png)
 
-   Komponenterna representeras av
+  Komponenterna representeras av
 
    * Komponentnamn
    * Komponentgrupp (i grått)
@@ -92,16 +92,16 @@ Det faktiska utseendet och hanteringen beror på vilken enhetstyp du använder:
       * Standardkomponentens ikoner är monokroma.
       * Förkortningar är alltid de två första tecknen i komponentnamnet.
 
-   I det övre verktygsfältet i **Komponenter** webbläsare:
+  I det övre verktygsfältet i **Komponenter** webbläsare:
 
    * Filtrera komponenter efter namn.
    * Begränsa visningen till en viss grupp med listrutan.
 
-   Om du vill ha en mer detaljerad beskrivning av komponenten kan du klicka eller trycka på informationsikonen bredvid komponenten i **komponentläsaren** (om den är tillgänglig). För **layoutbehållaren**:
+  Om du vill ha en mer detaljerad beskrivning av komponenten kan du klicka eller trycka på informationsikonen bredvid komponenten i **komponentläsaren** (om den är tillgänglig). För **layoutbehållaren**:
 
-   ![ateat-06](assets/ateat-06.png)
+  ![ateat-06](assets/ateat-06.png)
 
-   Mer information om de komponenter som finns tillgängliga finns i [Komponentkonsol](/help/sites-authoring/default-components-console.md).
+  Mer information om de komponenter som finns tillgängliga finns i [Komponentkonsol](/help/sites-authoring/default-components-console.md).
 
 ## Resursläsaren {#assets-browser}
 
@@ -150,23 +150,23 @@ Det faktiska utseendet och hanteringen beror på vilken enhetstyp du använder:
 
 * **Mobila enheter som iPad**
 
-   Resursläsaren täcker hela sidan som redigeras.
+  Resursläsaren täcker hela sidan som redigeras.
 
-   Om du vill lägga till en resurs på sidan håller du pekaren över den resurs du behöver och sedan flyttar den åt höger. Resursläsaren stängs och sidan visas igen, där du kan lägga till resursen i den nödvändiga komponenten.
+  Om du vill lägga till en resurs på sidan håller du pekaren över den resurs du behöver och sedan flyttar den åt höger. Resursläsaren stängs och sidan visas igen, där du kan lägga till resursen i den nödvändiga komponenten.
 
-   ![ateat-09](assets/ateat-09.png)
+  ![ateat-09](assets/ateat-09.png)
 
 * **Skrivbordsenhet**
 
-   Resursläsaren öppnas till vänster i fönstret.
+  Resursläsaren öppnas till vänster i fönstret.
 
-   Om du vill lägga till en resurs på sidan klickar du på den önskade resursen och drar den till önskad komponent eller plats.
+  Om du vill lägga till en resurs på sidan klickar du på den önskade resursen och drar den till önskad komponent eller plats.
 
-   ![ateat-10](assets/ateat-10.png)
+  ![ateat-10](assets/ateat-10.png)
 
 Om du snabbt behöver göra en ändring i en resurs kan du starta [tillgångsredigerare](/help/assets/manage-assets.md) direkt från resursläsaren genom att klicka på redigeringsikonen som visas bredvid resursens namn.
 
-![](do-not-localize/screen_shot_2018-03-22at142448.png)
+![Resurser Browser Desktop Device](do-not-localize/screen_shot_2018-03-22at142448.png)
 
 ## Innehållsträd {#content-tree}
 
@@ -174,7 +174,7 @@ The **Innehållsträd** ger en översikt över alla komponenter på sidan i en h
 
 Innehållsträdet är en flik i sidopanelen (tillsammans med komponenterna och resursläsaren). Om du vill öppna (eller stänga) sidopanelen använder du ikonen längst upp till vänster i verktygsfältet:
 
-![](do-not-localize/screen_shot_2018-03-22at142042.png)
+![Innehållsträd](do-not-localize/screen_shot_2018-03-22at142042.png)
 
 När du öppnar sidopanelen öppnas den (från vänster sida). Välj **Innehållsträd** tabba vid behov. När den är öppen kan du se en trädvyrepresentation av sidan eller mallen, så att det blir lättare att förstå hur innehållet är hierarkiskt strukturerat. På en komplex sida är det dessutom enklare att växla mellan sidans komponenter.
 
@@ -196,19 +196,19 @@ Om du klickar på komponenten markeras komponenten i sidredigeraren. Vilka åtg�
 
 * En grundsida:
 
-   `https://localhost:4502/editor.html/content/we-retail/language-masters/en/equipment.html`
+  `https://localhost:4502/editor.html/content/we-retail/language-masters/en/equipment.html`
 
-   ![ateat-12](assets/ateat-12.png)
+  ![ateat-12](assets/ateat-12.png)
 
-   Om komponenten som du klickar på i trädet är redigerbar visas en skiftnyckelsikon till höger om namnet. Om du klickar på den här ikonen öppnas redigeringsdialogrutan för komponenten.
+  Om komponenten som du klickar på i trädet är redigerbar visas en skiftnyckelsikon till höger om namnet. Om du klickar på den här ikonen öppnas redigeringsdialogrutan för komponenten.
 
-   ![](do-not-localize/screen_shot_2018-03-22at142725.png)
+  ![Ikon för skiftnyckel - Redigera](do-not-localize/screen_shot_2018-03-22at142725.png)
 
 * Eller en sida som är en del av en [livecopy](/help/sites-administering/msm.md), där komponenter ärvs från en annan sida, till exempel:
 
-   `https://localhost:4502/editor.html/content/we-retail/us/en/equipment.html`
+  `https://localhost:4502/editor.html/content/we-retail/us/en/equipment.html`
 
-   ![ateat-13](assets/ateat-13.png)
+  ![ateat-13](assets/ateat-13.png)
 
 ## Fragment - Associerad innehållsläsare {#fragments-associated-content-browser}
 
@@ -320,7 +320,6 @@ Du kommer åt dem med hjälp av ikonerna i det övre högra hörnet. Den faktisk
 >* Det finns ett [kortkommando](/help/sites-authoring/page-authoring-keyboard-shortcuts.md) (`Ctrl-Shift-M`) som du kan använda för att växla mellan **förhandsvisning** och det aktuella läget (t.ex. **Redigera** eller **Layout**).
 >
 
-
 ## Banmarkering {#path-selection}
 
 När du redigerar är det ofta nödvändigt att välja en annan resurs, till exempel när du definierar en länk till en annan sida eller resurs eller markerar en bild. Markera en bana enkelt genom att [sökvägsfält](/help/sites-authoring/author-environment-tools.md#path-fields) erbjuder automatisk komplettering och [sökvägsläsare](/help/sites-authoring/author-environment-tools.md#path-browser) ger mer robust markering.
@@ -333,7 +332,7 @@ Sökvägsfält har automatisk komplettering och framåtblickande funktioner som 
 
 Klicka på **Öppna dialogrutan Markering** knappen i sökvägsfältet öppnar [sökvägsläsare](/help/sites-authoring/author-environment-tools.md#path-browser) för mer detaljerade markeringsalternativ.
 
-![](do-not-localize/screen_shot_2018-03-22at154427.png)
+![Öppna dialogrutan Markering](do-not-localize/screen_shot_2018-03-22at154427.png)
 
 Du kan också börja skriva i sökvägsfältet och AEM erbjuder matchande sökvägar när du skriver.
 
@@ -351,7 +350,7 @@ Sökvägsläsaren är ordnad som [kolumnvy](/help/sites-authoring/basic-handling
 * Du kan när som helst använda sökfältet högst upp i dialogrutan. Klicka på **X** i sökfältet för att rensa sökningen.
 * Om du vill begränsa sökningen kan du visa filteralternativen och filtrera resultaten baserat på en viss bana.
 
-   ![ateat-21](assets/ateat-21.png)
+  ![ateat-21](assets/ateat-21.png)
 
 ## Kortkommandon {#keyboard-shortcuts}
 
