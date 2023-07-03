@@ -8,9 +8,9 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 8ae6817a-16d3-4740-b67a-498e75adf350
 exl-id: 5e232886-75c1-4f0f-b359-4739ae035fd3
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: cae9890cd61d6d894f34c7299e2e15ee70e14ac9
 workflow-type: tm+mt
-source-wordcount: '907'
+source-wordcount: '913'
 ht-degree: 0%
 
 ---
@@ -68,13 +68,13 @@ Så här aktiverar eller inaktiverar du en komponent:
 
 1. Klicka eller tryck på **Överordnad** ikon.
 
-   ![](do-not-localize/screen_shot_2018-03-22at103204.png)
+   ![Överordnad](do-not-localize/screen_shot_2018-03-22at103204.png)
 
    Då väljs det styckesystem som innehåller den aktuella komponenten.
 
 1. The **Konfigurera** -ikonen för styckesystemet visas i det överordnade objektets åtgärdsfält.
 
-   ![](do-not-localize/screen_shot_2018-03-22at103256.png)
+   ![Konfigurera](do-not-localize/screen_shot_2018-03-22at103256.png)
 
    Välj det här alternativet om du vill visa dialogrutan.
 
@@ -121,7 +121,7 @@ Så här aktiverar eller inaktiverar du en komponent:
 
 1. Använd **Konfigurera** för att öppna dialogrutan.
 
-   ![](do-not-localize/screen_shot_2018-03-22at103256-1.png)
+   ![Ikonen Konfigurera](do-not-localize/screen_shot_2018-03-22at103256-1.png)
 
    I designdialogrutan kan du konfigurera komponenten enligt tillgängliga designparametrar.
 
@@ -151,12 +151,12 @@ Så här aktiverar eller inaktiverar du en komponent:
 
    ![chlimage_1-94](assets/chlimage_1-94.png)
 
-   Använd ikonen** Ta bort **för att ta bort en post från en dialogrutelista med flera poster.
+   Använd **Ta bort** om du vill ta bort en post från en dialogruta med flera poster.
 
-   ![](do-not-localize/screen_shot_2018-03-22at103809.png)
+   ![Ta bort](do-not-localize/screen_shot_2018-03-22at103809.png)
 
    Använd **Flytta** om du vill ändra ordningen på posterna i en dialogruta med flera poster.
 
-   ![](do-not-localize/screen_shot_2018-03-22at103816.png)
+   ![Flytta](do-not-localize/screen_shot_2018-03-22at103816.png)
 
 1. Klicka eller tryck på **Klar** -ikonen för att spara och stänga dialogrutan.
