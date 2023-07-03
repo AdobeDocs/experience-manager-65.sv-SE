@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 21181a6f-b434-40ed-8eb1-ebdfc98964dd
 docset: aem65
 exl-id: ef1a3997-feb4-4cb0-9396-c8335b69bb10
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 3802eb71dc6d17db4b1158d8d433ba1c516e54f2
 workflow-type: tm+mt
-source-wordcount: '2973'
+source-wordcount: '3011'
 ht-degree: 3%
 
 ---
@@ -26,7 +26,6 @@ ht-degree: 3%
 >* Kortkommandon är tillgängliga i hela AEM. I synnerhet när [använda konsoler](/help/sites-authoring/keyboard-shortcuts.md) och [redigera sidor](/help/sites-authoring/page-authoring-keyboard-shortcuts.md).
 >
 
-
 ## Komma igång {#getting-started}
 
 ### Ett pekaktiverat användargränssnitt {#a-touch-enabled-ui}
@@ -39,7 +38,7 @@ När användargränssnittet för AEM är pekaktiverat kan du använda pekgester 
 
 Omedelbart efter att du loggat in kommer du till [Navigeringspanelen](#navigation-panel). Om du väljer något av alternativen öppnas respektive konsol.
 
-![bh-01](assets/bh-01.png)
+![Navigering](assets/bh-01.png)
 
 >[!NOTE]
 >
@@ -51,7 +50,7 @@ Omedelbart efter att du loggat in kommer du till [Navigeringspanelen](#navigatio
 
 När en användare först kommer åt en konsol startas en produktnavigeringssjälvstudiekurs. Klicka eller tryck en minut för att få en bra överblick över den grundläggande hanteringen av AEM.
 
-![bh-02](assets/bh-02.png)
+![Produktnavigering](assets/bh-02.png)
 
 Klicka eller tryck **Nästa** för att gå vidare till nästa sida i översikten. Klicka eller tryck **Stäng** eller klicka eller tryck utanför översiktsdialogrutan för att stänga.
 
@@ -63,7 +62,7 @@ Du kan navigera mellan konsolerna med den globala navigeringspanelen. Detta akti
 
 Du kan stänga den globala navigeringspanelen genom att klicka eller trycka på **Stäng** för att återgå till din tidigare plats.
 
-![bh-03](assets/bh-03.png)
+![Global navigering](assets/bh-03.png)
 
 >[!NOTE]
 >
@@ -80,7 +79,7 @@ De alternativ som är tillgängliga på dessa paneler beskrivs nedan.
 
 Navigeringspanelen ger åtkomst till AEM:
 
-![bh-01](assets/bh-01.png)
+![Navigering](assets/bh-01.png)
 
 Titeln på webbläsarfliken uppdateras för att återspegla din position när du navigerar genom konsolerna och innehållet.
 
@@ -135,95 +134,95 @@ Följande konsoler finns i Navigation:
 
 På verktygspanelen innehåller varje alternativ på sidopanelen ett intervall med undermenyer. The [Verktygskonsoler](/help/sites-administering/tools-consoles.md) finns här för att ge tillgång till ett antal specialiserade verktyg och konsoler som hjälper dig att administrera dina webbplatser, digitala resurser och andra aspekter av din innehållsdatabas.
 
-![bh-04](assets/bh-04.png)
+![Verktygspanelen](assets/bh-04.png)
 
 ## Sidhuvudet {#the-header}
 
 Rubriken visas alltid längst upp på skärmen. De flesta alternativen i huvudet är desamma oavsett var du befinner dig i systemet, men vissa är sammanhangsspecifika.
 
-![bh-03](assets/bh-03.png)
+![Sidhuvud](assets/bh-03.png)
 
 * [Global navigering](#navigatingconsolesandtools)
 
-   Välj **Adobe Experience Manager** för att navigera mellan konsoler.
+  Välj **Adobe Experience Manager** för att navigera mellan konsoler.
 
-   ![screen_shot_2018-03-23at103615](assets/screen_shot_2018-03-23at103615.png)
+  ![länken Adobe Experience Manager](assets/screen_shot_2018-03-23at103615.png)
 
 * [Sökning](/help/sites-authoring/search.md)
 
-   ![](do-not-localize/screen_shot_2018-03-23at103542.png)
+  ![Sökning](do-not-localize/screen_shot_2018-03-23at103542.png)
 
-   Du kan också använda [kortkommando](/help/sites-authoring/keyboard-shortcuts.md) `/` (snedstreck) för att starta sökning från en konsol.
+  Du kan också använda [kortkommando](/help/sites-authoring/keyboard-shortcuts.md) `/` (snedstreck) för att starta sökning från en konsol.
 
 * [Lösningar](https://www.adobe.com/experience-cloud.html)
 
-   ![](do-not-localize/screen_shot_2018-03-23at103552.png)
+  ![Lösningar](do-not-localize/screen_shot_2018-03-23at103552.png)
 
 * [Hjälp](#accessinghelptouchoptimizedui)
 
-   ![](do-not-localize/screen_shot_2018-03-23at103547.png)
+  ![Hjälp](do-not-localize/screen_shot_2018-03-23at103547.png)
 
 * [Meddelanden](/help/sites-authoring/inbox.md)
 
-   ![](do-not-localize/screen_shot_2018-03-23at103558.png)
+  ![Meddelanden](do-not-localize/screen_shot_2018-03-23at103558.png)
 
-   Den här ikonen kommer att märkas med antalet för närvarande tilldelade ofullständiga meddelanden.
+  Den här ikonen kommer att märkas med antalet för närvarande tilldelade ofullständiga meddelanden.
 
-   >[!NOTE]
-   >
-   >AEM levereras förinläst med administrativa uppgifter som tilldelats administratörsanvändargruppen. Se [Inkorgen - administrativa uppgifter som inte är tillgängliga](/help/sites-authoring/inbox.md#out-of-the-box-administrative-tasks) för mer information.
+  >[!NOTE]
+  >
+  >AEM levereras förinläst med administrativa uppgifter som tilldelats administratörsanvändargruppen. Se [Inkorgen - administrativa uppgifter som inte är tillgängliga](/help/sites-authoring/inbox.md#out-of-the-box-administrative-tasks) för mer information.
 
 * [Användaregenskaper](/help/sites-authoring/user-properties.md)
 
-   ![](do-not-localize/screen_shot_2018-03-23at103603.png)
+  ![Användaregenskaper](do-not-localize/screen_shot_2018-03-23at103603.png)
 
 * [Järnvägsväljare](/help/sites-authoring/basic-handling.md#rail-selector)
 
-   ![](do-not-localize/screen_shot_2018-03-23at103943.png)
+  ![](do-not-localize/screen_shot_2018-03-23at103943.png)
 
-   Vilka alternativ som visas beror på den aktuella konsolen. I **Webbplatser** Du kan bara markera innehåll (standardvärdet), tidslinjen, referenser eller sidopanelen för filter.
+  Vilka alternativ som visas beror på den aktuella konsolen. I **Webbplatser** Du kan bara markera innehåll (standardvärdet), tidslinjen, referenser eller sidopanelen för filter.
 
-   ![screen_shot_2018-03-23at104029](assets/screen_shot_2018-03-23at104029.png)
+  ![Järnvägsväljare](assets/screen_shot_2018-03-23at104029.png)
 
 * Breadcrumbs
 
-   ![bh-05](assets/bh-05.png)
+  ![Breadcrumbs](assets/bh-05.png)
 
-   I mitten av spåret, och alltid med beskrivningen av det markerade objektet, kan du navigera i en viss konsol med hjälp av de synliga kolumnerna. På webbplatskonsolen kan du navigera på webbplatsnivå.
+  I mitten av spåret, och alltid med beskrivningen av det markerade objektet, kan du navigera i en viss konsol med hjälp av de synliga kolumnerna. På webbplatskonsolen kan du navigera på webbplatsnivå.
 
-   Klicka bara på den breda texten för att visa en listruta med hierarkinivåerna för det markerade objektet. Klicka på en post för att hoppa till den platsen.
+  Klicka bara på den breda texten för att visa en listruta med hierarkinivåerna för det markerade objektet. Klicka på en post för att hoppa till den platsen.
 
-   ![bh-06](assets/bh-06.png)
+  ![Hierarkinivåer](assets/bh-06.png)
 
 * Val av analystidsperiod
 
-   ![screen_shot_2018-03-23at104126](assets/screen_shot_2018-03-23at104126.png)
+  ![Tidsperiod för analyser](assets/screen_shot_2018-03-23at104126.png)
 
-   Detta är endast tillgängligt i listvyn. Se [listvy](#list-view) för mer information.
+  Detta är endast tillgängligt i listvyn. Se [listvy](#list-view) för mer information.
 
 * **Skapa** knapp
 
-   ![screen_shot_2018-03-23at104301](assets/screen_shot_2018-03-23at104301.png)
+  ![Skapa](assets/screen_shot_2018-03-23at104301.png)
 
-   När du klickar på det här alternativet lämpar sig de alternativ som visas för konsolen/kontexten.
+  När du klickar på det här alternativet lämpar sig de alternativ som visas för konsolen/kontexten.
 
 * [Vyer](/help/sites-authoring/basic-handling.md#viewingandselectingyourresourcescardlistcolumn)
 
-   Vyikonen finns längst till höger i verktygsfältet AEM. Eftersom den aktuella vyn också visas ändras den. I standardvyn, till exempel **Kolumnvy** den visar:
+  Vyikonen finns längst till höger i verktygsfältet AEM. Eftersom den aktuella vyn också visas ändras den. I standardvyn, till exempel **Kolumnvy** den visar:
 
-   ![bh-07](assets/bh-07.png)
+  ![Kolumnvy](assets/bh-07.png)
 
-   Du kan växla mellan kolumnvy, kortvy och listvy; i listvyn visas även visningsinställningarna.
+  Du kan växla mellan kolumnvy, kortvy och listvy; i listvyn visas även visningsinställningarna.
 
-   ![bh-09](assets/bh-09.png)
+  ![Växla vy](assets/bh-09.png)
 
 * Tangentbordsnavigering
 
-   Du kan bara navigera på en webbplats med hjälp av tangentbordet. Detta använder webbläsarens standardfunktioner i **TABB** tangent (eller **OPT+TAB**) för att flytta dig mellan element på sidan som *fokuserbar*.
+  Du kan bara navigera på en webbplats med hjälp av tangentbordet. Detta använder webbläsarens standardfunktioner i **TABB** tangent (eller **OPT+TAB**) för att flytta dig mellan element på sidan som *fokuserbar*.
 
-   I **Webbplatser** konsolen där det finns ett tillagt alternativ för  **Hoppa till huvudinnehåll**. Detta syns när du *tab* genom rubrikalternativen och snabbar upp navigeringen genom att du kan hoppa över standardelementen i verktygsfältet (produkten) och ta dig direkt till huvudinnehållet.
+  I **Webbplatser** konsolen där det finns ett tillagt alternativ för  **Hoppa till huvudinnehåll**. Detta syns när du *tab* genom rubrikalternativen och snabbar upp navigeringen genom att du kan hoppa över standardelementen i verktygsfältet (produkten) och ta dig direkt till huvudinnehållet.
 
-   ![bh-30](assets/bh-30.png)
+  ![Hoppa till huvudinnehåll](assets/bh-30.png)
 
 ## Få hjälp {#accessing-help}
 
@@ -231,42 +230,42 @@ Det finns olika hjälpresurser:
 
 * **Verktygsfältet Konsol**
 
-   Beroende på var du befinner dig **Hjälp** öppnas lämpliga resurser:
+  Beroende på var du befinner dig **Hjälp** öppnas lämpliga resurser:
 
-   ![bh-10](assets/bh-10.png)
+  ![Verktygsfältet Konsol](assets/bh-10.png)
 
 * **Navigering**
 
-   Första gången du navigerar i systemet [en serie bilder AEM navigering](/help/sites-authoring/basic-handling.md#product-navigation).
+  Första gången du navigerar i systemet [en serie bilder AEM navigering](/help/sites-authoring/basic-handling.md#product-navigation).
 
 * **Page Editor**
 
-   Första gången du redigerar en sida innehåller en serie bilder en sidredigerare.
+  Första gången du redigerar en sida innehåller en serie bilder en sidredigerare.
 
-   ![bh-11](assets/bh-11.png)
+  ![Page Editor](assets/bh-11.png)
 
-   Navigera i den här översikten precis som i [produktnavigering - översikt](/help/sites-authoring/basic-handling.md#product-navigation) vid första åtkomst till en konsol.
+  Navigera i den här översikten precis som i [produktnavigering - översikt](/help/sites-authoring/basic-handling.md#product-navigation) vid första åtkomst till en konsol.
 
-   Från [**Sidinformation** meny som du kan välja **Hjälp**](/help/sites-authoring/author-environment-tools.md#accessing-help) för att visa detta igen när som helst.
+  Från [**Sidinformation** meny som du kan välja **Hjälp**](/help/sites-authoring/author-environment-tools.md#accessing-help) för att visa detta igen när som helst.
 
 * **Verktygskonsol**
 
-   Från **verktyg** konsolen som du också kan komma åt externt **Resurser**:
+  Från **verktyg** konsolen som du också kan komma åt externt **Resurser**:
 
    * **Dokumentation**
 Visa dokumentationen för Web Experience Management
 
    * **Resurser för utvecklare**
 Resurser och nedladdningar för utvecklare
-   >[!NOTE]
-   >
-   >Du kan när som helst få tillgång till en översikt över kortkommandon via snabbtangenten `?` (frågetecken) i en konsol.
-   >
-   >En översikt över alla kortkommandon finns i följande dokumentation:
-   >
-   >    * [Kortkommandon för att redigera sidor](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)
-   >    * [Kortkommandon för konsoler](/help/sites-authoring/keyboard-shortcuts.md)
 
+  >[!NOTE]
+  >
+  >Du kan när som helst få tillgång till en översikt över kortkommandon via snabbtangenten `?` (frågetecken) i en konsol.
+  >
+  >En översikt över alla kortkommandon finns i följande dokumentation:
+  >
+  >* [Kortkommandon för att redigera sidor](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)
+  >* [Kortkommandon för konsoler](/help/sites-authoring/keyboard-shortcuts.md)
 
 ## Verktygsfältet Åtgärder {#actions-toolbar}
 
@@ -294,7 +293,7 @@ I [Kortvy](#cardviewquickactions) vissa åtgärder är tillgängliga både som s
 
 Snabbåtgärderna är synliga när du för musen över ett resurskort (en stationär enhet). Vilka snabbåtgärder som är tillgängliga beror på konsolen och sammanhanget. Här följer t.ex. snabbåtgärderna för en sida i **Webbplatser** konsol:
 
-![bh-13](assets/bh-13.png)
+![Snabbåtgärder](assets/bh-13.png)
 
 ## Visa och välja resurser {#viewing-and-selecting-resources}
 
@@ -372,7 +371,7 @@ Du kan markera alla objekt i valfri vy genom att klicka på **Markera alla** i k
 * I **Listvy** alla objekt i listan markeras.
 * I **Kolumnvy** alla objekt i kolumnen längst till vänster är markerade.
 
-![screen-shot_2019-03-05at094659](assets/screen-shot_2019-03-05at094659.png)
+![Markera alla](assets/screen-shot_2019-03-05at094659.png)
 
 #### Avmarkera allt {#deselecting-all}
 
@@ -384,7 +383,7 @@ Du kan avmarkera alla objekt och avsluta markeringsläget genom att antingen:
 
 * eller använda **escape**.
 
-![bh-14](assets/bh-14.png)
+![Avmarkera](assets/bh-14.png)
 
 I alla vyer kan du avmarkera alla objekt genom att trycka på Esc på tangentbordet om du använder en stationär enhet.
 
@@ -392,7 +391,7 @@ I alla vyer kan du avmarkera alla objekt genom att trycka på Esc på tangentbor
 
 1. I kortvyn:
 
-   ![bh-15](assets/bh-15.png)
+   ![Välj - kortvy](assets/bh-15.png)
 
 1. När du har valt en resurs täcks den översta rubriken av [åtgärdsverktygsfält](#actionstoolbar) som ger åtkomst till åtgärder som för närvarande gäller för den valda resursen.
 
@@ -400,7 +399,7 @@ I alla vyer kan du avmarkera alla objekt genom att trycka på Esc på tangentbor
 
 ### Kolumnvy {#column-view}
 
-![bh-16](assets/bh-16.png)
+![Kolumnvy](assets/bh-16.png)
 
 I kolumnvyn kan du visuellt navigera i ett innehållsträd genom en serie överlappande kolumner. I den här vyn kan du visualisera och gå igenom webbplatsens trädstruktur.
 
@@ -410,11 +409,10 @@ Om du väljer en resurs i kolumnen längst till vänster visas de underordnade r
 
    * Resursnamnet och förvrängningen markeras när användaren knackar på eller klickar på den.
 
-   ![bh-17](assets/bh-17.png)
+     ![Kolumnvy](assets/bh-17.png)
 
    * De underordnade resurserna för den resurs som användaren klickar på/trycker på visas i kolumnen till höger om den resurs som användaren klickar på/trycker på.
    * Om du trycker eller klickar på ett resursnamn som inte har några underordnade objekt visas informationen i den sista kolumnen.
-
 
 * Om du trycker eller klickar på miniatyrbilden markeras resursen.
 
@@ -422,9 +420,9 @@ Om du väljer en resurs i kolumnen längst till vänster visas de underordnade r
    * Information om den valda resursen visas i den sista kolumnen.
    * Verktygsfältet för funktionsmakron blir tillgängligt.
 
-   ![bh-18](assets/bh-18.png)
+     ![Kolumnvy](assets/bh-18.png)
 
-   När en sida är markerad i kolumnvyn visas den markerade sidan i den sista kolumnen tillsammans med följande information:
+  När en sida är markerad i kolumnvyn visas den markerade sidan i den sista kolumnen tillsammans med följande information:
 
    * Sidtitel
    * Sidnamn (del av sidans URL)
@@ -432,7 +430,6 @@ Om du väljer en resurs i kolumnen längst till vänster visas de underordnade r
    * Ändringsinformation
    * Sidspråk
    * Publikationsinformation
-
 
 ### Kortvy {#card-view}
 
@@ -450,29 +447,29 @@ Om du väljer en resurs i kolumnen längst till vänster visas de underordnade r
 
 * [Snabbåtgärder](#quick-actions) är även tillgängliga i den här vyn, t.ex. markering och vanliga åtgärder som redigering.
 
-   ![bh-13-1](assets/bh-13-1.png)
+  ![Kortvy - snabbåtgärder](assets/bh-13-1.png)
 
 * Du kan navigera nedåt i trädet genom att trycka på/klicka på kort (var noga med att undvika snabbåtgärderna) eller uppåt igen genom att använda [vägbeskrivningar i sidhuvudet](/help/sites-authoring/basic-handling.md#the-header).
 
 ### Listvy {#list-view}
 
-![bh-19](assets/bh-19.png)
+![Listvy](assets/bh-19.png)
 
 * I listvyn visas information om varje resurs på den aktuella nivån.
 * Du kan navigera nedåt i trädet genom att trycka på/klicka på resursnamnet och sedan säkerhetskopiera genom att använda [vägbeskrivningar i sidhuvudet](/help/sites-authoring/basic-handling.md#the-header).
 
 * Om du enkelt vill markera alla objekt i listan använder du kryssrutan längst upp till vänster i listan.
 
-   ![bh-20](assets/bh-20.png)
+  ![Listvy - Markera alla](assets/bh-20.png)
 
    * När alla objekt i listan är markerade visas den här kryssrutan markerad.
 
       * Avmarkera alla genom att klicka eller trycka på kryssrutan.
+
    * När bara vissa objekt är markerade visas det med ett minustecken.
 
       * Markera alla genom att klicka eller trycka på kryssrutan.
       * Klicka eller tryck på kryssrutan igen för att avmarkera alla.
-
 
 * Markera de kolumner som ska visas med **Visa inställningar** som finns under knappen Vyer. Följande kolumner är tillgängliga för visning:
 
@@ -486,33 +483,33 @@ Om du väljer en resurs i kolumnen längst till vänster visas de underordnade r
    * **Unika besökare**
    * **Tid på sidan**
 
-   ![bh-21](assets/bh-21.png)
+  ![Visa inställningar - Konfigurera kolumner](assets/bh-21.png)
 
-   Som standard är **Namn** -kolumnen visas, vilket utgör en del av sidans URL. I vissa fall kan författaren behöva komma åt sidor som är på ett annat språk och det kan vara bra att se sidans namn (som vanligtvis är oföränderligt) om författaren inte kan sidans språk.
+  Som standard är **Namn** -kolumnen visas, vilket utgör en del av sidans URL. I vissa fall kan författaren behöva komma åt sidor på ett annat språk och det kan vara bra att se sidans namn (som vanligtvis är oföränderligt) om författaren inte känner till sidans språk.
 
 * Ändra objektens ordning med hjälp av den prickade lodräta listen längst till höger om varje objekt i listan.
 
-   >[!NOTE]
-   >
-   >Att ändra ordningen fungerar bara i en ordnad mapp som har `jcr:primaryType` värde som `sling:OrderedFolder`.
+  >[!NOTE]
+  >
+  >Att ändra ordningen fungerar bara i en ordnad mapp som har `jcr:primaryType` värde som `sling:OrderedFolder`.
 
-   ![bh-22](assets/bh-22.png)
+  ![Ändra ordning](assets/bh-22.png)
 
-   Klicka eller tryck på det lodräta markeringsfältet och dra objektet till en ny plats i listan.
+  Klicka eller tryck på det lodräta markeringsfältet och dra objektet till en ny plats i listan.
 
-   ![bh-23](assets/bh-23.png)
+  ![Ändra ordning - dra](assets/bh-23.png)
 
 * Du kan visa analysdata genom att visa lämpliga kolumner med hjälp av **Visa inställningar** -dialogrutan.
 
-   Du kan filtrera analysdata under de senaste 30, 90 eller 365 dagarna med filteralternativen till höger i sidhuvudet.
+  Du kan filtrera analysdata under de senaste 30, 90 eller 365 dagarna med filteralternativen till höger i sidhuvudet.
 
-   ![bh-24](assets/bh-24.png)
+  ![Analyser](assets/bh-24.png)
 
 ## Järnvägsväljare {#rail-selector}
 
 The **Järnvägsväljare** är tillgängligt längst upp till vänster i fönstret och visar alternativ beroende på dina aktuella konsoler.
 
-![bh-25](assets/bh-25.png)
+![Järnvägsväljare](assets/bh-25.png)
 
 I Platser kan du t.ex. markera endast innehåll (standard), innehållsträdet, tidslinjen, referenser eller panelen på filtersidan.
 
@@ -528,7 +525,7 @@ Innehållsträdet kan användas för att snabbt navigera i platshierarkin på si
 
 Med innehållsträdets sidopanel i kombination med en listvy eller kortvy kan användarna enkelt se projektets hierarkiska struktur och enkelt navigera i innehållsstrukturen med innehållsträdets sidopanel, samt visa detaljerad sidinformation i listvyn.
 
-![bh-26](assets/bh-26.png)
+![Innehållsträd](assets/bh-26.png)
 
 >[!NOTE]
 >
@@ -554,8 +551,8 @@ I tidslinjekolumnen kan du:
       * [Arbetsflöden](/help/sites-authoring/workflows-applying.md)
 
          * med undantag för [tillfälliga arbetsflöden](/help/sites-developing/workflows.md#transient-workflows) eftersom ingen historikinformation har sparats för dessa
-      * och Visa alla
 
+      * och Visa alla
 
 * [Lägg till/visa kommentarer om det markerade objektet. ](#timelineaddingandviewingcomments) Rutan **Kommentar** visas längst ned i händelselistan. Om du skriver en kommentar följt av Retur registreras kommentaren. Den visas när **Kommentarer** eller **Visa alla** markeras.
 
@@ -566,7 +563,7 @@ I tidslinjekolumnen kan du:
 
 De här alternativen är tillgängliga via markören bredvid **Kommentar** fält.
 
-![bh-27](assets/bh-27.png)
+![Tidslinje](assets/bh-27.png)
 
 ### Referenser {#references}
 
@@ -586,4 +583,4 @@ De här alternativen är tillgängliga via markören bredvid **Kommentar** fält
 
 Då öppnas en panel som liknar [sök](/help/sites-authoring/search.md) med rätt platsfilter redan inställda så att du kan filtrera innehållet ytterligare.
 
-![bh-29](assets/bh-29.png)
+![Filter](assets/bh-29.png)
