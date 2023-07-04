@@ -10,9 +10,9 @@ discoiquuid: e72da81b-4085-49b0-86c3-11ad48978a8a
 docset: aem65
 exl-id: 53d8c654-8017-4528-a44e-e362d8b59f82
 feature: Security
-source-git-commit: 3430897fc98aecbcf6cc7bf6bdc9b3df24e92366
+source-git-commit: 7803f1df1e05dc838cb458026f8dbd27de9cb924
 workflow-type: tm+mt
-source-wordcount: '5398'
+source-wordcount: '5402'
 ht-degree: 0%
 
 ---
@@ -284,14 +284,14 @@ Nedan följer några rekommendationer om hur du hanterar åtkomstkontrollistor:
 
 * Tilldela inte behörigheter direkt till användare. Tilldela dem endast till grupper.
 
-   Det förenklar underhållet eftersom antalet grupper är mycket mindre än antalet användare och också mindre flyktigt.
+  Det förenklar underhållet eftersom antalet grupper är mycket mindre än antalet användare och också mindre flyktigt.
 
 * Om du vill att en grupp/användare bara ska kunna ändra sidor, ska du inte ge dem behörighet att skapa eller neka. Ge dem endast behörighet att ändra och läsa.
 * Använd Neka sparsamt. Använd bara Tillåt i största möjliga utsträckning.
 
-   Om du använder Neka kan det orsaka oväntade effekter om behörigheterna tillämpas i en annan ordning än den förväntade. Om en användare är medlem i mer än en grupp kan programsatserna Neka från en grupp avbryta programsatsen Tillåt från en annan grupp eller tvärtom. Det är svårt att behålla en översikt när något sådant händer och det kan enkelt leda till oförutsedda resultat, medan Tillåt tilldelningar inte orsakar sådana konflikter.
+  Om du använder Neka kan det orsaka oväntade effekter om behörigheterna tillämpas i en annan ordning än den förväntade. Om en användare är medlem i mer än en grupp kan programsatserna Neka från en grupp avbryta programsatsen Tillåt från en annan grupp eller tvärtom. Det är svårt att behålla en översikt när något sådant händer och det kan enkelt leda till oförutsedda resultat, medan Tillåt tilldelningar inte orsakar sådana konflikter.
 
-   Adobe rekommenderar att du arbetar med Tillåt i stället för Neka [Bästa praxis](#best-practices).
+  Adobe rekommenderar att du arbetar med Tillåt i stället för Neka [Bästa praxis](#best-practices).
 
 Innan du ändrar någon av behörigheterna måste du se till att du förstår hur de fungerar och fungerar tillsammans. Se CRX-dokumentationen som visar hur AEM WCM [utvärderar åtkomsträttigheter](/help/sites-administering/user-group-ac-admin.md#how-access-rights-are-evaluated)och exempel på hur du ställer in åtkomstkontrollistor.
 
@@ -391,7 +391,7 @@ Gör något av följande om du vill få åtkomst AEM WCM-säkerhet:
 
 * Klicka på säkerhetsikonen på välkomstskärmen eller olika platser i AEM:
 
-![](do-not-localize/wcmtoolbar.png)
+![Fliken AEM WCM-säkerhet](do-not-localize/wcmtoolbar.png)
 
 * Navigera direkt till `https://<server>:<port>/useradmin`. Se till att du loggar in AEM som administratör.
 
@@ -640,7 +640,6 @@ Replikeringsprivilegium är rätten att publicera innehåll, och det kan anges f
 >* En användares replikeringsbehörighet åsidosätter en grupps replikeringsbehörighet.
 >* Tillåt replikeringsrättigheter har en högre prioritet än Neka-replikeringsrättigheter. Se [Behörigheter i AEM](#permissions-in-aem) för mer information.
 >
-
 
 Så här anger du replikeringsbehörighet:
 

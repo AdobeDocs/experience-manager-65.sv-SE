@@ -10,9 +10,9 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 6466d7b8-e308-43c5-acdc-dec15f796f64
 exl-id: 918fcbbc-a78a-4fab-a933-f183ce6a907f
-source-git-commit: 144fbe2d0efe20d848e9556f8d652a403d1835b2
+source-git-commit: 7803f1df1e05dc838cb458026f8dbd27de9cb924
 workflow-type: tm+mt
-source-wordcount: '2019'
+source-wordcount: '2026'
 ht-degree: 0%
 
 ---
@@ -144,11 +144,11 @@ Plats &lt;text_x> kan vara en blandning av statisk text och dynamiska strängvar
 * `${userId}`, ID:t för den användare som utlöste händelsen.
 * `${modifications}`, beskriver sidhändelsens typ och sidsökvägen i formatet:
 
-   &lt;page event=&quot;&quot; type=&quot;&quot;> => &lt;page path=&quot;&quot;>
+  &lt;page event=&quot;&quot; type=&quot;&quot;> => &lt;page path=&quot;&quot;>
 
-   Till exempel:
+  Till exempel:
 
-   PageModified => /content/geometrixx/en/products
+  PageModified => /content/geometrixx/en/products
 
 ### E-postmallar för arbetsflödesmeddelanden {#email-templates-for-workflow-notification}
 
@@ -342,7 +342,7 @@ Bekräfta slutligen konfigurationen genom att:
 1. Sök efter **Azure Active Directory** i sökfältet och klicka på resultatet. Du kan även bläddra direkt till [https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview)
 1. Klicka på **Appregistrering** - **Ny registrering**
 
-   ![](assets/oauth-outlook1.png)
+   ![Konfiguration av Microsoft Outlook](assets/oauth-outlook1.png)
 
 1. Fyll i informationen enligt dina krav och klicka sedan på **Registrera**
 1. Gå till den nya appen och välj **API-behörigheter**
@@ -397,7 +397,7 @@ Integrera sedan dina OAuth2-inställningar med AEM:
 
 När inställningarna har konfigurerats bör de se ut så här:
 
-![](assets/oauth-outlook-smptconfig.png)
+![Vy över konfigurationer på AEM sida](assets/oauth-outlook-smptconfig.png)
 
 Aktivera nu OAuth-komponenterna. Du kan göra detta genom att:
 

@@ -12,9 +12,9 @@ discoiquuid: c061b358-8c0d-40d3-8090-dc9800309ab3
 docset: aem65
 exl-id: 89f55598-e749-42b8-8f2a-496f45face66
 feature: Security
-source-git-commit: 002b9035f37a1379556378686b64d26bbbc30288
+source-git-commit: 7803f1df1e05dc838cb458026f8dbd27de9cb924
 workflow-type: tm+mt
-source-wordcount: '2445'
+source-wordcount: '2527'
 ht-degree: 1%
 
 ---
@@ -90,6 +90,7 @@ När användarsynkroniseringen är aktiverad synkroniseras endast nyskapade anv�
    * åtkomst till [Webbkonsol](/help/sites-deploying/configuring-osgi.md)
 
       * till exempel [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
+
    * leta `Apache Sling Distribution Agent - Sync Agents Factory`
 
       * markera den befintliga konfiguration som ska öppnas för redigering (pennikonen) Bekräfta `name`: **`socialpubsync`**
@@ -97,8 +98,7 @@ När användarsynkroniseringen är aktiverad synkroniseras endast nyskapade anv�
       * välj `Enabled` kryssruta
       * välj `Save`
 
-
-![](assets/chlimage_1-20.png)
+![Apache Sling Distribution Agent](assets/chlimage_1-20.png)
 
 ### 2. Skapa auktoriserad användare {#createauthuser}
 
@@ -111,15 +111,15 @@ Den här auktoriserade användaren kommer att användas i steg 3 för att konfig
    * åtkomst till [Säkerhetskonsol](/help/sites-administering/security.md)
 
       * till exempel [https://localhost:4503/useradmin](https://localhost:4503/useradmin)
+
    * skapa en ny användare
 
       * till exempel `usersync-admin`
+
    * lägg till den här användaren i **`administrators`** användargrupp
    * [lägg till ACL för den här användaren i /home](#howtoaddacl)
 
       * `Allow jcr:all` med begränsning `rep:glob=*/activities/*`
-
-
 
 >[!CAUTION]
 >
@@ -128,7 +128,6 @@ Den här auktoriserade användaren kommer att användas i steg 3 för att konfig
 >* Den tilldelade standardanvändaren är **`admin`**.
 >* Använd inte `communities-user-admin user.`
 >
-
 
 #### Lägga till ACL {#addacls}
 
@@ -148,7 +147,7 @@ Den här auktoriserade användaren kommer att användas i steg 3 för att konfig
 
 * välj **Spara alla**
 
-![](assets/chlimage_1-21.png)
+![Lägg till ACL-fönster](assets/chlimage_1-21.png)
 
 Se även
 
@@ -167,6 +166,7 @@ En auktoriserad användare, en medlem i **`administrators`** användargruppen, h
    * åtkomst till [Webbkonsol](/help/sites-deploying/configuring-osgi.md)
 
       * till exempel [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
+
    * leta `com.adobe.granite.distribution.core.impl.CryptoDistributionTransportSecretProvider.name`
    * markera den befintliga konfiguration som ska öppnas för redigering (pennikonen) Bekräfta `property name`: **`socialpubsync-publishUser`**
 
@@ -174,8 +174,7 @@ En auktoriserad användare, en medlem i **`administrators`** användargruppen, h
 
       * till exempel `usersync-admin`
 
-
-![](assets/chlimage_1-22.png)
+![Krypterad lösenordstransporthemlighetsprovider](assets/chlimage_1-22.png)
 
 ### 4. Apache Sling Distribution Agent - Queue Agents Factory {#apache-sling-distribution-agent-queue-agents-factory}
 
@@ -187,17 +186,17 @@ En auktoriserad användare, en medlem i **`administrators`** användargruppen, h
    * åtkomst till [Webbkonsol](/help/sites-deploying/configuring-osgi.md)
 
       * till exempel [https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)
+
    * leta `Apache Sling Distribution Agent - Queue Agents Factory`
 
       * markera den befintliga konfiguration som ska öppnas för redigering (pennikonen) Bekräfta `Name`: `socialpubsync-reverse`
 
       * välj `Enabled` kryssruta
       * välj `Save`
+
    * **upprepa** för varje publiceringsinstans
 
-
-
-![](assets/chlimage_1-23.png)
+![Köagenter - fabrik](assets/chlimage_1-23.png)
 
 ### 5. Adobe Social Sync - Diff Observer Factory {#diffobserver}
 
@@ -209,17 +208,17 @@ En auktoriserad användare, en medlem i **`administrators`** användargruppen, h
    * åtkomst till [Webbkonsol](/help/sites-deploying/configuring-osgi.md)
 
       * till exempel [https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)
+
    * leta **`Adobe Social Sync - Diff Observer Factory`**
 
       * välj den befintliga konfiguration som ska öppnas för redigering (pennikon)
 
-         Verifiera `agent name`: `socialpubsync-reverse`
+        Verifiera `agent name`: `socialpubsync-reverse`
 
       * välj `Enabled` kryssruta
       * välj `Save`
 
-
-![](assets/screen-shot_2019-05-24at090809.png)
+![Diff Observer Factory](assets/screen-shot_2019-05-24at090809.png)
 
 ### 6. Apache Sling Distribution Trigger - Factory för schemalagda utlösare {#apache-sling-distribution-trigger-scheduled-triggers-factory}
 
@@ -233,17 +232,17 @@ Som standard kommer författaren att söka efter ändringar var 30:e sekund. Så
    * åtkomst till [Webbkonsol](/help/sites-deploying/configuring-osgi.md)
 
       * till exempel [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
+
    * leta `Apache Sling Distribution Trigger - Scheduled Triggers Factory`
 
       * välj den befintliga konfiguration som ska öppnas för redigering (pennikon)
 
          * Verifiera `Name`: `socialpubsync-scheduled-trigger`
+
       * ange `Interval in Seconds` till önskat intervall
       * välj `Save`
 
-
-
-![](assets/chlimage_1-24.png)
+![Planerad utlösarfabrik](assets/chlimage_1-24.png)
 
 ## Konfigurera för flera publiceringsinstanser {#configure-for-multiple-publish-instances}
 
@@ -259,12 +258,12 @@ Standardkonfigurationen är för en enda publiceringsinstans. Eftersom orsaken t
    * åtkomst till [Webbkonsol](/help/sites-deploying/configuring-osgi.md)
 
       * till exempel [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
+
    * leta `Apache Sling Distribution Agent - Sync Agents Factory`
 
       * markera den befintliga konfiguration som ska öppnas för redigering (pennikonen) Bekräfta `Name`: `socialpubsync`
 
-
-![](assets/chlimage_1-25.png)
+![Synkroniseringsagenter - fabrik](assets/chlimage_1-25.png)
 
 * **Exporterarslutpunkter**
 Det ska finnas en exportörslutpunkt för varje publiceringsinstans. Om det till exempel finns två publiceringsinstanser, localhost:4503 och 4504, ska det finnas två poster:
@@ -292,11 +291,11 @@ Om det finns anpassade data som ska synkroniseras över flera publiceringsinstan
    * åtkomst till [Webbkonsol](/help/sites-deploying/configuring-osgi.md)
 
       * till exempel `https://localhost:4503/system/console/configMgr`
+
    * leta `AEM Communities User Sync Listener`
    * markera den befintliga konfiguration som ska öppnas för redigering (pennikonen) Bekräfta `Name`: `socialpubsync-scheduled-trigger`
 
-
-![](assets/chlimage_1-26.png)
+![AEM Communities Sync Listener](assets/chlimage_1-26.png)
 
 * **Nodtyper**
 Det här är listan över nodtyper som ska synkroniseras. Alla andra nodtyper än sling:Mappen måste listas här (sling:folder hanteras separat).
@@ -340,7 +339,7 @@ Så här validerar du att alla värden för Sling ID skiljer sig åt för varje 
 1. bläddra till `http://<host>:<port>/system/console/status-slingsettings`
 1. kontrollera värdet för **Sling-ID**
 
-![](assets/chlimage_1-27.png)
+![Kontrollera värdet för Sling ID](assets/chlimage_1-27.png)
 
 Om Sling ID för en publiceringsinstans matchar Sling ID för någon annan publiceringsinstans:
 
@@ -350,10 +349,10 @@ Om Sling ID för en publiceringsinstans matchar Sling ID för någon annan publi
    * söka efter och ta bort filen med namnet *sling.id.file*
 
       * i ett Linux-system:
-         `rm -i $(find . -type f -name sling.id.file)`
+        `rm -i $(find . -type f -name sling.id.file)`
 
       * i ett Windows-system:
-         `use windows explorer and search for *sling.id.file*`
+        `use windows explorer and search for *sling.id.file*`
 
 1. starta publiceringsinstansen
 
@@ -387,10 +386,10 @@ För att uppdateringarna ska kunna synkroniseras på rätt sätt måste du ändr
    * om du vill skriva över befintliga rep:principnoder med nya lägger du till ett tredje paketfilter:
 
       * `/home/users|+.*/rep:policy`
+
    * för att förhindra att profiler distribueras, ange
 
       * `Acl Handling:` `IGNORE`
-
 
 ![Vault Package Builder Factory](assets/vault-package-builder-factory.png)
 
@@ -423,13 +422,13 @@ Så här kontrollerar du status för distributionskön:
       * sök efter poster i `/var/sling/distribution/packages`
 
          * mappnoder namngivna med mönstret `distrpackage_*`
+
    * använda [Pakethanteraren](/help/sites-administering/package-manager.md)
 
       * söka efter väntande paket (ännu inte installerat)
 
          * namngiven med mönstret `socialpubsync-vlt*`
          * skapad av `communities-user-admin`
-
 
 Inaktivera användarsynkronisering när distributionskön är tom:
 
@@ -453,7 +452,7 @@ Om du bara anger användarsynkroniseringskonsolen visas resultatet.
 
 Detta visas när användarsynkronisering inte har aktiverats:
 
-![](assets/chlimage_1-28.png)
+![Varning om att diagnostiken för användarsynkronisering inte är aktiverad](assets/chlimage_1-28.png)
 
 #### Så här kör du diagnostik för publiceringsinstanser {#how-to-run-diagnostics-for-publish-instances}
 
@@ -463,7 +462,7 @@ I listan finns en URL för varje publiceringsinstans som kör diagnostiken för 
 
 **Anteckning**: innan webbadressen startas *auktoriserad synkroniseringsanvändare* måste redan vara inloggad på den publiceringsinstansen.
 
-![](assets/chlimage_1-29.png)
+![Diagnostik för publiceringsinstanser](assets/chlimage_1-29.png)
 
 ### Felaktig konfiguration {#configuration-improperly-added}
 
@@ -473,23 +472,23 @@ Här följer några vyer över hur den redigerade bilden visas standardkonfigura
 
 #### (författare) En Apache Sling Distribution Agent - Sync Agents Factory {#author-one-apache-sling-distribution-agent-sync-agents-factory}
 
-![](assets/chlimage_1-30.png)
+![Redigerad, standardkonfigurationsvy i webbkonsolen](assets/chlimage_1-30.png)
 
 #### (author) One Apache Sling Distribution Transport Credentials - User Credentials based DistributionTransportSecretProvider {#author-one-apache-sling-distribution-transport-credentials-user-credentials-based-distributiontransportsecretprovider}
 
-![](assets/chlimage_1-31.png)
+![Redigerad, standardkonfigurationsvy i webbkonsolen](assets/chlimage_1-31.png)
 
 #### (publicera) One Apache Sling Distribution Agent - Queue Agents Factory {#publish-one-apache-sling-distribution-agent-queue-agents-factory}
 
-![](assets/chlimage_1-32.png)
+![Redigerad, standardkonfigurationsvy i webbkonsolen](assets/chlimage_1-32.png)
 
 #### (publicera) One Adobe Social Sync - Diff Observer Factory {#publish-one-adobe-social-sync-diff-observer-factory}
 
-![](assets/chlimage_1-33.png)
+![Redigerad, standardkonfigurationsvy i webbkonsolen](assets/chlimage_1-33.png)
 
 #### (författare) One Apache Sling Distribution Trigger - Factory för schemalagda utlösare {#author-one-apache-sling-distribution-trigger-scheduled-triggers-factory}
 
-![](assets/chlimage_1-34.png)
+![Redigerad, standardkonfigurationsvy i webbkonsolen](assets/chlimage_1-34.png)
 
 ### Ändra åtgärdsundantag under svarsbearbetning {#modify-operation-exception-during-response-processing}
 
@@ -540,8 +539,8 @@ Se avsnitt [9. Unikt försäljnings-ID](#unique-sling-id)
 
          * Fliken Filter: Lägg till filter: Rotsökväg: `/home`
          * Fliken Avancerat: AC-hantering: `Overwrite`
-   * [exportera paketet](/help/sites-administering/package-manager.md#downloading-packages-to-your-file-system)
 
+   * [exportera paketet](/help/sites-administering/package-manager.md#downloading-packages-to-your-file-system)
 
 * på andra publiceringsinstanser:
 
@@ -576,6 +575,7 @@ Så här tar du bort en publiceringsinstans från [Apache Sling Distribution Age
 
       * `Exporter Endpoints`
       * `Importer Endpoints`
+
    * återaktivera användarsynkronisering
 
       * kontrollera `Enabled` kryssruta för [Apache Sling Distribution Agent - Sync Agents Factory](#apache-sling-distribution-agent-sync-agents-factory)

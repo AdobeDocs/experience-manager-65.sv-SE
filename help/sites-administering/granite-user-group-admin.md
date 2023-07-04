@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 95ab2e54-0f8d-49e0-ad20-774875f6f80a
 exl-id: f3477d21-7e9a-4588-94e8-496bc42434a8
 feature: Security
-source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
+source-git-commit: 7803f1df1e05dc838cb458026f8dbd27de9cb924
 workflow-type: tm+mt
-source-wordcount: '923'
+source-wordcount: '945'
 ht-degree: 1%
 
 ---
@@ -32,9 +32,9 @@ Välj antingen **Användare** eller **Grupper** från verktygskonsolen öppnar r
 
 * [Användaradministration](#user-administration)
 
-   ![chlimage_1-73](assets/chlimage_1-73a.png)
+  ![chlimage_1-73](assets/chlimage_1-73a.png)
 
-   The **Användare** konsollistor:
+  The **Användare** konsollistor:
 
    * användarnamnet
    * användarens inloggningsnamn (kontonamn)
@@ -42,9 +42,9 @@ Välj antingen **Användare** eller **Grupper** från verktygskonsolen öppnar r
 
 * [Gruppadministration](#group-administration)
 
-   ![chlimage_1-74](assets/chlimage_1-74a.png)
+  ![chlimage_1-74](assets/chlimage_1-74a.png)
 
-   The **Grupper** konsollistor:
+  The **Grupper** konsollistor:
 
    * gruppnamnet
    * gruppbeskrivningen
@@ -56,7 +56,7 @@ Välj antingen **Användare** eller **Grupper** från verktygskonsolen öppnar r
 
 1. Använd **Lägg till användare** ikon:
 
-   ![](do-not-localize/chlimage_1-1.png)
+   ![Lägg till användare](do-not-localize/chlimage_1-1.png)
 
 1. The **Skapa användare** formuläret öppnas:
 
@@ -66,16 +66,16 @@ Välj antingen **Användare** eller **Grupper** från verktygskonsolen öppnar r
 
    * **ID**
 
-      Detta är det unika ID:t för användarkontot. Det är obligatoriskt och får inte innehålla blanksteg.
+     Detta är det unika ID:t för användarkontot. Det är obligatoriskt och får inte innehålla blanksteg.
 
    * **E-postadress**
    * **Lösenord**
 
-      Ett lösenord är obligatoriskt.
+     Ett lösenord är obligatoriskt.
 
    * **Skriv lösenordet igen**
 
-      Detta är obligatoriskt eftersom det krävs för att bekräfta lösenordet.
+     Detta är obligatoriskt eftersom det krävs för att bekräfta lösenordet.
 
    * **Förnamn**
    * **Efternamn**
@@ -93,24 +93,23 @@ Välj antingen **Användare** eller **Grupper** från verktygskonsolen öppnar r
    * **Kontoinställningar**
 
       * **Status**
-Du kan flagga kontot som antingen 
-**aktiv** eller **inaktiv**.
+Du kan flagga kontot som antingen **aktiv** eller **inaktiv**.
+
    * **Foto**
 
-      Här kan du ladda upp ett foto som ska användas som avatar.
+     Här kan du ladda upp ett foto som ska användas som avatar.
 
-      Godkända filtyper: `.jpg .png .tif .gif`
+     Godkända filtyper: `.jpg .png .tif .gif`
 
-      Önskad storlek: `240x240px`
+     Önskad storlek: `240x240px`
 
    * **Lägg till användare i grupper**
 
-      Använd listrutan för val för att välja grupper som användaren ska vara medlem i. Använd **X** efter namnet som ska avmarkeras innan du sparar.
+     Använd listrutan för val för att välja grupper som användaren ska vara medlem i. Använd **X** efter namnet som ska avmarkeras innan du sparar.
 
    * **Grupper**
 
-      En lista över grupper som användaren är medlem i. Använd **X** efter namnet som ska avmarkeras innan du sparar.
-
+     En lista över grupper som användaren är medlem i. Använd **X** efter namnet som ska avmarkeras innan du sparar.
 
 1. När du har definierat användarkontot:
 
@@ -146,7 +145,7 @@ Du kan flagga kontot som antingen
 1. Använd kryssrutan för att flagga en eller flera användare.
 1. Använd **Grupper** ikon:
 
-   ![](do-not-localize/chlimage_1-2.png)
+   ![Använda ikonen Grupper](do-not-localize/chlimage_1-2.png)
 
    Så här öppnar du listrutan för gruppval:
 
@@ -164,7 +163,7 @@ Du kan flagga kontot som antingen
 1. Använd kryssrutan för att flagga en eller flera användare.
 1. Använd **Ta bort** -ikon för att ta bort användarinformationen:
 
-   ![](do-not-localize/chlimage_1-3.png)
+   ![Ta bort befintlig användarinformation](do-not-localize/chlimage_1-3.png)
 
 1. Du ombeds bekräfta borttagningen och sedan bekräftar ett meddelande att borttagningen har ägt rum.
 
@@ -174,7 +173,7 @@ Du kan flagga kontot som antingen
 
 1. Använd ikonen Lägg till grupp:
 
-   ![](do-not-localize/chlimage_1-4.png)
+   ![Lägg till en ny grupp](do-not-localize/chlimage_1-4.png)
 
 1. The **Skapa grupp** formuläret öppnas:
 
@@ -184,23 +183,23 @@ Du kan flagga kontot som antingen
 
    * **ID**
 
-      Detta är en unik identifierare för gruppen. Detta är obligatoriskt och får inte innehålla blanksteg.
+     Detta är en unik identifierare för gruppen. Detta är obligatoriskt och får inte innehålla blanksteg.
 
    * **Namn**
 
-      Ett namn för gruppen. den visas i gruppkonsolen.
+     Ett namn för gruppen. den visas i gruppkonsolen.
 
    * **Beskrivning**
 
-      En beskrivning av gruppen.
+     En beskrivning av gruppen.
 
    * **Lägg till medlemmar i grupp**
 
-      Använd listrutan för val för att välja användare som ska läggas till i gruppen. Använd **X** efter namnet som ska avmarkeras innan du sparar.
+     Använd listrutan för val för att välja användare som ska läggas till i gruppen. Använd **X** efter namnet som ska avmarkeras innan du sparar.
 
    * **Gruppmedlemmar**
 
-      En lista över användare i gruppen. Använd **X** efter namnet som ska avmarkeras innan du sparar.
+     En lista över användare i gruppen. Använd **X** efter namnet som ska avmarkeras innan du sparar.
 
 1. När du har definierat gruppen använder du:
 
@@ -218,7 +217,7 @@ Du kan flagga kontot som antingen
 1. Använd kryssrutan för att flagga en grupp.
 1. Använd **Kopiera** om du vill kopiera gruppinformationen:
 
-   ![](do-not-localize/chlimage_1-5.png)
+   ![Kopiera en befintlig grupp](do-not-localize/chlimage_1-5.png)
 
 1. The **Redigera gruppinställningar** kommer att öppnas.
 
@@ -231,6 +230,6 @@ Du kan flagga kontot som antingen
 1. Använd kryssrutan för att flagga en eller flera grupper.
 1. Använd **Ta bort** -ikon för att ta bort gruppinformationen:
 
-   ![](do-not-localize/chlimage_1-6.png)
+   ![Ta bort en befintlig grupp](do-not-localize/chlimage_1-6.png)
 
 1. Du ombeds bekräfta borttagningen och sedan bekräftar ett meddelande att borttagningen har ägt rum.

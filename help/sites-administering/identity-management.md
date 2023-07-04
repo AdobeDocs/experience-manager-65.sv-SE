@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 994a5751-7267-4a61-9bc7-01440a256c65
 docset: aem65
 exl-id: acb5b235-523e-4c01-9bd2-0cc2049f88e2
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 7803f1df1e05dc838cb458026f8dbd27de9cb924
 workflow-type: tm+mt
-source-wordcount: '1222'
+source-wordcount: '1226'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Enskilda besökare på din webbplats kan bara identifieras när du ger dem möjl
 * [AEM Communities](/help/communities/overview.md)Besökare på webbplatsen måste logga in för att kunna publicera innehåll i communityn.
 * [Stängda användargrupper](/help/sites-administering/cug.md)
 
-   Du kan behöva begränsa åtkomsten till din webbplats (eller delar av den) till vissa besökare.
+  Du kan behöva begränsa åtkomsten till din webbplats (eller delar av den) till vissa besökare.
 
 * [Personalisering](/help/sites-administering/personalization.md) Gör det möjligt för besökare att konfigurera vissa aspekter av hur de kommer åt din webbplats.
 
@@ -33,15 +33,15 @@ Funktionen Logga in (och ut) tillhandahålls av en [konto med **Profil**](#profi
 
 * Självregistrering från webbplatsen
 
-   A [Community-webbplats](/help/communities/sites-console.md) kan konfigureras så att besökare kan registrera sig själva eller logga in med sina Facebook- eller Twitter-konton.
+  A [Community-webbplats](/help/communities/sites-console.md) kan konfigureras så att besökare kan registrera sig själva eller logga in med sina Facebook- eller Twitter-konton.
 
 * Registreringsförfrågan från webbplatsen
 
-   För en sluten användargrupp kan du tillåta besökare att begära registrering, men tvinga fram auktorisering via ett arbetsflöde.
+  För en sluten användargrupp kan du tillåta besökare att begära registrering, men tvinga fram auktorisering via ett arbetsflöde.
 
 * Registrera varje konto från författarmiljön
 
-   Om du har ett litet antal profiler, som ändå behöver behörighet, kan du välja att registrera dem direkt.
+  Om du har ett litet antal profiler, som ändå behöver behörighet, kan du välja att registrera dem direkt.
 
 För att besökare ska kunna registrera sig kan en serie komponenter och formulär användas för att samla in den nödvändiga identifieringsinformationen, och sedan den extra (ofta valfria) profilinformationen. När de har registrerat sig bör de också kunna kontrollera och uppdatera de uppgifter de har lämnat.
 
@@ -106,7 +106,7 @@ Du kan visa en annan profil med [klientkontext](/help/sites-administering/client
 1. Tryck **control-alt-C** för att öppna klientkontexten.
 1. Klicka på knappen längst upp till vänster i klientkontexten **Läs in en profil** -knappen.
 
-   ![](do-not-localize/loadprofile.png)
+   ![Knappen Läs in en profil](do-not-localize/loadprofile.png)
 
 1. Välj en annan profil i listrutan i dialogrutan. till exempel **Alison Parker**.
 1. Klicka **OK**.
@@ -156,11 +156,11 @@ Detta görs med:
 
 * [Statliga leverantörer](#state-providers)
 
-   Om du vill hantera de två lägena för en viss egenskap och övergångarna mellan dessa.
+  Om du vill hantera de två lägena för en viss egenskap och övergångarna mellan dessa.
 
 * [Arbetsflöden](#workflows)
 
-   Om du vill hantera åtgärder relaterade till lägena.
+  Om du vill hantera åtgärder relaterade till lägena.
 
 Flera lägen kan definieras; I Geometrixx är dessa till exempel:
 
