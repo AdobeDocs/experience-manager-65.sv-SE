@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 6dbe82c2-7a25-49ab-a980-3635f0344817
 docset: aem65
 exl-id: d4de517e-50bc-4ca5-89b1-295d259fd5bb
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b4370d23c7b1bd43e1f02a862f11952d04892eb3
 workflow-type: tm+mt
-source-wordcount: '222'
+source-wordcount: '226'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ I det här exemplet återaktiverar vi det klassiska gränssnittet för webbplats
 
    Till exempel
 
-   [ `https://localhost:4502/crx/de/index.jsp#/libs/cq/core/content/nav`](https://localhost:4502/crx/de/index.jsp#/libs/cq/core/content/nav)
+   [`https://localhost:4502/crx/de/index.jsp#/libs/cq/core/content/nav`](https://localhost:4502/crx/de/index.jsp#/libs/cq/core/content/nav)
 
 1. Markera noden som motsvarar konsolen som du vill återaktivera det klassiska användargränssnittet för. Vi kommer till exempel att återaktivera det klassiska användargränssnittet för webbplatskonsolen.
 
@@ -50,6 +50,6 @@ I det här exemplet återaktiverar vi det klassiska gränssnittet för webbplats
 
 1. The **Klassiskt användargränssnitt** Alternativet är igen tillgängligt som ett poseralternativ i Admin Console.
 
-   ![](assets/syui-01-2019-02-27-15-16-55.png)
+   ![klassiskt alternativ för UI-posering](assets/syui-01-2019-02-27-15-16-55.png)
 
 Upprepa dessa steg för varje konsol som du vill återaktivera åtkomst till den klassiska användargränssnittsversionen för.

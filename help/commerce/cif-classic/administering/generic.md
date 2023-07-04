@@ -8,10 +8,10 @@ topic-tags: e-commerce
 content-type: reference
 docset: aem65
 exl-id: c29f6213-1df6-45af-91c8-14b255276d82
-source-git-commit: 58594be73372e128ba999a8290615fbcb447084e
+source-git-commit: 6ebcc7bd5c72c01672244fdfba353a8949f6e331
 workflow-type: tm+mt
-source-wordcount: '2910'
-ht-degree: 1%
+source-wordcount: '2979'
+ht-degree: 0%
 
 ---
 
@@ -66,21 +66,22 @@ Det behövs ett ställningar för varje enskild produkttyp. Den lämpliga strukt
 1. Använda **Produkter** konsolen navigerar till önskad plats.
 1. Använd **Importera produkter** -ikonen för att öppna guiden.
 
-   ![chlimage_1-1](/help/sites-administering/do-not-localize/chlimage_1-13.png)
+   ![Ikonen Importera produkter](/help/sites-administering/do-not-localize/chlimage_1-13.png)
 
 1. Ange:
 
    * **Importör**
 
-      Importören för den specifika [e-handelsleverantör](/help/commerce/cif-classic/administering/concepts.md#commerce-providers), som standard `Geometrixx`.
+     Importören för den specifika [e-handelsleverantör](/help/commerce/cif-classic/administering/concepts.md#commerce-providers), som standard `Geometrixx`.
 
    * **Källa**
 
-      Den fil du vill importera; du kan använda webbläsaren för att välja en fil.
+     Den fil du vill importera; du kan använda webbläsaren för att välja en fil.
 
    * **Inkrementell import**
 
-      Ange om detta är en stegvis import (i motsats till fullständig).
+     Ange om detta är en stegvis import (i motsats till fullständig).
+
    >[!NOTE]
    >
    >Den stegvisa importen (av importexemplaret geometrixx-outdoor) sker på produktnivå.
@@ -104,27 +105,27 @@ Det behövs ett ställningar för varje enskild produkttyp. Den lämpliga strukt
 1. Använda **verktyg** konsolen öppnar **Handel** mapp.
 1. Dubbelklicka för att öppna **Produktimporterare**:
 
-   ![chlimage_1-22](/help/sites-administering/assets/chlimage_1-22.jpeg)
+   ![Product Importer Console](/help/sites-administering/assets/chlimage_1-22.jpeg)
 
 1. Ange:
 
    * **Butiksnamn**
 
-      Produkterna importeras till:
+     Produkterna importeras till:
 
-      `/etc/commerce/products/<*store name*>/`
+     `/etc/commerce/products/<*store name*>/`
 
    * **Commerce Provider**
 
-      Importören för din [e-handelsleverantör](/help/commerce/cif-classic/administering/concepts.md#commerce-providers); som standard Geometrixx.
+     Importören för din [e-handelsleverantör](/help/commerce/cif-classic/administering/concepts.md#commerce-providers); som standard Geometrixx.
 
    * **Källfil**
 
-      Platsen i databasen för filen som du vill importera.
+     Platsen i databasen för filen som du vill importera.
 
    * **Inkrementell import**
 
-      Ange om detta är en stegvis import (i motsats till fullständig).
+     Ange om detta är en stegvis import (i motsats till fullständig).
 
 1. Klicka **Importera produkter**.
 
@@ -142,7 +143,7 @@ Det behövs ett ställningar för varje enskild produkttyp. Den lämpliga strukt
    * **Skapa produkt**
    * **Skapa produktvariation**
 
-   ![chlimage_1-14](/help/sites-administering/do-not-localize/chlimage_1-14.png)
+   ![Plustecken för att skapa](/help/sites-administering/do-not-localize/chlimage_1-14.png)
 
 1. Guiden öppnas. Använd **Grundläggande** och **Flikar** för att ange [produktattribut](/help/commerce/cif-classic/administering/concepts.md#product-attributes) för den nya produkten eller produktvarianten.
 
@@ -178,7 +179,7 @@ Det behövs ett ställningar för varje enskild produkttyp. Den lämpliga strukt
 
    Välj **Visa produktdata** ikon:
 
-   ![chlimage_1-3](/help/sites-administering/do-not-localize/chlimage_1-15.png)
+   ![visa produktdataikon - informationsikon](/help/sites-administering/do-not-localize/chlimage_1-15.png)
 
 1. The [produktattribut](/help/commerce/cif-classic/administering/concepts.md#product-attributes) visas. Använd **Redigera** och **Klar** för att göra ändringar.
 
@@ -189,11 +190,11 @@ Det behövs ett ställningar för varje enskild produkttyp. Den lämpliga strukt
 1. Använda **Produkter** konsol (via **Handel**) navigera till produktinformationen.
 1. Öppna den sekundära listen för referenser med ikonen:
 
-   ![chlimage_1-4](/help/sites-administering/do-not-localize/chlimage_1-16.png)
+   ![dubbelpil, ikon](/help/sites-administering/do-not-localize/chlimage_1-16.png)
 
 1. Välj önskad produkt - den sekundära rälen uppdateras för att visa tillgängliga referenstyper:
 
-   ![chlimage_1-88](/help/sites-administering/assets/chlimage_1-88.png)
+   ![produktkonsol med öppna referenser](/help/sites-administering/assets/chlimage_1-88.png)
 
 1. Klicka/tryck på referenstypen (t.ex. produktsidor) för att utöka listan.
 1. Välj en specifik referens för att visa alternativen:
@@ -201,18 +202,18 @@ Det behövs ett ställningar för varje enskild produkttyp. Den lämpliga strukt
    * Navigera till produktsidan
    * Redigera produktsida
 
-   ![chlimage_1-89](/help/sites-administering/assets/chlimage_1-89.png)
+   ![Referenspanelen för produktkonsolen](/help/sites-administering/assets/chlimage_1-89.png)
 
 ### Sök efter produkter {#search-for-products}
 
 1. Navigera till **Produkter** konsol, via **Handel**.
 1. Öppna den andra listen för sökning med ikonen:
 
-   ![](/help/sites-administering/do-not-localize/chlimage_1-17.png)
+   ![förstoringsglasikon](/help/sites-administering/do-not-localize/chlimage_1-17.png)
 
 1. Du kan söka efter produkter på flera olika sätt. Du kan bara använda en eller flera aspekter för en sökning. De produkter som hittas visas:
 
-   ![chlimage_1-90](/help/sites-administering/assets/chlimage_1-90.png)
+   ![Produktdata i produktkonsolen](/help/sites-administering/assets/chlimage_1-90.png)
 
 1. Om du klickar/trycker på en produkt öppnas den. Du kan också publicera den eller visa produktdata.
 
@@ -250,7 +251,7 @@ Du kan lägga till flera resurser i produktkomponenten och sedan ange vilken res
 1. Tryck/klicka på ikonen Redigera.
 1. Bläddra till **Lägg till**.
 
-   ![chlimage_1-91](/help/sites-administering/assets/chlimage_1-91.png)
+   ![Lägga till produktdata, bild](/help/sites-administering/assets/chlimage_1-91.png)
 
 1. Tryck/klicka **Lägg till**. En ny platshållare för resursen visas.
 1. Om du trycker/klickar på **Ändra **öppnas en dialogruta där du kan välja en resurs.
@@ -337,7 +338,7 @@ Mekanismen för att välja den bild som ska visas är följande:
 
    Välj **Publicera** eller **Avpublicera** ikon efter behov:
 
-   ![chlimage_1-6](/help/sites-administering/do-not-localize/chlimage_1-18.png) ![chlimage_1-7](/help/sites-administering/do-not-localize/chlimage_1-19.png)
+   ![world icon](/help/sites-administering/do-not-localize/chlimage_1-18.png) ![världsikon med ett kryss - inget tecken](/help/sites-administering/do-not-localize/chlimage_1-19.png)
 
    Produktinformationen kommer att publiceras eller avpubliceras efter behov.
 
@@ -367,7 +368,7 @@ För `PRODUCT_*` -händelser pekar sökvägen till basprodukten i `/etc/commerce
 
 Du kan titta på dem i webbkonsolen i OSGI-händelser ( `/system/console/events`), till exempel:
 
-![](/help/sites-administering/do-not-localize/chlimage_1-20.png)
+![Exempel på OSGI-händelser](/help/sites-administering/do-not-localize/chlimage_1-20.png)
 
 >[!NOTE]
 >
@@ -389,15 +390,15 @@ När du klickar på aktiveringspunkten öppnas en dialogruta där du kan välja 
 
 1. Klicka på helskärmsikonen.
 
-   ![chlimage_1-92](/help/sites-administering/assets/chlimage_1-92.png)
+   ![helskärmsikon](/help/sites-administering/assets/chlimage_1-92.png)
 
 1. Klicka på ikonen Starta karta.
 
-   ![chlimage_1-93](/help/sites-administering/assets/chlimage_1-93.png)
+   ![ikonen för startkarta](/help/sites-administering/assets/chlimage_1-93.png)
 
 1. Klicka på en av formikonerna.
 
-   ![chlimage_1-21](/help/sites-administering/do-not-localize/chlimage_1-21.png)
+   ![formikoner](/help/sites-administering/do-not-localize/chlimage_1-21.png)
 
 1. Ändra och flytta formen efter behov.
 1. Klicka på formen.
@@ -407,17 +408,17 @@ När du klickar på aktiveringspunkten öppnas en dialogruta där du kan välja 
    >
    >Du kan också skriva produktsökvägen som måste finnas på produktnivå, inte på variantnivå, direkt.
 
-   ![chlimage_1-94](/help/sites-administering/assets/chlimage_1-94.png)
+   ![textbana](/help/sites-administering/assets/chlimage_1-94.png)
 
 1. Klicka på bekräftelseikonen två gånger och sedan på Avsluta helskärm.
 1. Klicka någonstans på sidan bredvid komponenten. Sidan bör uppdateras och följande symbol bör visas på bilden:
 
-   ![](/help/sites-administering/do-not-localize/chlimage_1-22.png)
+   ![plustecken](/help/sites-administering/do-not-localize/chlimage_1-22.png)
 
 1. Växla till [förhandsgranska](/help/sites-authoring/editing-content.md#previewingpagestouchoptimizedui) läge.
 1. Klicka på hotspot-området +. En dialogruta öppnas där du kan välja storlek och kvantitet för den produkt du angav i **Bana**.
 
-   ![chlimage_1-95](/help/sites-administering/assets/chlimage_1-95.png)
+   ![produktexempel: ponko](/help/sites-administering/assets/chlimage_1-95.png)
 
 1. Ange en storlek och en kvantitet.
 1. Klicka på knappen Lägg till i kundvagnen. Dialogrutan stängs.
@@ -429,15 +430,15 @@ Du kan konfigurera hur dialogrutan ser ut när du klickar på hotspot-området:
 
 1. Klicka på komponenten och klicka på konfigurationsikonen.
 
-   ![chlimage_1-96](/help/sites-administering/assets/chlimage_1-96.png)
+   ![konfigurera ikon](/help/sites-administering/assets/chlimage_1-96.png)
 
 1. Bläddra nedåt. Det finns en **LÄGG TILL I KARTONG** -fliken.
 
-   ![chlimage_1-97](/help/sites-administering/assets/chlimage_1-97.png)
+   ![lägg till i kundvagnsflik](/help/sites-administering/assets/chlimage_1-97.png)
 
 1. Klicka **LÄGG TILL I KARTONG**. Det finns tre konfigurationsalternativ som du kan använda.
 
-   ![chlimage_1-98](/help/sites-administering/assets/chlimage_1-98.png)
+   ![konfigurationsalternativ](/help/sites-administering/assets/chlimage_1-98.png)
 
 1. Klicka på ikonen Klar.
 
@@ -461,18 +462,18 @@ Så här skapar du en katalog:
 
 1. Välj **Skapa katalog**&#x200B;öppnas guiden Skapa katalog.
 
-   ![chlimage_1-99](/help/sites-administering/assets/chlimage_1-99.png)
+   ![guiden skapa katalog](/help/sites-administering/assets/chlimage_1-99.png)
 
 1. Navigera till önskad katalogutkast.
 1. Tryck/klicka **Välj** och tryck/klicka på den önskade katalogdesignen.
 1. Tryck/klicka **Nästa**.
 
-   ![chlimage_1-100](/help/sites-administering/assets/chlimage_1-100.png)
+   ![guide för katalogegenskaper](/help/sites-administering/assets/chlimage_1-100.png)
 
 1. Skriv a **Titel** och **Namn**.
 1. Tryck/klicka på **Skapa** -knappen. Katalogen skapas och en dialogruta öppnas.
 
-   ![chlimage_1-101](/help/sites-administering/assets/chlimage_1-101.png)
+   ![katalog skapad dialogruta](/help/sites-administering/assets/chlimage_1-101.png)
 
 1. Tryck/klicka **Klar** Med knappen kommer du tillbaka till webbplatskonsolen där du kan se katalogen.
 
@@ -548,11 +549,11 @@ Så här distribuerar du en katalog:
 1. Navigera till den plats där du vill importera katalogplanen.
 1. Tryck/klicka på **Importera utkast** ikon.
 
-   ![](/help/sites-administering/do-not-localize/chlimage_1-13.png)
+   ![Importera utkast, ikon](/help/sites-administering/do-not-localize/chlimage_1-13.png)
 
 1. Välj källa i guiden efter behov och tryck/klicka **Nästa**.
 
-   ![chlimage_1-340](/help/sites-administering/assets/chlimage_1-102.png)
+   ![guide för utkast](/help/sites-administering/assets/chlimage_1-102.png)
 
 1. Tryck/klicka **Klar** när importen är klar.
 
@@ -661,7 +662,7 @@ På demowebbplatsen (Geometrixx Outdoors - engelska) kan du se kupongformuläret
 1. Använda **Beställningar** konsolen navigerar till önskad plats.
 1. Använd **Skapa** ikon som du vill markera **Skapa order**.
 
-   ![](/help/sites-administering/do-not-localize/chlimage_1-14.png)
+   ![Plustecken för att skapa](/help/sites-administering/do-not-localize/chlimage_1-14.png)
 
 1. Guiden öppnas. Använd **Grundläggande**, **Innehåll**, **Betalning** och **Uppfyllelse** -tabbar för att ange [information om den nya ordern](/help/commerce/cif-classic/administering/concepts.md#order-information).
 
@@ -679,7 +680,7 @@ På demowebbplatsen (Geometrixx Outdoors - engelska) kan du se kupongformuläret
 
    Välj **Visa orderdata** ikon:
 
-   ![](/help/sites-administering/do-not-localize/chlimage_1-15.png)
+   ![informationsikon](/help/sites-administering/do-not-localize/chlimage_1-15.png)
 
 1. The [orderinformation](/help/commerce/cif-classic/administering/concepts.md#order-information) visas. Använd **Redigera** och **Klar** för att göra ändringar.
 

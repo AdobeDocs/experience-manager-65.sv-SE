@@ -5,9 +5,9 @@ topic-tags: e-commerce
 content-type: reference
 docset: aem65
 exl-id: d995f0d6-9e48-4228-ac82-f33a0b25b9d3
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 745ca1aa7bc96d0938ec550a357d9edcbea341db
 workflow-type: tm+mt
-source-wordcount: '731'
+source-wordcount: '751'
 ht-degree: 0%
 
 ---
@@ -137,11 +137,11 @@ AEM eCommerce tillhandahåller:
    * Vouchers
    * och andra
 
-   ![](/help/sites-administering/assets/chlimage_1-130.png)
+  ![exempel på geometrixx-komponenter](/help/sites-administering/assets/chlimage_1-130.png)
 
-   >[!NOTE]
-   >
-   >Integreringsramverket som AEM tillhandahåller gör det även möjligt att skapa ytterligare AEM komponenter för handelsfunktioner oberoende av din specifika e-handelsmotor.
+  >[!NOTE]
+  >
+  >Integreringsramverket som AEM tillhandahåller gör det även möjligt att skapa ytterligare AEM komponenter för handelsfunktioner oberoende av din specifika e-handelsmotor.
 
 * **Sök** - med antingen:
 
@@ -150,28 +150,28 @@ AEM eCommerce tillhandahåller:
    * en tredje parts sökning
    * eller en kombination av dessa.
 
-   ![](/help/sites-administering/assets/chlimage_1-131.png)
+  ![sökexempel](/help/sites-administering/assets/chlimage_1-131.png)
 
 * Använder AEM möjlighet att **presentera innehållet i flera kanaler**, vara hela webbläsarfönstret eller den mobila enheten. Detta levererar innehållet i det format som besökarna behöver.
 
-   ![](/help/sites-administering/assets/chlimage_1-132.png)
+  ![mobilvy, exempel](/help/sites-administering/assets/chlimage_1-132.png)
 
 * Möjlighet att **utveckla er egen integrationsimplementering baserat på [AEM eCommerce Framework](#the-framework)**.
 
-   De två implementeringar som är tillgängliga för närvarande är båda byggda på samma grund - utöver det allmänna API:t (ramverket). Implementering av en ny integrering innebär bara implementering av de funktioner som din integrering behöver. Front end-komponenter kan användas av alla nya implementeringar när de använder gränssnitt (så är oberoende av implementeringen).
+  De två implementeringar som är tillgängliga för närvarande är båda byggda på samma grund - utöver det allmänna API:t (ramverket). Implementering av en ny integrering innebär bara implementering av de funktioner som din integrering behöver. Front end-komponenter kan användas av alla nya implementeringar när de använder gränssnitt (så är oberoende av implementeringen).
 
 * Möjligheten att utveckla **upplevelsestyrd e-handel baserad på kunddata och -aktivitet**. På så sätt kan du förverkliga många scenarier:
 
    * Ett exempel kan vara minskade fraktkostnader när den totala ordern överstiger ett visst belopp.
    * Ett annat kan göra att du kan erbjuda säsongserbjudanden som använder profildata (t.ex. plats). Dessa kan sedan markeras ytterligare, beroende på andra faktorer vid behov.
 
-   I exemplet nedan visas en teaser eftersom innehållet i vagnen är mindre än $75:
+  I exemplet nedan visas en teaser eftersom innehållet i vagnen är mindre än $75:
 
-   ![](/help/sites-administering/assets/chlimage_1-133.png)
+  ![kundvagn med kundkontext](/help/sites-administering/assets/chlimage_1-133.png)
 
-   Detta kan ändras när innehållet i kundvagnen överstiger $75:
+  Detta kan ändras när innehållet i kundvagnen överstiger $75:
 
-   ![](/help/sites-administering/assets/chlimage_1-134.png)
+  ![kundvagn med kundkontext efter ändring](/help/sites-administering/assets/chlimage_1-134.png)
 
 * Och andra funktioner:
 

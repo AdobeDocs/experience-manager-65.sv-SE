@@ -10,9 +10,9 @@ topic-tags: integrations
 discoiquuid: 96a77980-4213-4779-a540-00905ea8f7e3
 docset: aem65
 exl-id: 72f0f8e3-e70b-4f78-aa0e-b31768b536f7
-source-git-commit: 66631fd0813f623f3321072fc00fd90f7fa33d21
+source-git-commit: fef4f47794942b1fca4b30ce518b2faa8951f482
 workflow-type: tm+mt
-source-wordcount: '1531'
+source-wordcount: '1533'
 ht-degree: 0%
 
 ---
@@ -112,7 +112,7 @@ Utför följande steg för att skapa en rapportserie.
 Konfigurationen av Cloud Servicen är information om ditt Adobe Analytics-konto. Med konfigurationen kan Adobe Experience Manager (AEM) ansluta till Adobe Analytics. Skapa en separat konfiguration för varje Analytics-konto som du använder.
 
 1. Logga in på AEM författarinstans som administratör.
-1. Klicka på i det övre vänstra hörnet **Adobe Experience Manager** > **verktyg** ![](/help/forms/using/assets/tools.png) > **Cloud Services** > **Äldre Cloud Services**.
+1. Klicka på i det övre vänstra hörnet **Adobe Experience Manager** > **verktyg** ![hamikon](/help/forms/using/assets/tools.png) > **Cloud Services** > **Äldre Cloud Services**.
 1. Sök **Adobe Analytics** ikon. Klicka **Visa konfigurationer** och sedan fortsätta med att klicka **[+]** för att lägga till ny konfiguration.
 
    Om du är förstagångsanvändare klickar du på **Konfigurera nu**.
@@ -145,7 +145,7 @@ Ett Adobe Analytics-ramverk är en uppsättning mappningar mellan Adobe Analytic
 
    ![information_to_send_to_report_suite](assets/information_to_send_to_report_suite.png)
 
-1. Dra en **Form Analytics-komponent** från **övriga** från SideKick till ramverket.
+1. Dra en **Form Analytics-komponent** från **övriga** från Sidekick till ramverket.
 1. Om du vill mappa Analytics-variabler med variabler som är definierade i komponenten drar du en variabel från AEM Content Finder till ett fält i spårningskomponenten.
 
    ![Mappa AEM variabler med Adobe Analytics-variabler](assets/analytics_new.png)
@@ -169,6 +169,7 @@ Ett Adobe Analytics-ramverk är en uppsättning mappningar mellan Adobe Analytic
    * **Synkroniseringscron för analysrapport**: Ange cron-uttryck för att hämta rapporter från Adobe Analytics. Standardvärdet är 0 0 2 ? &#42; &#42;.
 
    * **Tidsgräns för hämtning av rapport:** Ange hur länge (i sekunder) som servern ska svara på analysrapporten. Standardtiden är 120 sekunder.
+
    >[!NOTE]
    >
    >Det kan ta upp till 10 sekunder till att tidsgränsen för hämtning av rapporter överskrids och det angivna antalet sekunder.
