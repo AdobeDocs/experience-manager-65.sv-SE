@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 6128c91a-4173-42b4-926f-bbbb2b54ba5b
 docset: aem65
 exl-id: bba64ce6-8b74-4be1-bf14-cfdf3b9b60e1
-source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
+source-git-commit: e85aacd45a2bbc38f10d03915e68286f0a55364e
 workflow-type: tm+mt
-source-wordcount: '2575'
+source-wordcount: '2583'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,6 @@ På den här sidan kan du utöka funktionerna i Multi Site Manager:
 >* [Designkonfigurationer för hantering av flera webbplatser](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/restructuring/sites-repository-restructuring-in-aem-6-5.html#multi-site-manager-blueprint-configurations)
 >* [Samlingskonfigurationer för flera platshanterare](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/restructuring/sites-repository-restructuring-in-aem-6-5.html#multi-site-manager-rollout-configurations)
 
-
 >[!CAUTION]
 >
 >Multi Site Manager och dess API används vid utvecklingen av en webbplats, så de är bara avsedda att användas i en författarmiljö.
@@ -50,13 +49,13 @@ Hantering av flera platser består av följande paket:
 
 De huvudsakliga MSM API-objekten interagerar på följande sätt (se även [Villkor](/help/sites-administering/msm.md#terms-used)):
 
-![chlimage_1-73](assets/chlimage_1-73.png)
+![Huvudobjekt för MSM API](assets/chlimage_1-73.png)
 
 * **`Blueprint`**
 
-   A `Blueprint` (som i [konfiguration av utkast](/help/sites-administering/msm.md#source-blueprints-and-blueprint-configurations)) anger de sidor från vilka en live-kopia kan ärva innehåll.
+  A `Blueprint` (som i [konfiguration av utkast](/help/sites-administering/msm.md#source-blueprints-and-blueprint-configurations)) anger de sidor från vilka en live-kopia kan ärva innehåll.
 
-   ![chlimage_1-74](assets/chlimage_1-74.png)
+  ![Blueprint](assets/chlimage_1-74.png)
 
    * Användning av en ritningskonfiguration ( `Blueprint`) är valfritt, men:
 
@@ -66,7 +65,7 @@ De huvudsakliga MSM API-objekten interagerar på följande sätt (se även [Vill
 
 * **`LiveRelationship`**
 
-   The `LiveRelationship` Anger anslutningen (relationen) mellan en resurs i livekopiegrenen och dess ekvivalenta käll-/planresurs.
+  The `LiveRelationship` Anger anslutningen (relationen) mellan en resurs i livekopiegrenen och dess ekvivalenta käll-/planresurs.
 
    * Relationerna används vid arv och utrullning.
    * `LiveRelationship` objekt ger åtkomst (referenser) till utrullningskonfigurationer ( `RolloutConfig`), `LiveCopy`och `LiveStatus` objekt som är relaterade till relationen.
@@ -75,7 +74,7 @@ De huvudsakliga MSM API-objekten interagerar på följande sätt (se även [Vill
 
 * **`LiveCopy`**
 
-   `LiveCopy` innehåller konfigurationsinformation för relationerna ( `LiveRelationship`) mellan de aktiva kopieringsresurserna och deras käll-/ritresurser.
+  `LiveCopy` innehåller konfigurationsinformation för relationerna ( `LiveRelationship`) mellan de aktiva kopieringsresurserna och deras käll-/ritresurser.
 
    * Använd `LiveCopy` -klass för att komma åt sidans sökväg, sökvägen till käll-/ritningssidan, rollout-konfigurationerna och om underordnade sidor också inkluderas i `LiveCopy`.
 
@@ -83,21 +82,21 @@ De huvudsakliga MSM API-objekten interagerar på följande sätt (se även [Vill
 
 * **`LiveStatus`**
 
-   `LiveStatus` objekt ger åtkomst till körningsstatus för en `LiveRelationship`. Används för att fråga synkroniseringsstatusen för en live-kopia.
+  `LiveStatus` objekt ger åtkomst till körningsstatus för en `LiveRelationship`. Används för att fråga synkroniseringsstatusen för en live-kopia.
 
 * **`LiveAction`**
 
-   A `LiveAction` är en åtgärd som utförs på varje resurs som ingår i utrullningen.
+  A `LiveAction` är en åtgärd som utförs på varje resurs som ingår i utrullningen.
 
    * LiveActions genereras endast av RolloutConfigs.
 
 * **`LiveActionFactory`**
 
-   Skapar `LiveAction` objekt som `LiveAction` konfiguration. Konfigurationer lagras som resurser i databasen.
+  Skapar `LiveAction` objekt som `LiveAction` konfiguration. Konfigurationer lagras som resurser i databasen.
 
 * **`RolloutConfig`**
 
-   The `RolloutConfig` innehåller en lista med `LiveActions`, som ska användas när den aktiveras. The `LiveCopy` ärver `RolloutConfig` och resultatet finns i `LiveRelationship`.
+  The `RolloutConfig` innehåller en lista med `LiveActions`, som ska användas när den aktiveras. The `LiveCopy` ärver `RolloutConfig` och resultatet finns i `LiveRelationship`.
 
    * När du konfigurerar en live-kopia för första gången används också en RolloutConfig (som utlöser LiveActions).
 
@@ -105,8 +104,8 @@ De huvudsakliga MSM API-objekten interagerar på följande sätt (se även [Vill
 
 Skapa anpassade synkroniseringsåtgärder som du kan använda med dina utrullningskonfigurationer. Skapa en synkroniseringsåtgärd när [installerade åtgärder](/help/sites-administering/msm-sync.md#installed-synchronization-actions) uppfyller inte dina specifika programkrav. Skapa då två klasser:
 
-* Ett genomförande av [ `com.day.cq.wcm.msm.api.LiveAction`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/msm/api/LiveAction.html) gränssnitt som utför åtgärden.
-* En OSGI-komponent som implementerar [ `com.day.cq.wcm.msm.api.LiveActionFactory`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/msm/api/LiveActionFactory.html) -gränssnittet och skapar instanser av `LiveAction` klassen.
+* Ett genomförande av [`com.day.cq.wcm.msm.api.LiveAction`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/msm/api/LiveAction.html) gränssnitt som utför åtgärden.
+* En OSGI-komponent som implementerar [`com.day.cq.wcm.msm.api.LiveActionFactory`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/msm/api/LiveActionFactory.html) -gränssnittet och skapar instanser av `LiveAction` klassen.
 
 The `LiveActionFactory` skapar instanser av `LiveAction` klass för en viss konfiguration:
 
@@ -147,9 +146,9 @@ public LiveAction createAction(Resource resource) throws WCMException {
 
 Följande objekt anges som parametrar för `execute` metoden `LiveAction` objekt:
 
-* A [ `Resource`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/org/apache/sling/api/resource/Resource.html) som representerar källan till Live Copy.
+* A [`Resource`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/org/apache/sling/api/resource/Resource.html) som representerar källan till Live Copy.
 * A `Resource` som representerar målet för Live Copy.
-* The [ `LiveRelationship`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/msm/api/LiveRelationship.html) objekt för live-kopian.
+* The [`LiveRelationship`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/msm/api/LiveRelationship.html) objekt för live-kopian.
 * The `autoSave` värdet anger om `LiveAction` bör spara ändringar som görs i databasen.
 
 * Återställningsvärdet anger återställningsläget för utrullning.
@@ -166,7 +165,7 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
 
 >[!NOTE]
 >
->The `Resource` argument kan `null` eller `Resources` objekt som inte anpassar sig till `Node` objekt, som [ `NonExistingResource`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/org/apache/sling/api/resource/NonExistingResource.html) objekt.
+>The `Resource` argument kan `null` eller `Resources` objekt som inte anpassar sig till `Node` objekt, som [`NonExistingResource`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/org/apache/sling/api/resource/NonExistingResource.html) objekt.
 
 ## Skapa en ny utrullningskonfiguration {#creating-a-new-rollout-configuration}
 
@@ -205,7 +204,6 @@ Så här skapar du en ny utrullningskonfiguration:
    >* Återskapa önskat objekt (d.v.s. som det finns i `/libs`) under `/apps`
    >* Gör ändringar i `/apps`
 
-
 1. Under **Skapa** en nod med följande egenskaper:
 
    * **Namn**: Nodnamnet för utrullningskonfigurationen. md#installed-synchronization-actions), till exempel `contentCopy` eller `workflow`.
@@ -213,17 +211,14 @@ Så här skapar du en ny utrullningskonfiguration:
 
 1. Lägg till följande egenskaper i den här noden:
    * **Namn**: `jcr:title`
-
-      **Typ**: `String`
-      **Värde**: En identifierande titel som visas i användargränssnittet.
+     **Typ**: `String`
+     **Värde**: En identifierande titel som visas i användargränssnittet.
    * **Namn**: `jcr:description`
-
-      **Typ**: `String`
-      **Värde**: En valfri beskrivning.
+     **Typ**: `String`
+     **Värde**: En valfri beskrivning.
    * **Namn**: `cq:trigger`
-
-      **Typ**: `String`
-      **Värde**: The [Utlösare för utrullning](/help/sites-administering/msm-sync.md#rollout-triggers) som ska användas. Välj  från:
+     **Typ**: `String`
+     **Värde**: The [Utlösare för utrullning](/help/sites-administering/msm-sync.md#rollout-triggers) som ska användas. Välj  från:
       * `rollout`
       * `modification`
       * `publish`
@@ -639,7 +634,7 @@ Språklistan sparas under `/libs/wcm/core/resources/languages` nod. Varje undero
 * The `country` -egenskapen för noden lagrar det fullständiga namnet på landet för koden.
 * När nodnamnet bara består av en språkkod (till exempel `en`), egenskapen country är `*`och ytterligare `defaultCountry` -egenskapen lagrar koden för det land som ska anges.
 
-![chlimage_1-76](assets/chlimage_1-76.png)
+![Språkdefinition](assets/chlimage_1-76.png)
 
 Så här ändrar du språk:
 
@@ -648,7 +643,7 @@ Så här ändrar du språk:
 
    Namnge den nya mappen `wcm`.
 
-1. Upprepa föregående steg för att skapa `/apps/wcm/core` mappträd. Skapa en nod av typen `sling:Folder` in `core` anropad `resources`. <!-- ![chlimage_1-77](assets/chlimage_1-77.png) -->
+1. Upprepa föregående steg för att skapa `/apps/wcm/core` mappträd. Skapa en nod av typen `sling:Folder` in `core` anropad `resources`. <!-- ![Resources](assets/chlimage_1-77.png) -->
 
 1. Högerklicka på `/libs/wcm/core/resources/languages` nod och klicka **Kopiera**.
 1. Högerklicka på `/apps/wcm/core/resources` mapp och klicka på **Klistra in**. Ändra de underordnade noderna efter behov.
@@ -656,7 +651,7 @@ Så här ändrar du språk:
 1. Klicka **verktyg**, **Operationer** sedan **Webbkonsol**. Klicka på **OSGi** sedan **Konfiguration**.
 1. Leta reda på och klicka **Day CQ WCM Language Manager** och ändra värdet för **Språklista** till `/apps/wcm/core/resources/languages`och sedan klicka **Spara**.
 
-   ![chlimage_1-78](assets/chlimage_1-78.png)
+   ![Day CQ WCM Language Manager](assets/chlimage_1-78.png)
 
 ## Konfigurera MSM-lås på sidegenskaper (pekaktiverat gränssnitt) {#configuring-msm-locks-on-page-properties-touch-enabled-ui}
 
@@ -693,7 +688,7 @@ Anger om en sidegenskap ska rullas ut och därför styrs arvet av egenskapen dia
       * **Typ**: `String`
 
       * **Värde**: innehåller namnet på den aktuella egendomen (och är jämförbart med värdet på egendomen) `name`; se
-         `/libs/foundation/components/page/cq:dialog/content/items/tabs/items/basic/items/column/items/title/items/title`
+        `/libs/foundation/components/page/cq:dialog/content/items/tabs/items/basic/items/column/items/title/items/title`
 
 När `cq-msm-lockable` har definierats, om kedjan bryts/stängs kommer den att interagera med MSM på följande sätt:
 
@@ -702,12 +697,12 @@ När `cq-msm-lockable` har definierats, om kedjan bryts/stängs kommer den att i
    * **Relativ** (t.ex. `myProperty` eller `./myProperty`)
 
       * den lägger till och tar bort egenskapen från `cq:propertyInheritanceCancelled`.
+
    * **Absolut** (t.ex. `/image`)
 
       * om du bryter kedjan avbryts arvet genom att lägga till `cq:LiveSyncCancelled` blanda till `./image` och inställning `cq:isCancelledForChildren` till `true`.
 
       * Om du stänger kedjan återställs arvet.
-
 
 >[!NOTE]
 >

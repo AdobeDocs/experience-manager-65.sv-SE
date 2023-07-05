@@ -8,9 +8,9 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 8ae6817a-16d3-4740-b67a-498e75adf350
 exl-id: 5e232886-75c1-4f0f-b359-4739ae035fd3
-source-git-commit: cae9890cd61d6d894f34c7299e2e15ee70e14ac9
+source-git-commit: e85aacd45a2bbc38f10d03915e68286f0a55364e
 workflow-type: tm+mt
-source-wordcount: '913'
+source-wordcount: '915'
 ht-degree: 0%
 
 ---
@@ -149,7 +149,7 @@ Så här aktiverar eller inaktiverar du en komponent:
 
    Använd **Lägg till** om du vill lägga till fler poster i en flerpostsdialogrutelista.
 
-   ![chlimage_1-94](assets/chlimage_1-94.png)
+   ![Lägg till ytterligare post](assets/chlimage_1-94.png)
 
    Använd **Ta bort** om du vill ta bort en post från en dialogruta med flera poster.
 

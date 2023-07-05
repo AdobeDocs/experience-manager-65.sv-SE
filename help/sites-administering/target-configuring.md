@@ -10,9 +10,9 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 20c8eb1d-5847-4902-b7d3-4c3286423b46
 exl-id: 0f710685-dc4f-4333-9847-d002b2637d08
-source-git-commit: c96f83b84ed1473aee0ddcca08a0e585ec088aa1
+source-git-commit: e85aacd45a2bbc38f10d03915e68286f0a55364e
 workflow-type: tm+mt
-source-wordcount: '2192'
+source-wordcount: '2200'
 ht-degree: 0%
 
 ---
@@ -56,14 +56,13 @@ Följande egenskapsvärden används i den konfiguration av molnet för konfigura
 >* Bättre implementeringsalternativ för single-page-applikationer
 >* AT.js innehåller komponenterna som ingick i target.js, så det finns inte längre något anrop till target.
 
-
 <!-- OLD URL WHICH IS 404 https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/mbox-download.html -->
 
 ### Etablerade egenskaper för målramverk {#provisioned-target-framework-properties}
 
 Det provisionerade målramverk som Opt-in-guiden skapar är konfigurerat att skicka kontextdata från profildatalagret. Lagringens ålder och könsposter skickas som standard till Target. Din lösning kräver förmodligen ytterligare parametrar för att skickas.
 
-![chlimage_1-158](assets/chlimage_1-158.png)
+![Etablerat målramverk](assets/chlimage_1-158.png)
 
 Du kan konfigurera ramverket så att ytterligare kontextinformation skickas till Target enligt beskrivningen i [Lägga till ett målramverk](/help/sites-administering/target-configuring.md#adding-a-target-framework).
 
@@ -93,7 +92,6 @@ För att göra det anger du vilken A4T-molnkonfiguration som ska ansluta din Ado
    1. Ange egenskapen **disable** till **false**.
    1. Tryck eller klicka **Spara alla**.
 
-
 #### Dialogrutan Konfiguration av A4T Analytics {#a4t-analytics-config-dialog}
 
 ```xml
@@ -109,8 +107,11 @@ Klicka **OK**. När du skapar innehåll med Adobe Target kan du [välj rapportk�
 Integrera manuellt med Adobe Target i stället för att använda anmälningsguiden.
 
 >[!NOTE]
+>
 Målbiblioteksfilen, [AT.JS](https://developer.adobe.com/target/implement/client-side/atjs/atjs-functions/mboxcreate-atjs/), är ett nytt implementeringsbibliotek för Adobe Target som är utformat för både vanliga webbimplementeringar och ensidiga program. Adobe rekommenderar att du använder AT.js i stället för mbox.js som klientbibliotek.
+>
 AT.js har flera förbättringar jämfört med mbox.js-biblioteket:
+>
 * Förbättrade sidladdningstider för webbimplementeringar
 * Förbättrad säkerhet
 * Bättre implementeringsalternativ för single-page-applikationer
@@ -146,12 +147,13 @@ Använd följande procedur för att skapa en Target-molnkonfiguration i AEM:
    ![AdobeTargetSettings](assets/adobe-target-settings.jpg)
 
    >[!NOTE]
+   >
    När du konfigurerar A4T med AEM kan du se att en Configuration-referens saknas. Så här kan du välja analysramverket:
+   >
    1. Navigera till **verktyg** > **Allmänt** > **CRXDE Lite**.
    1. Navigera till **/libs/cq/analytics/components/testandtarget page/dialog/items/tabs/items/tab1_general/items/a4tAnalyticsConfig**
    1. Ange egenskapen **disable** till **false**.
    1. Tryck eller klicka **Spara alla**.
-
 
 1. Ange värden för de här egenskaperna i dialogrutan.
 
@@ -169,9 +171,13 @@ Använd följande procedur för att skapa en Target-molnkonfiguration i AEM:
    * **Anpassad AT.js**: Lämna tomt om du har markerat DTM-rutan eller om du vill använda AT.js som standard. Du kan även överföra dina anpassade AT.js. Visas bara om du har valt AT.js.
 
    >[!NOTE]
+   >
    Som standard aktiveras korrekt målgruppsanpassning när du väljer att använda konfigurationsguiden för Adobe Target.
+   >
    Korrekt målinriktning innebär att molntjänstkonfigurationen väntar på att kontexten ska läsas in innan innehållet läses in. Därför kan en korrekt målinriktning i fråga om prestanda skapa en fördröjning på några millisekunder innan innehållet läses in.
+   >
    Korrekt målinriktning är alltid aktiverat på författarinstansen. På publiceringsinstansen kan du dock välja att inaktivera korrekt målanpassning globalt genom att avmarkera kryssrutan bredvid Korrekt målanpassning i molntjänstkonfigurationen (**http://localhost:4502/etc/cloudservices.html**). Du kan även aktivera och inaktivera exakt målinriktning för enskilda komponenter, oavsett vilken inställning du har i molntjänstkonfigurationen.
+   >
    Om du har ***redan*** har skapat riktade komponenter och du ändrar den här inställningen påverkar inte ändringarna dessa komponenter. Ändra dessa komponenter direkt.
 
 1. Klicka **Anslut till mål** för att initiera anslutningen med Target. Om anslutningen lyckas visas meddelandet **Anslutningen lyckades** visas. Klicka **OK** i meddelandet och sedan **OK** i dialogrutan.
@@ -187,26 +193,28 @@ Du kan skapa flera ramverk för en enda Target-konfiguration. Flera ramverk är 
 1. Klicka på knappen **+** (plustecken) bredvid Tillgängliga ramverk.
 1. I dialogrutan Skapa ramverk anger du en **Titel** väljer du **Adobe Target Framework** och klicka **Skapa**.
 
-   ![chlimage_1-161](assets/chlimage_1-161.png)
+   ![Dialogrutan Skapa ramverk](assets/chlimage_1-161.png)
 
-   Ramverkssidan öppnas. Sidekick innehåller komponenter som representerar information från [Klientkontext](/help/sites-administering/client-context.md) eller [ContextHub](/help/sites-developing/ch-configuring.md) som du kan mappa.
+   Ramverkssidan öppnas. Sidekick tillhandahåller komponenter som representerar information från [Klientkontext](/help/sites-administering/client-context.md) eller [ContextHub](/help/sites-developing/ch-configuring.md) som du kan mappa.
 
-   ![chlimage_1-162](assets/chlimage_1-162.png)
+   ![Komponenter för ramverket](assets/chlimage_1-162.png)
 
 1. Dra den klientkontextkomponent som representerar de data som du vill använda för mappning till släppmålet. Du kan också dra i **ContextHub Store** till ramverket.
 
    >[!NOTE]
+   >
    Vid mappning skickas parametrar till en mbox via enkla strängar. Du kan inte mappa arrayer från ContextHub.
 
    Använd till exempel **Profildata** om besökarna på er webbplats för att styra er Target-kampanj, dra **Profildata** till sidan. De profildatavariabler som är tillgängliga för mappning till Target-parametrar visas.
 
-   ![chlimage_1-163](assets/chlimage_1-163.png)
+   ![profildata](assets/chlimage_1-163.png)
 
 1. Markera variablerna som du vill göra synliga för Adobe Target-systemet genom att markera **Dela** -kryssrutan i rätt kolumner.
 
-   ![chlimage_1-164](assets/chlimage_1-164.png)
+   ![Dela](assets/chlimage_1-164.png)
 
    >[!NOTE]
+   >
    Synkronisering av parametrar är bara ett sätt - från AEM till Adobe Target.
 
 Ditt ramverk skapas. Om du vill replikera ramverket till publiceringsinstansen använder du **Aktivera ramverk** från sidosparken.
@@ -216,8 +224,12 @@ Ditt ramverk skapas. Om du vill replikera ramverket till publiceringsinstansen a
 Associera dina [AEM](/help/sites-authoring/activitylib.md) med din Target-molnkonfiguration så att du kan spegla aktiviteterna i [Adobe Target](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html).
 
 >[!NOTE]
+>
 Vilka typer av aktiviteter som är tillgängliga bestäms av följande:
+>
+>
 * Om **xt_only** alternativet är aktiverat på Adobe Target-klienten (klientkod) som används på AEM för att ansluta till Adobe Target, så kan du skapa **endast** XT-aktiviteter inom AEM.
+>
 * Om **xt_only** option is **not** som är aktiverat på Adobe Target-klienten (klientkod) kan du skapa **båda** XT- och A/B-aktiviteter inom AEM.
 >
 **Ytterligare information:** **xt_only** är en inställning som används för en viss målklient (klientkod) och kan bara ändras direkt i Adobe Target. Du kan inte aktivera eller inaktivera det här alternativet i AEM.
@@ -234,17 +246,19 @@ När du associerar en sida med ramverket ärver de underordnade sidorna associat
 1. Tryck/klicka **Redigera**.
 1. Tryck/klicka **Lägg till konfiguration** under **Cloud Service Configurations** och markera **Adobe Target**.
 
-   ![chlimage_1-165](assets/chlimage_1-165.png)
+   ![Lägg till konfiguration](assets/chlimage_1-165.png)
 
 1. Välj ramverket som du vill använda under **Konfigurationsreferens**.
 
    >[!NOTE]
+   >
    Se till att du väljer den specifika **ramverk** som du skapade och inte målmolnkonfigurationen som den skapades med.
 
 1. Tryck/klicka **Klar**.
 1. Aktivera webbplatsens rotsida så att du replikerar den till publiceringsservern. (Se [Publicera sidor](/help/sites-authoring/publishing-pages.md).)
 
    >[!NOTE]
+   >
    Om ramverket som du kopplade till sidan inte har aktiverats ännu öppnas en guide där du även kan publicera det.
 
 ## Felsöka problem med målanslutning {#troubleshooting-target-connection-problems}

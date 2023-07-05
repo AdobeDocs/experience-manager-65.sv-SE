@@ -12,9 +12,9 @@ discoiquuid: 6bcf0fcc-481a-4283-b30d-80b517701280
 docset: aem65
 feature: Multi Site Manager
 exl-id: ac24b8b4-b3ed-47fa-9a73-03f0c9e68ac8
-source-git-commit: 96aa75dec7433aa3961944fa57a80c4719316ba5
+source-git-commit: 785d4897263bfeae6a0cd235abca3c96f2231392
 workflow-type: tm+mt
-source-wordcount: '2696'
+source-wordcount: '2702'
 ht-degree: 0%
 
 ---
@@ -322,7 +322,7 @@ Flera egenskaper och nodtyper exkluderas som standard, de definieras i OSGi-konf
 
 Som standard är egenskaper som matchar följande reguljära uttryck exkluderade (dvs. inte uppdaterade) vid utrullning:
 
-![chlimage_1](assets/chlimage_1.png)
+![CQ MSM Content Update Action](assets/chlimage_1.png)
 
 Du kan ändra uttrycken som definierar exkluderingslistan efter behov.
 
@@ -374,7 +374,7 @@ I en plan används till exempel referensplatsen We.Retail som källinnehåll. En
 
 ### Ange utrullningskonfigurationer för en Live Copy-sida {#setting-the-rollout-configurations-for-a-live-copy-page}
 
-Konfigurera en live-kopieringssida med de utrullningskonfigurationer som ska användas när källsidan distribueras. Underordnade sidor ärver konfigurationen som standard. När du konfigurerar utrullningskonfigurationen att använda åsidosätter du konfigurationen som den aktiva kopieringssidan ärver från sin överordnade.
+Konfigurera en sida med en live-kopia med de utrullningskonfigurationer som ska användas när källsidan rullas ut. Underordnade sidor ärver konfigurationen som standard. När du konfigurerar utrullningskonfigurationen att använda åsidosätter du konfigurationen som den aktiva kopieringssidan ärver från sin överordnade.
 
 Du kan också konfigurera utrullningskonfigurationerna för en live-kopia-sida när du [skapa live-kopia](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-page).
 
@@ -384,7 +384,7 @@ Du kan också konfigurera utrullningskonfigurationerna för en live-kopia-sida n
 
    The **Konfiguration** visas de utrullningskonfigurationer som sidan ärver.
 
-   ![chlimage_1-1](assets/chlimage_1-1.png)
+   ![Konfiguration](assets/chlimage_1-1.png)
 
 1. Justera **Live Copy-arv** flagga. Om det här alternativet är markerat gäller konfigurationen för live-kopian alla underordnade.
 
@@ -392,7 +392,7 @@ Du kan också konfigurera utrullningskonfigurationerna för en live-kopia-sida n
 
    De valda rollout-konfigurationerna visas under listrutan.
 
-   ![chlimage_1-2](assets/chlimage_1-2.png)
+   ![Markerade utrullningskonfigurationer](assets/chlimage_1-2.png)
 
 1. Klicka eller tryck **Spara**.
 
@@ -413,8 +413,7 @@ Observera att de underordnade sidorna för den blå sidan ärver konfigurationen
 Ange en utrullningskonfiguration som ska användas som systemstandard. Konfigurera OSGi-tjänsten om du vill ange standardvärdet:
 
 * **Day CQ WCM Live Relationship Manager**
-tjänstens PID är 
-`com.day.cq.wcm.msm.impl.LiveRelationshipManagerImpl`
+tjänstens PID är `com.day.cq.wcm.msm.impl.LiveRelationshipManagerImpl`
 
 Konfigurera tjänsten med hjälp av [Webbkonsol](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) eller en [databasnod](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository).
 

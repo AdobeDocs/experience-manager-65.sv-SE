@@ -3,10 +3,10 @@ title: Skapa och synkronisera Live-kopior
 description: Lär dig hur du skapar och synkroniserar Live-kopior.
 feature: Multi Site Manager
 exl-id: 896b35dd-4510-4c94-8615-03d9649c2f64
-source-git-commit: 05dc73448d6902ccdbc92782fff39ef1a6339056
+source-git-commit: 785d4897263bfeae6a0cd235abca3c96f2231392
 workflow-type: tm+mt
-source-wordcount: '4171'
-ht-degree: 1%
+source-wordcount: '4230'
+ht-degree: 0%
 
 ---
 
@@ -47,7 +47,7 @@ Så här skapar du en ritningskonfiguration:
 1. [Navigera](/help/sites-authoring/basic-handling.md#global-navigation) till **verktyg** väljer du **Webbplatser** -menyn.
 1. Välj **Blueprints** för att öppna **Konfigurationer för utkast** konsol:
 
-   ![chlimage_1-209](assets/blueprint-configurations.png)
+   ![Skapa utkast](assets/blueprint-configurations.png)
 
 1. Välj **Skapa**.
 1. Välj en ritningsmall och sedan **Nästa** för att fortsätta.
@@ -66,7 +66,7 @@ Du kan redigera eller ta bort en befintlig ritningskonfiguration:
 1. [Navigera](/help/sites-authoring/basic-handling.md#global-navigation) till **verktyg** väljer du **Webbplatser** -menyn.
 1. Välj **Blueprints** för att öppna **Konfigurationer för utkast** konsol:
 
-   ![chlimage_1-210](assets/blueprint-configurations.png)
+   ![Skapa utkast](assets/blueprint-configurations.png)
 
 1. Välj önskad konfiguration av utkast - lämpliga åtgärder blir tillgängliga i verktygsfältet:
 
@@ -97,15 +97,15 @@ Så här skapar du en live-kopia:
 
 1. I **Webbplatser** välj konsol **Skapa** sedan **Live Copy**.
 
-   ![chlimage_1-212](assets/chlimage_1-212.png)
+   ![Skapa Live Copy](assets/chlimage_1-212.png)
 
 1. Välj källsida och klicka eller tryck sedan **Nästa**. Till exempel:
 
-   ![chlimage_1-213](assets/chlimage_1-213.png)
+   ![Välj källsida](assets/chlimage_1-213.png)
 
 1. Ange målsökvägen för live-kopian (öppna den överordnade mappen/sidan för live-kopian) och klicka eller tryck sedan på **Nästa**.
 
-   ![chlimage_1-214](assets/chlimage_1-214.png)
+   ![Ange mål](assets/chlimage_1-214.png)
 
    >[!NOTE]
    >
@@ -116,7 +116,7 @@ Så här skapar du en live-kopia:
    * a **Titel** för sidan.
    * a **Namn**, som används i URL-adressen.
 
-   ![chlimage_1-215](assets/chlimage_1-215.png)
+   ![Ange titel och namn](assets/chlimage_1-215.png)
 
 1. Använd **Uteslut undersidor** kryssruta:
 
@@ -152,7 +152,7 @@ Så här skapar du en live-kopia av en webbplats från en designkonfiguration:
 1. I **Webbplatser** konsol, välj **Skapa** sedan **Plats** i listrutan.
 1. Välj den designkonfiguration som ska användas som källa för live-kopian och fortsätt med **Nästa**:
 
-   ![chlimage_1-216](assets/blueprint-configuration-select.png)
+   ![Välj en ritningskonfiguration som källa för live-kopia](assets/blueprint-configuration-select.png)
 
 1. Använd **Ursprungliga språk** för att ange vilket språk som ska användas för den publicerade kopian.
 
@@ -160,7 +160,7 @@ Så här skapar du en live-kopia av en webbplats från en designkonfiguration:
 
    Till exempel:
 
-   ![chlimage_1-217](assets/chlimage_1-217.png)
+   ![Välj inledande språk](assets/chlimage_1-217.png)
 
 1. Använd **Inledande kapitel** i listrutan för att markera de avsnitt av ritningen som ska ingå i den aktiva kopian. Alla tillgängliga kapitel inkluderas som standard, men kan tas bort.
 1. Ange värden för de återstående egenskaperna och välj sedan **Skapa**. I bekräftelsedialogrutan väljer du **Klar** för att gå tillbaka till **Webbplatser** konsol, eller **Öppna webbplats** för att öppna webbplatsens rotsida.
@@ -190,7 +190,7 @@ Så här visar du egenskaperna:
 
    Till exempel:
 
-   ![chlimage_1-218](assets/chlimage_1-218.png)
+   ![Välj Live Copy](assets/chlimage_1-218.png)
 
    >[!NOTE]
    >
@@ -200,7 +200,7 @@ Så här visar du egenskaperna:
 
 Utskriftssidor (som refereras i en ritningskonfiguration) ger dig en lista över de live-kopieringssidor som använder den aktuella (blå) sidan som källa. Använd den här listan för att hålla reda på live-kopior. Listan visas på **Blueprint** -fliken i [sidegenskaper](/help/sites-authoring/editing-page-properties.md).
 
-![chlimage_1-219](assets/chlimage_1-219.png)
+![Blåtrycksflik](assets/chlimage_1-219.png)
 
 ## Synkronisera din Live-kopia {#synchronizing-your-live-copy}
 
@@ -213,6 +213,7 @@ Rulla ut en ritningssida för att överföra innehållsändringar till live-kopi
 >Konflikter kan uppstå om nya sidor med samma sidnamn skapas både i den blå grenen och i en beroende livekopiegren.
 >
 >sådan [konflikter måste hanteras och lösas vid utrullning](/help/sites-administering/msm-rollout-conflicts.md).
+>
 
 #### Skapa en skiss från Sidegenskaper {#rolling-out-a-blueprint-from-page-properties}
 
@@ -220,11 +221,11 @@ Rulla ut en ritningssida för att överföra innehållsändringar till live-kopi
 1. Öppna **Blueprint** -fliken.
 1. Välj **Utrullning**.
 
-   ![chlimage_1-220](assets/chlimage_1-220.png)
+   ![Välj utrullning](assets/chlimage_1-220.png)
 
 1. Ange sidorna och eventuella underordnade sidor och bekräfta sedan med bockmarkeringen:
 
-   ![chlimage_1-221](assets/chlimage_1-221.png)
+   ![Ange sidor och undersidor](assets/chlimage_1-221.png)
 
 1. Ange om utrullningsjobbet ska köras omedelbart (**Nu**) eller vid ett annat datum/tid (**Senare**).
 
@@ -246,13 +247,13 @@ Utrullningar bearbetas som asynkrona jobb och kan kontrolleras i [**Status för 
 
    * **Rullningsomfång**:
 
-      Ange om omfånget gäller enbart för den valda sidan eller om det ska omfatta underordnade sidor.
+     Ange om omfånget gäller enbart för den valda sidan eller om det ska omfatta underordnade sidor.
 
    * **Schema**:
 
-      Ange om utrullningsjobbet ska köras omedelbart (**Nu**) eller vid ett senare datum/tid (**Senare**).
+     Ange om utrullningsjobbet ska köras omedelbart (**Nu**) eller vid ett senare datum/tid (**Senare**).
 
-      ![chlimage_1-222](assets/rollout-live-copy.png)
+     ![Ange schemat](assets/rollout-live-copy.png)
 
 1. När du har bekräftat dessa uppgifter väljer du **Utrullning** för att utföra åtgärden.
 
@@ -270,7 +271,7 @@ The [Utrullningsåtgärden är också tillgänglig från Live-kopieringsöversik
 1. Välj **Utrullning** i verktygsfältet.
 1. Ange sidorna och eventuella underordnade sidor och bekräfta sedan med bockmarkeringen:
 
-   ![chlimage_1-223](assets/chlimage_1-223.png)
+   ![Markera sidor och undersidor](assets/chlimage_1-223.png)
 
 1. Ange om utrullningsjobbet ska köras omedelbart (**Nu**) eller vid ett annat datum/tid (**Senare**).
 
@@ -298,7 +299,7 @@ Synkronisera en live-kopia för att dra ändringar från källan till livecopy.
 1. Öppna **Live Copy** -fliken.
 1. Klicka eller tryck **Synkronisera**.
 
-   ![chlimage_1-224](assets/chlimage_1-224.png)
+   ![Synkronisera](assets/chlimage_1-224.png)
 
    Bekräftelse kommer att begäras, använd **Synkronisera** för att fortsätta.
 
@@ -313,7 +314,7 @@ The [Synkroniseringsåtgärden är även tillgänglig från Live-kopieringsöver
    * **Sidor och undersidor**
    * **Endast sida**
 
-   ![chlimage_1-225](assets/chlimage_1-225.png)
+   ![Bekräfta utrullning](assets/chlimage_1-225.png)
 
 ## Ändra innehåll i Live Copy {#changing-live-copy-content}
 
@@ -333,6 +334,7 @@ Om du vill ändra innehållet i en live-kopia kan du:
 >Konflikter kan uppstå om nya sidor med samma sidnamn skapas både i den blå grenen och i en beroende livekopiegren.
 >
 >sådan [konflikter måste hanteras och lösas vid utrullning](/help/sites-administering/msm-rollout-conflicts.md).
+>
 
 ### Lägga till komponenter på en Live Copy-sida {#adding-components-to-a-live-copy-page}
 
@@ -382,11 +384,11 @@ The [Åtgärden Gör uppehåll är också tillgänglig via Live Copy-översikt](
    * **Gör uppehåll**
    * **Pausa med barn**
 
-   ![chlimage_1-226](assets/chlimage_1-226.png)
+   ![Välj lämpligt alternativ för uppehåll](assets/chlimage_1-226.png)
 
 1. Bekräfta **Gör uppehåll** i **Skjut upp Live Copy** dialog:
 
-   ![chlimage_1-227](assets/chlimage_1-227.png)
+   ![Skjut upp åtgärd](assets/chlimage_1-227.png)
 
 ### Återuppta arv för en sida {#resuming-inheritance-for-a-page}
 
@@ -396,7 +398,7 @@ När du återaktiverar arv synkroniseras inte sidan automatiskt med källan. Du 
 
 * I **Återuppta**/**Återställ** dialog, till exempel:
 
-   ![chlimage_1-228](assets/chlimage_1-228.png)
+  ![Återuppta eller återställa](assets/chlimage_1-228.png)
 
 * I ett senare skede, genom att manuellt välja synkroniseringsåtgärden.
 
@@ -408,7 +410,7 @@ När du återaktiverar arv synkroniseras inte sidan automatiskt med källan. Du 
 
 En gång [pausad](#suspending-inheritance-from-page-properties) den **Återuppta** blir åtgärden i verktygsfältet för sidegenskaperna:
 
-![chlimage_1-229](assets/chlimage_1-229.png)
+![Återuppta](assets/chlimage_1-229.png)
 
 När du väljer det här alternativet visas dialogrutan. Du kan välja en synkronisering, om det behövs, och sedan bekräfta åtgärden.
 
@@ -474,11 +476,11 @@ Avbryt arv för att ändra komponentinnehållet eller ta bort komponenten:
 
 1. Klicka på eller tryck på den komponent som du vill avbryta arvet för.
 
-   ![chlimage_1-230](assets/chlimage_1-230.png)
+   ![Välj komponent för åtgärden Avbryt arv](assets/chlimage_1-230.png)
 
 1. Klicka eller tryck på knappen **Avbryt arv** ikon.
 
-   ![Bild](do-not-localize/chlimage_1-8.png)
+   ![Avbryt arv](do-not-localize/chlimage_1-8.png)
 
 1. Bekräfta åtgärden med i dialogrutan Avbryt arv **Ja**.
 
@@ -488,7 +490,7 @@ Avbryt arv för att ändra komponentinnehållet eller ta bort komponenten:
 
 Om du vill aktivera arv för en komponent klickar eller trycker du på **Återaktivera arv** -ikonen i komponentens verktygsfält.
 
-![bild](do-not-localize/chlimage_1-9.png)
+![Återaktivera arv](do-not-localize/chlimage_1-9.png)
 
 ### Ändra ordning på komponenter på en Live Copy-sida {#changing-the-order-of-components-on-a-live-copy-page}
 
@@ -514,11 +516,11 @@ Sidegenskaperna för en Live-kopia-sida ärvs (och kan inte redigeras) från kä
 
 Du kan avbryta arv av en egenskap när du behöver ändra egenskapsvärdet för live-kopian. En länkikon anger att arv är aktiverat för egenskapen.
 
-![chlimage_1-231](assets/chlimage_1-231.png)
+![Avbryt arv av egenskap](assets/chlimage_1-231.png)
 
 När du avbryter arv kan du ändra egenskapsvärdet. En ikon med en bruten länk anger att arvet har avbrutits.
 
-![chlimage_1-232](assets/chlimage_1-232.png)
+![Ändra egenskap när arv bryts](assets/chlimage_1-232.png)
 
 Du kan senare återaktivera arv för en egenskap om det behövs.
 
@@ -529,7 +531,7 @@ Du kan senare återaktivera arv för en egenskap om det behövs.
 1. Öppna egenskaperna för den aktiva kopieringssidan med hjälp av **Visa egenskaper** alternativ för **Webbplatser** konsol eller **Sidinformation** ikonen i sidans verktygsfält.
 1. Om du vill avbryta arvet av en egenskap klickar eller trycker du på länkikonen som visas till höger om egenskapen.
 
-   ![bild](do-not-localize/chlimage_1-10.png)
+   ![Avbryt arv av egenskap](do-not-localize/chlimage_1-10.png)
 
 1. I **Avbryt arv** bekräftelsedialogruta, klicka eller tryck **Ja**.
 
@@ -537,7 +539,7 @@ Du kan senare återaktivera arv för en egenskap om det behövs.
 
 Om du vill aktivera arv för en egenskap klickar eller trycker du på **Återställ arv** -ikonen som visas bredvid egenskapen.
 
-![bild](do-not-localize/chlimage_1-11.png)
+![Återställ arv](do-not-localize/chlimage_1-11.png)
 
 ### Återställa en Live Copy-sida {#resetting-a-live-copy-page}
 
@@ -554,7 +556,7 @@ Om du vill aktivera arv för en egenskap klickar eller trycker du på **Återst�
 1. Öppna **Live Copy** -fliken.
 1. Välj **Återställ** i verktygsfältet.
 
-   ![chlimage_1-233](assets/chlimage_1-233.png)
+   ![Återställ](assets/chlimage_1-233.png)
 
 1. I **Återställ Live Copy** dialogruta, bekräfta med **Återställ**.
 
@@ -566,7 +568,7 @@ The [Återställningsåtgärden är även tillgänglig från Live-kopieringsöve
 1. Välj **Återställ** i verktygsfältet.
 1. Bekräfta **Återställ** i **Återställ Live Copy** dialog:
 
-   ![chlimage_1-234](assets/chlimage_1-234.png)
+   ![Bekräfta återställning](assets/chlimage_1-234.png)
 
 ## Jämföra en Live Copy-sida med en designsida {#comparing-a-live-copy-page-with-a-blueprint-page}
 
@@ -585,7 +587,7 @@ Om du vill spåra de ändringar du har gjort kan du visa planeringsidan i **Refe
 
    Till exempel:
 
-   ![chlimage_1-235](assets/chlimage_1-235.png)
+   ![Jämför](assets/chlimage_1-235.png)
 
 1. De två sidorna (live copy och plan) öppnas sida vid sida.
 
@@ -605,27 +607,28 @@ Det påverkar var i trädet du använder **Koppla loss**:
 
 * **Koppla loss från en rotsida i en LiveCopy**
 
-   När den här åtgärden utförs på rotsidan för en live-kopia tas den aktiva relationen mellan alla sidor i ritningen och dess livecopy bort.
+  När den här åtgärden utförs på rotsidan för en live-kopia tas den aktiva relationen mellan alla sidor i ritningen och dess livecopy bort.
 
-   Ytterligare ändringar av sidor i planen (som tidigare) **inte** påverka livecopy (som tidigare).
+  Ytterligare ändringar av sidor i planen (som tidigare) **inte** påverka livecopy (som tidigare).
 
 * **Frigöra på en undersida i en LiveCopy**
 
-   När den här åtgärden utförs på en undersida (eller en gren) i en live-kopia:
+  När den här åtgärden utförs på en undersida (eller en gren) i en live-kopia:
 
    * direktrelationen tas bort för den undersidan (eller grenen)
    * och (sub-)sidorna i livekopiegrenen behandlas som om de skapats manuellt.
 
-   *Men*, undersidorna fortfarande omfattas av den överordnade grenens aktiva relation, så en ytterligare utrullning av ritningssidan/-sidorna kommer att båda:
+  *Men*, undersidorna fortfarande omfattas av den överordnade grenens aktiva relation, så en ytterligare utrullning av ritningssidan/-sidorna kommer att båda:
 
    1. Byt namn på den eller de frånkopplade sidorna:
 
       * Detta beror på att MSM betraktar dem som manuellt skapade sidor som orsakar en konflikt eftersom de har samma namn som de livecopy-sidor som de försöker skapa.
+
    1. Skapa en ny (livecopy) sida med det ursprungliga namnet som innehåller ändringarna från utrullningen.
 
-   >[!NOTE]
-   >
-   >Se [MSM-utrullningskonflikter](/help/sites-administering/msm-rollout-conflicts.md) för detaljer om sådana situationer.
+  >[!NOTE]
+  >
+  >Se [MSM-utrullningskonflikter](/help/sites-administering/msm-rollout-conflicts.md) för detaljer om sådana situationer.
 
 ### Frigöra en Live Copy-sida från Sidegenskaper {#detach-a-live-copy-page-from-the-page-properties}
 
@@ -635,7 +638,7 @@ Så här frigör du en live-kopia:
 1. Öppna **Live Copy** -fliken.
 1. I verktygsfältet väljer du **Koppla loss**.
 
-   ![chlimage_1-236](assets/chlimage_1-236.png)
+   ![Koppla loss](assets/chlimage_1-236.png)
 
 1. En bekräftelsedialogruta visas. Välj **Koppla loss** för att slutföra åtgärden.
 
@@ -647,4 +650,4 @@ The [Åtgärden Frigör är också tillgänglig från Live-kopieringsöversikten
 1. Välj **Koppla loss** i verktygsfältet.
 1. Bekräfta **Koppla loss** i **Frigör Live Copy** dialog:
 
-   ![chlimage_1-237](assets/chlimage_1-237.png)
+   ![Bekräfta frånkoppling](assets/chlimage_1-237.png)

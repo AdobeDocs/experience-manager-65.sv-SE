@@ -10,9 +10,9 @@ topic-tags: site-features
 content-type: reference
 discoiquuid: fabaa3e8-1657-4ed4-abb2-990117bec39c
 exl-id: 8f11f5de-f5af-4ce7-a448-2b4299de2930
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 785d4897263bfeae6a0cd235abca3c96f2231392
 workflow-type: tm+mt
-source-wordcount: '341'
+source-wordcount: '348'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ Ni kan effektivt skapa innehåll för multinationella och flerspråkiga webbplat
 
 I följande diagram visas hur huvudbegreppen överlappar (men inte alla nivåer/element som berörs):
 
-![chlimage_1-71](assets/chlimage_1-71a.png)
+![Diagram som visar huvudbegreppen MSM och översättning](assets/chlimage_1-71a.png)
 
 >[!NOTE]
 >
@@ -61,9 +61,8 @@ I följande diagram visas hur huvudbegreppen överlappar (men inte alla nivåer/
 >För alla användningsfall rekommenderas följande metodtips:
 >
 >* [Bästa praxis för MSM](/help/sites-administering/msm-best-practices.md); särskilt:
-   >
-   >   * [Skapa webbplats](/help/sites-administering/msm-best-practices.md#create-site)
-   >   * [MSM och flerspråkiga webbplatser](/help/sites-administering/msm-best-practices.md#msm-and-multilingual-websites)
+>
+>   * [Skapa webbplats](/help/sites-administering/msm-best-practices.md#create-site)
+>   * [MSM och flerspråkiga webbplatser](/help/sites-administering/msm-best-practices.md#msm-and-multilingual-websites)
 >
 >* [Best Practices for Translation](/help/sites-administering/tc-bp.md)
-

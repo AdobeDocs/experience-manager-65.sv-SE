@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 3763e985-7dd8-47fd-bfdf-2368b424c270
 feature: Multi Site Manager
 exl-id: 0c3488bd-5f32-4956-882c-93326a45b379
-source-git-commit: 53c39e4aa250b18d4fae0327b313b18901677f2c
+source-git-commit: 785d4897263bfeae6a0cd235abca3c96f2231392
 workflow-type: tm+mt
-source-wordcount: '534'
-ht-degree: 1%
+source-wordcount: '553'
+ht-degree: 0%
 
 ---
 
@@ -44,7 +44,7 @@ The **Live Copy - översikt** kan öppnas från **Referenser** sidpanelen på **
 1. I **Webbplatser** konsol, [navigera till din ritningssida och markera den](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources).
 1. Öppna **[Referenser](/help/sites-authoring/basic-handling.md#references)** panel och markera **Live-kopior**.
 
-   ![chlimage_1-359](assets/chlimage_1-359.png)
+   ![Referenspanelen - Live-kopior](assets/chlimage_1-359.png)
 
    >[!NOTE]
    >
@@ -60,7 +60,7 @@ The **Live Copy - översikt** kan öppnas när du visar egenskaper för en ritni
 1. Öppna **Egenskaper** för lämplig ritningssida.
 1. Öppna **Blueprint** -fliken - **Live Copy - översikt** visas i det övre verktygsfältet:
 
-   ![chlimage_1-360](assets/chlimage_1-360.png)
+   ![Fliken Utskrift - Live Copy-översikt](assets/chlimage_1-360.png)
 
 1. Välj **Live Copy - översikt** för att visa och använda översikten över alla live-kopior som hör till den aktuella planen.
 
@@ -81,7 +81,7 @@ The **Live Copy - översikt** kan även användas för att utföra åtgärder p�
 
 När du väljer en ritningssida är följande åtgärder tillgängliga:
 
-![chlimage_1-361](assets/chlimage_1-361.png)
+![Markerad skiss - tillgängliga åtgärder](assets/chlimage_1-361.png)
 
 * Redigera
 
@@ -95,7 +95,7 @@ När du väljer en ritningssida är följande åtgärder tillgängliga:
 
 När du väljer en live-kopieringssida är följande åtgärder tillgängliga:
 
-![chlimage_1-362](assets/chlimage_1-362.png)
+![Live copy page selected - actions available](assets/chlimage_1-362.png)
 
 * Redigera
 
@@ -136,10 +136,10 @@ The **Relationsstatus** konsolen har två flikar med en rad funktioner:
 
 På den här fliken finns detaljerad information om relationen mellan ritningen och den aktiva kopian:
 
-![chlimage_1-363](assets/chlimage_1-363.png)
+![Statusinformation för relation](assets/chlimage_1-363.png)
 
 ### Live Copy-information {#live-copy-information}
 
 På den här fliken kan du visa och redigera konfigurationen av live-kopian:
 
-![chlimage_1-364](assets/chlimage_1-364.png)
+![Live copy-information](assets/chlimage_1-364.png)

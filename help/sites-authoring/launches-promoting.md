@@ -10,10 +10,10 @@ discoiquuid: 3d4737ef-f758-4540-bc8f-ecd9f05f6bb0
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 exl-id: f59f12a2-ecd6-49cf-90ad-621719fe51bf
-source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
+source-git-commit: e85aacd45a2bbc38f10d03915e68286f0a55364e
 workflow-type: tm+mt
-source-wordcount: '754'
-ht-degree: 2%
+source-wordcount: '773'
+ht-degree: 1%
 
 ---
 
@@ -48,7 +48,6 @@ Du måste befordra startsidor för att kunna flytta tillbaka innehållet till k�
 >* [Startar - ordningen för händelser](/help/sites-authoring/launches.md#launches-the-order-of-events) om du vill ha mer information om automatiska kampanjer och publiceringar.
 >
 
-
 Du kan befordra starter från **Webbplatser** konsolen eller **Startar** konsol:
 
 1. Öppna:
@@ -60,17 +59,18 @@ Du kan befordra starter från **Webbplatser** konsolen eller **Startar** konsol:
       1. Välj **Startar** (t.ex. Launches (1)) för att visa en lista över specifika starter.
       1. Välj den specifika starten för att visa tillgängliga åtgärder.
       1. Välj **Befordra lansering** för att öppna guiden.
+
    * den **Startar** konsol:
 
       1. Välj start (tryck/klicka på miniatyrbilden).
       1. Välj **Befordra**.
-
 
 1. I det första steget kan du ange:
 
    * **Mål**
 
       * **Ta bort start efter befordran**
+
    * **Omfång**
 
       * **Befordra en fullständig lansering**
@@ -89,7 +89,7 @@ Du kan befordra starter från **Webbplatser** konsolen eller **Startar** konsol:
 1. Välj **Nästa** för att fortsätta.
 1. Du kan granska de sidor som ska befordras, vilket beror på vilket sidintervall du har valt:
 
-   ![chlimage_1-102](assets/chlimage_1-102.png)
+   ![Granska sidor som ska befordras](assets/chlimage_1-102.png)
 
 1. Välj **Befordra**.
 
@@ -97,7 +97,7 @@ Du kan befordra starter från **Webbplatser** konsolen eller **Startar** konsol:
 
 När du redigerar en startsida visas **Promote Launch** åtgärd är också tillgänglig från **Sidinformation**. Guiden öppnas för att samla in den information som behövs.
 
-![chlimage_1-103](assets/chlimage_1-103.png)
+![Promote Launch](assets/chlimage_1-103.png)
 
 >[!NOTE]
 >
@@ -107,7 +107,7 @@ När du redigerar en startsida visas **Promote Launch** åtgärd är också till
 
 När du har skapat en kapslad start kan du befordra den tillbaka till någon av källorna, inklusive rotkällan (produktionen).
 
-![chlimage_1-104](assets/chlimage_1-104.png)
+![Översikt över att befordra en kapslad programstart](assets/chlimage_1-104.png)
 
 1. Som med [Skapa en kapslad start](#creatinganestedlaunchlaunchwithinalaunch)navigerar du till och väljer önskad programstart i **Startar** konsolen eller **Referenser** järnväg.
 1. Välj **Befordra lansering** för att öppna guiden.
@@ -121,6 +121,7 @@ Du kan göra reklam för alla källor.
 
       * **Ta bort start efter befordran**
 När du har befordrat den valda starten och alla starter som är kapslade i den tas de bort.
+
    * **Omfång**
 Här kan du välja om du vill befordra hela starten eller bara sidor som faktiskt har redigerats. Om det är det senare alternativet kan du välja att ta med/exkludera underordnade sidor. Standardkonfigurationen är att endast befordra sidändringar för den aktuella sidan:
 
@@ -129,12 +130,12 @@ Här kan du välja om du vill befordra hela starten eller bara sidor som faktisk
       * **Höj upp aktuell sida**
       * **Befordra aktuella sidor och undersidor**
 
-   ![chlimage_1-105](assets/chlimage_1-105.png)
+   ![Inställningar för att befordra en start](assets/chlimage_1-105.png)
 
 1. Välj **Nästa**.
 1. Granska kampanjinformationen innan du väljer **Befordra**:
 
-   ![chlimage_1-106](assets/chlimage_1-106.png)
+   ![Granska detaljer och Befordra](assets/chlimage_1-106.png)
 
    >[!NOTE]
    >
@@ -142,7 +143,7 @@ Här kan du välja om du vill befordra hela starten eller bara sidor som faktisk
 
 1. Ändringarna kommer att främjas och återspeglas i **Startar** konsol:
 
-   ![chlimage_1-107](assets/chlimage_1-107.png)
+   ![Startar konsolen](assets/chlimage_1-107.png)
 
 ## Bearbeta befordrade sidor med AEM Workflow {#processing-promoted-pages-using-aem-workflow}
 
@@ -156,4 +157,4 @@ Så här startar du ett arbetsflöde automatiskt när sidor befordras: [konfigur
 
 Du kan t.ex. automatiskt generera begäranden om sidaktivering när författare befordrar startsidor. Konfigurera en startfunktion för arbetsflödet för aktivering av begäran när paketnoden ändras.
 
-![chlimage_1-108](assets/chlimage_1-108.png)
+![Starta arbetsflöde](assets/chlimage_1-108.png)

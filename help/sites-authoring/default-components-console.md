@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: b657f95d-7be3-4409-a31b-d47fb2bfa550
 docset: aem65
 exl-id: d79107b9-dfa4-4e80-870e-0b7ea72f0bc7
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e85aacd45a2bbc38f10d03915e68286f0a55364e
 workflow-type: tm+mt
-source-wordcount: '262'
-ht-degree: 23%
+source-wordcount: '263'
+ht-degree: 22%
 
 ---
 
@@ -42,35 +42,37 @@ Om du vill visa information om en viss komponent trycker/klickar du på den nöd
 
 * **Egenskaper**
 
-   ![screen_shot_2018-03-27at165847](assets/screen_shot_2018-03-27at165847.png)
+  ![screen_shot_2018-03-27at165847](assets/screen_shot_2018-03-27at165847.png)
 
-   På fliken Egenskaper kan du:
+  På fliken Egenskaper kan du:
 
    * Visa komponentens allmänna egenskaper.
    * Visa hur [ikon eller förkortning har definierats](/help/sites-developing/components-basics.md#component-icon-in-touch-ui) för komponenten.
 
       * Om du klickar på ikonens källa kommer du till den komponenten.
+
    * Visa **Resurstyp** och **Resurssupertyp** (om det är definierat) för komponenten.
 
       * Om du klickar på Resurssupertypen kommer du till den komponenten.
-   >[!NOTE]
-   >
-   >För `/apps` går inte att redigera vid körning, komponentkonsolen är skrivskyddad.
+
+  >[!NOTE]
+  >
+  >För `/apps` går inte att redigera vid körning, komponentkonsolen är skrivskyddad.
 
 * **Profiler**
 
-   ![chlimage_1-169](assets/chlimage_1-169.png)
+  ![Profiler](assets/chlimage_1-169.png)
 
 * **Live-användning**
 
-   ![chlimage_1-170](assets/chlimage_1-170.png)
+  ![Live-användning](assets/chlimage_1-170.png)
 
-   >[!CAUTION]
-   >
-   >På grund av den typ av information som samlas in för den här vyn kan det ta en stund att sortera/visa informationen.
+  >[!CAUTION]
+  >
+  >På grund av den typ av information som samlas in för den här vyn kan det ta en stund att sortera/visa informationen.
 
 * **Dokumentation**
 
-   Om utvecklaren har tillhandahållit [dokumentation för komponenten](/help/sites-developing/developing-components.md#documenting-your-component)visas den på **Dokumentation** -fliken. Om det inte finns någon tillgänglig dokumentation kan du **Dokumentation** kommer inte att visas.
+  Om utvecklaren har tillhandahållit [dokumentation för komponenten](/help/sites-developing/developing-components.md#documenting-your-component)visas den på **Dokumentation** -fliken. Om det inte finns någon tillgänglig dokumentation kan du **Dokumentation** kommer inte att visas.
 
-   ![chlimage_1-171](assets/chlimage_1-171.png)
+  ![Dokumentation](assets/chlimage_1-171.png)

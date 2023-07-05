@@ -10,9 +10,9 @@ topic-tags: site-features
 content-type: reference
 discoiquuid: c21debc3-ecf4-4aa9-ab5a-18ddd5cf2fff
 exl-id: 1e839845-fb5c-4200-8ec5-6ff744a96943
-source-git-commit: 53c39e4aa250b18d4fae0327b313b18901677f2c
+source-git-commit: 785d4897263bfeae6a0cd235abca3c96f2231392
 workflow-type: tm+mt
-source-wordcount: '2664'
+source-wordcount: '2667'
 ht-degree: 0%
 
 ---
@@ -45,80 +45,79 @@ Det finns många användningsfall för MSM och live-kopior, och vissa scenarier 
 
 * **Multinationals - Global till lokalt företag**
 
-   Ett typiskt användningsfall som MSM stöder är att återanvända innehåll på flera multinationella webbplatser på samma språk. På så sätt kan kärninnehållet återanvändas, samtidigt som nationella variationer tillåts.
+  Ett typiskt användningsfall som MSM stöder är att återanvända innehåll på flera multinationella webbplatser på samma språk. På så sätt kan kärninnehållet återanvändas, samtidigt som nationella variationer tillåts.
 
-   Exempelvis skapas den engelska delen av exemplet med referensplatsen We.Retail för kunder i USA. Det mesta av innehållet på den här webbplatsen kan också användas för andra webbsidor.Butikssajter som passar för engelsktalande kunder i olika länder och kulturer. Kärninnehållet är detsamma på alla webbplatser, och regionala justeringar kan göras.
+  Exempelvis skapas den engelska delen av exemplet med referensplatsen We.Retail för kunder i USA. Det mesta av innehållet på den här webbplatsen kan också användas för andra webbsidor.Butikssajter som passar för engelsktalande kunder i olika länder och kulturer. Kärninnehållet är detsamma på alla webbplatser, och regionala justeringar kan göras.
 
-   Följande struktur kan användas för webbplatser för USA, Storbritannien, Kanada och Australien:
+  Följande struktur kan användas för webbplatser för USA, Storbritannien, Kanada och Australien:
 
-   ```xml
-   /content
-       |- we.retail
-           |- language-masters
-               |- en
-       |- we.retail
-           |- us
-               |- en
-       |- we.retail
-           |- gb
-               |- en
-       |- we.retail
-           |- ca
-               |- en
-       |- we.retail
-           |- au
-               |- en
-   ```
+  ```xml
+  /content
+      |- we.retail
+          |- language-masters
+              |- en
+      |- we.retail
+          |- us
+              |- en
+      |- we.retail
+          |- gb
+              |- en
+      |- we.retail
+          |- ca
+              |- en
+      |- we.retail
+          |- au
+              |- en
+  ```
 
-   >[!NOTE]
-   >
-   >MSM översätter inte innehållet. Den används för att skapa den struktur som krävs och distribuera innehållet.
-   >
-   >
-   >Se [Översätta innehåll för flerspråkiga webbplatser](/help/sites-administering/translation.md) om du vill utöka ett sådant exempel.
+  >[!NOTE]
+  >
+  >MSM översätter inte innehållet. Den används för att skapa den struktur som krävs och distribuera innehållet.
+  >
+  >
+  >Se [Översätta innehåll för flerspråkiga webbplatser](/help/sites-administering/translation.md) om du vill utöka ett sådant exempel.
 
 * **Nationell myndighet - chef för de regionala avdelningarna**
 
-   Ett företag med ett nätverk av återförsäljare kan också vilja ha separata webbplatser för sina enskilda återförsäljare - var och en är en variation av huvudwebbplatsen som huvudkontoret tillhandahåller. Detta kan gälla ett enskilt företag med flera regionala kontor eller ett nationellt franchisystem som består av en central franchisor och flera lokala franchisetagare.
+  Ett företag med ett nätverk av återförsäljare kan också vilja ha separata webbplatser för sina enskilda återförsäljare - var och en är en variation av huvudwebbplatsen som huvudkontoret tillhandahåller. Detta kan gälla ett enskilt företag med flera regionala kontor eller ett nationellt franchisystem som består av en central franchisor och flera lokala franchisetagare.
 
-   Huvudkontoret kan tillhandahålla viktig information, medan de regionala enheterna kan lägga till lokal information, som kontaktuppgifter, öppettider och händelser.
+  Huvudkontoret kan tillhandahålla viktig information, medan de regionala enheterna kan lägga till lokal information, som kontaktuppgifter, öppettider och händelser.
 
-   ```xml
-   /content
-       |- head-office-Berlin
-       |- branch-Hamburg
-       |- branch-Stuttgart
-       |- branch-Munich
-       |- branch-Frankfurt
-   ```
+  ```xml
+  /content
+      |- head-office-Berlin
+      |- branch-Hamburg
+      |- branch-Stuttgart
+      |- branch-Munich
+      |- branch-Frankfurt
+  ```
 
 * **Flera versioner**
 
-   Eller så kan du använda MSM för att skapa versioner av en viss underavdelning, t.ex. en underavdelning till supporten som innehåller information om olika versioner av en viss produkt, där basinformationen är konstant och endast de uppdaterade funktionerna behöver ändras:
+  Eller så kan du använda MSM för att skapa versioner av en viss underavdelning, t.ex. en underavdelning till supporten som innehåller information om olika versioner av en viss produkt, där basinformationen är konstant och endast de uppdaterade funktionerna behöver ändras:
 
-   ```xml
-   /content
-       |- support
-           |- product X
-               |- v5.0
-               |- v4.0
-               |- v3.0
-               |- v2.0
-               |- v1.0
-   ```
+  ```xml
+  /content
+      |- support
+          |- product X
+              |- v5.0
+              |- v4.0
+              |- v3.0
+              |- v2.0
+              |- v1.0
+  ```
 
-   >[!NOTE]
-   >
-   >I ett sådant scenario är det alltid frågan om man ska göra en enkel kopia eller använda direktkopior.
-   >
-   >Balansen är:
-   >
-   >  * Hur mycket av det centrala innehållet som behöver uppdateras över flera versioner.
-   >
-   >Mot:
-   >
-   >  * Hur mycket av de enskilda kopiorna behöver justeras.
-
+  >[!NOTE]
+  >
+  >I ett sådant scenario är det alltid frågan om man ska göra en enkel kopia eller använda direktkopior.
+  >
+  >Balansen är:
+  >
+  >  * Hur mycket av det centrala innehållet som behöver uppdateras över flera versioner.
+  >
+  >Mot:
+  >
+  >  * Hur mycket av de enskilda kopiorna behöver justeras.
 
 ## MSM från användargränssnittet {#msm-from-the-ui}
 
@@ -304,7 +303,7 @@ Den grundläggande formen av en live-kopia har:
 
 * Ändringar kan [synkroniserad](/help/sites-administering/msm-livecopy.md#synchronizing-your-live-copy) enligt kraven.
 
-![chlimage_1-367](assets/chlimage_1-367.png)
+![Synkronisera](assets/chlimage_1-367.png)
 
 #### Live Copy med icke-Live-Copy-sidor {#live-copy-with-non-live-copy-pages}
 
@@ -313,7 +312,7 @@ När du skapar en live-kopia i AEM kan du se och navigera genom den aktiva kopie
 * Sådana resurser har ingen aktiv relation till käll-/ritningssidorna och är inte synkroniserade.
 * Scenarier kan inträffa som MSM hanterar som specialfall. När du till exempel (eller en process) skapar en sida med samma position och namn i både källans/ritytans och live-kopians grenar. För sådana situationer finns [MSM-utrullningskonflikter](/help/sites-administering/msm-rollout-conflicts.md) för mer information.
 
-![chlimage_1-368](assets/chlimage_1-368.png)
+![utrullningskonflikter](assets/chlimage_1-368.png)
 
 #### Kapslade Live-kopior {#nested-live-copies}
 
@@ -322,9 +321,9 @@ Skapa en [ny sida i en befintlig live-kopia](#live-copy-with-non-live-copy-pages
 * En djup utrullning som utlöses för live-kopian på den översta nivån kan fortsätta till den kapslade live-kopian (till exempel om utlösaren matchar).
 * Alla länkar mellan källorna skrivs om i de publicerade kopiorna.
 
-   Till exempel skrivs länkar från den andra till den första utkast om som länkar från den kapslade/andra live-kopian till den första live-kopian.
+  Till exempel skrivs länkar från den andra till den första utkast om som länkar från den kapslade/andra live-kopian till den första live-kopian.
 
-![chlimage_1-369](assets/chlimage_1-369.png)
+![Länkar mellan källor](assets/chlimage_1-369.png)
 
 >[!NOTE]
 >
@@ -350,13 +349,13 @@ Källan utgör utkast för den aktiva kopian. Planen definieras när du antingen
 
 * [Skapa en designkonfiguration](/help/sites-administering/msm-livecopy.md#creating-a-blueprint-configuration)
 
-   I konfigurationen definieras (i förväg) de sidor som ska användas för att skapa den aktiva kopian.
+  I konfigurationen definieras (i förväg) de sidor som ska användas för att skapa den aktiva kopian.
 
 * [Skapa en Live-kopia av en sida](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-page)
 
-   De sidor som används för att skapa den aktiva kopian (källsidorna) är de som används som utkast.
+  De sidor som används för att skapa den aktiva kopian (källsidorna) är de som används som utkast.
 
-   Källsidan kan refereras av en ritningskonfiguration eller inte.
+  Källsidan kan refereras av en ritningskonfiguration eller inte.
 
 ### Utrullning och synkronisering {#rollout-and-synchronize}
 
@@ -365,15 +364,15 @@ En utrullning är den centrala MSM-åtgärden som synkroniserar live-kopior med 
 * A [utrullningskonfiguration](#rollout-configurations) kan definieras så att specifika [händelser](/help/sites-administering/msm-sync.md#rollout-triggers) kan orsaka att en utrullning inträffar automatiskt.
 * När du skapar en ritningssida kan du använda [Utrullning](/help/sites-administering/msm-livecopy.md#rolling-out-a-blueprint) om du vill göra ändringar i den aktiva kopian.
 
-   **The Rollout** -kommandot är tillgängligt på en ritningssida som en ritningskonfiguration refererar till.
+  **The Rollout** -kommandot är tillgängligt på en ritningssida som en ritningskonfiguration refererar till.
 
-   ![chlimage_1-370](assets/chlimage_1-370.png)
+  ![Utrullning](assets/chlimage_1-370.png)
 
 * När du redigerar en live-kopieringssida kan du använda [Synkronisera](/help/sites-administering/msm-livecopy.md#synchronizing-a-live-copy) om du vill dra ändringar från källan till den aktiva kopian.
 
-   The **Synkronisera** -kommandot alltid är tillgängligt på live-kopieringssidan (oavsett om käll-/plantryckssidan omfattas av en ritningskonfiguration).
+  The **Synkronisera** -kommandot alltid är tillgängligt på live-kopieringssidan (oavsett om käll-/plantryckssidan omfattas av en ritningskonfiguration).
 
-   ![chlimage_1-371](assets/chlimage_1-371.png)
+  ![Synkronisera](assets/chlimage_1-371.png)
 
 ### Konfigurationer för utrullning {#rollout-configurations}
 
@@ -381,15 +380,15 @@ En utrullningskonfiguration definierar när och hur en live-kopia synkroniseras 
 
 * **Utlösare**
 
-   En utlösare är en händelse som gör att live-åtgärdssynkroniseringen utförs, till exempel aktiveringen av en källsida. MSM definierar de utlösare som du kan använda.
+  En utlösare är en händelse som gör att live-åtgärdssynkroniseringen utförs, till exempel aktiveringen av en källsida. MSM definierar de utlösare som du kan använda.
 
 * **Synkroniseringsåtgärder**
 
-   Arbetas på live-kopian för att synkronisera den med källan. Exempelåtgärder är att kopiera innehåll, ordna underordnade noder och aktivera live-kopieringssidan. MSM tillhandahåller ett antal synkroniseringsåtgärder.
+  Arbetas på live-kopian för att synkronisera den med källan. Exempelåtgärder är att kopiera innehåll, ordna underordnade noder och aktivera live-kopieringssidan. MSM tillhandahåller ett antal synkroniseringsåtgärder.
 
-   >[!NOTE]
-   >
-   >Du kan skapa anpassade åtgärder för instansen med Java API.
+  >[!NOTE]
+  >
+  >Du kan skapa anpassade åtgärder för instansen med Java API.
 
 Utrullningskonfigurationer kan återanvändas så att fler än en live-kopia kan använda samma utrullningskonfiguration. Flera [utrullningskonfigurationer](/help/sites-administering/msm-sync.md#installed-rollout-configurations) ingår i en standardinstallation.
 
@@ -440,10 +439,10 @@ Följande steg beskriver standardproceduren för användning av MSM för att åt
 MSM tillhandahåller verktyg så att implementeringen kan anpassas till de stora svårigheter som kan uppstå när du delar innehåll:
 
 * **Anpassade utrullningskonfigurationer**
-   [Skapa en utrullningskonfiguration](/help/sites-administering/msm-sync.md#creating-a-rollout-configuration) när de installerade utrullningskonfigurationerna inte uppfyller dina krav. Du kan använda alla tillgängliga utlösare och synkroniseringsåtgärder.
+  [Skapa en utrullningskonfiguration](/help/sites-administering/msm-sync.md#creating-a-rollout-configuration) när de installerade utrullningskonfigurationerna inte uppfyller dina krav. Du kan använda alla tillgängliga utlösare och synkroniseringsåtgärder.
 
 * **Anpassade synkroniseringsåtgärder**
-   [Skapa en anpassad synkroniseringsåtgärd](/help/sites-developing/extending-msm.md#creating-a-new-synchronization-action) när de installerade åtgärderna inte uppfyller dina specifika programkrav. MSM tillhandahåller ett Java-API för att skapa anpassade synkroniseringsåtgärder.
+  [Skapa en anpassad synkroniseringsåtgärd](/help/sites-developing/extending-msm.md#creating-a-new-synchronization-action) när de installerade åtgärderna inte uppfyller dina specifika programkrav. MSM tillhandahåller ett Java-API för att skapa anpassade synkroniseringsåtgärder.
 
 ## Bästa praxis {#best-practices}
 

@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 81ff6f6f-11b3-4f8e-80e6-b3e104158394
 docset: aem65
 exl-id: dcda537a-1bb2-4ce3-9904-40d158b47556
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e85aacd45a2bbc38f10d03915e68286f0a55364e
 workflow-type: tm+mt
-source-wordcount: '538'
+source-wordcount: '540'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ I redigeringsmiljön finns mekanismer för att skapa, uppdatera och granska inne
 * En författare skapar och granskar innehållet (detta kan vara av flera typer); till exempel sidor, resurser, publikationer osv.)
 * som någon gång kommer att publiceras på er webbplats.
 
-![chlimage_1-132](assets/chlimage_1-132.png)
+![Översikt över miljöer](assets/chlimage_1-132.png)
 
 I redigeringsmiljön är funktionaliteten för AEM tillgänglig via två användargränssnitt. För publiceringsmiljön utformar du hela det gränssnitt som är tillgängligt för användarna.
 
@@ -79,15 +79,14 @@ När AEM är en [communitywebbplats](/help/communities/overview.md), eller inneh
 >Tyvärr förekommer ibland en överlappning i den terminologi som används. Detta kan inträffa med:
 >
 >* **Publicera/avpublicera**
-   >  Detta är de primära villkoren för de åtgärder som gör innehållet tillgängligt för allmänheten i publiceringsmiljön (eller inte).
+>  Detta är de primära villkoren för de åtgärder som gör innehållet tillgängligt för allmänheten i publiceringsmiljön (eller inte).
 >
 >* **Aktivera/inaktivera**
-   >  Dessa termer är synonyma med publicera/avpublicera.
+>  Dessa termer är synonyma med publicera/avpublicera.
 >
 >* **Replikering/replikering**
-   >  Detta är de tekniska termer som används för att ange dataförflyttning (t.ex. sidinnehåll, filer, kod, användarkommentarer) från en miljö till en annan. t.ex. vid publicering, eller vid omvänd replikering av användarkommentarer.
+>  Detta är de tekniska termer som används för att ange dataförflyttning (t.ex. sidinnehåll, filer, kod, användarkommentarer) från en miljö till en annan. t.ex. vid publicering, eller vid omvänd replikering av användarkommentarer.
 >
-
 
 #### Dispatcher {#dispatcher}
 

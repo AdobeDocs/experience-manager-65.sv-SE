@@ -11,9 +11,9 @@ topic-tags: site-features
 discoiquuid: 8386a16a-9d47-46d5-bc60-5f290c59e60e
 docset: aem65
 exl-id: 3beea5cd-5ae0-485b-8dfc-8b3a23c11586
-source-git-commit: b3889b1897f0ec0c5bbf60c346b77b2906175904
+source-git-commit: e85aacd45a2bbc38f10d03915e68286f0a55364e
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: '578'
 ht-degree: 1%
 
 ---
@@ -52,7 +52,7 @@ Om du till exempel jämför versioner visas den aktuella versionen till vänster
 
 Källan för båda sidorna visas tydligt i sidhuvudsfältet högst upp i webbläsarfönstret.
 
-![chlimage_1-109](assets/chlimage_1-109.png)
+![Källa visas i rubriken](assets/chlimage_1-109.png)
 
 Skillnaden identifierar ändringar på komponentnivå och HTML. Objekt som har ändrats markeras med olika färger.
 
@@ -78,7 +78,7 @@ Om du vill fokusera på ett visst innehåll kan du klicka på helskärmsikonen f
 
 Den markerade sidan fyller hela fönstret, men fältet förblir överst så att du kan växla mellan de två sidorna.
 
-![chlimage_1-110](assets/chlimage_1-110.png)
+![Med fältet överst kan du växla mellan sidor](assets/chlimage_1-110.png)
 
 Du kan också stänga helskärmsläget genom att klicka på ikonen för att avsluta helskärmsläget.
 

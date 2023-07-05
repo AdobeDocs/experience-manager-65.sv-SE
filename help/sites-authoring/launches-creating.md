@@ -9,10 +9,10 @@ topic-tags: site-features
 discoiquuid: 4ec6b408-a165-4617-8d90-e89d8a415bb3
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 exl-id: bc7897da-15f6-4de4-a9fd-9dd84e6c7eed
-source-git-commit: 7f595bec8ea138d5a73a17d0548320a31544dcd1
+source-git-commit: e85aacd45a2bbc38f10d03915e68286f0a55364e
 workflow-type: tm+mt
-source-wordcount: '1018'
-ht-degree: 14%
+source-wordcount: '1040'
+ht-degree: 13%
 
 ---
 
@@ -41,6 +41,7 @@ Du kan skapa en start från Sites- eller Launches-konsolen:
    * **Launches**:
 
       1. Välj **Skapa start** i verktygsfältet för att öppna guiden.
+
    * **Sites**:
 
       1. Välj **Skapa** i verktygsfältet för att öppna markeringsrutan.
@@ -59,7 +60,7 @@ Du kan skapa en start från Sites- eller Launches-konsolen:
 
    Upprepa efter behov.
 
-   ![chlimage_1-225](assets/chlimage_1-225.png)
+   ![Välj källa och lägg till sidor](assets/chlimage_1-225.png)
 
    >[!NOTE]
    >
@@ -77,7 +78,7 @@ Du kan skapa en start från Sites- eller Launches-konsolen:
 
    Fortsätt med **Nästa**.
 
-   ![chlimage_1-226](assets/chlimage_1-226.png)
+   ![Ange om sidor ska inkluderas](assets/chlimage_1-226.png)
 
 1. I **Egenskaper** steg i guiden som du kan ange:
 
@@ -86,11 +87,11 @@ Du kan skapa en start från Sites- eller Launches-konsolen:
    * **använda en ny mall för att ersätta sidan**: Se [Skapa start med ny mall](#create-launch-with-new-template) för mer information.
    * **Ärv källsidans livedata**: Välj det här alternativet om du automatiskt vill uppdatera innehållet på startsidor när källsidorna ändras. Det här alternativet uppnår du genom att göra starten till [live copy](/help/sites-administering/msm.md).
 
-      Som standard är det här alternativet markerat.
+     Som standard är det här alternativet markerat.
 
    * **Startdatum**: Datum och tid då startkopian ska aktiveras (beroende på **Produktionsklar** Flagga. se [Startar - ordningen för händelser](/help/sites-authoring/launches.md#launches-the-order-of-events)).
 
-   ![chlimage_1-227](assets/chlimage_1-227.png)
+   ![Ange egenskaper](assets/chlimage_1-227.png)
 
 1. Använd **Skapa** för att slutföra processen och skapa en ny start. I bekräftelsedialogrutan får du frågan om du vill öppna starten direkt.
 
@@ -101,22 +102,20 @@ Du kan skapa en start från Sites- eller Launches-konsolen:
 
 ### Skapa start med ny mall {#create-launch-with-new-template}
 
-När [skapa en start](/help/sites-authoring/launches-creating.md#create-launch-with-new-template) du kan välja om du vill använda en ny mall:
-
-**använda en ny mall för att ersätta sidan**
+När [skapa en start](/help/sites-authoring/launches-creating.md#create-launch-with-new-template) du kan välja om du vill använda en ny mall med alternativet: **använda en ny mall för att ersätta sidan**
 
 >[!CAUTION]
 >
 >Det här alternativet är endast tillgängligt när du skapar en start från **Webbplatser** konsol. Det är inte tillgängligt när du skapar en start från **Startar** konsol.
 
-![chlimage_1-228](assets/chlimage_1-228.png)
+![Använd en ny mall för att ersätta sidan](assets/chlimage_1-228.png)
 
 Om du väljer det här alternativet kommer det att:
 
 * uppdatera övriga tillgängliga alternativ,
 * innehåller ett nytt steg där du kan välja önskad mall.
 
-![chlimage_1-229](assets/chlimage_1-229.png)
+![Välj mall](assets/chlimage_1-229.png)
 
 >[!CAUTION]
 >
@@ -139,11 +138,11 @@ Skapa en kapslad start från **Startar** konsolen är i stort sett densamma som 
 1. I **Startar** välj konsol **Skapa**.
 1. Välj **Lägg till sidor** och navigera sedan till startgrenen genom att ange `/content/launches` i filtret. Välj önskad start och bekräfta med **Välj**:
 
-   ![chlimage_1-230](assets/chlimage_1-230.png)
+   ![Välj start](assets/chlimage_1-230.png)
 
 1. Fortsätt med **Nästa** och fylla i **Egenskaper** som vid andra starter.
 
-   ![chlimage_1-231](assets/chlimage_1-231.png)
+   ![Ange egenskaper](assets/chlimage_1-231.png)
 
 #### Skapa en kapslad start - platskonsol {#creating-a-nested-launch-sites-console}
 

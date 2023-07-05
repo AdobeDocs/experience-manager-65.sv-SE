@@ -9,9 +9,9 @@ topic-tags: site-features
 discoiquuid: e145afd8-7391-47aa-b389-16fb303749d0
 docset: aem65
 exl-id: b25d3f8e-5687-49ab-95e1-19ec75c87f6e
-source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
+source-git-commit: e85aacd45a2bbc38f10d03915e68286f0a55364e
 workflow-type: tm+mt
-source-wordcount: '833'
+source-wordcount: '846'
 ht-degree: 6%
 
 ---
@@ -53,7 +53,7 @@ Med Launes kan du:
 
       * Källsidorna kan tas från flera (separata) grenar.
 
-   ![chlimage_1-111](assets/chlimage_1-111.png)
+  ![Översikt över startåtgärder](assets/chlimage_1-111.png)
 
 * Redigera startkonfigurationen:
 
@@ -67,32 +67,32 @@ Med Launes kan du:
       * Befordra ert startmaterial tillbaka till **Mål** (källsidor) när den är klar att publiceras.
       * Publicera innehållet från källsidorna (efter att ha befordrat dem).
       * Befordra antingen alla sidor eller endast ändrade sidor.
+
    * Automatiskt - det innebär följande:
 
       * The **Starta**(**Live**) **datum** fält: detta kan anges när du skapar eller redigerar en programstart.
 
       * The **Produktionsklar** flagga: detta kan bara anges när du redigerar en programstart.
       * Om **Produktionsklar** -flaggan är inställd kommer lanseringen automatiskt att befordras till produktionssidorna på den angivna **Starta**(**Live**) **datum**. Efter kampanjen publiceras produktionssidorna automatiskt.\
-         Om inget datum har angetts har flaggan ingen effekt.
-
+        Om inget datum har angetts har flaggan ingen effekt.
 
 * Uppdatera käll- och startsidor parallellt:
 
    * Ändringar av källsidorna implementeras automatiskt i startkopian (om den är konfigurerad som arv). dvs. som en live-kopia).
    * Du kan göra ändringar i startversionen utan att störa dessa automatiska uppdateringar eller källsidorna.
 
-   ![chlimage_1-112](assets/chlimage_1-112.png)
+  ![Översikt över uppdateringar](assets/chlimage_1-112.png)
 
 * [Skapa en kapslad start](/help/sites-authoring/launches-creating.md#creating-a-nested-launch) - en programstart inom en programstart:
 
    * Källan är en befintlig start.
    * Du kan [befordra en kapslad lansering](/help/sites-authoring/launches-promoting.md#promoting-a-nested-launch) till vilket mål som helst, detta kan vara en överordnad start eller källsidorna på den översta nivån (Produktion).
 
-   ![chlimage_1-113](assets/chlimage_1-113.png)
+  ![Översikt över kapslad start](assets/chlimage_1-113.png)
 
-   >[!CAUTION]
-   >
-   >Om du tar bort en programstart tas själva programstarten och alla underordnade kapslade programstarter bort.
+  >[!CAUTION]
+  >
+  >Om du tar bort en programstart tas själva programstarten och alla underordnade kapslade programstarter bort.
 
 >[!NOTE]
 >
@@ -121,8 +121,8 @@ På startkonsolen får du en översikt över dina starter och kan vidta åtgärd
 1. Öppna **Referenser** och välj källsidan.
 1. Välj **Startar**, kommer de befintliga starterna att listas:
 
-   ![screen-shot_2019-03-05at121901-1](assets/screen-shot_2019-03-05at121901-1.png)
+   ![Fliken Referens - Starta](assets/screen-shot_2019-03-05at121901-1.png)
 
 1. Tryck/klicka på lämplig start så visas listan med möjliga åtgärder:
 
-   ![screen-shot_2019-03-05at121952-1](assets/screen-shot_2019-03-05at121952-1.png)
+   ![Välj start för att visa möjliga åtgärder](assets/screen-shot_2019-03-05at121952-1.png)
