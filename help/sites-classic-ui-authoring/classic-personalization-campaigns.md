@@ -10,12 +10,13 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: e8b70971-4f23-45f8-8c23-e147413243c2
 exl-id: d1741525-a475-4a76-bd16-55318023495e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1ba34f95cf3ce3f136482075802d2e4372f28917
 workflow-type: tm+mt
-source-wordcount: '628'
+source-wordcount: '629'
 ht-degree: 0%
 
 ---
+
 
 # Campaign Management{#campaign-management}
 
@@ -36,62 +37,58 @@ I det här dokumentet beskrivs de olika element som utgör kampanjer. Mer detalj
 Kampanjhanteringen består av olika delar:
 
 * **Varumärken**
-I AEM är varumärken den översta enheten och utgör en samling 
-**Kampanjer**.
+I AEM är varumärken den översta enheten och utgör en samling **Kampanjer**.
 
 * **Kampanjer**
-En kampanj är en samling individuella 
-**Erfarenheter**.
+En kampanj är en samling individuella **Erfarenheter**.
 
 * **Erfarenheter**
-Det fokuserade innehållet utgör de olika upplevelserna, som presenteras för besökaren på 
-**Pekpunkter**. Det finns flera olika typer av upplevelser:
+Det fokuserade innehållet utgör de olika upplevelserna, som presenteras för besökaren på **Pekpunkter**. Det finns flera olika typer av upplevelser:
 
    * **Lärare**
-      [Teaser Pages / Paragrapes](#teasers) används för att styra specifika besökare **Segment** till innehåll som fokuseras på deras intressen.
+     [Teaser Pages / Paragrapes](#teasers) används för att styra specifika besökare **Segment** till innehåll som fokuseras på deras intressen.
 
-      Teaser pages can:
+     Teaser pages can:
 
       * har en rad alternativ som besökaren kan välja mellan
       * visa endast ett teaser-stycke som är baserat på det specifika besökarsegmentet, Det streckade stycket kan t.ex. vara beroende av besökarens ålder.
 
-      Vanligtvis är en&quot;teaser&quot;-sida en tillfällig åtgärd som varar en viss tid tills den ersätts av nästa&quot;teaser&quot;-sida.
+     Vanligtvis är en&quot;teaser&quot;-sida en tillfällig åtgärd som varar en viss tid tills den ersätts av nästa&quot;teaser&quot;-sida.
 
    * **Nyhetsbrev**
 
-      [E-postkommunikation](#emailmarketing) används för att engagera användare och uppmuntra dem att besöka din webbplats. Dessa kan oftast fås i form av ett nyhetsbrev som skickas till **Leads** (som vanligtvis grupperas i **Listor**). **Obs!** Adobe planerar inte att ytterligare förbättra denna kapacitet. Rekommendationen är att [utnyttja Adobe Campaign och integrationen för att AEM](/help/sites-administering/campaign.md).
+     [E-postkommunikation](#emailmarketing) används för att engagera användare och uppmuntra dem att besöka din webbplats. Dessa kan oftast fås i form av ett nyhetsbrev som skickas till **Leads** (som vanligtvis grupperas i **Listor**). **Obs!** Adobe planerar inte att ytterligare förbättra denna kapacitet. Rekommendationen är att [utnyttja Adobe Campaign och integrationen för att AEM](/help/sites-administering/campaign.md).
 
    * **Adobe Target**
 
-      Detta möjliggör integrering med Adobe Target (tidigare Test&amp;Target), som ger marknadsförarna ett optimeringsverktyg för konverteringswebbplatser med de funktioner som krävs för att kontinuerligt göra sitt onlineinnehåll mer relevant för sina kunder, vilket ger större konverteringsgrad. Adobe Target har ett intuitivt gränssnitt för att utforma och köra tester, skapa målgruppssegment och målinrikta innehåll - allt från ett och samma program.
-
+     Detta möjliggör integrering med Adobe Target (tidigare Test&amp;Target), som ger marknadsförarna ett optimeringsverktyg för konverteringswebbplatser med de nödvändiga funktionerna för att kontinuerligt göra sitt onlineinnehåll mer relevant för sina kunder, vilket ger större konverteringsgrad. Adobe Target har ett intuitivt gränssnitt för att utforma och köra tester, skapa målgruppssegment och målinrikta innehåll från ett och samma program.
 
 * **Pekpunkter**
 
-   Det här är kontaktpunkterna mellan besökaren och kampanjen. Kontaktpunkterna är kopplade till de upplevelser ni har skapat.
+  Det här är kontaktpunkterna mellan besökaren och kampanjen. Kontaktpunkterna är kopplade till de upplevelser ni har skapat.
 
-   För teasers är det till exempel innehållssidan där det teaserstycke finns, för ett nyhetsbrev är det postlistan.
+  För teasers är det till exempel innehållssidan där det teaserstycke finns, för ett nyhetsbrev är det postlistan.
 
 * **Leads**
 
-   Den information som ni har samlat in om era besökare och hur ni kontaktar dem utgör grunden för era leads. **Obs!** Adobe planerar inte att ytterligare förbättra denna kapacitet.
+  Den information som ni har samlat in om era besökare och hur ni kontaktar dem utgör grunden för era leads. **Obs!** Adobe planerar inte att ytterligare förbättra denna kapacitet.
 
-   Rekommendationen är att [utnyttja Adobe Campaign och integrationen för att AEM](/help/sites-administering/campaign.md).
+  Rekommendationen är att [utnyttja Adobe Campaign och integrationen för att AEM](/help/sites-administering/campaign.md).
 
 * **Listor**
 
-   Leads grupperas vanligtvis i listor så att du kan vidta kollektiva åtgärder för dem. Obs! **Obs!** Adobe planerar inte att ytterligare förbättra denna kapacitet.
+  Leads grupperas vanligtvis i listor så att du kan vidta kollektiva åtgärder för dem. Obs! **Obs!** Adobe planerar inte att ytterligare förbättra denna kapacitet.
 
-   Rekommendationen är att [utnyttja Adobe Campaign och integreringen för AEM.](/help/sites-administering/campaign.md)
+  Rekommendationen är att [utnyttja Adobe Campaign och integreringen för AEM.](/help/sites-administering/campaign.md)
 
 * **Segment**
 
-   Besökare har olika intressen och mål när de besöker en webbplats. Genom att analysera detta utifrån faktorer som aktivitet på webbplatsen, profilinformation som registrerats och aktivitet på andra webbplatser kan du definiera segment. Innehållet kan sedan specifikt anpassas efter besökarens behov och intressen enligt de segment som de matchar.
+  Besökare har olika intressen och mål när de besöker en webbplats. Genom att analysera detta utifrån faktorer som aktivitet på webbplatsen, profilinformation som registrerats och aktivitet på andra webbplatser kan du definiera segment. Innehållet kan sedan specifikt anpassas efter besökarens behov och intressen enligt de segment som de matchar.
 
 * **MCM**
 
-   Marketing Campaign Manager (MCM) är en konsol som ger er tillgång till alla funktioner ni behöver för att skapa och kontrollera kampanjer, varumärken, upplevelser, kontaktytor, leads, listor, segment och rapporter.
+  Marketing Campaign Manager (MCM) är en konsol som ger er tillgång till alla funktioner ni behöver för att skapa och kontrollera kampanjer, varumärken, upplevelser, kontaktytor, leads, listor, segment och rapporter.
 
-   Den kan nås från olika platser (märkta som **Kampanjer**), eller med till exempel URL-adressen:
+  Den kan nås från olika platser (märkta som **Kampanjer**), eller med till exempel URL-adressen:
 
-   `http://localhost:4502/libs/mcm/content/admin.html`
+  `http://localhost:4502/libs/mcm/content/admin.html`

@@ -10,12 +10,13 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 6466d7b8-e308-43c5-acdc-dec15f796f64
 exl-id: 918fcbbc-a78a-4fab-a933-f183ce6a907f
-source-git-commit: 7803f1df1e05dc838cb458026f8dbd27de9cb924
+source-git-commit: 93dfac20bbb761abd580a004741ade20dc4ee2fe
 workflow-type: tm+mt
-source-wordcount: '2026'
+source-wordcount: '2068'
 ht-degree: 0%
 
 ---
+
 
 # Konfigurerar e-postmeddelande{#configuring-email-notification}
 
@@ -54,7 +55,7 @@ Så här felsöker du ett problem med **Dagens CQ-posttjänst** kan du titta på
 
 Konfigurationen ser ut så här i webbkonsolen:
 
-![chlimage_1-276](assets/chlimage_1-276.png)
+![Konfigurationsfönstret Day CQ Mail Service OSGi](assets/chlimage_1-276.png)
 
 ## Konfigurera e-postmeddelandekanalen {#configuring-the-email-notification-channel}
 
@@ -88,7 +89,7 @@ När du får e-postmeddelanden om arbetsflöden anges standardvärden för både
 
 Standardkonfigurationen ser ut så här i webbkonsolen:
 
-![chlimage_1-277](assets/chlimage_1-277.png)
+![Konfigurationsfönstret för CQ Workflow Email Notification Service](assets/chlimage_1-277.png)
 
 ### E-postmallar för sidmeddelanden {#email-templates-for-page-notification}
 
@@ -233,7 +234,7 @@ Följande variabler kan användas i e-postmallen:
 
 * `${payload.type}`, nyttolasttypen
 * `${payload.path}`, nyttolastens sökväg
-* `${host.prefix}`, värdprefix, t.ex.: http://localhost:4502
+* `${host.prefix}`, värdprefix, t.ex.: `http://localhost:4502`
 
 ### Lägga till en e-postmall för ett nytt språk {#adding-an-email-template-for-a-new-language}
 
@@ -310,11 +311,11 @@ Konfigurera sedan SMTP OAuth-providern genom att följa proceduren nedan:
    * Uppdateringstoken förfaller: aldrig
 1. Klicka **Spara**.
 
-<!-- clarify refresh token expiry, currrently not present in the UI -->
+<!-- clarify refresh token expiry, currently not present in the UI -->
 
 När inställningarna har konfigurerats bör de se ut så här:
 
-![oauth smtp-provider](assets/oauth-smtpprov2.png)
+![Konfigurationsfönstret för CQ Mailer SMTP Oauth2-providern](assets/oauth-smtpprov2.png)
 
 Aktivera nu OAuth-komponenterna. Du kan göra detta genom att:
 
@@ -324,7 +325,7 @@ Aktivera nu OAuth-komponenterna. Du kan göra detta genom att:
    * `com.day.cq.mailer.oauth.servlets.handler.OAuthCodeAccessTokenGenerator`
 1. Tryck på ikonen Spela upp till vänster om komponenterna
 
-   ![komponenter](assets/oauth-components-play.png)
+   ![Lista över komponenter som visar OAuthCodeGenerateServlet och OAuthCodeAccessTokenGenerator](assets/oauth-components-play.png)
 
 Bekräfta slutligen konfigurationen genom att:
 
@@ -342,7 +343,7 @@ Bekräfta slutligen konfigurationen genom att:
 1. Sök efter **Azure Active Directory** i sökfältet och klicka på resultatet. Du kan även bläddra direkt till [https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview)
 1. Klicka på **Appregistrering** - **Ny registrering**
 
-   ![Konfiguration av Microsoft Outlook](assets/oauth-outlook1.png)
+   ![Den nya registreringsknappen när du konfigurerar Microsoft Outlook](assets/oauth-outlook1.png)
 
 1. Fyll i informationen enligt dina krav och klicka sedan på **Registrera**
 1. Gå till den nya appen och välj **API-behörigheter**
@@ -397,7 +398,7 @@ Integrera sedan dina OAuth2-inställningar med AEM:
 
 När inställningarna har konfigurerats bör de se ut så här:
 
-![Vy över konfigurationer på AEM sida](assets/oauth-outlook-smptconfig.png)
+![Den färdiga SMTP OAuth2-konfigurationen för CQ Mailer](assets/oauth-outlook-smptconfig.png)
 
 Aktivera nu OAuth-komponenterna. Du kan göra detta genom att:
 
@@ -407,7 +408,7 @@ Aktivera nu OAuth-komponenterna. Du kan göra detta genom att:
    * `com.day.cq.mailer.oauth.servlets.handler.OAuthCodeAccessTokenGenerator`
 1. Tryck på ikonen Spela upp till vänster om komponenterna
 
-![components2](assets/oauth-components-play.png)
+![Ett kodstycke för komponentlistan som innehåller OAuthCodeGenerateServlet och OAuthCodeAccessTokenGenerator](assets/oauth-components-play.png)
 
 Bekräfta slutligen konfigurationen genom att:
 

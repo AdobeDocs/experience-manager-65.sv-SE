@@ -11,12 +11,13 @@ content-type: reference
 discoiquuid: bab465bc-1ff4-4f21-9885-e4a875c73a8d
 docset: aem65
 exl-id: 9bf818f9-6e33-4557-b2e4-b0d4900f2a05
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: ec4f24528089fe3de639b974ff4ab6f8807fc7fc
 workflow-type: tm+mt
-source-wordcount: '432'
+source-wordcount: '448'
 ht-degree: 0%
 
 ---
+
 
 # Analyser med externa leverantörer {#analytics-with-external-providers}
 
@@ -70,15 +71,15 @@ För den grundläggande konfigurationen:
 1. Expandera från den vänstra rutan **Konfigurationer av Cloud Services**.
 1. Dubbelklicka på **Kodavsnitt för allmän analys** för att öppna sidan:
 
-   ![](assets/analytics_genericoverview.png)
+   ![Kodavsnitt för allmän analys](assets/analytics_genericoverview.png)
 
 1. Klicka på + för att lägga till en ny konfiguration med dialogrutan. åtminstone tilldela ett namn, till exempel Google Analytics:
 
-   ![](assets/analytics_addconfig.png)
+   ![Skapa en konfiguration](assets/analytics_addconfig.png)
 
 1. Klicka **Skapa**&#x200B;öppnas fragmentdialogrutan omedelbart - klistra in rätt javascript-fragment i fältet:
 
-   ![](assets/analytics_snippet.png)
+   ![Redigera komponenten](assets/analytics_snippet.png)
 
 1. Klicka **OK** att spara.
 
@@ -90,12 +91,12 @@ När du har skapat tjänstkonfigurationen behöver du nu konfigurera de sidor so
 1. Öppna **Sidegenskaper** från sidesparken, sedan **Cloud Services** -fliken.
 1. Klicka **Lägg till tjänst** väljer du sedan önskad tjänst, till exempel **Kodavsnitt för allmän analys**:
 
-   ![](assets/analytics_selectservice.png)
+   ![Lägga till en molntjänst](assets/analytics_selectservice.png)
 
 1. Klicka **OK** att spara.
 1. Du kommer tillbaka till **Cloud Services** -fliken. The **Kodavsnitt för allmän analys** visas nu med meddelandet `Configuration reference missing`. Använd listrutan för att välja en specifik tjänstinstans; till exempel google-analys:
 
-   ![](assets/analytics_selectspecificservice.png)
+   ![Lägger till molntjänstkonfiguration](assets/analytics_selectspecificservice.png)
 
 1. Klicka **OK** att spara.
 

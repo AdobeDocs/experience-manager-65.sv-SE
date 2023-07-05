@@ -11,12 +11,13 @@ content-type: reference
 discoiquuid: c68d5853-684f-42f2-a215-c1eaee06f58a
 docset: aem65
 exl-id: 6d759907-8796-4749-bd80-306ec7f2c819
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8f98d018518f2491f29211552863d3fa005cc0b7
 workflow-type: tm+mt
-source-wordcount: '1070'
+source-wordcount: '1140'
 ht-degree: 0%
 
 ---
+
 
 # Konfigurera segmentering {#configuring-segmentation}
 
@@ -34,7 +35,7 @@ AEM gör det enkelt att skapa och uppdatera segment, teasers och kampanjer. Du k
 
 The **Segmentredigerare** gör att du enkelt kan definiera ett segment:
 
-![](assets/segmenteditor.png)
+![Segmentredigeringsfönstret](assets/segmenteditor.png)
 
 Du kan **Redigera** varje segment för att ange **Titel**, **Beskrivning** och **Öka** faktor. Med hjälp av sidbrytaren kan du lägga till **OCH** och **ELLER** behållare för att definiera **Segmentlogik** och lägg sedan till **Segmentegenskaper** för att definiera urvalskriterierna.
 
@@ -130,17 +131,17 @@ Så här definierar du det nya segmentet:
 1. Skapa en [ny sida](/help/sites-authoring/editing-content.md#creatinganewpage) med **Segment** mall.
 1. Öppna den nya sidan och se segmentredigeraren:
 
-   ![](assets/screen_shot_2012-02-02at101726am.png)
+   ![Det första steget i att skapa ett nytt segment i segmentredigeraren](assets/screen_shot_2012-02-02at101726am.png)
 
 1. Använd antingen sidosparken eller snabbmenyn (oftast högerklickar du med musknappen och väljer sedan **Nytt...** för att öppna fönstret Infoga ny komponent) för att hitta det segment du behöver. Dra den sedan till **Segmentredigerare** kommer det att visas i standardinställningarna **OCH** behållare.
 1. Dubbelklicka på den nya egenskapen för att redigera de specifika parametrarna. till exempel musens position:
 
-   ![](assets/screen_shot_2012-02-02at103135am.png)
+   ![Redigera en komponent i segmentredigeraren](assets/screen_shot_2012-02-02at103135am.png)
 
 1. Klicka **OK** för att spara definitionen:
 1. Du kan **Redigera** segmentdefinitionen för att ge den en **Titel**, **Beskrivning** och **[Öka](#boost-factor)** faktor:
 
-   ![](assets/screen_shot_2012-02-02at103547am.png)
+   ![Redigera segmentinställningarna i segmentredigeraren](assets/screen_shot_2012-02-02at103547am.png)
 
 1. Lägg till fler egenskaper om det behövs. Du kan formulera booleska uttryck med **AND-behållare** och **ELLER-behållare** komponenter hittades under **Segmentlogik**. Med segmentredigeraren kan du ta bort egenskaper eller behållare som inte längre behövs, eller dra dem till nya positioner i programsatsen.
 
@@ -161,7 +162,7 @@ Kvinnor och mellan 16 och 62 år
 
 Som huvudoperator är OR måste du börja med ett **ELLER-behållare**. Här finns två AND-programsatser för varje programsats som du behöver en **AND-behållare** där du kan lägga till de enskilda egenskaperna.
 
-![](assets/screen_shot_2012-02-02at105145am.png)
+![Ett exempel på AND- och OR-operatorer i segmentredigeraren](assets/screen_shot_2012-02-02at105145am.png)
 
 ## Testa tillämpningen av ett segment {#testing-the-application-of-a-segment}
 
@@ -174,11 +175,11 @@ När segmentet är definierat kan man testa potentiella resultat med hjälp av *
 
 En enkel segmentdefinition kan till exempel baseras på användarens ålder och kön. När du läser in en viss profil visas att segmentet har lösts:
 
-![](assets/screen_shot_2012-02-02at105926am.png)
+![Använda fönstret Client Context för att testa en AND-segmenteringsåtgärd](assets/screen_shot_2012-02-02at105926am.png)
 
 Eller inte:
 
-![](assets/screen_shot_2012-02-02at110019am.png)
+![Använda fönstret Klientkontext för att testa en NOT-segmenteringsåtgärd](assets/screen_shot_2012-02-02at110019am.png)
 
 >[!NOTE]
 >
@@ -188,7 +189,7 @@ Sådana tester kan även utföras på innehållssidor och i kombination med **Te
 
 Om du för musen över ett teaser-stycke visas de segment som används, oavsett om de för närvarande löses och varför den aktuella teaser-instansen har valts:
 
-![](assets/chlimage_1-47.png)
+![Ett exempel på muspekaren över ett segment](assets/chlimage_1-47.png)
 
 ### Använda ditt segment {#using-your-segment}
 

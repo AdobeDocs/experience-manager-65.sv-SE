@@ -13,12 +13,13 @@ feature: Brand Portal
 role: Admin
 exl-id: ae33181c-9eec-421c-be55-4bd019de40b8
 hide: true
-source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
+source-git-commit: 14988b55c21131391fdcb033373774ee170f5305
 workflow-type: tm+mt
-source-wordcount: '1959'
+source-wordcount: '2007'
 ht-degree: 10%
 
 ---
+
 
 # Konfigurera AEM Assets med varumärkesportalen {#configure-integration-65}
 
@@ -103,6 +104,7 @@ Konfigurationen av AEM Assets med Brand Portal kräver konfigurationer i både A
 >En instans av en AEM Assets-författare får endast konfigureras med en Brand Portal-klient.
 
 Utför följande steg i den listade sekvensen om du konfigurerar AEM Assets med Brand Portal för första gången:
+
 1. [Hämta ett offentligt certifikat](#public-certificate)
 1. [Skapa JWT-anslutning (Service Account)](#createnewintegration)
 1. [Konfigurera IMS-konto](#create-ims-account-configuration)
@@ -274,7 +276,7 @@ Utför följande steg för att konfigurera IMS-kontot.
 
    Klicka **[!UICONTROL Check]** i dialogrutan. När konfigurationen är klar visas ett meddelande om att *Token har hämtats*.
 
-   ![](assets/create-new-integration5.png)
+   ![Bekräftelsedialogruta för felfri konfiguration](assets/create-new-integration5.png)
 
 >[!CAUTION]
 >
@@ -298,7 +300,7 @@ Så här konfigurerar du molntjänsten i Brand Portal:
 
    I **[!UICONTROL Service URL]** anger du din Brand Portal tenant-URL (organisation).
 
-   ![](assets/create-cloud-service.png)
+   ![Fönstret Brand Portal Configuration](assets/create-cloud-service.png)
 
 1. Klicka på **[!UICONTROL Save & Close]**. Molnkonfigurationen har skapats.
 
@@ -312,17 +314,17 @@ Utför följande steg för att validera konfigurationen:
 
 1. Från **verktyg** ![verktyg](assets/do-not-localize/tools.png) panel, navigera till **[!UICONTROL Deployment]** > **[!UICONTROL Replication]**.
 
-   ![](assets/test-integration1.png)
+   ![Panelen Verktyg](assets/test-integration1.png)
 
 1. Klicka på **[!UICONTROL Agents on author]**.
 
-   ![](assets/test-integration2.png)
+   ![Replikeringssida](assets/test-integration2.png)
 
    Du kan se de fyra replikeringsagenterna som har skapats för din Brand Portal-klient.
 
    Leta reda på replikeringsagenterna för din Brand Portal-klient och klicka på replikeringsagentens URL.
 
-   ![](assets/test-integration3.png)
+   ![Resursreplikeringskonfiguration](assets/test-integration3.png)
 
    >[!NOTE]
    >
@@ -330,11 +332,11 @@ Utför följande steg för att validera konfigurationen:
 
 1. Kontrollera anslutningen mellan AEM Assets och Brand Portal genom att klicka på **[!UICONTROL Test Connection]** ikon.
 
-   ![](assets/test-integration4.png)
+   ![Verifierar inställningarna för resursreplikering](assets/test-integration4.png)
 
    Ett meddelande om att *testpaketet har levererats*.
 
-   ![](assets/test-integration5.png)
+   ![Testa bekräftelseutdata](assets/test-integration5.png)
 
 1. Verifiera testresultaten för alla fyra replikeringsagenterna.
 
@@ -362,6 +364,7 @@ Se [Brand Portal-dokumentation](https://experienceleague.adobe.com/docs/experien
 ## Uppgraderingskonfiguration {#upgrade-integration-65}
 
 Utför följande steg i den listade sekvensen för att uppgradera dina befintliga konfigurationer till Adobe Developer Console:
+
 1. [Verifiera jobb som körs](#verify-jobs)
 1. [Ta bort befintliga konfigurationer](#delete-existing-configuration)
 1. [Skapa en konfiguration](#configure-new-integration-65)
@@ -376,13 +379,13 @@ Kontrollera att inget publiceringsjobb körs på din AEM Assets-författarinstan
 
 1. Klicka på **[!UICONTROL Agents on author]**.
 
-   ![](assets/test-integration2.png)
+   ![Replikeringsagenter för resurser](assets/test-integration2.png)
 
 1. Leta reda på replikeringsagenterna för din Brand Portal-klient.
 
    Se till att **Kön är inaktiv** för alla replikeringsagenter är inget publiceringsjobb aktivt.
 
-   ![](assets/test-integration3.png)
+   ![Inställningar för replikeringskö](assets/test-integration3.png)
 
 ### Ta bort befintliga konfigurationer {#delete-existing-configuration}
 
@@ -395,15 +398,15 @@ Du måste köra följande checklista när du tar bort befintliga konfigurationer
 
 1. Navigera till `/etc/replications/agents.author` och ta bort alla fyra replikeringsagenterna för din Brand Portal-klient.
 
-   ![](assets/delete-replication-agent.png)
+   ![Replikeringsagent i CRXDE](assets/delete-replication-agent.png)
 
 1. Navigera till `/etc/cloudservices/mediaportal` och ta bort Brand Portal molntjänstkonfiguration.
 
-   ![](assets/delete-cloud-service.png)
+   ![Information om replikeringsagenten i CRXDE](assets/delete-cloud-service.png)
 
 1. Navigera till `/home/users/mac` och ta bort **Mac-användare** av er Brand Portal-klient.
 
-   ![](assets/delete-mac-user.png)
+   ![Mer information om replikeringsagenten i CRXDE](assets/delete-mac-user.png)
 
 
 Nu kan du [skapa konfiguration](#configure-new-integration-65) via Adobe Developer Console på din AEM 6.5-författarinstans.

@@ -2,12 +2,13 @@
 title: Integrering med Adobe Target med IMS
 description: Läs om hur du integrerar AEM med Adobe Target med IMS
 exl-id: 8ddd86d5-a5a9-4907-b07b-b6552d7afdc8
-source-git-commit: 5c3de9c272030b3e258aea95899a58553c3b33db
+source-git-commit: 2f5f6a94a20feb2813b6da1b71e22f8675529ea5
 workflow-type: tm+mt
-source-wordcount: '1503'
+source-wordcount: '1548'
 ht-degree: 0%
 
 ---
+
 
 # Integrering med Adobe Target med IMS{#integration-with-adobe-target-using-ims}
 
@@ -50,7 +51,7 @@ Det första steget i konfigurationen är att skapa en IMS-konfiguration i AEM oc
 1. Aktivera **Skapa nytt certifikat** och ange ett nytt alias.
 1. Bekräfta med **Skapa certifikat**.
 
-   ![](assets/integrate-target-io-01.png)
+   ![Guiden Konfigurera Adobe IMS Technical Account](assets/integrate-target-io-01.png)
 
 1. Välj **Hämta** (eller **Hämta offentlig nyckel**) för att hämta filen till den lokala hårddisken, så att den är klar att användas när [konfigurera IMS för Adobe Target-integrering med AEM](#configuring-ims-for-adobe-target-integration-with-aem).
 
@@ -58,7 +59,7 @@ Det första steget i konfigurationen är att skapa en IMS-konfiguration i AEM oc
    >
    >Låt konfigurationen vara öppen, den behövs igen när [Slutför IMS-konfigurationen i AEM](#completing-the-ims-configuration-in-aem).
 
-   ![](assets/integrate-target-io-02.png)
+   ![Informationsmeddelande om att lägga till certifikat på Adobe I/O](assets/integrate-target-io-02.png)
 
 ## Konfigurera IMS för Adobe Target-integrering med AEM {#configuring-ims-for-adobe-target-integration-with-aem}
 
@@ -75,14 +76,14 @@ Med Adobe Developer Console måste du skapa ett projekt (integration) med Adobe 
 1. Alla projekt du har visas. Välj **Skapa nytt projekt** - platsen och användningen beror på:
 
    * Om du inte har något projekt än **Skapa nytt projekt** kommer att vara i mitten, nederst.
-      ![Skapa nytt projekt - första projektet](assets/integration-target-io-02.png)
+     ![Skapa nytt projekt - första projektet](assets/integration-target-io-02.png)
    * Om du redan har befintliga projekt listas dessa och **Skapa nytt projekt** kommer att vara överst till höger.
-      ![Skapa nytt projekt - flera projekt](assets/integration-target-io-03.png)
+     ![Skapa nytt projekt - flera projekt](assets/integration-target-io-03.png)
 
 
 1. Välj **Lägg till i projekt** följt av **API**:
 
-   ![](assets/integration-target-io-10.png)
+   ![Adobe Developer Console](assets/integration-target-io-10.png)
 
 1. Välj **Adobe Target** sedan **Nästa**:
 
@@ -90,15 +91,15 @@ Med Adobe Developer Console måste du skapa ett projekt (integration) med Adobe 
    >
    >Om du prenumererar på Adobe Target, men inte ser det i listan, bör du kontrollera [Förutsättningar](#prerequisites).
 
-   ![](assets/integration-target-io-12.png)
+   ![Klicka på nästa](assets/integration-target-io-12.png)
 
 1. **Överför din offentliga nyckel** och när det är klart fortsätter du med **Nästa**:
 
-   ![](assets/integration-target-io-13.png)
+   ![Lägga till integreringar med Developer Console](assets/integration-target-io-13.png)
 
 1. Granska inloggningsuppgifterna och fortsätt med **Nästa**:
 
-   ![](assets/integration-target-io-15.png)
+   ![Skapa ett nytt projekt](assets/integration-target-io-15.png)
 
 1. Välj önskade produktprofiler och fortsätt med **Spara konfigurerat API**:
 
@@ -109,8 +110,7 @@ Med Adobe Developer Console måste du skapa ett projekt (integration) med Adobe 
    >* Adobe Target Standard - endast **Standardarbetsyta** är tillgänglig
    >* Adobe Target Premium - alla tillgängliga arbetsytor visas i listan enligt nedan
 
-
-   ![](assets/integration-target-io-16.png)
+   ![Välja ett API att lägga till](assets/integration-target-io-16.png)
 
 1. Skapandet bekräftas.
 
@@ -173,7 +173,7 @@ Om du går tillbaka till AEM kan du slutföra IMS-konfigurationen genom att läg
 
 1. Din Adobe Target-konfiguration visas i AEM.
 
-   ![](assets/integrate-target-io-11.png)
+   ![Adobe IMS Technical Account Configuration](assets/integrate-target-io-11.png)
 
 ## Bekräfta IMS-konfigurationen {#confirming-the-ims-configuration}
 
@@ -187,15 +187,14 @@ Så här bekräftar du att konfigurationen fungerar som förväntat:
 
    * `https://localhost:4502/libs/cq/adobeims-configuration/content/configurations.html`
 
-
 1. Välj din konfiguration.
 1. Välj **Kontrollera hälsa** i verktygsfältet, följt av **Kontrollera**.
 
-   ![](assets/integrate-target-io-12.png)
+   ![Adobe IMS-konfigurationer](assets/integrate-target-io-12.png)
 
 1. Om det lyckas visas meddelandet:
 
-   ![](assets/integrate-target-io-13.png)
+   ![Kontrollera en konfiguration](assets/integrate-target-io-13.png)
 
 ## Konfigurera Adobe Target-Cloud Servicen {#configuring-the-adobe-target-cloud-service}
 
@@ -220,15 +219,15 @@ Det går nu att referera till konfigurationen för en Cloud Service som använde
 
    * **Klient-ID**: Adobe IMS-klientens ID. Se även [Klient-ID och klientkod](#tenant-client) -avsnitt.
 
-      >[!NOTE]
-      >
-      >För IMS måste det här värdet hämtas från Target. Du kan logga in på Target och extrahera klient-ID:t från URL:en.
-      >
-      >Om URL:en till exempel är:
-      >
-      >`https://experience.adobe.com/#/@yourtenantid/target/activities`
-      >
-      >Då använder du `yourtenantid`.
+     >[!NOTE]
+     >
+     >För IMS måste det här värdet hämtas från Target. Du kan logga in på Target och extrahera klient-ID:t från URL:en.
+     >
+     >Om URL:en till exempel är:
+     >
+     >`https://experience.adobe.com/#/@yourtenantid/target/activities`
+     >
+     >Då använder du `yourtenantid`.
 
    * **Klientkod**: Se [Klient-ID och klientkod](#tenant-client) -avsnitt.
 
@@ -247,6 +246,7 @@ Det går nu att referera till konfigurationen för en Cloud Service som använde
    * **Använd Tag Management System för att leverera klientbibliotek**: Använd DTM (utgått), Adobe Launch eller något annat tagghanteringssystem.
 
    * **Anpassad AT.js**: Lämna tomt om du har markerat rutan Tag Management eller om du vill använda AT.js som standard. Du kan även överföra dina anpassade AT.js. Visas bara om du har valt AT.js.
+
    >[!NOTE]
    >
    >[Konfiguration av en Cloud Service som ska använda API:t för klassiska mål](/help/sites-administering/target-configuring.md#manually-integrating-with-adobe-target) har tagits bort (använder fliken Adobe Recommendations-inställningar).
@@ -283,4 +283,3 @@ Som tidigare nämnts är det första fallet det vanligaste för AEM 6.5. Oavsett
 >1. Ange klientorganisations-ID:t igen.
 >2. Återanslut till mål.
 >3. Spara konfigurationen.
-

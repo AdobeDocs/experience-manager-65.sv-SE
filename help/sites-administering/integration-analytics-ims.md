@@ -2,12 +2,13 @@
 title: Integrering med Adobe Analytics med IMS
 description: Läs om hur du integrerar AEM med Adobe Analytics med IMS
 exl-id: 2833a6df-ef32-48ab-8395-0f26816f8443
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: 5789954afea2d42444b6f6f9f185d7926624e7f0
 workflow-type: tm+mt
-source-wordcount: '1040'
+source-wordcount: '1056'
 ht-degree: 0%
 
 ---
+
 
 # Integrering med Adobe Analytics med IMS {#integration-with-adobe-analytics-using-ims}
 
@@ -51,7 +52,7 @@ Det första steget i konfigurationen är att skapa en IMS-konfiguration i AEM oc
 1. Aktivera **Skapa nytt certifikat** och ange ett nytt alias.
 1. Bekräfta med **Skapa certifikat**.
 
-   ![](assets/integrate-analytics-io-01.png)
+   ![Guiden Konfigurera Adobe IMS Technical Account](assets/integrate-analytics-io-01.png)
 
 1. Välj **Hämta** (eller **Hämta offentlig nyckel**) för att hämta filen till den lokala hårddisken, så att den är klar att användas när [konfigurera IMS för Adobe Analytics-integrering med AEM](#configuring-ims-for-adobe-analytics-integration-with-aem).
 
@@ -59,7 +60,7 @@ Det första steget i konfigurationen är att skapa en IMS-konfiguration i AEM oc
    >
    >Låt konfigurationen vara öppen, den behövs igen när [Slutför IMS-konfigurationen i AEM](#completing-the-ims-configuration-in-aem).
 
-   ![](assets/integrate-analytics-io-02.png)
+   ![Dialogrutan Info där du kan lägga till nyckeln i Adobe I/O](assets/integrate-analytics-io-02.png)
 
 ## Konfigurera IMS för Adobe Analytics-integrering med AEM {#configuring-ims-for-adobe-analytics-integration-with-aem}
 
@@ -76,9 +77,9 @@ Med Adobe Developer Console måste du skapa ett projekt (integration) med Adobe 
 1. Alla projekt du har visas. Välj **Skapa nytt projekt** - platsen och användningen beror på:
 
    * Om du inte har något projekt än **Skapa nytt projekt** kommer att vara i mitten, nederst.
-      ![Skapa nytt projekt - första projektet](assets/integration-analytics-io-02.png)
+     ![Skapa nytt projekt - första projektet](assets/integration-analytics-io-02.png)
    * Om du redan har befintliga projekt listas dessa och **Skapa nytt projekt** kommer att vara överst till höger.
-      ![Skapa nytt projekt - flera projekt](assets/integration-analytics-io-03.png)
+     ![Skapa nytt projekt - flera projekt](assets/integration-analytics-io-03.png)
 
 
 1. Välj **Lägg till i projekt** följt av **API**:
@@ -177,7 +178,6 @@ Så här bekräftar du att konfigurationen fungerar som förväntat:
    Till exempel:
 
    * `https://localhost:4502/libs/cq/adobeims-configuration/content/configurations.html`
-
 
 1. Välj din konfiguration.
 1. Välj **Kontrollera hälsa** i verktygsfältet, följt av **Kontrollera**.

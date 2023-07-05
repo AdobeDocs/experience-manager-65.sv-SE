@@ -10,12 +10,13 @@ topic-tags: integration
 content-type: reference
 discoiquuid: fe6ba6af-f500-4c0d-b984-fb617d4bf48a
 exl-id: 9fa3e531-11b3-4b8d-a87c-a08faf06f5b7
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: 5e94a0cdb363e95ce398ea4ed0bce4a6aba9e7ce
 workflow-type: tm+mt
-source-wordcount: '1600'
+source-wordcount: '1612'
 ht-degree: 0%
 
 ---
+
 
 # Konfigurera länkspårning för Adobe Analytics{#configuring-link-tracking-for-adobe-analytics}
 
@@ -28,7 +29,7 @@ När användare klickar på länkar på webbplatsens sidor kan du hämta relater
 1. Använda **Visa konfigurationer**&#x200B;öppnar du Adobe Analytics-ramverket.
 1. Expandera **Konfiguration för länkspårning** och konfigurera efter behov (den här sidan innehåller mer information):
 
-   ![aa-08](assets/aa-08.png)
+   ![Analysramverk](assets/aa-08.png)
 
 ## Spåra filhämtningar {#tracking-file-downloads}
 
@@ -48,7 +49,7 @@ Nedladdningar av följande filtyper spåras som standard:
 * pdf
 * xls
 
-Om du t.ex. har hämtningsspårning aktiverat för PDF-filer spåras hämtningen av PDF när användare klickar på länkar till PDF-filer.
+Om hämtningsspårning är aktiverat för PDF-filer spåras PDF när användare klickar på länkar till PDF-filer.
 
 Egenskaperna för hämtningsspårning i ramverket implementeras som kod i `analytics.sitecatalyst.js` fil som genereras för en sida. Följande kodexempel representerar standardkonfigurationen för hämtningsspårning:
 
@@ -80,19 +81,19 @@ Aktiverar extern länkspårning.
 * **Externa filter**
 (Valfritt) Definierar filter för att matcha de externa URL:erna för länkmålen. När länkmålen matchar filtret spåras länken. Externa filter är användbara när du bara vill spåra vissa av de externa länkarna på sidorna.
 
-   Om du vill ange de externa länkar som ska spåras skriver du hela eller delar av länkmålets URL. Separera flera filter med kommatecken. Omsluter stränglitteraler inom enkla citattecken. Inget värde (standardvärdet för `''`, två enkla citattecken) spåras alla externa länkar.
+  Om du vill ange de externa länkar som ska spåras skriver du hela eller delar av länkmålets URL. Separera flera filter med kommatecken. Omsluter stränglitteraler inom enkla citattecken. Inget värde (standardvärdet för `''`, två enkla citattecken) spåras alla externa länkar.
 
 * **Interna filter**
 Definierar filter för att matcha URL:er för interna länkar. När länken pekar mot URL:er som matchar det här filtret spåras inte länken. Standardvärdet är ett javascript-kommando som returnerar värdnamnet för URL:en för den aktuella fönsteradressen.
 
-   Om du vill ange interna länkar som inte spåras skriver du hela eller en del av länkmålets interna URL. Separera flera filter med kommatecken. Omsluter stränglitteraler inom enkla citattecken.
+  Om du vill ange interna länkar som inte spåras skriver du hela eller en del av länkmålets interna URL. Separera flera filter med kommatecken. Omsluter stränglitteraler inom enkla citattecken.
 
-   Standardvärdet är `'javascript:,'+window.location.hostname`
+  Standardvärdet är `'javascript:,'+window.location.hostname`
 
 * **Lämna frågesträng**
 Inkluderar URL-parametrar vid utvärdering av matchningar med interna och externa filter.
 
-   Aktivera det här alternativet om du vill inkludera URL-parametrar när du utvärderar länkmål-URL:er mot externa och interna filter.
+  Aktivera det här alternativet om du vill inkludera URL-parametrar när du utvärderar länkmål-URL:er mot externa och interna filter.
 
 De externa länkspårningsegenskaperna implementeras som kod i `analytics.sitecatalyst.js` fil som genereras för en sida. Följande exempelkod genereras för en sida som är associerad med ett ramverk som har aktiverat extern länkspårning med följande konfiguration:
 
@@ -123,14 +124,14 @@ Egenskaper för att skicka variabeldata med länkklick:
 * **Länkspårshändelser**
 Ange de Adobe Analytics-händelsevariabler som du vill använda för att räkna länkklick.
 
-   Avgränsa flera variabelnamn med kommatecken.
+  Avgränsa flera variabelnamn med kommatecken.
 
-   Standardvärdet för `None` orsakar ingen händelsespårning.
+  Standardvärdet för `None` orsakar ingen händelsespårning.
 
 * **Länkspårsvarianter**
 Ange de Adobe Analytics-variabler som du vill skicka till Adobe Analytics när någon klickar på länkarna. Avgränsa flera variabelnamn med kommatecken.
 
-   Standardvärdet för `None` gör att inga variabeldata skickas.
+  Standardvärdet för `None` gör att inga variabeldata skickas.
 
 När du anger händelser och variabler som ska skickas implementeras konfigurationen som kod i `analytics.sitecatalyst.js` fil som genereras för en sida. Följande exempelkod genereras för en sida när ramverket spårar `event10` -händelsen och `prop4` egenskap:
 
@@ -148,7 +149,7 @@ Utför följande procedurer för att utforska länkspårningsbeteendet i Adobe A
 I det här exemplet visas hur mappningen fungerar för spårning och felsökning:
 
 1. Öppna det ramverk som har kopplats till en webbsida.
-1. Dra **Sida** till ramverkets mappningsområde. The **Sida** -komponenten tillhör **Allmänt** komponentgrupp i Sidespark.
+1. Dra **Sida** till ramverkets mappningsområde. The **Sida** -komponenten tillhör **Allmänt** komponentgrupp i Sidekick.
 
    >[!NOTE]
    >
@@ -236,7 +237,7 @@ I det här exemplet visas hur mappningen fungerar för spårning och felsökning
 
 Anropet ser ut så här när det visas med Adobe Marketing Cloud Debugger:
 
-![aa-leavequerysearch-blank](assets/aa-leavequerysearch-blank.png)
+![Adobe Marketing Cloud Debugger](assets/aa-leavequerysearch-blank.png)
 
 >[!NOTE]
 >
@@ -250,7 +251,7 @@ Anropet ser ut så här när det visas med Adobe Marketing Cloud Debugger:
 
 Samtalsinformationen som visas i Adobe Marketing Cloud Debugger liknar följande exempel:
 
-![aa-leavequerysearch-active](assets/aa-leavequerysearch-active.png)
+![Adobe Marketing Cloud Debugger igen](assets/aa-leavequerysearch-active.png)
 
 >[!NOTE]
 >
@@ -323,7 +324,7 @@ Använd följande procedur för att konfigurera länkspårning för en **Text** 
 
 1. Markera texten som du vill använda som hypertext och klicka på knappen Hyperlänk.
 
-   ![](do-not-localize/chlimage_1.png)
+   ![Länkikon](do-not-localize/chlimage_1.png)
 
 1. Lägg till mål-URL:en i rutan Länka till och utöka sedan området Länkspårning.
 
@@ -333,7 +334,7 @@ Använd följande procedur för att konfigurera länkspårning för en **Text** 
    >
    >Den aktiveras bara när du har valt en giltig länk i textredigeraren.
 
-   ![aa-17](assets/aa-17.png)
+   ![Aktivera länkspårning](assets/aa-17.png)
 
 1. Aktivera **Anpassad länkspårning** för att åsidosätta länkspårningskonfigurationen i Adobe Analytics-ramverket och för att aktivera länkspårning för den aktuella länken.
 

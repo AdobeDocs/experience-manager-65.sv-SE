@@ -9,12 +9,13 @@ content-type: reference
 discoiquuid: ccabf301-b417-48aa-8501-8360fd9f3e36
 role: Admin
 exl-id: b64e24d2-8407-484c-8216-8d328ef5fa4f
-source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
+source-git-commit: 201c87da1316944e594ade6d95800326b1e6667c
 workflow-type: tm+mt
-source-wordcount: '896'
-ht-degree: 1%
+source-wordcount: '915'
+ht-degree: 0%
 
 ---
+
 
 # Hanteringskonsoler för medlemmar och grupper {#members-groups-management-consoles}
 
@@ -47,7 +48,7 @@ I författarmiljön kan du nå Medlemskonsolen för att hantera medlemmar som ä
 >
 >Det går inte att använda medlemskonsolen om [tunneltjänst](deploy-communities.md#tunnel-service-on-author) är inte aktiverat.
 
-![member-console1](assets/member-console1.png)
+![Medlemskonsolen](assets/member-console1.png)
 
 ### Sökning {#search-features}
 
@@ -56,7 +57,7 @@ Markera sidpanelsikonen till vänster på sidan `Members` för att växla mellan
 ![Ikon för sidopanelen Sök.](assets/leftpanel-icon.png)
 
 
-![member-console2](assets/member-console2.png)
+![Filteralternativ för medlemskonsolen](assets/member-console2.png)
 
 Välj sökikonen till vänster i dialogrutan `Members` för att växla till att växla panelen på söksidan stängd.
 
@@ -76,7 +77,7 @@ Kolumnrubrikerna är
 
 Välj `Create Member` för att skapa en användare i publiceringsmiljön.
 
-![create-member1](assets/create-member1.png)
+![Fönstret Skapa ny medlem](assets/create-member1.png)
 
 ### ALLMÄNT - Medlemsinformation {#general-member-details}
 
@@ -150,7 +151,7 @@ The `BADGES` kan du tilldela och återkalla märken manuellt. Märken kan använ
 
 Se även [Betygsättning och emblem](implementing-scoring.md).
 
-![create-member2](assets/create-member2.png)
+![Fönstret Redigera medlemskapsinställningar](assets/create-member2.png)
 
 * **[!UICONTROL Add badges]**
    * Börja skriva för att välja bland [tillgängliga märken](badges.md). När du har valt ett märke väljer du varje webbplats, eller alla webbplatser, där märket ska visas tillsammans med medlemmens avatar.
@@ -173,7 +174,7 @@ Så här kommer du åt gruppkonsolen:
 
 Välj `Add Group` för att skapa en grupp i publiceringsmiljön.
 
-![group-console1](assets/group-console1.png)
+![Fönstret Skapa ny grupp](assets/group-console1.png)
 
 Följande fält krävs för att skapa en ny medlemsgrupp på publiceringssidan:
 

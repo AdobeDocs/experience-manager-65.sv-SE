@@ -11,12 +11,13 @@ content-type: reference
 discoiquuid: b279c033-bc93-4e62-81ad-123c40b9fdd2
 docset: aem65
 exl-id: 8c6ba22f-5555-4e3c-998a-9353bd44715b
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 21330d460d1080ab1dee3e82bc3c3877677c1420
 workflow-type: tm+mt
-source-wordcount: '860'
+source-wordcount: '889'
 ht-degree: 0%
 
 ---
+
 
 # Klassiskt gränssnitt, taggningskonsol{#classic-ui-tagging-console}
 
@@ -30,7 +31,7 @@ Så här kommer du åt konsolen Klassisk UI-taggning:
 * logga in med administratörsbehörighet
 * bläddra till konsolen, till exempel [https://localhost:4502/tagging](https://localhost:4502/tagging)
 
-![](assets/managing_tags_usingthetagasministrationconsole.png)
+![Klassiskt konsolfönster](assets/managing_tags_usingthetagasministrationconsole.png)
 
 ## Skapa taggar och namnutrymmen {#creating-tags-and-namespaces}
 
@@ -38,33 +39,29 @@ Så här kommer du åt konsolen Klassisk UI-taggning:
 
    Om du väljer **Taggar** du kan skapa ett namnutrymme:
 
-   ![](assets/creating_tags_andnamespaces.png)
+   ![Skapa en dialogruta för namnutrymmen](assets/creating_tags_andnamespaces.png)
 
    Om du väljer ett namnutrymme (till exempel **Demo**) kan du skapa en tagg i det namnutrymmet:
 
-   ![](assets/creating_tags_andnamespacesinnewnamespace.png)
+   ![Skapa en taggdialogruta](assets/creating_tags_andnamespacesinnewnamespace.png)
 
 1. I båda fallen anger du
 
    * **Titel**
-(
-*Obligatoriskt*) Visningsrubriken för taggen. Alla tecken kan anges, men du bör inte använda dessa specialtecken:
+(*Obligatoriskt*) Visningsrubriken för taggen. Alla tecken kan anges, men du bör inte använda dessa specialtecken:
 
       * `colon (:)` - namnutrymmesavgränsare
       * `forward slash (/)` - avgränsare för undertagg
 
-      Dessa tecken visas inte om de anges.
+     Dessa tecken visas inte om de anges.
 
    * **Namn**
-(
-*Obligatoriskt*) Taggens nodnamn.
+(*Obligatoriskt*) Taggens nodnamn.
 
    * **Beskrivning**
-(
-*Valfritt*) En beskrivning av taggen.
+(*Valfritt*) En beskrivning av taggen.
 
    * välj **Skapa**
-
 
 ## Redigera taggar {#editing-tags}
 
@@ -90,7 +87,7 @@ Så här kommer du åt konsolen Klassisk UI-taggning:
 
 **Lista** öppnar ett nytt fönster som visar sökvägarna för alla sidor som använder den markerade taggen:
 
-![](assets/list_showing_wheretagsarereferenced.png)
+![Söker efter var det finns referenser till taggar](assets/list_showing_wheretagsarereferenced.png)
 
 ## Flytta taggar {#moving-tags}
 
@@ -107,7 +104,7 @@ För att tagga administratörer och utvecklare så att de kan rensa taxonomin el
 
 The **Flytta tagg** ser ut så här:
 
-![](assets/move_tag.png)
+![Flytta en tagg](assets/move_tag.png)
 
 >[!NOTE]
 >
@@ -129,7 +126,7 @@ Så här sammanfogar du en tagg till en annan:
 
 The **Sammanfoga tagg** ser ut så här:
 
-![](assets/mergetag.png)
+![Sammanfoga en tagg](assets/mergetag.png)
 
 ## Räknar användning av taggar {#counting-usage-of-tags}
 
@@ -158,7 +155,7 @@ Följande procedur visar hur du översätter `title`för -taggen **Djur** till e
 
 Dialogrutan ser ut så här:
 
-![](assets/edit_tag.png)
+![Redigera en tagg](assets/edit_tag.png)
 
 Taggningskonsolen använder språkinställningen för användaren, så för taggen Animal visas Animaux för en användare som anger språket som franska i användaregenskaperna.
 
@@ -175,11 +172,11 @@ Som standard är taggen `titles`i sidegenskaperna visas på sidspråket. Dialogr
 
    Välj **Djur** (**Animaux**) och markera utanför dialogrutan för att stänga den och lägga till taggen i sidegenskaperna.
 
-   ![](assets/french_tag.png)
+   ![Redigera en annan tagg](assets/french_tag.png)
 
 Som standard visas taggen i dialogrutan Sidegenskaper `titles`enligt sidspråket.
 
-I allmänhet hämtas taggens språk från sidspråket om sidspråket är tillgängligt. När [ `tag` widget](/help/sites-developing/building.md#tagging-on-the-client-side) används i andra fall (t.ex. i formulär eller i dialogrutor), beror taggspråket på sammanhanget.
+I allmänhet hämtas taggens språk från sidspråket om sidspråket är tillgängligt. När [`tag` widget](/help/sites-developing/building.md#tagging-on-the-client-side) används i andra fall (t.ex. i formulär eller i dialogrutor), beror taggspråket på sammanhanget.
 
 >[!NOTE]
 >

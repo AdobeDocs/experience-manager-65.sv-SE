@@ -6,12 +6,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 exl-id: f82391d7-e30d-48d2-8f66-88fcae3dfb5f
-source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
+source-git-commit: 1a3e0f90bbe133a7b0fc383b997e69b10ca82478
 workflow-type: tm+mt
-source-wordcount: '2042'
-ht-degree: 2%
+source-wordcount: '2067'
+ht-degree: 1%
 
 ---
+
 
 # Konfigurera sökformulär{#configuring-search-forms}
 
@@ -29,7 +30,7 @@ Du kan [konfigurera sökformulären](#configuring-your-search-forms) används i 
 
 När du först öppnar den här konsolen ser du att alla konfigurationer har en hänglåssymbol. Det här anger att rätt konfiguration är standardkonfigurationen (färdig) och kan inte tas bort. När du har anpassat konfigurationen försvinner låset - såvida du inte [ta bort din anpassade konfiguration](#deleting-a-configuration-to-reinstate-the-default), i vilket fall standardinställningen (och hänglåsindikatorn) återställs.
 
-![chlimage_1-374](assets/chlimage_1-374.png)
+![Fönstret Sök i formulär](assets/chlimage_1-374.png)
 
 ## Konfigurationer {#configurations}
 
@@ -37,63 +38,63 @@ Standardkonfigurationerna är:
 
 * **Sidredigeraren (dokumentsökning):**
 
-   Den här konfigurationen definierar de alternativ som är tillgängliga när du söker efter dokument i resursläsaren (när du redigerar en sida).
+  Den här konfigurationen definierar de alternativ som är tillgängliga när du söker efter dokument i resursläsaren (när du redigerar en sida).
 
 * **Sidredigeraren (bildsökning):**
 
-   Den här konfigurationen definierar de alternativ som är tillgängliga när du söker efter bilder i resursläsaren (när du redigerar en sida).
+  Den här konfigurationen definierar de alternativ som är tillgängliga när du söker efter bilder i resursläsaren (när du redigerar en sida).
 
 * **Page Editor (Manuscript search):**
 
-   Den här konfigurationen definierar de alternativ som är tillgängliga när du söker efter manuskript i resursläsaren (när du redigerar en sida).
+  Den här konfigurationen definierar de alternativ som är tillgängliga när du söker efter manuskript i resursläsaren (när du redigerar en sida).
 
 * **Sidredigeraren (sidsökning):**
 
-   Den här konfigurationen definierar de alternativ som är tillgängliga när du söker efter sidor i resursläsaren (när du redigerar en sida).
+  Den här konfigurationen definierar de alternativ som är tillgängliga när du söker efter sidor i resursläsaren (när du redigerar en sida).
 
 * **Page Editor (Styckesökning):**
 
-   Den här konfigurationen definierar de alternativ som är tillgängliga när du söker efter stycken i resursläsaren (när du redigerar en sida).
+  Den här konfigurationen definierar de alternativ som är tillgängliga när du söker efter stycken i resursläsaren (när du redigerar en sida).
 
 * **Page Editor (produktsökning):**
 
-   Den här konfigurationen definierar de alternativ som är tillgängliga när du söker efter produkter i resursläsaren (när du redigerar en sida).
+  Den här konfigurationen definierar de alternativ som är tillgängliga när du söker efter produkter i resursläsaren (när du redigerar en sida).
 
 * **Page Editor (Dynamic Media Classic [tidigare Scene7] sök)**:
 
-   Den här konfigurationen definierar de alternativ som är tillgängliga när du söker efter Scene7-resurser i resursläsaren (när du redigerar en sida).
+  Den här konfigurationen definierar de alternativ som är tillgängliga när du söker efter Scene7-resurser i resursläsaren (när du redigerar en sida).
 
 * **Webbplatsadministratörens sökväg**:
 
-   Den här konfigurationen definierar de sökalternativ som är tillgängliga för användaren när sökfältet i webbplatskonsolen används.
+  Den här konfigurationen definierar de sökalternativ som är tillgängliga för användaren när sökfältet i webbplatskonsolen används.
 
 * **Sidredigeraren (videosökning):**
 
-   Den här konfigurationen definierar de alternativ som är tillgängliga när du söker efter videoklipp i resursläsaren (när du redigerar en sida).
+  Den här konfigurationen definierar de alternativ som är tillgängliga när du söker efter videoklipp i resursläsaren (när du redigerar en sida).
 
 * **Resursadministratörssökväg:**
 
-   Den här konfigurationen definierar de sökalternativ som är tillgängliga för användaren när konsolen Resurser används.
+  Den här konfigurationen definierar de sökalternativ som är tillgängliga för användaren när konsolen Resurser används.
 
 * **Katalogadministratörssökväg:**
 
-   Den här konfigurationen definierar de sökalternativ som är tillgängliga för användaren vid sökning i en e-handelskatalog.
+  Den här konfigurationen definierar de sökalternativ som är tillgängliga för användaren vid sökning i en e-handelskatalog.
 
 * **Sökväg för administrationsadministratör:**
 
-   Den här konfigurationen definierar de sökalternativ som är tillgängliga för användaren vid sökning i handelsorder.
+  Den här konfigurationen definierar de sökalternativ som är tillgängliga för användaren vid sökning i handelsorder.
 
 * **Sökväg för administratör för produktsamlingar:**
 
-   Den här konfigurationen definierar de sökalternativ som är tillgängliga för användaren vid sökning i produktsamlingar för e-handel.
+  Den här konfigurationen definierar de sökalternativ som är tillgängliga för användaren vid sökning i produktsamlingar för e-handel.
 
 * **Sökväg för produktadministratörer:**
 
-   Den här konfigurationen definierar de sökalternativ som är tillgängliga för användaren vid sökning i e-handelsprodukter.
+  Den här konfigurationen definierar de sökalternativ som är tillgängliga för användaren vid sökning i e-handelsprodukter.
 
 * **Sökväg för projektadministratör:**
 
-   Den här konfigurationen definierar de sökalternativ som är tillgängliga för användaren vid sökning i projekt.
+  Den här konfigurationen definierar de sökalternativ som är tillgängliga för användaren vid sökning i projekt.
 
 ## Förutsägelser och deras inställningar {#predicates-and-their-settings}
 
@@ -329,11 +330,11 @@ Följande predikat är tillgängliga, beroende på konfigurationen:
 >[!NOTE]
 >
 >* De vanliga sökpredikten definieras i:
-   >  `/libs/cq/gui/components/common/admin/customsearch/searchpredicates`
+>  `/libs/cq/gui/components/common/admin/customsearch/searchpredicates`
 >
 >* Sökpredikat som bara är relaterade till siteadmin (klassiskt användargränssnitt) finns under:
-   >  `/libs/cq/gui/components/siteadmin/admin/searchpanel/searchpredicates`
-   >   * Dessa är inaktuella och endast tillgängliga för bakåtkompatibilitet.
+>  `/libs/cq/gui/components/siteadmin/admin/searchpanel/searchpredicates`
+>   * Dessa är inaktuella och endast tillgängliga för bakåtkompatibilitet.
 >
 >Den här informationen är endast avsedd som referens. Du får inte göra ändringar i `/libs`.
 
@@ -343,47 +344,46 @@ Beroende på predikatet finns ett urval av inställningar tillgängliga för kon
 
 * **Fältetikett**
 
-   Den etikett som visas som ett komprimeringsbart huvud eller som fältetikett för predikatet.
+  Den etikett som visas som ett komprimeringsbart huvud eller som fältetikett för predikatet.
 
 * **Beskrivning**
 
-   Beskrivande information för användaren.
+  Beskrivande information för användaren.
 
 * **Platshållare**
 
-   Tom text eller platshållaren för predikatet om ingen filtreringstext anges.
+  Tom text eller platshållaren för predikatet om ingen filtreringstext anges.
 
 * **Egenskapsnamn**
 
-   Egenskapen som ska genomsökas. Den använder en relativ sökväg och jokertecknen `*/*/*` ange egenskapens djup i förhållande till `jcr:content` nod (varje asterisk representerar en nodnivå).
+  Egenskapen som ska genomsökas. Den använder en relativ sökväg och jokertecknen `*/*/*` ange egenskapens djup i förhållande till `jcr:content` nod (varje asterisk representerar en nodnivå).
 
-   Om du bara vill söka på en underordnad nod på första nivån för resursen som har `x` på `jcr:content` nod `*/jcr:content/x`
+  Om du bara vill söka på en underordnad nod på första nivån för resursen som har `x` på `jcr:content` nod `*/jcr:content/x`
 
 * **Egenskapsdjup**
 
-   Det maximala djup som ska sökas efter den egenskapen i resurserna. En sökning på den egenskapen kan därför utföras på en resurs och rekursiva underordnade tills nivån på de underordnade är lika med det angivna djupet.
+  Det maximala djup som ska sökas efter den egenskapen i resurserna. En sökning på den egenskapen kan därför utföras på en resurs och rekursiva underordnade tills nivån på de underordnade är lika med det angivna djupet.
 
 * **Egenskapsvärde**
 
-   Egenskapsvärdet som en absolut sträng eller som ett uttrycksspråk. till exempel `cq:Page` eller
+  Egenskapsvärdet som en absolut sträng eller som ett uttrycksspråk. till exempel `cq:Page` eller
 
-   `${empty requestPathInfo.suffix ? "/content" : requestPathInfo.suffix}`.
+  `${empty requestPathInfo.suffix ? "/content" : requestPathInfo.suffix}`.
 
 * **Intervalltext**
 
-   Etiketten för intervallfältet i **Datumintervall** förutsäga.
+  Etiketten för intervallfältet i **Datumintervall** förutsäga.
 
 * **Alternativbana**
 
-   Användaren kan markera sökvägen med hjälp av Bandläsaren på fliken för predikatinställningar. När du har valt **+** -ikonen används för att lägga till markeringen i listan över giltiga alternativ (sedan **-** -ikonen som ska tas bort om det behövs).
+  Användaren kan markera sökvägen med hjälp av Bandläsaren på fliken för predikatinställningar. När du har valt **+** -ikonen används för att lägga till markeringen i listan över giltiga alternativ (sedan **-** -ikonen som ska tas bort om det behövs).
 
-   Alternativen är innehållsnoder som skapas av användaren och som har följande struktur:
+  Alternativen är innehållsnoder som skapas av användaren och som har följande struktur:
 
-   `(jcr:primaryType = nt:unstructured, value (String), jcr:title (String))`
+  `(jcr:primaryType = nt:unstructured, value (String), jcr:title (String))`
 
 * **Alternativ nodsökväg**
-I praktiken samma som 
-**Sökväg till alternativ**, det är bara det här som finns i det vanliga predikatfältet, det andra är specifikt för resurser.
+I praktiken samma som **Sökväg till alternativ**, det är bara det här som finns i det vanliga predikatfältet, det andra är specifikt för resurser.
 
 * **Enkel markering**
 Om det här alternativet är markerat återges alternativen som kryssrutor som bara tillåter ett urval. Om du av misstag markerar kryssrutan kan den avmarkeras.
@@ -411,7 +411,6 @@ Etiketterna för publicerings- och Live copy-kryssrutorna för det platsspecifik
    >* `/apps/cq/gui/content/facets/<option>`
    >* `/apps/commerce/gui/content/facets/<option>`
 
-
 ### Lägg till/redigera ett prediktionsfält och definiera fältinställningar {#add-edit-a-predicate-field-and-define-field-settings}
 
 Du kan lägga till eller redigera fält och definiera/uppdatera deras inställningar:
@@ -419,20 +418,21 @@ Du kan lägga till eller redigera fält och definiera/uppdatera deras inställni
 1. [Öppna den anpassade konfigurationen](#creating-opening-a-customized-configuration) för uppdatering.
 1. Om du vill lägga till ett nytt fält öppnar du **Välj predikat** och dra predikatet till önskad plats. Till exempel **Prediktion för datumintervall**:
 
-   ![chlimage_1-375](assets/chlimage_1-375.png)
+   ![Redigera ett sökformulär](assets/chlimage_1-375.png)
 
 1. Beroende på om:
 
    * Du lägger till ett nytt fält:
 
-      När du har lagt till predikatet **Inställningar** öppnar och visar de egenskaper som kan definieras.
+     När du har lagt till predikatet **Inställningar** öppnar och visar de egenskaper som kan definieras.
 
    * Du vill uppdatera ett befintligt predikat:
 
-      Markera predikatfältet (till höger) och öppna sedan **Inställningar** -fliken.
+     Markera predikatfältet (till höger) och öppna sedan **Inställningar** -fliken.
+
    Till exempel inställningarna för **Prediktion för datumintervall**:
 
-   ![chlimage_1-376](assets/chlimage_1-376.png)
+   ![Egenskaper för predikat för datumintervall](assets/chlimage_1-376.png)
 
 1. Gör önskade ändringar och bekräfta med **Klar**.
 
@@ -440,11 +440,11 @@ Du kan lägga till eller redigera fält och definiera/uppdatera deras inställni
 
 1. Välj ikonen Förhandsgranska:
 
-   ![](do-not-localize/chlimage_1-31.png)
+   ![Ikonen Förhandsgranska](do-not-localize/chlimage_1-31.png)
 
 1. Då visas sökformulären så som de visas (helt expanderade) i kolumnen Sök i lämplig konsol.
 
-   ![chlimage_1-377](assets/chlimage_1-377.png)
+   ![Förhandsgranska sökformuläret](assets/chlimage_1-377.png)
 
 1. **Stäng** förhandsgranskningen för att returnera och slutföra konfigurationen.
 
@@ -453,7 +453,7 @@ Du kan lägga till eller redigera fält och definiera/uppdatera deras inställni
 1. [Öppna den anpassade konfigurationen](#creating-opening-a-customized-configuration) för uppdatering.
 1. Markera predikatfältet (till höger), öppna **Inställningar** och sedan väljer **Ta bort** ikon (längst ned till vänster).
 
-   ![](do-not-localize/chlimage_1-32.png)
+   ![Ikonen Ta bort](do-not-localize/chlimage_1-32.png)
 
 1. En dialogruta begär att du bekräftar borttagningsåtgärden.
 
@@ -471,7 +471,7 @@ En anpassad konfiguration tas bort från konsolen:
 
 1. Välj önskad konfiguration (till exempel **Page Editor (Styckesökning)**) och sedan **Ta bort** ikon i verktygsfältet:
 
-   ![chlimage_1-378](assets/chlimage_1-378.png)
+   ![Ta bort ett formulär](assets/chlimage_1-378.png)
 
 1. Den anpassade konfigurationen tas bort och standardinställningen återställs (detta indikeras av att hänglåssymbolen visas igen i konsolen).
 
@@ -490,7 +490,7 @@ I följande exempel (som används för att söka efter mallen som används för 
    * `jcr:title` - den fältetikett som ska visas i sökfältet
    * `value` - egenskapsvärdet som ska genomsökas
 
-   ![chlimage_1-379](assets/chlimage_1-379.png)
+   ![Lägga till alternativ i CRXDE](assets/chlimage_1-379.png)
 
    >[!NOTE]
    >
@@ -504,7 +504,6 @@ I följande exempel (som används för att söka efter mallen som används för 
    >1. `/libs/cq/gui/content/common/options/predicates`
    >1. Gör ändringar i `/apps.`
 
-
 1. Öppna **Sök i Forms** och välj den konfiguration som du vill uppdatera. Till exempel: **Webbplatsadministratörens sökväg**.
 
    Klicka/tryck sedan på **Redigera sökformulär** ikon.
@@ -514,21 +513,22 @@ I följande exempel (som används för att söka efter mallen som används för 
 
    * **Egenskapsnamn**
 
-      Specificera den nodegenskap som du vill söka efter på målnoderna. Till exempel:
+     Specificera den nodegenskap som du vill söka efter på målnoderna. Till exempel:
 
-      `jcr:content/cq:template`
+     `jcr:content/cq:template`
 
    * **Alternativ nodsökväg**
 
-      Välj den sökväg där du vill ha dina alternativ. Till exempel:
+     Välj den sökväg där du vill ha dina alternativ. Till exempel:
 
-      `/apps/cq/gui/content/common/options/predicates/templatetype`
-   ![chlimage_1-380](assets/chlimage_1-380.png)
+     `/apps/cq/gui/content/common/options/predicates/templatetype`
+
+   ![Lägga till egenskapssökväg](assets/chlimage_1-380.png)
 
 1. Välj **Klar** för att spara konfigurationen.
 1. Navigera till rätt konsol (i det här exemplet **Webbplatser**) och öppna **Sök** järnväg. De nya sökformulären, tillsammans med de olika alternativen, visas. Välj önskat alternativ för att visa sökresultaten:
 
-   ![chlimage_1-381](assets/chlimage_1-381.png)
+   ![Slutresultaten](assets/chlimage_1-381.png)
 
 ## Användarbehörigheter {#user-permissions}
 

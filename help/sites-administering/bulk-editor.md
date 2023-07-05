@@ -11,12 +11,13 @@ content-type: reference
 discoiquuid: 3649cffb-418a-4ad6-862f-56346a831b0b
 docset: aem65
 exl-id: c63e044c-4d2a-44d3-853b-8e7337e1ee03
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: feef7362b832f2ddef1902ef2a25d55323b6be26
 workflow-type: tm+mt
-source-wordcount: '1143'
+source-wordcount: '1167'
 ht-degree: 0%
 
 ---
+
 
 # Massredigeraren{#the-bulk-editor}
 
@@ -46,11 +47,11 @@ Ett exempel som illustrerar en sådan användning finns på Geometrixx webbplats
 1. Navigera till **Support** sidan och sedan till **Nöjd kundtjänst** enkät.
 1. **Redigera** den **Formulärets början** stycke. I dialogrutan klickar du på **Avancerat** -fliken, expandera **Åtgärdskonfiguration** och sedan klicka **Visa data...**.
 
-   ![](assets/custsatsurvey.png)
+   ![Exempel på enkät om kundnöjdhet](assets/custsatsurvey.png)
 
 1. Massredigeraren är helt anpassningsbar. I det här exemplet kan användare inte redigera innehållet, men bara exportera informationen till ett kalkylblad.
 
-   ![](assets/bulkeditor.png)
+   ![Konsol för massredigering](assets/bulkeditor.png)
 
 ## Så här använder du gruppredigeraren {#how-to-use-the-bulk-editor}
 
@@ -100,16 +101,16 @@ Så här använder du gruppredigeraren för att redigera flera objekt samtidigt:
 
 Till exempel:
 
-![](assets/searchfilter.png)
+![Alternativ för filtret Massredigeraren](assets/searchfilter.png)
 
 1. Klicka **Sök**. Resultaten visas i gruppredigeraren.
 I exemplet ovan returneras alla sidor som uppfyller dina sökvillkor och visas med de begärda kolumnerna.
 
-   ![](assets/chlimage_1-39.png)
+   ![Resultat av gruppredigering](assets/chlimage_1-39.png)
 
 1. Gör de ändringar du behöver genom att dubbelklicka i en cell.
 
-   ![](assets/srchresultedit.png)
+   ![Gruppredigering](assets/srchresultedit.png)
 
 1. Klicka **Spara** för att spara dina ändringar **Spara** aktiveras när du har redigerat en cell).
 
@@ -137,12 +138,12 @@ Så här exporterar du innehåll:
    >
    >Som standard kodas ändringar i [Windows-1252](https://en.wikipedia.org/wiki/Windows-1252) (kallas även CP-1252). Du kan markera UTF-8 om du vill exportera ändringarna i UTF-8.
 
-   ![](assets/srchrsesultexport.png)
+   ![Exporterar resultat](assets/srchrsesultexport.png)
 
 1. Markera platsen och bekräfta att du vill hämta filen.
 1. När du har laddat ned filen kan du öppna den från kalkylprogrammet, till exempel Microsoft Excel. Kalkylbladsprogrammet importerar filen och konverterar den till ett kalkylbladsformat.
 
-   ![](assets/exportinexcel.png)
+   ![Exporterade resultat i ett kalkylblad](assets/exportinexcel.png)
 
 ### Importera innehåll {#importing-content}
 

@@ -11,12 +11,13 @@ content-type: reference
 discoiquuid: 95ab2e54-0f8d-49e0-ad20-774875f6f80a
 exl-id: f3477d21-7e9a-4588-94e8-496bc42434a8
 feature: Security
-source-git-commit: 7803f1df1e05dc838cb458026f8dbd27de9cb924
+source-git-commit: 4dd216167f97eb6f6181586b57694b139872c5ef
 workflow-type: tm+mt
-source-wordcount: '945'
-ht-degree: 1%
+source-wordcount: '958'
+ht-degree: 0%
 
 ---
+
 
 # Granitåtgärder - användar- och gruppadministration{#granite-operations-user-and-group-administration}
 
@@ -26,7 +27,7 @@ Dessa konton utgör den underliggande grunden för [AEM](/help/sites-administeri
 
 Administrationskonsoler för Granite-användare och grupper är båda tillgängliga från **[verktyg](/help/sites-administering/tools-consoles.md)** konsol för det pekoptimerade användargränssnittet:
 
-![chlimage_1-72](assets/chlimage_1-72a.png)
+![Verktygskonsol](assets/chlimage_1-72a.png)
 
 Välj antingen **Användare** eller **Grupper** från verktygskonsolen öppnar rätt konsol. I båda kan du vidta åtgärder antingen genom att använda kryssrutan och sedan åtgärder från verktygsfältet, eller genom att öppna kontoinformationen via länken under **Namn**.
 
@@ -42,7 +43,7 @@ Välj antingen **Användare** eller **Grupper** från verktygskonsolen öppnar r
 
 * [Gruppadministration](#group-administration)
 
-  ![chlimage_1-74](assets/chlimage_1-74a.png)
+  ![Konsol för användarhantering](assets/chlimage_1-74a.png)
 
   The **Grupper** konsollistor:
 
@@ -56,11 +57,11 @@ Välj antingen **Användare** eller **Grupper** från verktygskonsolen öppnar r
 
 1. Använd **Lägg till användare** ikon:
 
-   ![Lägg till användare](do-not-localize/chlimage_1-1.png)
+   ![Ikonen Lägg till användare](do-not-localize/chlimage_1-1.png)
 
 1. The **Skapa användare** formuläret öppnas:
 
-   ![chlimage_1-75](assets/chlimage_1-75a.png)
+   ![Formulär för användarinformation](assets/chlimage_1-75a.png)
 
    Här kan du ange användarinformation för kontot (de flesta är standard och självförklarande):
 
@@ -132,11 +133,11 @@ Du kan flagga kontot som antingen **aktiv** eller **inaktiv**.
 
 1. Nu kan du redigera informationen som i [Lägga till en ny användare](#adding-a-new-user). Under **Kontoinställningar** det finns en länk för **Ändra lösenord**.
 
-   ![chlimage_1-76](assets/chlimage_1-76a.png)
+   ![Dialogrutan Kontoinställningar](assets/chlimage_1-76a.png)
 
 1. The **Ändra lösenord** öppnas. Ange och skriv det nya lösenordet igen tillsammans med ditt lösenord. Använd **OK** för att bekräfta ändringarna.
 
-   ![chlimage_1-77](assets/chlimage_1-77a.png)
+   ![Ändra lösenordsdialogruta](assets/chlimage_1-77a.png)
 
    Ett meddelande bekräftar att lösenordet har ändrats.
 
@@ -149,7 +150,7 @@ Du kan flagga kontot som antingen **aktiv** eller **inaktiv**.
 
    Så här öppnar du listrutan för gruppval:
 
-   ![chlimage_1-78](assets/chlimage_1-78a.png)
+   ![Gruppväljare](assets/chlimage_1-78a.png)
 
 1. I markeringsrutan kan du markera eller avmarkera grupper som användarkontot ska tillhöra.
 
@@ -177,7 +178,7 @@ Du kan flagga kontot som antingen **aktiv** eller **inaktiv**.
 
 1. The **Skapa grupp** formuläret öppnas:
 
-   ![chlimage_1-79](assets/chlimage_1-79a.png)
+   ![Formulär för gruppinformation](assets/chlimage_1-79a.png)
 
    Här kan du ange gruppinformation:
 

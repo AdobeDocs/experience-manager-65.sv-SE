@@ -11,12 +11,13 @@ content-type: reference
 discoiquuid: 994a5751-7267-4a61-9bc7-01440a256c65
 docset: aem65
 exl-id: acb5b235-523e-4c01-9bd2-0cc2049f88e2
-source-git-commit: 7803f1df1e05dc838cb458026f8dbd27de9cb924
+source-git-commit: 1036127ae508ec76c868db5fb67709c104c51123
 workflow-type: tm+mt
-source-wordcount: '1226'
+source-wordcount: '1250'
 ht-degree: 0%
 
 ---
+
 
 # Identity Management{#identity-management}
 
@@ -61,11 +62,11 @@ A [formulär](/help/sites-authoring/default-components.md#form-component) kan an
 Användare kan till exempel begära en ny profil via sidan Geometrixx
 `http://localhost:4502/content/geometrixx-outdoors/en/user/register.html`
 
-![registerformulär](assets/registerform.png)
+![Exempelregistreringsformulär](assets/registerform.png)
 
 När du skickar begäran öppnas profilsidan där användaren kan ange personlig information.
 
-![profilsida](assets/profilepage.png)
+![Exempel på profilsida](assets/profilepage.png)
 
 Det nya kontot visas även i [Användarkonsol](/help/sites-administering/security.md).
 
@@ -79,7 +80,7 @@ Användare kan till exempel antingen logga in eller skapa ett nytt konto med **L
 
 `http://localhost:4502/content/geometrixx-outdoors/en/user/sign-in.html`
 
-![inloggning](assets/login.png)
+![Exempel på inloggningssida](assets/login.png)
 
 ## Loggar ut {#logging-out}
 
@@ -106,13 +107,13 @@ Du kan visa en annan profil med [klientkontext](/help/sites-administering/client
 1. Tryck **control-alt-C** för att öppna klientkontexten.
 1. Klicka på knappen längst upp till vänster i klientkontexten **Läs in en profil** -knappen.
 
-   ![Knappen Läs in en profil](do-not-localize/loadprofile.png)
+   ![Läsa in en profilikon](do-not-localize/loadprofile.png)
 
 1. Välj en annan profil i listrutan i dialogrutan. till exempel **Alison Parker**.
 1. Klicka **OK**.
 1. Klicka igen **Min profil**. Formuläret uppdateras med Alisons information.
 
-   ![profilealison](assets/profilealison.png)
+   ![Exempelprofil för Alison](assets/profilealison.png)
 
 1. Du kan nu använda **Redigera profil** eller **Ändra lösenord** för att uppdatera informationen.
 
@@ -136,11 +137,11 @@ Du kan lägga till fält i profildefinitionen. Om du till exempel vill lägga ti
 
    Nästa gång du visar en profil kan du välja en favoritfärg:
 
-   ![aparkerfavcolor](assets/aparkerfavcolour.png)
+   ![Alison Parker&#39;s favorite color sample field](assets/aparkerfavcolour.png)
 
    Fältet sparas under **profil** i det aktuella användarkontot:
 
-   ![aparkercrxdelite](assets/aparkercrxdelite.png)
+   ![Alison Parkers data i CRXDE](assets/aparkercrxdelite.png)
 
 ## Profiltillstånd {#profile-states}
 
@@ -188,7 +189,7 @@ Profilerna lagras i innehållsdatabasen som en del av[användarkonto](/help/site
 
 Profilen finns under `/home/users/geometrixx`:
 
-![chlimage_1-138](assets/chlimage_1-138.png)
+![Profiler enligt CRXDE](assets/chlimage_1-138.png)
 
 I en standardinstallation (författare eller publicering) har alla läsåtkomst till all profilinformation för alla användare. alla är *Inbyggd grupp som automatiskt innehåller alla befintliga användare och grupper. Det går inte att redigera medlemslistan*&quot;.
 
@@ -205,7 +206,7 @@ Om sådan åtkomst inte är lämplig för din installation kan du ändra dessa s
 
 Detta kan du göra med **[Åtkomstkontroll](/help/sites-administering/user-group-ac-admin.md#access-right-management)** tab:
 
-![aclmanager](assets/aclmanager.png)
+![Hantera åtkomstkontrollistor i CRXDE](assets/aclmanager.png)
 
 ## Profilkomponenter {#profile-components}
 
@@ -220,22 +221,22 @@ Den här komponenten ger dig två fält för:
 
 Med standardinställningarna visas komponenten så här:
 
-![dc_profiles_checkedpassword](assets/dc_profiles_checkedpassword.png)
+![Dialogrutan Kontrollera lösenord](assets/dc_profiles_checkedpassword.png)
 
 ### Profil Avatar Photo {#profile-avatar-photo}
 
 Den här komponenten ger användaren en funktion för att välja och överföra en Avatar Photo-fil.
 
-![dc_profiles_avatarphoto](assets/dc_profiles_avatarphoto.png)
+![Avatarväljare](assets/dc_profiles_avatarphoto.png)
 
 ### Detaljerat profilnamn {#profile-detailed-name}
 
 Med den här komponenten kan användaren ange ett detaljerat namn.
 
-![dc_profiles_detailName](assets/dc_profiles_detailedname.png)
+![Dialogrutan Detaljerat namn](assets/dc_profiles_detailedname.png)
 
 ### Profilkön {#profile-gender}
 
 Med den här komponenten kan användaren ange sitt kön.
 
-![dc_profiles_kön](assets/dc_profiles_gender.png)
+![Genusväljare](assets/dc_profiles_gender.png)

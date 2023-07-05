@@ -11,12 +11,13 @@ content-type: reference
 discoiquuid: 7a3322fe-554e-479e-a27c-4259cdd3ba2e
 docset: aem65
 exl-id: 69c66c82-fbd6-406e-aefd-b85480a62109
-source-git-commit: 02afc4eb78acaacc40d3ba1830ccb1e9c3907d0f
+source-git-commit: aaeef8fcc0ed5f205aeb7ab40cc61f60912c9869
 workflow-type: tm+mt
-source-wordcount: '1877'
+source-wordcount: '1973'
 ht-degree: 0%
 
 ---
+
 
 # Klientkontext{#client-context}
 
@@ -26,9 +27,9 @@ ht-degree: 0%
 
 Klientkontexten är en mekanism som ger dig viss information om den aktuella sidan och besökaren. Den kan öppnas med **Ctrl-Alt-c** (fönster) eller **control-option-c** (Mac):
 
-![](assets/clientcontext_alisonparker.png)
+![Ett exempel på fönstret Client Context](assets/clientcontext_alisonparker.png)
 
-I båda [publicerings- och författarmiljö som visar information](#propertiesavailableintheclientcontext) om:
+I både publicerings- och författarmiljön visas information om:
 
 * Besökaren. beroende på din instans, begärs viss information eller hämtas.
 * Sida-taggar och det antal gånger som den aktuella besökaren har haft åtkomst till dessa taggar (visas när du flyttar musen över en viss tagg).
@@ -38,7 +39,7 @@ I båda [publicerings- och författarmiljö som visar information](#propertiesav
 
 Med ikonerna (endast tillgängliga i författarmiljön) kan du konfigurera informationen för klientkontexten:
 
-![](do-not-localize/clientcontext_icons.png)
+![Ikonerna Redigera, Läs in och Återställ i fönstret Klientkontext](do-not-localize/clientcontext_icons.png)
 
 * **Redigera**
 En ny sida öppnas där du kan [redigera, lägga till eller ta bort en profilegenskap](#editingprofiledetails).
@@ -116,6 +117,7 @@ Om musen till exempel befinner sig över den vänstra eller högra delen av fön
 **Tag Cloud** Visar taggar som angetts på den aktuella sidan och de som samlats in medan webbplatsen surrades. När du för musen över en tagg visas antalet gånger som den aktuella användaren har kommit åt sidor som innehåller den aktuella taggen.
 
 >[!NOTE]
+>
 Taggar som anges för DAM-resurser som visas på de besökta sidorna räknas inte.
 
 **Technographics Store** Den här komponenten är beroende av din installation.
@@ -127,6 +129,7 @@ Det här sessionsarkivet har ingen standardklientkontextkomponent.
 Mer information finns i [Klientkontext i detalj](/help/sites-developing/client-context.md).
 
 >[!NOTE]
+>
 Siddata är inte längre en standardkomponent i klientkontexten. Om det behövs kan du lägga till detta genom att redigera klientkontexten och lägga till **Egenskaper för allmänt arkiv** och sedan konfigurera detta för att definiera **Butik** as `pagedata`.
 
 ## Ändra klientkontextprofilen {#changing-the-client-context-profile}
@@ -149,11 +152,11 @@ När du är klar kan du [återställa profilen](#resetting-the-profile-to-the-cu
 
 1. Klicka på ikonen Läs in profil:
 
-   ![](do-not-localize/clientcontext_loadprofile.png)
+   ![Ikonen Läs in profil för klientkontext](do-not-localize/clientcontext_loadprofile.png)
 
 1. Dialogrutan öppnas där du kan välja vilken profil du vill läsa in:
 
-   ![](assets/clientcontext_profileloader.png)
+   ![Dialogrutan Profilinläsare visar listrutan för att välja en profil](assets/clientcontext_profileloader.png)
 
 1. Klicka **OK** att läsa in.
 
@@ -163,7 +166,7 @@ Du kan också välja en profil med markeringsreglaget:
 
 1. Dubbelklicka på ikonen som representerar den aktuella användaren. Väljaren öppnas, använder pilarna för att navigera och ser tillgängliga profiler:
 
-   ![](assets/clientcontext_profileselector.png)
+   ![Användarväljaren](assets/clientcontext_profileselector.png)
 
 1. Klicka på den profil som du vill läsa in. När detaljerna har lästs in klickar du utanför väljaren för att stänga.
 
@@ -171,13 +174,13 @@ Du kan också välja en profil med markeringsreglaget:
 
 1. Använd återställningsikonen om du vill återställa profilen i klientkontexten till den aktuella användarens profil:
 
-   ![](do-not-localize/clientcontext_resetprofile.png)
+   ![Ikonen Återställ](do-not-localize/clientcontext_resetprofile.png)
 
 ### Ändra webbläsarplattform {#changing-the-browser-platform}
 
 1. Dubbelklicka på ikonen som representerar webbläsarplattformen. Väljaren öppnas, använder pilarna för att navigera och ser vilka plattformar/webbläsare som är tillgängliga:
 
-   ![](assets/clientcontext_browserplatform.png)
+   ![Väljare för webbläsarplattform](assets/clientcontext_browserplatform.png)
 
 1. Klicka på den webbläsare som du vill läsa in. När detaljerna har lästs in klickar du utanför väljaren för att stänga.
 
@@ -185,7 +188,7 @@ Du kan också välja en profil med markeringsreglaget:
 
 1. Dubbelklicka på geopositioneringsikonen. En expanderad karta öppnas, där du kan dra markören till en ny plats:
 
-   ![](assets/clientcontext_geomocationrelocate.png)
+   ![Geolokaliseringsinformation](assets/clientcontext_geomocationrelocate.png)
 
 1. Klicka utanför kartan för att stänga den.
 
@@ -193,7 +196,7 @@ Du kan också välja en profil med markeringsreglaget:
 
 1. Dubbelklicka på taggmolndelen i klientkontexten. Dialogrutan öppnas där du kan välja taggar:
 
-   ![](assets/clientcontext_tagselection.png)
+   ![Dialogrutan Taggmoln](assets/clientcontext_tagselection.png)
 
 1. Klicka på OK för att läsa in i klientkontexten.
 
@@ -205,13 +208,13 @@ När du redigerar en klientkontext kan du ange (eller återställa) värden för
 
 När du redigerar en klientkontext kan du ange (eller återställa) värden för vissa egenskaper. Detta gör att du kan testa specifika scenarier (särskilt användbart för [segmentering](/help/sites-administering/campaign-segmentation.md) och [kampanjer](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md)).
 
-![](assets/clientcontext_alisonparker_edit.png)
+![Redigera klientkontexten](assets/clientcontext_alisonparker_edit.png)
 
 ### Lägga till en egenskapskomponent {#adding-a-property-component}
 
 När du har öppnat **ClientContext designsida** kan du också **Lägg till** en helt ny egenskap som använder de tillgängliga komponenterna (komponenterna listas både på sidosparken eller från **Infoga ny komponent** som öppnas när du dubbelklickar på **Dra komponenter eller resurser hit** box):
 
-![](assets/clientcontext_alisonparker_new.png)
+![Lägga till en egenskap i fönstret Klientkontext](assets/clientcontext_alisonparker_new.png)
 
 ### Ta bort en egenskapskomponent {#removing-a-property-component}
 
@@ -231,11 +234,11 @@ Lägg till JSONP Store-komponenten i klientkontexten och använd den för att h�
 1. Om du vill öppna klientkontexten trycker du på Ctrl-Alt-c (Windows) eller Ctrl-Option-c (Mac).
 1. Klicka på redigeringsikonen högst upp i klientkontexten för att öppna Client Context Designer.
 
-   ![](do-not-localize/chlimage_1.png)
+   ![Länkikon](do-not-localize/chlimage_1.png)
 
 1. Dra JSONP Store-komponenten till klientkontexten.
 
-   ![](assets/chlimage_1-4.jpeg)
+   ![Dra och släpp JSONP Store-komponenten i klientkontexten](assets/chlimage_1-4.jpeg)
 
 1. Dubbelklicka på komponenten för att öppna redigeringsdialogrutan.
 1. Ange följande URL i rutan URL för JSONP-tjänsten och klicka sedan på Hämta butik:
@@ -244,12 +247,12 @@ Lägg till JSONP Store-komponenten i klientkontexten och använd den för att h�
 
    Komponenten anropar JSONP-tjänsten och visar alla egenskaper som returnerade data innehåller. De egenskaper som finns i listan är de som kommer att vara tillgängliga i klientkontexten.
 
-   ![](assets/chlimage_1-40.png)
+   ![Egenskaperna för JSONP-tjänsten](assets/chlimage_1-40.png)
 
 1. Klicka på OK.
 1. Gå tillbaka till Geometrixx Outdoors hemsida och uppdatera sidan. Klientkontexten innehåller nu information från JSONP Store-komponenten.
 
-   ![](assets/chlimage_1-41.png)
+   ![Exempel på JSONP-komponenten ifylld med data](assets/chlimage_1-41.png)
 
 ### Skapa segmentet {#create-the-segment}
 
@@ -270,7 +273,7 @@ Använd data från det sessionsarkiv som du skapade med JSONP-lagringskomponente
 1. Högerklicka på vinter-segmentet och klicka på Öppna.
 1. Dra den allmänna lagringsegenskapen till standardbehållaren OCH.
 
-   ![](assets/chlimage_1-5.jpeg)
+   ![Lägga till en komponent i segmentredigeraren](assets/chlimage_1-5.jpeg)
 
 1. Dubbelklicka på komponenten för att öppna redigeringsdialogrutan, ange följande egenskapsvärden och klicka sedan på OK:
 
