@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 67625e62-7035-4eb5-8dd5-6840d775a547
 docset: aem65
 exl-id: 5d7b6b2e-d1d8-4efe-b9ff-c9542b4e67d7
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 75c6bb87bb06c5ac9378ccebf193b5416c080bb1
 workflow-type: tm+mt
-source-wordcount: '898'
+source-wordcount: '902'
 ht-degree: 1%
 
 ---
@@ -40,7 +40,7 @@ Olika **Hjälp** -resurser kan nås direkt från AEM:
 
 Förutom att få tillgång till [hjälp från konsolens verktygsfält](/help/sites-classic-ui-authoring/author-env-basic-handling.md#accessing-help)kan du även komma åt hjälpen från sidan (med ? ikon) när du redigerar en sida:
 
-![](do-not-localize/sidekick-collapsed-2.png)
+![Sidekick, komprimerad](do-not-localize/sidekick-collapsed-2.png)
 
 Eller genom att använda **Hjälp** knappen i redigeringsdialogrutan för specifika komponenter, detta visar sammanhangsberoende hjälp.
 
@@ -165,7 +165,7 @@ Så här visar du direkta sidreferenser:
 
    ![screen_shot_2012-02-16at83311pm](assets/screen_shot_2012-02-16at83311pm.png)
 
-I vissa situationer finns ytterligare åtgärder tillgängliga från Sidekick, bland annat:
+I vissa situationer finns det ytterligare åtgärder att vidta från Sidekick, bland annat:
 
 * [Launches](/help/sites-classic-ui-authoring/classic-launches.md)
 * [Live-kopior](/help/sites-administering/msm.md)
@@ -188,9 +188,9 @@ Webbplatskonsolen [innehåller information om sidans aktuella status](/help/site
 
 När du redigerar en sida med det klassiska användargränssnittet finns det olika lägen som du kan komma åt med hjälp av ikonerna längst ned i sidosparken:
 
-![](do-not-localize/chlimage_1-12.png)
+![Sidlägen](do-not-localize/chlimage_1-12.png)
 
-Ikonerna längst ned i Spark används för att växla mellan olika lägen för att arbeta med sidorna:
+Ikonerna längst ned på Sidekick används för att växla mellan olika lägen för att arbeta med sidorna:
 
 * [Redigera](/help/sites-classic-ui-authoring/classic-page-author-edit-mode.md)
 Det här är standardläget och du kan redigera sidan, lägga till eller ta bort komponenter och göra andra ändringar.
@@ -209,7 +209,6 @@ I det här läget kan du redigera sidans design genom att konfigurera de kompone
 >* [Klientkontext](/help/sites-administering/client-context.md)
 >* Webbplatser - öppnar webbplatskonsolen.
 >* Läs in igen - uppdaterar sidan.
-
 
 ## Kortkommandon {#keyboard-shortcuts}
 

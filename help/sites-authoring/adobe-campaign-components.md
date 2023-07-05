@@ -9,9 +9,9 @@ topic-tags: personalization
 discoiquuid: 9da34dab-7e89-4127-ab26-532687746b2a
 docset: aem65
 exl-id: d1132fcd-e6a0-44a2-8753-d250f68fbd78
-source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
+source-git-commit: b3889b1897f0ec0c5bbf60c346b77b2906175904
 workflow-type: tm+mt
-source-wordcount: '2826'
+source-wordcount: '2837'
 ht-degree: 0%
 
 ---
@@ -85,7 +85,7 @@ Du kan antingen dra och släppa en bild från [Resursläsaren](/help/sites-autho
 
 När bilden har överförts (och inte tidigare) kan du använda [redigering på plats](/help/sites-authoring/editing-content.md#editcontenttouchoptimizedui) för att beskära/rotera bilden efter behov:
 
-![](do-not-localize/chlimage_1-10.png)
+![Verktygsfältet för infogad redigering](do-not-localize/chlimage_1-10.png)
 
 >[!NOTE]
 >
@@ -95,7 +95,7 @@ När bilden har överförts (och inte tidigare) kan du använda [redigering på 
 
 Flera ytterligare alternativ finns i helskärmsläge. till exempel mappa och zooma:
 
-![](do-not-localize/chlimage_1-11.png)
+![Fullskärmsläge](do-not-localize/chlimage_1-11.png)
 
 När en bild har lästs in kan du konfigurera följande:
 
@@ -132,6 +132,7 @@ Anger bildens höjd och bredd.
 >Du måste ange information i **Alt-text** i **Avancerat** eller så kan bilden inte sparas och följande felmeddelande visas:
 >
 >`Validation failed. Verify the values of the marked fields.`
+>
 
 I följande exempel visas en bildkomponent (Campaign).
 
@@ -150,8 +151,7 @@ Länkens bildtext. Det här är den text som användarna ser.
 Lägger till ytterligare information om hur länken används.
 
 * **LinkType**
-I listrutan väljer du mellan en 
-**Anpassad URL** och **Adaptivt dokument**. Det här fältet är obligatoriskt. Om du väljer Anpassad URL kan du ange länkens URL. Om du väljer Adaptivt dokument kan du ange dokumentets sökväg.
+I listrutan väljer du mellan en **Anpassad URL** och **Adaptivt dokument**. Det här fältet är obligatoriskt. Om du väljer Anpassad URL kan du ange länkens URL. Om du väljer Adaptivt dokument kan du ange dokumentets sökväg.
 
 * **Ytterligare URL-parameter**
 Lägg till eventuella ytterligare URL-parametrar. Klicka på Lägg till objekt om du vill lägga till flera objekt.
@@ -161,6 +161,7 @@ Lägg till eventuella ytterligare URL-parametrar. Klicka på Lägg till objekt o
 >Du måste ange information i **Länktyp** i **URL-information** eller så kan komponenten inte spara och följande felmeddelande visas:
 >
 >`Validation failed. Verify the values of the marked fields.`
+>
 
 I följande exempel visas en länkkomponent (Campaign).
 
@@ -196,11 +197,11 @@ När du klickar för att konfigurera komponenten väljer du Text eller Bild.
 
 Markera **Text** visar en textbunden redigerare:
 
-![](do-not-localize/chlimage_1-12.png)
+![Verktygsfältet Text](do-not-localize/chlimage_1-12.png)
 
 Markera **Bild** I visas redigeraren på plats för bilder:
 
-![](do-not-localize/chlimage_1-13.png)
+![Verktygsfältet Bild](do-not-localize/chlimage_1-13.png)
 
 Se [Bildkomponent (Campaign)](#image-campaign) om du vill ha mer information om hur du arbetar med bilder. Se [Text- och personaliseringskomponent (Campaign)](#text-personalization-campaign) om du vill ha mer information om hur du arbetar med text.
 
@@ -234,6 +235,7 @@ Anger bildens höjd och bredd.
 >The **Alt-text** i **Avancerat** -fliken är obligatorisk eller komponenten kan inte sparas och följande felmeddelande visas:
 >
 >`Validation failed. Verify the values of the marked fields.`
+>
 
 I följande exempel visas en text- och bildkomponent (Campaign).
 

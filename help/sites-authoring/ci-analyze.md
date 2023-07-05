@@ -11,9 +11,9 @@ topic-tags: site-features
 discoiquuid: 57cd61d5-78f2-4f8c-99ee-75e100c052ef
 docset: aem65
 exl-id: 14484a90-4e44-4c85-9411-b78ed11dc70d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 75c6bb87bb06c5ac9378ccebf193b5416c080bb1
 workflow-type: tm+mt
-source-wordcount: '662'
+source-wordcount: '666'
 ht-degree: 0%
 
 ---
@@ -54,7 +54,7 @@ Så här ändrar du rapporteringsperioden för en Content Insight-sida:
 
 1. Om tidsramen inte visas överst på sidan klickar du på eller trycker på ikonen för att växla tidsram.
 
-   ![](do-not-localize/chlimage_1-22.png)
+   ![Växla tidsram](do-not-localize/chlimage_1-22.png)
 
 1. Om du vill ändra startdatumet för rapportperioden drar du cirkeln som visas till vänster om det skuggade området till önskat startdatum.
 
@@ -92,7 +92,7 @@ Använd följande procedur för att skapa en uppgift för en SEO-rekommendation.
 
 1. Klicka på eller tryck på informationsikonen för SEO-rekommendationen.
 
-   ![](do-not-localize/chlimage_1-23.png)
+   ![Informationsikon](do-not-localize/chlimage_1-23.png)
 
 1. Klicka på den inringade triangeln som visas bredvid informationsikonen.
 

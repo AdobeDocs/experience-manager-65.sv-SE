@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: ccc0e434-8847-4e12-8a18-84b55fb2964b
 docset: aem65
 exl-id: 5623dcf4-bda9-4dee-ace3-5a1f6057e96c
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 75c6bb87bb06c5ac9378ccebf193b5416c080bb1
 workflow-type: tm+mt
-source-wordcount: '1789'
+source-wordcount: '1829'
 ht-degree: 0%
 
 ---
@@ -60,7 +60,7 @@ RTF-redigeraren har en rad funktioner, som [beroende på konfigurationen](/help/
 
 ### Grundläggande teckenformat {#basic-character-formats}
 
-![](do-not-localize/cq55_rte_basicchars.png)
+![Verktygsfältet Teckenformat](do-not-localize/cq55_rte_basicchars.png)
 
 Här kan du formatera markerade tecken (markerade); Vissa alternativ har även kortkommandon:
 
@@ -98,7 +98,7 @@ Ett format kan tas bort; placera markören i texten som formatet har tillämpats
 
 ### Klipp ut, Kopiera, Klistra in {#cut-copy-paste}
 
-![](do-not-localize/cq55_rte_cutcopypaste.png)
+![Verktygsfältet Klipp ut, Kopiera, Klistra in](do-not-localize/cq55_rte_cutcopypaste.png)
 
 Standardfunktionerna i **[!UICONTROL Cut]** och **[!UICONTROL Copy]** är tillgängliga. Flera smaker av **[!UICONTROL Paste]** finns för olika format.
 
@@ -112,7 +112,7 @@ Standardfunktionerna i **[!UICONTROL Cut]** och **[!UICONTROL Copy]** är tillg�
 
 ### Ångra, Gör om {#undo-redo}
 
-![](do-not-localize/cq55_rte_undoredo.png)
+![Ångra, Gör om, verktygsfält](do-not-localize/cq55_rte_undoredo.png)
 
 AEM sparar information om dina senaste 50 åtgärder i den aktuella komponenten, som hålls i kronologisk ordning. Dessa åtgärder kan ångras (och sedan göras om) i strikt ordning om det behövs.
 
@@ -126,7 +126,7 @@ AEM sparar information om dina senaste 50 åtgärder i den aktuella komponenten,
 
 ### Justering {#alignment}
 
-![](do-not-localize/cq55_rte_alignment.png)
+![Justering (verktygsfält)](do-not-localize/cq55_rte_alignment.png)
 
 Texten kan antingen vara vänsterjusterad, centrerad eller högerjusterad.
 
@@ -134,7 +134,7 @@ Texten kan antingen vara vänsterjusterad, centrerad eller högerjusterad.
 
 ### Indrag {#indentation}
 
-![](do-not-localize/cq55_rte_indent.png)
+![Verktygsfältet Indrag](do-not-localize/cq55_rte_indent.png)
 
 Indraget för ett stycke kan ökas eller minskas. Det markerade stycket dras in och ny text som matas in behåller den aktuella indragsnivån.
 
@@ -142,7 +142,7 @@ Indraget för ett stycke kan ökas eller minskas. Det markerade stycket dras in 
 
 ### Listor {#lists}
 
-![](do-not-localize/cq55_rte_lists.png)
+![Verktygsfältet Listor](do-not-localize/cq55_rte_lists.png)
 
 Du kan skapa både punktlistor och numrerade listor i texten. Välj listtyp och börja skriva eller markera texten som ska konverteras. I båda fallen startar en radmatning ett nytt listobjekt.
 
@@ -154,11 +154,11 @@ Du kan ändra formatet på en lista genom att placera markören i listan och sed
 
 ### Länkar {#links}
 
-![](do-not-localize/cq55_rte_links.png)
+![Verktygsfältet Länkar](do-not-localize/cq55_rte_links.png)
 
 En länk till en URL-adress (antingen på din webbplats eller på en extern plats) skapas genom att markera texten och sedan klicka på hyperlänkikonen:
 
-![](do-not-localize/chlimage_1-9.png)
+![Ikon för hyperlänk](do-not-localize/chlimage_1-9.png)
 
 I en dialogruta kan du ange mål-URL; även om den ska öppnas i ett nytt fönster.
 
@@ -178,11 +178,11 @@ Du kan:
 
 Om du vill bryta länken placerar du markören var som helst i länktexten och klickar på knappen [!UICONTROL Unlink] ikon:
 
-![](do-not-localize/chlimage_1-10.png)
+![Ikonen Bryt länk](do-not-localize/chlimage_1-10.png)
 
 ### Fästpunkter {#anchors}
 
-![](do-not-localize/cq55_rte_anchor.png)
+![Verktygsfältet Ankarpunkter](do-not-localize/cq55_rte_anchor.png)
 
 Du kan skapa en ankarpunkt var som helst i texten genom att antingen placera markören eller markera text. Klicka sedan på **Ankarpunkt** för att öppna dialogrutan.
 
@@ -196,7 +196,7 @@ Fästpunkten visas när komponenten redigeras och kan nu användas inom ett län
 
 ### Sök och ersätt {#find-and-replace}
 
-![](do-not-localize/cq55_rte_findreplace.png)
+![Verktygsfältet Sök och ersätt](do-not-localize/cq55_rte_findreplace.png)
 
 AEM tillhandahåller båda **Sök** och **Ersätt** funktionen (sök och ersätt).
 
@@ -222,7 +222,7 @@ Du kan dra bilder från innehållssökaren för att lägga till dem i texten.
 
 ### Stavningskontroll {#spelling-checker}
 
-![](do-not-localize/cq55_rte_spellchecker.png)
+![Stavningskontroll](do-not-localize/cq55_rte_spellchecker.png)
 
 Stavningskontrollen kontrollerar all text i den aktuella komponenten.
 
@@ -240,15 +240,15 @@ Tabeller är tillgängliga båda:
 
 * Som **Tabell** komponent
 
-   ![chlimage_1-105](assets/chlimage_1-105.png)
+  ![Tabellkomponent](assets/chlimage_1-105.png)
 
 * Från **Text** komponent
 
-   ![](do-not-localize/chlimage_1-11.png)
+  ![Verktygsfältet Text](do-not-localize/chlimage_1-11.png)
 
-   >[!NOTE]
-   >
-   >Även om tabeller är tillgängliga i RTE rekommenderar vi att du använder **Tabell** -komponenten när du skapar tabeller.
+  >[!NOTE]
+  >
+  >Även om tabeller är tillgängliga i RTE rekommenderar vi att du använder **Tabell** -komponenten när du skapar tabeller.
 
 I båda **Text** och **Tabell** Komponenttabellens funktionalitet är tillgänglig via snabbmenyn (oftast högermusknappen) som klickas i tabellen. till exempel:
 
@@ -362,7 +362,6 @@ Om du skapar en kapslad tabell skapas en ny, fristående tabell i den aktuella c
 >* Windows IE: Använd Ctrl+primär-musknapp-klicka (vanligen vänster) för att markera flera celler.
 >* Firefox: Markera ett cellområde genom att dra pekaren.
 
-
 #### Ta bort tabell {#remove-table}
 
 ![cq55_rte_removetable](assets/cq55_rte_removetable.png)
@@ -371,7 +370,7 @@ Använd alternativet för att ta bort tabellen från **[!UICONTROL Text]** -komp
 
 ### Specialtecken {#special-characters}
 
-![](do-not-localize/cq55_rte_specialchars.png)
+![Verktygsfältet Specialtecken](do-not-localize/cq55_rte_specialchars.png)
 
 Specialtecken kan göras tillgängliga för textredigeraren; de kan variera beroende på installationen.
 
@@ -381,7 +380,7 @@ Använd muspekaren för att se en förstorad version av tecknet och klicka sedan
 
 ### Källredigeringsläge {#source-editing-mode}
 
-![](do-not-localize/cq55_rte_sourceedit.png)
+![Verktygsfältet för källredigeringsläge](do-not-localize/cq55_rte_sourceedit.png)
 
 I källredigeringsläget kan du visa och redigera komponentens underliggande HTML.
 

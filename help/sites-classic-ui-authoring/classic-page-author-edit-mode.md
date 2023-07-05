@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 9aa0521f-f321-42e9-b022-7ff968a36212
 docset: aem65
 exl-id: 88af99df-846b-47b3-9b1f-68bfdfc40eb8
-source-git-commit: 95638b6dd9527c567b38d8cd9da14633bd4142b5
+source-git-commit: 75c6bb87bb06c5ac9378ccebf193b5416c080bb1
 workflow-type: tm+mt
-source-wordcount: '6035'
+source-wordcount: '6036'
 ht-degree: 0%
 
 ---
@@ -48,7 +48,7 @@ De allmänna komponenterna är de grundläggande komponenter som du använder f�
 
 Du kan definiera en länk med rubrik och beskrivning.
 
-![](do-not-localize/chlimage_1-2.png)
+![Länk](do-not-localize/chlimage_1-2.png)
 
 ### Adaptiv bild {#adaptive-image}
 
@@ -163,11 +163,12 @@ Beroende på vilket objekt du väljer visas en ny panel:
 
          * **Överordnad sida**
 Ange en bana manuellt eller med väljaren. Lämna tomt om du vill använda den aktuella sidan som överordnad.
+
       * **Alternativ för fast lista**
 
          * **Sidor**
-Välj en lista med sidor. Använd 
-`+` om du vill lägga till fler poster och upp-/nedknapparna för att justera ordningen.
+Välj en lista med sidor. Använd `+` om du vill lägga till fler poster och upp-/nedknapparna för att justera ordningen.
+
       * **Alternativ för sökning**
 
          * **Starta i**
@@ -175,21 +176,18 @@ Ange en startbana, antingen manuellt eller med väljaren.
 
          * **Sökfråga**
 Du kan ange en sökfråga med oformaterad text.
+
       * **Alternativ för avancerad sökning**
 
          * **Querybuilder-predikatnotation**
 Du kan ange en sökfråga med Querybuilder-predikatnotation. Du kan till exempel ange &quot;fulltext=Marketing&quot; om du vill att alla sidor med &quot;Marketing&quot; i innehållet ska visas i Carousel.
 Se [QueryBuilder API](/help/sites-developing/querybuilder-api.md) om du vill ha en fullständig diskussion om frågeuttryck och fler exempel.
+
    * **Beställ av**
-Välj 
-`jcr:title`, `jcr:created`, `cq:lastModified`, eller `cq:template` i listrutan.
+Välj `jcr:title`, `jcr:created`, `cq:lastModified`, eller `cq:template` i listrutan.
 
    * **Gräns**
 Valfritt. Det maximala antalet objekt som du vill använda i Carousel.
-
-
-
-
 
 >[!NOTE]
 >
@@ -262,19 +260,19 @@ Integrationskomponenten för det externa programmet (**Extern**) kan du bädda i
 
    * **Målprogram**
 
-      Ange URL-adressen till det webbprogram som ska integreras. till exempel:
+     Ange URL-adressen till det webbprogram som ska integreras. till exempel:
 
-      ```
-      https://en.wikipedia.org/wiki/Main_Page
-      ```
+     ```
+     https://en.wikipedia.org/wiki/Main_Page
+     ```
 
    * **Skicka parametrar**
 
-      Markera rutan för parametrar som ska skickas till programmet när det behövs.
+     Markera rutan för parametrar som ska skickas till programmet när det behövs.
 
    * **Bredd och höjd**
 
-      Definiera storleken på iframe
+     Definiera storleken på iframe
 
 Den externa tillämpningen är integrerad i den AEM sidans styckesystem. till exempel när du använder ett Target-program med `https://en.wikipedia.org/wiki/Main_Page`:
 
@@ -292,37 +290,37 @@ Med komponenten Flash kan du läsa in en Flash-film. Du kan dra en Flash-resurs 
 
    * **Flash movie**
 
-      Flash-filmfilen. Dra en resurs från innehållssökaren eller klicka för att öppna ett bläddringsfönster.
+     Flash-filmfilen. Dra en resurs från innehållssökaren eller klicka för att öppna ett bläddringsfönster.
 
    * **Storlek**
 
-      Dimensioner i pixlar i visningsområdet där filmen finns.
+     Dimensioner i pixlar i visningsområdet där filmen finns.
 
 * **Alternativ bild**
 
-   En alternativ bild som ska visas
+  En alternativ bild som ska visas
 
 * **Avancerat**
 
    * **Snabbmeny**
 
-      Anger om snabbmenyn ska visas eller döljas.
+     Anger om snabbmenyn ska visas eller döljas.
 
    * **Fönsterläge**
 
-      Hur fönstret visas, till exempel ogenomskinligt, genomskinligt eller som ett distinkt (heldraget) fönster.
+     Hur fönstret visas, till exempel ogenomskinligt, genomskinligt eller som ett distinkt (heldraget) fönster.
 
    * **Bakgrundsfärg**
 
-      En bakgrundsfärg som valts i det angivna färgdiagrammet.
+     En bakgrundsfärg som valts i det angivna färgdiagrammet.
 
    * **Minimiversion**
 
-      Den lägsta versionen av Adobe Flash Player som krävs för att köra filmen. Standardvärdet är 9.0.0.
+     Den lägsta versionen av Adobe Flash Player som krävs för att köra filmen. Standardvärdet är 9.0.0.
 
    * **Attribut**
 
-      Ytterligare attribut krävs.
+     Ytterligare attribut krävs.
 
 ### Bild {#image}
 
@@ -346,43 +344,43 @@ När en bild har lästs in kan du konfigurera följande:
 
 * **Karta**
 
-   Om du vill mappa en bild väljer du Karta. Du kan ange hur du vill skapa bildschemat (rektangel, polygon och så vidare) och var området ska peka.
+  Om du vill mappa en bild väljer du Karta. Du kan ange hur du vill skapa bildschemat (rektangel, polygon och så vidare) och var området ska peka.
 
 * **Beskär**
 
-   Välj Beskär så att du kan klippa ut en del av en bild. Beskär bilden med musen.
+  Välj Beskär så att du kan klippa ut en del av en bild. Beskär bilden med musen.
 
 * **Rotera**
 
-   Om du vill rotera en bild väljer du Rotera. Använd detta upprepade gånger tills bilden roteras som du vill ha den.
+  Om du vill rotera en bild väljer du Rotera. Använd detta upprepade gånger tills bilden roteras som du vill ha den.
 
 * **Rensa**
 
-   Ta bort den aktuella bilden.
+  Ta bort den aktuella bilden.
 
 * **Zoomningsfält**
 
-   Om du vill zooma in och ut i bilden använder du bildfältet under bilden (ovanför knapparna OK och Avbryt)
+  Om du vill zooma in och ut i bilden använder du bildfältet under bilden (ovanför knapparna OK och Avbryt)
 
 * **Titel**
 
-   Bildens titel.
+  Bildens titel.
 
 * **Alt-text**
 
-   En alternativ text som kan användas när hjälpmedelsanpassat innehåll skapas.
+  En alternativ text som kan användas när hjälpmedelsanpassat innehåll skapas.
 
 * **Länka till**
 
-   Skapa en länk till resurser eller andra sidor på webbplatsen.
+  Skapa en länk till resurser eller andra sidor på webbplatsen.
 
 * **Beskrivning**
 
-   En beskrivning av bilden.
+  En beskrivning av bilden.
 
 * **Storlek**
 
-   Anger bildens höjd och bredd.
+  Anger bildens höjd och bredd.
 
 Den slutliga bilden (med **Titel** och **Beskrivning**) kan visas som:
 
@@ -402,61 +400,61 @@ Med List-komponenten kan du konfigurera sökvillkor för att visa en lista:
 
    * **Skapa lista med**
 
-      Här anger du var i listan innehållet hämtas. Det finns flera metoder:
+     Här anger du var i listan innehållet hämtas. Det finns flera metoder:
 
    * Beroende på vilket objekt du väljer visas en ny panel:
 
       * **Alternativ för underordnade sidor**
 
          * **Barn** (Överordnad sida) Ange en bana antingen manuellt eller med väljaren. Lämna tomt om du vill använda den aktuella sidan som överordnad.
+
       * **Alternativ för fast lista**
 
          * **Sidor**
 
-            Välj en lista med sidor. Använd + för att lägga till fler poster och upp-/nedknapparna för att justera ordningen.
+           Välj en lista med sidor. Använd + för att lägga till fler poster och upp-/nedknapparna för att justera ordningen.
+
       * **Alternativ för sökning**
 
          * **Starta i**
 
-            Ange en startbana, antingen manuellt eller med väljaren.
+           Ange en startbana, antingen manuellt eller med väljaren.
 
          * **Sökfråga**
 
-            Du kan ange en sökfråga med oformaterad text.
+           Du kan ange en sökfråga med oformaterad text.
+
       * **Alternativ för avancerad sökning**
 
          * **Querybuilder-predikatnotation**
 
-            Du kan ange en sökfråga med Querybuilder-predikatnotation. Du kan till exempel ange &quot;fulltext=Marketing&quot; om du vill att alla sidor med &quot;Marketing&quot; i innehållet ska visas i Carousel.
+           Du kan ange en sökfråga med Querybuilder-predikatnotation. Du kan till exempel ange &quot;fulltext=Marketing&quot; om du vill att alla sidor med &quot;Marketing&quot; i innehållet ska visas i Carousel.
 
-            Se [QueryBuilder API](/help/sites-developing/querybuilder-api.md) om du vill ha en fullständig diskussion om frågeuttryck och fler exempel.
+           Se [QueryBuilder API](/help/sites-developing/querybuilder-api.md) om du vill ha en fullständig diskussion om frågeuttryck och fler exempel.
+
       * **Taggar**
 
-         Ange **Överordnad sida**, **Taggar/nyckelord** och de matchningskriterier som krävs.
+        Ange **Överordnad sida**, **Taggar/nyckelord** och de matchningskriterier som krävs.
+
    * **Visa som**
 
-      Hur du vill att objekten ska listas; innehåller länkar, lärare och nyheter.
+     Hur du vill att objekten ska listas; innehåller länkar, lärare och nyheter.
 
    * **Beställ av**
 
-      Anger om listan ska ordnas och i så fall vilka villkor som ska användas för sorteringen. Du kan ange ett villkor eller välja ett i listrutan.
+     Anger om listan ska ordnas och i så fall vilka villkor som ska användas för sorteringen. Du kan ange ett villkor eller välja ett i listrutan.
 
    * **Gräns**
 
-      Ange det maximala antalet objekt som ska visas i listan.
+     Ange det maximala antalet objekt som ska visas i listan.
 
    * **Aktivera feed**
 
-      Anger om en RSS-feed ska aktiveras för listan.
+     Anger om en RSS-feed ska aktiveras för listan.
 
    * **Paginera efter**
 
-      Här kan du ange hur många listobjekt som ska visas samtidigt. En lista med fler objekt än angivet använder sidnumrering för att visa listan i flera delar.
-
-
-
-
-
+     Här kan du ange hur många listobjekt som ska visas samtidigt. En lista med fler objekt än angivet använder sidnumrering för att visa listan i flera delar.
 
 I följande exempel visas en **Lista** på samma sätt som en lista med underordnade sidor visas (designen styrs av en webbplatsdesigns anpassade CSS-definitioner).
 
@@ -474,29 +472,29 @@ Du kan konfigurera:
 
    * Avsnittsetikett
 
-      Inledande text för inmatningsfälten.
+     Inledande text för inmatningsfälten.
 
    * Etikett för användarnamn
 
-      Text som ska etikettera användarnamnsfältet.
+     Text som ska etikettera användarnamnsfältet.
 
    * Lösenordsetikett
 
-      Text som ska etikettera lösenordsfältet.
+     Text som ska etikettera lösenordsfältet.
 
    * Etikett för inloggningsknapp
 
-      Text för inloggningsknappen.
+     Text för inloggningsknappen.
 
    * Omdirigera till
 
-      Du kan ange vilken sida på webbplatsen som ska öppnas när användaren har loggat in.
+     Du kan ange vilken sida på webbplatsen som ska öppnas när användaren har loggat in.
 
 * Redan inloggad
 
    * Knappetiketten Fortsätt
 
-      Text som anger att användaren redan är inloggad.
+     Text som anger att användaren redan är inloggad.
 
 ### Orderstatus {#order-status}
 
@@ -504,15 +502,15 @@ Du kan konfigurera:
 
    * **Titel**
 
-      Ange den titeltext som du vill visa.
+     Ange den titeltext som du vill visa.
 
    * **Länk**
 
-      Ange den sida (produkt) som orderstatusen ska visas för.
+     Ange den sida (produkt) som orderstatusen ska visas för.
 
    * **Typ/storlek**
 
-      Välj ett alternativ.
+     Välj ett alternativ.
 
 ![chlimage_1-10](assets/chlimage_1-10.png)
 
@@ -524,7 +522,7 @@ The **Referens** kan du referera till text från en annan sida på AEM webbplats
 
    * **Referens**
 
-      Ange sökvägen till sidan och stycket som du vill referera till (inkludera innehåll).
+     Ange sökvägen till sidan och stycket som du vill referera till (inkludera innehåll).
 
 Om du vill ange sökvägen till ett stycke måste du lägga till följande suffix till banan (till sidan):
 
@@ -556,52 +554,52 @@ Du kan konfigurera:
 
    * **Nodtyper**
 
-      Om sökningen ska begränsas till en viss nodtypslista de här. till exempel `cq:Page`.
+     Om sökningen ska begränsas till en viss nodtypslista de här. till exempel `cq:Page`.
 
    * **Sökväg att söka i**
 
-      Ange rotsidan för grenen som du vill söka efter.
+     Ange rotsidan för grenen som du vill söka efter.
 
    * **Text för sökknapp**
 
-      Namnet som visas på den faktiska sökknappen.
+     Namnet som visas på den faktiska sökknappen.
 
    * **Statistiktext**
 
-      Texten som visas ovanför sökresultaten.
+     Texten som visas ovanför sökresultaten.
 
    * **Ingen resultattext**
 
-      Om det inte finns några resultat visas den text som anges här.
+     Om det inte finns några resultat visas den text som anges här.
 
    * **Stavningskontrollera text**
 
-      Om någon skriver in en liknande term visas den här texten före termen.
+     Om någon skriver in en liknande term visas den här texten före termen.
 Om du till exempel skriver `Geometrixxe`visas &quot;Menade du? Geometrixx&quot;.
 
    * **Text för liknande sidor**
 
-      Den text som visas bredvid ett resultat för liknande sidor. Klicka på den här länken om du vill klippa ut en del av en bild.
+     Den text som visas bredvid ett resultat för liknande sidor. Klicka på den här länken om du vill klippa ut en del av en bild.
 
    * **Text för relaterade sökningar**
 
-      Texten som visas bredvid söker efter relaterade termer och ämnen.
+     Texten som visas bredvid söker efter relaterade termer och ämnen.
 
    * **Text för söktender**
 
-      Titeln ovanför söktermerna som en användare anger.
+     Titeln ovanför söktermerna som en användare anger.
 
    * **Resultatsidor - etikett**
 
-      Den text som visas längst ned i listan med länkar till andra resultatsidor.
+     Den text som visas längst ned i listan med länkar till andra resultatsidor.
 
    * **Föregående etikett**
 
-      Namnet som visas på länken till tidigare söksidor.
+     Namnet som visas på länken till tidigare söksidor.
 
    * **Nästa etikett**
 
-      Namnet som visas på länken till efterföljande söksidor.
+     Namnet som visas på länken till efterföljande söksidor.
 
 I följande exempel visas sökkomponenten efter en sökning efter ordet *`geometrixx`* från rotkatalogen för en standardinstallation. Det visar också numreringen av resultaten:
 
@@ -623,7 +621,7 @@ Om det behövs kan du konfigurera:
 
    * **Rotsökväg**
 
-      Sökväg som listan ska börja från.
+     Sökväg som listan ska börja från.
 
 ### Bildspel {#slideshow}
 
@@ -635,17 +633,17 @@ Du kan konfigurera:
 
    * **Ny bild**
 
-      Du kan ange ett urval av bildrutor med hjälp av **Lägg till** (och **Ta bort**).
+     Du kan ange ett urval av bildrutor med hjälp av **Lägg till** (och **Ta bort**).
 
    * **Titel**
 
-      Ange en titel om det behövs. Den här rubriken läggs över på lämplig bildruta.
+     Ange en titel om det behövs. Den här rubriken läggs över på lämplig bildruta.
 
 * **Avancerat**
 
    * **Storlek**
 
-      Ange bredd och höjd i pixlar.
+     Ange bredd och höjd i pixlar.
 
 Bildspelskomponenten visar sedan upprepade gånger i sekvens under en kort tid innan den tonas in i nästa bild:
 
@@ -723,35 +721,35 @@ Du kan konfigurera:
 
 * **Komponentformat** (**Stilar**)
 
-   Här kan du justera bilden åt vänster eller höger. Standardvärdet är **Vänster** justerat, med bilden till vänster.
+  Här kan du justera bilden åt vänster eller höger. Standardvärdet är **Vänster** justerat, med bilden till vänster.
 
 * **Bildegenskaper** (**Avancerade bildegenskaper**)
 
-   Gör att du kan ange följande:
+  Gör att du kan ange följande:
 
    * **Bildresurs**
 
-      Överför den önskade bilden.
+     Överför den önskade bilden.
 
    * **Titel**
 
-      Blockets titel. Den visas genom muspekaren.
+     Blockets titel. Den visas genom muspekaren.
 
    * **Alt-text**
 
-      Alternativ text som visas om bilden inte kan visas. Om inget anges används rubriken.
+     Alternativ text som visas om bilden inte kan visas. Om inget anges används rubriken.
 
    * **Länka till**
 
-      Ange en målsökväg.
+     Ange en målsökväg.
 
    * **Beskrivning**
 
-      En beskrivning av bilden.
+     En beskrivning av bilden.
 
    * **Storlek**
 
-      Anger bildens höjd och bredd.
+     Anger bildens höjd och bredd.
 
 I följande exempel visas en textbildskomponent som visar bilden vänsterjusterad:
 
@@ -768,15 +766,15 @@ Du kan konfigurera följande:
 
 * **Titel**
 
-   Om du vill använda ett annat namn än sidrubriken anger du det här.
+  Om du vill använda ett annat namn än sidrubriken anger du det här.
 
 * **Länk**
 
-   URI:n om titeln ska fungera som en länk.
+  URI:n om titeln ska fungera som en länk.
 
 * **Typ/storlek**
 
-   Välj Liten eller Stor i listrutan. Liten genereras som en bild. Stor genereras som text.
+  Välj Liten eller Stor i listrutan. Liten genereras som en bild. Stor genereras som text.
 
 I följande exempel visas en **Titel** som visas, designen bestäms av den platsspecifika CSS:n.
 
@@ -794,11 +792,11 @@ När du har placerat en instans av komponenten på sidan kan du konfigurera föl
 
    * **Videoresurs**
 
-      Överför eller släpp videomaterialet.
+     Överför eller släpp videomaterialet.
 
    * **Storlek**
 
-      Videons ursprungliga storlek (bredd x höjd i pixlar) visas i rutorna intill Storlek (se ovan). Ange bredd- och höjddimensioner manuellt här om du vill åsidosätta videons ursprungliga dimensioner. Markera **OK** stänger dialogrutan.
+     Videons ursprungliga storlek (bredd x höjd i pixlar) visas i rutorna intill Storlek (se ovan). Ange bredd- och höjddimensioner manuellt här om du vill åsidosätta videons ursprungliga dimensioner. Markera **OK** stänger dialogrutan.
 
 >[!NOTE]
 >
@@ -808,7 +806,6 @@ När du har placerat en instans av komponenten på sidan kan du konfigurera föl
 >* `Ogg`
 >* `FLV` (Flash)
 >
-
 
 ## Kolumner {#columns}
 
@@ -834,7 +831,7 @@ Med komponenten Kolumnkontroll kan användarna välja hur de vill dela upp inneh
 
    * **Kolumnlayout**
 
-      Markera det antal kolumner som du vill återge. När varje kolumn har skapats har den en egen länk för att dra komponenter eller resurser när du lägger till innehåll.
+     Markera det antal kolumner som du vill återge. När varje kolumn har skapats har den en egen länk för att dra komponenter eller resurser när du lägger till innehåll.
 
 ## Formulär {#form}
 
@@ -848,15 +845,15 @@ Forms är uppbyggt av flera olika komponenter:
 
 * **Formulär**
 
-   Formulärkomponenten definierar början och slutet av ett nytt formulär på en sida. Andra komponenter kan sedan placeras mellan dessa element, som tabeller och nedladdningar.
+  Formulärkomponenten definierar början och slutet av ett nytt formulär på en sida. Andra komponenter kan sedan placeras mellan dessa element, som tabeller och nedladdningar.
 
 * **Formulärfält och -element**
 
-   Formulärfält och -element kan innehålla textrutor, alternativknappar och bilder. Användaren slutför ofta en åtgärd i ett formulärfält, till exempel att skriva text. Mer information finns i enskilda formulärelement.
+  Formulärfält och -element kan innehålla textrutor, alternativknappar och bilder. Användaren slutför ofta en åtgärd i ett formulärfält, till exempel att skriva text. Mer information finns i enskilda formulärelement.
 
 * **Profilkomponenter**
 
-   Profilkomponenter relaterar till besökarprofiler som används för socialt samarbete och andra områden där besökaranpassning krävs.
+  Profilkomponenter relaterar till besökarprofiler som används för socialt samarbete och andra områden där besökaranpassning krävs.
 
 I följande exempel visas ett exempelformulär. Den består av **Formulär** -komponent (start och slut), med två **Formulär** **Text** fält som används för indata, **Allmänt** **Text** fält som används för inledande text och ett **Skicka** -knappen.
 
@@ -874,19 +871,19 @@ När du konfigurerar någon av formulärkomponenterna är följande flikar tillg
 
 * **Titel och text**
 
-   Här måste du ange grundläggande information, t.ex. formulärets rubrik och eventuell tillhörande text. Där det är lämpligt kan du även definiera annan nyckelinformation, t.ex. om fältet är flervalsbart och om det finns objekt tillgängliga för markering.
+  Här måste du ange grundläggande information, t.ex. formulärets rubrik och eventuell tillhörande text. Där det är lämpligt kan du även definiera annan nyckelinformation, t.ex. om fältet är flervalsbart och om det finns objekt tillgängliga för markering.
 
 * **Startvärden**
 
-   Gör att du kan ange ett standardvärde.
+  Gör att du kan ange ett standardvärde.
 
 * **Begränsningar**
 
-   Här kan du ange om ett fält är obligatoriskt och om det finns begränsningar för att placera fält, t.ex. numeriska fält.
+  Här kan du ange om ett fält är obligatoriskt och om det finns begränsningar för att placera fält, t.ex. numeriska fält.
 
 * **Stilar**
 
-   Anger fältets storlek och format.
+  Anger fältets storlek och format.
 
 >[!NOTE]
 >
@@ -898,57 +895,57 @@ De här flikarna ger dig de parametrar som behövs. Flikarna beror på den enski
 
    * **Elementnamn**
 
-      Formulärelementets namn. Den anger var i databasen data lagras.
+     Formulärelementets namn. Den anger var i databasen data lagras.
 Det här fältet är obligatoriskt och får endast innehålla följande tecken:
 
       * alfanumeriska tecken
       * `_ . / : -`
+
    * **Titel**
 
-      Titeln som visas med fältet. Om inget anges visas standardtiteln.
+     Titeln som visas med fältet. Om inget anges visas standardtiteln.
 
    * **Beskrivning**
 
-      Här kan du ange ytterligare information för användaren om det behövs. I formuläret visas den här beskrivningen under fältet, med ett mindre teckensnitt än rubriken.
+     Här kan du ange ytterligare information för användaren om det behövs. I formuläret visas den här beskrivningen under fältet, med ett mindre teckensnitt än rubriken.
 
    * **Visa/dölj**
 
-      Anger när fältet är synligt.
-
+     Anger när fältet är synligt.
 
 * **Startvärden**
 
    * **Standardvärde**
 
-      Värdet som visas i fältet när formuläret öppnas. Det vill säga innan användaren har gjort några indata.
+     Värdet som visas i fältet när formuläret öppnas. Det vill säga innan användaren har gjort några indata.
 
 * **Begränsningar**
 
    * **Obligatoriskt**
 
-      Den här begränsningen beror på formulärkomponenttypen, men innehåller en eller flera kryssrutor som anger att det här fältet är obligatoriskt eller att vissa delar av det här fältet är obligatoriska.
+     Den här begränsningen beror på formulärkomponenttypen, men innehåller en eller flera kryssrutor som anger att det här fältet är obligatoriskt eller att vissa delar av det här fältet är obligatoriska.
 
    * **Nödvändigt meddelande**
 
-      Ett meddelande som informerar användarna om att det här fältet är obligatoriskt. Ett obligatoriskt fält markeras med en asterisk.
+     Ett meddelande som informerar användarna om att det här fältet är obligatoriskt. Ett obligatoriskt fält markeras med en asterisk.
 
    * **Begränsning**
 
-      Vilka begränsningar som är tillgängliga för markeringen beror på vilken typ av formulärkomponent det är.
+     Vilka begränsningar som är tillgängliga för markeringen beror på vilken typ av formulärkomponent det är.
 
    * **Begränsningsmeddelande**
 
-      Ett meddelande som informerar användarna om vad som krävs.
+     Ett meddelande som informerar användarna om vad som krävs.
 
 * **Stilar**
 
    * **Storlek**
 
-      I rader och kolumner.
+     I rader och kolumner.
 
    * **Bredd**
 
-      I pixlar.
+     I pixlar.
 
    * **CSS**
 
@@ -968,19 +965,19 @@ Den här nödvändiga komponenten definierar början på ett nytt formulär på 
 
    * **Tack**
 
-      Sidan som ska refereras till för att tacka besökarna för att de har lämnat sina synpunkter. Om formuläret lämnas tomt visas det igen när det har skickats.
+     Sidan som ska refereras till för att tacka besökarna för att de har lämnat sina synpunkter. Om formuläret lämnas tomt visas det igen när det har skickats.
 
    * **Starta arbetsflöde**
 
-      Bestämmer vilket arbetsflöde som ska aktiveras när ett formulär skickas.
+     Bestämmer vilket arbetsflöde som ska aktiveras när ett formulär skickas.
 
 * **Avancerat**
 
    * **Åtgärdstyp**
 
-      Ett formulär behöver en åtgärd. Åtgärden definierar den åtgärd som utlöses för körning med data som skickas av användaren (liknar action= i HTML). Vissa behöver en motsvarande **Åtgärdskonfiguration**.
+     Ett formulär behöver en åtgärd. Åtgärden definierar den åtgärd som utlöses för körning med data som skickas av användaren (liknar action= i HTML). Vissa behöver en motsvarande **Åtgärdskonfiguration**.
 
-      En rad åtgärdstyper ingår i en AEM standardinstallation:
+     En rad åtgärdstyper ingår i en AEM standardinstallation:
 
       * **Kontobegäran**
       * **Skapa innehåll**
@@ -999,142 +996,142 @@ Den här nödvändiga komponenten definierar början på ett nytt formulär på 
       * **Ange lösenord**
       * **Lagra innehåll**
 
-         Standardåtgärdstypen.
+        Standardåtgärdstypen.
 
       * **Lagra innehåll med överföringar**
       * **Skicka beställning**
       * **Avbeställ prenumeration**
       * **Uppdatera ordning**
+
    * **Formuläridentifierare**
 
-      Formuläridentifieraren identifierar formuläret unikt. Använd formuläridentifieraren om du har flera formulär på en sida, se till att de har olika identifierare.
+     Formuläridentifieraren identifierar formuläret unikt. Använd formuläridentifieraren om du har flera formulär på en sida, se till att de har olika identifierare.
 
    * **Läs in bana**
 
-      Sökvägen till nodegenskaper som används för att läsa in fördefinierade värden i formulärfälten.
+     Sökvägen till nodegenskaper som används för att läsa in fördefinierade värden i formulärfälten.
 Det här fältet är valfritt och anger sökvägen till en nod i databasen. När den här noden har egenskaper som matchar fältnamnen förinläses motsvarande fält i formuläret med egenskapsvärdet. Om det inte finns någon matchning innehåller fältet standardvärdet.
 Använda **Läs in bana** kan du läsa in formuläret i förväg med värden i de obligatoriska fälten. Se [Förhandsladda formulärvärden](/help/sites-developing/developing-forms.md#preloading-form-values).
 
    * **Klientvalidering**
 
-      Anger om klientvalidering krävs för det här formuläret (servervalidering) *alltid* inträffar.). Validering uppnås med **Forms Captcha** -komponenten.
+     Anger om klientvalidering krävs för det här formuläret (servervalidering) *alltid* inträffar.). Validering uppnås med **Forms Captcha** -komponenten.
 
    * **Typ av verifieringsresurs**
 
-      Definierar resurstypen för formulärvalidering om du vill validera hela formuläret (i stället för enskilda fält). Om du validerar det fullständiga formuläret ska du även inkludera något av följande:
+     Definierar resurstypen för formulärvalidering om du vill validera hela formuläret (i stället för enskilda fält). Om du validerar det fullständiga formuläret ska du även inkludera något av följande:
 
       * Ett skript för klientvalidering:
 
-         `/apps/<myApp>/form/<myValidation>/formclientvalidation.jsp`
+        `/apps/<myApp>/form/<myValidation>/formclientvalidation.jsp`
 
       * Ett skript för validering på serversidan:
 
-         `/apps/<myApp>/form/<myValidation>/formservervalidation.jsp`
+        `/apps/<myApp>/form/<myValidation>/formservervalidation.jsp`
+
    * **Åtgärdskonfiguration**
 
-      Tillgängliga alternativ i **Åtgärdskonfiguration** beroende på vad som är markerat **Åtgärdstyp**:
+     Tillgängliga alternativ i **Åtgärdskonfiguration** beroende på vad som är markerat **Åtgärdstyp**:
 
       * **Kontobegäran**
 
          * **Skapa kontosida**
 Sidan som används när ett konto skapas.
+
       * **Skapa innehåll**
 
          * Innehållssökväg Innehållssökvägen för allt innehåll som formuläret dumpar. Ange en bana som slutar med ett snedstreck `/`. Snedstrecket innebär att för varje formulärport skapas en ny nod på den angivna platsen. till exempel:
-            `/forms/feedback/`
+           `/forms/feedback/`
 
          * **Typ**
 
-            Välj önskad typ.
+           Välj önskad typ.
 
          * **Formulär**
 
-            Ange formuläret.
+           Ange formuläret.
 
          * **Återge med**
 
-            Välj önskat alternativ i listan.
+           Välj önskat alternativ i listan.
 
          * **Resurstyp**
 
-            Om den anges läggs den till i varje kommentar som `sling:resourceType`
+           Om den anges läggs den till i varje kommentar som `sling:resourceType`
 
          * **Visa väljare**
+
       * **Skapa lead**
 
          * **Lead kommer att läggas till i den här listan**
 Ange önskad leadlista.
+
       * **Skapa och uppdatera konto**
 
          * **Inledande grupp**
 
-            Grupp att tilldela ny användare till.
+           Grupp att tilldela ny användare till.
 
          * **Startsida**
 
-            Sida som ska visas efter slutförd inloggning.
+           Sida som ska visas efter slutförd inloggning.
 
          * **Bana**
 
-            Sökvägen (relativ) till den plats där det nya kontot skapas och lagras.
+           Sökvägen (relativ) till den plats där det nya kontot skapas och lagras.
 
          * **Visa data...**
 
-            Markera en knapp så att du kan komma åt informationen om formulärresultaten i gruppredigeraren. Härifrån kan du exportera informationen till en `.tsv` (tabbseparerad) fil (används t.ex. i ett Excel-kalkylblad).
+           Markera en knapp så att du kan komma åt informationen om formulärresultaten i gruppredigeraren. Härifrån kan du exportera informationen till en `.tsv` (tabbseparerad) fil (används t.ex. i ett Excel-kalkylblad).
+
       * **E-post**
 
          * **Från**
 
-            Ange den e-postadress som e-postmeddelandet ska komma från.
+           Ange den e-postadress som e-postmeddelandet ska komma från.
 
          * **Mailto**
 
-            Ange en eller flera e-postadresser som formuläret skickas till.
+           Ange en eller flera e-postadresser som formuläret skickas till.
 
          * **CC**
 
-            Ange en eller flera e-postadresser för CC.
+           Ange en eller flera e-postadresser för CC.
 
          * **BCC**
 
-            Ange en eller flera e-postadresser för hemlig kopia.
+           Ange en eller flera e-postadresser för hemlig kopia.
 
          * **Ämne**
 
-            Ange ett ämne för e-postmeddelandet.
+           Ange ett ämne för e-postmeddelandet.
+
       * **Återställ lösenord**
 
          * **Ändra lösenordssida**
 
-            Sidan som används när lösenordet ändras.
+           Sidan som används när lösenordet ändras.
+
       * **Lagra innehåll**
 
          * **Innehållsbana**
 
-            Innehållssökvägen för allt innehåll som formuläret dumpar. Ange en bana som slutar med ett snedstreck `/`. Snedstrecket innebär att för varje formulärport skapas en ny nod på den angivna platsen. till exempel:
-            `/forms/feedback/`
+           Innehållssökvägen för allt innehåll som formuläret dumpar. Ange en bana som slutar med ett snedstreck `/`. Snedstrecket innebär att för varje formulärport skapas en ny nod på den angivna platsen. till exempel:
+           `/forms/feedback/`
 
          * **Visa data...**
 
-            Markera en knapp så att du kan komma åt informationen om formulärresultaten i gruppredigeraren. Härifrån kan du exportera informationen till en .tsv-fil (tabbseparerad) (som exempelvis kan användas i ett Excel-kalkylblad).
+           Markera en knapp så att du kan komma åt informationen om formulärresultaten i gruppredigeraren. Härifrån kan du exportera informationen till en .tsv-fil (tabbseparerad) (som exempelvis kan användas i ett Excel-kalkylblad).
+
       * **Lagra innehåll med överföringar**
 
-         Har samma alternativ som **Lagra innehåll**.
+        Har samma alternativ som **Lagra innehåll**.
 
       * **Avbeställ prenumeration**
 
          * **Lead kommer att tas bort från den här listan**
 
-            Ange önskad leadlista.
-
-
-
-
-
-
-
-
-
+           Ange önskad leadlista.
 
 #### Formulärets slut {#end-of-form}
 
@@ -1144,27 +1141,27 @@ Markerar formulärets slut. Du kan konfigurera följande:
 
    * **Visa Skicka-knapp**
 
-      Anger om en Skicka-knapp ska visas eller inte.
+     Anger om en Skicka-knapp ska visas eller inte.
 
    * **Skicka namn**
 
-      En identifierare om du använder flera skicka-knappar i ett formulär.
+     En identifierare om du använder flera skicka-knappar i ett formulär.
 
    * **Skicka titel**
 
-      Namnet som visas på knappen, till exempel Skicka eller Skicka.
+     Namnet som visas på knappen, till exempel Skicka eller Skicka.
 
    * **Visa knappen Återställ**
 
-      Om du markerar kryssrutan visas knappen Återställ.
+     Om du markerar kryssrutan visas knappen Återställ.
 
    * **Återställ titel**
 
-      Namnet som visas på knappen Återställ.
+     Namnet som visas på knappen Återställ.
 
    * **Beskrivning**
 
-      Information som visas under knappen.
+     Information som visas under knappen.
 
 ### Kontonamn {#account-name}
 
@@ -1323,9 +1320,9 @@ Du kan ange olika parametrar, bland annat namnutrymmen som kan användas, med hj
       * **Standardtaggar**
       * **Marknadsföring**
       * **Resursegenskaper**
+
    * **Bredd i pixlar**
    * **Popup-storlek**
-
 
 ### Textfält {#text-field}
 

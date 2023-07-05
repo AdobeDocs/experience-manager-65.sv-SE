@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: 813fda6a-e877-452b-82c3-e758720e7dd0
 docset: aem65
 exl-id: 90cb8893-65f3-4d82-9880-ce8dd80891b1
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b3889b1897f0ec0c5bbf60c346b77b2906175904
 workflow-type: tm+mt
-source-wordcount: '260'
+source-wordcount: '264'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ Det här verktygsfältet innehåller följande alternativ:
 
 ## Helskärmsredigering {#full-screen-editing}
 
-Tryck på helskärmsläget i verktygsfältet för textbaserade komponenter ![](do-not-localize/screen_shot_2018-03-21at163236.png) öppnar RTF-redigeraren och döljer resten av sidinnehållet.
+Tryck på helskärmsläget i verktygsfältet för textbaserade komponenter ![Fullskärmsläge](do-not-localize/screen_shot_2018-03-21at163236.png) öppnar RTF-redigeraren och döljer resten av sidinnehållet.
 
 I helskärmsläge visas alla konfigurerade alternativ som du kan använda för att skapa. Tillgängligheten är alternativ [beror på konfigurationen](/help/sites-administering/rich-text-editor.md).
 

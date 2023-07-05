@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 10466b49-f8bd-4c2c-8106-b0c7ba054989
 docset: aem65
 exl-id: cb2d2d0d-feb4-4b89-8325-80f735816904
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 75c6bb87bb06c5ac9378ccebf193b5416c080bb1
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '509'
 ht-degree: 0%
 
 ---
@@ -43,15 +43,15 @@ Innehållet på en produktsida kan till exempel innehålla ett styckesystem som 
 
 I designläget minimeras sidosparken och du kan konfigurera komponenter som är tillgängliga för redigering:
 
-1. Öppna en sida för redigering och använd ikonen för att öppna designläget:
+1. Öppna en sida för redigering och använd ikonen Sidekick för att öppna designläget:
 
-   ![](do-not-localize/chlimage_1.png)
+   ![Designläge](do-not-localize/chlimage_1.png)
 
 1. Klicka **Redigera** på styckesystemet (**Partikeldesign**).
 
    ![screen_shot_2012-02-08at102726am](assets/screen_shot_2012-02-08at102726am.png)
 
-1. En dialogruta öppnas med en lista över de komponentgrupper som visas i Spark tillsammans med de enskilda komponenterna som de innehåller.
+1. En dialogruta öppnas med en lista över de komponentgrupper som visas i Sidekick tillsammans med de enskilda komponenterna som de innehåller.
 
    Välj vad som krävs för att lägga till eller ta bort komponenterna som ska vara tillgängliga i sidosparken.
 
@@ -59,15 +59,15 @@ I designläget minimeras sidosparken och du kan konfigurera komponenter som är 
 
 1. The Sidekick minimeras i designläge. Genom att klicka på pilen kan du maximera sparken och återgå till redigeringsläget:
 
-   ![](do-not-localize/sidekick-collapsed.png)
+   ![Sidekick minimerad](do-not-localize/sidekick-collapsed.png)
 
 ## Konfigurera designen för en komponent {#configuring-the-design-of-a-component}
 
 I designläget kan du även konfigurera attribut för de enskilda komponenterna. Varje komponent har sina egna parametrar visas i följande exempel **Bild** komponent:
 
-1. Öppna en sida för redigering och använd ikonen för att öppna designläget:
+1. Öppna en sida för redigering och använd ikonen Sidekick för att öppna designläget:
 
-   ![](do-not-localize/chlimage_1-1.png)
+   ![Designläge - Sidekick](do-not-localize/chlimage_1-1.png)
 
 1. Du kan konfigurera komponenternas design.
 
@@ -77,6 +77,6 @@ I designläget kan du även konfigurera attribut för de enskilda komponenterna.
 
 1. Klicka **OK** för att spara ändringarna.
 
-1. The Sidekick minimeras i designläge. Genom att klicka på pilen kan du maximera sparken och återgå till redigeringsläget:
+1. The Sidekick minimeras i designläge. Genom att klicka på pilen kan du maximera Sidekick och återgå till redigeringsläget:
 
-   ![](do-not-localize/sidekick-collapsed-1.png)
+   ![Sidekick minimerad](do-not-localize/sidekick-collapsed-1.png)

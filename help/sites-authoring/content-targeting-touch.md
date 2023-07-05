@@ -11,9 +11,9 @@ topic-tags: personalization
 discoiquuid: 9d940744-3b00-4721-829a-96d17bb738e8
 docset: aem65
 exl-id: edde225d-0be7-4306-8dda-d18d46fae977
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: b3889b1897f0ec0c5bbf60c346b77b2906175904
 workflow-type: tm+mt
-source-wordcount: '5349'
+source-wordcount: '5390'
 ht-degree: 5%
 
 ---
@@ -253,7 +253,7 @@ Utför följande procedur efter [starta målinriktningsprocessen](/help/sites-au
 
 1. Klicka på eller tryck på målikonen.
 
-   ![](do-not-localize/chlimage_1.png)
+   ![Mål](do-not-localize/chlimage_1.png)
 
    Komponentinnehållet är erbjudandet för standardupplevelsen. När en komponent har valts replikeras dess standardnod för varje upplevelse. Detta behövs för att redigera rätt innehållsnod vid upplevelsespecifik redigering. För de här icke-standardupplevelserna är antingen [lägg till ett anpassat erbjudande](/help/sites-authoring/content-targeting-touch.md#adding-a-custom-offer) eller [lägg till ett bibliotekserbjudande](/help/sites-authoring/content-targeting-touch.md#adding-an-offer-from-an-offer-library).
 
@@ -275,7 +275,7 @@ I målläget har Target-komponenten en blå ram och drop-target-meddelandet ange
 
 I redigeringsläget har målkomponenten en punktningsikon.
 
-![](do-not-localize/chlimage_1-1.png)
+![Målkomponent i redigeringsläge](do-not-localize/chlimage_1-1.png)
 
 När du drar komponenter till Target-komponenten är de målkomponenter.
 
@@ -296,6 +296,8 @@ Om du redigerar målinnehåll måste du klicka eller trycka **Börja målinrikta
    >
    >
    >Administratörer kan bestämma om den här konfigurationen måste anges på **https://&lt;host>:&lt;port>/system/console/configMgr/com.day.cq.personalization.impl.servlets.TargetingConfigurationServlet**
+   >
+   >
    Om du vill att användare ska ange en plats markerar du kryssrutan **Tvinga plats **.
 
 1. Välj den upplevelse som du vill skapa erbjudandet för.
@@ -321,7 +323,7 @@ Om ni bestämmer er för att erbjudandet kan användas för andra upplevelser ka
 
 1. Klicka på eller tryck på erbjudandet för att visa erbjudandemenyn och klicka eller tryck sedan på redigeringsikonen.
 
-   ![](do-not-localize/chlimage_1-2.png)
+   ![Menyn Erbjudande](do-not-localize/chlimage_1-2.png)
 
 1. Redigera komponentens innehåll.
 
@@ -338,7 +340,7 @@ Du kan inte lägga till bibliotekserbjudanden i standardupplevelsen.
 
 1. Klicka på eller tryck på mappikonen.
 
-   ![](do-not-localize/chlimage_1-3.png)
+   ![Mappikon](do-not-localize/chlimage_1-3.png)
 
 1. Välj erbjudandet från biblioteket och klicka eller tryck sedan på bockmarkeringsikonen.
 
@@ -371,7 +373,7 @@ Mer information om hur du använder Offers-konsolen för att skapa ett återanv�
 1. Välj upplevelsen för att visa det anpassade erbjudandet.
 1. Klicka på eller tryck på det anpassade erbjudandet för att visa erbjudandemenyn, klicka eller tryck på **Spara erbjudandet i erbjudandebiblioteket** ikon.
 
-   ![](do-not-localize/chlimage_1-4.png)
+   ![Spara erbjudandet i Erbjudandebibliotek](do-not-localize/chlimage_1-4.png)
 
 1. Skriv ett namn för erbjudandet, markera det bibliotek som du vill lägga till erbjudandet till och klicka eller tryck sedan på bockmarkeringsikonen.
 
@@ -382,7 +384,7 @@ Konvertera ett bibliotekserbjudande till ett anpassat erbjudande för att ändra
 1. Välj den upplevelse du vill visa bibliotekserbjudandet.
 1. Klicka på eller tryck på bibliotekserbjudandet för att visa erbjudandemenyn och klicka eller tryck sedan på ikonen Konvertera till infogat erbjudande.
 
-   ![](do-not-localize/chlimage_1-5.png)
+   ![Konvertera till infogat erbjudande](do-not-localize/chlimage_1-5.png)
 
 #### Redigera ett bibliotekserbjudande {#editing-a-library-offer}
 
@@ -410,7 +412,7 @@ Information om målmotorer finns på [Målmotor](/help/sites-authoring/personali
 
 En målgrupp får inte användas av mer än en upplevelse. En varningssymbol visas bredvid en upplevelse när den kopplas till en målgrupp som kopplas till en annan upplevelse.
 
-![](do-not-localize/chlimage_1-6.png)
+![Varningssymbol när den mappas till en publik som mappas till en annan upplevelse](do-not-localize/chlimage_1-6.png)
 
 ### Associera upplevelser med målgrupper (AEM eller Adobe Target) {#associating-experiences-with-audiences-aem-or-adobe-target}
 
@@ -577,11 +579,13 @@ Så här konfigurerar du mål och inställningar om du använder Adobe Target:
    Alla mätvärden har också avancerade inställningar som du kan definiera. Välj **Avancerade inställningar** för att få tillgång till dem. Se en definition av hur framgångsmått räknas i föregående tabell och se [Adobe Target-dokumentation](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html).
 
    >[!NOTE]
+   >
    Du måste ha minst ett definierat mål.
 
    ![chlimage_1-34](assets/chlimage_1-34.png)
 
    >[!NOTE]
+   >
    Om det saknas information i måttet omges mätningen av en röd linje.
 
 1. Klicka **Lägg till ett nytt mått** för att konfigurera ytterligare framgångsmått.
@@ -589,6 +593,7 @@ Så här konfigurerar du mål och inställningar om du använder Adobe Target:
    ![chlimage_1-35](assets/chlimage_1-35.png)
 
    >[!NOTE]
+   >
    Du kan ta bort ytterligare mål genom att klicka eller trycka på de tre punkterna och klicka eller trycka på **Ta bort**. AEM kräver att du har minst ett definierat mål.
 
 1. Om du vill ha mer kontroll över hur framgångsvärdena räknas klickar du på **Avancerade inställningar** för att få tillgång till dem.
@@ -611,6 +616,7 @@ Följande kriterier avgör vilket innehåll som visas när en besökares uppleve
 Om oväntat innehåll visas på sidan när du läser in en profil kontrollerar du konfigurationen för varje objekt i listan.
 
 >[!NOTE]
+>
 Om ni använder A/B-testning visas upplevelser baserat på trafikprocenten när ni simulerar upplevelser. Detta styrs av Adobe Target, vilket kan leda till oväntade resultat för författare. (Aktiviteten _author synkroniseras med specifika inställningar som tillåter omvärdering under simulering.) Författare kan behöva uppdatera för att se de andra upplevelserna baserat på deras trafikinställningar.
 
 Använd följande verktyg för att simulera besökarens upplevelse:
@@ -621,7 +627,7 @@ Använd följande verktyg för att simulera besökarens upplevelse:
 1. Om du vill växla till förhandsgranskningsläget klickar eller trycker du på i verktygsfältet **Förhandsgranska**.
 1. Klicka på eller tryck på ikonen för snabbpanelen i verktygsfältet.
 
-   ![](do-not-localize/chlimage_1-7.png)
+   ![Kontextnav](do-not-localize/chlimage_1-7.png)
 
 1. Använd kontextnavet för att ändra kontextegenskaper. Du kan till exempel klicka på eller trycka på egenskapen Persona för att välja en annan användare.
 
@@ -637,7 +643,7 @@ Du kan anpassa Target-komponenten genom att komma åt komponentens alternativ p�
 
 1. När du har angett komponenten som mål klickar eller trycker du på komponenten i Target och sedan på inställningsikonen (cog).
 
-   ![](do-not-localize/chlimage_1-8.png)
+   ![Meny för målkomponent](do-not-localize/chlimage_1-8.png)
 
    AEM visar fönstret Alternativ för målkomponent.
 
@@ -645,7 +651,7 @@ Du kan anpassa Target-komponenten genom att komma åt komponentens alternativ p�
 
 1. Du kan även komma åt dessa inställningar i helskärmsläge genom att klicka på eller trycka på helskärmsikonen i alternativfönstret för målkomponenten.
 
-   ![](do-not-localize/chlimage_1-9.png)
+   ![Alternativ för målkomponent](do-not-localize/chlimage_1-9.png)
 
    AEM visar alternativfönstret för målkomponenten i helskärmsläge.
 
@@ -704,6 +710,7 @@ Om du väljer Adobe Target som motor:
 </table>
 
 >[!NOTE]
+>
 När du markerar en komponent och gör den målbar, ersätter AEM även komponenten och injicerar en Adobe Target-komponent. (Adobe Target-komponenten används inte bara när du lägger till den manuellt på sidan, utan även när du aktiverar en befintlig komponent.)
 
 Om du väljer Klientkontext (klientsidan) som motor:

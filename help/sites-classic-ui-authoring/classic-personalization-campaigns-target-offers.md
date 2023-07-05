@@ -10,9 +10,9 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: e26bf608-c57c-4346-88fb-32a82cfa82d2
 exl-id: 46c2fbd0-7eff-4a6c-a088-57560ad2c5e4
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 75c6bb87bb06c5ac9378ccebf193b5416c080bb1
 workflow-type: tm+mt
-source-wordcount: '91'
+source-wordcount: '93'
 ht-degree: 5%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 5%
 1. Välj din nya kampanj i den vänstra rutan eller dubbelklicka på den i den högra rutan.
 1. Välj listvyn med hjälp av ikonen:
 
-   ![](do-not-localize/chlimage_1-11.png)
+   ![Listvy](do-not-localize/chlimage_1-11.png)
 
 1. Klicka **Nytt ...**
 1. Du kan ange **Titel**, **Namn** och den typ av erfarenhet som ska skapas, i det här fallet Test&amp;Target-erbjudande.

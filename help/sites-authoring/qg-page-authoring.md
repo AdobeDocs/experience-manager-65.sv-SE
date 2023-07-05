@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 2d35a2a4-0c8c-4b16-99a6-c6e6d66446dc
 docset: aem65
 exl-id: a7e16555-9bbe-4da2-817c-4495a0193f3f
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b3889b1897f0ec0c5bbf60c346b77b2906175904
 workflow-type: tm+mt
-source-wordcount: '1573'
+source-wordcount: '1580'
 ht-degree: 4%
 
 ---
@@ -64,7 +64,6 @@ Innan du ger en översikt över specifika detaljer finns det en liten samling al
 >* [Kortkommandon vid sidredigering](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)
 >* [Kortkommandon för konsoler](/help/sites-authoring/keyboard-shortcuts.md)
 >
-
 
 ### Hitta din sida {#finding-your-page}
 
@@ -119,6 +118,7 @@ Hur du väljer en sida beror på vilken vy du använder i konsolen:
    ![screen_shot_2018-03-21at160503](assets/screen_shot_2018-03-21at160503.png)
 
    * Kortet kommer att förses med en bock som visar att sidan har valts.
+
    >[!NOTE]
    >
    >När du är i markeringsläge **Välj** ikonen (en bock) ändras till **Avmarkera** ikon (ett kors).
@@ -154,8 +154,9 @@ Så här redigerar du sidan:
       * välja fliken Komponenter (på [komponentwebbläsare](/help/sites-authoring/author-environment-tools.md#components-browser))
       * dra den nödvändiga komponenten till sidan.
 
-      Sidpanelen kan öppnas (och stängas) med:
-   ![](do-not-localize/screen_shot_2018-03-21at160738.png)
+     Sidpanelen kan öppnas (och stängas) med:
+
+     ![Öppna sidopanelen](do-not-localize/screen_shot_2018-03-21at160738.png)
 
    * [Redigera innehållet i en befintlig komponent](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste) på sidan:
 
@@ -163,18 +164,21 @@ Så här redigerar du sidan:
       * Öppna komponentens direktredigerare genom att trycka och hålla ned eller dubbelklicka. De tillgängliga åtgärderna visas (för vissa komponenter är detta ett begränsat urval).
       * Om du vill visa alla tillgängliga åtgärder går du till helskärmsläge med:
 
-   ![](do-not-localize/screen_shot_2018-03-21at160706.png)
+     ![Helskärmsläge](do-not-localize/screen_shot_2018-03-21at160706.png)
 
    * [Konfigurera egenskaperna för en befintlig komponent](/help/sites-authoring/editing-content.md#component-edit-dialog)
 
       * Öppna komponentens verktygsfält genom att trycka eller klicka. Använd **Konfigurera** (skiftnyckel) för att öppna dialogrutan.
+
    * [Flytta en komponent](/help/sites-authoring/editing-content.md#moving-a-component) antingen:
 
       * Dra den önskade komponenten till dess nya plats.
       * Öppna komponentens verktygsfält genom att trycka eller klicka. Använd **Klipp ut** sedan **Klistra in** ikoner där det behövs.
+
    * [Kopiera (och klistra in)](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste) en komponent:
 
       * Öppna komponentens verktygsfält genom att trycka eller klicka. Använd **Kopiera** sedan **Klistra in** ikoner efter behov.
+
    >[!NOTE]
    >
    >Du kan **Klistra in** -komponenter till antingen samma sida eller en annan sida. Om du klistrar in på en annan sida som redan var öppen före klipp ut/kopiera-åtgärden, måste sidan uppdateras.
@@ -182,15 +186,17 @@ Så här redigerar du sidan:
    * [Ta bort](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste) en komponent:
 
       * Öppna komponentens verktygsfält med tryck eller klicka och använd sedan **Ta bort** ikon.
+
    * [Lägg till anteckningar](/help/sites-authoring/annotations.md#annotations) till sidan:
 
       * Välj **Anteckna** läge (pratbubblarikon). Lägg till anteckningar med **Lägg till anteckning** (plus) ikon. Avsluta anteckningsläget med X överst till höger.
 
-   ![](do-not-localize/screen_shot_2018-03-21at160813.png)
+     ![Anteckna](do-not-localize/screen_shot_2018-03-21at160813.png)
 
    * [Förhandsgranska en sida](/help/sites-authoring/editing-content.md#preview-mode) (för att se hur det kommer att se ut i publiceringsmiljön)
 
       * Välj **Förhandsgranska** i verktygsfältet.
+
    * Återgå till redigeringsläget (eller välj ett annat läge) med **Redigera** nedrullningsbar väljare.
 
    >[!NOTE]
@@ -209,17 +215,16 @@ Det finns två (huvudsakliga) metoder för [redigera sidegenskaper](/help/sites-
       * [Snabbåtgärder (endast kortvyn/skrivbordet)](#quick-actions-card-view-desktop-only) för rätt resurs.
       * Verktygsfältet när [sidan har valts](#selectiingyourpageforfurtheraction).
 
-   ![screen_shot_2018-03-21at160850](assets/screen_shot_2018-03-21at160850.png)
+  ![screen_shot_2018-03-21at160850](assets/screen_shot_2018-03-21at160850.png)
 
    1. Sidegenskaperna visas. Du kan göra nödvändiga uppdateringar och sedan använda Spara för att behålla dessa
-
 
 * När [redigera sidan](#editing-your-page-content):
 
    1. Öppna **Sidinformation** -menyn.
    1. Välj **Öppna egenskaper** för att öppna dialogrutan för redigering av egenskaperna.
 
-   ![screen_shot_2018-03-21at160920](assets/screen_shot_2018-03-21at160920.png)
+  ![screen_shot_2018-03-21at160920](assets/screen_shot_2018-03-21at160920.png)
 
 ### Publicera din sida (eller avpublicera) {#publishing-your-page-or-unpublishing}
 
@@ -233,22 +238,22 @@ Det finns två huvudmetoder för [publicera din sida](/help/sites-authoring/publ
       * [Snabbåtgärder (endast kortvyn/skrivbordet)](#quick-actions-card-view-desktop-only) för rätt resurs.
       * Verktygsfältet när [sidan har valts](#selectiingyourpageforfurtheraction) (ger även tillgång till [Publicera senare](/help/sites-authoring/publishing-pages.md#main-pars-title-12)).
 
-   ![screen_shot_2018-03-21at160957](assets/screen_shot_2018-03-21at160957.png)
+  ![screen_shot_2018-03-21at160957](assets/screen_shot_2018-03-21at160957.png)
 
 * När [redigera sidan](#editing-your-page-content):
 
    1. Öppna **Sidinformation** -menyn.
    1. Välj **Publicera sida**.
 
-   ![screen_shot_2018-03-21at161026](assets/screen_shot_2018-03-21at161026.png)
+  ![screen_shot_2018-03-21at161026](assets/screen_shot_2018-03-21at161026.png)
 
 * Du kan bara avpublicera en sida från konsolen via alternativet **Hantera publikation**, som bara är tillgängligt i verktygsfältet (inte via snabbåtgärderna).
 
-   The **Avpublicera sida** är fortfarande tillgängligt via **Sidinformation** i redigeraren.
+  The **Avpublicera sida** är fortfarande tillgängligt via **Sidinformation** i redigeraren.
 
-   ![screen_shot_2018-03-21at161059](assets/screen_shot_2018-03-21at161059.png)
+  ![screen_shot_2018-03-21at161059](assets/screen_shot_2018-03-21at161059.png)
 
-   Se [Publicera sidor](/help/sites-authoring/publishing-pages.md#unpublishing-pages) för mer information.
+  Se [Publicera sidor](/help/sites-authoring/publishing-pages.md#unpublishing-pages) för mer information.
 
 ### Flytta, kopiera och klistra in eller ta bort sidan {#move-copy-and-paste-or-delete-your-page}
 
@@ -265,12 +270,15 @@ Alla dessa åtgärder kan utlösas av:
    * Copy:
 
       * Du måste sedan navigera till den nya platsen och klistra in.
+
    * Flytta:
 
       * Guiden öppnas och samlar in den information som behövs för att flytta sidan. Följ instruktionerna på skärmen.
+
    * Ta bort:
 
       * Du ombeds bekräfta åtgärden.
+
    >[!NOTE]
    >
    >Borttagning är inte tillgängligt som snabbåtgärd.
@@ -330,6 +338,7 @@ Samma grundläggande funktion används när du återställer och/eller jämför 
    * **Återgå till den här versionen**
 
       * Versionen återställs.
+
    * **Visa skillnader**
 
       * Sidan öppnas med skillnader (mellan de två versionerna) markerade.

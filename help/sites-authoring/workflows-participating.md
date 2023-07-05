@@ -9,9 +9,9 @@ topic-tags: site-features
 discoiquuid: f170613c-329e-446b-9ac3-350615f1bfb6
 docset: aem65
 exl-id: e47270e8-bace-4d0f-a088-7269b6356315
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: b3889b1897f0ec0c5bbf60c346b77b2906175904
 workflow-type: tm+mt
-source-wordcount: '1524'
+source-wordcount: '1526'
 ht-degree: 1%
 
 ---
@@ -33,11 +33,11 @@ När du tilldelas en arbetsuppgift (till exempel **Godkänn innehåll**) visas o
 
 * Dina [meddelande](/help/sites-authoring/inbox.md) Indikatorn (verktygsfältet) ökas:
 
-   ![](do-not-localize/wf-57.png)
+  ![Meddelandeindikator](do-not-localize/wf-57.png)
 
 * Objektet kommer att listas i meddelandet [Inkorg](/help/sites-authoring/inbox.md):
 
-   ![wf-58](assets/wf-58.png)
+  ![wf-58](assets/wf-58.png)
 
 * När du använder sidredigeraren visas statusfältet:
 
@@ -48,18 +48,18 @@ När du tilldelas en arbetsuppgift (till exempel **Godkänn innehåll**) visas o
       * Använd vänster-/högerpilarna för att navigera i statusinformationen för de olika arbetsflödena.
       * klicka/tryck på det faktiska numret för att öppna en listruta med alla tillämpliga arbetsflöden och välj sedan det arbetsflöde som du vill visa i statusfältet.
 
-   ![wf-59](assets/wf-59.png)
+  ![wf-59](assets/wf-59.png)
 
-   >[!NOTE]
-   >
-   >Statusfältet är endast synligt för användare med arbetsflödesbehörighet. till exempel medlemmar i `workflow-users` grupp.
-   >
-   >
-   >Åtgärder visas när den aktuella användaren är direkt involverad i det aktuella steget i arbetsflödet.
+  >[!NOTE]
+  >
+  >Statusfältet är endast synligt för användare med arbetsflödesbehörighet. till exempel medlemmar i `workflow-users` grupp.
+  >
+  >
+  >Åtgärder visas när den aktuella användaren är direkt involverad i det aktuella steget i arbetsflödet.
 
 * När **Tidslinje** är öppet för resursen visas arbetsflödessteget. När du klickar/trycker på varningsbanderollen visas även de tillgängliga åtgärderna:
 
-   ![screen-shot_2019-03-05at120453](assets/screen-shot_2019-03-05at120453.png)
+  ![screen-shot_2019-03-05at120453](assets/screen-shot_2019-03-05at120453.png)
 
 ### Slutför ett deltagarsteg {#completing-a-participant-step}
 
@@ -229,19 +229,19 @@ Arbetsflödesinformationen visas i flikar och lämpliga åtgärder är tillgäng
 
 * **ARBETSOBJEKT** tab:
 
-   ![wf-72](assets/wf-72.png)
+  ![wf-72](assets/wf-72.png)
 
 * **INFORMATION OM ARBETSFLÖDE** tab:
 
-   ![wf-73](assets/wf-73.png)
+  ![wf-73](assets/wf-73.png)
 
-   If [Arbetsflödessteg](/help/sites-developing/workflows.md#workflow-stages) har konfigurerats för modellen, kan du visa förloppet enligt följande:
+  If [Arbetsflödessteg](/help/sites-developing/workflows.md#workflow-stages) har konfigurerats för modellen, kan du visa förloppet enligt följande:
 
-   ![wf-107](assets/wf-107.png)
+  ![wf-107](assets/wf-107.png)
 
 * **KOMMENTARER** tab:
 
-   ![wf-75](assets/wf-75.png)
+  ![wf-75](assets/wf-75.png)
 
 Du kan öppna information om arbetsobjekt från:
 

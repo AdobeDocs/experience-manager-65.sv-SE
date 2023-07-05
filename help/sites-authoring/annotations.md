@@ -8,9 +8,9 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: aa89326a-ad33-4b0b-8d09-c68c5a5c790a
 exl-id: de1ae7e3-db3a-4b5e-8a4f-ae111227181f
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 75c6bb87bb06c5ac9378ccebf193b5416c080bb1
 workflow-type: tm+mt
-source-wordcount: '634'
+source-wordcount: '641'
 ht-degree: 0%
 
 ---
@@ -53,14 +53,13 @@ En speciell [läge](/help/sites-authoring/author-environment-tools.md#page-modes
 >* [Kommentera videomaterial](/help/assets/managing-video-assets.md#annotate-video-assets)
 >
 
-
 ### Kommentera en komponent {#annotating-a-component}
 
 I anteckningsläget kan du skapa, redigera, flytta eller ta bort anteckningar i ditt innehåll:
 
 1. Du kan öppna anteckningsläget med ikonen i verktygsfältet (längst upp till höger) när du redigerar en sida:
 
-   ![](do-not-localize/screen_shot_2018-03-22at110414.png)
+   ![Anteckna](do-not-localize/screen_shot_2018-03-22at110414.png)
 
    Nu kan du visa alla befintliga anteckningar.
 
@@ -83,16 +82,17 @@ I anteckningsläget kan du skapa, redigera, flytta eller ta bort anteckningar i 
    * Ange anteckningstexten.
    * Skapa en skiss (linjer och former) för att markera ett område i komponenten.
 
-      Markören ändras till en korstråd när du skapar en skiss. Du kan rita flera distinkta linjer. Skisslinjen återspeglar anteckningsfärgen och kan vara en pil, cirkel eller oval.
-   ![](do-not-localize/screen_shot_2018-03-22at110640.png)
+     Markören ändras till en korstråd när du skapar en skiss. Du kan rita flera distinkta linjer. Skisslinjen återspeglar anteckningsfärgen och kan vara en pil, cirkel eller oval.
+
+     ![Sketch](do-not-localize/screen_shot_2018-03-22at110640.png)
 
    * Välj/ändra färg:
 
-   ![](do-not-localize/chlimage_1-19.png)
+     ![Välj/ändra färg](do-not-localize/chlimage_1-19.png)
 
    * Ta bort anteckningen.
 
-   ![](do-not-localize/screen_shot_2018-03-22at110647.png)
+     ![Ta bort anteckning](do-not-localize/screen_shot_2018-03-22at110647.png)
 
 1. Du kan stänga anteckningsdialogrutan genom att klicka/trycka utanför dialogrutan. En trunkerad vy (det första ordet) av anteckningen, tillsammans med eventuella skisser, visas:
 
@@ -103,12 +103,12 @@ I anteckningsläget kan du skapa, redigera, flytta eller ta bort anteckningar i 
    * Klicka/tryck på textmarkören för att öppna anteckningen. När du har öppnat hela texten kan du göra ändringar eller ta bort anteckningen.
 
       * Skisser kan inte tas bort oberoende av anteckningen.
+
    * Flytta textmarkören.
    * Klicka/tryck på en skisslinje för att markera skissen och dra den till önskad plats.
    * Flytta, eller kopiera, en komponent
 
       * Alla relaterade anteckningar och skisser av dem flyttas eller kopieras också, och deras placering i förhållande till stycket förblir densamma.
-
 
 1. Om du vill avsluta anteckningsläget och återgå till det tidigare använda läget trycker/klickar du på ikonen Anteckning (x-symbol) till höger i det övre verktygsfältet.
 

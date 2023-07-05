@@ -10,10 +10,10 @@ content-type: reference
 topic-tags: personalization
 discoiquuid: f281ef8c-0831-470c-acb7-189f20452a50
 exl-id: 78673609-8cbc-4b4b-953e-56c31ea1b4ea
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 75c6bb87bb06c5ac9378ccebf193b5416c080bb1
 workflow-type: tm+mt
-source-wordcount: '365'
-ht-degree: 3%
+source-wordcount: '369'
+ht-degree: 2%
 
 ---
 
@@ -42,7 +42,7 @@ Verktygsfältet ContextHub är tillgängligt i förhandsgranskningsläget. Verkt
 
 1. Visa verktygsfältet genom att klicka på eller trycka på ikonen ContextHub.
 
-   ![](do-not-localize/screen_shot_2018-03-23at093621.png)
+   ![Kontextnav](do-not-localize/screen_shot_2018-03-23at093621.png)
 
 ## Funktioner i gränssnittsmodul {#ui-module-features}
 
@@ -68,4 +68,4 @@ Popup-överlägget för en modul kan innehålla formulärelement som gör att du
 
 Popup-övertäckningar kan innehålla en ikon som du klickar på eller trycker på för att expandera popup-innehållet så att det täcker hela webbläsarfönstret eller skärmen.
 
-![](do-not-localize/chlimage_1-18.png)
+![Helskärm](do-not-localize/chlimage_1-18.png)

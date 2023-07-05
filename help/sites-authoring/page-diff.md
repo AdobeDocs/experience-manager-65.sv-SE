@@ -11,9 +11,9 @@ topic-tags: site-features
 discoiquuid: 8386a16a-9d47-46d5-bc60-5f290c59e60e
 docset: aem65
 exl-id: 3beea5cd-5ae0-485b-8dfc-8b3a23c11586
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b3889b1897f0ec0c5bbf60c346b77b2906175904
 workflow-type: tm+mt
-source-wordcount: '560'
+source-wordcount: '567'
 ht-degree: 1%
 
 ---
@@ -74,7 +74,7 @@ Skillnaden identifierar ändringar på komponentnivå och HTML. Objekt som har �
 
 Om du vill fokusera på ett visst innehåll kan du klicka på helskärmsikonen för endera&quot;sidan&quot; av diff:n för att förstora den till hela webbläsarfönstret.
 
-![](do-not-localize/chlimage_1-18.png)
+![Ikon för helskärmsläge](do-not-localize/chlimage_1-18.png)
 
 Den markerade sidan fyller hela fönstret, men fältet förblir överst så att du kan växla mellan de två sidorna.
 
@@ -82,7 +82,7 @@ Den markerade sidan fyller hela fönstret, men fältet förblir överst så att 
 
 Du kan också stänga helskärmsläget genom att klicka på ikonen för att avsluta helskärmsläget.
 
-![](do-not-localize/chlimage_1-19.png)
+![Stäng helskärm](do-not-localize/chlimage_1-19.png)
 
 Du kan när som helst stänga diff sida vid sida genom att klicka på stängningsknappen i sidhuvudet.
 
