@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 2d35a2a4-0c8c-4b16-99a6-c6e6d66446dc
 docset: aem65
 exl-id: a7e16555-9bbe-4da2-817c-4495a0193f3f
-source-git-commit: b3889b1897f0ec0c5bbf60c346b77b2906175904
+source-git-commit: d045fc1ac408f992d594a4cb68d1c4eeae2b0de1
 workflow-type: tm+mt
-source-wordcount: '1580'
+source-wordcount: '1558'
 ht-degree: 4%
 
 ---
@@ -59,7 +59,7 @@ Innan du ger en översikt över specifika detaljer finns det en liten samling al
 
 >[!NOTE]
 >
->Det finns ett antal kortkommandon som kan underlätta redigeringen.
+>Det finns flera kortkommandon som kan underlätta redigeringen.
 >
 >* [Kortkommandon vid sidredigering](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)
 >* [Kortkommandon för konsoler](/help/sites-authoring/keyboard-shortcuts.md)
@@ -69,7 +69,7 @@ Innan du ger en översikt över specifika detaljer finns det en liten samling al
 
 Det finns olika aspekter av att hitta en sida. kan du navigera och/eller söka:
 
-1. Öppna **Webbplatser** konsol (med **Webbplatser** i [Global navigering](/help/sites-authoring/basic-handling.md#global-navigation) - den här utlöses (nedrullningsbar) när du väljer länken Adobe Experience Manager (överst till vänster).
+1. Öppna **Webbplatser** konsol (med **Webbplatser** i [Global navigering](/help/sites-authoring/basic-handling.md#global-navigation)) - den här utlöses (nedrullningsbar) när du väljer länken Adobe Experience Manager (överst till vänster).
 
 1. Navigera nedåt i trädet genom att trycka/klicka på lämplig sida. Hur sidresurserna visas beror på vilken vy du använder - [Kort, lista eller kolumn](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources):
 
@@ -85,9 +85,9 @@ Det finns olika aspekter av att hitta en sida. kan du navigera och/eller söka:
 
 ### Skapa en ny sida {#creating-a-new-page}
 
-Till [skapa en ny sida](/help/sites-authoring/managing-pages.md#creating-a-new-page):
+Till [skapa en sida](/help/sites-authoring/managing-pages.md#creating-a-new-page):
 
-1. [Navigera till platsen](#finding-your-page) där du vill skapa den nya sidan.
+1. [Navigera till platsen](#finding-your-page) där du vill skapa sidan.
 1. Använd **Skapa** ikon och sedan markera **Sida** från listan:
 
    ![qgtap-02](assets/qgtap-02.png)
@@ -134,8 +134,6 @@ Hur du väljer en sida beror på vilken vy du använder i konsolen:
 
 ### Redigera sidinnehåll {#editing-your-page-content}
 
-Så här redigerar du sidan:
-
 1. [Navigera till sidan](#finding-your-page) du vill redigera.
 1. [Öppna sidan för redigering](/help/sites-authoring/managing-pages.md#opening-a-page-for-editing) med ikonen Redigera (penna):
 
@@ -143,12 +141,12 @@ Så här redigerar du sidan:
 
    Du kommer åt detta från antingen:
 
-   * [Snabbåtgärder (endast kortvyn/skrivbordet)](#quick-actions-card-view-desktop-only) för rätt resurs.
+   * [Snabbåtgärder (endast kortvyn/skrivbordet)](#quick-actions-card-view-desktop-only) för lämplig resurs.
    * Verktygsfältet när [sidan har valts](#selectiingyourpageforfurtheraction).
 
 1. När redigeraren öppnas kan du:
 
-   * [Lägg till en ny komponent på sidan](/help/sites-authoring/editing-content.md#inserting-a-component) av:
+   * [Lägga till en ny komponent på sidan](/help/sites-authoring/editing-content.md#inserting-a-component) av:
 
       * öppna sidopanelen
       * välja fliken Komponenter (på [komponentwebbläsare](/help/sites-authoring/author-environment-tools.md#components-browser))
@@ -161,7 +159,7 @@ Så här redigerar du sidan:
    * [Redigera innehållet i en befintlig komponent](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste) på sidan:
 
       * Öppna komponentens verktygsfält genom att trycka eller klicka. Använd **Redigera** (penna) för att öppna dialogrutan.
-      * Öppna komponentens direktredigerare genom att trycka och hålla ned eller dubbelklicka. De tillgängliga åtgärderna visas (för vissa komponenter är detta ett begränsat urval).
+      * Öppna komponentens direktredigerare genom att trycka och hålla ned eller dubbelklicka. De tillgängliga åtgärderna visas (för vissa komponenter är det ett begränsat urval).
       * Om du vill visa alla tillgängliga åtgärder går du till helskärmsläge med:
 
      ![Helskärmsläge](do-not-localize/screen_shot_2018-03-21at160706.png)
@@ -201,7 +199,7 @@ Så här redigerar du sidan:
 
    >[!NOTE]
    >
-   >Navigera med hjälp av länkar i innehållet som du måste använda [Förhandsgranskningsläge](/help/sites-authoring/editing-content.md#preview-mode).
+   >Om du vill navigera med hjälp av länkar i innehållet måste du använda [Förhandsgranskningsläge](/help/sites-authoring/editing-content.md#preview-mode).
 
 ### Redigera sidegenskaperna {#editing-the-page-properties}
 
@@ -212,7 +210,7 @@ Det finns två (huvudsakliga) metoder för [redigera sidegenskaper](/help/sites-
    1. [Navigera till sidan](#finding-your-page) du vill publicera.
    1. Välj **Egenskaper** ikon från antingen
 
-      * [Snabbåtgärder (endast kortvyn/skrivbordet)](#quick-actions-card-view-desktop-only) för rätt resurs.
+      * [Snabbåtgärder (endast kortvyn/skrivbordet)](#quick-actions-card-view-desktop-only) för lämplig resurs.
       * Verktygsfältet när [sidan har valts](#selectiingyourpageforfurtheraction).
 
   ![screen_shot_2018-03-21at160850](assets/screen_shot_2018-03-21at160850.png)
@@ -235,7 +233,7 @@ Det finns två huvudmetoder för [publicera din sida](/help/sites-authoring/publ
    1. [Navigera till sidan](#finding-your-page) du vill publicera.
    1. Välj **Snabbpublicering** ikon från antingen
 
-      * [Snabbåtgärder (endast kortvyn/skrivbordet)](#quick-actions-card-view-desktop-only) för rätt resurs.
+      * [Snabbåtgärder (endast kortvyn/skrivbordet)](#quick-actions-card-view-desktop-only) för lämplig resurs.
       * Verktygsfältet när [sidan har valts](#selectiingyourpageforfurtheraction) (ger även tillgång till [Publicera senare](/help/sites-authoring/publishing-pages.md#main-pars-title-12)).
 
   ![screen_shot_2018-03-21at160957](assets/screen_shot_2018-03-21at160957.png)
@@ -269,7 +267,7 @@ Alla dessa åtgärder kan utlösas av:
 
    * Copy:
 
-      * Du måste sedan navigera till den nya platsen och klistra in.
+      * Navigera till den nya platsen och klistra in.
 
    * Flytta:
 
@@ -288,7 +286,7 @@ Alla dessa åtgärder kan utlösas av:
 [När du låser en sida](/help/sites-authoring/editing-content.md#locking-a-page) kan andra författare inte arbeta med den. Ikonen/knappen Lås (och Lås upp) finns:
 
 * Verktygsfältet när [sidan har valts](#selecting-your-page-for-further-action).
-* The [Listruta för sidinformation](#editing-the-page-properties) när du redigerar en sida.
+* The [Listrutan Sidinformation](#editing-the-page-properties) när du redigerar en sida.
 * Sidans verktygsfält när du redigerar en sida (när sidan är låst)
 
 Låsikonen ser till exempel ut så här:
@@ -297,7 +295,7 @@ Låsikonen ser till exempel ut så här:
 
 ### Åtkomst till sidreferenser {#accessing-page-references}
 
-[Snabb åtkomst till referenser](/help/sites-authoring/author-environment-tools.md#references) till/från en sida är tillgänglig i Reference Rail.
+[Snabb åtkomst till referenser](/help/sites-authoring/author-environment-tools.md#references) till en sida eller från en sida är tillgängliga i Reference Rail.
 
 1. Välj **Referenser** med verktygsfältsikonen (antingen före eller efter [markera sidan](#selecting-your-page-for-further-action)):
 
@@ -331,7 +329,7 @@ Samma grundläggande funktion används när du återställer och/eller jämför 
 
    ![screen_shot_2018-03-21at161355-1](assets/screen_shot_2018-03-21at161355-1.png)
 
-   Om en version av sidan redan har sparats visas den i tidslinjen.
+   Om en version av sidan redan har sparats visas den på tidslinjen.
 
 1. Tryck/klicka på den version som du vill återställa - då visas ytterligare åtgärdsknappar:
 

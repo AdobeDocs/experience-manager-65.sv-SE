@@ -5,9 +5,9 @@ description: Så här distribuerar du AEM Communities
 seo-description: How to deploy AEM Communities
 content-type: reference
 topic-tags: deploying
-source-git-commit: cc0574ae22758d095a3ca6b91f0ceae4a8691f0e
+source-git-commit: d045fc1ac408f992d594a4cb68d1c4eeae2b0de1
 workflow-type: tm+mt
-source-wordcount: '1682'
+source-wordcount: '1755'
 ht-degree: 1%
 
 ---
@@ -53,27 +53,27 @@ ht-degree: 1%
       * [Installera och konfigurera MongoDB](/help/communities/msrp.md#mongodb-configuration)
       * [Konfigurera Solr](/help/communities/solr.md)
       * [Välj MSRP](/help/communities/srp-config.md)
+
    * Om relationsdatabas SRP [(DSRP)](/help/communities/dsrp.md)
 
       * [Installera JDBC-drivrutinen för MySQL](#jdbc-driver-for-mysql)
       * [Installera och konfigurera MySQL för DSRP](/help/communities/dsrp-mysql.md)
       * [Konfigurera Solr](/help/communities/solr.md)
       * [Välj DSRP](/help/communities/srp-config.md)
+
    * Om Adobe SRP [(ASRP)](/help/communities/asrp.md)
 
       * Samarbeta med din kontorepresentant för etablering.
       * [Välj ASRP](/help/communities/srp-config.md)
+
    * Om JCR SRP [(JSRP)](/help/communities/jsrp.md)
 
       * Inte ett delat UGC-arkiv:
 
          * UGC replikeras aldrig.
          * UGC är bara synligt på AEM eller kluster där det angavs.
+
       * Standard är JSRP
-
-
-
-
 
 
 ## Senaste releaser {#latest-releases}
@@ -124,7 +124,7 @@ Mer information om hur du installerar paket finns på [Webbkonsol](/help/sites-d
 
 #### Exempel: Installerat MySQL Connector-paket {#example-installed-mysql-connector-bundle}
 
-![](../assets/mysql-connector.png)
+![Adobe Experience Manager Web Console MySQL Connector Bundle](../assets/mysql-connector.png)
 
 ### AEM avancerad MLS {#aem-advanced-mls}
 
@@ -186,7 +186,7 @@ Som standard är `AEM Communities Publisher Configuration` OSGi-konfigurationen 
 
 Det är därför nödvändigt att **redigera konfigurationen för alla sekundära publiceringsinstanser** för att avmarkera **`Primary Publisher`** kryssruta.
 
-![](../assets/primary-publisher.png)
+![Dialogrutan Konfiguration av AEM Communities Publisher med kryssrutan Primär utgivare](../assets/primary-publisher.png)
 
 För alla andra (sekundära) publiceringsinstanser i en publiceringsgrupp:
 
@@ -234,7 +234,7 @@ I följande bilder visas resultatet av en ändring av porten från 4503 till 610
 
 #### Agenten för omvänd replikering (publicera omvänd) {#reverse-replication-agent-publish-reverse}
 
-![](../assets/reverse-replication-agent.png)
+![Agenten för omvänd replikering (publiceringsservrar) visar att den är aktiverad eller aktiverad.](../assets/reverse-replication-agent.png)
 
 ### Tunneltjänst på författare {#tunnel-service-on-author}
 
@@ -256,7 +256,7 @@ Så här aktiverar du tunneltjänsten:
 * Välj **enable** kryssruta
 * välj **Spara**
 
-![](../assets/tunnel-service.png)
+![AEM Communities Publish Tunnel Service visar kryssrutan Aktivera, markerad eller markerad.](../assets/tunnel-service.png)
 
 ### Replikera krypteringsnyckeln {#replicate-the-crypto-key}
 
@@ -270,25 +270,25 @@ Om du vill kopiera nyckelmaterialet från författaren till alla andra instanser
 
    * Leta reda på `com.adobe.granite.crypto.file` i det lokala filsystemet
 
-      Till exempel,
+     Till exempel,
 
       * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21`
       * The `bundle.info` filen identifierar paketet
+
    * Navigera till datamappen, till exempel
 
       * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
+
    * Kopiera hmac- och primära nodfiler.
-
-
 
 * För varje AEM
 
    * Navigera till datamappen, till exempel
 
       * `<publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
+
    * Klistra in de två tidigare kopierade filerna
    * Det är nödvändigt att [uppdatera Granite Crypto-paketet](#refresh-the-granite-crypto-bundle) om AEM körs.
-
 
 >[!CAUTION]
 >
@@ -315,7 +315,7 @@ Använda [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) :
 
 * [uppdatera Granite Crypto-paketet](#refresh-the-granite-crypto-bundle)
 
-![](../assets/replicare-repository.png)
+![CRXDE Lite som visar sökvägen /etc/key på den vänstra panelen och fliken Replikering markerad på den nedre högra panelen.](../assets/replicare-repository.png)
 
 #### Uppdatera Granite Crypto Bundle {#refresh-the-granite-crypto-bundle}
 
@@ -326,10 +326,10 @@ Använda [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) :
 * Sök `Adobe Granite Crypto Support` bundle (com.adobe.granite.crypto)
 * Välj **Uppdatera**
 
-![](../assets/refresh-granite-bundle.png)
+![Uppdatering av Adobe Granite Crypto Support-paketet.](../assets/refresh-granite-bundle.png)
 
 * Efter ett ögonblick **Lyckades** visas:
-   `Operation completed successfully.`
+  `Operation completed successfully.`
 
 ### Apache HTTP-server {#apache-http-server}
 

@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 21181a6f-b434-40ed-8eb1-ebdfc98964dd
 docset: aem65
 exl-id: ef1a3997-feb4-4cb0-9396-c8335b69bb10
-source-git-commit: 3802eb71dc6d17db4b1158d8d433ba1c516e54f2
+source-git-commit: d045fc1ac408f992d594a4cb68d1c4eeae2b0de1
 workflow-type: tm+mt
-source-wordcount: '3011'
+source-wordcount: '3024'
 ht-degree: 3%
 
 ---
@@ -178,7 +178,7 @@ Rubriken visas alltid längst upp på skärmen. De flesta alternativen i huvudet
 
 * [Järnvägsväljare](/help/sites-authoring/basic-handling.md#rail-selector)
 
-  ![](do-not-localize/screen_shot_2018-03-23at103943.png)
+  ![Rälsväljarlistan visas till vänster på Adobe Experience Manager-skärmen.](do-not-localize/screen_shot_2018-03-23at103943.png)
 
   Vilka alternativ som visas beror på den aktuella konsolen. I **Webbplatser** Du kan bara markera innehåll (standardvärdet), tidslinjen, referenser eller sidopanelen för filter.
 

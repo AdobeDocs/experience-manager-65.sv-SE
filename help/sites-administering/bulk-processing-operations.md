@@ -8,9 +8,9 @@ uuid: 62a6c379-a460-4f8f-a909-03d04fa8944b
 contentOwner: sarchiz
 discoiquuid: 47c2a80f-78ac-4372-86b4-06351a1dd58f
 docset: aem65
-source-git-commit: 4b965d8f7814816126601f6366c1ba313e404538
+source-git-commit: d045fc1ac408f992d594a4cb68d1c4eeae2b0de1
 workflow-type: tm+mt
-source-wordcount: '377'
+source-wordcount: '511'
 ht-degree: 0%
 
 ---
@@ -43,33 +43,33 @@ Välj sedan en av vyerna enligt nedan:
 
 ### Kortvy {#card-view}
 
-![](assets/unu.png)
+![Kortvyn med miniatyrbilder av olika bildresurser.](assets/unu.png)
 
 ### Massmarkering i kortvyn {#bulk-selection-in-card-view}
 
 Resurser eller sidor kan markeras i grupp med **Markera alla** överst till höger:
 
-![](assets/doi.png) ![](assets/trei.png)
+![Markera knappen Alla som visas i det övre högra hörnet i kortvyn.](assets/doi.png) ![Alla miniatyrbilder av bildresurser i kortvyn visas som markerade med bockmarkeringar.](assets/trei.png)
 
 ### Listvy {#list-view}
 
 Samma sak gäller för listvyn:
 
-![](assets/patru_modified.png)
+![Alternativet Markera alla i det övre högra hörnet av listvyn är markerat.](assets/patru_modified.png)
 
 ### Massmarkering i listvyn {#bulk-selection-in-list-view}
 
 I listvyn använder du antingen **Markera alla** eller använd kryssrutan till vänster för gruppval.
 
-![](assets/cinci.png) ![](assets/sase.png)
+![Live-vyn med miniatyrbilder av bildresurser visas i vågräta rader.](assets/cinci.png) ![Listruta med miniatyrbilder av bildresurser och en kryssruta till vänster om Namn.](assets/sase.png)
 
 ### Kolumnvy {#column-view}
 
-![](assets/sapte.png)
+![Kolumnvy med miniatyrbilder av bildresurser som visas i lodräta kolumner.](assets/sapte.png)
 
 ### Massmarkering i kolumnvyn {#bulk-selection-in-column-view}
 
-![](assets/opt.png)
+![Alla miniatyrbilder av bildresurser i kolumnvyn visas som markerade med bockmarkeringar.](assets/opt.png)
 
 ## Massaktiverade åtgärder {#bulk-enabled-operations}
 
@@ -77,8 +77,8 @@ Efter markeringen kan en av de tre massaktiverade åtgärderna utföras: **Flytt
 
 Här, **Flytta** åtgärden utförs på de tillgångar som valts ovan. I alla vyer resulterar detta i att alla resurser flyttas till den valda platsen och inte bara till de som läses in på skärmen.
 
-![](assets/noua.png)
+![Flytta resurser som visar en vald mapp i kolumnvyn.](assets/noua.png)
 
 För andra åtgärder som inte är massaktiverade, som **Ladda ned** en varning visas som anger att endast element som lästs in i webbläsaren kommer att inkluderas i åtgärden.
 
-![](assets/zece.png)
+![Resursvyn med markerade bildresurser och popup-dialogrutan &quot;Massåtgärd stöds inte&quot;.](assets/zece.png)
