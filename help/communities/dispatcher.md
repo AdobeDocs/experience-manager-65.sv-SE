@@ -1,18 +1,14 @@
 ---
 title: Konfigurera Dispatcher för Communities
-seo-title: Configuring Dispatcher for Communities
-description: Konfigurera dispatchern för AEM Communities
-seo-description: Configure the dispatcher for AEM Communities
-uuid: c17daca9-3244-4b10-9d4e-2e95df633dd9
+description: Konfigurera Dispatcher för AEM Communities
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 content-type: reference
 topic-tags: deploying
-discoiquuid: 23745dd3-1424-4d22-8456-d2dbd42467f4
 exl-id: fb4e3973-2193-4bb5-8120-bf2f3ec80112
-source-git-commit: 9f9f80eb4cb74b687c7fadd41d0f8ea4ee967865
+source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
 workflow-type: tm+mt
-source-wordcount: '636'
+source-wordcount: '644'
 ht-degree: 0%
 
 ---
@@ -25,25 +21,25 @@ För AEM Communities måste Dispatcher konfigureras för att säkerställa att p
 
 För att ta reda på vad som är nödvändigt för just din driftsättning och webbplatsdesign
 
-* Kontakt [Kundtjänst](https://helpx.adobe.com/marketing-cloud/contact-support.html)
+* Kontakt [Kundtjänst](https://experienceleague.adobe.com/?support-solution=General&amp;support-tab=home#support)
 
-Se även huvudsidan [Dispatcher-dokumentation](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html).
+Se även huvudsidan [Dispatcher-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=en).
 
 ## Dispatcher Caching {#dispatcher-caching}
 
 ### Översikt {#overview}
 
-Dispatcher-cachning för AEM Communities är en möjlighet för dispatchern att leverera fullt cachelagrade versioner av en communitywebbplats sidor.
+Dispatcher-cachning för AEM Communities är en möjlighet för Dispatcher att hantera fullt cachelagrade versioner av en communitywebbplats sidor.
 
-För närvarande stöds den bara för anonyma webbplatsbesökare, t.ex. användare som bläddrar på communitywebbplatsen, eller landar på en communitysida som ett resultat av en sökning, samt för sökmotorer som indexerar sidor. Fördelen är att anonyma användare och sökmotorer får bättre prestanda.
+För närvarande stöds den bara för anonyma webbplatsbesökare, t.ex. användare som surfar på communitywebbplatsen, eller som landar på en communitysida som ett resultat av en sökning, och för sökmotorer som indexerar sidor. Fördelen är att anonyma användare och sökmotorer får bättre prestanda.
 
-För inloggade medlemmar åsidosätter avsändaren cachen och vidarebefordrar begäranden direkt till utgivaren så att alla sidor genereras och levereras dynamiskt.
+För inloggade medlemmar åsidosätter Dispatcher cachen och vidarebefordrar begäranden direkt till utgivaren så att alla sidor genereras och levereras dynamiskt.
 
-Om inställningen är aktiverad för att hantera dispatcher-cachning läggs ett TTL-baserat förfallodatum till i huvudet för att säkerställa att de cachelagrade sidorna för dispatchern är aktuella.
+Om inställningen är aktiverad för Dispatcher-cachning läggs ett TTL-baserat förfallodatum till i sidhuvudet för att säkerställa att de cachelagrade sidorna för Dispatcher är aktuella.
 
 ### Krav {#requirements}
 
-* Dispatcher version 4.1.2 eller senare (se [Installerar Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-install.html) för den senaste versionen)
+* Dispatcher version 4.1.2 eller senare (se [Installerar Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html?lang=en) för den senaste versionen)
 * [ACS AEM Commons-paket](https://adobe-consulting-services.github.io/acs-aem-commons/)
 
    * Version 3.3.2 eller senare
@@ -53,45 +49,45 @@ Om inställningen är aktiverad för att hantera dispatcher-cachning läggs ett 
 
 OSGi-konfigurationen **ACS AEM Commands - Dispatcher Cache Control Header - Max Age** anger förfallodatum för cachelagrade sidor som visas under en angiven sökväg.
 
-* Från [Webbkonsol](../../help/sites-deploying/configuring-osgi.md)
+* Från [Webbkonsol](../../help/sites-deploying/configuring-osgi.md).
 
    * Till exempel: [http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
 
 * Sök `ACS AEM Commons - Dispatcher Cache Control Header - Max Age`
-* Välj ikonen + om du vill skapa en ny anslutningskonfiguration
+* Välj ikonen + så att du kan skapa en anslutningskonfiguration.
 
-   ![avsändare](assets/dispatcher.png)
+  ![avsändare](assets/dispatcher.png)
 
 * **Filtermönster**
-
-   *(obligatoriskt)* En eller flera sökvägar till communitysidor. Till exempel, `/content/sites/engage/(.*)`.
+  *(obligatoriskt)* En eller flera sökvägar till communitysidor. Till exempel, `/content/sites/engage/(.*)`.
 
 * **Maximal ålder för cachekontroll**
-
-   *(obligatoriskt)* Högsta ålder (i sekunder) som ska läggas till i huvudet för cachekontroll. Värdet måste vara större än noll (0).
+  *(obligatoriskt)* Högsta ålder (i sekunder) som ska läggas till i rubriken Cachekontroll. Värdet måste vara större än noll (0).
 
 ## Dispatcher-filter {#dispatcher-filters}
 
-Avsnittet /filter i `dispatcher.any` filen finns dokumenterad i [Konfigurera åtkomst till innehåll - /filter](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#filter).
+Avsnittet /filter i `dispatcher.any` filen finns dokumenterad i [Konfigurera åtkomst till innehåll - /filter](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en).
 
 I det här avsnittet beskrivs poster som troligtvis är nödvändiga för att funktionen i Communities ska fungera korrekt.
 
-Filteregenskapsnamnen följer reglerna för användning av ett fyrsiffrigt nummer för att ange i vilken ordning filtermönster ska användas. När flera filtermönster används på en begäran gäller det sista filtermönstret som tillämpas. Det allra första filtermönstret används ofta för att neka allt, så att följande mönster kan återskapa åtkomsten på ett kontrollerat sätt.
+Filteregenskapsnamnen följer reglerna för användning av ett fyrsiffrigt nummer för att ange i vilken ordning filtermönster ska användas. När flera filtermönster används på en begäran är det sista filtermönstret som används effektivt. Därför används ofta det första filtermönstret för att neka allt, så att följande mönster kan återskapa åtkomsten på ett kontrollerat sätt.
 
-I följande exempel används egenskapsnamn som troligen måste ändras för att få plats i en viss dispatcher.any-fil.
+I följande exempel används egenskapsnamn som sannolikt måste ändras för att passa in i en viss egenskap `dispatcher.any` -fil.
 
 Se även:
 
-* [Dispatcher Security Checklist](https://helpx.adobe.com/experience-manager/dispatcher/using/security-checklist.html)
+* [Dispatcher Security Checklist](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html?lang=en)
 
 >[!NOTE]
 >
 >**Exempel på egenskapsnamn**
->Alla egenskapsnamn som visas, till exempel **/0050** och **/0170**, ska justeras så att den passar i en befintlig dispatcher.alla konfigurationsfiler.
+>Alla egenskapsnamn som visas, till exempel **/0050** och **/0170**, bör justeras så att den passar i en befintlig `dispatcher.any` konfigurationsfil.
+>
 
 >[!CAUTION]
 >
->Se [Dispatcher Security Checklist](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html) om du vill ha mer information när du begränsar åtkomsten med Dispatcher. Läs även [AEM Security Cheklist](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/security-checklist.html) om du vill ha mer säkerhetsinformation om din AEM installation.
+>Se [Dispatcher Security Checklist](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html) om du vill ha mer information när du begränsar åtkomsten med Dispatcher. Läs även [AEM](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html) om du vill ha mer säkerhetsinformation om din AEM installation.
+>
 
 Följande poster ska läggas till i slutet av /filter-avsnittet, särskilt efter alla neka-poster.
 
@@ -273,9 +269,9 @@ Regelavsnittet i `dispatcher.any` definierar vilka svar som ska cachelagras base
 
 ## Felsökning {#troubleshooting}
 
-En stor problemkälla är att infoga filterregler utan att bry sig om hur de påverkar tidigare regler, särskilt när du lägger till en regel för att neka åtkomst.
+En stor problemkälla är att infoga filterregler utan att bry sig om effekten på tidigare regler, särskilt när du lägger till en regel för att neka åtkomst.
 
-Det allra första filtermönstret används ofta för att neka allt så att efterföljande filter återställer åtkomsten på ett kontrollerat sätt. När flera filter tillämpas på en begäran är det sista filter som tillämpas det som gäller.
+Det första filtermönstret används ofta för att neka allt så att följande filter återställer åtkomsten på ett kontrollerat sätt. När flera filter tillämpas på en begäran är det sista filter som tillämpas det som gäller.
 
 ## Exempeldispatcher.any {#sample-dispatcher-any}
 

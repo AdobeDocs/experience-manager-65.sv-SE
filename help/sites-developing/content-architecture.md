@@ -1,18 +1,14 @@
 ---
 title: Innehållsarkitektur
-seo-title: Content Architecture
 description: Tips för att skapa ditt innehåll (tips - allt är innehåll)
-seo-description: Tips for architecting your content in Adobe Experience Manager (AEM). (hint - everything is content)
-uuid: fef2bf0f-70ec-4621-8479-a62b7e1fbc07
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
-discoiquuid: ca46b74c-6114-458b-98c0-2a93abffcdc3
 exl-id: bcebbdb4-20b9-4c2d-8a87-013549d686c1
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
 workflow-type: tm+mt
-source-wordcount: '432'
+source-wordcount: '427'
 ht-degree: 0%
 
 ---
@@ -21,21 +17,21 @@ ht-degree: 0%
 
 ## Följ David modell {#follow-david-s-model}
 
-David’s Model skrevs av David Nuescheler för flera år sedan, men dagens idéer är sanna. David’s Model har följande huvudinnehåll:
+David&#39;s Model skrevs av David Nuescheler för flera år sedan, men idéerna är sanna i dag. De viktigaste grundsatserna i Davids modell är följande:
 
 * Data kommer först, strukturen senare. Kanske.
-* Driv fram innehållshierarkin, låt den inte ske.
+* Låt inte innehållshierarkin hända.
 * Arbetsytor är till för `clone()`, `merge()`och `update()`.
 * Se upp för samma namn som syskon.
 * Referenser anses vara skadliga.
 * Filer är filer.
 * ID:n är onda.
 
-David’s Model finns på Jackrabbit wiki på [https://wiki.apache.org/jackrabbit/DavidsModel](https://wiki.apache.org/jackrabbit/DavidsModel).
+David&#39;s Model finns på Jackrabbit wiki på [https://wiki.apache.org/jackrabbit/DavidsModel](https://wiki.apache.org/jackrabbit/DavidsModel).
 
 ### Allt är innehåll {#everything-is-content}
 
-Allt ska lagras i databasen i stället för att förlita sig på separata datakällor från tredje part, som databaser. Detta gäller redigerat innehåll, binära data som bilder, kod, konfigurationer osv. Detta gör att vi kan använda en uppsättning API:er för att hantera allt innehåll och för att hantera kampanjen av det här innehållet genom replikering. Vi får också en enda källa för säkerhetskopiering, loggning osv.
+Allt ska lagras i databasen i stället för att förlita sig på separata datakällor från tredje part, som databaser. Detta gäller för redigerat innehåll, binära data som bilder, kod och konfigurationer. Detta gör att vi kan använda en uppsättning API:er för att hantera allt innehåll och för att hantera kampanjen av det här innehållet genom replikering. Du får också en enda källa för säkerhetskopiering, loggning och så vidare.
 
 ### Använd designprincipen&quot;innehållsmodell först&quot; {#use-the-content-model-first-design-principle}
 
@@ -47,11 +43,11 @@ Servlets bör definieras baserat på resourceTypes i stället för sökvägar. D
 
 ### Undvik att definiera nya nodtyper {#avoid-defining-new-node-types}
 
-Nodtyper fungerar på en låg nivå i infrastrukturlagret och de flesta krav kan uppfyllas med hjälp av en sling:resourceType som tilldelats nodtypen int:unStructed, oak:Unstructed, sling:Folder eller cq:Page. Nodtyper motsvarar schemat i databasen och det kan vara väldigt dyrt att ändra nodtyperna längs vägen.
+Nodtyper fungerar på en låg nivå i infrastrukturlagret och de flesta krav kan uppfyllas med hjälp av en sling:resourceType som tilldelats nodtypen int:unStructed, oak:Unstructed, sling:Folder eller cq:Page. Nodtyper motsvarar schemat i databasen och det kan vara dyrt att ändra nodtyperna längs vägen.
 
 ### Anta namnkonventioner i den gemensamma CR-rapporten {#adhere-to-naming-conventions-in-the-jcr}
 
-Om du följer namngivningskonventioner blir kodbasen mer konsekvent, vilket minskar förekomsten av defekter och ökar hastigheten för utvecklare som arbetar i systemet. Adobe använder följande konventioner för att utveckla AEM:
+Om du följer namnkonventioner blir kodbasen mer konsekvent, vilket minskar förekomsten av defekter och ökar hastigheten för utvecklare som arbetar i systemet. Adobe använder följande konventioner för att utveckla AEM:
 
 * Nodnamn
 

@@ -1,19 +1,15 @@
 ---
 title: Analyser med externa leverantörer
-seo-title: Analytics with External Providers
 description: Lär dig mer om Analytics med externa leverantörer.
-seo-description: Learn about Analytics with External Providers.
-uuid: 31a773ca-901e-45f2-be8f-951c26f9dbc5
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
-discoiquuid: bab465bc-1ff4-4f21-9885-e4a875c73a8d
 docset: aem65
 exl-id: 9bf818f9-6e33-4557-b2e4-b0d4900f2a05
-source-git-commit: ec4f24528089fe3de639b974ff4ab6f8807fc7fc
+source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
 workflow-type: tm+mt
-source-wordcount: '448'
+source-wordcount: '435'
 ht-degree: 0%
 
 ---
@@ -30,11 +26,11 @@ Det finns olika färdiga konfigurationer för integrering med rätt tjänst, til
 
 Du kan också konfigurera en egen instans av **Generiska analysfragment** för att definiera en ny tjänstkonfiguration.
 
-Informationen samlas sedan in med små kodfragment som läggs till på webbsidorna. Till exempel:
+Informationen samlas sedan in av små kodfragment som läggs till på webbsidorna. Till exempel:
 
 >[!CAUTION]
 >
->Skript får inte omslutas av `script` -taggar.
+>Omsluter inte skript i `script` -taggar.
 
 ```
 var _gaq = _gaq || [];
@@ -61,23 +57,23 @@ Sådana fragment gör det möjligt att samla in data och generera rapporter. De 
 >
 >Om din egen `/apps` ärver inte från standardsidkomponenten ( `/libs/foundation/components/page`) måste du (eller dina utvecklare) se till att motsvarande `js` skript inkluderas, t.ex. genom att `cq/cloudserviceconfigs/components/servicescomponents`eller med en liknande mekanism.
 >
->Utan detta kommer ingen av tjänsterna (Generic, Analytics, Target, etc.) att fungera.
+>Utan detta kommer ingen av tjänsterna (Generic, Analytics, Target och så vidare) att fungera.
 
-## Skapa en ny tjänst med ett allmänt kodfragment {#creating-a-new-service-with-a-generic-snippet}
+## Skapa en tjänst med ett allmänt kodfragment {#creating-a-new-service-with-a-generic-snippet}
 
 För den grundläggande konfigurationen:
 
 1. Öppna **verktyg** konsol.
 1. Expandera från den vänstra rutan **Konfigurationer av Cloud Services**.
-1. Dubbelklicka på **Kodavsnitt för allmän analys** för att öppna sidan:
+1. Dubbelklicka **Kodavsnitt för allmän analys** för att öppna sidan:
 
    ![Kodavsnitt för allmän analys](assets/analytics_genericoverview.png)
 
-1. Klicka på + för att lägga till en ny konfiguration med dialogrutan. åtminstone tilldela ett namn, till exempel Google Analytics:
+1. Klicka på + för att lägga till en ny konfiguration med dialogrutan. Tilldela ett namn, till exempel Google Analytics:
 
    ![Skapa en konfiguration](assets/analytics_addconfig.png)
 
-1. Klicka **Skapa**&#x200B;öppnas fragmentdialogrutan omedelbart - klistra in rätt javascript-fragment i fältet:
+1. Klicka **Skapa**&#x200B;öppnas fragmentdialogrutan omedelbart - klistra in lämpligt JavaScript-fragment i fältet:
 
    ![Redigera komponenten](assets/analytics_snippet.png)
 
@@ -85,16 +81,16 @@ För den grundläggande konfigurationen:
 
 ## Använda din nya tjänst på sidor {#using-your-new-service-on-pages}
 
-När du har skapat tjänstkonfigurationen behöver du nu konfigurera de sidor som krävs för att använda den:
+När du har skapat tjänstkonfigurationen måste du nu konfigurera de sidor som krävs för att använda den:
 
 1. Navigera till sidan.
 1. Öppna **Sidegenskaper** från sidesparken, sedan **Cloud Services** -fliken.
-1. Klicka **Lägg till tjänst** väljer du sedan önskad tjänst, till exempel **Kodavsnitt för allmän analys**:
+1. Klicka **Lägg till tjänst** väljer du sedan önskad tjänst. Till exempel **Kodavsnitt för allmän analys**:
 
    ![Lägga till en molntjänst](assets/analytics_selectservice.png)
 
 1. Klicka **OK** att spara.
-1. Du kommer tillbaka till **Cloud Services** -fliken. The **Kodavsnitt för allmän analys** visas nu med meddelandet `Configuration reference missing`. Använd listrutan för att välja en specifik tjänstinstans; till exempel google-analys:
+1. Du kommer tillbaka till **Cloud Services** -fliken. The **Kodavsnitt för allmän analys** visas nu med meddelandet `Configuration reference missing`. Använd listrutan för att välja en specifik tjänstinstans. Till exempel Google-analys:
 
    ![Lägger till molntjänstkonfiguration](assets/analytics_selectspecificservice.png)
 
@@ -102,7 +98,7 @@ När du har skapat tjänstkonfigurationen behöver du nu konfigurera de sidor so
 
    Utdraget visas nu om du visar sidans sidkälla.
 
-   Efter en lämplig tidsperiod kan du visa den statistik som har samlats in.
+   När en viss tid har gått kan du visa den insamlade statistiken.
 
    >[!NOTE]
    >

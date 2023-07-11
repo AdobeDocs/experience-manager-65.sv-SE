@@ -1,20 +1,16 @@
 ---
 title: Planera din uppgradering
-seo-title: Planning Your Upgrade
-description: Den här artikeln hjälper till att fastställa tydliga mål, faser och resultat när du planerar AEM.
-seo-description: This article helps establish clear goals, phases and deliverables when planning the AEM upgrade.
-uuid: 6128ac53-4115-4262-82d9-a0ad7d498ea6
+description: Den här artikeln hjälper till att fastställa tydliga mål, faser och slutprodukter när du planerar AEM.
 contentOwner: sarchiz
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: upgrading
-discoiquuid: 49210824-ad87-4b6a-9ae8-77dcfe2b5c06
 docset: aem65
 feature: Upgrading
 exl-id: 0dea2b3e-fd7c-4811-a04a-6852ffc1e6d6
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
 workflow-type: tm+mt
-source-wordcount: '2430'
+source-wordcount: '2399'
 ht-degree: 0%
 
 ---
@@ -23,13 +19,13 @@ ht-degree: 0%
 
 ## AEM projektöversikt {#aem-project-overview}
 
-AEM används ofta i driftsättningar med stor effekt som kan vara till nytta för miljontals användare. I de flesta fall finns det anpassade program som distribueras på instanserna, vilket ökar komplexiteten. Alla försök att uppgradera en sådan distribution måste hanteras metodiskt.
+AEM används ofta i driftsättningar med stor effekt som kan vara till nytta för miljontals användare. Vanligtvis finns det anpassade program som distribueras på instanserna, vilket ökar komplexiteten. Alla försök att uppgradera en sådan distribution måste hanteras metodiskt.
 
-Den här guiden hjälper dig att fastställa tydliga mål, faser och resultat när du planerar en uppgradering. Det fokuserar på det övergripande projektgenomförandet och på riktlinjerna. Den ger en översikt över de faktiska uppgraderingsstegen, men hänvisar till tillgängliga tekniska resurser där det är lämpligt. Den bör användas tillsammans med de tillgängliga tekniska resurser som avses i dokumentet.
+Den här guiden hjälper dig att fastställa tydliga mål, faser och slutprodukter när du planerar en uppgradering. Det fokuserar på det övergripande projektgenomförandet och på riktlinjerna. Den ger en översikt över de faktiska uppgraderingsstegen, men hänvisar till tillgängliga tekniska resurser där det är lämpligt. Den bör användas tillsammans med de tillgängliga tekniska resurser som anges i dokumentet.
 
 Den AEM uppgraderingsprocessen kräver noggrant hanterade planerings-, analys- och körningsfaser med viktiga slutprodukter definierade för varje fas.
 
-Observera att det går att uppgradera direkt från AEM 6.0 och upp till 6.5. Kunder som kör 5.6.x och tidigare måste uppgradera först till version 6.0 eller senare, och 6.0(SP3) rekommenderas. Det nya OAK-segmenttjärformatet används nu även för segmentnodarkivet sedan 6.3, och databasmigrering till det nya formatet är obligatoriskt även för 6.0, 6.1 och 6.2.
+Det går att uppgradera direkt från AEM 6.0 och upp till 6.5. Kunder som kör 5.6.x och tidigare måste uppgradera först till version 6.0 eller senare, och 6.0(SP3) rekommenderas. Det nya Oak Segment-tjärformatet används nu även för segmentnodarkivet sedan 6.3, och databasmigrering till det nya formatet är obligatoriskt även för 6.0, 6.1 och 6.2.
 
 >[!CAUTION]
 >
@@ -52,14 +48,14 @@ Nedan finns en lista över områden som påverkas i ett vanligt AEM Upgrade Proj
    <td>När AEM uppgraderas kan det också vara dags att uppgradera operativsystemet, vilket kan få lite effekt.</td>
   </tr>
   <tr>
-   <td>Java Runtime</td>
+   <td>Java™ Runtime</td>
    <td>Måttlig effekt</td>
    <td>AEM 6.3 kräver JRE 1.7.x (64 bitar) eller senare. JRE 1.8 är den enda version som för närvarande stöds av Oraclet.</td>
   </tr>
   <tr>
    <td>Maskinvara</td>
    <td>Måttlig effekt</td>
-   <td>Onlineversionsrensning kräver kostnadsfri<br /> diskutrymme motsvarande 25 % av databasens storlek och 15 % ledigt stackutrymme<br /> för att slutföra. Du kan behöva uppgradera maskinvaran för att<br /> se till att det finns tillräckligt med resurser för rensning av onlineändringar för att<br /> köra. Om du uppgraderar från en version som är tidigare än AEM 6 finns det dessutom<br /> kan vara ytterligare lagringskrav.</td>
+   <td>Onlineversionsrensning kräver kostnadsfri<br /> diskutrymme motsvarande 25 % av databasens storlek och 15 % ledigt stackutrymme<br /> för att slutföra. Du kan behöva uppgradera maskinvaran för att<br /> se till att det finns tillräckligt med resurser för rensning av onlineändringar för att<br /> kör. Om du uppgraderar från en version som är tidigare än AEM 6 finns det även<br /> kan vara ytterligare lagringskrav.</td>
   </tr>
   <tr>
    <td>Innehållsdatabas (CRX eller Oak)</td>
@@ -89,31 +85,31 @@ Nedan finns en lista över områden som påverkas i ett vanligt AEM Upgrade Proj
  </tbody>
 </table>
 
-Det är viktigt att du kör ett operativsystem som stöds, Java-miljön, httpd- och Dispatcher-versionen. Mer information finns i [AEM 6.5 Technical Requirements page](/help/sites-deploying/technical-requirements.md). Du måste ta hänsyn till att du uppgraderar dessa komponenter i din projektplan och de bör göras innan du uppgraderar AEM.
+Det är viktigt att du kör ett operativsystem, en Java™-runtime, en httpd- eller Dispatcher-version som stöds. Mer information finns i [AEM 6.5 Technical Requirements page](/help/sites-deploying/technical-requirements.md). Du måste ta hänsyn till att du uppgraderar dessa komponenter i din projektplan och de bör göras innan du uppgraderar AEM.
 
 ## Projektfaser {#project-phases}
 
-En hel del arbete går åt till att planera och genomföra en AEM uppgradering. För att förtydliga de olika insatser som ingår i denna process har vi delat upp planerings- och genomförandeövningarna i separata faser. I avsnitten nedan resulterar varje fas i en slutprodukt som ofta utnyttjas av en framtida fas i projektet.
+Mycket arbete läggs på att planera och köra en AEM uppgradering. För att förtydliga de olika insatser som ingår i denna process har Adobe delat upp planerings- och genomförandeövningarna i separata faser. I avsnitten nedan resulterar varje fas i en slutprodukt som ofta används i en framtida fas av projektet.
 
 ### Planering för författarutbildning {#planning-for-author-training}
 
-I alla nya versioner finns det risk för förändringar i användargränssnittet och användararbetsflöden. Dessutom innehåller nya releaser nya funktioner som kan vara till nytta för företaget. Vi rekommenderar att du granskar de funktionsändringar som har införts och organiserar en plan för att utbilda dina användare så att de kan utnyttja dem effektivt.
+I alla nya versioner finns det risk för förändringar i användargränssnittet och användararbetsflöden. Nya releaser innehåller också nya funktioner som kan vara till nytta för företaget. Adobe rekommenderar att du granskar de funktionsändringar som har gjorts och organiserar en plan för att utbilda dina användare i att använda dem effektivt.
 
 ![unu_cropped](assets/unu_cropped.png)
 
-Nya funktioner i AEM 6.5 finns i [AEM på adobe.com](/help/release-notes/release-notes.md). Observera alla ändringar av användargränssnitt och produktfunktioner som används ofta i din organisation. När du tittar igenom de nya funktionerna bör du också tänka på alla funktioner som kan vara av värde för din organisation. När du har gått igenom vad som har ändrats i AEM 6.5 kan du utveckla en utbildningsplan för dina författare. Detta kan innebära att man kan utnyttja kostnadsfria resurser som hjälpmedelsvideor eller formell utbildning som erbjuds genom [Adobe Digital Learning Services](https://www.adobe.com/training.html).
+Nya funktioner i AEM 6.5 finns i [AEM på adobe.com](/help/release-notes/release-notes.md). Observera alla ändringar av användargränssnitt och produktfunktioner som används ofta i din organisation. När du tittar igenom de nya funktionerna bör du också tänka på alla funktioner som kan vara av värde för din organisation. När du har gått igenom vad som har ändrats i AEM 6.5 kan du utveckla en utbildningsplan för dina författare. Det kan handla om att använda kostnadsfria resurser som videor om hjälpfunktioner eller formell utbildning som erbjuds genom [Adobe Digital Learning Services](https://learning.adobe.com/).
 
 ### Skapa en testplan {#creating-a-test-plan}
 
-Varje kunds implementering av AEM är unik och har anpassats efter deras affärskrav. Därför är det viktigt att fastställa alla anpassningar som har gjorts i systemet så att de kan inkluderas i en testplan. Testplanen kommer att driva den QA-process som vi utför på den uppgraderade instansen.
+Varje kunds implementering av AEM är unik och har anpassats efter deras affärskrav. Därför är det viktigt att fastställa alla anpassningar som har gjorts i systemet så att de kan inkluderas i en testplan. Denna testplan kommer att driva den QA-process som Adobe utför på den uppgraderade instansen.
 
 ![test-plan](assets/test-plan.png)
 
-Den exakta produktionsmiljön måste dupliceras och testning bör utföras efter uppgraderingen för att säkerställa att alla program och anpassad kod fortfarande fungerar som de ska. Du måste ångra all anpassning och utföra prestandatestning, inläsning och säkerhetstestning. När du organiserar din testplan måste du ta med alla anpassningar som har gjorts i systemet, förutom de användargränssnitt och arbetsflöden som du använder i din dagliga verksamhet. Dessa kan omfatta anpassade OSGI-tjänster och -servrar, integrering med Adobe Marketing Cloud, integrering med tredje part via AEM, anpassade tredjepartsintegreringar, anpassade komponenter och mallar, anpassade användargränssnittsövertäckningar i AEM samt anpassade arbetsflöden. För kunder som migrerar från en tidigare version än AEM 6 bör alla anpassade frågor analyseras eftersom dessa kan behöva indexeras. För kunder som redan har en AEM 6.x-version bör dessa frågor fortfarande testas för att säkerställa att deras index fortsätter att fungera effektivt efter uppgraderingen.
+Den exakta produktionsmiljön måste dupliceras och testning bör utföras efter uppgraderingen för att säkerställa att alla program och anpassad kod fortfarande fungerar som de ska. Regress all anpassning och kör prestanda, inläsning och säkerhetstestning. När du organiserar din testplan måste du ta med alla anpassningar som har gjorts i systemet, förutom de användargränssnitt och arbetsflöden som används i de dagliga åtgärderna. Dessa kan omfatta anpassade OSGI-tjänster och -servrar, integrering med Adobe Experience Cloud, integrering med tredje part via AEM, anpassade tredjepartsintegreringar, anpassade komponenter och mallar, anpassade användargränssnittsövertäckningar i AEM samt anpassade arbetsflöden. För kunder som migrerar från en tidigare version än AEM 6 bör alla anpassade frågor analyseras eftersom dessa kan behöva indexeras. För kunder som redan har en AEM 6.x-version bör dessa frågor fortfarande testas för att säkerställa att deras index fortsätter att fungera effektivt efter uppgraderingen.
 
 ### Fastställa nödvändiga arkitektoniska förändringar och infrastrukturförändringar {#determining-architectural-and-infrastructure-changes-needed}
 
-När du uppgraderar kan du behöva uppgradera andra komponenter i din tekniska stack, till exempel operativsystemet eller JVM. Dessutom är det möjligt att ytterligare maskinvara kan behövas på grund av ändringar i databaskonfigurationen. Det här uppstår oftast bara för kunder som migrerar från tidigare versioner än 6.x, men det är viktigt att tänka på. Slutligen kan det finnas ändringar som är nödvändiga i era rutiner för övervakning, underhåll och säkerhetskopiering och katastrofåterställning.
+När du uppgraderar kan du behöva uppgradera andra komponenter i din tekniska stack, till exempel operativsystemet eller JVM. På grund av ändringar i databaskonfigurationen kan det dessutom behövas ytterligare maskinvara. Detta gäller endast kunder som migrerar från tidigare versioner än 6.x, men är viktigt att tänka på. Slutligen kan det finnas ändringar som är nödvändiga i era rutiner för övervakning, underhåll och säkerhetskopiering och katastrofåterställning.
 
 ![doi_cropped](assets/doi_cropped.png)
 
@@ -139,15 +135,15 @@ Läs de tekniska kraven för AEM 6.5 och se till att din nuvarande maskin- och p
 
 #### Överväganden vid innehållsomstrukturering {#content-restructuring-considerations}
 
-AEM har infört ändringar i databasstrukturen som gör uppgraderingarna smidigare. Ändringarna innebär att flytta innehåll från mappen /etc till mappar som /libs, /apps och /content, baserat på om Adobe eller en kund äger innehållet, vilket minskar riskerna för att skriva över innehåll under releaser. Omstruktureringen av databasen har gjorts på ett sådant sätt att kodändringar inte behöver göras vid uppgraderingen till version 6.5, även om det rekommenderas att du läser informationen på [Omstrukturering av lager i AEM](/help/sites-deploying/repository-restructuring.md) när du planerar en uppgradering.
+AEM har infört ändringar i databasstrukturen som gör uppgraderingarna smidigare. Ändringarna innebär att flytta innehåll från mappen /etc till mappar som /libs, /apps och /content, baserat på om Adobe eller en kund äger innehållet, vilket minskar riskerna för att skriva över innehåll under releaser. Omstruktureringen av databasen har gjorts på ett sådant sätt att inga kodändringar behöver göras vid uppgraderingen till version 6.5, även om det rekommenderas att du läser informationen på [Omstrukturering av lager i AEM](/help/sites-deploying/repository-restructuring.md) när du planerar en uppgradering.
 
 ### Utvärderar uppgraderingskomplexitet {#assessing-upgrade-complexity}
 
-På grund av det stora utbudet av anpassningar som våra kunder använder i sina AEM miljöer är det viktigt att lägga lite tid på att avgöra den övergripande nivå av arbete som förväntas i uppgraderingen.
+På grund av den stora variationen i antal och typ av anpassningar som Adobe-kunder använder i sina AEM miljöer är det viktigt att lägga lite tid på att avgöra den övergripande nivå av arbete som förväntas i uppgraderingen.
 
-Det finns två sätt att bedöma uppgraderingens komplexitet. En inledande fas kan bara använda den nya mönsteravkännaren, som är tillgänglig för att köras i AEM 6.1, 6.2 och 6.3. Mönsterdetektorn är det enklaste sättet att bedöma uppgraderingens totala komplexitet som kan förväntas med hjälp av rapporterade mönster. Mönsterdetektorrapporten innehåller mönster för att identifiera otillgängliga API:er som används av den anpassade kodbasen (detta gjordes med kompatibilitetskontroller före uppgradering i 6.3).
+Det finns två sätt att bedöma uppgraderingens komplexitet. En inledande fas kan använda den nya mönsteravkännaren, som är tillgänglig för att köras i AEM 6.1, 6.2 och 6.3. Mönsterdetektorn är det enklaste sättet att bedöma uppgraderingens totala komplexitet som kan förväntas med hjälp av rapporterade mönster. Mönsterdetektorrapporten innehåller mönster för att identifiera otillgängliga API:er som används av den anpassade kodbasen (detta gjordes med kompatibilitetskontrollerna före uppgradering i 6.3).
 
-Efter den första bedömningen kan ett mer omfattande nästa steg vara att utföra en uppgradering av en testinstans och utföra några grundläggande röktester. Adobe har också vissa funktioner. Dessutom finns en lista med [Föråldrade och borttagna funktioner](/help/release-notes/deprecated-removed-features.md) bör granskas inte bara för den version du uppgraderar till, utan även för alla versioner mellan käll- och målversionerna. Om du till exempel uppgraderar från AEM 6.2 till 6.5 är det viktigt att du granskar de borttagna och borttagna funktionerna i AEM 6.3 utöver dem i AEM 6.5.
+Efter den första bedömningen kan ett mer omfattande nästa steg vara att utföra en uppgradering av en testinstans och utföra några grundläggande röktester. Adobe har också vissa funktioner. Listan med [Föråldrade och borttagna funktioner](/help/release-notes/deprecated-removed-features.md) bör granskas inte bara för den version du uppgraderar till, utan även för alla versioner mellan käll- och målversionerna. Om du till exempel uppgraderar från AEM 6.2 till 6.5 är det viktigt att du granskar de borttagna och borttagna funktionerna i AEM 6.3 utöver dem i AEM 6.5.
 
 ![trei_cropped](assets/trei_cropped.png)
 
@@ -155,15 +151,15 @@ Den mönsteravkännare som introducerades nyligen bör ge en korrekt uppskattnin
 
 ### Bygga Runbook för uppgradering och återställning {#building-the-upgrade-and-rollback-runbook}
 
-Adobe har dokumenterat processen för uppgradering av en AEM instans, men varje kunds nätverkslayout, driftsättningsarkitektur och anpassningar kräver finjustering och anpassning av den här metoden. Därför rekommenderar vi att du granskar all dokumentation som vi har tillhandahållit och använder den för att informera en projektspecifik Runbook som beskriver de specifika uppgraderings- och återställningsprocedurer som du kommer att följa i din miljö. Om du uppgraderar från CRX2 måste du se till att utvärdera hur lång tid det tar att migrera innehåll när du flyttar från CRX2 till Oak. För stora databaser kan det vara mycket viktigt.
+Adobe har dokumenterat processen för uppgradering av en AEM instans, men varje kunds nätverkslayout, driftsättningsarkitektur och anpassningar kräver att man finjusterar och skräddarsyr den här metoden. Därför rekommenderar Adobe att du granskar all dokumentation som tillhandahålls och använder den för att informera en projektspecifik Runbook som beskriver de uppgraderings- och återställningsprocedurer som du kommer att följa i din miljö. Om du uppgraderar från CRX2 måste du se till att utvärdera hur lång tid det tar att migrera innehåll när du flyttar från CRX2 till Oak. För stora databaser kan det vara mycket viktigt.
 
 ![runbook-chart](assets/runbook-diagram.png)
 
-Vi erbjuder uppgraderings- och återställningsprocedurer i [Uppgraderingsprocedur](/help/sites-deploying/upgrade-procedure.md) samt steg-för-steg-instruktioner för hur man tillämpar uppgraderingen i Utföra en [Lokal uppgradering](/help/sites-deploying/in-place-upgrade.md). Dessa instruktioner bör granskas och beaktas med din systemarkitektur, anpassningar och driftsavvikelse för att avgöra vilka procedurer för växling och återställning som du ska utföra under uppgraderingen. Alla ändringar av arkitektur eller serverstorlekar bör inkluderas när du skapar din anpassade runbook. Det är viktigt att notera att detta bör behandlas som ett första utkast. När teamet slutför sina QA- och utvecklingscykler och distribuerar uppgraderingen till testmiljön är det troligt att det krävs ytterligare åtgärder. Helst bör det här dokumentet innehålla tillräckligt med information så att om det skulle överlämnas till en medlem av personalen kan de slutföra uppgraderingen helt utifrån informationen i det.
+Adobe har tillhandahållit uppgraderings- och återställningsprocedurer i [Uppgraderingsprocedur](/help/sites-deploying/upgrade-procedure.md) och steg-för-steg-instruktioner för hur du tillämpar uppgraderingen i Utföra en [Lokal uppgradering](/help/sites-deploying/in-place-upgrade.md). Dessa instruktioner bör granskas och övervägas med din systemarkitektur, anpassningar och driftsavvikelse för att avgöra vilka procedurer för växling och återställning som du ska utföra under uppgraderingen. Alla ändringar av arkitektur eller serverstorlekar bör inkluderas när du skapar din anpassade runbook. Det är viktigt att notera att detta bör behandlas som ett första utkast. När teamet slutför sina QA- och utvecklingscykler och distribuerar uppgraderingen till testmiljön är det troligt att det krävs ytterligare åtgärder. Helst bör det här dokumentet innehålla tillräckligt med information så att om det skulle överlämnas till en medlem av personalen kan de slutföra uppgraderingen helt utifrån informationen i det.
 
 ### Utveckla en projektplan {#developing-a-project-plan}
 
-Vi kan använda resultaten från tidigare övningar för att bygga en projektplan som täcker de tidslinjer som vi förväntar oss för test- eller utvecklingsarbete, utbildning och faktiskt utförande av uppgraderingen.
+Utdata från tidigare övningar kan användas för att bygga en projektplan som täcker de förväntade tidslinjerna för test- eller utvecklingsarbete, utbildning och faktiskt utförande av uppgraderingen.
 
 ![develop-project-plan](assets/develop-project-plan.png)
 
@@ -180,7 +176,7 @@ En omfattande projektplan bör omfatta följande:
 
 ### Utveckling och kvalitetskontroll {#performing-development-and-qa}
 
-Vi har skapat rutiner för [Uppgradera kod och anpassningar](/help/sites-deploying/upgrading-code-and-customizations.md) att vara kompatibel med AEM 6.5. När den här iterativa processen körs bör ändringar göras i Runbook efter behov. Se även [Bakåtkompatibilitet i AEM 6.5](/help/sites-deploying/backward-compatibility.md) information om hur anpassningarna i de flesta fall kan vara bakåtkompatibla utan att behöva utvecklas omedelbart efter uppgraderingen.
+Adobe har infört förfaranden för [Uppgradera kod och anpassningar](/help/sites-deploying/upgrading-code-and-customizations.md) att vara kompatibel med AEM 6.5. När den här iterativa processen körs bör ändringar göras i Runbook efter behov. Se även [Bakåtkompatibilitet i AEM 6.5](/help/sites-deploying/backward-compatibility.md) information om hur anpassningarna kan bli bakåtkompatibla normalt utan att behöva utvecklas omedelbart efter uppgraderingen.
 
 ![patru_cropped](assets/patru_cropped.png)
 
@@ -188,16 +184,16 @@ Utvecklings- och testprocessen är vanligtvis iterativ. På grund av anpassninga
 
 ### Slutlig testning {#final-testing}
 
-Vi rekommenderar en sista testomgång efter att kodbasen har certifierats av din organisations QA-team. Denna testomgång innebär att du validerar din runbook i en staging-miljö, följt av rundor där användaren accepteras, prestanda och säkerhetstestning.
+Adobe rekommenderar en sista testomgång efter att kodbasen har certifierats av din organisations QA-team. Denna testomgång innebär att du validerar din runbook i en staging-miljö, följt av rundor där användaren accepteras, prestanda och säkerhetstestning.
 
 ![cinci_cropped](assets/cinci_cropped.png)
 
-Det här steget är viktigt eftersom det är enda gången som du kan validera stegen i Runbook mot en produktionsliknande miljö. När miljön har uppgraderats är det viktigt att användarna ges tid att logga in och gå igenom de aktiviteter de utför när de använder systemet i sina dagliga aktiviteter. Det är inte ovanligt att användare utnyttjar en del av systemet som inte tidigare övervägts. Att hitta och åtgärda problem i dessa områden innan du publicerar produkten kan bidra till att förhindra kostsamma produktionsavbrott. Eftersom en ny version av AEM innehåller betydande ändringar av den underliggande plattformen är det också viktigt att utföra prestanda-, belastnings- och säkerhetstester på systemet som om det startades för första gången.
+Det här steget är viktigt eftersom det är enda gången som du kan validera stegen i Runbook mot en produktionsliknande miljö. När miljön har uppgraderats är det viktigt att användarna ges tid att logga in och gå igenom de aktiviteter de utför när de använder systemet i sina dagliga aktiviteter. Det är inte ovanligt att användare använder en del av systemet som inte tidigare övervägts. Att hitta och åtgärda problem i dessa områden innan du publicerar produkten kan bidra till att förhindra kostsamma produktionsavbrott. Eftersom en ny version av AEM innehåller betydande ändringar av den underliggande plattformen är det också viktigt att utföra prestanda-, belastnings- och säkerhetstester på systemet som om det startades för första gången.
 
 ### Utföra uppgraderingen {#performing-the-upgrade}
 
-När en slutgiltig signering har tagits emot från alla intressenter är det dags att köra de runbook-procedurer som har definierats. Vi har vidtagit åtgärder för uppgradering och återställning [Uppgraderingsprocedur](/help/sites-deploying/upgrade-procedure.md) och installationssteg i Utföra en [Lokal uppgradering](/help/sites-deploying/in-place-upgrade.md) som referenspunkt.
+När den slutliga signeringen har tagits emot från alla intressenter är det dags att utföra de definierade Runbook-procedurerna. Adobe har vidtagit åtgärder för uppgradering och återställning i [Uppgraderingsprocedur](/help/sites-deploying/upgrade-procedure.md) och installationssteg i Utföra en [Lokal uppgradering](/help/sites-deploying/in-place-upgrade.md) som referenspunkt.
 
 ![perform-upgrade](assets/perform-upgrade.png)
 
-Vi har tagit fram några steg i uppgraderingsinstruktionerna för miljövalidering. Detta omfattar grundläggande kontroller som att skanna uppgraderingsloggarna och verifiera att alla OSGi-paket har startats korrekt, men vi rekommenderar även att du validerar med dina egna testfall baserat på dina affärsprocesser. Vi rekommenderar även att du kontrollerar schemat för AEM online Revision Cleanup och relaterade rutiner för att säkerställa att de inträffar under en lugn tid för ditt företag. Dessa rutiner är viktiga för AEM långsiktiga resultat.
+Adobe har tagit fram några steg i uppgraderingsinstruktionerna för miljövalidering. Dessa omfattar grundläggande kontroller som att skanna uppgraderingsloggarna och verifiera att alla OSGi-paket har startats korrekt, men Adobe rekommenderar även att du validerar med dina egna testfall baserat på dina affärsprocesser. Adobe rekommenderar också att du kontrollerar schemat AEM Online Revision Cleanup och tillhörande rutiner för att säkerställa att de inträffar under en lugn tid för ditt företag. Dessa rutiner är viktiga för AEM långsiktiga resultat.

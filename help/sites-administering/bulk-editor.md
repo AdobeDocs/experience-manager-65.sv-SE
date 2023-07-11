@@ -1,19 +1,15 @@
 ---
 title: Massredigeraren
-seo-title: The Bulk Editor
 description: Lär dig hur du använder gruppredigeraren.
-seo-description: Learn how to use the Bulk Editor.
-uuid: 5f5e4190-d9b2-40a6-8cf4-4b7aebe35ad3
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
-discoiquuid: 3649cffb-418a-4ad6-862f-56346a831b0b
 docset: aem65
 exl-id: c63e044c-4d2a-44d3-853b-8e7337e1ee03
-source-git-commit: feef7362b832f2ddef1902ef2a25d55323b6be26
+source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
 workflow-type: tm+mt
-source-wordcount: '1167'
+source-wordcount: '1159'
 ht-degree: 0%
 
 ---
@@ -21,10 +17,10 @@ ht-degree: 0%
 
 # Massredigeraren{#the-bulk-editor}
 
-Med gruppredigeraren kan du redigera sidor mycket effektivt när den visuella sidkontexten inte behövs så som du kan:
+Med gruppredigeraren kan du redigera effektivt när den visuella sidkontexten inte behövs så som du kan:
 
 * söka efter (och visa) innehåll från flera sidor, detta görs med GQL (Google Query Language)
-* redigera det här innehållet direkt i gruppredigeraren
+* redigera innehållet direkt i gruppredigeraren
 * spara ändringarna (på originalsidorna)
 * exportera det här innehållet till en tabbavgränsad (.tsv) kalkylbladsfil
 
@@ -32,7 +28,7 @@ Med gruppredigeraren kan du redigera sidor mycket effektivt när den visuella si
 >
 >Du kan även importera innehåll till databasen, men som standard är detta inaktiverat för gruppredigeraren så som det är tillgängligt i **verktyg** konsol.
 
-I det här avsnittet beskrivs hur du arbetar med massredigeraren i **verktyg** konsol. Vanligtvis använder administratörer gruppredigeraren för att söka efter och redigera flera objekt. Det gör du genom att fylla i tabellen med en GQL-fråga och sedan genom att markera innehållsobjekten som du vill arbeta med. Författare använder vanligtvis massredigeringsprogrammet som en del av ett anpassat massredigeringsprogram som är tillgängligt via [produktlista](/help/sites-authoring/default-components.md#productlist) -komponenten.
+I det här avsnittet beskrivs hur du arbetar med gruppredigeraren i **verktyg** konsol. Vanligtvis använder administratörer gruppredigeraren för att söka efter och redigera flera objekt. Det gör du genom att fylla i tabellen med en GQL-fråga och sedan genom att markera innehållsobjekten som du vill arbeta med. Författare använder vanligtvis gruppredigeraren som en del av ett anpassat gruppredigeringsprogram som är tillgängligt via [produktlista](/help/sites-authoring/default-components.md#productlist) -komponenten.
 
 >[!CAUTION]
 >
@@ -49,13 +45,13 @@ Ett exempel som illustrerar en sådan användning finns på Geometrixx webbplats
 
    ![Exempel på enkät om kundnöjdhet](assets/custsatsurvey.png)
 
-1. Massredigeraren är helt anpassningsbar. I det här exemplet kan användare inte redigera innehållet, men bara exportera informationen till ett kalkylblad.
+1. Massredigeraren är helt anpassningsbar, men i det här exemplet tillåter inte gruppredigeraren att användare redigerar innehållet, utan bara att de kan exportera informationen till ett kalkylblad.
 
    ![Konsol för massredigering](assets/bulkeditor.png)
 
 ## Så här använder du gruppredigeraren {#how-to-use-the-bulk-editor}
 
-Massredigeraren gör att du kan:
+Med gruppredigeraren kan du:
 
 * [söka efter innehåll baserat på frågeparametrar, för att visa angivna egenskaper för resultaten i kolumner, för att redigera innehållet och spara ändringarna](#searching-and-editing-content)
 * [om du vill exportera det här innehållet till ett tabbseparerat kalkylblad](#exporting-content)
@@ -78,11 +74,11 @@ Så här använder du gruppredigeraren för att redigera flera objekt samtidigt:
   </tr>
   <tr>
    <td>Rotsökväg</td>
-   <td>Anger rotsökvägen som massredigeraren söker efter.<br /> Till exempel, <code>/content/geometrixx/en</code>. Massredigeraren söker igenom alla underordnade noder.</td>
+   <td>Anger den rotsökväg som den gruppredigeraren söker efter.<br /> Till exempel, <code>/content/geometrixx/en</code>. I gruppredigeraren söks alla underordnade noder igenom.</td>
   </tr>
   <tr>
    <td>Frågeparametrar</td>
-   <td>Använd GQL-parametrar för att ange den söksträng som du vill att massredigeraren ska söka efter i databasen; till exempel <code>type:Page</code> söker efter alla sidor i rotsökvägen, <code>text:professional</code> söker efter alla sidor som innehåller ordet "professionell", och <code>"jcr:title":English</code> söker efter alla sidor som har "engelska" som titel. Du kan bara söka efter strängar.</td>
+   <td>Använd GQL-parametrar för att ange söksträngen som du vill att den gruppredigerade ska söka efter i databasen; till exempel <code>type:Page</code> söker efter alla sidor i rotsökvägen, <code>text:professional</code> söker efter alla sidor som innehåller ordet "professionell", och <code>"jcr:title":English</code> söker efter alla sidor som har "engelska" som titel. Du kan bara söka efter strängar.</td>
   </tr>
   <tr>
    <td>Kryssrutan Innehållsläge</td>
@@ -90,7 +86,7 @@ Så här använder du gruppredigeraren för att redigera flera objekt samtidigt:
   </tr>
   <tr>
    <td>Egenskaper/kolumner</td>
-   <td>Markera kryssrutorna för de egenskaper som du vill att massredigeraren ska returnera. De egenskaper du väljer är kolumnrubrikerna i resultatrutan. Som standard visas nodsökvägen i resultatet.</td>
+   <td>Markera kryssrutorna för de egenskaper som du vill att gruppredigeraren ska returnera. De egenskaper du väljer är kolumnrubrikerna i resultatrutan. Som standard visas nodsökvägen i resultatet.</td>
   </tr>
   <tr>
    <td>Anpassade egenskaper/kolumner</td>
@@ -120,14 +116,14 @@ I exemplet ovan returneras alla sidor som uppfyller dina sökvillkor och visas m
 
 #### Ytterligare GQL-frågeparametrar {#additional-gql-query-parameters}
 
-* **sökväg:** bara söknoder under den här sökvägen. Om du anger mer än en term med ett sökvägsprefix beaktas bara den sista.
-* **typ:** bara returnera noder av de angivna nodtyperna. Detta inkluderar både primära och blandade typer. Du kan ange flera kommaseparerade nodtyper. GQL returnerar noder som är av någon av de angivna typerna.
-* **beställning:** sortera resultatet efter de angivna egenskaperna. Du kan ange flera kommaavgränsade egenskapsnamn. Om du vill ordna resultatet i fallande ordning lägger du bara till ett minustecken som prefix för egenskapsnamnet. Exempel: order:-name. Om du använder ett plustecken returneras resultatet i stigande ordning, vilket också är standard.
-* **gräns:** begränsar antalet resultat med ett intervall. Exempel: limit:10..20 Observera att intervallet är nollbaserat, att början är inkluderat och att slutet är exklusivt. Du kan även ange ett öppet intervall:limit:10.. eller limit:..20 Om punkterna utelämnas och endast ett värde anges kommer GQL att returnera maximalt detta antal resultat. T.ex. limit:10 (returnerar de första 10 resultaten)
+* **sökväg:** bara söknoder under den här sökvägen. Om du anger mer än en term med ett sökvägsprefix beaktas endast den sista termen.
+* **typ:** bara returnera noder av de angivna nodtyperna. Detta inkluderar primära typer och blandningstyper. Du kan ange flera kommaavgränsade nodtyper. GQL returnerar noder som är av någon av de angivna typerna.
+* **beställning:** sortera resultatet efter de angivna egenskaperna. Du kan ange flera kommaavgränsade egenskapsnamn. Om du vill ordna resultatet i fallande ordning lägger du bara till ett minustecken som prefix för egenskapsnamnet. Till exempel order:-name. Om du använder ett plustecken returneras resultatet i stigande ordning, vilket också är standard.
+* **gräns:** begränsar antalet resultat med ett intervall. Till exempel limit:10..20 Intervallet är nollbaserat, start är inkluderat och slut är exklusivt. Du kan även ange ett öppet intervall:limit:10.. eller limit:..20 Om punkterna utelämnas och endast ett värde anges kommer GQL att returnera maximalt detta antal resultat. Till exempel limit:10 (returnerar de första tio resultaten).
 
 ### Exporterar innehåll {#exporting-content}
 
-Du kan behöva exportera innehåll och göra ändringar i det i ett Excel-kalkylblad. Du kan till exempel vilja exportera en utskickslista och ändra riktnummer för alla telefonnummer som visas direkt i Excel, lägga till ytterligare rader och så vidare.
+Du kan behöva exportera innehåll och göra ändringar i det i ett Excel-kalkylblad. Du kan till exempel vilja exportera en utskickslista och ändra riktnummer för alla telefonnummer som visas direkt i Excel, eller lägga till ytterligare rader och så vidare.
 
 Så här exporterar du innehåll:
 
@@ -141,7 +137,7 @@ Så här exporterar du innehåll:
    ![Exporterar resultat](assets/srchrsesultexport.png)
 
 1. Markera platsen och bekräfta att du vill hämta filen.
-1. När du har laddat ned filen kan du öppna den från kalkylprogrammet, till exempel Microsoft Excel. Kalkylbladsprogrammet importerar filen och konverterar den till ett kalkylbladsformat.
+1. När du har laddat ned filen kan du öppna den från kalkylprogrammet, till exempel Microsoft® Excel. Kalkylbladsprogrammet importerar filen och konverterar den till ett kalkylbladsformat.
 
    ![Exporterade resultat i ett kalkylblad](assets/exportinexcel.png)
 
@@ -151,12 +147,12 @@ Som standard är importfunktionen dold när du öppnar gruppredigeraren. Lägg b
 
 >[!NOTE]
 >
->När du återimporterar innehåll raderas allt tidigare innehåll för de noderna. Var försiktig så att du inte skriver över viktig information.
+>När du återimporterar innehåll raderar du allt tidigare innehåll för de noderna. Var försiktig så att du inte skriver över viktig information.
 
 Så här importerar du innehåll:
 
 1. Öppna gruppredigeraren.
-1. Lägg till `?hib=false` till URL-adressen, t.ex.:
+1. Lägg till `?hib=false` till webbadressen, till exempel:
    `https://localhost:4502/etc/importers/bulkeditor.html?hib=false`
 1. Klicka **Importera**.
 1. Välj `.tsv` -fil. Data importeras till databasen.

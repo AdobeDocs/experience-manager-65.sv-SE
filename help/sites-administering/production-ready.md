@@ -1,27 +1,23 @@
 ---
 title: Köra AEM i produktionsklart läge
-seo-title: Running AEM in Production Ready Mode
 description: Lär dig hur du kör AEM i produktionsklart läge.
-seo-description: Learn how to run AEM in Production Ready Mode.
-uuid: f48c8bae-c72f-4772-967e-f1526f096399
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 content-type: reference
-discoiquuid: 32da99f0-f058-40ae-95a8-2522622438ce
 exl-id: 3c342014-f8ec-4404-afe5-514bdb651aae
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
 workflow-type: tm+mt
-source-wordcount: '383'
+source-wordcount: '378'
 ht-degree: 1%
 
 ---
 
 # Köra AEM i produktionsklart läge{#running-aem-in-production-ready-mode}
 
-Med AEM 6.1 introducerar Adobe den nya `"nosamplecontent"` runmode som automatiserar de steg som krävs för att förbereda en AEM instans för driftsättning i en produktionsmiljö.
+Med AEM 6.1 introducerar Adobe den nya `"nosamplecontent"` körningsläge som automatiserar de steg som krävs för att förbereda en AEM instans för driftsättning i en produktionsmiljö.
 
-Det nya körningsläget konfigurerar inte bara instansen automatiskt så att den följer de säkerhetspraxis som beskrivs i checklistan för säkerhet, utan tar även bort alla exempelgeometrixprogram och -konfigurationer i processen.
+Det nya körningsläget konfigurerar inte bara instansen automatiskt så att den uppfyller de säkerhetskrav som beskrivs i checklistan, utan tar även bort alla exempelprogram och -konfigurationer i Geometrixx.
 
 >[!NOTE]
 >
@@ -31,7 +27,7 @@ Det nya körningsläget konfigurerar inte bara instansen automatiskt så att den
 
 ![chlimage_1-83](assets/chlimage_1-83a.png)
 
-För att kunna köra AEM i produktionsklar läge behöver du bara lägga till `nosamplecontent` via `-r` byt runmode till dina befintliga startargument:
+Om du vill köra AEM i produktionsklar läge behöver du bara lägga till `nosamplecontent` via `-r` byt körläge till dina befintliga startargument:
 
 ```shell
 java -jar aem-quickstart.jar -r nosamplecontent
@@ -45,14 +41,14 @@ java -jar aem-quickstart.jar -r author,crx3,crx3mongo,nosamplecontent -Doak.mong
 
 ## Ändrar en del av produktionsklart läge {#changes-part-of-the-production-ready-mode}
 
-Mer specifikt kommer följande konfigurationsändringar att utföras när AEM körs i produktionsklar läge:
+Mer specifikt utförs följande konfigurationsändringar när AEM körs i produktionsklar läge:
 
 1. The **CRXDE-supportpaket** ( `com.adobe.granite.crxde-support`) är inaktiverat som standard i produktionsklar läge. Den kan installeras när som helst från Adobe offentliga Maven-databasen. Version 3.0.0 krävs för AEM 6.1.
 
 1. The **Apache Sling Simple WebDAV Åtkomst till databaser** ( `org.apache.sling.jcr.webdav`) kommer endast att vara tillgängligt på **författare** -instanser.
 
-1. Användare som skapats nyligen måste ändra lösenordet vid den första inloggningen. Detta gäller inte administratörsanvändaren.
-1. **Generera felsökningsinformation** är inaktiverat för **Apache Sling Java Script Handler**.
+1. Nyligen skapade användare måste ändra lösenordet vid den första inloggningen. Detta gäller inte administratörsanvändaren.
+1. **Generera felsökningsinformation** är inaktiverat för **Apache Sling JavaScript-hanterare**.
 
 1. **Mappat innehåll** och **Generera felsökningsinformation** är inaktiverade för **Apache Sling JSP Script Handler**.
 

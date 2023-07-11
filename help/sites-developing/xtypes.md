@@ -1,16 +1,14 @@
 ---
 title: Använda xtypes (Classic UI)
-description: Läs mer om alla typer som är tillgängliga med AEM
-uuid: 6497caa4-2f9b-4f21-9023-88d485fd1d78
+description: Läs mer om alla typer som är tillgängliga med Adobe Experience Manager
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: components
 content-type: reference
-discoiquuid: adb70b43-1b0b-4302-905a-c7612675dabb
 exl-id: 06ca4e6d-9ab7-4c5b-905c-07c448632f2b
-source-git-commit: 78c584db8c35ea809048580fe5b440a0b73c8eea
+source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
 workflow-type: tm+mt
-source-wordcount: '6400'
+source-wordcount: '6384'
 ht-degree: 0%
 
 ---
@@ -31,17 +29,17 @@ Om du vill ta reda på i vilka komponenter en viss xtype används i AEM kan du a
 >
 >Den här sidan beskriver användningen av ExtJS-xtyper i det klassiska användargränssnittet.
 >
->Adobe rekommenderar att du använder standardverktyget, modern, [pekaktiverat användargränssnitt](/help/sites-developing/touch-ui-concepts.md) baserat på [Coral UI](/help/sites-developing/touch-ui-concepts.md#coral-ui) och [Granite-gränssnitt](/help/sites-developing/touch-ui-concepts.md#granite-ui-foundation-components).
+>Adobe rekommenderar att du använder standarden, modern, [pekaktiverat användargränssnitt](/help/sites-developing/touch-ui-concepts.md) baserat på [Coral UI](/help/sites-developing/touch-ui-concepts.md#coral-ui) och [Granite-gränssnitt](/help/sites-developing/touch-ui-concepts.md#granite-ui-foundation-components).
 
 ## xtypes {#xtypes}
 
-Nedan finns en lista över tillgängliga xtyper i Adobe Experience Manager:
+Nedan visas de tillgängliga xtyperna i Adobe Experience Manager:
 
 * anteckning
 
   [CQ.wcm.Anteckning](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.Annotation)
 
-  Dialogrutan är en speciell typ av fönster med ett formulär i brödtexten och en knappgrupp i sidfoten. Det används vanligtvis för att redigera innehåll, men kan även visa information.
+  Dialogrutan är en speciell typ av fönster med ett formulär i brödtexten och en knappgrupp i sidfoten. Det används vanligtvis för att redigera innehåll, men kan även visa enbart information.
 
 * arraystore
 
@@ -73,7 +71,7 @@ Nedan finns en lista över tillgängliga xtyper i Adobe Experience Manager:
 
   [CQ.wcm.msm.BlueprintStatus](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.msm.BlueprintStatus)
 
-  Med BlueprintStatus kan du visa och redigera en utkast och dess Live-kopior-relationer. Bläddringen görs via en [CQ.wcm.msm.BlueprintStatus.Tree](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.msm.BlueprintStatus.Tree), via [CQ.wcm.msm.BlueprintConfig](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.msm.BlueprintConfig) och en [CQ.wcm.msm.LiveCopyProperties](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.msm.LiveCopyProperties).
+  Med BlueprintStatus kan du visa och redigera en utkast och dess Live-kopior-relationer. Bläddringen görs via en [CQ.wcm.msm.BlueprintStatus.Tree](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.msm.BlueprintStatus.Tree), via [CQ.wcm.msm.BlueprintConfig](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.msm.BlueprintConfig) och [CQ.wcm.msm.LiveCopyProperties](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.msm.LiveCopyProperties).
 
 * box
 
@@ -87,7 +85,7 @@ Nedan finns en lista över tillgängliga xtyper i Adobe Experience Manager:
 
   [CQ.BrowseDialog](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.BrowseDialog)
 
-  Med BrowseDialog kan användaren bläddra i databasen för att välja en sökväg. Det används vanligtvis via en [BrowseField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.BrowseField).
+  Med BrowseDialog kan användaren bläddra i databasen och välja en sökväg. Det används vanligtvis via en [BrowseField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.BrowseField).
 
 * webbläsarfält
 
@@ -209,15 +207,15 @@ Nedan finns en lista över tillgängliga xtyper i Adobe Experience Manager:
 
   [CQ.Ext.Container](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Container)
 
-  Basklass för alla [CQ.Ext.BoxComponent](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.BoxComponent) som kan innehålla andra komponenter. Behållare hanterar grundbeteendet för objekt som innehåller objekt, nämligen att lägga till, infoga och ta bort objekt.
+  Basklass för alla [CQ.Ext.BoxComponent](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.BoxComponent) som kan innehålla andra komponenter. Behållare hanterar grundbeteendet för objekt som innehåller, nämligen att lägga till, infoga och ta bort objekt.
 
-  De vanligaste behållarklasserna är [CQ.Ext.Panel](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Panel), [CQ.Ext.Window](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Window) och [CQ.Ext.TabPanel](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.TabPanel).
+  De vanligaste behållarklasserna är [CQ.Ext.Panel](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Panel), [CQ.Ext.Window](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Window)och [CQ.Ext.TabPanel](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.TabPanel).
 
 * contentfinder
 
   [CQ.wcm.ContentFinder](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.ContentFinder)
 
-  ContentFinder är en specialiserad två kolumner [Visningsruta](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Viewport) som innehåller den faktiska innehållssökaren till vänster och innehållsramen till höger.
+  ContentFinder är en specialiserad tvåkolumnslösning [Visningsruta](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Viewport) som innehåller den faktiska innehållssökaren till vänster och innehållsramen till höger.
 
 * innehållfinderflik
 
@@ -295,7 +293,7 @@ Nedan finns en lista över tillgängliga xtyper i Adobe Experience Manager:
 
   [CQ.Dialog](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Dialog)
 
-  Dialogrutan är en speciell typ av fönster med ett formulär i brödtexten och en knappgrupp i sidfoten. Det används vanligtvis för att redigera innehåll, men kan även visa information.
+  Dialogrutan är en speciell typ av fönster med ett formulär i brödtexten och en knappgrupp i sidfoten. Det används vanligtvis för att redigera innehåll, men kan även visa enbart information.
 
 * dialogfältange
 
@@ -391,7 +389,7 @@ Nedan finns en lista över tillgängliga xtyper i Adobe Experience Manager:
 
   [CQ.Ext.data.GroupingStore](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.GroupingStore)
 
-  En specialiserad butiksimplementering som möjliggör gruppering av poster i ett av de tillgängliga fälten. Detta används vanligtvis tillsammans med en [CQ.Ext.grid.GroupingView](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.GroupingView) för att bevisa datamodellen för en grupperad GridPanel.
+  En specialiserad butiksimplementering som möjliggör gruppering av poster i ett av de tillgängliga fälten. Detta används med en [CQ.Ext.grid.GroupingView](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.GroupingView) för att bevisa datamodellen för en grupperad GridPanel.
 
 * heavymovedialog
 
@@ -429,7 +427,7 @@ Nedan finns en lista över tillgängliga xtyper i Adobe Experience Manager:
 
   [CQ.IframePanel](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.IframePanel)
 
-  En panel som innehåller en iframe. Gör det enkelt att skapa iframes, en inläsningshändelse för iframe och enkel åtkomst till innehållet i iframe.
+  En panel som innehåller en iframe. Gör det enkelt att skapa iframes, en inläsningshändelse för iframe och att enkelt komma åt innehållet i iframe.
 
 * inlinetextfield
 
@@ -471,7 +469,7 @@ Nedan finns en lista över tillgängliga xtyper i Adobe Experience Manager:
 
   [CQ.wcm.msm.LiveCopyProperties](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.msm.LiveCopyProperties)
 
-  I LiveCopyProperties finns en panel där du kan visa och redigera Live Copy-egenskaper (relationsarv, synkroniseringsutlösare och synkroniseringsåtgärder ).
+  I LiveCopyProperties finns en panel där du kan visa och redigera Live Copy-egenskaper (relationsarv, synkroniseringsutlösare och synkroniseringsåtgärder).
 
 * lvbooleancolumn
 
@@ -529,7 +527,7 @@ Nedan finns en lista över tillgängliga xtyper i Adobe Experience Manager:
 
   [CQ.Ext.menu.Item](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.menu.Item)
 
-  En basklass för alla menyalternativ som kräver menyrelaterade funktioner (som undermenyer) och som inte är statiska visningsobjekt. Objektet utökar basfunktionerna i [CQ.Ext.menu.BaseItem](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.menu.BaseItem) genom att lägga till menyspecifik aktivering och klickningshantering.
+  En basklass för alla menyalternativ som kräver menyrelaterade funktioner (som undermenyer) och inte är statiska visningsobjekt. Objektet utökar basfunktionerna i [CQ.Ext.menu.BaseItem](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.menu.BaseItem) genom att lägga till menyspecifik aktivering och klickningshantering.
 
 * menuseparator
 
@@ -541,13 +539,13 @@ Nedan finns en lista över tillgängliga xtyper i Adobe Experience Manager:
 
   [CQ.Ext.menu.TextItem](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.menu.TextItem)
 
-  Lägger till en statisk textsträng på en meny, som vanligtvis används som rubrikavgränsare eller gruppavgränsare.
+  Lägger till en statisk textsträng på en meny, som används som rubrik- eller gruppavgränsare.
 
 * metadata
 
   [CQ.dam.form.Metadata](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.dam.form.Metadata)
 
-  Metadata innehåller en uppsättning fält för att avgöra vilken information som krävs för ett metadatafält, t.ex. på resursredigeringssidor.
+  Metadata innehåller en uppsättning fält som avgör vilken information som krävs för ett metadatafält, t.ex. på sidorna i Resursredigeraren.
 
   Den innehåller följande fält:
 
@@ -561,7 +559,7 @@ Nedan finns en lista över tillgängliga xtyper i Adobe Experience Manager:
 
   [CQ.form.MVT](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.MVT)
 
-  Multivariata testkomponenter kan användas för att definiera och redigera en uppsättning bilder som presenteras som olika banderoller. Klicka igenom prisstatistik per banner.
+  Multivariate Testing-komponenten kan användas för att definiera och redigera en uppsättning bilder som visas som omväxlande banderoller. Klicka igenom prisstatistik per banner.
 
 * meddelandeninkorg
 
@@ -579,7 +577,7 @@ Nedan finns en lista över tillgängliga xtyper i Adobe Experience Manager:
 
   [CQ.wcm.OfflineImporter](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.OfflineImporter)
 
-  OfflineImporter är ett verktyg för att importera och konvertera Microsoft Word-dokument till AEM sidor. Med den här funktionen kan innehåll redigeras offline med en ordbehandlare.
+  OfflineImporter är ett verktyg för att importera och konvertera Microsoft® Word-dokument till AEM sidor. Med den här funktionen kan innehåll redigeras offline med en ordbehandlare.
 
 * ownerdraw
 
@@ -605,7 +603,7 @@ Nedan finns en lista över tillgängliga xtyper i Adobe Experience Manager:
 
   [CQ.form.ParagraphReference](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.ParagraphReference)
 
-  I styckereferensfältet kan du bläddra bland sidor och välja ett av deras stycken. Det består av ett utlösarfält och en tillhörande dialogruta för styckebläddring.
+  I referensfältet för stycken kan du bläddra bland sidor och välja ett av deras stycken. Det består av ett utlösarfält och en tillhörande dialogruta för styckebläddring.
 
 * lösenord
 
@@ -715,7 +713,7 @@ Nedan finns en lista över tillgängliga xtyper i Adobe Experience Manager:
 
 * sidekick
 
-  [CQ.wcm.Sidespark](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.Sidekick)
+  [CQ.wcm.Sidekick](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.Sidekick)
 
   Sidekick är ett flytande hjälpmedel som ger användaren tillgång till vanliga verktyg för sidredigering.
 
@@ -765,7 +763,7 @@ Nedan finns en lista över tillgängliga xtyper i Adobe Experience Manager:
 
   SmartImage är en intelligent bildöverförare. Den innehåller verktyg för att bearbeta en överförd bild, till exempel ett verktyg för att definiera bildscheman och en bildpipett.
 
-  Observera att komponenten främst är avsedd att användas på en separat dialogruteflik.
+  Komponenten är utformad för att användas på en separat dialogruteflik.
 
 * spacer
 
@@ -783,7 +781,7 @@ Nedan finns en lista över tillgängliga xtyper i Adobe Experience Manager:
 
   [CQ.Ext.SplitButton](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.SplitButton)
 
-  En delad knapp som innehåller en inbyggd listrutepil som kan utlösa en händelse separat från knappens standardklickningshändelse. Vanligtvis används detta för att visa en listruta som innehåller ytterligare alternativ till den primära knappåtgärden, men alla anpassade hanterare kan tillhandahålla implementeringen av pilklick.
+  En delad knapp som innehåller en inbyggd listrutepil som kan utlösa en händelse separat från knappens standardklickningshändelse. Vanligtvis används den här för att visa en listruta som innehåller ytterligare alternativ till den primära knappåtgärden, men alla anpassade hanterare kan tillhandahålla implementeringen av pilklick.
 
 * static
 
@@ -801,13 +799,13 @@ Nedan finns en lista över tillgängliga xtyper i Adobe Experience Manager:
 
   [CQ.Ext.data.Store](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.Store)
 
-  Klassen Store kapslar in en klientcache för [Post](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.Record) objekt som tillhandahåller indata för komponenter, t.ex. [GridPanel](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.GridPanel), [ComboBox](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.ComboBox)eller [DataView](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.DataView).
+  Klassen Store kapslar in en klientsidescache med [Post](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.Record) objekt som tillhandahåller indata för komponenter, t.ex. [GridPanel](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.GridPanel), [ComboBox](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.ComboBox)eller [DataView](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.DataView).
 
 * förslagsfält
 
   [CQ.form.SuFöregeField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.SuggestField)
 
-  SuggestField ger användaren förslag baserat på inmatningen.
+  SuggestField ger användaren förslag som baseras på deras inmatning.
 
 * växlare
 
@@ -875,13 +873,13 @@ Nedan finns en lista över tillgängliga xtyper i Adobe Experience Manager:
 
   [CQ.Ext.Tip](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Tip)
 
-  @xtype tip Detta är basklassen för [CQ.Ext.QuickTip](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.QuickTip) och [CQ.Ext.Tooltip](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Tooltip) som innehåller den grundläggande layout och placering som alla spetsbaserade klasser kräver. Den här klassen kan användas direkt för enkla, statiskt positionerade tips.
+  @xtype tip Detta är basklassen för [CQ.Ext.QuickTip](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.QuickTip) och [CQ.Ext.Tooltip](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Tooltip) som innehåller den grundläggande layout och placering som alla spetsbaserade klasser kräver. Den här klassen kan användas direkt för enkla, statiskt placerade tips.
 
 * titleseparator
 
   [CQ.menu.TitleSeparator](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.menu.TitleSeparator)
 
-  Lägger till ett avgränsningsfält på en meny som används för att dela upp logiska grupper med menyalternativ. Avgränsaren kan även innehålla en titel.
+  Lägger till ett avgränsningsfält på en meny som används för att dela upp logiska grupper med menyalternativ. Avgränsaren kan också innehålla en titel.
 
 * verktygsfält
 

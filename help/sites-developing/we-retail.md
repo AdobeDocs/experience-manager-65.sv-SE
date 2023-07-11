@@ -1,18 +1,14 @@
 ---
 title: Implementering av referens för Vi.butik
-seo-title: We.Retail Reference Implementation
 description: Vi.Retail är en förhandstitt på teknik för en referensimplementering som visar det rekommenderade sättet att konfigurera en onlinenärvaro med AEM
-seo-description: We.Retail is a technology preview of a reference implementation that illustrates the recommended way of setting up an online presence with AEM
-uuid: d8833192-b592-4812-bf9b-bd882e8ee7f0
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
-discoiquuid: f50150af-deff-4c29-bfe0-1cfc67b29d51
 exl-id: 504c61c7-dcd3-412c-9239-d24a2b78e4b9
-source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
+source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
 workflow-type: tm+mt
-source-wordcount: '750'
+source-wordcount: '749'
 ht-degree: 1%
 
 ---
@@ -23,7 +19,7 @@ ht-degree: 1%
 
 Vi.Retail är en referensimplementering och exempelinnehåll som illustrerar det rekommenderade sättet att konfigurera en onlinenärvaro med Adobe Experience Manager.
 
-Vi.Retail använder de senaste AEM teknikerna som HTML, responsiva layouter, redigerbara mallar, kärnkomponenter med mera.
+Vi.Retail använder den senaste AEM tekniken som HTML, responsiva layouter, redigerbara mallar, kärnkomponenter och mycket annat.
 
 Även om sajten är en vertikal butiksskylt kan den konfigureras på alla vertikala ytor, och endast produktkatalogen och kundvagnsfunktionerna är butiksspecifika.
 
@@ -45,11 +41,11 @@ Som AEM standardimplementering av referenser visar vi nu några av de mest kraft
 
 ## Komma igång {#getting-started}
 
-Vi.Retail levereras som AEM exempelinnehåll. För att kunna använda [starta AEM som vanligt](/help/sites-deploying/deploy.md#getting-started)kontrollerar du att exempelinnehållet inte är inaktiverat.
+Vi.Retail levereras som AEM exempelinnehåll. Om du vill använda [starta AEM som vanligt](/help/sites-deploying/deploy.md#getting-started)kontrollerar du att exempelinnehållet inte är inaktiverat.
 
 >[!CAUTION]
 >
->Vi.Retail ska inte installeras på produktionsinstanser. Produktionsinstanser ska startas i `nosamplecontent` [runmode](/help/sites-deploying/configure-runmodes.md).
+>Installera inte We.Retail på produktionsinstanser. Produktionsinstanser ska startas i `nosamplecontent` [körningsläge](/help/sites-deploying/configure-runmodes.md).
 
 >[!CAUTION]
 >
@@ -109,11 +105,11 @@ KOD PÅ GITHUB
 Koden för den här sidan finns på GitHub
 
 * [Öppna aem-sample-we-retail-projekt på GitHub](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail)
-* Hämta projektet som [en ZIP-fil](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/archive/master.zip)
+* Hämta projektet som [en ZIP-fil](https://codeload.github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/zip/refs/heads/master)
 
-Den senaste versionen kan också [direkt nedladdad](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases/latest) som ett installerbart paket.
+Den senaste versionen kan också [direkt nedladdad](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases/tag/we.retail.reactor-4.0.0) som ett installerbart paket.
 
-Om du råkar ut för problem, skicka en fil [GitHub-problem](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/issues).
+Om du råkar ut för problem kan du skicka en [GitHub-problem](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/issues).
 
 Du kan vara fri från gaffel eller bidra med [pull-förfrågningar](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/pulls).
 

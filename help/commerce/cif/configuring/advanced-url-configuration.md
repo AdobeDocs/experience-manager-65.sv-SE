@@ -9,9 +9,9 @@ feature: Commerce Integration Framework
 kt: 4933
 thumbnail: 34350.jpg
 exl-id: 0125021a-1c00-4ea3-b7fb-1533b7b9f4f2
-source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
+source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
 workflow-type: tm+mt
-source-wordcount: '910'
+source-wordcount: '898'
 ht-degree: 3%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->Sökmotoroptimering (SEO) har blivit en viktig fråga för många marknadsförare. Därför måste SEO:s problem hanteras i många AEM projekt. Läs [Bästa praxis för hantering av SEO och URL](https://experienceleague.adobe.com/docs/experience-manager-65/managing/managing-further-reference/seo-and-url-management.html) för ytterligare information.
+>Sökmotoroptimering (SEO) har blivit en viktig fråga för många marknadsförare. Därför måste SEO-frågor behandlas i många AEM projekt. Se [Bästa praxis för hantering av SEO och URL](https://experienceleague.adobe.com/docs/experience-manager-65/managing/managing-further-reference/seo-and-url-management.html) för ytterligare information.
 
 [AEM CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components) innehåller avancerade konfigurationer för att anpassa URL:er för produkt- och kategorisidor. Många implementeringar anpassar dessa URL:er för sökmotoroptimering (SEO). Följande video visar hur du konfigurerar `UrlProvider` Service och funktioner i [Samlingsmappning](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html) för att anpassa URL:er för produkt- och kategorisidor.
 
@@ -28,11 +28,11 @@ ht-degree: 3%
 
 ## Konfiguration {#configuration}
 
-Så här konfigurerar du `UrlProvider` enligt SEO-kraven och ett projekt måste tillhandahålla en OSGI-konfiguration för CIF URL Provider-konfigurationen.
+Så här konfigurerar du `UrlProvider` i enlighet med SEO-kraven och ett projekt måste tillhandahålla en OSGI-konfiguration för CIF URL Provider-konfigurationen.
 
 >[!NOTE]
 >
->Sedan version 2.0.0 av AEM CIF Core Components finns det bara fördefinierade url-format i URL-providerkonfigurationen, i stället för det kostnadsfria format som kan konfigureras från 1.x-versioner. Dessutom har användningen av väljare för att skicka data i URL-adresser ersatts med suffix.
+>Sedan version 2.0.0 av de AEM CIF Core-komponenterna finns det bara fördefinierade url-format i URL-providerkonfigurationen, i stället för de format som kan konfigureras fritt från 1.x-versioner. Dessutom har användningen av väljare för att skicka data i URL-adresser ersatts med suffix.
 
 ### URL-format för produktsida {#product}
 
@@ -47,14 +47,14 @@ Detta konfigurerar URL:erna för produktsidorna och stöder följande alternativ
 När det gäller [Referensarkiv för Venedig](https://github.com/adobe/aem-cif-guides-venia):
 
 * `{{page}}` ersätts med `/content/venia/us/en/products/product-page`
-* `{{sku}}` ersätts med produktens sku, t.ex. `VP09`
-* `{{url_key}}` ersätts av produktens `url_key` egenskap, t.ex. `lenora-crochet-shorts`
-* `{{url_path}}` ersätts av produktens `url_path`, t.ex. `venia-bottoms/venia-pants/lenora-crochet-shorts`
-* `{{variant_sku}}` ersätts med den aktuella varianten, t.ex. `VP09-KH-S`
+* `{{sku}}` ersätts med exempelvis produktens SKU, `VP09`
+* `{{url_key}}` ersätts med produktens `url_key` egenskap, till exempel `lenora-crochet-shorts`
+* `{{url_path}}` ersätts med produktens `url_path`, till exempel `venia-bottoms/venia-pants/lenora-crochet-shorts`
+* `{{variant_sku}}` ersätts med den markerade varianten, till exempel `VP09-KH-S`
 
-Sedan `url_path` eftersom de fördefinierade produkt-URL-formaten är inaktuella används en produkts `url_rewrites` och välja den med de flesta bansegment som alternativ om `url_path` är inte tillgängligt.
+Sedan `url_path` eftersom de fördefinierade produkt-URL-formaten är inaktuella används en produkts `url_rewrites` och välja det med de flesta bansegmenten som alternativ om `url_path` är inte tillgängligt.
 
-Med exempeldata ovan ser en produktvariant-URL som är formaterad med standardformatet för URL ut som `/content/venia/us/en/products/product-page.html/VP09.html#VP09-KH-S`.
+Med exempeldata ser en produktvariant-URL som är formaterad med standardformatet för URL ut som `/content/venia/us/en/products/product-page.html/VP09.html#VP09-KH-S`.
 
 ### URL-format för kategorisida {#product-list}
 
@@ -85,13 +85,13 @@ Vid publiceringsnivåinstanser å andra sidan bör katalogsidans URL-adresser h�
 
 ## Anpassade URL-format {#custom-url-format}
 
-För att kunna tillhandahålla ett anpassat URL-format kan ett projekt implementera antingen [`ProductUrlFormat`](https://javadoc.io/doc/com.adobe.commerce.cif/core-cif-components-core/latest/com/adobe/cq/commerce/core/components/services/urls/ProductUrlFormat.html) eller [`CategoryUrlFormat`](https://javadoc.io/doc/com.adobe.commerce.cif/core-cif-components-core/latest/com/adobe/cq/commerce/core/components/services/urls/CategoryUrlFormat.html) och registrera implementeringen som en tjänst av allmänt ekonomiskt intresse. Dessa implementeringar, om de är tillgängliga, ersätter det konfigurerade fördefinierade formatet. Om det finns flera registrerade implementeringar ersätter den med den högre rangordningen dem med den lägre rangordningen.
+Om du vill ange ett anpassat URL-format som ett projekt kan implementera [`ProductUrlFormat`](https://javadoc.io/doc/com.adobe.commerce.cif/core-cif-components-core/latest/com/adobe/cq/commerce/core/components/services/urls/ProductUrlFormat.html) eller [`CategoryUrlFormat`](https://javadoc.io/doc/com.adobe.commerce.cif/core-cif-components-core/latest/com/adobe/cq/commerce/core/components/services/urls/CategoryUrlFormat.html) och registrera implementeringen som en tjänst av allmänt ekonomiskt intresse. Dessa implementeringar, om de är tillgängliga, ersätter det konfigurerade fördefinierade formatet. Om det finns flera registrerade implementeringar ersätter den med den högre rangordningen dem med den lägre rangordningen.
 
 Implementeringarna av det anpassade URL-formatet måste implementera ett par metoder för att skapa en URL från angivna parametrar och för att tolka en URL för att returnera samma parametrar.
 
 ## Kombinera med delningskartor {#sling-mapping}
 
-Förutom `UrlProvider`går det också att konfigurera [Samlingsmappningar](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html) för att skriva om och bearbeta URL:er. Det AEM Archetype-projektet innehåller även [en exempelkonfiguration](https://github.com/adobe/aem-cif-project-archetype/tree/master/src/main/archetype/samplecontent/src/main/content/jcr_root/etc/map.publish) om du vill konfigurera vissa kopplingsmappningar för port 4503 (publicera) och 80 (dispatcher).
+Förutom `UrlProvider`går det också att konfigurera [Samlingsmappningar](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html) för att skriva om och bearbeta URL:er. Det AEM Archetype-projektet innehåller även [en exempelkonfiguration](https://github.com/adobe/aem-cif-project-archetype/tree/master/src/main/archetype/samplecontent/src/main/content/jcr_root/etc/map.publish) om du vill konfigurera vissa kopplingsmappningar för port 4503 (publicera) och 80 (Dispatcher).
 
 ## Kombinera med AEM Dispatcher {#dispatcher}
 

@@ -1,14 +1,13 @@
 ---
 title: Använd AEM med SAP Commerce Cloud
 description: Lär dig använda AEM med SAP Commerce Cloud.
-uuid: cee1a781-fcba-461e-a0a4-c561a1dbcbf3
 contentOwner: Guillaume Carlino
 topic-tags: e-commerce
 content-type: reference
 exl-id: c342f789-2ff7-4802-99c7-c3699218fe47
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
 workflow-type: tm+mt
-source-wordcount: '1717'
+source-wordcount: '1702'
 ht-degree: 1%
 
 ---
@@ -52,27 +51,27 @@ Efter installationen kan du konfigurera instansen:
    >
    >Använd snabbmenyn (oftast högerklickning) för att markera `Create Solr sort`.
    >
-   >För Hybris 5.0.0 öppnar du `Indexed Types` flik, dubbelklicka på `ClothesVariantProduct`och sedan fliken `SOLR Sort`.
+   >För Hybris 5.0.0 öppnar du `Indexed Types` flik, dubbelklicka `ClothesVariantProduct`och sedan fliken `SOLR Sort`.
 
    ![chlimage_1-36](/help/sites-administering/assets/chlimage_1-36a.png)
 
-1. I **Indexerade typer** tabbuppsättningen **Sammansatt typ** till:
+1. I **Indexerade typer** -fliken, ange **Sammansatt typ** till:
 
    `Product - Product`
 
-1. I **Indexerade typer** tabbjustera **Indexerfrågor** for `full`:
+1. I **Indexerade typer** -fliken, justera **Indexerfrågor** for `full`:
 
    ```shell
    SELECT {pk} FROM {Product} WHERE {pk} NOT IN ({{SELECT {baseProductpk} FROM {variantproduct}}})
    ```
 
-1. I **Indexerade typer** tabbjustera **Indexerfrågor** for `incremental`:
+1. I **Indexerade typer** -fliken, justera **Indexerfrågor** for `incremental`:
 
    ```shell
    SELECT {pk} FROM {Product} WHERE {pk} NOT IN ({{SELECT {baseProductpk} FROM {variantproduct}}}) AND {modifiedtime} <= ?lastIndexTime
    ```
 
-1. I **Indexerade typer** tabbjustera `category` facet. Dubbelklicka på den sista posten i kategorilistan för att öppna **Indexerad egenskap** tab:
+1. I **Indexerade typer** -fliken, justera `category` facet. Dubbelklicka på den sista posten i kategorilistan för att öppna **Indexerad egenskap** tab:
 
    >[!NOTE]
    >
@@ -85,7 +84,7 @@ Efter installationen kan du konfigurera instansen:
    ![chlimage_1-39](/help/sites-administering/assets/chlimage_1-39a.png)
 
 1. **Spara ändringarna.**
-1. Igen från **SOLR-objekttyper**, justera `price` ansiktet enligt följande skärmbilder. Som med `category`, dubbelklicka på `price` för att öppna **Indexerad egenskap** tab:
+1. Igen från **SOLR-objekttyper**, justera `price` ansiktet enligt följande skärmbilder. Som med `category`, dubbelklicka `price` för att öppna **Indexerad egenskap** tab:
 
    ![chlimage_1-40](/help/sites-administering/assets/chlimage_1-40a.png)
 
@@ -106,7 +105,7 @@ The **Katalogversion** ( `hybris.catalog.version`) som importeras kan konfigurer
 **Dag CQ Commerce Hybris Configuration**
 ( `com.adobe.cq.commerce.hybris.common.DefaultHybrisConfigurationService`)
 
-**Katalogversion** är vanligtvis inställd på antingen `Online` eller `Staged` (standard).
+**Katalogversion** är inställd på antingen `Online` eller `Staged` (standard).
 
 >[!NOTE]
 >
@@ -151,7 +150,7 @@ I följande lista visas en exempelstruktur (med resurser, sidor och komponenter)
               + ...
 ```
 
-En sådan struktur skapas av OSGi-tjänsten `DefaultImportHandler` som implementerar `ImportHandler` gränssnitt. Den faktiska importören anropar en importhanterare för att skapa produkter, produktvariationer, kategorier, tillgångar osv.
+En sådan struktur skapas av OSGi-tjänsten `DefaultImportHandler` som implementerar `ImportHandler` gränssnitt. En importhanterare anropas av den faktiska importören för att skapa produkter, produktvariationer, kategorier, tillgångar och så vidare.
 
 >[!NOTE]
 >
@@ -181,7 +180,7 @@ Svarsparsern kan konfigureras för att definiera egenskaper och attribut som ska
 
 ## Importera produktdata {#importing-the-product-data}
 
-Det finns flera olika sätt att importera produktdata. Produktdata kan importeras när miljön först konfigureras eller efter att hybris-data har ändrats:
+Det finns olika sätt att importera produktdata. Produktdata kan importeras när miljön först konfigureras eller efter att hybris-data har ändrats:
 
 * [Fullständig import](#full-import)
 * [Inkrementell import](#incremental-import)
@@ -199,7 +198,7 @@ Följande egenskaper anger länken till hybris:
 
 >[!NOTE]
 >
->hybris-implementeringen (dvs. `geometrixx-outdoors/en_US`) lagrar endast produkt-ID:n och annan grundläggande information under `/etc/commerce`.
+>hybris implementering (det vill säga `geometrixx-outdoors/en_US`) lagrar endast produkt-ID:n och annan grundläggande information under `/etc/commerce`.
 >
 >Det hänvisas till hybris-servern varje gång information om en produkt begärs.
 
@@ -244,7 +243,7 @@ Följande egenskaper anger länken till hybris:
 
 ### Inkrementell import {#incremental-import}
 
-1. Kontrollera uppgifterna i AEM för den eller de berörda produkterna i respektive underträd under
+1. Kontrollera uppgifterna i AEM för de berörda produkterna i respektive underträd under
 
    `/etc/commerce/products`
 
@@ -252,7 +251,7 @@ Följande egenskaper anger länken till hybris:
 
    [http://localhost:4502/crx/de/index.jsp#/etc/commerce/products](http://localhost:4502/crx/de/index.jsp#/etc/commerce/products)
 
-1. I hybris ska informationen om relevanta produkter uppdateras.
+1. I hybris ska informationen om de relevanta produkterna uppdateras.
 
 1. Öppna hybris-importören i AEM:
 
@@ -276,7 +275,7 @@ Följande egenskaper anger länken till hybris:
 
 Importprocessen kan ta lång tid, så som ett tillägg till produktsynkroniseringen kan du välja specifika områden i katalogen för en snabb uppdatering som aktiveras manuellt. Detta använder exportflödet tillsammans med standardattributskonfigurationen.
 
-1. Kontrollera uppgifterna i AEM för den eller de berörda produkterna i respektive underträd under
+1. Kontrollera uppgifterna i AEM för de berörda produkterna i respektive underträd under
 
    `/etc/commerce/products`
 
@@ -284,9 +283,9 @@ Importprocessen kan ta lång tid, så som ett tillägg till produktsynkroniserin
 
    [http://localhost:4502/crx/de/index.jsp#/etc/commerce/products](http://localhost:4502/crx/de/index.jsp#/etc/commerce/products)
 
-1. I hybris ska informationen om relevanta produkter uppdateras.
+1. I hybris ska informationen om de relevanta produkterna uppdateras.
 
-1. I hybris lägger du till produkten/produkterna i Express-kön. till exempel:
+1. Lägg till en eller flera produkter i Express Queue i hybris, till exempel:
 
    ![chlimage_1-43](/help/sites-administering/assets/chlimage_1-43a.png)
 
@@ -378,21 +377,21 @@ Så här tar du bort en eller flera produkter från katalogen:
    * Sök efter `Cajamara`
    * Välj den här produkten och ändra godkännandestatusen till `unapproved`
 
-1. Utför en annan stegvis uppdatering (se [Katalogimport](#catalog-import)). Loggen visar den borttagna produkten.
+1. Utför en annan stegvis uppdatering (se [Katalogimport](#catalog-import)). I loggen visas den borttagna produkten.
 1. [Utrullning](/help/commerce/cif-classic/administering/generic.md#rolling-out-a-catalog) lämplig katalog. Produkt- och produktsidan har tagits bort från AEM.
 
    Till exempel:
 
    * Öppna:
 
-      [http://localhost:4502/aem/catalogs.html/content/catalogs/geometrixx-outdoors-hybris](http://localhost:4502/aem/catalogs.html/content/catalogs/geometrixx-outdoors-hybris)
+     [http://localhost:4502/aem/catalogs.html/content/catalogs/geometrixx-outdoors-hybris](http://localhost:4502/aem/catalogs.html/content/catalogs/geometrixx-outdoors-hybris)
 
    * Gör `Hybris Base` katalog
    * Öppna:
 
-      [http://localhost:4502/editor.html/content/geometrixx-outdoors/en_US/equipment/biking.html](http://localhost:4502/editor.html/content/geometrixx-outdoors/en_US/equipment/biking.html)
+     [http://localhost:4502/editor.html/content/geometrixx-outdoors/en_US/equipment/biking.html](http://localhost:4502/editor.html/content/geometrixx-outdoors/en_US/equipment/biking.html)
 
-   * The `Cajamara` produkten kommer att ha tagits bort från `Bike` kategori
+   * The `Cajamara` produkten tas bort från `Bike` kategori
 
 1. Så här återinstallerar du produkten:
 
@@ -436,4 +435,3 @@ Lägga till orderhistorik i [klientkontext](/help/sites-developing/client-contex
    >* Klicka på segmentet ([http://localhost:4502/etc/segmentation/geometrixx-outdoors/returning-customer.html](http://localhost:4502/etc/segmentation/geometrixx-outdoors/returning-customer.html))
    >
    >* Segmentet byggs med **Egenskap för orderhistorik** egenskap.
-
