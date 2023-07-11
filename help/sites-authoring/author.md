@@ -1,19 +1,15 @@
 ---
 title: Redigering
-seo-title: Authoring
-description: Begrepp att skapa i AEM
-seo-description: Concepts of authoring in AEM
-uuid: eaa5f613-a138-4215-8f84-dfc962fe7fa7
+description: Designbegrepp i Adobe Experience Manager
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
-discoiquuid: 81ff6f6f-11b3-4f8e-80e6-b3e104158394
 docset: aem65
 exl-id: dcda537a-1bb2-4ce3-9904-40d158b47556
-source-git-commit: e85aacd45a2bbc38f10d03915e68286f0a55364e
+source-git-commit: b9c164321baa3ed82ae87a97a325fcf0ad2f6ca0
 workflow-type: tm+mt
-source-wordcount: '540'
+source-wordcount: '551'
 ht-degree: 0%
 
 ---
@@ -36,15 +32,15 @@ I redigeringsmiljön finns mekanismer för att skapa, uppdatera och granska inne
 
 ![Översikt över miljöer](assets/chlimage_1-132.png)
 
-I redigeringsmiljön är funktionaliteten för AEM tillgänglig via två användargränssnitt. För publiceringsmiljön utformar du hela det gränssnitt som är tillgängligt för användarna.
+I redigeringsmiljön är AEM funktionalitet tillgänglig via två gränssnitt. I publiceringsmiljön utformar du hela det gränssnitt som är tillgängligt för användarna.
 
 ### Författarmiljö {#author-environment}
 
-Författaren arbetar i det som kallas **författarmiljö**. Detta ger ett användarvänligt gränssnitt (grafiskt användargränssnitt (GUI eller UI)) för att skapa innehållet. Det ligger vanligtvis bakom ett företags brandvägg som ger fullständigt skydd och som kräver att författaren loggar in med ett konto som tilldelats rätt åtkomstbehörighet.
+Författaren arbetar i det som kallas **författarmiljö**. Detta ger ett användarvänligt gränssnitt (grafiskt användargränssnitt (GUI eller UI)) för att skapa innehållet. Det finns bakom ett företags brandvägg som ger fullständigt skydd och som kräver att författaren loggar in med ett konto som tilldelats rätt åtkomstbehörighet.
 
 >[!NOTE]
 >
->Ditt konto behöver rätt behörighet för att skapa, redigera eller publicera innehåll.
+>Ditt konto behöver rätt behörighet för att skapa, redigera och publicera innehåll.
 
 Beroende på hur din instans och dina personliga åtkomsträttigheter är konfigurerade kan du utföra många åtgärder på ditt innehåll, bland annat:
 
@@ -54,12 +50,12 @@ Beroende på hur din instans och dina personliga åtkomsträttigheter är konfig
 * skapa, redigera och hantera publikationer
 * utveckla era kampanjer och relaterade resurser
 * utveckla och hantera communitysajter
-* flytta, kopiera eller ta bort innehållssidor, resurser osv.
-* publicera (eller avpublicera) sidor, resurser osv
+* flytta, kopiera eller ta bort innehållssidor, resurser och så vidare
+* publicera (eller avpublicera) sidor, resurser osv.
 
-Det finns dessutom administrativa uppgifter som hjälper dig att hantera ditt innehåll:
+Det finns även administrativa uppgifter som hjälper dig att hantera ditt innehåll:
 
-* arbetsflöden som styr hur ändringar hanteras, till exempel. genomföra en granskning före publicering
+* arbetsflöden som styr hur ändringar hanteras, till exempel genomdriva en granskning före publicering
 * projekt som koordinerar enskilda uppgifter
 
 >[!NOTE]
@@ -72,7 +68,7 @@ När AEM är klar publiceras webbplatsens innehåll på **publiceringsmiljö**. 
 
 Normalt ligger publiceringsmiljön innanför den demilitariserade zonen. med andra ord, tillgängliga för Internet, men inte längre till fullständigt skydd för det interna nätverket.
 
-När AEM är en [communitywebbplats](/help/communities/overview.md), eller innehåller [Communities-komponenter](/help/communities/author-communities.md), inloggade webbplatsbesökare (medlemmar) kan interagera med communityfunktioner. De kan till exempel publicera på ett forum, publicera en kommentar eller följa andra medlemmar. Medlemmar kan ges behörighet att utföra åtgärder som normalt bara är avsedda för författarmiljön, t.ex. skapa nya sidor (communitygrupper), bloggartiklar och moderata inlägg från andra medlemmar.
+När AEM är en [communitywebbplats](/help/communities/overview.md), eller innehåller [Communities-komponenter](/help/communities/author-communities.md), inloggade webbplatsbesökare (medlemmar) kan interagera med communityfunktioner. De kan till exempel publicera på ett forum, publicera en kommentar eller följa andra medlemmar. Medlemmar kan beviljas tillstånd att utföra aktiviteter som normalt bara är begränsade till författarmiljön, t.ex. skapa nya sidor (communitygrupper), bloggartiklar och moderata inlägg från andra medlemmar.
 
 >[!NOTE]
 >
@@ -85,9 +81,9 @@ När AEM är en [communitywebbplats](/help/communities/overview.md), eller inneh
 >  Dessa termer är synonyma med publicera/avpublicera.
 >
 >* **Replikering/replikering**
->  Detta är de tekniska termer som används för att ange dataförflyttning (t.ex. sidinnehåll, filer, kod, användarkommentarer) från en miljö till en annan. t.ex. vid publicering, eller vid omvänd replikering av användarkommentarer.
+>  Detta är de tekniska termer som används för att ange dataförflyttning (t.ex. sidinnehåll, filer, kod, användarkommentarer) från en miljö till en annan. d.v.s. när användarkommentarer publiceras eller replikeras om.
 >
 
 #### Dispatcher {#dispatcher}
 
-Om du vill optimera prestanda för besökare på webbplatsen kan du **[avsändare](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html)** implementerar belastningsutjämning och cachning.
+Om du vill optimera prestanda för besökare på webbplatsen kan du **[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=en)** implementerar belastningsutjämning och cachning.

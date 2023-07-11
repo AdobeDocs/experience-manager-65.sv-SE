@@ -1,14 +1,10 @@
 ---
 title: Genomgång av referenswebbplats för rekrytering av medarbetare
-seo-title: Employee recruitment
 description: AEM Forms referenswebbplats visar hur man kan använda AEM Forms funktioner för att genomföra rekryteringsarbetsflöden.
-seo-description: AEM Forms reference site showcases how organizations can use AEM Forms features to implement employee recruitment workflow.
-uuid: 27e456ba-3c08-4c43-ad54-1ba0070995ad
 topic-tags: introduction
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 5f04b13e-ea40-4c86-9168-e020c52435a2
 exl-id: bdfc0a20-1e98-47f9-a1d1-5af5b3ef15db
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b9c164321baa3ed82ae87a97a325fcf0ad2f6ca0
 workflow-type: tm+mt
 source-wordcount: '1413'
 ht-degree: 0%
@@ -86,13 +82,13 @@ Startsidan för We.Finance och karriärsidan är AEM Sites sidor. På karriärsi
 
 ### Se det själv {#see-it-yourself}
 
-Gå till `https://[publishHost]:[publishPort]/content/we-finance/global/en.html` och klicka **[!UICONTROL Career]**. Klicka **[!UICONTROL Search]** för att fylla i jobblistan och sedan klicka på **[!UICONTROL Apply]** för ett jobb. Fyll i uppgifterna i formuläret och skicka in ansökan.
+Gå till `https://[publishHost]:[publishPort]/content/we-finance/global/en.html` och klicka **[!UICONTROL Career]**. Klicka **[!UICONTROL Search]** så att du fyller i jobblistan och sedan klickar på **[!UICONTROL Apply]** för ett jobb. Fyll i uppgifterna i formuläret och skicka in ansökan.
 
 Se till att du anger ett giltigt e-post-ID i programmet eftersom all kommunikation genom genomgången skickas till det angivna e-post-ID:t.
 
 ## John Jacobs korthåller Sarah Rose profil för rekryteringschefens screening {#john-jacobs-shortlists-sarah-rose-s-profile-for-the-hiring-manager-s-screening}
 
-Organisationen får den jobbansökan som har skickats in av Sarah. John Jacobs, en rekryterare, får i uppdrag att granska Sarah profil. Han granskar uppgiften i sin AEM Inkorg, hittar profilen som matchar jobbbehovet och klickar på Kortlista. Sarah&#39;s profil vidarebefordras till Gloria Rios, anställningschef, för godkännande.
+Organisationen får den jobbansökan som har skickats in av Sarah. John Jacobs, en rekryterare, får i uppdrag att granska Sarah profil. John granskar uppgiften i sin AEM Inkorg, hittar profilen som matchar jobbbehovet och klickar på Kortlista. Sarah&#39;s profil vidarebefordras till Gloria Rios, anställningschef, för godkännande.
 
 ![jjacobs-inbox-1](assets/jjacobs-inbox-1.png)
 
@@ -116,7 +112,7 @@ Gloria, anställningschef, får den genlistade profilen som en uppgift i sin AEM
 
 ![gloriainbox](assets/gloriainbox.png)
 
-Gloria&#39;s AEM inbox
+Gloria&#39;s AEM Inbox
 
 ![gloriaschedulesintervju](assets/gloriaschedulesinterview.png)
 
@@ -138,7 +134,7 @@ John Doe får i uppdrag att schemalägga en intervju i sin inkorg. John Doe väl
 
 ![johnjacobsaeminbox](assets/johnjacobsaeminbox.png)
 
-John Does AEM inkorg
+John Doe&#39;s AEM Inbox
 
 ![johndoescheduleintervju](assets/johndoescheduleinterview.png)
 
@@ -146,7 +142,7 @@ John Doe schemalägger intervjun och skickar detaljerna till Sarah Rose
 
 ## Sarah Rose får ett mejl med intervju {#sarah-rose-receives-the-email-with-interview-schedule}
 
-Sarah Rose får e-postmeddelandet med intervju, plats och annan information. Hon klickar på Godkänn för att bekräfta att hon är okej med intervjun och platsen. Enligt den exakta informationen gör Sarah det till intervjuerna.
+Sarah Rose får e-postmeddelandet med intervju, plats och annan information. Sarah klickar på Godkänn för att bekräfta att hon är okej med intervjuschemat och platsen. Enligt den exakta informationen gör Sarah det till intervjuerna.
 
 ![sarahaförhandsvisa e-post](assets/sarahroseinterviewemail.png)
 
@@ -158,7 +154,7 @@ När Sarah Rose har gått igenom intervjuerna och rensat dem, öppnar Gloria Rio
 
 ![gloriariosinboxoffer](assets/gloriariosinboxoffer.png)
 
-Gloria&#39;s AEM inbox
+Gloria&#39;s AEM Inbox
 
 ![gloriariosselectkandidat](assets/gloriariosselectcandidate.png)
 
@@ -166,7 +162,7 @@ Gloria Rios väljer Sarah Rose efter intervjuerna
 
 ## John Doe begär mer information {#john-doe-requests-more-information}
 
-Innan du ber en kandidat att gå med i organisationen måste hennes bakgrund kontrolleras. John Doe öppnar och granskar den valda sökandes uppgifter och finner att en del av hennes anställnings- och utbildningsinformation ännu inte är ifylld. John Doe klickar på Behöver mer information.
+Innan du ber en kandidat att gå med i organisationen, måste Sarahs bakgrund kontrolleras. John Doe öppnar och granskar den valda sökandes uppgifter och finner att en del av hennes anställnings- och utbildningsinformation ännu inte är ifylld. John Doe klickar på Behöver mer information.
 
 ![johndoeinbox](assets/johndoeinbox.png) ![johndoeneedmoreinformation](assets/johndoeneedmoreinformation.png)
 
@@ -208,7 +204,7 @@ John Jacobs ser begäran om bakgrundskontroll i sin inkorg. John Jacobs öppnar 
 
 ![johnjacobsbackgroundCheckInbox](assets/johnjacobsbackgroundcheckinbox.png)
 
-John Jacobs AEM inkorg
+John Jacobs&#39;s AEM Inbox
 
 ![johnjacobsbackground checkgoahead](assets/johnjacobsbackgroundcheckgoahead.png)
 
@@ -216,11 +212,11 @@ När John Jacobs utfört bakgrundskontrollen klickar han på Gå framåt
 
 ## John Doe skickar ut brevet till Sarah Rose {#john-doe-sends-out-the-joining-letter-to-sarah-rose}
 
-John Doe får en begäran i sin AEM inkorg om att skicka det kopplade brevet. John öppnar förfrågan och ser detaljerna. John Doe bifogar det kopplade brevet PDF och klickar sedan på Bifoga och skicka det kopplade brevet.
+John Doe får en begäran i sin AEM Inbox om att skicka det kopplade brevet. John öppnar förfrågan och ser detaljerna. John Doe bifogar det kopplade brevet PDF och klickar sedan på Bifoga och skicka det kopplade brevet.
 
 ![johndoejoiningletterinbox](assets/johndoejoiningletterinbox.png)
 
-John Does AEM inkorg
+John Doe&#39;s AEM Inbox
 
 ![johndoejoiningletterattachandsend](assets/johndoejoiningletterattachandsend.png)
 
@@ -234,7 +230,7 @@ Sarah Rose får det förenande brevet för undertecknande. Sarah klickar här f�
 
 Sarah Rose får det kopplade brevet för signering
 
-Sarah kan välja att antingen skriva in, använda draw för hand, infoga en bild av en signatur eller använda mobilens pekskärm för att rita sin signatur. Sarah skriver sitt namn, klickar på Klicka för att signera och laddar ned den signerade kopian av det kopplade brevet.
+Sarah kan välja att antingen skriva in, använda draw för hand, infoga en bild av en signatur eller använda mobilens pekskärm för att rita sin signatur. Sarah skriver sitt namn, klickar på Klicka för att signera och hämtar den signerade kopian av det kopplade brevet.
 
 ![sarahrosejoininglettersign](assets/sarahrosejoininglettersign.png)
 

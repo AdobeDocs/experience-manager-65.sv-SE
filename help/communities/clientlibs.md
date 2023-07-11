@@ -1,19 +1,15 @@
 ---
 title: Clientlibs for Communities Components
-seo-title: Clientlibs for Communities Components
 description: Klientbibliotek för Communities
-seo-description: Client-side libraries for Communities
-uuid: d2a9f986-96cf-4ee8-81e6-36a96f45ddcb
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: 68ce47c8-a03f-40d6-a7f3-2cc64aee0594
 docset: aem65
 exl-id: 94415926-a273-4f03-b7b6-57fdac12c741
-source-git-commit: 1d334c42088342954feb34f6179dc5b134f81bb8
+source-git-commit: b9c164321baa3ed82ae87a97a325fcf0ad2f6ca0
 workflow-type: tm+mt
-source-wordcount: '382'
+source-wordcount: '373'
 ht-degree: 0%
 
 ---
@@ -34,9 +30,9 @@ Grundläggande information finns på
 
 Clientlibs krävs för att en komponent ska fungera korrekt (JavaScript) och formatera (CSS).
 
-När det finns en [communityfunktion](/help/communities/functions.md) för en funktion kommer alla nödvändiga komponenter och konfigurationer, inklusive nödvändiga klienter, att finnas på communitywebbplatsen. Det är bara om ytterligare komponenter ska vara tillgängliga för författare som måste läggas till ytterligare klientlib.
+När det finns en [communityfunktion](/help/communities/functions.md) för en funktion finns alla nödvändiga komponenter och konfigurationer, inklusive nödvändiga klienter, på communitywebbplatsen. Det är bara om ytterligare komponenter ska vara tillgängliga för författare som ytterligare klientlib behöver läggas till.
 
-När de nödvändiga klientlibs saknas, [lägga till en webbgruppskomponent på en sida](/help/communities/author-communities.md) kan resultera i javascript-fel och ett oväntat utseende.
+När de nödvändiga klientlibs saknas, [lägga till en webbgruppskomponent på en sida](/help/communities/author-communities.md) kan resultera i JavaScript-fel och ett oväntat utseende.
 
 ### Exempel: Monterade granskningar utan Clientlibs {#example-placed-reviews-without-clientlibs}
 
@@ -83,12 +79,12 @@ Så här lägger du till en klientlib för en community-webbplats med [CRXDE Lit
          * Upprepa om du vill lägga till fler klientbibliotek.
 
          * Välj **OK**.
-   * Välj **Spara alla**.
 
+   * Välj **Spara alla**.
 
 >[!NOTE]
 >
->Om webbplatsen inte är en communitywebbplats måste förekomsten eller platsen för klientbiblioteken som används för webbplatsen identifieras.
+>Om webbplatsen inte är en communitywebbplats måste förekomsten eller platsen för klientbiblioteken som används för webbplatsen upptäckas.
 
 Använda [Komma igång med AEM Communities](/help/communities/getting-started.md) exempel, där `site-name` är *engagera*, är det så här klienten visas om du lägger till granskningskomponenten:
 

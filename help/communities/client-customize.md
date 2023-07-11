@@ -10,9 +10,9 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 24b6d1d2-c118-4a25-959f-2783961c4ae3
 exl-id: bf34f564-ac93-4c8c-95f7-8690d99d85cb
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b9c164321baa3ed82ae87a97a325fcf0ad2f6ca0
 workflow-type: tm+mt
-source-wordcount: '1228'
+source-wordcount: '1232'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 | **[⇐ - funktioner](essentials.md)** | **[Anpassning på serversidan](server-customize.md)** |
 |---|---|
-|  | **[SCF Handlebars Helpers](handlebars-helpers.md)** |
+|   | **[SCF Handlebars Helpers](handlebars-helpers.md)** |
 
 Det finns flera sätt att anpassa utseendet och/eller beteendet för en AEM Communities-komponent på klientsidan.
 
@@ -53,7 +53,7 @@ Det här skiljer sig från [överläggning](#overlays) standardkomponenten där 
 
 Ett snabbt exempel på hur du utökar kommentarkomponenten finns i [Utöka kommentarkomponent, självstudiekurs](extend-comments.md).
 
-## Javascript-bindning {#javascript-binding}
+## JavaScript-bindning {#javascript-binding}
 
 HBS-skriptet för komponenten måste vara bundet till JavaScript-objekt, modeller och vyer som implementerar den här funktionen.
 
@@ -63,7 +63,7 @@ Om du vill binda en komponent måste hela komponentskriptet inneslutas i en &lt;
 
 * `data-component-id`=&quot;{{id}}&quot;
 
-   matchar egenskapen id från kontexten
+  matchar egenskapen id från kontexten
 
 * `data-scf-component`=&quot;*&lt;resourcetype>*
 
@@ -104,16 +104,16 @@ De anpassade formaten åsidosätter nu standardramverksformaten och komponenten 
 
 >[!CAUTION]
 >
->Alla CSS-klassnamn som har prefixet `scf-js` har en specifik användning i javascript-kod. Dessa klasser påverkar en komponents tillstånd (till exempel växla från dold till synlig) och bör varken åsidosättas eller tas bort.
+>Alla CSS-klassnamn som har prefixet `scf-js` har en specifik användning i JavaScript-kod. Dessa klasser påverkar en komponents tillstånd (till exempel växla från dold till synlig) och bör varken åsidosättas eller tas bort.
 >
->Med `scf-js` klasser påverkar inte format. Klassnamnen kan användas i formatmallar med det intrycket att det kan finnas biverkningar när de styr elementens lägen.
+>Med `scf-js` -klasser påverkar inte format. Klassnamnen kan användas i formatmallar med det intrycket att det kan finnas biverkningar när de styr elementens lägen.
 
 ## Utöka JavaScript {#extending-javascript}
 
-Om du vill utöka en Javascript-implementering för komponenter måste du:
+Om du vill utöka en komponents JavaScript-implementering måste du:
 
 1. Skapa en komponent för ditt program med jcr:resourceSuperType inställd på värdet för den utökade komponentens jcr:resourceType, t.ex. social/forum/components/hbs/forum.
-1. Granska JavaScript-komponentens standardkomponent för att ta reda på vilka metoder som behöver registreras med SCF.registerComponent().
+1. Granska standardkomponentens JavaScript för att ta reda på vilka metoder som behöver registreras med SCF.registerComponent().
 1. Kopiera den utökade komponentens JavaScript eller börja från början.
 1. Utöka metoden.
 1. Använd SCF.registerComponent() för att registrera alla metoder med antingen standardvärdena eller anpassade objekt och vyer.
@@ -179,7 +179,7 @@ The [Community Components Guide](components-guide.md) listar de fullständiga kl
 
 ### Författarklipp {#author-clientlibs}
 
-Klientlibs för författarversionen tas bort från det minsta JavaScript-skript som behövs för att implementera komponenten.
+Klientlibs för författarversionen tas bort från det minsta JavaScript som behövs för att implementera komponenten.
 
 Dessa clientlibs ska aldrig tas med direkt, utan kan bäddas in i andra clientlibs, som har skapats för en webbplats för hand.
 
@@ -200,10 +200,10 @@ Du kan identifiera de nödvändiga författarklientlibs genom att infoga&quot;f�
 
 Alla webbplatser är olika när det gäller hantering av klientbibliotek. Olika faktorer kan vara:
 
-* Total hastighet: Kanske vill man att sajten ska vara responsiv, men den första sidan ska vara lite långsam att ladda. Om många av sidorna använder samma Javascript kan de olika JavaScript-skripten bäddas in i ett clientlib och refereras från den första sidan som ska läsas in. Javascript-filen i den här hämtningen förblir cachelagrad, vilket minimerar mängden data som ska hämtas för efterföljande sidor.
-* Kort tid till första sidan: Kanske vill man att första sidan ska läsas in snabbt. I det här fallet finns Javascript i flera små filer som bara ska refereras där det behövs.
+* Total hastighet: Kanske vill man att sajten ska vara responsiv, men den första sidan ska vara lite långsam att ladda. Om många av sidorna använder samma JavaScript kan de olika JavaScript-skript bäddas in i ett clientlib och refereras från den första sidan som ska läsas in. JavaScript-koden i den här hämtningen förblir cachelagrad, vilket minimerar mängden data som ska hämtas för efterföljande sidor.
+* Kort tid till första sidan: Kanske vill man att första sidan ska läsas in snabbt. I det här fallet finns JavaScript i flera små filer som bara ska refereras där det behövs.
 * Balans mellan första sidinläsning och efterföljande nedladdningar.
 
 | **[⇐ - funktioner](essentials.md)** | **[Anpassning på serversidan](server-customize.md)** |
 |---|---|
-|  | **[SCF Handlebars Helpers](handlebars-helpers.md)** |
+|   | **[SCF Handlebars Helpers](handlebars-helpers.md)** |

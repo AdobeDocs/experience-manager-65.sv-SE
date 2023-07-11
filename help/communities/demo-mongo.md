@@ -1,9 +1,6 @@
 ---
 title: Så här konfigurerar du MongoDB för demo
-seo-title: How to Setup MongoDB for Demo
 description: Konfigurera MSRP för en författarinstans och en publiceringsinstans
-seo-description: How to setup MSRP for one author instance and one publish instance
-uuid: d2035a9e-f05c-4f90-949d-7cdae9646750
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
@@ -11,9 +8,9 @@ content-type: reference
 discoiquuid: 0b126218-b142-4d33-a28c-a91ab4fe99ac
 role: Admin
 exl-id: 7e257b34-a0f5-47db-b1a9-e26333c287d9
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: b9c164321baa3ed82ae87a97a325fcf0ad2f6ca0
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '763'
 ht-degree: 0%
 
 ---
@@ -24,7 +21,7 @@ ht-degree: 0%
 
 I den här självstudiekursen beskrivs hur du konfigurerar [MSRP](msrp.md) for *en författare* instans och *en publicering* -instans.
 
-Med den här konfigurationen är communityinnehållet tillgängligt både från författare- och publiceringsmiljöer utan att behöva vidarebefordra eller omvända replikera användargenererat innehåll (UGC).
+Med den här konfigurationen är communityinnehållet tillgängligt både från författare- och publiceringsmiljöer utan att du behöver vidarebefordra eller omvända replikera användargenererat innehåll (UGC).
 
 Den här konfigurationen är lämplig för *icke-produktion* miljöer som utveckling och/eller demonstration.
 
@@ -38,17 +35,17 @@ Den här konfigurationen är lämplig för *icke-produktion* miljöer som utveck
 
 ### Installera MongoDB {#install-mongodb}
 
-* Hämta MongoDB från [https://www.mongodb.org/](https://www.mongodb.org/)
+* Hämta MongoDB från [https://www.mongodb.com/](https://www.mongodb.com/)
 
    * Val av operativsystem:
 
-      * Linux
+      * Linux®
       * Mac 10.8
       * Windows 7
+
    * Val av version:
 
       * Använd minst version 2.6
-
 
 * Grundkonfiguration
 
@@ -56,9 +53,9 @@ Den här konfigurationen är lämplig för *icke-produktion* miljöer som utveck
    * Konfigurera för mongod:
 
       * Du behöver inte konfigurera mongor eller delningar.
-   * Den installerade MongoDB-mappen kallas &lt;mongo-install>.
-   * Den definierade datakatalogsökvägen kallas &lt;mongo-dbpath>.
 
+   * Den installerade MongoDB-mappen anropas &lt;mongo-install>.
+   * Den definierade datakatalogsökvägen anropas &lt;mongo-dbpath>.
 
 * MongoDB kan köras på samma värd som AEM eller fjärrköras.
 
@@ -100,13 +97,13 @@ Följande kommandon är ett exempel på hur du konfigurerar en replikuppsättnin
 
    * Passar alla operativsystem.
    * Solr version 7.0.
-   * Solr kräver Java 1.7 eller senare.
+   * Solr kräver Java™ 1.7 eller senare.
 
 * Grundkonfiguration
 
    * Följ exemplet Solr-konfigurationen.
    * Ingen tjänst behövs.
-   * Den installerade Solr-mappen kallas &lt;solr-install>.
+   * Den installerade Solr-mappen anropas &lt;solr-install>.
 
 ### Konfigurera Solr för AEM Communities {#configure-solr-for-aem-communities}
 
@@ -122,20 +119,21 @@ Metoden för att köra Solr kan variera beroende på version och installationss�
 Om du till exempel använder version 4.10 kan du enkelt starta Solr i fristående läge:
 
 * cd till &lt;solrinstall>/example
-* java -jar start.jar
+* Java™ -jar start.jar
 
-Detta startar en Solr HTTP-server med standardport 8983. Du kan bläddra till Solr Console för att få en Solr-konsol för testning.
+Den här processen startar en Solr HTTP-server med standardport 8983. Du kan bläddra till Solr Console för att få en Solr-konsol för testning.
 
 * standardSolr-konsol: [http://localhost:8983/solr/](http://localhost:8983/solr/)
 
 >[!NOTE]
 >
->Om Solr Console inte är tillgänglig kontrollerar du loggarna under &lt;solrinstall>/example/logs. Kontrollera om SOLR försöker binda till ett specifikt värdnamn som inte kan matchas (t.ex. &quot;user-macbook-pro&quot;).
-Om så är fallet kan du uppdatera etc/hosts-filen med en ny post för detta värdnamn (t.ex. 127.0.0.1 user-macbook-pro) och Solr startas korrekt.
+>Om Solr Console inte är tillgänglig kontrollerar du loggarna under &lt;solrinstall>/example/logs. Kontrollera om SOLR försöker binda till ett specifikt värdnamn som inte kan matchas (till exempel &quot;user-macbook-pro&quot;).
+>
+Uppdatera i så fall `etc/hosts` fil med en ny post för det här värdnamnet (till exempel 127.0.0.1 user-macbook-pro) för att stjärngradera Solr korrekt.
 
 ### SolrCloud {#solrcloud}
 
-Om du vill köra en mycket grundläggande (inte produktion) solrCloud-installation börjar du med:
+Om du vill köra en grundläggande (inte en produktionsbaserad) solrCloud-installation börjar du med:
 
 * `java -Dbootstrap_confdir=./solr/collection1/conf -Dbootstrap_conf=true -DzkRun -jar start.jar`
 
@@ -161,7 +159,7 @@ Om du vill testa och verifiera den gemensamma lagringsplatsen för MongoDB skick
 
    ![view-comment](assets/view-comment.png)
 
-   Obs! Det finns JCR-noder under *asipath* på författaren är dessa för SCF-ramverket. Den faktiska UGC:n finns inte i JCR, utan i MongoDB.
+   Obs! Det finns JCR-noder under *asipath* När du har skrivit är de här noderna för SCF-ramverket. Den faktiska UGC:n finns inte i JCR, utan i MongoDB.
 
 1. Se användargenerationen i mongudb **[!UICONTROL Communities]** > **[!UICONTROL Collections]** > **[!UICONTROL Content]**
 
@@ -184,7 +182,7 @@ Om du vill testa och verifiera den gemensamma lagringsplatsen för MongoDB skick
 
 1. Kontrollera att MSRP har konfigurerats som standardprovider:
 
-   * Om du skriver och publicerar AEM kan du gå till [Konsol för lagringskonfiguration](srp-config.md) eller kontrollera AEM:
+   * Om du skriver och publicerar AEM kan du gå till [Konsol för lagringskonfiguration](srp-config.md)eller kontrollera AEM:
 
    * I JCR, om [/etc/socialconfig](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/) innehåller inte [srpc](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc) -nod betyder det att lagringsprovidern är JSRP.
    * Om srpc-noden finns och innehåller nod [defaultconfiguration](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc/defaultconfiguration)ska standardkonfigurationens egenskaper definiera MSRP som standardprovider.

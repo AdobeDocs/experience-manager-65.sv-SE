@@ -1,18 +1,14 @@
 ---
 title: Lägg till Adobe Analytics i ditt mobilprogram
-seo-title: Add Adobe Analytics to your Mobile Application
-description: Följ den här sidan för att lära dig mer om hur du kan använda mobilappsanalys i dina AEM appar genom att integrera med Adobe mobiltjänster.
-seo-description: Follow this page to learn about how you can use Mobile App Analytics in your AEM Apps by integrating with Adobe Mobile Services.
-uuid: d3ff6f9b-0467-4abe-9a59-b3495a6af0f8
+description: Följ den här sidan för att lära dig mer om hur du kan använda mobilappsanalys i dina Adobe Experience Manager-appar genom att integrera med Adobe mobiltjänster.
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
-discoiquuid: cd9d2bea-48d8-4a17-8544-ea25dcad69f3
 exl-id: 8d965e94-c368-481d-b000-6e22456c34db
-source-git-commit: 85d39e59b82fdfdcd310be61787a315668aebe38
+source-git-commit: b9c164321baa3ed82ae87a97a325fcf0ad2f6ca0
 workflow-type: tm+mt
-source-wordcount: '946'
+source-wordcount: '939'
 ht-degree: 0%
 
 ---
@@ -21,13 +17,13 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (t.ex. Reagera). [Läs mer](/help/sites-developing/spa-overview.md).
+>Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (till exempel React). [Läs mer](/help/sites-developing/spa-overview.md).
 
 Vill du skapa engagerande och relevanta upplevelser för mobilanvändare? Om du inte använder Adobe Mobile Services SDK för att övervaka och mäta programmets livscykel och användning, vad baserar du dina beslut på? Var är era mest lojala kunder? Hur kan ni garantera att ni är relevanta och optimerar konverteringarna?
 
 Kommer användarna åt allt innehåll? Överger de appen, och i så fall, var? Hur ofta stannar de i appen och hur ofta de kommer tillbaka för att använda appen? Vilka förändringar kan ni införa och sedan mäta den ökade lojaliteten? Vad gäller för kraschfrekvenser, kraschar din app för dina användare?
 
-Utnyttja [Mobilappsanalys](https://www.adobe.com/ca/solutions/digital-analytics/mobile-web-apps-analytics.html) i dina AEM program genom att integrera med [Adobe Mobile Services](https://www.adobe.com/marketing-cloud/mobile-marketing.html).
+Utnyttja [Mobilappsanalys](https://business.adobe.com/products/analytics/mobile-marketing.html) i dina Adobe Experience Manager-program (AEM) genom att integrera med [Adobe Mobile Services](https://business.adobe.com/products/campaign/mobile-marketing.html).
 
 Instrumentera era AEM appar för att spåra, rapportera och förstå hur användarna interagerar med mobilappen och -innehållet och för att mäta nyckeltal under livscykeln, som starter, apptid och kraschfrekvens.
 
@@ -36,20 +32,20 @@ I det här avsnittet beskrivs hur AEM *Utvecklare* kan:
 * Integrera mobilanalys i mobilapplikationer
 * Testa er analysspårning med Bloodhound
 
-## Förinställningar {#prerequisties}
+## Förutsättningar {#prerequisties}
 
 AEM Mobile kräver ett Adobe Analytics-konto för att samla in och rapportera spårningsdata i appen. Som en del av konfigurationen AEM *Administratör* måste först:
 
-* Konfigurera ett Adobe Analytics-konto och skapa en rapportserie för ditt program i Mobiltjänster.
+* Konfigurera ett Adobe Analytics-konto och skapa en rapportsserie för ditt program i Mobiltjänster.
 * Konfigurera en AMS-Cloud Service i Adobe Experience Manager (AEM).
 
 ## För utvecklare - Integrera mobilanalys i appen {#for-developers-integrate-mobile-analytics-into-your-app}
 
 ### Konfigurera ContentSync för att hämta konfigurationsfilen {#configure-contentsync-to-pull-in-configuration-file}
 
-När Analytics-kontot har konfigurerats måste du skapa en konfiguration för innehållssynkronisering för att hämta in innehållet i ditt mobilprogram.
+När Analytics-kontot har konfigurerats skapar du en konfiguration för innehållssynkronisering som hämtar in innehållet i ditt mobilprogram.
 
-Mer information finns i Konfigurera innehåll för innehållssynkronisering. Konfigurationen måste instruera Content Sync att lägga ADBMobleConfig i katalogen /www. I Geometrixx Outdoors App finns konfigurationen för innehållssynkronisering till exempel på: */content/phonegap/geometrixx-outdoor/shell/jcr:content/page-app/app-config/ams-ADBMobileConfig*. Det finns även en konfiguration för utveckling. Den är dock identisk med den icke-utvecklingsrelaterade konfigurationen för Geometrixx Outdoors.
+Mer information finns i Konfigurera innehåll för innehållssynkronisering. Konfigurationen måste instruera Content Sync att lägga ADBMobleConfig i katalogen /www. I Geometrixx Outdoors App är till exempel konfigurationen för innehållssynkronisering följande: */content/phonegap/geometrixx-outdoor/shell/jcr:content/page-app/app-config/ams-ADBMobileConfig*. Det finns även en konfiguration för utveckling. Den är dock identisk med den icke-utvecklingsrelaterade konfigurationen för Geometrixx Outdoors.
 
 Mer information om hur du hämtar ADBMomobileConfig från kontrollpanelen för mobilprogram AEM program finns i Analytics - Mobile Services - Adobe Mobile Services SDK-konfigurationsfilen.
 
@@ -67,7 +63,7 @@ För varje plattform krävs att ADBMomobileConfig kopieras till en viss plats.
 
 Om du bygger med PhoneGap CLI kan du göra detta med ett cordova-byggkrokskript. Detta kan du se i Geometrixx Outdoor App på:*content/phonegap/geometrixx-outdoors/shell/_jcr_content/pge-app/app-content/phonegap/scripts/restore_plugins.js.*
 
-För iOS måste filen kopieras till XCode-projektets **Resurser** katalog (t.ex. &quot;platforms/ios/Geometrixx/Resources/ADBMobileConfig.json&quot;). Om appen har Android som mål är sökvägen till den platforms/android/assets/ADBMobileConfig.json. Mer information om hur du använder krokar under PhoneGap CLI-bygget finns i [Tre hookar upp ditt Cordova-/PhoneGap-projekt](https://gist.github.com/jlcarvalho/22402d013bc72f795d45a01836ce735c).
+För iOS måste filen kopieras till XCode-projektets **Resurser** katalog (till exempel&quot;platforms/ios/Geometrixx/Resources/ADBMobileConfig.json&quot;). Om appen är avsedd för Android™ är sökvägen till kopian&quot;platforms/android/assets/ADBMobileConfig.json&quot;. Mer information om hur du använder krokar under PhoneGap CLI-bygget finns i [Tre hookar upp ditt Cordova-/PhoneGap-projekt](https://gist.github.com/jlcarvalho/22402d013bc72f795d45a01836ce735c).
 
 ```xml
 ///////////////////////////
@@ -98,20 +94,20 @@ För att appen ska kunna samla in data måste plugin-programmet för Adobe Mobil
 </feature>
 ```
 
-Geometrixx Outdoors App config.xml finns på */content/phonegap/geometrixx-outdoor/shell/jcr:content/pge-app/app-content/phonegap/www/config.xml*. I exemplet ovan efterfrågas en specifik version av plugin-programmet som ska användas genom att ett &#39;#&#39; läggs till och sedan ett taggvärde efter plugin-URL:en. Detta är en bra metod att följa för att säkerställa att oväntade problem inte uppstår på grund av att otestade plugin-program läggs till under en programversion.
+Geometrixx Outdoors App config.xml finns på */content/phonegap/geometrixx-outdoor/shell/jcr:content/pge-app/app-content/phonegap/www/config.xml*. I exemplet ovan efterfrågas en specifik version av plugin-programmet som ska användas genom att ett &#39;#&#39; läggs till och sedan ett taggvärde efter plugin-URL:en. Det här är en bra metod att följa för att se till att oväntade problem inte uppstår på grund av att otestade plugin-program läggs till under ett bygge.
 
-När du har utfört dessa steg aktiveras appen för att rapportera alla livscykelvärden som tillhandahålls av Adobe Analytics. Detta inkluderar data som starter, krascher och installationer. Om det är den enda informationen du bryr dig om så är du klar. Om du vill samla in anpassade data måste du mäta koden.
+När du har utfört dessa steg aktiveras appen för att rapportera alla livscykelvärden som tillhandahålls av Adobe Analytics. Detta inkluderar data som starter, krascher och installationer. Om det är den enda informationen du bryr dig om, så är du klar. Om du vill samla in anpassade data måste du mäta koden.
 
 ### Instrumentera koden för fullständig appspårning {#instrument-your-code-for-full-app-tracking}
 
-Det finns flera API:er för spårning i [API för plugin-programmet AMS Phonegap.](https://experienceleague.adobe.com/docs/mobile-services/ios/phonegap-ios/phonegap-methods.html)
+Det finns flera API:er för spårning i [API för plugin-programmet AMS Phonegap.](https://github.com/Adobe-Marketing-Cloud/mobile-services/blob/master/docs/ios/phonegap/phonegap-methods.md)
 
-På så sätt kan du spåra lägen och åtgärder, t.ex. var sidor användarna navigerar till i appen, vilka kontroller som används mest. Det enklaste sättet att mäta vilket instrument ni använder för spårning är att använda de API:er för analys som tillhandahålls av plugin-programmet för AMS.
+På så sätt kan du spåra lägen och åtgärder, t.ex. var sidor användarna navigerar till i appen, vilka kontroller som används mest. Det enklaste sättet att mäta hur appen fungerar för spårning är att använda Analytics-API:erna som finns i AMS-pluginen.
 
 * ADB.trackState()
 * ADB.trackAction()
 
-Som referens kan du titta på koden i appen Geometrixx Outdoors. I appen Geometrixx Outdoors spåras alla sidnavigeringar med metoden ADB.trackState(). Mer information finns i källkoden för /libs/mobileapps/components/angular/ng-page/clientlibs/app-navigation.js
+Titta på koden i appen Geometrixx Outdoors. I appen Geometrixx Outdoors spåras all sidnavigering med metoden ADB.trackState(). Mer information finns i källkoden för /libs/mobileapps/components/angular/ng-page/clientlibs/app-navigation.js
 
 Genom att instrumentera källkoden med dessa metodanrop kan du samla in fullständiga mätvärden mot programmet.
 
