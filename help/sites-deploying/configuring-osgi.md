@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: d701e4ba-417f-4b57-b103-27fd25290736
 feature: Configuring
 exl-id: 5ecd09a3-c4be-4361-9816-03106435346f
-source-git-commit: 2981f11565db957fac323f81014af83cab2c0a12
+source-git-commit: bf55fcb855cbdad72c669058662ca70fe57e6632
 workflow-type: tm+mt
-source-wordcount: '1949'
+source-wordcount: '1973'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Båda metoderna kan användas trots att det finns små skillnader, främst i rel
 
    * Webbkonsolen är standardgränssnittet för OSGi-konfiguration. Det innehåller ett användargränssnitt för redigering av de olika egenskaperna, där möjliga värden kan väljas från fördefinierade listor.
 
-      Det är därför den enklaste metoden.
+     Det är därför den enklaste metoden.
 
    * Alla konfigurationer som görs med webbkonsolen tillämpas omedelbart och tillämpas på den aktuella instansen, oavsett aktuellt körningsläge eller eventuella efterföljande ändringar av körningsläget.
 
@@ -86,11 +86,12 @@ Så här uppdaterar du en konfiguration med webbkonsolen:
 
    * Öppna webbkonsolen från länken på panelen **Verktyg -> Åtgärder** -menyn. När du har loggat in på konsolen kan du använda den nedrullningsbara menyn i:
 
-      **OSGi >**
+     **OSGi >**
 
    * Den direkta URL:en. till exempel:
 
-      `http://localhost:4502/system/console/configMgr`
+     `http://localhost:4502/system/console/configMgr`
+
    En lista visas.
 
 1. Välj det paket som du vill konfigurera genom att antingen:
@@ -124,7 +125,9 @@ Dessa filer kan inkluderas i innehållspaket och återanvändas i andra instanse
 
 >[!NOTE]
 >
->Konfigurationsfilernas format är specifikt - se [Sling Apache-dokumentation](https://sling.apache.org/documentation/development/slingstart.html#default-configuration-format) för fullständig information.
+>Konfigurationsfilernas format är specifikt - se Sling Apache-dokumentationen för:
+>* fullständig information om [Apache Sling Provisioning Model och Apache SlingStart](https://sling.apache.org/documentation/development/slingstart.html#default-configuration-format).
+>* självstudiekurser och exempel på [Hämta resurser och egenskaper i Sling](https://sling.apache.org/documentation/tutorials-how-tos/getting-resources-and-properties-in-sling.html).
 >
 >Därför rekommenderar vi att du skapar och underhåller konfigurationsfilen genom att göra faktiska ändringar i webbkonsolen.
 
@@ -230,7 +233,8 @@ Så här lägger du till den nya konfigurationen i databasen:
    * Typ: `sling:OsgiConfig`
    * Namn: Den beständiga identiteten (PID).
 
-      till exempel AEM WCM Version Manager använder `com.day.cq.wcm.core.impl.VersionManagerImpl`
+     till exempel AEM WCM Version Manager använder `com.day.cq.wcm.core.impl.VersionManagerImpl`
+
    >[!NOTE]
    >
    >När du skapar ett fabrikskonfiguration som tillägg `-<identifier>` till namnet.
@@ -310,15 +314,15 @@ I följande lista visas ett litet urval av de konfigurationer som är tillgängl
 
 * Författare - AEM WCM-filter:
 
-   `libs/wcm/core/config.author/com.day.cq.wcm.core.WCMRequestFilter`
+  `libs/wcm/core/config.author/com.day.cq.wcm.core.WCMRequestFilter`
 
 * Publicera - AEM WCM-filter:
 
-   `libs/wcm/core/config.publish/com.day.cq.wcm.core.WCMRequestFilter`
+  `libs/wcm/core/config.publish/com.day.cq.wcm.core.WCMRequestFilter`
 
 * Publicera - AEM WCM-sidstatistik:
 
-   `libs/wcm/core/config.publish/com.day.cq.wcm.core.stats.PageViewStatistics`
+  `libs/wcm/core/config.publish/com.day.cq.wcm.core.stats.PageViewStatistics`
 
 >[!NOTE]
 >
@@ -332,25 +336,25 @@ Om du vill visa alla konfigurationsnoder i din instans använder du **Fråga** i
 
 * Om du ändrar en konfiguration via webbkonsolen skrivs den (vanligtvis) in i databasen på:
 
-   `/apps/{somewhere}`
+  `/apps/{somewhere}`
 
    * Som standard `{somewhere}` är `system/config` så att konfigurationen skrivs till
 
-      `/apps/system/config`
+     `/apps/system/config`
 
    * Om du redigerar en konfiguration som ursprungligen kom från en annan plats i databasen: till exempel:
 
-      /libs/foo/config/someconfig
+     /libs/foo/config/someconfig
 
-      Den uppdaterade konfigurationen skrivs sedan under den ursprungliga platsen. till exempel:
+     Den uppdaterade konfigurationen skrivs sedan under den ursprungliga platsen. till exempel:
 
-      `/apps/foo/config/someconfig`
+     `/apps/foo/config/someconfig`
 
 * Inställningar som ändrats av `admin` sparas i `*.config` filer under:
 
-   ```
-      /crx-quickstart/launchpad/config
-   ```
+  ```
+     /crx-quickstart/launchpad/config
+  ```
 
    * Det här området är privata data för OSGi-konfigurationsadministratören och innehåller all konfigurationsinformation som anges av `admin`, oavsett hur de gick in i systemet.
    * Det här området är en implementeringsdetalj och du får aldrig redigera den här katalogen direkt.
@@ -358,11 +362,11 @@ Om du vill visa alla konfigurationsnoder i din instans använder du **Fråga** i
 
       * Apache Felix OSGi Management Console
 
-         `../crx/org/apache/felix/webconsole/internal/servlet/OsgiManager.config`
+        `../crx/org/apache/felix/webconsole/internal/servlet/OsgiManager.config`
 
       * CRX Sling Client Repository
 
-         `../com/day/crx/sling/client/impl/CRXSlingClientRepository/<pid-nr>.config`
+        `../com/day/crx/sling/client/impl/CRXSlingClientRepository/<pid-nr>.config`
 
 >[!CAUTION]
 >
