@@ -9,16 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 73e63493-e821-443f-b50d-10797360f5d1
 docset: aem65
 exl-id: c3e5f8fc-d2b9-4f76-9a3d-4bc5733f5a5c
-source-git-commit: d9608d584e822accc0c198fcf1d1b706d065938e
+source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
 workflow-type: tm+mt
-source-wordcount: '3593'
+source-wordcount: '3594'
 ht-degree: 0%
 
 ---
 
 # Forms-centrerat arbetsflöde i OSGi{#forms-centric-workflow-on-osgi}
 
-![](do-not-localize/header.png)
+![hero-image](do-not-localize/header.png)
 
 Företag samlar in data från hundratals och tusentals formulär, olika datasystem samt online- och offlinedatakällor. De har också en dynamisk uppsättning användare som kan fatta beslut om data, vilket innefattar iterativa gransknings- och godkännandeprocesser.
 
@@ -236,7 +236,7 @@ En administratör (medlem i gruppen fd-administratörer) kan konfigurera en nät
   </tr>
   <tr>
    <td><span class="uicontrol">Bearbeta filer med</code></td>
-   <td>Välj <span class="uicontrol">Arbetsflöde </code>alternativ. </code></td>
+   <td>Välj <span class="uicontrol">Arbetsflöde </code>alternativ. </td>
   </tr>
   <tr>
    <td><span class="uicontrol">Arbetsflödesmodell</code></td>

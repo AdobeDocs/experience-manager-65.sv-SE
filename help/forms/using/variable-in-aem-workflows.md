@@ -10,9 +10,9 @@ topic-tags: publish
 discoiquuid: cbf4e35a-7905-44ab-ab68-fb443443f02d
 docset: aem65
 exl-id: beb2b83e-e8db-40bb-915f-cb6ba3140947
-source-git-commit: 936b636819eaef595fcdf9f1f3446d4ac0c28b2f
+source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
 workflow-type: tm+mt
-source-wordcount: '2196'
+source-wordcount: '2197'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,7 @@ Du behöver [AEM Forms tilläggspaket](https://helpx.adobe.com/aem-forms/kb/aem-
 
 Skapa en variabel genom att utföra följande steg:
 
-1. Navigera AEM till Verktyg ![](/help/forms/using/assets/hammer.png) > Arbetsflöde > Modeller.
+1. Navigera AEM till Verktyg ![verktyg](/help/forms/using/assets/hammer.png) > Arbetsflöde > Modeller.
 1. Tryck **[!UICONTROL Create]** och ange arbetsflödesmodellens titel och valfria namn. Markera modellen och tryck på **[!UICONTROL Edit]**.
 1. Tryck på variabelikonen som är tillgänglig i sidokanten av arbetsflödesmodellen och tryck på **[!UICONTROL Add Variable]**.
 

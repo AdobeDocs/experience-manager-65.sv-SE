@@ -10,16 +10,16 @@ discoiquuid: e24dbd0e-4481-4f9d-9570-3a4046b3ef35
 docset: aem65
 feature: Adaptive Forms
 exl-id: c039faec-f832-43d5-8a86-22afa3bef2a4
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
 workflow-type: tm+mt
-source-wordcount: '909'
+source-wordcount: '910'
 ht-degree: 0%
 
 ---
 
 # Självstudiekurs: Publicera ditt adaptiva formulär {#tutorial-publish-your-adaptive-form}
 
-![](do-not-localize/13-publish-your-adaptive-form-small.png)
+![Hero-image](do-not-localize/13-publish-your-adaptive-form-small.png)
 
 Den här självstudiekursen är ett steg i [Skapa ditt första adaptiva formulär](https://helpx.adobe.com/experience-manager/6-3/forms/using/create-your-first-adaptive-form.html) serie. Vi rekommenderar att du följer serien i kronologisk ordning för att förstå, utföra och demonstrera det fullständiga exemplet på självstudiekurser.
 
@@ -69,7 +69,8 @@ AEM [!DNL Forms] tillhandahålla en komponent, AEM [!DNL Forms] Behållare, bäd
    * Om du bara ändrar det inbäddade formuläret på en publicerad webbplatssida publicerar du det ursprungliga formuläret och ändringarna återspeglas på den publicerade webbplatssidan. Den publicerade webbplatssidan innehåller en referens till formuläret och behöver inte publicera om sidan.
    * Om du ändrar [!DNL Sites] och det inbäddade formuläret, publicera om [!DNL Sites] sida och formulär.
 
-      ![embed-in-aem-sites](assets/embed-in-aem-sites.png)
+     ![embed-in-aem-sites](assets/embed-in-aem-sites.png)
+
    Formuläret för ändring av leverans- och faktureringsadress har lagts till i en AEM [!DNL Sites] sida.
 
 ## Bädda in det anpassningsbara formuläret på en extern webbsida {#embed-the-adaptive-form-in-an-external-webpage}

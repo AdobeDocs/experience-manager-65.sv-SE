@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: f92ed674-5865-4a53-8c3a-369536861f14
 docset: aem65
 exl-id: d5cf4478-51e4-4ca8-b3f8-6d7caed7d515
-source-git-commit: d9155cdac183acbdd190da552512a1e9bcc43d64
+source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
 workflow-type: tm+mt
-source-wordcount: '3082'
+source-wordcount: '3080'
 ht-degree: 5%
 
 ---
@@ -40,7 +40,7 @@ Innehåll läggs till med [komponenter](/help/sites-authoring/default-components
 
 Verktygsfältet för sidan ger tillgång till lämplig funktionalitet, beroende på sidkonfigurationen.
 
-![screen_shot_2018-03-22at11338](assets/screen_shot_2018-03-22at111338.png)
+![Verktygsfältet Sida](assets/screen_shot_2018-03-22at111338.png)
 
 Verktygsfältet har många alternativ. Beroende på ditt aktuella sammanhang och din konfiguration kanske vissa alternativ inte är tillgängliga.
 
@@ -66,25 +66,25 @@ Verktygsfältet har många alternativ. Beroende på ditt aktuella sammanhang och
 
   Öppnar [kontextnav](/help/sites-authoring/ch-previewing.md). Endast tillgängligt i förhandsgranskningsläget.
 
-  ![screen_shot_2018-03-22at11543](assets/screen_shot_2018-03-22at111543.png)
+  ![Kontextnav](assets/screen_shot_2018-03-22at111543.png)
 
 * **Sidrubrik**
 
   Detta är enbart informativt.
 
-  ![screen_shot_2018-03-22at11554](assets/screen_shot_2018-03-22at111554.png)
+  ![Sidrubrik](assets/screen_shot_2018-03-22at111554.png)
 
 * **Lägesväljare**
 
   Visar aktuell [läge](/help/sites-authoring/author-environment-tools.md#page-modes) och gör att du kan välja ett annat läge, som redigering, layout, tidsförvrängning eller målinriktning.
 
-  ![chlimage_1-120](assets/chlimage_1-120.png)
+  ![Lägesväljare](assets/chlimage_1-120.png)
 
 * **Förhandsgranska**
 
   Aktiverar [förhandsgranskningsläge](/help/sites-authoring/editing-content.md#preview-mode). Då visas sidan som den kommer att se ut när den publiceras.
 
-  ![chlimage_1-121](assets/chlimage_1-121.png)
+  ![Förhandsgranskningsläge](assets/chlimage_1-121.png)
 
 * **Anteckna**
 
@@ -96,7 +96,7 @@ Verktygsfältet har många alternativ. Beroende på ditt aktuella sammanhang och
 
 Om en sida är en del av en [arbetsflöde](/help/sites-authoring/workflows.md) för flera arbetsflöden visas den här informationen i ett meddelandefält högst upp på skärmen när sidan redigeras.
 
-![screen_shot_2018-03-22at11739](assets/screen_shot_2018-03-22at111739.png)
+![arbetsflödesmeddelande](assets/screen_shot_2018-03-22at111739.png)
 
 >[!NOTE]
 >
@@ -114,7 +114,7 @@ Att slutföra och delegera arbetsflödessteg via meddelandefältet fungerar som 
 
 Om sidan har flera arbetsflöden visas antalet arbetsflöden till höger om meddelandet tillsammans med pilknapparna så att du kan bläddra igenom arbetsflödena.
 
-![chlimage_1-122](assets/chlimage_1-122.png)
+![Meddelande om antal arbetsflöden](assets/chlimage_1-122.png)
 
 ## Komponentplatshållare {#component-placeholder}
 
@@ -122,11 +122,11 @@ Komponentplatshållaren är en indikator som visar var en komponent placeras nä
 
 * När du lägger till en ny komponent på sidan (drar från komponentwebbläsaren):
 
-  ![screen_shot_2018-03-22at11928](assets/screen_shot_2018-03-22at111928.png)
+  ![lägga till en ny komponent](assets/screen_shot_2018-03-22at111928.png)
 
 * När en befintlig komponent flyttas:
 
-  ![screen_shot_2018-03-22at112445](assets/screen_shot_2018-03-22at112445.png)
+  ![flytta en befintlig komponent](assets/screen_shot_2018-03-22at112445.png)
 
 ## Infoga en komponent {#inserting-a-component}
 
@@ -153,13 +153,13 @@ Du kan lägga till en ny komponent med **Dra komponenter hit** styckesystemets r
 
    * Välj **Infoga komponent** (+) i verktygsfältet för en befintlig komponent eller **Dra komponenter hit** box.
 
-   ![screen_shot_2018-03-22at112536](assets/screen_shot_2018-03-22at112536.png)
+   ![Infoga komponentmarkering](assets/screen_shot_2018-03-22at112536.png)
 
    * Om du använder en stationär enhet kan du dubbelklicka på **Dra komponenter hit** box.
 
    The **Infoga ny komponent** öppnas så att du kan välja önskad komponent:
 
-   ![screen_shot_2018-03-22at112650](assets/screen_shot_2018-03-22at112650.png)
+   ![Infoga ny komponent](assets/screen_shot_2018-03-22at112650.png)
 
 1. Den markerade komponenten läggs till längst ned på sidan. [Redigera](#editmovecopypastedelete) komponenten efter behov.
 
@@ -218,7 +218,7 @@ Så här skapar du en komponent genom att dra en av resurstyperna ovan:
 
 Om du behöver göra en snabb ändring i en resurs när du bläddrar bland resurserna kan du starta [tillgångsredigerare](/help/assets/manage-assets.md) direkt från webbläsaren genom att klicka på redigeringsikonen bredvid resursens namn.
 
-![screen_shot_2018-03-22at112735](assets/screen_shot_2018-03-22at112735.png)
+![redigeringsikon](assets/screen_shot_2018-03-22at112735.png)
 
 ## Redigera/konfigurera/kopiera/klipp/ta bort/klistra in {#edit-configure-copy-cut-delete-paste}
 
@@ -226,7 +226,7 @@ Om du väljer en komponent öppnas verktygsfältet. Detta ger åtkomst till olik
 
 De faktiska åtgärder som är tillgängliga för användaren visas som lämpliga och inte alla åtgärder beskrivs här.
 
-![screen_shot_2018-03-22at112909](assets/screen_shot_2018-03-22at112909.png)
+![alternativ i verktygsfältet](assets/screen_shot_2018-03-22at112909.png)
 
 * **Redigera**
 
@@ -250,7 +250,7 @@ De faktiska åtgärder som är tillgängliga för användaren visas som lämplig
 
   Komponenten kopieras då till Urklipp. När inklistringsåtgärden har utförts tas den ursprungliga komponenten bort.
 
-  ![screen_shot_2018-03-22at113007](assets/screen_shot_2018-03-22at113007.png)
+  ![Klipp ut](assets/screen_shot_2018-03-22at113007.png)
 
 * **Ta bort**
 
@@ -272,7 +272,7 @@ De faktiska åtgärder som är tillgängliga för användaren visas som lämplig
    * Det inklistrade objektet klistras in ovanför objektet där du väljer åtgärden Klistra in.
    * Åtgärden Klistra in visas bara om det finns innehåll i Urklipp.
 
-  ![screen_shot_2018-03-22at113553](assets/screen_shot_2018-03-22at113553.png)
+  ![Klistra in](assets/screen_shot_2018-03-22at113553.png)
 
   >[!NOTE]
   >
@@ -288,7 +288,7 @@ De faktiska åtgärder som är tillgängliga för användaren visas som lämplig
 
   Gör att du kan välja den överordnade komponenten för den markerade komponenten.
 
-  ![screen_shot_2018-03-22at113028](assets/screen_shot_2018-03-22at113028.png)
+  ![Överordnad](assets/screen_shot_2018-03-22at113028.png)
 
 * **Layout**
 
@@ -317,11 +317,11 @@ De exakta redigeringsalternativen beror på komponenten. För vissa komponenter 
 
 * [Textkomponent](/help/sites-authoring/rich-text-editor.md#main-pars-title-24)
 
-  ![screen_shot_2018-03-22at120215](assets/screen_shot_2018-03-22at120215.png)
+  ![Textkomponent](assets/screen_shot_2018-03-22at120215.png)
 
 * Bildkomponent
 
-  ![screen_shot_2018-03-22at120252](assets/screen_shot_2018-03-22at120252.png)
+  ![Bildkomponent](assets/screen_shot_2018-03-22at120252.png)
 
   >[!NOTE]
   >
@@ -334,11 +334,11 @@ De exakta redigeringsalternativen beror på komponenten. För vissa komponenter 
 
   [Om du aktiverar helskärmsläget](/help/sites-authoring/editing-content.md#edit-content-full-screen-mode) för bildkomponenten får du mer plats att redigera bilden och dessutom visas extra redigeringsalternativ som **Startkarta** och **Återställ zoomning**. I helskärmsläget kan du dessutom välja förinställningar för beskärning.
 
-  ![screen_shot_2018-03-22at120529](assets/screen_shot_2018-03-22at120529.png)
+  ![Bildkomponent, helskärm](assets/screen_shot_2018-03-22at120529.png)
 
 * Komponenter som konstruerats av mer än en grundläggande komponent, t.ex. [Grundkomponenten Text och bild](/help/sites-authoring/default-components-foundation.md#text-image)ber du först att bekräfta vilken uppsättning redigeringsalternativ du vill använda:
 
-  ![chlimage_1-123](assets/chlimage_1-123.png)
+  ![Alternativ för komponentredigering](assets/chlimage_1-123.png)
 
 ### Dra och släpp resurser till komponent {#drag-and-drop-assets-into-component}
 
@@ -360,7 +360,7 @@ För alla komponenter går det att komma åt helskärmsläget med (och avsluta f
 
 Till exempel **Text** komponent:
 
-![screen_shot_2018-03-22at121616](assets/screen_shot_2018-03-22at121616.png)
+![Textredigerare](assets/screen_shot_2018-03-22at121616.png)
 
 >[!NOTE]
 >
@@ -373,7 +373,7 @@ Så här flyttar du en styckekomponent:
 1. Markera det stycke som ska flyttas genom att trycka och hålla ned eller klicka och hålla ned.
 1. Dra stycket till den nya platsen. AEM anger var stycket kan placeras. Släpp den där du vill.
 
-   ![screen_shot_2018-03-22at121821](assets/screen_shot_2018-03-22at121821.png)
+   ![rörlig styckekomponent](assets/screen_shot_2018-03-22at121821.png)
 
 1. Stycket flyttas.
 
@@ -387,7 +387,7 @@ I stället för att växla från redigeringsläge till [layoutläge](/help/sites
 
 1. När **Redigera** platskonsolens läge. Om du väljer en komponent visas komponentens verktygsfält.
 
-   ![screen_shot_2018-03-22at133756](assets/screen_shot_2018-03-22at133756.png)
+   ![Redigeringsläge i formulär](assets/screen_shot_2018-03-22at133756.png)
 
    Klicka eller tryck på **Layout** för att justera komponentens layout.
 
@@ -399,7 +399,7 @@ I stället för att växla från redigeringsläge till [layoutläge](/help/sites
    * Emulatorverktygsfältet visas högst upp på skärmen.
    * Layoutåtgärder i stället för standardredigeringsåtgärder visas i komponentverktygsfältet.
 
-   ![screen_shot_2018-03-22at133843](assets/screen_shot_2018-03-22at133843.png)
+   ![Förhandsgranska formulär på flera enheter](assets/screen_shot_2018-03-22at133843.png)
 
    Nu kan du ändra komponentens layout på samma sätt som i [layoutläge](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode).
 
@@ -427,7 +427,7 @@ Du kan avbryta (och sedan återaktivera) arvet. Beroende på vilken komponent de
 
   Komponentens verktygsfält, om komponenten finns på en sida som är en del av en live-kopia eller en start (baserat på en live-kopia). Till exempel:
 
-  ![screen_shot_2018-03-22at134339](assets/screen_shot_2018-03-22at134339.png)
+  ![Live Copy](assets/screen_shot_2018-03-22at134339.png)
 
   Alternativet Avbryt arv är tillgängligt:
 
@@ -445,7 +445,7 @@ Du kan avbryta (och sedan återaktivera) arvet. Beroende på vilken komponent de
 
   Konfigurationsdialogrutan. Som med det ärvda styckesystemet:
 
-  ![chlimage_1-124](assets/chlimage_1-124.png)
+  ![Ärvt styckesystem](assets/chlimage_1-124.png)
 
 ## Redigera sidmallen {#editing-the-page-template}
 
@@ -464,7 +464,7 @@ The [Sidläget Live Copy-status](/help/sites-authoring/author-environment-tools.
 
 Till exempel:
 
-![screen_shot_2018-03-22at134820](assets/screen_shot_2018-03-22at134820.png)
+![Arvsstatus för Live-kopia](assets/screen_shot_2018-03-22at134820.png)
 
 ## Lägga till anteckningar {#adding-annotations}
 
@@ -499,7 +499,7 @@ När du redigerar innehåll kan du förhandsgranska sidan med förhandsgransknin
 
 Vid redigering är förhandsgranskningsläget tillgängligt med hjälp av ikonen längst upp till höger i sidredigeraren:
 
-![chlimage_1-125](assets/chlimage_1-125.png)
+![Förhandsgranska](assets/chlimage_1-125.png)
 
 ### Visa som publicerad {#view-as-published}
 
@@ -516,7 +516,7 @@ En sida kan låsas från:
    1. Markera sidan med [markeringsläge](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources).
    1. Välj låsikonen.
 
-  ![screen_shot_2018-03-22at134928](assets/screen_shot_2018-03-22at134928.png)
+  ![Låsikon](assets/screen_shot_2018-03-22at134928.png)
 
 * **Page Editor**
 
@@ -525,7 +525,7 @@ En sida kan låsas från:
 
 När konsolvyn är låst uppdateras informationen och när du redigerar en låssymbol visas den i verktygsfältet.
 
-![screen_shot_2018-03-22at135010](assets/screen_shot_2018-03-22at135010.png)
+![Lås symbol](assets/screen_shot_2018-03-22at135010.png)
 
 >[!CAUTION]
 >
@@ -539,7 +539,7 @@ Låsa upp en sida påminner mycket om [låsa sidan](#locking-a-page). När sidan
 
 På menyn Sidinformation visas **Lås upp** som ett alternativ och låsikonen på Sites-konsolen ersätts av en **Lås upp**-ikon.
 
-![screen_shot_2018-03-22at134942](assets/screen_shot_2018-03-22at134942.png)
+![Lås upp](assets/screen_shot_2018-03-22at134942.png)
 
 >[!CAUTION]
 >

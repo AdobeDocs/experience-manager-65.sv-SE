@@ -5,9 +5,9 @@ feature: Adaptive Forms
 role: User, Developer
 level: Beginner, Intermediate
 exl-id: 1b402aef-a319-4d32-8ada-cadc86f5c872
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
 workflow-type: tm+mt
-source-wordcount: '1448'
+source-wordcount: '1718'
 ht-degree: 0%
 
 ---
@@ -393,163 +393,163 @@ Du bör vara medlem i [användargrupp](forms-groups-privileges-tasks.md) för at
   </tr>
   <tr>
    <td>Textfält</td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
    <td> </td>
    <td> </td>
   </tr>
   <tr>
    <td>Numeriskt fält</td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
    <td> </td>
    <td> </td>
   </tr>
   <tr>
    <td>Numerisk stege</td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
    <td> </td>
    <td> </td>
   </tr>
   <tr>
    <td>Alternativknapp</td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
    <td> </td>
    <td> </td>
   </tr>
   <tr>
    <td>Telefonnummer</td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
    <td> </td>
    <td> </td>
   </tr>
   <tr>
    <td>Byt</td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
    <td> </td>
    <td> </td>
   </tr>
   <tr>
    <td>Knapp</td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
    <td> </td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
    <td> </td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
    <td> </td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
    <td> </td>
   </tr>
   <tr>
    <td>Kryssruta</td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
    <td> </td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
   </tr>
   <tr>
    <td>Nedrullningsbar meny</td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
    <td> </td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
   </tr>
   <tr>
    <td>Bildval</td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
    <td> </td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
   </tr>
   <tr>
    <td>Datumindatafält</td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
    <td> </td>
    <td> </td>
   </tr>
   <tr>
    <td>Datumväljaren</td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
    <td> </td>
    <td> </td>
   </tr>
   <tr>
    <td>E-post</td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
    <td> </td>
    <td> </td>
   </tr>
   <tr>
    <td>Bifogad fil</td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
    <td> </td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
    <td> </td>
    <td> </td>
   </tr>
   <tr>
    <td>Bild</td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
    <td> </td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
    <td> </td>
    <td> </td>
    <td> </td>
@@ -558,9 +558,9 @@ Du bör vara medlem i [användargrupp](forms-groups-privileges-tasks.md) för at
   </tr>
   <tr>
    <td>Rita</td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
    <td> </td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
    <td> </td>
    <td> </td>
    <td> </td>
@@ -569,9 +569,9 @@ Du bör vara medlem i [användargrupp](forms-groups-privileges-tasks.md) för at
   </tr>
   <tr>
    <td>Panel</td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
    <td> </td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="Ikon för Ja-tick" src="assets/yes_tick.png" /></td>
    <td> </td>
    <td> </td>
    <td> </td>

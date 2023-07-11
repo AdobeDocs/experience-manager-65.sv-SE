@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 110c86ea-9bd8-4018-bfcc-ca33e6b3f3ba
 feature: Interactive Communication
 exl-id: 4fb82e9b-f870-47db-ac92-2d7510acace8
-source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
+source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
 workflow-type: tm+mt
-source-wordcount: '1992'
+source-wordcount: '1993'
 ht-degree: 0%
 
 ---
@@ -75,6 +75,7 @@ På fliken Innehåll hanterar du innehåll som dokumentfragment och innehållsva
 
       * [Kopiera och klistra in formaterad text från andra program](#pasteformattedtext)
       * [Markera delar av text](#highlightemphasize)
+
    * [Specialtecken](#specialcharacters)
    * [Kortkommandon](/help/forms/using/keyboard-shortcuts.md)
 
@@ -147,7 +148,7 @@ Agentgränssnittet har inbyggt stöd för 210 specialtecken. Administratören ka
 
 ### Dokumentfragment {#document-fragments}
 
-![](do-not-localize/contentoptionsdocfragments.png)
+![document-fragments-ui-operations](do-not-localize/contentoptionsdocfragments.png)
 
 * **Upp- och nedpilar**: Pilar för att flytta dokumentfragment uppåt eller nedåt i interaktiv kommunikation.
 * **Ta bort**: Ta bort dokumentfragmentet från den interaktiva kommunikationen om det tillåts.
@@ -324,20 +325,20 @@ I följande tabell förklaras exemplet `ccrDocumentInstance` SPI-implementering.
   <td><p><strong>Exempel på databastjänst</strong></p></td> 
    </tr>
   <tr>
-   <td><p>Du kan antingen skapa ett utkast för en interaktiv kommunikation eller skicka det direkt. API:t för åtgärden Spara kontrollerar om den interaktiva kommunikationen skickas som ett utkast och innehåller ett utkastnamn. API:t anropar sedan tjänsten mySQLDataBaseServiceCRUD med Spara som indatametod.</p></br><img src="assets/save-as-draft-save-operation.png"/></br>[#$sd1_sf1_dp9]</td>
-   <td><p>Tjänsten mySQLDataBaseServiceCRUD verifierar Spara som indatametod och genererar ett autogenererat utkast-ID och returnerar det till AEM. Logiken som används för att generera ett utkast-ID kan variera beroende på databasen.</p></br><img src="assets/save-operation-service.png"/></br>[#$sd1_sf1_dp13]</td>
+   <td><p>Du kan antingen skapa ett utkast för en interaktiv kommunikation eller skicka det direkt. API:t för åtgärden Spara kontrollerar om den interaktiva kommunikationen skickas som ett utkast och innehåller ett utkastnamn. API:t anropar sedan tjänsten mySQLDataBaseServiceCRUD med Spara som indatametod.</p></br><img src="assets/save-as-draft-save-operation.png"/></td>
+   <td><p>Tjänsten mySQLDataBaseServiceCRUD verifierar Spara som indatametod och genererar ett autogenererat utkast-ID och returnerar det till AEM. Logiken som används för att generera ett utkast-ID kan variera beroende på databasen.</p></br><img src="assets/save-operation-service.png"/></td>
    </tr>
   <tr>
-   <td><p>API:t för uppdateringsåtgärden hämtar status för Interactive Communication-utkastet och kontrollerar om Interactive Communication innehåller ett utkastsnamn. API:t anropar tjänsten mySQLDataBaseServiceCRUD för att uppdatera statusen i Database.</p></br><img src="assets/save-as-draft-update-operation.png"/></br>[#$sd1_sf1_dp17]</td>
+   <td><p>API:t för uppdateringsåtgärden hämtar status för Interactive Communication-utkastet och kontrollerar om Interactive Communication innehåller ett utkastsnamn. API:t anropar tjänsten mySQLDataBaseServiceCRUD för att uppdatera statusen i Database.</p></br><img src="assets/save-as-draft-update-operation.png"/></td>
    <td><p>Tjänsten mySQLDataBaseServiceCRUD verifierar Update som indatametod och sparar statusen för Interactive Communication-utkastet i databasen.</br></p><img src="assets/update-operation-service.png"/></td>
    </tr>
    <tr>
    <td><p>API:t för get-åtgärden kontrollerar om den interaktiva kommunikationen innehåller ett utkast-ID. API:t anropar sedan tjänsten mySQLDataBaseServiceCRUD med Get som indatametod för att hämta data för den interaktiva kommunikationen.</br></p><img src="assets/save-as-draft-get-operation.png"/></td>
-   <td><p>Tjänsten mySQLDataBaseServiceCRUD verifierar Get som indatametod och hämtar data för den interaktiva kommunikationen baserat på utkast-ID.</p></br><img src="assets/get-operation-service.png"/></br>[#$sd1_sf1_dp29]</td>
+   <td><p>Tjänsten mySQLDataBaseServiceCRUD verifierar Get som indatametod och hämtar data för den interaktiva kommunikationen baserat på utkast-ID.</p></br><img src="assets/get-operation-service.png"/></td>
    </tr>
    <tr>
    <td><p>API:t för åtgärden getAll anropar tjänsten mySQLGetALLData för att hämta data för all interaktiv kommunikation som har sparats i databasen.</br></p><img src="assets/save-as-draft-getall-operation.png"/></td>
-   <td><p>Tjänsten mySQLGetALLData hämtar data för alla interaktiva kommunikationer som har sparats i databasen.</p></br><img src="assets/getall-operation-service.png"/></br>[#$sd1_sf1_dp37]</td>
+   <td><p>Tjänsten mySQLGetALLData hämtar data för alla interaktiva kommunikationer som har sparats i databasen.</p></br><img src="assets/getall-operation-service.png"/></td>
    </tr>
   </tbody>
 </table>

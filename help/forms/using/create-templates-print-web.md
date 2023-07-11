@@ -10,7 +10,7 @@ discoiquuid: 879ff6ca-e5f3-451d-acc2-f75142101ddd
 docset: aem65
 feature: Interactive Communication
 exl-id: bef1f05e-aea2-433e-b3d5-0b7ad8163fa7
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
 workflow-type: tm+mt
 source-wordcount: '1793'
 ht-degree: 0%
@@ -93,6 +93,7 @@ Så här skapar du en XDP-mall för utskriftskanalen:
 
       * Avgifter
       * Diagram
+
    * SpecificeradeAnrop
    * PayNow
    * ValueAddedServices
@@ -162,6 +163,7 @@ Om du vill skapa ett layoutfragment för tryckkanalen i den interaktiva kommunik
    1. Välj **.xdp** från **Spara som typ** nedrullningsbar lista.
 
    1. Tryck **Spara**.
+
    När du har skapat en XDP-mall för layoutfragment med Forms Designer måste du [ladda upp](../../forms/using/create-templates-print-web.md#upload-xdp-template-to-the-aem-forms-server) till AEM Forms-servern så att mallen är tillgänglig för användning när du skapar layoutfragment.
 
 ## Skapa mall för webbkanal {#create-template-for-web-channel}
@@ -231,7 +233,7 @@ Så här skapar du en mall för webbkanalen i **Create_First_IC_templates** mapp
    1. Ange **Fakturainformation** i fältet Titel.
    1. Välj **1** från **Antal kolumner** nedrullningsbar lista.
 
-   1. Tryck ![](/help/forms/using/assets/done_icon.png) för att spara egenskaperna.
+   1. Tryck ![Spara](/help/forms/using/assets/done_icon.png) för att spara egenskaperna.
 
    Namnet på panelen uppdateras till **Fakturainformation** i innehållsträdet.
 
@@ -275,4 +277,4 @@ Baserat på användningsfallet måste du inkludera **Betala nu** och **Prenumere
 
    ![Tillåtna komponenter](assets/allowed_components_af_new.png)
 
-1. Tryck ![ready_icon](assets/done_icon.png) för att spara egenskaperna.
+1. Tryck ![spara](assets/done_icon.png) för att spara egenskaperna.

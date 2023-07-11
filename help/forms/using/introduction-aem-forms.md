@@ -11,9 +11,9 @@ discoiquuid: a20383f2-f86a-45bf-a39e-725ee764503b
 docset: aem65
 feature: Adaptive Forms
 exl-id: e5533b4f-93b7-4ea9-a01d-fdf9528652c8
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
 workflow-type: tm+mt
-source-wordcount: '891'
+source-wordcount: '894'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ I stora företag skapas formulär ofta en gång och återanvänds genom att man 
 
 AEM Forms har verktyg för blanketthantering som inte bara gör det möjligt att hantera adaptiva formulär, utan även XFA-formulär, PDF forms och relaterade resurser. Mer information finns i [Introduktion till hantering av formulär](../../forms/using/introduction-managing-forms.md).
 
-![](do-not-localize/4th-draft.gif)
+![AEM](do-not-localize/4th-draft.gif)
 
 ### Viktiga funktioner {#key-capabilities}
 

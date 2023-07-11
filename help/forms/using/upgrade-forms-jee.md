@@ -9,9 +9,9 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: e745033f-8015-4fae-9d82-99d35802c0a6
 role: Admin
 exl-id: 722e75a0-bcb3-465e-bb74-ea94a3b99fd3
-source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
+source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
 workflow-type: tm+mt
-source-wordcount: '377'
+source-wordcount: '382'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ AEM 6.5.12.0 Forms on JEE innehåller två typer av installationsprogram: Fullst
 
 I följande tabell visas avsändare som använder fullständig installation och korrigeringsinstallation.
 
-![](assets/full-and-patch-installer.png)
+![Installationsscenario för fullständig installation och korrigering](assets/full-and-patch-installer.png)
 
 Utför följande procedur för att använda det fullständiga installationsprogrammet för att uppgradera befintliga AEM 6.3 Forms på JEE eller AEM 6.4 Forms på JEE till AEM 6.5.12.0 Forms på JEE:
 
