@@ -1,29 +1,25 @@
 ---
 title: Distribuera bästa praxis
-seo-title: Deploying Best Practices
 description: Driftsätta och underhålla bästa praxis.
-seo-description: Deploying and maintaining best practices.
-uuid: 4546ed2c-43d5-40f3-874f-567b324e78c2
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
-discoiquuid: 4b5c0677-c630-4fae-867e-4f4583ac8507
 exl-id: 4cbc0a30-d5f6-40ff-b7f6-8d64762e1970
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: fd937341e26edd0c3edfced8e862066ebc30f9a3
 workflow-type: tm+mt
-source-wordcount: '430'
+source-wordcount: '434'
 ht-degree: 0%
 
 ---
 
 # Distribuera bästa praxis{#deploying-best-practices}
 
-Bästa tillvägagångssätt beskriver hur ni driftsätter eller upprätthåller AEM på det mest effektiva och effektiva sättet. Den här växande listan med ämnen innehåller en mängd olika områden i AEM.
+Bästa tillvägagångssätt beskriver hur man driftsätter eller underhåller Adobe Experience Manager (AEM) på det mest effektiva och effektiva sättet. Den här växande listan med ämnen innehåller olika områden i AEM.
 
 Följande områden har dokumentation om användning och underhåll av bästa metoder och rekommendationer:
 
-* [OAK](#oak)
+* [Oak](#oak)
 * [Communities](#communities)
 * [UI](#ui)
 * [Prestanda](#performance)
@@ -36,7 +32,7 @@ Mer information om hur du administrerar, utvecklar och redigerar finns i följan
 
 Specifika dokument beskrivs och länkas till i de tabeller som följer.
 
-## OAK {#oak}
+## Oak {#oak}
 
 [Oak](/help/sites-deploying/platform.md) är ett skalbart och prestandabaserat hierarkiskt innehållslager som utgör grunden för AEM.
 
@@ -48,7 +44,7 @@ Specifika dokument beskrivs och länkas till i de tabeller som följer.
    <td>Innehåller en rapport om den tekniska flexibiliteten, höga prestanda och funktioner för återställning efter ljudkatastrof</td>
   </tr>
   <tr>
-   <td>Rekommenderade OAK-distributioner</td>
+   <td>Rekommenderade ekdriftsättningar</td>
    <td><a href="/help/sites-deploying/recommended-deploys.md">Rekommenderade driftsättningar</a></td>
    <td>Beskriver distributionsscenarier</td>
   </tr>
@@ -63,7 +59,7 @@ Specifika dokument beskrivs och länkas till i de tabeller som följer.
    <td>I det här dokumentet förklaras de bästa sätten att lagra binära data och innehållsnoder. Innehåller information om hur du använder datalagret i Amazon S3.</td>
   </tr>
   <tr>
-   <td>Sök i OAK</td>
+   <td>Sök i Oak</td>
    <td><a href="/help/sites-deploying/best-practices-for-queries-and-indexing.md">Metodtips för frågor och indexering</a><br /> </td>
    <td>Beskriver de bästa sätten att indexera innehåll.</td>
   </tr>
@@ -74,7 +70,7 @@ Specifika dokument beskrivs och länkas till i de tabeller som följer.
 
 AEM Communities förenklar framtagning och hantering av lokala communityn. Bästa tillvägagångssätt för AEM Communities beskrivs här:
 
-[Community Content Store](/help/communities/working-with-srp.md) - Diskutera den nya funktionen för delad lagring för användargenererat innehåll (UGC) och överväganden för att välja underliggande [topologi](/help/communities/topologies.md).
+[Community Content Store](/help/communities/working-with-srp.md) - Diskuterar den nya funktionen för delad lagring för användargenererat innehåll (UGC) och överväganden för val av underliggande [topologi](/help/communities/topologies.md).
 
 [Rekommenderade distributioner för communities](/help/sites-deploying/recommended-deploys.md#considerations-for-aem-communities) - Beskriver de rekommenderade distributionerna för Communities. |
 
@@ -99,7 +95,7 @@ De bästa metoderna för prestandaanvändning listas här:
   </tr>
   <tr>
    <td>Använda Dispatcher med ett CDN</td>
-   <td><a href="https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html#using-dispatcher-with-a-cdn">Använda Dispatcher med ett CDN</a></td>
+   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=en#using-dispatcher-with-a-cdn">Använda Dispatcher med ett CDN</a></td>
    <td>Ett leveransnätverk (CDN), som Akamai Edge Delivery eller Amazon Cloud Front, levererar innehåll från en plats nära slutanvändaren.</td>
   </tr>
   <tr>

@@ -1,19 +1,15 @@
 ---
 title: Lägg till klienter
-seo-title: Add Clientlibs
 description: Lägg till en ClientLibraryFolder
-seo-description: Add a ClientLibraryFolder
-uuid: 2944923d-caca-4607-81a4-4122a2ce8e41
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: 46f81c3f-6512-43f1-8ec1-cc717ab6f6ff
 docset: aem65
 exl-id: 569f2052-b4fe-4f7f-aec9-657217cba091
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: fd937341e26edd0c3edfced8e862066ebc30f9a3
 workflow-type: tm+mt
-source-wordcount: '682'
+source-wordcount: '672'
 ht-degree: 0%
 
 ---
@@ -45,7 +41,7 @@ I **Egenskaper** för den nya `clientlibs` nod, ange **kategorier** egenskap:
 * Klicka **Lägg till**
 * Klicka **Spara alla**
 
-Obs! för att visa kategorivärdet med appar. är en konvention som identifierar att det ägande programmet finns i /apps-mappen, inte /libs.  VIKTIGT! Lägg till platshållare `js.tx`t och **`css.txt`** filer. (Det är inte officiellt en cq:ClientLibraryFolder utan dem.)
+Obs! för att visa kategorivärdet med appar. är en konvention som identifierar att det ägande programmet finns i /apps-mappen, inte /libs. VIKTIGT! Lägg till platshållare `js.tx`t och **`css.txt`** filer. (Det är inte officiellt en cq:ClientLibraryFolder utan dem.)
 
 1. Högerklicka **`/etc/designs/an-scf-sandbox/clientlibs`**
 1. Välj **Skapa fil...**
@@ -75,15 +71,15 @@ Skapa sedan en fil under clientlibs med namnet style.css och ställ in innehåll
 
 ### Bädda in SCF-klienter {#embed-scf-clientlibs}
 
-I **Egenskaper** -fliken för `clientlibs` node, enter the multi-value String property **embed**. Detta bäddar in nödvändiga [klientbibliotek (klientlibs) för SCF-komponenter](/help/communities/client-customize.md#clientlibs-for-scf). I den här självstudiekursen har många av de klientlibs som behövs för webbkomponenterna lagts till.
+I **Egenskaper** -fliken för `clientlibs` node, enter the multi-value String property **embed**. Detta bäddar in nödvändiga [klientbibliotek (klientlibs) för SCF-komponenter](/help/communities/client-customize.md#clientlibs-for-scf). I den här självstudiekursen läggs många av de klientlibs som behövs för komponenterna i Communities till.
 
-**Anteckning** att detta kan vara det önskade tillvägagångssättet för en produktionsplats, eftersom det finns praktiska överväganden jämfört med storleken/hastigheten för de klienter som laddas ned för varje sida.
+Detta kan vara det önskade tillvägagångssättet för en produktionsplats, eftersom det finns praktiska överväganden jämfört med storleken/hastigheten för de klienter som laddas ned för varje sida.
 
-Om du bara använder en funktion på en sida kan du inkludera den funktionens fullständiga klientlib direkt på sidan, t.ex.
+Om du bara använder en funktion på en sida kan du inkludera den funktionens fullständiga klientlib direkt på sidan, till exempel
 
 `% ui:includeClientLib categories=cq.social.hbs.forum" %`
 
-I det här fallet är det bäst att inkludera alla och så att de mer grundläggande SCF-klientlibs som är författarens klientlibs:
+I det här fallet är det bäst att ta med alla och så att de mer grundläggande SCF-klientlibs som författarklienten tillhör:
 
 * Namn: **`embed`**
 * Typ: **`String`**
@@ -110,7 +106,7 @@ Så här är det `/etc/designs/an-scf-sandbox/clientlibs` ska nu visas i databas
 
 ### Inkludera klienter i PlayPage-mallen {#include-clientlibs-in-playpage-template}
 
-Utan att inkludera `apps.an-scf-sandbox` Kategorin ClientLibraryFolder på sidan. SCF-komponenterna kommer inte att fungera eller formateras eftersom de Javascript och format som behövs inte kommer att vara tillgängliga.
+Utan att inkludera `apps.an-scf-sandbox` Kategorin ClientLibraryFolder på sidan. SCF-komponenterna fungerar inte och är inte formaterade eftersom nödvändiga JavaScript och format inte är tillgängliga.
 
 Utan att ta med clientlibs visas SCF-kommentarkomponenten som stylfri:
 
@@ -153,9 +149,9 @@ Läs in webbplatsen i webbläsaren och se om bakgrunden inte är en blå nyans.
 
 ### Spara ditt arbete hittills {#saving-your-work-so-far}
 
-I det här läget finns det en minimalistisk sandlåda och det kan vara värt att spara som ett paket så att du, när du spelar upp, kan aktivera servern om databasen blir skadad och du vill börja om, stänga av servern, byta namn på eller ta bort mappen crx-quickstart/, aktivera servern, ladda upp och installera det här sparade paketet och inte behöver upprepa dessa mest grundläggande steg.
+Nu finns det en minimalistisk sandlåda, och det kan vara värt att spara som ett paket så att du, när du spelar upp, kan stänga av servern, byta namn på eller ta bort mappen crx-quickstart/, aktivera servern, ladda upp och installera det här sparade paketet och inte behöver upprepa dessa mest grundläggande steg.
 
-Det här paketet finns på [Skapa en exempelsida](/help/communities/create-sample-page.md) självstudiekurs för dem som inte bara vill hoppa in och börja spela!..
+Det här paketet finns på [Skapa en exempelsida](/help/communities/create-sample-page.md) självstudiekurs för dem som inte vill vänta och börja spela!..
 
 Så här skapar du ett paket:
 
@@ -180,9 +176,9 @@ Så här skapar du ett paket:
       * Klicka **Lägg till filter**
       * Rotsökväg: bläddra till `/content/an-scf-sandbox**`
       * Klicka **Klar**
-   * Klicka **Spara**
 
+   * Klicka **Spara**
 
 * Klicka **Bygge**
 
-Nu kan du välja **Hämta** för att spara den på disk och **Överför paket** andra, samt markera **Mer > Replikera** för att överföra sandlådan till en lokal värdpubliceringsinstans för att utöka sandlådans sfär.
+Nu kan du välja **Hämta** för att spara den på disk och **Överför paket** någon annanstans, och markera **Mer > Replikera** om du vill överföra sandlådan till en lokal publiceringsinstans för att expandera sfären i sandlådan.

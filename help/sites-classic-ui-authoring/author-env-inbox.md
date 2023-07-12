@@ -1,17 +1,15 @@
 ---
 title: Din inkorg
 description: Du kan få meddelanden från olika AEM, till exempel meddelanden om arbetsobjekt eller uppgifter som representerar åtgärder som du måste utföra på sidinnehållet.
-uuid: e7ba9150-957d-4f84-a570-2f3d83792472
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
-discoiquuid: ce2a1475-49cf-43e6-bfb9-006884ce3881
 docset: aem65
 exl-id: 52ea2ca2-eb1c-4bed-b52d-feef37c6afd6
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: fd937341e26edd0c3edfced8e862066ebc30f9a3
 workflow-type: tm+mt
-source-wordcount: '581'
+source-wordcount: '569'
 ht-degree: 1%
 
 ---
@@ -68,18 +66,18 @@ Så här prenumererar du på meddelanden:
 
 1. Välj meddelandekanal:
 
-   * **Inkorg**: meddelanden visas i AEM inkorg.
+   * **Inkorg**: meddelanden visas i AEM Inkorg.
    * **E-post**: meddelanden skickas via e-post till den e-postadress som är definierad i din användarprofil.
 
    >[!NOTE]
    >
-   >Ett par inställningar måste konfigureras för att kunna meddelas via e-post. Det går också att anpassa e-postmallen eller lägga till en e-postmall för ett nytt språk. Se [Konfigurerar e-postmeddelande](/help/sites-administering/notification.md#configuringemailnotification) för att konfigurera e-postmeddelanden i AEM.
+   >Ett fåtal inställningar måste konfigureras för att kunna meddelas via e-post. Det går också att anpassa e-postmallen eller lägga till en e-postmall för ett nytt språk. Se [Konfigurerar e-postmeddelande](/help/sites-administering/notification.md#configuringemailnotification) för att konfigurera e-postmeddelanden i AEM.
 
 1. Välj de sidåtgärder som ska meddelas:
 
    * Aktiverad: när en sida har aktiverats.
    * Inaktiverad: när en sida har inaktiverats.
-   * Borttagen (syndikering): när en sida har tagits bort-replikerats, dvs. när en borttagningsåtgärd som har utförts på en sida har replikerats.
+   * Borttagen (syndikering): när en sida har tagits bort-replikerats, det vill säga när en borttagningsåtgärd som har utförts på en sida replikeras.
 När en sida tas bort eller flyttas replikeras en borttagningsåtgärd automatiskt: sidan tas bort på källinstansen där borttagningsåtgärden utfördes och på målinstansen som definierats av replikeringsagenterna.
 
    * Ändrad: när en sida har ändrats.
@@ -90,9 +88,9 @@ När en sida tas bort eller flyttas replikeras en borttagningsåtgärd automatis
 1. Definiera sökvägarna för sidorna som du ska meddelas om:
 
    * Klicka **Lägg till** om du vill lägga till en ny rad i tabellen.
-   * Klicka på **Bana** tabellcell och ange sökvägen, t.ex. `/content/docs`.
+   * Klicka på **Bana** tabellcell och ange sökvägen, till exempel `/content/docs`.
 
-   * Ska meddelas för alla sidor som tillhör underträdet, ange **Exakt?** till **Nej**.
+   * Om du vill bli meddelad för alla sidor som tillhör underträdet anger du **Exakt?** till **Nej**.
 Om du bara vill få meddelanden om åtgärder på sidan som definieras av sökvägen anger du **Exakt?** till **Ja**.
 
    * Om du vill tillåta regeln anger du **Regel** till **Tillåt**. Om inställt på **Neka**, nekas regeln men tas inte bort och kan tillåtas senare.
@@ -103,7 +101,7 @@ Om du bara vill få meddelanden om åtgärder på sidan som definieras av sökv�
 
 ## Bearbetar dina meddelanden {#processing-your-notifications}
 
-Om du har valt att ta emot meddelanden i din AEM inkorg kommer din inkorg att fyllas i med meddelanden. Du kan [visa meddelanden](#viewing-your-notifications) välj sedan de meddelanden som krävs för att:
+Om du har valt att ta emot meddelanden i din AEM Inkorg fylls din inkorg i med meddelanden. Du kan [visa meddelanden](#viewing-your-notifications)väljer du sedan de meddelanden som krävs för att:
 
 * Godkänn den genom att klicka **Godkänn**: värdet i **Läs** kolumnen är inställd på **true**.
 
