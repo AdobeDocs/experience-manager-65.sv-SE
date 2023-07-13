@@ -1,15 +1,17 @@
 ---
-source-git-commit: e3f12a9bbcb111e9a174e6bc3a0ec634df73c60f
-translation-type: tm+mt
+source-git-commit: e068cee192c0837f1473802143e0793674d400e8
+workflow-type: tm+mt
+source-wordcount: '428'
+ht-degree: 0%
 
 ---
-# Adobes uppförandekod
+# Adobe uppförandekod
 
-## Vår redovisning
+## Pledge
 
-I syfte att främja en öppen och välkommen miljö lovar vi som medverkande och underhållande att göra deltagande i vårt projekt och i vår community till en trakasserfri upplevelse för alla, oavsett ålder, kroppsstorlek, funktionshinder, etnicitet, könsidentitet och -uttryck, erfarenhetsnivå, nationalitet, personligt utseende, ras, religion, sexuell identitet och läggning.
+För att främja en öppen och välkommen miljö lovar dokumentationsgruppen, som medverkande och underhållande, att göra deltagande i ett projekt och vår community till en trakasserfri upplevelse för alla, oavsett ålder, kroppsstorlek, funktionshinder, etnicitet, könsidentitet och -uttryck, erfarenhetsnivå, nationalitet, personligt utseende, ras, religion eller sexuell identitet och läggning.
 
-## Våra standarder
+## Standarder
 
 Exempel på beteenden som bidrar till att skapa en positiv miljö är:
 
@@ -27,7 +29,7 @@ Exempel på oacceptabla beteenden från deltagarnas sida är:
 * Publicera andras personuppgifter, t.ex. en fysisk eller elektronisk adress, utan uttryckligt tillstånd
 * Annat beteende som rimligen skulle kunna anses olämpligt i yrkesmässig miljö
 
-## Vårt ansvar
+## Ansvarsområden
 
 Projektledare ansvarar för att förtydliga standarderna för godtagbart beteende och förväntas vidta lämpliga och rättvisa korrigerande åtgärder som svar på eventuella fall av oacceptabla beteenden.
 
@@ -45,4 +47,4 @@ Projektledare som inte följer eller tillämpar uppförandekoden i god tro kan d
 
 ## Attribut
 
-Denna uppförandekod har anpassats från [Contributor-konventionen](https://contributor-covenant.org), version 1.4, som finns på [https://contributor-covenant.org/version/1/4](https://contributor-covenant.org/version/1/4/).
+Denna uppförandekod har anpassats från [Contributor-konventionen](https://contributor-covenant.org), version 1.4, finns på [https://contributor-covenant.org/version/1/4](https://contributor-covenant.org/version/1/4/).

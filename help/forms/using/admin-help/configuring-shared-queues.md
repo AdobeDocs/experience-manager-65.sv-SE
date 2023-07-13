@@ -1,18 +1,14 @@
 ---
 title: Konfigurera delade köer
-seo-title: Configuring Shared Queues
 description: Med delade köer kan du konfigurera och hantera användarköer effektivt. Lär dig hur du konfigurerar delade köer.
-seo-description: Shared Queues allow you to configure and manage user queues effectively. Learn how to configure shared queues.
-uuid: 69ab611d-334b-40a5-bd2d-533d4cb25eda
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_forms_workflow
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: fc403a60-b635-4334-9bf8-2f3d2036b2f3
 exl-id: 5f4467c1-0f3f-4dc6-9bd5-98259f327295
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e068cee192c0837f1473802143e0793674d400e8
 workflow-type: tm+mt
-source-wordcount: '652'
+source-wordcount: '642'
 ht-degree: 0%
 
 ---
@@ -31,30 +27,30 @@ Med det här alternativet kan du hantera delade köer som tilldelats en vald anv
 
 ## Hantera åtkomst till en vald användarkö {#managing-access-to-a-selected-user-queue}
 
-Med funktionen Hantera åtkomst till en användare kan du hantera åtkomst till en vald användarkö. Du kan bevilja eller återkalla åtkomst till en vald användarkö för andra användare i organisationen. Kara Bowman är till exempel inte på kontoret. Med funktionen Hantera åtkomst till en användare kan hennes kö delas med Akira Tanaka och John Jacobs för slutförande. När Kara Bowman kommer tillbaka till kontoret senare kan du återkalla tillgången till hennes kö från Akira Tanaka och John Jacobs.
+Med funktionen Hantera åtkomst till en användare kan du hantera åtkomst till en vald användarkö. Du kan bevilja eller återkalla åtkomst till en vald användarkö för andra användare i organisationen. Kara Bowman är till exempel inte på kontoret. Med funktionen Hantera åtkomst till en användare kan Karas kö delas med Akira Tanaka och John Jacobs för slutförande. När Kara kommer tillbaka till kontoret kan du återkalla tillgången till hennes kö från Akira Tanaka och John Jacobs.
 
 När uppgifterna har delats kan de utföras av användaren, med åtkomst till kön, med hjälp av arbetsytan.
 
 >[!NOTE]
 >
->Flex Workspace är föråldrat för AEM formulärreleaser.
+>Flex Workspace används inte AEM formulärreleasen.
 
 ### Konfigurera åtkomst till en vald användarkö {#configuring-access-to-a-selected-user-queue}
 
 1. Logga in på administrationskonsolen med ett administratörskonto.
-1. Välj **Tjänster** > **formulärarbetsflöde** > **Delad kö**.
+1. Välj **Tjänster** > **Forms Workflow** > **Delad kö**.
 
 1. På fliken Hantera åtkomst till en användare söker du efter och markerar den användare vars kö du vill dela. I det nedre högra fönstret visas en lista med användare som har åtkomst till den valda användarkön.
-1. Leta reda på och markera användaren i den nedre vänstra rutan. Klicka på Dela.
+1. I rutan längst ned till vänster söker du efter och markerar användaren. Klicka på Dela.
 1. Klicka på Spara för att slutföra.
 
 ### Återkalla åtkomst till en vald användarkö {#revoking-access-to-a-selected-user-queue}
 
 1. Logga in på administrationskonsolen med ett administratörskonto.
-1. Välj **Tjänster** > **formulärarbetsflöde** > **Delad kö**.
+1. Välj **Tjänster** > **Forms Workflow** > **Delad kö**.
 
 1. På fliken Hantera åtkomst till en användare söker du efter och markerar den användare vars kö du vill hantera.
-1. I den nedre högra rutan visas en lista med användare som har åtkomst till den valda användarkön. Markera användaren och klicka på Återkalla.
+1. I rutan längst ned till höger visas en lista med användare som har åtkomst till den valda användarkön. Markera användaren och klicka på Återkalla.
 1. Klicka på Spara för att slutföra.
 
 ## Hantera köer som tilldelats en användare {#managing-queues-assigned-to-a-user}
@@ -65,22 +61,22 @@ När användaren har tilldelats dessa uppgifter kan de slutföras med Workspace.
 
 >[!NOTE]
 >
->Flex Workspace är föråldrat för AEM formulärreleaser.
+>Flex Workspace används inte AEM formulärreleasen.
 
 ### Bevilja åtkomst till en vald användarkö {#granting-access-to-a-selected-user-queue}
 
 1. Logga in på administrationskonsolen med ett administratörskonto.
-1. Välj **Tjänster** > **formulärarbetsflöde** > **Delad kö**.
+1. Välj **Tjänster** > **Forms Workflow** > **Delad kö**.
 
-1. På fliken Hantera åtkomst till en användare söker du efter och väljer den användare vars kö du vill dela. I det nedre högra fönstret visas en lista med användare som har åtkomst till den valda användarkön.
-1. I den nedre vänstra rutan söker du efter och väljer användarköer som du vill dela med den valda användaren. Klicka på Dela.
+1. På fliken Hantera åtkomst till en användare söker du efter och markerar den användare vars kö du vill dela. I det nedre högra fönstret visas en lista med användare som har åtkomst till den valda användarkön.
+1. I rutan längst ned till vänster söker du efter och väljer användarköer som du vill dela med den valda användaren. Klicka på Dela.
 1. Klicka på Spara för att slutföra.
 
 ### Återkalla åtkomst till en vald användarkö {#revoking_access_to_a_selected_user_queue-1}
 
 1. Logga in på administrationskonsolen med ett administratörskonto.
-1. Välj **Tjänster** > **formulärarbetsflöde** > **Delad kö**.
+1. Välj **Tjänster** > **Forms Workflow** > **Delad kö**.
 
 1. På fliken Hantera åtkomst av en användare söker du efter och markerar den användare vars kö du vill hantera.
-1. I den nedre högra rutan visas listan med användarköer som tilldelats den valda användaren. Markera användarkön och klicka på Återkalla.
+1. I rutan längst ned till höger visas en lista med användarköer som tilldelats den valda användaren. Markera användarkön och klicka på Återkalla.
 1. Klicka på Spara för att slutföra.

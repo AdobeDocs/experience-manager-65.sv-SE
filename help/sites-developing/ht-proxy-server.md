@@ -1,25 +1,21 @@
 ---
 title: Så här använder du proxyserververktyget
-seo-title: How to use the Proxy Server Tool
 description: Proxyservern fungerar som en mellanliggande server som vidarebefordrar begäranden mellan en klient och en server
-seo-description: The proxy server acts as an intermediate server that relays requests between a client and a server
-uuid: 30f4f46d-839e-4d23-a511-12f29b3cc8aa
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: development-tools
 content-type: reference
-discoiquuid: dfbc1d2f-80c1-4564-a01c-a5028b7257d7
 exl-id: 7222a0c3-cdb9-4c73-9d53-26f00792e439
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e068cee192c0837f1473802143e0793674d400e8
 workflow-type: tm+mt
-source-wordcount: '943'
+source-wordcount: '937'
 ht-degree: 0%
 
 ---
 
 # Så här använder du proxyserververktyget{#how-to-use-the-proxy-server-tool}
 
-Proxyservern fungerar som en mellanliggande server som vidarebefordrar begäranden mellan en klient och en server. Proxyservern håller reda på alla klient-server-interaktioner och genererar en logg över hela TCP-kommunikationen. På så sätt kan du övervaka exakt vad som händer, utan att behöva komma åt huvudservern.
+Proxyservern fungerar som en mellanliggande server som vidarebefordrar begäranden mellan en klient och en server. Proxyservern spårar alla klient-server-interaktioner och genererar en logg över hela TCP-kommunikationen. På så sätt kan du övervaka exakt vad som händer, utan att behöva komma åt huvudservern.
 
 Proxyservern finns i AEM här:
 
@@ -32,7 +28,7 @@ Du kan använda proxyservern för att övervaka all klient-server-interaktion, o
 * SMTP för e-postmeddelanden
 * LDAP för användarhantering
 
-Du kan till exempel placera proxyservern mellan två program som kommunicerar via ett TCP/IP-nätverk; t.ex. en webbläsare och AEM. På så sätt kan du övervaka exakt vad som händer när du begär en CQ-sida.
+Du kan till exempel placera proxyservern mellan två program som kommunicerar via ett TCP/IP-nätverk; till exempel en webbläsare och AEM. På så sätt kan du övervaka exakt vad som händer när du begär en CQ-sida.
 
 ## Starta proxyserververktyget {#starting-the-proxy-server-tool}
 
@@ -44,7 +40,7 @@ Starta servern på kommandoraden:
 
 `<host>`
 
-Det här är värdadressen för den CRX-instans som du vill ansluta till. Om instansen finns på din lokala dator är det `localhost`.
+Det här är värdadressen för den CRX-instans som du vill ansluta till. Om instansen finns på den lokala datorn är det `localhost`.
 
 `<remoteport>`
 
@@ -52,7 +48,7 @@ Det här är värdporten för mål-CRX-instansen. Standardinställningen för en
 
 `<localport>`
 
-Det här är den port på den lokala datorn som du vill ansluta till för att komma åt CRX-instansen via proxyn.
+Det här är den port på den lokala datorn som du vill ansluta för att komma åt CRX-instansen via proxyn.
 
 **Alternativ**
 
@@ -98,7 +94,7 @@ C-6-Finished: 758 bytes (1.0 kb/s)
 S-6-Finished: 665 bytes (1.0 kb/s)
 ```
 
-Detta visar antalet byte som skickas mellan klienten ( `C`) och servern ( `S`) på den sjätte anslutningen och med den genomsnittliga hastigheten.
+Detta visar antalet byte som skickas mellan klienten ( `C`) och servern ( `S`) på den sjätte förbindelsen och vid den genomsnittliga hastigheten.
 
 **Ett exempel på loggutdata**
 
@@ -106,11 +102,11 @@ Som ett exempel kan du titta på en sida som skapar följande kod när den efter
 
 ### Exempel {#example}
 
-Ett exempel är ett mycket enkelt HTML-dokument som finns i databasen på
+Ta som exempel ett enkelt HTML-dokument i databasen på
 
 `/content/test.html`
 
-tillsammans med en bildfil som finns på
+Vid sidan av en bildfil på
 
 `/content/test.jpg`
 
@@ -128,13 +124,13 @@ Innehållet i `test.html` är:
 </html>
 ```
 
-Anta att AEM körs `localhost:4502` så här startar vi proxyn:
+Anta att AEM körs `localhost:4502`startas proxyn så här:
 
 `java -jar proxy.jar localhost 4502 4444 -logfile test.log`
 
 CQ/CRX-instansen kan nu nås via proxyn på `localhost:4444` och all kommunikation via den här porten loggas på `test.log`.
 
-Om vi nu tittar på utdata från proxyn ser vi interaktionen mellan webbläsaren och AEM.
+Om du nu tittar på utdata från proxyn ser du interaktionen mellan webbläsaren och AEM.
 
 Vid start skickar proxyn följande:
 
@@ -143,11 +139,11 @@ starting proxy for localhost:4502 on port 4444
 using logfile: <some-dir>/crx-quickstart/opt/helpers/test.log
 ```
 
-Sedan öppnar vi en webbläsare och öppnar testsidan:
+Öppna nu en webbläsare och gå till testsidan:
 
 `http://localhost:4444/content/test.html`
 
-och vi ser att webbläsaren gör en `GET` begäran om sidan:
+Och du ser att webbläsaren gör en `GET` begäran om sidan:
 
 ```shell
 C-0-#000000 -> [GET /content/test.html HTTP/1.1 ]
@@ -219,7 +215,7 @@ Så här kontrollerar du om keep-alive-funktionen fungerar:
 
 **Söker efter förlorade begäranden**
 
-Om du förlorar begäranden i en komplex serverinställning, till exempel för en brandvägg och en dispatcher, kan du använda proxyservern för att ta reda på var begäran förlorades. Vid brandvägg:
+Om du förlorar begäranden i en komplex serverinställning, till exempel för en brandvägg och en Dispatcher, kan du använda proxyservern för att ta reda på var begäran förlorades. Om det finns en brandvägg:
 
 * Starta en proxy före en brandvägg
 * Starta en annan proxy efter en brandvägg
@@ -231,4 +227,4 @@ Om du ibland får väntande förfrågningar:
 
 * Starta proxyn.
 * Vänta eller skriv åtkomstloggen i en fil där varje post har en tidsstämpel.
-* När begäran börjar hänga kan du se hur många anslutningar som var öppna och vilken begäran som orsakar problem.
+* När begäran börjar gälla kan du se hur många anslutningar som var öppna och vilken begäran som orsakar problem.

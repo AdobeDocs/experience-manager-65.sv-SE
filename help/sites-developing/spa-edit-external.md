@@ -1,17 +1,17 @@
 ---
-title: Redigera en extern SPA i AEM
-description: I det här dokumentet beskrivs de rekommenderade stegen för att överföra en fristående SPA till en AEM, lägga till redigerbara innehållsavsnitt och aktivera redigering.
+title: Redigera en extern SPA i Adobe Experience Manager
+description: I det här dokumentet beskrivs de rekommenderade stegen för att överföra en fristående SPA till en Adobe Experience Manager-instans, lägga till redigerbara innehållsavsnitt och aktivera redigering.
 exl-id: 25236af4-405a-4152-8308-34d983977e9a
-source-git-commit: 90f3fb05581820167ea0dcf50fb23048609af31d
+source-git-commit: e068cee192c0837f1473802143e0793674d400e8
 workflow-type: tm+mt
-source-wordcount: '2446'
+source-wordcount: '2441'
 ht-degree: 0%
 
 ---
 
-# Redigera en extern SPA i AEM {#editing-external-spa-within-aem}
+# Redigera en extern SPA i Adobe Experience Manager {#editing-external-spa-within-aem}
 
-När du bestämmer vilken nivå av integration du vill ha mellan dina externa SPA och AEM behöver du ofta kunna redigera och visa SPA inom AEM.
+När du bestämmer vilken nivå av integration du vill ha mellan din externa SPA och Adobe Experience Manager (AEM) behöver du ofta kunna redigera och visa SPA i AEM.
 
 ## Översikt {#overview}
 
@@ -22,9 +22,9 @@ I det här dokumentet beskrivs de rekommenderade stegen för att överföra en f
 Förutsättningarna är enkla.
 
 * Kontrollera att en instans av AEM körs lokalt.
-* Skapa ett AEM SPA med [AEM Project Archetype.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?#available-properties)
-   * Detta kommer att utgöra grunden för det AEM projektet som kommer att uppdateras för att inkludera det externa SPA.
-   * För exemplen i det här dokumentet använder vi startpunkten för [WKND-SPA.](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/spa-editor/spa-editor-framework-feature-video-use.html#spa-editor)
+* Skapa ett AEM SPA med [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?#available-properties).
+   * Detta utgör grunden för det AEM projektet som kommer att uppdateras för att inkludera det externa SPA.
+   * Exemplen i det här dokumentet använder startpunkten för [WKND-SPA](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/spa-editor/spa-editor-framework-feature-video-use.html#spa-editor).
 * Ha den fungerande, externa SPA som ni vill integrera till hands.
 
 ## Överför SPA till AEM {#upload-spa-to-aem-project}
@@ -33,7 +33,7 @@ Först måste du överföra den externa SPA till ditt AEM.
 
 1. Ersätt `src` i `/ui.frontend` projektmapp med React-programmets `src` mapp.
 1. Inkludera eventuella ytterligare beroenden i appens `package.json` i `/ui.frontend/package.json` -fil.
-   * Kontrollera att SPA SDK-beroenden är av [rekommenderade versioner.](spa-getting-started-react.md#dependencies)
+   * Kontrollera att SPA SDK-beroenden är av [rekommenderade versioner](spa-getting-started-react.md#dependencies).
 1. Inkludera anpassningar i `/public` mapp.
 1. Inkludera eventuella infogade skript eller format som lagts till i `/public/index.html` -fil.
 
@@ -49,7 +49,7 @@ För att dra nytta av AEM SPA funktioner finns det beroenden av följande tre pa
 * [`@adobe/aem-spa-component-mapping`](https://www.npmjs.com/package/@adobe/aem-spa-component-mapping)
 * [`@adobe/aem-spa-page-model-manager`](https://www.npmjs.com/package/@adobe/aem-spa-model-manager)
 
-`@adobe/aem-spa-page-model-manager` innehåller API:t för att initiera en modellhanterare och hämta modellen från AEM. Den här modellen kan sedan användas för att återge AEM komponenter med API:er från `@adobe/aem-react-editable-components` och `@adobe/aem-spa-component-mapping`.
+The `@adobe/aem-spa-page-model-manager` innehåller API:t för att initiera en modellhanterare och hämta modellen från AEM. Den här modellen kan sedan användas för att återge AEM komponenter med API:er från `@adobe/aem-react-editable-components` och `@adobe/aem-spa-component-mapping`.
 
 #### Installation {#installation}
 
@@ -65,15 +65,15 @@ Innan appen återges visas [`ModelManager`](spa-blueprint.md#pagemodelmanager) m
 
 Detta måste göras inom `src/index.js` -fil i programmet eller var programmets rot återges.
 
-För detta kan vi använda `initializationAsync` API från `ModelManager`.
+Använd `initializationAsync` API från `ModelManager`.
 
-Följande skärmbild visar hur du aktiverar initiering av `ModelManager` i ett enkelt React-program. Den enda begränsningen är att `initializationAsync` måste anropas innan `ReactDOM.render()`.
+Följande skärmbild visar hur du aktiverar initiering av `ModelManager` i ett enkelt React-program. Den enda begränsningen är att `initializationAsync` måste anropas före `ReactDOM.render()`.
 
 ![Initiera ModelManager](assets/external-spa-initialize-modelmanager.png)
 
 I det här exemplet `ModelManager` har initierats och är tom `ModelStore` skapas.
 
-`initializationAsync` kan acceptera `options` objekt som parameter:
+The `initializationAsync` kan acceptera `options` objekt som parameter:
 
 * `path` - Vid initiering hämtas modellen vid den definierade sökvägen och lagras i `ModelStore`. Detta kan användas för att hämta `rootModel` vid initiering om det behövs.
 * `modelClient` - Tillåter att du anger en anpassad klient som ansvarar för att hämta modellen.
@@ -81,7 +81,7 @@ I det här exemplet `ModelManager` har initierats och är tom `ModelStore` skapa
 
 ### AEM Authorable Leaf Components {#authorable-leaf-components}
 
-1. Skapa/identifiera en AEM som en redigerbar React-komponent ska skapas för. I det här exemplet använder vi WKND-projektets textkomponent.
+1. Skapa/identifiera en AEM som en redigerbar React-komponent ska skapas för. I det här exemplet använder WKND-projektet textkomponenten.
 
    ![WKND-textkomponent](assets/external-spa-text-component.png)
 
@@ -93,13 +93,13 @@ I det här exemplet `ModelManager` har initierats och är tom `ModelStore` skapa
 
    ![Skapa config-objekt](assets/external-spa-config-object.png)
 
-   * `resourceType` är obligatoriskt för att mappa React-komponenten till AEM och aktivera redigering när den öppnas i AEM.
+   * `resourceType` är obligatoriskt för att mappa React-komponenten till AEM och aktivera redigering när den öppnas i AEM Editor.
 
 1. Använda funktionen wrapper `withMappable`.
 
    ![Använd medMappable](assets/external-spa-withmappable.png)
 
-   Den här wrapper-funktionen mappar React-komponenten till AEM `resourceType` anges i konfigurationen och aktiverar redigeringsfunktioner när de öppnas i AEM. För fristående komponenter hämtas även modellinnehållet för den specifika noden.
+   Den här wrapper-funktionen mappar React-komponenten till AEM `resourceType` anges i konfigurationen och aktiverar redigeringsfunktioner när de öppnas i AEM Editor. För fristående komponenter hämtas även modellinnehållet för den specifika noden.
 
    >[!NOTE]
    >
@@ -111,7 +111,7 @@ I det här exemplet `ModelManager` har initierats och är tom `ModelStore` skapa
 
    ![Egenskaper för textkomponent](assets/external-spa-text-properties.png)
 
-   Dessa värden skickas som egenskaper till de nyskapade `AEMText` Reaktionskomponent och kan användas för att återge innehållet.
+   Dessa värden skickas som egenskaper till de nya `AEMText` Reaktionskomponent och kan användas för att återge innehållet.
 
    ```javascript
    import React from 'react';
@@ -147,18 +147,18 @@ I det här exemplet `ModelManager` har initierats och är tom `ModelStore` skapa
 
    >[!NOTE]
    >
-   >I det här exemplet har vi gjort ytterligare anpassningar av den återgivna komponenten för att matcha den befintliga textkomponenten. Detta har dock inget med AEM att göra.
+   >I det här exemplet har ytterligare anpassningar gjorts för den återgivna komponenten för att matcha den befintliga textkomponenten. Detta har dock inget med AEM att göra.
 
 #### Lägg till redigerbara komponenter på sidan {#add-authorable-component-to-page}
 
-När de redigerbara React-komponenterna har skapats kan vi använda dem i hela programmet.
+När de redigerbara React-komponenterna har skapats kan de användas i hela programmet.
 
-Låt oss ta en exempelsida där vi behöver lägga till en text från WKND-SPA. I det här exemplet vill vi visa texten&quot;Hello World!&quot; på `/content/wknd-spa-react/us/en/home.html`.
+Låt oss ta en exempelsida där text från WKND-SPA måste läggas till. I det här exemplet vill du visa texten&quot;Hello World!&quot; på `/content/wknd-spa-react/us/en/home.html`.
 
 1. Ange sökvägen till noden som ska visas.
 
-   * `pagePath`: Sidan som innehåller noden, i vårt exempel `/content/wknd-spa-react/us/en/home`
-   * `itemPath`: Sökväg till noden på sidan, i vårt exempel `root/responsivegrid/text`
+   * `pagePath`: Sidan som innehåller noden, i exemplet `/content/wknd-spa-react/us/en/home`
+   * `itemPath`: Sökväg till noden på sidan, i exemplet `root/responsivegrid/text`
       * Detta består av namnen på de objekt som finns på sidan.
 
    ![Sökväg till noden](assets/external-spa-path.png)
@@ -171,7 +171,7 @@ Låt oss ta en exempelsida där vi behöver lägga till en text från WKND-SPA. 
 
 #### Verifiera redigering av textinnehåll på AEM {#verify-text-edit}
 
-Vi kan nu testa komponenten på vår AEM som körs.
+Testa nu komponenten på den AEM som körs.
 
 1. Kör följande Maven-kommando från `aem-guides-wknd-spa` katalog för att skapa och distribuera projektet till AEM.
 
@@ -188,8 +188,8 @@ The `AEMText` -komponenten är nu AEM.
 ### AEM sidor {#aem-authorable-pages}
 
 1. Identifiera en sida som ska läggas till för redigering i SPA. Det här exemplet använder `/content/wknd-spa-react/us/en/home.html`.
-1. Skapa en ny fil (t.ex. `Page.js`) för den redigerbara sidkomponenten. Här kan vi återanvända sidkomponenten som anges i `@adobe/cq-react-editable-components`.
-1. Upprepa steg fyra i avsnittet [AEM skrivbara komponenter.](#authorable-leaf-components) Använda funktionen wrapper `withMappable` på komponenten.
+1. Skapa en fil (till exempel `Page.js`) för den redigerbara sidkomponenten. Här kan sidkomponenten återanvändas som anges i `@adobe/cq-react-editable-components`.
+1. Upprepa steg fyra i avsnittet [AEM](#authorable-leaf-components). Använda funktionen wrapper `withMappable` på komponenten.
 1. Använd `MapTo` till AEM för alla underordnade komponenter på sidan.
 
    ```javascript
@@ -203,13 +203,13 @@ The `AEMText` -komponenten är nu AEM.
 
    >[!NOTE]
    >
-   >I det här exemplet använder vi den obrutna React-textkomponenten i stället för den omslutna `AEMText` tidigare. Detta beror på att när komponenten är en del av en sida/behållare och inte fristående, kommer behållaren att hantera rekursiv mappning av komponenten och aktivera redigeringsfunktioner och den extra adaptern behövs inte för varje underordnad.
+   >I det här exemplet används den obrutna React-textkomponenten i stället för den omslutna texten `AEMText` tidigare. Detta beror på att när komponenten är en del av en sida/behållare och inte fristående, kommer behållaren att hantera rekursiv mappning av komponenten och aktivera redigeringsfunktioner och den extra adaptern behövs inte för varje underordnad.
 
-1. Om du vill lägga till en skrivbar sida i SPA följer du samma steg i avsnittet [Lägg till redigerbara komponenter på sidan.](#add-authorable-component-to-page) Här kan vi hoppa över `itemPath` -egenskapen.
+1. Om du vill lägga till en skrivbar sida i SPA följer du samma steg i avsnittet [Lägg till redigerbara komponenter på sidan](#add-authorable-component-to-page). Här kan vi hoppa över `itemPath` -egenskapen.
 
 #### Verifiera sidinnehåll på AEM {#verify-page-content}
 
-Följ samma steg i avsnittet för att kontrollera att sidan kan redigeras [Verifiera redigering av textinnehåll på AEM.](#verify-text-edit)
+Följ samma steg i avsnittet för att kontrollera att sidan kan redigeras [Verifiera redigering av textinnehåll på AEM](#verify-text-edit).
 
 ![Redigera en sida i AEM](assets/external-spa-edit-page.png)
 
@@ -237,7 +237,7 @@ The `TestPage` -komponenten ser ut så här när den virtuella komponenten har l
 >
 >Se till att `AEMText` komponenten har `resourceType` anges i konfigurationen för att aktivera den här funktionen.
 
-Du kan nu distribuera ändringarna till AEM genom att följa stegen i avsnittet [Verifiera redigering av textinnehåll på AEM.](#verify-text-edit) En platshållare visas för de som inte finns `text_20` nod.
+Du kan nu distribuera ändringarna till AEM genom att följa stegen i avsnittet [Verifiera redigering av textinnehåll på AEM](#verify-text-edit). En platshållare visas för de befintliga `text_20` nod.
 
 ![Noden text_20 i aem](assets/external-spa-text20-aem.png)
 
@@ -247,13 +247,13 @@ När innehållsförfattaren uppdaterar den här komponenten visas en ny `text_20
 
 #### Krav och begränsningar {#limitations}
 
-Det finns ett antal krav på att lägga till virtuella bladkomponenter och vissa begränsningar.
+Det finns flera krav för att lägga till virtuella bladkomponenter samt vissa begränsningar.
 
 * The `pagePath` -egenskapen är obligatorisk för att skapa en virtuell komponent.
 * Den sidnod som finns på sökvägen i `pagePath` måste finnas i det AEM projektet.
 * Namnet på noden som ska skapas måste anges i `itemPath`.
 * Komponenten kan skapas på alla nivåer.
-   * Om vi erbjuder `itemPath='text_20'` i föregående exempel skapas den nya noden direkt under sidan, dvs. `/content/wknd-spa-react/us/en/home/jcr:content/text_20`
+   * Om vi erbjuder `itemPath='text_20'` i föregående exempel skapas den nya noden direkt under sidan som är `/content/wknd-spa-react/us/en/home/jcr:content/text_20`
 * Sökvägen till noden där en ny nod skapas måste vara giltig när den anges via `itemPath`.
    * I det här exemplet `root/responsivegrid` måste finnas så att den nya noden `text_20` kan skapas där.
 * Det går bara att skapa lövkomponenter. Virtuell behållare och sida stöds i framtida versioner.
@@ -286,7 +286,7 @@ Fler komponenter och innehåll kan läggas till i behållaren nu när författar
 
 #### Krav och begränsningar {#container-limitations}
 
-Det finns ett antal krav på att lägga till virtuella behållare samt vissa begränsningar.
+Det finns flera krav för att lägga till virtuella behållare samt vissa begränsningar.
 
 * Principen för att bestämma vilka komponenter som kan läggas till ärvs från den överordnade behållaren.
 * Den omedelbara överordnade behållaren för den behållare som ska skapas måste redan finnas i AEM.
@@ -324,7 +324,7 @@ Anta till exempel att vi har en SPA där programmet återges inuti en `div` för
 
 ### Redigera en SPA med routning {#editing-react-spa-with-routing}
 
-Om det finns flera sidor i det externa SPA React-programmet [kan använda routning för att bestämma vilken sida/komponent som ska återges.](spa-routing.md) Det grundläggande användningsexemplet är att matcha den aktiva URL:en mot sökvägen som anges för ett flöde. Om du vill aktivera redigering för sådana routningsaktiverade program måste sökvägen som ska matchas mot omformas för att rymma AEM information.
+Om det finns flera sidor i det externa SPA React-programmet [kan använda routning för att bestämma vilken sida/komponent som ska renderas](spa-routing.md). Det grundläggande användningsexemplet är att matcha den aktiva URL:en mot sökvägen som anges för ett flöde. Om du vill aktivera redigering för sådana routningsaktiverade program måste sökvägen som ska matchas mot omformas för att rymma AEM information.
 
 I följande exempel har vi ett enkelt React-program med två sidor. Den sida som ska återges bestäms genom att matcha sökvägen som har angetts till routern mot den aktiva URL:en. Om vi till exempel är på `mydomain.com/test`, `TestPage` återges.
 
@@ -351,9 +351,8 @@ Följande steg krävs för att aktivera redigering i AEM för det här SPA.
       * Sökvägen som krävs för routning
       * Den ursprungliga URL:en för den AEM instansen där SPA redigeras
       * Projektroten på AEM enligt det första steget
+
    * Dessa värden kan anges som miljövariabler för större flexibilitet.
-
-
 
 1. Verifiera redigering av sidan i AEM.
 
@@ -361,7 +360,7 @@ Följande steg krävs för att aktivera redigering i AEM för det här SPA.
 
 ## Rambegränsningar {#framework-limitations}
 
-RemotePage-komponenten förväntar sig att implementeringen tillhandahåller ett tillgångsmanifest som den [hittades här.](https://github.com/shellscape/webpack-manifest-plugin) RemotePage-komponenten har bara testats för att fungera med React Framework (och Next.js via komponenten remote-page-next) och stöder därför inte fjärrinläsning av program från andra ramverk, till exempel Angular.
+RemotePage-komponenten förväntar sig att implementeringen tillhandahåller ett tillgångsmanifest som den [hittades här](https://github.com/shellscape/webpack-manifest-plugin). RemotePage-komponenten har bara testats för att fungera med React Framework (och Next.js via komponenten remote-page-next) och stöder därför inte fjärrinläsning av program från andra ramverk, till exempel Angular.
 
 ## Ytterligare resurser {#additional-resources}
 

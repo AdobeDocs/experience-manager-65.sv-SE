@@ -1,41 +1,37 @@
 ---
 title: Skapa en anpassad Cloud Service
-seo-title: Creating a Custom Cloud Service
 description: Standarduppsättningen med Cloud Services kan utökas med anpassade Cloud Service
-seo-description: The default set of Cloud Services can be extended with custom Cloud Service types
-uuid: b105a0c1-b68c-4f57-8e3b-561c8051a08e
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: e48e87c6-43ca-45ba-bd6b-d74c969757cd
 exl-id: 9414c77a-b180-4440-8386-e6eb4426e475
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e068cee192c0837f1473802143e0793674d400e8
 workflow-type: tm+mt
-source-wordcount: '418'
+source-wordcount: '406'
 ht-degree: 0%
 
 ---
 
 # Skapa en anpassad Cloud Service{#creating-a-custom-cloud-service}
 
-Standarduppsättningen med Cloud Services kan utökas med anpassade Cloud Service. På så sätt kan du lägga in egen kod på sidan på ett strukturerat sätt. Detta kommer i första hand att användas av analytiker från tredje part, t.ex. Google Analytics, Chartbeat osv. Cloud Services ärvs från överordnade sidor till underordnade sidor med möjlighet att bryta arvet på alla nivåer.
+Standarduppsättningen med Cloud Services kan utökas med anpassade Cloud Service. På så sätt kan du lägga in egen kod på sidan på ett strukturerat sätt. Detta är främst till för analytiker från tredje part, till exempel Google Analytics, Chartbeat osv. Cloud Services ärvs från överordnade sidor till underordnade sidor med möjlighet att bryta arvet på alla nivåer.
 
 >[!NOTE]
 >
->Den här steg-för-steg-guiden för att skapa en ny Cloud Service är ett exempel på hur du använder Google Analytics. Allt kanske inte gäller ditt användningsfall.
+>Den här steg-för-steg-guiden för att skapa en Cloud Service är ett exempel på hur du använder Google Analytics. Allt kanske inte gäller ditt användningsfall.
 
-1. Skapa en ny nod under CRXDE Lite `/apps`:
+1. Skapa en nod under CRXDE Lite `/apps`:
 
    * **Namn**: `acs`
    * **Typ**: `nt:folder`
 
-1. Skapa en ny nod under `/apps/acs`:
+1. Skapa en nod under `/apps/acs`:
 
    * **Namn**: `analytics`
    * **Typ**: `sling:Folder`
 
-1. Skapa 2 nya noder under `/apps/acs/analytics`:
+1. Skapa två noder under `/apps/acs/analytics`:
 
    * **Namn**: komponenter
    * **Typ**: `sling:Folder`
@@ -44,7 +40,6 @@ Standarduppsättningen med Cloud Services kan utökas med anpassade Cloud Servic
 
    * **Namn**: mallar
    * **Typ**: `sling:Folder`
-
 
 1. Högerklicka på `/apps/acs/analytics/components`. Välj **Skapa...** följt av **Skapa komponent...** I dialogrutan som öppnas kan du ange:
 
@@ -64,7 +59,7 @@ Standarduppsättningen med Cloud Services kan utökas med anpassade Cloud Servic
    * **Namn:** `cq:defaultView`
    * **Värde:** `html`
 
-1. Skapa en ny fil med namnet `content.jsp` under `/apps/acs/analytics/components/googleanalyticspage`, med följande innehåll:
+1. Skapa en fil med namnet `content.jsp` under `/apps/acs/analytics/components/googleanalyticspage`, med följande innehåll:
 
    ```xml
    <%@page contentType="text/html"
@@ -79,7 +74,7 @@ Standarduppsättningen med Cloud Services kan utökas med anpassade Cloud Servic
    </div>
    ```
 
-1. Skapa en ny nod under `/apps/acs/analytics/components/googleanalyticspage/`:
+1. Skapa en nod under `/apps/acs/analytics/components/googleanalyticspage/`:
 
    * **Namn**: `dialog`
    * **Typ**: `cq:Dialog`
@@ -92,7 +87,7 @@ Standarduppsättningen med Cloud Services kan utökas med anpassade Cloud Servic
       * **Typ**: `String`
       * **Värde**: `dialog`
 
-1. Skapa en ny nod under `/apps/acs/analytics/components/googleanalyticspage/dialog`:
+1. Skapa en nod under `/apps/acs/analytics/components/googleanalyticspage/dialog`:
 
    * **Namn**: `items`
    * **Typ**: `cq:Widget`
@@ -102,12 +97,12 @@ Standarduppsättningen med Cloud Services kan utökas med anpassade Cloud Servic
       * **Typ**: `String`
       * **Värde**: `tabpanel`
 
-1. Skapa en ny nod under `/apps/acs/analytics/components/googleanalyticspage/dialog/items`:
+1. Skapa en nod under `/apps/acs/analytics/components/googleanalyticspage/dialog/items`:
 
    * **Namn**: `items`
    * **Typ**: `cq:WidgetCollection`
 
-1. Skapa en ny nod under `/apps/acs/analytics/components/googleanalyticspage/dialog/items/items`:
+1. Skapa en nod under `/apps/acs/analytics/components/googleanalyticspage/dialog/items/items`:
 
    * **Namn**: tab1
    * **Typ**: `cq:Panel`
@@ -117,7 +112,7 @@ Standarduppsättningen med Cloud Services kan utökas med anpassade Cloud Servic
       * **Typ**: `String`
       * **Värde**: `Config`
 
-1. Skapa en ny nod under `/apps/acs/analytics/components/googleanalyticspage/dialog/items/items/tab1`:
+1. Skapa en nod under `/apps/acs/analytics/components/googleanalyticspage/dialog/items/items/tab1`:
 
    * **Namn**: objekt
    * **Typ**: `nt:unstructured`
@@ -142,7 +137,7 @@ Standarduppsättningen med Cloud Services kan utökas med anpassade Cloud Servic
       * **Värde**: `textfield`
 
 1. Kopiera `/libs/cq/cloudserviceconfigs/components/configpage/body.jsp` till `/apps/acs/analytics/components/googleanalyticspage/body.jsp` och ändra `libs` till `apps` på rad 34 och göra skriptreferensen på rad 79 till en fullständigt kvalificerad sökväg.
-1. Skapa en ny mall under `/apps/acs/analytics/templates/`:
+1. Skapa en mall under `/apps/acs/analytics/templates/`:
 
    * med **Resurstyp** = `acs/analytics/components/googleanalyticspage`
    * med **Etikett** = `googleanalytics`
@@ -152,7 +147,7 @@ Standarduppsättningen med Cloud Services kan utökas med anpassade Cloud Servic
    * med **sling:resourceSuperType** = `cq/cloudserviceconfigs/templates/configpage` (på mallnod, inte jcr:content-noden)
    * med **cq:designPath** = `/etc/designs/cloudservices/googleanalytics` (on jcr:content)
 
-1. Skapa ny komponent: `/apps/acs/analytics/components/googleanalytics`.
+1. Skapa en komponent: `/apps/acs/analytics/components/googleanalytics`.
 
    Lägg till följande innehåll i `googleanalytics.jsp`:
 
@@ -195,7 +190,7 @@ Standarduppsättningen med Cloud Services kan utökas med anpassade Cloud Servic
 
    Den anpassade koden ska skapas baserat på konfigurationsegenskaperna.
 
-1. Navigera till `http://localhost:4502/miscadmin#/etc/cloudservices` och skapa en ny sida:
+1. Navigera till `http://localhost:4502/miscadmin#/etc/cloudservices` och skapa en sida:
 
    * **Titel**: `Google Analytics`
    * **Namn**: `googleanalytics`
@@ -206,14 +201,13 @@ Standarduppsättningen med Cloud Services kan utökas med anpassade Cloud Servic
    * **Typ**: `String`
    * **Värde**: `acs/analytics/components/googleanalytics`
 
-
-1. Navigera till den nyligen skapade tjänstsidan ( `http://localhost:4502/etc/cloudservices/googleanalytics.html`) och klicka på **+** för att skapa en ny konfiguration:
+1. Navigera till den nyligen skapade tjänstsidan ( `http://localhost:4502/etc/cloudservices/googleanalytics.html`) och klicka på **+** för att skapa en konfiguration:
 
    * **Överordnad konfiguration**: `/etc/cloudservices/googleanalytics`
    * **Titel:**  `My First GA Config`
 
    Välj **Konfiguration av Google Analytics** och klicka **Skapa**.
 
-1. Ange **Konto-ID**, till exempel `AA-11111111-1`. Klicka **OK**.
+1. Ange en **Konto-ID**, till exempel `AA-11111111-1`. Klicka **OK**.
 1. Navigera till en sida och lägg till den nya konfigurationen i sidegenskaperna, under **Cloud Services** -fliken.
 1. Den anpassade koden läggs till på sidan.
