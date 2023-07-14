@@ -1,5 +1,5 @@
 ---
-title: Namngivningskonventioner för noder i databasen med Jave-innehåll
+title: Namnkonventioner för noder i Java Content Repository
 description: Noderna i databasen omfattas av namnkonventioner i Java Content Repository
 uuid: 0515c5c5-3e93-4710-983f-c08c146467fc
 contentOwner: Guillaume Carlino
@@ -8,14 +8,14 @@ topic-tags: platform
 content-type: reference
 discoiquuid: 198098c0-432b-4a93-a94e-2552337435dd
 exl-id: 01c6bb29-1d2d-4a45-b291-0e8d97c01a08
-source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
+source-git-commit: 8cfc42dc8fdf4dc0bfd3f002385f100c81b15993
 workflow-type: tm+mt
 source-wordcount: '308'
 ht-degree: 0%
 
 ---
 
-# Namnkonventioner{#naming-conventions}
+# Namnkonventioner {#naming-conventions}
 
 Noderna i databasen omfattas av namnkonventioner i [Java Content Repository](/help/sites-developing/the-basics.md#java-content-repository). AEM lägger dock till ytterligare konventioner för sidnodernas namn.
 

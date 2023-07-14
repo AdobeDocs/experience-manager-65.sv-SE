@@ -1,5 +1,5 @@
 ---
-title: Använda taggar för att klassificera innehåll på en webbplats
+title: Använda taggar
 description: Taggar är ett snabbt och enkelt sätt att klassificera innehåll på en webbplats.
 uuid: 5d922443-f924-426e-acf4-27dffd1053f6
 contentOwner: Chris Bohnert
@@ -9,14 +9,15 @@ topic-tags: site-features
 discoiquuid: 9fb6d603-eb17-4192-bfa6-6c316f14ac7d
 docset: aem65
 exl-id: 49f95b31-92cd-4124-8c0f-c9802099fd0b
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 8dafa901bc628ee5e4823e9f8811bf4d09b7e072
 workflow-type: tm+mt
-source-wordcount: '575'
+source-wordcount: '569'
 ht-degree: 3%
 
 ---
 
-# Använda taggar{#using-tags}
+
+# Använda taggar {#using-tags}
 
 Taggar är ett snabbt och enkelt sätt att klassificera innehåll på en webbplats. Taggar kan ses som nyckelord eller etiketter som kan bifogas till en sida, en resurs eller annat innehåll för att göra det möjligt att söka efter innehållet och relaterat innehåll.
 
@@ -54,7 +55,7 @@ Precis som med sidor kan du göra följande med taggar och namnutrymmen:
 
 * Aktivera enskilda taggar.
 
-   Precis som för sidor måste nyligen skapade taggar aktiveras innan de blir tillgängliga i publiceringsmiljön.
+  Precis som för sidor måste nyligen skapade taggar aktiveras innan de blir tillgängliga i publiceringsmiljön.
 
 >[!NOTE]
 >
