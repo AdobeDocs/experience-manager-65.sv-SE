@@ -1,27 +1,23 @@
 ---
 title: Resursmappning
-seo-title: Resource Mapping
-description: Lär dig hur du definierar omdirigeringar, tillfälliga URL:er och virtuella värdar för AEM genom att använda resursmappning.
-seo-description: Learn how to define redirects, vanity URLs and virtual hosts for AEM by using resource mapping.
-uuid: 2ca2d0e4-6f90-4ecc-82db-26991f08c66f
+description: Lär dig hur du definierar omdirigeringar, tillfälliga URL:er och virtuella värdar för Adobe Experience Manager med hjälp av resursmappning.
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: configuring
 content-type: reference
-discoiquuid: 3582a4d8-a47b-467a-9e25-cb45f969ec93
 docset: aem65
 feature: Configuring
 exl-id: 3eebdd38-da5b-4c38-868a-22c3c7a97b66
-source-git-commit: 7c24379c01f247f5ad45e3ecd40f3edef4ac3cfb
+source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
 workflow-type: tm+mt
-source-wordcount: '519'
+source-wordcount: '522'
 ht-degree: 0%
 
 ---
 
 # Resursmappning{#resource-mapping}
 
-Resursmappning används för att definiera omdirigeringar, tillfälliga URL:er och virtuella värdar för AEM.
+Resursmappning används för att definiera omdirigeringar, tillfälliga URL:er och virtuella värdar för Adobe Experience Manager (AEM).
 
 Du kan till exempel använda dessa mappningar för:
 
@@ -32,11 +28,11 @@ Ett möjligt HTTP-mappningsprefix för alla begäranden till `localhost:4503` me
 
 `localhost:4503/content/we-retail/en/products.html`
 
-ska nås med:
+Ska kommas åt med:
 
 `localhost:4503/we-retail/en/products.html`
 
-eftersom mappningen automatiskt lägger till prefixet `/content` till `/we-retail/en/products.html`.
+När mappningen automatiskt lägger till prefixet `/content` till `/we-retail/en/products.html`.
 
 >[!CAUTION]
 >
@@ -44,7 +40,7 @@ eftersom mappningen automatiskt lägger till prefixet `/content` till `/we-retai
 
 >[!NOTE]
 >
->Läs Sling-dokumentationen och [Mappningar för resursupplösning](https://sling.apache.org/site/resources.html) och [Resurser](https://sling.apache.org/site/mappings-for-resource-resolution.html) för ytterligare information.
+>Läs Sling-dokumentationen och [Mappningar för resursupplösning](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html) och [Resurser](https://sling.apache.org/documentation/the-sling-engine/resources.html) för ytterligare information.
 
 ## Visa mappningsdefinitioner {#viewing-mapping-definitions}
 
@@ -62,7 +58,7 @@ Listan över poster som används av metoderna ResourceResolver.resolve för att 
 * **Mappa mappningsposter**
 Listan över poster som används av metoderna ResourceResolver.map för att mappa resurssökvägar till URL:er.
 
-De två listorna visar olika poster, inklusive de som definieras som standardvärden av programmen. Dessa syftar ofta till att förenkla URL:er för användaren.
+De två listorna visar olika poster, bland annat de som definierats som standard av programmen. Dessa syftar ofta till att förenkla URL:er för användaren.
 
 Listparet a **Mönster**, ett reguljärt uttryck som matchar begäran, med **Ersättning** som definierar den omdirigering som ska skjutas in.
 
@@ -70,15 +66,15 @@ Till exempel:
 
 **Mönster** `^[^/]+/[^/]+/welcome$`
 
-kommer att aktivera:
+Startar
 
 **Ersättning** `/libs/cq/core/content/welcome.html`.
 
-omdirigera en begäran:
+Så här omdirigerar du en begäran:
 
 `https://localhost:4503/welcome` ``
 
-till:
+Till:
 
 `https://localhost:4503/libs/cq/core/content/welcome.html`
 
@@ -86,7 +82,7 @@ Nya mappningsdefinitioner skapas i databasen.
 
 >[!NOTE]
 >
->Det finns många resurser som kan förklara hur du definierar reguljära uttryck. till exempel [https://www.regular-expressions.info/](https://www.regular-expressions.info/).
+>Det finns många tillgängliga resurser som förklarar hur du definierar reguljära uttryck. Till exempel: [https://www.regular-expressions.info/](https://www.regular-expressions.info/).
 
 ### Skapar mappningsdefinitioner i AEM {#creating-mapping-definitions-in-aem}
 
@@ -102,7 +98,7 @@ Så här skapar du en mappning som prefixar en begäran till https://localhost:4
 
 1. Använda CRXDE navigera till `/etc/map/http`.
 
-1. Skapa en ny nod:
+1. Skapa en nod:
 
    * **Typ** `sling:Mapping`
 Den här nodtypen är avsedd för sådana mappningar, men det är inte obligatoriskt att använda den.
@@ -117,16 +113,16 @@ Den här nodtypen är avsedd för sådana mappningar, men det är inte obligator
       * **Typ** `String`
 
       * **Värde** `localhost.4503/`
+
    * **Namn** `sling:internalRedirect`
 
       * **Typ** `String[]`
 
       * **Värde** `/content/`
 
-
 1. Klicka **Spara alla**.
 
-Detta kommer att hantera en begäran som:
+Detta hanterar en begäran som:
 `localhost:4503/geometrixx/en/products.html`
 som if:
 `localhost:4503/content/geometrixx/en/products.html`
@@ -134,8 +130,8 @@ hade blivit ombedd.
 
 >[!NOTE]
 >
->Se [Resurser](https://sling.apache.org/site/mappings-for-resource-resolution.html) I Sling Documentation finns mer information om vilka snedsättningsegenskaper som finns och hur de kan konfigureras.
+>Se [Resurser](https://sling.apache.org/documentation/the-sling-engine/resources.html) I Sling Documentation finns mer information om vilka snedsättningsegenskaper som finns och hur de kan konfigureras.
 
 >[!NOTE]
 >
->Du kan använda `/etc/map.publish` för att lagra konfigurationerna för publiceringsmiljön. Dessa måste sedan replikeras och den nya platsen ( `/etc/map.publish`) konfigurerad för **Mappningsplats** i [Resurslösare för Apache Sling](/help/sites-deploying/osgi-configuration-settings.md#apacheslingresourceresolver) av publiceringsmiljön.
+>Du kan använda `/etc/map.publish` för att lagra konfigurationerna för publiceringsmiljön. Dessa måste replikeras och den nya platsen ( `/etc/map.publish`) konfigurerad för **Mappningsplats** i [Resurslösare för Apache Sling](/help/sites-deploying/osgi-configuration-settings.md#apacheslingresourceresolver) av publiceringsmiljön.

@@ -2,9 +2,9 @@
 title: Komma åt och leverera innehållsfragment Headless Quick Start Guide
 description: Lär dig använda AEM Assets REST API för att hantera innehållsfragment och GraphQL API för headless-leverans av Content Fragment-innehåll.
 exl-id: 4664b3a4-4873-4f42-b59d-aadbfaa6072f
-source-git-commit: 7355c149500f9e5044c9ff78af208d36ee681f56
+source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
 workflow-type: tm+mt
-source-wordcount: '573'
+source-wordcount: '558'
 ht-degree: 0%
 
 ---
@@ -25,18 +25,18 @@ Resten av guiden fokuserar på GraphQL åtkomst och leverans av innehållsfragme
 
 ## Leverera ett innehållsfragment med GraphQL {#how-to-deliver-a-content-fragment}
 
-Informationsarkitekterna måste utforma frågor för sina kanalslutpunkter för att kunna leverera innehåll. Dessa frågor behöver i allmänhet bara övervägas en gång per slutpunkt och modell. I den här guiden behöver vi bara skapa en.
+Informationsarkitekterna måste utforma frågor så att deras kanalslutpunkter kan leverera innehåll. Dessa frågor måste bara beaktas en gång per slutpunkt och modell. För att komma igång-guiden behöver du bara skapa en.
 
 1. Logga in AEM och få åtkomst till [GraphiQL-gränssnitt](/help/sites-developing/headless/graphql-api/graphiql-ide.md):
    * Till exempel: `http://<host>:<port>/aem/graphiql.html`.
 
-1. GraphiQL är en frågeredigerare i webbläsaren för GraphQL. Du kan använda den för att skapa frågor för att hämta innehållsfragment och leverera dem i headlessskick som JSON.
+1. GraphiQL är en frågeredigerare i webbläsaren för GraphQL. Du kan använda den för att skapa frågor för att hämta innehållsfragment och leverera dem helhjärtat som JSON.
    * I den vänstra panelen kan du skapa din fråga.
    * Resultatet visas på den högra panelen.
    * Frågeredigeraren har funktioner för kodkomplettering och snabbtangenter för att enkelt köra frågan.
-      ![GraphiQL editor](assets/graphiql.png)
+     ![GraphiQL editor](assets/graphiql.png)
 
-1. Anta att modellen vi skapade anropades `person` med fält `firstName`, `lastName`och `position`kan vi skapa en enkel fråga för att hämta innehållet i vårt innehållsfragment.
+1. Anta att modellen du skapade anropades `person` med fält `firstName`, `lastName`och `position`kan du skapa en enkel fråga som hämtar innehållet i innehållsfragmentet.
 
    ```text
    query 
@@ -53,7 +53,6 @@ Informationsarkitekterna måste utforma frågor för sina kanalslutpunkter för 
    ```
 
 1. Skriv frågan i den vänstra panelen.
-
 <!--
    ![GraphiQL query](assets/graphiql-query.png)
 -->
@@ -65,15 +64,15 @@ Informationsarkitekterna måste utforma frågor för sina kanalslutpunkter för 
    * **Dokument** längst upp till höger på sidan om du vill visa sammanhangsberoende dokumentation som hjälper dig att skapa frågor som anpassar sig till dina egna modeller.
    * **Historik** i det övre verktygsfältet om du vill visa tidigare frågor.
    * **Spara som** och **Spara** för att spara dina frågor, därefter kan du visa och hämta dem från **Beständiga frågor** panel och **Publicera**.
-      ![GraphiQL-dokumentation](assets/graphiql-documentation.png)
+     ![GraphiQL-dokumentation](assets/graphiql-documentation.png)
 
-GraphQL möjliggör strukturerade frågor som inte bara kan rikta sig till specifika datauppsättningar eller enskilda dataobjekt, utan också kan leverera specifika element i objekten, kapslade resultat, har stöd för frågevariabler och mycket annat.
+GraphQL möjliggör strukturerade frågor som inte bara kan rikta sig till specifika datauppsättningar eller enskilda dataobjekt, utan även kan leverera specifika element i objekten, kapslade resultat, har stöd för frågevariabler och mycket annat.
 
-GraphQL kan undvika både iterativa API-begäranden och överleverans, och i stället tillåter massleverans av exakt det som behövs för återgivning som svar på en enda API-fråga. Den resulterande JSON kan användas för att leverera data till andra webbplatser eller appar.
+GraphQL kan undvika iterativa API-begäranden och överleverans. I stället kan man få exakt det som behövs för återgivningen som svar på en enda API-fråga. Den resulterande JSON kan användas för att leverera data till andra webbplatser eller appar.
 
 ## Nästa steg {#next-steps}
 
-Så ja! Ni har nu en grundläggande förståelse för innehållshantering utan problem i AEM. Det finns förstås många fler resurser där du kan fördjupa dig i en heltäckande bild av de funktioner som finns.
+Så ja! Ni har nu en grundläggande förståelse för innehållshantering utan problem i AEM. Det finns många fler resurser där du kan fördjupa dig för att få en heltäckande bild av de funktioner som finns.
 
 * **[Konfigurationsläsaren](create-configuration.md)** - Mer information om AEM Configuration Browser
 * **[Innehållsfragment](/help/assets/content-fragments/content-fragments.md)** - Mer information om hur du skapar och hanterar innehållsfragment

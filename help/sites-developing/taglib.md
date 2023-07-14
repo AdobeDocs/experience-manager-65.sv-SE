@@ -1,18 +1,14 @@
 ---
 title: Taggbibliotek
-seo-title: Tag Libraries
 description: Taggbiblioteken Granite, CQ och Sling ger dig tillgång till specifika funktioner som du kan använda i JSP-skriptet för dina mallar och komponenter
-seo-description: The Granite, CQ, and Sling tag libraries give you access to specific functions for use in the JSP script of your templates and components
-uuid: e622d47b-cfb3-4b4a-b8e3-e1adee294219
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
-discoiquuid: 6678e3c3-fb0f-4300-8838-38f23f14db07
 exl-id: 50e608d5-951f-4a3f-bed4-9e92ff5d7bd4
-source-git-commit: de5eb53f6160991ca0718d61afaeed2078a4fa88
+source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
 workflow-type: tm+mt
-source-wordcount: '2483'
+source-wordcount: '2465'
 ht-degree: 0%
 
 ---
@@ -97,7 +93,7 @@ När du utvecklar jsp-skriptet för en AEM bör du ta med följande kod högst u
 <%@include file="/libs/foundation/global.jsp"%>
 ```
 
-Den deklarerar sling-, CQ- och jstl-taggarna och visar de skriptobjekt som används ofta och definieras av [ `<cq:defineObjects />`](#amp-lt-cq-defineobjects) -tagg. Detta förkortar och förenklar jsp-koden för komponenten.
+Den deklarerar sling-, CQ- och jstl-taggarna och visar de skriptobjekt som används ofta och definieras av [`<cq:defineObjects />`](#amp-lt-cq-defineobjects) -tagg. Detta förkortar och förenklar jsp-koden för komponenten.
 
 ### &lt;cq:text> {#cq-text}
 
@@ -111,7 +107,7 @@ Den har följande valfria attribut:
 
 **oldValue** - Värde som ska användas för differensutdata. Om det här attributet finns skrivs användningen av egenskapsattributet över.
 
-**escapeXml** - Definierar om tecknen &lt;, >, &amp;, &#39; och &quot; i den resulterande strängen ska konverteras till motsvarande teckenentitetskoder. Standardvärdet är false. Observera att escape-konverteringen används efter den valfria formateringen.
+**escapeXml** - Definierar om tecknen &lt;, >, &amp;, &#39; och &quot; i den resulterande strängen ska konverteras till motsvarande teckenentitetskoder. Standardvärdet är false. Den nya inställningen används efter den valfria formateringen.
 
 **format** - Valfritt java.text.Format som används för att formatera texten.
 
@@ -121,11 +117,11 @@ Den har följande valfria attribut:
 
 **tagName** - Namnet på det element som omger ett utdata som inte är tomt. Som standard är det DIV.
 
-**platshållare** - Standardvärde som används för null eller tom text i redigeringsläge, dvs. platshållaren. Observera att standardkontrollen utförs efter den valfria formateringen och escape-konverteringen, d.v.s. att den skrivs i befintligt skick till utdata. Standardvärdet är:
+**platshållare** - Standardvärde som används för null eller tom text i redigeringsläge, det vill säga platshållaren. Observera att standardkontrollen utförs efter den valfria formateringen och escape-konverteringen, det vill säga att den skrivs som den är till utdata. Standardvärdet är:
 
 `<div><span class="cq-text-placeholder">&para;</span></div>`
 
-**standard** - Standardvärde som ska användas för null eller tom text. Observera att standardkontrollen utförs efter den valfria formateringen och escape-konverteringen, d.v.s. att den skrivs som utdata.
+**standard** - Standardvärde som ska användas för null eller tom text. Standardkontrollen utförs efter den valfria formateringen och escape-konverteringen, d.v.s. efter att utdata har skrivits som de är.
 
 Några exempel på hur `<cq:text>` -taggen kan användas i en JSP:
 
@@ -181,9 +177,9 @@ Om `source` inget attribut har angetts:
 
 * Om `language` -attributet har inte angetts, `source` som standard för attribut till `auto`.
 
-&quot;Innehållspaketet&quot; kan enkelt användas av standard-JSTL `<fmt:message>` -taggar. Nyckelsökningen efter meddelanden är två gånger:
+&quot;Innehållspaketet&quot; kan användas av standard-JSTL `<fmt:message>` -taggar. Nyckelsökningen efter meddelanden är två gånger:
 
-1. För det första genomsöks JCR-egenskaperna för den underliggande resurs som återges för närvarande efter översättningar. På så sätt kan du definiera en enkel komponentdialogruta för att redigera dessa värden.
+1. Först genomsöks JCR-egenskaperna för den underliggande resurs som återges efter översättningar. På så sätt kan du definiera en enkel komponentdialogruta för att redigera dessa värden.
 1. Om noden inte innehåller någon egenskap med namnet exakt som nyckeln, är reservdelen att läsa in ett resurspaket från försäljningsbegäran ( `SlingHttpServletRequest.getResourceBundle(Locale)`). Språket eller språkområdet för det här paketet definieras av språk- och källattributen för `<cq:setContentBundle>` -tagg.
 
 The `<cq:setContentBundle>` -taggen kan användas på följande sätt i ett jsp.
@@ -216,7 +212,7 @@ Den har följande attribut:
 
 **bana**
 
-* Sökvägen till det resursobjekt som ska inkluderas i den aktuella bearbetningen av begäran. Om den här sökvägen är relativ läggs den till i sökvägen till den aktuella resurs vars skript innehåller den angivna resursen. Sökväg och resourceType, eller skript måste anges.
+* Sökvägen till det resursobjekt som ska inkluderas i den aktuella bearbetningen av begäran. Om den här sökvägen är relativ läggs den till i sökvägen till den aktuella resursen vars skript innehåller den angivna resursen. Sökväg och resourceType, eller skript måste anges.
 
 **resourceType**
 
@@ -258,7 +254,7 @@ Ska du använda `<cq:include>` eller `<sling:include>`?
 
 >[!CAUTION]
 >
->`<cq:includeClientLib>` har tagits bort sedan AEM 5.6. [ `<ui:includeClientLib>`](/help/sites-developing/taglib.md#ui-includeclientlib) ska användas istället.
+>`<cq:includeClientLib>` Borttagen sedan AEM 5.6. [`<ui:includeClientLib>`](/help/sites-developing/taglib.md#ui-includeclientlib) ska användas istället.
 
 The `<cq:includeClientLib>` tagg Innehåller ett AEM HTML-klientbibliotek, som kan vara ett js, en css eller ett temabibliotek. För flera inkluderingar av olika typer, till exempel js och css, måste den här taggen användas flera gånger i jsp. Den här taggen är ett bekvämt omslag runt `com.day.cq.widget.HtmlLibraryManager` tjänstgränssnitt.
 
@@ -300,7 +296,7 @@ The `<cq:includeClientLib>` -taggen kan användas så här i en jsp:
 
 ### &lt;cq:defineObjects> {#cq-defineobjects}
 
-The `<cq:defineObjects>` -taggen visar följande, ofta använda, skriptobjekt som utvecklaren kan referera till. Objekten som definieras av [ `<sling:defineObjects>`](#amp-lt-sling-defineobjects) -tagg.
+The `<cq:defineObjects>` -taggen visar följande, ofta använda, skriptobjekt som utvecklaren kan referera till. Objekten som definieras av [`<sling:defineObjects>`](#amp-lt-sling-defineobjects) -tagg.
 
 **componentContext**
 
@@ -442,7 +438,7 @@ The `<cq:defineObjects>` -taggen visar följande, ofta använda, skriptobjekt so
 
 ### &lt;cq:requestURL> {#cq-requesturl}
 
-The `<cq:requestURL>` -taggen skriver den aktuella begärande-URL:en till JspWriter. De två taggarna [ `<cq:addParam>`](#amp-lt-cq-addparam) och [ `<cq:removeParam>`](#amp-lt-cq-removeparam) och kan användas inuti den här taggens brödtext för att ändra den aktuella begärande-URL:en innan den skrivs.
+The `<cq:requestURL>` -taggen skriver den aktuella begärande-URL:en till JspWriter. De två taggarna [`<cq:addParam>`](#amp-lt-cq-addparam) och [`<cq:removeParam>`](#amp-lt-cq-removeparam) och kan användas inuti den här taggens brödtext för att ändra den aktuella begärande-URL:en innan den skrivs.
 
 Du kan skapa länkar till den aktuella sidan med olika parametrar. Du kan till exempel omvandla din begäran:
 
@@ -464,7 +460,7 @@ Exempel:
 
 ### &lt;cq:addParam> {#cq-addparam}
 
-The `<cq:addParam>` lägger till en request-parameter med det angivna namnet och värdet i det omslutande [ `<cq:requestURL>`](#amp-lt-cq-requesturl) -tagg.
+The `<cq:addParam>` lägger till en request-parameter med det angivna namnet och värdet i det omslutande [`<cq:requestURL>`](#amp-lt-cq-requesturl) -tagg.
 
 Den har följande attribut:
 
@@ -484,7 +480,7 @@ Den har följande attribut:
 
 ### &lt;cq:removeParam> {#cq-removeparam}
 
-The `<cq:removeParam>` taggen tar bort en request-parameter med det angivna namnet och värdet från den omslutande [ `<cq:requestURL>`](#amp-lt-cq-requesturl) -tagg. Om inget värde anges tas alla parametrar med det angivna namnet bort.
+The `<cq:removeParam>` taggen tar bort en request-parameter med det angivna namnet och värdet från den omslutande [`<cq:requestURL>`](#amp-lt-cq-requesturl) -tagg. Om inget värde anges tas alla parametrar med det angivna namnet bort.
 
 Den har följande attribut:
 
@@ -528,7 +524,7 @@ Den har följande attribut:
 
 **bana**
 
-* Sökvägen till det resursobjekt som ska inkluderas i den aktuella bearbetningen av begäran. Om den här sökvägen är relativ läggs den till i sökvägen till den aktuella resurs vars skript innehåller den angivna resursen. Resurs eller sökväg måste anges. Om båda anges prioriteras resursen.
+* Sökvägen till det resursobjekt som ska inkluderas i den aktuella bearbetningen av begäran. Om den här sökvägen är relativ läggs den till i sökvägen till den aktuella resursen vars skript innehåller den angivna resursen. Resurs eller sökväg måste anges. Om båda anges prioriteras resursen.
 
 **resourceType**
 
@@ -549,7 +545,7 @@ Den har följande attribut:
 
 >[!NOTE]
 >
->Resursens och skriptets upplösning som ingår i `<sling:include>` -taggen är densamma som för en vanlig sling-URL-upplösning. Som standard är väljarna, tillägget osv. från den aktuella begäran används även för det inkluderade skriptet. De kan ändras med taggattributen: till exempel `replaceSelectors="foo.bar"` gör att du kan skriva över väljarna.
+>Resursens och skriptets upplösning som ingår i `<sling:include>` -taggen är densamma som för en vanlig sling-URL-upplösning. Som standard används väljarna, tillägget och så vidare från den aktuella begäran även för det inkluderade skriptet. De kan ändras med taggattributen: till exempel `replaceSelectors="foo.bar"` gör att du kan skriva över väljarna.
 
 Exempel:
 
@@ -583,11 +579,11 @@ The `<sling:defineObjects>` -taggen visar följande, ofta använda, skriptobjekt
 
 **slingRequest**
 
-* SlingHttpServletRequest-objekt som ger åtkomst till rubrikinformationen för HTTP-begäran - utökar HttpServletRequest-standarden och ger åtkomst till Sling-specifika saker som resurs, sökvägsinformation, väljare osv.
+* SlingHttpServletRequest-objekt som ger åtkomst till rubrikinformationen för HTTP-begäran - utökar HttpServletRequest-standarden och ger åtkomst till Sling-specifika saker som resurs, sökvägsinformation och väljare.
 
 **slingResponse**
 
-* SlingHttpServletResponse-objekt som ger åtkomst till HTTP-svaret som skapas av servern. Detta är för närvarande samma som det HttpServletResponse som det utökas från.**förfrågan**
+* SlingHttpServletResponse-objekt som ger åtkomst till HTTP-svaret som skapas av servern. Detta är samma som det HttpServletResponse som det utökas från.**förfrågan**
 * Standardobjektet för JSP-begäran, som är en ren HttpServletRequest.**svar**
 * Standardsvarsobjektet för JSP som är ett rent HttpServletResponse.
 
@@ -597,7 +593,7 @@ The `<sling:defineObjects>` -taggen visar följande, ofta använda, skriptobjekt
 
 .**sling**
 
-* Ett SlingScriptHelper-objekt som innehåller praktiska metoder för skript, huvudsakligen sling.include(&#39;/some/other/resource&#39;) för att inkludera svar från andra resurser i det här svaret (t.ex. inbäddning av HTML-huvudfragment) och sling.getService(foo.bar.Service.class) för att hämta OSGi-tjänster som är tillgängliga i Sling (klassnotation beroende på skriptspråk).
+* Ett SlingScriptHelper-objekt som innehåller praktiska metoder för skript, huvudsakligen sling.include(&#39;/some/other/resource&#39;) för att inkludera svar från andra resurser i det här svaret (till exempel inbäddning av HTML-rubrikfragment) och sling.getService(foo.bar.Service.class) för att hämta OSGi-tjänster som är tillgängliga i Sling (klassnotation beroende på skriptspråk).
 
 **resurs**
 
@@ -609,7 +605,7 @@ The `<sling:defineObjects>` -taggen visar följande, ofta använda, skriptobjekt
 
 **logg**
 
-* Tillhandahåller en SLF4J-loggare för loggning till Sling-loggsystemet från skript, t.ex. log.info(&quot;Kör mitt skript&quot;).
+* Tillhandahåller en SLF4J-loggare för loggning till Sling-loggsystemet från skript, till exempel log.info(&quot;Kör mitt skript&quot;).
 
 * Den har följande attribut:
 
@@ -634,7 +630,7 @@ l **ogName resourceResolverName**
 
 ## JSTL-taggbibliotek {#jstl-tag-library}
 
-The [JavaServer Pages Standard Tag Library](https://www.oracle.com/technetwork/java/index-jsp-135995.html) innehåller många användbara och standardtaggar. Märkorden core, formatting och functions definieras av `/libs/foundation/global.jsp` som i följande kodutdrag.
+The [JavaServer Pages Standard Tag Library](https://www.oracle.com/java/technologies/java-server-tag-library.html) innehåller många användbara och standardtaggar. Märkorden core, formatting och functions definieras av `/libs/foundation/global.jsp` som i följande kodutdrag.
 
 ### Extract of /libs/foundation/global.jsp {#extract-of-libs-foundation-global-jsp}
 
@@ -644,4 +640,4 @@ The [JavaServer Pages Standard Tag Library](https://www.oracle.com/technetwork/j
 <%@taglib prefix="fn" uri="https://java.sun.com/jsp/jstl/functions" %>
 ```
 
-När du har importerat `/libs/foundation/global.jsp` så som beskrivs ovan kan du använda `c`, `fmt` och `fn` -prefix för att komma åt dessa taglibs. JSTL:s officiella dokumentation finns på [Självstudiekursen Java EE 5 - JavaServer Pages Standard Tag Library](https://docs.oracle.com/javaee/5/tutorial/doc/bnakc.html).
+När du har importerat `/libs/foundation/global.jsp` så som beskrivs ovan kan du använda `c`, `fmt` och `fn` -prefix för att komma åt dessa taglibs. JSTL:s officiella dokumentation finns på [Självstudiekursen Java™ EE 5 - JavaServer Pages Standard Tag Library](https://docs.oracle.com/javaee/5/tutorial/doc/bnakc.html).

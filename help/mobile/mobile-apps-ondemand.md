@@ -1,18 +1,14 @@
 ---
 title: Mobile On-Demand
-seo-title: Mobile On-Demand
-description: Följ den här sidan för att lära dig mer om roller och ansvarsområden för AEM som arbetar med mobila on-demand-tjänster.
-seo-description: Follow this page to learn about the roles and responsibilities for AEM mobile On-Demand services author.
-uuid: dd0184d8-1220-4f6a-96b2-acdb31caae17
+description: Följ den här sidan om du vill veta mer om roller och ansvarsområden för Adobe Experience Manager författare av mobillösningar.
 contentOwner: msm-service
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-on-demand-services-app
-discoiquuid: 2ae7ea8d-fc58-4647-bc83-915d9f4b7dd8
 exl-id: 357e75f8-2c98-4377-afef-016d58505b4d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
 workflow-type: tm+mt
-source-wordcount: '271'
+source-wordcount: '273'
 ht-degree: 1%
 
 ---
@@ -21,7 +17,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (t.ex. Reagera). [Läs mer](/help/sites-developing/spa-overview.md).
+>Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (till exempel React). [Läs mer](/help/sites-developing/spa-overview.md).
 
 >[!NOTE]
 >
@@ -35,9 +31,9 @@ ht-degree: 1%
 
 ## AEM Mobile Author {#aem-mobile-author}
 
-An ***AEM Author* (eller *Marknadsförare*)**använder anpassade eller färdiga mallar och komponenter för att lägga till och redigera sidor, dra och släppa komponenter och lägga till media av alla typer från DAM, inklusive bilder, videor och textfragment (innehållsfragment). AEM inbyggda innehållsredigeraren används sedan av *AEM Authors* för att skapa engagerande och relevanta upplevelser i appen, inklusive integrering med resten av Adobe Marketing Cloud.
+An ***AEM Author* (eller *Marknadsförare*)**använder skräddarsydda eller färdiga mallar och komponenter för att lägga till och redigera sidor, dra och släppa komponenter och lägga till media av alla typer från DAM, inklusive bilder, videor och textfragment (innehållsfragment). AEM inbyggda innehållsredigeraren används sedan av *AEM Authors* för att skapa engagerande och relevanta upplevelser i appen, inklusive integrering med resten av Adobe Experience Cloud.
 
-En AEM är ansvarig för följande när du skapar ett program med AEM Mobile On Demand Services.
+En AEM författare ansvarar för följande när de skapar ett program med AEM Mobile On-demand Services.
 
 **AEM innehåll för AEM Mobile On-demand Services App** omfattar följande åtgärder:
 
@@ -55,7 +51,6 @@ Mer information om **Innehållstjänster**, se [Content Services - översikt](/h
 >* [Mallar](/help/sites-developing/templates.md)
 >* [Komponenter](/help/sites-developing/components.md)
 >
-
 
 ## Ytterligare resurser {#additional-resources}
 

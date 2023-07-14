@@ -3,11 +3,10 @@ title: Adobe Experience Manager Mobile - GDPR-beredskap
 description: Adobe Experience Manager Mobile - GDPR-beredskap
 uuid: 817c434f-4b78-40f7-99d6-6efafdedb77e
 contentOwner: trushton
-discoiquuid: 9399dd3d-a485-4f53-a6f2-7b190da4235b
 exl-id: d06e675f-fb61-47da-85de-e0b50dd44153
-source-git-commit: 85d39e59b82fdfdcd310be61787a315668aebe38
+source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
 workflow-type: tm+mt
-source-wordcount: '691'
+source-wordcount: '688'
 ht-degree: 0%
 
 ---
@@ -16,7 +15,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->GDPR används som exempel i avsnitten nedan, men de ingående detaljerna är tillämpliga på alla dataskydds- och sekretessbestämmelser. såsom GDPR, CCPA osv.
+>GDPR används som exempel i avsnitten nedan, men de ingående detaljerna är tillämpliga på alla dataskydds- och sekretessbestämmelser. såsom GDPR och CCPA.
 
 ## Stöd för AEM Mobile GDPR {#aem-mobile-gdpr-support}
 
@@ -26,7 +25,7 @@ AEM Mobile är redo att hjälpa kunderna med deras GDPR-efterlevnadsskyldigheter
 
 ## Adobe Digital Publishing Suite {#adobe-digital-publishing-suite}
 
-Adobe digital publishing product (som föregår AEM Mobile) stöder beredskapsinitiativ i Adobe GDPR. Se [https://www.adobe.com/privacy/general-data-protection-regulation.html](https://www.adobe.com/privacy/general-data-protection-regulation.html). Nedan ges information om stöd för GDPR-relevanta funktioner i Digital Publishing Suite-produkten, inklusive hur man arbetar med Adobe för att initiera GDPR-förfrågningar.
+Adobe digital publishing product (som föregår AEM Mobile) stöder beredskapsinitiativ i Adobe GDPR. Se [https://business.adobe.com/privacy/general-data-protection-regulation.html](https://business.adobe.com/privacy/general-data-protection-regulation.html). Nedan ges närmare information om stöd för relevanta funktioner i den allmänna dataskyddsförordningen i Digital Publishing Suite, inklusive hur man arbetar med Adobe för att initiera förfrågningar om den allmänna dataskyddsförordningen.
 
 För att vara säker på att du inte blandar ihop AEM Mobile med den äldre Digital Publishing Suite-produkten kan du logga in på Digital Publishing Suite här:
 
@@ -34,7 +33,7 @@ För att vara säker på att du inte blandar ihop AEM Mobile med den äldre Digi
 
 ### Initiera en GDPR-begäran {#initiating-a-gdpr-request}
 
-Kontakta Adobe kundtjänst för att starta en GDPR-förfrågan om Digital Publishing Suite.
+Kontakta Adobe kundtjänst så att du kan initiera en GDPR-förfrågan för Digital Publishing Suite.
 
 Följande ID krävs för att hitta kunddata. Alla delmängder som tas emot innebär att andra ID:n inte är tillämpliga för den här användaren.
 
@@ -52,11 +51,11 @@ Ange minst 1 av följande:
 
 **Kommer Adobe att ta bort mina App Store-köp när jag initierar en begäran från DELETE?**
 
-Adobe tar bort information om App Store-köp (prenumerationer osv.) men inköp registreras fortfarande i appbutikerna. Om appen (slutanvändaren) är inloggad i App Store hämtas dessa kvitton igen och skickas till Adobe, och därefter betraktas de som nya inköp och återställs av appen för att få åtkomst igen.
+Adobe tar bort information om App Store-köp (prenumerationer och så vidare), men inköp finns fortfarande kvar i App Store. Om appen (slutanvändaren) är inloggad i App Store hämtas dessa kvitton igen och skickas till Adobe och senare, betraktas de som nya inköp och återställs av appen för att få åtkomst igen.
 
 **Kommer Adobe att ta bort kundens angivna rättigheter när en begäran från DELETE initieras?**
 
-Adobe kommer att ta bort information om kundens ytterligare direkta berättiganden. Om appen (slutanvändaren) loggar in på OAuth-mekanismen som kunden har använt, skickas information till Adobe och tjänsterna hämtar de extra berättigandena igen.
+Adobe tar bort information om kundens ytterligare direktbehörigheter. Om appen (slutanvändaren) loggar in på OAuth-mekanismen som kunden har använt skickas information till Adobe och tjänsterna hämtar de extra berättigandena igen.
 
 **Vad förväntas av slutanvändaren?**
 
@@ -64,7 +63,7 @@ Eftersom nyckeln för att tilldela behörigheter till appen finns på enheten so
 
 **Vad händer när en app delas mellan personer på en enhet?**
 
-Adobe har mycket lite information som associeras direkt med en viss användare. Den associerar data med ett slumpmässigt skapat UUID som finns i appens data och skickas i varje begäran som appen initierar. Det innebär att slutanvändare som delar appen på samma enhet kommer att använda samma UUID och att alla data kommer att anses ägda av den person som gör GDPR-begäran. För både Access- och Delete-begäranden kommer DPSC att betrakta personer som delar en app som en person.
+Adobe har minimal information som associeras direkt till en viss användare. Den associerar data med ett slumpmässigt skapat UUID som finns i appens data och skickas i varje begäran som appen initierar. Det innebär att slutanvändare som delar appen på samma enhet använder samma UUID och att alla data betraktas som ägda av den person som gör GDPR-begäran. För både Access- och Delete-begäranden betraktas personer som delar en app som en enda person.
 
 **Vilka personuppgifter spåras med Analytics?**
 
@@ -72,13 +71,13 @@ Ingen. Data spåras, men på appnivå (inte personlig). Detta inkluderar händel
 
 **Slutanvändaren tillhandahöll sin information men inget hittades. Varför inte?**
 
-I takt med att Digital Publishing Suite-produkten utvecklades ändrades implementeringarna av tjänsterna och mer data försvårades. Om inga data hittades med användarens angivna data betyder det att användarens data inte kan spåras tillbaka till den personen.
+I takt med att Digital Publishing Suite-produkten utvecklades ändrades implementeringen av tjänsten och fler data hämtades. Om inga data hittades med användarens angivna data betyder det att användarens data inte kan spåras tillbaka till den personen.
 
 ### Exempel {#example}
 
-Kontakta Adobe kundtjänst för att starta en GDPR-förfrågan.
+Kontakta Adobe kundtjänst så att du kan initiera en GDPR-förfrågan.
 
-Här är ett exempel på indata och resultat från en Digital Publishing Suite GDPR-förfrågan:
+Här är ett exempel på indata och utdata från en Digital Publishing Suite GDPR-begäran:
 
 #### Indata: {#inputs}
 

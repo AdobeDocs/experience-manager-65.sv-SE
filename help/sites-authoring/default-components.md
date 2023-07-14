@@ -1,31 +1,29 @@
 ---
 title: Standardkomponenter
-description: Adobe Experience Manager har en mängd färdiga komponenter som ger omfattande funktionalitet för webbplatsförfattare.
-uuid: 55caeec3-add7-4d05-a620-07e33901adb7
+description: Adobe Experience Manager innehåller ett antal färdiga komponenter med omfattande funktionalitet för skribenter.
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
-discoiquuid: 53c37f8c-eb75-4134-9f91-8adb0a574360
 exl-id: 85463610-8461-4c1f-bfe7-72229a31ea40
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
 workflow-type: tm+mt
-source-wordcount: '430'
+source-wordcount: '425'
 ht-degree: 0%
 
 ---
 
 # Komponenter{#components}
 
-Adobe Experience Manager (AEM) innehåller en mängd färdiga komponenter som ger omfattande funktionalitet för webbplatsförfattare. De är tillgängliga när [redigera en sida](/help/sites-authoring/editing-content.md) och grupperas efter huvudfunktionsområde (kallas komponentgrupp) för att underlätta filtreringen.
+Adobe Experience Manager (AEM) innehåller olika färdiga komponenter som ger omfattande funktionalitet för webbplatsförfattare. De är tillgängliga när [redigera en sida](/help/sites-authoring/editing-content.md) och grupperas efter huvudfunktionsområde (kallas komponentgrupp) för att underlätta filtreringen.
 
-Komponenterna är tillgängliga när [redigera en sida](/help/sites-authoring/editing-content.md). För att underlätta filtreringen grupperas komponenterna efter det huvudsakliga funktionsområdet (dvs. komponentgruppen).
+Komponenterna är tillgängliga när [redigera en sida](/help/sites-authoring/editing-content.md). För att underlätta filtreringen grupperas komponenterna efter huvudfunktionsområdet (det vill säga komponentgruppen).
 
 >[!NOTE]
 >
 >I det här avsnittet behandlas endast komponenter som är tillgängliga i en AEM.
 >
->Beroende på vilken instans du har kan du ha utvecklat anpassade komponenter explicit för dina behov. De kan till och med ha samma namn som vissa av de komponenter som beskrivs här.
+>Beroende på vilken instans du har kan du ha utvecklat anpassade komponenter som är särskilt anpassade för dina behov. De kan till och med ha samma namn som vissa av de komponenter som beskrivs här.
 
 ## Allmän användning {#general-usage}
 
@@ -38,18 +36,18 @@ Du kan markera en komponent och dra den till önskad plats på sidan. Du kan sed
 
 * [Redigera innehåll - helskärmsläge](/help/sites-authoring/editing-content.md#edit-content-full-screen-mode)
 
-Mer information om hur du lägger till komponenter på en sida finns i artikeln [Redigera sidinnehåll](/help/sites-authoring/editing-content.md).
+Mer information om hur du lägger till komponenter på en sida finns i [Redigera sidinnehåll](/help/sites-authoring/editing-content.md).
 Komponenterna sorteras efter olika kategorier som kallas komponentgrupper. Exempel på sådana komponentgrupper är:
 
 * **Vi.butik**: Innehåller kärnkomponenterna som är proxyvarierade för användning med [Referensimplementering för Vi.butik](/help/sites-developing/we-retail.md).
 
 * **Vi.detaljhandel**: Omfattar handelskomponenter som varukorgar och produktrutnät
 
-* **Allmänt**: Innehåller layoutbehållaren och upplevelsefragmentet
+* **Allmänt**: Innehåller layoutbehållaren och Experience Fragment
 
 ## Översikt över alla komponenter {#overview-of-all-components}
 
-The [Komponentkonsol](/help/sites-authoring/default-components-console.md) ger en översikt över komponentgrupperna, och komponenterna, som finns i AEM. Du kan visa viktig information om de enskilda komponenterna och deras användning.
+The [Komponentkonsol](/help/sites-authoring/default-components-console.md) ger en översikt över komponentgrupper och komponenter som tillhandahålls av din AEM. Du kan visa viktig information om de enskilda komponenterna och deras användning.
 
 ## Komponenter - större områden {#components-major-areas}
 

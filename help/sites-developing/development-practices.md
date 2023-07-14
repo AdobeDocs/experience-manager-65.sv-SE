@@ -1,25 +1,21 @@
 ---
 title: Utvecklingspraxis
-seo-title: Development Practices
-description: Bästa tillvägagångssätt för att utveckla AEM
-seo-description: Best practices for developing on AEM
-uuid: 27a75f7f-6e2c-4113-9e9f-c5013a4594c2
+description: Bästa tillvägagångssätt för att utveckla på Adobe Experience Manager.
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
-discoiquuid: 8b0297a1-d922-410f-9aaf-3a6b87e11dc0
 exl-id: 65b2029e-03c9-4df4-8579-2b15dbee1035
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
 workflow-type: tm+mt
-source-wordcount: '629'
+source-wordcount: '616'
 ht-degree: 0%
 
 ---
 
 # Utvecklingspraxis{#development-practices}
 
-## Arbeta enligt definitionen Klar {#work-according-to-a-definition-of-done}
+## Arbeta enligt definition av Klar (DoD) {#work-according-to-a-definition-of-done}
 
 Varje team har en egen definition av vad&quot;gjort&quot; innebär, men det är viktigt att ha en sådan och se till att en berättelse uppfyller de definierade kriterierna innan den godkänns.
 
@@ -32,7 +28,7 @@ Några kriterier som vanligtvis anges av team är:
 * Validerad i QA-miljön
 * Lokalisering implementerad
 
-Utan en väldefinierad DoD är det lätt att hamna i en situation där mycket av saker är halvvägs och inget är helt färdigt.
+Utan en väldefinierad DoD är det lätt att hamna i en situation där mycket görs halvvägs och inget är helt färdigt.
 
 ### Definiera och följ kodnings- och formateringskonventioner {#define-and-adhere-to-coding-and-formatting-conventions}
 
@@ -40,9 +36,9 @@ Det kanske inte verkar viktigt med indragsnivåer och tomt utrymme, men att ha r
 
 ### Syfte med hög testtäckning  {#aim-for-high-test-coverage}
 
-När en projektimplementering växer i storlek ökar också den tid som krävs för att testa den. Utan god testtäckning kommer testteamet inte att kunna skalas om och utvecklarna kommer till slut att begravas i buggar.
+När en projektimplementering växer i storlek ökar också den tid som krävs för att testa den. Utan god testtäckning kan testteamet inte skalas om och utvecklarna blir till slut begravda i buggar.
 
-Utvecklarna bör öva på TDD och skriva underkända enhetstester före den produktionskod som uppfyller deras krav. Kvalitetssäkring bör skapa en automatiserad uppsättning godkännandetester för att säkerställa att systemet fungerar som väntat på en hög nivå.
+Utvecklare bör öva på testdriven utveckling (TDD) och skriva felaktiga enhetstester innan den produktionskod som uppfyller deras krav. Kvalitetssäkring bör skapa en automatiserad uppsättning godkännandetester för att säkerställa att systemet fungerar som väntat på en hög nivå.
 
 Det finns anpassade ramverk, till exempel Jackalope och Prosper, som gör det enklare för utvecklare att maska av JCR-API:er när de skriver enhetstester.
 
@@ -52,15 +48,15 @@ Systemet bör vara tillgängligt för demonstration till företaget i slutet av 
 
 ### Implementera en kontinuerlig integreringsmiljö och använd den {#implement-a-continuous-integration-environment-and-use-it}
 
-Genom att implementera en kontinuerlig integreringsmiljö kan du enkelt och repeterbart köra enhetstester och integrationstester. Det kommer också att frigöra driftsättningar från utvecklingsteamet, vilket gör att andra delar av teamet kan bli mer effektiva och göra driftsättningen mer stabil och förutsägbar.
+Genom att implementera en kontinuerlig integreringsmiljö kan du enkelt och upprepade gånger köra enhetstester och integrationstester. Det skiljer också åt driftsättningen från utvecklingsteamet, vilket gör att andra delar av teamet kan bli mer effektiva och gör driftsättningen mer stabil och förutsägbar.
 
 ### Håll utvecklingscykeln snabb genom att hålla byggtiderna låga {#keep-the-development-cycle-fast-by-keeping-build-times-low}
 
-Om enhetstester tar lång tid att köra undviker utvecklarna att köra dem och de förlorar sitt värde. Om det tar lång tid att skapa koden och distribuera den gör man det mindre ofta. Att prioritera korta byggtider säkerställer att den tid vi har investerat i vår testtäckning och CI-infrastruktur kommer att fortsätta göra teamet mer produktivt.
+Om enhetstester tar lång tid att köra undviker utvecklarna att köra dem och de förlorar sitt värde. Om det tar lång tid att skapa koden och distribuera den gör man det mindre ofta. Att göra korta byggtider till en prioritet säkerställer att den tid du har investerat i testtäckning och CI-infrastruktur fortsätter att göra teamet mer produktivt.
 
 ### Finjustera Sonar och andra verktyg för statisk kodanalys och agera utifrån deras rapporter {#fine-tune-sonar-and-other-static-code-analysis-tools-and-act-on-their-reports}
 
-Verktyg för kodanalys kan vara värdefulla, men bara om deras rapporter leder till åtgärder från utvecklingsteamets sida. Utan att finjustera den analys som dessa verktyg ger blir rekommendationerna som de genererar inte relevanta och de förlorar sitt värde.
+Verktyg för kodanalys kan vara värdefulla, men bara om deras rapporter leder till åtgärder från utvecklingsteamets sida. Utan att finjustera den analys som dessa verktyg ger blir rekommendationerna att de genererar irrelevanta och förlorar sitt värde.
 
 ### Följ Pojkens Scout-regel {#follow-the-boy-scout-rule}
 
@@ -68,4 +64,4 @@ Pojkens Scout har en regel: &quot;Låt det vara bättre än du hittade det.&quot
 
 ### Undvik att implementera YAGNI-funktioner {#avoid-implementing-yagni-features}
 
-YAGNI-funktioner (eller Du kommer inte att behöva dem) är saker som implementeras när vi förväntar oss att vi kommer att behöva något i framtiden, även om vi inte behöver det nu. Vi bör implementera det enklaste som kommer att fungera idag och använda kontinuerlig omfaktorisering för att säkerställa att systemarkitekturen utvecklas med de krav som ställs över tid. Detta gör att vi kan fokusera på det som är viktigt och förhindra att koden blottar och krypar funktioner.
+YAGNI-funktioner (du kommer inte att behöva dem) är saker som implementeras när vi förväntar oss att vi kommer att behöva något i framtiden, även om vi inte behöver det nu. Vi bör implementera det enklaste som kommer att fungera idag och använda kontinuerlig omfaktorisering för att säkerställa att systemarkitekturen utvecklas med de krav som ställs över tid. Detta gör att vi kan fokusera på det som är viktigt och förhindra att koden blottar och krypar funktioner.

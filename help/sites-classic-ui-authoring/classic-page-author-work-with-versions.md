@@ -1,17 +1,15 @@
 ---
 title: Arbeta med sidversioner
 description: Versionshantering skapar en ögonblicksbild av en sida vid en viss tidpunkt.
-uuid: 06e112cd-e4ae-4ee0-882d-7009f53ac85b
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
-discoiquuid: 48936115-4be2-4b0c-81ce-d61e43e4535d
 docset: aem65
 exl-id: 4eb0de5e-0306-4166-9cee-1297a5cd14ce
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
 workflow-type: tm+mt
-source-wordcount: '1362'
+source-wordcount: '1353'
 ht-degree: 0%
 
 ---
@@ -21,7 +19,7 @@ ht-degree: 0%
 Versionshantering skapar en ögonblicksbild av en sida vid en viss tidpunkt. Med versionshantering kan du utföra följande åtgärder:
 
 * Skapa en version av en sida.
-* Återställ en sida till en tidigare version för att ångra en ändring som du har gjort på en sida, till exempel.
+* Återställ en sida till en tidigare version om du till exempel vill ångra en ändring som du har gjort på en sida.
 * Jämför den aktuella versionen av en sida med en tidigare version med skillnader i markerad text och bild.
 
 ## Skapa en ny version {#creating-a-new-version}
@@ -77,7 +75,7 @@ Den här metoden kan användas för att återställa en sidversion. Den kan äve
 
    ![screen_shot_2012-02-08at45743pm-1](assets/screen_shot_2012-02-08at45743pm-1.png)
 
-1. Klicka **Återställ**. AEM återställer det markerade trädet.
+1. Klicka **Återställ**. AEM återställer trädet som du har valt.
 
 ## Jämföra med en tidigare version {#comparing-with-a-previous-version}
 
@@ -88,7 +86,7 @@ Så här jämför du den aktuella versionen av sidan med en tidigare version:
 
    ![screen_shot_2012-02-14at42949pm-1](assets/screen_shot_2012-02-14at42949pm-1.png)
 
-1. Välj den version du vill jämföra och klicka på **Diff** -knappen.
+1. Välj den version som du vill jämföra och klicka på **Diff** -knappen.
 1. Skillnaderna mellan den aktuella versionen och den valda versionen visas enligt följande:
 
    * Text som har tagits bort är röd och genomstruken.
@@ -114,7 +112,7 @@ Så här gör du:
 
 >[!NOTE]
 >
->Om versioner tas bort från databasen kan inte Timewarp visa rätt vy. Om element (som kod, css, bilder osv.) för återgivning av webbplatsen har ändrats, skiljer sig vyn från den ursprungliga, eftersom objekten inte versionsindelas i databasen.
+>Om versioner tas bort från databasen kan inte Timewarp visa rätt vy. Om elementen (till exempel kod, css och bilder) för återgivning av webbplatsen har ändrats skiljer sig vyn från den ursprungliga vyn, eftersom dessa objekt inte versionsindelas i databasen.
 
 ### Använda tidskonverteringskalendern {#using-the-timewarp-calendar}
 
@@ -136,11 +134,11 @@ Kalenderversionen används om du har en viss dag att visa:
 
    >[!NOTE]
    >
-   >Om du navigerar till en sida som har tagits bort/tagits bort från databasen kommer den att återges korrekt om äldre versioner av sidan fortfarande är tillgängliga i databasen.
+   >Om du navigerar till en sida som har tagits bort eller tagits bort från databasen kommer den att återges korrekt om äldre versioner av sidan fortfarande är tillgängliga i databasen.
 
    >[!NOTE]
    >
-   >Du kan inte redigera den gamla versionen av sidan. Det är bara tillgängligt för visning. Om du vill återställa den äldre versionen måste du göra det manuellt med [återställ](/help/sites-classic-ui-authoring/classic-page-author-work-with-versions.md#restoring-a-page-version-from-sidekick).
+   >Du kan inte redigera den gamla versionen av sidan. Det är bara tillgängligt för visning. Om du vill återställa den äldre versionen gör du det manuellt med [återställ](/help/sites-classic-ui-authoring/classic-page-author-work-with-versions.md#restoring-a-page-version-from-sidekick).
 
 1. När du är klar med visningen av sidan klickar du på:
 
@@ -155,13 +153,13 @@ Tidslinjeversionen används om du vill se en översikt över publiceringsaktivit
 
 Om du vill visa tidslinjen i dokumentet:
 
-1. Så här visar du tidslinjen:
+1. Gör något av följande om du vill visa tidslinjen:
 
-   1. Öppna **Versionshantering** och sedan klicka **Timewarp** (nära sidesparkens nederkant).
+   1. Öppna **Versionshantering** och sedan klicka på **Timewarp** (nära sidesparkens nederkant).
 
    1. Använd dialogrutan för sidspark som visas efter [med tidskonverteringskalendern](#using-the-timewarp-calendar).
 
-1. Klicka på **Visa tidslinje** - dokumentets tidslinje visas, till exempel:
+1. Klicka **Visa tidslinje** - dokumentets tidslinje visas, till exempel:
 
    ![chlimage_1-78](assets/chlimage_1-78.png)
 
@@ -169,7 +167,7 @@ Om du vill visa tidslinjen i dokumentet:
 
    * Alla rader visar publicerade versioner.
 När en sida är aktiverad börjar en ny rad. Varje gång dokumentet redigeras visas en ny färg.
-I exemplet nedan anger den röda linjen att sidan redigerades under tidsramen för den ursprungliga gröna versionen och den gula raden anger att sidan redigerades någon gång under den röda versionen osv.
+I exemplet nedan anger den röda linjen att sidan redigerades under tidsramen för den ursprungliga gröna versionen och den gula raden anger att sidan redigerades någon gång under den röda versionen och så vidare.
 
    ![chlimage_1-79](assets/chlimage_1-79.png)
 
@@ -186,10 +184,10 @@ Med Timewarp kan du göra ett bra försök att återskapa en sida vid en viss ti
 * **Timewarp använder sidversioner** - Om du navigerar till en sida som har tagits bort/tagits bort från databasen kommer den att återges korrekt om det fortfarande finns äldre versioner av sidan i databasen.
 * **Borttagna versioner påverkar Timewarp** - Om versioner tas bort från databasen kan inte Timewarp visa rätt vy.
 
-* **Timewarp är skrivskyddat** - Du kan inte redigera den gamla versionen av sidan. Det är bara tillgängligt för visning. Om du vill återställa den äldre versionen måste du göra det manuellt med [återställ](#main-pars-title-1).
+* **Timewarp är skrivskyddat** - Du kan inte redigera den gamla versionen av sidan. Det är bara tillgängligt för visning. Om du vill återställa den äldre versionen gör du det manuellt med [återställ](#main-pars-title-1).
 
-* **Timewarp baseras bara på sidinnehåll** - Om element (som kod, css, resurser/bilder osv.) för återgivning av webbplatsen har ändrats, skiljer sig vyn från den ursprungliga, eftersom objekten inte versionsindelas i databasen.
+* **Timewarp baseras bara på sidinnehåll** - Om element (som kod, css och bildresurser) för återgivning av webbplatsen har ändrats skiljer sig vyn från den ursprungliga vyn, eftersom dessa objekt inte versionsindelas i databasen.
 
 >[!CAUTION]
 >
->Timewarp är ett verktyg som hjälper författare att förstå och skapa sitt innehåll. Den är inte avsedd som en revisionslogg eller för juridiska ändamål.
+>Timewarp är utformat för att hjälpa författare att förstå och skapa sitt innehåll. Den är inte avsedd som en revisionslogg eller för juridiska ändamål.

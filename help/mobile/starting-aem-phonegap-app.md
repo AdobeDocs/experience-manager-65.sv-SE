@@ -1,18 +1,14 @@
 ---
 title: Startar AEM PhoneGap
-seo-title: Starting AEM PhoneGap
-description: Följ den här sidan om du vill veta mer om startsatsen för utvecklare.
-seo-description: Follow this page to learn about the starterkit for developers.
-uuid: 952bf9f9-5c79-4212-91b7-1d3850ec2402
+description: Läs mer om starterkit för utvecklare.
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
-discoiquuid: 2ecf05ed-4e56-4e0b-89cf-5161741f9001
 exl-id: 7d56b9f0-5aa5-4b68-a85e-7e80415cbc76
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
 workflow-type: tm+mt
-source-wordcount: '407'
+source-wordcount: '396'
 ht-degree: 0%
 
 ---
@@ -21,20 +17,20 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (t.ex. Reagera). [Läs mer](/help/sites-developing/spa-overview.md).
+>Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (till exempel React). [Läs mer](/help/sites-developing/spa-overview.md).
 
-För utvecklare är det bästa att börja med att ta en titt på Adobe Experience Manager Mobile Starterkit i github
+För utvecklare är det bästa att börja med att titta på Adobe Experience Manager Mobile Starterkit i github
 
 https://github.com/Adobe-Marketing-Cloud-Apps/aem-phonegap-starter-kit
 
 Starterkit hjälper dig att komma igång snabbt genom grunderna i AEM Mobile utveckling, med början när du skapar och styr projekt, installerar nödvändiga verktyg, definierar en Maven-arkityp, bygger, driftsätter och sedan skapar du en egen upplevelse.
 
-Utvecklarna kan använda det här exemplet som utgångspunkt för att testa ett AEM Mobile-program med PhoneGap. Om du kör igenom startpaketet och referensprogrammet får du en god förståelse för grunderna för att skapa avancerade mobilprogram.
+Utvecklarna kan använda det här exemplet som utgångspunkt för att testa ett AEM Mobile-program med PhoneGap. Genom att gå igenom startpaketet och referensprogrammet får du en god förståelse för grunderna för att skapa avancerade mobilprogram.
 
 * Använd [AEM PhoneGap Starter Kit](https://github.com/Adobe-Marketing-Cloud-Apps/aem-phonegap-starter-kit) för att skapa appar som passar för AEM Mobile-katalogen.
 * A [referensapp](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference) med en komplett källa har skapats som demonstrerar många av de nya funktionerna i AEM Mobile, oavsett om du migrerar en befintlig app till AEM Mobile eller börjar om från början.
-* Alla våra exempel finns här på github: [https://github.com/Adobe-Marketing-Cloud-Apps](https://github.com/Adobe-Marketing-Cloud-Apps) och backa projektet med Maven.
-* De flesta konferenssamtalen utnyttjar [Kitchen Sink, genomgång](https://github.com/blefebvre/aem-phonegap-kitchen-sink), som du också hittar i Github och fokuserar på användningen av den inbyggda utbyggbarheten för Apache Cordova.
+* Alla exempel finns på github: [https://github.com/Adobe-Marketing-Cloud-Apps](https://github.com/Adobe-Marketing-Cloud-Apps) och backa projektet med Maven.
+* De flesta konferenssamtalen använder [Kitchen Sink, genomgång](https://github.com/blefebvre/aem-phonegap-kitchen-sink), som du också hittar i GitHub och fokuserar på användningen av den inbyggda utökningsbarheten för Apache Cordova.
 
 >[!NOTE]
 >

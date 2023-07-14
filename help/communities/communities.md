@@ -1,18 +1,14 @@
 ---
 title: Utveckla webbgrupper
-seo-title: Developing Communities
-description: Skapa och anpassa communityfunktioner som forum, användargrupper med mera
-seo-description: Create and customize community features such as forums, user groups, and more
-uuid: 51dc54da-9090-4d36-adf9-72d5479062a5
+description: Skapa och anpassa communityfunktioner som forum, användargrupper med mera.
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: fbfe8097-3c3f-4a05-97ad-1ce526362a26
 exl-id: 3ed3768a-1b3c-45a1-a34c-61694cd407d9
-source-git-commit: 4dbbcc41757843d3b2d5a3bbb2656ef587e83d2c
+source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
 workflow-type: tm+mt
-source-wordcount: '385'
+source-wordcount: '391'
 ht-degree: 1%
 
 ---
@@ -21,7 +17,7 @@ ht-degree: 1%
 
 ## Översikt {#overview}
 
-AEM Communities gör det enklare att skapa och anpassa communityfunktioner som forum, användargrupper, bloggar, frågor och svar, kalendrar, kommentarer, recensioner, omröstningar, omdömen och uppdrag. Dessa funktioner gör att användargenererat innehåll (UGC) anges i publiceringsmiljön.
+Adobe Experience Manager (AEM) Communities förenklar framtagning och anpassning av communityfunktioner som forum, användargrupper, bloggar, frågor och svar, kalendrar, kommentarer, granskningar, omröstningar, betygsättning och uppdrag. Dessa funktioner gör att användargenererat innehåll (UGC) anges i publiceringsmiljön.
 
 Grunden för en [communitywebbplats](overview.md#communitiessites) är [ramverk för sociala komponenter](scf.md) (SCF). Skapandet av en community-webbplats börjar med att du väljer en [mall för communitywebbplats](sites-console.md) som består av [communityfunktioner](functions.md).
 
@@ -36,7 +32,7 @@ En översikt och självstudiekurser för att komma igång finns på:
 
 ## Rekommenderade distributioner {#recommended-deployments}
 
-* [Community-innehåll](working-with-srp.md): diskuterar de tillgängliga SRP-valen för en gemensam lagringsplats för användargenererat innehåll
+* [Community-innehåll](working-with-srp.md): diskuterar de tillgängliga SRP-alternativen (Social Resource Provider) för en gemensam lagringsplats för användargenererat innehåll
 * [Rekommenderade topologier för communities](topologies.md): diskuterar topologier baserat på användningsfall och SRP-val
 
 ## Ramverk för sociala komponenter {#social-component-framework}
@@ -62,11 +58,11 @@ AEM Communities komponenter, funktioner och funktioner utgör byggstenarna för 
 ## Community-medlemmar {#community-members}
 
 * [Hantera användare och användargrupper](users.md)
-* [Social inloggning med Facebook och Twitter](social-login.md)
+* [Social Logga in med Facebook och Twitter](social-login.md)
 
 ## Community-grupper {#community-groups}
 
-[Community-grupper](overview.md#communitygroups) är konceptet att tillåta communitymedlemmar att bilda undergrupper inom communitywebbplatsen. Skapande av en community-grupp kan ske i publicerings- eller författarmiljön.
+[Community-grupper](overview.md#communitygroups) är konceptet att tillåta communitymedlemmar att bilda undergrupper på communitywebbplatsen. Skapande av en community-grupp kan ske i publicerings- eller författarmiljön.
 
 * [Grundläggande om communitygrupper](essentials-groups.md)
 * [Funktionen Grupper](functions.md#groups-function)
@@ -92,7 +88,7 @@ AEM Communities komponenter, funktioner och funktioner utgör byggstenarna för 
 
 ## Dokumentation för relaterade communities {#related-communities-documentation}
 
-* Besök [Distribuera webbgrupper](deploy-communities.md) om du vill veta mer om rekommenderade distributioner och konfiguration av dispatcher.
+* Besök [Distribuera webbgrupper](deploy-communities.md) om du vill veta mer om rekommenderade distributioner och Dispatcher-konfiguration.
 
 * Besök [Administrera webbgruppsplatser](administer-landing.md) om du vill veta mer om hur du skapar en communitywebbplats, konfigurerar mallar för communityn, modererar communityinnehåll, hanterar medlemmar och konfigurerar meddelanden.
 

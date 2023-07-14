@@ -1,16 +1,14 @@
 ---
 title: Lägga till Adobe Analytics Tracking i komponenter
 description: Lägga till Adobe Analytics Tracking i komponenter
-uuid: 447b140c-678c-428d-a1c9-ecbdec75cd42
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: a11c39b4-c23b-4207-8898-33aea25f2ad0
 exl-id: e6c1258c-81d5-48e4-bdf1-90d7cc13a22d
-source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
+source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
 workflow-type: tm+mt
-source-wordcount: '1267'
+source-wordcount: '1266'
 ht-degree: 0%
 
 ---
@@ -38,7 +36,7 @@ ContextHub-posten ska inkluderas direkt under `<head>` -taggen, medan Cloud Serv
 
 The `contexthub` skript som du infogar efter `<head>` läggs ContextHub-funktionerna till på sidan.
 
-The `cloudservices` skript som du lägger till i `<head>` och `<body>` -avsnitten gäller för de molntjänstkonfigurationer som läggs till på sidan. (Om sidan använder mer än en konfiguration med Cloud Services, behöver du bara inkludera ContextHub-jsp och Cloud Servicens jsp en gång.)
+The `cloudservices` skript som du lägger till i `<head>` och `<body>` -avsnitten gäller för de molntjänstkonfigurationer som läggs till på sidan. (Om sidan använder mer än en konfiguration med Cloud Services, måste du bara inkludera ContextHub jsp och Cloud Services jsp en gång.)
 
 När ett Adobe Analytics-ramverk läggs till på sidan `cloudservices` skript genererar Adobe Analytics-relaterat JavaScript och referenser till klientbibliotek, som i följande exempel:
 
@@ -134,7 +132,7 @@ Komponenter kan interagera med Adobe Analytics-ramverket när komponenten har en
 
 * `cq:trackevents`: Identifierar de CQ-händelser som komponenten visar. (Se Anpassade händelser.)
 * `cq:trackvars`: Namnger CQ-variablerna som mappas med Adobe Analytics-egenskaper.
-* `cq:componentName`: Namnet på komponenten som visas i Sidekick.
+* `cq:componentName`: Namnet på komponenten som visas i Sidespark.
 * `cq:componentGroup`: Den grupp i Sidekick som innehåller komponenten.
 
 Koden i komponent-JSP lägger till JavaScript på sidan som utlöser spårningen och definierar data som spåras. Händelsenamnet och datanamnen som används i JavaScript måste matcha motsvarande värden i `analytics` nodegenskaper.
@@ -170,13 +168,13 @@ Konfigurera den övre komponenten och redigera JSP-filen för att definiera spå
    * Namn: `analytics`
    * Typ: `nt:unstructured`
 
-1. Lägg till följande egenskap i analysnoden för att namnge spårningshändelsen:
+1. Lägg till följande egenskap i analysnoden så att du kan namnge spårningshändelsen:
 
    * Namn: cq:trackevents
    * Typ: Sträng
    * Värde: topnavClick
 
-1. Lägg till följande egenskap i analysnoden för att namnge datavariablerna:
+1. Lägg till följande egenskap i analysnoden så att du kan namnge datavariablerna:
 
    * Namn: cq:trackvar
    * Typ: Sträng
@@ -188,7 +186,7 @@ Konfigurera den övre komponenten och redigera JSP-filen för att definiera spå
    * Typ: Sträng
    * Värde: topnav (spärra/knip)
 
-1. Lägg till följande egenskap i analysnoden för att namnge komponentgruppen för Sidespark:
+1. Lägg till följande egenskap i analysnoden för att namnge komponentgruppen för Sidekick:
 
    * Namn: cq:componentGroup
    * Typ: Sträng
@@ -196,7 +194,7 @@ Konfigurera den övre komponenten och redigera JSP-filen för att definiera spå
 
 1. Klicka på Spara alla.
 1. Öppna `topnav.jsp` -fil.
-1. Lägg till följande attribut i ett element:
+1. Lägg till följande attribut i elementet:
 
    ```xml
    onclick = "tracknav('<%= child.getPath() %>.html')"
@@ -362,7 +360,7 @@ The `analytics` -noden i komponenten måste visa variabelnamnen med `cq:trackvar
 * product.evars.eVarName1
 * product.evars.eVarName_n
 
-eCommerce-modulen innehåller flera komponenter som genererar variabeldata för s.products. Skicka-komponenten ([http://localhost:4502/crx/de/index.jsp#/libs/commerce/components/submitorder/submitorder.jsp](http://localhost:4502/crx/de/index.jsp#/libs/commerce/components/submitorder/submitorder.jsp)) genererar JavaScript som liknar följande exempel:
+eCommerce-modulen innehåller flera komponenter som genererar variabeldata för s.products. Till exempel `submitorder` komponent ([http://localhost:4502/crx/de/index.jsp#/libs/commerce/components/submitorder/submitorder.jsp](http://localhost:4502/crx/de/index.jsp#/libs/commerce/components/submitorder/submitorder.jsp)) genererar JavaScript som liknar följande exempel:
 
 ```
 <script type="text/javascript">
@@ -440,4 +438,4 @@ eCommerce-modulen innehåller flera komponenter som genererar variabeldata för 
 
 Webbläsare begränsar i allmänhet storleken på begäranden om GET. Eftersom CQ-produkter och SKU-värden är databassökvägar, kan produktarrayer som innehåller flera värden överskrida storleksgränsen för begäran. Därför bör dina komponenter begränsa antalet objekt i `product` arrayen för varje `CQ_Analytics.record function`. Skapa flera funktioner om antalet objekt som du måste spåra kan överskrida gränsen.
 
-ECommerce-komponenten för underordning begränsar till exempel antalet `product` objekt i ett samtal till fyra. När varukorgen innehåller mer än fyra produkter genereras flera `CQ_Analytics.record` funktioner.
+Exempel: e-handeln `submitorder` -komponenten begränsar antalet `product` objekt i ett samtal till fyra. När varukorgen innehåller mer än fyra produkter genereras flera `CQ_Analytics.record` funktioner.

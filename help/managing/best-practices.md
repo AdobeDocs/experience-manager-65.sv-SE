@@ -1,35 +1,31 @@
 ---
 title: Hantera projekt - checklista för bästa praxis
-seo-title: Managing Projects - Best Practices Checklist
 description: Planering och förståelse krävs för att hantera ett projekt som ska implementera Adobe Experience Manager (AEM). Projektchecklistor är avsedda som en uppsättning bästa metoder för projektleverans. De vägleder dig genom alla faser i projektets livscykel och ger dig möjlighet att övervaka din nuvarande status på hög nivå.
-seo-description: Managing a project to implement Adobe Experience Manager (AEM) requires planning and understanding. The Project Checklists are intended as a set of best practices for project delivery. They guide you through all phases of the project life cycle and provide high level monitoring of your current status.
-uuid: 859f73f4-535a-49a1-9ae4-a4aacd7f36dd
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/MANAGING
 topic-tags: managing-checklist, introduction
 content-type: reference
-discoiquuid: 2bfa287a-aad0-4681-9f9c-d48e8179684c
 docset: aem65
 exl-id: 94b91996-d2b2-4d4a-b770-334cfa2dc0b7
-source-git-commit: 43a30b5ba76ea470cc50a962d4f04b4a1508964d
+source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
 workflow-type: tm+mt
-source-wordcount: '3262'
+source-wordcount: '3252'
 ht-degree: 0%
 
 ---
 
 # Hantera projekt - checklista för bästa praxis{#managing-projects-best-practices-checklist}
 
-För att hantera ett projekt som ska implementera Adobe Experience Manager (AEM) måste du planera och förstå för att vara säker på att du är medveten om de problem och (relaterade) beslut som du måste fatta (både före och under implementeringen av projektet).
+För att hantera ett projekt som ska implementera Adobe Experience Manager (AEM) måste du planera och förstå för att vara säker på att du är medveten om problemen och (relaterade) beslut som du måste fatta, innan och medan du implementerar projektet.
 
 De bästa sätten är att
 
 * An [interaktiv checklista](/help/managing/best-practices-checklist.md) som gör att du kan följa upp och övervaka dina framsteg med dessa bästa metoder.
 
-   * Definierar indata och slutprodukter utifrån fas, milstolpe och personlighet.
+   * Definierar indata och slutprodukter utifrån fas, milstolpe och persona.
    * Ger automatiska översikter (kvalitet, hälsa och fullständighet) som visar på framsteg och projekthälsa.
 
-* Dokumentation som bygger direkt på [checklista](/help/managing/best-practices-checklist.md), som innehåller information om
+* Dokumentation som bygger på [checklista](/help/managing/best-practices-checklist.md), som innehåller information om
 
    * [Projektpulsslag](#projectheartbeat) analys.
    * [Status efter roll](#status-by-role) översikt.
@@ -57,7 +53,7 @@ The **Projektpulsslag** -kalkylbladet innehåller en grafisk översikt över kri
 
 ## Status efter roll {#status-by-role}
 
-The **Status efter roll** kalkylblad med detaljerad beskrivning av [**Hälsa**, **Kvalitet** och **Fullständighet**](#projectheartbeat) av **[Fas](#phases-and-milestones)** och **[Persona](#persona)**.
+The **Status efter roll** kalkylblad med detaljerad beskrivning av [**Hälsa**, **Kvalitet och **Fullständighet**](#projectheartbeat) av **[Fas](#phases-and-milestones)** och **[Persona](#persona)**.
 
 ## Faser och milstolpar {#phases-and-milestones}
 
@@ -71,7 +67,7 @@ Varje fas innehåller sina egna milstolpar. För varje [persona](#persona) (elle
 
 ### Förberedelse {#preparation}
 
-Förberedelser av ditt projekt utgör grunden för hela projektet. Ni måste definiera viktiga krav tillsammans med tydliga mål och förväntningar för:
+Förberedelser av ditt projekt utgör grunden för hela projektet. Definiera viktiga krav tillsammans med tydliga mål och förväntningar för:
 
 * **Affärsargument**
 
@@ -81,9 +77,9 @@ Förberedelser av ditt projekt utgör grunden för hela projektet. Ni måste def
 
    * Ett grundläggande tillämpningsområde och grovschema bör göras tillgängligt för att definiera vad som krävs och inom vilken tidsram. Om det hjälper till att klargöra situationen kan du också definiera vad som ligger utanför omfånget.
 
-Hur du förbereder, planerar och kör ditt projekt och implementerar din lösning påverkas av de begränsningar du har för din verksamhet, till exempel fast budget, fast tidslinje, innehållskvantitet, kvalitet som krävs.
+Hur du förbereder, planerar och kör ditt projekt och implementerar din lösning påverkas av de begränsningar du har. Exempel: fast budget, fast tidslinje, innehållskvantitet, kvalitet som krävs.
 
-Som alltid kommer justeringen av någon av faktorerna att påverka de andra. Om du till exempel minskar tiden, men behöver samma kvalitetsnivå, kommer priset förmodligen att öka samtidigt som du minskar mängden innehåll som du kan hantera. Budgeten är ofta en nyckelfaktor, så sådana relationer kan inte glömmas bort.
+Som alltid påverkar justeringen av någon av faktorerna de andra. Om du till exempel minskar tiden, men behöver samma kvalitetsnivå, kommer priset förmodligen att öka samtidigt som du minskar mängden innehåll som du kan hantera. Budgeten är ofta en nyckelfaktor, så sådana relationer kan inte glömmas bort.
 
 De fyra faktorerna:
 
@@ -93,31 +89,31 @@ De fyra faktorerna:
 
 * **Validering**
 
-   I den här fasen måste du validera och bekräfta målen för projektet; till exempel:
+  I den här fasen måste du validera och bekräfta målen för projektet; till exempel:
 
    * Vad vill du uppnå/tillhandahålla?
    * Vem tjänar på det?
    * Vad är omfattningen?
 
       * Om det gör det lättare att klargöra situationen kan du också definiera vad som ligger utanför omfånget.
-   * Hur definierar man framgången?
-   * Hur ska du mäta framgång?
+
+   * Hur definierar man framgång?
+   * Hur mäter man framgång?
    * Vilka är kraven, affärsvillkoren och de tekniska kraven?
    * Finns det äldre system som ska ersättas och, om så är fallet, finns det data som ska migreras?
-   * Vem kommer att bli inblandad?
+   * Vilka är inblandade?
    * Hur mäter du framstegen?
-   * Hur ofta granskar du hur projektet fortskrider?
-
+   * Hur ofta granskar du projektets förlopp?
 
 * **Budget**
 
-   Innan du påbörjar ett projekt behöver du en tillförlitlig och realistisk uppskattning av vad det kommer att kosta att implementera:
+  Innan du påbörjar ett projekt behöver du en tillförlitlig och realistisk uppskattning av vad det kostar att implementera:
 
    * Använd information från valideringsmilstolpen som grund för uppskattningarna.
    * Var realistiska i era uppskattningar.
-   * Fundera på och ta hänsyn till eventuella riktlinjer, processer eller begränsningar som kunden kan vara föremål för.
-   * Tänk på beredskaps- och granskningsprocesser om en granskning eller finjustering av budgeten krävs i ett senare skede.
-   * Kom ihåg att kostnader kan tillskrivas många olika former. inköp, användning av resurser och avgifter bland annat.
+   * Ta hänsyn till och följ eventuella riktlinjer, processer eller begränsningar som kunden omfattas av.
+   * Fundera på beredskaps- och granskningsprocesser om en granskning eller finjustering av budgeten krävs senare.
+   * Kom ihåg att kostnader kan tillskrivas många olika former, till exempel inköp, användning av resurser och avgifter.
 
 ### Planering {#planning}
 
@@ -127,19 +123,19 @@ När du planerar projektet konsolideras förberedelsen. Här måste ni börja ko
 
 * **Handtag**
 
-   En ren överlämning säkerställer att rätt person/grupper är medvetna om sitt ansvar i projektet.
+  Ett rent överlämnande säkerställer att rätt person/grupper är medvetna om sitt ansvar inom projektet.
 
-   Fullständiga uppgifter bör tillhandahållas/genereras för att säkerställa att de har fullständig förståelse för alla relevanta aspekter, inklusive färdplanen, omfattningen, målen, kraven och nyckeltalen.
+  Fullständiga uppgifter bör tillhandahållas/genereras för att säkerställa att de har fullständig förståelse för alla relevanta aspekter, inklusive färdplanen, omfattningen, målen, kraven och nyckeltalen.
 
 * **Riskbedömning**
 
-   För att undvika obehagliga överraskningar bör man använda riskbedömningar för att identifiera och kvantifiera eventuella risker tillsammans med deras konsekvenser och sannolikhet.
+  För att undvika obehagliga överraskningar bör man använda riskbedömningar för att identifiera och kvantifiera eventuella risker tillsammans med deras konsekvenser och sannolikhet.
 
-   Detta bör göras tidigt under projektets livscykel för att säkerställa att eventuella sårbarheter identifieras och utvärderas. Baserat på resultaten kan ni rapportera till era intressenter om huruvida de fullständiga kraven kan genomföras och, om det behövs, om det är möjligt att planera för lämpliga åtgärder som ska vidtas och spåras.
+  Detta bör göras tidigt i projektets livscykel för att säkerställa att eventuella sårbarheter identifieras och utvärderas. Baserat på resultaten kan ni rapportera till era intressenter om huruvida de fullständiga kraven kan genomföras och, om det behövs, om det är möjligt att planera för lämpliga åtgärder som ska vidtas och spåras.
 
 * **Kommunikation**
 
-   Kommunikation är alltid avgörande för att ett projekt ska lyckas. Ni måste kommunicera tydligt och effektivt för att säkerställa att alla är
+  Kommunikation är alltid avgörande för att ett projekt ska lyckas. Ni måste kommunicera tydligt och effektivt för att säkerställa att alla är
 
    * Att arbeta mot samma grundläggande mål
    * Från samma informationsbas
@@ -147,7 +143,7 @@ När du planerar projektet konsolideras förberedelsen. Här måste ni börja ko
 
 * **Sparka av**
 
-   Mötet med avaktivering används för att öka medvetenheten om att projektet har startat. Det är en bra möjlighet att
+  Mötet med avaktivering används för att öka medvetenheten om att projektet har startat. Det är en bra möjlighet att
 
    * Bjud in alla berörda parter (eller åtminstone grupprepresentanter).
    * Presentera viktiga fakta om projektet.
@@ -165,21 +161,21 @@ Att planera utvecklingsarbetet är avgörande för att säkerställa att projekt
 
 * **Utvecklingsteamet har personal och utbildning**
 
-   Innan du börjar med ett projekt bör du se till att ditt utvecklingsteam har lämplig personal och att alla teammedlemmar har utbildning för den aktuella uppgiften.
+  Innan du börjar med ett projekt bör du se till att ditt utvecklingsteam har lämplig personal och att alla teammedlemmar har utbildning för den aktuella uppgiften.
 
 * **Innehållsarkitektur**
 
-   Innehållsarkitekturen definierar och beskriver innehållets framtida arkitektur. inklusive:
+  Innehållsarkitekturen definierar och beskriver innehållets framtida arkitektur. inklusive:
 
    * Innehållsträdet. inklusive tillgångar
-   * Grundläggande strukturer. inklusive kampanjer, etc.
-   * Strukturer för flera webbplatser och språk (MSM, översättning osv.)
+   * Grundläggande strukturer. inklusive kampanjer och så vidare.
+   * Flersidiga och flerspråkiga strukturer (MSM, Translation osv.)
    * Innehåll som stöds (inklusive taggar och taggar)
    * Strategier för cachning och återanvändning av innehåll
 
 * **Systemarkitektur**
 
-   Systemarkitekturen definierar den konceptuella vyn för ditt system. inklusive (bland annat information):
+  Systemarkitekturen definierar den konceptuella vyn för ditt system. bl.a. följande:
 
    * [Systemstruktur](/help/sites-deploying/recommended-deploys.md#deployment-scenarios) för alla obligatoriska miljöer
    * Delsystem
@@ -188,42 +184,41 @@ Att planera utvecklingsarbetet är avgörande för att säkerställa att projekt
    * Servrar för varje miljö. se [Tekniska krav](/help/sites-deploying/technical-requirements.md) och [Riktlinjer för maskinvarans storlek](/help/managing/hardware-sizing-guidelines.md)
 
    * Processer för varje miljö. t.ex. krav på driftsättning och underhåll
-   * Underhållsaktiviteter (GC för datastore, optimering av TPM osv.)
-   * [Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html) cachelagring
+   * Underhållsaktiviteter (Datastore GC, TarPM-optimering och så vidare)
+   * [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=en) cachelagring
    * [Klustring](/help/sites-deploying/recommended-deploys.md#deployment-scenarios) Publicera/auktorisera resurs
    * Prestanda för klientsidan (JS minify, concat, css sprites, total number of http requests, and others)
 
 * **Programarkitektur**
 
-   Programarkitekturen definierar och beskriver de föreslagna programmens beteende.
+  Programarkitekturen definierar och beskriver de föreslagna programmens beteende.
 
-   Den fokuserar på:
+  Den fokuserar på:
 
    * Hur de interagerar med varandra och med användarna.
    * De data som ska användas och produceras av program, i stället för deras interna struktur.
 
-   Definitionerna bör omfatta följande:
+  Definitionerna bör omfatta följande:
 
    * Grundläggande kodstruktur för projektet
-   * Kodartefakter (paket, paket osv.)
+   * Kodartefakter (paket, paket och så vidare)
    * Uppdelning av mallar/komponenter och deras relationer
-   * Detaljerad information om nödvändiga anpassningar (specifika övertäckningar kommer senare)
-   * Utformning av de arbetsflöden som lösningen kräver (t.ex. skapande av innehåll, godkännande, publicering, omvandlingar, import, export osv.)
-   * Särskild hänsyn till komplexa moduler som MSM, Commerce och integrering med tredje part
-
+   * Detaljerad information om nödvändiga anpassningar (specifika överlägg kommer senare)
+   * Utformning av de arbetsflöden som lösningen kräver (t.ex. skapande av innehåll, godkännande, publicering, omvandlingar, import och export)
+   * Särskild hänsyn till komplexa moduler som MSM, Commerce och tredjepartsintegrering
 
 * **Systemintegrering**
 
-   Systemintegrering kräver att du planerar (och sedan implementerar):
+  Systemintegrering kräver att du planerar (och sedan implementerar):
 
    * Hur alla delsystem och [lösningar](/help/sites-administering/integration.md) kommer att samlas för att fungera som ett enda sammanhängande system
-   * Hur eventuella tredjepartssystem kommer att integreras. tillsammans med eventuella specialöverväganden, som offline/online, hantering på klientsidan/webbläsarsidan eller hantering av reservsidan när ett system från tredje part är offline/online
+   * Hur eventuella tredjepartssystem kommer att integreras. tillsammans med eventuella specialöverväganden som offline/online, klientsidan/webbläsaren eller reservhantering när ett tredjepartssystem är nere
 
 * **Testkoncept**
 
-   Innan du börjar utveckla bör du ta fram ett ingående och heltäckande koncept för alla [testning](/help/sites-developing/planning.md) krav för ditt projekt.
+  Innan du börjar utveckla bör du skapa ett djupgående och omfattande koncept för alla [testning](/help/sites-developing/planning.md) krav för ditt projekt.
 
-   Detta bör bland annat omfatta följande:
+  Detta bör bland annat omfatta följande:
 
    * Uppgifter om alla tester som ska utföras
    * Förberedelse av allt innehåll som krävs för dessa tester
@@ -233,15 +228,15 @@ Att planera utvecklingsarbetet är avgörande för att säkerställa att projekt
 
 * **Experience Design**
 
-   Experience Design (XD) handlar om att utforma användarupplevelsen för er lösning.
+  Experience Design (XD) innebär att utforma användarupplevelsen för er lösning.
 
-   Användarupplevelsen bör analyseras och utvecklas för både författarna och slutanvändarna av webbplatsen.
+  Användarupplevelsen bör analyseras och utvecklas för både författarna och slutanvändarna av webbplatsen.
 
 * **Support**
 
-   Innan alla supportprocesser som krävs för driftsättning, lansering, testning och rapportering tas fram bör fastställas.
+  Innan utveckling bör alla supportprocesser som krävs för att driftsätta, frisläppa, testa och rapportera problem fastställas.
 
-   Se även [Adobe supportportal](https://helpx.adobe.com/marketing-cloud/contact-support.html).
+  Se även [Adobe supportportal](https://experienceleague.adobe.com/?support-solution=General&amp;support-tab=home#support).
 
 ### Planering och drift {#operations-planning-and-operations}
 
@@ -251,34 +246,34 @@ På liknande sätt måste åtgärderna planeras på rätt sätt för att säkers
 
 * **Behörigheter**
 
-   Du måste planera och sedan implementera ett rolls- och rättighetskoncept för alla användare/grupper som ska använda lösningen.
+  Du måste planera och sedan implementera ett rolls- och rättighetskoncept för alla användare/grupper som ska använda lösningen.
 
-   Till exempel:
+  Till exempel:
 
-   * En lista med roller (dvs. grupper) med `read`/ `write` åtkomstdefinitioner för varje
+   * En lista med roller (d.v.s. grupper) med `read`/ `write` åtkomstdefinitioner för varje
 
    * Fastställande av användningen av befogenheter som påverkar publiceringsmiljön. till exempel `replicate`
    * För användare med minimal behörighet bör arbetsflöden definieras
    * Användare i `editor` gruppen ska inte ha `admin` rättigheter eller ingår i `administrators` grupp
 
-   Mer information finns i [Användaradministration och -säkerhet](/help/sites-administering/security.md).
+  Mer information finns i [Användaradministration och -säkerhet](/help/sites-administering/security.md).
 
 * **Övervakning och underhåll**
 
-   Övervakning och underhåll är viktiga aspekter av att säkerställa att lösningen fungerar smidigt när den är klar. Därför måste du definiera:
+  Övervakning och underhåll är viktiga aspekter av att säkerställa att lösningen fungerar smidigt när den är klar. Därför måste du definiera:
 
    * Vad behöver övervakas
    * Underhållsuppgifter. både vanliga och speciella fall
 
-   Se även [Övervakning och underhåll](/help/sites-deploying/monitoring-and-maintaining.md) för mer information.
+  Se även [Övervakning och underhåll](/help/sites-deploying/monitoring-and-maintaining.md) för mer information.
 
 * **Migrering**
 
-   Allt innehåll från det äldre systemet bör granskas och valideras för migrering.
+  Allt innehåll från det äldre systemet bör granskas och valideras för migrering.
 
 * **Återställningsplan**
 
-   Kontrollera att du har en återställningsplan. I en krissituation måste detta finnas tillgängligt för att säkerställa produktionsanvändningen av AEM. Detta bör omfatta situationer som säkerhetskopiering, återställning, återställning och reservlösningar.
+  Kontrollera att du har en återställningsplan. I en nödsituation måste denna vara tillgänglig för att säkerställa att AEM används vid produktionen. Detta bör omfatta situationer som säkerhetskopiering, återställning, återställning och reservlösningar.
 
 ### Utveckling {#development}
 
@@ -288,7 +283,7 @@ Utveckling är en avgörande fas som kräver mer än bara kodning.
 
 * **Utvecklingsmiljö**
 
-   Planera och dokumentera utvecklingsmiljön, inklusive:
+  Planera och dokumentera utvecklingsmiljön, inklusive:
 
    * Arkitektur
    * [Utvecklingsverktyg](/help/sites-developing/dev-tools.md)
@@ -301,14 +296,14 @@ Utveckling är en avgörande fas som kräver mer än bara kodning.
          * ett verktyg för kontinuerlig integrering, som Jenkins
          * ett verktyg för versionskontroll, som GIT/SVN
          * en databashanterare för byggarfelaktigheter, som Archiva/Nexus
+
    * Programintegrering/beroenden från tredje part
    * [Integrering/beroenden av lösningar](/help/sites-administering/integration.md)
    * Distributionsplats
 
-
 * **Testsystem**
 
-   Planera och dokumentera testmiljön, inklusive:
+  Planera och dokumentera testmiljön, inklusive:
 
    * Arkitektur
    * beroenden av utvecklingsbyggen, inklusive nattbyggen
@@ -318,7 +313,7 @@ Utveckling är en avgörande fas som kräver mer än bara kodning.
 
 * **Produktionssystem**
 
-   Planera och dokumentera produktionsmiljön, inklusive:
+  Planera och dokumentera produktionsmiljön, inklusive:
 
    * Arkitektur
    * Distributionsplats
@@ -329,7 +324,7 @@ Utveckling är en avgörande fas som kräver mer än bara kodning.
 
 * **Integrering**
 
-   Planera, dokumentera och testa alla aspekter av systemet och [integrering av lösningar](/help/sites-administering/integration.md), inklusive:
+  Planera, dokumentera och testa alla aspekter av systemet och [integrering av lösningar](/help/sites-administering/integration.md), inklusive:
 
    * En automatiserad testningsstrategi
    * Automatiserade processer till [flytta applikationer från utveckling till testning och sedan produktion](/help/managing/enterprise-devops.md#code-movement)
@@ -337,18 +332,18 @@ Utveckling är en avgörande fas som kräver mer än bara kodning.
 
 * **Migrering**
 
-   Planera, dokumentera och testa alla aspekter av innehållsmigreringen. inklusive:
+  Planera, dokumentera och testa alla aspekter av innehållsmigreringen. inklusive:
 
    * Innehållsarkitektur
    * Migreringsstrategi
 
 * **Kommunikation**
 
-   Se till att alla teammedlemmar och projektmedlemmar hålls uppdaterade vid behov.
+  Se till att alla teammedlemmar och projektmedlemmar hålls uppdaterade vid behov.
 
 * **Dokumentation**
 
-   Dokumentera lösningen fullt ut. inklusive:
+  Dokumentera lösningen fullt ut. inklusive:
 
    * Drifthandbok
    * Anpassningar som kan påverka uppgraderingar
@@ -368,26 +363,27 @@ När den nya applikationen är tillgänglig måste den genomgå strikta tester, 
 
 * **Test av godkännande av slutanvändare**
 
-   [Testning av godkännande av användare](/help/sites-developing/acceptance-signoff.md) (UAT) är avgörande för att säkerställa att
+  [Testning av godkännande av användare](/help/sites-developing/acceptance-signoff.md) (UAT) är avgörande för att säkerställa att
 
    * Lösningen uppfyller användar-/kundkraven
    * Kunden/användarna accepterar lösningen (funktion, design och prestanda)
 
-   Det bör finnas en formaliserad checklista för överlämnande av kunder. helst automatiseras och körs på nightly mot en ögonblicksbild. Resultatet ska skickas till projektledaren och utvecklingsteamet
+  Det bör finnas en formaliserad checklista för överlämnande av kunder. helst automatiseras och körs på nightly mot en ögonblicksbild. Resultatet ska skickas till projektledaren och utvecklingsteamet
 
 * **Prestanda- och belastningstester**
 
-   Prestanda- och belastningstester används för att säkerställa att lösningen uppfyller de nödvändiga prestandanivåerna vid medelbelastning och toppbelastning.
+  Prestanda- och belastningstester används för att säkerställa att lösningen uppfyller de nödvändiga prestandanivåerna vid medelbelastning och toppbelastning.
 
-   Mer information om prestandatestning finns i:
+  Mer information om prestandatestning finns i:
 
    * [Prestandatestning](/help/sites-deploying/configuring-performance.md)
    * [Planera och köra testning](/help/sites-developing/planning.md)
 
    * [Riktlinjer för grundläggande prestanda](/help/sites-deploying/configuring-performance.md#basic-performance-guidelines)
-   >[!NOTE]
-   >
-   >Denna process måste fortsätta under normal användning av AEM, men dessa inledande steg är de viktigaste.
+
+  >[!NOTE]
+  >
+  >Denna process måste fortsätta under normal användning av AEM, men dessa inledande steg är de viktigaste.
 
 ### Utrullning {#rollout}
 
@@ -397,17 +393,17 @@ För att lansera ditt nya program krävs noggrann planering för att säkerstäl
 
 * **Förberedelse**
 
-   Förberedelser och planering kommer att bidra till en smidig utrullning.
+  Förberedelser och planering kommer att bidra till en smidig utrullning.
 
 * **Utbildning**
 
-   se till att all berörd personal har utbildats.
+  se till att all berörd personal har utbildats.
 
-   Se [Adobe Experience Manager](https://training.adobe.com/training/courses.html#solution=adobeExperienceManager) i kurskatalogen.
+  Se [Adobe Experience Manager](https://training.adobe.com/training/courses.html#solution=adobeExperienceManager) i kurskatalogen.
 
 * **Administratörer utbildade**
 
-   Se till att era lösningsadministratörer har:
+  Se till att era lösningsadministratörer har:
 
    * Har tränats
    * erhållit lämpligt utbildningsmaterial
@@ -415,7 +411,7 @@ För att lansera ditt nya program krävs noggrann planering för att säkerstäl
 
 * **Användare utbildade**
 
-   Kontrollera att författarna har:
+  Kontrollera att författarna har:
 
    * Har tränats
    * erhållit lämpligt utbildningsmaterial
@@ -423,43 +419,43 @@ För att lansera ditt nya program krävs noggrann planering för att säkerstäl
 
 * **Genomstrykningstester**
 
-   Penetrationstester simulerar en attack på ett datorsystem för att identifiera potentiella säkerhetsbrister.
+  Penetrationstester simulerar en attack på ett datorsystem för att identifiera potentiella säkerhetsbrister.
 
 * **Genomstrykning/säkerhetstester**
 
-   För att försäkra dig om att din lösning är säker ska du utföra specifika penetrationstester tillsammans med ett större antal säkerhetstester.
+  För att försäkra dig om att din lösning är säker ska du utföra specifika penetrationstester tillsammans med ett större antal säkerhetstester.
 
-   Se [Säkerhetschecklista](/help/sites-administering/security-checklist.md) för mer information.
+  Se [Säkerhetschecklista](/help/sites-administering/security-checklist.md) för mer information.
 
 ### Go Live {#go-live}
 
-Du vill att ditt Go Live ska vara så smidigt som möjligt. Återigen behöver de sista stegen planera för ren körning.
+Du vill att ditt Go Live ska vara så smidigt som möjligt. Återigen behöver de sista stegen vara att planera för en ren exekvering.
 
 #### Milstolpar {#milestones-7}
 
 * **Förberedelse**
 
-   Förberedelser och planering säkerställer smidiga Go Live.
+  Förberedelser och planering säkerställer smidiga Go Live.
 
 * **Dokumentskydd**
 
-   Bekräfta säkerheten för lösningen för både interna och externa användare och deras innehåll.
+  Bekräfta säkerheten för lösningen för både interna och externa användare och deras innehåll.
 
 * **Reserv**
 
-   Se till att alla system, procedurer och mekanismer som krävs för reservdriftsättning finns på plats innan du går live.
+  Se till att alla system, procedurer och mekanismer som krävs för reservlösningar finns på plats innan du publicerar.
 
 * **Support**
 
-   Se till att supporttjänsterna finns på plats och är klara.
+  Se till att supporttjänsterna finns på plats och är klara.
 
 * **Övergång**
 
-   Planera och genomför övergången till produktionsmiljön och användarna.
+  Planera och genomför övergången till produktionsmiljön och användarna.
 
 * **Rulla ut**
 
-   Förbered och genomför röktesterna.
+  Förbered och genomför röktesterna.
 
 ## Persona {#persona}
 
@@ -493,7 +489,7 @@ Lösningsarkitekten:
 
 * Ansvarar för lösningens och systemets konstruktion på hög nivå.
 * Hjälper till att definiera implementeringsstrategin för AEM. Exempel: om en klustrad installation ska implementeras, om ett kallt vänteläge eller när ett leveransnätverk (CDN) krävs.
-* Definiera också den AEM lösningsarkitekturen baserat på kundens krav. Detta kan omfatta konceptet för användarroller (med relaterade behörigheter), relationen mellan mallar och komponenter eller när flera platser ska användas.
+* Definiera också den AEM lösningsarkitekturen baserat på kundens krav. Detta kan omfatta konceptet för användarroller (med relaterade behörigheter), relationen mellan mallar och komponenter eller när multisitehantering ska användas.
 
 ### Affärsanalytiker {#business-analyst}
 
@@ -521,7 +517,7 @@ Utvecklingsledd:
    * säkerställa att den är anpassad efter nyckeltal för verksamhet och prestanda
    * med beaktande av kriterier för framgång och definition,
 
-* Fungerar nära ihop med arkitekten (särskilt när du utarbetar utvecklingsstrategin för AEM) för att definiera aspekter som förhållandet mellan mallar och komponenter, integreringsstrategin för tredjepartsprogram och eventuella specialfunktioner.
+* Fungerar nära ihop med arkitekten (särskilt när du utarbetar utvecklingsstrategin för AEM) för att definiera aspekter som förhållandet mellan mallar och komponenter, integrationsstrategin för tredjepartsprogram och eventuella specialfunktioner.
 
 ### Kvalitetslead {#quality-lead}
 
@@ -548,7 +544,7 @@ Systemteknikern:
 Säkerhetsledaren:
 
 * Ansvarar för lösningens övergripande säkerhetskoncept och ser till att det är i linje med alla krav och policyer från kunden.
-* levererar ett säkerhetskoncept, säkerhetsfunktioner och rekommendationer för alla maskinvarubaserade säkerhetsbegrepp, som zoner och brandväggar.
+* tillhandahåller ett säkerhetskoncept, säkerhetsfunktioner och rekommendationer för eventuella maskinvarubaserade säkerhetsbegrepp, som zoner och brandväggar.
 
 ### Annan person {#other-persona}
 
@@ -566,7 +562,7 @@ Säkerhetsledaren:
 
 * Teknikskribenter
 
-   * Beroende på projektets omfattning och karaktär kan specialiserade tekniska skribenter användas för att skriva riktlinjer och handböcker för särskilda grupper. t.ex. en underhållshandbok för systemadministratörer eller en användarhandbok för författarna.
+   * Beroende på projektets omfattning och karaktär kan teknikskribenter använda särskilda riktlinjer och handböcker för särskilda grupper. Exempel: en underhållshandbok för systemadministratörer eller en användarhandbok för författarna.
 
 * Systemadministratörer
 
@@ -587,7 +583,7 @@ Checklistorna täcker **Obligatoriska dokument** och **Leveranser** för varje m
 
 The **Obligatoriska dokument** behövs av rätt person när de producerar sina produkter.
 
-För varje **Obligatoriskt dokument** Personen ska ange
+För varje **Obligatoriskt dokument** bör personuppgifterna ange
 
 * **J/N**: om den har tagits emot.
 * **1-3**: En uppgift om kvaliteten på det mottagna dokumentet.
@@ -596,7 +592,7 @@ För varje **Obligatoriskt dokument** Personen ska ange
 
 För varje milstolpe ansvarar rätt person för att leverera specifika dokument och därmed ta sitt ansvar för en viss milstolpe.
 
-För varje **Slutprodukt** Personen måste ange
+För varje **Slutprodukt** måste personuppgifterna ange
 
 * **J/N**: om den är slutförd.
 
@@ -632,4 +628,4 @@ De bästa sätten att distribuera, administrera, utveckla eller skapa finns i f�
 
 * Relaterad dokumentation
 
-   * Adobe Experience Cloud - [Planering för Adobe Experience Cloud](https://helpx.adobe.com/marketing-cloud/how-to/planning.html)
+   * Adobe Experience Cloud - [Planering för Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/services/core-services.html)

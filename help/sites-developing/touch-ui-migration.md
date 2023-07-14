@@ -1,28 +1,24 @@
 ---
 title: Migrering till Touch UI
-seo-title: Migration to the Touch UI
 description: Migrering till Touch UI
-seo-description: Migration to the Touch UI
-uuid: 47c43b56-532b-4ada-8503-04d66bab3564
 contentOwner: AEM Docs
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: introduction
-discoiquuid: b315720f-e9b8-4063-99e2-1b9aa6bba460
 docset: aem65
 exl-id: 33dc1ee7-1e34-43d8-9265-c66535f5e002
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
+source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
 workflow-type: tm+mt
-source-wordcount: '667'
+source-wordcount: '659'
 ht-degree: 1%
 
 ---
 
 # Migrering till Touch UI{#migration-to-the-touch-ui}
 
-Från och med version 6.0 har Adobe Experience Manager (AEM) infört ett nytt användargränssnitt som kallas *pekaktiverat användargränssnitt* (kallas även *pekgränssnitt*). Den är anpassad efter Adobe Marketing Cloud och Adobe användargränssnittets allmänna riktlinjer. Det här har blivit standardgränssnittet i AEM med det äldre, skrivbordsorienterade gränssnittet som kallas *klassiskt användargränssnitt*.
+Från och med version 6.0 har Adobe Experience Manager (AEM) infört ett nytt användargränssnitt som kallas *pekaktiverat användargränssnitt* (kallas även *pekgränssnitt*). Den är anpassad efter Adobe Experience Cloud och Adobe användargränssnittets allmänna riktlinjer. Det här har blivit standardgränssnittet i AEM med det äldre, skrivbordsorienterade gränssnittet som kallas *klassiskt användargränssnitt*.
 
-Om du har använt AEM med klassiskt gränssnitt måste du vidta åtgärder för att migrera instansen. Den här sidan är avsedd att fungera som en språngbräda genom länkar till enskilda resurser.
+Om du har använt AEM med klassiskt användargränssnitt ska du vidta åtgärder för att migrera instansen. Den här sidan är avsedd att fungera som en språngbräda genom länkar till enskilda resurser.
 
 >[!NOTE]
 >
@@ -30,7 +26,7 @@ Om du har använt AEM med klassiskt gränssnitt måste du vidta åtgärder för 
 
 ## Grunderna {#the-basics}
 
-När du migrerar bör du vara medveten om följande (stora) skillnader mellan det klassiska gränssnittet och det pekande gränssnittet:
+Tänk på följande stora skillnader mellan det klassiska gränssnittet och pekgränssnittet när du migrerar:
 
 <table>
  <tbody>
@@ -40,7 +36,7 @@ När du migrerar bör du vara medveten om följande (stora) skillnader mellan de
   </tr>
   <tr>
    <td>Beskrivs i JCR-databasen som en nodstruktur. Varje nod som representerar ett element i användargränssnittet kallas för <em>ExtJS-widget</em> och återges på klientsidan av <code>ExtJS</code>.</td>
-   <td>Beskrivs också i JCR-databasen som en nodstruktur. I det här fallet refererar alla noder till en Sling-resurstyp (Sling-komponent), som ansvarar för återgivningen. Gränssnittet renderas alltså (i stort) på serversidan.</td>
+   <td>Beskrivs också i JCR-databasen som en nodstruktur. I det här fallet refererar dock alla noder till en Sling-resurstyp (Sling-komponent) som ansvarar för återgivningen. Gränssnittet renderas alltså (i stort) på serversidan.</td>
   </tr>
   <tr>
    <td><p><code>sling:resourceType</code></p>
@@ -66,11 +62,11 @@ När du migrerar bör du vara medveten om följande (stora) skillnader mellan de
     </ul> </td>
   </tr>
   <tr>
-   <td><p>Javascript-plats:</p>
+   <td><p>JavaScript-plats:</p>
     <ul>
      <li>Imperativa delar bäddas in direkt med avlyssnare eller hanteras i klientlibs.</li>
     </ul> </td>
-   <td><p>Javascript-plats:</p>
+   <td><p>JavaScript-plats:</p>
     <ul>
      <li>Imperativa delar kan inte bäddas in i dialogdefinitionen. olika ansvarsområden.</li>
     </ul> </td>
@@ -78,11 +74,11 @@ När du migrerar bör du vara medveten om följande (stora) skillnader mellan de
   <tr>
    <td><p>Händelsehantering:</p>
     <ul>
-     <li>Dialogrutewidgetar refererar direkt till Javascript-kod.</li>
+     <li>Dialogwidgetar refererar direkt till JavaScript-kod.</li>
     </ul> </td>
    <td><p>Händelsehantering:</p>
     <ul>
-     <li>Javascript observerar dialoghändelser.</li>
+     <li>JavaScript observerar dialogrutehändelser.</li>
     </ul> </td>
   </tr>
   <tr>
@@ -107,7 +103,7 @@ Kontrollera status och relaterade rekommendationer innan du börjar:
 * [Status för Touch UI-funktioner](/help/release-notes/touch-ui-features-status.md)
 * [Användargränssnitt Recommendations för kunder](/help/sites-deploying/ui-recommendations.md)
 
-Grundläggande information om hur du utvecklar användargränssnittet för pekskärmar ger en solid grund:
+Grundläggande information om hur du utvecklar användargränssnittet för pekskärmar är en stabil grund:
 
 * [Koncepten i det AEM användargränssnittet med pekskärm](/help/sites-developing/touch-ui-concepts.md)
 * [Struktur för det AEM användargränssnittet med pekskärm](/help/sites-developing/touch-ui-structure.md)
@@ -149,12 +145,12 @@ Du kan också anpassa konsolerna:
 Fullständig information om hur du utvecklar AEM finns i samlingen av resurser under:
 
 * [Utveckla användarhandbok](/help/sites-developing/home.md)
-* [Bevilja gränssnittsdokumentation](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/index.html)
+* [Bevilja gränssnittsdokumentation](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)
 * [AEM 6.5 Sites Tutorials and Videos](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/overview.html)
 * [Komma igång med utveckling i AEM Sites – WKND-självstudiekurs](/help/sites-developing/getting-started.md)
-* [AEM Gems](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-index.html)
+* [AEM Gems](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/overview.html?lang=en)
 * [AEM Modernization Tools](https://opensource.adobe.com/aem-modernize-tools/)
 
 >[!CAUTION]
 >
->AEM är en gemenskapsinsats som inte stöds eller motiveras av Adobe.
+>Verktyg för AEM är en del av communityn och stöds inte eller garanteras inte av Adobe.

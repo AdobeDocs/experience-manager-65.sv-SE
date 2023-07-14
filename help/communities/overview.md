@@ -1,19 +1,15 @@
 ---
 title: AEM Communities - översikt
-seo-title: AEM Communities Overview
 description: En översikt över AEM Communities funktioner och inställningar
-seo-description: An overview of AEM Communities features and setup
-uuid: 14405847-36ae-4958-bdc6-d799ecd05f06
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
-discoiquuid: 44374006-f711-4af8-a1fe-f89164f79581
 docset: aem65
 exl-id: d6243dff-a067-455c-a326-5f451f225efd
-source-git-commit: 9f9f80eb4cb74b687c7fadd41d0f8ea4ee967865
+source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
 workflow-type: tm+mt
-source-wordcount: '1273'
+source-wordcount: '1265'
 ht-degree: 0%
 
 ---
@@ -60,7 +56,7 @@ The [guide för att skapa webbplatser](/help/communities/sites-console.md):
 
    * Responsiv design: använder [Twitter Bootstrap-teman](https://getbootstrap.com)
 
-   * Inloggning: självregistrering, [social inloggning](/help/communities/social-login.md), användarprofiler
+   * Logga in: självregistrering, [social inloggning](/help/communities/social-login.md), användarprofiler
 
       * Meddelanden: medlemmar ser händelser som är relevanta för dem och användargenererat innehåll där de är [@nämnda](/help/communities/overview.md#mentionssupport).
 
@@ -75,7 +71,7 @@ The [guide för att skapa webbplatser](/help/communities/sites-console.md):
    * Varumärke: valfri överföring av en banderollbild för visning på alla sidor i communitywebbplatsen
    * Navigeringsmeny: navigeringslänkar finns för de funktioner som ingår i communitywebbplatsmallen.
 
-Om du snabbt vill skapa en ny community-webbplats kan du besöka [Komma igång med AEM Communities](/help/communities/getting-started.md).
+Om du snabbt vill skapa en communitysajt kan du besöka [Komma igång med AEM Communities](/help/communities/getting-started.md).
 
 ## Community Content Persistence {#community-content-persistence}
 
@@ -85,9 +81,9 @@ Community-innehåll är enkelt att komma åt via lagringsresursens leverantör (
 
 Mer information om publicering av communityinnehåll och rekommenderade distributioner finns i:
 
-* [Community-innehåll](/help/communities/working-with-srp.md), som diskuterar de tillgängliga SRP-lagringsalternativen för UGC.
-* [Rekommenderade topologier](/help/communities/topologies.md)som diskuterar topologier baserat på användningsfall och SRP-val.
-* [Uppgradera till AEM 6.5 Communities](/help/communities/upgrade.md), som ger användbar information om UGC när du går över till AEM 6.5.
+* [Community-innehåll](/help/communities/working-with-srp.md)- diskuterar de tillgängliga SRP-lagringsalternativen för UGC.
+* [Rekommenderade topologier](/help/communities/topologies.md)- diskuterar topologier baserat på användningsfall och SRP-val.
+* [Uppgradera till AEM 6.5 Communities](/help/communities/upgrade.md)- ger användbar information om UGC vid övergång till AEM 6.5.
 
 ## Communities-konsoler {#communities-consoles}
 
@@ -135,11 +131,11 @@ Den globala verktygskonsolen ger tillgång till följande verktyg för communiti
 
 * [Komponentguide](/help/communities/components-guide.md)
 
-   * En exempelplats, [Community-komponenter](https://localhost:4502/editor.html/content/community-components/en.html), som innehåller ett exempel på alla Communities-komponenter med deras standardkonfiguration och möjlighet att experimentera med dem.
+   * En exempelplats, [Community-komponenter](https://localhost:4502/editor.html/content/community-components/en.html) innehåller ett exempel på alla communitykomponenter med deras standardkonfiguration och möjlighet att experimentera med dem.
 
 ## Mallar för communitywebbplatser {#community-site-templates}
 
-Skapandet av communitysajter bygger på ett urval av mallar för communitysajter som snabbt skapar en community som är oberoende av valfri exempelwebbplats.
+Skapandet av communitysajter baseras på ett urval av en mall för communitysajter som snabbt skapar en community som är oberoende av valfri exempelwebbplats.
 
 En mall för communitysajter, som består av communityfunktioner och mallar för communitygrupper, innehåller en struktur för en community-webbplats som inloggning, användarprofiler, meddelanden, webbplatsmeny, sökning, teman och varumärken.
 
@@ -155,7 +151,7 @@ Se [Konsol för communityfunktioner](/help/communities/functions.md).
 
 ## Community-grupper och gruppmallar {#community-groups-and-group-templates}
 
-Funktionen för communitygrupper är möjligheten för en undercommunity att skapas dynamiskt på en community-webbplats av behöriga användare och communitymedlemmar från både författarmiljön och publiceringsmiljön.
+Funktionen för communitygrupper är möjligheten för en undercommunity att skapas dynamiskt på en community-webbplats av behöriga användare och community-medlemmar från både författarmiljön och publiceringsmiljön.
 
 I författarmiljön kan communitygrupper (undergrupper) skapas inom en befintlig communitywebbplats eller kapslas inom en befintlig grupp när mallstrukturen innehåller [Funktionen Grupper](/help/communities/functions.md#groups-function).
 
@@ -195,7 +191,7 @@ En engagemangscommunity kan innehålla:
 * Betyg och emblem
 * Analysrapporter
 
-Om du snabbt vill skapa en ny engagemangscommunity kan du besöka [Komma igång med AEM Communities](/help/communities/getting-started.md).
+Om du snabbt vill skapa en engagemangscommunity kan du besöka [Komma igång med AEM Communities](/help/communities/getting-started.md).
 
 ## AEM Demo Machine {#aem-demo-machine}
 
@@ -208,7 +204,7 @@ Den AEM demomaskinen innehåller:
 
 * Paket som ska installeras.
 
-AEM Demo Machine har testats med CQ 5.5, CQ 5.6.1, AEM 6.0, AEM 6.1, AEM 6.2, AEM 6.3 och AEM 6.4 i Windows, MacOS och Linux.
+AEM Demo Machine har testats med CQ 5.5, CQ 5.6.1, AEM 6.0, AEM 6.1, AEM 6.2, AEM 6.3 och AEM 6.4 i Windows, MacOS och Linux®.
 
 AEM Demo Machine kräver en giltig AEM.
 

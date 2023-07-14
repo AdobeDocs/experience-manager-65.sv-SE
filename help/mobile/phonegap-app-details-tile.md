@@ -1,18 +1,14 @@
 ---
 title: Hantera apppanel
-seo-title: Manage App Tile
 description: Följ den här sidan om du vill veta mer om Hantera apppanel på appinstrumentpanelen som gör det möjligt att ändra information om programmet.
-seo-description: Follow this page to learn about the Manage App Tile on the app dashboard that provides the ability to modify details about the Application.
-uuid: bde75ecd-8694-427c-9b16-2c4ab2fd4d8b
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-adobe-phonegap-enterprise
-discoiquuid: a87834c9-247c-49fa-9978-a969230db91c
 exl-id: 8bcf70ef-94d2-4958-90b5-bc375b360916
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
 workflow-type: tm+mt
-source-wordcount: '1263'
+source-wordcount: '1252'
 ht-degree: 0%
 
 ---
@@ -21,9 +17,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (t.ex. Reagera). [Läs mer](/help/sites-developing/spa-overview.md).
+>Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (till exempel React). [Läs mer](/help/sites-developing/spa-overview.md).
 
-The **Hantera program** På panelen App Dashboard kan du ändra information om programmet. Om du vill öppna informationssidan klickar du på länken för information i panelen Hantera app. På sidan Hantera program kan du redigera inställningarna för PhoneGap Application Configuration (config.xml) och förbereda programmet för att skickas till olika programarkiv.
+The **Hantera program** På panelen App Dashboard kan du ändra information om programmet. Om du vill öppna informationssidan klickar du på informationslänken i panelen Hantera program. På sidan Hantera program kan du redigera inställningarna för PhoneGap Application Configuration (config.xml) och förbereda programmet för att skickas till olika programarkiv.
 
 ![chlimage_1-116](assets/chlimage_1-116.png)
 
@@ -41,7 +37,7 @@ Du kan redigera **Namn**, **Upphovsman**, **Kort beskrivning** och **Beskrivning
 
 Varje plattform för mobilapplikationer beskriver vilka data som samlas in, specifikt för varje applikationsbutik.
 
-De plattformar som visas styrs av innehållet config.xml i PhoneGap:
+De plattformar som visas styrs av innehållet config.xml för PhoneGap:
 
 ```xml
 <widget>
@@ -50,7 +46,7 @@ De plattformar som visas styrs av innehållet config.xml i PhoneGap:
 </widget>
 ```
 
-Alla leverantörsapplikationsbutiker, t.ex. Apple App Store eller Google Play Store, kräver en eller flera skärmdumpar av mobilappen för att kunna visa din applikationsinformation för kunderna. Skärmbilderna kan ha strikta krav när det gäller dimensioner och innehåll (de måste egentligen representera programmet). AEM Apps har stöd för att välja och hantera skärmbilderna för de plattformar som stöds och visa de portdimensioner som krävs i respektive leverantörs programbutik.
+Alla leverantörsapplikationsbutiker - till exempel Apple App Store eller Google Play Store - kräver en eller flera skärmdumpar av mobilappen för att visa din applikationsinformation för kunderna. Skärmbilderna kan ha strikta krav när det gäller dimensioner och innehåll (de måste egentligen representera programmet). AEM Apps har stöd för att välja och hantera skärmbilderna för de plattformar som stöds och visa de portdimensioner som krävs i respektive leverantörs programbutik.
 
 >[!NOTE]
 >
@@ -78,7 +74,7 @@ I det här avsnittet definierar du URL:en för Content Update Server, landningss
 
 **PhoneGap-version** är den version i vilken du vill kompilera programmet med PhoneGap. Bästa sättet är att hålla jämna steg med den aktuella versionen för att vara säker på att du får de senaste och bästa funktionerna och felkorrigeringarna.
 
-**URL för Content Update Server** är den URL som ditt program använder för att anropa ContentSync-uppdateringar. Den måste anges till din dispatcher-URL eller, om inte en dispatcher används, till en av dina publiceringsinstanser som ska användas för ContentSync-uppdateringar av programmet.
+**URL för Content Update Server** är den URL som ditt program använder för att anropa ContentSync-uppdateringar. Den måste anges till din Dispatcher-URL eller, om inte en Dispatcher används, till en av dina publiceringsinstanser som ska användas för ContentSync-uppdateringar av programmet.
 
 ![chlimage_1-119](assets/chlimage_1-119.png)
 
@@ -112,9 +108,9 @@ Exportfunktionen används för att underlätta insamling av skärmbilder och met
 
 ![chlimage_1-120](assets/chlimage_1-120.png)
 
-#### Android-metadata {#android-metadata}
+#### Android™-metadata {#android-metadata}
 
-När du väljer Android-plattformen finns det inga anpassade metadata som kan ställas in. När du klickar på nedladdningsknappen som zip-fil skapas en egenskapsfil som innehåller alla metadata och associerade skärmbilder.
+När du väljer Android™-plattformen finns det inga anpassade metadata som kan ställas in. När du klickar på nedladdningsknappen skapas en ZIP-fil med en egenskapsfil som innehåller alla metadata och associerade skärmbilder.
 
 Exportfunktionen används för att underlätta insamling av skärmbilder och metadata som kan skickas till programutgivaren för indata till den leverantörsspecifika programbutiken.
 
@@ -124,7 +120,7 @@ Exportfunktionen används för att underlätta insamling av skärmbilder och met
 
 En av de viktigaste funktionerna i AEM är möjligheten att låta ett mobilprogram begära nytt innehåll via ContentSync, där innehållet kan vara HTML-resurser, sidor, video, bilder, text och mycket mer. När en innehållsförfattare har uppdaterat innehållet och sedan publicerat det gör servern innehållsuppdateringen tillgänglig för det mobilprogram som ska laddas ned.
 
-Egenskapen URL för Content Update Server är den URL som måste peka på en publiceringsinstans. antingen direkt eller via avsändaren eller CDN. Formatet på URL:en är helt enkelt:
+Egenskapen URL för Content Update Server är den URL som måste peka på en publiceringsinstans. antingen direkt eller via Dispatcher eller CDN. Formatet på URL:en är helt enkelt:
 
 `https://[hostname]:[port]`
 
@@ -150,13 +146,13 @@ The **Skärmbilder** På -fliken visas de skärmbildupplösningar som stöds på
 
 ### Fliken Autentisering {#the-authentication-tab}
 
-The **Autentisering** På -fliken kan du välja en OAuth-klient som ska associeras med ditt program och göra det möjligt för en utvecklare att använda Adobe Experience Manager OAuth-autentisering.
+The **Autentisering** kan du välja en OAuth-klient att koppla till programmet och göra det möjligt för en utvecklare att använda Adobe Experience Manager OAuth-autentisering.
 
 ![chlimage_1-124](assets/chlimage_1-124.png)
 
 ### Nästa steg {#the-next-steps}
 
-När du har lärt dig mer om hur du hanterar apppaneler på programkontrollpanelen kan du läsa följande resurser för andra redigeringsroller:
+När du har lärt dig mer om hur du hanterar apppaneler i programkontrollpanelen kan du läsa följande resurser för andra redigeringsroller:
 
 * [Redigera appmetadata](/help/mobile/phonegap-editmetadata.md)
 * [Programdefinitioner](/help/mobile/phonegap-app-definitions.md)

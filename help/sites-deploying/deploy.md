@@ -1,19 +1,15 @@
 ---
 title: Driftsättning och underhåll
-seo-title: Deploying and Maintaining
 description: Lär dig hur du kommer igång med AEM.
-seo-description: Learn how to get started with the AEM installation.
-uuid: 4429ac4d-abd7-47d8-b19d-773accb7cc7a
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: deploying
-discoiquuid: e48cc0ed-688c-44c8-b6d6-5f3c8593a295
 docset: aem65
 exl-id: 3df0662a-0768-4b56-8b94-c517657b4bd9
-source-git-commit: 9052ed3e89fdc67d94fc60bbff64d42255565767
+source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
 workflow-type: tm+mt
-source-wordcount: '1802'
+source-wordcount: '1766'
 ht-degree: 1%
 
 ---
@@ -64,15 +60,15 @@ När du har lärt dig grunderna hittar du mer avancerad och detaljerad informati
 
 ### Vad är AEM? {#what-is-aem}
 
-Adobe Experience Manager är ett webbaserat klient-serversystem för att bygga, hantera och driftsätta kommersiella webbplatser och tillhörande tjänster. Det kombinerar ett antal funktioner på infrastruktur- och applikationsnivå i ett enda integrerat paket.
+Adobe Experience Manager är ett webbaserat klient-serversystem för att bygga, hantera och driftsätta kommersiella webbplatser och tillhörande tjänster. Den kombinerar flera funktioner på infrastruktur- och applikationsnivå i ett enda integrerat paket.
 
 På infrastrukturnivå AEM följande:
 
 * **Webbprogramserver**: AEM kan distribueras i fristående läge (det inkluderar en integrerad Jetty-webbserver) eller som ett webbprogram i en tredjepartsprogramserver.
 * **Web Application Framework**: AEM innehåller Sling Web Application Framework som förenklar skrivandet av RESTful, innehållsorienterade webbprogram.
-* **Innehållsdatabas**: AEM innehåller en Java Content Repository (JCR), en typ av hierarkisk databas som är särskilt utformad för ostrukturerade och halvstrukturerade data. I databasen lagras inte bara användarriktat innehåll utan även all kod, mallar och interna data som används av programmet.
+* **Innehållsdatabas**: AEM innehåller en Java™ Content Repository (JCR), en typ av hierarkisk databas som är särskilt utformad för ostrukturerade och halvstrukturerade data. I databasen lagras inte bara användarriktat innehåll utan även all kod, mallar och interna data som används av programmet.
 
-AEM bygger på denna bas och erbjuder även ett antal funktioner på programnivå för att hantera:
+AEM bygger på denna bas och erbjuder även flera funktioner på programnivå för att hantera:
 
 * **Webbplatser**
 * **Mobila program**
@@ -88,16 +84,16 @@ AEM server är **Java-baserad** och kan köras på de flesta operativsystem som 
 
 ### Vanliga distributionsscenarier {#typical-deployment-scenarios}
 
-I AEM är &quot;instance&quot; en kopia av AEM som körs på en server. AEM omfattar vanligen minst två instanser, vanligtvis på separata maskiner:
+I AEM är &quot;instance&quot; en kopia av AEM som körs på en server. AEM omfattar vanligtvis minst två instanser, som vanligtvis körs på olika datorer:
 
 * **Upphovsman**: En AEM som används för att skapa, överföra och redigera innehåll och för att administrera webbplatsen. När innehållet är klart att publiceras replikeras det till publiceringsinstansen.
 * **Publicera**: En AEM som skickar det publicerade innehållet till allmänheten.
 
-De här instanserna är identiska vad gäller installerad programvara. De skiljer sig bara åt genom konfiguration. Dessutom använder de flesta installationer en dispatcher:
+De här instanserna är identiska vad gäller installerad programvara. De skiljer sig bara åt genom konfiguration. Dessutom använder de flesta installationer en Dispatcher:
 
-* **Dispatcher**: En statisk webbserver (Apache httpd, Microsoft IIS osv.) utökad med AEM. Den cachelagrar webbsidor som skapats av publiceringsinstansen för att förbättra prestandan.
+* **Dispatcher**: En statisk webbserver (Apache httpd, Microsoft® IIS o.s.v.) som utökas med AEM Dispatcher-modulen. Den cachelagrar webbsidor som skapats av publiceringsinstansen för att förbättra prestandan.
 
-Det finns många avancerade alternativ och funktioner för den här konfigurationen, men det grundläggande mönstret för författare, publicering och utskickare är kärnan i de flesta distributioner. Vi börjar med att fokusera på en relativt enkel lösning. Därefter kommer vi att diskutera avancerade alternativ för driftsättning.
+Det finns många avancerade alternativ och lite mer detaljerade anvisningar för den här konfigurationen, men det grundläggande mönstret för författare, publicering och utskickare är kärnan i de flesta distributioner. Vi börjar med att fokusera på en enkel konfiguration. Här följer diskussioner om avancerade driftsättningsalternativ.
 
 I följande avsnitt beskrivs båda scenarierna:
 
@@ -113,15 +109,15 @@ Mer information om de typiska lokala distributionerna finns i [Rekommenderade di
 
 ### Managed Services med Cloud Manager {#managed-services-using-cloud-manager}
 
-AEM Managed Services är en komplett lösning för hantering av digitala upplevelser. Det ger fördelar med upplevelseleverans i molnet samtidigt som alla kontroll-, säkerhets- och anpassningsfördelar vid en lokal driftsättning bibehålls. AEM Managed Services gör det möjligt för kunderna att lansera snabbare genom att driftsätta i molnet och även genom att lära sig de bästa metoderna och den bästa supporten från Adobe. Organisationer och företagsanvändare kan engagera kunderna på minimal tid, öka marknadsandelen och fokusera på att skapa innovativa marknadsföringskampanjer samtidigt som IT-avdelningen minskar bördan.
+AEM Managed Services är en komplett lösning för hantering av digitala upplevelser. Det ger fördelar med upplevelseleverans i molnet samtidigt som man behåller kontrollen, säkerheten och anpassningsfördelarna med en lokal driftsättning. AEM Managed Services gör det möjligt för kunderna att lansera snabbare genom att driftsätta i molnet och även genom att lära sig de bästa metoderna och den bästa supporten från Adobe. Organisationer och företagsanvändare kan engagera kunderna på minimal tid, öka marknadsandelen och fokusera på att skapa innovativa marknadsföringskampanjer samtidigt som IT-avdelningen minskar bördan.
 
 Med AEM Managed Services kan man dra nytta av följande fördelar:
 
 **Snabbare time to market:** Med flexibel molninfrastruktur i Adobe Managed Services kan organisationer snabbt planera, lansera och optimera framgångsrika digitala upplevelser. Adobe hanterar molnarkitekturen utan ytterligare kapital-, maskinvaru- eller programvarubehov och Adobe kundlösningstekniker, hjälp med AEM arkitektur, provisionering, anpassning för att ansluta till back-end-appar och praktiska användningsmetoder.
 
-**Högre prestanda:** Ger tillförlitliga digitala upplevelser för företaget med fyra alternativ för tillgänglighet: 99,5 %, 99,9 %, 99,95 % och 99,99 %. Dessutom kan man med programmet automatiskt säkerhetskopiera och återställa flera lägen för att säkerställa tillförlitlighet och beredskapshantering.
+**Högre prestanda:** Ger tillförlitliga digitala upplevelser för företaget med fyra alternativ för tillgänglighet: 99,5 %, 99,9 %, 99,95 % och 99,99 %. Dessutom kan du använda automatiska modeller för säkerhetskopiering och återställning i flera lägen för att säkerställa tillförlitlighet och hantering av oförutsedda händelser.
 
-**Optimerade IT-kostnader:** Proaktiv vägledning och expertis hjälper organisationer att hålla sig uppdaterade med den senaste versionen av AEM. Adobe Platinum Maintenance and Support ingår automatiskt i nya driftsättningar av AMS Enterprise/Basic, med teknisk expertis och driftserfarenhet som hjälper företag att underhålla sina verksamhetskritiska applikationer. Kostnadsfria grundläggande analyser eller Target-funktioner ger ytterligare värde, särskilt för medelstora organisationer med begränsade behov av analys och personalisering.
+**Optimerade IT-kostnader:** Proaktiv vägledning och expertis hjälper organisationer att hålla sig uppdaterade med den senaste versionen av AEM. Adobe Platinum Maintenance and Support ingår automatiskt i nya driftsättningar av AMS Enterprise/Basic, med teknisk expertis och driftserfarenhet för att hjälpa företag att underhålla sina verksamhetskritiska applikationer. Kostnadsfria grundläggande analyser eller Target-funktioner ger ytterligare värde, särskilt för medelstora organisationer med begränsade behov av analys och personalisering.
 
 **Högsta säkerhet:** Säkerställer fysisk säkerhet, nätverks- och datasäkerhet i företagsklass genom att lagra kundapplikationer i en begränsad åtkomstfunktion, bakom brandväggssystem eller i ett virtuellt privat moln. Den innehåller virtuella datorer med en klientorganisation och robust kryptering för datalagring, antivirala program och dataisolering.
 
@@ -133,19 +129,19 @@ Mer information om Cloud Manager och dess resurser finns i [**Användarhandbok f
 
 ### Förutsättningar {#prerequisites}
 
-Medan produktionsinstanser vanligtvis körs på dedikerade datorer som kör ett operativsystem som stöds officiellt (se [Tekniska krav](/help/sites-deploying/technical-requirements.md)) kommer Experience Manager-servern att köras på alla system som har stöd för [**Java Standard Edition 8**](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
+Medan produktionsinstanser körs på dedikerade datorer som kör ett operativsystem som stöds officiellt (se [Tekniska krav](/help/sites-deploying/technical-requirements.md)) kommer Experience Manager-servern att köras på alla system som har stöd för [**Java™ Standard Edition 8**](https://www.oracle.com/java/technologies/downloads/#java8).
 
-För att kunna bli bekant och utveckla AEM är det mycket vanligt att använda en instans som är installerad på din dator och som kör Apple OS X eller skrivbordsversioner av Microsoft Windows eller Linux.
+För att bli bekant och för att kunna utveckla AEM är det vanligt att använda en instans som är installerad på din dator och som kör Apple OS X eller datorversioner av Microsoft® Windows eller Linux®.
 
-På klientsidan fungerar AEM med alla moderna webbläsare (**Microsoft Edge**, **Internet Explorer** 11, **Krom **51+** **, **Firefox **47+, **Safari** 8+) på både dator och surfplatta. Se [Klientplattformar som stöds](/help/sites-deploying/technical-requirements.md#supported-client-platforms) för mer information.
+På klientsidan fungerar AEM med alla moderna webbläsare (**Microsoft® Edge**, **Internet Explorer** 11, **Krom **51+** **, **Firefox **47+, **Safari** 8+) på både dator och surfplatta. Se [Klientplattformar som stöds](/help/sites-deploying/technical-requirements.md#supported-client-platforms) för mer information.
 
 ### Hämta programvaran {#getting-the-software}
 
 Kunder med giltigt underhålls- och supportavtal ska ha fått ett e-postmeddelande med en kod och kunna hämta AEM från [**Adobe licenswebbplats**](https://licensing.adobe.com/). Affärspartners kan begära nedladdningsåtkomst från [**spphelp@adobe.com**](mailto:spphelp@adobe.com).
 
-Programpaketet AEM finns i två former:
+Det AEM programpaketet finns i två former:
 
-* **cq-quickstart-6.5.0.jar:** En fristående körbar fil *jar* som innehåller allt som behövs för att komma igång.
+* **cq-quickstart-6.5.0.jar:** En fristående körbar fil *jar* som innehåller allt du behöver för att komma igång.
 
 * **cq-quickstart-6.5.0.war:** A *krig* -fil för distribution till en tredjepartsprogramserver.
 
@@ -155,15 +151,15 @@ I följande avsnitt beskriver vi **fristående installation**. Mer information o
 
 1. Skapa en installationskatalog på den lokala datorn. Till exempel:
 
-   Installationsplats för UNIX: **/opt/aem**
+   Installationsplats för UNIX®: **/opt/aem**
 
    Installationsplats för Windows: **`C:\Program Files\aem`**
 
-   Det är också vanligt att du installerar exempelinstanser i en mapp direkt på skrivbordet. I vilket fall som helst kommer vi att i allmänhet hänvisa till den här platsen som:
+   Det är också vanligt att du installerar exempelinstanser i en mapp direkt på skrivbordet. I vilket fall som helst hänvisar vi i allmänhet till den här platsen som:
 
    `<aem-install>`
 
-   *Observera att sökvägen till filkatalogen endast får bestå av ASCII-tecken från USA.*
+   *Sökvägen till filkatalogen får endast bestå av ASCII-tecken från USA.*
 
 1. Placera **jar** och **licens** filer i den här katalogen:
 
@@ -173,7 +169,7 @@ I följande avsnitt beskriver vi **fristående installation**. Mer information o
        license.properties
    ```
 
-   Om du inte anger en `license.properties` AEM dirigerar om webbläsaren till en **Välkommen** när programmet startas, där du kan ange en licensnyckel. Du måste begära en giltig licensnyckel från Adobe om du inte redan har en.
+   Om du inte anger en `license.properties` fil, AEM dirigerar om webbläsaren till en **Välkommen** när programmet startas, där du kan ange en licensnyckel. Du måste begära en giltig licensnyckel från Adobe om du inte redan har en.
 
 1. Om du vill starta instansen i en GUI-miljö dubbelklickar du på knappen **`cq-quickstart-6.5.0.jar`** -fil.
 
@@ -183,13 +179,13 @@ I följande avsnitt beskriver vi **fristående installation**. Mer information o
        java -Xmx1024M -jar cq-quickstart-6.5.0.jar
    ```
 
-AEM tar några minuter att packa upp burkfilen, installera och starta. Ovannämnda procedur ger följande resultat:
+AEM tar några minuter att packa upp burkfilen, installera sig själv och starta. Ovannämnda procedur ger följande resultat:
 
 * en **AEM** instance
 * körs **localhost**
 * på port **4502**
 
-Så här kommer du åt instansen genom att peka webbläsaren på:
+Om du vill komma åt instansen pekar du i webbläsaren på:
 
 **`https://localhost:4502`**
 
@@ -205,13 +201,13 @@ Byt namn på filen till
 
 **`cq-author-p4502.jar`**
 
-och när du startar programmet körs en författarinstans på **`localhost:4502`**.
+Och när du startar programmet körs en författarinstans på **`localhost:4502`**.
 
 På samma sätt byter du namn på och startar filen
 
 **`cq-publish-p4503.jar`**
 
-resulterar i att en publiceringsinstans körs på **`localhost:4503`**.
+Resultat av en publiceringsinstans som körs på **`localhost:4503`**.
 
 Du installerar de här två instanserna i
 
@@ -226,7 +222,7 @@ Mer information om hur du anpassar installationen finns i:
 
 ### Opackad installationskatalog {#unpacked-install-directory}
 
-När snabbstartsburken startas för första gången packas den upp i samma katalog under en ny underkatalog som kallas `crx-quickstart`. Resultatet blir följande:
+När snabbstartsburken startas för första gången packas den upp i samma katalog under en ny underkatalog som kallas `crx-quickstart`. Du bör ha följande:
 
 ```xml
 <aem-install>/
@@ -250,7 +246,7 @@ När snabbstartsburken startas för första gången packas den upp i samma katal
         readme.txt
 ```
 
-Om instansen installerades från användargränssnittet öppnas ett webbläsarfönster automatiskt och ett skrivbordsprogramfönster öppnas med instansens värd och port samt en på/av-knapp:
+Om instansen installerades från användargränssnittet öppnas ett webbläsarfönster automatiskt och ett skrivbordsprogramfönster öppnas med instansens värd och port och en på/av-knapp:
 
 ![startskärmen](assets/screen_shot_.png)
 
@@ -260,15 +256,15 @@ Om instansen installerades från användargränssnittet öppnas ett webbläsarf�
 
 ### Starta och stoppa {#starting-and-stopping}
 
-När AEM har packat upp sig och startat för första gången startar du bara instansen genom att dubbelklicka på burkfilen i installationskatalogen. Den installeras inte igen.
+När AEM har packat upp sig själv och startat för första gången startar du instansen genom att dubbelklicka på burkfilen i installationskatalogen, utan att installera om den.
 
-Om du vill stoppa instansen från det grafiska användargränssnittet klickar du bara på knappen **på/av** växla till skrivbordsprogramfönstret.
+Om du vill stoppa instansen från det grafiska användargränssnittet klickar du på knappen **på/av** växla till skrivbordsprogramfönstret.
 
-Du kan också stoppa och starta AEM från kommandoraden. Om du redan har installerat instansen för första gången visas **kommandoradsskript** finns här:
+Du kan också stoppa och starta AEM från kommandoraden. Om du redan har installerat instansen för första gången visas **kommandoradsskript** är här:
 
 **`<aem-install>/crx-quickstart/bin/`**
 
-Den här mappen innehåller följande Unix-basskalskript:
+Den här mappen innehåller följande UNIX®-baserade gränssnittsskript:
 
 * **`start`**: Startar instansen
 * `stop`: Stoppar instansen
@@ -285,7 +281,7 @@ AEM startar och dirigerar automatiskt om webbläsaren till rätt sida, vanligtvi
 
 ![inloggningsskärm](assets/screen_shot_2019-04-08at83533am.png)
 
-När du är inloggad har du tillgång till AEM. Mer information, beroende på din roll, finns i:
+När du är inloggad har du tillgång till AEM. Mer information, beroende på din roll, finns i följande:
 
 * [Redigering](/help/sites-authoring/home.md)
 * [Administratör](/help/sites-administering/home.md)

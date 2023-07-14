@@ -1,18 +1,14 @@
 ---
 title: Ursprungligt sandlådeinnehåll
-seo-title: Initial Sandbox Content
 description: Skapa innehåll
-seo-description: Create content
-uuid: 9810fe47-8d1a-4238-9b9c-0cc47c63d97a
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: e8f28cd5-7950-4aab-bf62-3d4ed3d33cbd
 exl-id: 068a0fff-ca48-4847-ba3f-d78416c97f6d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
 workflow-type: tm+mt
-source-wordcount: '434'
+source-wordcount: '429'
 ht-degree: 2%
 
 ---
@@ -27,11 +23,11 @@ I det här avsnittet skapar du följande sidor som alla använder [sidmall](init
 
    * SCF Play - Underordnad till den huvudsida som ska spelas upp.
 
-Även om den här självstudiekursen inte går in på [språkversioner](../../help/sites-administering/tc-prep.md)är den utformad så att rotsidan kan implementera identifiering av det språk som användaren föredrar via sidhuvudet i HTML och dirigera om till rätt huvudsida för språket. Konventionen är att använda landskoden med två bokstäver för sidans nodnamn, t.ex. &quot;en&quot; för engelska, &quot;fr&quot; för franska och så vidare.
+Även om den här självstudiekursen inte går in på [språkversioner](../../help/sites-administering/tc-prep.md)är den utformad så att rotsidan kan implementera identifiering av det språk som användaren föredrar via sidhuvudet i HTML och dirigera om till rätt huvudsida för språket. Konventionen är att använda landskoden med två bokstäver för sidans nodnamn, till exempel &quot;en&quot; för engelska och &quot;fr&quot; för franska.
 
 ## Skapa första sidor {#create-first-pages}
 
-Nu finns det en [sidmall](initial-app.md#createthepagetemplate)kan vi skapa webbplatsens rotsida i katalogen /content.
+Nu finns det en [sidmall](initial-app.md#createthepagetemplate)kan du skapa webbplatsens rotsida i katalogen /content.
 
 1. Standardgränssnittet innehåller för närvarande utkast för att skapa webbplatser. Det klassiska användargränssnittet är användbart eftersom den här självstudiekursen skapar en enkel webbplats.
 
@@ -58,14 +54,14 @@ Nu finns det en [sidmall](initial-app.md#createthepagetemplate)kan vi skapa webb
 
    ![classic-ui-create-page](assets/classic-ui-create-page.png)
 
-1. Markera den sida du just skapade i Utforskarfönstret. `/Websites/SCF Sandbox Site`och klicka **[!UICONTROL New]** > **[!UICONTROL New Page]**:
+1. Markera den sida du skapade i Utforskarfönstret. `/Websites/SCF Sandbox Site`och klicka **[!UICONTROL New]** > **[!UICONTROL New Page]**:
 
    * Titel: `SCF Sandbox`
    * Namn: `en`
    * Välj **[!UICONTROL An SCF Sandbox Play Template]**
    * Klicka på **[!UICONTROL Create]**
 
-1. Markera den sida du just skapade i Utforskarfönstret. `/Websites/SCF Sandbox Site/SCF Sandbox`och klicka **[!UICONTROL New]** > **[!UICONTROL New Page]**
+1. Markera den sida du skapade i Utforskarfönstret. `/Websites/SCF Sandbox Site/SCF Sandbox`och klicka **[!UICONTROL New]** > **[!UICONTROL New Page]**
 
    * Titel: `SCF Play`
    * Namn: `play`
@@ -86,7 +82,7 @@ När ` [/etc/designs/an-scf-sandbox](setup-website.md#setupthedesigntreeetcdesig
 
 * `cq:template="/libs/wcm/core/templates/designpage"`
 
-har definierats, vilket ger möjlighet att referera till designresurser i ett skript med `currentDesign.getPath()`. Till exempel
+definierades, vilket ger möjlighet att referera till designresurser i ett skript med `currentDesign.getPath()`. Till exempel
 
 * `% String favIcon = currentDesign.getPath() + "/favicon.ico"; %`
 
@@ -97,14 +93,14 @@ har definierats, vilket ger möjlighet att referera till designresurser i ett sk
 
 * Klicka på den gröna `[+] Add`
 
-Databasen ska vara som följer:
+Databasen ska visas så här:
 
 ![classic-ui-database-path](assets/classic-ui-repository-path.png)
 
 * Klicka på **[!UICONTROL Save All]**
 
-Om det uppstår problem när konfigurationen sparas kan du logga in igen och konfigurera igen.
+Om det blir problem med att spara konfigurationen loggar du in igen och konfigurerar igen.
 
 >[!NOTE]
 >
->Användning av `cq:designPath` är valfritt och har ingen koppling till [användning av klientlibs](develop-app.md#includeclientlibsintemplate), som i huvudsak krävs eftersom SCF-komponenterna använder [klientlibs](client-customize.md#clientlibs-for-scf) för att hantera JS och CSS.
+>Användning av `cq:designPath` är valfritt och har ingen koppling till [användning av klientlibs](develop-app.md#includeclientlibsintemplate)som krävs när SCF-komponenterna använder [klientlibs](client-customize.md#clientlibs-for-scf) för att hantera JS och CSS.

@@ -1,19 +1,15 @@
 ---
 title: Utöka och konfigurera designimporteraren för landningssidor
-seo-title: Extending and Configuring the Design Importer for Landing Pages
 description: Lär dig hur du konfigurerar designimporteraren för landningssidor.
-seo-description: Learn how to configure the Design Importer for landing pages.
-uuid: a2dd0c30-03e4-4e52-ba01-6b0b306c90fc
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
-discoiquuid: e02f5484-fbc2-40dc-8d06-ddb53fd9afc2
 docset: aem65
 exl-id: 1b8c6075-13c6-4277-b726-8dea7991efec
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
 workflow-type: tm+mt
-source-wordcount: '3503'
+source-wordcount: '3502'
 ht-degree: 0%
 
 ---
@@ -28,7 +24,7 @@ Här följer de logiska stegen för att få designimporteraren att känna igen d
 
 1. Skapa en TagHandler
 
-   * En tagghanterare är en POJO som hanterar HTML-taggar av en viss typ. Den typ av HTML-taggar som TagHandler kan hantera definieras via taggHandlerFactory-egenskapen OSGi &quot;tagpattern.name&quot;. Den här OSGi-egenskapen är i stort sett en regex som ska matcha den HTML-indatatagg som du vill hantera. Alla kapslade taggar kastas till tagghanteraren för hantering. Om du till exempel registrerar dig för en div som innehåller en kapslad &lt;p> -taggen, &lt;p> -taggen skickas också till din TagHandler och det är upp till dig hur du vill ta hand om den.
+   * En tagghanterare är en POJO som hanterar HTML-taggar av en viss typ. Den typ av HTML-taggar som TagHandler kan hantera definieras via OSGi-egenskapen för TagHandlerFactory, tagpattern.name. Den här OSGi-egenskapen är i stort sett en regex som ska matcha den HTML-indatatagg som du vill hantera. Alla kapslade taggar kastas till tagghanteraren för hantering. Om du till exempel registrerar dig för en div som innehåller en kapslad &lt;p> -taggen, &lt;p> taggen skickas också till din TagHandler och det är upp till dig hur du vill ta hand om den.
    * Tagghanteringsgränssnittet liknar ett SAX-innehållshanterargränssnitt. Den tar emot SAX-händelser för varje html-tagg. Som tagghanterare måste du implementera vissa livscykelmetoder som anropas automatiskt av designimportramverket.
 
 1. Skapa dess motsvarande TagHandlerFactory.
@@ -127,11 +123,11 @@ De webbläsare som har stöd för&quot;dra och släpp&quot; i zip-designen är C
 
 ### Modernizr stöds inte {#modernizr-is-not-supported}
 
-`Modernizr.js` är ett javascript-baserat verktyg som identifierar webbläsares inbyggda funktioner och identifierar om de passar för HTML5-element eller inte. Designer som använder Modernizer för att förbättra stödet i äldre versioner av olika webbläsare kan orsaka importproblem i landningssidans lösning. `Modernizr.js` -skript stöds inte av designimporteraren.
+`Modernizr.js` är ett JavaScript-baserat verktyg som identifierar webbläsares inbyggda funktioner och identifierar om de passar för HTML5-element eller inte. Designer som använder Modernizer för att förbättra stödet i äldre versioner av olika webbläsare kan orsaka importproblem i landningssidans lösning. `Modernizr.js` -skript stöds inte av designimporteraren.
 
 ### Sidegenskaperna bevaras inte vid import av designpaket {#page-properties-are-not-preserved-at-the-time-of-importing-design-package}
 
-Alla sidegenskaper (t.ex. Anpassad domän, Framtvinga HTTPS, osv.) anges för en sida (som använder mallen Tom landningssida) innan designpaketet importeras, tas bort efter att designen har importerats. Därför rekommenderar vi att du anger sidegenskaperna när du har importerat designpaketet.
+Alla sidegenskaper (till exempel Anpassad domän, Tillämpa HTTPS och så vidare) som har angetts för en sida (som använder mallen Tom landningssida) innan designpaketet importeras, försvinner när designen har importerats. Därför rekommenderar vi att du anger sidegenskaperna när du har importerat designpaketet.
 
 ### Markering endast för HTML antas {#html-only-markup-assumed}
 
@@ -191,7 +187,7 @@ Om du tar med ovanstående kod i HTML görs följande:
 * Anger `jcr:title` egenskapen för den skapade titelkomponenten till texten inom rubriktaggen omsluten i div.
 * Anger `type` -egenskap till rubriktaggen, i det här fallet `h1`.
 
-Titelkomponenten stöder 7 typer - `h1, h2, h3, h4, h5, h6` och `default`.
+Titelkomponenten stöder sju typer - `h1, h2, h3, h4, h5, h6` och `default`.
 
 **Kortfattad deklaration om komponenttaggar**:
 
@@ -251,7 +247,7 @@ Egenskaper som stöds
 
 * Etikett, med fet stil, kursiv stil och understrykning
 * Mål-URL, stöder tredje part och AEM-URL
-* Alternativ för sidåtergivning (samma fönster, nytt fönster osv.)
+* Alternativ för sidåtergivning (samma fönster, nytt fönster o.s.v.)
 
 Taggen HTML om du vill ta med klickningen genom komponenten i den importerade zippen. Här mappas href till mål-URL, &quot;Visa produktinformation&quot; mappas till etikett och så vidare.
 
@@ -277,16 +273,16 @@ Den här komponenten kan användas i alla fristående program eller importeras f
 
 #### Grafisk länk {#graphical-link}
 
-CTA-komponenten kan användas för att lägga till grafik med länk på landningssidan. Bilden kan vara en enkel knapp eller en grafisk bild som bakgrund. När användaren klickar på bilden kommer användaren till mål-URL:en som anges i komponentegenskaperna. Det ingår i gruppen&quot;Call to Action&quot;.
+CTA-komponenten kan användas för att lägga till grafik med länk på landningssidan. Bilden kan vara en enkel knapp eller en grafisk bild som bakgrund. När användaren klickar på bilden dirigeras användaren till den mål-URL som anges i komponentegenskaperna. Det ingår i gruppen&quot;Call to Action&quot;.
 
 Egenskaper som stöds
 
 * Bildbeskärning, rotering
 * Hovringstext, beskrivning, storlek i px
 * Mål-URL, stöder tredje part och AEM-URL
-* Alternativ för sidåtergivning (samma fönster, nytt fönster osv.)
+* Alternativ för sidåtergivning (samma fönster, nytt fönster o.s.v.)
 
-Taggen HTML om du vill ta med en grafisk länkkomponent i det importerade postnumret. Här mappas href till target url, img src blir återgivningsbilden, &quot;title&quot; tas som hovringstext och så vidare.
+Taggen HTML om du vill ta med en grafisk länkkomponent i det importerade postnumret. Här mappas href till target url, img src är återgivningsbilden, &quot;title&quot; är taggen hover text o.s.v.
 
 ```xml
 <div id="cqcanvas">
@@ -304,9 +300,9 @@ Taggen HTML om du vill ta med en grafisk länkkomponent i det importerade postnu
 >
 >Om du vill skapa en klickbar grafisk länk måste du kapsla in en ankartagg och bildtaggen inuti en div med `data-cq-component="clickthroughgraphicallink"` -attribut.
 >
->t.ex. `<div data-cq-component="clickthroughlink"> <a href="https://myURLhere/"><img src="image source here"></a> </div>`
+>Till exempel, `<div data-cq-component="clickthroughlink"> <a href="https://myURLhere/"><img src="image source here"></a> </div>`
 >
->Andra sätt att associera en bild med en ankartagg med CSS stöds inte. Följande kod fungerar inte:
+>Andra sätt att associera en bild med en ankartagg med CSS stöds inte. Följande kod fungerar till exempel inte:
 >
 >`<div data-cq-component="clickthroughgraphicallink">`
 >
@@ -315,27 +311,28 @@ Taggen HTML om du vill ta med en grafisk länkkomponent i det importerade postnu
 >`</div>`
 >
 >med en associerad `css .hasbackground { background-image: pathtoimage }`
+>
 
 ### Leadformulär {#lead-form}
 
-Ett lead-formulär är ett formulär som används för att samla in profilinformation för en besökare/lead. Denna information kan lagras och användas senare för att skapa en effektiv marknadsföring utifrån informationen. Informationen omfattar vanligtvis titel, namn, e-postadress, födelsedatum, adress, ränta osv. Det ingår i gruppen&quot;CTA Lead form&quot;.
+Ett lead-formulär är ett formulär som används för att samla in profilinformation för en besökare/lead. Denna information kan lagras och användas senare för att skapa en effektiv marknadsföring utifrån informationen. Informationen innehåller vanligtvis titel, namn, e-postadress, födelsedatum, adress, ränta osv. Det ingår i gruppen&quot;CTA Lead form&quot;.
 
 **Funktioner som stöds**
 
 * Fördefinierade lead-fält - förnamn, efternamn, adress, dob, kön, about, userId, emailId, submit-knapp är tillgängliga i sidosparken. Dra-och-släpp den nödvändiga komponenten i ditt lead-formulär.
-* Med hjälp av dessa komponenter kan författaren utforma ett fristående lead-formulär, motsvarar dessa fält formulärfält lead. I det fristående eller importerade ZIP-programmet kan användaren lägga till extra fält med cq:form eller cta lead-formulärfält, namnge och utforma dem enligt kraven.
+* Med hjälp av dessa komponenter kan författaren utforma ett fristående lead-formulär, motsvarar dessa fält formulärfält lead. I det fristående eller importerade ZIP-programmet kan användaren lägga till extra fält med cq:form eller cta lead-formulärfält, namn och utforma dem enligt kraven.
 * Mappa lead-formulärfält med specifika fördefinierade namn för CTA-lead-formulär, till exempel firstName för förnamn i lead-formulär och så vidare.
-* Fält som inte är mappade till lead-formulär mappas till cq:form components - text, radio, checkbox, dropdown, hidden, password.
+* Fält som inte är mappade till lead-formulärmappar till cq:formulärkomponenter - text, radio, kryssruta, listruta, dold, lösenord.
 * Användaren kan ange titeln med taggen&quot;label&quot; och formateringen med formatattributet&quot;class&quot; (endast tillgängligt för CTA-komponenter för inledande formulär).
 * Tack! Sidan och prenumerationslistan kan anges som en dold parameter i formuläret (finns i index.htm) eller kan läggas till/redigeras från redigeringsfältet i &quot;Början av lead-formuläret&quot;
 
-   &lt;input type=&quot;hidden&quot; name=&quot;redirectUrl&quot; value=&quot;/content/we-retail/en/user/register/thank_you&quot;/>
+  &lt;input type=&quot;hidden&quot; name=&quot;redirectUrl&quot; value=&quot;/content/we-retail/en/user/register/thank_you&quot;/>
 
-   &lt;input type=&quot;hidden&quot; name=&quot;groupName&quot; value=&quot;leadForm&quot;/>
+  &lt;input type=&quot;hidden&quot; name=&quot;groupName&quot; value=&quot;leadForm&quot;/>
 
 * Begränsningar som - krävs kan anges i redigeringskonfigurationen för varje komponent.
 
-Taggen HTML om du vill ta med en grafisk länkkomponent i det importerade postnumret. Här mappas&quot;firstName&quot; till lead-formulär firstName och så vidare, förutom kryssrutor - dessa två kryssrutor mappar till cq:form dropdown component.
+Taggen HTML om du vill ta med en grafisk länkkomponent i det importerade postnumret. Här mappas&quot;firstName&quot; till lead-formulär firstName osv., förutom för kryssrutor - dessa två kryssrutor mappar till cq:form dropdown component.
 
 ```xml
 <div id="cqcanvas">
@@ -447,7 +444,7 @@ Steg för att skapa en ny mall i AEM förklaras [här](/help/sites-developing/te
 
 ### Referera en komponent från landningssidan {#referring-a-component-from-landing-page}
 
-Anta att du har en komponent som du vill referera till i HTML med data-cq-component-attribut, så att designimporteraren återger en komponent som finns på den här platsen. t.ex. vill du referera till tabellkomponenten ( `resourceType = /libs/foundation/components/table`). Följande ska läggas till i HTML:
+Anta att du har en komponent som du vill referera till i HTML med data-cq-component-attribut, så att designimporteraren återger en komponent som finns på den här platsen. Du vill till exempel referera till tabellkomponenten ( `resourceType = /libs/foundation/components/table`). Följande ska läggas till i HTML:
 
 `<div data-cq-component="/libs/foundation/components/table">foundation table</div>`
 
@@ -519,7 +516,7 @@ Tabellen nedan beskriver kortfattat egenskaperna:
   <tr>
    <td> </td>
    <td>Ersätt mönster</td>
-   <td>Mönstret som ersätter de träffar som hittas. Du kan använda regex-gruppreferenser som $1, $2. Det här mönstret har dessutom stöd för nyckelord som {designPath} som löses med det faktiska värdet under importen.</td>
+   <td>Mönstret som ersätter de träffar som hittas. Du kan använda regex-gruppreferenser som $1, $2. Det här mönstret har även stöd för nyckelord som {designPath} som löses med det faktiska värdet under importen.</td>
   </tr>
  </tbody>
 </table>
@@ -530,10 +527,12 @@ Tabellen nedan beskriver kortfattat egenskaperna:
 >Om du behöver göra några ändringar i sökmönstret måste du lägga till omvända snedstreck manuellt när du öppnar egenskapsredigeraren för felix för att undvika regex-metatecken. Om du inte lägger till omvända snedstreck manuellt anses regex vara ogiltigt och ersätter inte det äldre.
 >
 >Om standardkonfigurationen till exempel är
->`/\* *CQ_DESIGN_PATH *\*/ *(['"])`
 >
->Och du måste ersätta >`CQ_DESIGN_PATH` med `VIPURL` i sökmönstret bör sökmönstret se ut så här:
-`/\* *VIPURL *\*/ *(['"])`
+>>`/\* *CQ_DESIGN_PATH *\*/ *(['"])`
+>
+>Och du måste ersätta `CQ_DESIGN_PATH` med `VIPURL` i sökmönstret bör sökmönstret se ut så här:
+>
+>`/\* *VIPURL *\*/ *(['"])`
 
 ## Felsökning {#troubleshooting}
 
@@ -545,14 +544,14 @@ Om designpaketet innehåller en parsys-komponentkod börjar sidosparken visa rel
 
 ### Felmeddelanden som visas vid import {#error-messages-displayed-during-import}
 
-Om fel uppstår (t.ex. om det importerade paketet inte är en giltig zip-fil), kommer designimporten inte att importera paketet och i stället visas ett felmeddelande ovanpå sidan precis ovanför dra-och-släpp-rutan. Här finns exempel på felscenarier. När du har åtgärdat felet kan du återimportera den uppdaterade zippen till samma tomma landningssida. Olika scenarier där fel uppstår är följande:
+Om fel uppstår (till exempel om det importerade paketet inte är en giltig zip-fil) importeras inte paketet vid designimporten. I stället visas ett felmeddelande ovanpå sidan precis ovanför dra och släpp-rutan. Här finns exempel på felscenarier. När du har åtgärdat felet kan du importera den uppdaterade zippen på samma tomma landningssida igen. Olika scenarier där fel uppstår är följande:
 
 * Det importerade designpaketet är inte ett giltigt zip-arkiv.
 * Det importerade designpaketet innehåller inte index.html på den översta nivån.
 
 ### Varningar som visas efter import {#warnings-displayed-after-import}
 
-Om det finns varningar (t.ex. HTML avser bilder som inte finns i paketet), kommer designimportören att importera zip-filen, men samtidigt visa en lista med problem/varningar i resultatrutan. Om du klickar på problemlänken visas en lista med varningar som pekar på eventuella problem i designpaketet. Olika scenarier där varningar fångas upp och visas av designimportören är följande:
+Om det finns några varningar (till exempel refererar HTML till bilder som inte finns i paketet) importerar designimporteraren zip-filen, men visar samtidigt en lista med problem/varningar i resultatrutan. Om du klickar på problemlänken visas en lista med varningar som pekar på eventuella problem i designpaketet. Olika scenarier där varningar fångas upp och visas av designimportören är följande:
 
 * HTML avser bilder som inte finns i paketet.
 * HTML avser skript som inte finns i paketet.
@@ -560,7 +559,7 @@ Om det finns varningar (t.ex. HTML avser bilder som inte finns i paketet), komme
 
 ### Var lagras filerna i ZIP-filen i AEM? {#where-are-the-files-of-the-zip-file-being-stored-in-aem}
 
-När landningssidan har importerats, filerna (bilder, css, js osv.) i designpaketet lagras på följande plats i AEM:
+När landningssidan har importerats lagras filerna (bilder, css, js och så vidare) i designpaketet på följande plats i AEM:
 
 `/etc/designs/default/canvas/content/campaigns/<name of brand>/<name of campaign>/<name of landing page>`
 
@@ -589,7 +588,7 @@ med en CSS tillämpad på klassen `box` enligt följande:
 { width: 450px; padding:10px; border: 1px #C5DBE7 solid; margin: 0px auto 0 auto; background-image:url(assets/box.gif); background-repeat:repeat-x,y; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px; color:#6D6D6D; }
 ```
 
-Sedan `box img` används i designimportören, den resulterande landningssidan verkar inte ha bevarat formateringen. För att undvika detta bör du vara medveten om att AEM lägger till div-taggar i CSS och skriver om koden därefter. Annars är vissa CSS-regler ogiltiga.
+Sedan `box img` används i designimportören, den resulterande landningssidan verkar inte ha bevarat formateringen. För att undvika detta lägger AEM till div-taggar i CSS och skriver om koden därefter. Annars kommer vissa CSS-regler att vara ogiltiga.
 
 ```xml
 .box img
@@ -598,4 +597,5 @@ Sedan `box img` används i designimportören, den resulterande landningssidan ve
 ```
 
 >[!NOTE]
-Designers bör också vara medvetna om att bara kod i **id=cqcanvas** -taggen känns igen av importören, annars bevaras inte designen.
+>
+>Designers bör också vara medvetna om att bara kod i **id=cqcanvas** -taggen känns igen av importören, annars bevaras inte designen.
