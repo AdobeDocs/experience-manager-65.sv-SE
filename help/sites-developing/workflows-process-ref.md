@@ -1,18 +1,14 @@
 ---
 title: Referens för arbetsflödesprocess
-seo-title: Workflow Process Reference
 description: Referens för arbetsflödesprocess
-seo-description: null
-uuid: de367aa8-4580-4810-b665-2a7b521e36ca
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: dbdf981f-791b-4ff7-8ca8-039d0bdc9c92
 exl-id: a9de8ec6-6948-4643-89c3-62d9b1f6293a
-source-git-commit: cf3b739fd774bc860d9906b9884d22fd532fd5dd
+source-git-commit: 69346a710708ee659ee97e9fdc193c8ea2658fe6
 workflow-type: tm+mt
-source-wordcount: '1075'
+source-wordcount: '1068'
 ht-degree: 0%
 
 ---
@@ -25,11 +21,11 @@ AEM innehåller flera processsteg som kan användas för att skapa arbetsflödes
 
 Följande egenskaper beskrivs för varje steg i processen.
 
-### Java-klass eller ECMA-sökväg {#java-class-or-ecma-path}
+### Java™-klass eller ECMA-sökväg {#java-class-or-ecma-path}
 
-Processstegen definieras antingen av en Java-klass eller av ett ECMAScript.
+Processstegen definieras antingen av en Java™-klass eller av ett ECMAScript.
 
-* För Java-klassprocesserna anges det fullständiga, kvalificerade klassnamnet.
+* För Java™-klassprocesser anges det fullständiga, kvalificerade klassnamnet.
 * För ECMAScript-processerna anges sökvägen till skriptet.
 
 ### Nyttolast {#payload}
@@ -38,7 +34,7 @@ Nyttolasten är den enhet som en arbetsflödesinstans agerar på. Nyttolasten v�
 
 Om ett arbetsflöde till exempel används på en AEM sida *P* sedan *P* överförs från steg till steg när arbetsflödet utvecklas, där varje steg kan utföras efter *P* på något sätt.
 
-I det vanligaste fallet är nyttolasten en JCR-nod i databasen (till exempel en AEM eller resurs). En JCR-nodnyttolast skickas som en sträng som antingen är en JCR-sökväg eller en JCR-identifierare (UUID). I vissa fall kan nyttolasten vara en JCR-egenskap (skickas som en JCR-sökväg), en URL, ett binärt objekt eller ett generiskt Java-objekt. Enskilda processsteg som fungerar på nyttolasten förväntar sig vanligtvis en nyttolast av en viss typ, eller fungerar på olika sätt beroende på nyttolasttypen. För varje process som beskrivs nedan beskrivs den förväntade nyttolasttypen, om sådan finns,.
+I det vanligaste fallet är nyttolasten en JCR-nod i databasen (till exempel en AEM eller resurs). En JCR-nodnyttolast skickas som en sträng som antingen är en JCR-sökväg eller en JCR-identifierare (UUID). Ibland kan nyttolasten vara en JCR-egenskap (skickas som en JCR-sökväg), en URL, ett binärt objekt eller ett generiskt Java™-objekt. Enskilda processsteg som fungerar på nyttolasten förväntar sig vanligtvis en nyttolast av en viss typ, eller fungerar på olika sätt beroende på nyttolasttypen. För varje process som beskrivs nedan beskrivs den förväntade nyttolasttypen, om sådan finns,.
 
 ### Argument {#arguments}
 
@@ -73,13 +69,13 @@ Det rekommenderade sättet att göra detta är att använda en tjänstanvändare
 
 >[!CAUTION]
 >
->Om du uppgraderar från en tidigare version än AEM 6.2 kan du behöva uppdatera implementeringen.
+>Om du uppgraderar från en version före AEM 6.2 kan du behöva uppdatera implementeringen.
 >
->I tidigare versioner skickades administratörssessionen till `WorkflowProcess` implementeringar och kunde sedan ha fullständig åtkomst till databasen utan att behöva definiera specifika åtkomstkontrollistor.
+>I tidigare versioner skickades administratörssessionen till `WorkflowProcess` implementeringar och kan sedan ha fullständig åtkomst till databasen utan att behöva definiera specifika åtkomstkontrollistor.
 >
 >Behörigheterna definieras nu enligt ovan ([Behörigheter](#permissions)). Som den metod som rekommenderas för att uppdatera implementeringen.
 >
->En kortsiktig lösning finns också tillgänglig för bakåtkompatibla syften när kodändringar inte är möjliga:
+>En kortsiktig lösning finns också tillgänglig för bakåtkompatibilitet när kodändringar inte är möjliga:
 >
 >* Använda webbkonsolen ( `/system/console/configMgr` leta upp **Konfigurationstjänst för arbetsflöde för Adobe Granite**
 >
@@ -95,7 +91,7 @@ Följande processer utför inga åtgärder på innehåll. De styr själva arbets
 
 The `AbsoluteTimeAutoAdvancer` (Absolut tid för automatiskt avancerat) fungerar likadant som **AutoAdvcer**, förutom att den timeout inträffar vid en viss tidpunkt och ett visst datum, i stället för efter en viss tid.
 
-* **Java-klass**: `com.adobe.granite.workflow.console.timeout.autoadvance.AbsoluteTimeAutoAdvancer`
+* **Java™-klass**: `com.adobe.granite.workflow.console.timeout.autoadvance.AbsoluteTimeAutoAdvancer`
 * **Nyttolast**: Ingen.
 * **Argument**: Ingen.
 * **Timeout**: Bearbetningstiderna är slut när den angivna tiden och datumet nås.
@@ -104,7 +100,7 @@ The `AbsoluteTimeAutoAdvancer` (Absolut tid för automatiskt avancerat) fungerar
 
 The `AutoAdvancer` processen flyttar automatiskt arbetsflödet till nästa steg. Om det finns mer än ett möjligt nästa steg (till exempel om det finns en OR-delning) kommer den här processen att flytta fram arbetsflödet längs *standardflöde*, om en sådan har angetts, annars kommer arbetsflödet inte att avanceras.
 
-* **Java-klass**: `com.adobe.granite.workflow.console.timeout.autoadvance.AutoAdvancer`
+* **Java™-klass**: `com.adobe.granite.workflow.console.timeout.autoadvance.AutoAdvancer`
 
 * **Nyttolast**: Ingen.
 * **Argument**: Ingen.
@@ -114,9 +110,9 @@ The `AutoAdvancer` processen flyttar automatiskt arbetsflödet till nästa steg.
 
 The `ProcessAssembler` kör flera underprocesser sekventiellt i ett enda arbetsflödessteg. Så här använder du `ProcessAssembler`skapar du ett enda steg av den här typen i arbetsflödet och anger dess argument för att ange namn och argument för de underprocesser som du vill köra.
 
-* **Java-klass**: `com.day.cq.workflow.impl.process.ProcessAssembler`
+* **Java™-klass**: `com.day.cq.workflow.impl.process.ProcessAssembler`
 
-* **Nyttolast**: En DAM-resurs, AEM sida eller ingen nyttolast (beror på underprocessernas krav).
+* **Nyttolast**: En DAM-resurs, AEM eller ingen nyttolast (beror på underprocessernas krav).
 * **Argument**:
 
 ```
@@ -136,7 +132,7 @@ Till exempel:
 
 * Extrahera metadata från resursen.
 * Skapa tre miniatyrbilder av de tre angivna storlekarna.
-* Skapa en JPEG-bild från resursen, förutsatt att resursen ursprungligen varken är en GIF eller en PNG-bild (då skapas ingen JPEG).
+* Skapa en JPEG-bild från resursen, förutsatt att resursen ursprungligen inte är GIF eller PNG (då skapas ingen JPEG).
 * Ange det senast ändrade datumet för tillgången.
 
 ```shell
@@ -152,7 +148,7 @@ Följande processer utför enkla uppgifter eller fungerar som exempel.
 
 >[!CAUTION]
 >
->Du ***måste*** ändrar ingenting i `/libs` bana.
+>Ändra ingenting i dialogrutan `/libs` bana.
 >
 >Detta beror på innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan skrivas över när du använder en snabbkorrigering eller ett funktionspaket).
 
@@ -200,7 +196,7 @@ Detta är ett exempel på ECMAScript-process.
 
 Låser arbetsflödets nyttolast.
 
-* **Java-klass:** `com.day.cq.workflow.impl.process.LockProcess`
+* **Java™-klass:** `com.day.cq.workflow.impl.process.LockProcess`
 
 * **Nyttolast:** JCR_PATH och JCR_UID
 * **Argument:** Ingen
@@ -215,7 +211,7 @@ Stegen har ingen effekt under följande omständigheter:
 
 Låser upp arbetsflödets nyttolast.
 
-* **Java-klass:** `com.day.cq.workflow.impl.process.UnlockProcess`
+* **Java™-klass:** `com.day.cq.workflow.impl.process.UnlockProcess`
 
 * **Nyttolast:** JCR_PATH och JCR_UID
 * **Argument:** Ingen
@@ -232,9 +228,9 @@ Följande process utför en versionsrelaterad uppgift.
 
 ### CreateVersionProcess {#createversionprocess}
 
-Skapar en ny version av arbetsflödets nyttolast (AEM eller DAM-resurs).
+Skapar en version av arbetsflödets nyttolast (AEM eller DAM-resurs).
 
-* **Java, klass**: `com.day.cq.wcm.workflow.process.CreateVersionProcess`
+* **Java™-klass**: `com.day.cq.wcm.workflow.process.CreateVersionProcess`
 
 * **Nyttolast**: En JCR-sökväg eller UUID som refererar till en sida eller en DAM-resurs
 * **Argument**: Ingen

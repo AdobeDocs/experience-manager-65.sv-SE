@@ -1,18 +1,14 @@
 ---
 title: Provar kärnkomponenter i We.Retail
-seo-title: Trying out Core Components in We.Retail
 description: Provar kärnkomponenter i We.Retail
-seo-description: null
-uuid: 8d1cea0b-99d9-49b2-b275-41f14864b1ff
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
-discoiquuid: af3cd818-61cf-4da1-bfb5-87540911ddd5
 exl-id: b5f2be67-c93c-4dbc-acc0-3edd8f1a282f
-source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
+source-git-commit: 69346a710708ee659ee97e9fdc193c8ea2658fe6
 workflow-type: tm+mt
-source-wordcount: '535'
+source-wordcount: '533'
 ht-degree: 2%
 
 ---
@@ -23,7 +19,7 @@ De centrala komponenterna är moderna, flexibla komponenter som är enkla att ut
 
 ## Prova {#trying-it-out}
 
-1. Börja AEM med exempelinnehållet i Web.Retail och öppna [Komponentkonsol](/help/sites-authoring/default-components-console.md).
+1. Starta Adobe Experience Manager (AEM) med exempelinnehållet We.Retail och öppna [Komponentkonsol](/help/sites-authoring/default-components-console.md).
 
    **Global navigering -> Verktyg -> Komponenter**
 
@@ -36,7 +32,7 @@ De centrala komponenterna är moderna, flexibla komponenter som är enkla att ut
 
    ![chlimage_1-162](assets/chlimage_1-162.png)
 
-1. Observera att alla kärnkomponenter namnges **v1**, som återspeglar att detta är den första versionen av denna kärnkomponent. Regelbundna versioner kommer att släppas på marknaden i framtiden, vilket blir versionskompatibelt med AEM och gör det enkelt att uppgradera så att du kan utnyttja de senaste funktionerna.
+1. Alla kärnkomponenter namnges **v1**, som återspeglar att detta är den första versionen av denna kärnkomponent. Regelbundna versioner kommer att släppas på marknaden i framtiden, vilket blir versionskompatibelt med AEM och gör det enkelt att uppgradera så att du kan utnyttja de senaste funktionerna.
 1. Klicka **Text (v1)**.
 
    Se **Resurstyp** för komponenten är `/apps/core/wcm/components/text/v1/text`. Kärnkomponenter finns under `/apps/core/wcm/components` och versionshanteras per komponent.
@@ -66,7 +62,7 @@ De centrala komponenterna är moderna, flexibla komponenter som är enkla att ut
 
    ![chlimage_1-168](assets/chlimage_1-168.png)
 
-1. När arvet har avbrutits och du väljer textkomponenterna finns det många fler alternativ. Klicka på** Redigera**.
+1. När arvet har avbrutits och du väljer textkomponenterna finns det många fler alternativ. Klicka **Redigera**.
 
    ![chlimage_1-169](assets/chlimage_1-169.png)
 
@@ -74,12 +70,12 @@ De centrala komponenterna är moderna, flexibla komponenter som är enkla att ut
 
    ![chlimage_1-170](assets/chlimage_1-170.png)
 
-1. Från **Sidinformation** menyval **Redigera mall**.
+1. Från **Sidinformation** meny, välja **Redigera mall**.
 1. Klicka på knappen **Policy** ikonen för textkomponenten i **Layoutbehållare** på sidan.
 
    ![chlimage_1-171](assets/chlimage_1-171.png)
 
-1. Med huvudkomponenterna kan mallskapare konfigurera vilka egenskaper som är tillgängliga för sidförfattarna. Dessa innehåller funktioner som tillåtna inklistringskällor, formateringsalternativ, tillgängliga styckeformat osv.
+1. Med huvudkomponenterna kan mallskapare konfigurera vilka egenskaper som är tillgängliga för sidförfattarna. Det gäller funktioner som tillåtna inklistringskällor, formateringsalternativ och tillgängliga styckeformat.
 
    Sådana designdialogrutor är tillgängliga för många viktiga komponenter och fungerar tillsammans med mallredigeraren. När de är aktiverade är de tillgängliga för författaren via komponentredigerarna.
 
@@ -87,6 +83,6 @@ De centrala komponenterna är moderna, flexibla komponenter som är enkla att ut
 
 ## Ytterligare information {#further-information}
 
-Mer information om kärnkomponenterna finns i redigeringsdokumentet [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) för en översikt över de viktigaste komponenternas och utvecklardokumentets funktioner [Utveckla kärnkomponenter](https://helpx.adobe.com/experience-manager/core-components/using/developing.html) för en teknisk översikt.
+Mer information om kärnkomponenterna finns i redigeringsdokumentet [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) för en översikt över de viktigaste komponenternas och utvecklardokumentets funktioner [Utveckla kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html?lang=en) för en teknisk översikt.
 
 Du kanske också vill undersöka ytterligare [redigerbara mallar](/help/sites-developing/we-retail-editable-templates.md). Se redigeringsdokumentet [Skapa sidmallar](/help/sites-authoring/templates.md) eller utvecklardokumentsidan [Mallar - redigerbara](/help/sites-developing/page-templates-editable.md) om du vill ha fullständig information om redigerbara mallar.

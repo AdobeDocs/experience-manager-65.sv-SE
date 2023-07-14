@@ -1,25 +1,21 @@
 ---
 title: Testa innehållsfragment i webb.detaljhandel
-seo-title: Trying out Content Fragments in We.Retail
 description: Testa innehållsfragment i webb.detaljhandel
-seo-description: null
-uuid: 66daddfe-8e98-47b6-8499-db055887ac17
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
-discoiquuid: d1326737-f378-46d0-9916-61ead4d31639
 exl-id: 1e5d8184-7164-4984-b43e-421015e8bf52
-source-git-commit: d045fc1ac408f992d594a4cb68d1c4eeae2b0de1
+source-git-commit: 69346a710708ee659ee97e9fdc193c8ea2658fe6
 workflow-type: tm+mt
-source-wordcount: '452'
+source-wordcount: '455'
 ht-degree: 3%
 
 ---
 
 # Testa innehållsfragment i webb.detaljhandel{#trying-out-content-fragments-in-we-retail}
 
-Med innehållsfragment kan du skapa kanalneutralt innehåll tillsammans med (eventuellt kanalspecifika) variationer. **Vi.butik** (som är tillgängligt i en körklar instans av AEM) innehåller fragmentet **Arktisk surfning i Lofoten** som ett grundläggande urval. Detta visar att:
+Med innehållsfragment kan du skapa kanalneutralt innehåll tillsammans med (eventuellt kanalspecifika) variationer. **Vi.butik** (som är tillgängligt i en körklar instans av Adobe Experience Manager) innehåller fragmentet **Arktisk surfning i Lofoten** som ett grundläggande urval. Detta visar att:
 
 * Innehållsfragment i Adobe Experience Manager (AEM) [skapas och hanteras som sidoberoende resurser](/help/assets/content-fragments/content-fragments.md). Med dem kan du skapa kanalneutralt innehåll tillsammans med (eventuellt kanalspecifika) variationer.
 
@@ -37,7 +33,7 @@ Den fullständiga dokumentationen om hur du skapar, hanterar, använder och utve
 >
 >**Innehållsfragment** och **[Upplevelsefragment](/help/sites-authoring/experience-fragments.md)** har olika funktioner i AEM:
 >
->* **Innehållsfragment** är redaktionellt innehåll, främst text och relaterade bilder. De är rent innehåll, utan design och layout.
+>* **Innehållsfragment** är redaktionellt innehåll, främst text, och relaterade bilder. De är rent innehåll, utan design och layout.
 >* **Upplevelsefragment** är helt utformat, ett fragment av en webbsida.
 >
 >Upplevelsefragment kan innehålla innehåll i form av innehållsfragment, men inte tvärtom.
@@ -48,7 +44,7 @@ Det finns flera exempelinnehållsfragment i We.Retail; navigera via **Resurser**
 
 Dessa innehåller **Arktisk surfning i Lofoten**, ett fragment tillsammans med relaterade visuella resurser:
 
-* Navigera via **Resurser**, **Filer**, **Vi.butik**, **Engelska**, **Erfarenheter**, **Artisk surfning i Lofoten**:
+* Navigera med hjälp av **Resurser**, **Filer**, **Vi.butik**, **Engelska**, **Erfarenheter**, **Arktisk surfning i Lofoten**:
 
    * [http://localhost:4502/assets.html/content/dam/we-retail/en/experiences/arctic-surfing-in-lofoten](http://localhost:4502/assets.html/content/dam/we-retail/en/experiences/arctic-surfing-in-lofoten)
 

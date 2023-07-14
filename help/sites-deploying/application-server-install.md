@@ -1,18 +1,14 @@
 ---
 title: Installation av programserver
-seo-title: Application Server Install
-description: Lär dig hur du installerar AEM med en programserver.
-seo-description: Learn how to install AEM with an application server.
-uuid: c9571f80-6ed1-46fe-b7c3-946658dfc3f4
+description: Lär dig hur du installerar Adobe Experience Manager med en programserver.
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: deploying
-discoiquuid: 6fdce35d-2709-41cc-87fb-27a4b867e960
 exl-id: 3a90f1d2-e53f-4cc4-8122-024ad6500de0
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 69346a710708ee659ee97e9fdc193c8ea2658fe6
 workflow-type: tm+mt
-source-wordcount: '1163'
+source-wordcount: '1162'
 ht-degree: 0%
 
 ---
@@ -21,14 +17,15 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->`JAR` och `WAR` är filtyperna som AEM släpps i. Dessa format genomgår kvalitetssäkring som motsvarar de supportnivåer som Adobe har åtagit sig att använda.
+>`JAR` och `WAR` är filtyperna som Adobe Experience Manager (AEM) släpps i. Dessa format genomgår kvalitetssäkring för att passa de supportnivåer som Adobe har åtagit sig.
+>
 
-I det här avsnittet beskrivs hur du installerar Adobe Experience Manager (AEM) med en programserver. Läs [Plattformar som stöds](/help/sites-deploying/technical-requirements.md#servlet-engines-application-servers) för att se de specifika supportnivåerna för de enskilda programservrarna.
+I det här avsnittet beskrivs hur du installerar Adobe Experience Manager (AEM) med en programserver. Läs [Plattformar som stöds](/help/sites-deploying/technical-requirements.md#servlet-engines-application-servers) om du vill läsa om de specifika supportnivåerna för de enskilda programservrarna.
 
 Installationsstegen för följande programservrar beskrivs:
 
-* [WebSphere 8.5](#websphere)
-* [JBoss EAP 6.3.0/6.4.0](#jboss-eap)
+* [WebSphere](#websphere)
+* [JBoss](#jboss-eap)
 * [Oracle WebLogic 12.1.3/12.2](#oracle-weblogic)
 * [Tomcat 8/8.5](#tomcat)
 
@@ -44,10 +41,10 @@ Mer information om hur du installerar webbprogram, serverkonfigurationer och hur
 
 AEM kommer som en enda krigsfil att distribuera.
 
-Om distribueras kommer följande att ske som standard:
+Om den distribueras händer följande som standard:
 
 * körningsläget är `author`
-* instansen (Repository, Felix OSGI environment, bundles etc.) är installerat i `${user.dir}/crx-quickstart`där `${user.dir}` är den aktuella arbetskatalogen, den här sökvägen till crx-quickstart anropas `sling.home`
+* instansen (Repository, Felix OSGI environment, bundles, osv.) installeras i `${user.dir}/crx-quickstart`där `${user.dir}` är den aktuella arbetskatalogen, den här sökvägen till crx-quickstart anropas `sling.home`
 
 * kontextroten är krigsfilens namn, t.ex.: `aem-6`
 
@@ -63,7 +60,7 @@ Du kan ändra standardbeteendet på följande sätt:
 
 #### Publicera installation {#publish-installation}
 
-För att få en publiceringsinstans distribuerad måste du ange att körningsläget ska publiceras:
+Om du vill distribuera en publiceringsinstans måste du ange att körningsläget ska publiceras:
 
 * Packa upp WEB-INF/web.xml från AEM krigsfil
 * Ändra parametern sling.run.modes till publicering
@@ -86,8 +83,8 @@ I demonstrationssyfte kan det vara lämpligt att installera författaren och pub
 1. Ändra parametern sling.home till en annan sökväg (absoluta och relativa sökvägar är möjliga).
 1. Ändra sling.run.modes till publicering för publiceringsinstansen.
 1. Upprepa filen web.xml.
-1. Byt namn på krigsfilerna så att de har olika namn: t.ex. en byter namn till aemauthor.war och den andra till aempublish.war.
-1. Använd högre minnesinställningar, t.ex. för standardinstanser AEM t.ex.: -Xmx3072m
+1. Byt namn på krigsfilerna så att de har olika namn. Exempel: en byter namn till aemauthor.war och den andra till aempublish.war.
+1. Använd högre minnesinställningar. Standardinstanser AEM till exempel `-Xmx3072m`
 1. Distribuera de två webbprogrammen.
 1. Stoppa de två webbprogrammen efter distributionen.
 1. I både författare- och publiceringsinstanser ser du till att egenskapen felix.service.urlhandlers=false anges i filen sling.properties (standard är att den är true).
@@ -95,7 +92,7 @@ I demonstrationssyfte kan det vara lämpligt att installera författaren och pub
 
 ## Installationsprocedurer för programservrar {#application-servers-installation-procedures}
 
-### WebSphere 8.5 {#websphere}
+### WebSphere® 8.5 {#websphere}
 
 Före en distribution ska du läsa [Allmän beskrivning](#general-description) ovan.
 
@@ -103,10 +100,10 @@ Före en distribution ska du läsa [Allmän beskrivning](#general-description) o
 
 * Låt Basic Auth Headers gå igenom:
 
-   * Ett sätt för AEM att autentisera en användare är att inaktivera WebSphere-serverns globala administrativa säkerhet: Gå till Säkerhet -> Global säkerhet och avmarkera kryssrutan Aktivera administrativ säkerhet, spara och starta om servern.
+   * Ett sätt för AEM att autentisera en användare är att inaktivera WebSphere®-serverns globala administrativa säkerhet: Gå till Säkerhet -> Global säkerhet och avmarkera kryssrutan Aktivera administrativ säkerhet, spara och starta om servern.
 
 * set `"JAVA_OPTS= -Xmx2048m"`
-* Om du vill installera AEM med kontextroten = / måste du först ändra kontextroten för det befintliga standardwebbprogrammet
+* Om du vill installera AEM med kontextroten = /, ändrar du kontextroten för det befintliga standardwebbprogrammet.
 
 **Distribuera AEM webbprogram**
 
@@ -124,17 +121,17 @@ Före en distribution ska du läsa [Allmän beskrivning](#general-description) o
 
 * Starta AEM webbprogram
 
-#### JBoss EAP 6.3.0/6.4.0 {#jboss-eap}
+#### JBoss® EAP 6.3.0/6.4.0 {#jboss-eap}
 
 Före en distribution ska du läsa [Allmän beskrivning](#general-description) ovan.
 
-**Förbered JBoss-server**
+**Förbered JBoss®-server**
 
-Ange minnesargument i din conf-fil (t.ex. `standalone.conf`)
+Ange minnesargument i din conf-fil (till exempel `standalone.conf`)
 
 * JAVA_OPTS=&quot;-Xms64m -Xmx2048m&quot;
 
-om du använder distributionsskannern för att installera AEM webbprogram kan det vara bra att öka `deployment-timeout,` för den uppsättningen `deployment-timeout` i xml-filen för instansen (t.ex. `configuration/standalone.xml)`:
+Om du använder distributionsskannern för att installera det AEM webbprogrammet kan det vara bra att öka `deployment-timeout,` för den uppsättningen `deployment-timeout` i xml-filen för instansen (t.ex. `configuration/standalone.xml)`:
 
 ```xml
 <subsystem xmlns="urn:jboss:domain:deployment-scanner:1.1">
@@ -144,7 +141,7 @@ om du använder distributionsskannern för att installera AEM webbprogram kan de
 
 **Distribuera AEM webbprogram**
 
-* Ladda upp det AEM webbprogrammet i JBoss-administrationskonsolen.
+* Ladda upp det AEM webbprogrammet i JBoss® Administration Console.
 
 * Aktivera det AEM webbprogrammet.
 
@@ -162,7 +159,7 @@ Detta använder en enkel serverlayout med endast en Admin Server.
 
 * Öka inställningarna för virtuellt minne:
 
-   * open `${myDomain}/bin/setDomainEnv.cmd` (Svara .sh) sök efter WLS_MEM_ARGS, ange t.ex. set `WLS_MEM_ARGS_64BIT=-Xms256m -Xmx2048m`
+   * open `${myDomain}/bin/setDomainEnv.cmd` (Svara .sh) sök efter WLS_MEM_ARGS, ange till exempel set `WLS_MEM_ARGS_64BIT=-Xms256m -Xmx2048m`
    * starta om WebLogic-server
 
 * Skapa i `${myDomain}` en paketmapp och i en cq-mapp och i den en Plan-mapp
@@ -170,7 +167,7 @@ Detta använder en enkel serverlayout med endast en Admin Server.
 **Distribuera AEM webbprogram**
 
 * Hämta AEM
-* Lägg AEM i mappen ${myDomain}/packages/cq
+* Lägg AEM i ${myDomain}/packages/cq mapp
 * Gör dina konfigurationer till `WEB-INF/web.xml` vid behov (se ovan i den allmänna beskrivningen)
 
    * Packa upp `WEB-INF/web.xml`fil
@@ -180,7 +177,7 @@ Detta använder en enkel serverlayout med endast en Admin Server.
 
 * Distribuera AEM krigsfil som ett program (för de andra inställningarna används standardinställningarna)
 * Installationen kan ta tid..
-* Kontrollera att installationen har slutförts enligt beskrivningen ovan i den allmänna beskrivningen (t.ex. finjustera error.log)
+* Kontrollera att installationen har slutförts enligt beskrivningen ovan i den allmänna beskrivningen (t.ex. för att anpassa error.log)
 * Du kan ändra kontextroten på fliken Konfiguration i webbprogrammet i WebLogic `/console`
 
 #### Tomcat 8/8.5 {#tomcat}
@@ -191,48 +188,48 @@ Före en distribution ska du läsa [Allmän beskrivning](#general-description) o
 
    * Öka inställningarna för virtuellt minne:
 
-      * I `bin/catalina.bat` (rep `catalina.sh` on unix) lägger till följande inställning:
+      * I `bin/catalina.bat` (rep `catalina.sh` på UNIX®) lägger du till följande inställning:
       * `set "JAVA_OPTS= -Xmx2048m`
-   * Tomcat ger varken administratörs- eller hanteraråtkomst vid installationen. Därför måste du redigera manuellt `tomcat-users.xml` för att ge åtkomst till dessa konton:
+
+   * Tomcat ger inte administratörs- eller hanteraråtkomst vid installationen. Därför måste du redigera manuellt `tomcat-users.xml` för att ge åtkomst till dessa konton:
 
       * Redigera `tomcat-users.xml` för att ge åtkomst till administratörer och chefer. Konfigurationen bör se ut ungefär som i följande exempel:
 
-         ```xml
-         <?xml version='1.0' encoding='utf-8'?>
-         <tomcat-users>
-         role rolename="manager"/>
-         role rolename="tomcat"/>
-         <role rolename="admin"/>
-         <role rolename="role1"/>
-         <role rolename="manager-gui"/>
-         <user username="both" password="tomcat" roles="tomcat,role1"/>
-         <user username="tomcat" password="tomcat" roles="tomcat"/>
-         <user username="admin" password="admin" roles="admin,manager-gui"/>
-         <user username="role1" password="tomcat" roles="role1"/>
-         </tomcat-users>
-         ```
+        ```xml
+        <?xml version='1.0' encoding='utf-8'?>
+        <tomcat-users>
+        role rolename="manager"/>
+        role rolename="tomcat"/>
+        <role rolename="admin"/>
+        <role rolename="role1"/>
+        <role rolename="manager-gui"/>
+        <user username="both" password="tomcat" roles="tomcat,role1"/>
+        <user username="tomcat" password="tomcat" roles="tomcat"/>
+        <user username="admin" password="admin" roles="admin,manager-gui"/>
+        <user username="role1" password="tomcat" roles="role1"/>
+        </tomcat-users>
+        ```
+
    * Om du vill distribuera AEM med kontextroten &quot;/&quot; måste du ändra kontextroten för den befintliga ROOT-webbappen:
 
       * Stoppa och avdistribuera ROOT-webbprogram
       * Byt namn på mappen ROOT.war i Tomcat-webbappen
       * Starta webbprogrammet igen
+
    * Om du installerar AEM webbprogram med hanteraren-gui måste du öka den maximala storleken för en överförd fil, eftersom standardvärdet endast tillåter 50 MB uppladdningsstorlek. För att göra det öppnar web.xml för webbprogrammet manager,
 
-      `webapps/manager/WEB-INF/web.xml`
+     `webapps/manager/WEB-INF/web.xml`
 
-      och öka max-file-size och max-request-size till minst 500 MB, se följande `multipart-config` exempel på en sådan `web.xml` -fil.
+     och öka max-file-size och max-request-size till minst 500 MB, se följande `multipart-config` exempel på en sådan `web.xml` -fil.
 
-      ```xml
-      <multipart-config>
-      <!-- 500MB max -->
-      <max-file-size>524288000</max-file-size>
-      <max-request-size>524288000</max-request-size>
-      <file-size-threshold>0</file-size-threshold>
-      </multipart-config>
-      ```
-
-
-
+     ```xml
+     <multipart-config>
+     <!-- 500MB max -->
+     <max-file-size>524288000</max-file-size>
+     <max-request-size>524288000</max-request-size>
+     <file-size-threshold>0</file-size-threshold>
+     </multipart-config>
+     ```
 
 * **Distribuera AEM webbprogram**
 
@@ -243,10 +240,10 @@ Före en distribution ska du läsa [Allmän beskrivning](#general-description) o
       * ändra sling.run.modes-parameter för publicering
       * avkommentera slinga.initial startparameter och ange den här sökvägen efter behov
       * Replikera filen web.xml
+
    * Byt namn AEM krigsfil till ROOT.war om du vill distribuera den som en rotwebbapp, byt namn på den till t.ex. aemauthor.war om du vill ha en aemauthor som kontextrot
    * kopiera det till Tomcat-webbappen
    * vänta tills AEM har installerats
-
 
 ## Felsökning {#troubleshooting}
 

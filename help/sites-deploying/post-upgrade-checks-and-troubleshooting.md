@@ -1,20 +1,16 @@
 ---
 title: Kontrollera och felsök efter uppgradering
-seo-title: Post Upgrade Checks and Troubleshooting
 description: Lär dig hur du felsöker problem som kan uppstå efter en uppgradering.
-seo-description: Learn how to troubleshoot issues that might appear after an upgrade.
-uuid: 3f525f2c-8d25-4bb8-a57e-3adf667edde8
 contentOwner: sarchiz
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: upgrading
 content-type: reference
-discoiquuid: 5a67aa9f-e5eb-4d7e-89da-2ee1a45eb8ce
 docset: aem65
 feature: Upgrading
 exl-id: ceac2b52-6885-496d-9517-5fc7291ad070
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 69346a710708ee659ee97e9fdc193c8ea2658fe6
 workflow-type: tm+mt
-source-wordcount: '1813'
+source-wordcount: '1785'
 ht-degree: 0%
 
 ---
@@ -56,10 +52,10 @@ Huvudsyftet med den här funktionen är att minska behovet av manuell tolkning e
 
 Mer specifikt säkerställer det att
 
-* Uppgraderingsfel som upptäcks av uppgraderingsramverket kan centraliseras i en enda uppgraderingsrapport.
+* Uppgraderingsfel som upptäcks av uppgraderingsramverket centraliseras i en enda uppgraderingsrapport.
 * Uppgraderingsrapporten innehåller indikatorer om nödvändigt manuellt ingripande.
 
-För att hantera detta har ändringar gjorts i hur loggarna genereras i `upgrade.log` -fil.
+För att tillgodose detta har ändringar gjorts i hur loggarna genereras i `upgrade.log` -fil.
 
 Här följer ett exempel på en rapport som inte visar några fel under uppgraderingen:
 
@@ -71,11 +67,11 @@ Här följer ett exempel på en rapport som visar ett paket som inte installerad
 
 **error.log**
 
-error.log bör granskas noggrant under och efter det att AEM startas med målversionen jar. Alla varningar och fel bör granskas. I allmänhet är det bäst att söka efter problem i början av loggen. Fel som inträffar senare i loggen kan i själva verket vara biverkningar av en rotorsak som anropas tidigt i filen. Om upprepade fel och varningar inträffar, se nedan för [Analysera problem med uppgraderingen](/help/sites-deploying/post-upgrade-checks-and-troubleshooting.md#analyzing-issues-with-the-upgrade).
+error.log bör granskas noggrant under och efter det att AEM startats med målversionen jar. Alla varningar och fel bör granskas. I allmänhet är det bäst att söka efter problem i början av loggen. Fel som inträffar senare i loggen kan i själva verket vara biverkningar av en rotorsak som anropas tidigt i filen. Om upprepade fel och varningar inträffar, se nedan för [Analysera problem med uppgraderingen](/help/sites-deploying/post-upgrade-checks-and-troubleshooting.md#analyzing-issues-with-the-upgrade).
 
 ### Verifiera OSGi Bundles {#verify-osgi-bundles}
 
-Navigera till OSGi-konsolen `/system/console/bundles` och kontrollera om några paket inte har startats. Om något paket är installerat läser du `error.log` för att fastställa rotproblem.
+Navigera till OSGi-konsolen `/system/console/bundles` och kontrollera om några paket inte har startats. Om något paket är installerat läser du `error.log` för att fastställa grundproblemet.
 
 ### Verifiera Oak-version {#verify-oak-version}
 
@@ -83,15 +79,15 @@ Efter uppgraderingen bör du se att Oak-versionen har uppdaterats till **1.10.2*
 
 ### Inspect PreUpgradeBackup, mapp {#inspect-preupgradebackup-folder}
 
-Under uppgraderingen försöker AEM säkerhetskopiera anpassningar och lagra dem under `/var/upgrade/PreUpgradeBackup/<time-stamp-of-upgrade>`. Om du vill visa den här mappen i CRXDE Lite måste du kanske [temporärt aktivera CRXDE Lite](/help/sites-administering/enabling-crxde-lite.md).
+Under uppgraderingen försöker AEM säkerhetskopiera anpassningar och lagra dem under `/var/upgrade/PreUpgradeBackup/<time-stamp-of-upgrade>`. Om du vill visa den här mappen i CRXDE Lite kan du behöva [temporärt aktivera CRXDE Lite](/help/sites-administering/enabling-crxde-lite.md).
 
-Mappen med tidsstämpeln ska ha en egenskap med namnet `mergeStatus` med värdet `COMPLETED`. The **att bearbeta** mappen ska vara tom och **överskriven** noden anger vilka noder som skrevs över under uppgraderingen. Innehåll under **leftovers** noden anger innehåll som inte kan sammanfogas på ett säkert sätt under uppgraderingen. Om implementeringen är beroende av någon av de underordnade noderna (och inte redan har installerats av det uppgraderade kodpaketet) måste de sammanfogas manuellt.
+Mappen med tidsstämpeln ska ha en egenskap med namnet `mergeStatus` med värdet `COMPLETED`. The **att bearbeta** mappen ska vara tom och **överskriven** noden anger vilka noder som skrevs över under uppgraderingen. Innehåll under den vänstra noden visar innehåll som inte kan sammanfogas på ett säkert sätt under uppgraderingen. Om implementeringen är beroende av någon av de underordnade noderna (och inte redan har installerats av det uppgraderade kodpaketet) måste de sammanfogas manuellt.
 
 Inaktivera CRXDE Lite efter den här övningen om det finns på en scen- eller produktionsmiljö.
 
 ### Inledande validering av sidor {#initial-validation-of-pages}
 
-Utför en inledande validering mot flera sidor i AEM. Om du uppgraderar en redigeringsmiljö öppnar du Start-sidan och välkomstsidan ( `/aem/start.html`, `/libs/cq/core/content/welcome.html`). I både redigerings- och publiceringsmiljöer öppnas några programsidor och röktester som återges korrekt. Om det uppstår problem kan du läsa `error.log` för att felsöka.
+Utför en inledande validering mot flera sidor i AEM. Om du uppgraderar en redigeringsmiljö öppnar du Start-sidan och välkomstsidan ( `/aem/start.html`, `/libs/cq/core/content/welcome.html`). I både redigerings- och publiceringsmiljöer öppnar du några programsidor och röktestar som de återges korrekt. Om det uppstår problem kan du läsa `error.log` för att felsöka.
 
 ### Använd AEM {#apply-aem-service-packs}
 
@@ -105,7 +101,7 @@ Flera funktioner i AEM kräver ytterligare steg efter uppgraderingen. En fullst�
 
 #### Aktivera skräpinsamling för datalager {#enable-data-store-garbage-collection}
 
-Om du använder ett fildatalager måste du se till att skräpinsamlingsaktiviteten för datalagret är aktiverad och läggs till i listan Veckounderhåll. Instruktioner beskrivs [här](/help/sites-administering/data-store-garbage-collection.md).
+Om du använder ett fildatalager måste du se till att aktiviteten Skräpinsamling i datalagret är aktiverad och läggs till i listan Veckounderhåll. Instruktioner beskrivs [här](/help/sites-administering/data-store-garbage-collection.md).
 
 >[!NOTE]
 >
@@ -113,7 +109,7 @@ Om du använder ett fildatalager måste du se till att skräpinsamlingsaktivitet
 
 #### Aktivera rensning av onlineändringar {#enable-online-revision-cleanup}
 
-Om du använder MongoMK eller det nya StjärmMK-segmentformatet ser du till att aktiviteten Revision Clean Up (Revision Clean Up) är aktiverad och läggs till i listan Daily Maintenance (Dagligt underhåll). Instruktioner [här](/help/sites-deploying/revision-cleanup.md).
+Om du använder MongoMK eller det nya StjärmMK-segmentformatet kontrollerar du att aktiviteten Revision Clean Up (Revision Clean Up) är aktiverad och läggs till i listan Daily Maintenance (Dagligt underhåll). Instruktioner [här](/help/sites-deploying/revision-cleanup.md).
 
 ### Kör testplan {#execute-test-plan}
 
@@ -137,43 +133,43 @@ Dessa scenarier bör hjälpa till att hitta orsaken till uppgraderingsrelaterade
 
 Datamigrering från CRX2 till Oak bör vara möjlig för alla scenarier som börjar med källinstanser baserade på CQ 5.4. Se till att du följer uppgraderingsinstruktionerna i det här dokumentet som innehåller förberedelsen av `repository.xml`kontrollerar du att ingen anpassad autentiserare har startats via JAAS och att instansen har kontrollerats för inkonsekvenser innan migreringen påbörjas.
 
-Om migreringen fortfarande misslyckas kan du ta reda på vad som är grundorsaken genom att granska `upgrade.log`. Om problemet inte är känt ännu, rapportera det till kundsupport.
+Om migreringen fortfarande misslyckas kan du ta reda på vad som är grundorsaken genom att granska `upgrade.log`. Om problemet inte är känt ännu rapporterar du det till kundsupport.
 
 ### Uppgraderingen kördes inte {#the-upgrade-did-not-run}
 
-Innan du startar förberedelsestegen bör du kontrollera att du kör **källa** först genom att köra den med kommandot java -jar aem-quickstart.jar. Detta krävs för att filen quickstart.properties ska kunna genereras korrekt. Om den saknas fungerar inte uppgraderingen. Du kan också kontrollera om filen finns genom att titta under `crx-quickstart/conf` i källinstansens installationsmapp. När du startar AEM för att starta uppgraderingen måste den dessutom köras med kommandot java -jar aem-quickstart.jar. Att starta från ett startskript startar inte AEM i uppgraderingsläge.
+Innan du startar förberedelsestegen bör du kontrollera att du kör **källa** först genom att köra den med kommandot Java™ -jar aem-quickstart.jar. Detta krävs för att säkerställa att filen quickstart.properties genereras korrekt. Om den saknas fungerar inte uppgraderingen. Du kan också kontrollera om filen finns genom att titta under `crx-quickstart/conf` i källinstansens installationsmapp. När du börjar AEM att uppgradera måste den också köras med kommandot Java™ -jar aem-quickstart.jar. Att starta från ett startskript startar inte AEM i uppgraderingsläge.
 
 ### Paket och paket kunde inte uppdateras  {#packages-and-bundles-fail-to-update-}
 
-Om paketen inte installeras under uppgraderingen kommer de paket de innehåller inte heller att uppdateras. Den här kategorin av problem orsakas vanligtvis av felkonfigurering av datalagret. De ser också ut som **FEL** och **VARNING** meddelanden i error.log. Eftersom standardinloggningen i de flesta fall kanske inte fungerar kan du använda CRXDE direkt för att undersöka och hitta konfigurationsproblemen.
+Om paketen inte installeras under uppgraderingen kommer de paket de innehåller inte heller att uppdateras. Den här kategorin av problem orsakas av felkonfigurering av datalagret. De ser också ut som **FEL** och **VARNING** meddelanden i error.log. Eftersom standardinloggningen i de flesta fall kan misslyckas kan du använda CRXDE direkt för att undersöka och hitta konfigurationsproblemen.
 
 ### Vissa AEM byter inte till aktivt läge {#some-aem-bundles-are-not-switching-to-the-active-state}
 
-Om paketen inte startar bör du kontrollera om du inte är nöjd med beroendet.
+Om det inte finns några paket som kan startas kontrollerar du om det finns några beroenden som inte är nöjda.
 
 Om det här problemet uppstår men baseras på en misslyckad paketinstallation som ledde till att paket inte uppgraderas, kommer de att anses vara inkompatibla för den nya versionen. Mer information om hur du felsöker detta finns i **Paket och paket kunde inte uppdateras** ovan.
 
-Vi rekommenderar också att du jämför paketlistan för en ny instans av AEM 6.5 med den uppgraderade instansen för att identifiera de paket som inte uppgraderats. Detta ger en närmare beskrivning av vad du ska söka efter i `error.log`.
+Vi rekommenderar också att du jämför paketlistan för en ny AEM 6.5-instans med den uppgraderade instansen för att identifiera de paket som inte uppgraderats. Detta ger en närmare beskrivning av vad du ska söka efter i `error.log`.
 
 ### Anpassade paket växlar inte till aktivt läge {#custom-bundles-not-switching-to-the-active-state}
 
-Om dina anpassade paket inte växlar till det aktiva läget är det mest troligt att det finns kod som inte importerar ändrings-API. Detta leder ofta till missnöjda beroenden.
+Om dina anpassade paket inte växlar till det aktiva läget är det troligtvis så att det finns kod som inte importerar ändrings-API. Detta leder ofta till missnöjda beroenden.
 
 API som har tagits bort ska markeras som borttaget i en av de tidigare versionerna. Instruktioner om direktmigrering av koden finns i det här meddelandet om borttagning. Adobe planerar semantisk versionshantering där det är möjligt, så att versionerna kan visa på förändringar som går förlorade.
 
-Det är också bäst att kontrollera om den ändring som har orsakat problemet var absolut nödvändig och återställa den om den inte är det. Kontrollera också om versionsökningen av paketexporten ökade mer än nödvändigt efter strikt semantisk versionshantering.
+Det är också bäst att kontrollera om den ändring som orsakade problemet var nödvändig och återställa den om så inte är fallet. Kontrollera också om versionsökningen av paketexporten ökade mer än nödvändigt efter strikt semantisk versionshantering.
 
 ### Felaktigt gränssnitt för plattformen {#malfunctioning-platform-ui}
 
-Om det finns vissa gränssnittsfunktioner som inte fungerar som de ska efter uppgraderingen bör du först kontrollera om gränssnittet är anpassat. Vissa strukturer kan ha ändrats och övertäckningen kan behöva uppdateras eller vara föråldrad.
+Om det finns vissa gränssnittsfunktioner som inte fungerar som de ska efter uppgraderingen bör du först kontrollera om gränssnittet har anpassats. Vissa strukturer kan ha ändrats och övertäckningen kan behöva uppdateras eller vara föråldrad.
 
-Kontrollera sedan om det finns JavaScript-fel som kan spåras till anpassade tillagda tillägg som är kopplade till klientbibliotek. Samma sak kan gälla för anpassad CSS som kan orsaka problem med den AEM layouten.
+Kontrollera sedan om det finns JavaScript-fel som kan spåras till anpassade tillägg som är kopplade till klientbibliotek. Samma sak kan gälla för anpassad CSS som kan orsaka problem med den AEM layouten.
 
-Slutligen kontrollerar du om Javascript inte kan hantera en felkonfiguration. Detta är vanligtvis fallet med felaktigt inaktiverade tillägg.
+Slutligen kontrollerar du om JavaScript inte kan hantera en felkonfiguration. Detta är vanligtvis fallet med felaktigt inaktiverade tillägg.
 
 ### Felfungerande anpassade komponenter, mallar eller gränssnittstillägg {#malfunctioning-custom-components-templates-or-ui-extensions}
 
-I de flesta fall är orsaken till de här problemen densamma som för paket som inte har startats eller paket som inte installeras med den enda skillnaden att problemen börjar inträffa när komponenterna används för första gången.
+Vanligtvis är orsaken till de här problemen densamma som för paket som inte har startats eller paket som inte installeras med den enda skillnaden att problemen börjar inträffa när komponenterna används för första gången.
 
 Ett sätt att hantera felaktig egen kod är att först utföra röktester för att identifiera orsaken. När du har hittat det kan du titta på rekommendationerna i det här [link] i artikeln om hur du åtgärdar dem.
 
@@ -183,7 +179,7 @@ Ett sätt att hantera felaktig egen kod är att först utföra röktester för a
 
 ### Analyserar error.log och upgrade.log {#analyzing-the-error.log-and-upgrade.log}
 
-I de flesta fall måste loggarna sökas efter fel för att hitta orsaken till ett problem. Vid uppgraderingar är det dock också nödvändigt att övervaka beroendeproblem eftersom gamla paket kanske inte uppgraderas korrekt.
+I de flesta fall måste du söka efter fel i loggarna för att hitta orsaken till ett problem. Vid uppgraderingar är det dock också nödvändigt att övervaka beroendeproblem eftersom gamla paket kanske inte uppgraderas korrekt.
 
 Det bästa sättet att göra detta är att ta bort error.log genom att ta bort alla meddelanden som inte har med problemet att göra. Du kan göra detta med ett verktyg som grep genom att använda:
 
@@ -203,4 +199,4 @@ I ett fåtal fall kan fel också hittas i WARN-meddelanden eftersom det kan finn
 
 ### Kontakta supporten för Adobe {#contacting-adobe-support}
 
-Om du har gått igenom råden på den här sidan och fortfarande ser problem kan du kontakta Adobe Support. Om du vill ge så mycket information som möjligt till den supporttekniker som arbetar med ditt ärende måste du inkludera filen upgrade.log från uppgraderingen.
+Om du har gått igenom råden på den här sidan och fortfarande ser problem kontaktar du supporten för Adobe. Om du vill ge så mycket information som möjligt till den supporttekniker som arbetar med ditt ärende måste du inkludera filen upgrade.log från uppgraderingen.

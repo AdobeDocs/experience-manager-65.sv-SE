@@ -1,29 +1,25 @@
 ---
 title: Använda Dölj villkor
-seo-title: Using Hide Conditions
 description: Dölj villkor kan användas för att avgöra om en komponentresurs återges eller inte.
-seo-description: Hide conditions can be used to determine if a component resource is rendered or not.
-uuid: 93b4f450-1d94-4222-9199-27b5f295f8e6
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: components
 content-type: reference
-discoiquuid: 104d1c64-b9b3-40f5-8f9b-fe92d9daaa1f
 exl-id: 65f5d5e1-ac11-4a3c-8a51-ce06a741c264
-source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
+source-git-commit: 69346a710708ee659ee97e9fdc193c8ea2658fe6
 workflow-type: tm+mt
-source-wordcount: '626'
+source-wordcount: '633'
 ht-degree: 0%
 
 ---
 
 # Använda Dölj villkor {#using-hide-conditions}
 
-Dölj villkor kan användas för att avgöra om en komponentresurs återges eller inte. Ett exempel på detta är när en mallskapare konfigurerar kärnkomponenten [listkomponent](https://helpx.adobe.com/experience-manager/core-components/using/list.html) i [mallredigerare](/help/sites-authoring/templates.md) och bestämmer sig för att inaktivera alternativen för att skapa listan baserat på underordnade sidor. Om du inaktiverar det här alternativet i designdialogrutan anges en egenskap så att när listkomponenten återges utvärderas dolda villkor och alternativet att visa underordnade sidor inte visas.
+Dölj villkor kan användas för att avgöra om en komponentresurs återges eller inte. Ett exempel på detta är när en mallskapare konfigurerar kärnkomponenten [listkomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/list.html?lang=en) i [mallredigerare](/help/sites-authoring/templates.md) och bestämmer sig för att inaktivera alternativen för att skapa listan baserat på underordnade sidor. Om du inaktiverar det här alternativet i designdialogrutan ställs en egenskap in så att det dolda villkoret utvärderas när listkomponenten återges och alternativet att visa underordnade sidor inte visas.
 
 ## Översikt {#overview}
 
-Dialogrutor kan bli mycket komplexa med många alternativ för användaren, som kanske bara använder en del av de alternativ som han/hon har till sitt förfogande. Detta kan leda till en överväldigande upplevelse av användargränssnittet.
+Dialogrutor kan bli komplexa med flera alternativ för användaren, som kanske bara använder en del av de alternativ som finns till hands. Detta kan leda till en överväldigande upplevelse av användargränssnittet.
 
 Genom att använda dolda villkor kan administratörer, utvecklare och superanvändare dölja resurser baserat på en uppsättning regler. Med den här funktionen kan de bestämma vilka resurser som ska visas när en författare redigerar innehåll.
 
@@ -35,7 +31,7 @@ Genom att använda dolda villkor kan administratörer, utvecklare och superanvä
 
 `com.adobe.granite.ui.components.FilteringResourceWrapper` är ansvarig för att filtrera resurserna baserat på förekomsten och värdet av `granite:hide` -egenskap, som finns i det fält som ska filtreras. Genomförandet av `/libs/cq/gui/components/authoring/dialog/dialog.jsp` innehåller en instans av `FilteringResourceWrapper.`
 
-Implementeringen utnyttjar Graniten [ELResolver API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/docs/server/el.html) och lägger till en `cqDesign` egen variabel via ExpressionCustomizer.
+Implementeringen utnyttjar Graniten [ELResolver API](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/docs/server/el.html) och lägger till en `cqDesign` egen variabel via ExpressionCustomizer.
 
 Här är några exempel på hur du döljer villkor i en designnod som finns under `etc/design` eller som en innehållsprincip.
 
@@ -49,17 +45,17 @@ ${cqDesign.myProperty == true}
 ${cqDesign.property1 == 'someText' && cqDesign.property2 || cqDesign.property3 != 1 || header.myHeader}
 ```
 
-När du definierar ditt dolda uttryck ska du tänka på:
+Tänk på följande när du definierar ditt dolda uttryck:
 
-* För att vara giltig måste det omfång i vilket egenskapen hittas uttryckas (t.ex. `cqDesign.myProperty`).
+* För att vara giltig måste omfånget som egenskapen hittas uttryckas (till exempel `cqDesign.myProperty`).
 * Värdena är skrivskyddade.
 * Funktioner (om det behövs) bör begränsas till en viss uppsättning som tillhandahålls av tjänsten.
 
 ## Exempel {#example}
 
-Exempel på dolda villkor finns i hela AEM och [kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) särskilt. Tänk dig till exempel [listkärnkomponent](https://helpx.adobe.com/experience-manager/core-components/using/list.html).
+Exempel på dolda villkor finns i hela AEM och [kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) särskilt. Tänk dig till exempel [listkärnkomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/list.html?lang=en).
 
-[Använda mallredigeraren](/help/sites-authoring/templates.md)kan mallskaparen i designdialogrutan definiera vilka alternativ för listkomponenten som är tillgängliga för sidförfattaren. Alternativ som om listan ska kunna vara en statisk lista, en lista med underordnade sidor, en lista med taggade sidor osv. kan aktiveras eller inaktiveras.
+[Använda mallredigeraren](/help/sites-authoring/templates.md)kan mallskaparen i designdialogrutan definiera vilka alternativ för listkomponenten som är tillgängliga för sidförfattaren. Du kan till exempel välja om listan ska vara en statisk lista, en lista med underordnade sidor, en lista med taggade sidor och så vidare, aktivera eller inaktivera.
 
 Om en mallskapare väljer att inaktivera alternativet för underordnade sidor, ställs en designegenskap in och ett dolt villkor utvärderas mot den, vilket gör att alternativet inte återges för sidförfattaren.
 
@@ -78,7 +74,7 @@ Om en mallskapare väljer att inaktivera alternativet för underordnade sidor, s
 
 1. Värdet för `disableChildren` hämtas från designkonfigurationen och uttrycket `${cqDesign.disableChildren}` utvärderas till `false`, vilket innebär att alternativet inte återges som en del av komponenten.
 
-   Du kan visa uttrycket hide som värdet för `granite:hide` property [i GitHub här](https://github.com/Adobe-Marketing-Cloud/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/list/v1/list/_cq_dialog/.content.xml#L40).
+   Du kan visa uttrycket hide som värdet för `granite:hide` property [i GitHub här](https://github.com/adobe/aem-core-wcm-components/blob/main/content/src/content/jcr_root/apps/core/wcm/components/list/v1/list/_cq_dialog/.content.xml#L40).
 
 1. Alternativet **Underordnade sidor** återges inte längre för sidförfattaren när listkomponenten används.
 

@@ -1,26 +1,22 @@
 ---
-title: Koncepten i det AEM användargränssnittet med pekskärm
-seo-title: Concepts of the AEM Touch-Enabled UI
-description: Med AEM 5.6 Adobe introducerades ett nytt pekoptimerat gränssnitt med responsiv design för redigeringsmiljön
-seo-description: With AEM 5.6 Adobe introduced a new touch-optimized UI with responsive design for the author environment
-uuid: 401c5a65-6ddc-4942-ab8e-395016f9c629
+title: Adobe Experience Manager Touch-aktiverade användargränssnitt
+description: Med Adobe Experience Manager 5.6 har Adobe introducerat ett nytt pekoptimerat gränssnitt med responsiv design för redigeringsmiljön
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
-discoiquuid: df3aaed1-97b5-4a4a-af74-cb887462475b
 docset: aem65
 exl-id: f13ac6c2-16ab-422d-9005-ab0b49172271
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 69346a710708ee659ee97e9fdc193c8ea2658fe6
 workflow-type: tm+mt
-source-wordcount: '2176'
+source-wordcount: '2167'
 ht-degree: 0%
 
 ---
 
-# Koncepten i det AEM användargränssnittet med pekskärm{#concepts-of-the-aem-touch-enabled-ui}
+# Adobe Experience Manager Touch-aktiverade användargränssnitt{#concepts-of-the-aem-touch-enabled-ui}
 
-AEM har ett pekaktiverat gränssnitt med [responsiv design](/help/sites-authoring/responsive-layout.md) för redigeringsmiljön som är utformad för att fungera både på pekskärmar och datorer.
+Adobe Experience Manager (AEM) har ett pekaktiverat användargränssnitt med [responsiv design](/help/sites-authoring/responsive-layout.md) för redigeringsmiljön som är utformad för att fungera både på pekskärmar och datorer.
 
 >[!NOTE]
 >
@@ -31,20 +27,20 @@ Användargränssnittet med pekfunktioner innehåller:
 * Suite header som:
    * Visar logotypen
    * Tillhandahåller en länk till den globala navigeringen
-   * Tillhandahåller länk till andra allmänna åtgärder. som Sök, Hjälp, Marketing Cloud Solutions, Notifications och User Settings.
+   * Tillhandahåller länk till andra allmänna åtgärder. till exempel Sök, Hjälp, Experience Cloud Solutions, Notifications och User Settings.
 * Den vänstra listen (visas när den behövs och är dold) som kan visa:
    * Tidslinje
    * Referenser
    * Filter
 * Navigeringsrubriken, som återigen är sammanhangsberoende och kan visa:
-   * Anger vilken konsol du använder och/eller din plats inom den konsolen
+   * Anger vilken konsol du använder, eller din plats, eller båda, i den konsolen
    * Markering för den vänstra rälen
    * Breadcrumbs
    * Tillgång till lämplig **Skapa** funktionsmakron
    * Visa markeringar
 * Innehållsområdet som:
-   * Visar en lista över innehållsobjekt (sidor, resurser, foruminlägg osv.)
-   * Kan formateras enligt begäran, t.ex. kolumn, kort eller lista
+   * Visar en lista med innehållsobjekt (sidor, resurser, foruminlägg osv.)
+   * Kan formateras enligt begäran, till exempel kolumn, kort eller lista
    * Använder en responsiv design (bildskärmen ändrar automatiskt storlek efter enheten och/eller fönsterstorleken)
    * Använder oändlig rullning (ingen sidnumrering, alla objekt visas i ett fönster)
 
@@ -69,11 +65,11 @@ De grundläggande principerna för det beröringskänsliga användargränssnitte
 * Inkludera inbäddade tester
 * Nedifrån och upp-design för att säkerställa att dessa principer tillämpas på alla element och komponenter
 
-Mer information om den beröringsaktiverade gränssnittsstrukturen finns i artikeln [Struktur för det AEM användargränssnittet med pekskärm](/help/sites-developing/touch-ui-structure.md).
+Mer information om användargränssnittets struktur med pekfunktion finns i [Struktur för det AEM användargränssnittet med pekskärm](/help/sites-developing/touch-ui-structure.md).
 
 ## AEM Technology Stack {#aem-technology-stack}
 
-AEM använder Granite-plattformen som bas och Granite-plattformen innehåller bland annat Java Content Repository.
+AEM använder Granite-plattformen som bas och Granite-plattformen innehåller bland annat Java™ Content Repository.
 
 ![chlimage_1-80](assets/chlimage_1-80.png)
 
@@ -83,7 +79,7 @@ Granite är en Adobe Open Web-stack med olika komponenter:
 
 * En programstart
 * Ett OSGi-ramverk där allt distribueras
-* Ett antal OSGi-sammanläggningstjänster som stöder byggapplikationer
+* Flera OSGi-kompendium-tjänster som stöder byggapplikationer
 * Ett omfattande loggningsramverk med olika loggnings-API:er
 * Implementeringen av CRX-databasen för JCR API-specifikationen
 * Apache Sling Web Framework
@@ -91,9 +87,9 @@ Granite är en Adobe Open Web-stack med olika komponenter:
 
 >[!NOTE]
 >
->Granite körs som ett öppet utvecklingsprojekt i Adobe: bidrag till koden, diskussioner och frågor görs i hela företaget.
+>Granite körs som ett öppet utvecklingsprojekt i Adobe: bidrag till koden, diskussioner och frågor görs från hela företaget.
 >
->Granite är dock **not** ett öppen källkodsprojekt. Den bygger till stor del på flera öppen källkodsprojekt (särskilt Apache Sling, Felix, Jackrabbit och Lucene), men Adobe drar en tydlig linje mellan vad som är offentligt och vad som är internt.
+>Granite är dock **not** ett öppen källkodsprojekt. Den bygger till stor del på flera öppen källkodsprojekt (särskilt Apache Sling, Felix, Jackrabbit och Lucene), men Adobe har en tydlig gräns mellan vad som är offentligt och vad som är internt.
 
 ## Granite-gränssnitt {#granite-ui}
 
@@ -121,7 +117,7 @@ Gränssnittet för Granite:
 * Tillhandahåller ett standardgränssnitt
 * Är utökningsbar
 * Är utformad för både mobila och stationära enheter (respekterar mobilen först)
-* Kan användas i alla Granite-baserade plattformar/produkter/projekt. e AEM
+* Kan användas i alla Granite-baserade plattformar/produkter/projekt. AEM
 
 ![chlimage_1-82](assets/chlimage_1-82.png)
 
@@ -142,7 +138,7 @@ Klient-server-kommunikationen i Granite-gränssnittet består av hypertext, inte
 
 Detta innebär att ett tillägg till HTML-vokabulär används, förutsatt att författaren kan uttrycka sin avsikt att skapa en interaktiv webbapp. Det här är ett liknande tillvägagångssätt [WAI-ARIA](https://www.w3.org/TR/wai-aria/) och [mikroformat](https://microformats.org/).
 
-Det består främst av en samling interaktionsmönster (till exempel asynkron sändning av ett formulär) som tolkas av JS- och CSS-koder, som körs på klientsidan. Klientsidans roll är att förstärka markeringen (som serverns hypermedia) för interaktivitet.
+Det består främst av en samling interaktionsmönster (till exempel asynkront skicka ett formulär) som tolkas av JS- och CSS-koder, som körs på klientsidan. Klientsidans roll är att förstärka markeringen (som serverns hypermedia) för interaktivitet.
 
 Klientsidan är oberoende av serverteknik. Så länge servern ger rätt kod kan klientsidan uppfylla sin roll.
 
@@ -158,7 +154,7 @@ Dessa levereras som en del av innehållspaketet:
 
 Detta formas av en samling slingkomponenter som gör att författaren kan *komponera* en webbapp snabbt. Utvecklaren utvecklar komponenter, författaren sätter ihop komponenterna till en webbapp. Serversidans roll är att förse klienten med hypermedia-råd (markup).
 
-Komponenterna finns för närvarande i Granite-databasen på:
+För närvarande finns komponenterna i Granite-databasen på:
 
 `/libs/granite/ui/components/foundation`
 
@@ -201,7 +197,7 @@ Skillnaderna mellan GRUI och ExtJS (används för det klassiska användargränss
 
 ### Granite UI Foundation Components {#granite-ui-foundation-components}
 
-The [Granite UI Foundation Components](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/index.html) tillhandahålla de grundläggande byggstenar som behövs för att bygga ett användargränssnitt. De omfattar bland annat följande:
+The [Granite UI Foundation Components](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html) tillhandahålla de grundläggande byggstenar som behövs för att bygga ett användargränssnitt. De omfattar bland annat följande:
 
 * Knapp
 * Hyperlänk
@@ -222,7 +218,7 @@ Syfte:
 Implementering:
 
 * Databasbaserad disposition och konfiguration
-* Utnyttja testfunktionerna i Granitplattformen
+* Användning av testutrustning som tillhandahålls av Granite-plattformen
 * JSP-mallar
 
 Det här biblioteket med grundkomponenter kan användas eller utökas av andra bibliotek.
@@ -258,7 +254,7 @@ När du uppgraderar ExtJS-kod för att använda GRA-gränssnittet ger följande 
 
 ### Granite UI Administration Components {#granite-ui-administration-components}
 
-The [Administrationskomponenter för GRI](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/index.html) bygga vidare på grundkomponenterna för att tillhandahålla generiska byggstenar som alla administrationsprogram kan implementera. Dessa omfattar bland annat följande:
+The [Administrationskomponenter för GRI](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html) bygga vidare på grundkomponenterna för att tillhandahålla generiska byggstenar som alla administrationsprogram kan implementera. Dessa omfattar bland annat följande:
 
 * Globalt navigeringsfält
 * Rail (skelett)
@@ -279,7 +275,7 @@ Implementering:
 CoralUI.pdf
 
 [Hämta fil](assets/coralui.pdf)
-Coral UI (CUI) är en implementering av Adobe visuell stil för det beröringsaktiverade användargränssnittet, som har utformats för att ge en konsekvent användarupplevelse för flera produkter. Coral UI innehåller allt du behöver för att använda den visuella stil som används i redigeringsmiljön.
+Coral UI (CUI) är en implementering av Adobe visuell stil för det pekaktiverade användargränssnittet som utformats för att ge en konsekvent användarupplevelse för flera produkter. Coral UI innehåller allt du behöver för att använda den visuella stil som används i redigeringsmiljön.
 
 >[!CAUTION]
 >
@@ -301,7 +297,6 @@ Coral UI (CUI) är en implementering av Adobe visuell stil för det beröringsak
 >* Program/komponenter/webbsidor som inte är tydligt kopplade till Adobe.
 >
 
-
 Coral UI är en samling byggstenar för utveckling av webbapplikationer.
 
 ![chlimage_1-84](assets/chlimage_1-84.png)
@@ -316,7 +311,7 @@ HTML-elementen ger ett gemensamt utseende och en gemensam känsla för alla grun
 
 På den mest grundläggande nivån är ett HTML-element en HTML-tagg med ett dedikerat klassnamn. Mer komplexa element kan bestå av flera taggar som är kapslade i varandra (på ett visst sätt).
 
-CSS används för att ge det verkliga utseendet och känslan. För att göra det enkelt att anpassa utseendet (t.ex. för varumärken) deklareras faktiska formatvärden som variabler som expanderas av [LESS](https://lesscss.org/) preprocessor under körning.
+CSS används för att ge det verkliga utseendet och känslan. För att göra det enkelt att anpassa utseendet (till exempel för varumärken) deklareras faktiska formatvärden som variabler som expanderas av [LESS](https://lesscss.org/) preprocessor under körning.
 
 Syfte:
 
@@ -325,7 +320,7 @@ Syfte:
 
 Implementering:
 
-* HTML-taggar med format som inspirerats av [bootstrap](https://twitter.github.com/bootstrap/)
+* HTML-taggar med format som inspirerats av [Bootstrap](https://twitter.github.com/bootstrap/)
 * Klasser definieras i LESS-filer
 * Ikoner definieras som teckensnittssprites
 
@@ -371,7 +366,7 @@ Ett plugin-program är antingen:
 
 Plugin-beteendet kan anpassas med parametrar, antingen genom att:
 
-* Skicka parametrarna med ett javascript-anrop
+* Skicka parametrarna med ett JavaScript-anrop
 * Använda dedikerad `data-*` attribut knutna till HTML-koden
 
 Även om utvecklaren kan välja det bästa sättet för alla plugin-program är tumregeln att använda:
@@ -424,7 +419,7 @@ Ett extrakt av exempelkod (observera de alternativ som anges som data-&#42; attr
 Anropet till jQuery-plugin-programmet:
 
 ```
-$(‘.cards’).cardlayout ();
+$('.cards').cardlayout ();
 ```
 
 Detta visas som:
@@ -435,13 +430,13 @@ The `cardLayout` plugin-programmet placerar ut det inneslutna `UL` elementen bas
 
 ### Widgetar för HTML Elements {#html-elements-widgets}
 
-En widget kombinerar ett eller flera grundläggande element med ett javascript-plugin-program till gränssnittselement på en högre nivå. Dessa kan implementera mer komplexa beteenden och även mer komplexa utseenden och känsla än vad ett enskilt element kan ge. Bra exempel är taggväljaren eller rälswidgetar.
+En widget kombinerar ett eller flera grundläggande element med ett JavaScript-plugin-program till gränssnittselement på en högre nivå. Dessa kan implementera mer komplexa beteenden och även mer komplexa utseenden och känsla än vad ett enskilt element kan ge. Bra exempel är taggväljaren eller rälswidgetar.
 
-En widget kan både utlösa och lyssna på anpassade händelser för att samarbeta med andra widgetar på sidan. Vissa widgetar är i själva verket inbyggda jQuery-widgetar som använder Coral HTML-element.
+En widget kan både utlösa och lyssna på anpassade händelser för att samarbeta med andra widgetar på sidan. Vissa widgetar är inbyggda jQuery-widgetar som använder Coral HTML-element.
 
 Syfte:
 
-* Implementera element för högre nivå i användargränssnittet som uppvisar komplext beteende
+* Implementera högnivågränssnittselement med komplext beteende
 * Utlösa och hantera händelser
 
 Implementering:
@@ -484,7 +479,7 @@ Detta visas som:
 
 ### Verktygsbibliotek {#utility-library}
 
-Det här biblioteket är en samling hjälpplugin för javascript och/eller funktioner som är:
+Det här biblioteket är en samling JavaScript-hjälpplugin-program och/eller funktioner som är:
 
 * Oberoende av användargränssnitt
 * Ändå avgörande för att bygga kompletta webbapplikationer
