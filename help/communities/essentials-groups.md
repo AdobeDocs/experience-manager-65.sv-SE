@@ -1,18 +1,14 @@
 ---
 title: Grundläggande om communitygrupper
-seo-title: Community Group Essentials
 description: Skapa communitysajter dynamiskt
-seo-description: Creating community sites dynamically
-uuid: 168e7aeb-6e9a-468d-8ac4-274007cea252
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: 4f85cd3c-5158-4f23-abe2-7e375fd0c8d4
 exl-id: f45ae7be-a500-463a-ab3e-81f281651a9d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 681d1e6bd885b801b930e580d95645f160f17cea
 workflow-type: tm+mt
-source-wordcount: '418'
+source-wordcount: '407'
 ht-degree: 0%
 
 ---
@@ -79,17 +75,17 @@ Från och med Communities [funktionspaket 1](deploy-communities.md#latestfeature
 
 ## Grundläggande för serversidan {#essentials-for-server-side}
 
-* [API för användargrupper](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/group/client/api/package-summary.html)
+* [API för användargrupper](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/group/client/api/package-summary.html)
 
-* [Slutpunkter för communitygrupp](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/group/client/endpoints/package-summary.html)
+* [Slutpunkter för communitygrupp](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/group/client/endpoints/package-summary.html)
 
 * [Anpassningar på serversidan](server-customize.md)
 
 ### Funktionen Grupper {#groups-function}
 
-En community-webbplatsstruktur som innehåller [Funktionen Grupper](functions.md#groups-function) kommer att stödja skapandet av nya `community groups` från publicerings- och författarmiljöerna. Den skapade communitygruppen kommer att innehålla en `community groups member list` som listar medlemmarna i gruppen.
+En community-webbplatsstruktur som innehåller [Funktionen Grupper](functions.md#groups-function) stöder skapandet av nya `community groups` från publicerings- och författarmiljöerna. Den skapade communitygruppen innehåller en `community groups member list` -komponent som listar medlemmarna i gruppen.
 
-En eller flera [communitygruppsmallar](tools-groups.md), som tillhandahåller designen för communitygruppssidor, kan konfigureras för funktionen Grupper när funktionen läggs till i en [mall för communitywebbplats](sites.md) eller kapslad i en community-gruppmall.
+En eller flera [communitygruppsmallar](tools-groups.md), som tillhandahåller designen för communitygruppssidorna, kan konfigureras för funktionen Grupper när funktionen läggs till i en [mall för communitywebbplats](sites.md) eller kapslad i en community-gruppmall.
 
 Om flera communitygruppsmallar ingår visas ett val av design för den behöriga användaren när en ny community-grupp skapas för communitywebbplatsen, vilket visas i avsnittet om [communitygrupper](creating-groups.md) för författare.
 
@@ -103,7 +99,7 @@ När en communitywebbplats eller gruppmall innehåller funktionen Grupper kan du
 
 * Skapa en grupp i publiceringsmiljön när den är konfigurerad för att tillåta det.
 
-När du skapar en grupp i författarmiljön måste du först publicera communitywebbplatsen och sedan publicera gruppen. När du publicerar communitywebbplatsen publiceras gruppens sidor, utan att det skapas undercommunityns medlemsgrupper som åtkomstkontrollistorna ställs in på. En begränsad (hemlig) grupp kan därför vara synlig tills gruppen uttryckligen publiceras.
+När du skapar en grupp i författarmiljön måste du först publicera communitywebbplatsen och sedan publicera gruppen. När du publicerar communitywebbplatsen publiceras gruppens sidor, utan att undercommunityns medlemsgrupper som åtkomstkontrollistorna är inställda på skapas. En begränsad (hemlig) grupp kan därför vara synlig tills gruppen uttryckligen publiceras.
 
 ## Länkar och tillhörande information {#links-and-related-information}
 
