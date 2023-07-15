@@ -1,18 +1,14 @@
 ---
 title: Grundläggande om communitysajter
-seo-title: Community Site Essentials
 description: Exportera och ta bort communitysajter och skapa anpassade webbplatsmallar
-seo-description: Exporting and deleting community sites and creating custom site templates
-uuid: f0ec0e71-64e9-415a-b14a-939a9b1611c1
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: dc7a085e-d6de-4bc8-bd7e-6b43f8d172d2
 exl-id: 1dc568cd-315c-4944-9a3e-e5d7794e5dc0
-source-git-commit: cc0574ae22758d095a3ca6b91f0ceae4a8691f0e
+source-git-commit: e161c37544c3391607cbe495644f3353b9f77fe3
 workflow-type: tm+mt
-source-wordcount: '498'
+source-wordcount: '495'
 ht-degree: 0%
 
 ---
@@ -73,19 +69,19 @@ Identifiera den anpassade mallen genom att lägga till en `page-template` egensk
 
 ![crxde-siteconfiguration](assets/crxde-siteconfiguration.png)
 
-Se till att **Spara alla** och replikera anpassad kod till alla AEM instanser (anpassad kod inkluderas inte när innehållet på communityplatsen publiceras från konsolen).
+Se till att **Spara alla** och replikera anpassad kod till alla Adobe Experience Manager-instanser (AEM) (anpassad kod inkluderas inte när innehållet på communityplatsen publiceras från konsolen).
 
 Rekommenderad metod för att replikera egen kod är att [skapa ett paket](../../help/sites-administering/package-manager.md#creating-a-new-package) och driftsätta den i alla instanser.
 
 ## Exportera en community-plats {#exporting-a-community-site}
 
-När en communitywebbplats har skapats kan du exportera webbplatsen som ett AEM paket som lagras i pakethanteraren och som är tillgängligt för hämtning och överföring.
+När en communitywebbplats har skapats kan du exportera webbplatsen som ett AEM paket som lagras i Package Manager och som är tillgängligt för hämtning och överföring.
 
 Det här är tillgängligt från [Konsolen Webbplatser i Communities](sites-console.md#exporting-the-site).
 
-Observera att UGC och anpassad kod inte ingår i communitywebbplatspaketet.
+UGC och anpassad kod ingår inte i communityplatspaketet.
 
-Om du vill exportera UGC använder du [AEM Communities UGC-migreringsverktyg](https://github.com/Adobe-Marketing-Cloud/communities-ugc-migration), ett verktyg för migrering med öppen källkod som finns på GitHub.
+Om du vill exportera UGC använder du [AEM Communities UGC-migreringsverktyg](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration), ett verktyg för migrering med öppen källkod som är tillgängligt på GitHub.
 
 ## Ta bort en communitywebbplats {#deleting-a-community-site}
 
@@ -105,7 +101,7 @@ Så här identifierar du det unika plats-ID som är kopplat till communityplatse
 
 * Plats-ID är den tredje komponenten i `rep:principalName`
 
-   Om `rep:principalName = community-enable-nrh9h-members`
+  Om `rep:principalName = community-enable-nrh9h-members`
 
    * **webbplatsnamn** = *enable*
    * **plats-ID** = *nrh9h*
@@ -113,9 +109,9 @@ Så här identifierar du det unika plats-ID som är kopplat till communityplatse
 
 ### Användargenererat innehåll {#user-generated-content}
 
-Hämta projektet Community-srp-tools från Github:
+Hämta communityn-srp-tools-projektet från GitHub:
 
-* [https://github.com/Adobe-Marketing-Cloud/communities-srp-tools](https://github.com/Adobe-Marketing-Cloud/communities-srp-tools)
+* [https://github.com/Adobe-Marketing-Cloud/aem-communities-srp-tools](https://github.com/Adobe-Marketing-Cloud/aem-communities-srp-tools)
 
 Det här innehåller en servett som tar bort all UGC från en SRP.
 
@@ -127,7 +123,7 @@ Detta tar endast bort användargenererat innehåll (som anges vid publicering) o
 
 ### Användargrupper {#community-user-groups}
 
-På alla författar- och publiceringsinstanser från [säkerhetskonsol](../../help/sites-administering/security.md), leta reda på och ta bort [användargrupper](users.md) som är
+På alla författar- och publiceringsinstanser från [säkerhetskonsol](../../help/sites-administering/security.md), hitta och ta bort [användargrupper](users.md) som är
 
 * Förfixat med `community`
 * Följd av [unikt webbplats-ID](#community-unique-site-id)

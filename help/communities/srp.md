@@ -1,18 +1,14 @@
 ---
 title: Översikt över lagringsresursprovider
-seo-title: Storage Resource Provider Overview
 description: Gemensamt lagringsutrymme för Communities
-seo-description: Common storage for Communities
-uuid: abdf4e5a-767b-428f-9aa4-0dc06819a26e
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: 63abeda4-6ea1-4b45-b188-f9c6b44ca0cd
 exl-id: 5f313274-1a2a-4e83-9289-60a4729b99b4
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e161c37544c3391607cbe495644f3353b9f77fe3
 workflow-type: tm+mt
-source-wordcount: '1133'
+source-wordcount: '1125'
 ht-degree: 0%
 
 ---
@@ -21,7 +17,7 @@ ht-degree: 0%
 
 ## Introduktion {#introduction}
 
-Från och med AEM Communities 6.1 lagras communityinnehåll, som ofta kallas användargenererat innehåll (UGC) i en enda gemensam butik som tillhandahålls av en [lagringsresursprovider](working-with-srp.md) (SRP).
+Från och med Adobe Experience Manager (AEM) Communities 6.1 lagras användarinnehåll, som ofta kallas användargenererat innehåll (UGC), i en enda gemensam butik som tillhandahålls av en [lagringsresursprovider](working-with-srp.md) (SRP).
 
 Det finns flera SRP-alternativ, som alla använder UGC via ett nytt AEM Communities-gränssnitt, [SocialResourceProvider API](srp-and-ugc.md) (SRP API), som innehåller alla CRUD-åtgärder (create, read, update) och delete.
 
@@ -31,7 +27,7 @@ Alla SCF-komponenter implementeras med SRP API, vilket gör att kod kan utveckla
 
 >[!NOTE]
 >
->**Anpassade komponenter**: För licensierade AEM Communities-kunder är SRP API tillgängligt för utvecklare av anpassade komponenter för att få åtkomst till UGC utan hänsyn till den underliggande topologin. Se [SRP och UGC Essentials](srp-and-ugc.md).
+>**Anpassade komponenter**: För licensierade AEM Communities-kunder är SRP API tillgängligt för utvecklare av anpassade komponenter för åtkomst till UGC, utan hänsyn till den underliggande topologin. Se [SRP och UGC Essentials](srp-and-ugc.md).
 
 Se även:
 
@@ -41,17 +37,17 @@ Se även:
 
 ## Om databasen {#about-the-repository}
 
-För att förstå SRP är det bra att förstå vilken roll AEM (OAK) har på en AEM communitywebbplats.
+För att förstå SRP är det bra att förstå vilken roll AEM (Oak) har på en AEM communitywebbplats.
 
-**Java Content Repository (JCR)**
-Den här standarden definierar en datamodell och ett programprogrammeringsgränssnitt ([JCR API](https://jackrabbit.apache.org/jcr/jcr-api.html)) för innehållsdatabaser. Det kombinerar egenskaper i konventionella filsystem med egenskaper i relationsdatabaser och lägger till ett antal extrafunktioner som innehållsprogram ofta behöver.
+**Java™ Content Repository (JCR)**
+Den här standarden definierar en datamodell och ett programprogrammeringsgränssnitt ([JCR API](https://jackrabbit.apache.org/jcr/jcr-api.html)) för innehållsdatabaser. Det kombinerar egenskaper i vanliga filsystem med egenskaper i relationsdatabaser och lägger till flera funktioner som innehållsprogram ofta behöver.
 
-En implementering av JCR är AEM, OAK.
+En implementering av JCR är AEM, Oak.
 
-**Apache Jackrabbit Oak (OAK)**
-[OAK](../../help/sites-deploying/platform.md) är en implementering av JCR 2.0 som är ett datalagringssystem som är särskilt utformat för innehållscentrerade program. Det är en typ av hierarkisk databas som är utformad för ostrukturerade eller halvstrukturerade data. I databasen lagras inte bara användarriktat innehåll utan även all kod, mallar och interna data som används av programmet. Gränssnittet för åtkomst av innehåll är [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md).
+**Apache Jackrabbit Oak**
+[Oak](../../help/sites-deploying/platform.md) är en implementering av JCR 2.0 som är ett datalagringssystem som är utformat för innehållscentrerade program. Det är en typ av hierarkisk databas som är utformad för ostrukturerade eller halvstrukturerade data. I databasen lagras inte bara användarriktat innehåll utan även all kod, mallar och interna data som används av programmet. Gränssnittet för åtkomst av innehåll är [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md).
 
-Både JCR och OAK används vanligtvis för att referera till AEM.
+Både JCR och Oak används vanligtvis för att referera till AEM.
 
 När webbplatsinnehållet har utvecklats i den privata författarmiljön måste det kopieras till den offentliga publiceringsmiljön. Detta görs ofta genom en åtgärd som kallas *[replikering](deploy-communities.md#replication-agents-on-author)*. Detta sker under kontroll av författaren/utvecklaren/administratören.
 
@@ -71,7 +67,7 @@ När UGC sparas i delad lagring finns det en enda instans av medlemsinnehåll so
 
 ### ASRP {#asrp}
 
-När det gäller ASRP lagras UGC inte i JCR, utan lagras i en molntjänst som hanteras av Adobe. UGC som lagras i ASRP kan varken visas med CRXDE Lite eller nås med JCR-API:t.
+Om det finns ASRP lagras UGC inte i JCR, utan lagras i en molntjänst som hanteras av Adobe. UGC som lagras i ASRP kan inte visas med CRXDE Lite eller nås via JCR-API:t.
 
 Se [ASRP - Adobe lagringsresursleverantör](asrp.md).
 
@@ -81,7 +77,7 @@ ASRP använder Adobe cloud för frågor.
 
 ### MSRP {#msrp}
 
-För MSRP lagras UGC inte i JCR, utan i MongoDB. UGC som lagras i MSRP kan varken visas med CRXDE Lite eller nås med JCR-API:t.
+Om det finns MSRP lagras inte UGC i JCR, utan lagras det i MongoDB. UGC som lagras i MSRP kan inte visas med CRXDE Lite eller nås via JCR-API:t.
 
 Se [MSRP - lagringsresursprovider för MongoDB](msrp.md).
 
@@ -91,11 +87,11 @@ MSRP använder Solr för frågor.
 
 ### JSRP {#jsrp}
 
-JSRP är standardprovider för åtkomst till all UGC i en enda AEM. Det gör att du snabbt kan uppleva AEM Communities 6.1 utan att behöva konfigurera MSRP eller ASRP.
+JSRP är standardprovider för åtkomst till all UGC i en enda AEM. Med den kan du snabbt uppleva AEM Communities 6.1 utan att behöva konfigurera MSRP eller ASRP.
 
 Se [JSRP - JCR-lagringsresursprovider](jsrp.md).
 
-När det gäller JSRP rekommenderar vi starkt att JCR-API:t aldrig används, trots att UGC lagras i JCR och är tillgängligt via både CRXDE Lite och JCR, eftersom framtida ändringar kan påverka den anpassade koden.
+Om det finns JSRP, medan UGC lagras i JCR och är tillgängligt via både CRXDE Lite och JCR API, rekommenderar vi att du aldrig använder JCR API för att göra det, annars kan framtida ändringar påverka anpassad kod.
 
 Dessutom delas inte databasen för författar- och publiceringsmiljöer. Även om ett kluster med publiceringsinstanser resulterar i en delad publiceringsdatabas, kommer den UGC som anges vid publicering inte att vara synlig för författaren, vilket innebär att det inte går att hantera UGC från författaren. UGC sparas bara i den AEM databasen (JCR) för instansen som den angavs för.
 
@@ -122,7 +118,7 @@ Se [SRP och UGC Essentials](srp-and-ugc.md) för exempelkod.
 
 ### För icke-befintliga resurser {#for-non-existing-resources-ners}
 
-Vissa communitykomponenter kan ingå i ett skript och kräver därför en Sling-adresserbar nod för att stödja Communities-funktioner. [Inkluderade komponenter](scf.md#add-or-include-a-communities-component) kallas icke-befintliga resurser.
+Vissa Communities-komponenter kan ingå i ett skript och kräver därför en Sling-adresserbar nod som stöder Communities-funktioner. [Inkluderade komponenter](scf.md#add-or-include-a-communities-component) kallas icke-befintliga resurser.
 
 Skuggnoder är en adresserbar plats för Sling i databasen.
 
@@ -136,13 +132,13 @@ Följande är ett exempel på en skuggnod med [Komponenten Kommentarer](http://l
 
 * Komponenten finns i den lokala databasen på:
 
-   `/content/community-components/en/comments/jcr:content/content/includable/comments`
+  `/content/community-components/en/comments/jcr:content/content/includable/comments`
 
 * Motsvarande skuggnod finns i den lokala databasen på:
 
-   `/content/usergenerated/content/community-components/en/comments/jcr:content/content/includable/comments`
+  `/content/usergenerated/content/community-components/en/comments/jcr:content/content/includable/comments`
 
-Ingen UGC hittas under skuggnoden.
+Ingen UGC hittades under skuggnoden.
 
 Standardbeteendet är att ställa in skuggnoder i en publiceringsinstans när det refereras till det relevanta underträdet för läsning eller skrivning.
 

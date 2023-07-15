@@ -11,9 +11,9 @@ discoiquuid: a20383f2-f86a-45bf-a39e-725ee764503b
 docset: aem65
 feature: Adaptive Forms
 exl-id: e5533b4f-93b7-4ea9-a01d-fdf9528652c8
-source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
+source-git-commit: 762e918a2c65898fc518f131d44421fb82ce4d6f
 workflow-type: tm+mt
-source-wordcount: '894'
+source-wordcount: '898'
 ht-degree: 0%
 
 ---
@@ -96,7 +96,7 @@ Att samla in data offline och synkronisera dem nästa gång du returnerar online
 * Anpassningsbara instrumentpaneler för realtidsinsikter i affärsverksamheten
 * API för att ansluta till rapporteringsverktyg från tredje part
 
-![](do-not-localize/3rd-draft.gif)
+![Tredje utkastet](do-not-localize/3rd-draft.gif)
 
 ## Personlig kommunikation {#personalized-communication}
 
@@ -115,6 +115,6 @@ Personaliserade dokument som kvitton, kvitton, välkomstpaket och kontoutdrag ka
 * Stöd för digitala signaturer för att validera innehållets integritet och undertecknarens identitet
 * Dokumentsäkerhetstillägg för AEM Forms, inklusive kryptering, användarprofiler, spårning och granskning
 
-![](do-not-localize/layout-02.png)
+![Layout två](do-not-localize/layout-02.png)
 
 Effektivt arbetsflöde för skräddarsydd kommunikation

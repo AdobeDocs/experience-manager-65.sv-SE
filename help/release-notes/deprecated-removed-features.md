@@ -2,9 +2,9 @@
 title: Borttagna funktioner i Adobe Experience Manager 6.5.
 description: Versionsinformation om borttagna funktioner i Adobe Experience Manager 6.5.
 exl-id: d9b6140a-c37d-4b90-a60c-01f471d65621
-source-git-commit: 11e848d93964b5f8e45ccd7388a48953a3148e35
+source-git-commit: 9be9bb1706df750ede3f804012442bd73dc462ee
 workflow-type: tm+mt
-source-wordcount: '1727'
+source-wordcount: '1730'
 ht-degree: 2%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 Adobe utvärderar ständigt produktfunktioner för att så småningom förnya eller ersätta äldre funktioner med modernare alternativ för att förbättra det totala kundvärdet, alltid med noggrant övervägande av bakåtkompatibilitet.
 
-Följande regler gäller för att informera om den förestående borttagningen eller ersättningen av AEM:
+Följande regler gäller för att informera om den förestående borttagningen eller ersättningen av Adobe Experience Manager (AEM)-funktioner:
 
 1. Föråldringsanmälan kommer först. Funktionerna är fortfarande tillgängliga, men har inte förbättrats ytterligare.
 1. Borttagning av föråldrade funktioner sker tidigast i följande större version. Faktiskt måldatum för borttagning tillkännages.

@@ -1,18 +1,14 @@
 ---
 title: Ramverk för sociala komponenter
-seo-title: Social Component Framework
 description: Det sociala ramverket (SCF) förenklar processen att konfigurera, anpassa och utöka webbgruppskomponenter
-seo-description: The social component framework (SCF) simplifies the process of configuring, customizing, and extending Communities components
-uuid: 23b4418d-b91c-46fc-bf42-1154ef79fe5a
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: d7b5b5e3-2d84-4a6b-bcc2-d490882ff3ed
 exl-id: 5ca58bc3-8505-4d91-9cd1-6b2e2671f1be
-source-git-commit: 1d5cfff10735ea31dc0289b6909851b8717936eb
+source-git-commit: e161c37544c3391607cbe495644f3353b9f77fe3
 workflow-type: tm+mt
-source-wordcount: '1483'
+source-wordcount: '1478'
 ht-degree: 0%
 
 ---
@@ -26,7 +22,7 @@ Fördelarna med ramverket:
 * **Funktionell**: Enkel integrering direkt med liten eller ingen anpassning för 80 % av användningsfallen.
 * **Skalbar**: Enhetlig användning av HTML-attribut för CSS-format.
 * **Utbyggbart**: Komponentimplementeringen är objektorienterad och lätt utifrån affärslogik - enkel att lägga till inkrementell företagsinloggning på servern.
-* **Flexibel**: Enkla logikfria javascript-mallar som enkelt kan överlagras och anpassas.
+* **Flexibel**: Enkla logikfria JavaScript-mallar som är enkla att överlagra och anpassa.
 * **Tillgänglig**: HTTP-API:t stöder publicering från alla klienter, inklusive mobilappar.
 * **Portable**: Integrera/bädda in i alla webbsidor som bygger på valfri teknik.
 
@@ -34,11 +30,11 @@ Utforska en författare eller publicera en instans med hjälp av den interaktiva
 
 ## Översikt {#overview}
 
-I SCF består en komponent av en SocialComponent POJO, en hanterarmall för JS (för att återge komponenten) och CSS (för att formatera komponenten).
+I SCF består en komponent av en SocialComponent POJO, en Handlebars JS-mall (för att återge komponenten) och CSS (för att formatera komponenten).
 
 JS-mallar för handtag kan utöka JS-komponenterna för modell/vy för att hantera användarinteraktion med komponenten på klienten.
 
-Om en komponent behöver stödja ändring av data kan implementeringen av API:t för SocialComponent skrivas för att ge stöd för redigering/sparande av data som liknar modell-/dataobjekt i traditionella webbprogram. Dessutom kan operationer (kontrollanter) och en åtgärdstjänst läggas till för att hantera operationsbegäranden, utföra affärslogik och anropa API:erna för modell-/dataobjekten.
+Om en komponent måste ha stöd för dataändringar kan implementeringen av API:t för SocialComponent skrivas för att ge stöd för redigering/sparande av data som liknar modell-/dataobjekt i traditionella webbprogram. Dessutom kan operationer (kontrollanter) och en åtgärdstjänst läggas till för att hantera operationsbegäranden, utföra affärslogik och anropa API:erna för modell-/dataobjekten.
 
 SocialComponent-API:t kan utökas för att tillhandahålla data som krävs av en klient för ett visningslager eller en HTTP-klient.
 
@@ -55,23 +51,23 @@ Om du vill anpassa eller utöka komponenterna skriver du bara övertäckningar o
 * För Look and Feel:
    * Ändra JS-mallen och CSS.
 * För Look, Feel och UX:
-   * Ändra JS-mall, CSS och [utöka/åsidosätta Javascript](client-customize.md#extending-javascript).
+   * Ändra JS-mallen, CSS och [utöka/åsidosätta JavaScript](client-customize.md#extending-javascript).
 * Så här ändrar du informationen som är tillgänglig för JS-mallen eller för GETENS slutpunkt:
    * Utöka [SocialComponent](server-customize.md#socialcomponent-interface).
 * Så här lägger du till anpassad bearbetning under åtgärder:
    * Skriv en [OperationExtension](server-customize.md#operationextension-class).
-* Så här lägger du till en ny anpassad åtgärd:
+* Så här lägger du till en anpassad åtgärd:
    * Skapa ett nytt [Sling-poståtgärd](server-customize.md#postoperation-class).
    * Använd befintlig [OperationServices](server-customize.md#operationservice-class) efter behov.
-   * Lägg till Javascript-kod för att anropa åtgärden från klientsidan efter behov.
+   * Lägg till JavaScript-kod för att anropa åtgärden från klientsidan efter behov.
 
 ## Serverside Framework {#server-side-framework}
 
 Ramverket innehåller API:er för att komma åt funktioner på servern och stödja interaktion mellan klienten och servern.
 
-### Java API:er {#java-apis}
+### Java™ API:er {#java-apis}
 
-Java-API:erna innehåller abstrakta klasser och gränssnitt som enkelt ärvs eller underklassas.
+Java™-API:erna innehåller abstrakta klasser och gränssnitt som är enkla att ärva eller gruppera.
 
 Huvudklasserna beskrivs i [Anpassning på serversidan](server-customize.md) sida.
 
@@ -131,7 +127,7 @@ HBS-skript är enkla, logikfria, kompilerade på både server och klient, är en
 
 Ramverket innehåller flera [Handtag](handlebars-helpers.md) som är användbara vid utveckling av sociala komponenter.
 
-När Sling löser en GET-begäran på servern identifieras det skript som ska användas för att svara på begäran. Om skriptet är en HBS-mall (.hbs) delegerar Sling begäran till Handlebars Engine. Handlebars Engine hämtar sedan SocialComponent från lämplig SocialComponentFactory, skapar en kontext och återger HTML.
+När Sling löser en GET-begäran på servern identifieras det skript som används för att svara på begäran. Om skriptet är en HBS-mall (.hbs) delegerar Sling begäran till Handlebars Engine. Handlebars Engine hämtar sedan SocialComponent från lämplig SocialComponentFactory, skapar en kontext och återger HTML.
 
 ### Ingen åtkomstbegränsning {#no-access-restriction}
 
@@ -157,7 +153,7 @@ Resultatet är en underordnad JCR-nod under en par-nod, som är Sling-adresserba
 
 Att ta med en komponent refererar till processen att lägga till en referens till en [&quot;non-existing&quot; resource](srp.md#for-non-existing-resources-ners) (ingen JCR-nod) i mallen, t.ex. med ett skriptspråk.
 
-Från och med AEM 6.1 går det att redigera komponentens egenskaper i *design-läget när en komponent inkluderas dynamiskt i stället för att läggas till.
+Från och med Adobe Experience Manager (AEM) 6.1 går det att redigera komponentens egenskaper i författaren när en komponent inkluderas dynamiskt i stället för att läggas till *design* läge.
 
 Endast ett fåtal av AEM Communities-komponenterna kan inkluderas dynamiskt. De är:
 
@@ -166,7 +162,7 @@ Endast ett fåtal av AEM Communities-komponenterna kan inkluderas dynamiskt. De 
 * [Recensioner](reviews-basics.md)
 * [Omröstning](essentials-voting.md)
 
-The [Community Components Guide](components-guide.md) tillåter att komponenter som inte kan inkluderas växlas från att läggas till till.
+The [Community Components Guide](components-guide.md) gör att inkluderbara komponenter kan växlas från att läggas till till till att inkluderas.
 
 **När du använder handtag** mallspråk inkluderas den icke-befintliga resursen med [include helper](handlebars-helpers.md#include) genom att ange dess resourceType:
 
@@ -189,17 +185,17 @@ Se [Hjälpmedel för SCF-handtag](handlebars-helpers.md) om du vill ha en lista 
 
 ## Klientbaserat ramverk {#client-side-framework}
 
-### Model-View Javascript Framework {#model-view-javascript-framework}
+### Model-View JavaScript Framework {#model-view-javascript-framework}
 
-Ramverket innehåller en förlängning av [Backbone.js](https://www.backbonejs.org/), ett modellbaserat JavaScript-ramverk som underlättar utvecklingen av avancerade, interaktiva komponenter. Den objektorienterade naturen har stöd för ett utbyggbart/återanvändbart ramverk. Kommunikationen mellan klient och server förenklas med HTTP API.
+Ramverket innehåller en förlängning av [Backbone.js](https://backbonejs.org/), ett modellbaserat JavaScript-ramverk som underlättar utvecklingen av avancerade, interaktiva komponenter. Den objektorienterade naturen har stöd för ett utbyggbart/återanvändbart ramverk. Kommunikationen mellan klient och server förenklas med HTTP API.
 
-Ramverket använder mallar för serversidans handtag för att återge komponenterna för klienten. Modellerna baseras på JSON-svar som genereras av HTTP API. Vyerna binder sig till HTML som genereras av Handlebars-mallarna och ger interaktivitet.
+I ramverket används hanterarmallar på serversidan för att återge komponenterna för klienten. Modellerna baseras på JSON-svar som genereras av HTTP API. Vyerna binder sig till HTML som genereras av Handlebars-mallarna och ger interaktivitet.
 
 ### CSS-konventioner {#css-conventions}
 
 Följande är rekommenderade konventioner för att definiera och använda CSS-klasser:
 
-* Använd CSS-klassväljarnamn med tydligt namn och undvik generiska namn som heading, image osv.
+* Använd CSS-klassväljarnamn med tydligt namn och undvik generiska namn som heading och image.
 * Definiera specifika klassväljarformat så att CSS-formatmallarna fungerar bra med andra element och format på sidan. Till exempel: `.social-forum .topic-list .li { color: blue; }`
 * Håll CSS-klasser för formatering åtskilda från CSS-klasser för UX som drivs av JavaScript.
 

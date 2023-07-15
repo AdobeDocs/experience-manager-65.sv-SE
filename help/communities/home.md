@@ -1,25 +1,23 @@
 ---
 title: Adobe Experience Manager 6.5 Communities Guide
-seo-title: Adobe Experience Manager 6.5 Communities Guide
-description: Skapa onlineupplevelser som forum, användargrupper, utbildningsresurser och andra sociala funktioner. Bläddra i vår guide som förklarar hur du distribuerar, administrerar, utvecklar och utvecklar användargrupper.
-seo-description: Covers all AEM Communities tasks, such as creating online experiences such as forums, user groups, learning resources, and other social features.
+description: Skapa onlineupplevelser som forum, användargrupper, utbildningsresurser och andra sociala funktioner. Bläddra i den här guiden som förklarar hur du distribuerar, administrerar, utvecklar och redigerar webbgrupper.
 exl-id: 63040353-d34c-4306-9e7a-584ba48d8ad5
-source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
+source-git-commit: e161c37544c3391607cbe495644f3353b9f77fe3
 workflow-type: tm+mt
-source-wordcount: '355'
-ht-degree: 22%
+source-wordcount: '352'
+ht-degree: 18%
 
 ---
 
-# Adobe Experience Manager 6.5 Communities Guide
+# Adobe Experience Manager (AEM) 6.5 Communities Guide
 
-Skapa onlineupplevelser som forum, användargrupper, utbildningsresurser och andra sociala funktioner. Bläddra i vår guide som förklarar hur du distribuerar, administrerar, utvecklar och utvecklar användargrupper.
+Skapa onlineupplevelser som forum, användargrupper, utbildningsresurser och andra sociala funktioner. Bläddra i den här guiden som förklarar hur du distribuerar, administrerar, utvecklar och redigerar webbgrupper.
 
 ## Viktiga AEM
 
 * [Komma igång med AEM](https://experienceleague.adobe.com/docs/experience-manager-65.html)
 * [Versionsinformation för AEM 6.5](/help/release-notes/home.md)
-* [Senaste dokumentationsuppdateringarna](https://helpx.adobe.com/experience-manager/documentation-updates.html)
+* [Senaste dokumentationsuppdateringarna](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html?lang=en)
 * [AEM](/help/sites-administering/security-checklist.md)
 
 ## AEM 6.5 användarhandböcker
@@ -42,11 +40,11 @@ Skapa onlineupplevelser som forum, användargrupper, utbildningsresurser och and
 
 ## Viktiga AEM
 
-* [AEM självstudiekurser](https://helpx.adobe.com/experience-manager/kt/index/aem-6-4-videos.html)
+* [AEM självstudiekurser](https://experienceleague.adobe.com/docs/experience-manager-tutorials.html)
 * [Användarhandbok för Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=en)
 * [Användarhandbok för HTML](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)
 * [Användarhandbok för kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 * [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html?lang=en)
 * [GDPR-efterlevnad](/help/managing/data-protection-and-privacy.md)
-* [Experience League](https://guided.adobe.com/?promoid=K42KVXHD&amp;mv=other#solutions/experience-manager)
-* [AEM-communityforum](https://forums.adobe.com/community/experience-cloud/marketing-cloud/experience-manager)
+* [Experience League](https://experienceleague.adobe.com/#home)
+* [AEM-communityforum](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community)
