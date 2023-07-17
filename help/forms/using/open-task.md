@@ -1,24 +1,20 @@
 ---
 title: Öppna en uppgift
-seo-title: Opening a task
-description: Steg för att öppna en uppgift i din AEM Forms-app.
-seo-description: Steps to open a task on your AEM Forms app.
-uuid: 3f543391-a62b-40ef-aa28-59b7f99554f1
+description: Steg för att öppna en uppgift i din Adobe Experience Manager Forms-app.
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
-discoiquuid: cdce7a6a-2bbf-492f-bf91-5b8f07d02207
 exl-id: 08e267f3-7f90-4e75-aea0-2128e8eb7b30
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 60924e7ee204e43a2ff833fbc394beca8db9c9d9
 workflow-type: tm+mt
-source-wordcount: '279'
+source-wordcount: '284'
 ht-degree: 0%
 
 ---
 
 # Öppna en uppgift {#opening-a-task}
 
-Om AEM Forms-programmet synkroniseras med en AEM Forms-server kan du arbeta med uppgifter som du har tilldelats. Uppgifter är steg i arbetsflödet som definieras i workbench eller i AEM arbetsflödesredigerare.
+Om Adobe Experience Manager (AEM) Forms-appen synkroniseras med en AEM Forms Server kan du arbeta med uppgifter som du har tilldelats. Uppgifter är steg i arbetsflödet som definieras i workbench eller i AEM arbetsflödesredigerare.
 
 Andra formulär sparas som utkast på fliken Utkast. Se [Spara ett utkast](/help/forms/using/save-as-draft.md).
 
@@ -26,7 +22,7 @@ Andra formulär sparas som utkast på fliken Utkast. Se [Spara ett utkast](/help
 
 1. Tryck på uppgiften i uppgiftslistan.
 
-   När du väljer en uppgift visas beskrivningen av uppgiften, enligt inställningen i Workbench, under uppgiftsnamnet. Efter beskrivningen visas den användaråtgärd/de användaråtgärder som är associerade med uppgiften.
+   När du väljer en uppgift visas beskrivningen av uppgiften, enligt inställningen i Workbench, under uppgiftsnamnet. Efter beskrivningen visas den användaråtgärd/de användaråtgärder som är kopplade till uppgiften.
 
    * Om en uppgift har associerade åtgärder visas åtgärderna när användaren trycker på den vågräta ellipsen bredvid uppgiften på hemskärmen.
    * Om processdesignern inte kopplar någon åtgärd till en uppgift är standardåtgärden som är kopplad till uppgiften Fullständig.

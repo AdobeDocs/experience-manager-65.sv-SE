@@ -1,16 +1,14 @@
 ---
 title: Konfigurera dina användare och användargrupper
 description: Följ den här sidan om du vill veta mer om användarroller och hur du konfigurerar användare och grupper så att de kan hantera redigering och hantering av appen för on-demand-tjänster.
-uuid: 461e1725-41dd-4883-92b9-a7e175660401
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: administering-on-demand-services-app
-discoiquuid: c3c73e67-7f85-4308-b4cd-1b42d4f3f2d9
 exl-id: 58b7d1b9-a851-442a-9d02-212cad8abbed
-source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
+source-git-commit: 60924e7ee204e43a2ff833fbc394beca8db9c9d9
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '512'
 ht-degree: 0%
 
 ---
@@ -19,7 +17,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (t.ex. Reagera). [Läs mer](/help/sites-developing/spa-overview.md).
+>Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (till exempel React). [Läs mer](/help/sites-developing/spa-overview.md).
 
 I det här kapitlet beskrivs användarrollerna och hur du konfigurerar användare och grupper för att ge stöd åt utveckling och hantering av dina mobilappar.
 
@@ -31,7 +29,7 @@ Medlemmar i gruppen app-author ansvarar för att skapa AEM innehåll för mobila
 
 #### Gruppkonfiguration - programförfattare {#group-configuration-app-authors}
 
-1. Skapa en ny användargrupp med namnet&quot;app-authors&quot;:
+1. Skapa en användargrupp med namnet&quot;app-authors&quot;:
 
    Navigera till User Admin Console: [http://localhost:4502/libs/granite/security/content/groupadmin.html](http://localhost:4502/libs/granite/security/content/groupadmin.html)
 
@@ -43,7 +41,7 @@ Medlemmar i gruppen app-author ansvarar för att skapa AEM innehåll för mobila
 
    ![chlimage_1-167](assets/chlimage_1-167.png)
 
-1. Nu när du har skapat användargruppen app-authors kan du lägga till enskilda teammedlemmar i den nya gruppen via [Konsol för användaradministration](http://localhost:4502/libs/granite/security/content/useradmin.md).
+1. Nu när du har skapat användargruppen app-authors kan du lägga till enskilda teammedlemmar i den nya gruppen via [Användare Admin Console](http://localhost:4502/libs/granite/security/content/useradmin.md).
 
    ![chlimage_1-168](assets/chlimage_1-168.png)
 
@@ -66,11 +64,11 @@ Medlemmar i gruppen app-admins kan skapa programinnehåll med samma behörighete
 >
 >Behörigheter avgör tillgängligheten för vissa användaråtgärder i AEM App Command Center.
 >
->Du kommer att märka att vissa alternativ inte är tillgängliga för appförfattare som är tillgängliga för appadministratörer.
+>Observera att vissa alternativ inte är tillgängliga för appförfattare som är tillgängliga för appadministratörer.
 
 ### Gruppkonfiguration - programadministratörer {#group-configuration-app-admins}
 
-1. Skapa en ny grupp som kallas appadministratörer.
+1. Skapa en grupp som kallas appadministratörer.
 1. Lägg till följande grupper i den nya gruppen för programadministratörer:
 
    * innehållsförfattare
@@ -86,7 +84,7 @@ Medlemmar i gruppen app-admins kan skapa programinnehåll med samma behörighete
 
    * (Läs, Ändra, Skapa, Ta bort, Replikera) på /etc/cloudServices/mobiltjänster
 
-1. På samma behörighetskonsol lägger du till behörigheter på scenen, publicerar och rensar uppdateringarna av appinnehåll.
+1. På samma behörighetskonsol lägger du till behörigheter på scenen, publicera och rensa innehållsuppdateringar för appar.
 
    * (Läs, Ändra, Skapa, Ta bort, Replikera) på /etc/packages/mobileapp
    * (Läs) på /var/contentsync
@@ -105,8 +103,8 @@ Medlemmar i gruppen app-admins kan skapa programinnehåll med samma behörighete
 1. Exportera innehåll eller överföra
 
    * (Läs) på /etc/contentsync för att komma åt exportmallar
-   * (Läs) på /var to för genomgång av sökväg vid läsning
-   * (Läs, skriv, ändra, ta bort) på /var/contentsync för att skriva, läsa och rensa innehåll i ContentSync-cachelagrad export
+   * (Läs) på /var till genomgång av sökväg vid läsning
+   * (Läs, skriv, ändra, ta bort) på /var/contentsync för att skriva, läsa och rensa cachelagrat ContentSync-exportinnehåll
 
 ### Ytterligare resurser {#additional-resources}
 
