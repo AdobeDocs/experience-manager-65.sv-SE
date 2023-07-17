@@ -1,26 +1,22 @@
 ---
 title: Ordlista
-seo-title: Glossary
 description: I den här ordlistan visas (i alfabetisk ordning) information om alla slutdokument i projektchecklistan.
-seo-description: This glossary lists (alphabetically) details of all Deliverable documents from the Project Checklist.
-uuid: 5f919b05-3ec5-4b18-b966-5dcf706407f4
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/MANAGING
 topic-tags: managing-checklist
 content-type: reference
-discoiquuid: cca21688-40b1-433d-93dc-cd62e5558507
 docset: aem65
 exl-id: 9672f7a4-82b7-4175-874d-181846115442
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: f21b0b5cb4246ffb22c9d9a219a622f36741d9b8
 workflow-type: tm+mt
-source-wordcount: '7036'
+source-wordcount: '6949'
 ht-degree: 0%
 
 ---
 
 # Ordlista{#glossary}
 
-I den här ordlistan visas (alfabetiskt) information om alla dokument i slutprodukten som finns på [Projektchecklista](/help/managing/best-practices-checklist.md).
+I den här ordlistan visas (i bokstavsordning) information om alla dokument i slutprodukten som finns i [Projektchecklista](/help/managing/best-practices-checklist.md).
 
 ## Godkännande från affärsintressenter {#acceptance-from-business-stakeholders}
 
@@ -37,7 +33,7 @@ Godkännandetester används för att bekräfta att
 * Användarna accepterar lösningen och kan tänka sig att arbeta med den.
 * Kunden godkänner projektet.
 
-Ju tidigare du planerar och utformar dina godkännandetester, desto enklare blir den slutliga driftsättningen. De bör definieras tillsammans med kunden och ditt kvalitetssäkringsteam.
+Ju tidigare ni planerar och utformar era godkännandetester, desto enklare blir den slutliga driftsättningen. De bör definieras tillsammans med kunden och ditt kvalitetssäkringsteam.
 
 Även om du kanske inte kan definiera alla detaljer i början av projektet bör de inledande definitionerna diskuteras och godkännas. Godkännandetesterna kommer antagligen att baseras på de grundläggande kraven (funktion och prestanda).
 
@@ -47,7 +43,7 @@ Kontrollera att de nödvändiga nivåerna av systemåtkomst har beviljats för a
 
 ### Adobe Security Checklist {#adobe-security-checklist}
 
-The [Adobe Security Checklist](/help/sites-administering/security-checklist.md) är den officiella checklista som tillhandahålls för att säkerställa att AEM är säker vid installationen. Den innehåller de säkerhetsåtgärder och verifieringssteg som du behöver utföra för att säkerställa instansens integritet.
+The [Adobe Security Checklist](/help/sites-administering/security-checklist.md) är den officiella checklista som tillhandahålls för att säkerställa att Adobe Experience Manager (AEM) är säkert vid installationen. Den innehåller de säkerhetsåtgärder och verifieringssteg som du måste utföra för att säkerställa instansens integritet.
 
 ### Projektinställningar för Adobe supportportal {#adobe-support-portal-project-set-up}
 
@@ -65,7 +61,7 @@ Utbildning för personal som ska producera (skriva) innehåll för lösningen. S
 
 ### AEM certifieringsprov {#aem-certification-exam}
 
-Se till att rätt person är registrerad för att ta relevanta uppgifter [certifieringsprov](https://training.adobe.com/certification/exams.html#p=1&amp;solution=adobeExperienceManager).
+Se till att rätt personer registreras för att ta relevanta uppgifter [certifieringsprov](https://training.adobe.com/certification/exams.html#p=1&amp;solution=adobeExperienceManager).
 
 ### AEM Certifierad {#aem-certified}
 
@@ -77,7 +73,7 @@ tillhandahålla teknisk utbildning för lämplig person, till exempel utvecklare
 
 ### Avtal om nyckeltal definierade som mål för projektet {#agreement-on-kpis-defined-as-goals-for-the-project}
 
-Nyckeltal för prestationsindikatorer (KPI) hjälper en organisation att definiera och mäta framstegen mot organisatoriska mål. När en organisation har analyserat sitt uppdrag och definierat sina mål måste den mäta framstegen mot dessa mål. KPI:er utgör en mätmekanism.
+KPI:er (Key Performance Indicators) hjälper en organisation att definiera och mäta framstegen mot organisatoriska mål. När en organisation har analyserat sitt uppdrag och definierat sina mål måste den mäta framstegen mot dessa mål. KPI:er utgör en mätmekanism.
 
 ### Justera nyckeltal för företag och prestanda {#align-business-and-performance-kpis}
 
@@ -102,7 +98,7 @@ Den fokuserar på:
 
 ### Programspecifika underhållsaktiviteter har definierats {#application-specific-maintenance-tasks-defined}
 
-Förutom vanliga underhållsåtgärder för Adobe Experience Manager (AEM) måste du definiera andra operativa uppgifter som behöver utföras för det pågående underhållet av lösningen.
+Förutom vanliga underhållsåtgärder för Adobe Experience Manager (AEM) måste du definiera alla andra driftsuppgifter som måste köras för det pågående underhållet av lösningen.
 
 ### Lämpligt utbildad personal {#appropriately-trained-staff}
 
@@ -122,7 +118,7 @@ Arkitekturdiagrammet är en grafisk representation av arkitekturen. Den innehål
 
 ### Arkitektur - utkast {#architecture-draft}
 
-Detta ger en översikt över system- och lösningsarkitekturen. I det här skedet är det ett utkast som kommer att granskas och förfinas i senare skeden.
+Detta ger en översikt över system- och lösningsarkitekturen på hög nivå. I det här skedet är det ett utkast som kommer att granskas och förfinas i senare skeden.
 
 ### Arkitekturens granskningskort - Sign Off {#architecture-review-board-sign-off}
 
@@ -183,7 +179,7 @@ Koncept för säkerhetskopiering och återställning anger de tekniska funktione
 
 Ett komplett test som bygger på konceptet för säkerhetskopiering och återställning.
 
-### Affärsärende(n) {#business-case-s}
+### Affärsärenden {#business-case-s}
 
 I ett affärsdokument presenteras argument som gäller att vidta en åtgärd, vidta alternativa åtgärder (om sådana finns) eller inte vidta några åtgärder. Argumenten bör vara balanserade på grundval av konkreta fakta (där det är möjligt/relevant) och framhäva både fördelar och risker i samtliga fall.
 
@@ -201,7 +197,7 @@ Affärsanalytikerna bör bekräfta att de till fullo förstår:
 
 Organisationer använder nyckeltal (KPI:er) för att utvärdera hur de lyckades uppnå sina mål.
 
-Affärs-KPI:er definierar mätbara värden som visar hur effektivt ett företag når viktiga affärsmål. Det är viktigt att välja nyckeltal som är lämpliga för ert företag/scenario med tydliga definitioner av vad de är, hur de mäts, hur de kommer att användas och av vem.
+Affärs-KPI:er definierar mätbara värden som visar hur effektivt ett företag når viktiga affärsmål. Det är viktigt att välja nyckeltal som är lämpliga för ert företag/scenario med tydliga definitioner av vad de är, hur de mäts, hur de används och av vem.
 
 ### Dokumentation för affärskrav {#business-requirements-documentation}
 
@@ -211,7 +207,7 @@ Vid granskningen av affärslösningen bör företagsledningen svara på frågan:
 
 ### Business Sign Off on any required adjustments to the Solution or Architecture Identified and Alignment Against ROI and KPI Expectations {#business-sign-off-on-any-required-adjustments-to-the-solution-or-architecture-identified-and-aligned-against-roi-and-kpi-expectations}
 
-Processerna för riskbedömning och penetrationstestning kan ge problem och resultat som behöver behandlas i lösningens uppbyggnad eller utveckling.
+Processerna för riskbedömning och penetrationstestning kan ge problem och resultat som måste behandlas i lösningens uppbyggnad eller utveckling.
 
 Alla justeringar som följer av dessa processer måste granskas och godkännas av företaget och vägas mot de övergripande målen.
 
@@ -219,11 +215,11 @@ Alla justeringar som följer av dessa processer måste granskas och godkännas a
 
 Cachningsstrategin visar vad som kommer att cachas för slutanvändaren. Den måste vara kompatibel med nyckeltal för prestanda.
 
-Element som bilder, javascript och andra serverfiler kan till exempel cachas för att förbättra prestanda i en lösning.
+Exempelvis kan element som bilder, JavaScript och andra serverfiler cachelagras för att förbättra prestanda i en lösning.
 
 ### Riktlinjer för kodning {#coding-guidelines}
 
-I riktlinjerna för kodning definieras grundläggande principer som utvecklarna bör följa när de utvecklar lösningen. Dessa kan bland annat omfatta följande:
+I riktlinjerna för kodning definieras grundläggande principer som utvecklarna bör följa när de utvecklar lösningen. Dessa kan bland annat vara:
 
 * namnkonventioner
 * tjänsteanvändning
@@ -259,7 +255,7 @@ Kontrollera att säkerhetskonceptet är på plats.
 
 ### Relationskoncept för komponenter och mallar {#components-and-templates-relationship-concept}
 
-Konturen med de mallar och komponenter som ska användas i det nya programmet. Innehåller bland annat information om arvsregler, behörigheter och relationer.
+Konturen med de mallar och komponenter som används i det nya programmet. Innehåller bland annat information om arvsregler, behörigheter och relationer.
 
 ### Relationsspecifikation för komponenter och mallar {#components-and-templates-relationship-specification}
 
@@ -299,10 +295,10 @@ Dokumentation om den aktuella innehållsarkitekturen och det aktuella innehålls
 
 Kundens policyer rörande:
 
-* säkerhetskopieringsprocesser för både data och lösning
+* säkerhetskopiera processer för både data och lösning
 * lagring av säkerhetskopian
 * bekräftelse på att säkerhetskopieringen fungerar som förväntat
-* återställande om fel uppstår
+* återställande, om ett fel uppstår
 
 ### Riktlinjer för kundkodning {#customer-coding-guidelines}
 
@@ -324,7 +320,7 @@ Det schema som definieras av kunden för releaser till produktionsmiljöerna.
 
 ### Principer och krav för kundrapportering {#customer-reporting-policies-and-requirements}
 
-Alla policyer och/eller krav som kunden har när det gäller rapportering. Dessa kan vara:
+Alla policyer, eller krav, eller båda, som kunden har för rapportering. Dessa kan vara:
 
 * hur ofta specifika rapporter ska levereras
 * formatet för särskilda rapporter
@@ -344,7 +340,7 @@ Kunden (företag och IT) kommer att ha policyer som definierar de säkerhetsniv�
 
 ### Riktlinjer för kundspecifikationer {#customer-specification-guidelines}
 
-Alla riktlinjer som kunden har gällande format, leverans och godkännande av specifikationer.
+Alla riktlinjer som kunden har som rör format, leverans och godkännande av specifikationer.
 
 ### Kundtestrapporter {#customer-test-reports}
 
@@ -375,7 +371,7 @@ Kontrollera att standardsäkerhetsinställningarna för AEM har aktiverats/imple
 
 ### Distributions-/versionsprinciper och processer {#deployment-release-policies-and-processes}
 
-Formaliserade profiler som omfattar både driftsättning och lanseringar av ditt projekt. Dessa kan vara:
+Formaliserade profiler som omfattar både driftsättning och releaser av ditt projekt. Dessa kan vara:
 
 * tid för releaser
 * fritidsplanering
@@ -406,7 +402,7 @@ Utvecklingsgruppen bör bekräfta att de till fullo förstår:
 
 * projektets omfattning
 * alla kundförväntningar
-* detta är grunden för alla beslut som fattas per person, per projektfas
+* grunden för alla beslut som fattas per person, per fas i projektet
 
 ### Dialogrutespecifikation {#dialogs-specification}
 
@@ -430,7 +426,7 @@ Hållbarhetstestet visar lösningens prestanda under en specifik belastning. Tes
 
 ### Varaktighetstestet har körts {#durability-test-executed}
 
-Utförande av hållbarhetsprovning(ar).
+Utförande av hållbarhetstester.
 
 ### Felhanteringskoncept {#error-handling-concept}
 
@@ -468,7 +464,7 @@ Förväntningarna kan vara:
 
 * specifika nyckeltal, t.ex. den procentuella ökningen av antalet sidor som hanteras
 * kortare tid för publicering av innehåll
-* mål på högre nivå, till exempel ett användarvänligt gränssnitt
+* mål på högre nivå, till exempel ett lättanvänt gränssnitt
 
 ### Krav för Experience Designs {#experience-designs-requirements}
 
@@ -486,8 +482,8 @@ Ett diagram (eller en uppsättning diagram) över hela ekosystemet i lösningen.
 
 Definitionen av reservsystemet:
 
-* de affärskritiska funktioner som måste fortsätta att fungera i händelse av ett allvarligt fel
-* de processer som krävs vid reserv
+* de affärskritiska funktioner som måste fortsätta att fungera om ett allvarligt fel uppstår
+* de processer som krävs om reservlösningar används
 
 ### Reservsystem och procedur som testats {#fallback-system-and-procedure-tested}
 
@@ -514,7 +510,7 @@ Bekräftelse på att berörda parter till fullo godtar
 
 ### Go Live Schedule {#go-live-schedule}
 
-Tidslinje och schema för de aktiviteter som krävs för:
+Tidslinje och tidsplan för de aktiviteter som krävs för:
 
 * förbereda dig för att vara live
 * den verkliga resan live
@@ -541,15 +537,15 @@ Definitionen av kraven på hög nivå ger en generaliserad uppdelning av systemk
 * Affärsprocesser
 * Huvudsystemfunktioner
 
-Grundläggande information om dessa funktioner är vanligtvis känd, så det här dokumentet bör inte vara en uppskattning.
+Grundläggande information om dessa funktioner är vanligtvis kända, så det här dokumentet bör inte vara en uppskattning.
 
 ### Lösningsdesign på hög nivå {#high-level-solution-design}
 
-Den högnivåbaserade lösningen förklarar den arkitektur som kommer att användas för att utveckla lösningen. Arkitekturen ger en översikt över hela systemet och identifierar de huvudkomponenter som ska utvecklas för produkten och deras gränssnitt.
+Den högnivåbaserade lösningen förklarar arkitekturen som används för att utveckla lösningen. Arkitekturen ger en översikt över hela systemet och identifierar de viktigaste komponenterna som har utvecklats för produkten och deras gränssnitt.
 
 ### Systemöversikt {#high-level-system-map}
 
-Den här systemkartan bör innehålla ett diagram på mycket hög nivå för systemet. Den skiljer sig från lösningssammanhanget genom att det är en generaliserad karta över alla system som ingår, det finns inga gränssnitt i det här diagrammet.
+Den här systemkartan bör innehålla ett diagram över systemets nivå. Den skiljer sig från lösningssammanhanget genom att det är en generaliserad karta över alla system som ingår, det finns inga gränssnitt i det här diagrammet.
 
 ### Struktur för historiskt innehåll {#historical-content-structure}
 
@@ -557,7 +553,7 @@ Definition av innehållsstrukturen i det äldre systemet. Detta används som ref
 
 ### Historiska nyckeltal för prestanda och historik {#historical-performance-and-historical-performance-kpis}
 
-Ni måste samla in och dokumentera prestandastatistik och nyckeltal för prestanda från det gamla systemet. Dessa används sedan som referenspunkt och för att testa den nya lösningen.
+Du måste samla in och dokumentera prestandastatistik och nyckeltal för prestanda från det äldre systemet. Dessa används sedan som referenspunkt och för att testa den nya lösningen.
 
 ### Identifiera viktiga lösningar/funktioner {#identify-critical-key-solutions-functionalities}
 
@@ -630,7 +626,7 @@ Implementeringskonceptet innehåller riktlinjer för hela implementeringen. Den 
 * Dokumentskydd
 * Skalbarhet
 
-Det här konceptet kan även omfatta ramverk, bibliotek och andra artefakter som används i lösningen.
+Detta koncept beskriver också ramverk, bibliotek och andra artefakter som används i lösningen.
 
 ### Informera Adobe support om Go Live Schedule {#inform-adobe-support-about-the-go-live-schedule}
 
@@ -654,7 +650,7 @@ Tydliga processer registrerar alla problem som påträffats och håller reda på
 
 Ett spårningssystem, tillsammans med de processer som krävs, för att registrera alla problem som påträffas och spåra pågående aktiviteter i syfte att säkerställa att alla problem hanteras.
 
-Alla projektintressenter bör ha tillgång för att underlätta insynen i projektets status.
+Alla projektintressenter bör ha tillgång till informationen för att underlätta insynen i projektets status.
 
 Exempel är Atlassian JIRA och HP Quality Center.
 
@@ -685,7 +681,7 @@ Listan består normalt av Solution Architect och/eller kundens IT-personal.
 
 ### Loggfilsanalys {#log-file-analysis}
 
-En analys, tillsammans med de rekommendationer som blir resultatet, som definierar vad som behöver loggas för att kunna övervaka lösningen:
+En analys, tillsammans med de rekommendationer som blir resultatet, som definierar vad som måste loggas för att övervaka lösningen:
 
 * aktiviteter som ska loggas
 * granularitetsnivå
@@ -741,7 +737,7 @@ Du bör övervaka användningen genom att:
 * databasen
 * loggfiler
 
-### Övervakning - externt system {#monitoring-external-system-s}
+### Övervakning - externa system {#monitoring-external-system-s}
 
 Övervaka alla anslutningar mellan lösningen och externa system:
 
@@ -790,7 +786,7 @@ De övervakningskoncept som ska tillämpas på din lösning. som innehåller
 
 Specifika punkter som kan vara felbenägna bör identifieras och definieras. Alla övervakningsuppgifter som rör dessa bör också definieras.
 
-Exempel är (bland annat):
+Exempel på detta är (bland annat):
 
 * viktiga arbetsflöden
 * transaktionsbearbetning
@@ -890,7 +886,7 @@ Bekräfta att produktionsmiljön är redo med automatiserad driftsättning.
 
 ### Production Sign Off från Business Intressentors {#production-sign-off-from-business-stakeholders}
 
-Innan Go Live lanseras i produktionsmiljön måste Production Sign off (PSO) beviljas. Detta är resultatet av en granskning av den release som kommer att bli aktuell, tillsammans med alla kända problem. En del av Go Live-schemat ger dig en signering.
+Innan Go Live lanseras i produktionsmiljön måste man bevilja Production Sign-off (PSO). Detta är resultatet av en granskning av den release som kommer att bli aktuell, tillsammans med alla kända problem. En del av Go Live-schemat ger dig rätt att anmäla dig.
 
 ### Processen för produktionssignering och policy {#production-sign-off-process-and-policy}
 
@@ -902,9 +898,9 @@ Definiera kommunikationsplanen för både affärsintressenter och projektteamet.
 
 ### Projektansträngningar - slutliga uppskattningar {#project-efforts-final-estimates}
 
-The [ursprungliga uppskattningar](#project-efforts-initial-estimates) var höga och tillverkade i enlighet med de höga kraven för genomförandet.
+The [ursprungliga uppskattningar](#project-efforts-initial-estimates) var höga och gjordes i enlighet med de höga kraven för genomförandet.
 
-Dessa är nu granskade, förfinade och utökade för att ge den slutliga uppskattningen. Beräkningar ska levereras av varje lämplig projektledare, inklusive projektledning, konsulttjänster, arkitektur, testning och utveckling.
+Dessa granskas, förfinas och utökas för att ge den slutliga uppskattningen. Beräkningar ska levereras av varje lämplig projektledare, inklusive projektledning, konsulttjänster, arkitektur, testning och utveckling.
 
 Dessa uppskattningar används för att finansiera och budgetera.
 
@@ -975,7 +971,7 @@ Slutversionen körs och är aktiv i produktion.
 
 ### Relevanta avtalsvillkor {#relevant-contract-terms}
 
-Du bör lyfta fram specifika avtalsvillkor som är relevanta för projektets genomförande. såsom avtalsenliga milstolpar, faktureringsperioder eller personalkrav.
+lyfta fram specifika avtalsvillkor som är relevanta för genomförandet av projektet, t.ex. avtalsenliga milstolpar, faktureringsperioder eller personalkrav.
 
 ### Rapporteringsgräns {#reporting-cadence}
 
@@ -1001,7 +997,7 @@ Se till att alla roller som krävs för live-publicering är bemannade och tillg
 
 ### Riskbedömning {#risk-assessment}
 
-Riskbedömningen utförs av kundens IT- och/eller säkerhetsavdelning(er).
+Riskbedömningen görs av kundens IT-avdelning, säkerhetsavdelning eller båda.
 
 Den bedömer projektets tekniska och affärsmässiga risker. Bedömningen krävs för att lösningen ska uppfylla säkerhetsprinciperna.
 
@@ -1020,13 +1016,13 @@ De syftar till att ange lösningens effektivitet i ekonomiska termer genom att d
 
 ### Roller och rättigheter {#roles-and-rights-concept}
 
-Detaljerad specifikation av de begrepp som rör roller och åtkomsträttigheter som krävs för den nya ansökan, inklusive en omfattande beskrivning av
+Detaljerad specifikation av de begrepp som gäller roller och åtkomsträttigheter som krävs för den nya tillämpningen, inklusive en översikt på hög nivå över
 
 * roller
 * grupper
 * användare
 * behörigheter
-* samt hantering och etablering av användare
+* och användarhantering och etablering
 
 ### Roller och rättighetskoncept uppfyller säkerhetsriktlinjerna {#roles-and-rights-concept-meets-security-guidelines}
 
@@ -1061,7 +1057,7 @@ Definiera och dokumentera information om den säkerhetskonfiguration som krävs 
 
 ### Utkast av säkerhetskoncept {#security-concept-draft}
 
-En övergripande översikt som täcker säkerhetsinställningarna för
+En översikt på hög nivå som täcker säkerhetsinställningarna för
 
 * program
 * arkitektur
@@ -1099,7 +1095,7 @@ Den övergripande strategin för programvaruarkitekturen. inklusive tjänster, s
 
 ### Konferensgruppen för lösningsgranskning har inrättats och möteskonferenser har angetts {#solution-review-board-established-and-meeting-cadence-set}
 
-Solution Review Board består vanligtvis av kundintressenter.
+Solution Review Board består av kundintressenter.
 
 Styrelsen har regelbundna möten för att fortlöpande se över de krav och specifikationer som för närvarande gäller. Målet är att säkerställa att de överensstämmer med definitionen och kriterierna för framgång och även ge underlag för utvecklingen av kraven.
 
@@ -1109,7 +1105,7 @@ Installationsanvisningar för lösningen, tillsammans med grundläggande operati
 
 ### Signering och godkännandeprocess för lösningen {#solution-sign-off-and-acceptance-process}
 
-Signerings- och godkännandeprocessen beskriver de kriterier som måste uppfyllas innan lösningen kan släppas i en produktionsmiljö.
+Signerings- och godkännandeprocessen beskriver de kriterier som måste uppfyllas innan lösningen kan släppas ut i en produktiv miljö.
 
 Den kan också fungera som en avtalsmässig milstolpe.
 
@@ -1160,9 +1156,9 @@ Statusrapporter är ett viktigt kommunikationsverktyg. Formatet bör anpassas ti
 
 ### Villkor och definition för lyckade försök {#success-criteria-and-definition}
 
-Kunden, projektsponsorn, projektledaren eller konsulten ska specificera
+Kunden, projektsponsorn och projektledaren eller konsulten ska specificera
 
-* Vad definierar ett lyckat resultat för projektet.
+* Vad definierar ett lyckat resultat för projektet?
 * De specifika kriterier som krävs för att uppfylla denna definition av framgång.
 
 Dessa används för att säkerställa att kriterierna för framgång uppfylls:
@@ -1176,7 +1172,7 @@ En del av ansvaret för kvalitetsledaren är att se till att det finns resurser 
 
 ### Supportprocesser och åtkomst till Adobe supportportal {#support-processes-and-access-to-adobe-support-portal}
 
-Tillgång till Adobe Support Portal är avgörande för att skicka in biljetter om produktrelaterade problem som kan uppstå under implementeringen.
+Tillgång till Adobe supportportal är avgörande för att skicka in biljetter om produktrelaterade problem som kan uppstå under implementeringen.
 
 Nyckelmedlemmar i teamet bör tilldelas åtkomst.
 
@@ -1190,7 +1186,7 @@ Ett dokument som beskriver systemarkitekturen. inklusive gränssnitt, nätverksp
 
 ### Systemarkitekturens säkerhetskoncept {#system-architecture-security-concept}
 
-En översikt över hur man gör så att systemarkitekturen överensstämmer med eventuella säkerhetsprofiler. Detta kan omfatta:
+En översikt på hög nivå över hur du gör systemarkitekturen kompatibel med andra säkerhetsprofiler. Detta kan omfatta:
 
 * brandväggar och brandväggsregler
 * säkerhetszoner
@@ -1234,7 +1230,7 @@ Identifiera och verifiera potentiella tekniska risker. Tekniska risker kan omfat
 
 ### Teknisk specifikation {#technical-specification}
 
-Den tekniska specifikationen omfattar (bland annat information)
+Den tekniska specifikationen omfattar (bland annat) följande:
 
 * gränssnitt
 * konfigurationer
@@ -1274,7 +1270,7 @@ Det bör noteras att
 
 ### Test Suite {#test-suite}
 
-Val av automatiseringsserie och verktyg. Dessa kommer att användas för att automatisera tester, inklusive användningsfall.
+Val av automatiseringsserie och verktyg. Dessa används för att automatisera tester, inklusive de som används.
 
 ### Test Tooling Suite Selected {#test-tooling-suite-selected}
 
@@ -1282,7 +1278,7 @@ Automatiseringssvit och verktyg som valts ut för fallautomatisering och andra t
 
 ### Testningskoncept {#testing-concept}
 
-Testkonceptet är en kontur på mycket hög nivå för testning av projektet. inklusive testning av QA, UAT, prestanda, säkerhet och integrering.
+Testkonceptet är en översikt på hög nivå över testningen av projektet. inklusive testning av QA, UAT, prestanda, säkerhet och integrering.
 
 ### Testningsplaner {#testing-plans}
 
@@ -1294,7 +1290,7 @@ Dessa krav är specifika för det tekniska genomförandet av tjänster som stöd
 
 ### Testningsstrategi {#testing-strategy}
 
-Testningsstrategin innehåller en övergripande strategi för kvalitetssäkring och testning av användarnas acceptans. Detta inkluderar tidslinjer, rapportstängsel och körning.
+Teststrategin bygger på en övergripande strategi för kvalitetssäkring och testning av användarnas acceptans. Detta inkluderar tidslinjer, rapportstängsel och körning.
 
 ### Integreringskoncept från tredje part {#third-party-integration-concept}
 
@@ -1302,7 +1298,7 @@ Koncept på arkitektur- och systemnivå för integrering med tredjepartssystem.
 
 ### Tredjepartsintegreringsspecifikation {#third-party-integration-specification}
 
-Uppgifter om kraven (både funktionella och icke-funktionella) på funktionalitet och integrering av system från tredje part.
+Uppgifter om kraven (både funktionella och icke-funktionella) på funktionalitet och integrering av tredjepartssystem.
 
 ### Tredjeparts säkerhetskoncept {#third-party-security-concept}
 
@@ -1314,14 +1310,14 @@ Se till att alla tredjepartssystem finns tillgängliga, med lämplig dokumentati
 
 ### Åtkomst till system från tredje part aktiverad {#third-party-systems-access-enabled}
 
-Nödvändiga åtkomsträttigheter som beviljas respektive roller som används i samverkan med tredjepartssystem.
+Nödvändiga åtkomsträttigheter som beviljas respektive roller som används i tredjepartssystem.
 
-### Testbegrepp från tredje part {#third-party-testing-concept}
+### Testkoncept från tredje part {#third-party-testing-concept}
 
 Definierar:
 
 * användningsfall för att testa integreringarna
-* funktionalitet i samband med program från tredje part
+* funktioner som är relaterade till ett program från tredje part
 
 ### Tröskeldefinition {#threshold-definition}
 
@@ -1341,13 +1337,13 @@ Detta bör definiera projekttidslinjer och avtalsenliga milstolpar som ska anvä
 
 ### Totalt antal projektansträngningar {#total-project-efforts}
 
-Alla uppskattningar av ansträngningen, från var och en av projektets leads, bör konsolideras. bland annat allmänna kostnader, utveckling, systemteknik, arkitektur och testning.
+Alla uppskattningar av ansträngningen, från var och en av projektets leads, bör konsolideras. bland annat, driftskostnader, utveckling, systemteknik, arkitektur och testning.
 
 Om avtalet innehåller en stödnivå bör även insatser för stöd och insatser ingå.
 
 ### Utbildningsmaterial {#training-materials}
 
-Material som ska användas i utbildningstillfällen. Materialet ska skapas specifikt för lösningen och utformas för att användas tillsammans med användarhandböckerna.
+Material som ska användas i utbildningstillfällen. Materialet ska skapas specifikt för lösningen och utformas för att användas med användarhandböckerna.
 
 ### Förstå projektets och förväntningarnas omfattning {#understands-scope-of-project-and-expectations}
 
@@ -1359,7 +1355,7 @@ Lämplig person bör bekräfta att de till fullo förstår
 
 ### URL-hanteringskoncept {#url-handling-concept}
 
-URL-hanteringskonceptet ska omfatta AEM specifika URL-funktioner, inklusive:
+URL-hanteringen ska omfatta AEM URL-funktioner som:
 
 * vanity-URL:er
 * externalisering av länkar
@@ -1395,11 +1391,11 @@ Budgetplanen måste granskas och valideras av alla intressenter. De måste kontr
 
 ### Testresultat för textruta {#white-box-test-results}
 
-Testning av vita rutor är en metod som testar interna strukturer eller funktioner i ett program, i motsats till dess funktioner. Testning av vita kartonger kan göras på enhets-, integrerings- och systemnivå i programtestprocessen.
+Testning av vita rutor är en metod som testar interna strukturer eller funktioner i ett program, i motsats till dess funktioner. Testning av vita kartonger kan utföras på enhet-, integrerings- och systemnivå i programtestningsprocessen.
 
 ### Arbetsflödesspecifikationer {#workflow-specifications}
 
-Baserat på arbetsflödeskonceptet bör dessa specifikationer i detalj definiera de steg som ska skapa det fullständiga arbetsflödet.
+Baserat på arbetsflödeskonceptet bör dessa specifikationer i detalj definiera de steg som skapar det fullständiga arbetsflödet.
 
 Specifikationen för varje arbetsflöde bör omfatta (minst):
 
@@ -1413,5 +1409,5 @@ Specifikationen för varje arbetsflöde bör omfatta (minst):
 
 Med arbetsflöden kan du automatisera AEM. Konturer för arbetsflöden:
 
-* de processer som behöver automatiseras
+* de processer som kräver automatisering
 * vilka tjänster och roller i AEM som kommer att påverkas

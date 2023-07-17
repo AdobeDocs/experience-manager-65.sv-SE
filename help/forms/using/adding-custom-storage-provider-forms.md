@@ -1,18 +1,14 @@
 ---
 title: Anpassad lagring för utkast och inskickningskomponenter
-seo-title: Custom storage for drafts and submissions component
 description: Se hur du kan anpassa lagring av användardata för utkast och inskickade data.
-seo-description: See how to customize the storage of user data for drafts and submissions.
-uuid: ac2e80ee-a9c7-44e6-801e-fe5a840cb7f8
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
-discoiquuid: 154255e7-468a-42e6-a33d-eee691cf854d
 feature: Forms Portal
 exl-id: b1300eeb-2653-4bb5-b2fd-88048c9c43b9
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 3d80ea6a6fbad05afcdd1f41f4b9de70921ab765
 workflow-type: tm+mt
-source-wordcount: '335'
+source-wordcount: '332'
 ht-degree: 0%
 
 ---
@@ -23,13 +19,13 @@ ht-degree: 0%
 
 Med AEM Forms kan du spara ett formulär som ett utkast. Med utkastsfunktionen kan du underhålla ett pågående formulär som du kan fylla i och skicka senare från vilken enhet som helst.
 
-Som standard lagrar AEM Forms användardata som är kopplade till utkastet och inskickandet av ett formulär i `/content/forms/fp` på Publish-instansen. Dessutom innehåller AEM Forms portalkomponenter datatjänster som du kan använda för att anpassa implementeringen av lagring av användardata för utkast och inskickade data. Du kan till exempel lagra användardata i ett datalager.
+Som standard lagrar AEM Forms användardata som är kopplade till utkastet och inskickandet av ett formulär i `/content/forms/fp` på Publish-instansen. Dessutom innehåller komponenterna i AEM Forms Portal datatjänster som du kan använda för att anpassa implementeringen av lagring av användardata för utkast och inskickade data. Du kan till exempel lagra användardata i ett datalager.
 
 ## Förutsättningar  {#prerequisites}
 
-* Aktivera [formulärportalkomponenter](/help/forms/using/enabling-forms-portal-components.md)
-* Skapa en [formulärportalsida](/help/forms/using/creating-form-portal-page.md)
-* Aktivera [anpassningsbara formulär för formulärportalen](/help/forms/using/draft-submission-component.md)
+* Aktivera [Forms Portal-komponenter](/help/forms/using/enabling-forms-portal-components.md)
+* Skapa en [Forms Portal page](/help/forms/using/creating-form-portal-page.md)
+* Aktivera [anpassningsbara formulär för Forms Portal](/help/forms/using/draft-submission-component.md)
 * Lär dig [implementeringsinformation för anpassad lagring](/help/forms/using/draft-submission-component.md#customizing-the-storage)
 
 ## Utkastdatatjänst {#draft-data-service}
@@ -188,7 +184,7 @@ public interface SubmitDataService {
 }
 ```
 
-Forms Portal använder UUID (Universally Unique Identifier) för att generera ett unikt ID för varje utkast och skickat formulär. Du kan också generera ett unikt ID. Du kan implementera gränssnittet FPKeyGeneratorService, åsidosätta dess metoder och utveckla en anpassad logik för att generera ett anpassat unikt ID för varje utkast och skickat formulär. Ange också tjänstrankning för implementering av anpassad ID-generering som är högre än 0. Det ser till att den anpassade implementeringen används i stället för standardimplementeringen.
+Forms Portal använder UUID (Universally Unique IDentifier) för att generera ett unikt ID för varje utkast och skickat formulär. Du kan också generera ett unikt ID. Du kan implementera gränssnittet FPKeyGeneratorService, åsidosätta dess metoder och utveckla en anpassad logik för att generera ett anpassat unikt ID för varje utkast och skickat formulär. Ange också tjänstrankning för implementering av anpassad ID-generering som är högre än 0. Det ser till att den anpassade implementeringen används i stället för standardimplementeringen.
 
 ```java
 public interface FPKeyGeneratorService {
@@ -207,7 +203,7 @@ Du kan använda anteckningen nedan för att öka rankningen för anpassade ID:n 
 
 `@Properties(value = { @Property(name = "service.ranking", intValue = 15) } )`
 
-Om du vill använda ovanstående kommentar importerar du följande till ditt projekt:
+Om du vill använda ovanstående anteckning importerar du följande till ditt projekt:
 
 ```java
 import org.apache.felix.scr.annotations.Properties;

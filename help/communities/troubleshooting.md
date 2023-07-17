@@ -1,16 +1,14 @@
 ---
 title: Felsökning för användargrupper
 description: Felsökning av användargrupper, inklusive kända fel
-uuid: 99225430-fa2a-4393-ae5a-18b19541c358
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: cdb2d80a-2fbf-4ee6-b89b-b5d74e6d3bfc
 exl-id: ef4f4108-c485-4e2e-a58f-ff64eee9937e
-source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
+source-git-commit: 3d80ea6a6fbad05afcdd1f41f4b9de70921ab765
 workflow-type: tm+mt
-source-wordcount: '359'
+source-wordcount: '350'
 ht-degree: 0%
 
 ---
@@ -47,23 +45,23 @@ All kod som använder API:t RelativeTimeFormat() måste därför ändras:
 * Från: `final RelativeTimeFormat fmt = new RelativeTimeFormat("r a", resourceBundle);`
 * Till: `final RelativeTimeFormat fmt = new RelativeTimeFormat("r", resourceBundle);`
 
-Felet skiljer sig åt när det gäller författare och publicering. Skribenten skriver att det inte går att skriva och att forumen helt enkelt inte visas. Vid publicering genereras ett fel på sidan.
+Felet skiljer sig åt när det gäller författare och publicering. På författaren misslyckas det utan att det märks och forumämnena visas helt enkelt inte. Vid publicering genereras ett fel på sidan.
 
-Se [com.day.cq.commons.date.RelativeTimeFormat](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/date/RelativeTimeFormat.html) API för mer information.
+Se [com.day.cq.commons.date.RelativeTimeFormat](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/date/RelativeTimeFormat.html) API för mer information.
 
 ## Vanliga problem {#common-concerns}
 
 ### Varning i loggar: Borttagna handtag {#warning-in-logs-handlebars-deprecated}
 
-Under start (inte under den första - men efter den) kan följande varning visas i loggarna:
+Under start (inte den första - men var tredje) kan följande varning visas i loggarna:
 
 * `11.04.2014 08:38:07.223 WARN [FelixStartLevel]com.github.jknack.handlebars.Handlebars Helper 'i18n'` har ersatts med `com.adobe.cq.social.handlebars.I18nHelper@15bac645`
 
-Den här varningen kan ignoreras som `jknack.handlebars.Handlebars`, används av [SCF](scf.md#handlebarsjavascripttemplatinglanguage), har ett eget i18n-hjälpverktyg. Från början ersätts den med en AEM specifik [i18n - hjälp](handlebars-helpers.md#i-n). Den här varningen genereras av tredjepartsbiblioteket för att bekräfta åsidosättningen av en befintlig hjälpreda.
+Den här varningen kan ignoreras som `jknack.handlebars.Handlebars`, används av [SCF](scf.md#handlebarsjavascripttemplatinglanguage), har ett eget i18n-hjälpverktyg. Vid start ersätts den med en AEM [i18n - hjälp](handlebars-helpers.md#i-n). Den här varningen genereras av tredjepartsbiblioteket för att bekräfta åsidosättningen av en befintlig hjälpreda.
 
 ### Varning i loggar: OakResourceListener processOsgiEventQueue {#warning-in-logs-oakresourcelistener-processosgieventqueue}
 
-Om du publicerar ett antal forum-ämnen för sociala communityer kan det resultera i stora mängder varnings- och informationsloggar från OakResourceListener processOsgiEventQueue.
+Om du publicerar flera forum för sociala communityer kan det resultera i stora mängder varnings- och informationsloggar från OakResourceListener processOsgiEventQueue.
 
 Dessa varningar kan ignoreras.
 
