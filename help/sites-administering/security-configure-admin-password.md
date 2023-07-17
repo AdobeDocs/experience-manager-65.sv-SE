@@ -1,18 +1,14 @@
 ---
 title: Konfigurera administratörslösenordet vid installationen
-seo-title: Configure the Admin Password on Installation
-description: Lär dig hur du ändrar administratörslösenordet vid AEM.
-seo-description: Learn how to change the Admin Password on AEM Installation.
-uuid: 06da9890-ed63-4fb6-88d5-fd0e16bc4ceb
+description: Lär dig hur du ändrar administratörslösenordet vid installation av Adobe Experience Manager.
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 content-type: reference
-discoiquuid: 00806e6e-3578-4caa-bafa-064f200a871f
 exl-id: b55ff9d5-8139-4ecf-ba09-5cf88207c5c4
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 96e2e945012046e6eac878389b7332985221204e
 workflow-type: tm+mt
-source-wordcount: '305'
+source-wordcount: '302'
 ht-degree: 0%
 
 ---
@@ -21,7 +17,7 @@ ht-degree: 0%
 
 ## Översikt {#overview}
 
-Sedan version 6.3 tillåter AEM att administratörslösenordet anges med kommandoraden när en ny instans installeras.
+Från och med version 6.3 tillåter Adobe Experience Manager (AEM) att administratörslösenordet ställs in med kommandoraden när en ny instans installeras.
 
 I tidigare versioner av AEM behövde lösenordet för administratörskontot samt lösenordet för olika andra konsoler ändras efter installationen.
 
@@ -29,7 +25,7 @@ Den här funktionen lägger till möjligheten att ange ett nytt administratörsl
 
 >[!CAUTION]
 >
->Observera att funktionen inte omfattar Felix Console, där lösenordet måste ändras manuellt. Mer information finns i relevanta [Avsnittet Säkerhetschecklista](/help/sites-administering/security-checklist.md#change-default-passwords-for-the-aem-and-osgi-console-admin-accounts).
+>Funktionen täcker inte Felix Console, för vilken lösenordet måste ändras manuellt. Mer information finns i relevanta [Avsnittet Säkerhetschecklista](/help/sites-administering/security-checklist.md#change-default-passwords-for-the-aem-and-osgi-console-admin-accounts).
 
 ## Hur använder jag den? {#how-do-i-use-it}
 
@@ -41,7 +37,7 @@ Den allmänna syntaxen för att köra en AEM från kommandoraden är:
 java -jar aem6.3.jar
 ```
 
-När du kör instansen från kommandoraden får du alternativet att ändra administratörslösenordet under installationen:
+När du har kört instansen från kommandoraden får du alternativet att ändra administratörslösenordet under installationsprocessen:
 
 ![chlimage_1-116](assets/chlimage_1-116a.png)
 
@@ -51,7 +47,7 @@ När du kör instansen från kommandoraden får du alternativet att ändra admin
 
 ## Använda flaggan -nointeractive {#using-the-nointeractive-flag}
 
-Du kan också välja att ange lösenordet från en egenskapsfil. Detta görs genom att använda `-nointeractive` flagga kombinerat med`-Dadmin.password.file` system, egenskap.
+Du kan också välja att ange lösenordet från en egenskapsfil. Detta görs genom att använda `-nointeractive` flagga kombinerat med `-Dadmin.password.file` system, egenskap.
 
 Nedan visas ett exempel:
 
@@ -67,4 +63,4 @@ admin.password = 12345678
 
 >[!NOTE]
 >
->Om du bara använder `-nointeractive` parametern utan `-Dadmin.password.file` system property, AEM använder administratörslösenordet utan att be dig ändra det, vilket i stort sett replikerar beteendet från tidigare versioner. Det här icke-interaktiva läget kan användas för automatiska installationer med kommandoraden i ett installationsskript.
+>Om du bara använder `-nointeractive` parametern utan `-Dadmin.password.file` system property, AEM använder administratörslösenordet som standard utan att be dig ändra det, vilket i stort sett replikerar beteendet från tidigare versioner. Det här icke-interaktiva läget kan användas för automatiska installationer med kommandoraden i ett installationsskript.

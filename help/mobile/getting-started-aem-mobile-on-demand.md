@@ -1,16 +1,14 @@
 ---
 title: Adobe Experience Manager Mobile On-Demand
-description: För att starta en ny AEM Mobile-appupplevelse krävs det att rollerna är enhetliga innan man kan redigera innehåll. Följ den här sidan för att komma igång med AEM on-demand-tjänster för mobiler.
-uuid: 175c609d-3cb8-4a1b-bfea-278df272e500
+description: För att starta en ny upplevelse av Adobe Experience Manager (AEM)-mobilappen krävs det att rollerna är enhetliga innan det är klart för innehållsredigering. Följ den här sidan för att komma igång med AEM on-demand-tjänster för mobiler.
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: introduction
 content-type: reference
-discoiquuid: dc6891cd-19cc-4dff-8bda-a41ed8af8bfb
 exl-id: 4be199d8-963d-4807-b9bb-e23fa577c5f2
-source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
+source-git-commit: 96e2e945012046e6eac878389b7332985221204e
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '772'
 ht-degree: 0%
 
 ---
@@ -19,17 +17,17 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (t.ex. Reagera). [Läs mer](/help/sites-developing/spa-overview.md).
+>Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (till exempel React). [Läs mer](/help/sites-developing/spa-overview.md).
 
 >[!NOTE]
 >
->Om du inte använder AEM som innehållshanteringskälla kan du läsa [Hjälp om AEM Mobile On-demand Services](https://helpx.adobe.com/digital-publishing-solution/topics.html).
+>Om du inte använder Adobe Experience Manager (AEM) som innehållshanteringskälla kan du läsa [Hjälp om AEM Mobile On-demand Services](https://helpx.adobe.com/digital-publishing-solution/topics.html).
 
 AEM innehåller flera verktyg som gör att du kan integrera ditt innehåll i mobilprogram.
 
 Följande diagram visar hur de olika komponenterna i AEM Mobile och On-Demand Services passar ihop för att leverera innehåll till mobilappar.
 
-AEM kan betraktas som en testmiljö för att förhandsgranska appen och innehållet före publiceringen. medan AEM Mobile App är den slutliga app som har byggts för distribution.
+AEM kan betraktas som en testmiljö för att förhandsgranska appen och innehållet före publicering. medan AEM Mobile App är den slutliga app som har byggts för distribution.
 
 >[!NOTE]
 >
@@ -45,7 +43,7 @@ AEM kan betraktas som en testmiljö för att förhandsgranska appen och innehål
 
 AEM Mobile är bara en av de två pelarna som utgör den kompletta AEM.
 
-För att starta en ny AEM Mobile-appupplevelse krävs det att rollerna är enhetliga innan man kan redigera innehåll. Följande roller är en startpunkt när du skapar ett nytt AEM Mobile-program:
+För att starta en ny AEM Mobile-appupplevelse krävs det att rollerna är enhetliga innan man kan redigera innehåll. Följande roller utgör en startpunkt när du skapar ett AEM Mobile-program:
 
 * **Administratör**
 * **Developer**
@@ -57,11 +55,11 @@ För att starta en ny AEM Mobile-appupplevelse krävs det att rollerna är enhet
 
 ### Om AEM Mobile Application Dashboard {#understanding-the-aem-mobile-application-dashboard}
 
-Innan användaren förstår roller och ansvarsområden bör han/hon ha kunskap om **AEM Mobile Control Center** eller **Instrumentpanel för program**. Klicka [här](/help/mobile/mobile-apps-ondemand-application-dashboard.md) för en djupgående förståelse.
+Innan användaren förstår roller och ansvarsområden bör han/hon ha grundliga kunskaper om **AEM Mobile Control Center** eller **Instrumentpanel för program**. Klicka [här](/help/mobile/mobile-apps-ondemand-application-dashboard.md) för en djupgående förståelse.
 
 ### AEM-administratör {#aem-administrator}
 
-An ***AEM*** ansvarar för att lägga till ett nytt program i AEM Mobile-katalogen, antingen genom att skapa ett nytt program med guiden Skapa eller genom att importera ett befintligt program. AEM som skapar ett nytt program med AEM Mobile *guide* Välj vanligtvis en av de önskade programmallarna antingen från våra färdiga referensexempel eller (i de flesta fall) en anpassad programmall som skapats av *AEM utvecklare.*
+An ***AEM*** ansvarar för att lägga till ett program i AEM Mobile-katalogen, antingen genom att skapa ett program med hjälp av guiden Skapa eller genom att importera ett befintligt program. AEM som skapar ett program med AEM Mobile *guide* oftast väljer du en av de önskade programmallarna antingen bland Adobe färdiga referensexempel eller (vanligtvis) en anpassad programmall som skapas av *AEM utvecklare.*
 
 En AEM är ansvarig för följande när du skapar ett program med AEM Mobile On-demand Services:
 
@@ -74,7 +72,7 @@ Om du vill komma igång med en administratörs roller och ansvarsområden, se [A
 
 ## AEM Developer {#aem-developer}
 
-An **AEM** utökar och skapar anpassade webbmallar och komponenter så att *AEM Author *kan skapa tilltalande och engagerande mobilupplevelser. Dessa mallar och komponenter är inte bara optimerade för mobilappsvärlden. men kommunicera både till enheten och till AEM server (valfri fjärrserver) till slutpunkter för flerkanalstjänster. AEM inbyggda innehållsredigeraren används av *AEM Authors* för att skapa engagerande och relevanta upplevelser i appen, inklusive integrering med resten av Adobe Marketing Cloud.
+An **AEM** utökar och skapar anpassade webbmallar och komponenter så att *AEM Author *kan skapa tilltalande och engagerande mobilupplevelser. Dessa mallar och komponenter är inte bara optimerade för mobilappsvärlden. men kommunicera både till enheten och till AEM server (valfri fjärrserver) till slutpunkter för flerkanalstjänster. AEM inbyggda innehållsredigeraren används av *AEM Authors* för att skapa engagerande och relevanta upplevelser i appen, inklusive integrering med resten av Adobe Experience Cloud.
 
 En AEM ansvarar för följande när du skapar ett program med AEM Mobile On-demand Services:
 
@@ -91,7 +89,7 @@ Om du vill komma igång med Developers roller och ansvarsområden, se [Utveckla 
 
 ## AEM Author {#aem-author}
 
-An ***AEM Author* (eller *Marknadsförare*)**använder de anpassade, utvecklade eller färdiga mallarna och komponenterna för att lägga till och redigera sidor, dra och släppa komponenter och lägga till media av alla typer från DAM, inklusive bilder, videor och textfragment (innehållsfragment). AEM inbyggda innehållsredigeraren används sedan av *AEM Authors* för att skapa engagerande och relevanta upplevelser i appen, inklusive integrering med resten av Adobe Marketing Cloud.
+An ***AEM Author* (eller *Marknadsförare*)**använder de anpassade, utvecklade eller färdiga mallarna och komponenterna för att lägga till och redigera sidor, dra och släppa komponenter och lägga till media av alla typer från DAM, inklusive bilder, videor och textfragment (innehållsfragment). AEM inbyggda innehållsredigeraren används sedan av *AEM Authors* för att skapa engagerande och relevanta upplevelser i appen, inklusive integrering med resten av Adobe Experience Cloud.
 
 AEM måste förstå följande när de skapar ett program med AEM Mobile On-demand Services:
 

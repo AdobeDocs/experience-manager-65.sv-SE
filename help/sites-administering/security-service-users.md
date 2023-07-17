@@ -1,24 +1,20 @@
 ---
-title: Tjänstanvändare i AEM
-seo-title: Service Users in AEM
-description: Läs mer om tjänstanvändare i AEM.
-seo-description: Learn about Service Users in AEM.
-uuid: 4efab5fb-ba11-4922-bd68-43ccde4eb355
+title: Tjänstanvändare i Adobe Experience Manager
+description: Läs mer om tjänstanvändare i Adobe Experience Manager.
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 content-type: reference
-discoiquuid: 9cfe5f11-8a0e-4a27-9681-a8d50835c864
 exl-id: ccd8577b-3bbf-40ba-9696-474545f07b84
 feature: Security
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 96e2e945012046e6eac878389b7332985221204e
 workflow-type: tm+mt
-source-wordcount: '1778'
+source-wordcount: '1766'
 ht-degree: 0%
 
 ---
 
-# Tjänstanvändare i AEM{#service-users-in-aem}
+# Tjänstanvändare i Adobe Experience Manager (AEM) {#service-users-in-aem}
 
 ## Översikt {#overview}
 
@@ -66,7 +62,7 @@ Se även till att alla nya funktioner du utvecklar följer dessa principer:
 
 * **Respektera sekretessinställningar**
 
-   * När det gäller privata profiler är ett exempel att inte visa profilbilden, e-postadressen eller det fullständiga namnet som finns på den privata profilen `/profile` nod.
+   * Om det finns privata profiler är ett exempel att inte visa profilbilden, e-postadressen eller det fullständiga namnet som finns på den privata `/profile` nod.
 
 ## Strikta åtkomstkontroll {#strict-access-control}
 
@@ -86,9 +82,9 @@ Vare sig du tillämpar åtkomstkontroll vid innehållsomstrukturering eller när
 Om ovanstående misslyckas erbjuder Sling 7 en tjänst för Mappning av tjänstanvändare, som gör det möjligt att konfigurera en mappning från paket till användare och två motsvarande API-metoder: ` [SlingRepository.loginService()](https://sling.apache.org/apidocs/sling7/org/apache/sling/jcr/api/SlingRepository.html#loginService-java.lang.String-java.lang.String-)` och ` [ResourceResolverFactory.getServiceResourceResolver()](https://sling.apache.org/apidocs/sling7/org/apache/sling/api/resource/ResourceResolverFactory.html#getServiceResourceResolver-java.util.Map-)` som returnerar en session-/resurslösare med endast behörighet för en konfigurerad användare. Dessa metoder har följande egenskaper:
 
 * De tillåter att användare mappar tjänster
-* De gör det möjligt att definiera underleverantörer
+* De gör det möjligt att definiera undertjänstanvändare
 * Den centrala konfigurationspunkten är: `org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl`
-* `service-id` = `service-name` [ &quot;:&quot; subservice-namn ] 
+* `service-id` = `service-name` [&quot;:&quot; subservice-namn]
 
 * `service-id` mappas till en resurslösare och/eller JCR-databasens användar-ID för autentisering
 * `service-name` är det symboliska namnet på det paket som tillhandahåller tjänsten
@@ -99,12 +95,12 @@ Om ovanstående misslyckas erbjuder Sling 7 en tjänst för Mappning av tjänsta
 
 En tjänstanvändare är en JCR-användare utan lösenord och med en minimisängd behörigheter som krävs för att utföra en viss uppgift. Om du inte anger något lösenord går det inte att logga in med en tjänstanvändare.
 
-Ett sätt att ersätta en administrativ session är att ersätta den med tjänstanvändarsessioner. Den kan vid behov även ersättas av flera undertjänstanvändare.
+Ett sätt att ersätta en administrativ session är att ersätta den med tjänstanvändarsessioner. Den kan också ersättas av flera undertjänstanvändare vid behov.
 
 Om du vill ersätta administratörssessionen med en tjänstanvändare utför du följande steg:
 
 1. Identifiera de behörigheter som krävs för tjänsten, med tanke på principen om minsta behörighet.
-1. Kontrollera om det redan finns en användare med exakt den behörighetsinställning du behöver. Skapa en ny systemtjänstanvändare om ingen befintlig användare matchar dina behov. RTC krävs för att skapa en ny tjänstanvändare. Ibland kan det vara bra att skapa flera underleverantörer (t.ex. en för att skriva och en för att läsa) för att dela upp åtkomsten ännu mer.
+1. Kontrollera om det redan finns en användare med exakt den behörighetsinställning du behöver. Skapa en systemtjänstanvändare om ingen befintlig användare matchar dina behov. RTC krävs för att skapa en tjänstanvändare. Ibland kan det vara bra att skapa flera undertjänstanvändare (t.ex. en för att skriva och en för att läsa) för att dela upp åtkomsten ännu mer.
 1. Konfigurera och testa ACE:n för din användare.
 1. Lägg till en `service-user` mappning för din tjänst och för `user/sub-users`
 
@@ -112,13 +108,13 @@ Om du vill ersätta administratörssessionen med en tjänstanvändare utför du 
 
 1. Ersätt `admin-session` i koden med `loginService` eller `getServiceResourceResolver` API:er.
 
-## Skapa en ny tjänstanvändare {#creating-a-new-service-user}
+## Skapa en tjänstanvändare {#creating-a-new-service-user}
 
 När du har verifierat att ingen användare i listan över AEM användare kan användas för ditt användningsfall och att motsvarande RTC-problem har godkänts, kan du lägga till den nya användaren i standardinnehållet.
 
 Rekommenderad metod är att skapa en tjänstanvändare som ska använda databasutforskaren på *https://&lt;server>:&lt;port>/crx/explorer/index.jsp*
 
-Målet är att få en giltig `jcr:uuid` -egenskap som är obligatorisk för att skapa användaren via en innehållspaketinstallation.
+Målet är att få en giltig `jcr:uuid` -egenskap som är obligatorisk för att skapa användaren via en installation av innehållspaket.
 
 Du kan skapa tjänstanvändare genom att:
 
@@ -134,7 +130,7 @@ Du kan skapa tjänstanvändare genom att:
 
    >[!NOTE]
    >
-   >Observera att det inte finns några blandningstyper associerade med tjänstanvändare. Det innebär att det inte finns några åtkomstkontrollprinciper för systemanvändare.
+   >Det finns inga blandningstyper associerade med tjänstanvändare. Det innebär att det inte finns några åtkomstkontrollprinciper för systemanvändare.
 
 När du lägger till motsvarande .content.xml i innehållet i ditt paket måste du se till att du har ställt in `rep:authorizableId` och att den primära typen är `rep:SystemUser`. Det borde se ut så här:
 
@@ -149,10 +145,10 @@ När du lägger till motsvarande .content.xml i innehållet i ditt paket måste 
 
 ## Lägga till en konfigurationsändring i ServiceUserMapper-konfigurationen {#adding-a-configuration-amendment-to-the-serviceusermapper-configuration}
 
-Om du vill lägga till en mappning från tjänsten till motsvarande systemanvändare måste du skapa en fabrikskonfiguration för ` [ServiceUserMapper](https://sling.apache.org/apidocs/sling7/org/apache/sling/serviceusermapping/ServiceUserMapper.html)` service. För att behålla denna modulära konfiguration kan sådana konfigurationer tillhandahållas med [Ändringsmekanism för Sling](https://issues.apache.org/jira/browse/SLING-3578). Det rekommenderade sättet att installera sådana konfigurationer med ditt paket är att använda [Inläsning av första innehåll vid försäljning](https://sling.apache.org/documentation/bundles/content-loading-jcr-contentloader.html):
+Om du vill lägga till en mappning från tjänsten till motsvarande systemanvändare skapar du en fabrikskonfiguration för ` [ServiceUserMapper](https://sling.apache.org/apidocs/sling7/org/apache/sling/serviceusermapping/ServiceUserMapper.html)` service. För att behålla denna modulära konfiguration kan sådan konfiguration tillhandahållas med [Ändringsmekanism för Sling](https://issues.apache.org/jira/browse/SLING-3578). Det rekommenderade sättet att installera sådana konfigurationer med ditt paket är att använda [Inläsning av första innehåll vid försäljning](https://sling.apache.org/documentation/bundles/content-loading-jcr-contentloader.html):
 
 1. Skapa en undermapp SLING-INF/innehåll under mappen src/main/resources i paketet
-1. I den här mappen skapar du en fil med namnet org.apache.sling.servicusermapping.impl.ServiceUserMapperImpl.changed-&lt;some unique=&quot;&quot; name=&quot;&quot; for=&quot;&quot; your=&quot;&quot; factory=&quot;&quot; configuration=&quot;&quot;>.xml med innehållet i fabrikskonfigurationen (inklusive alla användarmappningar för undertjänster). Exempel:
+1. I den här mappen skapar du en fil med namnet org.apache.sling.servicusermapping.impl.ServiceUserMapperImpl.changed-&lt;some unique=&quot;&quot; name=&quot;&quot; for=&quot;&quot; your=&quot;&quot; factory=&quot;&quot; configuration=&quot;&quot;>.xml med innehållet i din fabrikskonfiguration (inklusive alla användarmappningar för undertjänster). Exempel:
 
 1. Skapa en `SLING-INF/content` mappen nedanför `src/main/resources` din mapp;
 1. Skapa en fil i den här mappen `named org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended-<a unique name for your factory configuration>.xml` med innehållet i fabrikskonfigurationen, inklusive alla användarmappningar för undertjänster.
@@ -184,7 +180,7 @@ Om du vill lägga till en mappning från tjänsten till motsvarande systemanvän
    </Sling-Initial-Content>
    ```
 
-1. Installera paketet och kontrollera att fabrikskonfigurationen har installerats. Du kan göra detta genom att:
+1. Installera paketet och kontrollera att fabrikskonfigurationen är installerad. Du kan göra detta genom att:
 
    * Gå till webbkonsolen på *https://serverhost:serveraddress/system/console/configMgr*
    * Sök efter **Tillägg till användarmappningstjänsten för Apache Sling-tjänsten**
@@ -195,7 +191,7 @@ Om du vill lägga till en mappning från tjänsten till motsvarande systemanvän
 Samtal till `loginAdministrative()` visas ofta tillsammans med delade sessioner. Dessa sessioner hämtas vid aktivering av tjänsten och loggas bara ut när tjänsten har stoppats. Även om detta är vanligt leder det till två problem:
 
 * **Säkerhet:** Sådana administratörssessioner används för att cachelagra och returnera resurser eller andra objekt som är bundna till den delade sessionen. Senare i anropsstacken kan dessa objekt anpassas till sessioner eller resurslösare med utökad behörighet, och ofta är det inte tydligt för anroparen att det är en administratörssession som de arbetar med.
-* **Prestanda:** I Oak-delade sessioner kan prestandaproblem uppstå och du bör inte använda dem för närvarande.
+* **Prestanda:** I Oak kan delade sessioner orsaka prestandaproblem och du bör inte använda dem.
 
 Den mest uppenbara lösningen för säkerhetsrisken är att helt enkelt ersätta `loginAdministrative()` ring med `loginService()` en till en användare med begränsad behörighet. Detta påverkar dock inte eventuella prestandaförsämringar. En möjlighet att begränsa detta är att kapsla in all begärd information i ett objekt som inte har någon koppling till sessionen. Skapa sedan (eller förstör) sessionen på begäran.
 
@@ -214,7 +210,7 @@ Den första metoden är den önskade.
 
 ## Bearbetningshändelser, replikeringsförprocessorer och jobb {#processing-events-replication-preprocessors-and-jobs}
 
-När händelser eller jobb bearbetas, och i vissa fall arbetsflöden, förloras vanligtvis motsvarande session som utlöste händelsen. Detta leder till händelsehanterare och jobbbehandlare som ofta använder administrativa sessioner för att utföra sitt arbete. Det finns olika möjliga strategier för att lösa detta problem, vart och ett med sina fördelar och nackdelar:
+När händelser eller jobb bearbetas, och ibland arbetsflöden, går motsvarande session som utlöste händelsen förlorad. Detta leder till händelsehanterare och jobbbehandlare som ofta använder administrativa sessioner för att utföra sitt arbete. Det finns olika möjliga strategier för att lösa detta problem, vart och ett med sina för- och nackdelar:
 
 1. Skicka `user-id` i händelsens nyttolast och använd personifiering.
 
@@ -226,21 +222,21 @@ När händelser eller jobb bearbetas, och i vissa fall arbetsflöden, förloras 
 
    **Fördelar:** Enhetlig med den aktuella designen. Behöver minimala förändringar.
 
-   **Nackdelar:** Behöver mycket kraftfulla tjänstanvändare vara flexibla, vilket enkelt kan leda till eskalering av behörigheter. Omvandlar säkerhetsmodellen.
+   **Nackdelar:** Behöver kraftfulla tjänstanvändare vara flexibla, vilket enkelt kan leda till eskalering av behörigheter. Omvandlar säkerhetsmodellen.
 
 1. Skicka en serialisering av `Subject` i händelsens nyttolast och skapa en `ResourceResolver` baserat på det ämnet. Ett exempel skulle vara att använda JAAS `doAsPrivileged` i `ResourceResolverFactory`.
 
-   **Fördelar:** Ren implementering ur säkerhetssynpunkt. Det undviker omautentisering och arbetar med de ursprungliga behörigheterna. Kod som är relevant för säkerheten är transparent för händelsens konsument.
+   **Fördelar:** Ren implementering ur säkerhetssynpunkt. Det undviker återautentisering och fungerar med de ursprungliga behörigheterna. Kod som är relevant för säkerheten är transparent för händelsens konsument.
 
    **Nackdelar:** Behov av omfaktorisering. Det faktum att den säkerhetsrelaterade koden som är genomskinlig för händelsekonsumenten också kan leda till problem.
 
-Den tredje metoden är för närvarande den bästa behandlingstekniken.
+Den tredje metoden är att föredra framför behandlingsteknik.
 
 ## Arbetsflödesprocesser {#workflow-processes}
 
-I implementeringar av arbetsflödesprocesser förloras vanligtvis motsvarande användarsession som utlöste arbetsflödet. Detta leder till arbetsflödesprocesser som ofta använder administrativa sessioner för att utföra sitt arbete.
+I implementeringar av arbetsflödesprocesser förloras motsvarande användarsession som utlöste arbetsflödet. Detta leder till arbetsflödesprocesser som ofta använder administrativa sessioner för att utföra sitt arbete.
 
-För att kunna åtgärda dessa problem rekommenderar vi att samma metoder som anges i [Bearbetningshändelser, replikeringsförprocessorer och jobb](/help/sites-administering/security-service-users.md#processing-events-replication-preprocessors-and-jobs) användas.
+För att åtgärda dessa problem rekommenderar vi att samma metoder som anges i [Bearbetningshändelser, replikeringsförprocessorer och jobb](/help/sites-administering/security-service-users.md#processing-events-replication-preprocessors-and-jobs) användas.
 
 ## Processorerna för att dela POST och borttagna sidor {#sling-post-processors-and-deleted-pages}
 

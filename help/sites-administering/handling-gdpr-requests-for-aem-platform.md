@@ -1,20 +1,16 @@
 ---
-title: Hantera GDPR-begäranden för AEM Foundation
-seo-title: Handling GDPR Requests for the AEM Foundation
-description: Hantera GDPR-begäranden för AEM Foundation
-seo-description: null
-uuid: d470061c-bbcf-4d86-9ce3-6f24a764ca39
+title: Hantera GDPR-begäranden för Adobe Experience Manager Foundation
+description: Hantera GDPR-begäranden för Adobe Experience Manager Foundation
 contentOwner: sarchiz
-discoiquuid: 8ee843b6-8cea-45fc-be6c-99c043f075d4
 exl-id: 411d40ab-6be8-4658-87f6-74d2ac1a4913
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 96e2e945012046e6eac878389b7332985221204e
 workflow-type: tm+mt
-source-wordcount: '430'
-ht-degree: 6%
+source-wordcount: '431'
+ht-degree: 0%
 
 ---
 
-# Hantera GDPR-begäranden för AEM Foundation{#handling-gdpr-requests-for-the-aem-foundation}
+# Hantera GDPR-begäranden för Adobe Experience Manager (AEM) Foundation{#handling-gdpr-requests-for-the-aem-foundation}
 
 >[!IMPORTANT]
 >
@@ -22,7 +18,7 @@ ht-degree: 6%
 
 ## Stöd för AEM Foundation GDPR {#aem-foundation-gdpr-support}
 
-På AEM Foundation-nivå är de personuppgifter som lagras användarprofilen. Därför handlar informationen i den här artikeln främst om hur du får åtkomst till och tar bort användarprofiler, för att hantera förfrågningar om GDPR-åtkomst respektive -borttagning.
+På AEM Foundation-nivå är de personuppgifter som lagras användarprofilen. Därför handlar informationen i den här artikeln främst om hur du får åtkomst till och tar bort användarprofiler, om GDPR Access och Delete-begäranden.
 
 ## Åtkomst till en användarprofil {#accessing-a-user-profile}
 
@@ -86,7 +82,7 @@ curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYL
 
    ![image2018-2-6_1-40-58](assets/image2018-2-6_1-40-58.png)
 
-   Användargränssnittet visar sedan att användaren har inaktiverats genom att klistra ut och lägga till ett lås till profilkortet:
+   Användargränssnittet indikerar att användaren inaktiveras genom att gråta ut och lägga till ett lås till profilkortet:
 
    ![inaktiverad användare](assets/disableduser.png)
 
@@ -100,7 +96,7 @@ curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYL
 
    ![image2018-2-6_1-58-25](assets/image2018-2-6_1-58-25.png)
 
-1. Ta bort profilnoder och alla underordnade noder. Profilnoderna har två format beroende på AEM:
+1. Ta bort profilnoder och alla underordnade noder. Profilnoderna har två format, beroende på AEM:
 
    1. Standardprofilen under `[!UICONTROL /profile]`
    1. `[!UICONTROL /profiles]`, för nya profiler som skapats med AEM 6.5.
@@ -109,7 +105,7 @@ curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYL
 
 ### HTTP-API {#http-api-1}
 
-Följande procedurer använder kommandoradsverktyget `curl` för att visa hur du inaktiverar användaren med `userId` **[!UICONTROL cavery]** och tar bort dennes profiler på standardplatsen.
+Följande procedurer använder `curl` kommandoradsverktyg som illustrerar hur du inaktiverar användaren med **[!UICONTROL cavery]** `userId` och ta bort profiler för `cavery` som är tillgängliga på standardplatsen.
 
 * *Identifiera användarens hemsida*
 

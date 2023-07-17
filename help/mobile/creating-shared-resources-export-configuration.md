@@ -1,18 +1,14 @@
 ---
 title: Skapar exportkonfiguration för delade resurser
-seo-title: Creating Shared Resources Export Configuration
 description: Följ den här sidan om du vill veta mer om hur du exporterar delade resurser från Adobe Experience Manager (AEM) för överföring till AEM Mobile.
-seo-description: Follow this page to learn about exporting shared resources from Adobe Experience Manager (AEM) for upload to AEM Mobile.
-uuid: 99b8ff94-8135-4643-a15b-aa6fb91f5401
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-on-demand-services-app
-discoiquuid: 1edf6c76-ccb1-40b6-bdf6-924f1461cd28
 exl-id: 576b4567-c7b6-4196-84e7-47e980637540
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 96e2e945012046e6eac878389b7332985221204e
 workflow-type: tm+mt
-source-wordcount: '302'
+source-wordcount: '299'
 ht-degree: 0%
 
 ---
@@ -21,21 +17,21 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (t.ex. Reagera). [Läs mer](/help/sites-developing/spa-overview.md).
+>Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (till exempel React). [Läs mer](/help/sites-developing/spa-overview.md).
 
 >[!CAUTION]
 >
 >**Förutsättning**:
 >
->Läs mer om hur du skapar och ändrar delade resurser i [Innehållssynkronisering](/help/mobile/mobile-ondemand-contentsync.md) för att förstå de grundläggande begreppen.
+>Innan du lär dig mer om att skapa och ändra delade resurser, se [Innehållssynkronisering](/help/mobile/mobile-ondemand-contentsync.md) för att förstå de grundläggande begreppen.
 
-AEM Mobile-användare använder Innehållssynkronisering för att exportera live-innehåll till statiskt innehåll för användning i mobilappar, och den här exporten sker när innehåll överförs till Mobile On-Demand Services från AEM Mobile.
+Adobe Experience Manager (AEM) Mobile-användare använder Content Sync för att exportera live-innehåll till statiskt innehåll för användning i mobilappar, och den här exporten sker när innehåll överförs till Mobile On Demand Services från AEM Mobile.
 
 Egenskapen ***dps-exportTemplate*** som nämns i tabellen ovan definierar sökvägen till programmets exportkonfigurationer. Ange den här egenskapen för att skapa och ändra delade resurser.
 
-I följande resurser beskrivs hur du exporterar delade resurser från Adobe Experience Manager (AEM) för överföring till AEM Mobile.
+Följande resurser beskriver hur du exporterar delade resurser från AEM för överföring till AEM Mobile.
 
-Med delade HTML-resurser kan artiklar dela HTML-resurser som annars skulle behöva dupliceras för alla artiklar och som kan innehålla ikoner, teckensnitt, javascript och css.
+Med delade HTML-resurser kan artiklar dela HTML-resurser som annars skulle dupliceras för alla artiklar, och de kan innehålla ikoner, teckensnitt, JavaScript och css.
 
 Innehållssynkroniseringskonfigurationen finns på **&lt;dps-exporttemplate>/dps-HTMLResources>** bör vara konfigurerad för att exportera allt innehåll som en artikel kräver för statisk återgivning av egenskaper på enheten.
 
@@ -47,7 +43,6 @@ Innehållssynkroniseringskonfigurationen finns på **&lt;dps-exporttemplate>/dps
 >* kör AEM
 >* ingen konfigurerad anpassad kontext eller en annan port
 >
-
 
 Om du vill visa exempel på delad resurs, se stegen nedan:
 

@@ -1,16 +1,14 @@
 ---
 title: Konfigurera användare och användargrupper
-description: Följ den här sidan om du vill veta mer om användarroller och hur du konfigurerar användare och grupper så att de kan hantera redigering och hantering av dina mobilappar.
-uuid: 55cea2b3-d7e6-4174-92b3-ee97e46b59c4
+description: Följ den här sidan om du vill veta mer om användarroller och hur du konfigurerar användare och grupper för att stödja redigering och hantering av dina mobilappar.
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: administering-adobe-phonegap-enterprise
-discoiquuid: 167f3bd9-7dbc-4e6b-9868-3ee53935641b
 exl-id: 9f814204-8cd4-4ba9-9e25-3ff1b25c1955
-source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
+source-git-commit: 96e2e945012046e6eac878389b7332985221204e
 workflow-type: tm+mt
-source-wordcount: '633'
+source-wordcount: '632'
 ht-degree: 0%
 
 ---
@@ -19,9 +17,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (t.ex. Reagera). [Läs mer](/help/sites-developing/spa-overview.md).
+>Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (till exempel React). [Läs mer](/help/sites-developing/spa-overview.md).
 
-I det här kapitlet beskrivs användarrollerna och hur du konfigurerar användare och grupper så att de kan hantera redigering och hantering av dina mobilappar.
+I det här kapitlet beskrivs användarrollerna och hur du konfigurerar användare och grupper för att ge stöd åt utveckling och hantering av dina mobilappar.
 
 ## AEM Mobile Application Users and Group Administration {#aem-mobile-application-users-and-group-administration}
 
@@ -36,7 +34,7 @@ Medlemmar i gruppen app-author ansvarar för att skapa AEM innehåll för mobila
 
 #### Gruppkonfiguration - programförfattare {#group-configuration-app-authors}
 
-1. Skapa en ny användargrupp med namnet&quot;app-authors&quot;:
+1. Skapa en användargrupp med namnet&quot;app-authors&quot;:
 
    Navigera till User Admin Console: [http://localhost:4502/libs/granite/security/content/groupadmin.html](http://localhost:4502/libs/granite/security/content/groupadmin.html)
 
@@ -50,7 +48,7 @@ Medlemmar i gruppen app-author ansvarar för att skapa AEM innehåll för mobila
 
    Lägg till appförfattare i gruppen Författare
 
-1. Nu när du har skapat användargruppen app-authors kan du lägga till enskilda teammedlemmar i den nya gruppen via [Konsol för användaradministration](http://localhost:4502/libs/granite/security/content/useradmin.md).
+1. Nu när du har skapat användargruppen app-authors kan du lägga till enskilda teammedlemmar i den nya gruppen via [Användare Admin Console](http://localhost:4502/libs/granite/security/content/useradmin.md).
 
    ![chlimage_1-19](assets/chlimage_1-19.png)
 
@@ -59,9 +57,10 @@ Medlemmar i gruppen app-author ansvarar för att skapa AEM innehåll för mobila
 1. Navigera till [Behörighetskonsol](http://localhost:4502/useradmin) och lägga till behörigheter för att administrera molntjänster
 
    * (Läs) på /etc/cloudServices
+
    >[!NOTE]
    >
-   >Programförfattare utökar standardgruppen för innehållsförfattare (författare) från AEM och ärver därmed möjligheten att skapa innehåll under /content/phonegap
+   >Programförfattare utökar standardgruppen för innehållsförfattare (författare) från AEM, så att de ärver möjligheten att skapa innehåll under /content/phonegap
 
 ### AEM Mobile Application Administrators Group (app-admins group) {#aem-mobile-application-administrators-group-app-admins-group}
 
@@ -74,11 +73,11 @@ Medlemmar i gruppen app-admins kan skapa programinnehåll med samma behörighete
 >
 >Behörigheter avgör tillgängligheten för vissa användaråtgärder i AEM App Command Center.
 >
->Du kommer att märka att vissa alternativ inte är tillgängliga för appförfattare som är tillgängliga för appadministratörer.
+>Observera att vissa alternativ inte är tillgängliga för appförfattare som är tillgängliga för appadministratörer.
 
 #### Gruppkonfiguration - programadministratörer {#group-configuration-app-admins}
 
-1. Skapa en ny grupp som kallas appadministratörer.
+1. Skapa en grupp som kallas appadministratörer.
 1. Lägg till följande grupper i den nya gruppen för programadministratörer:
 
    * innehållsförfattare
@@ -112,14 +111,14 @@ Medlemmar i gruppen app-admins kan skapa programinnehåll med samma behörighete
 
 Instrumentpaneler kan visa olika åtgärder baserat på de behörigheter som användaren har. Nedan beskrivs vilka åtgärder som är tillgängliga för varje platta.
 
-Förutom dessa behörigheter kan en åtgärd också visas/döljas baserat på hur det aktuella programmet är konfigurerat. Det finns t.ex. ingen punkt som visar åtgärden &#39;Remote Build&#39; om en PhoneGap-molnkonfiguration inte har tilldelats programmet. De listas nedan under &#39;**Konfigurationsvillkor**-avsnitt.
+Förutom dessa behörigheter kan en åtgärd också visas/döljas baserat på hur det aktuella programmet är konfigurerat. Det finns t.ex. ingen punkt som visar åtgärden &#39;Remote Build&#39; om en PhoneGap-molnkonfiguration inte har tilldelats programmet. De här listas nedan under &#39;**Konfigurationsvillkor**-avsnitt.
 
 ### Hantera apppanel {#manage-app-tile}
 
 Panelen har för närvarande inga åtgärder som kräver behörigheter, men informationssidan för programmet har följande åtgärder:
 
 * *Redigera* för app-author och app-admin (UI Trigger - jcr:write - on /content/phonegap/{suffix})
-* *Hämta* för app-author och app-admin (UI-utlösare - på /content/phonegap/{suffix})
+* *Hämta* för app-author och app-admin (UI Trigger - på /content/phonegap/{suffix})
 
 Bilden nedan visar hämtnings- och redigeringsalternativen för ett program:
 

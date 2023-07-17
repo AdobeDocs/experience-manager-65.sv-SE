@@ -1,17 +1,13 @@
 ---
 title: Återgivning och leverans
-seo-title: Rendering and Delivery
 description: Återgivning och leverans
-seo-description: null
-uuid: 1253b6a5-6bf3-42b1-be3a-efa23b6ddb51
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
-discoiquuid: 672d5b1e-6b2f-4afe-ab04-c398e5ef45d5
 exl-id: f0c543ae-33ed-40bb-9eb7-0dc3bdea69e0
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 96e2e945012046e6eac878389b7332985221204e
 workflow-type: tm+mt
-source-wordcount: '573'
+source-wordcount: '580'
 ht-degree: 1%
 
 ---
@@ -20,13 +16,13 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (t.ex. Reagera). [Läs mer](/help/sites-developing/spa-overview.md).
+>Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (till exempel React). [Läs mer](/help/sites-developing/spa-overview.md).
 
-AEM kan enkelt återges via [Standardservrar för Sling](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html) för rendering [JSON](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html#default-json-rendering) och andra format.
+Adobe Experience Manager (AEM) kan enkelt återges med [Standardservrar för Sling](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html) för rendering [JSON](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html#default-json-rendering) och andra format.
 
 Dessa färdiga återgivningar tar vanligtvis plats i databasen och returnerar innehållet som det är.
 
-AEM, via Sling, har också stöd för utveckling och driftsättning av skräddarsydda snedsättningsrenderare för att få full kontroll över det renderade schemat och innehållet.
+AEM, som Sling, stöder också utveckling och driftsättning av anpassade snedstrecksrenderare för att få full kontroll över det renderade schemat och innehållet.
 
 Standardrenderare för innehållstjänster fyller luckan mellan färdiga Sling-standardinställningar och Anpassad utveckling som gör det möjligt att anpassa och styra många aspekter av det återgivna innehållet utan att behöva utveckla.
 
@@ -159,7 +155,7 @@ I följande tabell visas egenskaperna:
    <td>Sträng[] </td>
    <td>-</td>
    <td>sling:resourceType</td>
-   <td>Returnera inte standardexporten för CaaS json för följande sling-resurstyper.<br /> Returnera en kundjson-export genom att återge resursen som<br /> &lt;resource&gt;.&lt;selector_to_inc&gt;.json </td>
+   <td>Returnera inte standardexporten av CaaS json för följande sling-resurstyper.<br /> Returnera en kundjson-export genom att återge resursen som<br /> &lt;resource&gt;.&lt;selector_to_inc&gt;.json </td>
   </tr>
  </tbody>
 </table>
