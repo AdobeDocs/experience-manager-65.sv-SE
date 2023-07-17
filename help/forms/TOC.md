@@ -8,9 +8,9 @@ user-guide-title: Användarhandbok om Adobe Experience Manager 6.5 Forms
 breadcrumb-title: Användarhandbok om Forms
 user-guide-description: Skapa, hantera, publicera och uppdatera digitala formulär.
 role: User
-source-git-commit: 73271612633ec349ee1c002044724f408324e5a2
+source-git-commit: daf97f3d5c5f3c92ff5caeccff583e54f3f57364
 workflow-type: tm+mt
-source-wordcount: '3870'
+source-wordcount: '3881'
 ht-degree: 0%
 
 ---
@@ -127,10 +127,13 @@ ht-degree: 0%
    + [Introduktion till AEM Forms dataintegrering](using/data-integration.md)
    + [Konfigurera datakällor](using/configure-data-sources.md)
    + [Konfiguration av Microsoft Dynamics Odata](using/ms-dynamics-odata-configuration.md)
-   + [Salesforce-integrering med OAuth 2.0-klientautentiseringsflöde](/help/forms/using/oauth2-client-credentials-flow-for-server-to-server-integration.md)
    + [Skapa formulärdatamodell](using/create-form-data-models.md)
    + [Arbeta med formulärdatamodell](using/work-with-form-data-model.md)
    + [Använd formulärdatamodell](using/using-form-data-model.md)
++ Adaptiv Forms - kärnkomponenter {#adaptive-forms-core-components}
+   + [Aktivera kärnkomponenter för din miljö](/help/forms/using/enable-adaptive-forms-core-components.md)
+   + [Skapa en grundkomponentbaserad adaptiv form](/help/forms/using/create-an-adaptive-form-core-components.md)
+   + [Skapa teman för grundkomponentbaserade adaptiva Forms](/help/forms/using/create-or-customize-themes-for-adaptive-forms-core-components.md)
 + Adaptiv Forms - grundläggande redigering {#adaptive-forms-basic-authoring}
    + [Bästa tillvägagångssätt för arbete med anpassningsbara formulär](using/adaptive-forms-best-practices.md)
    + [Skapa ett anpassat formulär](using/creating-adaptive-form.md)
@@ -692,7 +695,6 @@ ht-degree: 0%
    + [Det gick inte att återställa CRX-databasen](/help/forms/using/restore-crx-repository.md)
    + [Fel som inte är tillgängliga för tjänsten efter installation av AEM 6.5.15.0 Service Pack](/help/forms/using/aem-service-pack-installation-solution.md)
    + [AEM Forms JEE 6.5.15.0 Service Pack - installationsproblem i JBoss Linux-miljö](/help/forms/using/linux-jboss-installation-issue-on-sp15.md)
-   + [EAR-distribution misslyckades på JEE WebLogic-server](/help/forms/using/ear-deployment-failing-on-jee-weblogic-server.md)
 + Äldre dokumentation {#legacy-documentation}
    + [Använda den körda skripttjänsten i AEM Forms på JEE Workbench för att skapa XML-data](developing/building-xml.md)
    + [Komprimera och dekomprimera filer med en AEM Forms på en anpassad JEE DSC](developing/compressing-decompressing-custom-dsc.md)

@@ -8,9 +8,9 @@ contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
-source-git-commit: 85f423b98ff680d7ed7cdbdde65e2dec1cfe4c03
+source-git-commit: daf97f3d5c5f3c92ff5caeccff583e54f3f57364
 workflow-type: tm+mt
-source-wordcount: '2060'
+source-wordcount: '2066'
 ht-degree: 0%
 
 ---
@@ -68,7 +68,7 @@ Att anpassa ett tema avser processen att ändra och anpassa utseendet på ett te
 
 ### Förutsättningar för att anpassa ett tema {#prerequisites}
 
-* [Aktivera adaptiva Forms Core-komponenter](/help/forms/using/installing-core-components.md) för din miljö.
+* [Aktivera adaptiva Forms Core-komponenter](/help/forms/using/enable-adaptive-forms-core-components.md) för din miljö.
 
 * Installera den senaste versionen av [Apache Maven.](https://maven.apache.org/download.cgi) Apache Maven är ett automatiserat byggverktyg som ofta används för Java™-projekt. Genom att installera den senaste versionen får du de beroenden du behöver för att anpassa temat.
 
@@ -145,20 +145,17 @@ The `variable.scss` filen innehåller temats globala variabler. Genom att uppdat
 
 1. Öppna `<your-theme-sources>/src/site/_variables.scss` fil för redigering.
 1. Ändra värdet för alla egenskaper. Standardfelfärgen är t.ex. röd. Om du vill ändra felfärgen från rött till blått ändrar du färghexkoden för `$error`variabel. Till exempel, `$error: #196ee5`.
+
+   ![Exempel: Felfärgen är blå](/help/forms/using/assets/theme-level-changes.png)
+
 1. Spara och stäng filen.
 
-<!--
-
-![Example: Error color set to blue](/help/forms/using/assets/variable-customization.png)
-
--->
 
 På samma sätt kan du använda `variable.scss` för att ange teckensnittsfamilj och -typ, tema- och teckensnittsfärger, teckenstorlek, temaavstånd, felikoner, temats kantlinjeformat och fler variabler som påverkar flera adaptiva formulärkomponenter.
 
 ##### Ange format för komponentnivå {#component-based-customization}
 
 Du kan också anpassa teckensnitt, färg, storlek och andra CSS-egenskaper för specifika komponenter i den adaptiva formulärkärnan, som knappar, kryssrutor, behållare, sidfötter och mycket annat. Genom att redigera den CSS-fil som är kopplad till den specifika komponenten kan du anpassa dess format efter din organisations varumärke. Så här anpassar du en komponents stil:
-
 
 1. Öppna filen `<your-theme-sources>/src/components/<component>/<component.scss>` för redigering. Om du till exempel vill ändra teckenfärgen för knappkomponenten öppnar du `<your-theme-sources>/src/components/button/button.scss`, fil .
 1. Ändra värdet enligt dina önskemål. Om du till exempel vill ändra färgen på knappkomponenten vid muspekaren till Grön, ändrar du värdet på `color: $white` -egenskapen i `cmp-adaptiveform-button__widget:hover` klass som ska hex-kod nr 12b453 eller någon annan grön nyans. Den färdiga koden ser ut så här:
@@ -326,9 +323,9 @@ Så här tar du bort oanvända eller oönskade teman:
 
 ## Se även
 
-* [Skapa en grundkomponentbaserad adaptiv form](/help/forms/using/create-an-adaptive-form-core-components.md)
+* [Skapa en grundkomponentbaserad adaptiv form](create-an-adaptive-form-core-components.md)
 * [Använd regelredigeraren för att lägga till dynamiskt beteende i formulär](rule-editor.md)
 * [Skapa eller anpassa teman för grundkomponentbaserade adaptiva Forms](create-or-customize-themes-for-adaptive-forms-core-components.md)
 * [Skapa en mall för grundkomponentbaserade adaptiva Forms](template-editor.md)
-* [Skapa eller lägga till ett anpassat formulär på en AEM Sites-sida eller ett Experience Fragment](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)
+* [Skapa eller lägga till ett anpassat formulär på en AEM Sites-sida eller ett Experience Fragment](create-or-add-an-adaptive-form-to-aem-sites-page.md)
 

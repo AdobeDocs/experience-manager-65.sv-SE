@@ -3,7 +3,7 @@ title: Versionsinformation för [!DNL Adobe Experience Manager] 6.5
 description: Hitta versionsinformation, nyheter, installationsanvisningar och en detaljerad ändringslista för [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
 exl-id: fed4e110-9415-4740-aba1-75da522039a9
-source-git-commit: d244fb50ad0f165d31bc51ee671b80bdd13c860e
+source-git-commit: daf97f3d5c5f3c92ff5caeccff583e54f3f57364
 workflow-type: tm+mt
 source-wordcount: '3765'
 ht-degree: 0%
@@ -58,7 +58,7 @@ Några av de viktigaste funktionerna och förbättringarna i den här versionen 
    * Lägg till flera formulär på en webbplatssida, effektivisera användarupplevelsen och ge större flexibilitet.
 * **[Stöd för reCAPTCHA Enterprise i Experience Manager Forms](/help/forms/using/captcha-adaptive-forms.md)**: Stöd för reCAPTCHA Enterprise i Experience Manager Forms har lagts till, vilket ger bättre skydd mot bedräglig aktivitet och skräppost utöver det befintliga stödet för Google reCAPTCHA v2.
 * **[Stöd för Adobe Acrobat Sign for Government med Experience Manager Forms](/help/forms/using/adobe-sign-integration-adaptive-forms.md)**: AEM Forms är nu integrerat med Adobe Acrobat Sign for Government (FedRAMP-kompatibelt). Integreringen ger en avancerad nivå av regelefterlevnad och säkerhet för e-signaturer med inskickade adaptiva formulär för myndighetskonton (myndigheter och myndigheter). Integrationen med Adobe Acrobat Sign for Government gör det möjligt för Adobe och myndighetskunder att använda elektroniska signaturer i Adaptive Forms för några av de mest verksamhetskritiska och känsliga verksamhetsområdena. Detta extra säkerhetsskikt säkerställer att alla e-signaturer är helt kompatibla med FedRAMP Moderate-kompatibiliteten, vilket ger Adobe myndighetskunder sinnesro.
-* **[Aktivera Salesforce-integrering med Experience Manager Forms för datautbyte](/help/forms/using/oauth2-client-credentials-flow-for-server-to-server-integration.md)**: Konfigurera integreringen mellan Experience Manager Forms och Salesforce med hjälp av inloggningsflödet för OAuth 2.0-klienten. Denna funktion möjliggör säker och direkt autentisering och behörighet av programmet och möjliggör smidig kommunikation utan användarinblandning.
+* **Aktivera Salesforce-integrering med Experience Manager Forms för datautbyte**: Konfigurera integreringen mellan Experience Manager Forms och Salesforce med hjälp av inloggningsflödet för OAuth 2.0-klienten. Denna funktion möjliggör säker och direkt autentisering och behörighet av programmet och möjliggör smidig kommunikation utan användarinblandning.
 * **Optimering och förbättrad funktionalitet i arbetsflödesmotorn**: Öka arbetsflödesmotorernas prestanda genom att minimera antalet arbetsflödesinstanser. Förutom `COMPLETED` och `RUNNING` statusvärden, arbetsflödet stöder även tre nya statusvärden: `ABORTED`, `SUSPENDED`och `FAILED`.
 
 

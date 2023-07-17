@@ -9,7 +9,7 @@ contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
-source-git-commit: 85f423b98ff680d7ed7cdbdde65e2dec1cfe4c03
+source-git-commit: daf97f3d5c5f3c92ff5caeccff583e54f3f57364
 workflow-type: tm+mt
 source-wordcount: '1799'
 ht-degree: 0%
@@ -30,13 +30,13 @@ Innan du börjar får du lära dig mer om vilken typ av Forms-komponenter du kan
 
 * [Adaptiva Forms Core-komponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=en): Dessa är standardiserade komponenter för datainhämtning. Dessa komponenter har anpassningsmöjligheter, kortare utvecklingstid och lägre underhållskostnader för era digitala registreringsupplevelser. En utvecklare kan enkelt anpassa och utforma dessa komponenter. Adobe rekommenderar att man utnyttjar dessa moderna och utbyggbara komponenter för att utveckla Adaptiv Forms.
 
-* [Adaptiva Forms Foundation-komponenter](creating-adaptive-form.md): Dessa är klassiska (gamla) datainhämtningskomponenter. Du kan fortsätta att använda dessa för att redigera dina befintliga grundläggande komponentbaserade adaptiva formulär. Om du skapar formulär rekommenderar Adobe att du använder  [Adaptiva Forms Core-komponenter](creating-adaptive-form-core-components.md) för att skapa en adaptiv Forms.
+* [Adaptiva Forms Foundation-komponenter](creating-adaptive-form.md): Dessa är klassiska (gamla) datainhämtningskomponenter. Du kan fortsätta att använda dessa för att redigera dina befintliga grundläggande komponentbaserade adaptiva formulär. Om du skapar formulär rekommenderar Adobe att du använder  [Adaptiva Forms Core-komponenter](/help/forms/using/create-adaptive-form.md) för att skapa en adaptiv Forms.
 
 ## Krav
 
 Du behöver följande för att skapa ett adaptivt formulär:
 
-* **Aktivera adaptiva Forms Core-komponenter för din miljö**: AEM Archetype project version 41 or later is required to [aktivera kärnkomponenter för din miljö](/help/forms/using/installing-core-components.md). När du aktiverar kärnkomponenterna för din miljö, **Adaptiv Forms (kärnkomponent)** -mallar och Canvas-teman läggs till i din miljö.
+* **Aktivera adaptiva Forms Core-komponenter för din miljö**: AEM Archetype project version 41 or later is required to [aktivera kärnkomponenter för din miljö](/help/forms/using/enable-adaptive-forms-core-components.md). När du aktiverar kärnkomponenterna för din miljö, **Adaptiv Forms (kärnkomponent)** -mallar och Canvas-teman läggs till i din miljö.
 
 * **En anpassad formulärmall**: En mall innehåller en grundläggande struktur och definierar utseendet (layouter och format) för ett adaptivt formulär. Den har förformaterade komponenter som innehåller vissa egenskaper och innehållsstruktur. Här finns också alternativ för att definiera ett tema och en skicka-åtgärd. Temat definierar utseendet, känslan och skickaåtgärden definierar vilken åtgärd som ska vidtas när ett adaptivt formulär skickas in. Du kan till exempel skicka insamlade data till en datakälla. Mallen med namnet `blank` stöds av OOTB:
 
@@ -46,7 +46,7 @@ Du behöver följande för att skapa ett adaptivt formulär:
 
   >[!NOTE]
   >
-  > Om du inte har det, **Adaptiv Forms (kärnkomponent)** mallar i din miljö, [Aktivera adaptiva Forms Core-komponenter för din miljö](/help/forms/using/installing-core-components.md). När du aktiverar kärnkomponenterna för din miljö, **Adaptiv Forms (kärnkomponent)** -mallen läggs till i din miljö.
+  > Om du inte har det, **Adaptiv Forms (kärnkomponent)** mallar i din miljö, [Aktivera adaptiva Forms Core-komponenter för din miljö](/help/forms/using/enable-adaptive-forms-core-components.md). När du aktiverar kärnkomponenterna för din miljö, **Adaptiv Forms (kärnkomponent)** -mallen läggs till i din miljö.
 
 * **Ett adaptivt formulärtema**: Ett tema innehåller formatinformation för komponenterna och panelerna. Format innehåller egenskaper som bakgrundsfärger, lägesfärger, genomskinlighet, justering och storlek. När du använder ett tema återspeglas det angivna formatet i motsvarande komponenter.  The `Canvas` -temat läggs till som standard när du aktiverar kärnkomponenter för din miljö. Du kan också [hämta och anpassa referensteman](create-or-customize-themes-for-adaptive-forms-core-components.md).
 
@@ -91,7 +91,7 @@ Med en Skicka-åtgärd kan du välja målet för data som har hämtats via ett a
 
    ![Klicka på skiftningsikonen för att öppna dialogrutan Adaptiv formulärbehållare och konfigurera en sändningsåtgärd](/help/forms/using/assets/adaptive-forms-submit-message.png)
 
-1. Välj och konfigurera en **[!UICONTROL Submit action]**, baserat på era behov. Mer information om Skicka åtgärder finns i [Inlämningsåtgärd för anpassat formulär](/help/forms/configuring-submit-actions.md)
+1. Välj och konfigurera en **[!UICONTROL Submit action]**, baserat på era behov. Mer information om Skicka åtgärder finns i [Inlämningsåtgärd för anpassat formulär](/help/forms/using/configuring-submit-actions.md)
 
 <!--
     
@@ -117,8 +117,8 @@ När du skickar ett formulär kan du dirigera om användaren till en annan webbs
 
 Du kan använda formulärdatamodellen för att ansluta ett formulär till en datakälla för att skicka och ta emot data baserat på användaråtgärder. Du kan också ansluta ett formulär till ett JSON-schema för att ta emot skickade data i ett fördefinierat format. Beroende på behovet kan du ansluta formuläret till ett JSON-schema eller en formulärdatamodell:
 
-* [Skapa ett JSON-schema och överför det till din miljö](/help/forms/adaptive-form-json-schema-form-model.md)
-* [Skapa en formulärdatamodell](/help/forms/create-form-data-models.md)
+* [Skapa ett JSON-schema och överför det till din miljö](/help/forms/using/adaptive-form-json-schema-form-model.md)
+* [Skapa en formulärdatamodell](/help/forms/using/create-form-data-models.md)
 
 ### Konfigurera ett JSON-schema eller en formulärdatamodell för formuläret
 
@@ -141,7 +141,7 @@ Så här konfigurerar du ett JSON-schema eller en formulärdatamodell för formu
 
 Du kan använda förifyllningstjänsten för att autofylla fält i ett adaptivt formulär med befintliga data. När en användare öppnar ett formulär är värdena för dessa fält förifyllda. Du kan:
 
-* [Skapa en anpassad förifyllningstjänst](/help/forms/prepopulate-adaptive-form-fields.md)
+* [Skapa en anpassad förifyllningstjänst](/help/forms/using/prepopulate-adaptive-form-fields.md)
 * [Använd förifyllningstjänsten för formulärdatamodell](#fdm-prefill-service)
 
 ### Använd förifyllningstjänsten för formulärdatamodell för att fylla i fält i ett adaptivt formulär i förväg {#fdm-prefill-service}
@@ -171,6 +171,6 @@ Du kan använda förifyllningstjänsten för formulärdatamodell för att fylla 
 
 ## Se även
 
-* [Skapa en grundkomponentbaserad adaptiv form](/help/forms/using/create-an-adaptive-form-core-components.md)
-* [Skapa eller lägga till ett anpassat formulär på en AEM Sites-sida eller ett Experience Fragment](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)
+* [Skapa en grundkomponentbaserad adaptiv form](create-an-adaptive-form-core-components.md)
+* [Skapa eller lägga till ett anpassat formulär på en AEM Sites-sida eller ett Experience Fragment](create-or-add-an-adaptive-form-to-aem-sites-page.md)
 

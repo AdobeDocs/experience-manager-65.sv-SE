@@ -8,7 +8,7 @@ contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
-source-git-commit: 85f423b98ff680d7ed7cdbdde65e2dec1cfe4c03
+source-git-commit: daf97f3d5c5f3c92ff5caeccff583e54f3f57364
 workflow-type: tm+mt
 source-wordcount: '858'
 ht-degree: 0%
@@ -150,6 +150,6 @@ När de adaptiva Forms Core-komponenterna är aktiverade för din miljö läggs 
 ## What&#39;s Next
 
 * [Skapa en grundkomponentbaserad adaptiv form](/help/forms/using/create-an-adaptive-form-core-components.md)
-* [Skapa eller lägga till ett anpassat formulär på en AEM Sites-sida eller ett Experience Fragment](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)
+* [Skapa eller lägga till ett anpassat formulär på en AEM Sites-sida eller ett Experience Fragment](create-or-add-an-adaptive-form-to-aem-sites-page.md)
 * [Skapa teman för grundkomponentbaserade adaptiva Forms](create-or-customize-themes-for-adaptive-forms-core-components.md)
 * [Skapa en mall för grundkomponentbaserade adaptiva Forms](template-editor.md)
