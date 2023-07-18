@@ -11,9 +11,9 @@ feature: Commerce Integration Framework
 kt: 4279
 thumbnail: customize-aem-cif-core-component.jpg
 exl-id: 8933942e-be49-49d3-bf0a-7225257e2803
-source-git-commit: 681d1e6bd885b801b930e580d95645f160f17cea
+source-git-commit: 1d914b12c3279bacaf5cabb3b1953e927c04bad1
 workflow-type: tm+mt
-source-wordcount: '2579'
+source-wordcount: '2571'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ The [CIF Venia Project](https://github.com/adobe/aem-cif-guides-venia) är en re
 
 ## Vad du ska bygga
 
-Varumärket Venia började nyligen tillverka vissa produkter med hjälp av hållbara material och företaget skulle vilja visa en **Miljövänlig** som en del av Product Teaser. Ett nytt anpassat attribut skapas i Adobe Commerce för att ange om en produkt använder **Miljövänlig** material. Det anpassade attributet läggs sedan till som en del av GraphQL-frågan och visas i Product Teaser för angivna produkter.
+Varumärket Venia började nyligen tillverka vissa produkter med hjälp av hållbara material och företaget skulle vilja visa en **Miljövänlig** som en del av Product Teaser. Ett nytt anpassat attribut skapas i Adobe Commerce för att ange om en produkt använder **Miljövänlig** material. Det här anpassade attributet läggs till som en del av GraphQL-frågan och visas i Product Teaser för angivna produkter.
 
 ![Slutlig implementering av miljöanpassade märken](../assets/customize-cif-components/final-product-teaser-eco-badge.png)
 
@@ -69,7 +69,7 @@ Du klonar [Venedig-projektet](https://github.com/adobe/aem-cif-guides-venia) och
 
 ## Skapa Product Teaser {#author-product-teaser}
 
-Product Teaser Component utökas genom hela kursen. Som ett första steg lägger du till en ny instans av Product Teaser på startsidan för att förstå baslinjefunktionerna.
+Product Teaser Component utökas genom hela kursen. Som ett första steg lägger du till en instans av Product Teaser på startsidan för att förstå baslinjefunktionerna.
 
 1. Navigera till **Hemsida** för platsen: [http://localhost:4502/editor.html/content/acme/us/en.html](http://localhost:4502/editor.html/content/acme/us/en.html)
 
@@ -178,11 +178,11 @@ Använd sedan en GraphQL-utvecklingsmiljö för att verifiera att `eco_friendly`
 
    ![Exempel på GraphQL-svar](../assets/customize-cif-components/sample-graphql-query.png)
 
-   Värdet för **Ja** är ett heltal av **1**. Detta är användbart när du skriver GraphQL-frågan i Java™.
+Värdet för **Ja** är ett heltal av **1**. Detta är användbart när du skriver GraphQL-frågan i Java™.
 
-   >[!TIP]
-   >
-   >Mer detaljerad dokumentation om [Adobe Commerce GraphQL finns här](https://devdocs.magento.com/guides/v2.4/graphql/index.html).
+>[!TIP]
+>
+>Mer detaljerad dokumentation om [Adobe Commerce GraphQL finns här](https://devdocs.magento.com/guides/v2.4/graphql/index.html).
 
 ## Uppdatera produktundervisningsmodellen {#updating-sling-model-product-teaser}
 
@@ -213,7 +213,7 @@ Använd [den utvecklingsmiljö du vill](https://experienceleague.adobe.com/docs/
    }
    ```
 
-   Detta är en ny metod för att kapsla in logiken som anger om produkten har `eco_friendly` attribut inställt på **Ja** eller **Nej**.
+Detta är en ny metod för att kapsla in logiken som anger om produkten har `eco_friendly` attribut inställt på **Ja** eller **Nej**.
 
 1. Kontrollera sedan `MyProductTeaserImpl.java` på `core/src/main/java/com/venia/core/models/commerce/MyProductTeaserImpl.java`.
 
@@ -234,7 +234,7 @@ Använd [den utvecklingsmiljö du vill](https://experienceleague.adobe.com/docs/
    }
    ```
 
-   Detta minimerar mängden Java™-kod som en implementering behöver skriva.
+   Detta minimerar mängden Java™-kod som en implementering måste skriva.
 
 1. En av de extra tilläggspunkterna AEM CIF Core Components är `AbstractProductRetriever` som ger tillgång till specifika produktattribut. Inspect `initModel()` metod:
 
@@ -486,7 +486,7 @@ I det här läget är logiken för när **Miljövänlig** emblemet fungerar, men
 
 ## Grattis {#congratulations}
 
-Du har anpassat din första AEM CIF-komponent! Ladda ned [färdiga lösningsfiler här](../assets/customize-cif-components/customize-cif-component-SOLUTION_FILES.zip).
+Du anpassade din första AEM CIF-komponent! Ladda ned [färdiga lösningsfiler här](../assets/customize-cif-components/customize-cif-component-SOLUTION_FILES.zip).
 
 ## Bonus Challenge {#bonus-challenge}
 
