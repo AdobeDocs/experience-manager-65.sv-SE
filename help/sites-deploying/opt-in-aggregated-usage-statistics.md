@@ -1,19 +1,15 @@
 ---
 title: Insamling av aggregerad användningsstatistik
-seo-title: Opting Into Aggregated Usage Statistics Collection
 description: Lär dig hur du väljer i sammanställd användningsstatistik.
-seo-description: Learn how to opt into aggregated usage statistics.
-uuid: 8bd0b870-4bea-42e1-8179-e900164591b6
 contentOwner: raiman
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: deploying
-discoiquuid: 075f53cc-146b-4eea-bfbb-54beaed97915
 docset: aem65
 exl-id: e626bdd8-b7ae-4de5-a0a0-47fb74c080d7
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: ae08247c7be0824151637d744f17665c3bd82f2d
 workflow-type: tm+mt
-source-wordcount: '298'
+source-wordcount: '300'
 ht-degree: 0%
 
 ---
@@ -22,7 +18,7 @@ ht-degree: 0%
 
 ## Introduktion {#introduction}
 
-Du kan hjälpa till att förbättra Adobe Marketing Cloud genom att skicka statistik om hur du interagerar med AEM till Adobe. Den här informationen innehåller inga data om besökarna på företagets webbplats och kommer endast att användas för att hjälpa Adobe att leverera, ge support och förbättra användarupplevelsen.
+Du kan hjälpa till att förbättra Adobe Experience Cloud genom att skicka statistik om hur du interagerar med Adobe Experience Manager (AEM) till Adobe. Den här informationen innehåller inga data om besökarna på företagets webbplats och används bara för att hjälpa Adobe att leverera, ge support och förbättra användarupplevelsen.
 
 Du kan välja att samla in användningsstatistik med hjälp av Touch-gränssnittet eller webbkonsolen.
 
@@ -34,7 +30,7 @@ Du kan välja att samla in användningsstatistik med hjälp av Touch-gränssnitt
 
 >[!NOTE]
 >
->Du kan också avanmäla dig när som helst genom att använda [Webbkonsol](/help/sites-deploying/opt-in-aggregated-usage-statistics.md#opt-in-by-using-the-web-console) eller genom att inte välja anmälningsalternativet på AEM anmälningsskärm.
+>Du kan avanmäla dig när som helst genom att använda [Webbkonsol](/help/sites-deploying/opt-in-aggregated-usage-statistics.md#opt-in-by-using-the-web-console) eller genom att inte välja anmälningsalternativet på AEM anmälningsskärm.
 
 ## Anmäl dig med Touch-gränssnittet {#opt-in-by-using-the-touch-ui}
 

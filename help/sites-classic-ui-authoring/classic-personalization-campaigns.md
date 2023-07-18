@@ -1,18 +1,14 @@
 ---
 title: Campaign Management
-seo-title: Campaign Management
 description: Kampanjhantering ger digitala marknadsförare möjlighet att leverera personaliserat innehåll och skapa dedikerade upplevelser för besökare. Ni kan samordna era marknadsföringskampanjer över webben, e-post och mobiltjänster och därmed engagera besökarna.
-seo-description: Campaign management provides digital marketers the opportunity to deliver personalized content and so create dedicated experiences for visitors. It allows you to orchestrate your marketing campaigns across the web, email and mobile services and so engage your visitors.
-uuid: 202d614b-a607-45de-8c24-1ee66b230315
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
-discoiquuid: e8b70971-4f23-45f8-8c23-e147413243c2
 exl-id: d1741525-a475-4a76-bd16-55318023495e
-source-git-commit: 1ba34f95cf3ce3f136482075802d2e4372f28917
+source-git-commit: ae08247c7be0824151637d744f17665c3bd82f2d
 workflow-type: tm+mt
-source-wordcount: '629'
+source-wordcount: '623'
 ht-degree: 0%
 
 ---
@@ -37,7 +33,7 @@ I det här dokumentet beskrivs de olika element som utgör kampanjer. Mer detalj
 Kampanjhanteringen består av olika delar:
 
 * **Varumärken**
-I AEM är varumärken den översta enheten och utgör en samling **Kampanjer**.
+I Adobe Experience Manager (AEM) är varumärken den viktigaste enheten och utgör en samling av **Kampanjer**.
 
 * **Kampanjer**
 En kampanj är en samling individuella **Erfarenheter**.
@@ -51,13 +47,13 @@ Det fokuserade innehållet utgör de olika upplevelserna, som presenteras för b
      Teaser pages can:
 
       * har en rad alternativ som besökaren kan välja mellan
-      * visa endast ett teaser-stycke som är baserat på det specifika besökarsegmentet, Det streckade stycket kan t.ex. vara beroende av besökarens ålder.
+      * visar endast ett steg som baseras på det specifika besökarsegmentet. Det streckade stycket kan till exempel vara beroende av besökarens ålder.
 
-     Vanligtvis är en&quot;teaser&quot;-sida en tillfällig åtgärd som varar en viss tid tills den ersätts av nästa&quot;teaser&quot;-sida.
+     Vanligtvis är en&quot;teaser&quot;-sida en tillfällig åtgärd som varar en viss tidsperiod tills den ersätts av nästa&quot;teaser&quot;-sida.
 
    * **Nyhetsbrev**
 
-     [E-postkommunikation](#emailmarketing) används för att engagera användare och uppmuntra dem att besöka din webbplats. Dessa kan oftast fås i form av ett nyhetsbrev som skickas till **Leads** (som vanligtvis grupperas i **Listor**). **Obs!** Adobe planerar inte att ytterligare förbättra denna kapacitet. Rekommendationen är att [utnyttja Adobe Campaign och integrationen för att AEM](/help/sites-administering/campaign.md).
+     [E-postkommunikation](#emailmarketing) används för att engagera användare och uppmuntra dem att besöka din webbplats. Dessa kan oftast fås i form av ett nyhetsbrev som skickas till **Leads** (som grupperas i **Listor**). **Obs!** Adobe planerar inte att ytterligare förbättra denna kapacitet. Rekommendationen är att [använda Adobe Campaign och integrationen för att AEM](/help/sites-administering/campaign.md).
 
    * **Adobe Target**
 
@@ -73,17 +69,17 @@ Det fokuserade innehållet utgör de olika upplevelserna, som presenteras för b
 
   Den information som ni har samlat in om era besökare och hur ni kontaktar dem utgör grunden för era leads. **Obs!** Adobe planerar inte att ytterligare förbättra denna kapacitet.
 
-  Rekommendationen är att [utnyttja Adobe Campaign och integrationen för att AEM](/help/sites-administering/campaign.md).
+  Rekommendationen är att [använda Adobe Campaign och integrationen för att AEM](/help/sites-administering/campaign.md).
 
 * **Listor**
 
-  Leads grupperas vanligtvis i listor så att du kan vidta kollektiva åtgärder för dem. Obs! **Obs!** Adobe planerar inte att ytterligare förbättra denna kapacitet.
+  Leads grupperas i listor så att du kan vidta kollektiva åtgärder för dem. Obs! **Obs!** Adobe planerar inte att ytterligare förbättra denna kapacitet.
 
-  Rekommendationen är att [utnyttja Adobe Campaign och integreringen för AEM.](/help/sites-administering/campaign.md)
+  Rekommendationen är att [använder Adobe Campaign och integreringen för att AEM.](/help/sites-administering/campaign.md)
 
 * **Segment**
 
-  Besökare har olika intressen och mål när de besöker en webbplats. Genom att analysera detta utifrån faktorer som aktivitet på webbplatsen, profilinformation som registrerats och aktivitet på andra webbplatser kan du definiera segment. Innehållet kan sedan specifikt anpassas efter besökarens behov och intressen enligt de segment som de matchar.
+  Besökare har olika intressen och mål när de besöker en webbplats. Genom att analysera detta utifrån faktorer som aktivitet på webbplatsen, registrerad profilinformation och aktivitet på andra webbplatser kan du definiera segment. Innehållet kan sedan anpassas efter besökarens behov och intressen enligt de segment som de matchar.
 
 * **MCM**
 
