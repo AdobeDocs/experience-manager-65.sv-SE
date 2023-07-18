@@ -1,35 +1,31 @@
 ---
 title: Query Builder API
-seo-title: Query Builder API
-description: Funktionerna i Asset Share Query Builder visas via Java API och REST API.
-seo-description: The functionality of the Asset Share Query Builder is exposed through a Java API and a REST API.
-uuid: 6928c3e9-96a1-44ad-9785-350d95f1869a
+description: Funktionerna i Asset Share Query Builder visas via en Java&trade. API och ett REST API.
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
-discoiquuid: 7965b7ef-dec4-441a-a012-daf1d60df0fb
 pagetitle: Query Builder API
 tagskeywords: querybuilder
 exl-id: b2288442-d055-4966-8057-8b7b7b6bff28
-source-git-commit: 13f15bee38b6b4af4cd59376849810a788f0c467
+source-git-commit: a66814fa065b7545ec39fe9109b4c5815fa199da
 workflow-type: tm+mt
-source-wordcount: '2313'
+source-wordcount: '2288'
 ht-degree: 0%
 
 ---
 
 # Query Builder API{#query-builder-api}
 
-Funktionen i [Resursdelningens frågebyggare](/help/assets/assets-finder-editor.md) exponeras via ett Java API och ett REST API. I det här avsnittet beskrivs dessa API:er.
+Funktionen i [Resursdelningens frågebyggare](/help/assets/assets-finder-editor.md) exponeras via ett Java™-API och ett REST-API. I det här avsnittet beskrivs dessa API:er.
 
-Frågeverktyget på serversidan ( [`QueryBuilder`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/QueryBuilder.html)) kan acceptera en frågebeskrivning, skapa och köra en XPath-fråga, eventuellt filtrera resultatuppsättningen och även extrahera ansikten, om så önskas.
+Frågeverktyget på serversidan ( [`QueryBuilder`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/QueryBuilder.html)) kan hantera en frågebeskrivning, skapa och köra en XPath-fråga, eventuellt filtrera resultatuppsättningen och även extrahera ansikten, om så önskas.
 
 Frågebeskrivningen är helt enkelt en uppsättning predikat ([`Predicate`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/Predicate.html)). Exempel är ett fulltextpredikat, som motsvarar `jcr:contains()` i XPath.
 
-För varje predikattyp finns det en utvärderingskomponent ([`PredicateEvaluator`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/PredicateEvaluator.html)) som kan hantera det specifika predikatet för XPath, filtrering och facet-extrahering. Det är mycket enkelt att skapa anpassade utvärderare, som kopplas in via OSGi-komponentkörningen.
+För varje predikattyp finns det en utvärderingskomponent ([`PredicateEvaluator`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/PredicateEvaluator.html)) som kan hantera det specifika predikatet för XPath, filtrering och facet-extrahering. Det är enkelt att skapa anpassade utvärderare, som kopplas in via OSGi-komponentkörningen.
 
-REST API ger åtkomst till exakt samma funktioner via HTTP med svar som skickas i JSON.
+REST API ger åtkomst till samma funktioner via HTTP med svar som skickas i JSON.
 
 >[!NOTE]
 >
@@ -37,21 +33,21 @@ REST API ger åtkomst till exakt samma funktioner via HTTP med svar som skickas 
 
 ## Gem-session {#gem-session}
 
-[AEM Gems](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/overview.html) är en serie tekniska djupdykningar i Adobe Experience Manager som levereras av experter från Adobe. Den här sessionen som är avsedd för frågebyggaren är mycket användbar för en översikt över och användning av verktyget.
+[Adobe Experience Manager (AEM) Gems](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/overview.html) är en serie tekniska djupdykningar i Adobe Experience Manager som levereras av experter från Adobe. Den här sessionen som är avsedd för frågebyggaren är användbar för en översikt över och användning av verktyget.
 
 >[!NOTE]
 >
->Se AEM Gem-sessionen [Sökformulär på ett enkelt sätt med AEM querybuilder](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2017/aem-search-forms-using-querybuilder.html) om du vill ha en detaljerad översikt över frågeverktyget.
+>AEM Gem-session [Sökformulär på ett enkelt sätt med AEM querybuilder](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2017/aem-search-forms-using-querybuilder.html) om du vill ha en detaljerad översikt över frågeverktyget.
 
 ## Exempelfrågor {#sample-queries}
 
-Dessa exempel anges i Java-egenskapsformatsnotation. Om du vill använda dem med Java API:n använder du en Java `HashMap` som i följande API-exempel.
+Dessa exempel anges i Java™-egenskapsformatsnotation. Om du vill använda dem med Java™ API:n använder du en Java™ `HashMap` som i följande API-exempel.
 
-För `QueryBuilder` JSON Servlet innehåller varje exempel en länk till din lokala CQ-installation (på standardplatsen, `http://localhost:4502`). Observera att du måste logga in på CQ-instansen innan du använder länkarna.
+För `QueryBuilder` JSON Servlet innehåller varje exempel en länk till din lokala CQ-installation (på standardplatsen, `http://localhost:4502`). Du måste logga in på CQ-instansen innan du använder länkarna.
 
 >[!CAUTION]
 >
->Som standard visas maximalt 10 träffar i frågeverktyget json.
+>Som standard visas maximalt tio träffar i frågeverktyget json.
 >
 >Om du lägger till följande parameter kan servleten visa alla frågeresultat:
 >
@@ -63,7 +59,7 @@ För `QueryBuilder` JSON Servlet innehåller varje exempel en länk till din lok
 
 ### Returnera alla resultat {#returning-all-results}
 
-Följande fråga kommer att **returnera tio resultat** (eller för att vara exakt högst tio), men informera dig om **Antal träffar:** som faktiskt finns tillgängliga:
+Följande fråga **returnera tio resultat** (eller, för att vara exakt, högst tio), men informera dig om **Antal träffar:** som är tillgängliga:
 
 `http://localhost:4502/bin/querybuilder.json?path=/content&1_property=sling:resourceType&1_property.value=foundation/components/text&1_property.operation=like&orderby=path`
 
@@ -90,7 +86,7 @@ orderby=path
 
 ### Använda p.gissningssumma för att returnera resultaten {#using-p-guesstotal-to-return-the-results}
 
-Syftet med `p.guessTotal` parametern är att returnera rätt antal resultat som kan visas genom att kombinera de lägsta p.offset- och p.limit-värdena. Fördelen med den här parametern är bättre prestanda med stora resultatuppsättningar. På så sätt undviker du att beräkna hela summan (t.ex. genom att anropa result.getSize()) och läsa hela resultatuppsättningen, optimerad hela vägen ned till OAK-motorn och indexvärdet. Detta kan vara en stor skillnad när det finns 100 000 resultat, både när det gäller körningstid och minnesanvändning.
+Syftet med `p.guessTotal` parametern är att returnera rätt antal resultat som kan visas genom att kombinera de lägsta p.offset- och p.limit-värdena. Fördelen med den här parametern är bättre prestanda med stora resultatuppsättningar. På så sätt undviker du att beräkna hela summan (till exempel genom att anropa result.getSize()) och läsa hela resultatuppsättningen, optimerad hela vägen ned till Oak-motorn och indexvärdet. Detta kan vara en stor skillnad när det finns 100 000 resultat, både när det gäller körningstid och minnesanvändning.
 
 Nackdelen med parametern är att användarna inte ser exakt summa. Men du kan ange ett minimivärde som p.gissningstotal=1000 så att det alltid läses upp till 1000, så du får exakta summor för mindre resultatuppsättningar, men om det är mer än så kan du bara visa&quot;och mer&quot;.
 
@@ -121,7 +117,7 @@ Från och med AEM 6.0 SP2 kan du även använda ett numeriskt värde för att r�
 
 `http://localhost:4502/bin/querybuilder.json?path=/content&1_property=sling:resourceType&1_property.value=foundation/components/text&1_property.operation=like&p.guessTotal=50&orderby=path`
 
-Den returnerar ett tal som är lika med standardgränsen på 10 resultat med förskjutningen 0, men som bara visar maximalt 50 resultat:
+Den returnerar ett tal som har samma standardgräns på tio resultat med en förskjutning på 0, men som bara visar maximalt 50 resultat:
 
 ```xml
 "success": true,
@@ -133,7 +129,7 @@ Den returnerar ett tal som är lika med standardgränsen på 10 resultat med fö
 
 ### Implementera sidnumrering {#implementing-pagination}
 
-Som standard ger Query Builder även antalet träffar. Beroende på den resulterande storleken kan det ta lång tid att fastställa det korrekta antalet, bland annat genom att kontrollera alla resultat för åtkomstkontroll. För det mesta används summan för att implementera sidnumrering för slutanvändargränssnittet. Eftersom det kan ta lång tid att fastställa det exakta antalet rekommenderar vi att du använder funktionen gissaTotal för att implementera sidnumreringen.
+Som standard ger Query Builder även antalet träffar. Beroende på den resulterande storleken kan det ta lång tid att fastställa det korrekta antalet genom att kontrollera alla resultat för åtkomstkontroll. För det mesta används summan för att implementera sidnumrering för slutanvändargränssnittet. Eftersom det kan ta lång tid att fastställa det exakta antalet rekommenderar vi att du använder funktionen gissningssumma för att implementera sidnumreringen.
 
 Gränssnittet kan till exempel anpassa följande metod:
 
@@ -145,7 +141,7 @@ Gränssnittet kan till exempel anpassa följande metod:
    * `total=43`, `more=false` - Anger att det totala antalet träffar är 43. Gränssnittet kan visa upp till tio resultat som en del av den första sidan och ge sidnumrering för de kommande tre sidorna. Du kan också använda den här implementeringen för att visa en beskrivande text som **&quot;43 resultat hittades&quot;**.
    * `total=100`, `more=true` - Anger att det totala antalet träffar är större än 100 och att det exakta antalet inte är känt. Gränssnittet kan visas upp till tio som en del av den första sidan och sidnumreringen kan göras för de kommande tio sidorna. Du kan också använda den här för att visa text som **&quot;fler än 100 resultat hittades&quot;**. När användaren går till nästa sida kommer ett anrop till Query Builder att öka gränsen för `guessTotal` och `offset` och `limit` parametrar.
 
-`guessTotal` bör också användas i de fall där användargränssnittet behöver använda oändlig rullning för att undvika att frågeverktyget avgör det exakta träffantalet.
+`guessTotal` bör användas i de fall där användargränssnittet behöver använda oändlig rullning för att undvika att frågeverktyget avgör det exakta träffantalet.
 
 ### Hitta jar-filer och beställ dem, nyaste först {#find-jar-files-and-order-them-newest-first}
 
@@ -201,7 +197,7 @@ Använd `tagid` som i exemplet om du känner till det explicita tagg-ID:t.
 
 Använd `tag` förutse taggens titelsökväg (utan blanksteg).
 
-I föregående exempel söker du efter sidor ( `cq:Page` noder) måste du använda den relativa sökvägen från den noden för `tagid.property` predikat, vilket `jcr:content/cq:tags`. Som standard är `tagid.property` skulle helt enkelt `cq:tags`.
+I föregående exempel söker du efter sidor ( `cq:Page` noder) använder du den relativa sökvägen från den noden för `tagid.property` predikat, vilket `jcr:content/cq:tags`. Som standard är `tagid.property` skulle helt enkelt `cq:tags`.
 
 ### Sök under flera sökvägar (med grupper) {#search-under-multiple-paths-using-groups}
 
@@ -291,7 +287,7 @@ property.3_value=bar
 
 ## Förfina vad som returneras {#refining-what-is-returned}
 
-Som standard returnerar JSON-servern för QueryBuilder en standarduppsättning med egenskaper för varje nod i sökresultatet (t.ex. sökväg, namn, titel). För att få kontroll över vilka egenskaper som returneras kan du göra något av följande:
+Som standard returnerar JSON-servern för QueryBuilder en standarduppsättning med egenskaper för varje nod i sökresultatet (till exempel sökväg, namn och titel). Du kan kontrollera vilka egenskaper som returneras genom att göra något av följande:
 
 Ange
 
@@ -315,17 +311,17 @@ Använd
 p.hits=selective
 ```
 
-och ange de egenskaper som du vill hämta in
+Och ange de egenskaper som du vill hämta in
 
 ```
 p.properties
 ```
 
-avgränsat med blanksteg:
+Separerat med ett blanksteg:
 
 `http://localhost:4502/bin/querybuilder.json?p.hits=selective&property=jcr%3atitle&property.value=Triangle`
 
-[ `http://localhost:4502/bin/querybuilder.json?`](http://localhost:4502/bin/querybuilder.json?p.hits=selective&amp;p.properties=sling%3aresourceType%20jcr%3aprimaryType&amp;property=jcr%3atitle&amp;property.value=Triangle) [p.hits=selective&amp;](http://localhost:4502/bin/querybuilder.json?p.hits=selective&amp;p.nodedepth=5&amp;p.properties=sling%3aresourceType%20jcr%3apath&amp;property=jcr%3atitle&amp;property.value=Triangle)p.properties=sling%3aresourceType%20jcr%3aprimaryType&amp;property=jcr%3atitle&amp;property.value=Triangle
+[`http://localhost:4502/bin/querybuilder.json?`](http://localhost:4502/bin/querybuilder.json?p.hits=selective&amp;p.properties=sling%3aresourceType%20jcr%3aprimaryType&amp;property=jcr%3atitle&amp;property.value=Triangle) [p.hits=selective&amp;](http://localhost:4502/bin/querybuilder.json?p.hits=selective&amp;p.nodedepth=5&amp;p.properties=sling%3aresourceType%20jcr%3apath&amp;property=jcr%3atitle&amp;property.value=Triangle)p.properties=sling%3aresourceType%20jcr%3aprimaryType&amp;property=jcr%3atitle&amp;property.value=Triangle
 
 ```xml
 property=jcr:title
@@ -334,13 +330,13 @@ p.hits=selective
 p.properties=sling:resourceType jcr:primaryType
 ```
 
-En annan sak du kan göra är att ta med underordnade noder i QueryBuilder-svaret. För att kunna göra detta måste du ange
+En annan sak du kan göra är att ta med underordnade noder i QueryBuilder-svaret. Du måste ange
 
 ```
 p.nodedepth=n
 ```
 
-där `n` är antalet nivåer som du vill att frågan ska returnera. Observera att för att en underordnad nod ska kunna returneras måste den anges av egenskapsväljaren
+Plats `n` är antalet nivåer som du vill att frågan ska returnera. För att en underordnad nod ska kunna returneras måste den anges av egenskapsväljaren
 
 ```
 p.hits=full
@@ -439,7 +435,7 @@ Frågor kan lagras i databasen så att du kan använda dem senare. The `QueryBui
 void storeQuery(Query query, String path, boolean createFile, Session session) throws RepositoryException, IOException;
 ```
 
-När du använder [ `QueryBuilder#storeQuery`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/QueryBuilder.html#storequerycomdaycqsearchqueryjavalangstringbooleanjavaxjcrsession) metod, den givna `Query` lagras i databasen som en fil eller som en egenskap enligt `createFile` argumentvärde. I följande exempel visas hur du sparar en `Query` till banan `/mypath/getfiles` som en fil:
+När du använder [`QueryBuilder#storeQuery`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/QueryBuilder.html#storequerycomdaycqsearchqueryjavalangstringbooleanjavaxjcrsession) metod, den givna `Query` lagras i databasen som en fil eller som en egenskap enligt `createFile` argumentvärde. I följande exempel visas hur du sparar en `Query` till banan `/mypath/getfiles` som en fil:
 
 ```java
 builder.storeQuery(query, "/mypath/getfiles", true, session);
@@ -463,7 +459,7 @@ Om du vill spela upp runt och felsöka frågor Builder-frågor kan du använda f
 
 `http://localhost:4502/libs/cq/search/content/querydebug.html`
 
-eller också kan querybuilder json servlet på
+Eller också kan du använda querybuilder json-serverleten på
 
 `http://localhost:4502/bin/querybuilder.json?path=/tmp`
 
@@ -477,14 +473,14 @@ Förklara **alla** frågar under utvecklingscykeln mot målindexuppsättningen.
 
 * Aktivera DEBUG-loggar för QueryBuilder för att få underliggande, förklarlig XPath-fråga
 
-   * Navigera till https://&lt;serveraddress>:&lt;serverport>/system/console/slinglog. Skapa en ny loggare för `com.day.cq.search.impl.builder.QueryImpl` på **FELSÖKNING**.
+   * Navigera till https://&lt;serveraddress>:&lt;serverport>/system/console/slinglog. Skapa en loggare för `com.day.cq.search.impl.builder.QueryImpl` på **FELSÖKNING**.
 
-* När DEBUG har aktiverats för ovanstående klass visas den XPath som genererats av Query Builder i loggarna.
+* När DEBUG är aktiverat för ovanstående klass visar loggarna den XPath som genererats av Query Builder.
 * Kopiera XPath-frågan från loggposten för den associerade QueryBuilder-frågan, till exempel:
 
    * `com.day.cq.search.impl.builder.QueryImpl XPath query: /jcr:root/content//element(*, cq:Page)[(jcr:contains(jcr:content, "Geometrixx") or jcr:contains(jcr:content/@cq:tags, "Geometrixx"))]`
 
-* Klistra in XPath-frågan i [Förklara fråga](/help/sites-administering/operations-dashboard.md#explain-query) som XPath för att undertrycka frågeplanen
+* Klistra in XPath-frågan i [Förklara fråga](/help/sites-administering/operations-dashboard.md#explain-query) som XPath för att erhålla frågeplanen
 
 ### Hämta förklaringsbar XPath via felsökningsfunktionen i Query Builder {#obtain-explain-able-xpath-via-the-query-builder-debugger}
 
@@ -496,9 +492,9 @@ Förklara **alla** frågar under utvecklingscykeln mot målindexuppsättningen.
 
 * Aktivera DEBUG-loggar för QueryBuilder för att få underliggande, förklarlig XPath-fråga
 
-   * Navigera till https://&lt;serveraddress>:&lt;serverport>/system/console/slinglog. Skapa en ny loggare för `com.day.cq.search.impl.builder.QueryImpl` på **FELSÖKNING**.
+   * Navigera till https://&lt;serveraddress>:&lt;serverport>/system/console/slinglog. Skapa en loggare för `com.day.cq.search.impl.builder.QueryImpl` på **FELSÖKNING**.
 
-* När DEBUG har aktiverats för ovanstående klass visas den XPath som genererats av Query Builder i loggarna.
+* När DEBUG är aktiverat för ovanstående klass visar loggarna den XPath som genererats av Query Builder.
 * Kopiera XPath-frågan från loggposten för den associerade QueryBuilder-frågan, till exempel:
 
    * `com.day.cq.search.impl.builder.QueryImpl XPath query: /jcr:root/content//element(*, cq:Page)[(jcr:contains(jcr:content, "Geometrixx") or jcr:contains(jcr:content/@cq:tags, "Geometrixx"))]`
@@ -511,7 +507,7 @@ Förklara **alla** frågar under utvecklingscykeln mot målindexuppsättningen.
 
 ![chlimage_1-66](assets/chlimage_1-66a.png)
 
-1. Ange frågan för Frågebyggaren i felsökningsprogrammet för Frågebyggaren
+1. Ange frågan i Query Builder i felsökningsprogrammet i Query Builder
 1. Utför sökningen
 1. Hämta genererad XPath
 1. Klistra in XPath-frågan i XPath som XPath för att hämta frågeplanen
