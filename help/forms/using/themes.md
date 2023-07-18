@@ -11,14 +11,19 @@ discoiquuid: 770e9174-b648-462a-abe9-05fefa967d86
 docset: aem65
 feature: Adaptive Forms
 exl-id: 93c360a8-a9d9-4c4b-b7e2-2c44eaf4604c
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '6026'
+source-wordcount: '6049'
 ht-degree: 0%
 
 ---
 
 # Skapa och använda teman {#creating-and-using-themes}
+
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/create-an-adaptive-form-on-forms-cs/themes.html) |
+| AEM 6.5 | Den här artikeln |
 
 ## Introduktion {#introduction}
 
@@ -207,15 +212,15 @@ Temaredigeraren är uppdelad i två paneler:
 
    * **Väljare:** Visar den komponent som är markerad för formatering och dess egenskaper som du kan formatera. Väljaren representerar alla komponenter av en typ. Om du väljer en textrutekomponent i ett tema för formatering ärver alla textrutor i formuläret eller den interaktiva kommunikationen formatet. Med väljare kan du välja en allmän komponent eller en specifik komponent för formatering. En fältkomponent är till exempel en allmän komponent och en textruta är en specifik komponent.
 
-      **Formatera allmän komponent:**
+     **Formatera allmän komponent:**
 Ett fält kan vara ett numeriskt fält, t.ex. age, eller ett textfält, t.ex. adress.
 När du formaterar ett fält formateras alla fält, till exempel ålder, namn och adress.
 
-      **Formateringsspecifik komponent**: En specifik komponent påverkar objekt i den specifika kategorin. När du formaterar den numeriska rutkomponenten i temat ärver bara det numeriska ruteobjektet formatet.
+     **Formateringsspecifik komponent**: En specifik komponent påverkar objekt i den specifika kategorin. När du formaterar den numeriska rutkomponenten i temat ärver bara det numeriska ruteobjektet formatet.
 
-      Ett textrutefält som adress är t.ex. längre och ett numeriskt rutefält som ålder är kortare. Du kan markera ett numeriskt rutfält, minska dess längd och använda det i formuläret. Bredden på alla numeriska rutfält minskas i formuläret.
+     Ett textrutefält som adress är t.ex. längre och ett numeriskt rutefält som ålder är kortare. Du kan markera ett numeriskt rutfält, minska dess längd och använda det i formuläret. Bredden på alla numeriska rutfält minskas i formuläret.
 
-      När du anpassar alla fältkomponenter med en viss bakgrundsfärg ärver alla fält, som ålder, namn och adress, bakgrundsfärgen. När du markerar en numerisk ruta, t.ex. ålder, och minskar bredden på den, minskas bredden på alla numeriska rutor, t.ex. ålder, antalet personer i en familj. Bredden på textrutor ändras inte.
+     När du anpassar alla fältkomponenter med en viss bakgrundsfärg ärver alla fält, som ålder, namn och adress, bakgrundsfärgen. När du markerar en numerisk ruta, t.ex. ålder, och minskar bredden på den, minskas bredden på alla numeriska rutor, t.ex. ålder, antalet personer i en familj. Bredden på textrutor ändras inte.
 
    * **Läge:** Gör att du kan anpassa format för ett objekt i ett visst läge. Du kan till exempel ange hur ett objekt ska se ut när det är i standardläge, fokusläge, inaktiverat läge, hovring eller felläge.
    * **Egenskapskategorier:** Formategenskaper delas upp i olika kategorier. Till exempel Dimension och placering, Text, Bakgrund, Kant och Effekter. Under varje kategori anger du formatinformation. Under Bakgrund kan du till exempel ange Bakgrundsfärg och Bild och övertoning.
@@ -223,9 +228,10 @@ När du formaterar ett fält formateras alla fält, till exempel ålder, namn oc
    * **Avancerat:** Gör att du kan lägga till anpassad CSS till ett objekt, vilket åsidosätter de egenskaper som visuella kontroller definierar om det finns en överlappning.
 
    * **Visa CSS**: Gör att du kan visa CSS för den markerade komponenten
-   I sidofältet finns dessutom en pil längst ned. När du klickar på pilen får du ytterligare två alternativ: **Simulera lyckade** och **Simulera fel.** Dessa alternativ, tillsammans med de alternativ som beskrivs ovan, beskrivs i detalj [nedan](../../forms/using/themes.md#using-rail).
 
-[ ![Theme editor med Rail och Canvas markerade.](assets/themes.png)](assets/themes-1.png) **S.** Sidebar **B.** Arbetsyta
+  I sidofältet finns dessutom en pil längst ned. När du klickar på pilen får du ytterligare två alternativ: **Simulera lyckade** och **Simulera fel.** Dessa alternativ, tillsammans med de alternativ som beskrivs ovan, beskrivs i detalj [nedan](../../forms/using/themes.md#using-rail).
+
+[![Theme editor med Rail och Canvas markerade.](assets/themes.png)](assets/themes-1.png) **S.** Sidebar **B.** Arbetsyta
 
 ### Formatkomponenter {#styling-components}
 
@@ -627,14 +633,14 @@ Du kan se den genererade CSS-koden med följande alternativ:
 
 * **Undvika resurser från ett annat tema**
 
-   När du redigerar ett tema kan du bläddra bland och lägga till resurser (till exempel bilder) från andra teman. Du redigerar till exempel bakgrunden på en sida. Om du till exempel väljer **Sida** ![edit-button](assets/edit-button.png)> **Bakgrund** > **Lägg till** > **Bild** visas en dialogruta där du kan bläddra bland och lägga till bilder i andra teman.
+  När du redigerar ett tema kan du bläddra bland och lägga till resurser (till exempel bilder) från andra teman. Du redigerar till exempel bakgrunden på en sida. Om du till exempel väljer **Sida** ![edit-button](assets/edit-button.png)> **Bakgrund** > **Lägg till** > **Bild** visas en dialogruta där du kan bläddra bland och lägga till bilder i andra teman.
 
 * Du kan stöta på problem med det aktuella temat om en resurs läggs till från ett annat tema och det andra temat flyttas eller tas bort. Du bör undvika att bläddra bland och lägga till resurser från andra teman.
 * **Använda clientlib, temaredigerare och intern formatering**
 
    * **Basklientlib**:
 
-      Basklientbiblioteket innehåller formatinformation. Om du vill använda formatinformation i klientbibliotek i teman.
+     Basklientbiblioteket innehåller formatinformation. Om du vill använda formatinformation i klientbibliotek i teman.
 
       1. Navigera till **Experience Manager > Forms > Teman**.
       1. Välj ett tema på sidan Teman och klicka på **Visa egenskaper**.
@@ -642,28 +648,27 @@ Du kan se den genererade CSS-koden med följande alternativ:
       1. Gå till fliken Avancerat, i fältet Klientbiblioteksplats, bläddra och välj det klientbibliotek som du vill använda.
       1. Klicka **Spara**.
 
-      Det format du anger i klientbiblioteket importeras i det tema som använder det. Du kan till exempel ange format för textruta, numerisk ruta och växla i klientbiblioteket. När du importerar ditt klientbibliotek till temat importeras format för textruta, numerisk ruta och växel. Du kan sedan formatera andra komponenter med hjälp av temaredigeraren.
+     Det format du anger i klientbiblioteket importeras i det tema som använder det. Du kan till exempel ange format för textruta, numerisk ruta och växla i klientbiblioteket. När du importerar ditt klientbibliotek till temat importeras format för textruta, numerisk ruta och växel. Du kan sedan formatera andra komponenter med hjälp av temaredigeraren.
 Du kan också skapa ett tema, skapa kopior av det och sedan ändra formatet som finns i de kopierade temana för liknande användningsfall.
 Se [Hämta specifikt utseende med teman](#specific-af-appearance)
 
    * **Theme Editor:**
 
-      Med Theme Editor kan du skapa teman för att utforma formuläret eller för interaktiv kommunikation. Du kan ange komponenternas format i ett tema, vilket ger enhetlighet i utseende och känsla i flera formulär eller interaktiv kommunikation som du utvecklar. Du bör ange formatinformation i ett tema och sedan använda temat i ett formulär.
+     Med Theme Editor kan du skapa teman för att utforma formuläret eller för interaktiv kommunikation. Du kan ange komponenternas format i ett tema, vilket ger enhetlighet i utseende och känsla i flera formulär eller interaktiv kommunikation som du utvecklar. Du bör ange formatinformation i ett tema och sedan använda temat i ett formulär.
 
    * **Textbunden formatering:**
 
-      Du kan formatera komponenter med stilläget i formuläret eller med den interaktiva kommunikationsredigeraren för flera kanaler när du arbetar med ett formulär. Om du använder formatläge för att ändra formulärkomponentens format åsidosätts den formatering som anges i temat. Om du vill ändra format för vissa komponenter i ett visst formulär läser du i [Textbunden formatering av komponenter](../../forms/using/inline-style-adaptive-forms.md).
-
+     Du kan formatera komponenter med stilläget i formuläret eller med den interaktiva kommunikationsredigeraren för flera kanaler när du arbetar med ett formulär. Om du använder formatläge för att ändra formulärkomponentens format åsidosätts den formatering som anges i temat. Om du vill ändra format för vissa komponenter i ett visst formulär läser du i [Textbunden formatering av komponenter](../../forms/using/inline-style-adaptive-forms.md).
 
 * **Använda bibliotek på klientsidan**
 
-   Om du vill skapa klientbibliotek för att importera formatinformation läser du [Använda bibliotek på klientsidan](/help/sites-developing/clientlibs.md). När du har skapat ett klientbibliotek kan du importera det till ditt tema enligt stegen ovan.
+  Om du vill skapa klientbibliotek för att importera formatinformation läser du [Använda bibliotek på klientsidan](/help/sites-developing/clientlibs.md). När du har skapat ett klientbibliotek kan du importera det till ditt tema enligt stegen ovan.
 
 * **Ändra layoutbredd för behållarpanelen**
 
-   Du bör inte ändra bredden på behållarpanelens layout. När du anger bredden på en behållarpanel blir den statisk och anpassas inte till olika skärmar.
+  Du bör inte ändra bredden på behållarpanelens layout. När du anger bredden på en behållarpanel blir den statisk och anpassas inte till olika skärmar.
 
 * **När formulärredigeraren eller temaredigeraren ska användas för att arbeta med sidhuvud och sidfot**
 
-   Använd temaredigeraren om du vill formatera sidhuvud och sidfot med formatalternativ som teckensnittsformat, bakgrund och genomskinlighet.
+  Använd temaredigeraren om du vill formatera sidhuvud och sidfot med formatalternativ som teckensnittsformat, bakgrund och genomskinlighet.
 Om du vill ange information som logotypbild, företagsnamn i sidhuvud och copyrightinformation i sidfoten använder du alternativen för formulärredigeraren.

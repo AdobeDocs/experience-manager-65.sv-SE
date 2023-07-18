@@ -11,21 +11,27 @@ discoiquuid: ba70921e-db7e-43f6-902c-1065d3b13aef
 docset: aem65
 feature: Adaptive Forms
 exl-id: 935b734c-6fb1-45e8-8515-e98c8b85286c
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '3082'
+source-wordcount: '3105'
 ht-degree: 0%
 
 ---
 
 # Introduktion till utveckling av anpassningsbara formulär {#introduction-to-authoring-adaptive-forms}
 
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/create-an-adaptive-form-on-forms-cs/introduction-forms-authoring.html) |
+| AEM 6.5 | Den här artikeln |
+
+
 ## Översikt {#overview}
 
 Med adaptiva formulär kan du skapa formulär som är engagerande, responsiva, dynamiska och anpassningsbara. AEM Forms har ett intuitivt användargränssnitt och färdiga komponenter för att skapa och arbeta med anpassningsbara formulär. Du kan välja att skapa ett anpassat formulär baserat på en formulärmodell eller ett schema eller utan en formulärmodell. Det är viktigt att du noga väljer den formulärmodell som inte bara passar dina behov, utan som utökar dina befintliga infrastrukturinvesteringar och resurser. Du kan välja mellan följande alternativ för att skapa ett anpassat formulär:
 
 * **Använda en formulärdatamodell**
-   [Dataintegrering](../../forms/using/data-integration.md) Med kan du integrera enheter och tjänster från olika datakällor i en formulärdatamodell som du kan använda för att skapa anpassade formulär. Välj formulärdatamodell om det adaptiva formulär du skapar inbegriper hämtning och skrivning av data från och till flera datakällor.
+  [Dataintegrering](../../forms/using/data-integration.md) Med kan du integrera enheter och tjänster från olika datakällor i en formulärdatamodell som du kan använda för att skapa anpassade formulär. Välj formulärdatamodell om det adaptiva formulär du skapar inbegriper hämtning och skrivning av data från och till flera datakällor.
 
 * **Använda en XDP-formulärmall**
 Det är en idealisk formulärmodell om du har investeringar i XFA- eller XDP-formulär. Det är ett direkt sätt att konvertera XFA-baserade formulär till anpassningsbara formulär. Alla befintliga XFA-regler behålls i de tillhörande adaptiva formulären. De färdiga adaptiva formulären har stöd för XFA-konstruktioner, till exempel valideringar, händelser, egenskaper och mönster.
@@ -88,17 +94,17 @@ Det gör att du kan dra och släppa formulärmodellelement i det anpassade formu
 
 * **Egenskapswebbläsaren**
 
-   Gör att du kan redigera egenskaperna för en komponent. Egenskaperna ändras enligt en komponent. Så här visar du egenskaper för den adaptiva formulärbehållaren:
+  Gör att du kan redigera egenskaperna för en komponent. Egenskaperna ändras enligt en komponent. Så här visar du egenskaper för den adaptiva formulärbehållaren:
 
-   Markera en komponent och tryck sedan på ![fältnivå](assets/field-level.png) > **[!UICONTROL Adaptive Form Container]** och sedan trycka ![cmppr](assets/cmppr.png).
+  Markera en komponent och tryck sedan på ![fältnivå](assets/field-level.png) > **[!UICONTROL Adaptive Form Container]** och sedan trycka ![cmppr](assets/cmppr.png).
 
 * **Resursläsaren**
 
-   Segmenterar olika typer av innehåll, t.ex. bilder, dokument, sidor, filmer och så vidare.
+  Segmenterar olika typer av innehåll, t.ex. bilder, dokument, sidor, filmer och så vidare.
 
 * **Komponentwebbläsare**
 
-   Innehåller komponenter som du kan använda för att skapa ett anpassat formulär. Du kan dra komponenter från till det adaptiva formuläret för att lägga till formulärelement och konfigurera tillagda element enligt kraven. I följande tabell beskrivs komponenterna i komponentwebbläsaren.
+  Innehåller komponenter som du kan använda för att skapa ett anpassat formulär. Du kan dra komponenter från till det adaptiva formuläret för att lägga till formulärelement och konfigurera tillagda element enligt kraven. I följande tabell beskrivs komponenterna i komponentwebbläsaren.
 
 <table>
  <tbody>
@@ -188,7 +194,7 @@ Det gör att du kan dra och släppa formulärmodellelement i det anpassade formu
   </tr>
   <tr>
    <td>Panel</td>
-   <td><p>Lägger till en panel eller underpanel.</p> <p>Du kan också lägga till en panelkomponent från den överordnade panelens verktygsfält med hjälp av <span class="uicontrol">Lägg till underordnad panel</code> -knappen. På samma sätt kan du lägga till ett panelspecifikt verktygsfält med <span class="uicontrol">Verktygsfältet Lägg till panel</code> -knappen. Du kan konfigurera placeringen av panelens verktygsfält med hjälp av dialogrutan Redigera panel.</code></code></p> </td>
+   <td><p>Lägger till en panel eller underpanel.</p> <p>Du kan också lägga till en panelkomponent från den överordnade panelens verktygsfält med hjälp av <span class="uicontrol">Lägg till underordnad panel</code> -knappen. På samma sätt kan du lägga till ett panelspecifikt verktygsfält med <span class="uicontrol">Verktygsfältet Lägg till panel</code> -knappen. Du kan konfigurera placeringen av panelens verktygsfält med hjälp av dialogrutan Redigera panel.</p> </td>
   </tr>
   <tr>
    <td>Lösenordsruta</td>
@@ -328,8 +334,8 @@ Verktygsfältet längst upp på sidan innehåller alternativ som gör att du kan
 
       * Upptäck vad formulären består av.
       * Felsök vad som händer var och när, vilket i sin tur hjälper till att lösa problem.
-   * **Design**. Gör att du kan aktivera eller inaktivera anpassade komponenter eller komponenter som inte finns med i sidofältet.
 
+   * **Design**. Gör att du kan aktivera eller inaktivera anpassade komponenter eller komponenter som inte finns med i sidofältet.
 
 * **Förhandsgranska**: Gör att du kan förhandsgranska hur formuläret ser ut när du publicerar det.
 

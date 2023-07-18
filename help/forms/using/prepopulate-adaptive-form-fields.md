@@ -10,14 +10,19 @@ discoiquuid: 7139a0e6-0e37-477c-9e0b-aa356991d040
 docset: aem65
 feature: Adaptive Forms
 exl-id: 29cbc330-7b3d-457e-ba4a-7ce6091f3836
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '2158'
+source-wordcount: '2180'
 ht-degree: 0%
 
 ---
 
 # Förifyll anpassningsbara formulärfält{#prefill-adaptive-form-fields}
+
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/prepopulate-adaptive-form-fields.html) |
+| AEM 6.5 | Den här artikeln |
 
 ## Introduktion {#introduction}
 
@@ -132,7 +137,7 @@ För fält vars modell är XML-schema är data förifyllda i `afBoundData` -tagg
 
 >[!NOTE]
 >
->Vi rekommenderar att du inte använder obundna fält i bundna paneler (paneler med icke-tomma paneler) `bindRef` som har skapats genom att dra komponenter från fliken SideKlick eller Datakällor). Det kan orsaka dataförlust för dessa obundna fält. Vi rekommenderar dessutom att fältnamnen är unika i hela formuläret, särskilt för obundna fält.
+>Vi rekommenderar att du inte använder obundna fält i bundna paneler (paneler med icke-tomma paneler) `bindRef` som har skapats genom att dra komponenter från Sidekick eller fliken Datakällor). Det kan orsaka dataförlust för dessa obundna fält. Vi rekommenderar dessutom att fältnamnen är unika i hela formuläret, särskilt för obundna fält.
 
 #### Ett exempel utan afData och afBoundData-wrapper {#an-example-without-afdata-and-afbounddata-wrapper}
 
@@ -197,7 +202,7 @@ Nedan visas ett exempel utan `afData/afBoundData` wrapper:
 
 >[!NOTE]
 >
->Använda obundna fält i bundna paneler (paneler med icke-tomma bindRef som har skapats genom att dra komponenter från fliken Sidspark eller Datakällor) **not** rekommenderas eftersom det kan orsaka dataförlust i obundna fält. Du bör ha unika fältnamn i hela formuläret, särskilt för obundna fält.
+>Använda obundna fält i bundna paneler (paneler med icke-tomma bindRef som har skapats genom att dra komponenter från Sidekick eller fliken Datakällor) **not** rekommenderas eftersom det kan orsaka dataförlust i obundna fält. Du bör ha unika fältnamn i hela formuläret, särskilt för obundna fält.
 
 ### Adaptiv form utan formulärmodell {#adaptive-form-with-no-form-model}
 
@@ -244,6 +249,7 @@ Om du vill aktivera förifyllningstjänsten anger du standardkonfigurationen fö
 
    * file:///C:/Users/public/Document/Prefill/.&#42;
    * https://localhost:8000/somesamplexmlfile.xml
+
    >[!NOTE]
    >
    >Som standard är förifyllning tillåtet via crx-filer för alla typer av adaptiva Forms (XSD, XDP, JSON, FDM och utan formulärmodellbaserad). Förifyll tillåts bara med JSON- och XML-filer.
@@ -384,8 +390,9 @@ Du kan konfigurera AEM Forms-servern så att den utför datasammanfogningsåtgä
    1. Aktivera alternativet Configuration.af.clientside.datamerge.enabled.name
 * Så här aktiverar eller inaktiverar du från kommandoraden:
    * Aktivera genom att köra följande cURL-kommando:
-      `curl -u admin:admin -X POST -d apply=true \ -d propertylist=af.clientside.datamerge.enabled \ -d af.clientside.datamerge.enabled=true \ http://${crx.host}:${crx.port}/system/console/configMgr/Adaptive%20Form%20and%20Interactive%20Communication%20Web%20Channel%20Configuration`
+     `curl -u admin:admin -X POST -d apply=true \ -d propertylist=af.clientside.datamerge.enabled \ -d af.clientside.datamerge.enabled=true \ http://${crx.host}:${crx.port}/system/console/configMgr/Adaptive%20Form%20and%20Interactive%20Communication%20Web%20Channel%20Configuration`
 
    * Om du vill inaktivera kör du följande cURL-kommando:
-      `curl -u admin:admin -X POST -d apply=true \ -d propertylist=af.clientside.datamerge.enabled \ -d af.clientside.datamerge.enabled=false \ http://${crx.host}:${crx.port}/system/console/configMgr/Adaptive%20Form%20and%20Interactive%20Communication%20Web%20Channel%20Configuration`
-   Om du vill utnyttja de förifyllda data som finns på klienten ska du uppdatera förifyllningstjänsten så att den returneras [FileAttachmentMap](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/forms/common/service/PrefillData.html) och [CustomContext](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/forms/common/service/PrefillData.html)
+     `curl -u admin:admin -X POST -d apply=true \ -d propertylist=af.clientside.datamerge.enabled \ -d af.clientside.datamerge.enabled=false \ http://${crx.host}:${crx.port}/system/console/configMgr/Adaptive%20Form%20and%20Interactive%20Communication%20Web%20Channel%20Configuration`
+
+  Om du vill utnyttja de förifyllda data som finns på klienten ska du uppdatera förifyllningstjänsten så att den returneras [FileAttachmentMap](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/forms/common/service/PrefillData.html) och [CustomContext](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/forms/common/service/PrefillData.html)

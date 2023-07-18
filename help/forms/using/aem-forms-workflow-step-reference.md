@@ -9,14 +9,19 @@ topic-tags: publish
 discoiquuid: f0a5588d-f210-4f04-bc35-b62834f90ab1
 docset: aem65
 exl-id: 470fcfda-dfde-437c-b539-d5af1e13a7d6
-source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
+source-git-commit: 5ca6c5abeb5ed09d8929d1986aa24c1416e0cc06
 workflow-type: tm+mt
-source-wordcount: '7452'
+source-wordcount: '7471'
 ht-degree: 0%
 
 ---
 
 # Forms-centrerat arbetsflöde i OSGi - stegreferens {#forms-centric-workflow-on-osgi-step-reference}
+
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/create-form-centric-workflows/aem-forms-workflow-step-reference.html) |
+| AEM 6.5 | Den här artikeln |
 
 Du använder arbetsflödesmodeller för att konvertera en affärslogik till en automatiserad repetitiv process. En modell hjälper dig att definiera och köra en serie steg. Du kan också definiera modellegenskaper, t.ex. om arbetsflödet är tillfälligt eller använder flera resurser. Du kan [inkludera olika AEM arbetsflödessteg i en modell för att uppnå affärslogiken](/help/sites-developing/workflows-models.md#extending-aem).
 
@@ -51,7 +56,7 @@ Du kan också använda komponenten för att styra aktivitetens beteende. Du kan 
 * **Markera åtgärden och kommentera från den senaste aktiviteten i Uppgiftsinformation:** Välj det här alternativet om du vill visa den senaste åtgärden som utfördes och kommentaren som togs emot i aktivitetsinformationsavsnittet för en uppgift.
 * **Typ:** Välj vilken typ av dokument som ska fyllas när arbetsflödet startas. Du kan välja ett adaptivt formulär, ett skrivskyddat adaptivt formulär, ett icke-interaktivt PDF-dokument, ett gränssnitt för interaktiv kommunikationsagent eller ett dokument för interaktiv kommunikationskanal.
 * **Använd adaptiv form:** Ange den metod som ska användas för att hitta indataadaptiva formulär. Det här alternativet är tillgängligt om du väljer Adaptivt formulär eller Skrivskyddat anpassat formulär i listrutan Typ. Du kan använda det adaptiva formuläret som skickas till arbetsflödet, som finns på en absolut sökväg eller som finns på en sökväg i en variabel. Du kan använda en variabel av typen String för att ange sökvägen.\
-   Du kan koppla flera adaptiva formulär till ett arbetsflöde. Det innebär att du kan ange ett anpassningsbart formulär i körningsmiljön med hjälp av de tillgängliga indatametoderna.
+  Du kan koppla flera adaptiva formulär till ett arbetsflöde. Det innebär att du kan ange ett anpassningsbart formulär i körningsmiljön med hjälp av de tillgängliga indatametoderna.
 
 * **Använd interaktiv kommunikation:** Ange den metod som ska användas för att hitta den interaktiva indatakommunikationen. Du kan använda den interaktiva kommunikationen som skickas till arbetsflödet, som finns på en absolut sökväg eller som finns på en sökväg i en variabel. Du kan använda en variabel av typen String för att ange sökvägen. Det här alternativet är tillgängligt om du väljer gränssnittet Interactive Communication Agent eller Interactive Communication Web Channel Document i listrutan Typ.
 
@@ -72,7 +77,7 @@ Du kan också använda komponenten för att styra aktivitetens beteende. Du kan 
       * **Välj en anpassad förifyllningstjänst:** Välj förifyllningstjänsten för att hämta data och fylla i dokumentet för webbkanalen för interaktiv kommunikation eller användargränssnittet för agenten i förväg.
       * **Använd förifyllningstjänsten för den interaktiva kommunikation som valts ovan:** Använd det här alternativet om du vill använda förifyllningstjänsten för interaktiv kommunikation som definieras i listrutan Använd interaktiv kommunikation.
       * **Attributmappning för begäran:** Använd avsnittet Mappning av attribut för begäran för att definiera [namn och värde för attributet request](../../forms/using/work-with-form-data-model.md#bindargument). Hämta informationen från datakällan baserat på attributnamnet och värdet som anges i begäran. Du kan definiera ett attributvärde för begäran med hjälp av ett literalt värde eller en variabel av datatypen String.\
-         Alternativen för förifyllningstjänst och attributmappning för begäran är bara tillgängliga om du väljer Interactive Communication Agent UI eller Interactive Communication Web Channel Document i listrutan Typ.
+        Alternativen för förifyllningstjänst och attributmappning för begäran är bara tillgängliga om du väljer Interactive Communication Agent UI eller Interactive Communication Web Channel Document i listrutan Typ.
 
 * **Skickade uppgifter:** Följande fält i listan nedan fungerar som utdataplatser för uppgiften:
 
@@ -94,7 +99,7 @@ Du kan också använda komponenten för att styra aktivitetens beteende. Du kan 
 * **Argument:** Fältet är tillgängligt när ett annat skript än skriptet RandomParticipantChoose har valts i fältet för deltagarväljare. I fältet kan du ange en lista med kommaavgränsade argument för det skript som valts i fältet Deltagare.
 
 * **Användare eller grupp:** Uppgiften tilldelas den valda användaren eller gruppen. Alternativet är tillgängligt när **Till en viss användare eller grupp** är markerat i **Tilldelningsalternativ** fält. I fältet visas alla användare och grupper i gruppen för arbetsflödesanvändare.\
-   The **Användare eller grupp** listar de användare och grupper som den inloggade användaren har åtkomst till. Hur användarnamn visas beror på om du har åtkomstbehörighet för **användare** nod i crx-database för just den användaren.
+  The **Användare eller grupp** listar de användare och grupper som den inloggade användaren har åtkomst till. Hur användarnamn visas beror på om du har åtkomstbehörighet för **användare** nod i crx-database för just den användaren.
 
 * **[!UICONTROL Send Notification Email]**: Välj det här alternativet om du vill skicka e-postmeddelanden till den tilldelade personen. Dessa meddelanden skickas när en uppgift tilldelas en användare eller grupp. Du kan använda **[!UICONTROL Recipient Email Address]** om du vill ange vilken mekanism som ska användas för att hämta e-postadressen.
 
@@ -134,7 +139,7 @@ Du kan också använda komponenten för att styra aktivitetens beteende. Du kan 
 
 ## Skicka e-poststeg {#send-email-step}
 
-Använd e-poststeget för att skicka ett e-postmeddelande, till exempel ett e-postmeddelande med ett arkivdokument, en länk till ett anpassningsbart formulär, en länk till en interaktiv kommunikation eller med ett bifogat PDF-dokument. Skicka e-poststeg som stöds [HTML email](https://en.wikipedia.org/wiki/HTML_email). HTML e-postmeddelanden är responsiva och anpassar sig efter mottagarnas e-postklient och skärmstorlek. Du kan använda en HTML-e-postmall för att definiera utseendet, färgschemat och beteendet för e-postmeddelandets innehåll.
+Använd e-poststeget för att skicka ett e-postmeddelande, till exempel ett e-postmeddelande med ett arkivdokument, en länk till ett anpassningsbart formulär, en länk till en interaktiv kommunikation eller med ett bifogat PDF-dokument. Skicka e-poststeg som stöds [HTML email](https://en.wikipedia.org/wiki/HTML_email). HTML e-postmeddelanden är responsiva och anpassar sig efter mottagarnas e-postklient och skärmstorlek. Du kan använda en HTML-e-postmall för att definiera utseendet, färgschemat och beteendet för e-postmeddelandet.
 
 I e-poststeget används Day CQ Mail Service för att skicka e-post. Innan du använder e-poststeget kontrollerar du att [e-posttjänst](../../forms/using/aem-forms-workflow.md) är konfigurerad. E-poststeget har följande egenskaper:
 
@@ -259,7 +264,7 @@ I steget Anropa formulärdatamodelltjänst visas följande fält för att underl
    * **Hämta från arbetsflödesmetadata:** Använd alternativet när värdet som ska användas sparas i en arbetsflödets metadataegenskap. Till exempel emailAddress.
    * **[!UICONTROL Relative to Payload]**: Använd alternativet för att hämta den bifogade filen som har sparats på en sökväg i förhållande till nyttolasten. Markera alternativet och ange antingen mappnamnet som innehåller den bifogade filen eller ange namnet på den bifogade filen i textrutan.
 
-      Om mappen Relativt till nyttolast i CRX-databasen till exempel innehåller en bifogad fil på `attachment\attachment-folder` plats, ange `attachment\attachment-folder` i textrutan efter att du har valt **[!UICONTROL Relative to Payload]** alternativ.
+     Om mappen Relativt till nyttolast i CRX-databasen till exempel innehåller en bifogad fil på `attachment\attachment-folder` plats, ange `attachment\attachment-folder` i textrutan efter att du har valt **[!UICONTROL Relative to Payload]** alternativ.
    * **JSON-punktnotation:** Använd alternativet när värdet som ska användas finns i en JSON-fil. Till exempel försäkring.customerDetails.emailAddress. Alternativet JSON-punktnotation är bara tillgängligt om du har valt alternativet Mappa inmatningsfält från JSON-inmatningsalternativet.
    * **Mappa indatafält från JSON-indata:** Ange sökvägen till en JSON-fil för att hämta indatavärdet för vissa tjänstargument från JSON-filen. Sökvägen till JSON-filen kan vara relativ till nyttolasten, en absolut sökväg eller så kan du välja ett JSON-inmatningsdokument med hjälp av variabeln JSON eller Form Data Model.
 
@@ -288,13 +293,13 @@ Med steget Signera dokument kan du använda Adobe Sign för att signera dokument
 * **Välj sökväg för bifogad fil med:** Sökväg till de bifogade filerna. Dessa bilagor inkluderas i signeringsdokumentet. Du kan behålla de bifogade filerna på en plats i förhållande till nyttolasten, ange en absolut sökväg för de bifogade filerna eller hämta bifogade filer som lagras i en variabel av dokumentdatatypen.
 
 
-   Om du anger sökvägen till en mapp, till exempel bilagor, bifogas alla filer som är direkt tillgängliga i mappen till Signera dokument. Om några filer är tillgängliga i de mappar som är direkt tillgängliga i den angivna sökvägen för bifogade filer, inkluderas filerna i Signera dokument som bifogade filer. Om det finns mappar i direkt tillgängliga mappar hoppas de över.
+  Om du anger sökvägen till en mapp, till exempel bilagor, bifogas alla filer som är direkt tillgängliga i mappen till Signera dokument. Om några filer är tillgängliga i de mappar som är direkt tillgängliga i den angivna sökvägen för bifogade filer, inkluderas filerna i Signera dokument som bifogade filer. Om det finns mappar i direkt tillgängliga mappar hoppas de över.
 
 * **Dagar till deadline:** Ett dokument markeras som förfallet (passerat deadline) efter det att det inte finns någon aktivitet för uppgiften för det antal dagar som anges i **Dagar till deadline** fält. Antalet dagar räknas efter att den dokumenterade har tilldelats en användare för signering.
 * **E-postfrekvens för påminnelse:** Du kan skicka en påminnelse via e-post varje dag eller vecka. Veckan räknas från den dag som den dokumenterade tilldelas en användare för signering.
 * **Underskriftsprocess:** Du kan välja att signera ett dokument i en sekventiell eller parallell ordning. I sekventiell ordning tar en signerare emot dokumentet i taget för signering. När den första signeraren har slutfört signeringen av dokumentet skickas dokumentet till den andra signeraren och så vidare. Flera signerare kan signera ett dokument samtidigt i parallell ordning.
 * **URL för omdirigering:** Ange en URL för omdirigering. När dokumentet har signerats kan du dirigera om den som tilldelats till en URL. Oftast innehåller denna URL ett tackmeddelande eller ytterligare instruktioner.
-* **Arbetsflödesfas:** Ett arbetsflöde kan ha flera steg. Dessa steg visas i AEM Inkorg. Du kan definiera de här stegen i modellens egenskaper (Sidspark > Sida > Sidegenskaper > Steg).
+* **Arbetsflödesfas:** Ett arbetsflöde kan ha flera steg. Dessa steg visas i AEM Inkorg. Du kan definiera dessa steg i modellens egenskaper (Sidekick > Sida > Sidegenskaper > Steg).
 * **Välj signerare:** Ange metoden för att välja signerare för dokumentet. Du kan dynamiskt tilldela arbetsflödet till en användare eller en grupp eller manuellt lägga till information om en signerare.
 * **Skript eller tjänst för att välja signerare:** Alternativet är bara tillgängligt om alternativet Dynamiskt är markerat i fältet Välj signerare. Du kan ange ett ECMAScript eller en tjänst för att välja signerare och verifieringsalternativ för ett dokument.
 * **Signerarinformation:** Alternativet är bara tillgängligt om alternativet Manuellt är markerat i fältet Välj signerare. Ange e-postadress och välj en valfri verifieringsmekanism. Innan du väljer en verifieringsmekanism i två steg måste du se till att motsvarande verifieringsalternativ är aktiverat för det konfigurerade Adobe Sign-kontot. Du kan använda en variabel av datatypen String för att definiera värden för **[!UICONTROL Email]**, **[!UICONTROL Country Code]** och **[!UICONTROL Phone Number]** fält. The **[!UICONTROL Country Code]** och **[!UICONTROL Phone Number]** fält visas bara om du väljer **[!UICONTROL Phone Verification]** från **[!UICONTROL 2-step verification]** nedrullningsbar lista.
@@ -437,7 +442,7 @@ Stegen Generera utskrift har följande egenskaper:
 
 * **[!UICONTROL Select Content Root location using]**: Innehållsroten är ett strängvärde som anger URI, absolut referens eller plats i databasen för att hämta relativa resurser som används i formulärdesignen. Om formulärdesignen till exempel refererar till en bild relativt, som ../myImage.gif, måste myImage.gif finnas på repository://. Standardvärdet är repository://, som pekar på databasens rotnivå.
 
-   När du väljer en resurs från ditt program måste innehållsrots-URI-sökvägen ha rätt struktur. Om ett formulär till exempel hämtas från ett program med namnet SampleApp och placeras på SampleApp/1.0/forms/Test.xdp, måste innehållets rot-URI anges som repository://administrator@password/Applications/SampleApp/1.0/forms/, eller databasen:/Applications/SampleApp/1.0/forms/ (när behörigheten är null). När innehållets rot-URI anges på det här sättet kommer sökvägarna för alla refererade resurser i formuläret att matchas mot denna URI.
+  När du väljer en resurs från ditt program måste innehållsrots-URI-sökvägen ha rätt struktur. Om ett formulär till exempel hämtas från ett program med namnet SampleApp och placeras på SampleApp/1.0/forms/Test.xdp, måste innehållets rot-URI anges som repository://administrator@password/Applications/SampleApp/1.0/forms/, eller databasen:/Applications/SampleApp/1.0/forms/ (när behörigheten är null). När innehållets rot-URI anges på det här sättet kommer sökvägarna för alla refererade resurser i formuläret att matchas mot denna URI.
 
 * **[!UICONTROL Select XCI file using]**: XCI-filer används för att beskriva teckensnitt och andra egenskaper som används för formulärdesignelement. Du kan behålla en XCI-fil i förhållande till nyttolasten, på en absolut sökväg eller med en variabel av dokumentdatatypen.
 

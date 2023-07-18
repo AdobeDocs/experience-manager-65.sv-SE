@@ -11,14 +11,20 @@ discoiquuid: f89921ef-c638-4a07-88d5-3dd8614c5166
 docset: aem65
 role: Admin
 exl-id: 2fc8abec-8ba6-40b7-bbb1-4288eeea7c86
-source-git-commit: 762e918a2c65898fc518f131d44421fb82ce4d6f
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '335'
-ht-degree: 0%
+source-wordcount: '356'
+ht-degree: 1%
 
 ---
 
 # Uppgradera till AEM 6.5 Forms{#upgrade-to-aem-forms}
+
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/setup-configure-migrate/migrate-to-forms-as-a-cloud-service.html) |
+| AEM 6.5 | Den här artikeln |
+
 
 AEM 6.5 Forms innehåller flera nya funktioner och förbättringar som effektiviserar framtagning, hantering och användarupplevelser med formulär och korrespondenser. Mer information om alla nya funktioner och förbättringar i AEM 6.5 Forms finns i [Översikt över nya funktioner](../../forms/using/whats-new.md).
 

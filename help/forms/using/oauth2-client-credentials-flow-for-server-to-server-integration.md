@@ -3,15 +3,21 @@ title: Salesforce-integrering med AEM Forms med OAuth 2.0-klientautentiseringsfl
 seo-title: Salesforce integration with AEM Forms using OAuth 2.0 client credentials flow
 description: Steg för att integrera Salesforce-integrering med AEM Forms med OAuth 2.0-klientens autentiseringsflöde
 seo-description: Steps to integrate Salesforce integration with AEM Forms using OAuth 2.0 client credentials flow
-source-git-commit: cc0375f5b5616f82a73bd983a9da95225c51db99
+exl-id: 31f2ccf8-1f4f-4d88-8c5f-ef1b7d1bfb4f
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '463'
-ht-degree: 0%
+source-wordcount: '485'
+ht-degree: 1%
 
 ---
 
-
 # Integrering av Salesforce med OAuth 2.0-klientautentiseringsflöde  {#configure-salesforce-with-ouath-2.0-client-credential}
+
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/configure-msdynamics-salesforce.html) |
+| AEM 6.5 | Den här artikeln |
+
 
 För att integrera AEM Forms med Salesforce-programmet används OAuth 2.0-klientens autentiseringsflöde. Det är en standardiserad och säker metod för direkt kommunikation utan att användaren behöver göra något. I det här flödet utbyter klientprogrammet (AEM formulär) klientautentiseringsuppgifterna, som definieras i det Salesforce-anslutna programmet, för att erhålla en åtkomsttoken. De nödvändiga klientautentiseringsuppgifterna innehåller konsumentnyckeln och konsumenthemligheten.
 
@@ -74,5 +80,3 @@ Swagger är en öppen källkodsuppsättning regler, specifikationer och verktyg 
 1. Om anslutningen lyckas klickar du på **[!UICONTROL Create]** -knappen.
 
 Nu kan du [skapa formulärdatamodellen](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html?lang=en) för att integrera den konfigurerade datakällan med ditt adaptiva formulär.
-
-

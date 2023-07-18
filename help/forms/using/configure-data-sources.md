@@ -10,14 +10,20 @@ discoiquuid: 9d78a6dc-fc9c-415b-b817-164fe6648b30
 docset: aem65
 feature: Form Data Model
 exl-id: 7a1d9d57-66f4-4f20-91c2-ace5a71a52f2
-source-git-commit: db4b432a95856302eb2e80b6386eee557d6afd17
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '1913'
+source-wordcount: '1935'
 ht-degree: 0%
 
 ---
 
 # Konfigurera datakällor{#configure-data-sources}
+
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/configure-data-sources.html) |
+| AEM 6.5 | Den här artikeln |
+
 
 ![Dataintegrering](do-not-localize/data-integeration.png)
 
@@ -51,7 +57,6 @@ Du kan konfigurera relationsdatabaser med hjälp AEM Konfiguration av webbkonsol
    >
    > 1. Gå till https://&#39;[server]:[port]/system/console/crypto.
    > 1. I **[!UICONTROL Plain Text]** anger du lösenordet eller en sträng som ska krypteras och trycker på **[!UICONTROL Protect]**.
-
    >
    >Den krypterade texten visas i fältet Skyddad text som du kan ange i konfigurationen.
 
@@ -131,7 +136,8 @@ Gör följande för att konfigurera RESTful-tjänster:
       * Schema: De överföringsprotokoll som används av REST API. Antalet schematyper som visas i listrutan beror på scheman som definieras i Swagger-källan.
       * Värd: Domännamnet eller IP-adressen för värden som använder REST API. Det är ett obligatoriskt fält.
       * Grundsökväg: URL-prefixet för alla API-sökvägar. Det är ett valfritt fält.\
-         Om det behövs kan du redigera de förifyllda värdena för dessa fält.
+        Om det behövs kan du redigera de förifyllda värdena för dessa fält.
+
    * Välj autentiseringstyp - Ingen, OAuth2.0([Auktoriseringskod](https://oauth.net/2/grant-types/authorization-code/), [Klientautentiseringsuppgifter](https://oauth.net/2/grant-types/client-credentials/)), Basic Authentication, API Key, Custom Authentication eller Mutual Authentication - för att få åtkomst till RESTful-tjänsten och ange därmed information för autentisering.
 
    Om du väljer **[!UICONTROL API Key]** Ange värdet för API-nyckeln som autentiseringstyp. API-nyckeln kan skickas som en begäranderubrik eller som en frågeparameter. Välj ett av dessa alternativ på menyn **[!UICONTROL Location]** nedrullningsbar lista och ange namnet på huvudet eller frågeparametern i **[!UICONTROL Parameter Name]** i enlighet med detta.
@@ -176,10 +182,10 @@ SOAP-baserade webbtjänster beskrivs med [WSDL-specifikationer (Web Services Des
    * Tjänstslutpunkt. Ange ett värde i det här fältet om du vill åsidosätta tjänstslutpunkten som anges i WSDL.
    * Välj autentiseringstyp - Ingen, OAuth2.0([Auktoriseringskod](https://oauth.net/2/grant-types/authorization-code/), [Klientautentiseringsuppgifter](https://oauth.net/2/grant-types/client-credentials/)), Basic Authentication, Custom Authentication, X509 Token eller Mutual Authentication - för att få åtkomst till SOAP-tjänsten och ange därefter information för autentisering.
 
-      Om du väljer **[!UICONTROL X509 Token]** som autentiseringstyp, konfigurera X509-certifikatet. Mer information finns i [Konfigurera certifikat](install-configure-document-services.md#set-up-certificates-for-reader-extension-and-encryption-service).
+     Om du väljer **[!UICONTROL X509 Token]** som autentiseringstyp, konfigurera X509-certifikatet. Mer information finns i [Konfigurera certifikat](install-configure-document-services.md#set-up-certificates-for-reader-extension-and-encryption-service).
 Ange KeyStore-alias för X509-certifikatet i **[!UICONTROL Key Alias]** fält. Ange tiden i sekunder tills autentiseringsbegäran är giltig i **[!UICONTROL Time To Live]** fält. Du kan också välja att signera meddelandetexten eller tidsstämpelhuvudet eller båda.
 
-      Om du väljer **[!UICONTROL Mutual Authentication]** som autentiseringstyp, se [Certifikatbaserad ömsesidig autentisering för RESTful- och SOAP-webbtjänster](#mutual-authentication).
+     Om du väljer **[!UICONTROL Mutual Authentication]** som autentiseringstyp, se [Certifikatbaserad ömsesidig autentisering för RESTful- och SOAP-webbtjänster](#mutual-authentication).
 
 1. Tryck **[!UICONTROL Create]** för att skapa molnkonfigurationen för SOAP-webbtjänsten.
 

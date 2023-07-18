@@ -11,14 +11,20 @@ discoiquuid: ce65cb5f-94ec-4423-9fa9-d617e9703091
 docset: aem65
 feature: Adaptive Forms
 exl-id: 7240897f-6b3a-427a-abc6-66310c2998f3
-source-git-commit: 85189a4c35d1409690cbb93946369244e8848340
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '3337'
+source-wordcount: '3359'
 ht-degree: 0%
 
 ---
 
 # Generera arkivdokument för anpassningsbara formulär{#generate-document-of-record-for-adaptive-forms}
+
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/generate-document-of-record-for-non-xfa-based-adaptive-forms.html) |
+| AEM 6.5 | Den här artikeln |
+
 
 ## Översikt {#overview}
 
@@ -287,7 +293,8 @@ Du kan också välja en formulärmodell när du skapar ett formulär.
    >
    >    * Ditt adaptiva formulär är schemabaserat
    >    * Du använder **Associera formulärmall som dokumentmall** alternativ för urkunder
-
+   >
+   >
 
 1. Klicka **Klart.**
 

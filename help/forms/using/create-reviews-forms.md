@@ -8,14 +8,20 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-manager
 docset: aem65
 feature: Adaptive Forms
-source-git-commit: 0ca7d76d0f5a3e440e5df9c986e3bb0efec368c1
+exl-id: 9ca4fcd6-3eb0-4fc1-a09c-e4ad532bbed0
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '673'
 ht-degree: 0%
 
 ---
 
 # Skapa och hantera granskningar av formulär{#creating-and-managing-reviews-to-forms}
+
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/create-reviews-forms.html) |
+| AEM 6.5 | Den här artikeln |
 
 ## Granska {#review}
 
@@ -39,7 +45,6 @@ En granskning är en mekanism som gör att en eller flera granskare kan kommente
    >* Administratören kan komma åt alla grupper som är kopplade till formuläranvändarna.
    >* Tjänstanvändargruppen är inte tillgänglig för granskning.
 
-
 ### Åtgärder som inträffar när en granskning konfigureras {#actions-that-occur-when-a-review-is-set-up}
 
 I det här avsnittet beskrivs vad som händer när en granskning skapas eller konfigureras.
@@ -59,7 +64,6 @@ I det här avsnittet beskrivs vad som händer när en granskning skapas eller ko
 >
 >* Endast pågående granskningar kan ändras.
 >* Fullständiga granskningar kan inte ändras.
-
 
 1. Navigera till fliken Formulär och markera ett formulär.
 
@@ -111,4 +115,5 @@ I det här avsnittet beskrivs vad som händer på **Granska uppdatering/Slut**:
    1. **Granskare**: För varje granskare avslutas den ofullständiga uppgift som är relaterad till granskningen. Aktiviteten visas inte längre som Väntande i granskarens meddelandeavsnitt.
    1. **Initierare**: Uppgiften som tilldelats granskningsinitieraren är markerad som slutförd. Aktiviteten tas bort från meddelandeavsnittet för granskningsinitieraren.
    1. **Alla**: Granskningen visas i avsnittet Tidigare granskningar. Inga fler kommentarer kan läggas till.
+
    ![granskning slutförd](assets/review-complete-imgg.png)

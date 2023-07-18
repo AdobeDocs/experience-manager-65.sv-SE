@@ -11,14 +11,19 @@ discoiquuid: ba571f8e-8bd3-48eb-82e1-c93b14ffe44a
 docset: aem65
 role: Admin
 exl-id: f82bbd39-b655-47a9-bca9-21d7cd30c082
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '1957'
+source-wordcount: '1980'
 ht-degree: 0%
 
 ---
 
 # Hantera formulärmetadata{#manage-form-metadata}
+
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/manage-metadata/manage-form-metadata.html) |
+| AEM 6.5 | Den här artikeln |
 
 ## Översikt  {#overview-nbsp}
 
@@ -203,7 +208,6 @@ Resurser har befintliga egenskapsvärden som kan visas i skrivskyddat läge. Des
    * Den vänstra panelen innehåller en miniatyrbild av formuläret
    * Den högra panelen innehåller metadataegenskaper i skrivskyddat läge, som är fördelade på olika flikar.
 
-
 ## Lägg till/uppdatera värden för formulärmetadata {#add-update-form-metadata-values}
 
 Du kan redigera värdet för befintliga metadataegenskaper eller lägga till nya värden i ett befintligt egenskapsfält för metadata (till exempel när ett metadatafält är tomt).
@@ -240,7 +244,6 @@ För adaptiva formulär finns ytterligare funktioner som gör att användaren ka
 >* Använd en fyrkantig bild som miniatyrbild. När du använder en bild som inte är fyrkantig och visar miniatyrbilden i listvyn visas miniatyrbilden som bortklippt.
 >* När en ny bild har överförts eller genererats ersätts miniatyrbilden av den här bilden och kan inte återställas till den föregående bilden.
 >
-
 
 ## Lägg till anpassade metadata {#add-custom-metadata}
 

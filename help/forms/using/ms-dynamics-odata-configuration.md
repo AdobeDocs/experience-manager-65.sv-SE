@@ -10,14 +10,19 @@ discoiquuid: 627507f5-1ffc-48f8-8cc9-5dbc5e409ae3
 docset: aem65
 feature: Form Data Model
 exl-id: 90cc9452-e107-4e57-80a3-f44f0bde132e
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 5ca6c5abeb5ed09d8929d1986aa24c1416e0cc06
 workflow-type: tm+mt
-source-wordcount: '1194'
+source-wordcount: '1215'
 ht-degree: 0%
 
 ---
 
 # Microsoft Dynamics OData-konfiguration{#microsoft-dynamics-odata-configuration}
+
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/ms-dynamics-odata-configuration.html) |
+| AEM 6.5 | Den här artikeln |
 
 ![dataintegrering](assets/data-integeration.png)
 
@@ -25,7 +30,7 @@ Microsoft Dynamics är en CRM- och ERP-programvara (Enterprise Resource Planning
 
 * Fråga Microsoft Dynamics-servern efter data och förifylla adaptiva formulär
 * Skriv data i Microsoft Dynamics när formulär skickas med adaptiv form
-* Skriv data i Microsoft Dynamics via anpassade entiteter som definierats i formulärdatamodellen och vice versa
+* Skriv data i Microsoft Dynamics via anpassade entiteter som definierats i formulärdatamodellen och omvänt
 
 AEM Forms tilläggspaket innehåller även OData-referenskonfiguration som du kan använda för att snabbt integrera Microsoft Dynamics med AEM Forms.
 
@@ -100,7 +105,7 @@ Gör följande för att registrera en OAuth-klient på AD FS-datorn (Active Dire
 
    * `Client-ID` är ett klient-ID som du kan generera med valfri GUID-generator.
    * `redirect-uri` är URL:en till molntjänsten Microsoft Dynamics OData på AEM Forms. Standardmolntjänsten som installeras med AEM Forms-paketet distribueras på följande URL:
-      `https://'[server]:[port]'/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html`
+     `https://'[server]:[port]'/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html`
 
 1. Kör följande kommando för att bevilja åtkomst på AD FS-datorn:
 

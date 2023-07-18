@@ -11,14 +11,19 @@ discoiquuid: 8fff78cb-9ef9-426e-8b30-d70b4f26887f
 docset: aem65
 feature: Forms Portal
 exl-id: 22d7c24e-7a77-4324-afdf-74c1fbf15773
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '1630'
+source-wordcount: '1652'
 ht-degree: 0%
 
 ---
 
 # Skapa en formulärportalsida{#creating-a-forms-portal-page}
+
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-forms-portal.html) |
+| AEM 6.5 | Den här artikeln |
 
 Forms portalkomponenter förser webbutvecklare med komponenter för att skapa och anpassa en formulärportal på webbplatser som skapats med Adobe Experience Manager (AEM). En snabb översikt av formulärportalen finns på [Introduktion till att publicera formulär på en portal](../../forms/using/introduction-publishing-forms.md).
 
@@ -158,7 +163,7 @@ The **Redigera** innehåller flera flikar med konfigurationsalternativ som beskr
 
 ### Sökruta {#search-pane}
 
-I sökrutan kan du lägga till komponenterna Date Predicate (Datumpredikat), Full Text Predicate (Fullständig textpredikat), Properties Predicate (Förutdikat för egenskaper) och Tags Predicate (Förutsägning för taggar) i kategorin Document Services Predicates AEM Sidekick. Dessa komponenter implementerar sökfunktionen så att användarna kan söka i de listade formulären.
+I sökrutan kan du lägga till komponenterna Date Predicate (Datumpredikat), Full Text Predicate (Fullständig textpredikat), Properties Predicate (Förutdikat för egenskaper) och Tags Predicate (Förutdikat för dokumenttjänster) i AEM Sidekick. Dessa komponenter implementerar sökfunktionen så att användarna kan söka i de listade formulären.
 
 **Tips:** *Du kan styra listan med formulär som visas på formulärportalen baserat på ett förinställt villkor och dölja sökfunktionen för slutanvändare. Om du vill styra listan med formulär använder du komponenterna Predicate för att använda sökfilter. Du kan också ange standardfiltervärden och inaktivera sökningen på fliken Visning i dialogrutan Redigera komponent.*
 

@@ -10,14 +10,19 @@ discoiquuid: a20736b7-f7b4-4da1-aa32-2408049b1209
 docset: aem65
 feature: Adaptive Forms
 exl-id: f7e3e2cd-0cbe-4b26-9e55-7afc6dc3af63
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '1001'
+source-wordcount: '1024'
 ht-degree: 0%
 
 ---
 
 # Förbättra prestanda för stora formulär med lat inläsningsverktyg{#improve-performance-of-large-forms-with-lazy-loading}
+
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/create-an-adaptive-form-on-forms-cs/lazy-loading-adaptive-forms.html) |
+| AEM 6.5 | Den här artikeln |
 
 ## Introduktion till lazy loading {#introduction-to-lazy-loading}
 
@@ -32,17 +37,17 @@ Innan du konfigurerar lazy loading av fragment i ditt adaptiva formulär är det
 * **Identifiera och skapa fragment**
 Du kan bara konfigurera adaptiva formulärfragment för lazy loading. Ett fragment är ett fristående segment som ligger utanför ett anpassningsbart formulär och kan återanvändas i olika formulär. Så det första steget mot att implementera lat inläsningsarbete är att identifiera logiska avsnitt i ett formulär och konvertera dem till fragment. Du kan skapa ett fragment från grunden eller spara en befintlig formulärpanel som fragment.
 
-   Mer information om hur du skapar fragment finns i [Anpassningsbara formulärfragment](../../forms/using/adaptive-form-fragments.md).
+  Mer information om hur du skapar fragment finns i [Anpassningsbara formulärfragment](../../forms/using/adaptive-form-fragments.md).
 
 * **Identifiera och markera globala värden**
 Forms-baserade transaktioner innefattar dynamiska element för att hämta in relevanta data från användarna och bearbeta dem för att förenkla ifyllandet av formulär. Formuläret har till exempel fält A i fragment X vars värde bestämmer giltigheten för fält B i ett annat fragment. Om fragment X i det här fallet har markerats för lazy loading måste värdet i fält A vara tillgängligt för att validera fält B även när fragment X inte har lästs in. För att uppnå detta kan du markera fält A som globalt, vilket garanterar att dess värde är tillgängligt för validering av fält B när fragment X inte har lästs in.
 
-   Mer information om hur du gör ett fältvärde globalt finns i [Konfigurerar lazy loading](../../forms/using/lazy-loading-adaptive-forms.md#p-configuring-lazy-loading-p).
+  Mer information om hur du gör ett fältvärde globalt finns i [Konfigurerar lazy loading](../../forms/using/lazy-loading-adaptive-forms.md#p-configuring-lazy-loading-p).
 
 * **Skriv regler för att kontrollera synligheten för fält**
 Forms innehåller fält och avsnitt som inte är tillämpliga för alla användare och under alla förhållanden. Forms författare och utvecklare använder synlighets- eller visningsregler för att styra synligheten baserat på användarindata. Fältet Kontorsadress visas t.ex. inte för användare som väljer Arbetslösa i fältet Anställningsstatus i ett formulär. Mer information om hur du skriver regler finns i [Använda regelredigeraren](../../forms/using/rule-editor.md).
 
-   Du kan använda synlighetsregler i de lagligen inlästa fragmenten så att villkorsfält bara visas när de är obligatoriska. Markera dessutom det villkorliga fältet globalt så att det refererar till det i synlighetsuttrycket för det lagerinlästa fragmentet.
+  Du kan använda synlighetsregler i de lagligen inlästa fragmenten så att villkorsfält bara visas när de är obligatoriska. Markera dessutom det villkorliga fältet globalt så att det refererar till det i synlighetsuttrycket för det lagerinlästa fragmentet.
 
 ## Konfigurerar lazy loading {#configuring-lazy-loading}
 
@@ -87,4 +92,4 @@ Viktiga punkter att tänka på när du utvecklar skript för lazy loading-panele
 * Använd den globalt tillgängliga egenskapen för fält för att göra värden för fält som finns i en lat inläsningspanel tillgängliga för alla andra paneler i ett formulär.
 * Vidarebefordra inte referensvärdet för ett fält i en lat panel oavsett om fältet markeras globalt över fragment eller inte.
 * Använd panelåterställningsfunktionen för att återställa allt som visas på panelen med följande klickuttryck.\
-   guideBridge.resolveNode(guideBridge.getFocus({&quot;focusOption&quot;): &quot;navigablePanel&quot;}).resetData()
+  guideBridge.resolveNode(guideBridge.getFocus({&quot;focusOption&quot;): &quot;navigablePanel&quot;}).resetData()

@@ -10,14 +10,19 @@ discoiquuid: 1b905e66-dc05-4f14-8025-62a78feef12a
 docset: aem65
 feature: Adaptive Forms
 exl-id: c611a1f8-9d94-47f3-bed3-59eef722bf98
-source-git-commit: 26403941129f3a80fdb3e9b964cb943a04b3bfa1
+source-git-commit: 5ca6c5abeb5ed09d8929d1986aa24c1416e0cc06
 workflow-type: tm+mt
-source-wordcount: '6836'
+source-wordcount: '6832'
 ht-degree: 0%
 
 ---
 
 # Anpassad formulärregelredigerare{#adaptive-forms-rule-editor}
+
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/add-rules-and-use-expressions-in-an-adaptive-form/rule-editor.html) |
+| AEM 6.5 | Den här artikeln |
 
 ## Översikt {#overview}
 
@@ -51,7 +56,7 @@ I regelredigeraren **När** regeltypen framtvingar konstruktorn för villkorsåt
 
 **Åtgärdsvillkor** I den här konstruktionen definierar en regel först en åtgärd som ska utlösas följt av villkor för utvärdering. En annan variant av den här konstruktionen är action-condition-alternate action, som också definierar en alternativ åtgärd som ska utlösas om villkoret returnerar False.
 
-Regeltyperna Visa, Dölj, Aktivera, Inaktivera, Ange värde för och Validera i regelredigeraren framtvingar regelkonstruktionen för åtgärdsvillkor. Som standard är den alternativa åtgärden för Visa Dölj och Aktivera inaktiveras, och vice versa. Du kan inte ändra den alternativa standardåtgärden.
+Regeltyperna Visa, Dölj, Aktivera, Inaktivera, Ange värde för och Validera i regelredigeraren framtvingar regelkonstruktionen för åtgärdsvillkor. Som standard är den alternativa åtgärden för Visa Dölj och Aktivera Inaktivera, och omvänt. Du kan inte ändra den alternativa standardåtgärden.
 
 >[!NOTE]
 >
@@ -65,11 +70,11 @@ Mer information om vilka regeltyper som finns i regelredigeraren finns i [Tillg�
 
 * En typisk tumregel när du skapar en regel är att tänka på den i kontexten för det objekt som du skriver en regel för. Tänk på att du vill dölja eller visa fältet B baserat på det värde som användaren anger i fältet A. I det här fallet utvärderar du ett villkor i fält A och baserat på det värde som returneras utlöser du en åtgärd i fält B.
 
-   Om du skriver en regel i fält B (det objekt som du utvärderar ett villkor för) ska du därför använda konstruktorn condition-action eller regeltypen When. Använd på samma sätt konstruktionen action-condition eller Visa eller Dölj regel i fält A.
+  Om du skriver en regel i fält B (det objekt som du utvärderar ett villkor för) ska du därför använda konstruktorn condition-action eller regeltypen When. Använd på samma sätt konstruktionen action-condition eller Visa eller Dölj regel i fält A.
 
 * Ibland måste du utföra flera åtgärder baserat på ett villkor. I sådana fall bör du använda konstruktorn condition-action. I den här konstruktionen kan du utvärdera ett villkor en gång och ange flera åtgärdssatser.
 
-   Om du till exempel vill dölja fält B, C och D baserat på villkoret som kontrollerar värdet som användaren anger i fält A, skriver du en regel med villkorsstyrd konstruktion eller Regeltyp för När i fält A och anger åtgärder som styr synligheten för fält B, C och D. I annat fall behöver du tre separata regler för fälten B, C och D, där varje regel kontrollerar villkoret och visar eller döljer respektive fält. I det här exemplet är det effektivare att skriva Regeltypen När för ett objekt i stället för att visa eller dölja regeltypen för tre objekt.
+  Om du till exempel vill dölja fält B, C och D baserat på villkoret som kontrollerar värdet som användaren anger i fält A, skriver du en regel med villkorsstyrd konstruktion eller Regeltyp för När i fält A och anger åtgärder som styr synligheten för fält B, C och D. I annat fall behöver du tre separata regler för fälten B, C och D, där varje regel kontrollerar villkoret och visar eller döljer respektive fält. I det här exemplet är det effektivare att skriva Regeltypen När för ett objekt i stället för att visa eller dölja regeltypen för tre objekt.
 
 * Om du vill aktivera en åtgärd baserat på flera villkor bör du använda konstruktorn action-condition. Om du till exempel vill visa och dölja fält A genom att utvärdera villkor i fält B, C och D, använder du Visa eller Dölj regeltyp i fält A.
 * Använd villkorskonstruktion för villkorsåtgärd eller åtgärd om regeln innehåller en åtgärd för ett villkor.
@@ -372,7 +377,7 @@ Mer information om hur du använder den visuella regelredigeraren finns i [Skriv
 
 ### E. Visual-code editors switch {#e-visual-code-editors-switcher}
 
-Användare i gruppen för formuläranvändare har åtkomst till kodredigeraren. Kodredigeraren är inte tillgänglig för andra användare. Om du har behörighet kan du växla från visuellt redigeringsläge till kodredigeringsläge för regelredigeraren, och vice versa, med väljaren precis ovanför regelredigeraren. När du startar regelredigeraren första gången öppnas den i det visuella redigeringsläget. Du kan skriva regler i det visuella redigeringsläget eller växla till kodredigeringsläget för att skriva ett regelskript. Observera dock att om du ändrar en regel eller skriver en regel i kodredigeraren kan du inte växla tillbaka till den visuella redigeraren för den regeln om du inte rensar kodredigeraren.
+Användare i gruppen för formuläranvändare har åtkomst till kodredigeraren. Kodredigeraren är inte tillgänglig för andra användare. Om du har behörighet kan du växla från visuellt redigeringsläge till kodredigeringsläge för regelredigeraren, och omvänt, använda väljaren precis ovanför regelredigeraren. När du startar regelredigeraren första gången öppnas den i det visuella redigeringsläget. Du kan skriva regler i det visuella redigeringsläget eller växla till kodredigeringsläget för att skriva ett regelskript. Observera dock att om du ändrar en regel eller skriver en regel i kodredigeraren kan du inte växla tillbaka till den visuella redigeraren för den regeln om du inte rensar kodredigeraren.
 
 AEM Forms spårar det regelredigeringsläge som du använde när du skrev en regel sist. När du startar regelredigeraren nästa gång öppnas den i det läget. Du kan dock konfigurera ett standardläge så att regelredigeraren öppnas i det angivna läget. Så här gör du:
 
@@ -550,36 +555,36 @@ Mer information finns i [usejsdoc.org](https://jsdoc.app/).
 Stöds `jsdoc` taggar:
 
 * **Privat**
-Syntax: En privat funktion ingår inte som en anpassad funktion.`@private`
+Syntax: `@private`
 En privat funktion ingår inte som en anpassad funktion.
 
 * **Namn**
-Syntax: Alternativt `@name funcName <Function Name>`
+Syntax: `@name funcName <Function Name>`
 Alternativt `,` du kan använda: `@function funcName <Function Name>` **eller** `@func` `funcName <Function Name>`.
-   `funcName` är namnet på funktionen (inga blanksteg tillåts).
-   `<Function Name>` är funktionens visningsnamn.
+  `funcName` är namnet på funktionen (inga blanksteg tillåts).
+  `<Function Name>` är funktionens visningsnamn.
 
 * **medlem**
-Syntax: Kopplar ett namnutrymme till funktionen.`@memberof namespace`
+Syntax: `@memberof namespace`
 Kopplar ett namnutrymme till funktionen.
 
 * **Parameter**
-Syntax: Du kan också använda: `@param {type} name <Parameter Description>`
+Syntax: `@param {type} name <Parameter Description>`
 Du kan också använda: `@argument` `{type} name <Parameter Description>` **eller** `@arg` `{type}` `name <Parameter Description>`.
 Visar parametrar som används av funktionen. En funktion kan ha flera parametertaggar, en tagg för varje parameter i ordningen för förekomst.
-   `{type}` representerar parametertyp. Tillåtna parametertyper är:
+  `{type}` representerar parametertyp. Tillåtna parametertyper är:
 
    1. string
    1. tal
    1. boolesk
    1. omfång
 
-   Omfång används för att referera till fält i ett adaptivt formulär. När ett formulär använder lazy loading kan du använda `scope` för att komma åt fälten. Du kan komma åt fält antingen när fälten läses in eller om fälten markeras som globala.
+  Omfång används för att referera till fält i ett adaptivt formulär. När ett formulär använder lazy loading kan du använda `scope` för att komma åt fälten. Du kan komma åt fält antingen när fälten läses in eller om fälten markeras som globala.
 
-   Alla andra parametertyper kategoriseras under någon av ovanstående. Ingen stöds inte. Välj en av typerna ovan. Typer är inte skiftlägeskänsliga. Blanksteg tillåts inte i parametern `name`. `<Parameter Descrption>` `<parameter>  can have multiple words. </parameter>`
+  Alla andra parametertyper kategoriseras under någon av ovanstående. Ingen stöds inte. Välj en av typerna ovan. Typer är inte skiftlägeskänsliga. Blanksteg tillåts inte i parametern `name`. `<Parameter Descrption>` `<parameter>  can have multiple words. </parameter>`
 
 * **Returtyp**
-Syntax: Du kan också använda `@return {type}`
+Syntax: `@return {type}`
 Du kan också använda `@returns {type}`.
 Lägger till information om funktionen, till exempel dess mål.
 {type} representerar funktionens returtyp. Tillåtna returtyper är:
@@ -588,30 +593,29 @@ Lägger till information om funktionen, till exempel dess mål.
    1. tal
    1. boolesk
 
-   Alla andra returtyper kategoriseras under en av ovanstående. Ingen stöds inte. Välj en av typerna ovan. Returtyperna är inte skiftlägeskänsliga.
+  Alla andra returtyper kategoriseras under en av ovanstående. Ingen stöds inte. Välj en av typerna ovan. Returtyperna är inte skiftlägeskänsliga.
 
 * **Detta**
-Syntax: 
-`@this currentComponent`
+Syntax: `@this currentComponent`
 
-   Använd @this för att referera till den adaptiva formulärkomponenten som regeln är skriven för.
+  Använd @this för att referera till den adaptiva formulärkomponenten som regeln är skriven för.
 
-   Följande exempel baseras på fältvärdet. I följande exempel döljer regeln ett fält i formuläret. The `this` del av `this.value` refererar till den underliggande adaptiva formulärkomponenten, som regeln är skriven för.
+  Följande exempel baseras på fältvärdet. I följande exempel döljer regeln ett fält i formuläret. The `this` del av `this.value` refererar till den underliggande adaptiva formulärkomponenten, som regeln är skriven för.
 
-   ```
-      /**
-      * @function myTestFunction
-      * @this currentComponent
-      * @param {scope} scope in which code inside function will be executed.
-      */
-      myTestFunction = function (scope) {
-         if(this.value == "O"){
-               scope.age.visible = true;
-         } else {
-            scope.age.visible = false;
-         }
-      }
-   ```
+  ```
+     /**
+     * @function myTestFunction
+     * @this currentComponent
+     * @param {scope} scope in which code inside function will be executed.
+     */
+     myTestFunction = function (scope) {
+        if(this.value == "O"){
+              scope.age.visible = true;
+        } else {
+           scope.age.visible = false;
+        }
+     }
+  ```
 
 >[!NOTE]
 >
@@ -641,7 +645,7 @@ Om du vill öppna ett formulär i redigeringsläge markerar du ett formulär och
 
 1. Markera den numeriska rutan och tryck på ![edit-rules](assets/edit-rules.png) för att öppna regelredigeraren.
 1. Tryck **Skapa regel**. Använd alternativen som visas nedan för att skapa en regel som sparar indatavärdet i fyrkantiga värden i formulärutdatafältet.
-   [ ![Skapa en regel med anpassade funktioner](assets/add_custom_rule_new.png)](assets/add-custom-rule.png)Tryck **Klar**. Din anpassade funktion har lagts till.
+   [![Skapa en regel med anpassade funktioner](assets/add_custom_rule_new.png)](assets/add-custom-rule.png)Tryck **Klar**. Din anpassade funktion har lagts till.
 
 #### Typer som stöds för funktionsdeklaration {#function-declaration-supported-types}
 

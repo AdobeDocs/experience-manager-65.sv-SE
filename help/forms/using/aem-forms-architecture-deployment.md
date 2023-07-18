@@ -11,14 +11,19 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: 0156b5c3-3bef-4213-9ada-c7b6ae96ada4
 role: Admin
 exl-id: d4421d46-cfc9-424e-8a88-9d0a2994a5cf
-source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '2460'
+source-wordcount: '2481'
 ht-degree: 0%
 
 ---
 
 # Arkitektur och driftsättningstopologier för AEM Forms {#architecture-and-deployment-topologies-for-aem-forms}
+
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/forms-overview/aem-forms-cloud-service-architecture.html) |
+| AEM 6.5 | Den här artikeln |
 
 ## Arkitektur {#architecture}
 
@@ -74,9 +79,9 @@ I följande bild visas olika AEM formulärserverkonfigurationer och deras kompon
 * **Bearbetning av råformulärdata som kommer från en Publish-instans:** Detta uppnås främst med en Processing-instans via AEM arbetsflöden som aktiveras när data kommer fram. I arbetsflödena kan du använda steget Formulärdatamodell som du får när du vill arkivera data eller dokument i ett lämpligt datalager.
 * **Säker lagring av formulärdata**: Bearbetningen är en databas bakom brandväggen för rådata som är isolerade från användarna. Varken formulärdesigners på författarinstansen eller slutanvändare på publiceringsinstansen har åtkomst till den här databasen.
 
-   >[!NOTE]
-   >
-   >Adobe rekommenderar att du använder ett datalager från tredje part för att spara slutliga bearbetade data i stället för att använda AEM.
+  >[!NOTE]
+  >
+  >Adobe rekommenderar att du använder ett datalager från tredje part för att spara slutliga bearbetade data i stället för att använda AEM.
 
 * **Lagring och efterbehandling av korrespondensdata som kommer från en Publish-instans:** AEM utför den valfria efterbearbetningen av motsvarande bokstavsdefinitioner. Dessa arbetsflöden kan spara de slutliga bearbetade data i lämpliga externa datalager.
 
@@ -95,7 +100,7 @@ De AEM Forms on JEE-topologier som rekommenderas nedan gäller främst kunder so
 
 AEM Forms-kunder som bara planerar att använda dokumenttjänster eller dokumentsäkerhetsfunktioner kan ha en topologi som liknar den som visas nedan. Den här topologin rekommenderar att du använder en enda instans av AEM Forms. Du kan också skapa ett kluster eller en grupp med AEM Forms-servrar om det behövs. Den här topologin rekommenderas när de flesta användare programmässigt får tillgång till funktioner på AEM Forms-servern och det krävs minsta möjliga ingrepp via användargränssnittet. Topologin är användbar vid gruppbearbetning av dokumenttjänster. Du kan till exempel använda utdatatjänsten för att skapa hundratals icke-redigerbara PDF-dokument dagligen.
 
-Även om AEM Forms låter dig konfigurera och köra alla funktioner från en enda server bör du ändå göra kapacitetsplanering, lastbalansering och konfigurera dedikerade servrar för specifika funktioner i en produktionsmiljö. I en miljö som använder PDF Generator-tjänsten för att konvertera tusentals sidor om dagen och lägga till digitala signaturer för att begränsa åtkomsten till dokument, kan du skapa separata AEM Forms-servrar för PDF Generator-tjänsten och funktioner för digitala signaturer. Det ger optimala prestanda och skalar servrarna oberoende av varandra.
+Även om AEM Forms låter dig konfigurera och köra alla funktioner från en enda server bör du ändå göra kapacitetsplanering, lastbalansering och konfigurera dedikerade servrar för specifika funktioner i en produktionsmiljö. I en miljö som använder tjänsten PDF Generator för att konvertera tusentals sidor om dagen och lägga till digitala signaturer för att begränsa åtkomsten till dokument, kan du skapa separata AEM Forms-servrar för tjänsten PDF Generator och digitala signaturer. Det ger optimala prestanda och skalar servrarna oberoende av varandra.
 
 ![grundläggande funktioner](assets/basic-features.png)
 
@@ -142,6 +147,6 @@ AEM Forms-kunder som planerar att använda bevakade mappar för batchbearbetning
 
 AEM Forms-kunder som bara planerar att använda dokumenttjänster kan ha en topologi som liknar den som visas nedan. Den här topologin rekommenderar att du använder ett kluster av AEM Forms på OSGi-servrar. Den här topologin rekommenderas när de flesta användare använder API:er via programmering för att få åtkomst till AEM Forms-servrar och ett ingripande via användargränssnittet är minimum. Topologin är mycket användbar i olika kundscenarier. Flera klienter använder till exempel tjänsten PDF Generator för att skapa PDF-dokument på begäran.
 
-Även om du kan använda AEM Forms för att konfigurera och köra alla funktioner från en enda server, bör du göra kapacitetsplanering, lastbalansering och konfigurera dedikerade servrar för specifika funktioner i en produktionsmiljö. I en miljö där man använder PDF Generator-tjänsten för att konvertera tusentals sidor om dagen och flera adaptiva formulär för datainhämtning, kan man skapa separata AEM Forms-servrar för PDF Generator-tjänsten och adaptiva formulärfunktioner. Det ger optimala prestanda och skalar servrarna oberoende av varandra.
+Även om du kan använda AEM Forms för att konfigurera och köra alla funktioner från en enda server, bör du göra kapacitetsplanering, lastbalansering och konfigurera dedikerade servrar för specifika funktioner i en produktionsmiljö. I en miljö som använder tjänsten PDF Generator för att konvertera tusentals sidor om dagen och flera adaptiva formulär för att hämta in data, kan du skapa separata AEM Forms-servrar för tjänsten PDF Generator och funktioner för adaptiva formulär. Det ger optimala prestanda och skalar servrarna oberoende av varandra.
 
 ![offline-api-baserad-bearbetning](assets/offline-api-based-processing.png)

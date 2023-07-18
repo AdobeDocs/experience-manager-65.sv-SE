@@ -11,14 +11,20 @@ discoiquuid: 0f335ea0-504f-4cc0-b97b-c3fc715bcc2e
 docset: aem65
 feature: Adaptive Forms
 exl-id: 1333c6cb-15cc-429b-a13e-5d23afdee69a
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '514'
+source-wordcount: '537'
 ht-degree: 0%
 
 ---
 
 # Introduktion till formulärsekvenser i flera steg{#introduction-to-multi-step-form-sequence}
+
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-layout-of-an-adaptive-form/introduction-form-sequence.html) |
+| AEM 6.5 | Den här artikeln |
+
 
 Med adaptiva blanketter kan man enkelt skapa datainhämtning i flera steg. Den har inbyggt stöd för att skapa flera paneler och koppla ihop varje panel med olika navigeringsmönster. Formulärförfattare kan gruppera formulärfält i logiska avsnitt och representera en grupp som en panel. Den övergripande navigeringen mellan paneler styrs med hjälp av panellayouten. Författare kan välja att ordna paneler i olika layouter, t.ex. placera sekventiellt med guidelayouten eller på ett ad hoc-sätt med hjälp av fliklayouten. Mer information om panellayouter finns i [Layoutfunktioner i anpassningsbara formulär](../../forms/using/layout-capabilities-adaptive-forms.md).
 
@@ -42,8 +48,8 @@ Låt oss ta ett exempel där du behöver skapa en sekvens för att fylla i, veri
 
       * Adobe Document Cloud eSign-tjänster
       * Klottra signaturer
-   * **Bekräftelse**: Den innehåller **Sammanfattning** som visar ett meddelande som bekräftar att formuläret skickas när en användare har signerat formuläret och når steget Bekräfta (Sammanfattning) i sekvensen. Författare kan konfigurera texten i komponenten Sammanfattning, visa ett tackmeddelande, visa en länk till det genererade PDF och så vidare.
 
+   * **Bekräftelse**: Den innehåller **Sammanfattning** som visar ett meddelande som bekräftar att formuläret skickas när en användare har signerat formuläret och når steget Bekräfta (Sammanfattning) i sekvensen. Författare kan konfigurera texten i komponenten Sammanfattning, visa ett tackmeddelande, visa en länk till det genererade PDF och så vidare.
 
 1. Välj layouten för rotpanelen som **[!UICONTROL Wizard]**.
 1. Slutför de återstående stegen för att skapa formulärmallen. Mer information finns i [Skapa en anpassad anpassad formulärmall](../../forms/using/custom-adaptive-forms-templates.md).

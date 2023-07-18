@@ -9,14 +9,20 @@ discoiquuid: 9d8d7044-ffce-4ab4-9543-a2d2f9da31e3
 docset: aem65
 feature: Adaptive Forms
 exl-id: 04efb4ad-cff6-4e05-bcd2-98102f052452
-source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '1857'
+source-wordcount: '1880'
 ht-degree: 0%
 
 ---
 
 # Konfigurera åtgärden Skicka{#configuring-the-submit-action}
+
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-submit-actions-and-metadata-submission/configuring-submit-actions.html) |
+| AEM 6.5 | Den här artikeln |
+
 
 ## Introduktion till att skicka åtgärder {#introduction-to-submit-actions}
 
@@ -68,6 +74,7 @@ Du kan också **Aktivera begäran om POST** och ange en URL för att skicka beg�
 Konfigurerar åtgärden Skicka för resterande slutpunkt
 
 >[!NOTE]
+>
 Om du vill skicka fälten som parametrar i en REST-URL måste alla fält ha olika elementnamn, även om fälten placeras på olika paneler.
 
 ### Bokför skickade data till en resurs eller extern slutpunkt för vila  {#post-submitted-data-to-a-resource-or-external-rest-end-point-nbsp}
@@ -98,6 +105,7 @@ I det här exemplet `data` lagrar XML-data, och `att` lagrar data för bifogade 
 The **Skicka e-post** skickar en åtgärd ett e-postmeddelande till en eller flera mottagare när formuläret har skickats. E-postmeddelandet som genereras kan innehålla formulärdata i ett fördefinierat format.
 
 >[!NOTE]
+>
 Alla formulärfält måste ha olika elementnamn, även om de finns på olika paneler), för att kunna inkludera formulärdata i ett e-postmeddelande.
 
 ## Skicka PDF via e-post {#send-pdf-via-email}
@@ -105,6 +113,7 @@ Alla formulärfält måste ha olika elementnamn, även om de finns på olika pan
 The **Skicka PDF via e-post** skicka-åtgärd skickar ett e-postmeddelande med ett PDF som innehåller formulärdata till en eller flera mottagare när formuläret har skickats.
 
 >[!NOTE]
+>
 Den här överföringsåtgärden är tillgänglig för XFA-baserade adaptiva formulär och XSD-baserade adaptionsformulär som har dokumentmallen.
 
 ## Anropa en Forms Workflow {#invoke-a-forms-workflow}
@@ -138,6 +147,7 @@ Innan du använder **Anropa ett AEM arbetsflöde** skicka-åtgärd, [konfigurera
 * **Datafil**: Den innehåller data som skickats till den adaptiva formen. Du kan använda **[!UICONTROL Data File Path]** om du vill ange filens namn och sökväg i förhållande till nyttolasten. Till exempel `/addresschange/data.xml` sökväg skapar en mapp med namnet `addresschange` och placerar den i förhållande till nyttolasten. Du kan också bara ange `data.xml` om du bara vill skicka skickade data utan att skapa en mapphierarki. Använd variabelalternativet och välj variabeln i listan med variabler som är tillgängliga för arbetsflödesmodellen.
 
 >[!NOTE]
+>
 Variabler kan användas oavsett om arbetsflödesmodellen är markerad för extern datalagring eller inte.
 
 * **Bifogade filer**: Du kan använda **[!UICONTROL Attachment Path]** om du vill ange mappnamnet för lagring av de bilagor som överförts till det adaptiva formuläret. Mappen skapas i förhållande till nyttolasten. Om arbetsflödet är markerat för extern datalagring använder du variabelalternativet och väljer variabeln i listan med variabler som är tillgängliga för arbetsflödesmodellen.
@@ -169,6 +179,7 @@ Aktivera validering på serversidan
 Om slutanvändaren åsidosätter dessa valideringar och skickar formulären utför servern valideringen igen. Om valideringen misslyckas vid serverslutet stoppas skicka-transaktionen. Slutanvändaren får originalformuläret igen. Insamlade data och skickade data visas för användaren som ett fel.
 
 >[!NOTE]
+>
 Validering på serversidan validerar formulärmodellen. Vi rekommenderar att du skapar ett separat klientbibliotek för validering och inte blandar det med andra saker som formatering av HTML och DOM-manipulering i samma klientbibliotek.
 
 ### Stöd för anpassade funktioner i valideringsuttryck {#supporting-custom-functions-in-validation-expressions-br}

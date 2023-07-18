@@ -12,14 +12,19 @@ docset: aem65
 feature: Adaptive Forms
 role: Admin
 exl-id: 2ed4d99e-0e90-4b21-ac17-aa6707a3ba7d
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 5ca6c5abeb5ed09d8929d1986aa24c1416e0cc06
 workflow-type: tm+mt
-source-wordcount: '783'
+source-wordcount: '804'
 ht-degree: 0%
 
 ---
 
 # Stöd för nya språk för lokalisering av adaptiva formulär{#supporting-new-locales-for-adaptive-forms-localization}
+
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/supporting-new-language-localization.html) |
+| AEM 6.5 | Den här artikeln |
 
 ## Om språkordlistor {#about-locale-dictionaries}
 
@@ -38,9 +43,8 @@ Det finns två metoder för att identifiera det anpassade formulärets språkomr
 * Titta på följande parametrar i den angivna ordningen:
 
    * Begäranparameter `afAcceptLang`
-Om du vill åsidosätta webbläsarens språkområde för användare kan du skicka 
-`afAcceptLang` begär parameter för att tvinga språkområdet. Följande URL kommer till exempel att tvinga formuläret att återges på japanska språk:
-      `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
+Om du vill åsidosätta webbläsarens språkområde för användare kan du skicka `afAcceptLang` begär parameter för att tvinga språkområdet. Följande URL kommer till exempel att tvinga formuläret att återges på japanska språk:
+     `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
 
    * Webbläsarens språkområdesuppsättning för användaren, som anges i begäran med `Accept-Language` header.
 
