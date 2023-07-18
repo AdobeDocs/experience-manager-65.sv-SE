@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
 exl-id: bfd50aa9-579e-47d5-997d-ec764c782497
-source-git-commit: 939132e8b461b51e1c49237e481243bcc5de3bf6
+source-git-commit: d3c40d1452217983b01245ec1c81111a3c4e7295
 workflow-type: tm+mt
-source-wordcount: '1883'
+source-wordcount: '1866'
 ht-degree: 3%
 
 ---
@@ -17,10 +17,10 @@ ht-degree: 3%
 
 Eftersom Adobe Experience Manager (AEM) baseras på Sling och använder en JCR-databas är de nodtyper som erbjuds av båda dessa tillgängliga för användning:
 
-* [JCR-nodtyper](https://www.adobe.io/experience-manager/reference-materials/spec/jcr/2.0/3_Repository_Model.html#3.1.7-Node-Types)
+* [JCR-nodtyper](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/2.0/3_Repository_Model.html#3.1.7-Node-Types)
 * [Sling Node Types](https://cwiki.apache.org/confluence/display/SLING/Sling+Node+Types)
 
-Förutom dessa. AEM innehåller ett antal anpassade nodtyper.
+Förutom de här nodtyperna finns AEM ett antal anpassade nodtyper.
 
 ## Granskning {#audit}
 
@@ -145,7 +145,7 @@ Definierar CQ-standardsidan.
 
 **Beskrivning**
 
-Definierar en blandningstyp som markerar noder som pseudosidor. Det innebär att de kan anpassas för redigeringsstöd för sidor och WCM.
+Definierar en blandningstyp som markerar noder som pseudosidor. Med andra ord innebär det att de kan anpassas för redigeringsstöd för Page och WCM.
 
 **Definition**
 
@@ -160,9 +160,9 @@ Definierar standardnoden för sidinnehåll, med de minimala egenskaper som anvä
 * `@prop jcr:title` - Rubrik för sidan.
 * `@prop jcr:description` - Beskrivning av den här sidan.
 * `@prop cq:template` - Sökväg till mallen som användes för att skapa sidan.
-* `@prop cq:allowedTemplates` - Lista med reguljära uttryck som används för att bestämma sökvägen/sökvägarna till den tillåtna mallen.
-* `@prop pageTitle` - Rubriken visas vanligtvis i `<title>` -tagg.
-* `@prop navTitle` - Rubrik som vanligtvis används vid navigering.
+* `@prop cq:allowedTemplates` - Lista med reguljära uttryck som används för att bestämma sökvägarna till den tillåtna mallen.
+* `@prop pageTitle` - Rubriken visas i `<title>` -tagg.
+* `@prop navTitle` - Titel som används vid navigering.
 * `@prop hideInNav` - Anger om sidan ska döljas i navigeringen.
 * `@prop onTime` - Tid när den här sidan blir giltig.
 * `@prop offTime` - Tid när den här sidan blir ogiltig.
@@ -202,8 +202,8 @@ Definierar en CQ-mall.
       * `+ name1`
          * `- cq:path`
             * `- cq:workflowName`
-* `@prop allowedParents` - Mönster för reguljära uttryck för att fastställa sökvägen/sökvägarna till mallar som tillåts som överordnade mallar.
-* `@prop allowedChildren` - Mönster för reguljära uttryck för att fastställa sökvägen/sökvägarna till mallar som tillåts som underordnade mallar.
+* `@prop allowedParents` - Mönster för reguljära uttryck som avgör vilka sökvägar till mallar som tillåts som överordnade mallar.
+* `@prop allowedChildren` - Mönster för reguljära uttryck som avgör vilka sökvägar till mallar som tillåts som underordnade mallar.
 * `@prop ranking` - Placera i listan med mallar i dialogrutan Skapa sida.
 
 **Definition**
@@ -232,15 +232,15 @@ Definierar en CQ-komponent.
 * `@prop dialogPath` - Sökväg till primär dialogruta (alternativ till dialogruta).
 * `@node design_dialog` - Design.
 * `@prop cq:cellName` - Namn på designcellen.
-* `@prop cq:isContainer` - Anger om detta är en behållarkomponent. Detta tvingar cellnamnen för de underordnade komponenterna att användas i stället för sökvägsnamn. Till exempel `parsys` är en behållarkomponent. Om det här värdet inte definieras görs kontrollen utifrån förekomsten av ett `cq:childEditConfig`.
+* `@prop cq:isContainer` - Anger om det är en behållarkomponent. Tvingar cellnamnen för de underordnade komponenterna att användas i stället för sökvägsnamn. Till exempel `parsys` är en behållarkomponent. Om det här värdet inte definieras görs kontrollen utifrån förekomsten av ett `cq:childEditConfig`.
 * `@prop cq:noDecoration` - Om true, ingen dekoration `div` -taggar ritas när komponenten tas med.
 * `@node cq:editConfig` - Den konfiguration som definierar parametrarna för redigeringsfältet.
 * `@node cq:childEditConfig` - Den redigeringskonfiguration som ärvs av underordnade komponenter.
 * `@node cq:htmlTag` - Definierar ytterligare taggattribut som läggs till i &quot;omgivande&quot; `div` -taggen när komponenten inkluderas.
 * `@node icon.png`- En fil som innehåller en karakteristisk ikon.
 * `@node thumbnail.png` - En fil som innehåller en karakteristisk miniatyrbild.
-* `@prop allowedParents` - Mönster för reguljära uttryck för att bestämma sökvägen/sökvägarna för komponenter som tillåts som överordnade komponenter.
-* `@prop allowedChildren` - Mönster för reguljära uttryck för att bestämma sökvägen/sökvägarna för komponenter som tillåts som underordnade komponenter.
+* `@prop allowedParents` - Mönster för reguljära uttryck som avgör vilka komponentsökvägar som tillåts som överordnade komponenter.
+* `@prop allowedChildren` - Mönster för reguljära uttryck som avgör vilka sökvägar för komponenter som tillåts som underordnade komponenter.
 * `@node virtual` - Innehåller undernoder som återspeglar virtuella komponenter som används för att dra och släppa komponenter.
 * `@prop componentGroup` - Namnet på komponentgruppen som används för att dra och släppa komponenten.
 * `@node cq:infoProviders` - Innehåller undernoder, som alla har en egenskap `className` som refererar till `PageInfoProvider`.
@@ -316,7 +316,7 @@ Definierar konfigurationen för&quot;redigeringsfältet&quot;.
 
 Konfigurerar ett släppmål för en komponent. Namnet på den här noden används som ett ID för dra och släpp.
 
-* `@prop accept` - Förteckning över MIME-typer som accepteras av detta släppmål. t.ex. `["image/*"]`
+* `@prop accept` - Förteckning över MIME-typer som accepteras av detta släppmål. till exempel `["image/*"]`
 * `@prop groups` - Lista med dra och släpp-grupper som accepterar en källa.
 * `@prop propertyName` - Namnet på egenskapen som används för att lagra referensen.
 
@@ -332,7 +332,7 @@ Konfigurerar ett släppmål för en komponent. Namnet på den här noden använd
 
 **Beskrivning**
 
-Definierar en virtuell CQ-komponent. Dessa används för närvarande bara för den nya guiden Dra och släpp för komponenten.
+Definierar en virtuell CQ-komponent. Används för närvarande endast för den nya guiden Dra och släpp för komponenten.
 
 * `@prop jcr:title` - Den här komponentens namn.
 * `@prop jcr:description` - Beskrivning av den här komponenten.
@@ -340,8 +340,8 @@ Definierar en virtuell CQ-komponent. Dessa används för närvarande bara för d
 * `@node cq:childEditConfig`- Redigera konfiguration som ärvs av underordnade komponenter.
 * `@node icon.png` - En fil som innehåller en karakteristisk ikon.
 * `@node thumbnail.png` - En fil som innehåller en karakteristisk miniatyrbild.
-* `@prop allowedParents` - Mönster för reguljära uttryck för att bestämma sökvägen/sökvägarna för komponenter som tillåts som överordnade komponenter.
-* `@prop allowedChildren` - Mönster för reguljära uttryck för att fastställa sökväg(ar) för komponenter som tillåts som underordnade komponenter.
+* `@prop allowedParents` - Mönster för reguljära uttryck för att bestämma sökvägar för komponenter som tillåts som överordnade komponenter.
+* `@prop allowedChildren` - Mönster för reguljära uttryck för att bestämma sökvägar för komponenter som tillåts som underordnade komponenter.
 * `@prop componentGroup` - Namnet på komponentgruppen där komponenten dras och släpps.
 
 **Definition**
@@ -444,7 +444,7 @@ Behållarlista.
 
 **Beskrivning**
 
-`cq:attributes` är nodtypen för ContentBus versionstaggar. Den här noden har bara en serie egenskaper; av vilka tre är fördefinierade &quot;created&quot;, &quot;csd&quot; och &quot;timestamp&quot;.
+Nodtypen `cq:attributes` är för ContentBus versionstaggar. Den här noden har bara en serie egenskaper; av vilka tre är fördefinierade &quot;created&quot;, &quot;csd&quot; och &quot;timestamp&quot;.
 
 * `@prop created (long) mandatory copy` - Tidsstämpel för när versionsinformationen skapades, vanligtvis tiden för incheckning av den tidigare versionen eller tiden då sidan skapades.
 * `@prop csd (string) mandatory copy` - csd-standardattribut, kopia av egenskapen cq:csd för sidnoden
@@ -485,9 +485,9 @@ Objekten i en `cq:Cq4ContentPage` är:
 
 Avsökningskonfiguration.
 
-* `@prop source (String) mandatory` - Datakällans URI, detta är obligatoriskt och får inte vara tomt
-* `@prop target (String)` - Målplatsen där data som hämtats från datakällan lagras. Detta är valfritt och standard är cq:PollConfig-noden.
-* `@prop interval (Long)` - Intervallet i sekunder som nya eller uppdaterade data från datakällan ska avsökas. Detta är valfritt och standardvärdet är 30 minuter (1 800 sekunder).
+* `@prop source (String) mandatory` - Datakällans URI. Obligatoriskt och får inte vara tomt.
+* `@prop target (String)` - Målplatsen där data som hämtats från datakällan lagras. Valfritt och standard är cq:PollConfig-noden.
+* `@prop interval (Long)` - Intervallet i sekunder som nya eller uppdaterade data från datakällan ska avsökas. Valfritt och standardvärdet är 30 minuter (1 800 sekunder).
 * [Skapa anpassade dataportortjänster för Adobe Experience Manager](https://helpx.adobe.com/experience-manager/using/polling.html)
 
 **Definition**
@@ -578,7 +578,7 @@ Definierar en LiveSync-blandning. Om en nod ingår i en LiveRelationship med en 
 
 **Beskrivning**
 
-Definierar en LiveSyncCanceled-blandning. Avbryt LiveSync-beteendet för en live-kopia (kontrollerad)-nod som kan ingå i en LiveRelationship på grund av en av dess överordnade noder.
+Definierar en LiveSyncCanceled-blandning. Avbryt LiveSync-beteendet för en live-kopia (kontrollerad)-nod som kan vara inblandad i en LiveRelationship på grund av någon av dess överordnade noder.
 
 * `@prop cq:isCancelledForChildren` - Definierar om en LiveSync-åtgärd ska avbrytas. även för barn.
 

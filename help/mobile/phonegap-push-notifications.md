@@ -1,14 +1,12 @@
 ---
 title: Push-meddelanden
 description: Följ den här sidan om du vill veta mer om hur du använder push-meddelanden i en Adobe Experience Manager Mobile-app.
-uuid: 0ed8b183-ef81-487f-8f35-934d74ec82af
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
-discoiquuid: ed8c51d2-5aac-4fe8-89e8-c175d4ea1374
 exl-id: 375f2f40-1b98-4e21-adee-cbea274e6a2a
-source-git-commit: 17d13e9b201629d9d1519fde4740cf651fe89d2c
+source-git-commit: d3c40d1452217983b01245ec1c81111a3c4e7295
 workflow-type: tm+mt
 source-wordcount: '3280'
 ht-degree: 0%
@@ -19,7 +17,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (t.ex. Reagera). [Läs mer](/help/sites-developing/spa-overview.md).
+>Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (till exempel React). [Läs mer](/help/sites-developing/spa-overview.md).
 
 Att omedelbart kunna informera användare av AEM Mobile-appar med viktiga meddelanden är avgörande för värdet av en mobilapp och dess marknadsföringskampanjer. Här beskrivs de steg som måste vidtas för att din app ska kunna ta emot push-meddelanden och hur du konfigurerar och skickar push-meddelanden från AEM Mobile till appen som är installerad på telefonen. I det här avsnittet beskrivs dessutom hur du konfigurerar [Djuplänkning](#deeplinking) till dina push-meddelanden.
 
@@ -228,7 +226,7 @@ Klientbiblioteken för push-meddelanden måste läggas till i programmet genom a
 I CRXDE Lite:
 
 1. Navigera till */etc/designs/phonegap/&lt;app name=&quot;&quot;>/clientlibsall.*
-1. Dubbelklicka på inbäddningsavsnittet i egenskapsrutan.
+1. Dubbelklicka på inbäddningsavsnittet i egenskapspanelen.
 1. I dialogrutan som visas lägger du till ett nytt klientlib genom att klicka på plusknappen (+).
 1. Lägg till&quot;cq.mobile.push&quot; i det nya textfältet och klicka på OK.
 1. Lägg till ytterligare en så kallad cq.mobile.push.amazon och klicka på OK.
